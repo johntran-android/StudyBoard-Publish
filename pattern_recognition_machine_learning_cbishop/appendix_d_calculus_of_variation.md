@@ -13,7 +13,7 @@
 
 ## Functional và bài toán cực trị
 
-<p align="center"><kbd><img src="assets/xt66wtupew.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/xt66wtupew.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đầu tiên gs nói với hàm y(x) thông thường, nhận vào x, trả ra y, gọi là
@@ -51,7 +51,7 @@
 
 ### Định lí Taylor và Đạo hàm
 
-<p align="center"><kbd><img src="assets/7agabtytbnn.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/7agabtytbnn.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Định lí Taylor nói rằng: 
@@ -176,9 +176,9 @@
 
 #### Đạo hàm phiếm hàm và điểm dừng
 
-<p align="center"><kbd><img src="assets/uqcqgpb39mp.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/uqcqgpb39mp.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/4xtn35f4ssp.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/4xtn35f4ssp.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Thế thì đại khái là ta cũng có thể áp dụng, và mở rộng cách hiểu này cho phiếm
@@ -315,9 +315,9 @@
 
 ##### Phương trình Euler-Lagrange
 
-<p align="center"><kbd><img src="assets/a9ld8omn6w8.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/a9ld8omn6w8.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/46rcie4fled.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/46rcie4fled.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > ok, tiếp tục tìm hiểu đoạn này:
@@ -550,7 +550,7 @@
 
 - **Euler-Lagrange dạng G(y,x)**
 
-<p align="center"><kbd><img src="assets/efmfkbksry7.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/efmfkbksry7.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Cuối cùng, tác giả cho biết thường thường thì ta hay xem xét các functional
