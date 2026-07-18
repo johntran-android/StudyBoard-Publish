@@ -7,6 +7,8 @@
 ### 📂 Pattern Recognition Machine Learning_C.Bishop (📝 315 Notes | 📸 452 Screenshots)
 <!-- key: pattern_recognition_machine_learning_cbishop -->
 
+> Cuốn sách kinh thánh trong lĩnh vực học máy và AI
+
 - [1.0 Into](pattern_recognition_machine_learning_cbishop/10_into.md) — `8n / 8i`
 - [1.1 Example: Polynomial Curve Fitting](pattern_recognition_machine_learning_cbishop/11_example_polynomial_curve_fitting.md) — `13n / 20i`
 - [1.2.0 Probability theory](pattern_recognition_machine_learning_cbishop/120_probability_theory.md) — `13n / 21i`
