@@ -1,8 +1,43 @@
 # studyboard-test
 
-**`~315 notes` · `~452 screenshots` · `1 notebooks`**
+**`~684 notes` · `~962 screenshots` · `2 notebooks`**
 
 ## 📚 Syllabus / Mục lục
+
+### 📂 Numerical Optimization_J.Nocedal (📝 369 Notes | 📸 510 Screenshots)
+<!-- key: numerical_optimization_jnocedal -->
+
+> Cuốn sách kinh thánh trong tối ưu hóa.
+
+- [📋 Overview](numerical_optimization_jnocedal/_overview.md) — `1n / 1i`
+- [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization_jnocedal/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i`
+- [2.2 Funds of Unconstrained Optim - Overview of Algorithms](numerical_optimization_jnocedal/22_funds_of_unconstrained_optim_overview_of_algorithms.md) — `24n / 35i`
+- [3.1 Line Search Method: Step Length](numerical_optimization_jnocedal/31_line_search_method_step_length.md) — `13n / 20i`
+- [3.2 Line Search Method: Convergence of Line Search Methods](numerical_optimization_jnocedal/32_line_search_method_convergence_of_line_search_methods.md) — `10n / 13i`
+- [3.3 Line Search Method: Rate of Convergence](numerical_optimization_jnocedal/33_line_search_method_rate_of_convergence.md) — `19n / 23i`
+- [3.4 Line Search Method: Newton’s Method with Hessian Modification](numerical_optimization_jnocedal/34_line_search_method_newtons_method_with_hessian_modification.md) — `24n / 29i`
+- [3.5 Line Search Method: Step-Length Selection Algorithms](numerical_optimization_jnocedal/35_line_search_method_step_length_selection_algorithms.md) — `12n / 15i`
+- [4.0 Trust-Region Methods: Outline of the Trust-Region Approach](numerical_optimization_jnocedal/40_trust_region_methods_outline_of_the_trust_region_approach.md) — `12n / 11i`
+- [4.1 Trust-Region Methods: Algorithms Based on the Cauchy Point](numerical_optimization_jnocedal/41_trust_region_methods_algorithms_based_on_the_cauchy_point.md) — `11n / 17i`
+- [4.2 Trust-Region Methods: Global Convergence](numerical_optimization_jnocedal/42_trust_region_methods_global_convergence.md) — `13n / 16i`
+- [4.3 Trust-Region Methods: Iterative Solution of the Subproblem](numerical_optimization_jnocedal/43_trust_region_methods_iterative_solution_of_the_subproblem.md) — `16n / 26i`
+- [4.4 Trust-Region Methods: Local Convergence of Trust-Region Newton Method](numerical_optimization_jnocedal/44_trust_region_methods_local_convergence_of_trust_region_newton_method.md) — `1n / 0i`
+- [4.5 Trust-Region Methods: Other Enhancements](numerical_optimization_jnocedal/45_trust_region_methods_other_enhancements.md) — `5n / 7i`
+- [5.1 Linear Conjugate Gradient](numerical_optimization_jnocedal/51_linear_conjugate_gradient.md) — `23n / 52i`
+- [6.1 The BFGS Method](numerical_optimization_jnocedal/61_the_bfgs_method.md) — `20n / 27i`
+- [6.2 The SR1 Method](numerical_optimization_jnocedal/62_the_sr1_method.md) — `6n / 15i`
+- [6.4 Convergence Analysis](numerical_optimization_jnocedal/64_convergence_analysis.md) — `5n / 6i`
+- [7.1 Inexact Newton Methods](numerical_optimization_jnocedal/71_inexact_newton_methods.md) — `22n / 28i`
+- [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_jnocedal/72_limited_memory_quasi_newton_methods.md) — `19n / 23i`
+- [8.1 Finite-Difference
+Derivative Approx](numerical_optimization_jnocedal/81_finite_difference_derivative_approx.md) — `20n / 29i`
+- [8.2 Automatic differentiation(*extremely important for AI)](numerical_optimization_jnocedal/82_automatic_differentiationextremely_important_for_ai.md) — `36n / 46i`
+- [10.1 Least-square problem](numerical_optimization_jnocedal/101_least_square_problem.md) — `11n / 13i`
+- [10.2 Linear Least-Square Problem](numerical_optimization_jnocedal/102_linear_least_square_problem.md) — `9n / 11i`
+- [10.3 Algorithms for nonlinear least-squares problem](numerical_optimization_jnocedal/103_algorithms_for_nonlinear_least_squares_problem.md) — `4n / 4i`
+- [Appendix A](numerical_optimization_jnocedal/appendix_a.md) — `1n / 1i`
+- [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_jnocedal/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
+- [A.1 Matrix Factorizations: Cholesky, LU, QR](numerical_optimization_jnocedal/a1_matrix_factorizations_cholesky_lu_qr.md) — `9n / 11i`
 
 ### 📂 Pattern Recognition Machine Learning_C.Bishop (📝 315 Notes | 📸 452 Screenshots)
 <!-- key: pattern_recognition_machine_learning_cbishop -->
