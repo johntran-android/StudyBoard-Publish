@@ -13,7 +13,7 @@
 
 ## Tính chất của ma trận
 
-<p align="center"><kbd><img src="assets/tazxmzc91t.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/tazxmzc91t.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi phần này thì đại khái là mình sẽ ôn lại một số cái tính chất của ma trận. Thì đại khái là giáo sư nói rằng mình không có nói chi tiết, không phải là một cái giáo trình về toán ma trận. Cho nên nó ông sẽ giả sử rằng người đọc đã có những cái kiến thức nền tảng về đại số tuyến tính. Một số kết quả thì ông sẽ chứng minh, nhưng một số trường hợp mà phức tạp thì ông sẽ không chứng minh. Và luôn luôn mình sẽ giả định rằng là nghịch đảo của ma trận tồn tại, cũng như là cái kích thước ma trận được thiết kế một cách phù hợp.
@@ -24,7 +24,7 @@
 
 ### Tính chất Ma trận
 
-<p align="center"><kbd><img src="assets/93n6rvsh2ht.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/93n6rvsh2ht.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Bắt đầu với vài công thức quen thuộc trong MIT 1806 đã học, ko có gì khó
@@ -51,7 +51,7 @@
 
 #### Đồng nhất thức tối ưu tính toán
 
-<p align="center"><kbd><img src="assets/ht7ohqbbl7l.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/ht7ohqbbl7l.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo là một identity mà mình lần đầu được học:
@@ -95,7 +95,7 @@
 
 ##### Độc lập tuyến tính
 
-<p align="center"><kbd><img src="assets/aec6vewmttk.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/aec6vewmttk.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo là một identity gọi là Woodbury identity. Nói chung là biết vậy thôi, còn chứng minh thì cũng dễ. Chỉ là biết các công thức này để khi nào cần tính một phép toán các matrix thì ta có thể lôi nó ra và thay vì tính cái bên trái thì ta sẽ tính cái bên phải giúp tiết kiệm chi phí tính toán hơn, vậy thôi. Chứ bản thân các identity này cũng ko cần phải mổ xẻ phân tích làm gì.
@@ -123,9 +123,9 @@
 
 - **Vết và định thức ma trận**
 
-<p align="center"><kbd><img src="assets/b4o0e4ndhj8.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/b4o0e4ndhj8.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/9zzlyak0dsq.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/9zzlyak0dsq.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi phần này nói về trace và determinant. Hai cái này thì trong 1806 MIT cũng đã học rất kỹ. Trace thì về cơ bản là nói về tổng tất cả các cái phần tử trên đường chéo của một cái ma trận. Đương nhiên trace và determinant chỉ nói về một cái ma trận vuông thôi.
@@ -147,7 +147,7 @@
 
 - **Các công thức định thức**
 
-<p align="center"><kbd><img src="assets/09x6zib36avm.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/09x6zib36avm.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo là một số cái tính chất của định thức.
@@ -189,7 +189,7 @@
 
 - **Đạo hàm Vector và Ma trận**
 
-<p align="center"><kbd><img src="assets/2dqlxdxws2c.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/2dqlxdxws2c.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Phần này nói về vài kiến thức cũng không có gì mới
@@ -229,7 +229,7 @@
 
 - **Đạo hàm vector và ma trận**
 
-<p align="center"><kbd><img src="assets/zzwzyarm57e.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/zzwzyarm57e.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tiếp, ∂/∂x (xTa) = ∂/∂x (aTx) = a. Thử giải thích vì sao?
@@ -283,7 +283,7 @@
 
 - **Đạo hàm ma trận nghịch đảo**
 
-<p align="center"><kbd><img src="assets/8svxszuh5le.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/8svxszuh5le.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Thử giải thích công thức C.21:
@@ -359,7 +359,7 @@
 
 - **Đạo hàm log det A**
 
-<p align="center"><kbd><img src="assets/jze4rhy95e9.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/jze4rhy95e9.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tiếp, thử làm lại công thức đạo hàm hàm log det A (hồi MIT 18s096 cũng đã xem qua):
@@ -605,7 +605,7 @@
 
 - **Đạo hàm Trace Ma trận**
 
-<p align="center"><kbd><img src="assets/ehjq2oj8m6.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/ehjq2oj8m6.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Thử xem công thức C.23:
@@ -681,7 +681,7 @@
 
 - **Đạo hàm hàm vết ma trận**
 
-<p align="center"><kbd><img src="assets/l64igtprkfo.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/l64igtprkfo.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Với cách chứng minh tương tự ta có thể chứng minh nhanh C.25:
@@ -789,7 +789,7 @@
 
 - **Trị riêng và vector riêng**
 
-<p align="center"><kbd><img src="assets/dqe9nq3oyl6.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/dqe9nq3oyl6.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đây là cơ hội để ôn lại chút xíu những kiến thức trong MIT 18.06:
@@ -845,7 +845,7 @@
 
 - **Tính chất ma trận đối xứng**
 
-<p align="center"><kbd><img src="assets/nuonn28kuvk.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/nuonn28kuvk.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo, tác giả nói về việc ta sẽ quan tâm chủ yếu tới matrix đối xứng vì rất nhiều matrix xuất hiện trong machine learning là matrix đối xứng.
@@ -929,7 +929,7 @@
 
 - **Eigenvector vuông góc ma trận đối xứng**
 
-<p align="center"><kbd><img src="assets/7ie0q9xnne6.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/7ie0q9xnne6.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo chính là gs nhắc lại cái điều mình vừa nói ở note trước: Luôn
@@ -1025,7 +1025,7 @@
 
 - **Điều kiện ma trận trực giao**
 
-<p align="center"><kbd><img src="assets/jy4w56uqwk.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/jy4w56uqwk.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Như đã biết từ Mục 18.06, khi có một tập hợp vector trực giao (tức là các vector vuông góc với nhau) và chúng được chuẩn hóa sao cho mỗi vector có chiều dài bằng 1, ta sẽ có một tập hợp vector trực chuẩn (orthonormal). Tuy nhiên, cần lưu ý một điểm quan trọng đã được nhắc đến trong lớp học. Giáo sư Gilbert Strang luôn nhấn mạnh rằng nếu các vector đó được sắp xếp thành các cột của một ma trận, ma trận đó không thể được gọi là ma trận trực giao (orthogonal matrix) trừ khi ta có đủ một bộ N vector trực giao. Điều này có nghĩa là ma trận đó phải là ma trận vuông. Nếu ma trận chỉ có một tập hợp các cột trực chuẩn hoặc trực giao nhưng không đủ số lượng để tạo thành ma trận vuông (tức là số cột ít hơn số hàng), thì nó vẫn chưa được gọi là một ma trận trực giao.
@@ -1057,7 +1057,7 @@
 
 - **Phân rã giá trị riêng và ma trận trực giao**
 
-<p align="center"><kbd><img src="assets/2x23obxx46a.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/2x23obxx46a.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi, tiếp, C.38 là sao?
@@ -1137,11 +1137,11 @@
 
 - **Chéo hóa và nghịch đảo ma trận**
 
-<p align="center"><kbd><img src="assets/ukolm5wkhth.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/ukolm5wkhth.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/cdwm2sysl5w.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/cdwm2sysl5w.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/8i84hi6rdyv.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/8i84hi6rdyv.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi, như note trước ta đã biết A = U Λ UT, và cũng là U Λ Uinv. Nhân hai vế cho UT và U: UT A U = Λ. thì cái biểu thức này được gọi là matrix A bị chéo hóa (diagonalized) bởi matrix U.
@@ -1193,7 +1193,7 @@
 
 - **Định nghĩa ma trận xác định**
 
-<p align="center"><kbd><img src="assets/ypytjkbufr.png" width="100%"></kbd></p>
+<p align="center"><kbd><img src="assets/ypytjkbufr.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Cuối cùng, một ma trận đối xứng được gọi là ma trận xác định dương (positive definite) nếu **dạng toàn phương của nó luôn dương với mọi vector khác không và chỉ bằng không khi vector W bằng không**. Trong lớp MIT 18.06, chúng ta đã biết rằng **một tính chất của ma trận xác định dương là tất cả các giá trị riêng của nó đều dương**. 
