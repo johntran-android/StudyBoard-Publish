@@ -7,7 +7,7 @@
 ### 📂 Numerical Optimization_J.Nocedal (📝 369 Notes | 📸 510 Screenshots)
 <!-- key: numerical_optimization_jnocedal -->
 
-> Cuốn sách kinh thánh trong tối ưu hóa.
+> Cuốn sách kinh thánh trong lĩnh vực tối ưu hóa.
 
 - [📋 Overview](numerical_optimization_jnocedal/_overview.md) — `1n / 1i`
 - [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization_jnocedal/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i`
