@@ -1,8 +1,100 @@
-abc xyz
+Welcome to my personal learning journey! This repository is where I document my deep dives into foundational topics that form the bedrock of machine learning and artificial intelligence. Currently, I'm immersing myself in the comprehensive wisdom of "Numerical Optimization" by J. Nocedal and "Pattern Recognition and Machine Learning" by C. Bishop – two truly indispensable resources in the field.
 
-**`~1,481 notes` · `~2,010 screenshots` · `3 notebooks`**
+Chào mừng đến với hành trình học tập của cá nhân tôi! Kho lưu trữ này là nơi tôi ghi lại những lần tìm hiểu sâu vào các chủ đề nền tảng, tạo nên nền tảng vững chắc cho học máy và trí tuệ nhân tạo. Hiện tại, tôi đang đắm mình trong kiến thức toàn diện từ cuốn "Numerical Optimization" của J. Nocedal và "Pattern Recognition and Machine Learning" của C. Bishop – hai tài liệu thực sự không thể thiếu trong lĩnh vực này.
+
+You'll find here a collection of my structured notes, meticulously organized chapter by chapter, along with a wealth of supporting screenshots directly from the textbooks. Each note is a distillation of key concepts, theorems, and algorithms, often refined with AI feedback to ensure clarity and accuracy. This systematic approach helps me solidify my understanding and provides a valuable resource for anyone else exploring these complex subjects.
+
+Tại đây, bạn sẽ tìm thấy bộ sưu tập các ghi chú được cấu trúc của tôi, được tổ chức tỉ mỉ theo từng chương, cùng với rất nhiều ảnh chụp màn hình hỗ trợ trực tiếp từ sách giáo khoa. Mỗi ghi chú là sự chắt lọc các khái niệm, định lý và thuật toán quan trọng, thường được tinh chỉnh bằng phản hồi từ AI để đảm bảo sự rõ ràng và chính xác. Cách tiếp cận có hệ thống này giúp tôi củng cố sự hiểu biết của mình và cung cấp một nguồn tài liệu quý giá cho bất kỳ ai đang khám phá các chủ đề phức tạp này.
+
+Tackling these 'bibles' of the field is a challenging but incredibly rewarding experience. My goal is not just to passively read, but to truly understand and internalize the mathematical underpinnings and practical implications of optimization and pattern recognition. I believe a strong grasp of these fundamentals is crucial for building robust and innovative AI systems in the future, and I'm excited to share my progress with you all.
+
+Việc chinh phục những cuốn 'kinh thánh' này trong lĩnh vực là một trải nghiệm đầy thử thách nhưng cực kỳ bổ ích. Mục tiêu của tôi không chỉ là đọc một cách thụ động, mà là thực sự hiểu và nắm vững các cơ sở toán học cũng như ý nghĩa thực tiễn của tối ưu hóa và nhận dạng mẫu. Tôi tin rằng việc nắm vững các kiến thức cơ bản này là rất quan trọng để xây dựng các hệ thống AI mạnh mẽ và sáng tạo trong tương lai, và tôi rất vui được chia sẻ tiến trình của mình với tất cả các bạn.
+
+---
+Notes exported from [StudyBoard](https://studyboard.app) — my personal learning workspace.
+
+**`~2,662 notes` · `~3,279 screenshots` · `4 notebooks`**
 
 ## 📚 Syllabus / Mục lục
+
+### 📂 MIT18.06_G.Strang (📝 1181 Notes | 📸 1269 Screenshots)
+<!-- key: mit1806_gstrang -->
+
+> This notebook covers fundamental linear algebra concepts, from solving systems of equations and matrix operations to eigenvalues, SVD, and linear transformations, often emphasizing their geometric interpretations.
+> 
+> Sổ tay này bao gồm các khái niệm cơ bản về đại số tuyến tính, từ giải hệ phương trình và các phép toán ma trận đến trị riêng, phân tích SVD và biến đổi tuyến tính, thường nhấn mạnh các diễn giải hình học của chúng.
+
+- [18.03 Lec 25](mit1806_gstrang/1803_lec_25.md) — `27n / 28i`
+- [Lecture 1: The Geometry
+of Linear Equations](mit1806_gstrang/lecture_1_the_geometry_of_linear_equations.md) — `18n / 20i`
+- [Lecture 2: Elimination With
+matrices](mit1806_gstrang/lecture_2_elimination_with_matrices.md) — `30n / 31i`
+- [Lecture 3: Multiplication
+and Inverse Matrices](mit1806_gstrang/lecture_3_multiplication_and_inverse_matrices.md) — `22n / 24i`
+- [Lecture 4: Factorization
+into A = Lu](mit1806_gstrang/lecture_4_factorization_into_a_lu.md) — `23n / 25i`
+- [Lecture 5: Transpose,
+permutations, Spaces R^n](mit1806_gstrang/lecture_5_transpose_permutations_spaces_rn.md) — `23n / 24i`
+- [Lecture 6: Column Space
+and Null Space](mit1806_gstrang/lecture_6_column_space_and_null_space.md) — `24n / 24i`
+- [Lecture 7: Solving Ax = 0:
+pivot Variables, Special
+solutions](mit1806_gstrang/lecture_7_solving_ax_0_pivot_variables_special_solutions.md) — `32n / 37i`
+- [Lecture 8: Solving Ax = B:
+row Reduced Form R](mit1806_gstrang/lecture_8_solving_ax_b_row_reduced_form_r.md) — `35n / 37i`
+- [Lecture 9: Independece,
+basis, And Dimension](mit1806_gstrang/lecture_9_independece_basis_and_dimension.md) — `35n / 37i`
+- [Lecture 10: The Four
+fundamental Subspaces](mit1806_gstrang/lecture_10_the_four_fundamental_subspaces.md) — `24n / 29i`
+- [Lecture 11: Matrix Spaces;
+rank 1; Small World Graphs](mit1806_gstrang/lecture_11_matrix_spaces_rank_1_small_world_graphs.md) — `33n / 34i`
+- [Lecture 12: Graphs,
+networks, Incidence
+matrices](mit1806_gstrang/lecture_12_graphs_networks_incidence_matrices.md) — `37n / 40i`
+- [Lecture 13: Quiz Review](mit1806_gstrang/lecture_13_quiz_review.md) — `36n / 40i`
+- [Lecture 14: Orthogonal
+vectors And Subspaces](mit1806_gstrang/lecture_14_orthogonal_vectors_and_subspaces.md) — `37n / 37i`
+- [Lecture 15: Projections
+onto Subspaces](mit1806_gstrang/lecture_15_projections_onto_subspaces.md) — `45n / 47i`
+- [Lecture 16: Projection
+matrices And Least Squares](mit1806_gstrang/lecture_16_projection_matrices_and_least_squares.md) — `38n / 43i`
+- [Lecture 17: Orthogonal Matrices
+and Gram-schmidt](mit1806_gstrang/lecture_17_orthogonal_matrices_and_gram_schmidt.md) — `38n / 39i`
+- [Lecture 18: Properties Of
+determinants](mit1806_gstrang/lecture_18_properties_of_determinants.md) — `34n / 39i`
+- [Lecture 19: Determinant
+formulas And Cofactors](mit1806_gstrang/lecture_19_determinant_formulas_and_cofactors.md) — `39n / 41i`
+- [Lecture 20: Cramer's Rule,
+inverse Matrix And Volume](mit1806_gstrang/lecture_20_cramers_rule_inverse_matrix_and_volume.md) — `29n / 30i`
+- [Lecture 21: Eigenvalues
+and Eigenvectors](mit1806_gstrang/lecture_21_eigenvalues_and_eigenvectors.md) — `38n / 39i`
+- [Lecture 22: Diagonalization
+and Powers Of A](mit1806_gstrang/lecture_22_diagonalization_and_powers_of_a.md) — `40n / 42i`
+- [Lecture 23: Differential
+equations And Exp(at)](mit1806_gstrang/lecture_23_differential_equations_and_expat.md) — `50n / 56i`
+- [Lecture 24: Markow
+matrices; Fourier Series](mit1806_gstrang/lecture_24_markow_matrices_fourier_series.md) — `35n / 37i`
+- [Lecture 24b: Quiz 2 Review](mit1806_gstrang/lecture_24b_quiz_2_review.md) — `29n / 34i`
+- [Lecture 25: Symmetric Matrices
+and Positive Definiteness](mit1806_gstrang/lecture_25_symmetric_matrices_and_positive_definiteness.md) — `28n / 30i`
+- [Lecture 26: Complex Matrices;
+fast Fourier Transform](mit1806_gstrang/lecture_26_complex_matrices_fast_fourier_transform.md) — `27n / 30i`
+- [Lecture 27: Positive Definite
+matrices And Minima](mit1806_gstrang/lecture_27_positive_definite_matrices_and_minima.md) — `36n / 39i`
+- [Lecture 28: Similar Matrices
+and Jordan Form](mit1806_gstrang/lecture_28_similar_matrices_and_jordan_form.md) — `32n / 32i`
+- [Lecture 29: Singular Value
+decomposition](mit1806_gstrang/lecture_29_singular_value_decomposition.md) — `33n / 37i`
+- [Lecture 30: Linear
+transformations And Their
+matrices](mit1806_gstrang/lecture_30_linear_transformations_and_their_matrices.md) — `42n / 46i`
+- [Lecture 31: Change Of Basis;
+image Compression](mit1806_gstrang/lecture_31_change_of_basis_image_compression.md) — `35n / 36i`
+- [Lecture 32: Quiz 3 Review](mit1806_gstrang/lecture_32_quiz_3_review.md) — `35n / 38i`
+- [Lecture 33: Left And Right
+inverse; Pseudoinverse](mit1806_gstrang/lecture_33_left_and_right_inverse_pseudoinverse.md) — `30n / 33i`
+- [Lecture 34: Final Course
+review](mit1806_gstrang/lecture_34_final_course_review.md) — `32n / 34i`
 
 ### 📂 Numerical Optimization_J.Nocedal (📝 369 Notes | 📸 510 Screenshots)
 <!-- key: numerical_optimization_jnocedal -->
