@@ -1,6 +1,6 @@
 abc xyz
 
-**`~1,481 notes` · `~2,009 screenshots` · `3 notebooks`**
+**`~1,481 notes` · `~2,010 screenshots` · `3 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -85,8 +85,76 @@ Of Dimensionality](pattern_recognition_machine_learning_cbishop/14_the_curse_of_
 - [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) — `19n / 22i`
 - [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) — `5n / 7i`
 
-### 📂 Statistical Inference - Casella (📝 797 Notes | 📸 1047 Screenshots)
+### 📂 Statistical Inference - Casella (📝 797 Notes | 📸 1048 Screenshots)
 <!-- key: statistical_inference_casella -->
 
-- [Statistical Inference - Casella](statistical_inference_casella/statistical_inference_casella.md) — `797n / 1047i`
+- [📋 Overview](statistical_inference_casella/_overview.md) — `0n / 1i`
+- [1.1 Set Theory](statistical_inference_casella/11_set_theory.md) — `6n / 9i`
+- [1.2.1 Axiomatic
+foundation](statistical_inference_casella/121_axiomatic_foundation.md) — `9n / 10i`
+- [1.2.2 Calculus
+of Probability](statistical_inference_casella/122_calculus_of_probability.md) — `5n / 9i`
+- [1.2.3 Counting](statistical_inference_casella/123_counting.md) — `6n / 8i`
+- [1.2.4 Enumerating
+outcome](statistical_inference_casella/124_enumerating_outcome.md) — `5n / 9i`
+- [1.3 Conditional
+probability & Independence](statistical_inference_casella/13_conditional_probability_independence.md) — `12n / 16i`
+- [1.4 Random Variables](statistical_inference_casella/14_random_variables.md) — `4n / 5i`
+- [1.5 Distribution
+function](statistical_inference_casella/15_distribution_function.md) — `9n / 11i`
+- [1.6 PDF & Pmf](statistical_inference_casella/16_pdf_pmf.md) — `4n / 5i`
+- [2.1 Distribution](statistical_inference_casella/21_distribution.md) — `15n / 21i`
+- [2.2 Expected Value](statistical_inference_casella/22_expected_value.md) — `7n / 10i`
+- [2.3 MGF](statistical_inference_casella/23_mgf.md) — `15n / 25i`
+- [2.4 Differentiating
+under integral](statistical_inference_casella/24_differentiating_under_integral.md) — `11n / 19i`
+- [2.5 Ex](statistical_inference_casella/25_ex.md) — `1n / 2i`
+- [3.1&2 Discrete
+distribution](statistical_inference_casella/312_discrete_distribution.md) — `20n / 32i`
+- [3.3 Continuous
+distribution](statistical_inference_casella/33_continuous_distribution.md) — `24n / 38i`
+- [3.4 Exponential families](statistical_inference_casella/34_exponential_families.md) — `10n / 15i`
+- [3.5 Location And
+scale Families](statistical_inference_casella/35_location_and_scale_families.md) — `12n / 17i`
+- [3.6 Inequalities](statistical_inference_casella/36_inequalities.md) — `9n / 12i`
+- [4.1 Joint & Marginal Distribution](statistical_inference_casella/41_joint_marginal_distribution.md) — `13n / 19i`
+- [4.2 Conditional Distributions &
+independent](statistical_inference_casella/42_conditional_distributions_independent.md) — `18n / 27i`
+- [4.3 Bivariate
+transformation](statistical_inference_casella/43_bivariate_transformation.md) — `14n / 24i`
+- [4.4 Hierarchical Model &
+mixture Distribution](statistical_inference_casella/44_hierarchical_model_mixture_distribution.md) — `11n / 19i`
+- [4.5 Covariance &
+correlation](statistical_inference_casella/45_covariance_correlation.md) — `18n / 25i`
+- [4.6 Multi-variate
+distribution](statistical_inference_casella/46_multi_variate_distribution.md) — `22n / 28i`
+- [4.7 Inequalities](statistical_inference_casella/47_inequalities.md) — `1n / 0i`
+- [5.1 Basic Concepts Of
+random Samples](statistical_inference_casella/51_basic_concepts_of_random_samples.md) — `13n / 16i`
+- [5.2 Σ Of Random Variables
+from A Random Sample](statistical_inference_casella/52_of_random_variables_from_a_random_sample.md) — `18n / 26i`
+- [5.3 Sampling From The
+normal Distribution](statistical_inference_casella/53_sampling_from_the_normal_distribution.md) — `21n / 29i`
+- [5.4 Order Statistic](statistical_inference_casella/54_order_statistic.md) — `12n / 16i`
+- [5.5 Convergence Concepts](statistical_inference_casella/55_convergence_concepts.md) — `42n / 52i`
+- [5.6 Generating
+random Sample](statistical_inference_casella/56_generating_random_sample.md) — `31n / 43i`
+- [6.1 Introduction](statistical_inference_casella/61_introduction.md) — `3n / 4i`
+- [6.2 The Sufficient Principle](statistical_inference_casella/62_the_sufficient_principle.md) — `46n / 59i`
+- [6.3 The Likelihood Principle](statistical_inference_casella/63_the_likelihood_principle.md) — `19n / 23i`
+- [6.4 The Equivariance Principle](statistical_inference_casella/64_the_equivariance_principle.md) — `11n / 14i`
+- [7.1 Introduction](statistical_inference_casella/71_introduction.md) — `3n / 3i`
+- [7.2 Method Of
+finding Estimators](statistical_inference_casella/72_method_of_finding_estimators.md) — `42n / 52i`
+- [7.3 Methods Of
+evaluating Estimators](statistical_inference_casella/73_methods_of_evaluating_estimators.md) — `63n / 74i`
+- [8.1 Introduction](statistical_inference_casella/81_introduction.md) — `5n / 5i`
+- [8.2 Method Of Finding Tests](statistical_inference_casella/82_method_of_finding_tests.md) — `21n / 26i`
+- [8.3 Methods Of Evaluating Test](statistical_inference_casella/83_methods_of_evaluating_test.md) — `53n / 64i`
+- [9.1 Introduction](statistical_inference_casella/91_introduction.md) — `9n / 9i`
+- [9.2 Methods Of Finding
+interval Estimators](statistical_inference_casella/92_methods_of_finding_interval_estimators.md) — `52n / 61i`
+- [9.3 Methods Of Evaluating
+interval Estimators](statistical_inference_casella/93_methods_of_evaluating_interval_estimators.md) — `34n / 35i`
+- [10.1 Point Estimation](statistical_inference_casella/101_point_estimation.md) — `18n / 21i`
 
