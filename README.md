@@ -1,6 +1,6 @@
 abc xyz
 
-**`~684 notes` · `~962 screenshots` · `2 notebooks`**
+**`~1,481 notes` · `~2,009 screenshots` · `3 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -84,4 +84,9 @@ Of Dimensionality](pattern_recognition_machine_learning_cbishop/14_the_curse_of_
 - [3.1.3 Sequential Learning](pattern_recognition_machine_learning_cbishop/313_sequential_learning.md) — `1n / 2i`
 - [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) — `19n / 22i`
 - [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) — `5n / 7i`
+
+### 📂 Statistical Inference - Casella (📝 797 Notes | 📸 1047 Screenshots)
+<!-- key: statistical_inference_casella -->
+
+- [Statistical Inference - Casella](statistical_inference_casella/statistical_inference_casella.md) — `797n / 1047i`
 
