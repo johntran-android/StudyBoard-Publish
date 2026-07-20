@@ -1,19 +1,26 @@
-Welcome to my personal learning journey! This repository is where I document my deep dives into foundational topics that form the bedrock of machine learning and artificial intelligence. Currently, I'm immersing myself in the comprehensive wisdom of "Numerical Optimization" by J. Nocedal and "Pattern Recognition and Machine Learning" by C. Bishop – two truly indispensable resources in the field.
+Welcome to my personal learning journey into the foundational mathematical and algorithmic pillars of Machine Learning and Artificial Intelligence! This repository serves as my dedicated space to document and solidify my understanding of these crucial concepts.
 
-Chào mừng đến với hành trình học tập của cá nhân tôi! Kho lưu trữ này là nơi tôi ghi lại những lần tìm hiểu sâu vào các chủ đề nền tảng, tạo nên nền tảng vững chắc cho học máy và trí tuệ nhân tạo. Hiện tại, tôi đang đắm mình trong kiến thức toàn diện từ cuốn "Numerical Optimization" của J. Nocedal và "Pattern Recognition and Machine Learning" của C. Bishop – hai tài liệu thực sự không thể thiếu trong lĩnh vực này.
+You'll find detailed notes from my exploration of *Linear Algebra* based on Gilbert Strang's MIT 18.06 course, which laid a robust foundation for my studies. Currently, I am deeply immersed in two indispensable resources: "Numerical Optimization" by J. Nocedal and "Pattern Recognition and Machine Learning" by C. Bishop, carefully dissecting their profound insights.
 
-You'll find here a collection of my structured notes, meticulously organized chapter by chapter, along with a wealth of supporting screenshots directly from the textbooks. Each note is a distillation of key concepts, theorems, and algorithms, often refined with AI feedback to ensure clarity and accuracy. This systematic approach helps me solidify my understanding and provides a valuable resource for anyone else exploring these complex subjects.
+This collection comprises structured notes, meticulously organized chapter by chapter, enriched with supporting screenshots directly from the textbooks. Each note represents a distillation of key concepts, theorems, and algorithms, often refined with AI feedback to ensure clarity and accuracy. This systematic approach not only solidifies my own understanding but also aims to provide a valuable, accessible resource for fellow learners tackling these complex subjects.
 
-Tại đây, bạn sẽ tìm thấy bộ sưu tập các ghi chú được cấu trúc của tôi, được tổ chức tỉ mỉ theo từng chương, cùng với rất nhiều ảnh chụp màn hình hỗ trợ trực tiếp từ sách giáo khoa. Mỗi ghi chú là sự chắt lọc các khái niệm, định lý và thuật toán quan trọng, thường được tinh chỉnh bằng phản hồi từ AI để đảm bảo sự rõ ràng và chính xác. Cách tiếp cận có hệ thống này giúp tôi củng cố sự hiểu biết của mình và cung cấp một nguồn tài liệu quý giá cho bất kỳ ai đang khám phá các chủ đề phức tạp này.
+Tackling these fundamental texts is a challenging yet incredibly rewarding endeavor. My primary goal is to move beyond passive reading, striving to truly internalize the mathematical underpinnings and practical implications of optimization, pattern recognition, and linear algebra. I firmly believe a strong grasp of these fundamentals is paramount for building robust and innovative AI systems, and I'm excited to openly share my progress and insights with you all.
 
-Tackling these 'bibles' of the field is a challenging but incredibly rewarding experience. My goal is not just to passively read, but to truly understand and internalize the mathematical underpinnings and practical implications of optimization and pattern recognition. I believe a strong grasp of these fundamentals is crucial for building robust and innovative AI systems in the future, and I'm excited to share my progress with you all.
-
-Việc chinh phục những cuốn 'kinh thánh' này trong lĩnh vực là một trải nghiệm đầy thử thách nhưng cực kỳ bổ ích. Mục tiêu của tôi không chỉ là đọc một cách thụ động, mà là thực sự hiểu và nắm vững các cơ sở toán học cũng như ý nghĩa thực tiễn của tối ưu hóa và nhận dạng mẫu. Tôi tin rằng việc nắm vững các kiến thức cơ bản này là rất quan trọng để xây dựng các hệ thống AI mạnh mẽ và sáng tạo trong tương lai, và tôi rất vui được chia sẻ tiến trình của mình với tất cả các bạn.
-
----
 Notes exported from [StudyBoard](https://studyboard.app) — my personal learning workspace.
 
-**`~2,662 notes` · `~3,279 screenshots` · `4 notebooks`**
+---
+
+Chào mừng đến với hành trình học tập cá nhân của tôi về các trụ cột toán học và thuật toán nền tảng của Học máy và Trí tuệ nhân tạo! Kho lưu trữ này là không gian chuyên biệt của tôi để ghi lại và củng cố sự hiểu biết về những khái niệm quan trọng này.
+
+Tại đây, bạn sẽ tìm thấy các ghi chú chi tiết từ hành trình khám phá *Đại số Tuyến tính* của tôi dựa trên khóa học MIT 18.06 của Gilbert Strang, một nền tảng vững chắc cho việc học của tôi. Hiện tại, tôi đang đắm mình sâu sắc vào hai tài liệu không thể thiếu: "Numerical Optimization" của J. Nocedal và "Pattern Recognition and Machine Learning" của C. Bishop, cẩn thận phân tích những hiểu biết sâu sắc từ chúng.
+
+Bộ sưu tập này bao gồm các ghi chú được cấu trúc, được tổ chức tỉ mỉ theo từng chương, được bổ sung bằng các ảnh chụp màn hình hỗ trợ trực tiếp từ sách giáo khoa. Mỗi ghi chú là sự chắt lọc các khái niệm, định lý và thuật toán quan trọng, thường được tinh chỉnh bằng phản hồi từ AI để đảm bảo sự rõ ràng và chính xác. Cách tiếp cận có hệ thống này không chỉ củng cố sự hiểu biết của riêng tôi mà còn nhằm mục đích cung cấp một nguồn tài liệu giá trị, dễ tiếp cận cho những người học khác đang vật lộn với các chủ đề phức tạp này.
+
+Việc chinh phục những văn bản nền tảng này là một nỗ lực đầy thử thách nhưng cực kỳ bổ ích. Mục tiêu chính của tôi là vượt ra ngoài việc đọc thụ động, cố gắng thực sự tiếp thu các cơ sở toán học và ý nghĩa thực tiễn của tối ưu hóa, nhận dạng mẫu và đại số tuyến tính. Tôi tin chắc rằng việc nắm vững những kiến thức cơ bản này là tối quan trọng để xây dựng các hệ thống AI mạnh mẽ và sáng tạo, và tôi rất vui được công khai chia sẻ tiến trình và những hiểu biết của mình với tất cả các bạn.
+
+Ghi chú được xuất từ [StudyBoard](https://studyboard.app) — không gian học tập cá nhân của tôi.
+
+**`~2,665 notes` · `~3,287 screenshots` · `4 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -131,11 +138,14 @@ Derivative Approx](numerical_optimization_jnocedal/81_finite_difference_derivati
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_jnocedal/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 - [A.1 Matrix Factorizations: Cholesky, LU, QR](numerical_optimization_jnocedal/a1_matrix_factorizations_cholesky_lu_qr.md) — `9n / 11i`
 
-### 📂 Pattern Recognition Machine Learning_C.Bishop (📝 315 Notes | 📸 452 Screenshots)
+### 📂 Pattern Recognition Machine Learning_C.Bishop (📝 318 Notes | 📸 460 Screenshots)
 <!-- key: pattern_recognition_machine_learning_cbishop -->
 
-> Cuốn sách kinh thánh trong lĩnh vực học máy và AI
+> This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
+> 
+> Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
+- [📋 Overview](pattern_recognition_machine_learning_cbishop/_overview.md) — `0n / 1i`
 - [1.0 Into](pattern_recognition_machine_learning_cbishop/10_into.md) — `8n / 8i`
 - [1.1 Example: Polynomial Curve Fitting](pattern_recognition_machine_learning_cbishop/11_example_polynomial_curve_fitting.md) — `13n / 20i`
 - [1.2.0 Probability theory](pattern_recognition_machine_learning_cbishop/120_probability_theory.md) — `13n / 21i`
@@ -174,6 +184,7 @@ Of Dimensionality](pattern_recognition_machine_learning_cbishop/14_the_curse_of_
 - [3.1.1 Maximum likelihood and least squares](pattern_recognition_machine_learning_cbishop/311_maximum_likelihood_and_least_squares.md) — `7n / 9i`
 - [3.1.2 Geometry of least squares](pattern_recognition_machine_learning_cbishop/312_geometry_of_least_squares.md) — `1n / 1i`
 - [3.1.3 Sequential Learning](pattern_recognition_machine_learning_cbishop/313_sequential_learning.md) — `1n / 2i`
+- [3.1.4 Regularized least squares](pattern_recognition_machine_learning_cbishop/314_regularized_least_squares.md) — `3n / 7i`
 - [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) — `19n / 22i`
 - [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) — `5n / 7i`
 
