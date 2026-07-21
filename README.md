@@ -20,9 +20,18 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app) — không gian học tập cá nhân của tôi.
 
-**`~2,665 notes` · `~3,287 screenshots` · `4 notebooks`**
+**`~2,705 notes` · `~3,351 screenshots` · `5 notebooks`**
 
 ## 📚 Syllabus / Mục lục
+
+### 📂 Foundation of LLM (📝 40 Notes | 📸 64 Screenshots)
+<!-- key: foundation_of_llm -->
+
+> This notebook explores the foundations of Large Language Models (LLMs), covering various pre-training strategies, key architectures like Encoder-Decoder, and techniques for fine-tuning and adapting these powerful models.
+
+- [📋 Overview](foundation_of_llm/_overview.md) — `0n / 1i`
+- [Giới thiệu Mô hình ngôn ngữ lớn](foundation_of_llm/gii_thiu_m_hnh_ngn_ng_ln.md) — `22n / 28i`
+- [Tiền huấn luyện tự giám sát](foundation_of_llm/tin_hun_luyn_t_gim_st.md) — `18n / 35i`
 
 ### 📂 MIT18.06_G.Strang (📝 1181 Notes | 📸 1269 Screenshots)
 <!-- key: mit1806_gstrang -->
