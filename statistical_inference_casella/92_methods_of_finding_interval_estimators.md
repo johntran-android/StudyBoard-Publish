@@ -2104,6 +2104,8 @@ interval Estimators
 
 <a id="node-4msae59"></a>
 
+- **Đại lượng then chốt và họ phân phối**
+
 <p align="center"><kbd><img src="assets/lxw4esehy7b.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2177,6 +2179,8 @@ interval Estimators
 
 <a id="node-47nzsh2"></a>
 
+- **Đại lượng chốt phân phối mũ**
+
 <p align="center"><kbd><img src="assets/7iay7dn2rrv.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2201,6 +2205,8 @@ interval Estimators
 <br>
 
 <a id="node-ff32hql"></a>
+
+- **Pivot từ công thức PDF**
 
 <p align="center"><kbd><img src="assets/xvj81ymbzge.png" width="80%"></kbd></p>
 
@@ -2332,6 +2338,8 @@ interval Estimators
 
 <a id="node-33zn53r"></a>
 
+- **Xây dựng tập tin cậy**
+
 <p align="center"><kbd><img src="assets/kcup2h8a4he.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2441,6 +2449,8 @@ interval Estimators
 
 <a id="node-hmy0ory"></a>
 
+- **Khoảng tin cậy λ phân phối mũ**
+
 <p align="center"><kbd><img src="assets/bewu7ffbqkb.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -2497,6 +2507,8 @@ interval Estimators
 <br>
 
 <a id="node-g9mg0da"></a>
+
+- **Khoảng tin cậy từ đại lượng pivot**
 
 <p align="center"><kbd><img src="assets/daf5of8hoc5.png" width="80%"></kbd></p>
 
@@ -2646,6 +2658,8 @@ interval Estimators
 <br>
 
 <a id="node-ek0kk9r"></a>
+
+- **Khoảng tin cậy cho phương sai**
 
 <p align="center"><kbd><img src="assets/pez8aisxnn.png" width="80%"></kbd></p>
 
@@ -4345,6 +4359,8 @@ interval Estimators
 
 <a id="node-p5oozlt"></a>
 
+- **Ví dụ của giáo sư**
+
 <p align="center"><kbd><img src="assets/kgul9dprrdi.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -4412,6 +4428,8 @@ interval Estimators
 <br>
 
 <a id="node-1agxnpl"></a>
+
+- **Lý thuyết và Ước lượng Bayesian**
 
 <p align="center"><kbd><img src="assets/jj4bmpky0m.png" width="80%"></kbd></p>
 
