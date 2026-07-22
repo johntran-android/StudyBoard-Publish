@@ -1,6 +1,6 @@
 # 10.3 Algorithms for nonlinear least-squares problem
 
-📊 **Progress:** `6` Notes | `6` Screenshots | `6` AI Reviews
+📊 **Progress:** `9` Notes | `11` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-i8zrnvn"></a>
@@ -371,4 +371,43 @@
 > Ghi chú giải thích rất chính xác và đầy đủ, không chỉ tóm tắt nội dung trong hình mà còn cung cấp thêm kiến thức nền tảng và chiều sâu về cách phương pháp Gauss-Newton được hình thành và áp dụng. Một điểm nhỏ có thể cải thiện là đảm bảo tính nhất quán trong hệ số 1/2 khi định nghĩa hàm f(x) ban đầu.
 
 <br>
+
+<a id="node-eh1f54p"></a>
+
+- **Convergence of the Gauss-Newton Method**
+
+<p align="center"><kbd><img src="assets/r8yh0j9nhz.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Quay lại sau
+
+<br>
+
+<a id="node-3atjq2q"></a>
+
+- **Theorem 10.1**
+
+<p align="center"><kbd><img src="assets/kwd5ew6ywnf.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Quay lại sau
+
+<br>
+
+<a id="node-nrctw1r"></a>
+
+- **Algorithms for Nonlinear Least-Squares Problems**
+
+<p align="center"><kbd><img src="assets/nqvwojftf4f.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4ub07kwlu1b.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/w6ffgce4q7.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Quay lại sau
+
+<br>
+
+<a id="node-x1k0lnw"></a>
 
