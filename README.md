@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app) — không gian học tập cá nhân của tôi.
 
-**`~2,712 notes` · `~3,358 screenshots` · `5 notebooks`**
+**`~3,593 notes` · `~4,467 screenshots` · `6 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -199,6 +199,62 @@ Of Dimensionality](pattern_recognition_machine_learning_cbishop/14_the_curse_of_
 - [3.1.5 Multiple outputs](pattern_recognition_machine_learning_cbishop/315_multiple_outputs.md) — `3n / 3i`
 - [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) — `19n / 22i`
 - [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) — `5n / 7i`
+
+### 📂 STAT110_Havard (📝 881 Notes | 📸 1109 Screenshots)
+<!-- key: stat110_havard -->
+
+> This notebook explores foundational and advanced topics in probability and statistical inference, covering random variables, their distributions (discrete and continuous), expectation, variance, moment generating functions, and key theorems such as the Law of Large Numbers and Central Limit Theorem.
+> 
+> Sổ tay này khám phá các chủ đề cơ bản và nâng cao trong lý thuyết xác suất và suy luận thống kê, bao gồm các biến ngẫu nhiên, các phân phối của chúng (rời rạc và liên tục), kỳ vọng, phương sai, hàm sinh moment, và các định lý quan trọng như Luật Số lớn và Định lý Giới hạn Trung tâm.
+
+- [📋 Overview](stat110_havard/_overview.md) — `0n / 1i`
+- [Lec 1: Probability & Counting](stat110_havard/lec_1_probability_counting.md) — `17n / 17i`
+- [Lec 2: Story Proofs,
+axioms Of Probability](stat110_havard/lec_2_story_proofs_axioms_of_probability.md) — `23n / 23i`
+- [Lec 3: Birthday Problem,
+properties Of Probability](stat110_havard/lec_3_birthday_problem_properties_of_probability.md) — `21n / 23i`
+- [Lec 4: Conditional Probability](stat110_havard/lec_4_conditional_probability.md) — `26n / 26i`
+- [Lec 5: Conditional Probability,
+law Of Total Probability](stat110_havard/lec_5_conditional_probability_law_of_total_probability.md) — `31n / 35i`
+- [Lec 6: Monty Hall, Simpson's
+paradox](stat110_havard/lec_6_monty_hall_simpsons_paradox.md) — `23n / 23i`
+- [Lec 7: Gambler's Ruin &
+random Variables](stat110_havard/lec_7_gamblers_ruin_random_variables.md) — `29n / 35i`
+- [Lec 8: Random Variables &
+their Distributions](stat110_havard/lec_8_random_variables_their_distributions.md) — `32n / 36i`
+- [Lec 9: Expectation, Indicator
+random Variables, Linearity](stat110_havard/lec_9_expectation_indicator_random_variables_linearity.md) — `40n / 41i`
+- [Lec 10: Expected Value](stat110_havard/lec_10_expected_value.md) — `34n / 41i`
+- [Lec 11: Poisson Distribution](stat110_havard/lec_11_poisson_distribution.md) — `31n / 39i`
+- [Lec 12: Discrete Vs
+continuous, The Uniform](stat110_havard/lec_12_discrete_vs_continuous_the_uniform.md) — `42n / 49i`
+- [Lec 13: Normal Distribution](stat110_havard/lec_13_normal_distribution.md) — `33n / 42i`
+- [Lec 14: Location, Scale, Lotus](stat110_havard/lec_14_location_scale_lotus.md) — `41n / 47i`
+- [Lec 15: Midterm Review](stat110_havard/lec_15_midterm_review.md) — `29n / 32i`
+- [Lec 16: Exponential
+distribution](stat110_havard/lec_16_exponential_distribution.md) — `19n / 25i`
+- [Lec 17: Moment
+generating Functions](stat110_havard/lec_17_moment_generating_functions.md) — `49n / 60i`
+- [Lec 18: MGF Continued](stat110_havard/lec_18_mgf_continued.md) — `42n / 49i`
+- [Lec 19: Joint, Conditional And
+marginal Distribution](stat110_havard/lec_19_joint_conditional_and_marginal_distribution.md) — `38n / 41i`
+- [Lec 20: Multinomial And Cauchy](stat110_havard/lec_20_multinomial_and_cauchy.md) — `31n / 44i`
+- [Lec 21: Covariance & Correlation](stat110_havard/lec_21_covariance_correlation.md) — `31n / 38i`
+- [Lec 22: Transformations & Convolution](stat110_havard/lec_22_transformations_convolution.md) — `22n / 28i`
+- [Lec 23: Beta Distribution](stat110_havard/lec_23_beta_distribution.md) — `10n / 13i`
+- [Lec 24: Gamma Distribution & Poisson](stat110_havard/lec_24_gamma_distribution_poisson.md) — `24n / 24i`
+- [Lec 25: Order Statistic &
+conditional Expectation](stat110_havard/lec_25_order_statistic_conditional_expectation.md) — `27n / 31i`
+- [Lec 26 Conditional
+expectation](stat110_havard/lec_26_conditional_expectation.md) — `30n / 33i`
+- [Lec 27: Conditional
+expectation Given An R.v](stat110_havard/lec_27_conditional_expectation_given_an_rv.md) — `26n / 36i`
+- [Lec 28: Inequalities](stat110_havard/lec_28_inequalities.md) — `19n / 21i`
+- [Lec 29: Law Of Large Numbers &
+law Of Central Limit](stat110_havard/lec_29_law_of_large_numbers_law_of_central_limit.md) — `35n / 36i`
+- [Lec 30: Chi-square, Student-t,
+multi-variate Gaussian](stat110_havard/lec_30_chi_square_student_t_multi_variate_gaussian.md) — `21n / 22i`
+- [Cheatsheet (nhờ Ai)](stat110_havard/cheatsheet_nh_ai.md) — `5n / 98i`
 
 ### 📂 Statistical Inference - Casella (📝 799 Notes | 📸 1050 Screenshots)
 <!-- key: statistical_inference_casella -->
