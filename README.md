@@ -27,7 +27,22 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app) — không gi
 ### 📂 MIT 18.01 — Single Variable Calculus (📝 317 Notes | 📸 331 Screenshots)
 <!-- key: a0_mit1801 -->
 
-- [MIT18.01 Single-variate Calculus](a0_mit1801/mit1801_single_variate_calculus.md) — `317n / 331i`
+- [Lec 1: Rate Of Change](a0_mit1801/lec_1_rate_of_change.md) — `24n / 26i`
+- [Lec 2: Limits](a0_mit1801/lec_2_limits.md) — `28n / 30i`
+- [Lec 3: Derivatives](a0_mit1801/lec_3_derivatives.md) — `21n / 22i`
+- [Lec 4: Chain Rule](a0_mit1801/lec_4_chain_rule.md) — `21n / 22i`
+- [Lec 5: Implicit
+differentiaion](a0_mit1801/lec_5_implicit_differentiaion.md) — `29n / 30i`
+- [Lec 6: Exponential &
+log](a0_mit1801/lec_6_exponential_log.md) — `36n / 37i`
+- [Lec 9: Linear And Quadratic
+approximations](a0_mit1801/lec_9_linear_and_quadratic_approximations.md) — `27n / 28i`
+- [Lec 10: Curve Sketching](a0_mit1801/lec_10_curve_sketching.md) — `28n / 29i`
+- [Lec 11: Max-min](a0_mit1801/lec_11_max_min.md) — `29n / 30i`
+- [Lec 12: Related Rates](a0_mit1801/lec_12_related_rates.md) — `24n / 25i`
+- [Lec 13: Newton's Method](a0_mit1801/lec_13_newtons_method.md) — `26n / 28i`
+- [Lec 14: Mean
+value Theorem](a0_mit1801/lec_14_mean_value_theorem.md) — `24n / 24i`
 
 ### 📂 EE364a, Convex Optim_S.Boyd (📝 937 Notes | 📸 1428 Screenshots)
 <!-- key: ee364a_convex_optim_sboyd -->
