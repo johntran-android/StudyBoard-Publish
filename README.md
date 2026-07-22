@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app) — không gian học tập cá nhân của tôi.
 
-**`~4,850 notes` · `~6,232 screenshots` · `9 notebooks`**
+**`~6,453 notes` · `~8,933 screenshots` · `9 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -44,10 +44,73 @@ approximations](a0_mit1801/lec_9_linear_and_quadratic_approximations.md) — `27
 - [Lec 14: Mean
 value Theorem](a0_mit1801/lec_14_mean_value_theorem.md) — `24n / 24i`
 
-### 📂 CS231N_Stanford (📝 0 Notes | 📸 1 Screenshots)
+### 📂 CS231N_Stanford (📝 1603 Notes | 📸 2702 Screenshots)
 <!-- key: cs231n_stanford -->
 
-- [📋 Overview](cs231n_stanford/_overview.md) — `0n / 1i`
+- [📋 Overview](cs231n_stanford/_overview.md) — `1n / 1i`
+- [Lecture 1/16 - Introduction To CNN](cs231n_stanford/lecture_116_introduction_to_cnn.md) — `11n / 31i`
+- [Lecture 2/16 - Image Classification](cs231n_stanford/lecture_216_image_classification.md) — `41n / 58i`
+- [LECTURE NOTE: Image Classification:
+Data-driven Approach, k-Nearest
+Neighbor, train/val/test splits](cs231n_stanford/lecture_note_image_classification_data_driven_approach_k_nearest_neighbor_trainvaltest_splits.md) — `1n / 0i`
+- [Assignment 1 - KNN](cs231n_stanford/assignment_1_knn.md) — `31n / 45i`
+- [Lecture 3/16 - Loss Functions And Optimization](cs231n_stanford/lecture_316_loss_functions_and_optimization.md) — `117n / 154i`
+- [Lecture 4/16 - Introduction To Neural Networks](cs231n_stanford/lecture_416_introduction_to_neural_networks.md) — `23n / 55i`
+- [Lecture Note Nn P1](cs231n_stanford/lecture_note_nn_p1.md) — `1n / 14i`
+- [Note #4 Backpropagation](cs231n_stanford/note_4_backpropagation.md) — `9n / 13i`
+- [Lecture 5/16 - Convolutional Neural Networks](cs231n_stanford/lecture_516_convolutional_neural_networks.md) — `52n / 63i`
+- [Lecture 6/16 - Training Neural Network I](cs231n_stanford/lecture_616_training_neural_network_i.md) — `65n / 105i`
+- [Lecture 7/16 - Training Neural Network Ii](cs231n_stanford/lecture_716_training_neural_network_ii.md) — `70n / 90i`
+- [Note - Neural
+network Part 2](cs231n_stanford/note_neural_network_part_2.md) — `44n / 59i`
+- [Note - Neural Network Part 3](cs231n_stanford/note_neural_network_part_3.md) — `49n / 61i`
+- [Note - Convolutional Net](cs231n_stanford/note_convolutional_net.md) — `22n / 31i`
+- [Assignment 1 - 2 Layer Nn](cs231n_stanford/assignment_1_2_layer_nn.md) — `28n / 38i`
+- [Assignment 2 - Fully Connected Nn](cs231n_stanford/assignment_2_fully_connected_nn.md) — `25n / 61i`
+- [Paper: Batch normalization](cs231n_stanford/paper_batch_normalization.md) — `17n / 32i`
+- [Assignment 2 - Batch Normalization](cs231n_stanford/assignment_2_batch_normalization.md) — `18n / 35i`
+- [Assignment 2 - Dropout](cs231n_stanford/assignment_2_dropout.md) — `6n / 14i`
+- [Assignment 2 -
+convolutional Network](cs231n_stanford/assignment_2_convolutional_network.md) — `27n / 64i`
+- [Assignment 2
+- Pytorch](cs231n_stanford/assignment_2_pytorch.md) — `22n / 32i`
+- [Lecture 8/16 - Deep Learning Software](cs231n_stanford/lecture_816_deep_learning_software.md) — `89n / 107i`
+- [Lecture 9/16 - CNN Architecture](cs231n_stanford/lecture_916_cnn_architecture.md) — `55n / 72i`
+- [Lecture 10/16 - Recurrent Neural Network](cs231n_stanford/lecture_1016_recurrent_neural_network.md) — `67n / 86i`
+- [Lecture Note
+introduction To RNN](cs231n_stanford/lecture_note_introduction_to_rnn.md) — `13n / 19i`
+- [Assignment 3 - RNN Captioning](cs231n_stanford/assignment_3_rnn_captioning.md) — `12n / 49i`
+- [Assignment 3 - Lstm Captioning](cs231n_stanford/assignment_3_lstm_captioning.md) — `9n / 34i`
+- [Lecture X: Transformer](cs231n_stanford/lecture_x_transformer.md) — `41n / 47i`
+- [Assignment 4 - Transformer Image Captioning](cs231n_stanford/assignment_4_transformer_image_captioning.md) — `20n / 36i`
+- [Lecture 11/16 - Detection And
+segmentation](cs231n_stanford/lecture_1116_detection_and_segmentation.md) — `108n / 144i`
+- [EECS 498-007/598-005 (2022) - ASSIGNMENT 4 (Part 1):
+ONE-STATE OBJECT DETECTOR](cs231n_stanford/eecs_498_007598_005_2022_assignment_4_part_1_one_state_object_detector.md) — `49n / 118i`
+- [EECS 498-007/598-005 (2022) - ASSIGNMENT 4 (Part 2):
+TWO-STAGE DETECTOR](cs231n_stanford/eecs_498_007598_005_2022_assignment_4_part_2_two_stage_detector.md) — `33n / 123i`
+- [Eecs 498-007_598-005 (2020) Assignment 4 (part 1):
+single-stage Detector - Yolo](cs231n_stanford/eecs_498_007_598_005_2020_assignment_4_part_1_single_stage_detector_yolo.md) — `43n / 158i`
+- [Eecs 498-007_598-005 (2020) Assignment 4 (part 2):
+two-stage Detector - Faster Rcnn](cs231n_stanford/eecs_498_007_598_005_2020_assignment_4_part_2_two_stage_detector_faster_rcnn.md) — `14n / 90i`
+- [Lecture 12/16 - Visualization And
+understanding](cs231n_stanford/lecture_1216_visualization_and_understanding.md) — `60n / 84i`
+- [Eecs 498-007_598-005 (2020) Assignment 6:
+network Visualization](cs231n_stanford/eecs_498_007_598_005_2020_assignment_6_network_visualization.md) — `8n / 33i`
+- [Eecs 498-007_598-005 (2020) Assignment 6:
+style Transfer](cs231n_stanford/eecs_498_007_598_005_2020_assignment_6_style_transfer.md) — `10n / 39i`
+- [Guess Lecture - Adversarial Machine Learning](cs231n_stanford/guess_lecture_adversarial_machine_learning.md) — `9n / 12i`
+- [Eecs498-007 Lecture 17: 3d Vision](cs231n_stanford/eecs498_007_lecture_17_3d_vision.md) — `49n / 59i`
+- [Eecs498-007
+lecture 18: Video](cs231n_stanford/eecs498_007_lecture_18_video.md) — `55n / 66i`
+- [Lecture 13/16 - Generative Models](cs231n_stanford/lecture_1316_generative_models.md) — `72n / 86i`
+- [Lecture 14/16 - Generative Models Ii](cs231n_stanford/lecture_1416_generative_models_ii.md) — `45n / 53i`
+- [Eecs 498-007_598-005 (2022) Assignment 6:
+variational Auto-encoder](cs231n_stanford/eecs_498_007_598_005_2022_assignment_6_variational_auto_encoder.md) — `18n / 43i`
+- [Eecs 498-007_598-005 (2022) Assignment 6:
+generative Adversarial Network](cs231n_stanford/eecs_498_007_598_005_2022_assignment_6_generative_adversarial_network.md) — `20n / 59i`
+- [Lecture 14/16 - Deep Reinforcement
+learning](cs231n_stanford/lecture_1416_deep_reinforcement_learning.md) — `24n / 29i`
 
 ### 📂 EE364a, Convex Optim_S.Boyd (📝 937 Notes | 📸 1428 Screenshots)
 <!-- key: ee364a_convex_optim_sboyd -->
