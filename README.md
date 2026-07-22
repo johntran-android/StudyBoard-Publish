@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app) — không gian học tập cá nhân của tôi.
 
-**`~4,850 notes` · `~6,231 screenshots` · `8 notebooks`**
+**`~4,850 notes` · `~6,232 screenshots` · `9 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -43,6 +43,11 @@ approximations](a0_mit1801/lec_9_linear_and_quadratic_approximations.md) — `27
 - [Lec 13: Newton's Method](a0_mit1801/lec_13_newtons_method.md) — `26n / 28i`
 - [Lec 14: Mean
 value Theorem](a0_mit1801/lec_14_mean_value_theorem.md) — `24n / 24i`
+
+### 📂 CS231N_Stanford (📝 0 Notes | 📸 1 Screenshots)
+<!-- key: cs231n_stanford -->
+
+- [📋 Overview](cs231n_stanford/_overview.md) — `0n / 1i`
 
 ### 📂 EE364a, Convex Optim_S.Boyd (📝 937 Notes | 📸 1428 Screenshots)
 <!-- key: ee364a_convex_optim_sboyd -->
