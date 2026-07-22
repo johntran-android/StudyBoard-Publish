@@ -1,6 +1,6 @@
 # 10.1 Point Estimation
 
-📊 **Progress:** `18` Notes | `21` Screenshots | `5` AI Reviews
+📊 **Progress:** `20` Notes | `23` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-2ixm3r0"></a>
@@ -992,83 +992,436 @@
 <p align="center"><kbd><img src="assets/9pfq0mb66la.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Giải nghĩa câu "If an MLE is **asymptotically efficient**, the **asymptotic variance** in Theorem 10.1.6 is the **Delta Method variance** of Theorem 5.5.24 (without the 1/n term)"
+> Cùng giải nghĩa đoạn này:
 >
 >
 >
-> i) Đầu tiên ôn nhanh Delta method theorem: Nói ngắn gọn, theorem này nói rằng:
+> Đại ý là, từ các mảnh ghép: i) CRLB của Wn, ii) định nghĩa của một estimator hiệu quả tiệm cận và iii)
+>
+> MLE là estimator hiệu quả tiệm cận thì ta có thể dùng chúng để giải quyết vấn đề sau đây: Estimate,
+>
+> ước lượng xấp xỉ giá trị của variance của một MLE, θ^, hoặc nói chung hơn, là h(θ^).
 >
 >
 >
-> Nếu √n(Yn - θ) → (d) n(0, σ^2) thì √n(g(Yn) - g(θ)) → (d) n(0, σ^2 \[g'(θ)\]^2)
+> Lập luận như sau:
 >
 >
 >
-> và với định nghĩa của phương sai tiệm cận của một chuỗi statistic là phương sai của phân phối chuẩn giới hạn: Nếu kn(Yn - θ) → (d) n(0, σ^2) thì Asymp Var(Yn) được định nghĩa là σ^2
+> Đầu tiên, cùng ôn lại CRLB, nói đơn giản, theorem này cho biết, nếu ta có một statistic Wn là estimator
+>
+> của θ thỏa vài điều kiện nhất định thì Var(Wn) ≥ \[d/dθ E\[Wn\]\]^2 / In(θ) với In(θ) là information number
+>
+> của n observation. Công thức của nó có thể nhìn trong sách, nhưng viết In(θ) cho gọn, và không khó
+>
+> để thấy nhờ tính iid, In(θ) = n I1(θ).
 >
 >
 >
-> Thì theo đó hiểu Delta method bằng lời là:
+> Gút lại, kết quả này chỉ là: nếu ta có Wn là estimator của θ thì CRLB của Var(Wn) là \[d/dθ E\[Wn\]\]^2 / n
+>
+> I1(θ), và nếu xét Wn có E\[Wn\] = h(θ) thì cái CRLB là **\[h'(θ)\]^2 / n I1(θ)**.
 >
 >
 >
-> Nếu Asymp Var(Yn) = σ^2 thì Asymp Var(g(Yn)) = σ^2 × \[g'(θ)\]^2
+> Kết quả này chỉ là để đây tí nữa xài.
 >
 >
 >
-> Tạm ghi là \[Asymp Var(g(Yn))\]\_Delta Method = σ^2 × \[g'(θ)\]^2
+> Tiếp theo ta xét định nghĩa của một Wn estimator **hiệu quả tiệm cận** của g(θ), thì theo định nghĩa:
 >
 >
 >
-> ii) Ôn nhanh về chặn dưới Cramer Rao và thế nào là chuỗi estimator hiệu quả tiệm cận
+> √n(Wn - θ) → (d) n(0, ν(θ)) với ν(θ) = \[g'(θ)\]^2 / I1(θ).
 >
 >
 >
-> Chặn dưới Cramer Rao: Var\_θ(W(**X**)) ≥ \[d/dθ E\_θ\[W(**X**)\]^2\] / E\_θ\[(∂/∂θ log f(**X**|θ))^2\]
+> Và ta lại đã chứng minh mle θ^ của θ, cũng coi như của g(θ) với g là identity function, là một estimator
+>
+> hiệu quả tiệm cận (cũng là nhất quán (consistent) luôn), nên theo định nghĩa trên ta có:
 >
 >
 >
-> Định nghĩa hiệu quả tiệm cận: nếu √n(Wn - τ(θ)) → n(0, ν(θ)) với ν(θ) = (\[τ'(θ)\]^2 / E\_θ\[(∂/∂θ log f(**X**|θ))^2\]).
+> √n(θ^ - θ) → (d) n(0, 1/I1(θ)), và với định nghĩa của phương sai tiệm cậnv thì đây cũng chính là nói
+>
+> Avar(θ^) = 1/I1(θ))
 >
 >
 >
-> (√n(Wn - τ(θ)) → n(0, ν(θ)) cũng chính là nói Asymp Var(Wn) = ν(θ)
+> Rồi, tiếp, ta xét delta method theorem, nó nói rằng:
 >
 >
 >
-> Và √n(Wn - τ(θ)) → n(0, ν(θ)) hàm ý lim E\_θ\[Wn\] → τ(θ). Nên ν(θ) cũng là (\[d/dθ E\_θ(Wn)\]^2 / E\_θ\[(∂/∂θ log f(**X**|θ))^2\]), và do đó, chính là CRLB.
+> nếu √n(Yn - θ) → (d) n(0, σ^2) thì √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\]^2 σ^2))
 >
 >
 >
-> Nên chuỗi estimator hiệu quả tiệm cận là khi phương sai tiệm cận bằng CRLB
+> Và cái trên cũng tương đương với việc nói Avar(Yn) = σ^2 thì Avar(g(Yn)) = \[g'(θ)\]^2 σ^2 = \[g'(θ)\]^2
+>
+> Avar(Yn)
 >
 >
 >
-> iii) Liên kết i) và ii): Thử xem Delta method variance của một chuỗi Wn hiệu quả tiệm cận:
+> Và việc nói Avar(g(Yn)) = \[g'(θ)\]^2 Avar(Yn) thì cũng có nghĩa là
 >
 >
 >
-> Theo i) thì Asymp Var(Yn) = σ^2, thì \[Asymp g(Yn)\]\_Delta = σ^2 \[g'(θ)\]^2.
+> khi n lớn thì Var(g(Yn)) ≈ \[g'(θ)\]^2 Avar(Yn) / n
 >
 >
 >
-> Mà theo ii) nếu Wn hiệu quả tiệm cận cho τ(θ) thì Asymp Var(Wn) = ν(θ) = (\[d/dθ E\_θ(Wn)\]^2 / \[E\_θ\[(∂/∂θ log f(**X**|θ))^2\]\])
+> vì sao, vì √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\]^2 σ^2)) = n(0, \[g'(θ)\]^2 Avar(Yn))) có bản chất ý nghĩa là: khi
+>
+> n vô cùng thì random variable √n(g(Yn) - g(θ)) sẽ có distribution là n(0, \[g'(θ)\]^2 Avar(Yn))).
 >
 >
 >
-> Nên nếu Yn hiệu quả tiệp cận cho τ(θ) = θ thì
+> Nên dĩ nhiên khi n lớn thì ta có xấp xỉ:
 >
 >
 >
-> Asymp Var(Yn) = (\[d/dθ θ\]^2 / \[E\_θ\[(∂/∂θ log f(**X**|θ))^2\]\])
+> Var\[√n(g(Yn) - g(θ))\] ≈ \[g'(θ)\]^2 Avar(Yn)
 >
 >
 >
-> = (1 / E\_θ\[(∂/∂θ log f(**X**|θ))^2\])
+> (ủa ko phải sao, vì nói distribution khi n vô cùng của X là n(μ, ε^2), tức cũng là nói khi n lớn X có
+>
+> distribution là normal, mean là μ, variance là ε^2, vậy thì khi n lớn ta sẽ có Var(X) ≈ ε^2 chứ, hoàn toàn
+>
+> logic)
 >
 >
 >
-> (do E\_θ(Yn) = θ ⇨ d/dθ \[θ\] = 1)
+> ⇔ n Var(g(Yn)) - n Var(g(θ)) ≈ \[g'(θ)\]^2 Avar(Yn)
+>
+>
+>
+> ⇔ n Var(g(Yn)) - 0 ≈ \[g'(θ)\]^2 Avar(Yn)
+>
+>
+>
+> ⇔ Var(g(Yn)) ≈ \[g'(θ)\]^2 Avar(Yn) / n
+>
+>
+>
+> Như vậy, nếu ta áp dụng delta method cho Yn = θ^ và g = h thì sao:
+>
+>
+>
+> Var(h(θ^)) ≈ \[h'(θ)\]^2 Avar(θ^) / n.
+>
+>
+>
+> Và với việc ta đã chỉ ra với θ^ là mle của θ, nên là estimator hiệu quả tiệm cận, nên Avar(θ^) = 1/I1(θ)
+>
+>
+>
+> ⇨ Var(h(θ^)) ≈ \[h'(θ)\]^2 (1/I1(θ)) / n
+>
+>
+>
+> ⇔ Var(h(θ^)) ≈ **\[h'(θ)\]^2 /nI1(θ))**, đây chính là 10.1.7
+>
+>
+>
+> Và vế phải như trên đã nói, chính là CRLB của một estimator Wn nào đó có E\[Wn\] = h(θ)
+>
+>
+>
+> **Từ đó ta có thể tính CRLB của một estimator Wn nào đó có E\[Wn\] = h(θ), và dùng nó để estimate cho**
+>
+> **Var(h(θ^))**
+>
+>
+>
+> Tóm lại, nếu nói cực ngắn gọn thì chỉ là 3 bước lập luận:
+>
+>
+>
+> i) Delta method cho Avar(h(θ^)) = \[h'(θ)\]^2 Avar(θ^).
+>
+>
+>
+> Và cái này cũng là cho ta: khi n lớn, Var(h(θ^)) ≈ \[h'(θ)\]^2 Avar(θ^) / n
+>
+>
+>
+> ii) θ^ là mle của θ, nên hiệu quả tiệm cận, theo định nghĩa của hiệu quả tiệm cận cho ta: Avar(θ^) =
+>
+> 1/I1(θ))
+>
+>
+>
+> i) và ii) ⇨ khi n lớn, Var(h(θ^)) ≈ \[h'(θ)\]^2 \[1/I1(θ))\] / n = \[h'(θ)\]^2/ nI1(θ))
+>
+>
+>
+> ⇔ Var(h(θ^)) ≈ \[h'(θ)\]^2/ nI1(θ)) (1)
+>
+>
+>
+> Cuối cùng:
+>
+>
+>
+> iii) CRLB theorem nói rằng với Wn thỏa vì điều kiện Var(Wn) ≥ \[d/dθ E\_θ\[Wn\]\]^2 / nI1(θ).
+>
+>
+>
+> nên nếu chọn Wn có E\_θ\[Wn\] = h(θ) thì:
+>
+>
+>
+> CRLB của Var(Wn) = \[h'(θ)\]^2 / nI1(θ) (2)
+>
+>
+>
+> Từ (1) và (2), ta suy ra Var(h(θ^)) ≈ CRLB của Var(Wn) với Wn có E\_θ\[Wn\] = h(θ).
+>
+>
+>
+> Phần tiếp theo chỉ là dùng công thức để thế vào In(θ), nhưng ý tưởng chính thì mình đã thông.
+
+<br>
+
+<a id="node-2mwxabg"></a>
+
+- **Delta Method Variance Approximation**
+
+<p align="center"><kbd><img src="assets/01kuzyikwazi.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, ôn lại nhanh cái lập luận bữa trước để cho phép ta dùng CRLB để estimate cho variance:
+>
+>
+>
+> rất đơn giản thôi, dựa trên các điểm sau đây:
+>
+>
+>
+> i) Với một Wn, là estimator của g(θ) thì CRLB của variance của nó: Var(Wn) ≥ \[d/dθ E\_θ\[Wn\]\]^2 / nI1(θ) (với I1(θ) là information number của 1 observation)
+>
+>
+>
+> nên nếu ta chọn Wn có E\[Wn\] = h(θ), thì CRLB của nó là \[h'(θ)\]^2 / nI1(θ)
+>
+>
+>
+> ii) Theo theorem của Delta method nói rằng nếu Avar(Yn) = σ^2 thì Avar(g(Yn)) = \[g'(θ)\]^2 σ^2 = \[g'(θ)\]^2 Avar(Yn). Và biểu thị toán học của của Avar(g(Yn)) = \[g'(θ)\]^2 Avar(Yn) đó là √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\]^2 Avar(Yn)), và cái này có nghĩa là nếu n lớn ta có Var\[√n(g(Yn) - g(θ))\] ≈ \[g'(θ)\]^2 Avar(Yn)) ⇔ Var\[g(Yn)\] ≈ \[g'(θ)\]^2 Avar(Yn)) / n.
+>
+>
+>
+> iii) Và giả sử ta có θ^ là mle của θ, thì nó sẽ có tính hiệu quả tiệm cận, theo định nghĩa, có nghĩa là:
+>
+>
+>
+> Avar(θ^) = 1/I1(θ). Nên nếu áp dụng điều ii) với Yn = θ^ và hàm h, thì ta sẽ có Var\[h(θ^)\] ≈ \[h'(θ)\]^2 / nI1(θ), và cái này theo (i) thì chính là CRLB của Wn có E\[Wn\] = h(θ)
+>
+>
+>
+> Vậy có nghĩa là, nếu ta muốn estimate variance của h(θ^), ta có thể dùng CRLB của một estimator Wn nào đó có E\[Wn\] = h(θ): Var\[h(θ^)\] ≈ CRLB của Var(Wn) = \[h'(θ)\]^2 / nI1(θ).
+>
+>
+>
+> Và tới đây, cách làm sẽ như sau:
+>
+>
+>
+> i) Dùng công thức xấp xỉ trên, sẽ cho phép ta dùng CLRB của Var(Wn) (với E\[Wn\] = h(θ)) = \[h'(θ)\]^2 / nI1(θ) để làm xấp xỉ cho Var(h(θ^).
+>
+>
+>
+> Nhưng bản thân cái xấp xỉ này ta cũng không biết vì nó dính θ, thành ra ta sẽ có bước 2:
+>
+>
+>
+> ii) Dùng estimator của θ, tức θ^ trong công thức xấp xỉ, như vậy:
+>
+>
+>
+> Estimator Var(h(θ^)) ≈ \[h'(θ^)\]^2 / nI1(θ^)
+>
+>
+>
+> Tóm lạ.
+>
+>
+>
+> Var(h(θ^)) ≈ \[h'(θ)\]^2 / In(θ), đây là công thức có được nhờ Delta method, và định nghĩa của efficient estimator.
+>
+>
+>
+> Với In(θ), thì dùng bổ đề 7.3.11 ta có công thức tính.
+>
+>
+>
+> Sau đó, ta dùng θ^ thay cho θ, và chuyển thành dấu xấp xỉ lần nữa.
+>
+>
+>
+> Var(h(θ^)) ≈ \[h'(θ^)\]^2 / In(θ^), hay Var(h(θ^)) ≈ \[h'(θ)\]^2 / In(θ) | θ = θ^
+>
+>
+>
+> nên kí hiệu là Var\_ θ^\[h(θ^)\] ý là hàm Var(h(θ^)) ≈ \[h'(θ)\]^2 / In(θ) evaluate tại θ^
+>
+>
+>
+> hoặc Var^(h(θ^)).
+>
+>
+>
+> Đây cũng là ý gs nói khúc cuối.
+>
+>
+>
+> ---
+>
+>
+>
+> Quay lại nói về cái vụ dùng Lemma 7.3.11:
+>
+>
+>
+> Như đã biết, trong phần CRLB, thhì E\_θ{\[∂/∂θ log f(**X**|θ)\]^2}, được kí hiệu là In(θ), information number của n observation (xem link).
+>
+>
+>
+> thì theo Lemma 7.3.11 nói rằng nếu f(x|θ) thỏa d/dθ E\_θ\[∂/∂θ log f(**X**|θ)\]
+>
+>
+>
+> = ∫ ∂/∂θ\[(∂/∂θ log f(x|θ)d(x|θ)\] dx thì E\_θ{\[∂/∂θ log f(**X**|θ)\]^2} = - E\_θ\[∂^2/∂θ^2 log f(**X**|θ)\]
+>
+>
+>
+>  Nên In(θ) ở đây = E\_θ{\[∂/∂θ log f(**X**|θ)\]^2}
+>
+>
+>
+> = - E\_θ\[∂^2/∂θ^2 log f(**X**|θ)\]
+>
+>
+>
+> = - E\_θ\[∂^2/∂θ^2 log L(θ|**X**)\] (do L(θ|**X**) = f(**X**|θ))
+>
+>
+>
+> Tới đây, một lần nữa người ta **bỏ kì vọng** chuyển sang dùng -∂^2/∂θ^2 log L(θ^|**X**) và gọi nó là **observed information number**, là cái mà ông nói thật ra ngon hơn (superior) so với expected information number (In(θ))
+>
+>
+>
+> = - E\_θ\[∂^2/∂θ^2 log L(θ|**X**)\] (do L(θ|**X**) = f(**X**|θ))
+>
+>
+>
+> ≈ -∂^2/∂θ^2 log L(θ^|**X**) 
+>
+>
+>
+>
+>
+> Nói tóm lại lần nữa.
+>
+>
+>
+> Nhờ Delta method, định nghĩa của hiệu quả tiệm cận nên ta có công thức xấp xỉ:
+>
+>
+>
+> Var(h(θ^)) ≈ CRLB của Wn, với E\[Wn\] = h(θ), = h'(θ) / In(θ), In(θ) là expected information number.
+>
+>
+>
+> Tiếp, ta sẽ estimate cái xấp xỉ này, bằng cách evaluate công thức trên tại θ^ (vì ko biết θ). Đồng thời thay cái expected information number bằng observed information number luôn.
+>
+>
+>
+> Var(h(θ^)) ≈ \[h'(θ) / -∂^2/∂θ^2 log L(θ|**X**)\] | θ=θ^. Và đây là cách ta estimate variance của một hàm của một mle.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bài giải thích rất chi tiết và sâu sắc các lập luận để ước lượng phương sai của h(θ̂) bằng CRLB, liên kết chặt chẽ các khái niệm về định lý Delta Method, hiệu quả tiệm cận của MLE và CRLB, hoàn toàn khớp với nội dung trong ảnh. Em đã nắm vững cách áp dụng các công thức và ý nghĩa của chúng.
+
+<br>
+
+<a id="node-cpdjv2x"></a>
+
+- **Theorem 10.1.6 on Consistent Estimators**
+
+<p align="center"><kbd><img src="assets/p70gp9yp7qr.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Còn một ý, nói -(1/n) ∂^2/∂θ^2 log L(θ|**X**)|θ=θ^ là consistent estimator của I(θ), Là sao ta?
+>
+>
+>
+> Vì ∂^2/∂θ^2 log L(θ|**X**) = ∂^2/∂θ^2 log f(**X**|θ)
+>
+>
+>
+> = ∂^2/∂θ^2 log Πi f(Xi|θ)
+>
+>
+>
+> = ∂^2/∂θ^2 Σi \[log f(Xi|θ)\]
+>
+>
+>
+> = Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
+>
+>
+>
+> Dĩ nhiên ∂^2/∂θ^2 log f(Xi|θ) là một random variable. Và với iid random sample X1,...Xn thì ta cũng có một random sample Y1, ...Yn với Yi = ∂^2/∂θ^2 log f(Xi|θ)
+>
+>
+>
+> Do đó Ybar = (Σi Yi)/n = (1/n) Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
+>
+>
+>
+> và theo LLN, Ybar → (p) E\_θ\[Yi\] = E\_θ\[∂^2/∂θ^2 log f(Xi|θ)\]
+>
+>
+>
+> và cái này thì chính là -Ii(θ), tức information number của observation i'th.
+>
+>
+>
+> Do đó, -Ybar = (1/n) Σi \[∂^2/∂θ^2 log f(Xi|θ)\] → (p) Ii(θ)
+>
+>
+>
+> Kết quả này thì có nghĩa là gì?
+>
+>
+>
+> Có nghĩa là cái xấp xỉ lúc nãy:
+>
+>
+>
+>  Var(h(θ^)) ≈ \[h'(θ^)^2 / -∂^2/∂θ^2 log L(θθ^|**X**)\] có đặc địểm:
+>
+>
+>
+> mẫu số -∂^2/∂θ^2 log L(θθ^|**X**)  = -n Ybar là consistent estimator của n Ii(θ), tức là In(θ)
+>
+>
+>
+> Vậy Var(h(θ^)) = nominator / denominator. Mà denominator là consistent estimator của In(θ).
+>
+>
+>
+> Còn nominator \[h'(θ^)\]^2 cũng sẽ hội tụ về \[h'(θ)\]^2 vì n → inf, θ^ → θ (do mle là consistant estimator của θ)
+>
+>
+>
+> Vậy suy ra Var(h(θ^)) cũng → (p) \[h'(θ)\]^2 / In(θ), tức là công thức xấp xỉ ban đầu mà ta lập luận từ Delta method và định nghĩa hiệu quả tiệm cận.
+>
+>
+>
+> Tóm lại, ý nói, cái việc ta dùng θ^ thay cho θ, và dùng observed information number thay cho expected information number In(θ). thì ta vẫn đang có một consistent estimator: Var^(h(θ^)), hay Var\_θ^(h(θ^)) là consistent estimator của Var\_θ(h(θ^))
 
 <br>
 
