@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app) — không gian học tập cá nhân của tôi.
 
-**`~2,707 notes` · `~3,353 screenshots` · `5 notebooks`**
+**`~2,709 notes` · `~3,355 screenshots` · `5 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -199,8 +199,12 @@ Of Dimensionality](pattern_recognition_machine_learning_cbishop/14_the_curse_of_
 - [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) — `19n / 22i`
 - [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) — `5n / 7i`
 
-### 📂 Statistical Inference - Casella (📝 797 Notes | 📸 1048 Screenshots)
+### 📂 Statistical Inference - Casella (📝 799 Notes | 📸 1050 Screenshots)
 <!-- key: statistical_inference_casella -->
+
+> This notebook compiles detailed notes on core concepts, key probability distributions, and essential methods for estimation and hypothesis testing in statistical inference, based on the Casella textbook.
+> 
+> Sổ tay này tổng hợp các ghi chú chi tiết về các khái niệm cốt lõi, những phân phối xác suất quan trọng và các phương pháp thiết yếu để ước lượng và kiểm định giả thuyết trong suy diễn thống kê, dựa trên giáo trình Casella.
 
 - [📋 Overview](statistical_inference_casella/_overview.md) — `0n / 1i`
 - [1.1 Set Theory](statistical_inference_casella/11_set_theory.md) — `6n / 9i`
@@ -270,5 +274,5 @@ evaluating Estimators](statistical_inference_casella/73_methods_of_evaluating_es
 interval Estimators](statistical_inference_casella/92_methods_of_finding_interval_estimators.md) — `52n / 61i`
 - [9.3 Methods Of Evaluating
 interval Estimators](statistical_inference_casella/93_methods_of_evaluating_interval_estimators.md) — `34n / 35i`
-- [10.1 Point Estimation](statistical_inference_casella/101_point_estimation.md) — `18n / 21i`
+- [10.1 Point Estimation](statistical_inference_casella/101_point_estimation.md) — `20n / 23i`
 
