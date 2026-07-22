@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app) — không gian học tập cá nhân của tôi.
 
-**`~2,705 notes` · `~3,351 screenshots` · `5 notebooks`**
+**`~2,707 notes` · `~3,353 screenshots` · `5 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -112,10 +112,12 @@ inverse; Pseudoinverse](mit1806_gstrang/lecture_33_left_and_right_inverse_pseudo
 - [Lecture 34: Final Course
 review](mit1806_gstrang/lecture_34_final_course_review.md) — `32n / 34i`
 
-### 📂 Numerical Optimization_J.Nocedal (📝 369 Notes | 📸 510 Screenshots)
+### 📂 Numerical Optimization_J.Nocedal (📝 371 Notes | 📸 512 Screenshots)
 <!-- key: numerical_optimization_jnocedal -->
 
-> Cuốn sách kinh thánh trong lĩnh vực tối ưu hóa.
+> This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
+> 
+> Sổ tay này đi sâu vào các thuật toán tối ưu hóa số cốt lõi như tìm kiếm đường thẳng, vùng tin cậy, quasi-Newton và gradient liên hợp, cùng các khái niệm thiết yếu như đạo hàm tự động, phân tích hội tụ và kỹ thuật đại số tuyến tính số.
 
 - [📋 Overview](numerical_optimization_jnocedal/_overview.md) — `1n / 1i`
 - [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization_jnocedal/21_funds_of_unconstrained_optim_whats_solution.md) — `15n / 21i`
@@ -142,7 +144,7 @@ Derivative Approx](numerical_optimization_jnocedal/81_finite_difference_derivati
 - [8.2 Automatic differentiation(*extremely important for AI)](numerical_optimization_jnocedal/82_automatic_differentiationextremely_important_for_ai.md) — `36n / 46i`
 - [10.1 Least-square problem](numerical_optimization_jnocedal/101_least_square_problem.md) — `11n / 13i`
 - [10.2 Linear Least-Square Problem](numerical_optimization_jnocedal/102_linear_least_square_problem.md) — `9n / 11i`
-- [10.3 Algorithms for nonlinear least-squares problem](numerical_optimization_jnocedal/103_algorithms_for_nonlinear_least_squares_problem.md) — `4n / 4i`
+- [10.3 Algorithms for nonlinear least-squares problem](numerical_optimization_jnocedal/103_algorithms_for_nonlinear_least_squares_problem.md) — `6n / 6i`
 - [Appendix A](numerical_optimization_jnocedal/appendix_a.md) — `1n / 1i`
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_jnocedal/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 - [A.1 Matrix Factorizations: Cholesky, LU, QR](numerical_optimization_jnocedal/a1_matrix_factorizations_cholesky_lu_qr.md) — `9n / 11i`
