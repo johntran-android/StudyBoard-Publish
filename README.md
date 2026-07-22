@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app) — không gian học tập cá nhân của tôi.
 
-**`~3,913 notes` · `~4,803 screenshots` · `7 notebooks`**
+**`~4,850 notes` · `~6,231 screenshots` · `8 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -28,6 +28,33 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app) — không gi
 <!-- key: a0_mit1801 -->
 
 - [MIT18.01 Single-variate Calculus](a0_mit1801/mit1801_single_variate_calculus.md) — `317n / 331i`
+
+### 📂 EE364a, Convex Optim_S.Boyd (📝 937 Notes | 📸 1428 Screenshots)
+<!-- key: ee364a_convex_optim_sboyd -->
+
+- [Appendix A](ee364a_convex_optim_sboyd/appendix_a.md) — `5n / 15i`
+- [Appendix C](ee364a_convex_optim_sboyd/appendix_c.md) — `43n / 63i`
+- [Lec 2](ee364a_convex_optim_sboyd/lec_2.md) — `55n / 71i`
+- [Lec 3](ee364a_convex_optim_sboyd/lec_3.md) — `60n / 76i`
+- [Lec 2](ee364a_convex_optim_sboyd/lec_2.md) — `34n / 49i`
+- [Lec 1](ee364a_convex_optim_sboyd/lec_1.md) — `7n / 10i`
+- [Lec 1](ee364a_convex_optim_sboyd/lec_1.md) — `51n / 63i`
+- [Lec 4](ee364a_convex_optim_sboyd/lec_4.md) — `39n / 43i`
+- [Lec 5](ee364a_convex_optim_sboyd/lec_5.md) — `61n / 82i`
+- [Lec 6](ee364a_convex_optim_sboyd/lec_6.md) — `31n / 36i`
+- [Lec 7](ee364a_convex_optim_sboyd/lec_7.md) — `56n / 77i`
+- [Lec 9b](ee364a_convex_optim_sboyd/lec_9b.md) — `26n / 50i`
+- [Chap 9.5](ee364a_convex_optim_sboyd/chap_95.md) — `44n / 81i`
+- [Lec 8 B](ee364a_convex_optim_sboyd/lec_8_b.md) — `37n / 51i`
+- [Chap 10](ee364a_convex_optim_sboyd/chap_10.md) — `60n / 99i`
+- [Lec 9](ee364a_convex_optim_sboyd/lec_9.md) — `48n / 64i`
+- [Chap 9.1 - 9.4](ee364a_convex_optim_sboyd/chap_91_94.md) — `34n / 68i`
+- [Lec 10b](ee364a_convex_optim_sboyd/lec_10b.md) — `33n / 60i`
+- [Lec 11](ee364a_convex_optim_sboyd/lec_11.md) — `48n / 92i`
+- [Chap 11.6](ee364a_convex_optim_sboyd/chap_116.md) — `32n / 60i`
+- [Lec 8 A](ee364a_convex_optim_sboyd/lec_8_a.md) — `45n / 59i`
+- [Lec 10](ee364a_convex_optim_sboyd/lec_10.md) — `35n / 64i`
+- [Chap 11:1,2,3,4,5](ee364a_convex_optim_sboyd/chap_1112345.md) — `53n / 95i`
 
 ### 📂 Foundation of LLM (📝 40 Notes | 📸 64 Screenshots)
 <!-- key: foundation_of_llm -->
