@@ -20,9 +20,14 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app) — không gian học tập cá nhân của tôi.
 
-**`~3,593 notes` · `~4,467 screenshots` · `6 notebooks`**
+**`~3,910 notes` · `~4,798 screenshots` · `7 notebooks`**
 
 ## 📚 Syllabus / Mục lục
+
+### 📂 MIT 18.01 — Single Variable Calculus (📝 317 Notes | 📸 331 Screenshots)
+<!-- key: a0_mit1801 -->
+
+- [MIT18.01 Single-variate Calculus](a0_mit1801/mit1801_single_variate_calculus.md) — `317n / 331i`
 
 ### 📂 Foundation of LLM (📝 40 Notes | 📸 64 Screenshots)
 <!-- key: foundation_of_llm -->
