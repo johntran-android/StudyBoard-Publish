@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~7,967 notes` · `~11,996 screenshots` · `12 notebooks`**
+**`~8,516 notes` · `~12,611 screenshots` · `13 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -230,6 +230,43 @@ hyperparams Tuning, Regularization & Optimization](deep_learning_specialization_
 - [📋 Overview](foundation_of_llm/_overview.md) — `0n / 1i`
 - [Giới thiệu Mô hình ngôn ngữ lớn](foundation_of_llm/gii_thiu_m_hnh_ngn_ng_ln.md) — `22n / 28i`
 - [Tiền huấn luyện tự giám sát](foundation_of_llm/tin_hun_luyn_t_gim_st.md) — `18n / 35i`
+
+### 📂 MIT 18.02 (📝 549 Notes | 📸 615 Screenshots)
+<!-- key: mit_1802 -->
+
+> This notebook covers multivariable calculus (MIT 18.02), exploring partial derivatives, multiple integrals, vector fields, and the geometric interpretation of transformations via Jacobian determinants and total differentials.
+
+- [Lec 1: Dot Products](mit_1802/lec_1_dot_products.md) — `0n / 4i`
+- [Lec 2: Determinant, Cross Product](mit_1802/lec_2_determinant_cross_product.md) — `16n / 21i`
+- [Lec 3: Matrix, Inverse Matrix](mit_1802/lec_3_matrix_inverse_matrix.md) — `26n / 31i`
+- [Lec 4: Square System, Equation
+of Plane](mit_1802/lec_4_square_system_equation_of_plane.md) — `20n / 23i`
+- [Lec 5: Parametric Equations For
+lines And Curves](mit_1802/lec_5_parametric_equations_for_lines_and_curves.md) — `23n / 24i`
+- [Lec 6: Velocity, Acceleration,
+kepler's Second Law](mit_1802/lec_6_velocity_acceleration_keplers_second_law.md) — `27n / 28i`
+- [Lec 7: Review](mit_1802/lec_7_review.md) — `16n / 17i`
+- [Lec 8: Level Curves, Partial
+derivatives, Tangent Plane](mit_1802/lec_8_level_curves_partial_derivatives_tangent_plane.md) — `20n / 22i`
+- [Lec 9: Max-min Problems, Least
+squares](mit_1802/lec_9_max_min_problems_least_squares.md) — `21n / 28i`
+- [Lec 10: Second Derivative Test,
+boudaries, Infinity](mit_1802/lec_10_second_derivative_test_boudaries_infinity.md) — `23n / 24i`
+- [Lec 11: Differentials, Chain-rule](mit_1802/lec_11_differentials_chain_rule.md) — `20n / 21i`
+- [Lec 12: Gradient, Directional
+derivative, Tangent Plane](mit_1802/lec_12_gradient_directional_derivative_tangent_plane.md) — `30n / 37i`
+- [Lec 13: Lagrange Multiplier](mit_1802/lec_13_lagrange_multiplier.md) — `33n / 36i`
+- [Lec 14: Non-independent Random
+variables](mit_1802/lec_14_non_independent_random_variables.md) — `32n / 35i`
+- [Lec 15: Partial Differentials Equations](mit_1802/lec_15_partial_differentials_equations.md) — `18n / 19i`
+- [Lec 16: Double Integrals](mit_1802/lec_16_double_integrals.md) — `35n / 37i`
+- [Lec 17: Double Integrals In
+polar Coordinates](mit_1802/lec_17_double_integrals_in_polar_coordinates.md) — `21n / 21i`
+- [Lec 18: Change Of Variables](mit_1802/lec_18_change_of_variables.md) — `33n / 36i`
+- [Lec 19: Vector Fields](mit_1802/lec_19_vector_fields.md) — `36n / 44i`
+- [Lec 20: Path Independence & Conservative Field](mit_1802/lec_20_path_independence_conservative_field.md) — `38n / 43i`
+- [Lec 21: Gradient Field & Potential Function](mit_1802/lec_21_gradient_field_potential_function.md) — `35n / 35i`
+- [Lec 22: Green's Theorem](mit_1802/lec_22_greens_theorem.md) — `26n / 29i`
 
 ### 📂 MIT18.06_G.Strang (📝 1181 Notes | 📸 1269 Screenshots)
 <!-- key: mit1806_gstrang -->
