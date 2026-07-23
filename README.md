@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app) — không gian học tập cá nhân của tôi.
 
-**`~6,453 notes` · `~8,933 screenshots` · `9 notebooks`**
+**`~6,530 notes` · `~9,046 screenshots` · `10 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -43,6 +43,23 @@ approximations](a0_mit1801/lec_9_linear_and_quadratic_approximations.md) — `27
 - [Lec 13: Newton's Method](a0_mit1801/lec_13_newtons_method.md) — `26n / 28i`
 - [Lec 14: Mean
 value Theorem](a0_mit1801/lec_14_mean_value_theorem.md) — `24n / 24i`
+
+### 📂 EE263A — Linear Dynamical Systems (📝 77 Notes | 📸 113 Screenshots)
+<!-- key: ee263a -->
+
+- [1.5 Complexity of vector
+computations](ee263a/15_complexity_of_vector_computations.md) — `4n / 6i`
+- [5.1 Linear Independent](ee263a/51_linear_independent.md) — `5n / 6i`
+- [5.2 Basis](ee263a/52_basis.md) — `2n / 4i`
+- [5.3 Orthonormal vectors](ee263a/53_orthonormal_vectors.md) — `4n / 5i`
+- [5.4 Gram-Smidth algorithm](ee263a/54_gram_smidth_algorithm.md) — `2n / 12i`
+- [10.1 Matrix matrix multiplication](ee263a/101_matrix_matrix_multiplication.md) — `4n / 5i`
+- [11.1 Left Right Inverse](ee263a/111_left_right_inverse.md) — `6n / 7i`
+- [11.2 Inverse](ee263a/112_inverse.md) — `9n / 9i`
+- [11.3 Solving linear equation](ee263a/113_solving_linear_equation.md) — `5n / 6i`
+- [11.5 Pseudo inverse](ee263a/115_pseudo_inverse.md) — `7n / 9i`
+- [13.0 Least squares problem](ee263a/130_least_squares_problem.md) — `15n / 24i`
+- [13.1 Least squares data fitting](ee263a/131_least_squares_data_fitting.md) — `14n / 20i`
 
 ### 📂 CS231N_Stanford (📝 1603 Notes | 📸 2702 Screenshots)
 <!-- key: cs231n_stanford -->
