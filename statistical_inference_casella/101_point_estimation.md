@@ -1,6 +1,6 @@
 # 10.1 Point Estimation
 
-📊 **Progress:** `22` Notes | `26` Screenshots | `6` AI Reviews
+📊 **Progress:** `23` Notes | `28` Screenshots | `8` AI Reviews
 
 ---
 <a id="node-2ixm3r0"></a>
@@ -1627,7 +1627,11 @@
 >
 >
 >
-> \[-∂^2/∂θ^2 log L(θ|**x**)\]|θ=θ^ = np^/(p^)^2 + n(1-p^)/(1-p^)^2
+> \[-∂^2/∂p^2 log L(p|**x**)\]|p=p^
+>
+>
+>
+> = np^/(p^)^2 + n(1-p^)/(1-p^)^2
 >
 >
 >
@@ -1643,7 +1647,7 @@
 >
 >
 >
-> Và như vậy Var^(h(p^)) ≈ \[h'(p)\]^2|p=p^ / \[-∂^2/∂p^2 log L(θ|**x**)\]|p=p^
+> Và như vậy Var^(h(p^)) ≈ \[h'(p)\]^2|p=p^ / \[-∂^2/∂p^2 log L(p|**x**)\]|p=p^
 >
 >
 >
@@ -1655,7 +1659,152 @@
 >
 >
 >
-> Và công thức này thì giống công thức Var^(p^) = p^(1-p^)/n mà ta đã tính hồi nãy (thế p^ thay cho p, trong công thức Var(p) = p(1-p)/n)
+> Và công thức này thì giống công thức Var^(p^) = p^(1-p^)/n mà ta đã tính hồi nãy (thế p^ thay cho p, trong công thức Var(p) = p(1-p)/n
+>
+>
+>
+> Ý quan trọng muốn nhấn mạnh đó là: Trong bài toán này, ta biết mle thật sự sẽ có công thức là Var(p^) (hay Var_p(p^), để thể hiện nó là hàm theo p) = p(1-p)/n. Để rồi từ đó, bằng cách dùng p^ thay p, ta có ước lượng của variance Var^(p^) = p^(1-p^)/n.
+>
+>
+>
+> Sau đó, bằng cách tiếp cận dựa trên lí thuyết nói rằng Var^(h(θ^)) ≈ \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 log L(θ|**x**)\]|θ=θ^, ta cũng tính ra được cùng kết quả Var^(p^) ≈ p^(1-p^)/n.
+>
+>
+>
+> Như vậy có nghĩa là: **Giả sử ta không có công thức** **Var(θ^) theo θ, kí hiệu Var\_θ(θ^), để từ đó thế θ^ vào để có Var^(θ^), là xấp xỉ của Var\_θ(θ^). Thì ta có thể dùng cách tiếp cận thứ hai nói trên**: Chỉ việc tính:
+>
+>
+>
+> i) \[h'(θ)\]^2|θ=θ^, mà ở đây khi đang tính Var(θ^) thì tức là h(.) = identity function, \[h'(θ)\]^2|θ=θ^ = 1.
+>
+>
+>
+> ii) Tính -∂^2/∂θ^2 log L(θ|**x**)\]|θ=θ^, tức là derive công thức đạo hàm bậc hai của log likelihood L(θ|**x**), sẽ ra một hàm theo θ, lấy dấu âm, và thế θ^ vào.
+>
+>
+>
+> iii) Khi đó 1/\[kết quả mẫu số\], chính là cũng sẽ cho ra Var^(θ^), mà trong ví dụ cụ thể này, đó là Var^(p^) ≈ p^(1-p^)/n
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **90/100**
+>
+> Bài làm rất chi tiết và có chiều sâu, giải thích rõ ràng từng bước và mục đích của việc áp dụng công thức xấp xỉ phương sai, đồng thời so sánh kết quả với công thức đã biết. Tuy nhiên, trong quá trình tính đạo hàm bậc hai của hàm log likelihood, bạn đã mắc lỗi về dấu ở thành phần thứ hai (∂/∂p [n(1-p^) [-1/(1-p)]] phải là -n(1-p^)/(1-p)^2 chứ không phải dương), dù kết quả cuối cùng vẫn chính xác.
+
+<br>
+
+<a id="node-suvnj6h"></a>
+
+- **Asymptotic Efficiency of Estimator p̂ (bản sao)**
+
+<p align="center"><kbd><img src="assets/rp734ayvn4.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, đoạn này nói rằng vì p^, hay θ^ là mle, được theo theorem nào đó, là một estimator có tính hiệu quả tiệm cận và consistent.
+>
+>
+>
+> √n(p^ - p) → (d) n(0, 1/I1(p))
+>
+>
+>
+> với I1(p) = E_p\[(∂/∂p log f(X|p))^2\]
+>
+>
+>
+> log f(X|p) = log\[p^X (1-p)^(1-X)\]
+>
+>
+>
+> = X log(p) + (1-X)l og(1-p)
+>
+>
+>
+> ⇨ d/dp \[X log(p) + (1-X) log(1-p)\]
+>
+>
+>
+> = X/p + (1-X) \[-1/(1-p)\]
+>
+>
+>
+> = X/p - (1-X)/(1-p)
+>
+>
+>
+> = X(1-p)/p(1-p) - p(1-X)/p(1-p)
+>
+>
+>
+> = \[X(1-p) - p(1-X)\]/p(1-p)
+>
+>
+>
+> = \[X - Xp - p + pX)\]/p(1-p)
+>
+>
+>
+> = (X-p)/p(1-p)
+>
+>
+>
+> E_p\[(∂/∂p log f(X|p))^2\] = E_p\[((X-p)/p(1-p))^2\]
+>
+>
+>
+> = E_p\[((X-p))^2\] / \[p(1-p)\]^2
+>
+>
+>
+> = Var_p(X) / \[p(1-p)\]^2
+>
+>
+>
+> = p(1-p) / \[p(1-p)\]^2
+>
+>
+>
+> = 1 / p(1-p)
+>
+>
+>
+>  Như vậy **√n(p^-p) → (d) n(0, 1/I1(p)) = n(0, p(1-p))**
+>
+>
+>
+> Lại cộng với Slusky theorem: Xn → (d) X, Yn → (p) a ⇨ XnYn → (d) aX
+>
+>
+>
+> Ta có ở trên √n(p^-p) → (d) n(0, p(1-p)),
+>
+>
+>
+> và 1/√\[p^(1-p^)\] → (p) 1/√\[p(1-p)\] do p^ → (p) p
+>
+>
+>
+> nên √n(p^-p) × \[1/√\[p^(1-p^)\]\] → (d) n(0, p(1-p)) × 1/√\[p(1-p)\])
+>
+>
+>
+> Mà với Z \~ n(0, σ^2), tức là một thành viên của location scale family ứng với scale = σ, thì theo location scale family, Z/σ sẽ \~ n(0,1). Vậy n(0, p(1-p)) /√\[p(1-p)\] sẽ \~ n(0,1)
+>
+>
+>
+> Vậy √n(p^-p)/√\[p(1-p)\] → (d) n(0, 1).
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Phân tích của bạn rất sâu sắc và chính xác, đặc biệt là phần dẫn xuất Fisher Information để chứng minh phương sai. Bạn đã giải thích rất rõ ràng cách áp dụng Định lý Slutsky và chuẩn hóa phân phối để đạt được kết quả cuối cùng.
+
+<br>
+
+<a id="node-13p5sy2"></a>
+
+- **Section 10.1 Point Estimation**
+
+<p align="center"><kbd><img src="assets/f2f54o58ynm.png" width="80%"></kbd></p>
 
 <br>
 
