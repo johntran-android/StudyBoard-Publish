@@ -331,8 +331,8 @@ Of Dimensionality](pattern_recognition_machine_learning_cbishop/14_the_curse_of_
 - [3.1.1 Maximum likelihood and least squares](pattern_recognition_machine_learning_cbishop/311_maximum_likelihood_and_least_squares.md) — `7n / 9i`
 - [3.1.2 Geometry of least squares](pattern_recognition_machine_learning_cbishop/312_geometry_of_least_squares.md) — `1n / 1i`
 - [3.1.3 Sequential Learning](pattern_recognition_machine_learning_cbishop/313_sequential_learning.md) — `1n / 2i`
-- [3.1.4 Regularized least squares](pattern_recognition_machine_learning_cbishop/314_regularized_least_squares.md) — `3n / 7i`
 - [3.1.5 Multiple outputs](pattern_recognition_machine_learning_cbishop/315_multiple_outputs.md) — `3n / 3i`
+- [3.1.4 Regularized least squares](pattern_recognition_machine_learning_cbishop/314_regularized_least_squares.md) — `3n / 7i`
 - [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) — `19n / 22i`
 - [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) — `5n / 7i`
 
