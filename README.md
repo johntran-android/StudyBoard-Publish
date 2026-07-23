@@ -49,6 +49,8 @@ value Theorem](a0_mit1801/lec_14_mean_value_theorem.md) — `24n / 24i`
 ### 📂 EE263A — Linear Dynamical Systems (📝 77 Notes | 📸 113 Screenshots)
 <!-- key: ee263a -->
 
+> This notebook delves into fundamental linear algebra concepts such as Gram-Schmidt orthogonalization, matrix inverses, and linear independence. It extensively covers the Least Squares problem, exploring its geometric interpretation, solution methods (including QR factorization and the normal equation), and applications in data fitting and regression, while also considering computational complexity.
+
 - [1.5 Complexity of vector
 computations](ee263a/15_complexity_of_vector_computations.md) — `4n / 6i`
 - [5.1 Linear Independent](ee263a/51_linear_independent.md) — `5n / 6i`
