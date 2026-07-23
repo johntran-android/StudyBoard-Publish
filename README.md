@@ -138,6 +138,8 @@ learning](cs231n_stanford/lecture_1416_deep_reinforcement_learning.md) — `24n 
 ### 📂 EE364a, Convex Optim_S.Boyd (📝 937 Notes | 📸 1428 Screenshots)
 <!-- key: ee364a_convex_optim_sboyd -->
 
+> This notebook contains lecture notes from EE364a, covering Stephen Boyd's approach to convex optimization. It explores key concepts like convex functions and sets, generalized inequalities, problem formulations, duality theory, optimality conditions, and computational considerations.
+
 - [Appendix A](ee364a_convex_optim_sboyd/appendix_a.md) — `5n / 15i`
 - [Appendix C](ee364a_convex_optim_sboyd/appendix_c.md) — `43n / 63i`
 - [Lec 2](ee364a_convex_optim_sboyd/lec_2.md) — `55n / 71i`
