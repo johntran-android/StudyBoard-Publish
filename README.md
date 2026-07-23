@@ -64,6 +64,8 @@ computations](ee263a/15_complexity_of_vector_computations.md) — `4n / 6i`
 ### 📂 CS231N_Stanford (📝 1603 Notes | 📸 2702 Screenshots)
 <!-- key: cs231n_stanford -->
 
+> This notebook compiles key concepts from Stanford's CS231N course, covering deep learning fundamentals such as neural networks, optimization, and hyperparameter tuning. It also extensively explores computer vision applications, including image classification, object detection, and generative models, with a strong emphasis on convolutional and recurrent neural networks.
+
 - [📋 Overview](cs231n_stanford/_overview.md) — `1n / 1i`
 - [Lecture 1/16 - Introduction To CNN](cs231n_stanford/lecture_116_introduction_to_cnn.md) — `11n / 31i`
 - [Lecture 2/16 - Image Classification](cs231n_stanford/lecture_216_image_classification.md) — `41n / 58i`
