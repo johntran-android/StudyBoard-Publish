@@ -27,6 +27,8 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app) — không gi
 ### 📂 MIT 18.01 — Single Variable Calculus (📝 317 Notes | 📸 331 Screenshots)
 <!-- key: a0_mit1801 -->
 
+> This notebook summarizes key concepts from MIT 18.01 Single-Variable Calculus, primarily focusing on limits, the definition and applications of derivatives. It covers topics like tangent lines, approximations, optimization, and related rates.
+
 - [Lec 1: Rate Of Change](a0_mit1801/lec_1_rate_of_change.md) — `24n / 26i`
 - [Lec 2: Limits](a0_mit1801/lec_2_limits.md) — `28n / 30i`
 - [Lec 3: Derivatives](a0_mit1801/lec_3_derivatives.md) — `21n / 22i`
