@@ -1,6 +1,6 @@
 # 10.3 Algorithms for nonlinear least-squares problem
 
-📊 **Progress:** `9` Notes | `11` Screenshots | `6` AI Reviews
+📊 **Progress:** `10` Notes | `13` Screenshots | `7` AI Reviews
 
 ---
 <a id="node-i8zrnvn"></a>
@@ -347,28 +347,112 @@
 >
 >
 >
-> Ý nghĩa là: r(x) phi tuyến → f(x) phi tuyến bậc cao
+> Và tìm p khiến minimize cái này chính là Gauss Newton step
 >
 >
 >
-> nhưng thay r(x) bằng hàm tuyến tính xấp xỉ nó, thì f(x) trở thành hàm bậc hai. Và hàm bậc hai thì có closed form minimizer. Và như vậy cho phép ta có bước nhảy tới đó, đó chính là Gauss Newton step.
+> Vậy thì nếu không dùng xấp xỉ, thì p khiến minimize (1/2) ||r(xk + p)||^2 chính là: Global/local minimum step, tức xk+ p chính là ngay chóc minimizer.
 >
 >
 >
-> Và cái này thì thật ra cũng chỉ là: dùng hàm g xấp xỉ bậc hai của hàm f và đi giải bài toán minimize hàm g, là bài toán minimize hàm bậc hai, có closed form minimizer. Vốn dĩ cũng là cách ta giải các bài toán tối ưu đầu giờ thôi.
+> Vậy khi nào là ta có Newton step. Là khi ta coi hàm f tại k là hàm bậc hai và đi tìm p minimize cái hàm bậc hai đó.
 >
 >
 >
-> Có nghĩa là, nó cũng y như việc ta giải bài toán minimize hàm f(x) = r(x)Tr(x) bằng Newton method: Ta cũng sẽ tại mỗi iteration, đặt ra subproblem: minimize hàm g(p) = xấp xỉ bậc hai của hàm f tại điểm đang đứng, và giải tìm Newton step p để nhảy đến minimizer của g. Thì trong bài toán này, newton step của g chính là Gauss Newton step pkGN.
+> Như vậy có nghĩa là, theo góc nhìn này thì Gauss Newton step khác Newton step ở chỗ:
 >
 >
 >
->  Cuối cùng, gs cho biết, tuy là là tính Newton step (Gauss Newton step), mà theo lý mà nói ta có thể xài unit step factor (tức là nhảy ngay đến điểm tiếp theo bởi hướng và độ dài của Newton step). Tuy nhiên các thuật toán áp dùng Gauss Newton sẽ thường cũng chỉ dùng pkGN làm search direction, và sẽ đi tìm step size phù hợp, có thể là Armijo hay Wolfe condition đã bàn ở chap 3.
+> Newton step: coi hàm f là hàm bậc hai, hay xấp xỉ hàm f bởi hàm bậc hai gk(p) = fk + ∇fkTp + (1/2)pT ∇^2fk p và tìm p minimize gk(p)
+>
+>
+>
+> Gauss Newton step: coi hàm r(xk + p) là hàm tuyến tính r(xk) + Jkp, và thay vì đi tìm p minimize hàm (1/2)||r(xk + p||^2, vốn dĩ sẽ tìm ra global/local minimum step, thì ta sẽ tìm p để minimize (1/2)||r(xk) + Jkp||^2, và p này sẽ là Gauss Newton.
+>
+>
+>
+> Thế thì với f(x) = (1/2)||r(x)||^2 thì f(xk + p) =  (1/2)||r(xk + p)||^2. Mình đoán khi thay r(xk + p) bởi hàm tuyến tính, thì cũng tương đương với việc thay f bởi hàm bậc hai h nào đó. Để rồi đi tìm p để minimize cái hàm bậc hai này cho ra Gauss Newton step.
+>
+>
+>
+> Có điều cái hàm bậc hai h này khác với hàm bậc hai g ở Newton step. Thử phân tích:
+>
+>
+>
+> Còn h(xk + p) = (1/2)||rk + Jkp||^2 = (1/2)(rk + Jkp)T(rk + Jkp)
+>
+>
+>
+> = (1/2)rkTrk + (1/2)pTJkTrk + (1/2)rkTJkp + (1/2)pTJkTJkp
+>
+>
+>
+> = (1/2)pTJkTJkp + rkTJkp + (1/2)rkTrk
+>
+>
+>
+> Và pkGN = argmin_p {(1/2)pTJkTJkp + rkTJkp + (1/2)rkTrk}
+>
+>
+>
+> Còn gk(p) = fk + ∇fkTp + (1/2)pT ∇^2fk p
+>
+>
+>
+> fk = ||rk||^2 = rkTrk
+>
+>
+>
+> ∇fk = JkTrk
+>
+>
+>
+> ∇^2fk = JkTJk + Σi {∇^2ri(x) ri(x)}
+>
+>
+>
+> Đặt Σi {∇^2ri(x) ri(x)} là term 2
+>
+>
+>
+> ⇨ gk(p) = rkTrk + rkTJkp + (1/2)pT (JkTJk + term 2) p
+>
+>
+>
+> = (1/2)pTJkTJkp + rkTJkp + + (1/2)pT(term 2)p + rkTrk
+>
+>
+>
+> và pkN = argmin_p {(1/2)pTJkTJkp + rkTJkp + (1/2)pT(term 2)p + rkTrk }
+>
+>
+>
+> Viết lại:
+>
+>
+>
+> pkGN = argmin_p {(1/2)pTJkTJkp + rkTJkp + (1/2)rkTrk}
+>
+>
+>
+> pkN = argmin_p {(1/2)pTJkTJkp + rkTJkp + (1/2)pT(term 2)p + rkTrk }
+>
+>
+>
+> thì mình thấy Gauss Newton step nó khác với Newton chính là ở chỗ ta bỏ đi cái term 2 của Hessian, hoàn toàn đúng với những gì đã nói
+>
+>
+>
+> Như vậy phân tích vừa rồi cho ta sự liên kết của hai góc nhìn về Gauss Newton.
+>
+>
+>
+> Cuối cùng, gs cho biết, tuy là là tính Newton step (Gauss Newton step), mà theo lý mà nói ta có thể xài unit step factor (tức là nhảy ngay đến điểm tiếp theo bởi hướng và độ dài của Newton step). Tuy nhiên các thuật toán áp dùng Gauss Newton sẽ thường cũng chỉ dùng pkGN làm search direction, và sẽ đi tìm step size phù hợp, có thể là Armijo hay Wolfe condition đã bàn ở chap 3.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
-> Ghi chú giải thích rất chính xác và đầy đủ, không chỉ tóm tắt nội dung trong hình mà còn cung cấp thêm kiến thức nền tảng và chiều sâu về cách phương pháp Gauss-Newton được hình thành và áp dụng. Một điểm nhỏ có thể cải thiện là đảm bảo tính nhất quán trong hệ số 1/2 khi định nghĩa hàm f(x) ban đầu.
+> Your note demonstrates a very strong and comprehensive understanding of the Gauss-Newton method, integrating both the linear approximation approach and its broader theoretical context with impressive clarity.
 
 <br>
 
@@ -409,5 +493,125 @@
 
 <br>
 
-<a id="node-x1k0lnw"></a>
+<a id="node-zvoluj0"></a>
+
+- **The Levenberg–Marquardt Method**
+
+<p align="center"><kbd><img src="assets/58clvut12vf.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/e91f07rjvp.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đại ý là nói rằng Gauss Newton có nhược điểm là sẽ bị vấn đề khi J bị (hoạc gần bị) rank-deficient. Hiểu ý này là sao:
+>
+>
+>
+> Rank deficient là khi matrix không full rank (cả full column rank), đồng nghĩa là các cột không độc lập, tồn tại non-zero nullspace vector.
+>
+>
+>
+> Thế thì như đã nói, phương pháp Gauss Newton sẽ chỉ giống Newton method nhưng thay vì dùng Hessian ∇^2f(x) thì ta dùng JkTJk để xấp xỉ cho nó. Và Gauss Newton step là nghiệm của (JkTJk) pkGN = JkTrk (tức ∇fk).
+>
+>
+>
+> Và để hệ có nghiệm để giải ra được pkGN, thì JkTJk phải full rank, invertible. Mà nhờ MIT 1806 mình đã biết rồi, matrix ATA và A có chung nullspace. Nên muốn ATA full rank thì A phải full column rank. Do đó, nếu Jk rank deficient thì JkTJk sẽ không full rank, non invertible → không tồn tại pkGN (tức là thuật toán giải hệ trên sẽ fail)
+>
+>
+>
+> Nhưng nếu Jk gần rank deficient, tức các cột gần phụ thuộc chứ chưa hẳn là phụ thuộc, thì lúc này JkTJk vẫn invertible, nhưng nó sẽ có eigenvalue rất nhỏ, khiến eigenvalue của JkTJk sẽ rất lớn và dẫn đến nếu vô tình JkTrk gần trùng với hướng của eiegenvector thì (JkTJk)inv JkTrk tức pkGN sẽ có độ dài khổng lồ → thuật toán bị phân kì và line search cũng không thể khắc phục được.
+>
+>
+>
+> ---
+>
+>
+>
+>  Vậy thì để hiểu cái Levenberg-Marquardt mình phải nhớ lại sự khác nhau giữa hai trường phái lớn của tối ưu: Line search và Trust Region.
+>
+>
+>
+> Với line search, cơ bản là ta tìm direction, sau đó tìm step size. Direction có thể là steepest descent direction hoặc Newton step direction, hoặc một descent direction nào đó. Và tìm step size thì có thể giải bài toán tìm optimal step size (gọi là exact line search) hoặc là dùng các thuật toán backtracking để tìm step size đủ tốt (ví dụ như các điều kiện Armijo, Wolfe)
+>
+>
+>
+> Còn trust region thì đi theo cách tiếp cận ngược lại: quy định step size trước (tức trust region) sau đó mới giải bài toán tìm direction trong phạm vi cho phép - sẽ là bài toán tối ưu có ràng buộc.
+>
+>
+>
+> Vậy thì, phải hiểu thế này: Mục tiêu cuối cùng là giảm hàm objective f(x) = ||r(x)||^2.
+>
+>
+>
+> Và để đạt được mục tiêu đó, với bài toán linear least square thì ta có closed form solution, và để tính ra solution, thì ta có thể dùng các thuật toán thuần túy là đại số tuyến tính (cholesky, QR, SVD factored based method) hoặc CG.
+>
+>
+>
+> Còn với non-linear least square, ta phải theo lối iterative: Iteratively giải các bài toán subproblem
+>
+>
+>
+> Và với bài toán subproblem, thì ta có thể đi theo hai cách line search hoặc trust region.
+>
+>
+>
+> Và nếu đi theo line search approach, thì đáng lẽ ta sẽ theo các các tiếp cận đã biết như steepest direction hay Newton direciton, rồi tính step size. Nhưng vì tính chất của bài toán least square có nhiều thuận lợi nên ta có thể dùng JTJ để xấp xỉ tốt cho Hessian, và như vậy, ta sẽ đi tính Gauss Newton direction, thay vì Newton direction. Rồi cũng tính step size và nhảy đến điểm tiếp theo, và cứ thế lặp lại.
+>
+>
+>
+> Và note trước đã cho mình góc nhìn để thấy sự khác và giống nhau của Gauss Newton và Newton:
+>
+>
+>
+> Ta đều muốn tìm p để minimize f(xk + p), và p này nếu tìm được sẽ cho ta xk + p là solution của bài táon. Nhưng điều này quá khó. Thành ra ta phải làm theo cách thức sau:
+>
+>
+>
+> Nếu ta thay f(xk + p) = ||r(xk + p)||^2 bởi xấp xỉ bậc nai của nó tại xk: g(p) và đi tìm p để minimize cái này → p này chính là Newton direction.
+>
+>
+>
+> Nếu ta thây f(xk + p), vốn là ||r(xk + p)||^2, bởi h(p) = ||r(xk) + ∇r(x)Tp||^2 = ||Jkp + rk||^2, tức thay r(xk + p) bởi hàm xấp xỉ tuyến tính của r tại xk. Và đi minimize h(p), thì p này chính là Gauss Newton direction.
+>
+>
+>
+> Thế thì nay, là nói về đi theo trust region approach:
+>
+>
+>
+> Thế thì với trust region, ta sẽ đặt ra bán kính tin cậy, và giải bài toán tìm p minimize hàm một hàm số xấp xỉ của f trong bán kính tinh cậy đó.
+>
+>
+>
+> Và hồi đầu đến giờ ta đều dùng hàm xấp xỉ bậc hai của f, tức à g nói trên, để có bài toán:
+>
+>
+>
+> minimize g(p) s.t ||p|| ≤ Δk, và đây là trust region Newton quen thuộc
+>
+>
+>
+> Nhưng với bài toán least square, tương tự, như ở line search, khi ta minimize h(p) thay vì g(p), và gọi nó là Gauss Newton direction, thì ở đây ta cũng có thể không dùng g, mà dùng h:
+>
+>
+>
+> minimize h(p) = ||Jkp + rk||^2 s.t ||p|| ≤ Δ, và đây chính là Levenberg - Marquardt
+>
+>
+>
+> và cái hàm này ||Jkp + rk||^2 thì trong note trước mình đã thấy nó là (1/2)pTJkTJkp + rkTJkp + (1/2)rkTrk → chính là 10.32
+>
+>
+>
+> mà đem so với g(p) = (1/2)pTJkTJkp + rkTJkp + (1/2)pT(term 2)p + rkTrk
+>
+>
+>
+> thì đúng là chỉ khác ở chỗ: Hessian của người ta có 2 term, ta bỏ đi term 2, chỉ dùng term 2: JkTJk.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bản ghi chú của bạn cực kỳ chi tiết và chính xác, đặc biệt là phần giải thích sâu sắc về nhược điểm của Gauss-Newton khi Jacobian bị thiếu hạng và sự khác biệt giữa line search với trust region. Sự phân tích kỹ lưỡng về lý do tại sao Jk rank deficient lại gây ra vấn đề cho thuật toán là một điểm cộng lớn.
+
+<br>
 
