@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~8,518 notes` · `~12,613 screenshots` · `13 notebooks`**
+**`~8,624 notes` · `~12,752 screenshots` · `14 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -267,6 +267,25 @@ polar Coordinates](mit_1802/lec_17_double_integrals_in_polar_coordinates.md) —
 - [Lec 20: Path Independence & Conservative Field](mit_1802/lec_20_path_independence_conservative_field.md) — `38n / 43i`
 - [Lec 21: Gradient Field & Potential Function](mit_1802/lec_21_gradient_field_potential_function.md) — `35n / 35i`
 - [Lec 22: Green's Theorem](mit_1802/lec_22_greens_theorem.md) — `26n / 29i`
+
+### 📂 MIT 1806 Book (📝 106 Notes | 📸 139 Screenshots)
+<!-- key: mit_1806_book -->
+
+- [📋 Overview](mit_1806_book/_overview.md) — `0n / 1i`
+- [6.2 Diagonalizing A Matrix](mit_1806_book/62_diagonalizing_a_matrix.md) — `17n / 22i`
+- [6.3 System Of Differential Equations](mit_1806_book/63_system_of_differential_equations.md) — `3n / 6i`
+- [6.4 Symmetric Matrices](mit_1806_book/64_symmetric_matrices.md) — `3n / 4i`
+- [7.2 Basis And Matrices In Svd](mit_1806_book/72_basis_and_matrices_in_svd.md) — `3n / 6i`
+- [7.3 Pca By Svd](mit_1806_book/73_pca_by_svd.md) — `4n / 7i`
+- [7.4 Geometry Of Svd](mit_1806_book/74_geometry_of_svd.md) — `17n / 19i`
+- [8.1 Idea Of A Linear Transformation](mit_1806_book/81_idea_of_a_linear_transformation.md) — `17n / 20i`
+- [8.2 The Matrix Of Linear Transformation](mit_1806_book/82_the_matrix_of_linear_transformation.md) — `20n / 23i`
+- [8.3 In Search Of Good Basis](mit_1806_book/83_in_search_of_good_basis.md) — `3n / 4i`
+- [11.2 Norm & Condition Number](mit_1806_book/112_norm_condition_number.md) — `13n / 15i`
+- [11.3 Iterative Method &
+preconditioner](mit_1806_book/113_iterative_method_preconditioner.md) — `4n / 6i`
+- [3. Vector Spaces
+and Subspaces](mit_1806_book/3_vector_spaces_and_subspaces.md) — `2n / 6i`
 
 ### 📂 MIT18.06_G.Strang (📝 1181 Notes | 📸 1269 Screenshots)
 <!-- key: mit1806_gstrang -->
