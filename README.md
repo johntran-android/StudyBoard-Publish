@@ -6,7 +6,7 @@ This collection comprises structured notes, meticulously organized chapter by ch
 
 Tackling these fundamental texts is a challenging yet incredibly rewarding endeavor. My primary goal is to move beyond passive reading, striving to truly internalize the mathematical underpinnings and practical implications of optimization, pattern recognition, and linear algebra. I firmly believe a strong grasp of these fundamentals is paramount for building robust and innovative AI systems, and I'm excited to openly share my progress and insights with you all.
 
-Notes exported from [StudyBoard](https://studyboard.app) — my personal learning workspace.
+Notes exported from [StudyBoard](https://studyboard.app/landing.html) — my personal learning workspace.
 
 ---
 
@@ -18,9 +18,9 @@ Bộ sưu tập này bao gồm các ghi chú được cấu trúc, được tổ
 
 Việc chinh phục những văn bản nền tảng này là một nỗ lực đầy thử thách nhưng cực kỳ bổ ích. Mục tiêu chính của tôi là vượt ra ngoài việc đọc thụ động, cố gắng thực sự tiếp thu các cơ sở toán học và ý nghĩa thực tiễn của tối ưu hóa, nhận dạng mẫu và đại số tuyến tính. Tôi tin chắc rằng việc nắm vững những kiến thức cơ bản này là tối quan trọng để xây dựng các hệ thống AI mạnh mẽ và sáng tạo, và tôi rất vui được công khai chia sẻ tiến trình và những hiểu biết của mình với tất cả các bạn.
 
-Ghi chú được xuất từ [StudyBoard](https://studyboard.app) — không gian học tập cá nhân của tôi.
+Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~7,166 notes` · `~10,876 screenshots` · `11 notebooks`**
+**`~7,967 notes` · `~11,996 screenshots` · `12 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -64,6 +64,51 @@ computations](ee263a/15_complexity_of_vector_computations.md) — `4n / 6i`
 - [11.5 Pseudo inverse](ee263a/115_pseudo_inverse.md) — `7n / 9i`
 - [13.0 Least squares problem](ee263a/130_least_squares_problem.md) — `15n / 24i`
 - [13.1 Least squares data fitting](ee263a/131_least_squares_data_fitting.md) — `14n / 20i`
+
+### 📂 CS224N_Stanford (📝 801 Notes | 📸 1120 Screenshots)
+<!-- key: cs224n_stanford -->
+
+> This notebook provides an introduction to core Natural Language Processing concepts, focusing on distributed word representations (embeddings) and their learning via neural network models like Word2Vec, exploring their properties and applications in various NLP tasks.
+
+- [📋 Overview](cs224n_stanford/_overview.md) — `1n / 1i`
+- [Week 1: Intro & Word Vectors](cs224n_stanford/week_1_intro_word_vectors.md) — `57n / 77i`
+- [Lecture 2: Neural Classifiers](cs224n_stanford/lecture_2_neural_classifiers.md) — `58n / 74i`
+- [Assignment 1](cs224n_stanford/assignment_1.md) — `18n / 29i`
+- [Lecture 3: Backprop And Neural Networks](cs224n_stanford/lecture_3_backprop_and_neural_networks.md) — `29n / 54i`
+- [Reading](cs224n_stanford/reading.md) — `1n / 1i`
+- [Lecture Note - 03
+backpropagation](cs224n_stanford/lecture_note_03_backpropagation.md) — `7n / 24i`
+- [Assignment 2 - Word2vec](cs224n_stanford/assignment_2_word2vec.md) — `22n / 56i`
+- [Lecture 4: Syntactic Structure
+and Dependency Parsing](cs224n_stanford/lecture_4_syntactic_structure_and_dependency_parsing.md) — `41n / 53i`
+- [Lecture Note 04 -
+dependency Parsers](cs224n_stanford/lecture_note_04_dependency_parsers.md) — `13n / 17i`
+- [Reading](cs224n_stanford/reading.md) — `0n / 1i`
+- [Assignment 3 -
+dependency Parsing](cs224n_stanford/assignment_3_dependency_parsing.md) — `31n / 47i`
+- [Lecture 5: Recurrent Neural Network](cs224n_stanford/lecture_5_recurrent_neural_network.md) — `15n / 21i`
+- [Lecture 6: Simple And Lstm Rnns](cs224n_stanford/lecture_6_simple_and_lstm_rnns.md) — `39n / 58i`
+- [Lecture Notes 05 Language
+model, RNN, Lstm, Gru](cs224n_stanford/lecture_notes_05_language_model_rnn_lstm_gru.md) — `38n / 77i`
+- [Reading](cs224n_stanford/reading.md) — `1n / 1i`
+- [Lecture 7: Translation, Seq2seq, Attention](cs224n_stanford/lecture_7_translation_seq2seq_attention.md) — `42n / 48i`
+- [Reading](cs224n_stanford/reading.md) — `1n / 1i`
+- [Assignment 4 - NMT](cs224n_stanford/assignment_4_nmt.md) — `18n / 45i`
+- [Lecture 8: Translation, Seq2seq, Attention](cs224n_stanford/lecture_8_translation_seq2seq_attention.md) — `8n / 17i`
+- [Reading](cs224n_stanford/reading.md) — `1n / 1i`
+- [Lecture 9: Self-attention And Transformers](cs224n_stanford/lecture_9_self_attention_and_transformers.md) — `41n / 45i`
+- [Reading](cs224n_stanford/reading.md) — `4n / 6i`
+- [Lecture 9: Pretraining](cs224n_stanford/lecture_9_pretraining.md) — `42n / 51i`
+- [Lec 9 Reading](cs224n_stanford/lec_9_reading.md) — `1n / 1i`
+- [Lecture 10: Prompting & RLHF](cs224n_stanford/lecture_10_prompting_rlhf.md) — `51n / 63i`
+- [Reading](cs224n_stanford/reading.md) — `1n / 1i`
+- [Lecture 12: Natural Language Generation](cs224n_stanford/lecture_12_natural_language_generation.md) — `59n / 68i`
+- [Lecture 11: Question & Answering](cs224n_stanford/lecture_11_question_answering.md) — `46n / 55i`
+- [Reading](cs224n_stanford/reading.md) — `1n / 1i`
+- [Lecture 13: Coreference Resolution](cs224n_stanford/lecture_13_coreference_resolution.md) — `50n / 52i`
+- [Lecture 14: Insights Between NLP And Linguistic](cs224n_stanford/lecture_14_insights_between_nlp_and_linguistic.md) — `32n / 38i`
+- [Lecture 15: Add Knowledge To Language Model](cs224n_stanford/lecture_15_add_knowledge_to_language_model.md) — `23n / 27i`
+- [Assignment 5: Self-attention, Transformers And Pretraining](cs224n_stanford/assignment_5_self_attention_transformers_and_pretraining.md) — `9n / 9i`
 
 ### 📂 CS231N_Stanford (📝 1603 Notes | 📸 2702 Screenshots)
 <!-- key: cs231n_stanford -->
