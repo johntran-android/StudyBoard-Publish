@@ -1,6 +1,6 @@
 # 10.1 Point Estimation
 
-📊 **Progress:** `23` Notes | `28` Screenshots | `8` AI Reviews
+📊 **Progress:** `24` Notes | `28` Screenshots | `8` AI Reviews
 
 ---
 <a id="node-2ixm3r0"></a>
@@ -1805,6 +1805,273 @@
 - **Section 10.1 Point Estimation**
 
 <p align="center"><kbd><img src="assets/f2f54o58ynm.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Mình thấy cần thiết phải ôn lại cái lập luận dẫn đến cách tiếp cận để giải quyết được bài toán estiamte variance của một mle vì thật sự đây là kiến thức rất khó và quan trọng.
+>
+>
+>
+> Đầu tiên cần nhấn mạnh, yêu cầu đặt ra là estiamte được variance của một mle θ^, của θ. Ta sẽ dựa trên các công cụ sau đây:
+>
+>
+>
+> Đầu tiên là khái niệm phương sai tiệm cận (asymptotically variance), kí hiệu Avar, được định nghĩa là phương sai của phân phối chuẩn mà √n(Wn - θ) hội tụ (distribution) về. Tức là, nếu ta có √n(Wn - θ) → (d) n(0, σ^2), thì Avar(Wn) = σ^2.
+>
+>
+>
+> Rồi, tiếp theo, là Delta method theorem, nói rằng nếu √n(Wn - θ) → (d) n(0, σ^2), thì √n(g(Wn) - g(θ)) → (d) n(0, g'(θ)^2 σ^2). Điều này cũng đồng nghĩa nói đơn giản hơn là nếu Wn có phương sai tiệm cận là Avar(Wn) thì Avar\[g(Wn)\] = \[g'(θ)\]^2 Avar(Wn).
+>
+>
+>
+> Kế đến, là công cụ nữa: Khái niệm thế nào là một estimator có tính hiệu qủa tiệm cận: Định nghĩa nói rằng, nếu estimator Wn của θ có Avar(Wn) = 1/I1(θ), thì nó là estiamator hiệu quả tiệm cận, đồng thời cũng imply consistent.
+>
+>
+>
+> Và công cụ tiếp theo là theorem nói rằng ML estimator của θ hay h(θ) thì sẽ là estimator hiệu quả tiệm cận.
+>
+>
+>
+> Với tất cả các công cụ trên ta sẽ lập luận như sau:
+>
+>
+>
+> Xét θ^, là MLE của θ và ta như ban đầu đã nói, ta muốn estimate variance của h(θ^).
+>
+>
+>
+> Thế thì, vì θ^ là MLE của θ, nên nó là estimator hiệu quả tiệm cận: Do đó Avar(θ^) = 1/I1(θ), I1(θ) là information number của 1 observation. Và theo định nghĩa của phương sai tiệm cận thì ta có √n(θ^ - θ) → (d) n(0, 1/I1(θ)).
+>
+>
+>
+> Rồi, theo Delta method theorem, khi θ^ có phương sai tiệm cận là Avar(θ^) thì Avar\[h(θ^)\] = \[h'(θ)\]^2 Avar(θ^), thay kết quả trên vào ta có:
+>
+>
+>
+> Avar\[h(θ^)\] = \[h'(θ)\]^2 \[1/I1(θ)\]
+>
+>
+>
+> Và theo định nghĩa của phương sai tiệm cận thì ta có:
+>
+>
+>
+> √n\[h(θ^) - h(θ)\] → (d) n(0, \[h'(θ)\]^2 \[1/I1(θ)\])
+>
+>
+>
+> Và điều này, ý nghĩa của nó là, khi n lớn đến vô hạn thì random variable √n\[h(θ^) - h(θ)\] sẽ có distribution là n(0, \[h'(θ)\]^2 \[1/I1(θ)\]).
+>
+>
+>
+> Vậy nếu xét n đủ lớn, thì ta có thể nói Var\[ √n\[h(θ^) - h(θ)\]\] ≈ \[h'(θ)\]^2 \[1/I1(θ)\]
+>
+>
+>
+> ⇔ n \[Var\[h(θ^)\] + 0\] ≈ \[h'(θ)\]^2 \[1/I1(θ)\] (khai triến vế trái theo tính chất của phương sai Var(c1X + c2) = c1^2Var(X).
+>
+>
+>
+> ⇔ Var\[h(θ^)\] ≈ \[h'(θ)\]^2 \[1/I1(θ)\] / n
+>
+>
+>
+> ⇔ Var\[h(θ^)\] ≈ \[h'(θ)\]^2 / nI1(θ)
+>
+>
+>
+> Tới đây là ta đã có công thức để tính xấp xỉ variance của h(θ^) rồi.
+>
+>
+>
+> Và với việc biết về theorem Cramer Rao Lower Bound, nói rằng, nếu ta có Wn là chuỗi estimator của θ, thì phương sai của nó không thể nhỏ hơn CRLB: Var\_θ(Wn) ≥ \[d/dθ E\_θ\[Wn\]^2/ In(θ). Và nếu ta có Wn là estiamtor có E\[Wn\] = h(θ) thì Var\_θ(Wn) ≥ \[h'(θ)\]^2/ In(θ) = \[h'(θ)\]^2/ nI1(θ) chính là cái trên. Do đó ta mới nói:
+>
+>
+>
+> Var\[h(θ^)\] ≈ \[h'(θ)\]^2 / nI1(θ) là CRLB của một estimator Wn có E\[Wn\] = h(θ)
+>
+>
+>
+> Rồi, thế thì tuy là ta có công thức để mà estimate Var(h(θ^)) ≈ \[h'(θ)\]^2 / nI1(θ) nhưng công thức này vô dụng vì dù sao ta cũng không thể biết θ là gì. Do đó, ta sẽ làm hai động tác để lại mang ý nghĩa là ta sẽ ước lượng (estimate) cái công thức xấp xỉ (approximate) trên:
+>
+>
+>
+> i) Động tác đầu tiên là chỗ nào có θ thì ta dùng θ^.
+>
+>
+>
+> ii) Động tác thứ hai, là nói về cái In(θ), vốn có công thức cần phải tính kì vọng: E\_θ{\[∂/∂θ log f(**X**|θ)\]^2}, nên nó gọi là expected information number.
+>
+>
+>
+> Phân tích cái này: Đầu tiên hãy hiểu rằng f(**X**|θ) là random variable có được bởi việc áp joint pdf của **X**: f(**x**|θ) lên random variable vector **X**, và sau đó là áp hàm log, rồi lấy đạo hàm theo θ, rồi bình phương, nên cuối cùng ta vẫn là có một random variable. Hay nói cách khác, ta có thể coi như đây là random variable có được bằng cách áp hàm g(**x**) = {d/dθ \[log f(**x**|θ)\]}^2, lên **X**. Và vì là random variable, nên ta có quyền lấy kì vọng. Và thêm nữa vì đây là random variabel có được từ việc áp dụng hàm g lên **X**, mà ông **X** có distribution phụ thuộc θ: **X** \~ f(**x**|θ) nên dĩ nhiên g(**X**) cũng vậy, và do đó expected value của nó phải là hàm phụ thuộc θ, nên nó mới có cái chữ θ ở dưới chân: E\_θ{\[∂/∂θ log f(**X**|θ)\]^2}. Nói chung hiểu bản chất của hắn ta sẽ dễ hiểu mấy khúc sau.
+>
+>
+>
+> Rồi, Theo Lemma 7.3.11 nói rằng nếu f(x|θ) thỏa d/dθ E\_θ\[∂/∂θ log f(**X**|θ)\] = ∫ ∂/∂θ\[(∂/∂θ log f(x|θ)d(x|θ)\] dx thì:
+>
+>
+>
+> E\_θ{\[∂/∂θ log f(**X**|θ)\]^2} = - E\_θ\[∂^2/∂θ^2 log f(**X**|θ)\]
+>
+>
+>
+> Và để tính kì vọng cuả cái này, thì vì ko biết θ, nên cũng không thể tính được. Do đó, ta sẽ không dùng kì vọng, mà thay bằng cái gọi là **observed information number**.
+>
+>
+>
+> Tức là thay - E\_θ\[∂^2/∂θ^2 log f(**X**|θ)\]
+>
+>
+>
+> bằng: - ∂^2/∂θ^2 log f(**x**|θ) 
+>
+>
+>
+> (chú ý, ở trên, là **X**, vì đây là random variable, và ta tính kì vọng của cái ∂^2/∂θ^2 log f(**X**|θ), cũng là random variable. Còn ở dưới, là ta thế observed value vào, bỏ kì vọng)
+>
+>
+>
+> Và với hai động tác đó, ta có công thức estimate cái công thức approximate:
+>
+>
+>
+> Var\[h(θ^)\] ≈ \[h'(θ)\]^2 / nI1(θ)
+>
+>
+>
+> ≈ \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 log f(**x**|θ)\]|θ=θ^
+>
+>
+>
+> Và dĩ nhiên f(**x**|θ) = L(θ|**x**)
+>
+>
+>
+> ≈ \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 logL(θ|**x**)\]|θ=θ^
+>
+>
+>
+> ---
+>
+>
+>
+> Rồi. thế thì ở đây nhắc đến trong bài tập 5.5.22 mình đã dùng Delta Method để approximate var(p^/(1-p^)). Thì như vừa ôn lại Delta method ở trên, theorem này nói rằng nếu Wn có Avar(Wn) thì g(Wn) có Avar(g(Wn)) = \[g'(θ)\]^2 Avar(Wn). Nên áp dụng cái này, ta sẽ coi như g(p^) = p^/(1-p^) để rồi:
+>
+>
+>
+> Avar\[p^/(1-p^)\] = \[g'(p)\]^2 Avar(p^)
+>
+>
+>
+> và với cái này thì ta có thể có Var\[p^/(1-p^)\] ≈ \[g'(p)\]^2 Avar(p^)/n
+>
+>
+>
+> Thế thì mình biết với random sample X1, X2,... Xn có mean μ và variance σ^2 thì CLT (central limit theorem) cho ta biết rằng √n(Xbar - μ)/σ → (d) n(0, 1), cũng chính là √n(Xbar - μ) → n(0, σ^2).
+>
+>
+>
+> Vậy áp dụng CLT ta sẽ có √n(p^ - p) → n(0, true variance) với true variance trong bài toán này là p(1-p). Vậy nên Avar(p^) = p(1-p).
+>
+>
+>
+> Còn \[g'(p)\]^2: g(p) = p/(1-p)
+>
+>
+>
+> ⇨ g'(p) = { \[d/dp p\](1-p) - p \[d/dp (1-p)\] } / (1-p)^2
+>
+>
+>
+> = \[(1-p) + p\] / (1-p)^2
+>
+>
+>
+> = 1 / (1-p)^2
+>
+>
+>
+> Vậy thay vô ta có: Var\[p^/(1-p^)\] ≈ \[g'(p)\]^2 Avar(p^)/n
+>
+>
+>
+> = \[1 / (1-p)^2\]^2 × p(1-p) / n
+>
+>
+>
+> = \[1 / (1-p)^4\] × p(1-p) / n
+>
+>
+>
+> = p / n(1-p)^3\]
+>
+>
+>
+> Vậy Var\[p^/(1-p^)\] ≈ p / n(1-p)^3\] và đây chính là ta đã giải lại bài tập 5.5.22 tính Var\[p^/(1-p^)\] theo Delta method. Và dĩ nhiên ta lại không có p, nên dùng cách thay p^ vào p, để có estimate của cái xấp xỉ này:
+>
+>
+>
+> Var^\[p^/(1-p^)\] ≈ Var_p\[p^/(1-p^)\]|p=p^ = p/n(1-p)^3|p=p^
+>
+>
+>
+> = **p^/n(1-p^)^3**
+>
+>
+>
+> ---
+>
+>
+>
+> Giờ, ta sẽ dùng cái kiến thức hồi nãy vừa ôn lại để tính cái này theo cách đó.
+>
+>
+>
+> Đó là Var(g(p^)) ≈ \[g'(p)\]^2|p=p^ / \[-∂^2/∂θ^2 log L(p|**x**)\]|p=p^
+>
+>
+>
+> Tử số: \[g'(p)\]^2 như trên đã tính = 1/(1-p)^4 
+>
+>
+>
+> ⇨ 1/(1-p)^4|p=p^ = 1/(1-p^)^4
+>
+>
+>
+> Mẫu số: -∂^2/∂θ^2 log L(p|**x**) note trước mình đã tính = np^/p^2 + n(1-p^)/(1-p)^2
+>
+>
+>
+> Evaluate tại p^: np^/p^2 + n(1-p^)/(1-p)^2|p=p^
+>
+>
+>
+> = np^/p^2 + n(1-p^)/(1-p^)^2
+>
+>
+>
+> = n/p^ + n/(1-p^)
+>
+>
+>
+> = n/p^(1-p^)
+>
+>
+>
+> Vậy Var(g(p^)) = \[1/(1-p^)^4\] / \[n/p^(1-p^)\]
+>
+>
+>
+> = \[1/(1-p^)^4\] × \[p^(1-p^)/n\]
+>
+>
+>
+> = **p^/n(1-p^)^3**
+>
+>
+>
+> Kết quả y chang cách 1 dùng Delta method.
 
 <br>
 
