@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~8,624 notes` · `~12,752 screenshots` · `14 notebooks`**
+**`~10,432 notes` · `~15,039 screenshots` · `15 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -365,6 +365,31 @@ image Compression](mit1806_gstrang/lecture_31_change_of_basis_image_compression.
 inverse; Pseudoinverse](mit1806_gstrang/lecture_33_left_and_right_inverse_pseudoinverse.md) — `30n / 33i`
 - [Lecture 34: Final Course
 review](mit1806_gstrang/lecture_34_final_course_review.md) — `32n / 34i`
+
+### 📂 NLP Spec Coursera (📝 1808 Notes | 📸 2287 Screenshots)
+<!-- key: nlp_spec_coursera -->
+
+> Exploring core Natural Language Processing (NLP) techniques, this notebook delves into Transformer and LSTM architectures, word embedding methods, and algorithms like BPE and LSH, complemented by practical exercises for building and evaluating NLP systems.
+
+- [📋 Overview](nlp_spec_coursera/_overview.md) — `0n / 1i`
+- [C1w1_logistic Regression](nlp_spec_coursera/c1w1_logistic_regression.md) — `64n / 113i`
+- [C1w2 - Naive Bayes](nlp_spec_coursera/c1w2_naive_bayes.md) — `83n / 112i`
+- [C1w3 - Vector Space Models](nlp_spec_coursera/c1w3_vector_space_models.md) — `146n / 122i`
+- [C1w4 - Machine Translation & Document Search](nlp_spec_coursera/c1w4_machine_translation_document_search.md) — `108n / 115i`
+- [C2_natural Language Processing With Probabilistic Models](nlp_spec_coursera/c2_natural_language_processing_with_probabilistic_models.md) — `0n / 1i`
+- [C2w1_autocorrect](nlp_spec_coursera/c2w1_autocorrect.md) — `110n / 123i`
+- [C2w2_part Of Speech Tagging And Hidden Markov Models](nlp_spec_coursera/c2w2_part_of_speech_tagging_and_hidden_markov_models.md) — `169n / 171i`
+- [C2w3_autocomplete And Language Models](nlp_spec_coursera/c2w3_autocomplete_and_language_models.md) — `152n / 143i`
+- [C3w4_word Embeddings With Neural Networks](nlp_spec_coursera/c3w4_word_embeddings_with_neural_networks.md) — `173n / 211i`
+- [C3w1_neural Networks For Sentiment Analysis](nlp_spec_coursera/c3w1_neural_networks_for_sentiment_analysis.md) — `94n / 141i`
+- [C3w2_recurrent Neural Networks For Language Modeling](nlp_spec_coursera/c3w2_recurrent_neural_networks_for_language_modeling.md) — `85n / 138i`
+- [C3W3_LSTMs AND NAMED ENTITY REGCONITION:](nlp_spec_coursera/c3w3_lstms_and_named_entity_regconition.md) — `69n / 108i`
+- [C3w4 - Siamese Network](nlp_spec_coursera/c3w4_siamese_network.md) — `82n / 122i`
+- [C4w1_neural Machine Translation](nlp_spec_coursera/c4w1_neural_machine_translation.md) — `167n / 220i`
+- [C4_natural Language Processing With Attention Models](nlp_spec_coursera/c4_natural_language_processing_with_attention_models.md) — `0n / 1i`
+- [C4w2_text Summarization](nlp_spec_coursera/c4w2_text_summarization.md) — `86n / 145i`
+- [C4w3 - Question Answering](nlp_spec_coursera/c4w3_question_answering.md) — `130n / 187i`
+- [C4w4_chatbot](nlp_spec_coursera/c4w4_chatbot.md) — `90n / 113i`
 
 ### 📂 Numerical Optimization_J.Nocedal (📝 374 Notes | 📸 517 Screenshots)
 <!-- key: numerical_optimization_jnocedal -->
