@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app) — không gian học tập cá nhân của tôi.
 
-**`~6,532 notes` · `~9,049 screenshots` · `10 notebooks`**
+**`~7,166 notes` · `~10,876 screenshots` · `11 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -134,6 +134,19 @@ variational Auto-encoder](cs231n_stanford/eecs_498_007_598_005_2022_assignment_6
 generative Adversarial Network](cs231n_stanford/eecs_498_007_598_005_2022_assignment_6_generative_adversarial_network.md) — `20n / 59i`
 - [Lecture 14/16 - Deep Reinforcement
 learning](cs231n_stanford/lecture_1416_deep_reinforcement_learning.md) — `24n / 29i`
+
+### 📂 Deep Learning Specialization_Cousera_Andrew Ng (📝 634 Notes | 📸 1827 Screenshots)
+<!-- key: deep_learning_specialization_cousera_andrew_ng -->
+
+> This notebook provides a comprehensive overview of core deep learning concepts, optimization techniques, and regularization methods. It also dives into building and applying various neural network architectures, from CNNs and RNNs to Transformers, for tasks like image segmentation, object detection, and natural language processing.
+
+- [📋 Overview](deep_learning_specialization_cousera_andrew_ng/_overview.md) — `0n / 1i`
+- [Course 1 - Neural Networks & Deep Learning](deep_learning_specialization_cousera_andrew_ng/course_1_neural_networks_deep_learning.md) — `73n / 373i`
+- [Course 2 - Improving Deep Neural Networks:
+hyperparams Tuning, Regularization & Optimization](deep_learning_specialization_cousera_andrew_ng/course_2_improving_deep_neural_networks_hyperparams_tuning_regularization_optimization.md) — `103n / 302i`
+- [Course 3 - Structuring Machine Learning Projects](deep_learning_specialization_cousera_andrew_ng/course_3_structuring_machine_learning_projects.md) — `64n / 87i`
+- [Course 4 - Convolutional Neural Network](deep_learning_specialization_cousera_andrew_ng/course_4_convolutional_neural_network.md) — `168n / 478i`
+- [Course 5 - Sequence Models](deep_learning_specialization_cousera_andrew_ng/course_5_sequence_models.md) — `226n / 586i`
 
 ### 📂 EE364a, Convex Optim_S.Boyd (📝 937 Notes | 📸 1428 Screenshots)
 <!-- key: ee364a_convex_optim_sboyd -->
