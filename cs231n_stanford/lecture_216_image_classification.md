@@ -180,6 +180,8 @@
 
 <a id="node-hxfhgdc"></a>
 
+- **KNN Model Prediction Mechanism**
+
 <p align="center"><kbd><img src="assets/bjbjn2umha8.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -230,6 +232,8 @@
 
 <a id="node-9oj7i7m"></a>
 
+- **Training vs. Inference Big O**
+
 <p align="center"><kbd><img src="assets/vd3q8bwjhnh.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -265,6 +269,8 @@
 
 <a id="node-kdh49hf"></a>
 
+- **Classification and Pattern Anomalies**
+
 <p align="center"><kbd><img src="assets/7mrzim52agw.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -276,6 +282,8 @@
 <br>
 
 <a id="node-4eepr72"></a>
+
+- **KNN Classifier: Voting and Smoothing**
 
 <p align="center"><kbd><img src="assets/t51z0j1b6g.png" width="80%"></kbd></p>
 
@@ -294,6 +302,8 @@
 
 <a id="node-6bgzffu"></a>
 
+- **Image Prediction Study**
+
 <p align="center"><kbd><img src="assets/6j4pam4srh2.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -303,6 +313,8 @@
 <br>
 
 <a id="node-m6oqdl6"></a>
+
+- **KNN Performance and Misclassification**
 
 <p align="center"><kbd><img src="assets/7fujktkhoz5.png" width="80%"></kbd></p>
 
@@ -314,6 +326,8 @@
 <br>
 
 <a id="node-k2ck3nc"></a>
+
+- **Feature Type and Distance Metric**
 
 <p align="center"><kbd><img src="assets/zwvdhowlcg.png" width="80%"></kbd></p>
 
@@ -334,6 +348,8 @@
 
 <a id="node-3gkubhj"></a>
 
+- **Distance Metric Comparison Plotting**
+
 <p align="center"><kbd><img src="assets/gafugiwk3bj.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -343,6 +359,8 @@
 <br>
 
 <a id="node-8j3aqeq"></a>
+
+- **KNN Hyperparameter Exploration**
 
 <p align="center"><kbd><img src="assets/n3ldd7ysuxm.png" width="80%"></kbd></p>
 
@@ -356,6 +374,8 @@
 
 <a id="node-a4wokob"></a>
 
+- **Human-selected hyperparameters**
+
 <p align="center"><kbd><img src="assets/upgwzkef8ba.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -366,6 +386,8 @@
 
 <a id="node-1dvhi5j"></a>
 
+- **Hyperparameter Tuning Strategies**
+
 <p align="center"><kbd><img src="assets/twka1cj0vu.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -375,6 +397,8 @@
 <br>
 
 <a id="node-4j2ca3l"></a>
+
+- **Overfitting from Training HP Tuning**
 
 <p align="center"><kbd><img src="assets/rzug6r4n4w.png" width="80%"></kbd></p>
 
@@ -395,6 +419,8 @@
 
 <a id="node-b917x60"></a>
 
+- **Test Set Overfitting Pitfalls**
+
 <p align="center"><kbd><img src="assets/9w6ys78wkij.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -413,6 +439,8 @@
 
 <a id="node-7rqo4zh"></a>
 
+- **Test Set Usage Principle**
+
 <p align="center"><kbd><img src="assets/ks6qd9ijm7.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -430,6 +458,8 @@
 
 <a id="node-4dhkefw"></a>
 
+- **K-fold Cross-Validation Applicability**
+
 <p align="center"><kbd><img src="assets/betnbt8wwyr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -446,6 +476,8 @@
 
 <a id="node-ny974sc"></a>
 
+- **Hyperparameter Tuning Performance Analysis**
+
 <p align="center"><kbd><img src="assets/mydudnqhwnb.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -456,6 +488,8 @@
 <br>
 
 <a id="node-o3dlamx"></a>
+
+- **KNN and L2 Distance Limitations**
 
 <p align="center"><kbd><img src="assets/1sjp13sjzmh.png" width="80%"></kbd></p>
 
@@ -472,6 +506,8 @@
 <br>
 
 <a id="node-9gpevd4"></a>
+
+- **Curse Of Dimensionality on KNN**
 
 <p align="center"><kbd><img src="assets/h7wako9m409.png" width="80%"></kbd></p>
 
@@ -502,6 +538,8 @@
 <br>
 
 <a id="node-xusozdn"></a>
+
+- **K-NN: Algorithm and Tuning**
 
 <p align="center"><kbd><img src="assets/3ztlo5bwtn3.png" width="80%"></kbd></p>
 
