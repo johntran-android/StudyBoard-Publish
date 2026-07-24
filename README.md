@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~11,519 notes` · `~16,872 screenshots` · `16 notebooks`**
+**`~11,997 notes` · `~17,377 screenshots` · `17 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -64,6 +64,16 @@ computations](ee263a/15_complexity_of_vector_computations.md) — `4n / 6i`
 - [11.5 Pseudo inverse](ee263a/115_pseudo_inverse.md) — `7n / 9i`
 - [13.0 Least squares problem](ee263a/130_least_squares_problem.md) — `15n / 24i`
 - [13.1 Least squares data fitting](ee263a/131_least_squares_data_fitting.md) — `14n / 20i`
+
+### 📂 LLM — Large Language Models (📝 478 Notes | 📸 505 Screenshots)
+<!-- key: a1_llm -->
+
+> This notebook explores Large Language Models, covering their architecture, fine-tuning techniques like PEFT and RLHF, model evaluation, responsible AI considerations, and deployment strategies.
+
+- [📋 Overview](a1_llm/_overview.md) — `0n / 1i`
+- [Week 1_introduction To Llms And The Generative Ai Project Lifecycle](a1_llm/week_1_introduction_to_llms_and_the_generative_ai_project_lifecycle.md) — `181n / 179i`
+- [Week 2 - Finetuning And Evaluating Large Language Model](a1_llm/week_2_finetuning_and_evaluating_large_language_model.md) — `144n / 156i`
+- [Week3 - Rhhf](a1_llm/week3_rhhf.md) — `153n / 169i`
 
 ### 📂 CS224N_Stanford (📝 801 Notes | 📸 1120 Screenshots)
 <!-- key: cs224n_stanford -->
