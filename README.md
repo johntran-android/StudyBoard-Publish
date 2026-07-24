@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~10,433 notes` · `~15,041 screenshots` · `15 notebooks`**
+**`~11,516 notes` · `~16,868 screenshots` · `16 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -192,6 +192,31 @@ hyperparams Tuning, Regularization & Optimization](deep_learning_specialization_
 - [Course 3 - Structuring Machine Learning Projects](deep_learning_specialization_cousera_andrew_ng/course_3_structuring_machine_learning_projects.md) — `64n / 87i`
 - [Course 4 - Convolutional Neural Network](deep_learning_specialization_cousera_andrew_ng/course_4_convolutional_neural_network.md) — `168n / 478i`
 - [Course 5 - Sequence Models](deep_learning_specialization_cousera_andrew_ng/course_5_sequence_models.md) — `226n / 586i`
+
+### 📂 DL Spec Coursera (📝 1083 Notes | 📸 1827 Screenshots)
+<!-- key: dl_spec_coursera -->
+
+> This notebook provides a comprehensive overview of deep learning concepts, from foundational neural networks and gradient descent to advanced architectures like CNNs, RNNs, and Transformers. It emphasizes practical implementation using TensorFlow, drawing heavily from Coursera specialization content and programming assignments.
+
+- [📋 Overview](dl_spec_coursera/_overview.md) — `0n / 1i`
+- [C1w1_introduction To N.n](dl_spec_coursera/c1w1_introduction_to_nn.md) — `7n / 24i`
+- [C1w2_n.n Basic](dl_spec_coursera/c1w2_nn_basic.md) — `64n / 163i`
+- [C1w3_shalow Neural Networks](dl_spec_coursera/c1w3_shalow_neural_networks.md) — `23n / 91i`
+- [C1w4_deep Neural Network](dl_spec_coursera/c1w4_deep_neural_network.md) — `21n / 95i`
+- [Untitled](dl_spec_coursera/untitled.md) — `1n / 0i`
+- [C2w1_practical Aspects Of Deep Learning](dl_spec_coursera/c2w1_practical_aspects_of_deep_learning.md) — `51n / 121i`
+- [C2w2_optimization Algorithms](dl_spec_coursera/c2w2_optimization_algorithms.md) — `50n / 96i`
+- [C2w3_hyperparamter Tuning, Batch Normalization & Programming Frameworks](dl_spec_coursera/c2w3_hyperparamter_tuning_batch_normalization_programming_frameworks.md) — `58n / 85i`
+- [C3w1_machine Learning Strategy 1](dl_spec_coursera/c3w1_machine_learning_strategy_1.md) — `42n / 47i`
+- [C3w2_machine Learning Strategy 2](dl_spec_coursera/c3w2_machine_learning_strategy_2.md) — `43n / 40i`
+- [C4w1_foundations Of Convolutional Neural Network](dl_spec_coursera/c4w1_foundations_of_convolutional_neural_network.md) — `80n / 117i`
+- [C4w2_deep Convolutional Models: Case Studies](dl_spec_coursera/c4w2_deep_convolutional_models_case_studies.md) — `88n / 118i`
+- [C4w3_object Detection](dl_spec_coursera/c4w3_object_detection.md) — `59n / 138i`
+- [C4w4_face Recognition & Neural Style Transfer](dl_spec_coursera/c4w4_face_recognition_neural_style_transfer.md) — `73n / 105i`
+- [C5w1_recurrent Neural Networks](dl_spec_coursera/c5w1_recurrent_neural_networks.md) — `99n / 165i`
+- [C5w2_natural Language Processing & Word Embeddings](dl_spec_coursera/c5w2_natural_language_processing_word_embeddings.md) — `59n / 103i`
+- [C5w3_sequence Models & Attention Mechanism](dl_spec_coursera/c5w3_sequence_models_attention_mechanism.md) — `72n / 116i`
+- [C5w4_transformer Network](dl_spec_coursera/c5w4_transformer_network.md) — `193n / 202i`
 
 ### 📂 EE364a, Convex Optim_S.Boyd (📝 937 Notes | 📸 1428 Screenshots)
 <!-- key: ee364a_convex_optim_sboyd -->
