@@ -362,6 +362,8 @@ interval Estimators
 
 <a id="node-4x9sjxz"></a>
 
+- **Mối quan hệ Test Tập tin cậy**
+
 <p align="center"><kbd><img src="assets/ete1jab3xe5.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -554,6 +556,8 @@ interval Estimators
 
 <a id="node-56k0gw3"></a>
 
+- **Đảo ngược test ra khoảng tin cậy**
+
 <p align="center"><kbd><img src="assets/aklem5idw1e.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -574,6 +578,8 @@ interval Estimators
 <br>
 
 <a id="node-y9cjzgq"></a>
+
+- **H1 và Dạng Tập Tin Cậy**
 
 <p align="center"><kbd><img src="assets/xz8i47fwtf.png" width="80%"></kbd></p>
 
@@ -619,6 +625,8 @@ interval Estimators
 <br>
 
 <a id="node-jw4zng6"></a>
+
+- **Khoảng tin cậy đảo ngược LRT**
 
 <p align="center"><kbd><img src="assets/9b0pxf7xz8q.png" width="80%"></kbd></p>
 
@@ -872,6 +880,8 @@ interval Estimators
 
 <a id="node-ejlee85"></a>
 
+- **Miền chấp nhận, khoảng tin cậy**
+
 <p align="center"><kbd><img src="assets/pbhe351lb0o.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -895,6 +905,8 @@ interval Estimators
 <br>
 
 <a id="node-9p7bal4"></a>
+
+- **Xây dựng khoảng tin cậy**
 
 <p align="center"><kbd><img src="assets/hf0hm1pd2r.png" width="80%"></kbd></p>
 
@@ -1067,6 +1079,8 @@ interval Estimators
 
 <a id="node-dscz8lz"></a>
 
+- **LRT và Tập tin cậy**
+
 <p align="center"><kbd><img src="assets/4pk4zylzs13.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1123,6 +1137,8 @@ interval Estimators
 <br>
 
 <a id="node-r96nyc1"></a>
+
+- **Đảo ngược kiểm định**
 
 <p align="center"><kbd><img src="assets/6ejqxb73u2w.png" width="80%"></kbd></p>
 
