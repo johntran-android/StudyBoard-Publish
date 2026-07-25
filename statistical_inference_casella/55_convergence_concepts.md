@@ -801,7 +801,7 @@
 
 <a id="node-32vkewg"></a>
 
-- **Định lý giới hạn trung tâm**
+- **CLT - Định lý giới hạn trung tâm**
 
 <p align="center"><kbd><img src="assets/xjdz8ybz0zl.png" width="80%"></kbd></p>
 
@@ -859,7 +859,7 @@
 
 <a id="node-yzn3dv1"></a>
 
-- **Chứng minh CLT bằng  MGF**
+- **Proof of Theorem 5.5.14**
 
 <p align="center"><kbd><img src="assets/a6mzbf1ze0d.png" width="80%"></kbd></p>
 
@@ -1062,7 +1062,7 @@
 
 <a id="node-yngnkwh"></a>
 
-- **CLT Dạng mạnh hơn**
+- **Stronger Central Limit Theorem**
 
 <p align="center"><kbd><img src="assets/6ss9jv782oi.png" width="80%"></kbd></p>
 
