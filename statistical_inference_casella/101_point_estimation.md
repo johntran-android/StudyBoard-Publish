@@ -1,6 +1,6 @@
 # 10.1 Point Estimation
 
-📊 **Progress:** `24` Notes | `28` Screenshots | `8` AI Reviews
+📊 **Progress:** `28` Notes | `32` Screenshots | `10` AI Reviews
 
 ---
 <a id="node-2ixm3r0"></a>
@@ -2072,6 +2072,148 @@
 >
 >
 > Kết quả y chang cách 1 dùng Delta method.
+
+<br>
+
+<a id="node-0d20ljz"></a>
+
+- **MLE Variance Approximation Limitations**
+
+<p align="center"><kbd><img src="assets/depno1k7k9o.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đại ý là tuy phương pháp ước lượng xấp xỉ variance của MLE hoạt động khá tốt trong nhiều trường hợp, nhưng nó không phải là không thể fail. Đặc biệt là khi hàm h(θ^) không monotone. Trong những trường hợp như vậy, đạo hàm h'sẽ đổi dấu, và điều này sẽ dẫn đến việc underestimate - đánh giá giá trị của variance thấp hơn thực tế.
+>
+>
+>
+> Ông nói thêm, vốn dĩ, việc dùng CRLB để ước lượng xấp xỉ cho variance của h(θ^) vốn dĩ đã có thể dễ dẫn dến under estimate rồi. Nhưng với hàm không monotone thì vấn đề có thể tệ hơn.
+
+<br>
+
+<a id="node-irc30cd"></a>
+
+- **Example 10.1.15 Bernoulli Variance**
+
+<p align="center"><kbd><img src="assets/q9l4csikf6.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Quay lại sau, nhưng đại ý đoạn này là minh họa rằng khi h(θ^) ko monotone thì giá trị xấp xỉ của variance Var(h(θ^)) có thể bị thấp hơn giá trị thật.
+
+<br>
+
+<a id="node-2y7vyqf"></a>
+
+- **Asymptotic Relative Efficiency**
+
+<p align="center"><kbd><img src="assets/qf9p6fgkwop.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái đoạn này nói rằng, tính chất hiệu quả tiệm cận rõ ràng cho ta một thước đo tiêu chuẩn mà một estimator hướng tới: Ý là, xét trên diện phương sai tiệm cận, thì tốt nhất chính là đặt được cái Cramer Rao Lower Bound (1/I1(θ)), để được gọi là estimator hiệu quả tiệm cận.
+>
+>
+>
+> Thì bên cạnh vai trò trên, ta sẽ bàn qua một tác dụng nữa của tính hiệu quả tiệm cận: Đó là dùng để so sánh các estimator.
+>
+>
+>
+> Để làm việc này, ta sẽ có định nghĩa của hiệu quả tiệm cận tương đối - asymptotic relative efficiency.
+>
+>
+>
+> Định nghĩa như sau:
+>
+>
+>
+> nếu ta có hai estimator Wn và Vn thỏa:
+>
+>
+>
+> √n(Wn - τ(θ)) → (d) n(0, σW^2) và
+>
+>
+>
+> √n(Vn - τ(θ)) → (d) n(0, σV^2)
+>
+>
+>
+> thì ARE của Vn wrt Wn được định nghĩa là ARE(Vn, Wn) = σW^2 / σV^2
+>
+>
+>
+> Suy nghĩ chút về cái định nghĩa này:
+>
+>
+>
+> Ta đã biết định nghĩa của phương sai tiệm cận: Đó là nếu √n(Wn - τ(θ)) → (d) n(0, σ^2) thì phương sai tiệm cận của Wn chính là σ^2: Avar(Wn) = σ^2.
+>
+>
+>
+> Vậy thì ở đây có thể hiểu định nghĩa của hiệu quả tiệm cận tương đối của Vn đối với Wn chính là tỉ lệ của Avar(Wn) và Avar(Vn) thôi chứ có gì đâu: 
+>
+>
+>
+> ARE(Vn, Wn) = Avar(Wn) / Avar(Vn)
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bài giải thích rất rõ ràng, bám sát nội dung gốc và còn mở rộng thêm chiều sâu bằng cách liên hệ với Cramer-Rao Lower Bound và định nghĩa phương sai tiệm cận (Avar), giúp người đọc dễ hiểu hơn về bản chất của Hiệu quả tiệm cận tương đối (ARE). Không có điểm yếu đáng kể, đây là một ghi chú xuất sắc.
+
+<br>
+
+<a id="node-eej3duv"></a>
+
+- **Example 10.1.17 Poisson Estimators**
+
+<p align="center"><kbd><img src="assets/ontzebnie1s.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Ví dụ này sẽ giúp ta thấy công dụng của ARE (hiệu quả tiệm cận tương đối). Đầu tiên, bài toán là cho X1, X2,... iid Poisson(λ). Và ta muốn estimate xác suất 0.
+>
+>
+>
+> Hiểu đại khái Xác suất 0, tức là xác suất X \~ pois(λ), bằng 0. Tức P(X = 0), và với pdf của Pois, thì P(X = 0) là e^-λ. Và ta hiểu thế này: ta ko biết λ thật bằng bao nhiêu, và ta muốn estimate cái hàm h(λ) = e^-λ này.
+>
+>
+>
+> Và đây cũng chỉ là bài toán point estimation thôi, thay vì estimate λ, ta estimate h(λ).
+>
+>
+>
+> Thế thì, mình nghĩ, ủa, thì nói mẹ nó là estimate λ đi, khi mày estimate được λ, ví dụ có λ^ (mle của λ) thì e^-λ^ sẽ là estimate cho "xác suất 0" không đúng sao.
+>
+>
+>
+> Nhưng cứ đọc tiếp: Thì tiếp theo, đại khái là gs nói rằng một cách đơn giản để estimate h(λ) đó là đặt Yi = I(Xi = 0), và dùng τ^ = (ΣYi)/n để estimate cho h(λ).
+>
+>
+>
+> Chỗ này mình hiểu: Có nghĩa là, cách làm naive và đơn giản là xem thử trung bình thì có bao nhiêu observed data = 0. Vì cái ta muốn estiamte là xác suất X = 0 mà. Nên ta sẽ đếm xem số event Xi = 0, hay số observed data có giá trị 0, và lấy trung bình.
+>
+>
+>
+> Và tức là mình hiểu Y1, ..Yn là các statistic: Y1 = I(X1 = 0), ..Yn = I(Xn = 0) và vì X1,..Xn iid \~ pois(λ) nên Y1,...Yn cũng tạo thành random sample iid \~ Bern(P(X = 0)), tức Bern(e^-λ) và τ^ chính là sample mean của random sample này.
+>
+>
+>
+> Nên ta có thể ghi là τ^(**Y**), mà thậm chí cũng có thể ghi là τ^(**X**), vì any way, **Y** vẫn là hàm theo **X**: **Y** = \[I(X1 = 0, ...I(Xn = 0)\]
+>
+>
+>
+> Trong các cháp trước mình đã biết với X \~ Bern(p) thì EX = p, Var(X) = p(1-p). 
+>
+>
+>
+> Và ta cũng đã biết E\[Xbar\] = EX, Var(Xbar) = Var(X)/n
+>
+>
+>
+> Nên áp dụng vào đây, E\[τ^\] = EYi = e^-λ và Var(τ^) = (e^-λ)(1-e^-λ)/n
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Phân tích của bạn rất sâu sắc và chính xác, thể hiện sự hiểu rõ các khái niệm và khả năng đặt câu hỏi phản biện. Bạn đã giải thích rất rõ ràng nguồn gốc và ý nghĩa của các công thức, làm nền tảng vững chắc cho việc tìm hiểu về AREs.
 
 <br>
 
