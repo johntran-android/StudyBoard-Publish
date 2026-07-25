@@ -2200,7 +2200,7 @@
 >
 >
 >
-> Trong các cháp trước mình đã biết với X \~ Bern(p) thì EX = p, Var(X) = p(1-p). 
+> Trong các chap trước mình đã biết với X \~ Bern(p) thì EX = p, Var(X) = p(1-p).
 >
 >
 >
