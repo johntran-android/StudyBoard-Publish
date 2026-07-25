@@ -5279,6 +5279,8 @@
 
 <a id="node-mlq6voe"></a>
 
+- **Kích thước test và p-value**
+
 <p align="center"><kbd><img src="assets/d6vlxp39m2.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -5313,6 +5315,8 @@
 <br>
 
 <a id="node-ymx7htu"></a>
+
+- **Định nghĩa và tính chất p-value**
 
 <p align="center"><kbd><img src="assets/5j82nayxmrs.png" width="80%"></kbd></p>
 
@@ -5410,6 +5414,8 @@
 <br>
 
 <a id="node-hqaq0hw"></a>
+
+- **Định nghĩa p-value hợp lệ**
 
 <p align="center"><kbd><img src="assets/ijciwxghjp.png" width="80%"></kbd></p>
 
@@ -5513,6 +5519,8 @@
 <br>
 
 <a id="node-aax4fpl"></a>
+
+- **P-value và phân phối Uniform**
 
 <p align="center"><kbd><img src="assets/06ygjmxc6yo2.png" width="80%"></kbd></p>
 
