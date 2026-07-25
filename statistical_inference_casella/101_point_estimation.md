@@ -1,6 +1,6 @@
 # 10.1 Point Estimation
 
-📊 **Progress:** `28` Notes | `32` Screenshots | `10` AI Reviews
+📊 **Progress:** `29` Notes | `33` Screenshots | `11` AI Reviews
 
 ---
 <a id="node-2ixm3r0"></a>
@@ -2214,6 +2214,194 @@
 > **🤖 AI Feedback** — ✅ Score: **100/100**
 >
 > Phân tích của bạn rất sâu sắc và chính xác, thể hiện sự hiểu rõ các khái niệm và khả năng đặt câu hỏi phản biện. Bạn đã giải thích rất rõ ràng nguồn gốc và ý nghĩa của các công thức, làm nền tảng vững chắc cho việc tìm hiểu về AREs.
+
+<br>
+
+<a id="node-jiyzyog"></a>
+
+- **MLE of e-lambda with Delta Method**
+
+<p align="center"><kbd><img src="assets/5w17dcipotv.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tiếp theo, gs nhắc đến mle của λ, là sample mean λ^ = (Σi Xi) / n cũng như nói e^-λ^ sẽ là mle của e^λ. Cùng tìm hiểu ý này.
+>
+>
+>
+> Đầu tiên là công thức mle. Có thể đi chứng minh lại nhanh:
+>
+>
+>
+> ML estimator, λ^(**x**) = argmax L(λ|**x**) = argmax f(**x**|λ)
+>
+>
+>
+> tức là ta cần giải bài toán tối ưu: maximize\_λ L(λ|**x**)
+>
+>
+>
+> f(**x**|λ) = L(λ|**x**) = Πi f(xi|λ) = Πi \[e^-λ λ^xi / xi!\]
+>
+>
+>
+> = (e^-λ)^n λ^(Σi xi) / (Πi xi!)
+>
+>
+>
+> Chuyển sang bài toán tương đương dùng hàm log
+>
+>
+>
+> ⇨ log L(λ|**x**) = log {(e^-λ)^n λ^(Σi xi) / (Πi xi!)}
+>
+>
+>
+> = log(e^-nλ) + log\[λ^(Σi xi)\] - log\[Πi xi!\]
+>
+>
+>
+> = -nλ +(Σi xi) log(λ) - log(Πi xi!)
+>
+>
+>
+> Again, chuyển sang bài toán tương đương tiếp tiếp theo, bằng cách bỏ đi constant:
+>
+>
+>
+> maximize\_λ {g(λ) = -nλ +(Σi xi) log(λ)}
+>
+>
+>
+> d/d g(λ) = 0 ⇔ -n + (Σi xi) 1/λ = 0 ⇔ λ = (Σi xi)/n, đây là stationary point. Và hàm (Σi xi) log(λ) là hàm concave, -nλ là hàm affine, vừa concave vừa convex ⇨ tổng hai hàm là concave function. Vậy stationary point chính là maximum ⇨ λ^ = (Σi xi)/n
+>
+>
+>
+> Còn ý thứ hai khi nói e^-λ^ cũng là mle của e^-λ là vì ta có theorem trong chap 7 nói về tính invariance của MLE (xem link)
+>
+>
+>
+> Như vậy là đã làm rõ câu đầu.
+>
+>
+>
+> ---
+>
+>
+>
+>  Tiếp, ông dùng Delta method để có E\[e^-λ^\] ≈ e^-λ và Var(e^-λ) ≈ λ e^-2λ/n. Thử làm lại:
+>
+>
+>
+> i) Chứng minh: Var(e^-λ) ≈ λ e^-2λ/n. Dùng Delta method theorem:
+>
+>
+>
+> Delta method theorem nói ngắn gọn là: nếu Wn có Avar(Wn) thì Avar(g(Wn)) = \[g'(θ)\]^2 Avar(Wn)
+>
+>
+>
+> Với g(λ) = e^-λ, thì g'(λ) = -e^-λ
+>
+>
+>
+> ⇔ Avar(e^(-λ^)\] = \[-e^-λ\]^2 Avar(λ^)
+>
+>
+>
+> Tiếp, CLT nói rằng với random sample X1,...Xn có EXi = μ và Var(Xi) = σ^2 &lt; inf thì √n(Xbar - μ)/σ → (d) n(0,1). Cũng chính là √n(Xbar - μ) → (d) n(0, σ^2).
+>
+>
+>
+> Nên ta sẽ có √n(λ^ - λ) → (d) n(0, Var(Xi)). Và Var(Xi) với Xi \~ Pois(λ), cũng là λ.
+>
+>
+>
+> Vậy ta có Avar(λ^) = λ
+>
+>
+>
+> ⇨ Avar(e^(-λ^)\] = \[-e^-λ\]^2 λ = λe^(-2λ)
+>
+>
+>
+> Tức √n(e^(-λ^) - e^(λ)) → n(0, λe^(-2λ))
+>
+>
+>
+> Và cái này có nghĩa là khi n lớn thì Var\[√n(e^(-λ^) - e^(-λ))\] ≈ λe^(-2λ)
+>
+>
+>
+> ⇔ n Var\[(e^(-λ^)\] ≈ λe^(-2λ)
+>
+>
+>
+> ⇔ Var\[e^(-λ^)\] ≈ λe^(-2λ) / n
+>
+>
+>
+> ---
+>
+>
+>
+> ii) Chứng minh E\[e^-λ^\] ≈ e^-λ:
+>
+>
+>
+> Cũng là delta method: dùng xấp xỉ  tuyến tính của hàm g(λ) tại λ^, vì tính consistent nên khi n → ∞ thì λ^ sẽ → λ, cho phép ta xấp xỉ tuyến tính g(λ) tại λ':
+>
+>
+>
+> g(λ^) ≈ g(λ) + g'(λ)(λ^ - λ)
+>
+>
+>
+> Tới đây nên nhớ λ^, có thể viết là λ^(**X**), cũng chỉ là một statistic, là một random variable, có được bởi áp một hàm số lên random sample **X**.
+>
+>
+>
+> Nên với việc ta xấp xỉ g(λ^) ≈ g(λ) + g'(λ)(λ^ - λ) thì do đó:
+>
+>
+>
+> g(λ^(**X**)) ≈ g(λ) + g'(λ)(λ^(**X**) - λ)
+>
+>
+>
+> Và vế trái là một random variable, vế phải cũng vậy (do đều là hàm áp lên **X**) và do đó mới có chuyện xét kì vọng của g(λ^(**X**)), cũng như là vì ta đang có hai hàm số xấp xỉ nhau, nên lấy trung bình cũng sẽ giữ dấu xỉ, và kết quả vẫn là hàm phụ thuộc λ do gốc rễ Xi \~ Pois(λ)
+>
+>
+>
+> E\_λ\[g(λ^(**X**))\] ≈ E\_λ\[g(λ) + g'(λ)(λ^(**X**) - λ)\].
+>
+>
+>
+> Hiểu bản chất rồi thì bỏ **X** đi cho gọn
+>
+>
+>
+> ⇔ E\_λ\[e^-(λ^)\] ≈ E\_λ\[g(λ)\] + E\_λ\[g'(λ)(λ^ - λ)\].
+>
+>
+>
+> ⇔ E\_λ\[e^-(λ^)\] ≈ g(λ) + g'(λ) E\_λ(λ^ - λ)
+>
+>
+>
+> ⇔ E\_λ\[e^-(λ^)\] ≈ g(λ) + g'(λ) \[E\_λ(λ^) - E\_λ(λ)\]
+>
+>
+>
+> ⇔ E\_λ\[e^-(λ^)\] ≈ e^-λ -e^-λ \[λ - λ\] (do E(λ^) = λ)
+>
+>
+>
+> ⇔ E\_λ\[e^-(λ^)\] ≈ e^-λ → Xong.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Bài giải này cực kỳ chính xác và chi tiết, không chỉ nhắc lại các công thức mà còn chứng minh từng bước một. Độ sâu phân tích vượt xa thông tin được cung cấp trong hình ảnh, thể hiện sự hiểu biết vững chắc về các khái niệm.
 
 <br>
 
