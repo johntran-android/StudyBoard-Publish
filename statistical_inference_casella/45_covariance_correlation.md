@@ -352,7 +352,7 @@ correlation
 > GIÁO SƯ CASELLA LƯU Ý THEOREM NÀY KO HỀ NÓI VỀ CHIỀU NGƯỢC 
 > LẠI, TỨC NẾU COV = 0 CHƯA CHẮC X, Y ĐỘC LẬP
 
-**🔗 See also:** [Điều kiện độc lập tổ hợp Normal](#node-91dxhtz)
+**🔗 See also:** [Điều kiện độc lập tổ hợp Normal](./53_sampling_from_the_normal_distribution.md#node-91dxhtz)
 
 <br>
 
