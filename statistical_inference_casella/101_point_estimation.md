@@ -1,6 +1,6 @@
 # 10.1 Point Estimation
 
-📊 **Progress:** `30` Notes | `35` Screenshots | `12` AI Reviews
+📊 **Progress:** `31` Notes | `37` Screenshots | `12` AI Reviews
 
 ---
 <a id="node-2ixm3r0"></a>
@@ -2548,6 +2548,77 @@
 > Bài làm đã thể hiện sự hiểu biết sâu sắc về cách tính toán và rút gọn biểu thức ARE, các bước đạo hàm và rút gọn đại số đều chính xác. Tuy nhiên, mô tả về hành vi của hàm số chưa hoàn toàn đúng; hàm ARE này thực tế là giảm nghiêm ngặt thay vì tăng liên tục đến giá trị lớn nhất.
 
 **🔗 See also:** [MLE of e-lambda with Delta Method](#node-jiyzyog)
+
+<br>
+
+<a id="node-h2zq9zw"></a>
+
+- **Asymptotic Relative Efficiency Analysis (bản sao)**
+
+<p align="center"><kbd><img src="assets/2q7cynwhz6u.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/k334xlkgwiq.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, như vậy, phần đầu ta đã có:
+>
+>
+>
+> √n(τ^ - e^-λ) → (d) n(0, (e^-λ)(1-e^-λ)/n), tức Avar(τ^) = (e^-λ)(1-e^-λ)
+>
+>
+>
+> Phần sau, ta đã tự chứng minh lại để thấy E\[e^-λ^\] ≈ e^-λ và Var(e^-λ^) ≈ λ e^-2λ/n, cũng là Avar(e^(-λ^)\] = λe^(-2λ)
+>
+>
+>
+> Nên ráp vào định nghĩa của ARE(τ^,  e^(-λ^)) = Avar(e^(-λ^)\] / Avar(τ^)
+>
+>
+>
+> = λe^(-2λ) / \[(e^-λ)(1-e^-λ)\]
+>
+>
+>
+> = λe^(-2λ) / \[(e^-λ)(1-e^-λ)\]
+>
+>
+>
+> = λe^(-λ) / (1-e^-λ)
+>
+>
+>
+> = λ / (1/e^(-λ)-1)
+>
+>
+>
+> = λ / \[e^(λ) - 1\]
+>
+>
+>
+> Và ông nói nếu ta phác thảo cái hàm này sẽ thấy nó giảm liên tục đến gía trị lớn nhất = 1, khi λ = 0, sau đó giảm nhanh chóng.
+>
+>
+>
+>
+>
+> Rồi như vậy thì cái kết quả về cái sự biến động của cái hàm ARE đó gọi là đồ thị hiệu quả tiệm cận tương đối của hai cái estimator một cái τ^ và một cái là MLE. Thì kết quả này cho thấy rõ là với một cái estimator nào đó khác không phải MLE thì variance của nó, tức là cái variance tiệm cận của nó, asymptotically variance sẽ luôn luôn không thể nào vượt quá, tức là không thể nào nhỏ hơn cái phương sai tiệm cận của MLE được. 
+>
+>
+>
+> Và điều này về cơ bản là nó là điều mình đã đoán trước. Bởi vì MLE là một estimator có tính chất hiệu quả tiệm cận, asymptotically efficient. Mà theo định nghĩa của một cái estimator hiệu quả tiệm cận đó thì phương sai tiệm cận của nó sẽ đạt cái mức Cramer-Rao, mức chặn dưới. Tức là nó sẽ đạt cái mức nhỏ nhất có thể của một cái một cái estimator. Thành thử ra là cái kết quả trên nó là minh chứng hoặc là minh họa cho cái nhận định này. Để thấy rằng rõ ràng là thông qua cái chỉ số ARE đó thì mình sẽ thấy rằng là nó sẽ không thể nào mà vượt quá số một được. 
+>
+>
+>
+> (Phương sai tiệm cận của MLE ≤ phương sai tiệm cận của τ^ nên tỉ lệ không thể nào quá một)
+>
+>
+>
+> Thì cái đoạn cuối giáo sư nói rằng là cái MLE đó, cái tính chất hiệu quả tiệm cận nó cho mình một cái tiêu chí để mà so sánh các estimator.
+>
+>
+>
+> Tuy nhiên, là trong một số tình huống khác thì những estimator khác tuy có phương sai tiệm cận lớn hơn phương sai tiệm cận của MLE nhưng có thể nó sẽ tốt hơn MLE ở những tiêu chí khác ví dụ như robustness mà ở phần tiếp theo là mình sẽ nói. thử ra trong những cái tình huống như vậy giáo sư kết luận rằng cái tính hiệu quả của MLE nó trở thành một một yếu tố có thể khiến mình phải đắn đo trong cái việc là sử dụng những estimator khác: kiểu như nếu dùng cái khác thì phải hi sinh bao nhiêu mức efficient
 
 <br>
 
