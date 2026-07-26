@@ -152,7 +152,7 @@ evaluating Estimators
 >
 > ⇔ MSE(W) = Var_θ(W) + [BIAS_θ(W)]^2
 
-**🔗 See also:** [Kiểm định, ước lượng và MSE](#node-2p2a5ur)
+**🔗 See also:** [Kiểm định, ước lượng và MSE](./83_methods_of_evaluating_test.md#node-2p2a5ur)
 
 <br>
 
@@ -283,7 +283,7 @@ evaluating Estimators
 >
 > VarS^2 = 2σ^4/(n-1) chỉ với normal, với distribution khác thì sẽ khác.
 
-**🔗 See also:** [Tính chất trung bình phương sai mẫu](#node-411jdqg)
+**🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg)
 
 <br>
 
@@ -632,7 +632,7 @@ evaluating Estimators
 >
 > Kết luận MLE của σ^2 là  [(n-1)/n] S^2
 
-**🔗 See also:** [Hessian log likelihood chuẩn](#node-19nyc96)
+**🔗 See also:** [Hessian log likelihood chuẩn](./72_method_of_finding_estimators.md#node-19nyc96)
 
 <br>
 
@@ -1782,7 +1782,7 @@ evaluating Estimators
 >
 > Bạn đã giải thích rất chính xác và chi tiết các khái niệm, đồng thời kết nối lý thuyết với ví dụ trong hình ảnh một cách rõ ràng. Để bài viết cô đọng hơn, bạn có thể lược bỏ các câu hỏi hoặc ghi chú cá nhân như "Chỗ này là sao nhỉ" khi trình bày.
 
-**🔗 See also:** [Tính chất trung bình phương sai mẫu](#node-411jdqg)
+**🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg)
 
 <br>
 
@@ -1865,7 +1865,7 @@ evaluating Estimators
 >
 > Thì Var\_θ(W(**X**)) ≥ \[d/dθ E\_θ\[W(**X**)\]^2\] / \[E\_θ\[(∂/∂θ log f(**X**|θ))^2\]\]
 
-**🔗 See also:** [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [10.1.3 Calculations and Comparisons](#node-iwgmm5t)
+**🔗 See also:** [Definition 10.1.11 Asymptotic Efficiency](./101_point_estimation.md#node-bgijdqy) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [10.1.3 Calculations and Comparisons](./101_point_estimation.md#node-iwgmm5t)
 
 <br>
 
@@ -2377,7 +2377,7 @@ evaluating Estimators
 >
 > Với mọi hàm khả vi τ(θ), thì ta đã có chặn dưới về variance của bất kì estimator W thỏa 7.3.4 và E\_θ(W) = τ(θ). Và cái bound chỉ phụ thuộc τ(θ) và f(x|θ). Mọi candidate estimator thỏa E\_θ(W) = τ(θ) (tức là unbiased estimator của τ(θ)) và có variance đạt mức này đều sẽ là BEST UNBIASED ESTIMATOR
 
-**🔗 See also:** [Bất đẳng thức Cramer-Rao](#node-1qs416c) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr) · [Chứng minh Hiệu quả Ước lượng MLE](#node-ucl78tu) · [Delta Method Variance Approximation](#node-2mwxabg) · [Asymptotic Efficiency of Estimator p̂](#node-ct81g3i)
+**🔗 See also:** [Bất đẳng thức Cramer-Rao](#node-1qs416c) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Asymptotic Efficiency of Estimator p̂](./101_point_estimation.md#node-ct81g3i)
 
 <br>
 
@@ -2399,7 +2399,7 @@ evaluating Estimators
 >
 > E_θ[(∂/∂θ log f(X|θ))^2] = - E_θ[∂^2/∂θ^2 log f(X|θ)]
 
-**🔗 See also:** [Delta Method Variance Approximation](#node-2mwxabg)
+**🔗 See also:** [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg)
 
 <br>
 
@@ -3316,7 +3316,7 @@ evaluating Estimators
 > và nếu Var_θ [Φ(T)] ≤ Var_θ W với mọi θ thì rõ ràng Φ(T) chính là cái có MSE
 > nhỏ  nhất SO VỚI ĐÁM W.
 
-**🔗 See also:** [Định lý phương sai toàn phần](#node-ivmktz5)
+**🔗 See also:** [Định lý phương sai toàn phần](./44_hierarchical_model_mixture_distribution.md#node-ivmktz5)
 
 <br>
 
@@ -4378,7 +4378,7 @@ evaluating Estimators
 > Và theo tác giả thì DỰA VÀO TÍNH CHẤT **COMPLETENESS**, ta sẽ có được
 > tình huống này
 
-**🔗 See also:** [Định nghĩa Tính đủ](#node-jcf9e90)
+**🔗 See also:** [Định nghĩa Tính đủ](./62_the_sufficient_principle.md#node-jcf9e90)
 
 <br>
 
@@ -4814,7 +4814,7 @@ evaluating Estimators
 >
 > E_θ[E[h(**X**) | Σi Xi]] = E[h(**X**)] = τ(θ)
 
-**🔗 See also:** [Thống kê đủ nhị thức](#node-ubmvdfc)
+**🔗 See also:** [Thống kê đủ nhị thức](./62_the_sufficient_principle.md#node-ubmvdfc)
 
 <br>
 
@@ -4912,7 +4912,7 @@ evaluating Estimators
 > Thì đây, rõ ràng cái mà ta vừa tính chính là P(X1=1|T=t), chính là conditional
 > distribution của sample đấy, Nên nó phải không còn phụ thuộc θ vì ý vừa nói.
 
-**🔗 See also:** [Định nghĩa Thống kê đủ](#node-aog81op)
+**🔗 See also:** [Định nghĩa Thống kê đủ](./62_the_sufficient_principle.md#node-aog81op)
 
 <br>
 
@@ -5031,7 +5031,7 @@ evaluating Estimators
 > Nhưng gs nói thêm, cũng có khi có tình trạng cross, tức là trong một số θ thì 
 > risk của δ1 nhỏ hơn nhưng ở một số θ khác thì risk δ2 nhỏ hơn
 
-**🔗 See also:** [Hàm mất mát và rủi ro](#node-9qgprpf)
+**🔗 See also:** [Hàm mất mát và rủi ro](./93_methods_of_evaluating_interval_estimators.md#node-9qgprpf)
 
 <br>
 
@@ -5663,7 +5663,7 @@ evaluating Estimators
 > Và ngay cả khi bài toán này không có closed form solution, thì vẫn có thể
 > giải nó theo lối numerically (ám chỉ các thuật toán tối ưu như đã học)
 
-**🔗 See also:** [EX: Giá trị dự đoán tốt nhất](#node-0loinmk)
+**🔗 See also:** [EX: Giá trị dự đoán tốt nhất](./22_expected_value.md#node-0loinmk)
 
 <br>
 
@@ -6124,7 +6124,7 @@ evaluating Estimators
 > Do đó, **khi dùng absolute error loss**, thì **Bayes rule given prior π**, **CŨNG
 > LÀ BAYES ESTIMATOR LUÔN.**
 
-**🔗 See also:** [Ước lượng Bayes phân phối chuẩn](#node-5ldrh78) · [Luật quyết định kiểm định Bayesian](#node-zk8yeue)
+**🔗 See also:** [Ước lượng Bayes phân phối chuẩn](./72_method_of_finding_estimators.md#node-5ldrh78) · [Luật quyết định kiểm định Bayesian](./82_method_of_finding_tests.md#node-zk8yeue)
 
 <br>
 
@@ -6217,7 +6217,7 @@ evaluating Estimators
 > chỉ ≈ 0 chứ nhất định không = 0, dù n có lớn cỡ nào. Ý nói, prior belief luôn
 > ảnh hưởng nhất định
 
-**🔗 See also:** [Ước lượng Bayes Binomial](#node-c7vhpqt)
+**🔗 See also:** [Ước lượng Bayes Binomial](./72_method_of_finding_estimators.md#node-c7vhpqt)
 
 <br>
 
