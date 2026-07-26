@@ -239,7 +239,7 @@ probability & Independence
 >
 > Xét P(A|B) = P(A,B) / P(B)
 
-**🔗 See also:** [Sự kiện rời rạc, Phân hoạch](#node-c55r2gt)
+**🔗 See also:** [Sự kiện rời rạc, Phân hoạch](./11_set_theory.md#node-c55r2gt)
 
 <br>
 
