@@ -7,6 +7,8 @@
 
 ## 7.1 Introduction
 
+**🔗 See also:** [Ước lượng điểm và đánh giá](#node-sxfmwm2) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-sxfmwm2"></a>
@@ -49,6 +51,8 @@
 > và tác giả nói rằng có thể ta sẽ thấy nó rất mơ hồ (vague) nhưng đây là điều
 > cần thiết nhằm mục đích là đảm bảo ta không bỏ xót ứng cử viên nào hết
 
+**🔗 See also:** [7.1 Introduction](#node-a3di5y4) · [Định nghĩa điểm ước lượng](#node-c0xbdri)
+
 <br>
 
 <a id="node-c0xbdri"></a>
@@ -82,6 +86,8 @@
 > giữa estimator và cái paramter mà nó đang estimate cả. Nhưng ông cho
 > rằng điều này là cần thiết, vì khi đề cập vào thì nó sẽ làm hạn chế / giảm số 
 > lượng những estimator khả thi
+
+**🔗 See also:** [Ước lượng điểm và đánh giá](#node-sxfmwm2) · [Khái niệm và đánh giá Estimator](#node-x5zhf0j)
 
 <br>
 
@@ -144,6 +150,8 @@
 >
 > Tuy nhiênt tác giả cũng nhấn mạnh, các technique này không đảm bảo là
 > ta sẽ tự nhiên có good estimator, mà vẫn phải có các phương pháp đánh giá
+
+**🔗 See also:** [Định nghĩa điểm ước lượng](#node-c0xbdri)
 
 <br>
 
