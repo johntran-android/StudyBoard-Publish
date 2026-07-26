@@ -7,6 +7,8 @@
 
 ## 2.1 Distribution
 
+**🔗 See also:** [Xác suất của hàm biến ngẫu nhiên](#node-v2c2n9j) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-v2c2n9j"></a>
@@ -144,6 +146,8 @@
 > Thế thì với g_inv(y1) = {x1} thì nó cũng là point set, có thể ghi
 > g_inv(y1) = x1
 
+**🔗 See also:** [2.1 Distribution](#node-0qrdxlz) · [Xác suất của biến đổi ngẫu nhiên](#node-0tf8zjy)
+
 <br>
 
 <a id="node-0tf8zjy"></a>
@@ -202,6 +206,8 @@
 >
 >
 > = **∑x** ∈ **g_inv(A) fX(x)**
+
+**🔗 See also:** [Xác suất của hàm biến ngẫu nhiên](#node-v2c2n9j) · [Chứng minh PMF Binomial](#node-0a96xaz)
 
 <br>
 
@@ -385,6 +391,8 @@
 >
 > = P(X = x) với x = n - y, = P(X = n - y) là tiếp như trên
 
+**🔗 See also:** [Xác suất của biến đổi ngẫu nhiên](#node-0tf8zjy) · [Khó khăn tính phân phối Y=g(X)](#node-yfzgx1w)
+
 <br>
 
 <a id="node-yfzgx1w"></a>
@@ -446,6 +454,8 @@
 > 2) XÁC ĐỊNH ĐƯỢC A NHƯNG BẢN CHẤT TÍNH CÁI TÍCH PHÂN KHÔNG
 > PHẢI LÚC NÀO CŨNG DỄ
 
+**🔗 See also:** [Chứng minh PMF Binomial](#node-0a96xaz) · [CDF của sin^2(X) phức tạp](#node-zdtg5p1)
+
 <br>
 
 <a id="node-zdtg5p1"></a>
@@ -505,6 +515,8 @@
 > ĐẠI Ý MUỐN MINH HỌA MỘT CASE DÙ BÀI TOÁN CÓ VẺ ĐƠN GIẢN
 > NHƯNG KẾT QỦA CDF CỦA Y KHÔNG ĐƠN GIẢN CHÚT NÀO KHI PHẢI
 > TÍNH CÁI TÍCH PHÂN NÀY**
+
+**🔗 See also:** [Khó khăn tính phân phối Y=g(X)](#node-yfzgx1w) · [Phân phối Y=g(X) đơn điệu](#node-sjshzi1)
 
 <br>
 
@@ -567,6 +579,8 @@
 >
 > = ∫-inf: ginv(y) fX(x)dx
 
+**🔗 See also:** [CDF của sin^2(X) phức tạp](#node-zdtg5p1) · [Chứng minh Định lý 2.1.3](#node-8ixo1nj)
+
 <br>
 
 <a id="node-8ixo1nj"></a>
@@ -578,6 +592,8 @@
 > [!NOTE]
 > Và lập luận này cũng đã chứng
 > minh cho Theorem 2.1.3
+
+**🔗 See also:** [Phân phối Y=g(X) đơn điệu](#node-sjshzi1) · [Phân phối của -log(X)](#node-ag2rjy2)
 
 <br>
 
@@ -618,6 +634,8 @@
 >
 > Do đó FY(y) = P(Y ≤ y) = P(- logX ≤ y) = P(log X ≥ -y) = P(X ≥ e^-y)
 > = 1 - P(X ≤ e^-y) = 1 - FX(e^-y) = 1 - e^-y
+
+**🔗 See also:** [Chứng minh Định lý 2.1.3](#node-8ixo1nj) · [Định lý biến đổi hàm mật độ](#node-m779doj)
 
 <br>
 
@@ -703,6 +721,8 @@
 >
 > (trong stat110 gs chỉ assume case increasing)
 
+**🔗 See also:** [Phân phối của -log(X)](#node-ag2rjy2) · [Phân bố Gamma ngược](#node-rpp5mf7)
+
 <br>
 
 <a id="node-rpp5mf7"></a>
@@ -747,6 +767,8 @@
 >
 >
 >  đây là pdf của inverted gamma (stat110 chưa thấy)
+
+**🔗 See also:** [Định lý biến đổi hàm mật độ](#node-m779doj) · [Đạo hàm PDF của Y=X^2](#node-6yi0r3h)
 
 <br>
 
@@ -849,6 +871,8 @@
 >
 >
 > = **(1/2√y) fX(√y) + (1/√2y) fX(-√y)**
+
+**🔗 See also:** [Phân bố Gamma ngược](#node-rpp5mf7) · [Chuyển đổi PDF biến ngẫu nhiên](#node-hbxp4xf) · [Bổ đề Chi-square](#node-udtt0nq)
 
 <br>
 
@@ -1086,6 +1110,8 @@
 >
 > LÀM SAU
 
+**🔗 See also:** [Đạo hàm PDF của Y=X^2](#node-6yi0r3h) · [Phân phối Chi-squared từ Y=X^2](#node-f14tr9i)
+
 <br>
 
 <a id="node-f14tr9i"></a>
@@ -1100,6 +1126,8 @@
 >
 >
 > và như đã biết từ stat110, nó chính là chi squaRed
+
+**🔗 See also:** [Chuyển đổi PDF biến ngẫu nhiên](#node-hbxp4xf) · [Tính phổ quát của Uniform(0,1)](#node-pxfeoev)
 
 <br>
 
@@ -1232,6 +1260,8 @@
 > Theo định nghĩa này thì trong hình b Finv(y) là x1 (là cái nhỏ nhất mà F(x) ≥
 > y, vốn dĩ tất cả các x từ x1 tới x2 đều thỏa)  hay range sẽ là -inf, x1 thay vì
 > mọi range -inf x với x từ x1 đến x2 đều có F là y.
+
+**🔗 See also:** [Phân phối Chi-squared từ Y=X^2](#node-f14tr9i) · [Biến đổi CDF sang Unif(0,1)](#node-gk21cay) · [Biến đổi tích phân xác suất](#node-ezy1q8o)
 
 <br>
 
@@ -1369,6 +1399,8 @@
 >
 >
 > ⇨  vậy P(X ≤ x) = F(x) suy ra cdf của X chính là F
+
+**🔗 See also:** [Tính phổ quát của Uniform(0,1)](#node-pxfeoev)
 
 <br>
 
