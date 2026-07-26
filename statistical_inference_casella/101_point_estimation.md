@@ -1,13 +1,11 @@
 # 10.1 Point Estimation
 
-📊 **Progress:** `31` Notes | `37` Screenshots | `12` AI Reviews
+📊 **Progress:** `30` Notes | `35` Screenshots | `12` AI Reviews
 
 ---
 <a id="node-2ixm3r0"></a>
 
 ## 10.1 Point Estimation
-
-**🔗 See also:** [Đánh giá tiệm cận](#node-wapn3q2) · [A0_casella](#node-yf9bh13)
 
 <br>
 
@@ -24,8 +22,6 @@
 >
 > Ta sẽ đánh giá tính chất này của cả 3 quy trình suy luận chính: point estimation, hypothesis testing và interval estimation. Đặc biệt tập trung vào các phương pháp liên quan đến maximum likelihood
 
-**🔗 See also:** [10.1 Point Estimation](#node-2ixm3r0) · [Giá trị tiệm cận](#node-ozps89j)
-
 <br>
 
 <a id="node-ozps89j"></a>
@@ -40,8 +36,6 @@
 >
 >
 > Có những cách đánh giá trở nên bất khả thi khi xét trong bối cảnh finite-sample nhưng trở nên khả thi khi xét trong bối cảnh infinte bao gồm các technique nổi tiếng như bootstrap và M-estimation.
-
-**🔗 See also:** [Đánh giá tiệm cận](#node-wapn3q2) · [Tính nhất quán chuỗi ước lượng](#node-eqqhqsv)
 
 <br>
 
@@ -88,8 +82,6 @@
 > trước đã nói, Xbar, hay S^2 thật ra chỉ là ghi cho gọn, ghi rõ phải là Xbar(**X**)
 > hay S^2(**X**) để thể hiện nó là function của sample **X**
 
-**🔗 See also:** [Giá trị tiệm cận](#node-ozps89j) · [Chuỗi Estimator Nhất Quán](#node-tpmiims)
-
 <br>
 
 <a id="node-tpmiims"></a>
@@ -117,8 +109,6 @@
 > < ε dĩ nhiên là xác suất của một event liên quan đến rv Wn có distribution
 > phụ thuộc θ nên đương nhiên nó phải phụ thuộc θ. Đó mới là lí do có chữ θ 
 > ở dưới, chứ ko phải là vì θ xuất hiện trong |Wn - θ|
-
-**🔗 See also:** [Tính nhất quán chuỗi ước lượng](#node-eqqhqsv) · [Hội tụ xác suất thống kê](#node-4pzd0to)
 
 <br>
 
@@ -165,7 +155,7 @@
 > một thành viên cụ thể trong một họ các distribution index bởi θ. Và trong
 > họ nào, thì cũng xảy ra hiện tượng W1,...Wn converge về θ hết.
 
-**🔗 See also:** [Chuỗi Estimator Nhất Quán](#node-tpmiims) · [Tính nhất quán của Xbar](#node-yx0vqu9) · [Hội tụ xác suất](#node-ybskg1i)
+**🔗 See also:** [Hội tụ xác suất](#node-ybskg1i)
 
 <br>
 
@@ -220,8 +210,6 @@
 >
 >
 > Vậy theo định nghĩa Xbar là consistent estimator của θ
-
-**🔗 See also:** [Hội tụ xác suất thống kê](#node-4pzd0to) · [Điều kiện vững ước lượng](#node-u07qsmw)
 
 <br>
 
@@ -328,7 +316,7 @@
 > khi n → inf, thì E_θ[(Wn - θ)^2] sẽ → 0 → P_θ(|Wn - θ| ≥ ε) → 0, và ta có
 > consistent sequence of estimator Wn của θ
 
-**🔗 See also:** [Tính nhất quán của Xbar](#node-yx0vqu9) · [Tính nhất quán của Xbar](#node-47kutgs) · [Bất đẳng thức Markov và chứng minh](#node-u9zgfoi)
+**🔗 See also:** [Bất đẳng thức Markov và chứng minh](#node-u9zgfoi)
 
 <br>
 
@@ -376,7 +364,7 @@
 > Như vậy, mọi Xbar_n của một sample iid có population với variance hữu
 > hạn sẽ đều là consistent estimator của μ
 
-**🔗 See also:** [Điều kiện vững ước lượng](#node-u07qsmw) · [Tính chất trung bình phương sai mẫu](#node-411jdqg) · [Định lý ước lượng nhất quán](#node-itwfbr1)
+**🔗 See also:** [Tính chất trung bình phương sai mẫu](#node-411jdqg)
 
 <br>
 
@@ -388,8 +376,6 @@
 
 > [!NOTE]
 > Đại ý là, gs nói rằng, hồi đầu ta đã đề cập đến việc, có đáng để phải để tâm đến một inconsistent estimator không. Thì ở đây ông nói đại ý là, sở dĩ nói vậy là vì theoerem sau đây ta sẽ thấy là, nếu Wm là một consistent estimator thì với chuỗi a1,a2,...và b1,b2,...thỏa điều kiện chuỗi a hội tụ về 1, chuỗi b hội tụ về 0 thì Un = anWn + bn sẽ cũng là một consistent estimator. Ý nói, có rất nhiều consistent estimator, nên ko việc gì phải xem xét một inconsistent
-
-**🔗 See also:** [Tính nhất quán của Xbar](#node-47kutgs) · [Tính nhất quán của MLE](#node-d19dn75)
 
 <br>
 
@@ -420,7 +406,7 @@
 >
 > Quay lại xem kĩ hơn phần chứng minh và regularity condition sau.
 
-**🔗 See also:** [Định lý ước lượng nhất quán](#node-itwfbr1) · [Tính nhất quán và hiệu quả](#node-e2xtw8s) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr) · [10.1.3 Calculations and Comparisons](#node-iwgmm5t) · [Theorem 10.1.6 on Consistent Estimators](#node-cpdjv2x) · [Asymptotic Efficiency of Estimator p̂](#node-ct81g3i)
+**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr) · [10.1.3 Calculations and Comparisons](#node-iwgmm5t) · [Theorem 10.1.6 on Consistent Estimators](#node-cpdjv2x) · [Asymptotic Efficiency of Estimator p̂](#node-ct81g3i)
 
 <br>
 
@@ -445,8 +431,6 @@
 > **🤖 AI Feedback** — ✅ Score: **92/100**
 >
 > Bài làm thể hiện sự hiểu biết sâu sắc và chính xác về các khái niệm consistency và efficiency như được trình bày. Tuy nhiên, cần sử dụng ngôn ngữ học thuật trang trọng hơn thay vì các cụm từ không chính thức để nâng cao chất lượng trình bày.
-
-**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Phương sai tiệm cận và giới hạn](#node-62aug4x)
 
 <br>
 
@@ -612,7 +596,7 @@
 >
 > Ghi chú của bạn rất chính xác và có chiều sâu đáng kinh ngạc. Bạn không chỉ tóm tắt nội dung mà còn giải thích chi tiết lý do tại sao Var(1/Xbar_n) lại là vô cùng và tự mình chứng minh lại phương pháp Delta, thể hiện sự hiểu biết sâu sắc và khả năng suy luận tốt.
 
-**🔗 See also:** [Tính nhất quán và hiệu quả](#node-e2xtw8s) · [Phương sai Tỷ lệ Odd](#node-44z7xj9) · [Example 10.1.10 Large-sample Mixture Variances](#node-slkl4m8) · [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy)
+**🔗 See also:** [Phương sai Tỷ lệ Odd](#node-44z7xj9) · [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy)
 
 <br>
 
@@ -757,7 +741,7 @@
 >
 > Cho pn → 1, tức là cho xác suất chọn được n(0,1) là rất rất lớn, đồng nghĩa rất rất hiếm xảy ra việc chọn được n(0, σn^2). Nhưng đồng thời cho σn → ∞ tức là cho nó rất rất lớn. Thì cái limiting variance ngu ngốc ở chỗ, nó vẫn cho rằng có xác suất dương nào đó (dù vô cùng nhỏ) xảy ra việc chọn cái normal có variance khổng lồ, nên nó cho rằng variance tổng (ý là limiting variance) là khổng lồ. Trong khi đó, thực tế thì, thật ra với xác suất cực lớn của việc chọn được n(0,1) thì variance = 1 sẽ hợp lí hơn, cũng là nói asymptotic variance sẽ thực tế hơn.
 
-**🔗 See also:** [Phương sai tiệm cận và giới hạn](#node-62aug4x) · [Định lý phương sai toàn phần](#node-ivmktz5) · [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy)
+**🔗 See also:** [Định lý phương sai toàn phần](#node-ivmktz5)
 
 <br>
 
@@ -838,7 +822,7 @@
 >
 > Bài giải thích rất sâu sắc và chi tiết, làm rõ định nghĩa về ước lượng hiệu quả tiệm cận (asymptotically efficient) bằng cách liên hệ chặt chẽ với Cramér-Rao Lower Bound, bao gồm cả bối cảnh và công thức. Độ chính xác và chiều sâu của kiến thức được trình bày rất ấn tượng.
 
-**🔗 See also:** [Example 10.1.10 Large-sample Mixture Variances](#node-slkl4m8) · [Bất đẳng thức Cramer-Rao](#node-1qs416c) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr) · [10.1.3 Calculations and Comparisons](#node-iwgmm5t) · [Phương sai tiệm cận và giới hạn](#node-62aug4x)
+**🔗 See also:** [Bất đẳng thức Cramer-Rao](#node-1qs416c) · [10.1.3 Calculations and Comparisons](#node-iwgmm5t) · [Phương sai tiệm cận và giới hạn](#node-62aug4x)
 
 <br>
 
@@ -900,7 +884,7 @@
 >
 > Ghi chú giải thích Theorem 10.1.12 rất chi tiết và chính xác, đặc biệt là phần chứng minh tính consistency bằng định lý Slutsky. Để hoàn thiện hơn, bạn có thể bổ sung giới hạn n → ∞ vào định nghĩa tính consistent.
 
-**🔗 See also:** [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy) · [Tính nhất quán của MLE](#node-d19dn75) · [Chứng minh Hiệu quả Ước lượng MLE](#node-ucl78tu) · [Định lý Slutsky](#node-uwbmbt7) · [Hội tụ xác suất và phân phối](#node-wqcasc6) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [CLT - Định lý giới hạn trung tâm](#node-32vkewg) · [Chuẩn tiệm cận, nhất quán, hiệu quả](#node-v1s5jks)
+**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Định lý Slutsky](#node-uwbmbt7) · [Hội tụ xác suất và phân phối](#node-wqcasc6) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [CLT - Định lý giới hạn trung tâm](#node-32vkewg) · [Chuẩn tiệm cận, nhất quán, hiệu quả](#node-v1s5jks)
 
 <br>
 
@@ -1006,7 +990,7 @@
 >
 > Vui lòng nhập lời giải thích của bạn để được chấm điểm.
 
-**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr) · [Chuẩn tiệm cận, nhất quán, hiệu quả](#node-v1s5jks) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m)
+**🔗 See also:** [Giới hạn dưới Cramer-Rao](#node-ihoar4m)
 
 <br>
 
@@ -1019,7 +1003,7 @@
 > [!NOTE]
 > Phần này như trong note trước đã hiểu rồi
 
-**🔗 See also:** [Chứng minh Hiệu quả Ước lượng MLE](#node-ucl78tu) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr) · [10.1.3 Calculations and Comparisons](#node-iwgmm5t)
+**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr)
 
 <br>
 
@@ -1220,7 +1204,7 @@
 >
 > Phần tiếp theo chỉ là dùng công thức để thế vào In(θ), nhưng ý tưởng chính thì mình đã thông.
 
-**🔗 See also:** [Chuẩn tiệm cận, nhất quán, hiệu quả](#node-v1s5jks) · [Phương pháp Delta](#node-lo99k23) · [Tính nhất quán của MLE](#node-d19dn75) · [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy) · [Bất đẳng thức Cramer-Rao](#node-1qs416c) · [Delta Method Variance Approximation](#node-2mwxabg)
+**🔗 See also:** [Phương pháp Delta](#node-lo99k23) · [Tính nhất quán của MLE](#node-d19dn75) · [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy) · [Bất đẳng thức Cramer-Rao](#node-1qs416c)
 
 <br>
 
@@ -1382,7 +1366,7 @@
 >
 > Bài giải thích rất chi tiết và sâu sắc các lập luận để ước lượng phương sai của h(θ̂) bằng CRLB, liên kết chặt chẽ các khái niệm về định lý Delta Method, hiệu quả tiệm cận của MLE và CRLB, hoàn toàn khớp với nội dung trong ảnh. Em đã nắm vững cách áp dụng các công thức và ý nghĩa của chúng.
 
-**🔗 See also:** [10.1.3 Calculations and Comparisons](#node-iwgmm5t) · [Theorem 10.1.6 on Consistent Estimators](#node-cpdjv2x) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [Bổ đề Tính toán Hàm mũ](#node-sttybm4)
+**🔗 See also:** [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [Bổ đề Tính toán Hàm mũ](#node-sttybm4)
 
 <br>
 
@@ -1463,7 +1447,7 @@
 >
 > Tóm lại, ý nói, cái việc ta dùng θ^ thay cho θ, và dùng observed information number thay cho expected information number In(θ). thì ta vẫn đang có một consistent estimator: Var^(h(θ^)), hay Var\_θ^(h(θ^)) là consistent estimator của Var\_θ(h(θ^))
 
-**🔗 See also:** [Delta Method Variance Approximation](#node-2mwxabg) · [Tính nhất quán của MLE](#node-d19dn75) · [Approximate binomial variance](#node-ytulpwg)
+**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75)
 
 <br>
 
@@ -1551,8 +1535,6 @@
 >
 >
 >  Var^(p^) = p^(1-p^)/n
-
-**🔗 See also:** [Theorem 10.1.6 on Consistent Estimators](#node-cpdjv2x) · [Asymptotic Efficiency of Estimator p̂](#node-ct81g3i)
 
 <br>
 
@@ -1734,7 +1716,7 @@
 >
 > Bài làm rất chi tiết và có chiều sâu, giải thích rõ ràng từng bước và mục đích của việc áp dụng công thức xấp xỉ phương sai, đồng thời so sánh kết quả với công thức đã biết. Tuy nhiên, trong quá trình tính đạo hàm bậc hai của hàm log likelihood, bạn đã mắc lỗi về dấu ở thành phần thứ hai (∂/∂p [n(1-p^) [-1/(1-p)]] phải là -n(1-p^)/(1-p)^2 chứ không phải dương), dù kết quả cuối cùng vẫn chính xác.
 
-**🔗 See also:** [Approximate binomial variance](#node-ytulpwg) · [Tính nhất quán của MLE](#node-d19dn75) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [Asymptotic Efficiency of Estimator p̂ (bản sao)](#node-suvnj6h)
+**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m)
 
 <br>
 
@@ -1843,8 +1825,6 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Phân tích của bạn rất sâu sắc và chính xác, đặc biệt là phần dẫn xuất Fisher Information để chứng minh phương sai. Bạn đã giải thích rất rõ ràng cách áp dụng Định lý Slutsky và chuẩn hóa phân phối để đạt được kết quả cuối cùng.
-
-**🔗 See also:** [Asymptotic Efficiency of Estimator p̂](#node-ct81g3i) · [Section 10.1 Point Estimation](#node-13p5sy2)
 
 <br>
 
@@ -2121,8 +2101,6 @@
 >
 > Kết quả y chang cách 1 dùng Delta method.
 
-**🔗 See also:** [Asymptotic Efficiency of Estimator p̂ (bản sao)](#node-suvnj6h) · [MLE Variance Approximation Limitations](#node-0d20ljz)
-
 <br>
 
 <a id="node-0d20ljz"></a>
@@ -2138,8 +2116,6 @@
 >
 > Ông nói thêm, vốn dĩ, việc dùng CRLB để ước lượng xấp xỉ cho variance của h(θ^) vốn dĩ đã có thể dễ dẫn dến under estimate rồi. Nhưng với hàm không monotone thì vấn đề có thể tệ hơn.
 
-**🔗 See also:** [Section 10.1 Point Estimation](#node-13p5sy2) · [Example 10.1.15 Bernoulli Variance](#node-irc30cd)
-
 <br>
 
 <a id="node-irc30cd"></a>
@@ -2150,8 +2126,6 @@
 
 > [!NOTE]
 > Quay lại sau, nhưng đại ý đoạn này là minh họa rằng khi h(θ^) ko monotone thì giá trị xấp xỉ của variance Var(h(θ^)) có thể bị thấp hơn giá trị thật.
-
-**🔗 See also:** [MLE Variance Approximation Limitations](#node-0d20ljz) · [Asymptotic Relative Efficiency](#node-2y7vyqf)
 
 <br>
 
@@ -2212,8 +2186,6 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Bài giải thích rất rõ ràng, bám sát nội dung gốc và còn mở rộng thêm chiều sâu bằng cách liên hệ với Cramer-Rao Lower Bound và định nghĩa phương sai tiệm cận (Avar), giúp người đọc dễ hiểu hơn về bản chất của Hiệu quả tiệm cận tương đối (ARE). Không có điểm yếu đáng kể, đây là một ghi chú xuất sắc.
-
-**🔗 See also:** [Example 10.1.15 Bernoulli Variance](#node-irc30cd) · [Example 10.1.17 Poisson Estimators](#node-eej3duv)
 
 <br>
 
@@ -2278,8 +2250,6 @@
 > **🤖 AI Feedback** — ✅ Score: **100/100**
 >
 > Phân tích của bạn rất sâu sắc và chính xác, thể hiện sự hiểu rõ các khái niệm và khả năng đặt câu hỏi phản biện. Bạn đã giải thích rất rõ ràng nguồn gốc và ý nghĩa của các công thức, làm nền tảng vững chắc cho việc tìm hiểu về AREs.
-
-**🔗 See also:** [Asymptotic Relative Efficiency](#node-2y7vyqf) · [MLE of e-lambda with Delta Method](#node-jiyzyog)
 
 <br>
 
@@ -2469,7 +2439,7 @@
 >
 > Bài giải này cực kỳ chính xác và chi tiết, không chỉ nhắc lại các công thức mà còn chứng minh từng bước một. Độ sâu phân tích vượt xa thông tin được cung cấp trong hình ảnh, thể hiện sự hiểu biết vững chắc về các khái niệm.
 
-**🔗 See also:** [Example 10.1.17 Poisson Estimators](#node-eej3duv) · [Chứng minh tính bất biến MLE](#node-6d46egj) · [Stronger Central Limit Theorem](#node-yngnkwh) · [Asymptotic Relative Efficiency Analysis](#node-wgjpxiz)
+**🔗 See also:** [Chứng minh tính bất biến MLE](#node-6d46egj) · [Stronger Central Limit Theorem](#node-yngnkwh)
 
 <br>
 
@@ -2546,79 +2516,6 @@
 > **🤖 AI Feedback** — ⚠️ Score: **85/100**
 >
 > Bài làm đã thể hiện sự hiểu biết sâu sắc về cách tính toán và rút gọn biểu thức ARE, các bước đạo hàm và rút gọn đại số đều chính xác. Tuy nhiên, mô tả về hành vi của hàm số chưa hoàn toàn đúng; hàm ARE này thực tế là giảm nghiêm ngặt thay vì tăng liên tục đến giá trị lớn nhất.
-
-**🔗 See also:** [MLE of e-lambda with Delta Method](#node-jiyzyog)
-
-<br>
-
-<a id="node-h2zq9zw"></a>
-
-- **Asymptotic Relative Efficiency Analysis (bản sao)**
-
-<p align="center"><kbd><img src="assets/2q7cynwhz6u.png" width="80%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/k334xlkgwiq.png" width="80%"></kbd></p>
-
-> [!NOTE]
-> Rồi, như vậy, phần đầu ta đã có:
->
->
->
-> √n(τ^ - e^-λ) → (d) n(0, (e^-λ)(1-e^-λ)/n), tức Avar(τ^) = (e^-λ)(1-e^-λ)
->
->
->
-> Phần sau, ta đã tự chứng minh lại để thấy E\[e^-λ^\] ≈ e^-λ và Var(e^-λ^) ≈ λ e^-2λ/n, cũng là Avar(e^(-λ^)\] = λe^(-2λ)
->
->
->
-> Nên ráp vào định nghĩa của ARE(τ^,  e^(-λ^)) = Avar(e^(-λ^)\] / Avar(τ^)
->
->
->
-> = λe^(-2λ) / \[(e^-λ)(1-e^-λ)\]
->
->
->
-> = λe^(-2λ) / \[(e^-λ)(1-e^-λ)\]
->
->
->
-> = λe^(-λ) / (1-e^-λ)
->
->
->
-> = λ / (1/e^(-λ)-1)
->
->
->
-> = λ / \[e^(λ) - 1\]
->
->
->
-> Và ông nói nếu ta phác thảo cái hàm này sẽ thấy nó giảm liên tục đến gía trị lớn nhất = 1, khi λ = 0, sau đó giảm nhanh chóng.
->
->
->
->
->
-> Rồi như vậy thì cái kết quả về cái sự biến động của cái hàm ARE đó gọi là đồ thị hiệu quả tiệm cận tương đối của hai cái estimator một cái τ^ và một cái là MLE. Thì kết quả này cho thấy rõ là với một cái estimator nào đó khác không phải MLE thì variance của nó, tức là cái variance tiệm cận của nó, asymptotically variance sẽ luôn luôn không thể nào vượt quá, tức là không thể nào nhỏ hơn cái phương sai tiệm cận của MLE được. 
->
->
->
-> Và điều này về cơ bản là nó là điều mình đã đoán trước. Bởi vì MLE là một estimator có tính chất hiệu quả tiệm cận, asymptotically efficient. Mà theo định nghĩa của một cái estimator hiệu quả tiệm cận đó thì phương sai tiệm cận của nó sẽ đạt cái mức Cramer-Rao, mức chặn dưới. Tức là nó sẽ đạt cái mức nhỏ nhất có thể của một cái một cái estimator. Thành thử ra là cái kết quả trên nó là minh chứng hoặc là minh họa cho cái nhận định này. Để thấy rằng rõ ràng là thông qua cái chỉ số ARE đó thì mình sẽ thấy rằng là nó sẽ không thể nào mà vượt quá số một được. 
->
->
->
-> (Phương sai tiệm cận của MLE ≤ phương sai tiệm cận của τ^ nên tỉ lệ không thể nào quá một)
->
->
->
-> Thì cái đoạn cuối giáo sư nói rằng là cái MLE đó, cái tính chất hiệu quả tiệm cận nó cho mình một cái tiêu chí để mà so sánh các estimator.
->
->
->
-> Tuy nhiên, là trong một số tình huống khác thì những estimator khác tuy có phương sai tiệm cận lớn hơn phương sai tiệm cận của MLE nhưng có thể nó sẽ tốt hơn MLE ở những tiêu chí khác ví dụ như robustness mà ở phần tiếp theo là mình sẽ nói. thử ra trong những cái tình huống như vậy giáo sư kết luận rằng cái tính hiệu quả của MLE nó trở thành một một yếu tố có thể khiến mình phải đắn đo trong cái việc là sử dụng những estimator khác: kiểu như nếu dùng cái khác thì phải hi sinh bao nhiêu mức efficient
 
 <br>
 
