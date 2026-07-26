@@ -9,6 +9,8 @@ interval Estimators
 ## 9.3 Methods Of Evaluating
 interval Estimators
 
+**🔗 See also:** [Đánh giá ước lượng khoảng](#node-f8q4lwy) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-f8q4lwy"></a>
@@ -50,6 +52,9 @@ interval Estimators
 >
 > Và ta cũng còn nhớ, định nghĩa của confidence coefficient = inf_θ P_θ(θ ∈
 > C(**X**)). và nó sẽ ko còn phụ thuộc θ nữa
+
+**🔗 See also:** [9.3 Methods Of Evaluating
+interval Estimators](#node-osahc74) · [Tối ưu độ dài khoảng tin cậy](#node-axekpmc)
 
 <br>
 
@@ -157,6 +162,8 @@ interval Estimators
 > Và phù hợp với nhận định là b sẽ nằm ở chặn dưới, a nằm ở chặn trên do hàm
 > Z = (Xbar - μ) / (σ/√n) là hàm monotone decreasing theo μ
 
+**🔗 See also:** [Đánh giá ước lượng khoảng](#node-f8q4lwy) · [Khoảng tin cậy ngắn nhất](#node-wmx5181)
+
 <br>
 
 <a id="node-wmx5181"></a>
@@ -243,6 +250,8 @@ interval Estimators
 > thì vì tại đó cái đám mây sẽ mỏng lét, nên để đủ giá trị xác suất 1-α 
 > thì ta sẽ phải kéo nó rất dài mới gom đủ.
 
+**🔗 See also:** [Tối ưu độ dài khoảng tin cậy](#node-axekpmc) · [Đoạn ngắn nhất PDF đơn đỉnh](#node-ah69d2y)
+
 <br>
 
 <a id="node-ah69d2y"></a>
@@ -258,6 +267,8 @@ interval Estimators
 > đó. Nếu tại a, b pdf đều dương và bằng nhau. và xác suất x giữa a, b
 > (∫a:bf(x)dx) là 1-α. thì [a,b] chính là đoạn có length ngắn nhất trong số
 > những đoạn khiến xác suất là 1-α
+
+**🔗 See also:** [Khoảng tin cậy ngắn nhất](#node-wmx5181) · [Chứng minh xác suất đoạn ngắn nhất](#node-smdxtqa)
 
 <br>
 
@@ -358,6 +369,8 @@ interval Estimators
 >
 > chứng minh xong
 
+**🔗 See also:** [Đoạn ngắn nhất PDF đơn đỉnh](#node-ah69d2y) · [Khoảng tin cậy tối ưu](#node-uj1aylo)
+
 <br>
 
 <a id="node-uj1aylo"></a>
@@ -424,6 +437,8 @@ interval Estimators
 > Và cuối cùng, tiếp theo ta sẽ chứng minh rằng với pdf nào unimodal, thì
 > cách làm equal α split (tức là chặt bỏ khúc đầu và khúc sau nơi có diện
 > tích = α/2)  sẽ đều cho ra đoạn optimal length.
+
+**🔗 See also:** [Chứng minh xác suất đoạn ngắn nhất](#node-smdxtqa) · [Tối ưu hóa kỳ vọng độ dài](#node-cu30bvl) · [Khoảng tin cậy đảo ngược LRT](#node-jw4zng6)
 
 <br>
 
@@ -697,6 +712,8 @@ interval Estimators
 > Vậy, mục đích của gs là kết nối theorem đó với việc quả thật nó khiến ta có kì
 > vọng của interval length nhỏ nhất trong bài toán cụ thể này.
 
+**🔗 See also:** [Khoảng tin cậy tối ưu](#node-uj1aylo) · [Khoảng tin cậy ngắn nhất β](#node-p0wtclz) · [Phân phối t của Student](#node-isdevob) · [Biến đổi PDF Location-Scale](#node-cs2rm3i)
+
 <br>
 
 <a id="node-p0wtclz"></a>
@@ -769,6 +786,8 @@ interval Estimators
 >
 > Do đó trong trường hợp này, ta không thể dựa vào theorem 9.3.2 mà kết luận
 > [x/b, x/a] là optimal 1-α confidence interval cho β được.
+
+**🔗 See also:** [Tối ưu hóa kỳ vọng độ dài](#node-cu30bvl) · [Điều kiện khoảng tin cậy tối ưu](#node-g482p67)
 
 <br>
 
@@ -972,6 +991,8 @@ interval Estimators
 > Và đây chính là điều kiện để giải tìm a, b khiến minimize length x/a - x/b
 > sao cho vẫn thỏa ∫a:b f(y)dy = 1 - α.
 
+**🔗 See also:** [Khoảng tin cậy ngắn nhất β](#node-p0wtclz) · [Khoảng ngắn nhất: Trục và Tổng thể](#node-fiappqb)
+
 <br>
 
 <a id="node-fiappqb"></a>
@@ -990,6 +1011,8 @@ interval Estimators
 > interval) ngắn nhất trong số những cái được dựa trên pivot X / β thôi.
 > CHƯA CHẮC NÓ LÀ CÁI NGẮN NHẤT TRÊN ĐỜI (so với mọi 1-α
 > confidence interval của β
+
+**🔗 See also:** [Điều kiện khoảng tin cậy tối ưu](#node-g482p67) · [Tính tối ưu liên quan kiểm định](#node-x4e1c5a)
 
 <br>
 
@@ -1021,6 +1044,8 @@ interval Estimators
 >
 > Nói nó liên quan đến size một cách gián tiếp là bởi: nếu một set có xác suất
 > mang giá trị sai nhỏ, thì cũng chính là nó càng ngắn.
+
+**🔗 See also:** [Khoảng ngắn nhất: Trục và Tổng thể](#node-fiappqb) · [Xác suất phủ sai](#node-fulf1oe)
 
 <br>
 
@@ -1111,6 +1136,8 @@ interval Estimators
 >
 > Còn với C(X) có dạng [L(**X**), U(**X**)] thì dĩ nhiên ta sẽ xét hết θ' khác θ.
 
+**🔗 See also:** [Tính tối ưu liên quan kiểm định](#node-x4e1c5a) · [Tập tin cậy UMA và UMP](#node-z5fk0x6)
+
 <br>
 
 <a id="node-z5fk0x6"></a>
@@ -1149,6 +1176,8 @@ interval Estimators
 >
 > Tuy nhiên vì đa phần các **UMP** test **ĐỀU CHỈ CÓ DẠNG LÀ MỘT ONE-SIDE** 
 > test, **NÊN UMA set** cũng vậy.
+
+**🔗 See also:** [Xác suất phủ sai](#node-fulf1oe) · [Định lý 9.3.5: UMA Confidence Set](#node-3nnpc36)
 
 <br>
 
@@ -1204,6 +1233,8 @@ interval Estimators
 >
 > P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) với mọi θ' < θ, với mọi 1-α confidence
 > set bất kì C(**X**) khác.
+
+**🔗 See also:** [Tập tin cậy UMA và UMP](#node-z5fk0x6) · [UMA từ kiểm định UMP](#node-6ofz752)
 
 <br>
 
@@ -1369,6 +1400,8 @@ interval Estimators
 >
 >
 > P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) ∀θ' < θ.
+
+**🔗 See also:** [Định lý 9.3.5: UMA Confidence Set](#node-3nnpc36) · [UMA từ Test UMP](#node-xumc7wb) · [H1 và Dạng Tập Tin Cậy](#node-y9cjzgq)
 
 <br>
 
@@ -1708,6 +1741,8 @@ interval Estimators
 > cách invert một cái 2-sided acceptance region của bài toán testing H0: μ = μ0
 > vs H1: μ khác μ0, mà bài toán toán này KHÔNG TỒN TẠI UMP.
 
+**🔗 See also:** [UMA từ kiểm định UMP](#node-6ofz752) · [Tính không chệch kiểm định ước lượng](#node-ve55c6x) · [Kiểm định UMP tham số trung bình](#node-kd3nfb2)
+
 <br>
 
 <a id="node-ve55c6x"></a>
@@ -1758,6 +1793,8 @@ interval Estimators
 >
 >
 > β(θ') ≤ α ≤ β(θ) với mọi θ' ∈ Θ0 và θ ∈ Θ0c
+
+**🔗 See also:** [UMA từ Test UMP](#node-xumc7wb) · [Tập tin cậy không chệch](#node-h64j2oo)
 
 <br>
 
@@ -1887,6 +1924,8 @@ interval Estimators
 > Do đó ∀ θ0 khác θ P_θ(θ0 ∈ C(**X**)) ≤ 1 - α ⇨ theo định nghĩa, giúp kết
 > luận C(**X**) là unbiased 1-α confidence set.
 
+**🔗 See also:** [Tính không chệch kiểm định ước lượng](#node-ve55c6x) · [Khoảng tin cậy không chệch](#node-d8pc9jk)
+
 <br>
 
 <a id="node-d8pc9jk"></a>
@@ -1929,6 +1968,8 @@ interval Estimators
 >
 > = {μ: Xbar - σ z_α/2 ≤ μ ≤ Xbar + σ z_α/2} chính là unbiased 1-α confidence
 > set của μ
+
+**🔗 See also:** [Tập tin cậy không chệch](#node-h64j2oo) · [Neyman-shortest: Chiều dài khoảng tin cậy](#node-fvhd1du) · [Không tồn tại UMP test](#node-66jeahy)
 
 <br>
 
@@ -1998,6 +2039,8 @@ interval Estimators
 >
 > Ở đây hơi thắc mắc, X này ko phải random vector, nên vì sao lại viết chữ
 > đậm?
+
+**🔗 See also:** [Khoảng tin cậy không chệch](#node-d8pc9jk) · [Chứng minh kỳ vọng độ dài C(X)](#node-5q122qr)
 
 <br>
 
@@ -2097,6 +2140,8 @@ interval Estimators
 >
 > Chứng minh xong.
 
+**🔗 See also:** [Neyman-shortest: Chiều dài khoảng tin cậy](#node-fvhd1du) · [Tối ưu chiều dài khoảng tin cậy](#node-n3etvsm)
+
 <br>
 
 <a id="node-n3etvsm"></a>
@@ -2114,6 +2159,8 @@ interval Estimators
 >
 >
 > Tuy nhiên với 1-sided confidence set thì không áp dụng.
+
+**🔗 See also:** [Chứng minh kỳ vọng độ dài C(X)](#node-5q122qr) · [Tối ưu khoảng tin cậy Bayesian](#node-qthljbf)
 
 <br>
 
@@ -2197,6 +2244,8 @@ interval Estimators
 > C(**x**) này đi áp vào random sample **X** để có C(**X**) thì không có lí
 > do gì để kết luận nó sẽ tạo ra một 1-α confidence set.
 
+**🔗 See also:** [Tối ưu chiều dài khoảng tin cậy](#node-n3etvsm) · [Vùng HPD và Likelihood](#node-1e5nbsx)
+
 <br>
 
 <a id="node-1e5nbsx"></a>
@@ -2258,6 +2307,8 @@ interval Estimators
 > region / vùng mà hàm likelihood lớn hơn mức nào đó), nên mới nói hai
 > region này similar in form  là vậy
 
+**🔗 See also:** [Tối ưu khoảng tin cậy Bayesian](#node-qthljbf) · [Vùng HPD Poisson](#node-yh9h8wy)
+
 <br>
 
 <a id="node-yh9h8wy"></a>
@@ -2308,6 +2359,8 @@ interval Estimators
 > ko cói λ như biến ngẫu nhiên mà chỉ là uknonw fixed value (xem link tới 
 > ví dụ 9.2.15
 
+**🔗 See also:** [Vùng HPD và Likelihood](#node-1e5nbsx) · [Vùng HPD bất đối xứng](#node-xyjk0o1) · [Khoảng tin cậy Poisson Gamma](#node-ahces3c) · [Khoảng tin cậy Poisson](#node-z5eytsr)
+
 <br>
 
 <a id="node-xyjk0o1"></a>
@@ -2315,6 +2368,8 @@ interval Estimators
 - **Vùng HPD bất đối xứng**
 
 <p align="center"><kbd><img src="assets/kn1ue7t4z8n.png" width="80%"></kbd></p>
+
+**🔗 See also:** [Vùng HPD Poisson](#node-yh9h8wy) · [Tối ưu hàm mất mát](#node-um19bvy)
 
 <br>
 
@@ -2352,6 +2407,8 @@ interval Estimators
 > subset của nó cũng có thể là những đoạn rời rạc - không thể gọi là interval
 > được.
 
+**🔗 See also:** [Vùng HPD bất đối xứng](#node-xyjk0o1) · [Hàm quyết định C(x)](#node-9e0albh)
+
 <br>
 
 <a id="node-9e0albh"></a>
@@ -2385,6 +2442,8 @@ interval Estimators
 > dạng [L(**x**), U(**x**)] thì C(**X**) là random interval tạo bởi hai rvs L(**X**) và
 > U(**X**). Thì ở đây, chẳng qua mình sẽ chuyển góc nhìn tí xíu, để thấy C(**X**) là
 > một function nhận vào giá trị **x** và trả ra một subset C trong Θ
+
+**🔗 See also:** [Tối ưu hàm mất mát](#node-um19bvy) · [Hàm mất mát ước lượng khoảng](#node-3nhar2c)
 
 <br>
 
@@ -2432,6 +2491,8 @@ interval Estimators
 >
 > và phần thứ hai phản ánh size của C, mà với interval, thì là length:
 > length(C)
+
+**🔗 See also:** [Hàm quyết định C(x)](#node-9e0albh) · [Hàm mất mát và rủi ro](#node-9qgprpf)
 
 <br>
 
@@ -2506,6 +2567,8 @@ interval Estimators
 >
 > Vậy R(θ, C(**X**)) = b E_θ[Length(C(**X**))] - P_θ(θ ∈ C(**X**))
 
+**🔗 See also:** [Hàm mất mát ước lượng khoảng](#node-3nhar2c) · [Hàm rủi ro: Kiểm soát Trade-off](#node-phc7we9) · [Hàm rủi ro ước lượng](#node-qschovu)
+
 <br>
 
 <a id="node-phc7we9"></a>
@@ -2531,6 +2594,8 @@ interval Estimators
 >
 > Ngược lại nếu b = inf, thì phần size rất nặng, khiến muốn giảm risk thì 
 > length (C) phải → 0, dẫn đến việc ta sẽ tạo ra một point set
+
+**🔗 See also:** [Hàm mất mát và rủi ro](#node-9qgprpf) · [Rủi ro ước lượng khoảng chuẩn](#node-9p4wibq)
 
 <br>
 
@@ -2697,6 +2762,8 @@ interval Estimators
 >
 >
 > Tóm lại ta có R(C, μ) = 2bσ c - [2P(Z ≤ c) - 1]
+
+**🔗 See also:** [Hàm rủi ro: Kiểm soát Trade-off](#node-phc7we9) · [Ước lượng khoảng tối ưu](#node-q5o5180)
 
 <br>
 
@@ -2879,6 +2946,8 @@ interval Estimators
 > Khi đó, interval [X - c σ, X + c σ] sẽ trở thành: [X, X], tức là một POINT SET, hay
 > nói cách khác, interval estimator cũng trở thành một point estimator, δ(X) = X.
 
+**🔗 See also:** [Rủi ro ước lượng khoảng chuẩn](#node-9p4wibq) · [Lý thuyết quyết định ước lượng khoảng](#node-kwm81pf)
+
 <br>
 
 <a id="node-kwm81pf"></a>
@@ -2899,6 +2968,8 @@ interval Estimators
 > cái kiểu nửa vời, là lại đi fixed coverage probability (1-α) rồi mới đi optimize
 > cái size.
 
+**🔗 See also:** [Ước lượng khoảng tối ưu](#node-q5o5180) · [Vấn đề hình dạng tập hợp](#node-nwk4rki)
+
 <br>
 
 <a id="node-nwk4rki"></a>
@@ -2916,6 +2987,8 @@ interval Estimators
 > thì cái size của tập sau cũng ko khác gì tập trước (optimal) vì tập các point coi như có length
 > = 0. Tuy nhiên, nếu μ mà mang giá trị nguyên thì tập sau sẽ có coverage lớn hơn tập trước.
 > Ý muốn nói, đáp án của cách tiếp cận decision theory bị vấn đề
+
+**🔗 See also:** [Lý thuyết quyết định ước lượng khoảng](#node-kwm81pf)
 
 <br>
 
