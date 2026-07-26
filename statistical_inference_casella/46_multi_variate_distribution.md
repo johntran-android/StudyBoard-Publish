@@ -886,7 +886,7 @@ distribution
 >
 > ⇨ MZ(t) = [MX(t)]^n
 
-**🔗 See also:** [Định lý Giới hạn Trung tâm](#node-efueime)
+**🔗 See also:** [Định lý Giới hạn Trung tâm](./55_convergence_concepts.md#node-efueime)
 
 <br>
 
@@ -913,7 +913,7 @@ distribution
 > Và qua đó cho thấy Z cũng là Gamma rv với parm cũng là β nhưng 
 > α là tổng αi
 
-**🔗 See also:** [Bổ đề Chi-square](#node-udtt0nq) · [Xây dựng khoảng tin cậy](#node-9p7bal4)
+**🔗 See also:** [Bổ đề Chi-square](./53_sampling_from_the_normal_distribution.md#node-udtt0nq) · [Xây dựng khoảng tin cậy](./92_methods_of_finding_interval_estimators.md#node-9p7bal4)
 
 <br>
 
@@ -1049,7 +1049,7 @@ distribution
 >
 > tới đây thì nó có dạng mgf của n(Σiμiai + Σbi,Σiai^2σi^2)
 
-**🔗 See also:** [Điều kiện độc lập tổ hợp Normal](#node-91dxhtz)
+**🔗 See also:** [Điều kiện độc lập tổ hợp Normal](./53_sampling_from_the_normal_distribution.md#node-91dxhtz)
 
 <br>
 
@@ -1093,7 +1093,7 @@ distribution
 >
 > Khái quát lên **X1, ...Xn** mutually độc lập ⇨ Ui = gi(**Xi**) cũng mutually độc lập
 
-**🔗 See also:** [Độc lập vector qua PDF chung](#node-25t5b1y)
+**🔗 See also:** [Độc lập vector qua PDF chung](./53_sampling_from_the_normal_distribution.md#node-25t5b1y)
 
 <br>
 
