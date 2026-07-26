@@ -205,7 +205,7 @@ random Sample
 >
 > (1/h) Σi h(Yi) → Eh(Y) in probability.
 
-**🔗 See also:** [Luật số lớn mạnh](#node-0yeml4r)
+**🔗 See also:** [Luật số lớn mạnh](./55_convergence_concepts.md#node-0yeml4r)
 
 <br>
 
@@ -491,7 +491,7 @@ random Sample
 >
 > đã đủ kết luận rằng X chính là random variable ~ cdf F. Chứng minh xong
 
-**🔗 See also:** [Tính phổ quát của Uniform(0,1)](#node-pxfeoev) · [Biến đổi tích phân xác suất](#node-d806mzg)
+**🔗 See also:** [Tính phổ quát của Uniform(0,1)](./21_distribution.md#node-pxfeoev) · [Biến đổi tích phân xác suất](./92_methods_of_finding_interval_estimators.md#node-d806mzg)
 
 <br>
 
@@ -608,7 +608,7 @@ random Sample
 > Tương tự với sample mean của Yi, và sample variance của Yi. Đây là minh
 > họa cho thấy rằng, à đúng là  thực tế cho thấy thật sự Yi là ~ expo(λ)
 
-**🔗 See also:** [Tính nhất quán của phương sai mẫu](#node-0qd6k83)
+**🔗 See also:** [Tính nhất quán của phương sai mẫu](./55_convergence_concepts.md#node-0qd6k83)
 
 <br>
 
@@ -1475,7 +1475,7 @@ random Sample
 > nói trên, là distribution của Xbar sẽ xấp xỉ distribution của W, hay Xbar hành xử
 > gần giống W, là một n(λ, √(λ/n))
 
-**🔗 See also:** [Phân phối trung bình mẫu](#node-c034x4w) · [Phân phối thống kê hàm mũ](#node-h84h2nr)
+**🔗 See also:** [Phân phối trung bình mẫu](./52_of_random_variables_from_a_random_sample.md#node-c034x4w) · [Phân phối thống kê hàm mũ](./52_of_random_variables_from_a_random_sample.md#node-h84h2nr)
 
 <br>
 
@@ -1988,7 +1988,7 @@ random Sample
 >
 > P((X,Y) ∈ A) = ∫∫A fX,Y(x,y)dxdy
 
-**🔗 See also:** [Giải thích PDF biến liên tục](#node-jprf5jo) · [Chứng minh P(X=x)=0](#node-29g5dq1)
+**🔗 See also:** [Giải thích PDF biến liên tục](./41_joint_marginal_distribution.md#node-jprf5jo) · [Chứng minh P(X=x)=0](./16_pdf_pmf.md#node-29g5dq1)
 
 <br>
 
