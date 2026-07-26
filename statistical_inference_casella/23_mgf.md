@@ -7,8 +7,6 @@
 
 ## 2.3 MGF
 
-**🔗 See also:** [Hàm sinh moment và các moment](#node-263lghw) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-263lghw"></a>
@@ -45,8 +43,6 @@
 > Mà cái quan trọng nhất chính là central moment bậc 2: E(X - EX)^2, cái này
 > như đã biết chính là Var(X)
 
-**🔗 See also:** [2.3 MGF](#node-prwuhjm) · [Định nghĩa và ý nghĩa Phương sai](#node-xx7gpce)
-
 <br>
 
 <a id="node-xx7gpce"></a>
@@ -72,7 +68,7 @@
 > và công thức cũng cho thấyd điều này E[(X - EX)^2] = 0 ⇔ X = EX, ⇨ giá
 > trị của X là cố định
 
-**🔗 See also:** [Hàm sinh moment và các moment](#node-263lghw) · [Phương sai phân phối mũ](#node-k8u18s5) · [Giá trị kỳ vọng phân phối mũ](#node-1098w9n)
+**🔗 See also:** [Giá trị kỳ vọng phân phối mũ](#node-1098w9n)
 
 <br>
 
@@ -250,8 +246,6 @@
 >
 > = (1/λ)[ 2λ λ^2  - 2λ λ^2 + λ^3] = (1/ λ) (λ^3) = **λ^2**
 
-**🔗 See also:** [Định nghĩa và ý nghĩa Phương sai](#node-xx7gpce) · [Phương sai: Tính chất và công thức](#node-6dfp8iz)
-
 <br>
 
 <a id="node-6dfp8iz"></a>
@@ -310,8 +304,6 @@
 >
 >
 > = **EX^2 - (EX)^2**
-
-**🔗 See also:** [Phương sai phân phối mũ](#node-k8u18s5) · [Phương sai phân phối nhị thức](#node-tq1pv0b)
 
 <br>
 
@@ -648,8 +640,6 @@
 >
 > ⇨ VarX = n(n-1)p^2 + np - (np)^2 = npq**
 
-**🔗 See also:** [Phương sai: Tính chất và công thức](#node-6dfp8iz) · [MGF: Định nghĩa và Khai triển](#node-3dwa2d5)
-
 <br>
 
 <a id="node-3dwa2d5"></a>
@@ -666,8 +656,6 @@
 >
 >
 > Dễ thấy dùng LOTUS ta có dạng khai triển
-
-**🔗 See also:** [Phương sai phân phối nhị thức](#node-tq1pv0b) · [Moment từ đạo hàm MGF](#node-efq3pxl)
 
 <br>
 
@@ -754,8 +742,6 @@
 >
 >
 > Tương tự ta sẽ có n'th derivative của mgf là n'th moment của X
-
-**🔗 See also:** [MGF: Định nghĩa và Khai triển](#node-3dwa2d5) · [MGF phân phối Gamma](#node-aaflva8)
 
 <br>
 
@@ -915,8 +901,6 @@
 >
 > Và evaluate tại 0: EX = d/dt M(t) | t=0 = αβ**
 
-**🔗 See also:** [Moment từ đạo hàm MGF](#node-efq3pxl) · [Hàm sinh moment phân phối nhị thức](#node-qerfh1r)
-
 <br>
 
 <a id="node-qerfh1r"></a>
@@ -1003,8 +987,6 @@
 >
 > Và kết quả có ngay **(pe^t + q)^n**
 
-**🔗 See also:** [MGF phân phối Gamma](#node-aaflva8) · [Xác định phân phối qua MGF](#node-uyc99nm)
-
 <br>
 
 <a id="node-uyc99nm"></a>
@@ -1044,8 +1026,6 @@
 > HOẶC mgf tồn tại trong khoảng lân cận của 0 thì ta có thể dựa vào mgf để
 > kết luận distribution.
 
-**🔗 See also:** [Hàm sinh moment phân phối nhị thức](#node-qerfh1r) · [Tiêu chí đồng nhất phân phối](#node-5kynqew)
-
 <br>
 
 <a id="node-5kynqew"></a>
@@ -1064,8 +1044,6 @@
 > Và nếu mgf của chúng đều tồn tại thì khi mgf của chúng bằng nhau tại mọi
 > điểm thì cdf cũng vậy (ý là nếu mgf tồn tại thì dùng mgf có thể kết luận
 > distritbution)
-
-**🔗 See also:** [Xác định phân phối qua MGF](#node-uyc99nm) · [Hội tụ MGFs](#node-yzqyu5s)
 
 <br>
 
@@ -1109,8 +1087,6 @@
 >
 >
 > M(t) = ∫-inf:inf e^tx fX(x)dx thì M(t) chính là Laplace transformation của fX(x)
-
-**🔗 See also:** [Tiêu chí đồng nhất phân phối](#node-5kynqew) · [Xấp xỉ Poisson](#node-f7hzylm)
 
 <br>
 
@@ -1334,8 +1310,6 @@
 >
 > Kết qủa cho thấy khi n→ inf tìh mgf của Bin(n,p) → mgf của Pois(np)**
 
-**🔗 See also:** [Hội tụ MGFs](#node-yzqyu5s) · [Xấp xỉ Poisson-Binomial](#node-dzmxf1c)
-
 <br>
 
 <a id="node-dzmxf1c"></a>
@@ -1354,8 +1328,6 @@
 >
 > Cũng như là biểu đồ cho thấy với n = 15 thì Pois và Bin có thể xấp xỉ
 > nhau tốt thế nào
-
-**🔗 See also:** [Xấp xỉ Poisson](#node-f7hzylm) · [MGF của aX+b](#node-4ypjp34)
 
 <br>
 
@@ -1395,7 +1367,7 @@
 >
 > = (e^tb)M_X(at)
 
-**🔗 See also:** [Xấp xỉ Poisson-Binomial](#node-dzmxf1c) · [Định lý Giới hạn Trung tâm](#node-efueime) · [Proof of Theorem 5.5.14](#node-yzn3dv1)
+**🔗 See also:** [Định lý Giới hạn Trung tâm](#node-efueime) · [Proof of Theorem 5.5.14](#node-yzn3dv1)
 
 <br>
 
