@@ -70,7 +70,7 @@
 >
 > (Trong stat110 thì hình như gs Blizstein gọi đây là Markov inequality)**
 
-**🔗 See also:** [Luật số lớn yếu](#node-j5m3pa1) · [Điều kiện vững ước lượng](#node-u07qsmw)
+**🔗 See also:** [Luật số lớn yếu](./55_convergence_concepts.md#node-j5m3pa1) · [Điều kiện vững ước lượng](./101_point_estimation.md#node-u07qsmw)
 
 <br>
 
@@ -412,7 +412,7 @@
 > một cái tích phân mà ta có thể tính được (evaluated analytically) vì với
 > α = 1, thì Γ(1, β) chính là exponential distribution (theo link)
 
-**🔗 See also:** [Trường hợp Gamma đặc biệt](#node-cvm81t8)
+**🔗 See also:** [Trường hợp Gamma đặc biệt](./33_continuous_distribution.md#node-cvm81t8)
 
 <br>
 
