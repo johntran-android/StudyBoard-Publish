@@ -197,7 +197,7 @@
 > định nghĩa **DISJOINT EVENTS** (là khi **intersection** của chúng bằng ∅) và
 > **PARTITION** (là khi chúng **disjoint** và **union của chúng bằng S**)
 
-**🔗 See also:** [Xác suất rút 4 lá Ách](#node-z4ilf15)
+**🔗 See also:** [Xác suất rút 4 lá Ách](./13_conditional_probability_independence.md#node-z4ilf15)
 
 <br>
 
