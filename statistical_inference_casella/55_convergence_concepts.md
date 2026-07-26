@@ -62,7 +62,7 @@
 > variable hội tụ về một constant, trong đó **cái random variable mà ta quan
 > tâm** là **sample mean**
 
-**🔗 See also:** [Hội tụ hầu chắc](#node-jayixv4) · [Hội tụ xác suất thống kê](#node-4pzd0to)
+**🔗 See also:** [Hội tụ hầu chắc](#node-jayixv4) · [Hội tụ xác suất thống kê](./101_point_estimation.md#node-4pzd0to)
 
 <br>
 
@@ -185,7 +185,7 @@
 > Đơn giản là vì xác suất thì chỉ trong  range 0,1, mà cái P này ≥ 1 cái tiến tới 1
 > thì P chắc chắn cũng phải → 1, chứ ko thể tiến tới số nào nhỏ hơn 1 được,
 
-**🔗 See also:** [Bất đẳng thức Markov và chứng minh](#node-u9zgfoi) · [Tính chất trung bình phương sai mẫu](#node-411jdqg)
+**🔗 See also:** [Bất đẳng thức Markov và chứng minh](./36_inequalities.md#node-u9zgfoi) · [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg)
 
 <br>
 
@@ -268,7 +268,7 @@
 >
 > và như vậy Var(Sn^2) phải → 0
 
-**🔗 See also:** [Tạo biến ngẫu nhiên mũ](#node-bxd38ye)
+**🔗 See also:** [Tạo biến ngẫu nhiên mũ](./56_generating_random_sample.md#node-bxd38ye)
 
 <br>
 
@@ -598,7 +598,7 @@
 >
 > tức Xnbar converge almost surely tới μ
 
-**🔗 See also:** [Phương pháp mô phỏng WLLN](#node-jeizj20)
+**🔗 See also:** [Phương pháp mô phỏng WLLN](./56_generating_random_sample.md#node-jeizj20)
 
 <br>
 
@@ -807,7 +807,7 @@
 >
 > Và theorem này mào đầu cho một thoerem quan trọng bậc nhất trong statistic Central Limit Theorem
 
-**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr)
+**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr)
 
 <br>
 
@@ -844,7 +844,7 @@
 >
 > **√n (Xnbar - μ) / σ hội tụ phân phối về standard normal random variable**
 
-**🔗 See also:** [Phương pháp Delta 1/Xbar](#node-1zfrnml) · [Stronger Central Limit Theorem](#node-yngnkwh) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr)
+**🔗 See also:** [Phương pháp Delta 1/Xbar](#node-1zfrnml) · [Stronger Central Limit Theorem](#node-yngnkwh) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr)
 
 <br>
 
@@ -869,7 +869,7 @@
 >
 > Cuối cũng, với **sức mạnh tính toán ngày càng lớn thì tầm quan trọng của theorem này ngày càng ít**
 
-**🔗 See also:** [MGF của aX+b](#node-4ypjp34) · [Các định lý độc lập n biến](#node-151qbd1)
+**🔗 See also:** [MGF của aX+b](./23_mgf.md#node-4ypjp34) · [Các định lý độc lập n biến](./46_multi_variate_distribution.md#node-151qbd1)
 
 <br>
 
@@ -1022,7 +1022,7 @@
 >
 > ... = \[MY(t /√n)\]^n
 
-**🔗 See also:** [Biến đổi PDF Location-Scale](#node-cs2rm3i) · [MGF của aX+b](#node-4ypjp34)
+**🔗 See also:** [Biến đổi PDF Location-Scale](./35_location_and_scale_families.md#node-cs2rm3i) · [MGF của aX+b](./23_mgf.md#node-4ypjp34)
 
 <br>
 
@@ -1101,7 +1101,7 @@
 >
 > Cái CLT này cho ta một công cụ hữu ích, **all-purpose approximation**, nhưng phải lưu ý rằng **chất lượng của approximation này phải xem lại**. Trong thực tế, nó luôn có ích trong việc đưa ra những tính toán sơ bộ đầu tiên
 
-**🔗 See also:** [CLT - Định lý giới hạn trung tâm](#node-32vkewg) · [MLE of e-lambda with Delta Method](#node-jiyzyog)
+**🔗 See also:** [CLT - Định lý giới hạn trung tâm](#node-32vkewg) · [MLE of e-lambda with Delta Method](./101_point_estimation.md#node-jiyzyog)
 
 <br>
 
@@ -1237,7 +1237,7 @@
 >
 > Gs cũng không chứng minh theorem này
 
-**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr)
+**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr)
 
 <br>
 
@@ -1812,7 +1812,7 @@
 >
 > Ghi chú của bạn cực kỳ chính xác và có chiều sâu vượt trội so với nội dung hình ảnh, giải thích cặn kẽ từng bước và cơ sở lý thuyết. Để nâng cao hơn nữa, bạn có thể cân nhắc nêu rõ tên "phương pháp Delta" ngay từ đầu.
 
-**🔗 See also:** [Phương sai tiệm cận và giới hạn](#node-62aug4x)
+**🔗 See also:** [Phương sai tiệm cận và giới hạn](./101_point_estimation.md#node-62aug4x)
 
 <br>
 
@@ -2132,7 +2132,7 @@
 >
 > Từ đó kết luận U \~ n(0, g'(θ)^2 × σ^2)
 
-**🔗 See also:** [10.1.3 Calculations and Comparisons](#node-iwgmm5t)
+**🔗 See also:** [10.1.3 Calculations and Comparisons](./101_point_estimation.md#node-iwgmm5t)
 
 <br>
 
@@ -2652,7 +2652,7 @@
 > của hai normal là một random variable thuộc lại Cauchy. mà ta đã biết nó ko có
 > mean (xem link xanh)
 
-**🔗 See also:** [Xấp xỉ kỳ vọng Taylor](#node-o8nor00) · [Đặc điểm phân phối Cauchy](#node-d6kf31i)
+**🔗 See also:** [Xấp xỉ kỳ vọng Taylor](#node-o8nor00) · [Đặc điểm phân phối Cauchy](./22_expected_value.md#node-d6kf31i)
 
 <br>
 
