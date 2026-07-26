@@ -7,6 +7,8 @@
 
 ## 3.6 Inequalities
 
+**🔗 See also:** [Bất đẳng thức Markov và chứng minh](#node-u9zgfoi) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-u9zgfoi"></a>
@@ -69,6 +71,8 @@
 >
 >
 > (Trong stat110 thì hình như gs Blizstein gọi đây là Markov inequality)**
+
+**🔗 See also:** [3.6 Inequalities](#node-je90bvn) · [Bất đẳng thức Chebyshev](#node-8q2eo23) · [Luật số lớn yếu](#node-j5m3pa1) · [Điều kiện vững ước lượng](#node-u07qsmw)
 
 <br>
 
@@ -182,6 +186,8 @@
 > Với t = 2: P(|(X - μ)| ≥ 2σ) ≤ 1/2^2 = 0.25 nói rằng sẽ có 25% thời gian X
 > mang giá trị mà độ lệch của nó so với μ là lớn hơn 2σ**
 
+**🔗 See also:** [Bất đẳng thức Markov và chứng minh](#node-u9zgfoi) · [Tính bảo thủ của Chebyshev](#node-nmymxe7)
+
 <br>
 
 <a id="node-nmymxe7"></a>
@@ -202,6 +208,8 @@
 > bound có từ Chebyshev.
 >
 > QUAY LẠI SAU
+
+**🔗 See also:** [Bất đẳng thức Chebyshev](#node-8q2eo23) · [Công thức đệ quy phân phối rời rạc](#node-3wnz8p8)
 
 <br>
 
@@ -246,6 +254,8 @@
 >
 > Nói chung là gs cho biết hầu hết các distribution rời rạc đều có identity
 > kiểu này
+
+**🔗 See also:** [Tính bảo thủ của Chebyshev](#node-nmymxe7) · [Chứng minh đẳng thức Gamma](#node-pc1n71r)
 
 <br>
 
@@ -410,6 +420,8 @@
 > một cái tích phân mà ta có thể tính được (evaluated analytically) vì với
 > α = 1, thì Γ(1, β) chính là exponential distribution (theo link)
 
+**🔗 See also:** [Công thức đệ quy phân phối rời rạc](#node-3wnz8p8) · [Bổ đề Stein và tích phân từng phần](#node-x7i764m) · [Trường hợp Gamma đặc biệt](#node-cvm81t8)
+
 <br>
 
 <a id="node-x7i764m"></a>
@@ -524,6 +536,8 @@
 > Thế thì áp dụng cái bổ đề này giúp tính moment bậc cao của normal
 > dễ dàng: QUAY LẠI SAU**
 
+**🔗 See also:** [Chứng minh đẳng thức Gamma](#node-pc1n71r)
+
 <br>
 
 <a id="node-j3ve8th"></a>
@@ -534,6 +548,8 @@
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Bổ đề Stein và tích phân từng phần](#node-x7i764m)
 
 <br>
 
