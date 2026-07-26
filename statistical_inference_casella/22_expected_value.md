@@ -311,7 +311,7 @@
 >
 > Và cdf khi đó là F(x) = 1 - e^-x/λ
 
-**🔗 See also:** [Định nghĩa và ý nghĩa Phương sai](#node-xx7gpce)
+**🔗 See also:** [Định nghĩa và ý nghĩa Phương sai](./23_mgf.md#node-xx7gpce)
 
 <br>
 
@@ -457,7 +457,7 @@
 >
 > QUAY LẠI SAU
 
-**🔗 See also:** [Xấp xỉ Mean Variance Tỉ số](#node-oj905vr)
+**🔗 See also:** [Xấp xỉ Mean Variance Tỉ số](./55_convergence_concepts.md#node-oj905vr)
 
 <br>
 
@@ -620,7 +620,7 @@
 >
 > QUAY LẠI SAU VỚI MEDIAN
 
-**🔗 See also:** [Xây dựng Quy tắc Bayes](#node-xatzdyv)
+**🔗 See also:** [Xây dựng Quy tắc Bayes](./73_methods_of_evaluating_estimators.md#node-xatzdyv)
 
 <br>
 
