@@ -106,7 +106,7 @@ normal Distribution
 >
 > Vậy thì thử xem ta có thể chứng minh theorem này ra sao.
 
-**🔗 See also:** [Chứng minh S^2 Chi-square](#node-nh8m52t) · [Suy diễn phân phối t](#node-iwzyu9l) · [Khoảng tin cậy từ đại lượng pivot](#node-g9mg0da)
+**🔗 See also:** [Chứng minh S^2 Chi-square](#node-nh8m52t) · [Suy diễn phân phối t](#node-iwzyu9l) · [Khoảng tin cậy từ đại lượng pivot](./92_methods_of_finding_interval_estimators.md#node-g9mg0da)
 
 <br>
 
@@ -684,7 +684,7 @@ normal Distribution
 > cũng là Γ, với tham số cộng lại. Ở đây gs nói vì Chi-square là một loại Γ cụ
 > thể là Γ(p/2, 2) nên dĩ nhiên nó cũng đúng
 
-**🔗 See also:** [Đạo hàm PDF của Y=X^2](#node-6yi0r3h) · [Tổng biến ngẫu nhiên Gamma](#node-08ciur5) · [Đạo hàm phân phối t-Student](#node-5eltn4g) · [Ước lượng Satterthwaite](#node-fosb15b)
+**🔗 See also:** [Đạo hàm PDF của Y=X^2](./21_distribution.md#node-6yi0r3h) · [Tổng biến ngẫu nhiên Gamma](./46_multi_variate_distribution.md#node-08ciur5) · [Đạo hàm phân phối t-Student](#node-5eltn4g) · [Ước lượng Satterthwaite](./72_method_of_finding_estimators.md#node-fosb15b)
 
 <br>
 
@@ -912,7 +912,7 @@ normal Distribution
 > cũng độc lập nhau. Mà như vậy thì Xk+1 - Xk_bar cũng độc lập với Sk^2 vì Sk^2 chả liên quan
 > gì đến Xk+1 (vì nó chỉ liên quan X1,...Xk)
 
-**🔗 See also:** [MGF của tổng phân phối chuẩn](#node-tk1wnj7) · [Tính chất Trung bình & Phương sai mẫu](#node-aytwme7)
+**🔗 See also:** [MGF của tổng phân phối chuẩn](./42_conditional_distributions_independent.md#node-tk1wnj7) · [Tính chất Trung bình & Phương sai mẫu](#node-aytwme7)
 
 <br>
 
@@ -1138,7 +1138,7 @@ normal Distribution
 > Đây chính là cái ràng buộc (restriction) đối với các constant mà giáo sư 
 > nói tới trong phần tiếp theo**
 
-**🔗 See also:** [Định lý Độc lập Hiệp phương sai](#node-o2ergsg) · [Chứng minh tổng biến chuẩn](#node-uaywczk)
+**🔗 See also:** [Định lý Độc lập Hiệp phương sai](./45_covariance_correlation.md#node-o2ergsg) · [Chứng minh tổng biến chuẩn](./46_multi_variate_distribution.md#node-uaywczk)
 
 <br>
 
@@ -1396,7 +1396,7 @@ normal Distribution
 > có thể tách thành tích các function gi mà mỗi cái apply riêng lên vector **xi )**
 > thì khi đó các rv Vector **X1,...Xn** là độc lập
 
-**🔗 See also:** [Khái quát tính độc lập biến ngẫu nhiên](#node-hvcrd7p)
+**🔗 See also:** [Khái quát tính độc lập biến ngẫu nhiên](./46_multi_variate_distribution.md#node-hvcrd7p)
 
 <br>
 
@@ -1586,7 +1586,7 @@ normal Distribution
 > (Xbar - μ) / S/√n (dùng sampling standard deviation thay cho σ). Nhằm làm cơ 
 > sở cho việc **suy luận ra μ Mà ko cần biết variance σ**
 
-**🔗 See also:** [Kiểm định LRT cho trung bình](#node-ouhenhy)
+**🔗 See also:** [Kiểm định LRT cho trung bình](./82_method_of_finding_tests.md#node-ouhenhy)
 
 <br>
 
@@ -1705,7 +1705,7 @@ normal Distribution
 >
 > Với p = 1 thì nó chính là pdf của Cauchy distribution
 
-**🔗 See also:** [Kiểm định hợp-giao cỡ α](#node-aruspge) · [Tối ưu hóa kỳ vọng độ dài](#node-cu30bvl)
+**🔗 See also:** [Kiểm định hợp-giao cỡ α](./83_methods_of_evaluating_test.md#node-aruspge) · [Tối ưu hóa kỳ vọng độ dài](./93_methods_of_evaluating_interval_estimators.md#node-cu30bvl)
 
 <br>
 
@@ -1878,7 +1878,7 @@ normal Distribution
 >
 > variance với p > 2 VarTp = p / (p - 2)
 
-**🔗 See also:** [Kiểm định hợp-giao cỡ α](#node-aruspge)
+**🔗 See also:** [Kiểm định hợp-giao cỡ α](./83_methods_of_evaluating_test.md#node-aruspge)
 
 <br>
 
