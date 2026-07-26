@@ -182,7 +182,7 @@ interval Estimators
 > Vậy ta đã có một **1 - α confidence interval** (hay 1 - α interval estimator) được xây
 > dựng đơn giản chỉ bằng cách đảo ngược một hypothesis test
 
-**🔗 See also:** [Đặc điểm kiểm định giả thuyết](#node-21ae20z)
+**🔗 See also:** [Đặc điểm kiểm định giả thuyết](./83_methods_of_evaluating_test.md#node-21ae20z)
 
 <br>
 
@@ -624,7 +624,7 @@ interval Estimators
 > đã  biết để tạo ra một reasonable test trước, rồi invert để có reasonable
 > confidence set
 
-**🔗 See also:** [UMA từ kiểm định UMP](#node-6ofz752)
+**🔗 See also:** [UMA từ kiểm định UMP](./93_methods_of_evaluating_interval_estimators.md#node-6ofz752)
 
 <br>
 
@@ -880,7 +880,7 @@ interval Estimators
 >
 > C(**X**) = {λ: (ΣXi/λ)^n e^(-ΣXi/λ) > k*} chính là một 1-α confidence set.
 
-**🔗 See also:** [Khoảng tin cậy tối ưu](#node-uj1aylo)
+**🔗 See also:** [Khoảng tin cậy tối ưu](./93_methods_of_evaluating_interval_estimators.md#node-uj1aylo)
 
 <br>
 
@@ -1081,7 +1081,7 @@ interval Estimators
 > Chọn α = 0.1, có cách để giải ra a, b như vậy từ đó ta có một [L(**X**),
 > U(**X**)] là một  1-α confidence set (cái này gs không nói)
 
-**🔗 See also:** [Tổng biến ngẫu nhiên Gamma](#node-08ciur5)
+**🔗 See also:** [Tổng biến ngẫu nhiên Gamma](./46_multi_variate_distribution.md#node-08ciur5)
 
 <br>
 
@@ -1532,7 +1532,7 @@ interval Estimators
 > test of its size (t0 ở đây có thể hiểu là k(p0), nó là cái threshold nào đó giúp
 > test T có size mong muốn thôi)
 
-**🔗 See also:** [Kiểm định UMP bằng MLR](#node-r9it3lg)
+**🔗 See also:** [Kiểm định UMP bằng MLR](./83_methods_of_evaluating_test.md#node-r9it3lg)
 
 <br>
 
@@ -2681,7 +2681,7 @@ interval Estimators
 >
 > ⇨ confidence interval: {μ: xbar - tn-1_α/2 s/√n ≤ μ ≤ xbar + tn-1_α/2 s/√n}
 
-**🔗 See also:** [Tính chất Trung bình & Phương sai mẫu](#node-aytwme7)
+**🔗 See also:** [Tính chất Trung bình & Phương sai mẫu](./53_sampling_from_the_normal_distribution.md#node-aytwme7)
 
 <br>
 
@@ -3114,7 +3114,7 @@ interval Estimators
 >
 > Vậy FX(x) = F(x) → chứng minh xong.
 
-**🔗 See also:** [Biến đổi tích phân xác suất](#node-ezy1q8o)
+**🔗 See also:** [Biến đổi tích phân xác suất](./56_generating_random_sample.md#node-ezy1q8o)
 
 <br>
 
@@ -4265,7 +4265,7 @@ interval Estimators
 >
 > Đây chính là hai phương trình 9.2.16 trong sách.
 
-**🔗 See also:** [Vùng HPD Poisson](#node-yh9h8wy)
+**🔗 See also:** [Vùng HPD Poisson](./93_methods_of_evaluating_interval_estimators.md#node-yh9h8wy)
 
 <br>
 
@@ -4387,7 +4387,7 @@ interval Estimators
 > decreasing đối với λ. Do đó λ mà ta có được ở phương trình đầu chính là chặn
 > trên λU(y0) và cái kia là λL(y0)
 
-**🔗 See also:** [Tích phân từng phần CDF Gamma](#node-ip8ufue)
+**🔗 See also:** [Tích phân từng phần CDF Gamma](./33_continuous_distribution.md#node-ip8ufue)
 
 <br>
 
@@ -4802,7 +4802,7 @@ interval Estimators
 >
 > Chính là 9.2.20
 
-**🔗 See also:** [Xác suất Credible & Tin cậy](#node-m77g4jo) · [Vùng HPD Poisson](#node-yh9h8wy)
+**🔗 See also:** [Xác suất Credible & Tin cậy](#node-m77g4jo) · [Vùng HPD Poisson](./93_methods_of_evaluating_interval_estimators.md#node-yh9h8wy)
 
 <br>
 
@@ -5145,7 +5145,7 @@ interval Estimators
 >
 > [θ - δB(xbar)] / √Var(θ|xbar) ~ normal(0,1)
 
-**🔗 See also:** [Ước lượng Bayes phân phối chuẩn](#node-5ldrh78)
+**🔗 See also:** [Ước lượng Bayes phân phối chuẩn](./72_method_of_finding_estimators.md#node-5ldrh78)
 
 <br>
 
