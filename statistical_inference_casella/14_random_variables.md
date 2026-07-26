@@ -150,7 +150,7 @@
 > ĐỊNH NGHĨA CỦA PROBABILITY FUNCTION ĐỐI VỚI
 > RANDOM VARIABLE
 
-**🔗 See also:** [Cơ sở xác suất của CDF](#node-wj2brgr)
+**🔗 See also:** [Cơ sở xác suất của CDF](./15_distribution_function.md#node-wj2brgr)
 
 <br>
 
