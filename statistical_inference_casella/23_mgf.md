@@ -68,7 +68,7 @@
 > và công thức cũng cho thấyd điều này E[(X - EX)^2] = 0 ⇔ X = EX, ⇨ giá
 > trị của X là cố định
 
-**🔗 See also:** [Giá trị kỳ vọng phân phối mũ](#node-1098w9n)
+**🔗 See also:** [Giá trị kỳ vọng phân phối mũ](./22_expected_value.md#node-1098w9n)
 
 <br>
 
@@ -1367,7 +1367,7 @@
 >
 > = (e^tb)M_X(at)
 
-**🔗 See also:** [Định lý Giới hạn Trung tâm](#node-efueime) · [Proof of Theorem 5.5.14](#node-yzn3dv1)
+**🔗 See also:** [Định lý Giới hạn Trung tâm](./55_convergence_concepts.md#node-efueime) · [Proof of Theorem 5.5.14](./55_convergence_concepts.md#node-yzn3dv1)
 
 <br>
 
