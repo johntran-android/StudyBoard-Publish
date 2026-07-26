@@ -299,7 +299,7 @@ from A Random Sample
 >
 > ⇔ **(n - 1) s^2 = Σi xi^2 - Σi x_bar^2**
 
-**🔗 See also:** [Tìm MLE không đạo hàm](#node-276or8r)
+**🔗 See also:** [Tìm MLE không đạo hàm](./72_method_of_finding_estimators.md#node-276or8r)
 
 <br>
 
@@ -865,7 +865,7 @@ from A Random Sample
 >
 > = **σ^2  Chứng minh xong**
 
-**🔗 See also:** [Luật số lớn yếu](#node-j5m3pa1) · [Tính không chệch Xbar S^2](#node-dgdrvpi) · [Ước lượng không chệch Poisson](#node-0ecqsqo) · [Tính nhất quán của Xbar](#node-47kutgs)
+**🔗 See also:** [Luật số lớn yếu](./55_convergence_concepts.md#node-j5m3pa1) · [Tính không chệch Xbar S^2](./73_methods_of_evaluating_estimators.md#node-dgdrvpi) · [Ước lượng không chệch Poisson](./73_methods_of_evaluating_estimators.md#node-0ecqsqo) · [Tính nhất quán của Xbar](./101_point_estimation.md#node-47kutgs)
 
 <br>
 
@@ -1289,7 +1289,7 @@ from A Random Sample
 >
 > QUAY LẠI SAU**
 
-**🔗 See also:** [Phân phối trung bình mẫu Poisson](#node-qmu12n8) · [Hàm lực β(θ) phân phối chuẩn](#node-55xkcix)
+**🔗 See also:** [Phân phối trung bình mẫu Poisson](./56_generating_random_sample.md#node-qmu12n8) · [Hàm lực β(θ) phân phối chuẩn](./83_methods_of_evaluating_test.md#node-55xkcix)
 
 <br>
 
@@ -1773,7 +1773,7 @@ from A Random Sample
 > Cauchy thì cũng là Cauchy luôn, với scale parameters bằng tổng các
 > scale params
 
-**🔗 See also:** [Biến đổi PDF Location-Scale](#node-cs2rm3i)
+**🔗 See also:** [Biến đổi PDF Location-Scale](./35_location_and_scale_families.md#node-cs2rm3i)
 
 <br>
 
@@ -2431,7 +2431,7 @@ from A Random Sample
 >
 > QUAY LẠI SAU
 
-**🔗 See also:** [Phân phối trung bình mẫu Poisson](#node-qmu12n8)
+**🔗 See also:** [Phân phối trung bình mẫu Poisson](./56_generating_random_sample.md#node-qmu12n8)
 
 <br>
 
