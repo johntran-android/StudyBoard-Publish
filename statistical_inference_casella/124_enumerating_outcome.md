@@ -9,6 +9,8 @@ outcome
 ## 1.2.4 Enumerating
 outcome
 
+**🔗 See also:** [Xác suất outcome đồng khả năng](#node-qmb2rou) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-qmb2rou"></a>
@@ -77,6 +79,9 @@ outcome
 >
 > Và như vậy để tính xác suất event A, ta chỉ cần **ĐẾM số possible outcome
 > chứa trong subset A** và nhân cho **1 / sample space size**
+
+**🔗 See also:** [1.2.4 Enumerating
+outcome](#node-8twizz7) · [Xác suất rút 4 Át](#node-9wsbvqw)
 
 <br>
 
@@ -181,6 +186,8 @@ outcome
 >
 > = **48/(52 choose 5)**
 
+**🔗 See also:** [Xác suất outcome đồng khả năng](#node-qmb2rou) · [Xác suất các tay bài Poker](#node-bjn9iaf)
+
 <br>
 
 <a id="node-bjn9iaf"></a>
@@ -244,17 +251,23 @@ outcome
 >
 > = 13*(4 c 2)*(13 c 3)*(4 c 1)^3 / (52 choose 5)
 
+**🔗 See also:** [Xác suất rút 4 Át](#node-9wsbvqw)
+
 <br>
 
 <a id="node-512w59h"></a>
 
 <p align="center"><kbd><img src="assets/d1iazqh9akb.png" width="80%"></kbd></p>
 
+**🔗 See also:** [Xác suất các tay bài Poker](#node-bjn9iaf)
+
 <br>
 
 <a id="node-c8b8ios"></a>
 
 <p align="center"><kbd><img src="assets/ttf2j0qqjv.png" width="80%"></kbd></p>
+
+**🔗 See also:** [Hiểu sai "equally likely"](#node-pu2z1e2)
 
 <br>
 
@@ -305,6 +318,8 @@ outcome
 >
 >
 > Đại khái là vậy
+
+**🔗 See also:** [Tổ hợp lặp và xác suất](#node-pl75v3r)
 
 <br>
 
@@ -366,11 +381,15 @@ outcome
 > [banh 2 trong hộp 3, banh 1 trong hộp 1] trong khi đây là hai sự kiện khác
 > nhau khi tính xác suất.
 
+**🔗 See also:** [Hiểu sai "equally likely"](#node-pu2z1e2)
+
 <br>
 
 <a id="node-56gu8sw"></a>
 
 <p align="center"><kbd><img src="assets/w1gpkvprdfq.png" width="80%"></kbd></p>
+
+**🔗 See also:** [Tổ hợp lặp và xác suất](#node-pl75v3r)
 
 <br>
 
