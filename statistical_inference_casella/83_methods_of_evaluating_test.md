@@ -745,7 +745,7 @@
 >
 > Vậy β(θ) là hàm increasing
 
-**🔗 See also:** [Biến đổi PDF Location-Scale](#node-cs2rm3i) · [Phân phối trung bình mẫu](#node-c034x4w) · [Họ phân phối Location-Scale](#node-zmiosz0) · [Kiểm định LRT không chệch](#node-gca38ub)
+**🔗 See also:** [Biến đổi PDF Location-Scale](./35_location_and_scale_families.md#node-cs2rm3i) · [Phân phối trung bình mẫu](./52_of_random_variables_from_a_random_sample.md#node-c034x4w) · [Họ phân phối Location-Scale](./35_location_and_scale_families.md#node-zmiosz0) · [Kiểm định LRT không chệch](#node-gca38ub)
 
 <br>
 
@@ -1443,7 +1443,7 @@
 > define cái rule theo Z: Reject H0 nếu |Xbar-θ0| ≥ (z_α/2)/√n (z_α/2 là thứ có thể tra
 > bảng được, thì ta sẽ có một size α LRT)
 
-**🔗 See also:** [Kiểm định LRT Phân phối Chuẩn](#node-kbapjux)
+**🔗 See also:** [Kiểm định LRT Phân phối Chuẩn](./82_method_of_finding_tests.md#node-kbapjux)
 
 <br>
 
@@ -1766,7 +1766,7 @@
 > c (trong sách)  khiến có size α test chính là cái a khiến có size α test, và a đó =
 > θ0 - log(α)/n
 
-**🔗 See also:** [Hàm hợp lí Exponential](#node-nl8sk1y) · [Chứng minh PDF thống kê thứ tự](#node-1zc19ro)
+**🔗 See also:** [Hàm hợp lí Exponential](./82_method_of_finding_tests.md#node-nl8sk1y) · [Chứng minh PDF thống kê thứ tự](./54_order_statistic.md#node-1zc19ro)
 
 <br>
 
@@ -2043,7 +2043,7 @@
 >
 > Và thường thường người ta chọn tL = -tU = t_n-1, α/2
 
-**🔗 See also:** [Kiểm định t hai phía](#node-qo5rly2) · [Phân phối t của Student](#node-isdevob) · [Kiểm định LRT cho trung bình](#node-ouhenhy) · [Giới hạn momen phân phối t](#node-ouu5cht)
+**🔗 See also:** [Kiểm định t hai phía](./82_method_of_finding_tests.md#node-qo5rly2) · [Phân phối t của Student](./53_sampling_from_the_normal_distribution.md#node-isdevob) · [Kiểm định LRT cho trung bình](./82_method_of_finding_tests.md#node-ouhenhy) · [Giới hạn momen phân phối t](./53_sampling_from_the_normal_distribution.md#node-ouu5cht)
 
 <br>
 
@@ -2190,7 +2190,7 @@
 > có bệnh (β lớn). Như vậy mới là unbiased. Ngược lại, biased là khi có bệnh hay
 > không có bệnh cũng cho β nhỏ hết.
 
-**🔗 See also:** [Đảo ngược test statistic](#node-qofmyhz)
+**🔗 See also:** [Đảo ngược test statistic](./92_methods_of_finding_interval_estimators.md#node-qofmyhz)
 
 <br>
 
@@ -3593,7 +3593,7 @@
 > Và có nghĩa là, cái test UMP level α test sẽ là cái mà có rule là reject H0 nếu xbar
 > < c  với c = -z_α(σ/√n) + θ0
 
-**🔗 See also:** [Biến đổi PDF Location-Scale](#node-cs2rm3i) · [Kiểm định UMP với thống kê đủ](#node-qawk1aq) · [UMA từ Test UMP](#node-xumc7wb)
+**🔗 See also:** [Biến đổi PDF Location-Scale](./35_location_and_scale_families.md#node-cs2rm3i) · [Kiểm định UMP với thống kê đủ](#node-qawk1aq) · [UMA từ Test UMP](./93_methods_of_evaluating_interval_estimators.md#node-xumc7wb)
 
 <br>
 
@@ -3893,7 +3893,7 @@
 >
 > Chứng minh xong Karlin Rubin
 
-**🔗 See also:** [Thống kê đủ và kiểm định UMP](#node-lbufvmo)
+**🔗 See also:** [Thống kê đủ và kiểm định UMP](./92_methods_of_finding_interval_estimators.md#node-lbufvmo)
 
 <br>
 
@@ -4168,7 +4168,7 @@
 > subset **CÁC UNBIASED TEST**. Và sẽ cho thấy là có khi cách làm này sẽ
 > dẫn đến best test.
 
-**🔗 See also:** [Ưu điểm của MSE](#node-55e9imf)
+**🔗 See also:** [Ưu điểm của MSE](./73_methods_of_evaluating_estimators.md#node-55e9imf)
 
 <br>
 
@@ -4715,7 +4715,7 @@
 >
 > = α/2 + α/2 = α
 
-**🔗 See also:** [Khoảng tin cậy không chệch](#node-d8pc9jk)
+**🔗 See also:** [Khoảng tin cậy không chệch](./93_methods_of_evaluating_interval_estimators.md#node-d8pc9jk)
 
 <br>
 
@@ -5055,7 +5055,7 @@
 > Kết quả này đủ kết luận test có rule reject H0 nếu T(**X**) < c chính là level α
 > test
 
-**🔗 See also:** [Kiểm định Tỷ số Hợp lý](#node-b3cjkf1)
+**🔗 See also:** [Kiểm định Tỷ số Hợp lý](./82_method_of_finding_tests.md#node-b3cjkf1)
 
 <br>
 
@@ -5080,7 +5080,7 @@
 >
 > Xem phần note của ví dụ 8.3.28, mình đã tự tay xây dựng two-side LRT
 
-**🔗 See also:** [Kiểm định LRT cho trung bình](#node-ouhenhy)
+**🔗 See also:** [Kiểm định LRT cho trung bình](./82_method_of_finding_tests.md#node-ouhenhy)
 
 <br>
 
@@ -6237,7 +6237,7 @@
 >
 > Hay p(**X**) = 2P_(μ0, σ^2)(Tn-1 ≥ |(Xbar-μ0) / (S/√n)|)
 
-**🔗 See also:** [Quan hệ UIT-LRT hai phía](#node-27dn67w) · [Kiểm định t hai phía](#node-qo5rly2)
+**🔗 See also:** [Quan hệ UIT-LRT hai phía](#node-27dn67w) · [Kiểm định t hai phía](./82_method_of_finding_tests.md#node-qo5rly2)
 
 <br>
 
@@ -6966,7 +6966,7 @@
 >
 > nên X^2/ θ HOÀN TOÀN KHÁC X^2)
 
-**🔗 See also:** [Định nghĩa Thống kê đủ](#node-aog81op)
+**🔗 See also:** [Định nghĩa Thống kê đủ](./62_the_sufficient_principle.md#node-aog81op)
 
 <br>
 
@@ -7200,7 +7200,7 @@
 >
 > đây chính là **p-value Statistic**: p(S1,S2) = Σ{u ∈ range S1, u ≥ S1} f(u|T=S1+S2),
 
-**🔗 See also:** [Định lý Factorization](#node-dyi91g8)
+**🔗 See also:** [Định lý Factorization](./62_the_sufficient_principle.md#node-dyi91g8)
 
 <br>
 
