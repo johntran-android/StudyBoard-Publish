@@ -645,7 +645,7 @@
 >
 > Và áp dụng tương tự cho joint pdf thì ta P((X,Y) ∈ A) = ∫∫A fX,Y(x,y)dxdy
 
-**🔗 See also:** [Thuật toán Accept/Reject](#node-aebauln)
+**🔗 See also:** [Thuật toán Accept/Reject](./56_generating_random_sample.md#node-aebauln)
 
 <br>
 
