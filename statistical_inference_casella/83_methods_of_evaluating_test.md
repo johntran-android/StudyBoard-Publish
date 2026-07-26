@@ -7,6 +7,8 @@
 
 ## 8.3 Methods Of Evaluating Test
 
+**🔗 See also:** [Đánh giá chất lượng kiểm định giả thuyết](#node-htj9wfs) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-htj9wfs"></a>
@@ -40,6 +42,8 @@
 > Và thường thường, người ta sẽ dùng cách tiếp cận là tính xác suất mắc sai
 > lầm, và dùng nó để so sánh các hypothesis test và trong một số trường hợp
 > có thể còn giúp chọn ra cái tốt nhất nữa.
+
+**🔗 See also:** [8.3 Methods Of Evaluating Test](#node-nxql2js) · [Sai lầm và vùng bác bỏ](#node-qbi9ma9)
 
 <br>
 
@@ -99,6 +103,8 @@
 >
 > P_θ(**x** ∈ R) = 1 - P(Type II error) khi θ ∈ Θ0c
 
+**🔗 See also:** [Đánh giá chất lượng kiểm định giả thuyết](#node-htj9wfs) · [Khái niệm hàm công suất kiểm định](#node-bksfmes)
+
 <br>
 
 <a id="node-bksfmes"></a>
@@ -134,6 +140,8 @@
 >
 >
 > β(θ) = 0 ∀ θ ∈ Θ0 và β(θ) = 1 ∀ θ ∈ Θ0c. Thì đó là hàm β lí tưởng.
+
+**🔗 See also:** [Sai lầm và vùng bác bỏ](#node-qbi9ma9) · [Kiểm định giả thuyết nhị thức](#node-qxpdaeg)
 
 <br>
 
@@ -280,6 +288,8 @@
 > thì ta sẽ xem trong đó, ta ưu tiên loại error nào hơn, từ đó chọn test rule nào.
 > Ví dụ, nếu trong thực tế, việc reject nhầm H0 gây hậu quả lớn hơn, tức Type
 > I error cần được ưu tiên giảm thiểu hơn. Ta có thể dùng rule 1.
+
+**🔗 See also:** [Khái niệm hàm công suất kiểm định](#node-bksfmes) · [Kiểm định LRT Phân phối Chuẩn](#node-23bm9zy)
 
 <br>
 
@@ -535,6 +545,8 @@
 > sách. (chú ý, c trong sách, là c' của mình, nên dĩ nhiên nó là số dương bất kì, không phải 
 > là ∈ [0,1])
 
+**🔗 See also:** [Kiểm định giả thuyết nhị thức](#node-qxpdaeg) · [Hàm lực β(θ) phân phối chuẩn](#node-55xkcix) · [Kiểm soát sai lầm kiểm định giả thuyết](#node-twddvnv)
+
 <br>
 
 <a id="node-55xkcix"></a>
@@ -743,6 +755,8 @@
 >
 > Vậy β(θ) là hàm increasing
 
+**🔗 See also:** [Kiểm định LRT Phân phối Chuẩn](#node-23bm9zy) · [Xác định cỡ mẫu bằng hàm lực](#node-xi0y2b7) · [Biến đổi PDF Location-Scale](#node-cs2rm3i) · [Phân phối trung bình mẫu](#node-c034x4w) · [Họ phân phối Location-Scale](#node-zmiosz0) · [Kiểm định LRT không chệch](#node-gca38ub)
+
 <br>
 
 <a id="node-xi0y2b7"></a>
@@ -755,6 +769,8 @@
 > Tiếp theo đại ý là thường thường, power function của một phép test sẽ phụ
 > thuộc vào sample size n. Và khi n có thể được phép chọn, thì power function
 > có thể giúp ta trả lời câu hỏi là nên chọn size của sample thế nào.
+
+**🔗 See also:** [Hàm lực β(θ) phân phối chuẩn](#node-55xkcix) · [Kiểm soát sai lầm kiểm định giả thuyết](#node-twddvnv)
 
 <br>
 
@@ -1074,6 +1090,8 @@
 > Vậy c = 1.28, n = 5 cho ra một test rule đạt yêu cầu về xác suất của error như mong
 > muốn.
 
+**🔗 See also:** [Xác định cỡ mẫu bằng hàm lực](#node-xi0y2b7) · [Quy tắc tra bảng Z](#node-rbze5n3) · [Kiểm định LRT Phân phối Chuẩn](#node-23bm9zy)
+
 <br>
 
 <a id="node-rbze5n3"></a>
@@ -1088,6 +1106,8 @@
 > Cách tra Z-table đại ý là tìm giá trị Φ(z) mong muốn. và cột dọc chính là phần
 > nguyên và thập phân thứ nhất, hàng ngang là thập phân thứ hai. Cũng dễ
 > hiểu
+
+**🔗 See also:** [Kiểm soát sai lầm kiểm định giả thuyết](#node-twddvnv) · [Size và Level α test](#node-zxo9ogt)
 
 <br>
 
@@ -1186,6 +1206,8 @@
 > Khi đó, ta sẽ làm đúng như ý tưởng: Lọc ra một đám có Type I error đạt tiêu
 > chuẩn (lọc bằng upper bound) và trong đám đó tìm ra thằng tốt nhất
 
+**🔗 See also:** [Quy tắc tra bảng Z](#node-rbze5n3) · [Ưu tiên tránh lỗi loại I](#node-njf27mc)
+
 <br>
 
 <a id="node-njf27mc"></a>
@@ -1265,6 +1287,8 @@
 >
 > Thì nay, với α, ta có thể thu hẹp đáng kể các phép thử (tức là bằng cách
 > chọn α ví dụ = 0.1, thì c sẽ phải nhỏ hơn mức sao đó)
+
+**🔗 See also:** [Size và Level α test](#node-zxo9ogt) · [Kiểm định tỉ số khả dĩ cỡ α](#node-8t9g9rt)
 
 <br>
 
@@ -1436,6 +1460,8 @@
 > Có ý này: Tác giả nói ko quan trọng ý là, ko cần phải tìm ra c cụ thể, mà chỉ cần
 > define cái rule theo Z: Reject H0 nếu |Xbar-θ0| ≥ (z_α/2)/√n (z_α/2 là thứ có thể tra
 > bảng được, thì ta sẽ có một size α LRT)
+
+**🔗 See also:** [Ưu tiên tránh lỗi loại I](#node-njf27mc) · [Ảnh hưởng Θ0 trong kiểm định](#node-csqvj7r) · [Kiểm định LRT Phân phối Chuẩn](#node-kbapjux)
 
 <br>
 
@@ -1758,6 +1784,8 @@
 > c (trong sách)  khiến có size α test chính là cái a khiến có size α test, và a đó =
 > θ0 - log(α)/n
 
+**🔗 See also:** [Kiểm định tỉ số khả dĩ cỡ α](#node-8t9g9rt) · [Điểm cắt phân phối xác suất](#node-ib3olsc) · [Hàm hợp lí Exponential](#node-nl8sk1y) · [Chứng minh PDF thống kê thứ tự](#node-1zc19ro)
+
 <br>
 
 <a id="node-ib3olsc"></a>
@@ -1794,6 +1822,8 @@
 >
 >
 >  Và chúng gọi là CUTOFF POINTS
+
+**🔗 See also:** [Ảnh hưởng Θ0 trong kiểm định](#node-csqvj7r) · [Kiểm định hợp-giao cỡ α](#node-aruspge)
 
 <br>
 
@@ -2033,6 +2063,8 @@
 >
 > Và thường thường người ta chọn tL = -tU = t_n-1, α/2
 
+**🔗 See also:** [Điểm cắt phân phối xác suất](#node-ib3olsc) · [Đặc điểm kiểm định giả thuyết](#node-21ae20z) · [Kiểm định t hai phía](#node-qo5rly2) · [Phân phối t của Student](#node-isdevob) · [Kiểm định LRT cho trung bình](#node-ouhenhy) · [Giới hạn momen phân phối t](#node-ouu5cht)
+
 <br>
 
 <a id="node-21ae20z"></a>
@@ -2178,6 +2210,8 @@
 > có bệnh (β lớn). Như vậy mới là unbiased. Ngược lại, biased là khi có bệnh hay
 > không có bệnh cũng cho β nhỏ hết.
 
+**🔗 See also:** [Kiểm định hợp-giao cỡ α](#node-aruspge) · [Kiểm định LRT không chệch](#node-gca38ub) · [Đảo ngược test statistic](#node-qofmyhz)
+
 <br>
 
 <a id="node-gca38ub"></a>
@@ -2232,6 +2266,8 @@
 > Vậy hàm β(θ) luôn đơn điệu tăng thì dĩ nhiên là tại θ'' ∈ (-inf, θ0] = Θ0   thì dĩ
 > nhiên luôn nhỏ hơn tại θ' ∈ (θ0, inf) = Θ0c → thỏa định nghĩa của unbiased
 > test
+
+**🔗 See also:** [Đặc điểm kiểm định giả thuyết](#node-21ae20z) · [Kiểm định giả thuyết tối ưu](#node-i8kwc7p) · [Hàm lực β(θ) phân phối chuẩn](#node-55xkcix)
 
 <br>
 
@@ -2290,6 +2326,8 @@
 > Vậy nên khi ta có một class các Level α test, và ta tìm ra thằng tốt nhất trong
 > đó Uniformly Most Powerfull (thằng có xác suất Type II Error thấp nhất) thì
 > nó được gọi là **UMP level α test.**
+
+**🔗 See also:** [Kiểm định LRT không chệch](#node-gca38ub) · [Định lý Neyman-Pearson](#node-00oute9)
 
 <br>
 
@@ -2463,6 +2501,8 @@
 > Do đó, để tìm thằng tốt nhất toàn cục: Thì ta phải **mạo hiểm hết mức có thể
 > trong biên độ rủi ro (loại I) cho phép**, để c**hấp nhận là thằng test dễ mua
 > phải đồ giả nhất nhưng cũng là thằng ít bị miss đồ thật nhất.**
+
+**🔗 See also:** [Kiểm định giả thuyết tối ưu](#node-i8kwc7p) · [Chứng minh định lý Neyman-Pearson](#node-jagupr6)
 
 <br>
 
@@ -2724,6 +2764,8 @@
 > lỗi loại 2, thì nó lại là thằng ít tệ nhất, nói cách khác, nó là thằng có năng lực
 > cao nhất trong việc chọn đúng H1 khi θ ∈ Θ0c.
 
+**🔗 See also:** [Định lý Neyman-Pearson](#node-00oute9) · [Độc nhất UMP level α test](#node-lw0vn5b)
+
 <br>
 
 <a id="node-lw0vn5b"></a>
@@ -2871,6 +2913,8 @@
 > (x) tại mọi x trừ x thuộc tập A là tập có xác suất bằng 0. Thì theo lí thuyết toán
 > học, điều này coi như hai hàm Φ và Φ' là một
 
+**🔗 See also:** [Chứng minh định lý Neyman-Pearson](#node-jagupr6) · [Kiểm định UMP với thống kê đủ](#node-qawk1aq)
+
 <br>
 
 <a id="node-qawk1aq"></a>
@@ -2929,6 +2973,8 @@
 > Còn nhớ theorem vừa rồi, nó nói rằng, nếu một test thỏa hai điều kiện: có
 > rule tuân theo 8.3.1 và thỏa 8.3.2 = là một size α test thì nó sẽ chính là một
 > UMP level α test, và là duy nhất.
+
+**🔗 See also:** [Độc nhất UMP level α test](#node-lw0vn5b) · [Chứng minh kiểm định UMP α](#node-de2hwk8) · [Kiểm định UMP tham số trung bình](#node-kd3nfb2)
 
 <br>
 
@@ -3011,6 +3057,8 @@
 >
 > Vậy kết luận test thỏa Neyman-Pearson lemma ⇨ Thỏa điều kiện để nó là
 > một unique UMP level α
+
+**🔗 See also:** [Kiểm định UMP với thống kê đủ](#node-qawk1aq) · [Kiểm định UMP nhị thức](#node-u1a707d)
 
 <br>
 
@@ -3298,6 +3346,8 @@
 >
 > Nếu r**eject H0 khi X = 1**, thì lúc này R = {1,2} ⇨ **ta sẽ có UMP level 3/4 test.**
 
+**🔗 See also:** [Chứng minh kiểm định UMP α](#node-de2hwk8) · [Kiểm định UMP tham số trung bình](#node-kd3nfb2)
+
 <br>
 
 <a id="node-kd3nfb2"></a>
@@ -3575,6 +3625,8 @@
 > Và có nghĩa là, cái test UMP level α test sẽ là cái mà có rule là reject H0 nếu xbar
 > < c  với c = -z_α(σ/√n) + θ0
 
+**🔗 See also:** [Kiểm định UMP nhị thức](#node-u1a707d) · [Kiểm định UMP giả thuyết phức hợp](#node-ibjxbz4) · [Biến đổi PDF Location-Scale](#node-cs2rm3i) · [Kiểm định UMP với thống kê đủ](#node-qawk1aq) · [UMA từ Test UMP](#node-xumc7wb)
+
 <br>
 
 <a id="node-ibjxbz4"></a>
@@ -3636,6 +3688,8 @@
 >
 > Do đó, ta sẽ cần một công cụ mới, cho phép deal với bài toán này.
 
+**🔗 See also:** [Kiểm định UMP tham số trung bình](#node-kd3nfb2) · [Định nghĩa Tỉ số Khả năng Đơn điệu](#node-czw18og)
+
 <br>
 
 <a id="node-czw18og"></a>
@@ -3672,6 +3726,8 @@
 >
 >
 > Nói chung, định nghĩa thì phải nhớ thôi. Không có gì để nói nhiều
+
+**🔗 See also:** [Kiểm định UMP giả thuyết phức hợp](#node-ibjxbz4) · [Kiểm định UMP bằng MLR](#node-r9it3lg)
 
 <br>
 
@@ -3873,6 +3929,8 @@
 >
 > Chứng minh xong Karlin Rubin
 
+**🔗 See also:** [Định nghĩa Tỉ số Khả năng Đơn điệu](#node-czw18og) · [Kiểm định UMP theo Karlin-Rubin](#node-5yjxrsb) · [Thống kê đủ và kiểm định UMP](#node-lbufvmo)
+
 <br>
 
 <a id="node-5yjxrsb"></a>
@@ -4058,6 +4116,8 @@
 > đó, phần diện tích bên trái của đồ thị bằng α là -z_α. Cũng như cái mốc mà
 > dựa vào đó mà phần diện tích bên phải của đồ thị bằng α là z_α.
 
+**🔗 See also:** [Kiểm định UMP bằng MLR](#node-r9it3lg) · [Kiểm định, ước lượng và MSE](#node-2p2a5ur)
+
 <br>
 
 <a id="node-2p2a5ur"></a>
@@ -4145,6 +4205,8 @@
 > Vậy thì quay lại đây cũng vậy, ta cũng sẽ thu hẹp phạm vi tìm kiếm trong
 > subset **CÁC UNBIASED TEST**. Và sẽ cho thấy là có khi cách làm này sẽ
 > dẫn đến best test.
+
+**🔗 See also:** [Kiểm định UMP theo Karlin-Rubin](#node-5yjxrsb) · [Test mức alpha và kích thước](#node-2k0efzk) · [Ưu điểm của MSE](#node-55e9imf)
 
 <br>
 
@@ -4569,6 +4631,8 @@
 >
 > **SUY RA BÀI TOÁN NÀY KHÔNG CÓ UMP LEVEL α TEST.**
 
+**🔗 See also:** [Kiểm định, ước lượng và MSE](#node-2p2a5ur) · [Không tồn tại UMP test](#node-66jeahy)
+
 <br>
 
 <a id="node-66jeahy"></a>
@@ -4691,6 +4755,8 @@
 >
 > = α/2 + α/2 = α
 
+**🔗 See also:** [Test mức alpha và kích thước](#node-2k0efzk) · [Kiểm định Hợp-Giao và Giao-Hợp](#node-ajkikjr) · [Khoảng tin cậy không chệch](#node-d8pc9jk)
+
 <br>
 
 <a id="node-ajkikjr"></a>
@@ -4795,6 +4861,8 @@
 >
 >
 > Đây chính là một test có tên là Union-Intersection Test
+
+**🔗 See also:** [Không tồn tại UMP test](#node-66jeahy) · [Quan hệ T(x) và λ(x)](#node-oaiy187)
 
 <br>
 
@@ -5029,6 +5097,8 @@
 > Kết quả này đủ kết luận test có rule reject H0 nếu T(**X**) < c chính là level α
 > test
 
+**🔗 See also:** [Kiểm định Hợp-Giao và Giao-Hợp](#node-ajkikjr) · [Quan hệ UIT-LRT hai phía](#node-27dn67w) · [Kiểm định Tỷ số Hợp lý](#node-b3cjkf1)
+
 <br>
 
 <a id="node-27dn67w"></a>
@@ -5051,6 +5121,8 @@
 >
 >
 > Xem phần note của ví dụ 8.3.28, mình đã tự tay xây dựng two-side LRT
+
+**🔗 See also:** [Quan hệ T(x) và λ(x)](#node-oaiy187) · [Lợi ích kiểm định giao liên hiệp](#node-ie7qjx1) · [Kiểm định LRT cho trung bình](#node-ouhenhy)
 
 <br>
 
@@ -5104,6 +5176,8 @@
 > Trong khi đó, nếu dùng UIT, nếu nó kết luận reject H0, thì ta có thể đi sâu
 > hơn để xem thử cái H0γ nào bị reject, từ đó RÕ RÀNG LÀ GIÚP CÓ THÊM 
 > THÔNG TIN
+
+**🔗 See also:** [Quan hệ UIT-LRT hai phía](#node-27dn67w) · [Định lý cỡ của IUT](#node-ao26tgd)
 
 <br>
 
@@ -5192,6 +5266,8 @@
 >
 > Chứng minh xong.
 
+**🔗 See also:** [Lợi ích kiểm định giao liên hiệp](#node-ie7qjx1) · [Cấp độ kiểm định UIT, IUT](#node-h45l6rn)
+
 <br>
 
 <a id="node-h45l6rn"></a>
@@ -5257,6 +5333,8 @@
 >
 > Và để qua luôn p-values. mình sẽ tạm bỏ qua Theorem này, quay lại sau
 
+**🔗 See also:** [Định lý cỡ của IUT](#node-ao26tgd)
+
 <br>
 
 <a id="node-1te0ejj"></a>
@@ -5266,6 +5344,8 @@
 > [!NOTE]
 > QUAY LẠI SAU
 
+**🔗 See also:** [Cấp độ kiểm định UIT, IUT](#node-h45l6rn)
+
 <br>
 
 <a id="node-9tj4tij"></a>
@@ -5274,6 +5354,8 @@
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Kích thước test và p-value](#node-mlq6voe)
 
 <br>
 
@@ -5311,6 +5393,8 @@
 >
 > Và phần này ta sẽ học cách report thứ hai, thông qua một TEST STATISTIC
 > ĐẶC BIỆT, là p-value.
+
+**🔗 See also:** [Định nghĩa và tính chất p-value](#node-ymx7htu)
 
 <br>
 
@@ -5410,6 +5494,8 @@
 >
 >
 > Dĩ nhiên chưa nói gì về cách tạo ra một p(**X**) valid, tiếp theo sẽ làm việc này
+
+**🔗 See also:** [Kích thước test và p-value](#node-mlq6voe) · [Định nghĩa p-value hợp lệ](#node-hqaq0hw)
 
 <br>
 
@@ -5515,6 +5601,8 @@
 >
 > Và dĩ nhiên với các giá trị khác nhau của **X** thì qua chu trình này, ta có các
 > giá trị khác nhau p(**x**), từ đó giúp hiểu cái định nghĩa của p(**X**) là sao
+
+**🔗 See also:** [Định nghĩa và tính chất p-value](#node-ymx7htu) · [P-value và phân phối Uniform](#node-aax4fpl)
 
 <br>
 
@@ -5702,6 +5790,8 @@
 >
 >
 > Do đó, theo định nghĩa của p-value, nó chính là một valid p-value
+
+**🔗 See also:** [Định nghĩa p-value hợp lệ](#node-hqaq0hw)
 
 <br>
 
@@ -6206,6 +6296,8 @@
 >
 >
 > Hay p(**X**) = 2P_(μ0, σ^2)(Tn-1 ≥ |(Xbar-μ0) / (S/√n)|)
+
+**🔗 See also:** [P-value và phân phối Uniform](#node-aax4fpl) · [Quan hệ UIT-LRT hai phía](#node-27dn67w) · [Kiểm định t hai phía](#node-qo5rly2)
 
 <br>
 
@@ -6934,6 +7026,8 @@
 >
 > nên X^2/ θ HOÀN TOÀN KHÁC X^2)
 
+**🔗 See also:** [Định nghĩa Thống kê đủ](#node-aog81op)
+
 <br>
 
 <a id="node-29b2q27"></a>
@@ -7165,6 +7259,8 @@
 >
 >
 > đây chính là **p-value Statistic**: p(S1,S2) = Σ{u ∈ range S1, u ≥ S1} f(u|T=S1+S2),
+
+**🔗 See also:** [Định lý Factorization](#node-dyi91g8)
 
 <br>
 
@@ -7504,6 +7600,8 @@
 >
 >
 > Và bước nhảy tại 0 là do chêch lệch giữa cII(1 - α) và cI α
+
+**🔗 See also:** [Kiểm định giả thuyết tối ưu](#node-i8kwc7p)
 
 <br>
 
