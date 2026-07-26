@@ -7,6 +7,8 @@
 
 ## 9.1 Introduction
 
+**🔗 See also:** [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-s53gfpp"></a>
@@ -38,6 +40,8 @@
 >
 > Rồi thế thì dĩ nhiên nếu θ mang giá trị thực thì một tập liên tục của giá trị
 > thực thì được gọi là interval, từ đó có bài toán interval estimation.
+
+**🔗 See also:** [9.1 Introduction](#node-be1qumf)
 
 <br>
 
@@ -432,6 +436,8 @@
 >
 > nên khi tính **CONFIDENCE COEFFICIENT**, có định nghĩa là inf_θ [confidence
 > coverage] thì nó cũng chính là **coverage probability** = (1/a)^n - (1/b)^n
+
+**🔗 See also:** [Chứng minh PDF thống kê thứ tự](#node-1zc19ro) · [Khái niệm xác suất bao phủ](#node-dgml8lx)
 
 <br>
 
