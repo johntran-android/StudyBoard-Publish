@@ -414,7 +414,7 @@
 > Nên mới nói "**equate evidence if sufficient statistic match**, tức là nếu T(x)
 > = T(y) thì coi như evidence như nhau"
 
-**🔗 See also:** [Nguyên lý đủ](#node-t9iuvx6)
+**🔗 See also:** [Nguyên lý đủ](./62_the_sufficient_principle.md#node-t9iuvx6)
 
 <br>
 
@@ -934,7 +934,7 @@
 > Còn để chứng minh chiều ngược lại
 > (converse) QUAY LẠI SAU
 
-**🔗 See also:** [Định lý Factorization](#node-dyi91g8)
+**🔗 See also:** [Định lý Factorization](./62_the_sufficient_principle.md#node-dyi91g8)
 
 <br>
 
@@ -1076,7 +1076,7 @@
 > Nên nếu cái giả định này sai thì coi chừng ta đang xài cái INSUFFICIENT
 > STATISTIC, dĩ nhiên khi đó ta đã vi phạm Formal Sufficient Principle
 
-**🔗 See also:** [Mean, Variance và Giả định Normal](#node-vofbsvc)
+**🔗 See also:** [Mean, Variance và Giả định Normal](./62_the_sufficient_principle.md#node-vofbsvc)
 
 <br>
 
