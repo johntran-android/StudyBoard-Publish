@@ -1754,7 +1754,7 @@ independent
 >
 > ...
 
-**🔗 See also:** [Chứng minh S^2 Chi-square](#node-nh8m52t)
+**🔗 See also:** [Chứng minh S^2 Chi-square](./53_sampling_from_the_normal_distribution.md#node-nh8m52t)
 
 <br>
 
