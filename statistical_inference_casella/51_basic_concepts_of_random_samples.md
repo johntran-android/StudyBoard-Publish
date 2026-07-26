@@ -9,8 +9,6 @@ random Samples
 ## 5.1 Basic Concepts Of
 random Samples
 
-**🔗 See also:** [Định nghĩa Lấy mẫu Ngẫu nhiên](#node-nk73jfo) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-nk73jfo"></a>
@@ -61,9 +59,6 @@ random Samples
 >
 > Trong chương 4 mình đã biết về khái niệm mutually independent. Nó mạnh
 > hơn là pair-wise independent, và nó imply pair-wise independent.
-
-**🔗 See also:** [5.1 Basic Concepts Of
-random Samples](#node-qlce1dx) · [Mô hình Lấy mẫu Ngẫu nhiên](#node-ntgqj4v)
 
 <br>
 
@@ -129,8 +124,6 @@ random Samples](#node-qlce1dx) · [Mô hình Lấy mẫu Ngẫu nhiên](#node-nt
 > một function, mapping một possible outcome tới trục số thực. Như đã nói,
 > quá trình chọn một người ngẫu nhiên chính là cho ra một possible outcome
 > s, và đo chiều cao của họ chính là function X1(s)
-
-**🔗 See also:** [Định nghĩa Lấy mẫu Ngẫu nhiên](#node-nk73jfo) · [Phân phối kết hợp mẫu ngẫu nhiên](#node-f1p1owb)
 
 <br>
 
@@ -259,8 +252,6 @@ random Samples](#node-qlce1dx) · [Mô hình Lấy mẫu Ngẫu nhiên](#node-nt
 > θ, thì ta có thể học được CÁCH HÀNH XỬ CỦA RANDOM SAMPLE VỚI
 > CÁC POPULATION KHÁC NHAU**
 
-**🔗 See also:** [Mô hình Lấy mẫu Ngẫu nhiên](#node-ntgqj4v) · [Mẫu ngẫu nhiên phân phối mũ](#node-z96bqg4)
-
 <br>
 
 <a id="node-z96bqg4"></a>
@@ -330,8 +321,6 @@ random Samples](#node-qlce1dx) · [Mô hình Lấy mẫu Ngẫu nhiên](#node-nt
 >
 >
 > = **(1/β)^n e^-Σxi/β**
-
-**🔗 See also:** [Phân phối kết hợp mẫu ngẫu nhiên](#node-f1p1owb) · [Tính xác suất bằng Joint PDF](#node-7lrwn0l)
 
 <br>
 
@@ -444,8 +433,6 @@ random Samples](#node-qlce1dx) · [Mô hình Lấy mẫu Ngẫu nhiên](#node-nt
 >
 > Mà với exponential distribution β có vai trò là mean.
 
-**🔗 See also:** [Mẫu ngẫu nhiên phân phối mũ](#node-z96bqg4) · [Xác suất mẫu độc lập đồng nhất](#node-bwqbjvi)
-
 <br>
 
 <a id="node-bwqbjvi"></a>
@@ -486,8 +473,6 @@ random Samples](#node-qlce1dx) · [Mô hình Lấy mẫu Ngẫu nhiên](#node-nt
 >
 >
 > Và P(X2 > 2) cũng vậy do chúng đều là Expo (β)
-
-**🔗 See also:** [Tính xác suất bằng Joint PDF](#node-7lrwn0l) · [Giả định độc lập biến ngẫu nhiên](#node-8xmgcot)
 
 <br>
 
@@ -540,8 +525,6 @@ random Samples](#node-qlce1dx) · [Mô hình Lấy mẫu Ngẫu nhiên](#node-nt
 >
 > Bỏ x1 ra khỏi (tạm gọi là) danh sách các possible value thì CHẢ ẢNH
 > HƯỞNG GÌ ĐẾN VIỆC X2 = x2
-
-**🔗 See also:** [Xác suất mẫu độc lập đồng nhất](#node-bwqbjvi) · [Lấy mẫu có hoàn lại](#node-kh9sv0g)
 
 <br>
 
@@ -606,8 +589,6 @@ random Samples](#node-qlce1dx) · [Mô hình Lấy mẫu Ngẫu nhiên](#node-nt
 >
 > Nói thêm cái này sẽ dùng trong BOOTSTRAP**
 
-**🔗 See also:** [Giả định độc lập biến ngẫu nhiên](#node-8xmgcot) · [Phụ thuộc trong lấy mẫu không hoàn lại](#node-qynsxfk)
-
 <br>
 
 <a id="node-qynsxfk"></a>
@@ -652,8 +633,6 @@ random Samples](#node-qlce1dx) · [Mô hình Lấy mẫu Ngẫu nhiên](#node-nt
 > ta thấy nó bằng 1/(N-1) ĐIỀU NÀY CHO THẤY GIÁ TRỊ CỤ THỂ CỦA X1
 > ĐÃ ẢNH HƯỞNG ĐẾN XÁC SUẤT CỦA X2. DO ĐÓ X1, X2 **KHÔNG ĐỘC
 > LẬP**
-
-**🔗 See also:** [Lấy mẫu có hoàn lại](#node-kh9sv0g) · [Đồng phân bố nhưng không độc lập](#node-42h00kb)
 
 <br>
 
@@ -742,8 +721,6 @@ random Samples](#node-qlce1dx) · [Mô hình Lấy mẫu Ngẫu nhiên](#node-nt
 >
 > Tất nhiên lập luận cho các rv khác cũng tương tự**
 
-**🔗 See also:** [Phụ thuộc trong lấy mẫu không hoàn lại](#node-qynsxfk) · [Độc lập gần đúng khi N lớn](#node-723pgub)
-
 <br>
 
 <a id="node-723pgub"></a>
@@ -781,8 +758,6 @@ random Samples](#node-qlce1dx) · [Mô hình Lấy mẫu Ngẫu nhiên](#node-nt
 >
 > Thì nếu N rất lớn → 1/(N-1) ≈ 0 dẫn đến coi như conditinal distribution ≈ 
 > marginal distribution
-
-**🔗 See also:** [Đồng phân bố nhưng không độc lập](#node-42h00kb) · [Xác suất lấy mẫu không hoàn lại](#node-klq6i7n)
 
 <br>
 
@@ -881,8 +856,6 @@ random Samples](#node-qlce1dx) · [Mô hình Lấy mẫu Ngẫu nhiên](#node-nt
 >
 >
 > ⇨ Σ{s ∈ Ω: X(s) > 200} P({s}) = 800 * (1/1000)
-
-**🔗 See also:** [Độc lập gần đúng khi N lớn](#node-723pgub) · [Phân phối siêu hình học](#node-un8v5j7)
 
 <br>
 
@@ -1031,8 +1004,6 @@ random Samples](#node-qlce1dx) · [Mô hình Lấy mẫu Ngẫu nhiên](#node-nt
 >
 >
 > Kết qủa này cho thấy nó khá gần con số (800/1000)^10**
-
-**🔗 See also:** [Xác suất lấy mẫu không hoàn lại](#node-klq6i7n)
 
 <br>
 
