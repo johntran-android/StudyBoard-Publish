@@ -9,8 +9,6 @@ interval Estimators
 ## 9.2 Methods Of Finding
 interval Estimators
 
-**🔗 See also:** [Phương pháp ước lượng khoảng](#node-a31idqf) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-a31idqf"></a>
@@ -24,9 +22,6 @@ interval Estimators
 > giáo sư nói rằng tuy trông có vẻ là 4 phương pháp khác nhau nhưng thực ra
 > cách triển khai đều giống: dựa trên chiến lược ĐẢO NGƯỢC MỘT TEST
 > STATISTIC. Chỉ có cái cuối, Bayesian intervals thì hơi khác
-
-**🔗 See also:** [9.2 Methods Of Finding
-interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qofmyhz)
 
 <br>
 
@@ -187,7 +182,7 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > Vậy ta đã có một **1 - α confidence interval** (hay 1 - α interval estimator) được xây
 > dựng đơn giản chỉ bằng cách đảo ngược một hypothesis test
 
-**🔗 See also:** [Phương pháp ước lượng khoảng](#node-a31idqf) · [Mối liên hệ Kiểm định - Khoảng tin cậy](#node-lyfpryv) · [Đặc điểm kiểm định giả thuyết](#node-21ae20z)
+**🔗 See also:** [Đặc điểm kiểm định giả thuyết](#node-21ae20z)
 
 <br>
 
@@ -279,8 +274,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > cái rule này sẽ **giúp xác lập** C(**x***) (hay C(xbar*) cũng được)sẽ là
 > **khoảng phù hợp mà ta cho rằng nhất định μ phải nằm trong đó**
 
-**🔗 See also:** [Đảo ngược test statistic](#node-qofmyhz) · [Khoảng tin cậy và Kiểm định](#node-zp0egnh)
-
 <br>
 
 <a id="node-zp0egnh"></a>
@@ -306,8 +299,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > 2) Còn **MUỐN KẾT LUẬN μ = μ0**, thì **PHẢI QUAN SÁT THẤY Xbar NẰM TRONG
 > ĐOẠN NÀY A(μ0)**
 
-**🔗 See also:** [Mối liên hệ Kiểm định - Khoảng tin cậy](#node-lyfpryv) · [Mối quan hệ C(x) và A(θ)](#node-cebe6p1)
-
 <br>
 
 <a id="node-cebe6p1"></a>
@@ -324,8 +315,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > Màu đỏ: lấy θ0. gom hết các ông **x** ∈ **X** mà C(**x**) chứa θ0, đặt là
 > A(θ0)
-
-**🔗 See also:** [Khoảng tin cậy và Kiểm định](#node-zp0egnh) · [Liên hệ Kiểm định - Tin cậy](#node-v7ov102)
 
 <br>
 
@@ -370,8 +359,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > sau: gom các **x** mà C(x) chứa θ0, thành tập kí hiệu là A(θ0), thì cái tập này
 > chính là acceptance region của cái test đang cần, dĩ nhiên đồng nghĩa đã
 > định ra cái test đó.
-
-**🔗 See also:** [Mối quan hệ C(x) và A(θ)](#node-cebe6p1) · [Mối quan hệ Test Tập tin cậy](#node-4x9sjxz)
 
 <br>
 
@@ -567,8 +554,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > Và đây chính là nói rằng test có rejection region A(θ0)c (cũng là acceptance region A(θ0)
 > là một level α test. Chứng minh xong.
 
-**🔗 See also:** [Liên hệ Kiểm định - Tin cậy](#node-v7ov102) · [Đảo ngược test ra khoảng tin cậy](#node-56k0gw3)
-
 <br>
 
 <a id="node-56k0gw3"></a>
@@ -591,8 +576,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > level α test) thì thường là dễ, nên cách vụ **invert test ra interval estimator này
 > rất có lợi**. Mà xây dựng test thì ta đã biết các cách để làm như hồi chap
 > trước rồi.
-
-**🔗 See also:** [Mối quan hệ Test Tập tin cậy](#node-4x9sjxz) · [H1 và Dạng Tập Tin Cậy](#node-y9cjzgq)
 
 <br>
 
@@ -641,7 +624,7 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > đã  biết để tạo ra một reasonable test trước, rồi invert để có reasonable
 > confidence set
 
-**🔗 See also:** [Đảo ngược test ra khoảng tin cậy](#node-56k0gw3) · [Khoảng tin cậy đảo ngược LRT](#node-jw4zng6) · [UMA từ kiểm định UMP](#node-6ofz752)
+**🔗 See also:** [UMA từ kiểm định UMP](#node-6ofz752)
 
 <br>
 
@@ -897,7 +880,7 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > C(**X**) = {λ: (ΣXi/λ)^n e^(-ΣXi/λ) > k*} chính là một 1-α confidence set.
 
-**🔗 See also:** [H1 và Dạng Tập Tin Cậy](#node-y9cjzgq) · [Miền chấp nhận, khoảng tin cậy](#node-ejlee85) · [Khoảng tin cậy tối ưu](#node-uj1aylo)
+**🔗 See also:** [Khoảng tin cậy tối ưu](#node-uj1aylo)
 
 <br>
 
@@ -924,8 +907,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > Còn hình thứ hai, ta vẽ cái đồ thị của λ vs (Σxi/λ)^n exp(-Σxi/λ). Thì vì C(**x**)
 > là tập chứa λ thỏa cái rule này, nên đoạn λ mà ở đó đồ thị cao hơn k* quả
 > thật chính là C(**x**) (khác với case trên)
-
-**🔗 See also:** [Khoảng tin cậy đảo ngược LRT](#node-jw4zng6) · [Xây dựng khoảng tin cậy](#node-9p7bal4)
 
 <br>
 
@@ -1100,7 +1081,7 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > Chọn α = 0.1, có cách để giải ra a, b như vậy từ đó ta có một [L(**X**),
 > U(**X**)] là một  1-α confidence set (cái này gs không nói)
 
-**🔗 See also:** [Miền chấp nhận, khoảng tin cậy](#node-ejlee85) · [LRT và Tập tin cậy](#node-dscz8lz) · [Tổng biến ngẫu nhiên Gamma](#node-08ciur5)
+**🔗 See also:** [Tổng biến ngẫu nhiên Gamma](#node-08ciur5)
 
 <br>
 
@@ -1161,8 +1142,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > dùng dummies variable θ, C(**x**) = {θ ∈ Θ: A(θ) chứa **x**} thì C(**X**) = {θ:
 > L(θ|**X**) ≥ k'(θ,**x**)} chính là 1-α confidence set.
 
-**🔗 See also:** [Xây dựng khoảng tin cậy](#node-9p7bal4) · [Đảo ngược kiểm định](#node-r96nyc1)
-
 <br>
 
 <a id="node-r96nyc1"></a>
@@ -1181,8 +1160,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > Và hơn nữa, theo lí thuyết thì invert cái test nào cũng sẽ ra một confidence
 > set, mà ví dụ vừa rồi ta invert một LRT.
-
-**🔗 See also:** [LRT và Tập tin cậy](#node-dscz8lz) · [Giới hạn tin cậy trên](#node-lw30f8x)
 
 <br>
 
@@ -1288,8 +1265,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > VÀ ĐÂY CHO THẤY C(**X**) CÓ DẠNG (-inf, U(**X**)], đúng là dạng của một
 > confidence upper bound
 
-**🔗 See also:** [Đảo ngược kiểm định](#node-r96nyc1) · [Thiết lập khoảng tin cậy một phía](#node-uohg28e)
-
 <br>
 
 <a id="node-uohg28e"></a>
@@ -1354,8 +1329,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > Và quan trọng là ta thấy nó có dạng (-inf, U(**X**)] với U(**X**) = (Xbar + (tn-1,α)(S/√n)
 
-**🔗 See also:** [Giới hạn tin cậy trên](#node-lw30f8x) · [Chặn dưới p nhị thức](#node-xgaovbl)
-
 <br>
 
 <a id="node-xgaovbl"></a>
@@ -1399,8 +1372,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > Thế thì, gs nói, ta sẽ xây dựng cái C(**X**) nói trên bằng cách invert cái test
 > của bài toán one-side test: H0: p = p0 vs H1: p > p0.
-
-**🔗 See also:** [Thiết lập khoảng tin cậy một phía](#node-uohg28e) · [Thống kê đủ và kiểm định UMP](#node-lbufvmo)
 
 <br>
 
@@ -1561,7 +1532,7 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > test of its size (t0 ở đây có thể hiểu là k(p0), nó là cái threshold nào đó giúp
 > test T có size mong muốn thôi)
 
-**🔗 See also:** [Chặn dưới p nhị thức](#node-xgaovbl) · [Ngưỡng k(p0) kiểm định mức alpha](#node-50n8cdi) · [Kiểm định UMP bằng MLR](#node-r9it3lg)
+**🔗 See also:** [Kiểm định UMP bằng MLR](#node-r9it3lg)
 
 <br>
 
@@ -1672,8 +1643,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 >
 > Đây chính là 9.2.8
-
-**🔗 See also:** [Thống kê đủ và kiểm định UMP](#node-lbufvmo) · [Khoảng Tin Cậy qua Đảo Kiểm Định](#node-svku8eg)
 
 <br>
 
@@ -2009,8 +1978,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > (sup_p0 {Σi=0:T-1 (n choose y) p0^y(1-p0)^n-y ≥ 1-α}, 1]
 
-**🔗 See also:** [Ngưỡng k(p0) kiểm định mức alpha](#node-50n8cdi) · [Khái niệm xác suất bao phủ](#node-dgml8lx)
-
 <br>
 
 <a id="node-dgml8lx"></a>
@@ -2086,8 +2053,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > nhánh đi xây dựng một confidence set dùng pivotal quantity được gọi là
 > **PIVOTAL INFERENCE**
 
-**🔗 See also:** [Khoảng Tin Cậy qua Đảo Kiểm Định](#node-svku8eg) · [Định nghĩa đại lượng then chốt](#node-hi75sor)
-
 <br>
 
 <a id="node-hi75sor"></a>
@@ -2160,8 +2125,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > Do đó C(**X**) sẽ là một **interval mà có probability coverage không phụ
 > thuộc θ nữa**
-
-**🔗 See also:** [Khái niệm xác suất bao phủ](#node-dgml8lx) · [Đại lượng then chốt và họ phân phối](#node-4msae59)
 
 <br>
 
@@ -2238,8 +2201,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > interval chỉ dựa trên pivotal quantities nhưng nói chung là ta có thể nhớ là
 > với location family thì dùng difference, với scale family thì dùng ratios
 
-**🔗 See also:** [Định nghĩa đại lượng then chốt](#node-hi75sor) · [Đại lượng chốt phân phối mũ](#node-47nzsh2)
-
 <br>
 
 <a id="node-47nzsh2"></a>
@@ -2266,8 +2227,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 >
 > Riêng 2T/λ thì nó cũng chính là chi-square 2n bậc tự do: X^2_2n
-
-**🔗 See also:** [Đại lượng then chốt và họ phân phối](#node-4msae59) · [Pivot từ công thức PDF](#node-ff32hql)
 
 <br>
 
@@ -2401,8 +2360,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > = g(q). như vậy fQ(q) = g(q) **hoàn toàn không phụ thuộc θ** nữa.
 
-**🔗 See also:** [Đại lượng chốt phân phối mũ](#node-47nzsh2) · [Xây dựng tập tin cậy](#node-33zn53r)
-
 <br>
 
 <a id="node-33zn53r"></a>
@@ -2514,8 +2471,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > Để rồi nếu monotone increasing, thì ta có random interval có dạng [L(**X**,a)
 > ≤ θ < U(**X**,b)] và ngược lại, ta sẽ có dạng [L(**X**,b) ≤ θ < L(**X**,a)]
 
-**🔗 See also:** [Pivot từ công thức PDF](#node-ff32hql) · [Khoảng tin cậy λ phân phối mũ](#node-hmy0ory)
-
 <br>
 
 <a id="node-hmy0ory"></a>
@@ -2574,8 +2529,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > và ở đây Q(λ, t) với t fixed = 2t/λ  là monotone decreasing theo λ ⇨ C(**X**)
 > có dạng [L(**X**, b) = 2T(**X**)/b, U(**X**, a) = 2T(**X**)/a]
-
-**🔗 See also:** [Xây dựng tập tin cậy](#node-33zn53r) · [Khoảng tin cậy từ đại lượng pivot](#node-g9mg0da)
 
 <br>
 
@@ -2728,7 +2681,7 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > ⇨ confidence interval: {μ: xbar - tn-1_α/2 s/√n ≤ μ ≤ xbar + tn-1_α/2 s/√n}
 
-**🔗 See also:** [Khoảng tin cậy λ phân phối mũ](#node-hmy0ory) · [Khoảng tin cậy cho phương sai](#node-ek0kk9r) · [Tính chất Trung bình & Phương sai mẫu](#node-aytwme7)
+**🔗 See also:** [Tính chất Trung bình & Phương sai mẫu](#node-aytwme7)
 
 <br>
 
@@ -2871,8 +2824,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > cùng lúc (thay vì làm riêng từng cái như trên) dựa trên cái gọi là Bonferonni 
 > Inequality
 
-**🔗 See also:** [Khoảng tin cậy từ đại lượng pivot](#node-g9mg0da) · [Pivot CDF và Confidence Set](#node-viuegt2)
-
 <br>
 
 <a id="node-viuegt2"></a>
@@ -2942,8 +2893,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > dùng cách invert một LRT, tuy chưa chắc cho ra một confidence set tối ưu
 > nhưng chắc chắn là ko tệ. Tuy nhiên đôi khi cách này khó, thì ta có thể có
 > một cách tiếp cận khác.
-
-**🔗 See also:** [Khoảng tin cậy cho phương sai](#node-ek0kk9r) · [Phương pháp Sterne](#node-imd32vw)
 
 <br>
 
@@ -3021,8 +2970,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > Và phần này, ta sẽ học một cách tiếp cận đảm bảo có được một monotone
 > pivot.
-
-**🔗 See also:** [Pivot CDF và Confidence Set](#node-viuegt2) · [Biến đổi tích phân xác suất](#node-d806mzg)
 
 <br>
 
@@ -3167,7 +3114,7 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > Vậy FX(x) = F(x) → chứng minh xong.
 
-**🔗 See also:** [Phương pháp Sterne](#node-imd32vw) · [Vùng chấp nhận và khoảng tin cậy](#node-s0xbsjo) · [Biến đổi tích phân xác suất](#node-ezy1q8o)
+**🔗 See also:** [Biến đổi tích phân xác suất](#node-ezy1q8o)
 
 <br>
 
@@ -3258,8 +3205,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > chính là một 1-α confidence set
 
-**🔗 See also:** [Biến đổi tích phân xác suất](#node-d806mzg) · [Khoảng tin cậy xoay CDF](#node-9rq2i5l)
-
 <br>
 
 <a id="node-9rq2i5l"></a>
@@ -3308,8 +3253,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > Còn nếu như FT nghịch biến theo θ thì α1 < α2 thì phải gán θL cho solution của
 > α2 = FT(t|θ) và θU cho solution của α1 = FT(t|θ).
-
-**🔗 See also:** [Vùng chấp nhận và khoảng tin cậy](#node-s0xbsjo) · [Phương pháp Khoảng Tin Cậy Pivot](#node-mg4nskf)
 
 <br>
 
@@ -3510,8 +3453,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > Hay với α1, α2 đã biết gọi chung là θL(t), θU(t) thì [θL(t), θU(t)] chính là 1-α
 > confidence interval
-
-**🔗 See also:** [Khoảng tin cậy xoay CDF](#node-9rq2i5l) · [Khoảng tin cậy mũ vị trí](#node-zex540f)
 
 <br>
 
@@ -3783,8 +3724,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > = {μ:  Y + (1/n) log (α/2) ≤ μ ≤ Y + (1/n) log(1 - α/2)}
 
-**🔗 See also:** [Phương pháp Khoảng Tin Cậy Pivot](#node-mg4nskf) · [Khoảng tin cậy số](#node-4qv2i8o)
-
 <br>
 
 <a id="node-4qv2i8o"></a>
@@ -3809,8 +3748,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > hóa, ví dụ giải Ax = b mà theo lối analytically thì ta sẽ tính Ainv, nhân với b.
 > Nhưng nếu giải theo thuật toán iteratively thì ta sẽ tạo chuỗi {xi} tiến dần về x
 > = Ainv b, đó chính là numerically,
-
-**🔗 See also:** [Khoảng tin cậy mũ vị trí](#node-zex540f) · [Lật CDF thống kê rời rạc](#node-96jhc8n)
 
 <br>
 
@@ -4124,8 +4061,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > Vậy P(Y ≤ y) ≤ y. Chứng minh xong
 
-**🔗 See also:** [Khoảng tin cậy số](#node-4qv2i8o) · [Khoảng tin cậy Poisson](#node-z5eytsr)
-
 <br>
 
 <a id="node-z5eytsr"></a>
@@ -4330,7 +4265,7 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > Đây chính là hai phương trình 9.2.16 trong sách.
 
-**🔗 See also:** [Lật CDF thống kê rời rạc](#node-96jhc8n) · [Khoảng tin cậy Poisson Chi-square](#node-s6r23qr) · [Vùng HPD Poisson](#node-yh9h8wy)
+**🔗 See also:** [Vùng HPD Poisson](#node-yh9h8wy)
 
 <br>
 
@@ -4452,7 +4387,7 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > decreasing đối với λ. Do đó λ mà ta có được ở phương trình đầu chính là chặn
 > trên λU(y0) và cái kia là λL(y0)
 
-**🔗 See also:** [Khoảng tin cậy Poisson](#node-z5eytsr) · [Ví dụ của giáo sư](#node-p5oozlt) · [Tích phân từng phần CDF Gamma](#node-ip8ufue)
+**🔗 See also:** [Tích phân từng phần CDF Gamma](#node-ip8ufue)
 
 <br>
 
@@ -4465,8 +4400,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > [!NOTE]
 > Còn khúc nhỏ này, đại khái
 > là gs cho ví dụ thôi
-
-**🔗 See also:** [Khoảng tin cậy Poisson Chi-square](#node-s6r23qr) · [Diễn giải khoảng tin cậy](#node-n5w17cn)
 
 <br>
 
@@ -4526,8 +4459,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > random sample Y từ phân phối của nó, thì sẽ có 90% lần được giá trị
 > y khiến tạo ra khoảng [X^2_2y,.95, X^2_2(y+1)] chứa λ.
 
-**🔗 See also:** [Ví dụ của giáo sư](#node-p5oozlt) · [Lý thuyết và Ước lượng Bayesian](#node-1agxnpl)
-
 <br>
 
 <a id="node-1agxnpl"></a>
@@ -4583,8 +4514,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 >
 > P(θ ∈ A|**x**) = ∫_A π(θ|**x**)dθ
-
-**🔗 See also:** [Diễn giải khoảng tin cậy](#node-n5w17cn) · [Khoảng tin cậy Poisson Gamma](#node-ahces3c)
 
 <br>
 
@@ -4873,7 +4802,7 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > Chính là 9.2.20
 
-**🔗 See also:** [Lý thuyết và Ước lượng Bayesian](#node-1agxnpl) · [Khác biệt Credible Confidence](#node-fo5vh2r) · [Xác suất Credible & Tin cậy](#node-m77g4jo) · [Vùng HPD Poisson](#node-yh9h8wy)
+**🔗 See also:** [Xác suất Credible & Tin cậy](#node-m77g4jo) · [Vùng HPD Poisson](#node-yh9h8wy)
 
 <br>
 
@@ -4900,8 +4829,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > value của Σx khác nhau, thì ta sẽ thấy credible set NGẮN HƠN
 > cũng như ĐIỂM CUỐI CỦA NÓ GẦN 0 HƠN, điều này được cho
 > là phản ánh cái prior distribution của λ
-
-**🔗 See also:** [Khoảng tin cậy Poisson Gamma](#node-ahces3c) · [Xác suất đáng tin cậy và độ phủ](#node-kdyn56v)
 
 <br>
 
@@ -4988,8 +4915,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > Đoạn cuối gs Casella nói về quan điểm của ông về hai trường phái thống
 > kê: ko có cái nào ưu việt hơn cái nào. Mà tùy hoàn cảnh mà vận dụng.
-
-**🔗 See also:** [Khác biệt Credible Confidence](#node-fo5vh2r) · [Xác suất Credible & Tin cậy](#node-m77g4jo)
 
 <br>
 
@@ -5095,7 +5020,7 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > mà thận chí nó còn có thể **TRỞ THÀNH 0 LUÔN**. Và điều này ko có gì
 > mâu thuẫn cả, vì đã nói, vì ta dùng sai cách mà.
 
-**🔗 See also:** [Xác suất đáng tin cậy và độ phủ](#node-kdyn56v) · [Xác suất đáng tin cậy khoảng](#node-h01qtjd) · [Khoảng tin cậy Poisson Gamma](#node-ahces3c)
+**🔗 See also:** [Khoảng tin cậy Poisson Gamma](#node-ahces3c)
 
 <br>
 
@@ -5104,8 +5029,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 - **Xác suất đáng tin cậy khoảng**
 
 <p align="center"><kbd><img src="assets/af9uxeqdhj.png" width="80%"></kbd></p>
-
-**🔗 See also:** [Xác suất Credible & Tin cậy](#node-m77g4jo) · [Sai mục đích Credible Set](#node-695tsck)
 
 <br>
 
@@ -5128,8 +5051,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > coi λ  là random variable có posterior distribution**, trong khi đó **lúc "xài"
 > lại đem tính coverage probability, tức là lại coi yếu tố random đến từ hai
 > cái chặn**, và coi λ  là fixed, vậy là sai rồi
-
-**🔗 See also:** [Xác suất đáng tin cậy khoảng](#node-h01qtjd) · [Phân phối hậu nghiệm Bayes Normal](#node-s6b012i)
 
 <br>
 
@@ -5224,7 +5145,7 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 > [θ - δB(xbar)] / √Var(θ|xbar) ~ normal(0,1)
 
-**🔗 See also:** [Sai mục đích Credible Set](#node-695tsck) · [Khoảng tin cậy 1-α](#node-p26ry6u) · [Ước lượng Bayes phân phối chuẩn](#node-5ldrh78)
+**🔗 See also:** [Ước lượng Bayes phân phối chuẩn](#node-5ldrh78)
 
 <br>
 
@@ -5362,8 +5283,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 >
 > Vậy 1-α credible interval A cần tìm chính là [δB(xbar) - z_α/2√Var(θ|xbar), δB(xbar) + z_α/2 √Var(θ|xbar)]
-
-**🔗 See also:** [Phân phối hậu nghiệm Bayes Normal](#node-s6b012i) · [Độ phủ khoảng đáng tin](#node-7bzqqs2)
 
 <br>
 
@@ -5657,8 +5576,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 > ĐÊM DÙNNG NHƯ CONFIDENCE INTERVAL HOẶC NGƯỢC LẠI ĐỀU TRỚT
 > QUỚT.
 
-**🔗 See also:** [Khoảng tin cậy 1-α](#node-p26ry6u) · [Khoảng Tin Cậy và Đáng Tin Cậy](#node-nyh5c4k)
-
 <br>
 
 <a id="node-nyh5c4k"></a>
@@ -5753,8 +5670,6 @@ interval Estimators](#node-7s1kn1j) · [Đảo ngược test statistic](#node-qo
 >
 >
 > Biến đổi chút nữa thì sẽ ra như sách thôi
-
-**🔗 See also:** [Độ phủ khoảng đáng tin](#node-7bzqqs2)
 
 <br>
 
