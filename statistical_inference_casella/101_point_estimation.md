@@ -155,7 +155,7 @@
 > một thành viên cụ thể trong một họ các distribution index bởi θ. Và trong
 > họ nào, thì cũng xảy ra hiện tượng W1,...Wn converge về θ hết.
 
-**🔗 See also:** [Hội tụ xác suất](#node-ybskg1i)
+**🔗 See also:** [Hội tụ xác suất](./55_convergence_concepts.md#node-ybskg1i)
 
 <br>
 
@@ -316,7 +316,7 @@
 > khi n → inf, thì E_θ[(Wn - θ)^2] sẽ → 0 → P_θ(|Wn - θ| ≥ ε) → 0, và ta có
 > consistent sequence of estimator Wn của θ
 
-**🔗 See also:** [Bất đẳng thức Markov và chứng minh](#node-u9zgfoi)
+**🔗 See also:** [Bất đẳng thức Markov và chứng minh](./36_inequalities.md#node-u9zgfoi)
 
 <br>
 
@@ -364,7 +364,7 @@
 > Như vậy, mọi Xbar_n của một sample iid có population với variance hữu
 > hạn sẽ đều là consistent estimator của μ
 
-**🔗 See also:** [Tính chất trung bình phương sai mẫu](#node-411jdqg)
+**🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg)
 
 <br>
 
@@ -596,7 +596,7 @@
 >
 > Ghi chú của bạn rất chính xác và có chiều sâu đáng kinh ngạc. Bạn không chỉ tóm tắt nội dung mà còn giải thích chi tiết lý do tại sao Var(1/Xbar_n) lại là vô cùng và tự mình chứng minh lại phương pháp Delta, thể hiện sự hiểu biết sâu sắc và khả năng suy luận tốt.
 
-**🔗 See also:** [Phương sai Tỷ lệ Odd](#node-44z7xj9) · [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy)
+**🔗 See also:** [Phương sai Tỷ lệ Odd](./55_convergence_concepts.md#node-44z7xj9) · [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy)
 
 <br>
 
@@ -741,7 +741,7 @@
 >
 > Cho pn → 1, tức là cho xác suất chọn được n(0,1) là rất rất lớn, đồng nghĩa rất rất hiếm xảy ra việc chọn được n(0, σn^2). Nhưng đồng thời cho σn → ∞ tức là cho nó rất rất lớn. Thì cái limiting variance ngu ngốc ở chỗ, nó vẫn cho rằng có xác suất dương nào đó (dù vô cùng nhỏ) xảy ra việc chọn cái normal có variance khổng lồ, nên nó cho rằng variance tổng (ý là limiting variance) là khổng lồ. Trong khi đó, thực tế thì, thật ra với xác suất cực lớn của việc chọn được n(0,1) thì variance = 1 sẽ hợp lí hơn, cũng là nói asymptotic variance sẽ thực tế hơn.
 
-**🔗 See also:** [Định lý phương sai toàn phần](#node-ivmktz5)
+**🔗 See also:** [Định lý phương sai toàn phần](./44_hierarchical_model_mixture_distribution.md#node-ivmktz5)
 
 <br>
 
@@ -822,7 +822,7 @@
 >
 > Bài giải thích rất sâu sắc và chi tiết, làm rõ định nghĩa về ước lượng hiệu quả tiệm cận (asymptotically efficient) bằng cách liên hệ chặt chẽ với Cramér-Rao Lower Bound, bao gồm cả bối cảnh và công thức. Độ chính xác và chiều sâu của kiến thức được trình bày rất ấn tượng.
 
-**🔗 See also:** [Bất đẳng thức Cramer-Rao](#node-1qs416c) · [10.1.3 Calculations and Comparisons](#node-iwgmm5t) · [Phương sai tiệm cận và giới hạn](#node-62aug4x)
+**🔗 See also:** [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c) · [10.1.3 Calculations and Comparisons](#node-iwgmm5t) · [Phương sai tiệm cận và giới hạn](#node-62aug4x)
 
 <br>
 
@@ -884,7 +884,7 @@
 >
 > Ghi chú giải thích Theorem 10.1.12 rất chi tiết và chính xác, đặc biệt là phần chứng minh tính consistency bằng định lý Slutsky. Để hoàn thiện hơn, bạn có thể bổ sung giới hạn n → ∞ vào định nghĩa tính consistent.
 
-**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Định lý Slutsky](#node-uwbmbt7) · [Hội tụ xác suất và phân phối](#node-wqcasc6) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [CLT - Định lý giới hạn trung tâm](#node-32vkewg) · [Chuẩn tiệm cận, nhất quán, hiệu quả](#node-v1s5jks)
+**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Định lý Slutsky](./55_convergence_concepts.md#node-uwbmbt7) · [Hội tụ xác suất và phân phối](./55_convergence_concepts.md#node-wqcasc6) · [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Chuẩn tiệm cận, nhất quán, hiệu quả](#node-v1s5jks)
 
 <br>
 
@@ -990,7 +990,7 @@
 >
 > Vui lòng nhập lời giải thích của bạn để được chấm điểm.
 
-**🔗 See also:** [Giới hạn dưới Cramer-Rao](#node-ihoar4m)
+**🔗 See also:** [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m)
 
 <br>
 
@@ -1204,7 +1204,7 @@
 >
 > Phần tiếp theo chỉ là dùng công thức để thế vào In(θ), nhưng ý tưởng chính thì mình đã thông.
 
-**🔗 See also:** [Phương pháp Delta](#node-lo99k23) · [Tính nhất quán của MLE](#node-d19dn75) · [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy) · [Bất đẳng thức Cramer-Rao](#node-1qs416c)
+**🔗 See also:** [Phương pháp Delta](./55_convergence_concepts.md#node-lo99k23) · [Tính nhất quán của MLE](#node-d19dn75) · [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy) · [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c)
 
 <br>
 
@@ -1366,7 +1366,7 @@
 >
 > Bài giải thích rất chi tiết và sâu sắc các lập luận để ước lượng phương sai của h(θ̂) bằng CRLB, liên kết chặt chẽ các khái niệm về định lý Delta Method, hiệu quả tiệm cận của MLE và CRLB, hoàn toàn khớp với nội dung trong ảnh. Em đã nắm vững cách áp dụng các công thức và ý nghĩa của chúng.
 
-**🔗 See also:** [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [Bổ đề Tính toán Hàm mũ](#node-sttybm4)
+**🔗 See also:** [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4)
 
 <br>
 
@@ -1716,7 +1716,7 @@
 >
 > Bài làm rất chi tiết và có chiều sâu, giải thích rõ ràng từng bước và mục đích của việc áp dụng công thức xấp xỉ phương sai, đồng thời so sánh kết quả với công thức đã biết. Tuy nhiên, trong quá trình tính đạo hàm bậc hai của hàm log likelihood, bạn đã mắc lỗi về dấu ở thành phần thứ hai (∂/∂p [n(1-p^) [-1/(1-p)]] phải là -n(1-p^)/(1-p)^2 chứ không phải dương), dù kết quả cuối cùng vẫn chính xác.
 
-**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m)
+**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m)
 
 <br>
 
@@ -2439,7 +2439,7 @@
 >
 > Bài giải này cực kỳ chính xác và chi tiết, không chỉ nhắc lại các công thức mà còn chứng minh từng bước một. Độ sâu phân tích vượt xa thông tin được cung cấp trong hình ảnh, thể hiện sự hiểu biết vững chắc về các khái niệm.
 
-**🔗 See also:** [Chứng minh tính bất biến MLE](#node-6d46egj) · [Stronger Central Limit Theorem](#node-yngnkwh)
+**🔗 See also:** [Chứng minh tính bất biến MLE](./72_method_of_finding_estimators.md#node-6d46egj) · [Stronger Central Limit Theorem](./55_convergence_concepts.md#node-yngnkwh)
 
 <br>
 
