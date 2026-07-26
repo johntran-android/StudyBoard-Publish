@@ -634,7 +634,7 @@
 >
 > QUAY LẠI SAU, NHƯNG ĐẠI Ý LÀ BIẾN ĐỔI ĐẠI SỐ TIẾP THÌ NÓ RA KẾT QUẢ
 
-**🔗 See also:** [Thống kê đầy đủ nhị thức](#node-8w0tig6) · [Ảnh hưởng Θ0 trong kiểm định](#node-csqvj7r)
+**🔗 See also:** [Thống kê đầy đủ nhị thức](./62_the_sufficient_principle.md#node-8w0tig6) · [Ảnh hưởng Θ0 trong kiểm định](./83_methods_of_evaluating_test.md#node-csqvj7r)
 
 <br>
 
@@ -672,7 +672,7 @@
 >
 > QUAY LẠI SAU
 
-**🔗 See also:** [Phân phối Range Ancillary](#node-abmssuo)
+**🔗 See also:** [Phân phối Range Ancillary](./62_the_sufficient_principle.md#node-abmssuo)
 
 <br>
 
