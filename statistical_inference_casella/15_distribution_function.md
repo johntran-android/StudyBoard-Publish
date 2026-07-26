@@ -9,8 +9,6 @@ function
 ## 1.5 Distribution
 function
 
-**🔗 See also:** [Cơ sở xác suất của CDF](#node-wj2brgr) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-wj2brgr"></a>
@@ -48,8 +46,7 @@ function
 >
 > ĐỊNH NGHĨA CỦA CDF
 
-**🔗 See also:** [1.5 Distribution
-function](#node-ytp3lpb) · [Hàm phân bố tích lũy của X](#node-01j9h9z) · [Hàm xác suất cảm sinh](#node-iqhzkcd)
+**🔗 See also:** [Hàm xác suất cảm sinh](#node-iqhzkcd)
 
 <br>
 
@@ -121,15 +118,11 @@ function](#node-ytp3lpb) · [Hàm phân bố tích lũy của X](#node-01j9h9z) 
 > TÍNH CHẤT RIGHT CONTINUOUS CỦA CDF LÀ DO F_X(x) =
 > P_X(X ≤ x)
 
-**🔗 See also:** [Cơ sở xác suất của CDF](#node-wj2brgr)
-
 <br>
 
 <a id="node-ehjraqn"></a>
 
 <p align="center"><kbd><img src="assets/eqm0zchkwfj.png" width="80%"></kbd></p>
-
-**🔗 See also:** [Hàm phân bố tích lũy của X](#node-01j9h9z) · [Điều kiện của hàm phân phối](#node-nsbo9t3)
 
 <br>
 
@@ -142,8 +135,6 @@ function](#node-ytp3lpb) · [Hàm phân bố tích lũy của X](#node-01j9h9z) 
 > [!NOTE]
 > Đại khái theorem này nói rằng để một function CÓ THỂ ĐÓNG VAI
 > MỘT CDF HỢP LỆ thì nó phải thỏa mãn 3 điều kiện
-
-**🔗 See also:** [Số lần tung đến Head](#node-fwtocma)
 
 <br>
 
@@ -344,8 +335,6 @@ function](#node-ytp3lpb) · [Hàm phân bố tích lũy của X](#node-01j9h9z) 
 >
 > = **1 - (1 - p)^x**
 
-**🔗 See also:** [Điều kiện của hàm phân phối](#node-nsbo9t3) · [Chứng minh tính chất hàm phân bố](#node-9y8jqsc)
-
 <br>
 
 <a id="node-9y8jqsc"></a>
@@ -360,8 +349,6 @@ function](#node-ytp3lpb) · [Hàm phân bố tích lũy của X](#node-01j9h9z) 
 >
 > QUAY LẠI SAU
 
-**🔗 See also:** [Số lần tung đến Head](#node-fwtocma) · [Hàm phân phối Logistics](#node-b5jxnwe)
-
 <br>
 
 <a id="node-b5jxnwe"></a>
@@ -375,8 +362,6 @@ function](#node-ytp3lpb) · [Hàm phân bố tích lũy của X](#node-01j9h9z) 
 > của Logistics Distribution
 >
 > QUAY LẠI SAU
-
-**🔗 See also:** [Chứng minh tính chất hàm phân bố](#node-9y8jqsc) · [Định nghĩa biến liên tục, rời rạc](#node-zj12ku5)
 
 <br>
 
@@ -396,8 +381,6 @@ function](#node-ytp3lpb) · [Hàm phân bố tích lũy của X](#node-01j9h9z) 
 >
 > ĐỊNH NGHĨA THẾ NÀO LÀ BIẾN LIÊN TỤC (CONTIUOUS)
 > VÀ RỜI RẠC (DISCRETE)
-
-**🔗 See also:** [Hàm phân phối Logistics](#node-b5jxnwe) · [Borel Field và Hàm phân phối](#node-ecxtok0)
 
 <br>
 
@@ -431,8 +414,6 @@ function](#node-ytp3lpb) · [Hàm phân bố tích lũy của X](#node-01j9h9z) 
 >
 > Vậy thì đại khái là tuy không hoàn toàn đúng nhưng trong context của
 > statistic thì được chấp nhận
-
-**🔗 See also:** [Định nghĩa biến liên tục, rời rạc](#node-zj12ku5) · [Định nghĩa biến phân phối đồng nhất](#node-7lropka)
 
 <br>
 
@@ -475,8 +456,6 @@ function](#node-ytp3lpb) · [Hàm phân bố tích lũy của X](#node-01j9h9z) 
 > NHIỀU ĐỂ NÓI: X1,X2...Xn là các iid random variables từ population
 > cdf/pmf f (hoặc cdf F) ⇨ chúng đều có chung marginal distribution, tức
 > fX1(x) = fX2(x) ...= fXn(x) với mọi x
-
-**🔗 See also:** [Borel Field và Hàm phân phối](#node-ecxtok0)
 
 <br>
 
