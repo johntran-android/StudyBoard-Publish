@@ -7,8 +7,6 @@
 
 ## 2.2 Expected Value
 
-**🔗 See also:** [Giá trị kỳ vọng và LOTUS](#node-p3585vu) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-p3585vu"></a>
@@ -48,8 +46,6 @@
 >
 >
 > Eg(X) = Σi g(x)P(X=x) hoặc ∫-inf:inf g(x)fX(x)dx
-
-**🔗 See also:** [2.2 Expected Value](#node-5atvgfg) · [Giá trị kỳ vọng phân phối mũ](#node-1098w9n)
 
 <br>
 
@@ -315,7 +311,7 @@
 >
 > Và cdf khi đó là F(x) = 1 - e^-x/λ
 
-**🔗 See also:** [Giá trị kỳ vọng và LOTUS](#node-p3585vu) · [Phương pháp tính kỳ vọng Binomial](#node-didrq3g) · [Định nghĩa và ý nghĩa Phương sai](#node-xx7gpce)
+**🔗 See also:** [Định nghĩa và ý nghĩa Phương sai](#node-xx7gpce)
 
 <br>
 
@@ -430,8 +426,6 @@
 >
 > Kết quả là = np
 
-**🔗 See also:** [Giá trị kỳ vọng phân phối mũ](#node-1098w9n) · [Đặc điểm phân phối Cauchy](#node-d6kf31i)
-
 <br>
 
 <a id="node-d6kf31i"></a>
@@ -463,7 +457,7 @@
 >
 > QUAY LẠI SAU
 
-**🔗 See also:** [Phương pháp tính kỳ vọng Binomial](#node-didrq3g) · [Nguồn gốc tính chất kỳ vọng](#node-qcu1zka) · [Xấp xỉ Mean Variance Tỉ số](#node-oj905vr)
+**🔗 See also:** [Xấp xỉ Mean Variance Tỉ số](#node-oj905vr)
 
 <br>
 
@@ -483,8 +477,6 @@
 >
 > Chứng minh rất đơn giản, chỉ dựa vào tính additivity của integral (với
 > contiunous rv)  cũng như Σ (với discrete rv)
-
-**🔗 See also:** [Đặc điểm phân phối Cauchy](#node-d6kf31i) · [EX: Giá trị dự đoán tốt nhất](#node-0loinmk)
 
 <br>
 
@@ -628,7 +620,7 @@
 >
 > QUAY LẠI SAU VỚI MEDIAN
 
-**🔗 See also:** [Nguồn gốc tính chất kỳ vọng](#node-qcu1zka) · [LOTUS và tích phân từng phần](#node-4yspyxx) · [Xây dựng Quy tắc Bayes](#node-xatzdyv)
+**🔗 See also:** [Xây dựng Quy tắc Bayes](#node-xatzdyv)
 
 <br>
 
@@ -787,8 +779,6 @@
 >
 >
 > Do đó ở đây EY = 1
-
-**🔗 See also:** [EX: Giá trị dự đoán tốt nhất](#node-0loinmk)
 
 <br>
 
