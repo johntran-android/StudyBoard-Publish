@@ -318,7 +318,7 @@ scale Families
 > **shift nó để dời location** hay nói như trong sách là để nhưng điểm trên
 > đồ thị vốn nằm bên phải trục x = 0 nay sẽ thành nằm bên phải trục x = μ
 
-**🔗 See also:** [Hàm lực β(θ) phân phối chuẩn](#node-55xkcix)
+**🔗 See also:** [Hàm lực β(θ) phân phối chuẩn](./83_methods_of_evaluating_test.md#node-55xkcix)
 
 <br>
 
@@ -442,7 +442,7 @@ scale Families
 >
 > = f(z). Chứng minh xong
 
-**🔗 See also:** [Trung bình mẫu Cauchy](#node-29xhnzg) · [Proof of Theorem 5.5.14](#node-yzn3dv1) · [Thống kê phụ trợ Range](#node-x76aniu) · [Hàm lực β(θ) phân phối chuẩn](#node-55xkcix) · [Kiểm định UMP tham số trung bình](#node-kd3nfb2) · [Tối ưu hóa kỳ vọng độ dài](#node-cu30bvl)
+**🔗 See also:** [Trung bình mẫu Cauchy](./52_of_random_variables_from_a_random_sample.md#node-29xhnzg) · [Proof of Theorem 5.5.14](./55_convergence_concepts.md#node-yzn3dv1) · [Thống kê phụ trợ Range](./62_the_sufficient_principle.md#node-x76aniu) · [Hàm lực β(θ) phân phối chuẩn](./83_methods_of_evaluating_test.md#node-55xkcix) · [Kiểm định UMP tham số trung bình](./83_methods_of_evaluating_test.md#node-kd3nfb2) · [Tối ưu hóa kỳ vọng độ dài](./93_methods_of_evaluating_interval_estimators.md#node-cu30bvl)
 
 <br>
 
