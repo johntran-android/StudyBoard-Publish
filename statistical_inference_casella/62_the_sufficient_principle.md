@@ -7,8 +7,6 @@
 
 ## 6.2 The Sufficient Principle
 
-**🔗 See also:** [Nguyên lý đủ](#node-t9iuvx6) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-t9iuvx6"></a>
@@ -30,7 +28,7 @@
 > trị quan sát được cụ thể của X1,..Xn) thì **việc suy luận về θ sẽ giống nhau**,
 > dù cho ta dùng bộ giá trị nào. X1,..Xn = x1,..xn hay X1,...Xn = y1,...yn
 
-**🔗 See also:** [6.2 The Sufficient Principle](#node-yxj3s29) · [Định nghĩa Thống kê đủ](#node-aog81op) · [Nguyên lý thống kê đủ](#node-hr9vr6y)
+**🔗 See also:** [Nguyên lý thống kê đủ](#node-hr9vr6y)
 
 <br>
 
@@ -66,7 +64,7 @@
 > Do đó ở đây gs đề nghị ta **chỉ xét discrete** T(**X**) và chỉ ra những điểm tương
 > đồng với continuous case
 
-**🔗 See also:** [Nguyên lý đủ](#node-t9iuvx6) · [Định nghĩa Thống kê Đầy đủ](#node-1j0q4qh) · [Thống kê đủ loại bỏ θ](#node-ap81sh3)
+**🔗 See also:** [Thống kê đủ loại bỏ θ](#node-ap81sh3)
 
 <br>
 
@@ -172,8 +170,6 @@
 > Vậy, có nghĩa là cái P_θ(**X** = **x** | T(**X**) = T(**x**)) ở trên sẽ không còn depend θ 
 > nữa, và ta bỏ cái subscript θ đi P(**X** = **x** | T(**X**) = T(**x**))
 
-**🔗 See also:** [Định nghĩa Thống kê đủ](#node-aog81op) · [Thống kê đủ và thông tin θ](#node-umvmbmt)
-
 <br>
 
 <a id="node-umvmbmt"></a>
@@ -262,8 +258,6 @@
 >
 > Nếu điều này đúng, thì có nghĩa là việc biết giá trị T(**x**) của T(**X**), đã nắm bắt
 > được mọi thông tin của θ rồi.
-
-**🔗 See also:** [Định nghĩa Thống kê Đầy đủ](#node-1j0q4qh) · [Thống kê đủ và phân phối](#node-9z7xkqn)
 
 <br>
 
@@ -614,8 +608,6 @@
 >
 > Đồng thời cũng hiểu vì sao P(**X** = **x** | T(**X**) = T(**x**)) = P(**Y** = **x** | T(**X**) = T(**x**))
 
-**🔗 See also:** [Thống kê đủ và thông tin θ](#node-umvmbmt) · [Phân phối biên qua tính đủ](#node-imixp1w)
-
 <br>
 
 <a id="node-imixp1w"></a>
@@ -697,8 +689,6 @@
 > đủ để mô tả phân phối population của **X**, nói cách khác, giá trị quan sát
 > của T(**x**) đã chứa đầy đủ thông tin về θ rồi.
 
-**🔗 See also:** [Thống kê đủ và phân phối](#node-9z7xkqn) · [Định nghĩa thống kê đủ](#node-vw80nut)
-
 <br>
 
 <a id="node-vw80nut"></a>
@@ -761,8 +751,6 @@
 >
 > Từ đó, những phần sau ta sẽ dùng điều kiện này để xét lại xem một số statistic
 > thông dụng có phải là sufficient statistic
-
-**🔗 See also:** [Phân phối biên qua tính đủ](#node-imixp1w) · [Thống kê đủ nhị thức](#node-ubmvdfc)
 
 <br>
 
@@ -837,7 +825,7 @@
 > kết quả này rõ ràng hoàn toàn không phụ thuộc θ nữa.** Do đó T(**X**) = X1 + ..
 > .+Xn là sufficient statistic của θ
 
-**🔗 See also:** [Định nghĩa thống kê đủ](#node-vw80nut) · [Trung bình mẫu thống kê đủ cho μ](#node-nqvdq30) · [Ước lượng không chệch tốt nhất Binomial](#node-brmf2r9)
+**🔗 See also:** [Ước lượng không chệch tốt nhất Binomial](#node-brmf2r9)
 
 <br>
 
@@ -1006,7 +994,7 @@
 >
 > ⇨ sample mean là sufficient statistic của μ đv normal
 
-**🔗 See also:** [Thống kê đủ nhị thức](#node-ubmvdfc) · [Thống kê đủ: Giảm chiều dữ liệu](#node-n7hexnk) · [Thống kê đủ và hoàn chỉnh Xbar](#node-st8akyc)
+**🔗 See also:** [Thống kê đủ và hoàn chỉnh Xbar](#node-st8akyc)
 
 <br>
 
@@ -1070,7 +1058,7 @@
 > Còn **với các family khác** (như Cauchy, Logistic) thì **ORDER STATISTIC LÀ
 > CÁI TỐT NHẤT RỒI.**
 
-**🔗 See also:** [Trung bình mẫu thống kê đủ cho μ](#node-nqvdq30) · [Sử dụng định nghĩa thống kê đủ](#node-cadv7we) · [Miền bác bỏ kiểm định tỉ số khả dĩ](#node-efq5sem)
+**🔗 See also:** [Miền bác bỏ kiểm định tỉ số khả dĩ](#node-efq5sem)
 
 <br>
 
@@ -1104,8 +1092,6 @@
 >
 >
 > Tuy nhiên tiếp theo theorem sẽ cho ta cách khác gọn hơn
-
-**🔗 See also:** [Thống kê đủ: Giảm chiều dữ liệu](#node-n7hexnk) · [Định lý Factorization](#node-dyi91g8)
 
 <br>
 
@@ -1166,7 +1152,7 @@
 > Vậy là đã chứng minh xong chiều đi: nếu T(**X**) là sufficient static, thì 
 > f(**x**|θ) = g(T(**x**)|θ)h(**x**)
 
-**🔗 See also:** [Sử dụng định nghĩa thống kê đủ](#node-cadv7we) · [Định lý Factorization: Điều kiện đủ](#node-4nmqg93) · [Chứng minh Định lý Birnbaum](#node-vayutvo) · [Định lý LRT Thống kê đủ](#node-gfm4olm)
+**🔗 See also:** [Chứng minh Định lý Birnbaum](#node-vayutvo) · [Định lý LRT Thống kê đủ](#node-gfm4olm)
 
 <br>
 
@@ -1318,8 +1304,6 @@
 >
 > ⇨ Chứng minh xong
 
-**🔗 See also:** [Định lý Factorization](#node-dyi91g8) · [Tìm Thống kê đủ Factorization](#node-b24e26s)
-
 <br>
 
 <a id="node-b24e26s"></a>
@@ -1377,8 +1361,6 @@
 > thông qua T(**x**) = xbar. Do đó, theo theorem này, T(**X**) = Xbar chính là sufficient
 > statistic cho μ
 
-**🔗 See also:** [Định lý Factorization: Điều kiện đủ](#node-4nmqg93) · [Phân phối đều rời rạc](#node-dasngh9)
-
 <br>
 
 <a id="node-dasngh9"></a>
@@ -1434,8 +1416,6 @@
 >
 >
 > = (1/θ)^n = 1/θ^n = θ^-n khi xi ∈ {1,2,....θ} và = 0 otherwise
-
-**🔗 See also:** [Tìm Thống kê đủ Factorization](#node-b24e26s) · [Thống Kê Đủ Factorization](#node-xxwct63)
 
 <br>
 
@@ -1528,7 +1508,7 @@
 >
 > Như vậy T(**X**) = maxi Xi chính là sufficient statistic của θ
 
-**🔗 See also:** [Phân phối đều rời rạc](#node-dasngh9) · [Thống kê đủ bằng hàm chỉ thị](#node-zgc9bub) · [Thống kê đầy đủ đồng nhất](#node-3b33zu7)
+**🔗 See also:** [Thống kê đầy đủ đồng nhất](#node-3b33zu7)
 
 <br>
 
@@ -1601,8 +1581,6 @@
 >
 > Do đó theo Factorization theorem, thì T(**X**) = maxi Xi là sufficient statistic
 
-**🔗 See also:** [Thống Kê Đủ Factorization](#node-xxwct63) · [Thống kê đủ vector](#node-iti6fjz)
-
 <br>
 
 <a id="node-iti6fjz"></a>
@@ -1634,8 +1612,6 @@
 >
 > ví dụ 6.2.9 sẽ áp dụng Factorization theorem để chứng minh / tìm sufficient
 > statistic cho case này
-
-**🔗 See also:** [Thống kê đủ bằng hàm chỉ thị](#node-zgc9bub) · [Thống kê đủ phân phối chuẩn](#node-hbgg43q)
 
 <br>
 
@@ -1732,8 +1708,6 @@
 > **TỪ ĐÓ** Factorization theorem cho phép **KẾT LUẬN** (Xbar(**x**), S^2(**x**)) **CHÍNH LÀ
 > SUFFICIENT STATISTIC CỦA** sample **X** ~ normal(μ, σ^2)
 
-**🔗 See also:** [Thống kê đủ vector](#node-iti6fjz) · [Mean, Variance và Giả định Normal](#node-vofbsvc)
-
 <br>
 
 <a id="node-vofbsvc"></a>
@@ -1761,7 +1735,7 @@
 > sample variance** thì TA CŨNG **ĐÃ QUÁ DỰA DẪM VÀO GIẢ ĐỊNH RẰNG
 > POPULATION LÀ NORMAL**
 
-**🔗 See also:** [Thống kê đủ phân phối chuẩn](#node-hbgg43q) · [Thống kê đủ gia đình mũ](#node-yl0xsvo) · [Hạn chế Nguyên lý Thống kê Đủ](#node-3fske3j)
+**🔗 See also:** [Hạn chế Nguyên lý Thống kê Đủ](#node-3fske3j)
 
 <br>
 
@@ -1835,8 +1809,6 @@
 >
 > T(**X**) = (Σjt1(Xj), Σjt2(Xj),...)
 
-**🔗 See also:** [Mean, Variance và Giả định Normal](#node-vofbsvc) · [Thống kê đủ tối thiểu](#node-jul7u6g)
-
 <br>
 
 <a id="node-jul7u6g"></a>
@@ -1867,8 +1839,6 @@
 >
 >
 > Như vậy, bất kì một random sample **X**, nào cũng là một sufficient statistic
-
-**🔗 See also:** [Thống kê đủ gia đình mũ](#node-yl0xsvo) · [Thống kê đủ và hàm một-một](#node-9eienhx)
 
 <br>
 
@@ -1914,8 +1884,6 @@
 > Gs nhắc lại ta rằng, mục đích của sufficient statistic là làm sao chứa trọn thông
 > tin về population parameter chứa trong random sample, do đó ta sẽ bàn tới
 > câu trả lời cho câu hỏi này
-
-**🔗 See also:** [Thống kê đủ tối thiểu](#node-jul7u6g) · [Thống kê đủ tối tiểu](#node-7cxqd8x)
 
 <br>
 
@@ -1971,8 +1939,6 @@
 >
 > Bởi vậy mới nói partition gắn với minimal sufficient statistic là cái
 > **COARSEST**
-
-**🔗 See also:** [Thống kê đủ và hàm một-một](#node-9eienhx) · [Hai thống kê đủ chuẩn](#node-p1f0kzg)
 
 <br>
 
@@ -2032,8 +1998,6 @@
 > Nhưng nếu σ chưa biết, thì một T(**X**) = Xbar dĩ nhiên KHÔNG PHẢI LÀ
 > SUFFICIENT STATISTIC CỦA Θ = (μ, σ^2).
 
-**🔗 See also:** [Thống kê đủ tối tiểu](#node-7cxqd8x) · [Định lý Minimal Sufficient Statistic](#node-nbwuekj)
-
 <br>
 
 <a id="node-nbwuekj"></a>
@@ -2069,8 +2033,6 @@
 >
 > Nếu như tỉ số f(**x**|θ) / f(**y**|θ) = constant khi và chỉ khi T(**x**) = T(**y**) **thì khi đó**
 > T(**X**) sẽ chính là minimal sufficient statistic
-
-**🔗 See also:** [Hai thống kê đủ chuẩn](#node-p1f0kzg) · [Chứng minh thống kê đủ](#node-m2iuwpb)
 
 <br>
 
@@ -2178,8 +2140,6 @@
 > Như vậy f(**x**|θ) = **g**(T(**x**)|θ) h(**x**). thì theo Factorization theorem, ta
 > có thể kết luận T(**X**) là **SUFFICIENT STATISTIC**
 
-**🔗 See also:** [Định lý Minimal Sufficient Statistic](#node-nbwuekj) · [Thống kê đủ tối thiểu](#node-seo4hb5)
-
 <br>
 
 <a id="node-seo4hb5"></a>
@@ -2257,8 +2217,6 @@
 > luôn là một function của T'(**X**) bất kì ⇨ T(**X**) **LÀ MINIMAL TRONG CÁC
 > SUFFICIENT STATISTIC**
 
-**🔗 See also:** [Chứng minh thống kê đủ](#node-m2iuwpb) · [Thống kê đủ tối thiểu phân phối chuẩn](#node-j3awosq)
-
 <br>
 
 <a id="node-j3awosq"></a>
@@ -2327,8 +2285,6 @@
 > as a function of μ và σ ) thì chỉ xảy ra khi xbar = ybar, và sx^2 = sy^2
 > (vì khi đó kết quả trở thành 1 là constant). Như vậy theo theorem này, thì
 > T(**X**)= (Xbar, S^2) chính là minimal sufficient statistic
-
-**🔗 See also:** [Thống kê đủ tối thiểu](#node-seo4hb5) · [Thống kê đủ tối thiểu phân phối đều](#node-m5hnxtp)
 
 <br>
 
@@ -2452,8 +2408,6 @@
 > là minimal sufficient statistic (vì T(**x**) chính là vector (min_i **x**, max_i **x**)
 > và T(**y**) chính là vector (min_i **y**, max_i **y**)
 
-**🔗 See also:** [Thống kê đủ tối thiểu phân phối chuẩn](#node-j3awosq) · [Thống kê đủ tối thiểu](#node-zlo20p1)
-
 <br>
 
 <a id="node-zlo20p1"></a>
@@ -2466,8 +2420,6 @@
 > Ý cuối là **minimal sufficient statistic cũng ko unique**. Nếu **apply một 1-1
 > function** nào vào **minimal sufficient statistic** ta **cũng được một sufficient
 > statistic**
-
-**🔗 See also:** [Thống kê đủ tối thiểu phân phối đều](#node-m5hnxtp) · [Statistic phụ trợ](#node-wi56xcm)
 
 <br>
 
@@ -2489,8 +2441,6 @@
 > CÁC STATISTIC KHÁC, THÌ NÓ LẠI CÓ THỂ GIÚP SUY LUẬN RA
 > θ**. Do đó phần này ta sẽ xem vài ví dụ của loại statistic này và phần sau 
 > sẽ bàn về cái vừa nói
-
-**🔗 See also:** [Thống kê đủ tối thiểu](#node-zlo20p1) · [Phân phối Range Ancillary](#node-abmssuo)
 
 <br>
 
@@ -2661,7 +2611,7 @@
 >
 > Và quan trọng là pdf này không phụ thuộc θ. DO ĐÓ R LÀ MỘT ANCILLARY
 
-**🔗 See also:** [Statistic phụ trợ](#node-wi56xcm) · [Thống kê khoảng biến thiên phụ](#node-mcs07q3) · [PDF đồng thời thống kê thứ tự](#node-xnvn76c)
+**🔗 See also:** [PDF đồng thời thống kê thứ tự](#node-xnvn76c)
 
 <br>
 
@@ -2735,8 +2685,6 @@
 > Như vậy, R là random variable tạo bởi áp dụng một function lên hai random
 > variable có distribution KHÔNG PHỤ THUỘC θ. Do đó R đương nhiên
 > có distribution không phụ thuộc θ.
-
-**🔗 See also:** [Phân phối Range Ancillary](#node-abmssuo) · [Thống kê phụ trợ Range](#node-x76aniu)
 
 <br>
 
@@ -2839,7 +2787,7 @@
 > và kết quả này ko phụ thuộc θ nữa vì Zi có distribution với location 0, ko phụ
 > thuộc θ nữa
 
-**🔗 See also:** [Thống kê khoảng biến thiên phụ](#node-mcs07q3) · [Quan hệ thống kê đủ, phụ trợ](#node-e10it2g) · [Biến đổi PDF Location-Scale](#node-cs2rm3i)
+**🔗 See also:** [Biến đổi PDF Location-Scale](#node-cs2rm3i)
 
 <br>
 
@@ -2855,7 +2803,7 @@
 > PHẦN SAU SẼ NÓI VỀ QUAN HỆ GIỮA SUFFICIENT  STATISTIC VÀ
 > ANCILLARY STATISTIC
 
-**🔗 See also:** [Thống kê phụ trợ Range](#node-x76aniu) · [Đủ tối thiểu và phụ trợ](#node-7589927) · [Kỳ vọng theo Định lý Basu](#node-pswxn93)
+**🔗 See also:** [Kỳ vọng theo Định lý Basu](#node-pswxn93)
 
 <br>
 
@@ -2892,8 +2840,6 @@
 >
 >
 > Do đó dĩ nhiên là chúng không độc lập nhau.
-
-**🔗 See also:** [Quan hệ thống kê đủ, phụ trợ](#node-e10it2g) · [Suy luận tham số từ Ancillary](#node-o5sgryc)
 
 <br>
 
@@ -3019,8 +2965,6 @@
 >
 > Do đó biết R = 2 giúp kết luận suy luận giá trị của θ cho dù R chỉ là ancillary statistic
 
-**🔗 See also:** [Đủ tối thiểu và phụ trợ](#node-7589927) · [Định nghĩa Tính đủ](#node-jcf9e90)
-
 <br>
 
 <a id="node-jcf9e90"></a>
@@ -3104,7 +3048,7 @@
 > ~ n(θ,1) thì không có hàm của X nào, TRỪ KHI NÓ LÀ ZERO FUNCTION, thỏa
 > E_θ(g(X)) = 0 với mọi θ. Nên n(θ,1) là họ complete
 
-**🔗 See also:** [Suy luận tham số từ Ancillary](#node-o5sgryc) · [Thống kê đầy đủ nhị thức](#node-8w0tig6) · [Tính đầy đủ và ước lượng](#node-8bbly0i)
+**🔗 See also:** [Tính đầy đủ và ước lượng](#node-8bbly0i)
 
 <br>
 
@@ -3280,7 +3224,7 @@
 >
 > Kết luận P_p(g(T) = 0) = 1 với mọi p. nên T là complete statistic
 
-**🔗 See also:** [Định nghĩa Tính đủ](#node-jcf9e90) · [Thống kê đầy đủ đồng nhất](#node-3b33zu7) · [Chứng minh PDF thống kê thứ tự](#node-1zc19ro)
+**🔗 See also:** [Chứng minh PDF thống kê thứ tự](#node-1zc19ro)
 
 <br>
 
@@ -3463,7 +3407,7 @@
 > có thể chấp nhận vì đại ý là hầu như mọi function có thể nghĩ ra đều là
 > Reiman-integrable
 
-**🔗 See also:** [Thống kê đầy đủ nhị thức](#node-8w0tig6) · [Định lý Basu](#node-rrvib6m) · [Thống Kê Đủ Factorization](#node-xxwct63)
+**🔗 See also:** [Thống Kê Đủ Factorization](#node-xxwct63)
 
 <br>
 
@@ -3703,8 +3647,6 @@
 >
 > Giúp kết luận S(**X**) và T(**X**) independent
 
-**🔗 See also:** [Thống kê đầy đủ đồng nhất](#node-3b33zu7) · [Thống kê đầy đủ họ hàm mũ](#node-d4sl8g4)
-
 <br>
 
 <a id="node-d4sl8g4"></a>
@@ -3746,8 +3688,6 @@
 > Như đã nói. gs sẽ không chứng minh theorem này, chỉ nói thêm là sở dĩ phải
 > đưa ra rằng buộc rằng parameter space Θ chứa một open set trong R^k
 > là để tránh một số trường hợp.
-
-**🔗 See also:** [Định lý Basu](#node-rrvib6m) · [Kỳ vọng theo Định lý Basu](#node-pswxn93)
 
 <br>
 
@@ -3956,7 +3896,7 @@
 >
 > = 1/n
 
-**🔗 See also:** [Thống kê đầy đủ họ hàm mũ](#node-d4sl8g4) · [Thống kê đủ và hoàn chỉnh Xbar](#node-st8akyc) · [Quan hệ thống kê đủ, phụ trợ](#node-e10it2g)
+**🔗 See also:** [Quan hệ thống kê đủ, phụ trợ](#node-e10it2g)
 
 <br>
 
@@ -4281,7 +4221,7 @@
 > statistic. Nên theo Basu Theorem, Xbar (complete statistic) và S^2 (ancillary)
 > độc lập
 
-**🔗 See also:** [Kỳ vọng theo Định lý Basu](#node-pswxn93) · [Trung bình mẫu thống kê đủ cho μ](#node-nqvdq30)
+**🔗 See also:** [Trung bình mẫu thống kê đủ cho μ](#node-nqvdq30)
 
 <br>
 
@@ -4291,8 +4231,6 @@
 
 > [!NOTE]
 > QUAY LẠI SAU
-
-**🔗 See also:** [Thống kê đủ và hoàn chỉnh Xbar](#node-st8akyc)
 
 <br>
 
