@@ -850,7 +850,7 @@
 >
 > = **(1/2√y) fX(√y) + (1/√2y) fX(-√y)**
 
-**🔗 See also:** [Bổ đề Chi-square](#node-udtt0nq)
+**🔗 See also:** [Bổ đề Chi-square](./53_sampling_from_the_normal_distribution.md#node-udtt0nq)
 
 <br>
 
@@ -1235,7 +1235,7 @@
 > y, vốn dĩ tất cả các x từ x1 tới x2 đều thỏa)  hay range sẽ là -inf, x1 thay vì
 > mọi range -inf x với x từ x1 đến x2 đều có F là y.
 
-**🔗 See also:** [Biến đổi tích phân xác suất](#node-ezy1q8o)
+**🔗 See also:** [Biến đổi tích phân xác suất](./56_generating_random_sample.md#node-ezy1q8o)
 
 <br>
 
