@@ -7,6 +7,8 @@
 
 ## 1.1 Set Theory
 
+**🔗 See also:** [Khái niệm không gian mẫu](#node-sa4wls9) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-sa4wls9"></a>
@@ -34,6 +36,8 @@
 >
 >
 > Hoặc **Uncountable**
+
+**🔗 See also:** [1.1 Set Theory](#node-z8607xs) · [Sự kiện và Phép toán Tập hợp](#node-2pf0neq)
 
 <br>
 
@@ -88,6 +92,8 @@
 > Và từ hai khái niệm "A sub B" và "A = B" này ta sẽ có 3 operation nền tảng
 > của Set theory: **Union**, **Intersection**, **Complement**
 
+**🔗 See also:** [Khái niệm không gian mẫu](#node-sa4wls9) · [Không gian mẫu, biến cố, phép toán](#node-x8iv2mk)
+
 <br>
 
 <a id="node-x8iv2mk"></a>
@@ -138,6 +144,8 @@
 > của **hai event bằng nhau: A = B** ⇔ **A** ⊂ **B và B** ⊂ **A** chưa dùng Venn diagram chỉ
 > mang tính chất cho dễ hình dung thôi
 
+**🔗 See also:** [Sự kiện và Phép toán Tập hợp](#node-2pf0neq) · [Chứng minh tính phân phối tập hợp](#node-hoxwyxs)
+
 <br>
 
 <a id="node-hoxwyxs"></a>
@@ -173,6 +181,8 @@
 > Nếu x ∈ vế phải, suy ra nó ∈ (A ∪ B) và ∈ (A ∪ C), vậy thì nó có thể ∈ A
 > hoặc ∈ (B ∩ C)
 
+**🔗 See also:** [Không gian mẫu, biến cố, phép toán](#node-x8iv2mk) · [Phép toán trên tập con vô hạn](#node-wa0salz)
+
 <br>
 
 <a id="node-wa0salz"></a>
@@ -185,6 +195,8 @@
 > Đại khái là ta có thể **mở rộng các set operation** (union và
 > intersection) này với **tập có vô số subset**
 
+**🔗 See also:** [Chứng minh tính phân phối tập hợp](#node-hoxwyxs) · [Sự kiện rời rạc, Phân hoạch](#node-c55r2gt)
+
 <br>
 
 <a id="node-c55r2gt"></a>
@@ -196,6 +208,8 @@
 > [!NOTE]
 > định nghĩa **DISJOINT EVENTS** (là khi **intersection** của chúng bằng ∅) và
 > **PARTITION** (là khi chúng **disjoint** và **union của chúng bằng S**)
+
+**🔗 See also:** [Phép toán trên tập con vô hạn](#node-wa0salz) · [Xác suất rút 4 lá Ách](#node-z4ilf15)
 
 <br>
 
