@@ -7,6 +7,8 @@
 
 ## 6.3 The Likelihood Principle
 
+**🔗 See also:** [Hàm khả năng - Thu gọn dữ liệu](#node-x6wqaks) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-x6wqaks"></a>
@@ -32,6 +34,8 @@
 > Mình nghĩ: Không khó hiểu khi ở đây lại nói **statistic** là likelihood **function.**
 > Vì đã biết định nghĩa của statistic, chỉ là một function, apply lên các random
 > variable của random sample.
+
+**🔗 See also:** [6.3 The Likelihood Principle](#node-exsbikw) · [Định nghĩa Hàm Khả Năng](#node-ttrbtni)
 
 <br>
 
@@ -63,6 +67,8 @@
 > của nó, là nếu **X**=**x** rồi, thì với các θ khác nhau khi f(**x**|θ) sẽ có các giá trị khác
 > nhau, và lấy giá trị đó đặt là hàm L(θ|**x**).
 
+**🔗 See also:** [Hàm khả năng - Thu gọn dữ liệu](#node-x6wqaks) · [Hàm Hợp Lý Vector Rời Rạc](#node-v3l3i2d)
+
 <br>
 
 <a id="node-v3l3i2d"></a>
@@ -91,6 +97,8 @@
 > thì điều đó mang ý nghĩa là: VỚI GIÁ TRỊ QUAN SÁT THẤY CỦA **X**
 > (=**x**)  THÌ GIÁ TRỊ CỦA θ1 SẼ HỢP LÝ (PLAUSIBLE) HƠN LÀ θ2, HỢP
 > LÝ Ở ĐÂY MANG Ý NGHĨA LÀ GẦN VỚI GIÁ TRỊ THẬT CỦA θ HƠN
+
+**🔗 See also:** [Định nghĩa Hàm Khả Năng](#node-ttrbtni) · [Hàm khả năng biến liên tục](#node-rzcdx1x)
 
 <br>
 
@@ -142,6 +150,8 @@
 > joint pdf. Chỉ cần nhớ, với joint pdf, ta coi như fixed (biết θ), và tính giá trị
 > tùy thuộc vào **x**. Còn với likelihood, ta coi **x** fixed và giá trị sẽ thay
 > đổi tùy theo θ
+
+**🔗 See also:** [Hàm Hợp Lý Vector Rời Rạc](#node-v3l3i2d) · [Lập luận PMF nhị thức âm](#node-14n5hfc)
 
 <br>
 
@@ -271,6 +281,8 @@
 > Nên nói khái quát nếu X = x quan sát thấy thì likelihood function sẽ là đa
 > thức bậc 3 + x.
 
+**🔗 See also:** [Hàm khả năng biến liên tục](#node-rzcdx1x) · [Nguyên lý Hợp lý](#node-kr518ye)
+
 <br>
 
 <a id="node-kr518ye"></a>
@@ -316,6 +328,8 @@
 > θ2, CHỨ KHÔNG THỂ NÓI XÁC SUẤT θ = θ1 CAO GẤP ĐÔI XÁC SUẤT 
 > θ = θ2. Vì CHƯA CHẮC L(Θ|x) LÀ PDF**
 
+**🔗 See also:** [Lập luận PMF nhị thức âm](#node-14n5hfc)
+
 <br>
 
 <a id="node-qlgywct"></a>
@@ -324,6 +338,8 @@
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Nguyên lý Hợp lý](#node-kr518ye)
 
 <br>
 
@@ -335,6 +351,8 @@
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Khái niệm Bằng chứng Thử nghiệm](#node-y3ovm38)
 
 <br>
 
@@ -376,6 +394,8 @@
 > phụ thuộc cách thử nghiệm (E, ví dụ có thể thấy nó phụ thuộc kích thước
 > sample n)
 
+**🔗 See also:** [Nguyên lý thống kê đủ](#node-hr9vr6y)
+
 <br>
 
 <a id="node-hr9vr6y"></a>
@@ -413,6 +433,8 @@
 >
 > Nên mới nói "**equate evidence if sufficient statistic match**, tức là nếu T(x)
 > = T(y) thì coi như evidence như nhau"
+
+**🔗 See also:** [Khái niệm Bằng chứng Thử nghiệm](#node-y3ovm38) · [Nguyên lý điều kiện](#node-42ksxxb) · [Nguyên lý đủ](#node-t9iuvx6)
 
 <br>
 
@@ -455,6 +477,8 @@
 > khác, thông tin về việc E1 được chọn thay vì E2 không làm thay đổi thông
 > tin về θ.
 
+**🔗 See also:** [Nguyên lý thống kê đủ](#node-hr9vr6y) · [Nguyên lý Điều kiện qua Thí nghiệm](#node-awo9vdb)
+
 <br>
 
 <a id="node-awo9vdb"></a>
@@ -484,6 +508,8 @@
 >
 >
 > Còn E2, thì nó là câu chuyện của negative binomial.
+
+**🔗 See also:** [Nguyên lý điều kiện](#node-42ksxxb) · [Mở rộng Nguyên lý Hợp lý](#node-m3lnwpx)
 
 <br>
 
@@ -715,6 +741,8 @@
 >
 > Từ đó kết luận Ev(E1, **x1***) = Ev(E2, **x2***)
 
+**🔗 See also:** [Nguyên lý Điều kiện qua Thí nghiệm](#node-awo9vdb) · [Chứng minh Định lý Birnbaum](#node-vayutvo)
+
 <br>
 
 <a id="node-vayutvo"></a>
@@ -932,6 +960,8 @@
 > Còn để chứng minh chiều ngược lại
 > (converse) QUAY LẠI SAU
 
+**🔗 See also:** [Mở rộng Nguyên lý Hợp lý](#node-m3lnwpx) · [Quy tắc Dừng: Thông tin dư thừa](#node-5cnv1rr) · [Định lý Factorization](#node-dyi91g8)
+
 <br>
 
 <a id="node-5cnv1rr"></a>
@@ -981,6 +1011,8 @@
 > của đồng xu** (p). Do đó, thông tin về "Quy tắc dừng" (Stopping Rule) là thông
 > tin ngoài lề, không có giá trị chứng cứ về p."
 
+**🔗 See also:** [Chứng minh Định lý Birnbaum](#node-vayutvo) · [Tương đương thông tin thống kê đủ](#node-ft3sp1e)
+
 <br>
 
 <a id="node-ft3sp1e"></a>
@@ -1011,6 +1043,8 @@
 >
 >
 > Đó là ý tác giả khi viết T(1,7) = T(2,3) = (1,7)
+
+**🔗 See also:** [Quy tắc Dừng: Thông tin dư thừa](#node-5cnv1rr) · [Hạn chế Nguyên lý Thống kê Đủ](#node-3fske3j)
 
 <br>
 
@@ -1072,6 +1106,8 @@
 > Nên nếu cái giả định này sai thì coi chừng ta đang xài cái INSUFFICIENT
 > STATISTIC, dĩ nhiên khi đó ta đã vi phạm Formal Sufficient Principle
 
+**🔗 See also:** [Tương đương thông tin thống kê đủ](#node-ft3sp1e) · [Dư lượng và nguyên lý đủ](#node-bzw6508) · [Mean, Variance và Giả định Normal](#node-vofbsvc)
+
 <br>
 
 <a id="node-bzw6508"></a>
@@ -1120,6 +1156,8 @@
 > như sample mean và sample variance là sufficient statistic, từ đó yên
 > tâm dùng sufficient principle**
 
+**🔗 See also:** [Hạn chế Nguyên lý Thống kê Đủ](#node-3fske3j)
+
 <br>
 
 <a id="node-s0mg8pj"></a>
@@ -1128,6 +1166,8 @@
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Dư lượng và nguyên lý đủ](#node-bzw6508)
 
 <br>
 
