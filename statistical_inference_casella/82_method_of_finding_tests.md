@@ -7,8 +7,6 @@
 
 ## 8.2 Method Of Finding Tests
 
-**🔗 See also:** [Kiểm định tỉ số khả dĩ](#node-sec6vtb) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-sec6vtb"></a>
@@ -62,8 +60,6 @@
 >
 > Chú ý, estimator, theo định nghĩa chính thức, là any function of random
 > sample, thì mle(**X**) define ở trên cũng thỏa định nghĩa này.
-
-**🔗 See also:** [8.2 Method Of Finding Tests](#node-ddu990f) · [Kiểm định Tỷ số Hợp lý](#node-b3cjkf1)
 
 <br>
 
@@ -123,7 +119,7 @@
 > LIKELIHOOD RATIO TEST STATISTIC VỚI MỘT NGƯỠNG c NÀO ĐÓ
 > TRONG [0,1]**, để rồi nếu λ(**x**) ≤ c → reject H0 và ngược lại.
 
-**🔗 See also:** [Kiểm định tỉ số khả dĩ](#node-sec6vtb) · [Nguyên lý Kiểm định tỉ số hợp lý](#node-eg90igs) · [Quan hệ T(x) và λ(x)](#node-oaiy187)
+**🔗 See also:** [Quan hệ T(x) và λ(x)](#node-oaiy187)
 
 <br>
 
@@ -199,8 +195,6 @@
 >
 >
 > Khi đó ta sẽ thấy λ(**x**), LRT có liên quan đến MLE là vậy
-
-**🔗 See also:** [Kiểm định Tỷ số Hợp lý](#node-b3cjkf1) · [Kiểm định LRT Phân phối Chuẩn](#node-kbapjux)
 
 <br>
 
@@ -296,7 +290,7 @@
 > ví dụ 7.2.5 ta đã biết θ^_mle(**X**) chính là Xbar ⇨ mẫu số là L(θ^_mle|**x**)
 > = L(Xbar|**x**)
 
-**🔗 See also:** [Nguyên lý Kiểm định tỉ số hợp lý](#node-eg90igs) · [Ngưỡng bác bỏ LRT](#node-326k3hu) · [Kiểm định tỉ số khả dĩ cỡ α](#node-8t9g9rt)
+**🔗 See also:** [Kiểm định tỉ số khả dĩ cỡ α](#node-8t9g9rt)
 
 <br>
 
@@ -467,7 +461,7 @@
 > rất dễ, rất nhiều x khiến xbar lệch khỏi θ0 tí xíu, nên vùng rejection mở rộng
 > rất lớn.
 
-**🔗 See also:** [Kiểm định LRT Phân phối Chuẩn](#node-kbapjux) · [Hàm hợp lí Exponential](#node-nl8sk1y) · [Thống kê đủ và LRT](#node-8hiqyvn)
+**🔗 See also:** [Thống kê đủ và LRT](#node-8hiqyvn)
 
 <br>
 
@@ -541,7 +535,7 @@
 > Do đó sách ghi là L(θ|**x**) = e^(-Σixi+nθ) khi x(1) ≥ θ và = 0 khi x(1) < θ 
 > là vậy.
 
-**🔗 See also:** [Ngưỡng bác bỏ LRT](#node-326k3hu) · [Tỷ số Hợp lý λ(x)](#node-hdo1xts) · [Ảnh hưởng Θ0 trong kiểm định](#node-csqvj7r)
+**🔗 See also:** [Ảnh hưởng Θ0 trong kiểm định](#node-csqvj7r)
 
 <br>
 
@@ -621,8 +615,6 @@
 >
 > L(x(1)|**x**) / L(x(1)|**x**) = 1 khi x(1) ≤ θ0
 
-**🔗 See also:** [Hàm hợp lí Exponential](#node-nl8sk1y) · [Miền bác bỏ kiểm định tỉ số khả dĩ](#node-efq5sem)
-
 <br>
 
 <a id="node-efq5sem"></a>
@@ -698,7 +690,7 @@
 > tức min_i Xi và những bài trước (xem link) ta đã biết các order statistic đều là 
 > sufficient statistic.
 
-**🔗 See also:** [Tỷ số Hợp lý λ(x)](#node-hdo1xts) · [Thống kê đủ và kiểm định LRT](#node-decrd99) · [Thống kê đủ: Giảm chiều dữ liệu](#node-n7hexnk)
+**🔗 See also:** [Thống kê đủ: Giảm chiều dữ liệu](#node-n7hexnk)
 
 <br>
 
@@ -727,8 +719,6 @@
 > likelihood ratio test statistic dựa trên T(**x**) thay vì **x**, và vì thông tin
 > chứa trong T(**x**) đã đủ, thì bài test dùng T(**x**) cũng phải tốt như bài
 > test dùng **x**. Và theorem tiếp sau đây sẽ khẳng định điều này
-
-**🔗 See also:** [Miền bác bỏ kiểm định tỉ số khả dĩ](#node-efq5sem) · [Định lý LRT Thống kê đủ](#node-gfm4olm)
 
 <br>
 
@@ -978,7 +968,7 @@
 >
 > Chứng minh xong.
 
-**🔗 See also:** [Thống kê đủ và kiểm định LRT](#node-decrd99) · [Thống kê đủ và LRT](#node-8hiqyvn) · [Định lý Factorization](#node-dyi91g8)
+**🔗 See also:** [Định lý Factorization](#node-dyi91g8)
 
 <br>
 
@@ -1015,7 +1005,7 @@
 > statistic, nên cũng có thể dùng likelihood gắn với X(1) để cho ra kết quả như
 > vậy
 
-**🔗 See also:** [Định lý LRT Thống kê đủ](#node-gfm4olm) · [LRT với tham số gây nhiễu](#node-elajwsz) · [Ngưỡng bác bỏ LRT](#node-326k3hu)
+**🔗 See also:** [Ngưỡng bác bỏ LRT](#node-326k3hu)
 
 <br>
 
@@ -1161,7 +1151,7 @@
 > σ^2 thì không biết. Nhưng cách làm của likelihood khiến cho ta không bị
 > vướng ở σ^2, vì đơn giản là ta sẽ dùng mle (σ^2)^ và (σ^2)^_0 thôi.
 
-**🔗 See also:** [Thống kê đủ và LRT](#node-8hiqyvn) · [Kiểm định giả thuyết Bayesian](#node-zi3rdod) · [Kiểm định LRT cho trung bình](#node-ouhenhy)
+**🔗 See also:** [Kiểm định LRT cho trung bình](#node-ouhenhy)
 
 <br>
 
@@ -1220,8 +1210,6 @@
 >
 > P(θ ∈ Θ0c|**x**) = P(H1 is true|**x**)
 
-**🔗 See also:** [LRT với tham số gây nhiễu](#node-elajwsz) · [Xác suất H0/H1 trong Bayesian](#node-y2elxyy)
-
 <br>
 
 <a id="node-y2elxyy"></a>
@@ -1255,8 +1243,6 @@
 > Nhưng quay lại Bayesian approach, **việc quan sát được x sẽ giúp thay
 > đổi distribution của θ (posterior) và giúp cho xác suất H0 và xác suất H1
 > dựa trên x ⇨ từ đó giúp việc có được x trở nên có tác dụng**
-
-**🔗 See also:** [Kiểm định giả thuyết Bayesian](#node-zi3rdod) · [Kiểm định giả thuyết Bayesian](#node-40sn9pl)
 
 <br>
 
@@ -1302,8 +1288,6 @@
 > Một điểm nữa, tác gỉa nói, có khi ta cũng có thể chọn một ngưỡng reject
 > cao hơn, thậm chí lên tới 0.99, để tránh khả năng reject sai, khi đó rejection
 > region là {**x**: P(θ ∈ Θ0_c) ≥ 0.99}
-
-**🔗 See also:** [Xác suất H0/H1 trong Bayesian](#node-y2elxyy) · [Luật quyết định kiểm định Bayesian](#node-zk8yeue)
 
 <br>
 
@@ -1394,7 +1378,7 @@
 >
 > Nếu μ = θ0 thì cái rule trở thành: accept H0 khi xbar ≤ θ0 và ngược lại.
 
-**🔗 See also:** [Kiểm định giả thuyết Bayesian](#node-40sn9pl) · [Kiểm định giả thuyết thống kê](#node-hyypk0c) · [Ước lượng Bayes phân phối chuẩn](#node-5ldrh78) · [Ước lượng Bayes chuẩn](#node-vscj9eh)
+**🔗 See also:** [Ước lượng Bayes phân phối chuẩn](#node-5ldrh78) · [Ước lượng Bayes chuẩn](#node-vscj9eh)
 
 <br>
 
@@ -1536,8 +1520,6 @@
 >
 >
 > Do đó, trong bài toán này, test statistic là sup_γ∈Γ Tγ(**X**)
-
-**🔗 See also:** [Luật quyết định kiểm định Bayesian](#node-zk8yeue) · [Kiểm định LRT cho trung bình](#node-ouhenhy)
 
 <br>
 
@@ -1910,7 +1892,7 @@
 >
 > như đã nói ở ví dụ 8.2.6
 
-**🔗 See also:** [Kiểm định giả thuyết thống kê](#node-hyypk0c) · [Kiểm định t hai phía](#node-qo5rly2) · [LRT với tham số gây nhiễu](#node-elajwsz) · [Phân phối và biến động trung bình mẫu](#node-153vzn2) · [Kiểm định hợp-giao cỡ α](#node-aruspge) · [Quan hệ UIT-LRT hai phía](#node-27dn67w)
+**🔗 See also:** [LRT với tham số gây nhiễu](#node-elajwsz) · [Phân phối và biến động trung bình mẫu](#node-153vzn2) · [Kiểm định hợp-giao cỡ α](#node-aruspge) · [Quan hệ UIT-LRT hai phía](#node-27dn67w)
 
 <br>
 
@@ -2010,7 +1992,7 @@
 > Như vậy mới nói là Union Intersection Test xây dựng bởi 2 cái one-sided t test
 > thì chính là / equivalent với cái LRT của bài toán 2-sided test
 
-**🔗 See also:** [Kiểm định LRT cho trung bình](#node-ouhenhy) · [Phương pháp hợp-giao và giao-hợp](#node-3ebhe5o) · [Kiểm định hợp-giao cỡ α](#node-aruspge)
+**🔗 See also:** [Kiểm định hợp-giao cỡ α](#node-aruspge)
 
 <br>
 
@@ -2068,8 +2050,6 @@
 > Và khi các rejection region của các bài toán con có dạng {**x**: T_γ(**x**) > c} thì
 > ⇨ rejection của bài toán gốc sẽ là {**x**: inf_γ ∈ Γ {T_γ(**x**)} > c}
 
-**🔗 See also:** [Kiểm định t hai phía](#node-qo5rly2)
-
 <br>
 
 <a id="node-x3ah7f9"></a>
@@ -2078,8 +2058,6 @@
 
 > [!NOTE]
 > QUAY LẠI SAU
-
-**🔗 See also:** [Phương pháp hợp-giao và giao-hợp](#node-3ebhe5o)
 
 <br>
 
