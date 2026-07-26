@@ -28,7 +28,7 @@
 > trị quan sát được cụ thể của X1,..Xn) thì **việc suy luận về θ sẽ giống nhau**,
 > dù cho ta dùng bộ giá trị nào. X1,..Xn = x1,..xn hay X1,...Xn = y1,...yn
 
-**🔗 See also:** [Nguyên lý thống kê đủ](#node-hr9vr6y)
+**🔗 See also:** [Nguyên lý thống kê đủ](./63_the_likelihood_principle.md#node-hr9vr6y)
 
 <br>
 
@@ -64,7 +64,7 @@
 > Do đó ở đây gs đề nghị ta **chỉ xét discrete** T(**X**) và chỉ ra những điểm tương
 > đồng với continuous case
 
-**🔗 See also:** [Thống kê đủ loại bỏ θ](#node-ap81sh3)
+**🔗 See also:** [Thống kê đủ loại bỏ θ](./73_methods_of_evaluating_estimators.md#node-ap81sh3)
 
 <br>
 
@@ -825,7 +825,7 @@
 > kết quả này rõ ràng hoàn toàn không phụ thuộc θ nữa.** Do đó T(**X**) = X1 + ..
 > .+Xn là sufficient statistic của θ
 
-**🔗 See also:** [Ước lượng không chệch tốt nhất Binomial](#node-brmf2r9)
+**🔗 See also:** [Ước lượng không chệch tốt nhất Binomial](./73_methods_of_evaluating_estimators.md#node-brmf2r9)
 
 <br>
 
@@ -1058,7 +1058,7 @@
 > Còn **với các family khác** (như Cauchy, Logistic) thì **ORDER STATISTIC LÀ
 > CÁI TỐT NHẤT RỒI.**
 
-**🔗 See also:** [Miền bác bỏ kiểm định tỉ số khả dĩ](#node-efq5sem)
+**🔗 See also:** [Miền bác bỏ kiểm định tỉ số khả dĩ](./82_method_of_finding_tests.md#node-efq5sem)
 
 <br>
 
@@ -1152,7 +1152,7 @@
 > Vậy là đã chứng minh xong chiều đi: nếu T(**X**) là sufficient static, thì 
 > f(**x**|θ) = g(T(**x**)|θ)h(**x**)
 
-**🔗 See also:** [Chứng minh Định lý Birnbaum](#node-vayutvo) · [Định lý LRT Thống kê đủ](#node-gfm4olm)
+**🔗 See also:** [Chứng minh Định lý Birnbaum](./63_the_likelihood_principle.md#node-vayutvo) · [Định lý LRT Thống kê đủ](./82_method_of_finding_tests.md#node-gfm4olm)
 
 <br>
 
@@ -1735,7 +1735,7 @@
 > sample variance** thì TA CŨNG **ĐÃ QUÁ DỰA DẪM VÀO GIẢ ĐỊNH RẰNG
 > POPULATION LÀ NORMAL**
 
-**🔗 See also:** [Hạn chế Nguyên lý Thống kê Đủ](#node-3fske3j)
+**🔗 See also:** [Hạn chế Nguyên lý Thống kê Đủ](./63_the_likelihood_principle.md#node-3fske3j)
 
 <br>
 
@@ -2611,7 +2611,7 @@
 >
 > Và quan trọng là pdf này không phụ thuộc θ. DO ĐÓ R LÀ MỘT ANCILLARY
 
-**🔗 See also:** [PDF đồng thời thống kê thứ tự](#node-xnvn76c)
+**🔗 See also:** [PDF đồng thời thống kê thứ tự](./54_order_statistic.md#node-xnvn76c)
 
 <br>
 
@@ -2787,7 +2787,7 @@
 > và kết quả này ko phụ thuộc θ nữa vì Zi có distribution với location 0, ko phụ
 > thuộc θ nữa
 
-**🔗 See also:** [Biến đổi PDF Location-Scale](#node-cs2rm3i)
+**🔗 See also:** [Biến đổi PDF Location-Scale](./35_location_and_scale_families.md#node-cs2rm3i)
 
 <br>
 
@@ -3048,7 +3048,7 @@
 > ~ n(θ,1) thì không có hàm của X nào, TRỪ KHI NÓ LÀ ZERO FUNCTION, thỏa
 > E_θ(g(X)) = 0 với mọi θ. Nên n(θ,1) là họ complete
 
-**🔗 See also:** [Tính đầy đủ và ước lượng](#node-8bbly0i)
+**🔗 See also:** [Tính đầy đủ và ước lượng](./73_methods_of_evaluating_estimators.md#node-8bbly0i)
 
 <br>
 
@@ -3224,7 +3224,7 @@
 >
 > Kết luận P_p(g(T) = 0) = 1 với mọi p. nên T là complete statistic
 
-**🔗 See also:** [Chứng minh PDF thống kê thứ tự](#node-1zc19ro)
+**🔗 See also:** [Chứng minh PDF thống kê thứ tự](./54_order_statistic.md#node-1zc19ro)
 
 <br>
 
