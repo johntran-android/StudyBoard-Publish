@@ -50,7 +50,7 @@
 
 <a id="node-xccy5or"></a>
 
-### Sai số tuyệt đối và tương đối
+### Absolute and Relative Error
 
 <p align="center"><kbd><img src="assets/lu67wns1kle.png" width="80%"></kbd></p>
 
