@@ -425,7 +425,7 @@ interval Estimators
 > cách làm equal α split (tức là chặt bỏ khúc đầu và khúc sau nơi có diện
 > tích = α/2)  sẽ đều cho ra đoạn optimal length.
 
-**🔗 See also:** [Khoảng tin cậy đảo ngược LRT](#node-jw4zng6)
+**🔗 See also:** [Khoảng tin cậy đảo ngược LRT](./92_methods_of_finding_interval_estimators.md#node-jw4zng6)
 
 <br>
 
@@ -699,7 +699,7 @@ interval Estimators
 > Vậy, mục đích của gs là kết nối theorem đó với việc quả thật nó khiến ta có kì
 > vọng của interval length nhỏ nhất trong bài toán cụ thể này.
 
-**🔗 See also:** [Phân phối t của Student](#node-isdevob) · [Biến đổi PDF Location-Scale](#node-cs2rm3i)
+**🔗 See also:** [Phân phối t của Student](./53_sampling_from_the_normal_distribution.md#node-isdevob) · [Biến đổi PDF Location-Scale](./35_location_and_scale_families.md#node-cs2rm3i)
 
 <br>
 
@@ -1374,7 +1374,7 @@ interval Estimators
 >
 > P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) ∀θ' < θ.
 
-**🔗 See also:** [H1 và Dạng Tập Tin Cậy](#node-y9cjzgq)
+**🔗 See also:** [H1 và Dạng Tập Tin Cậy](./92_methods_of_finding_interval_estimators.md#node-y9cjzgq)
 
 <br>
 
@@ -1714,7 +1714,7 @@ interval Estimators
 > cách invert một cái 2-sided acceptance region của bài toán testing H0: μ = μ0
 > vs H1: μ khác μ0, mà bài toán toán này KHÔNG TỒN TẠI UMP.
 
-**🔗 See also:** [Kiểm định UMP tham số trung bình](#node-kd3nfb2)
+**🔗 See also:** [Kiểm định UMP tham số trung bình](./83_methods_of_evaluating_test.md#node-kd3nfb2)
 
 <br>
 
@@ -1938,7 +1938,7 @@ interval Estimators
 > = {μ: Xbar - σ z_α/2 ≤ μ ≤ Xbar + σ z_α/2} chính là unbiased 1-α confidence
 > set của μ
 
-**🔗 See also:** [Không tồn tại UMP test](#node-66jeahy)
+**🔗 See also:** [Không tồn tại UMP test](./83_methods_of_evaluating_test.md#node-66jeahy)
 
 <br>
 
@@ -2318,7 +2318,7 @@ interval Estimators
 > ko cói λ như biến ngẫu nhiên mà chỉ là uknonw fixed value (xem link tới 
 > ví dụ 9.2.15
 
-**🔗 See also:** [Khoảng tin cậy Poisson Gamma](#node-ahces3c) · [Khoảng tin cậy Poisson](#node-z5eytsr)
+**🔗 See also:** [Khoảng tin cậy Poisson Gamma](./92_methods_of_finding_interval_estimators.md#node-ahces3c) · [Khoảng tin cậy Poisson](./92_methods_of_finding_interval_estimators.md#node-z5eytsr)
 
 <br>
 
@@ -2518,7 +2518,7 @@ interval Estimators
 >
 > Vậy R(θ, C(**X**)) = b E_θ[Length(C(**X**))] - P_θ(θ ∈ C(**X**))
 
-**🔗 See also:** [Hàm rủi ro ước lượng](#node-qschovu)
+**🔗 See also:** [Hàm rủi ro ước lượng](./73_methods_of_evaluating_estimators.md#node-qschovu)
 
 <br>
 
