@@ -9,6 +9,8 @@ random Sample
 ## 5.6 Generating
 random Sample
 
+**🔗 See also:** [Tạo mẫu ngẫu nhiên](#node-j0pok5k) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-j0pok5k"></a>
@@ -36,6 +38,9 @@ random Sample
 >
 > Thế thì trong phần này, ta sẽ làm ngược lại, đó là ta sẽ quan tâm đến  việc
 > tạo ra (generating) một random sample từ một distribution f(x|θ) cho trước
+
+**🔗 See also:** [5.6 Generating
+random Sample](#node-55zw1r1) · [Xác suất tuổi thọ mũ](#node-pgtqow0)
 
 <br>
 
@@ -149,6 +154,8 @@ random Sample
 > Nhưng ý chính là nếu ta chọn mô phỏng X bởi Γ  distribution thì có thể sẽ không
 > tính được p1 ở dạng close form như thế này
 
+**🔗 See also:** [Tạo mẫu ngẫu nhiên](#node-j0pok5k) · [Phương pháp mô phỏng WLLN](#node-jeizj20)
+
 <br>
 
 <a id="node-jeizj20"></a>
@@ -204,6 +211,8 @@ random Sample
 >
 >
 > (1/h) Σi h(Yi) → Eh(Y) in probability.
+
+**🔗 See also:** [Xác suất tuổi thọ mũ](#node-pgtqow0) · [Ước lượng p2 bằng mô phỏng](#node-cfrpm93) · [Luật số lớn mạnh](#node-0yeml4r)
 
 <br>
 
@@ -298,6 +307,8 @@ random Sample
 >
 > Và đó chính là cách tìm p2 bởi SIMULATION APPROACH
 
+**🔗 See also:** [Phương pháp mô phỏng WLLN](#node-jeizj20) · [Biến đổi Uniform thành phân phối](#node-dwnh42s)
+
 <br>
 
 <a id="node-dwnh42s"></a>
@@ -332,6 +343,8 @@ random Sample
 > Do đó mới nói, bài toán đặt ra thật sự sẽ là: làm sao transforming các
 > random variable uniform thành bộ random variable theo distribution mà ta
 > muốn
+
+**🔗 See also:** [Ước lượng p2 bằng mô phỏng](#node-cfrpm93) · [Biến đổi tích phân xác suất](#node-ezy1q8o)
 
 <br>
 
@@ -489,6 +502,8 @@ random Sample
 >
 > đã đủ kết luận rằng X chính là random variable ~ cdf F. Chứng minh xong
 
+**🔗 See also:** [Biến đổi Uniform thành phân phối](#node-dwnh42s) · [Biến đổi Tích phân Xác suất](#node-lmb6x1x) · [Tính phổ quát của Uniform(0,1)](#node-pxfeoev) · [Biến đổi tích phân xác suất](#node-d806mzg)
+
 <br>
 
 <a id="node-lmb6x1x"></a>
@@ -521,6 +536,8 @@ random Sample
 >
 >
 > Vậy FY_inv(U) = -λ log[1 - U]
+
+**🔗 See also:** [Biến đổi tích phân xác suất](#node-ezy1q8o) · [Tạo biến ngẫu nhiên mũ](#node-bxd38ye)
 
 <br>
 
@@ -604,6 +621,8 @@ random Sample
 > Tương tự với sample mean của Yi, và sample variance của Yi. Đây là minh
 > họa cho thấy rằng, à đúng là  thực tế cho thấy thật sự Yi là ~ expo(λ)
 
+**🔗 See also:** [Biến đổi Tích phân Xác suất](#node-lmb6x1x) · [Hạn chế phương pháp tạo mẫu](#node-9siyt0k) · [Tính nhất quán của phương sai mẫu](#node-0qd6k83)
+
 <br>
 
 <a id="node-9siyt0k"></a>
@@ -627,6 +646,8 @@ random Sample
 > Nhưng ý chính là, néu ko thể tạo ra random variables từ Chi-square bậc
 > lẻ  thì cũng ko thể tạo ra random variable từ NORMAL(0,1). Trong khi cái
 > này là rất quan trọng. Do đó ta cần cách tiếp cận khác
+
+**🔗 See also:** [Tạo biến ngẫu nhiên mũ](#node-bxd38ye) · [Giới hạn Biến đổi Tích phân](#node-bzrfuij)
 
 <br>
 
@@ -701,6 +722,8 @@ random Sample
 >
 >
 > Khi đó không xài cách này được.
+
+**🔗 See also:** [Hạn chế phương pháp tạo mẫu](#node-9siyt0k) · [Chuyển đổi Box-Muller](#node-c43optz)
 
 <br>
 
@@ -924,6 +947,8 @@ random Sample
 >
 > Dĩ nhiên ta sẽ có thể kết luận luôn là X1, X2 ~ normal(0,1) vì (1/√2π) e^(-x1^2) chính là pdf của n(0,1)
 
+**🔗 See also:** [Giới hạn Biến đổi Tích phân](#node-bzrfuij) · [Thuật toán Box-Muller](#node-14eg29f)
+
 <br>
 
 <a id="node-14eg29f"></a>
@@ -937,6 +962,8 @@ random Sample
 > có thể tạo U1, U2 là uniform(0,1) rvs thì thông qua biến đổi X = Rcos θ,
 > Y = R sin θ với R = √(-2 log U1) và θ = 2πU2 thì X,Y chính là hai normal(0,1)
 > Phần chứng minh thì chính là bài tập 5.50 mình vừa làm xong
+
+**🔗 See also:** [Chuyển đổi Box-Muller](#node-c43optz) · [Thuật toán Biến đổi Ngược Rời rạc](#node-jndtn8k)
 
 <br>
 
@@ -1089,6 +1116,8 @@ random Sample
 > vai trò là một giá trị của một random variable với distribution cdf F mong
 > muốn)
 
+**🔗 See also:** [Thuật toán Box-Muller](#node-14eg29f) · [Tạo biến nhị thức](#node-rrpw9m9)
+
 <br>
 
 <a id="node-rrpw9m9"></a>
@@ -1112,6 +1141,8 @@ random Sample
 > đó. Và thực hiện generate uniform(0,1). Để rồi, u nằm trong đoạn nào thì
 > lấy y là mốc trên của đoạn đó
 
+**🔗 See also:** [Thuật toán Biến đổi Ngược Rời rạc](#node-jndtn8k) · [Phương pháp bootstrap tham số](#node-wyh1gue)
+
 <br>
 
 <a id="node-wyh1gue"></a>
@@ -1119,6 +1150,8 @@ random Sample
 - **Phương pháp bootstrap tham số**
 
 <p align="center"><kbd><img src="assets/4x3znnzcnfp.png" width="80%"></kbd></p>
+
+**🔗 See also:** [Tạo biến nhị thức](#node-rrpw9m9) · [Phân phối trung bình mẫu Poisson](#node-qmu12n8)
 
 <br>
 
@@ -1469,6 +1502,8 @@ random Sample
 > nói trên, là distribution của Xbar sẽ xấp xỉ distribution của W, hay Xbar hành xử
 > gần giống W, là một n(λ, √(λ/n))
 
+**🔗 See also:** [Phương pháp bootstrap tham số](#node-wyh1gue) · [Phân phối trung bình mẫu](#node-p6egxsa) · [Phân phối trung bình mẫu](#node-c034x4w) · [Phân phối thống kê hàm mũ](#node-h84h2nr)
+
 <br>
 
 <a id="node-p6egxsa"></a>
@@ -1479,6 +1514,8 @@ random Sample
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Phân phối trung bình mẫu Poisson](#node-qmu12n8) · [Mô phỏng Poisson ước lượng S^2](#node-ezxhixg)
 
 <br>
 
@@ -1492,6 +1529,8 @@ random Sample
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Phân phối trung bình mẫu](#node-p6egxsa) · [Thuật toán Accept/Reject](#node-aebauln)
 
 <br>
 
@@ -1980,6 +2019,8 @@ random Sample
 >
 > P((X,Y) ∈ A) = ∫∫A fX,Y(x,y)dxdy
 
+**🔗 See also:** [Mô phỏng Poisson ước lượng S^2](#node-ezxhixg) · [Chọn c tối ưu](#node-kg24ph1) · [Giải thích PDF biến liên tục](#node-jprf5jo) · [Chứng minh P(X=x)=0](#node-29g5dq1)
+
 <br>
 
 <a id="node-kg24ph1"></a>
@@ -2106,6 +2147,8 @@ random Sample
 > Vì sao phải từ max y fY(y) mà ko thể thấp hơn: là vì khi đó sẽ có những 
 > U < fY(V) nhưng không thể xuất hiện (vì range từ 0 đến c < max y fY(y))
 
+**🔗 See also:** [Thuật toán Accept/Reject](#node-aebauln) · [Thuật toán Chấp nhận/Bác bỏ khái quát](#node-vntq710)
+
 <br>
 
 <a id="node-vntq710"></a>
@@ -2198,6 +2241,8 @@ random Sample
 > sẽ ít xuất hiện hơn nhiều. Và khi đó, p lại nhỏ, cái hay là chỗ này, khiến
 > xác suất accept nhỏ, ⇨ xác suất reject cao.
 
+**🔗 See also:** [Chọn c tối ưu](#node-kg24ph1) · [Lấy mẫu chấp nhận-loại bỏ](#node-7252yk6)
+
 <br>
 
 <a id="node-7252yk6"></a>
@@ -2237,6 +2282,8 @@ random Sample
 >
 > Kết qủa là cái đám candidate được accept sẽ y như được sinh ra từ ~ fY
 > vậy
+
+**🔗 See also:** [Thuật toán Chấp nhận/Bác bỏ khái quát](#node-vntq710) · [Thuật toán chấp nhận-loại bỏ](#node-h4i98x5)
 
 <br>
 
@@ -2375,6 +2422,8 @@ random Sample
 >
 > Như vậy kết quả là FY(y) ⇨ chứng minh xong
 
+**🔗 See also:** [Lấy mẫu chấp nhận-loại bỏ](#node-7252yk6) · [M và xác suất dừng](#node-77vxakc)
+
 <br>
 
 <a id="node-77vxakc"></a>
@@ -2390,6 +2439,8 @@ random Sample
 >
 > Ta cũng suy ra M = 1 / P(U ≤ m(V)), tức là 1 / P(Stop) vì điều kiện để 
 > stop, tức accept, chính là U ≤ m(V)
+
+**🔗 See also:** [Thuật toán chấp nhận-loại bỏ](#node-h4i98x5) · [Tạo biến Beta Accept/Reject](#node-6wwbqn3)
 
 <br>
 
@@ -2415,6 +2466,8 @@ random Sample
 > phí để mà có được V, từ β(2,6) nữa. Bởi việc tạo được V từ distrib này
 > cũng lại là vấn đề, cũng phải dùng cách thức indirect để tạo từ (U,W) với
 > W ~ uniform chẳng hạn.
+
+**🔗 See also:** [M và xác suất dừng](#node-77vxakc) · [Accept/Reject: Điều kiện M](#node-d508j5b)
 
 <br>
 
@@ -2450,6 +2503,8 @@ random Sample
 >
 > Do đó lúc này ta sẽ cần thuật toán khác, gọi là Markov Chain Monte Carlo
 
+**🔗 See also:** [Tạo biến Beta Accept/Reject](#node-6wwbqn3) · [Thuật toán Metropolis](#node-igf6ddy)
+
 <br>
 
 <a id="node-igf6ddy"></a>
@@ -2466,6 +2521,8 @@ random Sample
 >
 > QUAY LẠI SAU
 
+**🔗 See also:** [Accept/Reject: Điều kiện M](#node-d508j5b) · [Định lý Giới hạn Trung tâm](#node-1hwqtrw)
+
 <br>
 
 <a id="node-1hwqtrw"></a>
@@ -2476,6 +2533,8 @@ random Sample
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Thuật toán Metropolis](#node-igf6ddy) · [Độ lệch của S^2](#node-m2r8vrl)
 
 <br>
 
@@ -2490,6 +2549,8 @@ random Sample
 > [!NOTE]
 > QUAY LẠI SAU
 
+**🔗 See also:** [Định lý Giới hạn Trung tâm](#node-1hwqtrw) · [Bất đẳng thức Chebychev](#node-1evcnis)
+
 <br>
 
 <a id="node-1evcnis"></a>
@@ -2500,6 +2561,8 @@ random Sample
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Độ lệch của S^2](#node-m2r8vrl) · [Luật số lớn mạnh](#node-voy01dh)
 
 <br>
 
@@ -2514,6 +2577,8 @@ random Sample
 > [!NOTE]
 > QUAY LẠI SAU
 
+**🔗 See also:** [Bất đẳng thức Chebychev](#node-1evcnis)
+
 <br>
 
 <a id="node-kshuy97"></a>
@@ -2524,6 +2589,8 @@ random Sample
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Luật số lớn mạnh](#node-voy01dh)
 
 <br>
 
