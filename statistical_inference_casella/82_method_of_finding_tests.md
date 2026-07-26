@@ -119,7 +119,7 @@
 > LIKELIHOOD RATIO TEST STATISTIC VỚI MỘT NGƯỠNG c NÀO ĐÓ
 > TRONG [0,1]**, để rồi nếu λ(**x**) ≤ c → reject H0 và ngược lại.
 
-**🔗 See also:** [Quan hệ T(x) và λ(x)](#node-oaiy187)
+**🔗 See also:** [Quan hệ T(x) và λ(x)](./83_methods_of_evaluating_test.md#node-oaiy187)
 
 <br>
 
@@ -290,7 +290,7 @@
 > ví dụ 7.2.5 ta đã biết θ^_mle(**X**) chính là Xbar ⇨ mẫu số là L(θ^_mle|**x**)
 > = L(Xbar|**x**)
 
-**🔗 See also:** [Kiểm định tỉ số khả dĩ cỡ α](#node-8t9g9rt)
+**🔗 See also:** [Kiểm định tỉ số khả dĩ cỡ α](./83_methods_of_evaluating_test.md#node-8t9g9rt)
 
 <br>
 
@@ -535,7 +535,7 @@
 > Do đó sách ghi là L(θ|**x**) = e^(-Σixi+nθ) khi x(1) ≥ θ và = 0 khi x(1) < θ 
 > là vậy.
 
-**🔗 See also:** [Ảnh hưởng Θ0 trong kiểm định](#node-csqvj7r)
+**🔗 See also:** [Ảnh hưởng Θ0 trong kiểm định](./83_methods_of_evaluating_test.md#node-csqvj7r)
 
 <br>
 
@@ -690,7 +690,7 @@
 > tức min_i Xi và những bài trước (xem link) ta đã biết các order statistic đều là 
 > sufficient statistic.
 
-**🔗 See also:** [Thống kê đủ: Giảm chiều dữ liệu](#node-n7hexnk)
+**🔗 See also:** [Thống kê đủ: Giảm chiều dữ liệu](./62_the_sufficient_principle.md#node-n7hexnk)
 
 <br>
 
@@ -968,7 +968,7 @@
 >
 > Chứng minh xong.
 
-**🔗 See also:** [Định lý Factorization](#node-dyi91g8)
+**🔗 See also:** [Định lý Factorization](./62_the_sufficient_principle.md#node-dyi91g8)
 
 <br>
 
@@ -1378,7 +1378,7 @@
 >
 > Nếu μ = θ0 thì cái rule trở thành: accept H0 khi xbar ≤ θ0 và ngược lại.
 
-**🔗 See also:** [Ước lượng Bayes phân phối chuẩn](#node-5ldrh78) · [Ước lượng Bayes chuẩn](#node-vscj9eh)
+**🔗 See also:** [Ước lượng Bayes phân phối chuẩn](./72_method_of_finding_estimators.md#node-5ldrh78) · [Ước lượng Bayes chuẩn](./73_methods_of_evaluating_estimators.md#node-vscj9eh)
 
 <br>
 
@@ -1892,7 +1892,7 @@
 >
 > như đã nói ở ví dụ 8.2.6
 
-**🔗 See also:** [LRT với tham số gây nhiễu](#node-elajwsz) · [Phân phối và biến động trung bình mẫu](#node-153vzn2) · [Kiểm định hợp-giao cỡ α](#node-aruspge) · [Quan hệ UIT-LRT hai phía](#node-27dn67w)
+**🔗 See also:** [LRT với tham số gây nhiễu](#node-elajwsz) · [Phân phối và biến động trung bình mẫu](./53_sampling_from_the_normal_distribution.md#node-153vzn2) · [Kiểm định hợp-giao cỡ α](./83_methods_of_evaluating_test.md#node-aruspge) · [Quan hệ UIT-LRT hai phía](./83_methods_of_evaluating_test.md#node-27dn67w)
 
 <br>
 
@@ -1992,7 +1992,7 @@
 > Như vậy mới nói là Union Intersection Test xây dựng bởi 2 cái one-sided t test
 > thì chính là / equivalent với cái LRT của bài toán 2-sided test
 
-**🔗 See also:** [Kiểm định hợp-giao cỡ α](#node-aruspge)
+**🔗 See also:** [Kiểm định hợp-giao cỡ α](./83_methods_of_evaluating_test.md#node-aruspge)
 
 <br>
 
