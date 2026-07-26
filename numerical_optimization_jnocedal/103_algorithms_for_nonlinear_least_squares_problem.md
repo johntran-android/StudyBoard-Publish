@@ -1,6 +1,6 @@
 # 10.3 Algorithms for nonlinear least-squares problem
 
-📊 **Progress:** `10` Notes | `13` Screenshots | `7` AI Reviews
+📊 **Progress:** `11` Notes | `14` Screenshots | `7` AI Reviews
 
 ---
 <a id="node-i8zrnvn"></a>
@@ -612,6 +612,177 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Bản ghi chú của bạn cực kỳ chi tiết và chính xác, đặc biệt là phần giải thích sâu sắc về nhược điểm của Gauss-Newton khi Jacobian bị thiếu hạng và sự khác biệt giữa line search với trust region. Sự phân tích kỹ lưỡng về lý do tại sao Jk rank deficient lại gây ra vấn đề cho thuật toán là một điểm cộng lớn.
+
+<br>
+
+<a id="node-92ckevt"></a>
+
+- **Lemma 10.2**
+
+<p align="center"><kbd><img src="assets/anf3s2nsgzn.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đây là dịp để ôn lại về theorem 4.1 của Trust Region method mà cũng là dịp để ôn lại kiến thức về KKT conditions đã học trong S.Boyd.
+>
+>
+>
+> Bài toán tổng quát là bài toán tối ưu có ràng buộc bất đẳng thức và ràng buộc đẳng thức:
+>
+>
+>
+> minimize f0(x) s.t fi(x) ≤ 0 i=1,2,... hj(x) = 0, j=1,2,...
+>
+>
+>
+> Nghiệm của bài toán này sẽ là x thỏa: thuộc domain của f0, f1, f2,...h1, h2,...(cái này gọi là ràng buộc ẩn (implicit constraint), thuộc feasible set (thỏa các constraint) và giúp hàm f0(x) có giá trị nhỏ nhất.
+>
+>
+>
+> Mình hiểu Lagrangian function là cách ta tích hợp constraint vào hàm objective L(x, λ, v) = f0(x) + Σi λifi(x) + Σj νjhj(x) và giới thiệu thêm constraint: λi ≥ 0, gọi là dual constraint.
+>
+>
+>
+> Thế thì lập luận tiếp theo như sau:
+>
+>
+>
+> Bằng cách minimize (over x) L(x, λ, ν), ta sẽ có function không phụ thuộc x, đặt là g(λ, ν), gọi là dual function:
+>
+>
+>
+> g(λ, ν) = inf_x L(x, λ, ν)
+>
+>
+>
+> Thế thì, vì định nghĩa của g, nên dĩ nhiên g(λ, ν) ≤ L(x, λ, ν) ∀x, và do đó, dĩ nhiên phải đúng với x **(solution của bài toán đang tìm, là điểm thỏa constraint và minimize hàm f0(x)):
+>
+>
+>
+> g(λ, ν) ≤ L(x**, λ, ν), và L(x**, λ, ν) = f0(x**) + Σi λifi(x**) + Σj νjhj(x**)
+>
+>
+>
+> Và hơn nữa, vì x **phải thỏa constraint nên fi(x**) ≤ 0, với λi ≥ 0 ∀i thì Σi λi fi(x**) ≤ 0, hj(x**) = 0 ∀j ⇨ Σj νj hj(x) = 0
+>
+>
+>
+> Do đó:
+>
+>
+>
+> g(λ, ν) ≤ L(x**, λ, ν) = f0(x**) + Σi λifi(x**) + Σj νjhj(x**) ≤ f0(x**), và cái này người ta đặt là p**: primal optimal
+>
+>
+>
+> Tiếp theo, ta mới xét bài toán gọi λ **và ν** là nghiệm của bài toán maximize λ, ν g(λ, ν), khi đó ta có:
+>
+>
+>
+> g(λ, ν) ≤ g(λ**, ν**) ∀λ, ν, và 'cái này người ta gọi là d**, dual optimal
+>
+>
+>
+> Thế thì, vì g(λ, ν) ≤ L(x**, λ, ν) ∀λ, ν nên dĩ nhiên ta cũng có:
+>
+>
+>
+> g(λ**, ν**) ≤ L(x**, λ**, ν**)
+>
+>
+>
+> Như vậy ta có quan hệ:
+>
+>
+>
+> g(λ, ν) ≤ g(λ**, ν**) = d** ≤ L(x**, λ**, ν**) = f0(x**) + Σi λ**ifi(x**) + Σj ν**jhj(x**) ≤ f0(x**) = p**
+>
+>
+>
+> Và p **- d** gọi là duality gap, trong bài toán lồi, nếu thỏa các điều kiện gọi là (quên tên rồi?) ví dụ Slater condition, thì ta sẽ d **= p**
+>
+>
+>
+> Và lúc này sẽ dẫn đến:
+>
+>
+>
+> g(λ, ν) ≤ g(λ**, ν**) = d **= L(x**, λ**, ν**) = f0(x**) + Σi λ**ifi(x**) + Σj ν**jhj(x**) = f0(x**) = p **Tức là, ta có hai dấu bằng xảy ra:
+>
+>
+>
+> Dấu bằng thứ nhất: f0(x**) + Σi λ**ifi(x**) + Σj ν**jhj(x**) = f0(x**)
+>
+>
+>
+> Vốn dĩ Σj ν**jhj(x**) đã bằng 0
+>
+>
+>
+> nên thực ra ta có f0(x**) + Σi λ**ifi(x**) = f0(x**), và điều này suy ra: Σi λ**ifi(x**) = 0. Đây gọi là complementary slackness condition:
+>
+>
+>
+> vì λ**i ≥ 0, nên điều kiện này đồng nghĩa: nếu fi(x**) &lt; 0, thì λ**i = 0. nếu λ**i &gt; 0 thì fi(x**) = 0.
+>
+>
+>
+> Dấu bằng thứ hai: g(λ**, ν**) = d **= L(x**, λ**, ν**) = f0(x**) + Σi λ**ifi(x**) + Σj ν**jhj(x**): Để dễ hiểu hơn, ta nhớ lại rằng định nghĩa của dual function g là:
+>
+>
+>
+> g(λ, ν) = inf_x L(x, λ, ν). Và do định nghĩa này nên g(λ, v) ≤ L(x, λ, ν) ∀x, λ, ν. Và thay λ**, ν **vào (vì như đã nói, nó đúng với mọi λ, ν mà) ta có:
+>
+>
+>
+> g(λ**, ν**) ≤ L(x, λ**, ν**) ∀x
+>
+>
+>
+> Vậy mà với x** và có dấu bằng xảy ra, g(λ**, ν**) = L(x**, λ**, ν**) thì có nghĩa là: L(x**, λ**, ν**) = inf_x L(x**, λ**, ν**), và như vậy có nghĩa là: 
+>
+>
+>
+> x** chính là minimizer của L(x, λ**, ν**).
+>
+>
+>
+> Và vì vậy, gradient d/dx L(x, λ**, ν**)|x=x **phải = 0, đây là stationary condition:
+>
+>
+>
+> ∇\_x L(x, λ**, ν**) = 0.
+>
+>
+>
+> Cuối cùng, ta kể thêm các điều kiện như: 
+>
+>
+>
+> i) dual constraint λi** ≥ 0
+>
+>
+>
+> ii) primal constraint fi(x) ≤ 0 i=1,2.., hj(x) = 0 j=1,2,...
+>
+>
+>
+> Tổng hợp lại chính là KKT conditions:
+>
+>
+>
+> Stationary condition: ∇\_x L(x, λ**, ν**) = 0.
+>
+>
+>
+> Complementary slackness condition: Σi λ**ifi(x**) = 0
+>
+>
+>
+> Dual constraint: λi\* ≥ 0, i=1,2...
+>
+>
+>
+> Primal constraint: fi(x) ≤ 0 i=1,2.., hj(x) = 0 j=1,2,...
 
 <br>
 
