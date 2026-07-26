@@ -7,8 +7,6 @@
 
 ## 5.5 Convergence Concepts
 
-**🔗 See also:** [Khái niệm hội tụ](#node-0pl1tf2) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-0pl1tf2"></a>
@@ -34,8 +32,6 @@
 >
 > Và ta sẽ quan tâm **3 loại convergence**. Và cụ thể, ta sẽ xem xét hành vi
 > của Xn_bar, **sample mean** của mẫu size n
-
-**🔗 See also:** [5.5 Convergence Concepts](#node-tqtc86o) · [Hội tụ xác suất](#node-ybskg1i)
 
 <br>
 
@@ -66,7 +62,7 @@
 > variable hội tụ về một constant, trong đó **cái random variable mà ta quan
 > tâm** là **sample mean**
 
-**🔗 See also:** [Khái niệm hội tụ](#node-0pl1tf2) · [Luật số lớn yếu](#node-j5m3pa1) · [Hội tụ hầu chắc](#node-jayixv4) · [Hội tụ xác suất thống kê](#node-4pzd0to)
+**🔗 See also:** [Hội tụ hầu chắc](#node-jayixv4) · [Hội tụ xác suất thống kê](#node-4pzd0to)
 
 <br>
 
@@ -189,7 +185,7 @@
 > Đơn giản là vì xác suất thì chỉ trong  range 0,1, mà cái P này ≥ 1 cái tiến tới 1
 > thì P chắc chắn cũng phải → 1, chứ ko thể tiến tới số nào nhỏ hơn 1 được,
 
-**🔗 See also:** [Hội tụ xác suất](#node-ybskg1i) · [WLLN và nhất quán](#node-fvhedp5) · [Bất đẳng thức Markov và chứng minh](#node-u9zgfoi) · [Tính chất trung bình phương sai mẫu](#node-411jdqg)
+**🔗 See also:** [Bất đẳng thức Markov và chứng minh](#node-u9zgfoi) · [Tính chất trung bình phương sai mẫu](#node-411jdqg)
 
 <br>
 
@@ -209,8 +205,6 @@
 >
 >
 > Một tính chất được tóm tắt bới WLLN đó là **một chuỗi giá trị của statistic** ví dụ như sample mean của random sample size n **sẽ tiến tới hằng số** khi **n → inf**, được đặt tên là tính **NHẤT QUÁN - CONSISTENCY** mà ta sẽ gặp lại trong chương 7
-
-**🔗 See also:** [Luật số lớn yếu](#node-j5m3pa1) · [Tính nhất quán của phương sai mẫu](#node-0qd6k83)
 
 <br>
 
@@ -274,7 +268,7 @@
 >
 > và như vậy Var(Sn^2) phải → 0
 
-**🔗 See also:** [WLLN và nhất quán](#node-fvhedp5) · [Định lý ánh xạ liên tục](#node-4nopzwp) · [Tạo biến ngẫu nhiên mũ](#node-bxd38ye)
+**🔗 See also:** [Tạo biến ngẫu nhiên mũ](#node-bxd38ye)
 
 <br>
 
@@ -292,8 +286,6 @@
 >
 > thì với hàm h là hàm liên tục, h(X1),  h(X2) sẽ converge in probability về h(X)
 
-**🔗 See also:** [Tính nhất quán của phương sai mẫu](#node-0qd6k83) · [Tính nhất quán và chệch S](#node-5z4hn2f)
-
 <br>
 
 <a id="node-5z4hn2f"></a>
@@ -308,8 +300,6 @@
 >
 >
 > Nhưng giáo sư lưu ý, ta phát biểu trên là NẾU Sn^2 là consistent estimator của σ^2, NHƯNG THỰC TẾ THÌ Sn^2 LẠI LÀ BIASED ESTIMATOR CỦA σ^2 nhưng sự biased này biến mất asymtotically
-
-**🔗 See also:** [Định lý ánh xạ liên tục](#node-4nopzwp) · [Hội tụ hầu chắc](#node-jayixv4)
 
 <br>
 
@@ -346,7 +336,7 @@
 >
 > lim n → inf Xn(s) = X(s)
 
-**🔗 See also:** [Tính nhất quán và chệch S](#node-5z4hn2f) · [Hội tụ hầu chắc](#node-1z9xvgn) · [Hội tụ xác suất](#node-ybskg1i)
+**🔗 See also:** [Hội tụ xác suất](#node-ybskg1i)
 
 <br>
 
@@ -394,8 +384,6 @@
 >
 >
 > Như vậy, ta nói Xn converge almost surely tới X
-
-**🔗 See also:** [Hội tụ hầu chắc](#node-jayixv4) · [Hội tụ xác suất không hầu chắc](#node-58ihfld)
 
 <br>
 
@@ -480,8 +468,6 @@
 >
 > Xn converge in probability to X
 
-**🔗 See also:** [Hội tụ hầu chắc](#node-1z9xvgn) · [Hội tụ hầu chắc chắn](#node-mmaekd6)
-
 <br>
 
 <a id="node-mmaekd6"></a>
@@ -561,8 +547,6 @@
 >
 > nên ko thỏa P(lim n → inf |Xn - X| < ε) = 1
 
-**🔗 See also:** [Hội tụ xác suất không hầu chắc](#node-58ihfld) · [Định luật số lớn mạnh](#node-vfj18l8)
-
 <br>
 
 <a id="node-vfj18l8"></a>
@@ -591,8 +575,6 @@
 > Nên ở đây với bối cảnh ta dùng convergence almost surely thì ta có Strong
 > Law of Large number
 
-**🔗 See also:** [Hội tụ hầu chắc chắn](#node-mmaekd6) · [Luật số lớn mạnh](#node-0yeml4r)
-
 <br>
 
 <a id="node-0yeml4r"></a>
@@ -616,7 +598,7 @@
 >
 > tức Xnbar converge almost surely tới μ
 
-**🔗 See also:** [Định luật số lớn mạnh](#node-vfj18l8) · [Hội tụ theo phân phối](#node-ok89lxf) · [Phương pháp mô phỏng WLLN](#node-jeizj20)
+**🔗 See also:** [Phương pháp mô phỏng WLLN](#node-jeizj20)
 
 <br>
 
@@ -634,8 +616,6 @@
 > Định nghiã của nó: Ta gọi chuỗi các random variable X1,X2,.... converge
 > in distribution đến một random variable X nếu lim n → inf FXn(x) = FX(x)
 > tại mọi điểm x mà FX(s) liên tục
-
-**🔗 See also:** [Luật số lớn mạnh](#node-0yeml4r) · [X(n) hội tụ xác suất](#node-4c1bzlu)
 
 <br>
 
@@ -714,8 +694,6 @@
 >
 > Vậy đúng là X(n) converge về 1 in probability
 
-**🔗 See also:** [Hội tụ theo phân phối](#node-ok89lxf) · [Hội tụ xác suất và phân phối](#node-dhadrsn)
-
 <br>
 
 <a id="node-dhadrsn"></a>
@@ -779,8 +757,6 @@
 >
 > Nhưng n(1 - X(n)) cũng converge in distribution về expo(1) nữa
 
-**🔗 See also:** [X(n) hội tụ xác suất](#node-4c1bzlu) · [Hội tụ xác suất sang phân phối](#node-f944h0i)
-
 <br>
 
 <a id="node-f944h0i"></a>
@@ -803,8 +779,6 @@
 >
 >
 > Tuy nhiên, mặc dù bản chất khác biệt, Định lý 5.5.12 phát biểu rằng **nếu một chuỗi các biến ngẫu nhiên hội tụ theo xác suất (in probability) về một biến ngẫu nhiên X** (tức là chuỗi X1, X2, ..., Xn hội tụ về X theo xác suất), thì điều này cũng **đồng thời hàm ý sự hội tụ theo phân phối (in distribution)**. Nói một cách nôm na, nếu một chuỗi các biến ngẫu nhiên hội tụ về một biến ngẫu nhiên, thì nó cũng hội tụ theo phân phối.
-
-**🔗 See also:** [Hội tụ xác suất và phân phối](#node-dhadrsn) · [Hội tụ xác suất và phân phối](#node-wqcasc6)
 
 <br>
 
@@ -833,7 +807,7 @@
 >
 > Và theorem này mào đầu cho một thoerem quan trọng bậc nhất trong statistic Central Limit Theorem
 
-**🔗 See also:** [Hội tụ xác suất sang phân phối](#node-f944h0i) · [CLT - Định lý giới hạn trung tâm](#node-32vkewg) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr)
+**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr)
 
 <br>
 
@@ -870,7 +844,7 @@
 >
 > **√n (Xnbar - μ) / σ hội tụ phân phối về standard normal random variable**
 
-**🔗 See also:** [Hội tụ xác suất và phân phối](#node-wqcasc6) · [Định lý Giới hạn Trung tâm](#node-efueime) · [Phương pháp Delta 1/Xbar](#node-1zfrnml) · [Stronger Central Limit Theorem](#node-yngnkwh) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr)
+**🔗 See also:** [Phương pháp Delta 1/Xbar](#node-1zfrnml) · [Stronger Central Limit Theorem](#node-yngnkwh) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr)
 
 <br>
 
@@ -895,7 +869,7 @@
 >
 > Cuối cũng, với **sức mạnh tính toán ngày càng lớn thì tầm quan trọng của theorem này ngày càng ít**
 
-**🔗 See also:** [CLT - Định lý giới hạn trung tâm](#node-32vkewg) · [Proof of Theorem 5.5.14](#node-yzn3dv1) · [MGF của aX+b](#node-4ypjp34) · [Các định lý độc lập n biến](#node-151qbd1)
+**🔗 See also:** [MGF của aX+b](#node-4ypjp34) · [Các định lý độc lập n biến](#node-151qbd1)
 
 <br>
 
@@ -1048,7 +1022,7 @@
 >
 > ... = \[MY(t /√n)\]^n
 
-**🔗 See also:** [Định lý Giới hạn Trung tâm](#node-efueime) · [Khai triển Taylor MGF Moment](#node-o94eaek) · [Biến đổi PDF Location-Scale](#node-cs2rm3i) · [MGF của aX+b](#node-4ypjp34)
+**🔗 See also:** [Biến đổi PDF Location-Scale](#node-cs2rm3i) · [MGF của aX+b](#node-4ypjp34)
 
 <br>
 
@@ -1087,8 +1061,6 @@
 >
 > Vậy MY(t/√n) = 1 + (t/√n)^2/2! + RY(t/√n) với RY là các term còn lại của Taylor expansion (là sao, là vì ta đã biết 3 cái moment đầu tiên nên thay vào ta có 3 hạng tử đầu tiên như vầy, còn các hạng tử khác, gom vô thành hàm RY)
 
-**🔗 See also:** [Proof of Theorem 5.5.14](#node-yzn3dv1) · [Định lý Taylor](#node-pv5v3rp)
-
 <br>
 
 <a id="node-pv5v3rp"></a>
@@ -1103,8 +1075,6 @@
 >
 >
 > QUAY LẠI SAU
-
-**🔗 See also:** [Khai triển Taylor MGF Moment](#node-o94eaek) · [Stronger Central Limit Theorem](#node-yngnkwh)
 
 <br>
 
@@ -1131,7 +1101,7 @@
 >
 > Cái CLT này cho ta một công cụ hữu ích, **all-purpose approximation**, nhưng phải lưu ý rằng **chất lượng của approximation này phải xem lại**. Trong thực tế, nó luôn có ích trong việc đưa ra những tính toán sơ bộ đầu tiên
 
-**🔗 See also:** [Định lý Taylor](#node-pv5v3rp) · [Xấp xỉ Chuẩn Nhị thức Âm](#node-z9v0fvw) · [CLT - Định lý giới hạn trung tâm](#node-32vkewg) · [MLE of e-lambda with Delta Method](#node-jiyzyog)
+**🔗 See also:** [CLT - Định lý giới hạn trung tâm](#node-32vkewg) · [MLE of e-lambda with Delta Method](#node-jiyzyog)
 
 <br>
 
@@ -1240,8 +1210,6 @@
 >
 > QUAY LẠI SAU
 
-**🔗 See also:** [Stronger Central Limit Theorem](#node-yngnkwh) · [Định lý Slutsky](#node-uwbmbt7)
-
 <br>
 
 <a id="node-uwbmbt7"></a>
@@ -1269,7 +1237,7 @@
 >
 > Gs cũng không chứng minh theorem này
 
-**🔗 See also:** [Xấp xỉ Chuẩn Nhị thức Âm](#node-z9v0fvw) · [Ước lượng Odds và Delta Method](#node-q6etf0o) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr)
+**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](#node-n1mqtrr)
 
 <br>
 
@@ -1321,8 +1289,6 @@
 >
 >
 > Thế thì, đại ý là, **DELTA METHOD** sẽ giúp trong việc này
-
-**🔗 See also:** [Định lý Slutsky](#node-uwbmbt7) · [Khai triển Taylor](#node-kd4hd37)
 
 <br>
 
@@ -1501,8 +1467,6 @@
 >
 > ⇔ g(x) - Tr(x) = ∫a:x \[g^(r+1)(t)/r!\] (x-t)^r dt
 
-**🔗 See also:** [Ước lượng Odds và Delta Method](#node-q6etf0o) · [Xấp xỉ kỳ vọng Taylor](#node-o8nor00)
-
 <br>
 
 <a id="node-o8nor00"></a>
@@ -1626,7 +1590,7 @@
 >
 > Chú ý, vì ta đang dùng xấp xỉ bậc 1 cho g, nên cái ta có chỉ là approximated của E\_**θ** g(**T**).
 
-**🔗 See also:** [Khai triển Taylor](#node-kd4hd37) · [Công thức phương sai hàm](#node-pkuyin2) · [Xấp xỉ Mean Variance Tỉ số](#node-oj905vr)
+**🔗 See also:** [Xấp xỉ Mean Variance Tỉ số](#node-oj905vr)
 
 <br>
 
@@ -1719,8 +1683,6 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Ghi chú giải thích từng bước đạo hàm công thức phương sai xấp xỉ một cách cực kỳ chi tiết, rõ ràng và chính xác, bao gồm cả những giả định quan trọng. Phần giải thích về tính hữu ích của công thức cũng được trình bày rất tốt, thể hiện sự hiểu biết sâu sắc.
-
-**🔗 See also:** [Xấp xỉ kỳ vọng Taylor](#node-o8nor00) · [Phương sai Tỷ lệ Odd](#node-44z7xj9)
 
 <br>
 
@@ -1850,7 +1812,7 @@
 >
 > Ghi chú của bạn cực kỳ chính xác và có chiều sâu vượt trội so với nội dung hình ảnh, giải thích cặn kẽ từng bước và cơ sở lý thuyết. Để nâng cao hơn nữa, bạn có thể cân nhắc nêu rõ tên "phương pháp Delta" ngay từ đầu.
 
-**🔗 See also:** [Công thức phương sai hàm](#node-pkuyin2) · [Xấp xỉ kì vọng phương sai](#node-mpw7a57) · [Phương sai tiệm cận và giới hạn](#node-62aug4x)
+**🔗 See also:** [Phương sai tiệm cận và giới hạn](#node-62aug4x)
 
 <br>
 
@@ -2043,8 +2005,6 @@
 >
 > Và cái chính muốn nói là, cũng giống như ở ví dụ trước, ta có được cái khung, rằng Var \[p^/(1-p^)\] ≈ p/\[n(1-p)^3\], đặng từ đó mà có thể làm tiếp (lắp p^ vào thay cho p), thì ở đây cũng vậy, kết quả từ Taylor expansion cho ta rằng, nếu ta quyết định dùng g(X) để estimate cho g(μ) thì ta có thì đi tính Var\[g(X)\] dựa theo cái khung là g'(μ)^2 Var(X).
 
-**🔗 See also:** [Phương sai Tỷ lệ Odd](#node-44z7xj9) · [Phương pháp Delta](#node-lo99k23)
-
 <br>
 
 <a id="node-lo99k23"></a>
@@ -2172,7 +2132,7 @@
 >
 > Từ đó kết luận U \~ n(0, g'(θ)^2 × σ^2)
 
-**🔗 See also:** [Xấp xỉ kì vọng phương sai](#node-mpw7a57) · [Phương pháp Delta 1/Xbar](#node-1zfrnml) · [10.1.3 Calculations and Comparisons](#node-iwgmm5t)
+**🔗 See also:** [10.1.3 Calculations and Comparisons](#node-iwgmm5t)
 
 <br>
 
@@ -2257,7 +2217,7 @@
 >
 > Vậy ta có **√n(1/Xbar - 1/μ) → n(0, (1/μ^4) Var X1)** là vậy
 
-**🔗 See also:** [Phương pháp Delta](#node-lo99k23) · [Ước lượng Tham số Slutsky](#node-o60d9cf) · [CLT - Định lý giới hạn trung tâm](#node-32vkewg)
+**🔗 See also:** [CLT - Định lý giới hạn trung tâm](#node-32vkewg)
 
 <br>
 
@@ -2420,8 +2380,6 @@
 >
 > y như cái \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ^2\]
 
-**🔗 See also:** [Phương pháp Delta 1/Xbar](#node-1zfrnml) · [Chia ước lượng phương sai](#node-01ynaew)
-
 <br>
 
 <a id="node-01ynaew"></a>
@@ -2434,8 +2392,6 @@
 > cái này có thể khi học về các phần sau sẽ rõ hơn. Nhưng đại khái là gs đề
 > cập tới việc, bằng cách chia cho ước lượng của variance, (vì ko biết variance
 > thật) thì kết quả trên nó cho ta cơ sở để biện minh cho các kết  luận khác.
-
-**🔗 See also:** [Ước lượng Tham số Slutsky](#node-o60d9cf) · [Delta method bậc hai](#node-0zbphvb)
 
 <br>
 
@@ -2599,8 +2555,6 @@
 >
 > ⇨  n[g(Yn) - g(θ)] →(d) g''(θ) σ^2 Chi-square 1 hay σ^2 g''(θ) / 2 /X_1/^2
 
-**🔗 See also:** [Chia ước lượng phương sai](#node-01ynaew) · [Mở rộng Delta đa biến](#node-ratw2n8)
-
 <br>
 
 <a id="node-ratw2n8"></a>
@@ -2615,8 +2569,6 @@
 >
 >
 > Đại khái là để ta deal với các trường hợp mà ta  cần estimate một tỉ số
-
-**🔗 See also:** [Delta method bậc hai](#node-0zbphvb) · [Đạo hàm riêng tỉ lệ](#node-475o694)
 
 <br>
 
@@ -2642,8 +2594,6 @@
 >
 > Là sao? Thì đơn giản đây là tính đạo hàm riêng (partial derivative) thôi
 > ko có gì khó
-
-**🔗 See also:** [Mở rộng Delta đa biến](#node-ratw2n8) · [Xấp xỉ Mean Variance Tỉ số](#node-oj905vr)
 
 <br>
 
@@ -2702,7 +2652,7 @@
 > của hai normal là một random variable thuộc lại Cauchy. mà ta đã biết nó ko có
 > mean (xem link xanh)
 
-**🔗 See also:** [Đạo hàm riêng tỉ lệ](#node-475o694) · [CLT ước lượng tỉ số](#node-w9x29p6) · [Xấp xỉ kỳ vọng Taylor](#node-o8nor00) · [Đặc điểm phân phối Cauchy](#node-d6kf31i)
+**🔗 See also:** [Xấp xỉ kỳ vọng Taylor](#node-o8nor00) · [Đặc điểm phân phối Cauchy](#node-d6kf31i)
 
 <br>
 
@@ -2753,8 +2703,6 @@
 >
 > ⇨ g(**x**) ≈ g(**μ**) + ∇g(**μ**)T(**x** - **μ**)
 
-**🔗 See also:** [Xấp xỉ Mean Variance Tỉ số](#node-oj905vr) · [Phương pháp Delta Đa biến](#node-7o5yh86)
-
 <br>
 
 <a id="node-7o5yh86"></a>
@@ -2765,8 +2713,6 @@
 
 > [!NOTE]
 > QUAY LẠI SAU
-
-**🔗 See also:** [CLT ước lượng tỉ số](#node-w9x29p6)
 
 <br>
 
