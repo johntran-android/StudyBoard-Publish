@@ -477,7 +477,7 @@ finding Estimators
 > (vì ta biết Σi Yi tức là Σi aiYi với ai = 1, là Chi-square, thì ta đoán Σi aiYi cũng
 > sẽ là Chi-square)
 
-**🔗 See also:** [Bổ đề Chi-square](#node-udtt0nq)
+**🔗 See also:** [Bổ đề Chi-square](./53_sampling_from_the_normal_distribution.md#node-udtt0nq)
 
 <br>
 
@@ -1403,7 +1403,7 @@ finding Estimators
 >
 > Vậy Θ^(**X**)  = Xbar(**X**) chính là MLE
 
-**🔗 See also:** [Tính chất trung bình phương sai mẫu](#node-jhe69j5)
+**🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-jhe69j5)
 
 <br>
 
@@ -2155,7 +2155,7 @@ finding Estimators
 >
 > Hay η_mle, cũng là τ(θ)_mle chính là τ(θ_mle)
 
-**🔗 See also:** [MLE of e-lambda with Delta Method](#node-jiyzyog)
+**🔗 See also:** [MLE of e-lambda with Delta Method](./101_point_estimation.md#node-jiyzyog)
 
 <br>
 
@@ -2622,7 +2622,7 @@ finding Estimators
 > Nhưng ý chính gs nói là có thể thấy tính toán rất dài. Do đó nên hạn chế tính
 > Hessian
 
-**🔗 See also:** [Ước lượng chệch MSE](#node-iyvngjt)
+**🔗 See also:** [Ước lượng chệch MSE](./73_methods_of_evaluating_estimators.md#node-iyvngjt)
 
 <br>
 
@@ -2918,7 +2918,7 @@ finding Estimators
 > observed sample. f(p|y). Và vì nó là một phân phối xác suất, nên để estimate
 >  một điểm giá trị của nó thì lẽ tự nhiên nhất chính là lấy mean.
 
-**🔗 See also:** [Ước lượng Bayes Loss Tuyệt đối](#node-w61d148)
+**🔗 See also:** [Ước lượng Bayes Loss Tuyệt đối](./73_methods_of_evaluating_estimators.md#node-w61d148)
 
 <br>
 
@@ -3293,7 +3293,7 @@ finding Estimators
 >
 > θ^_B(x) = [τ^2 / (τ^2 + σ^2)]x + [σ^2 / (τ^2 + σ^2)]μ
 
-**🔗 See also:** [Ước lượng Bayes chuẩn](#node-vscj9eh) · [Luật quyết định kiểm định Bayesian](#node-zk8yeue) · [Phân phối hậu nghiệm Bayes Normal](#node-s6b012i)
+**🔗 See also:** [Ước lượng Bayes chuẩn](./73_methods_of_evaluating_estimators.md#node-vscj9eh) · [Luật quyết định kiểm định Bayesian](./82_method_of_finding_tests.md#node-zk8yeue) · [Phân phối hậu nghiệm Bayes Normal](./92_methods_of_finding_interval_estimators.md#node-s6b012i)
 
 <br>
 
