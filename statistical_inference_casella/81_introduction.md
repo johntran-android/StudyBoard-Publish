@@ -7,8 +7,6 @@
 
 ## 8.1 Introduction
 
-**🔗 See also:** [Sống còn với Kiểm định giả thuyết](#node-vgua6or) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-vgua6or"></a>
@@ -81,8 +79,6 @@
 >
 > (Gemini)
 
-**🔗 See also:** [8.1 Introduction](#node-30ukzo4) · [Kiểm định giả thuyết thống kê](#node-gr3mhf6)
-
 <br>
 
 <a id="node-gr3mhf6"></a>
@@ -119,8 +115,6 @@
 > Và MỤC TIÊU CỦA HYPOTHESIS TEST, là **ĐƯA RA QUYẾT ĐỊNH RẰNG
 > TRONG HAI GIẢ THUYẾT BÙ TRỪ (complement) NHAU THÌ CÁI NÀO LÀ
 > ĐÚNG**
-
-**🔗 See also:** [Sống còn với Kiểm định giả thuyết](#node-vgua6or) · [Giả thuyết không và đối thuyết](#node-8a7jzag)
 
 <br>
 
@@ -164,8 +158,6 @@
 > Gs nói thêm, bài toán hypothesis testing mà trong đó giả thuyết gắn với
 > chất lượng sản phẩm, thì có tên gọi riêng là acceptance sampling problems
 
-**🔗 See also:** [Kiểm định giả thuyết thống kê](#node-gr3mhf6) · [Định nghĩa kiểm định giả thuyết](#node-ae7hz64)
-
 <br>
 
 <a id="node-ae7hz64"></a>
@@ -203,8 +195,6 @@
 >
 >
 > Vùng còn lại, là những giá trị **x** giúp kết luận H0, gọi là ACCEPTANCE REGION
-
-**🔗 See also:** [Giả thuyết không và đối thuyết](#node-8a7jzag) · [Kiểm định giả thuyết: Khái niệm cơ bản](#node-2cgk98m)
 
 <br>
 
@@ -248,8 +238,6 @@
 >
 > Nói sơ, 8.2 ta sẽ học cách chọn test statistic và rejection region. 8.3 sẽ học
 > về tiêu chí để đánh giá test.
-
-**🔗 See also:** [Định nghĩa kiểm định giả thuyết](#node-ae7hz64)
 
 <br>
 
