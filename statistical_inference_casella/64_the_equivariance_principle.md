@@ -7,6 +7,8 @@
 
 ## 6.4 The Equivariance Principle
 
+**🔗 See also:** [Các nguyên lý nén dữ liệu](#node-3s5h85u) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-3s5h85u"></a>
@@ -54,6 +56,8 @@
 > Còn ở đây, **Equivariance Principle** nói rằng: Nếu thấy T(x) = T(y) thì suy
 > luận về θ từ **x** phải **CÓ QUAN HỆ NÀO ĐÓ** với suy luận về θ từ **y**
 
+**🔗 See also:** [6.4 The Equivariance Principle](#node-sykz8kz) · [Nguyên lý bất biến thang đo](#node-qhldzcs)
+
 <br>
 
 <a id="node-qhldzcs"></a>
@@ -77,6 +81,8 @@
 >
 > Và cái này, theo tác giả là dễ thấy rằng **rất hiển nhiên**, và **nó dễ dàng
 > được chấp  nhận**
+
+**🔗 See also:** [Các nguyên lý nén dữ liệu](#node-3s5h85u) · [Nguyên lý Bất biến Hình thức](#node-mu8r3fm)
 
 <br>
 
@@ -113,6 +119,8 @@
 > Nói chung ta hiểu đại khái là, nguyên lý này nói rằng: Nếu như **hai bài toán 
 > có cùng một cấu trúc toán học, thì việc suy luận phải cùng một quy trình.**
 
+**🔗 See also:** [Nguyên lý bất biến thang đo](#node-qhldzcs) · [Equivariance: Phép đo và Hình thức](#node-iabxfgy)
+
 <br>
 
 <a id="node-iabxfgy"></a>
@@ -126,6 +134,8 @@
 > sao cho mô hình cho **Y có cùng cấu trúc toán học với mô hình cho X
 > thì khi đó quy trình suy luận sẽ có cả tính measurement equivariant
 > và formally equivariant**
+
+**🔗 See also:** [Nguyên lý Bất biến Hình thức](#node-mu8r3fm) · [Ước lượng tham số p](#node-67429qw)
 
 <br>
 
@@ -352,6 +362,8 @@
 >
 > W(**x**) estimate θ ⇨ W(g(x)) estimate gbar(θ) (= θ')
 
+**🔗 See also:** [Equivariance: Phép đo và Hình thức](#node-iabxfgy) · [Lợi ích nguyên lí equivariance](#node-dwegalb)
+
 <br>
 
 <a id="node-dwegalb"></a>
@@ -404,6 +416,8 @@
 >
 > Kiểm tra thử sẽ thấy nó thỏa, ko khó lắm
 
+**🔗 See also:** [Ước lượng tham số p](#node-67429qw) · [Định Nghĩa Nhóm Biến Đổi](#node-j4z5s9s)
+
 <br>
 
 <a id="node-j4z5s9s"></a>
@@ -441,6 +455,8 @@
 >
 >
 > Cuối cùng là identity: e(x) = x cũng chứa trong G_curl.
+
+**🔗 See also:** [Lợi ích nguyên lí equivariance](#node-dwegalb) · [Xác minh nhóm biến đổi](#node-3qm392m)
 
 <br>
 
@@ -494,6 +510,8 @@
 >
 > Nói chung khúc này không có gì khó hiểu, ta verify được 𝐺 = {g1, g2} là một
 > group of transformation
+
+**🔗 See also:** [Định Nghĩa Nhóm Biến Đổi](#node-j4z5s9s) · [Nguyên lý Equivariance và Bất biến](#node-m5cxy5p)
 
 <br>
 
@@ -550,6 +568,8 @@
 > Vậy cả hai cái g1, g2 đều thỏa yêu cầu nên tập các binomial pmf có tính
 > invariant under G_curl = {g1, g2}
 
+**🔗 See also:** [Xác minh nhóm biến đổi](#node-3qm392m)
+
 <br>
 
 <a id="node-ciq8wo3"></a>
@@ -560,6 +580,8 @@
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Nguyên lý Equivariance và Bất biến](#node-m5cxy5p) · [Nguyên lý Equivariance: Bất biến hình thức](#node-a042o1g)
 
 <br>
 
