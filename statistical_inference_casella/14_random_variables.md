@@ -7,6 +7,8 @@
 
 ## 1.4 Random Variables
 
+**🔗 See also:** [Lí do định nghĩa biến ngẫu nhiên](#node-qy3wuvk) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-qy3wuvk"></a>
@@ -28,6 +30,8 @@
 > CŨNG **DỄ HƠN** (ví dụ nhỏ hơn)
 >
 > ĐỊNH NGHĨA RANDOM VARIABLE
+
+**🔗 See also:** [1.4 Random Variables](#node-kycgm4v) · [Hàm xác suất cảm sinh](#node-iqhzkcd)
 
 <br>
 
@@ -150,6 +154,8 @@
 > ĐỊNH NGHĨA CỦA PROBABILITY FUNCTION ĐỐI VỚI
 > RANDOM VARIABLE
 
+**🔗 See also:** [Lí do định nghĩa biến ngẫu nhiên](#node-qy3wuvk) · [Xác suất cảm sinh biến ngẫu nhiên](#node-f5xy91l) · [Cơ sở xác suất của CDF](#node-wj2brgr)
+
 <br>
 
 <a id="node-f5xy91l"></a>
@@ -212,6 +218,8 @@
 > SAMPLE SPACE GỐC S EQUALLY LIKELY NHƯNG CÁC POSSIBLE
 > VALUES (ĐÚNG HƠN LÀ EVENT X MANG GIÁ TRỊ LÀ CÁC POSSIBLE
 > VALUE NÀY) LẠI KHÔNG EQUALLY LIKELY
+
+**🔗 See also:** [Hàm xác suất cảm sinh](#node-iqhzkcd) · [Tính xác suất biến ngẫu nhiên](#node-73athml)
 
 <br>
 
@@ -293,6 +301,8 @@
 >
 >
 > Và nó **cũng tuân theo các Axioms**
+
+**🔗 See also:** [Xác suất cảm sinh biến ngẫu nhiên](#node-f5xy91l)
 
 <br>
 
