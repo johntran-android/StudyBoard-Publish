@@ -46,7 +46,7 @@ function
 >
 > ĐỊNH NGHĨA CỦA CDF
 
-**🔗 See also:** [Hàm xác suất cảm sinh](#node-iqhzkcd)
+**🔗 See also:** [Hàm xác suất cảm sinh](./14_random_variables.md#node-iqhzkcd)
 
 <br>
 
