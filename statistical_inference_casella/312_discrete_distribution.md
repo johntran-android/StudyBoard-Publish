@@ -9,6 +9,8 @@ distribution
 ## 3.1&2 Discrete
 distribution
 
+**🔗 See also:** [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-sewmhuc"></a>
@@ -17,6 +19,9 @@ distribution
 
 > [!NOTE]
 > đại khái là ...
+
+**🔗 See also:** [3.1&2 Discrete
+distribution](#node-26ucm3g) · [Đặc trưng phân phối đều rời rạc](#node-25ar9ag)
 
 <br>
 
@@ -116,6 +121,8 @@ distribution
 >
 >
 > =
+
+**🔗 See also:** [Phân biệt Hypergeometric và Binomial](#node-e41wet0)
 
 <br>
 
@@ -224,6 +231,8 @@ distribution
 > cùng lúc và quan tâm số cách lấy mà có x banh đỏ. Thay vì nói theo kiểu lấy
 > từng banh ra không hoàn lại sẽ thấy khó hình dung hơn
 
+**🔗 See also:** [Đặc trưng phân phối đều rời rạc](#node-25ar9ag) · [Kỳ vọng phân phối siêu hình học](#node-pttd7ak)
+
 <br>
 
 <a id="node-pttd7ak"></a>
@@ -325,6 +334,8 @@ distribution
 >
 > **VARIANCE QUAY LẠI SAU**
 
+**🔗 See also:** [Phân biệt Hypergeometric và Binomial](#node-e41wet0) · [Ứng dụng phân phối Hypergeometric](#node-z6auo5b)
+
 <br>
 
 <a id="node-z6auo5b"></a>
@@ -339,6 +350,8 @@ distribution
 >
 > QUAY LẠI SAU
 
+**🔗 See also:** [Kỳ vọng phân phối siêu hình học](#node-pttd7ak) · [Biến ngẫu nhiên Bernoulli](#node-njx4cxj)
+
 <br>
 
 <a id="node-njx4cxj"></a>
@@ -350,6 +363,8 @@ distribution
 > [!NOTE]
 > Mở đầu nói về Bern(p) rv.
 > Cái này quá dễ rồi
+
+**🔗 See also:** [Ứng dụng phân phối Hypergeometric](#node-z6auo5b) · [Hai câu chuyện phân phối nhị thức](#node-5opn50d)
 
 <br>
 
@@ -374,6 +389,8 @@ distribution
 >
 >
 > PMF của nó thì đã lập luận nhiều lần nên ko nhắc lại nữa
+
+**🔗 See also:** [Biến ngẫu nhiên Bernoulli](#node-njx4cxj) · [Định lý và Phân phối Nhị thức](#node-pga23jp)
 
 <br>
 
@@ -438,6 +455,8 @@ distribution
 >
 > Mean của Bin là np var = npq cũng như mgf MX(t) = [pe^t + (1-p)]^n 
 > đã chứng minh cả rồi
+
+**🔗 See also:** [Hai câu chuyện phân phối nhị thức](#node-5opn50d) · [Xác suất ít nhất một mặt 6](#node-ljwkqux)
 
 <br>
 
@@ -708,6 +727,8 @@ distribution
 >
 > ⇨ P(A) = **1 - (5/6)^4**
 
+**🔗 See also:** [Định lý và Phân phối Nhị thức](#node-pga23jp) · [Bài toán Newton-Pepys](#node-fvmyn3c)
+
 <br>
 
 <a id="node-fvmyn3c"></a>
@@ -746,6 +767,8 @@ distribution
 > đó là bài toán Newton-Perp, nơi ông Pepr gì đó đem bài toán này đi hỏi
 > Newton) đó là ta thấy kết quả nhỏ hơn hồi nãy. Đây là điều mà hồi xưa ông
 > Pascal tính ra và ngạc nhiên vì ông ban đầu ông cho rằng nó bằng nhau.
+
+**🔗 See also:** [Xác suất ít nhất một mặt 6](#node-ljwkqux) · [Liên hệ Poisson-Exponential và ứng dụng](#node-5yfw058)
 
 <br>
 
@@ -786,6 +809,8 @@ distribution
 > Như distribution của bom rơi trong một vùng. Cái này ta liên hệ với stat110
 > gs Blizstein từng nói về câu chuyện mưa rơi: Chia vùng ra thành nhiều ô
 > nhỏ thì số ô càng nhiều xác suất mưa rơi trúng càng ít.
+
+**🔗 See also:** [Bài toán Newton-Pepys](#node-fvmyn3c) · [Phân phối Poisson và Kỳ vọng](#node-n5pp9ik)
 
 <br>
 
@@ -903,6 +928,8 @@ distribution
 > Var X và MGF QUAY
 > LẠI LÀM SAU
 
+**🔗 See also:** [Liên hệ Poisson-Exponential và ứng dụng](#node-5yfw058) · [Phân phối Poisson cho cuộc gọi](#node-27srddu)
+
 <br>
 
 <a id="node-27srddu"></a>
@@ -943,6 +970,8 @@ distribution
 >
 >
 > Nói chung ko khó hiểu gì lắm
+
+**🔗 See also:** [Phân phối Poisson và Kỳ vọng](#node-n5pp9ik) · [Công thức đệ quy Poisson và Binomial](#node-uvpqigy)
 
 <br>
 
@@ -1029,6 +1058,8 @@ distribution
 >
 > QUAY LẠI LÀM SAU
 
+**🔗 See also:** [Phân phối Poisson cho cuộc gọi](#node-27srddu) · [Ước lượng Poisson lỗi đánh máy](#node-wxzapdy)
+
 <br>
 
 <a id="node-wxzapdy"></a>
@@ -1085,6 +1116,8 @@ distribution
 >
 >
 > = .4232
+
+**🔗 See also:** [Công thức đệ quy Poisson và Binomial](#node-uvpqigy) · [Lập luận PMF Nhị thức Âm](#node-sdeb90k)
 
 <br>
 
@@ -1297,6 +1330,8 @@ distribution
 > KHÚC NÓI VỀ CÁI TÊN
 > NEGATIVE QUAY LẠI SAU
 
+**🔗 See also:** [Ước lượng Poisson lỗi đánh máy](#node-wxzapdy) · [Tính toán Kỳ vọng và Phương sai](#node-zgdxsvo)
+
 <br>
 
 <a id="node-zgdxsvo"></a>
@@ -1376,6 +1411,8 @@ distribution
 > converge về cùng một giá trị λ, cho thấy nó cũng giống như Binomial
 > sẽ converge về Pois khi n lớn và p nhỏ
 
+**🔗 See also:** [Lập luận PMF Nhị thức Âm](#node-sdeb90k) · [Xác suất thu thập ruồi thoái hóa](#node-6hbfudo)
+
 <br>
 
 <a id="node-6hbfudo"></a>
@@ -1426,6 +1463,8 @@ distribution
 >
 >
 > = **Σy=r, r+1...N-1 [1 - (r + y - 1 choose y) (1 - p)^y p^r]**
+
+**🔗 See also:** [Tính toán Kỳ vọng và Phương sai](#node-zgdxsvo) · [Phân phối Geometric và thuộc tính](#node-lhccuzi)
 
 <br>
 
@@ -1876,6 +1915,8 @@ distribution
 > Vậy chứng minh xong P(X > s + t | X > t) = P(X > s) cho thấy Geometric
 > có tính MEMORYLESS**
 
+**🔗 See also:** [Xác suất thu thập ruồi thoái hóa](#node-6hbfudo) · [Phân phối hình học bóng đèn](#node-37wuarb)
+
 <br>
 
 <a id="node-37wuarb"></a>
@@ -1946,6 +1987,8 @@ distribution
 > ngày nó sẽ thay đổi, càng già xác suất càng cao nên sẽ sai khi tính xác suất ví
 > dụ như sống thọ hơn 50 năm (như kiểu tính xác suất bóng đèn cháy hơn 30
 > ngày) sẽ là sai
+
+**🔗 See also:** [Phân phối Geometric và thuộc tính](#node-lhccuzi)
 
 <br>
 
