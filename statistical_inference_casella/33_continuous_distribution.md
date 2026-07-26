@@ -9,6 +9,8 @@ distribution
 ## 3.3 Continuous
 distribution
 
+**🔗 See also:** [Tính toán Phân phối Đều](#node-nnwane6) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-nnwane6"></a>
@@ -165,6 +167,9 @@ distribution
 >
 >
 > = **(b-a)^2/12**
+
+**🔗 See also:** [3.3 Continuous
+distribution](#node-odu1bg9) · [Hàm Gamma và Tính chất](#node-4frhl19)
 
 <br>
 
@@ -389,6 +394,8 @@ distribution
 >
 > Một công thức hữu ích khác sẽ gặp lại trong 3.3.15
 
+**🔗 See also:** [Tính toán Phân phối Đều](#node-nnwane6) · [Hàm Gamma và Phân phối Gamma](#node-xt1ypib)
+
 <br>
 
 <a id="node-xt1ypib"></a>
@@ -484,6 +491,8 @@ distribution
 > Với α sẽ ảnh hưởng đến hình dạng của distribution còn β ảnh hưởng đến độ
 > phân tán của distribution
 
+**🔗 See also:** [Hàm Gamma và Tính chất](#node-4frhl19) · [Giá trị kỳ vọng phân phối Gamma](#node-9u6kuo2)
+
 <br>
 
 <a id="node-9u6kuo2"></a>
@@ -559,6 +568,8 @@ distribution
 >
 >
 > Recursion: Γ(α+1) = α Γ(α)
+
+**🔗 See also:** [Hàm Gamma và Phân phối Gamma](#node-xt1ypib) · [Tính toán Phương sai Gamma](#node-h9282yg)
 
 <br>
 
@@ -690,6 +701,8 @@ distribution
 >
 >
 > ⇨ Var(X) = **αβ^2**
+
+**🔗 See also:** [Giá trị kỳ vọng phân phối Gamma](#node-9u6kuo2) · [Tích phân từng phần CDF Gamma](#node-ip8ufue)
 
 <br>
 
@@ -854,6 +867,8 @@ distribution
 >
 > QUAY LẠI SAU
 
+**🔗 See also:** [Tính toán Phương sai Gamma](#node-h9282yg) · [Trường hợp Gamma đặc biệt](#node-cvm81t8) · [Khoảng tin cậy Poisson Chi-square](#node-s6r23qr)
+
 <br>
 
 <a id="node-cvm81t8"></a>
@@ -884,6 +899,8 @@ distribution
 >
 >
 > Ở stat110 Expo(λ) pdf = **λ e^- λx**
+
+**🔗 See also:** [Tích phân từng phần CDF Gamma](#node-ip8ufue) · [Tính không trí nhớ của Expo](#node-wczjqf6) · [Chứng minh đẳng thức Gamma](#node-pc1n71r)
 
 <br>
 
@@ -1099,6 +1116,8 @@ distribution
 >
 > Chứng minh xong: P(X > s + t | X > t) = P(X > s)**
 
+**🔗 See also:** [Trường hợp Gamma đặc biệt](#node-cvm81t8)
+
 <br>
 
 <a id="node-sa5jpw2"></a>
@@ -1107,6 +1126,8 @@ distribution
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Tính không trí nhớ của Expo](#node-wczjqf6) · [Tích phân Hàm mật độ Chuẩn](#node-ywzzzkr)
 
 <br>
 
@@ -1376,6 +1397,8 @@ distribution
 >
 > Đây chính là công thức pdf của N(μ, σ)**
 
+**🔗 See also:** [Chuẩn hóa biến ngẫu nhiên chuẩn](#node-uuez1ye)
+
 <br>
 
 <a id="node-uuez1ye"></a>
@@ -1478,6 +1501,8 @@ distribution
 >
 >
 > Từ đó có thể kết luận Z ~ N(0, 1)
+
+**🔗 See also:** [Tích phân Hàm mật độ Chuẩn](#node-ywzzzkr) · [Kỳ vọng và Phương sai Z](#node-4aid3je)
 
 <br>
 
@@ -1616,6 +1641,8 @@ distribution
 >
 > =  σ^2 Var(Z) = **σ^2**
 
+**🔗 See also:** [Chuẩn hóa biến ngẫu nhiên chuẩn](#node-uuez1ye) · [Tích phân Gauss](#node-55oplgl)
+
 <br>
 
 <a id="node-55oplgl"></a>
@@ -1647,6 +1674,8 @@ distribution
 >
 > Nói chung với Normal distribution thì cái mấu chốt là nhớ cái trick để deal với
 > cái tích phân này ∫-inf:inf e^-z^2/2dz
+
+**🔗 See also:** [Kỳ vọng và Phương sai Z](#node-4aid3je) · [Chứng minh Γ(1/2) = √π](#node-jzl2jlk)
 
 <br>
 
@@ -1734,6 +1763,8 @@ distribution
 >
 >
 > ⇨ Γ(1/2) = √π
+
+**🔗 See also:** [Tích phân Gauss](#node-55oplgl) · [Cực đại hàm mật độ Normal](#node-fcytb5c)
 
 <br>
 
@@ -1902,6 +1933,8 @@ distribution
 > chứng tỏ μ là local maximum, và với ta chỉ có một cực trị thì nó cũng là
 > global maximum
 
+**🔗 See also:** [Chứng minh Γ(1/2) = √π](#node-jzl2jlk) · [Phân phối chuẩn xấp xỉ phân phối](#node-0u3hc39)
+
 <br>
 
 <a id="node-0u3hc39"></a>
@@ -1920,6 +1953,8 @@ distribution
 >
 > Ví dụ như X ~ binomial(n, p) và n lớn, p không quá gần 0 hay 1 thì khi đó
 > X có thể được coi như một N(μ = np, σ^2 = npq)
+
+**🔗 See also:** [Cực đại hàm mật độ Normal](#node-fcytb5c) · [Xấp xỉ Normal Binomial](#node-r4qgnhh)
 
 <br>
 
@@ -1944,6 +1979,8 @@ distribution
 > Và có thể khắc phục bằng cái gọi là continuity correction.
 >
 > QUAY LẠI SAU
+
+**🔗 See also:** [Phân phối chuẩn xấp xỉ phân phối](#node-0u3hc39) · [Phân phối Beta: Định nghĩa, ứng dụng](#node-s8cq0wf)
 
 <br>
 
@@ -1972,6 +2009,8 @@ distribution
 >
 > Nên nó sẽ thường được dùng để mô hình hóa yếu tố tỉ lệ (proportion),
 > DỄ HIỂU VÌ TỈ LỆ THÌ TỰ NHIÊN SẼ CÓ GIÁ TRỊ TỪ 0 ĐẾN 1
+
+**🔗 See also:** [Xấp xỉ Normal Binomial](#node-r4qgnhh) · [Tính moment phân phối Beta](#node-6jnyj9e)
 
 <br>
 
@@ -2095,6 +2134,8 @@ distribution
 >
 > ...= αβ / [(α + β)^2(α + 1 + β)]
 
+**🔗 See also:** [Phân phối Beta: Định nghĩa, ứng dụng](#node-s8cq0wf) · [Phân phối Beta và F](#node-4d2xe12)
+
 <br>
 
 <a id="node-4d2xe12"></a>
@@ -2112,6 +2153,8 @@ distribution
 >
 > Và nó cũng liên hệ với một trong những distribution cực kì quan trọng của
 > statistical inference là F distribution mà ta sẽ học ở chap 5
+
+**🔗 See also:** [Tính moment phân phối Beta](#node-6jnyj9e) · [Phân phối Cauchy](#node-sy5tj8j)
 
 <br>
 
@@ -2199,6 +2242,8 @@ distribution
 >
 >
 > ⇨ kết quả = (1/π) (π/2 - (- π/2)) = 1
+
+**🔗 See also:** [Phân phối Beta và F](#node-4d2xe12) · [Phân phối Cauchy: Median θ](#node-0d2kmfl)
 
 <br>
 
@@ -2311,6 +2356,8 @@ distribution
 > Đại khái gs cho biết Cauchy cũng đóng vai trò cực kì quan trọng trong statistic
 > Một hành động hay gặp là ta sẽ cần model tỉ lệ giữa hai random variable.
 > Và thú vị là hai standard normal chia nhau sẽ là một Cauchy. Mình sẽ gpặ lại
+
+**🔗 See also:** [Phân phối Cauchy](#node-sy5tj8j) · [Đạo hàm PDF Log-normal](#node-07niffa)
 
 <br>
 
@@ -2495,6 +2542,8 @@ distribution
 > Đồng thời nó cũng cho phép dùng normal theo log (hiểu đại khái là vây) rất
 > thuận tiện**
 
+**🔗 See also:** [Phân phối Cauchy: Median θ](#node-0d2kmfl)
+
 <br>
 
 <a id="node-wumf3cm"></a>
@@ -2507,6 +2556,8 @@ distribution
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Đạo hàm PDF Log-normal](#node-07niffa)
 
 <br>
 
