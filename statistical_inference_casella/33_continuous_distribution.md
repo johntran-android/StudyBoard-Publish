@@ -854,7 +854,7 @@ distribution
 >
 > QUAY LẠI SAU
 
-**🔗 See also:** [Khoảng tin cậy Poisson Chi-square](#node-s6r23qr)
+**🔗 See also:** [Khoảng tin cậy Poisson Chi-square](./92_methods_of_finding_interval_estimators.md#node-s6r23qr)
 
 <br>
 
@@ -887,7 +887,7 @@ distribution
 >
 > Ở stat110 Expo(λ) pdf = **λ e^- λx**
 
-**🔗 See also:** [Chứng minh đẳng thức Gamma](#node-pc1n71r)
+**🔗 See also:** [Chứng minh đẳng thức Gamma](./36_inequalities.md#node-pc1n71r)
 
 <br>
 
