@@ -161,7 +161,7 @@
 > Chứng minh với continuous random
 > variable thì PMF P(X = x) = 0
 
-**🔗 See also:** [Thuật toán Accept/Reject](#node-aebauln)
+**🔗 See also:** [Thuật toán Accept/Reject](./56_generating_random_sample.md#node-aebauln)
 
 <br>
 
