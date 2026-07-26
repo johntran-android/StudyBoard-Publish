@@ -433,7 +433,7 @@
 > nên khi tính **CONFIDENCE COEFFICIENT**, có định nghĩa là inf_θ [confidence
 > coverage] thì nó cũng chính là **coverage probability** = (1/a)^n - (1/b)^n
 
-**🔗 See also:** [Chứng minh PDF thống kê thứ tự](#node-1zc19ro) · [Khái niệm xác suất bao phủ](#node-dgml8lx)
+**🔗 See also:** [Chứng minh PDF thống kê thứ tự](./54_order_statistic.md#node-1zc19ro) · [Khái niệm xác suất bao phủ](./92_methods_of_finding_interval_estimators.md#node-dgml8lx)
 
 <br>
 
