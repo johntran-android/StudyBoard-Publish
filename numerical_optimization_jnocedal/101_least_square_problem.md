@@ -31,6 +31,8 @@
 >
 > Và chương này mình sẽ học các thuật toán mạnh mẽ để giải bài toán này
 
+**🔗 See also:** [The Gauss-Newton Method](./103_algorithms_for_nonlinear_least_squares_problem.md#node-76os6gb)
+
 <br>
 
 <a id="node-woorrym"></a>
@@ -78,6 +80,8 @@
 > **🤖 AI Feedback** — ⚠️ Score: **75/100**
 >
 > Bài làm thể hiện sự hiểu biết sâu sắc về mối quan hệ giữa hàm mục tiêu least-squares, vector dư và ma trận Jacobian. Tuy nhiên, cần chú ý hơn đến tính chính xác trong ký hiệu, đặc biệt là khi định nghĩa các hàng của Jacobian liên quan đến chuyển vị của vector gradient.
+
+**🔗 See also:** [Optimal x* Solution](./102_linear_least_square_problem.md#node-4qw5hsw)
 
 <br>
 
@@ -195,6 +199,8 @@
 >
 > Bài làm của bạn rất chi tiết và thể hiện sự hiểu biết sâu sắc về các khái niệm giải tích vector và ma trận. Bạn đã thành công trong việc giải thích cả hai công thức gradient và Hessian với độ chính xác cao.
 
+**🔗 See also:** [Optimal x* Solution](./102_linear_least_square_problem.md#node-4qw5hsw)
+
 <br>
 
 <a id="node-4tij0lf"></a>
@@ -218,6 +224,8 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Bạn đã nắm bắt rất tốt điểm mấu chốt về việc tính toán phần Hessian "miễn phí" trong bài toán least-squares và ý nghĩa của nó trong các thuật toán tối ưu. Phần giải thích mối liên hệ với phương pháp Newton và quasi-Newton rất sâu sắc và chính xác.
+
+**🔗 See also:** [The Gauss-Newton Method](./103_algorithms_for_nonlinear_least_squares_problem.md#node-76os6gb) · [Gauss-Newton Method Approximation](./103_algorithms_for_nonlinear_least_squares_problem.md#node-2yk17h9)
 
 <br>
 
@@ -296,7 +304,7 @@
 >
 >
 >
-> Giá trị x tối thiểu hóa này được gọi là x**. Sau khi tìm được x**, ta sẽ sử dụng nó để dự đoán cho các mốc thời gian t khác.
+> Giá trị x tối thiểu hóa này được gọi là x\*. Sau khi tìm được x\*, ta sẽ sử dụng nó để dự đoán cho các mốc thời gian t khác.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
