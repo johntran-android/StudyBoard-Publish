@@ -124,6 +124,8 @@
 >
 > Bản dịch chính xác và việc trình bày chi tiết điều kiện KKT cho thấy sự hiểu biết sâu sắc về lý thuyết tối ưu hóa. Tuy nhiên, cần loại bỏ các lỗi chính tả nhỏ và các nhận xét không chính thức để nâng cao tính chuyên nghiệp của bài ghi chú.
 
+**🔗 See also:** [Bài toán (4.5) sẽ là minimize mk(p) = fk + gkTp + (1/2)pTBkp subject to ||pk|| ≤ Δk](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-4oyhvi4) · [Theorem 4.1](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-6p1mgzb) · [#4.1, 4.2, 4.3](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-9ozcgzk)
+
 <br>
 
 <a id="node-uff28gk"></a>
@@ -356,6 +358,8 @@
 >
 > Ghi chú của bạn giải thích rất chi tiết và chính xác nội dung văn bản. Việc kết nối với kiến thức nền tảng và phân tích các xấp xỉ toán học là đặc biệt ấn tượng, thể hiện sự hiểu sâu sắc.
 
+**🔗 See also:** [Convergence of algorithms based on nearly exact solution](#node-tr8868m)
+
 <br>
 
 <a id="node-kep1mmi"></a>
@@ -548,6 +552,8 @@
 >
 > Bài phân tích rất sâu sắc và chi tiết, đặc biệt là phần dẫn xuất công thức 4.44 hoàn toàn chính xác và thể hiện sự hiểu biết vững chắc. Tuy nhiên, cần lưu ý đến sự không nhất quán về dấu trong phương trình giải `p` và diễn giải chính xác hơn điều kiện `λ < -λ1` dẫn đến thất bại của phân tích Cholesky.
 
+**🔗 See also:** [Convergence of algorithms based on nearly exact solution](#node-tr8868m)
+
 <br>
 
 <a id="node-ty435bj"></a>
@@ -669,6 +675,8 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Bài phân tích rất xuất sắc, thể hiện sự hiểu biết sâu sắc về 'hard case' và các khía cạnh toán học liên quan. Lập luận rõ ràng và chính xác. Một điểm nhỏ có thể cải thiện là phần giải thích về tính trực giao giữa các vector riêng, có thể trình bày gọn gàng và trực tiếp hơn.
+
+**🔗 See also:** [Theorem 4.1](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-6p1mgzb)
 
 <br>
 
@@ -841,6 +849,8 @@
 >
 > Bài làm xuất sắc, thể hiện sự hiểu biết sâu sắc và khả năng phân tích vững chắc các điều kiện tối ưu và tính chất của hàm bậc hai. Các bước chứng minh được trình bày rõ ràng, logic và chính xác. Một điểm nhỏ cần lưu ý là có sự không nhất quán trong việc sử dụng 'x' thay vì 'm' hoặc 'p' khi đề cập đến hàm số hoặc cực tiểu trong phần chứng minh ý (ii).
 
+**🔗 See also:** [Bài toán (4.5) sẽ là minimize mk(p) = fk + gkTp + (1/2)pTBkp subject to ||pk|| ≤ Δk](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-4oyhvi4) · [Theorem 4.1](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-6p1mgzb)
+
 <br>
 
 <a id="node-4hwl6f7"></a>
@@ -954,6 +964,8 @@
 > **🤖 AI Feedback** — ✅ Score: **96/100**
 >
 > Bài làm rất xuất sắc, bạn đã tái hiện và giải thích chi tiết chứng minh điều kiện đủ của Định lý 4.1 một cách cực kỳ rõ ràng và chính xác. Việc phân tích hàm m(p) có hay không có hằng số f cho thấy sự hiểu biết sâu sắc. Một điểm nhỏ có thể cải thiện là diễn đạt điều kiện cần và đủ của bổ đề 4.7(i) một cách chính xác hơn về mối liên hệ giữa ma trận và vector g để hàm đạt cực tiểu.
+
+**🔗 See also:** [Theorem 4.1](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-6p1mgzb)
 
 <br>
 
@@ -1156,6 +1168,8 @@
 >
 > Bài phân tích này thể hiện sự hiểu biết sâu sắc về ngữ cảnh và các thuật toán liên quan đến đoạn văn. Các điểm chính từ đoạn văn gốc được nắm bắt chính xác và được bổ trợ bởi thông tin nền đáng giá, thể hiện độ sâu đáng nể, mặc dù một số chi tiết nền không trực tiếp có trong hình ảnh đã cho.
 
+**🔗 See also:** [Algorithm 4.3 Trust Region Subproblem](#node-t3v5vev) · [Bài toán (4.5) sẽ là minimize mk(p) = fk + gkTp + (1/2)pTBkp subject to ||pk|| ≤ Δk](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-4oyhvi4) · [Theorem 4.5](./42_trust_region_methods_global_convergence.md#node-fg12jtm) · [Theorem 4.6 #QUAY LẠI SAU](./42_trust_region_methods_global_convergence.md#node-i5wiv3l) · [Theorem 4.1](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-6p1mgzb) · [Tái định hình bài toán để khắc phục hạn chế của Newton method:](#node-o8ah5zo) · [Mức giảm Dogleg và Wolfe, (4.20)](./42_trust_region_methods_global_convergence.md#node-flrtdwa)
+
 <br>
 
 <a id="node-rnxo6wt"></a>
@@ -1224,6 +1238,8 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Bài phân tích rất sâu sắc và chính xác, không chỉ tóm tắt nội dung mà còn đi sâu vào chứng minh toán học chi tiết về cách điều kiện (4.52) giúp thoát khỏi điểm yên ngựa. Cách bạn giải thích vai trò của trị riêng âm và vector riêng rất ấn tượng. Cần lưu ý hơn về phong cách trình bày để đạt mức độ học thuật cao hơn.
+
+**🔗 See also:** [Mức giảm Dogleg và Wolfe, (4.20)](./42_trust_region_methods_global_convergence.md#node-flrtdwa)
 
 <br>
 
