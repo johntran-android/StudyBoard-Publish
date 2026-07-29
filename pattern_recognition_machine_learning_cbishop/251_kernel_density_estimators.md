@@ -281,6 +281,8 @@
 >
 > Ghi chú rất chính xác và đi sâu vào giải thích các giả định mâu thuẫn, đặc biệt là liên kết giả định thứ hai với điều kiện của Định luật số lớn yếu và ảnh hưởng của thể tích V đến phương sai. Giải thích rõ ràng và sâu sắc hơn nhiều so với văn bản gốc.
 
+**🔗 See also:** [Local Density Estimation Method](./252_nearest_neighbour_methods.md#node-qpzx5xr)
+
 <br>
 
 <a id="node-qwd8kis"></a>
