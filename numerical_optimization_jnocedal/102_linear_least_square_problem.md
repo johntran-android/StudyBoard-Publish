@@ -24,7 +24,7 @@
 >
 >
 >
-> Như vậy, tuy không liên quan lắm nhưng mình hiểu rằng, ở đây gs Nocedal chính là dùng lập luận đó: nói rằng, vì r(x) là hàm tuyến tính của x, nên nhất định nó phải có dạng một linear operator act on vector x: Và như vậy chỉ có thể là có dạng một matrix nào đó nhân với vector x mà thôi, ta gọi nó là matrix J: r(x) = Jx - y là vậy, để rồi J cũng chính là Jacobian của r(x) đối với x
+> Như vậy, tuy không liên quan lắm nhưng mình hiểu rằng, ở đây gs Nocedal chính là dùng lập luận đó: nói rằng, vì r(x) là hàm tuyến tính của x, nên nhất định nó phải có dạng một linear operator act on vector x: Và như vậy chỉ có thể là có dạng một matrix nào đó nhân với vector x mà thôi, ta gọi nó là matrix J: r(x) = Jx - y là vậy.
 >
 >
 >
@@ -33,8 +33,6 @@
 >
 >
 > Ở đây cần lưu ý một chút, mình đã nghe điều này nhiều lần trong các lớp AI, S.Boyd: Thật ra nếu nói chính xác, thì việc Φ(x, t) là hàm linear thì hàm residual rj(x) = Φ(x, tj) - yj PHẢI LÀ HÀM AFFINE, chứ không phải là hàm linear.
->
->
 >
 > Lí do, linear function nếu chặt chẽ, phải thỏa tính chất f(α x + β) = α f(x) + β. Nhưng ở đây ko thỏa: rj(α x + β) = Φ(αx + β, tj) - yj = α Φ(x, tj) + β - yj, và cái này khác α rj(x) + β (= α \[Φ(x, tj) - yj\] + β = α Φ(x, tj) - αyj + β). Nhưng người ta kiểu như coi như nó là hàm tuyến tính.
 >
@@ -156,7 +154,7 @@
 >
 >
 >
-> Và cuối cùng, vì f là hàm lồi, bài toán minimize f, ko có constraint gì, dĩ nhiên là bài toán lồi (convex optimization problem). (nếu đúng, phải xét thêm domain là tập lồi nữa, nhưng domain ở đây là R^n, dĩ nhiên là tập lồi). Và lúc này, dùng một theorem nói rằng, khi x **là điểm có gradient vanish, nó là local minimizer thì cũng sẽ là global minimizer luôn. (Ở đây có hai kiến thức lồng vào: x** là có ∇f(x**) = 0 → nó là critical point, nhưng với hàm lồi, thì chứng tỏ nó cũng là local minimizer do độ cong không âm kiến khi đi ra xa khỏi x**, hàm chỉ có thể đi lên. Và cùng vì tính chất hàm lồi, đảm bảo không thể có vụ đi xuống lại, nên ko thể có local minimizer nào khác.
+> Và cuối cùng, vì f là hàm lồi, bài toán minimize f, ko có constraint gì, dĩ nhiên là bài toán lồi (convex optimization problem). (nếu đúng, phải xét thêm domain là tập lồi nữa, nhưng domain ở đây là R^n, dĩ nhiên là tập lồi). Và lúc này, dùng một theorem nói rằng, khi x\* là điểm có gradient vanish, nó là local minimizer thì cũng sẽ là global minimizer luôn. (Ở đây có hai kiến thức lồng vào: x\* là có ∇f(x\*) = 0 → nó là critical point, nhưng với hàm lồi, thì chứng tỏ nó cũng là local minimizer do độ cong không âm kiến khi đi ra xa khỏi x\*, hàm chỉ có thể đi lên. Và cùng vì tính chất hàm lồi, đảm bảo không thể có vụ đi xuống lại, nên ko thể có local minimizer nào khác.
 >
 >
 >
@@ -397,6 +395,8 @@
 >
 > Phân tích của bạn cực kỳ sâu sắc và chính xác, đặc biệt với các chứng minh toán học chi tiết về điều kiện tồn tại của Cholesky factorization và mối quan hệ của số điều kiện. Tiếp tục duy trì mức độ đào sâu kiến thức và khả năng kết nối các khái niệm toán học này.
 
+**🔗 See also:** [Cholesky and QR Approaches](#node-na2d7pw)
+
 <br>
 
 <a id="node-4qw5hsw"></a>
@@ -510,6 +510,8 @@
 > **🤖 AI Feedback** — ✅ Score: **100/100**
 >
 > Phần ghi chú này cung cấp một quá trình dẫn xuất từng bước cực kỳ rõ ràng và chi tiết cho phương pháp phân tích QR trong bài toán bình phương tối thiểu tuyến tính, giải thích kỹ lưỡng từng phép biến đổi và lý do của nó. Việc liên hệ với các bước triển khai thực tế cũng được trình bày rất tốt.
+
+**🔗 See also:** [Phân tích QR và Gram-Schmidt](./a1_matrix_factorizations_cholesky_lu_qr.md#node-1eq3gxk) · [Gradient và Hessian của f(x)](./101_least_square_problem.md#node-rhbo48g) · [Đạo hàm bình phương tối thiểu](./101_least_square_problem.md#node-woorrym) · [SVD Approach and Singular Values](#node-0hoe8tb)
 
 <br>
 
@@ -763,6 +765,8 @@
 >
 > Phần giải thích rất rõ ràng, chính xác và có chiều sâu, đặc biệt là cách bạn đã phân tích từng bước để chuyển đổi bài toán và đi đến công thức cuối cùng. Việc giải thích chi tiết các tính chất của ma trận trực giao và cách mở rộng công thức tổng là một điểm mạnh lớn, giúp người đọc dễ dàng hiểu được các phương trình trong hình ảnh.
 
+**🔗 See also:** [SVD Approach and Singular Values](#node-0hoe8tb)
+
 <br>
 
 <a id="node-2tsnkwj"></a>
@@ -934,6 +938,8 @@
 >
 > Thì ưu điểm là nó có sai số tương đối chỉ tỉ lệ thuận vào condition number của J, không phải của JTJ nên sai số tương đối của nó nhỏ hơn của cách một → độ chính xác của solution đáng tin cậy hơn
 
+**🔗 See also:** [Giải phương trình chuẩn Cholesky](#node-ceyn10w)
+
 <br>
 
 <a id="node-0hoe8tb"></a>
@@ -943,7 +949,7 @@
 <p align="center"><kbd><img src="assets/f5anpbc48kg.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> x **= V Sinv U1Ty = ∑i=1:n (uiTy/σi) vi
+> x\* = V Sinv U1Ty = ∑i=1:n (uiTy/σi) vi
 >
 >
 >
@@ -951,7 +957,7 @@
 >
 >
 >
-> Tất nhiên lục này x** không thể bằng ∑i=1:n (uiTy/σi) vi. Vậy ta sẽ bắt đầu tìm x **lại từ bài toán minimize ||S(VTx) - U1Ty||^2 (mà nếu J full column rank thì x** có công thức trên)
+> Tất nhiên lục này x\* không thể bằng ∑i=1:n (uiTy/σi) vi. Vậy ta sẽ bắt đầu tìm x\* lại từ bài toán minimize ||S(VTx) - U1Ty||^2 (mà nếu J full column rank thì x\* có công thức trên)
 >
 >
 >
@@ -1046,6 +1052,8 @@
 >
 > Điểm mạnh: Bài viết rất chính xác và có chiều sâu, đặc biệt là phần dẫn giải chi tiết công thức x* cho trường hợp J thiếu hạng, giúp người đọc hiểu rõ bản chất. Điểm yếu: Bài viết rất tốt và không có điểm yếu rõ ràng nào cần cải thiện.
 
+**🔗 See also:** [Optimal x* Solution](#node-4qw5hsw) · [Phương pháp SVD bình phương tối thiểu](#node-xupdku2)
+
 <br>
 
 <a id="node-x7aktmm"></a>
@@ -1063,7 +1071,7 @@
 >
 >
 >
-> Điều đầu tiên còn nhớ, đó là, CG là một thuật toán chuyên trị việc giải hệ Ax = b. Và bản chất của nghiệm x **của Ax = b chỉ là: Nó thỏa Ax** - b = 0. Và khi nhìn nhận cái Ax - b như gradient của hàm số quadratic g(x) = (1/2)xTAx -bTx, thì việc tìm x\* thỏa Ax - b = 0 chính là tìm x khiến gradient ∇g(x) vanish, tức first order necessary condition. Thành ra, việc giải hệ Ax = b có thể được nhìn nhận như giải bài toán tối ưu: minimize g(x).
+> Điều đầu tiên còn nhớ, đó là, CG là một thuật toán chuyên trị việc giải hệ Ax = b. Và bản chất của nghiệm x\* của Ax = b chỉ là: Nó thỏa Ax\* - b = 0. Và khi nhìn nhận cái Ax - b như gradient của hàm số quadratic g(x) = (1/2)xTAx -bTx, thì việc tìm x\* thỏa Ax - b = 0 chính là tìm x khiến gradient ∇g(x) vanish, tức first order necessary condition. Thành ra, việc giải hệ Ax = b có thể được nhìn nhận như giải bài toán tối ưu: minimize g(x).
 >
 >
 >
@@ -1089,6 +1097,8 @@
 > **🤖 AI Feedback** — ⚠️ Score: **88/100**
 >
 > Bạn đã nắm vững các ý chính về việc sử dụng phương pháp gradient liên hợp (CG) cho các bài toán lớn và đặc biệt là cách triển khai tối ưu khi không cần hình thành ma trận JTJ trực tiếp. Phần giải thích sâu về nền tảng của CG cũng rất ấn tượng. Tuy nhiên, phần kết luận về "3 phương pháp nói trên" cho bài toán nhỏ không được đề cập trong đoạn văn bản gốc.
+
+**🔗 See also:** [A Practical Form Of The Conjugate Gradient Method.](./51_linear_conjugate_gradient.md#node-jdgssae)
 
 <br>
 
