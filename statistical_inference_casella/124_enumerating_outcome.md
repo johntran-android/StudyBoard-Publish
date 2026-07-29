@@ -543,7 +543,7 @@ outcome
 >
 > Bài phân tích thể hiện sự hiểu biết sâu sắc về bản chất bài toán, từ việc xác định loại lấy mẫu (có hoàn lại, không thứ tự) đến việc áp dụng công thức tổ hợp. Phần chứng minh công thức (n+r-1 chọn r) rất chi tiết và đúng đắn về mặt ý tưởng, tuy nhiên, có một lỗi nhỏ ở bước cuối cùng khi bạn viết (n+r-1)! / [(n-1)! r!] là (n-1 chọn r) thay vì (n+r-1 chọn r).
 
-**🔗 See also:** [Bootstrap Standard Errors](./101_point_estimation.md#node-gumecun)
+**🔗 See also:** [Bootstrap Standard Errors](./101_point_estimation.md#node-gumecun) · [Histogram of Sample Averages](#node-56gu8sw)
 
 <br>
 
@@ -622,6 +622,8 @@ outcome
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Bài phân tích của bạn rất chính xác và sâu sắc. Bạn đã hiểu rõ cách tính số lượng mẫu có thứ tự và công thức tổng quát của nó liên quan đến phân phối đa thức. Đặc biệt, việc bạn phát hiện ra sự không nhất quán giữa biểu đồ histogram và mô tả nguồn dữ liệu {2,4,4,9} là một điểm mạnh nổi bật, thể hiện khả năng phân tích và tư duy phản biện xuất sắc. Để tăng thêm độ chính xác, bạn có thể cân nhắc gọi biểu đồ này là 'biểu đồ phân phối xác suất' thay vì chỉ 'pmf' nếu các giá trị trung bình có thể không hoàn toàn rời rạc.
+
+**🔗 See also:** [Example 1.2.20 Calculating Average](#node-pl75v3r)
 
 <br>
 
