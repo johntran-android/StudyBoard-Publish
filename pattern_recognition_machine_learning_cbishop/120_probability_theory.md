@@ -534,6 +534,8 @@
 >
 > Để rồi sau đó, gs Bishop nói một ý quan trọng: việc **MÔ HÌNH HÓA DISTRIBUTION TỪ DỮ LIỆU (HỮU HẠN) ĐÓNG VAI TRÒ LÀ TRÁI TIM CỦA PATTERN RECOGNITION**: Câu nói này liên quan trực tiếp đến những gì đã học trong Casella: Ví dụ trong bài toán point estimator, cái ta làm chính là dựa trên giá trị quan sát được của sample **X**, để xây dựng một statistic δ(**X**) làm point estimator cho θ. Nó chính là ý gs Bishop nói ở đây.
 
+**🔗 See also:** [Histogram Density Estimation](./25_non_parametric_model.md#node-qmfgqko)
+
 <br>
 
 <a id="node-93p43r7"></a>
