@@ -60,6 +60,8 @@
 > again, ở đây gs Bishop ko tuân theo convention của toán nên ghi x (viết
 > thường là rv. p viết thường nốt, hic)
 
+**🔗 See also:** [Hàm phân phối tích lũy](#node-vgduzcj)
+
 <br>
 
 <a id="node-ixxtyu8"></a>
@@ -223,6 +225,8 @@
 > Gs lướt qua cdf, như đã biết trong stat110, Casella, cdf của X được kí hiệu FX(x)
 > và là hàm định nghĩa bởi FX(x) = P(X ≤ x). Và vì định nghĩa của pdf nên dùng
 > FTC ta có F là nguyên hàm của f như lúc nãy đã nói
+
+**🔗 See also:** [Định nghĩa PDF](#node-ainsl7e)
 
 <br>
 
