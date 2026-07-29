@@ -134,6 +134,8 @@
 >
 > Bài làm thể hiện sự hiểu biết sâu sắc và khả năng phân tích xuất sắc đối với bài toán. Các bước đạo hàm và lập luận cho từng trường hợp đều chính xác và đầy đủ. Chỉ một điểm nhỏ cần lưu ý là cách giải thích từ τ||pks|| = Δ để suy ra τ=1 có thể chính xác hơn, nhưng điều này không ảnh hưởng đến kết quả cuối cùng.
 
+**🔗 See also:** [Lemma 4.3: Cauchy point thỏa điều kiện giảm đủ](./42_trust_region_methods_global_convergence.md#node-csq4ymh) · [Algorithm 4.4 (Generalized Cauchy Point Calculation)](./45_trust_region_methods_other_enhancements.md#node-elmxe1e) · [Điểm Cauchy và hội tụ](./71_inexact_newton_methods.md#node-lqxn0xz)
+
 <br>
 
 <a id="node-42j2ybl"></a>
@@ -470,6 +472,8 @@
 > **🤖 AI Feedback** — ⚠️ Score: **82/100**
 >
 > Bản ghi chú của bạn thể hiện sự hiểu biết sâu sắc về các khái niệm, đặc biệt là trong việc đặt ngữ cảnh cho phương pháp dogleg và điểm Cauchy. Tuy nhiên, có một lỗi đáng kể trong việc diễn giải điều kiện cho vector 'v' khi 'B' là không xác định, điều này cần được chỉnh sửa để đảm bảo tính chính xác hoàn toàn.
+
+**🔗 See also:** [Điểm dừng và tối ưu toàn cục](./21_funds_of_unconstrained_optim_whats_solution.md#node-iqziy0r)
 
 <br>
 
