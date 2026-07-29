@@ -427,7 +427,7 @@
 >
 >
 >
-> Chứng minh thì cũng dễ thôi, dùng một theorem liên quan MGF: Đó là nếu X, Y độc lập thì với U = X + Y thì ΜU(t) = MX(t)**MY(t). Chứng minh rất dễ:
+> Chứng minh thì cũng dễ thôi, dùng một theorem liên quan MGF: Đó là nếu X, Y độc lập thì với U = X + Y thì ΜU(t) = MX(t)\*MY(t). Chứng minh rất dễ:
 >
 >
 >
@@ -435,7 +435,7 @@
 >
 >
 >
-> ⇨ Μ(t) = E\[e^tU\] = E\[e^t(X+Y)\] = E\[e^tX**  e^tY\]
+> ⇨ Μ(t) = E\[e^tU\] = E\[e^t(X+Y)\] = E\[e^tX \* e^tY\]
 >
 >
 >
@@ -463,7 +463,7 @@
 >
 >
 >
-> cũng chính là MX(t)  **MY(t).
+> cũng chính là MX(t) \* MY(t).
 >
 >
 >
@@ -475,7 +475,7 @@
 >
 >
 >
-> thì ΜU(t) = MX(t)**  MY(t) = exp(μ1t + σ1^2t^2/2) exp(μ2t + σ2^2t^2/2)
+> thì ΜU(t) = MX(t) \* MY(t) = exp(μ1t + σ1^2t^2/2) exp(μ2t + σ2^2t^2/2)
 >
 >
 >
@@ -1504,6 +1504,8 @@
 > σ^2 Nhưng trong EE364a, ta biết cái vụ nếu ta có hàm f(x, y), thì có thể maximize over x trước sau
 > đó maximize over y: sup_x,y f(x,) = sup_x [sup_y f(x,y)] = sup_y [sup_x f(x,uy)]. Có thể là ông đang 
 > nói đến việc ta có thể giải bài toán maximize over μ  trước rồi giải bài toán maximize over σ^2 sau.
+
+**🔗 See also:** [Ước lượng hợp lí cực đại](./125_curve_fitting_re_visited.md#node-r1gqc9l)
 
 <br>
 
