@@ -164,6 +164,8 @@
 >
 > Và phần này người ta muốn chứng minh rằng: chỉ cần độ lớn của chuỗi ηk tránh ra số 1 thì thuật toán inexact-Newton chắc chắn sẽ hội tụ
 
+**🔗 See also:** [5.1 The Linear Conjugate Gradient Method](./51_linear_conjugate_gradient.md#node-hpdy8sw)
+
 <br>
 
 <a id="node-zb201bp"></a>
@@ -255,6 +257,8 @@
 > **🤖 AI Feedback** — ✅ Score: **92/100**
 >
 > Bài phân tích rất sâu sắc và chính xác, đặc biệt là các giải thích về lý do thay đổi so với thuật toán CG chuẩn. Tuy nhiên, công thức định nghĩa εk có một lỗi nhỏ, thiếu căn bậc hai của ||∇fk||.
+
+**🔗 See also:** [A Practical Form Of The Conjugate Gradient Method.](./51_linear_conjugate_gradient.md#node-jdgssae)
 
 <br>
 
@@ -412,6 +416,8 @@
 >
 > Bài viết đã nắm bắt chính xác ý chính của đoạn văn, đặc biệt là phần giới thiệu về việc tìm kiếm giải pháp xấp xỉ và cải thiện điểm Cauchy. Tuy nhiên, nó bỏ qua một số chi tiết cụ thể như tên tác giả (Steihaug) và số hiệu thuật toán (7.2 và 4.1) được đề cập trong văn bản gốc.
 
+**🔗 See also:** [Algorithm 4.1 (Trust Region)](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-c4gu30d) · [Nói sơ về nội dung sắp tới](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-4u120q2)
+
 <br>
 
 <a id="node-4fbrszp"></a>
@@ -483,6 +489,8 @@
 > **🤖 AI Feedback** — ⚠️ Score: **88/100**
 >
 > Bài phân tích của bạn thể hiện sự hiểu biết sâu sắc và toàn diện về thuật toán Steihaug-CG và vai trò của nó trong phương pháp Trust-Region. Bạn đã nắm vững các điểm cốt lõi về việc điều chỉnh CG để đối phó với ma trận Hessian không xác định dương và ràng buộc vùng tin cậy, đồng thời kết nối tốt với các phương pháp tối ưu khác. Tuy nhiên, cần chú ý đến độ chính xác tuyệt đối trong các chi tiết: giải thích ban đầu về r0 là r0 = -(-∇fk là không cần thiết và có thể gây nhầm lẫn; chỉ cần nói r0 = ∇fk như trong thuật toán. Dù kết quả cuối cùng là đúng, cách diễn đạt cần phải trực tiếp và rõ ràng hơn.
+
+**🔗 See also:** [Nói sơ về nội dung sắp tới](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-4u120q2)
 
 <br>
 
@@ -611,6 +619,8 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Bài làm xuất sắc. Bạn đã phân tích chi tiết và chính xác mối liên hệ giữa các điều kiện của thuật toán 7.2 với khái niệm điểm Cauchy, đồng thời giải thích sâu sắc nguyên lý đảm bảo hội tụ toàn cục. Sự hiểu biết về đạo hàm điểm Cauchy cũng rất ấn tượng, mặc dù việc tham chiếu chương có thể chính xác hơn.
+
+**🔗 See also:** [Công thức Cauchy point](./41_trust_region_methods_algorithms_based_on_the_cauchy_point.md#node-06f2kv1)
 
 <br>
 
