@@ -27,6 +27,8 @@
 >
 > Ghi chú đã nắm bắt chính xác các thuộc tính chính của phân phối Gaussian, bao gồm tên gọi khác, ứng dụng rộng rãi và đặc biệt là đặc tính cực đại hóa entropy. Để tăng cường độ sâu, bạn có thể bổ sung các định nghĩa về tham số (như μ, σ², Σ) và lưu ý về việc phân phối này áp dụng cho "biến liên tục" từ văn bản.
 
+**🔗 See also:** [Tối ưu Entropy và Hàm Lagrangian](./16_information_theory.md#node-hhyh07u) · [Phân phối chuẩn entropy tối đa](./16_information_theory.md#node-71bnwai) · [Biến đổi Gaussian độc lập](#node-1vavixz) · [3.1.5 Multiple outputs](./315_multiple_outputs.md#node-5d9hd8j)
+
 <br>
 
 <a id="node-cp5ac1u"></a>
@@ -74,6 +76,8 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Ghi chú của bạn giải thích rất chính xác và chi tiết về Định lý Giới hạn Trung tâm, bao gồm cả công thức cụ thể cho phân phối của trung bình mẫu. Để toàn diện hơn, bạn có thể bổ sung thêm về sự hội tụ của phân phối nhị thức đã được đề cập.
+
+**🔗 See also:** [Histogram Density Estimation](./25_non_parametric_model.md#node-qmfgqko)
 
 <br>
 
@@ -360,7 +364,7 @@
 >
 >
 >
-> T(**x**) = Σj=1:m T(**x**)j  ****uj**
+> T(**x**) = Σj=1:m T(**x**)j \* **uj**
 >
 >
 >
@@ -368,7 +372,7 @@
 >
 >
 >
-> ⇨ Σi=1:n xi **a**i = Σj=1:m T(**x**)j**  **u**j
+> ⇨ Σi=1:n xi **a**i = Σj=1:m T(**x**)j \* **u**j
 >
 >
 >
@@ -1040,6 +1044,8 @@
 >
 > Bạn đã thể hiện sự hiểu biết sâu sắc và toàn diện về chủ đề này. Các bước chứng minh chi tiết và logic, đặc biệt là việc sử dụng hai phương pháp để đơn giản hóa số mũ và liên hệ kết quả với ý nghĩa về sự độc lập của các biến ngẫu nhiên là rất xuất sắc. Việc bạn kết nối trực tiếp các công thức toán học với các phát biểu lý thuyết của Bishop cho thấy một sự nắm vững kiến thức vững chắc.
 
+**🔗 See also:** [Phân phối Gaussian](#node-arii2cl)
+
 <br>
 
 <a id="node-tx5105q"></a>
@@ -1545,11 +1551,11 @@
 >
 >
 >
-> Và trong cái tích này, hai cái tích phân ∫ 1/(√(2πλi) exp {-yi^2/λi} yi dyi, và ∫ 1/(√(2πλj) exp {-yj^2/λj} yj dyj đều là tích phân của hàm lẽ trên toàn miền, nên đều = 0, hoặc có thể nhìn ra nó đều là mean E(Yi) của Yi \~ normal(0, λi) và E(Yj) của normal(0, λj). Còn những cụm khác đều có dạng của tích phân hàm normal(0, λi) trên toàn miền, nên đều bằng 1. Nhưng dù sao, thì vì có thừa số - 0, nên cả cái tích này bằng: 1**1**...**0**0**1**1 = 0.
+> Và trong cái tích này, hai cái tích phân ∫ 1/(√(2πλi) exp {-yi^2/λi} yi dyi, và ∫ 1/(√(2πλj) exp {-yj^2/λj} yj dyj đều là tích phân của hàm lẽ trên toàn miền, nên đều = 0, hoặc có thể nhìn ra nó đều là mean E(Yi) của Yi \~ normal(0, λi) và E(Yj) của normal(0, λj). Còn những cụm khác đều có dạng của tích phân hàm normal(0, λi) trên toàn miền, nên đều bằng 1. Nhưng dù sao, thì vì có thừa số - 0, nên cả cái tích này bằng: 1\*1\*...\*0\*0\*1\*1 = 0.
 >
 >
 >
-> Còn nếu i = j, thì nó sẽ trở thành 1**1**...**\[∫ 1/(√(2πλi) exp {-yi^2/λi} (yi^2)dyi\]**1**...**1
+> Còn nếu i = j, thì nó sẽ trở thành 1\*1\*...\*\[∫ 1/(√(2πλi) exp {-yi^2/λi} (yi^2)dyi\]\*1\*...\*1
 >
 >
 >
