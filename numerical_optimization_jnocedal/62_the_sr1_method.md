@@ -280,6 +280,8 @@
 >
 > Bài phân tích thể hiện sự hiểu biết sâu sắc và chính xác về thuật toán SR1 Trust-Region, đặc biệt là ý nghĩa quan trọng của việc cập nhật ma trận xấp xỉ Hessian (Bk) độc lập với độ tin cậy của mô hình (tỷ lệ ared/pred). Tuy nhiên, có một chi tiết nhỏ cần điều chỉnh: bán kính tin cậy (Δk) chỉ được tăng gấp đôi khi độ dài bước `||sk||` lớn hơn `0.8 Δk`, không phải khi `||sk|| >= 0.8 Δk` như đã nêu, vì khi `||sk|| <= 0.8 Δk` thì bán kính được giữ nguyên.
 
+**🔗 See also:** [Algorithm 4.1 (Trust Region)](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-c4gu30d)
+
 <br>
 
 <a id="node-bei9w43"></a>
