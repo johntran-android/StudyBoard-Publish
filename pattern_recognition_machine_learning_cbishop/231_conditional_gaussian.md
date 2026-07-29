@@ -275,6 +275,8 @@
 >
 > Ghi chú của bạn cực kỳ chi tiết và chính xác, làm rõ hoàn toàn quá trình suy luận để đạt được các kết quả (2.73) và (2.75) mà sách chỉ trình bày vắn tắt. Việc bạn triển khai từng bước các phép tính ma trận và so sánh với dạng tổng quát của Gaussian là rất xuất sắc, cho thấy sự hiểu biết sâu sắc.
 
+**🔗 See also:** [Phân phối Gaussian có điều kiện](./233_bayess_theorem_for_gaussian_variables.md#node-2d1tmn5)
+
 <br>
 
 <a id="node-su2e8a4"></a>
@@ -338,6 +340,8 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Bài làm của bạn rất chính xác và sâu sắc. Bạn không chỉ chép đúng công thức mà còn nắm vững các nhận xét quan trọng về tính chất của mô hình và đưa ra so sánh đúng đắn về độ đơn giản của các dạng biểu diễn. Để bài làm hoàn hảo hơn, bạn nên đảm bảo các tham chiếu số công thức khớp với tài liệu gốc hoặc giải thích rõ ràng hơn về chúng.
+
+**🔗 See also:** [Phân phối Gaussian phân tách có điều kiện](./232_marginal_gaussian.md#node-qwpga8o) · [Mô hình Gaussian Tuyến tính](./233_bayess_theorem_for_gaussian_variables.md#node-x44e412)
 
 <br>
 
