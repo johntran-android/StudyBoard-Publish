@@ -34,6 +34,8 @@
 >
 > Thế thì, trong bài toán này, cho rằng ta được cho f(**x**) và f(**y**|**x**) đều là Normal trong đó mean của f(**y**|**x**) là hàm phụ thuộc **x** và covariance matrix không phụ thuộc **x**. Đây là ví dụ của linear Gaussian model, và ta sẽ đi tìm f(**y**) cũng như f(**x**|**y**). Và đại khái là đây là bài toán gặp nhiều trong các chap sau nên ta sẽ phân tích nó ở đây trước.
 
+**🔗 See also:** [Mô hình Gaussian tuyến tính](./231_conditional_gaussian.md#node-usyapsm)
+
 <br>
 
 <a id="node-axpsoob"></a>
@@ -210,6 +212,8 @@
 >
 > Bài viết giải thích rất chi tiết và sâu sắc từng bước một, từ định nghĩa phân phối đến lý do chọn log và cách các hệ số kết hợp thành dạng bậc hai của Z, cho thấy sự hiểu biết vững chắc. Để hoàn thiện hơn, bạn có thể thử tự xây dựng tường minh vector mean và ma trận precision/covariance của Z khi nó đã được chứng minh là phân phối Gaussian.
 
+**🔗 See also:** [Phân phối Gaussian có điều kiện](#node-2d1tmn5)
+
 <br>
 
 <a id="node-77d52im"></a>
@@ -257,6 +261,8 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Phân tích rất chính xác và sâu sắc, giải thích rõ ràng cách suy ra phân phối biên của y từ phân phối hợp Gaussian, khớp hoàn toàn với các công thức và ý tưởng trong hình ảnh. Việc tổng hợp các kiến thức nền trước đó cũng rất hữu ích và làm tăng độ sâu của ghi chú.
+
+**🔗 See also:** [Hiệp phương sai phân phối biên Σaa](./232_marginal_gaussian.md#node-tmn4pn3)
 
 <br>
 
@@ -495,6 +501,8 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Bài giải rất chi tiết, logic và chính xác từng bước một trong việc áp dụng kết quả từ phân phối Gaussian có điều kiện và ma trận độ chính xác, hoàn toàn khớp với hình ảnh gốc. Việc tự sửa lỗi nhỏ về phân phối biên của Y cho thấy sự cẩn trọng và hiểu biết sâu sắc.
+
+**🔗 See also:** [Hiệp phương sai Gaussian điều kiện](./231_conditional_gaussian.md#node-mm664xt) · [Phân phối kết hợp Gaussian](#node-axpsoob)
 
 <br>
 
