@@ -358,11 +358,11 @@
 >
 >
 >
-> Trước khi giải, đầu tiên mình sẽ hiểu thế này, bài toán này có hai biến tối ưu, là **μ** và **Σ**, thì trong ee364a đã học, rằng, inf_x,y f(x,y) = inf_x {inf_y f(x,y)} tức làvới bài toán tối ưu có hai biến x, y, ta có thể giải lần lượt từng biến: giữ y fixed, tìm x**, sau đó tìm y**.
+> Trước khi giải, đầu tiên mình sẽ hiểu thế này, bài toán này có hai biến tối ưu, là **μ** và **Σ**, thì trong ee364a đã học, rằng, inf_x,y f(x,y) = inf_x {inf_y f(x,y)} tức làvới bài toán tối ưu có hai biến x, y, ta có thể giải lần lượt từng biến: giữ y fixed, tìm x\*, sau đó tìm y\*.
 >
 >
 >
-> Vậy ở đây cũng vậy, ta sẽ giữ **Σ** fix, giải tìm **μ**** trước, sau đó giải tìm **Σ****.
+> Vậy ở đây cũng vậy, ta sẽ giữ **Σ** fix, giải tìm **μ\*** trước, sau đó giải tìm **Σ\***.
 >
 >
 >
