@@ -837,6 +837,8 @@ Derivative Approx
 > một  vector d nào đó. Vì đây là thứ mà trong thực tế ta cần, chứ ko phải là bản thân
 > cái Jacobian.
 
+**🔗 See also:** [Công thức xấp xỉ Hessian-vector](#node-tnspmvs)
+
 <br>
 
 <a id="node-hownvpu"></a>
@@ -1054,6 +1056,8 @@ Derivative Approx
 >
 > Là tương tự như những phần trước ta sẽ có công thức xấp xỉ Hessian theo
 > central difference có sai số nhỏ hơn, O(ε^2)
+
+**🔗 See also:** [Xấp xỉ tích Jacobian-vector](#node-uv0qt75)
 
 <br>
 
