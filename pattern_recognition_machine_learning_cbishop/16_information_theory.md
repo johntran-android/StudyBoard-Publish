@@ -629,7 +629,7 @@
 >
 >
 >
-> Dĩ nhiên, nhiệm vụ là đi tìm x **thuộc domain của mọi hàm số và cũng thuộc feasible set sao cho f0(x**) có giá trị nhỏ nhất.
+> Dĩ nhiên, nhiệm vụ là đi tìm x\* thuộc domain của mọi hàm số và cũng thuộc feasible set sao cho f0(x\*) có giá trị nhỏ nhất.
 >
 >
 >
@@ -677,15 +677,15 @@
 >
 >
 >
-> Gọi d **= g(λ**, v**) với λ**, v **là solution của dual problem, gọi là dual optimal
+> Gọi d\* = g(λ\*, v\*) với λ\*, v\* là solution của dual problem, gọi là dual optimal
 >
 >
 >
-> Gọi p** = f0(x**), x** là solution của bài toán gốc (minimize f0(x) s.t constraint) x **gọi là primal optimal
+> Gọi p\* = f0(x\*), x\* là solution của bài toán gốc (minimize f0(x) s.t constraint) x\* gọi là primal optimal
 >
 >
 >
-> Khi đó ta có d** ≤ p **và p** - d **gọi là duality gap.
+> Khi đó ta có d\* ≤ p\* và p\* - d\* gọi là duality gap.
 >
 >
 >
@@ -693,7 +693,7 @@
 >
 >
 >
-> p** = f0(x**)
+> p\* = f0(x\*)
 >
 >
 >
@@ -701,39 +701,51 @@
 >
 >
 >
-> ⇨ f0(x**) + Σi λ*ifi(x*) + Σj v*jhj(x*) ≤ f0(x**)
+> ⇨ f0(x\*) + Σi λ*ifi(x*) + Σj v*jhj(x*) ≤ f0(x\*)
 >
 >
 >
-> ⇔ L(x**, λ**, v**) ≤ f0(x**) = p**
+> ⇔ L(x\*, λ\*, v\*) ≤ f0(x\*) = p\*
 >
 >
 >
-> Và g(λ**, v**) ≤ L(x**, λ**, v**) do định nghĩa g(λ,v) = inf_x L(x, λ, v), nên dĩ nhiên g(λ, v) ≤ L(x, λ, v) ∀x trong đó có x**
+> Và g(λ\*, v\*) ≤ L(x\*, λ\*, v\*) do định nghĩa g(λ,v) = inf_x L(x, λ, v), nên dĩ nhiên g(λ, v) ≤ L(x, λ, v) ∀x trong đó có x\*
 >
 >
 >
-> ⇨ g(λ**, v**) ≤ L(x**, λ**, v**) ≤ f0(x**) = p **Và g(λ, v) ≤ g(λ**, v**) do định nghĩa của dual optimal
+> ⇨ g(λ\*, v\*) ≤ L(x\*, λ\*, v\*) ≤ f0(x\*) = p\*
 >
 >
 >
-> Vậy g(λ, v) ≤ g(λ**, v**) = d** **≤** L(x**, λ**, v**) **≤** f0(x**) = p **Thế thì, trong trường mà bài toán thỏa một số điều kiện gọi là constraint qualification, ví dụ Slater's condition
+> Và g(λ, v) ≤ g(λ\*, v\*) do định nghĩa của dual optimal
 >
 >
 >
-> thì ta sẽ có strong duality: p** = d **khi đó, hai cái dấu ≤ in đậm ở trên phải xảy ra, dẫn đến:
+> Vậy g(λ, v) ≤ g(λ\*, v\*) = d\* **≤** L(x\*, λ\*, v\*) **≤** f0(x\*) = p\*
 >
 >
 >
-> Dấu ≤ thứ 2: L(x**, λ**, v**) = f0(x**)
+> Thế thì, trong trường mà bài toán thỏa một số điều kiện gọi là constraint qualification, ví dụ Slater's condition
 >
 >
 >
-> ⇔ f0(x**) + Σi λ*ifi(x*) + Σi v*ihi(x*) = f0(x**)
+> thì ta sẽ có strong duality: p\* = d\*
 >
 >
 >
-> ⇔ Σi λ*ifi(x*) = 0 (vì Σihi(x**) thì dĩ nhiên là bằng 0 do x **là primal optimal, nên nó phải thỏa inequality constraint rồi)
+> khi đó, hai cái dấu ≤ in đậm ở trên phải xảy ra, dẫn đến:
+>
+>
+>
+> Dấu ≤ thứ 2: L(x\*, λ\*, v\*) = f0(x\*)
+>
+>
+>
+> ⇔ f0(x\*) + Σi λ*ifi(x*) + Σi v*ihi(x*) = f0(x\*)
+>
+>
+>
+> ⇔ Σi λ*ifi(x*) = 0 (vì Σihi(x\*) thì dĩ nhiên là bằng 0 do x\* là primal optimal, nên nó phải thỏa inequality constraint rồi)
 >
 >
 >
@@ -741,31 +753,31 @@
 >
 >
 >
-> Nó nói rằng nếu fi(x**) &lt; 0 thì λi **phải = 0.
+> Nó nói rằng nếu fi(x\*) &lt; 0 thì λi\* phải = 0.
 >
 >
 >
-> Nếu λi** &gt; 0 thì fi(x**) phải bằng 0
+> Nếu λi\* &gt; 0 thì fi(x\*) phải bằng 0
 >
 >
 >
-> Dấu ≤ thứ nhất: g(λ**, v**) = d** ≤ L(x**, λ**, v**)
+> Dấu ≤ thứ nhất: g(λ\*, v\*) = d\* ≤ L(x\*, λ\*, v\*)
 >
 >
 >
-> cũng là inf_x L(x, λ**, v**) = L(x**, λ**, v**). Điều này có nghĩa là x **là minimizer của L(x, λ**, v**)
+> cũng là inf_x L(x, λ\*, v\*) = L(x\*, λ\*, v\*). Điều này có nghĩa là x\* là minimizer của L(x, λ\*, v\*)
 >
 >
 >
-> ⇨ ∇\_x L(x, λ**, v**)|x=x** = 0. Đây gọi là **stationary condition**
+> ⇨ ∇\_x L(x, λ\*, v\*)|x=x\* = 0. Đây gọi là **stationary condition**
 >
 >
 >
-> Tóm lại, ta có các điều kiện tối ưu (giúp giải x**, λ**, v**) như sau:
+> Tóm lại, ta có các điều kiện tối ưu (giúp giải x\*, λ\*, v\*) như sau:
 >
 >
 >
-> ∇\_x L(x, λ**, v**)|x=x** = 0 (Stationary condition)
+> ∇\_x L(x, λ\*, v\*)|x=x\* = 0 (Stationary condition)
 >
 >
 >
@@ -773,11 +785,11 @@
 >
 >
 >
-> λ**i ≥ 0 (Dual constraint)
+> λ\*i ≥ 0 (Dual constraint)
 >
 >
 >
-> fi(x**) ≤ 0, hi(x**) = 0 (Primal constraint)
+> fi(x\*) ≤ 0, hi(x\*) = 0 (Primal constraint)
 >
 >
 >
@@ -815,19 +827,19 @@
 >
 >
 >
-> ∇\_p L(p**, λ**) = 0
+> ∇\_p L(p\*, λ\*) = 0
 >
 >
 >
-> ⇔ d/dp \[Σi pi ln(pi) + λ**(Σi pi - 1)\] = 0
+> ⇔ d/dp \[Σi pi ln(pi) + λ\*(Σi pi - 1)\] = 0
 >
 >
 >
-> ⇔ d/dp \[Σi pi ln(pi)\] + d/dp\[λ**(Σi pi - 1)\] = 0
+> ⇔ d/dp \[Σi pi ln(pi)\] + d/dp\[λ\*(Σi pi - 1)\] = 0
 >
 >
 >
-> ⇔ d/dp \[Σi pi ln(pi)\] + λ** d/dp (Σi pi - 1) = 0
+> ⇔ d/dp \[Σi pi ln(pi)\] + λ\* d/dp (Σi pi - 1) = 0
 >
 >
 >
@@ -935,7 +947,7 @@
 >
 >
 >
-> Quay lại phương trình d/dp \[Σi pi ln(pi)\] + λ **d/dp (Σi pi - 1) = 0, xét hạng tử thứ 2
+> Quay lại phương trình d/dp \[Σi pi ln(pi)\] + λ\* d/dp (Σi pi - 1) = 0, xét hạng tử thứ 2
 >
 >
 >
@@ -943,7 +955,7 @@
 >
 >
 >
-> Vậy ta có: ln(p**) + 1 + λ*1 = 0 (λ*1 là λ **nhân vector 1)
+> Vậy ta có: ln(p\*) + 1 + λ*1 = 0 (λ*1 là λ\* nhân vector 1)
 >
 >
 >
@@ -959,11 +971,11 @@
 >
 >
 >
-> À như vậy stationary point p*1,p*2,..đều bằng nhau, bằng exp\[-(1+λ**)\]
+> À như vậy stationary point p*1,p*2,..đều bằng nhau, bằng exp\[-(1+λ\*)\]
 >
 >
 >
-> Ta cũng ko cần tính ra λ **làm gì, vì đã đủ kết luận phân phối p1,..pm có entropy lớn nhất chính là p1=p2=...=1/M
+> Ta cũng ko cần tính ra λ\* làm gì, vì đã đủ kết luận phân phối p1,..pm có entropy lớn nhất chính là p1=p2=...=1/M
 >
 >
 >
@@ -975,7 +987,7 @@
 >
 >
 >
-> Xét Hessian của \[-entropy\] tại p**:
+> Xét Hessian của \[-entropy\] tại p\*:
 >
 >
 >
@@ -1045,6 +1057,8 @@
 >
 > Do đó theo secondary test, p*1, p*2 ...là minimum.
 
+**🔗 See also:** [Phân phối Gaussian](./230_gaussian_distribution.md#node-arii2cl)
+
 <br>
 
 <a id="node-r4hbo0k"></a>
@@ -1076,7 +1090,7 @@
 >
 >
 >
-> Khi đó cứ hình dung trong một khoảng Δ nào đó, nằm từ cái mốc (i**Δ → i+1)**Δ (giống như cái khoảng Δ thứ hai ở trên), thì xác suất X nằm trong khoảng này sẽ là P(X ∈ \[iΔ,(i+1)Δ\]) = ∫iΔ:(i+1)Δ f(x)dx
+> Khi đó cứ hình dung trong một khoảng Δ nào đó, nằm từ cái mốc (i\*Δ → i+1)\*Δ (giống như cái khoảng Δ thứ hai ở trên), thì xác suất X nằm trong khoảng này sẽ là P(X ∈ \[iΔ,(i+1)Δ\]) = ∫iΔ:(i+1)Δ f(x)dx
 >
 >
 >
@@ -1268,7 +1282,7 @@
 >
 >
 >
-> Bằng cách lập luận quantization: cho trục số thành các khoảng Δ, khi đó, với mỗi khoảng, ta xét cái điểm mà pdf tại đó nhân với Δ sẽ bằng tích phân pdf trên khoảng đó: ∫i**Δ:(i+1)**Δ f(x)dx = f(xi)**Δ. Khi đó, ta mới quay về áp dụng lập luận cho biến rời rạc đặt mới: Y, với các possible value discrete yi: fY(yi) = f(xi)**Δ
+> Bằng cách lập luận quantization: cho trục số thành các khoảng Δ, khi đó, với mỗi khoảng, ta xét cái điểm mà pdf tại đó nhân với Δ sẽ bằng tích phân pdf trên khoảng đó: ∫i\*Δ:(i+1)\*Δ f(x)dx = f(xi)\*Δ. Khi đó, ta mới quay về áp dụng lập luận cho biến rời rạc đặt mới: Y, với các possible value discrete yi: fY(yi) = f(xi)\*Δ
 >
 >
 >
@@ -1515,6 +1529,8 @@
 >
 >
 > Vậy, kết quả là f(x) = pdf của normal(μ, σ^2). như kết quả 1.109 trong sách
+
+**🔗 See also:** [Phân phối Gaussian](./230_gaussian_distribution.md#node-arii2cl)
 
 <br>
 
