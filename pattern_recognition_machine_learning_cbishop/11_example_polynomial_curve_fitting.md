@@ -94,6 +94,8 @@
 > theo wj. Cũng dễ hiểu, ta có thể thể hiện ở dạng y(x, **w**) = **w**T[1, x, x^2,...,x^M]
 > Và ông đây là một function thuộc họ linear models, sẽ bàn kĩ ở chap 4
 
+**🔗 See also:** [Curve Fitting Góc Nhìn Xác Suất](./125_curve_fitting_re_visited.md#node-21cf3yh) · [Gaussian Basis Functions](./310_linear_regression_and_basis_functions.md#node-2e9r7fm)
+
 <br>
 
 <a id="node-7gck8b3"></a>
@@ -778,6 +780,8 @@
 > Cuối cùng, gs nói trong thống kê, kĩ thuật này gọi là SHRINKAGE, mà cụ thể
 > khi ta dùng hàm bậc hai của các weight như này thì ta gọi nó là RIDGE
 > REGRESSION. Trong neural network thì gọi là WEIGHT DECAY,
+
+**🔗 See also:** [Ước lượng Bayes và MAP](./125_curve_fitting_re_visited.md#node-8z48xwr)
 
 <br>
 
