@@ -188,15 +188,15 @@
 >
 >
 >
-> Vậy thì, hiểu đơn giản, hình 3.4 đầu tiên với q = 2, ta sẽ thấy nếu di chuyển trên đường contour plot màu xanh ngoài cùng (đồng nghĩa có xét các điểm có cùng main error term) thì điểm gần với gốc tọa độ nhất, đồng nghĩa có regularzer error nhỏ nhất chính là w**, giao điểm của hai đường tròn. Trong khi đó, cũng xét các điểm trên đường contour plot màu xanh ngoài cùng, thì nơi có regularizer error nhỏ nhất lại là đỉnh của hình vuông, và tại đây thì w**1 = 0.
+> Vậy thì, hiểu đơn giản, hình 3.4 đầu tiên với q = 2, ta sẽ thấy nếu di chuyển trên đường contour plot màu xanh ngoài cùng (đồng nghĩa có xét các điểm có cùng main error term) thì điểm gần với gốc tọa độ nhất, đồng nghĩa có regularzer error nhỏ nhất chính là w\*, giao điểm của hai đường tròn. Trong khi đó, cũng xét các điểm trên đường contour plot màu xanh ngoài cùng, thì nơi có regularizer error nhỏ nhất lại là đỉnh của hình vuông, và tại đây thì w\*1 = 0.
 >
 >
 >
-> Có nghĩa là, hình ảnh này cho ta hiểu đại khái rằng, vì hình dạng của contour plot của hàm E_W(w), sẽ dẫn đến kết quả solution w **khác nhau, trong đó cả hai đều đạt trạng thái cân bằng giữa việc cố gắng làm giảm main error và regularizer nhưng nếu ta dùng l1 thì kết quả sẽ dẫn đến là ép cho param nào đó thành 0 (dù cả hai, trong mục tiêu giảm error tổng sẽ đều muốn ép param nhỏ lại, nhưng cái dùng l1 regularizer, thì sẽ ép một một số param thành 0 luôn).
+> Có nghĩa là, hình ảnh này cho ta hiểu đại khái rằng, vì hình dạng của contour plot của hàm E_W(w), sẽ dẫn đến kết quả solution w\* khác nhau, trong đó cả hai đều đạt trạng thái cân bằng giữa việc cố gắng làm giảm main error và regularizer nhưng nếu ta dùng l1 thì kết quả sẽ dẫn đến là ép cho param nào đó thành 0 (dù cả hai, trong mục tiêu giảm error tổng sẽ đều muốn ép param nhỏ lại, nhưng cái dùng l1 regularizer, thì sẽ ép một một số param thành 0 luôn).
 >
 >
 >
-> Còn điểm w** nằm ở đâu, thì chính là thể hiện bởi: d/dw error tổng = 0
+> Còn điểm w\* nằm ở đâu, thì chính là thể hiện bởi: d/dw error tổng = 0
 >
 >
 >
@@ -208,11 +208,11 @@
 >
 >
 >
-> ⇨ **w** **phải là điểm mà tại đó gradient của hàm E_D(**w**) cùng phương và ngược hướng với gradient hàm E_W(**w**).
+> ⇨ **w**\* phải là điểm mà tại đó gradient của hàm E_D(**w**) cùng phương và ngược hướng với gradient hàm E_W(**w**).
 >
 >
 >
-> Mà cái này thì hoàn toàn phù hợp với trực giác ở trên: w** phải là giao điểm của hai contour plot (khiến cho tổng error là nhỏ nhất, còn hai contour plot nào thì sẽ quyết định bởi λ, tham số ảnh hưởng tới tương quan giữa E_D và E_W như đã nói). Và vì gradient của hai hàm số tại đó đều phải vuông góc với contour plot (level curve), nên chúng sẽ phải paralell (trùng phương, ngược hướng)
+> Mà cái này thì hoàn toàn phù hợp với trực giác ở trên: w\* phải là giao điểm của hai contour plot (khiến cho tổng error là nhỏ nhất, còn hai contour plot nào thì sẽ quyết định bởi λ, tham số ảnh hưởng tới tương quan giữa E_D và E_W như đã nói). Và vì gradient của hai hàm số tại đó đều phải vuông góc với contour plot (level curve), nên chúng sẽ phải paralell (trùng phương, ngược hướng)
 >
 >
 >
@@ -220,7 +220,7 @@
 >
 >
 >
-> Nói túm lại, về mặt trực giác chỉ cần hiểu đơn giản thôi: Để giảm error tổng, sẽ là sự giằng co trong việc giảm E_D và E_W (và kết quả dằng co này sẽ chi phối bởi λ, tham số chi phối tương quan giữa hài objective). Kết quả sẽ là một w**. Xét hai contour plot của hai hàm số mà w** là tiếp điểm, thì với trường hợp của q = 2 (tức L2 regularizer) và q = 1 (L1 regularizer), thì đại khái là vì sự khác nhau giữa hình dạng của contour plot của hai hàm L1 và L2, nên sẽ khiến với L1, w\* nằm ở trên trục (đồng nghĩa một số param trở thành 0) hoặc không (các param chỉ nhỏ, chứ ko thành 0)
+> Nói túm lại, về mặt trực giác chỉ cần hiểu đơn giản thôi: Để giảm error tổng, sẽ là sự giằng co trong việc giảm E_D và E_W (và kết quả dằng co này sẽ chi phối bởi λ, tham số chi phối tương quan giữa hài objective). Kết quả sẽ là một w\*. Xét hai contour plot của hai hàm số mà w\* là tiếp điểm, thì với trường hợp của q = 2 (tức L2 regularizer) và q = 1 (L1 regularizer), thì đại khái là vì sự khác nhau giữa hình dạng của contour plot của hai hàm L1 và L2, nên sẽ khiến với L1, w\* nằm ở trên trục (đồng nghĩa một số param trở thành 0) hoặc không (các param chỉ nhỏ, chứ ko thành 0)
 >
 >
 >
