@@ -177,6 +177,8 @@
 >
 > Bài giải thích của bạn cực kỳ chi tiết và chính xác, đặc biệt là các bước suy luận toán học để đi đến công thức (3.32) và (3.33) đều rất rõ ràng và dễ hiểu. Độ sâu phân tích này thể hiện sự nắm vững kiến thức đáng kinh ngạc, rất tốt!
 
+**🔗 See also:** [Phân phối Gaussian](./230_gaussian_distribution.md#node-arii2cl)
+
 <br>
 
 <a id="node-n01dmjr"></a>
