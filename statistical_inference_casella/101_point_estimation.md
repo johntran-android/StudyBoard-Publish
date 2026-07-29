@@ -1,6 +1,6 @@
 # 10.1 Point Estimation
 
-📊 **Progress:** `30` Notes | `35` Screenshots | `12` AI Reviews
+📊 **Progress:** `34` Notes | `40` Screenshots | `15` AI Reviews
 
 ---
 <a id="node-2ixm3r0"></a>
@@ -2187,6 +2187,8 @@
 >
 > Bài giải thích rất rõ ràng, bám sát nội dung gốc và còn mở rộng thêm chiều sâu bằng cách liên hệ với Cramer-Rao Lower Bound và định nghĩa phương sai tiệm cận (Avar), giúp người đọc dễ hiểu hơn về bản chất của Hiệu quả tiệm cận tương đối (ARE). Không có điểm yếu đáng kể, đây là một ghi chú xuất sắc.
 
+**🔗 See also:** [Estimating a Gamma Mean](#node-dv9sls8)
+
 <br>
 
 <a id="node-eej3duv"></a>
@@ -2516,6 +2518,281 @@
 > **🤖 AI Feedback** — ⚠️ Score: **85/100**
 >
 > Bài làm đã thể hiện sự hiểu biết sâu sắc về cách tính toán và rút gọn biểu thức ARE, các bước đạo hàm và rút gọn đại số đều chính xác. Tuy nhiên, mô tả về hành vi của hàm số chưa hoàn toàn đúng; hàm ARE này thực tế là giảm nghiêm ngặt thay vì tăng liên tục đến giá trị lớn nhất.
+
+<br>
+
+<a id="node-dv9sls8"></a>
+
+- **Estimating a Gamma Mean**
+
+<p align="center"><kbd><img src="assets/qv079363zf8.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/917jged40as.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Quay lại ví dụ này sau, nhưng đại ý là minh họa rằng, đôi khi việc chịu khó tính mle là đáng, vì các estimator khác dễ tính toán hơn như method of moment ở đây ko tốt bằng.
+>
+>
+>
+>  Nhớ lại ARE(Vn, Wn) = Avar(Wn) / Avar(Vn) là tỉ số của Avar của estimator này với estimator kia. Với MLE, là cái có tính chất hiểu quả tiệm cận, có Avar đạt CRLB, thì tỉ số AVar của estimatorkhac1 so với Avar của MLE estimator  luôn ≥ 1. Và đồ thị cho thấy điều này.
+
+**🔗 See also:** [Asymptotic Relative Efficiency](#node-2y7vyqf)
+
+<br>
+
+<a id="node-gumecun"></a>
+
+- **Bootstrap Standard Errors**
+
+<p align="center"><kbd><img src="assets/pjzm3ffj69.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Phần này sẽ giới thiệu về **Bootstrap Standard Error**:
+>
+>
+>
+> Đại ý là vầy: Bootstrap dựa trên một ý tưởng là: Trong statistic, ta tìm cách hiểu về một population distribution dựa trên việc lấy mẫu (sample).
+>
+>
+>
+> Thế thì, vì sample sẽ đại diện cho population, nên nếu ta có thể tìm thấy các đặc điểm tương tự giữa nhiều sample, thì nó sẽ giúp ta inference về đặc điểm của population.
+>
+>
+>
+> Và để có nhiều sample phục vụ cho việc tìm ra những đặc điểm tương tự, người ta sẽ làm động tác là take các **resample** (tạm hiểu là **lấy mẫu từ mẫu ban đầu**) theo lối **sampling with replacement**.
+
+> [!TIP]
+> **🤖 AI Feedback** — ⚠️ Score: **85/100**
+>
+> Ghi chú đã nắm bắt rất tốt ý tưởng cốt lõi của Bootstrap, từ việc sử dụng mẫu để hiểu quần thể cho đến quá trình resample với việc bổ sung chi tiết 'sampling with replacement' rất giá trị. Tuy nhiên, ghi chú có thể hoàn thiện hơn nếu đề cập rõ ràng hơn về mục đích chính của Bootstrap là một phương pháp thay thế để tính toán sai số chuẩn.
+
+**🔗 See also:** [Example 1.2.20 Calculating Average](./124_enumerating_outcome.md#node-pl75v3r)
+
+<br>
+
+<a id="node-f5aaasl"></a>
+
+- **Bootstrapping a variance**
+
+<p align="center"><kbd><img src="assets/0tths2o6fcvl.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Ok, sau khi đã ôn lại 1.2.20, mình có thể tóm tắt lại bối cảnh của phần này như sau:
+>
+>
+>
+> Bài toán là, ta có tập 4 con số {2,4,9,12} và thực hiện việc lấy mẫu 4 số theo lối có hoàn lại (with replacement) từ 4 con số này, và tính trung bình, gán cho X. Câu hỏi đặt ra là X có bao nhiêu possible value, và pmf tương ứng là bao nhiêu.
+>
+>
+>
+> Thế thì việc trả lời câu hỏi thứ nhất, trở thành bài toán đếm số possible outcome khi sampling with replacement 4 lần từ 4 con số trên, và ta không care thứ tự, ví dụ coi (2,4,4,9) cũng giống (2,9,4,4). Và bài toán này khớp với frame của bài toán khái quát là: Có n item khác nhau 1,2,...n, bốc r lần theo lối sampling có hoàn lại, thì có bao nhiêu possible outcome khác nhau trong đó ta không care thứ tự. Và công thức cho kết quả sẽ là (n + r - 1 choose r)
+>
+>
+>
+> Còn để trả lời cho câu hỏi sau: pmf là bao nhiêu, tức là tính xác suất của event, ta phải tính theo order sample. mà trong note của phần đó, mình đã thấy rằng, nếu tính theo unordered sample space, kết quả sẽ là xác suất các possible outcome (cũng là giá trị các pmf P(X = xi)) đều là 1/ (n + r - 1 choose r) (và ở đây, với r = n, sẽ là 1 / (n + n - 1 choose r) = 1/(7!/4!3!) = 1/35).
+>
+>
+>
+> Kết quả đúng phải là tính theo ordered sample space thì (4,2,4,4) cũng phải khác so với (2,4,4,4), và số possible outcome chính là (4 × 4 × 4 × 4) = 4^4. Do đó, xác suất của mọi outcome sẽ là 1/4^4.
+>
+>
+>
+> Thế thì: ở đây, ông nói cái ví dụ trên chính là dạng đơn giản của kĩ thuật **bootstrap** - gọi là **non-parametric bootstrap** một kĩ thuật quan trọng trong statistic.
+>
+>
+>
+> Và cụ thể là cái mà ta làm (sampling with replacement) 4 item từ set {2,4,9,12} **và tính trung bình** chính là ta đã **resample các possible values của sample mean**.
+>
+>
+>
+> Ta thấy như ở trên đã nhắc lại, rằng X sẽ có 35 possible values (cũng là số possible outcome khi xét unorder sample space của thử nghiệm), nhưng mỗi value có xác suất khác nhau (không equally likely, hay nói ở trong sách là không equiprobable, cũng là nghĩa đó).
+>
+>
+>
+> Còn 4^4, số possible outcome khi xét order sample space, thì chúng equally likely và ở đây nói "**có thể đối xử với 4^4 = 256 possible outcome này như random sample"** ("**can be treat as random sample"**) là sao?
+>
+>
+>
+> Có nên hiểu ý của gs Casella là: **TREAT NÓ NHƯ TOÀN BỘ SAMPLE SPACE**, và vì vậy, nó **CŨNG CHÍNH LÀ MỘT RANDOM SAMPLE**.
+>
+>
+>
+> Hiểu như vầy: Vì 256 outcomes này là **mọi khả năng có thể có** khi (sampling 4 lần từ 4 numbers {2,4,9,12}), để rồi tạo nên mọi possible value của con số X (trung bình 4 con số kết qủa cuả mỗi outcome). Do đó, cái tập 256 outcome này, chính là một **ORIGINAL SAMPLE SPACE S** (hay Ω) của một experiment.
+>
+>
+>
+> Thế thì với **random sample**, hãy nhớ lại định nghĩa của nó: Đó là, ta quan sát một đại lượng ngẫu nhiên nào đó n lần, giá trị mỗi lần sẽ được đại diện bởi một random variable Xi, và việc quan sát sẽ được thực hiện sao cho các random variable X1,...Xn này độc lập (mutually independent) và có cùng distribution (identically distributed).
+>
+>
+>
+> Vậy thì, giả sử ta lấy mẫu từ cái original sample space S, với n = 256, thì nếu quan sát thấy X1 = g(s1), X2 = g(s2),...với s1,..s256 là các outcome nói trên, và g(.) là hàm tính trung bình. Thì rõ ràng đây vẫn là một random sample hợp lệ.
+>
+>
+>
+> Và do đó, bản thân cái sample space - nói đúng hơn, là tập {g(s1), g(s2),....g(s256)}, hay {g(s): s ∈ S} cũng là một valid observed value của một random sample size n = 256.
+>
+>
+>
+> Như vậy ta có thể hiểu đại khái ý của gs khi ông nói có thể coi "4^4, số possible outcomes" như một random sample là vậy.
+>
+>
+>
+> Thế thì vì sao tập 35 unordered outcomes lại không phải là random sample.
+>
+>
+>
+> → Có thể trả lời là bởi vì tập này không phải là original sample space, chúng chứa các outcome (gọi là các event cũng được, vì ta nhớ định nghĩa của event chỉ là một tập các outcome trong original sample space) chứa các original (ordered) outcome: Ví dụ ta đã thấy trong (phần 1.2.4 - xem link) {2,4,4,9} sẽ "chứa" / "tương ứng" với 12 ordered original outcome.
+>
+>
+>
+> Và như vậy, không thể coi nó là original sample space, thì ko thể coi nó là random sample được, vì với định nghĩa của random sample như nói trên, thì original sample space có thể coi như một version đặc biệt của random sample, khi **có size bằng đúng original sample space size**, và các observed value của các random variable **chứa đủ mọi possible value của original sample space** - đây chẳng phải là một **random sample lí tưởng** sao - khi chắc chắn nó chính là cái có kích thước nhỏ nhất nhưng chứa đủ mọi thông tin của population.
+
+> [!TIP]
+> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+>
+> Bạn đã tóm tắt và phân tích rất tốt bối cảnh bài toán, sự khác biệt giữa 35 giá trị trung bình phân biệt và 256 mẫu con có thứ tự, cũng như vai trò của tính đồng xác suất. Tuy nhiên, phần diễn giải về "có thể coi như một random sample" cho 256 mẫu con có thể đơn giản hơn, tập trung vào việc mỗi mẫu con có thứ tự đều có xác suất xuất hiện như nhau (1/256), tạo nên một không gian mẫu đồng xác suất.
+
+**🔗 See also:** [Đếm mẫu tính xác suất](./124_enumerating_outcome.md#node-q02rbqh)
+
+<br>
+
+<a id="node-3dm7cfv"></a>
+
+- **Point Estimation: Variance Estimation**
+
+<p align="center"><kbd><img src="assets/rozddooqopg.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, thế thì khi đã coi như 256 possible values có được bằng cách xét 256 possible outcomes của thử nghiệm (sampling with replacement 4 số từ tập {2,4,9,12}) là một random sample (dĩ nhiên size 256). Và ta kí hiệu với resample thứ i là xbar\*\_i.
+>
+>
+>
+> Như vậy, có thể viết lại tương tự như cách viết thông thường của random sample như sau:
+>
+>
+>
+> (kiểu như "ta có random sample size n: X1,..Xn iid có observed value x1,...xn")
+>
+>
+>
+> Ta có random sample size n = 256: Xbar\*\_1, Xbar\*\_2,....,Xbar\*\_n, có observed value xbar\*\_1,...xbar\*\_n.
+>
+>
+>
+> Và với random sample X1,...Xn, mình đã quen thuộc với việc, ta có thể tính **sample variance**: S^2 = \[1/(n-1)\] Σi {(Xi - Xbar)^2})
+>
+>
+>
+> Thì ở đây cũng vậy, với random sample Xbar\*\_1, Xbar\*\_2,...Xbar\*\_256, ta có thể tính sample variance
+>
+>
+>
+> = \[1/(256 - 1)\] Σi=1:256 {(Xbar\*\_i - (Xbar\*)bar)^2}
+>
+>
+>
+> Làm rõ: (Xi - Xbar)^2 với Xbar = Σi Xi, thì sẽ ứng với Xbar\*\_i - (Xbar\*)bar với (Xbar\*)bar = Σi Xbar\*\_i
+>
+>
+>
+> Và con số 256 ở đây là chính là n^n (vì cái bài toán gốc là sampling with replacement 4 số từ tập có 4 số {2,4,9,12} để rồi order sample space có size 4^4, thì khái quát là sampling with replacement n số từ tập có n số, thì order sample space có size n^n)
+>
+>
+>
+> Như vậy ta hiểu cái công thức Var\*(Xbar) = \[1/(n^n - 1)\] Σi=1:n^n {(Xbar\*\_i - (Xbar\*)bar)^2} có bản chất là:
+>
+>
+>
+> Sample variance của một random sample size n^n, mà bản thân random sample này, chính là original sample space của thử nghiệm: sampling with replacement n item từ set có n item.
+>
+>
+>
+> Như vậy ta có thể tóm tắt lại, như cách để giải thích ngắn gọn lại cái công thức trên là cái quái gì:
+>
+>
+>
+> Bài toán lớn đặt ra là: Ta có một sample size n, và muốn estimate Variance của sample mean Xbar: Var(Xbar), mà trong các phần trước của chương này, ta đã có một số cách tiếp cận.
+>
+>
+>
+> Thế thì ở đây Bootstrap cho ta một cách làm như sau:
+>
+>
+>
+> Ví dụ, sample size n ban đầu có n giá trị quan sát được x1,...xn. Thì từ đó ta đặt ra một experiment như sau: Sampling with replacement n (items, hay sample) từ sample size n ban đầu.
+>
+>
+>
+> Và mỗi một "sample từ sample" như vậy, (mà ta gọi là resample) có n con số, và đem tính trung bình.
+>
+>
+>
+> Thế thì, xét cái original sample space của thử nghiệm này, tức là, tập chứa mọi possible outcome, trong đó ta có phân biệt thứ tự các item, sẽ có kích thước là n^n. Và mỗi outcome đều equally likely.
+>
+>
+>
+> Như vậy, nếu gọi s_1,...s_n^n là các possible outcome trong original sample space này, thì tập g(s_1), ...g(s_n^n) với hàm g là hàm tính trung bình của n con số của mỗi outcome, ta sẽ có thể coi nó là một random sample size N = n^n - là một random sample Xbar\*1, Xbar\*2,....Xbar\*\_N
+>
+>
+>
+> vì sao: Vì nếu ta lấy random sample size m từ original sample space này, thì cơ bản theo định nghĩa, chỉ là ta sẽ sampling từ original sample space này m lần, mỗi lần đại diện bởi một random variable X1,...Xm. Thế thì, nếu ta cho m = N, và X1 = g(s_1), X2 = g(s_2),...XN = g(s_N) thì nó vẫn hoàn toàn hợp lệ là một random sample:
+>
+>
+>
+> X1,...XN đều có cùng distribution, do P(X1 = g(s_i)) đều bằng 1/n^n với mọi i. P(X2 = g(s_i)) = 1/n^n với mọi i. Nên X1,...XN đều có cùng distributionn là discrete uniform P(X = g(s_i)) = 1/n^n với mọi i từ 1,2....n^n.
+>
+>
+>
+> Và ta kí hiệu random sample này là Xbar\*\_1, Xbar\*\_2,....Xbar\*\_N. Từ đó có thể dùng công thức để tính sample variance. Mà sample variance là một estimator cho variance của population, mà với population này, lại là population / sample space của các sample mean (Xbar\*\_1, Xbar\*\_2,....). Như vậy, ta sẽ có thể dùng nó để có estimate cho variance của sample mean, thông qua phương pháp bootstrap: Var\*(Xbar)
+>
+>
+>
+> Nếu ta xét unordered sample space, ví dụ {w_1, w_2,...w_K} nơi các outcome không equally likely thì bản thân nó không thể được coi là random sample theo nghĩa sau đây: 
+>
+> Ví dụ nếu ta coi như X1,...XK có các observed value là g(w_1),....g(w_K) thì 
+>
+>
+>
+> P(X1 = g(w_i)) = P(w_i)  với i = 1,2,...K
+>
+>
+>
+> P(X2 = g(w_i)) = P(w_i) với i = 1,2,...K. 
+>
+>
+>
+> ...
+>
+>
+>
+> Như vậy thì X1,X2,...XK cũng có chung distribution (distribution này không phải là uniform discrete thôi)
+>
+>
+>
+> Có điều khi mình cho rằng X1,X2,....XK mang observed value là g(w_1), g(w_2),..., g(w_K) thì sẽ xảy ra vấn đề:
+>
+>
+>
+> Nó không phản ánh đúng phân phối xác suất thực tế của sample space. Nói rõ hơn, ta sẽ liên hệ lại order sample space.
+>
+>
+>
+> Vì 256 outcome của order sample space có xác suất như nhau, nên bộ observed value X1 = g(s_1), X2 = g(s_2),....X256 = g(s_256) hoàn toàn có thể xảy ra. (Dĩ nhiên, X1, X2,...X256 là các random variable, nên mỗi thằng có thể có 256 possible values, nhưng vì 256 possible values này các xác suất như nhau, nên việc một bộ observed value là (g(s_1), g(s_2),....g(s_N)) là hoàn toàn bình thường. Và bộ giá trị quan sát này, trong đó mỗi possible value g(s_i) đều xuất hiện 1 lần, phản ánh được đặc điểm của phân phối gốc của order sample space - là discrete uniform.
+>
+>
+>
+> Trong khi đó, với unorder sample space, 35 possible outcome w_1,...w_35 này lại có xác suất RẤT KHÁC NHAU. Thành ra, tuy rằng khi xét một bộ random variable X1,X2,...X35, trong đó X1, X2,...độc lập, và P(X1 = g(w_i)) cũng bằng P(X2 = g(w_i)) = ...P(XK = g(w_i)) và đều bằng xác suất xảy ra của outcome w_i, tức là X1,...XK cũng cùng distribution, do đó X1,...XK vẫn là một random sample. Tuy nhiên, nếu mình xét một bộ observed value là X1 = g(w_1), X2 = g(w_2), ...XK = g(w_K) thì ta lại đang tạo ra một bộ observed value KHÔNG PHẢN ÁNH ĐÚNG PHÂN PHỐI XÁC SUẤT CỦA CÁC OUTCOME TRONG UNORDER SAMPLE SPACE. Vì với bộ observed value này, mỗi possible value lại xuất hiện một lần, đều nhau, trong khi xác suất của chúng trong sample space gốc là khác nhau.
+>
+>
+>
+> Tóm lại, phải hiểu ý nghĩa của việc nói "có thể treat bộ observed value (g(s_1), g(s_2), ...g(s_N)) là một random sample thì ý là, vì bộ giá trị quan sát được này, nó phản ánh được phân phối xác suất của sample space. Còn nếu dùng unordered value thì không.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bài giải thích rất sâu sắc và chi tiết về bản chất của công thức ước lượng phương sai bootstrap, đặc biệt là việc làm rõ vì sao tập hợp các giá trị trung bình từ không gian mẫu có thứ tự (n^n resamples) có thể được coi là một mẫu ngẫu nhiên để tính phương sai. Bạn đã đi sâu vào lý thuyết và giải thích rõ ràng các khái niệm phức tạp.
+
+**🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg) · [Thống kê mẫu cơ bản](./52_of_random_variables_from_a_random_sample.md#node-8bhfv8j)
 
 <br>
 
