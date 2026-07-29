@@ -87,6 +87,8 @@
 >
 > Ghi chú rất chính xác trong việc tái hiện các công thức và cung cấp cái nhìn sâu sắc về lý do tại sao các công cụ như trace và determinant lại hữu ích trong phân tích. Tuy nhiên, một vài điểm giải thích chi tiết hơn về các giả định không được trình bày trực tiếp trong đoạn văn bản gốc.
 
+**🔗 See also:** [Quasi-Newton bất biến tỉ lệ](./61_the_bfgs_method.md#node-j54km63)
+
 <br>
 
 <a id="node-gt8mtjy"></a>
@@ -124,6 +126,8 @@
 > **🤖 AI Feedback** — ✅ Score: **93/100**
 >
 > Bạn đã trình bày một cách xuất sắc việc chứng minh công thức (6.44), với các bước rất chi tiết và sử dụng đúng các tính chất của trace. Đặc biệt, việc sử dụng tính chất tr(AB) = tr(BA) là một cách rất thanh lịch để đơn giản hóa các số hạng, giúp bài giải rõ ràng và chính xác hơn.
+
+**🔗 See also:** [BFGS: Hiệu quả tính toán](./61_the_bfgs_method.md#node-af7o6pq)
 
 <br>
 
