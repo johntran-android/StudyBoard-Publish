@@ -667,5 +667,7 @@
 >
 > Ghi chú cung cấp một phân tích rất sâu sắc về phân tích QR, đặc biệt là việc liên hệ với quá trình Gram-Schmidt để giải thích cấu trúc của R, và trình bày chính xác các bước giải hệ Ax=b. Tuy nhiên, nó chưa đề cập đến chi phí tính toán và khả năng duy trì tính thưa của ma trận, những khía cạnh thực tiễn quan trọng từ tài liệu gốc.
 
+**🔗 See also:** [Optimal x* Solution](./102_linear_least_square_problem.md#node-4qw5hsw)
+
 <br>
 
