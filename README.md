@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,004 notes` · `~17,385 screenshots` · `17 notebooks`**
+**`~12,013 notes` · `~17,395 screenshots` · `17 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -571,7 +571,7 @@ law Of Central Limit](stat110_havard/lec_29_law_of_large_numbers_law_of_central_
 multi-variate Gaussian](stat110_havard/lec_30_chi_square_student_t_multi_variate_gaussian.md) — `21n / 22i`
 - [Cheatsheet (nhờ Ai)](stat110_havard/cheatsheet_nh_ai.md) — `5n / 98i`
 
-### 📂 Statistical Inference - Casella (📝 809 Notes | 📸 1062 Screenshots)
+### 📂 Statistical Inference - Casella (📝 818 Notes | 📸 1072 Screenshots)
 <!-- key: statistical_inference_casella -->
 
 > This notebook compiles detailed notes on core concepts, key probability distributions, and essential methods for estimation and hypothesis testing in statistical inference, based on the Casella textbook.
@@ -586,7 +586,7 @@ foundation](statistical_inference_casella/121_axiomatic_foundation.md) — `9n /
 of Probability](statistical_inference_casella/122_calculus_of_probability.md) — `5n / 9i`
 - [1.2.3 Counting](statistical_inference_casella/123_counting.md) — `6n / 8i`
 - [1.2.4 Enumerating
-outcome](statistical_inference_casella/124_enumerating_outcome.md) — `5n / 9i`
+outcome](statistical_inference_casella/124_enumerating_outcome.md) — `10n / 14i`
 - [1.3 Conditional
 probability & Independence](statistical_inference_casella/13_conditional_probability_independence.md) — `12n / 16i`
 - [1.4 Random Variables](statistical_inference_casella/14_random_variables.md) — `4n / 5i`
@@ -646,7 +646,7 @@ evaluating Estimators](statistical_inference_casella/73_methods_of_evaluating_es
 interval Estimators](statistical_inference_casella/92_methods_of_finding_interval_estimators.md) — `52n / 61i`
 - [9.3 Methods Of Evaluating
 interval Estimators](statistical_inference_casella/93_methods_of_evaluating_interval_estimators.md) — `34n / 35i`
-- [10.1 Point Estimation](statistical_inference_casella/101_point_estimation.md) — `30n / 35i`
+- [10.1 Point Estimation](statistical_inference_casella/101_point_estimation.md) — `34n / 40i`
 
 ---
 
