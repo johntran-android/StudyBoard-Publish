@@ -838,6 +838,8 @@
 >
 > Đây chính là J(x)Te
 
+**🔗 See also:** [AD nghịch đảo Jacobian thưa](#node-s7r8ypk)
+
 <br>
 
 <a id="node-dh6ihgh"></a>
@@ -990,6 +992,8 @@
 > Chú ý điểm này: Với forward mode, mỗi lần forward ta có một cột của J(x)
 >
 > Với reverse mode, mỗi lần ta có một hàng của J(x)
+
+**🔗 See also:** [Gradient Hàm Phân Tách Tô Màu](#node-ooabjdi)
 
 <br>
 
