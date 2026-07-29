@@ -280,6 +280,8 @@
 >
 > Đại ý là tuy công thức này co thể cho ta biết chính xác mức giảm của f tại mỗi iteration, nhưng vì cái term ở trong {} rất khó hiểu nên sẽ hữu ích hơn nếu ta sử dụng công cụ chặn (bound)
 
+**🔗 See also:** [Liên hệ với Wolfe conditions](./61_the_bfgs_method.md#node-zk38kse)
+
 <br>
 
 <a id="node-lut7jz5"></a>
