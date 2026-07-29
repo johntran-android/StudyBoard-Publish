@@ -218,6 +218,8 @@
 >
 > Phần lớn các bước đạo hàm cho p_k^s (phương trình 4.60) là chính xác và có chiều sâu đáng khen ngợi. Tuy nhiên, bài phân tích của bạn chưa hoàn chỉnh vì bạn đã bỏ qua hoàn toàn việc đạo hàm cho bước nhảy \tau_k (phương trình 4.61), đây là một phần cốt yếu của Thuật toán 4.4.
 
+**🔗 See also:** [Công thức Cauchy point](./41_trust_region_methods_algorithms_based_on_the_cauchy_point.md#node-06f2kv1)
+
 <br>
 
 <a id="node-zxn8eqb"></a>
