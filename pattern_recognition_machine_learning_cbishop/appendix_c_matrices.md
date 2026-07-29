@@ -872,43 +872,47 @@
 >
 >
 >
-> Như vậy nếu u là vector phức, và gọi u **là vector complex conjugate của nó, tức là mọi phần tử của u** đều là complex conjugate của u. Khi tích vô hướng của chúng, ta sẽ có uTu **= Σi ui**u**i và đây sẽ là một tổng các số thực, nên là số thực.
+> Như vậy nếu u là vector phức, và gọi u\* là vector complex conjugate của nó, tức là mọi phần tử của u\* đều là complex conjugate của u. Khi tích vô hướng của chúng, ta sẽ có uTu\* = Σi ui\*u\*i và đây sẽ là một tổng các số thực, nên là số thực.
 >
 >
 >
-> Thế thì Au = λu, nhân bên trái hai vế với u**T: u**TAu = u**Tλu ⇔ u**TAu = λ u**Tu (1)
+> Thế thì Au = λu, nhân bên trái hai vế với u\*T: u\*TAu = u\*Tλu ⇔ u\*TAu = λ u\*Tu (1)
 >
 >
 >
-> Tiếp, với Au = λu thì (Au) **= (λu)** (vì Au là vector, λu cũng là vector, mà hai thằng này bằng nhau thì complex conjugate của chúng đương nhiên bằng nhau.
+> Tiếp, với Au = λu thì (Au)\* = (λu)\* (vì Au là vector, λu cũng là vector, mà hai thằng này bằng nhau thì complex conjugate của chúng đương nhiên bằng nhau.
 >
 >
 >
-> Tiếp, với complex number thì nó có tính chất: (x+y) **= x** + y**, và (xy)** = x **y**
+> Tiếp, với complex number thì nó có tính chất: (x+y)\* = x\* + y\*, và (xy)\* = x\* y\*
 >
 >
 >
-> Nên (Au) **= (λu)** ⇔ A**u** = λ**u**.
+> Nên (Au)\* = (λu)\* ⇔ A\*u\* = λ\*u\*.
 >
 >
 >
-> Nhân hai vế với uT: A**u** = λ**u** ⇔ uTA**u** = uT λ**u**
+> Nhân hai vế với uT: A\*u\* = λ\*u\* ⇔ uTA\*u\* = uT λ\*u\*
 >
 >
 >
-> ⇔ uTA**u** = λ **uT u**
+> ⇔ uTA\*u\* = λ\* uT u\*
 >
 >
 >
-> ⇔ uTAu **= λ** uT u **(2) (Vì với matrix A, ta sẽ luôn dùng matrix số thực, nên A** = A)
+> ⇔ uTAu\* = λ\* uT u\* (2) (Vì với matrix A, ta sẽ luôn dùng matrix số thực, nên A\* = A)
 >
 >
 >
-> Tới đây (1) ta có u**TAu = λ u**Tu và (2) ta có uTAu **= λ** uT u **Vế trái u**TAu và uTAu **là giống nhau, vì là scalar nên bằng tranpose của chính nó.
+> Tới đây (1) ta có u\*TAu = λ u\*Tu và (2) ta có uTAu\* = λ\* uT u\*
 >
 >
 >
-> Suy ra vế phải bằng nhau λ u**Tu = λ **uT u** ⇨ λ = λ\*. Và khi một số bằng số phức liên hợp của nó thì thì nó chính là số thực.
+> Vế trái u\*TAu và uTAu\* là giống nhau, vì là scalar nên bằng tranpose của chính nó.
+>
+>
+>
+> Suy ra vế phải bằng nhau λ u\*Tu = λ\* uT u\* ⇨ λ = λ\*. Và khi một số bằng số phức liên hợp của nó thì thì nó chính là số thực.
 >
 >
 >
