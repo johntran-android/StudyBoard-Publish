@@ -79,6 +79,8 @@
 >
 >  (cái hàm này nói nôm na là nó sẽ quy định ví dụ như trong khoảng từ x=1 tới x=2, thì f(x) = 0.1, từ x=2 tới x=3 thì f(x)=0.2 ví dụ vậy)
 
+**🔗 See also:** [Mô hình hóa phân phối dữ liệu](./120_probability_theory.md#node-jfoiqx1) · [Định lý giới hạn trung tâm](./230_gaussian_distribution.md#node-cp5ac1u)
+
 <br>
 
 <a id="node-5hc2uov"></a>
