@@ -197,6 +197,8 @@
 >
 > Bài viết của bạn thể hiện sự hiểu biết vượt trội, với các giải thích sâu sắc và đạo hàm chi tiết, thể hiện rõ ràng sự nắm vững kiến thức. Tuy nhiên, bạn đã bỏ sót một điểm quan trọng mà tác giả nhấn mạnh là mục tiêu "hiệu quả" của thuật toán trong việc giảm thiểu tính toán đạo hàm.
 
+**🔗 See also:** [Điều kiện giảm đủ Armijo](./31_line_search_method_step_length.md#node-c14ii57) · [Điều kiện Wolfe và Wolfe mạnh](./31_line_search_method_step_length.md#node-7kgcs2p)
+
 <br>
 
 <a id="node-ih52es1"></a>
@@ -401,6 +403,8 @@
 > **🤖 AI Feedback** — ⚠️ Score: **85/100**
 >
 > Ghi chú của bạn giải thích rất chi tiết và chính xác về các điều kiện Wolfe, cung cấp nền tảng vững chắc cho thuật toán. Tuy nhiên, mô tả về giai đoạn "zoom" thứ hai còn thiếu một chi tiết quan trọng: thuật toán giảm dần kích thước của khoảng tìm kiếm để xác định độ dài bước chấp nhận được.
+
+**🔗 See also:** [Điều kiện Wolfe và Wolfe mạnh](./31_line_search_method_step_length.md#node-7kgcs2p)
 
 <br>
 
