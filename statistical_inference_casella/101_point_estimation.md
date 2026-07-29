@@ -1,6 +1,6 @@
 # 10.1 Point Estimation
 
-📊 **Progress:** `34` Notes | `40` Screenshots | `15` AI Reviews
+📊 **Progress:** `35` Notes | `41` Screenshots | `16` AI Reviews
 
 ---
 <a id="node-2ixm3r0"></a>
@@ -2793,6 +2793,190 @@
 > Bài giải thích rất sâu sắc và chi tiết về bản chất của công thức ước lượng phương sai bootstrap, đặc biệt là việc làm rõ vì sao tập hợp các giá trị trung bình từ không gian mẫu có thứ tự (n^n resamples) có thể được coi là một mẫu ngẫu nhiên để tính phương sai. Bạn đã đi sâu vào lý thuyết và giải thích rõ ràng các khái niệm phức tạp.
 
 **🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg) · [Thống kê mẫu cơ bản](./52_of_random_variables_from_a_random_sample.md#node-8bhfv8j)
+
+<br>
+
+<a id="node-6duo97a"></a>
+
+- **Bootstrap Mean and Variance**
+
+<p align="center"><kbd><img src="assets/h8pcm17myto.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Ôn lại nhanh, về bootstrap:
+>
+>
+>
+> Câu chuyện là, ta có 4 con số {2,4,9,12}. Và muốn tính variance của sample mean Var(Xbar).
+>
+>
+>
+> Có hai góc nhìn về 4 con số này:
+>
+>
+>
+> i) Góc nhìn 1: Có thể hiểu 4 con số này là một observed value của một random sample X1, X2, X3, X4, được sampling từ population distribution. Và như vậy Xbar = Σi Xi có observed value là = (2 + 4 + 9 + 12) / 4 = 27/4 = **6.75**
+>
+>
+>
+> Và ta muốn ước lượng variance của Xbar: Var(Xbar)
+>
+>
+>
+> Mà Var(Xbar), theo công thức, ta có σ^2/n với σ^2 là phương sai của population, là Var(X1)
+>
+>
+>
+> Do không có σ^2, ta có thể dùng S^2, sample variance = \[1/(n-1)\] Σi (Xi - Xbar)^2. Nên ở đây với observed value **x** = (2,4,9,12) ta có S^2(**x**) = (1/3) \[(2-6.75)^2 + (4-6.75)^2 + (9-6.75)^2 + (12-6.75)^2\] = 20.9167 ⇒ Var(Xbar) ≈ S^2/n = 20.9167/4 = **5.23**
+>
+>
+>
+> Và cái **Var(Xbar) nhưng dùng S^2 để estimate cho σ^2** này ta kí hiệu là Var^(Xbar): **Var^(Xbar)** = 5.23
+>
+>
+>
+> ---
+>
+>
+>
+> ii) Góc nhìn thứ hai: Coi {2,4,9,12} là một population, gọi là **empirical population**. Có nghĩa là nó là một **sample space** **chứa mọi possible outcome**.
+>
+>
+>
+> Và đối với cái empirical population này, người ta mới thực hiện động tác: Sampling with replacement 4 con số - tức là, đây chính là drawing một sample từ population, nhưng vì đây bản thân là một sample trong population gốc, nên ta gọi kết quả drawing này là resample (vẫn có ý nghĩa là một random sample từ empirical distribution).
+>
+>
+>
+> Vậy thì, xét cái empirical population này, ta có thể hiểu nó như distribution của một discrete random variable X, có 4 possible value 2, 4, 9, 12, với xác suất pmf bằng nhau, = 1/4.
+>
+>
+>
+> Và dựa trên công thức mean và variance ta có thể tính mean và variance của population này:
+>
+>
+>
+> Mean của empirical population: EX = Σ{2,4,9,12} xi × P(X=xi) = (1/4) (2 + 4 + 9 + 12) = 27/4 = **6.75**
+>
+>
+>
+> Variance của empirical population: VarX = E\[(X-EX)^2\] = Σ\_{mọi possible value của X} P(X=x)(x - xbar)^2
+>
+>
+>
+> = (1/4) \[(2-6.75)^2 + (4-6.75)^2 + (9-6.75)^2 +(12-6.75)^2\] = **15.6875**
+>
+>
+>
+> Và với cái empirical population này, như đã nói, ta sẽ drawing các resample: sampling with replacement 4 số từ đó. Với mỗi kết quả, ta tính mean (tức là sample mean). Và ý tưởng lớn sẽ là:
+>
+>
+>
+> **BOOTSTRAP SẼ CHO PHÉP TA DÙNG VARIANCE CỦA SAMPLE MEAN NÀY** (**VARIANCE CỦA RESAMPLE MEAN**, **HAY CÒN GỌI LÀ** **BOOTSTRAP SAMPLE MEAN** **Var\*(Xbar)** để mà **ESTIMATE CHO VARIANCE CỦA CÁI SAMPLE MEAN** của population gốc Var(Xbar) (mà trong đó {2,4,9,12} chỉ là một sample).
+>
+>
+>
+> Thế thì, áp dụng công thức Variance của bootstrap sample mean Var\*(Xbar) = \[bootstrap population variance, chính là **15.6875**\] / \[resample size, = 4, (vì sampling 4 số từ {2,4,9,12}\] (đây chính là công thức σ^2/n, theorem chương 5, về mean và variance của Xbar thôi) = **15.6875** / 4 = **3.921875**.
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì tiếp theo ta sẽ làm như sau, để cũng ra con số **3.921875**: Và đây mới là phương pháp bootstrap (con số trên chỉ là vì ta đã biết empirical population variance = **15.6875** mà **NGUYÊN NHÂN SÂU XA CŨNG LÀ VÌ TA ĐÃ BIẾT CÔNG THỨC VARIANCE VarX = E(X-EX)^2**. Mục đích là ta sẽ thấy cách tính boostrap cũng ra được con số này, để hiểu rằng nó có thể dùng để tính Variance của các đại lượng khác (không phải sample mean, mà là những cái khác). Cách làm ngắn gọn như sau:
+>
+>
+>
+> Ta xét tập chứa mọi order outcome của việc bốc có hoàn lại 4 con số từ {2,4,9,12}. Và vì random sampling with replacement, và ta có phân biệt thứ tự tên tập các possible outcome sẽ có cả (2,2,2,2), hoặc (2,4,9,12) hoặc (4,2,12,9). Và số lượng (cũng là kích thước order sample space) sẽ là: 4^4 (kết quả này ko khó để đếm theo step rule: bước 1 chọn số thứ nhất, có 4 khả năng, bước 2 chọn số thứ hai, cũng có 4 khả năng, ... → có 4^4 khả năng, và xác suất của mỗi khả năng đều là (1/4)^4.
+>
+>
+>
+> Như vậy, order sample space có 4^4 = 256 possible outcome với xác suất bằng nhau. gọi chúng là {s1,...sN} với N = 4^4 (Mà khi khái quát lên, trong random sample có size n (mà trong ví dụ này, là 4 ({2,4,9,12}), thì order sample space sẽ có size N = n^n)
+>
+>
+>
+> Và với mỗi outcome (là một bộ 4 số), ta bỏ vào hàm g(s) để tính trung bình 4 số này.
+>
+>
+>
+> Như vậy, lập luận mấu chốt là: Vì order sample space, lúc bấy giờ, ta có thể coi như là một population nữa (hồi nãy đã coi {2,4,9,12} là một empirical population, giờ lại coi {g(s1),...g(sN)} là một population, có xác suất bằng nhau.
+>
+>
+>
+> Thế thì, tiếp theo, nếu ta tiến hành sampling từ cái population này, ví dụ tạo một random sample size N: X1,...XN. Và thay vì dùng kí hiệu X, ta dùng Xbar\*, vì g(s) mang ý nghĩa là trung bình 4 số, trung bình của resample, resample mean. Như vậy ta có random sample size N: Xbar\*1, ....Xbar\*N, iid, có chung distribution, và dễ thấy đây là discrete uniform, có 256 possible value, pmf bằng nhau và bằng 1/256.
+>
+>
+>
+> Và vì population này có distribution discrete uniform, nên khi ta dùng bộ observed value: {Xbar\*1 = g(s1), Xbar\*2 = g(s2), ..., Xbar\*N = g(sN)}, thì nó có thể phản ánh distribution của order sample space.
+>
+>
+>
+> Và vì vậy, người ta mới nói, có thể đối xử với bộ observed value này {g(s1), g(s2),...g(sN)} như một random sample.
+>
+>
+>
+> Và ta sẽ dùng công thức của sample variance của random sample này:
+>
+>
+>
+> Trước tiên tính mean của sample này: (1/N) (Xbar\*1 + Xbar\*2 + ..Xbar\*N), và ta kí hiệu là (Xbar\*)bar (là cái x\* có 2 gạch trên đầu trong sách)
+>
+>
+>
+> 1/(N-1) Σi=1:N \[Xbar\*i - (Xbar\*)bar\]^2
+>
+>
+>
+> Và đây, đây chính là công thức tính VARIANCE CỦA SAMPLE MEAN THEO BOOTSTRAP, GỌI LÀ BOOTSTRAP VARIANCE CỦA SAMPLE MEAN. Và theo gs, nếu ta thế kết quả vào: Cho i lần lượt bằng 1, 2, ...256. \]
+>
+>
+>
+> Sau tính xbar\*i = g(si). Rồi tính (xbar\*)bar, và thế vào công thức trên ta sẽ ra kết quả là:
+>
+>
+>
+> (xbar\*)bar = **6.75**
+>
+>
+>
+> Var\*(Xbar) = **3.94**
+>
+>
+>
+> VÀ Ý QUAN TRỌNG TÁC GIẢ MUỐN NÓI
+>
+>
+>
+> Bootstrap sample mean (Xbar\*)bar (**6.75)**
+>
+>
+>
+> BẰNG Y CHANG 
+>
+>
+>
+> Mean của empirical population (**6.75)**
+>
+>
+>
+> Và: 
+>
+>
+>
+> Bootstrap variance của sample mean Var\*(Xbar) = **3.94**
+>
+>
+>
+> GẦN NHƯ BẰNG
+>
+>
+>
+> Variance của empirical population **3.921875**.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bài viết này rất chi tiết và chính xác trong việc giải thích phương pháp bootstrap, đặc biệt là cách tính toán mean và variance của bootstrap sample. Các giá trị số liệu trong bài khớp hoàn toàn với ví dụ được cung cấp, thể hiện sự hiểu biết sâu sắc. Để hoàn hảo hơn, có thể cân nhắc cô đọng một số đoạn giải thích để bài viết mạch lạc và dễ tiếp thu hơn.
 
 <br>
 
