@@ -38,6 +38,8 @@
 >
 > Bài phân tích rất chính xác và sâu sắc, không chỉ dịch đúng nội dung mà còn giải thích rõ ràng cách xây dựng Cauchy point, thể hiện sự hiểu biết vững chắc về chủ đề. Cần lưu ý thống nhất ký hiệu (ví dụ t và τ) để đảm bảo tính mạch lạc tối đa.
 
+**🔗 See also:** [Algorithm 4.1 (Trust Region)](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-c4gu30d)
+
 <br>
 
 <a id="node-flrtdwa"></a>
@@ -66,6 +68,8 @@
 > **🤖 AI Feedback** — ✅ Score: **92/100**
 >
 > Bản tóm tắt rất chính xác, đặc biệt là phần diễn giải về mối liên hệ với điều kiện Wolfe đầu tiên và sự tỉ lệ với gradient và kích thước bước, thể hiện sự hiểu biết sâu sắc. Tuy nhiên, việc đưa thêm thông tin không có trong đoạn văn được đánh dấu ("có 3 phương pháp thuộc dạng Improving Cauchy point...") cần được cân nhắc lại khi chỉ tóm tắt một đoạn văn cụ thể. Cụm từ "Là sao nhỉ" cũng quá thân mật cho một ghi chú học thuật.
+
+**🔗 See also:** [Theorem 4.5](#node-fg12jtm) · [Convergence of algorithms based on nearly exact solution](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-tr8868m) · [4.52a và 4.52b đại ý là điều kiện mà ta sẽ đặt ra cho bài toán subproblem giúp đảm bảo sự hội tụ toàn cục của cả bài toán trust region](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-rnxo6wt)
 
 <br>
 
@@ -227,6 +231,8 @@
 >
 > Bài phân tích cho thấy sự hiểu biết tốt về bối cảnh và các trường hợp của bổ đề. Tuy nhiên, phần chứng minh cho trường hợp gTBg > 0 với τ ≤ 1 còn thiếu một bước suy luận quan trọng để thiết lập cận dưới min(Δ, ||g||/||B||), làm cho lập luận chưa hoàn chỉnh và không hoàn toàn chính xác.
 
+**🔗 See also:** [Công thức Cauchy point](./41_trust_region_methods_algorithms_based_on_the_cauchy_point.md#node-06f2kv1)
+
 <br>
 
 <a id="node-1evgr39"></a>
@@ -299,6 +305,8 @@
 >
 > Thế thì, tác giả nói, ở case thứ nhất ta có thể chứng minh chuỗi gradient gj sẽ hội tụ về 0, và với case sau (nghiêm ngặt hơn) thì thậm chí ta còn có kết quả tốt hơn.
 
+**🔗 See also:** [Algorithm 4.1 (Trust Region)](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-c4gu30d)
+
 <br>
 
 <a id="node-5e0rp1k"></a>
@@ -356,6 +364,8 @@
 > Thì khi đó lim inf k → inf ||gk|| = 0 (4.26)
 >
 > Chú ý đây là liminf tức là giới hạn dưới.
+
+**🔗 See also:** [Mức giảm Dogleg và Wolfe, (4.20)](#node-flrtdwa) · [Convergence of algorithms based on nearly exact solution](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-tr8868m)
 
 <br>
 
@@ -521,6 +531,8 @@
 >
 > Phần chứng minh của bạn rất chi tiết và thể hiện sự hiểu biết sâu sắc về các định lý cơ bản như Định lý cơ bản của Giải tích (FTC) và tính chất Lipschitz. Đặc biệt, việc bạn tự mình dẫn ra công thức Taylor dạng tích phân và chỉ ra sự thiếu chính xác trong cách đặt câu "for some t ∈ (0,1)" trong văn bản gốc là điểm rất ấn tượng. Tuy nhiên, trong bước đánh giá cận trên cho hạng tử thứ hai của bất đẳng thức (4.27), mặc dù kết quả cuối cùng khớp với văn bản gốc, việc chuyển từ ∫t dt = 1/2 sang ≤ ∫1 dt = 1 khiến cho việc suy luận thiếu chặt chẽ. Cụ thể, sau khi tính được ∫0:1 t dt = 1/2, hạng tử chính xác phải là (β1/2)||pk||^2. Việc dùng cận lỏng hơn (≤ β1||pk||^2) là đúng về mặt toán học, nhưng một bài chứng minh chặt chẽ sẽ hoặc giữ nguyên cận chặt nhất hoặc giải thích rõ ràng lý do sử dụng cận lỏng hơn. Hãy chú ý hơn đến sự chính xác và chặt chẽ trong từng bước toán học.
 
+**🔗 See also:** [Outline of the trust-region method](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-464kbau) · [Theorem 2.1 Taylor's theorem, Taylor theorem](./21_funds_of_unconstrained_optim_whats_solution.md#node-zekxi9u)
+
 <br>
 
 <a id="node-c4u2j3o"></a>
@@ -664,6 +676,8 @@
 >
 >
 > #QUAY LẠI SAU
+
+**🔗 See also:** [Convergence of algorithms based on nearly exact solution](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-tr8868m)
 
 <br>
 
