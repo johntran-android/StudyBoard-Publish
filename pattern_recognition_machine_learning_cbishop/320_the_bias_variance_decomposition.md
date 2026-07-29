@@ -1,6 +1,6 @@
 # 3.2.0 The Bias-Variance Decomposition
 
-📊 **Progress:** `3` Notes | `4` Screenshots | `2` AI Reviews
+📊 **Progress:** `4` Notes | `4` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-0nolzxg"></a>
@@ -59,12 +59,6 @@
 >
 >
 >  Cho nên trong chapter này ta sẽ bàn sâu hơn về Bayesian approach. Tuy nhiên trước đó, gs sẽ dẫn dắt ta về một **góc nhìn về vấn đề overfit trong phạm vi vẫn thuộc trường phái cổ điển**: **Bias Variance trade-off**. Và cái này sẽ mở rộng cả các phạm vi khác chứ không riêng gì bài toán linear basis function model
-
-<br>
-
-<a id="node-41zhe6a"></a>
-
-<p align="center"><kbd><img src="assets/yktpyuit2kh.png" width="80%"></kbd></p>
 
 <br>
 
@@ -208,7 +202,7 @@
 >
 >
 >
-> Với chứng đó ôn tập, mình quay lại cái bài toán trong sách này, là đưa ra predict tối ưu của T khi có T \~ f(t|**x**)
+> Với chừng đó ôn tập, mình quay lại cái bài toán trong sách này, là đưa ra predict tối ưu của T khi có T \~ f(t|**x**)
 >
 >
 >
@@ -216,39 +210,39 @@
 >
 >
 >
-> Ta cũng đi giải bài toán: minimize_y(**x**) Risk function = ∫ L(y(**x**), t) f(t|**x**) dt = ∫(y(**x**) - t)^2 f(t|**x**) dt
+> Ta cũng đi giải bài toán: minimize_h(**x**) Risk function = ∫ L(h(**x**), t) f(t|**x**) dt = ∫(h(**x**) - t)^2 f(t|**x**) dt
 >
 >
 >
->  ∂/∂y \[∫(y(**x**) - t)^2 f(t|**x**) dt\] = ∫ \[∂/∂y \[(y(**x**) - t)^2\] f(t|**x**) dt
+>  ∂/∂y \[∫(h(**x**) - t)^2 f(t|**x**) dt\] = ∫ \[∂/∂y \[(h(**x**) - t)^2\] f(t|**x**) dt
 >
 >
 >
-> = ∫ 2(y(**x**) - t) f(t|**x**) dt
+> = ∫ 2(h(**x**) - t) f(t|**x**) dt
 >
 >
 >
-> = 2∫ (y(**x**) - t) f(t|**x**) dt
+> = 2∫ (h(**x**) - t) f(t|**x**) dt
 >
 >
 >
-> Fisrt order optimality condition: 2∫ (y(**x**) - t) f(t|**x**) dt = 0
+> Fisrt order optimality condition: 2∫ (h(**x**) - t) f(t|**x**) dt = 0
 >
 >
 >
-> ⇔ ∫(y(**x**) - t) f(t|**x**) dt = 0
+> ⇔ ∫(h(**x**) - t) f(t|**x**) dt = 0
 >
 >
 >
-> ⇔ ∫y(**x**)f(t|**x**) dt - ∫t f(t|**x**) dt = 0
+> ⇔ ∫h(**x**)f(t|**x**) dt - ∫t f(t|**x**) dt = 0
 >
 >
 >
-> ⇔ y(**x**) ∫f(t|**x**) dt = E\[T|**x**\]
+> ⇔ h(**x**) ∫f(t|**x**) dt = E\[T|**x**\]
 >
 >
 >
-> ⇔ y(**x**) = E\[T|**x**\]
+> ⇔ h(**x**) = E\[T|**x**\]
 >
 >
 >
@@ -260,4 +254,292 @@
 > Bài giải thích cực kỳ chi tiết và sâu sắc, vượt xa nội dung ảnh để cung cấp một nền tảng vững chắc về lý thuyết quyết định và ước lượng Bayes. Mặc dù rất toàn diện, có thể tóm tắt các phần ôn tập một cách ngắn gọn hơn nếu mục tiêu là chỉ tập trung vào giải thích công thức 3.36.
 
 <br>
+
+<a id="node-s3i1j2i"></a>
+
+#### Expected Squared Loss Decomposition
+
+<p align="center"><kbd><img src="assets/87zodxs4od8.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, tiếp theo chỗ này dễ lú, nên cần giải thích rõ khi ông nói ta cần phải phân biệt có hai loại squared loss, trong rất giống nhau, một cái là trong bối cảnh decision theory và còn lại là trong bài toán MLE. Là sao ta?
+>
+>
+>
+> Hiểu đại khái vầy: Nói đến decision theory, là vì, như note trước ta vừa mới làm: Rằng, trong bài toán này, khi ta làm theo probabilistic perspective, coi T như random variable, có predictive distribution f(t|**x**) thì câu hỏi đặt ra là, khi đã có f(t|**x**) rồi, thì nên lấy giá trị bao nhiêu để dự đoán (vì yêu cầu của bài toán cuối cùng vẫn là cho **x**, dự đoán t, chứ không phải là tính ra f(t|**x**)). Và đối mặt với câu hỏi này, ta cần đến decision theory giúp đỡ, nó sẽ cho ta cách làm như sau: Ta sẽ chọn loss function: L(T, h(**x**)), ví dụ square error loss, = (T - h(**x**))^2, đây sẽ là random variable (hàm của T). Và tính risk function, mang ý nghĩa là average của loss over all T \~ f(t|**x**):
+>
+>
+>
+> Risk function = E\[T - h(**x**)\] = ∫(t - h(**x**))^2 f(t|**x**)dt
+>
+>
+>
+> Và đi tìm h để mininimize cái risk function thì kết quả là h(**x**) = E\[T|**x**\].
+>
+>
+>
+> Đó là nói về square loss function trong decision theory, nói ngắn gọn, nó giúp ta đưa ra optimal point estimation của T với T \~ f(t|**x**).
+>
+>
+>
+> Thế còn sum squared error trong MLE?
+>
+>
+>
+> Là vầy: Nói về MLE, tức là ta nói về bài toán tìm point estimation cho PARAMETER θ: tìm estimator, là hàm theo data W(**X**, **t**) sao cho maximize L(θ|**X**, **t**) (**X**, **t** ở đây là observed data: **X** = matrix tạo bởi các vector **x**1, ...**x**N và **t** là vector các observed data t1, t2,...tN và có thể gọi chung là D (data) cho gọn) và θ đại diện cho tất cả parameter nói chung.
+>
+>
+>
+> Trong bài toán cụ thể ở đây, nếu ta dùng linear model dự đoán cho T \~ normal(y(**w**,**x**), 1/β) thì θ chính là (**w**, β). Và bài toán để giải MLE của (w, β) sẽ là:
+>
+>
+>
+> maximize (over **w**, β) L(**w**, β|**X**,**t**) = f(**t**|**w**, β, **X**).
+>
+>
+>
+> nhờ tính independent của T1,....Tn nên f(**t**|**w**, β, **X**) = Πi=1:N normal(**t**i|**w**, β, **x**i) và dùng hàm log là hàm monotone để chuyển thành bài toán tối ưu tương đương:
+>
+>
+>
+> maximize (over **w**, β) ln L(**w**, β|**X**,**t**) = ln {Πi=1:N normal(**t**i|y(**w**, **x**i),β)}
+>
+>
+>
+> Xét hàm objective, thay pdf normal vào:
+>
+>
+>
+> ln {Πi=1:N normal(**t**i|**w**, β, **x**i) = ln {Πi=1:N \[1/√2π(1/β) exp{-(ti - y(**w**,**x**i))^2/2(1/β)}\]}
+>
+>
+>
+> = ln {Πi=1:N \[1/√2π(1/β)\]} + ln {Πi=1:N exp{-(ti - y(**w**,**x**i))^2/2(1/β)}\]}
+>
+>
+>
+> Tới đây ta có thể giải theo **w** trước, tức là coi β như constant, từ đó chuyển thành bài toán tương đương tiếp theo bằng cách bỏ constant:
+>
+>
+>
+> maximize (over **w**) ln {Πi=1:N exp{-(ti - y(**w**,**x**i))^2/2(1/β)}\]}
+>
+>
+>
+> ⇔ maximize over **w** Σi=1:N ln {exp{-(ti - y(**w**,**x**i))^2/2(1/β)}\]}
+>
+>
+>
+> ⇔ maximize over **w** Σi=1:N \[-(ti - y(**w**,**x**i))^2/2(1/β)\]
+>
+>
+>
+> ⇔ maximize over **w** Σi=1:N \[(-β/2)(ti - y(**w**,**x**i))^2\]
+>
+>
+>
+> ⇔ maximize over **w** (-β/2) Σi=1:N \[(ti - y(**w**,**x**i))^2\]
+>
+>
+>
+> ⇔ minimize over **w** (1/2) Σi=1:N \[(ti - y(**w**,**x**i))^2\]
+>
+>
+>
+> Và đây chính là bài toán mininize hàm sum square error function. Giải thích cho ý gs nói sum-squares error function xuất hiện (arose) in MLE.
+>
+>
+>
+> Nhưng cái 3.37, lại xuất phát từ 1.5.5:
+>
+>
+>
+> E\[L\] = ∫∫L(t, y(**x**)) f(t,**x**) d**x** dt
+>
+>
+>
+> mà để hiểu công thức này thì phải thấy cả T và **X** đều là random variable:
+>
+>
+>
+> Và Loss = L(t, y(**x**)) = \[t - y(**x**)\]^2, thì L(**T**, y(**X**)) cũng là random variable, do đó có thể lấy kì vọng, và theo LOTUS:
+>
+>
+>
+> E\[L\] = ∫∫L(t, y(**x**)) f(t,**x**) d**x** dt
+>
+>
+>
+> = ∫∫(t - y(**x**))^2 f(t|**x**)f(**x**) d**x** dt (Bayes rule: f(t,**x**) = f(t|**x**)f(**x**))
+>
+>
+>
+> = ∫∫(y(**x**) - t)^2 f(t|**x**)f(**x**) d**x** dt
+>
+>
+>
+> cộng thêm và trừ bớt cho h(**x**) = E\[t|**x**\]
+>
+>
+>
+> = ∫∫(y(**x**) - h(**x**) + h(**x**) - t)^2 f(t|**x**)f(**x**) d**x** dt
+>
+>
+>
+> = ∫∫{\[y(**x**) - h(**x**)\]^2 +2\[y(**x**) - h(**x**)\]\[h(**x**) - t\] + \[h(**x**) - t\]^2} f(t|**x**)f(**x**) d**x**dt
+>
+>
+>
+> = ∫∫\[y(**x**) - h(**x**)\]^2 f(t|**x**) f(**x**) d**x** dt + 2∫∫\[y(**x**) - h(**x**)\]\[h(**x**) - t\]f(t|**x**) f(**x**) d**x**dt + ∫∫\[h(**x**) - t\]^2} f(t|**x**) f(**x**) d**x**dt
+>
+>
+>
+>  Xét term thứ 2: 2∫∫\[y(**x**) - h(**x**)\]\[h(**x**) - t\]f(t|**x**) f(**x**) d**x**dt
+>
+>
+>
+> Đổi chỗ d**x**, dt, tính tích phân theo t trước (1802 đã học gặp tích phân kép∫f(x,y)dxdy, thì tính tích phân theo cái nào trước cũng được vì ở đây range đều là toàn bộ mặt phẳng)
+>
+>
+>
+> = 2∫ \[∫(y(**x**) - h(**x**))(h(**x**) - t)f(t|**x**)dt\] f(**x**)d**x**
+>
+>
+>
+> Và vì đang tính tích phân theo t, ta đưa (y(**x**) - h(**x**)) không phụ thuộc t ra:
+>
+>
+>
+> = 2(y(**x**) - h(**x**)) ∫ \[∫(h(**x**) - t)f(t|**x**)dt\] f(**x**)d**x**
+>
+>
+>
+> Xét ∫(h(**x**) - t)f(t|**x**)dt, nó chính là E\[h(**x**) - T|**x**\] theo linearity = E\[h(**x**)\] - E\[T|**x**\] = E\[T|**x**\] - E\[T|**x**\] = 0.
+>
+>
+>
+> Vậy term thứ 2 = 0. Ta chỉ còn term 1, 3:
+>
+>
+>
+> ∫∫\[y(**x**) - h(**x**)\]^2 f(t|**x**) f(**x**) d**x** dt + ∫∫\[h(**x**) - t\]^2 f(t|**x**) f(**x**) d**x**dt
+>
+>
+>
+> Và đều chuyển thành tích phân của t trước, ta sẽ thấy nó là:
+>
+>
+>
+> = ∫(y(**x**) - h(**x**))^2 \[∫f(t|**x**)dt\] f(**x**)d**x** + ∫ \[∫\[h(**x**) - t\]^2 f(t|**x**)dt\] f(**x**)d**x** 
+>
+>
+>
+> ∫f(t|**x**)dt = 1 vì tính valid của pdf
+>
+>
+>
+> ∫\[h(**x**) - t\]^2 f(t|**x**)dt = E\[(h(**x**) - T)^2|**x**\]
+>
+>
+>
+> = ∫(y(**x**) - h(**x**))^2 f(**x**)d**x** + ∫ \[∫\[h(**x**) - t\]^2 f(t|**x**)dt\] f(**x**)d**x** 
+>
+>
+>
+> Đưa ∫ \[∫\[h(**x**) - t\]^2 f(t|**x**)dt\] f(**x**)d**x** trở lại thành ∫∫\[h(**x**) - t\]^2 f(t,**x**)d**x** dt
+>
+>
+>
+> Kết qủa ta có ∫(y(**x**) - h(**x**))^2 f(**x**)d**x** + ∫∫\[h(**x**) - t\]^2 f(t,**x**)d**x** dt → Đây chính là 3.37
+>
+>
+>
+> Dừng chút để nhận định lạ: Có nghĩa là square error xuất hiện ở 3 case khác nhau:
+>
+>
+>
+> Trong case 1: Khi có T \~ f(t|**x**), thì h(**x**) = E\[T|**x**\] sẽ minimize E\[L(h(**x**), T)\] với T\~f(**x**|t), L(h(x), T) = (h(**x**) - T)^2
+>
+>
+>
+> Trong case 2: Khi assume noise ε \~ n(0, 1/β) cũng là T \~ n(y(**w**,**x**), 1/β), thì **w**ML chính là minimizer của ln L(**w**|**X**,**t**,β) ≡ (1/2) Σi=1:N \[y(**w**, **x**i) - ti\]^2, là sum squared error.
+>
+>
+>
+> Trong case 3: Khi ta xét Loss của bài toàn regression: L(y(**X**), T) = \[y(**X**) - T\]^2, là một random variable (hàm của random variable **X** và T), và xét kì vọng của nó: E\[L\] = ∫∫ L(y(**x**), t) f(**x**, t) d**x** dt và triển khai ra ta có E\[L\] = ∫(y(**x**) - h(**x**))^2 f(**x**)d**x** + ∫∫\[h(**x**) - t\]^2 f(t,**x**)d**x** dt
+>
+>
+>
+> Điểm giống nhau của 1, và 3: Đều là trong bối cảnh decision theory, khi ta xét expected loss. Để rồi trong 1), minimize expected loss thì ta sẽ có h(**x**) = E\[T|**x**).
+>
+>
+>
+> Còn trong 3, ta cũng muốn (tìm y(**x**) để minimize E\[L\] thì ta sẽ thấy bài toán sẽ ≡ mininimize ∫(y(**x**) - h(**x**))^2 f(**x**)d**x** và kết quả sẽ cho solution y(**x**) = h(**x**)(tức = E\[T|**x**\]), cũng chính là quay lại bài toán nếu ta có predictive distribution: f(t|**x**) thì point estimator tối ưu cho T chính là E\[T|**x**\].
+>
+>
+>
+> Và ý chính gs Bishop muốn nói: Đi tìm f(t|**x**) (chính là ví dụ như khi mình tìm **w**ML) thì không nhất thiết ta phải dùng MLE, mà có thể dùng các các tiếp cận khác như fully Bayesian. Còn khi đã có f(t|**x**), thì theo decision theory, point estimation tối ưu cho T khi dùng squared loss là E\[T|**x**\]
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp tục, đoạn ghi chú màu xanh cũng là nói ý trên: Để tìm y(**x**) minimize E\[L\] thì chỉ tương đương tìm y(**x**) minimize term 1, vì term 2 không phụ thuộc y, và vì nó không âm nên mininimize khi y(**x**) = h(**x**) như nói trên.
+>
+>
+>
+> Vậy vì sao ông nói term 2 xuất phát từ noise nội tại (intrisic) và đại diện cho phần ko thể giảm được nữa, cũng là cái nhỏ nhất mà E\[L\] có thể đạt được (ý là với y\*(**x**), tối ưu) thì chỉ có thể giúp term 1 bằng 0, và E\[L} vẫn còn term 2?
+>
+>
+>
+> Là vì: xem xét, ∫∫\[h(**x**) - t\]^2 f(t,**x**)d**x** dt, thay h(x) = E\[T|**x**\]:
+>
+>
+>
+> = ∫∫\[t - E\[T|**x**\]\]^2 f(t,**x**) d**x** dt
+>
+>
+>
+> = ∫∫\[t - E\[T|**x**\]\]^2 f(t|**x**) f(**x**) d**x** dt
+>
+>
+>
+> = ∫∫\[t - E\[T|**x**\]\]^2 f(t|**x**) dt f(**x**) d**x**
+>
+>
+>
+> Xét riêng cụm này: ∫\[t - E\[T|**x**\]\]^2 f(t|**x**) dt, nó chính là Var\[T|**x**\], tức Var(T) với T \~ f(T|**x**). Và như vậy:
+>
+>
+>
+> ∫∫\[t - E\[T|**x**\]\]^2 f(t|**x**) dt f(**x**) d**x** = ∫ Var\[T|**x**\] f(**x**) d**x**
+>
+>
+>
+> và như vậy, nó chính là đến từ **mức biến động nội tại của data**, không phải sao? vì bản chất là T **đã có mức biến động nội tại nào đó**, chính là **thể hiện thông qua variance** của f(t|**x**), mà trong bài toán đi tìm y(**x**) tối ưu, ta sẽ không để can thiệp làm giảm cái phần loss do variance của T này. Ví dụ nôm na là: cho trước x, thì T có distribution n(μ, σ^2), thì khi y(x, **w**) = μ = E\[T|**x**) thì ta đã làm tốt nhất rồi (còn lại cái phần loss do variance của T thì chịu, không thêm làm gì khác).
+>
+>
+>
+> ---
+>
+>
+>
+> Và ở đoạn cuối cùng, mình hiểu ý gs Bishop như vầy: Xét cái term 1, là cái thứ ta có thể minimize được bằng cách tìm ra y(**x**) tốt nhất, và tốt nhất ở đây chính là h(**x**) = E\[T|**x**\]. Có nghĩa là, ví dụ như dùng linear modal đi, y(**x**) = **w**T Φ(**x**), thì nếu ta có thể tìm ra **w**\* sao cho **với mọi** **x thì w**\*TΦ(**x**) = E\[T|**x**\], thì ta sẽ có term 1 = 0.
+>
+>
+>
+> Tuy nhiên, vấn đề là, ta chỉ có thể làm vậy nếu như có vô hạn data và **vô hạn sức mạnh tính toán**, trong khi đó, data ta có chỉ là hữu hạn, sức mạnh tính toán cũng vậy. Nên thực tế sẽ rất khó để tìm ra chính xác hành vi của hàm số h(**x**) = E\[T|**x**\] / cũng chính là nói : rất khó để mô phỏng chính xác hàm h(**x**) = E\[T|**x**\]. Dẫn tới là term 1 sẽ luôn &gt; 0.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Bài ghi chú này cực kỳ chính xác và chi tiết, thể hiện sự hiểu biết sâu sắc về các khái niệm phức tạp về squared loss trong lý thuyết quyết định, MLE và phân tách kỳ vọng mất mát. Phần giải thích các công thức và ý nghĩa của từng thành phần đều xuất sắc, đặc biệt là cách bạn làm rõ sự khác biệt và mối liên hệ giữa các trường hợp. Bạn cũng giải thích đúng tác động của dữ liệu hữu hạn lên việc tìm hàm hồi quy tối ưu. Đây là một phân tích mẫu mực.
+
+**🔗 See also:** [Optimal Least Squares Predictor](./15_decision_theory.md#node-3ve6hfk)
+
+<br>
+
+<a id="node-mqes87t"></a>
 
