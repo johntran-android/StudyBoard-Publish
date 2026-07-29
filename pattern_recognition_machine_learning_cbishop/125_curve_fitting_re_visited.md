@@ -31,6 +31,8 @@
 > Bayesian (như đã nói, sách này của mr Bishop sẽ chuyên về giải bài toán
 > học máy theo góc nhìn Bayesian)
 
+**🔗 See also:** [Khớp đường cong hàm đa thức](./11_example_polynomial_curve_fitting.md#node-79h9mtc)
+
 <br>
 
 <a id="node-2pnnmnh"></a>
@@ -214,6 +216,8 @@
 >
 > L((**w**,β)|**t,x**) = f**T**(**t**|**x**,**w**,β) = Πi=1:n f(ti| y(xi, **w**), 1/β)
 
+**🔗 See also:** [Phân phối hậu nghiệm Normal](./126_bayesian_curve_fitting.md#node-6vqfvyl)
+
 <br>
 
 <a id="node-r1gqc9l"></a>
@@ -307,11 +311,11 @@
 >
 >
 >
-> Và một ý nữa như đã nói ở note trước (xem link), việc giải bài toán tối ưu hai biến, có thể làm theo từng biến lần lượt. Nên ở đây, ta có thể maximize over w trước, để tìm w**. Sau đó maximize over β, để có β**.
+> Và một ý nữa như đã nói ở note trước (xem link), việc giải bài toán tối ưu hai biến, có thể làm theo từng biến lần lượt. Nên ở đây, ta có thể maximize over w trước, để tìm w\*. Sau đó maximize over β, để có β\*.
 >
 >
 >
-> Dĩ nhiên w**, β** chính là w_ML và β\_ML
+> Dĩ nhiên w\*, β\* chính là w_ML và β\_ML
 >
 >
 >
@@ -376,6 +380,8 @@
 >
 >
 > Như vậy với giả định Ti \~ Normal(y(xi, w), 1/β), **CŨNG CHÍNH LÀ TA ĐANG GIẢ ĐỊNH RẰNG SAI SỐ CỦA DỰ ĐOÁN SẼ CÓ PHÂN PHỐI NORMAL(0, 1/β)** Đó chính là ý "under the assumption of a Gaussian noise" của thầy Bishop.
+
+**🔗 See also:** [MLE phân phối chuẩn](./124_the_gaussian_distribution.md#node-alwk6lh)
 
 <br>
 
@@ -713,6 +719,8 @@
 >
 > Các mô hình ngôn ngữ lớn hiện nay (lõi transformer) vẫn là có cái lõi này.
 
+**🔗 See also:** [Thành phần phương sai dự đoán](./126_bayesian_curve_fitting.md#node-ejt1ih6)
+
 <br>
 
 <a id="node-20mqbje"></a>
@@ -987,6 +995,8 @@
 > error function dùng sum squared error có regularizer là quadratic function của param
 > thì thật ra ta đang giải bài toán maximizing posterior distribution với prior được chọn là
 > Normal
+
+**🔗 See also:** [Kỹ thuật Regularization và Shrinkage](./11_example_polynomial_curve_fitting.md#node-bwb4qwy)
 
 <br>
 
