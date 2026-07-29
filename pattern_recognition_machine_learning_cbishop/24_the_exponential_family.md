@@ -44,6 +44,8 @@
 >
 > dĩ nhiên Σi wi(**θ**)ti(x) cũng tương đương với **η**T**u**(**x**) ở đây
 
+**🔗 See also:** [2.4.1 Maximum likelihood & sufficient statistic](./241_maximum_likelihood_sufficient_statistic.md#node-niekuox)
+
 <br>
 
 <a id="node-odjpnlm"></a>
