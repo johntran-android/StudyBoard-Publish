@@ -188,6 +188,8 @@
 >
 > Phân tích của bạn rất sâu sắc và chi tiết, đặc biệt là phần giải thích về 'full step' và điều kiện xác định dương của Bk, cho thấy sự hiểu biết vững chắc về lý thuyết. Tuy nhiên, khi tính sai khác f(xk + p) - mk(p), hãy cẩn trọng hơn về dấu của các thành phần trong biểu thức; và lần tới cần hoàn thiện các phần "Quay lại sau" để đạt điểm tối đa.
 
+**🔗 See also:** [4.3 Iterative Solution Of The Subproblem](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-gal0ace)
+
 <br>
 
 <a id="node-464kbau"></a>
@@ -236,6 +238,8 @@
 >
 > Bản phân tích của bạn cực kỳ kỹ lưỡng và sâu sắc, vượt xa việc tóm tắt nội dung trực tiếp từ văn bản, thể hiện sự hiểu biết vững chắc về các phương pháp tối ưu. Tuy nhiên, bạn có thể đề cập rõ hơn đến tính chất luôn không âm của predicted reduction để đảm bảo độ chính xác tuyệt đối.
 
+**🔗 See also:** [Chứng minh theorem 4.5](./42_trust_region_methods_global_convergence.md#node-oli585n)
+
 <br>
 
 <a id="node-c4gu30d"></a>
@@ -262,6 +266,8 @@
 > Cuối cùng, nếu pk thỏa điều kiện > η (là giá trị chọn trước ∈ [0, 1/4]) thì mới thực hiện bước update xk+1 = xk + pk còn ngược lại thì giữ nguyên xk+1 = xk
 >
 > Chỉ có để ý là, nó chỉ tăng trust region lên nếu như ở bước trước đó, ||pk|| = Δk, có nghĩa nôm na là việc tìm kiếm ra điểm thấp nhất trong phạm vi cho phép cho ra điểm ngay trên biên. Điều này cùng với việc tỉ số ϱk "đạt" thì ta mới mở rộng trust region.
+
+**🔗 See also:** [Hội tụ toàn cục điểm Cauchy](./42_trust_region_methods_global_convergence.md#node-edr7lqw) · [Convergence to Stationary Points](./42_trust_region_methods_global_convergence.md#node-k0era47) · [Thuật toán SR1 Vùng tin cậy](./62_the_sr1_method.md#node-fsif7wv) · [Phương pháp Trust-Region Newton CG](./71_inexact_newton_methods.md#node-8tkd9oh)
 
 <br>
 
@@ -290,6 +296,8 @@
 >
 >
 > #4.5, 4.6
+
+**🔗 See also:** [4.3 Iterative Solution Of The Subproblem](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-gal0ace) · [Proof of theorem 4.1: Lemma 4.7](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-k08q2ml) · [Convergence of algorithms based on nearly exact solution](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-tr8868m)
 
 <br>
 
@@ -364,6 +372,8 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Ghi chú của bạn rất chính xác và thể hiện sự nắm vững xuất sắc các điều kiện của bài toán con vùng tin cậy, bao gồm cả hiểu biết sâu sắc về các phép biến đổi tọa độ cơ bản và sắc thái của việc diễn giải gradient.
+
+**🔗 See also:** [4.3 Iterative Solution Of The Subproblem](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-gal0ace) · [The Hard Case: Khi q1Tg = 0](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-ty435bj) · [Proof of theorem 4.1: Lemma 4.7](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-k08q2ml) · [Proof of theorem 4.1](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-csqy8ix) · [Convergence of algorithms based on nearly exact solution](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-tr8868m) · [Lemma 10.2: Trust-Region Solution](./103_algorithms_for_nonlinear_least_squares_problem.md#node-za3zjv6)
 
 <br>
 
@@ -501,6 +511,8 @@
 > **🤖 AI Feedback** — ❌ Score: **65/100**
 >
 > Bài làm cho thấy sự hiểu biết khá tốt về các phương pháp giải quyết bài toán phụ, nhưng mắc lỗi nghiêm trọng trong việc phân biệt nội dung giữa các phần, đặc biệt là Phần 4.3 và 4.4.
+
+**🔗 See also:** [Trust Region Newton CG](./71_inexact_newton_methods.md#node-4fbrszp) · [Phương pháp Trust-Region Newton CG](./71_inexact_newton_methods.md#node-8tkd9oh)
 
 <br>
 
