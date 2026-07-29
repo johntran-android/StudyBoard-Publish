@@ -263,6 +263,8 @@
 >
 > Ghi chú đã giải thích rất chính xác mô hình và nguyên lý dự đoán tối ưu với hàm mất mát bình phương như trong hình ảnh. Chiều sâu phân tích, đặc biệt là phần chứng minh và phân biệt các bài toán, đã làm tăng đáng kể sự rõ ràng và toàn diện của nội dung.
 
+**🔗 See also:** [Predicting Values and Linear Models](./310_linear_regression_and_basis_functions.md#node-btnn2z0)
+
 <br>
 
 <a id="node-1wtfw5p"></a>
@@ -409,6 +411,8 @@
 > **🤖 AI Feedback** — ✅ Score: **96/100**
 >
 > Bài ghi chú của bạn thể hiện sự hiểu biết sâu sắc và toàn diện về việc thiết lập hàm khả năng hợp lý và log-khả năng hợp lý cho mô hình hồi quy tuyến tính. Bạn không chỉ tái hiện các công thức mà còn giải thích rất rõ ràng các giả định và ý nghĩa đằng sau chúng.
+
+**🔗 See also:** [Bias Parameter and Basis Function](./310_linear_regression_and_basis_functions.md#node-6p1u6u8) · [Maximum Likelihood Noise Precision β_ML](#node-vz4hsaf)
 
 <br>
 
@@ -699,15 +703,15 @@
 >
 >
 >
-> Thế thì x, là một solitution của Ax = b luôn có thể tách ra làm hai phần: x **nằm trong rowspace, và z nằm trong nullspace. Và vì rowspace và nullspace orthogonal complement, nên x** chính là nghiệm có norm nhỏ nhất (chú ý, x_particular chưa chắc đã là x**, vì nó có thể không nằm trong rowspace, phải chiếu nó lên rowspace thì mới có x**, phần dư sẽ vào nullspace)
+> Thế thì x, là một solitution của Ax = b luôn có thể tách ra làm hai phần: x\* nằm trong rowspace, và z nằm trong nullspace. Và vì rowspace và nullspace orthogonal complement, nên x\* chính là nghiệm có norm nhỏ nhất (chú ý, x_particular chưa chắc đã là x\*, vì nó có thể không nằm trong rowspace, phải chiếu nó lên rowspace thì mới có x\*, phần dư sẽ vào nullspace)
 >
 >
 >
-> Vậy ta lại dựa vào lập luận, vì x **nằm trong rowspace, nên tồn tại linear combination các rows của A tạo ra x**: ATy = x**, phần dư nằm trong nullspace x - ATy ⇨ A(x - ATy) = 0 ⇔ Ax - AATy = 0 ⇔ b = AATy ⇔ y = (AAT)inv b.
+> Vậy ta lại dựa vào lập luận, vì x\* nằm trong rowspace, nên tồn tại linear combination các rows của A tạo ra x\*: ATy = x\*, phần dư nằm trong nullspace x - ATy ⇨ A(x - ATy) = 0 ⇔ Ax - AATy = 0 ⇔ b = AATy ⇔ y = (AAT)inv b.
 >
 >
 >
-> Vậy x** = ATy = AT(AAT)inv b chính là nghiệm có norm nhỏ nhất trong vô số nghiệm của Ax = b
+> Vậy x\* = ATy = AT(AAT)inv b chính là nghiệm có norm nhỏ nhất trong vô số nghiệm của Ax = b
 >
 >
 >
@@ -919,6 +923,8 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Phần giải thích của bạn cực kỳ chi tiết, chính xác và đào sâu vấn đề một cách xuất sắc, từ việc trình bày bước đạo hàm đến việc làm rõ ý nghĩa thống kê của 1/β_ML và liên hệ chặt chẽ với câu kết luận trong sách. Để bản ghi chú hoàn hảo hơn, bạn có thể nhắc lại định nghĩa đầy đủ của E_D(w) ngay từ đầu phần đạo hàm để người đọc dễ theo dõi hơn.
+
+**🔗 See also:** [Likelihood and Error Functions](#node-urnjdcs)
 
 <br>
 
