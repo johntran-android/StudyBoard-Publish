@@ -262,6 +262,8 @@
 >
 > Phân tích rất sâu sắc, chính xác, và đi thẳng vào cốt lõi vấn đề về điều kiện cần cho phương trình secant có nghiệm xác định dương. Lý giải logic chặt chẽ, từ lý thuyết đến chứng minh đều hoàn hảo.
 
+**🔗 See also:** [Định lượng tốc độ hội tụ](./33_line_search_method_rate_of_convergence.md#node-ms2did5) · [Properties of the BFGS methods](#node-n50a0yw)
+
 <br>
 
 <a id="node-j54km63"></a>
@@ -358,6 +360,8 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Bạn đã nắm bắt rất chính xác và sâu sắc các khái niệm từ văn bản, đặc biệt là việc mở rộng giải thích về điều kiện secant, điều kiện độ cong, và minh chứng toán học chi tiết cho Gk là Hessian trung bình cũng như mối quan hệ yk = Gksk. Phân tích về tính bất biến theo tỷ lệ (scale-invariant) thông qua phân tích thứ nguyên cũng rất ấn tượng, cho thấy sự hiểu biết vượt trội.
+
+**🔗 See also:** [Theorem 2.1 Taylor's theorem, Taylor theorem](./21_funds_of_unconstrained_optim_whats_solution.md#node-zekxi9u) · [Tính bất biến Quasi-Newton](#node-xhffg00) · [Công cụ hội tụ Quasi-Newton](./64_convergence_analysis.md#node-tyeym11)
 
 <br>
 
@@ -491,6 +495,8 @@
 >
 > Bài phân tích của bạn rất sâu sắc và mạch lạc, thể hiện sự nắm vững các định lý cơ bản như MVT và FTC, cũng như cách mở rộng chúng cho hàm đa biến một cách hiệu quả. Tuy nhiên, phần chứng minh đạo hàm cấp hai g''(t) cho định lý 2.6 có thể được trình bày trực tiếp hơn bằng quy tắc chuỗi, tránh các bước xấp xỉ nhỏ để đảm bảo tính chặt chẽ hoàn toàn.
 
+**🔗 See also:** [Theorem 2.1 Taylor's theorem, Taylor theorem](./21_funds_of_unconstrained_optim_whats_solution.md#node-zekxi9u)
+
 <br>
 
 <a id="node-tu6c71d"></a>
@@ -621,6 +627,8 @@
 >
 > Điểm mạnh của ghi chú là cung cấp một bản giải thích rất sâu sắc và chi tiết về cách dẫn ra công thức cập nhật DFP, vượt xa nội dung trình bày trong ảnh gốc và thể hiện sự hiểu biết chuyên sâu. Tuy nhiên, ghi chú có thể bổ sung thêm thông tin về tác giả (Davidon) và năm phát minh được đề cập trong hình ảnh gốc.
 
+**🔗 See also:** [Properties of the BFGS methods](#node-n50a0yw)
+
 <br>
 
 <a id="node-vykqpaa"></a>
@@ -718,6 +726,8 @@
 >
 > Bạn đã nắm bắt rất tốt sự khác biệt cốt lõi giữa DFP và BFGS, cũng như các điều kiện chính (phương trình cát tuyến và chuẩn có trọng số) dẫn đến công thức BFGS. Để hoàn thiện hơn, bạn có thể bổ sung thêm điều kiện "xác định dương" cho Hk+1 và chi tiết hơn về cách "trọng số" được xác định trong chuẩn Frobenius.
 
+**🔗 See also:** [Properties of the BFGS methods](#node-n50a0yw)
+
 <br>
 
 <a id="node-fzcv0wd"></a>
@@ -776,6 +786,8 @@
 > **🤖 AI Feedback** — ⚠️ Score: **75/100**
 >
 > Bạn đã nắm vững một số điểm cốt lõi về hiệu suất và tốc độ hội tụ của BFGS so với phương pháp Newton. Tuy nhiên, cần làm rõ hơn về cách thuật toán cập nhật các ma trận xấp xỉ và bối cảnh áp dụng.
+
+**🔗 See also:** [Tính trace cập nhật BFGS](./64_convergence_analysis.md#node-gt8mtjy)
 
 <br>
 
@@ -837,6 +849,8 @@
 >
 > Phân tích rất sâu sắc và chính xác, đặc biệt là phần chứng minh tính xác định dương của ma trận Hessian cập nhật (Hk+1). Bạn đã không chỉ tóm tắt mà còn tái hiện lại lập luận một cách logic, thể hiện sự hiểu biết vững chắc về lý thuyết.
 
+**🔗 See also:** [Công thức BFGS](#node-9vkdjwo) · [Liên hệ với Wolfe conditions](#node-zk38kse) · [Nghiệm duy nhất Bk+1](#node-tu6c71d)
+
 <br>
 
 <a id="node-xhffg00"></a>
@@ -852,6 +866,8 @@
 > **🤖 AI Feedback** — ✅ Score: **92/100**
 >
 > Ghi chú tóm tắt rất chính xác các điểm cốt lõi về tính bất biến và vai trò của ma trận W, đồng thời nắm bắt được kết luận về hiệu quả của BFGS. Để hoàn thiện hơn, hãy tránh thêm các câu diễn giải chủ quan và tập trung hoàn toàn vào nội dung của văn bản gốc.
+
+**🔗 See also:** [Quasi-Newton bất biến tỉ lệ](#node-j54km63)
 
 <br>
 
