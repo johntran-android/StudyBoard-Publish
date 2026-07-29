@@ -343,6 +343,8 @@
 >
 > Posterior π(**w**|**x**,**t**) là Normal((β**X**T**X** + α**I**)invβ**X**T**t**,  (β**X**T**X** + α**I**)inv)
 
+**🔗 See also:** [Phân phối chung và Likelihood](./125_curve_fitting_re_visited.md#node-8u1p4w9)
+
 <br>
 
 <a id="node-ug53f6v"></a>
@@ -700,6 +702,8 @@
 > uncertainty **do coi w là random variable**), và cái cấu phần thứ hai trong
 > variance của Ti phản ánh điều này, quả thật, nó là một term liên quan đến
 > covariance variance của posterior distribution của **W**
+
+**🔗 See also:** [Ước lượng ML, Phân phối tiên đoán](./125_curve_fitting_re_visited.md#node-iw7c6u7)
 
 <br>
 
