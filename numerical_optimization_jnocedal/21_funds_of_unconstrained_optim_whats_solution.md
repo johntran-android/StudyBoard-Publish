@@ -403,6 +403,8 @@
 >
 > Học sinh đã nắm vững mục đích của Định lý Taylor và mối liên hệ của nó với Định lý Giá trị Trung bình một biến, cùng với cách biểu diễn điểm trung gian (X + T * P). Tuy nhiên, bài giải còn thiếu các điều kiện quan trọng của định lý và hoàn toàn bỏ qua việc giải thích công thức 2.5 và 2.6, vốn là một phần đáng kể của tài liệu gốc.
 
+**🔗 See also:** [Nguyên lý phương pháp Quasi-Newton](./22_funds_of_unconstrained_optim_overview_of_algorithms.md#node-p3pvsbu) · [Chứng minh theorem 4.5](./42_trust_region_methods_global_convergence.md#node-oli585n) · [Ôn lại Taylor's theorem](./61_the_bfgs_method.md#node-qy13j57) · [Quasi-Newton bất biến tỉ lệ](./61_the_bfgs_method.md#node-j54km63)
+
 <br>
 
 <a id="node-v0zxbya"></a>
@@ -850,6 +852,8 @@
 >
 > Và giáo sư nhận xét: Như mọi thuật toán đều tìm kiếm điểm gradient
 > vanish
+
+**🔗 See also:** [Two-dimensional Subspace Minimization](./41_trust_region_methods_algorithms_based_on_the_cauchy_point.md#node-nk72thi)
 
 <br>
 
