@@ -301,7 +301,7 @@ from A Random Sample
 >
 > ⇔ **(n - 1) s^2 = Σi xi^2 - Σi x_bar^2**
 
-**🔗 See also:** [Tìm MLE không đạo hàm](./72_method_of_finding_estimators.md#node-276or8r)
+**🔗 See also:** [Tìm MLE không đạo hàm](./72_method_of_finding_estimators.md#node-276or8r) · [Bootstrap Variance Formula](./101_point_estimation.md#node-uvh5j60)
 
 <br>
 
