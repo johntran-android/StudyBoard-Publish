@@ -50,6 +50,8 @@
 >
 > Your analysis accurately captures the equivalence between solving Ax=b and minimizing φ(x), and correctly derives the gradient. Connecting this specific problem to the broader principle of root-finding and Newton's method demonstrates a profound understanding of the underlying mathematical concepts.
 
+**🔗 See also:** [Tối ưu hóa tọa độ Hessian chéo](#node-b04ox8f) · [Vài suy nghĩ về bản chất của Conjugate Gradient method](#node-6z4orxx) · [Basic properties of conjugate gradient method](#node-p6jzgvh) · [Rate of Convergence](#node-3zg5huu) · [Local Convergence of Inexact Newtons](./71_inexact_newton_methods.md#node-ts4mvv1)
+
 <br>
 
 <a id="node-0lu7h6i"></a>
@@ -114,6 +116,8 @@
 >
 > Bạn đã nắm vững các định nghĩa cốt lõi và thực hiện xuất sắc việc chứng minh công thức alpha_k một cách chi tiết và chính xác. Để nâng cao hơn nữa, hãy xem xét lại cách thiết lập giả định và các bước chứng minh tính độc lập tuyến tính của các vector liên hợp để đảm bảo tính chặt chẽ.
 
+**🔗 See also:** [Chuyển đổi A thành diagonal](#node-tikzhc4) · [Tối ưu hóa tọa độ Hessian chéo](#node-b04ox8f) · [Vài suy nghĩ về bản chất của Conjugate Gradient method](#node-6z4orxx) · [Basic properties of conjugate gradient method](#node-p6jzgvh)
+
 <br>
 
 <a id="node-g0algzt"></a>
@@ -173,6 +177,8 @@
 > = pkT(b-Axk) Và vì rk = Axk-b nên đây chính là -pkTrk
 >
 > Vậy σk = pkTA(x*-x0)/pkTApk = -pkTrk/pkTApk, chính là αk. Chứng minh xong
+
+**🔗 See also:** [Chuyển đổi A thành diagonal](#node-tikzhc4)
 
 <br>
 
@@ -245,6 +251,8 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Bài phân tích rất xuất sắc, bạn không chỉ giải thích đúng ý nghĩa của hình minh họa mà còn cung cấp chứng minh toán học chi tiết, làm rõ vì sao ma trận A chéo lại dẫn đến các đường đồng mức hình elip. Để hoàn thiện hơn, bạn có thể lưu ý rằng trong hình 2D, điểm dừng x* đạt được sau x0 → x1 và x1 → x* chứ không phải x1 → x2.
+
+**🔗 See also:** [Tối ưu hóa tọa độ Hessian chéo](#node-b04ox8f)
 
 <br>
 
@@ -359,6 +367,8 @@
 >
 > Bài làm rất xuất sắc, thể hiện sự hiểu biết sâu sắc về đại số tuyến tính cơ bản và cách áp dụng vào giải thích thuật toán. Mặc dù phần giải thích về đổi cơ sở khá dài, nhưng nó hoàn toàn chính xác và củng cố vững chắc cho lập luận chính.
 
+**🔗 See also:** [Theorem 5.1](#node-g0algzt) · [Conjugate Direction Method](#node-0lu7h6i)
+
 <br>
 
 <a id="node-b04ox8f"></a>
@@ -394,6 +404,8 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Bài làm giải thích rất chính xác tính chất của ma trận Hessian chéo và sự tối ưu hóa trên không gian con, thể hiện sự hiểu sâu sắc. Việc tự tay dẫn dắt công thức (5.10) cũng cho thấy bạn đã nắm vững kiến thức và không chỉ đọc mà còn hiểu rõ từng bước; bạn chỉ cần chú ý đặt ký hiệu công thức ở dạng hoàn chỉnh để khớp hoàn toàn với văn bản gốc.
+
+**🔗 See also:** [Conjugate Direction Method](#node-0lu7h6i) · [5.1 The Linear Conjugate Gradient Method](#node-hpdy8sw) · [Góc nhìn hình học lí giải tính chất của conjugate direction](#node-aads1j4) · [Theorem 5.3](#node-e7cob1z)
 
 <br>
 
@@ -578,6 +590,8 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Điểm mạnh của bạn là sự hiểu biết sâu sắc về bản chất của thuật toán Conjugate Gradient, đặc biệt là vai trò của A-norm và phép chiếu trong không gian con. Bạn đã giải thích rất rõ ràng lý do tại sao phương pháp này lại hiệu quả, vượt xa việc chỉ tóm tắt định lý.
+
+**🔗 See also:** [5.1 The Linear Conjugate Gradient Method](#node-hpdy8sw) · [Conjugate Direction Method](#node-0lu7h6i) · [A Practical Form Of The Conjugate Gradient Method.](#node-jdgssae) · [Rate of Convergence](#node-3zg5huu)
 
 <br>
 
@@ -862,6 +876,8 @@
 > Dùng nó tính conjugate direction tiếp thep pk+1
 >
 > Lặp lại.
+
+**🔗 See also:** [5.1 The Linear Conjugate Gradient Method](#node-hpdy8sw) · [Conjugate Direction Method](#node-0lu7h6i) · [A Practical Form Of The Conjugate Gradient Method.](#node-jdgssae)
 
 <br>
 
@@ -1244,6 +1260,8 @@
 >
 > Bài ghi chú của bạn rất xuất sắc về độ chính xác và chiều sâu. Bạn đã giải thích chi tiết và rõ ràng từng bước trong chứng minh Định lý 5.3, đặc biệt là cách sử dụng khái niệm "span" và tổ hợp tuyến tính, cho thấy sự hiểu biết sâu sắc về tài liệu. Việc phân tích từng ý nhỏ và đưa ra lời giải thích cặn kẽ là một điểm mạnh lớn, giúp người đọc dễ dàng theo dõi toàn bộ quá trình chứng minh.
 
+**🔗 See also:** [Tối ưu hóa tọa độ Hessian chéo](#node-b04ox8f) · [A Practical Form Of The Conjugate Gradient Method.](#node-jdgssae) · [Rate of Convergence](#node-3zg5huu)
+
 <br>
 
 <a id="node-h5xdpvv"></a>
@@ -1397,6 +1415,8 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Bài viết đã trình bày rất sâu sắc và chính xác các bước chuyển đổi từ thuật toán Conjugate Gradient sơ bộ sang phiên bản hiệu quả hơn, đặc biệt là các phần chứng minh lại công thức αk và βk+1. Phần phân tích về chi phí tính toán (flops) cũng như ưu nhược điểm của CG cho các bài toán lớn đã bổ sung thêm chiều sâu đáng kể.
+
+**🔗 See also:** [Theorem 5.3](#node-e7cob1z) · [Vài suy nghĩ về bản chất của Conjugate Gradient method](#node-6z4orxx) · [Basic properties of conjugate gradient method](#node-p6jzgvh) · [Thuật toán Newton-CG](./71_inexact_newton_methods.md#node-rwy213p) · [Conjugate Gradient Method Iterations](./102_linear_least_square_problem.md#node-x7aktmm)
 
 <br>
 
@@ -1724,6 +1744,8 @@
 >
 > Bài phân tích cực kỳ chi tiết, sâu sắc và thể hiện sự hiểu biết thấu đáo về từng bước chứng minh. Khả năng tự đặt câu hỏi và giải thích các khái niệm phức tạp, như mối liên hệ giữa các hình chiếu và đa thức, hay cách diễn giải bất đẳng thức bằng phép ẩn dụ, là minh chứng cho tư duy xuất sắc. Tuy nhiên, cần chú ý hơn đến tính nhất quán ký hiệu, ví dụ như bình phương của chuẩn ở vế trái khi so sánh với tổng ở vế phải trong biểu thức tối thiểu hóa.
 
+**🔗 See also:** [Theorem 5.3](#node-e7cob1z) · [5.1 The Linear Conjugate Gradient Method](#node-hpdy8sw) · [Vài suy nghĩ về bản chất của Conjugate Gradient method](#node-6z4orxx) · [Theorem 5.5](#node-66uzm1b)
+
 <br>
 
 <a id="node-ji36w8z"></a>
@@ -1963,6 +1985,8 @@
 > **🤖 AI Feedback** — ⚠️ Score: **75/100**
 >
 > Bài phân tích của bạn thể hiện sự nỗ lực đáng kể trong việc kết nối các khái niệm và giải thích sâu hơn tài liệu. Tuy nhiên, có một hiểu lầm cơ bản về vai trò của Định lý 5.5: Định lý này là ước lượng, được suy ra từ các tính chất của một đa thức được xây dựng đặc biệt (đa thức Chebyshev), chứ không phải là công cụ để chứng minh giá trị lớn nhất của đa thức đó.
+
+**🔗 See also:** [Rate of Convergence](#node-3zg5huu)
 
 <br>
 
