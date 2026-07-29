@@ -1,6 +1,6 @@
 # 10.3 Algorithms for nonlinear least-squares problem
 
-📊 **Progress:** `8` Notes | `14` Screenshots | `3` AI Reviews
+📊 **Progress:** `9` Notes | `15` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-i8zrnvn"></a>
@@ -412,7 +412,7 @@
 >
 >
 >
-> Và hơn nữa, vì x **phải thỏa constraint nên fi(x**) ≤ 0, với λi ≥ 0 ∀i thì Σi λi fi(x\*) ≤ 0, hj(x\*) = 0 ∀j ⇨ Σj νj hj(x) = 0
+> Và hơn nữa, vì x phải thỏa constraint nên fi(x) ≤ 0, với λi ≥ 0 ∀i thì Σi λi fi(x\*) ≤ 0, hj(x\*) = 0 ∀j ⇨ Σj νj hj(x) = 0
 >
 >
 >
@@ -424,7 +424,7 @@
 >
 >
 >
-> Tiếp theo, ta mới xét bài toán gọi λ **và ν** là nghiệm của bài toán maximize λ, ν g(λ, ν), khi đó ta có:
+> Tiếp theo, ta mới xét bài toán gọi λ và ν là nghiệm của bài toán maximize λ, ν g(λ, ν), khi đó ta có:
 >
 >
 >
@@ -442,15 +442,15 @@
 >
 >
 >
-> g(λ, ν) ≤ g(λ\*, ν\*) = d\* ≤ L(x\*, λ\*, ν\*) = f0(x\*) + Σi λ**ifi(x**) + Σj ν**jhj(x**) ≤ f0(x\*) = p\*
+> g(λ, ν) ≤ g(λ\*, ν\*) = d\* ≤ L(x\*, λ\*, ν\*) = f0(x\*) + Σi λifi(x) + Σj νjhj(x) ≤ f0(x\*) = p\*
 >
 >
 >
-> Và p **- d** gọi là duality gap, trong bài toán lồi, nếu thỏa các điều kiện gọi là (quên tên rồi?) ví dụ Slater condition, thì ta sẽ d **= p**
+> Và p - d gọi là duality gap, trong bài toán lồi, nếu thỏa các điều kiện gọi là (quên tên rồi?) ví dụ Slater condition, thì ta sẽ d = p
 >
 > Và lúc này sẽ dẫn đến:
 >
-> g(λ, ν) ≤ g(λ\*, ν\*) = d **= L(x**, λ\*, ν\*) = f0(x\*) + Σi λ**ifi(x**) + Σj ν**jhj(x**) = f0(x\*) = p \*
+> g(λ, ν) ≤ g(λ\*, ν\*) = d = L(x, λ\*, ν\*) = f0(x\*) + Σi λifi(x) + Σj νjhj(x) = f0(x\*) = p \*
 >
 >
 >
@@ -458,21 +458,21 @@
 >
 >
 >
-> Dấu bằng thứ nhất: f0(x\*) + Σi λ**ifi(x**) + Σj ν**jhj(x**) = f0(x\*\*)
+> Dấu bằng thứ nhất: f0(x\*) + Σi λifi(x) + Σj νjhj(x) = f0(x\*\*)
 >
-> Vốn dĩ Σj ν**jhj(x**) đã bằng 0
->
->
->
-> nên thực ra ta có f0(x\*) + Σi λ**ifi(x**) = f0(x\*\*), và điều này suy ra: Σi λ**ifi(x**) = 0. Đây gọi là complementary slackness condition:
+> Vốn dĩ Σj νjhj(x) đã bằng 0
 >
 >
 >
-> vì λ**i ≥ 0, nên điều kiện này đồng nghĩa: nếu fi(x**) &lt; 0, thì λ**i = 0. nếu λ**i &gt; 0 thì fi(x\*) = 0.
+> nên thực ra ta có f0(x\*) + Σi λifi(x) = f0(x\*\*), và điều này suy ra: Σi λifi(x) = 0. Đây gọi là complementary slackness condition:
 >
 >
 >
-> Dấu bằng thứ hai: g(λ\*, ν\*) = d **= L(x**, λ\*, ν\*) = f0(x\*) + Σi λ**ifi(x**) + Σj ν**jhj(x**): Để dễ hiểu hơn, ta nhớ lại rằng định nghĩa của dual function g là:
+> vì λi ≥ 0, nên điều kiện này đồng nghĩa: nếu fi(x) &lt; 0, thì λi = 0. nếu λi &gt; 0 thì fi(x\*) = 0.
+>
+>
+>
+> Dấu bằng thứ hai: g(λ\*, ν\*) = d = L(x, λ\*, ν\*) = f0(x\*) + Σi λifi(x) + Σj νjhj(x): Để dễ hiểu hơn, ta nhớ lại rằng định nghĩa của dual function g là:
 >
 >
 >
@@ -544,7 +544,19 @@
 >
 >
 >
-> Bài toán tối ưu đặt ra là minimize over p {||Jp + r||^2} s.t ||p|| ≤ Δ, và lemma nói rằng pLM là solution nếu như nó thỏa: là feasible point (tức thỏa constraint), và tồn tại scalar λ không âm sao cho (JTJ + λI) pLM = -JTr và λ(Δ - ||pLM||) = 0. Thử liên hệ nó với KKT conditions:
+> Bài toán tối ưu đặt ra là minimize over p {||Jp + r||^2} s.t ||p|| ≤ Δ, và lemma nói rằng pLM là solution nếu như nó thỏa: là feasible point (tức thỏa constraint), và tồn tại scalar λ không âm sao cho (JTJ + λI) pLM = -JTr và λ(Δ - ||pLM||) = 0.
+>
+>
+>
+> Thử liên hệ nó với KKT conditions:
+>
+>
+>
+> Đầu tiên bài toán minimize over p {||Jp + r||^2} s.t ||p|| ≤ Δ equivalent với
+>
+>
+>
+> minimize over p {||Jp + r||^2} s.t (1/2)||p||^2 ≤ (1/2)Δ^2. Lí do là vì constraint ||p|| ≤ Δ (a) tương đương (1/2)||p||^2 ≤ (1/2) Δ^2 (b), vì Δ không âm. Do đó việc p thỏa thì cũng thỏa (a).
 >
 >
 >
@@ -552,11 +564,11 @@
 >
 >
 >
-> Vậy ở đây, hàm cần tối ưu là f0(p) = ||Jp + r||^2 (biến tối ưu là p). Và bài toán toán này có một inequality condition f1(p) = ||p|| - Δ ≤ 0. Nên Lagrangian function là:
+> Vậy ở đây, hàm cần tối ưu là f0(p) = ||Jp + r||^2 (biến tối ưu là p). Và bài toán toán này có một inequality condition f1(p) = (1/2)(||p||^2 - Δ^2) ≤ 0. Nên Lagrangian function là:
 >
 >
 >
-> L(p, λ) = f0(p) + λf1(p) =  ||Jp + r||^2 + λ(||p|| - Δ)
+> L(p, λ) = f0(p) + λf1(p) = ||Jp + r||^2 + (λ/2)(||p||^2 - Δ^2)
 >
 >
 >
@@ -564,12 +576,186 @@
 >
 >
 >
-> ∇\_p L(p, λ) = d/dp \[||Jp + r||^2 + λ(||p|| - Δ)\]
+> ∇\_p L(p, λ) = d/dp \[||Jp + r||^2 + (λ/2)(||p||^2 - Δ^2)\]
+>
+>
+>
+> = d/dp \[||Jp + r||^2\] + d/dp \[(λ/2)(||p||^2 - Δ^2)\]
+>
+>
+>
+> = d/dp \[||Jp + r||^2\] + (λ/2) d/dp (||p||^2) 
+>
+>
+>
+> ||Jp + r||^2 = (Jp + r)T(Jp + r) = (pTJT + rT)(Jp + r) = pTJTJp + rTJp + pTJTr + rTr
+>
+>
+>
+> = pTJTJp + 2rTJp + rTr
+>
+>
+>
+> và ta biết gradient của hàm f(x) = (1/2)xTPx + qTx + r sẽ là PTx + q.
+>
+>
+>
+> Nên ở đây, ∇\_p \[pTJTJp + 2rTJp + rTr\] = 2 ∇\_p \[(1/2)pTJTJp + rTJp + (1/2)rTr\] = 2 (JTJ p + JTr)
+>
+>
+>
+> Còn d/dp (||p||^2)  = d/dp pTp là gì?
+>
+>
+>
+> Làm theo lối MIT 18s096 đã học: tìm cách đửa d(||p||^2) về dạng linear operator act on dp
+>
+>
+>
+> d(||p||^2) = d(pTp) = (p+dp)T(p+dp) - pTp = (pT+dpT)(p+dp) - pTp = pTp+dpTp+pTdp+dpTdp - pTp
+>
+>
+>
+> = 2pTdp + dpTdp
+>
+>
+>
+> = 2pTdp (bỏ đi term bậc cao dpTdp)
+>
+>
+>
+> Như vậy, tại đây ta có dot product của 2p và dp, chính là linear operator act on dp, nên ⇒ ∇(pTp) = 2p
+>
+>
+>
+> Vậy: ∇\_p L(p, λ) = 2 (JTJ p + JTr) + (λ/2)2p
+>
+>
+>
+> Và stationary condition: ∇\_p L(p, λ) = 0 ⇔ 2 (JTJ p + JTr) + λp = 0
+>
+>
+>
+> ⇔ JTJ p + JTr + λp = 0
+>
+>
+>
+> ⇔ JTJ p + (λ/2)p = -JTr
+>
+>
+>
+> ⇔ JTJ p + (λ/2)p = -JTr
+>
+>
+>
+> ⇔ (JTJ + (λ/2)I)p = -JTr 
+>
+>
+>
+> vì λ chỉ là constant (Lagrange multiplier) nên có thể đặt λ mới  = λ/2, để có 
+>
+>
+>
+> (JTJ + (λI)p = -JTr 
+>
+>
+>
+> → đây chính là 10.34a
+>
+>
+>
+> Còn complementary slackness sẽ cho ra 10.34b:
+>
+>
+>
+> Công thức của complementary slackness condition: Σi λ\*i fi(x\*) = 0, áp dụng vào đây, chính là:
+>
+>
+>
+> λ\*(||p\*||^2 - Δ^2) = 0
+>
+>
+>
+> ⇔ λ\*(||p\*|| - Δ)(||p\*|| + Δ) = 0
+>
+>
+>
+> ⇔ λ\*(||p\*|| - Δ) = 0 → đây chính là 10.34b, ở đây tự hiểu p\* chính là pLM, và λ chính là λ\*, là dual variable.
+>
+>
+>
+> Như vậy việc mình biết KKT condition, giúp thấy rõ hai cái điều kiện 10.34a và 10.34b chỉ là KKT conditions thôi.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> **🤖 AI Feedback** — ✅ Score: **98/100**
 >
-> Đây là một phân tích rất sâu sắc và chính xác về điều kiện KKT và lý thuyết đối ngẫu, cung cấp một nền tảng lý thuyết vững chắc để hiểu Lemma 10.2. Để kết nối chặt chẽ hơn với nội dung hình ảnh, bạn có thể minh họa cụ thể cách áp dụng điều kiện KKT cho bài toán con vùng tin cậy được trình bày, qua đó chỉ rõ phương trình (10.34a) và (10.34b) là kết quả trực tiếp của việc áp dụng này.
+> Tuyệt vời. Bạn đã trình bày một cách chi tiết và chính xác mối liên hệ giữa điều kiện KKT và Lemma 10.2, với các bước suy luận toán học rõ ràng và dễ hiểu, thể hiện sự nắm vững kiến thức vững chắc.
+
+**🔗 See also:** [Theorem 4.1](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-6p1mgzb)
+
+<br>
+
+<a id="node-1z7vmo9"></a>
+
+- **Solving Least-Squares Subproblem**
+
+<p align="center"><kbd><img src="assets/8ezvxa04l96.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Phần chứng minh đơn giản chỉ là chỉ ra rằng ở đầy đều thỏa các điều kiện của theorem 4.1. Vậy thôi.
+>
+>
+>
+> Một điểm cần là rõ, là vì sao gs nói 10.33 ((JTJ + (λI)p = -JTr) lại chỉ là normal equation của bài toán linear least-square 10.35: minimize over p {(1/2) square norm của Up + q với U = \[J; I√λ\] và q = \[r; 0\].
+>
+>
+>
+> Normal equation của bài toán least square minimize f(x) = (1/2) ||Ax - b||^2 thật ra chỉ chính là cái first order optimality condition ∇f(x) = 0 thôi có khỉ gì đâu.
+>
+>
+>
+> ∇f = (1/2) d/dx (Ax - b)T(Ax - b) =  (1/2) d/dx (xTAT - bT)(Ax - b)
+>
+>
+>
+> = (1/2) d/dx (xTATAx - bTAx - xTATb + bTb)
+>
+>
+>
+> = d/dx \[(1/2)xTATAx - bTAx - xTATb + (1/2)bTb)
+>
+>
+>
+> = d/dx \[(1/2)xTATAx - bTAx + (1/2)bTb)
+>
+>
+>
+> = ATAx - ATb
+>
+>
+>
+> Và first order optimality condition: ATAx - ATb ⇔ ATAx = ATb, đây chính là normal equation.
+>
+>
+>
+> Nên ở đây nếu ta thay A = \[J; I√λ\] và b = -\[r;0\] và x = p thì ta có:
+>
+>
+>
+> \[J; I√λ\]T\[J; I√λ\]p = -\[J; I√λ\]T\[r;0\]
+>
+>
+>
+> ⇔ \[JTJ  + √λ (ITI) √λ\]p = -\[JTr + √λ IT0\]
+>
+>
+>
+> ⇔ (JTJ  + λI)p = -JTr → chính là 10.33
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bài phân tích của bạn rất sâu sắc, đặc biệt là phần chứng minh chi tiết việc phương trình (10.33) là phương trình chuẩn (normal equation) của bài toán bình phương tối thiểu (10.35). Cách bạn diễn giải và dẫn ra công thức là rất chính xác, thể hiện sự hiểu biết vững chắc về lý thuyết, mặc dù có thể làm rõ hơn một chút các bước trung gian khi lấy đạo hàm của biểu thức ||Ax - b||^2 để đạt độ chặt chẽ tuyệt đối.
 
 **🔗 See also:** [Theorem 4.1](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-6p1mgzb)
 
