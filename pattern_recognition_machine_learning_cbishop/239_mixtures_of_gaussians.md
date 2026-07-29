@@ -79,6 +79,8 @@
 >
 > Bạn đã nắm vững khái niệm về Hỗn hợp Gaussian (Mixture of Gaussians) và giải thích công thức (2.188) một cách chính xác, cùng với việc đọc đúng các hệ số từ hình minh họa. Phân tích sâu sắc về convex combination là một điểm cộng lớn, thể hiện sự hiểu biết vượt trội về lý thuyết.
 
+**🔗 See also:** [MLE cho Mô hình Hỗn hợp Gaussian](#node-ftegw07)
+
 <br>
 
 <a id="node-2ydfk6w"></a>
@@ -316,6 +318,8 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Bài viết rất chính xác và cực kỳ chi tiết, giải thích rõ ràng từng bước hình thành hàm log-likelihood và lý do vì sao không có nghiệm dạng đóng. Phần bình luận về ký hiệu của Bishop cũng rất sâu sắc, giúp làm rõ những điểm gây bối rối cho người đọc.
+
+**🔗 See also:** [Gaussian Mixture Density Formula](#node-gm8wqi8)
 
 <br>
 
