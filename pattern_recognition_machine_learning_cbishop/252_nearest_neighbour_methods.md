@@ -79,6 +79,8 @@
 >
 > Bài viết thể hiện sự hiểu biết sâu sắc về phương pháp K-nearest neighbour, phân biệt rõ ràng với kernel method và mô tả chính xác ảnh hưởng của K đến độ mượt. Để hoàn thiện hơn, hãy giải thích trực tiếp lý do nó không phải "true density model" là vì tích phân trên toàn không gian phân kỳ.
 
+**🔗 See also:** [Density Estimate Formula](./251_kernel_density_estimators.md#node-a23maxi)
+
 <br>
 
 <a id="node-n40ednw"></a>
@@ -244,6 +246,8 @@
 > **🤖 AI Feedback** — ✅ Score: **92/100**
 >
 > Ghi chú thể hiện sự hiểu biết sâu sắc về mối liên hệ giữa KNN, xác suất hậu nghiệm và rủi ro Bayes, đặc biệt là trong trường hợp lỗi phân loại đồng đều. Tuy nhiên, việc trình bày công thức rủi ro Bayes có thể được làm rõ hơn để tránh sự nhầm lẫn về ký hiệu.
+
+**🔗 See also:** [Luật quyết định Bayes tối ưu](./15_decision_theory.md#node-ym5yp89)
 
 <br>
 
