@@ -373,7 +373,7 @@
 >
 > Ghi chú của bạn rất chính xác và thể hiện sự nắm vững xuất sắc các điều kiện của bài toán con vùng tin cậy, bao gồm cả hiểu biết sâu sắc về các phép biến đổi tọa độ cơ bản và sắc thái của việc diễn giải gradient.
 
-**🔗 See also:** [4.3 Iterative Solution Of The Subproblem](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-gal0ace) · [The Hard Case: Khi q1Tg = 0](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-ty435bj) · [Proof of theorem 4.1: Lemma 4.7](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-k08q2ml) · [Proof of theorem 4.1](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-csqy8ix) · [Convergence of algorithms based on nearly exact solution](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-tr8868m) · [Lemma 10.2: Trust-Region Solution](./103_algorithms_for_nonlinear_least_squares_problem.md#node-za3zjv6)
+**🔗 See also:** [4.3 Iterative Solution Of The Subproblem](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-gal0ace) · [The Hard Case: Khi q1Tg = 0](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-ty435bj) · [Proof of theorem 4.1: Lemma 4.7](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-k08q2ml) · [Proof of theorem 4.1](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-csqy8ix) · [Convergence of algorithms based on nearly exact solution](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-tr8868m) · [Lemma 10.2: Trust-Region Solution](./103_algorithms_for_nonlinear_least_squares_problem.md#node-za3zjv6) · [Solving Least-Squares Subproblem](./103_algorithms_for_nonlinear_least_squares_problem.md#node-1z7vmo9)
 
 <br>
 
@@ -384,94 +384,175 @@
 > [!NOTE]
 > Lập luận lại cái KKT nhé:
 >
-> Đầu tiên, nhớ ý quan trọng này, **đối diện với bài toán inequality + equality constraint opt problem** có dạng: 
+>
+>
+> Đầu tiên, nhớ ý quan trọng này, **đối diện với bài toán inequality + equality constraint opt problem** có dạng:
 >
 > minimize x {f0(x)} s.t fi(x) ≤ 0, hi(x) = 0, i = 1,2...
 >
-> Thì solution của bài toán này sẽ là một điểm x* feasible (thoả các constraint) và khiến f0(x) nhỏ nhất.
 >
-> Thì cái **lí luận của việc xây dựng Lagrangian function** đó là vì** ta muốn "tích hợp" cái constraint vào, để đưa về bài toán unconstraint**. Và ta làm bằng cách, gắn trọng số vào các inequality:
+>
+> Thì solution của bài toán này sẽ là một điểm x\* feasible (thoả các constraint) và khiến f0(x) nhỏ nhất.
+>
+>
+>
+> Thì cái **lí luận của việc xây dựng Lagrangian function** đó là vì\*\* ta muốn "tích hợp" cái constraint vào, để đưa về bài toán unconstraint\*\*. Và ta làm bằng cách, gắn trọng số vào các inequality:
+>
+>
 >
 > Generalized Lagrangian function: L(x, λ, v) = f0(x) + Σi λi fi(x) + Σi vihi(x)
 >
-> Thế thì tuy tích hợp vào để thành bài toán unconstraint, nhưng **phải làm sao đó để phản ánh được constraint**, đó là ta muốn **fi(x) ≤ 0** và hi(x) = 0. 
 >
-> Vậy làm sao để khi minimize L theo x thì nó khiến fi(x) âm. Câu trả lời là phải **ràng buộc λi ≥0 **. Vì nếu không, quá trình tối ưu khi muốn minimize L sẽ đẩy fi(x) càng dương càng tốt vì điều này dẫn đến λifi(x) càng âm.→ Và fi(x) dương sẽ khiến vi phạm constraint.
+>
+> Thế thì tuy tích hợp vào để thành bài toán unconstraint, nhưng **phải làm sao đó để phản ánh được constraint**, đó là ta muốn **fi(x) ≤ 0** và hi(x) = 0.
+>
+>
+>
+> Vậy làm sao để khi minimize L theo x thì nó khiến fi(x) âm. Câu trả lời là phải \*\*ràng buộc λi ≥0 \*\*. Vì nếu không, quá trình tối ưu khi muốn minimize L sẽ đẩy fi(x) càng dương càng tốt vì điều này dẫn đến λifi(x) càng âm.→ Và fi(x) dương sẽ khiến vi phạm constraint.
+>
+>
 >
 > Do đó ta có một trong KKT conditions: λi ≥ 0, hay viết là λ ≽ 0 (vector λ)
 >
-> Thế thì, để minimize L over x, dĩ nhiên sẽ dẫn ta đến gradient của L wrt x = 0, vì đây là điều kiện cần bậc 1. Nên ta mới có ∇L(x*, λ, v) = ∇f0(x*) + Σi λi ∇fi(x*) + Σi vi ∇hi(x*) = 0. Đó chính là điều kiện KKT tiếp theo.
+>
+>
+> Thế thì, để minimize L over x, dĩ nhiên sẽ dẫn ta đến gradient của L wrt x = 0, vì đây là điều kiện cần bậc 1. Nên ta mới có ∇L(x\*, λ, v) = ∇f0(x\*) + Σi λi ∇fi(x\*) + Σi vi ∇hi(x\*) = 0. Đó chính là điều kiện KKT tiếp theo.
+>
+>
 >
 > Tiếp, khi mà ta đã minimize over x hàm Lagrangian, **thì Lagrangian tại đó, (tức tại x là solution của bài toán minimize over x hàm Lagrangian) sẽ không còn phụ thuộc vào x nữa**, nó là hàm theo λ và v. Đây là định nghĩa của **dual function**: g(λ, v) = inf x L(x, λ, v)
 >
+>
+>
 > và ta sẽ có một inequality:
+>
+>
 >
 > g(λ, v) ≤ L(x, λ, v) **với mọi x** do định nghĩa của dual function.
 >
-> Rồi. Tới đây nhận định thế này, nếu gọi **x* là solution của primal problem**, tức là **feasible point + minimize f0(x)** thì ta có: 
->
-> g(λ, v) ≤ L(x*, λ, v) = f0(x*) + Σi λi fi(x*) + Σi νi hi(x*) (1)
->
-> điều này là **đương nhiên, vì inequality này thỏa với mọi x** cơ mà. 
->
-> Và vì x* thỏa constraint (x* trước hết phải là feasible point), nên: 
->
-> λi × fi(x*) ≤ 0, (a) và 
->
-> vi × hi(x*) = 0. (b)
->
-> Giúp ta có: 
->
-> g(λ, v) ≤ L(x*, λ, v) = f0(x*) + Σi λi fi(x*) + Σi νi hi(x*)
->
-> = f0(x*) + Σi λi fi(x*) + 0 (do (b))
->
-> ≤ f0(x*) (do (a))
 >
 >
-> Vậy g(λ, v) ≤ f0(x*) 
+> Rồi. Tới đây nhận định thế này, nếu gọi x là solution của primal problem\*, tức là **feasible point + minimize f0(x)** thì ta có:
 >
-> Mang ý nghĩa **dual function là lower bound của optimal value p* = f0(x*)**
 >
-> Vậy thì câu chuyện tiếp theo sẽ là, nếu đã nhận định g(λ, v) là lower bound của p*, tức f0(x*), thì ta **muốn tìm cái lower bound tốt nhất (tức cao nhất). **Bằng cách maximize over λ, v đối với g(λ,v), bài toán này gọi là **dual problem**.
 >
-> gọi d* là sup λ ≽ 0, v {g(λ, v)}. gọi là **dual optimal value**. Thì ta sẽ lại có inequality: 
+> g(λ, v) ≤ L(x\*, λ, v) = f0(x\*) + Σi λi fi(x\*) + Σi νi hi(x\*) (1)
 >
-> d* ≤ p*
 >
-> Điều này chỉ là hệ quả của g(λ, v) ≤ p* ⇨ max của nó vẫn sẽ ≤ p*
 >
-> Và p* - d* gọi là **duality gap**
+> điều này là **đương nhiên, vì inequality này thỏa với mọi x** cơ mà.
 >
-> Tới đây, **có một theorem nói rằng** nếu như **trong bối cảnh convex problem** và **thỏa một số điều kiện gọi là qualification constraint**, thì ta sẽ có **strong duality**: d* = p*, hay zero duality gap (p* - d* = 0)
 >
-> d* = p*
 >
-> cũng là g(λ*, v*) = f0(x*)
+> Và vì x\* thỏa constraint (x\* trước hết phải là feasible point), nên:
 >
-> tức f0(x*) + Σi λ*ifi(x*) + Σi v*ihi(x*) = f0(x*)
 >
-> mà dĩ nhiên là hi(x*) = 0 vì x* là primal optimal nên dĩ nhiên feasible
 >
-> nên cái trên chỉ còn **Σi λ*ifi(x*) = 0** 
+> λi × fi(x\*) ≤ 0, (a) và
 >
-> và với fi(x*) ≤ 0, thì cái này cho thấy nếu fi(x*) âm thì λi phải bằng 0 và ngược lại nếu λi > 0 thì fi(x*) phải = 0.
+>
+>
+> vi × hi(x\*) = 0. (b)
+>
+>
+>
+> Giúp ta có:
+>
+>
+>
+> g(λ, v) ≤ L(x\*, λ, v) = f0(x\*) + Σi λi fi(x\*) + Σi νi hi(x\*)
+>
+>
+>
+> = f0(x\*) + Σi λi fi(x\*) + 0 (do (b))
+>
+>
+>
+> ≤ f0(x\*) (do (a))
+>
+>
+>
+> Vậy g(λ, v) ≤ f0(x\*)
+>
+>
+>
+> Mang ý nghĩa dual function là lower bound của optimal value p = f0(x)
+>
+>
+>
+> Vậy thì câu chuyện tiếp theo sẽ là, nếu đã nhận định g(λ, v) là lower bound của p\*, tức f0(x\*), thì ta \*\*muốn tìm cái lower bound tốt nhất (tức cao nhất). \*\*Bằng cách maximize over λ, v đối với g(λ,v), bài toán này gọi là **dual problem**.
+>
+>
+>
+> gọi d\* là sup λ ≽ 0, v {g(λ, v)}. gọi là **dual optimal value**. Thì ta sẽ lại có inequality:
+>
+>
+>
+> d\* ≤ p\*
+>
+>
+>
+> Điều này chỉ là hệ quả của g(λ, v) ≤ p\* ⇨ max của nó vẫn sẽ ≤ p\*
+>
+>
+>
+> Và p\* - d\* gọi là **duality gap**
+>
+>
+>
+> Tới đây, **có một theorem nói rằng** nếu như **trong bối cảnh convex problem** và **thỏa một số điều kiện gọi là qualification constraint**, thì ta sẽ có **strong duality**: d\* = p\*, hay zero duality gap (p\* - d\* = 0)
+>
+> d\* = p\*
+>
+>
+>
+> cũng là g(λ\*, v\*) = f0(x\*)
+>
+>
+>
+> tức f0(x\*) + Σi λifi(x) + Σi vihi(x) = f0(x\*)
+>
+>
+>
+> mà dĩ nhiên là hi(x\*) = 0 vì x\* là primal optimal nên dĩ nhiên feasible nên cái trên chỉ còn **Σi λifi(x) = 0**
+>
+>
+>
+> và với fi(x\*) ≤ 0, thì cái này cho thấy nếu fi(x\*) âm thì λi phải bằng 0 và ngược lại nếu λi &gt; 0 thì fi(x\*) phải = 0.
+>
+>
 >
 > Và đây chính là một điều kiện KKT nữa, có tên là **complementary slackness**.
 >
+>
+>
 > Do đó KKT conditions bao gồm:
 >
-> Gradient của Lagrangian đối với x tại x* = 0 . Đây gọi là **stationary condition**
 >
-> **Complementary slackess**: Σi λ*ifi(x*) = 0 với mọi i
 >
-> λi* ≥ 0, đây gọi là **dual constraint**, tức constraint của dual problem
+> Gradient của Lagrangian đối với x tại x\* = 0 . Đây gọi là **stationary condition**
 >
-> fi(x*) ≤ 0, hi(x*) = 0. gọi là **primal constraint**, constraint của primal problem.
 >
-> Và một điểm lưu ý quan trọng: 
 >
-> Nếu như **bài toán lồi và thỏa constraint qualification**, ví dụ điển hình là Slater's condition. **Giải KKT giúp kết luận x* là global optimal** (tức là coi như điều kiện cần + đủ)
+> **Complementary slackess**: Σi λifi(x) = 0 với mọi i
+>
+>
+>
+> λi\* ≥ 0, đây gọi là **dual constraint**, tức constraint của dual problem
+>
+>
+>
+> fi(x\*) ≤ 0, hi(x\*) = 0. gọi là **primal constraint**, constraint của primal problem.
+>
+>
+>
+> Và một điểm lưu ý quan trọng:
+>
+>
+>
+> Nếu như **bài toán lồi và thỏa constraint qualification**, ví dụ điển hình là Slater's condition. **Giải KKT giúp kết luận x là global optimal** (tức là coi như điều kiện cần + đủ)
+>
+>
 >
 > Còn theo Gemini mới dạy mình, là v**ới bài toán khác, vẫn có thể dùng KKT condition**, nhưng **chỉ được dùng như điều kiện cần** (chứ chưa đủ)
 
