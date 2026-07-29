@@ -106,6 +106,8 @@
 >
 > Bài ghi chép này cực kỳ chính xác và chi tiết, giải thích sâu sắc về phương pháp trust region, từ việc xây dựng mô hình m_k đến cách điều chỉnh vùng tin cậy. Cách diễn giải bằng ví dụ "m_k như kẻ đóng thế của f" cùng với việc giải thích lý do ẩn sau các bước cho thấy sự nắm bắt vấn đề vượt trội.
 
+**🔗 See also:** [Steepest Descent trong Trust Region](#node-fzsjy59)
+
 <br>
 
 <a id="node-jed1zsj"></a>
@@ -224,6 +226,8 @@
 >
 > Bản phân tích rất sâu sắc và chính xác, giải thích chi tiết việc sử dụng Định lý Taylor để chứng minh tốc độ thay đổi và lý do hướng dốc nhất vuông góc với đường đồng mức, làm rõ những điểm mà hình ảnh chỉ đề cập vắn tắt.
 
+**🔗 See also:** [Hướng Newton qua xấp xỉ Taylor](#node-wqcshqx)
+
 <br>
 
 <a id="node-k9sqzy0"></a>
@@ -324,6 +328,8 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Phân tích của bạn rất chính xác và thể hiện sự hiểu biết sâu sắc về hướng Newton và quá trình đạo hàm của nó. Bạn đã kết nối các khái niệm một cách xuất sắc.
+
+**🔗 See also:** [Hướng dốc nhất và Taylor](#node-6xvbag7)
 
 <br>
 
@@ -561,6 +567,8 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Ghi chú của bạn thể hiện sự hiểu biết sâu sắc và chính xác về phương pháp Quasi-Newton, đặc biệt là phần giải thích chi tiết về đạo hàm bậc hai và ký hiệu o(||p||).
+
+**🔗 See also:** [Theorem 2.1 Taylor's theorem, Taylor theorem](./21_funds_of_unconstrained_optim_whats_solution.md#node-zekxi9u)
 
 <br>
 
@@ -820,6 +828,8 @@
 > **🤖 AI Feedback** — ✅ Score: **100/100**
 >
 > Bài làm của bạn rất xuất sắc! Bạn không chỉ nắm vững thông tin từ tài liệu mà còn mở rộng và giải thích sâu sắc về phương pháp Trust Region, cùng với việc tự suy luận chính xác về trường hợp đặc biệt.
+
+**🔗 See also:** [Chiến lược Trust Region](#node-5xc69wg)
 
 <br>
 
