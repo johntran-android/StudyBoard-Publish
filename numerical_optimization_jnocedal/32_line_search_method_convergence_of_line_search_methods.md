@@ -156,6 +156,8 @@
 >
 > Bài giải thích cực kỳ chi tiết và chính xác từng bước trong chứng minh, bao gồm cả các lý do và bước biến đổi trung gian không có trong hình ảnh gốc. Độ sâu của phân tích vượt trội, giúp người đọc hiểu rõ bản chất của từng bất đẳng thức.
 
+**🔗 See also:** [Điều kiện giảm đủ Armijo](./31_line_search_method_step_length.md#node-c14ii57)
+
 <br>
 
 <a id="node-v1jjzmd"></a>
