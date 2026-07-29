@@ -148,6 +148,8 @@
 >
 > Bản ghi chú rất chính xác và có chiều sâu, đặc biệt trong việc giải thích mối quan hệ giữa l(α) và Φ(α) khi α nhỏ. Các giải thích chi tiết giúp người đọc hiểu rõ hơn về điều kiện Armijo.
 
+**🔗 See also:** [Chứng minh theorem 3.2](./32_line_search_method_convergence_of_line_search_methods.md#node-hyrj1r6) · [Interpolation](./35_line_search_method_step_length_selection_algorithms.md#node-0wgi08b)
+
 <br>
 
 <a id="node-a2xp2eh"></a>
@@ -246,6 +248,8 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Nội dung tóm tắt rất chính xác và đầy đủ, truyền tải đúng ý nghĩa của các điều kiện Wolfe và Strong Wolfe từ văn bản gốc. Việc bổ sung tên riêng cho từng điều kiện (Armijo, Strong Curvature condition) cũng giúp tăng thêm độ sâu cho phần giải thích.
+
+**🔗 See also:** [Interpolation](./35_line_search_method_step_length_selection_algorithms.md#node-0wgi08b) · [A line search algorithm for Wolfe condition](./35_line_search_method_step_length_selection_algorithms.md#node-umkxucl)
 
 <br>
 
