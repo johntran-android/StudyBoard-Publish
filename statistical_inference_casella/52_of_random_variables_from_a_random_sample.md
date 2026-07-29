@@ -185,6 +185,8 @@ from A Random Sample
 > sẽ chỉ possible value (hay giá trị cụ thể, hay giá trị quan sát được, cũng
 > như nhau) của X_bar, S^2, S
 
+**🔗 See also:** [Point Estimation: Variance Estimation](./101_point_estimation.md#node-3dm7cfv)
+
 <br>
 
 <a id="node-jhe69j5"></a>
@@ -865,7 +867,7 @@ from A Random Sample
 >
 > = **σ^2  Chứng minh xong**
 
-**🔗 See also:** [Luật số lớn yếu](./55_convergence_concepts.md#node-j5m3pa1) · [Tính không chệch Xbar S^2](./73_methods_of_evaluating_estimators.md#node-dgdrvpi) · [Ước lượng không chệch Poisson](./73_methods_of_evaluating_estimators.md#node-0ecqsqo) · [Tính nhất quán của Xbar](./101_point_estimation.md#node-47kutgs)
+**🔗 See also:** [Luật số lớn yếu](./55_convergence_concepts.md#node-j5m3pa1) · [Tính không chệch Xbar S^2](./73_methods_of_evaluating_estimators.md#node-dgdrvpi) · [Ước lượng không chệch Poisson](./73_methods_of_evaluating_estimators.md#node-0ecqsqo) · [Tính nhất quán của Xbar](./101_point_estimation.md#node-47kutgs) · [Point Estimation: Variance Estimation](./101_point_estimation.md#node-3dm7cfv)
 
 <br>
 
