@@ -9,6 +9,8 @@ probability & Independence
 ## 1.3 Conditional
 probability & Independence
 
+**🔗 See also:** [Xác suất rút 4 lá Ách](#node-z4ilf15) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-z4ilf15"></a>
@@ -239,7 +241,8 @@ probability & Independence
 >
 > Xét P(A|B) = P(A,B) / P(B)
 
-**🔗 See also:** [Sự kiện rời rạc, Phân hoạch](./11_set_theory.md#node-c55r2gt)
+**🔗 See also:** [1.3 Conditional
+probability & Independence](#node-5qan0fk) · [Phân biệt P(A) và P(A|B)](#node-nwwsfsu) · [Sự kiện rời rạc, Phân hoạch](./11_set_theory.md#node-c55r2gt)
 
 <br>
 
@@ -270,6 +273,8 @@ probability & Independence
 >
 > Nhưng khi **B xảy ra rồi**, tức là với P(A|B) ta chỉ quan tâm những
 > **possible outcome nằm trong A intersect B có xảy ra hay ko**
+
+**🔗 See also:** [Xác suất rút 4 lá Ách](#node-z4ilf15) · [Xác suất có điều kiện bốc Ách](#node-7phbwrb)
 
 <br>
 
@@ -510,6 +515,8 @@ probability & Independence
 > i lá) chứ không phải là event của B (bốc 4 lá ra i lá đầu là Ace). Chẳng qua tính P(B')
 > đơn giản hơn, nên ta tính P(B) thông qua nó.
 
+**🔗 See also:** [Phân biệt P(A) và P(A|B)](#node-nwwsfsu) · [Tiên đề xác suất có điều kiện](#node-6wnefij)
+
 <br>
 
 <a id="node-6wnefij"></a>
@@ -625,6 +632,8 @@ probability & Independence
 >
 >
 > Chia hai vế cho P(B) ta sẽ có P(A|B) + P(Ac|B) = 1 chứng minh xong
+
+**🔗 See also:** [Xác suất có điều kiện bốc Ách](#node-7phbwrb) · [Bài toán ba tù nhân](#node-abmq336)
 
 <br>
 
@@ -805,6 +814,8 @@ probability & Independence
 >
 > Có thể dùng biểu đồ nhánh như hình bên để hiểu
 
+**🔗 See also:** [Tiên đề xác suất có điều kiện](#node-6wnefij) · [Biểu đồ nhánh xác suất W](#node-gl0y438)
+
 <br>
 
 <a id="node-gl0y438"></a>
@@ -821,6 +832,8 @@ probability & Independence
 > Kí hiệu "B" là event "ông quản ngục nói B chết", cũng là
 > event W, nhớ rằng nó khác với event B hay Bc
 
+**🔗 See also:** [Bài toán ba tù nhân](#node-abmq336) · [Biểu đồ nhánh và xác suất](#node-egr4n0e)
+
 <br>
 
 <a id="node-egr4n0e"></a>
@@ -832,6 +845,8 @@ probability & Independence
 > [!NOTE]
 > Biểu đồ nhánh cũng giúp
 > thấy P(A ∩ Bc) = 1/3
+
+**🔗 See also:** [Biểu đồ nhánh xác suất W](#node-gl0y438) · [Định lý Bayes: Các phiên bản](#node-pzsb0sd)
 
 <br>
 
@@ -912,6 +927,8 @@ probability & Independence
 >
 >
 > **P(Ai|B) = P(B|Ai)P(Ai)/  ∑i P(B|Ai)P(Ai)**
+
+**🔗 See also:** [Biểu đồ nhánh và xác suất](#node-egr4n0e) · [Độ tin cậy tín hiệu Morse](#node-vvilvcv)
 
 <br>
 
@@ -1017,6 +1034,8 @@ probability & Independence
 >
 > .. Ráp vào là xong
 
+**🔗 See also:** [Định lý Bayes: Các phiên bản](#node-pzsb0sd) · [Sự kiện độc lập thống kê](#node-5x8paui)
+
 <br>
 
 <a id="node-5x8paui"></a>
@@ -1042,6 +1061,8 @@ probability & Independence
 > hoặc **P(A ∩ B) = P(A)*P(B)**
 >
 > HAI EVENT ĐỘC LẬP
+
+**🔗 See also:** [Độ tin cậy tín hiệu Morse](#node-vvilvcv) · [Xác suất ít nhất một 6](#node-4lk3khh)
 
 <br>
 
@@ -1141,6 +1162,8 @@ probability & Independence
 >
 > MỘT VÍ DỤ SỰ DỤNG TÍNH ĐỘC LẬP CỦA EVENTS
 
+**🔗 See also:** [Sự kiện độc lập thống kê](#node-5x8paui) · [Độc lập biến cố và phần bù](#node-13euzuz)
+
 <br>
 
 <a id="node-13euzuz"></a>
@@ -1185,6 +1208,10 @@ probability & Independence
 > THEOREM: NẾU A, B ĐỘC LẬP THÌ (A,
 > Bc), (Ac, B), (Ac, Bc) CŨNG VẬY
 
+**🔗 See also:** [Xác suất ít nhất một 6](#node-4lk3khh) · [Còn hai ví dụ đại khái là minh họa rằng
+điều kiện \\*INDEPENDENT\\* phải là
+\\*MUTUAL INDEPENDENT\\*](#node-oval3u7)
+
 <br>
 
 <a id="node-oval3u7"></a>
@@ -1192,6 +1219,8 @@ probability & Independence
 - **Còn hai ví dụ đại khái là minh họa rằng
 điều kiện \\*INDEPENDENT\\* phải là
 \\*MUTUAL INDEPENDENT\\***
+
+**🔗 See also:** [Độc lập biến cố và phần bù](#node-13euzuz)
 
 <br>
 
