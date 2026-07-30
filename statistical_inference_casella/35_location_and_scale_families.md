@@ -9,8 +9,6 @@ scale Families
 ## 3.5 Location And
 scale Families
 
-**🔗 See also:** [Xây dựng Family Phân phối Location/Scale](#node-1pgjrf5) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-1pgjrf5"></a>
@@ -27,9 +25,6 @@ scale Families
 >
 > Khi xây dựng ta **sẽ xây dựng một pdf chuẩn**, thì **các member khác
 > sẽ chỉ là transform từ pdf chuẩn**. Đại ý là vậy
-
-**🔗 See also:** [3.5 Location And
-scale Families](#node-zqu9nqh) · [Biến đổi hàm mật độ](#node-6l6anqi)
 
 <br>
 
@@ -79,8 +74,6 @@ scale Families](#node-zqu9nqh) · [Biến đổi hàm mật độ](#node-6l6anqi
 >
 > kết quả là ∫-inf:inf (1/ σ) f[(x - μ) / σ] = 1
 
-**🔗 See also:** [Xây dựng Family Phân phối Location/Scale](#node-1pgjrf5) · [Định nghĩa Gia đình Location](#node-xnzmjhc)
-
 <br>
 
 <a id="node-xnzmjhc"></a>
@@ -127,8 +120,6 @@ scale Families](#node-zqu9nqh) · [Biến đổi hàm mật độ](#node-6l6anqi
 >
 > thể hiện bằng P(-1 ≤ X ≤ 2|0) = P(1 ≤ X ≤ 4|μ) với X bên trái ~ f(x) và X bên
 > phải ~ f(x - μ)
-
-**🔗 See also:** [Biến đổi hàm mật độ](#node-6l6anqi) · [Tạo Location Family từ PDF](#node-qsbwe2h)
 
 <br>
 
@@ -188,8 +179,6 @@ scale Families](#node-zqu9nqh) · [Biến đổi hàm mật độ](#node-6l6anqi
 > ĐỂ RỒI NẾU NÓI VỀ NORMAL VỚI σ ĐÃ BIẾT THÌ TA CÓ FAMILY CÁC
 > NORMAL CÙNG VARIANCE NHƯNG KHÁC NHAU VỀ MEAN
 
-**🔗 See also:** [Định nghĩa Gia đình Location](#node-xnzmjhc) · [Location Family và Sai số đo](#node-pusr70d)
-
 <br>
 
 <a id="node-pusr70d"></a>
@@ -241,8 +230,6 @@ scale Families](#node-zqu9nqh) · [Biến đổi hàm mật độ](#node-6l6anqi
 >
 > CASE THỨ HAI CHƯA HIỂU
 
-**🔗 See also:** [Tạo Location Family từ PDF](#node-qsbwe2h) · [Họ phân phối vị trí mũ](#node-mrz72cz)
-
 <br>
 
 <a id="node-mrz72cz"></a>
@@ -280,8 +267,6 @@ scale Families](#node-zqu9nqh) · [Biến đổi hàm mật độ](#node-6l6anqi
 >
 > Nói sơ về việc cái này gọi là **threshold parameter, tạm biết vậy**
 
-**🔗 See also:** [Location Family và Sai số đo](#node-pusr70d) · [Họ phân phối Scale](#node-5y6bm6a)
-
 <br>
 
 <a id="node-5y6bm6a"></a>
@@ -311,8 +296,6 @@ scale Families](#node-zqu9nqh) · [Biến đổi hàm mật độ](#node-6l6anqi
 >
 > Vài ví dụ là Normal (0, σ^2) hay Γ(α fixed, β)
 
-**🔗 See also:** [Họ phân phối vị trí mũ](#node-mrz72cz) · [Họ phân phối Location-Scale](#node-zmiosz0)
-
 <br>
 
 <a id="node-zmiosz0"></a>
@@ -335,7 +318,7 @@ scale Families](#node-zqu9nqh) · [Biến đổi hàm mật độ](#node-6l6anqi
 > **shift nó để dời location** hay nói như trong sách là để nhưng điểm trên
 > đồ thị vốn nằm bên phải trục x = 0 nay sẽ thành nằm bên phải trục x = μ
 
-**🔗 See also:** [Họ phân phối Scale](#node-5y6bm6a) · [Biến đổi PDF Location-Scale](#node-cs2rm3i) · [Hàm lực β(θ) phân phối chuẩn](./83_methods_of_evaluating_test.md#node-55xkcix)
+**🔗 See also:** [Hàm lực β(θ) phân phối chuẩn](./83_methods_of_evaluating_test.md#node-55xkcix)
 
 <br>
 
@@ -459,7 +442,7 @@ scale Families](#node-zqu9nqh) · [Biến đổi hàm mật độ](#node-6l6anqi
 >
 > = f(z). Chứng minh xong
 
-**🔗 See also:** [Họ phân phối Location-Scale](#node-zmiosz0) · [Phân phối chuẩn hóa Z](#node-1oibkxl) · [Trung bình mẫu Cauchy](./52_of_random_variables_from_a_random_sample.md#node-29xhnzg) · [Proof of Theorem 5.5.14](./55_convergence_concepts.md#node-yzn3dv1) · [Thống kê phụ trợ Range](./62_the_sufficient_principle.md#node-x76aniu) · [Hàm lực β(θ) phân phối chuẩn](./83_methods_of_evaluating_test.md#node-55xkcix) · [Kiểm định UMP tham số trung bình](./83_methods_of_evaluating_test.md#node-kd3nfb2) · [Tối ưu hóa kỳ vọng độ dài](./93_methods_of_evaluating_interval_estimators.md#node-cu30bvl)
+**🔗 See also:** [Trung bình mẫu Cauchy](./52_of_random_variables_from_a_random_sample.md#node-29xhnzg) · [Proof of Theorem 5.5.14](./55_convergence_concepts.md#node-yzn3dv1) · [Thống kê phụ trợ Range](./62_the_sufficient_principle.md#node-x76aniu) · [Hàm lực β(θ) phân phối chuẩn](./83_methods_of_evaluating_test.md#node-55xkcix) · [Kiểm định UMP tham số trung bình](./83_methods_of_evaluating_test.md#node-kd3nfb2) · [Tối ưu hóa kỳ vọng độ dài](./93_methods_of_evaluating_interval_estimators.md#node-cu30bvl)
 
 <br>
 
@@ -486,8 +469,6 @@ scale Families](#node-zqu9nqh) · [Biến đổi hàm mật độ](#node-6l6anqi
 > Nói chung cái này là cái mà gs Blizstein bên stat110 đã nói: Thường ta sẽ
 > bắt đầu với **pdf của standard rv Z** trước rồi từ đó ta sẽ d**erive pdf của 
 > X nhờ theorem này dễ dàng.**
-
-**🔗 See also:** [Biến đổi PDF Location-Scale](#node-cs2rm3i) · [Kỳ vọng, phương sai biến đổi tuyến tính](#node-9cmwr9d)
 
 <br>
 
@@ -519,8 +500,6 @@ scale Families](#node-zqu9nqh) · [Biến đổi hàm mật độ](#node-6l6anqi
 >
 >
 > Chứng minh xong
-
-**🔗 See also:** [Phân phối chuẩn hóa Z](#node-1oibkxl) · [Ý nghĩa tham số Location-Scale](#node-t86ulc6)
 
 <br>
 
@@ -580,8 +559,6 @@ scale Families](#node-zqu9nqh) · [Biến đổi hàm mật độ](#node-6l6anqi
 > shift param là 0 và scale param là 1 - sao cho nó có mean cũng là 0,
 > và variance cũng là 1 thì tự nhiên cái families này sẽ có mean cũng 
 > trùng với shift param μ và standard deviation trùng với scale param σ
-
-**🔗 See also:** [Kỳ vọng, phương sai biến đổi tuyến tính](#node-9cmwr9d)
 
 <br>
 
