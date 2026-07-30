@@ -162,6 +162,8 @@ Expo(λ) r.v: f(t) = (1-e^(-λ*t))' =  λ*e^(-λt)
 > Để ví dụ như lần đầu (sau khi kết thúc T1) mà có ngay món đồ chơi mới thứ 2. Thì
 > khi đó **T2 - 1 = 0 => T2 = 1**
 
+**🔗 See also:** [linked note](./lec_9_expectation_indicator_random_variables_linearity.md#node-tm3492q)
+
 <br>
 
 <a id="node-c8f3l44"></a>
@@ -228,6 +230,8 @@ Expo(λ) r.v: f(t) = (1-e^(-λ*t))' =  λ*e^(-λt)
 >
 >
 > E(T3) = n/(n-2)....
+
+**🔗 See also:** [linked note](./lec_9_expectation_indicator_random_variables_linearity.md#node-fu3wk32)
 
 <br>
 
@@ -709,6 +713,8 @@ Expo(λ) r.v: f(t) = (1-e^(-λ*t))' =  λ*e^(-λt)
 >
 > Và PMF này cho thấy n-X là một Bin(n, q)
 
+**🔗 See also:** [linked note](./lec_7_gamblers_ruin_random_variables.md#node-325itnp) · [linked note](./lec_2_story_proofs_axioms_of_probability.md#node-ttpms3i)
+
 <br>
 
 <a id="node-qsas1k2"></a>
@@ -778,6 +784,8 @@ Expo(λ) r.v: f(t) = (1-e^(-λ*t))' =  λ*e^(-λt)
 >
 > Cho số email nhận được trong khoảng thời gian t là một Pois(λt) r.v Tìm
 > PDF của T = thời gian chờ cho đến khi nhận được email đầu tiên
+
+**🔗 See also:** [linked note](./lec_24_gamma_distribution_poisson.md#node-dahxnei)
 
 <br>
 
