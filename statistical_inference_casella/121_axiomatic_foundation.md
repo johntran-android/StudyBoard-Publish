@@ -9,8 +9,6 @@ foundation
 ## 1.2.1 Axiomatic
 foundation
 
-**🔗 See also:** [Miền xác định hàm xác suất](#node-nhnusyx) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-nhnusyx"></a>
@@ -30,9 +28,6 @@ foundation
 > Vậy thì cái function này, có **domain là gì**. Thế thì ý chính ở đây gs nói
 > rằng ta có lẽ sẽ thấy **tự nhiên** khi cho rằng domain là **tập mọi subset
 > của S**. Nhưng ông nói mọi chuyện **ko đơn giản vậy.**
-
-**🔗 See also:** [1.2.1 Axiomatic
-foundation](#node-m1hx49b) · [Sigma Algebra và Borel Field](#node-7ptao93)
 
 <br>
 
@@ -87,8 +82,6 @@ foundation](#node-m1hx49b) · [Sigma Algebra và Borel Field](#node-7ptao93)
 > ĐỊNH NGHĨA BOREL
 > FIELD HAY Σ ALGEBRA
 
-**🔗 See also:** [Miền xác định hàm xác suất](#node-nhnusyx) · [Tính chất không gian mẫu đếm được](#node-glfx3pg)
-
 <br>
 
 <a id="node-glfx3pg"></a>
@@ -111,8 +104,6 @@ foundation](#node-m1hx49b) · [Sigma Algebra và Borel Field](#node-7ptao93)
 > item  trong sample page, mỗi bước có 2 khả năng: có hay không bỏ vào) Từ đó
 > theo step rule sẽ có 2*2...*2=2^n
 
-**🔗 See also:** [Sigma Algebra và Borel Field](#node-7ptao93) · [Không gian mẫu vô hạn](#node-hl3zdu0)
-
 <br>
 
 <a id="node-hl3zdu0"></a>
@@ -124,8 +115,6 @@ foundation](#node-m1hx49b) · [Sigma Algebra và Borel Field](#node-7ptao93)
 > [!NOTE]
 > Với infinte sample
 > space thì vậy
-
-**🔗 See also:** [Tính chất không gian mẫu đếm được](#node-glfx3pg) · [Ba tiên đề xác suất](#node-wovlwib)
 
 <br>
 
@@ -176,8 +165,6 @@ foundation](#node-m1hx49b) · [Sigma Algebra và Borel Field](#node-7ptao93)
 > Tóm lại việc **đưa ra 3 Axiom** này giúp ta **có cách tiếp cận dựa trên tiên đề
 > (axiomatic) đối với xác suất**
 
-**🔗 See also:** [Không gian mẫu vô hạn](#node-hl3zdu0) · [Lựa chọn hàm xác suất đồng xu](#node-487lgel)
-
 <br>
 
 <a id="node-487lgel"></a>
@@ -221,8 +208,6 @@ foundation](#node-m1hx49b) · [Sigma Algebra và Borel Field](#node-7ptao93)
 >
 >
 > Do đó người ta muốn có cách xây hàm P sao cho đảm bảo nó valid với axiom
-
-**🔗 See also:** [Ba tiên đề xác suất](#node-wovlwib) · [Hàm xác suất rời rạc](#node-rjy0v56)
 
 <br>
 
@@ -314,8 +299,6 @@ foundation](#node-m1hx49b) · [Sigma Algebra và Borel Field](#node-7ptao93)
 >
 > THÌ NÓ SẼ THỎA 3 AXIOM
 
-**🔗 See also:** [Lựa chọn hàm xác suất đồng xu](#node-487lgel) · [Mô hình xác suất ném phi tiêu](#node-6c1v6jg)
-
 <br>
 
 <a id="node-6c1v6jg"></a>
@@ -330,8 +313,6 @@ foundation](#node-m1hx49b) · [Sigma Algebra và Borel Field](#node-7ptao93)
 > của việc được mấy điểm sẽ tỉ lệ với diện tích của phần bảng tương ứng, để
 > rồi với assume là khi ném phi tiêu luôn trung bảng nên không âm, tổng bằng
 > 1..thỏa các axiom
-
-**🔗 See also:** [Hàm xác suất rời rạc](#node-rjy0v56) · [Quan điểm về Axiom 3](#node-o3vg7q2)
 
 <br>
 
@@ -354,8 +335,6 @@ foundation](#node-m1hx49b) · [Sigma Algebra và Borel Field](#node-7ptao93)
 >
 >
 > Tuy nhiên trong sách này sẽ vẫn giữ Axiom 3 ở trên
-
-**🔗 See also:** [Mô hình xác suất ném phi tiêu](#node-6c1v6jg)
 
 <br>
 
