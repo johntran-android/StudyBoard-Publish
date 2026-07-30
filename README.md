@@ -322,7 +322,7 @@ preconditioner](mit_1806_book/113_iterative_method_preconditioner.md) — `4n / 
 - [3. Vector Spaces
 and Subspaces](mit_1806_book/3_vector_spaces_and_subspaces.md) — `2n / 6i`
 
-### 📂 MIT18.06_G.Strang (📝 1181 Notes | 📸 1269 Screenshots)
+### 📂 MIT 18.06 (📝 1181 Notes | 📸 1269 Screenshots)
 <!-- key: mit1806_gstrang -->
 
 > This notebook covers fundamental linear algebra concepts, from solving systems of equations and matrix operations to eigenvalues, SVD, and linear transformations, often emphasizing their geometric interpretations.
