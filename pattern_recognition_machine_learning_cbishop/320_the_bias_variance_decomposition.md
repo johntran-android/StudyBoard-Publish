@@ -1,6 +1,6 @@
 # 3.2.0 The Bias-Variance Decomposition
 
-📊 **Progress:** `4` Notes | `4` Screenshots | `3` AI Reviews
+📊 **Progress:** `5` Notes | `6` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-0nolzxg"></a>
@@ -458,11 +458,11 @@
 >
 >
 >
-> Trong case 1: Khi có T \~ f(t|**x**), thì h(**x**) = E\[T|**x**\] sẽ minimize E\[L(h(**x**), T)\] với T\~f(**x**|t), L(h(x), T) = (h(**x**) - T)^2
+> Trong case 1: Khi có T \~ f(t|**x**), thì h(**x**) = E\[T|**x**\] sẽ minimize E\[L(h(**x**), T)\] với T\~f(**x**|t), L(h(**x**), T) = (h(**x**) - T)^2
 >
 >
 >
-> Trong case 2: Khi assume noise ε \~ n(0, 1/β) cũng là T \~ n(y(**w**,**x**), 1/β), thì **w**ML chính là minimizer của ln L(**w**|**X**,**t**,β) ≡ (1/2) Σi=1:N \[y(**w**, **x**i) - ti\]^2, là sum squared error.
+> Trong case 2: Khi assume noise ε \~ n(0, 1/β) cũng là T \~ n(y(**w**,**x**), 1/β), thì **w**ML chính là minimizer của ln L(**w**|**X**,**t**,β) cũng là minimizer của (1/2) Σi=1:N \[y(**w**, **x**i) - ti\]^2, là sum squared error.
 >
 >
 >
@@ -530,7 +530,7 @@
 >
 >
 >
-> Tuy nhiên, vấn đề là, ta chỉ có thể làm vậy nếu như có vô hạn data và **vô hạn sức mạnh tính toán**, trong khi đó, data ta có chỉ là hữu hạn, sức mạnh tính toán cũng vậy. Nên thực tế sẽ rất khó để tìm ra chính xác hành vi của hàm số h(**x**) = E\[T|**x**\] / cũng chính là nói : rất khó để mô phỏng chính xác hàm h(**x**) = E\[T|**x**\]. Dẫn tới là term 1 sẽ luôn &gt; 0.
+> Tuy nhiên, vấn đề là, ta chỉ có thể làm vậy nếu như có **vô hạn data** và **vô hạn sức mạnh tính toán**, trong khi đó, data ta có chỉ là hữu hạn, sức mạnh tính toán cũng vậy. Nên thực tế sẽ rất khó để tìm ra chính xác hành vi của hàm số h(**x**) = E\[T|**x**\], cũng chính là nói: rất khó để mô phỏng chính xác hàm h(**x**) = E\[T|**x**\]. Dẫn tới là term 1 sẽ luôn &gt; 0.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
@@ -541,5 +541,247 @@
 
 <br>
 
-<a id="node-mqes87t"></a>
+<a id="node-biq5b66"></a>
+
+##### The Bias-Variance Decomposition
+
+<p align="center"><kbd><img src="assets/laq0toqbene.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/dswh3ztggft.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Thế thì, ở trên ta đã hiểu vì sao có công thức 3.37 ∫(y(**x**) - h(**x**))^2 f(**x**)d**x** + ∫∫\[h(**x**) - t\]^2 f(t,**x**)d**x** dt.
+>
+>
+>
+> Tập trung vào phần \[y(**x**) - h(**x**)\]^2 trong tích phân của term đầu tiên: \[y(**x**) - h(**x**)\]^2
+>
+>
+>
+> Đại ý hiểu phần này như sau:
+>
+>
+>
+> Đầu tiên phải xác định y(**x**) là cái gì?
+>
+>
+>
+> → y(**x**) là function dự đoán t từ input **x**. Một ví dụ cụ thể của y(**x**) là y(**x**) = **w**TΦ(**x**).
+>
+>
+>
+> Và trong ví dụ cụ thể này thì **w**, là giá trị tham số của linear modal, mà ta có thể dùng data để inference: ví dụ MLE của **w**: **w**ML (chỗ này tuy hơi cấn, vì trong bối cảnh thống kê suy diễn (Casella), estimator thường là estimator của population parameter, ví dụ X \~ f(x|θ), thì MLE là một cách tiếp cận để estimate θ, còn ở đây w không phải là population parameter. Hoặc mình có thể hiểu khác một chút, bằng việc dùng linear modal, mình đang assume quan hệ của T và **X** chi phối bởi một quy luật tuyến tính có tham số là **w**, và ta sẽ tính MLE của **w**.)
+>
+>
+>
+> Khi đó **w**ML = argmax L(**w**|D), nên ta có thể ghi là **w**(D) và do đó y cũng phụ thuộc dataset cụ thể D: y(**x**, **w**(D)), hay y(**x**, D)
+>
+>
+>
+> Và trên cơ sở là y là hàm phụ thuộc D, và dataset D, ta cũng có thể coi như một random quantity - mà thật sự trong bối cảnh thống kê thì dataset chỉ là một **random sample**: (**X**1, T1), (**X**1, T2),....(**X**N, **T**N) và một observation là (**x**1, t1), (**x**2, t2), ...(**x**N, tN), làm thành dataset D = (**matrix** **X**, **t**).
+>
+>
+>
+> Do đó, vì D là random variable, nên y(**x**, D) sẽ mang ý nghĩa như function y(**x**, d) apply lên D, nên cũng được một random variable (**x** cố định), và như vậy, ta được quyền lấy kì vọng: E\[y(**x**, D)\].
+>
+>
+>
+> Chỗ này gs kí hiệu là E_D\[y(**x**, D)\], nhưng mình nghĩ, đã average over mọi D thì kết quả không còn phụ thuộc D nữa, nó chỉ còn là hàm theo **x**. Nên phải hiểu đây là cách viết để diễn tả ý nhấn mạnh cái này là kì vọng của y(**x**, D), là random variable có được bởi một hàm của random variable D. Sở dĩ phải nói rõ, là vì trong thống kê, có khi ta gặp E\_θ\[f(**X**)\] và chữ θ ở dưới chân lại có nghĩa là đây là hàm theo θ, còn biến ngẫu nhiên mà ta đang lấy kì vọng là f(**X**).
+>
+>
+>
+> Thế thì quay lại \[y(**x**) - h(**x**)\]^2, ta cộng và trừ cho E\[y(**x**, D)\], đồng thời thể hiện y là hàm phụ thuộc thêm D:
+>
+>
+>
+> \[y(**x**, D) - h(**x**)\]^2 = \[y(**x**, D) - E\[y(**x**, D)\] + E\[y(**x**, D)\] - h(**x**)\]^2
+>
+>
+>
+> = {y(**x**, D) - E\[y(**x**, D)\]}^2 + {E\[y(**x**, D)\] - h(**x**)}^2 + 2{y(**x**, D) - E\[y(**x**, D)\]}{E\[y(**x**, D)\] - h(**x**)} → 3.39
+>
+>
+>
+> Tới đây, ta lấy kì vọng của \[y(**x**, D) - h(**x**)\]^2 (ta cũng xem nó cũng chỉ là function của D)
+>
+>
+>
+> E\[y(**x**, D) - h(**x**)\]^2 = E\[{y(**x**, D) - E\[y(**x**, D)\]}^2 + {E\[y(**x**, D)\] - h(**x**)}^2 + 2{y(**x**, D) - E\[y(**x**, D)\]}{E\[y(**x**, D)\] - h(**x**)}\]
+>
+>
+>
+> Dùng tính linearity của kì vọng
+>
+>
+>
+> = E\[{y(**x**, D) - E\[y(**x**, D)\]}^2\] + E\[{E\[y(**x**, D)\] - h(**x**)}^2\] + 2E\[{y(**x**, D) - E\[y(**x**, D)\]}{E\[y(**x**, D)\] - h(**x**)}\]\]
+>
+>
+>
+> Xét cái term thứ 3: 2E\[{y(**x**, D) - E\[y(**x**, D)\]}{E\[y(**x**, D)\] - h(**x**)}\], cần để ý E\[y(**x**, D)\], đã là fixed number, không còn là random variable, vì như đã nói ở trên, khi ta đã lấy trung bình của y(**x**, D) over mọi D thì không còn phụ thuộc D nữa. Do đó {E\[y(**x**, D)\] - h(**x**)} cũng là fixed number. Thành ra ta đưa ra ngoài:
+>
+>
+>
+> E\[{y(**x**, D) - E\[y(**x**, D)\]}{E\[y(**x**, D)\] - h(**x**)}\] = {E\[y(**x**, D)\] - h(**x**)} × E\[y(**x**, D) - E\[y(**x**, D)\]\]
+>
+>
+>
+> Rồi tiếp, E\[y(**x**, D) - E\[y(**x**, D)\]\] = E\[y(**x**, D)\] - E\[E\[y(**x**, D)\]\] = E\[y(**x**, D)\] - E\[y(**x**, D)\] = 0
+>
+>
+>
+> Vậy E\[y(**x**, D) - h(**x**)\]^2 = E\[{y(**x**, D) - E\[y(**x**, D)\]}^2\] + E\[{E\[y(**x**, D)\] - h(**x**)}^2\]
+>
+>
+>
+> Xét hai term này, term thứ 2:
+>
+>
+>
+> E\[{E\[y(**x**, D)\] - h(**x**)}^2\], again, cái cụm E\[y(**x**, D)\] - h(**x**) là fixed number, nên {E\[y(**x**, D)\] - h(**x**)}^2 cũng là fixed number do đó E\[{E\[y(**x**, D)\] - h(**x**)}^2\] = {E\[y(**x**, D)\] - h(**x**)}^2.
+>
+>
+>
+> Nhìn kĩ cái này, ta thấy nó là gì: {E\[y(**x**, D)\] - h(**x**)}^2, nó chính là bình phương distance của y(**x**, D) tới h(**x**), mà h(**x**) là mean của distrubition f(t|**x**), tức E\[T|**x**\] và người ta gọi E\[y(**x**, D)\] - h(**x**) là BIAS, để thành ra cái này là bình phương của Bias. (tí nữa mình sẽ liên hệ với kiến thức đã học trong Statistical Inference của Casella sẽ thấy cái này nó tương tự thôi)
+>
+>
+>
+> Còn cái trêm thứ nhất: E\[{y(**x**, D) - E\[y(**x**, D)\]}^2\]. Thì để dễ thấy nó là gì, chỉ cần ôn lại công thức Variance của random variance X: Var(X) = E\[X - EX\]^2. Vậy thì ở đây, như đã nói ở trên, y(**x**, D) là random variable. Thành ra theo công thức của variance thì E\[{y(**x**, D) - E\[y(**x**, D)\]}^2\] chính là Var\[y(**x**, D)\].
+>
+>
+>
+> Do đó, E\[y(**x**, D) - h(**x**)\]^2 = bình phương bias + variance của y(**x**, D).
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì, mình sẽ liên hệ với những gì đã học trong Casella để thấy cái này không có gì lạ:
+>
+>
+>
+> Trong Casella, bối cảnh sẽ là, ta có random sample X = X1,...Xn iid \~ f(x|θ), và ta muốn đi xây dựng một funciton của sample W(**X**) để estimator của θ. Có nghĩa là, với một observed value của sample: **X** = **x**, ta sẽ co W(**x**) là môt estiamate cho giá trị của θ. Và để xây dựng một estimator tốt, thì ta có các cách tiếp cận như MLE, hay Bayes, hay Method of Moment.
+>
+>
+>
+> Vậy thì, để đánh giá (evaluate) chất lượng của một estimator, người ta đặt ra loss function:
+>
+>
+>
+> L(W(**X**), θ) là hàm dùng một công thức nào đó để đo sự khác biệt giữa estimator và θ. Mà một dạng phổ biến là square error function L(W(**X**), θ) = \[W(**X**) - θ\]^2.
+>
+>
+>
+> Dĩ nhiên, L(W(**x**), θ) mang ý nghĩa là, với một observed value cụ thể của **X**, = **x**, thì ta có bình phương sai số giữa estimator W(**x**) và θ, cho thấy một mức độ sai sót nào đó.
+>
+>
+>
+> Thế thì, để đánh giá nó cho mọi giá trị có thể có của **X**, ta sẽ lấy trung bình. Hoặc cũng có thể nhìn theo kiểu khác: Là L(W(**X**), θ) = \[W(**X**) - θ\]^2 cũng chỉ là random variable (vì là hàm của **X**) nên ta sẽ lấy average / mean / expected value của random variable này: E\[L(W(**X**), θ)\] = E\[\[W(**X**) - θ\]^2\]. Và cái này, người ta đặt là hàm MSE:
+>
+>
+>
+> MSE(W(**X**), θ) = E\[\[W(**X**) - θ\]^2\]
+>
+>
+>
+> Và có khi để nhấn mạnh đây là hàm theo θ (vì bản chất khi lấy kì vọng cái L(W(**X**), θ) - là random variable phụ thuộc **X**, với X có distribution phụ thuộc θ, nên tựu chung lại, đây là hàm phụ thuộc θ), người ta sẽ ghi là:
+>
+>
+>
+> MSE(W(**X**), θ) = E\_θ\[\[W(**X**) - θ\]^2\]
+>
+>
+>
+> (để rồi khi chuyển sang Bayesian, trong đó coi θ như random variable, thì cái MSE này lại là một random variable, và ta sẽ lại có thể lấy trung bình, chính là định nghĩa của Bayes risk)
+>
+>
+>
+> Rồi, thế thì quay lại phân tích cái MSE, mở cái bình phương ra, và dùng tính linearity của kì vọng, ta có:
+>
+>
+>
+> E\_θ\[\[W(**X**) - θ\]^2\] = E\_θ\[\[W(**X**)\]^2 - 2W(**X**)θ + θ^2\]
+>
+>
+>
+> = E\_θ\[\[W(**X**)\]^2\] - E\_θ\[2W(**X**)θ\] + E\_θ\[θ^2\]
+>
+>
+>
+> = E\_θ\[\[W(**X**)\]^2\] - 2θE\_θ\[W(**X**)\] + θ^2
+>
+>
+>
+> = E\_θ\[\[W(**X**)\]^2\] - {E\[W(**X**)\]}^2 + {E\[W(**X**)\]}^2 - 2θE\_θ\[W(**X**)\] + θ^2
+>
+>
+>
+> Tới đây E\_θ\[\[W(**X**)\]^2\] - {E\[W(**X**)\]}^2 chính là Var(W(**X**)
+>
+>
+>
+> và {E\[W(**X**)\]}^2 - 2θE\_θ\[W(**X**)\] + θ^2 chính là {E\[W(**X**)\] - θ}^2
+>
+>
+>
+> = Var(W(**X**) + {E\[W(**X**)\] - θ}^2
+>
+>
+>
+> và người ta cũng define hàm bias như sau: Bias(W(**X**), θ) = E\[W(**X**)\] - θ.
+>
+>
+>
+> vậy MSE = Var(W(**X**)) + (Bias(W(**X**))^2
+>
+>
+>
+> Như vậy, đối chiếu với những gì gs Bishop làm ở đây: Thì cơ bản cũng giống vậy: E{\[y(**x**,D) - h(**x**)\]^2} chính là tương đương với MSE. 
+>
+>
+>
+> Chỉ khác là, trong Casella: 
+>
+>
+>
+> MSE E\_θ\[\[W(**X**) - θ\]^2\] sẽ đo độ sai khác của W(**X**) là estimator của θ, so với θ 
+>
+>
+>
+> còn ở đây, 
+>
+>
+>
+> E{\[y(**x**,D) - h(**x**)\]^2} là MSE đo độ sai khác của prediction y(**x**, D) so với h(**x**) = E\[T|**x**\], là giá trị tối ưu mà ta nên dùng để predict cho T khi đã biết T \~ f(t|**x**)
+>
+>
+>
+> Để rồi, khi phân tích ra, thì nó đều gồm hai phần: bias^2 và variance.
+>
+>
+>
+> Với Casella, bias là hàm đo distance giữa kì vọng của estimator W(**X**) so với θ, để nếu như bias bằng 0, người ta gọi W(**X**) là một unbiased estimator của θ
+>
+>
+>
+> Còn ở đây, bias là hàm đo distance giữa kì vọng của y(**x**, D): E\[y(**x**, D)\] (mang ý nghĩa là tính trung bình y(**x**, D) qua mọi possible dataset D) và giá trị tối ưu nên dùng khi predict t: E\[T|**x**\]. 
+>
+>
+>
+> Hiểu như vậy, ta sẽ thấy cũng như khi thiết kế một estimator cho θ, dĩ nhiên ta muốn khi tính trung bình qua mọi possible value của **X** (tức E\[W(**X**)\]) thì ta sẽ ra ngay chóc giá trị thật của θ. Thì tương tự vậy, khi thiết kế một hàm dự đoán y(**x**, D) để dự đoán cho T có predictive distribution f(t|**x**), thì ta cũng muốn khi lấy trung bình mọi D, thì cũng ra y chóc giá trị tối ưu: E\[T|**x**\], mean của f(t|**x**). Và cái mong muốn rất logic này, được biện minh bởi việc đây chính là muốn giảm phần đóng góm bởi bias trong công thức MSE.
+>
+>
+>
+> Phần thứ hai muốn giảm, chính là giảm Variance của W(**X**) (trong Casella) và Var\[y(**x**, D)\] (trong Bishop). Và cũng rất logic, vì ta muốn cái hàm W(**X**) phải có sự biến động nhỏ. Và thậm chí nếu được, như trong chương 10 Casella đã học, ta muốn khi kích thước sample n tăng lên vô hạn, thì W(**X**) sẽ có phương sai tiệm cận đạt đúng phương sai nhỏ nhất quy định bởi Cramer Rao Lower Bound, khi đó W(**X**) sẽ được gọi là asymptotically efficient estimator. Tương tự vậy, ta cũng muốn khi dataset lớn vô cùng, thì y(**x**, D) sẽ có phương sai rất nhỏ.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Đây là một phân tích xuất sắc, vừa chính xác từng bước theo tài liệu gốc, vừa đào sâu kiến thức bằng cách liên hệ chặt chẽ với các khái niệm trong thống kê suy diễn. Khả năng giải thích và kết nối kiến thức của bạn là rất ấn tượng.
+
+<br>
+
+<a id="node-w19nneq"></a>
 
