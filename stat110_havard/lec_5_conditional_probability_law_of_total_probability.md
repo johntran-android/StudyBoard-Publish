@@ -132,6 +132,8 @@ và xác suất cả hai lá xì khi đã có lá xì bích
 >
 > và do đó **P(B) = P(A1,B) + P(A2,B) + ...P(An,B)**
 
+**🔗 See also:** [linked note](./lec_6_monty_hall_simpsons_paradox.md#node-k0u59e3)
+
 <br>
 
 <a id="node-bq5axvu"></a>
@@ -158,6 +160,8 @@ và xác suất cả hai lá xì khi đã có lá xì bích
 >
 > Và gs cho biết đây chính là **LOTP**: **LAW OF TOTAL PROBABILITY**. Nhưng
 > ông đề nghị **chỉ việc hiểu nó là việc ta chia nhỏ vấn đề** để tính B mà thôi
+
+**🔗 See also:** [linked note](./lec_4_conditional_probability.md#node-4kgijl9)
 
 <br>
 
@@ -187,6 +191,8 @@ và xác suất cả hai lá xì khi đã có lá xì bích
 >
 >
 > Và thực hành nhiều sẽ giúp ta biết phải chia partition như thế nào
+
+**🔗 See also:** [linked note](#node-eh1hh5p) · [linked note](./lec_8_random_variables_their_distributions.md#node-kitf3pn)
 
 <br>
 
@@ -715,6 +721,8 @@ và xác suất cả hai lá xì khi đã có lá xì bích
 >
 >
 > Đây cũng là dạng mà **một số sách ghi về Bayes rule**
+
+**🔗 See also:** [linked note](#node-k14626i) · [linked note](./lec_3_birthday_problem_properties_of_probability.md#node-454f4gq)
 
 <br>
 
