@@ -350,6 +350,8 @@
 >
 > Phần dưới QUAY LẠI SAU
 
+**🔗 See also:** [linked note](#node-n8ryfyq)
+
 <br>
 
 <a id="node-jm9qbk9"></a>
@@ -406,6 +408,8 @@
 >
 > Thành ra việc chọn P sẽ có thể giúp giảm cost của việc giải Ax = b
 > vì chọn P có thể khiến LLT sparse hơn
+
+**🔗 See also:** [linked note](./chap_95.md#node-j847q9w)
 
 <br>
 
@@ -560,6 +564,8 @@
 >
 > Tổng cộng là n^3/3 + 2n^2 + n, coi như n^3/3
 
+**🔗 See also:** [linked note](./chap_10.md#node-yf53tj8)
+
 <br>
 
 <a id="node-xcllrby"></a>
@@ -619,6 +625,8 @@
 > thay vì x1 và x2), gắn với matrix S thay vì A.
 >
 > Và tất nhiên giải ra x2 sẽ giúp giải ra x1 = A11inv(b1 - A12x2)
+
+**🔗 See also:** [linked note](./chap_10.md#node-pjjarce)
 
 <br>
 
@@ -877,6 +885,8 @@
 > Nói thêm rằng khi A11 là banded matrix thì đôi khi A được gọi là
 > ARROW MATRIX nếu n2 >> n1 và việc giải Ax = b với phương pháp
 > Block elimination hiệu quả hơn nhiều so với standard method
+
+**🔗 See also:** [linked note](#node-dyoq50t)
 
 <br>
 
