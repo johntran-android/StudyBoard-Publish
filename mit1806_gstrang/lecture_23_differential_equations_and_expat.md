@@ -225,6 +225,8 @@ equations And Exp(at)
 > eigenvectors thật ra ta đang quan tâm phương, không
 > quan tâm hướng
 
+**🔗 See also:** [linked note](#node-xwat2so)
+
 <br>
 
 <a id="node-86f383i"></a>
@@ -355,6 +357,8 @@ equations And Exp(at)
 >
 > ta tìm được c: **c1 = c2 = 1/3**
 
+**🔗 See also:** [linked note](#node-kqf351m)
+
 <br>
 
 <a id="node-7bzf5vx"></a>
@@ -405,6 +409,8 @@ equations And Exp(at)
 >
 >
 > Và **eigenvalue sẽ cho ta biết điều đó**
+
+**🔗 See also:** [linked note](#node-qz8n3kq)
 
 <br>
 
@@ -487,6 +493,8 @@ equations And Exp(at)
 >
 > Và trạng thái **BLOW UP** sẽ xảy ra nếu **MỌI EIGENVALUES
 > CÓ GIÁ TRỊ DƯƠNG**
+
+**🔗 See also:** [linked note](./lecture_24_markow_matrices_fourier_series.md#node-6ie64kz)
 
 <br>
 
@@ -839,6 +847,8 @@ equations And Exp(at)
 > Cho nên tương tự với phương trình dv(t)/dt = Λv thì
 > v(t) = e^Λt v(0) CŨNG LÀ NGHIỆM TỔNG QUÁT
 
+**🔗 See also:** [linked note](#node-qz8n3kq)
+
 <br>
 
 <a id="node-ckdooia"></a>
@@ -979,6 +989,8 @@ equations And Exp(at)
 >
 > Vậy **e^At = Se^ΛtSinv**
 
+**🔗 See also:** [linked note](#node-qz8n3kq)
+
 <br>
 
 <a id="node-r5pyiur"></a>
@@ -1040,6 +1052,8 @@ equations And Exp(at)
 >
 > thì đây cũng chính là **S*e^(Λt)*c**, với S là eigenvector matrix,
 > Λ là eigenvalues diagonal matrix và c là (c1 c2)
+
+**🔗 See also:** [linked note](#node-lwzum6q) · [linked note](#node-nvlbs8p) · [linked note](#node-7bzf5vx)
 
 <br>
 
