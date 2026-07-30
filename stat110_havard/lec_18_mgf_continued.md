@@ -184,6 +184,8 @@ Pois(λ+µ)
 
 <a id="node-9510dh2"></a>
 
+- **Moment Generating Function Derivation**
+
 <p align="center"><kbd><img src="assets/gg07dk26wne.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -219,6 +221,8 @@ Pois(λ+µ)
 > Vậy cái tích phân mình cần tính là **1/(1-t) với điều kiện t<1**
 >
 > - Tính MGF M(t) của Expo(1) = 1/(1-t) t < 1
+
+**🔗 See also:** [Exponential Distribution PDF](./lec_16_exponential_distribution.md#node-4qgm8vv)
 
 <br>
 
