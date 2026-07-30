@@ -128,6 +128,8 @@ matrices
 > Gs: Correct. Thế thì điều này gợi ý rằng **loop sẽ biểu hiện
 > một bộ các row / edge có tính chất linearly dependent.**
 
+**🔗 See also:** [linked note](#node-e4mbogb)
+
 <br>
 
 <a id="node-3tldtoo"></a>
@@ -368,6 +370,8 @@ matrices
 > linearly independent cols** ->  **basis của cols space có 3
 > vector -> dim của columns space = 3 -> rank = 3**
 
+**🔗 See also:** [linked note](./lecture_10_the_four_fundamental_subspaces.md#node-bsozk2k) · [linked note](#node-e7n8l7p)
+
 <br>
 
 <a id="node-xk4c9wi"></a>
@@ -419,6 +423,8 @@ matrices
 > ATy = 0). Và **cùng với nhau chúng sẽ cover Rm**: dim C(A) +
 > dim N(AT) = m từ đó dim N(AT) = m - dim C(A) = m - r = 5 -
 > 3 = 2
+
+**🔗 See also:** [linked note](./lecture_10_the_four_fundamental_subspaces.md#node-z9zvfsz)
 
 <br>
 
@@ -608,6 +614,8 @@ matrices
 > elimination, nên nhớ là sẽ **có các bước row - exchange**, nên
 > dù thế nào thì row cuối cùng thành 0)
 
+**🔗 See also:** [linked note](#node-s7plvzp)
+
 <br>
 
 <a id="node-378kryy"></a>
@@ -661,6 +669,8 @@ matrices
 > Và **hai vector** trong **basis của N(A.T) sẽ ứng với hai
 > loop**
 
+**🔗 See also:** [linked note](#node-s7plvzp)
+
 <br>
 
 <a id="node-0xqk45g"></a>
@@ -697,6 +707,8 @@ matrices
 >
 >
 > Do đó dim của rowspace of A là 3.
+
+**🔗 See also:** [linked note](#node-6w3cdka)
 
 <br>
 
@@ -750,6 +762,8 @@ matrices
 > Vậy **số edge tạo một bộ độc lập từ một graph có #nodes
 > sẽ là #nodes - 1**
 
+**🔗 See also:** [linked note](#node-8pbirt7)
+
 <br>
 
 <a id="node-71c4eui"></a>
@@ -788,6 +802,8 @@ matrices
 > thì ta sẽ có 4 edge tạo thành một loop, 5 điểm thì có 5
 > edge thành một loop, do đó trừ 1 để thành ra một bộ 
 > các edge không tạo loop.
+
+**🔗 See also:** [linked note](#node-5qjh8qt) · [linked note](#node-4497kkv)
 
 <br>
 
