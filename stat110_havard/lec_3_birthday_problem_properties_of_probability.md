@@ -226,6 +226,8 @@ properties Of Probability
 >
 > ĐIỀU KIỆN ĐỂ FUNCTION VALID LÀM MÔT PROBABILITY FUNCTION
 
+**🔗 See also:** [linked note](./lec_5_conditional_probability_law_of_total_probability.md#node-eh1hh5p)
+
 <br>
 
 <a id="node-2i6bnpm"></a>
