@@ -35,6 +35,8 @@
 
 <a id="node-wzoo6dw"></a>
 
+#### Ứng dụng của Xác suất
+
 <p align="center"><kbd><img src="assets/1x6hnwrladz.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -44,6 +46,8 @@
 <br>
 
 <a id="node-9c668z2"></a>
+
+##### Không gian mẫu và tri thức phản trực giác
 
 <p align="center"><kbd><img src="assets/ijk79o43e.png" width="80%"></kbd></p>
 
@@ -62,6 +66,8 @@
 
 <a id="node-gxn2wkr"></a>
 
+- **Khái niệm xác suất sơ khai**
+
 <p align="center"><kbd><img src="assets/xhcnbvb3e29.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -79,6 +85,8 @@
 
 <a id="node-uszbbb3"></a>
 
+- **Xác suất tung 2 đồng xu**
+
 <p align="center"><kbd><img src="assets/ugq61v4btw.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -89,6 +97,8 @@
 <br>
 
 <a id="node-4sj1522"></a>
+
+- **Các giả định xác suất cơ bản**
 
 <p align="center"><kbd><img src="assets/mrb7yp67k7.png" width="80%"></kbd></p>
 
@@ -110,6 +120,8 @@
 
 <a id="node-etz9rcb"></a>
 
+- **Quy tắc Nhân trong Đếm**
+
 <p align="center"><kbd><img src="assets/wkzpn54yu3i.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -127,6 +139,8 @@
 <br>
 
 <a id="node-2p0sdni"></a>
+
+- **Nguyên tắc nhân trong tổ hợp**
 
 <p align="center"><kbd><img src="assets/5s8md0tbrw3.png" width="80%"></kbd></p>
 
@@ -147,6 +161,8 @@
 <br>
 
 <a id="node-bt7b7u1"></a>
+
+- **Khái niệm Hệ số nhị thức**
 
 <p align="center"><kbd><img src="assets/5ddeyrsc61f.png" width="80%"></kbd></p>
 
@@ -173,6 +189,8 @@
 <br>
 
 <a id="node-m3wc7ii"></a>
+
+- **Luận giải công thức tổ hợp**
 
 <p align="center"><kbd><img src="assets/gu1yz6w72p6.png" width="80%"></kbd></p>
 
@@ -250,6 +268,8 @@
 <br>
 
 <a id="node-wbdyz66"></a>
+
+- **Xác suất Full House trong Poker**
 
 <p align="center"><kbd><img src="assets/vlj9yd4vvvp.png" width="80%"></kbd></p>
 
