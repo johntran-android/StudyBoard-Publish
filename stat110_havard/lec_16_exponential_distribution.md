@@ -199,6 +199,8 @@ Survivor function với X~Expo(λ): P(X ≥ s) = e^(-λs)
 >
 > lim x-> 0 (1 - e^(-λx)) =  1 - e^(-λ*0) = 1-1 = **0**
 
+**🔗 See also:** [linked note](./lec_9_expectation_indicator_random_variables_linearity.md#node-hahfoj7)
+
 <br>
 
 <a id="node-4o7b4oy"></a>
@@ -219,6 +221,8 @@ Survivor function với X~Expo(λ): P(X ≥ s) = e^(-λs)
 > Đó là nếu set **Y = λ*X** thì **Y sẽ ~ Expo(1)**
 >
 > X ~ Expo(λ) thì  Y = λX thì Y sẽ ~ Expo(1)
+
+**🔗 See also:** [linked note](./lec_18_mgf_continued.md#node-ly17nqq)
 
 <br>
 
@@ -282,6 +286,8 @@ Survivor function với X~Expo(λ): P(X ≥ s) = e^(-λs)
 > X~Expo(1) là 1 - e^(-1*x)
 >
 > Chứng minh rằng Y ~ Expo(1)
+
+**🔗 See also:** [linked note](./lec_18_mgf_continued.md#node-ly17nqq)
 
 <br>
 
@@ -528,6 +534,8 @@ Survivor function với X~Expo(λ): P(X ≥ s) = e^(-λs)
 >
 > Var(Y) = 1 => Var(X) = Var(Y/λ) = (1/λ^2) Var(Y) = (1/λ^2)
 
+**🔗 See also:** [linked note](./lec_18_mgf_continued.md#node-rlr7teg) · [linked note](./lec_14_location_scale_lotus.md#node-g2oqmso)
+
 <br>
 
 <a id="node-jhlyk1v"></a>
@@ -659,6 +667,8 @@ Survivor function với X~Expo(λ): P(X ≥ s) = e^(-λs)
 >
 > Survivor function với X~Expo(λ): P(X ≥ s) = e^(-λs)
 
+**🔗 See also:** [linked note](./lec_17_moment_generating_functions.md#node-ypvr3hn)
+
 <br>
 
 <a id="node-3846ds1"></a>
@@ -679,6 +689,8 @@ Survivor function với X~Expo(λ): P(X ≥ s) = e^(-λs)
 >
 >
 > P(X ≥ s+t | X ≥ s) = P(X ≥ t)
+
+**🔗 See also:** [linked note](./lec_4_conditional_probability.md#node-tfge16d)
 
 <br>
 
