@@ -109,6 +109,8 @@
 > LAGRANGE DUAL FUNCTION &
 > CONJUGATE FUNCTION
 
+**🔗 See also:** [conjugate function](./lec_4.md#node-kr3qn6k)
+
 <br>
 
 <a id="node-gxrw7mc"></a>
@@ -206,6 +208,8 @@
 > vấn đề dấu của v mà thôi
 >
 > Có thể vì vậy mà trong lecture slide kết quả lại là g(v) = bTv khi ||ATv||* <= 1
+
+**🔗 See also:** [Conjugate function của norm](./lec_4.md#node-j3bjf6y)
 
 <br>
 
@@ -364,6 +368,8 @@
 >
 > Đây là kết quả như trong slide nhưng derive dùng calculus
 
+**🔗 See also:** [Một số ví dụ khác về conjugate function](./lec_4.md#node-hhpcqzh) · [linked note](./lec_8_b.md#node-3wciz9j)
+
 <br>
 
 <a id="node-fazkun9"></a>
@@ -477,6 +483,8 @@
 >
 > DUAL PROBLEM
 
+**🔗 See also:** [linked note](./lec_7.md#node-5mls9ep) · [linked note](#node-3hxz63z)
+
 <br>
 
 <a id="node-kjqyjrr"></a>
@@ -500,6 +508,8 @@
 >  2) λ, v sao cho g(λ, v) > -infinity.
 >
 > 5.2 LAGRANGE DUAL PROBLEM
+
+**🔗 See also:** [linked note](./lec_7.md#node-ekh1tgc)
 
 <br>
 
@@ -528,6 +538,8 @@
 > 5.2 LAGRANGE DUAL PROBLEM
 >
 > 5.2.1 MAKING DUAL CONSTRAINTS EXPLICIT
+
+**🔗 See also:** [linked note](./lec_7.md#node-ilfy28d) · [Bài toán đối ngẫu Lagrange](#node-0ndyxau) · [linked note](./lec_9.md#node-x4apjy4)
 
 <br>
 
@@ -610,6 +622,8 @@
 >
 > WEAK & STRONG DUALITY
 
+**🔗 See also:** [Optimization in standard form](./lec_5.md#node-vrjdtqq)
+
 <br>
 
 <a id="node-wab6bf3"></a>
@@ -651,6 +665,8 @@
 > 5.2 LAGRANGE DUAL PROBLEM
 >
 > 5.2.2 WEAK DUALITY
+
+**🔗 See also:** [linked note](./lec_7.md#node-2udlnvh)
 
 <br>
 
