@@ -177,6 +177,8 @@ onto Subspaces
 > space của P chính là line đi qua vector a**. Nên kết quả của
 > **Pb sẽ vẫn nằm trên line này**
 
+**🔗 See also:** [linked note](#node-5su5cq6)
+
 <br>
 
 <a id="node-e87h0ke"></a>
@@ -439,6 +441,8 @@ onto Subspaces
 > để ý rằng hồi nãy, equation ta có là **aTe = aT(b-Ax^) = 0**
 > còn bây giờ ta có hai vector a1 a2 basis của C(A) nên ta
 > có : **AT(b-Ax^) = 0**
+
+**🔗 See also:** [linked note](#node-u1oddq3)
 
 <br>
 
