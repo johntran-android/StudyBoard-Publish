@@ -87,6 +87,8 @@
 
 <a id="node-0sj7yms"></a>
 
+#### Hành vi tối ưu |u| và u^2
+
 <p align="center"><kbd><img src="assets/1r6sjqiswme.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -715,6 +717,8 @@
 > Do đó miễn là δ > 0 thì luôn có analytic solution x = (ATA + δI)inv ATb
 > mà ko cần giải định gì về rank của A (ý là nếu mà δ ko dương, ví dụ 
 > δ = 0 đi, khi đó để ATA invertible thì A phải full column rank)
+
+**🔗 See also:** [linked note](./lec_7.md#node-szbvhet)
 
 <br>
 
