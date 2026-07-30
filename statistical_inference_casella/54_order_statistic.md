@@ -7,6 +7,8 @@
 
 ## 5.4 Order Statistic
 
+**🔗 See also:** [Thống kê thứ tự và định nghĩa](#node-dk2jmpe) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-dk2jmpe"></a>
@@ -91,6 +93,8 @@
 > trị của nó, hay, nó có thể có nhiều possible value khác nhau, tùy thuộc vào
 > các giá trị cụ thể của các random variable X1,...Xn
 
+**🔗 See also:** [5.4 Order Statistic](#node-mownx2l) · [Miền mẫu và Trung vị mẫu](#node-7bwzokw)
+
 <br>
 
 <a id="node-7bwzokw"></a>
@@ -139,6 +143,8 @@
 >
 > Và thể hiện bởi M = X((n+1)/2) nếu n lẻ, hoặc = X(n/2) + X(n/2 + 1) nếu n 
 > chẵn.
+
+**🔗 See also:** [Thống kê thứ tự và định nghĩa](#node-dk2jmpe) · [Các thước đo trung tâm](#node-nxkdiyt)
 
 <br>
 
@@ -193,6 +199,8 @@
 >
 > Và cái statistic này cũng chính là sample median
 
+**🔗 See also:** [Miền mẫu và Trung vị mẫu](#node-7bwzokw) · [Quy ước làm tròn phân vị mẫu](#node-87bnmo9)
+
 <br>
 
 <a id="node-87bnmo9"></a>
@@ -230,6 +238,8 @@
 > đám X1,...Xn đều nhỏ hơn), còn cụ thể nó là gì, thì theo công thức trên nó
 > là X(n+1-{n(1-p)} = X(12+1-{4.2}) = X(9)
 
+**🔗 See also:** [Các thước đo trung tâm](#node-nxkdiyt) · [Tứ phân vị và thống kê thứ tự](#node-jp0yztu)
+
 <br>
 
 <a id="node-jp0yztu"></a>
@@ -254,6 +264,8 @@
 > tầng tầng lớp lớp, ví dụ như interquartile là hiệu hai cái upper & lower quartile,
 > mà chúng nó lại là 75th percentile, và 25th percentile, thì theo công thức,
 > cũng sẽ là một function apply lên các order statistic X(1),...X(n)
+
+**🔗 See also:** [Quy ước làm tròn phân vị mẫu](#node-87bnmo9) · [Xác suất thống kê thứ tự rời rạc](#node-rdrmu3r)
 
 <br>
 
@@ -313,6 +325,8 @@
 >
 >
 > P(X(j) = xi) = Σk=j:n (n choose k)[Pi^k(1 - Pi)^(n-k) - Pi-1^k(1-Pi-1)^n-k]
+
+**🔗 See also:** [Tứ phân vị và thống kê thứ tự](#node-jp0yztu) · [Biến ngẫu nhiên nhị thức Y](#node-4fy6f74)
 
 <br>
 
@@ -443,6 +457,8 @@
 >
 > = Σk=j:n (n choose k)[ (1 - Pi)^(n - k) - (1 - Pi-1)^(n - k) ] chứng minh xong vế 5.4.3
 
+**🔗 See also:** [Xác suất thống kê thứ tự rời rạc](#node-rdrmu3r) · [Thứ tự thống kê biến liên tục](#node-6g7a7bo)
+
 <br>
 
 <a id="node-6g7a7bo"></a>
@@ -478,6 +494,8 @@
 > vector, đặt các order statistic vào thành random vector. Thì khi đó các possible
 > value của nó là {(x1,...xn): x1 < x2 < ...< xn}. Bởi lẽ, ko thể có chuyện x1 > x2,
 > hay bất kì thứ tự nào khác
+
+**🔗 See also:** [Biến ngẫu nhiên nhị thức Y](#node-4fy6f74) · [Chứng minh PDF thống kê thứ tự](#node-1zc19ro)
 
 <br>
 
@@ -634,7 +652,7 @@
 >
 > QUAY LẠI SAU, NHƯNG ĐẠI Ý LÀ BIẾN ĐỔI ĐẠI SỐ TIẾP THÌ NÓ RA KẾT QUẢ
 
-**🔗 See also:** [Thống kê đầy đủ nhị thức](./62_the_sufficient_principle.md#node-8w0tig6) · [Ảnh hưởng Θ0 trong kiểm định](./83_methods_of_evaluating_test.md#node-csqvj7r)
+**🔗 See also:** [Thứ tự thống kê biến liên tục](#node-6g7a7bo) · [Thống kê thứ tự mẫu Uniform](#node-ybdravy) · [Thống kê đầy đủ nhị thức](./62_the_sufficient_principle.md#node-8w0tig6) · [Ảnh hưởng Θ0 trong kiểm định](./83_methods_of_evaluating_test.md#node-csqvj7r)
 
 <br>
 
@@ -655,6 +673,8 @@
 > Từ đó ta có thể tính mean và variance dựa theo công thức của mean và
 > variance của β
 
+**🔗 See also:** [Chứng minh PDF thống kê thứ tự](#node-1zc19ro) · [PDF đồng thời thống kê thứ tự](#node-xnvn76c)
+
 <br>
 
 <a id="node-xnvn76c"></a>
@@ -672,7 +692,7 @@
 >
 > QUAY LẠI SAU
 
-**🔗 See also:** [Phân phối Range Ancillary](./62_the_sufficient_principle.md#node-abmssuo)
+**🔗 See also:** [Thống kê thứ tự mẫu Uniform](#node-ybdravy) · [Khoảng và trung vị mẫu](#node-tshz3wp) · [Phân phối Range Ancillary](./62_the_sufficient_principle.md#node-abmssuo)
 
 <br>
 
@@ -688,6 +708,8 @@
 > Cho X1, ...Xn là random sample iid uniform(0, a) và và X(1), ...X(n) là các 
 > order statistic. Và range, là R = X(n) - X(1), dĩ nhiên cũng là một statistic.
 > Và Midrange V = X(1) + X(n)]/2
+
+**🔗 See also:** [PDF đồng thời thống kê thứ tự](#node-xnvn76c)
 
 <br>
 
