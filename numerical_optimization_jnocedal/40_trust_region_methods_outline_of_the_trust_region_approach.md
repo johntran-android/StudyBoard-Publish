@@ -267,7 +267,7 @@
 >
 > Chỉ có để ý là, nó chỉ tăng trust region lên nếu như ở bước trước đó, ||pk|| = Δk, có nghĩa nôm na là việc tìm kiếm ra điểm thấp nhất trong phạm vi cho phép cho ra điểm ngay trên biên. Điều này cùng với việc tỉ số ϱk "đạt" thì ta mới mở rộng trust region.
 
-**🔗 See also:** [Hội tụ toàn cục điểm Cauchy](./42_trust_region_methods_global_convergence.md#node-edr7lqw) · [Convergence to Stationary Points](./42_trust_region_methods_global_convergence.md#node-k0era47) · [Thuật toán SR1 Vùng tin cậy](./62_the_sr1_method.md#node-fsif7wv) · [Phương pháp Trust-Region Newton CG](./71_inexact_newton_methods.md#node-8tkd9oh)
+**🔗 See also:** [Hội tụ toàn cục điểm Cauchy](./42_trust_region_methods_global_convergence.md#node-edr7lqw) · [Convergence to Stationary Points](./42_trust_region_methods_global_convergence.md#node-k0era47) · [Thuật toán SR1 Vùng tin cậy](./62_the_sr1_method.md#node-fsif7wv) · [Phương pháp Trust-Region Newton CG](./71_inexact_newton_methods.md#node-8tkd9oh) · [Triển khai Levenberg-Marquardt](./103_algorithms_for_nonlinear_least_squares_problem.md#node-gb1ww4r)
 
 <br>
 
