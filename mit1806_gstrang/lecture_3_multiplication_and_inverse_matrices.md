@@ -354,6 +354,8 @@ and Inverse Matrices
 > với A ở bên trái để biến nó thành I,  thì I sẽ trở thành
 > A_inv ở bên phải**
 
+**🔗 See also:** [linked note](./lecture_10_the_four_fundamental_subspaces.md#node-v0i68k6)
+
 <br>
 
 <a id="node-1loce7y"></a>
