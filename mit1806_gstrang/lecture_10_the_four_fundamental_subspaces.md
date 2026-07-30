@@ -196,6 +196,8 @@ fundamental Subspaces
 > Và đây là một tính chất tuyệt vời. **Cols space và rows
 > space của A đều có dimension là r**
 
+**🔗 See also:** [linked note](./lecture_12_graphs_networks_incidence_matrices.md#node-xk4c9wi)
+
 <br>
 
 <a id="node-m0vwas1"></a>
@@ -435,6 +437,8 @@ fundamental Subspaces
 > dimension của nullspace là n-r. **Tổng dimension là n-r + r
 > = n = số cols của A**
 
+**🔗 See also:** [linked note](./lecture_12_graphs_networks_incidence_matrices.md#node-6w3cdka)
+
 <br>
 
 <a id="node-8mhy0ir"></a>
@@ -667,6 +671,8 @@ fundamental Subspaces
 > A**, và khi elimination, ta **cũng áp dụng các bước biến đổi
 > đối với matrix I**. Từ đó **khi A thành R**, **I trở thành matrix nào
 > đó, gọi là E** (cố tình đặt tên là E)
+
+**🔗 See also:** [linked note](./lecture_3_multiplication_and_inverse_matrices.md#node-o2kdp8j)
 
 <br>
 
