@@ -346,6 +346,8 @@ determinants
 >
 > Vậy thì det A = det B - det B = 0
 
+**🔗 See also:** [linked note](./lecture_19_determinant_formulas_and_cofactors.md#node-3i3pc9l)
+
 <br>
 
 <a id="node-31383cl"></a>
@@ -398,6 +400,8 @@ determinants
 >
 >
 > (Và bài sau sẽ biết chúng (d1,d2...) cũng là eigenvalues)**
+
+**🔗 See also:** [Tích pivot tính định thức](./lecture_2_elimination_with_matrices.md#node-5jfuigm)
 
 <br>
 
@@ -502,6 +506,8 @@ determinants
 > [!NOTE]
 > chuyển A về U, bằng cách khử c, =
 > trừ hàng 2 cho c/a * hàng 1.
+
+**🔗 See also:** [linked note](./lecture_19_determinant_formulas_and_cofactors.md#node-p3l7q8d)
 
 <br>
 
