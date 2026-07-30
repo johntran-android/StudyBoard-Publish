@@ -290,6 +290,8 @@ law Of Central Limit
 >
 > Đó là chứng minh LLN (weak)**
 
+**🔗 See also:** [linked note](#node-6oomiwi)
+
 <br>
 
 <a id="node-thrz5ue"></a>
@@ -515,6 +517,8 @@ law Of Central Limit
 > **cụ thể hơn** là **trong dạng  thứ hai** thì ta quan tâm đến **Tổng Xj đã được
 > standardized**
 
+**🔗 See also:** [linked note](#node-cwgq2to)
+
 <br>
 
 <a id="node-ysssezj"></a>
@@ -624,6 +628,8 @@ law Of Central Limit
 >
 >
 > (mà xuất phát cũng từ tính chất E(XY) = EX*EY mà ta đã chứng minh trong link hồng
+
+**🔗 See also:** [linked note](./lec_17_moment_generating_functions.md#node-3j4ghan) · [linked note](./lec_19_joint_conditional_and_marginal_distribution.md#node-9qk5uuw)
 
 <br>
 
