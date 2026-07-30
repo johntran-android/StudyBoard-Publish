@@ -565,6 +565,8 @@
 >
 > M_(X1+X2+..Xn)(t) = M_X1(t)*M_X2(t)*....M_Xn(t) = [**1/(1-t)]^n**  (t<1)
 
+**🔗 See also:** [Moment Generating Function Derivation](./lec_18_mgf_continued.md#node-9510dh2)
+
 <br>
 
 <a id="node-oiihl32"></a>
