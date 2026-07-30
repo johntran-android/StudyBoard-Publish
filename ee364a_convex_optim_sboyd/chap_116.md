@@ -327,6 +327,8 @@
 >
 > Không khó để thấy Φ  vẫn là hàm convex
 
+**🔗 See also:** [linked note](./chap_1112345.md#node-6jdej9v)
+
 <br>
 
 <a id="node-9q53wkx"></a>
@@ -745,6 +747,8 @@
 > iteration cần thiết, còn lại thì nó ko khác biệt mấy (ví dụ hình 11.15, giữa
 > μ = 50 với 200 số Newton's iteration ko khác biệt mấy) nhưng nếu μ nhỏ
 > (=2) thì số Newton iteration sẽ tăng lên đáng kể'
+
+**🔗 See also:** [linked note](./chap_1112345.md#node-8tkmlf8)
 
 <br>
 
@@ -1384,6 +1388,8 @@
 >
 > Nhận xét thứ hai là Δxpd cũng là primal feasible direction: Lí do vì trong hệ trên cho thấy A Δxpd = 0
 > ⇨ với s bất kì thì A(x + s Δxpd) = b ⇨ x + s Δxpd ∈ feasible set
+
+**🔗 See also:** [linked note](./chap_1112345.md#node-k9jd0h2)
 
 <br>
 
