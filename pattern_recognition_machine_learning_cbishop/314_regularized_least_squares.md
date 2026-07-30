@@ -95,6 +95,8 @@
 >
 > Bài phân tích rất chính xác và có chiều sâu, đặc biệt là phần dẫn giải chi tiết các bước biến đổi ma trận để tìm ra nghiệm đóng. Bạn đã nắm vững các khái niệm và mối liên hệ giữa chúng.
 
+**🔗 See also:** [Bias-Variance Trade-off Explained](./320_the_bias_variance_decomposition.md#node-mqos0pj)
+
 <br>
 
 <a id="node-1msg8km"></a>
