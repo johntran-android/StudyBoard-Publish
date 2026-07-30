@@ -47,6 +47,8 @@
 >
 > Và p(x) - tq(x) ≤ 0 sẽ tương đương p(x)/q(x) ≤ t nên 0-sublevel set của Φt(x) sẽ chính là t-sublevel set của f0(x)
 
+**🔗 See also:** [Quasiconvex function](./lec_4.md#node-wut6uxw)
+
 <br>
 
 <a id="node-4dbgyuo"></a>
@@ -172,6 +174,8 @@
 > Thế thì có thể thắc mắc là tại sao không dừng ở đây mà còn phải làm  thêm bứơc sau là tách x thành x+ - x- để rồi có thêm x+ ≽ 0 và x- ≽ 0 Thì Chat GPT nói rằng bài toán ở bước 1 đã là Standard LP
 >
 > Nhưng bước sau là cái mà họ hay làm
+
+**🔗 See also:** [(Sách) Cách tạo equivalent problem: Slack variables](./lec_5.md#node-6zywl35)
 
 <br>
 
@@ -383,6 +387,8 @@
 > Tại sao điểm x* trong hình là optimal point. Vì nó nằm tại điểm tiếp xúc giữa level set và cạnh của P. Mọi điểm trong P đều nằm một bên của level set này. Khi di chuyển trên level set f0 sẽ ko đổi, nên di chuyển về mọi hướng trong P từ x* sẽ đều là tạo nên một góc nhỏ hơn 90 độ với gradient vector ∇f0(x0), khiến f0 tăng lên.
 >
 > Gs cho biết thêm QP là bài toán rất phổ biến. Ông nói hầu như mọi quỹ đầu tư Hedge-fund đều giải những bài toán QP (tối ưu danh mục đầu tư). Thậm chí việc tên lửa Falcon đáp xuống của SpaceX gần đây cũng ứng dụng rất nhiều bài toán QP
+
+**🔗 See also:** [Second order conditions](./lec_3.md#node-zmb0etz)
 
 <br>
 
