@@ -68,6 +68,8 @@
 > Gs cho rằng vì **một số lí do** mà ta sẽ **giữ 1/x** chứ không gom
 > **x^a/x = x^(a-1)**
 
+**🔗 See also:** [linked note](#node-97f2xof)
+
 <br>
 
 <a id="node-0rf6fyg"></a>
@@ -129,6 +131,8 @@
 >
 > Còn Gamma (3/2) thì theo Identity trên **Gamma(n+1) = nGamma(n)** thì ta có
 > Gamma (3/2) = Gamma(1/2+1) = 1/2Gamma(1/2)
+
+**🔗 See also:** [linked note](./lec_25_order_statistic_conditional_expectation.md#node-6ikcoq7)
 
 <br>
 
@@ -240,6 +244,8 @@
 >
 > PDF của Y~Gamma(a, λ) là: f_Y(y) = (1/G(a)) (λy)^a * e^-(λy) * (1/y).
 
+**🔗 See also:** [linked note](#node-hk2er7p)
+
 <br>
 
 <a id="node-dahxnei"></a>
@@ -269,6 +275,8 @@
 > nói về giả định thứ 2 này)
 >
 > POISSON PROCESS
+
+**🔗 See also:** [linked note](./lec_15_midterm_review.md#node-9pnvzz0)
 
 <br>
 
@@ -509,6 +517,8 @@
 >
 > Tn CHÍNH LÀ ~ Gamma(n, λ)
 
+**🔗 See also:** [linked note](./lec_25_order_statistic_conditional_expectation.md#node-8y9uhek)
+
 <br>
 
 <a id="node-ijjvh6u"></a>
@@ -565,7 +575,7 @@
 >
 > M_(X1+X2+..Xn)(t) = M_X1(t)*M_X2(t)*....M_Xn(t) = [**1/(1-t)]^n**  (t<1)
 
-**🔗 See also:** [Moment Generating Function Derivation](./lec_18_mgf_continued.md#node-9510dh2)
+**🔗 See also:** [Moment Generating Function Derivation](./lec_18_mgf_continued.md#node-9510dh2) · [linked note](#node-fhsrfg7)
 
 <br>
 
@@ -721,6 +731,8 @@
 > CHỨNG MINH Tn CHÍNH
 > LÀ ~ Gamma(n, λ)
 
+**🔗 See also:** [linked note](#node-v9cm6ey)
+
 <br>
 
 <a id="node-dsy5w0h"></a>
@@ -806,6 +818,8 @@
 >
 >
 > E[x^c] = Gamma(a+c) / Gamma(a)
+
+**🔗 See also:** [linked note](#node-tg90580)
 
 <br>
 
@@ -909,6 +923,8 @@
 > (theo tính chất của variance Var(cX) = c^2 VarX mà ta đã học)
 >
 > X~Gamma(a, λ): EX = a / λ VarX = a / λ^2
+
+**🔗 See also:** [linked note](#node-0gj5s98)
 
 <br>
 
