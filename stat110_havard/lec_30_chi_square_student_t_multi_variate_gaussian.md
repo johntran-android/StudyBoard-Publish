@@ -93,6 +93,8 @@ multi-variate Gaussian
 >
 > Chi-Square (n) chính là Gamma(n/2, 1/2)
 
+**🔗 See also:** [linked note](./lec_25_order_statistic_conditional_expectation.md#node-rip9kxc)
+
 <br>
 
 <a id="node-sehuwmc"></a>
@@ -382,6 +384,8 @@ multi-variate Gaussian
 > Nếu có thể tìm một linear combination nào của Xj mà ko phải Normal thì
 > X không phải MVN
 
+**🔗 See also:** [linked note](#node-zgndxxv)
+
 <br>
 
 <a id="node-e2jzoza"></a>
@@ -445,6 +449,8 @@ multi-variate Gaussian
 > Thế thì trông nó có vẻ phức tạp, nhưng khi nhìn vào cái tổng tjXj và nhớ
 > lại định nghĩa của MVN, ta sẽ nhớ rằng theo định nghĩa MVN, mọi linear
 > combination  tjXj là một Normal rv
+
+**🔗 See also:** [linked note](#node-gqilxxj)
 
 <br>
 
@@ -557,6 +563,8 @@ multi-variate Gaussian
 > Bởi vì khi đó (X1+X2,X1-X2) là MVN, và X1+X2 uncorrelated với X1-X2 mà ta lại có X1+X2,
 > independent với X1-X2 thì điều này chỉ có thể xảy ra nếu trong bối cảnh MVN, tức là chỉ có thể xảy ra
 > khi X1, X2 là normal (để (X1+X2, X1-X2) là MVN
+
+**🔗 See also:** [linked note](./lec_21_covariance_correlation.md#node-piggpgl)
 
 <br>
 
