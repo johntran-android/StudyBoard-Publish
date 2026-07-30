@@ -7,6 +7,8 @@
 
 ## 1.2.3 Counting
 
+**🔗 See also:** [Quy tắc đếm và ứng dụng](#node-0i2gesa) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-0i2gesa"></a>
@@ -33,6 +35,8 @@
 > Và **Theorem 1.2.14** chính là **Step Rule** khi như đã biết, **nếu việc đếm
 > thứ gì đó có thể chia thành nhiều bước**, **mỗi bước có số lựa chọn không bị
 > ảnh hưởng bởi lựa chọn cụ thể của bước trước đó**. Thì ta **nhân** lại.
+
+**🔗 See also:** [1.2.3 Counting](#node-53imynu) · [Xổ số: Tổ hợp và Hoán vị](#node-z5kn46i)
 
 <br>
 
@@ -70,6 +74,8 @@
 > Nói chung tóm lại là, **khi mình muốn đếm** số bộ / số cách tạo một bộ 6
 > số từ 44 con số thì **việc có hay không hoàn** lại khi sampling, và **có tính
 > đến thứ tự hay không** sẽ **ảnh hưởng đến kết quả.**
+
+**🔗 See also:** [Quy tắc đếm và ứng dụng](#node-0i2gesa) · [Hoán vị không hoàn lại, có thứ tự](#node-c8kvxlc)
 
 <br>
 
@@ -123,6 +129,8 @@
 > TỨC LÀ CÓ TÍNH VÀO, CHÍNH LÀ COI THỨ TỰ CỦA CHÚNG LÀ KHÁC 
 > NHAU
 
+**🔗 See also:** [Xổ số: Tổ hợp và Hoán vị](#node-z5kn46i) · [Tổ hợp chập k của n](#node-ogb2173)
+
 <br>
 
 <a id="node-ogb2173"></a>
@@ -155,6 +163,8 @@
 >
 > Và đây chính là **(n choose k)**
 
+**🔗 See also:** [Hoán vị không hoàn lại, có thứ tự](#node-c8kvxlc) · [Hoán vị lặp có thứ tự](#node-aja8015)
+
 <br>
 
 <a id="node-aja8015"></a>
@@ -176,6 +186,8 @@
 > Một lần nữa, rõ ràng **trong mỗi** bước ta **đã cho phép nó có hết n khả
 > năng**, nên **kiểu như sẽ có chuỗi 12xxxx** và cũng có tính chuỗi 21xxxx Thì
 > ý là ta **đã có tính đến / quan tâm đến thứ tự**
+
+**🔗 See also:** [Tổ hợp chập k của n](#node-ogb2173) · [Tổ hợp lặp: Bóng và Hộp](#node-2vmccxy)
 
 <br>
 
@@ -332,6 +344,8 @@
 >
 >
 > Và chính là **(n-1+k choose k)**
+
+**🔗 See also:** [Hoán vị lặp có thứ tự](#node-aja8015)
 
 <br>
 
