@@ -289,6 +289,8 @@
 >
 > Rồi, kết luận A là 3x3 matrix.
 
+**🔗 See also:** [linked note](./lecture_8_solving_ax_b_row_reduced_form_r.md#node-9vdh965)
+
 <br>
 
 <a id="node-tex123q"></a>
