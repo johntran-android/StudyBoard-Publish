@@ -11,7 +11,7 @@
 
 <a id="node-29pr2x1"></a>
 
-## Tiếp nối bài trước ta đã nói về cách để chứng minh tính convexity
+## Operations that preserve convexity
 
 <p align="center"><kbd><img src="assets/z2o8cysgssr.png" width="80%"></kbd></p>
 
@@ -64,6 +64,8 @@
 > và f là tổng của các - log (bi - aiTx), nên cũng convex
 >
 > Ví dụ khác là norm của affine f(x) = ||Ax+b||: **norm là convex function**, nên **||Ax+b|| thực ra là apply norm function vào affine** nên thuộc vào mục **composition with affine**: nên cũng là convex
+
+**🔗 See also:** [Gs nói thêm về equivalent convex problem](./lec_5.md#node-tzys8j7)
 
 <br>
 
@@ -187,6 +189,8 @@
 >
 > VÍ DỤ: SUPPORT FUNCTION CỦA SET C
 
+**🔗 See also:** [conjugate function](#node-kr3qn6k)
+
 <br>
 
 <a id="node-93dza2e"></a>
@@ -199,6 +203,8 @@
 > mở rộng ra với **pointwise supremum**
 >
 > Đáng chú ý ở đây nói thêm là **tương tự, khi infimum của set các concave function thì ta có concave function**
+
+**🔗 See also:** [linked note](./lec_7.md#node-ekh1tgc)
 
 <br>
 
@@ -465,6 +471,8 @@
 >
 > và **increasing in all argument: gi tăng thì log Σ exp gi không giảm**
 
+**🔗 See also:** [Tiếp theo là log-sum-exp và geometric mean cũng có Hessian ≽ 0](./lec_3.md#node-zdlnun6)
+
 <br>
 
 <a id="node-0uoul1f"></a>
@@ -623,6 +631,8 @@
 >
 > Bài làm cho thấy sự hiểu biết sâu sắc về khái niệm tối ưu hóa một phần và bảo toàn tính lồi, với các chứng minh chi tiết và chính xác. Cần chú ý hơn đến các lỗi dấu nhỏ trong quá trình tính toán.
 
+**🔗 See also:** [Second order conditions](./lec_3.md#node-zmb0etz) · [linked note](./lec_7.md#node-7gcnhz7)
+
 <br>
 
 <a id="node-y2s0tnu"></a>
@@ -643,6 +653,8 @@
 > Nên ý nói **jointly convex là điều kiện rất mạnh**, không phải chỉ là convex theo mỗi biến
 >
 > hình dung một function mà ta đi theo 1 trục x hoặc y thì đều cong lên (convex theo từng biến, positive curvature) nhưng đi theo hướng kết hợp hai trục ví dụ 45 độ thì nó lại curve down). Đó là hình ảnh của function ko jointly convex
+
+**🔗 See also:** [ví dụ này, f = xy](./lec_3.md#node-eot6wop)
 
 <br>
 
@@ -720,6 +732,8 @@
 > thì **với một x cụ thể nào đó thì dễ thấy yTx - f(x) là một affine function của y**.
 >
 > Nên cái f*(y) này - tìm trong mọi x cái nào khiến xTy - f(x) lớn nhất, cơ bản chính là **maximize trong vô số các affine function (dĩ nhiên là các affine function thì  convex) thì theo link theorem trước (point-wise supremum), nó sẽ là convex**, dù cho function f ko convex
+
+**🔗 See also:** [point-wise supremum](#node-4xr0k7s) · [linked note](./lec_8_a.md#node-iz4rv64)
 
 <br>
 
@@ -983,6 +997,8 @@
 > **🤖 AI Feedback** — ⚠️ Score: **72/100**
 >
 > Bài làm cho thấy sự hiểu biết vững chắc về định nghĩa hàm liên hợp và phương pháp tính toán. Tuy nhiên, còn một số lỗi nhỏ về dấu, miền xác định của hàm gốc, và phân tích giới hạn chưa chính xác, cùng với một phần giải bài tập chưa hoàn thiện.
+
+**🔗 See also:** [Entropy maximization](./lec_8_a.md#node-myefxtz)
 
 <br>
 
@@ -1452,6 +1468,8 @@
 >
 > Việc còn lại là chứng minh Hessian Negative Definite: (làm sau)
 
+**🔗 See also:** [linked note](./lec_9.md#node-ehvdbod)
+
 <br>
 
 <a id="node-j3bjf6y"></a>
@@ -1520,6 +1538,8 @@
 >
 > EX: Conjugate function của norm ||x||
 
+**🔗 See also:** [linked note](./lec_7.md#node-z9xoezp) · [linked note](./lec_8_a.md#node-xrwq4nc)
+
 <br>
 
 <a id="node-gtqvaka"></a>
@@ -1569,6 +1589,8 @@
 > chứng minh f*(y) >= (1/2)(||y||*)^2 
 >
 > Từ đó suy ra conjugate f(x) = (1/2)||x||^2 là f*(y) = (1/2)(||y||*)^2
+
+**🔗 See also:** [linked note](./lec_9.md#node-hixhho4)
 
 <br>
 
@@ -1633,6 +1655,8 @@
 >
 > CHAPTER 3.3 - QUASI-CONVEX
 > FUNCTION
+
+**🔗 See also:** [Convex representation of sublevel sets of f0](./lec_6.md#node-m2yj4il)
 
 <br>
 
