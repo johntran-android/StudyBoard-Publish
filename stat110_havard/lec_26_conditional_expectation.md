@@ -103,6 +103,8 @@ expectation
 > Ta chỉ có thể bỏ condition sau khi dùng thông tin của nó nếu CHÚNG 
 > INDEPENDENT (tức 2 event indendent)
 
+**🔗 See also:** [linked note](./lec_28_inequalities.md#node-9iwsiko)
+
 <br>
 
 <a id="node-xn0n5tf"></a>
@@ -513,6 +515,8 @@ expectation
 >
 > CONTINUOUS CASE: E(Y|X=x) = ∫-inf:inf y*f_Y|X(y|x) dy
 
+**🔗 See also:** [linked note](./lec_27_conditional_expectation_given_an_rv.md#node-mkqdgg8)
+
 <br>
 
 <a id="node-ijpl9xo"></a>
@@ -610,6 +614,8 @@ expectation
 > cứ liên hệ nó với E(Y|X=x)Và tí nữa ta sẽ thấy, khi **tìm ra g(x), như đã nói ở trên rằng E(Y|X=x) là
 > function of x thì ta sẽ có E(Y|X) là r.v và là function of X g(X)**
 
+**🔗 See also:** [linked note](./lec_27_conditional_expectation_given_an_rv.md#node-jka3wac)
+
 <br>
 
 <a id="node-g16xcz3"></a>
@@ -678,6 +684,8 @@ expectation
 >
 > Còn tiếp theo vì X,Y **i.i.d** nên **việc biết giá trị của X** **không giúp gì** cho việc
 > **đoán giá trị của Y**. Do đó **E(Y|X) = E(Y)**
+
+**🔗 See also:** [linked note](./lec_27_conditional_expectation_given_an_rv.md#node-mkqdgg8)
 
 <br>
 
@@ -789,6 +797,8 @@ expectation
 >
 > **X|T=n là một Bin(n, p=1/2) với ý nghĩa là nếu biết T = n thì X sẽ là
 > rv ~ Bin(n, p=1/2)**
+
+**🔗 See also:** [linked note](./lec_18_mgf_continued.md#node-qm2eavg)
 
 <br>
 
