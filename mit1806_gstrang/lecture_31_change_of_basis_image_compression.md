@@ -626,6 +626,8 @@ image Compression
 >
 > Từ đó ta có A
 
+**🔗 See also:** [linked note](./lecture_30_linear_transformations_and_their_matrices.md#node-pcg8p5q)
+
 <br>
 
 <a id="node-8tebwkt"></a>
@@ -709,6 +711,8 @@ image Compression
 >
 > Như vậy với một linear transformation T(v) = Ax. Mà ta sử dụng
 > basis vector là eigenvectors của A thì matrix sẽ chính là LAMBDA
+
+**🔗 See also:** [linked note](./lecture_30_linear_transformations_and_their_matrices.md#node-bq2tfnb)
 
 <br>
 
