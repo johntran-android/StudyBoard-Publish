@@ -431,6 +431,8 @@ matrices And Least Squares
 > A full column rank tức mọi columns đều độc lập thì ATA
 > sẽ full rank)
 
+**🔗 See also:** [linked note](#node-taomu1c)
+
 <br>
 
 <a id="node-rigclww"></a>
@@ -609,6 +611,8 @@ matrices And Least Squares
 > nãy ông nhận định rằng ta sẽ kì vọng nó **invertible**,
 > và xa hơn là **positive definite**
 
+**🔗 See also:** [linked note](#node-nir3uvv)
+
 <br>
 
 <a id="node-lsrpf0x"></a>
@@ -733,6 +737,8 @@ matrices And Least Squares
 > Và điều này như nãy đã nói, **sẽ suy ra các cols của ATA
 > độc lập**, và nó lại là **square matrix** nên suy ra nó
 > **full rank -> invertible**
+
+**🔗 See also:** [linked note](./lecture_14_orthogonal_vectors_and_subspaces.md#node-3l4hkq3)
 
 <br>
 
