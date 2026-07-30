@@ -194,6 +194,8 @@
 >
 > Vậy kết quả là = **μ*E(N)**
 
+**🔗 See also:** [linked note](./lec_26_conditional_expectation.md#node-qk60e2p)
+
 <br>
 
 <a id="node-qyo7wtx"></a>
@@ -304,6 +306,8 @@
 >
 > Var(X) = E(Var(X|N)) + Var(E(X|N))  = E(N*σ^2) + Var(μ*N)**
 
+**🔗 See also:** [linked note](./lec_21_covariance_correlation.md#node-v6hjfkl)
+
 <br>
 
 <a id="node-95nekbx"></a>
@@ -384,6 +388,8 @@
 >
 > |E(XY)| <= √[E(X^2)*E(Y^2)]
 
+**🔗 See also:** [linked note](./lec_21_covariance_correlation.md#node-5ylqffk)
+
 <br>
 
 <a id="node-dem92ez"></a>
@@ -450,6 +456,8 @@
 >
 > Nên bất đẳng thức Cauchy này trong statistic chính là việc correlation nằm
 > trong [-1,1]
+
+**🔗 See also:** [linked note](./lec_21_covariance_correlation.md#node-pzissvb)
 
 <br>
 
