@@ -9,8 +9,6 @@ transformation
 ## 4.3 Bivariate
 transformation
 
-**🔗 See also:** [Biến đổi vector biến ngẫu nhiên](#node-ldjkf78) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-ldjkf78"></a>
@@ -189,9 +187,6 @@ transformation
 > Và để ý chi tiết họ gọi B là tập các possible value của (U,V) cho thấy ở sách này người ta
 > đang đồng nhất SUPPORT SET VÀ POSSIBLE VALUE SET hòan toàn phù hợp với quy
 > ước chung
-
-**🔗 See also:** [4.3 Bivariate
-transformation](#node-mnzjqow) · [Xác định PMF biến đổi rời rạc](#node-6ewp2ii)
 
 <br>
 
@@ -392,8 +387,6 @@ transformation](#node-mnzjqow) · [Xác định PMF biến đổi rời rạc](#
 >
 > Từ đó chứng minh P(U=u,V=v) = P((X,Y) ∈ Auv)
 
-**🔗 See also:** [Biến đổi vector biến ngẫu nhiên](#node-ldjkf78) · [Chứng minh tính dương PDF đồng thời](#node-71dmw5o)
-
 <br>
 
 <a id="node-71dmw5o"></a>
@@ -500,8 +493,6 @@ transformation](#node-mnzjqow) · [Xác định PMF biến đổi rời rạc](#
 >
 > Từ đó ta chứng minh fU,V(u,v) dương trên B_curly
 
-**🔗 See also:** [Xác định PMF biến đổi rời rạc](#node-6ewp2ii) · [Phân phối chung và biến đổi Poisson](#node-o1p0j7v)
-
 <br>
 
 <a id="node-o1p0j7v"></a>
@@ -604,8 +595,6 @@ transformation](#node-mnzjqow) · [Xác định PMF biến đổi rời rạc](#
 >
 > 2) SUPPORT SET CỦA NÓ**
 
-**🔗 See also:** [Chứng minh tính dương PDF đồng thời](#node-71dmw5o) · [Đạo hàm PMF biên fU(u)](#node-502p4lv)
-
 <br>
 
 <a id="node-502p4lv"></a>
@@ -701,8 +690,6 @@ transformation](#node-mnzjqow) · [Xác định PMF biến đổi rời rạc](#
 >
 > Và tới đây có thể thấy **marginal pmf của U** CÓ DẠNG CỦA MỘT
 > **POISSON(θ+λ)**
-
-**🔗 See also:** [Phân phối chung và biến đổi Poisson](#node-o1p0j7v) · [Jacobian trong hàm mật độ](#node-6g2gxiv)
 
 <br>
 
@@ -999,8 +986,6 @@ transformation](#node-mnzjqow) · [Xác định PMF biến đổi rời rạc](#
 > Quan hệ giữa A_curly và B_curly lúc này là 1-1, nhưng giữa R^2 →
 > B_curly vẫn có thể là ko phải 1-1
 
-**🔗 See also:** [Đạo hàm PMF biên fU(u)](#node-502p4lv) · [Miền hỗ trợ biến đổi Beta](#node-12qoex9)
-
 <br>
 
 <a id="node-12qoex9"></a>
@@ -1118,8 +1103,6 @@ transformation](#node-mnzjqow) · [Xác định PMF biến đổi rời rạc](#
 >
 > = fX,Y(h1(u,v),h2(u,v)) |∂(x,y)/∂(u,v)|
 
-**🔗 See also:** [Jacobian trong hàm mật độ](#node-6g2gxiv) · [Tích phân biên và phân phối Beta](#node-lg6irvg)
-
 <br>
 
 <a id="node-lg6irvg"></a>
@@ -1137,8 +1120,6 @@ transformation](#node-mnzjqow) · [Xác định PMF biến đổi rời rạc](#
 > QUAY LẠI SAU
 >
 > QUAY LẠI SAU
-
-**🔗 See also:** [Miền hỗ trợ biến đổi Beta](#node-12qoex9) · [Xác định tập support B](#node-bytw46k)
 
 <br>
 
@@ -1341,8 +1322,6 @@ transformation](#node-mnzjqow) · [Xác định PMF biến đổi rời rạc](#
 >  và đã chứng minh f1(u) chính là fU(u) ⇨ fV(v) = (1/√2π√2)e^-v^2/4 và từ đó
 > suy ra V cũng là normal(0, 2)
 
-**🔗 See also:** [Tích phân biên và phân phối Beta](#node-lg6irvg) · [Phân phối tổng hiệu biến chuẩn](#node-0lxzfim)
-
 <br>
 
 <a id="node-0lxzfim"></a>
@@ -1433,8 +1412,6 @@ transformation](#node-mnzjqow) · [Xác định PMF biến đổi rời rạc](#
 >
 >
 > ⇨ Y ~ n(0,1)
-
-**🔗 See also:** [Xác định tập support B](#node-bytw46k) · [Tính độc lập của biến đổi hàm](#node-0p93ngi)
 
 <br>
 
@@ -1606,8 +1583,6 @@ transformation](#node-mnzjqow) · [Xác định PMF biến đổi rời rạc](#
 >
 > ∂^2F(x,y)/∂x∂y = f(x,y)
 
-**🔗 See also:** [Phân phối tổng hiệu biến chuẩn](#node-0lxzfim) · [Phân phối biến mới qua ánh xạ](#node-xubp2m2)
-
 <br>
 
 <a id="node-xubp2m2"></a>
@@ -1624,8 +1599,6 @@ transformation](#node-mnzjqow) · [Xác định PMF biến đổi rời rạc](#
 > = g2(X,Y) = X, **Miễn sao là support set của X,Y (/A_curly)/ được mapping
 > 1-1 với  (B_curly)**, thì  từ đó ta lại áp dụng theorem trên để tìm joint
 > distribution của U, V và marginalizing over v để có marginal pdf/pmf của U.
-
-**🔗 See also:** [Tính độc lập của biến đổi hàm](#node-0p93ngi) · [Xử lý ánh xạ không 1-1](#node-tjwlk6s)
 
 <br>
 
@@ -1743,8 +1716,6 @@ transformation](#node-mnzjqow) · [Xác định PMF biến đổi rời rạc](#
 >
 >
 > Khi đó theorem cho ta **fU,V(u,v) = Σ fX,Y(h1i(u,v), h2i(u,v)) | Ji |**
-
-**🔗 See also:** [Phân phối biến mới qua ánh xạ](#node-xubp2m2) · [Biến đổi U=X/Y, V=|Y|](#node-993gkil)
 
 <br>
 
@@ -1899,8 +1870,6 @@ transformation](#node-mnzjqow) · [Xác định PMF biến đổi rời rạc](#
 >
 >
 > Từ đó tính marginal pdf của U 1/[π(u^2 + 1)] -inf < u < inf
-
-**🔗 See also:** [Xử lý ánh xạ không 1-1](#node-tjwlk6s)
 
 <br>
 
