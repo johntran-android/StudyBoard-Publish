@@ -139,6 +139,8 @@ sinh) =  P(X!=0) = 1 - P(X=0)
 >
 > POISSON DISTRIBUTION
 
+**🔗 See also:** [linked note](#node-g7pua7f)
+
 <br>
 
 <a id="node-6gc6xh3"></a>
@@ -443,6 +445,8 @@ sinh) =  P(X!=0) = 1 - P(X=0)
 >
 > Vậy từ (1) và (2) ta có **λ = p1 + p2 + ..pn**
 
+**🔗 See also:** [linked note](#node-9nzud7e)
+
 <br>
 
 <a id="node-oe3e1xl"></a>
@@ -493,6 +497,8 @@ sinh) =  P(X!=0) = 1 - P(X=0)
 >
 > (Còn Binomial (n,p) yêu cầu bối cảnh phải là các i.i.d Bern(p) trials)**
 
+**🔗 See also:** [linked note](#node-uwrb3gg)
+
 <br>
 
 <a id="node-wu77piz"></a>
@@ -536,6 +542,8 @@ sinh) =  P(X!=0) = 1 - P(X=0)
 >
 > CHỨNG MINH n LỚN ĐẾN VÔ CÙNG và p NGÀY CÀNG NHỎ thì BINOMIAL sẽ CONVERGE về
 > POISSON.
+
+**🔗 See also:** [linked note](./lec_9_expectation_indicator_random_variables_linearity.md#node-shpz4kp)
 
 <br>
 
@@ -662,6 +670,8 @@ sinh) =  P(X!=0) = 1 - P(X=0)
 > Như vậy ta đã chứng minh khi **số lượng trial lớn** với **xác suất success của
 > trial nhỏ dần** thì Binomial (n, p) converge về Poisson (λ) (λ = np)
 
+**🔗 See also:** [linked note](#node-205orpm)
+
 <br>
 
 <a id="node-uedd7a6"></a>
@@ -726,6 +736,8 @@ sinh) =  P(X!=0) = 1 - P(X=0)
 > Do đó gs nói **sẽ phù hợp với Poisson hơn**, vì Poisson **không đòi hỏi các
 > event independent**, và cũng **không đòi hỏi xác suất của các event đều như
 > nhau** như ta đã nhận định lúc nãy
+
+**🔗 See also:** [linked note](#node-mk4vwhj)
 
 <br>
 
@@ -934,6 +946,8 @@ sinh) =  P(X!=0) = 1 - P(X=0)
 >
 >
 > Vậy P([ÍT NHẤT một triple matched]) = 1 - P(X=0) = 1 - e^-λ * λ^0 / 0! = **1 - e^λ**
+
+**🔗 See also:** [linked note](#node-s7mttyw)
 
 <br>
 
