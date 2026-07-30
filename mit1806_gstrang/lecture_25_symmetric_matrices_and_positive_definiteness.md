@@ -88,6 +88,8 @@ and Positive Definiteness
 > SYMMETRIC LUÔN CÓ ĐỦ BỘ (n, là số
 > column của A) EIGENVECTOR ĐỘC LẬP
 
+**🔗 See also:** [linked note](./lecture_22_diagonalization_and_powers_of_a.md#node-2jhlbd4)
+
 <br>
 
 <a id="node-jbwmqmp"></a>
@@ -298,6 +300,8 @@ and Positive Definiteness
 >
 > = **u^2 + v^2 chính là square của modulus.**
 
+**🔗 See also:** [linked note](#node-rfbv3be)
+
 <br>
 
 <a id="node-x9kgd1j"></a>
@@ -484,6 +488,8 @@ and Positive Definiteness
 > Và từ đó cho ta **kết luận là x_barTx dương** (? không âm thì
 > đúng hơn chứ, vì norm vector có thể bằng 0), và **ta
 > có thể cancel out hai vế**
+
+**🔗 See also:** [linked note](#node-0el7my9)
 
 <br>
 
