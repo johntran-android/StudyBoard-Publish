@@ -265,6 +265,8 @@ generating Functions
 > trước, đối diện với bài toán kiểu như **survivor** như này thì dùng P(X > x) dễ
 > hơn (G với ý nghĩa P(X > x) như bài trước đã biết, gọi là survivor function)
 
+**🔗 See also:** [linked note](./lec_16_exponential_distribution.md#node-ei7gvpm)
+
 <br>
 
 <a id="node-wf98su3"></a>
@@ -553,6 +555,8 @@ generating Functions
 >
 > Moment Generating Function M(t) = E(e^tX)
 
+**🔗 See also:** [linked note](./lec_18_mgf_continued.md#node-90onk9j)
+
 <br>
 
 <a id="node-arvfm0u"></a>
@@ -777,6 +781,8 @@ generating Functions
 >
 > N'TH MOMENT E(X^n) CHÍNH LÀ ĐẠO HÀM CẤP N CỦA M(t) TẠI 0
 
+**🔗 See also:** [linked note](./lec_18_mgf_continued.md#node-afbqqmv)
+
 <br>
 
 <a id="node-puc0rkm"></a>
@@ -828,6 +834,8 @@ generating Functions
 > Tức là MGF của tổng hai independent variable là bằng tích của MGF của mỗi cái**
 >
 > THEOREM: NẾU X, Y ĐỘC LẬP THÌ **M_(X+Y)(t) = M_X(t)*M_Y(t)**
+
+**🔗 See also:** [linked note](./lec_18_mgf_continued.md#node-quky9sd) · [linked note](./lec_19_joint_conditional_and_marginal_distribution.md#node-yyyepse) · [linked note](./lec_20_multinomial_and_cauchy.md#node-frusjsi) · [linked note](./lec_29_law_of_large_numbers_law_of_central_limit.md#node-jiaaihf)
 
 <br>
 
@@ -906,6 +914,8 @@ generating Functions
 > Vậy MGF của Binomial (n, p) = (p*e^t+q)^n**
 >
 > MGF của Binomial (n, p) = (p*e^t+q)^n
+
+**🔗 See also:** [linked note](./lec_22_transformations_convolution.md#node-6burrip)
 
 <br>
 
@@ -1132,6 +1142,8 @@ generating Functions
 > Normal) trở thành **e^t^2/2**
 >
 > MGF CỦA N(0,1) M(t) = e^t^2/2
+
+**🔗 See also:** [linked note](./lec_14_location_scale_lotus.md#node-3hqg23j) · [linked note](./lec_18_mgf_continued.md#node-pxqpg73) · [linked note](./lec_20_multinomial_and_cauchy.md#node-frusjsi)
 
 <br>
 
@@ -1372,6 +1384,8 @@ generating Functions
 > [a, b] và 0 nếu x ngoài [a,b]. Từ đó ta tính ra **c** = 1/(b-a). Do đó **với Unif(0,
 > 1)**, **f(x) = 1/(1-0) =** **1** khi x trong đoạn [0,1]
 
+**🔗 See also:** [linked note](./lec_12_discrete_vs_continuous_the_uniform.md#node-788jyon)
+
 <br>
 
 <a id="node-3vsn4eu"></a>
@@ -1521,6 +1535,8 @@ generating Functions
 >
 >
 > f(p | Sn=k) ở trên sẽ tỉ lệ thuận **p^k (1-p)^(n-k)**
+
+**🔗 See also:** [linked note](./lec_7_gamblers_ruin_random_variables.md#node-8w71zey)
 
 <br>
 
