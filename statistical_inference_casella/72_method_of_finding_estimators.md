@@ -9,8 +9,6 @@ finding Estimators
 ## 7.2 Method Of
 finding Estimators
 
-**🔗 See also:** [Phương pháp tìm Estimator](#node-zsuc7bv) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-zsuc7bv"></a>
@@ -38,9 +36,6 @@ finding Estimators
 >
 > Nhưng trong những trường hợp khác phức tạp hơn, ta sẽ cần một phương
 > pháp tiếp cận để tìm ra các estimator
-
-**🔗 See also:** [7.2 Method Of
-finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 
 <br>
 
@@ -238,8 +233,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > Qua ví dụ ta sẽ rõ hơn
 
-**🔗 See also:** [Phương pháp tìm Estimator](#node-zsuc7bv) · [Phương pháp moment phân phối chuẩn](#node-bn68hte)
-
 <br>
 
 <a id="node-bn68hte"></a>
@@ -332,8 +325,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 >
 > σ~^ = (1/n) Σi [Xi^2 - θ^2]
-
-**🔗 See also:** [Phương pháp Moment](#node-8qfp0vx) · [Phương pháp moment nhị thức](#node-3tj98mt)
 
 <br>
 
@@ -436,8 +427,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > Giáo sư nói thêm rằng dù là trực giác cho phép mình dự đoán estimator cho p
 > nhưng với k thì khó hơn và method method cho ta tìm ra candidate cho nó
 
-**🔗 See also:** [Phương pháp moment phân phối chuẩn](#node-bn68hte) · [Ước lượng Satterthwaite](#node-fosb15b)
-
 <br>
 
 <a id="node-fosb15b"></a>
@@ -488,7 +477,7 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > (vì ta biết Σi Yi tức là Σi aiYi với ai = 1, là Chi-square, thì ta đoán Σi aiYi cũng
 > sẽ là Chi-square)
 
-**🔗 See also:** [Phương pháp moment nhị thức](#node-3tj98mt) · [Ước lượng bậc tự do Satterthwaite](#node-cm80dbi) · [Bổ đề Chi-square](./53_sampling_from_the_normal_distribution.md#node-udtt0nq)
+**🔗 See also:** [Bổ đề Chi-square](./53_sampling_from_the_normal_distribution.md#node-udtt0nq)
 
 <br>
 
@@ -749,8 +738,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > QUAY LẠI SAU
 
-**🔗 See also:** [Ước lượng Satterthwaite](#node-fosb15b) · [Ước lượng Satterthwaite dương](#node-z0ze1t9)
-
 <br>
 
 <a id="node-z0ze1t9"></a>
@@ -761,8 +748,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 
 > [!NOTE]
 > QUAY LẠI SAU
-
-**🔗 See also:** [Ước lượng bậc tự do Satterthwaite](#node-cm80dbi) · [Ước lượng Hợp lý Tối đa](#node-wxp53go)
 
 <br>
 
@@ -826,8 +811,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > L(**θ**|**x**), tức L(θ1, ...θk|x1,...xn) = Πi=1:n f(xi|θ1...θk) (không khó hiểu, vì joint pmf
 > pdf = tích marginal pmf / pdf do tính chất iid)
 
-**🔗 See also:** [Ước lượng Satterthwaite dương](#node-z0ze1t9) · [Maximum Likelihood Estimator](#node-jkdovk5)
-
 <br>
 
 <a id="node-jkdovk5"></a>
@@ -863,8 +846,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 >
 > Và người ta gọi nó là **MAXIMUM LIKELIHOOD ESTIMATOR**
-
-**🔗 See also:** [Ước lượng Hợp lý Tối đa](#node-wxp53go) · [Khái niệm và nhược điểm MLE](#node-nhpym6g)
 
 <br>
 
@@ -911,8 +892,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > quá trình giải bài toán MLE có thể sẽ khác nhiều nếu như ta chỉ thay đổi dữ
 > liệu một chút xíu. Từ đó khiến ta phải nghi ngờ tính chính xác của MLE.
 
-**🔗 See also:** [Maximum Likelihood Estimator](#node-jkdovk5) · [Điều kiện tìm MLE](#node-l9ary6g)
-
 <br>
 
 <a id="node-l9ary6g"></a>
@@ -954,8 +933,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > Nên ở đây có thể hiểu khi gs nói ta phải check boundary để tìm extrema
 > (tức là khi giá trị lớn nhất / nhỏ nhất lại nằm ở biên)
-
-**🔗 See also:** [Khái niệm và nhược điểm MLE](#node-nhpym6g) · [MLE Phân phối Chuẩn](#node-qe4w7u6)
 
 <br>
 
@@ -1326,8 +1303,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > Vậy phải trong khoảng đó, Hessian vẫn xác định âm khiến cho cái quadratic term
 > **d**T∇^2f(**x*** + α**d**)**d** âm → f(**x*** + t**d**) nhỏ hơn f(**x***). Cho thấy **x*** là local maximum.
 
-**🔗 See also:** [Điều kiện tìm MLE](#node-l9ary6g) · [Tìm MLE không đạo hàm](#node-276or8r)
-
 <br>
 
 <a id="node-276or8r"></a>
@@ -1428,7 +1403,7 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > Vậy Θ^(**X**)  = Xbar(**X**) chính là MLE
 
-**🔗 See also:** [MLE Phân phối Chuẩn](#node-qe4w7u6) · [Ước lượng hợp lý cực đại Bernoulli](#node-x4jgau5) · [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-jhe69j5)
+**🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-jhe69j5)
 
 <br>
 
@@ -1708,8 +1683,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > Vậy p^(**X**) = ΣXi/n hay, Xbar, hay Xbar(**X**) chính là MLE estimator
 
-**🔗 See also:** [Tìm MLE không đạo hàm](#node-276or8r) · [MLE có ràng buộc](#node-ochksqx)
-
 <br>
 
 <a id="node-ochksqx"></a>
@@ -1855,8 +1828,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 >
 > Vậy MLE là θ^mle = Xbar khi 0 ≤ Xbar và θ^mle là 0 nếu ngược lại
-
-**🔗 See also:** [Ước lượng hợp lý cực đại Bernoulli](#node-x4jgau5) · [Binomial MLE K chưa biết](#node-ejujagz)
 
 <br>
 
@@ -2092,8 +2063,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > QUAY LẠI SAU
 
-**🔗 See also:** [MLE có ràng buộc](#node-ochksqx) · [Chứng minh tính bất biến MLE](#node-6d46egj)
-
 <br>
 
 <a id="node-6d46egj"></a>
@@ -2186,7 +2155,7 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > Hay η_mle, cũng là τ(θ)_mle chính là τ(θ_mle)
 
-**🔗 See also:** [Binomial MLE K chưa biết](#node-ejujagz) · [Hàm hợp lý cảm ứng](#node-90k73p1) · [MLE of e-lambda with Delta Method](./101_point_estimation.md#node-jiyzyog)
+**🔗 See also:** [MLE of e-lambda with Delta Method](./101_point_estimation.md#node-jiyzyog)
 
 <br>
 
@@ -2273,8 +2242,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > Và khi đó η^ khiến maximize L*(η|x) được gọi là MLE của η = τ(θ)
 
-**🔗 See also:** [Chứng minh tính bất biến MLE](#node-6d46egj) · [Tính bất biến của MLE](#node-5fmoqr8)
-
 <br>
 
 <a id="node-5fmoqr8"></a>
@@ -2351,8 +2318,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > Vậy chứng minh xong L*(τ(θ)|x) = L(θ^|x)
 
-**🔗 See also:** [Hàm hợp lý cảm ứng](#node-90k73p1) · [Tính bất biến của MLE đa biến](#node-i829lwu)
-
 <br>
 
 <a id="node-i829lwu"></a>
@@ -2390,8 +2355,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > Có thể dùng thêm Hessian (Nhờ học tối ưu mà ta biết điều kiện đủ bậc 2:
 > Là Hessian tại đó xác định âm (vì đang tìm max)
-
-**🔗 See also:** [Tính bất biến của MLE](#node-5fmoqr8) · [MLEs phân phối chuẩn](#node-6nhtwtp)
 
 <br>
 
@@ -2587,8 +2550,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > CÁI NÀY CÓ MỘT KHÁI NIỆM MỚI PROFILE LIKELIHOOD của σ^2
 
-**🔗 See also:** [Tính bất biến của MLE đa biến](#node-i829lwu) · [Điều kiện đủ cực đại](#node-auqb0ls)
-
 <br>
 
 <a id="node-auqb0ls"></a>
@@ -2641,8 +2602,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > là cho thấy matrix Hessian xác định âm ⇨ Theo điều kiện đủ bậc
 > hai thì đây giúp kết luận (θ^1, θ^2) là maximum
 
-**🔗 See also:** [MLEs phân phối chuẩn](#node-6nhtwtp) · [Hessian log likelihood chuẩn](#node-19nyc96)
-
 <br>
 
 <a id="node-19nyc96"></a>
@@ -2663,7 +2622,7 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > Nhưng ý chính gs nói là có thể thấy tính toán rất dài. Do đó nên hạn chế tính
 > Hessian
 
-**🔗 See also:** [Điều kiện đủ cực đại](#node-auqb0ls) · [Bất ổn định của ước lượng MLE](#node-tvdry6j) · [Ước lượng chệch MSE](./73_methods_of_evaluating_estimators.md#node-iyvngjt)
+**🔗 See also:** [Ước lượng chệch MSE](./73_methods_of_evaluating_estimators.md#node-iyvngjt)
 
 <br>
 
@@ -2708,8 +2667,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > Ông cũng nói, cái này là do likelihood function nó quá phẳng quanh lân cận
 > của maximum
 
-**🔗 See also:** [Hessian log likelihood chuẩn](#node-19nyc96) · [Phương pháp Bayesian](#node-1zrz6du)
-
 <br>
 
 <a id="node-1zrz6du"></a>
@@ -2745,8 +2702,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > Rồi, một random sample được lấy từ population indexed bởi θ. Và từ đó prior
 > distribution được cập nhật lại dùng Bayes's rule. Để có posterior distribution
 > Do đó cách tiếp cận này có tên là Bayesian approach là vậy.
-
-**🔗 See also:** [Bất ổn định của ước lượng MLE](#node-tvdry6j) · [Phân phối hậu nghiệm](#node-pkhjlso)
 
 <br>
 
@@ -2791,8 +2746,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > random variable, viết thường cho argument (tức giá trị quan sát / cụ thể của
 > random variable) nữa. Ví dụ X cho random variable và x cho value của nó.
 > Vì bây giờ θ cũng là lower case luôn nhưng nó được đối xử như random variable
-
-**🔗 See also:** [Phương pháp Bayesian](#node-1zrz6du) · [Ước lượng Bayes Binomial](#node-c7vhpqt)
 
 <br>
 
@@ -2965,7 +2918,7 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > observed sample. f(p|y). Và vì nó là một phân phối xác suất, nên để estimate
 >  một điểm giá trị của nó thì lẽ tự nhiên nhất chính là lấy mean.
 
-**🔗 See also:** [Phân phối hậu nghiệm](#node-pkhjlso) · [Ước lượng Bayes và Họ liên hợp](#node-tofw262) · [Ước lượng Bayes Loss Tuyệt đối](./73_methods_of_evaluating_estimators.md#node-w61d148)
+**🔗 See also:** [Ước lượng Bayes Loss Tuyệt đối](./73_methods_of_evaluating_estimators.md#node-w61d148)
 
 <br>
 
@@ -3021,8 +2974,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > THÌ LUÔN CÓ MỘT HỌ CÁC DISTRIBUTION MÀ TỎ RA LÀ LỰA CHỌN
 > TỰ NHIÊN NHẤT ĐỂ LÀM PRIOR. VÀ ĐÓ GỌI LÀ CONJUGATE FAMILY**
 
-**🔗 See also:** [Ước lượng Bayes Binomial](#node-c7vhpqt) · [Gia đình liên hợp](#node-ezdw2sh)
-
 <br>
 
 <a id="node-ezdw2sh"></a>
@@ -3054,8 +3005,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > CONJUGATE FAMILY HAY KHÔNG THÌ CHƯA CHẮC, VÌ NHƯ ĐÃ NÓI
 > PRIOR DISTRIBUTION ĐƯỢC CHỌN LÀ DỰA TRÊN KINH NGHIỆM
 > CỦA EXPERIMENTER.
-
-**🔗 See also:** [Ước lượng Bayes và Họ liên hợp](#node-tofw262) · [Ước lượng Bayes phân phối chuẩn](#node-5ldrh78)
 
 <br>
 
@@ -3344,7 +3293,7 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > θ^_B(x) = [τ^2 / (τ^2 + σ^2)]x + [σ^2 / (τ^2 + σ^2)]μ
 
-**🔗 See also:** [Gia đình liên hợp](#node-ezdw2sh) · [Ước lượng Bayes và trọng số](#node-houeudi) · [Ước lượng Bayes chuẩn](./73_methods_of_evaluating_estimators.md#node-vscj9eh) · [Luật quyết định kiểm định Bayesian](./82_method_of_finding_tests.md#node-zk8yeue) · [Phân phối hậu nghiệm Bayes Normal](./92_methods_of_finding_interval_estimators.md#node-s6b012i)
+**🔗 See also:** [Ước lượng Bayes chuẩn](./73_methods_of_evaluating_estimators.md#node-vscj9eh) · [Luật quyết định kiểm định Bayesian](./82_method_of_finding_tests.md#node-zk8yeue) · [Phân phối hậu nghiệm Bayes Normal](./92_methods_of_finding_interval_estimators.md#node-s6b012i)
 
 <br>
 
@@ -3392,8 +3341,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > Nói chung là có cái gì đó rất hợp lý trong này.
 
-**🔗 See also:** [Ước lượng Bayes phân phối chuẩn](#node-5ldrh78) · [Thuật toán EM](#node-1mb63f8)
-
 <br>
 
 <a id="node-1mb63f8"></a>
@@ -3413,8 +3360,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > Thuật toán này gọi là **Expectation Maximization**. Và nó **đặc biệt phù hợp với
 > những vấn đề bị thiếu dữ liệu.**
-
-**🔗 See also:** [Ước lượng Bayes và trọng số](#node-houeudi) · [Tỷ lệ Poisson đa](#node-bgfmx4q)
 
 <br>
 
@@ -3451,8 +3396,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > Rồi, τi là số dân mỗi quận, mà ta chưa biết, nhưng ta quan sát thấy Xi,...Xn
 > là kết quả khảo sát dân số của mỗi quận. Đây cũng là số nguyên không âm
 > nên ta cho rằng Xi ~ Pois(τi)
-
-**🔗 See also:** [Thuật toán EM](#node-1mb63f8) · [MLE Tham số β, τ](#node-6yw5xf0)
 
 <br>
 
@@ -3921,8 +3864,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > Vậy τ^i = (x1+ y1) / (1 + β^)
 
-**🔗 See also:** [Tỷ lệ Poisson đa](#node-bgfmx4q) · [Hàm likelihood không đầy đủ](#node-qi1xp1x)
-
 <br>
 
 <a id="node-qi1xp1x"></a>
@@ -3967,8 +3908,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 >
 > Và đây là hàm likelihood mà ta muốn maximize.
-
-**🔗 See also:** [MLE Tham số β, τ](#node-6yw5xf0) · [Likelihood Dữ liệu Thiếu/Đủ](#node-5vtypth)
 
 <br>
 
@@ -4022,8 +3961,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > Khi đó nếu khó tính toán với L(θ|**y**), thì có khi sẽ dễ hơn để tính toán với 
 > L(θ|**y**,**x**)
 
-**🔗 See also:** [Hàm likelihood không đầy đủ](#node-qi1xp1x) · [Hàm khả dĩ dữ liệu khuyết](#node-tkdapiz)
-
 <br>
 
 <a id="node-tkdapiz"></a>
@@ -4076,8 +4013,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 > (tạm bỏ qua bước tính toán trên, cơ bản là cũng không khó, tương tự như cách
 > ta đã làm thôi)
-
-**🔗 See also:** [Likelihood Dữ liệu Thiếu/Đủ](#node-5vtypth) · [Thuật toán EM](#node-2vjmewo)
 
 <br>
 
@@ -4291,8 +4226,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > Và tí nữa ta sẽ xem thử tại sao cách làm (thuật toán) này NHẤT ĐỊNH
 > SẼ CONVERGE VỀ θ_MLE
 
-**🔗 See also:** [Hàm khả dĩ dữ liệu khuyết](#node-tkdapiz) · [Tính toán E-step EM](#node-5xvjzb0)
-
 <br>
 
 <a id="node-5xvjzb0"></a>
@@ -4474,8 +4407,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 >
 > ta có E[ log (Π...) [e^-(τ1r (τ1r)^x1 / x1!]
-
-**🔗 See also:** [Thuật toán EM](#node-2vjmewo) · [Tối đa hóa hàm likelihood](#node-ryq60uz)
 
 <br>
 
@@ -4677,8 +4608,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 >
 >
 > Và ta sẽ đi maximize cái này.
-
-**🔗 See also:** [Tính toán E-step EM](#node-5xvjzb0) · [EM: Thay thế X1](#node-y9vv1u6)
 
 <br>
 
@@ -4929,8 +4858,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > likelihood thì nó ra cái dạng tương tự như bài toán maximize log complete data
 > likelihood chỉ khác τ1r thay cho x1 thôi.
 
-**🔗 See also:** [Tối đa hóa hàm likelihood](#node-ryq60uz) · [Hội tụ thuật toán EM](#node-mkv4q7h)
-
 <br>
 
 <a id="node-mkv4q7h"></a>
@@ -4942,8 +4869,6 @@ finding Estimators](#node-po2ayci) · [Phương pháp Moment](#node-8qfp0vx)
 > [!NOTE]
 > QUAY LẠI SAU, nhưng đại ý theorem này cho biết về sự hội tụ về θ^_mle
 > của EM algorithm
-
-**🔗 See also:** [EM: Thay thế X1](#node-y9vv1u6)
 
 <br>
 
