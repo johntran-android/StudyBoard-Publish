@@ -259,6 +259,8 @@ f(x0) HOÀN TOÀN CÓ THỂ LỚN HƠN 1
 >
 > Đó là cách ta **chuyển từ PDF sang CDF**
 
+**🔗 See also:** [linked note](./lec_13_normal_distribution.md#node-j00lakx)
+
 <br>
 
 <a id="node-lk4y45a"></a>
@@ -324,6 +326,8 @@ f(x0) HOÀN TOÀN CÓ THỂ LỚN HƠN 1
 > Thế mà, theo định nghĩa thì, với X là continuous random
 > variable P(X ∈ A) = ∫A f(t)dt  ⇨ F(x) = P(X ≤ x)  sẽ tính bằng ∫-inf:x f_(t)dt.
 > Vậy F(x) = ∫-inf:x f(t)dt nên theo FTC2 thì d/dx F(x) chính là f(x).
+
+**🔗 See also:** [linked note](./lec_20_multinomial_and_cauchy.md#node-f968zqv)
 
 <br>
 
@@ -687,6 +691,8 @@ f(x0) HOÀN TOÀN CÓ THỂ LỚN HƠN 1
 >
 > Quay lại đây, từ đó: c(b-a) = 1 => **c = 1/(b-a)**
 
+**🔗 See also:** [linked note](./lec_17_moment_generating_functions.md#node-tvhyc3q)
+
 <br>
 
 <a id="node-35v9xqu"></a>
@@ -712,6 +718,8 @@ f(x0) HOÀN TOÀN CÓ THỂ LỚN HƠN 1
 >
 > Thế thì tương tự ta **chỉ cần tích phân từ a đến x** (vì tích phân ngoài đoạn a,b
 > đều bằng 0 rồi)
+
+**🔗 See also:** [linked note](./lec_13_normal_distribution.md#node-j00lakx)
 
 <br>
 
@@ -830,6 +838,8 @@ f(x0) HOÀN TOÀN CÓ THỂ LỚN HƠN 1
 >
 > **LOTUS - LAW OF UNCONSCIOUS
 > STATISTICIAN**
+
+**🔗 See also:** [linked note](./lec_14_location_scale_lotus.md#node-l7ox3d2)
 
 <br>
 
