@@ -76,6 +76,8 @@ matrices; Fourier Series
 > 1** (vì nếu nó < 1 thì sẽ dẫn tới tình trạng nhỏ dần, còn
 > nếu > 1 thì nó sẽ lớn dần)
 
+**🔗 See also:** [linked note](./lecture_23_differential_equations_and_expat.md#node-u8hhsmk)
+
 <br>
 
 <a id="node-w059ddz"></a>
@@ -184,6 +186,8 @@ matrices; Fourier Series
 >
 >
 > **c1*λ1^k*x1 + c2*λ2^k*x2......+cn*λn^k*xn**
+
+**🔗 See also:** [linked note](./lecture_22_diagonalization_and_powers_of_a.md#node-fmdbu9q)
 
 <br>
 
@@ -365,6 +369,8 @@ matrices; Fourier Series
 > (*): Chỗ này có vẻ như gs đang ghi nhầm là N(AT), bởi vì rõ
 > ràng là ta đang xét matrix (A - I)
 
+**🔗 See also:** [linked note](#node-ulnm7rm)
+
 <br>
 
 <a id="node-2b3cfls"></a>
@@ -482,6 +488,8 @@ matrices; Fourier Series
 > nghĩa là x chính là eigenvector của A với eigenvalue = 1
 > rồi. Đâu có cần phải dựa vào việc biết eigenvalue của AT
 > rồi suy ra nó cũng là eigenvalue của A
+
+**🔗 See also:** [linked note](#node-ueu3jed)
 
 <br>
 
