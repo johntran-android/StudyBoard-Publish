@@ -470,6 +470,8 @@
 >
 > Và từ đó giải ra Δy, giúp update cả x, λ, t, gọi là primal-dual search direction
 
+**🔗 See also:** [linked note](#node-59l9hj1)
+
 <br>
 
 <a id="node-s6oay78"></a>
@@ -1192,6 +1194,8 @@
 >
 > ||r(y + tΔy_nt)|| ≤ (1 - t) ||r(y)|| + (LK^2/2) t^2 ||r(y)||^2
 
+**🔗 See also:** [linked note](#node-rxkrzze)
+
 <br>
 
 <a id="node-y3c1c51"></a>
@@ -1594,6 +1598,8 @@
 > matrix, tón (n + p) flops. Và cuối cùng là LTx = z2, là hệ với upper triangular
 > matrix, chính là back substitution, tốn (n + p)^2 flops.
 
+**🔗 See also:** [linked note](./appendix_c.md#node-kw2xw79)
+
 <br>
 
 <a id="node-pjjarce"></a>
@@ -1703,6 +1709,8 @@
 > Tóm lại tốn: f + (p + 1)s + (p^2)n + 2np + s 
 >
 > coi như f + ps + (p^2)n + (1/3)p^3
+
+**🔗 See also:** [C.4 Block elimination](./appendix_c.md#node-xcllrby)
 
 <br>
 
@@ -1894,6 +1902,8 @@
 >
 > Mình sẽ nói thêm về việc tìm Δv_nt ở note tiếp theo
 
+**🔗 See also:** [linked note](#node-b4cbc9q)
+
 <br>
 
 <a id="node-5nxrces"></a>
@@ -2011,6 +2021,8 @@
 >
 > TÓM LẠI CHÍNH MUỐN NÓI CÁCH GIẢI THEO BLOCK ELIMINATION
 > VỪA NÓI, CÓ CÙNG COMPLEXITY VỚI CÁCH NÀY (DUAL)
+
+**🔗 See also:** [linked note](#node-yvk3urk)
 
 <br>
 
@@ -2165,6 +2177,8 @@
 > Với w như đã nói là solution của (3): và với Hinv là diag(x)^2, - Hinvg là x
 > thì (3) là A diag(x)^2 ATw = Ax = b (Ax là b còn gì nữa)
 
+**🔗 See also:** [linked note](#node-bjz5p2c)
+
 <br>
 
 <a id="node-dlj7nj2"></a>
@@ -2235,6 +2249,8 @@
 >
 > Và ta đã chứng minh (ở những phần trước) là hai cách 1, và 2 này
 > thật ra có cùng complexity
+
+**🔗 See also:** [linked note](#node-5nxrces)
 
 <br>
 
@@ -3206,6 +3222,8 @@
 > hàm f theo hướng vector Newton's step Δx_nt.
 >
 > Chứng minh cho những cái này thì đã làm ở trước rồi (theo link)
+
+**🔗 See also:** [linked note](./chap_95.md#node-3vdq21w)
 
 <br>
 
