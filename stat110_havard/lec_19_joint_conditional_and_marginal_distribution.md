@@ -91,6 +91,8 @@ marginal Distribution
 > Và gs nói **tích phân kép** cũng chỉ là, ta t**ích phân với x trước**, **coi y như
 > constant** và sau đó **tích phân với y, coi x như constant**
 
+**🔗 See also:** [linked note](./lec_20_multinomial_and_cauchy.md#node-uim6914)
+
 <br>
 
 <a id="node-k9drwbe"></a>
@@ -237,6 +239,8 @@ marginal Distribution
 > dụ như **f(y|x)** là **xác suất Y mang giá trị trong một vùng rất nhỏ quanh y**
 > **DỰA TRÊN VIỆC** biết **X mang giá trị trong một vùng rất nhỏ quanh x.**
 
+**🔗 See also:** [linked note](./lec_4_conditional_probability.md#node-pxucmn2)
+
 <br>
 
 <a id="node-72zcp07"></a>
@@ -281,6 +285,8 @@ marginal Distribution
 >
 > X,Y INDEPENDENT IF f_X,Y(x,y) = f_X(x)*f_Y(y)
 > (JOINT PDF = TÍCH MARGINAL PDF với mọi x, y)
+
+**🔗 See also:** [linked note](./lec_18_mgf_continued.md#node-qpqn9zg)
 
 <br>
 
@@ -564,6 +570,8 @@ marginal Distribution
 > CHỨNG MINH THEOREM: X,Y INDEPENDENT thì
 > E[XY] = EX*EY NHỜ 2D LOTUS
 
+**🔗 See also:** [linked note](./lec_17_moment_generating_functions.md#node-3j4ghan) · [linked note](./lec_21_covariance_correlation.md#node-7wonc98)
+
 <br>
 
 <a id="node-choxtlk"></a>
@@ -583,6 +591,8 @@ marginal Distribution
 >
 > Ta sẽ chứng minh theorem này với continuous case, với discrete cũng
 > tương tự
+
+**🔗 See also:** [linked note](./lec_21_covariance_correlation.md#node-2duont2)
 
 <br>
 
@@ -663,6 +673,8 @@ marginal Distribution
 >
 >
 > Gs cho rằng với LOTUS, ta đã dễ dàng chứng minh được theorem này
+
+**🔗 See also:** [linked note](./lec_29_law_of_large_numbers_law_of_central_limit.md#node-jiaaihf)
 
 <br>
 
