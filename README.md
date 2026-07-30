@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,015 notes` · `~17,401 screenshots` · `17 notebooks`**
+**`~12,017 notes` · `~17,408 screenshots` · `17 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -463,7 +463,7 @@ Derivative Approx](numerical_optimization_jnocedal/81_finite_difference_derivati
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_jnocedal/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 - [A.1 Matrix Factorizations: Cholesky, LU, QR](numerical_optimization_jnocedal/a1_matrix_factorizations_cholesky_lu_qr.md) — `9n / 11i`
 
-### 📂 Pattern Recognition Machine Learning_C.Bishop (📝 326 Notes | 📸 469 Screenshots)
+### 📂 Pattern Recognition Machine Learning_C.Bishop (📝 328 Notes | 📸 476 Screenshots)
 <!-- key: pattern_recognition_machine_learning_cbishop -->
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
@@ -511,7 +511,7 @@ Of Dimensionality](pattern_recognition_machine_learning_cbishop/14_the_curse_of_
 - [3.1.3 Sequential Learning](pattern_recognition_machine_learning_cbishop/313_sequential_learning.md) — `1n / 2i`
 - [3.1.5 Multiple outputs](pattern_recognition_machine_learning_cbishop/315_multiple_outputs.md) — `3n / 3i`
 - [3.1.4 Regularized least squares](pattern_recognition_machine_learning_cbishop/314_regularized_least_squares.md) — `3n / 7i`
-- [3.2.0 The Bias-Variance Decomposition](pattern_recognition_machine_learning_cbishop/320_the_bias_variance_decomposition.md) — `5n / 6i`
+- [3.2.0 The Bias-Variance Decomposition](pattern_recognition_machine_learning_cbishop/320_the_bias_variance_decomposition.md) — `7n / 13i`
 - [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) — `19n / 22i`
 - [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) — `5n / 7i`
 
