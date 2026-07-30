@@ -1,6 +1,6 @@
 # 10.3 Algorithms for nonlinear least-squares problem
 
-📊 **Progress:** `9` Notes | `15` Screenshots | `4` AI Reviews
+📊 **Progress:** `9` Notes | `16` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-i8zrnvn"></a>
@@ -758,6 +758,16 @@
 > Bài phân tích của bạn rất sâu sắc, đặc biệt là phần chứng minh chi tiết việc phương trình (10.33) là phương trình chuẩn (normal equation) của bài toán bình phương tối thiểu (10.35). Cách bạn diễn giải và dẫn ra công thức là rất chính xác, thể hiện sự hiểu biết vững chắc về lý thuyết, mặc dù có thể làm rõ hơn một chút các bước trung gian khi lấy đạo hàm của biểu thức ||Ax - b||^2 để đạt độ chặt chẽ tuyệt đối.
 
 **🔗 See also:** [Theorem 4.1](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-6p1mgzb)
+
+<br>
+
+<a id="node-gb1ww4r"></a>
+
+- **Triển khai Levenberg-Marquardt**
+
+<p align="center"><kbd><img src="assets/i80shtmymeq.png" width="80%"></kbd></p>
+
+**🔗 See also:** [Algorithm 4.1 (Trust Region)](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-c4gu30d)
 
 <br>
 
