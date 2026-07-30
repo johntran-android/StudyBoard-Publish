@@ -9,8 +9,6 @@ from A Random Sample
 ## 5.2 Σ Of Random Variables
 from A Random Sample
 
-**🔗 See also:** [Biến Thống Kê Từ Mẫu](#node-qor4jdy) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-qor4jdy"></a>
@@ -68,9 +66,6 @@ from A Random Sample
 > Vậy thì những gì trong chương 4 mà mình đã học sẽ giúp ta TÍNH TOÁN
 > DISTRIBUTION CỦA Y THEO DISTRIBUTION CỦA X1, X2 ,....Xn
 
-**🔗 See also:** [5.2 Σ Of Random Variables
-from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw)
-
 <br>
 
 <a id="node-cnykxmw"></a>
@@ -98,8 +93,6 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 >
 > Trong phần này ta sẽ học các đặc điểm của SAMPLING
 > DISTRIBUTION
-
-**🔗 See also:** [Biến Thống Kê Từ Mẫu](#node-qor4jdy) · [Statistic và phân phối lấy mẫu](#node-138bli1)
 
 <br>
 
@@ -142,8 +135,6 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 >
 >
 > Và có 3 lạoi hay dùng nhất
-
-**🔗 See also:** [Phân phối lấy mẫu](#node-cnykxmw) · [Thống kê mẫu cơ bản](#node-8bhfv8j)
 
 <br>
 
@@ -194,7 +185,7 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 > sẽ chỉ possible value (hay giá trị cụ thể, hay giá trị quan sát được, cũng
 > như nhau) của X_bar, S^2, S
 
-**🔗 See also:** [Statistic và phân phối lấy mẫu](#node-138bli1) · [Tính chất trung bình phương sai mẫu](#node-jhe69j5) · [Point Estimation: Variance Estimation](./101_point_estimation.md#node-3dm7cfv)
+**🔗 See also:** [Point Estimation: Variance Estimation](./101_point_estimation.md#node-3dm7cfv)
 
 <br>
 
@@ -310,7 +301,7 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 >
 > ⇔ **(n - 1) s^2 = Σi xi^2 - Σi x_bar^2**
 
-**🔗 See also:** [Thống kê mẫu cơ bản](#node-8bhfv8j) · [Kỳ vọng và Phương sai Tổng Mẫu](#node-ii0ww7t) · [Tìm MLE không đạo hàm](./72_method_of_finding_estimators.md#node-276or8r) · [Bootstrap Variance Formula](./101_point_estimation.md#node-uvh5j60)
+**🔗 See also:** [Tìm MLE không đạo hàm](./72_method_of_finding_estimators.md#node-276or8r) · [Bootstrap Variance Formula](./101_point_estimation.md#node-uvh5j60)
 
 <br>
 
@@ -359,8 +350,6 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 > theo lối sampling without replacement, thì dù các random variable X1,..Xn
 > KHÔNG MUTUAL INDEPENDENT, nhưng CHÚNG VẪN CÓ CÙNG MARGINAL
 > DISTRIBUTION (IDENTICALLY DISTRIBUTED)
-
-**🔗 See also:** [Tính chất trung bình phương sai mẫu](#node-jhe69j5) · [Phương sai tổng hàm độc lập](#node-j3jux7k)
 
 <br>
 
@@ -592,8 +581,6 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 >
 >
 > Do đó chứng minh xong **Var[Σi g(Xi)] = n Var[g(X1)]**
-
-**🔗 See also:** [Kỳ vọng và Phương sai Tổng Mẫu](#node-ii0ww7t) · [Tính chất trung bình phương sai mẫu](#node-411jdqg)
 
 <br>
 
@@ -880,7 +867,7 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 >
 > = **σ^2  Chứng minh xong**
 
-**🔗 See also:** [Phương sai tổng hàm độc lập](#node-j3jux7k) · [Ước lượng không chệch](#node-p3l84lw) · [Luật số lớn yếu](./55_convergence_concepts.md#node-j5m3pa1) · [Tính không chệch Xbar S^2](./73_methods_of_evaluating_estimators.md#node-dgdrvpi) · [Ước lượng không chệch Poisson](./73_methods_of_evaluating_estimators.md#node-0ecqsqo) · [Tính nhất quán của Xbar](./101_point_estimation.md#node-47kutgs) · [Point Estimation: Variance Estimation](./101_point_estimation.md#node-3dm7cfv)
+**🔗 See also:** [Luật số lớn yếu](./55_convergence_concepts.md#node-j5m3pa1) · [Tính không chệch Xbar S^2](./73_methods_of_evaluating_estimators.md#node-dgdrvpi) · [Ước lượng không chệch Poisson](./73_methods_of_evaluating_estimators.md#node-0ecqsqo) · [Tính nhất quán của Xbar](./101_point_estimation.md#node-47kutgs) · [Point Estimation: Variance Estimation](./101_point_estimation.md#node-3dm7cfv)
 
 <br>
 
@@ -958,8 +945,6 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 >
 > Và nhớ lại trong cuốn Deep Learning của Yoshua bengio mình đã từng
 > thấy tác giả nói về vụ này
-
-**🔗 See also:** [Tính chất trung bình phương sai mẫu](#node-411jdqg) · [Chứng minh PDF Sample Mean](#node-vvlk5d8)
 
 <br>
 
@@ -1095,8 +1080,6 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 >
 > = **n f_X1+X2+...Xn(nx) Chứng minh xong fXbar(x) = nfX1+X2+...Xn(nx)**
 
-**🔗 See also:** [Ước lượng không chệch](#node-p3l84lw) · [Phân phối lấy mẫu Xbar](#node-lm7jg65)
-
 <br>
 
 <a id="node-lm7jg65"></a>
@@ -1216,8 +1199,6 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 >
 > **chính là MY(t/n)**
 
-**🔗 See also:** [Chứng minh PDF Sample Mean](#node-vvlk5d8) · [Phân phối trung bình mẫu](#node-c034x4w)
-
 <br>
 
 <a id="node-c034x4w"></a>
@@ -1310,7 +1291,7 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 >
 > QUAY LẠI SAU**
 
-**🔗 See also:** [Phân phối lấy mẫu Xbar](#node-lm7jg65) · [Công thức tích chập Z=X+Y](#node-8ukvs63) · [Phân phối trung bình mẫu Poisson](./56_generating_random_sample.md#node-qmu12n8) · [Hàm lực β(θ) phân phối chuẩn](./83_methods_of_evaluating_test.md#node-55xkcix)
+**🔗 See also:** [Phân phối trung bình mẫu Poisson](./56_generating_random_sample.md#node-qmu12n8) · [Hàm lực β(θ) phân phối chuẩn](./83_methods_of_evaluating_test.md#node-55xkcix)
 
 <br>
 
@@ -1660,8 +1641,6 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 > TRỌNG. QUA CÁC SÁCH CỦA C.BISHOP, YOSHUA BENGIO, GẶP RẤT 
 > NHIỀU
 
-**🔗 See also:** [Phân phối trung bình mẫu](#node-c034x4w) · [Giới hạn tích phân chập](#node-5ol3wjb)
-
 <br>
 
 <a id="node-5ol3wjb"></a>
@@ -1781,8 +1760,6 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 > Và tương tự thì cách làm này cũng có thể giúp ta tìm pdf của hiệu
 > tích, thương hai random variable**
 
-**🔗 See also:** [Công thức tích chập Z=X+Y](#node-8ukvs63) · [Trung bình mẫu Cauchy](#node-29xhnzg)
-
 <br>
 
 <a id="node-29xhnzg"></a>
@@ -1798,7 +1775,7 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 > Cauchy thì cũng là Cauchy luôn, với scale parameters bằng tổng các
 > scale params
 
-**🔗 See also:** [Giới hạn tích phân chập](#node-5ol3wjb) · [Phân phối TB mẫu Location-Scale](#node-4qucutj) · [Biến đổi PDF Location-Scale](./35_location_and_scale_families.md#node-cs2rm3i)
+**🔗 See also:** [Biến đổi PDF Location-Scale](./35_location_and_scale_families.md#node-cs2rm3i)
 
 <br>
 
@@ -1970,8 +1947,6 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 > Tương tự vậy Z1 = g(X1) (g(z) = x σ + μ), cũng sẽ độc lập với Z2 = g(X2)...
 > ⇨ Z1,..Zn cũng mutually independent ⇨ từ đó chúng chính là một random
 > sample có population pdf f(z)
-
-**🔗 See also:** [Trung bình mẫu Cauchy](#node-29xhnzg) · [Trung bình mẫu Location Scale](#node-put8ifc)
 
 <br>
 
@@ -2259,8 +2234,6 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 > là σ) trong khi đó với các distribution khác ví dụ như normal, thì càng nhiều mẫu,
 > sẽ càng giảm variance của Xbar (vì áp dụng được theorem VarXbar  = σ^2 / n
 
-**🔗 See also:** [Phân phối TB mẫu Location-Scale](#node-4qucutj) · [Phân phối thống kê hàm mũ](#node-h84h2nr)
-
 <br>
 
 <a id="node-h84h2nr"></a>
@@ -2460,7 +2433,7 @@ from A Random Sample](#node-ii9obi5) · [Phân phối lấy mẫu](#node-cnykxmw
 >
 > QUAY LẠI SAU
 
-**🔗 See also:** [Trung bình mẫu Location Scale](#node-put8ifc) · [Phân phối trung bình mẫu Poisson](./56_generating_random_sample.md#node-qmu12n8)
+**🔗 See also:** [Phân phối trung bình mẫu Poisson](./56_generating_random_sample.md#node-qmu12n8)
 
 <br>
 
