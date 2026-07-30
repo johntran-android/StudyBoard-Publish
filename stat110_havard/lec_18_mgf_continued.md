@@ -92,6 +92,8 @@ Pois(λ+µ)
 > có **rất nhiều điểm tương đồng giữa variance** (trong **statistic**) với
 > **moment of inertia** (mô men quán tính)
 
+**🔗 See also:** [linked note](./lec_16_exponential_distribution.md#node-4o7b4oy) · [linked note](./lec_16_exponential_distribution.md#node-6fh3808)
+
 <br>
 
 <a id="node-k9xqo34"></a>
@@ -222,7 +224,7 @@ Pois(λ+µ)
 >
 > - Tính MGF M(t) của Expo(1) = 1/(1-t) t < 1
 
-**🔗 See also:** [Exponential Distribution PDF](./lec_16_exponential_distribution.md#node-4qgm8vv)
+**🔗 See also:** [Exponential Distribution PDF](./lec_16_exponential_distribution.md#node-4qgm8vv) · [linked note](./lec_24_gamma_distribution_poisson.md#node-v9cm6ey)
 
 <br>
 
@@ -241,6 +243,8 @@ Pois(λ+µ)
 > Thì trong trường hợp này, khoảng đó là **(-infinity, 1)** hoặc ta có thể nói rằng trong 
 > (**-1, 1)**. (có nghĩa là yêu cầu t<1 cho phép function finite trong khoảng (-1, 1) nên
 > thỏa yêu cầu về tính valid của MGF
+
+**🔗 See also:** [linked note](./lec_17_moment_generating_functions.md#node-n12rmsw)
 
 <br>
 
@@ -307,6 +311,8 @@ Pois(λ+µ)
 > 2) ngược lại **có Geometric series** ta sẽ **collapse** nó thành dạng **Geometric
 > series result**
 
+**🔗 See also:** [linked note](./lec_9_expectation_indicator_random_variables_linearity.md#node-pzjjt7s)
+
 <br>
 
 <a id="node-afbqqmv"></a>
@@ -354,6 +360,8 @@ Pois(λ+µ)
 >
 > Từ đó cho phép ta **ĐỌC LUÔN RẰNG: 1ST MOMENT (EX) LÀ 1!, 2ND MOMENT E(X^2) LÀ 2!**
 
+**🔗 See also:** [linked note](./lec_17_moment_generating_functions.md#node-rc1zjw8)
+
 <br>
 
 <a id="node-4s1og1h"></a>
@@ -390,6 +398,8 @@ Pois(λ+µ)
 >
 > Nên nếu Y ~ Expo(λ) thì mean Y tức EY = 1/λ, thì để có random variable có
 > mean = 1 thì ta phải nhân với λ. Nên X = λ*Y sẽ là ~ Expo(1)
+
+**🔗 See also:** [linked note](./lec_16_exponential_distribution.md#node-83wlarz)
 
 <br>
 
@@ -436,6 +446,8 @@ Pois(λ+µ)
 > [!NOTE]
 > Tương tự như vậy bữa trước ta đã **tìm MGF của standard normal Z ~ N(0,1)** thì
 > bằng cách đặt **X = μ + σZ** thì ta **có thể tính MGF của mọi normal N(μ, σ^2) r.v**
+
+**🔗 See also:** [linked note](./lec_17_moment_generating_functions.md#node-cc2zxo3)
 
 <br>
 
@@ -493,6 +505,8 @@ Pois(λ+µ)
 >
 >
 > VỚI N LẺ ĐỀU BẰNG 0
+
+**🔗 See also:** [linked note](./lec_13_normal_distribution.md#node-u3y0li3) · [linked note](./lec_21_covariance_correlation.md#node-43m0k5w)
 
 <br>
 
@@ -644,6 +658,8 @@ Pois(λ+µ)
 > Thì tiếp theo ta sẽ thảo luận **MGF của Poisson**, mà như ta đã biết
 > **Pois(lambda)** r.v có **mean** và **variance** đều là **lambda**
 
+**🔗 See also:** [linked note](./lec_14_location_scale_lotus.md#node-9x8l1ro)
+
 <br>
 
 <a id="node-mqvx1hy"></a>
@@ -783,6 +799,8 @@ Pois(λ+µ)
 >
 > Do đó ta có: M_(X+Y)(t) = e^[**λ**(e^t-1)] * e^[**µ**(e^t-1)] = **e^[(λ+µ)(e^t-1)]**
 
+**🔗 See also:** [linked note](./lec_17_moment_generating_functions.md#node-3j4ghan)
+
 <br>
 
 <a id="node-qm2eavg"></a>
@@ -801,6 +819,8 @@ Pois(λ+µ)
 >
 > Nếu Y ~ Pois(µ) và X~Pois(λ) và biết X, Y
 > INDEPENDENT thì X+Y ~ Pois(λ+µ)
+
+**🔗 See also:** [linked note](./lec_26_conditional_expectation.md#node-vxn19m5)
 
 <br>
 
@@ -845,6 +865,8 @@ Pois(λ+µ)
 > joint distribution của việc **NHÂN** PDF, CDF, PMF của các r.v
 >
 > JOINT DISTRIBUTION
+
+**🔗 See also:** [linked note](./lec_13_normal_distribution.md#node-gfyor8l)
 
 <br>
 
@@ -963,6 +985,8 @@ Pois(λ+µ)
 >
 > X, Y INDEPENDENT KHI VÀ CHỈ KHI JOINT CDF,
 > PMF, PDF = TÍCH CÁC MARGINAL CDF, PMF, PDF
+
+**🔗 See also:** [linked note](./lec_19_joint_conditional_and_marginal_distribution.md#node-lzp90m9)
 
 <br>
 
