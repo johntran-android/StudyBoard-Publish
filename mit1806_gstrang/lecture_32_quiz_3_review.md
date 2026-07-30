@@ -779,6 +779,8 @@
 > vector U nhưng sai dấu. Bởi lẽ một eigenvector chỉ nói
 > về phương, còn chiều nào cũng là eigenvector thôi,
 
+**🔗 See also:** [linked note](./lecture_29_singular_value_decomposition.md#node-zxzonui)
+
 <br>
 
 <a id="node-chel703"></a>
