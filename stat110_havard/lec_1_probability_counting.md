@@ -467,6 +467,8 @@
 > Và có thể thấy với việc có hoàn lại (sampling with replacement) thì trong các possible
 > outcome sẽ có các outcome là [đỏ, đỏ, đỏ] hay [vàng, vàng, vàng]
 
+**🔗 See also:** [linked note](./lec_2_story_proofs_axioms_of_probability.md#node-1kbabm7)
+
 <br>
 
 <a id="node-b07ux0r"></a>
