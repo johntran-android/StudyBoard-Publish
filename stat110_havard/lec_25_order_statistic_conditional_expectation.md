@@ -75,6 +75,8 @@ conditional Expectation
 > Thời gian chờ đến lượt được phục vụ khi đứng ở vị trí thứ n sẽ là tổng
 > n Expo(λ) nên nó sẽ là một Gamma(n, λ)
 
+**🔗 See also:** [linked note](./lec_24_gamma_distribution_poisson.md#node-kjg1zee)
+
 <br>
 
 <a id="node-rip9kxc"></a>
@@ -109,6 +111,8 @@ conditional Expectation
 > Bằng story proof chứng minh tổng
 > của Gamma(a, λ) và Gamma(b, λ) sẽ
 > là một Gamma(a+b, λ)
+
+**🔗 See also:** [linked note](./lec_30_chi_square_student_t_multi_variate_gaussian.md#node-mim5nb8)
 
 <br>
 
@@ -193,6 +197,8 @@ conditional Expectation
 >
 >
 > Về kí hiệu **∂(x,y)/∂(t,w)**, trong 1801 đã học
+
+**🔗 See also:** [linked note](./lec_22_transformations_convolution.md#node-xthrhaz)
 
 <br>
 
@@ -684,6 +690,8 @@ conditional Expectation
 >
 >
 > Tương tự E(X+Y) = a+b. Vậy Kết quả là a/a+b khớp với đáp án tính ra từ EX^n
+
+**🔗 See also:** [linked note](./lec_24_gamma_distribution_poisson.md#node-o7l8llf) · [linked note](./lec_27_conditional_expectation_given_an_rv.md#node-6y8ive2)
 
 <br>
 
