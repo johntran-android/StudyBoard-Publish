@@ -812,6 +812,8 @@ random Variables
 >
 > CÔNG THỨC CỦA BIN(N,P) PMF
 
+**🔗 See also:** [linked note](./lec_17_moment_generating_functions.md#node-m3xzfhx) · [linked note](./lec_8_random_variables_their_distributions.md#node-8rvz0qj)
+
 <br>
 
 <a id="node-325itnp"></a>
@@ -823,6 +825,8 @@ random Variables
 > k bằng mấy** (integer từ 0 tới n) thì **P(X=k) là bao nhiêu**
 >
 > PROBABILITY MASS FUNCTION - PMF
+
+**🔗 See also:** [linked note](./lec_15_midterm_review.md#node-5hqe5ma)
 
 <br>
 
