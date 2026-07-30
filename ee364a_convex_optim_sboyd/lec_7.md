@@ -97,6 +97,8 @@
 >
 > OPTIMAL & PARETO OPTIMAL
 
+**🔗 See also:** [linked note](./lec_2.md#node-x7fv2jz)
+
 <br>
 
 <a id="node-0uq0na4"></a>
@@ -565,6 +567,8 @@
 > Dù chưa hiểu lắm nhưng có thể hiểu đại khái là làm vậy ta sẽ tìm
 > ra support hyperplane của set O
 
+**🔗 See also:** [Dual characterization of minimal elements](./lec_3.md#node-f5go1ga)
+
 <br>
 
 <a id="node-80zb98n"></a>
@@ -977,6 +981,8 @@
 > Và miễn là μ dương - ứng với λ1, λ2 đều > 0 (λ ≻ ) thì x sẽ là minimum 
 > của bài toán này và đồng thời sẽ là Pareto optimal của bài toán gốc
 
+**🔗 See also:** [linked note](./lec_9b.md#node-uimksyy)
+
 <br>
 
 <a id="node-1kowu9l"></a>
@@ -1219,6 +1225,8 @@
 >
 > LOWER BOUND PROPERTY: g(λ,v) <= p*
 
+**🔗 See also:** [Partial minimization](./lec_4.md#node-znif4tu)
+
 <br>
 
 <a id="node-ilfy28d"></a>
@@ -1258,6 +1266,8 @@
 >
 > 5.1.3 LOWER BOUNDS ON OPTIMAL VALUE
 
+**🔗 See also:** [linked note](./lec_8_a.md#node-3hxz63z)
+
 <br>
 
 <a id="node-ekh1tgc"></a>
@@ -1284,6 +1294,8 @@
 > 5.1 LAGRANGE DUAL FUNCTION
 >
 > 5.1.2 THE LAGRANGE DUAL FUNCTION
+
+**🔗 See also:** [mở rộng ra với **pointwise supremum**](./lec_4.md#node-93dza2e) · [linked note](./lec_8_a.md#node-kjqyjrr)
 
 <br>
 
@@ -1513,6 +1525,8 @@
 > Mà một khi nó nằm trong rowspace thì nó chính là x_particular. Vì x_complete như đã nói là
 > x_particular + x_null
 
+**🔗 See also:** [First-order condition](./lec_3.md#node-l3oqmgj)
+
 <br>
 
 <a id="node-vcjpi3n"></a>
@@ -1629,6 +1643,8 @@
 > STANDARD FORM LP: DÙNG LAGRANGIAN  GIẢI BÀI
 > TOÁN LP Ở DẠNG CHUẨN
 
+**🔗 See also:** [Bài toán đối ngẫu Lagrange](./lec_8_a.md#node-0ndyxau)
+
 <br>
 
 <a id="node-iahtqu4"></a>
@@ -1643,6 +1659,8 @@
 <a id="node-agqew85"></a>
 
 <p align="center"><kbd><img src="assets/y3owj90x33.png" width="80%"></kbd></p>
+
+**🔗 See also:** [linked note](./lec_9.md#node-x4apjy4)
 
 <br>
 
@@ -1763,6 +1781,8 @@
 >
 > EQUALITY CONSTRAINED NORM MINIMIZATION
 
+**🔗 See also:** [Conjugate function của norm](./lec_4.md#node-j3bjf6y)
+
 <br>
 
 <a id="node-2udlnvh"></a>
@@ -1786,6 +1806,8 @@
 > ÁP DỤNG LAGRANGIAN DUAL FUNCTION 
 >
 > TÌM LOWER BOUND CỦA TWO WAY PARTITIONING
+
+**🔗 See also:** [linked note](./lec_8_a.md#node-wab6bf3)
 
 <br>
 
