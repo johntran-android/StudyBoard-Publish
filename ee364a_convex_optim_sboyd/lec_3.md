@@ -93,6 +93,8 @@
 >
 > SUPPORTING HYPERPLANE THEOREM
 
+**🔗 See also:** [Optimality criterion](./lec_5.md#node-bwy9own)
+
 <br>
 
 <a id="node-brtgbm0"></a>
@@ -413,6 +415,8 @@
 > K* = {y | yTx ≥ 0} for all x ∈ K (dấu ≥)
 >
 > Dual cones của cone K là tập (set) **các điểm (vector) mà khi dot product với mọi vector của cone K đều ra không âm**
+
+**🔗 See also:** [Chứng minh:  x là minimum của S wrt K ⇔ λTx unique minimize λTz với mọi λ thuộc int K*](#node-sniocip)
 
 <br>
 
@@ -921,6 +925,8 @@
 >
 > Bài làm cho thấy sự hiểu biết sâu sắc và khả năng giải thích rõ ràng các khái niệm phức tạp, đặc biệt là phần chứng minh chiều ngược lại đã được diễn giải tốt hơn so với văn bản gốc. Tuy nhiên, định nghĩa về 'int K*' còn chưa hoàn toàn chính xác và có một lỗi chính tả nhỏ trong phần chứng minh nghịch đảo.
 
+**🔗 See also:** [Định nghĩa dual cones](#node-ladwkad)
+
 <br>
 
 <a id="node-m24dw9f"></a>
@@ -1049,6 +1055,8 @@
 > **🤖 AI Feedback** — ❌ Score: **55/100**
 >
 > Bài phân tích đã bám sát cấu trúc chứng minh từ tài liệu gốc. Tuy nhiên, có những thiếu sót nghiêm trọng trong định nghĩa phần tử "minimal" và "không minimal", thể hiện sự thiếu chính xác về mặt toán học. Ngoài ra, các chứng minh còn bỏ qua điều kiện quan trọng rằng vector λ phải khác 0.
+
+**🔗 See also:** [linked note](./lec_7.md#node-zk6bict)
 
 <br>
 
@@ -1567,6 +1575,8 @@
 >
 > Bài phân tích thể hiện độ sâu sắc vượt trội, đặc biệt là phần chứng minh điều kiện bậc nhất cho hàm lồi thông qua khai triển Taylor đa biến và tính chất của Hessian. Tuy nhiên, định nghĩa về vector gradient ∇f(x) trong bài viết của bạn là vector cột lại mâu thuẫn trực tiếp với cách nó được biểu diễn rõ ràng là vector hàng trong hình ảnh đã cung cấp. Đây là một điểm không chính xác đáng kể so với tài liệu gốc.
 
+**🔗 See also:** [linked note](./lec_7.md#node-ie1twki)
+
 <br>
 
 <a id="node-76ff13h"></a>
@@ -1714,6 +1724,8 @@
 >
 > Từ đây suy ra f là convex
 
+**🔗 See also:** [Chứng minh optimality condition.](./lec_5.md#node-14hyln5)
+
 <br>
 
 <a id="node-gklbcmo"></a>
@@ -1855,6 +1867,8 @@
 > Completing the square cho thấy w trở thành (1/4a) [4a^2(x+by/2a)^2]. Đây là case **degenerate critical point, khi ta có vô số critical point. và sẽ đều là min nếu a dương và max nếu a âm.**
 >
 > **second order conditions**: Đại khái là nếu tồn tại Hessian của function tại mọi điểm và Hessian là **positive semi definite thì function là  convex** (hoặc strictly convex nếu là Positive Definite)
+
+**🔗 See also:** [Partial minimization](./lec_4.md#node-znif4tu) · [Quadratic program](./lec_6.md#node-9yjta8o)
 
 <br>
 
@@ -2092,6 +2106,8 @@
 > Tóm lại đây là ví dụ cho thấy function **convex theo từng biến** (giữ y fixed, thì f(x,y) là hàm theo x, và nó convex, ngược lại giữ x fixed thì hàm thành hàm theo y, cũng convex) **nhưng không 
 > jointly convex**
 
+**🔗 See also:** [Nói thêm về jointly convex là điều kiện rất mạnh, không phải chỉ là convex theo mỗi biến](./lec_4.md#node-y2s0tnu)
+
 <br>
 
 <a id="node-zdlnun6"></a>
@@ -2237,6 +2253,8 @@
 >
 > VÍ DỤ KHÁC LOG SUM EXP & GEOMETRIC MEAN LÀ CÁC CONVEX
 > DO THỎA SECOND ORDER CONDITION (CÓ HESSIAN PSD)
+
+**🔗 See also:** [Ví dụ khác là log Σi exp gi(x)](./lec_4.md#node-2kpv2mn)
 
 <br>
 
