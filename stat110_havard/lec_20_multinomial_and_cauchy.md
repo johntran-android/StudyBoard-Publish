@@ -173,6 +173,8 @@
 > Bởi vì như đã biết, MGF cũng có **công dụng tương tự PDF, CDF đó là giúp xác định
 > distribution.**
 
+**🔗 See also:** [linked note](./lec_17_moment_generating_functions.md#node-3j4ghan) · [linked note](./lec_17_moment_generating_functions.md#node-cc2zxo3)
+
 <br>
 
 <a id="node-gllm99h"></a>
@@ -196,6 +198,8 @@
 >
 > Do đó **Z1-Z2 cũng là Normal** với **mean là tổng mean = 0**, và variance
 > bằng **tổng variance = 1 + 1 = 2**
+
+**🔗 See also:** [linked note](./lec_14_location_scale_lotus.md#node-uaqngmf)
 
 <br>
 
@@ -790,6 +794,8 @@
 > Nhưng ông sẽ **dùng cách tiếp cận khác**, tính **CDF**, và như đã
 > biết khi có CDF, lấy **derivative** sẽ cho ta **PDF**
 
+**🔗 See also:** [linked note](#node-mafpvdr)
+
 <br>
 
 <a id="node-kagfwqx"></a>
@@ -852,6 +858,8 @@
 >
 > Do đó, ta xác định limit của tích phân ở ngoài là **-inf:inf** và limit của tích phân của x là **-inf : t|y|**
 > vì đang xét vùng A là vùng mà X ≤ t|Y|
+
+**🔗 See also:** [linked note](./lec_19_joint_conditional_and_marginal_distribution.md#node-o82ibj6)
 
 <br>
 
@@ -927,6 +935,8 @@
 > Nhưng sau đó ta đã biết **có thể tính được bằng cách khác** khá rắc rối. Hơn
 > nữa, ta cũng đã biết đây chính là **Φ(t|y|)** - ý nghĩa là hàm Φ là **CDF** của
 > **Standard Normal N(0,1)**, evaluated tại t|y| (theo link màu cam)
+
+**🔗 See also:** [linked note](./lec_13_normal_distribution.md#node-j00lakx) · [linked note](#node-u5syd2o)
 
 <br>
 
@@ -1029,6 +1039,8 @@
 > X/Y  thì bây giờ đ**ương nhiên ta cũng lấy đạo hàm theo t** để có PDF của V
 > **f_V(t): F'(t) = f(t) chỉ là ta đang đang có F(t) ở dạng tích phân**
 
+**🔗 See also:** [linked note](./lec_12_discrete_vs_continuous_the_uniform.md#node-xyq3zk4)
+
 <br>
 
 <a id="node-31f2lmn"></a>
@@ -1092,6 +1104,8 @@
 >
 >
 > F'(t) = √(2/π) Tích phân 0:inf của {e^-y^2/2 * y * [1/(√2π) e^-t^2y^2/2] } dy**
+
+**🔗 See also:** [linked note](./lec_22_transformations_convolution.md#node-9vpzcjt)
 
 <br>
 
@@ -1268,6 +1282,8 @@
 >
 > trong đó f_Y(y) mà gs ghi là Φ(y) là **PDF của y,** và Y như đã biết là N(0,1)
 
+**🔗 See also:** [linked note](#node-uygnycf)
+
 <br>
 
 <a id="node-u5syd2o"></a>
@@ -1306,6 +1322,8 @@
 >
 >
 > giải tiếp tại đây như hồi nãy (theo link xanh)
+
+**🔗 See also:** [linked note](#node-ynmtz3o)
 
 <br>
 
