@@ -9,8 +9,6 @@ outcome
 ## 1.2.4 Enumerating
 outcome
 
-**🔗 See also:** [Xác suất outcome đồng khả năng](#node-qmb2rou) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-qmb2rou"></a>
@@ -79,9 +77,6 @@ outcome
 >
 > Và như vậy để tính xác suất event A, ta chỉ cần **ĐẾM số possible outcome
 > chứa trong subset A** và nhân cho **1 / sample space size**
-
-**🔗 See also:** [1.2.4 Enumerating
-outcome](#node-8twizz7) · [Xác suất rút 4 Át](#node-9wsbvqw)
 
 <br>
 
@@ -186,7 +181,7 @@ outcome](#node-8twizz7) · [Xác suất rút 4 Át](#node-9wsbvqw)
 >
 > = **48/(52 choose 5)**
 
-**🔗 See also:** [Xác suất outcome đồng khả năng](#node-qmb2rou) · [Xác suất các tay bài Poker](#node-bjn9iaf) · [Ordered and Unordered Sample Space](#node-512w59h)
+**🔗 See also:** [Ordered and Unordered Sample Space](#node-512w59h)
 
 <br>
 
@@ -240,8 +235,6 @@ outcome](#node-8twizz7) · [Xác suất rút 4 Át](#node-9wsbvqw)
 >
 >
 > = 13 × (4 c 2) × (13 c 3) × (4 c 1)^3 / (52 choose 5)
-
-**🔗 See also:** [Xác suất rút 4 Át](#node-9wsbvqw) · [Ordered and Unordered Sample Space](#node-512w59h)
 
 <br>
 
@@ -306,7 +299,7 @@ outcome](#node-8twizz7) · [Xác suất rút 4 Át](#node-9wsbvqw)
 >
 > Tuy nhiên, cái trên chỉ đúng nếu như ta sampling without replacement, và xét xác suất của event mà ta ko care thứ tự. Chứ nếu sampling with replacement, hay event có care thứ tự thì dĩ nhiên không thể tính bằng cả hai cách.
 
-**🔗 See also:** [Xác suất các tay bài Poker](#node-bjn9iaf) · [Example 1.2.19 Sampling with Replacement](#node-c8b8ios) · [Xác suất rút 4 Át](#node-9wsbvqw)
+**🔗 See also:** [Xác suất rút 4 Át](#node-9wsbvqw)
 
 <br>
 
@@ -404,8 +397,6 @@ outcome](#node-8twizz7) · [Xác suất rút 4 Át](#node-9wsbvqw)
 >
 > Ghi chú thể hiện sự hiểu biết sâu sắc về lấy mẫu có hoàn lại, phân biệt rõ ràng giữa không gian mẫu có thứ tự và không có thứ tự. Bạn đã phân tích chính xác tại sao quy luật giai thừa không còn đúng khi có sự lặp lại và tính toán xác suất để chứng minh các kết quả không thứ tự không đồng khả năng. Chỉ cần lưu ý sửa ký hiệu P(A|B) thành P(A hoặc B) hoặc P(A U B) khi đề cập đến xác suất của hai biến cố rời nhau.
 
-**🔗 See also:** [Ordered and Unordered Sample Space](#node-512w59h) · [Hiểu sai "equally likely"](#node-pu2z1e2)
-
 <br>
 
 <a id="node-pu2z1e2"></a>
@@ -455,8 +446,6 @@ outcome](#node-8twizz7) · [Xác suất rút 4 Át](#node-9wsbvqw)
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Phân tích của bạn rất rõ ràng và chính xác, nắm bắt hoàn toàn điểm cốt lõi của bài viết gốc. Bạn đã trình bày xuất sắc về sai lầm phổ biến khi tính xác suất cho các biến cố không thứ tự và giải thích thuyết phục tại sao cần sử dụng không gian mẫu có thứ tự. Để nội dung thêm hoàn hảo, bạn có thể cân nhắc đề cập rõ ràng hơn về 'bóng không phân biệt' ngay từ phần giới thiệu vấn đề.
-
-**🔗 See also:** [Example 1.2.19 Sampling with Replacement](#node-c8b8ios) · [Example 1.2.20 Calculating Average](#node-pl75v3r)
 
 <br>
 
@@ -554,7 +543,7 @@ outcome](#node-8twizz7) · [Xác suất rút 4 Át](#node-9wsbvqw)
 >
 > Bài phân tích thể hiện sự hiểu biết sâu sắc về bản chất bài toán, từ việc xác định loại lấy mẫu (có hoàn lại, không thứ tự) đến việc áp dụng công thức tổ hợp. Phần chứng minh công thức (n+r-1 chọn r) rất chi tiết và đúng đắn về mặt ý tưởng, tuy nhiên, có một lỗi nhỏ ở bước cuối cùng khi bạn viết (n+r-1)! / [(n-1)! r!] là (n-1 chọn r) thay vì (n+r-1 chọn r).
 
-**🔗 See also:** [Hiểu sai "equally likely"](#node-pu2z1e2) · [Bootstrap Standard Errors](./101_point_estimation.md#node-gumecun) · [Đếm mẫu tính xác suất](#node-q02rbqh) · [Histogram of Sample Averages](#node-56gu8sw)
+**🔗 See also:** [Bootstrap Standard Errors](./101_point_estimation.md#node-gumecun) · [Histogram of Sample Averages](#node-56gu8sw)
 
 <br>
 
@@ -606,7 +595,7 @@ outcome](#node-8twizz7) · [Xác suất rút 4 Át](#node-9wsbvqw)
 >
 > Ghi chú giải thích rất rõ ràng và chính xác sự khác biệt quan trọng giữa việc đếm số lượng các mẫu phân biệt và việc tính xác suất bằng cách sử dụng không gian mẫu có thứ tự, với các ví dụ minh họa và tính toán chi tiết hoàn toàn trùng khớp với tài liệu. Để cải thiện nhỏ, bạn có thể cân nhắc làm rõ hơn mối liên hệ giữa các công thức tổ hợp ở phần cuối với công thức tổng quát đã đề cập ban đầu.
 
-**🔗 See also:** [Example 1.2.20 Calculating Average](#node-pl75v3r) · [Histogram of Sample Averages](#node-56gu8sw) · [Bootstrapping a variance](./101_point_estimation.md#node-f5aaasl)
+**🔗 See also:** [Bootstrapping a variance](./101_point_estimation.md#node-f5aaasl)
 
 <br>
 
@@ -634,7 +623,7 @@ outcome](#node-8twizz7) · [Xác suất rút 4 Át](#node-9wsbvqw)
 >
 > Bài phân tích của bạn rất chính xác và sâu sắc. Bạn đã hiểu rõ cách tính số lượng mẫu có thứ tự và công thức tổng quát của nó liên quan đến phân phối đa thức. Đặc biệt, việc bạn phát hiện ra sự không nhất quán giữa biểu đồ histogram và mô tả nguồn dữ liệu {2,4,4,9} là một điểm mạnh nổi bật, thể hiện khả năng phân tích và tư duy phản biện xuất sắc. Để tăng thêm độ chính xác, bạn có thể cân nhắc gọi biểu đồ này là 'biểu đồ phân phối xác suất' thay vì chỉ 'pmf' nếu các giá trị trung bình có thể không hoàn toàn rời rạc.
 
-**🔗 See also:** [Đếm mẫu tính xác suất](#node-q02rbqh) · [The Bootstrap Statistical Technique](#node-h4ac7kx) · [Example 1.2.20 Calculating Average](#node-pl75v3r)
+**🔗 See also:** [Example 1.2.20 Calculating Average](#node-pl75v3r)
 
 <br>
 
@@ -646,8 +635,6 @@ outcome](#node-8twizz7) · [Xác suất rút 4 Át](#node-9wsbvqw)
 
 > [!NOTE]
 > Rồi thì để ý là ông nói về cái việc cái mà nãy giờ mình tính toán đó thì nó là một cái kỹ thuật đơn giản, một phiên bản đơn giản của một cái kỹ thuật trong thống kê rất quan trọng đó là bootstrap mà mình sẽ gặp lại ở chương 10.1.4.
-
-**🔗 See also:** [Histogram of Sample Averages](#node-56gu8sw)
 
 <br>
 
