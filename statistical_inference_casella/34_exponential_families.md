@@ -7,6 +7,8 @@
 
 ## 3.4 Exponential families
 
+**🔗 See also:** [Họ Phân phối Exponential](#node-vx6ku00) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-vx6ku00"></a>
@@ -41,6 +43,8 @@
 >
 >
 > Nói chung khi vào ví dụ sẽ hiểu
+
+**🔗 See also:** [3.4 Exponential families](#node-05anyjt) · [Binomial thuộc exponential family](#node-327dwlx)
 
 <br>
 
@@ -111,6 +115,8 @@
 >
 > Trong trường hợp này k = 1
 
+**🔗 See also:** [Họ Phân phối Exponential](#node-vx6ku00) · [Định lý Họ mũ](#node-zfho9z1)
+
 <br>
 
 <a id="node-zfho9z1"></a>
@@ -121,6 +127,8 @@
 
 > [!NOTE]
 > đại khái là **exponential family sẽ có theorem này**. Tuy nhìn ghê gớm nhưng khi áp dụng vào sẽ **rất tiện lợi** đặc biệt là do ta có thể **đổi chỗ giữa tích phân và Σ với đạo hàm**
+
+**🔗 See also:** [Binomial thuộc exponential family](#node-327dwlx) · [Kì vọng phân phối nhị thức](#node-o1w51w2)
 
 <br>
 
@@ -271,6 +279,8 @@
 >
 > ⇨ EX = p + p+ ... p = **np**
 
+**🔗 See also:** [Định lý Họ mũ](#node-zfho9z1) · [Phân Phối Normal Họ Hàm Mũ](#node-7eyobyz)
+
 <br>
 
 <a id="node-7eyobyz"></a>
@@ -418,6 +428,8 @@
 >
 > f(x|λ) = I(-inf, inf)(x) h(x) c(λ) exp { Σi wi(λ)ti(x) }
 
+**🔗 See also:** [Kì vọng phân phối nhị thức](#node-o1w51w2) · [Tập hỗ trợ gia đình mũ](#node-iid8zor)
+
 <br>
 
 <a id="node-iid8zor"></a>
@@ -453,6 +465,8 @@
 >
 > thì nó sẽ là f(x | θ) = θ^-1 exp(1 - x / θ)I(θ, inf)(x) mà khi đó, ta ko còn có dạng tổng quát của expo families nữa vì trước exp(Σ) ko còn là tích của hai hàm một cái chỉ phụ thuộc x : f(x) và một cái chỉ phụ thuộc θ: c(θ) vì ở đây ta có I(θ, inf)(x) phụ thuộc cả hai\*\*
 
+**🔗 See also:** [Phân Phối Normal Họ Hàm Mũ](#node-7eyobyz) · [Không gian tham số tự nhiên](#node-rieim5a)
+
 <br>
 
 <a id="node-rieim5a"></a>
@@ -464,6 +478,8 @@
 > [!NOTE]
 > QUAY LẠI SAU
 > KHI XEM VÍ DỤ
+
+**🔗 See also:** [Tập hỗ trợ gia đình mũ](#node-iid8zor) · [Hội tụ tích phân Normal](#node-xlswd6l)
 
 <br>
 
@@ -610,6 +626,8 @@
 >
 > QUAY LẠI SAU KHI HỌC HẾT 18.01
 
+**🔗 See also:** [Không gian tham số tự nhiên](#node-rieim5a) · [Full và Curved Exponent Family](#node-c354uly)
+
 <br>
 
 <a id="node-c354uly"></a>
@@ -638,6 +656,8 @@
 >
 > KHÚC NÓI VỀ PARAM SPACE KO HIỂU
 
+**🔗 See also:** [Hội tụ tích phân Normal](#node-xlswd6l) · [Xấp xỉ Chuẩn Poisson](#node-k4w282h)
+
 <br>
 
 <a id="node-k4w282h"></a>
@@ -660,6 +680,8 @@
 > KHÚC DƯỚI KO HIỂU
 >
 > KHÚC DƯỚI KO HIỂU
+
+**🔗 See also:** [Full và Curved Exponent Family](#node-c354uly)
 
 <br>
 
