@@ -9,8 +9,6 @@ of Probability
 ## 1.2.2 Calculus
 of Probability
 
-**🔗 See also:** [Hệ quả từ tiên đề xác suất](#node-ux6vxx8) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-ux6vxx8"></a>
@@ -59,9 +57,6 @@ of Probability
 >
 > VÀI CÔNG THỨC HỆ
 > QUẢ NỮA TỪ 3 TIÊN ĐỀ
-
-**🔗 See also:** [1.2.2 Calculus
-of Probability](#node-lx2d7y5) · [Các tính chất xác suất](#node-9qioy43)
 
 <br>
 
@@ -165,8 +160,6 @@ of Probability](#node-lx2d7y5) · [Các tính chất xác suất](#node-9qioy43)
 > THÊM VÀI CÔNG THỨC HỆ
 > QUẢ NỮA TỪ 3 TIÊN ĐỀ
 
-**🔗 See also:** [Hệ quả từ tiên đề xác suất](#node-ux6vxx8) · [Cận dưới xác suất giao Bonferroni](#node-jgljylb)
-
 <br>
 
 <a id="node-jgljylb"></a>
@@ -180,8 +173,6 @@ of Probability](#node-lx2d7y5) · [Các tính chất xác suất](#node-9qioy43)
 > l**ower bound của xác suất joint event,** ví dụ **P(A) = 0.95, P(B) = 0.95** thì ta có
 > thể biết **P(A ∩ B) ≥ 0.95 + 0.95 - 1 = 0.9**. Và dễ thấy rằng **nếu P(A), P(B) nho
 > nhỏ quá thì lower bound sẽ ra âm**, khi đó **tuy vẫn đúng nhưng vô dụng**
-
-**🔗 See also:** [Các tính chất xác suất](#node-9qioy43) · [Hai Định Lý Xác Suất Quan Trọng](#node-bxt3vic)
 
 <br>
 
@@ -299,15 +290,11 @@ of Probability](#node-lx2d7y5) · [Các tính chất xác suất](#node-9qioy43)
 > HAI THEOREM
 > QUAN TRỌNG
 
-**🔗 See also:** [Cận dưới xác suất giao Bonferroni](#node-jgljylb)
-
 <br>
 
 <a id="node-ouabc44"></a>
 
 <p align="center"><kbd><img src="assets/vzbpemqtduc.png" width="80%"></kbd></p>
-
-**🔗 See also:** [Hai Định Lý Xác Suất Quan Trọng](#node-bxt3vic) · [Điểm tương đồng Bool-Bonferroni](#node-4jj12y1)
 
 <br>
 
