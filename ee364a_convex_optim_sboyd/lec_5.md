@@ -250,6 +250,8 @@
 >
 > Hay **có thể thỏa các constrains nhưng không thể tìm được f0(x) nhỏ nhất**
 
+**🔗 See also:** [linked note](./lec_8_a.md#node-murgxv6)
+
 <br>
 
 <a id="node-l7cs5is"></a>
@@ -347,6 +349,8 @@
 > Qua khái niệm local optimal thì trong bài đã nói rồi
 >
 > Ngoài ra còn vài khái niệm như active / inactive và redundant constraint, cũng ko có gì khó
+
+**🔗 See also:** [linked note](./lec_8_b.md#node-l8otevv)
 
 <br>
 
@@ -602,6 +606,8 @@
 > Nói chung là **nhiều trường hợp cái này sẽ rất hữu ích**.
 >
 > Và có thể thấy cách làm này làm **phát sinh variable  mới là si**, được gọi là **slack variable**
+
+**🔗 See also:** [Converting LPs to standard form](./lec_6.md#node-ljt9bzz)
 
 <br>
 
@@ -1059,6 +1065,8 @@
 >
 > Bài làm thể hiện kiến thức nền tảng tốt về gradient và đường mức, cùng khả năng lập luận toán học. Tuy nhiên, có sự nhầm lẫn nghiêm trọng trong việc xác định hướng của vector pháp tuyến của siêu phẳng hỗ trợ liên quan đến điều kiện tối ưu.
 
+**🔗 See also:** [Supporting Hyper-plane](./lec_3.md#node-8xqj33s)
+
 <br>
 
 <a id="node-14hyln5"></a>
@@ -1125,6 +1133,8 @@
 > **🤖 AI Feedback** — ✅ Score: **90/100**
 >
 > Bài chứng minh rất chính xác và được trình bày rõ ràng, thể hiện sự nắm vững các điều kiện tối ưu cho hàm lồi. Tuy nhiên, việc tường minh hóa tính lồi của tập khả thi X khi xây dựng điểm thử z(t) sẽ giúp bài chứng minh chặt chẽ hơn.
+
+**🔗 See also:** [Chứng minh first order convexity condition](./lec_3.md#node-debfrog)
 
 <br>
 
@@ -1475,6 +1485,8 @@
 >
 > Một điểm nữa đó là sở dĩ bài toán convex tương đương là bởi f0(Fz + x0) chính là **convex function** bởi f0 convex, và đây là case "convex function precompose with an affine
 > function" (cho nên nó cũng convex)
+
+**🔗 See also:** [Bbữa trước ta đã đi qua những operations đầu tiên](./lec_4.md#node-9gifnzj)
 
 <br>
 
