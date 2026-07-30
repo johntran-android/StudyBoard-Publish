@@ -117,6 +117,8 @@
 >
 > (và = inf y -infinity = -infinity khi ATv khác 0)
 
+**🔗 See also:** [linked note](./lec_7.md#node-agqew85) · [linked note](./lec_8_a.md#node-3hxz63z)
+
 <br>
 
 <a id="node-4ow8cmu"></a>
@@ -395,6 +397,8 @@
 >
 > Quay lại sau
 
+**🔗 See also:** [Conjugate function của log-sum-exp](./lec_4.md#node-ub6i6o2)
+
 <br>
 
 <a id="node-hixhho4"></a>
@@ -450,6 +454,8 @@
 > 5.7 EXAMPLES
 >
 > 5.7.2 TRANSFORMING THE OBJECTIVE
+
+**🔗 See also:** [Conjugate function của norm squared](./lec_4.md#node-gtqvaka)
 
 <br>
 
@@ -1561,6 +1567,8 @@
 > Tương tự:
 >
 > ∇ui p*(U,v) | U=0, v=0 = - λ*i
+
+**🔗 See also:** [linked note](./lec_8_b.md#node-khfilej)
 
 <br>
 
