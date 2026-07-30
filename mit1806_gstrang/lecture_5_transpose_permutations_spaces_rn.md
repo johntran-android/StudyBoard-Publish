@@ -219,6 +219,8 @@ permutations, Spaces R^n
 > phép một vector nhân với 0** **để ra kết quả vẫn thuộc
 > vector space.**
 
+**🔗 See also:** [linked note](./lecture_6_column_space_and_null_space.md#node-od7m1pa) · [linked note](./lecture_6_column_space_and_null_space.md#node-2737lqj)
+
 <br>
 
 <a id="node-9ztjlat"></a>
@@ -304,6 +306,8 @@ permutations, Spaces R^n
 > vector của một matrix, thì nó thỏa hai tính chất cần thiết của
 > vector space. Vậy nó là một vector space. Và nó có tên là
 > Column Space
+
+**🔗 See also:** [linked note](./lecture_9_independece_basis_and_dimension.md#node-7nqnb3m)
 
 <br>
 
