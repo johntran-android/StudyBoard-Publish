@@ -215,6 +215,8 @@ row Reduced Form R
 > Hay nói cách khác **x_particular + nullspace** sẽ là **tập hợp
 > toàn bộ solution của Ax=b**
 
+**🔗 See also:** [linked note](./lecture_13_quiz_review.md#node-k2tf2ug)
+
 <br>
 
 <a id="node-f3zb5ut"></a>
@@ -455,6 +457,8 @@ row Reduced Form R
 > (Nó **ít nhất cũng có vector 0** vì **nullspace là subspace**, là một
 > vector space, nên nó **phải ít nhất cũng chứa origin = vector 0**)
 
+**🔗 See also:** [linked note](./lecture_7_solving_ax_0_pivot_variables_special_solutions.md#node-xpxaf8g)
+
 <br>
 
 <a id="node-v6cs9bu"></a>
@@ -668,6 +672,8 @@ row Reduced Form R
 > mình biết elimination apply với A chính là nhân A với matrix E
 > thể hiện các bước elimination. Vậy EA = I. Điều này chứng tỏ
 > E chính là A_inv, đồng nghĩa A là **INVERTIBLE** MATRIX
+
+**🔗 See also:** [linked note](./lecture_9_independece_basis_and_dimension.md#node-ojpu0lh)
 
 <br>
 
