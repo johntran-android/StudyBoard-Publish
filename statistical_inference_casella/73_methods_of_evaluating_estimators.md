@@ -9,8 +9,6 @@ evaluating Estimators
 ## 7.3 Methods Of
 evaluating Estimators
 
-**🔗 See also:** [Phương pháp đánh giá Estimator](#node-e9bf7u1) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-e9bf7u1"></a>
@@ -28,9 +26,6 @@ evaluating Estimators
 >
 > Tác gỉa cũng nhắc đến việc đánh giá các quy trình thống kê (statistical
 > procedure)  thuộc một nhánh của thống kê gọi là DECISION THEORY
-
-**🔗 See also:** [7.3 Methods Of
-evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#node-duqd3ml)
 
 <br>
 
@@ -90,8 +85,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 >
 > Cuối cùng, thì nó là hàm theo θ đơn giản là vì tính cái kì vọng này ra sẽ chỉ còn phụ thuộc θ, ko phụ thuộc W nữa.
-
-**🔗 See also:** [Phương pháp đánh giá Estimator](#node-e9bf7u1) · [Ưu điểm của MSE](#node-55e9imf)
 
 <br>
 
@@ -159,7 +152,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > ⇔ MSE(W) = Var_θ(W) + [BIAS_θ(W)]^2
 
-**🔗 See also:** [Sai số bình phương trung bình](#node-duqd3ml) · [Độ lệch và MSE ước lượng](#node-851tuq2) · [Kiểm định, ước lượng và MSE](./83_methods_of_evaluating_test.md#node-2p2a5ur)
+**🔗 See also:** [Kiểm định, ước lượng và MSE](./83_methods_of_evaluating_test.md#node-2p2a5ur)
 
 <br>
 
@@ -205,8 +198,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 >
 > Đây là những điểm / định nghĩa cực kì quan trọng trong machine learning
-
-**🔗 See also:** [Ưu điểm của MSE](#node-55e9imf) · [Tính không chệch Xbar S^2](#node-dgdrvpi)
 
 <br>
 
@@ -292,7 +283,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > VarS^2 = 2σ^4/(n-1) chỉ với normal, với distribution khác thì sẽ khác.
 
-**🔗 See also:** [Độ lệch và MSE ước lượng](#node-851tuq2) · [Ước lượng chệch MSE](#node-iyvngjt) · [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg)
+**🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg)
 
 <br>
 
@@ -641,7 +632,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Kết luận MLE của σ^2 là  [(n-1)/n] S^2
 
-**🔗 See also:** [Tính không chệch Xbar S^2](#node-dgdrvpi) · [Hạn chế của MSE](#node-3ym8o9h) · [Hessian log likelihood chuẩn](./72_method_of_finding_estimators.md#node-19nyc96)
+**🔗 See also:** [Hessian log likelihood chuẩn](./72_method_of_finding_estimators.md#node-19nyc96)
 
 <br>
 
@@ -685,8 +676,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 >
 > Và nói chung là nếu dùng MSE để đánh giá thì ko có cái nào là tốt nhất cả.
-
-**🔗 See also:** [Ước lượng chệch MSE](#node-iyvngjt) · [MSE của p^_mle](#node-evr547s)
 
 <br>
 
@@ -860,8 +849,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Vậy Var_p[Xbar] = p(1-p) / n, y như sách
 
-**🔗 See also:** [Hạn chế của MSE](#node-3ym8o9h) · [MSE của ước lượng Bayes](#node-91iu9k3)
-
 <br>
 
 <a id="node-91iu9k3"></a>
@@ -993,8 +980,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Đây là kết quả trong sách.
 
-**🔗 See also:** [MSE của p^_mle](#node-evr547s) · [MSE Bayes hằng số](#node-7ow3v45)
-
 <br>
 
 <a id="node-7ow3v45"></a>
@@ -1073,8 +1058,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Giải sẽ ra kết quả trên thôi, khi đó thể vô ta sẽ có E_p[p^_B - p]^2 là constant
 
-**🔗 See also:** [MSE của ước lượng Bayes](#node-91iu9k3) · [Chọn ước lượng Bayes MLE](#node-cm8s96a)
-
 <br>
 
 <a id="node-cm8s96a"></a>
@@ -1111,8 +1094,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > Ví dụ này minh họa ta ý hồi nãy, là dù MSE có thể không giúp quyết định
 > được cái nào là tốt hơn hẳn (uniformly better than other) nhưng nó cũng giúp
 > cung cấp những thông tin hữu ích
-
-**🔗 See also:** [MSE Bayes hằng số](#node-7ow3v45) · [Nguyên lý ước lượng tương biến](#node-hp56gbv)
 
 <br>
 
@@ -1260,8 +1241,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 >
 > **gbar(W(x)) = W(g(x))**
-
-**🔗 See also:** [Chọn ước lượng Bayes MLE](#node-cm8s96a) · [MSE ước lượng bất biến](#node-6tq0d74)
 
 <br>
 
@@ -1640,8 +1619,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > minimize E_θ[(W(X1,...Xn) - θ)]^2 subject to  W(x1,..xn) + a = W(x1 + a,...
 > xn + a)
 
-**🔗 See also:** [Nguyên lý ước lượng tương biến](#node-hp56gbv) · [Ước lượng viên không chệch tốt nhất](#node-z12msux)
-
 <br>
 
 <a id="node-z12msux"></a>
@@ -1681,8 +1658,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > MÀ MỘT CÁCH PHỔ BIẾN ĐẦU TIÊN LÀ CHỈ TÌM TRONG CÁC UNBIASED
 > ESTIMATOR
-
-**🔗 See also:** [MSE ước lượng bất biến](#node-6tq0d74) · [Ước lượng không chệch tốt nhất](#node-8ya7lh1)
 
 <br>
 
@@ -1735,8 +1710,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Giải thích rất rõ ràng và chính xác, kết nối khéo léo các khái niệm về MSE, độ lệch, và phương sai cho cả ước lượng không thiên vị và lớp ước lượng tổng quát hơn. Để hoàn thiện hơn nữa, việc đề cập rõ ràng thuật ngữ "Ước lượng không thiên vị có phương sai tối thiểu đồng nhất (UMVUE)" khi thảo luận về "ước lượng không thiên vị tốt nhất" sẽ bổ sung tính đầy đủ.
 
-**🔗 See also:** [Ước lượng viên không chệch tốt nhất](#node-z12msux) · [Ước lượng không chệch phương sai nhỏ nhất](#node-oexdyyk)
-
 <br>
 
 <a id="node-oexdyyk"></a>
@@ -1760,8 +1733,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > **🤖 AI Feedback** — ✅ Score: **100/100**
 >
 > Bạn đã giải thích định nghĩa về ước lượng không chệch có phương sai tối thiểu đồng nhất (UMVUE) rất chính xác và đầy đủ. Việc làm rõ cả trường hợp tổng quát τ(θ) và trường hợp đặc biệt τ(θ) = θ cho thấy sự hiểu biết sâu sắc về khái niệm này.
-
-**🔗 See also:** [Ước lượng không chệch tốt nhất](#node-8ya7lh1) · [Ước lượng không chệch Poisson](#node-0ecqsqo)
 
 <br>
 
@@ -1811,7 +1782,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Bạn đã giải thích rất chính xác và chi tiết các khái niệm, đồng thời kết nối lý thuyết với ví dụ trong hình ảnh một cách rõ ràng. Để bài viết cô đọng hơn, bạn có thể lược bỏ các câu hỏi hoặc ghi chú cá nhân như "Chỗ này là sao nhỉ" khi trình bày.
 
-**🔗 See also:** [Ước lượng không chệch phương sai nhỏ nhất](#node-oexdyyk) · [Ước lượng không chệch tối ưu](#node-m43gtj6) · [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg)
+**🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg)
 
 <br>
 
@@ -1871,8 +1842,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > hiệu là B(θ). Rồi sau đó, chỉ ra Var_θ (W*) = B(θ) thì khi đó đương nhiên
 > dễ hiểu W* sẽ là best unbiased estimator
 
-**🔗 See also:** [Ước lượng không chệch Poisson](#node-0ecqsqo) · [Bất đẳng thức Cramer-Rao](#node-1qs416c)
-
 <br>
 
 <a id="node-1qs416c"></a>
@@ -1896,7 +1865,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Thì Var\_θ(W(**X**)) ≥ \[d/dθ E\_θ\[W(**X**)\]^2\] / \[E\_θ\[(∂/∂θ log f(**X**|θ))^2\]\]
 
-**🔗 See also:** [Ước lượng không chệch tối ưu](#node-m43gtj6) · [Bất đẳng thức Cauchy-Schwarz](#node-puo4qgq) · [Definition 10.1.11 Asymptotic Efficiency](./101_point_estimation.md#node-bgijdqy) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [10.1.3 Calculations and Comparisons](./101_point_estimation.md#node-iwgmm5t)
+**🔗 See also:** [Definition 10.1.11 Asymptotic Efficiency](./101_point_estimation.md#node-bgijdqy) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [10.1.3 Calculations and Comparisons](./101_point_estimation.md#node-iwgmm5t)
 
 <br>
 
@@ -2024,8 +1993,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 >
 > ⇔ E\[UV\]^2 = E\[U^2\]E\[V^2\]
-
-**🔗 See also:** [Bất đẳng thức Cramer-Rao](#node-1qs416c) · [Chứng minh Cramer-Rao từ Cauchy-Schwarz](#node-bevjtm7)
 
 <br>
 
@@ -2273,8 +2240,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Ghi chú của bạn cực kỳ chi tiết, chính xác và cung cấp cái nhìn sâu sắc hơn đáng kể so với tài liệu gốc, đặc biệt trong việc giải thích cặn kẽ từng bước. Để hoàn thiện, hãy lưu ý đến việc giải thích rõ hơn lý do W(X)=1 là một ước lượng hợp lệ khi áp dụng tính chất của đạo hàm.
 
-**🔗 See also:** [Bất đẳng thức Cauchy-Schwarz](#node-puo4qgq) · [Bất đẳng thức Cramer-Rao iid](#node-6hjlvs1)
-
 <br>
 
 <a id="node-6hjlvs1"></a>
@@ -2385,8 +2350,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Bài viết của bạn rất chi tiết và thể hiện sự hiểu biết sâu sắc về các bước chứng minh, đặc biệt là phần giải thích tại sao các kỳ vọng riêng lẻ có thể cộng lại thành n lần kỳ vọng. Tuy nhiên, bạn cần cẩn thận hơn với các ký hiệu đạo hàm ở một số chỗ và làm rõ hơn cơ sở của việc kỳ vọng bằng 0 (chẳng hạn như đề cập đến 7.3.8).
 
-**🔗 See also:** [Chứng minh Cramer-Rao từ Cauchy-Schwarz](#node-bevjtm7) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m)
-
 <br>
 
 <a id="node-ihoar4m"></a>
@@ -2414,7 +2377,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Với mọi hàm khả vi τ(θ), thì ta đã có chặn dưới về variance của bất kì estimator W thỏa 7.3.4 và E\_θ(W) = τ(θ). Và cái bound chỉ phụ thuộc τ(θ) và f(x|θ). Mọi candidate estimator thỏa E\_θ(W) = τ(θ) (tức là unbiased estimator của τ(θ)) và có variance đạt mức này đều sẽ là BEST UNBIASED ESTIMATOR
 
-**🔗 See also:** [Bất đẳng thức Cramer-Rao iid](#node-6hjlvs1) · [Bổ đề Tính toán Hàm mũ](#node-sttybm4) · [Bất đẳng thức Cramer-Rao](#node-1qs416c) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Asymptotic Efficiency of Estimator p̂](./101_point_estimation.md#node-ct81g3i)
+**🔗 See also:** [Bất đẳng thức Cramer-Rao](#node-1qs416c) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Asymptotic Efficiency of Estimator p̂](./101_point_estimation.md#node-ct81g3i)
 
 <br>
 
@@ -2436,7 +2399,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > E_θ[(∂/∂θ log f(X|θ))^2] = - E_θ[∂^2/∂θ^2 log f(X|θ)]
 
-**🔗 See also:** [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [Cramer-Rao ước lượng Poisson](#node-ter8ib4) · [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg)
+**🔗 See also:** [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg)
 
 <br>
 
@@ -2584,8 +2547,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 >
 > Và vì Var\_λ Xbar = λ / n nên ta kết luận ngay Xbar là best unbiased estimator mà khỏi phải tính Var\_λ của S^2 làm gì.
-
-**🔗 See also:** [Bổ đề Tính toán Hàm mũ](#node-sttybm4) · [Cramer-Rao: Vi phạm giả định](#node-i0n08jh)
 
 <br>
 
@@ -2762,7 +2723,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > NHƯ VẬY LÀ. TRONG CASE NÀY, CRAMER RAO INEQUALTY
 > KHÔNG ÁP DỤNG ĐƯỢC
 
-**🔗 See also:** [Cramer-Rao ước lượng Poisson](#node-ter8ib4) · [Giới hạn Định lý Cramer-Rao](#node-6bzkk7p) · [Thống kê đủ & Ước lượng tốt nhất](#node-7mgmpeq)
+**🔗 See also:** [Thống kê đủ & Ước lượng tốt nhất](#node-7mgmpeq)
 
 <br>
 
@@ -2790,8 +2751,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > Và nói chung, nếu range của pdf phụ thuộc vào parameter thì theorem
 > này không áp dụng được (trong ví dỵ này chính là như vậy vì f(x|θ) = 1/θ
 > và 0 < x < θ → Đây chính là "range phụ thuộc parameter"
-
-**🔗 See also:** [Cramer-Rao: Vi phạm giả định](#node-i0n08jh) · [Hạn chế Cramer-Rao Bound](#node-xr3p7cn)
 
 <br>
 
@@ -2827,8 +2786,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Và khi đó ta buộc phải quyết định là không có estimator nào có thể đạt được
 > hoặc ta phải tìm thêm nhiều estimator
-
-**🔗 See also:** [Giới hạn Định lý Cramer-Rao](#node-6bzkk7p) · [Giới hạn Cramer-Rao phương sai chuẩn](#node-87ia248)
 
 <br>
 
@@ -2955,8 +2912,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > 2) Cái lower bound này, attainable, như vậy ta phải đi tìm cái best estimator
 > có variance đạt mức này, chứ cái S^2 này không phải.
 
-**🔗 See also:** [Hạn chế Cramer-Rao Bound](#node-xr3p7cn) · [Dấu bằng Cramer-Rao](#node-7lcj64c)
-
 <br>
 
 <a id="node-7lcj64c"></a>
@@ -2997,8 +2952,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 >
 > PHẦN CHỨNG MINH QUAY LẠI SAU
-
-**🔗 See also:** [Giới hạn Cramer-Rao phương sai chuẩn](#node-87ia248) · [Ước lượng σ^2 tốt nhất](#node-6cu0ju6)
 
 <br>
 
@@ -3053,8 +3006,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > μ, nên chỉ tính được nếu đã biết μ. Còn nếu μ ko biết, thì Cramer Rao
 > Bound UNATTAINABLE.
 
-**🔗 See also:** [Dấu bằng Cramer-Rao](#node-7lcj64c) · [Tiêu chí Sufficiency](#node-msu36fl)
-
 <br>
 
 <a id="node-msu36fl"></a>
@@ -3089,8 +3040,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > NHƯNG TA SẼ DỪNG Ở ĐÂY, MÀ **CHUYỂN HƯỚNG SANG ĐÁNH GIÁ
 > ESTIMATOR THEO MỘT HƯỚNG KHÁC - TIÊU CHÍ SUFFICIENCY**
-
-**🔗 See also:** [Ước lượng σ^2 tốt nhất](#node-6cu0ju6) · [Đủ và không chệch](#node-yc3l550)
 
 <br>
 
@@ -3268,8 +3217,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Còn cái Identity thứ hai quay lại sau
 
-**🔗 See also:** [Tiêu chí Sufficiency](#node-msu36fl) · [Định lý Rao-Blackwell](#node-aixo4xg)
-
 <br>
 
 <a id="node-aixo4xg"></a>
@@ -3369,7 +3316,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > và nếu Var_θ [Φ(T)] ≤ Var_θ W với mọi θ thì rõ ràng Φ(T) chính là cái có MSE
 > nhỏ  nhất SO VỚI ĐÁM W.
 
-**🔗 See also:** [Đủ và không chệch](#node-yc3l550) · [Định lý Rao-Blackwell](#node-batro2q) · [Định lý phương sai toàn phần](./44_hierarchical_model_mixture_distribution.md#node-ivmktz5)
+**🔗 See also:** [Định lý phương sai toàn phần](./44_hierarchical_model_mixture_distribution.md#node-ivmktz5)
 
 <br>
 
@@ -3437,8 +3384,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > Thì như note trước đã nói, vì T là sufficient statistic, nên distribution
 > of W|T không phụ thuộc θ, nên Φ(T) quả thật là statistic/estimator
 
-**🔗 See also:** [Định lý Rao-Blackwell](#node-aixo4xg) · [Rao-Blackwell và thống kê đủ](#node-cst7ebf)
-
 <br>
 
 <a id="node-cst7ebf"></a>
@@ -3480,8 +3425,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > PHẢI LÀ ESTIMATOR, VÌ KHI ĐÓ NÓ KHÔNG PHẢI LÀ FUNCTION CỦA
 > CHỈ RANDOM SAMPLE MÀ CÓ CẢ θ NÊN KHÔNG GIÚP KẾT LUẬN GÌ
 > ĐƯỢC (ý là ta đang tìm estimator tốt nhất cơ mà)
-
-**🔗 See also:** [Định lý Rao-Blackwell](#node-batro2q) · [Điều kiện hóa thống kê không đủ](#node-bmys9rc)
 
 <br>
 
@@ -3624,8 +3567,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Như vậy Φ(X1) là hàm phụ thuộc cả θ nên nó không phải estimator.
 
-**🔗 See also:** [Rao-Blackwell và thống kê đủ](#node-cst7ebf) · [Ước lượng không chệch duy nhất](#node-093ai45)
-
 <br>
 
 <a id="node-093ai45"></a>
@@ -3702,8 +3643,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > Và theorem tiếp theo thực hiện một bước lót đường để tìm ra nhà vua:
 > TÍNH ĐỘC NHẤT: nó nói rằng: NẾU W LÀ THE **BEST UNBIASED
 > ESTIMATOR THÌ NÓ LÀ DUY NHẤT**
-
-**🔗 See also:** [Điều kiện hóa thống kê không đủ](#node-bmys9rc) · [Ước lượng không chệch tốt nhất duy nhất](#node-01on741)
 
 <br>
 
@@ -4050,8 +3989,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Vậy chứng minh xong a(θ), b(θ) = 1, 0 → W là unique
 
-**🔗 See also:** [Ước lượng không chệch duy nhất](#node-093ai45) · [Đánh giá Ước lượng Không Chệch Tốt nhất](#node-3xk2w90)
-
 <br>
 
 <a id="node-3xk2w90"></a>
@@ -4163,8 +4100,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > hay không thì phải XEM XÉT Cov(W, U) - tức là QUAN HỆ CỦA NÓ VỚI U - 
 > TỨC LÀ UNBIASED ESTIMATOR CỦA 0
 
-**🔗 See also:** [Ước lượng không chệch tốt nhất duy nhất](#node-01on741) · [Ước lượng không chệch tốt nhất](#node-xsdsv1d)
-
 <br>
 
 <a id="node-xsdsv1d"></a>
@@ -4245,8 +4180,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > DO VẬY, CHỨNG MINH ĐƯỢC W là THE BEST
 
-**🔗 See also:** [Đánh giá Ước lượng Không Chệch Tốt nhất](#node-3xk2w90) · [Đặc điểm ước lượng không chệch tốt nhất](#node-c2oqhq4)
-
 <br>
 
 <a id="node-c2oqhq4"></a>
@@ -4305,8 +4238,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > (tức là xác nhận một thằng làm vua thì khó, nhưng việc chỉ ra một thằng không
 > phải vua thì có thể dễ)
-
-**🔗 See also:** [Ước lượng không chệch tốt nhất](#node-xsdsv1d) · [Ước lượng không chệch của 0](#node-dvlz38u)
 
 <br>
 
@@ -4391,8 +4322,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > ⇔ h(θ+1) - h(θ) = 0
 
-**🔗 See also:** [Đặc điểm ước lượng không chệch tốt nhất](#node-c2oqhq4) · [Tính đầy đủ và ước lượng](#node-8bbly0i)
-
 <br>
 
 <a id="node-8bbly0i"></a>
@@ -4449,7 +4378,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > Và theo tác giả thì DỰA VÀO TÍNH CHẤT **COMPLETENESS**, ta sẽ có được
 > tình huống này
 
-**🔗 See also:** [Ước lượng không chệch của 0](#node-dvlz38u) · [Thống kê đủ & Ước lượng tốt nhất](#node-7mgmpeq) · [Định nghĩa Tính đủ](./62_the_sufficient_principle.md#node-jcf9e90)
+**🔗 See also:** [Định nghĩa Tính đủ](./62_the_sufficient_principle.md#node-jcf9e90)
 
 <br>
 
@@ -4565,7 +4494,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > Và như trên đã nói, với việc Y là complete statistic, và như vừa nói ở trên
 > g(Y) = [(n+1)/n]Y sẽ là best estimator của E_θ[g(Y)], tức là θ.
 
-**🔗 See also:** [Tính đầy đủ và ước lượng](#node-8bbly0i) · [Ước lượng không chệch tốt nhất](#node-0igldl9) · [Cramer-Rao: Vi phạm giả định](#node-i0n08jh)
+**🔗 See also:** [Cramer-Rao: Vi phạm giả định](#node-i0n08jh)
 
 <br>
 
@@ -4702,8 +4631,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > và cũng chứng minh xong định lí này
 
-**🔗 See also:** [Thống kê đủ & Ước lượng tốt nhất](#node-7mgmpeq) · [Tìm ước lượng không chệch tốt nhất](#node-kj1uy1d)
-
 <br>
 
 <a id="node-kj1uy1d"></a>
@@ -4733,8 +4660,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Vậy nói ngắn gọn là. Có T là complete + sufficient statistic, thì chỉ cần kiếm
 > h(**X**) là unbiased estimator của τ(θ) thì ta sẽ có ngay the best: E[h(**X**)|T]
-
-**🔗 See also:** [Ước lượng không chệch tốt nhất](#node-0igldl9) · [Ước lượng không chệch tốt nhất Binomial](#node-brmf2r9)
 
 <br>
 
@@ -4889,7 +4814,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > E_θ[E[h(**X**) | Σi Xi]] = E[h(**X**)] = τ(θ)
 
-**🔗 See also:** [Tìm ước lượng không chệch tốt nhất](#node-kj1uy1d) · [Thống kê đủ loại bỏ θ](#node-ap81sh3) · [Thống kê đủ nhị thức](./62_the_sufficient_principle.md#node-ubmvdfc)
+**🔗 See also:** [Thống kê đủ nhị thức](./62_the_sufficient_principle.md#node-ubmvdfc)
 
 <br>
 
@@ -4987,7 +4912,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > Thì đây, rõ ràng cái mà ta vừa tính chính là P(X1=1|T=t), chính là conditional
 > distribution của sample đấy, Nên nó phải không còn phụ thuộc θ vì ý vừa nói.
 
-**🔗 See also:** [Ước lượng không chệch tốt nhất Binomial](#node-brmf2r9) · [Tối ưu hàm mất mát](#node-k2onxtg) · [Định nghĩa Thống kê đủ](./62_the_sufficient_principle.md#node-aog81op)
+**🔗 See also:** [Định nghĩa Thống kê đủ](./62_the_sufficient_principle.md#node-aog81op)
 
 <br>
 
@@ -5061,8 +4986,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > FUNCTION PHÙ HỢP GIÚP PHẢN ÁNH ĐƯỢC HẬU QUẢ CỦA CÁC DẠNG
 > ERROR KHÁC NHAU.
 
-**🔗 See also:** [Thống kê đủ loại bỏ θ](#node-ap81sh3) · [Hàm rủi ro ước lượng](#node-qschovu)
-
 <br>
 
 <a id="node-qschovu"></a>
@@ -5108,7 +5031,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > Nhưng gs nói thêm, cũng có khi có tình trạng cross, tức là trong một số θ thì 
 > risk của δ1 nhỏ hơn nhưng ở một số θ khác thì risk δ2 nhỏ hơn
 
-**🔗 See also:** [Tối ưu hàm mất mát](#node-k2onxtg) · [Risk function: MSE](#node-m0ppuk5) · [Hàm mất mát và rủi ro](./93_methods_of_evaluating_interval_estimators.md#node-9qgprpf)
+**🔗 See also:** [Hàm mất mát và rủi ro](./93_methods_of_evaluating_interval_estimators.md#node-9qgprpf)
 
 <br>
 
@@ -5147,8 +5070,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 >
 > R(θ, δ(**X**)) = MSE_θ(δ(**X**)), và do đó = Var_θ(δ(**X**)) + [Bias_θ δ(**X**)]^2
-
-**🔗 See also:** [Hàm rủi ro ước lượng](#node-qschovu) · [Ước lượng Tốt: Phương sai, Độ chệch](#node-behoipa)
 
 <br>
 
@@ -5192,8 +5113,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > không toàn diện bằng việc đánh giá cùng lúc cả bias và variance để tìm cái
 > có bias nhỏ và variance nhỏ.
 
-**🔗 See also:** [Risk function: MSE](#node-m0ppuk5) · [So sánh Risk Function Estimator](#node-0afaavz)
-
 <br>
 
 <a id="node-0afaavz"></a>
@@ -5225,8 +5144,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Ngược lại khi n lớn thì mse (risk function) của xbar là nhỏ hơn của p^_B trong
 > phần lớn trường hợp.
-
-**🔗 See also:** [Ước lượng Tốt: Phương sai, Độ chệch](#node-behoipa) · [Rủi ro phương sai chuẩn](#node-49hnht1)
 
 <br>
 
@@ -5291,8 +5208,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 >
 > = [b^2 2/(n-1) + (b-1)^2]σ^4
-
-**🔗 See also:** [So sánh Risk Function Estimator](#node-0afaavz) · [Ước lượng phương sai tối ưu](#node-wfnyjqz)
 
 <br>
 
@@ -5382,8 +5297,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > Và hình 7.3.2 cho thấy đồ thị hàm risk của S_tilde^2(**X**), S^2 (như đã biết, là
 > unbiased estimator của σ^2) và của MLE của σ^2. Nhận xét thấy nó thấp hơn hai
 > thằng này ở mọi giá trị của σ^2
-
-**🔗 See also:** [Rủi ro phương sai chuẩn](#node-49hnht1) · [Ước lượng phương sai: Stein Loss](#node-66qvgc7)
 
 <br>
 
@@ -5516,8 +5429,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > Như vậy b khiến R(σ^2, bS^2) nhỏ nhất với mọi σ^2 chính là b = 1. Nói
 > cách khác, S^2 chính là estimator có risk nhỏ nhất khi dùng Stein loss
 
-**🔗 See also:** [Ước lượng phương sai tối ưu](#node-wfnyjqz) · [Rủi ro Bayes và Quy tắc Bayes](#node-v9yu5x2)
-
 <br>
 
 <a id="node-v9yu5x2"></a>
@@ -5610,8 +5521,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > Rồi, từ đó ta sẽ tìm **estimator δ nào có Bayes risk nhỏ nhất**, thì tác giả cho
 > biết nó sẽ được gọi là **Bayes rule wrt a prior π**, kí hiệu δ^π
 
-**🔗 See also:** [Ước lượng phương sai: Stein Loss](#node-66qvgc7) · [Tìm quy tắc quyết định Bayes](#node-h9jb5t8)
-
 <br>
 
 <a id="node-h9jb5t8"></a>
@@ -5695,8 +5604,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > Do đó với mỗi giá trị observed value **x** của **X**, **bằng cách chọn δ sao cho
 > minimize cái này, thì ta sẽ có estimator minimize Bayes risk**
 
-**🔗 See also:** [Rủi ro Bayes và Quy tắc Bayes](#node-v9yu5x2) · [Xây dựng Quy tắc Bayes](#node-xatzdyv)
-
 <br>
 
 <a id="node-xatzdyv"></a>
@@ -5756,7 +5663,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > Và ngay cả khi bài toán này không có closed form solution, thì vẫn có thể
 > giải nó theo lối numerically (ám chỉ các thuật toán tối ưu như đã học)
 
-**🔗 See also:** [Tìm quy tắc quyết định Bayes](#node-h9jb5t8) · [Ước lượng Bayes và Hàm mất mát](#node-ingp49m) · [EX: Giá trị dự đoán tốt nhất](./22_expected_value.md#node-0loinmk)
+**🔗 See also:** [EX: Giá trị dự đoán tốt nhất](./22_expected_value.md#node-0loinmk)
 
 <br>
 
@@ -5903,8 +5810,6 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 >
 > Từ đó phải hiểu Bayes estimator khi dùng loss khác, sẽ chưa chắc là mean
 > của θ ~ π(θ|**x**)
-
-**🔗 See also:** [Xây dựng Quy tắc Bayes](#node-xatzdyv) · [Ước lượng Bayes chuẩn](#node-vscj9eh)
 
 <br>
 
@@ -6219,7 +6124,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > Do đó, **khi dùng absolute error loss**, thì **Bayes rule given prior π**, **CŨNG
 > LÀ BAYES ESTIMATOR LUÔN.**
 
-**🔗 See also:** [Ước lượng Bayes và Hàm mất mát](#node-ingp49m) · [Ước lượng Bayes Loss Tuyệt đối](#node-w61d148) · [Ước lượng Bayes phân phối chuẩn](./72_method_of_finding_estimators.md#node-5ldrh78) · [Luật quyết định kiểm định Bayesian](./82_method_of_finding_tests.md#node-zk8yeue)
+**🔗 See also:** [Ước lượng Bayes phân phối chuẩn](./72_method_of_finding_estimators.md#node-5ldrh78) · [Luật quyết định kiểm định Bayesian](./82_method_of_finding_tests.md#node-zk8yeue)
 
 <br>
 
@@ -6312,7 +6217,7 @@ evaluating Estimators](#node-l0tjfjp) · [Sai số bình phương trung bình](#
 > chỉ ≈ 0 chứ nhất định không = 0, dù n có lớn cỡ nào. Ý nói, prior belief luôn
 > ảnh hưởng nhất định
 
-**🔗 See also:** [Ước lượng Bayes chuẩn](#node-vscj9eh) · [Ước lượng Bayes Binomial](./72_method_of_finding_estimators.md#node-c7vhpqt)
+**🔗 See also:** [Ước lượng Bayes Binomial](./72_method_of_finding_estimators.md#node-c7vhpqt)
 
 <br>
 
