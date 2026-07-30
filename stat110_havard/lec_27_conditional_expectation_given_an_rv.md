@@ -127,6 +127,8 @@ expectation Given An R.v
 >
 > Do đó **chuyển về conditioned on r.v E(Y|X)** ta chỉ việc **thay x bằng X**: **E(Y|X) = X/2**
 
+**🔗 See also:** [linked note](./lec_26_conditional_expectation.md#node-z5ga6xd)
+
 <br>
 
 <a id="node-cy4h4bg"></a>
@@ -271,6 +273,8 @@ expectation Given An R.v
 >
 > E(Y|X) = E(Y) nếu X, Y INDEPENDENT.
 
+**🔗 See also:** [linked note](./lec_26_conditional_expectation.md#node-83l5pqi) · [linked note](./lec_26_conditional_expectation.md#node-vfxe5t9)
+
 <br>
 
 <a id="node-te81t3m"></a>
@@ -356,6 +360,8 @@ expectation Given An R.v
 > E(Residual)*E[h(X) = E[Y-E(Y|X)]*Eh(X) = {EY - E[E(Y|X)]}*Eh(X) = (EY - EY)*Eh(X) = 0
 >
 > PROPERTY 4: E[ (Y-E[Y|X]) h(X) ] = 0
+
+**🔗 See also:** [linked note](./lec_21_covariance_correlation.md#node-5ylqffk)
 
 <br>
 
@@ -791,6 +797,8 @@ expectation Given An R.v
 > làm prior distribution của Q** cũng là hợp lí nhờ tính chất **conjugate** **prior** to
 > **Binomial của Beta**
 
+**🔗 See also:** [linked note](./lec_22_transformations_convolution.md#node-ze03psn)
+
 <br>
 
 <a id="node-6y8ive2"></a>
@@ -924,6 +932,8 @@ expectation Given An R.v
 >
 >
 > Và Q là ~ Beta(a,b) nên **EQ = a/(a+b)** như đã biết bữa trước, Vậy EX = **na/(a+b)**
+
+**🔗 See also:** [linked note](./lec_25_order_statistic_conditional_expectation.md#node-6ikcoq7)
 
 <br>
 
