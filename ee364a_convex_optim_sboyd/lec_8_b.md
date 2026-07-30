@@ -114,6 +114,8 @@
 >
 > 5.5 OPTIMALITY CONDITION
 
+**🔗 See also:** [KKT và tính tối ưu lồi](#node-0kgn4eu) · [linked note](#node-tp163f0)
+
 <br>
 
 <a id="node-xhsdknh"></a>
@@ -252,6 +254,8 @@
 >
 > Phần về Slater's gs ko nói
 
+**🔗 See also:** [linked note](#node-6du1rri)
+
 <br>
 
 <a id="node-d37ruj7"></a>
@@ -322,6 +326,8 @@
 > 5.5.1 CERTIFICATE OF SUBOBTIMALITY 
 > & STOPPING CRITERIA
 
+**🔗 See also:** [Các khái niệm như unattainable & unsolvable, ε-suboptimal](./lec_5.md#node-vzno2dm) · [linked note](#node-74sfwci)
+
 <br>
 
 <a id="node-qkkp5l1"></a>
@@ -367,6 +373,8 @@
 > 5.5 OPTIMALITY CONDITIONS
 >
 > 5.5.2 COMPLEMETARY SLACNESS
+
+**🔗 See also:** [linked note](#node-6du1rri)
 
 <br>
 
@@ -545,6 +553,8 @@
 >
 > Do đó khi ta có g(λ~, v~) = f0(x~) thì điều này CHỈ XẢY RA KHI g(λ~, v~)
 > chính là 1) g(λ*, v*), 2) f0(x~) chính là f0(x*) và 3) Ta có Strong duality xảy ra.
+
+**🔗 See also:** [linked note](#node-l8otevv)
 
 <br>
 
@@ -863,6 +873,8 @@
 > Và như đã nói, ta sẽ CHECK XEM x* có PRIMAL FEASIBLE KHÔNG. 
 > NẾU CÓ THÌ NÓ CHÍNH LÀ PRIMAL OPTIMAL.
 
+**🔗 See also:** [Entropy maximization](./lec_8_a.md#node-myefxtz)
+
 <br>
 
 <a id="node-80b0876"></a>
@@ -1102,6 +1114,8 @@
 > Và vì đang nói ta có Strong Duality nên p*(0, 0)  = d*(0, 0) 
 >
 > Vậy tóm lại ta có: p*(u, v) >= p*(0, 0) - λ*Tu - v*Tw
+
+**🔗 See also:** [linked note](#node-khfilej)
 
 <br>
 
@@ -1469,6 +1483,8 @@
 > Và cái này đúng ∀ x ⇨ cũng đúng với x* của perturbed problem: 
 >
 > f0(x*) = p*(u, v) ≥ p*(0,0) - Σi λ*iui - Σi w*ivi
+
+**🔗 See also:** [linked note](#node-nqqrjwj) · [linked note](./lec_9.md#node-tad98fl)
 
 <br>
 
