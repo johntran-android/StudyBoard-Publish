@@ -151,6 +151,8 @@
 > đổi coordinate bởi P = ∇^2f(x) thì sublevel set trong vùng gần x* sẽ
 > có condition number nhỏ -> converge nhanh
 
+**🔗 See also:** [linked note](./chap_91_94.md#node-lhz1ztj)
+
 <br>
 
 <a id="node-5ploxp9"></a>
@@ -435,6 +437,8 @@
 >
 > Ý cuói cùng là liên quan đến khái niệm affine invariance, quay lại sau
 
+**🔗 See also:** [linked note](./chap_10.md#node-rk6orjq)
+
 <br>
 
 <a id="node-vmlbdyl"></a>
@@ -514,6 +518,8 @@
 > function là quadratic, hoặc rất gần quadratic. Do đó, có thể nhận định
 > Lipschitz constant L này chính là cái sẽ ảnh hưởng đến hiệu qỉa của
 > Newton's method
+
+**🔗 See also:** [linked note](./chap_91_94.md#node-1u71cgz)
 
 <br>
 
@@ -2251,6 +2257,8 @@
 > Thế thì vì P (tốt nhất) như thế nào thì chỉ phụ thuộc vào bản thân H,
 > mà H không đổi. Nên ta có thể tính P trước và dùng nhiều lần Đại
 > khái là vậy
+
+**🔗 See also:** [linked note](./appendix_c.md#node-f6w6yif)
 
 <br>
 
