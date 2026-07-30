@@ -1,6 +1,6 @@
 # 3.2.0 The Bias-Variance Decomposition
 
-📊 **Progress:** `5` Notes | `6` Screenshots | `4` AI Reviews
+📊 **Progress:** `7` Notes | `13` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-0nolzxg"></a>
@@ -537,7 +537,7 @@
 >
 > Bài ghi chú này cực kỳ chính xác và chi tiết, thể hiện sự hiểu biết sâu sắc về các khái niệm phức tạp về squared loss trong lý thuyết quyết định, MLE và phân tách kỳ vọng mất mát. Phần giải thích các công thức và ý nghĩa của từng thành phần đều xuất sắc, đặc biệt là cách bạn làm rõ sự khác biệt và mối liên hệ giữa các trường hợp. Bạn cũng giải thích đúng tác động của dữ liệu hữu hạn lên việc tìm hàm hồi quy tối ưu. Đây là một phân tích mẫu mực.
 
-**🔗 See also:** [Optimal Least Squares Predictor](./15_decision_theory.md#node-3ve6hfk)
+**🔗 See also:** [Optimal Least Squares Predictor](./15_decision_theory.md#node-3ve6hfk) · [Expected Squared Loss Decomposition](#node-w19nneq)
 
 <br>
 
@@ -547,7 +547,7 @@
 
 <p align="center"><kbd><img src="assets/laq0toqbene.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/dswh3ztggft.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/1622x2st9ib.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Thế thì, ở trên ta đã hiểu vì sao có công thức 3.37 ∫(y(**x**) - h(**x**))^2 f(**x**)d**x** + ∫∫\[h(**x**) - t\]^2 f(t,**x**)d**x** dt.
@@ -646,11 +646,11 @@
 >
 >
 >
-> Còn cái trêm thứ nhất: E\[{y(**x**, D) - E\[y(**x**, D)\]}^2\]. Thì để dễ thấy nó là gì, chỉ cần ôn lại công thức Variance của random variance X: Var(X) = E\[X - EX\]^2. Vậy thì ở đây, như đã nói ở trên, y(**x**, D) là random variable. Thành ra theo công thức của variance thì E\[{y(**x**, D) - E\[y(**x**, D)\]}^2\] chính là Var\[y(**x**, D)\].
+> Còn cái term thứ nhất: E\[{y(**x**, D) - E\[y(**x**, D)\]}^2\]. Thì để dễ thấy nó là gì, chỉ cần ôn lại công thức Variance của random variance X: Var(X) = E\[X - EX\]^2. Vậy thì ở đây, như đã nói ở trên, y(**x**, D) là random variable. Thành ra theo công thức của variance thì E\[{y(**x**, D) - E\[y(**x**, D)\]}^2\] chính là Var\[y(**x**, D)\].
 >
 >
 >
-> Do đó, E\[y(**x**, D) - h(**x**)\]^2 = bình phương bias + variance của y(**x**, D).
+> Do đó, E\[y(**x**, D) - h(**x**)\]^2 = {E\[y(**x**, D)\] - h(**x**)}^2 + Var\[y(**x**, D)\] = bình phương bias + variance của y(**x**, D).
 >
 >
 >
@@ -738,19 +738,19 @@
 >
 >
 >
-> Như vậy, đối chiếu với những gì gs Bishop làm ở đây: Thì cơ bản cũng giống vậy: E{\[y(**x**,D) - h(**x**)\]^2} chính là tương đương với MSE. 
+> Như vậy, đối chiếu với những gì gs Bishop làm ở đây: Thì cơ bản cũng giống vậy: E{\[y(**x**,D) - h(**x**)\]^2} chính là tương đương với MSE.
 >
 >
 >
-> Chỉ khác là, trong Casella: 
+> Chỉ khác là, trong Casella:
 >
 >
 >
-> MSE E\_θ\[\[W(**X**) - θ\]^2\] sẽ đo độ sai khác của W(**X**) là estimator của θ, so với θ 
+> MSE E\_θ\[\[W(**X**) - θ\]^2\] sẽ đo độ sai khác của W(**X**) là estimator của θ, so với θ
 >
 >
 >
-> còn ở đây, 
+> còn ở đây,
 >
 >
 >
@@ -766,7 +766,7 @@
 >
 >
 >
-> Còn ở đây, bias là hàm đo distance giữa kì vọng của y(**x**, D): E\[y(**x**, D)\] (mang ý nghĩa là tính trung bình y(**x**, D) qua mọi possible dataset D) và giá trị tối ưu nên dùng khi predict t: E\[T|**x**\]. 
+> Còn ở đây, bias là hàm đo distance giữa kì vọng của y(**x**, D): E\[y(**x**, D)\] (mang ý nghĩa là tính trung bình y(**x**, D) qua mọi possible dataset D) và giá trị tối ưu nên dùng khi predict t: E\[T|**x**\].
 >
 >
 >
@@ -775,6 +775,14 @@
 >
 >
 > Phần thứ hai muốn giảm, chính là giảm Variance của W(**X**) (trong Casella) và Var\[y(**x**, D)\] (trong Bishop). Và cũng rất logic, vì ta muốn cái hàm W(**X**) phải có sự biến động nhỏ. Và thậm chí nếu được, như trong chương 10 Casella đã học, ta muốn khi kích thước sample n tăng lên vô hạn, thì W(**X**) sẽ có phương sai tiệm cận đạt đúng phương sai nhỏ nhất quy định bởi Cramer Rao Lower Bound, khi đó W(**X**) sẽ được gọi là asymptotically efficient estimator. Tương tự vậy, ta cũng muốn khi dataset lớn vô cùng, thì y(**x**, D) sẽ có phương sai rất nhỏ.
+>
+>
+>
+> Và đoạn cuối gs cũng nói điều mình hiểu vừa rồi. Bias sẽ đo xem là khi ta lấy trung bình prediction y(**x**, D) trên mọi data D thì nó còn các h(**x**) bao nhiêu.
+>
+>
+>
+> Và khi Var(y(**x**, D) sẽ cho ta biết với các dataset khác nhau, thì giá trị dự đoán y(**x**, D) sẽ biến động nhiều hay ít thế nào, từ đó cho ta thấy rằng SỰ NHẠY CẢM CỦA PREDICTION DỰA TRÊN DATA
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
@@ -784,4 +792,149 @@
 <br>
 
 <a id="node-w19nneq"></a>
+
+- **Expected Squared Loss Decomposition**
+
+<p align="center"><kbd><img src="assets/n02rigs4pa8.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Nãy giờ cái ta có là E{\[y(**x**,D) - h(**x**)\]^2}, expected value của \[y(**x**,D) - h(**x**)\]^2 với D là đối tượng random, và cái kì vọng này mang ý nghĩa là lấy trung bình qua mọi possible value của D.
+>
+>
+>
+> Nhưng đối với **x**, dĩ nhiên E{\[y(**x**,D) - h(**x**)\]^2} sẽ cũng là function theo **x**. Vậy thì quay lại cái 3.37:
+>
+>
+>
+> E\[L\] = ∫(y(**x**) - h(**x**))^2 f(**x**)d**x** + ∫∫\[h(**x**) - t\]^2 f(t,**x**)d**x** dt
+>
+>
+>
+> và thay (y(**x**) - h(**x**))^2 (mang ý nghĩa là square error tính bởi một bộ data cụ thể) bằng E{\[y(**x**,D) - h(**x**)\]^2} (mang ý nghĩa là square error tính trung bình bởi mọi bộ data có thể có), ta sẽ có:
+>
+>
+>
+> E\[L\] = ∫ E{\[y(**x**,D) - h(**x**)\]^2} f(**x**)d**x** + ∫∫\[h(**x**) - t\]^2 f(t,**x**)d**x** dt 
+>
+>
+>
+> Và E{\[y(**x**,D) - h(**x**)\]^2} = {E\[y(**x**, D)\] - h(**x**)}^2 + Var\[y(**x**, D)\]
+>
+>
+>
+> = ∫ \[ {E\[y(**x**, D)\] - h(**x**)}^2 + Var\[y(**x**, D)\] \] f(**x**)d**x** + ∫∫\[h(**x**) - t\]^2 f(t,**x**)d**x** dt 
+>
+>
+>
+> = ∫ {E\[y(**x**, D)\] - h(**x**)}^2 f(**x**)d**x** + ∫ Var\[y(**x**, D)\] f(**x**)d**x** + ∫∫\[h(**x**) - t\]^2 f(t,**x**)d**x** dt 
+>
+>
+>
+> Tới đây, xét từng term và ý nghĩa của chúng:
+>
+>
+>
+> i) ∫ {E\[y(**x**, D)\] - h(**x**)}^2 f(**x**)d**x**
+>
+>
+>
+> Như đã biết, {E\[y(**x**, D)\] - h(**x**)}^2 là bình phương của bias - thước đo cho thấy rằng khi tính trung bình y(**x**, D) trên mọi possible dataset D thì nó cách h(**x**) là bao nhiêu. Và cái này đang tính với một input **x** cụ thể. Nói cách khác, ta có thể hiểu nôm na bằng lời rằng: À với **x** cụ thể này, thì bias của hàm prediction y là bao nhiêu.
+>
+>
+>
+> Thế thì nếu bây giờ, ta tính trung bình của cái này trên mọi possible value của **x**, với trọng số là f(**x**) thì ta sẽ có cái tích phân trên. Hoặc nhìn theo cách khác: Nếu ta xem xét random variable **X**, thì {E\[y(**X**, D)\] - h(**x**)}^2 trở thành một random variable. Và ta tính expected value của random variable này: E\[{E\[y(**x**, D)\] - h(**x**)}^2\], theo công thức LOTUS đã học: khi có g(X) với X \~ f(x) thì Eg(X) = ∫g(x)f(x)dx, giúp ta có:
+>
+>
+>
+> E\[{E\[y(**x**, D)\] - h(**x**)}^2\] = ∫ {E\[y(**x**, D)\] - h(**x**)}^2 f(**x**)d**x**
+>
+>
+>
+> chính là cái tích phân trên. Và cái tích phân này mang ý nghĩa: Tính trung bình bias trên mọi possible value của **X**.
+>
+>
+>
+> ii) ∫ Var\[y(**x**, D)\] f(**x**)d**x**
+>
+>
+>
+> Như đã nói ở note trước, Var(y(**x**, D)) là variance của y(**x**, D), mang ý nghĩa là với **X** = **x**, thì mức biến động của y(**x**, D) là cỡ nào. Thế thì, nay, thay **x** bằng **X**, thì Var(y(**x**, D)) lại trở thành random variable và ta lấy kì vọng của nó, LOTUS sẽ cho ta cái tích phân ∫ Var\[y(**x**, D)\] f(**x**)d**x**:
+>
+>
+>
+> E\[Var\[y(**X**, D)\]\] = ∫ Var\[y(**x**, D)\] f(**x**)d**x**
+>
+>
+>
+> và ý nghĩa của nó là, xét trung bình trên mọi possible value **x** của **X**, thì mức biến động của y là bao nhiêu.
+>
+>
+>
+> iii) ∫∫\[h(**x**) - t\]^2 f(t,**x**)d**x** dt , cái term này thì như note trước đã nói rồi, là phần error không thể reduce được (vì không dính gì đến y), nó đơn thuần phản ánh mức độ nhiễu.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bạn đã thể hiện sự hiểu biết sâu sắc về phân tách bias-variance, từ việc phân tích biểu thức kì vọng tại một điểm x cụ thể đến việc tích phân để có được các đại lượng tổng thể. Việc sử dụng Luật Thống kê Vô thức (LOTUS) để giải thích các tích phân cũng rất chính xác và hiệu quả. Để tăng cường tính rõ ràng, bạn có thể bổ sung một ghi chú nhỏ về sự tương ứng giữa f(x) bạn dùng và p(x) trong tài liệu, cũng như giữa f(t,x) và p(x,t).
+
+**🔗 See also:** [Expected Squared Loss Decomposition](#node-s3i1j2i)
+
+<br>
+
+<a id="node-mqos0pj"></a>
+
+- **Bias-Variance Trade-off Explained**
+
+<p align="center"><kbd><img src="assets/9tfsgf45t8v.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/79lrqjkc2qr.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/c6wabzwfzqu.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/khf294hyf8.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Nói chung đoạn này chỉ là gs Bishop nói về việc, dù ta muốn giảm cái expected loss E\[L\], vốn dĩ tách thành 3 phần (bình phương bias), variance và noise, thì thật ra ngoại trừ việc cái noise thì ta không làm gì được, thì còn một vấn đề là hai cái đầu nó trade-off nhau, tức là (dùng model) giảm bias thì lại tăng loss do variance, và ngược lại, dùng model giảm variance thì lại tăng loss do bias.
+>
+>
+>
+> Và để minh họa, ông mới dùng một model có độ plexible cao (bằng cách dùng các hàm Gaussian basis - như đã biết, bữa giờ ta nói về linear model y(**w**, **x**) = **w**TΦ(**x**), là linear model đối với **w** nhưng nhờ basis fuction, Φ, ta có non-linear model đới với **x**, và cũng nhờ Φ mà ta có thể tăng mức complex, flexible của model.
+>
+>
+>
+> Tuy nhiên, trong quá trình training để giảm loss, ta thêm regularization (λ/2) **w**T**w**, để tùy theo λ lớn nhỏ, ta khống chế giá trị của **w\***. Và từ đó, kiểu như là tăng hay giảm mức flexible của model. (bởi dù model dùng các hàm Φi(**x**) để có tính phi tuýến, nhưng chúng gắn với trọng số là wi, nên nếu khống chế wi bằng cách không cho chúng được tự do thì ta lại vẫn có thể giàm mức độ flexible của model.
+>
+>
+>
+> Như vậy, gs sẽ làm như sau: Đầu tiên cho λ lớn, để tạo ra các model kém flexible. Và train trên 100 dataset D khác nhau, kết quả là các đường màu đỏ trên cùng (ln λ = 2.6) có mức biến động (variance) có thể thấy là nhỏ. (nhớ ko, Var(y(**x**, D)) sẽ cho biết với **X** = **x**, thì y(x, D), là random variable theo D sẽ biến động thế nào khi D thay đổi. Thì hình dung một lát cắt tại x = 0.5 chẳng hạn, thì ta sẽ thấy các đường màu đỏ không biến động quá nhiều. Cũng chính là ta thấy đám line màu đỏ nó nằm khá "gọn" (nhìn tụi nó có vẻ giống nhau). Tuy nhiên, hình bên phải khi tính trung bình lại (chính là E\[y(**x**, D), trung bình y(**x**, D) over all D) thì nó lại khá xa h(**x**) = E\[T|**x**\]. Dẫn tới đường màu đỏ trung bình bên phải lệch khá xa đường màu xanh. Đây chính là minh họa cho bias lớn.
+>
+>
+>
+> Vậy khi model có variance thấp thì bias lại lớn.
+>
+>
+>
+> Sau đó, gs làm lại, với λ rất nhỏ, tạo ra các model rất flexible. Kết quả là hình cuối (ln λ = -2.4), các đường màu đỏ có vẻ rất "loạn xạ", mà nguyên nhân là, Var(y(**x**, D)) lúc này lớn. Xét mặt cắt tại x = 0.5 sẽ thấy Var(y(x, D)) sẽ lớn hơn là trường hợp λ lớn. Nhưng khi tính trung bình, thì E\[y(**x**, D) lại khá gần h(**x**) → Bias thấp, dẫn đến thệ hiện trên hình bên phải là thì đường màu đỏ lại bám sát khá tốt đường màu xanh.
+>
+>
+>
+> Vậy khi model có variance cao thì bias lại thấp.
+>
+>
+>
+> Và lí tưởng là khi λ vừa phải, model bias và variance đều không quá cao.
+>
+>
+>
+> Và một ý cũng quan trọng đó là với mô hình có variance cao, thì tuy chúng sẽ sensitive với data, tức là, khi D thay đổi thì y(**x**, D) sẽ thay đổi rất lớn, dẫn tới mỗi đường màu đỏ rất khác nhau. Nhưng trung bình lại thì chúng lại khá sát với đường màu xanh. Điều này gợi ý cho ta rằng có thể phát triển một phương pháp nào đó mà cho phép dùng complex model sau đó lấy trung bình của chúng (đây chính là ensemble model mình đã biết sơ từ các lớp ML cơ bản)
+
+**🔗 See also:** [3.1.4 Regularized least squares](./314_regularized_least_squares.md#node-y97v4o1)
+
+<br>
+
+<a id="node-xi208eq"></a>
+
+<p align="center"><kbd><img src="assets/e9l4mvavm0i.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/uwc5h0qx9v.png" width="80%"></kbd></p>
 
