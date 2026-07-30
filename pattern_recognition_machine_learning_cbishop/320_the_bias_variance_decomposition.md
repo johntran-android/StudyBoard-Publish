@@ -1,6 +1,6 @@
 # 3.2.0 The Bias-Variance Decomposition
 
-📊 **Progress:** `7` Notes | `13` Screenshots | `5` AI Reviews
+📊 **Progress:** `8` Notes | `16` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-0nolzxg"></a>
@@ -928,6 +928,11 @@
 >
 > Và một ý cũng quan trọng đó là với mô hình có variance cao, thì tuy chúng sẽ sensitive với data, tức là, khi D thay đổi thì y(**x**, D) sẽ thay đổi rất lớn, dẫn tới mỗi đường màu đỏ rất khác nhau. Nhưng trung bình lại thì chúng lại khá sát với đường màu xanh. Điều này gợi ý cho ta rằng có thể phát triển một phương pháp nào đó mà cho phép dùng complex model sau đó lấy trung bình của chúng (đây chính là ensemble model mình đã biết sơ từ các lớp ML cơ bản)
 
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bạn đã phân tích rất chi tiết và chính xác về mối quan hệ giữa bias, variance và tham số regularization, thể hiện sự hiểu biết sâu sắc về cơ chế hoạt động của mô hình. Để tăng cường độ chính xác, bạn có thể cụ thể hóa hơn các giá trị ln λ trong hình mà bạn đang mô tả cho mỗi trường hợp.
+
 **🔗 See also:** [3.1.4 Regularized least squares](./314_regularized_least_squares.md#node-y97v4o1)
 
 <br>
@@ -937,4 +942,19 @@
 <p align="center"><kbd><img src="assets/e9l4mvavm0i.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/uwc5h0qx9v.png" width="80%"></kbd></p>
+
+<a id="node-qtn6vrp"></a>
+
+- **Bias-Variance Trade-Off Formulas**
+
+<p align="center"><kbd><img src="assets/plq7gblf0b.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/oox21ldi24q.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/btlkbu0dlc.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Cái này nhìn vậy mà lại có thể khó hiểu đấy.
+
+<br>
 
