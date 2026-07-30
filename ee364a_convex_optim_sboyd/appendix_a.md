@@ -25,6 +25,8 @@
 
 <p align="center"><kbd><img src="assets/ww5z8s5yy0k.png" width="80%"></kbd></p>
 
+**🔗 See also:** [linked note](./chap_91_94.md#node-eyy8adw)
+
 <br>
 
 <a id="node-xg1oge8"></a>
