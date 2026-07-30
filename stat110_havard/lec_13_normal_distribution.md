@@ -328,6 +328,8 @@ Gs cho rằng ta chỉ cần biết là f(z) có công thức này c*e^(-z^2/2),
 > **JOINT PMF** P(X1=x1, X2=x2...Xn=xn) = P(X1=x1)*P(X2=x2)*...P(Xn=xn) (tích các
 > PMF)
 
+**🔗 See also:** [linked note](./lec_18_mgf_continued.md#node-rvqmvgf)
+
 <br>
 
 <a id="node-qdyl86a"></a>
@@ -723,6 +725,8 @@ Gs cho rằng ta chỉ cần biết là f(z) có công thức này c*e^(-z^2/2),
 > Nó chính là **xuất hiện khi ta chuyển từ Cartesian coordinates sang Polar
 > coordinates**
 
+**🔗 See also:** [linked note](#node-88g780u)
+
 <br>
 
 <a id="node-u3y0li3"></a>
@@ -755,6 +759,8 @@ Gs cho rằng ta chỉ cần biết là f(z) có công thức này c*e^(-z^2/2),
 >
 > CHỨNG MINH X ~ N(0,1) EX = 0
 > DỰA VÀO SYMMETRY
+
+**🔗 See also:** [linked note](./lec_18_mgf_continued.md#node-dfvtp2n)
 
 <br>
 
@@ -921,6 +927,8 @@ Gs cho rằng ta chỉ cần biết là f(z) có công thức này c*e^(-z^2/2),
 >
 > CHỨNG MINH X ~ N(0,1) VarX = 1
 
+**🔗 See also:** [linked note](#node-430taui)
+
 <br>
 
 <a id="node-j00lakx"></a>
@@ -947,6 +955,8 @@ Gs cho rằng ta chỉ cần biết là f(z) có công thức này c*e^(-z^2/2),
 >
 >
 > (again t chỉ là dummy name, để tránh trùng với x, nhưng không quan trọng)
+
+**🔗 See also:** [linked note](./lec_12_discrete_vs_continuous_the_uniform.md#node-px4qd31) · [linked note](./lec_12_discrete_vs_continuous_the_uniform.md#node-9i8dw33) · [linked note](./lec_20_multinomial_and_cauchy.md#node-ynmtz3o)
 
 <br>
 
