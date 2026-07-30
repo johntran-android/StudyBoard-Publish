@@ -9,8 +9,6 @@ normal Distribution
 ## 5.3 Sampling From The
 normal Distribution
 
-**🔗 See also:** [Lấy mẫu từ phân phối chuẩn](#node-fw0jsmz) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-fw0jsmz"></a>
@@ -29,9 +27,6 @@ normal Distribution
 > Việc sampling từ normal distribution có nhiều tính chất hữu ích, cũng như là
 > sampling distribution của các statistic từ normal sẽ có dạng quen thuộc là
 > những mô hình xác suất nổi tiếng
-
-**🔗 See also:** [5.3 Sampling From The
-normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai mẫu](#node-aytwme7)
 
 <br>
 
@@ -111,7 +106,7 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 >
 > Vậy thì thử xem ta có thể chứng minh theorem này ra sao.
 
-**🔗 See also:** [Lấy mẫu từ phân phối chuẩn](#node-fw0jsmz) · [MGF trung bình mẫu](#node-dg373v9) · [Chứng minh S^2 Chi-square](#node-nh8m52t) · [Suy diễn phân phối t](#node-iwzyu9l) · [Khoảng tin cậy từ đại lượng pivot](./92_methods_of_finding_interval_estimators.md#node-g9mg0da)
+**🔗 See also:** [Chứng minh S^2 Chi-square](#node-nh8m52t) · [Suy diễn phân phối t](#node-iwzyu9l) · [Khoảng tin cậy từ đại lượng pivot](./92_methods_of_finding_interval_estimators.md#node-g9mg0da)
 
 <br>
 
@@ -294,8 +289,6 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 >
 > (vì như đã biết, mgf, cũng như cdf, pdf pmf, đều có thể giúp xác định loại
 > của một distribution)
-
-**🔗 See also:** [Tính chất Trung bình & Phương sai mẫu](#node-aytwme7) · [Xbar và S^2 độc lập](#node-z2xp2q0)
 
 <br>
 
@@ -643,8 +636,6 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 >
 > ⇨ Xbar (=Y1)  cũng độc lập với S^2 (là function của Y2,...Yn)
 
-**🔗 See also:** [MGF trung bình mẫu](#node-dg373v9) · [Bổ đề Chi-square](#node-udtt0nq)
-
 <br>
 
 <a id="node-udtt0nq"></a>
@@ -693,7 +684,7 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 > cũng là Γ, với tham số cộng lại. Ở đây gs nói vì Chi-square là một loại Γ cụ
 > thể là Γ(p/2, 2) nên dĩ nhiên nó cũng đúng
 
-**🔗 See also:** [Xbar và S^2 độc lập](#node-z2xp2q0) · [Chứng minh S^2 Chi-square](#node-nh8m52t) · [Đạo hàm PDF của Y=X^2](./21_distribution.md#node-6yi0r3h) · [Tổng biến ngẫu nhiên Gamma](./46_multi_variate_distribution.md#node-08ciur5) · [Đạo hàm phân phối t-Student](#node-5eltn4g) · [Ước lượng Satterthwaite](./72_method_of_finding_estimators.md#node-fosb15b)
+**🔗 See also:** [Đạo hàm PDF của Y=X^2](./21_distribution.md#node-6yi0r3h) · [Tổng biến ngẫu nhiên Gamma](./46_multi_variate_distribution.md#node-08ciur5) · [Đạo hàm phân phối t-Student](#node-5eltn4g) · [Ước lượng Satterthwaite](./72_method_of_finding_estimators.md#node-fosb15b)
 
 <br>
 
@@ -921,7 +912,7 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 > cũng độc lập nhau. Mà như vậy thì Xk+1 - Xk_bar cũng độc lập với Sk^2 vì Sk^2 chả liên quan
 > gì đến Xk+1 (vì nó chỉ liên quan X1,...Xk)
 
-**🔗 See also:** [Bổ đề Chi-square](#node-udtt0nq) · [Độc lập trung bình phương sai](#node-qx3kch2) · [MGF của tổng phân phối chuẩn](./42_conditional_distributions_independent.md#node-tk1wnj7) · [Tính chất Trung bình & Phương sai mẫu](#node-aytwme7)
+**🔗 See also:** [MGF của tổng phân phối chuẩn](./42_conditional_distributions_independent.md#node-tk1wnj7) · [Tính chất Trung bình & Phương sai mẫu](#node-aytwme7)
 
 <br>
 
@@ -970,8 +961,6 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 >
 > b) random vector (U1,...Uk) và (V1,...Vm) độc lập khi và chỉ khi Ui độc lập
 > với Vr với mọi cặp i, j
-
-**🔗 See also:** [Chứng minh S^2 Chi-square](#node-nh8m52t) · [Điều kiện độc lập tổ hợp Normal](#node-91dxhtz)
 
 <br>
 
@@ -1149,7 +1138,7 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 > Đây chính là cái ràng buộc (restriction) đối với các constant mà giáo sư 
 > nói tới trong phần tiếp theo**
 
-**🔗 See also:** [Độc lập trung bình phương sai](#node-qx3kch2) · [Độc lập biến chuẩn](#node-l2y727n) · [Định lý Độc lập Hiệp phương sai](./45_covariance_correlation.md#node-o2ergsg) · [Chứng minh tổng biến chuẩn](./46_multi_variate_distribution.md#node-uaywczk)
+**🔗 See also:** [Định lý Độc lập Hiệp phương sai](./45_covariance_correlation.md#node-o2ergsg) · [Chứng minh tổng biến chuẩn](./46_multi_variate_distribution.md#node-uaywczk)
 
 <br>
 
@@ -1380,8 +1369,6 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 >
 > Tới đây là đủ để thấy joint pdf của U, V phân tách ⇨ U, V độc lập ⇨ Chứng minh xong phần a)
 
-**🔗 See also:** [Điều kiện độc lập tổ hợp Normal](#node-91dxhtz) · [Độc lập vector qua PDF chung](#node-25t5b1y)
-
 <br>
 
 <a id="node-25t5b1y"></a>
@@ -1409,7 +1396,7 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 > có thể tách thành tích các function gi mà mỗi cái apply riêng lên vector **xi )**
 > thì khi đó các rv Vector **X1,...Xn** là độc lập
 
-**🔗 See also:** [Độc lập biến chuẩn](#node-l2y727n) · [Hiệp phương sai Độc lập Biến Chuẩn](#node-1d7jfyb) · [Khái quát tính độc lập biến ngẫu nhiên](./46_multi_variate_distribution.md#node-hvcrd7p)
+**🔗 See also:** [Khái quát tính độc lập biến ngẫu nhiên](./46_multi_variate_distribution.md#node-hvcrd7p)
 
 <br>
 
@@ -1454,8 +1441,6 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 >
 > Và DUY CHỈ CÓ KHI TA START VỚI NORMAL THÌ MỚI CÓ TÍNH CHẤT
 > NÀY
-
-**🔗 See also:** [Độc lập vector qua PDF chung](#node-25t5b1y) · [Chứng minh độc lập S^2 Xbar](#node-jkt5q0l)
 
 <br>
 
@@ -1509,8 +1494,6 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 >
 > Nên ở đâu S^2 = là function của (X1 - Xbar, X2 - Xbar,...)
 > nên nó cũng độc lập Xbar
-
-**🔗 See also:** [Hiệp phương sai Độc lập Biến Chuẩn](#node-1d7jfyb) · [Phân phối và biến động trung bình mẫu](#node-153vzn2)
 
 <br>
 
@@ -1603,7 +1586,7 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 > (Xbar - μ) / S/√n (dùng sampling standard deviation thay cho σ). Nhằm làm cơ 
 > sở cho việc **suy luận ra μ Mà ko cần biết variance σ**
 
-**🔗 See also:** [Chứng minh độc lập S^2 Xbar](#node-jkt5q0l) · [Suy diễn phân phối t](#node-iwzyu9l) · [Kiểm định LRT cho trung bình](./82_method_of_finding_tests.md#node-ouhenhy)
+**🔗 See also:** [Kiểm định LRT cho trung bình](./82_method_of_finding_tests.md#node-ouhenhy)
 
 <br>
 
@@ -1695,7 +1678,7 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 > V là Chi-square p, thì ta có thể tìm distribution của √(V/p), rồi U là n(0,1) thì
 > nói chung ta có thể tìm được distribution của U/√(V/p)
 
-**🔗 See also:** [Phân phối và biến động trung bình mẫu](#node-153vzn2) · [Phân phối t của Student](#node-isdevob) · [Tính chất Trung bình & Phương sai mẫu](#node-aytwme7)
+**🔗 See also:** [Tính chất Trung bình & Phương sai mẫu](#node-aytwme7)
 
 <br>
 
@@ -1722,7 +1705,7 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 >
 > Với p = 1 thì nó chính là pdf của Cauchy distribution
 
-**🔗 See also:** [Suy diễn phân phối t](#node-iwzyu9l) · [Đạo hàm phân phối t-Student](#node-5eltn4g) · [Kiểm định hợp-giao cỡ α](./83_methods_of_evaluating_test.md#node-aruspge) · [Tối ưu hóa kỳ vọng độ dài](./93_methods_of_evaluating_interval_estimators.md#node-cu30bvl)
+**🔗 See also:** [Kiểm định hợp-giao cỡ α](./83_methods_of_evaluating_test.md#node-aruspge) · [Tối ưu hóa kỳ vọng độ dài](./93_methods_of_evaluating_interval_estimators.md#node-cu30bvl)
 
 <br>
 
@@ -1860,7 +1843,7 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 >
 > từ đó ta có pdf của T,là pdf của student t p degree
 
-**🔗 See also:** [Phân phối t của Student](#node-isdevob) · [Giới hạn momen phân phối t](#node-ouu5cht) · [Bổ đề Chi-square](#node-udtt0nq)
+**🔗 See also:** [Bổ đề Chi-square](#node-udtt0nq)
 
 <br>
 
@@ -1895,7 +1878,7 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 >
 > variance với p > 2 VarTp = p / (p - 2)
 
-**🔗 See also:** [Đạo hàm phân phối t-Student](#node-5eltn4g) · [Phân phối F: Tỉ lệ phương sai](#node-dl1mlxm) · [Kiểm định hợp-giao cỡ α](./83_methods_of_evaluating_test.md#node-aruspge)
+**🔗 See also:** [Kiểm định hợp-giao cỡ α](./83_methods_of_evaluating_test.md#node-aruspge)
 
 <br>
 
@@ -1942,8 +1925,6 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 > thì ta sẽ thấy nó bằng 1 khi m lớn. Từ đó ý nghĩa là, hay cho phép kết luận
 > là, hay có cơ sở để nói là, SX^2 / SY^2 ≈ σX^2 / σY^2
 
-**🔗 See also:** [Giới hạn momen phân phối t](#node-ouu5cht) · [Phân phối F và Đối xứng Cầu](#node-hd9jnpj)
-
 <br>
 
 <a id="node-hd9jnpj"></a>
@@ -1976,8 +1957,6 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 > tương tự như khi derive pdf của t distribution (nhớ lại, với t distribution,
 > thì ta dựa vào định nghĩa của nó là U/√(V/p) với U là normal(0,1) V là
 > Chi-square p
-
-**🔗 See also:** [Phân phối F: Tỉ lệ phương sai](#node-dl1mlxm) · [Phân phối F và phương sai](#node-ydb31kk)
 
 <br>
 
@@ -2188,8 +2167,6 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 > SỐ CỦA HAI SAMPLE VARIANCE ĐỂ SUY LUẬN CHO TỈ SỐ CỦA HAI
 > POPULATION VARIANCE
 
-**🔗 See also:** [Phân phối F và Đối xứng Cầu](#node-hd9jnpj) · [Tính chất phân phối F và t](#node-85e946b)
-
 <br>
 
 <a id="node-85e946b"></a>
@@ -2206,8 +2183,6 @@ normal Distribution](#node-lmu32b0) · [Tính chất Trung bình & Phương sai 
 >
 >
 > Nếu X là một Student's t có q bậc tự do thì X^2 là một F 1,q
-
-**🔗 See also:** [Phân phối F và phương sai](#node-ydb31kk)
 
 <br>
 
