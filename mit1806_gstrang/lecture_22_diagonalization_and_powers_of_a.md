@@ -171,6 +171,8 @@ and Powers Of A
 > khi đó x - một vector x khác 0 thỏa Ax = 0 thì **x thuộc
 > nullspace chứ không phải column space.**
 
+**🔗 See also:** [linked note](./lecture_25_symmetric_matrices_and_positive_definiteness.md#node-6ifom9q)
+
 <br>
 
 <a id="node-hdc52sx"></a>
@@ -216,6 +218,8 @@ and Powers Of A
 > (**ELIMINATION** - quá trình biến A thành dạng row echelon
 > form - matrix U) hay A = QR (**ORTHOGONALIZATION** - quá
 > trình từ A, tạo ra bộ orthogonal basis - matrix Q)
+
+**🔗 See also:** [linked note](./lecture_17_orthogonal_matrices_and_gram_schmidt.md#node-3rhmt7i)
 
 <br>
 
@@ -512,6 +516,8 @@ and Powers Of A
 >
 > Còn ở đây ông gọi là system of **DIFFERENCE equation**
 > (hệ phương trình sai phân)
+
+**🔗 See also:** [linked note](./lecture_24_markow_matrices_fourier_series.md#node-iqngcv5)
 
 <br>
 
