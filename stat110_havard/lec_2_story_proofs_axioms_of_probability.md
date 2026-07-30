@@ -82,6 +82,8 @@ axioms Of Probability
 > Cái này tương đồng với cs109 gs Cris có nói, **luôn distinct các thứ**, nhằm
 > giúp có  **equally likely (possible) outcomes**
 
+**🔗 See also:** [linked note](#node-0oeba3z)
+
 <br>
 
 <a id="node-jic8eqt"></a>
@@ -197,6 +199,8 @@ axioms Of Probability
 > nếu k = 1, thì n^k = n^1 = n. Nên mới nói khi k = 1 thì **dù CÓ hay
 > KHÔNG quan  tâm thứ tự** thì kết quả vẫn **chỉ có n cách chọn**
 
+**🔗 See also:** [linked note](./lec_1_probability_counting.md#node-p9lquxa)
+
 <br>
 
 <a id="node-0oeba3z"></a>
@@ -289,6 +293,8 @@ axioms Of Probability
 >
 >
 > Vậy ý nói rằng với việc thử với n = 2, ta thấy **công thức (n+1 choose k) là đúng**
+
+**🔗 See also:** [linked note](#node-7vkv1vs)
 
 <br>
 
@@ -763,6 +769,8 @@ axioms Of Probability
 >
 > CHỨNG MINH (n choose k) = (n choose n-k) BẰNG STORY PROOF
 
+**🔗 See also:** [linked note](./lec_15_midterm_review.md#node-5hqe5ma)
+
 <br>
 
 <a id="node-m6rk0yo"></a>
@@ -834,6 +842,8 @@ axioms Of Probability
 >
 >
 > k(n choose k) = n(n-1 choose k-1)**
+
+**🔗 See also:** [linked note](./lec_9_expectation_indicator_random_variables_linearity.md#node-izuy464)
 
 <br>
 
@@ -908,6 +918,8 @@ axioms Of Probability
 > Đó chính là story proof, chứng minh xong. MÀ THEO GS CHỈ CẦN VẦI DÒNG
 > TRONG KHI NẾU DÙNG TÍNH TOÁN THÌ SẼ RẤT DÀI
 
+**🔗 See also:** [linked note](./lec_8_random_variables_their_distributions.md#node-rmmw7ki)
+
 <br>
 
 <a id="node-henb3el"></a>
@@ -936,6 +948,8 @@ axioms Of Probability
 >
 >
 > Và **xác suất này có range [0:1]**
+
+**🔗 See also:** [linked note](./lec_8_random_variables_their_distributions.md#node-vtd73qg)
 
 <br>
 
