@@ -859,6 +859,8 @@ decomposition
 > Bởi lẽ **SVD quy định rằng mọi matrix A đều có thể làm
 > được như vậy.**
 
+**🔗 See also:** [linked note](./lecture_32_quiz_3_review.md#node-umse8ys)
+
 <br>
 
 <a id="node-55sn7u1"></a>
