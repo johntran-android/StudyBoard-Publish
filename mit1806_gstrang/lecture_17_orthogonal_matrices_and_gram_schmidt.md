@@ -125,6 +125,8 @@ and Gram-schmidt
 > Cái này không cần chứng minh gì cả vì nếu Q vuông mà
 > QTQ = I thì ngay lập tức có thể kết luận QT = Qinv
 
+**🔗 See also:** [linked note](./lecture_33_left_and_right_inverse_pseudoinverse.md#node-1e8cob4)
+
 <br>
 
 <a id="node-otgfo5x"></a>
@@ -737,6 +739,8 @@ and Gram-schmidt
 > [!NOTE]
 > và tương tự quá trình **Gram Schmidt** giúp **biến A
 > thành Q** được thể hiện qua **A = QR**
+
+**🔗 See also:** [linked note](./lecture_22_diagonalization_and_powers_of_a.md#node-tvotgic)
 
 <br>
 
