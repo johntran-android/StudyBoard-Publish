@@ -7,6 +7,8 @@
 
 ## 4.1 Joint & Marginal Distribution
 
+**🔗 See also:** [Định Nghĩa Biến Ngẫu Nhiên Đa Chiều](#node-ilwp7i2) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-ilwp7i2"></a>
@@ -27,6 +29,8 @@
 > FUNCTION map giữa possible outcome trong sample space với trục số
 > thực. Thì với n-dimensional random variable vector, cũng có thể hiểu nó là
 > FUNCTION, map giữa sample space và không gian R^n
+
+**🔗 See also:** [4.1 Joint & Marginal Distribution](#node-7lw1fvu) · [Bản chất sự kiện vector ngẫu nhiên](#node-yujk9o3)
 
 <br>
 
@@ -93,6 +97,8 @@
 >
 > ⇨ P((X,Y) = (5,3)) = 2 * 1/36 =0 = 1/18
 
+**🔗 See also:** [Định Nghĩa Biến Ngẫu Nhiên Đa Chiều](#node-ilwp7i2) · [Biến rời rạc, PMF đồng thời](#node-zl7sw97)
+
 <br>
 
 <a id="node-zl7sw97"></a>
@@ -121,6 +127,8 @@
 >
 > Và để ghi cho rõ thì giống như khi ta ghi fX(x) là pmf / pdf của X thì 
 > ta sẽ ghi fX,Y(x, y) là joint pmf/pdf của X, Y
+
+**🔗 See also:** [Bản chất sự kiện vector ngẫu nhiên](#node-yujk9o3) · [Hàm khối xác suất đồng thời](#node-73eppl7)
 
 <br>
 
@@ -208,6 +216,8 @@
 >
 >
 > = 2 * (1/18) | do possible outcome equally likely
+
+**🔗 See also:** [Biến rời rạc, PMF đồng thời](#node-zl7sw97) · [Kỳ vọng biến ngẫu nhiên hai chiều](#node-gi1wsle)
 
 <br>
 
@@ -301,6 +311,8 @@
 >
 >
 > Từ đó cho phép định nghĩa joint pmf bất kì
+
+**🔗 See also:** [Hàm khối xác suất đồng thời](#node-73eppl7) · [Chứng minh PMF biên](#node-k9qwll6)
 
 <br>
 
@@ -399,6 +411,8 @@
 >
 > và đây chính là Σ {mọi possible value của Y} fX,Y(x, y)
 
+**🔗 See also:** [Kỳ vọng biến ngẫu nhiên hai chiều](#node-gi1wsle) · [Tính toán pmf biên Y](#node-2cndbfd)
+
 <br>
 
 <a id="node-2cndbfd"></a>
@@ -419,6 +433,8 @@
 >
 >
 > Lí do là vì đã nói marginal pmf cảu Y cũng chính là pmf của Y
+
+**🔗 See also:** [Chứng minh PMF biên](#node-k9qwll6) · [Tính không đủ của phân phối biên](#node-zjhts02)
 
 <br>
 
@@ -441,6 +457,8 @@
 >
 > CÓ NGHĨA LÀ CÓ RẤT NHIỀU JOINT PMF KHÁC NHAU VẪN CÓ THỂ
 > CHO RA CÙNG MARGINAL PMF.
+
+**🔗 See also:** [Tính toán pmf biên Y](#node-2cndbfd) · [Giải thích PDF biến liên tục](#node-jprf5jo)
 
 <br>
 
@@ -645,7 +663,7 @@
 >
 > Và áp dụng tương tự cho joint pdf thì ta P((X,Y) ∈ A) = ∫∫A fX,Y(x,y)dxdy
 
-**🔗 See also:** [Thuật toán Accept/Reject](./56_generating_random_sample.md#node-aebauln)
+**🔗 See also:** [Tính không đủ của phân phối biên](#node-zjhts02) · [Kỳ vọng và phân phối đồng thời](#node-fhuau7v) · [Thuật toán Accept/Reject](./56_generating_random_sample.md#node-aebauln)
 
 <br>
 
@@ -732,6 +750,8 @@
 >
 > = 1 - 0 = 1**
 
+**🔗 See also:** [Giải thích PDF biến liên tục](#node-jprf5jo) · [Tính xác suất PDF đồng thời](#node-0x265ae)
+
 <br>
 
 <a id="node-0x265ae"></a>
@@ -748,6 +768,8 @@
 >
 > QUAY LẠI SAU
 
+**🔗 See also:** [Kỳ vọng và phân phối đồng thời](#node-fhuau7v)
+
 <br>
 
 <a id="node-oseaes6"></a>
@@ -758,6 +780,8 @@
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Tính xác suất PDF đồng thời](#node-0x265ae)
 
 <br>
 
