@@ -9,6 +9,8 @@ mixture Distribution
 ## 4.4 Hierarchical Model &
 mixture Distribution
 
+**🔗 See also:** [Mô hình phân cấp](#node-lytbbql) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-lytbbql"></a>
@@ -45,6 +47,9 @@ mixture Distribution
 >
 > Thế thì ƯU ĐIỂM CỦA CÁI NÀY LÀ NÓ GIÚP THỂ HIỆN MỘT QUÁ TRÌNH
 > PHỨC TẠP BỞI MỘT CHUỖI CÁC MODEL ĐƠN GIẢN.
+
+**🔗 See also:** [4.4 Hierarchical Model &
+mixture Distribution](#node-s5hrhdz) · [Phân phối Poisson của X](#node-xtkaa4b)
 
 <br>
 
@@ -112,6 +117,8 @@ mixture Distribution
 >
 >
 > và câu trả lời cho câu hỏi là trung bình có bao nhiêu trứng nở sẽ là λp
+
+**🔗 See also:** [Mô hình phân cấp](#node-lytbbql) · [Luật Kỳ Vọng Toàn Phần](#node-3aseb34)
 
 <br>
 
@@ -213,6 +220,8 @@ mixture Distribution
 > = pλ (do Y ~ Pois(λ) KẾT QUẢ CŨNG RA NHƯ HỒI NÃY KHI TA KIỂU NHƯ
 > CHỨNG MINH X ~ POIS(λp)
 
+**🔗 See also:** [Phân phối Poisson của X](#node-xtkaa4b) · [Định nghĩa phân phối hỗn hợp](#node-ux7w713)
+
 <br>
 
 <a id="node-ux7w713"></a>
@@ -243,6 +252,8 @@ mixture Distribution
 >
 > Thế thì gs nói rằng ko lí do gì mà CHỈ CÓ 2 TẦNG, nhưng sẽ dễ hơn nếu ta
 > xem xét một hệ nhiều tầng theo từng chuỗi 2 tầng
+
+**🔗 See also:** [Luật Kỳ Vọng Toàn Phần](#node-3aseb34) · [Mô hình phân tầng](#node-d9y0usw)
 
 <br>
 
@@ -318,6 +329,8 @@ mixture Distribution
 > continuous rv (Λ ~ Expo(β)) nhưng ko vấn đề gì. Chỉ cần nhớ khi tính
 > expected value hay marginalizing  thì với discrete rv ta sẽ Σ , còn continuous
 > rv ta sẽ ∫
+
+**🔗 See also:** [Định nghĩa phân phối hỗn hợp](#node-ux7w713) · [Mô hình ba cấp thành hai](#node-coenx9x)
 
 <br>
 
@@ -493,6 +506,8 @@ mixture Distribution
 >
 > NHƯNG DÙNG MÔ HÌNH 3 TẦNG THÌ DỄ HIỂU HƠN**
 
+**🔗 See also:** [Mô hình phân tầng](#node-d9y0usw) · [Hỗn hợp Poisson-Gamma](#node-f2k0dv8)
+
 <br>
 
 <a id="node-f2k0dv8"></a>
@@ -510,6 +525,8 @@ mixture Distribution
 >
 >
 > (Expo(β) chính là Γ(α, β) với α = 1)
+
+**🔗 See also:** [Mô hình ba cấp thành hai](#node-coenx9x) · [Noncentral Chi-squared và mô hình tầng](#node-jaoa4am)
 
 <br>
 
@@ -572,6 +589,8 @@ mixture Distribution
 >
 >
 > Nếu mà tính bằng cách dùng pmf thì rất khó
+
+**🔗 See also:** [Hỗn hợp Poisson-Gamma](#node-f2k0dv8) · [Mô hình Beta-binomial](#node-5d9xmzc)
 
 <br>
 
@@ -636,6 +655,8 @@ mixture Distribution
 >
 >
 > = n α/(α + β) | mean của β(α, β) là α/(α + β)
+
+**🔗 See also:** [Noncentral Chi-squared và mô hình tầng](#node-jaoa4am) · [Định lý phương sai toàn phần](#node-ivmktz5)
 
 <br>
 
@@ -781,7 +802,7 @@ mixture Distribution
 >
 > **⇔ Var(X) = E[Var(X|Y)] - Var(EX|Y)**
 
-**🔗 See also:** [Định lý Rao-Blackwell](./73_methods_of_evaluating_estimators.md#node-aixo4xg) · [Example 10.1.10 Large-sample Mixture Variances](./101_point_estimation.md#node-slkl4m8)
+**🔗 See also:** [Mô hình Beta-binomial](#node-5d9xmzc) · [Phương sai Binomial Beta](#node-tvfka2r) · [Định lý Rao-Blackwell](./73_methods_of_evaluating_estimators.md#node-aixo4xg) · [Example 10.1.10 Large-sample Mixture Variances](./101_point_estimation.md#node-slkl4m8)
 
 <br>
 
@@ -846,6 +867,8 @@ mixture Distribution
 >
 >
 > ....QUAY LẠI SAU
+
+**🔗 See also:** [Định lý phương sai toàn phần](#node-ivmktz5)
 
 <br>
 
