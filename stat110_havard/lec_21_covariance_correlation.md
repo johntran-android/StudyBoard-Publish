@@ -69,6 +69,8 @@
 >
 > **Cov(X,Y) = E[(X-EX)(Y-EY)] = E(X-EX)*E(Y_EY) = 0**
 
+**🔗 See also:** [linked note](./lec_19_joint_conditional_and_marginal_distribution.md#node-yyyepse)
+
 <br>
 
 <a id="node-mzftswv"></a>
@@ -213,6 +215,8 @@
 > Nên nếu X, Y INDEPENDENT thì E(XY) = EXEY (CÁI NÀY ĐÃ
 > CHỨNG MINH BỮA TRƯỚC NHỜ 2D LOTUS)  DẪN TỚI Cov(X,
 > Y) = EXEY - EXEY = 0
+
+**🔗 See also:** [linked note](./lec_27_conditional_expectation_given_an_rv.md#node-q243jsp) · [linked note](./lec_28_inequalities.md#node-uyktp07)
 
 <br>
 
@@ -456,6 +460,8 @@
 >
 > NHƯNG VẪN CÓ THỂ DEPENDENT MÀ COV(X,Y) = 0
 
+**🔗 See also:** [linked note](./lec_30_chi_square_student_t_multi_variate_gaussian.md#node-zgg4xl6)
+
 <br>
 
 <a id="node-v6hjfkl"></a>
@@ -505,6 +511,8 @@
 >
 > #Property 7: Var(X1+X2...Xn) = ∑ j Var(Xj) + 2 ∑ i<j Cov(Xi, Xj)
 
+**🔗 See also:** [linked note](#node-188d6s1) · [linked note](./lec_28_inequalities.md#node-h1f99dz)
+
 <br>
 
 <a id="node-2duont2"></a>
@@ -531,6 +539,8 @@
 >
 >
 > Theorem: Nếu hai r.v INDEPENDENT, thì UNCORRELATED
+
+**🔗 See also:** [linked note](./lec_19_joint_conditional_and_marginal_distribution.md#node-choxtlk)
 
 <br>
 
@@ -572,6 +582,8 @@
 >
 >
 > COVARIANCE = 0 / UNCORRELATED CHƯA CHẮC INDEPENDENT
+
+**🔗 See also:** [linked note](./lec_18_mgf_continued.md#node-dfvtp2n)
 
 <br>
 
@@ -623,6 +635,8 @@
 >
 >
 > Corr(X,Y) = Cov(X,Y) / [SD(X) * SD(Y)]
+
+**🔗 See also:** [linked note](./lec_28_inequalities.md#node-8tfjr5p)
 
 <br>
 
@@ -840,6 +854,8 @@
 >
 > Nên Cov(Xi, Xi) = Var(Xi) = np_i(1-p_i)
 
+**🔗 See also:** [linked note](./lec_14_location_scale_lotus.md#node-q9jfesr)
+
 <br>
 
 <a id="node-4c2oa5w"></a>
@@ -1008,6 +1024,8 @@
 >
 > Vậy **Var(Xj)** = p - p^2 = p*(1-p) = **pq**
 
+**🔗 See also:** [linked note](#node-pgv9kcm)
+
 <br>
 
 <a id="node-188d6s1"></a>
@@ -1040,6 +1058,8 @@
 >
 >
 > Vậy Var(X) = pq + pq + ... = **npq**
+
+**🔗 See also:** [linked note](#node-v6hjfkl)
 
 <br>
 
@@ -1221,6 +1241,8 @@
 >
 >
 > Nên P(A1, A2) = w*(w-1) / [(w+p)*(w+p-1)]**
+
+**🔗 See also:** [linked note](./lec_9_expectation_indicator_random_variables_linearity.md#node-mg29wcb) · [linked note](#node-awdvohk)
 
 <br>
 
