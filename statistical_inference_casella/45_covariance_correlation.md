@@ -9,6 +9,8 @@ correlation
 ## 4.5 Covariance &
 correlation
 
+**🔗 See also:** [Hiệp phương sai và Tương quan](#node-lb5gjlm) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-lb5gjlm"></a>
@@ -44,6 +46,9 @@ correlation
 > khối lượng của họ, thì dì ta  sẽ vẫn expect có quan hệ nào đó nhưng sẽ ko
 > thể là tuyến tính được
 
+**🔗 See also:** [4.5 Covariance &
+correlation](#node-0rdjr6h) · [Covariance và Correlation](#node-fsj542i)
+
 <br>
 
 <a id="node-fsj542i"></a>
@@ -71,6 +76,8 @@ correlation
 >
 > Ngược lại nếu X lớn mà X có xu hướng nhỏ, thì Cov(X,Y) sẽ âm
 
+**🔗 See also:** [Hiệp phương sai và Tương quan](#node-lb5gjlm) · [Covariance, Correlation, Công thức](#node-9r0g6c2)
+
 <br>
 
 <a id="node-9r0g6c2"></a>
@@ -93,6 +100,8 @@ correlation
 >
 > Thế thì ta sẽ có một theorem: Cov(X,Y) = E(XY) - μXμY (ko khó để chứng minh,
 > chỉ là triển khai cái E(X-μX)(Y-μY) thôi
+
+**🔗 See also:** [Covariance và Correlation](#node-fsj542i) · [Phân phối biên và Tương quan](#node-zphel1p)
 
 <br>
 
@@ -296,6 +305,8 @@ correlation
 >
 > Thế vào công thức covariance EXY - μXμY = 1/12 và Cor(X,Y) = 1/√2
 
+**🔗 See also:** [Covariance, Correlation, Công thức](#node-9r0g6c2) · [Định lý Độc lập Hiệp phương sai](#node-o2ergsg)
+
 <br>
 
 <a id="node-o2ergsg"></a>
@@ -352,7 +363,7 @@ correlation
 > GIÁO SƯ CASELLA LƯU Ý THEOREM NÀY KO HỀ NÓI VỀ CHIỀU NGƯỢC 
 > LẠI, TỨC NẾU COV = 0 CHƯA CHẮC X, Y ĐỘC LẬP
 
-**🔗 See also:** [Điều kiện độc lập tổ hợp Normal](./53_sampling_from_the_normal_distribution.md#node-91dxhtz)
+**🔗 See also:** [Phân phối biên và Tương quan](#node-zphel1p) · [Hiệp phương sai và độc lập](#node-60rnyjg) · [Điều kiện độc lập tổ hợp Normal](./53_sampling_from_the_normal_distribution.md#node-91dxhtz)
 
 <br>
 
@@ -375,6 +386,8 @@ correlation
 >
 > CHO NÊN CÓ KHI HAI RANDOM VARIABLE QUAN HỆ MẠNH VỚI NHAU
 > NHƯNG KHÔNG TUYẾN TÍNH THÌ COVARIANCE VẪN = 0.
+
+**🔗 See also:** [Định lý Độc lập Hiệp phương sai](#node-o2ergsg) · [Định lý phương sai tổng](#node-jmex719)
 
 <br>
 
@@ -450,6 +463,8 @@ correlation
 >
 > Khi X, Y độc lập thì Cov(X,Y) = 0 ⇨ Var(aX + bY) = a^2VarX + b^2VarY**
 
+**🔗 See also:** [Hiệp phương sai và độc lập](#node-60rnyjg) · [Phương sai tổng biến ngẫu nhiên](#node-7ms3bg2)
+
 <br>
 
 <a id="node-7ms3bg2"></a>
@@ -486,6 +501,8 @@ correlation
 > nữa khiến mức biến động của tổng sẽ bị khuếch đại. Còn khi hai thằng mà
 > một thằng lớn thì thằng kia nhỏ thì kiểu như bù trừ nhau làm giảm mức biến
 > động
+
+**🔗 See also:** [Định lý phương sai tổng](#node-jmex719) · [Giới hạn và ý nghĩa tương quan](#node-08l2mqd)
 
 <br>
 
@@ -626,6 +643,8 @@ correlation
 > Và như vậy tồn tại a, b sao cho Y = aX + b với , chính là a = -t, b = μXt  + μY
 > chứng minh xong ý 2
 
+**🔗 See also:** [Phương sai tổng biến ngẫu nhiên](#node-7ms3bg2) · [Ý nghĩa hệ số tương quan](#node-qv5sqiy)
+
 <br>
 
 <a id="node-qv5sqiy"></a>
@@ -649,6 +668,8 @@ correlation
 > chỉ khi tồn tại cặp a, b sao cho ta có Y = aX + b. Vậy thì dễ hiểu là khi tồn
 > tại a, b như vậy thì nếu biết giá trị của random variable này thì ta sẽ biết
 > ngay giá trị của random variable kia thônq quan quan hệ tuyến tính.
+
+**🔗 See also:** [Giới hạn và ý nghĩa tương quan](#node-08l2mqd) · [Hàm mật độ liên hợp (X,Y)](#node-rrg9pye)
 
 <br>
 
@@ -916,6 +937,8 @@ correlation
 >
 > Tới đây thay công thức fZ vào, ...phần còn lại thì như trên
 
+**🔗 See also:** [Ý nghĩa hệ số tương quan](#node-qv5sqiy) · [Tính Cov(X, X+Z)](#node-q6bws1d)
+
 <br>
 
 <a id="node-q6bws1d"></a>
@@ -985,6 +1008,8 @@ correlation
 >
 >
 > = EX^2 - (EX)^2 = Var(X) và đã tính lúc trước = 1/12
+
+**🔗 See also:** [Hàm mật độ liên hợp (X,Y)](#node-rrg9pye) · [Độ chặt quan hệ X,Y](#node-t3q7fd0)
 
 <br>
 
@@ -1097,6 +1122,8 @@ correlation
 > rộng, thể hiện sự ko chắc  Versus lần này, khi với giá trị đã biết của X thì
 > giá trị của Y có thể được ước đoán trong phạm vi hẹp hơn thể hiện sự
 > chắc chắn cao hơn.
+
+**🔗 See also:** [Tính Cov(X, X+Z)](#node-q6bws1d) · [Tương quan zero quan hệ phi tuyến](#node-xug8deu)
 
 <br>
 
@@ -1212,6 +1239,8 @@ correlation
 > giá trị của X, Y tập trung quanh parabol, cho thấy quan hệ của nó rất
 > mạnh với nhau. Tuy nhiên khi correlation lại là 0
 
+**🔗 See also:** [Độ chặt quan hệ X,Y](#node-t3q7fd0)
+
 <br>
 
 <a id="node-ljt1bsi"></a>
@@ -1222,6 +1251,8 @@ correlation
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Tương quan zero quan hệ phi tuyến](#node-xug8deu) · [Biến đổi hệ số tương quan](#node-s2u2sl9)
 
 <br>
 
@@ -1234,6 +1265,8 @@ correlation
 > [!NOTE]
 > QUAY LẠI SAU
 
+**🔗 See also:** [Chứng minh ρXY = ρ](#node-gn8tsfs)
+
 <br>
 
 <a id="node-gn8tsfs"></a>
@@ -1245,6 +1278,8 @@ correlation
 > [!NOTE]
 > QUAY LẠI SAU
 
+**🔗 See also:** [Biến đổi hệ số tương quan](#node-s2u2sl9) · [Hội tụ phân phối có điều kiện](#node-g2hs1nk)
+
 <br>
 
 <a id="node-g2hs1nk"></a>
@@ -1255,6 +1290,8 @@ correlation
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Chứng minh ρXY = ρ](#node-gn8tsfs)
 
 <br>
 
