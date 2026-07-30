@@ -164,6 +164,8 @@ TỨC Ý NÓI LÀ KHÔNG CÒN CARE ĐƠN VỊ LÀ GÌ NỮA
 > Symmetry còn giúp ta kết luận (nếu Z ~
 > N(0,1) thì -Z cũng là một N(0,1)
 
+**🔗 See also:** [linked note](./lec_20_multinomial_and_cauchy.md#node-gllm99h)
+
 <br>
 
 <a id="node-nodshzh"></a>
@@ -211,6 +213,8 @@ TỨC Ý NÓI LÀ KHÔNG CÒN CARE ĐƠN VỊ LÀ GÌ NỮA
 > Nhưng ông cho rằng **sẽ tốt hơn nếu ta hiểu Standard Normal** **Z ~ N(0,1)**
 > trước, sau đó hiểu rằng khi **scale và shift Z với σ và μ khác nhau** thì
 > ta sẽ có **bất kì một Normal distribution N(μ, σ^2)** nào
+
+**🔗 See also:** [linked note](./lec_17_moment_generating_functions.md#node-cc2zxo3)
 
 <br>
 
@@ -321,6 +325,8 @@ TỨC Ý NÓI LÀ KHÔNG CÒN CARE ĐƠN VỊ LÀ GÌ NỮA
 > = E(X^2) - (EX)^2 = **Var(X)**
 >
 > PROPERTIES CỦA VAR(X): Var(X + c) = Var(X)
+
+**🔗 See also:** [linked note](./lec_16_exponential_distribution.md#node-83wlarz)
 
 <br>
 
@@ -844,6 +850,8 @@ TỨC Ý NÓI LÀ KHÔNG CÒN CARE ĐƠN VỊ LÀ GÌ NỮA
 > GIẢI THÍCH TẠI SAO LOTUS WORK (CHƯA PHẢI CHỨNG MINH
 > LOTUS MÀ NẰM CUỐI BÀI NÀY)
 
+**🔗 See also:** [linked note](./lec_12_discrete_vs_continuous_the_uniform.md#node-k8vhw1k)
+
 <br>
 
 <a id="node-ee5qqr6"></a>
@@ -1193,6 +1201,8 @@ TỨC Ý NÓI LÀ KHÔNG CÒN CARE ĐƠN VỊ LÀ GÌ NỮA
 > có target value có tính chất là **mean càng lớn** thì v**ariance cũng càng lớn**,
 > thì sử dùng P**oisson Regression** sẽ phù hợp hơn.
 
+**🔗 See also:** [linked note](./lec_18_mgf_continued.md#node-cl67m54)
+
 <br>
 
 <a id="node-koz472r"></a>
@@ -1315,6 +1325,8 @@ TỨC Ý NÓI LÀ KHÔNG CÒN CARE ĐƠN VỊ LÀ GÌ NỮA
 >
 > Vậy **E(X^2) = n E(I1^2) + (n choose 2) 2*E(I1I2)**
 
+**🔗 See also:** [linked note](./lec_9_expectation_indicator_random_variables_linearity.md#node-mg29wcb)
+
 <br>
 
 <a id="node-lz82hmm"></a>
@@ -1409,6 +1421,8 @@ TỨC Ý NÓI LÀ KHÔNG CÒN CARE ĐƠN VỊ LÀ GÌ NỮA
 >
 > X~Bin(n,p), Var(X) = npq (q = 1-p)
 
+**🔗 See also:** [linked note](./lec_21_covariance_correlation.md#node-hysumtm)
+
 <br>
 
 <a id="node-7sfm4xu"></a>
@@ -1499,6 +1513,8 @@ TỨC Ý NÓI LÀ KHÔNG CÒN CARE ĐƠN VỊ LÀ GÌ NỮA
 > = x. Còn P({s}) thì chỉ là khối lượng của viên sỏi s
 >
 > CHỨNG MINH LOTUS
+
+**🔗 See also:** [linked note](./lec_10_expected_value.md#node-y1r0hqu)
 
 <br>
 
