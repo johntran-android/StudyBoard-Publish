@@ -7,6 +7,8 @@
 
 ## 1.6 PDF & Pmf
 
+**🔗 See also:** [Định nghĩa và ứng dụng PMF](#node-6k21kkz) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-6k21kkz"></a>
@@ -103,6 +105,8 @@
 >
 > ĐỊNH NGHĨA PMF
 
+**🔗 See also:** [1.6 PDF & Pmf](#node-05uz3pr) · [Chứng minh P(X=x)=0](#node-29g5dq1)
+
 <br>
 
 <a id="node-29g5dq1"></a>
@@ -161,7 +165,7 @@
 > Chứng minh với continuous random
 > variable thì PMF P(X = x) = 0
 
-**🔗 See also:** [Thuật toán Accept/Reject](./56_generating_random_sample.md#node-aebauln)
+**🔗 See also:** [Định nghĩa và ứng dụng PMF](#node-6k21kkz) · [Điều kiện hợp lệ PMF/PDF](#node-1qsxqre) · [Thuật toán Accept/Reject](./56_generating_random_sample.md#node-aebauln)
 
 <br>
 
@@ -193,6 +197,8 @@
 >
 > QUAY LẠI SAU
 
+**🔗 See also:** [Chứng minh P(X=x)=0](#node-29g5dq1)
+
 <br>
 
 <a id="node-rm16ntz"></a>
@@ -201,6 +207,8 @@
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+**🔗 See also:** [Điều kiện hợp lệ PMF/PDF](#node-1qsxqre)
 
 <br>
 
