@@ -51,6 +51,8 @@ Survivor function với X~Expo(λ): P(X ≥ s) = e^(-λs)
 
 <a id="node-4qgm8vv"></a>
 
+### Exponential Distribution PDF
+
 <p align="center"><kbd><img src="assets/hsozcu19r8p.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/t692802ua0a.png" width="80%"></kbd></p>
@@ -81,6 +83,8 @@ Survivor function với X~Expo(λ): P(X ≥ s) = e^(-λs)
 >
 >
 > PDF của nó là f(x) = λ e^(-λx) với x dương, còn nếu x ≤ 0 thì f(x) = 0
+
+**🔗 See also:** [Moment Generating Function Derivation](./lec_18_mgf_continued.md#node-9510dh2)
 
 <br>
 
