@@ -204,6 +204,8 @@ trong n chữ số
 >
 > Nhưng **ở đây ta không có X, Y độc lập**
 
+**🔗 See also:** [linked note](./lec_8_random_variables_their_distributions.md#node-bl7cni7)
+
 <br>
 
 <a id="node-ap291gm"></a>
@@ -270,6 +272,8 @@ trong n chữ số
 > subset chứa 2 possible outcome, giả sử gọi là s1,s2 Vậy thì P(X=1) sẽ bằng
 > tổng của  P({s1}) và P({s2}). Tất nhiên cả s1, s2 đều được map với label = 1 hay
 > **X(s1) = X(s2) = 1**. Và thực ra **1*P(X=1)** chính là **X(s1)*P({s1}) + X(s2)*P({s2})**
+
+**🔗 See also:** [linked note](./lec_14_location_scale_lotus.md#node-7sfm4xu)
 
 <br>
 
@@ -789,6 +793,8 @@ trong n chữ số
 >
 >
 > Nên có thể viết **E(X) = E(X1 + X2 + ....Xr)**
+
+**🔗 See also:** [linked note](./lec_9_expectation_indicator_random_variables_linearity.md#node-h8zpnoy)
 
 <br>
 
