@@ -285,6 +285,8 @@ paradox
 > ở cửa 2 | Monty chọn cửa 3 cao hơn xác suất cái xe nằm ở cửa 1 | Monty 
 > chọn cửa 2.
 
+**🔗 See also:** [linked note](./lec_4_conditional_probability.md#node-dom6lob)
+
 <br>
 
 <a id="node-0u7kqry"></a>
@@ -419,6 +421,8 @@ paradox
 >
 >
 > **TỪ đó P(S) = Σi P(S|Di)P(Di) = P(S|D1)(1/3) + P(S|D2)(1/3) + P(S|D3)(1/3)**
+
+**🔗 See also:** [linked note](./lec_5_conditional_probability_law_of_total_probability.md#node-yv77i4h)
 
 <br>
 
