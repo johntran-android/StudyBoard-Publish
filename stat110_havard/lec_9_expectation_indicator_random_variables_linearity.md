@@ -268,6 +268,8 @@ bridge vẫn tính được
 >
 > và F(x) -> 1 khi x -> infinity
 
+**🔗 See also:** [linked note](./lec_16_exponential_distribution.md#node-v3hmlol)
+
 <br>
 
 <a id="node-76tu36n"></a>
@@ -329,6 +331,8 @@ bridge vẫn tính được
 >
 >
 > P(X≤x, Y≤y) = P(X≤x) * P(Y≤y) với mọi x, y
+
+**🔗 See also:** [linked note](./lec_8_random_variables_their_distributions.md#node-bl7cni7)
 
 <br>
 
@@ -717,6 +721,8 @@ bridge vẫn tính được
 >
 > Vậy **k*(n choose k) = n*(n-1 choose k-1)**
 
+**🔗 See also:** [linked note](./lec_2_story_proofs_axioms_of_probability.md#node-kdm1oo2)
+
 <br>
 
 <a id="node-53qsc0z"></a>
@@ -839,6 +845,8 @@ bridge vẫn tính được
 >
 > TÍNH LẠI EX CỦA BIN(n,p) DÙNG STORY, LINEARITY, FUNDAMENTAL BRIDGE
 
+**🔗 See also:** [linked note](./lec_8_random_variables_their_distributions.md#node-8dmi5xa) · [linked note](./lec_11_poisson_distribution.md#node-wu77piz)
+
 <br>
 
 <a id="node-rw6s91v"></a>
@@ -959,6 +967,8 @@ bridge vẫn tính được
 > ta (nhờ cách làm dùng **linearity**, **symmetry**, **fundamental** **bridge**)
 > để simplify vấn đề để có thể dùng unconditional probability)
 
+**🔗 See also:** [linked note](./lec_14_location_scale_lotus.md#node-k5gwhll) · [linked note](./lec_21_covariance_correlation.md#node-pgv9kcm)
+
 <br>
 
 <a id="node-1h09nfa"></a>
@@ -1012,6 +1022,8 @@ bridge vẫn tính được
 > KHI TRIAL SUCCESS  LẦN ĐẦU NÊN TA THẤY KHÔNG CÓ PARAM n**
 >
 > GEOMETRIC DISTRIBUTION
+
+**🔗 See also:** [linked note](./lec_15_midterm_review.md#node-attetln)
 
 <br>
 
@@ -1100,6 +1112,8 @@ bridge vẫn tính được
 > Geometric series
 > học trong 18.01
 
+**🔗 See also:** [linked note](./lec_18_mgf_continued.md#node-x1gqp0q)
+
 <br>
 
 <a id="node-1hyophx"></a>
@@ -1125,6 +1139,8 @@ bridge vẫn tính được
 >
 >
 > Tiếp xem phần note theo
+
+**🔗 See also:** [linked note](#node-h8zpnoy)
 
 <br>
 
@@ -1199,6 +1215,8 @@ bridge vẫn tính được
 >
 > GEOMETRIC E(X) = q/p
 
+**🔗 See also:** [linked note](#node-1hyophx) · [linked note](./lec_10_expected_value.md#node-fc8x028)
+
 <br>
 
 <a id="node-fu3wk32"></a>
@@ -1207,6 +1225,8 @@ bridge vẫn tính được
 
 > [!NOTE]
 > Kết quả ta có vầy q/p
+
+**🔗 See also:** [linked note](./lec_15_midterm_review.md#node-ru1wdoc)
 
 <br>
 
