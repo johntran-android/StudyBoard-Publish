@@ -759,6 +759,8 @@
 >
 > ĐỊNH NGHĨA CỦA CONDITIONAL PROBABILITY
 
+**🔗 See also:** [linked note](./lec_16_exponential_distribution.md#node-3846ds1)
+
 <br>
 
 <a id="node-pxucmn2"></a>
@@ -780,6 +782,8 @@
 > Như đã biết **event là subset của sample space**. Gọ**i event B là subset chứa
 > 4 possible outcome này**
 
+**🔗 See also:** [linked note](./lec_19_joint_conditional_and_marginal_distribution.md#node-a8ulykf)
+
 <br>
 
 <a id="node-dom6lob"></a>
@@ -790,6 +794,8 @@
 > Thế thì **ý nghĩa của P(A|B)**: **B đã xảy ra**, nên đồng nghĩa **các possible
 > outcome không thuộc B không thể xảy ra**, **trở nên irrelevant** (ko liên
 > quan nữa), nên ta **bỏ đi các possible outcome trong B_c**
+
+**🔗 See also:** [linked note](./lec_6_monty_hall_simpsons_paradox.md#node-9fj2ygl)
 
 <br>
 
@@ -949,6 +955,8 @@
 > **xác xuất của A riêng lẻ** (không biết B xảy ra hay không)
 >
 > THEOREM: P(A)*P(B|A) = P(B)*P(A|B)
+
+**🔗 See also:** [linked note](./lec_5_conditional_probability_law_of_total_probability.md#node-bq5axvu)
 
 <br>
 
