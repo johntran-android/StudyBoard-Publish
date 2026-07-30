@@ -9,6 +9,8 @@ independent
 ## 4.2 Conditional Distributions &
 independent
 
+**🔗 See also:** [Phân phối có điều kiện](#node-wo00dbo) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-wo00dbo"></a>
@@ -60,6 +62,9 @@ independent
 >
 >
 > fY(y) = fX,Y(x,y) / fY(y)
+
+**🔗 See also:** [4.2 Conditional Distributions &
+independent](#node-6ysk9w8) · [PMF có điều kiện](#node-fla87ob)
 
 <br>
 
@@ -140,6 +145,8 @@ independent
 > Cái chính muốn nhấn mạnh là vì fY|X(y|x) là valid pmf nên nó hoàn toàn có thể giúp xác
 > định distribution của Y khi biết giá trị của X
 
+**🔗 See also:** [Phân phối có điều kiện](#node-wo00dbo) · [Tính xác suất có điều kiện](#node-a3ihpix)
+
 <br>
 
 <a id="node-a3ihpix"></a>
@@ -181,6 +188,8 @@ independent
 > là (X=0, Y=10), (X=0, Y=20) với xác suất là như nhau = 2/18. Điều này phản
 > ảnh vào fY|X: là f(10|0) bằng 1/2, thể hiện rằng khi biết X=0 thì 50-50 là Y = 10
 > hoặc 20
+
+**🔗 See also:** [PMF có điều kiện](#node-fla87ob) · [Xác suất có điều kiện biến liên tục](#node-pltt7ab)
 
 <br>
 
@@ -306,6 +315,8 @@ independent
 > Quay lại đây. gs nói rằng cách tiếp cận đối với continuous rv đối với
 > conditional probability  sẽ là ta thay conditional pmf bằng conditional pdf
 
+**🔗 See also:** [Tính xác suất có điều kiện](#node-a3ihpix) · [Kỳ vọng và PDF có điều kiện](#node-kwtsuph)
+
 <br>
 
 <a id="node-kwtsuph"></a>
@@ -345,6 +356,8 @@ independent
 > Và cái này mang ý nghĩa tương tự như ý nghĩa của Eg(Y) là best guess
 > cho giá trị của g(Y) thì Eg(Y)|x mang ý nghĩa là best guess của g(Y) khi
 > biết X = x
+
+**🔗 See also:** [Xác suất có điều kiện biến liên tục](#node-pltt7ab) · [Tính toán PDF có điều kiện](#node-0ycns54)
 
 <br>
 
@@ -617,6 +630,8 @@ independent
 >
 > Vậy có thể thấy đúng là Y ~ gamma (2, 1)
 
+**🔗 See also:** [Kỳ vọng và PDF có điều kiện](#node-kwtsuph) · [PDF điều kiện và biến đổi](#node-6etzh2e)
+
 <br>
 
 <a id="node-6etzh2e"></a>
@@ -842,6 +857,8 @@ independent
 >
 > Vậy là fZ(z)**  = f(z) ⇨ fZ = f, hay f là pdf của Z với quan hệ giữa X Z: X = σZ + μ
 
+**🔗 See also:** [Tính toán PDF có điều kiện](#node-0ycns54) · [Biến ngẫu nhiên tham số](#node-4d54w5v)
+
 <br>
 
 <a id="node-4d54w5v"></a>
@@ -893,6 +910,8 @@ independent
 > VỊ TRÍ CỦA MỘT PARAMETERS THÌ ĐÓ LÀ KHI TA ĐANG MÔ TẢ MỘT
 > FAMILY CÁC DISTRIBUTION. Đây là một nhận định cực kì quan trọng,**
 
+**🔗 See also:** [PDF điều kiện và biến đổi](#node-6etzh2e) · [Kỳ vọng điều kiện biến ngẫu nhiên](#node-wzjnh5i)
+
 <br>
 
 <a id="node-wzjnh5i"></a>
@@ -939,6 +958,8 @@ independent
 >
 > Nên điều đó cho thấy E[g(Y)|X] = 1 + X
 
+**🔗 See also:** [Biến ngẫu nhiên tham số](#node-4d54w5v) · [Biến ngẫu nhiên độc lập](#node-cb31d67)
+
 <br>
 
 <a id="node-cb31d67"></a>
@@ -972,6 +993,8 @@ independent
 > có thể tính ra joint pmf mà ko cần xây dựng công thức / biết công thức
 > của joint pmf/pdf
 
+**🔗 See also:** [Kỳ vọng điều kiện biến ngẫu nhiên](#node-wzjnh5i) · [Kiểm tra tính độc lập](#node-2vfyxqz)
+
 <br>
 
 <a id="node-2vfyxqz"></a>
@@ -987,6 +1010,8 @@ independent
 > X, Y (cũng là các possible value của random variable vector (X, Y)). Thì từ
 > đó ta tính marginal pmf của X, Y. Và cho thấy rằng joint pmf không bằng tích
 > marginal pmf với mọi giá trị x, y. Nên X, Y ko đọc lập
+
+**🔗 See also:** [Biến ngẫu nhiên độc lập](#node-cb31d67) · [Tiêu chí độc lập không cần biên](#node-ixljkmi)
 
 <br>
 
@@ -1148,6 +1173,8 @@ independent
 > của X, Y mà chỉ cần chỉ ra hàm g(x) và h(y) thỏa g(x)h(y) = f(x,y) với mọi
 > x, y là đủ để kết luận X, Y độc lập
 
+**🔗 See also:** [Kiểm tra tính độc lập](#node-2vfyxqz) · [Tiêu chí độc lập qua miền support](#node-4bwxmsd)
+
 <br>
 
 <a id="node-4bwxmsd"></a>
@@ -1252,6 +1279,8 @@ independent
 > KHÔNG, THÌ YÊU CẦU LÀ 0 < x < y . DO ĐÓ TẬP NÀY KHÔNG PHẢI LÀ
 > AxB, TỪ ĐÓ KẾT LUẬN X, Y KO ĐỘC LÂP
 
+**🔗 See also:** [Tiêu chí độc lập không cần biên](#node-ixljkmi) · [PMF chung từ biến độc lập](#node-pwzadzd)
+
 <br>
 
 <a id="node-pwzadzd"></a>
@@ -1344,6 +1373,8 @@ independent
 >
 >
 > từ đó thế các giá trị fX, fY vô để có kết quả
+
+**🔗 See also:** [Tiêu chí độc lập qua miền support](#node-4bwxmsd) · [Kỳ vọng tích hàm biến độc lập](#node-8f0x6br)
 
 <br>
 
@@ -1586,6 +1617,8 @@ independent
 >
 > Kết quả chứng minh xong
 
+**🔗 See also:** [PMF chung từ biến độc lập](#node-pwzadzd) · [Kỳ vọng và phương sai Expo(λ)](#node-6pr996h)
+
 <br>
 
 <a id="node-6pr996h"></a>
@@ -1673,6 +1706,8 @@ independent
 >
 > Var(X) = cũng làm tương tự
 
+**🔗 See also:** [Kỳ vọng tích hàm biến độc lập](#node-8f0x6br) · [Định lý MGF tổng biến độc lập](#node-hx6s7er)
+
 <br>
 
 <a id="node-hx6s7er"></a>
@@ -1717,6 +1752,8 @@ independent
 >
 > Nhận xét là nhờ cái theorem đó mà chứng minh cái này rất khỏe
 
+**🔗 See also:** [Kỳ vọng và phương sai Expo(λ)](#node-6pr996h) · [MGF của tổng phân phối chuẩn](#node-tk1wnj7)
+
 <br>
 
 <a id="node-tk1wnj7"></a>
@@ -1754,7 +1791,7 @@ independent
 >
 > ...
 
-**🔗 See also:** [Chứng minh S^2 Chi-square](./53_sampling_from_the_normal_distribution.md#node-nh8m52t)
+**🔗 See also:** [Định lý MGF tổng biến độc lập](#node-hx6s7er) · [Chứng minh S^2 Chi-square](./53_sampling_from_the_normal_distribution.md#node-nh8m52t)
 
 <br>
 
