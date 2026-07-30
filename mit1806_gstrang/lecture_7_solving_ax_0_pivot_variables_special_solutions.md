@@ -168,6 +168,8 @@ solutions
 >
 >  -> x = c * [-2, 1, 0, 0].T
 
+**🔗 See also:** [linked note](#node-o9zdw8l)
+
 <br>
 
 <a id="node-ftx8eg7"></a>
@@ -228,6 +230,8 @@ solutions
 > Và như đã nói **MỌI LINEAR COMBINATION CỦA SPECIAL
 > SOLUTION LÀM THÀNH NULL-SPACE**
 
+**🔗 See also:** [linked note](./lecture_8_solving_ax_b_row_reduced_form_r.md#node-37ysmvr) · [linked note](./lecture_9_independece_basis_and_dimension.md#node-suvoza3)
+
 <br>
 
 <a id="node-isp5jls"></a>
@@ -264,6 +268,8 @@ solutions
 >
 > Có thể tiếp tục clean hơn nữa: **CHO PIVOT BẰNG 1
 > HẾT**. -> Chia row 2 cho pivot
+
+**🔗 See also:** [linked note](#node-r7qd5ov)
 
 <br>
 
@@ -500,6 +506,8 @@ solutions
 > Thế là ta đã có matrix U - mà mình nhớ là viết tắt của
 > **Upper triangular matrix** (số khác 0 ở trên đường chéo)
 
+**🔗 See also:** [linked note](./lecture_4_factorization_into_a_lu.md#node-lgkwott)
+
 <br>
 
 <a id="node-o9zdw8l"></a>
@@ -532,6 +540,8 @@ solutions
 >
 > Có nghĩa là có 1 special solution ứng với 1 free columns
 
+**🔗 See also:** [linked note](#node-iw4p78u)
+
 <br>
 
 <a id="node-krqt7qd"></a>
@@ -563,6 +573,8 @@ solutions
 >
 >
 > <-> **col 3 = col 1 + col 2**
+
+**🔗 See also:** [Phép nhân ma trận và tổ hợp](./lecture_2_elimination_with_matrices.md#node-596cn5u)
 
 <br>
 
@@ -638,6 +650,8 @@ solutions
 >
 > Trừ hàng 1 cho hàng 2, (để trong mỗi cột chỉ có pivot 
 > là khác 0) và chia hàng 2 cho 1 để đưa các pivot thành 1
+
+**🔗 See also:** [linked note](#node-pzchlka)
 
 <br>
 
