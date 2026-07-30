@@ -578,6 +578,8 @@ vectors And Subspaces
 > (Ta sẽ gặp lại ATA sau, trong đó ta s**ẽ chứng minh ATA
 > fullrank chỉ khi nào A full column rank (theo link)**
 
+**🔗 See also:** [linked note](#node-3l4hkq3)
+
 <br>
 
 <a id="node-bvqfsbw"></a>
@@ -661,6 +663,8 @@ vectors And Subspaces
 > {0}**, đồng nghĩa **N(A) cũng vậy**, mà điều này dễ thấy sẽ
 > tương đương với việc **A Full Column Rank khi đó dim C(A)
 > =  rank = n => dim N(A) = 0**
+
+**🔗 See also:** [linked note](#node-30t8kt0) · [linked note](./lecture_16_projection_matrices_and_least_squares.md#node-ho17455)
 
 <br>
 
