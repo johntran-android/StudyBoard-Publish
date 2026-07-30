@@ -121,6 +121,8 @@ HyperGeometric
 >
 > INDEPENDENT IDENTICALLY DISTRIBUTED (I.I.D)
 
+**🔗 See also:** [linked note](./lec_9_expectation_indicator_random_variables_linearity.md#node-shpz4kp)
+
 <br>
 
 <a id="node-8rvz0qj"></a>
@@ -130,6 +132,8 @@ HyperGeometric
 > [!NOTE]
 > Và cách hiểu thứ 3 là dùng function **PMF: P(X = k)** = **(n choose k)*p^k*q^(n-k)**
 > trong đó q = 1 - p
+
+**🔗 See also:** [linked note](./lec_7_gamblers_ruin_random_variables.md#node-8w71zey)
 
 <br>
 
@@ -315,6 +319,8 @@ HyperGeometric
 >
 >
 > Mà P(S) = 1 theo Axiom 1 nên **TA CẦN Σj p_j  = 1**
+
+**🔗 See also:** [linked note](./lec_2_story_proofs_axioms_of_probability.md#node-henb3el)
 
 <br>
 
@@ -505,6 +511,8 @@ HyperGeometric
 >
 > **P(X+Y=k)** **=** **Σ j P(X+Y=k|X=j)*P(X=j)**
 
+**🔗 See also:** [linked note](./lec_5_conditional_probability_law_of_total_probability.md#node-k14626i)
+
 <br>
 
 <a id="node-tihy5z0"></a>
@@ -662,6 +670,8 @@ HyperGeometric
 >
 > Do đó: P(Y=k-j | X = j) = P(Y=k-j | \~X = j\~) = P(Y=k-j)
 
+**🔗 See also:** [linked note](./lec_9_expectation_indicator_random_variables_linearity.md#node-t3rn4bo) · [linked note](./lec_10_expected_value.md#node-7g3160y)
+
 <br>
 
 <a id="node-4yjuvcm"></a>
@@ -745,6 +755,8 @@ HyperGeometric
 >
 > ĐIỀU NÀY CHO THẤY P(X+Y=K) TUÂN THEO CÔNG THỨC PMF CỦA BINOMIAL 
 > BIN(m+n, k) cho ta kết luận X+Y ~ Bin(m+n, k)**
+
+**🔗 See also:** [linked note](./lec_2_story_proofs_axioms_of_probability.md#node-pfbppfi) · [linked note](#node-io1pwak)
 
 <br>
 
@@ -1049,6 +1061,8 @@ HyperGeometric
 >
 >
 > Từ đó ta có (w+b choose n) ở tử và mẫu -> **Tổng k P(X=k) = 1**
+
+**🔗 See also:** [linked note](#node-rmmw7ki)
 
 <br>
 
