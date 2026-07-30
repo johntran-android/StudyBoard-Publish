@@ -327,6 +327,8 @@ and Null Space
 > vector space, subspace của R3 (vì như đã kết luận,
 > muốn là vector space thì nó đầu tiên phải chứa gốc O)**
 
+**🔗 See also:** [linked note](./lecture_5_transpose_permutations_spaces_rn.md#node-47m7mjs)
+
 <br>
 
 <a id="node-khvdugm"></a>
@@ -444,6 +446,8 @@ and Null Space
 > một vector thuộc solution space * 0 sẽ dc kết quả nằm ngoài
 > solution space => solution space không thỏa điều kiện vector
 > space)
+
+**🔗 See also:** [linked note](./lecture_5_transpose_permutations_spaces_rn.md#node-47m7mjs)
 
 <br>
 
