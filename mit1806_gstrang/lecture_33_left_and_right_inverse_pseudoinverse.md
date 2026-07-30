@@ -673,6 +673,8 @@ inverse; Pseudoinverse
 > thì chưa đủ, phải square nữa. Khi đó QTQ = I = QQT, nên
 > QT chính là Qinv)
 
+**🔗 See also:** [linked note](./lecture_17_orthogonal_matrices_and_gram_schmidt.md#node-9bg3l8w)
+
 <br>
 
 <a id="node-ij69zxa"></a>
