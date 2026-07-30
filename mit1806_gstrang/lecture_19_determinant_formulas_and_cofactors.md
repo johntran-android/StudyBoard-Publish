@@ -53,6 +53,8 @@ formulas And Cofactors
 > không thể full rank vì cột bằng 0 đó dependent** -> 
 > non-invertible, hay singular -> det = 0)
 
+**🔗 See also:** [linked note](./lecture_18_properties_of_determinants.md#node-enxuz0g)
+
 <br>
 
 <a id="node-p3l7q8d"></a>
@@ -78,6 +80,8 @@ formulas And Cofactors
 > Cái matrix thứ hai, thì cần phải thực hiện row exchange
 > để đưa về dạng upper triangular, và det của nó là cd,
 > nhưng vì có một lần row exchange nên phải thêm dấu (-)
+
+**🔗 See also:** [linked note](./lecture_18_properties_of_determinants.md#node-d43yoe8)
 
 <br>
 
@@ -409,6 +413,8 @@ formulas And Cofactors
 > trên, ta sẽ kiểu như **lấy thừa số chung**, ví dụ a11 ra để
 > đưa a22a33 - a23a32 vào DẤU NGOẶC
 
+**🔗 See also:** [linked note](#node-05qerut)
+
 <br>
 
 <a id="node-kykhtfp"></a>
@@ -513,6 +519,8 @@ formulas And Cofactors
 > hình như điều đó **có nghĩa là ta cũng có thể "làm theo"
 > row 2,3**..ví dụ bằng cách gom các term có chung a23 và
 > đưa a23 ra ngoài, gs không nói)
+
+**🔗 See also:** [linked note](#node-19dus47)
 
 <br>
 
