@@ -9,8 +9,6 @@ distribution
 ## 4.6 Multi-variate
 distribution
 
-**🔗 See also:** [Vecto Ngẫu nhiên Đa biến](#node-z3s9u2p) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-z3s9u2p"></a>
@@ -27,9 +25,6 @@ distribution
 >
 >
 > **X** = (X1, X2, X3, X4)
-
-**🔗 See also:** [4.6 Multi-variate
-distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 
 <br>
 
@@ -269,8 +264,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 >
 > P(**X** ∈ A) = ∫...∫A f**X**(**x**)d**x** = ∫...∫A f(x1,x2...xn)dx1dx2...dxn
 
-**🔗 See also:** [Vecto Ngẫu nhiên Đa biến](#node-z3s9u2p) · [Hàm vô hướng của vector ngẫu nhiên](#node-96puc6j)
-
 <br>
 
 <a id="node-96puc6j"></a>
@@ -300,8 +293,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 > mình đã gặp trong STAT110 cũng như nói trong phần trước bivariate random
 > variable vector
 
-**🔗 See also:** [PMF cho vector rời rạc](#node-kno8x44) · [Phân phối biên và có điều kiện](#node-rh0qyqi)
-
 <br>
 
 <a id="node-rh0qyqi"></a>
@@ -324,8 +315,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 >
 >
 > f(xk+1, ...xn|x1,...xk) = f(x1,...xn) / f(x1,...xk)
-
-**🔗 See also:** [Hàm vô hướng của vector ngẫu nhiên](#node-96puc6j) · [Hàm mật độ xác suất liên hợp](#node-nr41f74)
 
 <br>
 
@@ -450,8 +439,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 >
 > Để rồi tổng lại ta có P(**X** ∈ A) = 151/1024
 
-**🔗 See also:** [Phân phối biên và có điều kiện](#node-rh0qyqi) · [Phân phối đồng thời và kỳ vọng](#node-o4skwck)
-
 <br>
 
 <a id="node-o4skwck"></a>
@@ -533,8 +520,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 >
 > = 3/32 + 3/32 + 1/8 = 5/16
 
-**🔗 See also:** [Hàm mật độ xác suất liên hợp](#node-nr41f74) · [Hàm mật độ có điều kiện](#node-6widx3r)
-
 <br>
 
 <a id="node-6widx3r"></a>
@@ -546,8 +531,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 > [!NOTE]
 > Ta cũng có thể tính f(x3,x4|x1,x2) =
 > f(x1,x2,x3,x4) / f(x1,x2)
-
-**🔗 See also:** [Phân phối đồng thời và kỳ vọng](#node-o4skwck) · [Phân phối đa thức và nhị thức](#node-ywhue8g)
 
 <br>
 
@@ -577,8 +560,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 >
 > Nên lúc này X = (X1, X2) thì X1 là số tổng số trial thành công trong n trial
 > sẽ là Binomial(m, p) rv
-
-**🔗 See also:** [Hàm mật độ có điều kiện](#node-6widx3r) · [Ví dụ phân phối đa thức xí ngầu](#node-gbjb2zx)
 
 <br>
 
@@ -620,8 +601,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 >
 > Và  m!/(x1!...xn!) gọi là MULTINOMIAL COEFFICIENTS
 
-**🔗 See also:** [Phân phối đa thức và nhị thức](#node-ywhue8g) · [Định lý Đa thức tổng quát](#node-4mnv9w1)
-
 <br>
 
 <a id="node-4mnv9w1"></a>
@@ -655,8 +634,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 >
 > Thì nhờ cái này ta cũng sẽ chứng minh Σ của multinomial pmf trên mọi
 > point = 1
-
-**🔗 See also:** [Ví dụ phân phối đa thức xí ngầu](#node-gbjb2zx) · [Liên hệ phân phối Đa thức-Nhị thức](#node-12z2ovs)
 
 <br>
 
@@ -694,8 +671,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 >
 >
 > QUAY LẠI LÀM SAU
-
-**🔗 See also:** [Định lý Đa thức tổng quát](#node-4mnv9w1) · [Phân phối đa thức có điều kiện](#node-ffhuho6)
 
 <br>
 
@@ -770,8 +745,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 > Đó là cách lập luận theo story, còn trong sách gs Casella tính ra 
 > pmf của (X1,...Xn-1) cũng chứng minh nó là multinomial(n - xn, **p'**)
 
-**🔗 See also:** [Liên hệ phân phối Đa thức-Nhị thức](#node-12z2ovs) · [Hiệp phương sai âm vector đa thức](#node-00f7vz9)
-
 <br>
 
 <a id="node-00f7vz9"></a>
@@ -788,8 +761,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 > Nhưng đại khái là nói rằng Xi và Xj trong multinomial rv vector sẽ có
 > covariance Âm và cũng dễ thấy, vì khi Xi mang giá trị lớn thì Xj sẽ
 > có xu hướng mang giá trị bé
-
-**🔗 See also:** [Phân phối đa thức có điều kiện](#node-ffhuho6) · [Độc lập vector biến ngẫu nhiên](#node-ag4s266)
 
 <br>
 
@@ -835,8 +806,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 > LẬP. CÒN ĐÂY LÀ MỘT ĐÁM CÁC RANDOM VARIABLE X1,X2...Xn MULTUAL
 > ĐỘC LẬP.
 
-**🔗 See also:** [Hiệp phương sai âm vector đa thức](#node-00f7vz9) · [Sự độc lập tương hỗ và từng cặp](#node-reqi8yp)
-
 <br>
 
 <a id="node-reqi8yp"></a>
@@ -868,8 +837,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 > Và đại khái nói là mutual independent thì sẽ mạnh hơn và suy ra cũng pair
 > wise nhưng pair wise independent thì chưa chắc đã multual independent
 > mà trong ví dụ 1.3.11 đã từng nói
-
-**🔗 See also:** [Độc lập vector biến ngẫu nhiên](#node-ag4s266) · [Các định lý độc lập n biến](#node-151qbd1)
 
 <br>
 
@@ -919,7 +886,7 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 >
 > ⇨ MZ(t) = [MX(t)]^n
 
-**🔗 See also:** [Sự độc lập tương hỗ và từng cặp](#node-reqi8yp) · [Tổng biến ngẫu nhiên Gamma](#node-08ciur5) · [Định lý Giới hạn Trung tâm](./55_convergence_concepts.md#node-efueime)
+**🔗 See also:** [Định lý Giới hạn Trung tâm](./55_convergence_concepts.md#node-efueime)
 
 <br>
 
@@ -946,7 +913,7 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 > Và qua đó cho thấy Z cũng là Gamma rv với parm cũng là β nhưng 
 > α là tổng αi
 
-**🔗 See also:** [Các định lý độc lập n biến](#node-151qbd1) · [Hàm sinh momen tổ hợp tuyến tính](#node-wv5kgnt) · [Bổ đề Chi-square](./53_sampling_from_the_normal_distribution.md#node-udtt0nq) · [Xây dựng khoảng tin cậy](./92_methods_of_finding_interval_estimators.md#node-9p7bal4)
+**🔗 See also:** [Bổ đề Chi-square](./53_sampling_from_the_normal_distribution.md#node-udtt0nq) · [Xây dựng khoảng tin cậy](./92_methods_of_finding_interval_estimators.md#node-9p7bal4)
 
 <br>
 
@@ -1026,8 +993,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 >
 > = e^Σbi MX1(ta1)MX2(ta2).....
 
-**🔗 See also:** [Tổng biến ngẫu nhiên Gamma](#node-08ciur5) · [Chứng minh tổng biến chuẩn](#node-uaywczk)
-
 <br>
 
 <a id="node-uaywczk"></a>
@@ -1084,7 +1049,7 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 >
 > tới đây thì nó có dạng mgf của n(Σiμiai + Σbi,Σiai^2σi^2)
 
-**🔗 See also:** [Hàm sinh momen tổ hợp tuyến tính](#node-wv5kgnt) · [Khái quát tính độc lập biến ngẫu nhiên](#node-hvcrd7p) · [Điều kiện độc lập tổ hợp Normal](./53_sampling_from_the_normal_distribution.md#node-91dxhtz)
+**🔗 See also:** [Điều kiện độc lập tổ hợp Normal](./53_sampling_from_the_normal_distribution.md#node-91dxhtz)
 
 <br>
 
@@ -1128,7 +1093,7 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 >
 > Khái quát lên **X1, ...Xn** mutually độc lập ⇨ Ui = gi(**Xi**) cũng mutually độc lập
 
-**🔗 See also:** [Chứng minh tổng biến chuẩn](#node-uaywczk) · [Biến đổi hàm mật độ không 1-1](#node-mokq7p0) · [Độc lập vector qua PDF chung](./53_sampling_from_the_normal_distribution.md#node-25t5b1y)
+**🔗 See also:** [Độc lập vector qua PDF chung](./53_sampling_from_the_normal_distribution.md#node-25t5b1y)
 
 <br>
 
@@ -1205,8 +1170,6 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 >
 > f**U**(**u**) = Σi f**X**(h1i(**u**),h2i(**u**)) | Ji |
 
-**🔗 See also:** [Khái quát tính độc lập biến ngẫu nhiên](#node-hvcrd7p) · [Lời nhắc quay lại](#node-cdhes1j)
-
 <br>
 
 <a id="node-cdhes1j"></a>
@@ -1222,15 +1185,11 @@ distribution](#node-1ndxf47) · [PMF cho vector rời rạc](#node-kno8x44)
 >
 > QUAY LẠI SAU
 
-**🔗 See also:** [Biến đổi hàm mật độ không 1-1](#node-mokq7p0)
-
 <br>
 
 <a id="node-7d519ii"></a>
 
 <p align="center"><kbd><img src="assets/wur25a07knn.png" width="80%"></kbd></p>
-
-**🔗 See also:** [Lời nhắc quay lại](#node-cdhes1j)
 
 <br>
 
