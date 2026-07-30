@@ -1400,6 +1400,8 @@
 >
 > MINIMUM VÀ MINIMAL
 
+**🔗 See also:** [linked note](./lec_7.md#node-zawjzk1)
+
 <br>
 
 <a id="node-qt6l3c6"></a>
