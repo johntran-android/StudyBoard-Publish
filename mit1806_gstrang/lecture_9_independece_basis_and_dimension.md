@@ -239,6 +239,8 @@ basis, And Dimension
 > Còn với trường hợp các cols của A **dependence**, thì ta có
 > số **pivot < số cột**, đồng nghĩa có free columns , và rank < n
 
+**🔗 See also:** [linked note](./lecture_7_solving_ax_0_pivot_variables_special_solutions.md#node-xpxaf8g)
+
 <br>
 
 <a id="node-7nqnb3m"></a>
@@ -256,6 +258,8 @@ basis, And Dimension
 > của matrix A** được gọi là **columns spac**e của A. Thì đó
 > cũng chính là nói rằng **CÁC COLUMNS CỦA A SPAN
 > COLUMN SPACE C(A)**
+
+**🔗 See also:** [linked note](./lecture_5_transpose_permutations_spaces_rn.md#node-sobom5t)
 
 <br>
 
@@ -430,6 +434,8 @@ basis, And Dimension
 > Đồng nghĩa **EA = I** (E là elimination matrix). Từ đó suy
 > ra **E chính là A_inv** đồng nghĩa **A là invertible matrix (vì
 > tồn tại A_inv)**
+
+**🔗 See also:** [linked note](./lecture_8_solving_ax_b_row_reduced_form_r.md#node-i0hzrgh)
 
 <br>
 
