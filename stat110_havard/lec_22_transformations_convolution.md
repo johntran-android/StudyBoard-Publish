@@ -118,6 +118,8 @@
 > SỐ BANH RẤT NHIỀU THÌ CÓ HOÀN LẠI HAY KHÔNG HOÀN LẠI
 > CŨNG GIỐNG NHAU => HYPERGEOMETRIC ~= BINOMIAL
 
+**🔗 See also:** [linked note](./lec_27_conditional_expectation_given_an_rv.md#node-i0ja041)
+
 <br>
 
 <a id="node-q6w0qul"></a>
@@ -592,6 +594,8 @@
 >
 > Nhớ lại 1806 một chút: det(I) = det(AinvA) = det(A)det(Ainv) = 1 => **det(Ainv) = 1/det(A)**
 
+**🔗 See also:** [linked note](./lec_25_order_statistic_conditional_expectation.md#node-qw65vfd)
+
 <br>
 
 <a id="node-6burrip"></a>
@@ -622,6 +626,8 @@
 >
 > CONVOLUTION: SUM OF
 > RANDOM VARIABLES
+
+**🔗 See also:** [linked note](./lec_17_moment_generating_functions.md#node-mop0pcd)
 
 <br>
 
@@ -954,6 +960,8 @@
 >
 >
 > Vậy kết quả là **tích phân -inf:inf [ f_X(x) * f_Y(t-x) * dx ]**
+
+**🔗 See also:** [linked note](./lec_20_multinomial_and_cauchy.md#node-31f2lmn)
 
 <br>
 
