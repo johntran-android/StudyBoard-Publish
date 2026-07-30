@@ -9,8 +9,6 @@ under integral
 ## 2.4 Differentiating
 under integral
 
-**🔗 See also:** [Đạo hàm dưới dấu tích phân](#node-817xtmo) · [A0_casella](#node-yf9bh13)
-
 <br>
 
 <a id="node-817xtmo"></a>
@@ -41,9 +39,6 @@ under integral
 >
 > FTC1 thì cho biết, nếu G(x) là nguyên hàm của f(x): Tức d/dx G(x) = f(x)
 > thì ∫a:b f(x)dx = G(b) - G(a)
-
-**🔗 See also:** [2.4 Differentiating
-under integral](#node-jv0kuie) · [Đạo hàm dưới dấu tích phân](#node-or3ajbc)
 
 <br>
 
@@ -184,8 +179,6 @@ under integral](#node-jv0kuie) · [Đạo hàm dưới dấu tích phân](#node-
 >
 >
 > Và để chứng mih cái này gs cho rằng cần công tục measure theoru
-
-**🔗 See also:** [Đạo hàm dưới dấu tích phân](#node-817xtmo) · [Đạo hàm dưới dấu tích phân](#node-khwznuf)
 
 <br>
 
@@ -347,8 +340,6 @@ under integral](#node-jv0kuie) · [Đạo hàm dưới dấu tích phân](#node-
 > Ở ĐAY CÓ CHỖ CHƯA HIỂU LÀ TẠI
 > SAO PHẢI CÓ MỘT  GIỚI HẠN |δ| ≤ δ0
 
-**🔗 See also:** [Đạo hàm dưới dấu tích phân](#node-or3ajbc) · [Điều kiện đổi chỗ tích phân](#node-brxodwp)
-
 <br>
 
 <a id="node-brxodwp"></a>
@@ -444,8 +435,6 @@ under integral](#node-jv0kuie) · [Đạo hàm dưới dấu tích phân](#node-
 > VỀ TÍNH ĐỒNG ĐỀU CỦA HÀM SỐ PHẢI ĐƯỢC GIỚI HẠN (Ý LÀ
 > NÓ PHẢI NẰM TRONG KHUON KHỔ CHO PHÉP NÀO ĐÓ VỀ TÍNH 
 > ĐỒNG ĐỀU) ĐỂ CHO PHÉP TÍCH PHÂN VÀ ĐẠO HÀM CÓ THỂ ĐỔI CHỖ
-
-**🔗 See also:** [Đạo hàm dưới dấu tích phân](#node-khwznuf) · [Biện minh đổi chỗ tích phân](#node-hpuoadp)
 
 <br>
 
@@ -612,8 +601,6 @@ under integral](#node-jv0kuie) · [Đạo hàm dưới dấu tích phân](#node-
 >
 > QUAY LẠI SAU
 
-**🔗 See also:** [Điều kiện đổi chỗ tích phân](#node-brxodwp) · [Công thức đệ quy momen](#node-m94jjdl)
-
 <br>
 
 <a id="node-m94jjdl"></a>
@@ -642,8 +629,6 @@ under integral](#node-jv0kuie) · [Đạo hàm dưới dấu tích phân](#node-
 >
 > Và tính chất này cũng xuất hiện ở một số distribyution khác ví dụ N(μ ,1)
 
-**🔗 See also:** [Biện minh đổi chỗ tích phân](#node-hpuoadp) · [Đổi chỗ tích phân đạo hàm](#node-f1srg8g)
-
 <br>
 
 <a id="node-f1srg8g"></a>
@@ -662,8 +647,6 @@ under integral](#node-jv0kuie) · [Đạo hàm dưới dấu tích phân](#node-
 >
 > QUAY LẠI SAU
 
-**🔗 See also:** [Công thức đệ quy momen](#node-m94jjdl) · [Khả tích dưới dấu tích phân](#node-nu0vtkw)
-
 <br>
 
 <a id="node-nu0vtkw"></a>
@@ -674,8 +657,6 @@ under integral](#node-jv0kuie) · [Đạo hàm dưới dấu tích phân](#node-
 
 > [!NOTE]
 > QUAY LẠI SAU
-
-**🔗 See also:** [Đổi chỗ tích phân đạo hàm](#node-f1srg8g) · [Đổi chỗ Đạo hàm và Tổng](#node-xsgavig)
 
 <br>
 
@@ -859,8 +840,6 @@ under integral](#node-jv0kuie) · [Đạo hàm dưới dấu tích phân](#node-
 >
 > ⇔ 1/θ - EX/(1 - θ) = 0 ⇨ **EX = (1 - θ) / θ**
 
-**🔗 See also:** [Khả tích dưới dấu tích phân](#node-nu0vtkw) · [Đổi chỗ đạo hàm và tổng](#node-njwmqfu)
-
 <br>
 
 <a id="node-njwmqfu"></a>
@@ -886,8 +865,6 @@ under integral](#node-jv0kuie) · [Đạo hàm dưới dấu tích phân](#node-
 >
 >
 > CHƯA HIỂU
-
-**🔗 See also:** [Đổi chỗ Đạo hàm và Tổng](#node-xsgavig) · [Hội tụ đều tổng đạo hàm](#node-g9asefx)
 
 <br>
 
@@ -1054,8 +1031,6 @@ under integral](#node-jv0kuie) · [Đạo hàm dưới dấu tích phân](#node-
 >
 >
 > Vậy nó thỏa theorem trên từ đó biện minh cho việc hoán đổi.**
-
-**🔗 See also:** [Đổi chỗ đạo hàm và tổng](#node-njwmqfu)
 
 <br>
 
