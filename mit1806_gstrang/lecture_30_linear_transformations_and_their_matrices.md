@@ -715,6 +715,8 @@ matrices
 >
 > Nhận xét nó là diagonal matrix**
 
+**🔗 See also:** [linked note](#node-x290g51)
+
 <br>
 
 <a id="node-bq2tfnb"></a>
@@ -817,6 +819,8 @@ matrices
 > bất kì, hay nói cách khác, ta có thể **yên tâm dùng A để
 > project mọi điểm bất kì lên line vì A đã project đúng hai
 > basis vector rồi.**
+
+**🔗 See also:** [linked note](./lecture_31_change_of_basis_image_compression.md#node-3y08di6)
 
 <br>
 
@@ -996,6 +1000,8 @@ matrices
 >
 > Thì **coefficient đó chính là cột thứ nhất của A: [a11, a21..]**
 
+**🔗 See also:** [linked note](./lecture_31_change_of_basis_image_compression.md#node-576moj7)
+
 <br>
 
 <a id="node-91jmcck"></a>
@@ -1032,6 +1038,8 @@ matrices
 > Và ta sẽ dùng phương pháp này để thử xây dựng lại
 > matrix A trong ví dụ projection lên line hồi nãy mà khi đó là
 > ta chỉ đoán giá trị của A vì đây là trường hợp đơn giản
+
+**🔗 See also:** [linked note](#node-obcha20)
 
 <br>
 
