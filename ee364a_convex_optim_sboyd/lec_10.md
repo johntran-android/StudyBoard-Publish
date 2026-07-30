@@ -321,6 +321,8 @@
 
 <a id="node-0riuwf3"></a>
 
+- **Tối thiểu kỳ vọng bình phương điều hòa**
+
 <p align="center"><kbd><img src="assets/n5b30xkikqf.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/9x6xanpzysr.png" width="80%"></kbd></p>
