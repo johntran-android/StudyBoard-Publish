@@ -7,6 +7,8 @@
 
 ## 6.1 Introduction
 
+**🔗 See also:** [Thống kê Mẫu Ngẫu nhiên](#node-y0ojemq) · [A0_casella](#node-yf9bh13)
+
 <br>
 
 <a id="node-y0ojemq"></a>
@@ -43,6 +45,8 @@
 >
 > Gs cũng nhắc lại convention ta sẽ ghi **X** là chỉ vector các random variable
 > với giá trị cụ thể của nó là **x**
+
+**🔗 See also:** [6.1 Introduction](#node-ex3u4vb) · [Thống kê: Giảm lược Dữ liệu](#node-hi3q1rq)
 
 <br>
 
@@ -134,6 +138,8 @@
 > Và chương này đại khái là mình sẽ bàn về các hệ quả và ưu điểm của
 > cái loại / cái cách làm data reduction dạng này
 
+**🔗 See also:** [Thống kê Mẫu Ngẫu nhiên](#node-y0ojemq) · [Nguyên lý giảm thiểu dữ liệu](#node-hlkebgm)
+
 <br>
 
 <a id="node-hlkebgm"></a>
@@ -171,6 +177,8 @@
 >
 > Và Equivariance Principle thì nói về các method khác, giúp data reduction 
 > nhưng vẫn preserve các feature quan trọng
+
+**🔗 See also:** [Thống kê: Giảm lược Dữ liệu](#node-hi3q1rq)
 
 <br>
 
