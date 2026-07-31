@@ -521,5 +521,7 @@
 >
 > Và tóm tắt lại các kết quả ta đã tự làm trong bảng sau.
 
+**🔗 See also:** [Bayesian Linear Regression Posterior Update](./33_bayesian_linear_regression.md#node-fv65lte)
+
 <br>
 
