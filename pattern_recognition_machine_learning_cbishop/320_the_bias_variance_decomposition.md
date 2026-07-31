@@ -1,6 +1,6 @@
 # 3.2.0 The Bias-Variance Decomposition
 
-📊 **Progress:** `8` Notes | `16` Screenshots | `6` AI Reviews
+📊 **Progress:** `8` Notes | `16` Screenshots | `7` AI Reviews
 
 ---
 <a id="node-0nolzxg"></a>
@@ -537,7 +537,7 @@
 >
 > Bài ghi chú này cực kỳ chính xác và chi tiết, thể hiện sự hiểu biết sâu sắc về các khái niệm phức tạp về squared loss trong lý thuyết quyết định, MLE và phân tách kỳ vọng mất mát. Phần giải thích các công thức và ý nghĩa của từng thành phần đều xuất sắc, đặc biệt là cách bạn làm rõ sự khác biệt và mối liên hệ giữa các trường hợp. Bạn cũng giải thích đúng tác động của dữ liệu hữu hạn lên việc tìm hàm hồi quy tối ưu. Đây là một phân tích mẫu mực.
 
-**🔗 See also:** [Optimal Least Squares Predictor](./15_decision_theory.md#node-3ve6hfk) · [Expected Squared Loss Decomposition](#node-w19nneq)
+**🔗 See also:** [Optimal Least Squares Predictor](./15_decision_theory.md#node-3ve6hfk) · [Expected Squared Loss Decomposition](#node-w19nneq) · [Bias-Variance Trade-Off Formulas](#node-qtn6vrp)
 
 <br>
 
@@ -877,7 +877,7 @@
 >
 > Bạn đã thể hiện sự hiểu biết sâu sắc về phân tách bias-variance, từ việc phân tích biểu thức kì vọng tại một điểm x cụ thể đến việc tích phân để có được các đại lượng tổng thể. Việc sử dụng Luật Thống kê Vô thức (LOTUS) để giải thích các tích phân cũng rất chính xác và hiệu quả. Để tăng cường tính rõ ràng, bạn có thể bổ sung một ghi chú nhỏ về sự tương ứng giữa f(x) bạn dùng và p(x) trong tài liệu, cũng như giữa f(t,x) và p(x,t).
 
-**🔗 See also:** [Expected Squared Loss Decomposition](#node-s3i1j2i)
+**🔗 See also:** [Expected Squared Loss Decomposition](#node-s3i1j2i) · [Bias-Variance Trade-Off Formulas](#node-qtn6vrp)
 
 <br>
 
@@ -939,9 +939,13 @@
 
 <a id="node-xi208eq"></a>
 
+- **Hình ảnh**
+
 <p align="center"><kbd><img src="assets/e9l4mvavm0i.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/uwc5h0qx9v.png" width="80%"></kbd></p>
+
+<br>
 
 <a id="node-qtn6vrp"></a>
 
@@ -955,6 +959,209 @@
 
 > [!NOTE]
 > Cái này nhìn vậy mà lại có thể khó hiểu đấy.
+>
+>
+>
+> Công thức bữa trước:
+>
+>
+>
+> (bias)^2 = ∫ {E\[y(**x**, D)\] - h(**x**)}^2 f(**x**)d**x**
+>
+>
+>
+> variance = ∫ Var\[y(**x**, D)\] f(**x**)d**x**
+>
+>
+>
+> noise = ∫∫\[h(**x**) - t\]^2 f(t,**x**)d**x** dt
+>
+>
+>
+> Giải thích ý nghĩa lại lần nữa của các công thức này:
+>
+>
+>
+> y(**x**, D) là dự đoán của hàm prediction y đối với input **x**, dựa trên một dataset cụ thể D. Và vì D là một random variable, nên y(x, D) cũng vậy, cho phép ta lấy kì vọng: E\[y(**x**, D)\] và kì vọng này mang ý nghĩa tính trung bình trên mọi dataset dự đoán của y đối với input **x**.
+>
+>
+>
+> Thế thì E\[y(**x**, D)\] - h(**x**) sẽ mang ý nghĩa là bias - thước đo xem với cái trung bình nói trên còn cách bao xa so với h(**x**), = E\[T|**x**\], là giá trị ước lượng điểm tối ưu cho giá trị của T khi T \~ predictive distribution f(t|**x**). Và \[E\[y(**x**, D)\] - h(**x**)\]^2 là bình phương bias
+>
+>
+>
+> Tuy nhiên E\[y(**x**, D)\] - h(**x**), nếu vẫn chỉ bình phương bias tại một giá trị cụ thể của **x**. Thì nếu xét theo khía cạnh ta có **X** là random variable, E\[y(**X**, D)\] - h(**X**) cũng là random variable, từ đó có thể lấy kì vọng:
+>
+>
+>
+> E{\[E\[y(**X**, D)\] - h(**X**)\]^2}, dùng công thức LOTUS, = ∫ \[E\[y(**x**, D)\] - h(**x**)\]^2 f(**x**) d**x**, mang ý nghĩa, tính trung bình bias của y(.) trên mọi possible value của **X**.
+>
+>
+>
+> Vậy thì, ta hiểu rằng, bây giờ, vì không biết f(**x**), nên ta sẽ tạm cho rằng X có empirical distribution là uniform discrete: với N possible value có xác suất bằng nhau: P(**X**=**x**1) = ... = P(**X**=**x**N) = 1/N
+>
+>
+>
+> Khi đó E\[E\[(y(**X**, D)\] - h(**X**))^2\] = Σi=1:N {(E\[y(**x**i, D)\] - h(**x**i))^2} P(**X**=xi)
+>
+>
+>
+> = (1/N) Σi=1:N {\[E\[y(**x**i, D)\] - h(**x**i)\]^2}
+>
+>
+>
+> Tiếp, E\[y(**x**i, D)\], nếu tính chính xác, phải tích phân trên mọi possible value của D: ∫ y(**x**i, D) f(D) dD. Nhưng dĩ nhiên ta không có thể làm vậy được. Nên lại cho rằng D có empirical distribution là discrete uniform với L possible value D1,...DL có xác suất bằng nhau = 1/L:
+>
+>
+>
+> từ đó E\[y(**x**i, D)\] = Σj=1:L y(**x**i, Dj) P(D=Dj)
+>
+>
+>
+> = Σj=1:L y(**x**i, Dj) (1/L)
+>
+>
+>
+> = (1/L) Σj=1:L y(**x**i, Dj)
+>
+>
+>
+> Đặt y^(j) (**x**) = y(**x**i, Dj)
+>
+>
+>
+> .. = (1/L) Σj=1:L y^(j)(**x**i)
+>
+>
+>
+> tất nhiên đây cũng là trung bình của y^(1)(**x**i),...,y^(L)(**x**i), nên đặt là ybar(**x**i)
+>
+>
+>
+> Ráp vào ta có:
+>
+>
+>
+> (bias)^2 = (1/N) Σi=1:N {\[ybar(**x**i) - h(**x**i)\]^2}
+>
+>
+>
+> Dùng x thay cho **x** để phản ánh gs Bishop đang cho ví dụ input x là 1D (thay vì khái quát **x** là vector), và dùng index variable n, và l thay cho i, j ta sẽ có công thức trong sách:
+>
+>
+>
+> (bias)^2 = (1/N) Σn=1:N {\[ybar(xn) - h(xn)\]^2}
+>
+>
+>
+> với ybar(x) = (1/L) Σl=1:L y^(l)(x)
+>
+>
+>
+> Tương tự, với variance, công thức đúng là ∫ Var\[y(**x**, D)\] f(**x**)d**x**, hay E\[Var\[y(**X**, D)\]\], với ý nghĩa tính trung bình của Var\[y(**x**, D)\] qua mọi possible value của **X**:
+>
+>
+>
+> Xét Var\[y(**x**, D)\], tính chính xác phải là ∫ {y(**x**, D) - E\[y(**x**, D)\]}^2 f(D) dD. Nhưng dĩ nhiên ta không thể có f(D). Nên mới coi như D tuân theo empirical distribution là discrete uniform, có L possible value D1,...DL với xác suất bằng nhau. Từ đó cho phép tính Var\[y(**x**, D)\] theo định nghĩa variance của biến rời rạc, và LOTUS, bằng:
+>
+>
+>
+> Var\[y(**x**, D)\] = Σl=1:L {y(**x**, D) - E\[y(**x**, D)\]}^2 P(D=Dl)
+>
+>
+>
+> = (1/L) Σl=1:L {y(**x**, D) - E\[y(**x**, D)\]}^2
+>
+>
+>
+> Dùng ybar(**x**) thay cho E\[y(**x**, D)\] như ở trên
+>
+>
+>
+> = (1/L) Σl=1:L {y(**x**, D) - ybar(**x**)\]}^2
+>
+>
+>
+> Tới đây ∫ Var\[y(**x**, D)\] f(**x**)d**x** = ∫ { (1/L) Σl=1:L {y(**x**, D) - ybar(**x**)\]}^2 } f(**x**)d**x**
+>
+>
+>
+> Dĩ nhiên cũng không có f(**x**), nên cũng chỉ có thể coi X có empirical distribition với N possible value x1,...xN xác suất bằng nhau = 1/N
+>
+>
+>
+> từ đó cho phép tính E\[Var\[y(**X**, D)\]\] theo định nghĩa của kì vọng biến rời rạc và LOTUS:
+>
+>
+>
+> = Σn=1:N Var\[y(**x**n, D)\] P(**X**=**x**n)
+>
+>
+>
+> = Σn=1:N Var\[y(**x**n, D)\] (1/N)
+>
+>
+>
+> = (1/N) Σn=1:N Var\[y(**x**n, D)\]  
+>
+>
+>
+> = (1/N) Σn=1:N { (1/L) Σl=1:L {y(**x**n, D) - ybar(**x**n)\]}^2 }
+>
+>
+>
+> = (1/N) Σn=1:N { (1/L) Σl=1:L {y^(l)(**x**n) - ybar(**x**n)\]}^2 }
+>
+>
+>
+> như đã nói, ở đây input là 1D nên thay bằng chữ thường ta sẽ có
+>
+>
+>
+> công thức 3.47:
+>
+>
+>
+> = (1/N) Σn=1:N { (1/L) Σl=1:L {y^(l)(xn) - ybar(xn)\]}^2 }
+>
+>
+>
+> Như vậy, mấu chốt để hiểu ở đâu ra có các công thức 3.45, 3.46, 3.47 là: Ta không thể tính trung bình trên mọi possible value của dataset D, hay **X**, nên xem như D, **X** có empirical distribution discrete. Từ đó cho phép tính được.
+>
+>
+>
+> Và nhờ vậy, khi tính (bias)^2, variance với các λ khác nhau, ta có được hình 3.6 với nhận xét sau:
+>
+>
+>
+> Khi λ nhỏ, regularization yếu, model ít ràng buộc nên flexible, ta thấy (bias)^2 thấp (đường màu xanh khúc đầu rất thấp) nhưng variance cao (đường màu đỏ).
+>
+>
+>
+> Khi λ tăng dần, model bị ràng buộc nhiều hơn, bắt đầu giảm variance loss, nhưng tăng dần bias loss. Tổng loss giảm dần.
+>
+>
+>
+> Khi λ tiếp tục tăng, model bị nhiều ràng buộc, variance giảm còn rất nhỏ nhưng bias tăng mạnh khiến tổng loss tăng lên lại.
+>
+>
+>
+> Và đường màu hồng tạo nên dạng chữ U mà ta sẽ gặp nhiều trong phân tích variance bias.
+>
+>
+>
+> Cuối cùng, nhận xét của gs Bishop là: Tuy phân tích bias - variance trên cho ta góc nhìn về model complexity theo trường phái Frequentist (hay Classic) nhưng nó không có tác dụng mấy trong thực tế, bởi vì dễ thấy rằng, nó cần ta phải có nhiều data (ví dụ như để vẽ cái hình như 3.6 ta phải có L bộ dataset D). Trong khi đó, nếu mà đã có nhiều data thì ta cứ việc gom lại thành một bộ data lớn hơn để giúp giảm overfit của một complex model rồi.
+>
+>
+>
+> Do đó, phần tiếp theo của chapter 3, gs sẽ nói qua Bayesian approach đối với bài toán linear model, và ta sẽ thấy cách tiếp cận Bayesian với vấn đề complexity của model sẽ tốt hơn nhiều.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú cực kỳ xuất sắc và đào sâu bản chất toán học khi giải thích cách chuyển từ tích phân liên tục sang tổng rời rạc qua phân phối thực nghiệm. Bạn chỉ cần chú ý đồng bộ các ký hiệu ngoặc đóng/mở trong công thức tính variance để ghi chú hoàn hảo hơn.
+
+**🔗 See also:** [Expected Squared Loss Decomposition](#node-s3i1j2i) · [Expected Squared Loss Decomposition](#node-w19nneq)
 
 <br>
 
