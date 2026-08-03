@@ -2307,6 +2307,8 @@
 > đó Uniformly Most Powerfull (thằng có xác suất Type II Error thấp nhất) thì
 > nó được gọi là **UMP level α test.**
 
+**🔗 See also:** [linked note](#node-o7dx7qm)
+
 <br>
 
 <a id="node-00oute9"></a>
@@ -5080,7 +5082,7 @@
 >
 > Xem phần note của ví dụ 8.3.28, mình đã tự tay xây dựng two-side LRT
 
-**🔗 See also:** [Kiểm định LRT cho trung bình](./82_method_of_finding_tests.md#node-ouhenhy)
+**🔗 See also:** [Kiểm định LRT cho trung bình](./82_method_of_finding_tests.md#node-ouhenhy) · [linked note](#node-yn1ggv1)
 
 <br>
 
