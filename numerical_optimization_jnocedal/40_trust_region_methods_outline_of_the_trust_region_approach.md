@@ -280,19 +280,34 @@
 > [!NOTE]
 > Thế thì trong thuật toán vừa rồi, thì bước đầu tiên là giải bài toán tìm pk, (sau khi đã có trust region radius Δk
 >
+>
+>
 > Như đã biết, tại iteration k, đứng ở xk, ta tìm cách đến xk+1.
 >
-> Thì bài toán (4.5) sẽ là minimize mk(p) = fk + gkTp + (1/2)pTBkp subject to ||pk|| ≤ Δk 
+>
+>
+> Thì bài toán (4.5) sẽ là minimize mk(p) = fk + gkTp + (1/2)pTBkp subject to ||pk|| ≤ Δk
+>
+>
 >
 > (gk là gradient tại k, ∇f(xk), Bk thì có khi là I, có thể là xấp xỉ của Hessian ∇^f(xk) hoặc có thể là ∇^f(xk))
 >
+>
+>
 > Cho gọn thì ta tạm bỏ đi subscript:
 >
-> minimize f + gTp + (1/2)pTBp subject to ||p|| ≤ Δ (
 >
-> Thì đại ý là, để giải bài toán này, ta sẽ dùng một theorem mà ta sẽ chứng minh sau, theorem này nói rằng: nếu p* là solution của bài toán 4.5 thì nó sẽ thõa:
 >
-> (B  + λI)p* = -g (4.6)
+> minimize f + gTp + (1/2)pTBp subject to ||p|| ≤ Δ 
+>
+>
+>
+> Thì đại ý là, để giải bài toán này, ta sẽ dùng một theorem mà ta sẽ chứng minh sau, theorem này nói rằng: nếu p\* là solution của bài toán 4.5 thì nó sẽ thõa:
+>
+>
+>
+> (B + λI)p\* = -g (4.6)
+>
 >
 >
 > #4.5, 4.6
@@ -373,7 +388,7 @@
 >
 > Ghi chú của bạn rất chính xác và thể hiện sự nắm vững xuất sắc các điều kiện của bài toán con vùng tin cậy, bao gồm cả hiểu biết sâu sắc về các phép biến đổi tọa độ cơ bản và sắc thái của việc diễn giải gradient.
 
-**🔗 See also:** [4.3 Iterative Solution Of The Subproblem](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-gal0ace) · [The Hard Case: Khi q1Tg = 0](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-ty435bj) · [Proof of theorem 4.1: Lemma 4.7](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-k08q2ml) · [Proof of theorem 4.1](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-csqy8ix) · [Convergence of algorithms based on nearly exact solution](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-tr8868m) · [Lemma 10.2: Trust-Region Solution](./103_algorithms_for_nonlinear_least_squares_problem.md#node-za3zjv6) · [Solving Least-Squares Subproblem](./103_algorithms_for_nonlinear_least_squares_problem.md#node-1z7vmo9)
+**🔗 See also:** [4.3 Iterative Solution Of The Subproblem](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-gal0ace) · [The Hard Case: Khi q1Tg = 0](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-ty435bj) · [Proof of theorem 4.1: Lemma 4.7](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-k08q2ml) · [Proof of theorem 4.1: Chứng minh điều kiện đủ](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-csqy8ix) · [Convergence of algorithms based on nearly exact solution](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-tr8868m) · [Lemma 10.2: Trust-Region Solution](./103_algorithms_for_nonlinear_least_squares_problem.md#node-za3zjv6) · [Solving Least-Squares Subproblem](./103_algorithms_for_nonlinear_least_squares_problem.md#node-1z7vmo9)
 
 <br>
 
