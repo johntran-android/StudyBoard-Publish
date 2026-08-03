@@ -1,6 +1,6 @@
 # 10.3 Algorithms for nonlinear least-squares problem
 
-📊 **Progress:** `9` Notes | `16` Screenshots | `4` AI Reviews
+📊 **Progress:** `10` Notes | `18` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-i8zrnvn"></a>
@@ -298,11 +298,13 @@
 
 <p align="center"><kbd><img src="assets/ecbur3odqbs.png" width="80%"></kbd></p>
 
+**🔗 See also:** [Conjugate Gradient Method Iterations](./102_linear_least_square_problem.md#node-x7aktmm)
+
 <br>
 
 <a id="node-fj4b7z2"></a>
 
-- **The Levenberg-marquardt Method**
+- **Phương pháp Levenberg-Marquardt**
 
 <p align="center"><kbd><img src="assets/vwnfq8vvx57.png" width="80%"></kbd></p>
 
@@ -404,7 +406,7 @@
 >
 >
 >
-> Thế thì, vì định nghĩa của g, nên dĩ nhiên g(λ, ν) ≤ L(x, λ, ν) ∀x, và do đó, dĩ nhiên phải đúng với x \*\*(solution của bài toán đang tìm, là điểm thỏa constraint và minimize hàm f0(x)):
+> Thế thì, vì định nghĩa của g, nên dĩ nhiên g(λ, ν) ≤ L(x, λ, ν) ∀x, và do đó, dĩ nhiên phải đúng với x \*(solution của bài toán đang tìm, là điểm thỏa constraint và minimize hàm f0(x)):
 >
 >
 >
@@ -420,7 +422,7 @@
 >
 >
 >
-> g(λ, ν) ≤ L(x\*, λ, ν) = f0(x\*) + Σi λifi(x\*) + Σj νjhj(x\*) ≤ f0(x\*\*), và cái này người ta đặt là p\*: primal optimal
+> g(λ, ν) ≤ L(x\*, λ, ν) = f0(x\*) + Σi λifi(x\*) + Σj νjhj(x\*) ≤ f0(x\*), và cái này người ta đặt là p\*: primal optimal
 >
 >
 >
@@ -458,13 +460,13 @@
 >
 >
 >
-> Dấu bằng thứ nhất: f0(x\*) + Σi λifi(x) + Σj νjhj(x) = f0(x\*\*)
+> Dấu bằng thứ nhất: f0(x\*) + Σi λifi(x) + Σj νjhj(x) = f0(x\*)
 >
 > Vốn dĩ Σj νjhj(x) đã bằng 0
 >
 >
 >
-> nên thực ra ta có f0(x\*) + Σi λifi(x) = f0(x\*\*), và điều này suy ra: Σi λifi(x) = 0. Đây gọi là complementary slackness condition:
+> nên thực ra ta có f0(x\*) + Σi λifi(x) = f0(x\*), và điều này suy ra: Σi λifi(x) = 0. Đây gọi là complementary slackness condition:
 >
 >
 >
@@ -476,7 +478,7 @@
 >
 >
 >
-> g(λ, ν) = inf_x L(x, λ, ν). Và do định nghĩa này nên g(λ, v) ≤ L(x, λ, ν) ∀x, λ, ν. Và thay λ\*, ν \*\*vào (vì như đã nói, nó đúng với mọi λ, ν mà) ta có:
+> g(λ, ν) = inf_x L(x, λ, ν). Và do định nghĩa này nên g(λ, v) ≤ L(x, λ, ν) ∀x, λ, ν. Và thay λ\*, ν \* vào (vì như đã nói, nó đúng với mọi λ, ν mà) ta có:
 >
 >
 >
@@ -648,15 +650,15 @@
 >
 >
 >
-> ⇔ (JTJ + (λ/2)I)p = -JTr 
+> ⇔ (JTJ + (λ/2)I)p = -JTr
 >
 >
 >
-> vì λ chỉ là constant (Lagrange multiplier) nên có thể đặt λ mới  = λ/2, để có 
+> vì λ chỉ là constant (Lagrange multiplier) nên có thể đặt λ mới = λ/2, để có
 >
 >
 >
-> (JTJ + (λI)p = -JTr 
+> (JTJ + (λI)p = -JTr
 >
 >
 >
@@ -685,13 +687,25 @@
 >
 >
 > Như vậy việc mình biết KKT condition, giúp thấy rõ hai cái điều kiện 10.34a và 10.34b chỉ là KKT conditions thôi.
+>
+>
+>
+> ---
+>
+>
+>
+> Tuy vậy, một điểm cần hiểu: Việc biết KKT giúp mình hiểu các điều kiện 10.34 a,b ở đâu ra, cũng như là trong theorem 4.1 nói về điều kiện nghiệm của subproblem. Tuy nhiên lập luận trên không phải chứng minh. Nó chỉ giúp mình liên hệ với kiến thức KKT đã học bên Convex Optim của Boyd. Còn để chứng minh theorem 4.1 thì trong sách đã có nói.
+>
+>
+>
+> Và bổ đề này thật ra cũng chỉ là từ theorem 4.1 mà thôi, note kế tiếp ta sẽ chỉ ra rằng bổ đề 10.2 chỉ là áp dụng theorem 4.1.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Tuyệt vời. Bạn đã trình bày một cách chi tiết và chính xác mối liên hệ giữa điều kiện KKT và Lemma 10.2, với các bước suy luận toán học rõ ràng và dễ hiểu, thể hiện sự nắm vững kiến thức vững chắc.
 
-**🔗 See also:** [Theorem 4.1](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-6p1mgzb)
+**🔗 See also:** [Theorem 4.1](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-6p1mgzb) · [Triển khai Levenberg-Marquardt](#node-gb1ww4r)
 
 <br>
 
@@ -702,7 +716,61 @@
 <p align="center"><kbd><img src="assets/8ezvxa04l96.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Phần chứng minh đơn giản chỉ là chỉ ra rằng ở đầy đều thỏa các điều kiện của theorem 4.1. Vậy thôi.
+> Phần chứng minh đơn giản chỉ là chỉ ra rằng ở đầy đều thỏa các điều kiện của theorem 4.1
+>
+>
+>
+> Theorem 4.1 nói rằng: Cho bài toán minimize over p {m(p) = f + gTp + (1/2)pTBp} s.t ||p|| ≤ Δ, thì p\* là global solution if and only if p\* feasible và có λ ≥ 0 sao cho:
+>
+>
+>
+> (B + λI) p\* = -g (4.8a)
+>
+>
+>
+> λ(Δ - ||p||) = 0 (4.8b)
+>
+>
+>
+> (B + λI) ⪰ 0 (4.8c)
+>
+>
+>
+> Lemma 10.2 nói rằng cho bài toán minimize ||Jp + r||^2 s.t ||p|| ≤ Δ if and only if pLM feasible và tồn tại scalar λ ≥ 0 thỏa:
+>
+>
+>
+> (JTJ + λI) pLM = -JTr (10.34a)
+>
+>
+>
+> λ(Δ - ||pLM||) = 0 (10.34b)
+>
+>
+>
+> Vậy thì chứng mình 10.2 rất đơn giản: Chỉ là dựa vào theorem 4.1:
+>
+>
+>
+> Bài toán minimize ||Jp + r||^2 s.t ||p|| ≤ Δ chính là minimize f + gTp + (1/2)pTBp s.t ||p|| ≤ Δ với B = JTJ, g = JTr, f = rTr. Nên theo theorem 4.1, nếu pLM feasible và tồn tại λ ≥ 0 thỏa 4.8a,b,c thì pLM sẽ chính là solution.
+>
+>
+>
+> Mà 4.8a: (B + λI) p\* = -g, thay B = JTJ, g = JTr sẽ thành: (JTJ + λI) p\* = -JTr → đây chính là điều kiện 10.34a
+>
+>
+>
+> Còn 4.8b: λ(Δ - ||p||) = 0 cũng chính là 10.34b
+>
+>
+>
+> Còn 4.8c: Chính là vì B = JTJ, đã ⪰ 0, nên chỉ cần λ ≥ 0 thì B + λI đã tự động ⪰, nên không cần nêu ra điều kiện tương ứng với 4.8c nữa.
+>
+>
+>
+> ---
+>
+>
 >
 >
 >
@@ -746,11 +814,11 @@
 >
 >
 >
-> ⇔ \[JTJ  + √λ (ITI) √λ\]p = -\[JTr + √λ IT0\]
+> ⇔ \[JTJ + √λ (ITI) √λ\]p = -\[JTr + √λ IT0\]
 >
 >
 >
-> ⇔ (JTJ  + λI)p = -JTr → chính là 10.33
+> ⇔ (JTJ + λI)p = -JTr → chính là 10.33
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
@@ -767,7 +835,82 @@
 
 <p align="center"><kbd><img src="assets/i80shtmymeq.png" width="80%"></kbd></p>
 
-**🔗 See also:** [Algorithm 4.1 (Trust Region)](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-c4gu30d)
+> [!NOTE]
+> Để hiểu đoạn này, ôn nhanh chút xíu về thuật toán giải bài toán này:
+>
+>
+>
+> Từ Lemma 10.2 (hay xa hơn là định lý 4.1) nói điều kiện cần và đủ để p\* làm nghiệm của bài toán minimize over p {m(p) = (1/2)pTBp + gTp + f} là tồn tại λ ≥ 0 thỏa (a) (B + λI)p\* = -g ; (b) λ(||p|| - Δ) = 0; (c) B + λI ⪰ 0 (c), sẽ dẫn ta đến cách giải bài toán subproblem đại ý như sau:
+>
+>
+>
+> p\* và λ phải thỏa (b) nên nếu ||p|| = Δ thì λ &gt; 0 và ngược lại nếu ||p|| khác Δ thì λ = 0.
+>
+>
+>
+> Nên đầu tiên thử λ = 0, xem B có ⪰ 0, và p = -Binv có ≤ Δ không, nếu thỏa thì chốt nghiệm.
+>
+>
+>
+> Nếu trường hợp trên không thỏa, thì (yêu cầu đặt ra là phải tìm) λ &gt; 0, và (B + λI)p\* = -g với ||p\*|| = Δ.
+>
+>
+>
+> Cách giải: Từ (B + λI)p = -g ⇒ p là hàm theo λ, kí hiệu p(λ). Và giải ||p(λ)|| = Δ tìm λ và ta sẽ giải bằng root finding Newton method: Bắt đầu từ λ0, thuật toán sẽ tuần tự tính λ mới, bao gồm các bước:
+>
+>
+>
+> Factorize B + λI thành RTR, giải RTR p = - g ra p và giải RTq = p cho ra q. Từ đó ráp vào công thức tính λ mới. Các công thức này chỉ là xuất phát từ phương pháp root finding Newton, áp dụng cho bài toán 1/||p|| = 1/Δ, là phương trình tương đương ||p|| = Δ, nhưng thuận lợi hơn vì tránh được các trường hợp khiến hệ khó hội tụ.
+>
+>
+>
+> Cần nhấn mạnh rằng: Việc ta giải tìm λ sao cho ||p(λ)|| = Δ với (B + λI)p = -g bằng root finding Newton thực chất chính là lặp lại các bước Factor, tính p, tính q, tính λ mới và check điều kiện dừng nào đó.
+>
+>
+>
+> Một điểm có thể cần chú ý: Cần phải có cơ chế để đảm bảo λ sinh ra luôn &gt; -λ1 (gọi λ1 là λmin(B)) để đảm bảo bước factor thành công. Và vì đây là thuật toán iterative nên sẽ có điều kiện dừng nào đó khi đã tính được λ thỏa điều kiện ||p(λ)|| = Δ (có thể không bằng chính xác, nhưng ||p(λ)|| ≈ Δ để xấp xỉ tốt cũng được).
+>
+>
+>
+> Nói chung là tới đây sẽ có hai trường hợp.
+>
+>
+>
+> Trường hợp 1: Giải ra λ ok (từ thuật toán iterative ở trên)
+>
+>
+>
+> Trường hợp 2: Thuật toán iterative tìm λ bằng root finding không finish. Thì lúc này ta đã rơi vào the hard case. Tuy vậy, trong sách cũng không nói đầy đủ để biết khi nào thì ta sẽ biết cần tính theo the hard case, theo thảo luận, thì ta tạm hiểu là sẽ có cách để biết khi nào cần dừng thuật toán root finding và tính theo the hard case. Lúc này chỉ đơn giản là ta cho λ = -λ1, và đi giải tìm τ giúp ||p(-λ1) + τz|| = Δ với z là nullspace vector, theo công thức của phần the hard case.
+>
+>
+>
+> ---
+>
+>
+>
+> Quay lại nội dung của screenshot này. Tác giả nói cái vụ safeguard cho thuật toán trong trường hợp này sẽ dễ: Chỉ cần đảm bảo λ^(l) (ý nói λ tính trong chu trình root finding) dương là được. Có thể hiểu ý này, vì cái vụ safeguard đại ý là khi generate λ, phải check và có cơ chế can thiệp để khiến λ luôn &gt; -λ1 (- λmin(B)) vì như vậy B + λI mới ≻ 0 và từ đó việc factoring B + λI thành RTR mới thành công. Và lí do là B trong bài toán L-M = JTJ, vốn đã  ⪰ 0, nên chỉ cần λ^(l) dương thì chắc chắc B + λ^(l)I ≻ 0.
+>
+>
+>
+>
+>
+> Rồi, cũng vì B có cấu trúc đặc biệt (=JTJ) nên ta không cần phải refactor B + λI từ đầu mỗi vòng lặp (của chu trình tìm λ). Mà thay vào đó, ta có thể dùng một kĩ thuật khác:
+>
+>
+>
+> \[R\_λ; 0\] = (Q\_λ)T \[J; (√λ)I\]
+
+**🔗 See also:** [Algorithm 4.1 (Trust Region)](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-c4gu30d) · [Lemma 10.2: Trust-Region Solution](#node-za3zjv6) · [The Hard Case: Khi q1Tg = 0](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-ty435bj)
+
+<br>
+
+<a id="node-yf11h74"></a>
+
+- **Implementation of the Levenberg-Marquardt Method**
+
+<p align="center"><kbd><img src="assets/5t6ozcj6qrw.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bfsc0wwcwg.png" width="80%"></kbd></p>
 
 <br>
 
