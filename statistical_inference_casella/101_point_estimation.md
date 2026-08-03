@@ -1,6 +1,6 @@
 # 10.1 Point Estimation
 
-📊 **Progress:** `36` Notes | `42` Screenshots | `17` AI Reviews
+📊 **Progress:** `37` Notes | `43` Screenshots | `18` AI Reviews
 
 ---
 <a id="node-2ixm3r0"></a>
@@ -3101,6 +3101,288 @@
 > Bạn đã giải thích rất chi tiết và dễ hiểu về phương pháp bootstrap, đặc biệt là việc làm rõ ưu điểm thực sự của nó khi áp dụng cho các ước lượng tổng quát. Việc sử dụng ví dụ số học cụ thể giúp minh họa các khái niệm một cách xuất sắc, và công thức bootstrap variance được trình bày rất chính xác.
 
 **🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-jhe69j5)
+
+<br>
+
+<a id="node-1gfsb6x"></a>
+
+- **Bootstrapping a Binomial Variance**
+
+<p align="center"><kbd><img src="assets/jlmeoqita8.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Active recall về Bootstrap method:
+>
+>
+>
+>  Bài toán đặt ra là: Ta có một bộ 4 con số: {2,4,9,12}. Có thể coi như là một observed value của một random sample size n = 4, sampling từ một distribution P gốc nào đó có. Nói cách khác, ta có một random sample **X** = (X1,X2,X3,X4) với observed value là x1 = 2, x2 = 4, x3 = 9, x4 = 12.
+>
+> Và bài toán đặt ra là estimate Var(Xbar).
+>
+>
+>
+> Dĩ nhiên, Xbar, là một hàm của sample: Xbar(**X**) = Σi=1:n Xi. Nó cũng là một statistic, một random variable. Và xbar = (2 + 4 + 9 + 12)/4 = 6.75 chính là một observed value của nó.
+>
+>
+>
+> Thế thì, với Xbar, đây là một statistic đặc biệt quan trọng, nên nó có công thức để tính ra phương sai chính xác rồi:
+>
+>
+>
+> Var(Xbar) = Var(Xi) / n. Tức là, population variance σ^2 chia sample size (ở đây chính là n, = 4).
+>
+>
+>
+> Dĩ nhiên, nếu ta đã biết distribution của X1,X2,X3,X4, ví dụ như biết chúng là \~ n(0, 10) thì ta cũng có ngay variance của Xbar = 10/4 = 2.5
+>
+>
+>
+> Vấn đề là, giả sử ta không biết population variance thì sao?
+>
+>
+>
+> Câu trả lời là, ta có thể dùng (observed value của) sample variance để thay chỗ của population variance, từ đó, thay vì ta có công thức chính xác Var(Xbar) = σ^2 / n, ta có công thức ước lượng: Var(Xbar) ≈ s^2/n. Và với observed value của sample, thì ta có observed value của S^2: s^2 = \[1/(n-1)\] Σi=1:n (xi - xbar)^2. Thế giá trị vào ta tính ra con số **5.23**, là ước lượng của Xbar variance.
+>
+>
+>
+> Var(Xbar) = σ^2/n ≈ Var^(Xbar) = s^2/n = **5.23** (chú ý kí hiệu Var^, var có mũ, thể hiện đây là giá trị estimate cho Var(Xbar) chính xác)
+>
+>
+>
+> Đó là cách thứ nhất: Dùng sample mean thế chỗ cho population mean trong công thức chính xác của Var(Xbar).
+>
+>
+>
+> ---
+>
+>
+>
+> Cách thứ hai: Ta sẽ coi như population gốc là một uniform discrete và {2, 4, 9, 12} chính là 4 possible value. Tức là distribution gốc có dạng discrete với P(X=2) = P(X=4) = P(X=9) = P(X=12) = 1/4. Thế thì vì 4 possible value đều có xác suất xảy ra bằng nhau, nên ta nói rằng: Có thể coi bộ 4 số {2,4,9,12} là một observed value của một random sample size 4. Lí do nói vậy là vì phân phối gốc cho phép các possible value xuất hiện với xác suất bằng nhau nên hoàn toàn hợp lệ nếu như ta có một bộ quan sát chứa cả 4 số này. (để thấy rõ hơn, ta có thể giả sử phân phối gốc của discrete variable Y có 3 possible value {1,3,4} là f(1) = f(3) = 0.5, f(4) = 0. Thì sẽ không thể cho rằng {1,3,4} là một observed value của random sample size 3 sampling từ distribution fY được, vì không thể xảy ra observed value như vậy)
+>
+>
+>
+> Rồi, thế thì với cơ sở là ta cho rằng population gốc là discrete có 4 possible value equally likely và một observed value của sample size 4: x1, x2, x3, x4) = (2, 4, 9, 12). Thì observed value của sample mean cũng là xbar = (2 + 4 + 9 + 12)/4 = 6.75
+>
+>
+>
+> (y như lúc nãy, chỉ khác là ở đây ta đang giả định distribution gốc là discrete uniform với 4 possible value)
+>
+>
+>
+> Để tính variance của Xbar., thì tới đây sẽ khác với lúc nãy:
+>
+>
+>
+> Nhắc lại lúc nãy: Khi vẫn chỉ dùng đúng bản chất, là coi {2,4,9,12} là một observed value của random sample size 4 sampling từ distribution gốc, và ta không biết population gốc là gì cả.
+>
+>
+>
+> Khi đó ta thay sample variance s^2 vào thế chỗ của population variance σ^2 để có ước lượng cho Var(Xbar) = σ^2/n ≈ Var^(Xbar) = s^2/n = **5.23**
+>
+>
+>
+> Còn bây giờ, khi ta đã giả định population gốc là X \~ discrete uniform với 4 possible value equally likely {2, 4, 9, 12} rồi thì ta sẽ có population mean và population variance chính xác:
+>
+>
+>
+> EX = Σ{x=2,4,9,12} xP(X=x) = Σ{x=2,4,9,12} x (1/4) = 6.75
+>
+>
+>
+> σ^2 = E\[(X - EX)^2\] = (LOTUS) = Σ{x=2,4,9,12} (x - 6.75)^2 P(X = x)
+>
+>
+>
+> = Σ{x=2,4,9,12} (x - 6.75)^2 (1/4)
+>
+>
+>
+> = 15.6875
+>
+>
+>
+> Và với việc có population variance (dù là population variance pha ke - vì ta đã giả định nó là discrete uniform), ta sẽ tính Var(Xbar) theo công thức "chính xác" = 15.6875/n = 15.6875/4 = 3.921875
+>
+>
+>
+> (dù nói là công thức "chính xác" nhưng dĩ nhiên đây cũng chỉ là estimate cho giá trị thật variance của Xbar, vì ta đã giáng cấp population gốc thành discrete uniform)
+>
+>
+>
+> Như vậy, ta có cách estimate thứ hai của Var(Xbar): Cũng kí hiệu Var^
+>
+>
+>
+> Var^(Xbar) = **3.92**
+>
+>
+>
+> (Var^(Xbar) của cách 1 là **5.23)**
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì, bootstrap cho ta một cách tính khác: Ý tưởng chính là vầy: Với 4 số {2, 4, 9, 12}. Sampling with replacement 4 số. Số possible outcome (có phân biệt thứ tự) dễ thấy có thể tính theo step rule: Chọn số thứ 1 có 4 khả năng, chọn số thứ 2 có 4 khả năng,.. → 4 × 4 × 4 × 4 = 4^4. Gọi ordered sample space là {s1,....sN}, N = 4^4. Và si đều có xác suất bằng nhau. Gọi xbar\*(s) là hàm phụt ra con số trung bình. Thì xbar\*1 = xbar\*(s1), xbar\*2 = xbar\*(2), ...,xbar\*256 = xbar\*(s256) sẽ chính là 256 possible value của random variable Xbar\*, có distribution uniform discrete.
+>
+>
+>
+> Và vì distribution của Xbar là discrete uniform nên ta có thể được phép coi **x** = xbar\*1,....xbar\*N là một observed value của random sample sampling từ distribution của Xbar\*. Điều này giống như, X có 3 possible value 1,2,3 có xác suất bằng nhau, nên **x** = (x1 = 1, x2 = 2, x3 = 3) có thể valid là một random sample bởi trong đó mỗi giá trị khả dĩ đều xuất hiện một lần. Mặt khác, nếu X có 3 possible value 1,2,3 với xác suất là P(X=1) = P(X=2) = 0.5, và P(X=3) = 0 thì bộ 3 giá trị cụ thể (1,2,3) không thể được xem là obsrevation của một random sample được, vì lí do là nó không phản ánh đúng phân phối thực khi xuất hiện con số 3 trong khi phân phối thực P(X = 3) = 0.
+>
+>
+>
+> Và vì coi như ta có một observed value của random sample **X**: **x** = (xbar\*1, ....xbar\*N). Nên ta có thể dùng công thức sample variance S^2: = 1/(256 - 1) Σi=1:N \[xbar\*i - (xbar\*)bar\]^2. Và ta sẽ lấy giá trị này để estimate cho variance của sample mean Var(Xbar), kí hiệu là Var(Xbar)\*
+>
+>
+>
+> Và theo công thức này, kết quả ra được là: Var(Xbar)\* = **3.94**
+>
+>
+>
+> Kết quả này rất sát với approach #2.
+>
+>
+>
+> Khiến cho ta có thể áp dụng nó để tính Variance của các statistic (estimator khác):
+>
+>
+>
+> Sở dĩ ta có thể theo approach #2 là vì ta đang tính variance của Xbar (estimator của true mean), và cái statistic này thì có công thức chính xác: \[population variance\] / n.
+>
+>
+>
+> Nhưng nếu ta muốn estimate variance của một statistic khác, W(**X**), là estimator của population parameter khác (ví dụ như population odd ratio, median) ...thì nhưng cái này chúng không có công thức tính từ population paramter như cách mà Var(Xbar) = population variance / n có. Khi đó, ta không thể có approach 2 được, và dễ thấy, cũng không có approach 1 luôn (vì bản chất approach 1 vẫn chỉ là dùng sample mean variance thay cho population variance để thành công thức ước lượng)
+>
+>
+>
+> Còn bootstrap, thì lại luôn cho phép làm được. Thành ra ta có thể dùng bootstrap để estimate variance của các estimator bất kì.
+>
+>
+>
+> ---
+>
+>
+>
+> Và với chừng đó recall, ta quay lại screenshot này, ví dụ như ở đây, ta cần estimate variance của statistic sau đây: W(**X**) = p^(1-p^) với p^ là cũng là Xbar (vì p^ ở đây là MLE estimator của Binomial(n, p), mà ta đã chứng minh, chính là Xbar). Nên estimator W(**X**) này, có thể nhìn nhận, là một hàm của Xbar, dĩ nhiên, Xbar, hay hàm của Xbar thì cũng đều là statistic hết.
+>
+>
+>
+> Thế thì, giá mà có công thức chính xác nào của Var(p^(1-p^)), ví dụ như = hàm g(p) nào đó chẳng hạn. Khi đó, ta có thể theo approach 1, 2: 
+>
+>
+>
+> Ví dụ approach 1: Không có p, ta dùng p^ thay vào, để từ công thức chính xác = g(p), ta có công thức ước lượng: = g(p^).
+>
+>
+>
+> Hoặc approach 2: Ta cũng coi distribution là uniform discrete, có các observed value chính là các possible value, với equally likely. Từ đó tính ra population mean p  và thế vào g(p).
+>
+>
+>
+> Nhưng thực tế thì không có hàm g(p) nào cả. Và bootstrap sẽ giải cứu:
+>
+>
+>
+> ---
+>
+>
+>
+> Cũng làm y như với xbar:
+>
+>
+>
+> Giả sử n observed value (như {2,4,9,12}) là x1,x2....xn.
+>
+>
+>
+> Theo quy trình: sampling n item with replacement, ta sẽ có n^n ordered possible value: s1,....sN, mỗi cái đều có xác suất bằng nhau = 1/N
+>
+>
+>
+> Gọi hàm xbar\*(s) = lấy trung bình mấy số của một outcome s. Thì ta sẽ có {xbar\*(s1),...xbar\*(sN)} là n^n possible value của một uniform discrete random variable Xbar\*. 
+>
+>
+>
+> Và do xác suất các possible value đều bằng nhau, nên ta có thể coi bộ số {xbar\*1 = xbar\*(s1),..., xbar\*N = xbar\*(sN)} là một observed value của một random sample sampling từ empirical distribution của Xbar\* này.
+>
+>
+>
+> Có nghĩa là coi như ta có một Xbar \~ empirical distribution uniform discrete có n^n possible value equally likely. Và random sample có observed value là xbar\*1, ...xbar\*N. 
+>
+>
+>
+> Nên sample variance = \[1/(n^n - 1)\] Σi=1:n^n \[xbar\*j - (xbar\*)bar\]^2
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy thì ở đây tương tự:
+>
+>
+>
+> Giả sử n observed value (như {2,4,9,12}) là x1,x2....xn.
+>
+>
+>
+> Theo quy trình: sampling n item with replacement, ta sẽ có n^n ordered possible value: s1,....sN, mỗi cái đều có xác suất bằng nhau = 1/N
+>
+>
+>
+> Đặt hàm w\*(.) = \[p^(1-p^)\]\*(.) là hàm nhận cái bộ số của một outcome, và đi tính trung bình, rồi tính 1 - trung bình, rồi nhân lại với nhau.
+>
+>
+>
+> (đây là chỗ cực dễ lú: Nhờ học qua Stat110 mình để hiểu bản chất nên mới không lú chỗ này: ở đây ta treat \[p^(1-p^)\]\*() như tên hàm, y như xbar\*(.) ở trên vậy. 
+>
+>
+>
+> xbar\*(s): nhận vào s, là một dãy số, phụt ra số trung bình
+>
+>
+>
+> \[p^(1-p^)\]\*(s) : nhận vào s, là một dãy số: đi tính trung bình nhân với (1 - trung bình)
+>
+>
+>
+> Như vậy với n^n equally likely possible outcome s1,...sN ta có n^n possible values của một uniform discrete random variable W = \[p^(1-p^)\].
+>
+>
+>
+> Tương tự, vì equally likely, nên ta coi {w1 = \[p^(1-p^)\](s1), ...wN = \[p^(1-p^)\](sN)} là một observed value của một random sample sampling từ empirical distribution của W.
+>
+>
+>
+> Nên theo công thức sample variance:
+>
+>
+>
+> sample variance của W = \[1/(n^n-1)\] Σi=1:n^n (w\*j - w\*bar)^2
+>
+>
+>
+> Và nếu ta dùng \[p^(1-p^)\] làm cái tên của statitisc W luôn thì nó sẽ đẻ ra cái công thức kinh dị trong sách:
+>
+>
+>
+> sample variance của \[p^(1-p^)\], và ta định nghĩa cái này là bootstrap variance: 
+>
+>
+>
+> Var\*(\[p^(1-p^)\]:
+>
+>
+>
+> = \[1/(n^n-1)\] Σi=1: n^n (\[p^(1-p^)\]\*j - \[p^(1-p^)\]\*bar)^2
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú cực kỳ chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về phương pháp Bootstrap cũng như cách giải thích ký hiệu toán học trong sách. Bạn chỉ cần lưu ý thêm rằng trong thực tế khi n lớn, người ta thường dùng mô phỏng Monte Carlo (chọn B mẫu ngẫu nhiên) thay vì tính toàn bộ $n^n$ trường hợp vì giới hạn tính toán.
 
 <br>
 
