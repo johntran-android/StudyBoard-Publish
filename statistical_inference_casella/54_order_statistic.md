@@ -634,7 +634,7 @@
 >
 > QUAY LẠI SAU, NHƯNG ĐẠI Ý LÀ BIẾN ĐỔI ĐẠI SỐ TIẾP THÌ NÓ RA KẾT QUẢ
 
-**🔗 See also:** [Thống kê đầy đủ nhị thức](./62_the_sufficient_principle.md#node-8w0tig6) · [Ảnh hưởng Θ0 trong kiểm định](./83_methods_of_evaluating_test.md#node-csqvj7r)
+**🔗 See also:** [Thống kê đầy đủ nhị thức](./62_the_sufficient_principle.md#node-8w0tig6) · [Ảnh hưởng Θ0 trong kiểm định](./83_methods_of_evaluating_test.md#node-csqvj7r) · [linked note](./91_introduction.md#node-bmbbuwh)
 
 <br>
 
