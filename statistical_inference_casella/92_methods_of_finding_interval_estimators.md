@@ -2053,6 +2053,8 @@ interval Estimators
 > nhánh đi xây dựng một confidence set dùng pivotal quantity được gọi là
 > **PIVOTAL INFERENCE**
 
+**🔗 See also:** [linked note](./91_introduction.md#node-bmbbuwh)
+
 <br>
 
 <a id="node-hi75sor"></a>
