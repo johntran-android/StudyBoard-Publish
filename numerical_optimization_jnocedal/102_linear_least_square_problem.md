@@ -1098,7 +1098,7 @@
 >
 > Bạn đã nắm vững các ý chính về việc sử dụng phương pháp gradient liên hợp (CG) cho các bài toán lớn và đặc biệt là cách triển khai tối ưu khi không cần hình thành ma trận JTJ trực tiếp. Phần giải thích sâu về nền tảng của CG cũng rất ấn tượng. Tuy nhiên, phần kết luận về "3 phương pháp nói trên" cho bài toán nhỏ không được đề cập trong đoạn văn bản gốc.
 
-**🔗 See also:** [A Practical Form Of The Conjugate Gradient Method.](./51_linear_conjugate_gradient.md#node-jdgssae)
+**🔗 See also:** [A Practical Form Of The Conjugate Gradient Method.](./51_linear_conjugate_gradient.md#node-jdgssae) · [Algorithms for Nonlinear Least-Squares](./103_algorithms_for_nonlinear_least_squares_problem.md#node-yq2hekh)
 
 <br>
 
