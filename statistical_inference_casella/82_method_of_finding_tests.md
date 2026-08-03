@@ -1992,7 +1992,7 @@
 > Như vậy mới nói là Union Intersection Test xây dựng bởi 2 cái one-sided t test
 > thì chính là / equivalent với cái LRT của bài toán 2-sided test
 
-**🔗 See also:** [Kiểm định hợp-giao cỡ α](./83_methods_of_evaluating_test.md#node-aruspge)
+**🔗 See also:** [Kiểm định hợp-giao cỡ α](./83_methods_of_evaluating_test.md#node-aruspge) · [linked note](./83_methods_of_evaluating_test.md#node-yn1ggv1)
 
 <br>
 
