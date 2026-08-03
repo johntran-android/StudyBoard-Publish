@@ -1,6 +1,6 @@
 # 10.3 Algorithms for nonlinear least-squares problem
 
-📊 **Progress:** `10` Notes | `18` Screenshots | `4` AI Reviews
+📊 **Progress:** `10` Notes | `18` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-i8zrnvn"></a>
@@ -888,7 +888,7 @@
 >
 >
 >
-> Quay lại nội dung của screenshot này. Tác giả nói cái vụ safeguard cho thuật toán trong trường hợp này sẽ dễ: Chỉ cần đảm bảo λ^(l) (ý nói λ tính trong chu trình root finding) dương là được. Có thể hiểu ý này, vì cái vụ safeguard đại ý là khi generate λ, phải check và có cơ chế can thiệp để khiến λ luôn &gt; -λ1 (- λmin(B)) vì như vậy B + λI mới ≻ 0 và từ đó việc factoring B + λI thành RTR mới thành công. Và lí do là B trong bài toán L-M = JTJ, vốn đã  ⪰ 0, nên chỉ cần λ^(l) dương thì chắc chắc B + λ^(l)I ≻ 0.
+> Quay lại nội dung của screenshot này. Tác giả nói cái vụ safeguard cho thuật toán trong trường hợp này sẽ dễ: Chỉ cần đảm bảo λ^(l) (ý nói λ tính trong chu trình root finding) dương là được. Có thể hiểu ý này, vì cái vụ safeguard đại ý là khi generate λ, phải check và có cơ chế can thiệp để khiến λ luôn &gt; -λ1 (- λmin(B)) vì như vậy B + λI mới ≻ 0 và từ đó việc factoring B + λI thành RTR mới thành công. Và lí do là B trong bài toán L-M = JTJ, vốn đã ⪰ 0, nên chỉ cần λ^(l) dương thì chắc chắc B + λ^(l)I ≻ 0.
 >
 >
 >
@@ -899,6 +899,71 @@
 >
 >
 > \[R\_λ; 0\] = (Q\_λ)T \[J; (√λ)I\]
+>
+>
+>
+> Mình sẽ nói tiếp trong note sau, nhưng đại ý là: Bản chất của việc phân tách Cholesky đối với matrix B + λI mà ta muốn làm, cũng chỉ là tìm ra matrix R sao cho B + λI = RTR, hay kí hiệu (R\_λ)T(R\_λ) để ý nói kết quả này tương ứng với một λ cụ thể (vì trong chu trình lặp để tìm λ thỏa ||p(λ)|| = Δ thì mỗi bước ta sẽ đều phải factor B + λI)
+>
+>
+>
+> Thế thì ta có thể chỉ ra rằng, cái matrix R\_λ cần tìm nói trên, thực ra, cũng chính là matrix R\_λ trong kết qủa phân tách QR đối với matrix sau đây: A = \[J; (√λ)I\].
+>
+>
+>
+> Chính vì vậy, thay vì đi phân tách Cholesky matrix B + λI, ta có thể phân tách QR đối với matrix A này, để tìm ra R\_λ.
+>
+>
+>
+> Và nói thêm chút xíu về đại ý của phần sau như sau:
+>
+>
+>
+> Như đã nói, mỗi vòng lặp trong chu trình, ta sẽ đều phải làm việc phân tách này. Thế mà giả sử tại vòng lặp (5) thì A5 = \[J; (√λ5) I\] thì nó chỉ khác cái matrix A4 của vòng lặp trước đó, = \[J; (√λ4) I \] ở cái matrix khối (√λ4) I mà thôi.
+>
+>
+>
+> Do đó, nếu như cứ mỗi vòng lặp ta lại phải xách cái A mới chỉ khác cái cụm ở dưới đi phân tách QR thì phí quá. Thành ra người ta mới nghĩ cách để bớt phí.
+>
+>
+>
+> Và đại ý là có giải pháp sau đây:
+>
+>
+>
+> A có hai cục chồng lên nhau là J và (√λ)I với sự thay đổi sau mỗi vòng chỉ là λ, vậy thì ta sẽ đem tách QR đối với cục J trước. Giả sử gọi kết quả là J = Q \[R; 0\]. 
+>
+>
+>
+> Khi đó A = \[J; (√λ) I\] = \[ Q \[R; 0\]; (√λ) I \]
+>
+>
+>
+> và cái kết quả này đại ý là tương đương \[matrix trực giao\] \[R; 0; (√λ) I\]
+>
+>
+>
+> Và tới đây đã coi như sắp ra kết quả rồi: (vì nhớ không, mục đích chỉ là tìm ra R\_λ trong A = \[matrix trực giao Q\] \[R\_λ; 0\]
+>
+>
+>
+> Ta mới dùng một kĩ thuật gọi là Given, hiểu nôm na là, dùng một matrix X nào đó để có:
+>
+>
+>
+> \[matrix X\] \[R; 0; (√λ) I\] = \[R\_λ; 0; 0\]
+>
+>
+>
+> khi đó ta sẽ có được R\_λ.
+>
+>
+>
+> Trong sách, matrix X này chính là \[Q^\_λ\]T.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú rất xuất sắc, thể hiện sự hiểu biết sâu sắc và chính xác về mặt toán học lẫn thuật toán, đặc biệt là phần giải thích về Givens rotations và cơ chế safeguard. Điểm nhỏ cần lưu ý là thuật ngữ chính xác là phép xoay Givens (Givens rotations) chứ không phải Given.
 
 **🔗 See also:** [Algorithm 4.1 (Trust Region)](./40_trust_region_methods_outline_of_the_trust_region_approach.md#node-c4gu30d) · [Lemma 10.2: Trust-Region Solution](#node-za3zjv6) · [The Hard Case: Khi q1Tg = 0](./43_trust_region_methods_iterative_solution_of_the_subproblem.md#node-ty435bj)
 
@@ -909,6 +974,12 @@
 - **Implementation of the Levenberg-Marquardt Method**
 
 <p align="center"><kbd><img src="assets/5t6ozcj6qrw.png" width="80%"></kbd></p>
+
+<br>
+
+<a id="node-p3l117n"></a>
+
+- **Implementation of the Levenberg-Marquardt Method (bản sao)**
 
 <p align="center"><kbd><img src="assets/bfsc0wwcwg.png" width="80%"></kbd></p>
 
