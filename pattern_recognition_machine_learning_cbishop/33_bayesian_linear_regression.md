@@ -1,6 +1,6 @@
 # 3.3 Bayesian Linear Regression
 
-📊 **Progress:** `4` Notes | `4` Screenshots | `4` AI Reviews
+📊 **Progress:** `5` Notes | `7` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-2o000zc"></a>
@@ -392,6 +392,72 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Ghi chú cực kỳ xuất sắc, thể hiện sự hiểu biết sâu sắc và chính xác về mối liên hệ giữa tối đa hóa hậu nghiệm (MAP) và việc giảm thiểu sai số có Regularization L2. Bạn chỉ cần lưu ý thêm hệ số 1/2 ở phần phạt L2 (tức là α/2 thay vì α) để công thức hoàn toàn đồng nhất với tài liệu học.
+
+<br>
+
+<a id="node-ek7ydwk"></a>
+
+##### Bayesian Linear Regression Example
+
+<p align="center"><kbd><img src="assets/e0lxfmqww39.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là ở đây với mục đích là muốn minh họa và so sánh kết quả thu được khi dùng cách tiếp cận Bayesian đối với bài toán linear model, tác giả sẽ đặt ra một bối cảnh như sau:
+>
+>
+>
+> Ta sẽ tạo ví dụ N = 100 điểm data theo quy luật sau:
+>
+>
+>
+> Sampling X1,....X100 từ Uniform(-1,1)
+>
+>
+>
+> Dùng hàm f(x, **a**) = a0 + a1x = -0.3 + 0.5x.
+>
+>
+>
+> Và sampling ε1,...ε100 từ N(0, (0.2)^2)
+>
+>
+>
+> Và tính t1 = f(x1, **a**) + ε1, ...,t100 = f(x100, **a**) + ε100
+>
+>
+>
+> Như vậy, có nghĩa là gì?
+>
+>
+>
+> Có nghĩa là, các giá trị t1,...tN sẽ là observed value của T|x sẽ tuân theo phân phối Normal(f(x, **a**), (0.2)^2). Vì sao? Vì ε \~ Normal(0, (0.2)^2), thì ε + f(x, **a**) sẽ là một Normal(f(x,**a**), (0.2)^2).
+>
+>
+>
+> Do đó, nếu ta dùng một linear model có basis function đơn giản: tuyến tính: Φ(x) = x, để linear model sẽ là: y(x, **w**) = w0 + w1x, và đặt ra assumption là T|x \~ normal(y(x, **w**), (0.2)^2) thì ta đang giả định đúng distribution của T. Khi đó, nếu làm tốt, để tìm ra được **w** = **a**, thì khi dùng hàm y(x, **w**=**a**) để dự đoán giá trị t của một x mới, sai số error sẽ chỉ còn là sai số đơn thuần do nhiễu ngẫu nhiên - là phần không thể loại bỏ được.
+>
+>
+>
+> Chý ý là, vì ở đây ta chủ động tạo noise theo normal có variance 0.2^2, và mục đích là tập trung vào **w**, nên trong giả định về distribution normal(y(x, **w**), (0.2)^2) của T|x thì ta coi như biết variance luôn, chứ nếu không, variance cũng là một tham số cần phải đi tìm (estimator, dựa trên data)
+>
+>
+>
+> Và còn một parameter nữa, đó là vì sẽ chọn prior distribution cho **w**, là N(0, 1/α). Trong trường hợp này, ta cũng cho rằng nó là 2. (Nói chung là để chỉ còn parameter là **w** là chưa biết thôi).
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chú của bạn rất chính xác và thể hiện sự hiểu biết sâu sắc về quá trình sinh dữ liệu giả lập cũng như mô hình Bayesian Regression. Bạn chỉ cần lưu ý làm rõ mô hình sử dụng hai hàm cơ sở là phi_0(x) = 1 và phi_1(x) = x để tránh nhầm lẫn khi định nghĩa vector basis function.
+
+<br>
+
+<a id="node-cpf6sek"></a>
+
+- **Bayesian Linear Regression**
+
+<p align="center"><kbd><img src="assets/f48m4xtjxra.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/vvvwba1pei.png" width="80%"></kbd></p>
 
 <br>
 
