@@ -314,7 +314,7 @@
 >
 >
 >
-> Đầu tiên, cần nhấn mạnh, nói đến maximum likelihood, thì ta đang trong trường phái Frequentist. Vì trong trường phái này, ta coi tham số, tức **w** là giá trị cố định nhưng chưa biết. Và ta muốn đi tìm một function của data để estimate ra giá trị **w**. Và MLE chỉ là một cách tiếp cận phổ biến, trong đó ta sẽ dùng cái function sau đây để làm estimator cho **w**: **w**ML(data) = argmax\_**w** L(**w**|data). Có nghĩa là, ta sẽ giải bài toán tối ưu: 
+> Đầu tiên, cần nhấn mạnh, nói đến maximum likelihood, thì ta đang trong trường phái Frequentist. Vì trong trường phái này, ta coi tham số, tức **w** là giá trị cố định nhưng chưa biết. Và ta muốn đi tìm một function của data để estimate ra giá trị **w**. Và MLE chỉ là một cách tiếp cận phổ biến, trong đó ta sẽ dùng cái function sau đây để làm estimator cho **w**: **w**ML(data) = argmax\_**w** L(**w**|data). Có nghĩa là, ta sẽ giải bài toán tối ưu:
 >
 >
 >
@@ -338,7 +338,7 @@
 >
 >
 >
-> Và xét bài toán maximize over **w** {f(**t**|**w**) f(**w**) / f(**t**)} 
+> Và xét bài toán maximize over **w** {f(**t**|**w**) f(**w**) / f(**t**)}
 >
 >
 >
@@ -366,11 +366,27 @@
 >
 >
 >
-> Có nghĩa là giả bài toán trên ta sẽ ra **w** là **m**N
+> Có nghĩa là giải bài toán trên ta sẽ ra **w** là **m**N
 >
 >
 >
 > Nhưng ý quan trọng muốn nói, là bài toán minimize hàm sum square error với L2 regularization loss chính là việc ta đi tìm w khiến maximize posterior distribution, dù rằng trong trường hợp này ta biết solution chính là mean **m**N
+>
+>
+>
+> Suy ngẫm một chút, mình nhớ, trong Casella, khi đã đi theo Bayesian approach, để đi xây dựng cái gọi là Bayes estimator của θ, và sau khi đã có được posterior distribution π(θ|**x**), thì hình như người ta không làm theo lối đi tìm θ khiến maximize π(θ|**x**). Mà thay vào đó, họ sẽ dùng decision theory: chọn loss function, L(W(**X**), θ), ví dụ square error loss = \[W(**X**) - θ\]^2. 
+>
+>
+>
+> Rồi, tính risk function: E\_θ\[L(W(**X**), θ)\] = ∫ L(W(**x**), θ) f(**x**|θ) d**x**. 
+>
+>
+>
+> Và Bayes risk: E\[E\_θ\[L(W(**x**), θ)\]\] = ∫E\_θ\[L(W(**x**), θ)\] π(θ)dθ. Từ đó đi minimize cái Bayes risk này, và bài toán sau một chút biến đổi, sẽ cũng là minimize ∫L(W(**x**), θ) π(θ|**x**) dθ, gọi là posterior expected loss. Và kết quả sẽ cho ra là E\[θ|**x**\], tức mean của posterior
+>
+>
+>
+> Nếu so với việc tìm θ có π(θ|**x**) lớn nhất, thì kết quả có thể sẽ khác. Tuy rằng trong trường hợp posterior là Normal thì hai kết quả sẽ giống nhau, vì mean của posterior cũng là nơi có π(θ|**x**) lớn nhất.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
