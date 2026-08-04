@@ -283,7 +283,7 @@ evaluating Estimators
 >
 > VarS^2 = 2σ^4/(n-1) chỉ với normal, với distribution khác thì sẽ khác.
 
-**🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg)
+**🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg) · [Example 10.1.22 Parametric Bootstrap](./101_point_estimation.md#node-s9n2ly7)
 
 <br>
 
