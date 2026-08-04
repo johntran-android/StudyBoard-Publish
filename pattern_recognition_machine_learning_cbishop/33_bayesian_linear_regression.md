@@ -1,6 +1,6 @@
 # 3.3 Bayesian Linear Regression
 
-📊 **Progress:** `3` Notes | `3` Screenshots | `3` AI Reviews
+📊 **Progress:** `4` Notes | `4` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-2o000zc"></a>
@@ -292,6 +292,90 @@
 > Ghi chú cực kỳ chính xác và chi tiết khi liên kết thành công công thức tổng quát từ Chương 2 để chứng minh công thức Chương 3 một cách tường minh. Để hoàn hảo hơn, bạn có thể bổ sung thêm giải thích ngắn gọn về ý nghĩa vật lý của các tham số đóng vai trò là độ chính xác (precision) trong việc cập nhật phân phối.
 
 **🔗 See also:** [Phân bố tiên nghiệm và hậu nghiệm](./233_bayess_theorem_for_gaussian_variables.md#node-zswmsts)
+
+<br>
+
+<a id="node-fs2bcmg"></a>
+
+#### Maximum A Posteriori Estimation
+
+<p align="center"><kbd><img src="assets/z5b6x2u043.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, đoạn này là sao:
+>
+>
+>
+> Thì đại ý là, sau khi đã có posterior distribution của **w**, là normal(mN, SN_inv) thì ta làm gì nữa? Tại sao lại nói đến maximize log của posterior distribution?
+>
+>
+>
+> Thế thì, chỗ này để hiểu rõ cần phải nhắc lại maximum likelihood, rồi ta sẽ liên hệ qua lại cái này.
+>
+>
+>
+> Đầu tiên, cần nhấn mạnh, nói đến maximum likelihood, thì ta đang trong trường phái Frequentist. Vì trong trường phái này, ta coi tham số, tức **w** là giá trị cố định nhưng chưa biết. Và ta muốn đi tìm một function của data để estimate ra giá trị **w**. Và MLE chỉ là một cách tiếp cận phổ biến, trong đó ta sẽ dùng cái function sau đây để làm estimator cho **w**: **w**ML(data) = argmax\_**w** L(**w**|data). Có nghĩa là, ta sẽ giải bài toán tối ưu: 
+>
+>
+>
+> maximize over **w** {L(**w**|data)}. Với data ở đây là **t**, matrix **X**
+>
+>
+>
+> và hàm likelihood là hàm của **w**, được mang ý nghĩa là độ hợp lí của **w** dựa trên / giải thích cho giá trị quan sát được của data, có giá trị = f(data|**w**), ở đây, tức là f(**t**|**X**, **w**), hay f(**t**|**w**).
+>
+>
+>
+> và để giải bài toán tối ưu ta có thể dùng hàm ln để chuyển thành bài toán tương đương trong đó ta maximize hàm ln likelihood: ln L(**w**|data) = ln f(**t**|**w**). Và với f(t|**w**) là pdf của normal, kết quả một lần nữa chuyển thành minimize sum square error như đã biết.
+>
+>
+>
+> Thế thì, ý chính là, khi ta maximize hàm likelihood L(**w**|**t**) thì ta đang tìm w để maximize hàm L(**w**|**t**)
+>
+>
+>
+> Vậy thì quay lại đây, khi ta đã có posterior f(**w**|**t**) = f(**t**|**w**) f(**w**) / f(**t**) thì hoàn toàn tương tự, ta cũng có thể đi tìm **w** để maximize f(**w**|**t**) cũng là maximize f(**t**|**w**) f(**w**) / f(**t**)
+>
+>
+>
+> Và xét bài toán maximize over **w** {f(**t**|**w**) f(**w**) / f(**t**)} 
+>
+>
+>
+> thì vì f(**t**) không âm , và dùng hàm ln để có bài toán tối ưu tương đương:
+>
+>
+>
+> maximize over **w** {ln \[f(**t**|**w**) f(**w**)\]}
+>
+>
+>
+> dùng tính chất hàm log: ln \[f(**t**|**w**) f(**w**)\] = ln f(**t**|**w**) + ln f(**w**)
+>
+>
+>
+> Thay công thức của f(**t**|**w**) (y như ở trên) và f(**w**), và gom constant lại ta sẽ thấy nó thành bài toán:
+>
+>
+>
+> minimize (β/2) sum square error + α **w**T**w** + constant
+>
+>
+>
+> Tuy nhiên vì ta biết f(**w**|**t**) là normal có mean mN, nên ta cũng biết w khiến maximize f(**w**|**t**) rồi: chính là **m**N.
+>
+>
+>
+> Có nghĩa là giả bài toán trên ta sẽ ra **w** là **m**N
+>
+>
+>
+> Nhưng ý quan trọng muốn nói, là bài toán minimize hàm sum square error với L2 regularization loss chính là việc ta đi tìm w khiến maximize posterior distribution, dù rằng trong trường hợp này ta biết solution chính là mean **m**N
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú cực kỳ xuất sắc, thể hiện sự hiểu biết sâu sắc và chính xác về mối liên hệ giữa tối đa hóa hậu nghiệm (MAP) và việc giảm thiểu sai số có Regularization L2. Bạn chỉ cần lưu ý thêm hệ số 1/2 ở phần phạt L2 (tức là α/2 thay vì α) để công thức hoàn toàn đồng nhất với tài liệu học.
 
 <br>
 
