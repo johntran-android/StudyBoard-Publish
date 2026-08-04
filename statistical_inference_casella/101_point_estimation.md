@@ -1,6 +1,6 @@
 # 10.1 Point Estimation
 
-📊 **Progress:** `37` Notes | `43` Screenshots | `18` AI Reviews
+📊 **Progress:** `42` Notes | `49` Screenshots | `22` AI Reviews
 
 ---
 <a id="node-2ixm3r0"></a>
@@ -3383,6 +3383,321 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Ghi chú cực kỳ chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về phương pháp Bootstrap cũng như cách giải thích ký hiệu toán học trong sách. Bạn chỉ cần lưu ý thêm rằng trong thực tế khi n lớn, người ta thường dùng mô phỏng Monte Carlo (chọn B mẫu ngẫu nhiên) thay vì tính toàn bộ $n^n$ trường hợp vì giới hạn tính toán.
+
+<br>
+
+<a id="node-z5s820i"></a>
+
+- **Bootstrap Variance Estimation**
+
+<p align="center"><kbd><img src="assets/2qw9scvza7a.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là, có một vấn đề trong công thức vừa rồi, đó là N = n^n, tức số possible outcome trong ordered sample space, thật ra sẽ là con số rất lớn nếu n lớn. Do đó, không nhất thiết cứ phải theo quy trình (ôn lại nhanh như sau):
+>
+>
+>
+> có một sample size n (tức observed value của random sample size n): **x** = x1,...xn. 
+>
+>
+>
+> rồi xét s1,...sN với N = n^n là mọi possible outcome khi sampling with distribution n con số từ {x1,...xn}. 
+>
+>
+>
+> rồi đặt hàm θ^(s) để có θ^\*1 = θ^(s1), ..θ^\*2 = θ^(s2),....θ^\*N = θ^(sN)
+>
+>
+>
+> và vì s1,...sN equally likely nên ta coi θ^\*1,...θ^\*N là N possible value của θ^ có distribution là uniform discrete. Và từ đó có thể coi {θ^\*1,..θ^\*N} là một sample từ distribution này. Và nhờ vậy ta có thể dùng công thức sample variance S^2 để tính sample variance của cái estimator θ^ có distribution uniform discrete nói trên. Và đây là cái ta gọi là bootstrap variance:
+>
+>
+>
+> Var\*(θ^) = (1/N-1) Σj=1:N  \[θ^\*j - (θ^\*)bar\]^2.
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy thì, không cần xét N, mà chỉ xét B. Có nghĩa là không cần xét bộ số {θ\*1,...θ\*N} và xem nó như một (observed value của một) sample từ phân phối discrete uniform của θ^. Làm vậy là ta đang xét random sample size N. Thay vào đó, ta có thể xét random sample size B = {θ\*1,...θ\*B} (tức là thay vì lấy hết {θ\*1,...θ\*N}, ta chỉ lấy B cái thôi.
+>
+>
+>
+> Như vậy cách làm sẽ khác chút xíu: 
+>
+>
+>
+> Trước: Liệt kê đủ N = n^n các possible outcome khi sampling with replacement n số từ {x1,...xn}, để có {s1,...sN}. Và tính ra θ^\*1, ...θ^\*N và dùng N con số này để làm một sample.
+>
+>
+>
+> Sau: Không cần liệt kê đủ (mà cũng ko làm nổi). Thay vào đó, ta thực hiện việc sampling with replacement n số từ {x1, ...xn} B LẦN. để có s1,...sB. Và từ đó tính θ^\*1,...θ^\*B, và dùng B con số này để làm một sample.
+>
+>
+>
+> Như vậy cũng có thể thấy cách sau, chính là, hay y như là việc ta có {s1,...sN} và sampling có hoàn lại B lần từ đó vậy.
+>
+>
+>
+> Và tính sample variance trên sample size B này. và dùng nó làm bootstrap variance:
+>
+>
+>
+> Var\*(θ^) = (1/B-1) Σj=1:B  \[θ^\*j - (θ^\*)bar\]^2.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú của bạn rất chính xác và chi tiết, giải thích rõ ràng sự chuyển đổi từ tính toán bootstrap chính xác (với $N = n^n$) sang phương pháp xấp xỉ thực tế bằng cách chọn $B$ mẫu tái chọn. Để hoàn thiện hơn, bạn có thể nhấn mạnh thêm rằng việc lấy $B$ lần độc lập này chính là phương pháp Monte Carlo để xấp xỉ phân phối bootstrap thực nghiệm.
+
+<br>
+
+<a id="node-fu6c70x"></a>
+
+- **Bootstrap and Delta Method Variances**
+
+<p align="center"><kbd><img src="assets/32zq1q91v81.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/84cg34hqnew.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là, ở đây tác giả so sánh kết quả giữa các phương pháp khi ta estimate variance của p^(1-p^) theo Delta method và theo bootstrap.
+>
+>
+>
+> Nói chung có thể xem kĩ hơn sau. Nhưng đại ý là kết qủa cho thấy Bootstrap cho ra estimate sát với true variance của p^(1-p^) hơn là Delta method, và cụ thể Delta method có xu hướng under-estimate true variance, mà điều này gs cho rằng đừng nên ngạc nhiên vì ta biết Delta method vốn dĩ là dựa trên
+
+<br>
+
+<a id="node-gy8w62g"></a>
+
+- **Introduction to Parametric Bootstrap**
+
+<p align="center"><kbd><img src="assets/x0f4ebkkrms.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là, một dạng khác, gọi là parameter bootstrap, đại ý như sau:
+>
+>
+>
+> Giả sử ta có một sample **X** = X1,...Xn \~ f(x|θ)
+>
+>
+>
+> Giả sử tiếp ta có MLE của θ: θ^. 
+>
+>
+>
+> Thế thì, để estimate Var(θ^) theo non-parameter bootstrap ta sẽ làm như sau:
+>
+>
+>
+> Với obsered value của sample **X**: **x** = (x1,..xn). Ta thực hiện sampling with replacement n number, làm vậy B lần, để có s1,..sB. Và tính ra θ^\*1 = θ^(s1), ...θ^\*B = θ^(sB). và dùng nó như một random sample size B của một θ^ \~ discrete uniform. Và dùng công thức sample variance để tính, Var\*(θ^) = (1/B-1) Σj=1:B \[θ^\*j - (θ^\*)bar\]^2.
+>
+>
+>
+> Bây giờ qua parametric bootstrap, ta làm như sau:
+>
+>
+>
+> Lắp θ^ vào f(x|θ), để có f(x|θ^).
+>
+>
+>
+> Sau đó sampling từ distribution này: để có sample X\*1, X\*2,....X\*n \~ f(x|θ^).
+>
+>
+>
+> Và làm vậy B lần, để có B sample như vậy. Rồi làm tiếp như các bước của non-parameter bootstrap.
+>
+>
+>
+> Như vậy, B bộ sample ở đây, KHÔNG ĐƯỢC GỌI LÀ RESAMPLE, dễ hiểu lí do là vì, ta drawing  f(x|θ^) chứ ko phải f(x|θ), và f(x|θ^) người ta gọi là PLUG-IN distribution.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **92/100**
+>
+> Ghi chú của bạn rất chi tiết, thể hiện sự hiểu bài sâu sắc khi phân biệt rõ ràng giữa hai phương pháp bootstrap. Điểm cần lưu ý nhỏ là ta rút mẫu ngẫu nhiên trực tiếp từ phân phối plug-in f(x|θ̂) để tạo ra các X*i, chứ không phải là rút mẫu 'từ' các x*i.
+
+<br>
+
+<a id="node-s9n2ly7"></a>
+
+- **Example 10.1.22 Parametric Bootstrap**
+
+<p align="center"><kbd><img src="assets/eatzp1p4q1.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, qua ví dụ này. Cho bộ giá trị quan sát được (sample): -1.81,....,5.09 (tức là, đây là observed value của một sample size n=9: X1,....X9, sampling từ một distribution f(x|θ) nào đó)
+>
+>
+>
+> Thế thì với observed value của sample như vậy, thì observed value của sample mean xbar là 2.71, và observed value của sample variance s^2 là 4.82.
+>
+>
+>
+> Theo định nghĩa của parameter bootstrap ta vừa học, trong đó ta gắn (plug in) θ^ vào f(x|θ) để có plug-in distribution f(x|θ^), rồi từ đó sampling B sample từ distribution này và dùng nó để tính tiếp.
+>
+>
+>
+> Như vậy ở đây, mình có observed value của sample mean, và sample variance. Câu hỏi là, nếu như θ^ gắn vào thay cho θ trong f(x|θ). thì ở đây ta gắn xbar và s^ vào đâu?
+>
+>
+>
+> Có thể hiểu như sau:
+>
+>
+>
+> Vì MLE của θ, tức θ^ là estimator của θ, thì ta mới gắn θ^ vào thay cho θ trong f(x|θ) để có plug-in distirbution.
+>
+>
+>
+> Vậy ở đây muốn gắn, ta phải giả định population distribution là distribution có hai parameter là mean và variance. Ví dụ, giả định distribution gốc là n(μ, σ^2). thì khi đó, ta mới gắn xbar vào thay chỗ của μ, và s^2 vào thay chỗ của σ^2. Đó là lí do trong sách ta thấy gs giả định population distribution là normal là vậy.
+>
+>
+>
+> Vậy khi đó, ta có plug in distribution là normal(2.71, 4.82).
+>
+>
+>
+> Để rồi sampling ra B sample (size n) từ plug in distribution này), và dùng nó để tính Var\*(estimator nào đó), ở đây là Var\*(S^2).
+>
+>
+>
+> Vậy thì làm như sau: như đã nói, ta sẽ có B sample sampling từ plug in distribution này, tức B bộ số {x\*1,..x\*n}. Ứng với mỗi bộ, ví dụ sample j ta sẽ tính ra xbar(sample j), và s^2(sample j).
+>
+>
+>
+> Từ đó, ta sẽ có s^2\*\_1, ...s^2\*\_B.
+>
+>
+>
+> Và coi như đây là một sample của S^2 \~ uniform discrete có B possible value equally likely, s^2\*\_1, ...s^2\*\_B, ta mới tính sample variance:
+>
+>
+>
+> (1/B-1) Σj=1:B \[s^2\*j - (s^2\*)bar\], đây chính là parameter bootstrap variance của S^2: Var\*\_B(S^2).
+>
+>
+>
+> Gs cho biết, khi làm thật theo quy trình này, ông thu được Var\*\_B(S^2) = 4.33. 
+>
+>
+>
+> (Phải hiểu là mình không chắc sẽ replicate ra giá trị này, mà chỉ hiểu đây là kết quả mà gs đã làm, chứ nếu mình tự tính, thì quá trình sampling từ plug in distribution có thể ra B bộ giá trị khác, ráp vào công thức trên, có thể sẽ ra khác 4.33
+>
+>
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì, với việc ta muốn estimate variance của estimator là S^2. Thì tương tự như khi ta đang deal với các estimator đặc biệt, là sample mean Xbar, để rồi Var(Xbar) có công thức chính xác là \[population variance\] / n, từ đó cho phép ta thay population variance bởi sample variance, để được công thức ướng lượng của Var(Xbar).
+>
+>
+>
+> Thì nay cũng vậy, vì ta đang deal với estimator là sample variance S^2. Mà cái này, nếu như đang trong giả định rằng population distribution là normal, thì ta sẽ có công thức (xem crosslink) Var(S^2) = 2 × (population variance)^2/(n-1).
+>
+>
+>
+> Từ đó, bằng cách nhét sample variance vào thay cho population variance, thay vì công thức chính xác của Var(S^2), ta có công thức estimate của Var(S^2):
+>
+>
+>
+> Var(S^2) = 2 × (population variance)^2/(n-1) ≈ Var^(S^2) = 2 × (sample variance)^2/(n-1)
+>
+>
+>
+> và thế giá trị sample variance mà ta có = 4.82, và n = 9 - 1 = 8
+>
+>
+>
+> kết quả là 5.81.
+>
+>
+>
+> (Chỗ này lại chú ý rằng, khác với con số 4.33 ở trên, nơi mà ta đã nói nó chỉ là giá trị cụ thể khi gs làm, nếu ta tính, thì vì kết quả sampling từ plug in distribution có thể sẽ ra B sample khác với gs,nên chưa chắc sẽ ra con số 4.33 này. Tuy nhiên, ở đây, con số 5.81 thì khác, nó dựa trên cái sample mà ta có ban đầu: -1.81, 0.63,....5.09, nên gs làm hay ta làm (ý nói tính ước lượng của Var(S^2) dựa trên giả định population gốc là normal) đều phải ra con số 5.81. Nhưng, dù sao đi nữa ý chính là so sánh kết quả này với 4.33 thu được từ bootstrap)
+>
+>
+>
+> Một điểm nữa, gs lại nói rằng, cái population distribution thật sự là normal có variance σ^2 = 4. Thành ra, theo công thức chính xác của Var(S^2), ta có Var(S^2) = 2 × population variance σ^4/(n-1) = 2 × 4^2 / (9-1) = 4.
+>
+>
+>
+> ---
+>
+>
+>
+> Như vậy tóm lại gs muốn chỉ ra rằng:
+>
+>
+>
+> trong ví dụ này: variance thật của S^2 là 4: Var(S^2) = 4
+>
+>
+>
+> Variance của S^2 được estimate dựa trên giả định population distribution là normal (cái giả định cho phép ta có công thức chính xác của Var(S^2) là hàm theo population variance, để rồi từ đó ta có công thức ước lượng cho Var(S^2) bằng cách gắn sample variance vào thế chỗ của population variance) là 5.81: Var^(S^2) =  5.81
+>
+>
+>
+> Variance của S^2 được estimate dựa theo parametric bootstrap: 4.33.
+>
+>
+>
+> Như vậy 4.33 gần với 4 hơn là 5.81, giúp kết luận trong ví dụ này parameter bootstrap estimate tốt Var(S^2) hơn là công thức Var^(S^2)
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Ghi chú cực kỳ chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về bản chất của parametric bootstrap, đặc biệt là việc phân biệt tính ngẫu nhiên của mô phỏng bootstrap so với công thức lý thuyết định tính. Không có điểm gì cần cải thiện thêm vì bài viết đã giải thích xuất sắc mọi khía cạnh của ví dụ.
+
+**🔗 See also:** [Tính không chệch Xbar S^2](./73_methods_of_evaluating_estimators.md#node-dgdrvpi)
+
+<br>
+
+<a id="node-lrc4e54"></a>
+
+- **Consistency of the Bootstrap**
+
+<p align="center"><kbd><img src="assets/viy5ghhxg8.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Cuối cùng có thể hiểu sơ lược là, gs nói rằng nói chung là Bootstrap cho ta một cách estimate variance của estimator tương đối tốt.
+>
+>
+>
+> Thể hiện bởi
+>
+>
+>
+> Var\*\_B(θ^) → Var\*(θ^)
+>
+>
+>
+> Có nghĩa là: khi cho B lớn dần đến ∞ thì bootstrap variance của θ^ sẽ tiến đến giá trị bootstrap varinace lí tưởng (khi mà ta xét sample size N = n^n thay vì chỉ là sample size B) Var\*(θ^)
+>
+>
+>
+> Và
+>
+> Var\*(θ^) → Var(θ^)
+>
+>
+>
+> Có nghĩa là khi n → inf thì bootstrap variance lí tưởng sẽ tiến về variance thật của θ^. Như vậy, có nghĩa là Var\*(θ^) chính là một consistent estimator của Var(θ^).
+>
+>
+>
+> (ta thường nói θ^ là estimator của θ. Còn ở đây Var\*(θ^) cũng là estimator của Var(θ^))
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú của bạn rất chính xác và thể hiện sự hiểu biết sâu sắc khi giải thích rõ ý nghĩa của hai giới hạn (B -> vô cùng và n -> vô cùng) cũng như bản chất của Var*(theta^). Để hoàn thiện hơn, bạn có thể bổ sung thêm lưu ý rằng tính nhất quán (consistency) ở phần b thường đòi hỏi điều kiện lấy mẫu i.i.d như giáo trình đề cập.
 
 <br>
 
