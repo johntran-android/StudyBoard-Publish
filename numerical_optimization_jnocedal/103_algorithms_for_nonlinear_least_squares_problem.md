@@ -1,6 +1,6 @@
 # 10.3 Algorithms for nonlinear least-squares problem
 
-📊 **Progress:** `11` Notes | `18` Screenshots | `6` AI Reviews
+📊 **Progress:** `14` Notes | `23` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-i8zrnvn"></a>
@@ -975,6 +975,8 @@
 
 <p align="center"><kbd><img src="assets/5t6ozcj6qrw.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/bfsc0wwcwg.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > Rồi, như đã nói sơ ở note trước về việc trong Levenberg-Marquardt, ta sẽ không cần dùng Cholesky factorization trong chu trình giải tìm λ theo root finding Newton method.
 >
@@ -984,7 +986,7 @@
 >
 >
 >
-> Và trong chu trình root findind Newton để giải λ, ta sẽ làm các bước trong mỗi vòng lặp (cho đến khi hội tụ về λ là nghiệm của ||p(λ)|| = Δ: 
+> Và trong chu trình root findind Newton để giải λ, ta sẽ làm các bước trong mỗi vòng lặp (cho đến khi hội tụ về λ là nghiệm của ||p(λ)|| = Δ:
 >
 >
 >
@@ -996,7 +998,7 @@
 >
 >
 >
-> Như vậy, với bức tranh toàn cảnh đó, ta sẽ hiểu là mỗi vòng lặp trong chu trình tính λ mới, ta sẽ đều phải Cholesky factor matrix B + λI. 
+> Như vậy, với bức tranh toàn cảnh đó, ta sẽ hiểu là mỗi vòng lặp trong chu trình tính λ mới, ta sẽ đều phải Cholesky factor matrix B + λI.
 >
 >
 >
@@ -1028,7 +1030,7 @@
 >
 >
 >
-> Vậy thì câu chuyển tại mỗi vòng lặp của chu trình, thay vì Cholesky factor matrix JTJ + λI, ta sẽ QR factor matrix A\_λ = \[J, (√λ)I\]. 
+> Vậy thì câu chuyển tại mỗi vòng lặp của chu trình, thay vì Cholesky factor matrix JTJ + λI, ta sẽ QR factor matrix A\_λ = \[J, (√λ)I\].
 >
 >
 >
@@ -1048,7 +1050,7 @@
 >
 >
 >
-> A\_λ = \[matrix trực giao Q\] \[R\_λ; 0\]. 
+> A\_λ = \[matrix trực giao Q\_λ\] \[R\_λ; 0\].
 >
 >
 >
@@ -1068,7 +1070,7 @@
 >
 >
 >
-> nên \[(Q_J)TJ; (√λ)I\] = \[\[R_J; 0\]; (√λ)I\] 
+> nên \[(Q_J)TJ; (√λ)I\] = \[\[R_J; 0\]; (√λ)I\]
 >
 >
 >
@@ -1080,7 +1082,11 @@
 >
 >
 >
-> Và bằng kĩ thuật gọi là Given, ta sẽ có \[R\_λ; 0\], là kết quả của QR factor matrix A\_λ: A\_λ = \[matrix trực giao Q\] \[R\_λ; 0\]
+> Và bằng kĩ thuật gọi là Given Rotation, ta sẽ có \[R\_λ; 0\], là kết quả của QR factor matrix A\_λ: A\_λ = \[matrix trực giao Q\] \[R\_λ; 0\]
+>
+>
+>
+> ---
 >
 >
 >
@@ -1097,6 +1103,70 @@
 >
 >
 > Chạy thuật toán Given, (rẻ), để từ \[R_J; 0; (√λ)I\] ta sẽ có được \[R\_λ; 0\] → đây chính là đã có R\_λ của Cholesky factor JTJ + λI = (R\_λ)T R\_λ nhưng rẻ hơn nhiều.
+>
+>
+>
+> Thế thì, cái thuật toán Given Rotation, thực chất chỉ là nhân một matrix trực giao khác, tức là:
+>
+>
+>
+> (Q^\_λ)T \[R_J; 0; (√λ)I\] = \[R\_λ; 0\]
+>
+>
+>
+> (mà cụ thể nó làm gì có thể nghiên cứu sau, chỉ cần hiểu sơ là nó biến \[R_J; 0; (√λ)I\] thông qua matrix (Q^\_λ)T, kết qủa ta được matrix tam giác \[R\_λ; 0\])
+>
+>
+>
+> ---
+>
+>
+>
+> Như vậy, tóm tắt lại, quá trình để có matrix R\_λ, kết quả của Cholesky factor matrix (B + λI) = (R\_λ)T R\_λ, thì ta QR factor matrix A\_λ = \[J; (√λ)I\] nhưng nhờ cấu trúc đặc biệt trong đó các matrix A\_λ chỉ khác nhau cái cục bên dưới, nên ta sẽ làm hai bước:
+>
+>
+>
+> i) Chạy chu trình QR factor J trước: J = Q_J \[R_J; 0\]
+>
+>
+>
+> iia) Hình thành matrix \[(Q_J)T, 0; 0, I\] và lấy nó với A\_λ, sẽ được kết quả \[R_J; 0; (√λ)I\]
+>
+>
+>
+> iib) Chạy thuật toán Given Rotation: Lấy Q^\_λ nhân với \[R_J; 0; (√λ)I\] để được \[R\_λ; 0\]
+>
+>
+>
+> Và gộp iia), iib) ta có:
+>
+>
+>
+> (Q^\_λ)T \[(Q_J)T, 0; 0, I\] A\_λ = \[R\_λ; 0\]
+>
+>
+>
+> ⇔ A\_λ = {(Q^\_λ)T \[(Q_J)T, 0; 0, I\]}T \[R\_λ; 0\]
+>
+>
+>
+> ⇒ matrix Q\_λ giúp QR factor A\_λ: A\_λ = Q\_λ \[R\_λ; 0\] chính là {Q^\_λ \[(Q_J)T, 0; 0, I\]}T
+>
+>
+>
+> Q\_λ = {(Q^\_λ)T \[(Q_J)T, 0; 0, I\]}T
+>
+>
+>
+> = \[(Q_J)T, 0; 0, I\]T ((Q^\_λ)T)T
+>
+>
+>
+> = \[Q_J, 0; 0, I\] Q^\_λ
+>
+>
+>
+> → Q\_λ = \[Q_J, 0; 0, I\] Q^\_λ
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -1105,11 +1175,84 @@
 
 <br>
 
-<a id="node-p3l117n"></a>
+<a id="node-pbz00ng"></a>
 
-- **Implementation of the Levenberg-Marquardt Method (bản sao)**
+- **Ellipsoidal Trust-Region Subproblem**
 
-<p align="center"><kbd><img src="assets/bfsc0wwcwg.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/spd3w870hm.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/42qjg6unylx.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đại ý là nói về việc, bài toán least-square thường bị tính chất gọi là poorly scaled.
+>
+>
+>
+> Trong chap 4, ta đã bàn về nhược điểm của Trust Region method khi rơi vào trường hợp như vậy. Đại ý là, ví dụ như khi hàm số quá nhạy theo biến này nhưng ít nhạy theo biến khác. Ví dụ như hình dung ta có một hàm bậc hai hai biến, mà chỉ cần nhích chút xíu ở biến thứ nhất, hàm sẽ thay đổi rất nhanh, trong khi đó ở biến thứ hai thì ngược lại, hàm thay đổi rất chậm. Trong tình huống này, đại ý là, nếu ta dùng trust region hình tròn, với một bán kính nào đó, thì kiểu như ở hướng có độ nhạy cao thì trust region là quá rộng trong khi ở hướng còn lại thì lại quá hẹp. Nói chung dẫn đến là thuật toán không hiệu quả. Từ đó, người ta mới dùng matrix D, để thay vì dùng ràng buộc ||p|| ≤ Δ, thì nay dùng ràng buộc ||Dp|| ≤ Δ. Và với matrix D được chọn phù hợp, cái vùng tin cậy sẽ trở thành hình ellipse sao cho chiều dài của nó tương ứng với hướng ít nhạy và chiều ốm của nó ứng với hướng nhạy. Như vậy, cái hình dạng trust region này sẽ cho phép thuật toán tìm ra hướng p theo chiều ít nhạy - vốn dĩ sẽ là hướng đi tốt (vì đi theo hướng nhạy, thì thuật toán sẽ xảy ra tình trạng leo qua leo lại giữa hai bên vách đá, khiến chậm hội tụ về đáy)
+>
+>
+>
+> Vậy thì ở đây cũng vậy, bài toán subproblem sẽ dùng constraint ||Dk p|| ≤ Δk thay vì ||p|| ≤ Δk
+>
+>
+>
+> Khi đó điều kiện (B + λI) pLM = -g
+>
+>
+>
+> từ (JkTJk + λI) pLM_k = -JkTrk 
+>
+>
+>
+> trở thành (JkTJk + λ Dk^2) pLM_k = -JkTrk 
+>
+>
+>
+> và nó tương đương bài toán
+>
+>
+>
+> minimize ||\[Jk; √λ Dk\]p + \[rk; 0\]||^2
+>
+>
+>
+> Khúc dưới hiểu sơ sơ. Quay lại sau.
+
+**🔗 See also:** [Scaling (cont)](./45_trust_region_methods_other_enhancements.md#node-nzffto7)
+
+<br>
+
+<a id="node-9nrimbz"></a>
+
+- **CG-Steihaug with Gauss-Newton Approximation**
+
+<p align="center"><kbd><img src="assets/kgz30pugc7r.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Cuối cùng là khi bài toán non-linear least square lớn, bắt buộc phải dùng CG, (gọi là CG Steihaug) và vài đặc điểm của least square cũng đem đến vài thuận lợi khi dùng CG.
+>
+>
+>
+> (nói chung gs cũng chỉ lướt sơ, muốn hiểu rõ phải đào sâu thêm khi thực hành)
+
+<br>
+
+<a id="node-mqcb3ri"></a>
+
+- **Convergence of the Levenberg-Marquardt Method**
+
+<p align="center"><kbd><img src="assets/9cada89y3rk.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Bỏ qua, quay lại sau
+
+<br>
+
+<a id="node-ggaazzm"></a>
+
+- **Methods for Large-Residual Problems**
+
+<p align="center"><kbd><img src="assets/it3wqofppq.png" width="80%"></kbd></p>
 
 <br>
 
