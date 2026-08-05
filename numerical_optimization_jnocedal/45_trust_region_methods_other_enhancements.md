@@ -92,6 +92,8 @@
 >
 > Bài làm rất xuất sắc. Sinh viên đã diễn giải rõ ràng cơ chế tạo vùng tin cậy elip bằng toán học và liên hệ chính xác với độ nhạy của hàm mục tiêu, thể hiện sự thấu hiểu sâu sắc. Tuy nhiên, có một lỗi đánh máy nhỏ ở cuối phần ghi chú (đihp[) cần được sửa chữa.
 
+**🔗 See also:** [Ellipsoidal Trust-Region Subproblem](./103_algorithms_for_nonlinear_least_squares_problem.md#node-pbz00ng)
+
 <br>
 
 <a id="node-elmxe1e"></a>
