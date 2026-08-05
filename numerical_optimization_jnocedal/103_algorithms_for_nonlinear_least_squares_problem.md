@@ -1,6 +1,6 @@
 # 10.3 Algorithms for nonlinear least-squares problem
 
-📊 **Progress:** `10` Notes | `18` Screenshots | `5` AI Reviews
+📊 **Progress:** `11` Notes | `18` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-i8zrnvn"></a>
@@ -974,6 +974,134 @@
 - **Implementation of the Levenberg-Marquardt Method**
 
 <p align="center"><kbd><img src="assets/5t6ozcj6qrw.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, như đã nói sơ ở note trước về việc trong Levenberg-Marquardt, ta sẽ không cần dùng Cholesky factorization trong chu trình giải tìm λ theo root finding Newton method.
+>
+>
+>
+> (Active recall nhanh: L-M là cách ta giải bài toán minimize non-linear least square theo các tiếp cận Trust Region. Mà theo đó, thì thuật toán sẽ bao gồm việc lặp đi lặp lại chu trình tính bán kính tin cậy, và giải bài toán subproblem: minimize hàm xấp xỉ bậc hai của objective tại điểm đang đứng với ràng buộc là bước đi p có chuẩn không quá bán kính tin cậy. Và dựa vào 3 điều kiện tạm gọi tắt là Stationary, Complementary slackness, và "Bán xác định dương" - mà ta sẽ có thuật toán để giải bài toán subproblem bao gồm 2 bước: cho λ = 0 và kiểm tra tính bán xác định dương và chuẩn của p nhỏ hơn Δ. Hoặc λ sẽ dương và norm p phải bằng Δ, khi đó ta sẽ dùng chu trình root finding Newton để giải 1/||p(λ)|| = 1/Δ, vốn dĩ là bài toán tương đương của ||p(λ)|| = Δ, nhưng ổn định hơn. Và khi chu trình này không thành công trong việc tìm λ thỏa điều kiện, thì tức là ta đã rơi vào the hard case, khi đó ta sẽ cho λ = -λ1 (tức -λmin(B)), tìm nullspace vector z của matrix B, và theo công thức để tính τ khiến ||p(-λ1) + τz|| = Δ.
+>
+>
+>
+> Và trong chu trình root findind Newton để giải λ, ta sẽ làm các bước trong mỗi vòng lặp (cho đến khi hội tụ về λ là nghiệm của ||p(λ)|| = Δ: 
+>
+>
+>
+> (Có thể chỉnh sửa để B + λ^(l)I xác định dương) → Cholesky factor B + λI thành (RT)R → .. → tính λ kế tiếp: λ^(l+1))
+>
+>
+>
+> Kết thúc active recall)
+>
+>
+>
+> Như vậy, với bức tranh toàn cảnh đó, ta sẽ hiểu là mỗi vòng lặp trong chu trình tính λ mới, ta sẽ đều phải Cholesky factor matrix B + λI. 
+>
+>
+>
+> Tuy nhiên trong bài toán least square, với B = JTJ, thì ta có một đặc điểm đặc biệt:
+>
+>
+>
+> Đó là, nếu ta đi QR factor matrix A = \[J; (√λ)I\] để có: \[J; (√λ)I\] = Q\[R; 0\]. Thì cái matrix R này chính là matrix R khi ta Cholesky factor matrix JTJ + λI. Việc chứng minh không khó:
+>
+>
+>
+> ATA = \[J; (√λ)I\]T \[J; (√λ)I\] = \[JT, (√λ)I\] \[J; (√λ)I\] = JTJ + λI
+>
+>
+>
+> mà A = \[J; (√λ)I\] = Q\[R; 0\]
+>
+>
+>
+> ⇒ ATA = {Q\[R; 0\]}TQ\[R; 0\] = \[R; 0\]TQTQ\[R; 0\] = \[RT, 0\] \[R; 0\] = RTR
+>
+>
+>
+> Vậy ATA = JTJ + λI = RTR. Và điều này cho thấy R trong A = Q\[R; 0\] cũng chính là R trong JTJ + λI = RTR.
+>
+>
+>
+> Đến đây ta sẽ gọi A là A\_λ để ám chỉ \[J, √λ\] với λ khác nhau. Và ta sẽ gọi R cần tìm (kết quả factor) là R\_λ
+>
+>
+>
+> Vậy thì câu chuyển tại mỗi vòng lặp của chu trình, thay vì Cholesky factor matrix JTJ + λI, ta sẽ QR factor matrix A\_λ = \[J, (√λ)I\]. 
+>
+>
+>
+> Tuy nhiên, với các λ khác nhau thì các A\_λ chỉ khác nhau cái block (√λ)I ở dưới. Do đó, có thể tiết kiệm chi phí tính toán hơn nữa bằng cách sau:
+>
+>
+>
+> QR factor cái cục J trước: J = Q_J \[R; 0\], chú ý, R này là R của QR factor của riêng thằng J, ta có thể gọi là R_J
+>
+>
+>
+> Khi đó A\_λ = \[Q_J\[R_J; 0\], (√λ)I\]
+>
+>
+>
+> Mục đích của QR factor matrix A\_λ là tách nó thành:
+>
+>
+>
+> A\_λ = \[matrix trực giao Q\] \[R\_λ; 0\]. 
+>
+>
+>
+> Nhân \[(Q_J)T, 0; 0, I\] vào bên phải matrix A\_λ = \[J; (√λ)I\]
+>
+>
+>
+> \[(Q_J)T, 0; 0, I\] A\_λ = \[(Q_J)T, 0; 0, I\] \[J; (√λ)I\]
+>
+>
+>
+> = \[(Q_J)TJ; (√λ)I\]
+>
+>
+>
+> và vì J = (Q_J) \[R_J; 0\] nên (Q_J)TJ = (Q_J)T(Q_J) \[R_J; 0\] = \[R_J; 0\]
+>
+>
+>
+> nên \[(Q_J)TJ; (√λ)I\] = \[\[R_J; 0\]; (√λ)I\] 
+>
+>
+>
+> = \[R_J; 0; (√λ)I\]
+>
+>
+>
+> Và như vậy chỉ việc nhân \[(Q_J)T, 0; 0, I\] vào bên phải matrix A\_λ ta đã có \[R_J; 0; (√λ)I\]
+>
+>
+>
+> Và bằng kĩ thuật gọi là Given, ta sẽ có \[R\_λ; 0\], là kết quả của QR factor matrix A\_λ: A\_λ = \[matrix trực giao Q\] \[R\_λ; 0\]
+>
+>
+>
+> Nói cách khác, thay vì chạy thuật toán QR factor đối với A\_λ (mà làm vậy thì chả có rẻ hơn tí nào so với việc chạy thuật toán Cholesky factor đối với JTJ + λI,) ta sẽ làm như sau:
+>
+>
+>
+> QR factor J để có Q_J và R_J.
+>
+>
+>
+> Hình thành matrix \[(Q_J)T, 0; 0, I\] và lấy nó với A\_λ, sẽ được kết quả \[R_J; 0; (√λ)I\]
+>
+>
+>
+> Chạy thuật toán Given, (rẻ), để từ \[R_J; 0; (√λ)I\] ta sẽ có được \[R\_λ; 0\] → đây chính là đã có R\_λ của Cholesky factor JTJ + λI = (R\_λ)T R\_λ nhưng rẻ hơn nhiều.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chú của bạn rất xuất sắc, giải thích rõ ràng tư duy toán học và lý do phương pháp kết hợp Householder và Givens giúp tối ưu hóa chi phí tính toán. Bạn chỉ cần lưu ý đính chính lỗi diễn đạt thành 'nhân vào bên trái' (thay vì bên phải) và viết đúng thuật ngữ phép biến đổi 'Givens'.
 
 <br>
 
