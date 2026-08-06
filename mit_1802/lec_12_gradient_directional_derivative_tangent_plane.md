@@ -59,6 +59,8 @@ derivative, Tangent Plane
 > partial derivative sẽ tùy thuộc vào / phụ thuộc vào một điểm (x, y, z) cụ
 > thể
 
+**🔗 See also:** [linked note](#node-eocx74p)
+
 <br>
 
 <a id="node-051hysy"></a>
@@ -118,6 +120,8 @@ derivative, Tangent Plane
 > Theorem: GRADIENT VECTOR tại một điểm nào đó sẽ VUÔNG
 > GÓC VỚI LEVEL SURFACE
 
+**🔗 See also:** [linked note](./lec_13_lagrange_multiplier.md#node-h0mt9ko) · [linked note](./lec_15_partial_differentials_equations.md#node-oqny49o)
+
 <br>
 
 <a id="node-yyn7pto"></a>
@@ -146,6 +150,8 @@ derivative, Tangent Plane
 > a3>** (MÀ ĐÂY CŨNG **CHÍNH LÀ GRAD_W)** mà n**ormal vector
 > đương nhiên là vector vuông góc với plane** nên điều này đã cho
 > thấy **gradient vector vuông góc với plane - là level surface**
+
+**🔗 See also:** [linked note](./lec_4_square_system_equation_of_plane.md#node-miy1y9u)
 
 <br>
 
@@ -207,6 +213,8 @@ derivative, Tangent Plane
 > mọi điểm trên đó đều có **w = c** và lấy một curve **r = r(t)** (ý là một quỹ
 > đạo, một tập hợp điểm các vị trí của object di chuyển thể hiện bởi
 > **position vector r(t)**
+
+**🔗 See also:** [linked note](./lec_6_velocity_acceleration_keplers_second_law.md#node-k44c7aj)
 
 <br>
 
@@ -579,6 +587,8 @@ derivative, Tangent Plane
 >
 > LINEAR APPROXIMATION
 
+**🔗 See also:** [linked note](./lec_11_differentials_chain_rule.md#node-n0soaua)
+
 <br>
 
 <a id="node-atn51k2"></a>
@@ -717,6 +727,8 @@ derivative, Tangent Plane
 >
 >
 > và dr/ds = u nên **dw/ds = grad_w . u^**
+
+**🔗 See also:** [linked note](#node-49gybpg)
 
 <br>
 
