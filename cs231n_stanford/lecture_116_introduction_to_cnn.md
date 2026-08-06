@@ -47,8 +47,6 @@
 
 <a id="node-8xkd6ij"></a>
 
-- **Early Computer Vision Foundations**
-
 <p align="center"><kbd><img src="assets/55k9jbs0yu5.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -71,8 +69,6 @@
 
 <a id="node-socj4uu"></a>
 
-- **Early Computer Vision Segmentation**
-
 <p align="center"><kbd><img src="assets/5d3ccjnoxwk.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -84,8 +80,6 @@
 <br>
 
 <a id="node-v6zh8ua"></a>
-
-- **2001 Face Recognition & Fujifilm**
 
 <p align="center"><kbd><img src="assets/py50s67wya.png" width="80%"></kbd></p>
 
@@ -121,8 +115,6 @@
 
 <a id="node-bu9jzrq"></a>
 
-- **PASCAL Visual Object Challenge**
-
 <p align="center"><kbd><img src="assets/nwnpfge94t.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -132,8 +124,6 @@
 <br>
 
 <a id="node-28kb2qm"></a>
-
-- **ImageNet Dataset Creation**
 
 <p align="center"><kbd><img src="assets/5kl6rjk1m1.png" width="80%"></kbd></p>
 
@@ -152,8 +142,6 @@
 <br>
 
 <a id="node-2q8hn6y"></a>
-
-- **AlexNet's Impact on Error Rates**
 
 <p align="center"><kbd><img src="assets/66ks7rm7tjn.png" width="80%"></kbd></p>
 
@@ -184,8 +172,6 @@
 
 <a id="node-8hgps1o"></a>
 
-- **AlexNet's ImageNet Challenge Breakthrough**
-
 <p align="center"><kbd><img src="assets/ovswhmc1d88.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -195,8 +181,6 @@
 <br>
 
 <a id="node-xhlfpc8"></a>
-
-- **Long conception before invention**
 
 <p align="center"><kbd><img src="assets/soxgrg8fcg.png" width="80%"></kbd></p>
 
@@ -220,8 +204,6 @@
 
 <a id="node-4at0ke5"></a>
 
-- **Rapid Human Image Understanding**
-
 <p align="center"><kbd><img src="assets/3i9w5crkwi7.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -237,8 +219,6 @@
 <br>
 
 <a id="node-lf0hun7"></a>
-
-- **AI image comprehension gap**
 
 <p align="center"><kbd><img src="assets/1sxjltt6pkf.png" width="80%"></kbd></p>
 
@@ -272,8 +252,6 @@
 <br>
 
 <a id="node-o23bl9w"></a>
-
-- **Style Transfer Technique Images**
 
 <p align="center"><kbd><img src="assets/rqutytz2neb.png" width="80%"></kbd></p>
 
