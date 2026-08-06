@@ -263,7 +263,7 @@
 >
 > Ghi chú đã giải thích rất chính xác mô hình và nguyên lý dự đoán tối ưu với hàm mất mát bình phương như trong hình ảnh. Chiều sâu phân tích, đặc biệt là phần chứng minh và phân biệt các bài toán, đã làm tăng đáng kể sự rõ ràng và toàn diện của nội dung.
 
-**🔗 See also:** [Predicting Values and Linear Models](./310_linear_regression_and_basis_functions.md#node-btnn2z0)
+**🔗 See also:** [Predicting Values and Linear Models](./310_linear_regression_and_basis_functions.md#node-btnn2z0) · [3.3.2 Predictive distribution](./332_predictive_distribution.md#node-wdjepxb)
 
 <br>
 
