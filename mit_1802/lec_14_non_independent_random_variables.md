@@ -89,6 +89,8 @@ variables
 >
 > = 2x*dx + z*dy + (y+3z^2)*dz
 
+**🔗 See also:** [linked note](./lec_11_differentials_chain_rule.md#node-ibo13sv)
+
 <br>
 
 <a id="node-4b41r2p"></a>
@@ -163,6 +165,8 @@ variables
 >
 >
 > Tương tự với x
+
+**🔗 See also:** [linked note](./lec_11_differentials_chain_rule.md#node-kyannpv)
 
 <br>
 
@@ -618,6 +622,8 @@ variables
 >
 > Thay A_theta, A_b, partial b / partial theta)_a vào thì ta cũng sẽ 
 > có kết quả như method 2
+
+**🔗 See also:** [linked note](./lec_11_differentials_chain_rule.md#node-zezolbx)
 
 <br>
 
