@@ -79,17 +79,17 @@
 > 4 Example problem of building a system to classify positive and negative
 > product reviews
 >
-> 5 Week 1: **Representing text as a vector** and using **logistic regression** to
+> 5 Week 1: \\*Representing text as a vector\\* and using\\* logistic regression\\* to
 > classify sentiment
 >
-> 6 Week 2: Using the **Naive Bayes classifier** for sentiment classification
+> 6 Week 2: Using the \\*Naive Bayes classifier\\* for sentiment classification
 >
-> 7 Week 3: Learning about **vector space models** and their applications in
-> **information retrieval, indexing, relevancy ranking, and information
-> filtering**
+> 7 Week 3: Learning about \\*vector space models\\* and their applications in
+> \\*information retrieval, indexing, relevancy ranking, and information
+> filtering\\*
 >
-> 8 Week 4: Building a simple **machine translation** system and using
-> **locality sensitive hashing** to improve **nearest neighbor search**
+> 8 Week 4: Building a simple \\*machine translation\\* system and using
+> \\*locality sensitive hashing\\* to improve \\*nearest neighbor search\\*
 >
 > 9 Importance of NLP concepts in search engine algorithms
 
@@ -118,18 +118,18 @@
 > [!NOTE]
 > Welcome to the first week of Course 1.
 >
-> This week is all about **logistic regression**, which is a very
+> This week is all about \\*logistic regression\\*, which is a very
 > important tool used in many applications in NLP.
 >
-> Logistic regression algorithms are **particularly useful** because
-> they are **easy to train** and provide you with a **good baseline
-> result**.
+> Logistic regression algorithms are \\*particularly useful\\* because
+> they are \\*easy to train\\* and provide you with a \\*good baseline
+> result\\*.
 >
-> This week you'll use logistic regression for **sentiment analysis of
-> tweets**.
+> This week you'll use logistic regression for \\*sentiment analysis of
+> tweets\\*.
 >
-> You will first **process your data**, then you **train your model** and
-> finally, you will **test the accuracy** of your model.
+> You will first \\*process your data\\*, then you \\*train your model\\* and
+> finally, you will \\*test the accuracy \\*of your model.
 
 <br>
 
@@ -142,18 +142,18 @@
 <a id="node-3dxx882"></a>
 
 > [!NOTE]
-> 1 The **goal** of supervised machine learning is to **minimize error rates or cost**
-> by **mapping input features X to output labels Y hat.**
+> 1 The \\*goal\\* of supervised machine learning is to \\*minimize error rates or cost\\*
+> by \\*mapping input features X to output labels Y hat.\\*
 >
-> 2 **Logistic regression** is a **classification** algorithm used to assign
+> 2 \\*Logistic regression\\* is a \\*classification\\* algorithm used to assign
 > observations to two distinct classes.
 >
-> 3 In the context of **sentiment analysis**, logistic regression can be used to
+> 3 In the context of \\*sentiment analysis\\*, logistic regression can be used to
 > predict whether a tweet has a positive or negative sentiment.
 >
 > 4 The steps for building a logistic regression classifier for sentiment analysis
-> include: p**rocessing raw tweets to extract useful features**, **training** the
-> **classifier** to **minimize the cost,** and **making predictions** based on the trained
+> include: p\\*rocessing raw tweets to extract useful features\\*, \\*training\\* the
+> \\*classifier\\* to\\* minimize the cost,\\* and \\*making predictions\\* based on the trained
 > model.
 >
 > 5 The next video will cover how to extract features from tweets for sentiment
@@ -192,18 +192,18 @@
 <a id="node-vr30phe"></a>
 
 > [!NOTE]
-> 1 Introduction: Learning to **represent text as a vector**
+> 1 Introduction: Learning to \\*represent text as a vector\\*
 >
-> 2 Building a vocabulary: Creating a **list of unique words**
+> 2 Building a vocabulary: Creating a \\*list of unique words\\*
 >
 > 3 Extracting features: Assigning values to features in a tweet
 > based on the vocabulary
 >
-> 4 **Sparse** **representation**: Representation with a small relative
+> 4 \\*Sparse\\* \\*representation\\*: Representation with a small relative
 > number of non-zero values
 >
 > 5 Problems with large vocabularies: Model training takes
-> **excessive time**
+> \\*excessive time\\*
 >
 > 6 Conclusion: Recap of representing text as a vector and
 > introduction to identifying problems with large vocabularies in
@@ -393,6 +393,8 @@
 > Đôi khi phải cân nhắc giữ lại punctuation nếu
 > nó thể hiện thông tin cần thiết cho nlp task cụ thể đang làm
 
+**🔗 See also:** [linked note](./c1w2_naive_bayes.md#node-bhe9qvd)
+
 <br>
 
 <a id="node-zyuursj"></a>
@@ -470,12 +472,12 @@
 
 > [!NOTE]
 > In this lab, we will be exploring how to preprocess tweets for
-> sentiment analysis. We will **provide a function for
-> preprocessing tweets** during this week's assignment, but it is
-> **still good to know what is going on** under the hood.
+> sentiment analysis. We will \\*provide a function for
+> preprocessing tweets\\* during this week's assignment, but it is
+> \\*still good to know what is going on\\* under the hood.
 >
-> By the end of this lecture, you will see **how to use the NLTK
-> package to perform a preprocessing** pipeline for Twitter
+> By the end of this lecture, you will see \\*how to use the NLTK
+> package to perform a preprocessing\\* pipeline for Twitter
 > datasets.
 
 <br>
@@ -740,11 +742,11 @@
 > [!NOTE]
 > Building and Visualizing word frequencies
 >
-> In this lab, we will focus on the **build_freqs**() helper
+> In this lab, we will focus on the \\*build_freqs\\*() helper
 > function and visualizing a dataset fed into it. In our goal of
-> tweet sentiment analysis, this function will **build a
+> tweet sentiment analysis, this function will \\*build a
 > dictionary where we can lookup how many times a word
-> appears in the lists of positive or negative** tweets. This
+> appears in the lists of positive or negative\\* tweets. This
 > will be very helpful when extracting the features of the
 > dataset in the week's programming assignment. Let's see
 > how this function is implemented under the hood in this
@@ -938,10 +940,10 @@
 <a id="node-lzk88yw"></a>
 
 > [!NOTE]
-> **Objectives:** Visualize and interpret the logistic
+> \\*Objectives:\\* Visualize and interpret the logistic
 > regression model
 >
-> **Steps:**   • Plot tweets in a scatter plot using their
+> \\*Steps: \\*  • Plot tweets in a scatter plot using their
 > positive and negative sums.
 >
 > • Plot the output of the logistic regression model in the
@@ -1336,14 +1338,14 @@
 > • Learn how to \\/extract features\\/ for logistic regression given
 > some text
 >
-> • Implement \\/**logistic regression from scratch**\\/
+> • Implement \\/\\*logistic regression from scratch\\*\\/
 >
-> • Apply logistic regression on a \\/**natural language processing
-> task**\\/
+> • Apply logistic regression on a \\/\\*natural language processing
+> task\\*\\/
 >
-> • \\/**Test**\\/ using your logistic regression
+> • \\/\\*Test\\*\\/ using your logistic regression
 >
-> • Perform \\/**error analysis**\\/
+> • Perform \\/\\*error analysis\\*\\/
 
 <br>
 
