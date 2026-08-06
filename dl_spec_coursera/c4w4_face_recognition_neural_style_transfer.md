@@ -93,8 +93,8 @@
 > 3 A Siamese neural network architecture runs two identical convolutional
 > neural networks on two different inputs and then compares them.
 >
-> 4 **The Siamese neural network is trained by learning parameters that result
-> in a function d, which tells when two pictures are of the same person.**
+> 4 \\*The Siamese neural network is trained by learning parameters that result
+> in a function d, which tells when two pictures are of the same person.\\*
 >
 > 5 The objective function to make a neural network learn to determine
 > similarity or difference between two faces is defined using the triplet loss
@@ -261,12 +261,12 @@
 > inputting them into a logistic regression unit to predict whether the two images are of the
 > same person or not.
 >
-> 3 Computing the Logistic Regression Unit: The logistic regression unit **takes the differences
-> between the encodings as features** and **trains appropriate weights on these features to
-> predict whether the two images are of the same person or not.**
+> 3 Computing the Logistic Regression Unit: The logistic regression unit \\*takes the differences
+> between the encodings as features\\* and \\*trains appropriate weights on these features to
+> predict whether the two images are of the same person or not.\\*
 >
 > 4 Variations on Computing the Formula: There are different variations on computing the
-> formula for the logistic regression unit, including the **chi-square similarity formula**.
+> formula for the logistic regression unit, including the \\*chi-square similarity formula\\*.
 >
 > 5 Training the Siamese Network: The Siamese Network is trained using pairs of similar and
 > dissimilar images to learn to predict whether the two images are of the same person or not.
@@ -372,20 +372,20 @@
 > the neural network's functioning better.
 >
 > 2 To visualize what hidden units in different layers are computing, one
-> can find out the **images that maximize that unit's activation** by scanning
+> can find out the\\* images that maximize that unit's activation\\* by scanning
 > through the training sets.
 >
-> 3 Hidden units in layer 1 usually detect relatively **simple features such as
-> edges or shades of color.**
+> 3 Hidden units in layer 1 usually detect relatively \\*simple features such as
+> edges or shades of color.\\*
 >
-> 4 Hidden units in d**eeper layers** of the neural network see a **larger region
-> of the image** and **detect more complex shapes and patterns**.
+> 4 Hidden units in d\\*eeper layers\\* of the neural network see a \\*larger region
+> of the image\\* and \\*detect more complex shapes and patterns\\*.
 >
-> 5 The features that second and third layers detect are **getting more
-> complicated**.
+> 5 The features that second and third layers detect are \\*getting more
+> complicated\\*.
 >
-> 6 The video cites a paper titled "**Visualizing and Understanding
-> Convolutional Networks" by Matthew Zeiler and Rob Fergus** that offers
+> 6 The video cites a paper titled "\\*Visualizing and Understanding
+> Convolutional Networks" by Matthew Zeiler and Rob Fergus\\* that offers
 > more sophisticated ways of visualizing when the ConvNet is running.
 
 <br>
@@ -853,10 +853,12 @@
 > cho nên theo lẽ thường của Deep Learning là ta sẽ tìm một cái
 > model đã pretrain để xài (train lại hoặc dùng như khởi đầu)
 >
-> Và ổng đã tìm sẵn cho mình xài: **keras-facenet-h5/model. json**
+> Và ổng đã tìm sẵn cho mình xài: \\*keras-facenet-h5/model. json\\*
 > và cái Network Implementation dùng để train ra cái model ở trên
 > là làm theo Inception model của ông Szegedy et al, xem trong
-> file **inception_blocks_v2.py** Đại khái là xem thử model (pretrained) output, input sao
+> file\\* inception_blocks_v2.py
+>
+> \\*Đại khái là xem thử model (pretrained) output, input sao
 > mình sẽ dùng nó để 'tính' / encode ra encoding, để rồi từ đó
 > tính ra distance của 2 encoding.
 >
@@ -1037,7 +1039,7 @@
 > Có cái tên (identity) -> Lấy cái encoding từ database ra
 >
 > Tính distance giữa 2 cái encoding này bằng function distance of a
-> & b = **np.linalg.norm(a-b)**
+> & b = \\*np.linalg.norm(a-b)\\*
 >
 > So với threshold để decide
 
@@ -1143,7 +1145,7 @@
 <a id="node-ztl5z3o"></a>
 
 > [!NOTE]
-> **Congratulations**! You've completed this assignment, and your face recognition system is
+> \\*Congratulations\\*! You've completed this assignment, and your face recognition system is
 > working well! It not only lets in authorized persons, but now people don't need to carry an ID
 > card around anymore!
 >
@@ -1162,7 +1164,7 @@
 >
 > • Performed face verification and face recognition with these encodings Great work!
 >
-> **What you should remember**:
+> \\*What you should remember\\*:
 >
 > • Face verification solves an easier 1:1 matching problem; face recognition addresses a
 > harder 1:K matching problem.
@@ -1199,7 +1201,7 @@
 <a id="node-zelfihr"></a>
 
 > [!NOTE]
-> 6 - References  
+> 6 - References \\* \\*
 >
 > 1 Florian Schroff, Dmitry Kalenichenko, James Philbin (2015). \\_FaceNet: A Unified Embedding
 > for Face Recognition and Clustering
@@ -1233,7 +1235,7 @@
 > Deep Learning Specialization! In this notebook,  you'll use transfer learning to generate new
 > artistic images.
 >
-> **Upon completion of this assignment, you will be able to:**
+> \\*Upon completion of this assignment, you will be able to:\\*
 >
 > • Implement the neural style transfer algorithm
 >
@@ -1395,7 +1397,7 @@
 >     , axis=None) 
 > J_content = J_content / (4*n_H*n_W*n_C)
 >
-> **What you should remember:**
+> \\*What you should remember:\\*
 >
 > • The content cost takes a hidden layer activation of
 > the neural network, and measures how different  a(𝐶)
@@ -1618,7 +1620,7 @@
 > [!NOTE]
 > Exercise 5 - total_cost
 >
-> **What you should remember:**
+> \\*What you should remember:\\*
 >
 > • The total cost is a linear combination of the content cost
 > 𝐽𝑐𝑜𝑛𝑡𝑒𝑛𝑡(𝐶,𝐺)  and the style cost 𝐽𝑠𝑡𝑦𝑙𝑒(𝑆,𝐺).
@@ -1813,13 +1815,17 @@
 <a id="node-r9a8np3"></a>
 
 > [!NOTE]
-> **Conclusion:** Great job on completing this assignment! You are now able to use Neural Style
+> \\*Conclusion:
+>
+> \\*Great job on completing this assignment! You are now able to use Neural Style
 > Transfer to generate artistic images. This is also your first time building a model
 > in which the optimization algorithm updates the pixel values rather than the
 > neural network's parameters. Deep learning has many different types of models
 > and this is only one of them!
 >
-> **What you should remember:**  • Neural Style Transfer is an algorithm that given a content image C and a
+> \\*What you should remember:
+>
+> \\* • Neural Style Transfer is an algorithm that given a content image C and a
 > style image S can generate an artistic image
 >
 > • It uses representations (hidden layer activations) based on a pretrained
