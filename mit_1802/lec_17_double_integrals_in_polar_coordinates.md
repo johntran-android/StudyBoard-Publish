@@ -304,6 +304,8 @@ polar Coordinates
 > lượng của object. (nếu theta = constant thì nó sẽ là theta*diện tích R
 > còn không  thì nó vẫn giúp ta tính khối lượng của object )
 
+**🔗 See also:** [linked note](./lec_22_greens_theorem.md#node-t8iykun)
+
 <br>
 
 <a id="node-qq4otrj"></a>
@@ -362,6 +364,8 @@ polar Coordinates
 > [!NOTE]
 > một ứng dụng nữa là **giúp tính vị
 > trí (tọa độ) của trọng tâm**.
+
+**🔗 See also:** [linked note](./lec_22_greens_theorem.md#node-t8iykun)
 
 <br>
 
