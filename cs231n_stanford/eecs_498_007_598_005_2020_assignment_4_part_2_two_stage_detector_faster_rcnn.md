@@ -450,6 +450,8 @@ two-stage Detector - Faster Rcnn
 > boolean mask để sclicing, còn mình thì tạo non-zero indices để
 > slicing.
 
+**🔗 See also:** [linked note](./eecs_498_007598_005_2022_assignment_4_part_2_two_stage_detector.md#node-23bybjw)
+
 <br>
 
 <a id="node-y8ydy5n"></a>
