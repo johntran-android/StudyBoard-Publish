@@ -549,6 +549,8 @@
 > Vậy, có thể coi như sau khi qua self attention để attend với các input trước
 > đó (ý là theo T dimension), thì nó sẽ chỉ đơn giản là add với feature vector.
 
+**🔗 See also:** [linked note](./assignment_3_rnn_captioning.md#node-hlwqkvj)
+
 <br>
 
 <a id="node-k0gk59k"></a>
