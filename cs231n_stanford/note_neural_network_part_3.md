@@ -828,6 +828,8 @@
 > là vậy để chỉ lực kéo gây nên bởi độ dốc, tất nhiên theo vật lí
 > thì nó là trọng lực, chiếu lên hướng đường đi) sẽ lớn
 
+**🔗 See also:** [linked note](./assignment_2_fully_connected_nn.md#node-bpp5psh)
+
 <br>
 
 <a id="node-pf6yrbx"></a>
