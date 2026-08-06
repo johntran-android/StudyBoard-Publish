@@ -209,6 +209,8 @@ single-stage Detector - Yolo
 > output feature, append vào list. Cuối cùng thì dùng torch.concat để tạo tensor
 > các feature.
 
+**🔗 See also:** [linked note](./eecs_498_007598_005_2022_assignment_4_part_1_one_state_object_detector.md#node-k94qtgo)
+
 <br>
 
 <a id="node-c0ip5w1"></a>
@@ -475,6 +477,8 @@ single-stage Detector - Yolo
 > dụng nhiều for loop. Rõ ràng solution của mình tốt hơn khi chỉ tốn
 > có 3 dòng
 
+**🔗 See also:** [linked note](./eecs_498_007598_005_2022_assignment_4_part_2_two_stage_detector.md#node-vgkeioz)
+
 <br>
 
 <a id="node-7qukswk"></a>
@@ -580,6 +584,8 @@ single-stage Detector - Yolo
 > You should see errors on the order of 1e-7 or less.
 >
 > Checked!
+
+**🔗 See also:** [linked note](./eecs_498_007598_005_2022_assignment_4_part_2_two_stage_detector.md#node-vo0rsby)
 
 <br>
 
@@ -928,6 +934,8 @@ single-stage Detector - Yolo
 <p align="center"><kbd><img src="assets/bq1hpbx8rj.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/p4opkdnrv2l.png" width="80%"></kbd></p>
+
+**🔗 See also:** [linked note](./eecs_498_007598_005_2022_assignment_4_part_2_two_stage_detector.md#node-vo0rsby) · [linked note](./eecs_498_007598_005_2022_assignment_4_part_2_two_stage_detector.md#node-3lzeboh)
 
 <br>
 
