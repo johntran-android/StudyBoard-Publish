@@ -28,22 +28,22 @@
 
 > [!NOTE]
 > 1 There are a lot of hyperparameters that need to be set when training deep
-> neural networks, such as **learning rate**, **momentum term**, **number of layers,**
+> neural networks, such as \\*learning rate\\*, \\*momentum term\\*,\\* number of layers,\\*
 > number of hidden units, mini-batch size, and learning rate decay.
 >
-> 2 Some of these hyperparameters are **more important than others**. **Learning
-> rate** is the **most important,** followed by **momentum term**, **mini-batch size**,
-> and number of **hidden units.**
+> 2 Some of these hyperparameters are \\*more important than others\\*. \\*Learning
+> rate\\* is the\\* most important,\\* followed by \\*momentum term\\*, \\*mini-batch size\\*,
+> and number of \\*hidden units.\\*
 >
 > 3 It's difficult to know in advance which hyperparameters will be the most
-> important, so it's important to **try out a wide range of values**.
+> important, so it's important to\\* try out a wide range of values\\*.
 >
-> 4 **Sampling at random** is a **better approach** than systematically exploring
-> values in a **grid** because it allows for a **more rich exploration** of the
+> 4 \\*Sampling at random\\* is a \\*better approach\\* than systematically exploring
+> values in a \\*grid\\* because it allows for a \\*more rich exploration\\* of the
 > hyperparameter space.
 >
-> 5 **Coarse to fine sampling** is a **common practice** that involves **zooming** **in** on
-> **promising areas** of the **hyperparameter space** and exploring more densely
+> 5\\* Coarse to fine sampling\\* is a \\*common practice\\* that involves \\*zooming\\* \\*in\\* on
+> \\*promising areas\\* of the \\*hyperparameter space\\* and exploring more densely
 > within that area.
 
 <br>
@@ -89,30 +89,30 @@
 > 2 Importance of hyperparameters: Some of these hyperparameters are more important than
 > others. The most important hyperparameter to tune is usually the learning rate alpha. Other
 > hyperparameters that should be considered next include the momentum term (0.9 is a good
-> default), the **mini-batch size** (to ensure the optimization algorithm is running efficiently), and the
+> default), the \\*mini-batch size\\* (to ensure the optimization algorithm is running efficiently), and the
 > hidden units.
 >
-> 3 **Tuning** **hyperparameters**: How do you go about finding a good setting for these
-> hyperparameters? It's important to **systematically organize your hyperparameter** tuning process
+> 3 \\*Tuning\\* \\*hyperparameters\\*: How do you go about finding a good setting for these
+> hyperparameters? It's important to \\*systematically organize your hyperparameter\\* tuning process
 > to make it more efficient for you to converge on a good setting of the hyperparameters.
 >
-> 4 **Sampling** hyperparameters: In earlier generations of machine learning algorithms, if you had
+> 4 \\*Sampling\\* hyperparameters: In earlier generations of machine learning algorithms, if you had
 > two hyperparameters, it was common practice to sample the points in a grid and systematically
-> explore these values. However, in deep learning, it's better to choose the **points at random** to try
-> **out on a randomly chosen set of points**. This is because it's difficult to know in advance which
+> explore these values. However, in deep learning, it's better to choose the\\* points at random\\* to try
+> \\*out on a randomly chosen set of points\\*. This is because it's difficult to know in advance which
 > hyperparameters are going to be the most important for your problem.
 >
-> 5 Importance of sampling at random: Some hyperparameters are **much more important than
-> other**s. If you sample in a grid, you might find that you' ve only tried out a few values of the most
+> 5 Importance of sampling at random: Some hyperparameters are \\*much more important than
+> other\\*s. If you sample in a grid, you might find that you' ve only tried out a few values of the most
 > important hyperparameter, while having tried out many different values of a less important
-> hyperparameter. Sampling at random helps to explore a **more diverse set of possible values for
-> the most important hyperparameters**, whatever they turn out to be.
+> hyperparameter. Sampling at random helps to explore a \\*more diverse set of possible values for
+> the most important hyperparameters\\*, whatever they turn out to be.
 >
-> 6 **Coarse to fine sampling** scheme: Another common practice when sampling hyperparameters is
-> to use a **coarse to fine sampling scheme**. This involves **starting with a larger set of
-> hyperparameters** and then **zooming in to a smaller region** of the hyperparameters to sample
-> m**ore densely within this space.** This can help to **focus more resources on searching within the
-> most promising regions** of hyperparameters.
+> 6 \\*Coarse to fine sampling\\* scheme: Another common practice when sampling hyperparameters is
+> to use a \\*coarse to fine sampling scheme\\*. This involves \\*starting with a larger set of
+> hyperparameters\\* and then \\*zooming in to a smaller region\\* of the hyperparameters to sample
+> m\\*ore densely within this space.\\* This can help to\\* focus more resources on searching within the
+> most promising regions\\* of hyperparameters.
 
 <br>
 
@@ -125,30 +125,31 @@
 <a id="node-hxg5exh"></a>
 
 > [!NOTE]
-> 1 **Random sampling** over hyperparameters allows **efficient search** over their
+> 1\\* Random sampling\\* over hyperparameters allows \\*efficient search\\* over their
 > space.
 >
-> 2 It is **important** to pick the **appropriate scale** on which to explore the
+> 2 It is \\*important\\* to pick the \\*appropriate scale\\* on which to explore the
 > hyperparameters.
 >
-> 3 **Sampling uniformly at random** over the range of hyperparameters might be
-> **reasonable for certain hyperparameters,** such as the **number of hidden units**
-> and **layers** in a neural network.
+> 3 \\*Sampling uniformly at random \\*over the range of hyperparameters might be
+> \\*reasonable for certain hyperparameters,\\* such as the \\*number of hidden units\\*
+> and \\*layers\\* in a neural network.
 >
-> 4 It is **not reasonable** to sample uniformly at random over the range of all
+> 4 It is\\* not reasonable\\* to sample uniformly at random over the range of all
 > hyperparameters.
 >
-> 5 Searching for hyperparameters on a **log scale** is **more reasonable**, especially
-> for hyperparameters such as the **learning rate.**
+> 5 Searching for hyperparameters on a\\* log scale\\* is \\*more reasonable\\*, especially
+> for hyperparameters such as the \\*learning rate.\\*
 >
-> 6 To sample on a log scale, you need to take the **low** and **high values**, take
-> **logs** to figure out what **a** and **b** are, sample **r** **uniformly between a and b**, and
-> set the **hyperparameter to be 10 to the power of r.**
+> 6 To sample on a log scale, you need to take the \\*low\\* and \\*high values\\*, take
+> \\*logs\\* to figure out what \\*a\\* and\\* b\\* are, sample \\*r\\* \\*uniformly between a and b\\*, and
+> set the \\*hyperparameter to be 10 to the power of r.\\*
 >
-> 7 Sampling for the hyperparameter **beta** used for computing exponentially
-> weighted averages is **tricky** and **should not be** **sampled on a linear scale.** 
-> 8 To explore the r**ange of values for beta**, it is important to **consider the range
-> of values for the corresponding exponentially weighted average**s.
+> 7 Sampling for the hyperparameter \\*beta\\* used for computing exponentially
+> weighted averages is \\*tricky\\* and \\*should not be\\* \\*sampled on a linear scale.
+> \\*
+> 8 To explore the r\\*ange of values for beta\\*, it is important to \\*consider the range
+> of values for the corresponding exponentially weighted average\\*s.
 
 <br>
 
@@ -276,20 +277,20 @@
 > [!NOTE]
 > 1 Intuitions about hyperparameter settings from one application
 > area may or may not transfer to a different one, but
-> **cross-fertilization among different domains** is **increasingly
-> common**.
+> \\*cross-fertilization among different domains\\* is \\*increasingly
+> common\\*.
 >
-> 2 **Hyperparameter settings** can get **stale** due to **changes** in **data**
-> or **computational resources,** so it's recommended to **retest** or
-> **reevaluate hyperparameters** at least once **every several months.**
+> 2 \\*Hyperparameter settings\\* can get \\*stale\\* due to \\*changes\\* in \\*data\\*
+> or \\*computational resources,\\* so it's recommended to \\*retest\\* or
+> \\*reevaluate hyperparameters\\* at least once \\*every several months.\\*
 >
-> 3 Two **major ways** of searching for hyperparameters are the
-> **panda approac**h, where **one model** is **gradually tweaked**, and the
-> **caviar approach**, where **many mode**ls are trained **in parallel** and
-> the b**est one is chosen.**
+> 3 Two \\*major ways\\* of searching for hyperparameters are the
+> \\*panda approac\\*h, where \\*one model\\* is \\*gradually tweaked\\*, and the
+> \\*caviar approach\\*, where \\*many mode\\*ls are trained \\*in parallel \\*and
+> the b\\*est one is chosen.\\*
 >
-> 4 The choice between the two approaches **depends on the
-> amount of computational resources** available.
+> 4 The choice between the two approaches \\*depends on the
+> amount of computational resources\\* available.
 
 <br>
 
@@ -332,40 +333,40 @@
 <a id="node-p7er5vp"></a>
 
 > [!NOTE]
-> 1 Importance of **cross-fertilization** in deep learning:  2 Deep learning is applied in various application
-> areas, and **intuitions about hyperparameter settings** from one area **may or may not transfer** to a
-> different one. However, there is a lot of **cross-fertilization among different application domains**, with
+> 1 Importance of \\*cross-fertilization\\* in deep learning:  2 Deep learning is applied in various application
+> areas, and\\* intuitions about hyperparameter settings\\* from one area \\*may or may not transfer\\* to a
+> different one. However, there is a lot of \\*cross-fertilization among different application domains\\*, with
 > researchers reading increasingly from other domains to look for inspiration for cross-fertilization. For
-> example, ideas developed in **computer vision**, such as **ConVnets** or **ResNets**, have been successfully
-> applied to **speech**, and vice versa.
+> example, ideas developed in \\*computer vision\\*, such as \\*ConVnets\\* or \\*ResNets\\*, have been successfully
+> applied to \\*speech\\*, and vice versa.
 >
-> 3 The risk of **stale hyperparameter settings:**  4 Intuitions about the **best hyperparameter settings can get
-> stale over time,** even when working on the same problem. For instance, a good setting that was once
-> found may **no longer work** due to c**hanges in data or hardware**. Therefore, it is recommended to **retest**
-> or **reevaluate** **hyperparameters** **periodically**, maybe at least **once every several months**, to ensure that
-> the current hyperparameter values are **still suitable.**
+> 3 The risk of \\*stale hyperparameter settings:\\*  4 Intuitions about the \\*best hyperparameter settings can get
+> stale over time,\\* even when working on the same problem. For instance, a good setting that was once
+> found may \\*no longer work\\* due to c\\*hanges in data or hardware\\*. Therefore, it is recommended to \\*retest\\*
+> or \\*reevaluate\\* \\*hyperparameters\\* \\*periodically\\*, maybe at least\\* once every several months\\*, to ensure that
+> the current hyperparameter values are\\* still suitable.\\*
 >
-> 5 Two major **schools of thought** in **hyperparameter search**:  6 There are two major ways in which people
-> go about searching for hyperparameters: **babysitting** one model and **training** many models in **parallel**.
+> 5 Two major \\*schools of thought \\*in \\*hyperparameter search\\*:  6 There are two major ways in which people
+> go about searching for hyperparameters: \\*babysitting\\* one model and \\*training\\* many models in \\*parallel\\*.
 >
-> 7 **Babysitting** one model:  8 If c**omputational resources are limited**, then one approach is to **babysit** one
-> model by **gradually nudging up** and **down the parameters**. For example, one might initialize the
+> 7 \\*Babysitting\\* one model:  8 If c\\*omputational resources are limited\\*, then one approach is to \\*babysit\\* one
+> model by \\*gradually nudging up\\* and \\*down the parameters\\*. For example, one might initialize the
 > parameters randomly and start training, then gradually watch the learning curve, maybe the cost
 > function or dataset error, gradually decrease over the first day. At the end of the day, one might try
 > increasing the learning rate a little bit and see how it performs, and then adjust the parameters again
-> the following day, and so on. The approach is called the p**anda approach**, as it is similar to how pandas
-> have few children and **put a lot of effort into ensuring their survival**.
+> the following day, and so on. The approach is called the p\\*anda approach\\*, as it is similar to how pandas
+> have few children and \\*put a lot of effort into ensuring their survival\\*.
 >
-> 9 Training **many models in parallel:**  10 If there are **enough computational resources**, then one can train
-> **many models** in **parallel** with **different hyperparameters**. Each model generates its **own learning curve**,
-> and the **best hyperparameter setting** is selected based on **which model performs the best**. This
-> approach is called the **caviar strategy**, as it is similar to how fish reproduce by laying many eggs and not
+> 9 Training\\* many models in parallel:\\*  10 If there are \\*enough computational resources\\*, then one can train
+> \\*many models\\* in \\*parallel\\* with \\*different hyperparameters\\*. Each model generates its \\*own learning curve\\*,
+> and the \\*best hyperparameter setting\\* is selected based on\\* which model performs the best\\*. This
+> approach is called the \\*caviar strategy\\*, as it is similar to how fish reproduce by laying many eggs and not
 > paying too much attention to any one of them.
 >
 > 11 Choosing between the two approaches:  12 The choice between the two approaches is mainly a
-> function of how **much computational resources are available**. If there are enough resources, then the
+> function of how \\*much computational resources are available\\*. If there are enough resources, then the
 > caviar strategy can be used to try a lot of different hyperparameter settings and select the best one
-> **quickly**. However, if **resources are limited**, then the panda approach can be used to gradually adjust the
+> \\*quickly\\*. However, if \\*resources are limited\\*, then the panda approach can be used to gradually adjust the
 > hyperparameters of one model over time.
 
 <br>
@@ -470,6 +471,8 @@
 > 5 và đoạn này nó khá tuyến tính nên nó sẽ
 > không tận dụng được khả năng phi tuyến tính
 > của hàm sigmoid
+
+**🔗 See also:** [linked note](#node-ln9g4bs)
 
 <br>
 
@@ -715,27 +718,27 @@
 <a id="node-xslmncf"></a>
 
 > [!NOTE]
-> 1 **Binary** **classification** involves two possible labels, **0** or **1**.
+> 1 \\*Binary\\* \\*classification\\* involves two possible labels, \\*0\\* or \\*1\\*.
 >
-> 2 **Softmax** **regression** is a **generalization** of **logistic regression** used
-> for recognizing **multiple classes**.
+> 2 \\*Softmax\\* \\*regression\\* is a \\*generalization\\* of \\*logistic regression\\* used
+> for recognizing \\*multiple classes\\*.
 >
-> 3 Softmax regression uses a **Softmax** **layer** to generate the
-> **probabilities** for **each of the classes**.
+> 3 Softmax regression uses a \\*Softmax\\* \\*layer\\* to generate the
+> \\*probabilities\\* for \\*each of the classes\\*.
 >
-> 4 The number of **units** in the **Softmax** layer is **equal to the number
-> of classes**.
+> 4 The number of \\*units\\* in the \\*Softmax\\* layer is \\*equal to the number
+> of classes\\*.
 >
-> 5 The **Softmax** **activation** **function** computes a temporary variable, t,
+> 5 The \\*Softmax\\* \\*activation\\* \\*function\\* computes a temporary variable, t,
 > which is e to the power of the output of the final layer.
 >
 > 6 The output of the Softmax activation function, aL, is the vector t
 > normalized to sum to 1.
 >
-> 7 The i-th element of the output vector aL represents the p**robability
-> of the input belonging to the i-th class**.
+> 7 The i-th element of the output vector aL represents the p\\*robability
+> of the input belonging to the i-th class\\*.
 >
-> 8 The **probabilities** generated by the Softmax layer should **sum to 1.**
+> 8 The \\*probabilities\\* generated by the Softmax layer should \\*sum to 1.\\*
 
 <br>
 
@@ -761,7 +764,7 @@
 
 > [!NOTE]
 > 1 Softmax regression is a generalization of logistic regression for multiple classes. Instead of just
-> recognizing two classes, Softmax regression allows you to recognize **one of C possible classes,**
+> recognizing two classes, Softmax regression allows you to recognize \\*one of C possible classes,\\*
 > where C is the number of classes you're trying to categorize your inputs into.
 >
 > 2 To use Softmax regression, you need to build a new neural network where the upper layer has
@@ -769,17 +772,17 @@
 > input x.
 >
 > 3 The output labels y hat in Softmax regression are a C by 1 dimensional vector, where each
-> element represents the **probability of its corresponding class.**
+> element represents the \\*probability of its corresponding class.\\*
 >
-> 4 Because **probabilities should sum to one**, the **elements in y hat should also sum to one.**
+> 4 Because \\*probabilities should sum to one\\*, the \\*elements in y hat should also sum to one.\\*
 >
-> 5 The standard model for Softmax regression uses a **Softmax layer** in the output layer to generate
+> 5 The standard model for Softmax regression uses a \\*Softmax layer\\* in the output layer to generate
 > these probabilities. The Softmax activation function is used to compute the output of the final
 > layer.
 >
-> 6 The **Softmax** activation function takes the **linear part** of the layer (**zL**) and computes a temporary
+> 6 The \\*Softmax\\* activation function takes the\\* linear part\\* of the layer (\\*zL\\*) and computes a temporary
 > variable (t), which is e to the zL (element-wise). Then, the output aL is computed by normalizing t
-> to sum to one. This ensures that the elements in aL **represent probabilities that sum to one.**
+> to sum to one. This ensures that the elements in aL \\*represent probabilities that sum to one.\\*
 >
 > 7 In the Softmax layer, the output aL is a C by 1 dimensional vector, where each element
 > represents the probability of its corresponding class. The i-th element of aL is computed as ti
@@ -814,8 +817,8 @@
 > predicted probability of the class j.
 >
 > 4 The loss function tries to make the corresponding probability of the
-> true class as high as possible, which is a form of **maximum likelihood
-> estimation.**
+> true class as high as possible, which is a form of \\*maximum likelihood
+> estimation.\\*
 >
 > 5 To reduce the loss on the training set, the neural network adjusts the
 > predicted probability of the true class.
@@ -1038,6 +1041,8 @@
 >
 >
 > Câu 5 đúng
+
+**🔗 See also:** [linked note](#node-1zt2817)
 
 <br>
 
