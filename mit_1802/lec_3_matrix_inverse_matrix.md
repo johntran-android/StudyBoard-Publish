@@ -39,6 +39,8 @@
 > Cũng như bản thân vector (A x B) sẽ **vuông góc với plane span
 > bởi vector A, B**
 
+**🔗 See also:** [linked note](./lec_4_square_system_equation_of_plane.md#node-miy1y9u)
+
 <br>
 
 <a id="node-0s4i8ph"></a>
@@ -87,6 +89,8 @@
 > Và **volume** của hình khối bình hành là **det của 3 vector** như đã biết.
 > Ta có thể **xây dựng equation det = 0**, và tính toán ra x, y, z để kết
 > quả sẽ cho ra **phương trình mặt phẳng của plane**
+
+**🔗 See also:** [linked note](./lec_2_determinant_cross_product.md#node-yodlng2)
 
 <br>
 
