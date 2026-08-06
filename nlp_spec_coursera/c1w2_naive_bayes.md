@@ -288,6 +288,8 @@
 > cái probability function để giúp P pos hay neg không bằng 0 (để công thức
 > Naive Bayes không bị lỗi do chia 0)
 
+**🔗 See also:** [linked note](#node-1wcj675)
+
 <br>
 
 <a id="node-zo2g94m"></a>
@@ -315,10 +317,10 @@
 <a id="node-ue7nn00"></a>
 
 > [!NOTE]
-> 1 Counting word **occurrence** for probability calculation
->  2 **Problem with probability of zero** for **unseen word** pairs
->  3 Introduction to **smoothing**
->  4 **Laplacian smoothing** technique to **avoid zero probabilities**
+> 1 Counting word \\*occurrence\\* for probability calculation
+>  2 \\*Problem with probability of zero\\* for \\*unseen word\\* pairs
+>  3 Introduction to \\*smoothing\\*
+>  4 \\*Laplacian smoothing\\* technique to \\*avoid zero probabilities\\*
 >  5 Formula for Laplacian smoothing
 >  6 Calculation of probability using Laplacian smoothing
 >  7 Importance of Laplacian smoothing
@@ -387,6 +389,8 @@
 > Với Laplacian Smoothing, P ('because', neg
 > class) không còn bằng 0 nữa
 
+**🔗 See also:** [linked note](#node-n5wptlp)
+
 <br>
 
 <a id="node-ziylhod"></a>
@@ -415,25 +419,25 @@
 <a id="node-youe127"></a>
 
 > [!NOTE]
-> 1 The video introduces the concept of **log likelihood**s, which
-> are l**ogarithms of the probabilities** used in sentiment
+> 1 The video introduces the concept of\\* log likelihood\\*s, which
+> are l\\*ogarithms of the probabilities\\* used in sentiment
 > classification.
 >
-> 2 Words are classified as **neutral**, **positive**, or **negative** using
-> **conditional probabilities**, and their **ratios** are used for
+> 2 Words are classified as \\*neutral\\*, \\*positive\\*, or \\*negative\\* using
+> \\*conditional probabilities\\*, and their \\*ratios\\* are used for
 > classification.
 >
-> 3 The **ratios** for each word are essential for **Naive Bayes'
-> binary classification**, and a mathematical **trick** using
-> **logarithms** can be used to **prevent numerical underflow.**
+> 3 The \\*ratios\\* for each word are essential for \\*Naive Bayes'
+> binary classification\\*, and a mathematical \\*trick\\* using
+> \\*logarithms\\* can be used to \\*prevent numerical underflow.\\*
 >
-> 4 **Lambda** is introduced as the **log of the ratio of the
-> probability that a word is positive** **over the probability that it
-> is negative**, and it can be used to calculate the log score for
+> 4 \\*Lambda\\* is introduced as the \\*log of the ratio of the
+> probability that a word is positive\\* \\*over the probability that it
+> is negative\\*, and it can be used to calculate the log score for
 > sentiment classification.
 >
-> 5 The video emphasizes the **importance** of the **prior ratio** in
-> **unbalanced data-sets** and how it affects the Naive Bayes'
+> 5 The video emphasizes the \\*importance\\* of the \\*prior ratio\\* in
+> \\*unbalanced data-sets\\* and how it affects the Naive Bayes'
 > formula for binary classification.
 
 <br>
@@ -519,22 +523,22 @@
 <a id="node-55vyewa"></a>
 
 > [!NOTE]
-> 1 Inference: Learn how to calculate the **log likelihood of a tweet**
-> based on the **lambda dictionary**
+> 1 Inference: Learn how to calculate the \\*log likelihood of a tweet\\*
+> based on the\\* lambda dictionary\\*
 >
-> 2 Log likelihood: **Sum up the lambdas from each word** in the
-> tweet to calculate the l**og likelihood**
+> 2 Log likelihood: \\*Sum up the lambdas from each word\\* in the
+> tweet to calculate the l\\*og likelihood\\*
 >
-> 3 Sentiment analysis: Determine whether a **tweet is positive or
-> negative** based on the **log likelihood value**
+> 3 Sentiment analysis: Determine whether a\\* tweet is positive or
+> negative\\* based on the \\*log likelihood value\\*
 >
-> 4 Power words: **Words with positive or negative sentiment** have
-> more influence on the **log likelihood score**
+> 4 Power words: \\*Words with positive or negative sentiment\\* have
+> more influence on the \\*log likelihood score\\*
 >
-> 5 Decision threshold: The **threshold** for the log likelihood score
-> is **0** instead of 1
+> 5 Decision threshold: The \\*threshold\\* for the log likelihood score
+> is \\*0\\* instead of 1
 >
-> 6 Training: Introduction to **training a naive bayes model** for
+> 6 Training: Introduction to \\*training a naive bayes model\\* for
 > sentiment analysis.
 
 <br>
@@ -587,24 +591,24 @@
 > 1 Naive Bayes classifier is trained differently from logistic regression or
 > deep learning.
 >
-> 2 The first step in any supervised machine learning project is to **gather** and
-> **preprocess** data.
+> 2 The first step in any supervised machine learning project is to \\*gather\\* and
+> \\*preprocess\\* data.
 >
-> 3 Preprocessing involves **lowercase** texts, **removing** **punctuation**, **URLs**,
-> handles, **stop words**, **stemming**, and **tokenizing**.
+> 3 Preprocessing involves \\*lowercase\\* texts, \\*removing\\* \\*punctuation\\*, \\*URLs\\*,
+> handles,\\* stop words\\*, \\*stemming\\*, and \\*tokenizing\\*.
 >
-> 4 The next step is to **compute the vocabulary** for each word in each class
-> to produce a table of **frequencies** and **conditional probabilities**.
+> 4 The next step is to \\*compute the vocabulary\\* for each word in each class
+> to produce a table of \\*frequencies\\* and \\*conditional probabilities\\*.
 >
-> 5 The **Lambda** score for each word is estimated using the **log of the ratio**
+> 5 The \\*Lambda\\* score for each word is estimated using the \\*log of the ratio\\*
 > of conditional probabilities.
 >
-> 6 The **log prior** is estimated by counting the number of positive and
+> 6 The\\* log prior\\* is estimated by counting the number of positive and
 > negative tweets and computing the log of the ratio.
 >
-> 7 **Training a Naive Bayes** model can be divided into **six logical steps.**
+> 7 \\*Training a Naive Bayes\\* model can be divided into \\*six logical steps.\\*
 >
-> 8 The final step is to **classify sentences** using the **probability table** built in
+> 8 The final step is to \\*classify sentences\\* using the\\* probability table \\*built in
 > the previous steps.
 
 <br>
@@ -668,18 +672,18 @@
 <a id="node-mw4uiri"></a>
 
 > [!NOTE]
-> In this lab, we will cover an **essential part of data analysis** that has not
+> In this lab, we will cover an \\*essential part of data analysis\\* that has not
 > been included in the lecture videos. As we stated in the previous module,
-> **data visualization** gives **insight** into the **expected performance** of
+> \\*data visualization\\* gives \\*insight\\* into the \\*expected performance\\* of
 > any model.
 >
-> In the following exercise, you are going to make a **visual inspection** of
-> the tweets dataset using the **Naïve Bayes features**. We will see how we
-> can understand the **log-likelihood ratio** explained in the videos as a pair
+> In the following exercise, you are going to make a \\*visual inspection\\* of
+> the tweets dataset using the \\*Naïve Bayes features\\*. We will see how we
+> can understand the \\*log-likelihood ratio\\* explained in the videos as a pair
 > of numerical features that can be fed in a machine learning algorithm.
 >
-> At the end of this lab, we will introduce the concept of **confidence ellipse**
-> as a tool for representing the **Naïve Bayes** model visually.
+> At the end of this lab, we will introduce the concept of \\*confidence ellipse\\*
+> as a tool for representing the \\*Naïve Bayes\\* model visually.
 
 <br>
 
@@ -811,31 +815,31 @@
 <a id="node-hize6yx"></a>
 
 > [!NOTE]
-> 1 The main task is to apply the Naive Bayes classifier on **real test examples.**
+> 1 The main task is to apply the Naive Bayes classifier on \\*real test examples.\\*
 >
-> 2 The **conditional probabilities** are used to predict the sentiment of new unseen tweets.
+> 2 The \\*conditional probabilities\\* are used to predict the sentiment of new unseen tweets.
 >
-> 3 The **model performance** is evaluated using a **test set** of annotated tweets.
+> 3 The \\*model performance\\* is evaluated using a\\* test set\\* of annotated tweets.
 >
-> 4 **Pre-processing of text** is necessary before applying the model to predict sentiments.
+> 4\\* Pre-processing of text\\* is necessary before applying the model to predict sentiments.
 >
-> 5 The model can only give a score for words **it's seen before.**
+> 5 The model can only give a score for words \\*it's seen before.\\*
 >
-> 6 The **score obtained** from the model can be used to predict whether a tweet has
+> 6 The \\*score obtained\\* from the model can be used to predict whether a tweet has
 > positive or negative sentiment.
 >
-> 7 **Validation set** is used to measure the performance of the trained model.
+> 7 \\*Validation set\\* is used to measure the performance of the trained model.
 >
-> 8 The **accuracy function** is implemented to **measure the performance of the model**.
+> 8 The \\*accuracy function\\* is implemented to \\*measure the performance of the model\\*.
 >
 > 9 The score of each entry in the validation set is computed and evaluated to get a vector of
 > zeros and ones indicating whether the predicted sentiment is negative or positive,
 > respectively.
 >
-> 10 The **accuracy of the model** is computed by **comparing the predicted labels** with
-> the **true labels** provided in the validation set.
+> 10 The \\*accuracy of the model \\*is computed by \\*comparing the predicted labels\\* with
+> the\\* true labels \\*provided in the validation set.
 >
-> 11 The words that don't appear in the Lambda table are treated as **neutral words.**
+> 11 The words that don't appear in the Lambda table are treated as \\*neutral words.\\*
 >
 > 12 The Naive Bayes method is applied to classify tweets in the coding exercise at the end
 > of the week.
@@ -896,27 +900,28 @@
 <a id="node-ac9hjwc"></a>
 
 > [!NOTE]
-> 1 Naive Bayes method can be used for v**arious classification tasks**, such as **sentiment
-> analysis**, **author identification, spam filtering, information retrieval, and word
-> disambiguation.** 
-> 2 The **Naive Bayes formula** calculates the **ratio between** the **conditional probabilities of the
-> priors** and **likelihoods to estimate the probability for each class**.
+> 1 Naive Bayes method can be used for v\\*arious classification tasks\\*, such as \\*sentiment
+> analysis\\*, \\*author identification, spam filtering, information retrieval, and word
+> disambiguation.
+> \\*
+> 2 The \\*Naive Bayes formula\\* calculates the \\*ratio between\\* the \\*conditional probabilities of the
+> priors\\* and \\*likelihoods to estimate the probability for each class\\*.
 >
-> 3 Naive Bayes can be used for **author identification** by training a model to recognize
-> whether a new document was written by one author or another, based on their **unique
-> writing style.**
+> 3 Naive Bayes can be used for \\*author identification\\* by training a model to recognize
+> whether a new document was written by one author or another, based on their \\*unique
+> writing style.\\*
 >
-> 4 **Spam filtering** can be performed using Naive Bayes by **analyzing the sender, subject,
-> and content** of an email to determine whether it is spam or not.
+> 4 \\*Spam filtering\\* can be performed using Naive Bayes by \\*analyzing the sender, subject,
+> and content\\* of an email to determine whether it is spam or not.
 >
-> 5 **Information retrieval** can be done using Naive Bayes by calculating the **likelihood** of
-> **documents given a query** and storing them based on their likelihoods.
+> 5 \\*Information retrieval\\* can be done using Naive Bayes by calculating the \\*likelihood\\* of
+> \\*documents given a query\\* and storing them based on their likelihoods.
 >
-> 6 Naive Bayes can be used for **word disambiguation** by **calculating the score of the
-> documents given that a word refers to each possible meaning**, and choosing the one with
+> 6 Naive Bayes can be used for \\*word disambiguation\\* by \\*calculating the score of the
+> documents given that a word refers to each possible meaning\\*, and choosing the one with
 > the highest score.
 >
-> 7 Naive Bayes is a **popular method** due to its **simplicity** in training, use, and interpretation.
+> 7 Naive Bayes is a \\*popular method\\* due to its \\*simplicity\\* in training, use, and interpretation.
 >
 > 8 The assumptions underlying the Naive Bayes method will be discussed in the upcoming
 > videos.
@@ -975,22 +980,22 @@
 <a id="node-5w6pbeg"></a>
 
 > [!NOTE]
-> 1 The main **assumption** underlying the naïve bayes method is **independence**
-> of **words in a sentence.**
+> 1 The main \\*assumption\\* underlying the naïve bayes method is \\*independence\\*
+> of \\*words in a sentence.\\*
 >
-> 2 Naïve bayes is a **simple** model that **doesn't require setting custom
-> parameter**s.
+> 2 Naïve bayes is a \\*simple\\* model that \\*doesn't require setting custom
+> parameter\\*s.
 >
-> 3 Naïve bayes assumes **independence** between the predictors or **features**
-> associated with each class, which may **not always be the case.**
+> 3 Naïve bayes assumes \\*independence\\* between the predictors or \\*features\\*
+> associated with each class, which may \\*not always be the case.\\*
 >
-> 4 Naïve bayes could l**ead to under or overestimation** of the **conditional
-> probabilities of individual words.**  5 Naïve bayes **relies on the distribution of the
-> training data sets**, which could result in an **overly optimistic or pessimistic
-> model**.
+> 4 Naïve bayes could l\\*ead to under or overestimation\\* of the \\*conditional
+> probabilities of individual words. \\* 5 Naïve bayes \\*relies on the distribution of the
+> training data sets\\*, which could result in an \\*overly optimistic or pessimistic
+> model\\*.
 >
-> 6 The assumption of **independence in naïve bayes is difficult to guarantee**, but
-> the model **works well in certain situations.**
+> 6 The assumption of\\* independence in naïve bayes is difficult to guarantee\\*, but
+> the model \\*works well in certain situations.\\*
 >
 > 7 The relative frequency of positive and negative tweets in training data sets needs
 > to be balanced for accurate results.
@@ -1061,22 +1066,22 @@
 <a id="node-evi6q7s"></a>
 
 > [!NOTE]
-> 1 **NLP errors** are **inevitable** no matter what method you use
+> 1 \\*NLP errors\\* are \\*inevitable\\* no matter what method you use
 >
-> 2 Errors in NLP can be caused by **loss of semantic meaning**, **word**
-> **order**, and **language quirks** that are **difficult for machines** to understand
+> 2 Errors in NLP can be caused by \\*loss of semantic meaning\\*, \\*word\\*
+> \\*order\\*, and \\*language quirks\\* that are \\*difficult for machines\\* to understand
 >
-> 3 It's important to **analyze processed text** to ensure accurate results,
-> including **checking for punctuation and word removal**
+> 3 It's important to \\*analyze processed text\\* to ensure accurate results,
+> including \\*checking for punctuation and word removal\\*
 >
-> 4 **Naïve base classification** relies on word **frequency** **counts** and can
-> lead to **errors due to its independence assumption**
+> 4 \\*Naïve base classification\\* relies on word \\*frequency\\* \\*counts\\* and can
+> lead to \\*errors due to its independence assumption\\*
 >
-> 5 **Word vectors** can be used to improve NLP results
+> 5 \\*Word vectors\\* can be used to improve NLP results
 >
-> 6 Naïve base classification may fail in cases of **adversarial attacks,**
-> which are **language phenomena like sarcasm, irony, and euphemism**
-> that machines have **difficulty understanding.**
+> 6 Naïve base classification may fail in cases of \\*adversarial attacks,\\*
+> which are \\*language phenomena like sarcasm, irony, and euphemism\\*
+> that machines have\\* difficulty understanding.\\*
 
 <br>
 
@@ -1094,6 +1099,8 @@
 > Đại khái là nhớ lại 1 điểm lưu ý trong Processing bữa trước khi
 > removing **Punctuation** phải cẩn thận vì đôi khi nó chứa thông tin quan
 > trọng, ví dụ bỏ cái mặt buồn ở dưới thôi là thay đổi hết ý nghĩa câu
+
+**🔗 See also:** [linked note](./c1w1_logistic_regression.md#node-4y3azjg)
 
 <br>
 
@@ -1131,17 +1138,19 @@
 > [!NOTE]
 > An adversarial attack in the context of naïve Bayes refers to a situation
 > where the model misclassifies a text input due to the use of language
-> phenomena such as **sarcasm, irony, or euphemism.** These language phenomena can be **easily understood by humans**
-> but can be **challenging for machines** to interpret. In the given
-> example, the text "This is a ridiculously powerful movie. The plot was
-> gripping and I cried right through until the ending" contains **positive**
-> language, but the **pre-processing step used by naïve Bayes** to
-> extract features and analyze sentiment may **incorrectly classify it as
-> negative** due to the presence of words like "**ridiculous**" or "cried."
+> phenomena such as \\*sarcasm, irony, or euphemism.
 >
-> This can **result in inaccurate sentiment analysis** and affect the
+> \\*These language phenomena can be \\*easily understood by humans\\*
+> but can be \\*challenging for machines\\* to interpret. In the given
+> example, the text "This is a ridiculously powerful movie. The plot was
+> gripping and I cried right through until the ending" contains \\*positive\\*
+> language, but the \\*pre-processing step used by naïve Bayes\\* to
+> extract features and analyze sentiment may \\*incorrectly classify it as
+> negative\\* due to the presence of words like "\\*ridiculous\\*" or "cried."
+>
+> This can \\*result in inaccurate sentiment analysis\\* and affect the
 > overall performance of the model. To avoid such adversarial attacks, it
-> is important to use **more sophisticated models** that can better
+> is important to use \\*more sophisticated models\\* that can better
 > understand the nuances of language and context. (GPT)
 >
 > Đại khái cái sao đó chính là hiện tượng gọi là Adversarial
@@ -1237,26 +1246,26 @@
 <a id="node-lfx7uyd"></a>
 
 > [!NOTE]
-> Welcome to week two of this specialization. You will learn about **Naive
-> Bayes**. Concretely, you will be using Naive Bayes for **sentiment analysis** on
-> **tweets**. Given a tweet, you will decide if it has a positive sentiment or a
+> Welcome to week two of this specialization. You will learn about \\*Naive
+> Bayes\\*. Concretely, you will be using Naive Bayes for \\*sentiment analysis\\* on
+> \\*tweets\\*. Given a tweet, you will decide if it has a positive sentiment or a
 > negative one. Specifically you will:
 >
-> • **Train a naive bayes model** on a **sentiment analysis task**
+> • \\*Train a naive bayes model\\* on a \\*sentiment analysis task\\*
 >
-> • **Test using your model**
+> • \\*Test using your model\\*
 >
-> • **Compute ratios of positive words to negative words**
+> • \\*Compute ratios of positive words to negative words\\*
 >
-> • Do some **error analysis**
+> • Do some \\*error analysis\\*
 >
 > • Predict on your own tweet
 >
 > You may already be familiar with Naive Bayes and its justification in terms of
-> **conditional probabilities** and **independence**.
+> \\*conditional probabilities\\* and \\*independence\\*.
 >
-> • In this week's lectures and assignments we used the **ratio of probabilities
-> between positive and negative sentiment.**
+> • In this week's lectures and assignments we used the \\*ratio of probabilities
+> between positive and negative sentiment.\\*
 >
 > • This approach gives us simpler formulas for these 2-way classification
 > tasks.
@@ -1274,17 +1283,17 @@
 > [!NOTE]
 > from utils import process_tweet, lookup
 > import pdb
-> from **nltk.corpus** import **stopwords**, **twitter_samples**
+> from \\*nltk.corpus\\* import \\*stopwords\\*, \\*twitter_samples\\*
 > import numpy as np
 > import pandas as pd
 > import nltk
 > import string
-> from nltk.tokenize import **TweetTokenizer**
+> from nltk.tokenize import \\*TweetTokenizer\\*
 > from os import getcwd
 > import w2_unittest
 >
-> **nltk.download('twitter_samples')
-> nltk.download('stopwords')**
+> \\*nltk.download('twitter_samples')
+> nltk.download('stopwords')\\*
 
 <br>
 
@@ -1308,20 +1317,20 @@
 > filePath = f"{getcwd()}/../tmp2/"
 > nltk.data.path.append(filePath)
 >
-> \\/# **get the sets of positive and negative tweets**\\/
-> all_positive_tweets = twitter_samples.strings('**positive_tweets.json**')
-> all_negative_tweets = twitter_samples.strings('**negative_tweets.json**')
+> \\/# \\*get the sets of positive and negative tweets\\*\\/
+> all_positive_tweets = twitter_samples.strings('\\*positive_tweets.json\\*')
+> all_negative_tweets = twitter_samples.strings('\\*negative_tweets.json\\*')
 >
-> \\/# **split the data into two pieces**, one for training and one for testing (validation set)
-> \\/test_pos = all_positive_tweets[**4000**:]
-> train_pos = all_positive_tweets[:**4000**]
+> \\/# \\*split the data into two pieces\\*, one for training and one for testing (validation set)
+> \\/test_pos = all_positive_tweets[\\*4000\\*:]
+> train_pos = all_positive_tweets[:\\*4000\\*]
 > test_neg = all_negative_tweets[4000:]
 > train_neg = all_negative_tweets[:4000]
 >
 > train_x = train_pos + train_neg
 > test_x = test_pos + test_neg
 >
-> **# avoid assumptions about the length of all_positive_tweets**
+> \\*# avoid assumptions about the length of all_positive_tweets\\*
 > train_y = np.append(np.ones(len(train_pos)), np.zeros(len(train_neg)))
 > test_y = np.append(np.ones(len(test_pos)), np.zeros(len(test_neg)))
 
@@ -1336,21 +1345,22 @@
 <a id="node-nk4iitd"></a>
 
 > [!NOTE]
-> For any machine learning project, once you've gathered the data, **the first step is to process it** to make useful inputs to your model.
+> For any machine learning project, once you've gathered the data, \\*the first step is to process it
+> \\*to make useful inputs to your model.
 >
-> **Remove noise**: You will first want to remove noise from your data -- that is, **remove words
-> that don't tell you much** about the content. These include all **common words like 'I, you, are,
-> is**, etc...' that would not give us enough information on the sentiment.
+> \\*Remove noise\\*: You will first want to remove noise from your data -- that is, \\*remove words
+> that don't tell you much\\* about the content. These include all \\*common words like 'I, you, are,
+> is\\*, etc...' that would not give us enough information on the sentiment.
 >
-> We'll also remove **stock market tickers**, **retweet** **symbols**, **hyperlinks**, and **hashtags**
+> We'll also remove \\*stock market tickers\\*, \\*retweet\\* \\*symbols\\*, \\*hyperlinks\\*, and \\*hashtags\\*
 > because they can not tell you a lot of information on the sentiment. You also want to remove all
-> the **punctuation** from a tweet. The reason for doing this is because we want to **treat words
-> with or without the punctuation** as the same word, instead of treating "happy" , "happy?", "
+> the \\*punctuation\\* from a tweet. The reason for doing this is because we want to \\*treat words
+> with or without the punctuation\\* as the same word, instead of treating "happy" , "happy?", "
 > happy!", "happy," and "happy." as different words.
 >
-> Finally you want to use **stemming** to only keep track of one variation of each word. In other
+> Finally you want to use \\*stemming\\* to only keep track of one variation of each word. In other
 > words, we'll treat "motivation", "motivated", and " motivate" similarly by grouping them within the
-> same stem of **"motiv-"**. We have given you the function \\/**process_tweet**\\/ that does this for
+> same stem of \\*"motiv-"\\*. We have given you the function \\/\\*process_tweet\\*\\/ that does this for
 > you.
 
 <br>
@@ -1377,12 +1387,12 @@
 <a id="node-y37ysk9"></a>
 
 > [!NOTE]
-> To help you train your naive bayes model, you will need to **compute a dictionary** where the **keys are a tuple
-> (word, label)** and the values are the corresponding **frequency**. Note that the labels we'll use here are 1 **for
-> positive and 0 for negative**.
+> To help you train your naive bayes model, you will need to \\*compute a dictionary\\* where the \\*keys are a tuple
+> (word, label) \\*and the values are the corresponding \\*frequency\\*. Note that the labels we'll use here are 1\\* for
+> positive and 0 for negative\\*.
 >
-> You will also implement a **lookup helper function** that takes in the **freqs** **dictionary**, a **word**, and a
-> **label** (1 or 0) and **returns the number of times that word and label tuple appears in the collection of tweets.**
+> You will also implement a \\*lookup helper function\\* that takes in the \\*freqs\\* \\*dictionary\\*, a \\*word\\*, and a
+> \\*label\\* (1 or 0) and \\*returns the number of times that word and label tuple appears in the collection of tweets.\\*
 >
 > For example: given a list of tweets ["I am rather excited", "you are rather happy"] and the label 1, the function will
 > return a dictionary that contains the following key-value pairs:
@@ -1391,8 +1401,8 @@
 >
 > - Notice how for each word in the given string, the same label 1 is assigned to each word.
 >
-> - Notice how the words "I" and "am" are not saved, since it was removed by **process_tweet** because it is a
-> **stopword**.
+> - Notice how the words "I" and "am" are not saved, since it was removed by \\*process_tweet\\* because it is a
+> \\*stopword\\*.
 >
 > - Notice how the word " rather" appears twice in the list of tweets, and so its count value is 2.
 
@@ -1407,25 +1417,25 @@
 <a id="node-d1kqhvl"></a>
 
 > [!NOTE]
-> Create a function **count_tweets** that **takes a list of tweets** as input, **cleans** all of them, and **returns a
-> dictionary**.
+> Create a function \\*count_tweets\\* that \\*takes a list of tweets\\* as input, \\*cleans\\* all of them, and \\*returns a
+> dictionary\\*.
 >
-> - The **key** in the dictionary is a **tuple containing the stemmed word and its class label,** e.g. ("happi",1).
+> - The \\*key\\* in the dictionary is a \\*tuple containing the stemmed word and its class label,\\* e.g. ("happi",1).
 >
-> - The **value** the **number of times this word appears in the given collection of tweet**s (an integer).
+> - The \\*value\\* the \\*number of times this word appears in the given collection of tweet\\*s (an integer).
 >
-> **Hints**
+> \\*Hints\\*
 >
-> • Please use the `**process_tweet**` function that was imported above, and then store the words in their respective
+> • Please use the `\\*process_tweet\\*` function that was imported above, and then store the words in their respective
 > dictionaries and sets.
 >
-> • You may find it useful to use the `**zip**` function to match each element in `tweets` with each element in `ys`.
+> • You may find it useful to use the `\\*zip\\*` function to match each element in `tweets` with each element in `ys`.
 >
-> • Remember to **check** if the key in the dictionary **exists** before adding that key to the dictionary, or
+> • Remember to \\*check\\* if the key in the dictionary \\*exists\\* before adding that key to the dictionary, or
 > incrementing its value.
 >
 > • Assume that the `result` dictionary that is input will contain clean key-value pairs (you can assume that the values
-> will be integers that can be incremented). It is **good practice to check the datatype** before **incrementing** the
+> will be integers that can be incremented). It is\\* good practice to check the datatype\\* before \\*incrementing\\* the
 > value, but it's not required here.
 
 <br>
@@ -1484,14 +1494,14 @@
 <a id="node-hozvdnb"></a>
 
 > [!NOTE]
-> \\/**Create freqs dictionary** \\/
+> \\/\\*Create freqs dictionary \\*\\/
 >
-> • Given your **count_tweets** function, you can compute a dictionary
-> called **freqs** that contains all the frequencies.
+> • Given your \\*count_tweets\\* function, you can compute a dictionary
+> called \\*freqs\\* that contains all the frequencies.
 >
-> • In this freqs dictionary, the **key** is the tuple **(word, label)**
+> • In this freqs dictionary, the \\*key\\* is the tuple \\*(word, label)\\*
 >
-> • The value is the **number of times it has appeared**.
+> • The value is the \\*number of times it has appeared\\*.
 >
 > We will use this dictionary in several parts of this assignment.
 
@@ -1570,11 +1580,11 @@
 > [!NOTE]
 > Note 
 >
-> Note we calculate the **prior** from the **training data**,
+> Note we calculate the \\*prior\\* from the \\*training data\\*,
 > and that the training data is evenly split between positive
 > and negative labels (4000 positive and 4000 negative
 > tweets). This means that the ratio of positive to negative 1,
-> and the logprior is **0.**
+> and the logprior is \\*0.\\*
 >
 > The value of 0.0 means that when we add the logprior to
 > the log likelihood, we're just adding zero to the log
@@ -1605,17 +1615,17 @@
 <a id="node-tblta79"></a>
 
 > [!NOTE]
-> Implement test_naive_bayes. **Instructions**:
+> Implement test_naive_bayes. \\*Instructions\\*:
 >
-> • Implement **test_naive_bayes** to check the accuracy of your
+> • Implement \\*test_naive_bayes\\* to check the accuracy of your
 > predictions.
 >
-> • The function takes in your **test_x**, **test_y**, **log_prior**, and
-> **loglikelihood**
+> • The function takes in your \\*test_x\\*, \\*test_y\\*, \\*log_prior\\*, and
+> \\*loglikelihood\\*
 >
 > • It returns the accuracy of your model.
 >
-> • First, use **naive_bayes_predict** function to make predictions
+> • First, use \\*naive_bayes_predict\\* function to make predictions
 > for each tweet in test_x.
 
 <br>
@@ -1689,7 +1699,7 @@
 <a id="node-565arho"></a>
 
 > [!NOTE]
-> • Some words have **more positive counts** than others, and can be
+> • Some words have \\*more positive counts\\* than others, and can be
 > considered "more positive". Likewise, some words can be considered
 > more negative than others.
 >
@@ -1703,8 +1713,8 @@
 > • We can calculate the ratio of positive to negative frequencies of a
 > word.
 >
-> • Once we're able to calculate these ratios, we can also **filter a subset of
-> words** that have a **minimum ratio of positivity / negativity** or higher.
+> • Once we're able to calculate these ratios, we can also \\*filter a subset of
+> words\\* that have a \\*minimum ratio of positivity / negativity\\* or higher.
 >
 > • Similarly, we can also filter a subset of words that have a maximum
 > ratio of positivity / negativity or lower (words that are at least as
