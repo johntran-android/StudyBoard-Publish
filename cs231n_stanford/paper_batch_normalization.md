@@ -150,6 +150,8 @@
 > Ngoài ra còn vai trò regularization cũng như cho phép xài hàm 
 > saturating nonlinearity**
 
+**🔗 See also:** [linked note](./assignment_2_fully_connected_nn.md#node-enu7klx)
+
 <br>
 
 <a id="node-h1w95tf"></a>
@@ -167,6 +169,8 @@
 > Cho thấy việc thực hiện **whitening** (transform data sao cho zero
 > center,  và variance = 1, như đã biết trong lec note) input sẽ giúp
 > training converge nhanh hơn
+
+**🔗 See also:** [linked note](./note_neural_network_part_2.md#node-fgbl2s9)
 
 <br>
 
