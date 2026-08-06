@@ -33,16 +33,16 @@
 > have come this far, but I'm so sad that it's almost the end. Before we are
 > done, I want to tell you about the reformer model.
 >
-> This week, we will be talking about **chatbots** and you will be using a dataset
-> called **Martin Voss**. This dataset has about **10,000 human annotated
-> dialogues** and spans **multiple domains and topics**. You will be using it to **train
-> your model**. The **Reformer** has **two main advantages** over the traditional
-> transformer. First, it makes use of **reversible layers**. So in the former
-> propagation, you **don't have to store the layer data** to use in the back
+> This week, we will be talking about \\*chatbots\\* and you will be using a dataset
+> called \\*Martin Voss\\*. This dataset has about \\*10,000 human annotated
+> dialogues\\* and spans \\*multiple domains and topics\\*. You will be using it to\\* train
+> your model\\*. The \\*Reformer\\* has \\*two main advantages\\* over the traditional
+> transformer. First, it makes use of \\*reversible layers\\*. So in the former
+> propagation, you \\*don't have to store the layer data\\* to use in the back
 > propagation.
 >
-> It also makes use of l**ocality sensitive hashing**, which you learned about in
-> the course 1. It **speeds up the attention search**
+> It also makes use of l\\*ocality sensitive hashing\\*, which you learned about in
+> the course 1. It \\*speeds up the attention search\\*
 >
 > Đại khái là sẽ học về **Reformer model, có hai advantage so với Transformer.**
 > là dùng **Reversible** layer giúp cải thiện **backpropagarion** và **Locality
@@ -61,32 +61,32 @@
 <a id="node-ax9ntn7"></a>
 
 > [!NOTE]
-> 1/ This week focuses on **pushing the transformer model** to work on **longer
-> sequences**, which is essential for tasks like **writing books, storytelling, and
-> chatbots.**
+> 1/ This week focuses on \\*pushing the transformer model\\* to work on \\*longer
+> sequences\\*, which is essential for tasks like \\*writing books, storytelling, and
+> chatbots.\\*
 >
-> 2/ It's **increasingly challenging** to distinguish between human-written
+> 2/ It's \\*increasingly challenging\\* to distinguish between human-written
 > content and AI-generated content.
 >
-> 3/ Many models for **long sequences,** like **GPT-3**, are e**xpensive to train**
-> due to their size, **requiring industrial-scale compute**.
+> 3/ Many models for\\* long sequences,\\* like \\*GPT-3\\*, are e\\*xpensive to train\\*
+> due to their size, \\*requiring industrial-scale compute\\*.
 >
-> 4/ The session will introduce the **"reformer" model**, also known as the
-> **reversible transformer**, highlighting its significance and functionality.
+> 4/ The session will introduce the\\* "reformer" model\\*, also known as the
+> \\*reversible transformer\\*, highlighting its significance and functionality.
 >
-> 5/ Participants will **build and train a chatbot** that can **handle extensive text
-> sequences**, using all the **prior context** in a conversation to generate
+> 5/ Participants will \\*build and train a chatbot\\* that can\\* handle extensive text
+> sequences\\*, using all the \\*prior context\\* in a conversation to generate
 > appropriate replies.
 >
-> 6/ The differences between **context-based Q&A** and c**losed-loop Q&A** are
-> **revisited**, with **emphasis on how chatbots function similarly to the latter.**
+> 6/ The differences between\\* context-based Q&A\\* and c\\*losed-loop Q&A \\*are
+> \\*revisited\\*, with \\*emphasis on how chatbots function similarly to the latter.\\*
 >
-> 7/ The assignment for the week will u**tilize the NLP knowledge** from
-> previous courses, **harnessing transformers** for l**ong sequences** to develop
+> 7/ The assignment for the week will u\\*tilize the NLP knowledge\\* from
+> previous courses, \\*harnessing transformers\\* for l\\*ong sequences \\*to develop
 > a chatbot.
 >
-> 8/ **Long sequence tasks** are not easily addressed by **simply applying the
-> transformer model**; reasons for this complexity will be discussed in the
+> 8/ \\*Long sequence tasks\\* are not easily addressed by \\*simply applying the
+> transformer model\\*; reasons for this complexity will be discussed in the
 > subsequent video.
 
 <br>
@@ -149,37 +149,37 @@
 <a id="node-ejfq99a"></a>
 
 > [!NOTE]
-> 1/ Running a large transformer on **long sequences** often results in **memory issues.**
+> 1/ Running a large transformer on \\*long sequences\\* often results in \\*memory issues.\\*
 >
-> 2/ **Transformers' size** introduces various **engineering challenges**, particularly when
-> **handling attention.**
+> 2/ \\*Transformers' size\\* introduces various \\*engineering challenges\\*, particularly when
+> \\*handling attention.\\*
 >
-> 3/ Attention on a sequence of **length L** demands **L squared time and memory**, mainly
-> because of the **pairwise comparison of each word in two sentences**.
+> 3/ Attention on a sequence of \\*length L\\* demands \\*L squared time and memory\\*, mainly
+> because of the \\*pairwise comparison of each word in two sentences\\*.
 >
-> 4/ The memory requirement is **compounded with increased layers**, as demonstrated by
-> **GPT-3's 96 layers.**
+> 4/ The memory requirement is \\*compounded with increased layers\\*, as demonstrated by
+> \\*GPT-3's 96 layers.\\*
 >
-> 5/ **Calculations** become **increasingly cumbersome** as sequence lengths grow, e.g., a
-> sequence of **10,000 words** demands **100 million operations**.
+> 5/ \\*Calculations\\* become \\*increasingly cumbersome\\* as sequence lengths grow, e.g., a
+> sequence of \\*10,000 words\\* demands \\*100 million operations\\*.
 >
-> 6/ The **attention mechanism formula** involves the **softmax of Q times K transpose times
-> V**, where Q, K, and V are all dimensions of (**L , d_model)**, resulting in a **square memory
-> requirement**.
+> 6/ The \\*attention mechanism formula\\* involves the \\*softmax of Q times K transpose times
+> V\\*, where Q, K, and V are all dimensions of (\\*L , d_model)\\*, resulting in a \\*square memory
+> requirement\\*.
 >
-> 7/ For **longer sequences**, it's often **unnecessary to consider the entire length**; **focusing on
-> specific areas or words can be more efficient.**
+> 7/ For \\*longer sequences\\*, it's often \\*unnecessary to consider the entire length\\*; \\*focusing on
+> specific areas or words can be more efficient.\\*
 >
-> 8/ **Memory usage increases** with **more layers** because of the **need to store forward pass
-> activations for backpropagation**.
+> 8/ \\*Memory usage increases\\* with \\*more layers\\* because of the \\*need to store forward pass
+> activations for backpropagation\\*.
 >
-> 9/ Although one can **reduce memory** by **recomputing activations**, this can be
-> **time-consuming**, especially for models like GPT-3.
+> 9/ Although one can \\*reduce memory\\* by \\*recomputing activations\\*, this can be
+> \\*time-consuming\\*, especially for models like GPT-3.
 >
-> 10/ The goal is to **find efficient ways** to **speed up re-computation to save on memory.**
+> 10/ The goal is to \\*find efficient ways\\* to \\*speed up re-computation to save on memory.\\*
 >
-> 11/ The video underscores two **primary contributors** to **computational complexity** in
-> transformers, and **subsequent content** will address improving these for handling long
+> 11/ The video underscores two \\*primary contributors\\* to \\*computational complexity\\* in
+> transformers, and \\*subsequent content\\* will address improving these for handling long
 > sequences.
 
 <br>
@@ -229,20 +229,20 @@
 <a id="node-0pyxpd8"></a>
 
 > [!NOTE]
-> When you are handling long sequences, you usually **don't need to
-> consider all L positions**. You can **just focus on an area of interest**
+> When you are handling long sequences, you usually \\*don't need to
+> consider all L positions\\*. You can\\* just focus on an area of interest\\*
 > instead. For example, when translating a long text from one language to
-> another, you **don't need to consider every word at once**. You can **instead
-> focus on a single word being translated**, and **those immediately around
-> it**, by using attention.
+> another, you \\*don't need to consider every word at once\\*. You can \\*instead
+> focus on a single word being translated\\*, and \\*those immediately around
+> it\\*, by using attention.
 >
-> To overcome the **memory requirements** you can **recompute the
-> activations**. As long as you do it efficiently, you will be able to save a
+> To overcome the \\*memory requirements\\* you can \\*recompute the
+> activations\\*. As long as you do it efficiently, you will be able to save a
 > good amount of time and memory. You will learn this week how to do it.
 >
-> Instead of **storing N layers**, you will be **able to recompute them when
-> doing the back-propagation**. That combined with **local attention**, will give
-> you a **much faster model** that **works at the same level** as the
+> Instead of \\*storing N layers\\*, you will be \\*able to recompute them when
+> doing the back-propagation\\*. That combined with \\*local attention\\*, will give
+> you a \\*much faster model\\* that \\*works at the same level\\* as the
 > transformer you learned about last week.
 
 <br>
@@ -645,20 +645,20 @@
 <a id="node-5vv0z5t"></a>
 
 > [!NOTE]
-> The videos describe two 'reforms' made to the **Transformer** to
-> make it more **memory** and **compute efficient**. The **Reversible
-> Layers** reduce memory and **Locality Sensitive Hashing (LSH)**
-> reduces the **cost of the Dot Product attention** for large input sizes.
-> This ungraded lab will look more closely **at LSH** and how it is
+> The videos describe two 'reforms' made to the \\*Transformer\\* to
+> make it more \\*memory\\* and \\*compute efficient\\*. The \\*Reversible
+> Layers\\* reduce memory and \\*Locality Sensitive Hashing (LSH)\\*
+> reduces the \\*cost of the Dot Product attention\\* for large input sizes.
+> This ungraded lab will look more closely \\*at LSH\\* and how it is
 > used in the Reformer model.
 >
 > Specifically, the notebook has 3 goals
 >
-> - review **dot-product self attention** for reference
+> - review \\*dot-product self attention\\* for reference
 >
-> - examine **LSH based self attention**
+> - examine \\*LSH based self attention\\*
 >
-> - extend our **understanding and familiarity with Trax infrastructure**
+> - extend our \\*understanding and familiarity with Trax infrastructure\\*
 >
 > Đại khái là trong bài nói có hai technique giúp
 > cải thiện Transformer là Reversible Layers và
@@ -1096,29 +1096,30 @@
 <a id="node-of3q1uh"></a>
 
 > [!NOTE]
-> 1. **Memory Efficiency** in **Deep Models**: **Large deep models** often **run out of memory** due to the
-> **continuous allocation of memory** by each layer. This problem can be addressed using
-> **reversible layers.**
+> 1. \\*Memory Efficiency\\* in \\*Deep Models\\*:\\* Large deep models\\* often \\*run out of memory\\* due to the
+> \\*continuous allocation of memory\\* by each layer. This problem can be addressed using
+> \\*reversible layers.\\*
 >
-> 2. **Reversible Residual Connections**: To save memory while **running the Transformer network
-> in reverse**, **reversible residual connections** are introduced. These **connections allow you to
-> recompute activations quickly instead of storing them**.
+> 2. \\*Reversible Residual Connections\\*: To save memory while \\*running the Transformer network
+> in reverse\\*, \\*reversible residual connections\\* are introduced. These \\*connections allow you to
+> recompute activations quickly instead of storing them\\*.
 >
-> 3. Reversible Layer Configuration: The key idea is to **have two copies of the model inputs** and
-> **update only one of them at each laye**r. The **unmodified activations are used to compute
-> residuals.**
+> 3. Reversible Layer Configuration: The key idea is to \\*have two copies of the model inputs\\* and
+> \\*update only one of them at each laye\\*r. The\\* unmodified activations are used to compute
+> residuals.\\*
 >
 > 4. Reversible Layer Equations: The standard residual connection equations in a Transformer
-> are modified in the reversible case. **The forward pass computes Y_1 and Y_2, while X_1 and
-> X_2 are reconstructed to save memory.**
+> are modified in the reversible case. \\*The forward pass computes Y_1 and Y_2, while X_1 and
+> X_2 are reconstructed to save memory.\\*
 >
 > 5. Forward Pass in Reversible Layers: In the forward pass of reversible layers, Y_1 is
 > calculated first using attention, and then Y_2 is computed based on Y_1 and feedforward
 > operations. This illustrates how information flows from left to right.
 >
 > 6. Memory Savings: Reversible residual blocks combine attention and feedforward layers into
-> a single block, **reducing the need to store activations for each individual layer and saving
-> memory.** 
+> a single block, \\*reducing the need to store activations for each individual layer and saving
+> memory.
+> \\*
 > 7. Backward Pass in Reversible Layers: In the backward pass, X_2 is computed before X_1.
 > X_2 is calculated from Y_2 and feedforward, and then X_1 is computed from Y_1 and the
 > attention operation. This reverse pass allows you to recover the inputs without storing
@@ -1406,24 +1407,24 @@
 
 > [!NOTE]
 > Welcome to the last assignment of Course 4. Before you get started, we want to congratulate you
-> on getting here. It is your **16th programming assignment** in this Specialization and we are very
-> proud of you! In this assignment, you are going to use the **Reformer**, also known as the **efficient
-> Transformer**, to generate a **dialogue between two bots**. You will **feed conversations to your
-> model** and it will **learn how to understand the context of each one**. Not only will it **learn how to
-> answer questions** but it will also **know how to ask questions if it needs more info**. For example,
+> on getting here. It is your\\* 16th programming assignment\\* in this Specialization and we are very
+> proud of you! In this assignment, you are going to use the \\*Reformer\\*, also known as the \\*efficient
+> Transformer\\*, to generate a \\*dialogue between two bots\\*. You will \\*feed conversations to your
+> model\\* and it will \\*learn how to understand the context of each one\\*. Not only will it \\*learn how to
+> answer questions\\* but it will also \\*know how to ask questions if it needs more info\\*. For example,
 > after a customer asks for a train ticket, the chatbot can ask what time the said customer wants to
 > leave. You can use this concept to automate call centers, hotel receptions, personal trainers, or any
 > type of customer service. By completing this assignment, you will:
 >
-> Understand **how the Reformer works**
+> Understand \\*how the Reformer works\\*
 >
-> Explore the **MultiWoz dataset**
+> Explore the \\*MultiWoz dataset\\*
 >
-> **Process the data to feed it into the model**
+> \\*Process the data to feed it into the model\\*
 >
 > Train your model
 >
-> **Generate a dialogue by feeding a question to the model**
+> \\*Generate a dialogue by feeding a question to the model\\*
 
 <br>
 
@@ -1643,26 +1644,27 @@
 
 > [!NOTE]
 > Dataset contains the following files:
-> 1. **data.json**: the **woz dialogue dataset,** which contains the **conversation  users and wizards**, as well 
-> as a **set of coarse labels for each user turn**. This file contains both system and user dialogue acts annotated 
-> at the turn level. Files with **multi-domain dialogues** have "**MUL**" in their names. **Single domain dialogues** have 
-> either "**SNG**" or "**WOZ**" in their names.
-> 2. **restaurant_db.json**: the **Cambridge restaurant database file**, containing **restaurants** in the 
-> **Cambridge UK area** and a **set of attributes.**
-> 3. **attraction_db.json**: the Cambridge attraction database file, contining attractions in the 
+> 1. \\*data.json\\*: the \\*woz dialogue dataset,\\* which contains the \\*conversation  users and wizards\\*, as well 
+> as a\\* set of coarse labels for each user turn\\*. This file contains both system and user dialogue acts annotated 
+> at the turn level. Files with \\*multi-domain dialogues\\* have "\\*MUL\\*" in their names.\\* Single domain dialogues\\* have 
+> either "\\*SNG\\*" or "\\*WOZ\\*" in their names.
+> 2. \\*restaurant_db.json\\*: the\\* Cambridge restaurant database file\\*, containing \\*restaurants\\* in the 
+> \\*Cambridge UK area\\* and a \\*set of attributes.\\*
+> 3. \\*attraction_db.json\\*: the Cambridge attraction database file, contining attractions in the 
 > Cambridge UK area and a set of attributes.
-> 4. **hotel_db.json**: the Cambridge hotel database file, containing hotels in the Cambridge 
+> 4. \\*hotel_db.json\\*: the Cambridge hotel database file, containing hotels in the Cambridge 
 > UK area and a set of attributes.
-> 5. **train_db.json**: the Cambridge train (with artificial connections) database file, containing 
+> 5. \\*train_db.json\\*: the Cambridge train (with artificial connections) database file, containing 
 > trains in the Cambridge UK area and a set of attributes.
-> 6. **hospital_db.json**: the Cambridge hospital database file, contatining information about departments.
-> 7. **police_db.json**: the Cambridge police station information.
-> 8. **taxi_db.json**: slot-value list for taxi domain.
+> 6. \\*hospital_db.json\\*: the Cambridge hospital database file, contatining information about departments.
+> 7. \\*police_db.json\\*: the Cambridge police station information.
+> 8. \\*taxi_db.json\\*: slot-value list for taxi domain.
 >
-> 9. **valListFile.txt**: list of **dialogues for validation.**
-> 10. **testListFile.txt**: list of **dialogues for testing.** 
-> 11. **system_acts.json**:
->   There are **6 domains ('Booking', 'Restaurant', 'Hotel', 'Attraction', 'Taxi', 'Train')** and **1 dummy domain ('general')**.
+> 9. \\*valListFile.txt\\*: list of \\*dialogues for validation.\\*
+> 10. \\*testListFile.txt\\*: list of \\*dialogues for testing.
+>    \\*
+> 11. \\*system_acts.json\\*:
+>   There are \\*6 domains ('Booking', 'Restaurant', 'Hotel', 'Attraction', 'Taxi', 'Train')\\* and \\*1 dummy domain ('general')\\*.
 >   A domain-dependent dialogue act is defined as a domain token followed by a domain-independent 
 > dialogue act, e.g. 'Hotel-inform' means it is an 'inform' act in the Hotel domain.
 >   Dialogue acts which cannot take slots, e.g., 'good bye', are defined under the 'general' domain.
@@ -1670,8 +1672,8 @@
 >   If a dialogue act takes no slots, e.g., dialogue act 'offer booking' for an utterance 'would you like 
 > to take a reservation?', its slot-value pair is ['none', 'none']
 >
->  There are **four types of values:**
->   1) If a slot takes a **binary value**, e.g., **'has Internet' or 'has park'**, the value is either **'yes' or 'no'.**
+>  There are \\*four types of values:\\*
+>   1) If a slot takes a \\*binary value\\*, e.g., \\*'has Internet' or 'has park'\\*, the value is either \\*'yes' or 'no'.\\*
 >   2) If a slot is under the act 'request', e.g., 'request' about 'area', the value is expressed as '?'.
 >   3) The value that appears in the utterance e.g., the name of a restaurant.
 >   4) If for some reason the turn does not have an annotation then it is labeled as "No Annotation."
@@ -1686,10 +1688,10 @@
 <a id="node-bivaiwb"></a>
 
 > [!NOTE]
-> As you can see, there are **many other aspects** of the **MultiWoz**
-> dataset. Nonetheless, you'll see that **even with just the
+> As you can see, there are \\*many other aspects\\* of the \\*MultiWoz\\*
+> dataset. Nonetheless, you'll see that \\*even with just the
 > conversations, your model will still be able to generate useful
-> responses**. This concludes our exploration of the dataset. In the
+> responses\\*. This concludes our exploration of the dataset. In the
 > next section, we will do some preprocessing before we feed it into
 > our model for training.
 >
@@ -1866,13 +1868,13 @@
 <a id="node-fv0dpgp"></a>
 
 > [!NOTE]
-> When running large deep models, you will often **run out of
-> memory** as **each layer allocates memory to store
-> activations** for use in **backpropagation**.
+> When running large deep models, you will often \\*run out of
+> memory\\* as \\*each layer allocates memory to store
+> activations\\* for use in \\*backpropagation\\*.
 >
-> To save this resource, you need to be able to **recompute
+> To save this resource, you need to be able to \\*recompute
 > these activations during the backward pass without storing
-> them during the forward pass**. Take a look first at the
+> them during the forward pass\\*. Take a look first at the
 > leftmost diagram below.
 >
 > Như bài trước đã phân tích nhu cầu phải có **Reversible**
@@ -1989,10 +1991,10 @@
 <a id="node-fn5w7hr"></a>
 
 > [!NOTE]
-> You will now proceed to **training your model**. Since you have already
-> know the **two main components** that differentiates it from the standard
+> You will now proceed to \\*training your model\\*. Since you have already
+> know the \\*two main components\\* that differentiates it from the standard
 > Transformer, LSH in Course 1 and reversible layers above, you can
-> **just use the pre-built model already implemented in Trax**. It will have
+> \\*just use the pre-built model already implemented in Trax\\*. It will have
 > this architecture:
 >
 > Qua quá trình training. Ở đây do mình **đã biết hai điểm khác so với
@@ -2017,10 +2019,10 @@
 
 > [!NOTE]
 > Similar to the Transformer you learned earlier, you want to apply
-> an **attention** and **feed forward layer** to your **inputs**.
+> an \\*attention\\* and \\*feed forward layer\\* to your \\*inputs\\*.
 >
-> For the **Reformer**, we improve the **memory efficiency** by
-> using **reversible decoder blocks** and you can picture its
+> For the \\*Reformer\\*, we improve the \\*memory efficiency\\* by
+> using \\*reversible decoder blocks\\* and you can picture its
 > implementation in Trax like below:
 
 <br>
@@ -2038,25 +2040,25 @@
 <a id="node-syndf2p"></a>
 
 > [!NOTE]
-> You can see that it takes the **initial inputs x1 and x2** and
-> does the **first equation of the reversible networks** you
-> learned in Part 3. As you've also learned, the **reversible
-> residual** has **two equations for the forward-pass** so doing
+> You can see that it takes the\\* initial inputs x1 and x2\\* and
+> does the \\*first equation of the reversible networks\\* you
+> learned in Part 3. As you've also learned, the \\*reversible
+> residual \\*has \\*two equations for the forward-pass\\* so doing
 > just one of them will just constitute half of the reversible
 > decoder block.
 >
 > Before doing the second equation (i.e. second half of the
-> reversible residual), it first needs to **swap the elements** to
-> **take into account the stack semantics in Trax**. It simply puts
-> **x2 on top of the stack** so it can be fed to the add block of the
-> half-residual layer. It then **swaps the two outputs again** so it
+> reversible residual), it first needs to \\*swap the elements\\* to
+> \\*take into account the stack semantics in Trax\\*. It simply puts
+> \\*x2 on top of the stack\\* so it can be fed to the add block of the
+> half-residual layer. It then \\*swaps the two outputs again\\* so it
 > can be fed to the next layer of the network. All of these arrives
-> at the two equations in Part 3 and it can be **used to recompute
-> the activations during the backward pass.**
+> at the two equations in Part 3 and it can be \\*used to recompute
+> the activations during the backward pass.\\*
 >
-> These are **already implemented for you in Trax** and in the
-> following exercise, you'll get to **practice how to call them to
-> build your network.**
+> These are \\*already implemented for you in Trax\\* and in the
+> following exercise, you'll get to\\* practice how to call them to
+> build your network.\\*
 >
 > Cơ bản **nói thêm về cách thức hoạt động** để hiểu sơ, còn
 > **Trax nó implement ở dưới** rồi đó là sau bước tính thứ nhất
@@ -2332,7 +2334,7 @@
 <a id="node-2rrv8ga"></a>
 
 > [!NOTE]
-> def **generate_dialogue**(ReformerLM, model_state, **start_sentence**, vocab_file, vocab_dir, max_len, temperature):
+> def \\*generate_dialogue\\*(ReformerLM, model_state, \\*start_sentence\\*, vocab_file, vocab_dir, max_len, temperature):
 >     """
 >     Args:
 >         ReformerLM:  the Reformer language model you just trained
@@ -2362,11 +2364,11 @@
 >     # output tokens. we insert a ': ' for formatting
 >     result = [tokenize(': ', vocab_file=vocab_file, vocab_dir=vocab_dir)]
 >
->     # **reset the model state** when **starting a new dialogue**
->     **ReformerLM.state = model_state**
+>     # \\*reset the model state\\* when\\* starting a new dialogue\\*
+>     \\*ReformerLM.state = model_state\\*
 >
 >     # calls the output generator implemented earlier
->     output = **ReformerLM_output_gen**(ReformerLM, start_sentence, vocab_file=VOCAB_FILE,  
+>     output = \\*ReformerLM_output_gen\\*(ReformerLM, start_sentence, vocab_file=VOCAB_FILE,  
 >                                                vocab_dir=VOCAB_DIR, temperature=temperature)
 >
 >
