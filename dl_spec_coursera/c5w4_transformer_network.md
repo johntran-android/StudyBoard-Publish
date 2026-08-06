@@ -27,15 +27,15 @@
 > Main idea:
 >
 > The transformer architecture is a complex neural network architecture that
-> has **revolutionized the field of NLP**. It allows for **parallel processing of
-> sequences**, unlike traditional sequential models such as RNNs, GRUs, and
+> has \\*revolutionized the field of NLP\\*. It allows for \\*parallel processing of
+> sequences\\*, unlike traditional sequential models such as RNNs, GRUs, and
 > LSTMs.
 >
-> The major innovation of the transformer architecture is **combining** the use of
-> **attention-based representations** and a **CNN-style of processing**.
+> The major innovation of the transformer architecture is \\*combining\\* the use of
+> \\*attention-based representations\\* and a \\*CNN-style of processing\\*.
 >
-> **Self-attention** and **multi-headed attention** are the two key ideas that go into
-> **computing rich representations** for **all the words in a sentence in parallel.**
+> \\*Self-attention\\* and \\*multi-headed attention\\* are the two key ideas that go into
+> \\*computing rich representations\\* for \\*all the words in a sentence in parallel.\\*
 > These representations can be used for machine translation or other NLP
 > tasks to create effectiveness.
 >
@@ -103,26 +103,26 @@
 <a id="node-ye63ywk"></a>
 
 > [!NOTE]
-> 1 Self-attention mechanism of transformers is **the most
-> important core idea** behind what makes transformer networks
+> 1 Self-attention mechanism of transformers is \\*the most
+> important core idea\\* behind what makes transformer networks
 > work.
 >
-> 2 To \\/**use attention with a style more like CNNs**\\/, you need to
-> **calculate self-attention**, where you create **attention-based
-> representations for each of the words in your input sentence**.
+> 2 To \\/\\*use attention with a style more like CNNs\\*\\/, you need to
+> \\*calculate self-attention\\*, where you create \\*attention-based
+> representations for each of the words in your input sentence\\*.
 >
-> 3 For every word, you have three values called the **query**, **key**,
-> and **value**, which are the key inputs to **computing the attention
-> value for each word**.
+> 3 For every word, you have three values called the \\*query\\*, \\*key\\*,
+> and \\*value\\*, which are the key inputs to \\*computing the attention
+> value for each word\\*.
 >
-> 4 The query, key, and value vectors are supposed to **pull up
-> the most information** that's needed to help compute the most
+> 4 The query, key, and value vectors are supposed to \\*pull up
+> the most information\\* that's needed to help compute the most
 > useful representation.
 >
-> 5 The goal of the operation is to **create attention-based
-> representations** for each word that \\_**look at the surrounding
+> 5 The goal of the operation is to \\*create attention-based
+> representations\\* for each word that \\_\\*look at the surrounding
 > words to figure out what's actually going on in how we're
-> talking about the word in the sentence.**\\_
+> talking about the word in the sentence.\\*\\_
 
 <br>
 
@@ -288,26 +288,28 @@
 > hiểu được đó là  Ba cái matrix Q, K, V được tạo ra như thế nào
 >
 > Thì đây, đaị khái là một cái Attention (không phải Self-attention nha) sẽ
-> cần 3 cái **INPUT PARAMS có tên là Query, Key và Value** và ba cái này sẽ dùng để tính ra Q, K, V.
+> cần 3 cái \\*INPUT PARAMS có tên là Query, Key và Value
+>
+> \\*và ba cái này sẽ dùng để tính ra Q, K, V.
 >
 > Và (cái này thì ông Andrew có hint) là để làm Self-attention thì ba cái
-> Query, Key và  Value sẽ **giống nhau**
+> Query, Key và  Value sẽ \\*giống nhau\\*
 >
-> Đại khái là ta sẽ bỏ cái embedding-encoding block vào và cho nó **ĐỒNG
+> Đại khái là ta sẽ bỏ cái embedding-encoding block vào và cho nó \\*ĐỒNG
 > THỜI LÀ Query, Key, và Value
 >
-> Rồi nó tính Q, K, V như thế nào?**
+> Rồi nó tính Q, K, V như thế nào?\\*
 >
-> Đại khái là thông qua **linear layer** của Attention với các weights matrix **W_Q**, **W_K**,
-> **W_V** - Đều có size là (**emb_dim**, **emb_dim**). Qua các linear layer này Query, Key,
+> Đại khái là thông qua \\*linear layer\\* của Attention với các weights matrix \\*W_Q\\*, \\*W_K\\*,
+> \\*W_V\\* - Đều có size là (\\*emb_dim\\*, \\*emb_dim\\*). Qua các linear layer này Query, Key,
 > Value input params (mà ta sẽ gán vào cho tụi nó bằng cái embedded sequence bao gồm
-> word embedding và positional embedding) sẽ **" tạo ra"** ba matrix **Q**, **K**, **V**
-> - đều có shape là **sequence_len** x **emb_dim**.
+> word embedding và positional embedding) sẽ \\*" tạo ra"\\* ba matrix \\*Q\\*, \\*K\\*, \\*V\\*
+> - đều có shape là \\*sequence_len\\* x \\*emb_dim\\*.
 >
-> Rồi từ Q,K,V nó sẽ tính ra **attention score** và nói ngắn gọn cộng với những cái mà Andrew
+> Rồi từ Q,K,V nó sẽ tính ra \\*attention score\\* và nói ngắn gọn cộng với những cái mà Andrew
 > cũng đã nói và giải thích rõ trong article 4 của loạt bài đó là: Trong quá trình training, tất cả
-> các **word embedding vectors** và **weights** của Attention linear layers **W_Q**, **W_K**,**W_V** sẽ được
-> **train** sao cho cách sắp xếp/kiến trúc của attention giúp minimize loss qua đó tìm ra được
+> các \\*word embedding vectors\\* và \\*weights\\* của Attention linear layers \\*W_Q\\*, \\*W_K\\*,\\*W_V\\* sẽ được
+> \\*train\\* sao cho cách sắp xếp/kiến trúc của attention giúp minimize loss qua đó tìm ra được
 > các weight và embedding sao cho word embedded vector phản ánh tốt nhất thông tin của 1
 > từ.Khúc cuối này khá khó diễn đạt, nhưng đại khái là cách kiến trúc của Attention sẽ giúp khi
 > training nó sẽ cải thiện dần dần embedding vector đồng nghĩa giảm dần cost.
@@ -324,7 +326,7 @@
 
 > [!NOTE]
 > 1 Multi-head attention mechanism is a modification of self-attention
-> mechanism that involves **computing multiple self-attentions** for a given
+> mechanism that involves \\*computing multiple self-attentions\\* for a given
 > sequence.
 >
 > 2 The input vectors Q, K, and V are multiplied by matrices WQ, WK, and
@@ -333,13 +335,13 @@
 > 3 The same set of query, key, and value vectors are used to compute
 > multiple self-attentions.
 >
-> 4 Each self-attention calculation for a sequence is called a **head**, and the
-> number of heads is denoted by **'h'**.
+> 4 Each self-attention calculation for a sequence is called a \\*head\\*, and the
+> number of heads is denoted by \\*'h'\\*.
 >
-> 5 **Each head represents a different feature**, and the final output is the
-> **concatenation of all the heads**.
+> 5 \\*Each head represents a different feature\\*, and the final output is the
+> \\*concatenation of all the heads\\*.
 >
-> 6 The different heads' values can **be computed in parallel** because no
+> 6 The different heads' values can \\*be computed in parallel\\* because no
 > head's value depends on the value of any other head.
 >
 > 7 In practice, the computation of different heads' values is not done in a big
@@ -433,28 +435,28 @@
 <a id="node-dazdkvt"></a>
 
 > [!NOTE]
-> 1 The transformer architecture **combines self-attention** and **multi-headed
-> attention** mechanisms to perform sequence to sequence translation
+> 1 The transformer architecture \\*combines self-attention\\* and \\*multi-headed
+> attention\\* mechanisms to perform sequence to sequence translation
 > tasks.
 >
-> 2 The encoder block takes the **word embeddings** as input and uses
-> **multi-headed attention to compute Q, K, and V matrices** which are then
-> passed through a **feed-forward neural network**.
+> 2 The encoder block takes the \\*word embeddings\\* as input and uses
+> \\*multi-headed attention to compute Q, K, and V matrices\\* which are then
+> passed through a \\*feed-forward neural network\\*.
 >
-> 3 The **decoder** block generates the English translation **by using
+> 3 The \\*decoder\\* block generates the English translation \\*by using
 > multi-headed attention to compute Q, K, and V matrices from the
-> previous output** and the **French sentence embeddings**, and passing
-> them through a **feed-forward neural network** to **generate the next word in
-> the sequence**.
+> previous output\\* and the \\*French sentence embeddings\\*, and passing
+> them through a \\*feed-forward neural network\\* to \\*generate the next word in
+> the sequence\\*.
 >
-> 4 The transformer architecture uses **positional encoding** to account for
+> 4 The transformer architecture uses \\*positional encoding\\* to account for
 > the position of each word in the input sequence.
 >
-> 5 The transformer architecture is **repeated N times**, typically **six**, to
-> **improve the accuracy** of the translation task.
+> 5 The transformer architecture is \\*repeated N times\\*, typically \\*six\\*, to
+> \\*improve the accuracy\\* of the translation task.
 >
-> 6 The transformer architecture has additional features such as **residual
-> connections**, **layer normalization**, and **masked multi-headed attention** to
+> 6 The transformer architecture has additional features such as \\*residual
+> connections\\*, \\*layer normalization\\*, and \\*masked multi-headed attention\\* to
 > improve its performance.
 
 <br>
@@ -721,8 +723,8 @@
 > [!NOTE]
 > eg. Consider two sentences:
 >
-> The **cat** drank the milk because **it** was hungry.
-> The cat drank the **milk** because **it** was sweet.
+> The \\*cat\\* drank the milk because \\*it\\* was hungry.
+> The cat drank the \\*milk\\* because \\*it\\* was sweet.
 >
 > Ví dụ trong 2 câu này thì từ 'it' "chỉ" tới 2 cái khác nhau
 
@@ -763,25 +765,25 @@
 <a id="node-f0lz9w8"></a>
 
 > [!NOTE]
-> 1.The input sequence is **converted** into **Embeddings** (with **Position Encoding**)
-> and **fed to the Encoder.**
+> 1.The input sequence is \\*converted\\* into \\*Embeddings\\* (with \\*Position Encoding\\*)
+> and \\*fed to the Encoder.\\*
 >
-> 2.The stack of Encoders processes this and produces an **encoded
-> representation of the input sequence**.
+> 2.The stack of Encoders processes this and produces an \\*encoded
+> representation of the input sequence\\*.
 >
-> 3.The **target sequence** is **prepended** with a **start-of-sentence token**, converted
-> into **Embeddings** (with Position Encoding), and fed to the Decoder.
+> 3.The \\*target sequence\\* is \\*prepended\\* with a \\*start-of-sentence token\\*, converted
+> into \\*Embeddings\\* (with Position Encoding), and fed to the Decoder.
 >
-> 4.The stack of Decoders processes this **along with the Encoder stack’s
-> encoded representation** to produce an **encoded representation of the target
-> sequence**.
+> 4.The stack of Decoders processes this \\*along with the Encoder stack’s
+> encoded representation\\* to produce an \\*encoded representation of the target
+> sequence\\*.
 >
-> 5.The Output layer **converts** it into **word probabilities** and the **final output
-> sequence**.
+> 5.The Output layer \\*converts\\* it into \\*word probabilities\\* and the \\*final output
+> sequence\\*.
 >
-> 6.The Transformer’s **Loss function** **compares** this output sequence with the
+> 6.The Transformer’s \\*Loss function\\* \\*compares\\* this output sequence with the
 > target sequence from the training data. This loss is used to generate gradients
-> to train the Transformer during **back-propagation**.
+> to train the Transformer during \\*back-propagation\\*.
 
 <br>
 
@@ -810,29 +812,29 @@
 <a id="node-xj0l5i7"></a>
 
 > [!NOTE]
-> 1.The input sequence is **converted** into **Embeddings** (with **Position Encoding**) and **fed
-> to the Encoder.**
+> 1.The input sequence is \\*converted\\* into \\*Embeddings\\* (with \\*Position Encoding\\*) and \\*fed
+> to the Encoder.\\*
 >
-> 2.The stack of Encoders **processes** this and produces **an encoded representation** of
+> 2.The stack of Encoders \\*processes\\* this and produces\\* an encoded representation\\* of
 > the input sequence.
 >
-> 3.Instead of the target sequence, we use an **empty sequence** with only a
-> **start-of-sentence token**. This is converted into **Embeddings** (with **Position Encoding**)
-> and **fed to the Decoder.**
+> 3.Instead of the target sequence, we use an \\*empty sequence\\* with only a
+> \\*start-of-sentence token\\*. This is converted into \\*Embeddings\\* (with \\*Position Encoding\\*)
+> and \\*fed to the Decoder.\\*
 >
-> 4.The stack of Decoders **processes** this along **with the Encoder stack’s encoded
-> representation** to produce an **encoded representation of the target sequence.**
+> 4.The stack of Decoders \\*processes\\* this along \\*with the Encoder stack’s encoded
+> representation\\* to produce an \\*encoded representation of the target sequence.\\*
 >
-> 5.The Output layer **converts** it into **word probabilities** and produces an **output
-> sequence**.
+> 5.The Output layer \\*converts\\* it into \\*word probabilities\\* and produces an \\*output
+> sequence\\*.
 >
-> 6.We **take the last word of the output sequence** as the **predicted word**. That word is
+> 6.We \\*take the last word of the output sequence\\* as the \\*predicted word\\*. That word is
 > now filled into the second position of our Decoder input sequence, which now contains
 > a start-of-sentence token and the first word.
 >
 > 7.Go back to step #3. As before, feed the new Decoder sequence into the model. Then
-> **take the second word of the output and append it to the Decoder sequence**. Repeat
-> this **until it predicts an end-of-sentence token**. Note that since the Encoder sequence
+> \\*take the second word of the output and append it to the Decoder sequence\\*. Repeat
+> this \\*until it predicts an end-of-sentence token\\*. Note that since the Encoder sequence
 > does not change for each iteration, we do not have to repeat steps #1 and #2 each
 > time (\\/Thanks to Michal Kučírka for pointing this out\\/).
 
@@ -1090,7 +1092,7 @@
 <a id="node-n3oj6on"></a>
 
 > [!NOTE]
-> The (**samples, sequence length, embedding size**) shape
+> The (\\*samples, sequence length, embedding size\\*) shape
 > produced by the Embedding and Position Encoding layers is
 > preserved all through the Transformer, as the data flows
 > through the Encoder and Decoder Stacks until it is reshaped
@@ -1129,7 +1131,7 @@
 
 > [!NOTE]
 > The Encoder and Decoder Stacks consists of several
-> (**usually six**) Encoders and Decoders respectively,
+> (\\*usually six\\*) Encoders and Decoders respectively,
 > connected sequentially.
 >
 > The first Encoder in the stack receives its input from the
@@ -1213,11 +1215,11 @@
 > - Encoder-Decoder-attention in the Decoder — the target
 > sequence pays attention to the input sequence
 >
-> ***The Attention layer takes its input in the form of three
-> parameters, known as the Query, Key, and Value.**
+> *\\*The Attention layer takes its input in the form of three
+> parameters, known as the Query, Key, and Value.\\*
 >
-> I**n the Encoder’s Self-attention, the Encoder’s input is
-> passed to all three parameters, Query, Key, and Value.**
+> I\\*n the Encoder’s Self-attention, the Encoder’s input is
+> passed to all three parameters, Query, Key, and Value.\\*
 >
 > Có nghĩa đại khái là 1 Attention layer nó quy định
 > sẽ nhận input ở dạng 3 params là Query, Key,
@@ -1278,17 +1280,17 @@
 
 > [!NOTE]
 > The Transformer calls each Attention processor an
-> Attention Head and **repeats it several times in
-> parallel**. This is known as Multi-head attention. It
-> gives its Attention **greater power of discrimination**, by
-> **combining several similar Attention calculations**.
+> Attention Head and \\*repeats it several times in
+> parallel\\*. This is known as Multi-head attention. It
+> gives its Attention \\*greater power of discrimination\\*, by
+> \\*combining several similar Attention calculations\\*.
 >
 > The Query, Key, and Value are each passed through
-> separate **Linear layers**, each with their **own weights**,
-> producing three results called **Q**, **K**, and **V**
+> separate \\*Linear layers\\*, each with their \\*own weights\\*,
+> producing three results called \\*Q\\*, \\*K\\*, and \\*V\\*
 > respectively. These are then combined together using
-> the **Attention formula** as shown below, to produce the
-> **Attention Score**.
+> the \\*Attention formula\\* as shown below, to produce the
+> \\*Attention Score\\*.
 
 <br>
 
@@ -1330,8 +1332,8 @@
 <a id="node-yfefm9t"></a>
 
 > [!NOTE]
-> The important thing to realize here is that the Q, K, and V values **carry
-> an encoded representation of each word in the sequence**. The
+> The important thing to realize here is that the Q, K, and V values \\*carry
+> an encoded representation of each word in the sequence\\*. The
 > Attention calculations then combine each word with every other word
 > in the sequence, so that the Attention Score encodes a score for each
 > word in the sequence.
@@ -1375,9 +1377,11 @@
 <a id="node-ns6f739"></a>
 
 > [!NOTE]
-> In the Decoder Self-attention: masking serves to **prevent the
+> In the Decoder Self-attention: masking serves to \\*prevent the
 > decoder from ‘peeking’ ahead at the rest of the target sentence
-> when predicting the next word.** The Decoder processes words in the source sequence and
+> when predicting the next word.
+>
+> \\*The Decoder processes words in the source sequence and
 > uses them to predict the words in the destination sequence.
 > During training, this is done via Teacher Forcing, where the
 > complete target sequence is fed as Decoder inputs. Therefore,
@@ -1415,8 +1419,8 @@
 > When calculating the Attention Score (refer to the picture
 > earlier showing the calculations) masking is applied to
 > the numerator just before the Softmax. The masked out
-> elements (white squares) are set to **negative infinity**,
-> so that **Softmax turns those values to zero**.
+> elements (white squares) are set to \\*negative infinity\\*,
+> so that \\*Softmax turns those values to zero\\*.
 >
 > Cái này có thể bổ trợ cho việc hiểu thêm về
 > khúc này của Programming assignment vốn
@@ -1442,18 +1446,18 @@
 > The last Decoder in the stack passes its output to the Output
 > component which converts it into the final output sentence.
 >
-> The Linear layer projects the Decoder vector into **Word Scores**,
+> The Linear layer projects the Decoder vector into \\*Word Scores\\*,
 > with a score value for each unique word in the target vocabulary,
 > at each position in the sentence. For instance, if our final output
 > sentence has 7 words and the target Spanish vocabulary has
-> 10000 unique words, we generate **10000 score values** for each of
+> 10000 unique words, we generate \\*10000 score values\\* for each of
 > those 7 words. The score values indicate the likelihood of
 > occurrence for each word in the vocabulary in that position of the
 > sentence.
 >
-> The **Softmax** layer then **turns those scores into probabilities** (which
+> The \\*Softmax\\* layer then \\*turns those scores into probabilities\\* (which
 > add up to 1.0). In each position, we find the index for the word with
-> the **highest probability**, and then map that index to the
+> the \\*highest probability\\*, and then map that index to the
 > corresponding word in the vocabulary. Those words then form the
 > output sequence of the Transformer.
 >
@@ -1476,9 +1480,9 @@
 <a id="node-fvvsl9q"></a>
 
 > [!NOTE]
-> During training, we use a loss function such as **cross-entropy loss** to
-> **compare** the \\_**generated output probability distribution**\\_ to the **target
-> sequence**. The probability distribution gives the probability of each word
+> During training, we use a loss function such as \\*cross-entropy loss\\* to
+> \\*compare\\* the \\_\\*generated output probability distribution\\*\\_ to the \\*target
+> sequence\\*. The probability distribution gives the probability of each word
 > occurring in that position.
 >
 > Let’s assume our target vocabulary contains just four words. Our goal is to
@@ -1489,7 +1493,7 @@
 > have a probability of 1 for the second and third word-positions respectively.
 >
 > As usual, the loss is used to compute gradients to train the Transformer via
-> **backpropagation**.
+> \\*backpropagation\\*.
 
 <br>
 
@@ -1611,11 +1615,11 @@
 > [!NOTE]
 > n the Transformer, the Attention module repeats its
 > computations multiple times in parallel. Each of these is called
-> an Attention Head. The Attention module **splits its Query, Key,
-> and Value parameters N-ways** and **passes each split
-> independently through a separate Head**. All of these similar
-> Attention calculations are then **combined together** to produce a
-> **final Attention score**. This is called Multi-head attention and
+> an Attention Head. The Attention module \\*splits its Query, Key,
+> and Value parameters N-ways\\* and \\*passes each split
+> independently through a separate Head\\*. All of these similar
+> Attention calculations are then \\*combined together\\* to produce a
+> \\*final Attention score\\*. This is called Multi-head attention and
 > gives the Transformer greater power to encode multiple
 > relationships and nuances for each word.
 >
@@ -1641,17 +1645,17 @@
 <a id="node-rl481xn"></a>
 
 > [!NOTE]
-> - **Embedding Size** — width of the embedding vector (we use
+> - \\*Embedding Size\\* — width of the embedding vector (we use
 > a width of 6 in our example). This dimension is carried
 > forward throughout the Transformer model and hence is
 > sometimes referred to by other names like ‘model size’ etc.
 >
-> - **Query Size** (equal to Key and Value size)— the size of the
+> - \\*Query Size\\* (equal to Key and Value size)— the size of the
 > weights used by three Linear layers to produce the Query,
 > Key, and Value matrices respectively (we use a Query size of
 > 3 in our example)
 >
-> - **Number of Attention heads** (we use 2 heads in our example)
+> - \\*Number of Attention heads\\* (we use 2 heads in our example)
 > In addition, we also have the Batch size, giving us one
 > dimension for the number of samples.
 
@@ -1724,17 +1728,17 @@
 
 > [!NOTE]
 > However, the important thing to understand is that this is a
-> **logical split only**.
+> \\*logical split only\\*.
 >
-> The Query, Key, and Value are **not physically split into
-> separate matrices**, one for each Attention head. A single data
+> The Query, Key, and Value are \\*not physically split into
+> separate matrices\\*, one for each Attention head. A single data
 > matrix is used for the Query, Key, and Value, respectively, with
-> **logically separate sections** of the matrix for each Attention
+> \\*logically separate sections\\* of the matrix for each Attention
 > head.
 >
-> Similarly, there are **not separate Linear layers**, one for each
+> Similarly, there are \\*not separate Linear layers\\*, one for each
 > Attention head. All the Attention heads share the same Linear
-> layer but simply operate on their ‘own’ **logical section** of the
+> layer but simply operate on their ‘own’ \\*logical section\\* of the
 > data matrix.
 >
 > Đại khái là chỉ split về logic thôi chứ vẫn chỉ có 1
@@ -1774,11 +1778,11 @@
 
 > [!NOTE]
 > The computations for all Heads can be therefore be
-> achieved via a **single matrix operation** rather than requiring
+> achieved via a \\*single matrix operation\\* rather than requiring
 > N separate operations. This makes the computations more
-> **efficient** and keeps the model **simple** because fewer Linear
-> layers are required, while still achieving the **power of the
-> independent** Attention heads.
+> \\*efficient\\* and keeps the model \\*simple\\* because fewer Linear
+> layers are required, while still achieving the \\*power of the
+> independent\\* Attention heads.
 
 <br>
 
@@ -2157,10 +2161,12 @@
 > source word by a series of transformations — embedding,
 > position encoding, and linear layer.
 >
-> **All of those transformations are trainable operations. This
+> \\*All of those transformations are trainable operations. This
 > means that the weights used in those operations are not
 > pre-decided but are learned by the model in such a way that they
-> produce the desired output predictions.** The key question is, how does the Transformer figure out what
+> produce the desired output predictions.
+>
+> \\*The key question is, how does the Transformer figure out what
 > set of weights will give it the best results? Keep this point in the
 > back of your mind as we will come back to it a little later.
 
@@ -2590,15 +2596,15 @@
 > advantage of parallel processing and allows you to substantially
 > speed up the training process.
 >
-> **After this assignment you'll be able to**:
+> \\*After this assignment you'll be able to\\*:
 >
-> • Create \\/**positional encodings**\\/ to capture **sequential
-> relationships** in data
+> • Create \\/\\*positional encodings\\*\\/ to capture \\*sequential
+> relationships\\* in data
 >
-> • Calculate \\/**scaled dot-product self-attention**\\/ with word
+> • Calculate \\/\\*scaled dot-product self-attention\\*\\/ with word
 > embeddings
 >
-> • Implement \\/**masked multi-head attention**\\/
+> • Implement \\/\\*masked multi-head attention\\*\\/
 >
 > • Build and train a\\/ Transformer model\\/
 
@@ -2966,6 +2972,8 @@
 >
 > và **d_model** chính là embedding_dimension**: Size của embedded vector.**
 
+**🔗 See also:** [linked note](#node-mmajyyk)
+
 <br>
 
 <a id="node-qam8ms1"></a>
@@ -3012,6 +3020,8 @@
 >
 > Tạm hiểu **"size of each attention head"** đại khái là **chiều dài của
 > word embedding vector**
+
+**🔗 See also:** [linked note](#node-pzc3rq8)
 
 <br>
 
@@ -3141,7 +3151,7 @@
 <a id="node-nvxlrgw"></a>
 
 > [!NOTE]
-> Giải thích dòng: **self.embedding = Embedding(input_vocab_size, self.embedding_dim)** 
+> Giải thích dòng: \\*self.embedding = Embedding(input_vocab_size, self.embedding_dim) \\*
 >
 > mà lúc call nó biến x từ:
 >
@@ -3149,7 +3159,7 @@
 >
 > để thành ra:
 >
-> x = self.embedding(x)  # (batch_size, input_seq_len, **embedding_dim**)
+> x = self.embedding(x)  # (batch_size, input_seq_len, \\*embedding_dim\\*)
 >
 > --> Đại khái là bước này define một Embedding layer, bài trước ta đã
 > làm (Embedding), nhưng ở đó mình dùng một pre-trained word
@@ -3164,10 +3174,12 @@
 > - Có thể confuse một chút là cái Self-Attention cũng tìm cách tạo các
 > vector A<> đại diện cho từ sao cho nó nắm bắt ngữ cảnh của từ trong
 > câu thì kệ nó cứ hiểu đại khái là cái (step) nào cũng có tác dụng của nó
-> -> Không có gì confuse sâu khi đọc 4 articles của **Ketan Doshi,** ta hiểu rằng
+> -> Không có gì confuse sâu khi đọc 4 articles của \\*Ketan Doshi,\\* ta hiểu rằng
 > Self Attention layer sẽ 'add' thêm vào các embedding vector này các thông
-> tin 'ngữ cảnh', tức **dimension của vector embedded vẫn vậy**, chỉ là được kiểu
+> tin 'ngữ cảnh', tức \\*dimension của vector embedded vẫn vậy\\*, chỉ là được kiểu
 > như là bồi đắp thêm/củng cố thêm thôi.
+
+**🔗 See also:** [linked note](./c5w2_natural_language_processing_word_embeddings.md#node-9w7kqkt)
 
 <br>
 
@@ -3176,18 +3188,18 @@
 <p align="center"><kbd><img src="assets/21h27cc5b2p.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Embedding layer trong document arg  \\/**input_dim**\\/: "Integer. Size of the
-> vocabulary",  **output_dim**: Integer. Dimension of the dense embedding
+> Embedding layer trong document arg  \\/\\*input_dim\\*\\/: "Integer. Size of the
+> vocabulary",  \\*output_dim\\*: Integer. Dimension of the dense embedding
 >
 > và
 >
-> Input shape 2D tensor with shape: (batch_size, **input_length**).
+> Input shape 2D tensor with shape: (batch_size, \\*input_length\\*).
 >
-> Output shape 3D tensor with shape: (batch_size, **input_length**,
-> **output_dim**).
+> Output shape 3D tensor with shape: (batch_size, \\*input_length\\*,
+> \\*output_dim\\*).
 >
-> Hiểu đại khái là đưa **input dim** là max của số lượng các từ cần embedded
-> vậy không "liên quan" đến **input_length !???**
+> Hiểu đại khái là đưa \\*input dim\\* là max của số lượng các từ cần embedded
+> vậy không "liên quan" đến \\*input_length !???\\*
 >
 > Nên khi define ở bài trước thì Embedding(vocab_size, embedding_dim) bài
 > này thì Embedding (input_vacab_size, embedding_dim) Còn khi 'chạy' ta đưa
@@ -3200,6 +3212,8 @@
 > quan" đến input_length Không biết hiểu vậy có
 > đúng không!??? Quay lại sau
 
+**🔗 See also:** [linked note](./c5w2_natural_language_processing_word_embeddings.md#node-9wym0fc)
+
 <br>
 
 <a id="node-qxg98q0"></a>
@@ -3211,36 +3225,39 @@
 <a id="node-mmajyyk"></a>
 
 > [!NOTE]
-> Giải thích dòng self.pos_encoding = positional_encoding(max..., **embedding_dim**)
+> Giải thích dòng self.pos_encoding = positional_encoding(max..., \\*embedding_dim\\*)
 >
-> Thì đại khái là sau loạt bài của **Ketan**, ta hiểu (rõ hơn) rằng một data instance 
+> Thì đại khái là sau loạt bài của \\*Ketan\\*, ta hiểu (rõ hơn) rằng một data instance 
 > (một sequence - hay một câu đi cho rõ) hoặc nhiều (một số lượng batch_size)
 > các sequence sẽ được trải qua quá trình xử lý như sau:
 >
 > a. Đuợc embedded (trong Keras như bài asigment này thì chính là bước Embedding
 > layer ở trên) -> Tức là quá trình mỗi một từ trong sequence (câu) sẽ được biến
-> thành một embedding vector có độ dài là **embedding_dim.** Cái này đã nói ở trên 
+> thành một embedding vector có độ dài là \\*embedding_dim. \\*Cái này đã nói ở trên 
 >
 > b. Cùng lúc đó, một cách ngắn gọn giải thích lại câu chuyện là tại vì không như RNN
-> mà ở đó ta đưa vào từng từ để learn nên có sẵn thông tin **vị trí**, bây giờ với Transformer
-> cách làm kết hợp lợi điểm của CNN là xử lý **CÙNG LÚC** và tuyệt chiêu **attention-based 
-> t**hì lại **không còn thông tin vị trí** nên phải dùng **kĩ thuật Positional Encoding** để bổ
+> mà ở đó ta đưa vào từng từ để learn nên có sẵn thông tin \\*vị trí\\*, bây giờ với Transformer
+> cách làm kết hợp lợi điểm của CNN là xử lý \\*CÙNG LÚC \\*và\\* \\*tuyệt chiêu \\*attention-based 
+> t\\*hì lại \\*không còn thông tin vị trí \\*nên phải dùng\\* kĩ thuật Positional Encoding \\*để bổ
 > sung thông tin này, tạm giải thích gọn vậy thôi.
 >
 > Vậy thì thông tin của positional encoding này sẽ có cùng shape với embedding vector
 > tức là cũng batch_size, sequence_length, embedding_size.
 > Mà điều có thể gây confuse là mr Andrew hình như không nói rõ trong bài giảng và trong
-> các function như positional_encoding thì dùng chữ **d / d_model** (trong test_function)
+> các function như positional_encoding thì dùng chữ \\*d / d_model \\*(trong test_function)
 > rằng cái positional encoding vector và word embedding vector đều có dimension là
-> **embedding_dim.** 
-> *Sẵn tiện trong loạt bài của Ketan cũng cho biết **embedding_dim** là constant dùng 
-> xuyên suốt nên còn được gọi là **d_model** giống như dimension của model vậy.
-> Cái này cũng giải thích bối rối **d-model** ở define **FullyConnected** (theo link mà xem)
+> \\*embedding_dim.
+> \\*
+> *Sẵn tiện trong loạt bài của Ketan cũng cho biết \\*embedding_dim\\* là constant dùng 
+> xuyên suốt nên còn được gọi là \\*d_model\\* giống như dimension của model vậy.
+> Cái này cũng giải thích bối rối \\*d-model\\* ở define \\*FullyConnected\\* (theo link mà xem)
 >
-> Để kết lại phải nói thêm là cái **positional_encoding** block sẽ được **CỘNG** với **word
-> embedding** block vì cùng size mà (batch, seq_len, emb_dim) trước khi bỏ vào Encoder
-> Câu này giải thích luôn cho dòng **x += self.pos_encoding** của call()
+> Để kết lại phải nói thêm là cái \\*positional_encoding\\* block sẽ được \\*CỘNG \\*với \\*word
+> embedding\\* block vì cùng size mà (batch, seq_len, emb_dim) trước khi bỏ vào Encoder
+> Câu này giải thích luôn cho dòng \\*x += self.pos_encoding \\*của call()
 > Còn cụ thể tại sao gọi (:,:sequence_len,:) thì chưa hiểu lắm
+
+**🔗 See also:** [linked note](#node-htbpmcj) · [linked note](#node-kpwnwu9)
 
 <br>
 
@@ -3253,31 +3270,35 @@
 >                                         fully_connected_dim=fully_connected_dim,
 >                                         dropout_rate=dropout_rate,
 >                                         layernorm_eps=layernorm_eps) 
->                            **for _ in range(self.num_layers)]**
+>                            \\*for _ in range(self.num_layers)]\\*
 >
-> Đại khái là nó tạo 1 list có **num_layers cái** EncoderLayer object 
-> Các argument như thế này là define theo required của function **__ini__()** 
-> trong **EncoderLayer** class
+> Đại khái là nó tạo 1 list có \\*num_layers cái \\*EncoderLayer object 
+> Các argument như thế này là define theo required của function\\* __ini__() \\*
+> trong \\*EncoderLayer\\* class
 >
 > Sau khi đọc loạt bài của Ketan, ta hiểu rằng người ta cho thông tin 'chạy qua'
 > một vài Encode, mà trong loạt bài của Ketan là 6 cái. Đừng lầm lẫn với 
 > Multi-head gì ở đây vốn là mỗi một Encoder chứa 1 cái Multi-head Attention
-> Và như vậy cứ **out của thằng (Encoder) trước là input của thằng sau** thôi.
+> Và như vậy cứ \\*out của thằng (Encoder) trước là input của thằng sau\\* thôi.
 > Nên trong function call() mr Andrew làm vậy trong for-loop num_layers  
 >
 > Cái input của Encoder sẽ là cái volume các embedding vector có shape như sau
-> (**batch_size**, **seq_len**, **emb_dim**)
+> (\\*batch_size\\*, \\*seq_len\\*, \\*emb_dim\\*)
 >
 > Kiểu như: 
-> - Có B - **batch_size** sample (sample là 1 câu đó), 
-> - Mỗi sample /câu có **sequence_len** từ
-> - Mỗi từ là một embedding vector có size là **embedding_dim**
+> - Có B - \\*batch_size\\* sample (sample là 1 câu đó), 
+> - Mỗi sample /câu có \\*sequence_len\\* từ
+> - Mỗi từ là một embedding vector có size là \\*embedding_dim\\*
+
+**🔗 See also:** [linked note](#node-cnj8lh8) · [linked note](#node-kpwnwu9)
 
 <br>
 
 <a id="node-kpwnwu9"></a>
 
 <p align="center"><kbd><img src="assets/bi2utygw506.png" width="80%"></kbd></p>
+
+**🔗 See also:** [linked note](#node-mmajyyk) · [linked note](#node-pzc3rq8) · [linked note](#node-ziv2et3)
 
 <br>
 
@@ -3330,11 +3351,19 @@
 <a id="node-ziv2et3"></a>
 
 > [!NOTE]
-> Chỗ này mr Andrew hình như đã nhầm khi mà ghi rằng:  **x** là tensor và
-> **enc_output** là shape: (batch_size, target_seq_len, **full_connected_dim là
-> đâu đúng? phải là embedding_dim chứ)** Mà ở Encoder ổng cũng ghi là output là batch_size, sequence_len, **embedding_dim**  Và output sau mha1 cũng là batch_size, sequence_len, **d_model** =  **embedding_dim
-> Nói chung có thể chỗ nào là fully_connected_dim đều phải sửa là embedding_dim** Vì Theo loạt bài của Ketan thì sequence embedding sẽ giữ nguyên shape là
-> **batch_size**, **sequence_len**, **embedding_dim** xuyên suốt
+> Chỗ này mr Andrew hình như đã nhầm khi mà ghi rằng:  \\*x\\* là tensor và
+> \\*enc_output\\* là shape: (batch_size, target_seq_len, \\*full_connected_dim là
+> đâu đúng? phải là embedding_dim chứ)
+>
+> \\*Mà ở Encoder ổng cũng ghi là output là batch_size, sequence_len, \\*embedding_dim\\* \\*
+> \\*Và output sau mha1 cũng là batch_size, sequence_len, \\*d_model\\* =  \\*embedding_dim
+> Nói chung có thể chỗ nào là fully_connected_dim đều phải sửa là embedding_dim
+>
+>
+> \\*Vì Theo loạt bài của Ketan thì sequence embedding sẽ giữ nguyên shape là
+> \\*batch_size\\*, \\*sequence_len\\*, \\*embedding_dim\\* xuyên suốt
+
+**🔗 See also:** [linked note](#node-kpwnwu9)
 
 <br>
 
@@ -3447,13 +3476,14 @@
 <a id="node-xc47td6"></a>
 
 > [!NOTE]
-> **Conclusion** You've come to the end of the graded portion of the assignment. By now, you've:
+> \\*Conclusion
+> \\*You've come to the end of the graded portion of the assignment. By now, you've:
 >  • Created positional encodings to capture sequential relationships in data
 >  • Calculated scaled dot-product self-attention with word embeddings
 >  • Implemented masked multi-head attention
 >  • Built and trained a Transformer model
 >
-> **What you should remember**:
+> \\*What you should remember\\*:
 >  • The combination of self-attention and convolutional network layers allows of parallelization of training and \\/faster training\\/.
 >  • Self-attention is calculated using the generated query Q, key K, and value V matrices.
 >  • Adding positional encoding to word embeddings is an effective way to include sequence information in self-attention calculations.
@@ -3510,9 +3540,9 @@
 > import matplotlib.pyplot as plt
 > import os
 >
-> from tensorflow.keras.layers import **Embedding**
-> from tensorflow.keras.preprocessing.text import **Tokenizer**
-> from tensorflow.keras.preprocessing.sequence import **pad_sequences**
+> from tensorflow.keras.layers import \\*Embedding\\*
+> from tensorflow.keras.preprocessing.text import \\*Tokenizer\\*
+> from tensorflow.keras.preprocessing.sequence import \\*pad_sequences\\*
 
 <br>
 
@@ -3628,12 +3658,12 @@
 <a id="node-l6a8gz3"></a>
 
 > [!NOTE]
-> You have gained insight into the **relationship
-> positional encoding vectors have with other vectors**
+> You have gained insight into the \\*relationship
+> positional encoding vectors have with other vectors\\*
 > at different positions by creating correlation and
 > distance matrices. Similarly, you can gain a stronger
-> intuition as to **how positional encodings affect word
-> embeddings** by visualizing the sum of these vectors.
+> intuition as to \\*how positional encodings affect word
+> embeddings\\* by visualizing the sum of these vectors.
 
 <br>
 
@@ -3789,7 +3819,7 @@
 <a id="node-4wii9kd"></a>
 
 > [!NOTE]
-> **What you should remember**:
+> \\*What you should remember\\*:
 >
 > • Positional encodings can be expressed as linear
 > functions of each other, which allow the model to
@@ -3851,9 +3881,9 @@
 > as named-entities and classify them as person, location, and time.
 >
 > - You will use a variation of the Transformer model you built in the last
-> assignment to **process a large dataset of resumes**.
+> assignment to \\*process a large dataset of resumes\\*.
 >
-> - You will find and **classify relevant information** such as the companies the
+> - You will find and \\*classify relevant information\\* such as the companies the
 > applicant worked at, skills, type of degree, etc.
 >
 > Đại khái là (ứng dụng NER) xử lý một tập resumes data lớn
@@ -3873,11 +3903,11 @@
 > Cái này ổng làm một loạt xem qua các function
 >
 > Khúc đầu đại khái là chuẩn bị một số function để giúp lấy dữ liệu
-> **get_entities**()... Mấy cái này nhờ CHatGPT sẽ có thể hiểu sau
+> \\*get_entities\\*()... Mấy cái này nhờ CHatGPT sẽ có thể hiểu sau
 >
-> - **convert_dataturks_to_spacy**: Hiểu đại khái là convert gì đó
+> - \\*convert_dataturks_to_spacy\\*: Hiểu đại khái là convert gì đó
 >
-> - **trim_entity_spans**: Removes leading and trailing white spaces
+> - \\*trim_entity_spans\\*: Removes leading and trailing white spaces
 > from entity spans -> Hiểu đại khái là trim
 >
 > Chưa hiểu cụ thể
@@ -4115,7 +4145,7 @@
 > last assignment to answer questions about stories.
 >
 > • You will implement extractive QA model in TensorFlow and in
-> PyTorch.  **Recommendation:**
+> PyTorch. \\* Recommendation:\\*
 >
 > • If you are interested, check out the \\_Course 4: Natural Language
 > Processing with Attention Models\\_ of our \\_Natural Language
@@ -4189,7 +4219,7 @@
 <a id="node-zot322i"></a>
 
 > [!NOTE]
-> **1.2 - Tokenize and Align with** 🤗 **Library** 
+> \\*1.2 - Tokenize and Align with \\*🤗\\* Library \\*
 >
 > Now you have all the data you need to train a Transformer model to perform Question
 > Answering! You are ready for a task you may have already encountered in the
