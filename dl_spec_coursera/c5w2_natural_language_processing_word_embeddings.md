@@ -109,18 +109,22 @@
 <a id="node-wdfi78p"></a>
 
 > [!NOTE]
-> Tiếp đại khái ý nói là cái word embedding này có thể được **'làm' bởi
-> large dataset** với hàng tỷ từ trên internet (tự làm hay download
-> pretrained word embedding) chỉ cần **dùng lại** nó trong vấn đề của
-> mình (như name entity recognition vốn **có ít data  hơn** nhiều) -
-> Chính là **'transfer learning'** Cuối cùng đại khái là khái niệm embedding nó rất gần với  khái niệm
-> encoding trong face encoding. Đúng hơn là ta **train ra 1 cái network để làm công tác encoding**: là cho
+> Tiếp đại khái ý nói là cái word embedding này có thể được \\*'làm' bởi
+> large dataset\\* với hàng tỷ từ trên internet (tự làm hay download
+> pretrained word embedding) chỉ cần \\*dùng lại\\* nó trong vấn đề của
+> mình (như name entity recognition vốn \\*có ít data  hơn\\* nhiều) -
+> Chính là \\*'transfer learning'
+>
+> \\*Cuối cùng đại khái là khái niệm embedding nó rất gần với  khái niệm
+> encoding trong face encoding.\\*
+>
+> \\*Đúng hơn là ta \\*train ra 1 cái network để làm công tác encoding\\*: là cho
 > 1 cái hình vào thì encoding ra được 1 vector sao cho cùng 1 người thì 2
 > vector gần nhau, khác người thì xa nhau. Và làm được vậy mới bất kì
 > khuôn mặt mới nào.
 >
-> Còn word embedding là ta sẽ tạo cho **mỗi từ một fixed value vector
-> mang đặc tính của từ đó**, và chỉ cần làm với 1 giới hạn từ vì từ lạ cứ
+> Còn word embedding là ta sẽ tạo cho \\*mỗi từ một fixed value vector
+> mang đặc tính của từ đó\\*, và chỉ cần làm với 1 giới hạn từ vì từ lạ cứ
 > cho là Unknown thôi Nói chung là hai khái niệm này rất gần nhau chỉ
 > khác nhau do cách làm.
 
@@ -349,8 +353,8 @@
 > almost magical. Therefore, the video will start by introducing slightly more complex
 > algorithms, which can help develop intuition about why they work.
 >
-> 4 **One way to learn a set of embeddings** is by **building a neural language
-> model**, which **predicts the next word in a sequence given the previous words**.
+> 4 \\*One way to learn a set of embeddings\\* is by \\*building a neural language
+> model\\*, which \\*predicts the next word in a sequence given the previous words\\*.
 >
 > 5 To build a neural network for this task, you can start by taking a list of words and
 > constructing a one-hot vector for each word.
@@ -519,7 +523,7 @@
 > binary classification với logistic regression
 > bằng cách 'tạo' target y đại khái nói là cặp
 > Orange-juice thì đúng (=1), các cặp khác (orange-king,...)
-> thì sai (=0) - **số từ sai quy định bởi 'k'**
+> thì sai (=0) - \\*số từ sai quy định bởi 'k'\\*
 >
 > Dựa vào cách define y như vậy, ta train 10.000 bài toán binary
 > thì đại khái sẽ nhanh hơn là train bài toán softmax.
@@ -804,12 +808,12 @@
 > learning algorithms are used in important decisions ranging from
 > college admissions to the criminal justice system.
 >
-> 4 To reduce or eliminate bias in word embeddings, one can **identify
-> the direction corresponding to a particular bias** and **perform
-> neutralization to get rid of bias in words that are not definitional**.
+> 4 To reduce or eliminate bias in word embeddings, one can \\*identify
+> the direction corresponding to a particular bias\\* and \\*perform
+> neutralization to get rid of bias in words that are not definitional\\*.
 >
-> 5 **The bias direction can be found using a singular value
-> decomposition algorithm**, and the neutralization step can make
+> 5 \\*The bias direction can be found using a singular value
+> decomposition algorithm\\*, and the neutralization step can make
 > words gender-neutral.
 
 <br>
@@ -966,18 +970,18 @@
 > Welcome to your first assignment of Week 2, Course 5 of the Deep Learning Specialization!
 >
 > Because word embeddings are very computationally expensive to train, most ML practitioners
-> will load a pre-trained set of embeddings. In this notebook you'll try your hand at \\_**loading**\\_,
-> \\_**measuring similarity between**\\_, and \\_**modifying pre-trained embeddings**\\_.
+> will load a pre-trained set of embeddings. In this notebook you'll try your hand at \\_\\*loading\\*\\_,
+> \\_\\*measuring similarity between\\*\\_, and \\_\\*modifying pre-trained embeddings\\*\\_.
 >
-> **After this assignment you'll be able to**:
+> \\*After this assignment you'll be able to\\*:
 >  • Explain how word embeddings capture relationships between words
 >  • Load pre-trained word vectors
 >  • Measure similarity between word vectors using cosine similarity
->  • Use word embeddings to solve word analogy problems such as Man is to Woman as King is to **__**.
+>  • Use word embeddings to solve word analogy problems such as Man is to Woman as King is to \\*__\\*.
 >
 >
 > At the end of this notebook you'll have a chance to try an optional exercise, where you'll modify
-> word embeddings to \\_**reduce their gender bias**\\_. Reducing bias is an important
+> word embeddings to \\_\\*reduce their gender bias\\*\\_. Reducing bias is an important
 > consideration in ML and NLP, so you're encouraged to take this chall
 
 <br>
@@ -1079,7 +1083,7 @@
 <a id="node-wvpz9e1"></a>
 
 > [!NOTE]
-> **Congratulations!** You've come to the end of the graded portion of the
+> \\*Congratulations! \\*You've come to the end of the graded portion of the
 > assignment. By now, you've:
 >
 > • Loaded some pre-trained word vectors
@@ -1094,7 +1098,7 @@
 > should be helpful to you in explaining how it works, and applying it to your
 > own projects!
 >
-> **What you should remember**:  • Cosine similarity is a good way to
+> \\*What you should remember\\*:  • Cosine similarity is a good way to
 > compare the similarity between pairs of word vectors.
 >
 > ▪ Note that L2 (Euclidean) distance also works.
@@ -1245,7 +1249,9 @@
 <a id="node-jf51xnp"></a>
 
 > [!NOTE]
-> **Congratulations!** You have come to the end of both graded and
+> \\*Congratulations!
+>
+> \\*You have come to the end of both graded and
 > ungraded portions of this notebook, and have seen
 > several of the ways that word vectors can be applied
 > and modified. Great work pushing your knowledge in
@@ -1269,7 +1275,9 @@
 <a id="node-j2ainjf"></a>
 
 > [!NOTE]
-> **What you'll build:**  1 In this exercise, you'll start with a baseline model (Emojifier-V1)
+> \\*What you'll build:
+>
+> \\* 1 In this exercise, you'll start with a baseline model (Emojifier-V1)
 > using word embeddings.
 >
 > 2 Then you will build a more sophisticated model (Emojifier-V2) that
@@ -1634,28 +1642,32 @@
 
 <p align="center"><kbd><img src="assets/z9box62267.png" width="80%"></kbd></p>
 
+**🔗 See also:** [linked note](#node-b4gjyv5)
+
 <br>
 
 <a id="node-9w7kqkt"></a>
 
 > [!NOTE]
 > Ở đây nói rất rõ là ta sẽ tự define Embedding layer BẰNG cách
-> **'set the embedding weights to be equal to the embedding
-> matrix'**
+> \\*'set the embedding weights to be equal to the embedding
+> matrix'\\*
 >
-> Bằng cách nào đó, tải trên mạng blah blah ta có một **dictionary**
-> Trong đó **mỗi từ sẽ với tương ứng một embedded vector** mà
+> Bằng cách nào đó, tải trên mạng blah blah ta có một \\*dictionary\\*
+> Trong đó \\*mỗi từ sẽ với tương ứng một embedded vector\\* mà
 > vector này đại diện cho nó, có tính chất như thế nào thì xem  lại
 > theo link (mà đại khái là embedded vector dc tạo ra nhằm mục
 > đích chứa trong mình những thông tin hữu ích về các khía cạnh
 > của từ đó như giới tính, ngành nghề ....)
 >
-> Như vậy, Embedding layer sẽ đại khái là **nhận một từ thì biến thành
-> một embedded vector**, nhận **một list** các từ (1 câu/1 sequence /
-> vector) thì biến thành một **matrix**. Nói chúng là bỏ vào 1 volume
-> (hay còn gọi là Tensor) có **mấy dimension** thì nó **tạo ra thêm một
-> dimension** nữa, vì cứ 1 từ (sẽ biểu thị bởi 1 con số - index) thì nó
+> Như vậy, Embedding layer sẽ đại khái là \\*nhận một từ thì biến thành
+> một embedded vector\\*, nhận \\*một list\\* các từ (1 câu/1 sequence /
+> vector) thì biến thành một \\*matrix\\*. Nói chúng là bỏ vào 1 volume
+> (hay còn gọi là Tensor) có \\*mấy dimension\\* thì nó \\*tạo ra thêm một
+> dimension\\* nữa, vì cứ 1 từ (sẽ biểu thị bởi 1 con số - index) thì nó
 > tạo một vector
+
+**🔗 See also:** [linked note](./c5w4_transformer_network.md#node-nvxlrgw)
 
 <br>
 
@@ -1671,6 +1683,8 @@
 >
 > Embedding một **index input** thành một **embedding vector**, 
 > nên nó như một dictionary
+
+**🔗 See also:** [linked note](./c5w4_transformer_network.md#node-7vptaod)
 
 <br>
 
@@ -1730,8 +1744,8 @@
 <p align="center"><kbd><img src="assets/tu7ljc23v3.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> In Keras, an embedding layer is a type of layer that maps **input values** (such
-> as words or categorical variables) to **fixed-size vectors of real numbers**, also
+> In Keras, an embedding layer is a type of layer that maps \\*input values\\* (such
+> as words or categorical variables) to \\*fixed-size vectors of real numbers\\*, also
 > known as embeddings. These embeddings can be used as a more compact
 > and dense representation of the original input, making it easier to work with
 > and analyze.
@@ -1739,8 +1753,8 @@
 > The embedding layer takes as input a matrix of integers, where each row
 > represents a sequence of input values. Each value in the matrix represents a
 > categorical variable, such as a word or an item in a list of categories. The layer
-> then looks up the corresponding **embedding vector** for each **input value** in a
-> **lookup table**, which is **learned during training**.
+> then looks up the corresponding \\*embedding vector\\* for each \\*input value\\* in a
+> \\*lookup table\\*, which is \\*learned during training\\*.
 >
 > The size of the embedding vectors is a hyperparameter that needs to be
 > specified when defining the layer. The dimensionality of the embedding space
@@ -1748,8 +1762,8 @@
 > information in the input data, but not so large as to introduce overfitting.
 >
 > The output of the embedding layer is a matrix of the same shape as the input
-> matrix, but with **each integer value replaced by its corresponding embedding
-> vector**. This matrix can then be passed on to further layers for processing.
+> matrix, but with \\*each integer value replaced by its corresponding embedding
+> vector\\*. This matrix can then be passed on to further layers for processing.
 >
 > Overall, the embedding layer in Keras is a powerful tool for transforming
 > categorical inputs into dense, continuous representations that can be more
@@ -1765,8 +1779,8 @@
 > Đại khái là mỗi input value sẽ được replace bởi 1 embedded
 > vector (mà item value của vector đó là real number)
 >
-> Bằng cách nó look up value từ 1 lookup table được **learned
-> during trainning.**
+> Bằng cách nó look up value từ 1 lookup table được \\*learned
+> during trainning.\\*
 >
 > Kểu như mình có thể:  Pre-train rồi gán trainable = false
 > để không train lại cái embedding layer này
@@ -1776,8 +1790,10 @@
 >
 > Hoặc Train từ đầu (không có pre-train gì cả)
 >
-> Thì trong assigment này chính là xài cái **pre-train và không
-> train lại**
+> Thì trong assigment này chính là xài cái \\*pre-train và không
+> train lại\\*
+
+**🔗 See also:** [linked note](#node-wuwkpv2)
 
 <br>
 
@@ -1817,7 +1833,7 @@
 <a id="node-4fn5rak"></a>
 
 > [!NOTE]
-> **Congratulations!** You've completed this notebook, and
+> \\*Congratulations! \\*You've completed this notebook, and
 > harnessed the power of LSTMs to make your words more
 > emotive! ❤️❤️❤️
 >
