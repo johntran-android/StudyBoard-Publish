@@ -37,30 +37,30 @@
 > [!NOTE]
 > Here are the main ideas extracted from the lecture text in numerical order:
 >
-> 1. Introduction to **transfer learning** as a **new concept** in the course, which **improves results**
-> and **speeds up training**.
+> 1. Introduction to\\* transfer learning\\* as a \\*new concept\\* in the course, which \\*improves results\\*
+> and\\* speeds up training\\*.
 >
-> 2. Discussion of q**uestion answering**, both **context-based** and **closed book question
-> answering**.
+> 2. Discussion of q\\*uestion answering\\*, both \\*context-based\\* and \\*closed book question
+> answering\\*.
 >
-> 3. Highlighting the importance of **innovations in training methods** for improving
+> 3. Highlighting the importance of \\*innovations in training methods \\*for improving
 > performance.
 >
-> 4. Comparison of **classical training to transfer learning**, emphasizing **the use of pre-trained
-> model weights.**
+> 4. Comparison of\\* classical training to transfer learning\\*, emphasizing \\*the use of pre-trained
+> model weights.\\*
 >
-> 5. Demonstrating the **application of transfer learning to various tasks**, such as **sentiment
-> classification** and **question answering**.
+> 5. Demonstrating the \\*application of transfer learning to various tasks\\*, such as \\*sentiment
+> classification\\* and \\*question answering\\*.
 >
-> 6. Explanation of **BERT** and its use of **bi-directional context.**
+> 6. Explanation of \\*BERT\\* and its use of \\*bi-directional context.\\*
 >
-> 7. Comparison of **single task models to multi-task models using T5**.
+> 7. Comparison of \\*single task models to multi-task models using T5\\*.
 >
-> 8. Emphasis on **the importance of data size in transfer learning**, with examples of dataset
+> 8. Emphasis on \\*the importance of data size in transfer learning\\*, with examples of dataset
 > sizes.
 >
-> 9. **Desirable goals for transfer learning**, including **reducing training time**, **improving
-> predictions, and needing less data.**
+> 9. \\*Desirable goals for transfer learning\\*, including \\*reducing training time\\*, \\*improving
+> predictions, and needing less data.\\*
 >
 > 10. Excitement for the upcoming exploration of transfer learning in the next video.
 
@@ -144,34 +144,34 @@
 > Here are the main ideas extracted from the lecture text in numerical order:
 >
 > 1. Introduction to the lecture topics, including transfer learning with the full transformer, 
-> **BERT** (Bidirectional Encoder Representation for Transformers), and the **T5** model.
+> \\*BERT\\* (Bidirectional Encoder Representation for Transformers), and the \\*T5\\* model.
 >
-> 2. Explanation of what **transfer learni**ng is and its relevance to NLP tasks.
+> 2. Explanation of what\\* transfer learni\\*ng is and its relevance to NLP tasks.
 >
-> 3. Overview of **two basic forms** of transfer learning: **feature-based learning** and **fine-
-> tuning.**
+> 3. Overview of \\*two basic forms \\*of transfer learning: \\*feature-based learning\\* and \\*fine-
+> tuning.\\*
 >
-> 4. Discussion of **pre-trained data** and **pre-training tasks**, such as language modeling.
+> 4. Discussion of \\*pre-trained data\\* and \\*pre-training tasks\\*, such as language modeling.
 >
-> 5. Exploration of **general-purpose learning**, including **word embeddings** and their 
+> 5. Exploration of\\* general-purpose learning\\*, including \\*word embeddings\\* and their 
 > application to translation tasks.
 >
-> 6. Comparison between **feature-based** and **fine-tuning approaches** with visual examples.
+> 6. Comparison between\\* feature-based\\* and \\*fine-tuning approaches \\*with visual examples.
 >
-> 7. Detailed explanation of **fine-tuning**, including how it can be added to a model and its 
+> 7. Detailed explanation of\\* fine-tuning\\*, including how it can be added to a model and its 
 > role in downstream tasks.
 >
-> 8. Emphasis on the significant **impact of data on model performance**, with examples 
+> 8. Emphasis on the significant \\*impact of data on model performance\\*, with examples 
 > showing the relationship between data size and outcomes.
 >
-> 9. Explanation of the **availability of labeled and unlabeled data** and **their relevance in self-
-> supervised tasks**.
+> 9. Explanation of the \\*availability of labeled and unlabeled data\\* and \\*their relevance in self-
+> supervised tasks\\*.
 >
-> 10. Illustration of **self-supervised learning through language modeling**, using **unlabeled 
-> data** to create **input features and targets.**
+> 10. Illustration of \\*self-supervised learning through language modeling\\*, using \\*unlabeled 
+> data\\* to create \\*input features and targets.\\*
 >
 > 11. Discussion of fine-tuning a pre-trained model for various downstream tasks like 
-> **translation, summarization, and question answering**.
+> \\*translation, summarization, and question answering\\*.
 >
 > 12. Summary of key points, including the use of transfer learning for feature-based or 
 > fine-tuning approaches, the importance of data, and the role of pre-training tasks.
@@ -414,33 +414,33 @@
 <a id="node-yaj26q1"></a>
 
 > [!NOTE]
-> 1. **Introduction to BERT**: **Bidirectional Encoder Representations for Transformers**.
+> 1. **Introduction to BERT**: \\*Bidirectional Encoder Representations for Transformers\\*.
 >
-> 2. **Directionality**: BERT p**rocesses inputs from two directions**.
+> 2. **Directionality**: BERT p\\*rocesses inputs from two directions\\*.
 >
-> 3. **Architecture**: BERT is a **multi-layer bidirectional transformer** utilizing **positional embeddings**. 
+> 3. **Architecture**: BERT is a \\*multi-layer bidirectional transformer\\* utilizing \\*positional embeddings\\*. 
 >
-> 4. **BERT's Base**: Has 1**2 transformer blocks, 12 attention heads, and 110 million parameters**.
+> 4. **BERT's Base**: Has 1\\*2 transformer blocks, 12 attention heads, and 110 million parameters\\*.
 >
 > 5. **Framework**: Comprises two main steps: 
->    - **Pre-training**: Training on **unlabeled data**.
->    - **Fine-tuning**: Uses p**re-trained parameters** and **fine-tunes with labeled data**.
+>    -\\* Pre-training\\*: Training on \\*unlabeled data\\*.
+>    - \\*Fine-tuning\\*: Uses p\\*re-trained parameters\\* and \\*fine-tunes with labeled data\\*.
 >
-> 6. **Input and Output**: Starts with **input embeddings** (E_1 to E_n), **goes through transformer 
-> blocks**, and **results in outputs (T_1 to T_n).**
+> 6. **Input and Output**: Starts with\\* input embeddings\\* (E_1 to E_n), \\*goes through transformer 
+> blocks\\*, and \\*results in outputs (T_1 to T_n).\\*
 >
-> 7. ****Pre-training Tasks****:
->    - ****Masked Language Mode**l**: **15% of words are masked**. These masked words are:
->      - **Replaced by a [MASK] token 80%** of the time.
->      - **Replaced by a random token 10%** of the time.
->      - **Left unchanged 10%** of the time.
->    - Objective is to **predict the original token**.
+> 7. **\\*Pre-training Tasks\\***:
+>    - **\\*Masked Language Mode\\*l**: \\*15% of words are masked\\*. These masked words are:
+>      -\\* Replaced by a [MASK] token 80%\\* of the time.
+>      -\\* Replaced by a random token 10%\\* of the time.
+>      - \\*Left unchanged 10%\\* of the time.
+>    - Objective is to \\*predict the original token\\*.
 >    - Example given: "After school, Lucas does his [blank] in the library."
 >
-> 8. ****Prediction Mechanism****: Add a **dense layer** post the **token** and **classify after encoder outputs**. 
-> **Multiplication by embedding matrix** transforms them into vocabulary dimension, ending with **softmax**.
+> 8. **\\*Prediction Mechanism\\***: Add a \\*dense layer\\* post the \\*token\\* and\\* classify after encoder outputs\\*. 
+> \\*Multiplication by embedding matrix\\* transforms them into vocabulary dimension, ending with \\*softmax\\*.
 >
-> 9. ****Next Sentence Prediction****: Determines if two given sentences follow one another in a sequence or not.
+> 9. **\\*Next Sentence Prediction\\***: Determines if two given sentences follow one another in a sequence or not.
 >
 > 10. **End Note**: The next video will formalize and explain BERT's loss function.
 
@@ -1739,19 +1739,19 @@
 <a id="node-ctg925f"></a>
 
 > [!NOTE]
-> You've seen how to use **BERT**, and other **transformer models** for a wide range of **natural
-> language tasks**, including machine translation, summarization, and question answering.
-> **Transformers** have become the **standard model for NLP,** similar to **convolutional models in
-> computer vision**. And all started with **Attention**!
+> You've seen how to use \\*BERT\\*, and other \\*transformer models\\* for a wide range of \\*natural
+> language tasks\\*, including machine translation, summarization, and question answering.
+> \\*Transformers\\* have become the \\*standard model for NLP,\\* similar to \\*convolutional models in
+> computer vision\\*. And all started with \\*Attention\\*!
 >
-> In practice, you'll **rarely train a transformer model from scratch**. Transformers tend to be
-> very **large**, so they take **time, money, and lots of data** to train fully. Instead, you'll want to
-> **start with a pre-trained model and fine-tune it** with your dataset if you need to.
+> In practice, you'll \\*rarely train a transformer model from scratch\\*. Transformers tend to be
+> very \\*large\\*, so they take \\*time, money, and lots of data\\* to train fully. Instead, you'll want to
+> \\*start with a pre-trained model and fine-tune it \\*with your dataset if you need to.
 >
-> \\_Hugging Face\\_ (🤗) is the best resource for pre-trained transformers. Their **open-source
-> libraries** simplify **downloading** and **using transformer models** like **BERT, T5, and GPT-2**.
-> And the best part, you can **use them alongside either TensorFlow, PyTorch and Flax**. In this
-> notebook, you'll use 🤗 transformers to download and use the **DistilBERT** model for
+> \\_Hugging Face\\_ (🤗) is the best resource for pre-trained transformers. Their \\*open-source
+> libraries\\* simplify \\*downloading\\* and \\*using transformer models\\* like\\* BERT, T5, and GPT-2\\*.
+> And the best part, you can\\* use them alongside either TensorFlow, PyTorch and Flax\\*. In this
+> notebook, you'll use 🤗 transformers to download and use the \\*DistilBERT\\* model for
 > question answering.
 >
 > First, let's install some packages that we will use during the lab.
@@ -1784,15 +1784,15 @@
 <a id="node-g549zbu"></a>
 
 > [!NOTE]
-> **Before fine-tuning a model**, you will look to the **pipelines** from Hugging Face
-> to **use pre-trained transformer models** for **specific tasks**. The transformers
-> library **provides pipelines for popular tasks** like sentiment analysis,
-> summarization, and text generation. A pipeline consists of a **tokenizer**, a
-> **model**, and the **model configuration**. All these are packaged together into an
+> \\*Before fine-tuning a model\\*, you will look to the \\*pipelines\\* from Hugging Face
+> to \\*use pre-trained transformer models\\* for \\*specific tasks\\*. The transformers
+> library\\* provides pipelines for popular tasks\\* like sentiment analysis,
+> summarization, and text generation. A pipeline consists of a \\*tokenizer\\*, a
+> \\*model\\*, and the \\*model configuration\\*. All these are packaged together into an
 > easy-to-use object. Hugging Face makes life easier.
 >
-> Pipelines are intended **to be used without fine-tuning** and will **often be
-> immediately helpful** in your projects. For example, transformers provides a
+> Pipelines are intended \\*to be used without fine-tuning\\* and will \\*often be
+> immediately helpful\\* in your projects. For example, transformers provides a
 > pipeline for question answering that you can directly use to answer your
 > questions if you give some context. Let's see how to do just that.
 >
@@ -1900,19 +1900,19 @@
 <a id="node-n3vnz44"></a>
 
 > [!NOTE]
-> In the previous Hugging Face ungraded lab, you saw how to **use the pipeline objects** to 
-> use **transformer models** for NLP tasks. I showed you that the **model didn't output the 
-> desired answers** to a series of precise questions for a context related to the history of 
+> In the previous Hugging Face ungraded lab, you saw how to \\*use the pipeline objects\\* to 
+> use \\*transformer models\\* for NLP tasks. I showed you that the \\*model didn't output the 
+> desired answers\\* to a series of precise questions for a context related to the history of 
 > comic books.
 >
-> In this lab, you will **fine-tune the model** from that lab to **give better answers** for that type of 
-> context. To do that, you'll be using the \\_**TyDi QA dataset**\\_ but on a filtered version with only 
+> In this lab, you will \\*fine-tune the model\\* from that lab to\\* give better answers\\* for that type of 
+> context. To do that, you'll be using the \\_\\*TyDi QA dataset\\*\\_ but on a filtered version with only 
 > English examples. Additionally, you will use a lot of the tools that Hugging Face has to 
 > offer.
 >
-> You have to note that, in general, you will **fine-tune general-purpose transformer models** 
-> to work for specific tasks. However, **fine-tuning a general-purpose** model can **take a lot of 
-> time**. That's why you will be **using the model from the question answering pipeline** in this 
+> You have to note that, in general, you will\\* fine-tune general-purpose transformer models\\* 
+> to work for specific tasks. However, \\*fine-tuning a general-purpose\\* model can \\*take a lot of 
+> time\\*. That's why you will be\\* using the model from the question answering pipeline\\* in this 
 > lab.
 >
 > First, let's install some packages that you will use during the lab.
@@ -2005,10 +2005,10 @@
 <a id="node-ekn4v9h"></a>
 
 > [!NOTE]
-> You can see that **each example** is like a **dictionary object.** This
-> dataset consists of **questions**, **contexts**, and **indices** that **point to
-> the start and end position** of the answer **inside the context**. You
-> can **access the index using the annotations key**, which is a kind
+> You can see that \\*each example\\* is like a\\* dictionary object.\\* This
+> dataset consists of \\*questions\\*, \\*contexts\\*, and \\*indices\\* that \\*point to
+> the start and end position\\* of the answer\\* inside the context\\*. You
+> can\\* access the index using the annotations key\\*, which is a kind
 > of dictionary.
 
 <br>
@@ -2032,15 +2032,15 @@
 <a id="node-nmt4vgi"></a>
 
 > [!NOTE]
-> The **question answering model** predicts **a start and endpoint in the context to
-> extract as the answer**. That's why **this NLP task is known as extractive question
-> answering.**
+> The \\*question answering model\\* predicts \\*a start and endpoint in the context to
+> extract as the answer\\*. That's why \\*this NLP task is known as extractive question
+> answering.\\*
 >
-> To train your model, you need to **pass start and endpoints as labels**. So, you need
-> to **implement a function that extracts the start and end positions** from the dataset.
+> To train your model, you need to \\*pass start and endpoints as labels\\*. So, you need
+> to\\* implement a function that extracts the start and end positions\\* from the dataset.
 >
-> The dataset contains **unanswerable questions**. For these, the **start and end
-> indices for the answer are equal to -1**
+> The dataset contains \\*unanswerable questions\\*. For these, the \\*start and end
+> indices for the answer are equal to -1\\*
 >
 > Đại khái là với dạng task này, model được train để extract
 > thông tin từ context ra bằng cách predict start và end point
@@ -2088,14 +2088,14 @@
 <a id="node-nk1chby"></a>
 
 > [!NOTE]
-> Now, you will use the \\_**tokenizer**\\_ object from Hugging Face. You can **load a tokenizer** using 
-> different methods. Here, you will **retrieve it from the pipeline object** you created in the 
-> previous Hugging Face lab. With this tokenizer, you can **ensure that the tokens you get 
-> for the dataset** will **match the tokens used in the original DistilBERT** implementation.
+> Now, you will use the \\_\\*tokenizer\\*\\_ object from Hugging Face. You can \\*load a tokenizer\\* using 
+> different methods. Here, you will \\*retrieve it from the pipeline object\\* you created in the 
+> previous Hugging Face lab. With this tokenizer, you can \\*ensure that the tokens you get 
+> for the dataset\\* will \\*match the tokens used in the original DistilBERT\\* implementation.
 >
-> When **loading a tokenizer** with any method, you must **pass the model checkpoint** that you 
-> want to fine-tune. Here, you are using the **'distilbert-base-cased-distilled-
-> squad'** checkpoint.
+> When \\*loading a tokenizer\\* with any method, you must \\*pass the model checkpoint\\* that you 
+> want to fine-tune. Here, you are using the \\*'distilbert-base-cased-distilled-
+> squad'\\* checkpoint.
 >
 > Có nhiều cách để load tokenizer, ở đây ta load từ pipeline define ở
 > trên, việc này sẽ đảm bảo cái tokenizer là đúng cái được dùng trong
@@ -2107,8 +2107,8 @@
 
 > [!NOTE]
 > # Import the AutoTokenizer from the transformers library
-> from transformers import **AutoTokenizer**
-> tokenizer = **AutoTokenizer**.**from_pretrained**("distilbert-base-cased-distilled-squad")
+> from transformers import \\*AutoTokenizer\\*
+> tokenizer = \\*AutoTokenizer\\*.\\*from_pretrained\\*("distilbert-base-cased-distilled-squad")
 >
 > Có thể dùng AutoTokenizer để load tokenizer tương thích với model
 > distilBERT bằng cách gọi **from_pretrained**(tên model)
@@ -2118,24 +2118,24 @@
 <a id="node-tzuqa7a"></a>
 
 > [!NOTE]
-> Given the **characteristics of the dataset** and the **question-answering
-> task**, you will need to **add some steps to pre-process the data** after
+> Given the\\* characteristics of the dataset\\* and the \\*question-answering
+> task\\*, you will need to \\*add some steps to pre-process the data\\* after
 > the tokenization:
 >
-> When **there is no answer to a question** given a context, you will use the
-> **CLS token**, a unique token used to represent the **start of the
-> sequence.**
+> When \\*there is no answer to a question\\* given a context, you will use the
+> \\*CLS token\\*, a unique token used to represent the \\*start of the
+> sequence.\\*
 >
-> **Tokenizers** can **split a given string into substrings**, resulting in a
-> subtoken for each substring, **creating misalignment between the list of
-> dataset tags and the labels generated by the tokenizer**. Therefore, you
-> will need to **align the start and end indices with the tokens associated
-> with the target answer word.**
+> \\*Tokenizers\\* can \\*split a given string into substrings\\*, resulting in a
+> subtoken for each substring, \\*creating misalignment between the list of
+> dataset tags and the labels generated by the tokenizer\\*. Therefore, you
+> will need to\\* align the start and end indices with the tokens associated
+> with the target answer word.\\*
 >
-> Finally, a tokenizer can **truncate a very long sequence**. So, if the
-> **start/end position of an answer is None**, you will **assume that it was
-> truncated** and **assign the maximum length of the tokenizer to those
-> positions.**
+> Finally, a tokenizer can \\*truncate a very long sequence\\*. So, if the
+> \\*start/end position of an answer is None\\*, you will \\*assume that it was
+> truncated\\* and \\*assign the maximum length of the tokenizer to those
+> positions.\\*
 
 <br>
 
@@ -2143,7 +2143,7 @@
 
 > [!NOTE]
 > # Processing samples using the 3 steps described.
-> def **process_samples**(sample):
+> def \\*process_samples\\*(sample):
 >     tokenized_data = tokenizer(sample['document_plaintext'], sample['question_text'], truncation="only_first", padding="max_length")
 >
 >     input_ids = tokenized_data["input_ids"]
@@ -2224,12 +2224,12 @@
 <a id="node-rs1agfc"></a>
 
 > [!NOTE]
-> Here, we give you the **F1 score** as a **metric to evaluate** your model's
+> Here, we give you the \\*F1 score\\* as a \\*metric to evaluate\\* your model's
 > performance. We will use this metric for simplicity, although it is based
 > on the start and end values predicted by the model. If you want to dig
 > deeper on other metrics that can be used for a question and answering
-> task, you can also check this **colab notebook resource from the Hugging
-> Face team.**
+> task, you can also check this\\* colab notebook resource from the Hugging
+> Face team.\\*
 >
 > Đại khái là ở đây **chỉ dùng F1 score để evaluate cho nhanh**, nghiên cứu thêm **cách
 > khác evaluate 'Question Answering' model** bằng Notebook này:
@@ -2290,15 +2290,15 @@
 <a id="node-l57ix7g"></a>
 
 > [!NOTE]
-> After **training and evaluating** your **fine-tuned model**, you can
-> **check its results** for the same questions from the previous lab.
+> After \\*training and evaluating\\* your\\* fine-tuned model\\*, you can
+> \\*check its results\\* for the same questions from the previous lab.
 >
-> For that, you will tell **Pytorch** to use your **GPU or your CPU** to run
-> the model. Additionally, you will need to t**okenize your input context and
-> questions**.
+> For that, you will tell \\*Pytorch\\* to use your \\*GPU or your CPU\\* to run
+> the model. Additionally, you will need to t\\*okenize your input context and
+> questions\\*.
 >
-> Finally, you need to **post-process the output results to transform them
-> from tokens to human-readable strings using the tokenizer.**
+> Finally, you need to \\*post-process the output results to transform them
+> from tokens to human-readable strings using the tokenizer.\\*
 
 <br>
 
@@ -2317,24 +2317,25 @@
 >              "What well-known superheroes were introduced between 1939 and 1941 by Detective Comics?"]
 >
 > for question in questions:
->     inputs = tokenizer**.encode_plus**(question, text, **return_tensors="pt"**)
+>     inputs = tokenizer\\*.encode_plus\\*(question, text, \\*return_tensors="pt"\\*)
 >     #print("inputs", inputs)
 >     #print("inputs", type(inputs))
->     **input_ids** = **inputs["input_ids"].tolist()[0]**
->     **inputs.to("cuda")**
+>     \\*input_ids\\* =\\* inputs["input_ids"].tolist()[0]\\*
+>     \\*inputs.to("cuda")\\*
 >
->     text_tokens = tokenizer.**convert_ids_to_tokens**(input_ids)
->     **answer_model** = **model(**inputs)** 
->     # **Get the most likely beginning of answer** with the argmax of the score
->     answer_start = **torch.argmax(**
->         **answer_model['start_logits']**
+>     text_tokens = tokenizer.\\*convert_ids_to_tokens\\*(input_ids)
+>     \\*answer_model\\* = \\*model(**inputs)
+> \\*
+>     # \\*Get the most likely beginning of answer\\* with the argmax of the score
+>     answer_start = \\*torch.argmax(\\*
+>         \\*answer_model['start_logits']\\*
 >     ) 
 >
 >     # Get the most likely end of answer with the argmax of the score
->     answer_end = **torch.argmax**(answer_model['end_logits']) + 1  
+>     answer_end = \\*torch.argmax\\*(answer_model['end_logits']) + 1  
 >
->     answer = tokenizer.**convert_tokens_to_string**(
->                                          tokenizer.**convert_ids_to_tokens**(
+>     answer =\\* \\*tokenizer.\\*convert_tokens_to_string\\*(
+>                                          tokenizer.\\*convert_ids_to_tokens\\*(
 >                                                             input_ids[answer_start:answer_end]))
 >
 >     print(f"Question: {question}")
@@ -2449,10 +2450,10 @@
 
 > [!NOTE]
 > Welcome to this week's assignment of course 4. In this you will
-> explore **question answering**. You will implement the **"Text to Text
-> Transfer from Transformers"** (better known as **T5**). Since you
-> implemented **transformers** from scratch last week you will now be
-> able to **use them.**
+> explore \\*question answering\\*. You will implement the \\*"Text to Text
+> Transfer from Transformers"\\* (better known as \\*T5\\*). Since you
+> implemented \\*transformers\\* from scratch last week you will now be
+> able to \\*use them.\\*
 
 <br>
 
@@ -2465,22 +2466,22 @@
 <a id="node-sui54up"></a>
 
 > [!NOTE]
-> This assignment will be different from the two previous ones. Due to **memory
-> and time constraints** of this environment you will not be **able to train a model
-> and use it for inference**. Instead you will **create the necessary building blocks**
-> for the **transformer encoder model** and will use a **pretrained version of the same
-> model** in two ungraded labs after this assignment.
+> This assignment will be different from the two previous ones. Due to \\*memory
+> and time constraints\\* of this environment you will not be \\*able to train a model
+> and use it for inference\\*. Instead you will \\*create the necessary building blocks\\*
+> for the \\*transformer encoder model\\* and will use a \\*pretrained version of the same
+> model\\* in two ungraded labs after this assignment.
 >
-> After **completing these 3** (1 graded and 2 ungraded) labs you will:
+> After \\*completing these 3\\* (1 graded and 2 ungraded) labs you will:
 >
-> • Implement the **code necessary** for **Bidirectional Encoder Representation from
-> Transformer (BERT).**
+> • Implement the \\*code necessary\\* for \\*Bidirectional Encoder Representation from
+> Transformer (BERT).\\*
 >
-> • **Understand how the C4 dataset is structured**.
+> • \\*Understand how the C4 dataset is structured\\*.
 >
-> • **Use a pre-trained model** for **inference**.
+> • \\*Use a pre-trained model \\*for \\*inference\\*.
 >
-> • Understand how the **"Text to Text Transfer from Transformers"** or T5 model
+> • Understand how the \\*"Text to Text Transfer from Transformers"\\* or T5 model
 > works.
 >
 > Đại khái là vì giới hạn bộ nhớ và thời gian ở đây nên ta sẽ **không thể train một
@@ -2617,15 +2618,15 @@
 <a id="node-260djen"></a>
 
 > [!NOTE]
-> The following functions will help you **detokenize** and **tokenize** the
+> The following functions will help you \\*detokenize\\* and \\*tokenize\\* the
 > text data.
 >
-> The **sentencepiece** vocabulary was used to **convert from text to
-> ids**. This vocabulary file  is **loaded and used in these helper
-> functions**.
+> The \\*sentencepiece\\* vocabulary was used to \\*convert from text to
+> ids\\*. This vocabulary file  is \\*loaded and used in these helper
+> functions\\*.
 >
-> **natural_language_texts** has the **text from the examples we gave
-> you.**
+> \\*natural_language_texts\\* has the \\*text from the examples we gave
+> you.\\*
 >
 > Run the cells below to see what is going on.
 >
@@ -2748,7 +2749,8 @@
 <a id="node-gxjvn68"></a>
 
 > [!NOTE]
-> i: 1, char: **Z** [vocab_size - i] = [**31999**] -> decoded_text = **Internațional**
+> i: 1, char: \\*Z
+> \\*[vocab_size - i] = [\\*31999\\*] -> decoded_text = \\*Internațional\\*
 > The sentinel is <Z> and the decoded token is: Internațional
 > i: 2, char: Y
 > [vocab_size - i] = [31998] -> decoded_text = erwachsene
@@ -3275,10 +3277,10 @@
 <a id="node-jbf7fl5"></a>
 
 > [!NOTE]
-> token: **Internațional**, char **<Z>**
+> token: \\*Internațional\\*, char \\*<Z>\\*
 >
 > after replacing: Beginners BBQ Class Taking Place in Missoula! Do
-> you **<Z>** to get better at making delicious BBQ? You will have the
+> you \\*<Z>\\* to get better at making delicious BBQ? You will have the
 > opportunity, put this on your calendar now. Thursday, September 22nd
 > join World Class erwachsene Champion, Tony Ba Cushion from Lone
 > imunitare Rangers. He will be teaching  Intellectual beginner level
@@ -3291,12 +3293,12 @@
 > or  garanteazpron and you will be tasting samples of each meat that is
 > prepared.
 >
-> token: **erwachsene**, char **<Y>**
+> token: \\*erwachsene\\*, char \\*<Y>\\*
 >
 > after replacing: Beginners BBQ Class Taking Place in Missoula! Do
-> you **<Z>** to get better at making delicious BBQ? You will have the
+> you \\*<Z>\\* to get better at making delicious BBQ? You will have the
 > opportunity, put this on your calendar now. Thursday, September 22nd
-> join World Class **<Y>** Champion, Tony Ba Cushion from Lone
+> join World Class \\*<Y>\\* Champion, Tony Ba Cushion from Lone
 > imunitare Rangers. He will be teaching  Intellectual beginner level
 > class for everyone who wants traditi get better with their culinary
 > disguise. Heexerce teach you everything younourishe to know to
@@ -3739,14 +3741,14 @@
 <a id="node-yziwhu6"></a>
 
 > [!NOTE]
-> **pretty_decoded input:**
+> \\*pretty_decoded input:\\*
 >
-> Fo **<Z>** plaid ly **<Y>** and **<X>**dex shortall with metallic slinky insets. Attached metallic elastic **<W>** with
-> O-ring. **<V>**band **<U>**. Great hip hop **<T>** dance costume. Made in the USA.
+> Fo \\*<Z>\\* plaid ly \\*<Y>\\* and \\*<X>\\*dex shortall with metallic slinky insets. Attached metallic elastic \\*<W>\\* with
+> O-ring. \\*<V>\\*band \\*<U>\\*. Great hip hop \\*<T>\\* dance costume. Made in the USA.
 >
-> **pretty_decoded target:**
+> \\*pretty_decoded target:\\*
 >
-> **<Z>il <Y>cra <X> span <W> belt <V> Head <U> included <T> or jazz**
+> \\*<Z>il <Y>cra <X> span <W> belt <V> Head <U> included <T> or jazz\\*
 >
 > c4_input:
 >
@@ -3808,10 +3810,10 @@
 
 > [!NOTE]
 > Welcome to the part 2 of testing the models for this week's
-> assignment. This time we will perform **decoding using the T5
-> SQuAD model**. In this notebook we'll **perform Question
-> Answering** by **providing a "Question", its "Context"** and **see how
-> well we get the "Target" answer.**
+> assignment. This time we will perform \\*decoding using the T5
+> SQuAD model\\*. In this notebook we'll \\*perform Question
+> Answering\\* by \\*providing a "Question", its "Context"\\* and \\*see how
+> well we get the "Target" answer.\\*
 >
 > Thử **dùng** T5 đã **fine-tuned trên SqaAD dataset**. Đưa vào model
 > **question + context** và xem thử answer của nó ra sao
@@ -3857,11 +3859,11 @@
 <a id="node-5eyh3hr"></a>
 
 > [!NOTE]
-> Now let's try to **fine tune on SQuAD** and see what becomes of the
-> model. For this, we need to **write a function** that will **create and
-> process the SQuAD tf.data.Dataset**. Below is how **T5 pre-processes
-> SQuAD dataset** as a **text2text example**. Before we jump in, we will
-> have to **first load in the data.**
+> Now let's try to \\*fine tune on SQuAD\\* and see what becomes of the
+> model. For this, we need to \\*write a function\\* that will \\*create and
+> process the SQuAD tf.data.Dataset\\*. Below is how \\*T5 pre-processes
+> SQuAD dataset\\* as a \\*text2text example\\*. Before we jump in, we will
+> have to \\*first load in the data.\\*
 >
 > Đại khái là lab này mình sẽ dùng **T5 model** đã được
 > **fine-tuned với bộ dataset tên là SQuAD**.
@@ -3919,9 +3921,9 @@
 <a id="node-pud9zcz"></a>
 
 > [!NOTE]
-> **question**: What is the use of a transistor ?
+> \\*question\\*: What is the use of a transistor ?
 >
-> **context**:  A transistor is a semiconductor device used to amplify or switch
+> \\*context\\*:  A transistor is a semiconductor device used to amplify or switch
 > electronic signals and electrical power . It is composed of semiconductor material
 > with at least three terminals for connection to an external circuit . A voltage or
 > current applied to one pair of the transistor ' s terminals changes the current
@@ -3930,7 +3932,7 @@
 > Today , some transistors are packaged individually , but many more are found
 > embedded in integrated circuits .
 >
-> **target**: to amplify or switch electronic signals and electrical power
+> \\*target\\*: to amplify or switch electronic signals and electrical power
 
 <br>
 
