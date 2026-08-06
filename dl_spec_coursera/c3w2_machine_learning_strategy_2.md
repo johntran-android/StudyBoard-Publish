@@ -78,19 +78,19 @@
 > 2 Sometimes data can be incorrectly labeled, which refers to when the label assigned by a
 > human to a piece of data is incorrect.
 >
-> 3 Deep learning algorithms are **robust to random errors in the training set, as long as the
-> errors are not too far from random**. In other words, if the errors are reasonably random, it's
+> 3 Deep learning algorithms are \\*robust to random errors in the training set, as long as the
+> errors are not too far from random\\*. In other words, if the errors are reasonably random, it's
 > probably okay to leave them as they are and not spend too much time fixing them.
 >
-> 4 Deep learning algorithms are **less robust to systematic errors**, which occur when the
+> 4 Deep learning algorithms are \\*less robust to systematic errors\\*, which occur when the
 > labeler consistently labels certain things incorrectly.
 >
 > 5 If there are incorrectly labeled examples in the dev set or test set, it's recommended to
 > add an extra column to count up the number of examples where the label Y was incorrect
 > during error analysis.
 >
-> 6 If the incorrectly labeled examples in the dev set or test set make a **significant difference**
-> to your ability to evaluate algorithms, then it's **worthwhile to spend time fixing them**.
+> 6 If the incorrectly labeled examples in the dev set or test set make a \\*significant difference\\*
+> to your ability to evaluate algorithms, then it's \\*worthwhile to spend time fixing them\\*.
 > Otherwise, it might not be the best use of your time.
 >
 > 7 To decide whether it's worth reducing the number of mislabeled examples, you should
@@ -230,7 +230,7 @@
 > many teams will use whatever data they can find, even if it is not from the
 > same distribution as their dev and test data.
 >
-> 2 When training on data from a **different distribution than dev and test data**,
+> 2 When training on data from a \\*different distribution than dev and test data\\*,
 > there are best practices to follow.
 >
 > 3 An example is given of a mobile app that needs to recognize cats in images
@@ -238,14 +238,14 @@
 > mobile app (the desired distribution) and images downloaded from the web (a
 > different distribution).
 >
-> 4 One option is to combine the two datasets and **randomly shuffle them into
-> train, dev, and test sets.** The disadvantage of this option is that the dev set
-> will be **biased** towards the web distribution of images, rather than the mobile
+> 4 One option is to combine the two datasets and \\*randomly shuffle them into
+> train, dev, and test sets.\\* The disadvantage of this option is that the dev set
+> will be \\*biased\\* towards the web distribution of images, rather than the mobile
 > app distribution that the team actually cares about.
 >
-> 5 Another option is to use **all of the web images for the training set** and a
-> **small portion of the mobile app images**, while using **only mobile app images
-> for the dev and test sets**. This option ensures that the dev set is
+> 5 Another option is to use \\*all of the web images for the training set\\* and a
+> \\*small portion of the mobile app images\\*, while using \\*only mobile app images
+> for the dev and test sets\\*. This option ensures that the dev set is
 > representative of the mobile app distribution, which is what the team cares
 > about.
 
@@ -351,14 +351,14 @@
 > 1 Data mismatch problem can occur when the training data comes from a
 > different distribution than the dev and test sets.
 >
-> 2 Manual error analysis can be carried out to **understand the differences
-> between the training set and dev/test sets**, which can help identify categories
+> 2 Manual error analysis can be carried out to \\*understand the differences
+> between the training set and dev/test sets\\*, which can help identify categories
 > of errors.
 >
-> 3 Insights gained from error analysis can be used to **make training data more
-> similar to dev/test sets** or **collect more data** similar to the dev/test sets.
+> 3 Insights gained from error analysis can be used to \\*make training data more
+> similar to dev/test sets\\* or \\*collect more data\\* similar to the dev/test sets.
 >
-> 4 **Artificial data synthesis** can be used to make training data more similar to the
+> 4 \\*Artificial data synthesis\\* can be used to make training data more similar to the
 > dev/test sets by simulating data that wasn't originally present.
 >
 > 5 Caution should be exercised while using artificial data synthesis as it can
@@ -583,21 +583,21 @@
 <a id="node-5fvacjx"></a>
 
 > [!NOTE]
-> End-to-end deep learning is a **recent development** in deep
+> End-to-end deep learning is a \\*recent development\\* in deep
 > learning that replaces multi-stage data processing systems
 > with a single neural network. Traditional data processing
 > systems required multiple stages of processing, such as
 > feature extraction and machine learning algorithms.
-> End-to-end deep learning, on the other hand, **takes an input
+> End-to-end deep learning, on the other hand, \\*takes an input
 > and outputs a direct result, bypassing many intermediate
-> steps.** End-to-end deep learning **works best with large
-> data sets** and can be challenging for researchers who have
+> steps.\\* End-to-end deep learning\\* works best with large
+> data sets\\* and can be challenging for researchers who have
 > spent many years designing individual steps of the pipeline.
 > One example of end-to-end deep learning is speech
 > recognition, where a neural network can directly output a
 > transcript from an audio clip. However, end-to-end deep
-> learning is not always the best approach, as it may **require
-> a lot of data to work well.** For example, in face recognition
+> learning is not always the best approach, as it may \\*require
+> a lot of data to work well.\\* For example, in face recognition
 > turnstiles, a multi-step approach of face detection, cropping,
 > and identity estimation works better than directly feeding the
 > raw image to a neural net.
@@ -639,18 +639,18 @@
 
 > [!NOTE]
 > 1 Benefits of End-to-End Deep Learning  • Lets the data speak
-> and captures the statistics in the data without reflecting **human
-> preconceptions**
+> and captures the statistics in the data without reflecting \\*human
+> preconceptions\\*
 >
 > • Simplifies the design workflow by reducing the need for hand
 > designing of components
 >
-> 2 Drawbacks of End-to-End Deep Learning  • **Requires a large
-> amount of data** to learn the direct mapping from input (X) to
+> 2 Drawbacks of End-to-End Deep Learning  • \\*Requires a large
+> amount of data\\* to learn the direct mapping from input (X) to
 > output (Y)
 >
-> • **Excludes potentially useful hand-designed components that
-> could inject manual knowledge into the algorithm**
+> • \\*Excludes potentially useful hand-designed components that
+> could inject manual knowledge into the algorithm\\*
 >
 > 3 Key question in deciding whether to use End-to-End Deep
 > Learning  • Do you have sufficient data to learn the function of
