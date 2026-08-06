@@ -61,23 +61,23 @@
 <a id="node-wen4xy5"></a>
 
 > [!NOTE]
-> 1 Introduction to **word vectors** and **training them from scratch**.
+> 1 Introduction to \\*word vectors\\* and \\*training them from scratch\\*.
 >
-> 2 The **significance of word vectors** in **NLP applications** and their use in tasks such as
-> **semantic analogies**, **similarity calculations**, **sentiment analysis**, **machine translation**,
-> **information extraction**, and **question answering**.
+> 2 The \\*significance of word vectors\\* in \\*NLP applications\\* and their use in tasks such as
+> \\*semantic analogies\\*, \\*similarity calculations\\*, \\*sentiment analysis\\*, \\*machine translation\\*,
+> \\*information extraction\\*, and \\*question answering\\*.
 >
-> 3 Learning objectives for the week, including **understanding word representations**
-> and **their numeric representation**, **generating word embeddings**, and **preparing text
-> for machine learning**.
+> 3 Learning objectives for the week, including \\*understanding word representations\\*
+> and \\*their numeric representation\\*, \\*generating word embeddings\\*, and \\*preparing text
+> for machine learning\\*.
 >
-> 4 Implementation of the **continuous bag-of-words model** for creating word
-> embeddings, with an emphasis on its **simplicity and efficiency**.
+> 4 Implementation of the \\*continuous bag-of-words model\\* for creating word
+> embeddings, with an emphasis on its \\*simplicity and efficiency\\*.
 >
-> 5 Mention of other techniques like **GloVec** and **Word2Vec** for training word
-> embeddings, but focusing on the **continuous bag-of-words model** in this week.
+> 5 Mention of other techniques like \\*GloVec\\* and \\*Word2Vec\\* for training word
+> embeddings, but focusing on the \\*continuous bag-of-words model\\* in this week.
 >
-> 6 Recommendation to have **familiarity with neural networks**, suggesting completion
+> 6 Recommendation to have\\* familiarity with neural networks\\*, suggesting completion
 > of the first course of the deep learning specialization by deeplearning.ai.
 >
 > 7 Excitement and anticipation for the upcoming videos and the learning experiences
@@ -122,30 +122,30 @@
 > 1 Introduction to creating a matrix to represent words in a vocabulary, where  each
 > vector corresponds to a word.
 >
-> 2 Exploring the **simplest way of representing words** as numbers using a **unique
-> integer** assigned to each word in the vocabulary.
+> 2 Exploring the\\* simplest way of representing words\\* as numbers using a \\*unique
+> integer\\* assigned to each word in the vocabulary.
 >
-> 3 **Limitations of numerical indexing** in terms of s**emantic perspective** and l**ack of
-> meaningful order**.
+> 3 \\*Limitations of numerical indexing\\* in terms of s\\*emantic perspective\\* and l\\*ack of
+> meaningful order\\*.
 >
-> 4 Introducing the **concept of using column vectors** as **"one hot vectors"** to
-> represent words, where **each element corresponds to a word in the vocabulary.**
+> 4 Introducing the \\*concept of using column vectors\\* as \\*"one hot vectors"\\* to
+> represent words, where \\*each element corresponds to a word in the vocabulary.\\*
 >
-> 5 Encoding words with **one hot vectors,** with a value of 1 in the corresponding row
+> 5 Encoding words with \\*one hot vectors,\\* with a value of 1 in the corresponding row
 > and 0 elsewhere.
 >
-> 6 **Mapping between integers and one hot vectors** for easy conversion.
+> 6 \\*Mapping between integers and one hot vectors\\* for easy conversion.
 >
-> 7 **Advantages** of one hot vectors in terms of representing **categorical variables**
-> **without implying relationships between words.**
+> 7 \\*Advantages\\* of one hot vectors in terms of representing \\*categorical variables\\*
+> \\*without implying relationships between words.\\*
 >
-> 8 **Limitations** of one hot vectors, including their l**arge size for complex vocabularies**
-> and the **lack of capturing word meaning or semantic similarity.**
+> 8 \\*Limitations\\* of one hot vectors, including their l\\*arge size for complex vocabularies\\*
+> and the \\*lack of capturing word meaning or semantic similarity.\\*
 >
-> 9 Teasing the upcoming topic of **word embeddings** as a solution to the limitations of
+> 9 Teasing the upcoming topic of \\*word embeddings\\* as a solution to the limitations of
 > one hot vectors.
 >
-> 10 Recap of the **pros and cons of one hot vectors** and a promise to explore word
+> 10 Recap of the \\*pros and cons of one hot vectors\\* and a promise to explore word
 > embeddings in the next video.
 
 <br>
@@ -224,32 +224,32 @@
 <a id="node-qg4lfwp"></a>
 
 > [!NOTE]
-> 1 Introduction to a method that can encode meaning in a **low-dimensional vector**,
-> allowing for **representation of words along different dimensions**.
+> 1 Introduction to a method that can encode meaning in a\\* low-dimensional vector\\*,
+> allowing for \\*representation of words along different dimensions\\*.
 >
 > 2 Explanation of using number lines to represent positive and negative words, as
 > well as concrete and abstract words.
 >
-> 3 Use of **decimal values** to capture **proximity** and **similarity** between words.
+> 3 Use of \\*decimal values\\* to capture \\*proximity\\* and \\*similarity\\* between words.
 >
-> 4 **Representing vocabulary** with **small vectors of length 1 or 2**, creating **word
-> embeddings.**
+> 4 \\*Representing vocabulary\\* with \\*small vectors of length 1 or 2\\*, creating \\*word
+> embeddings.\\*
 >
-> 5 **Benefits** of word embeddings, including practicality for calculations, **carrying
-> meaning**, **determining semantic** closeness, and **enabling analogies**.
+> 5 \\*Benefits\\* of word embeddings, including practicality for calculations, \\*carrying
+> meaning\\*, \\*determining semantic\\* closeness, and \\*enabling analogies\\*.
 >
-> 6 Importance of word embeddings for **more complex NLP tasks** like question
+> 6 Importance of word embeddings for \\*more complex NLP tasks\\* like question
 > answering and translation.
 >
-> 7 Objectives of the module, focusing on **creating word embeddings** through
-> **simpler to more advanced methods**.
+> 7 Objectives of the module, focusing on\\* creating word embeddings\\* through
+> \\*simpler to more advanced methods\\*.
 >
-> 8 **Terminology clarification** regarding word vectors and word embeddings.
+> 8 \\*Terminology clarification\\* regarding word vectors and word embeddings.
 >
-> 9 **Advantages of word embeddings** over other representations, such as one-hot
+> 9 \\*Advantages of word embeddings\\* over other representations, such as one-hot
 > vectors, in real-world NLP applications.
 >
-> 10 Introduction to the idea of **learning the coordinates of word embeddings** in the
+> 10 Introduction to the idea of \\*learning the coordinates of word embeddings\\* in the
 > next video.
 
 <br>
@@ -344,41 +344,41 @@
 <a id="node-sxcdkd5"></a>
 
 > [!NOTE]
-> 1 To create **word** **embeddings**, two main components are required: a **corpus** of text and an
-> embedding **method**.
+> 1 To create \\*word\\* \\*embeddings\\*, two main components are required: a \\*corpus\\* of text and an
+> embedding \\*method\\*.
 >
-> 2 The corpus contains the words that need to be embedded, and it should reflect the **desired
-> context**. For example, using the **full and original text of Shakespeare** would be suitable for
-> generating **Shakespeare-related embeddings**.
+> 2 The corpus contains the words that need to be embedded, and it should reflect the \\*desired
+> context\\*. For example, using the \\*full and original text of Shakespeare \\*would be suitable for
+> generating \\*Shakespeare-related embeddings\\*.
 >
-> 3 The **context of a word** refers to the **words or combinations of words** that **commonly occur
-> around it**. **Understanding the context is crucial** for giving meaning to word embeddings.
+> 3 The \\*context of a word\\* refers to the \\*words or combinations of words\\* that \\*commonly occur
+> around it\\*. \\*Understanding the context is crucial \\*for giving meaning to word embeddings.
 >
-> 4 **A simple vocabulary list** of common words is **not sufficient for creating embeddings**. The
-> corpus should consist of comprehensive sets of documents, such as **Wikipedia articles** or
-> **domain-specific texts like legal contracts** for specific NLP use cases.
+> 4 \\*A simple vocabulary list\\* of common words is\\* not sufficient for creating embeddings\\*. The
+> corpus should consist of comprehensive sets of documents, such as \\*Wikipedia articles\\* or
+> \\*domain-specific texts like legal contracts\\* for specific NLP use cases.
 >
-> 5 The **embedding method** is responsible for **generating the word embeddings from the corpus**.
-> Modern methods based on **machine learning models** are commonly used for this purpose.
+> 5 The \\*embedding method \\*is responsible for \\*generating the word embeddings from the corpus\\*.
+> Modern methods based on \\*machine learning models\\* are commonly used for this purpose.
 >
-> 6 The **machine learning model** performs a l**earning task**, and\\/ **word embeddings are** **by-products
-> of this task**\\/. For example, the model may l**earn to predict a word based on the surrounding
-> words** in a sentence using approaches like the **continuous bag of words**.
+> 6 The \\*machine learning model\\* performs a l\\*earning task\\*, and\\/\\* word embeddings are\\* \\*by-products
+> of this task\\*\\/. For example, the model may l\\*earn to predict a word based on the surrounding
+> words\\* in a sentence using approaches like the \\*continuous bag of words\\*.
 >
-> 7 The **specific task \\/performed by the model determines the meaning of individual words in the
-> embeddings**\\/. The task is considered \\/**self-supervised**\\/, as the input **corpus is unlabeled**, \\/**but the
-> data itself provides the necessary context.**\\/
+> 7 The\\* specific task \\/performed by the model determines the meaning of individual words in the
+> embeddings\\*\\/. The task is considered \\/\\*self-supervised\\*\\/, as the input \\*corpus is unlabeled\\*, \\/\\*but the
+> data itself provides the necessary context.\\*\\/
 >
-> 8 Word embeddings can be **fine-tuned using hyperparameters**, including the **dimension of the
-> embedding vectors**. Higher dimensions capture **more nuanced meanings** but require **more
-> computational resources**.
+> 8 Word embeddings can be \\*fine-tuned using hyperparameters\\*, including the \\*dimension of the
+> embedding vectors\\*. Higher dimensions capture \\*more nuanced meanings\\* but require \\*more
+> computational resources\\*.
 >
-> 9 **Before feeding** the corpus into the machine learning model, the t**ext contents need to be
-> transformed into a suitable mathematical representation**, such as i**nteger-based indices** or
-> **one-hot vectors**, depending on the **specific model requirements.**
+> 9 \\*Before feeding\\* the corpus into the machine learning model, the t\\*ext contents need to be
+> transformed into a suitable mathematical representation\\*, such as i\\*nteger-based indices\\* or
+> \\*one-hot vectors\\*, depending on the \\*specific model requirements.\\*
 >
-> 10 The next step involves introducing v**arious word embedding  methods**, including the
-> **continuous bag of words approach**, which will be implemented in the assignment for the week.
+> 10 The next step involves introducing v\\*arious word embedding  methods\\*, including the
+> \\*continuous bag of words approach\\*, which will be implemented in the assignment for the week.
 
 <br>
 
@@ -434,35 +434,35 @@
 <a id="node-pwvnxwd"></a>
 
 > [!NOTE]
-> 1 **Various word embedding methods** exist and continue to evolve over time.
+> 1 \\*Various word embedding methods\\* exist and continue to evolve over time.
 >
-> 2 **Word2vec** is a **shallow neural network mode**l with two architectures: **continuous
-> bag-of-words** and **continuous skip-gram**.
+> 2 \\*Word2vec\\* is a \\*shallow neural network mode\\*l with two architectures: \\*continuous
+> bag-of-words\\* and \\*continuous skip-gram\\*.
 >
-> 3 **Global vectors (GloVe)** involves **factorizing the word co-occurrence matrix**.
+> 3 \\*Global vectors (GloVe)\\* involves\\* factorizing the word co-occurrence matrix\\*.
 >
-> 4 **FastText** considers the **structure of words** by representing them as **character n-grams.**
+> 4 \\*FastText\\* considers the \\*structure of words\\* by representing them as \\*character n-grams.\\*
 >
-> 5 **FastText** s**upports previously unseen words** and allows **averaging of word embedding
-> vectors for phrases and sentences**.
+> 5 \\*FastText\\* s\\*upports previously unseen words\\* and allows \\*averaging of word embedding
+> vectors for phrases and sentences\\*.
 >
-> 6 **Advanced** models use **deep neural network architectures** and **context-dependent word
-> embeddings.**
+> 6 \\*Advanced\\* models use \\*deep neural network architectures\\* and \\*context-dependent word
+> embeddings.\\*
 >
-> 7 Advanced models address **polysemy** and capture **different meanings of words based on their
-> contexts.**
+> 7 Advanced models address \\*polysemy\\* and capture \\*different meanings of words based on their
+> contexts.\\*
 >
-> 8 Examples of advanced models include **BERT, ELMo, and GPT-2**.
+> 8 Examples of advanced models include \\*BERT, ELMo, and GPT-2\\*.
 >
-> 9 **Pretrained** models of advanced methods are **available for use**, leveraging **domain-specific
-> word embeddings**.
+> 9 \\*Pretrained\\* models of advanced methods are \\*available for use\\*, leveraging \\*domain-specific
+> word embeddings\\*.
 >
-> 10 The **continuous bag-of-words model** will be introduced for this week's assignments.
+> 10 The \\*continuous bag-of-words model\\* will be introduced for this week's assignments.
 >
-> 11 The history of word embedding methods spans from **word2vec** to the latest **transformer**
+> 11 The history of word embedding methods spans from \\*word2vec\\* to the latest \\*transformer\\*
 > methods.
 >
-> 12 **Transformers** are considered one of the **most advanced AI methods.**
+> 12 \\*Transformers\\* are considered one of the \\*most advanced AI methods.\\*
 
 <br>
 
@@ -608,46 +608,46 @@
 <a id="node-lg5ycyv"></a>
 
 > [!NOTE]
-> 1 **Overall process** for **machine learning model-based word embeddings**: To create word
-> embeddings, you need a **corpus** (a collection of text) and a **machine learning model** that
-> **performs a learning task**. The model **learns from the corpus** and **generates a set of word
-> embeddings** as a **byproduct**. You also need to **transform the corpus into a representation
-> suitable** for the machine learning model.
+> 1 \\*Overall process\\* for \\*machine learning model-based word embeddings\\*: To create word
+> embeddings, you need a \\*corpus\\* (a collection of text) and a \\*machine learning model\\* that
+> \\*performs a learning task\\*. The model \\*learns from the corpus\\* and \\*generates a set of word
+> embeddings\\* as a \\*byproduct\\*. You also need to \\*transform the corpus into a representation
+> suitable\\* for the machine learning model.
 >
-> 2 **Continuous Bag-of-Words (CBOW)** model instantiation: The CBOW model's **objective** is to
-> **predict a missing word based on the surrounding words** in a sentence. The **assumption** is that
-> \\/**words with similar contexts are semantically related**\\/. For example, given the sentence "The little
+> 2 \\*Continuous Bag-of-Words (CBOW)\\* model instantiation: The CBOW model's \\*objective\\* is to
+> \\*predict a missing word based on the surrounding words\\* in a sentence. The \\*assumption\\* is that
+> \\/\\*words with similar contexts are semantically related\\*\\/. For example, given the sentence "The little
 > something is barking," the model can learn that the missing word is related to dogs, such as "dog," "
-> puppy," "hound," etc. The model l\\/**earns the meaning of words based on their contexts**\\/.
+> puppy," "hound," etc. The model l\\/\\*earns the meaning of words based on their contexts\\*\\/.
 >
-> 3 **Creating training data** for the prediction task: To train the CBOW model, you need to create
-> training examples. For a **given center word** in the corpus (e.g., "happy"), the **context words are
-> defined as the words before and after the center word**. The **size of the context (C) is a
-> hyper-parameter of the model.** The **window** is defined as **the count of the center word plus the
-> context words**. \\/**Each training example consists of the context words and the center word to be
-> predicted.**\\/
+> 3 \\*Creating training data\\* for the prediction task: To train the CBOW model, you need to create
+> training examples. For a \\*given center word\\* in the corpus (e.g., "happy"), the \\*context words are
+> defined as the words before and after the center word\\*. The \\*size of the context (C) is a
+> hyper-parameter of the model.\\* The \\*window \\*is defined as \\*the count of the center word plus the
+> context words\\*. \\/\\*Each training example consists of the context words and the center word to be
+> predicted.\\*\\/
 >
-> 4 Training examples and sliding the window: The **training examples are created** by **sliding the
-> window by one word** at a time. Each example includes the **context words** and the **corresponding
-> center word to predict**. For example, given the sentence "I am happy because I'm learning," the first
+> 4 Training examples and sliding the window: The \\*training examples are created\\* by \\*sliding the
+> window by one word\\* at a time. Each example includes the \\*context words\\* and the \\*corresponding
+> center word to predict\\*. For example, given the sentence "I am happy because I'm learning," the first
 > training example has the window "I am happy because I" with the center word "happy." The next
-> example has the window " I'm happy because I'm" with the center word "something." This **process
-> continues for the entire corpus.**  
+> example has the window " I'm happy because I'm" with the center word "something." This \\*process
+> continues for the entire corpus. \\* 
 >
-> 5 Model architecture: The **CBOW** model architecture involves
-> **using the context words as inputs** and **predicting the center word as the output**. The \\/**original
-> paper on CBOW describes this architecture**\\/, where the model learns to associate the context words
+> 5 Model architecture: The \\*CBOW\\* model architecture involves
+> \\*using the context words as inputs\\* and \\*predicting the center word as the output\\*. The \\/\\*original
+> paper on CBOW describes this architecture\\*\\/, where the model learns to associate the context words
 > with the center word.
 >
-> 6 Recap and next steps: The CBOW model **predicts the center word** **based on the surrounding
-> context word**s and **produces word embeddings as a result.** The focus for the rest of the week will
-> be on **preparing a training dataset from a corpus** and **delving into the mathematics behind the
-> model**.
+> 6 Recap and next steps: The CBOW model \\*predicts the center word\\* \\*based on the surrounding
+> context word\\*s and \\*produces word embeddings as a result.\\* The focus for the rest of the week will
+> be on \\*preparing a training dataset from a corpus\\* and \\*delving into the mathematics behind the
+> model\\*.
 >
-> In summary, the **CBOW model predicts the center word using the surrounding context words**. By
-> **training the model on a corpu**s**, word embeddings are obtained as a byproduct**. The **training
-> data** consists of **examples with context words** and **corresponding center word**s. The **CBOW
-> model architecture** takes **context words as inputs and aims to predict the center word**.
+> In summary, the \\*CBOW model predicts the center word using the surrounding context words\\*. By
+> \\*training the model on a corpu\\*s\\*, word embeddings are obtained as a byproduct\\*. The \\*training
+> data\\* consists of \\*examples with context words\\* and \\*corresponding center word\\*s. The \\*CBOW
+> model architecture\\* takes \\*context words as inputs and aims to predict the center word\\*.
 
 <br>
 
@@ -748,30 +748,30 @@
 <a id="node-slmu2fx"></a>
 
 > [!NOTE]
-> 1 **Cleaning** and **tokenization** are important steps in processing a corpus.
+> 1 \\*Cleaning\\* and \\*tokenization\\* are important steps in processing a corpus.
 >
-> 2 Consider the words of the corpus as **case** **insensitive** by converting it to either **all lowercase** or
-> **all uppercase**.
+> 2 Consider the words of the corpus as \\*case\\* \\*insensitive\\* by converting it to either \\*all lowercase\\* or
+> \\*all uppercase\\*.
 >
-> 3 Handle **punctuation** by representing **interrupting punctuation marks** as a **single special word**,
-> **ignoring non-interrupting punctuation marks**, and collapsing multi-sign marks into a single mark.
+> 3 Handle \\*punctuation\\* by representing \\*interrupting punctuation marks\\* as a \\*single special word\\*,
+> \\*ignoring non-interrupting punctuation marks\\*, and collapsing multi-sign marks into a single mark.
 >
-> 4 Decide how to handle **numbers** based on t**heir relevance to the use case.** Numbers **without
-> important meaning** can be **dropped**, while **significant numbers** can be **kept or replaced with a
-> special token like "<NUMBER>"**.
+> 4 Decide how to handle \\*numbers\\* based on t\\*heir relevance to the use case.\\* Numbers \\*without
+> important meaning\\* can be \\*dropped\\*, while \\*significant numbers\\* can be \\*kept or replaced with a
+> special token like "<NUMBER>"\\*.
 >
-> 5 Handle **special characters** like **mathematical symbols**, **currency symbols**, section and
-> paragraph signs, and online markup signs. It is usually **safe to drop them.**
+> 5 Handle \\*special characters\\* like \\*mathematical symbols\\*, \\*currency symbols\\*, section and
+> paragraph signs, and online markup signs. It is usually \\*safe to drop them.\\*
 >
-> 6 When working with **modern corpora** that include user inputs like **tweets** or **consumer reviews**,
-> handle **special words** such as **emojis** and **hashtags** based on the **intended meaning**. Consider
-> **treating each emoji or hashtag** as an **individual word**.
+> 6 When working with \\*modern corpora\\* that include user inputs like \\*tweets\\* or \\*consumer reviews\\*,
+> handle \\*special words\\* such as \\*emojis\\* and \\*hashtags\\* based on the \\*intended meaning\\*. Consider
+> \\*treating each emoji or hashtag\\* as an \\*individual word\\*.
 >
-> 7 A **Python example** **demonstrates** some of these **recommendations**, including **collapsing
-> interrupting punctuation**, **tokenizing using NLTK library**, and keeping **lowercase** tokens that are
-> **alphabetical, full stops, or emojis**.
+> 7 A \\*Python example\\* \\*demonstrates\\* some of these \\*recommendations\\*, including \\*collapsing
+> interrupting punctuation\\*, \\*tokenizing using NLTK library\\*, and keeping \\*lowercase\\* tokens that are
+> \\*alphabetical, full stops, or emojis\\*.
 >
-> 8 The next part of the **continuous bag-of-words model** is the **sliding window**, which involves a
+> 8 The next part of the \\*continuous bag-of-words model \\*is the \\*sliding window\\*, which involves a
 > window moving over the text corpus.
 
 <br>
@@ -895,34 +895,36 @@
 <a id="node-5gnv07c"></a>
 
 > [!NOTE]
-> 1 Introduction to **context words** and **center words**: The transcript mentions the importance of
-> **context words** and **center words** for training a **continuous bag-of-words model.**
+> 1 Introduction to\\* context words\\* and \\*center words\\*: The transcript mentions the importance of
+> \\*context words\\* and \\*center words\\* for training a \\*continuous bag-of-words model.\\*
 >
-> 2 Extraction of context words and center words: The **get_windows** function in. Python is
-> introduced, which **takes a corpus of words** and the **context size** as arguments. It initializes a
-> counter and **iterates through the corpus** to **extract the center word** and **its corresponding
-> context words**.
+> 2 Extraction of context words and center words: The \\*get_windows\\* function in. Python is
+> introduced, which \\*takes a corpus of words\\* and the \\*context size\\* as arguments. It initializes a
+> counter and\\* iterates through the corpus\\* to \\*extract the center word\\* and \\*its corresponding
+> context words\\*.
 >
-> 3 Function explanation: The transcript provides a **step-by-step explanation** of the **get_windows**
-> **function**, including how it **identifies the first usable center word**, loops through the corpus, **creates arrays of context words**, and **uses the yield keyword** to return values.
+> 3 Function explanation: The transcript provides a \\*step-by-step explanation\\* of the \\*get_windows\\*
+> \\*function\\*, including how it \\*identifies the first usable center word\\*, loops through the corpus,\\*
+> creates arrays of context words\\*, and \\*uses the yield keyword\\* to return values.
 >
-> 4 Usage of the **get_windows** function: The transcript demonstrates how to **use the get_windows
-> function in a loop to obtain tuples of context words and center words**. It shows the output for the
+> 4 Usage of the \\*get_windows\\* function: The transcript demonstrates how to \\*use the get_windows
+> function in a loop to obtain tuples of context words and center words\\*. It shows the output for the
 > example sentence "I am happy because I am learning" with a context size of 2.
 >
-> 5 Recap of the **get_windows** function: The transcript summarizes the purpose of the get_windows
-> function, which **takes a corpus and context size as input and returns the context words and center
-> words for each sliding window.**
+> 5 Recap of the \\*get_windows\\* function: The transcript summarizes the purpose of the get_windows
+> function, which \\*takes a corpus and context size as input and returns the context words and center
+> words for each sliding window.\\*
 >
-> 6 Introduction to **converting words into vectors**: The transcript mentions that the next step will
-> involve **converting the sets of words into vectors** to be used by the continuous bag-of-words
+> 6 Introduction to \\*converting words into vectors\\*: The transcript mentions that the next step will
+> involve \\*converting the sets of words into vectors\\* to be used by the continuous bag-of-words
 > model.
 >
-> 7 Use of **yield** in Python: The transcript explains the use of the y**ield keyword**,  highlighting its **ability to pause the function and return values multiple times**, making it useful for **data generators
-> or functions that provide data in small batches**.
+> 7 Use of \\*yield\\* in Python: The transcript explains the use of the y\\*ield keyword\\*,  highlighting its\\*
+> ability to pause the function and return values multiple times\\*, making it useful for \\*data generators
+> or functions that provide data in small batches\\*.
 >
-> 8 Significance for programming assignments: The transcript notes that the process of **extracting
-> context words and center words using a sliding window in Pytho**n is relevant for programming
+> 8 Significance for programming assignments: The transcript notes that the process of \\*extracting
+> context words and center words using a sliding window in Pytho\\*n is relevant for programming
 > assignments related to the continuous bag-of-words model.
 
 <br>
@@ -980,31 +982,31 @@
 <a id="node-15wwbjb"></a>
 
 > [!NOTE]
-> 1 Introduction to **representing context words** and **central word**: The transcript states that in order to
-> predict the central word given context words, we need to **find a way to represent them mathematically**.
+> 1 Introduction to \\*representing context words\\* and \\*central word\\*: The transcript states that in order to
+> predict the central word given context words, we need to \\*find a way to represent them mathematically\\*.
 >
-> 2 **Creation of vocabulary**: The transcript explains that **a vocabulary is created**, which **consists of all the
-> unique words** in the corpus. Each word is **encoded as a column in a one-hot vector,** where **each row
-> corresponds to a word in the vocabulary**.
+> 2 \\*Creation of vocabulary\\*: The transcript explains that \\*a vocabulary is created\\*, which \\*consists of all the
+> unique words\\* in the corpus. Each word is \\*encoded as a column in a one-hot vector,\\* where \\*each row
+> corresponds to a word in the vocabulary\\*.
 >
-> 3 **Encoding central words**: The transcript describes how **central words are represented using one-hot
-> vectors**. Each word in the vocabulary has a **value of 1 in its corresponding row**, while **all other rows
-> contain zeros.**
+> 3 \\*Encoding central words\\*: The transcript describes how \\*central words are represented using one-hot
+> vectors\\*. Each word in the vocabulary has a \\*value of 1 in its corresponding row\\*, while\\* all other rows
+> contain zeros.\\*
 >
-> 4 **Encoding context words**: The transcript explains that a **single vector is created to represent the
-> context words**. This is done by taking the **average of the one-hot vectors of each context word**. The
-> **resulting vector is the representation of the entire context.**
+> 4 \\*Encoding context words\\*: The transcript explains that a \\*single vector is created to represent the
+> context words\\*. This is done by taking the \\*average of the one-hot vectors of each context word\\*. The
+> \\*resulting vector is the representation of the entire context.\\*
 >
 > 5 Example of vector representation: The transcript provides an example of encoding context words and
-> central word using one-hot vectors. It shows the **vocabulary** and the **corresponding one-hot vectors for
-> context words**, as well as the **averaged vector  representation for the entire context**.
+> central word using one-hot vectors. It shows the \\*vocabulary\\* and the \\*corresponding one-hot vectors for
+> context words\\*, as well as the \\*averaged vector  representation for the entire context\\*.
 >
-> 6 **Preparation** **phase completion**: The transcript states that the **preparation phase**, starting from the r**aw
-> corpus, has been concluded**. The **data is now ready to be used for training** a continuous bag-of-words
+> 6 \\*Preparation\\* \\*phase completion\\*: The transcript states that the \\*preparation phase\\*, starting from the r\\*aw
+> corpus, has been concluded\\*. The \\*data is now ready to be used for training\\* a continuous bag-of-words
 > (CBOW) model.
 >
-> 7 Introduction to the CBOW model: The transcript mentions that in the next video, the **architecture of the
-> CBOW model will be explained**, preparing for the application of the newly acquired skills in the upcoming
+> 7 Introduction to the CBOW model: The transcript mentions that in the next video, the\\* architecture of the
+> CBOW model will be explained\\*, preparing for the application of the newly acquired skills in the upcoming
 > assignment.
 
 <br>
@@ -1057,15 +1059,15 @@
 <a id="node-yhw3jqw"></a>
 
 > [!NOTE]
-> In this series of ungraded notebooks, you'll **try out all the individual techniques that
-> you learned about** in the lectures. Practicing on **small examples will prepare you for
-> the graded assignment**, where you will combine the techniques in more advanced
+> In this series of ungraded notebooks, you'll \\*try out all the individual techniques that
+> you learned about\\* in the lectures. Practicing on \\*small examples will prepare you for
+> the graded assignment\\*, where you will combine the techniques in more advanced
 > ways to create word embeddings from a real-life corpus.
 >
 > This notebook focuses on data preparation, which is the first step of any machine
-> learning algorithm. It is a very important step because **models are only as good as
-> the data they are trained on** and the models used **require the data to have a
-> particular structure** to process it properly.
+> learning algorithm. It is a very important step because \\*models are only as good as
+> the data they are trained on\\* and the models used \\*require the data to have a
+> particular structure\\* to process it properly.
 >
 > To get started, import and initialize all the libraries you will need.
 
@@ -1081,14 +1083,14 @@
 
 > [!NOTE]
 > import re
-> import **nltk**
+> import \\*nltk\\*
 >
-> nltk.download('**punkt**')
+> nltk.download('\\*punkt\\*')
 >
-> import **emoji**
-> import **numpy** as np
-> from nltk.tokenize import **word_tokenize**
-> from utils2 import **get_dict**
+> import \\*emoji\\*
+> import \\*numpy\\* as np
+> from nltk.tokenize import \\*word_tokenize\\*
+> from utils2 import \\*get_dict\\*
 
 <br>
 
@@ -1101,13 +1103,13 @@
 <a id="node-u4pmr3e"></a>
 
 > [!NOTE]
-> In the **data preparation phase**, starting with a **corpus of text**, you will:
+> In the \\*data preparation phase\\*, starting with a\\* corpus of text\\*, you will:
 >  • Clean and tokenize the corpus.
->  • Extract the **pairs of context words and center word** that will make up the 
+>  • Extract the \\*pairs of context words and center word\\* that will make up the 
 > training data set for the CBOW model. The context words are the features that will be fed 
-> into the model, and the **center words** are the target values that the model will learn to 
+> into the model, and the \\*center words\\* are the target values that the model will learn to 
 > predict.
->  • Create **simple vector representations** of the context words (features) and 
+>  • Create \\*simple vector representations\\* of the context words (features) and 
 > center words (targets) that can be used by the neural network of the CBOW model.
 
 <br>
@@ -1290,6 +1292,8 @@
 > function** để **chuyển một bộ các context
 > words** thành một **word vector.**
 
+**🔗 See also:** [linked note](#node-ks6tfom)
+
 <br>
 
 <a id="node-vfju44o"></a>
@@ -1320,6 +1324,8 @@
 > **get_training_example** nó sẽ có cái kiểu **trả kết quả từng chút từng chút
 > (từng bộ một)** chứ không phải nó chạy xong hết nó trả 1 cục ra
 
+**🔗 See also:** [linked note](#node-ks6tfom)
+
 <br>
 
 <a id="node-75mpreg"></a>
@@ -1331,35 +1337,35 @@
 <a id="node-y8v00jt"></a>
 
 > [!NOTE]
-> 1 The **continuous bag of words (CBOW)** model uses a **shallow dense neural network
-> architecture**.
+> 1 The \\*continuous bag of words (CBOW)\\* model uses a\\* shallow dense neural network
+> architecture\\*.
 >
-> 2 The model consists of an **input layer, a single hidden layer, and an output layer.**
+> 2 The model consists of an \\*input layer, a single hidden layer, and an output layer.\\*
 >
-> 3 The input layer takes a vector of **context words (x) as input**, and the **output layer predicts the
-> center word (y hat).**
+> 3 The input layer takes a vector of \\*context words (x) as input\\*, and the \\*output layer predicts the
+> center word (y hat).\\*
 >
-> 4 The **size of the input and output vectors** is equal to the **vocabulary size (V).**
+> 4 The \\*size of the input and output vectors\\* is equal to the \\*vocabulary size (V).\\*
 >
-> 5 The **hidden layer's size** is determined by the **chosen word embedding size (N)** and is
+> 5 The \\*hidden layer's size\\* is determined by the \\*chosen word embedding size (N)\\* and is
 > typically set to match N.
 >
-> 6 The neural network is **fully connected,** with weights **(W_1 and W_2)** and bias vectors **(b_1
-> and b_2)** between the layers.
+> 6 The neural network is\\* fully connected,\\* with weights \\*(W_1 and W_2)\\* and bias vectors \\*(b_1
+> and b_2)\\* between the layers.
 >
-> 7 **Word embeddings** are **derived from the weights matrices** of the neural network.
+> 7 \\*Word embeddings\\* are \\*derived from the weights matrices\\* of the neural network.
 >
-> 8 The activation function used for the hidden layer is **rectified linear units (ReLU)**, and **softmax**
+> 8 The activation function used for the hidden layer is \\*rectified linear units (ReLU)\\*, and \\*softmax\\*
 > is used for the output layer.
 >
 > 9 The activation functions play a crucial role in the model's predictions but will be discussed in detail
 > in a future video.
 >
-> 10 **Understanding the dimensions of the matrices and vectors** is important for completing the
+> 10 \\*Understanding the dimensions of the matrices and vectors\\* is important for completing the
 > assignments.
 >
-> 11 **Logistic regression cannot be used in this case as there are multiple possibilities for prediction
-> (V possible ways).**
+> 11 \\*Logistic regression cannot be used in this case as there are multiple possibilities for prediction
+> (V possible ways).\\*
 
 <br>
 
@@ -1396,22 +1402,22 @@
 <a id="node-jr3yygs"></a>
 
 > [!NOTE]
-> 1 Understanding the **dimensions of the layers** in a model can **help in comprehending how the model works**
+> 1 Understanding the \\*dimensions of the layers\\* in a model can \\*help in comprehending how the model works\\*
 > and following along with the equations.
 >
-> 2 The **continuous bag of words (CBOW) model** consists of an **input layer, hidden layer, and output layer.**
+> 2 The \\*continuous bag of words (CBOW) model\\* consists of an\\* input layer, hidden layer, and output layer.\\*
 >
-> 3 The **input layer** is represented by a **column vector x** with a **size equal to the vocabulary (V)**.
+> 3 The \\*input layer\\* is represented by a \\*column vector x\\* with a \\*size equal to the vocabulary (V)\\*.
 >
-> 4 The **weighted sum of the values from the input layer**, along with the bias vector, **gives the results z1 in the
-> hidden layer**.
+> 4 The \\*weighted sum of the values from the input layer\\*, along with the bias vector, \\*gives the results z1 in the
+> hidden layer\\*.
 >
-> 5 The weighting matrix W1 between the input layer and hidden layer has **N rows** (**word embedding size**) and **V**
-> c**olumns (vocabulary size)**.
+> 5 The weighting matrix W1 between the input layer and hidden layer has \\*N rows\\* (\\*word embedding size\\*) and \\*V\\*
+> c\\*olumns (vocabulary size)\\*.
 >
 > 6 The bias vector b1 for the hidden layer has N rows (neurons in the hidden layer).
 >
-> 7 Applying the ReLU **activation function** **preserves the dimensions**, resulting in a hidden layer represented by
+> 7 Applying the ReLU \\*activation function\\* \\*preserves the dimensions\\*, resulting in a hidden layer represented by
 > a column vector with N rows.
 >
 > 8 The weighted sum of the values from the hidden layer, along with the bias vector, gives the results z2 in the
@@ -1422,13 +1428,13 @@
 >
 > 10 The bias vector b2 for the output layer has V rows (output neurons).
 >
-> 11 Applying the **softmax activation function preserves the dimensions**, resulting in an output column vector y
+> 11 Applying the \\*softmax activation function preserves the dimensions\\*, resulting in an output column vector y
 > hat with V rows.
 >
-> 12 **If working with row vectors instead of column vectors, the calculations involve transposed matrices and
-> inverted terms in matrix multiplication.**
+> 12 \\*If working with row vectors instead of column vectors, the calculations involve transposed matrices and
+> inverted terms in matrix multiplication.\\*
 >
-> 13 Understanding the dimensions is essential when working with **batches of examples** instead of **one example**
+> 13 Understanding the dimensions is essential when working with \\*batches of examples \\*instead of \\*one example\\*
 > at a time.
 >
 > 14 Knowing the dimensions helps in programming assignments and prevents dimension mismatches.
@@ -1465,38 +1471,39 @@
 <a id="node-u85tj4o"></a>
 
 > [!NOTE]
-> 1 In the **continuous bag of words (CBOW) model**, **feeding several examples** into the neural network at the
-> same time is known as **batch processing**, which can **speed up the learning process.**
+> 1 In the \\*continuous bag of words (CBOW) model\\*,\\* feeding several examples\\* into the neural network at the
+> same time is known as \\*batch processing\\*, which can \\*speed up the learning process.\\*
 >
-> 2 The **batch size** is denoted as **m** and is a **hyperparameter** defined at training time.
+> 2 The \\*batch size\\* is denoted as \\*m\\* and is a \\*hyperparameter \\*defined at training time.
 >
-> 3 To **process multiple inputs simultaneously**, the **individual input context word vectors** can be **joined** side
-> by side to form a **matrix X with m columns.**
+> 3 To \\*process multiple inputs simultaneously\\*, the\\* individual input context word vectors\\* can be \\*joined\\* side
+> by side to form a \\*matrix X with m columns.\\*
 >
-> 4 Passing this **matrix X** through the network results in a **matrix H**, representing the **values of the hidden
-> layer**.
+> 4 Passing this \\*matrix X\\* through the network results in a \\*matrix H\\*, representing the \\*values of the hidden
+> layer\\*.
 >
-> 5 Matrix H is obtained by **applying the ReLU activation function** to the **weighted sum matrix Z1**, where Z1 is
-> the result of the **matrix multiplication W1 times X plus the bias matrix B1**.
+> 5 Matrix H is obtained by \\*applying the ReLU activation function\\* to the \\*weighted sum matrix Z1\\*, where Z1 is
+> the result of the \\*matrix multiplication W1 times X plus the bias matrix B1\\*.
 >
-> 6 **The bias matrix B1** is created by **duplicating the bias vector b1 m times** to have an **N by m matrix** (where
+> 6 \\*The bias matrix B1\\* is created by \\*duplicating the bias vector b1 m times\\* to have an \\*N by m matrix\\* (where
 > N is the size of word embeddings and m is the batch size).
 >
-> 7 **Broadcasting the vector to a matrix** is performed **automatically by numpy** when **adding a matrix to a
-> column vector** with the **same number of rows.**
+> 7 \\*Broadcasting the vector to a matrix\\* is performed \\*automatically by numpy\\* when\\* adding a matrix to a
+> column vector\\* with the \\*same number of rows.\\*
 >
-> 8 The **output matrix Y hat**, **containing the m outputs**, is obtained by **applying the softmax function** to the **weighted sum matrix W2H plus the bias matrix B2.**
+> 8 The \\*output matrix Y hat\\*, \\*containing the m outputs\\*, is obtained by\\* applying the softmax function\\* to the\\*
+> weighted sum matrix W2H plus the bias matrix B2.\\*
 >
-> 9 The **bias matrix B2** is created by r**eplicating the bias vector b2 m times** to have an **output bias matrix with
-> m columns.**
+> 9 The \\*bias matrix B2\\* is created by r\\*eplicating the bias vector b2 m times\\* to have an \\*output bias matrix with
+> m columns.\\*
 >
-> 10 The **output matrix Y hat** can be **broken down into m column vectors,** each corresponding to **one of the
-> input context word vectors.**
+> 10 The \\*output matrix Y hat\\* can be\\* broken down into m column vectors,\\* each corresponding to \\*one of the
+> input context word vectors.\\*
 >
 > 11 Each input context word vector from the input matrix X is transformed into the corresponding output vector from
 > the output matrix Y hat.
 >
-> 12 Understanding **how to vectorize inputs** and **outputs in batch processing** is an important step toward
+> 12 Understanding \\*how to vectorize inputs\\* and \\*outputs in batch processing\\* is an important step toward
 > building a working CBOW model.
 >
 > 13 The next video will dive into the activation functions used in the CBOW model.
@@ -1536,39 +1543,41 @@
 <a id="node-fi9ps8a"></a>
 
 > [!NOTE]
-> 1 The **rectified linear unit (ReLU)** is an **activation function** used in neural networks. It calculates the **weighted sum of
-> inputs** for each layer and passes the result through the **ReLU function**.  **2 ReLU function activates a neuron only if the
-> weighted sum of its inputs is positive**. It returns the **maximum of 0 and the input value.**
+> 1 The \\*rectified linear unit (ReLU)\\* is an \\*activation function\\* used in neural networks. It calculates the \\*weighted sum of
+> inputs\\* for each layer and passes the result through the\\* ReLU function\\*. \\* 
 >
-> 3 ReLU function **converts negative values to zero**, while **positive values remain unchanged**.
+> 2 ReLU function activates a neuron only if the
+> weighted sum of its inputs is positive\\*. It returns the \\*maximum of 0 and the input value.\\*
 >
-> 4 The **ReLU functio**n is applied to the hidden layer in the continuous bag of words (CBOW) model after calculating the
-> weighted sum **Z1** (W1 times X plus B1).
+> 3 ReLU function \\*converts negative values to zero\\*, while \\*positive values remain unchanged\\*.
 >
-> 5 The **ReLU function helps introduce non-linearity to the neural network**, allowing it to **learn complex patterns and
-> relationships in the data**.
+> 4 The \\*ReLU functio\\*n is applied to the hidden layer in the continuous bag of words (CBOW) model after calculating the
+> weighted sum \\*Z1\\* (W1 times X plus B1).
 >
-> 6 The **softmax function** is an **activation function** used in the **output layer of the CBOW model.**
+> 5 The \\*ReLU function helps introduce non-linearity to the neural network\\*, allowing it to\\* learn complex patterns and
+> relationships in the data\\*.
 >
-> 7 The softmax function **takes a vector of real numbers** as **input** and **outputs a vector of real numbers between 0 and
-> 1.**
+> 6 The\\* softmax function\\* is an \\*activation function\\* used in the \\*output layer of the CBOW model.\\*
 >
-> 8 The softmax function **normalizes the inputs to probabilities that sum up to one**, \\/**representing the likelihood of each
-> event in the output vector.**\\/
+> 7 The softmax function \\*takes a vector of real numbers\\* as \\*input\\* and \\*outputs a vector of real numbers between 0 and
+> 1.\\*
 >
-> 9 In the CBOW model, the **softmax function is applied to the weighted sum Z2** (W2H plus B2) to obtain the output vector
+> 8 The softmax function \\*normalizes the inputs to probabilities that sum up to one\\*, \\/\\*representing the likelihood of each
+> event in the output vector.\\*\\/
+>
+> 9 In the CBOW model, the \\*softmax function is applied to the weighted sum Z2\\* (W2H plus B2) to obtain the output vector
 > Y hat.
 >
-> 10 The **output vector Y hat has V rows**, corresponding to the words in the vocabulary, and the \\/**values represent the
-> probabilities that the central word is assigned to each word in the vocabulary.**\\/
+> 10 The\\* output vector Y hat has V rows\\*, corresponding to the words in the vocabulary, and the \\/\\*values represent the
+> probabilities that the central word is assigned to each word in the vocabulary.\\*\\/
 >
-> 11 The softmax function is calculated by **exponentiating the input vector elements** and **normalizing them by the sum of
-> all exponentiated values.**
+> 11 The softmax function is calculated by \\*exponentiating the input vector elements\\* and \\*normalizing them by the sum of
+> all exponentiated values.\\*
 >
-> 13 The **highest probability value in the output vector** indicates the **predicted central word**.
+> 13 The \\*highest probability value in the output vector\\* indicates the\\* predicted central word\\*.
 >
-> 15 **ReLU function introduces non-linearity and helps capture complex patterns,** while **softmax function provides
-> probabilities for classification tasks.**
+> 15 \\*ReLU function introduces non-linearity and helps capture complex patterns,\\* while \\*softmax function provides
+> probabilities for classification tasks.\\*
 
 <br>
 
@@ -1787,37 +1796,38 @@
 <a id="node-rciohhr"></a>
 
 > [!NOTE]
-> 1 The cost function for **Softmax** is used to predict one of the possible words in a machine learning
+> 1 The cost function for \\*Softmax\\* is used to predict one of the possible words in a machine learning
 > model.
 >
-> 2 The objective is to **minimize the cost function** in order to **make accurate predictions.**
+> 2 The objective is to\\* minimize the cost function\\* in order to \\*make accurate predictions.\\*
 >
-> 3 A machine learning model consists of training examples with **inputs, true targets, and predicted
-> values**.
+> 3 A machine learning model consists of training examples with \\*inputs, true targets, and predicted
+> values\\*.
 >
-> 4 The loss function measures the **difference between the prediction and the true value** for a
-> **single training example** in the continuous bag of words model.
+> 4 The loss function measures the \\*difference between the prediction and the true value\\* for a
+> \\*single training example\\* in the continuous bag of words model.
 >
-> 5 The **parameters being adjusted** in the continuous bag of words model are the weight matrices
+> 5 The \\*parameters being adjusted\\* in the continuous bag of words model are the weight matrices
 > (W1 and W2) and the bias factors (B1 and B2).
 >
-> 6 The **cross-entropy loss function** is commonly used with **classification models**, including the
+> 6 The\\* cross-entropy loss function\\* is commonly used with \\*classification models\\*, including the
 > continuous bag of words model.
 >
-> 7 The **cross-entropy** loss is calculated using the **negative sum of the product of the actual value
-> (Y) and the logarithm of the predicted value (Ŷ).** 
+> 7 The \\*cross-entropy\\* loss is calculated using the \\*negative sum of the product of the actual value
+> (Y) and the logarithm of the predicted value (Ŷ).
+> \\*
 > 8 An example is given with input context "I am because I were" and the actual central word "
 > happy" with corresponding vectors Y and Ŷ.
 >
-> 9 The **cross-entropy loss** is computed as the **negative sum**, resulting in a **loss value.**
+> 9 The \\*cross-entropy loss\\* is computed as the \\*negative sum\\*, resulting in a \\*loss value.\\*
 >
 > 10 When the prediction is incorrect, the loss is larger, and the cross-entropy loss is positive.
 >
-> 11 The **cross-entropy loss rewards correct predictions and penalizes incorrect predictions.**
+> 11 The \\*cross-entropy loss rewards correct predictions and penalizes incorrect predictions.\\*
 >
-> 12 The l**oss approaches positive infinity** as the **predicted value approaches zero.**
+> 12 The l\\*oss approaches positive infinity\\* as the \\*predicted value approaches zero.\\*
 >
-> 13 The c**ross-entropy loss** is used in the **forward propagation** of the continuous bag of words
+> 13 The c\\*ross-entropy loss\\* is used in the \\*forward propagation\\* of the continuous bag of words
 > model.
 
 <br>
@@ -1985,26 +1995,26 @@
 <a id="node-c0u0qqo"></a>
 
 > [!NOTE]
-> 1 **Forward propagation** of the CBOW model is explained, which shows the **transformation of inputs through
-> activation layers** until a **prediction** is made.
+> 1 \\*Forward propagation\\* of the CBOW model is explained, which shows the \\*transformation of inputs through
+> activation layers\\* until a \\*prediction\\* is made.
 >
-> 2 The **cross-entropy loss function** is used to **measure the error** in the CBOW model's predictions for a
+> 2 The \\*cross-entropy loss function\\* is used to \\*measure the error\\* in the CBOW model's predictions for a
 > single example.
 >
-> 3 Training is done using **batches of examples**, and **forward propagatio**n is applied to **propagate inputs
-> through the network** and obtain the **output matrix Ŷ.**
+> 3 Training is done using\\* batches of examples\\*, and \\*forward propagatio\\*n is applied to \\*propagate inputs
+> through the network\\* and obtain the \\*output matrix Ŷ.\\*
 >
-> 4 **Cost** is an **extension of loss to support a batch of training examples**, and it is calculated based on the
-> **cross-entropy loss function.**
+> 4 \\*Cost\\* is an \\*extension of loss to support a batch of training examples\\*, and it is calculated based on the
+> \\*cross-entropy loss function.\\*
 >
-> 5 The terms **"loss" and "cost" are used interchangeably**, with **"loss" referring to a single example and "cost"
-> to a batch of examples.**
+> 5 The terms \\*"loss" and "cost" are used interchangeably\\*, with \\*"loss" referring to a single example and "cost"
+> to a batch of examples.\\*
 >
-> 6 The cross-entropy cost for a batch of examples is the **mean** of the cross-entropy losses for each individual
+> 6 The cross-entropy cost for a batch of examples is the \\*mean\\* of the cross-entropy losses for each individual
 > example.
 >
-> 8 The **cost function** is used to **optimize the parameters of the neural network** through **backpropagation**
-> and **gradient descent.**
+> 8 The \\*cost function\\* is used to \\*optimize the parameters of the neural network\\* through \\*backpropagation\\*
+> and \\*gradient descent.\\*
 
 <br>
 
@@ -2041,37 +2051,37 @@
 <a id="node-ojeb6r8"></a>
 
 > [!NOTE]
-> 1 The **goal** is to learn the weights and biases of the linear layer and word embeddings by **minimizing
-> the cost function.**  
+> 1 The \\*goal\\* is to learn the weights and biases of the linear layer and word embeddings by \\*minimizing
+> the cost function. \\* 
 >
-> 2 **Backpropagation** is an algorithm that **calculates the partial derivatives or
-> gradients of the cost function with respect to the weights and biases** of the neural network.
+> 2 \\*Backpropagation\\* is an algorithm that \\*calculates the partial derivatives or
+> gradients of the cost function with respect to the weights and biases\\* of the neural network.
 >
-> 3 Backpropagation involves using the **chain rule for derivatives** to **calculate derivatives starting from
-> the output layer and working backward through the layers**.
+> 3 Backpropagation involves using the \\*chain rule for derivatives \\*to \\*calculate derivatives starting from
+> the output layer and working backward through the layers\\*.
 >
-> 4 **Gradient Descent** is a technique that **adjusts the weights and biases of the neural network using the
-> gradients to minimize the cost**.
+> 4 \\*Gradient Descent\\* is a technique that\\* adjusts the weights and biases of the neural network using the
+> gradients to minimize the cost\\*.
 >
-> 5 The **partial derivatives of the cost function with respect to the weights and biases (W1, W2, b1, b2)** are
+> 5 The\\* partial derivatives of the cost function with respect to the weights and biases (W1, W2, b1, b2)\\* are
 > provided.
 >
-> 6 The **formulas for updating the weights and biases using Gradient Descent** are given, including the
-> **learning rate (alpha) as a hyperparameter.**
+> 6 The \\*formulas for updating the weights and biases using Gradient Descent\\* are given, including the
+> \\*learning rate (alpha) as a hyperparameter.\\*
 >
-> 7 The **learning rate determines the size of the step taken during each parameter update**, with a
-> **smaller** value leading to **more gradual updates** and a **larger** value allowing for **faster updates**.
+> 7 The \\*learning rate determines the size of the step taken during each parameter update\\*, with a
+> \\*smaller\\* value leading to \\*more gradual updates\\* and a \\*larger\\* value allowing for \\*faster updates\\*.
 >
-> 8 The **updated weights** and **biases** are obtained by **subtracting alpha times their respective
-> gradients from their original values**.
+> 8 The \\*updated weights\\* and \\*biases\\* are obtained by \\*subtracting alpha times their respective
+> gradients from their original values\\*.
 >
-> 9 Understanding the **mathematical derivation of the formulas** is not necessary for this course.
+> 9 Understanding the\\* mathematical derivation of the formulas\\* is not necessary for this course.
 >
-> 10 With the knowledge of **backpropagation** and g**radient descent**, one has the  necessary tools to train a
+> 10 With the knowledge of \\*backpropagation\\* and g\\*radient descent\\*, one has the  necessary tools to train a
 > continuous bag-of-words model.
 >
-> 11 The next video will cover **how to extract word embedding vectors** from a **trained continuous
-> bag-of-words model.**
+> 11 The next video will cover \\*how to extract word embedding vectors\\* from a \\*trained continuous
+> bag-of-words model.\\*
 
 <br>
 
@@ -2095,6 +2105,8 @@
 > Ổng để sẵn công thức tính p.d nhưng
 > mình vì đã học nên có thể hiểu tại
 > sao ra công thức này.
+
+**🔗 See also:** [linked note](#node-vlkixok)
 
 <br>
 
@@ -2135,13 +2147,13 @@
 <p align="center"><kbd><img src="assets/xdcdlxc7og.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> In previous lecture notebooks you saw how to **prepare data** before feeding it to a 
+> In previous lecture notebooks you saw how to \\*prepare data\\* before feeding it to a 
 > continuous bag-of-words model, the model itself, its architecture and activation functions. 
 > This notebook will walk you through:
->  • **Forward propagation**.
->  • **Cross-entropy loss**.
->  • **Backpropagation**.
->  • **Gradient descent.**
+>  • \\*Forward propagation\\*.
+>  • \\*Cross-entropy loss\\*.
+>  • \\*Backpropagation\\*.
+>  • \\*Gradient descent.\\*
 >
 > Which are concepts necessary to understand how the training of the model works.
 >
@@ -2212,14 +2224,14 @@
 <a id="node-ks6tfom"></a>
 
 > [!NOTE]
-> # Define the **tokenized version of the corpus**
+> # Define the\\* tokenized version of the corpus\\*
 > words = ['i', 'am', 'happy', 'because', 'i', 'am', 'learning']
 >
-> # Get '**word2Ind**' and '**Ind2word**' dictionaries for the tokenized corpus
-> **word2Ind**, **Ind2word** = **get_dict(words)**
+> # Get '\\*word2Ind\\*' and '\\*Ind2word\\*' dictionaries for the tokenized corpus
+> \\*word2Ind\\*, \\*Ind2word\\* = \\*get_dict(words)\\*
 >
-> # Define the '**get_windows**' function as seen in a previous notebook
-> def **get_windows**(words, C):
+> # Define the '\\*get_windows\\*' function as seen in a previous notebook
+> def \\*get_windows\\*(words, C):
 >     i = C
 >     while i < len(words) - C:
 >         center_word = words[i]
@@ -2227,25 +2239,27 @@
 >         yield context_words, center_word
 >         i += 1
 >
-> # Define the '**word_to_one_hot_vector**' function as seen in a previous notebook
-> def **word_to_one_hot_vector**(word, word2Ind, V):
+> # Define the '\\*word_to_one_hot_vector\\*' function as seen in a previous notebook
+> def \\*word_to_one_hot_vector\\*(word, word2Ind, V):
 >     one_hot_vector = np.zeros(V)
 >     one_hot_vector[word2Ind[word]] = 1
 >     return one_hot_vector
 >
-> # Define the '**context_words_to_vector**' function as seen in a previous notebook
+> # Define the '\\*context_words_to_vector\\*' function as seen in a previous notebook
 > def context_words_to_vector(context_words, word2Ind, V):
 >     context_words_vectors = [word_to_one_hot_vector(w, word2Ind, V) for w in context_words]
 >     context_words_vectors = np.mean(context_words_vectors, axis=0)
 >     return context_words_vectors
 >
 > # Define the generator function 'get_training_example' as seen in a previous notebook
-> def **get_training_example**(words, C, word2Ind, V):
+> def \\*get_training_example\\*(words, C, word2Ind, V):
 >     for context_words, center_word in get_windows(words, C):
 >         yield context_words_to_vector(context_words, word2Ind, V), word_to_one_hot_vector(center_word, word2Ind, V)
 >
 > Mấy function này đã 'làm qua' ở lab
 > trước, đây dùng lại thôi
+
+**🔗 See also:** [linked note](#node-bqvwylf) · [linked note](#node-o1jnhic)
 
 <br>
 
@@ -2455,15 +2469,15 @@
 >
 > You'll need many more iterations to fully train the neural network, and you can optimize the
 > learning process by training on batches of examples, as described in the lecture. You will get
-> to do this during this week's assignment.  **How this practice relates to and differs from the
-> upcoming graded assignment** 
+> to do this during this week's assignment. \\* How this practice relates to and differs from the
+> upcoming graded assignment \\*
 >
-> • In the assignment, for each iteration of training **you will use batches of examples** **instead** of
+> • In the assignment, for each iteration of training \\*you will use batches of examples\\* \\*instead\\* of
 > a single example. The formulas for forward propagation and backpropagation will be modified
-> accordingly, and you will use **cross-entropy** **cost** instead of **cross-entropy loss.**
+> accordingly, and you will use \\*cross-entropy\\* \\*cost\\* instead of \\*cross-entropy loss.\\*
 >
-> • You will also complete **several iterations of training**, until you **reach an acceptably low
-> cross-entropy cost**, at which point you can **extract good word embeddings** from the weight
+> • You will also complete \\*several iterations of training\\*, until you \\*reach an acceptably low
+> cross-entropy cost\\*, at which point you can \\*extract good word embeddings\\* from the weight
 > matrices.
 >
 > Đại khái trong P.A sẽ xử lý 1 batch
@@ -2480,25 +2494,25 @@
 <a id="node-pngxli3"></a>
 
 > [!NOTE]
-> 1 **Word embeddings are not directly output** by the training process but are a **by-product of
-> it**. Word embeddings are **vectors that carry the meaning of words based on the context
-> words in the corpus**.
+> 1\\* Word embeddings are not directly output\\* by the training process but are a\\* by-product of
+> it\\*. Word embeddings are \\*vectors that carry the meaning of words based on the context
+> words in the corpus\\*.
 >
-> 2 After training a neural network, there are **three alternative methods to extract word
-> embeddings from the trained model**:
+> 2 After training a neural network, there are \\*three alternative methods to extract word
+> embeddings from the trained model\\*:
 >
-> 3 a. Extract the **column vectors of the weight matrix W_1** as word embeddings. Each
+> 3 a. Extract the \\*column vectors of the weight matrix W_1\\* as word embeddings. Each
 > column corresponds to a word in the vocabulary.
 >
-> 4 b. Extract the **row vectors of the weight matrix W_2** as word embeddings. Each row
+> 4 b. Extract the \\*row vectors of the weight matrix W_2\\* as word embeddings. Each row
 > corresponds to a word in the vocabulary.
 >
-> 5 c. **Take the average of the previous two representations** by averaging W_1 and the
+> 5 c. \\*Take the average of the previous two representations\\* by averaging W_1 and the
 > transpose of W_2 to obtain a new matrix W_3. Word embeddings can then be extracted
 > from each column of W_3.
 >
-> 8 In the following week's video, there will be a discussion about **evaluation metrics for word
-> embeddings**, specifically intrinsic evaluation and extrinsic evaluation.
+> 8 In the following week's video, there will be a discussion about \\*evaluation metrics for word
+> embeddings\\*, specifically intrinsic evaluation and extrinsic evaluation.
 
 <br>
 
@@ -2531,7 +2545,7 @@
 > [!NOTE]
 > In previous lecture notebooks you saw all the steps needed to
 > train the CBOW model. This notebook will walk you through
-> **how to extract the word embedding vectors** from a model.
+> \\*how to extract the word embedding vectors\\* from a model.
 >
 > Let's dive into it!
 
@@ -2594,28 +2608,28 @@
 <a id="node-ilizw9v"></a>
 
 > [!NOTE]
-> 1 There are **two types of evaluation metrics** for word embeddings: **intrinsic** evaluation and **extrinsic**
+> 1 There are \\*two types of evaluation metrics\\* for word embeddings: \\*intrinsic\\* evaluation and \\*extrinsic\\*
 > evaluation.
 >
-> 2 **Intrinsic evaluation** focuses on **assessing how well word embeddings capture semantic and syntactic
-> relationships between words**. **Semantic analogies**, such as **finding missing words in analogies** like "
-> France is to Paris as Italy is to ____," and **syntactic analogies**, such as identifying **patterns in tenses or
-> comparatives**, can be used for evaluation.
+> 2 \\*Intrinsic evaluation\\* focuses on \\*assessing how well word embeddings capture semantic and syntactic
+> relationships between words\\*. \\*Semantic analogies\\*, such as \\*finding missing words in analogies\\* like "
+> France is to Paris as Italy is to ____," and \\*syntactic analogies\\*, such as identifying \\*patterns in tenses or
+> comparatives\\*, can be used for evaluation.
 >
-> 3 **Intrinsic evaluation** can also **involve clustering similar word embedding vectors** and **assessing the
-> quality of the clusters** by **comparing them to a human-made reference**, like a **thesaurus**.
+> 3 \\*Intrinsic evaluation\\* can also \\*involve clustering similar word embedding vectors\\* and \\*assessing the
+> quality of the clusters\\* by \\*comparing them to a human-made reference\\*, like a \\*thesaurus\\*.
 >
-> 4 It is important to note that **in some cases, there may be multiple correct answers** or instances where
-> **word embeddings fail to capture certain relationships accurately.**
+> 4 It is important to note that \\*in some cases, there may be multiple correct answers\\* or instances where
+> \\*word embeddings fail to capture certain relationships accurately.\\*
 >
-> 5 **Visualization** of word embedding vectors can **be a part of intrinsic evaluation**, allowing for a **basic
-> assessment of the embeddings using human judgment**.
+> 5 \\*Visualization\\* of word embedding vectors can \\*be a part of intrinsic evaluation\\*, allowing for a \\*basic
+> assessment of the embeddings using human judgment\\*.
 >
-> 7 **Intrinsic** evaluation methods include **clustering, analogies, and visualization**, while **extrinsic**
-> evaluation focuses on **evaluating the performance of word embeddings in specific downstream tasks**.
+> 7 \\*Intrinsic\\* evaluation methods include \\*clustering, analogies, and visualization\\*, while \\*extrinsic\\*
+> evaluation focuses on \\*evaluating the performance of word embeddings in specific downstream tasks\\*.
 >
-> Overall, the text introduces the **concepts of intrinsic and extrinsic evaluation**, discusses intrinsic
-> evaluation methods such as **analogies and clustering,** and mentions that **visualization** and basic
+> Overall, the text introduces the \\*concepts of intrinsic and extrinsic evaluation\\*, discusses intrinsic
+> evaluation methods such as \\*analogies and clustering, \\*and mentions that\\* visualization\\* and basic
 > intrinsic evaluation will be part of the assignment. It also sets the stage for the next video, where
 > extrinsic evaluation will be explored.
 
@@ -2671,31 +2685,31 @@
 <a id="node-aobookt"></a>
 
 > [!NOTE]
-> 1 **Extrinsic evaluation** is a method used to **test word embeddings** on **external tasks**, which are typically
-> r**eal-world tasks** that **require the use of word embeddings**. It evaluates the **performance of the word
-> embeddings by using the performance metric of the external task** as **a proxy for the quality of the embeddings**.
+> 1 \\*Extrinsic evaluation\\* is a method used to \\*test word embeddings\\* on \\*external tasks\\*, which are typically
+> r\\*eal-world tasks\\* that \\*require the use of word embeddings\\*. It evaluates the \\*performance of the word
+> embeddings by using the performance metric of the external task\\* as \\*a proxy for the quality of the embeddings\\*.
 >
-> 2 Examples of useful **word-level tasks for extrinsic evaluation** include **named entity recognition** and
-> **parts-of-speech tagging**. Named entity recognition involves i**dentifying and categorizing named entities in a
-> sentence**, such as **identifying persons, organizations, locations,** etc.
+> 2 Examples of useful \\*word-level tasks for extrinsic evaluation\\* include \\*named entity recognition\\* and
+> \\*parts-of-speech tagging\\*. Named entity recognition involves i\\*dentifying and categorizing named entities in a
+> sentence\\*, such as \\*identifying persons, organizations, locations, \\*etc.
 >
-> 3 To perform **extrinsic evaluation**, you **train a model using word embeddings** and **evaluate its performance on a
-> test set using selected evaluation metrics** like **accuracy** or **F1 score**. The **performance of the model** on the
-> evaluation metric **represents** the **combined performance of both the word embeddings** and the **classification
-> task**.
+> 3 To perform \\*extrinsic evaluation\\*, you \\*train a model using word embeddings\\* and\\* evaluate its performance on a
+> test set using selected evaluation metrics\\* like \\*accuracy\\* or \\*F1 score\\*. The \\*performance of the model \\*on the
+> evaluation metric \\*represents\\* the \\*combined performance of both the word embeddings\\* and the \\*classification
+> task\\*.
 >
-> 4 **Extrinsic evaluation** is considered the **ultimate test to ensure the actual usefulness of word embeddings.**
-> However, it has some **drawbacks**, including being **more time-consuming** than intrinsic evaluation and **not
-> providing specific information** about **which part** of the end-to-end process (word embeddings or the external
-> task) **is  responsible** if the performance is poor.
+> 4 \\*Extrinsic evaluation\\* is considered the \\*ultimate test to ensure the actual usefulness of word embeddings.\\*
+> However, it has some \\*drawbacks\\*, including being \\*more time-consuming\\* than intrinsic evaluation and \\*not
+> providing specific information\\* about \\*which part \\*of the end-to-end process (word embeddings or the external
+> task) \\*is  responsible\\* if the performance is poor.
 >
-> 5 Extrinsic evaluation is **more challenging** to **troubleshoot** compared to intrinsic evaluation.
+> 5 Extrinsic evaluation is\\* more challenging\\* to\\* troubleshoot\\* compared to intrinsic evaluation.
 >
-> 6 The text suggests referring to a **comprehensive** and **readable paper** on **evaluating word embeddings** for
-> **further exploration** of the topic.
+> 6 The text suggests referring to a \\*comprehensive\\* and \\*readable paper\\* on \\*evaluating word embeddings\\* for
+> \\*further exploration\\* of the topic.
 >
-> 7 The summary emphasizes that **extrinsic evaluation** evaluates the **actual usefulness of word embeddings** but
-> acknowledges that it is **more time-consuming** and **difficult to troubleshoot** compared to intrinsic evaluation.
+> 7 The summary emphasizes that \\*extrinsic evaluation\\* evaluates the \\*actual usefulness of word embeddings\\* but
+> acknowledges that it is \\*more time-consuming\\* and \\*difficult to troubleshoot\\* compared to intrinsic evaluation.
 
 <br>
 
@@ -2741,13 +2755,13 @@
 > [!NOTE]
 > In this ungraded notebook, you'll try out all the individual techniques that you learned
 > about in the lecture. Practicing on small examples will prepare you for the graded
-> assignment, where you will combine the techniques in **more advanced ways** to
-> create **word embeddings** from a **real-life corpus.**
+> assignment, where you will combine the techniques in \\*more advanced ways\\* to
+> create \\*word embeddings\\* from a \\*real-life corpus.\\*
 >
-> This notebook is made of two main parts: **data preparation**, and the **continuous
-> bag-of-words (CBOW) model.**
+> This notebook is made of two main parts: \\*data preparation\\*, and the \\*continuous
+> bag-of-words (CBOW) model.\\*
 >
-> To get started, **import and initialize all the libraries** you will need.
+> To get started, \\*import and initialize all the libraries\\* you will need.
 
 <br>
 
@@ -2772,18 +2786,18 @@
 <a id="node-fq9q9u3"></a>
 
 > [!NOTE]
-> In the data preparation phase, starting with a **corpus of text**, you will:
+> In the data preparation phase, starting with a \\*corpus of text\\*, you will:
 >
-> • **Clean** and **tokenize the corpus.**
+> • \\*Clean\\* and \\*tokenize the corpus.\\*
 >
-> • **Extract the pairs of context words** and **center word** that will **make up
-> the training data set** for the **CBOW model**. The **context words** are the
-> **features** that will be **fed into the model**, and the **center words** are the
-> **target values** that the **model will learn to predict.**
+> • \\*Extract the pairs of context words\\* and \\*center word\\* that will \\*make up
+> the training data set\\* for the \\*CBOW model\\*. The \\*context words\\* are the
+> \\*features\\* that will be \\*fed into the model\\*, and the \\*center words\\* are the
+> \\*target values\\* that the \\*model will learn to predict.\\*
 >
-> • Create **simple vector representations** of the **context words** (features)
-> and **center words** (targets) that can be used by the **neural network of
-> the CBOW model.**
+> • Create \\*simple vector representations\\* of the \\*context words\\* (features)
+> and \\*center words\\* (targets) that can be used by the \\*neural network of
+> the CBOW model.\\*
 
 <br>
 
@@ -2796,9 +2810,9 @@
 <a id="node-w2hcsuu"></a>
 
 > [!NOTE]
-> To demonstrate the **cleaning** and **tokenization**
-> process, consider a **corpus** that contains **emojis**
-> and various **punctuation signs**.
+> To demonstrate the \\*cleaning\\* and \\*tokenization\\*
+> process, consider a \\*corpus\\* that contains \\*emojis\\*
+> and various \\*punctuation signs\\*.
 
 <br>
 
@@ -3371,33 +3385,33 @@
 <a id="node-2skz4k9"></a>
 
 > [!NOTE]
-> 1 Word **embeddings** are vectors that **capture the meaning of words** and can be used in various
-> **NLP applications**.
+> 1 Word \\*embeddings\\* are vectors that \\*capture the meaning of words\\* and can be used in various
+> \\*NLP applications\\*.
 >
-> 2 The week's focus was on **word embeddings** and **their applications in NLP.**
+> 2 The week's focus was on \\*word embeddings\\* and \\*their applications in NLP.\\*
 >
-> 3 The covered topics include **training word embeddings from scratch**, **tokenizing a corpus** to **build
-> a vocabulary**, **converting words to indices** and **one-hot vectors**, creating **word representations**
-> using continuous bag of words model, **training neural networks** for word embeddings, and
-> **visualizing** word embedding vectors.
+> 3 The covered topics include \\*training word embeddings from scratch\\*, \\*tokenizing a corpus\\* to \\*build
+> a vocabulary\\*, \\*converting words to indices\\* and \\*one-hot vectors\\*, creating \\*word representations\\*
+> using continuous bag of words model, \\*training neural networks\\* for word embeddings, and
+> \\*visualizing\\* word embedding vectors.
 >
-> 4 The final assignment allows practicing all the learned skills, including **data preparation**, **building
-> a vocabulary**, **training word embeddings, and evaluating them through visualization.**
+> 4 The final assignment allows practicing all the learned skills, including \\*data preparation\\*,\\* building
+> a vocabulary\\*, \\*training word embeddings, and evaluating them through visualization.\\*
 >
-> 5 **Advanced language modeling** and word embedding approaches can handle **out-of-vocabulary
-> words** and **multiple word meanings**, making them suitable for **real-world NLP applications**.
+> 5 \\*Advanced language modeling\\* and word embedding approaches can handle \\*out-of-vocabulary
+> words\\* and \\*multiple word meanings\\*, making them suitable for \\*real-world NLP applications\\*.
 >
 > 6 While implementing everything from scratch for the assignment, in practice, NLP and machine
-> learning libraries like **Keras**, **PyTorch**, and **TensorFlow** can **simplify the process with built-in
-> embedding layers.**
+> learning libraries like \\*Keras\\*, \\*PyTorch\\*, and \\*TensorFlow\\* can \\*simplify the process with built-in
+> embedding layers.\\*
 >
-> 7 **Exploring these libraries** is **recommended** as they provide **efficient ways to incorporate word
-> embeddings into neural networks** with just a **few lines of code.**
+> 7 \\*Exploring these libraries\\* is \\*recommended\\* as they provide \\*efficient ways to incorporate word
+> embeddings into neural networks\\* with just a \\*few lines of code.\\*
 >
-> 8 Acquiring the **ability to use and train word embeddings from scratch** is a **valuable skill for NLP
-> practitioners.**
+> 8 Acquiring the \\*ability to use and train word embeddings from scratch\\* is a \\*valuable skill for NLP
+> practitioners.\\*
 >
-> Overall, the main ideas **revolve around the importance** and **practicality of word embeddings** in
+> Overall, the main ideas \\*revolve around the importance\\* and \\*practicality of word embeddings\\* in
 > NLP, the skills learned throughout the week, and the suggestion to utilize NLP libraries for
 > efficient implementation.
 
@@ -3498,27 +3512,27 @@
 > [!NOTE]
 > Welcome to the fourth (and last) programming assignment of Course 2!
 >
-> In this assignment, you will practice how to **compute word embeddings** and use them for  **sentiment
-> analysis.**
+> In this assignment, you will practice how to \\*compute word embeddings\\* and use them for  \\*sentiment
+> analysis.\\*
 >
-> • To implement sentiment analysis, you can g**o beyond counting the number of  positive words** and
-> **negative words.**
+> • To implement sentiment analysis, you can g\\*o beyond counting the number of  positive words\\* and
+> \\*negative words.\\*
 >
-> • You can find a way to **represent each word numerically**, by a **vector**.
+> • You can find a way to \\*represent each word numerically\\*, by a \\*vector\\*.
 >
-> • The vector could then **represent syntactic** (i.e. **parts of speech**) and **semantic** (i.e. **meaning**)
+> • The vector could then \\*represent syntactic\\* (i.e. \\*parts of speech\\*) and \\*semantic  \\*(i.e. \\*meaning\\*)
 > structures.
 >
-> In this assignment, you will explore a **classic way** of **generating word embeddings** or  representations.
+> In this assignment, you will explore a \\*classic way\\* of\\* generating word embeddings\\* or  representations.
 >
-> • You will implement a **famous model** called the **continuous bag of words  (CBOW) model.**
+> • You will implement a \\*famous model \\*called the \\*continuous bag of words  (CBOW) model.\\*
 >
-> By completing this assignment you will:  • **Train word vectors** from **scratch**.  • Learn **how to create
-> batches of data**.  • Understand how **backpropagation** works.  • **Plot and visualize your learned word
-> vectors**.
+> By completing this assignment you will:  • \\*Train word vectors\\* from \\*scratch\\*.  • Learn \\*how to create
+> batches of data\\*.  • Understand how \\*backpropagation\\* works.  • \\*Plot and visualize your learned word
+> vectors\\*.
 >
-> Knowing how to train these models will **give you a better understanding of word vectors**,  which are
-> **building blocks to many applications** in **natural language processing.**
+> Knowing how to train these models will \\*give you a better understanding of word vectors\\*,  which are
+> \\*building blocks to many applications\\* in \\*natural language processing.\\*
 
 <br>
 
@@ -3561,13 +3575,13 @@
 > [!NOTE]
 > # Import Python libraries and helper functions (in utils2) 
 > import nltk
-> from nltk.tokenize import **word_tokenize**
+> from nltk.tokenize import \\*word_tokenize\\*
 > import numpy as np
-> from collections import **Counter**
-> from utils2 import **sigmoid**, **get_batches**, **compute_pca**, **get_dict**
-> import **w4_unittest**
+> from collections import \\*Counter\\*
+> from utils2 import \\*sigmoid\\*, \\*get_batches\\*, \\*compute_pca\\*, \\*get_dict\\*
+> import \\*w4_unittest\\*
 >
-> nltk.download('**punkt**')
+> nltk.download('\\*punkt\\*')
 
 <br>
 
@@ -3575,7 +3589,7 @@
 
 > [!NOTE]
 > # Download sentence tokenizer
-> **nltk.data.path.append('.')**
+> \\*nltk.data.path.append('.')\\*
 
 <br>
 
@@ -3583,12 +3597,13 @@
 
 > [!NOTE]
 > # Load, tokenize and process the data
-> import **re**                                                           #  Load the **Regex-modul**
-> **with open('./data/shakespeare.txt') as f:
->     data = f.read()** #  Read in the data
-> data = **re.sub(r'[,!?;-]', '.',data)**                                 #  **Punktuations** are replaced by **.**
-> data = **nltk.word_tokenize(data)**                                     #  **Tokenize string to words**
-> data = **[ ch.lower() for ch in data if ch.isalpha() or ch == '.']**    #  **Lower case** and **drop non-alphabetical tokens** print("Number of tokens:", len(data),'\\\\n', data[:15])               #  print data sample
+> import \\*re\\*                                                           #  Load the \\*Regex-modul\\*
+> \\*with open('./data/shakespeare.txt') as f:
+>     data = f.read()                                                 \\*#  Read in the data
+> data = \\*re.sub(r'[,!?;-]', '.',data) \\*                                #  \\*Punktuations\\* are replaced by \\*.\\*
+> data = \\*nltk.word_tokenize(data)\\*                                     #  \\*Tokenize string to words\\*
+> data = \\*[ ch.lower() for ch in data if ch.isalpha() or ch == '.']\\*    #  \\*Lower case\\* and \\*drop non-alphabetical tokens
+> \\*print("Number of tokens:", len(data),'\\\\n', data[:15])               #  print data sample
 >
 > Đại khái là làm các việc sau:
 >
@@ -3619,10 +3634,10 @@
 <p align="center"><kbd><img src="assets/j8qh4dxewpn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> # **Compute the frequency distribution** of the **words** in the dataset (vocabulary)
-> **fdist** = **nltk.FreqDist**(word for **word** in **data**)
-> print("Size of vocabulary: ",**len(fdist)** )
-> print("Most frequent tokens: ",**fdist.most_common(20) )** # print the 20 most frequent words and their freq.
+> # \\*Compute the frequency distribution\\* of the \\*words\\* in the dataset (vocabulary)
+> \\*fdist\\* = \\*nltk.FreqDist\\*(word for \\*word\\* in \\*data\\*)
+> print("Size of vocabulary: ",\\*len(fdist)\\* )
+> print("Most frequent tokens: ",\\*fdist.most_common(20) )\\* # print the 20 most frequent words and their freq.
 >
 > Dùng **nltk.FreqDist** rất tiện lợi tạo ra gọi là **frequency distribution**:
 > Kiểu như một **list các tuple**, mỗi tuple chứa **token và số lần
@@ -3801,7 +3816,7 @@
 
 > [!NOTE]
 > # compute_cost: cross-entropy cost function
-> def **compute_cost**(y, yhat, batch_size):
+> def \\*compute_cost\\*(y, yhat, batch_size):
 >
 >     # cost function 
 >     logprobs = np.multiply(np.log(yhat),y)
@@ -3893,6 +3908,8 @@
 >
 > Như vậy ta đã có thể hiểu cái công
 > thức dJbach/db1 trong slide là vậy
+
+**🔗 See also:** [linked note](#node-p1b4x3p)
 
 <br>
 
