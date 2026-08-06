@@ -33,27 +33,27 @@
 <a id="node-szgnmpk"></a>
 
 > [!NOTE]
-> 1 N-gram language models have **limitations** in terms of **space** and **memory requirements.**
+> 1 N-gram language models have \\*limitations\\* in terms of \\*space\\* and \\*memory requirements.\\*
 >
-> 2 To compute the **probability of a sequence of word**s, **N-gram models require computing conditional
-> probabilities for bigrams** or higher-order N-grams.
+> 2 To compute the \\*probability of a sequence of word\\*s,\\* N-gram models require computing conditional
+> probabilities for bigrams\\* or higher-order N-grams.
 >
-> 3 The p**robability of a sentence** in an N-gram model is obtained by **multiplying the probabilities of each
-> word using its previous (N-1) words**.
+> 3 The p\\*robability of a sentence\\* in an N-gram model is obtained by \\*multiplying the probabilities of each
+> word using its previous (N-1) words\\*.
 >
-> 4 N-gram models **struggle to capture dependencies between words that are far apart**, as they would
-> **require accounting for conditional probabilities in very long word sequences.**
+> 4 N-gram models \\*struggle to capture dependencies between words that are far apart\\*, as they would
+> \\*require accounting for conditional probabilities in very long word sequences.\\*
 >
-> 5 **Estimating** these probabilities **becomes challenging** with **large corpora**, and **storing all possible
-> combinations of probabilities** would **require significant space and memory**.
+> 5 \\*Estimating\\* these probabilities \\*becomes challenging\\* with \\*large corpora\\*, and \\*storing all possible
+> combinations of probabilities\\* would \\*require significant space and memory\\*.
 >
-> 6 **Recurrent Neural Networks (RNNs)** and **Gated Recurrent Units (GRUs)** are **more efficient models**
-> for **natural language processing (NLP)** tasks like **machine translation.**
+> 6 \\*Recurrent Neural Networks (RNNs)\\* and \\*Gated Recurrent Units (GRUs)\\* are \\*more efficient models\\*
+> for \\*natural language processing (NLP)\\* tasks like \\*machine translation.\\*
 >
-> 7 **RNNs and GRUs** are **more suitable for scenarios with limited space**, such as **mobile applications**,
-> as they do **not require storing the entire probability distribution** like N-gram models.
+> 7 \\*RNNs and GRUs\\* are \\*more suitable for scenarios with limited space\\*, such as \\*mobile applications\\*,
+> as they do\\* not require storing the entire probability distribution\\* like N-gram models.
 >
-> 8 **RNNs** are introduced as an alternative to traditional N-gram language models in this video, offering
+> 8 \\*RNNs\\* are introduced as an alternative to traditional N-gram language models in this video, offering
 > more efficient approaches for NLP tasks.
 
 <br>
@@ -87,34 +87,34 @@
 <a id="node-bquk8dy"></a>
 
 > [!NOTE]
-> 1 **Recurrent Neural Networks (RNNs)** have **advantages** over **traditional N-gram language
-> models** in **capturing dependencies** that **N-grams cannot capture**.
+> 1 \\*Recurrent Neural Networks (RNNs)\\* have \\*advantages\\* over \\*traditional N-gram language
+> models\\* in \\*capturing dependencies\\* that \\*N-grams cannot capture\\*.
 >
-> 2 **RNNs** can **propagate information** **from the beginning to the end of a sequence**, allowing for
-> **better predictions**.
+> 2 \\*RNNs\\* can \\*propagate information\\* \\*from the beginning to the end of a sequence\\*, allowing for
+> \\*better predictions\\*.
 >
-> 3 Traditional language models, like **trigrams**, may **select the most probable word based on the
-> previous context**, but it **may not make sense in the context of the sentence.**
+> 3 Traditional language models, like \\*trigrams\\*, may \\*select the most probable word based on the
+> previous context\\*, but it \\*may not make sense in the context of the sentence.\\*
 >
-> 4 RNNs are **not limited to considering only the previous n words** and **can use information from the
-> entire sequence.**
+> 4 RNNs are \\*not limited to considering only the previous n words\\* and \\*can use information from the
+> entire sequence.\\*
 >
 > 5 To capture dependencies for sentence completion using an N-gram model, one would need to
 > account for impractical and lengthy sequences of words.
 >
-> 6 RNNs propagate information through a sequence by computing values at each step, **using
-> information from previous computations** and the **current word**.
+> 6 RNNs propagate information through a sequence by computing values at each step, \\*using
+> information from previous computations\\* and the \\*current word\\*.
 >
-> 7 The computations in an RNN are **repeated for each word in the sequence**, with the **same
-> weights** multiplied to propagate information.
+> 7 The computations in an RNN are \\*repeated for each word in the sequence\\*, with the \\*same
+> weights \\*multiplied to propagate information.
 >
-> 8 RNNs are called **recurrent** because they \\_**repeatedly feed the computed values to
-> themselves**\\_ **until** a **prediction is made**.
+> 8 RNNs are called \\*recurrent\\* because they \\_\\*repeatedly feed the computed values to
+> themselves\\*\\_ \\*until\\* a \\*prediction is made\\*.
 >
-> 9 The main advantage of RNNs is **their ability to propagate information within sequences**, **sharing
-> most of the parameters in the computations**.
+> 9 The main advantage of RNNs is \\*their ability to propagate information within sequences\\*, \\*sharing
+> most of the parameters in the computations\\*.
 >
-> 10 **Different types of RNN architectures** will be explored in the next video, along with guidelines on
+> 10 \\*Different types of RNN architectures\\* will be explored in the next video, along with guidelines on
 > when to use each type.
 
 <br>
@@ -185,29 +185,29 @@
 <a id="node-zbsklxx"></a>
 
 > [!NOTE]
-> 1 **Different tasks in A**I can be **categorized** based on their **input and output nature.**
+> 1 \\*Different tasks in A\\*I can be \\*categorized\\* based on their \\*input and output nature.\\*
 >
-> 2 **One-to-One task**s involve taking a **set of input features** and **returning a single output**.
+> 2 \\*One-to-One task\\*s involve taking a \\*set of input features\\* and \\*returning a single output\\*.
 >
-> 3 Fo**r tasks like predicting a team's position on a leaderboard** using **input scores**, a recurrent neural
+> 3 Fo\\*r tasks like predicting a team's position on a leaderboard\\* using \\*input scores\\*, a recurrent neural
 > network (RNN) isn't significantly different from a conventional neural network.
 >
-> 4 **One-to-Many** tasks involve **taking a single input (e.g., an image)** and **generating multiple outputs (e.g.,
-> a caption describing the image).**
+> 4\\* One-to-Many\\* tasks involve \\*taking a single input (e.g., an image)\\* and \\*generating multiple outputs (e.g.,
+> a caption describing the image).\\*
 >
-> 5 **Sentiment analysis** is an example of a **Many-to-One task**, where a **sequence of words is inputted**, and
-> the **RNN outputs the sentiment (positive or negative).**
+> 5 \\*Sentiment analysis\\* is an example of a\\* Many-to-One task\\*, where a \\*sequence of words is inputted\\*, and
+> the \\*RNN outputs the sentiment (positive or negative).\\*
 >
-> 6 **Many-to-Many tasks** involve **multiple inputs and multiple outputs**, such as **machine translation**, where a
-> **sequence of words in one language is translated to another language**.
+> 6\\* Many-to-Many tasks\\* involve \\*multiple inputs and multiple outputs\\*, such as \\*machine translation\\*, where a
+> \\*sequence of words in one language is translated to another language\\*.
 >
-> 7 The **encoder-decoder architecture** is commonly **used in machine translation**, with the **encoder capturing
-> the overall meaning of the input sentenc**e and the **decoder generating the translated sequence.**
+> 7 The \\*encoder-decoder architecture\\* is commonly \\*used in machine translation\\*, with the\\* encoder capturing
+> the overall meaning of the input sentenc\\*e and the \\*decoder generating the translated sequence.\\*
 >
-> 8 **RNNs** are **powerful architectures** that can be **used to solve various problems in natural language
-> processing (NLP)**, including **machine translation and caption generation.**
+> 8 \\*RNNs\\* are \\*powerful architectures\\* that can be \\*used to solve various problems in natural language
+> processing (NLP)\\*, including \\*machine translation and caption generation.\\*
 >
-> 9 **RNNs** are **versatile tools** that can be **shaped according to the specific task requirements.**
+> 9 \\*RNNs\\* are \\*versatile tools \\*that can be \\*shaped according to the specific task requirements.\\*
 >
 > 10 Choosing the appropriate RNN architecture depends on the task at hand.
 >
@@ -263,27 +263,28 @@
 <a id="node-umn7stu"></a>
 
 > [!NOTE]
-> 1 **Recurrent Neural Networks** (RNNs) are **powerful models** for **processing sequential data** and **making sequential
-> predictions**.
+> 1 \\*Recurrent Neural Networks \\*(RNNs) are \\*powerful models\\* for \\*processing sequential data\\* and \\*making sequential
+> predictions\\*.
 >
-> 2 The computation in a **plain or vanilla RNN** involves taking an **input x**, a **hidden state h**, and producing a
-> p**rediction y^** at each **time step <t>** 
-> 3 The hidden state at each time step is computed using an **activation function g**, which takes the **product of a
-> weight matrix Wh** and the previous **hidden state h<t-1>, concatenated with the input
-> variable x<t>** and **a bias term bh**
+> 2 The computation in a \\*plain or vanilla RNN\\* involves taking an \\*input x\\*, a\\* hidden state h\\*, and producing a
+> p\\*rediction y^\\* at each\\* time step <t>
+> \\*
+> 3 The hidden state at each time step is computed using an \\*activation function g\\*, which takes the \\*product of a
+> weight matrix Wh\\* and the previous \\*hidden state h<t-1>, concatenated with the input
+> variable x<t>\\* and \\*a bias term bh\\*
 >
-> 4 The **prediction y^** is obtained by using an **activation function g** with the **product** of the **hidden state h<t>** and
-> another set of parameters **Wy** plus a **bias term by.**
+> 4 The \\*prediction y^\\* is obtained by using an \\*activation function g\\* with the \\*product\\* of the \\*hidden state h<t>\\* and
+> another set of parameters \\*Wy\\* plus a \\*bias term by.\\*
 >
-> 5 These equations represent the **mathematical operations** performed in a simple RNN.
+> 5 These equations represent the \\*mathematical operations\\* performed in a simple RNN.
 >
-> 7 The hidden states in RNNs enable the **propagation of information through time**, allowing the network to
-> **capture dependencies across different positions** **within a sequence.**
+> 7 The hidden states in RNNs enable the \\*propagation of information through time\\*, allowing the network to
+> \\*capture dependencies across different positions\\* \\*within a sequence.\\*
 >
 > 8 Diagrams similar to the one presented in the video are often used in RNN literature to illustrate the
-> **computation flow** and **information propagation** within a recurrent unit.
+> \\*computation flow\\* and \\*information propagation\\* within a recurrent unit.
 >
-> 9 **Hidden states** serve as the **variables that facilitate information propagation in RNNs.**
+> 9 \\*Hidden states\\* serve as the \\*variables that facilitate information propagation in RNNs.\\*
 >
 > 10 The video provides an introduction to the forward propagation equations and the concept of hidden states in
 > RNNs, with the promise of explaining the cost function in the next video.
@@ -469,8 +470,8 @@
 <a id="node-4hz4si7"></a>
 
 > [!NOTE]
-> Summary That's it! We've verified that the **two formulas
-> produce the same results**, and seen how to combine
+> Summary That's it! We've verified that the \\*two formulas
+> produce the same results\\*, and seen how to combine
 > matrices vertically and horizontally to make that happen.
 > We now have all the intuition needed to understand the
 > math notation of RNNs.
@@ -907,6 +908,8 @@
 > last dimension** của predictions chính là **256**. Có thể cho tiện, **thay vì
 > phải hard code là 256, hay một variable vocab size nào đó**
 
+**🔗 See also:** [linked note](#node-40aszuj)
+
 <br>
 
 <a id="node-nt1jf9d"></a>
@@ -1223,29 +1226,29 @@
 <a id="node-7jljwss"></a>
 
 > [!NOTE]
-> 1 **Deep recurrent neural networks (RNNs)** are useful for **capturing dependencies that shallow
-> RNNs cannot capture.**
+> 1 \\*Deep recurrent neural networks (RNNs)\\* are useful for \\*capturing dependencies that shallow
+> RNNs cannot capture.\\*
 >
 > 2 Equations used in implementing deep RNNs and their relation to the cost function are explained.
 >
 > 3 Bidirectional neural networks and their importance are introduced.
 >
-> 4 **Bidirectional RNNs** **propagate information both from the beginning to the end of a sequence** and
-> f**rom the end to the beginning**, allowing predictions to be made for missing information.
+> 4 \\*Bidirectional RNNs\\* \\*propagate information both from the beginning to the end of a sequence\\* and
+> f\\*rom the end to the beginning\\*, allowing predictions to be made for missing information.
 >
-> 5 Bidirectional RNNs are r**epresented as acyclic graphs** where information **flows independently in
-> both directions.**
+> 5 Bidirectional RNNs are r\\*epresented as acyclic graphs \\*where information\\* flows independently in
+> both directions.\\*
 >
-> 6 Computation of **hidden states** and **predictions** in a bidirectional RNN involves **propagating
-> information from both direction**s.
+> 6 Computation of \\*hidden states\\* and \\*predictions\\* in a bidirectional RNN involves \\*propagating
+> information from both direction\\*s.
 >
-> 7 **Deep RNNs** consist of **multiple hidden layers,** similar to **regular deep neural networks**.
+> 7 \\*Deep RNNs \\*consist of \\*multiple hidden layers,\\* similar to \\*regular deep neural networks\\*.
 >
-> 8 Information **flows through time in deep RNNs**, followed by **propagation through the layers** to
+> 8 Information\\* flows through time in deep RNNs\\*, followed by \\*propagation through the layers\\* to
 > obtain predictions.
 >
-> 9 Bidirectional RNNs and deep RNNs are **variations** of the **vanilla RNN model**, offering **more
-> complex capabilities.**
+> 9 Bidirectional RNNs and deep RNNs are \\*variations\\* of the \\*vanilla RNN model\\*, offering \\*more
+> complex capabilities.\\*
 >
 > 10 The passage concludes by summarizing the topics covered: RNNs, gated recurrent units,
 > bidirectional RNNs, and deep RNNs. It mentions that in the assignments, learners will have the
@@ -1433,18 +1436,18 @@
 
 > [!NOTE]
 > Welcome to the second assignment of course 3. In this assignment you will explore 
-> **Recurrent Neural Networks RNN**.
+> \\*Recurrent Neural Networks RNN\\*.
 >
->  • You will be using the fundamentals of google's \\_**trax**\\_ package to implement any 
+>  • You will be using the fundamentals of google's \\_\\*trax\\*\\_ package to implement any 
 > kind of deeplearning model.
 >
 > By completing this assignment, you will learn how to implement models from scratch:
->  • How to **convert a line of text** into a **tensor**
->  • **Create an iterator** to **feed data to the model**
->  • Define a **GRU** **model** using **trax**
->  • **Train the model** using **trax**
->  • **Compute the accuracy** of your model using the **perplexity**
->  • **Predict** using your own model
+>  • How to \\*convert a line of text\\* into a \\*tensor\\*
+>  • \\*Create an iterator\\* to \\*feed data to the model\\*
+>  • Define a \\*GRU\\* \\*model\\* using \\*trax\\*
+>  • \\*Train the model\\* using \\*trax\\*
+>  • \\*Compute the accuracy\\* of your model using the \\*perplexity\\*
+>  • \\*Predict\\* using your own model
 
 <br>
 
@@ -1457,17 +1460,17 @@
 <a id="node-prvlgxv"></a>
 
 > [!NOTE]
-> Your task will be to **predict the next set of characters** using the **previous characters.**
->  • Although this task **sounds simple**, it is **pretty useful.**
->  • You will start by **converting a line of text** into a **tensor**
->  • Then you will **create a generator** to **feed data into the model**
->  • You will **train a neural network** in order to **predict the new set of characters** of 
+> Your task will be to \\*predict the next set of characters\\* using the \\*previous characters.\\*
+>  • Although this task \\*sounds simple\\*, it is \\*pretty useful.\\*
+>  • You will start by \\*converting a line of text\\* into a \\*tensor\\*
+>  • Then you will \\*create a generator\\* to \\*feed data into the model\\*
+>  • You will \\*train a neural network\\* in order to \\*predict the new set of characters\\* of 
 > defined length.
->  • You will **use embeddings** for each character and **feed them as inputs** to your 
+>  • You will \\*use embeddings\\* for each character and \\*feed them as inputs\\* to your 
 > model.
->  ▪ Many **natural language task**s rely on **using embeddings for predictions.**
->  • Your model will **convert each character to its embedding**, run the embeddings 
-> through a **Gated Recurrent Unit GRU**, and **run it through a linear layer** to predict the next 
+>  ▪ Many \\*natural language task\\*s rely on \\*using embeddings for predictions.\\*
+>  • Your model will \\*convert each character to its embedding\\*, run the embeddings 
+> through a \\*Gated Recurrent Unit GRU\\*, and \\*run it through a linear layer\\* to predict the next 
 > set of characters.
 >
 > Đại khái là bài toán **predict một chuỗi kí tự** dựa trên **những kí tự
@@ -1488,14 +1491,15 @@
 
 > [!NOTE]
 > The figure above gives you a summary of what you are about to implement.
->  • You will **get the embeddings**;
->  • **Stack the embeddings on top of each other**;
->  • Run them through **two layers** with a **relu activation** in the middle;
->  • Finally, you will **compute the softmax**.
+>  • You will \\*get the embeddings\\*;
+>  • \\*Stack the embeddings on top of each other\\*;
+>  • Run them through \\*two layers\\* with a \\*relu activation\\* in the middle;
+>  • Finally, you will \\*compute the softmax\\*.
 >
 > To predict the next character:
 >
->  • **Use the softmax output** and **identify the word** with the **highest probability.**  • The word with the highest probability is the prediction for the next word.
+>  • \\*Use the softmax output \\*and \\*identify the word\\* with the\\* highest probability.
+> \\* • The word with the highest probability is the prediction for the next word.
 
 <br>
 
@@ -1520,15 +1524,15 @@
 <a id="node-rep0bkz"></a>
 
 > [!NOTE]
-> Now **import the dataset** and do some **processing**.
->  • The dataset has **one sentence per line.**
->  • You will be **doing character generation**, so you have to process each sentence 
-> by **converting each character (and not word) to a number.**
->  • You will use the **ord** function to c**onvert a unique character** to a **unique integer 
-> ID.**
->  • **Store** **each line** in a **list**.
->  • Create a **data generator** that takes in the **batch_size** and the **max_length**.
->  ▪ The **max_length** corresponds to the **maximum length of the sentence**.
+> Now \\*import the dataset\\* and do some \\*processing\\*.
+>  • The dataset has \\*one sentence per line.\\*
+>  • You will be \\*doing character generation\\*, so you have to process each sentence 
+> by \\*converting each character (and not word) to a number.\\*
+>  • You will use the \\*ord\\* function to c\\*onvert a unique character\\* to a\\* unique integer 
+> ID.\\*
+>  • \\*Store\\* \\*each line\\* in a \\*list\\*.
+>  • Create a \\*data generator\\* that takes in the \\*batch_size\\* and the \\*max_length\\*.
+>  ▪ The \\*max_length\\* corresponds to the \\*maximum length of the sentence\\*.
 
 <br>
 
@@ -1581,13 +1585,13 @@
 <a id="node-a4eknlu"></a>
 
 > [!NOTE]
-> **Instructions:** **Write a function** that **takes in a single line** and **transforms each character** 
-> into **its unicode integer.** This returns **a list of integers**, which we'll refer to as a **tensor**.
->  • Use a **special integer** to represent the **end of the sentence** (the end of the line).
->  • This will be the **EOS_int** (end of sentence integer) parameter of the function.
->  • Include the **EOS_int** as the **last integer** of the
->  • For this exercise, you will **use the number 1** to **represent the end of a 
-> sentence.**
+> \\*Instructions:\\* \\*Write a function\\* that \\*takes in a single line\\* and \\*transforms each character\\* 
+> into \\*its unicode integer.\\* This returns \\*a list of integers\\*, which we'll refer to as a \\*tensor\\*.
+>  • Use a \\*special integer\\* to represent the \\*end of the sentence\\* (the end of the line).
+>  • This will be the \\*EOS_int\\* (end of sentence integer) parameter of the function.
+>  • Include the \\*EOS_int \\*as the \\*last integer\\* of the
+>  • For this exercise, you will \\*use the number 1\\* to \\*represent the end of a 
+> sentence.\\*
 >
 > Đại khái là **viết một function** nhận một **single line of text** và "
 > chuyển" **character của nó** thành **unicode** integer và **thêm một
@@ -1611,22 +1615,22 @@
 <a id="node-scmxodj"></a>
 
 > [!NOTE]
-> Most of the time in **Natural Language Processing**, and **AI** in general we use **batches** when 
-> training our data sets. Here, you will **build a data generator** that **takes in a text** and 
-> r**eturns a batch of text lines** (lines are **sentences**).
+> Most of the time in \\*Natural Language Processing\\*, and \\*AI\\* in general we use \\*batches\\* when 
+> training our data sets. Here, you will \\*build a data generator\\* that \\*takes in a text\\* and 
+> r\\*eturns a batch of text lines\\* (lines are \\*sentences\\*).
 >
->  • The **generator** converts **text lines** (sentences) into n**umpy arrays of integers** 
-> **padded by zeros** so that **all arrays have the same length**, which is the **length of the 
-> longest sentence** in the entire data set.
+>  • The \\*generator\\* converts \\*text lines\\* (sentences) into n\\*umpy arrays of integers\\* 
+> \\*padded by zeros\\* so that \\*all arrays have the same length\\*, which is the \\*length of the 
+> longest sentence\\* in the entire data set.
 >
-> Once you create the generator, you can **iterate on it** like this:
-> **next(data_generator)**
+> Once you create the generator, you can\\* iterate on it \\*like this:
+> \\*next(data_generator)\\*
 >
-> This generator r**eturns the data** in a **format** that you could **directly use in your model** when 
-> computing the **feed-forward of your algorithm**. This iterator returns a **batch of lines** and 
-> **per token mask**. The batch is a tuple of three parts: **inputs**, **targets**, **mask**. The **inputs** and 
-> **targets** are **identical**. The **second column** will be u**sed to evaluate your predictions**. **Mask 
-> is 1 for non-padding tokens.**
+> This generator r\\*eturns the data\\* in a \\*format\\* that you could \\*directly use in your model\\* when 
+> computing the \\*feed-forward of your algorithm\\*. This iterator returns a \\*batch of lines\\* and 
+> \\*per token mask\\*. The batch is a tuple of three parts: \\*inputs\\*, \\*targets\\*, \\*mask\\*. The \\*inputs\\* and 
+> \\*targets\\* are \\*identical\\*. The \\*second column\\* will be u\\*sed to evaluate your predictions\\*. \\*Mask 
+> is 1 for non-padding tokens.\\*
 >
 > Đại khái là thường trong ML và NLP model sẽ "xử lý" từng batch nhiều training
 > sample thay vì chỉ một mỗi lần. Mình sẽ viết một function đóng vai trò là một
@@ -1651,26 +1655,27 @@
 <a id="node-sc4fqhb"></a>
 
 > [!NOTE]
-> **Instructions:** Implement the data generator below. Here are some things you will need.
->  • **While True loop**: this will **yield one batch** at a time.
->  • **if index >= num_lines**, **set index to 0**.
->  • The generator should return **shuffled** batches of data. To achieve this **without 
-> modifying the actual lines** a **list containing the indexes of data_lines** is created. This list 
-> can be **shuffled** and **used to get random batches** everytime the index is reset.
->  • **if len(line) < max_length** **append line to cur_batch**.
->  ▪ Note that a line that has **length equal** to **max_length** should **not be appended** 
+> \\*Instructions:\\* Implement the data generator below. Here are some things you will need.
+>  • \\*While True loop\\*: this will \\*yield one batch\\* at a time.
+>  • \\*if index >= num_lines\\*, \\*set index to 0\\*.
+>  • The generator should return \\*shuffled\\* batches of data. To achieve this \\*without 
+> modifying the actual lines\\* a \\*list containing the indexes of data_lines\\* is created. This list 
+> can be \\*shuffled\\* and \\*used to get random batches\\* everytime the index is reset.
+>  • \\*if len(line) < max_length\\* \\*append line to cur_batch\\*.
+>  ▪ Note that a line that has \\*length equal\\* to \\*max_length\\* should \\*not be appended\\* 
 > to the batch.
->  ▪ This is because **when converting the characters into a tensor of integers**, an 
-> **additional end of sentence token id will be added**.
+>  ▪ This is because \\*when converting the characters into a tensor of integers\\*, an 
+> \\*additional end of sentence token id will be added\\*.
 >  ▪ So if max_length is 5, and a line has 4 characters, the tensor representing 
 > those 4 characters plus the end of sentence character will be of length 5, which is the 
 > max length.
->  • if **len(cur_batch) == batch_size**, go over every line, convert it to an int and 
+>  • if \\*len(cur_batch) == batch_size\\*, go over every line, convert it to an int and 
 > store it.
->  **Remember that when calling np you are really calling trax.fastmath.numpy which is 
+> \\*
+> Remember that when calling np you are really calling trax.fastmath.numpy which is 
 > trax’s version of numpy that is compatible with JAX. As a result of this, where you 
 > used to encounter the type numpy.ndarray now you will find the type 
-> jax.interpreters.xla.DeviceArray.**
+> jax.interpreters.xla.DeviceArray.\\*
 
 <br>
 
@@ -1709,8 +1714,8 @@
 > [!NOTE]
 > Now that you have your generator, you can just call them and
 > they will return tensors which correspond to your lines in
-> Shakespeare. The **first column and the second column are
-> identical**. Now you can go ahead and start building your
+> Shakespeare. The\\* first column and the second column are
+> identical\\*. Now you can go ahead and start building your
 > neural network
 
 <br>
@@ -1724,17 +1729,17 @@
 <a id="node-sun0sir"></a>
 
 > [!NOTE]
-> The way the iterator is currently defined, it will **keep providing batches forever.**
+> The way the iterator is currently defined, it will \\*keep providing batches forever.\\*
 >
-> Although it is not needed, we want to show you the **itertools.cycle function** which is really 
-> **useful when the generator eventually stops**
+> Although it is not needed, we want to show you the\\* itertools.cycle function\\* which is really 
+> \\*useful when the generator eventually stops\\*
 >
-> Notice that **it is expected to use this function within the training function** further below
+> Notice that \\*it is expected to use this function within the training function\\* further below
 >
-> Usually we want to **cycle over the dataset multiple times during training** (i.e. train for 
-> **multiple \\/epochs**\\/).
+> Usually we want to\\* cycle over the dataset multiple times during training\\* (i.e. train for 
+> \\*multiple \\/epochs\\*\\/).
 >
-> For small datasets we can use \\_**itertools.cycle**\\_ to achieve this easily.
+> For small datasets we can use \\_\\*itertools.cycle\\*\\_ to achieve this easily.
 >
 > Chưa hiểu lắm đại khái là giới thiệu một cách tiện lợi để
 > chạy qua / lướt qua dataset nhiều lần kiểu như nhiều
@@ -1771,10 +1776,10 @@
 > ensures that the iterator keeps cycling indefinitely, it allows for seamless access to
 > the dataset without explicitly handling the end of the data.
 >
-> The use of itertools.cycle **simplifies** the **process of iterating over the dataset** **multiple
-> times**, especially when dealing with small datasets. It **eliminates t**he need to
-> **manually reset or handle the end of the dataset**, making it **convenient** for **training
-> functions** that **require repeated access to the data.**
+> The use of itertools.cycle \\*simplifies\\* the \\*process of iterating over the dataset\\* \\*multiple
+> times\\*, especially when dealing with small datasets. It \\*eliminates t\\*he need to
+> \\*manually reset or handle the end of the dataset\\*, making it \\*convenient \\*for\\* training
+> functions \\*that \\*require repeated access to the data.\\*
 
 <br>
 
@@ -1788,10 +1793,10 @@
 
 > [!NOTE]
 > Now that you have the input and output tensors, you will go ahead
-> and **initialize your  model**. You will be implementing the **GRULM**,
-> **gated recurrent unit** model. To implement  this model, you will be
-> using **google's trax package**. Instead of making you implement
-> the GRU from scratch, we will give you the **necessary method**s
+> and \\*initialize your  model\\*. You will be implementing the \\*GRULM\\*,
+> \\*gated recurrent unit \\*model. To implement  this model, you will be
+> using \\*google's trax package\\*. Instead of making you implement
+> the GRU from scratch, we will give you the \\*necessary method\\*s
 > from a build in package.  You can use the following packages
 > when constructing the model:
 >
@@ -1893,22 +1898,22 @@
 <a id="node-w2qu3yp"></a>
 
 > [!NOTE]
-> Now you are **going to train your model**. As usual, you have to **define the cost function**, the
-> **optimizer**, and **decide whether you will be training it** on a **gpu** or **cpu**. You also have to **feed in a
-> built model**. Before, going into the training, we re-introduce
-> the **TrainTask** and **EvalTask** **abstractions** from the **last week's assignment.**
+> Now you are \\*going to train your model\\*. As usual, you have to \\*define the cost function\\*, the
+> \\*optimizer\\*, and \\*decide whether you will be training it\\* on a \\*gpu\\* or \\*cpu\\*. You also have to\\* feed in a
+> built model\\*. Before, going into the training, we re-introduce
+> the \\*TrainTask\\* and \\*EvalTask\\* \\*abstractions\\* from the\\* last week's assignment.\\*
 >
-> To train a model on a task, Trax defines an **abstraction** t**rax.supervised.training**.**TrainTask** which
-> **packages the train data, loss and optimizer (among other things) together into an object.**
+> To train a model on a task, Trax defines an \\*abstraction\\* t\\*rax.supervised.training\\*.\\*TrainTask\\* which
+> \\*packages the train data, loss and optimizer (among other things) together into an object.\\*
 >
-> Similarly to evaluate a model, Trax defines an abstraction **trax.supervised.training.EvalTask** which
-> **packages the eval data and metrics** (among other things) into another object.
+> Similarly to evaluate a model, Trax defines an abstraction \\*trax.supervised.training.EvalTask\\* which
+> \\*packages the eval data and metrics\\* (among other things) into another object.
 >
-> The final piece tying things together is the **trax.supervised.training.Loop abstraction** that is a very
-> **simple and flexible** way to **put** **everything together** and train the model, all the while **evaluating it
-> and saving checkpoint**s. Using **training.Loop** will **save you a lot of code** compared to always
-> **writing the training loop by hand**, like you did in **courses 1 and 2.** More importantly, you are **less
-> likely to have a bug** in that code that would **ruin your training**
+> The final piece tying things together is the \\*trax.supervised.training.Loop abstraction\\* that is a very
+> \\*simple and flexible\\* way to \\*put\\* \\*everything together\\* and train the model, all the while \\*evaluating it
+> and saving checkpoint\\*s. Using \\*training.Loop\\* will \\*save you a lot of code\\* compared to always
+> \\*writing the training loop by hand\\*, like you did in \\*courses 1 and 2.\\* More importantly, you are\\* less
+> likely to have a bug\\* in that code that would \\*ruin your training\\*
 >
 > Đại khái là nhắc lại những **cái abstraction TrainTask, EvalTask** giúp **đóng gói
 > training/evaluation data, optimizer và loss** lại thành một **object**, và **Loop giúp
@@ -1920,20 +1925,20 @@
 <a id="node-x7l2bka"></a>
 
 > [!NOTE]
-> An **epoch** is traditionally defined as **one pass through the dataset.**
+> An \\*epoch\\* is traditionally defined as \\*one pass through the dataset.\\*
 >
-> Since the **dataset was divided in batches** you need **several steps (gradient
-> evaluations)** in order to complete an epoch. So, one epoch corresponds to the
-> **number of examples in a batch** times the **number of steps**. In short, in **each
-> epoch** you **go over all the dataset.**
+> Since the \\*dataset was divided in batches\\* you need \\*several steps (gradient
+> evaluations)\\* in order to complete an epoch. So, one epoch corresponds to the
+> \\*number of examples in a batch\\* times the \\*number of steps\\*. In short, in \\*each
+> epoch\\* you \\*go over all the dataset.\\*
 >
-> The **max_length** variable defines the **maximum length of lines** to be used in
-> training our data, **lines longer than that** length **are discarded.**
+> The \\*max_length\\* variable defines the \\*maximum length of lines\\* to be used in
+> training our data, \\*lines longer than that\\* length \\*are discarded.\\*
 >
-> Below is a function and results that indicate **how many lines conform to our
-> criteria of maximum length** of a sentence **in the entire dataset** and **how many
-> steps are required in order to cover the entire dataset** which in turn corresponds
-> to an **epoch**..
+> Below is a function and results that indicate \\*how many lines conform to our
+> criteria of maximum length\\* of a sentence \\*in the entire dataset\\* and \\*how many
+> steps are required in order to cover the entire dataset\\* which in turn corresponds
+> to an \\*epoch\\*..
 >
 > Đại khái là nói lại về **định nghĩa của một epoch** là sao, nó là **một lần loop qua
 > hết toàn bộ training** data. Vì **bộ data chia thành nhiều batch**, trong đó **model
@@ -2028,6 +2033,8 @@
 > [!NOTE]
 > Nếu thấy khó hiểu, xem lại Lab
 > trước, đã giải thích rất rõ
+
+**🔗 See also:** [linked note](#node-wt3ipyz)
 
 <br>
 
@@ -2171,14 +2178,15 @@
 <a id="node-tz05whi"></a>
 
 > [!NOTE]
-> **On statistical methods** 
-> Using a **statistical method** like the one you implemented in **course 2** will **not give you 
-> results that are as good.** Your model will **not be able to encode information seen 
-> previously in the data set** and as a result, the **perplexity will increase**. Remember from 
-> course 2 that the **higher the perplexity, the worse your model** is. Furthermore, **statistical 
-> ngram models** take up t**oo much space and memory**. As a result, it will be **inefficient** and 
-> too **slow**. Conversely, with **deepnets, you can get a better perplexity**. Note, l**earning about 
-> n-gram language models is still important** and allows you to better understand deepnets.
+> \\*On statistical methods 
+> \\*
+> Using a \\*statistical method\\* like the one you implemented in \\*course 2\\* will \\*not give you 
+> results that are as good.\\* Your model will \\*not be able to encode information seen 
+> previously in the data set\\* and as a result, the \\*perplexity will increase\\*. Remember from 
+> course 2 that the\\* higher the perplexity, the worse your model\\* is. Furthermore, \\*statistical 
+> ngram models\\* take up t\\*oo much space and memory\\*. As a result, it will be \\*inefficient\\* and 
+> too \\*slow\\*. Conversely, with \\*deepnets, you can get a better perplexity\\*. Note, l\\*earning about 
+> n-gram language models is still important\\* and allows you to better understand deepnets.
 >
 > Đại khái là những **statistical method như N-gram ở course 2** **không đạt kết quả
 > tốt** được như này. Vì nó **không nắm bắt và "nhớ" được thông tin mà nó gặp ở
