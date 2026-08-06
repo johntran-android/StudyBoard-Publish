@@ -78,6 +78,8 @@ network Part 2
 > Với image thì do các feature (các pixel) để đã có range giống nhau (0-255)
 > rồi nên không cần làm cách này**
 
+**🔗 See also:** [linked note](./assignment_2_pytorch.md#node-ged9ehm)
+
 <br>
 
 <a id="node-cb3kk43"></a>
@@ -347,6 +349,8 @@ X_project có feature uncorrelated
 >
 > Thì kết quả là các variance đều bằng 1, gọi là unit variance, và khi đó covariance
 > matrix của X_whitening sẻ là identity matrix vì các item trên đường chéo đều = 1
+
+**🔗 See also:** [linked note](./paper_batch_normalization.md#node-h1w95tf)
 
 <br>
 
@@ -869,6 +873,8 @@ X_project có feature uncorrelated
 > đó là xài cái này thì không sợ "**exploding**" khi **weight trở nên quá lớn gây mất
 > ổn định**  vì dù có set learning rate lớn thì vì weight luôn bị khống chế nên
 > không bị hiện tượng  này.
+
+**🔗 See also:** [linked note](./assignment_2_fully_connected_nn.md#node-0jxqa1a)
 
 <br>
 
