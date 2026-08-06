@@ -913,6 +913,8 @@ localization
 > Để rồi tính log loss (classification) và l1 loss (regression - bounding box)
 > và gradient backprop để learn model param
 
+**🔗 See also:** [linked note](#node-0c6np1a)
+
 <br>
 
 <a id="node-6nfl9s6"></a>
@@ -1394,6 +1396,8 @@ localization
 > hồi này, chỉ khác là ta sẽ pair giữa cái propose region mà spit out bởi RPN
 > với ground truth box. Những cái này sẽ rõ hơn khi **ta làm assignment 4**
 
+**🔗 See also:** [linked note](./eecs_498_007598_005_2022_assignment_4_part_2_two_stage_detector.md#node-wvs5g6n)
+
 <br>
 
 <a id="node-u3cx2y1"></a>
@@ -1670,6 +1674,8 @@ detetor
 > hình vuông** và từ đó (**bằng cách chọn 2x2 hay 3x3** hay 7x7 thì **output của RoI
 > pooling sẽ có size phù hợp với yêu cầu kích thước của stage 2** - cái **cnn hay 
 > fc layer**
+
+**🔗 See also:** [linked note](#node-yd7lqxp)
 
 <br>
 
