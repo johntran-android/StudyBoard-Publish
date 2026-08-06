@@ -196,6 +196,8 @@
 >
 > Và kết qủa này cho thấy bước factorization chiếm phần lớn chi phí**
 
+**🔗 See also:** [linked note](./112_inverse.md#node-6vpwahf) · [linked note](./54_gram_smidth_algorithm.md#node-sqqhs1t)
+
 <br>
 
 <a id="node-v0oqblg"></a>
