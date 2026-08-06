@@ -86,6 +86,8 @@ of Plane
 > plane** span bởi A, B và **độ lớn vector A x B là diện tích hình bình
 > hành tạo bởi A, B**
 
+**🔗 See also:** [linked note](./lec_3_matrix_inverse_matrix.md#node-2bhdgpm) · [linked note](./lec_12_gradient_directional_derivative_tangent_plane.md#node-yyn7pto)
+
 <br>
 
 <a id="node-s5xh069"></a>
