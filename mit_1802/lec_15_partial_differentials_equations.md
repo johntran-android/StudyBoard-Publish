@@ -101,6 +101,8 @@
 >
 > Còn hướng thì Grad_f sẽ chỉ về hướng mà f tăng lên nhanh nhất
 
+**🔗 See also:** [linked note](./lec_12_gradient_directional_derivative_tangent_plane.md#node-ttjrg7j)
+
 <br>
 
 <a id="node-b3jtrsy"></a>
@@ -260,6 +262,8 @@
 >
 > Gs cũng nhắc lại có thể bài toán trở nên phức tạp nhưng cũng có thể
 > đơn giản (theo link xanh lá)
+
+**🔗 See also:** [linked note](./lec_13_lagrange_multiplier.md#node-q433w3t) · [linked note](./lec_13_lagrange_multiplier.md#node-h0mt9ko)
 
 <br>
 
