@@ -291,7 +291,7 @@
 >
 > Ghi chú cực kỳ chính xác và chi tiết khi liên kết thành công công thức tổng quát từ Chương 2 để chứng minh công thức Chương 3 một cách tường minh. Để hoàn hảo hơn, bạn có thể bổ sung thêm giải thích ngắn gọn về ý nghĩa vật lý của các tham số đóng vai trò là độ chính xác (precision) trong việc cập nhật phân phối.
 
-**🔗 See also:** [Phân bố tiên nghiệm và hậu nghiệm](./233_bayess_theorem_for_gaussian_variables.md#node-zswmsts)
+**🔗 See also:** [Phân bố tiên nghiệm và hậu nghiệm](./233_bayess_theorem_for_gaussian_variables.md#node-zswmsts) · [3.3.2 Predictive distribution](./332_predictive_distribution.md#node-wdjepxb)
 
 <br>
 
@@ -455,11 +455,11 @@
 
 - **Bayesian Linear Regression**
 
-<p align="center"><kbd><img src="assets/rtt82qjmkbb.png" width="80%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/f48m4xtjxra.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/vvvwba1pei.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/rtt82qjmkbb.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/35k7zbl32uv.png" width="80%"></kbd></p>
 
