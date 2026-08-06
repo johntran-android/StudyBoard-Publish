@@ -222,6 +222,8 @@
 > determinant của hai vector cạnh** của nó, ta lấy vector (-2, 1) và (3,
 > 1). Tính ra kết quả là 5
 
+**🔗 See also:** [Determinant và Diện tích Hình Bình Hành](./lec_2_determinant_cross_product.md#node-wc2svhz)
+
 <br>
 
 <a id="node-qujxq4h"></a>
@@ -292,6 +294,40 @@
 >
 > [delta_u, delta_v] ~= matrix [u_x, u_y; v_x, v_y] . [delta_x, delta_y]
 
+**🔗 See also:** [linked note](./lec_11_differentials_chain_rule.md#node-ibo13sv) · [Đại khái là ta \\*có thể thấy TẠI SAO SCALING FACTOR LÀ DET CỦA 
+MATRIX\\* \\*OF PARTIAL DERIVATIVE\\*
+
+Từ điều ta có hồi nãy, vector <Δx, Δy> liên hệ với <Δu, Δv> thông matrix: 
+
+<Δu, Δv> ~= matrix [u_x, u_y; v_x, v_y] . <Δx, Δy>
+
+Thì cái này có nghĩa là: một vector <Δx, Δy> sẽ tương ứng với vector <Δu, Δv>
+= [u_x, u_y; v_x, v_y] . <Δx, Δy> khi đổi biến từ x,y sang u,v.
+
+Do đó, vector <Δx, 0> (là cạnh vertical của hình vuông trong x,y coordinate) sẽ
+ứng với / trở thành vector Δx * <u_x, v_x>  + 0 * <u_y, v_y> (nhân <Δx, 0> với matrix
+[u_x, u_y; v_x, v_y] theo góc nhìn linear combination các matrix column) và bằng
+<Δx * u_x, Δx * v_x> hay \\*<u_x*Δx, v_x*Δx>\\*
+
+Tương tự, vector <0, Δy> (là cạnh horizontal của hình vuông trong x,y coordinate)
+sẽ tương ứng vector 0 * <u_x, v_x>  + Δy * <u_y, v_y> = <Δy * u_y, Δy * v_y>
+hay \\*<u_y*Δy, v_y*Δy>\\*
+
+Để rồi từ delta_A =\\* Δ*Δy\\*, transformed thành delta_A' = 
+
+= \\*determinant của hai vector <u_x*Δx, v_x*Δx> và <u_y*Δy, v_y*Δy>\\* 
+
+Đây là kiến thức đã học (theo link) rằng diện tích của hình bình hành tạo bởi
+hai vector a = <a1, a2> và b = <b1, b2> chính là determinant của hai vectors
+a1b2 - a2b1
+
+Và ở đây nó bằng: u_x*Δx*v_y*Δy - u_y*Δy*v_x*Δx
+
+= \\*(u_x*v_y - u_y*v_x)*Δx*Δy
+
+Thế thì (u_x*v_y - u_y*v_x) CHÍNH LÀ DETERMINANT CỦA TRANSFORM
+MATRIX [u_x, u_y; v_x, v_y]\\*](#node-1ag0xsj)
+
 <br>
 
 <a id="node-jixeuxa"></a>
@@ -332,6 +368,8 @@
 
 <p align="center"><kbd><img src="assets/z4tkq4xzsyq.png" width="80%"></kbd></p>
 
+**🔗 See also:** [Determinant và Diện tích Hình Bình Hành](./lec_2_determinant_cross_product.md#node-wc2svhz)
+
 <br>
 
 <a id="node-1ag0xsj"></a>
@@ -369,6 +407,8 @@ Và ở đây nó bằng: u_x*Δx*v_y*Δy - u_y*Δy*v_x*Δx
 
 Thế thì (u_x*v_y - u_y*v_x) CHÍNH LÀ DETERMINANT CỦA TRANSFORM
 MATRIX [u_x, u_y; v_x, v_y]\\***
+
+**🔗 See also:** [linked note](#node-rqd8oib)
 
 <br>
 
