@@ -351,6 +351,8 @@
 > quan nhau. Do đó thực ra tích phân này chỉ là của 1 variable và ta sẽ 
 > chuyển tích phân này về 1 variable x., hoặc y hoặc t
 
+**🔗 See also:** [linked note](./lec_20_path_independence_conservative_field.md#node-k0h00k7)
+
 <br>
 
 <a id="node-tk2z3ke"></a>
