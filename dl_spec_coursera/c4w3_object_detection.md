@@ -19,15 +19,15 @@
 
 > [!NOTE]
 > Đại khái là bài toán bây giờ là không những chỉ phân loại -vd. có phải
-> xe hơi hay không (**classification)** mà còn vẽ cái box xung quanh cái
-> xe (**classification with localization)**. Và mở rộng hơn là detect nhiều
-> object khác loại trên cùng 1 image (**Object detection**)
+> xe hơi hay không (\\*classification)\\* mà còn vẽ cái box xung quanh cái
+> xe (\\*classification with localization)\\*. Và mở rộng hơn là detect nhiều
+> object khác loại trên cùng 1 image (\\*Object detection\\*)
 >
-> Đại khái là muốn localize thì ta **sửa cái output layer**, v.d đang là 
+> Đại khái là muốn localize thì ta \\*sửa cái output layer\\*, v.d đang là 
 > Softmax ra 4 unit tương ứng 4 loại khả dĩ của cái hình, để
-> **thêm vào 4 chỉ số nữa là bx, by, bw, bh** = Vị trí của cái object.
+> \\*thêm vào 4 chỉ số nữa là bx, by, bw, bh\\* = Vị trí của cái object.
 >
-> Bằng cách **có thêm 4 thông số này trong training set,** đại khái
+> Bằng cách \\*có thêm 4 thông số này trong training set,\\* đại khái
 > là ta có thể khiến cho network có thể học được cách xác định
 > được 4 chỉ số này trong các mẫu mới -> Localize được cái xe.
 >
@@ -37,8 +37,8 @@
 > vị trí cái object nếu có hoặc bỏ trống (?) nếu không, và C1
 > C1 C3 - class label hoặc Probability class
 >
-> Cuối cùng là define Loss function có thể dùng **square của
-> từng cặp tương ưng giữa y^ và y** hoặc kĩ hơn thì dùng
+> Cuối cùng là define Loss function có thể dùng \\*square của
+> từng cặp tương ưng giữa y^ và y \\*hoặc kĩ hơn thì dùng
 > từng hàm khác nhau  đ/v các chỉ số khác nhau như
 >
 > - Binary Cross Entropy đ.v pC,
@@ -113,11 +113,11 @@
 > các  điểm đó l1x, l1y, l2x, l2y....
 >
 > Dĩ nhiên label (Y train) cũng phải có những landmark này và công
-> việc xác định các điểm này tốn nhiều công sức (**laborious**)
+> việc xác định các điểm này tốn nhiều công sức (\\*laborious\\*)
 >
 > Ứng dụng của cái này lấy ví dụ như chuyển khuôn mặt cười thành
 > khóc, những hiệu ứng của Snapchat như đội nón đều dựa trên
-> việc xác định được các landmark của khuôn mặt. **Recognize emotion**
+> việc xác định được các landmark của khuôn mặt. \\*Recognize emotion\\*
 >
 > Một ví dụ khác là xác định bộ khung - tư thế người.
 
@@ -162,7 +162,7 @@
 > (bằng cách bỏ vào bài toán classification).
 >
 > Nhưng nhược điểm là với Deep Learning thì cách làm kiểu Sliding
-> Window này rất **tốn computational resource**.
+> Window này rất\\* tốn computational resource\\*.
 >
 > Cách này đã có từ lâu khi Machine Learning còn thô sơ và người ta dùng
 > với very simple algorithm như Linear regression và nó cũng tạm được.
@@ -225,13 +225,13 @@
 >
 > Vi diệu
 >
-> Đại khái là thay vì dùng **sliding window** để cắt ra từng ô rồi bỏ
+> Đại khái là thay vì dùng \\*sliding window \\*để cắt ra từng ô rồi bỏ
 > vào convNet để forward ra 1 kết quả xem có phải cái xe hay
 > không, làm vậy phải slide và forward 4 lần
 >
-> Thay vì vậy, **cứ bỏ cái hình bự vào luôn** dùng cái **convNet**
-> nó sẽ tính ra kết quả cuối cùng chính là **chứa đựng kết quả của
-> 4 lần riêng lẻ.**
+> Thay vì vậy, \\*cứ bỏ cái hình bự vào luôn\\* dùng cái \\*convNet\\*
+> nó sẽ tính ra kết quả cuối cùng chính là \\*chứa đựng kết quả của
+> 4 lần riêng lẻ.\\*
 
 <br>
 
@@ -285,18 +285,18 @@
 <a id="node-svk15sp"></a>
 
 > [!NOTE]
-> 1 Sliding windows have a **problem with accurate bounding box**
-> predictions **even with a convolutional implementation.**
+> 1 Sliding windows have a \\*problem with accurate bounding box\\*
+> predictions \\*even with a convolutional implementation.\\*
 >
-> 2 The **YOLO** (You Only Look Once) algorithm offers a way to **output
-> more accurate bounding boxes** by **applying image classification and
-> localization algorithms** to a grid system.
+> 2 The \\*YOLO\\* (You Only Look Once) algorithm offers a way to \\*output
+> more accurate bounding boxes\\* by \\*applying image classification and
+> localization algorithms\\* to a grid system.
 >
 > 3 The grid system divides the input image into cells, and for each
 > cell, a target label vector Y is defined, with the first output
 > representing whether there is an image in that grid cell.
 >
-> 4 **The target label vector Y includes PC, BX, BY, BH, BW** to specify
+> 4 \\*The target label vector Y includes PC, BX, BY, BH, BW\\* to specify
 > the bounding box and C1, C2, C3 to specify the object class.
 >
 > 5 The total volume of the target output is 3 by 3 by 8 because the
@@ -390,7 +390,7 @@
 <a id="node-eg57ag6"></a>
 
 > [!NOTE]
-> Đại khái là tính ra chỉ số **Itersection / Unit (giao hợp)** và quyết
+> Đại khái là tính ra chỉ số \\*Itersection / Unit (giao hợp)\\* và quyết
 > định môt threshold để xem nó có correct hay không
 >
 > 1 Introduction to Intersection Over Union (IoU) function for
@@ -443,15 +443,15 @@
 > 2 Non-max suppression is a method to ensure that object
 > detection algorithms only detect each object once.
 >
-> 3 Non-max suppression works by **selecting the most confident
-> detection** and then **suppressing overlapping detections.**
+> 3 Non-max suppression works by \\*selecting the most confident
+> detection\\* and then \\*suppressing overlapping detections.\\*
 >
-> 4 The first step of non-max suppression is to **discard all boxes
-> with a probability less than or equal to some threshold.**
+> 4 The first step of non-max suppression is to \\*discard all boxes
+> with a probability less than or equal to some threshold.\\*
 >
-> 5 The next step is to repeatedly **pick the box with the highest
-> probability** and **output it as a prediction** and **suppress all box
-> that overlap it** until there are no more boxes left.
+> 5 The next step is to repeatedly \\*pick the box with the highest
+> probability\\* and \\*output it as a prediction\\* and \\*suppress all box
+> that overlap it\\* until there are no more boxes left.
 
 <br>
 
@@ -513,18 +513,18 @@
 <a id="node-ev61tpi"></a>
 
 > [!NOTE]
-> 1 Object detection with grid cells has a **limitation of detecting only
-> one object per cell**.
+> 1 Object detection with grid cells has a \\*limitation of detecting only
+> one object per cell\\*.
 >
-> 2 Anchor boxes are **pre-defined shapes used to associate multiple
-> predictions with different anchor boxes.**
+> 2 Anchor boxes are \\*pre-defined shapes used to associate multiple
+> predictions with different anchor boxes.\\*
 >
-> 3 Anchor boxes **allow for detecting objects with different shapes
-> and sizes in a single grid cell**.
+> 3 Anchor boxes \\*allow for detecting objects with different shapes
+> and sizes in a single grid cell\\*.
 >
-> 4 The **target label** with anchor boxes consists of a **3 by 3 grid and
+> 4 The \\*target label\\* with anchor boxes consists of a \\*3 by 3 grid and
 > anchor box pair, with each pair containing 8 dimensions for object
-> detection.**
+> detection.\\*
 >
 > 5 Anchor boxes are assigned to the same grid cell as before, but
 > with the highest Intersection over Union (IoU) with the object's
@@ -583,8 +583,8 @@
 > 1 The YOLO object detection algorithm combines various components of
 > object detection.
 >
-> 2 To construct the training set, the appropriate **target vector y is formed
-> for each of the nine grid cells.**
+> 2 To construct the training set, the appropriate \\*target vector y is formed
+> for each of the nine grid cells.\\*
 >
 > 3 The final output volume is 3 by 3 by 16, but in practice, it may be more
 > like 19 by 19 by 16 or 19 by 19 by 24 if more anchor boxes are used.
@@ -846,16 +846,16 @@
 <a id="node-p5733dv"></a>
 
 > [!NOTE]
-> - Đại khái là sử dụng **convolution thông thường phần
-> đầu** của mạng nơ-ron.
+> - Đại khái là sử dụng \\*convolution thông thường phần
+> đầu\\* của mạng nơ-ron.
 >
-> - Sử dụng **transpose convolution trong phần thứ hai
-> của mạng nơ-ron để khôi phục lại kích thước ảnh gốc.**
+> - Sử dụng \\*transpose convolution trong phần thứ hai
+> của mạng nơ-ron để khôi phục lại kích thước ảnh gốc.\\*
 >
-> - Giới thiệu **skip connections** từ các lớp trước đến
-> các lớp sau để cải thiện hiệu suất bằng cách **cung cấp
+> - Giới thiệu \\*skip connections\\* từ các lớp trước đến
+> các lớp sau để cải thiện hiệu suất bằng cách \\*cung cấp
 > thông tin bối cảnh cấp cao và thông tin kết cấu cấp
-> thấp** để cho phép mạng nơ-ron bắt được thông tin
+> thấp\\* để cho phép mạng nơ-ron bắt được thông tin
 > không gian chi tiết, tinh vi.
 
 <br>
@@ -1822,6 +1822,8 @@
 > Đại khái là mỗi pixel là 1 vector 11 dimensions (do có 11 classes)
 > và gía trị mỗi item trong vector là class probabilities của pixel đó.
 
+**🔗 See also:** [linked note](#node-mttzesm)
+
 <br>
 
 <a id="node-gx52ado"></a>
@@ -1880,6 +1882,8 @@
 > [!NOTE]
 > Đại khái là bước này nó sẽ xác định cái class
 > của từng pixel thuộc về đây, dùng argument max
+
+**🔗 See also:** [linked note](#node-q047bvd)
 
 <br>
 
