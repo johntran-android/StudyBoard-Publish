@@ -1865,7 +1865,7 @@ evaluating Estimators
 >
 > Thì Var\_θ(W(**X**)) ≥ \[d/dθ E\_θ\[W(**X**)\]^2\] / \[E\_θ\[(∂/∂θ log f(**X**|θ))^2\]\]
 
-**🔗 See also:** [Definition 10.1.11 Asymptotic Efficiency](./101_point_estimation.md#node-bgijdqy) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [10.1.3 Calculations and Comparisons](./101_point_estimation.md#node-iwgmm5t)
+**🔗 See also:** [Definition 10.1.11 Asymptotic Efficiency](./101_point_estimation.md#node-bgijdqy) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [10.1.3 Calculations and Comparisons](./101_point_estimation.md#node-iwgmm5t) · [Robustness of the Sample Mean](./102_robustness.md#node-3pctii6)
 
 <br>
 
@@ -2377,7 +2377,7 @@ evaluating Estimators
 >
 > Với mọi hàm khả vi τ(θ), thì ta đã có chặn dưới về variance của bất kì estimator W thỏa 7.3.4 và E\_θ(W) = τ(θ). Và cái bound chỉ phụ thuộc τ(θ) và f(x|θ). Mọi candidate estimator thỏa E\_θ(W) = τ(θ) (tức là unbiased estimator của τ(θ)) và có variance đạt mức này đều sẽ là BEST UNBIASED ESTIMATOR
 
-**🔗 See also:** [Bất đẳng thức Cramer-Rao](#node-1qs416c) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Asymptotic Efficiency of Estimator p̂](./101_point_estimation.md#node-ct81g3i)
+**🔗 See also:** [Bất đẳng thức Cramer-Rao](#node-1qs416c) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Asymptotic Efficiency of Estimator p̂](./101_point_estimation.md#node-ct81g3i) · [Robustness of the Sample Mean](./102_robustness.md#node-3pctii6)
 
 <br>
 
