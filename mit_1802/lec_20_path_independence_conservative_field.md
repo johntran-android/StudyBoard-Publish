@@ -73,6 +73,8 @@
 >
 > Vậy nên ta sẽ cần tính tích phân của ydx +xdy trên các c_i khác nhau
 
+**🔗 See also:** [linked note](./lec_19_vector_fields.md#node-951vhyr)
+
 <br>
 
 <a id="node-7zr3y7w"></a>
@@ -416,6 +418,8 @@
 >
 > Thế thì đây ta nhận ra chính là CHAIN-RULE, để f_x*dx/dt +
 > f_y*dy/dt chính RATE OF CHANGE CỦA F ĐỐI VỚI T: df/dt
+
+**🔗 See also:** [linked note](./lec_11_differentials_chain_rule.md#node-kyannpv)
 
 <br>
 
