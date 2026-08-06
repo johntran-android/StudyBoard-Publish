@@ -152,6 +152,8 @@ log
 > Thế thì tới đây ta sẽ dùng một cái **trick** đó là ta sẽ **DEFINE e
 > LÀ MỘT UNIQUE NUMHER SAO CHO  M(e) = 1**
 
+**🔗 See also:** [linked note](#node-qt9plpa)
+
 <br>
 
 <a id="node-7qa1r74"></a>
@@ -425,6 +427,8 @@ log
 >
 > Chúng minh d/dx a^x = ln(a) a^x theo
 > cách CHUYỂN SANG BASE e
+
+**🔗 See also:** [linked note](#node-hgqiv48)
 
 <br>
 
