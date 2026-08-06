@@ -400,6 +400,8 @@
 >
 > Bài viết rất chính xác và có chiều sâu vượt trội. Cách giải thích cặn kẽ về bản chất của phép tích chập (convolution) thông qua đổi biến, cùng với việc áp dụng chi tiết vào trường hợp A=I, giúp người đọc nắm vững kiến thức một cách toàn diện. Đây là một phân tích xuất sắc.
 
+**🔗 See also:** [Variance of the Predictive Distribution](./332_predictive_distribution.md#node-w88dcdy)
+
 <br>
 
 <a id="node-2d1tmn5"></a>
@@ -521,7 +523,7 @@
 >
 > Và tóm tắt lại các kết quả ta đã tự làm trong bảng sau.
 
-**🔗 See also:** [Bayesian Linear Regression Posterior Update](./331_bayesian_linear_regression.md#node-fv65lte)
+**🔗 See also:** [Bayesian Linear Regression Posterior Update](./331_bayesian_linear_regression.md#node-fv65lte) · [3.3.2 Predictive distribution](./332_predictive_distribution.md#node-wdjepxb)
 
 <br>
 
