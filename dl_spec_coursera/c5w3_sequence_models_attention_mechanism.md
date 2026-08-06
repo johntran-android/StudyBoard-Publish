@@ -24,26 +24,26 @@
 <a id="node-t0vuxhp"></a>
 
 > [!NOTE]
-> 1 **Sequence to sequence models** are useful for a variety of
-> applications, including **machine translation** and **speech recognition**.
+> 1 \\*Sequence to sequence models\\* are useful for a variety of
+> applications, including \\*machine translation\\* and \\*speech recognition\\*.
 >
-> 2 The **basic model** for sequence to sequence involves using an
-> **encoder network** (e.g., a RNN) to encode the input sequence and a
-> **decoder network** to decode the output sequence one word at a time.
+> 2 The \\*basic model\\* for sequence to sequence involves using an
+> \\*encoder network\\* (e.g., a RNN) to encode the input sequence and a
+> \\*decoder network\\* to decode the output sequence one word at a time.
 >
 > 3 For example, to translate a French sentence to English, the encoder
 > network would encode the French sentence and the decoder network
 > would output the English translation.
 >
-> 4 A similar model can be used for **image captioning**, where a
-> **pre-trained convolutional neural network** is used **as the encoder**
-> **network** to encode an image and an **RNN is used as the decoder**
-> **network** to generate the caption.
+> 4 A similar model can be used for\\* image captioning\\*, where a
+> \\*pre-trained convolutional neural network\\* is used \\*as the encoder\\*
+> \\*network\\* to encode an image and an \\*RNN is used as the decoder\\*
+> \\*network\\* to generate the caption.
 >
 > 5 One key difference between generating translations or captions
 > using a sequence to sequence model and synthesizing novel text
-> using a language model is that in the former, the goal is to **generate
-> the most likely translation** or caption **rather than a random one**.
+> using a language model is that in the former, the goal is to \\*generate
+> the most likely translation\\* or caption \\*rather than a random one\\*.
 
 <br>
 
@@ -83,26 +83,26 @@
 <a id="node-qbww9sb"></a>
 
 > [!NOTE]
-> 1 Sequence to sequence machine translation model is s**imilar to
-> language models**, but there are some significant differences.
+> 1 Sequence to sequence machine translation model is s\\*imilar to
+> language models\\*, but there are some significant differences.
 >
-> 2 Machine translation can be thought of as building a **conditional
-> language model** that estimates the probability of an output sentence
+> 2 Machine translation can be thought of as building a \\*conditional
+> language model\\* that estimates the probability of an output sentence
 > based on input.
 >
-> 3 The model starts off the **decoded network** with the representation of
-> the input sentence, unlike the **language model**, which starts with a
-> **vector of all zeros.**
+> 3 The model starts off the \\*decoded network\\* with the representation of
+> the input sentence, unlike the \\*language model\\*, which starts with a
+> \\*vector of all zeros.\\*
 >
-> 4 The goal of the machine translation model is to **find the English
-> sentence that maximizes the conditional probability** given a French
+> 4 The goal of the machine translation model is to \\*find the English
+> sentence that maximizes the conditional probability\\* given a French
 > input sentence.
 >
 > 5 The most common algorithm for finding the English sentence that
-> maximizes the conditional probability is **beam search**.
+> maximizes the conditional probability is \\*beam search\\*.
 >
-> 6 **Greedy search** algorithm doesn't work because it may not pick the
-> best words that maximize the **joint probability** of the whole sentence.
+> 6 \\*Greedy search\\* algorithm doesn't work because it may not pick the
+> best words that maximize the \\*joint probability\\* of the whole sentence.
 
 <br>
 
@@ -184,8 +184,8 @@
 > probability  [P('a', x, 'September'), P('aaron', x, 'September'),....10000 từ...P('zulu', x, '
 > September')]
 >
-> Xong tính Probability của 1 cặp P(y<1>, y<2> | X) theo công thức: **P(y<1>, y<2> | X)
-> = P(y<1>|x).P(y<2>|x, y<1>)**  để có:
+> Xong tính Probability của 1 cặp P(y<1>, y<2> | X) theo công thức: \\*P(y<1>, y<2> | X)
+> = P(y<1>|x).P(y<2>|x, y<1>) \\* để có:
 >
 > [   P('in', 'a' | x), P('in', 'aaron' | x), ...10000 cái...P('in', 'zulu' | x),..   P('jane', 'a' | x), P('
 > jane', 'aaron' | x), .....P('jane', 'zulu' | x),..   P('september', 'a' | x), P('september', 'aaron'
@@ -193,8 +193,8 @@
 >
 > Cuối cùng tìm 3 cặp có P(y<1>, y<2> | x) cao nhất.
 >
-> Giả sử kết quả là {in September}, {jane í}, {jane visiting} thì đồng nghĩa **September
-> không còn là ứng viên của từ thứ nhất**
+> Giả sử kết quả là {in September}, {jane í}, {jane visiting} thì đồng nghĩa \\*September
+> không còn là ứng viên của từ thứ nhất\\*
 
 <br>
 
@@ -286,18 +286,18 @@
 <a id="node-35z58ts"></a>
 
 > [!NOTE]
-> 1 **Length normalization** can improve the performance of the basic
+> 1 \\*Length normalization\\* can improve the performance of the basic
 > search algorithm.
 >
-> 2 Using **logs** instead of multiplying probabilities can make the
-> algorithm more **numerically stable**.
+> 2 Using \\*logs\\* instead of multiplying probabilities can make the
+> algorithm more \\*numerically stable\\*.
 >
 > 3 The algorithm can be further improved by normalizing the log
 > probability by the number of words in the translation, using a
 > parameter called Alpha.
 >
 > 4 Beam search involves evaluating a large number of possible
-> translations and s**electing the highest scoring** one.
+> translations and s\\*electing the highest scoring\\* one.
 >
 > 5 The beam width determines how many possibilities are
 > considered during beam search.
@@ -340,16 +340,16 @@
 <a id="node-apd7gis"></a>
 
 > [!NOTE]
-> Main ideas:  1 **Error analysis** and **beam search** are two important
+> Main ideas:  1 \\*Error analysis\\* and \\*beam search\\* are two important
 > concepts in machine translation.
 >
-> 2 Beam search is an approximate search algorithm that **doesn't always
-> output the most likely sentence**.
+> 2 Beam search is an approximate search algorithm that\\* doesn't always
+> output the most likely sentence\\*.
 >
-> 3 It's important to figure out whether it is the **beam search algorithm** or
-> the **RNN model** that is causing translation errors.
+> 3 It's important to figure out whether it is the \\*beam search algorithm\\* or
+> the \\*RNN model\\* that is causing translation errors.
 >
-> 4 Computing **P(y* given x)** and **P(y-hat given x)** using the RNN model
+> 4 Computing \\*P(y* given x)\\* and \\*P(y-hat given x)\\* using the RNN model
 > can help to determine which component is more to blame for translation
 > errors.
 >
@@ -405,18 +405,18 @@
 > 1 Machine translation faces a challenge where there can be multiple
 > equally good translations of the same sentence.
 >
-> 2 **BLEU score** is used to **evaluate the quality of machine translations** by
-> **comparing them with human-generated translations**.
+> 2 \\*BLEU score\\* is used to \\*evaluate the quality of machine translations\\* by
+> \\*comparing them with human-generated translations\\*.
 >
-> 3 BLEU score is an **understudy for human evaluators** and measures
+> 3 BLEU score is an \\*understudy for human evaluators\\* and measures
 > how good the machine translation is by looking at the types of words it
 > generates.
 >
-> 4 **Precision** **measures** are used in BLEU score, where words are given
+> 4 \\*Precision\\* \\*measures\\* are used in BLEU score, where words are given
 > credit only up to the maximum number of times they appear in the
 > reference sentences.
 >
-> 5 The **modified precision measure** in BLEU score gives a score by
+> 5 The \\*modified precision measure\\* in BLEU score gives a score by
 > clipping the count of the number of times a word appears in reference
 > sentences.
 >
@@ -551,17 +551,17 @@
 
 > [!NOTE]
 > Đại khái là:
-> One of the **most influential ideas** in Deep Learning
+> One of the \\*most influential ideas\\* in Deep Learning
 >
-> Đại khái là **thay vì nhớ cả 1 câu dài rồi mới làm** (khiến hiểu quả giảm xuống
-> **bleu score sẽ thấp dần khi câu càng dài**) thì nó sẽ **dịch từng phần** (giúp bleu
+> Đại khái là \\*thay vì nhớ cả 1 câu dài rồi mới làm\\* (khiến hiểu quả giảm xuống
+> \\*bleu score sẽ thấp dần khi câu càng dài\\*) thì nó sẽ \\*dịch từng phần\\* (giúp bleu
 > score vẫn cao)
 >
-> Có thêm **'tham số' alpha đánh giá mức độ cần tham gia của các từ lân
-> cận / xung quanh trong việc dự đoán từ tiếp theo** s<3>
+> Có thêm \\*'tham số' alpha đánh giá mức độ cần tham gia của các từ lân
+> cận / xung quanh trong việc dự đoán từ tiếp theo\\* s<3>
 >
-> Tham số này sẽ phụ thuộc **hidden output** **a<t>** (ở đây là 2 chiều
-> bi-directional network và k**ết quả của từ trước đó s<2>** )
+> Tham số này sẽ phụ thuộc \\*hidden output\\* \\*a<t>\\* (ở đây là 2 chiều
+> bi-directional network và k\\*ết quả của từ trước đó s<2>\\* )
 
 <br>
 
@@ -630,21 +630,22 @@
 > where one RNN reads in a sentence and another one outputs a
 > sentence.
 >
-> 2 The Attention Model is a **modification of the Encoder-Decoder** architecture that **works better for long sentences**.
+> 2 The Attention Model is a \\*modification of the Encoder-Decoder
+> \\*architecture that \\*works better for long sentences\\*.
 >
-> 3 The Attention Model works by **looking at parts of the input
-> sentence at a time** instead of **memorizing the whole sentence**.
+> 3 The Attention Model works by \\*looking at parts of the input
+> sentence at a time\\* instead of \\*memorizing the whole sentence\\*.
 >
 > 4 The performance of machine translation systems with the
-> Attention Model is **better** than that of the Encoder-Decoder
-> architecture for **long sentences**.
+> Attention Model is \\*better\\* than that of the Encoder-Decoder
+> architecture for \\*long sentences\\*.
 >
 > 5 The Attention Model was proposed by Dimitri, Bahdanau,
-> Camcrun Cho, and Y**oshua Bengio**, and it has been influential in
+> Camcrun Cho, and Y\\*oshua Bengio\\*, and it has been influential in
 > many areas of deep learning.
 >
-> 6 The Attention Model uses **attention weights** to compute the
-> **context** that the RNN unit should be paying attention to while
+> 6 The Attention Model uses \\*attention weights\\* to compute the
+> \\*context\\* that the RNN unit should be paying attention to while
 > generating the output sentence.
 
 <br>
@@ -728,20 +729,20 @@
 >
 > 2 Speech recognition involves finding a text transcript from an audio clip.
 >
-> 3 **Spectrograms**, which represent the **intensity of different frequencies** at
+> 3 \\*Spectrograms\\*, which represent the \\*intensity of different frequencies\\* at
 > different times, are commonly used to preprocess audio data.
 >
-> 4 End-to-end deep learning has made **phoneme** representations
+> 4 End-to-end deep learning has made \\*phoneme\\* representations
 > unnecessary for speech recognition.
 >
 > 5 Larger datasets, transcribed audio datasets, and deep learning
 > algorithms have driven progress in speech recognition.
 >
-> 6 The attention model and **CTC cost** are two methods used for speech
+> 6 The attention model and \\*CTC cost\\* are two methods used for speech
 > recognition.
 >
-> 7 The **CTC cost** function allows the RNN to generate an output that
-> **matches** the number of input time steps, even if the output has fewer
+> 7 The\\* CTC cost\\* function allows the RNN to generate an output that
+> \\*matches\\* the number of input time steps, even if the output has fewer
 > characters.
 
 <br>
@@ -803,7 +804,7 @@
 
 > [!NOTE]
 > Đại khái là đây là 1 cách làm ...có input x như vầy, feed into một RNN như
-> vầy, giờ là **làm sao có target label**, thì đại khái là chỗ nào người ta vừa nói
+> vầy, giờ là \\*làm sao có target label\\*, thì đại khái là chỗ nào người ta vừa nói
 > xong trigger word thì set label là 1, còn lại trước đó là 0. Đang nói đến việc
 > build model và tạo training data.
 >
@@ -1226,8 +1227,8 @@
 <a id="node-2subr4i"></a>
 
 > [!NOTE]
-> **Congratulations!** You have come to the end of this assignment  **Here's
-> what you should remember** 
+> \\*Congratulations! \\*You have come to the end of this assignment  \\*Here's
+> what you should remember \\*
 >
 > • Machine translation models can be used to map from one sequence to
 > another. They are useful not just for translating human languages (like
@@ -1557,10 +1558,10 @@
 > lấy ngẫu nhiên 1 thời điểm trong độ dài của background
 > sao cho nó chèn được âm thanh vừa (tính độ dài của
 > cái cần chèn trước, rồi mới lấy điểm đầu cuối một cách
-> ngẫu nhiên) dùng \\/**get_random_time_segment**\\/()
+> ngẫu nhiên) dùng \\/\\*get_random_time_segment\\*\\/()
 >
 > Phải check không chồng lấp với cái có sẵn (nếu có) bằng 
-> function \\/**is_overlapping**\\/() và
+> function \\/\\*is_overlapping\\*\\/() và
 > keep track những cái đã chèn bằng 1 list 
 >
 > Cuối cùng là dùng pydub để thực hiện việc chèn (tạo ra
@@ -1613,7 +1614,7 @@
 >
 > Chú ý ở chỗ function nhận segment_end_ms đại khái là vị trí
 > trong 10000 milliseconds mà âm thanh kết thúc, nó phải
-> tương ứng với 1 vị trí (time step) **<t>** trong Ty = 1375 để rồi
+> tương ứng với 1 vị trí (time step) \\*<t>\\* trong Ty = 1375 để rồi
 > mới set  y<t+1> -> y<t+50> = 1
 >
 > Nên tìm t như chuyển đổi đơn vị vậy:
@@ -1908,9 +1909,9 @@
 <a id="node-iv6o9zq"></a>
 
 > [!NOTE]
-> **Congratulations** You've come to the end of this assignment!
+> \\*Congratulations \\*You've come to the end of this assignment!
 >
-> **Here's what you should remember:** 
+> \\*Here's what you should remember: \\*
 >
 > • Data synthesis is an effective way to create a large training set for
 > speech problems, specifically trigger word detection.
