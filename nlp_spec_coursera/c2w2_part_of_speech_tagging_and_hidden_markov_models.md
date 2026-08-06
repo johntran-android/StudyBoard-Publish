@@ -68,19 +68,19 @@
 <a id="node-hzecbzv"></a>
 
 > [!NOTE]
-> Because **POS tags** describe the **characteristic structure of lexical terms** in a
-> sentence or text, you can use them to **make assumptions about semantics.**
+> Because \\*POS tags\\* describe the \\*characteristic structure of lexical terms\\* in a
+> sentence or text, you can use them to \\*make assumptions about semantics.\\*
 > They're used for identifying named entities too. In a sentence such as the Eiffel
 > Tower is located in Paris, Eiffel Tower and Paris are both named entities. 
 >
 > Tags
 > are also used for coreference resolution. If you have the two sentences, the
-> **Eiffel Tower** is located in Paris, **it** is 324 meters high, you can use part-of-speech
-> tagging to infer that **it refers in this context to the Eiffel Tower.** 
+> \\*Eiffel Tower\\* is located in Paris, \\*it\\* is 324 meters high, you can use part-of-speech
+> tagging to infer that \\*it refers in this context to the Eiffel Tower.\\* 
 >
 > Another
-> application is **speech recognition**, where you use parts of speech tags to **check
-> if a sequence of words has a high probability or not**.
+> application is \\*speech recognition\\*, where you use parts of speech tags to \\*check
+> if a sequence of words has a high probability or not\\*.
 >
 > /"Because **POS tags** describe the **characteristic structure of lexical
 > terms** in a sentence or text, you can use them to **make assumptions
@@ -97,12 +97,12 @@
 <a id="node-lbygpsl"></a>
 
 > [!NOTE]
-> Part of Speech Tagging (POS) is the process of **assigning a Part of 
-> Speech tag to a word**. By doing so, you will learn the following: 
+> Part of Speech Tagging (POS) is the process of \\*assigning a Part of 
+> Speech tag to a word\\*. By doing so, you will learn the following: 
 >
->  • **Markov Chains**
->  • **Hidden Markov Models**
->  • **Viterbi algorithm**
+>  • \\*Markov Chains\\*
+>  • \\*Hidden Markov Models\\*
+>  • \\*Viterbi algorithm\\*
 >
 > The POS tagging is process of **assigning a POS tag to a word**
 >
@@ -123,14 +123,14 @@
 <a id="node-9p0gux8"></a>
 
 > [!NOTE]
-> You can use **part of speech tagging for**: 
+> You can use \\*part of speech tagging for\\*: 
 >
->  • **Identifying named entities**
->  • **Speech recognition**
->  • **Coreference Resolution**
+>  • \\*Identifying named entities\\*
+>  • \\*Speech recognition\\*
+>  • \\*Coreference Resolution\\*
 >
->  You can use the **probabilities** of **POS tags** **happening near 
-> one another** to **come up with the most reasonable output**.
+>  You can use the \\*probabilities\\* of \\*POS tags\\* \\*happening near 
+> one another\\* to \\*come up with the most reasonable output\\*.
 >
 > Hiểu đại khái là nếu mình biết **xác suất một loại từ nào đứng
 > cạnh một loại từ nào đó cao** hay thấp, hay nôm na kiểu ví dụ
@@ -151,13 +151,13 @@
 <a id="node-r71c8p3"></a>
 
 > [!NOTE]
-> In this lecture notebook you will **create a vocabular**y from a **tagged dataset** and learn how 
-> to **deal with words** that are **not present in this vocabulary** when **working with other text 
-> sources**. Aside from this you will also learn how to:
+> In this lecture notebook you will \\*create a vocabular\\*y from a \\*tagged dataset \\*and learn how 
+> to \\*deal with words\\* that are \\*not present in this vocabulary\\* when \\*working with other text 
+> sources\\*. Aside from this you will also learn how to:
 >
->  • **read text files**
->  • **work with defaultdict**
->  • **work with string data**
+>  • \\*read text files\\*
+>  • \\*work with defaultdict\\*
+>  • \\*work with string data\\*
 
 <br>
 
@@ -170,16 +170,16 @@
 <a id="node-uf9cgjh"></a>
 
 > [!NOTE]
-> A **tagged dataset** taken from the **Wall Street Journal** is provided in the 
-> file **WSJ_02-21.pos**.
+> A \\*tagged dataset\\* taken from the \\*Wall Street Journal\\* is provided in the 
+> file \\*WSJ_02-21.pos\\*.
 >
-> To **read this file** you can use **Python's context manager** by using the with **keyword 'open'** and 
-> **specifying the name of the file** you wish to read. To actually save the contents of the file 
-> into memory you will need to use the **readlines()** method and **store its return value in a 
-> variable**.
+> To \\*read this file\\* you can use \\*Python's context manager\\* by using the with \\*keyword 'open'\\* and 
+> \\*specifying the name of the file\\* you wish to read. To actually save the contents of the file 
+> into memory you will need to use the\\* readlines()\\* method and \\*store its return value in a 
+> variable\\*.
 >
-> **Python's context managers** are great because you **don't need to explicitly close** **the 
-> connection to the file**, this is done under the hood:
+> \\*Python's context managers\\* are great because you \\*don't need to explicitly close\\* \\*the 
+> connection to the file\\*, this is done under the hood:
 >
 > Đầu tiên phải hiểu rằng Wall Street Journal nó cung cấp sẵn một bộ dữ liệu "tagged
 > dataset" - là các từ được gắn (tag) với loại từ (POS tag). Lưu trong file WSJ_02-21.
@@ -200,9 +200,9 @@
 <a id="node-j4td9ut"></a>
 
 > [!NOTE]
-> # Read lines from 'WSJ_02-21.pos' file and save them into the '**lines**' variable
-> **with** **open**("\\/**./data/WSJ_02-21.pos**\\/", 'r') as **f**:
->     **lines** = f.**readlines**()
+> # Read lines from 'WSJ_02-21.pos' file and save them into the '\\*lines\\*' variable
+> \\*with\\* \\*open\\*("\\/\\*./data/WSJ_02-21.pos\\*\\/", 'r') as \\*f\\*:
+>     \\*lines\\* = f.\\*readlines\\*()
 >
 > thì lines sẽ là 1 array các line, trong file
 > WSJ_02-21.pos, 1 line có nội dung 
@@ -226,7 +226,7 @@
 >
 > # Print first five lines of the dataset
 > for I in range(5):
->     print(f'line number {I+1}: {**lines[I]**}')
+>     print(f'line number {I+1}: {\\*lines[I]\\*}')
 
 <br>
 
@@ -239,11 +239,11 @@
 <a id="node-xg58viz"></a>
 
 > [!NOTE]
-> Each **line** within the dataset has a **word** followed by its
-> **corresponding tag**. However since  the printing was done using a
-> formatted string it can be inferred that the **word** and  the **tag** are
-> **separated by a tab** (or some spaces) and there is a **newline at the
-> end of  each line** (notice that there is a space between each line).
+> Each \\*line\\* within the dataset has a \\*word\\* followed by its
+> \\*corresponding tag\\*. However since  the printing was done using a
+> formatted string it can be inferred that the \\*word\\* and  the \\*tag\\* are
+> \\*separated by a tab\\* (or some spaces) and there is a \\*newline at the
+> end of  each line\\* (notice that there is a space between each line).
 >
 > If you want to understand the meaning of these tags you can take a
 > look \\_here\\_.
@@ -267,8 +267,8 @@
 > [!NOTE]
 > To better understand how the
 > information is structured in the dataset it
-> is recommended to **print an unformatted
-> version of it:**
+> is recommended to \\*print an unformatted
+> version of it:\\*
 
 <br>
 
@@ -294,14 +294,14 @@
 <a id="node-ugly52e"></a>
 
 > [!NOTE]
-> Now that you understand **how the dataset is structured**, you will **create a vocabulary** out 
-> of it. A vocabulary is made up of **every** **word** that **appeared at least 2 times** in the dataset. 
+> Now that you understand \\*how the dataset is structured\\*, you will \\*create a vocabulary\\* out 
+> of it. A vocabulary is made up of \\*every\\* \\*word\\* that \\*appeared at least 2 times\\* in the dataset. 
 > For this, follow these steps:
->  • Get **only the words** from the dataset
->  • Use a **defaultdict** to **count the number of times** each word **appears**
->  • **Filter the dict** to **only** **include** words that appeared **at least 2 times**
->  • **Create a list** out of the **filtered dict**
->  • **Sort the list**
+>  • Get \\*only the words\\* from the dataset
+>  • Use a \\*defaultdict\\* to \\*count the number of times\\* each word \\*appears\\*
+>  • \\*Filter the dict\\* to \\*only\\* \\*include\\* words that appeared \\*at least 2 times\\*
+>  • \\*Create a list\\* out of the \\*filtered dict\\*
+>  • \\*Sort the list\\*
 
 <br>
 
@@ -309,7 +309,7 @@
 
 > [!NOTE]
 > # Get the words from each line in the dataset
-> words = [line.split(**'\\\\t'**)[**0**] for line in lines]
+> words = [line.split(\\*'\\\\t'\\*)[\\*0\\*] for line in lines]
 >
 > Giờ ta đã biết list comprehension trong Python thì cái
 > này tương đương như sau:
@@ -336,10 +336,10 @@
 <a id="node-nf518tx"></a>
 
 > [!NOTE]
-> Step 2 can be done easily by **leveraging defaultdict**. In case you aren't familiar with 
-> **defaultdicts** they are a **special kind of dictionaries** that **return the "zero" value of a type 
-> if you try to access a key that does not exist**. Since you want the **frequencies** of 
-> words, you should define the **defaultdict** with a **type of int.**
+> Step 2 can be done easily by \\*leveraging defaultdict\\*. In case you aren't familiar with 
+> \\*defaultdicts\\* they are a \\*special kind of dictionaries\\* that \\*return the "zero" value of a type 
+> if you try to access a key that does not exist\\*. Since you want the \\*frequencies\\* of 
+> words, you should define the \\*defaultdict\\* with a \\*type of int.\\*
 >
 > Now you don't need to worry about the case when the word is not present within the 
 > dictionary because getting the value for that key will simply return a zero. Isn't that cool?
@@ -356,11 +356,11 @@
 
 > [!NOTE]
 > # Define defaultdict of type 'int'
-> freq = **defaultdict(int)**
+> freq = \\*defaultdict(int)\\*
 >
-> # **Count frequency of occurrence** for each word in the dataset
-> **for word in words:
->     freq[word] += 1**
+> # \\*Count frequency of occurrence\\* for each word in the dataset
+> \\*for word in words:
+>     freq[word] += 1\\*
 >
 > Có nghĩa làm với **defaultdict tiện lợi hơn** thấy
 > không, thay vì **bình thường là phải check xem
@@ -376,10 +376,10 @@
 <a id="node-i0k9kc2"></a>
 
 > [!NOTE]
-> **Filtering** the **freq** **dictionary** can be done using **list
-> comprehensions** again (aren't they handy?). You should
-> filter out words that **appeared only once** and also **words**
-> that are **just a newline character**:
+> \\*Filtering\\* the \\*freq\\* \\*dictionary\\* can be done using \\*list
+> comprehensions\\* again (aren't they handy?). You should
+> filter out words that \\*appeared only once\\* and also \\*words\\*
+> that are \\*just a newline character\\*:
 >
 > Tiếp là filter **loại bỏ những từ chỉ xuất hiện 1
 > lần** và những từ dạng **'\\n'**. Dùng list
@@ -391,7 +391,7 @@
 
 > [!NOTE]
 > # Create the vocabulary by filtering the 'freq' dictionary
-> vocab = [k for k, v in **freq.items()** if (v > 1 and k != '\\\\n')]
+> vocab = [k for k, v in \\*freq.items()\\* if (v > 1 and k != '\\\\n')]
 >
 > Rất dễ hiểu khi ta đã biết list
 > comprehension trong Python: 
@@ -416,7 +416,7 @@
 
 > [!NOTE]
 > # Sort the vocabulary
-> vocab.**sort()**
+> vocab.\\*sort()\\*
 >
 > # Print some random values of the vocabulary
 > for I in range(4000, 4005):
@@ -438,12 +438,12 @@
 <a id="node-2pmsnoi"></a>
 
 > [!NOTE]
-> Now you have successfully **created a vocabulary from the dataset.**
-> **Great job**! The vocabulary is **quite extensive** so it is not printed out
+> Now you have successfully \\*created a vocabulary from the dataset.\\*
+> \\*Great job\\*! The vocabulary is \\*quite extensive\\* so it is not printed out
 > but you can still do so by creating a cell and running something
 > like print(vocab).
 >
-> At this point you will u**sually write the vocabulary into a file** for
+> At this point you will u\\*sually write the vocabulary into a file\\* for
 > future use, but that is out of the scope of this notebook. If you are
 > curious it is very similar to how you read the file at the beginning
 > of this notebook.
@@ -501,39 +501,39 @@
 <a id="node-4qjxzup"></a>
 
 > [!NOTE]
-> Now that you have a **vocabulary**, you will use it when processing
-> new text sources. **A  new text will have words that do not
-> appear in the current vocabulary**. To tackle this,  you can
-> simply **classify each new word** as an **unknown one**, but you can
-> do better by  **creating a function** that tries to **classify the type of
-> each unknown word** and **assign it a  corresponding unknown
-> token**
+> Now that you have a \\*vocabulary\\*, you will use it when processing
+> new text sources. \\*A  new text will have words that do not
+> appear in the current vocabulary\\*. To tackle this,  you can
+> simply \\*classify each new word\\* as an \\*unknown one\\*, but you can
+> do better by  \\*creating a function\\* that tries to \\*classify the type of
+> each unknown word\\* and \\*assign it a  corresponding unknown
+> token\\*
 
 <br>
 
 <a id="node-u1tne62"></a>
 
 > [!NOTE]
-> This function will do the following **checks** and return an
-> **appropriate token**:
+> This function will do the following \\*checks\\* and return an
+> \\*appropriate token\\*:
 >
-> • Check if the unknown word **contains any character that is a digit**
+> • Check if the unknown word \\*contains any character that is a digit\\*
 >
-> ▪ return --**unk_digit**--
+> ▪ return --\\*unk_digit\\*--
 >
-> • Check if the unknown word contains any **punctuation** character
+> • Check if the unknown word contains any \\*punctuation\\* character
 >
-> ▪ return --**unk_punct**--
+> ▪ return --\\*unk_punct\\*--
 >
-> • Check if the unknown word contains any **upper-case character**
+> • Check if the unknown word contains any \\*upper-case character\\*
 >
-> ▪ return --**unk_upper**--
+> ▪ return --\\*unk_upper\\*--
 >
-> • Check if the unknown word **ends with a suffix** that could indicate
+> • Check if the unknown word \\*ends with a suffix\\* that could indicate
 > it is a noun,  verb, adjective or adverb
 >
-> ▪ return --**unk_noun**--, --**unk_verb**--, --**unk_adj**--,
-> --**unk_adv**-- respectively
+> ▪ return --\\*unk_noun\\*--, --\\*unk_verb\\*--, --\\*unk_adj\\*--,
+> --\\*unk_adv\\*-- respectively
 >
 > Đại khái là nói về việc handle 1 từ không có trong từ điển
 > (vocabulary - dict) thì ta có thể viết một function check và
@@ -549,12 +549,12 @@
 <a id="node-5x6jpyd"></a>
 
 > [!NOTE]
-> If a word fails to **fall** under any condition then its token will be a **plain --unk--**. The 
-> conditions will be evaluated in the **same order as listed here**. So if a word contains a 
+> If a word fails to \\*fall\\* under any condition then its token will be a\\* plain --unk--\\*. The 
+> conditions will be evaluated in the \\*same order as listed here\\*. So if a word contains a 
 > punctuation character but does not contain digits, it will fall under the second condition. 
-> To achieve this behaviour some **if/elif statements** can be used along with **early returns**.
+> To achieve this behaviour some \\*if/elif statements\\* can be used along with \\*early returns\\*.
 >
-> This function is implemented next. Notice that the **any()** **function** is being **heavily used**. It 
+> This function is implemented next. Notice that the \\*any()\\* \\*function\\* is being \\*heavily used\\*. It 
 > returns True if at least one of the cases it evaluates is True.
 >
 > Đại khái là các condition sẽ
@@ -565,47 +565,47 @@
 <a id="node-mrzmatt"></a>
 
 > [!NOTE]
-> def **assign_unk**(word):
+> def \\*assign_unk\\*(word):
 >     """
 >     Assign tokens to unknown words
 >     """
 >
->     # **Punctuation characters**
+>     # \\*Punctuation characters\\*
 >     # Try printing them out in a new cell!
->     punct = set(**string.punctuation**) 
+>     punct = set(\\*string.punctuation\\*) 
 >
->     # **Suffixes**
->     **noun_suffix** = ["action", "age", "ance", "cy", "dom", "ee", "ence", "er", "hood", "ion", "ism", "ist", "ity", "ling", "ment", "ness", "or", "ry", "scape", "ship", "ty"]
->     **verb_suffix** = ["ate", "ify", "ise", "ize"]
->     **adj_suffix** = ["able", "ese", "ful", "i", "ian", "ible", "ic", "ish", "ive", "less", "ly", "ous"]
->     **adv_suffix** = ["ward", "wards", "wise"]
+>     # \\*Suffixes\\*
+>     \\*noun_suffix\\* = ["action", "age", "ance", "cy", "dom", "ee", "ence", "er", "hood", "ion", "ism", "ist", "ity", "ling", "ment", "ness", "or", "ry", "scape", "ship", "ty"]
+>     \\*verb_suffix\\* = ["ate", "ify", "ise", "ize"]
+>     \\*adj_suffix\\* = ["able", "ese", "ful", "i", "ian", "ible", "ic", "ish", "ive", "less", "ly", "ous"]
+>     \\*adv_suffix\\* = ["ward", "wards", "wise"]
 >
->     # **Loop the characters in the word, check if any is a digit**
->     if **any**(**char.isdigit**() for char in word):
->         return "--**unk_digit**--"
+>     # \\*Loop the characters in the word, check if any is a digit\\*
+>     if \\*any\\*(\\*char.isdigit\\*() for char in word):
+>         return "--\\*unk_digit\\*--"
 >
 >     # Loop the characters in the word, check if any is a punctuation character
->     elif any(char **in** **punct** for char in word):
->         return "--**unk_punct**--"
+>     elif any(char \\*in\\* \\*punct\\* for char in word):
+>         return "--\\*unk_punct\\*--"
 >
 >     # Loop the characters in the word, check if any is an upper case character
->     elif **any**(**char.isupper**() for char in word):
->         return "--**unk_upper**--"
+>     elif \\*any\\*(\\*char.isupper\\*() for char in word):
+>         return "--\\*unk_upper\\*--"
 >
 >     # Check if word ends with any noun suffix
->     elif any(**word.endswith**(**suffix**) for suffix in **noun_suffix**):
+>     elif any(\\*word.endswith\\*(\\*suffix\\*) for suffix in \\*noun_suffix\\*):
 >         return "--unk_noun--"
 >
 >     # Check if word ends with any verb suffix
->     elif any(**word.endswith**(**suffix**) for suffix in **verb_suffix**):
+>     elif any(\\*word.endswith\\*(\\*suffix\\*) for suffix in \\*verb_suffix\\*):
 >         return "--unk_verb--"
 >
 >     # Check if word ends with any adjective suffix
->     elif any(**word.endswith**(**suffix**) for suffix in **adj_suffix**):
+>     elif any(\\*word.endswith\\*(\\*suffix\\*) for suffix in \\*adj_suffix\\*):
 >         return "--unk_adj--"
 >
 >     # Check if word ends with any adverb suffix
->     elif any(**word.endswith**(**suffix**) for suffix in **adv_suffix**):
+>     elif any(\\*word.endswith\\*(\\*suffix\\*) for suffix in \\*adv_suffix\\*):
 >         return "--unk_adv--"
 >
 >     # If none of the previous criteria is met, return plain unknown
@@ -635,10 +635,10 @@
 <a id="node-xlsdadi"></a>
 
 > [!NOTE]
-> A POS tagger will **always encounter** words that are not
+> A POS tagger will \\*always encounter\\* words that are not
 > within the vocabulary that is being used. By augmenting the
-> dataset to include these **unknown** word tokens you are
-> **helping the tagger to have a better idea** of the appropriate
+> dataset to include these \\*unknown\\* word tokens you are
+> \\*helping the tagger to have a better idea\\* of the appropriate
 > tag for these words.
 
 <br>
@@ -652,19 +652,19 @@
 <a id="node-guxxxwj"></a>
 
 > [!NOTE]
-> All that is left is to **implement a function** that will **get the correct tag** for a **particular word** 
+> All that is left is to \\*implement a function\\* that will \\*get the correct tag\\* for a \\*particular word\\* 
 > taking special considerations for unknown words. Since the dataset provides each word 
 > and tag within the same line and a word being known depends on the vocabulary used, 
 > these two elements should be arguments to this function.
 >
-> This function should **check if a line is empty** and if so, it should return a **placeholder** **word** 
-> and **tag**, **--n--** and **--s--** respectively.
+> This function should \\*check if a line is empty\\* and if so, it should return a \\*placeholder\\* \\*word\\* 
+> and \\*tag\\*, \\*--n--\\* and \\*--s--\\* respectively.
 >
-> If not, it should process the line to return the **correct word** and **tag** pair, considering if a 
-> word is unknown in which scenario the function **assign_unk**() should be used.
+> If not, it should process the line to return the \\*correct word\\* and \\*tag\\* pair, considering if a 
+> word is unknown in which scenario the function \\*assign_unk\\*() should be used.
 >
-> The function is implemented next. Notice that the **split()** method can be used without 
-> specifying the **delimiter**, in which case it will default to **any whitespace**.
+> The function is implemented next. Notice that the \\*split()\\* method can be used without 
+> specifying the \\*delimiter\\*, in which case it will default to \\*any whitespace\\*.
 >
 > Cuối cùng là tổng hợp lại và viết một function để
 > nhận một linę (tức là trong quá trình readline() 
@@ -680,9 +680,9 @@
 <a id="node-yrpju5i"></a>
 
 > [!NOTE]
-> def **get_word_tag**(**line**, **vocab**):
->     # If **line is empty** return placeholders for word and tag
->     **if not line.split():** \\/#Tức là nếu split bởi whitespace mà 
+> def \\*get_word_tag\\*(\\*line\\*, \\*vocab\\*):
+>     # If \\*line is empty\\* return placeholders for word and tag
+>    \\* if not line.split(): \\*\\/#Tức là nếu split bởi whitespace mà 
 > #vẫn không có gì, thì tức là line is empty\\/
 >         word = "--n--"
 >         tag = "--s--"
@@ -690,11 +690,12 @@
 >         # Split line to separate word and tag \\/#Cái này cũng là split 
 > #bởi (any) whitespace vì tab (mỗi line của data có dạng word + tab + tag) cũng là 
 > #whitespace
-> \\/        word, tag = **line.split()**
+> \\/        word, tag =\\* line.split()\\*
 >         # Check if word is not in vocabulary
->         if **word** **not in vocab:** 
+>         if \\*word\\* \\*not in vocab: \\*
 >             # Handle unknown word
->             tag = **assign_unk(word)**     return **word, tag**
+>             tag = \\*assign_unk(word)
+> \\*    return \\*word, tag\\*
 
 <br>
 
@@ -708,8 +709,8 @@
 
 > [!NOTE]
 > Congratulations on finishing this lecture notebook! Now you should be more
-> familiar with working with text data and **have a better understanding** of how a
-> **basic POS tagger works**.
+> familiar with working with text data and \\*have a better understanding\\* of how a
+> \\*basic POS tagger works\\*.
 >
 > Keep it up!
 
@@ -725,32 +726,32 @@
 
 > [!NOTE]
 > 1 Introduction to Markov Chains:
-> a. Markov chains are **crucial** in **speech recognition** and **parts of speech tagging POS**.
-> b. **Transition probabilities** and **states** are **fundamental concepts** in Markov chains.
+> a. Markov chains are \\*crucial\\* in \\*speech recognition \\*and \\*parts of speech tagging POS\\*.
+> b. \\*Transition probabilities\\* and \\*states\\* are \\*fundamental concepts\\* in Markov chains.
 >
->  2 Example: **Transition Probabilities**:
-> a. A small example is used to **illustrate** the **concept of transition probabilities** in Markov chains.
-> b. The **likelihood of the next word's part of speech tag** **depends** **on the previous word's tag**.
-> c. **Arrows** and **circles** are used to **visually represent transition probabilities between states**.
+>  2 Example: \\*Transition Probabilities\\*:
+> a. A small example is used to \\*illustrate\\* the \\*concept of transition probabilities\\* in Markov chains.
+> b. The \\*likelihood of the next word's part of speech tag\\* \\*depends\\* \\*on the previous word's tag\\*.
+> c. \\*Arrows\\* and \\*circles\\* are used to \\*visually represent transition probabilities between states\\*.
 >
->  3 Understanding **Markov Chains**:
-> a. Markov chains are **stochastic** **models** that **describe sequences of events**.
-> b. They **rely on previous event states** to determine the **probability of each event.**
-> c. Stochastic models incorporate **randomness** and have a **random component.**
+>  3 Understanding \\*Markov Chains\\*:
+> a. Markov chains are \\*stochastic\\* \\*models\\* that \\*describe sequences of events\\*.
+> b. They \\*rely on previous event states\\* to determine the \\*probability of each event.\\*
+> c. Stochastic models incorporate \\*randomness\\* and have a \\*random component.\\*
 >
 >  4 Depicting Markov Chains:
-> a. Markov chains can be represented as **directed graphs**.
-> b. Graphs consist of **circles** (nodes) **connected by lines** (edges) with **directional arrows.**
-> c. **Each circle represents a state** in the model, **reflecting a specific condition** at the **present moment**.
+> a. Markov chains can be represented as \\*directed graphs\\*.
+> b. Graphs consist of \\*circles\\* (nodes) \\*connected by lines\\* (edges) with \\*directional arrows.\\*
+> c. \\*Each circle represents a state \\*in the model, \\*reflecting a specific condition\\* at the \\*present moment\\*.
 >
 >  5 States in Markov Chains:
-> a. **States** in Markov chains **can correspond to part of speech tags**, among other conditions.
-> b. For example, **verbs** and **nouns** can be **represented by different states in the model**.
-> c. **States are labeled** using **unique names** (e.g., **q1, q2, q3)**, and the **set of all states** is denoted by **Q**.
+> a. \\*States\\* in Markov chains \\*can correspond to part of speech tags\\*, among other conditions.
+> b. For example, \\*verbs\\* and \\*nouns\\* can be \\*represented by different states in the model\\*.
+> c. \\*States are labeled \\*using \\*unique names\\* (e.g., \\*q1, q2, q3)\\*, and the \\*set of all states\\* is denoted by\\* Q\\*.
 >
->  6 Next Steps: P**arts of Speech Tagging**:
-> a. The upcoming video will delve into **parts of speech tags** in the context of **Markov chains**.
-> b. Parts of speech tags provide a way to **label words** based on their **grammatical function**.
+>  6 Next Steps: P\\*arts of Speech Tagging\\*:
+> a. The upcoming video will delve into \\*parts of speech tags\\* in the context of \\*Markov chains\\*.
+> b. Parts of speech tags provide a way to \\*label words\\* based on their \\*grammatical function\\*.
 
 <br>
 
@@ -859,29 +860,29 @@
 <a id="node-dp1bi44"></a>
 
 > [!NOTE]
-> 1 Introduction to **parts of speech tags** and **transition probabilities**
+> 1 Introduction to \\*parts of speech tags\\* and \\*transition probabilities\\*
 >
-> 2 Representation of **sentences** as **graphs** with **part of speech tags** as
-> **events**
+> 2 Representation of \\*sentences\\* as \\*graphs\\* with \\*part of speech tags\\* as
+> \\*events\\*
 >
-> 3 **Markov property** in modeling **transition probabilities**
+> 3 \\*Markov property\\* in modeling \\*transition probabilities\\*
 >
-> 4 **Analogy** of **water states** (solid, liquid, gas) to understand **Markov chains**
+> 4 \\*Analogy\\* of \\*water states\\* (solid, liquid, gas) to understand \\*Markov chains\\*
 >
-> 5 **Probability** **calculation** based on **current state** for the **next word** in a
+> 5 \\*Probability\\* \\*calculation\\* based on \\*current state\\* for the \\*next word\\* in a
 > sentence
 >
-> 6 **Transition matrix** as a \\/**compact\\/ representation of the Markov chain**
+> 6 \\*Transition matrix\\* as a \\/\\*compact\\/ representation of the Markov chain\\*
 > model
 >
-> 7 Flaw in the model: assigning part of speech tag to the **first word**
+> 7 Flaw in the model: assigning part of speech tag to the \\*first word\\*
 >
-> 8 Introduction of an **initial state** to handle the **first word in a sentence**
+> 8 Introduction of an \\*initial state\\* to handle the\\* first word in a sentence\\*
 >
-> 9 Recap of Markov chains, including **states** and **transition matrix**
+> 9 Recap of Markov chains, including \\*states\\* and \\*transition matrix\\*
 >
-> 10 Conclusion of the video and preview of the next topic: **hidden Markov
-> models for decoding hidden states**
+> 10 Conclusion of the video and preview of the next topic: \\*hidden Markov
+> models for decoding hidden states\\*
 
 <br>
 
@@ -1042,6 +1043,8 @@
 > Đây là cơ sở để tính **TRANSITION probability** - Xác suất một 
 > POS tag -> POS tag : loại từ này theo sau bởi loaị từ khác
 
+**🔗 See also:** [linked note](#node-nu3t2ls)
+
 <br>
 
 <a id="node-gjvr50y"></a>
@@ -1086,41 +1089,41 @@
 <a id="node-ipl4pt6"></a>
 
 > [!NOTE]
-> 1 Introduction to **Hidden Markov models (HMM)**:
->  • **HMMs** are used to **decode hidden states**, such as **parts of speech in this video**.
->  • **Hidden states** are **not directly observable** from the **text data**.
->  • **Observable data** consists of words that **can be seen** by the machine.
+> 1 Introduction to \\*Hidden Markov models (HMM)\\*:
+>  • \\*HMMs\\* are used to \\*decode hidden states\\*, such as \\*parts of speech in this video\\*.
+>  • \\*Hidden states\\* are \\*not directly observable\\* from the \\*text data\\*.
+>  • \\*Observable data\\* consists of words that \\*can be seen\\* by the machine.
 >
->  2 **Transition probabilities** in Markov models and HMMs:
->  • **Markov chain model** and **HMM** have t**ransition probabilities** represented by 
-> **matrix A**.
->  • A is of dimensions (**NxN)**, where **N is the number of hidden states**.
->  • **Hidden states** represent **parts of speech**, such as **noun, verb**, or others.
+>  2 \\*Transition probabilities\\* in Markov models and HMMs:
+>  • \\*Markov chain model\\* and \\*HMM\\* have t\\*ransition probabilities\\* represented by 
+> \\*matrix A\\*.
+>  • A is of dimensions (\\*NxN)\\*, where \\*N is the number of hidden states\\*.
+>  • \\*Hidden states\\* represent \\*parts of speech\\*, such as \\*noun, verb\\*, or others.
 >
->  3 **Emission** **probabilities** in HMMs:
->  • **HMMs** have **additional probabilities** called **emission probabilities**.
->  • Emission probabilities describe the **transition from hidden states to 
-> observables (words).**
+>  3 \\*Emission\\* \\*probabilities\\* in HMMs:
+>  • \\*HMMs\\* have \\*additional probabilities\\* called \\*emission probabilities\\*.
+>  • Emission probabilities describe the \\*transition from hidden states to 
+> observables (words).\\*
 >  • Emission probabilities can be represented in a matrix/table format.
 >
->  4 Understanding **emission probabilities:**
->  • Emission probability represents the **likelihood of emitting an observable given 
-> a hidden state.**
->  • Example: The emission probability from the **verb** hidden state to the word **"eat"** 
-> is **0.5.**
->  • **Words can have different parts of speech tags depending on the context.**
+>  4 Understanding \\*emission probabilities:\\*
+>  • Emission probability represents the \\*likelihood of emitting an observable given 
+> a hidden state.\\*
+>  • Example: The emission probability from the \\*verb\\* hidden state to the word \\*"eat" \\*
+> is \\*0.5.\\*
+>  • \\*Words can have different parts of speech tags depending on the context.\\*
 >
 >  5 Components and notation of HMMs:
->  • HMMs consist of a **set of N states** **(Q)**.
->  • **Transition matrix A** has dimension N by N, representing transition probabilities.
->  • **Emission matrix B** has dimension **N by V**, representing emission probabilities.
->  • **N denotes the number of hidden states**, and **V represents the number of 
-> observables (words).**
+>  • HMMs consist of a \\*set of N states\\* \\*(Q)\\*.
+>  • \\*Transition matrix A\\* has dimension N by N, representing transition probabilities.
+>  • \\*Emission matrix B\\* has dimension \\*N by V\\*, representing emission probabilities.
+>  • \\*N denotes the number of hidden states\\*, and \\*V represents the number of 
+> observables (words).\\*
 >
 >  6 Computation of transition and emission probabilities:
->  • **Transition probabilities** define **state transitions** in the HMM.
->  • **Emission probabilities** describe the **relationship between hidden states and 
-> observables.**
+>  • \\*Transition probabilities\\* define \\*state transitions\\* in the HMM.
+>  • \\*Emission probabilities\\* describe the \\*relationship between hidden states and 
+> observables.\\*
 
 <br>
 
@@ -1296,32 +1299,32 @@
 <a id="node-l1thzhf"></a>
 
 > [!NOTE]
-> 1 Introduction: Learn how to **compute probabilities for transition** and **emission** matrices in a
-> Markov model **using a corpus**.
+> 1 Introduction: Learn how to \\*compute probabilities for transition\\* and\\* emission\\* matrices in a
+> Markov model \\*using a corpus\\*.
 >
-> 2 Transition Matrix: The **transition matrix** contains **transition probabilities** **between states** in
+> 2 Transition Matrix: The \\*transition matrix\\* contains \\*transition probabilities\\* \\*between states\\* in
 > the Markov model.
 >
 > 3 Calculating Transition Probabilities: Transition probabilities are calculated based on the
-> **occurrences of tag combinations** in the **training corpus.**
+> \\*occurrences of tag combinations\\* in the \\*training corpus.\\*
 >
-> 4 Counting Tag Pairs: The function **C(t_i-1, t_i)** counts the **occurrences of tag pair (t_i-1, t_i)**
+> 4 Counting Tag Pairs: The function \\*C(t_i-1, t_i)\\* counts the \\*occurrences of tag pair (t_i-1, t_i)\\*
 > in the corpus.
 >
-> 5 Probability Calculation: **Probability P(t_i|t_i-1)** is calculated using the **counts of (t_i-1, t_i)**
-> divided by the **sum of occurrences of tag t_i-1 with all other tags t_j.**
+> 5 Probability Calculation: \\*Probability P(t_i|t_i-1)\\* is calculated using the \\*counts of (t_i-1, t_i)\\*
+> divided by the \\*sum of occurrences of tag t_i-1 with all other tags t_j.\\*
 >
-> 6 Haiku Example: Training a **model for haiku** using a **provided corpus** and making
-> **necessary modifications**.
+> 6 Haiku Example: Training a \\*model for haiku\\* using a \\*provided corpus\\* and making
+> \\*necessary modifications\\*.
 >
-> 7 **Corpus** **Preparation**: Adding **start tokens** to each line, **converting words to lowercase**, and
+> 7 \\*Corpus\\* \\*Preparation\\*: Adding\\* start tokens\\* to each line, \\*converting words to lowercase\\*, and
 > preserving punctuation.
 >
-> 8 Transformation to Probabilities: **Converting counts into probabilities** to **populate the
-> transition matrix.**
+> 8 Transformation to Probabilities: \\*Converting counts into probabilities\\* to \\*populate the
+> transition matrix.\\*
 >
-> 9 Importance of Probabilities: **Probabilities** allow for the **representation of transitions**
-> **between states** in the Markov model.
+> 9 Importance of Probabilities: \\*Probabilities\\* allow for the \\*representation of transitions\\*
+> \\*between states\\* in the Markov model.
 
 <br>
 
@@ -1336,6 +1339,8 @@
 > xanh dương -> tím** trên t**ổng số lần xanh dương -> Từ
 > bất kì** thì sẽ cho ta cái **xác suất ô tím theo sau một ô là
 > xanh dương** - **P(tím|xanh dương)** là bao nhiêu.
+
+**🔗 See also:** [linked note](#node-n6wk66s)
 
 <br>
 
@@ -1446,39 +1451,40 @@
 <a id="node-hbph0op"></a>
 
 > [!NOTE]
-> 1 Introduction: To **populate the transition matrix**, calculate **probabilities of tag transitions** and **initial tag probabilities**.
+> 1 Introduction: To\\* populate the transition matrix\\*, calculate \\*probabilities of tag transitions
+> \\*and \\*initial tag probabilities\\*.
 >
-> 2 Filling the First Column: Count the **occurrences** of **tag combinations** to populate the first
-> column of the **transition matrix.**
+> 2 Filling the First Column: Count the \\*occurrences\\* of\\* tag combinations\\* to populate the first
+> column of the \\*transition matrix.\\*
 >
 > 3 Shortcut and Programming Assignments: Shortcut taken for illustration purposes, but in
 > programming assignments, all calculations must be performed.
 >
-> 4 Transition Matrix Calculation: Once the counts are obtained, **divide each count** by the
-> **corresponding row sum** to calculate **transition probabilities.**
+> 4 Transition Matrix Calculation: Once the counts are obtained, \\*divide each count\\* by the
+> \\*corresponding row sum\\* to calculate \\*transition probabilities.\\*
 >
-> 5 Row Sum Interpretation: **Row sums represent all pairs of words where the current state
-> is a specific part of speech, and the next state can be any part of speech.**
+> 5 Row Sum Interpretation:\\* Row sums represent all pairs of words where the current state
+> is a specific part of speech, and the next state can be any part of speech.\\*
 >
-> 6 Problems with Division: The **issue of division by zero** for certain tags and **many zero
-> entries in the transition matrix.**
+> 6 Problems with Division: The \\*issue of division by zero\\* for certain tags and \\*many zero
+> entries in the transition matrix.\\*
 >
-> 7 Smoothing: Modify the formula by **adding a small value (Epsilon) to each count** and **N
-> times Epsilon to the divisor for smoothin**g.
+> 7 Smoothing: Modify the formula by \\*adding a small value (Epsilon) to each count\\* and \\*N
+> times Epsilon to the divisor for smoothin\\*g.
 >
-> 8 Smoothing Benefits: **Smoothing** **eliminates zero value** entries and allows the model to
-> **generalize** to other examples.
+> 8 Smoothing Benefits: \\*Smoothing\\* \\*eliminates zero value\\* entries and allows the model to
+> \\*generalize\\* to other examples.
 >
 > 9 Transition Matrix After Smoothing: A transition matrix example after applying smoothing
 > with Epsilon (0.001).
 >
-> 10 Initial Probabilities and Smoothing: **Consideration of not applying smoothing to initial
-> probabilities to avoid allowing any tag, including punctuation, at the start of a sentence.**
+> 10 Initial Probabilities and Smoothing: \\*Consideration of not applying smoothing to initial
+> probabilities to avoid allowing any tag, including punctuation, at the start of a sentence.\\*
 >
-> 11 Understanding Smoothing: Explanation of smoothing and **its importance in estimating
-> transition probabilities**.
+> 11 Understanding Smoothing: Explanation of smoothing and \\*its importance in estimating
+> transition probabilities\\*.
 >
-> 12 Next Steps: Moving on to **populating the emissions matrix** in the next video.
+> 12 Next Steps: Moving on to \\*populating the emissions matrix\\* in the next video.
 
 <br>
 
@@ -1636,21 +1642,21 @@
 
 > [!NOTE]
 > 1 Introduction: Introduction to the need for a new matrix to incorporate
-> **word probabilities** into the equation.
+> \\*word probabilities\\* into the equation.
 >
-> 2 **Emission** Matrix: Introduction to the emission matrix, which provides
-> **probabilities of** \\/**transitioning from a word to a part of speech tag**\\/.
+> 2 \\*Emission\\* Matrix: Introduction to the emission matrix, which provides
+> \\*probabilities of\\* \\/\\*transitioning from a word to a part of speech tag\\*\\/.
 >
-> 3 Counting **Co-Occurrences**: Counting the co-occurrences of part of
-> speech tags with specific words in the corpus to **populate the emission
-> matrix**.
+> 3 Counting \\*Co-Occurrences\\*: Counting the co-occurrences of part of
+> speech tags with specific words in the corpus to \\*populate the emission
+> matrix\\*.
 >
-> 4 Example: **Illustration** of counting co-occurrences using a small
+> 4 Example: \\*Illustration\\* of counting co-occurrences using a small
 > training corpus and the haiku example.
 >
 > 5 Formula for Emission Probabilities: The formula for calculating
-> emission probabilities with smoothing, using **counts of tag-word pairs**
-> and corresponding **row sums** in the emission matrix.
+> emission probabilities with smoothing, using \\*counts of tag-word pairs\\*
+> and corresponding \\*row sums\\* in the emission matrix.
 >
 > 6 Recap: Ability to calculate both transition and emission matrices,
 > including applying smoothing for improved model generalization.
@@ -1730,11 +1736,11 @@
 <a id="node-wf9t152"></a>
 
 > [!NOTE]
-> In this lecture notebook you will **create a matrix** using
-> some **tag information** and then **modify it** using **different
-> approaches**. This will serve as **hands-on experience**
-> working with **Numpy** and as an introduction to some
-> elements used for **POS tagging**.
+> In this lecture notebook you will \\*create a matrix\\* using
+> some\\* tag information\\* and then \\*modify it\\* using \\*different
+> approaches\\*. This will serve as \\*hands-on experience\\*
+> working with \\*Numpy\\* and as an introduction to some
+> elements used for \\*POS tagging\\*.
 
 <br>
 
@@ -1755,9 +1761,9 @@
 <a id="node-op03gqs"></a>
 
 > [!NOTE]
-> For this notebook you will be using a **toy example**
-> including only **three tags** (or states). In a **real
-> world application** there are **many more tags**
+> For this notebook you will be using a \\*toy example\\*
+> including only \\*three tags\\* (or states). In a \\*real
+> world application\\* there are \\*many more tags\\*
 > which can be found here.
 
 <br>
@@ -1779,21 +1785,21 @@
 <a id="node-lnqew8s"></a>
 
 > [!NOTE]
-> In this week's assignment you will **construct some dictionaries** that
-> provide **useful information of the tags** and words you will be working
+> In this week's assignment you will \\*construct some dictionaries\\* that
+> provide \\*useful information of the tags\\* and words you will be working
 > with.
 >
-> One of these dictionaries is the **transition_counts** which counts the
-> number of times a **particular tag happened next to another.** The keys of
-> this dictionary have the form (**previous_tag**, **tag**) and the values are the
-> **frequency of occurrences**.
+> One of these dictionaries is the \\*transition_counts\\* which counts the
+> number of times a \\*particular tag happened next to another.\\* The keys of
+> this dictionary have the form (\\*previous_tag\\*, \\*tag\\*) and the values are the
+> \\*frequency of occurrences\\*.
 >
-> Another one is the **emission_counts** dictionary which will count the
-> number of times a **particular pair of (tag, word) appeared in the training
-> dataset.**
+> Another one is the \\*emission_counts\\* dictionary which will count the
+> number of times a \\*particular pair of (tag, word) appeared in the training
+> dataset.\\*
 >
-> In general think of **transition** when working with **tags only** and of
-> **emission** when working with **tags and words.**
+> In general think of \\*transition\\* when working with \\*tags only\\* and of
+> \\*emission\\* when working with \\*tags and words.\\*
 >
 > In this notebook you will be looking at the first one:
 >
@@ -1808,7 +1814,7 @@
 <a id="node-2x2ddqf"></a>
 
 > [!NOTE]
-> # Define '**transition_counts**' dictionary
+> # Define '\\*transition_counts\\*' dictionary
 > # Note: values are the same as the ones in the assignment
 > transition_counts = {
 >     ('NN', 'NN'): 16241,
@@ -1881,7 +1887,7 @@
 
 > [!NOTE]
 > # Create sorted version of the tag's list
-> **sorted_tags** = **sorted**(tags)
+> \\*sorted_tags\\* = \\*sorted\\*(tags)
 >
 > # Print sorted list
 > sorted_tags
@@ -1902,13 +1908,13 @@
 
 > [!NOTE]
 > # Loop rows
-> for **i** in range(**num_tags**):
+> for \\*i\\* in range(\\*num_tags\\*):
 >     # Loop columns
->     for **j** in range(**num_tags**):
+>     for \\*j\\* in range(\\*num_tags\\*):
 >         # Define tag pair
->         **tag_tuple** = (**sorted_tags**[i], **sorted_tags**[j])
+>         \\*tag_tuple\\* = (\\*sorted_tags\\*[i], \\*sorted_tags\\*[j])
 >         # Get frequency from transition_counts dict and assign to (i, j) position in the matrix
->         **transition_matrix[i, j] = transition_counts.get(tag_tuple)**
+>         \\*transition_matrix[i, j] = transition_counts.get(tag_tuple)\\*
 >
 > # Print matrix
 > transition_matrix
@@ -1928,11 +1934,11 @@
 <a id="node-p3roel5"></a>
 
 > [!NOTE]
-> Looks like this worked fine. However the **matrix** can be
-> hard to read as **Numpy** is more  about efficiency, rather
+> Looks like this worked fine. However the \\*matrix\\* can be
+> hard to read as \\*Numpy\\* is more  about efficiency, rather
 > than presenting values in a pretty format.
 >
-> For this you can use a **Pandas** **DataFrame**. In particular, a
+> For this you can use a \\*Pandas\\* \\*DataFrame\\*. In particular, a
 > function that takes the matrix  as input and prints out a
 > pretty version of it will be very useful:
 
@@ -1943,16 +1949,16 @@
 > [!NOTE]
 > # Define 'print_matrix' function
 > def print_matrix(matrix):
->     print(pd.**DataFrame**(matrix, index=**sorted_tags**, columns=**sorted_tags**))
+>     print(pd.\\*DataFrame\\*(matrix, index=\\*sorted_tags\\*, columns=\\*sorted_tags\\*))
 
 <br>
 
 <a id="node-v3i4341"></a>
 
 > [!NOTE]
-> Notice that the **tags are not a parameter** **of
-> the function**. This is because the
-> **sorted_tags** list **will not change** in the rest
+> Notice that the \\*tags are not a parameter\\* \\*of
+> the function\\*. This is because the
+> \\*sorted_tags\\* list \\*will not change\\* in the rest
 > of the notebook so it is safe to use the variable
 > previously declared. To test this function simply
 > run:
@@ -1987,16 +1993,16 @@
 > Now that you got the matrix set up it is time to see how a matrix can be
 > manipulated after  being created.
 >
-> Numpy allows **vectorized operations** which means that operations that would
+> Numpy allows \\*vectorized operations\\* which means that operations that would
 > normally  include looping over the matrix can be done in a simpler manner.
-> This is consistent with  **treating numpy arrays as matrices** since you get
+> This is consistent with \\* treating numpy arrays as matrices\\* since you get
 > support for common matrix operations.  You can do matrix multiplication,
 > scalar multiplication, vector addition and many more!
 >
-> For instance try **scaling each value in the matrix by a factor of 1/10**
+> For instance try \\*scaling each value in the matrix by a factor of 1/10\\*
 >
 > Normally you would loop over each value in the matrix, updating them
-> accordingly. But in Numpy this is as easy as **dividing the whole matrix by 10**:
+> accordingly. But in Numpy this is as easy as \\*dividing the whole matrix by 10\\*:
 
 <br>
 
@@ -2004,7 +2010,7 @@
 
 > [!NOTE]
 > # Scale transition matrix
-> transition_matrix = **transition_matrix/10**
+> transition_matrix = \\*transition_matrix/10\\*
 >
 > # Print scaled matrix
 > print_matrix(transition_matrix)
@@ -2027,7 +2033,7 @@
 
 > [!NOTE]
 > # Compute sum of row for each row
-> rows_sum = transition_matrix.**sum**(**axis=1**, keepdims=True)
+> rows_sum = transition_matrix.\\*sum\\*(\\*axis=1\\*, keepdims=True)
 >
 > # Print sum of rows
 > rows_sum
@@ -2053,18 +2059,18 @@
 <a id="node-lhlk4dh"></a>
 
 > [!NOTE]
-> Notice that the **sum()** method was used. This method does exactly what its
-> name implies.  Since the **sum of the rows** was **desired** the **axis was set to 1.**
-> In Numpy **axis=1 refers to  the columns** so the sum is done by summing
+> Notice that the \\*sum()\\* method was used. This method does exactly what its
+> name implies.  Since the \\*sum of the rows\\* was\\* desired\\* the \\*axis was set to 1.\\*
+> In Numpy \\*axis=1 refers to  the columns\\* so the sum is done by summing
 > each column of a particular row, for each  row.
 >
-> Also the **keepdims** parameter was set to **True** so the resulting array had
-> **shape (3,  1) rather than (3,)**. This was done so that the axes were
+> Also the \\*keepdims\\* parameter was set to \\*True\\* so the resulting array had
+> \\*shape (3,  1) rather than (3,)\\*. This was done so that the axes were
 > consistent with the desired  operation.
 >
-> When working with Numpy, always **remember to check the shape of the
-> arrays** you are  working with, **many unexpected errors happen because of
-> axes not being consistent**.  The \\/**shape attribute is your friend**\\/ for these
+> When working with Numpy, always \\*remember to check the shape of the
+> arrays\\* you are  working with, \\*many unexpected errors happen because of
+> axes not being consistent\\*.  The \\/\\*shape attribute is your friend\\*\\/ for these
 > cases.
 >
 > Cách hiểu thứ 2 cũng dễ nhớ là: Tổng các hàng có nghĩa là cộng giá
@@ -2103,8 +2109,8 @@
 <a id="node-01p8iaj"></a>
 
 > [!NOTE]
-> Notice that the **normalization** that was carried out
-> forces the **sum of each row to be equal to 1**. You
+> Notice that the \\*normalization\\* that was carried out
+> forces the \\*sum of each row to be equal to 1\\*. You
 > can easily check this by running the sum method
 > on the resulting matrix:
 
@@ -2114,8 +2120,8 @@
 
 > [!NOTE]
 > transition_matrix.
-> sum(**axis=1**,
-> **keepdims**=True)
+> sum(\\*axis=1\\*,
+> \\*keepdims\\*=True)
 
 <br>
 
@@ -2137,13 +2143,13 @@
 <a id="node-e10gmzw"></a>
 
 > [!NOTE]
-> For a final example you are asked to **modify each value of the
-> diagonal of the matrix** so  that they are **equal to the log of the sum
-> of the current row plus the current value**. When  doing
+> For a final example you are asked to \\*modify each value of the
+> diagonal of the matrix\\* so  that they are \\*equal to the log of the sum
+> of the current row plus the current value\\*. When  doing
 > mathematical operations like this one don't forget to import
 > the math module.
 >
-> This can be done using a **standard for loop** or **vectorization**. You'll
+> This can be done using a \\*standard for loop\\* or \\*vectorization\\*. You'll
 > see both in action:
 
 <br>
@@ -2153,11 +2159,11 @@
 > [!NOTE]
 > import math
 >
-> # **Copy transition matrix** for for-loop example
-> t_matrix_for = **np.copy(**transition_matrix)
+> # \\*Copy transition matrix\\* for for-loop example
+> t_matrix_for =\\* np.copy(\\*transition_matrix)
 >
-> # **Copy** transition matrix for numpy functions example
-> t_matrix_np = **np.copy**(transition_matrix)
+> # \\*Copy\\* transition matrix for numpy functions example
+> t_matrix_np = \\*np.copy\\*(transition_matrix)
 
 <br>
 
@@ -2183,7 +2189,7 @@
 
 > [!NOTE]
 > # Save diagonal in a numpy array
-> d = **np.diag(t_matrix_np)**
+> d = \\*np.diag(t_matrix_np)\\*
 >
 > # Print shape of diagonal
 > d.shape
@@ -2199,12 +2205,12 @@
 <a id="node-nbpb0n5"></a>
 
 > [!NOTE]
-> You can **save the diagonal** in a numpy array using
-> Numpy' s **diag() function**. Notice that  this array has
-> shape **(3,)** so it is **inconsistent** with the dimensions of
-> the rows_sum array  which are **(3, 1)**. You'll have to
-> **reshape** before moving forward. For this you can use
-> Numpy's **reshape**() function, specifying the desired
+> You can \\*save the diagonal\\* in a numpy array using
+> Numpy' s \\*diag() function\\*. Notice that  this array has
+> shape \\*(3,)\\* so it is \\*inconsistent\\* with the dimensions of
+> the rows_sum array  which are \\*(3, 1)\\*. You'll have to
+> \\*reshape\\* before moving forward. For this you can use
+> Numpy's \\*reshape\\*() function, specifying the desired
 > shape in a tuple
 
 <br>
@@ -2213,7 +2219,7 @@
 
 > [!NOTE]
 > # Reshape diagonal numpy array
-> d = np.**reshape**(d, (3,1))
+> d = np.\\*reshape\\*(d, (3,1))
 >
 > # Print shape of diagonal
 > d.shape
@@ -2229,15 +2235,15 @@
 <a id="node-mrhgsgf"></a>
 
 > [!NOTE]
-> Now that the **diagonal** has the **correct shape** you can do the vectorized
-> operation by  applying the **math.log()** function to the **rows_sum** array and
+> Now that the \\*diagonal\\* has the \\*correct shape\\* you can do the vectorized
+> operation by  applying the \\*math.log() \\*function to the \\*rows_sum\\* array and
 > adding the diagonal.
 >
 > To apply a function to each element of a numpy array use Numpy'
-> s **vectorize()** function  \\/**providing the desired function as a parameter.**\\/ This
+> s \\*vectorize()\\* function  \\/\\*providing the desired function as a parameter.\\*\\/ This
 > function returns a vectorized function  that accepts a numpy array as a parameter.
 >
-> To update the original matrix you can use Numpy' s **fill_diagonal**() function.
+> To update the original matrix you can use Numpy' s \\*fill_diagonal\\*() function.
 
 <br>
 
@@ -2245,10 +2251,10 @@
 
 > [!NOTE]
 > # Perform the vectorized operation
-> d = d + **np.vectorize(math.log)(rows_sum)**
+> d = d +\\* np.vectorize(math.log)(rows_sum)\\*
 >
-> # Use numpy's '**fill_diagonal**' function to update the diagonal
-> **np.fill_diagonal**(t_matrix_np, d)
+> # Use numpy's '\\*fill_diagonal\\*' function to update the diagonal
+> \\*np.fill_diagonal\\*(t_matrix_np, d)
 >
 > # Print the matrix
 > print_matrix(t_matrix_np)
@@ -2264,7 +2270,7 @@
 <a id="node-844nobw"></a>
 
 > [!NOTE]
-> To perform a **sanity check** that both methods yield the same
+> To perform a \\*sanity check \\*that both methods yield the same
 > result you can compare both matrices. Notice that this
 > operation is also vectorized so you will get the equality check
 > for each element in both matrices:
@@ -2286,33 +2292,33 @@
 <a id="node-9be6gqp"></a>
 
 > [!NOTE]
-> 1 **Introduction** to the **Viterbi algorithm** and its purpose.
+> 1 \\*Introduction\\* to the \\*Viterbi algorithm\\* and its purpose.
 >
-> 2 Calculation of **transition** and **emission** **probabilities** for the **Markov chain** and **hidden
-> Markov model**.
+> 2 Calculation of \\*transition\\* and \\*emission\\* \\*probabilities\\* for the \\*Markov chain\\* and \\*hidden
+> Markov model\\*.
 >
-> 3 Problem: Finding the **most likely sequence of parts of speech tags** given a **sentence
-> and the model.**
+> 3 Problem: Finding the \\*most likely sequence of parts of speech tags\\* given a \\*sentence
+> and the model.\\*
 >
-> 4 Introduction of the **Viterbi algorithm** as a **graph algorithm.**
+> 4 Introduction of the \\*Viterbi algorithm\\* as a \\*graph algorithm.\\*
 >
-> 5 Example: **Toy model** with the sentence **"I love to learn"** and **initial states**.
+> 5 Example: \\*Toy model\\* with the sentence \\*"I love to learn"\\* and \\*initial states\\*.
 >
-> 6 Selection of the **most probable hidden states** based on transition and emission
+> 6 Selection of the \\*most probable hidden states\\* based on transition and emission
 > probabilities.
 >
-> 7 Calculation of **joint probabilities** for **observed words** and transitions between hidden
+> 7 Calculation of \\*joint probabilities\\* for \\*observed words\\* and transitions between hidden
 > states.
 >
-> 8 Iterative process of **traversing the model graph** and **making optimal choices** for
-> **hidden states.**
+> 8 Iterative process of \\*traversing the model graph\\* and \\*making optimal choices\\* for
+> \\*hidden states.\\*
 >
-> 9 Computation of **multiple paths simultaneously** to **find the most likely sequence.**
+> 9 Computation of \\*multiple paths simultaneously\\* to\\* find the most likely sequence.\\*
 >
-> 10 Three main steps of the Viterbi algorithm: **initialization**, **forward** pass, and **backward**
+> 10 Three main steps of the Viterbi algorithm: \\*initialization\\*, \\*forward\\* pass, and \\*backward\\*
 > pass.
 >
-> 11 Introduction of **auxiliary matrices (C and D)** to store **probabilities** and **visited states**.
+> 11 Introduction of \\*auxiliary matrices (C and D) \\*to store \\*probabilities\\* and \\*visited states\\*.
 >
 > 12 Matrix dimensions and their relation to the number of parts of speech tags and
 > words in the sequence.
@@ -2339,10 +2345,10 @@
 <a id="node-uhpooxr"></a>
 
 > [!NOTE]
-> So far you've calculated the **transition** and **emission** probabilities for the
-> **Markov chain** and the **hidden Markov model**. Given a **part of speech tag**
-> and **these probabilities**, you can **easily select the most likely next parts
-> of speech tag** or the **most probable word**. You can do so by looking up
+> So far you've calculated the \\*transition\\* and \\*emission\\* probabilities for the
+> \\*Markov chain\\* and the \\*hidden Markov model\\*. Given a \\*part of speech tag\\*
+> and \\*these probabilities\\*, you can \\*easily select the most likely next parts
+> of speech tag\\* or the \\*most probable word\\*. You can do so by looking up
 > the correct entry in the respective row of the transition or emission
 > matrix.
 >
@@ -2587,15 +2593,21 @@
 <a id="node-8qnarm1"></a>
 
 > [!NOTE]
->  **1 Initialization Step**: The initialization step involves populating the **first
-> column** of the **auxiliary** matrices C and D.  **2 Matrix C Initialization**: In matrix C, the first column represents the
-> probability of transitioning from the **start states (π)** to the **first tag (t_i)** and
-> **word (w_1)**. The entries in the first column (**c_1,1**) are calculated as the
-> **product of** the transition probability **A(1,i)** from the initial states and the
-> corresponding emission probability (b) for the word.  **3 Matrix D Initialization**: In matrix D, the first column stores the labels
+> \\* 1 Initialization Step\\*: The initialization step involves populating the \\*first
+> column\\* of the \\*auxiliary\\* matrices C and D. \\*
+>
+> 2 Matrix C Initialization\\*: In matrix C, the first column represents the
+> probability of transitioning from the \\*start states (π)\\* to the \\*first tag (t_i)\\* and
+> \\*word (w_1)\\*. The entries in the first column (\\*c_1,1\\*) are calculated as the
+> \\*product of\\* the transition probability \\*A(1,i)\\* from the initial states and the
+> corresponding emission probability (b) for the word. \\*
+>
+> 3 Matrix D Initialization\\*: In matrix D, the first column stores the labels
 > representing the different states traversed while finding the most likely
 > sequence of parts of speech tags. In the first column, all entries are set to zero
-> as there are no preceding parts of speech tags.  **4 Matrix Indexing**: The C index function returns the column index and the
+> as there are no preceding parts of speech tags. \\*
+>
+> 4 Matrix Indexing\\*: The C index function returns the column index and the
 > matrix b value for the given word. This indexing is used to calculate the
 > probabilities and update the matrices during the algorithm's execution. The
 > initialized matrices C and D provide the starting point for further calculations in
@@ -2773,17 +2785,23 @@
 <a id="node-4wx2oca"></a>
 
 > [!NOTE]
->  **1 Forward Pass**: The forward pass is the second step in populating the matrices
-> C and D using the Viterbi algorithm.  **2 Calculation of Matrix C**: To calculate the entries in matrix C, a function is used
+> \\* 1 Forward Pass\\*: The forward pass is the second step in populating the matrices
+> C and D using the Viterbi algorithm. \\*
+>
+> 2 Calculation of Matrix C\\*: To calculate the entries in matrix C, a function is used
 > that considers the values from the previous column and the emission probability of
 > the current word. Starting from the last term, the formula incorporates the emission
 > probability from tag t1 to word w2, the transition probability from tag tk to the current
 > tag t1 (ak,1), and the probability of the preceding path (tk1). The formula is
 > evaluated for each possible value of k, and the k value that maximizes the formula
-> is chosen. The resulting maximum value is stored in Ci,j.  **3 Calculation of Matrix D**: Matrix D is calculated using a similar formula to that of
+> is chosen. The resulting maximum value is stored in Ci,j. \\*
+>
+> 3 Calculation of Matrix D\\*: Matrix D is calculated using a similar formula to that of
 > matrix C, with the exception of the leading argmax function. The argmax function
 > returns the k value that maximizes the function arguments instead of the maximum
-> value itself. The k value that maximizes the formula is stored in Di,j.  **4 Populating Matrices Column by Column**: The remaining entries in matrices C
+> value itself. The k value that maximizes the formula is stored in Di,j. \\*
+>
+> 4 Populating Matrices Column by Column\\*: The remaining entries in matrices C
 > and D are populated column by column, following the same calculation process
 > described above.
 >
@@ -3085,26 +3103,26 @@
 > [!NOTE]
 > Welcome to the second assignment of Course 2 in the Natural Language Processing 
 > specialization. This assignment will develop skills in part-of-speech (POS) tagging, the 
-> process of assigning a **part-of-speech tag (Noun, Verb, Adjective...)** to **each word in an 
-> input text**. **Tagging** is difficult because some words can represent more than one part of 
-> speech at different times. They are **Ambiguous**. Let's look at the following example:
+> process of assigning a \\*part-of-speech tag (Noun, Verb, Adjective...)\\* to \\*each word in an 
+> input text\\*. \\*Tagging\\* is difficult because some words can represent more than one part of 
+> speech at different times. They are \\*Ambiguous\\*. Let's look at the following example:
 >
->  • The whole team played **well**. [adverb]
->  • You are doing **well** for yourself. [adjective]
->  **• Well**, this assignment took me forever to complete. [interjection]
->  • The **well** is dry. [noun]
->  • Tears were beginning to **well** in her eyes. [verb]
+>  • The whole team played \\*well\\*. [adverb]
+>  • You are doing \\*well\\* for yourself. [adjective]
+> \\* • Well\\*, this assignment took me forever to complete. [interjection]
+>  • The \\*well\\* is dry. [noun]
+>  • Tears were beginning to \\*well\\* in her eyes. [verb]
 >
-> Distinguishing the parts-of-speech of a word in a sentence will help you **better understand 
-> the meaning of a sentence**. This would be critically important in **search queries.** 
-> Identifying the proper **noun**, the **organization**, the **stock symbol,** or anything similar would 
+> Distinguishing the parts-of-speech of a word in a sentence will help you \\*better understand 
+> the meaning of a sentence\\*. This would be critically important in \\*search queries.\\* 
+> Identifying the proper \\*noun\\*, the \\*organization\\*, the \\*stock symbol,\\* or anything similar would 
 > greatly improve everything ranging from speech recognition to search. By completing this 
 > assignment, you will:
 >  • Learn how parts-of-speech tagging works
->  • Compute the **transition matrix A** in a Hidden Markov Model
->  • Compute the **emission matrix B** in a Hidden Markov Model
->  • Compute the **Viterbi** algorithm
->  • Compute the **accuracy** of your own model
+>  • Compute the \\*transition matrix A\\* in a Hidden Markov Model
+>  • Compute the \\*emission matrix B\\* in a Hidden Markov Model
+>  • Compute the \\*Viterbi\\* algorithm
+>  • Compute the \\*accuracy\\* of your own model
 
 <br>
 
@@ -3130,43 +3148,43 @@
 <a id="node-qiuw5iu"></a>
 
 > [!NOTE]
-> This assignment will use two **tagged data sets** collected from the **Wall Street Journal (WSJ)**.
+> This assignment will use two \\*tagged data sets\\* collected from the \\*Wall Street Journal (WSJ)\\*.
 > \\_
-> Here\\_ is an example **'tag-set'** or **Part of Speech** designation describing the two or three 
+> Here\\_ is an example \\*'tag-set'\\* or \\*Part of Speech\\* designation describing the two or three 
 > letter tag and their meaning.
->  • One data set (**WSJ-2_21.pos**) will be used for **training**.
->  • The other (**WSJ-24.pos**) for **testing**.
+>  • One data set (\\*WSJ-2_21.pos\\*) will be used for \\*training\\*.
+>  • The other (\\*WSJ-24.pos\\*) for \\*testing\\*.
 >  • The tagged training data has been preprocessed to form a vocabulary 
-> (**hmm_vocab.txt**).
+> (\\*hmm_vocab.txt\\*).
 >  • The words in the vocabulary are words from the training set that were used 
 > two or more times.
->  • The vocabulary is augmented with a set of '**unknown word tokens**', described below.
-> The training set will be used to create the **emission, transition and tag counts**.
+>  • The vocabulary is augmented with a set of '\\*unknown word tokens\\*', described below.
+> The training set will be used to create the \\*emission, transition and tag counts\\*.
 
 <br>
 
 <a id="node-inptjbl"></a>
 
 > [!NOTE]
-> The test set (WSJ-24.pos) is read in to create **y**.
->  • This contains both the **test text and the true tag.**
->  • The test set has also been preprocessed to **remove the tags** to 
-> form **test_words.txt**.
+> The test set (WSJ-24.pos) is read in to create \\*y\\*.
+>  • This contains both the \\*test text and the true tag.\\*
+>  • The test set has also been preprocessed to \\*remove the tags\\* to 
+> form \\*test_words.txt\\*.
 >  • This is read in and further processed to identify the end of sentences and 
-> handle words not in the vocabulary using functions provided in **utils_pos.py**.
->  • This forms the **list prep**, the preprocessed text used to test our POS taggers.
+> handle words not in the vocabulary using functions provided in \\*utils_pos.py\\*.
+>  • This forms the \\*list prep\\*, the preprocessed text used to test our POS taggers.
 
 <br>
 
 <a id="node-pgkpte4"></a>
 
 > [!NOTE]
-> **A POS tagger** will necessarily encounter words that are not in its datasets.
->  • To improve accuracy, these words are **further analyzed** during preprocessing 
-> to **extract available hints** as to their appropriate tag.
->  • For example, the suffix '**ize**' is a hint that the word is a verb, as in '**final-ize**' or 
-> '**character-ize**'.
->  • A set of unknown-tokens, such as '**--unk-verb--**' or '**--unk-noun--**' will replace 
+> \\*A POS tagger\\* will necessarily encounter words that are not in its datasets.
+>  • To improve accuracy, these words are \\*further analyzed\\* during preprocessing 
+> to \\*extract available hints\\* as to their appropriate tag.
+>  • For example, the suffix '\\*ize\\*' is a hint that the word is a verb, as in '\\*final-ize\\*' or 
+> '\\*character-ize\\*'.
+>  • A set of unknown-tokens, such as '\\*--unk-verb--\\*' or '\\*--unk-noun--\\*' will replace 
 > the unknown words in both the training and test corpus and will appear in the emission, 
 > transition and tag data structures.
 
@@ -3224,9 +3242,9 @@
 
 > [!NOTE]
 > Implementation note:
->  • For python 3.6 and beyond, **dictionaries** retain the **insertion order**.
->  • Furthermore, their **hash-based lookup** makes them suitable for **rapid 
-> membership tests**.
+>  • For python 3.6 and beyond, \\*dictionaries\\* retain the \\*insertion order\\*.
+>  • Furthermore, their \\*hash-based lookup\\* makes them suitable for \\*rapid 
+> membership tests\\*.
 >  ▪ If \\/di\\/ is a dictionary, key in di will return True if \\/di\\/ has a key _key_, else False.
 >
 > The dictionary vocab will utilize these features.
@@ -3242,11 +3260,11 @@
 
 > [!NOTE]
 > # load in the training corpus
-> **with open**("./data/WSJ_02-21.pos", 'r') **as** **f**:
->     **training_corpus** = **f.readlines()**
+> \\*with open\\*("./data/WSJ_02-21.pos", 'r') \\*as\\* \\*f\\*:
+>     \\*training_corpus\\* = \\*f.readlines()\\*
 >
 > print(f"A few items of the training corpus list")
-> print(training_corpus[**0:5**])
+> print(training_corpus[\\*0:5\\*])
 >
 > Đại khái là đọc file WSJ_02-21.pos ra,
 > thì training_corpus sẽ là 1 list
@@ -3262,9 +3280,9 @@
 <a id="node-qslg2ar"></a>
 
 > [!NOTE]
-> # read the vocabulary data, split by each line of text, and **save the list**
-> with open("./data/**hmm_vocab.txt**", 'r') as f:
->     **voc_l** = f.read().**split**('\\\\n')
+> # read the vocabulary data, split by each line of text, and \\*save the list\\*
+> with open("./data/\\*hmm_vocab.txt\\*", 'r') as f:
+>     \\*voc_l\\* = f.read().\\*split\\*('\\\\n')
 >
 > print("A few items of the vocabulary list")
 > print(voc_l[0:50])
@@ -3286,12 +3304,12 @@
 <a id="node-clyywly"></a>
 
 > [!NOTE]
-> # **vocab**: **dictionary** that has the **index of the corresponding words**
+> # \\*vocab\\*: \\*dictionary\\* that has the \\*index of the corresponding words\\*
 > vocab = {}
 >
 > # Get the index of the corresponding words. 
-> for I, word in enumerate(sorted(**voc_l**)): 
->     **vocab[word] = I**       
+> for I, word in enumerate(sorted(\\*voc_l\\*)): 
+>     \\*vocab[word] = I\\*       
 >
 > print("Vocabulary dictionary, key is the word, value is a unique integer")
 > cnt = 0
@@ -3375,12 +3393,12 @@
 <a id="node-fvkx7js"></a>
 
 > [!NOTE]
-> You will start with the **simplest** possible **parts-of-speech tagger** and we will build up to the 
-> **state of the art.**
+> You will start with the \\*simplest\\* possible \\*parts-of-speech tagger\\* and we will build up to the 
+> \\*state of the art.\\*
 >
-> In this section, you will find the words that are **not ambiguous.**
+> In this section, you will find the words that are \\*not ambiguous.\\*
 >  • For example, the word is is a verb and it is not ambiguous.
->  • In the WSJ corpus, **86%** of the token are unambiguous (meaning they have 
+>  • In the WSJ corpus, \\*86%\\* of the token are unambiguous (meaning they have 
 > only one tag)
 >  • About 14% are ambiguous (meaning that they have more than one tag)
 >
@@ -3399,9 +3417,9 @@
 <a id="node-fkp0v4k"></a>
 
 > [!NOTE]
-> Before you start **predicting the tags of each word**,
-> you will need to compute a **few dictionaries** that will
-> help you to **generate the tables**.
+> Before you start \\*predicting the tags of each word\\*,
+> you will need to compute a \\*few dictionaries\\* that will
+> help you to \\*generate the tables\\*.
 
 <br>
 
@@ -3451,15 +3469,15 @@
 <a id="node-ocbb3gd"></a>
 
 > [!NOTE]
-> **Instructions:** 
-> Write a program that takes in the **training_corpus** and returns the **three 
-> dictionaries** mentioned above **transition_counts**, **emission_counts**, and **tag_counts**.
->  • **emission_counts**: maps (tag, word) to the number of times it happened.
->  • **transition_counts**: maps (prev_tag, tag) to the number of times it has 
+> \\*Instructions:\\* 
+> Write a program that takes in the \\*training_corpus\\* and returns the \\*three 
+> dictionaries\\* mentioned above \\*transition_counts\\*, \\*emission_counts\\*, and \\*tag_counts\\*.
+>  • \\*emission_counts\\*: maps (tag, word) to the number of times it happened.
+>  • \\*transition_counts\\*: maps (prev_tag, tag) to the number of times it has 
 > appeared.
->  • **tag_counts**: maps (tag) to the number of times it has occurred.
+>  • \\*tag_counts\\*: maps (tag) to the number of times it has occurred.
 >
-> Implementation note: This routine utilizes \\/**defaultdict**\\/, which is a **subclass of \\/dict**\\/.
+> Implementation note: This routine utilizes \\/\\*defaultdict\\*\\/, which is a \\*subclass of \\/dict\\*\\/.
 >  • A standard Python dictionary throws a \\/KeyError\\/ if you try to access an item 
 > with a key that is not currently in the dictionary.
 >  • In contrast, the \\/defaultdict\\/ will create an item of the type of the argument, in 
@@ -3494,12 +3512,12 @@
 <a id="node-hzenkds"></a>
 
 > [!NOTE]
-> The '**states**' are the Parts-of-speech designations found in the training data. They will also 
-> be referred to as '**tags**' or **POS** in this assignment.
->  • "**NN**" is **noun**, **singular**,
->  • '**NNS**' is **noun**, **plural**.
->  • In addition, there are helpful tags like '**--s--**' which indicate a **start of a 
-> sentence**.
+> The '\\*states\\*' are the Parts-of-speech designations found in the training data. They will also 
+> be referred to as '\\*tags\\*' or \\*POS\\* in this assignment.
+>  • "\\*NN\\*" is \\*noun\\*, \\*singular\\*,
+>  • '\\*NNS\\*' is \\*noun\\*, \\*plural\\*.
+>  • In addition, there are helpful tags like '\\*--s--\\*' which indicate a \\*start of a 
+> sentence\\*.
 >  • You can get a more complete description at \\_clips/MBSP\\_.
 
 <br>
@@ -3517,12 +3535,12 @@
 
 > [!NOTE]
 > print("transition examples: ")
-> for ex in **list**(**transition_counts.items()**)[**:3**]:
+> for ex in \\*list\\*(\\*transition_counts.items()\\*)[\\*:3\\*]:
 >     print(ex)
 > print()
 >
 > print("emission examples: ")
-> for ex in **list**(**emission_counts.items()**)[**200:203**]:
+> for ex in \\*list\\*(\\*emission_counts.items()\\*)[\\*200:203\\*]:
 >     print (ex)
 > print()
 >
@@ -3547,12 +3565,12 @@
 <a id="node-v7t3kc7"></a>
 
 > [!NOTE]
-> Now you will **test** the **accuracy of your parts-of-speech tagger** using 
-> your **emission_counts** dictionary.
->  • Given your **preprocessed test corpus prep**, you will assign a **parts-of-speech** 
-> **tag** to every word in that corpus.
->  • Using the **original tagged test corpus y,** you will then **compute what percent of 
-> the tags you got correct**.
+> Now you will \\*test\\* the \\*accuracy of your parts-of-speech tagger\\* using 
+> your \\*emission_counts\\* dictionary.
+>  • Given your \\*preprocessed test corpus prep\\*, you will assign a \\*parts-of-speech\\* 
+> \\*tag\\* to every word in that corpus.
+>  • Using the \\*original tagged test corpus y,\\* you will then \\*compute what percent of 
+> the tags you got correct\\*.
 >
 > Đại khái là ta sẽ gán POS tag cho từ trong preprocessed
 > test corpus prep, và dùng pos thực sự (original tagged test
@@ -3576,17 +3594,17 @@
 <a id="node-biqkn6l"></a>
 
 > [!NOTE]
-> **Exercise 2 - predict_pos
+> \\*Exercise 2 - predict_pos
 >
-> Instructions:** Implement **predict_pos** that computes the accuracy of your model.
->  • This is a **warm up exercise.**
->  • To assign a part of speech to a word, assign the **most frequent POS** for **that 
-> word** in the **training set.**
->  • Then **evaluate how well this approach works**. Each time you predict based on 
+> Instructions:\\* Implement \\*predict_pos\\* that computes the accuracy of your model.
+>  • This is a \\*warm up exercise.\\*
+>  • To assign a part of speech to a word, assign the \\*most frequent POS\\* for\\* that 
+> word\\* in the \\*training set.\\*
+>  • Then\\* evaluate how well this approach works\\*. Each time you predict based on 
 > the most frequent POS for the given word, check whether the actual POS of that word is 
 > the same. If so, the prediction was correct!
->  • Calculate the accuracy as the **number of correct predictions** divided by the 
-> **total number of words** for which you predicted the POS tag.
+>  • Calculate the accuracy as the\\* number of correct predictions\\* divided by the 
+> \\*total number of words\\* for which you predicted the POS tag.
 >
 > Đại khái là sơ khởi, ta sẽ gán POS cho từ một ví dụ 'back' một cách ngây thơ là cứ dùng POS nào mà
 > **POS-'back'** có **giá trị cao nhất trong Emission count dict**. Có nghĩa ta coi trong training, **loại từ
@@ -3634,24 +3652,24 @@
 <a id="node-oeijrtj"></a>
 
 > [!NOTE]
-> Now you will build something more **context specific**. Concretely, you will be implementing 
-> a **Hidden Markov Model (HMM)** with a **Viterbi decoder**
->  • The HMM is one of the **most commonly used algorithms** in **Natural Language 
-> Processing**, and is a **foundation** **to many deep learning techniques** you will see in this 
+> Now you will build something more \\*context specific\\*. Concretely, you will be implementing 
+> a \\*Hidden Markov Model (HMM)\\* with a \\*Viterbi decoder\\*
+>  • The HMM is one of the \\*most commonly used algorithms\\* in \\*Natural Language 
+> Processing\\*, and is a \\*foundation\\* \\*to many deep learning techniques\\* you will see in this 
 > specialization.
->  • In addition to **parts-of-speech tagging**, HMM is used in **speech recognition**, 
-> **speech synthesis**, etc.
->  • By completing this part of the assignment you will get a **95% accuracy** on the 
+>  • In addition to \\*parts-of-speech tagging\\*, HMM is used in \\*speech recognition\\*, 
+> \\*speech synthesis\\*, etc.
+>  • By completing this part of the assignment you will get a \\*95% accuracy\\* on the 
 > same dataset you used in Part 1.
 >
-> The Markov Model contains a **number of states** and the **probability of transition between 
-> those states**.
->  • **In this case**, the **states** are the **parts-of-speech.**
->  • A Markov Model utilizes a **transition matrix, A**.
->  • A Hidden Markov Model adds an **observation** or **emission matrix B** which 
-> describes the **probability of a visible observation when we are in a particular state.**
->  • In this case, the **emissions** are the **words in the corpus**
->  • The state, which is hidden, is the **POS tag** of that word.
+> The Markov Model contains a \\*number of states\\* and the \\*probability of transition between 
+> those states\\*.
+>  • \\*In this case\\*, the \\*states\\* are the \\*parts-of-speech.\\*
+>  • A Markov Model utilizes a \\*transition matrix, A\\*.
+>  • A Hidden Markov Model adds an \\*observation\\* or \\*emission matrix B\\* which 
+> describes the \\*probability of a visible observation when we are in a particular state.\\*
+>  • In this case, the \\*emissions\\* are the \\*words in the corpus\\*
+>  • The state, which is hidden, is the \\*POS tag\\* of that word.
 >
 > Đại khái là nói về Hidden Markov Model, rất quan trong, đặt nền
 > móng cho nhiều ứng dụng khác trong NLP nữa. Nhắc lại về
@@ -3670,15 +3688,16 @@
 <a id="node-2iko86e"></a>
 
 > [!NOTE]
-> **Creating the 'A' transition probabilities matrix** 
-> Now that you have your **emission_counts**, **transition_counts**, and **tag_counts**, you will 
-> start implementing the **Hidden Markov Model**.
+> \\*Creating the 'A' transition probabilities matrix
+> \\*
+> Now that you have your \\*emission_counts\\*, \\*transition_counts\\*, and \\*tag_counts\\*, you will 
+> start implementing the \\*Hidden Markov Model\\*.
 >
 > This will allow you to quickly construct the
->  • **A transition probabilities matrix**.
->  • and the **B emission probabilities matrix**.
+>  • \\*A transition probabilities matrix\\*.
+>  • and the \\*B emission probabilities matrix\\*.
 >
-> You will also use some **smoothing** when computing these matrices.
+> You will also use some \\*smoothing\\* when computing these matrices.
 >
 > Here is an example of what the A transition matrix would look like (it is simplified to 5 tags 
 > for viewing. It is 46x46 in this assignment.):
@@ -3708,8 +3727,8 @@
 > [!NOTE]
 > Instructions: Implement the
 > create_transition_matrix below for all tags. Your
-> task is to output a **matrix** that computes
-> **equation 3** for **each cell in matrix A.** 
+> task is to output a \\*matrix\\* that computes
+> \\*equation 3\\* for \\*each cell in matrix A. \\*
 
 <br>
 
@@ -3788,16 +3807,16 @@
 <a id="node-p0l3s0f"></a>
 
 > [!NOTE]
-> In this part of the assignment you will implement the **Viterbi algorithm** which makes use of 
-> dynamic programming. Specifically, you will use your two matrices, **A** and **B** to compute 
-> the **Viterbi algorithm**. We have decomposed this process into three main steps for you.
->  **• Initialization** - In this part you **initialize** 
-> the **best_paths** and **best_probabilities** **matrices** that you will be populating 
+> In this part of the assignment you will implement the \\*Viterbi algorithm\\* which makes use of 
+> dynamic programming. Specifically, you will use your two matrices, \\*A\\* and \\*B\\* to compute 
+> the \\*Viterbi algorithm\\*. We have decomposed this process into three main steps for you.
+> \\* • Initialization\\* - In this part you \\*initialize\\* 
+> the \\*best_paths\\* and \\*best_probabilities\\* \\*matrices\\* that you will be populating 
 > in feed_forward.
->  **• Feed forward** - At each step, you **calculate the probability of each path** 
-> happening and **the best paths up to that point.**
->  **• Feed backward**: This allows you to **find the best path** with the **highest 
-> probabilities.**
+> \\* • Feed forward\\* - At each step, you \\*calculate the probability of each path\\* 
+> happening and \\*the best paths up to that point.\\*
+> \\* • Feed backward\\*: This allows you to\\* find the best path\\* with the \\*highest 
+> probabilities.\\*
 
 <br>
 
@@ -3810,11 +3829,11 @@
 <a id="node-qyd4tcl"></a>
 
 > [!NOTE]
-> You will start by **initializing two matrices** of the same dimension.
->  • **best_probs**: Each cell contains the **probability of going from one POS tag to a 
-> word in the corpus**.
->  • **best_paths**: A matrix that helps you trace through the **best possible path in the 
-> corpus.**
+> You will start by \\*initializing two matrices\\* of the same dimension.
+>  • \\*best_probs\\*: Each cell contains the \\*probability of going from one POS tag to a 
+> word in the corpus\\*.
+>  • \\*best_paths\\*: A matrix that helps you trace through the \\*best possible path in the 
+> corpus.\\*
 
 <br>
 
