@@ -40,6 +40,8 @@
 > Tức là từ y = f(x) => d/dx (y = f(x)) <=> dy/dx = df(x)/dx <=> **dy/dx =
 > f'(x) hay dy = f'(x)dx là vậy**
 
+**🔗 See also:** [linked note](./lec_14_non_independent_random_variables.md#node-8r52v3n) · [linked note](./lec_20_path_independence_conservative_field.md#node-7hei77e)
+
 <br>
 
 <a id="node-twu2pj5"></a>
@@ -176,6 +178,8 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 > TOTAL DIFFERENTIAL: df = f_x*dx + f_y*dy + f_z*dz
 
+**🔗 See also:** [linked note](./lec_14_non_independent_random_variables.md#node-i4e81w1) · [linked note](./lec_18_change_of_variables.md#node-rqd8oib)
+
 <br>
 
 <a id="node-e6oek6s"></a>
@@ -269,6 +273,8 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 > 2/ Là vai trò củ**a place holder** như mới nói để khi **thay bằng các
 > delta thì ta sẽ có công thức xấp xỉ ∆f ~= f_x∆x + f_y∆y + f_z∆z**
+
+**🔗 See also:** [linked note](./lec_12_gradient_directional_derivative_tangent_plane.md#node-wbj3643)
 
 <br>
 
@@ -413,6 +419,8 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 > **df/dt ~= f_x*dx/dt + f_y*dy/dt + f_z*dz/dt**
+
+**🔗 See also:** [linked note](./lec_9_max_min_problems_least_squares.md#node-q20s5wi)
 
 <br>
 
@@ -647,6 +655,8 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 > Bởi vì ý nghĩa của total differential equation là nó giúp liên hệ giữa
 > khoảng hay đổi của f : df với các yếu tố đóng góp: dx, dy thông
 > qua partial derivative**
+
+**🔗 See also:** [linked note](./lec_14_non_independent_random_variables.md#node-8t4x78s)
 
 <br>
 
