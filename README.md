@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,040 notes` · `~17,443 screenshots` · `17 notebooks`**
+**`~12,043 notes` · `~17,446 screenshots` · `17 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -574,7 +574,7 @@ law Of Central Limit](stat110_havard/lec_29_law_of_large_numbers_law_of_central_
 multi-variate Gaussian](stat110_havard/lec_30_chi_square_student_t_multi_variate_gaussian.md) — `21n / 22i`
 - [Cheatsheet (nhờ Ai)](stat110_havard/cheatsheet_nh_ai.md) — `5n / 98i`
 
-### 📂 Statistical Inference - Casella (📝 826 Notes | 📸 1081 Screenshots)
+### 📂 Statistical Inference - Casella (📝 829 Notes | 📸 1084 Screenshots)
 <!-- key: statistical_inference_casella -->
 
 > This notebook compiles detailed notes on core concepts, key probability distributions, and essential methods for estimation and hypothesis testing in statistical inference, based on the Casella textbook.
@@ -650,6 +650,7 @@ interval Estimators](statistical_inference_casella/92_methods_of_finding_interva
 - [9.3 Methods Of Evaluating
 interval Estimators](statistical_inference_casella/93_methods_of_evaluating_interval_estimators.md) — `34n / 35i`
 - [10.1 Point Estimation](statistical_inference_casella/101_point_estimation.md) — `42n / 49i`
+- [10.2 Robustness](statistical_inference_casella/102_robustness.md) — `3n / 3i`
 
 ---
 
