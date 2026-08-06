@@ -88,6 +88,8 @@
 > <END> token vào đầu và cuối câu (caption). Cũng như là pad các câu ngắn với
 > <NULL> token để mình đã có các sequence dài bằng nhau cho việc  Batching.
 
+**🔗 See also:** [linked note](./assignment_4_transformer_image_captioning.md#node-qlza70c)
+
 <br>
 
 <a id="node-qfn133i"></a>
