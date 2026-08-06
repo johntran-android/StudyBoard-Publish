@@ -64,6 +64,8 @@ squares
 > Thế thì khi thay đổi cả x, y ta **xấp xỉ** khoảng thay đổi của f bằng **tổng
 > hai khoảng thay đổi** do y và do x
 
+**🔗 See also:** [linked note](./lec_11_differentials_chain_rule.md#node-w4i69mr)
+
 <br>
 
 <a id="node-8zbmwg3"></a>
