@@ -37,6 +37,8 @@
 > Thế thì, ta sẽ dùng công thức sin(a+b) = sin(a)cos(b) - cos(a)sin(b)
 > để triển khai sin(x+delta_x) ra.
 
+**🔗 See also:** [Difference Quotient Limit](./lec_1_rate_of_change.md#node-hmphcem)
+
 <br>
 
 <a id="node-e1fo8ye"></a>
