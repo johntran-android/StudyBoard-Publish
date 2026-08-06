@@ -443,6 +443,8 @@ lecture 18: Video
 > rộng  dần dần.**  Đây chính là lí do cách tiếp cận này được gọi là **Slow
 > Fusion**
 
+**🔗 See also:** [linked note](#node-7iw2v3h)
+
 <br>
 
 <a id="node-g44y0b1"></a>
@@ -1098,6 +1100,8 @@ lecture 18: Video
 >
 > và thường sẽ được conv 1x1x1 lần nữa để quay lại C-dimension. Trước khi add
 > với residual connection là xong. Cái này được gọi là Non-local Block
+
+**🔗 See also:** [linked note](#node-z8cqspc)
 
 <br>
 
