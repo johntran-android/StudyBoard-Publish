@@ -208,6 +208,8 @@
 >
 > Ghi chú đã tóm tắt thông tin từ văn bản rất chính xác và đầy đủ, bao gồm định nghĩa, đặc trưng, mục tiêu và lợi ích của pre-training. Việc giải thích các ví dụ và thêm chi tiết về objective function giúp tăng cường sự hiểu biết.
 
+**🔗 See also:** [Mô hình ngôn ngữ hoán vị Transformer](./tin_hun_luyn_t_gim_st.md#node-51loao8)
+
 <br>
 
 <a id="node-y5l90nt"></a>
