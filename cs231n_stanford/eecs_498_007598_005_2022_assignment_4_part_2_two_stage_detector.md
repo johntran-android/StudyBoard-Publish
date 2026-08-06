@@ -78,6 +78,8 @@ TWO-STAGE DETECTOR
 > matrix 3x5** nhưng **chỉ có 2 hoặc 1 hàng là có số thôi**, còn lại là **-1** (gọi là dc
 > **null padding**)
 
+**🔗 See also:** [linked note](./eecs_498_007598_005_2022_assignment_4_part_1_one_state_object_detector.md#node-grvd1a3)
+
 <br>
 
 <a id="node-gh6pdfv"></a>
@@ -130,6 +132,8 @@ TWO-STAGE DETECTOR
 > DetectorBackboneWithFPN** mà mình đã làm ở part 1. Pass cho nó một
 > dummy tensor để nó in ra mấy cái shape của các feature ở các level khác
 > nhau
+
+**🔗 See also:** [linked note](./eecs_498_007598_005_2022_assignment_4_part_1_one_state_object_detector.md#node-k94qtgo)
 
 <br>
 
@@ -365,6 +369,8 @@ TWO-STAGE DETECTOR
 >
 > RPNPredictionNetwork
 
+**🔗 See also:** [linked note](./eecs_498_007598_005_2022_assignment_4_part_1_one_state_object_detector.md#node-smqpfz5)
+
 <br>
 
 <a id="node-6c71gf8"></a>
@@ -597,6 +603,8 @@ TWO-STAGE DETECTOR
 > deltas như bên FCOS (là khoảng cách từ location tới các cạnh)
 >
 > generate_fpn_anchors
+
+**🔗 See also:** [linked note](./eecs_498_007_598_005_2020_assignment_4_part_1_single_stage_detector_yolo.md#node-w5xpa5l)
 
 <br>
 
@@ -861,6 +869,8 @@ TWO-STAGE DETECTOR
 > mà nó nằm trong cái function **ReferenceOnActivatedAnchor** - giúp match 
 > anchors với gt box mà họ làm giùm. /
 
+**🔗 See also:** [linked note](./eecs_498_007_598_005_2020_assignment_4_part_1_single_stage_detector_yolo.md#node-fksddyg) · [linked note](./eecs_498_007_598_005_2020_assignment_4_part_1_single_stage_detector_yolo.md#node-r1b3ll4)
+
 <br>
 
 <a id="node-bfd3yiv"></a>
@@ -951,6 +961,8 @@ TWO-STAGE DETECTOR
 >
 > rcnn_get_deltas_from_anchors
 
+**🔗 See also:** [linked note](./lecture_1116_detection_and_segmentation.md#node-61j8sxp)
+
 <br>
 
 <a id="node-oxs9qjx"></a>
@@ -1025,6 +1037,8 @@ TWO-STAGE DETECTOR
 > tạo negative anchor ind thì họ cũng random sampling một số lượng bằng
 > positive anchor/
 
+**🔗 See also:** [linked note](./eecs_498_007_598_005_2020_assignment_4_part_1_single_stage_detector_yolo.md#node-fksddyg)
+
 <br>
 
 <a id="node-6efpxni"></a>
@@ -1081,6 +1095,8 @@ TWO-STAGE DETECTOR
 > [backbone cnn - fpn] predict / propose ra các region có object.
 >
 > RPN
+
+**🔗 See also:** [linked note](./eecs_498_007_598_005_2020_assignment_4_part_2_two_stage_detector_faster_rcnn.md#node-kvvhqpr)
 
 <br>
 
