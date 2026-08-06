@@ -136,6 +136,8 @@ ONE-STATE OBJECT DETECTOR
 > matrix 3x5** nhưng **chỉ có 2 hoặc 1 hàng là có số thôi**, còn lại là **-1** (gọi là dc
 > **null padding**)
 
+**🔗 See also:** [linked note](./eecs_498_007598_005_2022_assignment_4_part_2_two_stage_detector.md#node-21f3vas)
+
 <br>
 
 <a id="node-ojnysia"></a>
@@ -342,6 +344,8 @@ ONE-STATE OBJECT DETECTOR
 >
 > 2*pad = k - 1 = 3-1 = 2 -> pad = 1
 
+**🔗 See also:** [linked note](./eecs_498_007_598_005_2020_assignment_4_part_1_single_stage_detector_yolo.md#node-8nftybj) · [linked note](./eecs_498_007598_005_2022_assignment_4_part_2_two_stage_detector.md#node-dwlx5i6)
+
 <br>
 
 <a id="node-h1z7nr8"></a>
@@ -470,6 +474,8 @@ ONE-STATE OBJECT DETECTOR
 >
 > + bốn con số thể hiện **box regression delta**, tạm hiểu là khoảng cách từ vị
 > trí đến 4 cạnh của bounding box.
+
+**🔗 See also:** [linked note](./eecs_498_007598_005_2022_assignment_4_part_2_two_stage_detector.md#node-zxnjulo)
 
 <br>
 
@@ -1144,6 +1150,8 @@ ONE-STATE OBJECT DETECTOR
 > xài background mask để set centerness cho trường hợp background
 > thành -1, chứ nếu theo công thức mà tính thì nó sẽ thành ra 1.
 
+**🔗 See also:** [linked note](#node-zj8esq2)
+
 <br>
 
 <a id="node-9b4gap7"></a>
@@ -1294,6 +1302,8 @@ ONE-STATE OBJECT DETECTOR
 > Với centerness-loss cũng tương tự, nhưng thay vì dụng F.l1_loss
 > thì ta sẽ dùng F.binary_cross_entropy_with_logits
 
+**🔗 See also:** [linked note](#node-jy9kana)
+
 <br>
 
 <a id="node-nc3qjfg"></a>
@@ -1422,6 +1432,8 @@ ONE-STATE OBJECT DETECTOR
 > Chú ý là cái **stride** cần có để input vào là dùng cái function **fpn_strides**() của
 > backbone module
 
+**🔗 See also:** [linked note](#node-jy9kana)
+
 <br>
 
 <a id="node-nyfbu71"></a>
@@ -1494,6 +1506,8 @@ ONE-STATE OBJECT DETECTOR
 > khúc đầu là dành cho inference (testing) ta
 > sẽ làm function inference sau
 
+**🔗 See also:** [linked note](#node-23k167m)
+
 <br>
 
 <a id="node-hozwc76"></a>
@@ -1532,6 +1546,8 @@ ONE-STATE OBJECT DETECTOR
 > ta iterate qua từng "cái" trong batch dimension, và pass vào fcos_get_deltas..
 > Mỗi cái cho ra một dict, vậy matched_gt_deltas là list (có số lượng bằng 
 > batch-size) cái dict, mỗi dict là kết quả của một sample.
+
+**🔗 See also:** [linked note](#node-jy9kana)
 
 <br>
 
@@ -1697,6 +1713,8 @@ ONE-STATE OBJECT DETECTOR
 > Lúc đầu dùng mask1 nhưng sửa lại dùng mask2 cho giống lúc người
 > ta làm mẫu
 
+**🔗 See also:** [linked note](#node-hozwc76) · [linked note](#node-a9ae729) · [linked note](#node-gihscgx)
+
 <br>
 
 <a id="node-zj8esq2"></a>
@@ -1742,6 +1760,8 @@ ONE-STATE OBJECT DETECTOR
 > gt_ctr: torch.Size([16, 1029, 1]),
 > pred_ctr_logits: torch.Size([16, 1029, 1]), 
 > loss_ctr: torch.Size([16, 1029, 1])
+
+**🔗 See also:** [linked note](#node-52yc2vw)
 
 <br>
 
@@ -1912,6 +1932,8 @@ ONE-STATE OBJECT DETECTOR
 > - pred_ctr_logits: 3 bộ các centerness logit, shape (N,1)
 >
 > "xét riêng" từng level, lấy các "bộ" (value) tương ứng ra.
+
+**🔗 See also:** [linked note](#node-nyfbu71)
 
 <br>
 
