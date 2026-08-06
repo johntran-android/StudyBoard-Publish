@@ -37,35 +37,35 @@
 > [!NOTE]
 > Main ideas from the provided text:
 >
-> 1. The Course Introduction: The text introduces the **4th and final course of a specialization** called "**Natural
-> Language Processing with Attention Models**." This course is **positioned as the cutting edge of practical NLP**
+> 1. The Course Introduction: The text introduces the\\* 4th and final course of a specialization \\*called "\\*Natural
+> Language Processing with Attention Models\\*." This course is \\*positioned as the cutting edge of practical NLP\\*
 > methods.
 >
-> 2. **Attention Mechanism**: The course **focuses on using a powerful technique** called "**attention**" to build different
-> models. The a**ttention mechanism** is employed to **create language translation models**, **text summarization**
-> algorithms, q**uestion-answering models**, and **chatbots**.
+> 2. \\*Attention Mechanism\\*: The course\\* focuses on using a powerful technique\\* called "\\*attention\\*" to build different
+> models. The a\\*ttention mechanism\\* is employed to \\*create language translation models\\*, \\*text summarization\\*
+> algorithms, q\\*uestion-answering models\\*, and \\*chatbots\\*.
 >
-> 3. **Skills Development**: Completing this course equips learners with the **ability to build state-of-the-art NLP**
-> **applications** similar to **those used in large companies in the industry**.
+> 3. \\*Skills Development\\*: Completing this course equips learners with the\\* ability to build state-of-the-art NLP\\*
+> \\*applications\\* similar to\\* those used in large companies in the industry\\*.
 >
 > 4. Instructors: The instructors for this course are Lukasz and Younes, who are excited about the topics covered
 > in the course.
 >
-> 5. Significance of **Sentiment Analysis**: Sentiment analysis is d**iscussed as a crucial problem**, and it is
-> **highlighted that determining the sentiment of a sentence** is relevant in many applications.
+> 5. Significance of \\*Sentiment Analysis\\*: Sentiment analysis is d\\*iscussed as a crucial problem\\*, and it is
+> \\*highlighted that determining the sentiment of a sentence \\*is relevant in many applications.
 >
-> 6. Building **Models from Scratch**: The course teaches learners how to **build NLP models from scratch**, which
-> represents the **active areas of research in the field**.
+> 6. Building \\*Models from Scratch\\*: The course teaches learners how to \\*build NLP models from scratch\\*, which
+> represents the \\*active areas of research in the field\\*.
 >
-> 7. **Pre-trained Models and Fine-Tuning**: The n**ew normal in modern deep learning** is to **use pre-trained models
-> and fine-tune them for specific use cases**. The course provides c**ustom pre-trained models** and guides learners
-> on how to **fine-tune them.**
+> 7. \\*Pre-trained Models and Fine-Tuning\\*: The n\\*ew normal in modern deep learning\\* is to \\*use pre-trained models
+> and fine-tune them for specific use cases\\*. The course provides c\\*ustom pre-trained models\\* and guides learners
+> on how to \\*fine-tune them.\\*
 >
-> 8. **Access to Powerful TPU Clusters**: The course provides **access to powerful TPU clusters**, which are **currently
-> only available to researchers at Google**.
+> 8. \\*Access to Powerful TPU Clusters\\*: The course provides \\*access to powerful TPU clusters\\*, which are \\*currently
+> only available to researchers at Google\\*.
 >
-> 9. **Industry Standard** **Workflow**: Learners will practice the **workflow used in the industry to fine-tune
-> state-of-the-art pre-trained models.**
+> 9.\\* Industry Standard\\* \\*Workflow\\*: Learners will practice the \\*workflow used in the industry to fine-tune
+> state-of-the-art pre-trained models.\\*
 >
 > 10. Introduction to Course Materials: The instructors briefly mention that the course will cover important
 > materials related to NLP and encourage students to get started.
@@ -89,38 +89,38 @@
 <a id="node-c7pmc60"></a>
 
 > [!NOTE]
-> 1. Introduction to **Neural Machine Translation (NMT)**: The text introduces **neural machine translation**,
-> which involves **using an encoder and a decoder to translate text from one language to another**.
+> 1. Introduction to\\* Neural Machine Translation (NMT)\\*: The text introduces \\*neural machine translation\\*,
+> which involves \\*using an encoder and a decoder to translate text from one language to another\\*.
 >
-> 2. **Seq2seq** Model: The **traditional seq2seq model**, introduced by **Google in 2014**, uses **LSTMs for
-> encoding and decoding**. It maps **variable-length sequences** to **fixed-length memory**, making it powerful
-> for machine translation. The encoder takes **word tokens** as input and **returns its final hidden state** as
+> 2. \\*Seq2seq\\* Model: The \\*traditional seq2seq model\\*, introduced by \\*Google in 2014\\*, uses \\*LSTMs for
+> encoding and decoding\\*. It maps \\*variable-length sequences\\* to \\*fixed-length memory\\*, making it powerful
+> for machine translation. The encoder takes \\*word tokens\\* as input and \\*returns its final hidden state\\* as
 > output.
 >
-> 3. **Encoder** and **Decoder Architecture**: The encoder consists of an **embedding layer** and an **LSTM
-> module** with **one or more layers**. The LSTM **receives inputs from the embedding layer** and **previous
-> hidden states**, \\_**returning the final hidden state**\\_ that\\_ **encodes the overall meaning of the sentence**\\_. The
-> **decoder is constructed similarly** with an embedding layer and an LSTM layer.
+> 3. \\*Encoder\\* and \\*Decoder Architecture\\*: The encoder consists of an \\*embedding layer\\* and an \\*LSTM
+> module\\* with \\*one or more layers\\*. The LSTM \\*receives inputs from the embedding layer\\* and \\*previous
+> hidden states\\*, \\_\\*returning the final hidden state\\*\\_ that\\_\\* encodes the overall meaning of the sentence\\*\\_. The
+> \\*decoder is constructed similarly\\* with an embedding layer and an LSTM layer.
 >
-> 4. **Limitation of Seq2seq Model:** The traditional seq2seq model\\_ **suffers from an information bottleneck**\\_,
-> **particularly with long input sequences**.\\_ **Fixed-length memory**\\_ **restricts the model's ability to compress
-> longer sequences**, leading to \\_**lower performance as sequence size increases.**\\_
+> 4. \\*Limitation of Seq2seq Model:\\* The traditional seq2seq model\\_\\* suffers from an information bottleneck\\*\\_,
+> \\*particularly with long input sequences\\*.\\_\\* Fixed-length memory\\*\\_ \\*restricts the model's ability to compress
+> longer sequences\\*, leading to \\_\\*lower performance as sequence size increases.\\*\\_
 >
-> 5. Introducing **Attention Mechanism**: To overcome the limitations of seq2seq, **attention** is introduced as a
-> new layer. \\_**Attention allows the model to focus on the most important words at each time step**\\_ during
-> **decoding**.
+> 5. Introducing \\*Attention Mechanism\\*: To overcome the limitations of seq2seq, \\*attention\\* is introduced as a
+> new layer. \\_\\*Attention allows the model to focus on the most important words at each time step\\*\\_ during
+> \\*decoding\\*.
 >
-> 6. **Benefits of Attention**: Attention **provides a way to \\_process information specific to each input word**,\\_
-> enabling the model to \\_**focus its attention in the right place during the decoding process**\\_. This results in
-> **improved accuracy and efficiency** for predicting from long sequences.
+> 6.\\* Benefits of Attention\\*: Attention\\* provides a way to \\_process information specific to each input word\\*,\\_
+> enabling the model to \\_\\*focus its attention in the right place during the decoding process\\*\\_. This results in
+> \\*improved accuracy and efficiency\\* for predicting from long sequences.
 >
-> 7. **Conceptual Understanding**: The text emphasizes that **attention is a crucial advancement in NMT,**
-> allowing the model to\\_ **pay attention to relevant parts of the input sequence**\\_ while translating to improve
+> 7. \\*Conceptual Understanding\\*: The text emphasizes that \\*attention is a crucial advancement in NMT,\\*
+> allowing the model to\\_\\* pay attention to relevant parts of the input sequence\\*\\_ while translating to improve
 > the overall translation quality.
 >
-> 8. Summary: The text concludes that the reader now has an overview of **neural machine translation** and
-> a **conceptual understanding of the attention mechanism**, which enables the model to **focus on important
-> words during translatio**n.
+> 8. Summary: The text concludes that the reader now has an overview of \\*neural machine translation \\*and
+> a \\*conceptual understanding of the attention mechanism\\*, which enables the model to \\*focus on important
+> words during translatio\\*n.
 
 <br>
 
@@ -305,27 +305,27 @@
 <a id="node-p4cq56u"></a>
 
 > [!NOTE]
-> 1. **Attention** is a **crucial concept** in machine learning that **allows models to focus on specific
-> inputs** when making predictions.
+> 1. \\*Attention\\* is a \\*crucial concept \\*in machine learning that\\* allows models to focus on specific
+> inputs\\* when making predictions.
 >
-> 2. Attention was originally introduced in a **landmark** paper by **Dzmitry Bahdanau, KyungHyun
-> Cho, and Yoshua Bengio** to improve machine translation models.
+> 2. Attention was originally introduced in a \\*landmark\\* paper by \\*Dzmitry Bahdanau, KyungHyun
+> Cho, and Yoshua Bengio\\* to improve machine translation models.
 >
-> 3. Traditional "**Seq2Seq**" models **use the final hidden state of the encoder** for the decoder,
-> which can **lead to inefficiencies in handling longer sentences**.
+> 3. Traditional "\\*Seq2Seq\\*" models \\*use the final hidden state of the encoder\\* for the decoder,
+> which can \\*lead to inefficiencies in handling longer sentences\\*.
 >
-> 4. **Attention** solves this problem by **allowing the decoder to consider all the hidden states of the
-> encoder** but **with weighted importance on each state**.
+> 4. \\*Attention\\* solves this problem by \\*allowing the decoder to consider all the hidden states of the
+> encoder\\* but \\*with weighted importance on each state\\*.
 >
-> 5. The attention layer calculates **alignments** between the **decoder and encoder hidden states**,
-> **producing weights** that **represent the importance of each input word for the prediction.**
+> 5. The attention layer calculates \\*alignments\\* between the \\*decoder and encoder hidden states\\*,
+> \\*producing weights\\* that\\* represent the importance of each input word for the prediction.\\*
 >
-> 6. The **context vector,** obtained by s**umming the encoder states weighted** by their **respective
-> importance scores**, **holds relevant information for the decoder's next prediction**.
+> 6. The \\*context vector,\\* obtained by s\\*umming the encoder states weighted\\* by their \\*respective
+> importance scores\\*, \\*holds relevant information for the decoder's next prediction\\*.
 >
-> 7. **Models with attention**, such as the **RNN search model**s, **outperform traditional "Seq2Seq"
-> models across all sentence lengths** by focusing on **specific inputs rather than memorizing the
-> entire input sentence.**
+> 7. \\*Models with attention\\*, such as the \\*RNN search model\\*s, \\*outperform traditional "Seq2Seq"
+> models across all sentence lengths\\* by focusing on \\*specific inputs rather than memorizing the
+> entire input sentence.\\*
 >
 > 8. Attention has applications beyond machine translation and is successfully used in various
 > domains.
@@ -457,6 +457,8 @@
 > trọng số cao cho một số từ nào đó ảnh hưởng nhiều\_ và \_giảm bớt trọng số đối với các từ
 > khác**\_
 
+**🔗 See also:** [linked note](#node-vi039nl)
+
 <br>
 
 <a id="node-dqsm6t8"></a>
@@ -553,18 +555,18 @@
 > These models generate a sequence of hidden states \\/h\\/<\\/t>\\/, as a function of the previous 
 > hidden state h<t-1> and the input for position t. 
 >
-> The **sequential nature** of models you learned in the previous course (RNNs, LSTMs, 
-> GRUs) **does not allow for parallelization** within training examples, which becomes critical 
+> The \\*sequential nature\\* of models you learned in the previous course (RNNs, LSTMs, 
+> GRUs) \\*does not allow for parallelization\\* within training examples, which becomes critical 
 > at longer sequence lengths, as memory constraints limit batching across examples. In 
 > other words, if you rely on sequences and you need to know the beginning of a text 
-> before being able to compute something about the ending of it, then you **can not use 
-> parallel computing**. You would have to **wait until the initial computations are complete**. 
-> This is not good, because **if your text is too long**, then 1) it will **take a long time** for you to 
-> process it and 2) you will **lose a good amount of information mentioned earlier** in the text 
+> before being able to compute something about the ending of it, then you \\*can not use 
+> parallel computing\\*. You would have to \\*wait until the initial computations are complete\\*. 
+> This is not good, because \\*if your text is too long\\*, then 1) it will \\*take a long time\\* for you to 
+> process it and 2) you will \\*lose a good amount of information mentioned earlier \\*in the text 
 > as you approach the end.  
 >
-> Therefore, **attention mechanisms** have become **critical**  for sequence modeling in various 
-> tasks, **allowing modeling of dependencies without caring too much about their distance** in 
+> Therefore, \\*attention mechanisms\\* have become \\*critical\\*  for sequence modeling in various 
+> tasks, \\*allowing modeling of dependencies without caring too much about their distance\\* in 
 > the input or output sequences. 
 >
 > In this course, you will learn about these attention mechanisms and see how they are 
@@ -586,48 +588,48 @@
 
 > [!NOTE]
 > 1. **Introduction and Attention Concepts:**
->    - **Attention** involves the use of **queries**, **keys**, and **values**.
->    - The **original attention paper** was published in 2014, leading to **various attention 
-> variations.**
->    - Some models **don't rely on recurrent neural networks**.
+>    - \\*Attention\\* involves the use of \\*queries\\*, \\*keys\\*, and \\*values\\*.
+>    - The \\*original attention paper\\* was published in 2014, leading to \\*various attention 
+> variations.\\*
+>    - Some models \\*don't rely on recurrent neural networks\\*.
 >
 > 2. **Transformer Model and Attention Mechanism:**
->    - The 2017 paper "**Attention Is All You Need**" introduced the **transformer** model and 
-> **attention**.
->    - Attention is based on **information retrieval with queries, keys, and values.**
+>    - The 2017 paper "\\*Attention Is All You Need\\*" introduced the \\*transformer\\* model and 
+> \\*attention\\*.
+>    - Attention is based on \\*information retrieval with queries, keys, and values.\\*
 >    - This form of attention is efficient and powerful.
->    - **Alignment between languages** is a key concept.
+>    - \\*Alignment between languages\\* is a key concept.
 >
-> 3. ****Queries, Keys, and Values** Concept:**
->    - **Queries are matched with keys** to **retrieve associated values**.
->    - Keys and values can be thought of as **lookup tables**.
->    - **Embedding vectors** represent queries, keys, and values.
->    - **Similarity between words is alignment**.
+> 3. **\\*Queries, Keys, and Values\\* Concept:**
+>    - \\*Queries are matched with keys\\* to \\*retrieve associated values\\*.
+>    - Keys and values can be thought of as \\*lookup tables\\*.
+>    - \\*Embedding vectors\\* represent queries, keys, and values.
+>    - \\*Similarity between words is alignment\\*.
 >
 > 4. **Alignment and Attention Vector:**
->    - **Alignment scores** are calculated using **query** and **key** vectors.
->    - Alignment scores become **weights** for **weighted sum of value vectors**.
+>    - \\*Alignment scores\\* are calculated using \\*query\\* and \\*key\\* vectors.
+>    - Alignment scores become \\*weights\\* for \\*weighted sum of value vectors\\*.
 >    - Attention vector is the result of this process.
 >
-> 5. ****Scale Dot-Product Attention**:**
->    - **Scale dot-product** attention involves matrices **Q, K, and V**.
->    - **Queries and keys are multiplied**, then **scaled**.
->    - **Alignment scores** become **weights** using **softmax**.
->    - **Weights** and **value matrices** are multiplied to **get attention vectors**.
->    - **Only two matrix** **multiplications** in **scale dot-product attention**.
->    - **Alignment is learned elsewhere**, often in **input embeddings** or linear layers.
+> 5. **\\*Scale Dot-Product Attention\\*:**
+>    - \\*Scale dot-product\\* attention involves matrices\\* Q, K, and V\\*.
+>    - \\*Queries and keys are multiplied\\*, then \\*scaled\\*.
+>    - \\*Alignment scores\\* become \\*weights\\* using \\*softmax\\*.
+>    - \\*Weights\\* and \\*value matrices\\* are multiplied to \\*get attention vectors\\*.
+>    - \\*Only two matrix\\* \\*multiplications\\* in \\*scale dot-product attention\\*.
+>    - \\*Alignment is learned elsewhere\\*, often in \\*input embeddings\\* or linear layers.
 >
-> 6. ****Alignment** and **Translation**:**
->    - **Alignment weight**s form a matrix indicating **similarities between word pairs**.
->    - \\_**Model learns word similarities**\\_ and \\_**encodes them in query and key vectors**\\_.
->    - Beneficial for translating **languages with different structures.**
->    - **Attention** handles **word order variations.**
+> 6. **\\*Alignment\\* and \\*Translation\\*:**
+>    - \\*Alignment weight\\*s form a matrix indicating\\* similarities between word pairs\\*.
+>    - \\_\\*Model learns word similarities\\*\\_ and \\_\\*encodes them in query and key vectors\\*\\_.
+>    - Beneficial for translating \\*languages with different structures.\\*
+>    - \\*Attention\\* handles \\*word order variations.\\*
 >
 > 7. **Summary and Future Topics:**
->    - Attention layer's purpose and relation to **information retrieval.**
->    - **Effective performance** even with **different language structures**.
->    - Introduction to q**ueries, keys, and value**s for research paper understanding.
->    - Upcoming topic: setup for **neural machine translation** and **data** **preprocessing**.
+>    - Attention layer's purpose and relation to \\*information retrieval.\\*
+>    - \\*Effective performance \\*even with \\*different language structures\\*.
+>    - Introduction to q\\*ueries, keys, and value\\*s for research paper understanding.
+>    - Upcoming topic: setup for \\*neural machine translation\\* and \\*data\\* \\*preprocessing\\*.
 
 <br>
 
@@ -740,6 +742,8 @@
 > ba cổng Query, Key và Value sau **Embedding layers trước khi qua Attention layers. Và ta
 > biết nó thực chất là 3 Linear layer với weight matrix W_Q, W_K, W_V**
 
+**🔗 See also:** [linked note](#node-qxp7834)
+
 <br>
 
 <a id="node-2vb4j69"></a>
@@ -818,11 +822,11 @@
 
 > [!NOTE]
 > As you've learned, attention allows a seq2seq decoder to \\_use
-> information from\\_ **e\\_ach encoder step** instead of **just the final encoder
-> hidden state**\\_. In the attention operation, the \\_**encoder outputs are
-> weighted based on the decoder hidden state**\\_, then c**ombined into
-> one context vector**. This vector is then **used as input to the decoder
-> to predict the next output step**.
+> information from\\_ \\*e\\_ach encoder step\\* instead of\\* just the final encoder
+> hidden state\\*\\_. In the attention operation, the \\_\\*encoder outputs are
+> weighted based on the decoder hidden state\\*\\_, then c\\*ombined into
+> one context vector\\*. This vector is then \\*used as input to the decoder
+> to predict the next output step\\*.
 >
 > In this ungraded lab, you'll implement a basic attention operation as
 > described in Bhadanau, et al (2014) using Numpy. I'll describe each
@@ -1027,35 +1031,35 @@
 
 > [!NOTE]
 > 1. **Introduction to Neural Machine Translation (NMT)**:
->    - **Explanation of how words are represented** in the **neural machine translation setting**.
->    - Introduction to the **data set used for NMT**.
+>    - \\*Explanation of how words are represented\\* in the \\*neural machine translation setting\\*.
+>    - Introduction to the \\*data set used for NMT\\*.
 >
 > 2. **Data Set and Examples**:
 >    - Description of the structure of the input data set.
->    - **Example of input sequences in English** and **their corresponding French translations**.
->    - **Mention of occasional inputs in Spanish** within the data set.
+>    - \\*Example of input sequences in English\\* and\\* their corresponding French translations\\*.
+>    - \\*Mention of occasional inputs in Spanish\\* within the data set.
 >
 > 3. **Word Representation and Mapping**:
->    - Mention of **state-of-the-art models** using **pre-trained vectors for word representation**.
->    - Explanation of using **one-hot vectors** to **represent words**.
->    - Introduction of **word-to-index (word2ind)** and **index-to-word (ind2word)** **dictionaries** for 
+>    - Mention of \\*state-of-the-art models\\* using \\*pre-trained vectors for word representation\\*.
+>    - Explanation of using \\*one-hot vectors\\* to \\*represent words\\*.
+>    - Introduction of \\*word-to-index (word2ind)\\* and\\* index-to-word (ind2word)\\* \\*dictionaries\\* for 
 > mapping.
->    - Transformation of **input words into indices** and vice versa for predictions.
+>    - Transformation of \\*input words into indices\\* and vice versa for predictions.
 >
-> 4. **Special **Tokens** and **Padding****:
->    - Usage of an **end-of-sequence token** to mark the **end of sentences.**
->    - **Padding token vectors** with **zeros** to match the **length of the longest sequence**.
+> 4. **Special \\*Tokens\\* and \\*Padding\\***:
+>    - Usage of an \\*end-of-sequence token\\* to mark the\\* end of sentences.\\*
+>    - \\*Padding token vectors\\* with \\*zeros\\* to match the \\*length of the longest sequence\\*.
 >
 > 5. **Example from Assignments**:
 >    - Demonstration of tokenization and indexing for an English sentence.
->    - Showing the **EOS token** and **padding for the English tokenized version**.
->    - **Displaying the French translation** and **its tokenized version with EOS token and 
-> padding.**
+>    - Showing the \\*EOS token\\* and \\*padding for the English tokenized version\\*.
+>    - \\*Displaying the French translation\\* and\\* its tokenized version with EOS token and 
+> padding.\\*
 >
 > 6. **Preparing for Model Training**:
->    - Recap of **understanding word representation**, **model initialization**, and **dataset 
-> structure**.
->    - **Encouragement to start training the NMT model based on the knowledge gained.**
+>    - Recap of \\*understanding word representation\\*, \\*model initialization\\*, and \\*dataset 
+> structure\\*.
+>    - \\*Encouragement to start training the NMT model based on the knowledge gained.\\*
 >    - Mention of the upcoming video tutorial for training the model.
 
 <br>
@@ -1122,17 +1126,17 @@
 
 > [!NOTE]
 > The 2017 paper \\_Attention Is All You Need  (\\_\\/https://arxiv.org/abs/1706.03762\\/)  introduced
-> the **Transformer model** and **scaled  dot-product attention**, sometimes also called
-> **QKV** (**Q**ueries, **K**eys, **V**alues) attention.  Since then, Transformers have come to
-> dominate **large-scale natural language**  applications. Scaled dot-product attention can be
-> used to improve **seq2seq** models as  well. In this ungraded lab, you'll implement a
-> **simplified version of scaled dot-product  attention** and replicate word alignment between
+> the \\*Transformer model\\* and \\*scaled  dot-product attention\\*, sometimes also called
+> \\*QKV\\* (\\*Q\\*ueries, \\*K\\*eys, \\*V\\*alues) attention.  Since then, Transformers have come to
+> dominate \\*large-scale natural language\\*  applications. Scaled dot-product attention can be
+> used to improve \\*seq2seq\\* models as  well. In this ungraded lab, you'll implement a
+> \\*simplified version of scaled dot-product  attention\\* and replicate word alignment between
 > English and French, as shown  in \\_Bhadanau, et al. (2014)\\_. (\\/https://arxiv.org/abs/1409.0473)\\/
 >
-> The Transformer model **learns how to align words in different languages**. You won't be
-> training any weights here, so instead I've prepared some \\_p**re-trained aligned word
-> embeddings from here**\\_. https://fasttext.cc/docs/en/aligned-vectors.html 
-> Run the cell below to l**oad the embeddings** and set up the rest of
+> The Transformer model \\*learns how to align words in different languages\\*. You won't be
+> training any weights here, so instead I've prepared some \\_p\\*re-trained aligned word
+> embeddings from here\\*\\_. https://fasttext.cc/docs/en/aligned-vectors.html 
+> Run the cell below to l\\*oad the embeddings\\* and set up the rest of
 > the notebook.
 >
 > Trong lab này ta sẽ thực hành build một phiên bản đơn giản
@@ -1243,11 +1247,11 @@
 <a id="node-pe7gxa6"></a>
 
 > [!NOTE]
-> **Implement the softmax** function with Numpy and use it to
-> **calculate the weights** from the **queries and keys**. Assume the
-> queries and keys are **2D arrays** (matrices). Note that since the
-> **dot-product of Q and K** will be a matrix, you'll need to take care to
-> calculate **softmax** over a **specific axi**s. See the end of the
+> \\*Implement the softmax\\* function with Numpy and use it to
+> \\*calculate the weights\\* from the \\*queries and keys\\*. Assume the
+> queries and keys are\\* 2D arrays \\*(matrices). Note that since the
+> \\*dot-product of Q and K\\* will be a matrix, you'll need to take care to
+> calculate \\*softmax\\* over a \\*specific axi\\*s. See the end of the
 > notebook for solutions.
 
 <br>
@@ -1350,31 +1354,31 @@
 > [!NOTE]
 > 1. Introduction to training a neural machine translation (NMT) system.
 >
-> 2. Concepts like **"teacher forcing"** in **NMT** **training** and **its advantages**.
+> 2. Concepts like \\*"teacher forcing"\\* in \\*NMT\\* \\*training\\* and \\*its advantages\\*.
 >
-> 3. **Training an NMT model** with **attention**, specifically **focusing on teacher
-> forcing.**
+> 3. \\*Training an NMT model\\* with \\*attention\\*, specifically\\* focusing on teacher
+> forcing.\\*
 >
-> 4. **Sequence-to-sequence** models generate **translations by using decoder
-> outputs as next  inputs.**
+> 4. \\*Sequence-to-sequence\\* models generate \\*translations by using decoder
+> outputs as next  inputs.\\*
 >
-> 5. In training, **comparing decoder output to target sequence to calculate loss
-> (cross entropy).**
+> 5. In training, \\*comparing decoder output to target sequence to calculate loss
+> (cross entropy).\\*
 >
-> 6. **Limitation**: **Early-stage naive model makes wrong predictions**, **leading to
-> compounding errors**.
+> 6. \\*Limitation\\*: \\*Early-stage naive model makes wrong predictions\\*, \\*leading to
+> compounding errors\\*.
 >
-> 7. **Solution**: **Use ground truth words as decoder inputs to mitigate early errors**.
+> 7. \\*Solution\\*: \\*Use ground truth words as decoder inputs to mitigate early errors\\*.
 >
-> 8. **Teacher forcing** method: Using **correct predictions as inputs**, **regardless of
-> model errors.**
+> 8. \\*Teacher forcing\\* method: Using \\*correct predictions as inputs\\*, \\*regardless of
+> model errors.\\*
 >
-> 9. Teacher forcing makes **training faster and more efficient**.
+> 9. Teacher forcing makes\\* training faster and more efficient\\*.
 >
-> 10. Variations like **curriculum learning**: **Gradually transitioning from ground
-> truth to model outputs.**
+> 10. Variations like \\*curriculum learning\\*: \\*Gradually transitioning from ground
+> truth to model outputs.\\*
 >
-> 11. Teacher forcing is a technique to **improve NMT training accuracy.**
+> 11. Teacher forcing is a technique to\\* improve NMT training accuracy.\\*
 >
 > 12. Importance of adding teacher forcing to the toolbox for better model
 > training and accuracy
@@ -1498,28 +1502,29 @@
 <a id="node-5xto36y"></a>
 
 > [!NOTE]
-> 1. Training a **neural machine translation** system **from scratch.** 
-> 2. Overview of the **model architecture** for this week's assignments.
+> 1. Training a \\*neural machine translation\\* system\\* from scratch.
+> \\*
+> 2. Overview of the \\*model architecture\\* for this week's assignments.
 >
-> 3. Components of the model: **Encoder, Pre-Attention Decoder, Attention
->  Mechanism, Post-Attention Decoder**. 
+> 3. Components of the model: \\*Encoder, Pre-Attention Decoder, Attention
+>  Mechanism, Post-Attention Decoder\\*. 
 >
-> 4. **Encoder** transforms **input tokens** into **key** and **value** vectors.
+> 4. \\*Encoder\\* transforms \\*input tokens\\* into \\*key\\* and \\*value\\* vectors.
 >
-> 5. **Pre-Attention Decoder** handles **target tokens** and implements **teacher
->  forcing**.
+> 5. \\*Pre-Attention Decoder\\* handles \\*target tokens\\* and implements \\*teacher
+>  forcing\\*.
 >
-> 6. **Input and target tokens** go through an **Embedding** layer and **LSTMs**.
+> 6. \\*Input and target tokens\\* go through an \\*Embedding\\* layer and \\*LSTMs\\*.
 >
-> 7. **Attention layer** uses **query, key, value** vectors and a **padding mask.**
+> 7. \\*Attention layer\\* uses \\*query, key, value\\* vectors and a \\*padding mask.\\*
 >
-> 8. **Context vector** and **mask** are output from the attention layer.
+> 8. \\*Context vector \\*and \\*mask\\* are output from the attention layer.
 >
-> 9. **Decoder processes context vectors through LSTM, dense layer, and LogSoftmax**.
+> 9. \\*Decoder processes context vectors through LSTM, dense layer, and LogSoftmax\\*.
 >
-> 10. Model returns **log probabilities** and c**opy of target tokens.**
+> 10. Model returns\\* log probabilities\\* and c\\*opy of target tokens.\\*
 >
-> 11. Computation in encoder and pre-attention decoder can be **parallelized**.
+> 11. Computation in encoder and pre-attention decoder can be \\*parallelized\\*.
 >
 > 12. Overview of the entire process and how components interact.
 >
@@ -1644,44 +1649,44 @@
 <a id="node-f7k3aa9"></a>
 
 > [!NOTE]
-> 1. **Importance of **Model Assessmen**t**: After **building and training a machine translation model**, it's
-> crucial to **assess its performance** using **appropriate metrics**.
+> 1. **Importance of \\*Model Assessmen\\*t**: After\\* building and training a machine translation model\\*, it's
+> crucial to \\*assess its performance \\*using \\*appropriate metrics\\*.
 >
-> 2. **BLEU Score and Its Purpose**: The **BLEU Score** (**Bilingual Evaluation Understudy**) is a metric
-> **specifically designed for evaluating machine translation models**. It addresses challenging issues in
-> NLP, such as **machine translation quality**.
+> 2. **BLEU Score and Its Purpose**: The \\*BLEU Score\\* (\\*Bilingual Evaluation Understudy\\*) is a metric
+> \\*specifically designed for evaluating machine translation models\\*. It addresses challenging issues in
+> NLP, such as \\*machine translation quality\\*.
 >
-> 3. **BLEU Score Calculation**: The BLEU Score **compares a candidate translation to one or more
-> reference translations**. It **quantifies the quality of the candidate** by measuring the **precision of its
-> n-grams** (e.g., unigrams) that **match those in the references**.
+> 3. **BLEU Score Calculation**: The BLEU Score \\*compares a candidate translation to one or more
+> reference translations\\*. It \\*quantifies the quality of the candidate\\* by measuring the \\*precision of its
+> n-grams\\* (e.g., unigrams) that\\* match those in the references\\*.
 >
-> 4. **Scoring Interpretation**: The BLEU Score **ranges from 0 (worst) to 1 (best)**. Higher scores
+> 4. **Scoring Interpretation**: The BLEU Score \\*ranges from 0 (worst) to 1 (best)\\*. Higher scores
 > indicate better model performance in terms of translation quality.
 >
-> 5. **Issues with **Vanilla BLEU** Score**: The **vanilla BLEU Score** **has limitations**. It can **give high
-> scores to models that generate common words and phrases**, even if the translation is far from the
+> 5. **Issues with \\*Vanilla BLEU\\* Score**: The \\*vanilla BLEU Score\\* \\*has limitations\\*. It can \\*give high
+> scores to models that generate common words and phrases\\*, even if the translation is far from the
 > reference.
 >
-> 6. ****Modified BLEU** Score Approach**: A modified version of the BLEU Score addresses some
-> issues. It **exhausts matching words in the references as they are encountered** in the candidate
-> translation, resulting in a **more reasonable evaluation.**
+> 6. **\\*Modified BLEU\\* Score Approach**: A modified version of the BLEU Score addresses some
+> issues. It \\*exhausts matching words in the references as they are encountered\\* in the candidate
+> translation, resulting in a\\* more reasonable evaluation.\\*
 >
-> 7. ****Limitations** of BLEU Score**: The BLEU Score has drawbacks. It d**oesn't account for semantic
-> meaning** or **sentence structure**, which can **lead to misleading scores** in cases where the translation
+> 7. **\\*Limitations\\* of BLEU Score**: The BLEU Score has drawbacks. It d\\*oesn't account for semantic
+> meaning\\* or \\*sentence structure\\*, which can\\* lead to misleading scores\\* in cases where the translation
 > doesn't accurately capture these aspects.
 >
-> 8. ****Widely Adopted Metric****: Despite its limitations, the BLEU Score **remains a widely used
-> evaluation metric** for machine translation models.
+> 8. **\\*Widely Adopted Metric\\***: Despite its limitations, the BLEU Score \\*remains a widely used
+> evaluation metric \\*for machine translation models.
 >
-> 9. **Awareness Needed**: Users s**hould be aware of the caveats of the BLEU Score** before relying
+> 9. **Awareness Needed**: Users s\\*hould be aware of the caveats of the BLEU Score\\* before relying
 > solely on it for evaluating machine translation performance.
 >
-> 10. **Upcoming Metric**: The text mentions that **there's another metric** to be discussed in a
-> following video, which could provide a **better estimate of model performance**.
+> 10. **Upcoming Metric**: The text mentions that \\*there's another metric\\* to be discussed in a
+> following video, which could provide a \\*better estimate of model performance\\*.
 >
-> Overall, the text introduces the BLEU Score as a **common metric** for **evaluating machine translation**
-> models, **explains its calculation**, **discusses its limitations**, and emphasizes the importance of
-> **considering its drawbacks** when **interpreting model performance.** It also hints at the introduction of
+> Overall, the text introduces the BLEU Score as a \\*common metric\\* for \\*evaluating machine translation\\*
+> models, \\*explains its calculation\\*, \\*discusses its limitations\\*, and emphasizes the importance of
+> \\*considering its drawbacks\\* when \\*interpreting model performance.\\* It also hints at the introduction of
 > an alternative metric for evaluation.
 
 <br>
@@ -1784,12 +1789,12 @@
 
 > [!NOTE]
 > In this ungraded lab, we will implement a popular metric for
-> evaluating the quality of machine-translated text: **the BLEU
-> score** proposed by **Kishore Papineni**, et al. in their 2002 paper "
-> **BLEU: a Method for Automatic Evaluation of Machine
-> Translation**", the BLEU score works by **comparing " candidate"
-> text to one or more "reference" translations**. The result is better
-> the closer the **score is to 1**. Let's see how to get this value in the
+> evaluating the quality of machine-translated text: \\*the BLEU
+> score \\*proposed by \\*Kishore Papineni\\*, et al. in their 2002 paper "
+> \\*BLEU: a Method for Automatic Evaluation of Machine
+> Translation\\*", the BLEU score works by \\*comparing " candidate"
+> text to one or more "reference" translations\\*. The result is better
+> the closer the \\*score is to 1\\*. Let's see how to get this value in the
 > following sections
 
 <br>
@@ -2007,38 +2012,38 @@
 > [!NOTE]
 > The main ideas from this portion of the lecture are:
 >
-> 1. **Introduction to **ROUGE Score****: The lecture introduces the **ROUGE score** as an
-> **alternative performance metric to BLEU** for **evaluating machine translation** systems. It
-> **emphasizes that ROUGE is recall-oriented**, focusing on the **presence of human references
-> in candidate translations.**
+> 1. **Introduction to \\*ROUGE Score\\***: The lecture introduces the \\*ROUGE score\\* as an
+> \\*alternative performance metric to BLEU\\* for \\*evaluating machine translation\\* systems. It
+> \\*emphasizes that ROUGE is recall-oriented\\*, focusing on the \\*presence of human references
+> in candidate translations.\\*
 >
 > 2. **ROUGE-N Metric**: Among various versions of the ROUGE score, the lecture
-> highlights **ROUGE-N,** which involves **counting n-gram overlaps between candidates and
-> reference translations**, similar to BLEU.
+> highlights \\*ROUGE-N,\\* which involves \\*counting n-gram overlaps between candidates and
+> reference translations\\*, similar to BLEU.
 >
-> 3. **Basic ROUGE-N Calculation**: The basic ROUGE-N calculation involves **counting
-> word matches between candidate and reference translations** and **dividing by the number of
-> words in the reference**. The process is illustrated through an example.
+> 3. **Basic ROUGE-N Calculation**: The basic ROUGE-N calculation involves\\* counting
+> word matches between candidate and reference translations\\* and \\*dividing by the number of
+> words in the reference\\*. The process is illustrated through an example.
 >
-> 4. **Comparison with BLEU**: The lectur**e contrasts ROUGE-N's recall-oriented nature
-> with BLEU's precision-oriented approach**, and suggests **combining both metrics** to get an
-> **F1 score** for a **more comprehensive evaluation**.
+> 4. **Comparison with BLEU**: The lectur\\*e contrasts ROUGE-N's recall-oriented nature
+> with BLEU's precision-oriented approach\\*, and suggests \\*combining both metrics\\* to get an
+> \\*F1 score\\* for a\\* more comprehensive evaluation\\*.
 >
-> 5. **F1 Score Calculation**: The F1 score is explained as **a combination of precision and
-> recall,** with formulas presented using **modified BLEU and ROUGE-N scores**. An example
+> 5. **F1 Score Calculation**: The F1 score is explained as \\*a combination of precision and
+> recall,\\* with formulas presented using \\*modified BLEU and ROUGE-N scores\\*. An example
 > calculation is shown, resulting in an F1 score.
 >
-> 6. **Considerations**: While BLEU and ROUGE-N are **commonly reported metrics**, it's
-> noted that they **do not account for sentence structure and semantics**, **only focusing on
-> n-gram matching** between candidates and references.
+> 6. **Considerations**: While BLEU and ROUGE-N are \\*commonly reported metrics\\*, it's
+> noted that they \\*do not account for sentence structure and semantics\\*, \\*only focusing on
+> n-gram matching\\* between candidates and references.
 >
-> 7. **Evaluation Metrics**: The lecture **emphasizes the use of modified BLEU, ROUGE-N,
-> and F1 score for evaluating machine translation models**. It's highlighted that **F1 scores can
-> offer a better assessment of model performance** in some cases.
+> 7. **Evaluation Metrics**: The lecture \\*emphasizes the use of modified BLEU, ROUGE-N,
+> and F1 score for evaluating machine translation models\\*. It's highlighted that\\* F1 scores can
+> offer a better assessment of model performance\\* in some cases.
 >
 > 8. **Limitations**: The lecture concludes by reminding the audience that current evaluation
-> metrics d**o not encompass sentence structure and semantics**, indicating a **potential for
-> further refinemen**t in the evaluation process.
+> metrics d\\*o not encompass sentence structure and semantics\\*, indicating a\\* potential for
+> further refinemen\\*t in the evaluation process.
 >
 > Overall, this section of the lecture explains the ROUGE score, introduces its recall-oriented
 > nature, demonstrates how ROUGE-N is calculated, suggests combining it with BLEU for
@@ -2168,28 +2173,28 @@
 > [!NOTE]
 > The main ideas from this part of the lecture are:
 >
-> 1. **Introduction to **Decoding Methods****: The lecture introduces **two approach**es for
-> constructing sentences using a sequence-to-sequence (seq2seq) model: **greedy
-> decoding** and **random sampling**. It highlights the advantages and drawbacks of each
+> 1. **Introduction to \\*Decoding Methods\\***: The lecture introduces\\* two approach\\*es for
+> constructing sentences using a sequence-to-sequence (seq2seq) model: \\*greedy
+> decoding\\* and \\*random sampling\\*. It highlights the advantages and drawbacks of each
 > method.
 >
-> 2. ****Greedy Decoding****: Greedy decoding involves **selecting the most probable word** at
-> each step of decoding. However, this simple approach can **lead to repetitive or
-> nonsensical sequences,** especially for l**onger outputs.**
+> 2. **\\*Greedy Decoding\\***: Greedy decoding involves \\*selecting the most probable word\\* at
+> each step of decoding. However, this simple approach can\\* lead to repetitive or
+> nonsensical sequences,\\* especially for l\\*onger outputs.\\*
 >
-> 3. ****Random Sampling****: Random sampling **assigns probabilities to words and samples
-> accordingly** for the next outputs. This approach can **introduce randomness but might
-> produce overly unpredictable results**.
+> 3. **\\*Random Sampling\\***: Random sampling \\*assigns probabilities to words and samples
+> accordingly\\* for the next outputs. This approach can\\* introduce randomness but might
+> produce overly unpredictable results\\*.
 >
-> 4. ****Temperature** Parameter**: Temperature is introduced as a parameter that **controls the
-> level of randomness in predictions**. A **lower value** makes predictions **more deterministic
-> and cautious**, while a **higher value** increases e**xcitement and randomness.**
+> 4. **\\*Temperature\\* Parameter**: Temperature is introduced as a parameter that\\* controls the
+> level of randomness in predictions\\*. A \\*lower value\\* makes predictions\\* more deterministic
+> and cautious\\*, while a \\*higher value\\* increases e\\*xcitement and randomness.\\*
 >
 > 5. **Adjusting Temperature**: Lower temperature values lead to safer, more confident
 > predictions, while higher values introduce more randomness and excitement but may
 > result in more mistakes.
 >
-> 6. **T**rade-off**s**: The lecture acknowledges that the introduced methods for sampling and
+> 6. **T\\*rade-off\\*s**: The lecture acknowledges that the introduced methods for sampling and
 > decoding, while providing sentence construction, may not always yield convincing
 > outputs. It sets the stage for discussing more advanced methods in the following videos.
 >
@@ -2296,35 +2301,35 @@
 <a id="node-t0x00pn"></a>
 
 > [!NOTE]
-> 1. **Beam Search Technique**: Beam search is used to **identify best sequences** within a
-> **fixed window size**, referred to as the **"beam width."**
+> 1. **Beam Search Technique**: Beam search is used to \\*identify best sequences\\* within a
+> \\*fixed window size\\*, referred to as the \\*"beam width."\\*
 >
-> 2. ****Optimal Sequences****: Unlike **selecting the highest probability output** at each time
-> step, beam search **aims to find sequences with better overall probabilities**.
+> 2. **\\*Optimal Sequences\\***: Unlike \\*selecting the highest probability output\\* at each time
+> step, beam search \\*aims to find sequences with better overall probabilities\\*.
 >
-> 3. ****Calculating Sequence Probabilities****: Beam search involves **computing probabilities
-> for potential sequences** based on **previous outputs.**
+> 3. **\\*Calculating Sequence Probabilities\\***: Beam search involves \\*computing probabilities
+> for potential sequences\\* based on \\*previous outputs.\\*
 >
-> 4. ****Beam Width****: To **manage computational complexity**, a beam width (B) is set to **limit
-> the number of sequences** **considered** at each step.
+> 4. **\\*Beam Width\\***: To \\*manage computational complexity\\*, a beam width (B) is set to \\*limit
+> the number of sequences\\* \\*considered\\* at each step.
 >
-> 5. ****Conditional Probabilities****: At each step, **conditional probabilities of words are
-> calculated** given the sequences kept so far (based on beam width).
+> 5. **\\*Conditional Probabilities\\***: At each step,\\* conditional probabilities of words are
+> calculated\\* given the sequences kept so far (based on beam width).
 >
-> 6. ****Iterative Process****: The process **continues iteratively**, **generating new words** and
-> **updating probabilities**.
+> 6. **\\*Iterative Process\\***: The process \\*continues iteratively\\*, \\*generating new words\\* and
+> \\*updating probabilities\\*.
 >
-> 7. ****Memory and Computational Cost****: Beam search can be **memory-intensive** and
-> **computationally costly** due to **multiple calculations and sequence storage**.
+> 7. **\\*Memory and Computational Cost\\***: Beam search can be \\*memory-intensive\\* and
+> \\*computationally costly\\* due to \\*multiple calculations and sequence storage\\*.
 >
-> 8. ****Penalizing Longer Sequences****: Vanilla beam search can **penalize longer sequences**
-> due to the **multiplication of conditional probabilities**.
+> 8. **\\*Penalizing Longer Sequences\\***: Vanilla beam search can \\*penalize longer sequences\\*
+> due to the \\*multiplication of conditional probabilities\\*.
 >
-> 9. ****Effective Tool****: Despite its limitations, beam search is a **widely used technique** with
+> 9. **\\*Effective Tool*\\**: Despite its limitations, beam search is a \\*widely used technique\\* with
 > practical value.
 >
-> 10. **Next Steps**: In the upcoming video, a different technique known as **Minimum
-> Bayes Risk (NBR)** will be introduced as another valuable tool.
+> 10. **Next Steps**: In the upcoming video, a different technique known as \\*Minimum
+> Bayes Risk (NBR)\\* will be introduced as another valuable tool.
 
 <br>
 
@@ -2459,33 +2464,33 @@
 
 > [!NOTE]
 > 1. Introduction to a Final Evaluation Technique: The narrator introduces the last technique for
-> **evaluating Neural Machine Translation** (NMT) systems. This technique is simple yet **effective
-> compared to others**.
+> \\*evaluating Neural Machine Translation\\* (NMT) systems. This technique is simple yet \\*effective
+> compared to others\\*.
 >
-> 2. **Improving Decoding** with **Multiple Samples**: The narrator discusses the **limitations of random
-> sampling** for decoding and suggests a method to improve it. By **generating multiple samples** (e.g.,
-> 30) and **comparing them**, **decoding quality improves significantly.**
+> 2. \\*Improving Decoding\\* with \\*Multiple Samples\\*: The narrator discusses the \\*limitations of random
+> sampling\\* for decoding and suggests a method to improve it. By \\*generating multiple samples\\* (e.g.,
+> 30) and \\*comparing them\\*, \\*decoding quality improves significantly.\\*
 >
-> 3. **Minimum Bayes Risk (MBR)** Decoding Method: **MBR** is introduced as a decoding method. It
-> involves **comparing multiple candidate translations** to **find a consensus translation** that **maximizes
-> similarity**. MBR uses a **similarity score or a loss function**, such as **ROUGE**, to **evaluate translations**.
+> 3. \\*Minimum Bayes Risk (MBR)\\* Decoding Method: \\*MBR\\* is introduced as a decoding method. It
+> involves \\*comparing multiple candidate translations\\* to\\* find a consensus translation\\* that \\*maximizes
+> similarity\\*. MBR uses a \\*similarity score or a loss function\\*, such as \\*ROUGE\\*, to \\*evaluate translations\\*.
 >
-> 4. **ROUGE** **Score** for Comparing Translations: ROUGE score is proposed as a suitable metric for
-> comparing candidate translations. The goal is to **select the translation (E) that maximizes the average
-> ROUGE score with other candidate translations (E prime)**.
+> 4. \\*ROUGE\\* \\*Score\\* for Comparing Translations: ROUGE score is proposed as a suitable metric for
+> comparing candidate translations. The goal is to \\*select the translation (E) that maximizes the average
+> ROUGE score with other candidate translations (E prime)\\*.
 >
 > 5. Steps to Implement MBR with ROUGE: The steps for implementing MBR with ROUGE on a small
-> set of candidate translations are outlined. These steps include **calculating ROUGE scores between
-> candidates** and **selecting the translation with the highest average ROUGE score**.
+> set of candidate translations are outlined. These steps include \\*calculating ROUGE scores between
+> candidates\\* and \\*selecting the translation with the highest average ROUGE score\\*.
 >
-> 6. Benefits of **MBR**: MBR provides a **contextually accurate translation** by **considering multiple
-> candidates** and **choosing the one with the highest average similarity**. It **outperforms random sampling**
-> and **greedy decoding**.
+> 6. Benefits of \\*MBR\\*: MBR provides a \\*contextually accurate translation\\* by \\*considering multiple
+> candidates\\* and \\*choosing the one with the highest average similarity\\*. It \\*outperforms random sampling\\*
+> and \\*greedy decoding\\*.
 >
 > 7. Conclusion and Preview of Next Week: The section concludes by congratulating the viewer on
 > learning about implementing and evaluating machine translation systems. The narrator mentions that
-> the next week's topic will be about the **transformer model,** a **state-of-the-art architecture** that uses an
-> **encoder-decoder framework.**
+> the next week's topic will be about the\\* transformer model,\\* a \\*state-of-the-art architecture\\* that uses an
+> \\*encoder-decoder framework.\\*
 
 <br>
 
@@ -2600,19 +2605,19 @@
 <a id="node-e73jkdv"></a>
 
 > [!NOTE]
-> In this ungraded lab, we will explain the **stack semantics** in **Trax**. This will
-> help in understanding **how to use layers** like **Select** and **Residual** which
-> **operate on elements in the stack**.
+> In this ungraded lab, we will explain the\\* stack semantics\\* in \\*Trax\\*. This will
+> help in understanding \\*how to use layers\\* like \\*Select\\* and \\*Residual\\* which
+> \\*operate on elements in the stack\\*.
 >
-> If you've taken a computer science class before, you will recall that a **stack** is a
-> data structure that follows the **Last In, First Out (LIFO)** principle. That is,
-> whatever is the **latest element that is pushed into** the stack will also be **the first
-> one to be popped out**. 
+> If you've taken a computer science class before, you will recall that a \\*stack\\* is a
+> data structure that follows the \\*Last In, First Out (LIFO) \\*principle. That is,
+> whatever is the \\*latest element that is pushed into\\* the stack will also be \\*the first
+> one to be popped out\\*. 
 >
 > If you're not yet familiar with stacks, then you may find
-> this short tutorial useful. In a nutshell, all you really need to remember is **it puts
-> elements one on top of the other**. You **should be** **aware of what is on top of the
-> stack to know which element you will be popping first**. You will see this in the
+> this short tutorial useful. In a nutshell, all you really need to remember is \\*it puts
+> elements one on top of the other\\*. You \\*should be\\* \\*aware of what is on top of the
+> stack to know which element you will be popping first\\*. You will see this in the
 > discussions below. Let's get started!
 >
 > Trải nghiệm khái niệm stack semantic
@@ -3149,26 +3154,27 @@
 <a id="node-tsz1hvf"></a>
 
 > [!NOTE]
-> Welcome to the first assignment of Course 4. Here, you will build an **English-to-German** 
-> **neural machine translation (NMT)** model using **Long Short-Term Memory (LSTM)** 
-> networks with **attention**. 
+> Welcome to the first assignment of Course 4. Here, you will build an \\*English-to-German \\*
+> \\*neural machine translation (NMT)\\* model using \\*Long Short-Term Memory (LSTM) \\*
+> networks with \\*attention\\*. 
 >
-> **Machine translation** is an important task in natural language 
+> \\*Machine translation\\* is an important task in natural language 
 > processing and could be useful not only for translating one language to another but also 
-> for word **sense disambiguation** (e.g. determining whether the word "bank" refers to the 
+> for word \\*sense disambiguation\\* (e.g. determining whether the word "bank" refers to the 
 > financial bank, or the land alongside a river). 
 >
-> Implementing this using just a **Recurrent 
-> Neural Network (RNN) with LSTMs** can work for **short to medium length sentences** but 
-> can result in **vanishing gradients** for **very long sequences**. To solve this, you will be 
-> **adding an attention mechanism** to allow the decoder to **access all relevant parts of the 
-> input sentence regardless of its length**. 
+> Implementing this using just a \\*Recurrent 
+> Neural Network (RNN) with LSTMs\\* can work for \\*short to medium length sentences\\* but 
+> can result in \\*vanishing gradients\\* for \\*very long sequences\\*. To solve this, you will be 
+> \\*adding an attention mechanism\\* to allow the decoder to \\*access all relevant parts of the 
+> input sentence regardless of its length\\*. 
 >
 > By completing this assignment, you will:
->  • learn how to **preprocess your training and evaluation data**
->  • **implement an encoder-decoder system with attention**  • understand **how attention works**
->  • **build the NMT model from scratch using Trax**
->  • generate translations using **greedy** and **Minimum Bayes Risk (MBR) decoding**
+>  • learn how to \\*preprocess your training and evaluation data\\*
+>  • \\*implement an encoder-decoder system with attention
+> \\* • understand \\*how attention works\\*
+>  • \\*build the NMT model from scratch using Trax\\*
+>  • generate translations using \\*greedy\\* and \\*Minimum Bayes Risk (MBR) decoding\\*
 >
 > DLSpec ta đã làm Attention mechanism với model giúp translate ngày tháng năm ở
 > dạng chữ thành dạng chuẩn ở đây ta sẽ build một model làm translate từ English sang
@@ -3203,27 +3209,27 @@
 <a id="node-yxx2u0d"></a>
 
 > [!NOTE]
-> Next, we will import the dataset we will use to train the model. To **meet the**
-> **storage constraints** in this lab environment, we will just use a **small dataset from
-> Opus  https://opus.nlpl.eu/**, a growing **collection of translated texts from the
-> web**.
+> Next, we will import the dataset we will use to train the model. To \\*meet the\\*
+> \\*storage constraints\\* in this lab environment, we will just use a \\*small dataset from
+> Opus  https://opus.nlpl.eu/\\*, a growing \\*collection of translated texts from the
+> web\\*.
 >
-> Particularly, we will get an **English to German translation subset** specified as
-> **opus/medical** which has **medical related texts.**
+> Particularly, we will get an \\*English to German translation subset\\* specified as
+> \\*opus/medical\\* which has \\*medical related texts.\\*
 >
-> If storage is not an issue, you can opt to get a **larger corpus** such as the English
-> to German translation dataset from **ParaCrawl https://paracrawl.eu/**, a **large
-> multi-lingual translation dataset created by the European Union**. Both of these
-> datasets are available **via Tensorflow Datasets (TFDS)** and you can **browse
-> through the other available datasets** here. https://www.tensorflow.
+> If storage is not an issue, you can opt to get a \\*larger corpus\\* such as the English
+> to German translation dataset from \\*ParaCrawl https://paracrawl.eu/\\*, a \\*large
+> multi-lingual translation dataset created by the European Union\\*. Both of these
+> datasets are available \\*via Tensorflow Datasets (TFDS)\\* and you can \\*browse
+> through the other available datasets\\* here. https://www.tensorflow.
 > org/datasets/catalog/overview 
 >
-> We have **downloaded the data for you** in the
-> **data/ directory** of your workspace. As you' ll see below, you can **easily access
-> this dataset from TFDS with trax.data.TFDS**.
+> We have \\*downloaded the data for you\\* in the
+> \\*data/ directory\\* of your workspace. As you' ll see below, you can\\* easily access
+> this dataset from TFDS with trax.data.TFDS\\*.
 >
-> The result is a **python generator function yielding tuples**. Use the k**eys
-> argument** to select **what appears** at **which position** in the tuple. For example,
+> The result is a \\*python generator function yielding tuples\\*. Use the k\\*eys
+> argument\\* to select \\*what appears\\* at \\*which position\\* in the tuple. For example,
 > keys=('en', 'de') below will return pairs as (English sentence, German sentence).
 >
 > Đại khái là vì **hạn chế storage** của lab environment nên ở đây sẽ **chỉ
@@ -3262,23 +3268,24 @@
 <a id="node-atirbah"></a>
 
 > [!NOTE]
-> Notice that **TFDS** returns a **generator function**, not a **generator**.
-> This is because in Python, you **cannot reset generators** so you
-> **cannot go back to a previously yielded value**.
+> Notice that \\*TFDS\\* returns a \\*generator function\\*, not a \\*generator\\*.
+> This is because in Python, you \\*cannot reset generators\\* so you
+> \\*cannot go back to a previously yielded value\\*.
 >
-> During deep learning **training**, you use **Stochastic Gradient Descent** and **don't actually need to go back** -- but it is **sometimes** good to
+> During deep learning \\*training\\*, you use \\*Stochastic Gradient Descent
+> \\*and \\*don't actually need to go back\\* -- but it is \\*sometimes\\* good to
 > be able to do that, and that's where the functions come in.
 >
-> It is actually **very common to use generator functions in Python** -- e.
-> g., **zip** is a **generator function**. You can read more about Python
-> generators to understand **why we use them**. 
+> It is actually \\*very common to use generator functions in Python\\* -- e.
+> g., \\*zip\\* is a \\*generator function\\*. You can read more about Python
+> generators to understand \\*why we use them\\*. 
 >
 > https://book.pythontips.com/en/latest/generators.html 
 >
-> Let's print a a **sample
-> pair** from our **train and eval data**. Notice that the **raw ouput is
-> represented in bytes** (denoted by the **b**' prefix) and these will be
-> **converted to strings internally in the next steps**.
+> Let's print a a \\*sample
+> pair\\* from our \\*train and eval data\\*. Notice that the \\*raw ouput is
+> represented in bytes\\* (denoted by the \\*b\\*' prefix) and these will be
+> \\*converted to strings internally in the next steps\\*.
 >
 > Đại khái là TFDS là **generator function**, **không phải là generator**. Cho biết
 > thêm **nếu là generator thì sẽ không thể đi ngược để access các item/tuple
@@ -3314,25 +3321,27 @@
 <a id="node-6nmq8ib"></a>
 
 > [!NOTE]
-> Now that we have imported our corpus, we will be **preprocessing the sentences** into
-> a  **format** that our model can accept. This will be composed of several steps: **Tokenizing the sentences using subword representations:** As you've learned in the
-> earlier courses of this specialization, we want to **represent each sentence as an array
-> of  integers instead of strings**.
+> Now that we have imported our corpus, we will be \\*preprocessing the sentences\\* into
+> a  \\*format\\* that our model can accept. This will be composed of several steps:\\*
 >
-> For our application, we will use \\/**subword\\/ representations** to  **tokenize our
-> sentences**. This is a **common technique to avoid out-of-vocabulary words** by
-> **allowing parts of words to be represented separately**.
+> Tokenizing the sentences using subword representations:\\* As you've learned in the
+> earlier courses of this specialization, we want to \\*represent each sentence as an array
+> of  integers instead of strings\\*.
 >
-> For example, instead of having  separate entries in your vocabulary for --**"fear", "
-> fearless", "fearsome", "some"**, and  "less"--, you can simply store --**"fear", "some"**,
-> and **"less"**-- then allow **your tokenizer to  combine these subwords when needed**.
-> This allows it to be **more flexible** so you **won't  have to save uncommon words
-> explicitly** in your vocabulary (e.g. \\/stylebender\\/, \\/nonce\\/,  etc).
+> For our application, we will use \\/\\*subword\\/ representations\\* to  \\*tokenize our
+> sentences\\*. This is a \\*common technique to avoid out-of-vocabulary words\\* by
+> \\*allowing parts of words to be represented separately\\*.
 >
-> Tokenizing is done with the **trax.data.Tokenize()** **command** and we have provided
-> you the c**ombined subword vocabulary for English and German** (i.e. **ende_32k.
-> subword**)  **saved in the data directory**. Feel free to open this file to **see how the
-> subwords look like**.
+> For example, instead of having  separate entries in your vocabulary for --\\*"fear", "
+> fearless", "fearsome", "some"\\*, and  "less"--, you can simply store --\\*"fear", "some"\\*,
+> and \\*"less"\\*-- then allow \\*your tokenizer to  combine these subwords when needed\\*.
+> This allows it to be \\*more flexible\\* so you \\*won't  have to save uncommon words
+> explicitly\\* in your vocabulary (e.g. \\/stylebender\\/, \\/nonce\\/,  etc).
+>
+> Tokenizing is done with the \\*trax.data.Tokenize()\\* \\*command\\* and we have provided
+> you the c\\*ombined subword vocabulary for English and German\\* (i.e. \\*ende_32k.
+> subword\\*)  \\*saved in the data directory\\*. Feel free to open this file to\\* see how the
+> subwords look like\\*.
 >
 > Thì ở đây là ta sẽ thấy / **dùng một dạng tokenize mới** mà DLSpec không dùng và ở những
 > Course của NLPSpec trước từng nói qua đó l**à tokenize theo kiểu các phần của từ thay vì
@@ -3548,14 +3557,14 @@
 > com/how-to-speed-up-the-training-of-the-sequence-model-using-bucketing-techniques-9e302b0fd976
 > but the gist is very simple.
 >
-> Our inputs  have **variable lengths** and you want to **make these the same when batching** groups
-> of sentences together. One way to do that is to **pad each sentence to the length of the  longest
-> sentence** in the dataset. This might l**ead to some wasted computation** though.
+> Our inputs  have \\*variable lengths\\* and you want to \\*make these the same when batching\\* groups
+> of sentences together. One way to do that is to \\*pad each sentence to the length of the  longest
+> sentence\\* in the dataset. This might l\\*ead to some wasted computation\\* though.
 >
-> For  example, if there are **multiple short sentences with just two tokens**, do we want to **pad  these
-> when the longest sentence is composed of a 100 tokens?** Instead of **padding with  0s to the
-> maximum length of a sentence each time**, we can **group our tokenized sentences by length and
-> bucket**, as on this image (from the article above):
+> For  example, if there are \\*multiple short sentences with just two tokens\\*, do we want to \\*pad  these
+> when the longest sentence is composed of a 100 tokens?\\* Instead of \\*padding with  0s to the
+> maximum length of a sentence each time\\*, we can\\* group our tokenized sentences by length and
+> bucket\\*, as on this image (from the article above):
 >
 > Ideas cũng đơn giản thôi, trước giờ ta đã biết **max_length padding** - **padding  (với zeros) để tất cả
 > các sequence đều có length = câu dài nhất của data.**
@@ -3668,12 +3677,12 @@
 <a id="node-wub44i6"></a>
 
 > [!NOTE]
-> The **input_batch** and **target_batch** are Numpy arrays consisting of
+> The \\*input_batch\\* and \\*target_batch\\* are Numpy arrays consisting of
 > tokenized English  sentences and German sentences respectively.
-> These tokens will later be used to  produce **embedding vectors for each
-> word** in the sentence (so the embedding for a  sentence will be a
-> matrix). The number of sentences in each **batch is usually a power of 2
-> for optimal computer memory usage.**
+> These tokens will later be used to  produce \\*embedding vectors for each
+> word\\* in the sentence (so the embedding for a  sentence will be a
+> matrix). The number of sentences in each \\*batch is usually a power of 2
+> for optimal computer memory usage.\\*
 >
 > We can now visually inspect some of the data. You can run the cell
 > below several times  to shuffle through the sentences. Just to note,
@@ -3938,26 +3947,26 @@
 <a id="node-92i3hti"></a>
 
 > [!NOTE]
-> This function will prepare the inputs to the attention layer. We want to **take in the
-> encoder  and pre-attention decoder activations** and **assign** it to the **queries,
-> keys, and values**. 
+> This function will prepare the inputs to the attention layer. We want to \\*take in the
+> encoder  and pre-attention decoder activations\\* and \\*assign\\* it to the\\* queries,
+> keys, and values\\*. 
 >
-> In  addition, another output here will be the **mask** to
-> **distinguish real tokens from padding  tokens.**
-> This mask will **be used internally by Trax** when **computing the softmax so
-> padding  tokens will not have an effect on the computated probabilities**. From the
+> In  addition, another output here will be the \\*mask\\* to
+> \\*distinguish real tokens from padding  tokens.\\*
+> This mask will \\*be used internally by Trax\\* when \\*computing the softmax so
+> padding  tokens will not have an effect on the computated probabilities\\*. From the
 > data preparation  steps in Section 1 of this assignment, you should know which
 > tokens in the input  correspond to padding.
 >
 > We have filled the last two lines in composing the mask for you because it
 > includes a  concept that will be discussed further next week. This is related
-> to \\/**multiheaded  attention**\\/ which you can think of right now as **computing the
-> attention multiple times** to  improve the model's predictions.
+> to \\/\\*multiheaded  attention\\*\\/ which you can think of right now as\\* computing the
+> attention multiple times\\* to  improve the model's predictions.
 >
-> It is required to **consider this additional axis in the output**  so we've included it
-> already but you **don't need to analyze it just yet.** What's important  now is for
-> you to know **which should be the queries, keys, and values**, as well as to
-> **initialize the mask.**
+> It is required to \\*consider this additional axis in the output \\* so we've included it
+> already but you \\*don't need to analyze it just yet.\\* What's important  now is for
+> you to know \\*which should be the queries, keys, and values\\*, as well as to
+> \\*initialize the mask.\\*
 >
 > Kế đến là viết một function nhận các kết quả **activation của encoder và pre-attention
 > decoder** (tức là **output từ các LSTM** của chúng) để **assign vào queries, keys và
@@ -4029,12 +4038,12 @@
 <a id="node-7nhkyam"></a>
 
 > [!NOTE]
-> We are now **ready to implement** our sequence-to-sequence
-> model with attention. This will be a **Serial network** and is
+> We are now \\*ready to implement\\* our sequence-to-sequence
+> model with attention. This will be a \\*Serial network\\* and is
 > illustrated in the diagram below.
 >
-> It shows the layers you'll be using in Trax and you'll see that **each
-> step can be implemented quite easily with one line commands.** We'
+> It shows the layers you'll be using in Trax and you'll see that \\*each
+> step can be implemented quite easily with one line commands.\\* We'
 > ve placed several links to the documentation for each relevant layer
 > in the discussion after the figure below.
 
@@ -4712,16 +4721,16 @@
 <a id="node-hz8vmq3"></a>
 
 > [!NOTE]
-> As mentioned in the lectures, **getting the most probable token** 
-> at each step **may not necessarily produce the best results**. 
-> Another approach is to do **Minimum Bayes Risk Decodin**g or MBR. 
+> As mentioned in the lectures, \\*getting the most probable token\\* 
+> at each step \\*may not necessarily produce the best results\\*. 
+> Another approach is to do \\*Minimum Bayes Risk Decodin\\*g or MBR. 
 >
 > The general steps to implement this are:
->  1 **take several random samples**
->  2 **score each sample against all other samples**
->  3 **select the one with the highest score**
+>  1 \\*take several random samples\\*
+>  2 \\*score each sample against all other samples\\*
+>  3 \\*select the one with the highest score\\*
 >
-> You will be building **helper functions** for these steps in the following 
+> You will be building \\*helper functions\\* for these steps in the following 
 > sections.
 >
 > Như đã biết trong lecture, là dùng greedy decoding với mỗi từ
@@ -4803,10 +4812,10 @@
 
 > [!NOTE]
 > One of the more commonly used metrics in machine translation is the
-> ROUGE score. For unigrams, this is called **ROUGE-1** and as shown in
-> class, you can **output the scores for both precision and recall** when
+> ROUGE score. For unigrams, this is called \\*ROUGE-1\\* and as shown in
+> class, you can \\*output the scores for both precision and recall\\* when
 > comparing two samples. To get the final score, you will want to compute
-> the **F1-score** as given by:
+> the \\*F1-score\\* as given by:
 
 <br>
 
@@ -4932,9 +4941,9 @@
 <a id="node-4bpawox"></a>
 
 > [!NOTE]
-> In practice, it is also common to see the **weighted mean**
-> being used to **calculate the overall score** instead of just the
-> **arithmetic mean**. We have implemented it below and you
+> In practice, it is also common to see the \\*weighted mean\\*
+> being used to \\*calculate the overall score\\* instead of just the
+> \\*arithmetic mean\\*. We have implemented it below and you
 > can use it in your experiements to see which one will give
 > better results.
 
@@ -4970,12 +4979,12 @@
 <a id="node-4wrvv5e"></a>
 
 > [!NOTE]
-> We will now p**ut everything together** and develop the
-> **mbr_decode**() function. Please use the helper functions
+> We will now p\\*ut everything together\\* and develop the
+> \\*mbr_decode\\*() function. Please use the helper functions
 > you just developed to complete this. You will want to
-> **generate samples**, **get the score for each sample**, **get the
-> highest score among all samples**, then **detokenize this
-> sample to get the translated sentence**
+> \\*generate samples\\*, \\*get the score for each sample\\*, \\*get the
+> highest score among all samples\\*, then \\*detokenize this
+> sample to get the translated sentence\\*
 >
 > Ta sẽ generate samples, tính average similarity với mỗi
 > sample với các sample còn lại. Chọn ra thằng có avg
@@ -5011,7 +5020,7 @@
 
 > [!NOTE]
 > Congratulations! Next week, you'll dive deeper into attention
-> models and study the **Transformer** architecture. You will build
+> models and study the \\*Transformer\\* architecture. You will build
 > another network but without the recurrent part. It will show that
 > attention is all you need! It should be fun!
 >
