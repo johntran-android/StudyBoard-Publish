@@ -18,19 +18,19 @@
 <a id="node-moeof8q"></a>
 
 > [!NOTE]
-> 1 **Computer vision** is rapidly advancing thanks to deep learning,
+> 1 \\*Computer vision\\* is rapidly advancing thanks to deep learning,
 > enabling new applications that were impossible a few years ago.
 >
 > 2 The computer vision research community's creativity and
 > inventiveness in coming up with new neural network architectures
 > and algorithms can inspire cross-fertilization into other areas.
 >
-> 3 Computer vision problems include **image classification**, **object
-> detection**, and **neural style transfer**, among others.
+> 3 Computer vision problems include \\*image classification\\*, \\*object
+> detection\\*, and \\*neural style transfer\\*, among others.
 >
 > 4 One of the challenges of computer vision problems is that the
-> **inputs can get really big**, requiring better implementation of the
-> **convolution operatio**n, which is one of the fundamental building
+> \\*inputs can get really big\\*, requiring better implementation of the
+> \\*convolution operatio\\*n, which is one of the fundamental building
 > blocks of convolutional neural networks.
 
 <br>
@@ -70,23 +70,23 @@
 <a id="node-y304zjh"></a>
 
 > [!NOTE]
-> • The **convolution operation** is a fundamental building block of
-> **convolutional neural networks**.
+> • The \\*convolution operation\\* is a fundamental building block of
+> \\*convolutional neural networks\\*.
 >
-> • **Edge detection** is one of the many applications of the convolution
+> • \\*Edge detection\\* is one of the many applications of the convolution
 > operation.
 >
-> • **Early** layers of a neural network **detect** **edges** while **later layers**
-> detect **complete objects**.
+> • \\*Early\\* layers of a neural network \\*detect\\* \\*edges\\* while \\*later layers\\*
+> detect \\*complete objects\\*.
 >
-> • Convolution involves a **filter** or **kernel** being passed over an input
+> • Convolution involves a \\*filter\\* or \\*kernel\\* being passed over an input
 > image to produce an output image.
 >
 > • The output of the convolution operation is determined by taking
-> **element-wise products** and **summing** up the resulting values.
+> \\*element-wise products\\* and \\*summing\\* up the resulting values.
 >
-> • The **output** of the convolution operation is **smaller** in size than the
-> **input** image.
+> • The \\*output\\* of the convolution operation is \\*smaller\\* in size than the
+> \\*input\\* image.
 
 <br>
 
@@ -170,22 +170,22 @@
 <a id="node-nd9u265"></a>
 
 > [!NOTE]
-> 1 The video discusses **edge detection**, which is the process of
-> i**dentifying boundaries** in an image.
+> 1 The video discusses \\*edge detection\\*, which is the process of
+> i\\*dentifying boundaries\\* in an image.
 >
-> 2 The video explains the **difference between positive and negative
-> edges** and how this is detected using edge detection filters.
+> 2 The video explains the \\*difference between positive and negative
+> edges\\* and how this is detected using edge detection filters.
 >
-> 3 **Different edge detection filters** are discussed, including the three
-> by three filter for detecting vertical and horizontal edges, the **Sobel
-> filter**, and the **Scharr** filter.
+> 3\\* Different edge detection filters\\* are discussed, including the three
+> by three filter for detecting vertical and horizontal edges, the \\*Sobel
+> filter\\*, and the \\*Scharr\\* filter.
 >
-> 4 The video highlights the possibility of using **machine learning** to
-> **learn the parameters of an edge detection filter**.
+> 4 The video highlights the possibility of using \\*machine learning\\* to
+> \\*learn the parameters of an edge detection filter\\*.
 >
-> 5 The **limitations of edge detection** in **small images** and the
-> **potential for deep learning to improve edge detection in complex
-> images** are also discussed.
+> 5 The \\*limitations of edge detection\\* in \\*small images\\* and the
+> \\*potential for deep learning to improve edge detection in complex
+> images\\* are also discussed.
 
 <br>
 
@@ -241,27 +241,27 @@
 <a id="node-oc713os"></a>
 
 > [!NOTE]
-> 1 **Padding** is a **modification** to the **basic convolutional operation** that can
-> help build **deep neural networks**.
+> 1 \\*Padding\\* is a \\*modification\\* to the \\*basic convolutional operation\\* that can
+> help build \\*deep neural networks\\*.
 >
-> 2 A convolutional operation **reduces the size of the image.**
+> 2 A convolutional operation\\* reduces the size of the image.\\*
 >
-> 3 **Shrinking** the image too much may lead to **loss of information.**   
+> 3 \\*Shrinking\\* the image too much may lead to \\*loss of information. \\*  
 >
-> 4 **Padding** is a solution to this problem as it **preserves** the size of the
+> 4 \\*Padding\\* is a solution to this problem as it \\*preserves\\* the size of the
 > image.
 >
-> 5 By padding the image, the output dimension increases by **2p** in each
+> 5 By padding the image, the output dimension increases by \\*2p\\* in each
 > direction.  
 >
-> 6 **Valid convolution** is a type of convolution that **doesn't use
-> padding.**
+> 6 \\*Valid convolution \\*is a type of convolution that \\*doesn't use
+> padding.\\*
 >
-> 7 **Same convolution** is a type of convolution where the **output size** is the
-> **same** as the **input size**.
+> 7 \\*Same convolution\\* is a type of convolution where the \\*output size\\* is the
+> \\*same\\* as the\\* input size\\*.
 >
-> 8 The amount of **padding** **required** to achieve the **same** convolution is
-> **(f-1)/2**, where **f is the size of the filter**.
+> 8 The amount of \\*padding\\* \\*required\\* to achieve the \\*same\\* convolution is
+> \\*(f-1)/2\\*, where \\*f is the size of the filter\\*.
 
 <br>
 
@@ -315,27 +315,27 @@
 <a id="node-w35h2jc"></a>
 
 > [!NOTE]
-> 1 **Strided** convolutions are a basic building block of Convolutional Neural
+> 1 \\*Strided\\* convolutions are a basic building block of Convolutional Neural
 > Networks.
 >
-> 2 A **strided** convolution involves taking an element-wise product of an
-> image and a filter, but **instead of stepping the filter by one**, it is stepped
-> by a **stride s.**
+> 2 A \\*strided\\* convolution involves taking an element-wise product of an
+> image and a filter, but \\*instead of stepping the filter by one\\*, it is stepped
+> by a \\*stride s.\\*
 >
 > 3 The output dimensions of the strided convolution are governed by the
 > formula: (N + 2P - F)/S + 1, where N is the input size, P is the padding, F
 > is the filter size, and S is the stride.
 >
-> 4 If the output dimensions are **not an integer**, they are **rounded down.**
+> 4 If the output dimensions are \\*not an integer\\*, they are \\*rounded down.\\*
 >
-> 5 The **convention** for convolutions is that the **filter** must **lie entirely** within
+> 5 The \\*convention\\* for convolutions is that the \\*filter\\* must \\*lie entirely\\* within
 > the image or the image plus padding region.
 >
-> 6 The difference between **convolution** and **cross-correlation** is that
+> 6 The difference between \\*convolution\\* and \\*cross-correlation\\* is that
 > convolution involves a flip of the filter on both axes before taking the
 > element-wise product and summing, while cross-correlation does not
-> involve this flip. However, the **deep learning literature** often r**efers to both
-> operations as convolutions.**
+> involve this flip. However, the \\*deep learning literature\\* often r\\*efers to both
+> operations as convolutions.\\*
 
 <br>
 
@@ -426,18 +426,18 @@
 <a id="node-ecg7rb1"></a>
 
 > [!NOTE]
-> • **3D convolution** can be used to **detect features** in
+> • \\*3D convolution\\* can be used to \\*detect features\\* in
 > 3D volumes.
 >
-> • **Filters** are placed in the volume and multiplied with
+> • \\*Filters\\* are placed in the volume and multiplied with
 > corresponding values from the color channels to
 > produce an output volume.
 >
-> • **Different parameters** can be used to create **different
-> feature detectors**.
+> • \\*Different parameters\\* can be used to create \\*different
+> feature detectors\\*.
 >
-> • **Multiple filters** can be used at the same time to
-> detect **multiple types of features** (more complex features)
+> • \\*Multiple filters\\* can be used at the same time to
+> detect \\*multiple types of features\\* (more complex features)
 
 <br>
 
@@ -507,19 +507,20 @@
 
 > [!NOTE]
 > 1 The video demonstrates how to build one layer of a convolutional neural
-> network using an example of **convolving a 3D volum**e with **two filters** to
-> produce different **4 by 4 outputs.**
+> network using an example of \\*convolving a 3D volum\\*e with\\* two filters\\* to
+> produce different \\*4 by 4 outputs.\\*
 >
-> 2 The resulting outputs are passed through a **bias** and **non-linearity** to
-> produce a **4 by 4 output** **for each filter,** which are then **stacked up** to form a
-> **4 by 4 by 2 output volume.**
+> 2 The resulting outputs are passed through a \\*bias\\* and \\*non-linearity\\* to
+> produce a\\* 4 by 4 output\\* \\*for each filter,\\* which are then \\*stacked up\\* to form a
+> \\*4 by 4 by 2 output volume.\\*
 >
-> 3 The convolution operation is **similar to a linear operation** in a
-> non-convolutional neural network, where the **filters** play a **role similar to w1**
-> and the **output** of the convolution operation plays a role similar to **w1 times
-> a0.** 
-> 4 One layer of a convolutional neural network can have **multiple filters,**
-> which can result in a **higher-dimensional output volume.**
+> 3 The convolution operation is \\*similar to a linear operation\\* in a
+> non-convolutional neural network, where the \\*filters\\* play a \\*role similar to w1\\*
+> and the \\*output\\* of the convolution operation plays a role similar to \\*w1 times
+> a0.
+> \\*
+> 4 One layer of a convolutional neural network can have \\*multiple filters,\\*
+> which can result in a \\*higher-dimensional output volume.\\*
 >
 > 5 To calculate the number of parameters in a layer with ten 3 by 3 by 3
 > filters, one needs to multiply the number of parameters per filter (28) by the
@@ -600,21 +601,21 @@
 
 > [!NOTE]
 > 1 Introduction to a deep convolutional neural network for
-> **image classification.**
+> \\*image classification.\\*
 >
-> 2 Example of a **ConvNet** using small images.
+> 2 Example of a \\*ConvNet\\* using small images.
 >
-> 3 Explanation of the **dimensions** and **number of filters** for
+> 3 Explanation of the \\*dimensions\\* and \\*number of filters\\* for
 > each convolutional layer.
 >
-> 4 **Flattening** the output of the **last convolutional layer** into a
+> 4 \\*Flattening\\* the output of the \\*last convolutional layer\\* into a
 > vector for the final prediction.
 >
-> 5 The importance of **selecting** **hyperparameters** in designing
+> 5 The importance of \\*selecting\\* \\*hyperparameters\\* in designing
 > a convolutional neural network.
 >
-> 6 Upcoming guidelines and suggestions for **selecting
-> hyperparameters.**
+> 6 Upcoming guidelines and suggestions for \\*selecting
+> hyperparameters.\\*
 
 <br>
 
@@ -661,30 +662,30 @@
 <a id="node-pjjav1w"></a>
 
 > [!NOTE]
-> 1 ConvNets use **pooling layers** to **reduce representation size**, **increase speed**
-> and **make features more robust.**
+> 1 ConvNets use \\*pooling layers\\* to \\*reduce representation size\\*, \\*increase speed\\*
+> and \\*make features more robust.\\*
 >
-> 2 **Max pooling** is a common type of pooling layer.
+> 2 \\*Max pooling\\* is a common type of pooling layer.
 >
-> 3 In max pooling, the input is divided into regions and the **output is the maximum
-> value of each region.**
+> 3 In max pooling, the input is divided into regions and the \\*output is the maximum
+> value of each region.\\*
 >
-> 4 The **hyperparameters** of max pooling are **filter size** and **stride**, which determine
-> the s**ize of the regions**.
+> 4 The \\*hyperparameters\\* of max pooling are\\* filter size\\* and \\*stride\\*, which determine
+> the s\\*ize of the regions\\*.
 >
-> 5 Max pooling helps **preserve features detected anywhere in the filter**, while
-> **suppressing others that aren't detected**.
+> 5 Max pooling helps \\*preserve features detected anywhere in the filter\\*, while
+> \\*suppressing others that aren't detected\\*.
 >
-> 6 The intuition behind **why max pooling works well** is **not fully understood.**
+> 6 The intuition behind \\*why max pooling works well\\* is \\*not fully understood.\\*
 >
-> 7 Max pooling has **hyperparameters** but no parameters to learn, so it's a **fixed
-> computation.**
+> 7 Max pooling has \\*hyperparameters\\* but no parameters to learn, so it's a \\*fixed
+> computation.\\*
 >
-> 8 The formulas for figuring out the **output size** of convolutional layers also work
+> 8 The formulas for figuring out the \\*output size\\* of convolutional layers also work
 > for max pooling.
 >
-> 9 Max pooling can be applied to **3D** **inputs and the output will have the same
-> dimension.**
+> 9 Max pooling can be applied to \\*3D\\* \\*inputs and the output will have the same
+> dimension.\\*
 
 <br>
 
@@ -783,19 +784,19 @@
 <a id="node-nbifvxz"></a>
 
 > [!NOTE]
-> 1 Convolutional layers have **two main advantages** over fully
-> connected layers: **parameter sharing** and **sparsity of
-> connections.**
+> 1 Convolutional layers have \\*two main advantages\\* over fully
+> connected layers: \\*parameter sharing\\* and \\*sparsity of
+> connections.\\*
 >
-> 2 Convolutional layers have a lot **fewer parameters**, which
-> allows for **smaller training sets and less overfitting**.
+> 2 Convolutional layers have a lot\\* fewer parameters\\*, which
+> allows for \\*smaller training sets and less overfitting\\*.
 >
-> 3 Convolutional neural networks **capture translation invariance**,
-> which helps them **recognize objects regardless of their location**
+> 3 Convolutional neural networks \\*capture translation invariance\\*,
+> which helps them \\*recognize objects regardless of their location\\*
 > in an image.
 >
-> 4 **Training** a convolutional neural network involves using a
-> **labeled training** set to **adjust the weights of the filters** to
+> 4 \\*Training\\* a convolutional neural network involves using a
+> \\*labeled training\\* set to \\*adjust the weights of the filters\\* to
 > produce accurate outputs.
 
 <br>
@@ -876,22 +877,22 @@
 > [!NOTE]
 > 7 Training a convolutional neural network
 >
-> - Building a **labeled training** set for a specific task, such as identifying
+> - Building a \\*labeled training\\* set for a specific task, such as identifying
 > images of cats and dogs.
 >
-> - **Preprocessing** the **data** to **standardize** the **image size** and pixel values.
+> - \\*Preprocessing\\* the \\*data\\* to \\*standardize\\* the \\*image size\\* and pixel values.
 >
-> - **Defining the architecture** of the convolutional neural network, including the
-> **number** and **type of layer**s, **activation** functions, and **optimization** algorithm.
+> - \\*Defining the architecture\\* of the convolutional neural network, including the
+> \\*number\\* and\\* type of layer\\*s, \\*activation\\* functions, and \\*optimization\\* algorithm.
 >
-> - **Initializing the weights** of the network and using **backpropagation** to **adjust
-> the weights** to **minimize the loss** between the **predicted** and actual labels.
+> - \\*Initializing the weights \\*of the network and using \\*backpropagation\\* to \\*adjust
+> the weights\\* to \\*minimize the loss\\* between the \\*predicted\\* and actual labels.
 >
-> - **Evaluating the performance** of the network on a **validation set** and
-> **adjusting the hyperparameters** as necessary.
+> - \\*Evaluating the performance\\* of the network on a \\*validation set\\* and
+> \\*adjusting the hyperparameters\\* as necessary.
 >
-> - Finally, **testing the trained network** on a test set to **evaluate its
-> generalization performance.**
+> - Finally, \\*testing the trained network\\* on a test set to \\*evaluate its
+> generalization performance.\\*
 
 <br>
 
@@ -1038,12 +1039,12 @@
 > vẫn là quan trọng vì nó là một trong những khái niệm
 > khó của Deep Learning
 >
->  • **Convolution functions**, including:
+>  • \\*Convolution functions\\*, including:
 >  ▪ Zero Padding
 >  ▪ Convolve window
 >  ▪ Convolution forward
 >  ▪ Convolution backward (optional)
->  • **Pooling functions**, including:
+>  • \\*Pooling functions\\*, including:
 >  ▪ Pooling forward
 >  ▪ Create mask
 >  ▪ Distribute value
@@ -1400,9 +1401,9 @@
 > of Course 4 of the Deep Learning Specialization.
 >
 > In this notebook you will build ConvNets to create a
-> **mood classifier** and **identify sign language digits**,
-> while gaining familiarity with the **TF Keras Sequential**
-> and **Functional APIs** along the way.
+> \\*mood classifier\\* and \\*identify sign language digits\\*,
+> while gaining familiarity with the \\*TF Keras Sequential\\*
+> and \\*Functional APIs\\* along the way.
 
 <br>
 
@@ -1611,8 +1612,8 @@
 
 > [!NOTE]
 > 4.2 - Split the Data into Train/Test Sets Thực
-> hiện việc **normalization** và dùng custom
-> function **convert_to_one_hot**() để transform
+> hiện việc \\*normalization\\* và dùng custom
+> function \\*convert_to_one_hot\\*() để transform
 > Y_train, Y_test
 
 <br>
@@ -1723,8 +1724,8 @@
 
 > [!NOTE]
 > 4.4 - Train the Model: 
-> Tạo train / test dataset modal cho Conv_model với tf.Dataset.**from_tensor_slices**()
-> Gọi fucntion **fit()** trên conv_model created
+> Tạo train / test dataset modal cho Conv_model với tf.Dataset.\\*from_tensor_slices\\*()
+> Gọi fucntion \\*fit()\\* trên conv_model created
 > ở trên, bỏ vào train_dataset và test_set, no. epochs
 
 <br>
