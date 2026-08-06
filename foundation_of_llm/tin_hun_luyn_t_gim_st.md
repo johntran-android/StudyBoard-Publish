@@ -206,6 +206,8 @@
 >
 > Học sinh hiểu đúng điểm khác biệt quan trọng giữa mô hình ngôn ngữ hoán vị và các phương pháp khác, đặc biệt là không sử dụng 'mask token' theo cách truyền thống. Tuy nhiên, cần bổ sung thêm về cách triển khai thực tế.
 
+**🔗 See also:** [Học không giám sát để tiền huấn luyện](./gii_thiu_m_hnh_ngn_ng_ln.md#node-hsb1v0a)
+
 <br>
 
 <a id="node-hdg9mdo"></a>
@@ -290,6 +292,8 @@
 > **🤖 AI Feedback** — ✅ Score: **90/100**
 >
 > Ghi chú của bạn thể hiện sự hiểu biết rất tốt về cách tiếp cận huấn luyện ELECTRA, đặc biệt là việc nhận diện hai mô hình chính và mục tiêu của chúng. Bạn cũng đã có một nhận định sâu sắc khi liên hệ với GANs.
+
+**🔗 See also:** [Nền tảng Mô hình ngôn ngữ lớn](#node-tzhbd32)
 
 <br>
 
