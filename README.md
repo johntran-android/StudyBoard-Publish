@@ -290,18 +290,18 @@ boudaries, Infinity](mit_1802/lec_10_second_derivative_test_boudaries_infinity.m
 - [Lec 11: Differentials, Chain-rule](mit_1802/lec_11_differentials_chain_rule.md) — `20n / 21i`
 - [Lec 12: Gradient, Directional
 derivative, Tangent Plane](mit_1802/lec_12_gradient_directional_derivative_tangent_plane.md) — `30n / 37i`
-- [Lec 13: Lagrange Multiplier](mit_1802/lec_13_lagrange_multiplier.md) — `33n / 36i`
 - [Lec 14: Non-independent Random
 variables](mit_1802/lec_14_non_independent_random_variables.md) — `32n / 35i`
 - [Lec 15: Partial Differentials Equations](mit_1802/lec_15_partial_differentials_equations.md) — `18n / 19i`
 - [Lec 16: Double Integrals](mit_1802/lec_16_double_integrals.md) — `35n / 37i`
-- [Lec 17: Double Integrals In
-polar Coordinates](mit_1802/lec_17_double_integrals_in_polar_coordinates.md) — `21n / 21i`
 - [Lec 18: Change Of Variables](mit_1802/lec_18_change_of_variables.md) — `33n / 36i`
 - [Lec 19: Vector Fields](mit_1802/lec_19_vector_fields.md) — `36n / 44i`
 - [Lec 20: Path Independence & Conservative Field](mit_1802/lec_20_path_independence_conservative_field.md) — `38n / 43i`
 - [Lec 21: Gradient Field & Potential Function](mit_1802/lec_21_gradient_field_potential_function.md) — `35n / 35i`
 - [Lec 22: Green's Theorem](mit_1802/lec_22_greens_theorem.md) — `26n / 29i`
+- [Lec 13: Lagrange Multiplier](mit_1802/lec_13_lagrange_multiplier.md) — `33n / 36i`
+- [Lec 17: Double Integrals In
+polar Coordinates](mit_1802/lec_17_double_integrals_in_polar_coordinates.md) — `21n / 21i`
 
 ### 📂 MIT 1806 Book (📝 106 Notes | 📸 139 Screenshots)
 <!-- key: mit_1806_book -->
