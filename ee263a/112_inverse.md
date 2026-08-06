@@ -371,5 +371,7 @@
 >
 > Từ đó giúp ta có thuật toán tìm inverse của A
 
+**🔗 See also:** [QR factorization giải hệ tuyến tính](./113_solving_linear_equation.md#node-t4camwj)
+
 <br>
 
