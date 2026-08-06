@@ -188,6 +188,8 @@
 >
 > **GRAD_F = CONSTANT*GRAD_G**
 
+**🔗 See also:** [linked note](./lec_12_gradient_directional_derivative_tangent_plane.md#node-ttjrg7j) · [linked note](./lec_15_partial_differentials_equations.md#node-7wnt4tc)
+
 <br>
 
 <a id="node-qx1rfh0"></a>
@@ -328,6 +330,8 @@
 > [!NOTE]
 > Thế thì theo gs, đối diện với bài toán này, ta không có cách tổng quát
 > để giải. Có khi vấn đề rất dễ mà có khi cũng rất khó
+
+**🔗 See also:** [linked note](./lec_15_partial_differentials_equations.md#node-7wnt4tc)
 
 <br>
 
