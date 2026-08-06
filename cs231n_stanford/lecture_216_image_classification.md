@@ -11,8 +11,6 @@
 
 <a id="node-eae738h"></a>
 
-## Python NumPy Tutorial Guide
-
 <p align="center"><kbd><img src="assets/gy64iml86ru.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -21,8 +19,6 @@
 <br>
 
 <a id="node-qzqhhf2"></a>
-
-### GCE Tutorial Setup
 
 <p align="center"><kbd><img src="assets/zi6rmz1lfgk.png" width="80%"></kbd></p>
 
@@ -39,8 +35,6 @@
 
 <a id="node-sjxnzl6"></a>
 
-##### Computer Learning Cat Patterns
-
 <p align="center"><kbd><img src="assets/h4lh7chyg5.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -51,8 +45,6 @@
 <br>
 
 <a id="node-xf9nbu0"></a>
-
-- **Object Detection Robustness**
 
 <p align="center"><kbd><img src="assets/9li09ebl38i.png" width="80%"></kbd></p>
 
@@ -102,8 +94,6 @@
 
 <a id="node-h1qh0xf"></a>
 
-- **Rule-based Object Recognition Challenges**
-
 <p align="center"><kbd><img src="assets/hjjouwdn98s.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -122,8 +112,6 @@
 
 <a id="node-1g36zbr"></a>
 
-## KNN Image Classification Steps
-
 <p align="center"><kbd><img src="assets/9ywqbxyjiim.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -136,8 +124,6 @@
 
 <a id="node-kwrosvn"></a>
 
-### CIFAR for ML Experimentation
-
 <p align="center"><kbd><img src="assets/rmu5dq5kyum.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -148,8 +134,6 @@
 
 <a id="node-j2zh6if"></a>
 
-#### Stupid but Reasonable Approach
-
 <p align="center"><kbd><img src="assets/0lnafqnk05v.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -159,8 +143,6 @@
 <br>
 
 <a id="node-otdjq35"></a>
-
-##### L1 Image Distance for KNN
 
 <p align="center"><kbd><img src="assets/nk60h0d3z9.png" width="80%"></kbd></p>
 
@@ -179,8 +161,6 @@
 <br>
 
 <a id="node-hxfhgdc"></a>
-
-- **KNN Model Prediction Mechanism**
 
 <p align="center"><kbd><img src="assets/bjbjn2umha8.png" width="80%"></kbd></p>
 
@@ -232,8 +212,6 @@
 
 <a id="node-9oj7i7m"></a>
 
-- **Training vs. Inference Big O**
-
 <p align="center"><kbd><img src="assets/vd3q8bwjhnh.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -269,8 +247,6 @@
 
 <a id="node-kdh49hf"></a>
 
-- **Classification and Pattern Anomalies**
-
 <p align="center"><kbd><img src="assets/7mrzim52agw.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -282,8 +258,6 @@
 <br>
 
 <a id="node-4eepr72"></a>
-
-- **KNN Classifier: Voting and Smoothing**
 
 <p align="center"><kbd><img src="assets/t51z0j1b6g.png" width="80%"></kbd></p>
 
@@ -302,8 +276,6 @@
 
 <a id="node-6bgzffu"></a>
 
-- **Image Prediction Study**
-
 <p align="center"><kbd><img src="assets/6j4pam4srh2.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -313,8 +285,6 @@
 <br>
 
 <a id="node-m6oqdl6"></a>
-
-- **KNN Performance and Misclassification**
 
 <p align="center"><kbd><img src="assets/7fujktkhoz5.png" width="80%"></kbd></p>
 
@@ -326,8 +296,6 @@
 <br>
 
 <a id="node-k2ck3nc"></a>
-
-- **Feature Type and Distance Metric**
 
 <p align="center"><kbd><img src="assets/zwvdhowlcg.png" width="80%"></kbd></p>
 
@@ -348,8 +316,6 @@
 
 <a id="node-3gkubhj"></a>
 
-- **Distance Metric Comparison Plotting**
-
 <p align="center"><kbd><img src="assets/gafugiwk3bj.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -359,8 +325,6 @@
 <br>
 
 <a id="node-8j3aqeq"></a>
-
-- **KNN Hyperparameter Exploration**
 
 <p align="center"><kbd><img src="assets/n3ldd7ysuxm.png" width="80%"></kbd></p>
 
@@ -374,8 +338,6 @@
 
 <a id="node-a4wokob"></a>
 
-- **Human-selected hyperparameters**
-
 <p align="center"><kbd><img src="assets/upgwzkef8ba.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -386,8 +348,6 @@
 
 <a id="node-1dvhi5j"></a>
 
-- **Hyperparameter Tuning Strategies**
-
 <p align="center"><kbd><img src="assets/twka1cj0vu.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -397,8 +357,6 @@
 <br>
 
 <a id="node-4j2ca3l"></a>
-
-- **Overfitting from Training HP Tuning**
 
 <p align="center"><kbd><img src="assets/rzug6r4n4w.png" width="80%"></kbd></p>
 
@@ -419,8 +377,6 @@
 
 <a id="node-b917x60"></a>
 
-- **Test Set Overfitting Pitfalls**
-
 <p align="center"><kbd><img src="assets/9w6ys78wkij.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -439,8 +395,6 @@
 
 <a id="node-7rqo4zh"></a>
 
-- **Test Set Usage Principle**
-
 <p align="center"><kbd><img src="assets/ks6qd9ijm7.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -458,8 +412,6 @@
 
 <a id="node-4dhkefw"></a>
 
-- **K-fold Cross-Validation Applicability**
-
 <p align="center"><kbd><img src="assets/betnbt8wwyr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -476,8 +428,6 @@
 
 <a id="node-ny974sc"></a>
 
-- **Hyperparameter Tuning Performance Analysis**
-
 <p align="center"><kbd><img src="assets/mydudnqhwnb.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -488,8 +438,6 @@
 <br>
 
 <a id="node-o3dlamx"></a>
-
-- **KNN and L2 Distance Limitations**
 
 <p align="center"><kbd><img src="assets/1sjp13sjzmh.png" width="80%"></kbd></p>
 
@@ -506,8 +454,6 @@
 <br>
 
 <a id="node-9gpevd4"></a>
-
-- **Curse Of Dimensionality on KNN**
 
 <p align="center"><kbd><img src="assets/h7wako9m409.png" width="80%"></kbd></p>
 
@@ -539,8 +485,6 @@
 
 <a id="node-xusozdn"></a>
 
-- **K-NN: Algorithm and Tuning**
-
 <p align="center"><kbd><img src="assets/3ztlo5bwtn3.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -563,6 +507,8 @@
 
 <a id="node-bd7vlx7"></a>
 
+### Mạng nơ-ron: Lắp ghép phân loại
+
 <p align="center"><kbd><img src="assets/cjmd8agqi2.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -572,6 +518,8 @@
 <br>
 
 <a id="node-k51mntu"></a>
+
+#### Ghép khối LEGO mô tả ảnh
 
 <p align="center"><kbd><img src="assets/jca2vyfdjot.png" width="80%"></kbd></p>
 
@@ -584,6 +532,8 @@
 
 <a id="node-v496ms7"></a>
 
+##### Kết hợp CNN-RNN trong AI
+
 <p align="center"><kbd><img src="assets/itmfrkit2yg.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -594,6 +544,8 @@
 
 <a id="node-q3aeb00"></a>
 
+- **Nghiên cứu bộ CIFAR10**
+
 <p align="center"><kbd><img src="assets/3vmmae0oc7q.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -602,6 +554,8 @@
 <br>
 
 <a id="node-hn985bg"></a>
+
+- **Phân loại tuyến tính và KNN**
 
 <p align="center"><kbd><img src="assets/zsw0gfpdowk.png" width="80%"></kbd></p>
 
@@ -667,6 +621,8 @@
 <br>
 
 <a id="node-ley4zob"></a>
+
+- **Ý nghĩa hàng ma trận W**
 
 <p align="center"><kbd><img src="assets/r1foriodu4.png" width="80%"></kbd></p>
 
