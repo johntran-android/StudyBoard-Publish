@@ -264,6 +264,8 @@
 > gradient** do grad đi về bị khuếch đại do nhân với
 > activation value  lớn (mà cũng bởi W lớn)
 
+**🔗 See also:** [linked note](./note_neural_network_part_2.md#node-qsy52kc)
+
 <br>
 
 <a id="node-erqwgyi"></a>
@@ -325,6 +327,8 @@
 >
 > Depth = 3, lr 6e-4, ws: 0.006 - 0.01, train acc: 92% 100%
 
+**🔗 See also:** [linked note](./paper_batch_normalization.md#node-kwno76t)
+
 <br>
 
 <a id="node-yekoys4"></a>
@@ -359,6 +363,8 @@
 > nhiệm vụ là làm cái sgd_momentum update. Dựa trên
 > công thức mà làm thôi, còn nguyên lý của cái này thì
 > trong note đã hiểu
+
+**🔗 See also:** [linked note](./note_neural_network_part_3.md#node-e91a8l6)
 
 <br>
 
