@@ -11,6 +11,8 @@
 
 <a id="node-8kkd4d9"></a>
 
+## Tích vô hướng và ứng dụng
+
 <p align="center"><kbd><img src="assets/whpxuq26sz.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -26,6 +28,8 @@
 <br>
 
 <a id="node-ty6aj2z"></a>
+
+### Độ lớn hình chiếu vector
 
 <p align="center"><kbd><img src="assets/pq4if0qtlbp.png" width="80%"></kbd></p>
 
@@ -126,6 +130,8 @@
 
 <a id="node-04irbrz"></a>
 
+#### Diện tích tam giác: Vector và định thức
+
 <p align="center"><kbd><img src="assets/9ac6zkhps6.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -158,6 +164,8 @@
 
 <a id="node-iklpmd0"></a>
 
+##### Diện tích tam giác bằng xoay vector
+
 <p align="center"><kbd><img src="assets/vhg3ewmx9nn.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -183,6 +191,8 @@
 
 <a id="node-x3tt19o"></a>
 
+- **Tính toán phép quay 90 độ**
+
 <p align="center"><kbd><img src="assets/hp08dh3y4nm.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -192,6 +202,8 @@
 <br>
 
 <a id="node-tfkyz6q"></a>
+
+- **Xây dựng ma trận xoay 2D**
 
 <p align="center"><kbd><img src="assets/4k20c9g0jbr.png" width="80%"></kbd></p>
 
@@ -265,6 +277,8 @@
 
 <a id="node-hqstsep"></a>
 
+- **Vector vuông góc A'**
+
 <p align="center"><kbd><img src="assets/f3r7qiq4tjs.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -274,6 +288,8 @@
 <br>
 
 <a id="node-wc2svhz"></a>
+
+- **Determinant và Diện tích Hình Bình Hành**
 
 <p align="center"><kbd><img src="assets/1pe5w78ivbi.png" width="80%"></kbd></p>
 
@@ -290,9 +306,13 @@
 > DIỆN TÍCH HÌNH BÌNH HÀNH TẠO BỞI HAI 2D VECTOR A,B
 > LÀ (TRỊ TUYỆT ĐỐI) CỦA DETERMINANT CỦA CHÚNG
 
+**🔗 See also:** [linked note](./lec_18_change_of_variables.md#node-0jb0hwz) · [linked note](./lec_18_change_of_variables.md#node-x4fkrnp)
+
 <br>
 
 <a id="node-h42wet1"></a>
+
+- **Diện tích tam giác từ định thức**
 
 <p align="center"><kbd><img src="assets/2fzkgveyx8i.png" width="80%"></kbd></p>
 
@@ -328,6 +348,8 @@
 > [!NOTE]
 > và (absolute value của) nó **chính là volume (thể tích)
 > của hình hộp (parallelepiped) tạo bởi 3 vector này**
+
+**🔗 See also:** [linked note](./lec_3_matrix_inverse_matrix.md#node-l4alsam)
 
 <br>
 
