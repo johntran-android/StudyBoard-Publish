@@ -181,6 +181,8 @@
 > đó là, khi nói hàm f liên tục tại x0 thì điều này có nghĩa là lim x->x0 f(x)
 > = f(x0)
 
+**🔗 See also:** [linked note](./lec_4_chain_rule.md#node-jvfb8ys)
+
 <br>
 
 <a id="node-adv1lh6"></a>
