@@ -115,6 +115,8 @@
 > và biểu thức cần tìm limit có tên gọi là
 > **DIFFERENCE QUOTIENT**
 
+**🔗 See also:** [linked note](./lec_3_derivatives.md#node-s2734rr)
+
 <br>
 
 <a id="node-zryukyt"></a>
