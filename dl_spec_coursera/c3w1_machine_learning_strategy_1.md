@@ -68,17 +68,17 @@
 <a id="node-cqk9mdf"></a>
 
 > [!NOTE]
-> In machine learning, "**orthogonalization**"
-> refers to the principle of **separating
-> concerns** so that changes in one aspect of
+> In machine learning, "\\*orthogonalization\\*"
+> refers to the principle of \\*separating
+> concerns\\* so that changes in one aspect of
 > the system do not affect other aspects.
 >
 > Specifically, it means breaking down the
 > machine learning process into modular
 > components, each of which has a specific
 > responsibility, and ensuring that 
-> **changes to one component do not have unintended
-> consequences for other components**. This
+> \\*changes to one component do not have unintended
+> consequences for other components\\*. This
 > makes it easier to develop, debug, and
 > maintain complex machine learning systems.
 
@@ -134,22 +134,22 @@
 <a id="node-9ixhmnn"></a>
 
 > [!NOTE]
-> 1 Using a **single evaluation metric** can help improve progress in a machine
+> 1 Using a \\*single evaluation metric\\* can help improve progress in a machine
 > learning project by quickly determining if the new idea is working better or
 > worse than the last one.
 >
-> 2 **Precision** and **recall** are reasonable ways to evaluate the performance of
+> 2 \\*Precision\\* and \\*recall\\* are reasonable ways to evaluate the performance of
 > classifiers in terms of recognizing images of cats.
 >
-> 3 Using precision and recall as evaluation metrics can present a **problem of
-> tradeoff**, making it difficult to determine which classifier is better if one classifier
+> 3 Using precision and recall as evaluation metrics can present a \\*problem of
+> tradeoff\\*, making it difficult to determine which classifier is better if one classifier
 > does better on recall while the other does better on precision.
 >
-> 4 **Combining precision and recall into a single evaluation metric** can help
+> 4 \\*Combining precision and recall into a single evaluation metric\\* can help
 > quickly select the better classifier. The standard way to combine precision and
 > recall is using an F1 score, which is the harmonic mean of precision and recall.
 >
-> 5 Having **a well-defined dev set and a single evaluation metric allows** for
+> 5 Having \\*a well-defined dev set and a single evaluation metric allows\\* for
 > quicker selection of the better classifier and speeds up the iterative process of
 > improving the machine learning algorithm.
 >
@@ -183,15 +183,15 @@
 <a id="node-159yk7s"></a>
 
 > [!NOTE]
-> 1 Introduction: It is **not always
-> easy to combine** all the  things you care about into a single
+> 1 Introduction: It is \\*not always
+> easy to combine\\* all the  things you care about into a single
 > evaluation metric.
 >
-> 2 Setting up **satisficing** and **optimizing** metrics: It is sometimes
+> 2 Setting up \\*satisficing\\* and \\*optimizing\\* metrics: It is sometimes
 > useful to set up satisficing and optimizing metrics  to evaluate
-> multiple factors. Satisficing metrics are those that **just need to be
-> good enough**,  while optimizing metrics are those that you want to
-> **maximize**.
+> multiple factors. Satisficing metrics are those that\\* just need to be
+> good enough\\*,  while optimizing metrics are those that you want to
+> \\*maximize\\*.
 >
 > 3 Example 1: Combining accuracy and running time to evaluate a
 > cat's classifier.
@@ -204,7 +204,7 @@
 > metrics to quickly evaluate multiple options.   
 >
 > 6 Evaluation metrics
-> must be calculated on a **training set, development set, or test set.**
+> must be calculated on a\\* training set, development set, or test set.\\*
 
 <br>
 
@@ -228,24 +228,24 @@
 <a id="node-7vu5b0t"></a>
 
 > [!NOTE]
-> 1 Setting up training, development and test sets properly is **crucial** for
+> 1 Setting up training, development and test sets properly is \\*crucial\\* for
 > maximizing team efficiency when building machine learning applications.
 >
-> 2 The **dev** set, also known as the development set, is **used to evaluate
-> different models** and pick one to improve for the final test set.
+> 2 The \\*dev\\* set, also known as the development set, is \\*used to evaluate
+> different models\\* and pick one to improve for the final test set.
 >
-> 3 \\/**Dev and test sets need to come from the same distribution**\\/ to avoid
+> 3 \\/\\*Dev and test sets need to come from the same distribution\\*\\/ to avoid
 > unexpected and unwanted results.
 >
-> 4 **Randomly shuffling all data into the dev and test sets** is the best way to
+> 4 \\*Randomly shuffling all data into the dev and test sets\\* is the best way to
 > ensure that both sets have data from all regions and the same distribution.
 >
-> 5 Teams can waste a lot of time and effort by setting up **dev** and **test** sets from
+> 5 Teams can waste a lot of time and effort by setting up \\*dev\\* and \\*test\\* sets from
 > different distributions or not taking into account all possible data sources they
 > may encounter.
 >
-> 6 **Choose a dev set and test set to reflect data expected to be encountered in
-> the future,** and consider important for the application's success.
+> 6 \\*Choose a dev set and test set to reflect data expected to be encountered in
+> the future,\\* and consider important for the application's success.
 
 <br>
 
@@ -309,17 +309,17 @@
 
 > [!NOTE]
 > 1 Introduction  • Guidelines for setting up dev and test sets are changing in the era
-> of Deep Learning.  • The old rule of thumb of a **70/30 split no longer applies**.  • Best
-> practices are to **use more data for training and less for dev and tests**, especially
+> of Deep Learning.  • The old rule of thumb of a \\*70/30 split no longer applies\\*.  • Best
+> practices are to \\*use more data for training and less for dev and tests\\*, especially
 > when dealing with larger data sets.
 >
-> 2 Dev Set  • **Dev sets should come from the same distribution as the test set.**  • The
+> 2 Dev Set  • \\*Dev sets should come from the same distribution as the test set.\\*  • The
 > size of the dev set should be big enough for its purpose, which helps evaluate
 > different ideas and pick up from AOP better.  • When working with larger data sets,
 > using a much smaller fraction of the data for the dev set is reasonable.
 >
-> 3 Test Set  • The purpose of the test set is to **evaluate the final system's
-> performance**.  • The guideline is to set the test set big enough to give high
+> 3 Test Set  • The purpose of the test set is to \\*evaluate the final system's
+> performance\\*.  • The guideline is to set the test set big enough to give high
 > confidence in the overall performance of the system.  • Having millions of examples
 > in the test set may not always be necessary.  • The test set size could be much less
 > than 30% of the data, depending on the application.
@@ -327,12 +327,12 @@
 > 4 Train-Dev Set  • Some applications may not require a high level of confidence in
 > the overall performance of the final system.  • Using a train-dev set and
 > acknowledging the absence of a test set may be appropriate.  • It's not
-> recommended, but **having a large dev set may allow for the absence of a separate
-> test set.**
+> recommended, but \\*having a large dev set may allow for the absence of a separate
+> test set.\\*
 >
 > 5 Changing Evaluation Metrics and Dev/Test Sets  • Sometimes, mid-way through a
-> machine learning problem, it **may be necessary to change the evaluation metric or
-> dev/test sets**.  • It's important to be aware of when to do this and how to properly set
+> machine learning problem, it \\*may be necessary to change the evaluation metric or
+> dev/test sets\\*.  • It's important to be aware of when to do this and how to properly set
 > up the new evaluation metric and dev/test sets.
 
 <br>
@@ -408,20 +408,20 @@
 <a id="node-nw8lw4y"></a>
 
 > [!NOTE]
-> 1 **Evaluation metrics are essential** in ML projects for setting targets and
+> 1 \\*Evaluation metrics are essential\\* in ML projects for setting targets and
 > enabling the team to achieve better results.
 >
-> 2 **Evaluation metrics should be changed when the original metric does not lead
-> to the desired results**. Pornographic images and non-pornographic images
+> 2 \\*Evaluation metrics should be changed when the original metric does not lead
+> to the desired results\\*. Pornographic images and non-pornographic images
 > should be treated differently in evaluation metrics.
 >
-> 3 **Orthogonalization** is a technique that can be used to break ML projects into
+> 3 \\*Orthogonalization\\* is a technique that can be used to break ML projects into
 > separate steps to achieve better results. One step involves defining a metric that
 > captures what one wants to do, while the other step involves placing the target
 > accurately.
 >
-> 4 To achieve better results in ML projects, one needs to **focus on different steps
-> and adjust the knobs** that correspond to these steps.
+> 4 To achieve better results in ML projects, one needs to\\* focus on different steps
+> and adjust the knobs\\* that correspond to these steps.
 
 <br>
 
@@ -572,12 +572,12 @@
 > 2 Progress in accuracy for machine learning tasks tends to be relatively rapid as you
 > approach human-level performance, but then slows down once you surpass it.
 >
-> 3 **Bayes optimal error** is the best possible error for any function mapping from x to y, and it is
-> the theoretical limit that the machine learning algorithm **can approach but never surpass**.
+> 3 \\*Bayes optimal error\\* is the best possible error for any function mapping from x to y, and it is
+> the theoretical limit that the machine learning algorithm \\*can approach but never surpass\\*.
 >
 > 4 Progress often slows down when you surpass human-level performance because the
-> performance is not far from Bayes' optimal error, and **certain tactics for improving
-> performance are harder to apply once the algorithm surpasses human-level performance**.
+> performance is not far from Bayes' optimal error, and \\*certain tactics for improving
+> performance are harder to apply once the algorithm surpasses human-level performance\\*.
 >
 > 5 Comparing to human-level performance is helpful because machine learning algorithms
 > tend to be good at replicating tasks that people can do and catching up to human-level
@@ -639,8 +639,8 @@
 > giảm variance bằng cách sử dụng regularization hoặc tăng số lượng dữ liệu
 > huấn luyện.
 >
-> Bên cạnh đó, ta còn có khái niệm **avoidable bias, là sự chênh lệch giữa lỗi
-> tập huấn luyện và lỗi Bayes**, tức là lỗi tối thiểu mà chúng ta có thể đạt được.
+> Bên cạnh đó, ta còn có khái niệm \\*avoidable bias, là sự chênh lệch giữa lỗi
+> tập huấn luyện và lỗi Bayes\\*, tức là lỗi tối thiểu mà chúng ta có thể đạt được.
 > Nếu mô hình đang có avoidable bias, ta nên tập trung vào giảm bias bằng
 > cách tăng kích thước mạng neural hoặc thời gian huấn luyện. Ngược lại,
 > nếu mô hình đang có phần variance lớn hơn, ta nên tập trung vào giảm
