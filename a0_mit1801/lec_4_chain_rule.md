@@ -89,6 +89,8 @@
 >
 > Như vậy là chứng minh xong
 
+**🔗 See also:** [linked note](./lec_2_limits.md#node-b4tdkfq)
+
 <br>
 
 <a id="node-g2yv8j8"></a>
