@@ -223,6 +223,8 @@
 
 <p align="center"><kbd><img src="assets/j5t5uecsbk.png" width="80%"></kbd></p>
 
+**🔗 See also:** [QR factorization giải hệ tuyến tính](./113_solving_linear_equation.md#node-t4camwj)
+
 <br>
 
 <a id="node-51wzu1o"></a>
