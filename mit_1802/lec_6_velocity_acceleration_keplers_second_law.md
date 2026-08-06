@@ -44,6 +44,8 @@ kepler's Second Law
 > Nếu bánh xe quay với **unit speed**, thì **theta = t** (theta vốn là hàm theo
 > t, và nếu tốc độ quay là unit tức là bằng 1 thì theta = 1*t)
 
+**🔗 See also:** [linked note](./lec_12_gradient_directional_derivative_tangent_plane.md#node-2y7tc9e)
+
 <br>
 
 <a id="node-ba19hnw"></a>
@@ -59,6 +61,8 @@ kepler's Second Law
 >
 > Và component của vector v sẽ có được bằng cách lấy derivative của 
 > từng component của r(t) đối với t: dx/dt, dy/dt, dz/dt
+
+**🔗 See also:** [linked note](#node-uchr2ns)
 
 <br>
 
@@ -336,6 +340,8 @@ kepler's Second Law
 >
 >
 > delta_r / delta_t ~= v <=> **delta_r ~= v * delta_t**
+
+**🔗 See also:** [linked note](#node-ba19hnw)
 
 <br>
 
