@@ -2031,6 +2031,8 @@ better.**
 > Còn ở dưới là derivative của loss w.r.t các vector row của W ứng với incorrect
 > class.
 
+**🔗 See also:** [linked note](#node-iiiulp0)
+
 <br>
 
 <a id="node-f65fv4c"></a>
@@ -2248,6 +2250,8 @@ svm
 <p align="center"><kbd><img src="assets/cm6342bczej.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/drw1fcrz2xm.png" width="80%"></kbd></p>
+
+**🔗 See also:** [linked note](#node-391ims3)
 
 <br>
 
