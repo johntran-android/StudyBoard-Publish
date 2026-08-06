@@ -88,6 +88,8 @@
 >
 > Cái test set/loader cũng tương tự
 
+**🔗 See also:** [linked note](./note_neural_network_part_2.md#node-7scek9b)
+
 <br>
 
 <a id="node-sgd2qe7"></a>
