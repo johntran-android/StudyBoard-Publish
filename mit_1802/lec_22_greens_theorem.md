@@ -189,6 +189,8 @@
 >
 > **Tích phân kép trên vùng R của x . dA = x_bar * Diện tích vùng R**
 
+**🔗 See also:** [linked note](./lec_17_double_integrals_in_polar_coordinates.md#node-8twb2v4) · [linked note](./lec_17_double_integrals_in_polar_coordinates.md#node-8uiv5d5)
+
 <br>
 
 <a id="node-aht7k8c"></a>
@@ -442,6 +444,8 @@
 >
 > tích phân từ a đến b của M(x, f1(x)) dx - tích phân từ a đến b của M(x, f2(x)) dx
 
+**🔗 See also:** [linked note](#node-fie91hk)
+
 <br>
 
 <a id="node-85x7k1b"></a>
@@ -511,6 +515,8 @@
 >
 >
 > Và đây chính là y như vế trái, vậy là ta đã chứng minh xong
+
+**🔗 See also:** [linked note](#node-0c2s8gb)
 
 <br>
 
