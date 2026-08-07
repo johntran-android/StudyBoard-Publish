@@ -1,6 +1,6 @@
 # 3.3.2 Predictive distribution
 
-📊 **Progress:** `3` Notes | `6` Screenshots | `2` AI Reviews
+📊 **Progress:** `4` Notes | `8` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-wdjepxb"></a>
@@ -545,6 +545,266 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Ghi chú của bạn rất xuất sắc, có độ sâu toán học cao khi tự biến đổi công thức Sherman-Morrison để giải thích định lượng hiện tượng 'thắt nút' của phương sai tại điểm dữ liệu quan sát. Để hoàn thiện hơn nữa, bạn có thể giải thích thêm lý do tại sao đường mean màu đỏ gần như nằm ngang ở hình thứ nhất (gợi ý: liên quan đến việc ưu tiên của prior khi chỉ có 1 điểm dữ liệu).
+
+<br>
+
+<a id="node-yslp52z"></a>
+
+#### Covariance of Predictive Distributions
+
+<p align="center"><kbd><img src="assets/oeqagrldmv.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/jkuthurlh0k.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, cùng tìm hiểu đoạn này.
+>
+>
+>
+> Đầu tiên, gs nói cái hình trước, cụ thể là cái bề rộng của dải màu đỏ nhạt tại một vị trí x, như đã hiểu, nó chính là phương sai của predictive distribution f(t|**t**, x, α, β), mà ta đã hiểu nó là normal(t|**m**NTΦ(**x**), 1/β + Φ(**x**)T**S**NΦ(**x**)) tại x (nên gs mới nói rằng: nó chỉ là point-wise predictive variance 1/β + Φ(**x**)T**S**NΦ(**x**) khi xem xét ở khía cạnh nó là hàm theo **x**.
+>
+>
+>
+> Thế thì, như vậy, ta chỉ có thể nhìn vào đồ thị này, để có hiểu rằng, với x cho trước, ta có thể tự tin cỡ nào nếu lấy mean của của predictive distribution, tức **m**NTΦ(**x**) để dự đoán cho t, mà nơi vùng đỏ nhạt phình ra chính là nơi mà mô hình không tự tin lắm (khi dùng **m**NTΦ(**x**) để dự đoán cho t tương ứng với x tại đó
+>
+>
+>
+> Tuy nhiên, gs đề cập đến việc, ta muốn biết sự tương quan của variance tại các vị trí khác nhau (có nghĩa là, ví dụ như tại x1, variance là vầy, tại x2 variance là vầy, nhưng tương quan của chúng thế nào, vì đây là một dạng thông tin khác, cho biết tương quan giữa variance giữa hai điểm) - giống như ta có hai variable X, Y. Var(X), Var(Y) sẽ cho ta biết về mức biến động của nó quanh mean của mỗi đứa, nhưng covariance Cov(X,Y) sẽ cho biết sự tương quan giữa mức biến động của hai thằng với nhau.
+>
+>
+>
+> Thế thì để có được thông tin như vậy, ta sẽ làm như sau:
+>
+>
+>
+> Đại khái là vì ta đã có posterior distribution f(**w**|**t**, **X**, α, β) (hay nếu bỏ **X** đi cho gọn thì là f(**w**|**t**, α, β)). Và giả sử tìm được **w** thì ta sẽ dùng **w**TΦ(**x**) để dự đoán cho t. (chú ý coi chừng lú chỗ này: Ở trên, khi ta nói mình dùng mean của predictive distribution **m**NTΦ(**x**) để dự đoán cho t thì ý là vì đây là cách làm tối ưu, khi thay vì ta đi tìm **w** tốt nhất để lắp vào **w**TΦ(**x**), ta lấy trung bình lại, để có một predictive distribution không còn phụ thuộc **w**, rồi dùng mean của nó để dự đoán. Còn ở đây ta làm theo kiểu cũ - lắp **w** vào **w**TΦ(**x**).
+>
+>
+>
+> Như vậy, ta sẽ làm như sau: sampling w từ posterior distribution, và lắp vào **w**TΦ(**x**), và vẽ đồ thị hàm **w**TΦ(**x**) ra. Kết quả là với mỗi sample, ta được một hàm **w**TΦ(**x**), vẽ đồ thị ra, ta được một đường màu đỏ.
+>
+>
+>
+> Từ đó, nhận xét như sau:
+>
+>
+>
+> Các đường màu đỏ uốn lượn lên xuống rất mượt
+>
+>
+>
+> Và so sánh các hình thì có nhận xét sau:
+>
+>
+>
+> Khi chỉ có một data point, các đường màu đỏ tuy đều cố đi qua điểm data, nhưng sau đó chúng chạy lên chạy xuống tán loạn.
+>
+>
+>
+> Khi tăng số data point lên, các đường màu đỏ sinh ra bắt đầu ít tán loạn hơn.
+>
+>
+>
+> Và khi data là 20 điểm, thì chúng giống như bắt đầu giống giống nhau.
+>
+>
+>
+> Thế thì, ý nghĩa cần hiểu là
+>
+>
+>
+> i) Tại sao khi data càng nhiều thì các đường màu đỏ giống như bắt đầu giống giống nhau?
+>
+>
+>
+> Thì đại ý thế này: Ta đã biết posterior của w là một phân phối normal có mean **m**N và covariance matrix **S**n.
+>
+>
+>
+> Và **S**n (covariance của **w** sau khi có N data point) liên hệ với S0 (prior covariance của **w**, khi chưa có data) qua công thức sau: **S**Ninv = **S**0inv + β**Φ**T**Φ**.
+>
+>
+>
+> Và trong note trước mình cũng đã hiểu **Φ**T**Φ**, với **Φ**, là design matrix có các hàng là các vector Φ(x1), Φ(x2),...Φ(xN). Thì **Φ**T**Φ** sẽ là tổng N các rank 1 matrix tạo bởi outer product của Φ(xj) và chính nó:
+>
+>
+>
+> **Φ**T**Φ** = Σj=1:N Φ(xj)Φ(xj)T.
+>
+>
+>
+> Như vậy ta sẽ thấy rằng: Khi càng có thêm data, thì cái tổng này càng bự ra, khiến giá trị của các phần tử matrix **Φ**T**Φ** sẽ càng lớn. Và có nghĩa **S**Ninv = **S**0inv + β**Φ**T**Φ** cũng sẽ càng lớn. Điều này dẫn đến **S**N là nghịch đảo của **S**Ninv sẽ càng nhỏ lại.
+>
+>
+>
+> Vậy thì hệ quả là gì: Để hiểu, ta cần hiểu ý nghĩa của covariance matrix, nó tương tự như variance σ^2 trong normal đơn biến n(μ, σ^2) vậy: Khi σ^2 càng nhỏ, thì cái dạng hình chuông càng nhọn tại μ, xác suất tập trung cao tại đây. Và ý nghĩa của chuyện này là: NẾU TA SAMPLING TỪ DISTRIBUTION NHỌN NÀY, CÁC GIÁ TRỊ SẼ XUẤT HIỆN GIỐNG GIỐNG NHAU (VÀ GIỐNG μ). Ngược lại, nếu σ^2 lớn, cái xác suất phân tán rộng, nên khi sampling, các giá trị có được sẽ rất khác nhau.
+>
+>
+>
+> Vậy thì ở đây cũng y vậy: khi chỉ có 1 data, **S**1inv còn nhỏ, khiến **S**1 còn lớn, dẫn đến khi sampling **w** từ posterior normal(**m**1, **S**1) thì CÁC GIÁ TRỊ THU ĐƯỢC **w** RẤT KHÁC NHAU, VÀ DO ĐÓ, CÁC HÀM SỐ y(**w**, x) = **w**TΦ(x) CŨNG RẤT KHÁC NHAU ⇒ CÁC ĐƯỜNG MÀU ĐỎ RẤT KHÁC NHAU.
+>
+>
+>
+> Khi data tăng lên, SNinv tăng lên, SN nhỏ lại, nên giống như SAMPLING TỪ MỘT DISTRIBUTION NORMAL CÓ HÌNH CHUÔNG NHỌN HOẮC tại **m**N, kết quả sẽ ra các giá trị w đều giống giống **m**N, và DO ĐÓ, CÁC HÀM **w**TΦ(x) CŨNG TRỞ NÊN GIỐNG NHAU → CÁC ĐƯỜNG MÀU ĐỎ CỦA HÌNH CUỐI GIỐNG NHƯ BÓ LẠI THÀNH 1 BÓ LÀ VẬY
+>
+>
+>
+> ---
+>
+>
+>
+> ii) Bản thân các đường màu đỏ, vì sao chúng lại uốn lượn mượt như vậy?
+>
+>
+>
+> Để hiểu, ta sẽ đi từng bước như sau:
+>
+>
+>
+> Như đã biết, ta đang coi **w** là random variable có distribution là posterior f(**w**|**t**,α,β). Thế thì, với một x fixed, y(x, **w**) = **w**TΦ(x) là một hàm của **w**, nên nó cũng là một random variable. Vậy ta sẽ xét hai random variable sau:
+>
+>
+>
+> y(x1, **w**) và y(x2, **w**), đặt là Y1, Y2 cho gọn
+>
+>
+>
+> và đi xét covarinance của hai random variable này. Dùng công thức Cov(X,Y) đã học trong Stat110 hay Casella, = E\[(X - EX)(Y - EY)\], ta có:
+>
+>
+>
+> Cov(Y1, Y2) = E\[(Y1-EY1)(Y2-EY2)\]
+>
+>
+>
+> = E\[Y1Y2 - (EY1)Y2 - Y1EY2 + (EY1)EY2\]
+>
+>
+>
+> = E(Y1Y2) - E\[(EY1)Y2\] - E\[Y1EY2\] + E\[(EY1)EY2\]
+>
+>
+>
+> = E(Y1Y2) - EY1 EY2 - EY1 EY2 + EY1 EY2
+>
+>
+>
+> = E(Y1Y2) - EY1 EY2
+>
+>
+>
+> = E(**w**TΦ(x1)**w**TΦ(x2)) - E(**w**TΦ(x1)) E(**w**TΦ(x2))
+>
+>
+>
+> Do **w**TΦ(x1) là scalar ⇒ **w**TΦ(x1) = \[**w**TΦ(x1)\]T = Φ(x1)T**w**
+>
+>
+>
+> Và tính linearity của kì vọng cho ta E(**w**TΦ(x1)) = E(**w**)TΦ(x1)), E(**w**TΦ(x2)) = E(**w**)TΦ(x2)),
+>
+>
+>
+> = E(Φ(x1)T**ww**TΦ(x2)) - E(**w**)TΦ(x1)) E(**w**)TΦ(x2))
+>
+>
+>
+> Tiếp tục dùng tính linearity: E(Φ(x1)T**ww**TΦ(x2)) = Φ(x1)TE(**ww**TΦ(x2)) = Φ(x1)TE(**ww**T)Φ(x2)
+>
+>
+>
+> Và dùng tính chất E(**w**)TΦ(x1) là scalar nên E(**w**)TΦ(x1) = \[E(**w**)TΦ(x1)\]T = Φ(x1)TE(**w**)
+>
+>
+>
+> = Φ(x1)TE(**ww**T)Φ(x2) - Φ(x1)TE(**w**) E(**w**)TΦ(x2)
+>
+>
+>
+> Tới đây gom lại (đặt thừa số chung):
+>
+>
+>
+> = Φ(x1)T \[ E(**ww**T) - E(**w**) E(**w**)T\] Φ(x2)
+>
+>
+>
+> Xét cục ở giữa: E(**ww**T) - E(**w**) E(**w**)T, thì đây chính là định nghĩa của cov(**w**, **w**) hay cov(**w**), tức covariance matrix (Xem link).
+>
+>
+>
+> Và **w** \~ prior distribution là normal(m0, posterior là normal(t|**m**N, **S**N)
+>
+>
+>
+> nên cov(**w**, **w**) chính là **S**N
+>
+>
+>
+> Vậy, Cov(Y1, Y2) = Φ(x1)T **S**N Φ(x2)
+>
+>
+>
+> Và kết quả này giúp ta trả lời câu hỏi, Cov(X, Y) sẽ cho biết tương quan của chúng, nếu covariance lớn, thì sẽ biểu hiện xu hướng hai thằng cùng lớn hoặc cùng bé, ví dụ X lớn hơn EX thì Y cũng vậy. Còn ngược lại, nếu nó nhỏ, thì biểu hiện xu hướng một thằng lớn thì thằng kia bé.
+>
+>
+>
+> Vậy, nếu xét x1, x2 là hai điểm gần nhau: x1 ≈ x2, thì dĩ nhiên Φ(x1) sẽ ≈ Φ(x2) tức là hai vector gần trùng nhau.
+>
+>
+>
+> (chú ý Φ(x) là vector chứa các phần tử 1, Φ1(x),...Φ9(x))
+>
+>
+>
+> Và xét Φ(x1)T **S**N Φ(x2)
+>
+>
+>
+> **S**N, là matrix xác định dương (positive definite). Chứng minh rất nhanh thôi:
+>
+>
+>
+> Với covariance matrix, Cov(**X**), có công thức = E\[(**X** - **a**)(**X** - **a**)T\] (xem link, như hồi nãy), sẽ luôn bán xác định dương:
+>
+>
+>
+> Như đã học trong MIT 1806, để chứng minh matrix A positive semi definite, chỉ cần chứng minh quadratic form xTAx của nó không âm khi x khác 0.
+>
+>
+>
+> Vậy ở đây ta xét **z**TCov(**X**)**z**, = **z**TE\[(**X** - **a**)(**X** - **a**)T\]**z** = E\[**z**T(**X** - **a**)(**X** - **a**)T**z**\] (đưa **z** vào, do tính linearity) 
+>
+>
+>
+> = E{ \[(**X** - **a**)T**z**\]T \[(**X** - **a**)T**z**\] }
+>
+>
+>
+> = E{ \[(**X** - **a**)T**z**\]^2} (vì = (**X** - **a**)T**z** là scalar nên tranpose của nó bằng chính nó, nên đây là bình phương của nó.
+>
+>
+>
+> và \[(**X** - **a**)T**z**\]^2 ≥ 0 nên kì vọng cũng không âm, vậy covariance matrix luôn bán xác định dương.
+>
+>
+>
+> Thế thì **S**Ninv = **S**0inv + β**Φ**T**Φ**. Trong đó **S**0 đều là covariance matrix (của posterior và prior) nên sẽ bán xác định dương như vừa chứng minh, nhưng ta biết nó lại được chọn là (1/α)**I**, nên nó xác định dương luôn chứ không bán, và đương nhiên nghịch đảo cũng vậy. Còn **Φ**T**Φ** thì là Gram matrix, đã biết nó cũng bán xác định dương rồi. Vậy tổng hai thằng nhất định xác định dương. Dẫn đến **S**N xác định dương
+>
+>
+>
+> Do đó Φ(x1)T **S**N Φ(x2) ≈ Φ(x1)T **S**N Φ(x1), và đây chính là **quadratic form** của **S**N, với matrix xác định dương, thì **quadratic form** sẽ **luôn là số dương**.
+>
+>
+>
+> Và do đó, với x1 ≈ Φ(x1)T **S**N Φ(x2) = Cov(Y1, Y2) sẽ luôn là số dương, khiến cho Y1, Y2 đều luôn có xu hướng lớn nhỏ cùng nhau và điều này dẫn tới đồ thị đường màu đỏ y(**w**, x) = **w**TΦ(x) SẼ UỐN LƯỢN, VÌ CÁI SỰ UỐN LƯỢN NÀY CHÍNH LÀ HỆ QỦA VIỆC VIỆC HAI ĐIỂM X GẦN NHAU SẼ CÓ XU HƯỚNG CÓ GIÁ TRỊ HÀM SỐ GIỐNG NHAU, NẾU KHÔNG, ĐỒ THỊ SẼ GIẬT CỤC NHƯ RĂNG CƯA VẬY.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Excellent note with exceptionally clear intuition and rigorous mathematical derivation of the covariance between predictions. To make it even better, you could explicitly mention that the smoothness also depends on the choice of continuous basis functions, such as Gaussians.
+
+**🔗 See also:** [Ma trận Hiệp Phương Sai](./1212_probability_densities_expectations_covariances.md#node-jrsj465)
 
 <br>
 
