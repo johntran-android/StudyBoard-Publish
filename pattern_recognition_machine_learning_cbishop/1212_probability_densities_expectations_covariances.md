@@ -880,5 +880,7 @@
 >
 > = E[**XY**T] - (E**X**)E(**Y**T), chính là công thức 1.42
 
+**🔗 See also:** [Covariance of Predictive Distributions](./332_predictive_distribution.md#node-yslp52z)
+
 <br>
 
