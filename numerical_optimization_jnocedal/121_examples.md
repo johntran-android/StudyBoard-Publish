@@ -1,6 +1,6 @@
 # 12.1 Examples
 
-📊 **Progress:** `2` Notes | `2` Screenshots | `2` AI Reviews
+📊 **Progress:** `3` Notes | `3` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-frx2ram"></a>
@@ -130,6 +130,42 @@
 > **🤖 AI Feedback** — ✅ Score: **92/100**
 >
 > Bản ghi chép rất chi tiết, chính xác và thể hiện sự hiểu bài sâu sắc về khái niệm tập khả thi cũng như cách xác định nghiệm tối ưu bằng trực quan. Tuy nhiên, bạn đã nhầm lẫn điểm ví dụ từ tọa độ $(\sqrt{2}, 0)^T$ trong sách thành $(0, \sqrt{2})$, dẫn đến lập luận hướng di chuyển giảm hàm mục tiêu chưa hoàn toàn chính xác.
+
+<br>
+
+<a id="node-7fdsp9e"></a>
+
+#### First-Order Optimality Condition
+
+<p align="center"><kbd><img src="assets/58thm3fphf8.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Trong phần tiếp theo, tác giả chỉ ra rằng khi quan sát Hình 12.3, tại điểm tối ưu (solution), vector pháp tuyến (normal vector) của hàm ràng buộc C1 sẽ song song (parallel) với vector gradient của hàm mục tiêu f. Về mặt toán học, điều này được biểu diễn bằng việc tồn tại một hệ số lambda sao cho gradient của f tại điểm tối ưu sẽ bằng lambda nhân với gradient của C1 tại điểm tối ưu đó. Đây là kiến thức về nhân tử Lagrange (Lagrange multiplier) đã được học trong khóa Giải tích đa biến MIT 18.02. Trước khi bước sang phần sau để đọc lời giải thích của Giáo sư Nocedal, mình sẽ thử áp dụng phương pháp chủ động gợi nhớ (active recall) để tự giải thích lại hiện tượng này.
+>
+>
+>
+> Trong bài giảng đó, gs người Pháp Denis Auroux đặt ra bài toán đại ý là tìm cực trị của hàm số f(x) với constraint g(x) = 0. Với g(x) = 0 biểu diễn một phương trình đường hyperbol.
+>
+>
+>
+> Và thật ra ở bài giảng đó, với tư cách là lớp giải tích đại cương, gs không đi vào chứng minh mà chỉ kiểu như đưa ra một lập luận trực giác đó là: điểm cực trị (có thể là cực tiểu hoặc cực đại) của f thỏa ràng buộc này, **SẼ LÀ ĐIỂM TIẾP XÚC GIỮA LEVEL CURVE CỦA f và LEVEL CURVE CỦA g** (g(x) = 0, chính là 0-level set của g(x)). Và điều này dễ hiểu về trực giác như sau: Nếu x\* không phải là điểm tiếp xúc của f(x\*)-level curve của f(x) và 0-level curve của g(x) thì nhưng vậy có thễ đi theo level curve của g theo hướng nào đó để mà xuống level curve nhỏ hơn (tức là có thể còn giảm f hơn nữa). Chỉ khi thỏa điều kiện trên, thì khi đó, đi trên 0-level curve của g ra khỏi x\* theo hướng nào thì cũng đều là đi "ra" level curve cao hơn của f, khiến hàm f tăng, khi đó x\* mới là cực trị.
+>
+>
+>
+> Và dựa vào lập luận mang tính trực giác này, ta sẽ rút ra các kết quả:
+>
+>
+>
+> Vì gradient sẽ luôn vuông góc với level curve. Nên ∇f vuông góc với tiếp tuyến u của f(x\*)-level curve tại x\*, và ∇g vuông góc với tiếp tuyến v của 0-level curve của g(x). Mà x\* là tiếp điểm của hai level curve này, nên hai cái tiếp tuyến trên là một. Từ đó suy ra: ∇f(x\*) vuông góc u, ∇g(x\*) cũng vuông góc u. Nên ∇f(x\*) trùng hướng với ∇g(x\*). Và thể hiện toán học là tồn tại số scalar λ nào đó để:
+>
+>
+>
+> ∇f(x\*) = λ∇g(x\*)
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Ghi chú của bạn rất xuất sắc, không chỉ tóm tắt chính xác nội dung từ sách mà còn giải thích rất trực quan và chuẩn xác bản chất hình học của nhân tử Lagrange thông qua các đường mức (level curves) và gradient. Sự liên hệ với kiến thức từ khóa học MIT 18.02 giúp củng cố tư duy chủ động và đào sâu hiểu biết rất tốt.
 
 <br>
 
