@@ -781,7 +781,7 @@ mixture Distribution
 >
 > **⇔ Var(X) = E[Var(X|Y)] - Var(EX|Y)**
 
-**🔗 See also:** [Định lý Rao-Blackwell](./73_methods_of_evaluating_estimators.md#node-aixo4xg) · [Example 10.1.10 Large-sample Mixture Variances](./101_point_estimation.md#node-slkl4m8)
+**🔗 See also:** [Định lý Rao-Blackwell](./73_methods_of_evaluating_estimators.md#node-aixo4xg) · [Example 10.1.10 Large-sample Mixture Variances](./101_point_estimation.md#node-slkl4m8) · [Delta-Contamination Model](./102_robustness.md#node-bazw9hn)
 
 <br>
 
