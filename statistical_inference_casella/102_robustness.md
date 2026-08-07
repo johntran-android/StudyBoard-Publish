@@ -1,11 +1,17 @@
 # 10.2 Robustness
 
-📊 **Progress:** `3` Notes | `3` Screenshots | `3` AI Reviews
+📊 **Progress:** `4` Notes | `5` Screenshots | `4` AI Reviews
 
 ---
-<a id="node-wah0nty"></a>
+<a id="node-o8s85wd"></a>
 
 ## 10.2 Robustness
+
+<br>
+
+<a id="node-wah0nty"></a>
+
+## Tính robust của ước lượng
 
 <p align="center"><kbd><img src="assets/kmefret33e.png" width="80%"></kbd></p>
 
@@ -37,7 +43,7 @@
 
 <a id="node-xdhfotf"></a>
 
-## Huber's Criteria for Robustness
+### Huber's Criteria for Robustness
 
 <p align="center"><kbd><img src="assets/bkhgj3ek6x.png" width="80%"></kbd></p>
 
@@ -65,7 +71,7 @@
 
 <a id="node-3pctii6"></a>
 
-### Robustness of the Sample Mean
+#### Robustness of the Sample Mean
 
 <p align="center"><kbd><img src="assets/8286i3qtyc3.png" width="80%"></kbd></p>
 
@@ -182,6 +188,232 @@
 > Ghi chú rất xuất sắc và chi tiết khi bạn đã chủ động tự chứng minh lại định lý Cramer-Rao Lower Bound để làm rõ ví dụ trong sách. Có một lỗi nhỏ về dấu ở bước trung gian khi lấy đạo hàm theo $\mu$, nhưng kết quả biến đổi cuối cùng vẫn hoàn toàn chính xác.
 
 **🔗 See also:** [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c) · [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m)
+
+<br>
+
+<a id="node-bazw9hn"></a>
+
+##### Delta-Contamination Model
+
+<p align="center"><kbd><img src="assets/sjxoau8i8xb.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Cùng nhau hiểu đoạn này:
+>
+>
+>
+> Đoạn trước ta đã thấy Xar thỏa tiêu chí thứ nhất của một robust estimator: Đó là nó khá efficient, thể hiện qua việc Var(Xr) qủa thật chính là Cramer Rao Lower Bound - mức variance nhỏ nhất mà một estimator có thể đạt được.
+>
+>
+>
+> Đoạn này đại khái là xét qua đặc tính thứ hai: Rằng liệu là Xbar có thỏa tính chất là khi giả định ban đầu sai, thì sự ảnh hưởng sẽ chỉ nhỏ thôi. Thì để làm vậy, đầu tiên ta sẽ định nghĩa cụ thể hơn cái đặc tính trên là như thế nào cái đã.
+>
+>
+>
+> Một cách tiếp cận phổ biến là dùng cái gọi là δ-contamination model:
+>
+>
+>
+> Đó là ta sẽ giả sử Xi sẽ tuân theo phân phối n(μ, σ^2) với xác suất 1-δ và f(x) (có mean θ, variance τ^2) với xác suất δ.
+>
+>
+>
+> Ta có thể mô tả thông qua một biến Y, Bern(δ): Xi \~ n(μ, σ^2) khi Y=0 (xác suất 1-δ) và Xi \~ f(x) khi Y=1 (xác suất δ)
+>
+>
+>
+> Khi đó Var(Xbar) sẽ là theo công thức (1-δ)σ^2/n + δτ^2/n + δ(1-δ)(θ-μ)^2/n
+>
+>
+>
+> Công thức này là sao?
+>
+>
+>
+> Dựa vào identity trong Theorem 4.4.7: Var(X) = E\[Var(X|Y)\] + Var(E\[X|Y\]) ta sẽ có:
+>
+>
+>
+> Gọi Y là random variable \~ Bern(δ)
+>
+>
+>
+> Var(Xi) = E\[Var(Xi|Y)\] + Var(E\[Xi|Y\])
+>
+>
+>
+> i) Xét E\[Var(Xi|Y)\]. Phân tích chút về nó, Var(Xi|Y) là gì? Nó chính là, random variable có được khi áp hàm g(y) sau đây lên random variable Y: g(y) = Var(Xi|y). Cái hàm này sẽ nhận vào y, và trả ra variance của Xi dựa trên Y=y. Do đó, dĩ nhiên là ta có thể lấy kì vọng của random variable Var(Xi|Y) này. Và áp dụng LOTUS, cho ta tính kì vọng này, và dụng thực tế rằng Y là discrete variable có hai possible value 0,1 với xác suất 1-δ, và δ nên:
+>
+>
+>
+> E\[Var(Xi|Y)\] = Var(Xi|Y=0) × P(Y=0) + Var(Xi|Y=1) × P(Y=1)
+>
+>
+>
+> Khi Y=0, thì Xi \~ n(μ, σ) → Var(Xi) = σ^2 và khi Y=1 thì Xi \~ f(x) có variance τ^2 → Var(Xi) = τ^2
+>
+>
+>
+> ..= σ^2 × (1-δ) + τ^2 × δ
+>
+>
+>
+> = (1-δ) σ^2 + δ τ^2
+>
+>
+>
+> ---
+>
+>
+>
+> ii) Xét Var(E\[Xi|Y\]): Thì E\[Xi|Y\], cũng là random variable, có được bằng cách áp hàm E\[Xi|y\] (hàm nhận vào giá trị của Y, và tính mean của Xi tùy theo Y bằng mấy) lên random variable Y, thành ra mới nói đến việc tính variance của E\[Xi|Y\], chứ nếu nó là constant thì variance đã bằng 0 rồi).
+>
+>
+>
+> Thế thì, theo công thức tính của variance: Var(X) = E(X^2) - (EX)^2,
+>
+>
+>
+> nên Var\[E\[Xi|Y\]\] = E{\[E\[Xi|Y\]\]^2} - {E\[E\[Xi|Y\]\]}^2
+>
+>
+>
+> iia) Tính E\[E\[Xi|Y\]\], như đã nói, E\[Xi|Y\] là random variable bởi hàm E\[Xi|y\] áp lên Y, nên dùng LOTUS cho phép ta tính kì vọng:
+>
+>
+>
+> E\[E\[Xi|Y\]\] = E\[Xi|Y=1\] × P(Y=1) + E\[Xi|Y=0\] × P(Y=0)
+>
+>
+>
+> = E\[Xi|Xi\~f(x), có mean θ\] × δ + E\[Xi|Xi\~n(μ, σ^2)\] × (1-δ)
+>
+>
+>
+> = θ × δ + μ × (1-δ)
+>
+>
+>
+> = θδ + μ(1-δ)
+>
+>
+>
+> ⇒ {E\[E\[Xi|Y\]\]}^2 = \[θδ + μ(1-δ)\]^2
+>
+>
+>
+> iib) Tính E{\[E\[Xi|Y\]\]^2}, tương tự, \[E\[Xi|Y\]\]^2 là random variable có được bởi việc áp hàm \[E\[Xi|y\]\]^2 lên random variable Y, theo LOTUS ta có:
+>
+>
+>
+> E{\[E\[Xi|Y\]\]^2}
+>
+>
+>
+> = \[E\[Xi|Y=1\]\]^2 × P(Y=1) + \[E\[Xi|Y=0\]\]^2 × P(Y=0)
+>
+>
+>
+> = (θ)^2 × δ + (μ)^2 × (1-δ)
+>
+>
+>
+> = δ(θ)^2 + (1-δ)(μ)^2
+>
+>
+>
+> Vậy ghép hai term lại ta có:
+>
+>
+>
+> δ(θ^2) + (1-δ)(μ)^2 - \[θδ + μ(1-δ)\]^2
+>
+>
+>
+> = δ(θ^2) + (1-δ) μ^2 - δ^2θ^2 - μ^2 (1-δ)^2 - 2θδμ(1-δ)
+>
+>
+>
+> = δ(θ^2) - δ^2θ^2 + μ^2\[1 - δ - (1-δ)^2\] - 2θδμ(1-δ)
+>
+>
+>
+> = δ(θ^2)(1 - δ) + μ^2\[1 - δ - 1 - δ^2 + 2δ\] - 2θδμ(1-δ)
+>
+>
+>
+> = δ(θ^2)(1 - δ) + μ^2(δ - δ^2) - 2θδμ(1-δ)
+>
+>
+>
+> = δ(θ^2)(1 - δ) + μ^2δ(1 - δ) - 2θδμ(1 - δ)
+>
+>
+>
+> = (1 - δ) \[δ(θ^2) + μ^2δ - 2θδμ\]
+>
+>
+>
+> = (1 - δ) δ (θ^2 + μ^2 - 2θμ)
+>
+>
+>
+> = (1 - δ) δ (θ - μ)^2 
+>
+>
+>
+> Vậy kết luận Var(Xi) = (1-δ) σ^2 + δ τ^2 + (1 - δ) δ (θ - μ)^2 
+>
+>
+>
+> Và Var(Xbar) luôn = Var(Xi) / n
+>
+>
+>
+> ⇒ Var(Xbar) = (1-δ) σ^2/n + δ τ^2/n + (1 - δ) δ (θ - μ)^2/n
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+>  Thế thì đại ý là, khi θ ≈ μ và τ^2 ≈ σ^2 thì Var(Xbar), với công thức trên sẽ là:
+>
+>
+>
+> ≈ (1-δ) σ^2/n + δ τ^2/n + 0  (do θ ≈ μ nên (1 - δ) δ (θ - μ)^2/n ≈ 0)
+>
+>
+>
+> ≈ (1-δ) σ^2/n + δ σ^2/n  (do θ ≈ μ)
+>
+>
+>
+> = σ^2/n = Var(Xbar) ban đâù. Có nghĩa là, nếu như vì lí do nào đó, giả định mô hình (rằng Xi \~ n(μ, σ^2)) là sai, thì trong trường hợp mà phân phối xác suất thật sự của Xi khi đó có mean và variance không khác mấy so với giả định ban đầu (chỉ là nó không phải là normal thôi). Thì khi đó, variance của Xbar vẫn là σ^2/n, tức là nó vẫn là efficient estimator (do variance đạt mức nhỏ nhất - CRLB)
+>
+>
+>
+> Tuy nhiên, chỉ cần f(x) là Cauchy, thì τ^2 lập tức là ∞ (đây là tính chất của Cauchy). khi đó, dù xác suất rất nhỏ δ, và n rất lớn, cũng không thể ngăn δ τ^2/n biến thành con số rất lớn → Var(Xbar) trở nên rất lớn, không còn là một efficient estimator nữa.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Ghi chú của bạn cực kỳ xuất sắc và chính xác, đặc biệt là phần tự chứng minh chi tiết công thức bằng Luật phương sai toàn phần vốn không có sẵn trong sách. Cách bạn giải thích ý nghĩa thực tế khi mô hình bị nhiễu bởi phân phối Cauchy cũng rất trực quan và rõ ràng.
+
+**🔗 See also:** [Định lý phương sai toàn phần](./44_hierarchical_model_mixture_distribution.md#node-ivmktz5) · [Eve's Law of Total Variance *(STAT110_Havard)*](../stat110_havard/lec_27_conditional_expectation_given_an_rv.md#node-qtzyzjc)
+
+<br>
+
+<a id="node-6rvo106"></a>
+
+- **Definition 10.2.2 Breakdown Value**
+
+<p align="center"><kbd><img src="assets/7szolja24zi.png" width="80%"></kbd></p>
+
+**🔗 See also:** [Quy ước làm tròn phân vị mẫu](./54_order_statistic.md#node-87bnmo9)
 
 <br>
 
