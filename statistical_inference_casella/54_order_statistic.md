@@ -202,8 +202,7 @@
 <p align="center"><kbd><img src="assets/u7pss3bb8nn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đại khái là ta biết thêm một kí hiệu: {b} là con số làm tròn đến con số nguyên
-> gần nhất. Ví dụ {4.2} = 4, {5.7} = 6
+> đại khái là ta biết thêm một kí hiệu: {b} là con số làm tròn đến con số nguyên gần nhất. Ví dụ {4.2} = 4, {5.7} = 6
 >
 >
 >
@@ -211,24 +210,23 @@
 >
 >
 >
-> X({np}) khi 1/2n < p < 0.5 và X(n+1-{n(1-p)} khi 0.5 < p < 1 - 1/2n
+> X({np}) khi 1/2n &lt; p &lt; 0.5 và X(n+1-{n(1-p)} khi 0.5 &lt; p &lt; 1 - 1/2n
 >
 >
 >
-> Ôn lại tí, X(1) là một order statistic, cụ thể nó là cái nhỏ nhất trong các X1,...Xn
-> (nhìn thế này: nó là kết quả của việc apply function min vào bộ X1,..Xn)
+> (Chú ý (100p)th percentile ý là, ví dụ như 65th percentile thì p = 0.65)
 >
 >
 >
-> Vậy thì X({np}) thì là sao, là ta lấy con số np, đem làm tròn đến số nguyên gần
-> nhất, ví dụ ra 5 thì ta có X(5), cái random variable nhỏ thứ 5 trong các X1,...Xn
+> Ôn lại tí, X(1) là một order statistic, cụ thể nó là cái nhỏ nhất trong các X1,...Xn (nhìn thế này: nó là kết quả của việc apply function min vào bộ X1,..Xn)
 >
 >
 >
-> Nên quay lại đây, ví dụ như nói về cái statistic: 65th sample percentile, thì nó
-> (theo định nghĩa, hay ý nghĩa, là con số mà, 65% các random variable trong
-> đám X1,...Xn đều nhỏ hơn), còn cụ thể nó là gì, thì theo công thức trên nó
-> là X(n+1-{n(1-p)} = X(12+1-{4.2}) = X(9)
+> Vậy thì X({np}) thì là sao, là ta lấy con số np, đem làm tròn đến số nguyên gần nhất, ví dụ ra 5 thì ta có X(5), cái random variable nhỏ thứ 5 trong các X1,...Xn
+>
+>
+>
+> Nên quay lại đây, ví dụ như nói về cái statistic: 65th sample percentile, thì nó (theo định nghĩa, hay ý nghĩa, là con số mà, 65% các random variable trong đám X1,...Xn đều nhỏ hơn), còn cụ thể nó là gì, thì theo công thức trên nó là X(n+1-{n(1-p)} = X(12+1-{4.2}) = X(9)
 
 **🔗 See also:** [Definition 10.2.2 Breakdown Value](./102_robustness.md#node-6rvo106)
 
