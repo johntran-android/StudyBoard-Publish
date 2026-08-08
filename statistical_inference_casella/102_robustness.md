@@ -1,6 +1,6 @@
 # 10.2 Robustness
 
-📊 **Progress:** `4` Notes | `5` Screenshots | `4` AI Reviews
+📊 **Progress:** `5` Notes | `5` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-o8s85wd"></a>
@@ -412,6 +412,58 @@
 - **Definition 10.2.2 Breakdown Value**
 
 <p align="center"><kbd><img src="assets/7szolja24zi.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Hiểu đại khái như sau, để check qua tiêu chí thứ 3 của một robust statistic: Khi giả định ban đầu sai hoàn toàn thì cũng không gây ra thảm họa.
+>
+>
+>
+> Thế thì, gs cho biết, ta sẽ dùng sự kiện sau đây để thể hiện sự kiện giả định ban đầu sai hoàn toàn: là trong số các giá trị quan sát được, thì bỗng nhiên có giá trị vô cùng lớn (thể hiện toán học là X(n), tức cái n'th order statistic, tức là thằng có giá trị lớn nhất trong mẫu, tiến đến ∞.
+>
+>
+>
+> Và trước khi nói tiếp, ta sẽ học thêm 1 khái niệm: breakdown value của một statistic.
+>
+>
+>
+> Định nghĩa của cái gọi là breakdown value b: Hiểu nôm na, giả sử ta có random sample size n: X1,...Xn và xếp thành từ nhỏ đến lớn (bộ order statistic X(1),...X(n). Và Tn là một statistic (dĩ nhiên theo định nghĩa, là một hàm của sample) 
+>
+>
+>
+> Và giả sử ta lấy con số làm mốc để chia bộ giá trị của sample (sắp xếp từ nhỏ đến lớn) thành 2 phần, và ta lấy phần từ mốc bên phải b trở đi, đem cho lớn vô cùng. Thì nếu b là con số sao cho chỉ cần nếu lớn hơn mốc này chút xíu thì hành động trên sẽ khiến statistic Tn tăng vọt lên vô cùng. Còn nếu vẫn chỉ lấy từ mốc b thì Tn vẫn hữu hạn. Thì khi đó mốc b chính là breakdown value của Tn.
+>
+>
+>
+> Thể hiện cái ý trên bằng toán chính là:
+>
+>
+>
+> lim X({(1-b)n}) → ∞ {Tn} &lt; ∞ và lim X({(1-(b+ε))n}) → ∞ {Tn} = ∞
+>
+>
+>
+> Có thể ôn lại (theo link) cái kí hiệu percentile, nhưng đại ý là vầy:
+>
+>
+>
+> {(1-b)n} là ta tính giá trị của (1-b)n, và làm tròn về giá trị nguyên gần nhất. Ví dụ 7.2 thì {7.2} = 7, và X{7} là cái 7'th order statistic, tức là ta sẽ là cái statistic có được bằng cách áp hàm sau đây vào sample **X**: X{7} = lấy ra thằng nhỏ thứ 7 của đám X1,...Xn, hay xếp giá trị của X1,....Xn từ nhỏ đến lớn, rồi đưa cho tao thằng thứ 7 (nói như vậy có thể thấy nó là một hàm số).
+>
+>
+>
+> Khi đó ta hiểu X{(1-b)n} chỉ là cái thằng order statistic nào đó thôi, và việc cho nó lớn vô cùng dĩ nhiên cũng đồng nghĩa là cho đám order statistic từ nó trở lên lớn vô cùng.
+>
+>
+>
+> Vậy thì lim X({(1-b)n}) → ∞ {Tn} &lt; ∞ có nghĩa là cho cái đám order statistic từ cái mốc tính bởi b lớn vô cùng thì Tn vẫn không vọt lên vô cùng. Trong khi chỉ nhích b lên tí xíu thành b + ε và làm tương tự thì lại khíến Tn vọt lên vô cùng. 
+>
+>
+>
+> Do đó ta hình dung b giống như cái ngưỡng mà Tn chịu hết nổi, giống như con lừa đang bị chở nặng đến mức cực hạn, để gánh thêm cái áo nhẹ thênh thì cũng đủ nó quỵ xuống.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú giải thích rất trực quan, chính xác bản chất toán học của breakdown value và sử dụng hình ảnh so sánh sinh động (con lừa gánh nặng). Để hoàn thiện hơn, bạn có thể nhấn mạnh thêm rằng b đại diện cho tỷ lệ phần trăm dữ liệu bị lỗi tối đa mà statistic có thể chịu đựng.
 
 **🔗 See also:** [Quy ước làm tròn phân vị mẫu](./54_order_statistic.md#node-87bnmo9)
 
