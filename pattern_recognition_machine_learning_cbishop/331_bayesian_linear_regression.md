@@ -1,6 +1,6 @@
 # 3.3.1 Bayesian Linear Regression
 
-📊 **Progress:** `7` Notes | `11` Screenshots | `7` AI Reviews
+📊 **Progress:** `8` Notes | `12` Screenshots | `8` AI Reviews
 
 ---
 <a id="node-2o000zc"></a>
@@ -295,9 +295,40 @@
 
 <br>
 
+<a id="node-nt82rck"></a>
+
+#### Gaussian Prior and Posterior Parameters
+
+<p align="center"><kbd><img src="assets/00fu18cuswuei.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, đoạn này để ý là dựa trên kết quả, mình có được về cái phân phối hậu nghiệm có dạng là một phân phối chuẩn, hay còn gọi là normal hay là Gaussians. Thì ta biết cái phân phối chuẩn đó, nó có một cái đặc điểm là hình dạng đồ thị của hàm phân phối, nó sẽ như cái hình cái chuông, có cái tâm của cái chuông là ngay tại tham số location của phân phối. Và ý nghĩa của nó đó là khi mà càng gần tâm thì giá trị của hàm PDF nó sẽ càng lớn và nó lớn nhất ở tại tâm. Và khi đi ra khỏi xa tâm đó thì hàm PDF sẽ giảm xuống, xác suất sẽ giảm xuống, trở hình cái chuông. Vậy thì ý chính ở đây nó là vì phân phối hậu nghiệm mình xây dựng được có dạng của phân phối chuẩn, do đó nếu như ta dựa vào phân phối hậu nghiệm của tham số W để mà đưa ra một cái ước lượng điểm, một cái point estimation cho giá trị của W, thì đương nhiên là có nhiều cách, và một trong những cách đó đó là dùng cái giá trị của W mà có phân phối hậu nghiệm cao nhất. Vậy thì đương nhiên trong trường hợp này, nếu mình dùng theo cách làm đó, thì chỉ đơn giản là lấy cái mean, lấy cái tâm của cái phân phối hậu nghiệm ra. Và do đó người ta mới nói đó là cái maximum posterior weight vector đó nó chỉ đơn giản là mean của phân phối hậu nghiệm vừa tìm được.
+>
+>   \
+> Vậy thì mình phải hiểu rằng là cái việc mình đi tìm tham số W chính là việc giải một cái bài toán ước lượng điểm. Tuy nhiên, mình đang tiếp cận theo trường phái Bayesians, nó khác với cách tiếp cận của trường phái cổ điển. Khi mà mình đi tìm cái gọi là Maximum Likelihood Estimator đó của W thì thật ra mình đang đi theo trường phái cổ điển. Trong đó, ta coi giá trị của W, tức là tham số, chỉ là một giá trị cố định nhưng mà chưa biết, và mục đích là tìm một cái hàm số, một cái statistic, sao cho khi mà mình gắn giá trị của sample vào, tức là giá trị quan sát được của mẫu, thì mình sẽ có được một cái giá trị ước lượng, sao cho tốt nhất đối với giá trị mà mình không biết của tham số. Và để giải bài toán đó thì một cái cách làm hợp lý hoặc một cái cách làm mà tương đối tốt mà giới thống kê hay dùng đó là ước lượng hợp lý nhất, tức là Maximum Likelihood Estimation. Nhưng mà khi mình chuyển qua trường phái Bayesian thì cách tiếp cận của nó sẽ coi giá trị của W, hoặc là nó coi W là một biến ngẫu nhiên. Và vì nó coi là biến ngẫu nhiên cho nên mình sẽ định ra cái phân phối tiên nghiệm của nó và sau đó xây dựng phân phối hậu nghiệm là phân phối của tham số dựa trên giá trị quan sát được của mẫu, gọi là phân phối hậu nghiệm. Thì cái việc xây dựng này nó dựa trên cái định lý Bayes cho nên mới gọi đây là trường phái Bayesians. Vậy thì cái chính cần hiểu đó là mình sẽ tìm ra cái phân phối hậu nghiệm của W, nhưng bài toán ban đầu đặt ra yêu cầu là tìm ra một cái ước lượng điểm cho W. Do đó, mình có phân phối hậu nghiệm thì mình vẫn phải đi tìm hoặc là vẫn phải đưa ra một cái lựa chọn cho ước lượng điểm. Và có nhiều cách để làm, thì cách đơn giản nhất hoặc là một trong những cách đó chính là dùng ước lượng điểm hoặc là dùng cái giá trị W mà có phân phối hậu nghiệm lớn nhất.\
+> \
+> Cái câu tiếp theo giáo sư nói đó là như ở trên là mình đang chọn cái hàm phân phối tiên nghiệm của w, nó là một cái phân phối chuẩn có mean zero và có cái ma trận hiệp phương sai là 1/alpha nhân I. Thì mình hiểu đại khái là cái hình dạng của cái phân phối tiên nghiệm nó sẽ thể hiện như sau, tức là nó thể hiện một cái niềm tin rằng cái giá trị của tham số nó sẽ đâu đó tập trung ở quanh cái mốc zero, tức là các cái biến ngẫu nhiên w1, w2, vân vân sẽ có cái giá trị tập trung quanh mốc zero. Nhưng mà đương nhiên vì nó là biến ngẫu nhiên cho nên mình không biết nó nằm ở đâu, và mình thể hiện cái chuyện không chắc chắn đó thông qua cái ma trận hiệp phương sai của phân phối chuẩn. Vậy thì cái giá trị alpha đó chính là cái tham số, hoặc ở đây mình hay gọi nó là một cái, nó cũng là một cái tham số khác. Nó quyết định cái hình dạng của phân phối tiên nghiệm, và giá trị của alpha nó sẽ quyết định cái mức độ tập trung của hình chuông tiên nghiệm quanh cái mốc zero, để rồi nếu như mà alpha lớn thì có nghĩa là mình đang tin rằng các giá trị của w tập trung quanh mốc zero nhưng tập trung ở mức độ rất cao, tức là nó chỉ lớn hơn hoặc bé hơn zero tí xíu thôi. Và mình tin chắc là như vậy, tức là mình có một cái niềm tin cao là như vậy. Còn ngược lại, nếu như mình giảm cái alpha thì đồng nghĩa là mình đang nói rằng mình cũng tin rằng giá trị của w sẽ tập trung quanh mốc zero nhưng mình không chắc lắm, nó có thể có cái tính không chắc chắn dàn trải hơn nhiều. Và ở mức độ cực đoan khi mà cho alpha tiến tới zero thì mình có thể coi như là cái hình chuông đó nó không còn là hình chuông nữa mà nó dàn trải xác suất ra toàn bộ không gian mặt phẳng và nó thể hiện rằng niềm tin ban đầu cho w là mình không biết gì về nó hết. Nó sẽ giống như một cái phân phối uniform mà trong đó xác suất ở bất cứ nơi nào đều như nhau. 
+>
+>
+>
+> Và với cái trường hợp như vậy khi mà có thể nói nôm na là có cái phân phối tiên nghiệm hoặc là có những cái niềm tin ban đầu coi như không biết gì, tức là có cũng như không đó thì cái bài toán mà mình đi tìm ước lượng điểm của w theo phương pháp Bayesian nó lại trở về y chang cái bài toán mình tìm ước lượng điểm của w theo trường phái cổ điển là theo phương pháp Maximum Likelihood. Cho nên cái ý ở đây là lặp lại một cái điểm mà giáo sư Bishop đã nói ở mấy chương trước đó, đó là cái cách tiếp cận Bayesian nó giúp khắc phục những cái nhược điểm của cách tiếp cận cổ điển. Bởi vì với cái Maximum Likelihood Estimation thì nếu như dữ liệu ít thì cái ước lượng điểm mà tạo bởi phương pháp này nó có thể trở nên rất cực đoan. Trong khi đó, với cách tiếp cận Bayesian thì nhờ vào cái phân phối tiên nghiệm prior distribution mà cho dù rơi vào cái hoàn cảnh có ít dữ liệu thì cái kết quả nó cũng không cực đoan như là thằng Maximum Likelihood Estimation. Thì từ đó mình hiểu rằng nếu như mà cái phân phối tiên nghiệm nó trở nên là cực kỳ dàn trải để rồi mang ý nghĩa là mình cũng chẳng biết gì hoặc là chưa có một cái hiểu biết gì về cái giá trị của w cả thì lúc đó nó coi như là không có tác dụng và cái bài toán mà ước lượng w theo Bayesian nó vẫn trở nên giống như thằng Maximum Likelihood Estimation.
+>
+> \
+> \
+> Và một ý tiếp theo cũng không quá khó để hiểu đó là khi nói về chuyện N nếu bằng 0 thì phân phối hậu nghiệm nó cũng y như phân phối tiên nghiệm. Thì cái chuyện này cũng không khó để hiểu bởi vì phân phối hậu nghiệm về cơ bản chỉ là phân phối của W dựa trên những cái data, những giá trị quan sát được của dữ liệu. Vậy thì nếu mà chưa có giá trị quan sát nào thì phân phối hậu nghiệm nó cũng như là phân phối tiên nghiệm thôi. Và một điểm nữa mình cũng đã gặp ở trong những cái phần trước đó là cái chuyện mình có thể dùng cái cách diễn giải của Bayesians hoặc là của Bayes' rule đó để mà giải thích cho cái trường hợp mà dữ liệu nó không đến cùng một lúc ban đầu ngay có một cục có sẵn mà nó đến từng điểm một, nó đến một cách nối tiếp thì kết quả nó vẫn giống nhau. Nếu mà nó đến một cục có sẵn đó thì mình sẽ dùng Bayes' rule, mình xây dựng phân phối hậu nghiệm bằng phân phối tiên nghiệm nhân cho cái hàm likelihood của tham số dựa trên giá trị quan sát của cả cái cục đó. Còn nếu mà dữ liệu đến theo từng điểm thì ví dụ như mình có điểm thứ nhất thì mình sẽ tính phân phối hậu nghiệm bằng phân phối tiên nghiệm nhân cho cái likelihood của W dựa trên giá trị quan sát của X1. Sau đó mình lại dùng cái phân phối hậu nghiệm đó để làm phân phối tiên nghiệm tiếp tục nhân với hàm likelihood khi mà xuất hiện thêm X2 và thành ra một cái chuỗi như vậy thì kết quả nó sẽ vẫn ra là phân phối hậu nghiệm dựa trên toàn bộ dữ liệu. Còn cái đoạn cuối cùng thì chỉ là áp dụng lại một cái kiến thức đã học ở trong chương 2 đó là khi mình chọn cái phân phối tiên nghiệm là hàm phân phối chuẩn mean như vậy và ma trận hiệp phương sai như vậy cộng với hàm likelihood cũng là phân phối chuẩn thì mình sẽ ra được cái phân phối hậu nghiệm có mean và ma trận hiệp phương sai như công thức 5.3, 5.4.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chú của bạn rất xuất sắc, giải thích rất sâu sắc và trực quan từ trực giác hình chuông của phân phối chuẩn đến sự khác biệt giữa hai trường phái Bayes và tần suất. Điểm trừ duy nhất là lỗi gõ nhầm số thứ tự công thức ở cuối bài từ (3.53, 3.54) thành (5.3, 5.4).
+
+**🔗 See also:** [Section 3.3.3 Equivalent Kernel](./333_equivalent_kernel.md#node-qgf9klh)
+
+<br>
+
 <a id="node-fs2bcmg"></a>
 
-#### Maximum A Posteriori Estimation
+##### Maximum A Posteriori Estimation
 
 <p align="center"><kbd><img src="assets/z5b6x2u043.png" width="80%"></kbd></p>
 
@@ -397,7 +428,7 @@
 
 <a id="node-ek7ydwk"></a>
 
-##### Bayesian Linear Regression Example
+- **Bayesian Linear Regression Example**
 
 <p align="center"><kbd><img src="assets/e0lxfmqww39.png" width="80%"></kbd></p>
 
