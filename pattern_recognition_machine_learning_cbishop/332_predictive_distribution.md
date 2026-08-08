@@ -1,6 +1,6 @@
 # 3.3.2 Predictive distribution
 
-📊 **Progress:** `4` Notes | `8` Screenshots | `3` AI Reviews
+📊 **Progress:** `6` Notes | `11` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-wdjepxb"></a>
@@ -556,6 +556,8 @@
 
 <p align="center"><kbd><img src="assets/jkuthurlh0k.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/mhifv4glulr.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > Tiếp, cùng tìm hiểu đoạn này.
 >
@@ -805,6 +807,48 @@
 > Excellent note with exceptionally clear intuition and rigorous mathematical derivation of the covariance between predictions. To make it even better, you could explicitly mention that the smoothness also depends on the choice of continuous basis functions, such as Gaussians.
 
 **🔗 See also:** [Ma trận Hiệp Phương Sai](./1212_probability_densities_expectations_covariances.md#node-jrsj465)
+
+<br>
+
+<a id="node-mj6gazr"></a>
+
+##### Localized Basis Functions and Gaussian Processes
+
+<p align="center"><kbd><img src="assets/nr1fs0rjdv.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đại ý là nói rằng nếu ta dùng hàm basis, là mấy cái hàm Φ1(x),...Φ9(x) đó, mà ở đây cụ thể là dùng Gaussian kernel basis function, trong đó nó sẽ tạo pattern phi tuyến theo kiểu hình cái chuông, để khi input x gần tâm - tâm này cũng define sẵn trong hàm, thì Φ(x) sẽ lớn và càng ra xa thì hàm nhỏ lại. Thế thì dễ hiểu là nếu hàm basis kiểu này chỉ mang tính local (mà cái chuông vừa mô tả chính là mang tính local vì dạng đường cong của cái chuông chỉ nằm trong phạm vi cục bộ quanh tâm nào đó, còn khi ra xa thì nó xẹp về constant = 0) thì Φ(x) sẽ = 0, và do đó variance của predictive distribution = 1/β + Φ(x1)T **S**N Φ(x2) chỉ còn 1/β.
+>
+>
+>
+> Và điều này gây ra một đặc điểm: Với những điểm ở xa phạm vi của basis function thì predictive distribution lại rất tự tin (vì variance nó nhỏ lại). Và sự tự tin này hoàn toàn không do cơ sở nào cả, chỉ là vì cái hành vi của hàm basis cục bộ.
+>
+>
+>
+> Gs nói, để khắc phục, ta sẽ học qua Gaussian process, là một cách tiếp cận Bayesian khác.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Giải thích của bạn rất xuất sắc và chi tiết, thể hiện sự hiểu biết sâu sắc về bản chất toán học lẫn trực quan vật lý của vấn đề. Điểm lưu ý duy nhất là công thức phương sai dự báo tại một điểm nên là $\phi(x)^T \mathbf{S}_N \phi(x)$ thay vì dùng hai điểm $x_1, x_2$ (vốn là công thức hiệp phương sai giữa hai điểm khác nhau).
+
+<br>
+
+<a id="node-z7uy925"></a>
+
+- **Suy luận w và beta**
+
+<p align="center"><kbd><img src="assets/hcotn64jjo.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi đoạn cuối đấy là nói sang cái việc mình coi beta cũng là biến ngẫu nhiên. Beta thì ta nhớ 1 phần beta là phương sai của phân phối chuẩn mà mình dùng để giả định cho nhiễu. Và cũng đồng nghĩa là mình cũng giả định biến ngẫu nhiên t là theo phân phối chuẩn có tâm là hàm y (x, w) và phương sai là 1 phần beta. Vậy thì đấy là hồi đầu đến giờ là mình đang chỉ xét cái bài toán suy luận ra cái giá trị của w theo cách tiếp cận Bayesian. Thì nay là mình sẽ nếu mình tính luôn cả beta vô thì nó sẽ khác chút xíu. Lúc trước nếu như mình chỉ suy luận cho w và mình coi hoặc là giả định beta đã biết thì đương nhiên là mình chỉ phải chọn cái phân phối tiên nghiệm, prior distribution của w. Và như đã nói vì hàm likelihood là một cái phân phối chuẩn, hoặc là giả định là phân phối chuẩn, cho nên là tiên nghiệm liên hợp của phân phối chuẩn là Gaussian, cũng là phân phối chuẩn, cho nên là mình sẽ có cái phân phối tiên nghiệm của w là phân phối chuẩn, và dẫn đến là phân phối hậu nghiệm posterior nó cũng là phân phối chuẩn. Còn bây giờ nếu như mình xét beta cũng là biến ngẫu nhiên, thì lúc bấy giờ mình sẽ phải chọn phân phối tiên nghiệm không phải chỉ của w mà là của w và beta cùng lúc.\
+> \
+> Và trong cái chương 2 đó là mình đã học về cái trường hợp này khi mà giáo sư đã chuẩn bị một số cái nền tảng về xác suất cho những cái phần sau đây mình không cần phải làm lại. Cụ thể đó là khi mà mình xét cả W và beta thì phân phối tiên nghiệm của W beta sẽ là một cái phân phối gọi là Gaussian gamma và dựa trên cái phân phối tiên nghiệm đó mình tiến hành xây dựng phân phối predictive thì mình sẽ thấy nó không phải phân phối chuẩn nữa mà nó sẽ là phân phối student T.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Ghi chú vô cùng xuất sắc, không chỉ dịch đúng nội dung cốt lõi của đoạn text (tiên nghiệm Gaussian-gamma và phân phối dự báo Student-t) mà còn hệ thống hóa rất tốt kiến thức nền tảng liên quan. Tư duy liên kết mạch lạc này rất đáng khen ngợi, hãy tiếp tục duy trì nhé!
 
 <br>
 
