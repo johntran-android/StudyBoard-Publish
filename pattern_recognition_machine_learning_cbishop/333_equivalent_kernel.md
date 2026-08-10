@@ -1,6 +1,6 @@
 # 3.3.3 Equivalent kernel
 
-📊 **Progress:** `2` Notes | `4` Screenshots | `1` AI Reviews
+📊 **Progress:** `5` Notes | `8` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-9bkb1me"></a>
@@ -212,6 +212,111 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Bài viết thể hiện sự thấu hiểu sâu sắc và giải thích trực quan rất tốt về đồ thị, đặc biệt là phần phân biệt tính cục bộ/toàn cục của basis functions. Bạn chỉ cần sửa một lỗi diễn đạt nhỏ ở đoạn 4: hệ số kernel dùng để tổ hợp tuyến tính các giá trị target $t_n$ chứ không phải các vector $x_n$.
+
+<br>
+
+<a id="node-fpm5jlu"></a>
+
+#### Covariance and the Equivalent Kernel
+
+<p align="center"><kbd><img src="assets/nhgnvrggvqn.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tiếp theo, đoại này đại ý là: Bữa trước trong note (Covariance of Predictive Distributions, xem link) mình đã hiểu rằng Cov(y(**x**), y(**x**')) chính là Φ(**x**) **S**n Φ(**x**').
+>
+>
+>
+> Và với việc k(**x**,**x**') = β Φ(**x**) **S**n Φ(**x**') thì như vậy Cov(y(**x**), y(**x**')) = (1/β) k(**x**,**x**')
+>
+>
+>
+> Và từ đó giúp ta có thể dẫn đến một góc nhìn khác giúp giải thích cho hiện tượng đường cong màu đỏ trong hình 3.9 (là đường cong đồ thị hàm y(**w**,**x**) với **w** được sampling từ posterior distribution) có đặc điểm cong lên cong xuống mượt mà như vậy (mà không phải là nhảy lên nhảy xuống đột ngột như răng cưa). 
+>
+>
+>
+> Cụ thể là, như bữa trước, ta giải thích đặc điểm này bằng cách chỉ ra rằng vì Cov(y(**x**), y(**x**')) = Φ(**x**) **S**n Φ(**x**'), nên nó chắc chắn là một giá trị dương, đo đó y(**x**) và y(**x**') có sự tương quan dương nên khi thằng này cao thì thằng kia cũng cao, dẫn đến với x' nằm kề x, thì covariance cao sẽ khiến hàm số tại x và x' sẽ cao thấp cùng nhau, dẫn tới kết quả là sự lên xuống mượt mà hàm y(**x**,**w**).
+>
+>
+>
+> Vậy thì nay, với kernel function, ta càng thấy rõ điều đó: khi **x** gần **x**', hàm kernel sẽ lớn, và covariance của y(**x**) và y(**x**') sẽ lớn, dẫn đến kết quả như vừa nói. Còn khi **x** xa **x**', kernel k(x,x') nhỏ → sự tương quan của y(**x**) và y(**x**') sẽ kém, biểu hiện là hai điểm xa nhau trên đồ thị sẽ có có giá trị ít liên quan nhau
+>
+>
+>
+> Đây cũng chính là ý gs nói, cái đường cong màu đỏ này giúp ta thấy (visualize) yếu tố joint uncertainty của posterior distribution giữa hai y values tại 2 x values, được chi phối bởi kernel function
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Your note is exceptionally accurate and demonstrates a deep, intuitive understanding of how the equivalent kernel represents joint uncertainty and smoothness in the sampled functions. To make it perfect, ensure you explicitly define β as the noise precision parameter when relating the kernel to the covariance.
+
+**🔗 See also:** [Covariance of Predictive Distributions](./332_predictive_distribution.md#node-yslp52z)
+
+<br>
+
+<a id="node-8dlc4x5"></a>
+
+##### Introduction to Gaussian Processes
+
+<p align="center"><kbd><img src="assets/f4h2xb89gbt.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Trong đoạn tiếp theo, tác giả chỉ ra rằng thông qua các kết quả vừa phân tích, hàm hồi quy (regression) y(**w**, **x**)—dùng để dự đoán giá trị mục tiêu t cho đầu vào **x**—thực chất có thể đ**ược biểu diễn dưới dạng tổ hợp tuyến tính của các giá trị mục tiêu t1, t2, ..., tN, với hệ số được xác định bởi hàm kernel.** 
+>
+>
+>
+> Cách thể hiện này **mang lại một hướng tiếp cận mới cho bài toán hồi quy**. Thay vì **phải đưa vào một bộ các hàm cơ sở (basis functions) để định nghĩa một cách ngầm định (implicitly) hàm kernel tương đương (equivalent kernel)**, chúng ta **có thể định nghĩa trực tiếp hàm kernel đó**. Sau đó, chúng ta **dự đoán giá trị t bằng cách lấy tổ hợp tuyến tính của các giá trị mục tiêu với trọng số là các hàm kernel.** 
+>
+>
+>
+> Có nghĩa là việc định nghĩa các hàm cơ sở ban đầu nhằm đưa tính phi tuyến vào để biến hàm y(**w**, **x**) thành phi tuyến đối với **x**, nhưng **kết quả cuối cùng của quá trình dự đoán vẫn chỉ là tổ hợp tuyến tính của các giá trị mục tiêu thông qua hệ số kernel**. Vì vậy, thay vì thực hiện toàn bộ các bước phức tạp bắt đầu từ việc định nghĩa các hàm cơ sở, chúng ta có thể **bỏ qua các bước trung gian này để định nghĩa trực tiếp một hàm kernel cục bộ (localized kernel)**. Phương thức trực tiếp này giúp đưa ra dự đoán cho một vectơ **x** dựa trên tập huấn luyện (training set) một cách tương tự, và đây chính là nội dung sẽ được nghiên cứu trong phần 6.4 với tên gọi **Quá trình Gaussian (Gaussian Process).**
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chú rất xuất sắc khi giải thích chi tiết và chính xác ý tưởng cốt lõi của đoạn văn về việc định nghĩa trực tiếp kernel thay vì thông qua các basis functions. Để hoàn thiện hơn, bạn nên dùng thuật ngữ chuyên ngành 'Quá trình Gaussian' thay vì 'quy trình Gaussian'.
+
+<br>
+
+<a id="node-p4bufrd"></a>
+
+- **Effective Kernel Weights Sum to One**
+
+<p align="center"><kbd><img src="assets/fdub10190ar.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/v8lzvhpykea.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, còn vài ý cuối. Thì ý tiếp theo đại khái gs nói là, ta có thể chứng minh Σj=1=N k(**x**j, **x**) = 1. Và chứng minh cũng đơn giản chỉ cần lập luận như vầy:
+>
+>
+>
+> Đó là giả sử ta có rất nhiều data, với mọi t1,...tN đều bằng 1. Dĩ nhiên, như đã nói, việc đưa ra hàm dự đoán cho giá trị t của một input **x** mới cuối cùng cũng chỉ là xây dựng hàm kernel k(**x**, **x**'), để rồi dùng Σj=1:N k(**x**j, **x**) tj để dự đoán cho t. Và kiểu như là, với data rất nhiều, thì chắc chắn là ta có thể xây dựng một hàm số fit tuyệt đối dataset. Và vì mọi t1,...tN đều bằng 1 nên kiểu như ta sẽ tin rằng hàm regress sẽ dự đoán t cho một input **x** nào đó cũng phải bằng 1.
+>
+>
+>
+> ⇔ Σj=1:N k(**x**j, **x**) = 1, chứng minh xong tính chất này.
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp theo là một cái ý đó là tuy rằng tổng của các cái kernel K này nó đều là bằng 1 khiến cho mình có thể bị lầm tưởng đây là một cái tổ hợp convex. Ở đây có thể dừng lại chút xíu để nói về một số cái định nghĩa mà ở bên cái cuốn sách tối ưu hóa lồi của tác giả Stephen Boyd cũng đã giới thiệu mà mình cũng có được học. Đầu tiên là mình đã biết khái niệm tổ hợp tuyến tính khi mà học cái lớp MIT 18.06 của thầy Gilbert Strang. Thì tổ hợp tuyến tính đó là một cái tổng thôi, một cái tổng của các cái vectơ với cái bộ hệ số bất kỳ, bộ hệ số bất kỳ. Nhưng bây giờ nếu như mình giới hạn cái bộ hệ số đó là nó phải có tổng bằng 1, có tổng bằng 1 thì lúc bấy giờ nó sẽ trở thành một cái tổ hợp gọi là tổ hợp affine hoặc là affine combination. Tiếp tục thêm một ràng buộc nữa, là bắt buộc các cái hệ số không những tổng bằng 1 mà còn phải không âm thì khi đó mình sẽ có một cái gọi là tổ hợp lồi hay là convex combination. Và khi đó thì cái bộ giá trị của các cái hệ số nó sẽ tạo thành một cái phân phối xác suất đúng không? Khi mà thỏa hai cái tính chất là không âm và có tổng bằng 1. Như vậy thì mình sẽ có thể dễ hiểu cái ý của tác giả ở đây khi mà ông nói cái này không nhất thiết phải là một cái tổ hợp lồi đúng chưa? Bởi vì cái hàm kernel tuy có tổng bằng 1 đúng chưa, nhưng mà nó không có yêu cầu phải là không âm. Kernel giữa x và x' vẫn có thể là âm. Đó là một điểm chú ý, nên đây không phải là convex combination.
+>
+>
+>
+> ---
+>
+>
+>
+> \
+> Và cái cuối cùng đó là tác giả nói rằng cái hàm equivalent kernel đó nó phải thỏa mãn những cái đặc điểm quan trọng của kernel function nói chung. Đó là nó phải được thể hiện bởi, tức là nó phải có thể được thể hiện bởi inner product của hai cái vector. Như vậy thì trong cái trường hợp này mình có thể thấy rằng cái kernel function nó có thể được thực sự là thỏa mãn cái tiêu chí này. Cũng không khó để hiểu bởi vì beta nhân phi X nhân cho SN nhân phi X thì cái SN là một cái ma trận xác định dương, mình đã nhắc đến cái chuyện này trước đây. Vì nó là ma trận xác định dương cho nên nó luôn luôn có thể được phân tách thành hai cái dạng là SN mũ 1/2 nhân với SN mũ 1/2. Và từ đó thì mình sẽ thấy cái kernel function này nó chính là tích vô hướng của hai cái vector được định nghĩa bởi là căn bậc hai của beta nhân với ma trận SN mũ 1/2 nhân với vector phi X. Thì giáo sư nhắc đến cái đặc điểm này mục đích là gì? Để mà khi mình qua cái phần 6.4 đó mình phát triển những cái localized kernel function đó thì mình phải nhớ rằng nó phải thỏa cái đặc điểm chung của kernel function này.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chú rất xuất sắc, đặc biệt là phần liên hệ sâu sắc với kiến thức tổ hợp affine/lồi và giải thích việc phân tách ma trận xác định dương $S_N$. Để hoàn thiện hơn, bạn nên làm rõ rằng ta fit chính xác được nhãn $t_n=1$ là nhờ có một basis function hằng số (bias), thay vì chỉ giải thích chung chung là do có nhiều dữ liệu.
 
 <br>
 
