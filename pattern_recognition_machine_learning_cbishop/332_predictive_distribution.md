@@ -1,6 +1,6 @@
 # 3.3.2 Predictive distribution
 
-📊 **Progress:** `6` Notes | `11` Screenshots | `5` AI Reviews
+📊 **Progress:** `6` Notes | `10` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-wdjepxb"></a>
@@ -556,8 +556,6 @@
 
 <p align="center"><kbd><img src="assets/jkuthurlh0k.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/mhifv4glulr.png" width="80%"></kbd></p>
-
 > [!NOTE]
 > Tiếp, cùng tìm hiểu đoạn này.
 >
@@ -806,7 +804,7 @@
 >
 > Excellent note with exceptionally clear intuition and rigorous mathematical derivation of the covariance between predictions. To make it even better, you could explicitly mention that the smoothness also depends on the choice of continuous basis functions, such as Gaussians.
 
-**🔗 See also:** [Ma trận Hiệp Phương Sai](./1212_probability_densities_expectations_covariances.md#node-jrsj465)
+**🔗 See also:** [Ma trận Hiệp Phương Sai](./1212_probability_densities_expectations_covariances.md#node-jrsj465) · [Covariance and the Equivalent Kernel](./333_equivalent_kernel.md#node-fpm5jlu)
 
 <br>
 
