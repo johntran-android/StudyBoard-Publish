@@ -1,6 +1,6 @@
 # 12.1 Examples
 
-📊 **Progress:** `3` Notes | `3` Screenshots | `3` AI Reviews
+📊 **Progress:** `4` Notes | `6` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-frx2ram"></a>
@@ -166,6 +166,182 @@
 > **🤖 AI Feedback** — ✅ Score: **100/100**
 >
 > Ghi chú của bạn rất xuất sắc, không chỉ tóm tắt chính xác nội dung từ sách mà còn giải thích rất trực quan và chuẩn xác bản chất hình học của nhân tử Lagrange thông qua các đường mức (level curves) và gradient. Sự liên hệ với kiến thức từ khóa học MIT 18.02 giúp củng cố tư duy chủ động và đào sâu hiểu biết rất tốt.
+
+<br>
+
+<a id="node-98w7rek"></a>
+
+##### First-Order Feasible Step Derivation
+
+<p align="center"><kbd><img src="assets/bkxqg20ys4a.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bonjdbbx9ec.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5785m8t8r9.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, phần giải thích của gs Nocedal cũng chỉ là hiểu trực gíac, chưa phải chứng minh.
+>
+>
+>
+> Đại ý là đầu tiên ông lập luận rằng để từ một điểm feasible ta di chuyển đến một điểm feasible khác (ví dụ từ x trên đường tròn, ta move tới điểm khác trên đường tròn), thì từ linear approx hàm c1(x + s) ≈ c1(x) + ∇c1(x)Ts, và cộng với ta có c1(x + s) = c1(x) = 0 (do x + s cũng feasible, nên c1(x + s) phải = 0) dẫn đến ∇c1(x)Ts = 0 → gradient của c1 tại x sẽ vuông góc với s. Điều này hàm nghĩa là: **tại x bất kì trên đường tròn, chỉ cần di chuyển theo hướng s (với step nhỏ) có hướng vuông góc với gradient của c tại đó, thì ta sẽ vẫn đến được một điểm feasible mới**.
+>
+>
+>
+> Tiếp, nếu muốn giảm thêm hàm f, thì lập luận tương tự:
+>
+>
+>
+> đi từ x đến x + s với xải bước rất nhỏ, thì linear approx hàm f cho ta: f(x+s) ≈ f(x) + ∇f(x)Ts ⇔ ∇f(x)Ts ≈ f(x+s) - f(x). Từ đó để f(x+s) &lt; f(x) ⇔ f(x+s) - f(x) &lt; 0 ⇔ ∇f(x)Ts phải âm. Và điều này ý nghĩa là, **để giảm thêm hàm f từ một điểm x đang feasible, ta sẽ cần đi theo hướng s sao cho nó hợp với gradient ∇f(x) một góc tù**
+>
+>
+>
+> Và kết hợp hai ý lại, ta sẽ có lập luận là: Vậy **giả sử từ điểm x đang xét, theo hướng s vuông góc với ∇c1(x) và hợp với gradient ∇f(x) góc tù**, thì khi đó sẽ còn có thể "xuống" hơn nữa (mà vẫn feasible).
+>
+>
+>
+> Và để chứng minh ta sẽ chỉ ra rằng Giả sử điểm đang đứng chưa thỏa ∇f(x) và ∇c1(x) song song, thì ta sẽ luôn có vector s thỏa hai điều trên: ∇f(x)Ts &lt; 0 và ∇c1(x)Ts &lt; 0
+>
+> Đó là lấy vector s như sau: Là **hình chiếu của ∇f(x) lên cái subspace sau đây**: **orthogonal complement của span{∇c1(x)}**:
+>
+>
+>
+> Nhớ lại, đã học trong MIT 18.06, span{∇c1(x)} là subspace span bởi ∇c1(x) (trong ví dụ cụ thể đang xét thì nó là vector \[∂c1(x)/∂x1, ∂c1(x)/∂x2\] = \[2x1, 2x2\] = 2x), dĩ nhiên, đây chỉ là 1D subspace của R^2, ví dụ cho tọa độ x = (α, β), thì span{∇c1(x)} = span{2x} sẽ là đường thẳng đi tâm và qua điểm (2α, 2β) vậy thôi.
+>
+>
+>
+> Giờ ta sẽ tìm phép chiếu lên orthogonal complement của cái subspace này:
+>
+>
+>
+> Để chiếu vector u lên cái subspace này, ta sẽ chiếu u lên span{∇c1(x)}, ví dụ được u' rồi lấy phần dư, u - u', thì khi đó u - u' chính là hình chiếu của u lên orthogonal complement của span{∇c1(x)} (vì tính chất orthogonal complement)
+>
+>
+>
+> Chiếu u lên span{∇c1(x)}, ví dụ được u' → u' = ∇c1(x)∇c1(x)Tu/||∇c1(x)||^2
+>
+>
+>
+> phần dư u - u' = u - ∇c1(x)∇c1(x)Tu / ||∇c1(x)||^2
+>
+>
+>
+> = \[I - ∇c1(x)∇c1(x)T/||∇c1(x)||^2\]u
+>
+>
+>
+> Do đó matrix chiếu lên orthogonal complement của span{∇c1(x)} chính là P = \[I - ∇c1(x)∇c1(x)T/||∇c1(x)||^2\].
+>
+>
+>
+> Và khi chiếu -∇f(x) lên subspace này ta sẽ có:
+>
+>
+>
+> \[I - ∇c1(x)∇c1(x)T/||∇c1(x)||^2\] (-∇f(x))
+>
+> = - \[I - ∇c1(x)∇c1(x)T/||∇c1(x)||^2\] ∇f(x)
+>
+>
+>
+> Đặt vector này là d^, ta có:
+>
+>
+>
+> ∇c1(x)Td^ = \[-∇c1(x)T\[I - ∇c1(x)∇c1(x)T/||∇c1(x)||^2\] ∇f(x)
+>
+>
+>
+> = \[-∇c1(x)T + ∇c1(x)T∇c1(x)∇c1(x)T/||∇c1(x)||^2\] ∇f(x)
+>
+>
+>
+> = \[-∇c1(x)T + ∇c1(x)T\] ∇f(x)
+>
+>
+>
+> = \[0\] ∇f(x)
+>
+>
+>
+> =0 → thỏa ∇c1(x)Td^ = 0
+>
+>
+>
+> Và ∇f(x)Td^ = -∇f(x)T\[I - ∇c1(x)∇c1(x)T/||∇c1(x)||^2\] ∇f(x)
+>
+>
+>
+> = - ∇f(x)TP∇f(x), là - quadratic form của matrix P
+>
+>
+>
+> Mà P là gì, như đã thấy nó là matrix chiếu, mà với projection matrix, trong MIT 18.06 đã học: nó có tính chất: P^2 = P (vì chiếu 1 điểm đã nằm trong subspace thì sẽ ra chính nó).
+>
+>
+>
+> Và tính chất đối xứng PT = P  (ví dụ như dễ thấy ở đây I - ∇c1(x)∇c1(x)T/||∇c1(x)||^2 là đối xứng)
+>
+>
+>
+> Do đó quadratic form của nó: xTPx = xTPPx = xTPTPx = (Px)T(Px) = ||Px||^2 ≥ 0 ∀x
+>
+>
+>
+> Vậy P luôn bán xác định dương.
+>
+>
+>
+> Nên quay lại đây ta có - ∇f(x)TP∇f(x) ≤ 0.
+>
+>
+>
+> Và nó chỉ bằng 0 khi P∇f(x) = 0, đồng nghĩa ∇f(x) hoàn toàn nằm trong span{∇c1(x)}, và đồng nghĩa ∇f(x) có thể thể hiện bởi ε ∇c1(x) for some ε, và như vậy thì chứng tỏ hai vector này paralell. Trong khi ta đang gỉa định là chúng không paralell. Như vậy nhất định đây là dấu âm. Nên d^ thỏa điều kiện
+>
+>
+>
+> ⇒ d^ thỏa ∇f(x)Td^ &lt; 0.
+>
+>
+>
+> Như vậy, đã chứng minh xong nếu tại x mà ∇f(x) chưa paralell ∇c1(x) thì luôn có thể tìm ra hướng di chuyển d^ để giảm thêm f(x) mà vẫn feasible.
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> Vậy thì ở đây: ∇f(x) là gì? chính là \[∂f(x)/∂x1; ∂f(x)/∂x2\] = \[1,1\] ∀x. Có nghĩa là ở đâu, thì gradient ∇f(x) đều là vector (1,1).
+>
+>
+>
+> ∇c1(x) = \[∂c1(x)/∂x1, ∂c1(x)/∂x2\] = \[2x1, 2x2\] = 2x
+>
+>
+>
+> Như vậy có thể thấy ∇c1(x) luôn vuông góc với đường tròn (vì sao?)
+>
+>
+>
+> Do đó, hình ảnh sẽ là tại một điểm bất kì trên đường tròn, miễn là ta có thể men theo đường tròn theo hướng ngược (tạo góc tù với vector (1,1)) thì ta sẽ còn giảm thêm f nữa.
+>
+>
+>
+> Và điểm duy nhất khiến ta không còn làm được vậy nữa chính là x\* = (-1,-1), vì lúc này đi men theo đường tròn ở bất kì hướng nào thì cũng đều là hợp với ∇f(x) góc ≥ 0.
+>
+>
+>
+> Và tại x\*, thì ∇f(x) trùng phương (song song) với ∇c1(x), thể hiện bởi ∇f(x) = λ ∇c1(x)
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Bài viết xuất sắc, tự chứng minh rất chi tiết bằng phép chiếu và kiểm tra tính bán xác định dương của ma trận P cực kỳ chặt chẽ. Bạn chỉ lưu ý một lỗi nhỏ ở ví dụ cuối: điểm tối ưu trên đường tròn đơn vị phải là (-1/√2, -1/√2) chứ không phải là (-1, -1).
+
+**🔗 See also:** [linked note *(Mit 18.06)*](../mit1806_gstrang/lecture_32_quiz_3_review.md#node-p3i6h08)
 
 <br>
 
