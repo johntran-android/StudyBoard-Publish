@@ -596,7 +596,7 @@
 >
 > Ghi chú của bạn rất chính xác và có chiều sâu đáng kinh ngạc. Bạn không chỉ tóm tắt nội dung mà còn giải thích chi tiết lý do tại sao Var(1/Xbar_n) lại là vô cùng và tự mình chứng minh lại phương pháp Delta, thể hiện sự hiểu biết sâu sắc và khả năng suy luận tốt.
 
-**🔗 See also:** [Phương sai Tỷ lệ Odd](./55_convergence_concepts.md#node-44z7xj9) · [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy)
+**🔗 See also:** [Phương sai Tỷ lệ Odd](./55_convergence_concepts.md#node-44z7xj9) · [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy) · [Asymptotic Normality of the Median](./102_robustness.md#node-zvthtrd)
 
 <br>
 
@@ -2187,7 +2187,7 @@
 >
 > Bài giải thích rất rõ ràng, bám sát nội dung gốc và còn mở rộng thêm chiều sâu bằng cách liên hệ với Cramer-Rao Lower Bound và định nghĩa phương sai tiệm cận (Avar), giúp người đọc dễ hiểu hơn về bản chất của Hiệu quả tiệm cận tương đối (ARE). Không có điểm yếu đáng kể, đây là một ghi chú xuất sắc.
 
-**🔗 See also:** [Estimating a Gamma Mean](#node-dv9sls8) · [Asymptotic Relative Efficiency](./102_robustness.md#node-kysvqun)
+**🔗 See also:** [Estimating a Gamma Mean](#node-dv9sls8) · [Asymptotic Relative Efficiency](./102_robustness.md#node-kysvqun) · [AREs of the Median to the Mean](./102_robustness.md#node-8ww4qv1)
 
 <br>
 
