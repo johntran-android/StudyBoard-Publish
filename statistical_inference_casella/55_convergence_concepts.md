@@ -1101,7 +1101,7 @@
 >
 > Cái CLT này cho ta một công cụ hữu ích, **all-purpose approximation**, nhưng phải lưu ý rằng **chất lượng của approximation này phải xem lại**. Trong thực tế, nó luôn có ích trong việc đưa ra những tính toán sơ bộ đầu tiên
 
-**🔗 See also:** [CLT - Định lý giới hạn trung tâm](#node-32vkewg) · [MLE of e-lambda with Delta Method](./101_point_estimation.md#node-jiyzyog)
+**🔗 See also:** [CLT - Định lý giới hạn trung tâm](#node-32vkewg) · [MLE of e-lambda with Delta Method](./101_point_estimation.md#node-jiyzyog) · [Asymptotic Normality of the Median](./102_robustness.md#node-zvthtrd)
 
 <br>
 
