@@ -2187,7 +2187,7 @@
 >
 > Bài giải thích rất rõ ràng, bám sát nội dung gốc và còn mở rộng thêm chiều sâu bằng cách liên hệ với Cramer-Rao Lower Bound và định nghĩa phương sai tiệm cận (Avar), giúp người đọc dễ hiểu hơn về bản chất của Hiệu quả tiệm cận tương đối (ARE). Không có điểm yếu đáng kể, đây là một ghi chú xuất sắc.
 
-**🔗 See also:** [Estimating a Gamma Mean](#node-dv9sls8)
+**🔗 See also:** [Estimating a Gamma Mean](#node-dv9sls8) · [Asymptotic Relative Efficiency](./102_robustness.md#node-kysvqun)
 
 <br>
 
