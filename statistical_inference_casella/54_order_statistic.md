@@ -314,6 +314,8 @@
 >
 > P(X(j) = xi) = Σk=j:n (n choose k)[Pi^k(1 - Pi)^(n-k) - Pi-1^k(1-Pi-1)^n-k]
 
+**🔗 See also:** [Asymptotic Normality of the Median](./102_robustness.md#node-zvthtrd)
+
 <br>
 
 <a id="node-4fy6f74"></a>
@@ -323,9 +325,7 @@
 <p align="center"><kbd><img src="assets/nuh5i51zmy.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Để chứng minh, đầu tiên với xi nào đó, ta gọi Y là random variable mang giá
-> trị là số lượng random variable trong đám X1,...Xn có giá trị nhỏ hơn xi.
-> Dừng lại tại đây, tại sao Y là random variable?
+> Để chứng minh, đầu tiên với xi nào đó, ta gọi Y là random variable mang giá trị là số lượng random variable trong đám X1,...Xn có giá trị nhỏ hơn xi. Dừng lại tại đây, tại sao Y là random variable?
 >
 >
 >
@@ -333,27 +333,15 @@
 >
 >
 >
-> Và cái hàm g đó làm cái việc là, xem xét qua từng thằng trong đám X1,. ..
-> Xn, mỗi lần tìm thấy một thằng nhỏ hơn xi, thì cộng 1 lên, và trả ra  kết qủa.
-> Rõ ràng Y là random variable.
+> Và cái hàm g đó làm cái việc là, xem xét qua từng thằng trong đám X1,. .. Xn, mỗi lần tìm thấy một thằng nhỏ hơn xi, thì cộng 1 lên, và trả ra kết qủa. Rõ ràng Y là random variable.
 >
 >
 >
-> Rồi, với cái hàm g như vậy, thì có thể thấy, nó đang đếm số trial success,
-> trong tổng số n trial (các trial là: X1 có nhỏ hơn xi  ko, X2 có nhỏ hơn xi
-> không,...) và vì X1,X2,...Xn independent, nên đây dĩ nhiên là các independent
-> Bern(p1_i), Bern(p2_i)... trial với p1_i là xác suất trial thứ 1 success (còn chữ
-> i là ý đang nói  ta đang xét xác suất nhỏ hơn xi, tức xác suất Xi < xi. Nhưng
-> vì X1, X2,...Xn cũng identically distributed nên xác suất mà chúng nó < xi đều
-> bằng nhau (vì cái xác suất này quy định bởi marginal distribution, mà chúng
-> đều giống nhau, là population distribution), va ta gọi xác suất này là Pi
-> (again, chữ i này là vì đang xét Y là số lượng các rv trong đám X1,...Xn nhỏ
-> hơn xi)
+> Rồi, với cái hàm g như vậy, thì có thể thấy, nó đang đếm số trial success, trong tổng số n trial (các trial là: X1 có nhỏ hơn xi ko, X2 có nhỏ hơn xi không,...) và vì X1,X2,...Xn independent, nên đây dĩ nhiên là các independent Bern(p1_i), Bern(p2_i)... trial với p1_i là xác suất trial thứ 1 success (còn chữ i là ý đang nói ta đang xét xác suất nhỏ hơn xi, tức xác suất Xi &lt; xi. Nhưng vì X1, X2,...Xn cũng identically distributed nên xác suất mà chúng nó &lt; xi đều bằng nhau (vì cái xác suất này quy định bởi marginal distribution, mà chúng đều giống nhau, là population distribution), va ta gọi xác suất này là Pi (again, chữ i này là vì đang xét Y là số lượng các rv trong đám X1,...Xn nhỏ hơn xi)
 >
 >
 >
-> Vậy, dễ thấy, đây là các Bern(Pi) trials iid, và Y là random variable đếm số
-> trial thành công ⇨ Y là một binomial(n, Pi)
+> Vậy, dễ thấy, đây là các Bern(Pi) trials iid, và Y là random variable đếm số trial thành công ⇨ Y là một binomial(n, Pi)
 >
 >
 >
@@ -361,19 +349,15 @@
 >
 >
 >
-> Tiếp theo là một nhận định quan trọng: Nếu Y là số lượng các rv trong đám
-> X1,...Xn nhỏ hơn hoặc bằng xi thì việc Y ≥ j cũng đồng nghĩa có ít nhất j cái
-> trong đám  X1,..Xn nhỏ hoặc bằng hơn xi
+> Tiếp theo là một nhận định quan trọng: Nếu Y là số lượng các rv trong đám X1,...Xn nhỏ hơn hoặc bằng xi thì việc Y ≥ j cũng đồng nghĩa có ít nhất j cái trong đám X1,..Xn nhỏ hoặc bằng hơn xi
 >
 >
 >
-> Và kể cả khi sắp xếp tụi nó theo thứ tự từ nhỏ đến lớn thì điều này vẫn đúng:
-> vẫn có ít nhất j cái sẽ nhỏ hoặc bằng hơn xi. Và như vậy dễ thấy, X(j) phải
-> nhỏ hơn hoặc bằng xi.
+> Và kể cả khi sắp xếp tụi nó theo thứ tự từ nhỏ đến lớn thì điều này vẫn đúng: vẫn có ít nhất j cái sẽ nhỏ hoặc bằng hơn xi. Và như vậy dễ thấy, X(j) phải nhỏ hơn hoặc bằng xi.
 >
 >
 >
-> Vậy event Y ≥  j cũng tương đương với event X(j) ≤ xi
+> Vậy event Y ≥ j cũng tương đương với event X(j) ≤ xi
 >
 >
 >
@@ -393,7 +377,7 @@
 >
 >
 >
-> ⇨ Chứng minh xong 5.4.2: 
+> ⇨ Chứng minh xong 5.4.2:
 >
 >
 >
@@ -401,31 +385,31 @@
 >
 >
 >
-> Còn xét P(X(j) = xi) thì nó chính là P(xi-1 < X(j) ≤ xi)
+> Còn xét P(X(j) = xi) thì nó chính là P(xi-1 &lt; X(j) ≤ xi)
 >
 >
 >
-> Mà xi-1 < X(j) ≤ xi ∪ X(j) ≤ xi-1 = X(j) ≤ xi
+> Mà xi-1 &lt; X(j) ≤ xi ∪ X(j) ≤ xi-1 = X(j) ≤ xi
 >
 >
 >
-> ⇨ P[xi-1 < X(j) ≤ xi ∪ X(j) ≤ xi-1] = P(X(j) ≤ xi),
+> ⇨ P\[xi-1 &lt; X(j) ≤ xi ∪ X(j) ≤ xi-1\] = P(X(j) ≤ xi),
 >
 >
 >
-> và vế trái là P của hai disjoint event, theo axiom 3: 
+> và vế trái là P của hai disjoint event, theo axiom 3:
 >
 >
 >
-> = P(xi-1 < X(j) ≤ xi) + P(X(j) ≤ xi-1)
+> = P(xi-1 &lt; X(j) ≤ xi) + P(X(j) ≤ xi-1)
 >
 >
 >
-> ⇨ P(xi-1 < X(j) ≤ xi) + P(X(j) ≤ xi-1) = P(X(j) ≤ xi)
+> ⇨ P(xi-1 &lt; X(j) ≤ xi) + P(X(j) ≤ xi-1) = P(X(j) ≤ xi)
 >
 >
 >
-> ⇨ P(xi-1 < X(j) ≤ xi) = P(X(j) ≤ xi) - P(X(j) ≤ xi-1)
+> ⇨ P(xi-1 &lt; X(j) ≤ xi) = P(X(j) ≤ xi) - P(X(j) ≤ xi-1)
 >
 >
 >
@@ -433,15 +417,15 @@
 >
 >
 >
-> = Σk=j:n (n choose k)Pi^k(1 - Pi)^(n - k) 
+> = Σk=j:n (n choose k)Pi^k(1 - Pi)^(n - k)
 >
 >
 >
-> - Σk=j:n (n choose k)Pi-1^k(1 - Pi-1)^(n - k)
+> = Σk=j:n (n choose k)Pi-1^k(1 - Pi-1)^(n - k)
 >
 >
 >
-> = Σk=j:n (n choose k)[ (1 - Pi)^(n - k) - (1 - Pi-1)^(n - k) ] chứng minh xong vế 5.4.3
+> = Σk=j:n (n choose k)\[ (1 - Pi)^(n - k) - (1 - Pi-1)^(n - k) \] chứng minh xong vế 5.4.3
 
 <br>
 
