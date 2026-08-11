@@ -1,6 +1,6 @@
 # 10.2 Robustness
 
-📊 **Progress:** `5` Notes | `5` Screenshots | `5` AI Reviews
+📊 **Progress:** `7` Notes | `7` Screenshots | `7` AI Reviews
 
 ---
 <a id="node-o8s85wd"></a>
@@ -466,6 +466,60 @@
 > Ghi chú giải thích rất trực quan, chính xác bản chất toán học của breakdown value và sử dụng hình ảnh so sánh sinh động (con lừa gánh nặng). Để hoàn thiện hơn, bạn có thể nhấn mạnh thêm rằng b đại diện cho tỷ lệ phần trăm dữ liệu bị lỗi tối đa mà statistic có thể chịu đựng.
 
 **🔗 See also:** [Quy ước làm tròn phân vị mẫu](./54_order_statistic.md#node-87bnmo9)
+
+<br>
+
+<a id="node-q8d1j0e"></a>
+
+- **Breakdown Value of Mean and Median**
+
+<p align="center"><kbd><img src="assets/urgujq7swlm.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Thế thì, với định nghĩa của breakdown value là như vậy, thì ta cũng có thể hiểu đại khái là, đây là tỉ lệ (fraction) lớn nhất các sample mà khi ta kéo giá trị của chúng lên vô cùng thì statistic sẽ vẫn không bị tăng lên vô cùng. Ví dụ có X1,X2,...X10. Ném {X6,...X10} kéo ra ∞ mà Tn vẫn ok nhưng nếm X5 kéo ra ∞ thì Tn tạch thì khi đó b là tỉ lệ của số lượng X5 → X10 trên toàn bộ: tức 6/10 = 60%)
+>
+>
+>
+> Vậy với sample mean, chỉ cần 1 sample nào đó lớn vô cùng thì Xbar sẽ lớn vô cùng, nên tỉ lệ lớn nhất mà nó chịu được chỉ là 0. Vì ví dụ X1,...X10. thì dù chỉ một thằng X10 bị kéo ra ∞ thì cũng đủ để Xbar tạch (lớn lên vô cùng), nên tỉ lệ mà nó chịu được chỉ là 0%
+>
+>
+>
+> Trong khi đó, với sample median, là giá trị của thằng đứng giữa (ví dụ X1,X2,...X10 thì sample median = (X4+X6)/2 thì ví dụ kéo X7,X8,X9,X10 (40%) ra ∞ thì sample median vẫn ko tạch. Nhưng nếu kéo thêm X6 (thành ra 5/10 = 50%) thì nó tạch, nên ngưỡng tạch nhỏ nhất của nó là 50%
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **93/100**
+>
+> Ghi chú giải thích rất trực quan và chính xác bản chất breakdown value của trung bình và trung vị qua ví dụ 10 phần tử rất dễ hiểu. Bạn chỉ mắc một lỗi nhỏ khi viết nhầm công thức trung vị của 10 số là trung bình của X5 và X6 (thay vì X4 và X6).
+
+<br>
+
+<a id="node-kysvqun"></a>
+
+- **Asymptotic Relative Efficiency**
+
+<p align="center"><kbd><img src="assets/yl9ifsti5yb.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Thế thì như vậy, với việc ta biết sample median sẽ robust hơn sample mean, câu hỏi sẽ là. trong tình huống như ví dụ 10.2.1, nơi mà ta có tình trạng là, nếu như giả định phân phối thật là Normal, thì sample mean, với việc ta đã biết nó có bias = 0, và Variance lại là CRLB, nên đây chính là cái uniformly best unbiased estimator của population mean.
+>
+>
+>
+> Vậy tính sao với việc median roburst hơn đây. Để trả lời ta phải hỏi câu khác: rằng, khi giả định là đúng, thì mean nó tốt hơn median được bao nhiêu. Ý là, nếu median roburst hơn nhiều, và khi giả định là đúng thì mean cũng không hơn median là bao thì ta có thể hi sinh chút tiêu chí optimality, để chọn tiêu chí robusrt median.
+>
+>
+>
+> Và để trả lời câu hỏi này, ta sẽ mượn đến công cụL ARE - độ hiệu quả tiệm cận tương đối.
+>
+>
+>
+> Còn nhớ định nghĩa của cái này đó là tỉ lệ phương sai tiệm cận của hai estimator.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chú của bạn thể hiện sự hiểu biết sâu sắc và chính xác về sự đánh đổi giữa tính vững (robustness) và tính tối ưu (optimality) thông qua công cụ ARE. Bạn chỉ cần lưu ý sửa một vài lỗi chính tả nhỏ như 'roburst' (robust) hay 'công cụL' để ghi chú thêm phần hoàn hảo.
+
+**🔗 See also:** [Asymptotic Relative Efficiency](./101_point_estimation.md#node-2y7vyqf)
 
 <br>
 
