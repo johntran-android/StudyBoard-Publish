@@ -1,6 +1,6 @@
 # 10.2 Robustness
 
-📊 **Progress:** `7` Notes | `7` Screenshots | `7` AI Reviews
+📊 **Progress:** `12` Notes | `13` Screenshots | `12` AI Reviews
 
 ---
 <a id="node-o8s85wd"></a>
@@ -508,7 +508,7 @@
 >
 >
 >
-> Và để trả lời câu hỏi này, ta sẽ mượn đến công cụL ARE - độ hiệu quả tiệm cận tương đối.
+> Và để trả lời câu hỏi này, ta sẽ mượn đến công cụ ARE - độ hiệu quả tiệm cận tương đối.
 >
 >
 >
@@ -520,6 +520,422 @@
 > Ghi chú của bạn thể hiện sự hiểu biết sâu sắc và chính xác về sự đánh đổi giữa tính vững (robustness) và tính tối ưu (optimality) thông qua công cụ ARE. Bạn chỉ cần lưu ý sửa một vài lỗi chính tả nhỏ như 'roburst' (robust) hay 'công cụL' để ghi chú thêm phần hoàn hảo.
 
 **🔗 See also:** [Asymptotic Relative Efficiency](./101_point_estimation.md#node-2y7vyqf)
+
+<br>
+
+<a id="node-zvthtrd"></a>
+
+- **Asymptotic Normality of the Median**
+
+<p align="center"><kbd><img src="assets/nhofcqwoj0p.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/zy4ezr91s08.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, ví dụ này, mục đích là ta sẽ đi tìm phân phối giới hạn của sample median, từ đó có được cái phương sai tiệm cận của nó, để rồi dùng trong việc tính ARE giúp so sánh nó với sample mean. (vì ARE là tỉ lệ phương sai tiệm cận của hai thằng, giúp cho thấy cái nào tốt hơn)
+>
+>
+>
+> Đầu tiên cần nhớ, định nghĩa của median. Nếu μ là median của distribution có cdf là F, thì F(μ) = 1/2.
+>
+>
+>
+> Thế thì ta gọi X1,...Xn là random sample \~ pdf f và cdf F (và population median là μ), ta sẽ có P(Xi ≤ μ) = F(μ) = 1/2. Và gọi Mn là sample median.
+>
+>
+>
+> Mục đích của ta là đi tìm lim P(√n(Mn - μ) ≤ a) for some a. Tí nữa sẽ nói nguyên nhân, còn giờ cứ tập trung vào √n(Mn - μ) ≤ a.
+>
+>
+>
+> Event này tương đương Mn ≤ μ + a/√n
+>
+>
+>
+> Vậy làm cách nào để tính P(Mn ≤ μ + a/√n)
+>
+>
+>
+> Với Mn là sample median, ta sẽ lập luận như sau: Ta giả sử n (sample size) là số lẻ. Ví dụ n = 3, sample là X1,X2,X3 và order statistic là X(1),X2,X3. Thì khi đó sample median chính là thằng X2. Như vậy, với sample size n, Mn chính là thằng X((n+1)/2)
+>
+>
+>
+> Do đó Mn ≤ μ + a/√n ⇔ X((n+1)/2) ≤ μ + a/√n và như vậy đồng nghĩa X(1),X(2),...X((n+1)/2) đều ≤ μ + a/√n
+>
+>
+>
+> Từ đó ta có thể thấy, event Mn ≤ μ + a/√n tương đương event: Có ít nhất (n+1)/2 random variable trong random sample X1,....Xn có giá trị ≤ μ + a/√n
+>
+>
+>
+> Tới đây ta đặt Yj là Bernouilly random variable mang giá trị 1 khi Xj ≤ μ + a/√n và mang giá trị 0 khi ngược lại. Thì event "Có ít nhất (n+1)/2 random variable trong random sample X1,....Xn có giá trị ≤ μ + a/√n" sẽ tương đương với event "Y1+Y2+...Yn ≥ (n+1)/2", hay Σj Yj ≥ (n+1)/2
+>
+>
+>
+> (sẽ dễ dàng nhận ra, theo những gì đã học trong Stat110 với gs Joe, nó liên quan đến random variable Σj Yj, có story là tổng các Bernouilly(p) trial iid:độc lập (vì X1,...Xn độc lập), và có cùng distribution tham số pn = P(Xj ≤ μ + a/√n) (vì Xj iid nên P(Xj ≤ μ + a/√n) cũng đều giống nhau với mọi j). Nhưng ở đây ta không dùng thực tế Σj Yj là binomial, mà chỉ quan tâm đến Y1,...Yn là iid \~ Bern(pn).
+>
+>
+>
+> Như đã biết với Bern(pn) distribution thì mean và variance:
+>
+>
+>
+> EYj = pn
+>
+>
+>
+> Var(Yj) = pn(1 - pn)
+>
+>
+>
+> Biến đổi tiếp: Σj Yj ≥ (n+1)/2, mục đích là đưa về dạng √n(sample mean - population mean)/σ để dùng LT:
+>
+>
+>
+> ⇔ (Σj Yj)/n ≥ (n+1)/2n
+>
+>
+>
+> ⇔ (Σj Yj)/n - pn ≥ (n+1)/2n - pn
+>
+>
+>
+> ⇔ √n\[(Σj Yj)/n - pn\]/√\[pn(1 - pn)\] ≥ √n\[(n+1)/2n - pn\]/√\[pn(1 - pn)\]
+>
+>
+>
+> Chú ý: Lúc này vế trái chính là có dạng: √n \[sample mean (Σj Yj)/n\] - population mean (=pn)\] / √population variance (=√\[pn(1 - pn)\])
+>
+>
+>
+> Rút gọn bớt, đưa n xuống dưới:
+>
+>
+>
+> ⇔ \[(Σj Yj) - npn\]/√n\[pn(1 - pn)\] ≥ \[(n+1)/2 - npn\]/√\[npn(1 - pn)\]
+>
+>
+>
+> Thế thì, theo Central Limit Theorem, nếu ta có X1,...Xn , có mean μ, variance σ^2. Thì khi n → ∞ P(√n(Xbar - μ)/σ ≤ x), tức cdf √n(Xbar - μ)/σ tại x của sẽ converge về Φ(x), tức P(Z ≤ x) với Z là standard normal variable. (đây gọi là converge in distribution: √n(Xbar - μ)/σ → (d) n(0,1)
+>
+>
+>
+> Vậy áp dụng CLT ở đây, \[(Σj Yj) - npn\]/√n\[pn(1 - pn)\] → (d) n(0,1)
+>
+>
+>
+> Nên tại limit n → ∞, thì event \[(Σj Yj) - npn\]/√n\[pn(1 - pn)\] ≥ \[(n+1)/2 - npn\]/√\[npn(1 - pn)\] sẽ là event liên quan đến normal random variable Z:
+>
+>
+>
+> Z ≥ lim n → ∞ \[(n+1)/2 - npn\]/√\[npn(1 - pn)\]
+>
+>
+>
+> Từ đó ta sẽ có thể có P(√n(Mn - μ) ≤ a) → P(Z ≥ cái gì đó), và từ vào đây ta sẽ cố gắng đưa vế phải về dạng P(something × Z ≤ a) để kết luận √n(Mn - μ) converge in distriution về \[something\] × Z, và nó cũng là một normal có variance là \[something\]^2, giúp kết luận Avar(Mn) theo định nghĩa.
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy, tiếp theo ta sẽ đi tính lim n → ∞ \[(n+1)/2 - npn\]/√\[npn(1 - pn)\], với pn = P(Xj ≤ μ + a/√n)
+>
+>
+>
+> khi n → ∞, P(Xj ≤ μ + a/√n) → P(Xj ≤ μ + 0) = F(μ) = 1/2 (do μ là population median)
+>
+>
+>
+> nên mẫu số√\[npn(1 - pn)\] → √\[n(1/2)(1/2)\] = √(n/4) = √n/2
+>
+>
+>
+> Còn tử số (n+1)/2 - npn = (n+1)/2 - nP(Xj ≤ μ + a/√n)
+>
+>
+>
+> P(Xj ≤ μ + a/√n), tức F(μ + a/√n) ≈ F(μ) + F'(μ)(a/√n) (linear approx)
+>
+>
+>
+> = F(μ) + f(μ)(a/√n)
+>
+>
+>
+> ⇒ (n+1)/2 - nP(Xj ≤ μ + a/√n) ≈ (n+1)/2 - n\[F(μ) + f(μ)(a/√n)\]
+>
+>
+>
+> = (n+1)/2 - nF(μ) - nf(μ)(a/√n)
+>
+>
+>
+> = (n+1)/2 - n/2 - nf(μ)(a/√n)
+>
+>
+>
+> = 1/2 - nf(μ)(a/√n)
+>
+>
+>
+> Nên khi n → inf, tử số → - a√nf(μ)
+>
+>
+>
+> Vậy khi tại limit, \[(n+1)/2 - npn\]/√\[npn(1 - pn)\] = - a√nf(μ)/(√n/2) = - 2af(μ)
+>
+>
+>
+> ---
+>
+>
+>
+> Như vậy, tại limit, event Mn ≤ μ + a/√n tương đương Z ≥ - 2af(μ)
+>
+>
+>
+> nên P(Mn ≤ μ + a/√n) = P(√n(Mn - μ) ≤ a) → P(Z ≥ - 2af(μ)), cũng là P(Z ≤ 2af(μ))
+>
+>
+>
+> (do Z \~ n(0,1), P(Z ≥ - 2af(μ)) là diện tích đồ thị hàm pdf từ mốc -2af(μ) trở lên, do tính đối xứng, nó sẽ bằng diện tích đồ thị từ -∞ đến +2af(μ), tức P(Z ≤ 2af(μ)).
+>
+>
+>
+> Như vậy, P(√n(Mn - μ) ≤ a) → P(Z/2f(μ) ≤ a) có nghĩa là cdf của √n(Mn - μ) converge về cdf của Z.
+>
+>
+>
+> Theo định nghĩa của converge in distribution, điều này có nghĩa là √n(Mn - μ) → (d) \[1/2f(μ)\] × Z.
+>
+>
+>
+> Và theo location scale family, đây là normal(0, \[1/2f(μ)\]^2)
+>
+>
+>
+> Vậy limit distribution của √n(Mn - μ) là normal(0, \[1/2f(μ)\]^2), nên theo định nghĩa của phương sai tiệm cận, ta nói Avar(Mn) = \[1/2f(μ)\]^2.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú vô cùng chi tiết và chính xác, đặc biệt là phần tự khai triển xấp xỉ Taylor rất trực quan mà sách giáo khoa đã bỏ qua. Điểm trừ duy nhất là một lỗi ký hiệu nhỏ ở mẫu số vế trái trong bước biến đổi trung gian, nhưng không ảnh hưởng đến tính đúng đắn của toàn bộ bài viết.
+
+**🔗 See also:** [Xác suất thống kê thứ tự rời rạc](./54_order_statistic.md#node-rdrmu3r) · [Stronger Central Limit Theorem](./55_convergence_concepts.md#node-yngnkwh) · [Phương sai tiệm cận và giới hạn](./101_point_estimation.md#node-62aug4x)
+
+<br>
+
+<a id="node-8ww4qv1"></a>
+
+- **AREs of the Median to the Mean**
+
+<p align="center"><kbd><img src="assets/uxey1bhs0hc.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> và như vậy, khi ta đã có Avar(Mn) = \[1/2f(μ)\]^2, với f(μ) là pdf của Xi tại population median μ.
+>
+>
+>
+> Ta mới dùng ARE (asymptotic relative efficientcy), như đã nói, là tỉ lệ của Avar của hai estimator.
+>
+>
+>
+> Nên ARE(Mn,Xbar_n) = Avar(Xbar_n)/Avar(Mn)
+>
+>
+>
+> = (σ^2)/\[1/2f(μ)\]^2
+>
+>
+>
+> Chú ý,  ARE(Mn,Xbar_n) = Avar(Xbar_n)/Avar(Mn) càng lớn chứng tỏ Avar của sample median càng vượt trội Avar(sample mean) và cho thấy sample median tốt hơn.
+>
+>
+>
+> Và người ta tính toán cái này với các distribution khác nhau thì thấy
+>
+>
+>
+> Khi distribution là normal, thì ARE là 0.64, cho thấy Avar(sample mean) chỉ bằng 0.64 Avar(sample median) chứng tỏ, sample mean tốt hơn.
+>
+>
+>
+> Nhưng khi distribution ngày càng khác normal, có dạng heavy tail (khác với light tail của normal) thì ARE lớn cho thấy phương sai tiệm cận của sample median nhỏ hơn → sample median tốt hơn
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chú rất chính xác và chi tiết, giải thích rõ ràng công thức ARE cũng như ý nghĩa thực tế đối với phân phối đuôi nặng dựa trên tài liệu. Bạn chỉ cần viết rõ hơn ký hiệu toán học ở mẫu số [1/(2f(μ))]^2 để tránh hiểu nhầm về mặt toán học.
+
+**🔗 See also:** [Asymptotic Relative Efficiency](./101_point_estimation.md#node-2y7vyqf)
+
+<br>
+
+<a id="node-wq8irqn"></a>
+
+- **Section 10.2.2 M-Estimators**
+
+<p align="center"><kbd><img src="assets/jdaby4q3h8i.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Qua phần này, đại khái là, nhiều estimator thật ra có bản chất là kết quả của quá trình ta giải bài toán tối ưu nào đó.
+>
+>
+>
+> Ví dụ, nổi tiếng nhất, chính là MLE, như đã biết, chính là ta đi giải bài toán tối ưu: maximize (over θ) L(θ|**x**) = f(**x**|θ) = Πi f(xi|θ), để có được ML estimator θ^(**X**) của θ, để rồi với observed value **X** = **x**, θ^(**x**) sẽ là giá trị của θ có độ hợp lí cao nhất giải thích cho việc quan sát được data mang gía trị này.
+>
+>
+>
+> Bên cạnh đó, sample mean Xbar, hay diễn ta rằng nó cũng là một estimator, là hàm của sample, ta viết Xbar(**X**). Thì thật ra nó cũng là kết quả của bài toán tối ưu sau: minimize (over W) Σi (W - Xi)^2. Cái này dễ thấy, dùng ngôn ngữ tối ưu, đây là bài toán tối ưu hàm quadratic function của W, là bài toán lồi. Dùng đìều kiện tối ưu bậc một ta có d/dW \[Σi (W - Xi)^2\] = 0 ⇔ Σi \[d/dW (W - Xi)^2\] = 0 ⇔ Σi \[2(W - Xi)\] = 0 ⇔ nW - ΣiXi = 0 ⇔ W = (ΣiXi)/n chính là sample mean Xbar(**X**)
+>
+>
+>
+> Tương tự, với sample median, nó cũng chính là solution của bài toán minimize |W - Xi|
+>
+>
+>
+> Vậy khi minimize (sum) **square** của (W - Xi)^2 thì ta có sample mean
+>
+>
+>
+> mininize (sum) **absolute** của |W - Xi| thì ta có sample median
+>
+>
+>
+> và minimize sum **ln f(xi|θ)** đối với MLE
+>
+>
+>
+> (bài toán MLE, như đã biết, ta có thể chuyển thành equivalent bằng hàm ln: maximize ln Πi f(xi|θ), hay minimize - ln Πi f(xi|θ) = -Σi ln f(xi|θ)
+>
+>
+>
+>
+>
+> Vậy, ở đây đại ý là, gs muốn tìm một cách mang tính hệ thống, cụ thể là một tiêu chí nào đó để khi giải bài toán tối ưu với tiêu chí đó thì ta sẽ được một roburst estmator.
+>
+>
+>
+> Thế thì, nhà thống kê Huber (cái tên Huber loss trong Machine Learning là tên ông này) tiếp cận như sau:
+>
+>
+>
+> Ông đặt ra tiêu chí là: minimize (over a) Σi ρ(xi-a) (a hay W cũng được, chỉ là tên biến tối ưu)
+>
+>
+>
+> với ρ(x) = (1/2)x^2 khi |x| ≤ k và = k|x| - (1/2)k^2 khi |x| ≥ k
+>
+>
+>
+> Và đại ý là, cái này giống như **kết hợp tiêu chí square và absolute** lại. Với k là constant gọi là tuning parameter.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chú của bạn rất xuất sắc, chính xác và có chiều sâu khi tự chứng minh bài toán tối ưu cho sample mean và liên hệ tốt với Huber loss trong Machine Learning. Để hoàn thiện hơn, bạn nên chú ý viết đầy đủ ký hiệu tổng cho trường hợp median và rà soát một vài lỗi chính tả nhỏ như 'roburst estmator'.
+
+<br>
+
+<a id="node-xv75rqm"></a>
+
+- **Example 10.2.5 Huber Estimator**
+
+<p align="center"><kbd><img src="assets/2krlvv34k8x.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Thế thì người ta lấy ví dụ có sample với giá trị quan sát được là -1.28,.....9 (tức là x1=-1.28, x2=-0.96,.....
+>
+>
+>
+> Và với giá trị của sample vậy, sample mean và sample median là 1.33 và -0.21.
+>
+>
+>
+> Và cũng tính giá trị của Huber estimator tại observed value.
+>
+>
+>
+> Phải nói chút xíu chỗ này: Nên nhớ, sample mean, sample median đều là estimator, là function của sample W(**X**), với W là hàm số nào đó. Và như đã nói ở note trước, chúng thực chất là kết quả của việc giải bài toán tối ưu với tiêu chí khác nhau. Nên cụ thể là với sample mean, W(**X**) = (Σi Xi)/n, cũng được, mà ghi là argmin_W {Σi (W - Xi)^2} cũng được luôn.
+>
+>
+>
+> Tương tự, với sample median thì cái hàm đó là W(**X**) = argmin_W {Σi |W - Xi|}.
+>
+>
+>
+> Tương tự, Huber loss, nó là W(**X**) = argmin_W {Σi ρ(W - Xi)}
+>
+>
+>
+> Rồi, dù là sample mean / median hay Huber estimator, vì đều chỉ là các hàm của **X**, nên khi có observed value của **X**, = **x**, ta có observed value của 3 cái estimator này, lần lượt là:
+>
+>
+>
+> sample mean: argmin_W {Σi (W - xi)^2}, hay (Σi xi)/n và tính ra là 1.33
+>
+>
+>
+> sample median: argmin_W {Σi |W - xi|} = -0.21
+>
+>
+>
+> Huber estimator: argmin_W {Σi ρ(W - xi)} = một giá trị nào đó còn phụ thuộc hằng số k
+>
+>
+>
+> Và với k khác nhau tăng dần, ta thấy giá trị của Huber estimator thay đổi từ -0.21 đến 1.33 giúp ta có một góc nhìn là:
+>
+>
+>
+> khi k tăng dần, Huber estimator sẽ chuyển dịch từ sample median (có độ robusrt tốt hơn sample mean) sang sample mean, có độ roburst kém hơn. Do đó trong sách nói nó sẽ giảm tính robusrtness đối với outlier so khi k tăng (outlier ý là, trong data quan sát được xuất hiện những giá trị cực hạn, bất thường, mà điều đó đồng nghĩa là giả định ban đầu của ta về phân phối thật không đúng, và tính robusrt thì giúp chống lại ảnh hưởng từ điều này. Nên giảm tính robursness với outliner có nghĩa là giảm khả năng chống chọi với việc giả định ban đầu là sai.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Note giải thích rất chi tiết và chính xác bản chất toán học của các estimator dưới dạng bài toán tối ưu, cũng như giải nghĩa rõ ràng về tính chất robust đối với outlier khi k thay đổi. Để hoàn thiện hơn, bạn có thể giải thích ngắn gọn cách Huber loss chuyển hóa về L1-loss khi k tiến về 0 và L2-loss khi k tiến ra vô cùng.
+
+<br>
+
+<a id="node-o9kk9tp"></a>
+
+- **Introduction to M-Estimators**
+
+<p align="center"><kbd><img src="assets/mztyzb1eta.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là thật ra hàm ρ như trong 10.2.2 chỉ là một trường hợp đặc biệt, có thể có công thức khác. Và khi xét hàm ρ tổng quát, người ta gọi cái estimator argmin_W Σi ρ(xi - W) là M-estimator.
+>
+>
+>
+> (trong sách ghi mininize Σi ρ(xi - θ), theo mình là dễ gây nhầm lẫn khi dùng θ làm biến tối ưu, nên ghi là mininize Σi ρ(xi - a) hay mininize Σi ρ(xi - W), giải ra sẽ có được một hàm theo **x**. Còn không thì ta phải hiểu θ ở đây là biến tối ưu, mà solution của bài toán tối ưu này là sẽ là estimator cho θ)
+>
+>
+>
+> Và khi ρ(x-θ) = -l(θ|x) ta sẽ có kết quả M-estimator chính là MLE, thử xem đúng không.
+>
+>
+>
+> Với ρ(x-θ) = -l(θ|x) thì ρ(xi-θ) = -l(θ|xi), khi đó bài toán tối ưu sẽ là: 
+>
+>
+>
+> minimize Σi ρ(xi - θ) = Σi \[-l(θ|xi\] = Σi \[-ln L(θ|xi)\] = -ln Πi L(θ|xi)
+>
+>
+>
+> ≡ maximize ln Πi L(θ|xi)
+>
+>
+>
+> cũng là maximize maximize ln Πi f(xi|θ), nhờ tính iid, nên đây chính là maximize ln L(θ|**x**), và do đó solution của nó chính là MLE.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú rất xuất sắc, không chỉ hiểu rõ nội dung sách mà còn chỉ ra điểm dễ nhầm lẫn trong ký hiệu và tự chứng minh lại một cách chặt chẽ. Bạn chỉ cần lưu ý làm rõ hơn giả định i.i.d. khi biến đổi từ tổng log-likelihood thành tích likelihood.
 
 <br>
 
