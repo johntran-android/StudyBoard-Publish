@@ -1,6 +1,6 @@
 # 12.1 Examples
 
-📊 **Progress:** `4` Notes | `6` Screenshots | `4` AI Reviews
+📊 **Progress:** `5` Notes | `7` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-frx2ram"></a>
@@ -156,11 +156,11 @@
 >
 >
 >
-> Vì gradient sẽ luôn vuông góc với level curve. Nên ∇f vuông góc với tiếp tuyến u của f(x\*)-level curve tại x\*, và ∇g vuông góc với tiếp tuyến v của 0-level curve của g(x). Mà x\* là tiếp điểm của hai level curve này, nên hai cái tiếp tuyến trên là một. Từ đó suy ra: ∇f(x\*) vuông góc u, ∇g(x\*) cũng vuông góc u. Nên ∇f(x\*) trùng hướng với ∇g(x\*). Và thể hiện toán học là tồn tại số scalar λ nào đó để:
+> Vì gradient sẽ luôn vuông góc với level curve. Nên ∇f vuông góc với tiếp tuyến u của f(x\*)-level curve tại x\*, và ∇g vuông góc với tiếp tuyến v của 0-level curve của g(x). Mà x\* là tiếp điểm của hai level curve này, nên hai cái tiếp tuyến trên là một. Từ đó suy ra: ∇f(x\*) vuông góc u, ∇g(x\*) cũng vuông góc u. Nên ∇f(x\*) trùng hướng với ∇g(x\*). Và thể hiện toán học là tồn tại số scalar λ\* nào đó để:
 >
 >
 >
-> ∇f(x\*) = λ∇g(x\*)
+> ∇f(x\*) = λ\*∇g(x\*)
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
@@ -342,6 +342,29 @@
 > Bài viết xuất sắc, tự chứng minh rất chi tiết bằng phép chiếu và kiểm tra tính bán xác định dương của ma trận P cực kỳ chặt chẽ. Bạn chỉ lưu ý một lỗi nhỏ ở ví dụ cuối: điểm tối ưu trên đường tròn đơn vị phải là (-1/√2, -1/√2) chứ không phải là (-1, -1).
 
 **🔗 See also:** [linked note *(Mit 18.06)*](../mit1806_gstrang/lecture_32_quiz_3_review.md#node-p3i6h08)
+
+<br>
+
+<a id="node-eq84j6p"></a>
+
+- **Lagrangian Function and Lagrange Multipliers**
+
+<p align="center"><kbd><img src="assets/zkr2n6pw71d.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Thế thì đại ý là, từ việc lập luận mang tính trực giác rằng nếu x\* chưa thỏa ∇f(x\*) = λ\*∇c1(x) thì sẽ luôn có thể từ đó mà đi đến đến feasible có f nhỏ hơn, ta sẽ dùng điều kiện này làm điều kiện cần trong việc xác định solution của bài toán ràng buộc.
+>
+>
+>
+> Và bằng cách đưa vào (introducing) một hàm có tên là Lagrangian L(x, λ) = f(x) + λc1(x) thì cái điều kiện này chính là ∇\_x L(x\*, λ\*) = 0 (tức là đạo hàm theo x của L = 0)
+>
+>
+>
+> Và λ1 được gọi là Lagrange multiplier.
+>
+>
+>
+> Một ý cuối đó là, điều kiện này chỉ là cần, chứ chưa đủ ý là, nếu thỏa thì chưa chắc x\* đã là minimizer. Vì dễ thấy trong ví dụ trước, điểm (1,1) cũng có tính chất ∇f(x) song song ∇c1(x). Nhưng rõ ràng nó là maximizer chứ không phải minimizer
 
 <br>
 
