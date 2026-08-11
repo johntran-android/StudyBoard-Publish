@@ -120,8 +120,6 @@
 
 <br>
 
-<a id="node-4x0nr6q"></a>
-
 <a id="node-u3tnntf"></a>
 
 ##### Smoothness in Constrained Optimization
@@ -183,6 +181,4 @@
 > Ghi chú rất chi tiết, dịch và giải thích chính xác các khái niệm toán học từ đoạn văn bản, bao gồm cả ví dụ minh họa và phần biến đổi ràng buộc. Điểm cần lưu ý duy nhất là cụm từ "sometimes" nên được dịch chính xác là "đôi khi" thay vì "thông thường" để phản ánh đúng tần suất áp dụng của phương pháp.
 
 <br>
-
-<a id="node-59u96uf"></a>
 
