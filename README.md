@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,071 notes` · `~17,484 screenshots` · `17 notebooks`**
+**`~12,075 notes` · `~17,488 screenshots` · `17 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -466,7 +466,7 @@ Derivative Approx](numerical_optimization_jnocedal/81_finite_difference_derivati
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_jnocedal/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 - [A.1 Matrix Factorizations: Cholesky, LU, QR](numerical_optimization_jnocedal/a1_matrix_factorizations_cholesky_lu_qr.md) — `9n / 11i`
 
-### 📂 Pattern Recognition Machine Learning_C.Bishop (📝 348 Notes | 📸 509 Screenshots)
+### 📂 Pattern Recognition Machine Learning_C.Bishop (📝 352 Notes | 📸 513 Screenshots)
 <!-- key: pattern_recognition_machine_learning_cbishop -->
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
@@ -518,6 +518,7 @@ Of Dimensionality](pattern_recognition_machine_learning_cbishop/14_the_curse_of_
 - [3.3.2 Predictive distribution](pattern_recognition_machine_learning_cbishop/332_predictive_distribution.md) — `6n / 10i`
 - [3.3.1 Bayesian Linear Regression](pattern_recognition_machine_learning_cbishop/331_bayesian_linear_regression.md) — `8n / 12i`
 - [3.3.3 Equivalent kernel](pattern_recognition_machine_learning_cbishop/333_equivalent_kernel.md) — `5n / 8i`
+- [3.4 Bayesian Model Comparison](pattern_recognition_machine_learning_cbishop/34_bayesian_model_comparison.md) — `4n / 4i`
 - [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) — `19n / 22i`
 - [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) — `5n / 7i`
 
