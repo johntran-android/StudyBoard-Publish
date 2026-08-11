@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,062 notes` · `~17,472 screenshots` · `17 notebooks`**
+**`~12,063 notes` · `~17,475 screenshots` · `17 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -426,7 +426,7 @@ review](mit1806_gstrang/lecture_34_final_course_review.md) — `32n / 34i`
 - [C4w3 - Question Answering](nlp_spec_coursera/c4w3_question_answering.md) — `130n / 187i`
 - [C4w4_chatbot](nlp_spec_coursera/c4w4_chatbot.md) — `90n / 113i`
 
-### 📂 Numerical Optimization_J.Nocedal (📝 388 Notes | 📸 541 Screenshots)
+### 📂 Numerical Optimization_J.Nocedal (📝 389 Notes | 📸 544 Screenshots)
 <!-- key: numerical_optimization_jnocedal -->
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
@@ -461,7 +461,7 @@ Derivative Approx](numerical_optimization_jnocedal/81_finite_difference_derivati
 - [10.3 Algorithms for nonlinear least-squares problem](numerical_optimization_jnocedal/103_algorithms_for_nonlinear_least_squares_problem.md) — `14n / 23i`
 - [10.4 Orthogonal Distance Regression (bỏ qua)](numerical_optimization_jnocedal/104_orthogonal_distance_regression_b_qua.md) — `1n / 1i`
 - [12.0 Theory of Constrained Optimization](numerical_optimization_jnocedal/120_theory_of_constrained_optimization.md) — `5n / 8i`
-- [12.1 Examples](numerical_optimization_jnocedal/121_examples.md) — `3n / 3i`
+- [12.1 Examples](numerical_optimization_jnocedal/121_examples.md) — `4n / 6i`
 - [Appendix A](numerical_optimization_jnocedal/appendix_a.md) — `1n / 1i`
 - [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_jnocedal/a1_error_analysis_floating_point_arithmetic.md) — `8n / 10i`
 - [A.1 Matrix Factorizations: Cholesky, LU, QR](numerical_optimization_jnocedal/a1_matrix_factorizations_cholesky_lu_qr.md) — `9n / 11i`
