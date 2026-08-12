@@ -1926,7 +1926,7 @@
 >
 >
 >
-> Vậy thì ở đây, nếu **x,y** ∈B_t', tức {**z** ∈R^n: T'(z) = t' ∈ T_curly}
+> Vậy thì ở đây, nếu **x,y** ∈B_t', tức {**z** ∈R^n: T'(z) = t' ∈ 𝒯}
 > thì như trên ta có T'(**x**) = T'(**y**) = t', và g(T'(**x**)) = g(T'(**y**)) ⇔
 > T(**x**) = T(**y**) = g(t). Như vậy điều này chứng tỏ ràng, nếu ông **x**, **y**
 > mà nằm trong A_t' thì chúng cũng nằm trong một partition của T(**X**) luôn,
