@@ -28,7 +28,9 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 <!-- key: a0_mit1801 -->
 `317 notes · 331 screenshots · 8 sections`
 
-> This notebook summarizes key concepts from MIT 18.01 Single-Variable Calculus, primarily focusing on limits, the definition and applications of derivatives. It covers topics like tangent lines, approximations, optimization, and related rates.
+> A comprehensive set of study notes for MIT 18.01 Single Variable Calculus, covering core topics from limits and derivatives to practical applications such as optimization, curve sketching, and approximation methods.
+> 
+> Tập hợp chi tiết các ghi chép học tập cho khóa học Giải tích một biến MIT 18.01, bao gồm các chủ đề cốt lõi từ giới hạn, đạo hàm cho đến các ứng dụng thực tế như tối ưu hóa, khảo sát hàm số và các phương pháp xấp xỉ.
 
 <details open>
 <summary>📖 8 sections</summary>
@@ -93,7 +95,9 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 <!-- key: cs224n_stanford -->
 `801 notes · 1,120 screenshots · 29 sections`
 
-> This notebook provides an introduction to core Natural Language Processing concepts, focusing on distributed word representations (embeddings) and their learning via neural network models like Word2Vec, exploring their properties and applications in various NLP tasks.
+> A comprehensive study notebook for Stanford's CS224N (Natural Language Processing with Deep Learning) course, covering fundamental to advanced NLP concepts from word embeddings (Word2Vec, GloVe) to neural architectures like RNNs, Transformers, and RLHF.
+> 
+> Sổ tay học tập toàn diện cho khóa học CS224N của Stanford (Xử lý Ngôn ngữ Tự nhiên với Học sâu), bao gồm các kiến thức từ cơ bản đến nâng cao từ biểu diễn từ (Word2Vec, GloVe) cho đến các kiến trúc mạng nơ-ron như RNN, Transformer và RLHF.
 
 <details open>
 <summary>📖 29 sections</summary>
@@ -136,7 +140,9 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 <!-- key: cs231n_stanford -->
 `1,603 notes · 2,702 screenshots · 29 sections`
 
-> This notebook compiles key concepts from Stanford's CS231N course, covering deep learning fundamentals such as neural networks, optimization, and hyperparameter tuning. It also extensively explores computer vision applications, including image classification, object detection, and generative models, with a strong emphasis on convolutional and recurrent neural networks.
+> This notebook contains comprehensive study notes, lecture summaries, and programming assignments from Stanford's CS231n course on Convolutional Neural Networks for Visual Recognition.
+> 
+> Cuốn sổ tay này tổng hợp các ghi chép học tập, tóm tắt bài giảng và bài tập thực hành từ khóa học CS231n của Đại học Stanford về Mạng nơ-ron tích chập cho Nhận dạng Thị giác.
 
 <details open>
 <summary>📖 29 sections</summary>
@@ -198,7 +204,9 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 <!-- key: dl_spec_coursera -->
 `1,083 notes · 1,827 screenshots · 19 sections`
 
-> This notebook provides a comprehensive overview of deep learning concepts, from foundational neural networks and gradient descent to advanced architectures like CNNs, RNNs, and Transformers. It emphasizes practical implementation using TensorFlow, drawing heavily from Coursera specialization content and programming assignments.
+> A comprehensive compilation of notes, quizzes, and programming assignments from the Coursera Deep Learning Specialization. It covers topics ranging from foundational neural networks to advanced computer vision, NLP architectures, and model optimization using TensorFlow.
+> 
+> Tổng hợp toàn diện các ghi chép, bài trắc nghiệm và bài tập lập trình từ Chuyên ngành Deep Learning trên Coursera. Nội dung bao gồm từ các khái niệm mạng nơ-ron cơ bản đến các kiến trúc nâng cao về thị giác máy tính, NLP và tối ưu hóa mô hình bằng TensorFlow.
 
 <details open>
 <summary>📖 19 sections</summary>
@@ -231,7 +239,9 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 <!-- key: ee364a_convex_optim_sboyd -->
 `937 notes · 1,428 screenshots · 23 sections`
 
-> This notebook contains lecture notes from EE364a, covering Stephen Boyd's approach to convex optimization. It explores key concepts like convex functions and sets, generalized inequalities, problem formulations, duality theory, optimality conditions, and computational considerations.
+> A comprehensive collection of study notes and lecture summaries for Stephen Boyd's Convex Optimization course (EE364a), covering fundamental concepts such as convex sets and functions, duality theory, KKT conditions, and optimization algorithms.
+> 
+> Bộ sưu tập chi tiết các ghi chép học tập và tóm tắt bài giảng cho khóa học Tối ưu hóa Lồi (EE364a) của Stephen Boyd, bao gồm các khái niệm nền tảng như tập hợp và hàm lồi, lý thuyết đối ngẫu, điều kiện KKT và các thuật toán tối ưu hóa.
 
 <details open>
 <summary>📖 23 sections</summary>
@@ -285,7 +295,9 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 <!-- key: mit_1802 -->
 `549 notes · 615 screenshots · 13 sections`
 
-> This notebook covers multivariable calculus (MIT 18.02), exploring partial derivatives, multiple integrals, vector fields, and the geometric interpretation of transformations via Jacobian determinants and total differentials.
+> This notebook contains study notes for MIT 18.02 (Multivariable Calculus), covering core topics such as vector algebra, matrices, partial derivatives, Lagrange multipliers, and double integrals.
+> 
+> Vở ghi chép này tổng hợp các kiến thức môn Giải tích đa biến (MIT 18.02), bao gồm các chủ đề cốt lõi như đại số vector, ma trận, đạo hàm riêng, phương pháp nhân tử Lagrange và tích phân kép.
 
 <details open>
 <summary>📖 13 sections</summary>
@@ -336,6 +348,8 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `1,181 notes · 1,269 screenshots · 36 sections`
 
 > This notebook covers fundamental linear algebra concepts, from solving systems of equations and matrix operations to eigenvalues, SVD, and linear transformations, often emphasizing their geometric interpretations.
+> 
+> Sổ tay này bao gồm các khái niệm cơ bản về đại số tuyến tính, từ giải hệ phương trình và các phép toán ma trận đến trị riêng, phân tích SVD và biến đổi tuyến tính, thường nhấn mạnh các diễn giải hình học của chúng.
 
 <details open>
 <summary>📖 36 sections</summary>
@@ -385,7 +399,9 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 <!-- key: nlp_spec_coursera -->
 `1,808 notes · 2,287 screenshots · 19 sections`
 
-> Exploring core Natural Language Processing (NLP) techniques, this notebook delves into Transformer and LSTM architectures, word embedding methods, and algorithms like BPE and LSH, complemented by practical exercises for building and evaluating NLP systems.
+> A comprehensive collection of study notes, practical exercises, and implementations from the Coursera NLP Specialization, covering foundational NLP techniques, sequence models, and modern Transformer architectures.
+> 
+> Cuốn sổ tay tổng hợp các ghi chép học tập, bài tập thực hành và mã nguồn từ khóa học Chuyên sâu về NLP trên Coursera, bao gồm các kỹ thuật NLP nền tảng, mô hình chuỗi và kiến trúc Transformer hiện đại.
 
 <details open>
 <summary>📖 19 sections</summary>
@@ -419,6 +435,8 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `392 notes · 550 screenshots · 30 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
+> 
+> Sổ tay này đi sâu vào các thuật toán tối ưu hóa số cốt lõi như tìm kiếm đường thẳng, vùng tin cậy, quasi-Newton và gradient liên hợp, cùng các khái niệm thiết yếu như đạo hàm tự động, phân tích hội tụ và kỹ thuật đại số tuyến tính số.
 
 <details open>
 <summary>📖 30 sections</summary>
@@ -463,6 +481,8 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `352 notes · 513 screenshots · 46 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
+> 
+> Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
 <summary>📖 46 sections</summary>
@@ -523,6 +543,8 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `881 notes · 1,109 screenshots · 16 sections`
 
 > This notebook explores foundational and advanced topics in probability and statistical inference, covering random variables, their distributions (discrete and continuous), expectation, variance, moment generating functions, and key theorems such as the Law of Large Numbers and Central Limit Theorem.
+> 
+> Sổ tay này khám phá các chủ đề cơ bản và nâng cao trong lý thuyết xác suất và suy luận thống kê, bao gồm các biến ngẫu nhiên, các phân phối của chúng (rời rạc và liên tục), kỳ vọng, phương sai, hàm sinh moment, và các định lý quan trọng như Luật Số lớn và Định lý Giới hạn Trung tâm.
 
 <details open>
 <summary>📖 16 sections</summary>
@@ -552,7 +574,9 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 <!-- key: statistical_inference_casella -->
 `838 notes · 1,094 screenshots · 26 sections`
 
-> This notebook compiles detailed notes on core concepts, key probability distributions, and essential methods for estimation and hypothesis testing in statistical inference, based on the Casella textbook.
+> This notebook contains detailed study notes and proofs based on Casella and Berger's *Statistical Inference*, covering key topics in probability theory, estimation methods, hypothesis testing, and asymptotic properties.
+> 
+> Sổ tay học tập này tổng hợp các ghi chép và chứng minh chi tiết dựa trên giáo trình *Statistical Inference* của Casella và Berger, bao gồm các chủ đề cốt lõi về lý thuyết xác suất, phương pháp ước lượng, kiểm định giả thuyết và tính chất tiệm cận.
 
 <details open>
 <summary>📖 26 sections</summary>
