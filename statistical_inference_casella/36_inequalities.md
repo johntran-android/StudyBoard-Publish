@@ -70,7 +70,7 @@
 >
 > (Trong stat110 thì hình như gs Blizstein gọi đây là Markov inequality)**
 
-**🔗 See also:** [Luật số lớn yếu](./55_convergence_concepts.md#node-j5m3pa1) · [Điều kiện vững ước lượng](./101_point_estimation.md#node-u07qsmw)
+**🔗 See also:** [Luật số lớn yếu WLLN](./55_convergence_concepts.md#node-j5m3pa1) · [Điều kiện vững ước lượng](./101_point_estimation.md#node-u07qsmw)
 
 <br>
 
