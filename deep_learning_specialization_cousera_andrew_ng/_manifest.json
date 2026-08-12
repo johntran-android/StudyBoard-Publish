@@ -1,0 +1,44 @@
+{
+  "title": "deep_learning_specialization_cousera_andrew_ng",
+  "publishedAt": 1786562252667,
+  "sections": [
+    {
+      "title": "📋 Overview",
+      "path": "deep_learning_specialization_cousera_andrew_ng/_overview.md",
+      "noteCount": 0,
+      "imageCount": 1
+    },
+    {
+      "title": "Course 1 - Neural Networks & Deep Learning",
+      "path": "deep_learning_specialization_cousera_andrew_ng/course_1_neural_networks_deep_learning.md",
+      "noteCount": 73,
+      "imageCount": 373
+    },
+    {
+      "title": "Course 2 - Improving Deep Neural Networks:",
+      "path": "deep_learning_specialization_cousera_andrew_ng/course_2_improving_deep_neural_networks_hyperparams_tuning_regularization_optimization.md",
+      "noteCount": 103,
+      "imageCount": 302
+    },
+    {
+      "title": "Course 3 - Structuring Machine Learning Projects",
+      "path": "deep_learning_specialization_cousera_andrew_ng/course_3_structuring_machine_learning_projects.md",
+      "noteCount": 64,
+      "imageCount": 87
+    },
+    {
+      "title": "Course 4 - Convolutional Neural Network",
+      "path": "deep_learning_specialization_cousera_andrew_ng/course_4_convolutional_neural_network.md",
+      "noteCount": 168,
+      "imageCount": 478
+    },
+    {
+      "title": "Course 5 - Sequence Models",
+      "path": "deep_learning_specialization_cousera_andrew_ng/course_5_sequence_models.md",
+      "noteCount": 226,
+      "imageCount": 586
+    }
+  ],
+  "totalNotes": 634,
+  "totalImages": 1827
+}
