@@ -1,6 +1,6 @@
 # 12.1 Examples
 
-📊 **Progress:** `5` Notes | `7` Screenshots | `4` AI Reviews
+📊 **Progress:** `7` Notes | `12` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-frx2ram"></a>
@@ -365,6 +365,179 @@
 >
 >
 > Một ý cuối đó là, điều kiện này chỉ là cần, chứ chưa đủ ý là, nếu thỏa thì chưa chắc x\* đã là minimizer. Vì dễ thấy trong ví dụ trước, điểm (1,1) cũng có tính chất ∇f(x) song song ∇c1(x). Nhưng rõ ràng nó là maximizer chứ không phải minimizer
+
+<br>
+
+<a id="node-l2m5qfg"></a>
+
+- **Single Inequality Constraint Optimization**
+
+<p align="center"><kbd><img src="assets/slkskexsoy.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ia0v2dnxfp.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, qua ví dụ này thì đại khái là người ta thay cái ràng buộc thay vì dùng ràng buộc đẳng thức thì người ta dùng ràng buộc bất đẳng thức. Tức là thay vì x1 bình phương cộng x2 bình phương bằng 2 thì bây giờ nó sẽ trở thành là 2 trừ x1 bình phương trừ x2 bình phương lớn hơn hoặc bằng 0. Thì cái feasible set, tức cái tập khả thi lúc này á, nó không còn là chỉ là tập hợp những điểm ở trên đường tròn nữa, mà lúc bấy giờ nó trở thành những điểm trên đường tròn và mọi điểm ở trong đường tròn đó. Hay nói khác nó là cái hình tròn. Và giáo sư cũng đề nghị ta để ý là cái vectơ gradient á, tức là nabla c1 á, bây giờ nó không còn là vectơ vuông góc với đường tròn và hướng ra ngoài nữa, mà nó bây giờ là vectơ vuông góc với đường tròn và hướng vào trong. Và khi mà mình quan sát kỹ hơn á, thì mình sẽ thấy cái điểm -1 -1 vẫn là nghiệm của cái bài toán này. Tuy nhiên, cái giá trị lamda 1 sao lúc này á nó là 1/2. Nói chung á là ý chính cần chú ý ở đây đó là với cái ràng buộc bất đẳng thức đó thì cái dấu của cái Lagrange multiplier nó trở nên quan trọng. Và mình sẽ cùng tìm hiểu chuyện này.
+
+<br>
+
+<a id="node-i0gcjhq"></a>
+
+- **First-Order Feasible Step Conditions**
+
+<p align="center"><kbd><img src="assets/s2n7kkh7i2f.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ur4aow7krlr.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/uqwxijuhze.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Phần này gs Nocedal sẽ nói về lập luận mang tính trực giác để dẫn tới điều kiện giúp tìm nghiệm của bài toán tối ưu có ràng buộc bất đẳng thức: minimize f(x) s.t c1(x) ≥ 0. 
+>
+>
+>
+> Thế thì đại khái là ta sẽ cũng theo cái lối lập luận trước đây, khi làm cho ràng buộc đẳng thức: Đó là ta sẽ nói rằng, giả sử tại một điểm x feasible, nếu còn có thể tìm được vector s khiến x+s vẫn feasible và f(x+s) &lt; f(x) thì x khi đó chưa phải là minimizer của bài toán. Và ngược lại, nếu tại điểm nào đó mà không thể tìm được vector s như vậy, thì đó chính là minimizer. Từ đó ta sẽ thiết lập được điều kiện cần cho bài toán tối ưu này.
+>
+>
+>
+> Rồi, với s nhỏ, để x+s nằm trong lân cận x, ta có thể xấp xỉ hàm c1(x+s) bởi hàm tuyến tính: c1(x+s) ≈ c1(x) + ∇c1(x)Ts. Và để đến được x+s vẫn feasible, thì s phải thỏa c1(x+s) ≥ 0. Kết hợp với c1(x+s) ≈ c1(x) + ∇c1(x)Ts ta có thể nói rằng s phải thỏa: c1(x) + ∇c1(x)Ts ≥ 0
+>
+>
+>
+> Tiếp, lập luận tương tự, với s nhỏ, để x+s ≈ x, ta có thể xấp xỉ hàm f(x+s) bởi hàm tuyến tính:
+>
+>
+>
+> f(x+s) ≈ f(x) + ∇f(x)Ts
+>
+>
+>
+> và để đi xuống hơn nữa (giảm f hơn nữa) thì s phải thoả ∇f(x)Ts ≈ f(x+s) - f(x) &lt; 0 ⇔ ∇f(x)Ts &lt; 0.
+>
+>
+>
+> Như vậy muốn từ x, tiếp tục giảm f mà vẫn feasible thì phải tìm được s sao cho: ∇f(x)Ts &lt; 0 → s hợp với ∇f(x) góc tù. Và c1(x) + ∇c1(x)Ts ≥ 0
+>
+>
+>
+> Đến đây ta sẽ chia hai trường hợp:
+>
+>
+>
+> i) Nếu x đang đứng là điểm nằm trong interior của feasible set: tức c1(x) &gt; 0
+>
+>
+>
+> Khi đó ta thấy điều kiện c1(x) + ∇c1(x)Ts ≥ 0 sẽ chỉ là: Miễn là s đừng có khiến ∇c1(x)Ts âm quá lớn, để có giá trị dương của c1(x) vẫn đủ để gánh, thì khi đó điều kiện này sẽ vẫn thỏa. Và như vậy thì có nghĩa là, s có thể là hướng tùy ý, miễn là độ lớn phải đảm bảo không được làm cho ∇c1(x)Ts quá âm khiến c1(x) không gánh nổi. 
+>
+>
+>
+> Và vì s có thể chọn hướng tùy ý (miễn là giới hạn độ dài), nên đương nhiên là có thể chọn s để thỏa điều kiện ∇f(x)Ts &lt; 0, tức hợp với ∇f(x) góc tù để giảm thêm f nữa. Tuy nhiên phải đặt điều kiện là ∇f(x) khác 0 (vì nếu nó đã bằng 0, thì s, dù chọn hướng bất kì cũng không thể có tích vô hướng với ∇f(x) âm được.
+>
+>
+>
+> Như vậy: khi điểm đang đứng nằm trong interior của feasible set, thì trừ khi ∇f(x) đã bằng 0 rồi, thì khi đó không thể có s khiến x+s feasible và giảm thêm f. Ngược lại, nếu ∇f(x) khác 0, thì luôn tồn tại s khiến có thể giảm thêm. Và đương nhiên, lúc này hướng giảm nhanh nhất chính là - ∇f(x). Và như đã nhắc lại nhiều lần, rằng s hướng tuỳ ý nhưng phải khống chế độ dài, nên ta có:
+>
+>
+>
+> s = -α ∇f(x) với α đủ nhỏ.
+>
+>
+>
+> ii) Trường hợp x đang đứng là nằm ngay trên boundary của feasible set, tức c1(x) = 0.
+>
+>
+>
+> Khi đó, điều kiện tìm s để x+s vẫn feasible: c1(x) + ∇c1(x)Ts ≥ 0 trở thành ∇c1(x)Ts ≥ 0, mang ý nghĩa là s hợp ∇c1(x) góc vuông hoặc tù.
+>
+>
+>
+> Như vậy, trong trường hợp này, nếu tại x vẫn tìm được s sao cho s hợp với ∇f(x) góc tù, và với ∇c1(x) góc vuông hoặc tù, thì x chưa phải là minimizer. Còn ngược lại, nếu không thể tìm được s thỏa điều trên thì x chính là minimizer. 
+>
+>
+>
+> Vậy câu hỏi là, khi nào thì không thể tìm được s.
+>
+>
+>
+> Dễ thấy, đó là khi ∇f(x) và ∇c1(x) trùng nhau, vì s không thể nào hợp góc vuông hoặc nhọn và tù với cùng 1 vector được. Như vậy, ta có thể thiết lập điều kiện tìm minimizer:
+>
+>
+>
+> ∇f(x) và ∇c1(x) trùng nhau, thể hiện toán học bởi ∇f(x) = λ1 ∇c1(x) với λ phải không âm. 
+>
+>
+>
+> Vì sao λ1 phải không âm, vì điều kiện ta đang nói là chúng trùng nhau, tức trùng hướng (same direction), chứ ko phải chỉ là paralell (trùng phương, song song), vì nếu chúng trùng phương nhưng ngược hướng thì đương nhiên có vô số s hợp với ∇f(x) góc tù và hợp với ∇c1(x) góc nhọn
+>
+>
+>
+> (trong sách có cách giải thích hơi khác, đó là điều kiện ∇f(x)Ts &lt; 0 và ∇c1(x)Ts ≥ 0 chính là phương trình của hai halfspace (nhờ học Convex Optim S.Boyd nên trong mấy chapter đầu đã học về halfspace rồi) và s sẽ giúp define ra hai cái halfspace này. Thế thì nếu tồn tại s mà thỏa cùng lúc hai cái này tức là tồn tại s khiến cho điểm đang đứng x nằm trong intersection của hai cái halfspace này. Từ đó ta suy luận rằng để mà không tồn tại s, thì chỉ có thể là ∇f(x) trùng hướng ∇c1(x), vì khi đó hai half space sẽ chia đôi không gian, và một cái là tập đóng (ý là chứa biên) một cái là tập mở. Nên không thể nào chúng có điểm chung)
+>
+>
+>
+> ---
+>
+>
+>
+> Như vậy tổng kết hai case:
+>
+>
+>
+> Khi x trong interior của feasible: c1(x) &gt; 0 thì điều kiện dừng (không thể tìm được s để giảm thêm f mà vẫn feasible) là: ∇f(x) = 0
+>
+>
+>
+> Khi x trên boundary của feasible set: c1(x) = 0, thì điều kiện dừng là: ∇f(x) = λ ∇c1(x) với λ ≥ 0
+>
+>
+>
+> Vậy, ta sẽ kết hợp hai cái lại, thể hiện bởi: 
+>
+>
+>
+> ∇f(x\*) = λ\* ∇c1(x\*) (i) 
+>
+>
+>
+> λ\* × c1(x\*) = 0 (ii) 
+>
+>
+>
+> λ\* ≥ 0 (iii)
+>
+>
+>
+> Điều kiện λ\* c1(x\*) = 0 sẽ thể hiện rằng, nếu c1(x\*) &gt; 0, thì λ\* phải bằng 0, và (1) sẽ trở thành ∇f(x\*) = 0. Đây chính là case 1.
+>
+>
+>
+> Và nếu c1(x\*) = 0, thì λ\* chỉ cần thỏa (iii): tức λ\* ≥ 0, và cùng với (i), nó chính là miêu ta case 2.
+>
+>
+>
+> Và (i) thì cũng chính là ∇\_x ℒ(x\*, λ\*) = 0 với ℒ(x, λ) = f(x) - λ1c1(x).
+>
+>
+>
+> (ii) chính là complementary slackness đã học bên Convex Optim
+>
+>
+>
+> (iii) chính là dual feasible condition.
+>
+>
+>
+> Và mấy cái này tạo thành KKT condition.
+>
+>
+>
+> Như vậy, mình đã được thấy cách lập luận để xây dựng KKT condition tương đối khác với trong sách Boyd.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Bài viết thể hiện sự hiểu biết trực quan rất sâu sắc và mạch lạc về cách thiết lập điều kiện KKT. Tuy nhiên, có một nhầm lẫn nhỏ ở Case II khi viết điều kiện $\nabla c_1(x)^T s \ge 0$ tương ứng với góc 'vuông hoặc tù' (thực tế phải là góc 'nhọn hoặc vuông').
 
 <br>
 
