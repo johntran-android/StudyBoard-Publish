@@ -68,7 +68,7 @@
 
 <a id="node-j5m3pa1"></a>
 
-#### Luật số lớn yếu
+#### Luật số lớn yếu WLLN
 
 <p align="center"><kbd><img src="assets/h3ay3ovf49q.png" width="80%"></kbd></p>
 
@@ -185,7 +185,7 @@
 > Đơn giản là vì xác suất thì chỉ trong  range 0,1, mà cái P này ≥ 1 cái tiến tới 1
 > thì P chắc chắn cũng phải → 1, chứ ko thể tiến tới số nào nhỏ hơn 1 được,
 
-**🔗 See also:** [Bất đẳng thức Markov và chứng minh](./36_inequalities.md#node-u9zgfoi) · [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg)
+**🔗 See also:** [Bất đẳng thức Markov và chứng minh](./36_inequalities.md#node-u9zgfoi) · [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu)
 
 <br>
 
@@ -1101,7 +1101,7 @@
 >
 > Cái CLT này cho ta một công cụ hữu ích, **all-purpose approximation**, nhưng phải lưu ý rằng **chất lượng của approximation này phải xem lại**. Trong thực tế, nó luôn có ích trong việc đưa ra những tính toán sơ bộ đầu tiên
 
-**🔗 See also:** [CLT - Định lý giới hạn trung tâm](#node-32vkewg) · [MLE of e-lambda with Delta Method](./101_point_estimation.md#node-jiyzyog) · [Asymptotic Normality of the Median](./102_robustness.md#node-zvthtrd)
+**🔗 See also:** [CLT - Định lý giới hạn trung tâm](#node-32vkewg) · [MLE of e-lambda with Delta Method](./101_point_estimation.md#node-jiyzyog) · [Asymptotic Normality of the Median](./102_robustness.md#node-zvthtrd) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu)
 
 <br>
 
