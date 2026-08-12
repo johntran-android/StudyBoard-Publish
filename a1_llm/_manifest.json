@@ -1,0 +1,32 @@
+{
+  "title": "LLM — Large Language Models",
+  "publishedAt": 1786562572084,
+  "sections": [
+    {
+      "title": "📋 Overview",
+      "path": "a1_llm/_overview.md",
+      "noteCount": 0,
+      "imageCount": 1
+    },
+    {
+      "title": "Week3 - Rhhf",
+      "path": "a1_llm/week3_rhhf.md",
+      "noteCount": 153,
+      "imageCount": 169
+    },
+    {
+      "title": "Week 1_introduction To Llms And The Generative Ai Project Lifecycle",
+      "path": "a1_llm/week_1_introduction_to_llms_and_the_generative_ai_project_lifecycle.md",
+      "noteCount": 181,
+      "imageCount": 179
+    },
+    {
+      "title": "Week 2 - Finetuning And Evaluating Large Language Model",
+      "path": "a1_llm/week_2_finetuning_and_evaluating_large_language_model.md",
+      "noteCount": 144,
+      "imageCount": 156
+    }
+  ],
+  "totalNotes": 478,
+  "totalImages": 505
+}
