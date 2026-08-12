@@ -24,8 +24,11 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 ## 📚 Syllabus / Mục lục
 
+### 📂 Calculus
+
 ### MIT 18.01 — Single Variable Calculus
 <!-- key: a0_mit1801 -->
+<!-- group: Calculus -->
 `317 notes · 331 screenshots · 8 sections`
 
 > A comprehensive set of study notes for MIT 18.01 Single Variable Calculus, covering core topics from limits and derivatives to practical applications such as optimization, curve sketching, and approximation methods.
@@ -48,251 +51,9 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 </details>
 
-### EE263A — Linear Dynamical Systems
-<!-- key: ee263a -->
-`77 notes · 113 screenshots · 11 sections`
-
-> This notebook delves into fundamental linear algebra concepts such as Gram-Schmidt orthogonalization, matrix inverses, and linear independence. It extensively covers the Least Squares problem, exploring its geometric interpretation, solution methods (including QR factorization and the normal equation), and applications in data fitting and regression, while also considering computational complexity.
-
-<details open>
-<summary>📖 11 sections</summary>
-
-| Section | Notes | Screenshots |
-|---|---:|---:|
-| [5.1 Linear Independent](ee263a/51_linear_independent.md) | 5 | 6 |
-| [5.2 Basis](ee263a/52_basis.md) | 2 | 4 |
-| [5.3 Orthonormal vectors](ee263a/53_orthonormal_vectors.md) | 4 | 5 |
-| [5.4 Gram-Smidth algorithm](ee263a/54_gram_smidth_algorithm.md) | 2 | 12 |
-| [10.1 Matrix matrix multiplication](ee263a/101_matrix_matrix_multiplication.md) | 4 | 5 |
-| [11.1 Left Right Inverse](ee263a/111_left_right_inverse.md) | 6 | 7 |
-| [11.2 Inverse](ee263a/112_inverse.md) | 9 | 9 |
-| [11.3 Solving linear equation](ee263a/113_solving_linear_equation.md) | 5 | 6 |
-| [11.5 Pseudo inverse](ee263a/115_pseudo_inverse.md) | 7 | 9 |
-| [13.0 Least squares problem](ee263a/130_least_squares_problem.md) | 15 | 24 |
-| [13.1 Least squares data fitting](ee263a/131_least_squares_data_fitting.md) | 14 | 20 |
-
-</details>
-
-### LLM — Large Language Models
-<!-- key: a1_llm -->
-`478 notes · 505 screenshots · 4 sections`
-
-> This notebook explores Large Language Models, covering their architecture, fine-tuning techniques like PEFT and RLHF, model evaluation, responsible AI considerations, and deployment strategies.
-
-<details open>
-<summary>📖 4 sections</summary>
-
-| Section | Notes | Screenshots |
-|---|---:|---:|
-| [📋 Overview](a1_llm/_overview.md) | 0 | 1 |
-| [Week 1_introduction To Llms And The Generative Ai Project Lifecycle](a1_llm/week_1_introduction_to_llms_and_the_generative_ai_project_lifecycle.md) | 181 | 179 |
-| [Week 2 - Finetuning And Evaluating Large Language Model](a1_llm/week_2_finetuning_and_evaluating_large_language_model.md) | 144 | 156 |
-| [Week3 - Rhhf](a1_llm/week3_rhhf.md) | 153 | 169 |
-
-</details>
-
-### CS224N_Stanford
-<!-- key: cs224n_stanford -->
-`801 notes · 1,120 screenshots · 29 sections`
-
-> A comprehensive study notebook for Stanford's CS224N (Natural Language Processing with Deep Learning) course, covering fundamental to advanced NLP concepts from word embeddings (Word2Vec, GloVe) to neural architectures like RNNs, Transformers, and RLHF.
-> 
-> Sổ tay học tập toàn diện cho khóa học CS224N của Stanford (Xử lý Ngôn ngữ Tự nhiên với Học sâu), bao gồm các kiến thức từ cơ bản đến nâng cao từ biểu diễn từ (Word2Vec, GloVe) cho đến các kiến trúc mạng nơ-ron như RNN, Transformer và RLHF.
-
-<details open>
-<summary>📖 29 sections</summary>
-
-| Section | Notes | Screenshots |
-|---|---:|---:|
-| [📋 Overview](cs224n_stanford/_overview.md) | 1 | 1 |
-| [Week 1: Intro & Word Vectors](cs224n_stanford/week_1_intro_word_vectors.md) | 57 | 77 |
-| [Lecture 2: Neural Classifiers](cs224n_stanford/lecture_2_neural_classifiers.md) | 58 | 74 |
-| [Assignment 1](cs224n_stanford/assignment_1.md) | 18 | 29 |
-| [Lecture 3: Backprop And Neural Networks](cs224n_stanford/lecture_3_backprop_and_neural_networks.md) | 29 | 54 |
-| [Reading](cs224n_stanford/reading.md) | 1 | 1 |
-| [Assignment 2 - Word2vec](cs224n_stanford/assignment_2_word2vec.md) | 22 | 56 |
-| [Reading](cs224n_stanford/reading.md) | 0 | 1 |
-| [Lecture 5: Recurrent Neural Network](cs224n_stanford/lecture_5_recurrent_neural_network.md) | 15 | 21 |
-| [Lecture 6: Simple And Lstm Rnns](cs224n_stanford/lecture_6_simple_and_lstm_rnns.md) | 39 | 58 |
-| [Reading](cs224n_stanford/reading.md) | 1 | 1 |
-| [Lecture 7: Translation, Seq2seq, Attention](cs224n_stanford/lecture_7_translation_seq2seq_attention.md) | 42 | 48 |
-| [Reading](cs224n_stanford/reading.md) | 1 | 1 |
-| [Assignment 4 - NMT](cs224n_stanford/assignment_4_nmt.md) | 18 | 45 |
-| [Lecture 8: Translation, Seq2seq, Attention](cs224n_stanford/lecture_8_translation_seq2seq_attention.md) | 8 | 17 |
-| [Reading](cs224n_stanford/reading.md) | 1 | 1 |
-| [Lecture 9: Self-attention And Transformers](cs224n_stanford/lecture_9_self_attention_and_transformers.md) | 41 | 45 |
-| [Reading](cs224n_stanford/reading.md) | 4 | 6 |
-| [Lecture 9: Pretraining](cs224n_stanford/lecture_9_pretraining.md) | 42 | 51 |
-| [Lec 9 Reading](cs224n_stanford/lec_9_reading.md) | 1 | 1 |
-| [Lecture 10: Prompting & RLHF](cs224n_stanford/lecture_10_prompting_rlhf.md) | 51 | 63 |
-| [Reading](cs224n_stanford/reading.md) | 1 | 1 |
-| [Lecture 12: Natural Language Generation](cs224n_stanford/lecture_12_natural_language_generation.md) | 59 | 68 |
-| [Lecture 11: Question & Answering](cs224n_stanford/lecture_11_question_answering.md) | 46 | 55 |
-| [Reading](cs224n_stanford/reading.md) | 1 | 1 |
-| [Lecture 13: Coreference Resolution](cs224n_stanford/lecture_13_coreference_resolution.md) | 50 | 52 |
-| [Lecture 14: Insights Between NLP And Linguistic](cs224n_stanford/lecture_14_insights_between_nlp_and_linguistic.md) | 32 | 38 |
-| [Lecture 15: Add Knowledge To Language Model](cs224n_stanford/lecture_15_add_knowledge_to_language_model.md) | 23 | 27 |
-| [Assignment 5: Self-attention, Transformers And Pretraining](cs224n_stanford/assignment_5_self_attention_transformers_and_pretraining.md) | 9 | 9 |
-
-</details>
-
-### CS231N_Stanford
-<!-- key: cs231n_stanford -->
-`1,603 notes · 2,702 screenshots · 29 sections`
-
-> This notebook contains comprehensive study notes, lecture summaries, and programming assignments from Stanford's CS231n course on Convolutional Neural Networks for Visual Recognition.
-> 
-> Cuốn sổ tay này tổng hợp các ghi chép học tập, tóm tắt bài giảng và bài tập thực hành từ khóa học CS231n của Đại học Stanford về Mạng nơ-ron tích chập cho Nhận dạng Thị giác.
-
-<details open>
-<summary>📖 29 sections</summary>
-
-| Section | Notes | Screenshots |
-|---|---:|---:|
-| [📋 Overview](cs231n_stanford/_overview.md) | 1 | 1 |
-| [Lecture 1/16 - Introduction To CNN](cs231n_stanford/lecture_116_introduction_to_cnn.md) | 11 | 31 |
-| [Lecture 2/16 - Image Classification](cs231n_stanford/lecture_216_image_classification.md) | 41 | 58 |
-| [Assignment 1 - KNN](cs231n_stanford/assignment_1_knn.md) | 31 | 45 |
-| [Lecture 3/16 - Loss Functions And Optimization](cs231n_stanford/lecture_316_loss_functions_and_optimization.md) | 117 | 154 |
-| [Lecture 4/16 - Introduction To Neural Networks](cs231n_stanford/lecture_416_introduction_to_neural_networks.md) | 23 | 55 |
-| [Lecture Note Nn P1](cs231n_stanford/lecture_note_nn_p1.md) | 1 | 14 |
-| [Note #4 Backpropagation](cs231n_stanford/note_4_backpropagation.md) | 9 | 13 |
-| [Lecture 5/16 - Convolutional Neural Networks](cs231n_stanford/lecture_516_convolutional_neural_networks.md) | 52 | 63 |
-| [Lecture 6/16 - Training Neural Network I](cs231n_stanford/lecture_616_training_neural_network_i.md) | 65 | 105 |
-| [Lecture 7/16 - Training Neural Network Ii](cs231n_stanford/lecture_716_training_neural_network_ii.md) | 70 | 90 |
-| [Note - Neural Network Part 3](cs231n_stanford/note_neural_network_part_3.md) | 49 | 61 |
-| [Note - Convolutional Net](cs231n_stanford/note_convolutional_net.md) | 22 | 31 |
-| [Assignment 1 - 2 Layer Nn](cs231n_stanford/assignment_1_2_layer_nn.md) | 28 | 38 |
-| [Assignment 2 - Fully Connected Nn](cs231n_stanford/assignment_2_fully_connected_nn.md) | 25 | 61 |
-| [Paper: Batch normalization](cs231n_stanford/paper_batch_normalization.md) | 17 | 32 |
-| [Assignment 2 - Batch Normalization](cs231n_stanford/assignment_2_batch_normalization.md) | 18 | 35 |
-| [Assignment 2 - Dropout](cs231n_stanford/assignment_2_dropout.md) | 6 | 14 |
-| [Lecture 8/16 - Deep Learning Software](cs231n_stanford/lecture_816_deep_learning_software.md) | 89 | 107 |
-| [Lecture 9/16 - CNN Architecture](cs231n_stanford/lecture_916_cnn_architecture.md) | 55 | 72 |
-| [Lecture 10/16 - Recurrent Neural Network](cs231n_stanford/lecture_1016_recurrent_neural_network.md) | 67 | 86 |
-| [Assignment 3 - RNN Captioning](cs231n_stanford/assignment_3_rnn_captioning.md) | 12 | 49 |
-| [Assignment 3 - Lstm Captioning](cs231n_stanford/assignment_3_lstm_captioning.md) | 9 | 34 |
-| [Lecture X: Transformer](cs231n_stanford/lecture_x_transformer.md) | 41 | 47 |
-| [Assignment 4 - Transformer Image Captioning](cs231n_stanford/assignment_4_transformer_image_captioning.md) | 20 | 36 |
-| [Guess Lecture - Adversarial Machine Learning](cs231n_stanford/guess_lecture_adversarial_machine_learning.md) | 9 | 12 |
-| [Eecs498-007 Lecture 17: 3d Vision](cs231n_stanford/eecs498_007_lecture_17_3d_vision.md) | 49 | 59 |
-| [Lecture 13/16 - Generative Models](cs231n_stanford/lecture_1316_generative_models.md) | 72 | 86 |
-| [Lecture 14/16 - Generative Models Ii](cs231n_stanford/lecture_1416_generative_models_ii.md) | 45 | 53 |
-
-</details>
-
-### Deep Learning Specialization_Cousera_Andrew Ng
-<!-- key: deep_learning_specialization_cousera_andrew_ng -->
-`634 notes · 1,827 screenshots · 5 sections`
-
-> This notebook provides a comprehensive overview of core deep learning concepts, optimization techniques, and regularization methods. It also dives into building and applying various neural network architectures, from CNNs and RNNs to Transformers, for tasks like image segmentation, object detection, and natural language processing.
-
-<details open>
-<summary>📖 5 sections</summary>
-
-| Section | Notes | Screenshots |
-|---|---:|---:|
-| [📋 Overview](deep_learning_specialization_cousera_andrew_ng/_overview.md) | 0 | 1 |
-| [Course 1 - Neural Networks & Deep Learning](deep_learning_specialization_cousera_andrew_ng/course_1_neural_networks_deep_learning.md) | 73 | 373 |
-| [Course 3 - Structuring Machine Learning Projects](deep_learning_specialization_cousera_andrew_ng/course_3_structuring_machine_learning_projects.md) | 64 | 87 |
-| [Course 4 - Convolutional Neural Network](deep_learning_specialization_cousera_andrew_ng/course_4_convolutional_neural_network.md) | 168 | 478 |
-| [Course 5 - Sequence Models](deep_learning_specialization_cousera_andrew_ng/course_5_sequence_models.md) | 226 | 586 |
-
-</details>
-
-### DL Spec Coursera
-<!-- key: dl_spec_coursera -->
-`1,083 notes · 1,827 screenshots · 19 sections`
-
-> A comprehensive compilation of notes, quizzes, and programming assignments from the Coursera Deep Learning Specialization. It covers topics ranging from foundational neural networks to advanced computer vision, NLP architectures, and model optimization using TensorFlow.
-> 
-> Tổng hợp toàn diện các ghi chép, bài trắc nghiệm và bài tập lập trình từ Chuyên ngành Deep Learning trên Coursera. Nội dung bao gồm từ các khái niệm mạng nơ-ron cơ bản đến các kiến trúc nâng cao về thị giác máy tính, NLP và tối ưu hóa mô hình bằng TensorFlow.
-
-<details open>
-<summary>📖 19 sections</summary>
-
-| Section | Notes | Screenshots |
-|---|---:|---:|
-| [📋 Overview](dl_spec_coursera/_overview.md) | 0 | 1 |
-| [C1w1_introduction To N.n](dl_spec_coursera/c1w1_introduction_to_nn.md) | 7 | 24 |
-| [C1w2_n.n Basic](dl_spec_coursera/c1w2_nn_basic.md) | 64 | 163 |
-| [C1w3_shalow Neural Networks](dl_spec_coursera/c1w3_shalow_neural_networks.md) | 23 | 91 |
-| [C1w4_deep Neural Network](dl_spec_coursera/c1w4_deep_neural_network.md) | 21 | 95 |
-| [Untitled](dl_spec_coursera/untitled.md) | 1 | 0 |
-| [C2w1_practical Aspects Of Deep Learning](dl_spec_coursera/c2w1_practical_aspects_of_deep_learning.md) | 51 | 121 |
-| [C2w2_optimization Algorithms](dl_spec_coursera/c2w2_optimization_algorithms.md) | 50 | 96 |
-| [C2w3_hyperparamter Tuning, Batch Normalization & Programming Frameworks](dl_spec_coursera/c2w3_hyperparamter_tuning_batch_normalization_programming_frameworks.md) | 58 | 85 |
-| [C3w1_machine Learning Strategy 1](dl_spec_coursera/c3w1_machine_learning_strategy_1.md) | 42 | 47 |
-| [C3w2_machine Learning Strategy 2](dl_spec_coursera/c3w2_machine_learning_strategy_2.md) | 43 | 40 |
-| [C4w1_foundations Of Convolutional Neural Network](dl_spec_coursera/c4w1_foundations_of_convolutional_neural_network.md) | 80 | 117 |
-| [C4w2_deep Convolutional Models: Case Studies](dl_spec_coursera/c4w2_deep_convolutional_models_case_studies.md) | 88 | 118 |
-| [C4w3_object Detection](dl_spec_coursera/c4w3_object_detection.md) | 59 | 138 |
-| [C4w4_face Recognition & Neural Style Transfer](dl_spec_coursera/c4w4_face_recognition_neural_style_transfer.md) | 73 | 105 |
-| [C5w1_recurrent Neural Networks](dl_spec_coursera/c5w1_recurrent_neural_networks.md) | 99 | 165 |
-| [C5w2_natural Language Processing & Word Embeddings](dl_spec_coursera/c5w2_natural_language_processing_word_embeddings.md) | 59 | 103 |
-| [C5w3_sequence Models & Attention Mechanism](dl_spec_coursera/c5w3_sequence_models_attention_mechanism.md) | 72 | 116 |
-| [C5w4_transformer Network](dl_spec_coursera/c5w4_transformer_network.md) | 193 | 202 |
-
-</details>
-
-### EE364a, Convex Optim_S.Boyd
-<!-- key: ee364a_convex_optim_sboyd -->
-`937 notes · 1,428 screenshots · 23 sections`
-
-> A comprehensive collection of study notes and lecture summaries for Stephen Boyd's Convex Optimization course (EE364a), covering fundamental concepts such as convex sets and functions, duality theory, KKT conditions, and optimization algorithms.
-> 
-> Bộ sưu tập chi tiết các ghi chép học tập và tóm tắt bài giảng cho khóa học Tối ưu hóa Lồi (EE364a) của Stephen Boyd, bao gồm các khái niệm nền tảng như tập hợp và hàm lồi, lý thuyết đối ngẫu, điều kiện KKT và các thuật toán tối ưu hóa.
-
-<details open>
-<summary>📖 23 sections</summary>
-
-| Section | Notes | Screenshots |
-|---|---:|---:|
-| [Appendix A](ee364a_convex_optim_sboyd/appendix_a.md) | 5 | 15 |
-| [Appendix C](ee364a_convex_optim_sboyd/appendix_c.md) | 43 | 63 |
-| [Lec 2](ee364a_convex_optim_sboyd/lec_2.md) | 55 | 71 |
-| [Lec 3](ee364a_convex_optim_sboyd/lec_3.md) | 60 | 76 |
-| [Lec 2](ee364a_convex_optim_sboyd/lec_2.md) | 34 | 49 |
-| [Lec 1](ee364a_convex_optim_sboyd/lec_1.md) | 7 | 10 |
-| [Lec 1](ee364a_convex_optim_sboyd/lec_1.md) | 51 | 63 |
-| [Lec 4](ee364a_convex_optim_sboyd/lec_4.md) | 39 | 43 |
-| [Lec 5](ee364a_convex_optim_sboyd/lec_5.md) | 61 | 82 |
-| [Lec 6](ee364a_convex_optim_sboyd/lec_6.md) | 31 | 36 |
-| [Lec 7](ee364a_convex_optim_sboyd/lec_7.md) | 56 | 77 |
-| [Lec 9b](ee364a_convex_optim_sboyd/lec_9b.md) | 26 | 50 |
-| [Chap 9.5](ee364a_convex_optim_sboyd/chap_95.md) | 44 | 81 |
-| [Lec 8 B](ee364a_convex_optim_sboyd/lec_8_b.md) | 37 | 51 |
-| [Chap 10](ee364a_convex_optim_sboyd/chap_10.md) | 60 | 99 |
-| [Lec 9](ee364a_convex_optim_sboyd/lec_9.md) | 48 | 64 |
-| [Chap 9.1 - 9.4](ee364a_convex_optim_sboyd/chap_91_94.md) | 34 | 68 |
-| [Lec 10b](ee364a_convex_optim_sboyd/lec_10b.md) | 33 | 60 |
-| [Lec 11](ee364a_convex_optim_sboyd/lec_11.md) | 48 | 92 |
-| [Chap 11.6](ee364a_convex_optim_sboyd/chap_116.md) | 32 | 60 |
-| [Lec 8 A](ee364a_convex_optim_sboyd/lec_8_a.md) | 45 | 59 |
-| [Lec 10](ee364a_convex_optim_sboyd/lec_10.md) | 35 | 64 |
-| [Chap 11:1,2,3,4,5](ee364a_convex_optim_sboyd/chap_1112345.md) | 53 | 95 |
-
-</details>
-
-### Foundation of LLM
-<!-- key: foundation_of_llm -->
-`40 notes · 64 screenshots · 3 sections`
-
-> This notebook explores the foundations of Large Language Models (LLMs), covering various pre-training strategies, key architectures like Encoder-Decoder, and techniques for fine-tuning and adapting these powerful models.
-
-<details open>
-<summary>📖 3 sections</summary>
-
-| Section | Notes | Screenshots |
-|---|---:|---:|
-| [📋 Overview](foundation_of_llm/_overview.md) | 0 | 1 |
-| [Giới thiệu Mô hình ngôn ngữ lớn](foundation_of_llm/gii_thiu_m_hnh_ngn_ng_ln.md) | 22 | 28 |
-| [Tiền huấn luyện tự giám sát](foundation_of_llm/tin_hun_luyn_t_gim_st.md) | 18 | 35 |
-
-</details>
-
 ### MIT 18.02
 <!-- key: mit_1802 -->
+<!-- group: Calculus -->
 `549 notes · 615 screenshots · 13 sections`
 
 > This notebook contains study notes for MIT 18.02 (Multivariable Calculus), covering core topics such as vector algebra, matrices, partial derivatives, Lagrange multipliers, and double integrals.
@@ -320,31 +81,37 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 </details>
 
-### MIT 1806 Book
-<!-- key: mit_1806_book -->
-`106 notes · 139 screenshots · 11 sections`
+### 📂 Linear Algebra
+
+### EE263A — Linear Dynamical Systems
+<!-- key: ee263a -->
+<!-- group: Linear Algebra -->
+`77 notes · 113 screenshots · 11 sections`
+
+> This notebook delves into fundamental linear algebra concepts such as Gram-Schmidt orthogonalization, matrix inverses, and linear independence. It extensively covers the Least Squares problem, exploring its geometric interpretation, solution methods (including QR factorization and the normal equation), and applications in data fitting and regression, while also considering computational complexity.
 
 <details open>
 <summary>📖 11 sections</summary>
 
 | Section | Notes | Screenshots |
 |---|---:|---:|
-| [📋 Overview](mit_1806_book/_overview.md) | 0 | 1 |
-| [6.2 Diagonalizing A Matrix](mit_1806_book/62_diagonalizing_a_matrix.md) | 17 | 22 |
-| [6.3 System Of Differential Equations](mit_1806_book/63_system_of_differential_equations.md) | 3 | 6 |
-| [6.4 Symmetric Matrices](mit_1806_book/64_symmetric_matrices.md) | 3 | 4 |
-| [7.2 Basis And Matrices In Svd](mit_1806_book/72_basis_and_matrices_in_svd.md) | 3 | 6 |
-| [7.3 Pca By Svd](mit_1806_book/73_pca_by_svd.md) | 4 | 7 |
-| [7.4 Geometry Of Svd](mit_1806_book/74_geometry_of_svd.md) | 17 | 19 |
-| [8.1 Idea Of A Linear Transformation](mit_1806_book/81_idea_of_a_linear_transformation.md) | 17 | 20 |
-| [8.2 The Matrix Of Linear Transformation](mit_1806_book/82_the_matrix_of_linear_transformation.md) | 20 | 23 |
-| [8.3 In Search Of Good Basis](mit_1806_book/83_in_search_of_good_basis.md) | 3 | 4 |
-| [11.2 Norm & Condition Number](mit_1806_book/112_norm_condition_number.md) | 13 | 15 |
+| [5.1 Linear Independent](ee263a/51_linear_independent.md) | 5 | 6 |
+| [5.2 Basis](ee263a/52_basis.md) | 2 | 4 |
+| [5.3 Orthonormal vectors](ee263a/53_orthonormal_vectors.md) | 4 | 5 |
+| [5.4 Gram-Smidth algorithm](ee263a/54_gram_smidth_algorithm.md) | 2 | 12 |
+| [10.1 Matrix matrix multiplication](ee263a/101_matrix_matrix_multiplication.md) | 4 | 5 |
+| [11.1 Left Right Inverse](ee263a/111_left_right_inverse.md) | 6 | 7 |
+| [11.2 Inverse](ee263a/112_inverse.md) | 9 | 9 |
+| [11.3 Solving linear equation](ee263a/113_solving_linear_equation.md) | 5 | 6 |
+| [11.5 Pseudo inverse](ee263a/115_pseudo_inverse.md) | 7 | 9 |
+| [13.0 Least squares problem](ee263a/130_least_squares_problem.md) | 15 | 24 |
+| [13.1 Least squares data fitting](ee263a/131_least_squares_data_fitting.md) | 14 | 20 |
 
 </details>
 
 ### MIT 18.06
 <!-- key: mit1806_gstrang -->
+<!-- group: Linear Algebra -->
 `1,181 notes · 1,269 screenshots · 36 sections`
 
 > This notebook covers fundamental linear algebra concepts, from solving systems of equations and matrix operations to eigenvalues, SVD, and linear transformations, often emphasizing their geometric interpretations.
@@ -395,8 +162,139 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 </details>
 
+### 📂 Machine Learning & Deep Learning
+
+### CS224N_Stanford
+<!-- key: cs224n_stanford -->
+<!-- group: Machine Learning & Deep Learning -->
+`801 notes · 1,120 screenshots · 29 sections`
+
+> A comprehensive study notebook for Stanford's CS224N (Natural Language Processing with Deep Learning) course, covering fundamental to advanced NLP concepts from word embeddings (Word2Vec, GloVe) to neural architectures like RNNs, Transformers, and RLHF.
+> 
+> Sổ tay học tập toàn diện cho khóa học CS224N của Stanford (Xử lý Ngôn ngữ Tự nhiên với Học sâu), bao gồm các kiến thức từ cơ bản đến nâng cao từ biểu diễn từ (Word2Vec, GloVe) cho đến các kiến trúc mạng nơ-ron như RNN, Transformer và RLHF.
+
+<details open>
+<summary>📖 29 sections</summary>
+
+| Section | Notes | Screenshots |
+|---|---:|---:|
+| [📋 Overview](cs224n_stanford/_overview.md) | 1 | 1 |
+| [Week 1: Intro & Word Vectors](cs224n_stanford/week_1_intro_word_vectors.md) | 57 | 77 |
+| [Lecture 2: Neural Classifiers](cs224n_stanford/lecture_2_neural_classifiers.md) | 58 | 74 |
+| [Assignment 1](cs224n_stanford/assignment_1.md) | 18 | 29 |
+| [Lecture 3: Backprop And Neural Networks](cs224n_stanford/lecture_3_backprop_and_neural_networks.md) | 29 | 54 |
+| [Reading](cs224n_stanford/reading.md) | 1 | 1 |
+| [Assignment 2 - Word2vec](cs224n_stanford/assignment_2_word2vec.md) | 22 | 56 |
+| [Reading](cs224n_stanford/reading.md) | 0 | 1 |
+| [Lecture 5: Recurrent Neural Network](cs224n_stanford/lecture_5_recurrent_neural_network.md) | 15 | 21 |
+| [Lecture 6: Simple And Lstm Rnns](cs224n_stanford/lecture_6_simple_and_lstm_rnns.md) | 39 | 58 |
+| [Reading](cs224n_stanford/reading.md) | 1 | 1 |
+| [Lecture 7: Translation, Seq2seq, Attention](cs224n_stanford/lecture_7_translation_seq2seq_attention.md) | 42 | 48 |
+| [Reading](cs224n_stanford/reading.md) | 1 | 1 |
+| [Assignment 4 - NMT](cs224n_stanford/assignment_4_nmt.md) | 18 | 45 |
+| [Lecture 8: Translation, Seq2seq, Attention](cs224n_stanford/lecture_8_translation_seq2seq_attention.md) | 8 | 17 |
+| [Reading](cs224n_stanford/reading.md) | 1 | 1 |
+| [Lecture 9: Self-attention And Transformers](cs224n_stanford/lecture_9_self_attention_and_transformers.md) | 41 | 45 |
+| [Reading](cs224n_stanford/reading.md) | 4 | 6 |
+| [Lecture 9: Pretraining](cs224n_stanford/lecture_9_pretraining.md) | 42 | 51 |
+| [Lec 9 Reading](cs224n_stanford/lec_9_reading.md) | 1 | 1 |
+| [Lecture 10: Prompting & RLHF](cs224n_stanford/lecture_10_prompting_rlhf.md) | 51 | 63 |
+| [Reading](cs224n_stanford/reading.md) | 1 | 1 |
+| [Lecture 12: Natural Language Generation](cs224n_stanford/lecture_12_natural_language_generation.md) | 59 | 68 |
+| [Lecture 11: Question & Answering](cs224n_stanford/lecture_11_question_answering.md) | 46 | 55 |
+| [Reading](cs224n_stanford/reading.md) | 1 | 1 |
+| [Lecture 13: Coreference Resolution](cs224n_stanford/lecture_13_coreference_resolution.md) | 50 | 52 |
+| [Lecture 14: Insights Between NLP And Linguistic](cs224n_stanford/lecture_14_insights_between_nlp_and_linguistic.md) | 32 | 38 |
+| [Lecture 15: Add Knowledge To Language Model](cs224n_stanford/lecture_15_add_knowledge_to_language_model.md) | 23 | 27 |
+| [Assignment 5: Self-attention, Transformers And Pretraining](cs224n_stanford/assignment_5_self_attention_transformers_and_pretraining.md) | 9 | 9 |
+
+</details>
+
+### CS231N_Stanford
+<!-- key: cs231n_stanford -->
+<!-- group: Machine Learning & Deep Learning -->
+`1,603 notes · 2,702 screenshots · 29 sections`
+
+> This notebook contains comprehensive study notes, lecture summaries, and programming assignments from Stanford's CS231n course on Convolutional Neural Networks for Visual Recognition.
+> 
+> Cuốn sổ tay này tổng hợp các ghi chép học tập, tóm tắt bài giảng và bài tập thực hành từ khóa học CS231n của Đại học Stanford về Mạng nơ-ron tích chập cho Nhận dạng Thị giác.
+
+<details open>
+<summary>📖 29 sections</summary>
+
+| Section | Notes | Screenshots |
+|---|---:|---:|
+| [📋 Overview](cs231n_stanford/_overview.md) | 1 | 1 |
+| [Lecture 1/16 - Introduction To CNN](cs231n_stanford/lecture_116_introduction_to_cnn.md) | 11 | 31 |
+| [Lecture 2/16 - Image Classification](cs231n_stanford/lecture_216_image_classification.md) | 41 | 58 |
+| [Assignment 1 - KNN](cs231n_stanford/assignment_1_knn.md) | 31 | 45 |
+| [Lecture 3/16 - Loss Functions And Optimization](cs231n_stanford/lecture_316_loss_functions_and_optimization.md) | 117 | 154 |
+| [Lecture 4/16 - Introduction To Neural Networks](cs231n_stanford/lecture_416_introduction_to_neural_networks.md) | 23 | 55 |
+| [Lecture Note Nn P1](cs231n_stanford/lecture_note_nn_p1.md) | 1 | 14 |
+| [Note #4 Backpropagation](cs231n_stanford/note_4_backpropagation.md) | 9 | 13 |
+| [Lecture 5/16 - Convolutional Neural Networks](cs231n_stanford/lecture_516_convolutional_neural_networks.md) | 52 | 63 |
+| [Lecture 6/16 - Training Neural Network I](cs231n_stanford/lecture_616_training_neural_network_i.md) | 65 | 105 |
+| [Lecture 7/16 - Training Neural Network Ii](cs231n_stanford/lecture_716_training_neural_network_ii.md) | 70 | 90 |
+| [Note - Neural Network Part 3](cs231n_stanford/note_neural_network_part_3.md) | 49 | 61 |
+| [Note - Convolutional Net](cs231n_stanford/note_convolutional_net.md) | 22 | 31 |
+| [Assignment 1 - 2 Layer Nn](cs231n_stanford/assignment_1_2_layer_nn.md) | 28 | 38 |
+| [Assignment 2 - Fully Connected Nn](cs231n_stanford/assignment_2_fully_connected_nn.md) | 25 | 61 |
+| [Paper: Batch normalization](cs231n_stanford/paper_batch_normalization.md) | 17 | 32 |
+| [Assignment 2 - Batch Normalization](cs231n_stanford/assignment_2_batch_normalization.md) | 18 | 35 |
+| [Assignment 2 - Dropout](cs231n_stanford/assignment_2_dropout.md) | 6 | 14 |
+| [Lecture 8/16 - Deep Learning Software](cs231n_stanford/lecture_816_deep_learning_software.md) | 89 | 107 |
+| [Lecture 9/16 - CNN Architecture](cs231n_stanford/lecture_916_cnn_architecture.md) | 55 | 72 |
+| [Lecture 10/16 - Recurrent Neural Network](cs231n_stanford/lecture_1016_recurrent_neural_network.md) | 67 | 86 |
+| [Assignment 3 - RNN Captioning](cs231n_stanford/assignment_3_rnn_captioning.md) | 12 | 49 |
+| [Assignment 3 - Lstm Captioning](cs231n_stanford/assignment_3_lstm_captioning.md) | 9 | 34 |
+| [Lecture X: Transformer](cs231n_stanford/lecture_x_transformer.md) | 41 | 47 |
+| [Assignment 4 - Transformer Image Captioning](cs231n_stanford/assignment_4_transformer_image_captioning.md) | 20 | 36 |
+| [Guess Lecture - Adversarial Machine Learning](cs231n_stanford/guess_lecture_adversarial_machine_learning.md) | 9 | 12 |
+| [Eecs498-007 Lecture 17: 3d Vision](cs231n_stanford/eecs498_007_lecture_17_3d_vision.md) | 49 | 59 |
+| [Lecture 13/16 - Generative Models](cs231n_stanford/lecture_1316_generative_models.md) | 72 | 86 |
+| [Lecture 14/16 - Generative Models Ii](cs231n_stanford/lecture_1416_generative_models_ii.md) | 45 | 53 |
+
+</details>
+
+### DL Spec Coursera
+<!-- key: dl_spec_coursera -->
+<!-- group: Machine Learning & Deep Learning -->
+`1,083 notes · 1,827 screenshots · 19 sections`
+
+> A comprehensive compilation of notes, quizzes, and programming assignments from the Coursera Deep Learning Specialization. It covers topics ranging from foundational neural networks to advanced computer vision, NLP architectures, and model optimization using TensorFlow.
+> 
+> Tổng hợp toàn diện các ghi chép, bài trắc nghiệm và bài tập lập trình từ Chuyên ngành Deep Learning trên Coursera. Nội dung bao gồm từ các khái niệm mạng nơ-ron cơ bản đến các kiến trúc nâng cao về thị giác máy tính, NLP và tối ưu hóa mô hình bằng TensorFlow.
+
+<details open>
+<summary>📖 19 sections</summary>
+
+| Section | Notes | Screenshots |
+|---|---:|---:|
+| [📋 Overview](dl_spec_coursera/_overview.md) | 0 | 1 |
+| [C1w1_introduction To N.n](dl_spec_coursera/c1w1_introduction_to_nn.md) | 7 | 24 |
+| [C1w2_n.n Basic](dl_spec_coursera/c1w2_nn_basic.md) | 64 | 163 |
+| [C1w3_shalow Neural Networks](dl_spec_coursera/c1w3_shalow_neural_networks.md) | 23 | 91 |
+| [C1w4_deep Neural Network](dl_spec_coursera/c1w4_deep_neural_network.md) | 21 | 95 |
+| [Untitled](dl_spec_coursera/untitled.md) | 1 | 0 |
+| [C2w1_practical Aspects Of Deep Learning](dl_spec_coursera/c2w1_practical_aspects_of_deep_learning.md) | 51 | 121 |
+| [C2w2_optimization Algorithms](dl_spec_coursera/c2w2_optimization_algorithms.md) | 50 | 96 |
+| [C2w3_hyperparamter Tuning, Batch Normalization & Programming Frameworks](dl_spec_coursera/c2w3_hyperparamter_tuning_batch_normalization_programming_frameworks.md) | 58 | 85 |
+| [C3w1_machine Learning Strategy 1](dl_spec_coursera/c3w1_machine_learning_strategy_1.md) | 42 | 47 |
+| [C3w2_machine Learning Strategy 2](dl_spec_coursera/c3w2_machine_learning_strategy_2.md) | 43 | 40 |
+| [C4w1_foundations Of Convolutional Neural Network](dl_spec_coursera/c4w1_foundations_of_convolutional_neural_network.md) | 80 | 117 |
+| [C4w2_deep Convolutional Models: Case Studies](dl_spec_coursera/c4w2_deep_convolutional_models_case_studies.md) | 88 | 118 |
+| [C4w3_object Detection](dl_spec_coursera/c4w3_object_detection.md) | 59 | 138 |
+| [C4w4_face Recognition & Neural Style Transfer](dl_spec_coursera/c4w4_face_recognition_neural_style_transfer.md) | 73 | 105 |
+| [C5w1_recurrent Neural Networks](dl_spec_coursera/c5w1_recurrent_neural_networks.md) | 99 | 165 |
+| [C5w2_natural Language Processing & Word Embeddings](dl_spec_coursera/c5w2_natural_language_processing_word_embeddings.md) | 59 | 103 |
+| [C5w3_sequence Models & Attention Mechanism](dl_spec_coursera/c5w3_sequence_models_attention_mechanism.md) | 72 | 116 |
+| [C5w4_transformer Network](dl_spec_coursera/c5w4_transformer_network.md) | 193 | 202 |
+
+</details>
+
 ### NLP Spec Coursera
 <!-- key: nlp_spec_coursera -->
+<!-- group: Machine Learning & Deep Learning -->
 `1,808 notes · 2,287 screenshots · 19 sections`
 
 > A comprehensive collection of study notes, practical exercises, and implementations from the Coursera NLP Specialization, covering foundational NLP techniques, sequence models, and modern Transformer architectures.
@@ -430,8 +328,51 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 </details>
 
+### 📂 Optimization
+
+### EE364a, Convex Optim_S.Boyd
+<!-- key: ee364a_convex_optim_sboyd -->
+<!-- group: Optimization -->
+`937 notes · 1,428 screenshots · 23 sections`
+
+> A comprehensive collection of study notes and lecture summaries for Stephen Boyd's Convex Optimization course (EE364a), covering fundamental concepts such as convex sets and functions, duality theory, KKT conditions, and optimization algorithms.
+> 
+> Bộ sưu tập chi tiết các ghi chép học tập và tóm tắt bài giảng cho khóa học Tối ưu hóa Lồi (EE364a) của Stephen Boyd, bao gồm các khái niệm nền tảng như tập hợp và hàm lồi, lý thuyết đối ngẫu, điều kiện KKT và các thuật toán tối ưu hóa.
+
+<details open>
+<summary>📖 23 sections</summary>
+
+| Section | Notes | Screenshots |
+|---|---:|---:|
+| [Appendix A](ee364a_convex_optim_sboyd/appendix_a.md) | 5 | 15 |
+| [Appendix C](ee364a_convex_optim_sboyd/appendix_c.md) | 43 | 63 |
+| [Lec 2](ee364a_convex_optim_sboyd/lec_2.md) | 55 | 71 |
+| [Lec 3](ee364a_convex_optim_sboyd/lec_3.md) | 60 | 76 |
+| [Lec 2](ee364a_convex_optim_sboyd/lec_2.md) | 34 | 49 |
+| [Lec 1](ee364a_convex_optim_sboyd/lec_1.md) | 7 | 10 |
+| [Lec 1](ee364a_convex_optim_sboyd/lec_1.md) | 51 | 63 |
+| [Lec 4](ee364a_convex_optim_sboyd/lec_4.md) | 39 | 43 |
+| [Lec 5](ee364a_convex_optim_sboyd/lec_5.md) | 61 | 82 |
+| [Lec 6](ee364a_convex_optim_sboyd/lec_6.md) | 31 | 36 |
+| [Lec 7](ee364a_convex_optim_sboyd/lec_7.md) | 56 | 77 |
+| [Lec 9b](ee364a_convex_optim_sboyd/lec_9b.md) | 26 | 50 |
+| [Chap 9.5](ee364a_convex_optim_sboyd/chap_95.md) | 44 | 81 |
+| [Lec 8 B](ee364a_convex_optim_sboyd/lec_8_b.md) | 37 | 51 |
+| [Chap 10](ee364a_convex_optim_sboyd/chap_10.md) | 60 | 99 |
+| [Lec 9](ee364a_convex_optim_sboyd/lec_9.md) | 48 | 64 |
+| [Chap 9.1 - 9.4](ee364a_convex_optim_sboyd/chap_91_94.md) | 34 | 68 |
+| [Lec 10b](ee364a_convex_optim_sboyd/lec_10b.md) | 33 | 60 |
+| [Lec 11](ee364a_convex_optim_sboyd/lec_11.md) | 48 | 92 |
+| [Chap 11.6](ee364a_convex_optim_sboyd/chap_116.md) | 32 | 60 |
+| [Lec 8 A](ee364a_convex_optim_sboyd/lec_8_a.md) | 45 | 59 |
+| [Lec 10](ee364a_convex_optim_sboyd/lec_10.md) | 35 | 64 |
+| [Chap 11:1,2,3,4,5](ee364a_convex_optim_sboyd/chap_1112345.md) | 53 | 95 |
+
+</details>
+
 ### Numerical Optimization_J.Nocedal
 <!-- key: numerical_optimization_jnocedal -->
+<!-- group: Optimization -->
 `392 notes · 550 screenshots · 30 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
@@ -476,8 +417,11 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 </details>
 
+### 📂 Machine Learning Foundation
+
 ### Pattern Recognition Machine Learning_C.Bishop
 <!-- key: pattern_recognition_machine_learning_cbishop -->
+<!-- group: Machine Learning Foundation -->
 `352 notes · 513 screenshots · 46 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
@@ -538,8 +482,11 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 </details>
 
+### 📂 Probability & Statistics
+
 ### STAT110_Havard
 <!-- key: stat110_havard -->
+<!-- group: Probability & Statistics -->
 `881 notes · 1,109 screenshots · 16 sections`
 
 > This notebook explores foundational and advanced topics in probability and statistical inference, covering random variables, their distributions (discrete and continuous), expectation, variance, moment generating functions, and key theorems such as the Law of Large Numbers and Central Limit Theorem.
@@ -572,6 +519,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 ### Statistical Inference - Casella
 <!-- key: statistical_inference_casella -->
+<!-- group: Probability & Statistics -->
 `838 notes · 1,094 screenshots · 26 sections`
 
 > This notebook contains detailed study notes and proofs based on Casella and Berger's *Statistical Inference*, covering key topics in probability theory, estimation methods, hypothesis testing, and asymptotic properties.
@@ -609,6 +557,85 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [9.1 Introduction](statistical_inference_casella/91_introduction.md) | 9 | 9 |
 | [10.1 Point Estimation](statistical_inference_casella/101_point_estimation.md) | 42 | 49 |
 | [10.2 Robustness](statistical_inference_casella/102_robustness.md) | 12 | 13 |
+
+</details>
+
+### 📂 Other
+
+### LLM — Large Language Models
+<!-- key: a1_llm -->
+`478 notes · 505 screenshots · 4 sections`
+
+> This notebook explores Large Language Models, covering their architecture, fine-tuning techniques like PEFT and RLHF, model evaluation, responsible AI considerations, and deployment strategies.
+
+<details open>
+<summary>📖 4 sections</summary>
+
+| Section | Notes | Screenshots |
+|---|---:|---:|
+| [📋 Overview](a1_llm/_overview.md) | 0 | 1 |
+| [Week 1_introduction To Llms And The Generative Ai Project Lifecycle](a1_llm/week_1_introduction_to_llms_and_the_generative_ai_project_lifecycle.md) | 181 | 179 |
+| [Week 2 - Finetuning And Evaluating Large Language Model](a1_llm/week_2_finetuning_and_evaluating_large_language_model.md) | 144 | 156 |
+| [Week3 - Rhhf](a1_llm/week3_rhhf.md) | 153 | 169 |
+
+</details>
+
+### Deep Learning Specialization_Cousera_Andrew Ng
+<!-- key: deep_learning_specialization_cousera_andrew_ng -->
+`634 notes · 1,827 screenshots · 5 sections`
+
+> This notebook provides a comprehensive overview of core deep learning concepts, optimization techniques, and regularization methods. It also dives into building and applying various neural network architectures, from CNNs and RNNs to Transformers, for tasks like image segmentation, object detection, and natural language processing.
+
+<details open>
+<summary>📖 5 sections</summary>
+
+| Section | Notes | Screenshots |
+|---|---:|---:|
+| [📋 Overview](deep_learning_specialization_cousera_andrew_ng/_overview.md) | 0 | 1 |
+| [Course 1 - Neural Networks & Deep Learning](deep_learning_specialization_cousera_andrew_ng/course_1_neural_networks_deep_learning.md) | 73 | 373 |
+| [Course 3 - Structuring Machine Learning Projects](deep_learning_specialization_cousera_andrew_ng/course_3_structuring_machine_learning_projects.md) | 64 | 87 |
+| [Course 4 - Convolutional Neural Network](deep_learning_specialization_cousera_andrew_ng/course_4_convolutional_neural_network.md) | 168 | 478 |
+| [Course 5 - Sequence Models](deep_learning_specialization_cousera_andrew_ng/course_5_sequence_models.md) | 226 | 586 |
+
+</details>
+
+### Foundation of LLM
+<!-- key: foundation_of_llm -->
+`40 notes · 64 screenshots · 3 sections`
+
+> This notebook explores the foundations of Large Language Models (LLMs), covering various pre-training strategies, key architectures like Encoder-Decoder, and techniques for fine-tuning and adapting these powerful models.
+
+<details open>
+<summary>📖 3 sections</summary>
+
+| Section | Notes | Screenshots |
+|---|---:|---:|
+| [📋 Overview](foundation_of_llm/_overview.md) | 0 | 1 |
+| [Giới thiệu Mô hình ngôn ngữ lớn](foundation_of_llm/gii_thiu_m_hnh_ngn_ng_ln.md) | 22 | 28 |
+| [Tiền huấn luyện tự giám sát](foundation_of_llm/tin_hun_luyn_t_gim_st.md) | 18 | 35 |
+
+</details>
+
+### MIT 1806 Book
+<!-- key: mit_1806_book -->
+`106 notes · 139 screenshots · 11 sections`
+
+<details open>
+<summary>📖 11 sections</summary>
+
+| Section | Notes | Screenshots |
+|---|---:|---:|
+| [📋 Overview](mit_1806_book/_overview.md) | 0 | 1 |
+| [6.2 Diagonalizing A Matrix](mit_1806_book/62_diagonalizing_a_matrix.md) | 17 | 22 |
+| [6.3 System Of Differential Equations](mit_1806_book/63_system_of_differential_equations.md) | 3 | 6 |
+| [6.4 Symmetric Matrices](mit_1806_book/64_symmetric_matrices.md) | 3 | 4 |
+| [7.2 Basis And Matrices In Svd](mit_1806_book/72_basis_and_matrices_in_svd.md) | 3 | 6 |
+| [7.3 Pca By Svd](mit_1806_book/73_pca_by_svd.md) | 4 | 7 |
+| [7.4 Geometry Of Svd](mit_1806_book/74_geometry_of_svd.md) | 17 | 19 |
+| [8.1 Idea Of A Linear Transformation](mit_1806_book/81_idea_of_a_linear_transformation.md) | 17 | 20 |
+| [8.2 The Matrix Of Linear Transformation](mit_1806_book/82_the_matrix_of_linear_transformation.md) | 20 | 23 |
+| [8.3 In Search Of Good Basis](mit_1806_book/83_in_search_of_good_basis.md) | 3 | 4 |
+| [11.2 Norm & Condition Number](mit_1806_book/112_norm_condition_number.md) | 13 | 15 |
 
 </details>
 
