@@ -1,0 +1,128 @@
+{
+  "title": "dl_spec_coursera",
+  "publishedAt": 1786562253362,
+  "sections": [
+    {
+      "title": "📋 Overview",
+      "path": "dl_spec_coursera/_overview.md",
+      "noteCount": 0,
+      "imageCount": 1
+    },
+    {
+      "title": "C1w1_introduction To N.n",
+      "path": "dl_spec_coursera/c1w1_introduction_to_nn.md",
+      "noteCount": 7,
+      "imageCount": 24
+    },
+    {
+      "title": "C1w2_n.n Basic",
+      "path": "dl_spec_coursera/c1w2_nn_basic.md",
+      "noteCount": 64,
+      "imageCount": 163
+    },
+    {
+      "title": "C1w3_shalow Neural Networks",
+      "path": "dl_spec_coursera/c1w3_shalow_neural_networks.md",
+      "noteCount": 23,
+      "imageCount": 91
+    },
+    {
+      "title": "C1w4_deep Neural Network",
+      "path": "dl_spec_coursera/c1w4_deep_neural_network.md",
+      "noteCount": 21,
+      "imageCount": 95
+    },
+    {
+      "title": "C2w1_practical Aspects Of Deep Learning",
+      "path": "dl_spec_coursera/c2w1_practical_aspects_of_deep_learning.md",
+      "noteCount": 51,
+      "imageCount": 121
+    },
+    {
+      "title": "C2w2_optimization Algorithms",
+      "path": "dl_spec_coursera/c2w2_optimization_algorithms.md",
+      "noteCount": 50,
+      "imageCount": 96
+    },
+    {
+      "title": "C2w3_hyperparamter Tuning, Batch Normalization & Programming Frameworks",
+      "path": "dl_spec_coursera/c2w3_hyperparamter_tuning_batch_normalization_programming_frameworks.md",
+      "noteCount": 58,
+      "imageCount": 85
+    },
+    {
+      "title": "C3w1_machine Learning Strategy 1",
+      "path": "dl_spec_coursera/c3w1_machine_learning_strategy_1.md",
+      "noteCount": 42,
+      "imageCount": 47
+    },
+    {
+      "title": "C3w2_machine Learning Strategy 2",
+      "path": "dl_spec_coursera/c3w2_machine_learning_strategy_2.md",
+      "noteCount": 43,
+      "imageCount": 40
+    },
+    {
+      "title": "C4w1_foundations Of Convolutional Neural Network",
+      "path": "dl_spec_coursera/c4w1_foundations_of_convolutional_neural_network.md",
+      "noteCount": 80,
+      "imageCount": 117
+    },
+    {
+      "title": "C4w2_deep Convolutional Models: Case Studies",
+      "path": "dl_spec_coursera/c4w2_deep_convolutional_models_case_studies.md",
+      "noteCount": 88,
+      "imageCount": 118
+    },
+    {
+      "title": "C4w3_object Detection",
+      "path": "dl_spec_coursera/c4w3_object_detection.md",
+      "noteCount": 59,
+      "imageCount": 138
+    },
+    {
+      "title": "C4w4_face Recognition & Neural Style Transfer",
+      "path": "dl_spec_coursera/c4w4_face_recognition_neural_style_transfer.md",
+      "noteCount": 73,
+      "imageCount": 105
+    },
+    {
+      "title": "C5w1_recurrent Neural Networks",
+      "path": "dl_spec_coursera/c5w1_recurrent_neural_networks.md",
+      "noteCount": 99,
+      "imageCount": 165
+    },
+    {
+      "title": "C5w2_natural Language Processing & Word Embeddings",
+      "path": "dl_spec_coursera/c5w2_natural_language_processing_word_embeddings.md",
+      "noteCount": 59,
+      "imageCount": 103
+    },
+    {
+      "title": "C5w3_sequence Models & Attention Mechanism",
+      "path": "dl_spec_coursera/c5w3_sequence_models_attention_mechanism.md",
+      "noteCount": 72,
+      "imageCount": 116
+    },
+    {
+      "title": "C5w4_transformer Network",
+      "path": "dl_spec_coursera/c5w4_transformer_network.md",
+      "noteCount": 193,
+      "imageCount": 202
+    },
+    {
+      "title": "Course 1 - Neural Networks & Deep Learning",
+      "path": "dl_spec_coursera/course_1_neural_networks_deep_learning.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Untitled",
+      "path": "dl_spec_coursera/untitled.md",
+      "noteCount": 1,
+      "imageCount": 0
+    }
+  ],
+  "totalNotes": 1083,
+  "totalImages": 1827
+}
