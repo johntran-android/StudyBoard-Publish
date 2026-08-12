@@ -1,0 +1,92 @@
+{
+  "title": "EE263A — Linear Dynamical Systems",
+  "publishedAt": 1786562253779,
+  "sections": [
+    {
+      "title": "10.1 Matrix matrix multiplication",
+      "path": "ee263a/101_matrix_matrix_multiplication.md",
+      "noteCount": 4,
+      "imageCount": 5
+    },
+    {
+      "title": "11.1 Left Right Inverse",
+      "path": "ee263a/111_left_right_inverse.md",
+      "noteCount": 6,
+      "imageCount": 7
+    },
+    {
+      "title": "11.2 Inverse",
+      "path": "ee263a/112_inverse.md",
+      "noteCount": 9,
+      "imageCount": 9
+    },
+    {
+      "title": "11.3 Solving linear equation",
+      "path": "ee263a/113_solving_linear_equation.md",
+      "noteCount": 5,
+      "imageCount": 6
+    },
+    {
+      "title": "11.4 Example",
+      "path": "ee263a/114_example.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "11.5 Pseudo inverse",
+      "path": "ee263a/115_pseudo_inverse.md",
+      "noteCount": 7,
+      "imageCount": 9
+    },
+    {
+      "title": "13.0 Least squares problem",
+      "path": "ee263a/130_least_squares_problem.md",
+      "noteCount": 15,
+      "imageCount": 24
+    },
+    {
+      "title": "13.1 Least squares data fitting",
+      "path": "ee263a/131_least_squares_data_fitting.md",
+      "noteCount": 14,
+      "imageCount": 20
+    },
+    {
+      "title": "1.5 Complexity of vector",
+      "path": "ee263a/15_complexity_of_vector_computations.md",
+      "noteCount": 4,
+      "imageCount": 6
+    },
+    {
+      "title": "5.1 Linear Independent",
+      "path": "ee263a/51_linear_independent.md",
+      "noteCount": 5,
+      "imageCount": 6
+    },
+    {
+      "title": "5.2 Basis",
+      "path": "ee263a/52_basis.md",
+      "noteCount": 2,
+      "imageCount": 4
+    },
+    {
+      "title": "5.3 Orthonormal vectors",
+      "path": "ee263a/53_orthonormal_vectors.md",
+      "noteCount": 4,
+      "imageCount": 5
+    },
+    {
+      "title": "5.4 Gram-Smidth algorithm",
+      "path": "ee263a/54_gram_smidth_algorithm.md",
+      "noteCount": 2,
+      "imageCount": 12
+    },
+    {
+      "title": "Chap 12 Least squares",
+      "path": "ee263a/chap_12_least_squares.md",
+      "noteCount": 0,
+      "imageCount": 0
+    }
+  ],
+  "totalNotes": 77,
+  "totalImages": 113
+}
