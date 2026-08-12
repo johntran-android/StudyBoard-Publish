@@ -735,21 +735,21 @@ random Sample
 >
 >
 >
-> Thế thì, điều kiện để có thể dùng transformation theorem, là: mapping giữa A_curly và ảnh của nó,
-> phải là mapping 1-1. Trong đó A_curly là support set của fX,Y, tức là tập này: {(x, y) ∈ R^2: fX,Y(x, y)
-> ≥ 0} và ảnh của nó, là  tập này: {(u,v) ∈ R^2: (u,v) = (g1(x,y), g2(x,y)) for some (x,y) in A_curly}
+> Thế thì, điều kiện để có thể dùng transformation theorem, là: mapping giữa 𝒜 và ảnh của nó,
+> phải là mapping 1-1. Trong đó 𝒜 là support set của fX,Y, tức là tập này: {(x, y) ∈ R^2: fX,Y(x, y)
+> ≥ 0} và ảnh của nó, là  tập này: {(u,v) ∈ R^2: (u,v) = (g1(x,y), g2(x,y)) for some (x,y) in 𝒜}
 >
 >
 >
-> Điều kiện trên vẫn cho phép có (x,y) nào đó không thuộc A_curly map với (u,v) thuộc
-> image(A_curly), miễn là với (x,y) thuộc A_curly thì chỉ có một (u,v) thuộc image(A_curly) và ngược
+> Điều kiện trên vẫn cho phép có (x,y) nào đó không thuộc 𝒜 map với (u,v) thuộc
+> image(𝒜), miễn là với (x,y) thuộc 𝒜 thì chỉ có một (u,v) thuộc image(𝒜) và ngược
 > lại.
 >
 >
 >
 > Lí do để cần phải có điều kiện này là vì: Khi đó, với (u,v) = (g1(x,y), g2(x,y)) thì tồn tại một (x,y) duy
-> nhất thuộc A_curly (x,y) = (h1(u,v), h2(u,v)) (có thể vẫn tồn tại (x,y) khác mapping ngược lại từ (u,v)
-> ko nằm trong A_curly, nhưng khi đó ta không care vì fX,Y(x,y) tại đó = 0.
+> nhất thuộc 𝒜 (x,y) = (h1(u,v), h2(u,v)) (có thể vẫn tồn tại (x,y) khác mapping ngược lại từ (u,v)
+> ko nằm trong 𝒜, nhưng khi đó ta không care vì fX,Y(x,y) tại đó = 0.
 >
 >
 >
