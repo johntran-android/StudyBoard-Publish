@@ -1,0 +1,152 @@
+{
+  "title": "mit_1802",
+  "publishedAt": 1786562256153,
+  "sections": [
+    {
+      "title": "Lec 10: Second Derivative Test,",
+      "path": "mit_1802/lec_10_second_derivative_test_boudaries_infinity.md",
+      "noteCount": 23,
+      "imageCount": 24
+    },
+    {
+      "title": "Lec 11: Differentials, Chain-rule",
+      "path": "mit_1802/lec_11_differentials_chain_rule.md",
+      "noteCount": 20,
+      "imageCount": 21
+    },
+    {
+      "title": "Lec 12: Gradient, Directional",
+      "path": "mit_1802/lec_12_gradient_directional_derivative_tangent_plane.md",
+      "noteCount": 30,
+      "imageCount": 37
+    },
+    {
+      "title": "Lec 13: Lagrange Multiplier",
+      "path": "mit_1802/lec_13_lagrange_multiplier.md",
+      "noteCount": 33,
+      "imageCount": 36
+    },
+    {
+      "title": "Lec 14: Non-independent Random",
+      "path": "mit_1802/lec_14_non_independent_random_variables.md",
+      "noteCount": 32,
+      "imageCount": 35
+    },
+    {
+      "title": "Lec 15: Partial Differentials Equations",
+      "path": "mit_1802/lec_15_partial_differentials_equations.md",
+      "noteCount": 18,
+      "imageCount": 19
+    },
+    {
+      "title": "Lec 16: Double Integrals",
+      "path": "mit_1802/lec_16_double_integrals.md",
+      "noteCount": 35,
+      "imageCount": 37
+    },
+    {
+      "title": "Lec 17: Double Integrals In",
+      "path": "mit_1802/lec_17_double_integrals_in_polar_coordinates.md",
+      "noteCount": 21,
+      "imageCount": 21
+    },
+    {
+      "title": "Lec 18: Change Of Variables",
+      "path": "mit_1802/lec_18_change_of_variables.md",
+      "noteCount": 33,
+      "imageCount": 36
+    },
+    {
+      "title": "Lec 19: Vector Fields",
+      "path": "mit_1802/lec_19_vector_fields.md",
+      "noteCount": 36,
+      "imageCount": 44
+    },
+    {
+      "title": "Lec 1: Dot Products",
+      "path": "mit_1802/lec_1_dot_products.md",
+      "noteCount": 0,
+      "imageCount": 4
+    },
+    {
+      "title": "Lec 20: Path Independence & Conservative Field",
+      "path": "mit_1802/lec_20_path_independence_conservative_field.md",
+      "noteCount": 38,
+      "imageCount": 43
+    },
+    {
+      "title": "Lec 21: Gradient Field & Potential Function",
+      "path": "mit_1802/lec_21_gradient_field_potential_function.md",
+      "noteCount": 35,
+      "imageCount": 35
+    },
+    {
+      "title": "Lec 22: Green's Theorem",
+      "path": "mit_1802/lec_22_greens_theorem.md",
+      "noteCount": 26,
+      "imageCount": 29
+    },
+    {
+      "title": "Lec 23: Flux",
+      "path": "mit_1802/lec_23_flux.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lec 24: Simply Connected Region",
+      "path": "mit_1802/lec_24_simply_connected_region.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lec 2: Determinant, Cross Product",
+      "path": "mit_1802/lec_2_determinant_cross_product.md",
+      "noteCount": 16,
+      "imageCount": 21
+    },
+    {
+      "title": "Lec 3: Matrix, Inverse Matrix",
+      "path": "mit_1802/lec_3_matrix_inverse_matrix.md",
+      "noteCount": 26,
+      "imageCount": 31
+    },
+    {
+      "title": "Lec 4: Square System, Equation",
+      "path": "mit_1802/lec_4_square_system_equation_of_plane.md",
+      "noteCount": 20,
+      "imageCount": 23
+    },
+    {
+      "title": "Lec 5: Parametric Equations For",
+      "path": "mit_1802/lec_5_parametric_equations_for_lines_and_curves.md",
+      "noteCount": 23,
+      "imageCount": 24
+    },
+    {
+      "title": "Lec 6: Velocity, Acceleration,",
+      "path": "mit_1802/lec_6_velocity_acceleration_keplers_second_law.md",
+      "noteCount": 27,
+      "imageCount": 28
+    },
+    {
+      "title": "Lec 7: Review",
+      "path": "mit_1802/lec_7_review.md",
+      "noteCount": 16,
+      "imageCount": 17
+    },
+    {
+      "title": "Lec 8: Level Curves, Partial",
+      "path": "mit_1802/lec_8_level_curves_partial_derivatives_tangent_plane.md",
+      "noteCount": 20,
+      "imageCount": 22
+    },
+    {
+      "title": "Lec 9: Max-min Problems, Least",
+      "path": "mit_1802/lec_9_max_min_problems_least_squares.md",
+      "noteCount": 21,
+      "imageCount": 28
+    }
+  ],
+  "totalNotes": 549,
+  "totalImages": 615
+}
