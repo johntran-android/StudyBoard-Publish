@@ -1,0 +1,26 @@
+{
+  "title": "foundation_of_llm",
+  "publishedAt": 1786562254723,
+  "sections": [
+    {
+      "title": "📋 Overview",
+      "path": "foundation_of_llm/_overview.md",
+      "noteCount": 0,
+      "imageCount": 1
+    },
+    {
+      "title": "Giới thiệu Mô hình ngôn ngữ lớn",
+      "path": "foundation_of_llm/gii_thiu_m_hnh_ngn_ng_ln.md",
+      "noteCount": 22,
+      "imageCount": 28
+    },
+    {
+      "title": "Tiền huấn luyện tự giám sát",
+      "path": "foundation_of_llm/tin_hun_luyn_t_gim_st.md",
+      "noteCount": 18,
+      "imageCount": 35
+    }
+  ],
+  "totalNotes": 40,
+  "totalImages": 64
+}
