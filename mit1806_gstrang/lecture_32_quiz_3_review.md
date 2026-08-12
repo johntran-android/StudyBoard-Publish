@@ -1048,6 +1048,8 @@
 > Và vì projection matrix có P^2 = P nên P^2 = PTP <=> PP =
 > PTP suy ra P = PT
 
+**🔗 See also:** [First-Order Feasible Step Derivation *(Numerical Optimization_J.Nocedal)*](../numerical_optimization_jnocedal/121_examples.md#node-98w7rek)
+
 <br>
 
 <a id="node-io8o5sr"></a>
