@@ -861,7 +861,7 @@
 <p align="center"><kbd><img src="assets/rvd4h4583u.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Hiểu đại khái là , định lý này nói rằng nếu sample space của X, X_curly
+> Hiểu đại khái là , định lý này nói rằng nếu sample space của X, 𝒳
 > mà có thể chia thành các partition A0, A1,....Ak
 >
 >
@@ -870,8 +870,8 @@
 >
 >
 >
-> Rồi, đặt Y_curly là set ảnh của X_curly: tức là Y_curly là {g(x) với x ∈
-> X_curly)
+> Rồi, đặt 𝒴 là set ảnh của 𝒳: tức là 𝒴 là {g(x) với x ∈
+> 𝒳)
 >
 >
 >
@@ -879,7 +879,7 @@
 >
 >
 >
-> Khi đó ta có fY(y) = Σ fX(gi_inv(y)) d/dy |gi_inv(y)| y ∈ Y_curly
+> Khi đó ta có fY(y) = Σ fX(gi_inv(y)) d/dy |gi_inv(y)| y ∈ 𝒴
 >
 >
 >
@@ -895,7 +895,7 @@
 >
 >
 >
-> P(Y < y) = P(g(X) < y) = P({x ∈ X_curly: g(x) < y})
+> P(Y < y) = P(g(X) < y) = P({x ∈ 𝒳: g(x) < y})
 >
 >
 >
@@ -1082,7 +1082,7 @@
 >
 >
 >
-> Nếu y không thuộc Y_curly thì sao?
+> Nếu y không thuộc 𝒴 thì sao?
 >
 >
 >
