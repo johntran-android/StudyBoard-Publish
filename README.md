@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,077 notes` · `~17,493 screenshots` · `17 notebooks`**
+**`~12,287 notes` · `~17,714 screenshots` · `18 notebooks`**
 
 ## 📚 Syllabus / Mục lục
 
@@ -32,8 +32,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `317 notes · 331 screenshots · 8 sections`
 
 > A comprehensive set of study notes for MIT 18.01 Single Variable Calculus, covering core topics from limits and derivatives to practical applications such as optimization, curve sketching, and approximation methods.
-> 
-> Tập hợp chi tiết các ghi chép học tập cho khóa học Giải tích một biến MIT 18.01, bao gồm các chủ đề cốt lõi từ giới hạn, đạo hàm cho đến các ứng dụng thực tế như tối ưu hóa, khảo sát hàm số và các phương pháp xấp xỉ.
 
 <details open>
 <summary>📖 8 sections</summary>
@@ -57,8 +55,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `549 notes · 615 screenshots · 13 sections`
 
 > This notebook contains study notes for MIT 18.02 (Multivariable Calculus), covering core topics such as vector algebra, matrices, partial derivatives, Lagrange multipliers, and double integrals.
-> 
-> Vở ghi chép này tổng hợp các kiến thức môn Giải tích đa biến (MIT 18.02), bao gồm các chủ đề cốt lõi như đại số vector, ma trận, đạo hàm riêng, phương pháp nhân tử Lagrange và tích phân kép.
 
 <details open>
 <summary>📖 13 sections</summary>
@@ -78,6 +74,42 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [Lec 21: Gradient Field & Potential Function](mit_1802/lec_21_gradient_field_potential_function.md) | 35 | 35 |
 | [Lec 22: Green's Theorem](mit_1802/lec_22_greens_theorem.md) | 26 | 29 |
 | [Lec 13: Lagrange Multiplier](mit_1802/lec_13_lagrange_multiplier.md) | 33 | 36 |
+
+</details>
+
+### MIT 18S096 Matrix Calculus for ML
+<!-- key: mit_18s096_matrix_calculus_for_ml -->
+<!-- group: Calculus -->
+`210 notes · 221 screenshots · 19 sections`
+
+> This notebook contains study notes and problem sets for MIT 18.S096 (Matrix Calculus for Machine Learning), covering core topics such as multidimensional derivatives, automatic differentiation, optimization, and computational graphs.
+> 
+> Sổ tay ghi chép này tổng hợp bài học và bài tập từ khóa học MIT 18.S096 (Giải tích Ma trận cho Học máy), bao gồm các chủ đề cốt lõi như đạo hàm đa chiều, đạo hàm tự động, tối ưu hóa và đồ thị tính toán.
+
+<details open>
+<summary>📖 19 sections</summary>
+
+| Section | Notes | Screenshots |
+|---|---:|---:|
+| [Lec 1 Part 1 Intro And Motivation](mit_18s096_matrix_calculus_for_ml/lec_1_part_1_intro_and_motivation.md) | 19 | 17 |
+| [Lec 1 Part 2 Derivatives As Linear Operator](mit_18s096_matrix_calculus_for_ml/lec_1_part_2_derivatives_as_linear_operator.md) | 12 | 13 |
+| [Lec 2 Part 1: Derivatives In Higher Dimensions: Jacobians And Matrix Functions](mit_18s096_matrix_calculus_for_ml/lec_2_part_1_derivatives_in_higher_dimensions_jacobians_and_matrix_functions.md) | 20 | 20 |
+| [Lec 2 Part 2: Vectorization Of Matrix Function](mit_18s096_matrix_calculus_for_ml/lec_2_part_2_vectorization_of_matrix_function.md) | 3 | 3 |
+| [Lec 3 Part 1 Kronecker Products And Jacobians](mit_18s096_matrix_calculus_for_ml/lec_3_part_1_kronecker_products_and_jacobians.md) | 24 | 26 |
+| [Lec 3 Part 2 Finite-difference Approximations](mit_18s096_matrix_calculus_for_ml/lec_3_part_2_finite_difference_approximations.md) | 23 | 24 |
+| [Lec 4 Part 1: Gradient And Inner Products In Other Vector Spaces](mit_18s096_matrix_calculus_for_ml/lec_4_part_1_gradient_and_inner_products_in_other_vector_spaces.md) | 18 | 16 |
+| [Lec 4 Part 2: Nonlinear Rooting Finding, Optimization And Adjoint Gradient Methods](mit_18s096_matrix_calculus_for_ml/lec_4_part_2_nonlinear_rooting_finding_optimization_and_adjoint_gradient_methods.md) | 15 | 17 |
+| [Lec 5 P1: Derivative Of Matrix Determinant And Invers](mit_18s096_matrix_calculus_for_ml/lec_5_p1_derivative_of_matrix_determinant_and_invers.md) | 7 | 6 |
+| [Lec 5 P2: Forward Automatic Differentiation Via Dua Numbers](mit_18s096_matrix_calculus_for_ml/lec_5_p2_forward_automatic_differentiation_via_dua_numbers.md) | 22 | 23 |
+| [Lec 5 P3 Differentiation On Computational Graphs](mit_18s096_matrix_calculus_for_ml/lec_5_p3_differentiation_on_computational_graphs.md) | 1 | 0 |
+| [Lec 6 P1: Adjoint Differentiation On ODE Solutions](mit_18s096_matrix_calculus_for_ml/lec_6_p1_adjoint_differentiation_on_ode_solutions.md) | 1 | 0 |
+| [Lec 6 P2: Calculus Of Variations & Gradient Of Functionals](mit_18s096_matrix_calculus_for_ml/lec_6_p2_calculus_of_variations_gradient_of_functionals.md) | 1 | 0 |
+| [Lec 7 P1: Derivative Of Random Functions](mit_18s096_matrix_calculus_for_ml/lec_7_p1_derivative_of_random_functions.md) | 18 | 19 |
+| [Lec 7 P2: Second Derivatives, Bilinear Form, Hessian](mit_18s096_matrix_calculus_for_ml/lec_7_p2_second_derivatives_bilinear_form_hessian.md) | 23 | 22 |
+| [Lecture Note](mit_18s096_matrix_calculus_for_ml/lecture_note.md) | 2 | 4 |
+| [Lec 8 P2: Automatic Differentiation On Computational Graph](mit_18s096_matrix_calculus_for_ml/lec_8_p2_automatic_differentiation_on_computational_graph.md) | 1 | 0 |
+| [Problem Sets 1](mit_18s096_matrix_calculus_for_ml/problem_sets_1.md) | 0 | 3 |
+| [Problem Sets 2](mit_18s096_matrix_calculus_for_ml/problem_sets_2.md) | 0 | 8 |
 
 </details>
 
@@ -115,8 +147,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `1,181 notes · 1,269 screenshots · 36 sections`
 
 > This notebook covers fundamental linear algebra concepts, from solving systems of equations and matrix operations to eigenvalues, SVD, and linear transformations, often emphasizing their geometric interpretations.
-> 
-> Sổ tay này bao gồm các khái niệm cơ bản về đại số tuyến tính, từ giải hệ phương trình và các phép toán ma trận đến trị riêng, phân tích SVD và biến đổi tuyến tính, thường nhấn mạnh các diễn giải hình học của chúng.
 
 <details open>
 <summary>📖 36 sections</summary>
@@ -170,8 +200,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `801 notes · 1,120 screenshots · 29 sections`
 
 > A comprehensive study notebook for Stanford's CS224N (Natural Language Processing with Deep Learning) course, covering fundamental to advanced NLP concepts from word embeddings (Word2Vec, GloVe) to neural architectures like RNNs, Transformers, and RLHF.
-> 
-> Sổ tay học tập toàn diện cho khóa học CS224N của Stanford (Xử lý Ngôn ngữ Tự nhiên với Học sâu), bao gồm các kiến thức từ cơ bản đến nâng cao từ biểu diễn từ (Word2Vec, GloVe) cho đến các kiến trúc mạng nơ-ron như RNN, Transformer và RLHF.
 
 <details open>
 <summary>📖 29 sections</summary>
@@ -216,8 +244,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `1,603 notes · 2,702 screenshots · 29 sections`
 
 > This notebook contains comprehensive study notes, lecture summaries, and programming assignments from Stanford's CS231n course on Convolutional Neural Networks for Visual Recognition.
-> 
-> Cuốn sổ tay này tổng hợp các ghi chép học tập, tóm tắt bài giảng và bài tập thực hành từ khóa học CS231n của Đại học Stanford về Mạng nơ-ron tích chập cho Nhận dạng Thị giác.
 
 <details open>
 <summary>📖 29 sections</summary>
@@ -262,8 +288,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `1,083 notes · 1,827 screenshots · 19 sections`
 
 > A comprehensive compilation of notes, quizzes, and programming assignments from the Coursera Deep Learning Specialization. It covers topics ranging from foundational neural networks to advanced computer vision, NLP architectures, and model optimization using TensorFlow.
-> 
-> Tổng hợp toàn diện các ghi chép, bài trắc nghiệm và bài tập lập trình từ Chuyên ngành Deep Learning trên Coursera. Nội dung bao gồm từ các khái niệm mạng nơ-ron cơ bản đến các kiến trúc nâng cao về thị giác máy tính, NLP và tối ưu hóa mô hình bằng TensorFlow.
 
 <details open>
 <summary>📖 19 sections</summary>
@@ -298,8 +322,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `1,808 notes · 2,287 screenshots · 19 sections`
 
 > A comprehensive collection of study notes, practical exercises, and implementations from the Coursera NLP Specialization, covering foundational NLP techniques, sequence models, and modern Transformer architectures.
-> 
-> Cuốn sổ tay tổng hợp các ghi chép học tập, bài tập thực hành và mã nguồn từ khóa học Chuyên sâu về NLP trên Coursera, bao gồm các kỹ thuật NLP nền tảng, mô hình chuỗi và kiến trúc Transformer hiện đại.
 
 <details open>
 <summary>📖 19 sections</summary>
@@ -336,8 +358,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `937 notes · 1,428 screenshots · 23 sections`
 
 > A comprehensive collection of study notes and lecture summaries for Stephen Boyd's Convex Optimization course (EE364a), covering fundamental concepts such as convex sets and functions, duality theory, KKT conditions, and optimization algorithms.
-> 
-> Bộ sưu tập chi tiết các ghi chép học tập và tóm tắt bài giảng cho khóa học Tối ưu hóa Lồi (EE364a) của Stephen Boyd, bao gồm các khái niệm nền tảng như tập hợp và hàm lồi, lý thuyết đối ngẫu, điều kiện KKT và các thuật toán tối ưu hóa.
 
 <details open>
 <summary>📖 23 sections</summary>
@@ -376,8 +396,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `392 notes · 550 screenshots · 30 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
-> 
-> Sổ tay này đi sâu vào các thuật toán tối ưu hóa số cốt lõi như tìm kiếm đường thẳng, vùng tin cậy, quasi-Newton và gradient liên hợp, cùng các khái niệm thiết yếu như đạo hàm tự động, phân tích hội tụ và kỹ thuật đại số tuyến tính số.
 
 <details open>
 <summary>📖 30 sections</summary>
@@ -425,8 +443,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `352 notes · 513 screenshots · 46 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
-> 
-> Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
 <summary>📖 46 sections</summary>
@@ -490,8 +506,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `881 notes · 1,109 screenshots · 16 sections`
 
 > This notebook explores foundational and advanced topics in probability and statistical inference, covering random variables, their distributions (discrete and continuous), expectation, variance, moment generating functions, and key theorems such as the Law of Large Numbers and Central Limit Theorem.
-> 
-> Sổ tay này khám phá các chủ đề cơ bản và nâng cao trong lý thuyết xác suất và suy luận thống kê, bao gồm các biến ngẫu nhiên, các phân phối của chúng (rời rạc và liên tục), kỳ vọng, phương sai, hàm sinh moment, và các định lý quan trọng như Luật Số lớn và Định lý Giới hạn Trung tâm.
 
 <details open>
 <summary>📖 16 sections</summary>
@@ -523,8 +537,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `838 notes · 1,094 screenshots · 26 sections`
 
 > This notebook contains detailed study notes and proofs based on Casella and Berger's *Statistical Inference*, covering key topics in probability theory, estimation methods, hypothesis testing, and asymptotic properties.
-> 
-> Sổ tay học tập này tổng hợp các ghi chép và chứng minh chi tiết dựa trên giáo trình *Statistical Inference* của Casella và Berger, bao gồm các chủ đề cốt lõi về lý thuyết xác suất, phương pháp ước lượng, kiểm định giả thuyết và tính chất tiệm cận.
 
 <details open>
 <summary>📖 26 sections</summary>
