@@ -1,0 +1,212 @@
+{
+  "title": "stat110_havard",
+  "publishedAt": 1786562260720,
+  "sections": [
+    {
+      "title": "📋 Overview",
+      "path": "stat110_havard/_overview.md",
+      "noteCount": 0,
+      "imageCount": 1
+    },
+    {
+      "title": "A0_stat110",
+      "path": "stat110_havard/a0_stat110.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Cheatsheet (nhờ Ai)",
+      "path": "stat110_havard/cheatsheet_nh_ai.md",
+      "noteCount": 5,
+      "imageCount": 98
+    },
+    {
+      "title": "Lec 10: Expected Value",
+      "path": "stat110_havard/lec_10_expected_value.md",
+      "noteCount": 34,
+      "imageCount": 41
+    },
+    {
+      "title": "Lec 11: Poisson Distribution",
+      "path": "stat110_havard/lec_11_poisson_distribution.md",
+      "noteCount": 31,
+      "imageCount": 39
+    },
+    {
+      "title": "Lec 12: Discrete Vs",
+      "path": "stat110_havard/lec_12_discrete_vs_continuous_the_uniform.md",
+      "noteCount": 42,
+      "imageCount": 49
+    },
+    {
+      "title": "Lec 13: Normal Distribution",
+      "path": "stat110_havard/lec_13_normal_distribution.md",
+      "noteCount": 33,
+      "imageCount": 42
+    },
+    {
+      "title": "Lec 14: Location, Scale, Lotus",
+      "path": "stat110_havard/lec_14_location_scale_lotus.md",
+      "noteCount": 41,
+      "imageCount": 47
+    },
+    {
+      "title": "Lec 15: Midterm Review",
+      "path": "stat110_havard/lec_15_midterm_review.md",
+      "noteCount": 29,
+      "imageCount": 32
+    },
+    {
+      "title": "Lec 16: Exponential",
+      "path": "stat110_havard/lec_16_exponential_distribution.md",
+      "noteCount": 19,
+      "imageCount": 25
+    },
+    {
+      "title": "Lec 17: Moment",
+      "path": "stat110_havard/lec_17_moment_generating_functions.md",
+      "noteCount": 49,
+      "imageCount": 60
+    },
+    {
+      "title": "Lec 18: MGF Continued",
+      "path": "stat110_havard/lec_18_mgf_continued.md",
+      "noteCount": 42,
+      "imageCount": 49
+    },
+    {
+      "title": "Lec 19: Joint, Conditional And",
+      "path": "stat110_havard/lec_19_joint_conditional_and_marginal_distribution.md",
+      "noteCount": 38,
+      "imageCount": 41
+    },
+    {
+      "title": "Lec 1: Probability & Counting",
+      "path": "stat110_havard/lec_1_probability_counting.md",
+      "noteCount": 17,
+      "imageCount": 17
+    },
+    {
+      "title": "Lec 20: Multinomial And Cauchy",
+      "path": "stat110_havard/lec_20_multinomial_and_cauchy.md",
+      "noteCount": 31,
+      "imageCount": 44
+    },
+    {
+      "title": "Lec 21: Covariance & Correlation",
+      "path": "stat110_havard/lec_21_covariance_correlation.md",
+      "noteCount": 31,
+      "imageCount": 38
+    },
+    {
+      "title": "Lec 22: Transformations & Convolution",
+      "path": "stat110_havard/lec_22_transformations_convolution.md",
+      "noteCount": 22,
+      "imageCount": 28
+    },
+    {
+      "title": "Lec 23: Beta Distribution",
+      "path": "stat110_havard/lec_23_beta_distribution.md",
+      "noteCount": 10,
+      "imageCount": 13
+    },
+    {
+      "title": "Lec 24: Gamma Distribution & Poisson",
+      "path": "stat110_havard/lec_24_gamma_distribution_poisson.md",
+      "noteCount": 24,
+      "imageCount": 24
+    },
+    {
+      "title": "Lec 25: Order Statistic &",
+      "path": "stat110_havard/lec_25_order_statistic_conditional_expectation.md",
+      "noteCount": 27,
+      "imageCount": 31
+    },
+    {
+      "title": "Lec 26 Conditional",
+      "path": "stat110_havard/lec_26_conditional_expectation.md",
+      "noteCount": 30,
+      "imageCount": 33
+    },
+    {
+      "title": "Lec 27: Conditional",
+      "path": "stat110_havard/lec_27_conditional_expectation_given_an_rv.md",
+      "noteCount": 26,
+      "imageCount": 36
+    },
+    {
+      "title": "Lec 28: Inequalities",
+      "path": "stat110_havard/lec_28_inequalities.md",
+      "noteCount": 19,
+      "imageCount": 21
+    },
+    {
+      "title": "Lec 29: Law Of Large Numbers &",
+      "path": "stat110_havard/lec_29_law_of_large_numbers_law_of_central_limit.md",
+      "noteCount": 35,
+      "imageCount": 36
+    },
+    {
+      "title": "Lec 2: Story Proofs,",
+      "path": "stat110_havard/lec_2_story_proofs_axioms_of_probability.md",
+      "noteCount": 23,
+      "imageCount": 23
+    },
+    {
+      "title": "Lec 30: Chi-square, Student-t,",
+      "path": "stat110_havard/lec_30_chi_square_student_t_multi_variate_gaussian.md",
+      "noteCount": 21,
+      "imageCount": 22
+    },
+    {
+      "title": "Lec 31: Markov Chain (chưa Học)",
+      "path": "stat110_havard/lec_31_markov_chain_cha_hc.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lec 3: Birthday Problem,",
+      "path": "stat110_havard/lec_3_birthday_problem_properties_of_probability.md",
+      "noteCount": 21,
+      "imageCount": 23
+    },
+    {
+      "title": "Lec 4: Conditional Probability",
+      "path": "stat110_havard/lec_4_conditional_probability.md",
+      "noteCount": 26,
+      "imageCount": 26
+    },
+    {
+      "title": "Lec 5: Conditional Probability,",
+      "path": "stat110_havard/lec_5_conditional_probability_law_of_total_probability.md",
+      "noteCount": 31,
+      "imageCount": 35
+    },
+    {
+      "title": "Lec 6: Monty Hall, Simpson's",
+      "path": "stat110_havard/lec_6_monty_hall_simpsons_paradox.md",
+      "noteCount": 23,
+      "imageCount": 23
+    },
+    {
+      "title": "Lec 7: Gambler's Ruin &",
+      "path": "stat110_havard/lec_7_gamblers_ruin_random_variables.md",
+      "noteCount": 29,
+      "imageCount": 35
+    },
+    {
+      "title": "Lec 8: Random Variables &",
+      "path": "stat110_havard/lec_8_random_variables_their_distributions.md",
+      "noteCount": 32,
+      "imageCount": 36
+    },
+    {
+      "title": "Lec 9: Expectation, Indicator",
+      "path": "stat110_havard/lec_9_expectation_indicator_random_variables_linearity.md",
+      "noteCount": 40,
+      "imageCount": 41
+    }
+  ],
+  "totalNotes": 881,
+  "totalImages": 1109
+}
