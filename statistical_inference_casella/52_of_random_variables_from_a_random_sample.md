@@ -1364,25 +1364,25 @@ from A Random Sample
 >
 >
 > Ôn lại một chút, cái theorem này phải dựa trên assume là ta có mapping
-> 1-1 từ support set A_curly của X, Y với ảnh của nó B_curly:
+> 1-1 từ support set 𝒜 của X, Y với ảnh của nó ℬ:
 >
 >
 >
-> A_curly được định nghĩa là tập {(x,y) sao cho fX,Y(x,y) > 0}
+> 𝒜 được định nghĩa là tập {(x,y) sao cho fX,Y(x,y) > 0}
 >
 >
 >
-> Còn B_curly là ảnh của A_curly: 
+> Còn ℬ là ảnh của 𝒜: 
 >
 >
 >
-> {(u,v) với u = g1(x,y), v = g2(x,y) với (x,y) ∈ A_curly}
+> {(u,v) với u = g1(x,y), v = g2(x,y) với (x,y) ∈ 𝒜}
 >
 >
 >
-> Vậy nói mapping 1-1 là với mỗi (u,v) ∈ B_curly thì tồn tại duy nhất một (x,y)
-> thuộc A_curly map với nó (vẫn có thể có (x,y) khác không thuộc A_curly
-> được map với B_curly, nhưng miễn là xét trên A_curly và B_curly thì mapping
+> Vậy nói mapping 1-1 là với mỗi (u,v) ∈ ℬ thì tồn tại duy nhất một (x,y)
+> thuộc 𝒜 map với nó (vẫn có thể có (x,y) khác không thuộc 𝒜
+> được map với ℬ, nhưng miễn là xét trên 𝒜 và ℬ thì mapping
 > là 1-1 là ok)
 >
 >
@@ -1496,25 +1496,25 @@ from A Random Sample
 >
 >
 >
-> Vậy đến đây ta xem thử cái giả định rằng mapping giữa A_curly và B_curly
+> Vậy đến đây ta xem thử cái giả định rằng mapping giữa 𝒜 và ℬ
 > có thỏa yêu cầu 1-1 không?
 >
 >
 >
-> Đầu tiên nhắc lại A_curly là cái gì (trong sách là chữ A viết kiểu, mình gọi
-> là A_curly cho nhanh) nó là support set của X, Y. Mà support set được định
+> Đầu tiên nhắc lại 𝒜 là cái gì (trong sách là chữ A viết kiểu, mình gọi
+> là 𝒜 cho nhanh) nó là support set của X, Y. Mà support set được định
 > nghĩa là tập chứa (x,y) ∈ R^2 sao cho fX,Y(x,y) DƯƠNG, vậy thôi.
 >
 >
 >
-> Và B_curly là ảnh của A_curly, tức là với (x,y) ∈ A_Curly, ta pass nó qua
+> Và ℬ là ảnh của 𝒜, tức là với (x,y) ∈ 𝒜, ta pass nó qua
 > hàm g1, g2 để có (u,v). Thì tập mọi (u,v) được tạo ra kiểu đó sẽ làm nên
-> B_curly. Do đó định nghĩa của nó là {(u,v): u = g1(x,y), v=g2(x,y), với some
-> (x,y) ∈ A_curly)
+> ℬ. Do đó định nghĩa của nó là {(u,v): u = g1(x,y), v=g2(x,y), với some
+> (x,y) ∈ 𝒜)
 >
 >
 >
-> Vậy thì ở đây A_curly là gì? ⇨ Thì phải xem joint pdf của X, Y là gì? Đề
+> Vậy thì ở đây 𝒜 là gì? ⇨ Thì phải xem joint pdf của X, Y là gì? Đề
 > bài đã cho marginal pdf của X, Y.  Và X, Y ĐỘC LẬP. Nên ta biết joint pdf
 > của các rv độc lập là tích cách marginal pdf ⇨ fX,Y(x,y) = fX(x)fY(y)
 >
@@ -1523,12 +1523,12 @@ from A Random Sample
 > Do đó cặp (x,y) khiến vế trái dương chính là cặp (x,y) khiến vế phải dương
 > mà muốn vậy thì phải khiến chúng cùng dương hoặc cùng âm. Dĩ nhiên
 > marginal pdf (hay pdf nói chung thì ko âm) nên thành ra câu trả lời là (x,y)
-> sao cho fX(x) dương và fY(y) dương. ⇨ A_curly = {(x,y) ∈ R^2: fX(x) > 0, 
+> sao cho fX(x) dương và fY(y) dương. ⇨ 𝒜 = {(x,y) ∈ R^2: fX(x) > 0, 
 > fY(y) > 0}. Nhưng ta ko biết cụ thể fX(x) fY(y) là gì nên chỉ đi được tới đây.
 >
 >
 >
-> Còn B_curly thì theo định nghĩa trên. 
+> Còn ℬ thì theo định nghĩa trên. 
 >
 >
 >
@@ -1542,7 +1542,7 @@ from A Random Sample
 >
 >
 > Nếu có hơn 1 cặp x, y thì mapping này chưa chắc 1-1. Trừ khi 1 cặp nằm
-> ngoài A_curly, 1 cặp nằm trong. khi đó vẫn ok.
+> ngoài 𝒜, 1 cặp nằm trong. khi đó vẫn ok.
 >
 >
 >
@@ -1556,20 +1556,20 @@ from A Random Sample
 >
 >
 > Và kết quả này đương nhiên là unique (duy nhất). Thành ra mapping chắc
-> chắn là 1-1 (ta có thể thắc mắc là lỡ l, và z-l ko nằm trong A_curly thì sao?
-> Không sao cả. vì định nghĩa của B_curly ko yêu cầu là (z,l) trong B_curly
-> thì nhất định phải map với (x,y) thuộc A_curly. Vì hoàn toàn cho phép có
-> hai cái, một cái trong A_curly, một cái ngoài A_curly và cả hai đều map
-> với một (z,l) thuộc B_curly. Nhưng ngay cả như vậy thì mapping giữa
-> A_curly và B_curly vẫn là 1-1, vì ko có case nào có hai cái thuộc A_curly
-> mà được map với cùng một điểm trong B_curly, khi đó mới là vi phạm.
+> chắn là 1-1 (ta có thể thắc mắc là lỡ l, và z-l ko nằm trong 𝒜 thì sao?
+> Không sao cả. vì định nghĩa của ℬ ko yêu cầu là (z,l) trong ℬ
+> thì nhất định phải map với (x,y) thuộc 𝒜. Vì hoàn toàn cho phép có
+> hai cái, một cái trong 𝒜, một cái ngoài 𝒜 và cả hai đều map
+> với một (z,l) thuộc ℬ. Nhưng ngay cả như vậy thì mapping giữa
+> 𝒜 và ℬ vẫn là 1-1, vì ko có case nào có hai cái thuộc 𝒜
+> mà được map với cùng một điểm trong ℬ, khi đó mới là vi phạm.
 >
 >
 >
 > Ở đây mình đã thấy mapping giữa x,y và z,l là 1-1. Nên dù truy ngược 
-> ra lại x,y có thuộc A_curly hay ko, thì ko quan trong. Vì chắc chắn rằng
-> nếu có ông (x,y) nào đó nằm trong A_curly thì chắc chắn nó được map
-> duy nhất với B_curly.
+> ra lại x,y có thuộc 𝒜 hay ko, thì ko quan trong. Vì chắc chắn rằng
+> nếu có ông (x,y) nào đó nằm trong 𝒜 thì chắc chắn nó được map
+> duy nhất với ℬ.
 >
 >
 >
@@ -1661,8 +1661,8 @@ from A Random Sample
 >
 >
 > Thì trong phần trước khi ta ôn lại lý thuyết của transformation theorem.
-> Ta có nhắc đến A_curly, là support set của X,Y và ảnh của nó, B_curly.
-> và đã lập luận để thấy rằng  A_curly = {(x,y) ∈ R^2: fX(x) > 0,  fY(y) > 0}
+> Ta có nhắc đến 𝒜, là support set của X,Y và ảnh của nó, ℬ.
+> và đã lập luận để thấy rằng  𝒜 = {(x,y) ∈ R^2: fX(x) > 0,  fY(y) > 0}
 > tức là tập các (x,y) thuộc R^2 sao cho x khiến thằng fX(x) dương và
 > y khiến fY(y) dương (trong lập luận đó ta có kết quả này là X, Y độc lập)
 >
@@ -1674,11 +1674,11 @@ from A Random Sample
 >
 >
 > Là sao? Ví dụ như (như trong sách ở đây nói), giả sử fX(x) chỉ dương khi
-> x DƯƠNG, và fY(x) chỉ dương khi y DƯƠNG, tức là A_curly trở thành:
+> x DƯƠNG, và fY(x) chỉ dương khi y DƯƠNG, tức là 𝒜 trở thành:
 >
 >
 >
-> A_curly = {(x,y) ∈ R^2: fX(x) > 0,  fY(y) > 0}
+> 𝒜 = {(x,y) ∈ R^2: fX(x) > 0,  fY(y) > 0}
 >
 >
 >
