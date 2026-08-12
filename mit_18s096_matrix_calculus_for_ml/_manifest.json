@@ -1,0 +1,128 @@
+{
+  "title": "mit_18s096_matrix_calculus_for_ml",
+  "publishedAt": 1786562257094,
+  "sections": [
+    {
+      "title": "Lec 1 Part 1 Intro And Motivation",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_1_part_1_intro_and_motivation.md",
+      "noteCount": 19,
+      "imageCount": 17
+    },
+    {
+      "title": "Lec 1 Part 2 Derivatives As Linear Operator",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_1_part_2_derivatives_as_linear_operator.md",
+      "noteCount": 12,
+      "imageCount": 13
+    },
+    {
+      "title": "Lec 2 Part 1: Derivatives In Higher Dimensions: Jacobians And Matrix Functions",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_2_part_1_derivatives_in_higher_dimensions_jacobians_and_matrix_functions.md",
+      "noteCount": 20,
+      "imageCount": 20
+    },
+    {
+      "title": "Lec 2 Part 2: Vectorization Of Matrix Function",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_2_part_2_vectorization_of_matrix_function.md",
+      "noteCount": 3,
+      "imageCount": 3
+    },
+    {
+      "title": "Lec 3 Part 1 Kronecker Products And Jacobians",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_3_part_1_kronecker_products_and_jacobians.md",
+      "noteCount": 24,
+      "imageCount": 26
+    },
+    {
+      "title": "Lec 3 Part 2 Finite-difference Approximations",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_3_part_2_finite_difference_approximations.md",
+      "noteCount": 23,
+      "imageCount": 24
+    },
+    {
+      "title": "Lec 4 Part 1: Gradient And Inner Products In Other Vector Spaces",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_4_part_1_gradient_and_inner_products_in_other_vector_spaces.md",
+      "noteCount": 18,
+      "imageCount": 16
+    },
+    {
+      "title": "Lec 4 Part 2: Nonlinear Rooting Finding, Optimization And Adjoint Gradient Methods",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_4_part_2_nonlinear_rooting_finding_optimization_and_adjoint_gradient_methods.md",
+      "noteCount": 15,
+      "imageCount": 17
+    },
+    {
+      "title": "Lec 5 P1: Derivative Of Matrix Determinant And Invers",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_5_p1_derivative_of_matrix_determinant_and_invers.md",
+      "noteCount": 7,
+      "imageCount": 6
+    },
+    {
+      "title": "Lec 5 P2: Forward Automatic Differentiation Via Dua Numbers",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_5_p2_forward_automatic_differentiation_via_dua_numbers.md",
+      "noteCount": 22,
+      "imageCount": 23
+    },
+    {
+      "title": "Lec 5 P3 Differentiation On Computational Graphs",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_5_p3_differentiation_on_computational_graphs.md",
+      "noteCount": 1,
+      "imageCount": 0
+    },
+    {
+      "title": "Lec 6 P1: Adjoint Differentiation On ODE Solutions",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_6_p1_adjoint_differentiation_on_ode_solutions.md",
+      "noteCount": 1,
+      "imageCount": 0
+    },
+    {
+      "title": "Lec 6 P2: Calculus Of Variations & Gradient Of Functionals",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_6_p2_calculus_of_variations_gradient_of_functionals.md",
+      "noteCount": 1,
+      "imageCount": 0
+    },
+    {
+      "title": "Lec 7 P1: Derivative Of Random Functions",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_7_p1_derivative_of_random_functions.md",
+      "noteCount": 18,
+      "imageCount": 19
+    },
+    {
+      "title": "Lec 7 P2: Second Derivatives, Bilinear Form, Hessian",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_7_p2_second_derivatives_bilinear_form_hessian.md",
+      "noteCount": 23,
+      "imageCount": 22
+    },
+    {
+      "title": "Lec 8: Derivative Of Eigenproblems",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_8_derivative_of_eigenproblems.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lec 8 P2: Automatic Differentiation On Computational Graph",
+      "path": "mit_18s096_matrix_calculus_for_ml/lec_8_p2_automatic_differentiation_on_computational_graph.md",
+      "noteCount": 1,
+      "imageCount": 0
+    },
+    {
+      "title": "Lecture Note",
+      "path": "mit_18s096_matrix_calculus_for_ml/lecture_note.md",
+      "noteCount": 2,
+      "imageCount": 4
+    },
+    {
+      "title": "Problem Sets 1",
+      "path": "mit_18s096_matrix_calculus_for_ml/problem_sets_1.md",
+      "noteCount": 0,
+      "imageCount": 3
+    },
+    {
+      "title": "Problem Sets 2",
+      "path": "mit_18s096_matrix_calculus_for_ml/problem_sets_2.md",
+      "noteCount": 0,
+      "imageCount": 8
+    }
+  ],
+  "totalNotes": 210,
+  "totalImages": 221
+}
