@@ -1,0 +1,86 @@
+{
+  "title": "MIT 18.01 — Single Variable Calculus",
+  "publishedAt": 1786562249185,
+  "sections": [
+    {
+      "title": "Lec 10: Curve Sketching",
+      "path": "a0_mit1801/lec_10_curve_sketching.md",
+      "noteCount": 28,
+      "imageCount": 29
+    },
+    {
+      "title": "Lec 11: Max-min",
+      "path": "a0_mit1801/lec_11_max_min.md",
+      "noteCount": 29,
+      "imageCount": 30
+    },
+    {
+      "title": "Lec 12: Related Rates",
+      "path": "a0_mit1801/lec_12_related_rates.md",
+      "noteCount": 24,
+      "imageCount": 25
+    },
+    {
+      "title": "Lec 13: Newton's Method",
+      "path": "a0_mit1801/lec_13_newtons_method.md",
+      "noteCount": 26,
+      "imageCount": 28
+    },
+    {
+      "title": "Lec 14: Mean",
+      "path": "a0_mit1801/lec_14_mean_value_theorem.md",
+      "noteCount": 24,
+      "imageCount": 24
+    },
+    {
+      "title": "Lec 1: Rate Of Change",
+      "path": "a0_mit1801/lec_1_rate_of_change.md",
+      "noteCount": 24,
+      "imageCount": 26
+    },
+    {
+      "title": "Lec 2: Limits",
+      "path": "a0_mit1801/lec_2_limits.md",
+      "noteCount": 28,
+      "imageCount": 30
+    },
+    {
+      "title": "Lec 3: Derivatives",
+      "path": "a0_mit1801/lec_3_derivatives.md",
+      "noteCount": 21,
+      "imageCount": 22
+    },
+    {
+      "title": "Lec 4: Chain Rule",
+      "path": "a0_mit1801/lec_4_chain_rule.md",
+      "noteCount": 21,
+      "imageCount": 22
+    },
+    {
+      "title": "Lec 5: Implicit",
+      "path": "a0_mit1801/lec_5_implicit_differentiaion.md",
+      "noteCount": 29,
+      "imageCount": 30
+    },
+    {
+      "title": "Lec 6: Exponential &",
+      "path": "a0_mit1801/lec_6_exponential_log.md",
+      "noteCount": 36,
+      "imageCount": 37
+    },
+    {
+      "title": "Lec 7: Exam Review (ko Có Lec 8)",
+      "path": "a0_mit1801/lec_7_exam_review_ko_c_lec_8.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lec 9: Linear And Quadratic",
+      "path": "a0_mit1801/lec_9_linear_and_quadratic_approximations.md",
+      "noteCount": 27,
+      "imageCount": 28
+    }
+  ],
+  "totalNotes": 317,
+  "totalImages": 331
+}
