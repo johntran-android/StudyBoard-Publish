@@ -1192,36 +1192,36 @@ normal Distribution
 >
 >
 >
-> A_curly là support set của X,Y, đơn giản là tập (con của R^2, vì (X,Y) là R^2 random variable vector) mà
+> 𝒜 là support set của X,Y, đơn giản là tập (con của R^2, vì (X,Y) là R^2 random variable vector) mà
 > trong đó joint pdf của X,Y dương.
 >
 >
 >
 > Dĩ nhiên là thông qua hàm g1, g2, thì U = g1(X,Y), V = g2(X, Y) thì các giá trị khả dĩ (x,y) của X, Y sẽ
-> được map với u,v trong R^2. Nhưng mà ta sẽ chỉ quan tâm tới (x,y) trong A_curly, vì tại đó mới là nơi "có
+> được map với u,v trong R^2. Nhưng mà ta sẽ chỉ quan tâm tới (x,y) trong 𝒜, vì tại đó mới là nơi "có
 > thể xảy ra" (ý là giá trị của X,Y)
 >
 >
 >
-> Ảnh của A_curly tức là B_curly = {(u,v) ∈ R^2: u = g1(x, y), v = g2(x, y) for some (x,y) ∈ A_curly}
+> Ảnh của 𝒜 tức là ℬ = {(u,v) ∈ R^2: u = g1(x, y), v = g2(x, y) for some (x,y) ∈ 𝒜}
 >
 >
 >
-> Và mapping 1-1 giữa A_curly và B_curly tức là:
+> Và mapping 1-1 giữa 𝒜 và ℬ tức là:
 >
 >
 >
-> với một (u,v) trong B_curly thì chỉ tìm thấy duy nhất một (x,y) trong A_curly mà thôi.
+> với một (u,v) trong ℬ thì chỉ tìm thấy duy nhất một (x,y) trong 𝒜 mà thôi.
 >
 >
 >
-> (Và điều này không ngăn cản việc có thể có điểm (x,y) khác trong R^2 nằm ngoài A_curly được map với
+> (Và điều này không ngăn cản việc có thể có điểm (x,y) khác trong R^2 nằm ngoài 𝒜 được map với
 > (u,v) nhưng vì tại (x,y) khác này, joint pdf của X,Y = 0 nên ko ảnh hưởng gì, nên theorem chỉ cần
-> mapping 1-1 giữa A_curly với B_curly là đủ)
+> mapping 1-1 giữa 𝒜 với ℬ là đủ)
 >
 >
 >
-> Khi thỏa yêu cầu đó, thì từ (u,v) trong B_curly, như đã nói ta có thể tìm thấy (x,y) trong A_curly: x = h1(u,
+> Khi thỏa yêu cầu đó, thì từ (u,v) trong ℬ, như đã nói ta có thể tìm thấy (x,y) trong 𝒜: x = h1(u,
 > v), y = h2(u,v) mà nếu điều kiện mapping 1-1 ko thỏa thì ta ko biết x, y là gì hết.
 >
 >
