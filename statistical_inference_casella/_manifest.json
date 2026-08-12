@@ -1,6 +1,6 @@
 {
-  "title": "statistical_inference_casella",
-  "publishedAt": 1786562262089,
+  "title": "Statistical Inference - Casella",
+  "publishedAt": 1786566466160,
   "sections": [
     {
       "title": "📋 Overview",
@@ -9,31 +9,19 @@
       "imageCount": 1
     },
     {
-      "title": "10.1 Point Estimation",
-      "path": "statistical_inference_casella/101_point_estimation.md",
-      "noteCount": 42,
-      "imageCount": 49
-    },
-    {
-      "title": "10.2 Robustness",
-      "path": "statistical_inference_casella/102_robustness.md",
-      "noteCount": 12,
-      "imageCount": 13
-    },
-    {
       "title": "1.1 Set Theory",
       "path": "statistical_inference_casella/11_set_theory.md",
       "noteCount": 6,
       "imageCount": 9
     },
     {
-      "title": "1.2.1 Axiomatic",
+      "title": "1.2.1 Axiomatic\nfoundation",
       "path": "statistical_inference_casella/121_axiomatic_foundation.md",
       "noteCount": 9,
       "imageCount": 10
     },
     {
-      "title": "1.2.2 Calculus",
+      "title": "1.2.2 Calculus\nof Probability",
       "path": "statistical_inference_casella/122_calculus_of_probability.md",
       "noteCount": 5,
       "imageCount": 9
@@ -45,13 +33,13 @@
       "imageCount": 8
     },
     {
-      "title": "1.2.4 Enumerating",
+      "title": "1.2.4 Enumerating\noutcome",
       "path": "statistical_inference_casella/124_enumerating_outcome.md",
       "noteCount": 10,
       "imageCount": 14
     },
     {
-      "title": "1.3 Conditional",
+      "title": "1.3 Conditional\nprobability & Independence",
       "path": "statistical_inference_casella/13_conditional_probability_independence.md",
       "noteCount": 12,
       "imageCount": 16
@@ -63,7 +51,7 @@
       "imageCount": 5
     },
     {
-      "title": "1.5 Distribution",
+      "title": "1.5 Distribution\nfunction",
       "path": "statistical_inference_casella/15_distribution_function.md",
       "noteCount": 9,
       "imageCount": 11
@@ -93,7 +81,7 @@
       "imageCount": 25
     },
     {
-      "title": "2.4 Differentiating",
+      "title": "2.4 Differentiating\nunder integral",
       "path": "statistical_inference_casella/24_differentiating_under_integral.md",
       "noteCount": 11,
       "imageCount": 19
@@ -105,13 +93,13 @@
       "imageCount": 2
     },
     {
-      "title": "3.1&2 Discrete",
+      "title": "3.1&2 Discrete\ndistribution",
       "path": "statistical_inference_casella/312_discrete_distribution.md",
       "noteCount": 20,
       "imageCount": 32
     },
     {
-      "title": "3.3 Continuous",
+      "title": "3.3 Continuous\ndistribution",
       "path": "statistical_inference_casella/33_continuous_distribution.md",
       "noteCount": 24,
       "imageCount": 38
@@ -123,7 +111,7 @@
       "imageCount": 15
     },
     {
-      "title": "3.5 Location And",
+      "title": "3.5 Location And\nscale Families",
       "path": "statistical_inference_casella/35_location_and_scale_families.md",
       "noteCount": 12,
       "imageCount": 17
@@ -141,31 +129,31 @@
       "imageCount": 19
     },
     {
-      "title": "4.2 Conditional Distributions &",
+      "title": "4.2 Conditional Distributions &\nindependent",
       "path": "statistical_inference_casella/42_conditional_distributions_independent.md",
       "noteCount": 18,
       "imageCount": 27
     },
     {
-      "title": "4.3 Bivariate",
+      "title": "4.3 Bivariate\ntransformation",
       "path": "statistical_inference_casella/43_bivariate_transformation.md",
       "noteCount": 14,
       "imageCount": 24
     },
     {
-      "title": "4.4 Hierarchical Model &",
+      "title": "4.4 Hierarchical Model &\nmixture Distribution",
       "path": "statistical_inference_casella/44_hierarchical_model_mixture_distribution.md",
       "noteCount": 11,
       "imageCount": 19
     },
     {
-      "title": "4.5 Covariance &",
+      "title": "4.5 Covariance &\ncorrelation",
       "path": "statistical_inference_casella/45_covariance_correlation.md",
       "noteCount": 18,
       "imageCount": 25
     },
     {
-      "title": "4.6 Multi-variate",
+      "title": "4.6 Multi-variate\ndistribution",
       "path": "statistical_inference_casella/46_multi_variate_distribution.md",
       "noteCount": 22,
       "imageCount": 28
@@ -177,19 +165,19 @@
       "imageCount": 0
     },
     {
-      "title": "5.1 Basic Concepts Of",
+      "title": "5.1 Basic Concepts Of\nrandom Samples",
       "path": "statistical_inference_casella/51_basic_concepts_of_random_samples.md",
       "noteCount": 13,
       "imageCount": 16
     },
     {
-      "title": "5.2 Σ Of Random Variables",
+      "title": "5.2 Σ Of Random Variables\nfrom A Random Sample",
       "path": "statistical_inference_casella/52_of_random_variables_from_a_random_sample.md",
       "noteCount": 18,
       "imageCount": 26
     },
     {
-      "title": "5.3 Sampling From The",
+      "title": "5.3 Sampling From The\nnormal Distribution",
       "path": "statistical_inference_casella/53_sampling_from_the_normal_distribution.md",
       "noteCount": 21,
       "imageCount": 29
@@ -207,7 +195,7 @@
       "imageCount": 52
     },
     {
-      "title": "5.6 Generating",
+      "title": "5.6 Generating\nrandom Sample",
       "path": "statistical_inference_casella/56_generating_random_sample.md",
       "noteCount": 31,
       "imageCount": 43
@@ -243,13 +231,13 @@
       "imageCount": 3
     },
     {
-      "title": "7.2 Method Of",
+      "title": "7.2 Method Of\nfinding Estimators",
       "path": "statistical_inference_casella/72_method_of_finding_estimators.md",
       "noteCount": 42,
       "imageCount": 52
     },
     {
-      "title": "7.3 Methods Of",
+      "title": "7.3 Methods Of\nevaluating Estimators",
       "path": "statistical_inference_casella/73_methods_of_evaluating_estimators.md",
       "noteCount": 63,
       "imageCount": 74
@@ -279,18 +267,30 @@
       "imageCount": 9
     },
     {
-      "title": "9.2 Methods Of Finding",
+      "title": "9.2 Methods Of Finding\ninterval Estimators",
       "path": "statistical_inference_casella/92_methods_of_finding_interval_estimators.md",
       "noteCount": 52,
       "imageCount": 61
     },
     {
-      "title": "9.3 Methods Of Evaluating",
+      "title": "9.3 Methods Of Evaluating\ninterval Estimators",
       "path": "statistical_inference_casella/93_methods_of_evaluating_interval_estimators.md",
       "noteCount": 34,
       "imageCount": 35
+    },
+    {
+      "title": "10.1 Point Estimation",
+      "path": "statistical_inference_casella/101_point_estimation.md",
+      "noteCount": 42,
+      "imageCount": 49
+    },
+    {
+      "title": "10.2 Robustness",
+      "path": "statistical_inference_casella/102_robustness.md",
+      "noteCount": 12,
+      "imageCount": 15
     }
   ],
   "totalNotes": 838,
-  "totalImages": 1094
+  "totalImages": 1096
 }
