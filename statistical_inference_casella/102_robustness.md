@@ -1,6 +1,6 @@
 # 10.2 Robustness
 
-📊 **Progress:** `12` Notes | `13` Screenshots | `12` AI Reviews
+📊 **Progress:** `12` Notes | `15` Screenshots | `12` AI Reviews
 
 ---
 <a id="node-o8s85wd"></a>
@@ -936,6 +936,18 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Ghi chú rất xuất sắc, không chỉ hiểu rõ nội dung sách mà còn chỉ ra điểm dễ nhầm lẫn trong ký hiệu và tự chứng minh lại một cách chặt chẽ. Bạn chỉ cần lưu ý làm rõ hơn giả định i.i.d. khi biến đổi từ tổng log-likelihood thành tích likelihood.
+
+<br>
+
+<a id="node-qm1tb5s"></a>
+
+- **Taylor Expansion for M-Estimators**
+
+<p align="center"><kbd><img src="assets/vcdrh3dhtsq.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/dh5vg0eoajn.png" width="80%"></kbd></p>
+
+**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr)
 
 <br>
 
