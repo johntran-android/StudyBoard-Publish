@@ -114,7 +114,7 @@
 >
 >
 >
-> Do đó các preimage của {x ∈ range **X**: T(**x**) = ti} với ti ∈ T_curly = image
+> Do đó các preimage của {x ∈ range **X**: T(**x**) = ti} với ti ∈ 𝒯 = image
 > của range **X** sẽ tạo nên một partition: Ta nhớ định nghĩa của partition: A1,
 > A2...Ak là partition của Ω  khi chúng disjoint và ∪ của chúng tạo thành Ω
 >
