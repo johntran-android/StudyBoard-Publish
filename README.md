@@ -333,88 +333,19 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 ### MIT 18.06
 <!-- key: mit1806_gstrang -->
-`1,181 notes · 1,269 screenshots · 36 sections`
+`1,181 notes · 1,269 screenshots · 4 sections`
 
 > This notebook covers fundamental linear algebra concepts, from solving systems of equations and matrix operations to eigenvalues, SVD, and linear transformations, often emphasizing their geometric interpretations.
-> 
-> Sổ tay này bao gồm các khái niệm cơ bản về đại số tuyến tính, từ giải hệ phương trình và các phép toán ma trận đến trị riêng, phân tích SVD và biến đổi tuyến tính, thường nhấn mạnh các diễn giải hình học của chúng.
 
 <details>
-<summary>📖 36 sections</summary>
+<summary>📖 4 sections</summary>
 
 | Section | Notes | Screenshots |
 |---|---:|---:|
 | [18.03 Lec 25](mit1806_gstrang/1803_lec_25.md) | 27 | 28 |
-| [Lecture 1: The Geometry
-of Linear Equations](mit1806_gstrang/lecture_1_the_geometry_of_linear_equations.md) | 18 | 20 |
-| [Lecture 2: Elimination With
-matrices](mit1806_gstrang/lecture_2_elimination_with_matrices.md) | 30 | 31 |
-| [Lecture 3: Multiplication
-and Inverse Matrices](mit1806_gstrang/lecture_3_multiplication_and_inverse_matrices.md) | 22 | 24 |
-| [Lecture 4: Factorization
-into A = Lu](mit1806_gstrang/lecture_4_factorization_into_a_lu.md) | 23 | 25 |
-| [Lecture 5: Transpose,
-permutations, Spaces R^n](mit1806_gstrang/lecture_5_transpose_permutations_spaces_rn.md) | 23 | 24 |
-| [Lecture 6: Column Space
-and Null Space](mit1806_gstrang/lecture_6_column_space_and_null_space.md) | 24 | 24 |
-| [Lecture 7: Solving Ax = 0:
-pivot Variables, Special
-solutions](mit1806_gstrang/lecture_7_solving_ax_0_pivot_variables_special_solutions.md) | 32 | 37 |
-| [Lecture 8: Solving Ax = B:
-row Reduced Form R](mit1806_gstrang/lecture_8_solving_ax_b_row_reduced_form_r.md) | 35 | 37 |
-| [Lecture 9: Independece,
-basis, And Dimension](mit1806_gstrang/lecture_9_independece_basis_and_dimension.md) | 35 | 37 |
-| [Lecture 10: The Four
-fundamental Subspaces](mit1806_gstrang/lecture_10_the_four_fundamental_subspaces.md) | 24 | 29 |
-| [Lecture 11: Matrix Spaces;
-rank 1; Small World Graphs](mit1806_gstrang/lecture_11_matrix_spaces_rank_1_small_world_graphs.md) | 33 | 34 |
-| [Lecture 12: Graphs,
-networks, Incidence
-matrices](mit1806_gstrang/lecture_12_graphs_networks_incidence_matrices.md) | 37 | 40 |
 | [Lecture 13: Quiz Review](mit1806_gstrang/lecture_13_quiz_review.md) | 36 | 40 |
-| [Lecture 14: Orthogonal
-vectors And Subspaces](mit1806_gstrang/lecture_14_orthogonal_vectors_and_subspaces.md) | 37 | 37 |
-| [Lecture 15: Projections
-onto Subspaces](mit1806_gstrang/lecture_15_projections_onto_subspaces.md) | 45 | 47 |
-| [Lecture 16: Projection
-matrices And Least Squares](mit1806_gstrang/lecture_16_projection_matrices_and_least_squares.md) | 38 | 43 |
-| [Lecture 17: Orthogonal Matrices
-and Gram-schmidt](mit1806_gstrang/lecture_17_orthogonal_matrices_and_gram_schmidt.md) | 38 | 39 |
-| [Lecture 18: Properties Of
-determinants](mit1806_gstrang/lecture_18_properties_of_determinants.md) | 34 | 39 |
-| [Lecture 19: Determinant
-formulas And Cofactors](mit1806_gstrang/lecture_19_determinant_formulas_and_cofactors.md) | 39 | 41 |
-| [Lecture 20: Cramer's Rule,
-inverse Matrix And Volume](mit1806_gstrang/lecture_20_cramers_rule_inverse_matrix_and_volume.md) | 29 | 30 |
-| [Lecture 21: Eigenvalues
-and Eigenvectors](mit1806_gstrang/lecture_21_eigenvalues_and_eigenvectors.md) | 38 | 39 |
-| [Lecture 22: Diagonalization
-and Powers Of A](mit1806_gstrang/lecture_22_diagonalization_and_powers_of_a.md) | 40 | 42 |
-| [Lecture 23: Differential
-equations And Exp(at)](mit1806_gstrang/lecture_23_differential_equations_and_expat.md) | 50 | 56 |
-| [Lecture 24: Markow
-matrices; Fourier Series](mit1806_gstrang/lecture_24_markow_matrices_fourier_series.md) | 35 | 37 |
 | [Lecture 24b: Quiz 2 Review](mit1806_gstrang/lecture_24b_quiz_2_review.md) | 29 | 34 |
-| [Lecture 25: Symmetric Matrices
-and Positive Definiteness](mit1806_gstrang/lecture_25_symmetric_matrices_and_positive_definiteness.md) | 28 | 30 |
-| [Lecture 26: Complex Matrices;
-fast Fourier Transform](mit1806_gstrang/lecture_26_complex_matrices_fast_fourier_transform.md) | 27 | 30 |
-| [Lecture 27: Positive Definite
-matrices And Minima](mit1806_gstrang/lecture_27_positive_definite_matrices_and_minima.md) | 36 | 39 |
-| [Lecture 28: Similar Matrices
-and Jordan Form](mit1806_gstrang/lecture_28_similar_matrices_and_jordan_form.md) | 32 | 32 |
-| [Lecture 29: Singular Value
-decomposition](mit1806_gstrang/lecture_29_singular_value_decomposition.md) | 33 | 37 |
-| [Lecture 30: Linear
-transformations And Their
-matrices](mit1806_gstrang/lecture_30_linear_transformations_and_their_matrices.md) | 42 | 46 |
-| [Lecture 31: Change Of Basis;
-image Compression](mit1806_gstrang/lecture_31_change_of_basis_image_compression.md) | 35 | 36 |
 | [Lecture 32: Quiz 3 Review](mit1806_gstrang/lecture_32_quiz_3_review.md) | 35 | 38 |
-| [Lecture 33: Left And Right
-inverse; Pseudoinverse](mit1806_gstrang/lecture_33_left_and_right_inverse_pseudoinverse.md) | 30 | 33 |
-| [Lecture 34: Final Course
-review](mit1806_gstrang/lecture_34_final_course_review.md) | 32 | 34 |
 
 </details>
 
