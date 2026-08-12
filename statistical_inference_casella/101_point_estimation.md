@@ -853,7 +853,11 @@
 >
 >
 >
-> Ta có √n (τ(θ^) - τ(θ)) → (d) n(0, ν(θ)) thì phải hiểu là √n (τ(θ^) - τ(θ)) → (d) Z \~ n(0, ν(θ)) (√n (τ(θ^) - τ(θ)) sẽ trở thành một random variable có phân phối n(0, ν(θ)).
+> Ta có √n (τ(θ^) - τ(θ)) → (d) n(0, ν(θ)) thì phải hiểu là √n (τ(θ^) - τ(θ)) → (d) Z \~ n(0, ν(θ)) 
+>
+>
+>
+> (√n (τ(θ^) - τ(θ)) sẽ trở thành một random variable có phân phối n(0, ν(θ)).
 >
 >
 >
@@ -865,7 +869,7 @@
 >
 >
 >
-> Mà theo một theorem 5.5.13, nói rằng, nếu Xn → (d) constant μ ⇔ Xn → (p) constant μ. Nên áp dụng theorem này, ta có √n (τ(θ^) - τ(θ)) × 1/√n = τ(θ^) - τ(θ) cũng → (p) contant 0. Và theo định nghĩa của consistent sequence of estimator, nếu P\_θ(|Wn - θ| < ε) = 1 ∀ε, cũng chính là nói Wn → (p) θ, thì Wn là consistent sequence of estimator. Vậy, theo đó, τ(θ^) là consistent sequence of estimator của τ(θ)
+> Mà theo một theorem 5.5.13, nói rằng, nếu Xn → (d) constant μ ⇔ Xn → (p) constant μ. Nên áp dụng theorem này, ta có √n (τ(θ^) - τ(θ)) × 1/√n = τ(θ^) - τ(θ) cũng → (p) contant 0. Và theo định nghĩa của consistent sequence of estimator, nếu P\_θ(|Wn - θ| &lt; ε) = 1 ∀ε, cũng chính là nói Wn → (p) θ, thì Wn là consistent sequence of estimator. Vậy, theo đó, τ(θ^) là consistent sequence of estimator của τ(θ)
 >
 >
 >
@@ -884,7 +888,7 @@
 >
 > Ghi chú giải thích Theorem 10.1.12 rất chi tiết và chính xác, đặc biệt là phần chứng minh tính consistency bằng định lý Slutsky. Để hoàn thiện hơn, bạn có thể bổ sung giới hạn n → ∞ vào định nghĩa tính consistent.
 
-**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Định lý Slutsky](./55_convergence_concepts.md#node-uwbmbt7) · [Hội tụ xác suất và phân phối](./55_convergence_concepts.md#node-wqcasc6) · [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Chuẩn tiệm cận, nhất quán, hiệu quả](#node-v1s5jks)
+**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Định lý Slutsky](./55_convergence_concepts.md#node-uwbmbt7) · [Hội tụ xác suất và phân phối](./55_convergence_concepts.md#node-wqcasc6) · [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Chuẩn tiệm cận, nhất quán, hiệu quả](#node-v1s5jks) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s)
 
 <br>
 
@@ -892,16 +896,20 @@
 
 - **Chứng minh Hiệu quả Ước lượng MLE**
 
-<p align="center"><kbd><img src="assets/y2x6re1hg58.png" width="80%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/tb0uu0e48t9.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/y2x6re1hg58.png" width="80%"></kbd></p>
+
 > [!NOTE]
-> Ở đây sẽ chứng minh τ(θ^) = θ^ là efficient sequence of estimator cho θ:
+> Ở đây ta sẽ chứng minh τ(θ^) = θ^ là efficient sequence of estimator cho θ:
 >
 >
 >
-> Đầu tiên, ta kí hiệu l(θ|**x**) là hàm log likelihood, thì đạo hàm của nó là l'(θ|**x**). ta mới linear approx tại θ0 (gọi true value của θ là θ0)
+> Đầu tiên, ta kí hiệu l(θ|**x**) là hàm log likelihood, thì đạo hàm của nó là l'(θ|**x**).
+>
+>
+>
+> Gọi true value của θ là θ0, với θ ≈ θ0 thì hàm l'(θ|x) có thể được xấp xỉ bởi hàm tuyến tính sau:
 >
 >
 >
@@ -921,7 +929,7 @@
 >
 >
 >
-> Vế trái lúc này, có thể hiểu, chính là d/dθ \[log L(θ|**x**)\]|θ=θ^, mà vì định nghĩa của MLE, là solution của bài toán maximize\_θ L(θ|**x**), nên theo điều kiện cần bậc nhất, d/dθ \[L(θ|**x**)\]|θ=θ^ phải bằng 0, cũng là d/dθ \[log L(θ|**x**)\]|θ=θ^. Vậy vế trái = 0, ta có:
+> Vế trái lúc này, có thể hiểu, chính là d/dθ \[log L(θ|**x**)\]|θ=θ^, mà vì định nghĩa của MLE, là solution của bài toán maximize\_θ L(θ|**x**) ( nên theo điều kiện cần bậc nhất, d/dθ \[L(θ|**x**)\]|θ=θ^ phải bằng 0, cũng là d/dθ \[log L(θ|**x**)\]|θ=θ^ → l'(θ|**x**)|θ=θ^ = 0. Vậy vế trái = 0, ta có:
 >
 >
 >
@@ -937,15 +945,19 @@
 >
 >
 >
-> ⇔ √n(θ^ - θ0)  ≈ √n\[-l'(θ0|**x**)/l''(θ0|**x**)\]
+> ⇔ √n(θ^ - θ0)  ≈ √n\[-l'(θ0|**x**)/l''(θ0|**x**)\] (nhân hai vế cho √n)
 >
 >
 >
-> ⇔ √n(θ^ - θ0)  ≈ √n\[-(1/√n)l'(θ0|**x**)\] / \[(1/√n)l''(θ0|**x**)\]
+> ⇔ √n(θ^ - θ0)  ≈ √n\[-(1/√n)l'(θ0|**x**)\] / \[(1/√n)l''(θ0|**x**)\] (nhân tử và mẫu cho 1/√n)
 >
 >
 >
-> ⇔ √n(θ^ - θ0)  ≈ \[-(1/√n)l'(θ0|**x**)\] / \[(1/n)l''(θ0|**x**)\] → 10.1.5
+> ⇔ √n(θ^ - θ0)  ≈ \[-(1/√n)l'(θ0|**x**)\] / \[(1/n)l''(θ0|**x**)\] (đưa cái √n ở tử thành 1/√n ở mẫu, nhập với 1/√n có sẵn thành ra 1/n luôn)
+>
+>
+>
+> → Đây là 10.1.5
 >
 >
 >
@@ -953,44 +965,212 @@
 >
 >
 >
-> → l là hàm log likelihood, nên l'(θ0|X) = d/dθ \[log L(θ|X)\]|θ=θ0
+> → Đó là vì định nghĩa, trong bài trước (xem link), người ta gọi đại lượng E\_θ\[(∂/∂θ log f(X|θ))^2\] là information number hay Fisher information
 >
 >
 >
-> và cũng là d/dθ \[log f(X|θ0)\]. Và cái này, dĩ nhiên là random variable, có được từ việc áp hàm d/dθ \[log f(x|θ0)\] lên X, bình phương lên, cũng là random variable, thành ra có thể lấy kì vọng.
+> Vậy thì quay lại đây, E\[l'(θ0|X)\]^2, là cái gì, với việc ta đã đặt l(θ|x) là log likelihood: log L(θ|x), và hàm likelihood, theo định nghĩa, thì cũng chính là f(x|θ) khi xem nó là hàm theo θ. và l'(θ0|X) thì chính là ∂/∂θ l(θ0|X) chứ gì nữa. Vậy E\[l'(θ0|X)\]^2 (nên ghi là E\[(l'(θ0|X))^2\] cho rõ, là kì vọng của cái bình phương, quả thật chính là E\_θ\[(∂/∂θ log f(X|θ))^2\], nên nó chính là information number.
 >
 >
 >
-> Vậy vì sao E\[l'(θ0|X)\]^2 = E\[d/dθ \[log L(θ|X)\]|θ=θ0\]^2 = E\[d/dθ \[log L(θ0|X)\]\]^2 lại được ông gọi là information number của một observation?
+> Và nói thêm tí về bản chất của E\_θ\[(∂/∂θ log f(X|θ))^2\]. Bên trong kì vọng là (∂/∂θ log f(X|θ))^2, là bình phương của ∂/∂θ log f(X|θ), và cái này là đạo hàm của log f(X|θ) theo θ, và khi đạo hàm theo θ thì ta coi X cố định, và vì hàm số này phụ thuộc X và θ, nên khi chỉ đạo hàm theo θ thì ta đang lấy đạo hàm riêng (partial derivative), đó chính là lí do có cái ∂/∂. Đạo hàm riêng theo θ cũng là một hàm số theo θ. Như vậy, (∂/∂θ log f(X|θ))^2 nếu xem như X fix, thì nó cũng là một hàm số theo θ. Còn nếu xem như X không fix, thì nó vẫn là hàm theo các X và θ. Và X là random variable, vậy (∂/∂θ log f(X|θ))^2 là một random variable. Từ đó ta có quyền nói về kì vọng: E\[(∂/∂θ log f(X|θ))^2\], và vì cái random variable (∂/∂θ log f(X|θ))^2 phụ thuộc X, mà X có phân phối phụ thuộc θ, thành ra khi tính kì vọng, thì kết quả sẽ ra là hàm phụ thuộc θ. Có nghĩa là, ở đây có tới hai lí do để người ta viết chữ θ ở dưới chữ E trong E\_θ\[(∂/∂θ log f(X|θ))^2\]: Là vì cái cục trong kì vọng vốn đã là hàm theo θ, dù cho nó không phụ thuộc θ đi nữa và sau khi tính kì vọng, do phân phối của X phụ thuộc θ nên nó nhất định cũng phải dính đến θ. Và chữ θ ở dưới chữ E nhằm thể hiện, đây là hàm theo θ chỉ vậy thôi.
 >
 >
 >
-> Nhớ lại bất đẳng thức Cramer Rao, giúp ta có lower bound của variance của estimator:
+> Như vậy information number, không phải là fixed number, mà là một hàm theo θ: I(θ) Và ta thay θ0 vào. Giúp giải đáp thắc mắc là vì sao trong định nghĩa bữa trước nói information number là E\_θ\[(∂/∂θ log f(X|θ))^2\] mà nay lại là E\[l'(θ0|X)\]^2
 >
 >
 >
-> Var\_θ\[W(**X**)\] ≥ {d/dθ E\_θ\[W(**X**)\]}^2 / E\_θ\[(∂/∂θ log f(**X**|θ)^2\] 
+> Rồi, thế thì, một điểm lưu ý, Information number chỉ là một khái niệm tổng quát, nó có thể là information number của sample size 1, kí hiệu I1(θ) = E\_θ\[(∂/∂θ log f(X1|θ))^2\] hoặc information number của một sample size n, In(θ) = E\_θ\[(∂/∂θ log f(**X**|θ))^2\].
 >
 >
 >
->  thì cái đại lượng E\_θ\[(∂/∂θ log f(**X**|θ))^2\] được gọi là **information number** hoặc **Fisher information**
+> ---
 >
 >
 >
-> Vậy thì theo đó, mình sẽ tạm hiểu rằng, E\_θ\[(∂/∂θ log f(Xi|θ))^2\] là information number của một observation Xi (còn ở trên, là của mọi, hay n observation X1,...Xn).
+> Tiếp, xét cái random variable sau: l'(θ0|X), tức ∂/∂θ l(θ0|X), như đã nói ở trên, đây là hàm theo X, θ, nhưng evaluate tại θ = θ0. Thế thì như vậy ứng với bộ sample các random variable X1,...Xn iid thì ta cũng có sample l'(θ0|X1),...l'(θ0|Xn) iid. Đặt chúng là Y1,...Yn.
 >
 >
 >
->  ---
+> Và mean của chúng đều bằng nhau E\[Y1\] = E\[Y2\].. (do chúng có cùng phân phối) và E\[Y1\] = E\_θ\[∂/∂θ log f(X1|θ)\], như vừa nói ở trên, = I1(θ0).
 >
->  (Quay lại sau)
+>
+>
+> Và cái này bằng 0. Ta sẽ chứng minh nhanh:
+>
+>
+>
+> E\_θ\[∂/∂θ log f(X|θ0)\] = ∫(∂/∂θ log f(x|θ)) f(x|θ) dx
+>
+>
+>
+> = ∫((1/f(x|θ)) ∂/∂θ f(x|θ)) f(x|θ) dx (dùng chain rule)
+>
+>
+>
+> = ∫∂/∂θ f(x|θ)) dx
+>
+>
+>
+> đổi chỗ đạo hàm và tích phân
+>
+>
+>
+> = ∂/∂θ ∫ f(x|θ)) dx
+>
+>
+>
+> = ∂/∂θ \[1\]
+>
+>
+>
+> = 0
+>
+>
+>
+> ---
+>
+>
+>
+> Còn variance của chúng: Var(Y1), theo công thức thứ hai của variance
+>
+>
+>
+> = E\[Y1^2\] - \[E(Y1)\]^2
+>
+>
+>
+> = E\[Y1^2\] - 0 (ở trên vừa chứng minh mean của Y1,...Yn = 0)
+>
+>
+>
+> = E\[Y1^2\] = E\_θ\[(∂/∂θ log f(X1|θ0))^2\] đây chính là I1(θ0)
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> Vậy, sample Y1,...Yn có mean là 0, variance I1(θ0)
+>
+>
+>
+> Và sample mean của nó là:
+>
+>
+>
+> (1/n) Σi=1:n l'(θ|Xi) | θ=θ0
+>
+>
+>
+> = (1/n) Σi=1:n \[∂/∂θ log L(θ|Xi)\] | θ=θ0
+>
+>
+>
+> đưa đạo hàm ra ngoài (sum rule)
+>
+>
+>
+> = (1/n) ∂/∂θ Σi=1:n \[ log L(θ|Xi)\] | θ=θ0 \]
+>
+>
+>
+> dùng công thức hàm log: tổng log = log tích
+>
+>
+>
+> = (1/n) ∂/∂θ log Πi=1:n \[L(θ|Xi)\] | θ=θ0\]
+>
+>
+>
+> dùng định nghĩa hàm Likekihood: L(θ|Xi) = f(Xi|θ), và dùng tính iid của X1,...Xn, nên tích các marginal pdf là joint pdf
+>
+>
+>
+> = (1/n) ∂/∂θ log Πi=1:n \[f(Xi|θ)\] | θ=θ0\]
+>
+>
+>
+> = (1/n) ∂/∂θ log \[f(**X**|θ)\] | θ=θ0\]
+>
+>
+>
+> dùng định nghĩa hàm likelihood lần nữa, chuyển lại f(**X**|θ) = L(θ|**X**)
+>
+>
+>
+> = (1/n) ∂/∂θ log \[L(θ|**X**)\] | θ=θ0\]
+>
+>
+>
+> và cái này chính là (1/n) l'(θ|**X**)
+>
+>
+>
+> Như vậy sample mean Ybar = (1/n) l'(θ|**X**)
+>
+>
+>
+> ---
+>
+>
+>
+> Đến đây ta đã có thể dùng CLT và WLLN.
+>
+>
+>
+> CLT nói rằng, với X1,...Xn, có EX = μ, Var(X) = σ^2. Thì √n(Xbar - μ)/σ → (d) n(0, 1)
+>
+>
+>
+> Vậy √n(Ybar - E\[Y1\]) / √Var(Y1) → (d) n(0,1)
+>
+>
+>
+> ⇔ √n((1/n) l'(θ|**X**) - 0) / √I1(θ0) → (d) n(0,1)
+>
+>
+>
+> ⇔ (1/√n) l'(θ|**X**) / √I1(θ0) → (d) n(0,1)
+>
+>
+>
+> mà √I1(θ0) → (p) √I1(θ0)
+>
+>
+>
+> nên theo Slusky theorem:
+>
+>
+>
+> \[(1/√n) l'(θ|**X**) / √I1(θ0)\] × √I1(θ0) → (d) √I1(θ0) n(0,1)
+>
+>
+>
+> và vế phải chính là một normal(0, 1(θ0))
+>
+>
+>
+> Do đó ta có: \[(1/√n) l'(θ|**X**) / √I1(θ0)\] × √I1(θ0) → (d) n(0, I1(θ0)) đây chính là 10.1.6.
+>
+>
+>
+> ---
+>
+>
+>
+>  Quay lại làm tiếp sau.
 
 > [!TIP]
-> **🤖 AI Feedback** — ❌ Score: **0/100**
+> **🤖 AI Feedback** — ⚠️ Score: **88/100**
 >
-> Vui lòng nhập lời giải thích của bạn để được chấm điểm.
+> Ghi chép của bạn rất xuất sắc, giải thích vô cùng chi tiết và trực quan từ các bước biến đổi đại số đến bản chất toán học của Fisher Information và định lý giới hạn trung tâm. Tuy nhiên, bài viết vẫn còn dang dở ở phần cuối, chưa hoàn thiện chứng minh sự hội tụ của mẫu số theo Luật số lớn để đi đến kết luận cuối cùng của định lý.
 
-**🔗 See also:** [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m)
+**🔗 See also:** [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [Stronger Central Limit Theorem](./55_convergence_concepts.md#node-yngnkwh) · [Luật số lớn yếu WLLN](./55_convergence_concepts.md#node-j5m3pa1)
 
 <br>
 
