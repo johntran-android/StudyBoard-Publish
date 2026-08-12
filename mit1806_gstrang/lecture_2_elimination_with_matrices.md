@@ -269,6 +269,8 @@ matrices
 
 <a id="node-zi97w9p"></a>
 
+- **Phần tử ma trận tích**
+
 <p align="center"><kbd><img src="assets/rm8craomt7.png" width="80%"></kbd></p>
 
 > [!NOTE]
