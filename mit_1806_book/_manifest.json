@@ -1,0 +1,86 @@
+{
+  "title": "mit_1806_book",
+  "publishedAt": 1786562256623,
+  "sections": [
+    {
+      "title": "📋 Overview",
+      "path": "mit_1806_book/_overview.md",
+      "noteCount": 0,
+      "imageCount": 1
+    },
+    {
+      "title": "11.2 Norm & Condition Number",
+      "path": "mit_1806_book/112_norm_condition_number.md",
+      "noteCount": 13,
+      "imageCount": 15
+    },
+    {
+      "title": "11.3 Iterative Method &",
+      "path": "mit_1806_book/113_iterative_method_preconditioner.md",
+      "noteCount": 4,
+      "imageCount": 6
+    },
+    {
+      "title": "3. Vector Spaces",
+      "path": "mit_1806_book/3_vector_spaces_and_subspaces.md",
+      "noteCount": 2,
+      "imageCount": 6
+    },
+    {
+      "title": "6.2 Diagonalizing A Matrix",
+      "path": "mit_1806_book/62_diagonalizing_a_matrix.md",
+      "noteCount": 17,
+      "imageCount": 22
+    },
+    {
+      "title": "6.3 System Of Differential Equations",
+      "path": "mit_1806_book/63_system_of_differential_equations.md",
+      "noteCount": 3,
+      "imageCount": 6
+    },
+    {
+      "title": "6.4 Symmetric Matrices",
+      "path": "mit_1806_book/64_symmetric_matrices.md",
+      "noteCount": 3,
+      "imageCount": 4
+    },
+    {
+      "title": "7.2 Basis And Matrices In Svd",
+      "path": "mit_1806_book/72_basis_and_matrices_in_svd.md",
+      "noteCount": 3,
+      "imageCount": 6
+    },
+    {
+      "title": "7.3 Pca By Svd",
+      "path": "mit_1806_book/73_pca_by_svd.md",
+      "noteCount": 4,
+      "imageCount": 7
+    },
+    {
+      "title": "7.4 Geometry Of Svd",
+      "path": "mit_1806_book/74_geometry_of_svd.md",
+      "noteCount": 17,
+      "imageCount": 19
+    },
+    {
+      "title": "8.1 Idea Of A Linear Transformation",
+      "path": "mit_1806_book/81_idea_of_a_linear_transformation.md",
+      "noteCount": 17,
+      "imageCount": 20
+    },
+    {
+      "title": "8.2 The Matrix Of Linear Transformation",
+      "path": "mit_1806_book/82_the_matrix_of_linear_transformation.md",
+      "noteCount": 20,
+      "imageCount": 23
+    },
+    {
+      "title": "8.3 In Search Of Good Basis",
+      "path": "mit_1806_book/83_in_search_of_good_basis.md",
+      "noteCount": 3,
+      "imageCount": 4
+    }
+  ],
+  "totalNotes": 106,
+  "totalImages": 139
+}
