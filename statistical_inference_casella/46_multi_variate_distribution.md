@@ -1106,7 +1106,7 @@ distribution
 <p align="center"><kbd><img src="assets/lnia15lqw48.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cái này y như (khái quát) của 4.3.6 là nếu mapping từ A_curly → B_curly ko
+> Cái này y như (khái quát) của 4.3.6 là nếu mapping từ 𝒜 → ℬ ko
 > 1-1. 
 >
 >
@@ -1115,11 +1115,11 @@ distribution
 >
 >
 >
-> 1) Có partition của A_curly: P((X,Y) ∈ A0) = 0
+> 1) Có partition của 𝒜: P((X,Y) ∈ A0) = 0
 >
 >
 >
-> 2) Trên các A1, A2, thì qua g1, g2 đều map tới B_curly, và là mapping 1-1
+> 2) Trên các A1, A2, thì qua g1, g2 đều map tới ℬ, và là mapping 1-1
 > (mà mapping 1-1 ở đây còn thêm ý là ta có thể tìm được hàm inverse
 > để từ u,v tìm được x,y trên Ai nữa)
 >
@@ -1138,7 +1138,7 @@ distribution
 >
 >
 > U = g1(X,Y) V = g2(X,Y) mà mapping x,y → u,v không 1-1.Khi đó nếu có thể
-> chỉ ra có partition A0,A1,...Ak của A_curly Sao cho:
+> chỉ ra có partition A0,A1,...Ak của 𝒜 Sao cho:
 >
 >
 >
@@ -1146,11 +1146,11 @@ distribution
 >
 >
 >
-> 2) trên Ai thì với x,y ∈ Ai thì g1(x,y), g2(x,y) đều ∈ B_curly
+> 2) trên Ai thì với x,y ∈ Ai thì g1(x,y), g2(x,y) đều ∈ ℬ
 >
 >
 >
-> và với u,v = g1(x,y), g2(x,y) ∈ B_curly với x,y ∈ Ai ta có thể tìm x = h1i(u,v)
+> và với u,v = g1(x,y), g2(x,y) ∈ ℬ với x,y ∈ Ai ta có thể tìm x = h1i(u,v)
 > và y = h2i(u,v)
 >
 >
