@@ -1,0 +1,296 @@
+{
+  "title": "cs231n_stanford",
+  "publishedAt": 1786562252224,
+  "sections": [
+    {
+      "title": "📋 Overview",
+      "path": "cs231n_stanford/_overview.md",
+      "noteCount": 1,
+      "imageCount": 1
+    },
+    {
+      "title": "Assignment 1 - 2 Layer Nn",
+      "path": "cs231n_stanford/assignment_1_2_layer_nn.md",
+      "noteCount": 28,
+      "imageCount": 38
+    },
+    {
+      "title": "Assignment 1 - KNN",
+      "path": "cs231n_stanford/assignment_1_knn.md",
+      "noteCount": 31,
+      "imageCount": 45
+    },
+    {
+      "title": "Assignment 2 - Batch Normalization",
+      "path": "cs231n_stanford/assignment_2_batch_normalization.md",
+      "noteCount": 18,
+      "imageCount": 35
+    },
+    {
+      "title": "Assignment 2 -",
+      "path": "cs231n_stanford/assignment_2_convolutional_network.md",
+      "noteCount": 27,
+      "imageCount": 64
+    },
+    {
+      "title": "Assignment 2 - Dropout",
+      "path": "cs231n_stanford/assignment_2_dropout.md",
+      "noteCount": 6,
+      "imageCount": 14
+    },
+    {
+      "title": "Assignment 2 - Fully Connected Nn",
+      "path": "cs231n_stanford/assignment_2_fully_connected_nn.md",
+      "noteCount": 25,
+      "imageCount": 61
+    },
+    {
+      "title": "Assignment 2",
+      "path": "cs231n_stanford/assignment_2_pytorch.md",
+      "noteCount": 22,
+      "imageCount": 32
+    },
+    {
+      "title": "Assignment 3 - Lstm Captioning",
+      "path": "cs231n_stanford/assignment_3_lstm_captioning.md",
+      "noteCount": 9,
+      "imageCount": 34
+    },
+    {
+      "title": "Assignment 3 - RNN Captioning",
+      "path": "cs231n_stanford/assignment_3_rnn_captioning.md",
+      "noteCount": 12,
+      "imageCount": 49
+    },
+    {
+      "title": "Assignment 4 - Transformer Image Captioning",
+      "path": "cs231n_stanford/assignment_4_transformer_image_captioning.md",
+      "noteCount": 20,
+      "imageCount": 36
+    },
+    {
+      "title": "Eecs498-007 Lecture 17: 3d Vision",
+      "path": "cs231n_stanford/eecs498_007_lecture_17_3d_vision.md",
+      "noteCount": 49,
+      "imageCount": 59
+    },
+    {
+      "title": "Eecs498-007",
+      "path": "cs231n_stanford/eecs498_007_lecture_18_video.md",
+      "noteCount": 55,
+      "imageCount": 66
+    },
+    {
+      "title": "EECS 498-007/598-005 (2022) - ASSIGNMENT 4 (Part 1):",
+      "path": "cs231n_stanford/eecs_498_007598_005_2022_assignment_4_part_1_one_state_object_detector.md",
+      "noteCount": 49,
+      "imageCount": 118
+    },
+    {
+      "title": "EECS 498-007/598-005 (2022) - ASSIGNMENT 4 (Part 2):",
+      "path": "cs231n_stanford/eecs_498_007598_005_2022_assignment_4_part_2_two_stage_detector.md",
+      "noteCount": 33,
+      "imageCount": 123
+    },
+    {
+      "title": "Eecs 498-007_598-005 (2020) Assignment 4 (part 1):",
+      "path": "cs231n_stanford/eecs_498_007_598_005_2020_assignment_4_part_1_single_stage_detector_yolo.md",
+      "noteCount": 43,
+      "imageCount": 158
+    },
+    {
+      "title": "Eecs 498-007_598-005 (2020) Assignment 4 (part 2):",
+      "path": "cs231n_stanford/eecs_498_007_598_005_2020_assignment_4_part_2_two_stage_detector_faster_rcnn.md",
+      "noteCount": 14,
+      "imageCount": 90
+    },
+    {
+      "title": "Eecs 498-007_598-005 (2020) Assignment 6:",
+      "path": "cs231n_stanford/eecs_498_007_598_005_2020_assignment_6_network_visualization.md",
+      "noteCount": 8,
+      "imageCount": 33
+    },
+    {
+      "title": "Eecs 498-007_598-005 (2020) Assignment 6:",
+      "path": "cs231n_stanford/eecs_498_007_598_005_2020_assignment_6_style_transfer.md",
+      "noteCount": 10,
+      "imageCount": 39
+    },
+    {
+      "title": "Eecs 498-007_598-005 (2022) Assignment 6:",
+      "path": "cs231n_stanford/eecs_498_007_598_005_2022_assignment_6_generative_adversarial_network.md",
+      "noteCount": 20,
+      "imageCount": 59
+    },
+    {
+      "title": "Eecs 498-007_598-005 (2022) Assignment 6:",
+      "path": "cs231n_stanford/eecs_498_007_598_005_2022_assignment_6_variational_auto_encoder.md",
+      "noteCount": 18,
+      "imageCount": 43
+    },
+    {
+      "title": "Guess Lecture - Adversarial Machine Learning",
+      "path": "cs231n_stanford/guess_lecture_adversarial_machine_learning.md",
+      "noteCount": 9,
+      "imageCount": 12
+    },
+    {
+      "title": "Lecture 10/16 - Recurrent Neural Network",
+      "path": "cs231n_stanford/lecture_1016_recurrent_neural_network.md",
+      "noteCount": 67,
+      "imageCount": 86
+    },
+    {
+      "title": "Lecture 11/16 - Detection And",
+      "path": "cs231n_stanford/lecture_1116_detection_and_segmentation.md",
+      "noteCount": 108,
+      "imageCount": 144
+    },
+    {
+      "title": "Lecture 1/16 - Introduction To CNN",
+      "path": "cs231n_stanford/lecture_116_introduction_to_cnn.md",
+      "noteCount": 11,
+      "imageCount": 31
+    },
+    {
+      "title": "Lecture 12/16 - Visualization And",
+      "path": "cs231n_stanford/lecture_1216_visualization_and_understanding.md",
+      "noteCount": 60,
+      "imageCount": 84
+    },
+    {
+      "title": "Lecture 13/16 - Generative Models",
+      "path": "cs231n_stanford/lecture_1316_generative_models.md",
+      "noteCount": 72,
+      "imageCount": 86
+    },
+    {
+      "title": "Lecture 14/16 - Deep Reinforcement",
+      "path": "cs231n_stanford/lecture_1416_deep_reinforcement_learning.md",
+      "noteCount": 24,
+      "imageCount": 29
+    },
+    {
+      "title": "Lecture 14/16 - Generative Models Ii",
+      "path": "cs231n_stanford/lecture_1416_generative_models_ii.md",
+      "noteCount": 45,
+      "imageCount": 53
+    },
+    {
+      "title": "Lecture 15/16 - Efficient Methods And",
+      "path": "cs231n_stanford/lecture_1516_efficient_methods_and_hardware_for_deep_learning.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lecture 16/16 - Adversarial Examples",
+      "path": "cs231n_stanford/lecture_1616_adversarial_examples_and_adversarial.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lecture 2/16 - Image Classification",
+      "path": "cs231n_stanford/lecture_216_image_classification.md",
+      "noteCount": 41,
+      "imageCount": 58
+    },
+    {
+      "title": "Lecture 3/16 - Loss Functions And Optimization",
+      "path": "cs231n_stanford/lecture_316_loss_functions_and_optimization.md",
+      "noteCount": 117,
+      "imageCount": 154
+    },
+    {
+      "title": "Lecture 4/16 - Introduction To Neural Networks",
+      "path": "cs231n_stanford/lecture_416_introduction_to_neural_networks.md",
+      "noteCount": 23,
+      "imageCount": 55
+    },
+    {
+      "title": "Lecture 5/16 - Convolutional Neural Networks",
+      "path": "cs231n_stanford/lecture_516_convolutional_neural_networks.md",
+      "noteCount": 52,
+      "imageCount": 63
+    },
+    {
+      "title": "Lecture 6/16 - Training Neural Network I",
+      "path": "cs231n_stanford/lecture_616_training_neural_network_i.md",
+      "noteCount": 65,
+      "imageCount": 105
+    },
+    {
+      "title": "Lecture 7/16 - Training Neural Network Ii",
+      "path": "cs231n_stanford/lecture_716_training_neural_network_ii.md",
+      "noteCount": 70,
+      "imageCount": 90
+    },
+    {
+      "title": "Lecture 8/16 - Deep Learning Software",
+      "path": "cs231n_stanford/lecture_816_deep_learning_software.md",
+      "noteCount": 89,
+      "imageCount": 107
+    },
+    {
+      "title": "Lecture 9/16 - CNN Architecture",
+      "path": "cs231n_stanford/lecture_916_cnn_architecture.md",
+      "noteCount": 55,
+      "imageCount": 72
+    },
+    {
+      "title": "LECTURE NOTE: Image Classification:",
+      "path": "cs231n_stanford/lecture_note_image_classification_data_driven_approach_k_nearest_neighbor_trainvaltest_splits.md",
+      "noteCount": 1,
+      "imageCount": 0
+    },
+    {
+      "title": "Lecture Note",
+      "path": "cs231n_stanford/lecture_note_introduction_to_rnn.md",
+      "noteCount": 13,
+      "imageCount": 19
+    },
+    {
+      "title": "Lecture Note Nn P1",
+      "path": "cs231n_stanford/lecture_note_nn_p1.md",
+      "noteCount": 1,
+      "imageCount": 14
+    },
+    {
+      "title": "Lecture X: Transformer",
+      "path": "cs231n_stanford/lecture_x_transformer.md",
+      "noteCount": 41,
+      "imageCount": 47
+    },
+    {
+      "title": "Note #4 Backpropagation",
+      "path": "cs231n_stanford/note_4_backpropagation.md",
+      "noteCount": 9,
+      "imageCount": 13
+    },
+    {
+      "title": "Note - Convolutional Net",
+      "path": "cs231n_stanford/note_convolutional_net.md",
+      "noteCount": 22,
+      "imageCount": 31
+    },
+    {
+      "title": "Note - Neural",
+      "path": "cs231n_stanford/note_neural_network_part_2.md",
+      "noteCount": 44,
+      "imageCount": 59
+    },
+    {
+      "title": "Note - Neural Network Part 3",
+      "path": "cs231n_stanford/note_neural_network_part_3.md",
+      "noteCount": 49,
+      "imageCount": 61
+    },
+    {
+      "title": "Paper: Batch normalization",
+      "path": "cs231n_stanford/paper_batch_normalization.md",
+      "noteCount": 17,
+      "imageCount": 32
+    }
+  ],
+  "totalNotes": 1603,
+  "totalImages": 2702
+}
