@@ -1,0 +1,230 @@
+{
+  "title": "cs224n_stanford",
+  "publishedAt": 1786562574012,
+  "sections": [
+    {
+      "title": "📋 Overview",
+      "path": "cs224n_stanford/_overview.md",
+      "noteCount": 1,
+      "imageCount": 1
+    },
+    {
+      "title": "Assignment 1",
+      "path": "cs224n_stanford/assignment_1.md",
+      "noteCount": 18,
+      "imageCount": 29
+    },
+    {
+      "title": "Assignment 2 - Word2vec",
+      "path": "cs224n_stanford/assignment_2_word2vec.md",
+      "noteCount": 22,
+      "imageCount": 56
+    },
+    {
+      "title": "Assignment 3 -",
+      "path": "cs224n_stanford/assignment_3_dependency_parsing.md",
+      "noteCount": 31,
+      "imageCount": 47
+    },
+    {
+      "title": "Assignment 4 - NMT",
+      "path": "cs224n_stanford/assignment_4_nmt.md",
+      "noteCount": 18,
+      "imageCount": 45
+    },
+    {
+      "title": "Assignment 5: Self-attention, Transformers And Pretraining",
+      "path": "cs224n_stanford/assignment_5_self_attention_transformers_and_pretraining.md",
+      "noteCount": 9,
+      "imageCount": 9
+    },
+    {
+      "title": "Lec 9 Reading",
+      "path": "cs224n_stanford/lec_9_reading.md",
+      "noteCount": 1,
+      "imageCount": 1
+    },
+    {
+      "title": "Lecture 10: Prompting & RLHF",
+      "path": "cs224n_stanford/lecture_10_prompting_rlhf.md",
+      "noteCount": 51,
+      "imageCount": 63
+    },
+    {
+      "title": "Lecture 11: Question & Answering",
+      "path": "cs224n_stanford/lecture_11_question_answering.md",
+      "noteCount": 46,
+      "imageCount": 55
+    },
+    {
+      "title": "Lecture 12: Natural Language Generation",
+      "path": "cs224n_stanford/lecture_12_natural_language_generation.md",
+      "noteCount": 59,
+      "imageCount": 68
+    },
+    {
+      "title": "Lecture 13: Coreference Resolution",
+      "path": "cs224n_stanford/lecture_13_coreference_resolution.md",
+      "noteCount": 50,
+      "imageCount": 52
+    },
+    {
+      "title": "Lecture 14: Insights Between NLP And Linguistic",
+      "path": "cs224n_stanford/lecture_14_insights_between_nlp_and_linguistic.md",
+      "noteCount": 32,
+      "imageCount": 38
+    },
+    {
+      "title": "Lecture 14: T5 And Large Language Model",
+      "path": "cs224n_stanford/lecture_14_t5_and_large_language_model.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lecture 15: Add Knowledge To Language Model",
+      "path": "cs224n_stanford/lecture_15_add_knowledge_to_language_model.md",
+      "noteCount": 23,
+      "imageCount": 27
+    },
+    {
+      "title": "Lecture 16: Social & Ethical Considerations",
+      "path": "cs224n_stanford/lecture_16_social_ethical_considerations.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lecture 17: Model Analysis And Explanation",
+      "path": "cs224n_stanford/lecture_17_model_analysis_and_explanation.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lecture 18: Future Of NLP + Deep Learning",
+      "path": "cs224n_stanford/lecture_18_future_of_nlp_deep_learning.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lecture 19: Low Resolution Machine Translation",
+      "path": "cs224n_stanford/lecture_19_low_resolution_machine_translation.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lecture 20: Bert And Other Pre-trained Language Model",
+      "path": "cs224n_stanford/lecture_20_bert_and_other_pre_trained_language_model.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lecture 21: Socially Intelligent NLP Systems",
+      "path": "cs224n_stanford/lecture_21_socially_intelligent_nlp_systems.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lecture 22: Building Knowledge Representation",
+      "path": "cs224n_stanford/lecture_22_building_knowledge_representation.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lecture 23: Scaling Language Model",
+      "path": "cs224n_stanford/lecture_23_scaling_language_model.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Lecture 2: Neural Classifiers",
+      "path": "cs224n_stanford/lecture_2_neural_classifiers.md",
+      "noteCount": 58,
+      "imageCount": 74
+    },
+    {
+      "title": "Lecture 3: Backprop And Neural Networks",
+      "path": "cs224n_stanford/lecture_3_backprop_and_neural_networks.md",
+      "noteCount": 29,
+      "imageCount": 54
+    },
+    {
+      "title": "Lecture 4: Syntactic Structure",
+      "path": "cs224n_stanford/lecture_4_syntactic_structure_and_dependency_parsing.md",
+      "noteCount": 41,
+      "imageCount": 53
+    },
+    {
+      "title": "Lecture 5: Recurrent Neural Network",
+      "path": "cs224n_stanford/lecture_5_recurrent_neural_network.md",
+      "noteCount": 15,
+      "imageCount": 21
+    },
+    {
+      "title": "Lecture 6: Simple And Lstm Rnns",
+      "path": "cs224n_stanford/lecture_6_simple_and_lstm_rnns.md",
+      "noteCount": 39,
+      "imageCount": 58
+    },
+    {
+      "title": "Lecture 7: Translation, Seq2seq, Attention",
+      "path": "cs224n_stanford/lecture_7_translation_seq2seq_attention.md",
+      "noteCount": 42,
+      "imageCount": 48
+    },
+    {
+      "title": "Lecture 8: Translation, Seq2seq, Attention",
+      "path": "cs224n_stanford/lecture_8_translation_seq2seq_attention.md",
+      "noteCount": 8,
+      "imageCount": 17
+    },
+    {
+      "title": "Lecture 9: Pretraining",
+      "path": "cs224n_stanford/lecture_9_pretraining.md",
+      "noteCount": 42,
+      "imageCount": 51
+    },
+    {
+      "title": "Lecture 9: Self-attention And Transformers",
+      "path": "cs224n_stanford/lecture_9_self_attention_and_transformers.md",
+      "noteCount": 41,
+      "imageCount": 45
+    },
+    {
+      "title": "Lecture Note - 03",
+      "path": "cs224n_stanford/lecture_note_03_backpropagation.md",
+      "noteCount": 7,
+      "imageCount": 24
+    },
+    {
+      "title": "Lecture Note 04 -",
+      "path": "cs224n_stanford/lecture_note_04_dependency_parsers.md",
+      "noteCount": 13,
+      "imageCount": 17
+    },
+    {
+      "title": "Lecture Notes 05 Language",
+      "path": "cs224n_stanford/lecture_notes_05_language_model_rnn_lstm_gru.md",
+      "noteCount": 38,
+      "imageCount": 77
+    },
+    {
+      "title": "Python Review",
+      "path": "cs224n_stanford/python_review.md",
+      "noteCount": 0,
+      "imageCount": 0
+    },
+    {
+      "title": "Reading",
+      "path": "cs224n_stanford/reading.md",
+      "noteCount": 0,
+      "imageCount": 1
+    },
+    {
+      "title": "Week 1: Intro & Word Vectors",
+      "path": "cs224n_stanford/week_1_intro_word_vectors.md",
+      "noteCount": 57,
+      "imageCount": 77
+    }
+  ],
+  "totalNotes": 791,
+  "totalImages": 1108
+}
