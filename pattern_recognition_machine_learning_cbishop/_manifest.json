@@ -1,0 +1,290 @@
+{
+  "title": "pattern_recognition_machine_learning_cbishop",
+  "publishedAt": 1786562259832,
+  "sections": [
+    {
+      "title": "📋 Overview",
+      "path": "pattern_recognition_machine_learning_cbishop/_overview.md",
+      "noteCount": 0,
+      "imageCount": 1
+    },
+    {
+      "title": "1.0 Into",
+      "path": "pattern_recognition_machine_learning_cbishop/10_into.md",
+      "noteCount": 8,
+      "imageCount": 8
+    },
+    {
+      "title": "1.1 Example: Polynomial Curve Fitting",
+      "path": "pattern_recognition_machine_learning_cbishop/11_example_polynomial_curve_fitting.md",
+      "noteCount": 13,
+      "imageCount": 20
+    },
+    {
+      "title": "1.2.0 Probability theory",
+      "path": "pattern_recognition_machine_learning_cbishop/120_probability_theory.md",
+      "noteCount": 13,
+      "imageCount": 21
+    },
+    {
+      "title": "1.2.1&2 Probability densities & Expectations Covariances",
+      "path": "pattern_recognition_machine_learning_cbishop/1212_probability_densities_expectations_covariances.md",
+      "noteCount": 14,
+      "imageCount": 18
+    },
+    {
+      "title": "1.2.3 Bayesian probabilities",
+      "path": "pattern_recognition_machine_learning_cbishop/123_bayesian_probabilities.md",
+      "noteCount": 11,
+      "imageCount": 14
+    },
+    {
+      "title": "1.2.4 The Gaussian distribution",
+      "path": "pattern_recognition_machine_learning_cbishop/124_the_gaussian_distribution.md",
+      "noteCount": 10,
+      "imageCount": 14
+    },
+    {
+      "title": "1.2.5 Curve fitting re-visited.",
+      "path": "pattern_recognition_machine_learning_cbishop/125_curve_fitting_re_visited.md",
+      "noteCount": 9,
+      "imageCount": 11
+    },
+    {
+      "title": "1.2.6 Bayesian curve fitting",
+      "path": "pattern_recognition_machine_learning_cbishop/126_bayesian_curve_fitting.md",
+      "noteCount": 6,
+      "imageCount": 7
+    },
+    {
+      "title": "1.3 Model Selection",
+      "path": "pattern_recognition_machine_learning_cbishop/13_model_selection.md",
+      "noteCount": 5,
+      "imageCount": 6
+    },
+    {
+      "title": "1.4 The Curse",
+      "path": "pattern_recognition_machine_learning_cbishop/14_the_curse_of_dimensionality.md",
+      "noteCount": 6,
+      "imageCount": 15
+    },
+    {
+      "title": "1.5 Decision Theory",
+      "path": "pattern_recognition_machine_learning_cbishop/15_decision_theory.md",
+      "noteCount": 29,
+      "imageCount": 41
+    },
+    {
+      "title": "1.6 Information Theory",
+      "path": "pattern_recognition_machine_learning_cbishop/16_information_theory.md",
+      "noteCount": 24,
+      "imageCount": 32
+    },
+    {
+      "title": "1.7 Excersices",
+      "path": "pattern_recognition_machine_learning_cbishop/17_excersices.md",
+      "noteCount": 1,
+      "imageCount": 0
+    },
+    {
+      "title": "2.0 Intro",
+      "path": "pattern_recognition_machine_learning_cbishop/20_intro.md",
+      "noteCount": 4,
+      "imageCount": 5
+    },
+    {
+      "title": "2.1 Binary Variables",
+      "path": "pattern_recognition_machine_learning_cbishop/21_binary_variables.md",
+      "noteCount": 16,
+      "imageCount": 24
+    },
+    {
+      "title": "2.2 Multinomial Variables",
+      "path": "pattern_recognition_machine_learning_cbishop/22_multinomial_variables.md",
+      "noteCount": 7,
+      "imageCount": 10
+    },
+    {
+      "title": "2.3.0 Gaussian Distribution",
+      "path": "pattern_recognition_machine_learning_cbishop/230_gaussian_distribution.md",
+      "noteCount": 16,
+      "imageCount": 27
+    },
+    {
+      "title": "2.3.1 Conditional Gaussian",
+      "path": "pattern_recognition_machine_learning_cbishop/231_conditional_gaussian.md",
+      "noteCount": 6,
+      "imageCount": 7
+    },
+    {
+      "title": "2.3.2 Marginal Gaussian",
+      "path": "pattern_recognition_machine_learning_cbishop/232_marginal_gaussian.md",
+      "noteCount": 3,
+      "imageCount": 7
+    },
+    {
+      "title": "2.3.3 Bayes's theorem for Gaussian variables",
+      "path": "pattern_recognition_machine_learning_cbishop/233_bayess_theorem_for_gaussian_variables.md",
+      "noteCount": 6,
+      "imageCount": 9
+    },
+    {
+      "title": "2.3.4 Maximum Likelihood for Gaussian",
+      "path": "pattern_recognition_machine_learning_cbishop/234_maximum_likelihood_for_gaussian.md",
+      "noteCount": 4,
+      "imageCount": 4
+    },
+    {
+      "title": "2.3.5 Sequential  estimation",
+      "path": "pattern_recognition_machine_learning_cbishop/235_sequential_estimation.md",
+      "noteCount": 5,
+      "imageCount": 8
+    },
+    {
+      "title": "2.3.6 Bayes inference for the Gaussian",
+      "path": "pattern_recognition_machine_learning_cbishop/236_bayes_inference_for_the_gaussian.md",
+      "noteCount": 8,
+      "imageCount": 13
+    },
+    {
+      "title": "2.3.7 Studen's t-distribution",
+      "path": "pattern_recognition_machine_learning_cbishop/237_studens_t_distribution.md",
+      "noteCount": 4,
+      "imageCount": 9
+    },
+    {
+      "title": "2.3.8 Periodic variables",
+      "path": "pattern_recognition_machine_learning_cbishop/238_periodic_variables.md",
+      "noteCount": 7,
+      "imageCount": 17
+    },
+    {
+      "title": "2.3.9 Mixtures of Gaussians",
+      "path": "pattern_recognition_machine_learning_cbishop/239_mixtures_of_gaussians.md",
+      "noteCount": 5,
+      "imageCount": 9
+    },
+    {
+      "title": "2.4.1 Maximum likelihood & sufficient statistic",
+      "path": "pattern_recognition_machine_learning_cbishop/241_maximum_likelihood_sufficient_statistic.md",
+      "noteCount": 4,
+      "imageCount": 4
+    },
+    {
+      "title": "2.4.3 Non-informative priors",
+      "path": "pattern_recognition_machine_learning_cbishop/243_non_informative_priors.md",
+      "noteCount": 7,
+      "imageCount": 8
+    },
+    {
+      "title": "2.4.4 Conjugate prior",
+      "path": "pattern_recognition_machine_learning_cbishop/244_conjugate_prior.md",
+      "noteCount": 1,
+      "imageCount": 1
+    },
+    {
+      "title": "2.4 The Exponential Family",
+      "path": "pattern_recognition_machine_learning_cbishop/24_the_exponential_family.md",
+      "noteCount": 6,
+      "imageCount": 9
+    },
+    {
+      "title": "2.5.1 Kernel density estimators",
+      "path": "pattern_recognition_machine_learning_cbishop/251_kernel_density_estimators.md",
+      "noteCount": 7,
+      "imageCount": 9
+    },
+    {
+      "title": "2.5.2 Nearest-neighbour methods",
+      "path": "pattern_recognition_machine_learning_cbishop/252_nearest_neighbour_methods.md",
+      "noteCount": 5,
+      "imageCount": 10
+    },
+    {
+      "title": "2.5 Non-parametric model",
+      "path": "pattern_recognition_machine_learning_cbishop/25_non_parametric_model.md",
+      "noteCount": 5,
+      "imageCount": 5
+    },
+    {
+      "title": "3.1.0 Linear Regression and Basis Functions",
+      "path": "pattern_recognition_machine_learning_cbishop/310_linear_regression_and_basis_functions.md",
+      "noteCount": 7,
+      "imageCount": 9
+    },
+    {
+      "title": "3.1.1 Maximum likelihood and least squares",
+      "path": "pattern_recognition_machine_learning_cbishop/311_maximum_likelihood_and_least_squares.md",
+      "noteCount": 7,
+      "imageCount": 9
+    },
+    {
+      "title": "3.1.2 Geometry of least squares",
+      "path": "pattern_recognition_machine_learning_cbishop/312_geometry_of_least_squares.md",
+      "noteCount": 1,
+      "imageCount": 1
+    },
+    {
+      "title": "3.1.3 Sequential Learning",
+      "path": "pattern_recognition_machine_learning_cbishop/313_sequential_learning.md",
+      "noteCount": 1,
+      "imageCount": 2
+    },
+    {
+      "title": "3.1.4 Regularized least squares",
+      "path": "pattern_recognition_machine_learning_cbishop/314_regularized_least_squares.md",
+      "noteCount": 3,
+      "imageCount": 7
+    },
+    {
+      "title": "3.1.5 Multiple outputs",
+      "path": "pattern_recognition_machine_learning_cbishop/315_multiple_outputs.md",
+      "noteCount": 3,
+      "imageCount": 3
+    },
+    {
+      "title": "3.2.0 The Bias-Variance Decomposition",
+      "path": "pattern_recognition_machine_learning_cbishop/320_the_bias_variance_decomposition.md",
+      "noteCount": 8,
+      "imageCount": 16
+    },
+    {
+      "title": "3.3.1 Bayesian Linear Regression",
+      "path": "pattern_recognition_machine_learning_cbishop/331_bayesian_linear_regression.md",
+      "noteCount": 8,
+      "imageCount": 12
+    },
+    {
+      "title": "3.3.2 Predictive distribution",
+      "path": "pattern_recognition_machine_learning_cbishop/332_predictive_distribution.md",
+      "noteCount": 6,
+      "imageCount": 10
+    },
+    {
+      "title": "3.3.3 Equivalent kernel",
+      "path": "pattern_recognition_machine_learning_cbishop/333_equivalent_kernel.md",
+      "noteCount": 5,
+      "imageCount": 8
+    },
+    {
+      "title": "3.4 Bayesian Model Comparison",
+      "path": "pattern_recognition_machine_learning_cbishop/34_bayesian_model_comparison.md",
+      "noteCount": 4,
+      "imageCount": 4
+    },
+    {
+      "title": "Appendix C. Matrices",
+      "path": "pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md",
+      "noteCount": 19,
+      "imageCount": 22
+    },
+    {
+      "title": "Appendix D. Calculus of Variation",
+      "path": "pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md",
+      "noteCount": 5,
+      "imageCount": 7
+    }
+  ],
+  "totalNotes": 352,
+  "totalImages": 513
+}
