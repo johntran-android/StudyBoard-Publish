@@ -686,12 +686,12 @@ correlation
 >
 >
 >
-> Tiếp, ta sẽ xác định support set của X,Y A_curly: Với distribution đã biết
-> của X, Y, thì A_curly = {(x,y) ∈ R^2: 0 ≤ x ≤ 1; 0 ≤ y ≤ 1/10}
+> Tiếp, ta sẽ xác định support set của X,Y 𝒜: Với distribution đã biết
+> của X, Y, thì 𝒜 = {(x,y) ∈ R^2: 0 ≤ x ≤ 1; 0 ≤ y ≤ 1/10}
 >
 >
 >
-> Ảnh của A_curly: B_curly = {(u,v): u = g1(x,y), v=g2(x,y), (x,y) ∈ A_curly}
+> Ảnh của 𝒜: ℬ = {(u,v): u = g1(x,y), v=g2(x,y), (x,y) ∈ 𝒜}
 >
 >
 >
@@ -703,11 +703,11 @@ correlation
 >
 >
 >
-> ⇨ B_curly = {0 ≤ u ≤ 1, 0 ≤ v ≤ 1/10 + u}
+> ⇨ ℬ = {0 ≤ u ≤ 1, 0 ≤ v ≤ 1/10 + u}
 >
 >
 >
-> Câu hỏi đặt ra: mapping từ A_curly → B_curly có 1-1 không?
+> Câu hỏi đặt ra: mapping từ 𝒜 → ℬ có 1-1 không?
 >
 >
 >
