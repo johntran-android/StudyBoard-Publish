@@ -30,7 +30,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 > This notebook summarizes key concepts from MIT 18.01 Single-Variable Calculus, primarily focusing on limits, the definition and applications of derivatives. It covers topics like tangent lines, approximations, optimization, and related rates.
 
-<details>
+<details open>
 <summary>📖 8 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -52,7 +52,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 > This notebook delves into fundamental linear algebra concepts such as Gram-Schmidt orthogonalization, matrix inverses, and linear independence. It extensively covers the Least Squares problem, exploring its geometric interpretation, solution methods (including QR factorization and the normal equation), and applications in data fitting and regression, while also considering computational complexity.
 
-<details>
+<details open>
 <summary>📖 11 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -77,7 +77,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 > This notebook explores Large Language Models, covering their architecture, fine-tuning techniques like PEFT and RLHF, model evaluation, responsible AI considerations, and deployment strategies.
 
-<details>
+<details open>
 <summary>📖 4 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -95,7 +95,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 > This notebook provides an introduction to core Natural Language Processing concepts, focusing on distributed word representations (embeddings) and their learning via neural network models like Word2Vec, exploring their properties and applications in various NLP tasks.
 
-<details>
+<details open>
 <summary>📖 29 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -138,7 +138,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 > This notebook compiles key concepts from Stanford's CS231N course, covering deep learning fundamentals such as neural networks, optimization, and hyperparameter tuning. It also extensively explores computer vision applications, including image classification, object detection, and generative models, with a strong emphasis on convolutional and recurrent neural networks.
 
-<details>
+<details open>
 <summary>📖 29 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -181,7 +181,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 > This notebook provides a comprehensive overview of core deep learning concepts, optimization techniques, and regularization methods. It also dives into building and applying various neural network architectures, from CNNs and RNNs to Transformers, for tasks like image segmentation, object detection, and natural language processing.
 
-<details>
+<details open>
 <summary>📖 5 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -200,7 +200,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 > This notebook provides a comprehensive overview of deep learning concepts, from foundational neural networks and gradient descent to advanced architectures like CNNs, RNNs, and Transformers. It emphasizes practical implementation using TensorFlow, drawing heavily from Coursera specialization content and programming assignments.
 
-<details>
+<details open>
 <summary>📖 19 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -233,7 +233,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 > This notebook contains lecture notes from EE364a, covering Stephen Boyd's approach to convex optimization. It explores key concepts like convex functions and sets, generalized inequalities, problem formulations, duality theory, optimality conditions, and computational considerations.
 
-<details>
+<details open>
 <summary>📖 23 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -270,7 +270,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 > This notebook explores the foundations of Large Language Models (LLMs), covering various pre-training strategies, key architectures like Encoder-Decoder, and techniques for fine-tuning and adapting these powerful models.
 
-<details>
+<details open>
 <summary>📖 3 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -287,7 +287,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 > This notebook covers multivariable calculus (MIT 18.02), exploring partial derivatives, multiple integrals, vector fields, and the geometric interpretation of transformations via Jacobian determinants and total differentials.
 
-<details>
+<details open>
 <summary>📖 13 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -312,7 +312,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 <!-- key: mit_1806_book -->
 `106 notes · 139 screenshots · 11 sections`
 
-<details>
+<details open>
 <summary>📖 11 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -336,10 +336,8 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `1,181 notes · 1,269 screenshots · 36 sections`
 
 > This notebook covers fundamental linear algebra concepts, from solving systems of equations and matrix operations to eigenvalues, SVD, and linear transformations, often emphasizing their geometric interpretations.
-> 
-> Sổ tay này bao gồm các khái niệm cơ bản về đại số tuyến tính, từ giải hệ phương trình và các phép toán ma trận đến trị riêng, phân tích SVD và biến đổi tuyến tính, thường nhấn mạnh các diễn giải hình học của chúng.
 
-<details>
+<details open>
 <summary>📖 36 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -389,7 +387,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 > Exploring core Natural Language Processing (NLP) techniques, this notebook delves into Transformer and LSTM architectures, word embedding methods, and algorithms like BPE and LSH, complemented by practical exercises for building and evaluating NLP systems.
 
-<details>
+<details open>
 <summary>📖 19 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -422,7 +420,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
 
-<details>
+<details open>
 <summary>📖 30 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -466,7 +464,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
 
-<details>
+<details open>
 <summary>📖 46 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -526,7 +524,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 > This notebook explores foundational and advanced topics in probability and statistical inference, covering random variables, their distributions (discrete and continuous), expectation, variance, moment generating functions, and key theorems such as the Law of Large Numbers and Central Limit Theorem.
 
-<details>
+<details open>
 <summary>📖 16 sections</summary>
 
 | Section | Notes | Screenshots |
@@ -556,7 +554,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 
 > This notebook compiles detailed notes on core concepts, key probability distributions, and essential methods for estimation and hypothesis testing in statistical inference, based on the Casella textbook.
 
-<details>
+<details open>
 <summary>📖 26 sections</summary>
 
 | Section | Notes | Screenshots |
