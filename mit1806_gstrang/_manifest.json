@@ -1,0 +1,224 @@
+{
+  "title": "mit1806_gstrang",
+  "publishedAt": 1786562255567,
+  "sections": [
+    {
+      "title": "18.03 Lec 25",
+      "path": "mit1806_gstrang/1803_lec_25.md",
+      "noteCount": 27,
+      "imageCount": 28
+    },
+    {
+      "title": "Lecture 10: The Four",
+      "path": "mit1806_gstrang/lecture_10_the_four_fundamental_subspaces.md",
+      "noteCount": 24,
+      "imageCount": 29
+    },
+    {
+      "title": "Lecture 11: Matrix Spaces;",
+      "path": "mit1806_gstrang/lecture_11_matrix_spaces_rank_1_small_world_graphs.md",
+      "noteCount": 33,
+      "imageCount": 34
+    },
+    {
+      "title": "Lecture 12: Graphs,",
+      "path": "mit1806_gstrang/lecture_12_graphs_networks_incidence_matrices.md",
+      "noteCount": 37,
+      "imageCount": 40
+    },
+    {
+      "title": "Lecture 13: Quiz Review",
+      "path": "mit1806_gstrang/lecture_13_quiz_review.md",
+      "noteCount": 36,
+      "imageCount": 40
+    },
+    {
+      "title": "Lecture 14: Orthogonal",
+      "path": "mit1806_gstrang/lecture_14_orthogonal_vectors_and_subspaces.md",
+      "noteCount": 37,
+      "imageCount": 37
+    },
+    {
+      "title": "Lecture 15: Projections",
+      "path": "mit1806_gstrang/lecture_15_projections_onto_subspaces.md",
+      "noteCount": 45,
+      "imageCount": 47
+    },
+    {
+      "title": "Lecture 16: Projection",
+      "path": "mit1806_gstrang/lecture_16_projection_matrices_and_least_squares.md",
+      "noteCount": 38,
+      "imageCount": 43
+    },
+    {
+      "title": "Lecture 17: Orthogonal Matrices",
+      "path": "mit1806_gstrang/lecture_17_orthogonal_matrices_and_gram_schmidt.md",
+      "noteCount": 38,
+      "imageCount": 39
+    },
+    {
+      "title": "Lecture 18: Properties Of",
+      "path": "mit1806_gstrang/lecture_18_properties_of_determinants.md",
+      "noteCount": 34,
+      "imageCount": 39
+    },
+    {
+      "title": "Lecture 19: Determinant",
+      "path": "mit1806_gstrang/lecture_19_determinant_formulas_and_cofactors.md",
+      "noteCount": 39,
+      "imageCount": 41
+    },
+    {
+      "title": "Lecture 1: The Geometry",
+      "path": "mit1806_gstrang/lecture_1_the_geometry_of_linear_equations.md",
+      "noteCount": 18,
+      "imageCount": 20
+    },
+    {
+      "title": "Lecture 20: Cramer's Rule,",
+      "path": "mit1806_gstrang/lecture_20_cramers_rule_inverse_matrix_and_volume.md",
+      "noteCount": 29,
+      "imageCount": 30
+    },
+    {
+      "title": "Lecture 21: Eigenvalues",
+      "path": "mit1806_gstrang/lecture_21_eigenvalues_and_eigenvectors.md",
+      "noteCount": 38,
+      "imageCount": 39
+    },
+    {
+      "title": "Lecture 22: Diagonalization",
+      "path": "mit1806_gstrang/lecture_22_diagonalization_and_powers_of_a.md",
+      "noteCount": 40,
+      "imageCount": 42
+    },
+    {
+      "title": "Lecture 23: Differential",
+      "path": "mit1806_gstrang/lecture_23_differential_equations_and_expat.md",
+      "noteCount": 50,
+      "imageCount": 56
+    },
+    {
+      "title": "Lecture 24: Markow",
+      "path": "mit1806_gstrang/lecture_24_markow_matrices_fourier_series.md",
+      "noteCount": 35,
+      "imageCount": 37
+    },
+    {
+      "title": "Lecture 24b: Quiz 2 Review",
+      "path": "mit1806_gstrang/lecture_24b_quiz_2_review.md",
+      "noteCount": 29,
+      "imageCount": 34
+    },
+    {
+      "title": "Lecture 25: Symmetric Matrices",
+      "path": "mit1806_gstrang/lecture_25_symmetric_matrices_and_positive_definiteness.md",
+      "noteCount": 28,
+      "imageCount": 30
+    },
+    {
+      "title": "Lecture 26: Complex Matrices;",
+      "path": "mit1806_gstrang/lecture_26_complex_matrices_fast_fourier_transform.md",
+      "noteCount": 27,
+      "imageCount": 30
+    },
+    {
+      "title": "Lecture 27: Positive Definite",
+      "path": "mit1806_gstrang/lecture_27_positive_definite_matrices_and_minima.md",
+      "noteCount": 36,
+      "imageCount": 39
+    },
+    {
+      "title": "Lecture 28: Similar Matrices",
+      "path": "mit1806_gstrang/lecture_28_similar_matrices_and_jordan_form.md",
+      "noteCount": 32,
+      "imageCount": 32
+    },
+    {
+      "title": "Lecture 29: Singular Value",
+      "path": "mit1806_gstrang/lecture_29_singular_value_decomposition.md",
+      "noteCount": 33,
+      "imageCount": 37
+    },
+    {
+      "title": "Lecture 2: Elimination With",
+      "path": "mit1806_gstrang/lecture_2_elimination_with_matrices.md",
+      "noteCount": 30,
+      "imageCount": 31
+    },
+    {
+      "title": "Lecture 30: Linear",
+      "path": "mit1806_gstrang/lecture_30_linear_transformations_and_their_matrices.md",
+      "noteCount": 42,
+      "imageCount": 46
+    },
+    {
+      "title": "Lecture 31: Change Of Basis;",
+      "path": "mit1806_gstrang/lecture_31_change_of_basis_image_compression.md",
+      "noteCount": 35,
+      "imageCount": 36
+    },
+    {
+      "title": "Lecture 32: Quiz 3 Review",
+      "path": "mit1806_gstrang/lecture_32_quiz_3_review.md",
+      "noteCount": 35,
+      "imageCount": 38
+    },
+    {
+      "title": "Lecture 33: Left And Right",
+      "path": "mit1806_gstrang/lecture_33_left_and_right_inverse_pseudoinverse.md",
+      "noteCount": 30,
+      "imageCount": 33
+    },
+    {
+      "title": "Lecture 34: Final Course",
+      "path": "mit1806_gstrang/lecture_34_final_course_review.md",
+      "noteCount": 32,
+      "imageCount": 34
+    },
+    {
+      "title": "Lecture 3: Multiplication",
+      "path": "mit1806_gstrang/lecture_3_multiplication_and_inverse_matrices.md",
+      "noteCount": 22,
+      "imageCount": 24
+    },
+    {
+      "title": "Lecture 4: Factorization",
+      "path": "mit1806_gstrang/lecture_4_factorization_into_a_lu.md",
+      "noteCount": 23,
+      "imageCount": 25
+    },
+    {
+      "title": "Lecture 5: Transpose,",
+      "path": "mit1806_gstrang/lecture_5_transpose_permutations_spaces_rn.md",
+      "noteCount": 23,
+      "imageCount": 24
+    },
+    {
+      "title": "Lecture 6: Column Space",
+      "path": "mit1806_gstrang/lecture_6_column_space_and_null_space.md",
+      "noteCount": 24,
+      "imageCount": 24
+    },
+    {
+      "title": "Lecture 7: Solving Ax = 0:",
+      "path": "mit1806_gstrang/lecture_7_solving_ax_0_pivot_variables_special_solutions.md",
+      "noteCount": 32,
+      "imageCount": 37
+    },
+    {
+      "title": "Lecture 8: Solving Ax = B:",
+      "path": "mit1806_gstrang/lecture_8_solving_ax_b_row_reduced_form_r.md",
+      "noteCount": 35,
+      "imageCount": 37
+    },
+    {
+      "title": "Lecture 9: Independece,",
+      "path": "mit1806_gstrang/lecture_9_independece_basis_and_dimension.md",
+      "noteCount": 35,
+      "imageCount": 37
+    }
+  ],
+  "totalNotes": 1181,
+  "totalImages": 1269
+}
