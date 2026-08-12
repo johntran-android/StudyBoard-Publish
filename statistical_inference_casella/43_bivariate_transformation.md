@@ -225,7 +225,7 @@ transformation
 >
 >
 >
-> Thế thì ta sẽ đặt nó là A_curly, và theo định nghĩa nó chính là support set của (X,Y), vì nó
+> Thế thì ta sẽ đặt nó là 𝒜, và theo định nghĩa nó chính là support set của (X,Y), vì nó
 > đã chứa mọi (x,y) khiến fX,Y(x,y) > 0
 >
 >
@@ -251,16 +251,16 @@ transformation
 >
 >
 >
-> Do đó mình hiểu của việc tại sao phải chọn B_curly, cho vai trò của B, với B_curly = {(u,
-> v): u = g1(x,y), v = g2(x,y) với some (x,y) ∈ A_curly}
+> Do đó mình hiểu của việc tại sao phải chọn ℬ, cho vai trò của B, với ℬ = {(u,
+> v): u = g1(x,y), v = g2(x,y) với some (x,y) ∈ 𝒜}
 >
 >
 >
-> Vì khi đó, ta có thể có fU,V(u,v) trên B_curly (tức (u,v) ∈ B_curly) dương
+> Vì khi đó, ta có thể có fU,V(u,v) trên ℬ (tức (u,v) ∈ ℬ) dương
 >
 >
 >
-> Thế thì xét một (u,v) ∈ B_curly, thì mình mới định nghĩa ra {(x,y) ∈ A_curly: g1(x,y) = u,}
+> Thế thì xét một (u,v) ∈ ℬ, thì mình mới định nghĩa ra {(x,y) ∈ 𝒜: g1(x,y) = u,}
 > g2(x,y) = v} và ta gọi nó là Auv và mục đích là chứng minh fU,V tại (u,v) có thể được tính
 > bởi fXY tại Auv
 >
@@ -271,7 +271,7 @@ transformation
 >
 >
 >
-> Ở đây vai trò của B chính là **point set {(u,v)}**  với (u,v) là một điểm trong B_curly (thay
+> Ở đây vai trò của B chính là **point set {(u,v)}**  với (u,v) là một điểm trong ℬ (thay
 > vì trong R^2, giúp đảm bảo rằng fU,V(u,v) dương).
 >
 >
@@ -285,15 +285,15 @@ transformation
 >
 >
 >
-> {(x,y) ∈ A_curly: g1(x,y) = u, g2(x, y) = v} ∪ {(x,y) ∈ R^2\\A_curly: g1(x,y) = u, g2(x, y) = v}
+> {(x,y) ∈ 𝒜: g1(x,y) = u, g2(x, y) = v} ∪ {(x,y) ∈ R^2\\𝒜: g1(x,y) = u, g2(x, y) = v}
 >
 >
 >
-> và chính là Auv ∪ {(x,y) ∈ R^2\\A_curly: g1(x,y) = u, g2(x, y) = v}
+> và chính là Auv ∪ {(x,y) ∈ R^2\\𝒜: g1(x,y) = u, g2(x, y) = v}
 >
 >
 >
-> Gọi {(x,y) ∈ R^2\\A_curly: g1(x,y) = u, g2(x, y) = v} là Auv_plus
+> Gọi {(x,y) ∈ R^2\\𝒜: g1(x,y) = u, g2(x, y) = v} là Auv_plus
 >
 >
 >
@@ -313,12 +313,12 @@ transformation
 >
 >
 >
-> Và vì Auv_plus ∩ A_curly = ∅ do định nghĩa của nó nên (X,Y) ∈ Auv_plus sẽ nằm ngoài
-> A_curly, mà A_curly là support set ⇨ P((X,Y) ∈ Auv_plus) = 0
+> Và vì Auv_plus ∩ 𝒜 = ∅ do định nghĩa của nó nên (X,Y) ∈ Auv_plus sẽ nằm ngoài
+> 𝒜, mà 𝒜 là support set ⇨ P((X,Y) ∈ Auv_plus) = 0
 >
 >
 >
-> Vậy P((U,V) ∈ {(u,v), (u,v) là điểm trong B_curly} = P((X,Y) ∈ Auv)
+> Vậy P((U,V) ∈ {(u,v), (u,v) là điểm trong ℬ} = P((X,Y) ∈ Auv)
 >
 >
 >
@@ -330,16 +330,16 @@ transformation
 >
 >
 >
-> Auv cũng là tập con của A_curly (vì ngay định nghĩa đã nói Auv: = {(x,y) ∈ A_curly....} rồi
+> Auv cũng là tập con của 𝒜 (vì ngay định nghĩa đã nói Auv: = {(x,y) ∈ 𝒜....} rồi
 >
 >
 >
-> Và Auv cũng là tập con của A (tức preimage của B={(u,v), với (u,v) là point trong B_curly},
+> Và Auv cũng là tập con của A (tức preimage của B={(u,v), với (u,v) là point trong ℬ},
 > bởi A define là {(x,y) ∈ R^2: g1(x,y) = u, g2(x,y) = v}
 >
 >
 >
-> (nhưng sẽ là sai nếu nói A_curly là tập con của A nhé, vì nó ko liên quan gì cả)
+> (nhưng sẽ là sai nếu nói 𝒜 là tập con của A nhé, vì nó ko liên quan gì cả)
 >
 >
 >
@@ -357,31 +357,31 @@ transformation
 >
 >
 >
-> A_CURLY = {(x,y): fX,Y(x,y) > 0}
+> 𝒜 = {(x,y): fX,Y(x,y) > 0}
 >
 >
 >
-> Auv = {(x,y) ∈ A_curly: g1(x,y) = u, g2(x,y) = v}
+> Auv = {(x,y) ∈ 𝒜: g1(x,y) = u, g2(x,y) = v}
 >
 >
 >
-> Nên Auv ⊂ A_curly, Auv ⊂ A
+> Nên Auv ⊂ 𝒜, Auv ⊂ A
 >
 >
 >
-> ⇨ Auv = A ∩ A_curly
+> ⇨ Auv = A ∩ 𝒜
 >
-> discrete case, ta chọn B là point set {(u,v)} với (u,v) ∈ B_curly
+> discrete case, ta chọn B là point set {(u,v)} với (u,v) ∈ ℬ
 > từ đó A - tiền ảnh của tập này, sẽ là tập các điểm rời rạc gồm
 > hai phần: 
 >
 >
 >
-> 1) những điểm (map với (u,v)) trong A_curly, gọi là Auv
+> 1) những điểm (map với (u,v)) trong 𝒜, gọi là Auv
 >
 >
 >
-> 2) những điểm (map với (u,v)) ngoài A_curly
+> 2) những điểm (map với (u,v)) ngoài 𝒜
 >
 >
 >
@@ -398,34 +398,34 @@ transformation
 <p align="center"><kbd><img src="assets/s0xd0053jlo.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi thế thì ở đây (U,V), (X,Y) là các discrete vector. Nên các member  A_curly
-> và B_curly sẽ chứa các điểm rời rạc, dù có thể cũng có vô hạn số lượng,
+> Rồi thế thì ở đây (U,V), (X,Y) là các discrete vector. Nên các member  𝒜
+> và ℬ sẽ chứa các điểm rời rạc, dù có thể cũng có vô hạn số lượng,
 > nhưng vẫn là countable
 >
 >
 >
 > Còn nếu xét (U,V), (X,Y) **continuous** thì hai tập này sẽ chứa v**ô hạn điểm liên
-> tục** và ta sẽ **ko chọn B là point set trong B_curly** nữa vì lúc này pmf = 0
+> tục** và ta sẽ **ko chọn B là point set trong ℬ** nữa vì lúc này pmf = 0
 >
 >
 >
-> Tuy nhiên A_curly và B_curly vẫn vậy, là set mà fX,Y dương trên đó (A_curly)
-> và B_curly là {(u,v) ∈ R^2: u = g1(x,y), v = g2(x,y), (x,y) ∈ A_curly}. Nói cách
-> khác B_curly là ảnh (image) của A_curly
+> Tuy nhiên 𝒜 và ℬ vẫn vậy, là set mà fX,Y dương trên đó (𝒜)
+> và ℬ là {(u,v) ∈ R^2: u = g1(x,y), v = g2(x,y), (x,y) ∈ 𝒜}. Nói cách
+> khác ℬ là ảnh (image) của 𝒜
 >
 >
 >
-> Và câu hỏi đặt ra đầu tiên là tại sao joint pdf của U,V lại dương trên B_curly?
+> Và câu hỏi đặt ra đầu tiên là tại sao joint pdf của U,V lại dương trên ℬ?
 >
 >
 >
 > Ta xét một vùng có diện tích rất nhỏ có diện tích dA quanh điểm (u,v) trong
-> B_curly, và cho nó đóng vai trò của B.
+> ℬ, và cho nó đóng vai trò của B.
 >
 >
 >
 > Thì A, tiền ảnh của nó, sẽ là {(x,y) ∈ R^2: (g1(x,y), g2(x,y)) ∈ B}, nhớ rằng B
-> đang là vùng rất nhỏ xung quanh điểm (u,v) thuộc B_curly
+> đang là vùng rất nhỏ xung quanh điểm (u,v) thuộc ℬ
 >
 >
 >
@@ -433,10 +433,10 @@ transformation
 >
 >
 >
-> Vậy thì lúc này ta có thể chứng minh A sẽ có giao với A_curly: Bởi vì xét
-> những điểm thuộc A_curly mà g1(x,y), g2(x,y) ∈ B (B, hiện là vùng rất nhỏ
-> quanh (u,v) thuộc B_curly ⇨ B ⊂ B_curly) ⇨ những điểm này cũng thuộc A.
-> Nên A_curly ∩ A khác ∅.
+> Vậy thì lúc này ta có thể chứng minh A sẽ có giao với 𝒜: Bởi vì xét
+> những điểm thuộc 𝒜 mà g1(x,y), g2(x,y) ∈ B (B, hiện là vùng rất nhỏ
+> quanh (u,v) thuộc ℬ ⇨ B ⊂ ℬ) ⇨ những điểm này cũng thuộc A.
+> Nên 𝒜 ∩ A khác ∅.
 >
 >
 >
@@ -444,7 +444,7 @@ transformation
 >
 >
 >
-> ((X,Y) ∈ (A_curly ∩ A) ∪ (X,Y) ∈ A_curly_complement ∩ A)
+> ((X,Y) ∈ (𝒜 ∩ A) ∪ (X,Y) ∈ 𝒜_complement ∩ A)
 >
 >
 >
@@ -452,11 +452,11 @@ transformation
 >
 >
 >
-> = P((X,Y) ∈ (A_curly ∩ A) + P((X,Y) ∈ A_curly_complement ∩ A)
+> = P((X,Y) ∈ (𝒜 ∩ A) + P((X,Y) ∈ 𝒜_complement ∩ A)
 >
 >
 >
-> Và nhờ P((X,Y) ∈ (A_curly ∩ A) > 0 nên ta suy ra P((X,Y) ∈ A) > 0
+> Và nhờ P((X,Y) ∈ (𝒜 ∩ A) > 0 nên ta suy ra P((X,Y) ∈ A) > 0
 >
 >
 >
@@ -464,14 +464,14 @@ transformation
 >
 >
 >
-> Mà điều này đúng với mọi điểm (u,v) thuộc B_curly, cũng như đúng với mọi
+> Mà điều này đúng với mọi điểm (u,v) thuộc ℬ, cũng như đúng với mọi
 > vùng có diện tích vô cùng nhỏ dA bao quanh (u,v) nên ta lập luận tương tự để
-> suy ra fU,V(u,v) LUÔN DƯƠNG TRÊN B_CURLY
+> suy ra fU,V(u,v) LUÔN DƯƠNG TRÊN ℬ
 >
 > LƯU Ý ĐÂY LÀ Ở PAGE 158, MÌNH VIẾT LUÔN Ở ĐÂY ĐỂ LIỀN MẠCH
 > SUY NGHĨ TỪ DISCRETE CASE SANG CONTINUOUS CASE
 >
-> Continues: Ta ko xét B là point set {(u,v)} thuộc B_curly nữa. Mà xét 
+> Continues: Ta ko xét B là point set {(u,v)} thuộc ℬ nữa. Mà xét 
 > B là vùng dA quanh (u,v) thuộc B.
 >
 >
@@ -481,17 +481,17 @@ transformation
 >
 >
 >
-> - phần nằm trong A_curly, (thích thì gọi là Auv cũng được nhưng phải
+> - phần nằm trong 𝒜, (thích thì gọi là Auv cũng được nhưng phải
 > hiểu nó map với các điểm trong dA quanh (u,v) chứ ko phải là map
 > với point (u,v))
 >
 >
 >
-> - phần nằm ngoài A_curly
+> - phần nằm ngoài 𝒜
 >
 >
 >
-> Từ đó ta chứng minh fU,V(u,v) dương trên B_curly
+> Từ đó ta chứng minh fU,V(u,v) dương trên ℬ
 
 <br>
 
@@ -702,25 +702,25 @@ transformation
 <p align="center"><kbd><img src="assets/1d8aor3g5ro.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì ở đây học sẽ **giả sử dùng quan hệ mapping từ A_curly đến
-> B_curly là 1-1**
+> Thế thì ở đây học sẽ **giả sử dùng quan hệ mapping từ 𝒜 đến
+> ℬ là 1-1**
 >
 >
 >
-> Tức là như vừa rồi mình có nói, với u,v ∈ B_curly thì tồn tại x,y thuộc
-> A_curly sao cho nó được map với u,v. Có thể có nhiều (x,y) được map
-> với (u,v), và trong cái đám này có thể có nhiều x,y thuộc A_curly và cũng
-> có thể không thuộc A_curly.
+> Tức là như vừa rồi mình có nói, với u,v ∈ ℬ thì tồn tại x,y thuộc
+> 𝒜 sao cho nó được map với u,v. Có thể có nhiều (x,y) được map
+> với (u,v), và trong cái đám này có thể có nhiều x,y thuộc 𝒜 và cũng
+> có thể không thuộc 𝒜.
 >
 >
 >
-> Vậy bây giờ mình giả sử với một u,v thuộc B_curly thì sẽ chỉ có một x,y
-> trong A_curly (ngoài ra ko còn cái nào khác) là được map với u,v thôi.
+> Vậy bây giờ mình giả sử với một u,v thuộc ℬ thì sẽ chỉ có một x,y
+> trong 𝒜 (ngoài ra ko còn cái nào khác) là được map với u,v thôi.
 >
 >
 >
-> (chú ý là vẫn có thể khi xét từ R^2 → B_curly thì quan hệ ko 1-1 nhưng
-> xét A_curly → B_curly thì thỏa, như hình minh họa cho thấy mapping
+> (chú ý là vẫn có thể khi xét từ R^2 → ℬ thì quan hệ ko 1-1 nhưng
+> xét 𝒜 → ℬ thì thỏa, như hình minh họa cho thấy mapping
 > giữa R^2 → B ko 1-1)
 >
 >
@@ -728,7 +728,7 @@ transformation
 > Khi đó đại khái là từ việc u = g1(x,y), v = g2(x,y) thì ta **có thể GIẢI RA x,
 > y theo u, v**: x = h1(u,v); y = h2(u,v). Và **x, y là duy nhất**. Vậy mới thấy
 > cần giả định trên, vì nếu không thì có thể giải ra nhiều x,y mà chưa chắc
-> nó đã thuộc A_curly
+> nó đã thuộc 𝒜
 >
 >
 >
@@ -747,7 +747,7 @@ transformation
 >
 > Qua công thức này ta có thể tìm joint pdf của U,V từ joint pdf của X,Y  có
 > điều ko phải lúc này cũng dễ verify rằng mapping là 1-1 và ko dễ để xác
-> định B_curly là set gì?
+> định ℬ là set gì?
 >
 > Tới đây thử ôn lại và lập luận xem tại sao lại lòi ra một cái Jacobian of 
 > the transformation.
@@ -983,8 +983,8 @@ transformation
 >
 > tạo thành hình bình hành
 >
-> Quan hệ giữa A_curly và B_curly lúc này là 1-1, nhưng giữa R^2 →
-> B_curly vẫn có thể là ko phải 1-1
+> Quan hệ giữa 𝒜 và ℬ lúc này là 1-1, nhưng giữa R^2 →
+> ℬ vẫn có thể là ko phải 1-1
 
 <br>
 
@@ -1019,7 +1019,7 @@ transformation
 >
 >
 >
-> Tức A_curly = x, y ∈  {(x,y): 0<x<1, 0<y<1} (đó là hình vuông trong R^2)
+> Tức 𝒜 = x, y ∈  {(x,y): 0<x<1, 0<y<1} (đó là hình vuông trong R^2)
 >
 >
 >
@@ -1027,11 +1027,11 @@ transformation
 >
 >
 >
-> ta sẽ xem thử **B_curly, theo định nghĩa, là ảnh của A_curly, là set nào**,
+> ta sẽ xem thử **ℬ, theo định nghĩa, là ảnh của 𝒜, là set nào**,
 >
 >
 >
-> và **mapping giữa A_curly và B_curly  có one-to-one ko**?
+> và **mapping giữa 𝒜 và ℬ  có one-to-one ko**?
 >
 >
 >
@@ -1053,17 +1053,17 @@ transformation
 >
 >
 > Còn đang lập luận để cho ra ví dụ như v ∈ (0,1)  u ∈ (0,v) **là đang xác định
-> tập B_curly, ảnh của A_curly** = {g1(x,y), g2(x,y) với (x,y) ∈ A_curly}
+> tập ℬ, ảnh của 𝒜** = {g1(x,y), g2(x,y) với (x,y) ∈ 𝒜}
 >
 >
 >
-> (B_curly, là ảnh của A_curly và ta đã chứng minh trên đó joint pdf của U,V duơng,
+> (ℬ, là ảnh của 𝒜 và ta đã chứng minh trên đó joint pdf của U,V duơng,
 > tuy nhiên nó chỉ là tập con của support set U,V chứ chưa chắc là toàn bộ support
 > set)
 >
 >
 >
-> Vậy tập **B_curly là {(u,v)** ∈ **R^2: 0 < v < 1, 0 < u < v}**
+> Vậy tập **ℬ là {(u,v)** ∈ **R^2: 0 < v < 1, 0 < u < v}**
 >
 >
 >
@@ -1080,8 +1080,8 @@ transformation
 >
 >
 > Nếu xét mapping bởi hàm g1(x,y) = xy, g2(x,y) =  x với (x,y) từ **toàn R^2 tới
-> B_curly** thì nó **KHONG PHẢI LÀ mapping 1-1** (tức là mapping giữa R^2 và
-> B_curly KHÔNG  PHẢI 1-1) vì điểm bất kì (0,y) nào cũng được map với (0,0)
+> ℬ** thì nó **KHONG PHẢI LÀ mapping 1-1** (tức là mapping giữa R^2 và
+> ℬ KHÔNG  PHẢI 1-1) vì điểm bất kì (0,y) nào cũng được map với (0,0)
 >
 >
 >
@@ -1089,7 +1089,7 @@ transformation
 >
 >
 >
-> nên việc **mapping từ A_curly tới B_curly là 1-1 mapping**.
+> nên việc **mapping từ 𝒜 tới ℬ là 1-1 mapping**.
 >
 >
 >
@@ -1145,7 +1145,7 @@ transformation
 >
 >
 >
-> Đó là: Tìm tập B_curly (ảnh của A_curly - support set của X,Y) và tính det của J
+> Đó là: Tìm tập ℬ (ảnh của 𝒜 - support set của X,Y) và tính det của J
 >
 >
 >
@@ -1178,11 +1178,11 @@ transformation
 >
 >
 >
-> và ĐIỀU QUAN TRỌNG LÀ, **x, y này CHẮC CHẮC** ∈ **A_curly**, đơn giản vì
-> A_curly .. LÀ **TOÀN BỘ R^2**. Vậy nên, cái ông u,v bất kì kìa CHẮC CHẮC LÀ
-> THUỘC B_curly (vì định nghĩa của B_curly là (g1(x,y),g2(x,y)) với (x,y) ∈ A_curly
+> và ĐIỀU QUAN TRỌNG LÀ, **x, y này CHẮC CHẮC** ∈ **𝒜**, đơn giản vì
+> 𝒜 .. LÀ **TOÀN BỘ R^2**. Vậy nên, cái ông u,v bất kì kìa CHẮC CHẮC LÀ
+> THUỘC ℬ (vì định nghĩa của ℬ là (g1(x,y),g2(x,y)) với (x,y) ∈ 𝒜
 > mà) Thế mà ta đã bắt đầu bằng việc chọn u, v bất kì, để rồi đều cho thấy nó thuộc
-> B_curly, ĐIỀU NÀY GIÚP KẾT LUẬN B_curly CHÍNH LÀ R^2
+> ℬ, ĐIỀU NÀY GIÚP KẾT LUẬN ℬ CHÍNH LÀ R^2
 >
 >
 >
@@ -1191,12 +1191,12 @@ transformation
 >
 >
 > Rồi, bên cạnh đó, từ việc chọn u, v bất kì (mà nay ta đã biết "bất kì" thì cũng  là
-> thuộc B_curly), ta giải ra x = (u + v)/2 (tức h1(u, v)) và y = (u - v)/2 tức h2(u, v) mà
+> thuộc ℬ), ta giải ra x = (u + v)/2 (tức h1(u, v)) và y = (u - v)/2 tức h2(u, v) mà
 > rõ ràng cái này cho thấy x, y là unique, chứng tỏ mapping giữa A, và B là 1-1
 >
 >
 >
-> TÓM LẠI, X**ÁC ĐỊNH ĐƯỢC B_curly** CHÍNH LÀ **R^2**, VÀ **CHỨNG MINH ĐƯỢC
+> TÓM LẠI, X**ÁC ĐỊNH ĐƯỢC ℬ** CHÍNH LÀ **R^2**, VÀ **CHỨNG MINH ĐƯỢC
 > MAPPING LÀ 1-1**.
 >
 >
@@ -1214,7 +1214,7 @@ transformation
 >
 >
 >
-> từ đó ta có như trong sách với ghi chú -inf < u và v < inf thể hiện set B_curly là R^2
+> từ đó ta có như trong sách với ghi chú -inf < u và v < inf thể hiện set ℬ là R^2
 >
 >
 >
@@ -1596,8 +1596,8 @@ transformation
 > tâm đến một random variable mới là kết quả của việc apply function g1 nào
 > đó lên X, Y thôi chứ ko phải là ta có cặp rv U,V nào cả. Thì khi đó, thật ra ta
 > vẫn đơn giản là CHỌN MỘT V DEFINE BỞI g2 ĐƠN GIẢN NÀO ĐÓ ví dụ V
-> = g2(X,Y) = X, **Miễn sao là support set của X,Y (/A_curly)/ được mapping
-> 1-1 với  (B_curly)**, thì  từ đó ta lại áp dụng theorem trên để tìm joint
+> = g2(X,Y) = X, **Miễn sao là support set của X,Y (/𝒜)/ được mapping
+> 1-1 với  (ℬ)**, thì  từ đó ta lại áp dụng theorem trên để tìm joint
 > distribution của U, V và marginalizing over v để có marginal pdf/pmf của U.
 
 <br>
@@ -1609,8 +1609,8 @@ transformation
 <p align="center"><kbd><img src="assets/9etfyrfywtf.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, ở đây nói về tình huống mà ta không có mapping 1-1 từ A_curly
-> (tức tập support của X,Y) đến B_curly
+> Đại khái là, ở đây nói về tình huống mà ta không có mapping 1-1 từ 𝒜
+> (tức tập support của X,Y) đến ℬ
 >
 >
 >
@@ -1625,10 +1625,10 @@ transformation
 >
 >
 >
-> Cụ thể ta sẽ dựa trên mapping giữa A_curly, support set của X,Y và B_curly
-> là ảnh của A_curly để từ đó xây dựng, tuy nhiên điều kiện của theorem trước
-> là mapping phải 1-1, tức là với u,v  ∈ B_curly (tất nhiên theo định nghĩa của
-> B_curly thì phải có x,y nào đó của A_curly mà u = g1(x,y), v = g2(x,y)) thì ta
+> Cụ thể ta sẽ dựa trên mapping giữa 𝒜, support set của X,Y và ℬ
+> là ảnh của 𝒜 để từ đó xây dựng, tuy nhiên điều kiện của theorem trước
+> là mapping phải 1-1, tức là với u,v  ∈ ℬ (tất nhiên theo định nghĩa của
+> ℬ thì phải có x,y nào đó của 𝒜 mà u = g1(x,y), v = g2(x,y)) thì ta
 > có thể giải ra được x = h1(u,v), y = h2(u,v)
 >
 >
@@ -1643,7 +1643,7 @@ transformation
 >
 > Thế thì đại khái là ta sẽ giải quyết bằng cách dùng một khái quát của vấn đề
 > tương tự với transformation đơn biến. Y = g(X). Đó là theorem 2.1.8, nói rằng
-> Nếu như range của X (X_curly, chứa các possible value của X, là tập con
+> Nếu như range của X (𝒳, chứa các possible value của X, là tập con
 > của R, nhưng như đã từng nói, nó ko nhất thiết là support set, hiểu đơn giản
 > là có thể chứa xi là mapping từ si: xi = X(si), với si là một possible outcome
 > trong sample space, nhưng outcome này có thể không bao giờ xảy ra, P({si})
@@ -1651,8 +1651,8 @@ transformation
 >
 >
 >
-> Thế thì, quay lại vấn đề, là có khi g(x) không map 1-1 giữa X_curly và Y_curly
-> (Y_curly là range của Y) nên không dùng theorem này được:
+> Thế thì, quay lại vấn đề, là có khi g(x) không map 1-1 giữa 𝒳 và 𝒴
+> (𝒴 là range của Y) nên không dùng theorem này được:
 >
 >
 >
@@ -1668,8 +1668,8 @@ transformation
 >
 >
 >
-> X_curly có thể chia thành một partition tức là bộ các set A0, A1,...Ak không giao
-> nhau và ∪ = X_curly. Với P(X ∈ A0) = 0, và trên các A1,A2,...thì hàm g sẽ hành
+> 𝒳 có thể chia thành một partition tức là bộ các set A0, A1,...Ak không giao
+> nhau và ∪ = 𝒳. Với P(X ∈ A0) = 0, và trên các A1,A2,...thì hàm g sẽ hành
 > xử theo kiểu nó sẽ là kết quả của các hàm gi khác nhau trên các Ai khác nhau,
 > ví dụ như g(x) với x trên A1 sẽ = g1(x), g(x) với x trên A2 sẽ = g2(x)....
 > Bên cạnh đó, yêu cầu quan trọng là các hàm gi trên các set Ai phải đơn điệu
@@ -1677,7 +1677,7 @@ transformation
 >
 >
 >
-> Và quan trọng hơn nữa là x ∈ Ai với i nào thì g(x) cũng ∈ Y_curly
+> Và quan trọng hơn nữa là x ∈ Ai với i nào thì g(x) cũng ∈ 𝒴
 >
 >
 >
@@ -1685,7 +1685,7 @@ transformation
 >
 >
 >
-> fY(y) với y ∈ Y_curly, = **Σi fX(gi_inv(y)) |d/dy gi_inv(y)|** và = 0 khi y không ∈ Y_curly
+> fY(y) với y ∈ 𝒴, = **Σi fX(gi_inv(y)) |d/dy gi_inv(y)|** và = 0 khi y không ∈ 𝒴
 >
 >
 >
@@ -1694,10 +1694,10 @@ transformation
 >
 >
 > Vậy thì ở đây tương tự, ta có khái quát của theorem 2.1.8, nói rằng: Nếu như 
-> mapping giữa A_curly và B_curly không 1-1, nhưng A_curly có thể hình thành
+> mapping giữa 𝒜 và ℬ không 1-1, nhưng 𝒜 có thể hình thành
 > một partition: A0,A1,....Ak sao cho P((X,Y) ∈ A0) = 0 Còn trên các A1,A2,...ta
 > có các transformation U = g1(X,Y), V = g2(X,Y) mapping 1-1, tức là ví dụ với
-> x,y ∈ A1, u,v = (g1(x,y), g2(x,y)) ∈ B_curly ⇨ có thể tìm ngược lại x,y từ u, v:
+> x,y ∈ A1, u,v = (g1(x,y), g2(x,y)) ∈ ℬ ⇨ có thể tìm ngược lại x,y từ u, v:
 > x = h1i(u,v), y = hi2(u,v)
 >
 >
@@ -1711,7 +1711,7 @@ transformation
 >
 >
 >
-> Thêm một assumption nữa là Jacobian ko vanish identically trên B_curly (!???)
+> Thêm một assumption nữa là Jacobian ko vanish identically trên ℬ (!???)
 >
 >
 >
@@ -1728,8 +1728,8 @@ transformation
 <p align="center"><kbd><img src="assets/t1jbxfwcssa.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Vô ví dụ này, X,Y ~ n(0,1), U = X/Y, V = |Y|, ở đây không map 1-1 giữa A_curly
-> và B_curly vì sao, vì ví dụ như cả (x,y) và (-x,-y) đều được map với u,v = x/y, |y|
+> Vô ví dụ này, X,Y ~ n(0,1), U = X/Y, V = |Y|, ở đây không map 1-1 giữa 𝒜
+> và ℬ vì sao, vì ví dụ như cả (x,y) và (-x,-y) đều được map với u,v = x/y, |y|
 > (do x/y cũng = -x/-y và |y| cũng bằng |-y|)
 >
 >
@@ -1739,11 +1739,11 @@ transformation
 >
 >
 >
-> Đầu tiên A_curly là gì? theo định nghĩa nó là {(x,y) ∈ R^2: fX,Y(x,y) > 0} Ta chưa
+> Đầu tiên 𝒜 là gì? theo định nghĩa nó là {(x,y) ∈ R^2: fX,Y(x,y) > 0} Ta chưa
 > biết joint pdf fX,Y. Nhưng vì đề bài cho X, Y độc lập ta có thể suy ra ngay fX,Y(x,
 > y) = fX(x)fY(y), và từ đó fX,Y(x,y) > 0 ⇔ fX(x) > 0 và fY(y) > 0 ⇔ x ∈ support set
 > của X và y ∈ support set của Y  cũng chính là x ∈ R, y ∈ R, hay (x,y) ∈ R^2. Lí do
-> là vì X và Y đều ~n(0,1) có pdf dương tại mọi điểm thuộc R. Tóm lại A_curly là
+> là vì X và Y đều ~n(0,1) có pdf dương tại mọi điểm thuộc R. Tóm lại 𝒜 là
 > R^2.
 >
 >
@@ -1763,12 +1763,12 @@ transformation
 >
 >
 > 2) Xem thử mapping giữa g(x,y) = x/y và h(x,y) = |y| từ A1, A2 đều map tới
-> B_curly không? Mà nếu vậy phải xem B_curly là gì?
+> ℬ không? Mà nếu vậy phải xem ℬ là gì?
 >
 >
 >
-> B_curly theo định nghĩa là set {u=g(x,y), v=h(x,y) với x,y ∈ A_curly} tức là {(x/y,
-> |y|) với (x,y) ∈ A_curly}.
+> ℬ theo định nghĩa là set {u=g(x,y), v=h(x,y) với x,y ∈ 𝒜} tức là {(x/y,
+> |y|) với (x,y) ∈ 𝒜}.
 >
 >
 >
@@ -1778,11 +1778,11 @@ transformation
 >
 >
 > ví dụ v = 3, u = 1 thì nó có thể là v = |-3|, u = -3/-3, tức (-3,-3) ∈ A1 → (u,v) ∈
-> B_curly hoặc v = |3|, u = 3/3, tức mapping từ (3,3) ∈ A2 → (u,v) ∈ B_curly
+> ℬ hoặc v = |3|, u = 3/3, tức mapping từ (3,3) ∈ A2 → (u,v) ∈ ℬ
 >
 >
 >
-> Nên đại khái là nó thỏa yêu cầu này: A1,A2 đều được map với B_curly bởi g1,
+> Nên đại khái là nó thỏa yêu cầu này: A1,A2 đều được map với ℬ bởi g1,
 > g2
 >
 >
