@@ -1,0 +1,194 @@
+{
+  "title": "numerical_optimization_jnocedal",
+  "publishedAt": 1786562258649,
+  "sections": [
+    {
+      "title": "📋 Overview",
+      "path": "numerical_optimization_jnocedal/_overview.md",
+      "noteCount": 1,
+      "imageCount": 1
+    },
+    {
+      "title": "10.1 Least-square problem",
+      "path": "numerical_optimization_jnocedal/101_least_square_problem.md",
+      "noteCount": 11,
+      "imageCount": 13
+    },
+    {
+      "title": "10.2 Linear Least-Square Problem",
+      "path": "numerical_optimization_jnocedal/102_linear_least_square_problem.md",
+      "noteCount": 9,
+      "imageCount": 11
+    },
+    {
+      "title": "10.3 Algorithms for nonlinear least-squares problem",
+      "path": "numerical_optimization_jnocedal/103_algorithms_for_nonlinear_least_squares_problem.md",
+      "noteCount": 14,
+      "imageCount": 23
+    },
+    {
+      "title": "10.4 Orthogonal Distance Regression (bỏ qua)",
+      "path": "numerical_optimization_jnocedal/104_orthogonal_distance_regression_b_qua.md",
+      "noteCount": 1,
+      "imageCount": 1
+    },
+    {
+      "title": "12.0 Theory of Constrained Optimization",
+      "path": "numerical_optimization_jnocedal/120_theory_of_constrained_optimization.md",
+      "noteCount": 5,
+      "imageCount": 8
+    },
+    {
+      "title": "12.1 Examples",
+      "path": "numerical_optimization_jnocedal/121_examples.md",
+      "noteCount": 7,
+      "imageCount": 12
+    },
+    {
+      "title": "2.1 Funds of Unconstrained Optim - What's Solution",
+      "path": "numerical_optimization_jnocedal/21_funds_of_unconstrained_optim_whats_solution.md",
+      "noteCount": 15,
+      "imageCount": 21
+    },
+    {
+      "title": "2.2 Funds of Unconstrained Optim - Overview of Algorithms",
+      "path": "numerical_optimization_jnocedal/22_funds_of_unconstrained_optim_overview_of_algorithms.md",
+      "noteCount": 24,
+      "imageCount": 35
+    },
+    {
+      "title": "3.1 Line Search Method: Step Length",
+      "path": "numerical_optimization_jnocedal/31_line_search_method_step_length.md",
+      "noteCount": 13,
+      "imageCount": 20
+    },
+    {
+      "title": "3.2 Line Search Method: Convergence of Line Search Methods",
+      "path": "numerical_optimization_jnocedal/32_line_search_method_convergence_of_line_search_methods.md",
+      "noteCount": 10,
+      "imageCount": 13
+    },
+    {
+      "title": "3.3 Line Search Method: Rate of Convergence",
+      "path": "numerical_optimization_jnocedal/33_line_search_method_rate_of_convergence.md",
+      "noteCount": 19,
+      "imageCount": 23
+    },
+    {
+      "title": "3.4 Line Search Method: Newton’s Method with Hessian Modification",
+      "path": "numerical_optimization_jnocedal/34_line_search_method_newtons_method_with_hessian_modification.md",
+      "noteCount": 24,
+      "imageCount": 29
+    },
+    {
+      "title": "3.5 Line Search Method: Step-Length Selection Algorithms",
+      "path": "numerical_optimization_jnocedal/35_line_search_method_step_length_selection_algorithms.md",
+      "noteCount": 12,
+      "imageCount": 15
+    },
+    {
+      "title": "4.0 Trust-Region Methods: Outline of the Trust-Region Approach",
+      "path": "numerical_optimization_jnocedal/40_trust_region_methods_outline_of_the_trust_region_approach.md",
+      "noteCount": 12,
+      "imageCount": 11
+    },
+    {
+      "title": "4.1 Trust-Region Methods: Algorithms Based on the Cauchy Point",
+      "path": "numerical_optimization_jnocedal/41_trust_region_methods_algorithms_based_on_the_cauchy_point.md",
+      "noteCount": 11,
+      "imageCount": 17
+    },
+    {
+      "title": "4.2 Trust-Region Methods: Global Convergence",
+      "path": "numerical_optimization_jnocedal/42_trust_region_methods_global_convergence.md",
+      "noteCount": 13,
+      "imageCount": 16
+    },
+    {
+      "title": "4.3 Trust-Region Methods: Iterative Solution of the Subproblem",
+      "path": "numerical_optimization_jnocedal/43_trust_region_methods_iterative_solution_of_the_subproblem.md",
+      "noteCount": 16,
+      "imageCount": 26
+    },
+    {
+      "title": "4.4 Trust-Region Methods: Local Convergence of Trust-Region Newton Method",
+      "path": "numerical_optimization_jnocedal/44_trust_region_methods_local_convergence_of_trust_region_newton_method.md",
+      "noteCount": 1,
+      "imageCount": 0
+    },
+    {
+      "title": "4.5 Trust-Region Methods: Other Enhancements",
+      "path": "numerical_optimization_jnocedal/45_trust_region_methods_other_enhancements.md",
+      "noteCount": 5,
+      "imageCount": 7
+    },
+    {
+      "title": "5.1 Linear Conjugate Gradient",
+      "path": "numerical_optimization_jnocedal/51_linear_conjugate_gradient.md",
+      "noteCount": 23,
+      "imageCount": 52
+    },
+    {
+      "title": "6.1 The BFGS Method",
+      "path": "numerical_optimization_jnocedal/61_the_bfgs_method.md",
+      "noteCount": 20,
+      "imageCount": 27
+    },
+    {
+      "title": "6.2 The SR1 Method",
+      "path": "numerical_optimization_jnocedal/62_the_sr1_method.md",
+      "noteCount": 6,
+      "imageCount": 15
+    },
+    {
+      "title": "6.4 Convergence Analysis",
+      "path": "numerical_optimization_jnocedal/64_convergence_analysis.md",
+      "noteCount": 5,
+      "imageCount": 6
+    },
+    {
+      "title": "7.1 Inexact Newton Methods",
+      "path": "numerical_optimization_jnocedal/71_inexact_newton_methods.md",
+      "noteCount": 22,
+      "imageCount": 28
+    },
+    {
+      "title": "7.2 Limited-Memory Quasi-Newton Methods",
+      "path": "numerical_optimization_jnocedal/72_limited_memory_quasi_newton_methods.md",
+      "noteCount": 19,
+      "imageCount": 23
+    },
+    {
+      "title": "8.1 Finite-Difference",
+      "path": "numerical_optimization_jnocedal/81_finite_difference_derivative_approx.md",
+      "noteCount": 20,
+      "imageCount": 29
+    },
+    {
+      "title": "8.2 Automatic differentiation(*extremely important for AI)",
+      "path": "numerical_optimization_jnocedal/82_automatic_differentiationextremely_important_for_ai.md",
+      "noteCount": 36,
+      "imageCount": 46
+    },
+    {
+      "title": "A.1 Error Analysis & Floating-Point Arithmetic",
+      "path": "numerical_optimization_jnocedal/a1_error_analysis_floating_point_arithmetic.md",
+      "noteCount": 8,
+      "imageCount": 10
+    },
+    {
+      "title": "A.1 Matrix Factorizations: Cholesky, LU, QR",
+      "path": "numerical_optimization_jnocedal/a1_matrix_factorizations_cholesky_lu_qr.md",
+      "noteCount": 9,
+      "imageCount": 11
+    },
+    {
+      "title": "Appendix A",
+      "path": "numerical_optimization_jnocedal/appendix_a.md",
+      "noteCount": 1,
+      "imageCount": 1
+    }
+  ],
+  "totalNotes": 392,
+  "totalImages": 550
+}
