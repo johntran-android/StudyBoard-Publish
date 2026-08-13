@@ -5,8 +5,6 @@
 ---
 <a id="node-6e545fx"></a>
 
-## 3.1.2 Geometry of least squares
-
 <p align="center"><kbd><img src="assets/o8a5bu6pa0d.png" width="80%"></kbd></p>
 
 > [!NOTE]
