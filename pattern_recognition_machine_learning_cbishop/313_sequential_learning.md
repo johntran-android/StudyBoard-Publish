@@ -5,8 +5,6 @@
 ---
 <a id="node-9o3hhga"></a>
 
-## 3.1.3 Sequential Learning
-
 <p align="center"><kbd><img src="assets/jdxsi8mjfj.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/i7xw0no18y.png" width="80%"></kbd></p>
