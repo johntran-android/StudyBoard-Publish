@@ -5,8 +5,6 @@
 ---
 <a id="node-1dy0iuq"></a>
 
-## 2.5.2 Nearest-neighbour methods
-
 <br>
 
 <a id="node-hr4ynja"></a>
@@ -253,7 +251,7 @@
 
 <a id="node-2ctjqyp"></a>
 
-- **Figure 2.28 K-nearest-neighbour Algorithm**
+###### Figure 2.28 K-nearest-neighbour Algorithm
 
 <p align="center"><kbd><img src="assets/2b9kzbbe9ua.png" width="80%"></kbd></p>
 
