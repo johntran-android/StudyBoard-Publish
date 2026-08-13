@@ -5,8 +5,6 @@
 ---
 <a id="node-nt8ghn7"></a>
 
-## 1.0 Into
-
 <br>
 
 <a id="node-sdxd7ip"></a>
@@ -120,7 +118,7 @@
 
 <a id="node-5a1qqm1"></a>
 
-- **Trích chọn đặc trưng để tối ưu**
+###### Trích chọn đặc trưng để tối ưu
 
 <p align="center"><kbd><img src="assets/58beelcuw78.png" width="80%"></kbd></p>
 
@@ -149,7 +147,7 @@
 
 <a id="node-qebm7e9"></a>
 
-- **Các loại bài toán Machine Learning**
+###### Các loại bài toán Machine Learning
 
 <p align="center"><kbd><img src="assets/hej0hneokci.png" width="80%"></kbd></p>
 
@@ -161,7 +159,7 @@
 
 <a id="node-9bf8uva"></a>
 
-- **Tổng quan Học tăng cường**
+###### Tổng quan Học tăng cường
 
 <p align="center"><kbd><img src="assets/bj7wc65e4gk.png" width="80%"></kbd></p>
 
@@ -173,7 +171,7 @@
 
 <a id="node-u7mtd5q"></a>
 
-- **Lý thuyết Xác suất, Thông tin, Quyết định**
+###### Lý thuyết Xác suất, Thông tin, Quyết định
 
 <p align="center"><kbd><img src="assets/xabng89hr4.png" width="80%"></kbd></p>
 
