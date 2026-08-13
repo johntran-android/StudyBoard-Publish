@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,223 notes` · `~17,637 screenshots` · `18 notebooks`**
+**`~12,225 notes` · `~17,638 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -50,7 +50,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `317 notes · 331 screenshots · 12 sections`
 
 > A comprehensive set of study notes for MIT 18.01 Single Variable Calculus, covering core topics from limits and derivatives to practical applications such as optimization, curve sketching, and approximation methods.
-> > Tập hợp chi tiết các ghi chép học tập cho khóa học Giải tích một biến MIT 18.01, bao gồm các chủ đề cốt lõi từ giới hạn, đạo hàm cho đến các ứng dụng thực tế như tối ưu hóa, khảo sát hàm số và các phương pháp xấp xỉ.
+> Tập hợp chi tiết các ghi chép học tập cho khóa học Giải tích một biến MIT 18.01, bao gồm các chủ đề cốt lõi từ giới hạn, đạo hàm cho đến các ứng dụng thực tế như tối ưu hóa, khảo sát hàm số và các phương pháp xấp xỉ.
 
 <details open>
 <summary>📖 12 sections</summary>
@@ -81,7 +81,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `549 notes · 615 screenshots · 22 sections`
 
 > This notebook contains study notes for MIT 18.02 (Multivariable Calculus), covering core topics such as vector algebra, matrices, partial derivatives, Lagrange multipliers, and double integrals.
-> > Vở ghi chép này tổng hợp các kiến thức môn Giải tích đa biến (MIT 18.02), bao gồm các chủ đề cốt lõi như đại số vector, ma trận, đạo hàm riêng, phương pháp nhân tử Lagrange và tích phân kép.
+> Vở ghi chép này tổng hợp các kiến thức môn Giải tích đa biến (MIT 18.02), bao gồm các chủ đề cốt lõi như đại số vector, ma trận, đạo hàm riêng, phương pháp nhân tử Lagrange và tích phân kép.
 
 <details open>
 <summary>📖 22 sections</summary>
@@ -122,7 +122,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `210 notes · 221 screenshots · 19 sections`
 
 > This notebook contains study notes and problem sets for MIT 18.S096 (Matrix Calculus for Machine Learning), covering core topics such as multidimensional derivatives, automatic differentiation, optimization, and computational graphs.
-> > Sổ tay ghi chép này tổng hợp bài học và bài tập từ khóa học MIT 18.S096 (Giải tích Ma trận cho Học máy), bao gồm các chủ đề cốt lõi như đạo hàm đa chiều, đạo hàm tự động, tối ưu hóa và đồ thị tính toán.
+> Sổ tay ghi chép này tổng hợp bài học và bài tập từ khóa học MIT 18.S096 (Giải tích Ma trận cho Học máy), bao gồm các chủ đề cốt lõi như đạo hàm đa chiều, đạo hàm tự động, tối ưu hóa và đồ thị tính toán.
 
 <details open>
 <summary>📖 19 sections</summary>
@@ -193,7 +193,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `106 notes · 139 screenshots · 13 sections`
 
 > A comprehensive compilation of study notes and solved problems for MIT 18.06 Linear Algebra, focusing on the four fundamental subspaces, matrix diagonalisation, singular value decomposition (SVD), and linear transformations.
-> > Tài liệu tổng hợp ghi chép lý thuyết và bài tập giải chi tiết môn Đại số Tuyến tính MIT 18.06, tập trung vào bốn không gian con cơ bản, chéo hóa ma trận, phân tích kỳ dị (SVD) và biến đổi tuyến tính.
+> Tài liệu tổng hợp ghi chép lý thuyết và bài tập giải chi tiết môn Đại số Tuyến tính MIT 18.06, tập trung vào bốn không gian con cơ bản, chéo hóa ma trận, phân tích kỳ dị (SVD) và biến đổi tuyến tính.
 
 <details open>
 <summary>📖 13 sections</summary>
@@ -225,7 +225,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `1,181 notes · 1,269 screenshots · 36 sections`
 
 > This notebook covers fundamental linear algebra concepts, from solving systems of equations and matrix operations to eigenvalues, SVD, and linear transformations, often emphasizing their geometric interpretations.
-> > Sổ tay này bao gồm các khái niệm cơ bản về đại số tuyến tính, từ giải hệ phương trình và các phép toán ma trận đến trị riêng, phân tích SVD và biến đổi tuyến tính, thường nhấn mạnh các diễn giải hình học của chúng.
+> Sổ tay này bao gồm các khái niệm cơ bản về đại số tuyến tính, từ giải hệ phương trình và các phép toán ma trận đến trị riêng, phân tích SVD và biến đổi tuyến tính, thường nhấn mạnh các diễn giải hình học của chúng.
 
 <details open>
 <summary>📖 36 sections</summary>
@@ -283,7 +283,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `791 notes · 1,108 screenshots · 27 sections`
 
 > A comprehensive study notebook for Stanford's CS224N (Natural Language Processing with Deep Learning) course, covering fundamental to advanced NLP concepts from word embeddings (Word2Vec, GloVe) to neural architectures like RNNs, Transformers, and RLHF.
-> > Sổ tay học tập toàn diện cho khóa học CS224N của Stanford (Xử lý Ngôn ngữ Tự nhiên với Học sâu), bao gồm các kiến thức từ cơ bản đến nâng cao từ biểu diễn từ (Word2Vec, GloVe) cho đến các kiến trúc mạng nơ-ron như RNN, Transformer và RLHF.
+> Sổ tay học tập toàn diện cho khóa học CS224N của Stanford (Xử lý Ngôn ngữ Tự nhiên với Học sâu), bao gồm các kiến thức từ cơ bản đến nâng cao từ biểu diễn từ (Word2Vec, GloVe) cho đến các kiến trúc mạng nơ-ron như RNN, Transformer và RLHF.
 
 <details open>
 <summary>📖 27 sections</summary>
@@ -329,7 +329,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `1,603 notes · 2,702 screenshots · 46 sections`
 
 > This notebook contains comprehensive study notes, lecture summaries, and programming assignments from Stanford's CS231n course on Convolutional Neural Networks for Visual Recognition.
-> > Cuốn sổ tay này tổng hợp các ghi chép học tập, tóm tắt bài giảng và bài tập thực hành từ khóa học CS231n của Đại học Stanford về Mạng nơ-ron tích chập cho Nhận dạng Thị giác.
+> Cuốn sổ tay này tổng hợp các ghi chép học tập, tóm tắt bài giảng và bài tập thực hành từ khóa học CS231n của Đại học Stanford về Mạng nơ-ron tích chập cho Nhận dạng Thị giác.
 
 <details open>
 <summary>📖 46 sections</summary>
@@ -394,7 +394,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `1,083 notes · 1,827 screenshots · 19 sections`
 
 > A comprehensive compilation of notes, quizzes, and programming assignments from the Coursera Deep Learning Specialization. It covers topics ranging from foundational neural networks to advanced computer vision, NLP architectures, and model optimization using TensorFlow.
-> > Tổng hợp toàn diện các ghi chép, bài trắc nghiệm và bài tập lập trình từ Chuyên ngành Deep Learning trên Coursera. Nội dung bao gồm từ các khái niệm mạng nơ-ron cơ bản đến các kiến trúc nâng cao về thị giác máy tính, NLP và tối ưu hóa mô hình bằng TensorFlow.
+> Tổng hợp toàn diện các ghi chép, bài trắc nghiệm và bài tập lập trình từ Chuyên ngành Deep Learning trên Coursera. Nội dung bao gồm từ các khái niệm mạng nơ-ron cơ bản đến các kiến trúc nâng cao về thị giác máy tính, NLP và tối ưu hóa mô hình bằng TensorFlow.
 
 <details open>
 <summary>📖 19 sections</summary>
@@ -432,7 +432,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `1,808 notes · 2,287 screenshots · 19 sections`
 
 > A comprehensive collection of study notes, practical exercises, and implementations from the Coursera NLP Specialization, covering foundational NLP techniques, sequence models, and modern Transformer architectures.
-> > Cuốn sổ tay tổng hợp các ghi chép học tập, bài tập thực hành và mã nguồn từ khóa học Chuyên sâu về NLP trên Coursera, bao gồm các kỹ thuật NLP nền tảng, mô hình chuỗi và kiến trúc Transformer hiện đại.
+> Cuốn sổ tay tổng hợp các ghi chép học tập, bài tập thực hành và mã nguồn từ khóa học Chuyên sâu về NLP trên Coursera, bao gồm các kỹ thuật NLP nền tảng, mô hình chuỗi và kiến trúc Transformer hiện đại.
 
 <details open>
 <summary>📖 19 sections</summary>
@@ -473,7 +473,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `875 notes · 1,347 screenshots · 21 sections`
 
 > A comprehensive collection of study notes and lecture summaries for Stephen Boyd's Convex Optimization course (EE364a), covering fundamental concepts such as convex sets and functions, duality theory, KKT conditions, and optimization algorithms.
-> > Bộ sưu tập chi tiết các ghi chép học tập và tóm tắt bài giảng cho khóa học Tối ưu hóa Lồi (EE364a) của Stephen Boyd, bao gồm các khái niệm nền tảng như tập hợp và hàm lồi, lý thuyết đối ngẫu, điều kiện KKT và các thuật toán tối ưu hóa.
+> Bộ sưu tập chi tiết các ghi chép học tập và tóm tắt bài giảng cho khóa học Tối ưu hóa Lồi (EE364a) của Stephen Boyd, bao gồm các khái niệm nền tảng như tập hợp và hàm lồi, lý thuyết đối ngẫu, điều kiện KKT và các thuật toán tối ưu hóa.
 
 <details open>
 <summary>📖 21 sections</summary>
@@ -513,7 +513,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `397 notes · 560 screenshots · 32 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
-> 
 > Sổ tay này đi sâu vào các thuật toán tối ưu hóa số cốt lõi như tìm kiếm đường thẳng, vùng tin cậy, quasi-Newton và gradient liên hợp, cùng các khái niệm thiết yếu như đạo hàm tự động, phân tích hội tụ và kỹ thuật đại số tuyến tính số.
 
 <details open>
@@ -568,7 +567,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `355 notes · 517 screenshots · 47 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
-> > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
+> Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
 <summary>📖 47 sections</summary>
@@ -637,7 +636,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `881 notes · 1,109 screenshots · 32 sections`
 
 > This notebook explores foundational and advanced topics in probability and statistical inference, covering random variables, their distributions (discrete and continuous), expectation, variance, moment generating functions, and key theorems such as the Law of Large Numbers and Central Limit Theorem.
-> > Sổ tay này khám phá các chủ đề cơ bản và nâng cao trong lý thuyết xác suất và suy luận thống kê, bao gồm các biến ngẫu nhiên, các phân phối của chúng (rời rạc và liên tục), kỳ vọng, phương sai, hàm sinh moment, và các định lý quan trọng như Luật Số lớn và Định lý Giới hạn Trung tâm.
+> Sổ tay này khám phá các chủ đề cơ bản và nâng cao trong lý thuyết xác suất và suy luận thống kê, bao gồm các biến ngẫu nhiên, các phân phối của chúng (rời rạc và liên tục), kỳ vọng, phương sai, hàm sinh moment, và các định lý quan trọng như Luật Số lớn và Định lý Giới hạn Trung tâm.
 
 <details open>
 <summary>📖 32 sections</summary>
@@ -685,10 +684,11 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 ### Statistical Inference - Casella
 <!-- key: statistical_inference_casella -->
 <!-- group: Probability & Statistics -->
-`838 notes · 1,096 screenshots · 48 sections`
+`840 notes · 1,097 screenshots · 48 sections`
 
 > This notebook contains detailed study notes and proofs based on Casella and Berger's *Statistical Inference*, covering key topics in probability theory, estimation methods, hypothesis testing, and asymptotic properties.
-> > Sổ tay học tập này tổng hợp các ghi chép và chứng minh chi tiết dựa trên giáo trình *Statistical Inference* của Casella và Berger, bao gồm các chủ đề cốt lõi về lý thuyết xác suất, phương pháp ước lượng, kiểm định giả thuyết và tính chất tiệm cận.
+> 
+> Sổ tay học tập này tổng hợp các ghi chép và chứng minh chi tiết dựa trên giáo trình *Statistical Inference* của Casella và Berger, bao gồm các chủ đề cốt lõi về lý thuyết xác suất, phương pháp ước lượng, kiểm định giả thuyết và tính chất tiệm cận.
 
 <details open>
 <summary>📖 48 sections</summary>
@@ -697,13 +697,13 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 |---|---:|---:|
 | [📋 Overview](statistical_inference_casella/_overview.md) | 0 | 1 |
 | [1.1 Set Theory](statistical_inference_casella/11_set_theory.md) | 6 | 9 |
-| [1.2.1 Axiomatic foundation](statistical_inference_casella/121_axiomatic_foundation.md) | 9 | 10 |
-| [1.2.2 Calculus of Probability](statistical_inference_casella/122_calculus_of_probability.md) | 5 | 9 |
+| [1.2.1 Axiomatic Foundation](statistical_inference_casella/121_axiomatic_foundation.md) | 9 | 10 |
+| [1.2.2 Calculus Of Probability](statistical_inference_casella/122_calculus_of_probability.md) | 5 | 9 |
 | [1.2.3 Counting](statistical_inference_casella/123_counting.md) | 6 | 8 |
-| [1.2.4 Enumerating outcome](statistical_inference_casella/124_enumerating_outcome.md) | 10 | 14 |
-| [1.3 Conditional probability & Independence](statistical_inference_casella/13_conditional_probability_independence.md) | 12 | 16 |
+| [1.2.4 Enumerating Outcome](statistical_inference_casella/124_enumerating_outcome.md) | 10 | 14 |
+| [1.3 Conditional Probability & Independence](statistical_inference_casella/13_conditional_probability_independence.md) | 12 | 16 |
 | [1.4 Random Variables](statistical_inference_casella/14_random_variables.md) | 4 | 5 |
-| [1.5 Distribution function](statistical_inference_casella/15_distribution_function.md) | 9 | 11 |
+| [1.5 Distribution Function](statistical_inference_casella/15_distribution_function.md) | 9 | 11 |
 | [1.6 PDF & Pmf](statistical_inference_casella/16_pdf_pmf.md) | 4 | 5 |
 | [2.1 Distribution](statistical_inference_casella/21_distribution.md) | 15 | 21 |
 | [2.2 Expected Value](statistical_inference_casella/22_expected_value.md) | 7 | 10 |
@@ -713,36 +713,36 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [3.1&2 Discrete distribution](statistical_inference_casella/312_discrete_distribution.md) | 20 | 32 |
 | [3.3 Continuous distribution](statistical_inference_casella/33_continuous_distribution.md) | 24 | 38 |
 | [3.4 Exponential families](statistical_inference_casella/34_exponential_families.md) | 10 | 15 |
-| [3.5 Location And scale Families](statistical_inference_casella/35_location_and_scale_families.md) | 12 | 17 |
+| [3.5 Location And Scale Families](statistical_inference_casella/35_location_and_scale_families.md) | 12 | 17 |
 | [3.6 Inequalities](statistical_inference_casella/36_inequalities.md) | 9 | 12 |
 | [4.1 Joint & Marginal Distribution](statistical_inference_casella/41_joint_marginal_distribution.md) | 13 | 19 |
-| [4.2 Conditional Distributions & independent](statistical_inference_casella/42_conditional_distributions_independent.md) | 18 | 27 |
-| [4.3 Bivariate transformation](statistical_inference_casella/43_bivariate_transformation.md) | 14 | 24 |
-| [4.4 Hierarchical Model & mixture Distribution](statistical_inference_casella/44_hierarchical_model_mixture_distribution.md) | 11 | 19 |
-| [4.5 Covariance & correlation](statistical_inference_casella/45_covariance_correlation.md) | 18 | 25 |
-| [4.6 Multi-variate distribution](statistical_inference_casella/46_multi_variate_distribution.md) | 22 | 28 |
+| [4.2 Conditional Distributions & Independent](statistical_inference_casella/42_conditional_distributions_independent.md) | 18 | 27 |
+| [4.3 Bivariate Transformation](statistical_inference_casella/43_bivariate_transformation.md) | 14 | 24 |
+| [4.4 Hierarchical Model & Mixture Distribution](statistical_inference_casella/44_hierarchical_model_mixture_distribution.md) | 11 | 19 |
+| [4.5 Covariance & Correlation](statistical_inference_casella/45_covariance_correlation.md) | 18 | 25 |
+| [4.6 Multi-variate Distribution](statistical_inference_casella/46_multi_variate_distribution.md) | 22 | 28 |
 | [4.7 Inequalities](statistical_inference_casella/47_inequalities.md) | 1 | 0 |
-| [5.1 Basic Concepts Of random Samples](statistical_inference_casella/51_basic_concepts_of_random_samples.md) | 13 | 16 |
-| [5.2 Σ Of Random Variables from A Random Sample](statistical_inference_casella/52_of_random_variables_from_a_random_sample.md) | 18 | 26 |
-| [5.3 Sampling From The normal Distribution](statistical_inference_casella/53_sampling_from_the_normal_distribution.md) | 21 | 29 |
+| [5.1 Basic Concepts Of Random Samples](statistical_inference_casella/51_basic_concepts_of_random_samples.md) | 13 | 16 |
+| [5.2 Σ Of Random Variables From A Random Sample](statistical_inference_casella/52_of_random_variables_from_a_random_sample.md) | 18 | 26 |
+| [5.3 Sampling From The Normal Distribution](statistical_inference_casella/53_sampling_from_the_normal_distribution.md) | 21 | 29 |
 | [5.4 Order Statistic](statistical_inference_casella/54_order_statistic.md) | 12 | 16 |
 | [5.5 Convergence Concepts](statistical_inference_casella/55_convergence_concepts.md) | 42 | 52 |
-| [5.6 Generating random Sample](statistical_inference_casella/56_generating_random_sample.md) | 31 | 43 |
+| [5.6 Generating Random Sample](statistical_inference_casella/56_generating_random_sample.md) | 31 | 43 |
 | [6.1 Introduction](statistical_inference_casella/61_introduction.md) | 3 | 4 |
 | [6.2 The Sufficient Principle](statistical_inference_casella/62_the_sufficient_principle.md) | 46 | 59 |
 | [6.3 The Likelihood Principle](statistical_inference_casella/63_the_likelihood_principle.md) | 19 | 23 |
 | [6.4 The Equivariance Principle](statistical_inference_casella/64_the_equivariance_principle.md) | 11 | 14 |
 | [7.1 Introduction](statistical_inference_casella/71_introduction.md) | 3 | 3 |
-| [7.2 Method Of finding Estimators](statistical_inference_casella/72_method_of_finding_estimators.md) | 42 | 52 |
-| [7.3 Methods Of evaluating Estimators](statistical_inference_casella/73_methods_of_evaluating_estimators.md) | 63 | 74 |
+| [7.2 Method Of Finding Estimators](statistical_inference_casella/72_method_of_finding_estimators.md) | 42 | 52 |
+| [7.3 Methods Of Evaluating Estimators](statistical_inference_casella/73_methods_of_evaluating_estimators.md) | 63 | 74 |
 | [8.1 Introduction](statistical_inference_casella/81_introduction.md) | 5 | 5 |
 | [8.2 Method Of Finding Tests](statistical_inference_casella/82_method_of_finding_tests.md) | 21 | 26 |
 | [8.3 Methods Of Evaluating Test](statistical_inference_casella/83_methods_of_evaluating_test.md) | 53 | 64 |
 | [9.1 Introduction](statistical_inference_casella/91_introduction.md) | 9 | 9 |
-| [9.2 Methods Of Finding interval Estimators](statistical_inference_casella/92_methods_of_finding_interval_estimators.md) | 52 | 61 |
-| [9.3 Methods Of Evaluating interval Estimators](statistical_inference_casella/93_methods_of_evaluating_interval_estimators.md) | 34 | 35 |
-| [10.1 Point Estimation](statistical_inference_casella/101_point_estimation.md) | 42 | 49 |
-| [10.2 Robustness](statistical_inference_casella/102_robustness.md) | 12 | 15 |
+| [9.2 Methods Of Finding Interval Estimators](statistical_inference_casella/92_methods_of_finding_interval_estimators.md) | 52 | 61 |
+| [9.3 Methods Of Evaluating Interval Estimators](statistical_inference_casella/93_methods_of_evaluating_interval_estimators.md) | 34 | 35 |
+| [10.1 Point Estimation](statistical_inference_casella/101_point_estimation.md) | 42 | 48 |
+| [10.2 Robustness](statistical_inference_casella/102_robustness.md) | 14 | 17 |
 
 </details>
 
