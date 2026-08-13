@@ -5,8 +5,6 @@
 ---
 <a id="node-2o000zc"></a>
 
-## 3.3.1 Bayesian Linear Regression
-
 <p align="center"><kbd><img src="assets/lfdkvgqkwyh.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -428,7 +426,7 @@
 
 <a id="node-ek7ydwk"></a>
 
-- **Bayesian Linear Regression Example**
+###### Bayesian Linear Regression Example
 
 <p align="center"><kbd><img src="assets/e0lxfmqww39.png" width="80%"></kbd></p>
 
@@ -484,7 +482,7 @@
 
 <a id="node-cpf6sek"></a>
 
-- **Bayesian Linear Regression**
+###### Bayesian Linear Regression
 
 <p align="center"><kbd><img src="assets/f48m4xtjxra.png" width="80%"></kbd></p>
 
@@ -632,7 +630,7 @@
 
 <a id="node-s30ywpk"></a>
 
-- **Generalized Gaussian Prior Distribution**
+###### Generalized Gaussian Prior Distribution
 
 <p align="center"><kbd><img src="assets/eprp3s513b9.png" width="80%"></kbd></p>
 
