@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,218 notes` · `~17,627 screenshots` · `18 notebooks`**
+**`~12,223 notes` · `~17,637 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -510,23 +510,18 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 ### Numerical Optimization_J.Nocedal
 <!-- key: numerical_optimization_jnocedal -->
 <!-- group: Optimization -->
-`392 notes · 550 screenshots · 31 sections`
+`397 notes · 560 screenshots · 32 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
-> > Sổ tay này đi sâu vào các thuật toán tối ưu hóa số cốt lõi như tìm kiếm đường thẳng, vùng tin cậy, quasi-Newton và gradient liên hợp, cùng các khái niệm thiết yếu như đạo hàm tự động, phân tích hội tụ và kỹ thuật đại số tuyến tính số.
+> 
+> Sổ tay này đi sâu vào các thuật toán tối ưu hóa số cốt lõi như tìm kiếm đường thẳng, vùng tin cậy, quasi-Newton và gradient liên hợp, cùng các khái niệm thiết yếu như đạo hàm tự động, phân tích hội tụ và kỹ thuật đại số tuyến tính số.
 
 <details open>
-<summary>📖 31 sections</summary>
+<summary>📖 32 sections</summary>
 
 | Section | Notes | Screenshots |
 |---|---:|---:|
 | [📋 Overview](numerical_optimization_jnocedal/_overview.md) | 1 | 1 |
-| [10.1 Least-square problem](numerical_optimization_jnocedal/101_least_square_problem.md) | 11 | 13 |
-| [10.2 Linear Least-Square Problem](numerical_optimization_jnocedal/102_linear_least_square_problem.md) | 9 | 11 |
-| [10.3 Algorithms for nonlinear least-squares problem](numerical_optimization_jnocedal/103_algorithms_for_nonlinear_least_squares_problem.md) | 14 | 23 |
-| [10.4 Orthogonal Distance Regression (bỏ qua)](numerical_optimization_jnocedal/104_orthogonal_distance_regression_b_qua.md) | 1 | 1 |
-| [12.0 Theory of Constrained Optimization](numerical_optimization_jnocedal/120_theory_of_constrained_optimization.md) | 5 | 8 |
-| [12.1 Examples](numerical_optimization_jnocedal/121_examples.md) | 7 | 12 |
 | [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization_jnocedal/21_funds_of_unconstrained_optim_whats_solution.md) | 15 | 21 |
 | [2.2 Funds of Unconstrained Optim - Overview of Algorithms](numerical_optimization_jnocedal/22_funds_of_unconstrained_optim_overview_of_algorithms.md) | 24 | 35 |
 | [3.1 Line Search Method: Step Length](numerical_optimization_jnocedal/31_line_search_method_step_length.md) | 13 | 20 |
@@ -546,11 +541,18 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [6.4 Convergence Analysis](numerical_optimization_jnocedal/64_convergence_analysis.md) | 5 | 6 |
 | [7.1 Inexact Newton Methods](numerical_optimization_jnocedal/71_inexact_newton_methods.md) | 22 | 28 |
 | [7.2 Limited-Memory Quasi-Newton Methods](numerical_optimization_jnocedal/72_limited_memory_quasi_newton_methods.md) | 19 | 23 |
-| [8.1 Finite-Difference](numerical_optimization_jnocedal/81_finite_difference_derivative_approx.md) | 20 | 29 |
+| [8.1 Finite-Difference Derivative Approx](numerical_optimization_jnocedal/81_finite_difference_derivative_approx.md) | 20 | 29 |
 | [8.2 Automatic differentiation(*extremely important for AI)](numerical_optimization_jnocedal/82_automatic_differentiationextremely_important_for_ai.md) | 36 | 46 |
+| [10.1 Least-square problem](numerical_optimization_jnocedal/101_least_square_problem.md) | 11 | 13 |
+| [10.2 Linear Least-Square Problem](numerical_optimization_jnocedal/102_linear_least_square_problem.md) | 9 | 11 |
+| [10.3 Algorithms for nonlinear least-squares problem](numerical_optimization_jnocedal/103_algorithms_for_nonlinear_least_squares_problem.md) | 14 | 23 |
+| [10.4 Orthogonal Distance Regression (bỏ qua)](numerical_optimization_jnocedal/104_orthogonal_distance_regression_b_qua.md) | 1 | 1 |
+| [12.0 Theory of Constrained Optimization](numerical_optimization_jnocedal/120_theory_of_constrained_optimization.md) | 5 | 8 |
+| [12.1 Examples](numerical_optimization_jnocedal/121_examples.md) | 9 | 17 |
+| [12.3 First Order Optimality Condition](numerical_optimization_jnocedal/123_first_order_optimality_condition.md) | 3 | 5 |
+| [Appendix A](numerical_optimization_jnocedal/appendix_a.md) | 1 | 1 |
 | [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_jnocedal/a1_error_analysis_floating_point_arithmetic.md) | 8 | 10 |
 | [A.1 Matrix Factorizations: Cholesky, LU, QR](numerical_optimization_jnocedal/a1_matrix_factorizations_cholesky_lu_qr.md) | 9 | 11 |
-| [Appendix A](numerical_optimization_jnocedal/appendix_a.md) | 1 | 1 |
 
 </details>
 
@@ -566,8 +568,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `355 notes · 517 screenshots · 47 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
-> 
-> Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
+> > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
 <summary>📖 47 sections</summary>
