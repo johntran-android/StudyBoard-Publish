@@ -5,8 +5,6 @@
 ---
 <a id="node-05anyjt"></a>
 
-## 3.4 Exponential families
-
 <br>
 
 <a id="node-vx6ku00"></a>
@@ -275,7 +273,7 @@
 
 <a id="node-7eyobyz"></a>
 
-- **Phân Phối Normal Họ Hàm Mũ**
+###### Phân Phối Normal Họ Hàm Mũ
 
 <p align="center"><kbd><img src="assets/h1c8s9424v9.png" width="80%"></kbd></p>
 
@@ -422,7 +420,7 @@
 
 <a id="node-iid8zor"></a>
 
-- **Tập hỗ trợ gia đình mũ**
+###### Tập hỗ trợ gia đình mũ
 
 <p align="center"><kbd><img src="assets/qx1jp97sl6.png" width="80%"></kbd></p>
 
@@ -457,7 +455,7 @@
 
 <a id="node-rieim5a"></a>
 
-- **Không gian tham số tự nhiên**
+###### Không gian tham số tự nhiên
 
 <p align="center"><kbd><img src="assets/oonncusmvo.png" width="80%"></kbd></p>
 
@@ -469,7 +467,7 @@
 
 <a id="node-xlswd6l"></a>
 
-- **Hội tụ tích phân Normal**
+###### Hội tụ tích phân Normal
 
 <p align="center"><kbd><img src="assets/p7mml9voj78.png" width="80%"></kbd></p>
 
@@ -614,7 +612,7 @@
 
 <a id="node-c354uly"></a>
 
-- **Full và Curved Exponent Family**
+###### Full và Curved Exponent Family
 
 <p align="center"><kbd><img src="assets/x8xl9ttwagi.png" width="80%"></kbd></p>
 
@@ -642,7 +640,7 @@
 
 <a id="node-k4w282h"></a>
 
-- **Xấp xỉ Chuẩn Poisson**
+###### Xấp xỉ Chuẩn Poisson
 
 <p align="center"><kbd><img src="assets/x3vh9avk8r.png" width="80%"></kbd></p>
 
