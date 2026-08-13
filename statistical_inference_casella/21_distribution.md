@@ -5,8 +5,6 @@
 ---
 <a id="node-0qrdxlz"></a>
 
-## 2.1 Distribution
-
 <br>
 
 <a id="node-v2c2n9j"></a>
@@ -450,7 +448,7 @@
 
 <a id="node-zdtg5p1"></a>
 
-- **CDF của sin^2(X) phức tạp**
+###### CDF của sin^2(X) phức tạp
 
 <p align="center"><kbd><img src="assets/3hj49jpwh8d.png" width="80%"></kbd></p>
 
@@ -510,7 +508,7 @@
 
 <a id="node-sjshzi1"></a>
 
-- **Phân phối Y=g(X) đơn điệu**
+###### Phân phối Y=g(X) đơn điệu
 
 <p align="center"><kbd><img src="assets/a6yr4qz346i.png" width="80%"></kbd></p>
 
@@ -571,7 +569,7 @@
 
 <a id="node-8ixo1nj"></a>
 
-- **Chứng minh Định lý 2.1.3**
+###### Chứng minh Định lý 2.1.3
 
 <p align="center"><kbd><img src="assets/08i7dc2ok1ov.png" width="80%"></kbd></p>
 
@@ -583,7 +581,7 @@
 
 <a id="node-ag2rjy2"></a>
 
-- **Phân phối của -log(X)**
+###### Phân phối của -log(X)
 
 <p align="center"><kbd><img src="assets/a33cnbcn6el.png" width="80%"></kbd></p>
 
@@ -623,7 +621,7 @@
 
 <a id="node-m779doj"></a>
 
-- **Định lý biến đổi hàm mật độ**
+###### Định lý biến đổi hàm mật độ
 
 <p align="center"><kbd><img src="assets/znmc5ok4r7.png" width="80%"></kbd></p>
 
@@ -707,7 +705,7 @@
 
 <a id="node-rpp5mf7"></a>
 
-- **Phân bố Gamma ngược**
+###### Phân bố Gamma ngược
 
 <p align="center"><kbd><img src="assets/2snoj045qar.png" width="80%"></kbd></p>
 
@@ -752,7 +750,7 @@
 
 <a id="node-6yi0r3h"></a>
 
-- **Đạo hàm PDF của Y=X^2**
+###### Đạo hàm PDF của Y=X^2
 
 <p align="center"><kbd><img src="assets/2mtuj27hhdp.png" width="80%"></kbd></p>
 
@@ -856,7 +854,7 @@
 
 <a id="node-hbxp4xf"></a>
 
-- **Chuyển đổi PDF biến ngẫu nhiên**
+###### Chuyển đổi PDF biến ngẫu nhiên
 
 <p align="center"><kbd><img src="assets/rvd4h4583u.png" width="80%"></kbd></p>
 
@@ -1092,7 +1090,7 @@
 
 <a id="node-f14tr9i"></a>
 
-- **Phân phối Chi-squared từ Y=X^2**
+###### Phân phối Chi-squared từ Y=X^2
 
 <p align="center"><kbd><img src="assets/3fc22t50ro3.png" width="80%"></kbd></p>
 
@@ -1107,7 +1105,7 @@
 
 <a id="node-pxfeoev"></a>
 
-- **Tính phổ quát của Uniform(0,1)**
+###### Tính phổ quát của Uniform(0,1)
 
 <p align="center"><kbd><img src="assets/k409q48d68h.png" width="80%"></kbd></p>
 
@@ -1241,7 +1239,7 @@
 
 <a id="node-gk21cay"></a>
 
-- **Biến đổi CDF sang Unif(0,1)**
+###### Biến đổi CDF sang Unif(0,1)
 
 <p align="center"><kbd><img src="assets/llgcdlkoo9.png" width="80%"></kbd></p>
 
