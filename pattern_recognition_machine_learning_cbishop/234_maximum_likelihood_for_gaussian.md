@@ -5,8 +5,6 @@
 ---
 <a id="node-hddmpl9"></a>
 
-## 2.3.4 Maximum Likelihood for Gaussian
-
 <br>
 
 <a id="node-elojjdn"></a>
