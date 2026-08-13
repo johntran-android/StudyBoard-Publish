@@ -5,8 +5,6 @@
 ---
 <a id="node-1s9eyw1"></a>
 
-## 1.6 Information Theory
-
 <br>
 
 <a id="node-v5xo1lp"></a>
@@ -234,7 +232,7 @@
 
 <a id="node-elslwki"></a>
 
-- **Entropy: Bits và Nats**
+###### Entropy: Bits và Nats
 
 <p align="center"><kbd><img src="assets/c302adptxyi.png" width="80%"></kbd></p>
 
@@ -251,7 +249,7 @@
 
 <a id="node-kxh9r4e"></a>
 
-- **Entropy: Thước đo sự hỗn loạn**
+###### Entropy: Thước đo sự hỗn loạn
 
 <p align="center"><kbd><img src="assets/y4o8b8qexqd.png" width="80%"></kbd></p>
 
@@ -350,7 +348,7 @@
 
 <a id="node-ezq1odt"></a>
 
-- **Xấp xỉ Stirling và Entropy**
+###### Xấp xỉ Stirling và Entropy
 
 <p align="center"><kbd><img src="assets/91qapr8arud.png" width="80%"></kbd></p>
 
@@ -455,7 +453,7 @@
 
 <a id="node-lzssfch"></a>
 
-- **Microstate, Macrostate, Trọng số**
+###### Microstate, Macrostate, Trọng số
 
 <p align="center"><kbd><img src="assets/2dmkna55pc9.png" width="80%"></kbd></p>
 
@@ -487,7 +485,7 @@
 
 <a id="node-nrk591v"></a>
 
-- **Đối chiếu Entropy Thông tin Vật lý**
+###### Đối chiếu Entropy Thông tin Vật lý
 
 <p align="center"><kbd><img src="assets/91ogt0w455e.png" width="80%"></kbd></p>
 
@@ -545,7 +543,7 @@
 
 <a id="node-4o27gpm"></a>
 
-- **Entropy và Phân phối Xác suất**
+###### Entropy và Phân phối Xác suất
 
 <p align="center"><kbd><img src="assets/u8zduyqcuws.png" width="80%"></kbd></p>
 
@@ -594,7 +592,7 @@
 
 <a id="node-hhyh07u"></a>
 
-- **Tối ưu Entropy và Hàm Lagrangian**
+###### Tối ưu Entropy và Hàm Lagrangian
 
 <p align="center"><kbd><img src="assets/wusfz0s69v.png" width="80%"></kbd></p>
 
@@ -1063,7 +1061,7 @@
 
 <a id="node-r4hbo0k"></a>
 
-- **Mở rộng PDF biến liên tục**
+###### Mở rộng PDF biến liên tục
 
 <p align="center"><kbd><img src="assets/bg4xrzktq5e.png" width="80%"></kbd></p>
 
@@ -1228,7 +1226,7 @@
 
 <a id="node-1l1fbic"></a>
 
-- **Entropy vi phân**
+###### Entropy vi phân
 
 <p align="center"><kbd><img src="assets/aacvt8kkzf.png" width="80%"></kbd></p>
 
@@ -1239,7 +1237,7 @@
 
 <a id="node-71bnwai"></a>
 
-- **Phân phối chuẩn entropy tối đa**
+###### Phân phối chuẩn entropy tối đa
 
 <p align="center"><kbd><img src="assets/t12fpw4sqln.png" width="80%"></kbd></p>
 
@@ -1286,7 +1284,7 @@
 >
 >
 >
-> - Σi fY(yi) ln\[fY(yi)\] = - Σi f(xi) Δ ln \[f(xi) Δ\]
+> \- Σi fY(yi) ln\[fY(yi)\] = - Σi f(xi) Δ ln \[f(xi) Δ\]
 >
 >
 >
@@ -1536,7 +1534,7 @@
 
 <a id="node-veonl24"></a>
 
-- **Entropy phân phối Gauss**
+###### Entropy phân phối Gauss
 
 <p align="center"><kbd><img src="assets/q4vxbl06gy.png" width="80%"></kbd></p>
 
@@ -1624,7 +1622,7 @@
 
 <a id="node-3i7z68a"></a>
 
-- **Entropy có điều kiện**
+###### Entropy có điều kiện
 
 <p align="center"><kbd><img src="assets/6i1tk5c7sag.png" width="80%"></kbd></p>
 
@@ -1724,7 +1722,7 @@
 
 <a id="node-c9tv275"></a>
 
-- **KL Divergence**
+###### KL Divergence
 
 <p align="center"><kbd><img src="assets/b9ntfgfs5u.png" width="80%"></kbd></p>
 
@@ -1804,7 +1802,7 @@
 
 <a id="node-2akd8za"></a>
 
-- **Hàm lồi: Đạo hàm bậc hai**
+###### Hàm lồi: Đạo hàm bậc hai
 
 <p align="center"><kbd><img src="assets/ivo3wiae12g.png" width="80%"></kbd></p>
 
@@ -1961,7 +1959,7 @@
 
 <a id="node-nvpf8to"></a>
 
-- **Bất đẳng thức Jensen**
+###### Bất đẳng thức Jensen
 
 <p align="center"><kbd><img src="assets/qs0fq7p65gi.png" width="80%"></kbd></p>
 
@@ -2049,7 +2047,7 @@
 
 <a id="node-hh2wohi"></a>
 
-- **KL-divergence và tính chất**
+###### KL-divergence và tính chất
 
 <p align="center"><kbd><img src="assets/d8l7npyh76u.png" width="80%"></kbd></p>
 
@@ -2168,11 +2166,13 @@
 > này được dùng để đo sự khác nhau (phân tách / divergence) của hai
 > phân phối xác suất
 
+**🔗 See also:** [Bayesian Model Comparison](./34_bayesian_model_comparison.md#node-7rkr8xy)
+
 <br>
 
 <a id="node-fl1grsl"></a>
 
-- **Nén dữ liệu và Entropy thông tin**
+###### Nén dữ liệu và Entropy thông tin
 
 <p align="center"><kbd><img src="assets/eyib1qfuas.png" width="80%"></kbd></p>
 
@@ -2279,7 +2279,7 @@
 
 <a id="node-1tako5e"></a>
 
-- **Ước lượng độ phân kỳ KL**
+###### Ước lượng độ phân kỳ KL
 
 <p align="center"><kbd><img src="assets/30a1ft34ari.png" width="80%"></kbd></p>
 
@@ -2417,7 +2417,7 @@
 
 <a id="node-9aycafp"></a>
 
-- **Đo lường độc lập bằng KL-divergence**
+###### Đo lường độc lập bằng KL-divergence
 
 <p align="center"><kbd><img src="assets/9b06s0iwlf.png" width="80%"></kbd></p>
 
@@ -2447,7 +2447,7 @@
 
 <a id="node-rhe33yu"></a>
 
-- **Giảm bất định của thông tin tương hỗ**
+###### Giảm bất định của thông tin tương hỗ
 
 <p align="center"><kbd><img src="assets/je442lszwu.png" width="80%"></kbd></p>
 
