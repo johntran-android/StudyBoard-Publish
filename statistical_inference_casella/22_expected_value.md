@@ -5,8 +5,6 @@
 ---
 <a id="node-5atvgfg"></a>
 
-## 2.2 Expected Value
-
 <br>
 
 <a id="node-p3585vu"></a>
@@ -463,7 +461,7 @@
 
 <a id="node-qcu1zka"></a>
 
-- **Nguồn gốc tính chất kỳ vọng**
+###### Nguồn gốc tính chất kỳ vọng
 
 <p align="center"><kbd><img src="assets/kvwh17hdwyc.png" width="80%"></kbd></p>
 
@@ -482,7 +480,7 @@
 
 <a id="node-0loinmk"></a>
 
-- **EX: Giá trị dự đoán tốt nhất**
+###### EX: Giá trị dự đoán tốt nhất
 
 <p align="center"><kbd><img src="assets/ek114duh5aw.png" width="80%"></kbd></p>
 
@@ -626,7 +624,7 @@
 
 <a id="node-4yspyxx"></a>
 
-- **LOTUS và tích phân từng phần**
+###### LOTUS và tích phân từng phần
 
 <p align="center"><kbd><img src="assets/ldszi320ge7.png" width="80%"></kbd></p>
 
