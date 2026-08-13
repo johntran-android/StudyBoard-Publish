@@ -5,8 +5,6 @@
 ---
 <a id="node-niekuox"></a>
 
-## 2.4.1 Maximum likelihood & sufficient statistic
-
 <p align="center"><kbd><img src="assets/7swge4ekywk.png" width="80%"></kbd></p>
 
 > [!NOTE]
