@@ -1,48 +1,12 @@
 {
-  "title": "numerical_optimization_jnocedal",
-  "publishedAt": 1786562258649,
+  "title": "Numerical Optimization_J.Nocedal",
+  "publishedAt": 1786595814330,
   "sections": [
     {
       "title": "📋 Overview",
       "path": "numerical_optimization_jnocedal/_overview.md",
       "noteCount": 1,
       "imageCount": 1
-    },
-    {
-      "title": "10.1 Least-square problem",
-      "path": "numerical_optimization_jnocedal/101_least_square_problem.md",
-      "noteCount": 11,
-      "imageCount": 13
-    },
-    {
-      "title": "10.2 Linear Least-Square Problem",
-      "path": "numerical_optimization_jnocedal/102_linear_least_square_problem.md",
-      "noteCount": 9,
-      "imageCount": 11
-    },
-    {
-      "title": "10.3 Algorithms for nonlinear least-squares problem",
-      "path": "numerical_optimization_jnocedal/103_algorithms_for_nonlinear_least_squares_problem.md",
-      "noteCount": 14,
-      "imageCount": 23
-    },
-    {
-      "title": "10.4 Orthogonal Distance Regression (bỏ qua)",
-      "path": "numerical_optimization_jnocedal/104_orthogonal_distance_regression_b_qua.md",
-      "noteCount": 1,
-      "imageCount": 1
-    },
-    {
-      "title": "12.0 Theory of Constrained Optimization",
-      "path": "numerical_optimization_jnocedal/120_theory_of_constrained_optimization.md",
-      "noteCount": 5,
-      "imageCount": 8
-    },
-    {
-      "title": "12.1 Examples",
-      "path": "numerical_optimization_jnocedal/121_examples.md",
-      "noteCount": 7,
-      "imageCount": 12
     },
     {
       "title": "2.1 Funds of Unconstrained Optim - What's Solution",
@@ -159,7 +123,7 @@
       "imageCount": 23
     },
     {
-      "title": "8.1 Finite-Difference",
+      "title": "8.1 Finite-Difference\nDerivative Approx",
       "path": "numerical_optimization_jnocedal/81_finite_difference_derivative_approx.md",
       "noteCount": 20,
       "imageCount": 29
@@ -169,6 +133,54 @@
       "path": "numerical_optimization_jnocedal/82_automatic_differentiationextremely_important_for_ai.md",
       "noteCount": 36,
       "imageCount": 46
+    },
+    {
+      "title": "10.1 Least-square problem",
+      "path": "numerical_optimization_jnocedal/101_least_square_problem.md",
+      "noteCount": 11,
+      "imageCount": 13
+    },
+    {
+      "title": "10.2 Linear Least-Square Problem",
+      "path": "numerical_optimization_jnocedal/102_linear_least_square_problem.md",
+      "noteCount": 9,
+      "imageCount": 11
+    },
+    {
+      "title": "10.3 Algorithms for nonlinear least-squares problem",
+      "path": "numerical_optimization_jnocedal/103_algorithms_for_nonlinear_least_squares_problem.md",
+      "noteCount": 14,
+      "imageCount": 23
+    },
+    {
+      "title": "10.4 Orthogonal Distance Regression (bỏ qua)",
+      "path": "numerical_optimization_jnocedal/104_orthogonal_distance_regression_b_qua.md",
+      "noteCount": 1,
+      "imageCount": 1
+    },
+    {
+      "title": "12.0 Theory of Constrained Optimization",
+      "path": "numerical_optimization_jnocedal/120_theory_of_constrained_optimization.md",
+      "noteCount": 5,
+      "imageCount": 8
+    },
+    {
+      "title": "12.1 Examples",
+      "path": "numerical_optimization_jnocedal/121_examples.md",
+      "noteCount": 9,
+      "imageCount": 17
+    },
+    {
+      "title": "12.3 First Order Optimality Condition",
+      "path": "numerical_optimization_jnocedal/123_first_order_optimality_condition.md",
+      "noteCount": 3,
+      "imageCount": 5
+    },
+    {
+      "title": "Appendix A",
+      "path": "numerical_optimization_jnocedal/appendix_a.md",
+      "noteCount": 1,
+      "imageCount": 1
     },
     {
       "title": "A.1 Error Analysis & Floating-Point Arithmetic",
@@ -181,14 +193,8 @@
       "path": "numerical_optimization_jnocedal/a1_matrix_factorizations_cholesky_lu_qr.md",
       "noteCount": 9,
       "imageCount": 11
-    },
-    {
-      "title": "Appendix A",
-      "path": "numerical_optimization_jnocedal/appendix_a.md",
-      "noteCount": 1,
-      "imageCount": 1
     }
   ],
-  "totalNotes": 392,
-  "totalImages": 550
+  "totalNotes": 397,
+  "totalImages": 560
 }
