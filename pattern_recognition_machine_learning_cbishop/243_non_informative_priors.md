@@ -5,8 +5,6 @@
 ---
 <a id="node-9c40xz5"></a>
 
-## 2.4.3 Non-informative priors
-
 <p align="center"><kbd><img src="assets/6wmfqpo2gu.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -209,7 +207,7 @@
 
 <a id="node-6t8ihcb"></a>
 
-- **Scale Invariance and Prior Distributions**
+###### Scale Invariance and Prior Distributions
 
 <p align="center"><kbd><img src="assets/mcd10conne.png" width="80%"></kbd></p>
 
@@ -340,7 +338,7 @@
 
 <a id="node-bqzipap"></a>
 
-- **Noninformative Prior for Precision**
+###### Noninformative Prior for Precision
 
 <p align="center"><kbd><img src="assets/qqvfrmooh8r.png" width="80%"></kbd></p>
 
