@@ -5,8 +5,6 @@
 ---
 <a id="node-1avcivj"></a>
 
-## 2.5 Non-parametric model
-
 <br>
 
 <a id="node-eh32du2"></a>
@@ -153,7 +151,7 @@
 
 <a id="node-81wvgz2"></a>
 
-- **Bài học về bề rộng bin histogram**
+###### Bài học về bề rộng bin histogram
 
 <p align="center"><kbd><img src="assets/35ahwxffxn9.png" width="80%"></kbd></p>
 
