@@ -5,8 +5,6 @@
 ---
 <a id="node-w90ruv4"></a>
 
-## 1.2.6 Bayesian curve fitting
-
 <br>
 
 <a id="node-ti0uy3l"></a>
@@ -668,7 +666,7 @@
 
 <a id="node-ejt1ih6"></a>
 
-- **Thành phần phương sai dự đoán**
+###### Thành phần phương sai dự đoán
 
 <p align="center"><kbd><img src="assets/dq2q72ju7ml.png" width="80%"></kbd></p>
 
@@ -709,7 +707,7 @@
 
 <a id="node-enjiwzp"></a>
 
-- **Phân phối dự đoán**
+###### Phân phối dự đoán
 
 <p align="center"><kbd><img src="assets/l92qod0f5fb.png" width="80%"></kbd></p>
 
