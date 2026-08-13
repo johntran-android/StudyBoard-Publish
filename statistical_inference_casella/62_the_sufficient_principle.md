@@ -5,8 +5,6 @@
 ---
 <a id="node-yxj3s29"></a>
 
-## 6.2 The Sufficient Principle
-
 <br>
 
 <a id="node-t9iuvx6"></a>
@@ -263,7 +261,7 @@
 
 <a id="node-9z7xkqn"></a>
 
-- **Thống kê đủ và phân phối**
+###### Thống kê đủ và phân phối
 
 <p align="center"><kbd><img src="assets/itolun8e7e.png" width="80%"></kbd></p>
 
@@ -612,7 +610,7 @@
 
 <a id="node-imixp1w"></a>
 
-- **Phân phối biên qua tính đủ**
+###### Phân phối biên qua tính đủ
 
 <p align="center"><kbd><img src="assets/razqcsykbme.png" width="80%"></kbd></p>
 
@@ -693,7 +691,7 @@
 
 <a id="node-vw80nut"></a>
 
-- **Định nghĩa thống kê đủ**
+###### Định nghĩa thống kê đủ
 
 <p align="center"><kbd><img src="assets/nuyij2dfnnk.png" width="80%"></kbd></p>
 
@@ -756,7 +754,7 @@
 
 <a id="node-ubmvdfc"></a>
 
-- **Thống kê đủ nhị thức**
+###### Thống kê đủ nhị thức
 
 <p align="center"><kbd><img src="assets/z1hgeb1v25a.png" width="80%"></kbd></p>
 
@@ -831,7 +829,7 @@
 
 <a id="node-nqvdq30"></a>
 
-- **Trung bình mẫu thống kê đủ cho μ**
+###### Trung bình mẫu thống kê đủ cho μ
 
 <p align="center"><kbd><img src="assets/8a6oshein6c.png" width="80%"></kbd></p>
 
@@ -1000,7 +998,7 @@
 
 <a id="node-n7hexnk"></a>
 
-- **Thống kê đủ: Giảm chiều dữ liệu**
+###### Thống kê đủ: Giảm chiều dữ liệu
 
 <p align="center"><kbd><img src="assets/2mh4mwn5ips.png" width="80%"></kbd></p>
 
@@ -1064,7 +1062,7 @@
 
 <a id="node-cadv7we"></a>
 
-- **Sử dụng định nghĩa thống kê đủ**
+###### Sử dụng định nghĩa thống kê đủ
 
 <p align="center"><kbd><img src="assets/ptcxbw00xh.png" width="80%"></kbd></p>
 
@@ -1097,7 +1095,7 @@
 
 <a id="node-dyi91g8"></a>
 
-- **Định lý Factorization**
+###### Định lý Factorization
 
 <p align="center"><kbd><img src="assets/olyc9ad4u1f.png" width="80%"></kbd></p>
 
@@ -1158,7 +1156,7 @@
 
 <a id="node-4nmqg93"></a>
 
-- **Định lý Factorization: Điều kiện đủ**
+###### Định lý Factorization: Điều kiện đủ
 
 <p align="center"><kbd><img src="assets/1rjs107l2yt.png" width="80%"></kbd></p>
 
@@ -1308,7 +1306,7 @@
 
 <a id="node-b24e26s"></a>
 
-- **Tìm Thống kê đủ Factorization**
+###### Tìm Thống kê đủ Factorization
 
 <p align="center"><kbd><img src="assets/hfq9z05bl9r.png" width="80%"></kbd></p>
 
@@ -1365,7 +1363,7 @@
 
 <a id="node-dasngh9"></a>
 
-- **Phân phối đều rời rạc**
+###### Phân phối đều rời rạc
 
 <p align="center"><kbd><img src="assets/fb1oq5dm9vb.png" width="80%"></kbd></p>
 
@@ -1421,7 +1419,7 @@
 
 <a id="node-xxwct63"></a>
 
-- **Thống Kê Đủ Factorization**
+###### Thống Kê Đủ Factorization
 
 <p align="center"><kbd><img src="assets/69l1arl8y1p.png" width="80%"></kbd></p>
 
@@ -1514,7 +1512,7 @@
 
 <a id="node-zgc9bub"></a>
 
-- **Thống kê đủ bằng hàm chỉ thị**
+###### Thống kê đủ bằng hàm chỉ thị
 
 <p align="center"><kbd><img src="assets/06ptt0uy9r0v.png" width="80%"></kbd></p>
 
@@ -1585,7 +1583,7 @@
 
 <a id="node-iti6fjz"></a>
 
-- **Thống kê đủ vector**
+###### Thống kê đủ vector
 
 <p align="center"><kbd><img src="assets/dtv5qxfsitt.png" width="80%"></kbd></p>
 
@@ -1617,7 +1615,7 @@
 
 <a id="node-hbgg43q"></a>
 
-- **Thống kê đủ phân phối chuẩn**
+###### Thống kê đủ phân phối chuẩn
 
 <p align="center"><kbd><img src="assets/0jx0n8dlwgj6.png" width="80%"></kbd></p>
 
@@ -1712,7 +1710,7 @@
 
 <a id="node-vofbsvc"></a>
 
-- **Mean, Variance và Giả định Normal**
+###### Mean, Variance và Giả định Normal
 
 <p align="center"><kbd><img src="assets/nzqkkiueqfm.png" width="80%"></kbd></p>
 
@@ -1741,7 +1739,7 @@
 
 <a id="node-yl0xsvo"></a>
 
-- **Thống kê đủ gia đình mũ**
+###### Thống kê đủ gia đình mũ
 
 <p align="center"><kbd><img src="assets/r9be8t3jpor.png" width="80%"></kbd></p>
 
@@ -1813,7 +1811,7 @@
 
 <a id="node-jul7u6g"></a>
 
-- **Thống kê đủ tối thiểu**
+###### Thống kê đủ tối thiểu
 
 <p align="center"><kbd><img src="assets/axukp52nh4j.png" width="80%"></kbd></p>
 
@@ -1844,7 +1842,7 @@
 
 <a id="node-9eienhx"></a>
 
-- **Thống kê đủ và hàm một-một**
+###### Thống kê đủ và hàm một-một
 
 <p align="center"><kbd><img src="assets/c4pikgfp8pu.png" width="80%"></kbd></p>
 
@@ -1889,7 +1887,7 @@
 
 <a id="node-7cxqd8x"></a>
 
-- **Thống kê đủ tối tiểu**
+###### Thống kê đủ tối tiểu
 
 <p align="center"><kbd><img src="assets/j9fa1dvf3ei.png" width="80%"></kbd></p>
 
@@ -1944,7 +1942,7 @@
 
 <a id="node-p1f0kzg"></a>
 
-- **Hai thống kê đủ chuẩn**
+###### Hai thống kê đủ chuẩn
 
 <p align="center"><kbd><img src="assets/ejzic1bp29u.png" width="80%"></kbd></p>
 
@@ -2002,7 +2000,7 @@
 
 <a id="node-nbwuekj"></a>
 
-- **Định lý Minimal Sufficient Statistic**
+###### Định lý Minimal Sufficient Statistic
 
 <p align="center"><kbd><img src="assets/hj5556bq9j6.png" width="80%"></kbd></p>
 
@@ -2038,7 +2036,7 @@
 
 <a id="node-m2iuwpb"></a>
 
-- **Chứng minh thống kê đủ**
+###### Chứng minh thống kê đủ
 
 <p align="center"><kbd><img src="assets/mtrkzo0c4ph.png" width="80%"></kbd></p>
 
@@ -2144,7 +2142,7 @@
 
 <a id="node-seo4hb5"></a>
 
-- **Thống kê đủ tối thiểu**
+###### Thống kê đủ tối thiểu
 
 <p align="center"><kbd><img src="assets/sz1y0xiem3h.png" width="80%"></kbd></p>
 
@@ -2221,7 +2219,7 @@
 
 <a id="node-j3awosq"></a>
 
-- **Thống kê đủ tối thiểu phân phối chuẩn**
+###### Thống kê đủ tối thiểu phân phối chuẩn
 
 <p align="center"><kbd><img src="assets/apzni7lo44d.png" width="80%"></kbd></p>
 
@@ -2290,7 +2288,7 @@
 
 <a id="node-m5hnxtp"></a>
 
-- **Thống kê đủ tối thiểu phân phối đều**
+###### Thống kê đủ tối thiểu phân phối đều
 
 <p align="center"><kbd><img src="assets/r4bno71jesm.png" width="80%"></kbd></p>
 
@@ -2412,7 +2410,7 @@
 
 <a id="node-zlo20p1"></a>
 
-- **Thống kê đủ tối thiểu**
+###### Thống kê đủ tối thiểu
 
 <p align="center"><kbd><img src="assets/2kjyk7tap5d.png" width="80%"></kbd></p>
 
@@ -2425,7 +2423,7 @@
 
 <a id="node-wi56xcm"></a>
 
-- **Statistic phụ trợ**
+###### Statistic phụ trợ
 
 <p align="center"><kbd><img src="assets/97jhlnpdsc9.png" width="80%"></kbd></p>
 
@@ -2446,7 +2444,7 @@
 
 <a id="node-abmssuo"></a>
 
-- **Phân phối Range Ancillary**
+###### Phân phối Range Ancillary
 
 <p align="center"><kbd><img src="assets/420uld9zdtf.png" width="80%"></kbd></p>
 
@@ -2617,7 +2615,7 @@
 
 <a id="node-mcs07q3"></a>
 
-- **Thống kê khoảng biến thiên phụ**
+###### Thống kê khoảng biến thiên phụ
 
 <p align="center"><kbd><img src="assets/nnqtya4giv.png" width="80%"></kbd></p>
 
@@ -2690,7 +2688,7 @@
 
 <a id="node-x76aniu"></a>
 
-- **Thống kê phụ trợ Range**
+###### Thống kê phụ trợ Range
 
 <p align="center"><kbd><img src="assets/fcb2m285xwi.png" width="80%"></kbd></p>
 
@@ -2793,7 +2791,7 @@
 
 <a id="node-e10it2g"></a>
 
-- **Quan hệ thống kê đủ, phụ trợ**
+###### Quan hệ thống kê đủ, phụ trợ
 
 <p align="center"><kbd><img src="assets/i64j0fral.png" width="80%"></kbd></p>
 
@@ -2809,7 +2807,7 @@
 
 <a id="node-7589927"></a>
 
-- **Đủ tối thiểu và phụ trợ**
+###### Đủ tối thiểu và phụ trợ
 
 <p align="center"><kbd><img src="assets/u7ntaih9tsb.png" width="80%"></kbd></p>
 
@@ -2845,7 +2843,7 @@
 
 <a id="node-o5sgryc"></a>
 
-- **Suy luận tham số từ Ancillary**
+###### Suy luận tham số từ Ancillary
 
 <p align="center"><kbd><img src="assets/se724hfmkld.png" width="80%"></kbd></p>
 
@@ -2969,7 +2967,7 @@
 
 <a id="node-jcf9e90"></a>
 
-- **Định nghĩa Tính đủ**
+###### Định nghĩa Tính đủ
 
 <p align="center"><kbd><img src="assets/0xj82ysns3nm.png" width="80%"></kbd></p>
 
@@ -3054,7 +3052,7 @@
 
 <a id="node-8w0tig6"></a>
 
-- **Thống kê đầy đủ nhị thức**
+###### Thống kê đầy đủ nhị thức
 
 <p align="center"><kbd><img src="assets/w22tc6nuz9t.png" width="80%"></kbd></p>
 
@@ -3230,7 +3228,7 @@
 
 <a id="node-3b33zu7"></a>
 
-- **Thống kê đầy đủ đồng nhất**
+###### Thống kê đầy đủ đồng nhất
 
 <p align="center"><kbd><img src="assets/bjzdk32oiv7.png" width="80%"></kbd></p>
 
@@ -3413,7 +3411,7 @@
 
 <a id="node-rrvib6m"></a>
 
-- **Định lý Basu**
+###### Định lý Basu
 
 <p align="center"><kbd><img src="assets/yeicwa5lyi.png" width="80%"></kbd></p>
 
@@ -3651,7 +3649,7 @@
 
 <a id="node-d4sl8g4"></a>
 
-- **Thống kê đầy đủ họ hàm mũ**
+###### Thống kê đầy đủ họ hàm mũ
 
 <p align="center"><kbd><img src="assets/orbz3t1be.png" width="80%"></kbd></p>
 
@@ -3693,7 +3691,7 @@
 
 <a id="node-pswxn93"></a>
 
-- **Kỳ vọng theo Định lý Basu**
+###### Kỳ vọng theo Định lý Basu
 
 <p align="center"><kbd><img src="assets/h0kri149moo.png" width="80%"></kbd></p>
 
@@ -3902,7 +3900,7 @@
 
 <a id="node-st8akyc"></a>
 
-- **Thống kê đủ và hoàn chỉnh Xbar**
+###### Thống kê đủ và hoàn chỉnh Xbar
 
 <p align="center"><kbd><img src="assets/3bi4ml45de5.png" width="80%"></kbd></p>
 
