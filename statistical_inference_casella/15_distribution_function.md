@@ -1,13 +1,9 @@
-# 1.5 Distribution
-function
+# 1.5 Distribution Function
 
 📊 **Progress:** `9` Notes | `11` Screenshots
 
 ---
 <a id="node-ytp3lpb"></a>
-
-## 1.5 Distribution
-function
 
 <br>
 
@@ -140,7 +136,7 @@ function
 
 <a id="node-fwtocma"></a>
 
-- **Số lần tung đến Head**
+###### Số lần tung đến Head
 
 <p align="center"><kbd><img src="assets/5g2osrpg7fi.png" width="80%"></kbd></p>
 
@@ -339,7 +335,7 @@ function
 
 <a id="node-9y8jqsc"></a>
 
-- **Chứng minh tính chất hàm phân bố**
+###### Chứng minh tính chất hàm phân bố
 
 <p align="center"><kbd><img src="assets/s3l764nne88.png" width="80%"></kbd></p>
 
@@ -353,7 +349,7 @@ function
 
 <a id="node-b5jxnwe"></a>
 
-- **Hàm phân phối Logistics**
+###### Hàm phân phối Logistics
 
 <p align="center"><kbd><img src="assets/6qhgsm00hex.png" width="80%"></kbd></p>
 
@@ -367,7 +363,7 @@ function
 
 <a id="node-zj12ku5"></a>
 
-- **Định nghĩa biến liên tục, rời rạc**
+###### Định nghĩa biến liên tục, rời rạc
 
 <p align="center"><kbd><img src="assets/qc32uenbw5h.png" width="80%"></kbd></p>
 
@@ -386,7 +382,7 @@ function
 
 <a id="node-ecxtok0"></a>
 
-- **Borel Field và Hàm phân phối**
+###### Borel Field và Hàm phân phối
 
 <p align="center"><kbd><img src="assets/phwylw9ifmb.png" width="80%"></kbd></p>
 
@@ -419,7 +415,7 @@ function
 
 <a id="node-7lropka"></a>
 
-- **Định nghĩa biến phân phối đồng nhất**
+###### Định nghĩa biến phân phối đồng nhất
 
 <p align="center"><kbd><img src="assets/0g3oxpez5659.png" width="80%"></kbd></p>
 
