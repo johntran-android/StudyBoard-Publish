@@ -1,13 +1,9 @@
-# 1.2.1 Axiomatic
-foundation
+# 1.2.1 Axiomatic Foundation
 
 📊 **Progress:** `9` Notes | `10` Screenshots
 
 ---
 <a id="node-m1hx49b"></a>
-
-## 1.2.1 Axiomatic
-foundation
 
 <br>
 
@@ -120,7 +116,7 @@ foundation
 
 <a id="node-wovlwib"></a>
 
-- **Ba tiên đề xác suất**
+###### Ba tiên đề xác suất
 
 <p align="center"><kbd><img src="assets/d4ljhlds6zk.png" width="80%"></kbd></p>
 
@@ -169,7 +165,7 @@ foundation
 
 <a id="node-487lgel"></a>
 
-- **Lựa chọn hàm xác suất đồng xu**
+###### Lựa chọn hàm xác suất đồng xu
 
 <p align="center"><kbd><img src="assets/7le0f8tt4yj.png" width="80%"></kbd></p>
 
@@ -213,7 +209,7 @@ foundation
 
 <a id="node-rjy0v56"></a>
 
-- **Hàm xác suất rời rạc**
+###### Hàm xác suất rời rạc
 
 <p align="center"><kbd><img src="assets/14rk932wev2.png" width="80%"></kbd></p>
 
@@ -303,7 +299,7 @@ foundation
 
 <a id="node-6c1v6jg"></a>
 
-- **Mô hình xác suất ném phi tiêu**
+###### Mô hình xác suất ném phi tiêu
 
 <p align="center"><kbd><img src="assets/dbkpzgjqdh7.png" width="80%"></kbd></p>
 
@@ -318,7 +314,7 @@ foundation
 
 <a id="node-o3vg7q2"></a>
 
-- **Quan điểm về Axiom 3**
+###### Quan điểm về Axiom 3
 
 <p align="center"><kbd><img src="assets/wfpqjuwbhx.png" width="80%"></kbd></p>
 
