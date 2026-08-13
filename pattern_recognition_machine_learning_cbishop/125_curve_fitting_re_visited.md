@@ -5,8 +5,6 @@
 ---
 <a id="node-gdpz55o"></a>
 
-## 1.2.5 Curve fitting re-visited.
-
 <br>
 
 <a id="node-21cf3yh"></a>
@@ -222,7 +220,7 @@
 
 <a id="node-r1gqc9l"></a>
 
-- **Ước lượng hợp lí cực đại**
+###### Ước lượng hợp lí cực đại
 
 <p align="center"><kbd><img src="assets/ncvn51248xa.png" width="80%"></kbd></p>
 
@@ -387,7 +385,7 @@
 
 <a id="node-pbdo1sz"></a>
 
-- **Ước lượng ML w và β**
+###### Ước lượng ML w và β
 
 <p align="center"><kbd><img src="assets/papslfupags.png" width="80%"></kbd></p>
 
@@ -588,7 +586,7 @@
 
 <a id="node-iw7c6u7"></a>
 
-- **Ước lượng ML, Phân phối tiên đoán**
+###### Ước lượng ML, Phân phối tiên đoán
 
 <p align="center"><kbd><img src="assets/407bokzgphh.png" width="80%"></kbd></p>
 
@@ -725,7 +723,7 @@
 
 <a id="node-20mqbje"></a>
 
-- **Phân phối Bayesian của w**
+###### Phân phối Bayesian của w
 
 <p align="center"><kbd><img src="assets/sgbuy6um7us.png" width="80%"></kbd></p>
 
@@ -870,7 +868,7 @@
 
 <a id="node-8z48xwr"></a>
 
-- **Ước lượng Bayes và MAP**
+###### Ước lượng Bayes và MAP
 
 <p align="center"><kbd><img src="assets/g9o488zi7x9.png" width="80%"></kbd></p>
 
@@ -966,7 +964,7 @@
 >
 >
 >
-> - (β/2) Σi [ti-y(xi,**w**)]^2 + (n/2) log β - (n/2) log (2π) ] + log [α/(2π)^(M+1)/2 -
+> \- (β/2) Σi [ti-y(xi,**w**)]^2 + (n/2) log β - (n/2) log (2π) ] + log [α/(2π)^(M+1)/2 -
 > (α/2)**w**T**w**
 >
 >
