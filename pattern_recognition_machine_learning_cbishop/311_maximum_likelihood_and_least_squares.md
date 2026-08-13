@@ -5,8 +5,6 @@
 ---
 <a id="node-rgglm5o"></a>
 
-## 3.1.1 Maximum likelihood and least squares
-
 <p align="center"><kbd><img src="assets/b9wyedxqse5.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -750,7 +748,7 @@
 
 <a id="node-ftju6pw"></a>
 
-- **Bias Parameter w0 Derivation**
+###### Bias Parameter w0 Derivation
 
 <p align="center"><kbd><img src="assets/56zc94csmfj.png" width="80%"></kbd></p>
 
@@ -838,7 +836,7 @@
 
 <a id="node-vz4hsaf"></a>
 
-- **Maximum Likelihood Noise Precision β_ML**
+###### Maximum Likelihood Noise Precision β_ML
 
 <p align="center"><kbd><img src="assets/fpmku0735s.png" width="80%"></kbd></p>
 
