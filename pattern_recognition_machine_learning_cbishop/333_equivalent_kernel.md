@@ -5,8 +5,6 @@
 ---
 <a id="node-9bkb1me"></a>
 
-## 3.3.3 Equivalent kernel
-
 <br>
 
 <a id="node-qgf9klh"></a>
@@ -279,7 +277,7 @@
 
 <a id="node-p4bufrd"></a>
 
-- **Effective Kernel Weights Sum to One**
+###### Effective Kernel Weights Sum to One
 
 <p align="center"><kbd><img src="assets/fdub10190ar.png" width="80%"></kbd></p>
 
