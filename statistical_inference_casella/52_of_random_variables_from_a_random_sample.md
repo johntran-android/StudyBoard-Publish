@@ -1,13 +1,9 @@
-# 5.2 Σ Of Random Variables
-from A Random Sample
+# 5.2 Σ Of Random Variables From A Random Sample
 
 📊 **Progress:** `18` Notes | `26` Screenshots
 
 ---
 <a id="node-ii9obi5"></a>
-
-## 5.2 Σ Of Random Variables
-from A Random Sample
 
 <br>
 
@@ -191,7 +187,7 @@ from A Random Sample
 
 <a id="node-jhe69j5"></a>
 
-- **Tính chất trung bình phương sai mẫu**
+###### Tính chất trung bình phương sai mẫu
 
 <p align="center"><kbd><img src="assets/vlgsvgvg5f.png" width="80%"></kbd></p>
 
@@ -307,7 +303,7 @@ from A Random Sample
 
 <a id="node-ii0ww7t"></a>
 
-- **Kỳ vọng và Phương sai Tổng Mẫu**
+###### Kỳ vọng và Phương sai Tổng Mẫu
 
 <p align="center"><kbd><img src="assets/nvmrj704jzq.png" width="80%"></kbd></p>
 
@@ -355,7 +351,7 @@ from A Random Sample
 
 <a id="node-j3jux7k"></a>
 
-- **Phương sai tổng hàm độc lập**
+###### Phương sai tổng hàm độc lập
 
 <p align="center"><kbd><img src="assets/0w6uguepyxhj.png" width="80%"></kbd></p>
 
@@ -586,7 +582,7 @@ from A Random Sample
 
 <a id="node-411jdqg"></a>
 
-- **Tính chất trung bình phương sai mẫu**
+###### Tính chất trung bình phương sai mẫu
 
 <p align="center"><kbd><img src="assets/g10ssoqhv3.png" width="80%"></kbd></p>
 
@@ -873,7 +869,7 @@ from A Random Sample
 
 <a id="node-p3l84lw"></a>
 
-- **Ước lượng không chệch**
+###### Ước lượng không chệch
 
 <p align="center"><kbd><img src="assets/apqo13p1gw.png" width="80%"></kbd></p>
 
@@ -950,7 +946,7 @@ from A Random Sample
 
 <a id="node-vvlk5d8"></a>
 
-- **Chứng minh PDF Sample Mean**
+###### Chứng minh PDF Sample Mean
 
 <p align="center"><kbd><img src="assets/84rkqbdw6q.png" width="80%"></kbd></p>
 
@@ -1084,7 +1080,7 @@ from A Random Sample
 
 <a id="node-lm7jg65"></a>
 
-- **Phân phối lấy mẫu Xbar**
+###### Phân phối lấy mẫu Xbar
 
 <p align="center"><kbd><img src="assets/n01k99av0xc.png" width="80%"></kbd></p>
 
@@ -1203,7 +1199,7 @@ from A Random Sample
 
 <a id="node-c034x4w"></a>
 
-- **Phân phối trung bình mẫu**
+###### Phân phối trung bình mẫu
 
 <p align="center"><kbd><img src="assets/imrda6ltsq.png" width="80%"></kbd></p>
 
@@ -1297,7 +1293,7 @@ from A Random Sample
 
 <a id="node-8ukvs63"></a>
 
-- **Công thức tích chập Z=X+Y**
+###### Công thức tích chập Z=X+Y
 
 <p align="center"><kbd><img src="assets/3ypt0mj581n.png" width="80%"></kbd></p>
 
@@ -1645,7 +1641,7 @@ from A Random Sample
 
 <a id="node-5ol3wjb"></a>
 
-- **Giới hạn tích phân chập**
+###### Giới hạn tích phân chập
 
 <p align="center"><kbd><img src="assets/a96gcinvz8.png" width="80%"></kbd></p>
 
@@ -1764,7 +1760,7 @@ from A Random Sample
 
 <a id="node-29xhnzg"></a>
 
-- **Trung bình mẫu Cauchy**
+###### Trung bình mẫu Cauchy
 
 <p align="center"><kbd><img src="assets/kwz9x4oik87.png" width="80%"></kbd></p>
 
@@ -1781,7 +1777,7 @@ from A Random Sample
 
 <a id="node-4qucutj"></a>
 
-- **Phân phối TB mẫu Location-Scale**
+###### Phân phối TB mẫu Location-Scale
 
 <p align="center"><kbd><img src="assets/emi5s168mvt.png" width="80%"></kbd></p>
 
@@ -1952,7 +1948,7 @@ from A Random Sample
 
 <a id="node-put8ifc"></a>
 
-- **Trung bình mẫu Location Scale**
+###### Trung bình mẫu Location Scale
 
 <p align="center"><kbd><img src="assets/06a0t9gc28gw.png" width="80%"></kbd></p>
 
@@ -2238,7 +2234,7 @@ from A Random Sample
 
 <a id="node-h84h2nr"></a>
 
-- **Phân phối thống kê hàm mũ**
+###### Phân phối thống kê hàm mũ
 
 <p align="center"><kbd><img src="assets/id2byp1rm4.png" width="80%"></kbd></p>
 
