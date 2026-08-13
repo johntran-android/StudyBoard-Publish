@@ -5,8 +5,6 @@
 ---
 <a id="node-9hoqrts"></a>
 
-## 2.0 Intro
-
 <br>
 
 <a id="node-ao0b0j2"></a>
