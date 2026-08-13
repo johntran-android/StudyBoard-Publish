@@ -5,8 +5,6 @@
 ---
 <a id="node-prwuhjm"></a>
 
-## 2.3 MGF
-
 <br>
 
 <a id="node-263lghw"></a>
@@ -309,7 +307,7 @@
 
 <a id="node-tq1pv0b"></a>
 
-- **Phương sai phân phối nhị thức**
+###### Phương sai phân phối nhị thức
 
 <p align="center"><kbd><img src="assets/rfxcqx0d9ar.png" width="80%"></kbd></p>
 
@@ -644,7 +642,7 @@
 
 <a id="node-3dwa2d5"></a>
 
-- **MGF: Định nghĩa và Khai triển**
+###### MGF: Định nghĩa và Khai triển
 
 <p align="center"><kbd><img src="assets/3ahpj42ryc8.png" width="80%"></kbd></p>
 
@@ -661,7 +659,7 @@
 
 <a id="node-efq3pxl"></a>
 
-- **Moment từ đạo hàm MGF**
+###### Moment từ đạo hàm MGF
 
 <p align="center"><kbd><img src="assets/0c0y77q25mr6.png" width="80%"></kbd></p>
 
@@ -747,7 +745,7 @@
 
 <a id="node-aaflva8"></a>
 
-- **MGF phân phối Gamma**
+###### MGF phân phối Gamma
 
 <p align="center"><kbd><img src="assets/bgojhfdr5oh.png" width="80%"></kbd></p>
 
@@ -905,7 +903,7 @@
 
 <a id="node-qerfh1r"></a>
 
-- **Hàm sinh moment phân phối nhị thức**
+###### Hàm sinh moment phân phối nhị thức
 
 <p align="center"><kbd><img src="assets/zkmc3nzbpkk.png" width="80%"></kbd></p>
 
@@ -991,7 +989,7 @@
 
 <a id="node-uyc99nm"></a>
 
-- **Xác định phân phối qua MGF**
+###### Xác định phân phối qua MGF
 
 <p align="center"><kbd><img src="assets/o7bqzytt7d.png" width="80%"></kbd></p>
 
@@ -1030,7 +1028,7 @@
 
 <a id="node-5kynqew"></a>
 
-- **Tiêu chí đồng nhất phân phối**
+###### Tiêu chí đồng nhất phân phối
 
 <p align="center"><kbd><img src="assets/gsqy0ur17xf.png" width="80%"></kbd></p>
 
@@ -1049,7 +1047,7 @@
 
 <a id="node-yzqyu5s"></a>
 
-- **Hội tụ MGFs**
+###### Hội tụ MGFs
 
 <p align="center"><kbd><img src="assets/ama0ct8hwpg.png" width="80%"></kbd></p>
 
@@ -1092,7 +1090,7 @@
 
 <a id="node-f7hzylm"></a>
 
-- **Xấp xỉ Poisson**
+###### Xấp xỉ Poisson
 
 <p align="center"><kbd><img src="assets/kc4tewbi9w.png" width="80%"></kbd></p>
 
@@ -1314,7 +1312,7 @@
 
 <a id="node-dzmxf1c"></a>
 
-- **Xấp xỉ Poisson-Binomial**
+###### Xấp xỉ Poisson-Binomial
 
 <p align="center"><kbd><img src="assets/2kxdf9to5v9.png" width="80%"></kbd></p>
 
@@ -1333,7 +1331,7 @@
 
 <a id="node-4ypjp34"></a>
 
-- **MGF của aX+b**
+###### MGF của aX+b
 
 <p align="center"><kbd><img src="assets/oi4m783pex8.png" width="80%"></kbd></p>
 
