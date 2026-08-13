@@ -1,13 +1,9 @@
-# 9.2 Methods Of Finding
-interval Estimators
+# 9.2 Methods Of Finding Interval Estimators
 
 📊 **Progress:** `52` Notes | `61` Screenshots
 
 ---
 <a id="node-7s1kn1j"></a>
-
-## 9.2 Methods Of Finding
-interval Estimators
 
 <br>
 
@@ -88,7 +84,7 @@ interval Estimators
 > Và nếu lấy minimum: inf_θ∈Θ P_θ(L(**X**) ≤ θ ≤ U(**X**)) thì ta sẽ có một hàm
 > không phụ thuộc θ nữa, gọi là **CONFIDENCE COEFFICIENT** Để rồi nếu ta
 > có giá trị của cái này, ví dụ 1 - α thì ta gọi nó (cái interval estimator) là một **1
-> - α confidence set**.
+> \- α confidence set**.
 >
 >
 >
@@ -303,7 +299,7 @@ interval Estimators
 
 <a id="node-cebe6p1"></a>
 
-- **Mối quan hệ C(x) và A(θ)**
+###### Mối quan hệ C(x) và A(θ)
 
 <p align="center"><kbd><img src="assets/amz16d0vxro.png" width="80%"></kbd></p>
 
@@ -320,7 +316,7 @@ interval Estimators
 
 <a id="node-v7ov102"></a>
 
-- **Liên hệ Kiểm định - Tin cậy**
+###### Liên hệ Kiểm định - Tin cậy
 
 <p align="center"><kbd><img src="assets/07qhdsbr6ae.png" width="80%"></kbd></p>
 
@@ -364,7 +360,7 @@ interval Estimators
 
 <a id="node-4x9sjxz"></a>
 
-- **Mối quan hệ Test Tập tin cậy**
+###### Mối quan hệ Test Tập tin cậy
 
 <p align="center"><kbd><img src="assets/ete1jab3xe5.png" width="80%"></kbd></p>
 
@@ -558,7 +554,7 @@ interval Estimators
 
 <a id="node-56k0gw3"></a>
 
-- **Đảo ngược test ra khoảng tin cậy**
+###### Đảo ngược test ra khoảng tin cậy
 
 <p align="center"><kbd><img src="assets/aklem5idw1e.png" width="80%"></kbd></p>
 
@@ -581,7 +577,7 @@ interval Estimators
 
 <a id="node-y9cjzgq"></a>
 
-- **H1 và Dạng Tập Tin Cậy**
+###### H1 và Dạng Tập Tin Cậy
 
 <p align="center"><kbd><img src="assets/xz8i47fwtf.png" width="80%"></kbd></p>
 
@@ -630,7 +626,7 @@ interval Estimators
 
 <a id="node-jw4zng6"></a>
 
-- **Khoảng tin cậy đảo ngược LRT**
+###### Khoảng tin cậy đảo ngược LRT
 
 <p align="center"><kbd><img src="assets/9b0pxf7xz8q.png" width="80%"></kbd></p>
 
@@ -886,7 +882,7 @@ interval Estimators
 
 <a id="node-ejlee85"></a>
 
-- **Miền chấp nhận, khoảng tin cậy**
+###### Miền chấp nhận, khoảng tin cậy
 
 <p align="center"><kbd><img src="assets/pbhe351lb0o.png" width="80%"></kbd></p>
 
@@ -912,7 +908,7 @@ interval Estimators
 
 <a id="node-9p7bal4"></a>
 
-- **Xây dựng khoảng tin cậy**
+###### Xây dựng khoảng tin cậy
 
 <p align="center"><kbd><img src="assets/hf0hm1pd2r.png" width="80%"></kbd></p>
 
@@ -1087,7 +1083,7 @@ interval Estimators
 
 <a id="node-dscz8lz"></a>
 
-- **LRT và Tập tin cậy**
+###### LRT và Tập tin cậy
 
 <p align="center"><kbd><img src="assets/4pk4zylzs13.png" width="80%"></kbd></p>
 
@@ -1146,7 +1142,7 @@ interval Estimators
 
 <a id="node-r96nyc1"></a>
 
-- **Đảo ngược kiểm định**
+###### Đảo ngược kiểm định
 
 <p align="center"><kbd><img src="assets/6ejqxb73u2w.png" width="80%"></kbd></p>
 
@@ -1165,7 +1161,7 @@ interval Estimators
 
 <a id="node-lw30f8x"></a>
 
-- **Giới hạn tin cậy trên**
+###### Giới hạn tin cậy trên
 
 <p align="center"><kbd><img src="assets/s4vqxpf0m5i.png" width="80%"></kbd></p>
 
@@ -1269,7 +1265,7 @@ interval Estimators
 
 <a id="node-uohg28e"></a>
 
-- **Thiết lập khoảng tin cậy một phía**
+###### Thiết lập khoảng tin cậy một phía
 
 <p align="center"><kbd><img src="assets/lzv9isona2m.png" width="80%"></kbd></p>
 
@@ -1333,7 +1329,7 @@ interval Estimators
 
 <a id="node-xgaovbl"></a>
 
-- **Chặn dưới p nhị thức**
+###### Chặn dưới p nhị thức
 
 <p align="center"><kbd><img src="assets/2dbzixbnu6x.png" width="80%"></kbd></p>
 
@@ -1377,7 +1373,7 @@ interval Estimators
 
 <a id="node-lbufvmo"></a>
 
-- **Thống kê đủ và kiểm định UMP**
+###### Thống kê đủ và kiểm định UMP
 
 <p align="center"><kbd><img src="assets/37bq2nq6lbu.png" width="80%"></kbd></p>
 
@@ -1538,7 +1534,7 @@ interval Estimators
 
 <a id="node-50n8cdi"></a>
 
-- **Ngưỡng k(p0) kiểm định mức alpha**
+###### Ngưỡng k(p0) kiểm định mức alpha
 
 <p align="center"><kbd><img src="assets/wcqz3ie59en.png" width="80%"></kbd></p>
 
@@ -1648,7 +1644,7 @@ interval Estimators
 
 <a id="node-svku8eg"></a>
 
-- **Khoảng Tin Cậy qua Đảo Kiểm Định**
+###### Khoảng Tin Cậy qua Đảo Kiểm Định
 
 <p align="center"><kbd><img src="assets/cz1fjx2jyt.png" width="80%"></kbd></p>
 
@@ -1982,7 +1978,7 @@ interval Estimators
 
 <a id="node-dgml8lx"></a>
 
-- **Khái niệm xác suất bao phủ**
+###### Khái niệm xác suất bao phủ
 
 <p align="center"><kbd><img src="assets/8mfkd0ktbng.png" width="80%"></kbd></p>
 
@@ -2059,7 +2055,7 @@ interval Estimators
 
 <a id="node-hi75sor"></a>
 
-- **Định nghĩa đại lượng then chốt**
+###### Định nghĩa đại lượng then chốt
 
 <p align="center"><kbd><img src="assets/rpav5q3czha.png" width="80%"></kbd></p>
 
@@ -2132,7 +2128,7 @@ interval Estimators
 
 <a id="node-4msae59"></a>
 
-- **Đại lượng then chốt và họ phân phối**
+###### Đại lượng then chốt và họ phân phối
 
 <p align="center"><kbd><img src="assets/lxw4esehy7b.png" width="80%"></kbd></p>
 
@@ -2207,7 +2203,7 @@ interval Estimators
 
 <a id="node-47nzsh2"></a>
 
-- **Đại lượng chốt phân phối mũ**
+###### Đại lượng chốt phân phối mũ
 
 <p align="center"><kbd><img src="assets/7iay7dn2rrv.png" width="80%"></kbd></p>
 
@@ -2234,7 +2230,7 @@ interval Estimators
 
 <a id="node-ff32hql"></a>
 
-- **Pivot từ công thức PDF**
+###### Pivot từ công thức PDF
 
 <p align="center"><kbd><img src="assets/xvj81ymbzge.png" width="80%"></kbd></p>
 
@@ -2366,7 +2362,7 @@ interval Estimators
 
 <a id="node-33zn53r"></a>
 
-- **Xây dựng tập tin cậy**
+###### Xây dựng tập tin cậy
 
 <p align="center"><kbd><img src="assets/kcup2h8a4he.png" width="80%"></kbd></p>
 
@@ -2477,7 +2473,7 @@ interval Estimators
 
 <a id="node-hmy0ory"></a>
 
-- **Khoảng tin cậy λ phân phối mũ**
+###### Khoảng tin cậy λ phân phối mũ
 
 <p align="center"><kbd><img src="assets/bewu7ffbqkb.png" width="80%"></kbd></p>
 
@@ -2536,7 +2532,7 @@ interval Estimators
 
 <a id="node-g9mg0da"></a>
 
-- **Khoảng tin cậy từ đại lượng pivot**
+###### Khoảng tin cậy từ đại lượng pivot
 
 <p align="center"><kbd><img src="assets/daf5of8hoc5.png" width="80%"></kbd></p>
 
@@ -2689,7 +2685,7 @@ interval Estimators
 
 <a id="node-ek0kk9r"></a>
 
-- **Khoảng tin cậy cho phương sai**
+###### Khoảng tin cậy cho phương sai
 
 <p align="center"><kbd><img src="assets/pez8aisxnn.png" width="80%"></kbd></p>
 
@@ -2830,7 +2826,7 @@ interval Estimators
 
 <a id="node-viuegt2"></a>
 
-- **Pivot CDF và Confidence Set**
+###### Pivot CDF và Confidence Set
 
 <p align="center"><kbd><img src="assets/obms40rweo.png" width="80%"></kbd></p>
 
@@ -2900,7 +2896,7 @@ interval Estimators
 
 <a id="node-imd32vw"></a>
 
-- **Phương pháp Sterne**
+###### Phương pháp Sterne
 
 <p align="center"><kbd><img src="assets/43ipg4v3m08.png" width="80%"></kbd></p>
 
@@ -2977,7 +2973,7 @@ interval Estimators
 
 <a id="node-d806mzg"></a>
 
-- **Biến đổi tích phân xác suất**
+###### Biến đổi tích phân xác suất
 
 <p align="center"><kbd><img src="assets/c0bkvmfzjw.png" width="80%"></kbd></p>
 
@@ -3122,7 +3118,7 @@ interval Estimators
 
 <a id="node-s0xbsjo"></a>
 
-- **Vùng chấp nhận và khoảng tin cậy**
+###### Vùng chấp nhận và khoảng tin cậy
 
 <p align="center"><kbd><img src="assets/qylsy11yyv.png" width="80%"></kbd></p>
 
@@ -3211,7 +3207,7 @@ interval Estimators
 
 <a id="node-9rq2i5l"></a>
 
-- **Khoảng tin cậy xoay CDF**
+###### Khoảng tin cậy xoay CDF
 
 <p align="center"><kbd><img src="assets/0ms3dydf2e2r.png" width="80%"></kbd></p>
 
@@ -3260,7 +3256,7 @@ interval Estimators
 
 <a id="node-mg4nskf"></a>
 
-- **Phương pháp Khoảng Tin Cậy Pivot**
+###### Phương pháp Khoảng Tin Cậy Pivot
 
 <p align="center"><kbd><img src="assets/4uxq65odbqt.png" width="80%"></kbd></p>
 
@@ -3460,7 +3456,7 @@ interval Estimators
 
 <a id="node-zex540f"></a>
 
-- **Khoảng tin cậy mũ vị trí**
+###### Khoảng tin cậy mũ vị trí
 
 <p align="center"><kbd><img src="assets/lig7r5t8p6p.png" width="80%"></kbd></p>
 
@@ -3730,7 +3726,7 @@ interval Estimators
 
 <a id="node-4qv2i8o"></a>
 
-- **Khoảng tin cậy số**
+###### Khoảng tin cậy số
 
 <p align="center"><kbd><img src="assets/hnznuqgyggc.png" width="80%"></kbd></p>
 
@@ -3755,7 +3751,7 @@ interval Estimators
 
 <a id="node-96jhc8n"></a>
 
-- **Lật CDF thống kê rời rạc**
+###### Lật CDF thống kê rời rạc
 
 <p align="center"><kbd><img src="assets/by0jss48xqv.png" width="80%"></kbd></p>
 
@@ -4067,7 +4063,7 @@ interval Estimators
 
 <a id="node-z5eytsr"></a>
 
-- **Khoảng tin cậy Poisson**
+###### Khoảng tin cậy Poisson
 
 <p align="center"><kbd><img src="assets/0g17267vo2sv.png" width="80%"></kbd></p>
 
@@ -4273,7 +4269,7 @@ interval Estimators
 
 <a id="node-s6r23qr"></a>
 
-- **Khoảng tin cậy Poisson Chi-square**
+###### Khoảng tin cậy Poisson Chi-square
 
 <p align="center"><kbd><img src="assets/5quhpos80r3.png" width="80%"></kbd></p>
 
@@ -4395,7 +4391,7 @@ interval Estimators
 
 <a id="node-p5oozlt"></a>
 
-- **Ví dụ của giáo sư**
+###### Ví dụ của giáo sư
 
 <p align="center"><kbd><img src="assets/kgul9dprrdi.png" width="80%"></kbd></p>
 
@@ -4407,7 +4403,7 @@ interval Estimators
 
 <a id="node-n5w17cn"></a>
 
-- **Diễn giải khoảng tin cậy**
+###### Diễn giải khoảng tin cậy
 
 <p align="center"><kbd><img src="assets/517nau9ga2s.png" width="80%"></kbd></p>
 
@@ -4465,7 +4461,7 @@ interval Estimators
 
 <a id="node-1agxnpl"></a>
 
-- **Lý thuyết và Ước lượng Bayesian**
+###### Lý thuyết và Ước lượng Bayesian
 
 <p align="center"><kbd><img src="assets/jj4bmpky0m.png" width="80%"></kbd></p>
 
@@ -4521,7 +4517,7 @@ interval Estimators
 
 <a id="node-ahces3c"></a>
 
-- **Khoảng tin cậy Poisson Gamma**
+###### Khoảng tin cậy Poisson Gamma
 
 <p align="center"><kbd><img src="assets/fm0s6ccmsp6.png" width="80%"></kbd></p>
 
@@ -4810,7 +4806,7 @@ interval Estimators
 
 <a id="node-fo5vh2r"></a>
 
-- **Khác biệt Credible Confidence**
+###### Khác biệt Credible Confidence
 
 <p align="center"><kbd><img src="assets/l5tdsmc51.png" width="80%"></kbd></p>
 
@@ -4836,7 +4832,7 @@ interval Estimators
 
 <a id="node-kdyn56v"></a>
 
-- **Xác suất đáng tin cậy và độ phủ**
+###### Xác suất đáng tin cậy và độ phủ
 
 <p align="center"><kbd><img src="assets/swyp3fc3e4m.png" width="80%"></kbd></p>
 
@@ -4922,7 +4918,7 @@ interval Estimators
 
 <a id="node-m77g4jo"></a>
 
-- **Xác suất Credible & Tin cậy**
+###### Xác suất Credible & Tin cậy
 
 <p align="center"><kbd><img src="assets/gongd3cb5nd.png" width="80%"></kbd></p>
 
@@ -5028,7 +5024,7 @@ interval Estimators
 
 <a id="node-h01qtjd"></a>
 
-- **Xác suất đáng tin cậy khoảng**
+###### Xác suất đáng tin cậy khoảng
 
 <p align="center"><kbd><img src="assets/af9uxeqdhj.png" width="80%"></kbd></p>
 
@@ -5036,7 +5032,7 @@ interval Estimators
 
 <a id="node-695tsck"></a>
 
-- **Sai mục đích Credible Set**
+###### Sai mục đích Credible Set
 
 <p align="center"><kbd><img src="assets/q3s1hfomu9l.png" width="80%"></kbd></p>
 
@@ -5058,7 +5054,7 @@ interval Estimators
 
 <a id="node-s6b012i"></a>
 
-- **Phân phối hậu nghiệm Bayes Normal**
+###### Phân phối hậu nghiệm Bayes Normal
 
 <p align="center"><kbd><img src="assets/r7z7e9ekcpk.png" width="80%"></kbd></p>
 
@@ -5153,7 +5149,7 @@ interval Estimators
 
 <a id="node-p26ry6u"></a>
 
-- **Khoảng tin cậy 1-α**
+###### Khoảng tin cậy 1-α
 
 <p align="center"><kbd><img src="assets/1iee3qmtoq8.png" width="80%"></kbd></p>
 
@@ -5290,7 +5286,7 @@ interval Estimators
 
 <a id="node-7bzqqs2"></a>
 
-- **Độ phủ khoảng đáng tin**
+###### Độ phủ khoảng đáng tin
 
 <p align="center"><kbd><img src="assets/ncbn101k89.png" width="80%"></kbd></p>
 
@@ -5582,7 +5578,7 @@ interval Estimators
 
 <a id="node-nyh5c4k"></a>
 
-- **Khoảng Tin Cậy và Đáng Tin Cậy**
+###### Khoảng Tin Cậy và Đáng Tin Cậy
 
 <p align="center"><kbd><img src="assets/0ribs6du7u1.png" width="80%"></kbd></p>
 
