@@ -5,8 +5,6 @@
 ---
 <a id="node-dp9al6u"></a>
 
-## 2.3.0 Gaussian Distribution
-
 <br>
 
 <a id="node-arii2cl"></a>
@@ -221,7 +219,7 @@
 
 <a id="node-ulmctg7"></a>
 
-- **Phân rã Eigen hiệp phương sai**
+###### Phân rã Eigen hiệp phương sai
 
 <p align="center"><kbd><img src="assets/efqvqjj52w5.png" width="80%"></kbd></p>
 
@@ -307,7 +305,7 @@
 
 <a id="node-c9cpfzj"></a>
 
-- **Chuyển tọa độ eigenvector**
+###### Chuyển tọa độ eigenvector
 
 <p align="center"><kbd><img src="assets/tpqdysnql6.png" width="80%"></kbd></p>
 
@@ -533,7 +531,7 @@
 
 <a id="node-ucnx12w"></a>
 
-- **Đường đồng mức Gaussian**
+###### Đường đồng mức Gaussian
 
 <p align="center"><kbd><img src="assets/74bjy2kdpz.png" width="80%"></kbd></p>
 
@@ -620,7 +618,7 @@
 
 <a id="node-1mvawof"></a>
 
-- **Eigenvalues Ma trận Hiệp phương sai**
+###### Eigenvalues Ma trận Hiệp phương sai
 
 <p align="center"><kbd><img src="assets/ubfq8ck4isc.png" width="80%"></kbd></p>
 
@@ -747,7 +745,7 @@
 
 <a id="node-1j3i0ue"></a>
 
-- **Ma trận Jacobian Gaussian**
+###### Ma trận Jacobian Gaussian
 
 <p align="center"><kbd><img src="assets/brcb013iryt.png" width="80%"></kbd></p>
 
@@ -843,7 +841,7 @@
 
 <a id="node-1vavixz"></a>
 
-- **Biến đổi Gaussian độc lập**
+###### Biến đổi Gaussian độc lập
 
 <p align="center"><kbd><img src="assets/bpuuihrupy7.png" width="80%"></kbd></p>
 
@@ -1050,7 +1048,7 @@
 
 <a id="node-tx5105q"></a>
 
-- **Chứng minh Mean Gaussian**
+###### Chứng minh Mean Gaussian
 
 <p align="center"><kbd><img src="assets/nfec6grlboc.png" width="80%"></kbd></p>
 
@@ -1216,7 +1214,7 @@
 
 <a id="node-b5enpfj"></a>
 
-- **Kì vọng XXT Gaussian**
+###### Kì vọng XXT Gaussian
 
 <p align="center"><kbd><img src="assets/wfu7ulrdn68.png" width="80%"></kbd></p>
 
@@ -1320,7 +1318,7 @@
 
 <a id="node-4n8u0a8"></a>
 
-- **E[XXT] Phân tích Eigen**
+###### E[XXT] Phân tích Eigen
 
 <p align="center"><kbd><img src="assets/ovdcek71dg9.png" width="80%"></kbd></p>
 
@@ -1638,7 +1636,7 @@
 
 <a id="node-gig7x9a"></a>
 
-- **Ma trận hiệp phương sai Σ**
+###### Ma trận hiệp phương sai Σ
 
 <p align="center"><kbd><img src="assets/h92028te82g.png" width="80%"></kbd></p>
 
@@ -1722,7 +1720,7 @@
 
 <a id="node-35ylf7v"></a>
 
-- **Ma trận hiệp phương sai Normal**
+###### Ma trận hiệp phương sai Normal
 
 <p align="center"><kbd><img src="assets/di2wfqqwwxg.png" width="80%"></kbd></p>
 
@@ -1794,7 +1792,7 @@
 
 <a id="node-56jy7fs"></a>
 
-- **Phân phối Gaussian và biến ẩn**
+###### Phân phối Gaussian và biến ẩn
 
 <p align="center"><kbd><img src="assets/nuj3d99mpwt.png" width="80%"></kbd></p>
 
