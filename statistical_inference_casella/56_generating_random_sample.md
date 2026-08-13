@@ -1,13 +1,9 @@
-# 5.6 Generating
-random Sample
+# 5.6 Generating Random Sample
 
 📊 **Progress:** `31` Notes | `43` Screenshots
 
 ---
 <a id="node-55zw1r1"></a>
-
-## 5.6 Generating
-random Sample
 
 <br>
 
@@ -304,7 +300,7 @@ random Sample
 
 <a id="node-dwnh42s"></a>
 
-- **Biến đổi Uniform thành phân phối**
+###### Biến đổi Uniform thành phân phối
 
 <p align="center"><kbd><img src="assets/u5n47fyiq6.png" width="80%"></kbd></p>
 
@@ -339,7 +335,7 @@ random Sample
 
 <a id="node-ezy1q8o"></a>
 
-- **Biến đổi tích phân xác suất**
+###### Biến đổi tích phân xác suất
 
 <p align="center"><kbd><img src="assets/p7w2v57w1rk.png" width="80%"></kbd></p>
 
@@ -497,7 +493,7 @@ random Sample
 
 <a id="node-lmb6x1x"></a>
 
-- **Biến đổi Tích phân Xác suất**
+###### Biến đổi Tích phân Xác suất
 
 <p align="center"><kbd><img src="assets/zg2goj3ry1f.png" width="80%"></kbd></p>
 
@@ -530,7 +526,7 @@ random Sample
 
 <a id="node-bxd38ye"></a>
 
-- **Tạo biến ngẫu nhiên mũ**
+###### Tạo biến ngẫu nhiên mũ
 
 <p align="center"><kbd><img src="assets/9j8mbjghoze.png" width="80%"></kbd></p>
 
@@ -614,7 +610,7 @@ random Sample
 
 <a id="node-9siyt0k"></a>
 
-- **Hạn chế phương pháp tạo mẫu**
+###### Hạn chế phương pháp tạo mẫu
 
 <p align="center"><kbd><img src="assets/zkda0twj8ee.png" width="80%"></kbd></p>
 
@@ -638,7 +634,7 @@ random Sample
 
 <a id="node-bzrfuij"></a>
 
-- **Giới hạn Biến đổi Tích phân**
+###### Giới hạn Biến đổi Tích phân
 
 <p align="center"><kbd><img src="assets/fqnjl0uc4xg.png" width="80%"></kbd></p>
 
@@ -712,7 +708,7 @@ random Sample
 
 <a id="node-c43optz"></a>
 
-- **Chuyển đổi Box-Muller**
+###### Chuyển đổi Box-Muller
 
 <p align="center"><kbd><img src="assets/wj790kl3sr.png" width="80%"></kbd></p>
 
@@ -934,7 +930,7 @@ random Sample
 
 <a id="node-14eg29f"></a>
 
-- **Thuật toán Box-Muller**
+###### Thuật toán Box-Muller
 
 <p align="center"><kbd><img src="assets/mqtywf89oxl.png" width="80%"></kbd></p>
 
@@ -948,7 +944,7 @@ random Sample
 
 <a id="node-jndtn8k"></a>
 
-- **Thuật toán Biến đổi Ngược Rời rạc**
+###### Thuật toán Biến đổi Ngược Rời rạc
 
 <p align="center"><kbd><img src="assets/ajs51jaogrt.png" width="80%"></kbd></p>
 
@@ -1099,7 +1095,7 @@ random Sample
 
 <a id="node-rrpw9m9"></a>
 
-- **Tạo biến nhị thức**
+###### Tạo biến nhị thức
 
 <p align="center"><kbd><img src="assets/t2spehm8x1m.png" width="80%"></kbd></p>
 
@@ -1122,7 +1118,7 @@ random Sample
 
 <a id="node-wyh1gue"></a>
 
-- **Phương pháp bootstrap tham số**
+###### Phương pháp bootstrap tham số
 
 <p align="center"><kbd><img src="assets/4x3znnzcnfp.png" width="80%"></kbd></p>
 
@@ -1130,7 +1126,7 @@ random Sample
 
 <a id="node-qmu12n8"></a>
 
-- **Phân phối trung bình mẫu Poisson**
+###### Phân phối trung bình mẫu Poisson
 
 <p align="center"><kbd><img src="assets/nex7squ13ji.png" width="80%"></kbd></p>
 
@@ -1481,7 +1477,7 @@ random Sample
 
 <a id="node-p6egxsa"></a>
 
-- **Phân phối trung bình mẫu**
+###### Phân phối trung bình mẫu
 
 <p align="center"><kbd><img src="assets/h0hhgj9pg28.png" width="80%"></kbd></p>
 
@@ -1492,7 +1488,7 @@ random Sample
 
 <a id="node-ezxhixg"></a>
 
-- **Mô phỏng Poisson ước lượng S^2**
+###### Mô phỏng Poisson ước lượng S^2
 
 <p align="center"><kbd><img src="assets/8w394o9sjz5.png" width="80%"></kbd></p>
 
@@ -1505,7 +1501,7 @@ random Sample
 
 <a id="node-aebauln"></a>
 
-- **Thuật toán Accept/Reject**
+###### Thuật toán Accept/Reject
 
 <p align="center"><kbd><img src="assets/24iup3cst5r.png" width="80%"></kbd></p>
 
@@ -1994,7 +1990,7 @@ random Sample
 
 <a id="node-kg24ph1"></a>
 
-- **Chọn c tối ưu**
+###### Chọn c tối ưu
 
 <p align="center"><kbd><img src="assets/ebg3futfshi.png" width="80%"></kbd></p>
 
@@ -2120,7 +2116,7 @@ random Sample
 
 <a id="node-vntq710"></a>
 
-- **Thuật toán Chấp nhận/Bác bỏ khái quát**
+###### Thuật toán Chấp nhận/Bác bỏ khái quát
 
 <p align="center"><kbd><img src="assets/twiavgte16o.png" width="80%"></kbd></p>
 
@@ -2212,7 +2208,7 @@ random Sample
 
 <a id="node-7252yk6"></a>
 
-- **Lấy mẫu chấp nhận-loại bỏ**
+###### Lấy mẫu chấp nhận-loại bỏ
 
 <p align="center"><kbd><img src="assets/mdosyo3nj5.png" width="80%"></kbd></p>
 
@@ -2252,7 +2248,7 @@ random Sample
 
 <a id="node-h4i98x5"></a>
 
-- **Thuật toán chấp nhận-loại bỏ**
+###### Thuật toán chấp nhận-loại bỏ
 
 <p align="center"><kbd><img src="assets/e7hoe5om6v.png" width="80%"></kbd></p>
 
@@ -2389,7 +2385,7 @@ random Sample
 
 <a id="node-77vxakc"></a>
 
-- **M và xác suất dừng**
+###### M và xác suất dừng
 
 <p align="center"><kbd><img src="assets/zow0rvdojh.png" width="80%"></kbd></p>
 
@@ -2405,7 +2401,7 @@ random Sample
 
 <a id="node-6wwbqn3"></a>
 
-- **Tạo biến Beta Accept/Reject**
+###### Tạo biến Beta Accept/Reject
 
 <p align="center"><kbd><img src="assets/3gjmyxsvie4.png" width="80%"></kbd></p>
 
@@ -2430,7 +2426,7 @@ random Sample
 
 <a id="node-d508j5b"></a>
 
-- **Accept/Reject: Điều kiện M**
+###### Accept/Reject: Điều kiện M
 
 <p align="center"><kbd><img src="assets/vzxdueegoue.png" width="80%"></kbd></p>
 
@@ -2464,7 +2460,7 @@ random Sample
 
 <a id="node-igf6ddy"></a>
 
-- **Thuật toán Metropolis**
+###### Thuật toán Metropolis
 
 <p align="center"><kbd><img src="assets/qnctgg3ycxf.png" width="80%"></kbd></p>
 
@@ -2480,7 +2476,7 @@ random Sample
 
 <a id="node-1hwqtrw"></a>
 
-- **Định lý Giới hạn Trung tâm**
+###### Định lý Giới hạn Trung tâm
 
 <p align="center"><kbd><img src="assets/zamoeq0j5b.png" width="80%"></kbd></p>
 
@@ -2491,7 +2487,7 @@ random Sample
 
 <a id="node-m2r8vrl"></a>
 
-- **Độ lệch của S^2**
+###### Độ lệch của S^2
 
 <p align="center"><kbd><img src="assets/mendkwwr7bb.png" width="80%"></kbd></p>
 
@@ -2504,7 +2500,7 @@ random Sample
 
 <a id="node-1evcnis"></a>
 
-- **Bất đẳng thức Chebychev**
+###### Bất đẳng thức Chebychev
 
 <p align="center"><kbd><img src="assets/8honx00l7er.png" width="80%"></kbd></p>
 
@@ -2515,7 +2511,7 @@ random Sample
 
 <a id="node-voy01dh"></a>
 
-- **Luật số lớn mạnh**
+###### Luật số lớn mạnh
 
 <p align="center"><kbd><img src="assets/170tzir90hoi.png" width="80%"></kbd></p>
 
