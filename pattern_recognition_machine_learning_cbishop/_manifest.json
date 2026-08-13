@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1786579364137,
+  "publishedAt": 1786660842056,
   "sections": [
     {
       "title": "📋 Overview",
@@ -63,7 +63,7 @@
       "imageCount": 6
     },
     {
-      "title": "1.4 The Curse\nOf Dimensionality",
+      "title": "1.4 The Curse Of Dimensionality",
       "path": "pattern_recognition_machine_learning_cbishop/14_the_curse_of_dimensionality.md",
       "noteCount": 6,
       "imageCount": 15
@@ -269,8 +269,8 @@
     {
       "title": "3.4 Bayesian Model Comparison",
       "path": "pattern_recognition_machine_learning_cbishop/34_bayesian_model_comparison.md",
-      "noteCount": 7,
-      "imageCount": 8
+      "noteCount": 10,
+      "imageCount": 14
     },
     {
       "title": "Appendix C. Matrices",
@@ -285,6 +285,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 355,
-  "totalImages": 517
+  "totalNotes": 358,
+  "totalImages": 523
 }
