@@ -5,8 +5,6 @@
 ---
 <a id="node-a3di5y4"></a>
 
-## 7.1 Introduction
-
 <br>
 
 <a id="node-sxfmwm2"></a>
