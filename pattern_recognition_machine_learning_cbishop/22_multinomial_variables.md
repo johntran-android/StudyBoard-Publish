@@ -5,8 +5,6 @@
 ---
 <a id="node-3wyjcuf"></a>
 
-## 2.2 Multinomial Variables
-
 <br>
 
 <a id="node-8bncfkc"></a>
@@ -488,7 +486,7 @@
 
 <a id="node-z10rtol"></a>
 
-- **Giải thích Phân phối Đa thức**
+###### Giải thích Phân phối Đa thức
 
 <p align="center"><kbd><img src="assets/7hmyco8fal8.png" width="80%"></kbd></p>
 
@@ -756,7 +754,7 @@
 
 <a id="node-mtuvvxg"></a>
 
-- **Phân phối Dirichlet**
+###### Phân phối Dirichlet
 
 <p align="center"><kbd><img src="assets/wifcz7huwxc.png" width="80%"></kbd></p>
 
@@ -832,7 +830,7 @@
 
 <a id="node-t1l9a4m"></a>
 
-- **Prior liên hợp Dirichlet**
+###### Prior liên hợp Dirichlet
 
 <p align="center"><kbd><img src="assets/af9ic9x2mhf.png" width="80%"></kbd></p>
 
