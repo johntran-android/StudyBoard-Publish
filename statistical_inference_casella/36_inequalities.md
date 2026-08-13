@@ -5,8 +5,6 @@
 ---
 <a id="node-je90bvn"></a>
 
-## 3.6 Inequalities
-
 <br>
 
 <a id="node-u9zgfoi"></a>
@@ -253,7 +251,7 @@
 
 <a id="node-pc1n71r"></a>
 
-- **Chứng minh đẳng thức Gamma**
+###### Chứng minh đẳng thức Gamma
 
 <p align="center"><kbd><img src="assets/g4v53kde7oa.png" width="80%"></kbd></p>
 
@@ -418,7 +416,7 @@
 
 <a id="node-x7i764m"></a>
 
-- **Bổ đề Stein và tích phân từng phần**
+###### Bổ đề Stein và tích phân từng phần
 
 <p align="center"><kbd><img src="assets/106ojf6yovv.png" width="80%"></kbd></p>
 
