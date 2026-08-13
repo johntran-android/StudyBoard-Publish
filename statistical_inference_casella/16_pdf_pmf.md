@@ -5,8 +5,6 @@
 ---
 <a id="node-05uz3pr"></a>
 
-## 1.6 PDF & Pmf
-
 <br>
 
 <a id="node-6k21kkz"></a>
