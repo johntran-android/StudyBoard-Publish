@@ -1,13 +1,9 @@
-# 5.1 Basic Concepts Of
-random Samples
+# 5.1 Basic Concepts Of Random Samples
 
 📊 **Progress:** `13` Notes | `16` Screenshots
 
 ---
 <a id="node-qlce1dx"></a>
-
-## 5.1 Basic Concepts Of
-random Samples
 
 <br>
 
@@ -326,7 +322,7 @@ random Samples
 
 <a id="node-7lrwn0l"></a>
 
-- **Tính xác suất bằng Joint PDF**
+###### Tính xác suất bằng Joint PDF
 
 <p align="center"><kbd><img src="assets/ekxj17bpbzr.png" width="80%"></kbd></p>
 
@@ -437,7 +433,7 @@ random Samples
 
 <a id="node-bwqbjvi"></a>
 
-- **Xác suất mẫu độc lập đồng nhất**
+###### Xác suất mẫu độc lập đồng nhất
 
 <p align="center"><kbd><img src="assets/ms46drfem2s.png" width="80%"></kbd></p>
 
@@ -478,7 +474,7 @@ random Samples
 
 <a id="node-8xmgcot"></a>
 
-- **Giả định độc lập biến ngẫu nhiên**
+###### Giả định độc lập biến ngẫu nhiên
 
 <p align="center"><kbd><img src="assets/610new53pyk.png" width="80%"></kbd></p>
 
@@ -530,7 +526,7 @@ random Samples
 
 <a id="node-kh9sv0g"></a>
 
-- **Lấy mẫu có hoàn lại**
+###### Lấy mẫu có hoàn lại
 
 <p align="center"><kbd><img src="assets/sikx6k2luzt.png" width="80%"></kbd></p>
 
@@ -593,7 +589,7 @@ random Samples
 
 <a id="node-qynsxfk"></a>
 
-- **Phụ thuộc trong lấy mẫu không hoàn lại**
+###### Phụ thuộc trong lấy mẫu không hoàn lại
 
 <p align="center"><kbd><img src="assets/a9354i76fdl.png" width="80%"></kbd></p>
 
@@ -638,7 +634,7 @@ random Samples
 
 <a id="node-42h00kb"></a>
 
-- **Đồng phân bố nhưng không độc lập**
+###### Đồng phân bố nhưng không độc lập
 
 <p align="center"><kbd><img src="assets/e1qgxlvl67j.png" width="80%"></kbd></p>
 
@@ -725,7 +721,7 @@ random Samples
 
 <a id="node-723pgub"></a>
 
-- **Độc lập gần đúng khi N lớn**
+###### Độc lập gần đúng khi N lớn
 
 <p align="center"><kbd><img src="assets/teli8wvt53.png" width="80%"></kbd></p>
 
@@ -763,7 +759,7 @@ random Samples
 
 <a id="node-klq6i7n"></a>
 
-- **Xác suất lấy mẫu không hoàn lại**
+###### Xác suất lấy mẫu không hoàn lại
 
 <p align="center"><kbd><img src="assets/lnouz1bkyye.png" width="80%"></kbd></p>
 
@@ -861,7 +857,7 @@ random Samples
 
 <a id="node-un8v5j7"></a>
 
-- **Phân phối siêu hình học**
+###### Phân phối siêu hình học
 
 <p align="center"><kbd><img src="assets/3vc463eqgdn.png" width="80%"></kbd></p>
 
