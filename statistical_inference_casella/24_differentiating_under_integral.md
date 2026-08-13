@@ -1,13 +1,9 @@
-# 2.4 Differentiating
-under integral
+# 2.4 Differentiating under integral
 
 📊 **Progress:** `11` Notes | `19` Screenshots
 
 ---
 <a id="node-jv0kuie"></a>
-
-## 2.4 Differentiating
-under integral
 
 <br>
 
@@ -440,7 +436,7 @@ under integral
 
 <a id="node-hpuoadp"></a>
 
-- **Biện minh đổi chỗ tích phân**
+###### Biện minh đổi chỗ tích phân
 
 <p align="center"><kbd><img src="assets/x6no4oo0uc.png" width="80%"></kbd></p>
 
@@ -605,7 +601,7 @@ under integral
 
 <a id="node-m94jjdl"></a>
 
-- **Công thức đệ quy momen**
+###### Công thức đệ quy momen
 
 <p align="center"><kbd><img src="assets/767vpgnjte.png" width="80%"></kbd></p>
 
@@ -633,7 +629,7 @@ under integral
 
 <a id="node-f1srg8g"></a>
 
-- **Đổi chỗ tích phân đạo hàm**
+###### Đổi chỗ tích phân đạo hàm
 
 <p align="center"><kbd><img src="assets/ohbesy9wzhh.png" width="80%"></kbd></p>
 
@@ -651,7 +647,7 @@ under integral
 
 <a id="node-nu0vtkw"></a>
 
-- **Khả tích dưới dấu tích phân**
+###### Khả tích dưới dấu tích phân
 
 <p align="center"><kbd><img src="assets/e3duc8q5y1q.png" width="80%"></kbd></p>
 
@@ -662,7 +658,7 @@ under integral
 
 <a id="node-xsgavig"></a>
 
-- **Đổi chỗ Đạo hàm và Tổng**
+###### Đổi chỗ Đạo hàm và Tổng
 
 <p align="center"><kbd><img src="assets/jd0tsl0926.png" width="80%"></kbd></p>
 
@@ -844,7 +840,7 @@ under integral
 
 <a id="node-njwmqfu"></a>
 
-- **Đổi chỗ đạo hàm và tổng**
+###### Đổi chỗ đạo hàm và tổng
 
 <p align="center"><kbd><img src="assets/6pkipnbdjg.png" width="80%"></kbd></p>
 
@@ -870,7 +866,7 @@ under integral
 
 <a id="node-g9asefx"></a>
 
-- **Hội tụ đều tổng đạo hàm**
+###### Hội tụ đều tổng đạo hàm
 
 <p align="center"><kbd><img src="assets/ie7hhb4q05.png" width="80%"></kbd></p>
 
