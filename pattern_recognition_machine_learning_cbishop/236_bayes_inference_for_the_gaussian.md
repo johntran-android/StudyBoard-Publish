@@ -5,8 +5,6 @@
 ---
 <a id="node-h5q9xat"></a>
 
-## 2.3.6 Bayes inference for the Gaussian
-
 <p align="center"><kbd><img src="assets/6180lkg4qcn.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -578,7 +576,7 @@
 
 <a id="node-0krdszq"></a>
 
-- **Mẫu hiệu quả trong Gamma prior**
+###### Mẫu hiệu quả trong Gamma prior
 
 <p align="center"><kbd><img src="assets/0s8yydm2vl3l.png" width="80%"></kbd></p>
 
@@ -618,7 +616,7 @@
 
 <a id="node-klxmvr0"></a>
 
-- **Phân phối Gaussian-Gamma**
+###### Phân phối Gaussian-Gamma
 
 <p align="center"><kbd><img src="assets/xhsrqgshy8l.png" width="80%"></kbd></p>
 
@@ -836,7 +834,7 @@
 
 <a id="node-5sg7gx0"></a>
 
-- **Suy luận tham số Gaussian đa biến**
+###### Suy luận tham số Gaussian đa biến
 
 <p align="center"><kbd><img src="assets/lb84nzfcv4l.png" width="80%"></kbd></p>
 
