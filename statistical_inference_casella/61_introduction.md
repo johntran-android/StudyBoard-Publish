@@ -5,8 +5,6 @@
 ---
 <a id="node-ex3u4vb"></a>
 
-## 6.1 Introduction
-
 <br>
 
 <a id="node-y0ojemq"></a>
