@@ -5,8 +5,6 @@
 ---
 <a id="node-30ukzo4"></a>
 
-## 8.1 Introduction
-
 <br>
 
 <a id="node-vgua6or"></a>
@@ -200,7 +198,7 @@
 
 <a id="node-2cgk98m"></a>
 
-- **Kiểm định giả thuyết: Khái niệm cơ bản**
+###### Kiểm định giả thuyết: Khái niệm cơ bản
 
 <p align="center"><kbd><img src="assets/5f72b6fv0dc.png" width="80%"></kbd></p>
 
