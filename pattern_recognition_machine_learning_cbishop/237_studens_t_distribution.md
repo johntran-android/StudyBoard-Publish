@@ -5,8 +5,6 @@
 ---
 <a id="node-twxs20e"></a>
 
-## 2.3.7 Studen's t-distribution
-
 <br>
 
 <a id="node-uji4ipq"></a>
