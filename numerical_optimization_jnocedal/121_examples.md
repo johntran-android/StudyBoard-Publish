@@ -1,6 +1,6 @@
 # 12.1 Examples
 
-📊 **Progress:** `7` Notes | `12` Screenshots | `5` AI Reviews
+📊 **Progress:** `9` Notes | `17` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-frx2ram"></a>
@@ -94,6 +94,8 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Ghi chú rất xuất sắc, giải thích chính xác và trực quan định nghĩa về tập hoạt động (active set) kèm ví dụ minh họa rõ ràng và so sánh hệ thống ký hiệu với sách của Stephen Boyd. Bạn chỉ cần lưu ý chỉnh sửa một vài lỗi chính tả nhỏ để bài viết thêm phần hoàn thiện.
+
+**🔗 See also:** [First-Order Optimality Conditions](./123_first_order_optimality_condition.md#node-hvhhcds)
 
 <br>
 
@@ -538,6 +540,103 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Bài viết thể hiện sự hiểu biết trực quan rất sâu sắc và mạch lạc về cách thiết lập điều kiện KKT. Tuy nhiên, có một nhầm lẫn nhỏ ở Case II khi viết điều kiện $\nabla c_1(x)^T s \ge 0$ tương ứng với góc 'vuông hoặc tù' (thực tế phải là góc 'nhọn hoặc vuông').
+
+<br>
+
+<a id="node-jyp1xyk"></a>
+
+- **Example 12.3 Two Inequality Constraints**
+
+<p align="center"><kbd><img src="assets/2vj8ghvkeqg.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6jfolcun94g.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fwow0p3vrfe.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này không có gì khó hiểu, chỉ là mở rộng thêm 1 ràng buộc bất đẳng thức nữa. Lagrangian có thêm 1 term -λ2c2(x). Và điều kiện tìm solution vẫn là ∇\_x L(x\*, λ\*) = 0, λ\* ≥ 0, λ1\* c1(x\*) = 0 λ2\* c2(x\*) = 0.
+
+<br>
+
+<a id="node-r2pl3pb"></a>
+
+- **Lagrangian Properties at Feasible Points**
+
+<p align="center"><kbd><img src="assets/xw6dqe8959j.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ys4ijfmcn8.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Khúc này cũng không có gì quan trọng. Nói chung chỉ là gs Nocedal muốn minh họa để thuyết phục ta rằng cái điều kiện stationary và complementary slackness thật sự chỉ thỏa khi đó là solution, nếu không thì nó sẽ không thỏa.
+>
+>
+>
+> Nhưng mình sẽ active recall lại lần nữa cái lập luận mang tính trực giác giúp dẫn đến các điều kiện KKT, mình sẽ bỏ qua 12.3 (quay lại sau) nơi nói về Tangent cone, vốn dĩ chỉ là nhằm mục đích chứng minh cái theorem này.
+>
+>
+>
+> Ok, lập luận nhanh: bài toán là, minimize f(x) với constraint c1(x) ≥ 0.
+>
+>
+>
+> Lập luận như sau: Giả sử đang đứng tại x feasible. Nếu tìm được vector s có độ dài rất nhỏ, để x + s vẫn feasible và f(x + s) &lt; f(x) thì x không phải là solution của bài toán. Ngược lại, nếu không thể tìm được s như vậy thì x chính là solution.
+>
+>
+>
+> Thế thì với s rất ngắn, x+s sẽ rất gần x (≈x), cho phép hàm f(x+s) hành xử xấp xỉ như hàm tuyến tính: f(x+s) ≈ f(x) + ∇f(x)Ts. Như vậy, để giảm f, thì f(x+s) &lt; f(s), đồng nghĩa ∇f(s)Ts ≈ f(x+s) - f(x) phải &lt; 0. Như vậy, s phải hợp góc tù với ∇f(x) (i)
+>
+>
+>
+> Tương tự, với x+s rất gần x, hàm c1(x) cũng hành xử như hàm tuyến tính: c1(x+s) ≈ c1(x) + ∇c1Ts. Thế thì để x+s vẫn feasible, tức c1(x+s) ≥ 0 nên tương đương c1(x) + ∇c1Ts ≥ 0 (ii)
+>
+>
+>
+> Tới đây ta chia hai trường hợp:
+>
+>
+>
+> Case 1: Khi x đang ở interior của feasible set, tức c1(x) &gt; 0. Khi đó, để tìm một s thỏa (ii), thì miễn là s rất ngắn để cho dù ∇c1Ts có âm thì cái hạng tử dương c1(x) vẫn đủ để gánh, khiến thỏa (ii). Mà nói vậy thì đương nhiên đồng nghĩa luôn tồn tại vector s (còn việc khống chế cho length nó nhỏ thì luôn làm được) thỏa (ii), và không những là luôn tồn tại, mà là bất kì s với hướng nào cũng được, miễn là khống chế length của nó. Và trong số s bất kì đó, chắc chắn phải có s hợp với ∇f(x) một góc tù, trừ khi ∇f(x) đã bằng 0. Vậy, trong trường hợp này, khi x trong interior của feasible set, thì dù nó thế nào, thì cũng luôn tồn tại s khiến thỏa (ii) và (i), nên x luôn không phải là solution. Trừ một trường hợp: ∇f(x) = 0, khi đó dù với s bất kì đều thỏa (ii) nhưng không thể nào có s thỏa (i), vì làm sao hợp với zero vector một góc tù được. Vậy điều kiện để tìm solution ở case này là: ∇f(x\*) = 0
+>
+>
+>
+> Case 2: Khi x đang ở boundary của feasible set, tức c1(x) = 0. Khi đó, điều kiện (ii) trở thành ∇c1Ts ≥ 0, đồng nghĩa s phải hợp với ∇c1 một góc nhọn hoặc vuông. Câu hỏi lúc này là, tại x ở đâu thì không thể tìm được s thỏa: hợp góc nhọn hoặc vuông với ∇c1(x) và hợp với góc tù với ∇f(x). Câu trả lời chính là: khi ∇f(x) trùng với ∇c1(x), vì khi đó s không thể nào hợp một góc vừa nhọn vuông vừa tù được. Và như vậy, điều kiện tìm solution là:
+>
+>
+>
+> ∇f(x\*) = λ\*1 ∇c1(x\*) với λ\*1 ≥ 0
+>
+>
+>
+> Như vậy, tổng hợp lại 2 case, điều kiện sẽ là:
+>
+>
+>
+> ∇f(x\*) - λ\*1 ∇c1(x\*) = 0
+>
+>
+>
+> và λ\*1 c1(x\*) = 0
+>
+>
+>
+> và λ\*1 ≥ 0. 
+>
+>
+>
+> với 3 điều kiện này, nó sẽ cover 2 case trên:
+>
+>
+>
+> Khi c1(x\*) &gt; 0, thì λ\*(x) phải = 0, và (1) trở thành điều kiện tìm nghiệm của case 1: ∇f(x\*) = 0
+>
+>
+>
+> Khi c1(x\*) = , thì λ\*(x) chỉ cần ≥ 0, và (1) trở thành điều kiện tìm nghiệm của case 2: ∇f(x\*) = λ\*1 ∇c1(x\*) với λ\*1 ≥ 0
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Bạn có tư duy trực quan xuất sắc khi tự lập luận và tái hiện lại các điều kiện KKT qua hai trường hợp biên và trong của tập khả thi. Hãy lưu ý sửa một lỗi gõ nhỏ ở cuối đoạn ('c1(x*) = ') và nhớ bổ sung vai trò của điều kiện ràng buộc (Constraint Qualifications) khi bạn tìm hiểu sâu hơn ở phần Tangent cone nhé.
 
 <br>
 
