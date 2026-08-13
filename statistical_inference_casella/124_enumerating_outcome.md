@@ -1,13 +1,9 @@
-# 1.2.4 Enumerating
-outcome
+# 1.2.4 Enumerating Outcome
 
 📊 **Progress:** `10` Notes | `14` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-8twizz7"></a>
-
-## 1.2.4 Enumerating
-outcome
 
 <br>
 
@@ -305,7 +301,7 @@ outcome
 
 <a id="node-c8b8ios"></a>
 
-- **Example 1.2.19 Sampling with Replacement**
+###### Example 1.2.19 Sampling with Replacement
 
 <p align="center"><kbd><img src="assets/ttf2j0qqjv.png" width="80%"></kbd></p>
 
@@ -401,7 +397,7 @@ outcome
 
 <a id="node-pu2z1e2"></a>
 
-- **Hiểu sai "equally likely"**
+###### Hiểu sai "equally likely"
 
 <p align="center"><kbd><img src="assets/jzcifoelpz.png" width="80%"></kbd></p>
 
@@ -451,7 +447,7 @@ outcome
 
 <a id="node-pl75v3r"></a>
 
-- **Example 1.2.20 Calculating Average**
+###### Example 1.2.20 Calculating Average
 
 <p align="center"><kbd><img src="assets/1gulxoqfhivi.png" width="80%"></kbd></p>
 
@@ -549,7 +545,7 @@ outcome
 
 <a id="node-q02rbqh"></a>
 
-- **Đếm mẫu tính xác suất**
+###### Đếm mẫu tính xác suất
 
 <p align="center"><kbd><img src="assets/flt24tbdbf4.png" width="80%"></kbd></p>
 
@@ -601,7 +597,7 @@ outcome
 
 <a id="node-56gu8sw"></a>
 
-- **Histogram of Sample Averages**
+###### Histogram of Sample Averages
 
 <p align="center"><kbd><img src="assets/vqd94nwmwcc.png" width="80%"></kbd></p>
 
@@ -629,7 +625,7 @@ outcome
 
 <a id="node-h4ac7kx"></a>
 
-- **The Bootstrap Statistical Technique**
+###### The Bootstrap Statistical Technique
 
 <p align="center"><kbd><img src="assets/tskaisufr0o.png" width="80%"></kbd></p>
 
