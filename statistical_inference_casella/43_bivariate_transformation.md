@@ -1,13 +1,9 @@
-# 4.3 Bivariate
-transformation
+# 4.3 Bivariate Transformation
 
 📊 **Progress:** `14` Notes | `24` Screenshots
 
 ---
 <a id="node-mnzjqow"></a>
-
-## 4.3 Bivariate
-transformation
 
 <br>
 
@@ -481,13 +477,13 @@ transformation
 >
 >
 >
-> - phần nằm trong 𝒜, (thích thì gọi là Auv cũng được nhưng phải
+> \- phần nằm trong 𝒜, (thích thì gọi là Auv cũng được nhưng phải
 > hiểu nó map với các điểm trong dA quanh (u,v) chứ ko phải là map
 > với point (u,v))
 >
 >
 >
-> - phần nằm ngoài 𝒜
+> \- phần nằm ngoài 𝒜
 >
 >
 >
@@ -599,7 +595,7 @@ transformation
 
 <a id="node-502p4lv"></a>
 
-- **Đạo hàm PMF biên fU(u)**
+###### Đạo hàm PMF biên fU(u)
 
 <p align="center"><kbd><img src="assets/e0bbqciunm4.png" width="80%"></kbd></p>
 
@@ -695,7 +691,7 @@ transformation
 
 <a id="node-6g2gxiv"></a>
 
-- **Jacobian trong hàm mật độ**
+###### Jacobian trong hàm mật độ
 
 <p align="center"><kbd><img src="assets/kv14skniabc.png" width="80%"></kbd></p>
 
@@ -990,7 +986,7 @@ transformation
 
 <a id="node-12qoex9"></a>
 
-- **Miền hỗ trợ biến đổi Beta**
+###### Miền hỗ trợ biến đổi Beta
 
 <p align="center"><kbd><img src="assets/ea9z82ss7vk.png" width="80%"></kbd></p>
 
@@ -1107,7 +1103,7 @@ transformation
 
 <a id="node-lg6irvg"></a>
 
-- **Tích phân biên và phân phối Beta**
+###### Tích phân biên và phân phối Beta
 
 <p align="center"><kbd><img src="assets/jy83p1mfy0i.png" width="80%"></kbd></p>
 
@@ -1125,7 +1121,7 @@ transformation
 
 <a id="node-bytw46k"></a>
 
-- **Xác định tập support B**
+###### Xác định tập support B
 
 <p align="center"><kbd><img src="assets/yn4cjc1bb7.png" width="80%"></kbd></p>
 
@@ -1326,7 +1322,7 @@ transformation
 
 <a id="node-0lxzfim"></a>
 
-- **Phân phối tổng hiệu biến chuẩn**
+###### Phân phối tổng hiệu biến chuẩn
 
 <p align="center"><kbd><img src="assets/eyp5rlq3g66.png" width="80%"></kbd></p>
 
@@ -1417,7 +1413,7 @@ transformation
 
 <a id="node-0p93ngi"></a>
 
-- **Tính độc lập của biến đổi hàm**
+###### Tính độc lập của biến đổi hàm
 
 <p align="center"><kbd><img src="assets/2lk6qau7oab.png" width="80%"></kbd></p>
 
@@ -1587,7 +1583,7 @@ transformation
 
 <a id="node-xubp2m2"></a>
 
-- **Phân phối biến mới qua ánh xạ**
+###### Phân phối biến mới qua ánh xạ
 
 <p align="center"><kbd><img src="assets/toxu6a4vomm.png" width="80%"></kbd></p>
 
@@ -1604,7 +1600,7 @@ transformation
 
 <a id="node-tjwlk6s"></a>
 
-- **Xử lý ánh xạ không 1-1**
+###### Xử lý ánh xạ không 1-1
 
 <p align="center"><kbd><img src="assets/9etfyrfywtf.png" width="80%"></kbd></p>
 
@@ -1721,7 +1717,7 @@ transformation
 
 <a id="node-993gkil"></a>
 
-- **Biến đổi U=X/Y, V=|Y|**
+###### Biến đổi U=X/Y, V=|Y|
 
 <p align="center"><kbd><img src="assets/sy58q0ujlg.png" width="80%"></kbd></p>
 
