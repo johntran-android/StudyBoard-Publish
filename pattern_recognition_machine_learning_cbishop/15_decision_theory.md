@@ -5,8 +5,6 @@
 ---
 <a id="node-0es6zw7"></a>
 
-## 1.5 Decision Theory
-
 <br>
 
 <a id="node-ugcaq47"></a>
@@ -166,7 +164,7 @@
 
 <a id="node-xhvr2pu"></a>
 
-- **Giảm thiểu tỉ lệ phân loại nhầm**
+###### Giảm thiểu tỉ lệ phân loại nhầm
 
 <p align="center"><kbd><img src="assets/jzfufhvi8ob.png" width="80%"></kbd></p>
 
@@ -364,7 +362,7 @@
 
 <a id="node-6papqg6"></a>
 
-- **Tối ưu hóa vùng quyết định**
+###### Tối ưu hóa vùng quyết định
 
 <p align="center"><kbd><img src="assets/jqtwov9vxyd.png" width="80%"></kbd></p>
 
@@ -528,7 +526,7 @@
 
 <a id="node-oaenu4z"></a>
 
-- **Giảm thiểu lỗi phân loại**
+###### Giảm thiểu lỗi phân loại
 
 <p align="center"><kbd><img src="assets/kjgaatltwb8.png" width="80%"></kbd></p>
 
@@ -585,7 +583,7 @@
 
 <a id="node-11mro6g"></a>
 
-- **Phân loại Bayes K lớp**
+###### Phân loại Bayes K lớp
 
 <p align="center"><kbd><img src="assets/lcinhi9o1rb.png" width="80%"></kbd></p>
 
@@ -600,7 +598,7 @@
 > ) = 1 - P(" correct"). Mà với bài toán tối ưu thì ta biết rồi, minimize hàm f(x) thì
 > cũng là maximize hàm -f(x). Đo đó, minimize P("mistake") tương đương
 > maximize
-> - P("mistake"), và cũng tương đương maximize 1 - P("mistake") (cộng hằng
+> \- P("mistake"), và cũng tương đương maximize 1 - P("mistake") (cộng hằng
 > số vào objective thì cũng được bài toán tương đương), và đây chính là
 > maximize P("correct")
 >
@@ -681,7 +679,7 @@
 
 <a id="node-1uqmzls"></a>
 
-- **Phân loại và ưu tiên lỗi**
+###### Phân loại và ưu tiên lỗi
 
 <p align="center"><kbd><img src="assets/i2en93qrj8n.png" width="80%"></kbd></p>
 
@@ -1011,7 +1009,7 @@
 
 <a id="node-b12udmg"></a>
 
-- **Hàm mất mát và rủi ro Bayes**
+###### Hàm mất mát và rủi ro Bayes
 
 <p align="center"><kbd><img src="assets/i4bga48z0z.png" width="80%"></kbd></p>
 
@@ -1149,7 +1147,7 @@
 
 <a id="node-jfiv67u"></a>
 
-- **Cấu trúc hàm mất mát**
+###### Cấu trúc hàm mất mát
 
 <p align="center"><kbd><img src="assets/4a2jgmogvng.png" width="80%"></kbd></p>
 
@@ -1326,7 +1324,7 @@
 
 <a id="node-wfazk8i"></a>
 
-- **Bayes risk và ước lượng Bayes**
+###### Bayes risk và ước lượng Bayes
 
 <p align="center"><kbd><img src="assets/4pji888h68n.png" width="80%"></kbd></p>
 
@@ -1568,7 +1566,7 @@
 
 <a id="node-ym5yp89"></a>
 
-- **Luật quyết định Bayes tối ưu**
+###### Luật quyết định Bayes tối ưu
 
 <p align="center"><kbd><img src="assets/i870mw765vb.png" width="80%"></kbd></p>
 
@@ -1627,7 +1625,7 @@
 
 <a id="node-vgqxms7"></a>
 
-- **Tuỳ chọn từ chối**
+###### Tuỳ chọn từ chối
 
 <p align="center"><kbd><img src="assets/jskp9rvfhwj.png" width="80%"></kbd></p>
 
@@ -1724,7 +1722,7 @@
 
 <a id="node-qyo3xob"></a>
 
-- **Lựa chọn từ chối phân loại**
+###### Lựa chọn từ chối phân loại
 
 <p align="center"><kbd><img src="assets/tl813zhd0c.png" width="80%"></kbd></p>
 
@@ -1737,7 +1735,7 @@
 
 <a id="node-zxhy7ux"></a>
 
-- **Inference và Decision**
+###### Inference và Decision
 
 <p align="center"><kbd><img src="assets/fgd3dfdfraw.png" width="80%"></kbd></p>
 
@@ -1786,7 +1784,7 @@
 
 <a id="node-dlnliou"></a>
 
-- **Mô hình Generative**
+###### Mô hình Generative
 
 <p align="center"><kbd><img src="assets/7gekk5ortgi.png" width="80%"></kbd></p>
 
@@ -1851,7 +1849,7 @@
 
 <a id="node-o0cwsv1"></a>
 
-- **Mô hình phân biệt**
+###### Mô hình phân biệt
 
 <p align="center"><kbd><img src="assets/2ymhk9wtcrz.png" width="80%"></kbd></p>
 
@@ -1872,7 +1870,7 @@
 
 <a id="node-odscyh7"></a>
 
-- **Hàm phân biệt**
+###### Hàm phân biệt
 
 <p align="center"><kbd><img src="assets/zknjsj3iwbq.png" width="80%"></kbd></p>
 
@@ -1885,7 +1883,7 @@
 
 <a id="node-3xzksfu"></a>
 
-- **Ưu điểm Cách 1: Phát hiện bất thường**
+###### Ưu điểm Cách 1: Phát hiện bất thường
 
 <p align="center"><kbd><img src="assets/qadxk3honq.png" width="80%"></kbd></p>
 
@@ -1919,7 +1917,7 @@
 
 <a id="node-fks3wq7"></a>
 
-- **Hiệu quả phương pháp phân loại**
+###### Hiệu quả phương pháp phân loại
 
 <p align="center"><kbd><img src="assets/x6a7gktwko.png" width="80%"></kbd></p>
 
@@ -1971,7 +1969,7 @@
 
 <a id="node-ir8w5wg"></a>
 
-- **Lợi ích của Posterior**
+###### Lợi ích của Posterior
 
 <p align="center"><kbd><img src="assets/rlr5mrbu46k.png" width="80%"></kbd></p>
 
@@ -1997,7 +1995,7 @@
 
 <a id="node-1ps2hou"></a>
 
-- **Điều chỉnh phân phối hậu nghiệm**
+###### Điều chỉnh phân phối hậu nghiệm
 
 <p align="center"><kbd><img src="assets/gw7iqzvzyhs.png" width="80%"></kbd></p>
 
@@ -2083,7 +2081,7 @@
 
 <a id="node-lm3a6ad"></a>
 
-- **Naive Bayes và độc lập điều kiện**
+###### Naive Bayes và độc lập điều kiện
 
 <p align="center"><kbd><img src="assets/ykjpnie4t4.png" width="80%"></kbd></p>
 
@@ -2149,7 +2147,7 @@
 
 <a id="node-pgy5or6"></a>
 
-- **Loss functions for regression**
+###### Loss functions for regression
 
 <p align="center"><kbd><img src="assets/fdhzp1y5yur.png" width="80%"></kbd></p>
 
@@ -2182,7 +2180,7 @@
 
 <a id="node-hh6bwri"></a>
 
-- **Minimizing Squared Loss Function**
+###### Minimizing Squared Loss Function
 
 <p align="center"><kbd><img src="assets/ogib0z5b2sf.png" width="80%"></kbd></p>
 
@@ -2509,7 +2507,7 @@
 
 <a id="node-3ve6hfk"></a>
 
-- **Optimal Least Squares Predictor**
+###### Optimal Least Squares Predictor
 
 <p align="center"><kbd><img src="assets/6w9531itl2u.png" width="80%"></kbd></p>
 
@@ -2926,7 +2924,7 @@
 
 <a id="node-nfr9orb"></a>
 
-- **Các Phương Pháp Ước Lượng**
+###### Các Phương Pháp Ước Lượng
 
 <p align="center"><kbd><img src="assets/8dkw46p60cf.png" width="80%"></kbd></p>
 
@@ -2953,7 +2951,7 @@
 
 <a id="node-ip8foqy"></a>
 
-- **Hàm mất mát Minkowski và q**
+###### Hàm mất mát Minkowski và q
 
 <p align="center"><kbd><img src="assets/dqv79e2ntrc.png" width="80%"></kbd></p>
 
