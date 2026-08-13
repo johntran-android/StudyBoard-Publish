@@ -5,8 +5,6 @@
 ---
 <a id="node-6omzny8"></a>
 
-## 1.2.4 The Gaussian distribution
-
 <br>
 
 <a id="node-7gzn07s"></a>
@@ -825,7 +823,7 @@
 
 <a id="node-yyj622u"></a>
 
-- **Ký hiệu vector và mẫu ngẫu nhiên**
+###### Ký hiệu vector và mẫu ngẫu nhiên
 
 <p align="center"><kbd><img src="assets/z4ghx6oil9d.png" width="80%"></kbd></p>
 
@@ -1058,7 +1056,7 @@
 
 <a id="node-xm5nidw"></a>
 
-- **Hàm hợp lý và phân phối Chuẩn**
+###### Hàm hợp lý và phân phối Chuẩn
 
 <p align="center"><kbd><img src="assets/rrlibhsewk.png" width="80%"></kbd></p>
 
@@ -1160,7 +1158,7 @@
 
 <a id="node-0k0d9g2"></a>
 
-- **Ước lượng Tham số Likelihood**
+###### Ước lượng Tham số Likelihood
 
 <p align="center"><kbd><img src="assets/xmicg2sfvxj.png" width="80%"></kbd></p>
 
@@ -1185,7 +1183,7 @@
 
 <a id="node-alwk6lh"></a>
 
-- **MLE phân phối chuẩn**
+###### MLE phân phối chuẩn
 
 <p align="center"><kbd><img src="assets/jduciam1g1b.png" width="80%"></kbd></p>
 
@@ -1511,7 +1509,7 @@
 
 <a id="node-1g51yok"></a>
 
-- **Sai lệch phương sai MLE**
+###### Sai lệch phương sai MLE
 
 <p align="center"><kbd><img src="assets/ask2cz14tfa.png" width="80%"></kbd></p>
 
@@ -1753,7 +1751,7 @@
 
 <a id="node-wki4nv2"></a>
 
-- **Ước lượng không chệch phương sai**
+###### Ước lượng không chệch phương sai
 
 <p align="center"><kbd><img src="assets/u7lm7lp7d7i.png" width="80%"></kbd></p>
 
