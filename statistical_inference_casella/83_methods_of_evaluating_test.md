@@ -5,8 +5,6 @@
 ---
 <a id="node-nxql2js"></a>
 
-## 8.3 Methods Of Evaluating Test
-
 <br>
 
 <a id="node-htj9wfs"></a>
@@ -285,7 +283,7 @@
 
 <a id="node-23bm9zy"></a>
 
-- **Kiểm định LRT Phân phối Chuẩn**
+###### Kiểm định LRT Phân phối Chuẩn
 
 <p align="center"><kbd><img src="assets/2fkquudhknn.png" width="80%"></kbd></p>
 
@@ -541,7 +539,7 @@
 
 <a id="node-55xkcix"></a>
 
-- **Hàm lực β(θ) phân phối chuẩn**
+###### Hàm lực β(θ) phân phối chuẩn
 
 <p align="center"><kbd><img src="assets/v8dwh0ik3re.png" width="80%"></kbd></p>
 
@@ -751,7 +749,7 @@
 
 <a id="node-xi0y2b7"></a>
 
-- **Xác định cỡ mẫu bằng hàm lực**
+###### Xác định cỡ mẫu bằng hàm lực
 
 <p align="center"><kbd><img src="assets/6kqd3g45j19.png" width="80%"></kbd></p>
 
@@ -764,7 +762,7 @@
 
 <a id="node-twddvnv"></a>
 
-- **Kiểm soát sai lầm kiểm định giả thuyết**
+###### Kiểm soát sai lầm kiểm định giả thuyết
 
 <p align="center"><kbd><img src="assets/u5sbim4uoe9.png" width="80%"></kbd></p>
 
@@ -1084,7 +1082,7 @@
 
 <a id="node-rbze5n3"></a>
 
-- **Quy tắc tra bảng Z**
+###### Quy tắc tra bảng Z
 
 <p align="center"><kbd><img src="assets/qotv4r48bkd.png" width="80%"></kbd></p>
 
@@ -1099,7 +1097,7 @@
 
 <a id="node-zxo9ogt"></a>
 
-- **Size và Level α test**
+###### Size và Level α test
 
 <p align="center"><kbd><img src="assets/zt6d7vg3jwg.png" width="80%"></kbd></p>
 
@@ -1196,7 +1194,7 @@
 
 <a id="node-njf27mc"></a>
 
-- **Ưu tiên tránh lỗi loại I**
+###### Ưu tiên tránh lỗi loại I
 
 <p align="center"><kbd><img src="assets/4orftegunjs.png" width="80%"></kbd></p>
 
@@ -1276,7 +1274,7 @@
 
 <a id="node-8t9g9rt"></a>
 
-- **Kiểm định tỉ số khả dĩ cỡ α**
+###### Kiểm định tỉ số khả dĩ cỡ α
 
 <p align="center"><kbd><img src="assets/2encuqk25kh.png" width="80%"></kbd></p>
 
@@ -1449,7 +1447,7 @@
 
 <a id="node-csqvj7r"></a>
 
-- **Ảnh hưởng Θ0 trong kiểm định**
+###### Ảnh hưởng Θ0 trong kiểm định
 
 <p align="center"><kbd><img src="assets/pcrp06lo81.png" width="80%"></kbd></p>
 
@@ -1772,7 +1770,7 @@
 
 <a id="node-ib3olsc"></a>
 
-- **Điểm cắt phân phối xác suất**
+###### Điểm cắt phân phối xác suất
 
 <p align="center"><kbd><img src="assets/37676qtd3dk.png" width="80%"></kbd></p>
 
@@ -1809,7 +1807,7 @@
 
 <a id="node-aruspge"></a>
 
-- **Kiểm định hợp-giao cỡ α**
+###### Kiểm định hợp-giao cỡ α
 
 <p align="center"><kbd><img src="assets/s9p2acb6gm.png" width="80%"></kbd></p>
 
@@ -2049,7 +2047,7 @@
 
 <a id="node-21ae20z"></a>
 
-- **Đặc điểm kiểm định giả thuyết**
+###### Đặc điểm kiểm định giả thuyết
 
 <p align="center"><kbd><img src="assets/ixwaj4i2tkj.png" width="80%"></kbd></p>
 
@@ -2196,7 +2194,7 @@
 
 <a id="node-gca38ub"></a>
 
-- **Kiểm định LRT không chệch**
+###### Kiểm định LRT không chệch
 
 <p align="center"><kbd><img src="assets/co4yil0kekb.png" width="80%"></kbd></p>
 
@@ -2253,7 +2251,7 @@
 
 <a id="node-i8kwc7p"></a>
 
-- **Kiểm định giả thuyết tối ưu**
+###### Kiểm định giả thuyết tối ưu
 
 <p align="center"><kbd><img src="assets/59zcba057bt.png" width="80%"></kbd></p>
 
@@ -2313,7 +2311,7 @@
 
 <a id="node-00oute9"></a>
 
-- **Định lý Neyman-Pearson**
+###### Định lý Neyman-Pearson
 
 <p align="center"><kbd><img src="assets/ronb8nvg2mh.png" width="80%"></kbd></p>
 
@@ -2486,7 +2484,7 @@
 
 <a id="node-jagupr6"></a>
 
-- **Chứng minh định lý Neyman-Pearson**
+###### Chứng minh định lý Neyman-Pearson
 
 <p align="center"><kbd><img src="assets/5wfjfnl5dy2.png" width="80%"></kbd></p>
 
@@ -2589,7 +2587,7 @@
 >
 >
 > ⇔ ∫Φ(**x**)f(**x**|θ1d**x** - ∫Φ'(**x**)f(**x**|θ1d**x** - k[ ∫Φ(**x**)f(**x**|θ0)d**x**
-> - ∫Φ' (**x**)f(**x**|θ0)d**x**] ≥ 0
+> \- ∫Φ' (**x**)f(**x**|θ0)d**x**] ≥ 0
 >
 >
 >
@@ -2746,7 +2744,7 @@
 
 <a id="node-lw0vn5b"></a>
 
-- **Độc nhất UMP level α test**
+###### Độc nhất UMP level α test
 
 <p align="center"><kbd><img src="assets/wo2c3o10xf.png" width="80%"></kbd></p>
 
@@ -2798,7 +2796,7 @@
 >
 >
 >
-> - k[β(θ0) - β'(θ0)] ≥ 0
+> \- k[β(θ0) - β'(θ0)] ≥ 0
 >
 >
 >
@@ -2893,7 +2891,7 @@
 
 <a id="node-qawk1aq"></a>
 
-- **Kiểm định UMP với thống kê đủ**
+###### Kiểm định UMP với thống kê đủ
 
 <p align="center"><kbd><img src="assets/igl290n2x9g.png" width="80%"></kbd></p>
 
@@ -2954,7 +2952,7 @@
 
 <a id="node-de2hwk8"></a>
 
-- **Chứng minh kiểm định UMP α**
+###### Chứng minh kiểm định UMP α
 
 <p align="center"><kbd><img src="assets/81j8iq4vong.png" width="80%"></kbd></p>
 
@@ -3036,7 +3034,7 @@
 
 <a id="node-u1a707d"></a>
 
-- **Kiểm định UMP nhị thức**
+###### Kiểm định UMP nhị thức
 
 <p align="center"><kbd><img src="assets/oircqkeh7sa.png" width="80%"></kbd></p>
 
@@ -3322,7 +3320,7 @@
 
 <a id="node-kd3nfb2"></a>
 
-- **Kiểm định UMP tham số trung bình**
+###### Kiểm định UMP tham số trung bình
 
 <p align="center"><kbd><img src="assets/u3m9jgzb22e.png" width="80%"></kbd></p>
 
@@ -3601,7 +3599,7 @@
 
 <a id="node-ibjxbz4"></a>
 
-- **Kiểm định UMP giả thuyết phức hợp**
+###### Kiểm định UMP giả thuyết phức hợp
 
 <p align="center"><kbd><img src="assets/civzfkewmoo.png" width="80%"></kbd></p>
 
@@ -3662,7 +3660,7 @@
 
 <a id="node-czw18og"></a>
 
-- **Định nghĩa Tỉ số Khả năng Đơn điệu**
+###### Định nghĩa Tỉ số Khả năng Đơn điệu
 
 <p align="center"><kbd><img src="assets/uxcwxihnj6c.png" width="80%"></kbd></p>
 
@@ -3699,7 +3697,7 @@
 
 <a id="node-r9it3lg"></a>
 
-- **Kiểm định UMP bằng MLR**
+###### Kiểm định UMP bằng MLR
 
 <p align="center"><kbd><img src="assets/2yj2tu41x9c.png" width="80%"></kbd></p>
 
@@ -3901,7 +3899,7 @@
 
 <a id="node-5yjxrsb"></a>
 
-- **Kiểm định UMP theo Karlin-Rubin**
+###### Kiểm định UMP theo Karlin-Rubin
 
 <p align="center"><kbd><img src="assets/h81szfjplz.png" width="80%"></kbd></p>
 
@@ -4086,7 +4084,7 @@
 
 <a id="node-2p2a5ur"></a>
 
-- **Kiểm định, ước lượng và MSE**
+###### Kiểm định, ước lượng và MSE
 
 <p align="center"><kbd><img src="assets/ng90fhxdx1c.png" width="80%"></kbd></p>
 
@@ -4176,7 +4174,7 @@
 
 <a id="node-2k0efzk"></a>
 
-- **Test mức alpha và kích thước**
+###### Test mức alpha và kích thước
 
 <p align="center"><kbd><img src="assets/uxtlhwbhmn.png" width="80%"></kbd></p>
 
@@ -4478,7 +4476,7 @@
 > chứng minh Xbar sẽ có distribution là n(θ, σ^2/n). Và theo normal là một
 > thành viên thuộc location scale distribution, với sự đặc biệt là mean θ
 > cũng là location và std σ cũng là scale. Rồi, theo một theorem ta biết (Xbar
-> - location) / scale, tức (Xbar - θ) / (σ/√n) sẽ chính là một rv của standard
+> \- location) / scale, tức (Xbar - θ) / (σ/√n) sẽ chính là một rv của standard
 > member, có location 0, scale 1, đồng nghĩa với normal, thì nó chính là
 > normal mean 0, variance 1, tức normal(0,1). Thế thì ở đây ta đang tính
 > P_θ2((Xbar - θ2 / ....) thì thật ra có nghĩa là ta đang tính P_θ((Xbar - θ) / ....
@@ -4599,7 +4597,7 @@
 
 <a id="node-66jeahy"></a>
 
-- **Không tồn tại UMP test**
+###### Không tồn tại UMP test
 
 <p align="center"><kbd><img src="assets/ndqrlln8b1.png" width="80%"></kbd></p>
 
@@ -4723,7 +4721,7 @@
 
 <a id="node-ajkikjr"></a>
 
-- **Kiểm định Hợp-Giao và Giao-Hợp**
+###### Kiểm định Hợp-Giao và Giao-Hợp
 
 <p align="center"><kbd><img src="assets/34irc6lwbvs.png" width="80%"></kbd></p>
 
@@ -4828,7 +4826,7 @@
 
 <a id="node-oaiy187"></a>
 
-- **Quan hệ T(x) và λ(x)**
+###### Quan hệ T(x) và λ(x)
 
 <p align="center"><kbd><img src="assets/rpzqj7jbljp.png" width="80%"></kbd></p>
 
@@ -5063,7 +5061,7 @@
 
 <a id="node-27dn67w"></a>
 
-- **Quan hệ UIT-LRT hai phía**
+###### Quan hệ UIT-LRT hai phía
 
 <p align="center"><kbd><img src="assets/rssyqb7qnl.png" width="80%"></kbd></p>
 
@@ -5088,7 +5086,7 @@
 
 <a id="node-ie7qjx1"></a>
 
-- **Lợi ích kiểm định giao liên hiệp**
+###### Lợi ích kiểm định giao liên hiệp
 
 <p align="center"><kbd><img src="assets/mank77sms4s.png" width="80%"></kbd></p>
 
@@ -5141,7 +5139,7 @@
 
 <a id="node-ao26tgd"></a>
 
-- **Định lý cỡ của IUT**
+###### Định lý cỡ của IUT
 
 <p align="center"><kbd><img src="assets/im465bxwzs.png" width="80%"></kbd></p>
 
@@ -5228,7 +5226,7 @@
 
 <a id="node-h45l6rn"></a>
 
-- **Cấp độ kiểm định UIT, IUT**
+###### Cấp độ kiểm định UIT, IUT
 
 <p align="center"><kbd><img src="assets/x6wqv7xkcu.png" width="80%"></kbd></p>
 
@@ -5311,7 +5309,7 @@
 
 <a id="node-mlq6voe"></a>
 
-- **Kích thước test và p-value**
+###### Kích thước test và p-value
 
 <p align="center"><kbd><img src="assets/d6vlxp39m2.png" width="80%"></kbd></p>
 
@@ -5348,7 +5346,7 @@
 
 <a id="node-ymx7htu"></a>
 
-- **Định nghĩa và tính chất p-value**
+###### Định nghĩa và tính chất p-value
 
 <p align="center"><kbd><img src="assets/5j82nayxmrs.png" width="80%"></kbd></p>
 
@@ -5447,7 +5445,7 @@
 
 <a id="node-hqaq0hw"></a>
 
-- **Định nghĩa p-value hợp lệ**
+###### Định nghĩa p-value hợp lệ
 
 <p align="center"><kbd><img src="assets/ijciwxghjp.png" width="80%"></kbd></p>
 
@@ -5552,7 +5550,7 @@
 
 <a id="node-aax4fpl"></a>
 
-- **P-value và phân phối Uniform**
+###### P-value và phân phối Uniform
 
 <p align="center"><kbd><img src="assets/06ygjmxc6yo2.png" width="80%"></kbd></p>
 
