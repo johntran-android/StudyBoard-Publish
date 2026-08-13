@@ -1,13 +1,9 @@
-# 1.4 The Curse
-Of Dimensionality
+# 1.4 The Curse Of Dimensionality
 
 📊 **Progress:** `6` Notes | `15` Screenshots
 
 ---
 <a id="node-hd50p0p"></a>
-
-## 1.4 The Curse
-Of Dimensionality
 
 <br>
 
@@ -156,7 +152,7 @@ Of Dimensionality
 
 <a id="node-bu0rxl1"></a>
 
-- **Phân phối Gaussian không gian D**
+###### Phân phối Gaussian không gian D
 
 <p align="center"><kbd><img src="assets/zt4lsp3fmti.png" width="80%"></kbd></p>
 
@@ -175,7 +171,7 @@ Of Dimensionality
 
 <a id="node-9vzhnuc"></a>
 
-- **Ràng buộc không gian trong học máy**
+###### Ràng buộc không gian trong học máy
 
 <p align="center"><kbd><img src="assets/x4qnfwoqu1.png" width="80%"></kbd></p>
 
