@@ -1,13 +1,9 @@
-# 4.2 Conditional Distributions &
-independent
+# 4.2 Conditional Distributions & Independent
 
 📊 **Progress:** `18` Notes | `27` Screenshots
 
 ---
 <a id="node-6ysk9w8"></a>
-
-## 4.2 Conditional Distributions &
-independent
 
 <br>
 
@@ -310,7 +306,7 @@ independent
 
 <a id="node-kwtsuph"></a>
 
-- **Kỳ vọng và PDF có điều kiện**
+###### Kỳ vọng và PDF có điều kiện
 
 <p align="center"><kbd><img src="assets/8f8ntakr5gp.png" width="80%"></kbd></p>
 
@@ -350,7 +346,7 @@ independent
 
 <a id="node-0ycns54"></a>
 
-- **Tính toán PDF có điều kiện**
+###### Tính toán PDF có điều kiện
 
 <p align="center"><kbd><img src="assets/q98ai9civ9.png" width="80%"></kbd></p>
 
@@ -621,7 +617,7 @@ independent
 
 <a id="node-6etzh2e"></a>
 
-- **PDF điều kiện và biến đổi**
+###### PDF điều kiện và biến đổi
 
 <p align="center"><kbd><img src="assets/b61ogvnjnxg.png" width="80%"></kbd></p>
 
@@ -846,7 +842,7 @@ independent
 
 <a id="node-4d54w5v"></a>
 
-- **Biến ngẫu nhiên tham số**
+###### Biến ngẫu nhiên tham số
 
 <p align="center"><kbd><img src="assets/wszsyfv3a3b.png" width="80%"></kbd></p>
 
@@ -897,7 +893,7 @@ independent
 
 <a id="node-wzjnh5i"></a>
 
-- **Kỳ vọng điều kiện biến ngẫu nhiên**
+###### Kỳ vọng điều kiện biến ngẫu nhiên
 
 <p align="center"><kbd><img src="assets/39ak90pwhjq.png" width="80%"></kbd></p>
 
@@ -943,7 +939,7 @@ independent
 
 <a id="node-cb31d67"></a>
 
-- **Biến ngẫu nhiên độc lập**
+###### Biến ngẫu nhiên độc lập
 
 <p align="center"><kbd><img src="assets/wwd6xfo6jx.png" width="80%"></kbd></p>
 
@@ -976,7 +972,7 @@ independent
 
 <a id="node-2vfyxqz"></a>
 
-- **Kiểm tra tính độc lập**
+###### Kiểm tra tính độc lập
 
 <p align="center"><kbd><img src="assets/p7hfccmchc.png" width="80%"></kbd></p>
 
@@ -992,7 +988,7 @@ independent
 
 <a id="node-ixljkmi"></a>
 
-- **Tiêu chí độc lập không cần biên**
+###### Tiêu chí độc lập không cần biên
 
 <p align="center"><kbd><img src="assets/89ze68w2rbe.png" width="80%"></kbd></p>
 
@@ -1152,7 +1148,7 @@ independent
 
 <a id="node-4bwxmsd"></a>
 
-- **Tiêu chí độc lập qua miền support**
+###### Tiêu chí độc lập qua miền support
 
 <p align="center"><kbd><img src="assets/7p8wc9eb4zm.png" width="80%"></kbd></p>
 
@@ -1256,7 +1252,7 @@ independent
 
 <a id="node-pwzadzd"></a>
 
-- **PMF chung từ biến độc lập**
+###### PMF chung từ biến độc lập
 
 <p align="center"><kbd><img src="assets/h86ohbr9ns.png" width="80%"></kbd></p>
 
@@ -1349,7 +1345,7 @@ independent
 
 <a id="node-8f0x6br"></a>
 
-- **Kỳ vọng tích hàm biến độc lập**
+###### Kỳ vọng tích hàm biến độc lập
 
 <p align="center"><kbd><img src="assets/13wuoplbx5io.png" width="80%"></kbd></p>
 
@@ -1590,7 +1586,7 @@ independent
 
 <a id="node-6pr996h"></a>
 
-- **Kỳ vọng và phương sai Expo(λ)**
+###### Kỳ vọng và phương sai Expo(λ)
 
 <p align="center"><kbd><img src="assets/2u4udvksmhu.png" width="80%"></kbd></p>
 
@@ -1677,7 +1673,7 @@ independent
 
 <a id="node-hx6s7er"></a>
 
-- **Định lý MGF tổng biến độc lập**
+###### Định lý MGF tổng biến độc lập
 
 <p align="center"><kbd><img src="assets/k2ql8a8fiz.png" width="80%"></kbd></p>
 
@@ -1721,7 +1717,7 @@ independent
 
 <a id="node-tk1wnj7"></a>
 
-- **MGF của tổng phân phối chuẩn**
+###### MGF của tổng phân phối chuẩn
 
 <p align="center"><kbd><img src="assets/rd4a9qgmi8n.png" width="80%"></kbd></p>
 
