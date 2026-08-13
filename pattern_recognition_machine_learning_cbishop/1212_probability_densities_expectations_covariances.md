@@ -5,8 +5,6 @@
 ---
 <a id="node-i5fw9bl"></a>
 
-## 1.2.1&2 Probability densities & Expectations Covariances
-
 <br>
 
 <a id="node-ainsl7e"></a>
@@ -217,7 +215,7 @@
 
 <a id="node-vgduzcj"></a>
 
-- **Hàm phân phối tích lũy**
+###### Hàm phân phối tích lũy
 
 <p align="center"><kbd><img src="assets/g6ijk00qxt5.png" width="80%"></kbd></p>
 
@@ -232,7 +230,7 @@
 
 <a id="node-lzkvzf2"></a>
 
-- **Hàm mật độ đồng thời**
+###### Hàm mật độ đồng thời
 
 <p align="center"><kbd><img src="assets/nwm3zge5bs.png" width="80%"></kbd></p>
 
@@ -264,7 +262,7 @@
 
 <a id="node-1z352km"></a>
 
-- **Quy tắc tổng tích PDF**
+###### Quy tắc tổng tích PDF
 
 <p align="center"><kbd><img src="assets/npehfafhlwb.png" width="80%"></kbd></p>
 
@@ -276,7 +274,7 @@
 
 <a id="node-nto2go4"></a>
 
-- **Kì vọng hàm số**
+###### Kì vọng hàm số
 
 <p align="center"><kbd><img src="assets/xc8h96ijrff.png" width="80%"></kbd></p>
 
@@ -363,7 +361,7 @@
 
 <a id="node-z150bh8"></a>
 
-- **Xấp xỉ kì vọng**
+###### Xấp xỉ kì vọng
 
 <p align="center"><kbd><img src="assets/fkzbmtkzhbu.png" width="80%"></kbd></p>
 
@@ -452,7 +450,7 @@
 
 <a id="node-tkufstj"></a>
 
-- **Kì vọng theo một biến**
+###### Kì vọng theo một biến
 
 <p align="center"><kbd><img src="assets/vnysqsirboq.png" width="80%"></kbd></p>
 
@@ -568,7 +566,7 @@
 
 <a id="node-hcodu2l"></a>
 
-- **Kỳ vọng có điều kiện: Ước lượng Bayes**
+###### Kỳ vọng có điều kiện: Ước lượng Bayes
 
 <p align="center"><kbd><img src="assets/xw96xwotrd.png" width="80%"></kbd></p>
 
@@ -627,7 +625,7 @@
 
 <a id="node-n9nlkxk"></a>
 
-- **Định nghĩa Variance**
+###### Định nghĩa Variance
 
 <p align="center"><kbd><img src="assets/wkzdbu1adsc.png" width="80%"></kbd></p>
 
@@ -677,7 +675,7 @@
 
 <a id="node-umwxc6g"></a>
 
-- **Covariance và biến độc lập**
+###### Covariance và biến độc lập
 
 <p align="center"><kbd><img src="assets/wiqfx5jzlsl.png" width="80%"></kbd></p>
 
@@ -780,7 +778,7 @@
 
 <a id="node-jrsj465"></a>
 
-- **Ma trận Hiệp Phương Sai**
+###### Ma trận Hiệp Phương Sai
 
 <p align="center"><kbd><img src="assets/swdd6klfenh.png" width="80%"></kbd></p>
 
