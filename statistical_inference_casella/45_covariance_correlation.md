@@ -1,13 +1,9 @@
-# 4.5 Covariance &
-correlation
+# 4.5 Covariance & Correlation
 
 📊 **Progress:** `18` Notes | `25` Screenshots
 
 ---
 <a id="node-0rdjr6h"></a>
-
-## 4.5 Covariance &
-correlation
 
 <br>
 
@@ -141,11 +137,11 @@ correlation
 >
 >
 >
-> - If y < 0 or y-1 > 1 ⇔ y < 0 or y > 2 ⇨ A = ∅
+> \- If y < 0 or y-1 > 1 ⇔ y < 0 or y > 2 ⇨ A = ∅
 >
 >
 >
-> - If 0 < y < 1 ⇨ A = (0, y) ∩ (y-1, 1) = (max(0, y-1), min(1,y))
+> \- If 0 < y < 1 ⇨ A = (0, y) ∩ (y-1, 1) = (max(0, y-1), min(1,y))
 >
 >
 >
@@ -300,7 +296,7 @@ correlation
 
 <a id="node-o2ergsg"></a>
 
-- **Định lý Độc lập Hiệp phương sai**
+###### Định lý Độc lập Hiệp phương sai
 
 <p align="center"><kbd><img src="assets/iz4sp7owm3n.png" width="80%"></kbd></p>
 
@@ -358,7 +354,7 @@ correlation
 
 <a id="node-60rnyjg"></a>
 
-- **Hiệp phương sai và độc lập**
+###### Hiệp phương sai và độc lập
 
 <p align="center"><kbd><img src="assets/qd9co37tvw.png" width="80%"></kbd></p>
 
@@ -380,7 +376,7 @@ correlation
 
 <a id="node-jmex719"></a>
 
-- **Định lý phương sai tổng**
+###### Định lý phương sai tổng
 
 <p align="center"><kbd><img src="assets/x8r8ryt4ex9.png" width="80%"></kbd></p>
 
@@ -454,7 +450,7 @@ correlation
 
 <a id="node-7ms3bg2"></a>
 
-- **Phương sai tổng biến ngẫu nhiên**
+###### Phương sai tổng biến ngẫu nhiên
 
 <p align="center"><kbd><img src="assets/hbl0cnlupku.png" width="80%"></kbd></p>
 
@@ -491,7 +487,7 @@ correlation
 
 <a id="node-08l2mqd"></a>
 
-- **Giới hạn và ý nghĩa tương quan**
+###### Giới hạn và ý nghĩa tương quan
 
 <p align="center"><kbd><img src="assets/pgsfasss5rk.png" width="80%"></kbd></p>
 
@@ -630,7 +626,7 @@ correlation
 
 <a id="node-qv5sqiy"></a>
 
-- **Ý nghĩa hệ số tương quan**
+###### Ý nghĩa hệ số tương quan
 
 <p align="center"><kbd><img src="assets/0t8gvw1co4od.png" width="80%"></kbd></p>
 
@@ -654,7 +650,7 @@ correlation
 
 <a id="node-rrg9pye"></a>
 
-- **Hàm mật độ liên hợp (X,Y)**
+###### Hàm mật độ liên hợp (X,Y)
 
 <p align="center"><kbd><img src="assets/joodbwxamwl.png" width="80%"></kbd></p>
 
@@ -920,7 +916,7 @@ correlation
 
 <a id="node-q6bws1d"></a>
 
-- **Tính Cov(X, X+Z)**
+###### Tính Cov(X, X+Z)
 
 <p align="center"><kbd><img src="assets/hig68pf6use.png" width="80%"></kbd></p>
 
@@ -990,7 +986,7 @@ correlation
 
 <a id="node-t3q7fd0"></a>
 
-- **Độ chặt quan hệ X,Y**
+###### Độ chặt quan hệ X,Y
 
 <p align="center"><kbd><img src="assets/96m6shkt2d.png" width="80%"></kbd></p>
 
@@ -1102,7 +1098,7 @@ correlation
 
 <a id="node-xug8deu"></a>
 
-- **Tương quan zero quan hệ phi tuyến**
+###### Tương quan zero quan hệ phi tuyến
 
 <p align="center"><kbd><img src="assets/5othwm61oqi.png" width="80%"></kbd></p>
 
@@ -1227,7 +1223,7 @@ correlation
 
 <a id="node-s2u2sl9"></a>
 
-- **Biến đổi hệ số tương quan**
+###### Biến đổi hệ số tương quan
 
 <p align="center"><kbd><img src="assets/8kahb8nqlmc.png" width="80%"></kbd></p>
 
@@ -1238,7 +1234,7 @@ correlation
 
 <a id="node-gn8tsfs"></a>
 
-- **Chứng minh ρXY = ρ**
+###### Chứng minh ρXY = ρ
 
 <p align="center"><kbd><img src="assets/1hdi2omnuubh.png" width="80%"></kbd></p>
 
@@ -1249,7 +1245,7 @@ correlation
 
 <a id="node-g2hs1nk"></a>
 
-- **Hội tụ phân phối có điều kiện**
+###### Hội tụ phân phối có điều kiện
 
 <p align="center"><kbd><img src="assets/bho5nvb5f2f.png" width="80%"></kbd></p>
 
