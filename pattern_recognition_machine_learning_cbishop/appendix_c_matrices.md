@@ -5,8 +5,6 @@
 ---
 <a id="node-zscgdad"></a>
 
-## Appendix C. Matrices
-
 <br>
 
 <a id="node-627u9c0"></a>
@@ -121,7 +119,7 @@
 
 <a id="node-lb95zgn"></a>
 
-- **Vết và định thức ma trận**
+###### Vết và định thức ma trận
 
 <p align="center"><kbd><img src="assets/b4o0e4ndhj8.png" width="80%"></kbd></p>
 
@@ -145,7 +143,7 @@
 
 <a id="node-gy7eo5n"></a>
 
-- **Các công thức định thức**
+###### Các công thức định thức
 
 <p align="center"><kbd><img src="assets/09x6zib36avm.png" width="80%"></kbd></p>
 
@@ -187,7 +185,7 @@
 
 <a id="node-wjfa1zt"></a>
 
-- **Đạo hàm Vector và Ma trận**
+###### Đạo hàm Vector và Ma trận
 
 <p align="center"><kbd><img src="assets/2dqlxdxws2c.png" width="80%"></kbd></p>
 
@@ -227,7 +225,7 @@
 
 <a id="node-jvke7s6"></a>
 
-- **Đạo hàm vector và ma trận**
+###### Đạo hàm vector và ma trận
 
 <p align="center"><kbd><img src="assets/zzwzyarm57e.png" width="80%"></kbd></p>
 
@@ -281,7 +279,7 @@
 
 <a id="node-448zh7o"></a>
 
-- **Đạo hàm ma trận nghịch đảo**
+###### Đạo hàm ma trận nghịch đảo
 
 <p align="center"><kbd><img src="assets/8svxszuh5le.png" width="80%"></kbd></p>
 
@@ -357,7 +355,7 @@
 
 <a id="node-hinethk"></a>
 
-- **Đạo hàm log det A**
+###### Đạo hàm log det A
 
 <p align="center"><kbd><img src="assets/jze4rhy95e9.png" width="80%"></kbd></p>
 
@@ -603,7 +601,7 @@
 
 <a id="node-0oculhd"></a>
 
-- **Đạo hàm Trace Ma trận**
+###### Đạo hàm Trace Ma trận
 
 <p align="center"><kbd><img src="assets/ehjq2oj8m6.png" width="80%"></kbd></p>
 
@@ -679,7 +677,7 @@
 
 <a id="node-f8fc5lg"></a>
 
-- **Đạo hàm hàm vết ma trận**
+###### Đạo hàm hàm vết ma trận
 
 <p align="center"><kbd><img src="assets/l64igtprkfo.png" width="80%"></kbd></p>
 
@@ -787,7 +785,7 @@
 
 <a id="node-kmq2pa7"></a>
 
-- **Trị riêng và vector riêng**
+###### Trị riêng và vector riêng
 
 <p align="center"><kbd><img src="assets/dqe9nq3oyl6.png" width="80%"></kbd></p>
 
@@ -843,7 +841,7 @@
 
 <a id="node-v3m7nu4"></a>
 
-- **Tính chất ma trận đối xứng**
+###### Tính chất ma trận đối xứng
 
 <p align="center"><kbd><img src="assets/nuonn28kuvk.png" width="80%"></kbd></p>
 
@@ -931,7 +929,7 @@
 
 <a id="node-yjtwsh3"></a>
 
-- **Eigenvector vuông góc ma trận đối xứng**
+###### Eigenvector vuông góc ma trận đối xứng
 
 <p align="center"><kbd><img src="assets/7ie0q9xnne6.png" width="80%"></kbd></p>
 
@@ -1027,7 +1025,7 @@
 
 <a id="node-net3ui9"></a>
 
-- **Điều kiện ma trận trực giao**
+###### Điều kiện ma trận trực giao
 
 <p align="center"><kbd><img src="assets/jy4w56uqwk.png" width="80%"></kbd></p>
 
@@ -1059,7 +1057,7 @@
 
 <a id="node-vq30f8p"></a>
 
-- **Phân rã giá trị riêng và ma trận trực giao**
+###### Phân rã giá trị riêng và ma trận trực giao
 
 <p align="center"><kbd><img src="assets/2x23obxx46a.png" width="80%"></kbd></p>
 
@@ -1139,7 +1137,7 @@
 
 <a id="node-pr02nbl"></a>
 
-- **Chéo hóa và nghịch đảo ma trận**
+###### Chéo hóa và nghịch đảo ma trận
 
 <p align="center"><kbd><img src="assets/ukolm5wkhth.png" width="80%"></kbd></p>
 
@@ -1195,7 +1193,7 @@
 
 <a id="node-32sy6bh"></a>
 
-- **Định nghĩa ma trận xác định**
+###### Định nghĩa ma trận xác định
 
 <p align="center"><kbd><img src="assets/ypytjkbufr.png" width="80%"></kbd></p>
 
