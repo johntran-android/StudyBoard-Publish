@@ -5,8 +5,6 @@
 ---
 <a id="node-5d9hd8j"></a>
 
-## 3.1.5 Multiple outputs
-
 <p align="center"><kbd><img src="assets/e50rzm6m55l.png" width="80%"></kbd></p>
 
 > [!NOTE]
