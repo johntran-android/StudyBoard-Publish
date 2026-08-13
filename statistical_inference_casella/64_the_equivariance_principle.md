@@ -5,8 +5,6 @@
 ---
 <a id="node-sykz8kz"></a>
 
-## 6.4 The Equivariance Principle
-
 <br>
 
 <a id="node-3s5h85u"></a>
@@ -131,7 +129,7 @@
 
 <a id="node-67429qw"></a>
 
-- **Ước lượng tham số p**
+###### Ước lượng tham số p
 
 <p align="center"><kbd><img src="assets/0mnj0zo3jwwl.png" width="80%"></kbd></p>
 
@@ -356,7 +354,7 @@
 
 <a id="node-dwegalb"></a>
 
-- **Lợi ích nguyên lí equivariance**
+###### Lợi ích nguyên lí equivariance
 
 <p align="center"><kbd><img src="assets/r35822nbp0n.png" width="80%"></kbd></p>
 
@@ -408,7 +406,7 @@
 
 <a id="node-j4z5s9s"></a>
 
-- **Định Nghĩa Nhóm Biến Đổi**
+###### Định Nghĩa Nhóm Biến Đổi
 
 <p align="center"><kbd><img src="assets/qlzs8k3r35.png" width="80%"></kbd></p>
 
@@ -446,7 +444,7 @@
 
 <a id="node-3qm392m"></a>
 
-- **Xác minh nhóm biến đổi**
+###### Xác minh nhóm biến đổi
 
 <p align="center"><kbd><img src="assets/c09xl76t6g.png" width="80%"></kbd></p>
 
@@ -499,7 +497,7 @@
 
 <a id="node-m5cxy5p"></a>
 
-- **Nguyên lý Equivariance và Bất biến**
+###### Nguyên lý Equivariance và Bất biến
 
 <p align="center"><kbd><img src="assets/brsltf6e59.png" width="80%"></kbd></p>
 
@@ -565,7 +563,7 @@
 
 <a id="node-a042o1g"></a>
 
-- **Nguyên lý Equivariance: Bất biến hình thức**
+###### Nguyên lý Equivariance: Bất biến hình thức
 
 <p align="center"><kbd><img src="assets/ffevc4tv6p8.png" width="80%"></kbd></p>
 
