@@ -5,8 +5,6 @@
 ---
 <a id="node-53imynu"></a>
 
-## 1.2.3 Counting
-
 <br>
 
 <a id="node-0i2gesa"></a>
@@ -159,7 +157,7 @@
 
 <a id="node-aja8015"></a>
 
-- **Hoán vị lặp có thứ tự**
+###### Hoán vị lặp có thứ tự
 
 <p align="center"><kbd><img src="assets/gxf79wy45s.png" width="80%"></kbd></p>
 
@@ -181,7 +179,7 @@
 
 <a id="node-2vmccxy"></a>
 
-- **Tổ hợp lặp: Bóng và Hộp**
+###### Tổ hợp lặp: Bóng và Hộp
 
 <p align="center"><kbd><img src="assets/vhqehhlw3q.png" width="80%"></kbd></p>
 
