@@ -1,13 +1,9 @@
-# 5.3 Sampling From The
-normal Distribution
+# 5.3 Sampling From The Normal Distribution
 
 📊 **Progress:** `21` Notes | `29` Screenshots
 
 ---
 <a id="node-lmu32b0"></a>
-
-## 5.3 Sampling From The
-normal Distribution
 
 <br>
 
@@ -640,7 +636,7 @@ normal Distribution
 
 <a id="node-udtt0nq"></a>
 
-- **Bổ đề Chi-square**
+###### Bổ đề Chi-square
 
 <p align="center"><kbd><img src="assets/11d0h51r0h5c.png" width="80%"></kbd></p>
 
@@ -690,7 +686,7 @@ normal Distribution
 
 <a id="node-nh8m52t"></a>
 
-- **Chứng minh S^2 Chi-square**
+###### Chứng minh S^2 Chi-square
 
 <p align="center"><kbd><img src="assets/d32ijmy0cdd.png" width="80%"></kbd></p>
 
@@ -918,7 +914,7 @@ normal Distribution
 
 <a id="node-qx3kch2"></a>
 
-- **Độc lập trung bình phương sai**
+###### Độc lập trung bình phương sai
 
 <p align="center"><kbd><img src="assets/900tplcxb4.png" width="80%"></kbd></p>
 
@@ -966,7 +962,7 @@ normal Distribution
 
 <a id="node-91dxhtz"></a>
 
-- **Điều kiện độc lập tổ hợp Normal**
+###### Điều kiện độc lập tổ hợp Normal
 
 <p align="center"><kbd><img src="assets/c1025ux777n.png" width="80%"></kbd></p>
 
@@ -1144,7 +1140,7 @@ normal Distribution
 
 <a id="node-l2y727n"></a>
 
-- **Độc lập biến chuẩn**
+###### Độc lập biến chuẩn
 
 <p align="center"><kbd><img src="assets/vmi5qtu1ufk.png" width="80%"></kbd></p>
 
@@ -1373,7 +1369,7 @@ normal Distribution
 
 <a id="node-25t5b1y"></a>
 
-- **Độc lập vector qua PDF chung**
+###### Độc lập vector qua PDF chung
 
 <p align="center"><kbd><img src="assets/0c7m7lf7hrye.png" width="80%"></kbd></p>
 
@@ -1402,7 +1398,7 @@ normal Distribution
 
 <a id="node-1d7jfyb"></a>
 
-- **Hiệp phương sai Độc lập Biến Chuẩn**
+###### Hiệp phương sai Độc lập Biến Chuẩn
 
 <p align="center"><kbd><img src="assets/l5y3sp0oz2i.png" width="80%"></kbd></p>
 
@@ -1446,7 +1442,7 @@ normal Distribution
 
 <a id="node-jkt5q0l"></a>
 
-- **Chứng minh độc lập S^2 Xbar**
+###### Chứng minh độc lập S^2 Xbar
 
 <p align="center"><kbd><img src="assets/hjy1nwe3o2.png" width="80%"></kbd></p>
 
@@ -1499,7 +1495,7 @@ normal Distribution
 
 <a id="node-153vzn2"></a>
 
-- **Phân phối và biến động trung bình mẫu**
+###### Phân phối và biến động trung bình mẫu
 
 <p align="center"><kbd><img src="assets/h7e5i0wibo.png" width="80%"></kbd></p>
 
@@ -1592,7 +1588,7 @@ normal Distribution
 
 <a id="node-iwzyu9l"></a>
 
-- **Suy diễn phân phối t**
+###### Suy diễn phân phối t
 
 <p align="center"><kbd><img src="assets/vcmhn3i47.png" width="80%"></kbd></p>
 
@@ -1684,7 +1680,7 @@ normal Distribution
 
 <a id="node-isdevob"></a>
 
-- **Phân phối t của Student**
+###### Phân phối t của Student
 
 <p align="center"><kbd><img src="assets/r22vor23fbe.png" width="80%"></kbd></p>
 
@@ -1711,7 +1707,7 @@ normal Distribution
 
 <a id="node-5eltn4g"></a>
 
-- **Đạo hàm phân phối t-Student**
+###### Đạo hàm phân phối t-Student
 
 <p align="center"><kbd><img src="assets/oweb6o4iaa.png" width="80%"></kbd></p>
 
@@ -1849,7 +1845,7 @@ normal Distribution
 
 <a id="node-ouu5cht"></a>
 
-- **Giới hạn momen phân phối t**
+###### Giới hạn momen phân phối t
 
 <p align="center"><kbd><img src="assets/rkmoi7hubdh.png" width="80%"></kbd></p>
 
@@ -1884,7 +1880,7 @@ normal Distribution
 
 <a id="node-dl1mlxm"></a>
 
-- **Phân phối F: Tỉ lệ phương sai**
+###### Phân phối F: Tỉ lệ phương sai
 
 <p align="center"><kbd><img src="assets/7tlnh2e8wx5.png" width="80%"></kbd></p>
 
@@ -1929,7 +1925,7 @@ normal Distribution
 
 <a id="node-hd9jnpj"></a>
 
-- **Phân phối F và Đối xứng Cầu**
+###### Phân phối F và Đối xứng Cầu
 
 <p align="center"><kbd><img src="assets/mqv389ctaxp.png" width="80%"></kbd></p>
 
@@ -1962,7 +1958,7 @@ normal Distribution
 
 <a id="node-ydb31kk"></a>
 
-- **Phân phối F và phương sai**
+###### Phân phối F và phương sai
 
 <p align="center"><kbd><img src="assets/4j73ps0pq9.png" width="80%"></kbd></p>
 
@@ -2171,7 +2167,7 @@ normal Distribution
 
 <a id="node-85e946b"></a>
 
-- **Tính chất phân phối F và t**
+###### Tính chất phân phối F và t
 
 <p align="center"><kbd><img src="assets/bjahnif90f7.png" width="80%"></kbd></p>
 
