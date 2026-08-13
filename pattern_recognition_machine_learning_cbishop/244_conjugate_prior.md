@@ -5,8 +5,6 @@
 ---
 <a id="node-6al8ljb"></a>
 
-## 2.4.4 Conjugate prior
-
 <br>
 
 <a id="node-5f0a4fj"></a>
