@@ -5,8 +5,6 @@
 ---
 <a id="node-kycgm4v"></a>
 
-## 1.4 Random Variables
-
 <br>
 
 <a id="node-qy3wuvk"></a>
