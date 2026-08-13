@@ -1,11 +1,9 @@
 # 10.2 Robustness
 
-📊 **Progress:** `12` Notes | `15` Screenshots | `12` AI Reviews
+📊 **Progress:** `14` Notes | `17` Screenshots | `14` AI Reviews
 
 ---
 <a id="node-o8s85wd"></a>
-
-## 10.2 Robustness
 
 <br>
 
@@ -409,7 +407,7 @@
 
 <a id="node-6rvo106"></a>
 
-- **Definition 10.2.2 Breakdown Value**
+###### Definition 10.2.2 Breakdown Value
 
 <p align="center"><kbd><img src="assets/7szolja24zi.png" width="80%"></kbd></p>
 
@@ -471,7 +469,7 @@
 
 <a id="node-q8d1j0e"></a>
 
-- **Breakdown Value of Mean and Median**
+###### Breakdown Value of Mean and Median
 
 <p align="center"><kbd><img src="assets/urgujq7swlm.png" width="80%"></kbd></p>
 
@@ -495,7 +493,7 @@
 
 <a id="node-kysvqun"></a>
 
-- **Asymptotic Relative Efficiency**
+###### Asymptotic Relative Efficiency
 
 <p align="center"><kbd><img src="assets/yl9ifsti5yb.png" width="80%"></kbd></p>
 
@@ -525,7 +523,7 @@
 
 <a id="node-zvthtrd"></a>
 
-- **Asymptotic Normality of the Median**
+###### Asymptotic Normality of the Median
 
 <p align="center"><kbd><img src="assets/nhofcqwoj0p.png" width="80%"></kbd></p>
 
@@ -729,7 +727,7 @@
 
 <a id="node-8ww4qv1"></a>
 
-- **AREs of the Median to the Mean**
+###### AREs of the Median to the Mean
 
 <p align="center"><kbd><img src="assets/uxey1bhs0hc.png" width="80%"></kbd></p>
 
@@ -775,7 +773,7 @@
 
 <a id="node-wq8irqn"></a>
 
-- **Section 10.2.2 M-Estimators**
+###### Section 10.2.2 M-Estimators
 
 <p align="center"><kbd><img src="assets/jdaby4q3h8i.png" width="80%"></kbd></p>
 
@@ -841,7 +839,7 @@
 
 <a id="node-xv75rqm"></a>
 
-- **Example 10.2.5 Huber Estimator**
+###### Example 10.2.5 Huber Estimator
 
 <p align="center"><kbd><img src="assets/2krlvv34k8x.png" width="80%"></kbd></p>
 
@@ -901,7 +899,7 @@
 
 <a id="node-o9kk9tp"></a>
 
-- **Introduction to M-Estimators**
+###### Introduction to M-Estimators
 
 <p align="center"><kbd><img src="assets/mztyzb1eta.png" width="80%"></kbd></p>
 
@@ -941,13 +939,498 @@
 
 <a id="node-qm1tb5s"></a>
 
-- **Taylor Expansion for M-Estimators**
+###### Taylor Expansion for M-Estimators
 
-<p align="center"><kbd><img src="assets/vcdrh3dhtsq.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/2zho0qchyh4.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/dh5vg0eoajn.png" width="80%"></kbd></p>
 
-**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr)
+> [!NOTE]
+> Rồi, qua đây, đầu tiên cần nhận định là đoạn này ông Casella muốn làm gì: Chính là muốn tìm phương sai tiệm cận của cái M-estimator (là cái estimator có công thức: W(**x**) = argmin_W Σi ρ(xi - W)) mà ta đã nói ở trên, và làm vậy để làm gì, thì câu trả để mà đánh giá tính tối ưu của nó thôi (ví dụ như khi tính ARE, giúp so sánh hai estimator, thì ta cần có phương sai tiệm cận Avar)
+>
+>
+>
+> Thế thì cứ theo cách dẫn dắt của gs Casella: Đầu tiên, ông nói vì cái estimator này giống với MLE, trong đó đều là ta đi giải bài toán tối ưu, nên bằng cách define ψ = ρ' (tức đạo hàm của hàm ρ) thì M-estimator chính là solution của:
+>
+>
+>
+> Σi ψ(xi - θ) = 0
+>
+>
+>
+> Giải thích chỗ này, vì sao gs lại nói vậy:
+>
+>
+>
+> Đơn giản thôi, W, hay W(**x**), = argmin_W Σi ρ(xi - W)) thì cũng có nghĩa là W là nghiệm của bài toán minimize ρ(xi - W). Đây là bài toán tối ưu không ràng buộc (unconstraint optimization problem), và áp dụng điều cần kiện tối ưu bậc nhất sẽ cho ta ứng cử viên có solution (mà nếu hàm số là hàm convex thì có thể kết luận luôn nghiệm):
+>
+>
+>
+> Điều kiện cần bậc nhất (first order optimality condition): d/dW \[Σi ρ(xi - W))\] = 0 (đạo hàm của hàm mục tiêu đối với biến tối ưu vanish)
+>
+>
+>
+> ⇔ Σi d/dW \[ρ(xi - W)\] = 0
+>
+>
+>
+> ⇔ Σi \[ρ'(xi - W)\] = 0
+>
+>
+>
+> ⇔ Σi ψ(xi - W) = 0 → 10.2.3 
+>
+>
+>
+> (trong sách dùng θ (Σi ψ(xi - θ) = 0) mình dùng W, cái nào cũng được, vì đây chỉ là tên biến tối ưu, muốn dùng a, b, c, gì cũng được, tuy nhiên mình sẽ dùng θ cho giống trong sách trong phần chứng minh, nhưng cần nhấn mạnh là xài W, a, á ớ gì cũng được vì chỉ là tên biến, cuối cùng vẫn là một hàm số của sample **X**, tức là một estimator.)
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, ông sẽ dùng cái kiểu biến đổi giống như khi chứng minh Theorem 10.1.12 (xem link). Giả định thêm là hàm ρ đối xứng (và hàm số đạo hàm của nó, tức hàm ψ đơn điệu tăng (monotone increasing). Ông làm như sau:
+>
+>
+>
+> Đầu tiên, theo cách thức tương tự như khi chứng minh theorem 10.1.12, trong đó ta chứng minh phương sai tiệm cận của MLE đạt mức nhỏ nhất (Cramer Rao Lower Bound), từ đó kết luận MLE thỏa định nghĩa của cái gọi là estimator hiệu quả tiệm cận (asymptotically efficient). Thì đầu tiên trong bước chứng minh đó, ta xấp xỉ bậc 1 hàm \[∂/∂θ log likelihood l(θ|**X**)\] (tức đạo hàm của log likelihood): Với θ ≈ θ0, định lý Taylor cho phép ta coi hành vi của hàm l'(θ) ≈ l'(θ0) + l''(θ0)(θ - θ0). Và với lập luận rằng θ^ là một consistent estimator của θ0, nên khi n tăng lên vô cùng, θ^ sẽ tiến sát tới θ0, cho phép ta áp dụng cái xấp xỉ trên với θ^: l'(θ^) ≈ l'(θ0) + l''(θ0)(θ^ - θ0). Và vì θ^ là MLE, là nghiệm của bài toán minimize log likelihood l(θ|**X**), nên đương nhiên nó thỏa điều kiện cần bậc nhất: l'(θ^) = 0, giúp ta có l'(θ0) + l''(θ0)(θ^ - θ0), và từ đó chuyển vế đổi dấu, nhân thêm √n hai vế, ta sẽ có √n(θ^ - θ) xuất hiện ở bên trái. Và thực hiện cái bước tiếp theo áp dụng CLT và WLLN ta sẽ có phương sai tiệm cận của θ^.
+>
+>
+>
+> Vậy ở đây ta cũng làm y chang: Ta xét hàm số đạo hàm bậc nhất của ρ: ρ'(θ) = Σi ψ(xi - θ). Và lập luận tương tự rằng:
+>
+>
+>
+> khi xét θ nằm rất gần θ0, giải tích cho phép ta xấp xỉ hàm ρ'(θ) bằng hàm tuyến tính
+>
+>
+>
+> (nói trước chút xíu, trong sách ông Casella nói ta sẽ dùng Taylor expansion rồi tí nữa bỏ đi các remainder (ám chỉ các term bậc cao, thì chính là xấp xỉ tuyến tính thôi)
+>
+>
+>
+> ρ'(θ) ≈ ρ'(θ0) + ρ''(θ0)(θ - θ0)
+>
+>
+>
+> ⇔ Σi ψ(xi - θ) ≈ Σi ψ(xi - θ0) + (∂/∂θ \[Σi ψ(xi - θ0)\])(θ - θ0)
+>
+>
+>
+> ⇔ Σi ψ(xi - θ) ≈ Σi ψ(xi - θ0) + (θ - θ0) (Σi ∂/∂θ\[ψ(xi - θ0))
+>
+>
+>
+> ⇔ Σi ψ(xi - θ) ≈ Σi ψ(xi - θ0) + (θ - θ0) Σi ψ'(xi - θ0) (tại đây thiếu cái dấu ba chấm "+ ..." nữa chỉ các term bậc cao thì sẽ giống trong sách)
+>
+>
+>
+> Nhớ rằng, kết quả này, chỉ đơn thuần là thứ mà giải tích (định lý Taylor) cho phép, khi xét θ nằm trong lân cận θ0.
+>
+>
+>
+> Vậy thì giả sử θ^M cũng thỏa yêu cầu này, ta sẽ có thể thế θ^M vào:
+>
+>
+>
+> Σi ψ(xi - θ^M) ≈ Σi ψ(xi - θ0) + (θ^M - θ0) Σi ψ'(xi - θ0)
+>
+>
+>
+> Tiếp theo, theo cách lập luận tương tự như trong phần chứng minh theorem 10.1.12 mà mình có nói sơ ở trên, ta sẽ nói rằng, vì θ^M, tức M-estimator, theo định nghĩa của nó thì nó là solution của bài toán mininize\_θ hàm Σi ρ(xi - θ), nên dĩ nhiên nó sẽ thỏa first order optimality condition, tức d/dθ \[Σi ρ(xi - θ)\] = 0. Tức là ta có d/dθ \[Σi ρ(xi - θ)\]|θ=θ^M = 0 ⇔ Σi ψ(xi - θ^M) = 0.
+>
+>
+>
+> Do đó ta có 0 = Σi ψ(xi - θ^M) ≈ Σi ψ(xi - θ0) + (θ^M - θ0) Σi ψ'(xi - θ0)
+>
+>
+>
+> ⇔ 0 ≈ Σi ψ(xi - θ0) + (θ^M - θ0) Σi ψ'(xi - θ0)
+>
+>
+>
+> ⇔ (θ^M - θ0) Σi ψ'(xi - θ0) ≈ - Σi ψ(xi - θ0)
+>
+>
+>
+> ⇔ (θ^M - θ0) ≈ - Σi ψ(xi - θ0) / Σi ψ'(xi - θ0)
+>
+>
+>
+> ⇔ √n (θ^M - θ0) ≈ - √n Σi ψ(xi - θ0) / Σi ψ'(xi - θ0) (nhân hai vế cho √n)
+>
+>
+>
+> ⇔ √n (θ^M - θ0) ≈ - √n (1/n) Σi ψ(xi - θ0) / \[(1/n) Σi ψ'(xi - θ0)\] (nhân tử và mẫu vế phải cho 1/n)
+>
+>
+>
+> ⇔ √n (θ^M - θ0) ≈ - (1/√n) Σi ψ(xi - θ0) / \[(1/n) Σi ψ'(xi - θ0)\] → đây là kết quả trong sách.
+>
+>
+>
+> ---
+>
+>
+>
+> Chỗ đây cần lưu ý, kết quả trên nên được viết ra rõ ràng là: 
+>
+>
+>
+> √n (θ^M(**x**) - θ0) ≈ - (1/√n) Σi ψ(xi - θ0) / \[(1/n) Σi ψ'(xi - θ0)\] để thể hiện vế trái, vẫn chỉ là hàm số theo **x**, do θ^M về bản chất vẫn là hàm số theo **x**.
+>
+>
+>
+> Và khi thay **x** bởi sample **X**, ta sẽ có vế trái với tư cách là một statistic, √n (θ^M(**X**) - θ0) và vế phải cũng là hai cái statistic chia nhau: 
+>
+>
+>
+> \- (1/√n) Σi ψ(Xi - θ0) / \[(1/n) Σi ψ'(Xi - θ0)\]
+>
+>
+>
+> Mục đích của việc này là tí nữa ta sẽ đi tìm limit distribution của tử và mẫu, thì phải hiểu bản chất chúng là các statistic.
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, gs mới đặt thêm giả định E\_θ0\[ψ(Xi - θ0\]= 0 mà ông nói là thường thì (giả định này) sẽ thỏa do định nghĩa của θ0.
+>
+> Và sau đó, ông nói ta sẽ có kết quả 10.2.4:
+>
+>
+>
+> \-1/√n(....) hội tụ in distribution về n(0, E\_θ0\[ψ(Xi - θ0\]^2).
+>
+>
+>
+> Là sao nhỉ? Vì sao lại có 10.2.4:
+>
+>
+>
+> Đại ý là ta sẽ làm tương tự như chứng minh theorem 10.1.12, khi đã tới được đây: 
+>
+>
+>
+> √n (θ^M - θ0) ≈ - (1/√n) Σi ψ(xi - θ0) / \[(1/n) Σi ψ'(xi - θ0)\]
+>
+>
+>
+> hay cũng là:
+>
+>
+>
+> √n (θ^M(**x**) - θ0) ≈ - (1/√n) Σi ψ(xi - θ0) / \[(1/n) Σi ψ'(xi - θ0)\]
+>
+>
+>
+> và do đó cũng là:
+>
+>
+>
+> √n (θ^M(**X**) - θ0) ≈ - (1/√n) Σi ψ(Xi - θ0) / \[(1/n) Σi ψ'(Xi - θ0)\]
+>
+>
+>
+> thì bước tiếp theo là lôi cái vế phải ra:
+>
+>
+>
+> \- (1/√n) Σi ψ(Xi - θ0) / \[(1/n) Σi ψ'(Xi - θ0)\]
+>
+>
+>
+> ...để cố gắng xem thử khi n tăng vô cùng thì có thể áp dụng CLT để cho thấy chúng sẽ hội tụ về phân phối nào, thì khi đó vế trái cũng sẽ như vậy. 
+>
+>
+>
+> ---
+>
+>
+>
+> Ta sẽ **tập trung vào cái tử số** trước: - (1/√n) Σi ψ(Xi - θ0) 
+>
+>
+>
+> và trong đó, ta sẽ tập trung vào cái tổng: Σi ψ(xi - θ0): Đây là một cái tổng của n hạng tử: ψ(xi - θ0). Do đó, dễ thấy với i = 1,...n, thì ta sẽ có ψ(X1 - θ0),...ψ(Xn - θ0) là một random sample iid (vì mỗi cái đều là random variable có dạng là hàm số của random variable Xi, và X1,....Xn iid \~ f(x|θ0) (**chú ý, θ0 chính là true mean, xem chỗ đóng khung đỏ trong hình**) nên ..
+>
+>
+>
+> nếu đặt Y1 = ψ(X1 - θ0),...Yn = ψ(Xn - θ0) thì Y1,...Yn cũng iid.
+>
+>
+>
+> Thế thì xét mean và variance của Y1,..Yn xem thử nó là gì, vì là iid, nên lấy đại thằng Y1 ra xét
+>
+> \
+> EY1 = E\[ψ(X1 - θ0)\]. Ta phân tích: vì Y1 là random variable có được bởi một hàm của random varable Xi, mà Xi có phân phối f(x|θ0), nên dĩ nhiên Y1 cũng có phân phối phụ thuộc θ0, và tính kì vọng Y1, sẽ ra một hàm phụ thuộc θ0. Nên ta sẽ ghi thêm θ0 dưới chân để thể hiện chuyện này: EY1 = E\_θ0\[ψ(X1 - θ0)\]. Và **đây lại là cái giáo sư Casella đang cho bằng 0**
+>
+>
+>
+> Vậy ta có EY1 = 0
+>
+>
+>
+> Còn Var(Y1)? Với việc EY1 = 0, thì Var(Y1) chỉ còn bằng E\[Y1^2\] (vì Var(Y1) theo công thức thứ 2 của variance, = E\[Y1^2) - \[E(Y1)\]^2 = E\[Y1^2) - 0^2 = E\[Y1^2\])
+>
+>
+>
+> Nên Var(Y1) = E\[Y1^2\] = E\[(ψ(Xi - θ0))^2\], tương tự, đây cũng là hàm theo θ0. ta ghi E\_θ0\[(ψ(Xi - θ0))^2\]
+>
+>
+>
+> Tới đây, với Y1,...Yn có mean = 0, variance = E\_θ0\[(ψ(Xi - θ0))^2\], và sample mean Ybar. Áp dụng CLT (Central Limit Theorem) cho phép ta có:
+>
+>
+>
+> \[√n(Ybar - true mean) / true standard deviation\] sẽ converge in distribution về n(0,1), tức:
+>
+>
+>
+> √n(Ybar - 0) / √E\_θ0\[(ψ(Xi - θ0))^2\] → (d) n(0,1) 
+>
+>
+>
+> ⇔ √n(Ybar) / √E\_θ0\[(ψ(Xi - θ0))^2\] → (d) n(0,1) 
+>
+>
+>
+> (tức là cái random variable ở vế trái sẽ trở thành một biến Z tuân theo phân phối standard normal)
+>
+>
+>
+> Mà true variance, √E\_θ0\[(ψ(Xi - θ0))^2\], dĩ nhiên chỉ là constant, nên sẽ converge (in probability) về chính nó
+>
+>
+>
+> Do đó áp dụng Slutsky theorem, nói rằng nếu ta có Xn → (d) X, Yn → (p) a, thì XnYn → (d) aX 
+>
+>
+>
+> Do đó -√E\_θ0\[(ψ(Xi - θ0))^2\] × (√n(Ybar) / √E\_θ0\[(ψ(Xi - θ0))^2\]) → (d) (-√E\_θ0\[(ψ(Xi - θ0))^2\]) × Z với Z \~ n(0,1))
+>
+>
+>
+> ⇔ -√n(Ybar) → (d) √E\_θ0\[(ψ(Xi - θ0))^2\] × Z với Z \~ n(0,1)), và theo location scale theorem, với Z là normal (0,1) thì αZ sẽ là normal(0, α^2). Vậy ta có:
+>
+>
+>
+> \-√n(Ybar) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))^2\])
+>
+>
+>
+> Thay Ybar = (1/n) Σi ψ(Xi - θ0), ta có: -√n(1/n)(Σi ψ(Xi - θ0)) = (1/√n)(Σi ψ(Xi - θ0)) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))^2\])
+>
+>
+>
+> Đến đây ta đã "làm xong" cái tử số -(1/√n) Σi ψ(xi - θ0),  khi biết:
+>
+>
+>
+>  -(1/√n)(Σi ψ(Xi - θ0)) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))^2\])
+>
+>
+>
+>  ⇔ √n(-1/n)(Σi ψ(Xi - θ0)) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))^2\])
+>
+>
+>
+> Đây chính là 10.2.4 
+>
+>
+>
+> ---
+>
+>
+>
+> Xét qua mẫu số: (1/n) Σi ψ'(Xi - θ0)
+>
+>
+>
+> Đặt Zi = ψ'(Xi - θ0) thì ta cũng có một sample iid Z1,...Zn, có phân phối phụ thuộc θ0, và cái mẫu này cũng là sample mean Zbar.
+>
+>
+>
+> Xét E(Z1) (cũng bằng E(Z2),...do Z1,..Zn cũng iid): E(Z1) = E\_θ0\[ψ'(Xi - θ0)\]
+>
+>
+>
+> Nên theo WLLN, Xbar sẽ hội tụ xác suất về true mean, ta có:
+>
+>
+>
+> Zbar = (1/n) Σi ψ'(Xi - θ0) → (p) E(Z1) = E\_θ0\[ψ'(Xi - θ0)\], đây chính là 10.2.5
+>
+>
+>
+> ---
+>
+>
+>
+> Kết hợp lại 10.2.4, 10.2.5:
+>
+>
+>
+>  √n(-1/n)(Σi ψ(Xi - θ0)) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))^2\])
+>
+>
+>
+> (1/n) Σi ψ'(Xi - θ0) → (p)  E\_θ0\[ψ'(Xi - θ0)\]
+>
+>
+>
+> Dùng tiếp Slusky theorem đã xài ở trên, ta có: 
+>
+>
+>
+> √n(-1/n)(Σi ψ(Xi - θ0)) / (1/n) Σi ψ'(Xi - θ0) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))^2\]) / E\_θ0\[ψ'(Xi - θ0)\]
+>
+>
+>
+> Vế trái chính là ≈ √n (θ^M - θ0)
+>
+>
+>
+> Vế phải theo location scale theorem, chính là n(0, E\_θ0\[(ψ(Xi - θ0))^2\] / {E\_θ0\[ψ'(Xi - θ0)\]}^2)
+>
+>
+>
+> Vậy ta có: √n (θ^M - θ0) converge in distribution về n(0, E\_θ0\[(ψ(Xi - θ0))^2\] / {E\_θ0\[ψ'(Xi - θ0)\]}^2)
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> ---
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú giải thích cực kỳ chi tiết, chính xác từng bước biến đổi toán học từ khai triển Taylor đến việc áp dụng các định lý giới hạn (CLT, WLLN, Slutsky). Cách viết rất sư phạm, mạch lạc và giúp người đọc hiểu sâu bản chất thống kê của từng đại lượng.
+
+**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Định lý Slutsky](./55_convergence_concepts.md#node-uwbmbt7) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Luật số lớn yếu WLLN](./55_convergence_concepts.md#node-j5m3pa1)
+
+<br>
+
+<a id="node-y9tl2rv"></a>
+
+###### Limit Distribution of Huber Estimator
+
+<p align="center"><kbd><img src="assets/5bfwyk4mfkx.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/lqq6vc092s.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Quay lại sau, đây chỉ là áp dụng cái kết quả vừa rồi với một trường hợp đặc biệt của M-estimator, là Huber estimator. Nói chung chỉ là thực hành tính tích phân. Kết qủa là cho thấy Huber estimator sẽ có phương sai tiệm cận là cái công thức dài thòng lòng dưới cùng.
+>
+>
+>
+> Còn vì sao nói nó asymptotically normal mean θ? Thì là vì ta đã chứng minh M-estimator có:
+>
+>
+>
+> √n (θ^M - θ0) converge in distribution về n(0, E\_θ0\[(ψ(Xi - θ0))^2\] / {E\_θ0\[ψ'(Xi - θ0)\]}^2)
+>
+>
+>
+> đồng nghĩa khi n rất lớn thì
+>
+>
+>
+> √n (θ^M - θ0) xấp xỉ một random variable Z với Z \~ n(0, E\_θ0\[(ψ(Xi - θ0))^2\] / {E\_θ0\[ψ'(Xi - θ0)\]}^2)
+>
+>
+>
+> nên θ^M sẽ xấp xỉ Z/√n + θ0
+>
+>
+>
+> Và theo location scale thì Z/√n + θ0 sẽ \~ n(θ0, (1/n) E\_θ0\[(ψ(Xi - θ0))^2\] / {E\_θ0\[ψ'(Xi - θ0)\]}^2)
+>
+>
+>
+> nên mới nói θ^M cũng sẽ tiệm cận là một normal mean θ0
+>
+>
+>
+> và áp dụng vào ví dụ cụ thể này thì cũng vậy ta sẽ có Huber estimator sẽ tiệm cận là một normal mean θ
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chú giải thích rất chính xác và dễ hiểu bản chất toán học của phân phối tiệm cận đối với Huber estimator từ công thức tổng quát của M-estimator. Để hoàn thiện hơn, bạn có thể bổ sung cách chuyển đổi các tích phân thành xác suất dựa trên tính đối xứng của hàm mật độ.
 
 <br>
 
