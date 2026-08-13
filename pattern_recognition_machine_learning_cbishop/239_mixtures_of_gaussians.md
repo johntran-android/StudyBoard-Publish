@@ -5,8 +5,6 @@
 ---
 <a id="node-z48jvxh"></a>
 
-## 2.3.9 Mixtures of Gaussians
-
 <br>
 
 <a id="node-qhez92p"></a>
@@ -213,7 +211,7 @@
 
 <a id="node-ftegw07"></a>
 
-- **MLE cho Mô hình Hỗn hợp Gaussian**
+###### MLE cho Mô hình Hỗn hợp Gaussian
 
 <p align="center"><kbd><img src="assets/2j92ki9mpou.png" width="80%"></kbd></p>
 
