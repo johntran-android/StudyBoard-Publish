@@ -5,8 +5,6 @@
 ---
 <a id="node-exsbikw"></a>
 
-## 6.3 The Likelihood Principle
-
 <br>
 
 <a id="node-x6wqaks"></a>
@@ -147,7 +145,7 @@
 
 <a id="node-14n5hfc"></a>
 
-- **Lập luận PMF nhị thức âm**
+###### Lập luận PMF nhị thức âm
 
 <p align="center"><kbd><img src="assets/gvh5cow86o.png" width="80%"></kbd></p>
 
@@ -275,7 +273,7 @@
 
 <a id="node-kr518ye"></a>
 
-- **Nguyên lý Hợp lý**
+###### Nguyên lý Hợp lý
 
 <p align="center"><kbd><img src="assets/lv1qk36qpch.png" width="80%"></kbd></p>
 
@@ -340,7 +338,7 @@
 
 <a id="node-y3ovm38"></a>
 
-- **Khái niệm Bằng chứng Thử nghiệm**
+###### Khái niệm Bằng chứng Thử nghiệm
 
 <p align="center"><kbd><img src="assets/tt8tx1ccj7.png" width="80%"></kbd></p>
 
@@ -380,7 +378,7 @@
 
 <a id="node-hr9vr6y"></a>
 
-- **Nguyên lý thống kê đủ**
+###### Nguyên lý thống kê đủ
 
 <p align="center"><kbd><img src="assets/u5yki5okmpr.png" width="80%"></kbd></p>
 
@@ -420,7 +418,7 @@
 
 <a id="node-42ksxxb"></a>
 
-- **Nguyên lý điều kiện**
+###### Nguyên lý điều kiện
 
 <p align="center"><kbd><img src="assets/i70ssqu1z3q.png" width="80%"></kbd></p>
 
@@ -461,7 +459,7 @@
 
 <a id="node-awo9vdb"></a>
 
-- **Nguyên lý Điều kiện qua Thí nghiệm**
+###### Nguyên lý Điều kiện qua Thí nghiệm
 
 <p align="center"><kbd><img src="assets/gdr59rrjuuu.png" width="80%"></kbd></p>
 
@@ -491,7 +489,7 @@
 
 <a id="node-m3lnwpx"></a>
 
-- **Mở rộng Nguyên lý Hợp lý**
+###### Mở rộng Nguyên lý Hợp lý
 
 <p align="center"><kbd><img src="assets/azc8u20gk6.png" width="80%"></kbd></p>
 
@@ -721,7 +719,7 @@
 
 <a id="node-vayutvo"></a>
 
-- **Chứng minh Định lý Birnbaum**
+###### Chứng minh Định lý Birnbaum
 
 <p align="center"><kbd><img src="assets/1nucnwttkl6.png" width="80%"></kbd></p>
 
@@ -940,7 +938,7 @@
 
 <a id="node-5cnv1rr"></a>
 
-- **Quy tắc Dừng: Thông tin dư thừa**
+###### Quy tắc Dừng: Thông tin dư thừa
 
 <p align="center"><kbd><img src="assets/e6t0vcn1wu.png" width="80%"></kbd></p>
 
@@ -989,7 +987,7 @@
 
 <a id="node-ft3sp1e"></a>
 
-- **Tương đương thông tin thống kê đủ**
+###### Tương đương thông tin thống kê đủ
 
 <p align="center"><kbd><img src="assets/msd1blq8ba.png" width="80%"></kbd></p>
 
@@ -1020,7 +1018,7 @@
 
 <a id="node-3fske3j"></a>
 
-- **Hạn chế Nguyên lý Thống kê Đủ**
+###### Hạn chế Nguyên lý Thống kê Đủ
 
 <p align="center"><kbd><img src="assets/2ijdhxx2g83.png" width="80%"></kbd></p>
 
@@ -1082,7 +1080,7 @@
 
 <a id="node-bzw6508"></a>
 
-- **Dư lượng và nguyên lý đủ**
+###### Dư lượng và nguyên lý đủ
 
 <p align="center"><kbd><img src="assets/u77s4r18klq.png" width="80%"></kbd></p>
 
