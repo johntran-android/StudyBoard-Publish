@@ -1,13 +1,9 @@
-# 9.3 Methods Of Evaluating
-interval Estimators
+# 9.3 Methods Of Evaluating Interval Estimators
 
 📊 **Progress:** `34` Notes | `35` Screenshots
 
 ---
 <a id="node-osahc74"></a>
-
-## 9.3 Methods Of Evaluating
-interval Estimators
 
 <br>
 
@@ -68,7 +64,7 @@ interval Estimators
 >
 > Xét ví dụ này, ta có X1,..Xn là iid n(μ, σ^2) với σ đã biết. Thì a, b thỏa P(a ≤ Z ≤
 > b) = 1 - α sẽ cho ta một 1-α confidence interval {μ: xbar - b σ/√n} ≤ μ ≤ xbar
-> - a σ/√n
+> \- a σ/√n
 >
 >
 >
@@ -263,7 +259,7 @@ interval Estimators
 
 <a id="node-smdxtqa"></a>
 
-- **Chứng minh xác suất đoạn ngắn nhất**
+###### Chứng minh xác suất đoạn ngắn nhất
 
 <p align="center"><kbd><img src="assets/f2cxobabnkd.png" width="80%"></kbd></p>
 
@@ -362,7 +358,7 @@ interval Estimators
 
 <a id="node-uj1aylo"></a>
 
-- **Khoảng tin cậy tối ưu**
+###### Khoảng tin cậy tối ưu
 
 <p align="center"><kbd><img src="assets/fl4phkbquzd.png" width="80%"></kbd></p>
 
@@ -431,7 +427,7 @@ interval Estimators
 
 <a id="node-cu30bvl"></a>
 
-- **Tối ưu hóa kỳ vọng độ dài**
+###### Tối ưu hóa kỳ vọng độ dài
 
 <p align="center"><kbd><img src="assets/ewia8xat91.png" width="80%"></kbd></p>
 
@@ -705,7 +701,7 @@ interval Estimators
 
 <a id="node-p0wtclz"></a>
 
-- **Khoảng tin cậy ngắn nhất β**
+###### Khoảng tin cậy ngắn nhất β
 
 <p align="center"><kbd><img src="assets/l0p6hbxoyik.png" width="80%"></kbd></p>
 
@@ -778,7 +774,7 @@ interval Estimators
 
 <a id="node-g482p67"></a>
 
-- **Điều kiện khoảng tin cậy tối ưu**
+###### Điều kiện khoảng tin cậy tối ưu
 
 <p align="center"><kbd><img src="assets/5vfwtx3t7kq.png" width="80%"></kbd></p>
 
@@ -980,7 +976,7 @@ interval Estimators
 
 <a id="node-fiappqb"></a>
 
-- **Khoảng ngắn nhất: Trục và Tổng thể**
+###### Khoảng ngắn nhất: Trục và Tổng thể
 
 <p align="center"><kbd><img src="assets/skawuo6o7n.png" width="80%"></kbd></p>
 
@@ -999,7 +995,7 @@ interval Estimators
 
 <a id="node-x4e1c5a"></a>
 
-- **Tính tối ưu liên quan kiểm định**
+###### Tính tối ưu liên quan kiểm định
 
 <p align="center"><kbd><img src="assets/ig8u0jftrvm.png" width="80%"></kbd></p>
 
@@ -1030,7 +1026,7 @@ interval Estimators
 
 <a id="node-fulf1oe"></a>
 
-- **Xác suất phủ sai**
+###### Xác suất phủ sai
 
 <p align="center"><kbd><img src="assets/q1q61z3kdc.png" width="80%"></kbd></p>
 
@@ -1119,7 +1115,7 @@ interval Estimators
 
 <a id="node-z5fk0x6"></a>
 
-- **Tập tin cậy UMA và UMP**
+###### Tập tin cậy UMA và UMP
 
 <p align="center"><kbd><img src="assets/g3xa5y8jm6p.png" width="80%"></kbd></p>
 
@@ -1158,7 +1154,7 @@ interval Estimators
 
 <a id="node-3nnpc36"></a>
 
-- **Định lý 9.3.5: UMA Confidence Set**
+###### Định lý 9.3.5: UMA Confidence Set
 
 <p align="center"><kbd><img src="assets/y4hzsr56uge.png" width="80%"></kbd></p>
 
@@ -1213,7 +1209,7 @@ interval Estimators
 
 <a id="node-6ofz752"></a>
 
-- **UMA từ kiểm định UMP**
+###### UMA từ kiểm định UMP
 
 <p align="center"><kbd><img src="assets/kyec4f89pv.png" width="80%"></kbd></p>
 
@@ -1380,7 +1376,7 @@ interval Estimators
 
 <a id="node-xumc7wb"></a>
 
-- **UMA từ Test UMP**
+###### UMA từ Test UMP
 
 <p align="center"><kbd><img src="assets/h3e9v9go6zl.png" width="80%"></kbd></p>
 
@@ -1720,7 +1716,7 @@ interval Estimators
 
 <a id="node-ve55c6x"></a>
 
-- **Tính không chệch kiểm định ước lượng**
+###### Tính không chệch kiểm định ước lượng
 
 <p align="center"><kbd><img src="assets/x3i47gssrh.png" width="80%"></kbd></p>
 
@@ -1771,7 +1767,7 @@ interval Estimators
 
 <a id="node-h64j2oo"></a>
 
-- **Tập tin cậy không chệch**
+###### Tập tin cậy không chệch
 
 <p align="center"><kbd><img src="assets/uvih05qlr4.png" width="80%"></kbd></p>
 
@@ -1899,7 +1895,7 @@ interval Estimators
 
 <a id="node-d8pc9jk"></a>
 
-- **Khoảng tin cậy không chệch**
+###### Khoảng tin cậy không chệch
 
 <p align="center"><kbd><img src="assets/wr22ix3liek.png" width="80%"></kbd></p>
 
@@ -1944,7 +1940,7 @@ interval Estimators
 
 <a id="node-fvhd1du"></a>
 
-- **Neyman-shortest: Chiều dài khoảng tin cậy**
+###### Neyman-shortest: Chiều dài khoảng tin cậy
 
 <p align="center"><kbd><img src="assets/eozv21wlr3j.png" width="80%"></kbd></p>
 
@@ -2013,7 +2009,7 @@ interval Estimators
 
 <a id="node-5q122qr"></a>
 
-- **Chứng minh kỳ vọng độ dài C(X)**
+###### Chứng minh kỳ vọng độ dài C(X)
 
 <p align="center"><kbd><img src="assets/c1ghn7pctcj.png" width="80%"></kbd></p>
 
@@ -2111,7 +2107,7 @@ interval Estimators
 
 <a id="node-n3etvsm"></a>
 
-- **Tối ưu chiều dài khoảng tin cậy**
+###### Tối ưu chiều dài khoảng tin cậy
 
 <p align="center"><kbd><img src="assets/hr9t65xclm.png" width="80%"></kbd></p>
 
@@ -2129,7 +2125,7 @@ interval Estimators
 
 <a id="node-qthljbf"></a>
 
-- **Tối ưu khoảng tin cậy Bayesian**
+###### Tối ưu khoảng tin cậy Bayesian
 
 <p align="center"><kbd><img src="assets/fkf9p10jk3b.png" width="80%"></kbd></p>
 
@@ -2211,7 +2207,7 @@ interval Estimators
 
 <a id="node-1e5nbsx"></a>
 
-- **Vùng HPD và Likelihood**
+###### Vùng HPD và Likelihood
 
 <p align="center"><kbd><img src="assets/7zk4bbp7vsd.png" width="80%"></kbd></p>
 
@@ -2272,7 +2268,7 @@ interval Estimators
 
 <a id="node-yh9h8wy"></a>
 
-- **Vùng HPD Poisson**
+###### Vùng HPD Poisson
 
 <p align="center"><kbd><img src="assets/xvw6ef6xsy.png" width="80%"></kbd></p>
 
@@ -2324,7 +2320,7 @@ interval Estimators
 
 <a id="node-xyjk0o1"></a>
 
-- **Vùng HPD bất đối xứng**
+###### Vùng HPD bất đối xứng
 
 <p align="center"><kbd><img src="assets/kn1ue7t4z8n.png" width="80%"></kbd></p>
 
@@ -2332,7 +2328,7 @@ interval Estimators
 
 <a id="node-um19bvy"></a>
 
-- **Tối ưu hàm mất mát**
+###### Tối ưu hàm mất mát
 
 <p align="center"><kbd><img src="assets/bxxuid2e4b5.png" width="80%"></kbd></p>
 
@@ -2368,7 +2364,7 @@ interval Estimators
 
 <a id="node-9e0albh"></a>
 
-- **Hàm quyết định C(x)**
+###### Hàm quyết định C(x)
 
 <p align="center"><kbd><img src="assets/mgpzh4snrs.png" width="80%"></kbd></p>
 
@@ -2402,7 +2398,7 @@ interval Estimators
 
 <a id="node-3nhar2c"></a>
 
-- **Hàm mất mát ước lượng khoảng**
+###### Hàm mất mát ước lượng khoảng
 
 <p align="center"><kbd><img src="assets/tngr55049w.png" width="80%"></kbd></p>
 
@@ -2449,7 +2445,7 @@ interval Estimators
 
 <a id="node-9qgprpf"></a>
 
-- **Hàm mất mát và rủi ro**
+###### Hàm mất mát và rủi ro
 
 <p align="center"><kbd><img src="assets/k1rjq8bvqej.png" width="80%"></kbd></p>
 
@@ -2524,7 +2520,7 @@ interval Estimators
 
 <a id="node-phc7we9"></a>
 
-- **Hàm rủi ro: Kiểm soát Trade-off**
+###### Hàm rủi ro: Kiểm soát Trade-off
 
 <p align="center"><kbd><img src="assets/gy7b7mcm8qw.png" width="80%"></kbd></p>
 
@@ -2550,7 +2546,7 @@ interval Estimators
 
 <a id="node-9p4wibq"></a>
 
-- **Rủi ro ước lượng khoảng chuẩn**
+###### Rủi ro ước lượng khoảng chuẩn
 
 <p align="center"><kbd><img src="assets/kpnw6ov4j1.png" width="80%"></kbd></p>
 
@@ -2716,7 +2712,7 @@ interval Estimators
 
 <a id="node-q5o5180"></a>
 
-- **Ước lượng khoảng tối ưu**
+###### Ước lượng khoảng tối ưu
 
 <p align="center"><kbd><img src="assets/he4j8u7yerw.png" width="80%"></kbd></p>
 
@@ -2897,7 +2893,7 @@ interval Estimators
 
 <a id="node-kwm81pf"></a>
 
-- **Lý thuyết quyết định ước lượng khoảng**
+###### Lý thuyết quyết định ước lượng khoảng
 
 <p align="center"><kbd><img src="assets/jwitblcjnns.png" width="80%"></kbd></p>
 
@@ -2917,7 +2913,7 @@ interval Estimators
 
 <a id="node-nwk4rki"></a>
 
-- **Vấn đề hình dạng tập hợp**
+###### Vấn đề hình dạng tập hợp
 
 <p align="center"><kbd><img src="assets/cuhb112jkdf.png" width="80%"></kbd></p>
 
