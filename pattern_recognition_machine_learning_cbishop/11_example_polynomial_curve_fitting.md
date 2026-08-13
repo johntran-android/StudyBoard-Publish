@@ -5,8 +5,6 @@
 ---
 <a id="node-3eb9aq4"></a>
 
-## 1.1 Example: Polynomial Curve Fitting
-
 <br>
 
 <a id="node-fa2patq"></a>
@@ -423,7 +421,7 @@
 
 <a id="node-6d73heg"></a>
 
-- **Tối ưu hóa và lựa chọn mô hình**
+###### Tối ưu hóa và lựa chọn mô hình
 
 <p align="center"><kbd><img src="assets/xo3ql20876i.png" width="80%"></kbd></p>
 
@@ -456,7 +454,7 @@
 
 <a id="node-wd4j4t4"></a>
 
-- **Khớp đa thức các bậc**
+###### Khớp đa thức các bậc
 
 <p align="center"><kbd><img src="assets/4k2ztlnpw7c.png" width="80%"></kbd></p>
 
@@ -464,7 +462,7 @@
 
 <a id="node-cubopx0"></a>
 
-- **Lỗi mô hình và độ phức tạp**
+###### Lỗi mô hình và độ phức tạp
 
 <p align="center"><kbd><img src="assets/jkwd8un1imr.png" width="80%"></kbd></p>
 
@@ -566,7 +564,7 @@
 
 <a id="node-gosr077"></a>
 
-- **Sai số và Overfitting**
+###### Sai số và Overfitting
 
 <p align="center"><kbd><img src="assets/u5mksqr4rzf.png" width="80%"></kbd></p>
 
@@ -574,7 +572,7 @@
 
 <a id="node-lp33fl9"></a>
 
-- **Nghịch lý bậc đa thức**
+###### Nghịch lý bậc đa thức
 
 <p align="center"><kbd><img src="assets/vv83ic8ode.png" width="80%"></kbd></p>
 
@@ -589,7 +587,7 @@
 
 <a id="node-xu6fhy7"></a>
 
-- **M và Độ lớn Hệ số**
+###### M và Độ lớn Hệ số
 
 <p align="center"><kbd><img src="assets/n0t31nzb3v.png" width="80%"></kbd></p>
 
@@ -617,7 +615,7 @@
 
 <a id="node-dsmf55e"></a>
 
-- **Overfitting và Phương pháp Bayesian**
+###### Overfitting và Phương pháp Bayesian
 
 <p align="center"><kbd><img src="assets/r2z83iz675c.png" width="80%"></kbd></p>
 
@@ -729,7 +727,7 @@
 
 <a id="node-bwb4qwy"></a>
 
-- **Kỹ thuật Regularization và Shrinkage**
+###### Kỹ thuật Regularization và Shrinkage
 
 <p align="center"><kbd><img src="assets/f6x6us5fy46.png" width="80%"></kbd></p>
 
@@ -787,7 +785,7 @@
 
 <a id="node-52s00hc"></a>
 
-- **Ảnh hưởng của λ**
+###### Ảnh hưởng của λ
 
 <p align="center"><kbd><img src="assets/on2ptyd7thl.png" width="80%"></kbd></p>
 
@@ -816,7 +814,7 @@
 
 <a id="node-eby1ek9"></a>
 
-- **Khớp đa thức chính quy hóa**
+###### Khớp đa thức chính quy hóa
 
 <p align="center"><kbd><img src="assets/whjk0yt7if.png" width="80%"></kbd></p>
 
@@ -824,7 +822,7 @@
 
 <a id="node-a0ug1y4"></a>
 
-- **Tác động của λ**
+###### Tác động của λ
 
 <p align="center"><kbd><img src="assets/2n18vdorfra.png" width="80%"></kbd></p>
 
@@ -844,7 +842,7 @@
 
 <a id="node-4siqx81"></a>
 
-- **Tối ưu độ phức tạp mô hình**
+###### Tối ưu độ phức tạp mô hình
 
 <p align="center"><kbd><img src="assets/g2j9x104gfu.png" width="80%"></kbd></p>
 
