@@ -5,8 +5,6 @@
 ---
 <a id="node-y97v4o1"></a>
 
-## 3.1.4 Regularized least squares
-
 <p align="center"><kbd><img src="assets/qlvzygyyfz.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/uaa7w0fxr7h.png" width="80%"></kbd></p>
