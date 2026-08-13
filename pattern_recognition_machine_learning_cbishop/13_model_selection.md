@@ -5,8 +5,6 @@
 ---
 <a id="node-3iqkedu"></a>
 
-## 1.3 Model Selection
-
 <br>
 
 <a id="node-st9hta3"></a>
@@ -159,7 +157,7 @@
 
 <a id="node-6wc179u"></a>
 
-- **Tiêu chí thông tin và Bayes**
+###### Tiêu chí thông tin và Bayes
 
 <p align="center"><kbd><img src="assets/iviuhhm48am.png" width="80%"></kbd></p>
 
