@@ -1,13 +1,9 @@
-# 4.4 Hierarchical Model &
-mixture Distribution
+# 4.4 Hierarchical Model & Mixture Distribution
 
 📊 **Progress:** `11` Notes | `19` Screenshots
 
 ---
 <a id="node-s5hrhdz"></a>
-
-## 4.4 Hierarchical Model &
-mixture Distribution
 
 <br>
 
@@ -248,7 +244,7 @@ mixture Distribution
 
 <a id="node-d9y0usw"></a>
 
-- **Mô hình phân tầng**
+###### Mô hình phân tầng
 
 <p align="center"><kbd><img src="assets/z4kvhhjt1k.png" width="80%"></kbd></p>
 
@@ -323,7 +319,7 @@ mixture Distribution
 
 <a id="node-coenx9x"></a>
 
-- **Mô hình ba cấp thành hai**
+###### Mô hình ba cấp thành hai
 
 <p align="center"><kbd><img src="assets/i06wzuozc0e.png" width="80%"></kbd></p>
 
@@ -497,7 +493,7 @@ mixture Distribution
 
 <a id="node-f2k0dv8"></a>
 
-- **Hỗn hợp Poisson-Gamma**
+###### Hỗn hợp Poisson-Gamma
 
 <p align="center"><kbd><img src="assets/pcd4od1maq.png" width="80%"></kbd></p>
 
@@ -515,7 +511,7 @@ mixture Distribution
 
 <a id="node-jaoa4am"></a>
 
-- **Noncentral Chi-squared và mô hình tầng**
+###### Noncentral Chi-squared và mô hình tầng
 
 <p align="center"><kbd><img src="assets/fcam6jaascw.png" width="80%"></kbd></p>
 
@@ -577,7 +573,7 @@ mixture Distribution
 
 <a id="node-5d9xmzc"></a>
 
-- **Mô hình Beta-binomial**
+###### Mô hình Beta-binomial
 
 <p align="center"><kbd><img src="assets/x4ay51rth6.png" width="80%"></kbd></p>
 
@@ -641,7 +637,7 @@ mixture Distribution
 
 <a id="node-ivmktz5"></a>
 
-- **Định lý phương sai toàn phần**
+###### Định lý phương sai toàn phần
 
 <p align="center"><kbd><img src="assets/6dqcu1altv7.png" width="80%"></kbd></p>
 
@@ -787,7 +783,7 @@ mixture Distribution
 
 <a id="node-tvfka2r"></a>
 
-- **Phương sai Binomial Beta**
+###### Phương sai Binomial Beta
 
 <p align="center"><kbd><img src="assets/qirp5x7a0wi.png" width="80%"></kbd></p>
 
