@@ -5,8 +5,6 @@
 ---
 <a id="node-o5ua58c"></a>
 
-## 2.3.1 Conditional Gaussian
-
 <br>
 
 <a id="node-1xniye5"></a>
@@ -281,7 +279,7 @@
 
 <a id="node-su2e8a4"></a>
 
-- **Schur complement: Biến đổi hiệp phương sai**
+###### Schur complement: Biến đổi hiệp phương sai
 
 <p align="center"><kbd><img src="assets/yeyvxh0k06.png" width="80%"></kbd></p>
 
@@ -301,7 +299,7 @@
 
 <a id="node-usyapsm"></a>
 
-- **Mô hình Gaussian tuyến tính**
+###### Mô hình Gaussian tuyến tính
 
 <p align="center"><kbd><img src="assets/u8vni82mqi.png" width="80%"></kbd></p>
 
