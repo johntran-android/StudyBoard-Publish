@@ -5,8 +5,6 @@
 ---
 <a id="node-64oo273"></a>
 
-## Appendix D. Calculus of Variation
-
 <br>
 
 <a id="node-1zqfvss"></a>
@@ -548,7 +546,7 @@
 
 <a id="node-of8u2wm"></a>
 
-- **Euler-Lagrange dạng G(y,x)**
+###### Euler-Lagrange dạng G(y,x)
 
 <p align="center"><kbd><img src="assets/efmfkbksry7.png" width="80%"></kbd></p>
 
