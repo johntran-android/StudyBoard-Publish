@@ -5,8 +5,6 @@
 ---
 <a id="node-yhaqh3n"></a>
 
-## 2.3.2 Marginal Gaussian
-
 <br>
 
 <a id="node-h2xysxl"></a>
