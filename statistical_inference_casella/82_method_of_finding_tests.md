@@ -5,8 +5,6 @@
 ---
 <a id="node-ddu990f"></a>
 
-## 8.2 Method Of Finding Tests
-
 <br>
 
 <a id="node-sec6vtb"></a>
@@ -296,7 +294,7 @@
 
 <a id="node-326k3hu"></a>
 
-- **Ngưỡng bác bỏ LRT**
+###### Ngưỡng bác bỏ LRT
 
 <p align="center"><kbd><img src="assets/zw69ffa0vn.png" width="80%"></kbd></p>
 
@@ -467,7 +465,7 @@
 
 <a id="node-nl8sk1y"></a>
 
-- **Hàm hợp lí Exponential**
+###### Hàm hợp lí Exponential
 
 <p align="center"><kbd><img src="assets/65d3wrj50tl.png" width="80%"></kbd></p>
 
@@ -541,7 +539,7 @@
 
 <a id="node-hdo1xts"></a>
 
-- **Tỷ số Hợp lý λ(x)**
+###### Tỷ số Hợp lý λ(x)
 
 <p align="center"><kbd><img src="assets/mjkc3341z7g.png" width="80%"></kbd></p>
 
@@ -619,7 +617,7 @@
 
 <a id="node-efq5sem"></a>
 
-- **Miền bác bỏ kiểm định tỉ số khả dĩ**
+###### Miền bác bỏ kiểm định tỉ số khả dĩ
 
 <p align="center"><kbd><img src="assets/ayadqwtnq5.png" width="80%"></kbd></p>
 
@@ -696,7 +694,7 @@
 
 <a id="node-decrd99"></a>
 
-- **Thống kê đủ và kiểm định LRT**
+###### Thống kê đủ và kiểm định LRT
 
 <p align="center"><kbd><img src="assets/urvjlknkles.png" width="80%"></kbd></p>
 
@@ -724,7 +722,7 @@
 
 <a id="node-gfm4olm"></a>
 
-- **Định lý LRT Thống kê đủ**
+###### Định lý LRT Thống kê đủ
 
 <p align="center"><kbd><img src="assets/3kypz51oz1j.png" width="80%"></kbd></p>
 
@@ -974,7 +972,7 @@
 
 <a id="node-8hiqyvn"></a>
 
-- **Thống kê đủ và LRT**
+###### Thống kê đủ và LRT
 
 <p align="center"><kbd><img src="assets/vk48edoisn.png" width="80%"></kbd></p>
 
@@ -1011,7 +1009,7 @@
 
 <a id="node-elajwsz"></a>
 
-- **LRT với tham số gây nhiễu**
+###### LRT với tham số gây nhiễu
 
 <p align="center"><kbd><img src="assets/mgc0us04m2.png" width="80%"></kbd></p>
 
@@ -1157,7 +1155,7 @@
 
 <a id="node-zi3rdod"></a>
 
-- **Kiểm định giả thuyết Bayesian**
+###### Kiểm định giả thuyết Bayesian
 
 <p align="center"><kbd><img src="assets/ynvdxlp9zr.png" width="80%"></kbd></p>
 
@@ -1214,7 +1212,7 @@
 
 <a id="node-y2elxyy"></a>
 
-- **Xác suất H0/H1 trong Bayesian**
+###### Xác suất H0/H1 trong Bayesian
 
 <p align="center"><kbd><img src="assets/wz3h721o8m.png" width="80%"></kbd></p>
 
@@ -1248,7 +1246,7 @@
 
 <a id="node-40sn9pl"></a>
 
-- **Kiểm định giả thuyết Bayesian**
+###### Kiểm định giả thuyết Bayesian
 
 <p align="center"><kbd><img src="assets/d2vo48u62k4.png" width="80%"></kbd></p>
 
@@ -1293,7 +1291,7 @@
 
 <a id="node-zk8yeue"></a>
 
-- **Luật quyết định kiểm định Bayesian**
+###### Luật quyết định kiểm định Bayesian
 
 <p align="center"><kbd><img src="assets/i7atw3pulbk.png" width="80%"></kbd></p>
 
@@ -1384,7 +1382,7 @@
 
 <a id="node-hyypk0c"></a>
 
-- **Kiểm định giả thuyết thống kê**
+###### Kiểm định giả thuyết thống kê
 
 <p align="center"><kbd><img src="assets/3dkm0wfh45w.png" width="80%"></kbd></p>
 
@@ -1525,7 +1523,7 @@
 
 <a id="node-ouhenhy"></a>
 
-- **Kiểm định LRT cho trung bình**
+###### Kiểm định LRT cho trung bình
 
 <p align="center"><kbd><img src="assets/mv8z0txlax.png" width="80%"></kbd></p>
 
@@ -1898,7 +1896,7 @@
 
 <a id="node-qo5rly2"></a>
 
-- **Kiểm định t hai phía**
+###### Kiểm định t hai phía
 
 <p align="center"><kbd><img src="assets/iun2mtnwwf.png" width="80%"></kbd></p>
 
@@ -1998,7 +1996,7 @@
 
 <a id="node-3ebhe5o"></a>
 
-- **Phương pháp hợp-giao và giao-hợp**
+###### Phương pháp hợp-giao và giao-hợp
 
 <p align="center"><kbd><img src="assets/mg005tnwby.png" width="80%"></kbd></p>
 
