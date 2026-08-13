@@ -1,6 +1,6 @@
 # 3.4 Bayesian Model Comparison
 
-📊 **Progress:** `4` Notes | `4` Screenshots | `4` AI Reviews
+📊 **Progress:** `7` Notes | `8` Screenshots | `7` AI Reviews
 
 ---
 <a id="node-8mjaf9g"></a>
@@ -132,7 +132,7 @@
 <p align="center"><kbd><img src="assets/k9q5rh88uuj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì f(ℳ) là cách để ta đưa vào PRERENCE / PRIOR BELIEF về mô hình- ý là, cũng là việc ví dụ như ta ưu ái những mô hình này hơn mô hình kia (thông qua việc đưa nó vào danh sách, và thông qua việc gán giá trị xác suất lớn nhỏ cho nó). 
+> Thế thì f(ℳ) là cách để ta đưa vào PRERENCE / PRIOR BELIEF về mô hình- ý là, cũng là việc ví dụ như ta ưu ái những mô hình này hơn mô hình kia (thông qua việc đưa nó vào danh sách, và thông qua việc gán giá trị xác suất lớn nhỏ cho nó).
 >
 >
 >
@@ -176,7 +176,7 @@
 >
 >
 >
-> còn f(𝒟|**ℳ**), tương tự như f(**x**|θ) = L(θ|**x**), ta cũng có thể gọi nó là L(ℳ|𝒟), marginal likelihood function mang ý nghĩa, độ hợp lí của model ℳ khi giá trị dữ liệu quan sát được là 𝒟.
+> còn f(𝒟|**ℳ**), tương tự như f(**x**|θ) = L(θ|**x**), ta cũng có thể gọi nó là L(ℳ|𝒟), marginal likelihood function mang ý nghĩa, **độ hợp lí của model ℳ khi giá trị dữ liệu quan sát được là 𝒟**.
 >
 >
 >
@@ -282,4 +282,282 @@
 <br>
 
 <a id="node-tmo40n6"></a>
+
+- **Model Selection and Model Evidence**
+
+<p align="center"><kbd><img src="assets/xn0guxtuv2e.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Ý này là sao? khi gs nói rằng một cách đơn giản để "model averaging" (tạm dịch là lấy trung bình qua các model) là ta sẽ dùng cái model có xác suất cao nhất (most probable), và chỉ lấy mình nó (alone) để mà dự đoán.
+>
+>
+>
+> Cái này nó y chang như khi ta tìm **w** (nói theo ngôn ngữ thống kê là ta đi infer (suy luận) giá trị của **w** bằng cách tìm một point estimation (là một hàm số dựa trên data) cho **w**) mà khi theo Bayesian approach, ta sẽ đi tìm posterior distribution của nó: f(**w**|𝒟), từ đó, ta có thể dựa vào decision theory giúp chỉ cho ta cách để đưa ra point estimation thế nào cho tối ưu, và kết quả có thể là mean hoặc median hoặc gì gì đó của posterior distribution. Ví dụ như khi tìm ra posterior là Normal, thì một cách hợp lý để point estimate đó là dùng cái mean nơi có posterior probability cao nhất. Nhưng đi xây dựng posterior distribution rồi lại lấy một point estimation để lắp vào hàm dự đoán y(**w**,**x**) thì nó mang tính Bayesian nửa mùa. Do đó, cách làm Bayesian hoàn chỉnh là không cần care về ước lượng điểm cho w làm gì, mà chỉ việc dùng cái distribution đó, để marginalizing f(t|**x**,**w**) over mọi possible value của **w** tuân theo f(**w**|𝒟). Khi đó predictive distribution f(t|**x**,𝒟) mang ý nghĩa đã tính trung bình trên mọi **w** rồi.
+>
+>
+>
+> Vậy thì ở đây cũng y hệt, khi ta có posterior distribution của model f(ℳ|𝒟), thì cách làm trọn vẹn theo Bayesian chính là ta sẽ dùng distribution này để marginalizing over mọi possible value của model, để có predictive distribution. Thế thì cái ở đoạn trên ta cũng có predictive distribution nhưng phải hiểu là đang làm việc với một model cụ thể nào đó, ví dụ có thể gọi là f(t|**x**) ở trên là f(t|**x**,ℳ,𝒟). Còn bây giờ, ta cũng tính trung bình trên mọi possible value của model, để có f(t|**x**,𝒟) không còn phụ thuộc model cụ thể nào nữa.
+>
+>
+>
+> Thế thì, tuy đó là cách làm mang tính là thuần túy Bayesian, nhưng quay ngược lại, ta cũng có thể làm theo kiểu nửa mùa Bayessian, đó là lại đi chọn một cái point estimation của model ℳ (y như làm nửa mùa bằng cách lấy point estimation của **w** và ráp vào y(**w**,**x**) đã nói ở trên). Và một cách hợp lý để chọn là lấy cái model có xác suất cao nhất (y như lấy **w** có posterior probability cao nhất), à cái này được gọi là model selection.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Ghi chú cực kỳ xuất sắc, giải thích rất sâu sắc và chính xác bản chất của 'model selection' bằng cách so sánh tương quan hoàn hảo với việc ước lượng điểm tham số trong thống kê Bayes. Lối tư duy liên hệ bản chất này vô cùng tốt và giúp hiểu rõ ngọn ngành của phương pháp xấp xỉ.
+
+<br>
+
+<a id="node-dmy6nc7"></a>
+
+- **Model Evidence and Marginal Likelihood**
+
+<p align="center"><kbd><img src="assets/oq6sviqwik.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tiếp theo qua đoạn này, đại ý là vầy:
+>
+>
+>
+> Ta đã hiểu rằng model thì có tham số **w**. Ý là, nói về một model cụ thể nào đó, ví dụ ℳ1, thì bản thân nó, cũng có vô số giá trị tham số **w**. Vậy thì đại ý là dùng sum rule và product rule, ta sẽ thấy f(𝒟|**ℳ**) chính là kết quả khi ta tính trung bình f(𝒟|**ℳ**) trên mọi giá trị khả dĩ của tham số **w**.
+>
+>
+>
+> Để hiểu công thức 3.68 thật ra có nhiều cách. Một cách đơn giản, đó là:
+>
+>
+>
+> xét hàm số sau: nhận input là model ℳi, và giá trị tham số **w**, và dưới mô hình này, thì ta sinh ra (sampling ra) data 𝒟, thì ta tính xác suất của giá trị cụ thể data 𝒟 là bao nhiêu (tương tự như f(**x**|θ), mang ý nghĩa dựa giá trị population parameter θ thì xác xuất sample **X** mang giá trị cụ thể **x** là bao nhiêu). Và ta kí hiệu nó là f(𝒟|**ℳ**i, **w**).
+>
+>
+>
+> Dĩ nhiên, với ℳi fixed, **w** fixed, thì đây chỉ là một fixed number.
+>
+>
+>
+> Thế rồi, ta mới không coi w là fixed nữa, mà nó là một random variable có phân phối là f(**w**|ℳi)...
+>
+>
+>
+> (chú ý chỗ này dễ lú: chỗ này không phải là f(**w**|𝒟), mà ở đây ý là nói về prior distribution của **w** khi mô hình là ℳi. Hay nói cách khác, bữa giờ ta nói về prior và posterior distribution của **w**, thì có thể hiểu là với model cụ thể nào đó, nên chúng là f(**w**|ℳ) và f(**w**|𝒟, ℳ) thì cái đang nói ở đây chính là cái prior distribution như vậy)
+>
+>
+>
+> ..thì lúc này, f(𝒟|**ℳ**i, **w**), là hàm số của một random variable, nên cũng là random variable. Và ta sẽ lấy kì vọng của cái random variable này, tức E\[f(𝒟|**ℳ**i, **w**)\] với **w** \~ f(**w**|ℳi) Theo LOTUS, nhắc lại nhanh, nói rằng khi ta có X có distribution pdf f(x), và Y = g(X), thì EY = ∫g(x)f(x)dx, vậy thì ở đây áp dụng LOTUS ta cũng có:
+>
+>
+>
+> E\[f(𝒟|**ℳ**i, **w**)\] với **w** \~ f(**w**|ℳi) = ∫f(𝒟|**ℳ**i, **w**) f(**w**|ℳ) d**w**, chính là công thức 3.68.
+>
+>
+>
+> Như vậy, ta có thể thấy f(𝒟|ℳ) có bản chất chỉ là ta đang tính f(𝒟|**ℳ**i, **w**) - mang ý nghĩa là xác suất của data 𝒟 dựa trên model ℳi có bộ tham số giá trị cụ thể **w**, nhưng lấy trung bình qua mọi possible value của **w**, với **w** \~ f(**w**|ℳi)
+>
+>
+>
+> Và đây cũng chính là ý tiếp theo khi gs nói, với góc nhìn (perspective) sampling, thì cái này chính là xác suất của việc sinh ra dataset 𝒟 từ một model (**ℳ**i) có giá trị tham số là **w** được sampled randomly từ prior distribution f(**w**|ℳi). Hiểu thế này, nói rằng theo sampling perspective, thì tức là ta sẽ làm như sau:
+>
+>
+>
+> sampling w từ f(w|ℳi), lắp w vào hàm f(𝒟|ℳi, w), tính ra ví dụ f1,
+>
+>
+>
+> sampling w từ f(w|ℳi), lắp w vào hàm f(𝒟|ℳi, w), tính ra ví dụ f2,
+>
+>
+>
+> ..
+>
+>
+>
+> sampling w từ f(w|ℳi), lắp w vào hàm f(𝒟|ℳi, w), tính ra ví dụ fn,
+>
+>
+>
+> và ta đây chính là một sample: F1,...Fn có observed value f1,...fn. với F = f(𝒟|ℳi, w) (F là random variable có được bởi áp hàm f(𝒟|ℳi, w) lên random variable w).
+>
+>
+>
+> và ta lấy trung bình Fbar = (Σi Fi)/n.
+>
+>
+>
+> Theo Law Of Large number, đã học (Casella, hay Stat110, xem link) thì sample mean sẽ converge in probabililty về true mean, mà true mean ở đây chính là E\[F\], chính là E\[f(𝒟|**ℳ**i, **w**)\] ở trên.
+>
+>
+>
+> ---
+>
+>
+>
+> Còn nếu muốn giải thích theo sum rule hay product rule cũng được:
+>
+>
+>
+> Đơn giản là, ta xét joint probability: f(𝒟, **w**|ℳi), và đi marginalizing over mọi possible value của **w** với **w** \~ f(**w**|ℳi) thì như đã học ở Stat110 hay Casella, khi marginalizing joint pdf của X, Y over y thì ta có marginal pdf của X: fX(x) = ∫f(x,y)dy. Thay f(x,y) bằng f(x|y)f(y), ta có fX(x) = ∫f(x|y)f(y)dy. Vậy ở đây cũng vậy:
+>
+>
+>
+> f(𝒟|**ℳ**i) = ∫f(𝒟, **w**|**ℳ**i)d**w** = ∫f(𝒟|**ℳ**i,**w**)f(**w**|ℳi)d**w**
+>
+>
+>
+> Vậy thì cái vụ marginalizing joint pdf của X, Y over y sẽ cho ra marginal distribution của X chính là sum rule và product rule đó, mà ta còn nhớ, nguồn gốc của nó trong Stat110, chính là có cái tên gọi là LOTP: Luật xác suất toàn phần.
+>
+>
+>
+> ---
+>
+>
+>
+> Cuối cùng, chỉ là ông nói rằng, cái f(𝒟|**ℳ**i) thật ra chính là cái xuất hiện ở mẫu số trong:
+>
+>
+>
+> f(w|𝒟, ℳi) = f(𝒟|w, ℳi) f(w|ℳi) / f(𝒟|ℳi)
+>
+>
+>
+> Ý này ko có gì đặc biệt.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chú cực kỳ xuất sắc, giải thích rất sâu sắc dưới cả góc độ kỳ vọng (LOTUS) và luật số lớn (LLN). Bạn chỉ cần lưu ý sửa một lỗi gõ nhỏ ở tích phân phần marginalizing khi viết thiếu điều kiện w trong f(D|M_i).
+
+**🔗 See also:** [Luật số lớn yếu WLLN *(Statistical Inference - Casella)*](../statistical_inference_casella/55_convergence_concepts.md#node-j5m3pa1) · [Luật số lớn mạnh *(Statistical Inference - Casella)*](../statistical_inference_casella/55_convergence_concepts.md#node-0yeml4r)
+
+<br>
+
+<a id="node-qzhn5db"></a>
+
+- **Model Evidence Approximation**
+
+<p align="center"><kbd><img src="assets/ocexek5e5ra.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/lqifmwkfmic.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, đoạn này là sao, cùng tìm hiểu:
+>
+>
+>
+> Đại ý là, gs nói rằng ta sẽ có thể có vài insight (tạm hiểu là hiểu biết) về model evidence (tức là cái f(𝒟|**ℳ**i) nãy giờ đang nói) bằng cách làm như sau:
+>
+>
+>
+> Đầu tiên, để đơn giản ta xét **w** chỉ là scalar, tức là model chỉ có một paramter thôi.
+>
+>
+>
+> Và xét posterior distribution của **w:** như đã biết f(w|𝒟, ℳi) = f(𝒟|ℳi,w) f(w|ℳi) / f(𝒟i|ℳi)
+>
+>
+>
+> bỏ bớt ℳi cho gọn về mặt kí hiệu (chứ phải hiểu là phải đang trong một model ℳi cụ thể):
+>
+>
+>
+> f(w|𝒟) = f(𝒟|w) f(w) / f(𝒟i)
+>
+>
+>
+> và dùng cách thể hiện proportional cho gọn, vì f(𝒟i) chỉ là constant dương.
+>
+>
+>
+> f(w|𝒟) ∝ f(𝒟|w) f(w)
+>
+>
+>
+> Tiếp, ta sẽ giả định (Để đơn giản hóa bài toán) là cái posterior distribution over parameter này nó có dạng kiểu như mọi xác suất đều dồn hết về 1 vùng có bề rộng Δw_posterior, và tại điểm wMAP, với chiều cao là xác suất tại đó f(wMAP|𝒟).
+>
+>
+>
+> Và ta giả định tiếp prior distribution là uniform (α, β) có bề rộng α đến β là Δw_prior.
+>
+>
+>
+> Rồi, thế thì lôi lại công thức f(𝒟|**ℳ**i) = ∫f(𝒟|**ℳ**i, **w**) f(**w**|ℳ) d**w**
+>
+>
+>
+> và bỏ đi ℳi cho gọn như đã nói, cũng như **w** là scalar (nên viết chữ thường) ta sẽ có:
+>
+>
+>
+> f(𝒟) = ∫f(𝒟|w) f(w) dw
+>
+>
+>
+> với prior distribution là uniform (α, β), ta có f(w) = 1/(β - α) = 1/Δw_prior
+>
+>
+>
+> ⇒ f(𝒟) = ∫f(𝒟|w) \[1/Δw_prior\] dw
+>
+>
+>
+> = \[1/Δw_prior\] ∫f(𝒟|w) dw (đưa ra ngoài tích phân)
+>
+>
+>
+> = \[1/Δw_prior\] ∫f(𝒟|w) dw 
+>
+>
+>
+> Tiếp, ∫f(𝒟|w) dw bằng cái gì?
+>
+>
+>
+> Một điểm rất quan trọng cần chú ý: Cái ta cần tính là ∫f(𝒟|w)dw, thì phải hiểu, nó là diện tích của đồ thị hàm f(𝒟|w) với tư cách là hàm của w, xét trên miền w từ -∞ tới ∞. Và ta lập luận như sau.
+>
+>
+>
+> Ta đã giả định f(w|𝒟) có dạng hình chữ nhật tại wMAP, rộng Δw_posterior, cao f(wMAP|𝒟), đương nhiên vì tính valid của pdf, diện tích của hình chữ nhật này Δw_posterior × f(wMAP|𝒟) phải ≈ 1 (dù rằng ta sẽ không xét đến đặc điểm này)
+>
+>
+>
+> Thế thì f(w|𝒟) = f(𝒟|w)f(w)/f(𝒟), với f(w) với giả định của prior distribution, ta coi như constant, f(𝒟) cũng vậy. Cho nên, f(𝒟|w), với tư cách là hàm theo w, sẽ = f(w|𝒟) nhân một constant c = f(𝒟)/f(w) = f(𝒟) Δw_prior
+>
+>
+>
+> f(𝒟|w) = c × f(w|𝒟)
+>
+>
+>
+> **Khúc này quan trọng:**
+>
+>
+>
+> Đến đây hãy hình dung khi w chạy trên trục số, khi nó chạy qua vùng có bề rộng Δw_posterior quanh wMAP, thì hàm f(w|D) và f(D|w) (trong tư cách là hàm theo w) sẽ đều nhảy vọt lên. Với f(w|𝒟) thì nó nhảy lên để mang giá trị f(wMAP|𝒟) thì f(D|w) nó sẽ nhảy vọt lên để mang giá trị nào đó, ta gọi là f(𝒟|wMAP). (dĩ nhiên hai cái này không bằng nhau), và khi đi qua vùng đó thì đồ thị xuống lại.
+>
+>
+>
+> như vậy, cái tích phân ∫f(𝒟|w) dw vốn bản chất chỉ là diện tích của đồ thị hàm f(𝒟|w) trong tư cách là hàm theo w, xét từ -∞ tới ∞, thì có thể hiểu cũng chỉ là diện tích của cái hình chữ nhật bề rộng Δw_posterior cao f(𝒟|wMAP) đặt tai w = wMAP mà thôi.
+>
+>
+>
+> Vậy cái tích phân này = f(𝒟|wMAP)  × Δw_posterior
+>
+>
+>
+> Do đó f(𝒟) = \[1/Δw_prior\] × f(𝒟|wMAP)  × Δw_posterior
+>
+>
+>
+> = f(𝒟|wMAP) × \[Δw_posterior / Δw_prior\]
+>
+>
+>
+> Lấy log ta sẽ có 3.71
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Giải thích của bạn cực kỳ xuất sắc, trực quan và chính xác khi phân tích mối liên hệ giữa posterior và likelihood để làm rõ bản chất tích phân. Tư duy suy luận tự do nhưng logic này giúp hiểu sâu sắc công thức (3.70) thay vì chỉ đọc thuộc lòng.
+
+<br>
 
