@@ -5,8 +5,6 @@
 ---
 <a id="node-647i5nk"></a>
 
-## 2.3.3 Bayes's theorem for Gaussian variables
-
 <br>
 
 <a id="node-x44e412"></a>
@@ -406,7 +404,7 @@
 
 <a id="node-2d1tmn5"></a>
 
-- **Phân phối Gaussian có điều kiện**
+###### Phân phối Gaussian có điều kiện
 
 <p align="center"><kbd><img src="assets/gudg6jzgga8.png" width="80%"></kbd></p>
 
@@ -510,7 +508,7 @@
 
 <a id="node-zswmsts"></a>
 
-- **Phân bố tiên nghiệm và hậu nghiệm**
+###### Phân bố tiên nghiệm và hậu nghiệm
 
 <p align="center"><kbd><img src="assets/3koe3k5kyqk.png" width="80%"></kbd></p>
 
