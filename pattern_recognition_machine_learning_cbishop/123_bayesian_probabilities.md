@@ -5,8 +5,6 @@
 ---
 <a id="node-g0j8l3h"></a>
 
-## 1.2.3 Bayesian probabilities
-
 <br>
 
 <a id="node-dls8evk"></a>
@@ -272,7 +270,7 @@
 
 <a id="node-ou7tcc1"></a>
 
-- **Hằng số Chuẩn hóa Định lý Bayes**
+###### Hằng số Chuẩn hóa Định lý Bayes
 
 <p align="center"><kbd><img src="assets/22miw5omvi6.png" width="80%"></kbd></p>
 
@@ -339,7 +337,7 @@
 
 <a id="node-h1ylwjp"></a>
 
-- **Nguồn Gốc Bất Định: Frequentist Bayesian**
+###### Nguồn Gốc Bất Định: Frequentist Bayesian
 
 <p align="center"><kbd><img src="assets/u1drtlto2q.png" width="80%"></kbd></p>
 
@@ -439,7 +437,7 @@
 
 <a id="node-rcntpny"></a>
 
-- **MLE và Hàm lỗi**
+###### MLE và Hàm lỗi
 
 <p align="center"><kbd><img src="assets/txct5cy3tla.png" width="80%"></kbd></p>
 
@@ -536,7 +534,7 @@
 
 <a id="node-mul6va4"></a>
 
-- **Bootstrap và Error Bars**
+###### Bootstrap và Error Bars
 
 <p align="center"><kbd><img src="assets/cq3hnl8beli.png" width="80%"></kbd></p>
 
@@ -556,7 +554,7 @@
 
 <a id="node-7snt2ef"></a>
 
-- **Ưu điểm Bayesian: Kiến thức tiên nghiệm**
+###### Ưu điểm Bayesian: Kiến thức tiên nghiệm
 
 <p align="center"><kbd><img src="assets/kzs41j78iol.png" width="80%"></kbd></p>
 
@@ -898,7 +896,7 @@
 
 <a id="node-qiq9m0c"></a>
 
-- **Tranh luận Frequentist Bayesian**
+###### Tranh luận Frequentist Bayesian
 
 <p align="center"><kbd><img src="assets/o7u9as3hbee.png" width="80%"></kbd></p>
 
@@ -925,7 +923,7 @@
 
 <a id="node-ivoeaz5"></a>
 
-- **Tiếp cận Bayesian hiện đại**
+###### Tiếp cận Bayesian hiện đại
 
 <p align="center"><kbd><img src="assets/b1886c1p5bc.png" width="80%"></kbd></p>
 
