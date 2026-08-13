@@ -5,8 +5,6 @@
 ---
 <a id="node-1hlelhn"></a>
 
-## 2.4 The Exponential Family
-
 <p align="center"><kbd><img src="assets/mh8iz7zygv.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -537,7 +535,7 @@
 
 <a id="node-cc9f9ml"></a>
 
-- **Solving for mu_k**
+###### Solving for mu_k
 
 <p align="center"><kbd><img src="assets/1epys69jmy.png" width="80%"></kbd></p>
 
