@@ -5,8 +5,6 @@
 ---
 <a id="node-djmqx0o"></a>
 
-## 3.1.0 Linear Regression and Basis Functions
-
 <p align="center"><kbd><img src="assets/faq5gp78m16.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -345,7 +343,7 @@
 
 <a id="node-lkqg58h"></a>
 
-- **Sigmoidal and Tanh Functions**
+###### Sigmoidal and Tanh Functions
 
 <p align="center"><kbd><img src="assets/70liydxof18.png" width="80%"></kbd></p>
 
@@ -375,7 +373,7 @@
 
 <a id="node-4gh1zj2"></a>
 
-- **Fourier Basis and Wavelets**
+###### Fourier Basis and Wavelets
 
 <p align="center"><kbd><img src="assets/rwynkz58c0j.png" width="80%"></kbd></p>
 
