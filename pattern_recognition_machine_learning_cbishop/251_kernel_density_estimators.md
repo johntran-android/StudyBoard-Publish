@@ -5,8 +5,6 @@
 ---
 <a id="node-ztg9jqd"></a>
 
-## 2.5.1 Kernel density estimators
-
 <br>
 
 <a id="node-k0xl2ap"></a>
@@ -310,7 +308,7 @@
 
 <a id="node-dubqlij"></a>
 
-- **Parzen Window Density Estimation**
+###### Parzen Window Density Estimation
 
 <p align="center"><kbd><img src="assets/bk60wq628g.png" width="80%"></kbd></p>
 
@@ -358,7 +356,7 @@
 
 <a id="node-4yvjv01"></a>
 
-- **Gaussian Kernel Density Model**
+###### Gaussian Kernel Density Model
 
 <p align="center"><kbd><img src="assets/clu6agiutyt.png" width="80%"></kbd></p>
 
@@ -404,7 +402,7 @@
 
 <a id="node-5wbga1e"></a>
 
-- **Kernel Density and Parzen Estimator**
+###### Kernel Density and Parzen Estimator
 
 <p align="center"><kbd><img src="assets/6qv6r5t9fd.png" width="80%"></kbd></p>
 
