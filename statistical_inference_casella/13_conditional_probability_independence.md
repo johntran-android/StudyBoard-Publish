@@ -1,13 +1,9 @@
-# 1.3 Conditional
-probability & Independence
+# 1.3 Conditional Probability & Independence
 
 📊 **Progress:** `12` Notes | `16` Screenshots
 
 ---
 <a id="node-5qan0fk"></a>
-
-## 1.3 Conditional
-probability & Independence
 
 <br>
 
@@ -630,7 +626,7 @@ probability & Independence
 
 <a id="node-abmq336"></a>
 
-- **Bài toán ba tù nhân**
+###### Bài toán ba tù nhân
 
 <p align="center"><kbd><img src="assets/dbewuiqyss5.png" width="80%"></kbd></p>
 
@@ -809,7 +805,7 @@ probability & Independence
 
 <a id="node-gl0y438"></a>
 
-- **Biểu đồ nhánh xác suất W**
+###### Biểu đồ nhánh xác suất W
 
 <p align="center"><kbd><img src="assets/wbb35aqqzw.png" width="80%"></kbd></p>
 
@@ -825,7 +821,7 @@ probability & Independence
 
 <a id="node-egr4n0e"></a>
 
-- **Biểu đồ nhánh và xác suất**
+###### Biểu đồ nhánh và xác suất
 
 <p align="center"><kbd><img src="assets/57dz1jqiuso.png" width="80%"></kbd></p>
 
@@ -837,7 +833,7 @@ probability & Independence
 
 <a id="node-pzsb0sd"></a>
 
-- **Định lý Bayes: Các phiên bản**
+###### Định lý Bayes: Các phiên bản
 
 <p align="center"><kbd><img src="assets/pj0n3lfniaq.png" width="80%"></kbd></p>
 
@@ -917,7 +913,7 @@ probability & Independence
 
 <a id="node-vvilvcv"></a>
 
-- **Độ tin cậy tín hiệu Morse**
+###### Độ tin cậy tín hiệu Morse
 
 <p align="center"><kbd><img src="assets/25motcav7qa.png" width="80%"></kbd></p>
 
@@ -1021,7 +1017,7 @@ probability & Independence
 
 <a id="node-5x8paui"></a>
 
-- **Sự kiện độc lập thống kê**
+###### Sự kiện độc lập thống kê
 
 <p align="center"><kbd><img src="assets/kf7f72amhif.png" width="80%"></kbd></p>
 
@@ -1047,7 +1043,7 @@ probability & Independence
 
 <a id="node-4lk3khh"></a>
 
-- **Xác suất ít nhất một 6**
+###### Xác suất ít nhất một 6
 
 <p align="center"><kbd><img src="assets/cq6pcwddfzv.png" width="80%"></kbd></p>
 
@@ -1145,7 +1141,7 @@ probability & Independence
 
 <a id="node-13euzuz"></a>
 
-- **Độc lập biến cố và phần bù**
+###### Độc lập biến cố và phần bù
 
 <p align="center"><kbd><img src="assets/4rxfs6s4eq9.png" width="80%"></kbd></p>
 
@@ -1189,9 +1185,7 @@ probability & Independence
 
 <a id="node-oval3u7"></a>
 
-- **Còn hai ví dụ đại khái là minh họa rằng
-điều kiện \\*INDEPENDENT\\* phải là
-\\*MUTUAL INDEPENDENT\\***
+###### Còn hai ví dụ đại khái là minh họa rằng điều kiện \\*INDEPENDENT\\* phải là \\*MUTUAL INDEPENDENT\\*
 
 <br>
 
