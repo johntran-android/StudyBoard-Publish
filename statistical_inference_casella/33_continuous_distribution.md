@@ -1,13 +1,9 @@
-# 3.3 Continuous
-distribution
+# 3.3 Continuous distribution
 
 📊 **Progress:** `24` Notes | `38` Screenshots
 
 ---
 <a id="node-odu1bg9"></a>
-
-## 3.3 Continuous
-distribution
 
 <br>
 
@@ -564,7 +560,7 @@ distribution
 
 <a id="node-h9282yg"></a>
 
-- **Tính toán Phương sai Gamma**
+###### Tính toán Phương sai Gamma
 
 <p align="center"><kbd><img src="assets/x5s7wqfxtp.png" width="80%"></kbd></p>
 
@@ -695,7 +691,7 @@ distribution
 
 <a id="node-ip8ufue"></a>
 
-- **Tích phân từng phần CDF Gamma**
+###### Tích phân từng phần CDF Gamma
 
 <p align="center"><kbd><img src="assets/czm14x0warc.png" width="80%"></kbd></p>
 
@@ -860,7 +856,7 @@ distribution
 
 <a id="node-cvm81t8"></a>
 
-- **Trường hợp Gamma đặc biệt**
+###### Trường hợp Gamma đặc biệt
 
 <p align="center"><kbd><img src="assets/ws20vpa3spb.png" width="80%"></kbd></p>
 
@@ -893,7 +889,7 @@ distribution
 
 <a id="node-wczjqf6"></a>
 
-- **Tính không trí nhớ của Expo**
+###### Tính không trí nhớ của Expo
 
 <p align="center"><kbd><img src="assets/m8cav9hn3x.png" width="80%"></kbd></p>
 
@@ -1116,7 +1112,7 @@ distribution
 
 <a id="node-ywzzzkr"></a>
 
-- **Tích phân Hàm mật độ Chuẩn**
+###### Tích phân Hàm mật độ Chuẩn
 
 <p align="center"><kbd><img src="assets/gc6a7bpijol.png" width="80%"></kbd></p>
 
@@ -1384,7 +1380,7 @@ distribution
 
 <a id="node-uuez1ye"></a>
 
-- **Chuẩn hóa biến ngẫu nhiên chuẩn**
+###### Chuẩn hóa biến ngẫu nhiên chuẩn
 
 <p align="center"><kbd><img src="assets/009x9q4zcq4pw.png" width="80%"></kbd></p>
 
@@ -1487,7 +1483,7 @@ distribution
 
 <a id="node-4aid3je"></a>
 
-- **Kỳ vọng và Phương sai Z**
+###### Kỳ vọng và Phương sai Z
 
 <p align="center"><kbd><img src="assets/hi6ek6mxm8g.png" width="80%"></kbd></p>
 
@@ -1624,7 +1620,7 @@ distribution
 
 <a id="node-55oplgl"></a>
 
-- **Tích phân Gauss**
+###### Tích phân Gauss
 
 <p align="center"><kbd><img src="assets/xbp72pyll3l.png" width="80%"></kbd></p>
 
@@ -1656,7 +1652,7 @@ distribution
 
 <a id="node-jzl2jlk"></a>
 
-- **Chứng minh Γ(1/2) = √π**
+###### Chứng minh Γ(1/2) = √π
 
 <p align="center"><kbd><img src="assets/pcv287vfx2l.png" width="80%"></kbd></p>
 
@@ -1743,7 +1739,7 @@ distribution
 
 <a id="node-fcytb5c"></a>
 
-- **Cực đại hàm mật độ Normal**
+###### Cực đại hàm mật độ Normal
 
 <p align="center"><kbd><img src="assets/fu9igbvdun.png" width="80%"></kbd></p>
 
@@ -1898,7 +1894,7 @@ distribution
 >
 >
 >
-> - (1/σ^3√2π) e^-[(μ - μ)^2/2σ^2] { [-(μ - μ)^2/σ^2] + 1}
+> \- (1/σ^3√2π) e^-[(μ - μ)^2/2σ^2] { [-(μ - μ)^2/σ^2] + 1}
 >
 >
 >
@@ -1910,7 +1906,7 @@ distribution
 
 <a id="node-0u3hc39"></a>
 
-- **Phân phối chuẩn xấp xỉ phân phối**
+###### Phân phối chuẩn xấp xỉ phân phối
 
 <p align="center"><kbd><img src="assets/hu2ir5r05j.png" width="80%"></kbd></p>
 
@@ -1929,7 +1925,7 @@ distribution
 
 <a id="node-r4qgnhh"></a>
 
-- **Xấp xỉ Normal Binomial**
+###### Xấp xỉ Normal Binomial
 
 <p align="center"><kbd><img src="assets/8vw5fblunl8.png" width="80%"></kbd></p>
 
@@ -1953,7 +1949,7 @@ distribution
 
 <a id="node-s8cq0wf"></a>
 
-- **Phân phối Beta: Định nghĩa, ứng dụng**
+###### Phân phối Beta: Định nghĩa, ứng dụng
 
 <p align="center"><kbd><img src="assets/46ws43atn4t.png" width="80%"></kbd></p>
 
@@ -1981,7 +1977,7 @@ distribution
 
 <a id="node-6jnyj9e"></a>
 
-- **Tính moment phân phối Beta**
+###### Tính moment phân phối Beta
 
 <p align="center"><kbd><img src="assets/hz4lv9tcrf.png" width="80%"></kbd></p>
 
@@ -2103,7 +2099,7 @@ distribution
 
 <a id="node-4d2xe12"></a>
 
-- **Phân phối Beta và F**
+###### Phân phối Beta và F
 
 <p align="center"><kbd><img src="assets/dyz8qi2o4hc.png" width="80%"></kbd></p>
 
@@ -2121,7 +2117,7 @@ distribution
 
 <a id="node-sy5tj8j"></a>
 
-- **Phân phối Cauchy**
+###### Phân phối Cauchy
 
 <p align="center"><kbd><img src="assets/5e4fz8846gw.png" width="80%"></kbd></p>
 
@@ -2208,7 +2204,7 @@ distribution
 
 <a id="node-0d2kmfl"></a>
 
-- **Phân phối Cauchy: Median θ**
+###### Phân phối Cauchy: Median θ
 
 <p align="center"><kbd><img src="assets/sbttuwa8fu.png" width="80%"></kbd></p>
 
@@ -2320,7 +2316,7 @@ distribution
 
 <a id="node-07niffa"></a>
 
-- **Đạo hàm PDF Log-normal**
+###### Đạo hàm PDF Log-normal
 
 <p align="center"><kbd><img src="assets/1fe519hp02a.png" width="80%"></kbd></p>
 
