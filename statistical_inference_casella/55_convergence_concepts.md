@@ -5,8 +5,6 @@
 ---
 <a id="node-tqtc86o"></a>
 
-## 5.5 Convergence Concepts
-
 <br>
 
 <a id="node-0pl1tf2"></a>
@@ -185,7 +183,7 @@
 > Đơn giản là vì xác suất thì chỉ trong  range 0,1, mà cái P này ≥ 1 cái tiến tới 1
 > thì P chắc chắn cũng phải → 1, chứ ko thể tiến tới số nào nhỏ hơn 1 được,
 
-**🔗 See also:** [Bất đẳng thức Markov và chứng minh](./36_inequalities.md#node-u9zgfoi) · [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu)
+**🔗 See also:** [Bất đẳng thức Markov và chứng minh](./36_inequalities.md#node-u9zgfoi) · [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Model Evidence and Marginal Likelihood *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/34_bayesian_model_comparison.md#node-dmy6nc7) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s)
 
 <br>
 
@@ -210,7 +208,7 @@
 
 <a id="node-0qd6k83"></a>
 
-- **Tính nhất quán của phương sai mẫu**
+###### Tính nhất quán của phương sai mẫu
 
 <p align="center"><kbd><img src="assets/ptyobcgfbq.png" width="80%"></kbd></p>
 
@@ -274,7 +272,7 @@
 
 <a id="node-4nopzwp"></a>
 
-- **Định lý ánh xạ liên tục**
+###### Định lý ánh xạ liên tục
 
 <p align="center"><kbd><img src="assets/byu9xbbz6z4.png" width="80%"></kbd></p>
 
@@ -290,7 +288,7 @@
 
 <a id="node-5z4hn2f"></a>
 
-- **Tính nhất quán và chệch S**
+###### Tính nhất quán và chệch S
 
 <p align="center"><kbd><img src="assets/3usynydltj6.png" width="80%"></kbd></p>
 
@@ -305,7 +303,7 @@
 
 <a id="node-jayixv4"></a>
 
-- **Hội tụ hầu chắc**
+###### Hội tụ hầu chắc
 
 <p align="center"><kbd><img src="assets/yncy5io3qd8.png" width="80%"></kbd></p>
 
@@ -342,7 +340,7 @@
 
 <a id="node-1z9xvgn"></a>
 
-- **Hội tụ hầu chắc**
+###### Hội tụ hầu chắc
 
 <p align="center"><kbd><img src="assets/ugsc0xjm9y9.png" width="80%"></kbd></p>
 
@@ -389,7 +387,7 @@
 
 <a id="node-58ihfld"></a>
 
-- **Hội tụ xác suất không hầu chắc**
+###### Hội tụ xác suất không hầu chắc
 
 <p align="center"><kbd><img src="assets/ty7yu7ada2.png" width="80%"></kbd></p>
 
@@ -472,7 +470,7 @@
 
 <a id="node-mmaekd6"></a>
 
-- **Hội tụ hầu chắc chắn**
+###### Hội tụ hầu chắc chắn
 
 <p align="center"><kbd><img src="assets/f1gfgapqoye.png" width="80%"></kbd></p>
 
@@ -551,7 +549,7 @@
 
 <a id="node-vfj18l8"></a>
 
-- **Định luật số lớn mạnh**
+###### Định luật số lớn mạnh
 
 <p align="center"><kbd><img src="assets/osiogtbn65r.png" width="80%"></kbd></p>
 
@@ -579,7 +577,7 @@
 
 <a id="node-0yeml4r"></a>
 
-- **Luật số lớn mạnh**
+###### Luật số lớn mạnh
 
 <p align="center"><kbd><img src="assets/eocepafk34.png" width="80%"></kbd></p>
 
@@ -598,13 +596,13 @@
 >
 > tức Xnbar converge almost surely tới μ
 
-**🔗 See also:** [Phương pháp mô phỏng WLLN](./56_generating_random_sample.md#node-jeizj20)
+**🔗 See also:** [Phương pháp mô phỏng WLLN](./56_generating_random_sample.md#node-jeizj20) · [Model Evidence and Marginal Likelihood *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/34_bayesian_model_comparison.md#node-dmy6nc7)
 
 <br>
 
 <a id="node-ok89lxf"></a>
 
-- **Hội tụ theo phân phối**
+###### Hội tụ theo phân phối
 
 <p align="center"><kbd><img src="assets/fdl1gmr2gvj.png" width="80%"></kbd></p>
 
@@ -621,7 +619,7 @@
 
 <a id="node-4c1bzlu"></a>
 
-- **X(n) hội tụ xác suất**
+###### X(n) hội tụ xác suất
 
 <p align="center"><kbd><img src="assets/x4fey7f28o.png" width="80%"></kbd></p>
 
@@ -698,7 +696,7 @@
 
 <a id="node-dhadrsn"></a>
 
-- **Hội tụ xác suất và phân phối**
+###### Hội tụ xác suất và phân phối
 
 <p align="center"><kbd><img src="assets/gb33aihcii4.png" width="80%"></kbd></p>
 
@@ -761,7 +759,7 @@
 
 <a id="node-f944h0i"></a>
 
-- **Hội tụ xác suất sang phân phối**
+###### Hội tụ xác suất sang phân phối
 
 <p align="center"><kbd><img src="assets/gr6p5brqclg.png" width="80%"></kbd></p>
 
@@ -784,7 +782,7 @@
 
 <a id="node-wqcasc6"></a>
 
-- **Hội tụ xác suất và phân phối**
+###### Hội tụ xác suất và phân phối
 
 <p align="center"><kbd><img src="assets/8o53owg5luu.png" width="80%"></kbd></p>
 
@@ -813,7 +811,7 @@
 
 <a id="node-32vkewg"></a>
 
-- **CLT - Định lý giới hạn trung tâm**
+###### CLT - Định lý giới hạn trung tâm
 
 <p align="center"><kbd><img src="assets/xjdz8ybz0zl.png" width="80%"></kbd></p>
 
@@ -844,13 +842,13 @@
 >
 > **√n (Xnbar - μ) / σ hội tụ phân phối về standard normal random variable**
 
-**🔗 See also:** [Phương pháp Delta 1/Xbar](#node-1zfrnml) · [Stronger Central Limit Theorem](#node-yngnkwh) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr)
+**🔗 See also:** [Phương pháp Delta 1/Xbar](#node-1zfrnml) · [Stronger Central Limit Theorem](#node-yngnkwh) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s)
 
 <br>
 
 <a id="node-efueime"></a>
 
-- **Định lý Giới hạn Trung tâm**
+###### Định lý Giới hạn Trung tâm
 
 <p align="center"><kbd><img src="assets/bowsrimnov.png" width="80%"></kbd></p>
 
@@ -875,7 +873,7 @@
 
 <a id="node-yzn3dv1"></a>
 
-- **Proof of Theorem 5.5.14**
+###### Proof of Theorem 5.5.14
 
 <p align="center"><kbd><img src="assets/a6mzbf1ze0d.png" width="80%"></kbd></p>
 
@@ -1028,7 +1026,7 @@
 
 <a id="node-o94eaek"></a>
 
-- **Khai triển Taylor MGF Moment**
+###### Khai triển Taylor MGF Moment
 
 <p align="center"><kbd><img src="assets/ysqpacdl0mk.png" width="80%"></kbd></p>
 
@@ -1065,7 +1063,7 @@
 
 <a id="node-pv5v3rp"></a>
 
-- **Định lý Taylor**
+###### Định lý Taylor
 
 <p align="center"><kbd><img src="assets/mllgwtonmep.png" width="80%"></kbd></p>
 
@@ -1080,7 +1078,7 @@
 
 <a id="node-yngnkwh"></a>
 
-- **Stronger Central Limit Theorem**
+###### Stronger Central Limit Theorem
 
 <p align="center"><kbd><img src="assets/6ss9jv782oi.png" width="80%"></kbd></p>
 
@@ -1107,7 +1105,7 @@
 
 <a id="node-z9v0fvw"></a>
 
-- **Xấp xỉ Chuẩn Nhị thức Âm**
+###### Xấp xỉ Chuẩn Nhị thức Âm
 
 <p align="center"><kbd><img src="assets/1axhgdorv9c.png" width="80%"></kbd></p>
 
@@ -1214,7 +1212,7 @@
 
 <a id="node-uwbmbt7"></a>
 
-- **Định lý Slutsky**
+###### Định lý Slutsky
 
 <p align="center"><kbd><img src="assets/vwxxek3j5.png" width="80%"></kbd></p>
 
@@ -1237,13 +1235,13 @@
 >
 > Gs cũng không chứng minh theorem này
 
-**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr)
+**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s)
 
 <br>
 
 <a id="node-q6etf0o"></a>
 
-- **Ước lượng Odds và Delta Method**
+###### Ước lượng Odds và Delta Method
 
 <p align="center"><kbd><img src="assets/f6l9bp32e3k.png" width="80%"></kbd></p>
 
@@ -1294,7 +1292,7 @@
 
 <a id="node-kd4hd37"></a>
 
-- **Khai triển Taylor**
+###### Khai triển Taylor
 
 <p align="center"><kbd><img src="assets/xyrceis8z9.png" width="80%"></kbd></p>
 
@@ -1471,7 +1469,7 @@
 
 <a id="node-o8nor00"></a>
 
-- **Xấp xỉ kỳ vọng Taylor**
+###### Xấp xỉ kỳ vọng Taylor
 
 <p align="center"><kbd><img src="assets/3n0807mluum.png" width="80%"></kbd></p>
 
@@ -1596,7 +1594,7 @@
 
 <a id="node-pkuyin2"></a>
 
-- **Công thức phương sai hàm**
+###### Công thức phương sai hàm
 
 <p align="center"><kbd><img src="assets/aux4mv76ou6.png" width="80%"></kbd></p>
 
@@ -1688,7 +1686,7 @@
 
 <a id="node-44z7xj9"></a>
 
-- **Phương sai Tỷ lệ Odd**
+###### Phương sai Tỷ lệ Odd
 
 <p align="center"><kbd><img src="assets/xlqxdmqg4cc.png" width="80%"></kbd></p>
 
@@ -1818,7 +1816,7 @@
 
 <a id="node-mpw7a57"></a>
 
-- **Xấp xỉ kì vọng phương sai**
+###### Xấp xỉ kì vọng phương sai
 
 <p align="center"><kbd><img src="assets/ny47vlh7sx.png" width="80%"></kbd></p>
 
@@ -2009,7 +2007,7 @@
 
 <a id="node-lo99k23"></a>
 
-- **Phương pháp Delta**
+###### Phương pháp Delta
 
 <p align="center"><kbd><img src="assets/chc7savsk3n.png" width="80%"></kbd></p>
 
@@ -2138,7 +2136,7 @@
 
 <a id="node-1zfrnml"></a>
 
-- **Phương pháp Delta 1/Xbar**
+###### Phương pháp Delta 1/Xbar
 
 <p align="center"><kbd><img src="assets/p8rtkb1w0gr.png" width="80%"></kbd></p>
 
@@ -2223,7 +2221,7 @@
 
 <a id="node-o60d9cf"></a>
 
-- **Ước lượng Tham số Slutsky**
+###### Ước lượng Tham số Slutsky
 
 <p align="center"><kbd><img src="assets/5tusqz5k2u.png" width="80%"></kbd></p>
 
@@ -2384,7 +2382,7 @@
 
 <a id="node-01ynaew"></a>
 
-- **Chia ước lượng phương sai**
+###### Chia ước lượng phương sai
 
 <p align="center"><kbd><img src="assets/qcsu3z36u9.png" width="80%"></kbd></p>
 
@@ -2397,7 +2395,7 @@
 
 <a id="node-0zbphvb"></a>
 
-- **Delta method bậc hai**
+###### Delta method bậc hai
 
 <p align="center"><kbd><img src="assets/epysybvkvlb.png" width="80%"></kbd></p>
 
@@ -2559,7 +2557,7 @@
 
 <a id="node-ratw2n8"></a>
 
-- **Mở rộng Delta đa biến**
+###### Mở rộng Delta đa biến
 
 <p align="center"><kbd><img src="assets/qxo0oa15jhk.png" width="80%"></kbd></p>
 
@@ -2574,7 +2572,7 @@
 
 <a id="node-475o694"></a>
 
-- **Đạo hàm riêng tỉ lệ**
+###### Đạo hàm riêng tỉ lệ
 
 <p align="center"><kbd><img src="assets/5bnrrngl5lh.png" width="80%"></kbd></p>
 
@@ -2599,7 +2597,7 @@
 
 <a id="node-oj905vr"></a>
 
-- **Xấp xỉ Mean Variance Tỉ số**
+###### Xấp xỉ Mean Variance Tỉ số
 
 <p align="center"><kbd><img src="assets/3nhmfrwrx83.png" width="80%"></kbd></p>
 
@@ -2658,7 +2656,7 @@
 
 <a id="node-w9x29p6"></a>
 
-- **CLT ước lượng tỉ số**
+###### CLT ước lượng tỉ số
 
 <p align="center"><kbd><img src="assets/kuxpzbl0ew.png" width="80%"></kbd></p>
 
@@ -2707,7 +2705,7 @@
 
 <a id="node-7o5yh86"></a>
 
-- **Phương pháp Delta Đa biến**
+###### Phương pháp Delta Đa biến
 
 <p align="center"><kbd><img src="assets/pc9wt9nzdra.png" width="80%"></kbd></p>
 
