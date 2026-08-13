@@ -5,8 +5,6 @@
 ---
 <a id="node-7lw1fvu"></a>
 
-## 4.1 Joint & Marginal Distribution
-
 <br>
 
 <a id="node-ilwp7i2"></a>
@@ -213,7 +211,7 @@
 
 <a id="node-gi1wsle"></a>
 
-- **Kỳ vọng biến ngẫu nhiên hai chiều**
+###### Kỳ vọng biến ngẫu nhiên hai chiều
 
 <p align="center"><kbd><img src="assets/jch9ktz6vv.png" width="80%"></kbd></p>
 
@@ -306,7 +304,7 @@
 
 <a id="node-k9qwll6"></a>
 
-- **Chứng minh PMF biên**
+###### Chứng minh PMF biên
 
 <p align="center"><kbd><img src="assets/6cqwqqgzmbw.png" width="80%"></kbd></p>
 
@@ -403,7 +401,7 @@
 
 <a id="node-2cndbfd"></a>
 
-- **Tính toán pmf biên Y**
+###### Tính toán pmf biên Y
 
 <p align="center"><kbd><img src="assets/av5u3r00fyd.png" width="80%"></kbd></p>
 
@@ -424,7 +422,7 @@
 
 <a id="node-zjhts02"></a>
 
-- **Tính không đủ của phân phối biên**
+###### Tính không đủ của phân phối biên
 
 <p align="center"><kbd><img src="assets/bfgotkc43.png" width="80%"></kbd></p>
 
@@ -446,7 +444,7 @@
 
 <a id="node-jprf5jo"></a>
 
-- **Giải thích PDF biến liên tục**
+###### Giải thích PDF biến liên tục
 
 <p align="center"><kbd><img src="assets/6r0rll1nabq.png" width="80%"></kbd></p>
 
@@ -651,7 +649,7 @@
 
 <a id="node-fhuau7v"></a>
 
-- **Kỳ vọng và phân phối đồng thời**
+###### Kỳ vọng và phân phối đồng thời
 
 <p align="center"><kbd><img src="assets/b9x4uje9vkn.png" width="80%"></kbd></p>
 
@@ -736,7 +734,7 @@
 
 <a id="node-0x265ae"></a>
 
-- **Tính xác suất PDF đồng thời**
+###### Tính xác suất PDF đồng thời
 
 <p align="center"><kbd><img src="assets/wu8zmmy7md8.png" width="80%"></kbd></p>
 
