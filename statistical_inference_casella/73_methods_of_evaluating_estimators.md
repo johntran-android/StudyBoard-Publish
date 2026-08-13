@@ -1,13 +1,9 @@
-# 7.3 Methods Of
-evaluating Estimators
+# 7.3 Methods Of Evaluating Estimators
 
 📊 **Progress:** `63` Notes | `74` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-l0tjfjp"></a>
-
-## 7.3 Methods Of
-evaluating Estimators
 
 <br>
 
@@ -203,7 +199,7 @@ evaluating Estimators
 
 <a id="node-dgdrvpi"></a>
 
-- **Tính không chệch Xbar S^2**
+###### Tính không chệch Xbar S^2
 
 <p align="center"><kbd><img src="assets/yhaa1q92nw.png" width="80%"></kbd></p>
 
@@ -289,7 +285,7 @@ evaluating Estimators
 
 <a id="node-iyvngjt"></a>
 
-- **Ước lượng chệch MSE**
+###### Ước lượng chệch MSE
 
 <p align="center"><kbd><img src="assets/0fimnrp1ku1d.png" width="80%"></kbd></p>
 
@@ -638,7 +634,7 @@ evaluating Estimators
 
 <a id="node-3ym8o9h"></a>
 
-- **Hạn chế của MSE**
+###### Hạn chế của MSE
 
 <p align="center"><kbd><img src="assets/s0u6dt3cmw.png" width="80%"></kbd></p>
 
@@ -681,7 +677,7 @@ evaluating Estimators
 
 <a id="node-evr547s"></a>
 
-- **MSE của p^_mle**
+###### MSE của p^_mle
 
 <p align="center"><kbd><img src="assets/0yt1eef423bc.png" width="80%"></kbd></p>
 
@@ -853,7 +849,7 @@ evaluating Estimators
 
 <a id="node-91iu9k3"></a>
 
-- **MSE của ước lượng Bayes**
+###### MSE của ước lượng Bayes
 
 <p align="center"><kbd><img src="assets/qcu2dg2wmdj.png" width="80%"></kbd></p>
 
@@ -984,7 +980,7 @@ evaluating Estimators
 
 <a id="node-7ow3v45"></a>
 
-- **MSE Bayes hằng số**
+###### MSE Bayes hằng số
 
 <p align="center"><kbd><img src="assets/oavevdteqcc.png" width="80%"></kbd></p>
 
@@ -1062,7 +1058,7 @@ evaluating Estimators
 
 <a id="node-cm8s96a"></a>
 
-- **Chọn ước lượng Bayes MLE**
+###### Chọn ước lượng Bayes MLE
 
 <p align="center"><kbd><img src="assets/cp9ulns2sqt.png" width="80%"></kbd></p>
 
@@ -1099,7 +1095,7 @@ evaluating Estimators
 
 <a id="node-hp56gbv"></a>
 
-- **Nguyên lý ước lượng tương biến**
+###### Nguyên lý ước lượng tương biến
 
 <p align="center"><kbd><img src="assets/ab1h3ti793m.png" width="80%"></kbd></p>
 
@@ -1246,7 +1242,7 @@ evaluating Estimators
 
 <a id="node-6tq0d74"></a>
 
-- **MSE ước lượng bất biến**
+###### MSE ước lượng bất biến
 
 <p align="center"><kbd><img src="assets/pmkrg4ahb6d.png" width="80%"></kbd></p>
 
@@ -1623,7 +1619,7 @@ evaluating Estimators
 
 <a id="node-z12msux"></a>
 
-- **Ước lượng viên không chệch tốt nhất**
+###### Ước lượng viên không chệch tốt nhất
 
 <p align="center"><kbd><img src="assets/w0fzsnz357t.png" width="80%"></kbd></p>
 
@@ -1663,7 +1659,7 @@ evaluating Estimators
 
 <a id="node-8ya7lh1"></a>
 
-- **Ước lượng không chệch tốt nhất**
+###### Ước lượng không chệch tốt nhất
 
 <p align="center"><kbd><img src="assets/10qet338lg5r.png" width="80%"></kbd></p>
 
@@ -1714,7 +1710,7 @@ evaluating Estimators
 
 <a id="node-oexdyyk"></a>
 
-- **Ước lượng không chệch phương sai nhỏ nhất**
+###### Ước lượng không chệch phương sai nhỏ nhất
 
 <p align="center"><kbd><img src="assets/xbjqa7f428.png" width="80%"></kbd></p>
 
@@ -1738,7 +1734,7 @@ evaluating Estimators
 
 <a id="node-0ecqsqo"></a>
 
-- **Ước lượng không chệch Poisson**
+###### Ước lượng không chệch Poisson
 
 <p align="center"><kbd><img src="assets/qsarlh6u28f.png" width="80%"></kbd></p>
 
@@ -1788,7 +1784,7 @@ evaluating Estimators
 
 <a id="node-m43gtj6"></a>
 
-- **Ước lượng không chệch tối ưu**
+###### Ước lượng không chệch tối ưu
 
 <p align="center"><kbd><img src="assets/jj7irlu8v3h.png" width="80%"></kbd></p>
 
@@ -1846,7 +1842,7 @@ evaluating Estimators
 
 <a id="node-1qs416c"></a>
 
-- **Bất đẳng thức Cramer-Rao**
+###### Bất đẳng thức Cramer-Rao
 
 <p align="center"><kbd><img src="assets/8o8pvitfgzi.png" width="80%"></kbd></p>
 
@@ -1871,7 +1867,7 @@ evaluating Estimators
 
 <a id="node-puo4qgq"></a>
 
-- **Bất đẳng thức Cauchy-Schwarz**
+###### Bất đẳng thức Cauchy-Schwarz
 
 <p align="center"><kbd><img src="assets/p2gue37clnp.png" width="80%"></kbd></p>
 
@@ -1998,7 +1994,7 @@ evaluating Estimators
 
 <a id="node-bevjtm7"></a>
 
-- **Chứng minh Cramer-Rao từ Cauchy-Schwarz**
+###### Chứng minh Cramer-Rao từ Cauchy-Schwarz
 
 <p align="center"><kbd><img src="assets/30zehffwxrx.png" width="80%"></kbd></p>
 
@@ -2244,7 +2240,7 @@ evaluating Estimators
 
 <a id="node-6hjlvs1"></a>
 
-- **Bất đẳng thức Cramer-Rao iid**
+###### Bất đẳng thức Cramer-Rao iid
 
 <p align="center"><kbd><img src="assets/5wrp50izsy8.png" width="80%"></kbd></p>
 
@@ -2354,7 +2350,7 @@ evaluating Estimators
 
 <a id="node-ihoar4m"></a>
 
-- **Giới hạn dưới Cramer-Rao**
+###### Giới hạn dưới Cramer-Rao
 
 <p align="center"><kbd><img src="assets/1cun9hlm3bo.png" width="80%"></kbd></p>
 
@@ -2383,7 +2379,7 @@ evaluating Estimators
 
 <a id="node-sttybm4"></a>
 
-- **Bổ đề Tính toán Hàm mũ**
+###### Bổ đề Tính toán Hàm mũ
 
 <p align="center"><kbd><img src="assets/l9etumf177j.png" width="80%"></kbd></p>
 
@@ -2399,13 +2395,13 @@ evaluating Estimators
 >
 > E_θ[(∂/∂θ log f(X|θ))^2] = - E_θ[∂^2/∂θ^2 log f(X|θ)]
 
-**🔗 See also:** [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg)
+**🔗 See also:** [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu)
 
 <br>
 
 <a id="node-ter8ib4"></a>
 
-- **Cramer-Rao ước lượng Poisson**
+###### Cramer-Rao ước lượng Poisson
 
 <p align="center"><kbd><img src="assets/7x0n396z6ed.png" width="80%"></kbd></p>
 
@@ -2552,7 +2548,7 @@ evaluating Estimators
 
 <a id="node-i0n08jh"></a>
 
-- **Cramer-Rao: Vi phạm giả định**
+###### Cramer-Rao: Vi phạm giả định
 
 <p align="center"><kbd><img src="assets/9vh800ga5u4.png" width="80%"></kbd></p>
 
@@ -2729,7 +2725,7 @@ evaluating Estimators
 
 <a id="node-6bzkk7p"></a>
 
-- **Giới hạn Định lý Cramer-Rao**
+###### Giới hạn Định lý Cramer-Rao
 
 <p align="center"><kbd><img src="assets/kpkbvszrwjh.png" width="80%"></kbd></p>
 
@@ -2756,7 +2752,7 @@ evaluating Estimators
 
 <a id="node-xr3p7cn"></a>
 
-- **Hạn chế Cramer-Rao Bound**
+###### Hạn chế Cramer-Rao Bound
 
 <p align="center"><kbd><img src="assets/6vfe2ws3wt.png" width="80%"></kbd></p>
 
@@ -2791,7 +2787,7 @@ evaluating Estimators
 
 <a id="node-87ia248"></a>
 
-- **Giới hạn Cramer-Rao phương sai chuẩn**
+###### Giới hạn Cramer-Rao phương sai chuẩn
 
 <p align="center"><kbd><img src="assets/mt93nlzh2kc.png" width="80%"></kbd></p>
 
@@ -2916,7 +2912,7 @@ evaluating Estimators
 
 <a id="node-7lcj64c"></a>
 
-- **Dấu bằng Cramer-Rao**
+###### Dấu bằng Cramer-Rao
 
 <p align="center"><kbd><img src="assets/e7zguu8x5al.png" width="80%"></kbd></p>
 
@@ -2957,7 +2953,7 @@ evaluating Estimators
 
 <a id="node-6cu0ju6"></a>
 
-- **Ước lượng σ^2 tốt nhất**
+###### Ước lượng σ^2 tốt nhất
 
 <p align="center"><kbd><img src="assets/b6w5w2soocv.png" width="80%"></kbd></p>
 
@@ -3010,7 +3006,7 @@ evaluating Estimators
 
 <a id="node-msu36fl"></a>
 
-- **Tiêu chí Sufficiency**
+###### Tiêu chí Sufficiency
 
 <p align="center"><kbd><img src="assets/l3fh01yl2x.png" width="80%"></kbd></p>
 
@@ -3045,7 +3041,7 @@ evaluating Estimators
 
 <a id="node-yc3l550"></a>
 
-- **Đủ và không chệch**
+###### Đủ và không chệch
 
 <p align="center"><kbd><img src="assets/cf8agvdlhp.png" width="80%"></kbd></p>
 
@@ -3221,7 +3217,7 @@ evaluating Estimators
 
 <a id="node-aixo4xg"></a>
 
-- **Định lý Rao-Blackwell**
+###### Định lý Rao-Blackwell
 
 <p align="center"><kbd><img src="assets/yukkq8ruam.png" width="80%"></kbd></p>
 
@@ -3322,7 +3318,7 @@ evaluating Estimators
 
 <a id="node-batro2q"></a>
 
-- **Định lý Rao-Blackwell**
+###### Định lý Rao-Blackwell
 
 <p align="center"><kbd><img src="assets/3g0ud20nhdg.png" width="80%"></kbd></p>
 
@@ -3388,7 +3384,7 @@ evaluating Estimators
 
 <a id="node-cst7ebf"></a>
 
-- **Rao-Blackwell và thống kê đủ**
+###### Rao-Blackwell và thống kê đủ
 
 <p align="center"><kbd><img src="assets/bx9ujiemy4.png" width="80%"></kbd></p>
 
@@ -3430,7 +3426,7 @@ evaluating Estimators
 
 <a id="node-bmys9rc"></a>
 
-- **Điều kiện hóa thống kê không đủ**
+###### Điều kiện hóa thống kê không đủ
 
 <p align="center"><kbd><img src="assets/76b6b7dbhcr.png" width="80%"></kbd></p>
 
@@ -3571,7 +3567,7 @@ evaluating Estimators
 
 <a id="node-093ai45"></a>
 
-- **Ước lượng không chệch duy nhất**
+###### Ước lượng không chệch duy nhất
 
 <p align="center"><kbd><img src="assets/8bjeffmf00c.png" width="80%"></kbd></p>
 
@@ -3648,7 +3644,7 @@ evaluating Estimators
 
 <a id="node-01on741"></a>
 
-- **Ước lượng không chệch tốt nhất duy nhất**
+###### Ước lượng không chệch tốt nhất duy nhất
 
 <p align="center"><kbd><img src="assets/2bba248ke8s.png" width="80%"></kbd></p>
 
@@ -3993,7 +3989,7 @@ evaluating Estimators
 
 <a id="node-3xk2w90"></a>
 
-- **Đánh giá Ước lượng Không Chệch Tốt nhất**
+###### Đánh giá Ước lượng Không Chệch Tốt nhất
 
 <p align="center"><kbd><img src="assets/2cxavmbpzh5.png" width="80%"></kbd></p>
 
@@ -4104,7 +4100,7 @@ evaluating Estimators
 
 <a id="node-xsdsv1d"></a>
 
-- **Ước lượng không chệch tốt nhất**
+###### Ước lượng không chệch tốt nhất
 
 <p align="center"><kbd><img src="assets/ssrhebsij3.png" width="80%"></kbd></p>
 
@@ -4184,7 +4180,7 @@ evaluating Estimators
 
 <a id="node-c2oqhq4"></a>
 
-- **Đặc điểm ước lượng không chệch tốt nhất**
+###### Đặc điểm ước lượng không chệch tốt nhất
 
 <p align="center"><kbd><img src="assets/0jwj3arvmof9.png" width="80%"></kbd></p>
 
@@ -4243,7 +4239,7 @@ evaluating Estimators
 
 <a id="node-dvlz38u"></a>
 
-- **Ước lượng không chệch của 0**
+###### Ước lượng không chệch của 0
 
 <p align="center"><kbd><img src="assets/o6e0am8p83.png" width="80%"></kbd></p>
 
@@ -4326,7 +4322,7 @@ evaluating Estimators
 
 <a id="node-8bbly0i"></a>
 
-- **Tính đầy đủ và ước lượng**
+###### Tính đầy đủ và ước lượng
 
 <p align="center"><kbd><img src="assets/tu9lv2mtvs.png" width="80%"></kbd></p>
 
@@ -4384,7 +4380,7 @@ evaluating Estimators
 
 <a id="node-7mgmpeq"></a>
 
-- **Thống kê đủ & Ước lượng tốt nhất**
+###### Thống kê đủ & Ước lượng tốt nhất
 
 <p align="center"><kbd><img src="assets/s52phfdwckl.png" width="80%"></kbd></p>
 
@@ -4500,7 +4496,7 @@ evaluating Estimators
 
 <a id="node-0igldl9"></a>
 
-- **Ước lượng không chệch tốt nhất**
+###### Ước lượng không chệch tốt nhất
 
 <p align="center"><kbd><img src="assets/ug5po53fen.png" width="80%"></kbd></p>
 
@@ -4635,7 +4631,7 @@ evaluating Estimators
 
 <a id="node-kj1uy1d"></a>
 
-- **Tìm ước lượng không chệch tốt nhất**
+###### Tìm ước lượng không chệch tốt nhất
 
 <p align="center"><kbd><img src="assets/sctdd7ctgm.png" width="80%"></kbd></p>
 
@@ -4665,7 +4661,7 @@ evaluating Estimators
 
 <a id="node-brmf2r9"></a>
 
-- **Ước lượng không chệch tốt nhất Binomial**
+###### Ước lượng không chệch tốt nhất Binomial
 
 <p align="center"><kbd><img src="assets/jsr25w49a9.png" width="80%"></kbd></p>
 
@@ -4820,7 +4816,7 @@ evaluating Estimators
 
 <a id="node-ap81sh3"></a>
 
-- **Thống kê đủ loại bỏ θ**
+###### Thống kê đủ loại bỏ θ
 
 <p align="center"><kbd><img src="assets/vum5t5furzh.png" width="80%"></kbd></p>
 
@@ -4918,7 +4914,7 @@ evaluating Estimators
 
 <a id="node-k2onxtg"></a>
 
-- **Tối ưu hàm mất mát**
+###### Tối ưu hàm mất mát
 
 <p align="center"><kbd><img src="assets/h98hpdu2hkw.png" width="80%"></kbd></p>
 
@@ -4990,7 +4986,7 @@ evaluating Estimators
 
 <a id="node-qschovu"></a>
 
-- **Hàm rủi ro ước lượng**
+###### Hàm rủi ro ước lượng
 
 <p align="center"><kbd><img src="assets/3rinkwrpxuh.png" width="80%"></kbd></p>
 
@@ -5037,7 +5033,7 @@ evaluating Estimators
 
 <a id="node-m0ppuk5"></a>
 
-- **Risk function: MSE**
+###### Risk function: MSE
 
 <p align="center"><kbd><img src="assets/mjw61dp2uyi.png" width="80%"></kbd></p>
 
@@ -5075,7 +5071,7 @@ evaluating Estimators
 
 <a id="node-behoipa"></a>
 
-- **Ước lượng Tốt: Phương sai, Độ chệch**
+###### Ước lượng Tốt: Phương sai, Độ chệch
 
 <p align="center"><kbd><img src="assets/dxxk1w7sehw.png" width="80%"></kbd></p>
 
@@ -5117,7 +5113,7 @@ evaluating Estimators
 
 <a id="node-0afaavz"></a>
 
-- **So sánh Risk Function Estimator**
+###### So sánh Risk Function Estimator
 
 <p align="center"><kbd><img src="assets/nsfhp73i4c.png" width="80%"></kbd></p>
 
@@ -5149,7 +5145,7 @@ evaluating Estimators
 
 <a id="node-49hnht1"></a>
 
-- **Rủi ro phương sai chuẩn**
+###### Rủi ro phương sai chuẩn
 
 <p align="center"><kbd><img src="assets/7snpx7aet1x.png" width="80%"></kbd></p>
 
@@ -5213,7 +5209,7 @@ evaluating Estimators
 
 <a id="node-wfnyjqz"></a>
 
-- **Ước lượng phương sai tối ưu**
+###### Ước lượng phương sai tối ưu
 
 <p align="center"><kbd><img src="assets/9odl4yoy5a.png" width="80%"></kbd></p>
 
@@ -5302,7 +5298,7 @@ evaluating Estimators
 
 <a id="node-66qvgc7"></a>
 
-- **Ước lượng phương sai: Stein Loss**
+###### Ước lượng phương sai: Stein Loss
 
 <p align="center"><kbd><img src="assets/zxakw87cgkp.png" width="80%"></kbd></p>
 
@@ -5433,7 +5429,7 @@ evaluating Estimators
 
 <a id="node-v9yu5x2"></a>
 
-- **Rủi ro Bayes và Quy tắc Bayes**
+###### Rủi ro Bayes và Quy tắc Bayes
 
 <p align="center"><kbd><img src="assets/tni2dij6o18.png" width="80%"></kbd></p>
 
@@ -5525,7 +5521,7 @@ evaluating Estimators
 
 <a id="node-h9jb5t8"></a>
 
-- **Tìm quy tắc quyết định Bayes**
+###### Tìm quy tắc quyết định Bayes
 
 <p align="center"><kbd><img src="assets/65ar2we9bep.png" width="80%"></kbd></p>
 
@@ -5608,7 +5604,7 @@ evaluating Estimators
 
 <a id="node-xatzdyv"></a>
 
-- **Xây dựng Quy tắc Bayes**
+###### Xây dựng Quy tắc Bayes
 
 <p align="center"><kbd><img src="assets/9gfxwoa902p.png" width="80%"></kbd></p>
 
@@ -5669,7 +5665,7 @@ evaluating Estimators
 
 <a id="node-ingp49m"></a>
 
-- **Ước lượng Bayes và Hàm mất mát**
+###### Ước lượng Bayes và Hàm mất mát
 
 <p align="center"><kbd><img src="assets/76kxaz34rea.png" width="80%"></kbd></p>
 
@@ -5815,7 +5811,7 @@ evaluating Estimators
 
 <a id="node-vscj9eh"></a>
 
-- **Ước lượng Bayes chuẩn**
+###### Ước lượng Bayes chuẩn
 
 <p align="center"><kbd><img src="assets/1r40a3x8e7t.png" width="80%"></kbd></p>
 
@@ -6130,7 +6126,7 @@ evaluating Estimators
 
 <a id="node-w61d148"></a>
 
-- **Ước lượng Bayes Loss Tuyệt đối**
+###### Ước lượng Bayes Loss Tuyệt đối
 
 <p align="center"><kbd><img src="assets/qmv9ux1j6w9.png" width="80%"></kbd></p>
 
