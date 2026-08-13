@@ -5,8 +5,6 @@
 ---
 <a id="node-0nolzxg"></a>
 
-## 3.2.0 The Bias-Variance Decomposition
-
 <p align="center"><kbd><img src="assets/y54wc6qlvqb.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -793,7 +791,7 @@
 
 <a id="node-w19nneq"></a>
 
-- **Expected Squared Loss Decomposition**
+###### Expected Squared Loss Decomposition
 
 <p align="center"><kbd><img src="assets/n02rigs4pa8.png" width="80%"></kbd></p>
 
@@ -883,7 +881,7 @@
 
 <a id="node-mqos0pj"></a>
 
-- **Bias-Variance Trade-off Explained**
+###### Bias-Variance Trade-off Explained
 
 <p align="center"><kbd><img src="assets/9tfsgf45t8v.png" width="80%"></kbd></p>
 
@@ -939,7 +937,7 @@
 
 <a id="node-xi208eq"></a>
 
-- **Hình ảnh**
+###### Hình ảnh
 
 <p align="center"><kbd><img src="assets/e9l4mvavm0i.png" width="80%"></kbd></p>
 
@@ -949,7 +947,7 @@
 
 <a id="node-qtn6vrp"></a>
 
-- **Bias-Variance Trade-Off Formulas**
+###### Bias-Variance Trade-Off Formulas
 
 <p align="center"><kbd><img src="assets/plq7gblf0b.png" width="80%"></kbd></p>
 
