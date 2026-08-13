@@ -1,13 +1,9 @@
-# 1.2.2 Calculus
-of Probability
+# 1.2.2 Calculus Of Probability
 
 📊 **Progress:** `5` Notes | `9` Screenshots
 
 ---
 <a id="node-lx2d7y5"></a>
-
-## 1.2.2 Calculus
-of Probability
 
 <br>
 
@@ -300,7 +296,7 @@ of Probability
 
 <a id="node-4jj12y1"></a>
 
-- **Điểm tương đồng Bool-Bonferroni**
+###### Điểm tương đồng Bool-Bonferroni
 
 <p align="center"><kbd><img src="assets/rwad1nyg3yf.png" width="80%"></kbd></p>
 
