@@ -1,13 +1,9 @@
-# 4.6 Multi-variate
-distribution
+# 4.6 Multi-variate Distribution
 
 📊 **Progress:** `22` Notes | `28` Screenshots
 
 ---
 <a id="node-1ndxf47"></a>
-
-## 4.6 Multi-variate
-distribution
 
 <br>
 
@@ -320,7 +316,7 @@ distribution
 
 <a id="node-nr41f74"></a>
 
-- **Hàm mật độ xác suất liên hợp**
+###### Hàm mật độ xác suất liên hợp
 
 <p align="center"><kbd><img src="assets/qch2y9qe2vk.png" width="80%"></kbd></p>
 
@@ -443,7 +439,7 @@ distribution
 
 <a id="node-o4skwck"></a>
 
-- **Phân phối đồng thời và kỳ vọng**
+###### Phân phối đồng thời và kỳ vọng
 
 <p align="center"><kbd><img src="assets/4ile8f7hdja.png" width="80%"></kbd></p>
 
@@ -524,7 +520,7 @@ distribution
 
 <a id="node-6widx3r"></a>
 
-- **Hàm mật độ có điều kiện**
+###### Hàm mật độ có điều kiện
 
 <p align="center"><kbd><img src="assets/8ibflhw5n8o.png" width="80%"></kbd></p>
 
@@ -536,7 +532,7 @@ distribution
 
 <a id="node-ywhue8g"></a>
 
-- **Phân phối đa thức và nhị thức**
+###### Phân phối đa thức và nhị thức
 
 <p align="center"><kbd><img src="assets/nar4usdq2a.png" width="80%"></kbd></p>
 
@@ -565,7 +561,7 @@ distribution
 
 <a id="node-gbjb2zx"></a>
 
-- **Ví dụ phân phối đa thức xí ngầu**
+###### Ví dụ phân phối đa thức xí ngầu
 
 <p align="center"><kbd><img src="assets/wwkspx257v.png" width="80%"></kbd></p>
 
@@ -605,7 +601,7 @@ distribution
 
 <a id="node-4mnv9w1"></a>
 
-- **Định lý Đa thức tổng quát**
+###### Định lý Đa thức tổng quát
 
 <p align="center"><kbd><img src="assets/v7r2fmvn5dp.png" width="80%"></kbd></p>
 
@@ -639,7 +635,7 @@ distribution
 
 <a id="node-12z2ovs"></a>
 
-- **Liên hệ phân phối Đa thức-Nhị thức**
+###### Liên hệ phân phối Đa thức-Nhị thức
 
 <p align="center"><kbd><img src="assets/rbsu210hd0f.png" width="80%"></kbd></p>
 
@@ -676,7 +672,7 @@ distribution
 
 <a id="node-ffhuho6"></a>
 
-- **Phân phối đa thức có điều kiện**
+###### Phân phối đa thức có điều kiện
 
 <p align="center"><kbd><img src="assets/yx5bg1bdyp8.png" width="80%"></kbd></p>
 
@@ -749,7 +745,7 @@ distribution
 
 <a id="node-00f7vz9"></a>
 
-- **Hiệp phương sai âm vector đa thức**
+###### Hiệp phương sai âm vector đa thức
 
 <p align="center"><kbd><img src="assets/kqk5l0sdcmo.png" width="80%"></kbd></p>
 
@@ -766,7 +762,7 @@ distribution
 
 <a id="node-ag4s266"></a>
 
-- **Độc lập vector biến ngẫu nhiên**
+###### Độc lập vector biến ngẫu nhiên
 
 <p align="center"><kbd><img src="assets/wftyh82jst9.png" width="80%"></kbd></p>
 
@@ -810,7 +806,7 @@ distribution
 
 <a id="node-reqi8yp"></a>
 
-- **Sự độc lập tương hỗ và từng cặp**
+###### Sự độc lập tương hỗ và từng cặp
 
 <p align="center"><kbd><img src="assets/30jpakpef8o.png" width="80%"></kbd></p>
 
@@ -842,7 +838,7 @@ distribution
 
 <a id="node-151qbd1"></a>
 
-- **Các định lý độc lập n biến**
+###### Các định lý độc lập n biến
 
 <p align="center"><kbd><img src="assets/um7b73f1mrl.png" width="80%"></kbd></p>
 
@@ -892,7 +888,7 @@ distribution
 
 <a id="node-08ciur5"></a>
 
-- **Tổng biến ngẫu nhiên Gamma**
+###### Tổng biến ngẫu nhiên Gamma
 
 <p align="center"><kbd><img src="assets/ts4hjx522kg.png" width="80%"></kbd></p>
 
@@ -919,7 +915,7 @@ distribution
 
 <a id="node-wv5kgnt"></a>
 
-- **Hàm sinh momen tổ hợp tuyến tính**
+###### Hàm sinh momen tổ hợp tuyến tính
 
 <p align="center"><kbd><img src="assets/u1bv2ivrh9.png" width="80%"></kbd></p>
 
@@ -997,7 +993,7 @@ distribution
 
 <a id="node-uaywczk"></a>
 
-- **Chứng minh tổng biến chuẩn**
+###### Chứng minh tổng biến chuẩn
 
 <p align="center"><kbd><img src="assets/ji2n3zsiegk.png" width="80%"></kbd></p>
 
@@ -1055,7 +1051,7 @@ distribution
 
 <a id="node-hvcrd7p"></a>
 
-- **Khái quát tính độc lập biến ngẫu nhiên**
+###### Khái quát tính độc lập biến ngẫu nhiên
 
 <p align="center"><kbd><img src="assets/5yv1sikrvk4.png" width="80%"></kbd></p>
 
@@ -1099,7 +1095,7 @@ distribution
 
 <a id="node-mokq7p0"></a>
 
-- **Biến đổi hàm mật độ không 1-1**
+###### Biến đổi hàm mật độ không 1-1
 
 <p align="center"><kbd><img src="assets/awrsah50xz4.png" width="80%"></kbd></p>
 
@@ -1174,7 +1170,7 @@ distribution
 
 <a id="node-cdhes1j"></a>
 
-- **Lời nhắc quay lại**
+###### Lời nhắc quay lại
 
 <p align="center"><kbd><img src="assets/4lt0ke5ktul.png" width="80%"></kbd></p>
 
