@@ -1,13 +1,9 @@
-# 3.5 Location And
-scale Families
+# 3.5 Location And Scale Families
 
 📊 **Progress:** `12` Notes | `17` Screenshots
 
 ---
 <a id="node-zqu9nqh"></a>
-
-## 3.5 Location And
-scale Families
 
 <br>
 
@@ -183,7 +179,7 @@ scale Families
 
 <a id="node-pusr70d"></a>
 
-- **Location Family và Sai số đo**
+###### Location Family và Sai số đo
 
 <p align="center"><kbd><img src="assets/3nkhn53o3v.png" width="80%"></kbd></p>
 
@@ -234,7 +230,7 @@ scale Families
 
 <a id="node-mrz72cz"></a>
 
-- **Họ phân phối vị trí mũ**
+###### Họ phân phối vị trí mũ
 
 <p align="center"><kbd><img src="assets/ctzqvtk6fzv.png" width="80%"></kbd></p>
 
@@ -271,7 +267,7 @@ scale Families
 
 <a id="node-5y6bm6a"></a>
 
-- **Họ phân phối Scale**
+###### Họ phân phối Scale
 
 <p align="center"><kbd><img src="assets/cuakerqscfs.png" width="80%"></kbd></p>
 
@@ -300,7 +296,7 @@ scale Families
 
 <a id="node-zmiosz0"></a>
 
-- **Họ phân phối Location-Scale**
+###### Họ phân phối Location-Scale
 
 <p align="center"><kbd><img src="assets/rs4sekizglt.png" width="80%"></kbd></p>
 
@@ -324,7 +320,7 @@ scale Families
 
 <a id="node-cs2rm3i"></a>
 
-- **Biến đổi PDF Location-Scale**
+###### Biến đổi PDF Location-Scale
 
 <p align="center"><kbd><img src="assets/lgadd81lqho.png" width="80%"></kbd></p>
 
@@ -448,7 +444,7 @@ scale Families
 
 <a id="node-1oibkxl"></a>
 
-- **Phân phối chuẩn hóa Z**
+###### Phân phối chuẩn hóa Z
 
 <p align="center"><kbd><img src="assets/muc9krfpw9.png" width="80%"></kbd></p>
 
@@ -474,7 +470,7 @@ scale Families
 
 <a id="node-9cmwr9d"></a>
 
-- **Kỳ vọng, phương sai biến đổi tuyến tính**
+###### Kỳ vọng, phương sai biến đổi tuyến tính
 
 <p align="center"><kbd><img src="assets/loiuov1xs2b.png" width="80%"></kbd></p>
 
@@ -505,7 +501,7 @@ scale Families
 
 <a id="node-t86ulc6"></a>
 
-- **Ý nghĩa tham số Location-Scale**
+###### Ý nghĩa tham số Location-Scale
 
 <p align="center"><kbd><img src="assets/esbzkdzsz2j.png" width="80%"></kbd></p>
 
