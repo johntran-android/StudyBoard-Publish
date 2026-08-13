@@ -1,13 +1,9 @@
-# 7.2 Method Of
-finding Estimators
+# 7.2 Method Of Finding Estimators
 
 📊 **Progress:** `42` Notes | `52` Screenshots
 
 ---
 <a id="node-po2ayci"></a>
-
-## 7.2 Method Of
-finding Estimators
 
 <br>
 
@@ -431,7 +427,7 @@ finding Estimators
 
 <a id="node-fosb15b"></a>
 
-- **Ước lượng Satterthwaite**
+###### Ước lượng Satterthwaite
 
 <p align="center"><kbd><img src="assets/poj72ofq7a.png" width="80%"></kbd></p>
 
@@ -483,7 +479,7 @@ finding Estimators
 
 <a id="node-cm80dbi"></a>
 
-- **Ước lượng bậc tự do Satterthwaite**
+###### Ước lượng bậc tự do Satterthwaite
 
 <p align="center"><kbd><img src="assets/rq0i98erxs.png" width="80%"></kbd></p>
 
@@ -742,7 +738,7 @@ finding Estimators
 
 <a id="node-z0ze1t9"></a>
 
-- **Ước lượng Satterthwaite dương**
+###### Ước lượng Satterthwaite dương
 
 <p align="center"><kbd><img src="assets/gqz1esnokl.png" width="80%"></kbd></p>
 
@@ -753,7 +749,7 @@ finding Estimators
 
 <a id="node-wxp53go"></a>
 
-- **Ước lượng Hợp lý Tối đa**
+###### Ước lượng Hợp lý Tối đa
 
 <p align="center"><kbd><img src="assets/23g8mn1z5sd.png" width="80%"></kbd></p>
 
@@ -815,7 +811,7 @@ finding Estimators
 
 <a id="node-jkdovk5"></a>
 
-- **Maximum Likelihood Estimator**
+###### Maximum Likelihood Estimator
 
 <p align="center"><kbd><img src="assets/x9l8yv01l1i.png" width="80%"></kbd></p>
 
@@ -851,7 +847,7 @@ finding Estimators
 
 <a id="node-nhpym6g"></a>
 
-- **Khái niệm và nhược điểm MLE**
+###### Khái niệm và nhược điểm MLE
 
 <p align="center"><kbd><img src="assets/j8lxxrn5por.png" width="80%"></kbd></p>
 
@@ -896,7 +892,7 @@ finding Estimators
 
 <a id="node-l9ary6g"></a>
 
-- **Điều kiện tìm MLE**
+###### Điều kiện tìm MLE
 
 <p align="center"><kbd><img src="assets/b446ph3eu7k.png" width="80%"></kbd></p>
 
@@ -938,7 +934,7 @@ finding Estimators
 
 <a id="node-qe4w7u6"></a>
 
-- **MLE Phân phối Chuẩn**
+###### MLE Phân phối Chuẩn
 
 <p align="center"><kbd><img src="assets/fb0pkpnqnsl.png" width="80%"></kbd></p>
 
@@ -1307,7 +1303,7 @@ finding Estimators
 
 <a id="node-276or8r"></a>
 
-- **Tìm MLE không đạo hàm**
+###### Tìm MLE không đạo hàm
 
 <p align="center"><kbd><img src="assets/bwa82yu9wdp.png" width="80%"></kbd></p>
 
@@ -1409,7 +1405,7 @@ finding Estimators
 
 <a id="node-x4jgau5"></a>
 
-- **Ước lượng hợp lý cực đại Bernoulli**
+###### Ước lượng hợp lý cực đại Bernoulli
 
 <p align="center"><kbd><img src="assets/7ees8gwzxm.png" width="80%"></kbd></p>
 
@@ -1687,7 +1683,7 @@ finding Estimators
 
 <a id="node-ochksqx"></a>
 
-- **MLE có ràng buộc**
+###### MLE có ràng buộc
 
 <p align="center"><kbd><img src="assets/zwdtl9h804.png" width="80%"></kbd></p>
 
@@ -1833,7 +1829,7 @@ finding Estimators
 
 <a id="node-ejujagz"></a>
 
-- **Binomial MLE K chưa biết**
+###### Binomial MLE K chưa biết
 
 <p align="center"><kbd><img src="assets/5ydrnkgdfxl.png" width="80%"></kbd></p>
 
@@ -2067,7 +2063,7 @@ finding Estimators
 
 <a id="node-6d46egj"></a>
 
-- **Chứng minh tính bất biến MLE**
+###### Chứng minh tính bất biến MLE
 
 <p align="center"><kbd><img src="assets/hqsotp6ta6l.png" width="80%"></kbd></p>
 
@@ -2161,7 +2157,7 @@ finding Estimators
 
 <a id="node-90k73p1"></a>
 
-- **Hàm hợp lý cảm ứng**
+###### Hàm hợp lý cảm ứng
 
 <p align="center"><kbd><img src="assets/fssxyqrh2ln.png" width="80%"></kbd></p>
 
@@ -2246,7 +2242,7 @@ finding Estimators
 
 <a id="node-5fmoqr8"></a>
 
-- **Tính bất biến của MLE**
+###### Tính bất biến của MLE
 
 <p align="center"><kbd><img src="assets/evygwtzim4k.png" width="80%"></kbd></p>
 
@@ -2322,7 +2318,7 @@ finding Estimators
 
 <a id="node-i829lwu"></a>
 
-- **Tính bất biến của MLE đa biến**
+###### Tính bất biến của MLE đa biến
 
 <p align="center"><kbd><img src="assets/kotankbfy29.png" width="80%"></kbd></p>
 
@@ -2360,7 +2356,7 @@ finding Estimators
 
 <a id="node-6nhtwtp"></a>
 
-- **MLEs phân phối chuẩn**
+###### MLEs phân phối chuẩn
 
 <p align="center"><kbd><img src="assets/1sw2z3zod8n.png" width="80%"></kbd></p>
 
@@ -2554,7 +2550,7 @@ finding Estimators
 
 <a id="node-auqb0ls"></a>
 
-- **Điều kiện đủ cực đại**
+###### Điều kiện đủ cực đại
 
 <p align="center"><kbd><img src="assets/jf8hbc691v.png" width="80%"></kbd></p>
 
@@ -2606,7 +2602,7 @@ finding Estimators
 
 <a id="node-19nyc96"></a>
 
-- **Hessian log likelihood chuẩn**
+###### Hessian log likelihood chuẩn
 
 <p align="center"><kbd><img src="assets/vcaerbvdn3b.png" width="80%"></kbd></p>
 
@@ -2628,7 +2624,7 @@ finding Estimators
 
 <a id="node-tvdry6j"></a>
 
-- **Bất ổn định của ước lượng MLE**
+###### Bất ổn định của ước lượng MLE
 
 <p align="center"><kbd><img src="assets/qg4t2e9um9.png" width="80%"></kbd></p>
 
@@ -2671,7 +2667,7 @@ finding Estimators
 
 <a id="node-1zrz6du"></a>
 
-- **Phương pháp Bayesian**
+###### Phương pháp Bayesian
 
 <p align="center"><kbd><img src="assets/a198vc8vpxj.png" width="80%"></kbd></p>
 
@@ -2707,7 +2703,7 @@ finding Estimators
 
 <a id="node-pkhjlso"></a>
 
-- **Phân phối hậu nghiệm**
+###### Phân phối hậu nghiệm
 
 <p align="center"><kbd><img src="assets/82c8dlnno4g.png" width="80%"></kbd></p>
 
@@ -2751,7 +2747,7 @@ finding Estimators
 
 <a id="node-c7vhpqt"></a>
 
-- **Ước lượng Bayes Binomial**
+###### Ước lượng Bayes Binomial
 
 <p align="center"><kbd><img src="assets/v35kvcbv2kb.png" width="80%"></kbd></p>
 
@@ -2924,7 +2920,7 @@ finding Estimators
 
 <a id="node-tofw262"></a>
 
-- **Ước lượng Bayes và Họ liên hợp**
+###### Ước lượng Bayes và Họ liên hợp
 
 <p align="center"><kbd><img src="assets/hz5fhypwuor.png" width="80%"></kbd></p>
 
@@ -2978,7 +2974,7 @@ finding Estimators
 
 <a id="node-ezdw2sh"></a>
 
-- **Gia đình liên hợp**
+###### Gia đình liên hợp
 
 <p align="center"><kbd><img src="assets/3tg6uv8u3mw.png" width="80%"></kbd></p>
 
@@ -3010,7 +3006,7 @@ finding Estimators
 
 <a id="node-5ldrh78"></a>
 
-- **Ước lượng Bayes phân phối chuẩn**
+###### Ước lượng Bayes phân phối chuẩn
 
 <p align="center"><kbd><img src="assets/8jz9ev6s7xn.png" width="80%"></kbd></p>
 
@@ -3299,7 +3295,7 @@ finding Estimators
 
 <a id="node-houeudi"></a>
 
-- **Ước lượng Bayes và trọng số**
+###### Ước lượng Bayes và trọng số
 
 <p align="center"><kbd><img src="assets/osi9ys295tm.png" width="80%"></kbd></p>
 
@@ -3345,7 +3341,7 @@ finding Estimators
 
 <a id="node-1mb63f8"></a>
 
-- **Thuật toán EM**
+###### Thuật toán EM
 
 <p align="center"><kbd><img src="assets/zvfzcpjbwtp.png" width="80%"></kbd></p>
 
@@ -3365,7 +3361,7 @@ finding Estimators
 
 <a id="node-bgfmx4q"></a>
 
-- **Tỷ lệ Poisson đa**
+###### Tỷ lệ Poisson đa
 
 <p align="center"><kbd><img src="assets/4i2il6mqpp5.png" width="80%"></kbd></p>
 
@@ -3401,7 +3397,7 @@ finding Estimators
 
 <a id="node-6yw5xf0"></a>
 
-- **MLE Tham số β, τ**
+###### MLE Tham số β, τ
 
 <p align="center"><kbd><img src="assets/tnnogk7tb3b.png" width="80%"></kbd></p>
 
@@ -3868,7 +3864,7 @@ finding Estimators
 
 <a id="node-qi1xp1x"></a>
 
-- **Hàm likelihood không đầy đủ**
+###### Hàm likelihood không đầy đủ
 
 <p align="center"><kbd><img src="assets/rrhux4ze8dk.png" width="80%"></kbd></p>
 
@@ -3913,7 +3909,7 @@ finding Estimators
 
 <a id="node-5vtypth"></a>
 
-- **Likelihood Dữ liệu Thiếu/Đủ**
+###### Likelihood Dữ liệu Thiếu/Đủ
 
 <p align="center"><kbd><img src="assets/nk4r752n5rd.png" width="80%"></kbd></p>
 
@@ -3965,7 +3961,7 @@ finding Estimators
 
 <a id="node-tkdapiz"></a>
 
-- **Hàm khả dĩ dữ liệu khuyết**
+###### Hàm khả dĩ dữ liệu khuyết
 
 <p align="center"><kbd><img src="assets/bsyk43shu97.png" width="80%"></kbd></p>
 
@@ -4018,7 +4014,7 @@ finding Estimators
 
 <a id="node-2vjmewo"></a>
 
-- **Thuật toán EM**
+###### Thuật toán EM
 
 <p align="center"><kbd><img src="assets/arez7f1qq.png" width="80%"></kbd></p>
 
@@ -4230,7 +4226,7 @@ finding Estimators
 
 <a id="node-5xvjzb0"></a>
 
-- **Tính toán E-step EM**
+###### Tính toán E-step EM
 
 <p align="center"><kbd><img src="assets/tbg3spejwgr.png" width="80%"></kbd></p>
 
@@ -4412,7 +4408,7 @@ finding Estimators
 
 <a id="node-ryq60uz"></a>
 
-- **Tối đa hóa hàm likelihood**
+###### Tối đa hóa hàm likelihood
 
 <p align="center"><kbd><img src="assets/cs8ai68b6s.png" width="80%"></kbd></p>
 
@@ -4613,7 +4609,7 @@ finding Estimators
 
 <a id="node-y9vv1u6"></a>
 
-- **EM: Thay thế X1**
+###### EM: Thay thế X1
 
 <p align="center"><kbd><img src="assets/pvqj30prsr.png" width="80%"></kbd></p>
 
@@ -4862,7 +4858,7 @@ finding Estimators
 
 <a id="node-mkv4q7h"></a>
 
-- **Hội tụ thuật toán EM**
+###### Hội tụ thuật toán EM
 
 <p align="center"><kbd><img src="assets/6uaupljhakn.png" width="80%"></kbd></p>
 
