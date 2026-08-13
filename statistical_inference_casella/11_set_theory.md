@@ -5,8 +5,6 @@
 ---
 <a id="node-z8607xs"></a>
 
-## 1.1 Set Theory
-
 <br>
 
 <a id="node-sa4wls9"></a>
@@ -177,7 +175,7 @@
 
 <a id="node-wa0salz"></a>
 
-- **Phép toán trên tập con vô hạn**
+###### Phép toán trên tập con vô hạn
 
 <p align="center"><kbd><img src="assets/odzjw27vrss.png" width="80%"></kbd></p>
 
@@ -189,7 +187,7 @@
 
 <a id="node-c55r2gt"></a>
 
-- **Sự kiện rời rạc, Phân hoạch**
+###### Sự kiện rời rạc, Phân hoạch
 
 <p align="center"><kbd><img src="assets/f0ljxhd0hnc.png" width="80%"></kbd></p>
 
