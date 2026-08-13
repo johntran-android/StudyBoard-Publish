@@ -1,11 +1,9 @@
 # 3.4 Bayesian Model Comparison
 
-📊 **Progress:** `7` Notes | `8` Screenshots | `7` AI Reviews
+📊 **Progress:** `10` Notes | `14` Screenshots | `10` AI Reviews
 
 ---
 <a id="node-8mjaf9g"></a>
-
-## 3.4 Bayesian Model Comparison
 
 <br>
 
@@ -123,6 +121,8 @@
 >
 > Ghi chép rất sâu sắc khi liên hệ được nền tảng thống kê cổ điển với bài toán so sánh mô hình theo quan điểm Bayesian một cách chính xác. Tuy nhiên, phần dẫn nhập có thể cô đọng hơn để người đọc nhanh chóng nắm bắt cơ chế cốt lõi của công thức Bayes áp dụng cho tập hợp mô hình.
 
+**🔗 See also:** [Model Evidence and Complexity](#node-l55vqkg)
+
 <br>
 
 <a id="node-5ef8t75"></a>
@@ -190,6 +190,8 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Ghi chú của bạn rất xuất sắc, thể hiện sự hiểu sâu sắc khi tự liên hệ phép tương tự giữa cấp độ tham số và cấp độ mô hình để giải thích marginal likelihood. Để hoàn thiện hơn, bạn có thể viết rõ công thức toán học thể hiện việc tích phân loại bỏ (marginalize out) tham số w.
+
+**🔗 See also:** [Marginal Likelihood Approximation](#node-3bm8r68) · [Bayesian Model Comparison](#node-7rkr8xy)
 
 <br>
 
@@ -283,7 +285,7 @@
 
 <a id="node-tmo40n6"></a>
 
-- **Model Selection and Model Evidence**
+###### Model Selection and Model Evidence
 
 <p align="center"><kbd><img src="assets/xn0guxtuv2e.png" width="80%"></kbd></p>
 
@@ -311,7 +313,7 @@
 
 <a id="node-dmy6nc7"></a>
 
-- **Model Evidence and Marginal Likelihood**
+###### Model Evidence and Marginal Likelihood
 
 <p align="center"><kbd><img src="assets/oq6sviqwik.png" width="80%"></kbd></p>
 
@@ -433,7 +435,7 @@
 
 <a id="node-qzhn5db"></a>
 
-- **Model Evidence Approximation**
+###### Model Evidence Approximation
 
 <p align="center"><kbd><img src="assets/ocexek5e5ra.png" width="80%"></kbd></p>
 
@@ -504,7 +506,7 @@
 >
 >
 >
-> = \[1/Δw_prior\] ∫f(𝒟|w) dw 
+> = \[1/Δw_prior\] ∫f(𝒟|w) dw
 >
 >
 >
@@ -540,11 +542,11 @@
 >
 >
 >
-> Vậy cái tích phân này = f(𝒟|wMAP)  × Δw_posterior
+> Vậy cái tích phân này = f(𝒟|wMAP) × Δw_posterior
 >
 >
 >
-> Do đó f(𝒟) = \[1/Δw_prior\] × f(𝒟|wMAP)  × Δw_posterior
+> Do đó f(𝒟) = \[1/Δw_prior\] × f(𝒟|wMAP) × Δw_posterior
 >
 >
 >
@@ -552,12 +554,322 @@
 >
 >
 >
-> Lấy log ta sẽ có 3.71
+> Lấy log ta sẽ có 3.71:
+>
+>
+>
+> ln f(𝒟) = ln \[f(𝒟|wMAP) × \[Δw_posterior / Δw_prior\]\]
+>
+>
+>
+> ⇔ ln f(𝒟) = ln \[f(𝒟|wMAP)\] + ln \[Δw_posterior / Δw_prior\]
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
 >
 > Giải thích của bạn cực kỳ xuất sắc, trực quan và chính xác khi phân tích mối liên hệ giữa posterior và likelihood để làm rõ bản chất tích phân. Tư duy suy luận tự do nhưng logic này giúp hiểu sâu sắc công thức (3.70) thay vì chỉ đọc thuộc lòng.
+
+<br>
+
+<a id="node-3bm8r68"></a>
+
+###### Marginal Likelihood Approximation
+
+<p align="center"><kbd><img src="assets/sjbxv70235f.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2gz7xeffjvp.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Thế thì đại khái là kết quả này, cho ta một góc nhìn quan trọng.
+>
+>
+>
+> ln f(𝒟) = ln \[f(𝒟|wMAP)\] + ln \[Δw_posterior / Δw_prior\]
+>
+>
+>
+> Nên nhớ thêm rằng các ta đang xét một model cụ thể ℳi nào đó, chẳng qua là ta bỏ (omit) cho bớt dài dòng. Nên đúng ra sẽ là:
+>
+>
+>
+> ln f(𝒟|**ℳ**i) = ln \[f(𝒟|wMAP,**ℳ**i)\] + ln \[Δw_posterior / Δw_prior\]
+>
+>
+>
+> Xét term thứ nhất ln f(𝒟|wMAP,**ℳ**i), nó là cái gì?
+>
+>
+>
+> thì f(𝒟|wMAP, **ℳ**i) chính là: xác suất (pdf) của observed data 𝒟 nếu như / dựa trên việc mô hình là **ℳ**i và giá trị tham số của ℳi lấy bằng ước lượng điểm (của tham số) có posterior probability cao nhất (maximum posterior) wMAP. Mà ta có thể nói theo cách khác: Nếu distribution ℳi, với tham số wMAP, thì xác suất của data quan sát được 𝒟 là bao nhiêu.
+>
+>
+>
+> Và nếu nhớ lại hàm likelihood, L(w|𝒟) (hay ghi thêm **ℳ**i để cho rõ là ta đang xét model ℳi, L(w|𝒟, **ℳ**i), có định nghĩa là độ hợp lý của giá trị tham số w (của mô hình ℳi), khi data quan sát được là 𝒟, và có giá trị theo định nghĩa chính là bằng f(𝒟|w,**ℳ**i). Thì như vậy, f(𝒟|wMAP, **ℳ**i) cũng có thể được hiểu là **độ hợp lý của wMAP khi giá trị quan sát được của data là 𝒟**.
+>
+>
+>
+> (Đương nhiên nếu ta tìm w giúp tối đa hóa cái này L(w|𝒟, **ℳ**i) thì đó là maximum likelihood estimate của w, tức wML, và L(wML|𝒟, **ℳ**i) = f(𝒟|wML,**ℳ**i) sẽ chính là xác suất của observed data 𝒟 nếu mô hình ℳi có tham số là wML và cũng là tại wML, độ hợp lí sẽ lớn nhất)
+>
+>
+>
+> ---
+>
+>
+>
+> Xét cái term thứ hai: ln \[Δw_posterior / Δw_prior\]
+>
+>
+>
+> Nói lại nhanh, ta đang giả định posterior distribution của w dồn lại thành một cột có bề rộng Δw_posterios tại wMAP. Trong khi đó prior distribution của w thì trải dài đều nhau trong một vùng có bề rộng Δw_prior.
+>
+>
+>
+> Thế thì hàm ln(x), có tính chất là khi x chạy từ 0 → inf thì ln(x) sẽ từ -∞ → ∞. Do đó, nếu như với prior, xác suất của w dàn trải trên vùng rộng, nhưng sau khi quan sát data 𝒟, posterior co hẹp lại một vùng càng hẹp, thì tỉ lệ Δw_posterior / Δw_prior sẽ càng nhỏ, khiến ln của tỉ lệ này càng tiến về âm.
+>
+>
+>
+> Và do đó, nó sẽ bóp cái vế phải nhỏ lại.
+>
+>
+>
+> ---
+>
+>
+>
+> Như vậy độ lớn của của model evidence f(𝒟|ℳi), cái mà ta đã nói, mang ý nghĩa là, xác suất của giá trị quan sát được của data 𝒟 nếu như model thật sự là ℳi, lấy trung bình trên mọi giá trị khả dĩ của tham số của ℳi.
+>
+>
+>
+> Và nếu mượn khái niệm likelihood, để đặt ra hàm likelihood L(ℳi|𝒟) mang ý nghĩa độ hợp lý của model ℳi nếu như data quan sát được là 𝒟. Và trong phần trên (Xem link Model Evidence and Bayes Factor), gs Bishop cũng có nói ý này, đó ta model evidence có thể được gọi là marginal likelihood vì ta có thể xem nó như likelihood function xét trên không gian models.
+>
+>
+>
+> ("The model evidence is sometimes also called the marginal likelihood because it can be viewed as a likelihood function over the space of models, in which the parameters have been marginalized out.")
+>
+>
+>
+> Và như vậy thì ta sẽ thấy rằng độ hợp lý của ℳi sẽ:
+>
+>
+>
+> Càng **lớn** nếu như dưới giả định ℳi, độ hợp lý của wMAP (của model ℳi) khi giúp giải thích cho 𝒟 càng lớn.
+>
+>
+>
+> Ví dụ, ln f(𝒟|wMAP)\_**ℳ**1 lớn hơn f(𝒟|wMAP)\_**ℳ**2 thì cái term 1 đang giúp độ hợp lý của ℳ1 cao hơn so với độ hợp lý của ℳ2.
+>
+>
+>
+> Càng **nhỏ** nếu như dưới giả định ℳi, sự chênh lệch của prior distribution và posterior distribution càng lớn. Ví dụ như dưới giả định ℳ1, thì tỉ lệ của Δw_posterior/ Δw_prior nhỏ hơn tỉ lệ này khi giả định model ℳ2 thì term 2 sẽ giúp độ hợp lí của ℳ2 cao hơn độ hợp lí của ℳ1
+>
+>
+>
+> ---
+>
+>
+>
+> Và như vậy, trong cuộc đua của ℳ1 và ℳ2, thì cái term số 2, chính là cái term khiến phạt model overfit với data.
+>
+>
+>
+> ---
+>
+>
+>
+> Và ý tiếp theo là, nếu ta xét qua model có không phải chỉ 1 parameter w như nãy giờ đang xét mà là M parameter, và gỉa định thêm là M cái w1,...wM này cũng đều có cùng một tỉ lệ Δw_posterior / Δw_prior. Khi đó nếu lặp lại các bước khai triển ban đầu ta sẽ có kết quả:
+>
+>
+>
+> ln f(𝒟) = ln \[f(𝒟|**w**MAP)\] + M ln \[Δw_posterior / Δw_prior\] (w giờ là vector, nên viết đậm **w**)
+>
+>
+>
+> Để rồi ta sẽ có thể có thêm nhận định quan trọng như sau:
+>
+>
+>
+> Đó là, giả sử như ln \[Δw_posterior / Δw_prior\] đang âm, thể hiện mức phạt cho việc làm cho prior và posterior quá khác nhau. Thì khi ta tăng số lượng tham số lên, mức phạt này sẽ bị nhân lên M lần. Do đó, mới nói, mức phạt dành cho sự tăng lên của độ phức tạp mô hình (complexity penalty) sẽ tăng tuyến tính với số lượng parameter M.
+>
+>
+>
+> Và dĩ nhiên khi tăng số lượng tham số, thì term đầu sẽ tăng vì mô hình càng phức tạp thì càng dễ fit với data.
+>
+>
+>
+> Như vậy, để chọn ra model có độ phức tạp tối ưu, ta sẽ phải cân nhắc giữa sự đánh đổi của term 1 và term 2. Và những phần sau ta sẽ có cách tiếp cận cho bài toán này.
+>
+>
+>
+> Tóm lại mình hiểu thế này:
+>
+>
+>
+> Nếu giữa hai model có cùng số lương tham số.
+>
+>
+>
+> thì cái nào giúp fit data tốt hơn (độ hợp lý của wMAP giúp giải thích cho data quan sát được 𝒟 cao hơn) sẽ là điểm cộng
+>
+>
+>
+> còn cái nào bóp méo, tạo sự chênh lệch lớn hơn giữa prior và posterior distribution của w, sẽ bị trừ điểm.
+>
+>
+>
+> Và nếu xét thêm số tham số nhiều hơn, thì tuy điểm cộng cũng sẽ tăng do model phức tạp hơn thì fit data tốt hơn nhưng những điểm trừ thì tăng tuyến tính với số tham số. Nên chưa chắc là cứ tăng số tham số là model luôn tốt hơn đâu.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chép rất xuất sắc, trình bày mạch lạc và chính xác bản chất toán học lẫn trực quan của việc phạt độ phức tạp mô hình qua các phương trình 3.71 và 3.72. Việc bạn chủ động bổ sung ký hiệu điều kiện theo mô hình Mi giúp lập luận trở nên vô cùng chặt chẽ.
+
+**🔗 See also:** [Model Evidence and Bayes Factor](#node-5ef8t75)
+
+<br>
+
+<a id="node-8yp4pb2"></a>
+
+<a id="node-l55vqkg"></a>
+
+###### Model Evidence and Complexity
+
+<p align="center"><kbd><img src="assets/our06oh0z0k.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/vmjslnmxaq8.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cm5kiyfnnvc.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, đoạn này, ta có thể có thể insight về việc so sánh các model khác nhau theo trường phái Bayesian như sau:
+>
+>
+>
+> Đại ý là vầy, trong cái hình 3.13, trục ngang biểu diễn các điểm dữ liệu (điểm ở đây là cả 1 bộ data có gía trị cụ thể nào đó, nhưng ta coi như 1 điểm trong không gian dữ liệu, chứ ko phải là 1 data point theo nghĩa (x1, t1) (x2, t2)). Hình dung thế này: tòan bộ trục ngang thể hiện toàn bộ giá trị của dataset tồn tại trong vũ trụ. Và ta đang quan tâm xác suất của bộ giá trị data cụ thể là 𝒟0 dưới các giả định model ℳi khác nhau, ý là nếu phân phối thật là ℳi, i=1,2,3 thì xác suất sinh ra data có giá trị là 𝒟0 là bao nhiêu.
+>
+>
+>
+> Thế thì xét ba model ℳ1,2,3 có độ phức tạp từ nhỏ đến lớn. Và ta hiểu quy trình sinh data từ các model này như sau: Ví dụ, dùng model ℳ1, thì trước tiên cần nhớ, model ở đây, như gs đã nhấn mạnh, phải hiểu là một giả định về population distribution đứng đằng sau chi phối sự xuất hiện của data. (xem lại link "Bayesian Model Comparison", trong trang trước gs nói : "Here a model refers to a probability distribution over the observed data D". Tương tự như ta có 1 chuỗi số, không biết nó sinh ra từ distribution nào, và ta giả định là ℳ1 rằng distribution của nó là normal, ℳ2 - distribution của nó là exponential).
+>
+>
+>
+> Vậy thì, dưới giả định là population distribution là ℳ1, và tham số của nó, ta sampling từ prior distribution f(w|ℳ1), rồi lắp w vào ℳ1, và tiến hành sampling ra data bằng phân phối (ℳ1, w) này.
+>
+>
+>
+> Khi đó, lập luận sẽ là: Nếu như model ℳ1 đơn giản, thì data sampling từ f(𝒟|**ℳ**1,w) sẽ đều ra giống giống nhau. Và do đó, data quan sát được khi sampling từ ℳ1 sẽ chỉ cover một phần nhỏ trong không gian vũ trụ toàn bộ các giá trị khả dĩ của data. Điều này thể hiện bởi đồ thị của ℳ1 khi mà bề rộng của nó chỉ chiếm phần nhỏ nhất trong trục 𝒟, và đáng chú ý, 𝒟0 không chứa trong đó, ý nói, với model ℳ1 thì khó mà, hiếm có thể quan sát được data có giá trị 𝒟0.
+>
+>
+>
+> Ở chiều ngược lại, với model ℳ3 phức tạp, thì data sampling từ mô hình xác suất ℳ3, (với tham số cũng sampling từ prior distribution f(w|ℳ3) sẽ có thể rất đa dạng, và do đó, ℳ3 có thể cover một vùng rất rộng các giá trị của 𝒟, và dư sức chứa 𝒟0, mang ý nghĩa là nếu quan sát được 𝒟0 thì khả năng, độ hợp lí của ℳ3 là có, là cao, hơn hẳn, độ hợp lí của ℳ1.
+>
+>
+>
+> Tuy nhiên, vì ℳ3 phức tạp, cover rộng, nên xác suất mà nó dành cho giá trị khả dĩ 𝒟0 là không cao.
+>
+>
+>
+> Từ đó ta mới xét ℳ2, có độ phức tạp vừa vừa, khiến cho quy trình sinh data của nó, có thể sinh ra data đa dạng hơn của ℳ1 nhưng không bằng ℳ3. Nhưng cũng vì vậy, cho trước giá trị quan sát 𝒟0, thì xác suất của f(𝒟0|**ℳ**2) lại cao nhất. Cái đường chấm chấm màu đỏ chính là thể hiện: nó cao hơn của màu xanh (ℳ3) và của ℳ1 (thằng này không cover nổi 𝒟0, nên f(𝒟0|ℳ1) coi như = 0)
+>
+>
+>
+> Và như vậy, dưới mô hình này, thì mô hình có độ phức tạp vừa vừa (intermediate complexity\_ lại là cái được favor (ưu tiên). Và nói tóm lại là: mô hình đơn giản quá thì ko thể sinh ra dữ [liệu 𝒟0. Mà mô hình phức tạp quá thì phổ data nó có thể sinh ra lại quá rộng, khiến xác suất tại một điểm cũng nhỏ. Chỉ có cái vừa vừa lại là vừa có thể sinh ra 𝒟0 và có xác suất cao nhất.](http://xn--liu-5kz.Ma)
+>
+>
+>
+> Mình có thể dùng ví von sau: Có 3 anh họa sĩ, và muốn truy tìm bức tranh đẹp đang có là ai vẽ.
+>
+>
+>
+> Anh họa sĩ ℳ1 non qúa thì chỉ vẽ những bức bình thường, nên xác suất anh ta vẽ ra bức này sẽ rất thấp, hoặc bằng 0.
+>
+>
+>
+> Anh họa sĩ tài hoa ℳ3 do quá giỏi nên range các bức tranh của anh ta rất đa dạng, khiến xác suất bức này do anh ta vẽ cũng có nhưng không cao
+>
+>
+>
+> Chỉ có anh thứ hai ℳ2, trình độ khá, nên khả năng anh ta vẽ cái này là cao nhất.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú của bạn vô cùng chính xác, sắc sảo và ví dụ ẩn dụ về ba họa sĩ rất sáng tạo, trực quan để giải thích hiện tượng tự động phạt các mô hình quá phức tạp (Bayesian Occam's razor). Một lưu ý nhỏ là trục hoành biểu diễn không gian của cả tập dữ liệu (datasets) chứ không chỉ là từng điểm dữ liệu đơn lẻ (data points), nhưng điều này không làm ảnh hưởng đến lập luận xuất sắc của bạn.
+
+**🔗 See also:** [Bayesian Model Comparison](#node-mg5ehv8)
+
+<br>
+
+<a id="node-7rkr8xy"></a>
+
+###### Bayesian Model Comparison
+
+<p align="center"><kbd><img src="assets/7vb67j3w6bn.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tiếp theo là một ý rất hay, đó là nói rằng, trong khuôn khổ của việc tiếp cận bài toán model selection / comparison theo trường phái Bayes, thì ta có một giả định ngầm rằng: trong tập các model (có độ phức tạp khác nhau) mà ta đang muốn so sánh để tìm ra cái tốt nhất, thì đã có sẵn trong đó cái đúng nhất, cái model thật sự đứng sau chi phối data.
+>
+>
+>
+> Thế thì giả sử ta đang so đó ℳ1 và ℳ2 trong đó ℳ1 chính là cái hàng thật (distribution thật, của vũ trụ, giúp từ đó mà 𝒟 được sinh ra).
+>
+>
+>
+> Vậy thì ta nhắc lại khái niệm Bayes factor, đơn giản chỉ là tỉ số của hai model evidence: Bayes factor của ℳ1 so với ℳ2 = f(𝒟|ℳ1) / f(𝒟|ℳ2). 
+>
+>
+>
+> và Bayes factor của ℳ2 so với ℳ1 = f(𝒟|ℳ2) / f(𝒟|ℳ1)
+>
+>
+>
+> Và ta giả sử là Bayes factor của ℳ2 đang cao hơn, có nghĩa là cái model sai đang có điểm số cao hơn. Và nếu lấy ln \[f(𝒟|ℳ1) / f(𝒟|ℳ2)\], thì do tỉ số này &lt; 1, nên ln của cái này âm.
+>
+>
+>
+> Nhưng nếu tính trung bình ln \[f(𝒟|ℳ1) / f(𝒟|ℳ2)\] trên mọi dataset:
+>
+>
+>
+> Tức là giống như ta xem như có random variable h(𝒟) = ln \[f(𝒟|ℳ1) / f(𝒟|ℳ2)\], thì theo LOTUS ta có:
+>
+>
+>
+> E{ln\[f(𝒟|ℳ1) / f(𝒟|ℳ2)\]} = ∫h(𝒟) f(𝒟|ℳ1) d𝒟
+>
+>
+>
+> = ∫ ln\[f(𝒟|ℳ1) / f(𝒟|ℳ2)\] f(𝒟|ℳ1) d𝒟
+>
+>
+>
+> Và cái này lại chính là khái niệm KL divergenve mà ta đã học ở chap 2. Và đại ý là cái này nó có tính chất không âm, và chỉ bằng 0 khi f(𝒟|ℳ1) trùng khít với f(𝒟|ℳ2)
+>
+>
+>
+> Vậy E{ln \[f(𝒟|ℳ1) / f(𝒟|ℳ2)\]} ≥ 0
+>
+>
+>
+> ⇔ E{ln f(𝒟|ℳ1)} - E{ln f(𝒟|ℳ2)} ≥ 0
+>
+>
+>
+> ⇔ E{ln f(𝒟|ℳ1)} ≥ E{ln f(𝒟|ℳ2)}
+>
+>
+>
+> Như vậy với một dataset 𝒟 cụ thể thì model evidence có thể ℳ1 đang kém so với model evidence của ℳ2
+>
+>
+>
+> Nhưng nếu tính trung bình trên mọi dataset thì model evidence của model thật sự chi phối data (ℳ1) sẽ luôn lớn hơn. Do đó, mới nói Bayes factor tính trên trung bình mọi data sẽ luôn ưu tiên cái model đúng.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú rất xuất sắc, giải thích chính xác và đào sâu bản chất toán học khi dùng LOTUS để chứng minh kỳ vọng của log Bayes factor chính là phân kỳ KL. Để hoàn thiện hơn, bạn nên lưu ý ghi rõ 'log Bayes factor' thay vì chỉ 'Bayes factor' ở các bước biến đổi cuối để tránh nhầm lẫn thuật ngữ.
+
+**🔗 See also:** [Model Evidence and Bayes Factor](#node-5ef8t75) · [KL-divergence và tính chất](./16_information_theory.md#node-hh2wohi)
 
 <br>
 
