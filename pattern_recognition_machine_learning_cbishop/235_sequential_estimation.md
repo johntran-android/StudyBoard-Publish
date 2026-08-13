@@ -5,8 +5,6 @@
 ---
 <a id="node-gbdy2ak"></a>
 
-## 2.3.5 Sequential  estimation
-
 <br>
 
 <a id="node-nbpswa4"></a>
@@ -371,7 +369,7 @@
 
 <a id="node-eo2d0r5"></a>
 
-- **Robbins-Monro trong MLE Gaussian**
+###### Robbins-Monro trong MLE Gaussian
 
 <p align="center"><kbd><img src="assets/h80leuqtec.png" width="80%"></kbd></p>
 
