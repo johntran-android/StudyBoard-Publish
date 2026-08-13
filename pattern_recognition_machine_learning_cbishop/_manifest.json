@@ -1,6 +1,6 @@
 {
-  "title": "pattern_recognition_machine_learning_cbishop",
-  "publishedAt": 1786562259832,
+  "title": "Pattern Recognition Machine Learning_C.Bishop",
+  "publishedAt": 1786579364137,
   "sections": [
     {
       "title": "📋 Overview",
@@ -63,7 +63,7 @@
       "imageCount": 6
     },
     {
-      "title": "1.4 The Curse",
+      "title": "1.4 The Curse\nOf Dimensionality",
       "path": "pattern_recognition_machine_learning_cbishop/14_the_curse_of_dimensionality.md",
       "noteCount": 6,
       "imageCount": 15
@@ -165,16 +165,16 @@
       "imageCount": 9
     },
     {
+      "title": "2.4 The Exponential Family",
+      "path": "pattern_recognition_machine_learning_cbishop/24_the_exponential_family.md",
+      "noteCount": 6,
+      "imageCount": 9
+    },
+    {
       "title": "2.4.1 Maximum likelihood & sufficient statistic",
       "path": "pattern_recognition_machine_learning_cbishop/241_maximum_likelihood_sufficient_statistic.md",
       "noteCount": 4,
       "imageCount": 4
-    },
-    {
-      "title": "2.4.3 Non-informative priors",
-      "path": "pattern_recognition_machine_learning_cbishop/243_non_informative_priors.md",
-      "noteCount": 7,
-      "imageCount": 8
     },
     {
       "title": "2.4.4 Conjugate prior",
@@ -183,10 +183,16 @@
       "imageCount": 1
     },
     {
-      "title": "2.4 The Exponential Family",
-      "path": "pattern_recognition_machine_learning_cbishop/24_the_exponential_family.md",
-      "noteCount": 6,
-      "imageCount": 9
+      "title": "2.4.3 Non-informative priors",
+      "path": "pattern_recognition_machine_learning_cbishop/243_non_informative_priors.md",
+      "noteCount": 7,
+      "imageCount": 8
+    },
+    {
+      "title": "2.5 Non-parametric model",
+      "path": "pattern_recognition_machine_learning_cbishop/25_non_parametric_model.md",
+      "noteCount": 5,
+      "imageCount": 5
     },
     {
       "title": "2.5.1 Kernel density estimators",
@@ -199,12 +205,6 @@
       "path": "pattern_recognition_machine_learning_cbishop/252_nearest_neighbour_methods.md",
       "noteCount": 5,
       "imageCount": 10
-    },
-    {
-      "title": "2.5 Non-parametric model",
-      "path": "pattern_recognition_machine_learning_cbishop/25_non_parametric_model.md",
-      "noteCount": 5,
-      "imageCount": 5
     },
     {
       "title": "3.1.0 Linear Regression and Basis Functions",
@@ -231,16 +231,16 @@
       "imageCount": 2
     },
     {
-      "title": "3.1.4 Regularized least squares",
-      "path": "pattern_recognition_machine_learning_cbishop/314_regularized_least_squares.md",
-      "noteCount": 3,
-      "imageCount": 7
-    },
-    {
       "title": "3.1.5 Multiple outputs",
       "path": "pattern_recognition_machine_learning_cbishop/315_multiple_outputs.md",
       "noteCount": 3,
       "imageCount": 3
+    },
+    {
+      "title": "3.1.4 Regularized least squares",
+      "path": "pattern_recognition_machine_learning_cbishop/314_regularized_least_squares.md",
+      "noteCount": 3,
+      "imageCount": 7
     },
     {
       "title": "3.2.0 The Bias-Variance Decomposition",
@@ -249,16 +249,16 @@
       "imageCount": 16
     },
     {
-      "title": "3.3.1 Bayesian Linear Regression",
-      "path": "pattern_recognition_machine_learning_cbishop/331_bayesian_linear_regression.md",
-      "noteCount": 8,
-      "imageCount": 12
-    },
-    {
       "title": "3.3.2 Predictive distribution",
       "path": "pattern_recognition_machine_learning_cbishop/332_predictive_distribution.md",
       "noteCount": 6,
       "imageCount": 10
+    },
+    {
+      "title": "3.3.1 Bayesian Linear Regression",
+      "path": "pattern_recognition_machine_learning_cbishop/331_bayesian_linear_regression.md",
+      "noteCount": 8,
+      "imageCount": 12
     },
     {
       "title": "3.3.3 Equivalent kernel",
@@ -269,8 +269,8 @@
     {
       "title": "3.4 Bayesian Model Comparison",
       "path": "pattern_recognition_machine_learning_cbishop/34_bayesian_model_comparison.md",
-      "noteCount": 4,
-      "imageCount": 4
+      "noteCount": 7,
+      "imageCount": 8
     },
     {
       "title": "Appendix C. Matrices",
@@ -285,6 +285,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 352,
-  "totalImages": 513
+  "totalNotes": 355,
+  "totalImages": 517
 }
