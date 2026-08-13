@@ -5,8 +5,6 @@
 ---
 <a id="node-qc6wvf9"></a>
 
-## 2.3.8 Periodic variables
-
 <p align="center"><kbd><img src="assets/j30m1eim5fb.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -493,7 +491,7 @@
 
 <a id="node-o5sdsgo"></a>
 
-- **Maximum Likelihood Estimators for Von Mises**
+###### Maximum Likelihood Estimators for Von Mises
 
 <p align="center"><kbd><img src="assets/86wbd31qec.png" width="80%"></kbd></p>
 
@@ -656,7 +654,7 @@
 
 <a id="node-vdmr1cv"></a>
 
-- **A(m) Function and Maximum Likelihood**
+###### A(m) Function and Maximum Likelihood
 
 <p align="center"><kbd><img src="assets/opz5hh4qu88.png" width="80%"></kbd></p>
 
