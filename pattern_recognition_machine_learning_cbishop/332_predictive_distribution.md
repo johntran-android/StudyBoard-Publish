@@ -5,8 +5,6 @@
 ---
 <a id="node-wdjepxb"></a>
 
-## 3.3.2 Predictive distribution
-
 <p align="center"><kbd><img src="assets/4nf43jhp825.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -834,7 +832,7 @@
 
 <a id="node-z7uy925"></a>
 
-- **Suy luận w và beta**
+###### Suy luận w và beta
 
 <p align="center"><kbd><img src="assets/hcotn64jjo.png" width="80%"></kbd></p>
 
