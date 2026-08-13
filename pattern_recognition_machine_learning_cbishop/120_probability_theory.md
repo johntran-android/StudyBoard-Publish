@@ -5,8 +5,6 @@
 ---
 <a id="node-ea2dyh1"></a>
 
-## 1.2.0 Probability theory
-
 <br>
 
 <a id="node-4keka2e"></a>
@@ -164,7 +162,7 @@
 
 <a id="node-spyv72h"></a>
 
-- **Tiên đề xác suất**
+###### Tiên đề xác suất
 
 <p align="center"><kbd><img src="assets/ordj48vrf7.png" width="80%"></kbd></p>
 
@@ -176,7 +174,7 @@
 
 <a id="node-f9tubgx"></a>
 
-- **Quy tắc Sum Product Xác suất**
+###### Quy tắc Sum Product Xác suất
 
 <p align="center"><kbd><img src="assets/llcwz6rbdk.png" width="80%"></kbd></p>
 
@@ -194,7 +192,7 @@
 
 <a id="node-zuag6aa"></a>
 
-- **Quy tắc xác suất cơ bản**
+###### Quy tắc xác suất cơ bản
 
 <p align="center"><kbd><img src="assets/36upmvnjyrt.png" width="80%"></kbd></p>
 
@@ -364,7 +362,7 @@
 
 <a id="node-amgfpbh"></a>
 
-- **Quy ước kí hiệu Bishop**
+###### Quy ước kí hiệu Bishop
 
 <p align="center"><kbd><img src="assets/94fl88qy9k.png" width="80%"></kbd></p>
 
@@ -458,7 +456,7 @@
 
 <a id="node-uh641z5"></a>
 
-- **Định lý Bayes và Chuẩn hóa**
+###### Định lý Bayes và Chuẩn hóa
 
 <p align="center"><kbd><img src="assets/ge7ca7c8ysf.png" width="80%"></kbd></p>
 
@@ -509,7 +507,7 @@
 
 <a id="node-jfoiqx1"></a>
 
-- **Mô hình hóa phân phối dữ liệu**
+###### Mô hình hóa phân phối dữ liệu
 
 <p align="center"><kbd><img src="assets/v2smjzh290f.png" width="80%"></kbd></p>
 
@@ -540,7 +538,7 @@
 
 <a id="node-93p43r7"></a>
 
-- **Bài toán xác suất hộp trái cây**
+###### Bài toán xác suất hộp trái cây
 
 <p align="center"><kbd><img src="assets/xcpezale6nm.png" width="80%"></kbd></p>
 
@@ -580,7 +578,7 @@
 
 <a id="node-q0e9cty"></a>
 
-- **Cập nhật niềm tin Bayes**
+###### Cập nhật niềm tin Bayes
 
 <p align="center"><kbd><img src="assets/ztb3gjyldj.png" width="80%"></kbd></p>
 
@@ -616,7 +614,7 @@
 
 <a id="node-qz6gnns"></a>
 
-- **Biến cố độc lập, Biến ngẫu nhiên**
+###### Biến cố độc lập, Biến ngẫu nhiên
 
 <p align="center"><kbd><img src="assets/18c531iib.png" width="80%"></kbd></p>
 
