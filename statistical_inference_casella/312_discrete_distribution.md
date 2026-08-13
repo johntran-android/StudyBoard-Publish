@@ -1,13 +1,9 @@
-# 3.1&2 Discrete
-distribution
+# 3.1&2 Discrete distribution
 
 📊 **Progress:** `20` Notes | `32` Screenshots
 
 ---
 <a id="node-26ucm3g"></a>
-
-## 3.1&2 Discrete
-distribution
 
 <br>
 
@@ -329,7 +325,7 @@ distribution
 
 <a id="node-z6auo5b"></a>
 
-- **Ứng dụng phân phối Hypergeometric**
+###### Ứng dụng phân phối Hypergeometric
 
 <p align="center"><kbd><img src="assets/7i0x07z8f1p.png" width="80%"></kbd></p>
 
@@ -343,7 +339,7 @@ distribution
 
 <a id="node-njx4cxj"></a>
 
-- **Biến ngẫu nhiên Bernoulli**
+###### Biến ngẫu nhiên Bernoulli
 
 <p align="center"><kbd><img src="assets/lo5xd7sj4ak.png" width="80%"></kbd></p>
 
@@ -355,7 +351,7 @@ distribution
 
 <a id="node-5opn50d"></a>
 
-- **Hai câu chuyện phân phối nhị thức**
+###### Hai câu chuyện phân phối nhị thức
 
 <p align="center"><kbd><img src="assets/uwtgt5u13a.png" width="80%"></kbd></p>
 
@@ -379,7 +375,7 @@ distribution
 
 <a id="node-pga23jp"></a>
 
-- **Định lý và Phân phối Nhị thức**
+###### Định lý và Phân phối Nhị thức
 
 <p align="center"><kbd><img src="assets/hyja911zdk9.png" width="80%"></kbd></p>
 
@@ -443,7 +439,7 @@ distribution
 
 <a id="node-ljwkqux"></a>
 
-- **Xác suất ít nhất một mặt 6**
+###### Xác suất ít nhất một mặt 6
 
 <p align="center"><kbd><img src="assets/vs8qkohftsb.png" width="80%"></kbd></p>
 
@@ -712,7 +708,7 @@ distribution
 
 <a id="node-fvmyn3c"></a>
 
-- **Bài toán Newton-Pepys**
+###### Bài toán Newton-Pepys
 
 <p align="center"><kbd><img src="assets/pekt9jjcf2.png" width="80%"></kbd></p>
 
@@ -751,7 +747,7 @@ distribution
 
 <a id="node-5yfw058"></a>
 
-- **Liên hệ Poisson-Exponential và ứng dụng**
+###### Liên hệ Poisson-Exponential và ứng dụng
 
 <p align="center"><kbd><img src="assets/5zj1j74wdso.png" width="80%"></kbd></p>
 
@@ -791,7 +787,7 @@ distribution
 
 <a id="node-n5pp9ik"></a>
 
-- **Phân phối Poisson và Kỳ vọng**
+###### Phân phối Poisson và Kỳ vọng
 
 <p align="center"><kbd><img src="assets/doteskqndwi.png" width="80%"></kbd></p>
 
@@ -907,7 +903,7 @@ distribution
 
 <a id="node-27srddu"></a>
 
-- **Phân phối Poisson cho cuộc gọi**
+###### Phân phối Poisson cho cuộc gọi
 
 <p align="center"><kbd><img src="assets/d2h7qjkq1pa.png" width="80%"></kbd></p>
 
@@ -948,7 +944,7 @@ distribution
 
 <a id="node-uvpqigy"></a>
 
-- **Công thức đệ quy Poisson và Binomial**
+###### Công thức đệ quy Poisson và Binomial
 
 <p align="center"><kbd><img src="assets/ojne5ywm6a.png" width="80%"></kbd></p>
 
@@ -1033,7 +1029,7 @@ distribution
 
 <a id="node-wxzapdy"></a>
 
-- **Ước lượng Poisson lỗi đánh máy**
+###### Ước lượng Poisson lỗi đánh máy
 
 <p align="center"><kbd><img src="assets/kn1cdlk55w9.png" width="80%"></kbd></p>
 
@@ -1090,7 +1086,7 @@ distribution
 
 <a id="node-sdeb90k"></a>
 
-- **Lập luận PMF Nhị thức Âm**
+###### Lập luận PMF Nhị thức Âm
 
 <p align="center"><kbd><img src="assets/phw1vvi024.png" width="80%"></kbd></p>
 
@@ -1301,7 +1297,7 @@ distribution
 
 <a id="node-zgdxsvo"></a>
 
-- **Tính toán Kỳ vọng và Phương sai**
+###### Tính toán Kỳ vọng và Phương sai
 
 <p align="center"><kbd><img src="assets/9vpmj2ldnys.png" width="80%"></kbd></p>
 
@@ -1380,7 +1376,7 @@ distribution
 
 <a id="node-6hbfudo"></a>
 
-- **Xác suất thu thập ruồi thoái hóa**
+###### Xác suất thu thập ruồi thoái hóa
 
 <p align="center"><kbd><img src="assets/j93u2aeezk.png" width="80%"></kbd></p>
 
@@ -1431,7 +1427,7 @@ distribution
 
 <a id="node-lhccuzi"></a>
 
-- **Phân phối Geometric và thuộc tính**
+###### Phân phối Geometric và thuộc tính
 
 <p align="center"><kbd><img src="assets/ksvwt5w2uen.png" width="80%"></kbd></p>
 
@@ -1880,7 +1876,7 @@ distribution
 
 <a id="node-37wuarb"></a>
 
-- **Phân phối hình học bóng đèn**
+###### Phân phối hình học bóng đèn
 
 <p align="center"><kbd><img src="assets/ma6y7cnyax.png" width="80%"></kbd></p>
 
