@@ -5,8 +5,6 @@
 ---
 <a id="node-22kgh3n"></a>
 
-## 2.1 Binary Variables
-
 <br>
 
 <a id="node-vj69379"></a>
@@ -635,7 +633,7 @@
 
 <a id="node-ixw17hk"></a>
 
-- **Ưu tiên liên hợp Beta-Nhị thức**
+###### Ưu tiên liên hợp Beta-Nhị thức
 
 <p align="center"><kbd><img src="assets/d98ha5xoraw.png" width="80%"></kbd></p>
 
@@ -782,7 +780,7 @@
 
 <a id="node-c0yn0on"></a>
 
-- **Kỳ vọng phân phối Beta**
+###### Kỳ vọng phân phối Beta
 
 <p align="center"><kbd><img src="assets/7z29vddk8kg.png" width="80%"></kbd></p>
 
@@ -898,7 +896,7 @@
 
 <a id="node-e2awcz9"></a>
 
-- **Các dạng phân phối Beta**
+###### Các dạng phân phối Beta
 
 <p align="center"><kbd><img src="assets/0k2k9rjosu59.png" width="80%"></kbd></p>
 
@@ -913,7 +911,7 @@
 
 <a id="node-aa12fia"></a>
 
-- **Hậu nghiệm Beta**
+###### Hậu nghiệm Beta
 
 <p align="center"><kbd><img src="assets/tyx5ibgh3a.png" width="80%"></kbd></p>
 
@@ -935,7 +933,7 @@
 
 <a id="node-uifqmjg"></a>
 
-- **Tham số Beta: Quan sát hiệu quả**
+###### Tham số Beta: Quan sát hiệu quả
 
 <p align="center"><kbd><img src="assets/knhcqy2swfr.png" width="80%"></kbd></p>
 
@@ -974,7 +972,7 @@
 
 <a id="node-8tz9iz5"></a>
 
-- **Học tuần tự Bayesian**
+###### Học tuần tự Bayesian
 
 <p align="center"><kbd><img src="assets/ri1npdd5alk.png" width="80%"></kbd></p>
 
@@ -1027,7 +1025,7 @@
 
 <a id="node-qdnf5ck"></a>
 
-- **Phân phối dự đoán Bayesian**
+###### Phân phối dự đoán Bayesian
 
 <p align="center"><kbd><img src="assets/isznezyxn6.png" width="80%"></kbd></p>
 
@@ -1186,7 +1184,7 @@
 
 <a id="node-odl8u2x"></a>
 
-- **Hội tụ Ước lượng Bayes và ML**
+###### Hội tụ Ước lượng Bayes và ML
 
 <p align="center"><kbd><img src="assets/8hcojb24aob.png" width="80%"></kbd></p>
 
@@ -1244,7 +1242,7 @@
 
 <a id="node-e6oik6z"></a>
 
-- **Giảm phương sai hậu nghiệm**
+###### Giảm phương sai hậu nghiệm
 
 <p align="center"><kbd><img src="assets/gfom81hu6do.png" width="80%"></kbd></p>
 
@@ -1295,7 +1293,7 @@
 
 <a id="node-uj4v7gz"></a>
 
-- **Luật Adam và Bayes**
+###### Luật Adam và Bayes
 
 <p align="center"><kbd><img src="assets/fagmx97j6jf.png" width="80%"></kbd></p>
 
@@ -1557,7 +1555,7 @@
 
 <a id="node-s6dn0fp"></a>
 
-- **Định luật Adam**
+###### Định luật Adam
 
 <p align="center"><kbd><img src="assets/5ag5oygy24b.png" width="80%"></kbd></p>
 
@@ -1570,7 +1568,7 @@
 
 <a id="node-gcen5bo"></a>
 
-- **Mối quan hệ phương sai Bayes**
+###### Mối quan hệ phương sai Bayes
 
 <p align="center"><kbd><img src="assets/o1ogkamytz8.png" width="80%"></kbd></p>
 
@@ -1637,7 +1635,7 @@
 >
 > vậy E[(E[Y|X] - EY)^2] = E[(E[Y|X] - E[E[Y|X]])^2] nhìn thì rối, nhưng nếu đặt cái random variable E[Y|X] là Z ta sẽ thấy nó là
 > E[(Z
-> - EZ)^2] nên đây chính là Var(Z).
+> \- EZ)^2] nên đây chính là Var(Z).
 >
 >
 >
