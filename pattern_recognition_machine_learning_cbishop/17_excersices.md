@@ -5,8 +5,6 @@
 ---
 <a id="node-f0vpfcw"></a>
 
-## 1.7 Excersices
-
 <br>
 
 <a id="node-ybrgb5b"></a>
