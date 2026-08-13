@@ -5,8 +5,6 @@
 ---
 <a id="node-mownx2l"></a>
 
-## 5.4 Order Statistic
-
 <br>
 
 <a id="node-dk2jmpe"></a>
@@ -234,7 +232,7 @@
 
 <a id="node-jp0yztu"></a>
 
-- **Tứ phân vị và thống kê thứ tự**
+###### Tứ phân vị và thống kê thứ tự
 
 <p align="center"><kbd><img src="assets/m0dy0jsul6l.png" width="80%"></kbd></p>
 
@@ -259,7 +257,7 @@
 
 <a id="node-rdrmu3r"></a>
 
-- **Xác suất thống kê thứ tự rời rạc**
+###### Xác suất thống kê thứ tự rời rạc
 
 <p align="center"><kbd><img src="assets/mury0pgm9f.png" width="80%"></kbd></p>
 
@@ -320,7 +318,7 @@
 
 <a id="node-4fy6f74"></a>
 
-- **Biến ngẫu nhiên nhị thức Y**
+###### Biến ngẫu nhiên nhị thức Y
 
 <p align="center"><kbd><img src="assets/nuh5i51zmy.png" width="80%"></kbd></p>
 
@@ -431,7 +429,7 @@
 
 <a id="node-6g7a7bo"></a>
 
-- **Thứ tự thống kê biến liên tục**
+###### Thứ tự thống kê biến liên tục
 
 <p align="center"><kbd><img src="assets/xd6wno9p5p.png" width="80%"></kbd></p>
 
@@ -467,7 +465,7 @@
 
 <a id="node-1zc19ro"></a>
 
-- **Chứng minh PDF thống kê thứ tự**
+###### Chứng minh PDF thống kê thứ tự
 
 <p align="center"><kbd><img src="assets/e2aib4xximo.png" width="80%"></kbd></p>
 
@@ -624,7 +622,7 @@
 
 <a id="node-ybdravy"></a>
 
-- **Thống kê thứ tự mẫu Uniform**
+###### Thống kê thứ tự mẫu Uniform
 
 <p align="center"><kbd><img src="assets/qnbe1ppt9db.png" width="80%"></kbd></p>
 
@@ -643,7 +641,7 @@
 
 <a id="node-xnvn76c"></a>
 
-- **PDF đồng thời thống kê thứ tự**
+###### PDF đồng thời thống kê thứ tự
 
 <p align="center"><kbd><img src="assets/6ro3z97ylfd.png" width="80%"></kbd></p>
 
@@ -662,7 +660,7 @@
 
 <a id="node-tshz3wp"></a>
 
-- **Khoảng và trung vị mẫu**
+###### Khoảng và trung vị mẫu
 
 <p align="center"><kbd><img src="assets/jm4vszvqdj.png" width="80%"></kbd></p>
 
