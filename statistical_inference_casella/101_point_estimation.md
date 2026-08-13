@@ -1,11 +1,9 @@
 # 10.1 Point Estimation
 
-📊 **Progress:** `42` Notes | `49` Screenshots | `22` AI Reviews
+📊 **Progress:** `42` Notes | `48` Screenshots | `22` AI Reviews
 
 ---
 <a id="node-2ixm3r0"></a>
-
-## 10.1 Point Estimation
 
 <br>
 
@@ -114,7 +112,7 @@
 
 <a id="node-4pzd0to"></a>
 
-- **Hội tụ xác suất thống kê**
+###### Hội tụ xác suất thống kê
 
 <p align="center"><kbd><img src="assets/2e24ssorah.png" width="80%"></kbd></p>
 
@@ -161,7 +159,7 @@
 
 <a id="node-yx0vqu9"></a>
 
-- **Tính nhất quán của Xbar**
+###### Tính nhất quán của Xbar
 
 <p align="center"><kbd><img src="assets/3cll4olsoft.png" width="80%"></kbd></p>
 
@@ -215,7 +213,7 @@
 
 <a id="node-u07qsmw"></a>
 
-- **Điều kiện vững ước lượng**
+###### Điều kiện vững ước lượng
 
 <p align="center"><kbd><img src="assets/rpgc3s7hqf.png" width="80%"></kbd></p>
 
@@ -322,7 +320,7 @@
 
 <a id="node-47kutgs"></a>
 
-- **Tính nhất quán của Xbar**
+###### Tính nhất quán của Xbar
 
 <p align="center"><kbd><img src="assets/zrgxsperwp.png" width="80%"></kbd></p>
 
@@ -370,7 +368,7 @@
 
 <a id="node-itwfbr1"></a>
 
-- **Định lý ước lượng nhất quán**
+###### Định lý ước lượng nhất quán
 
 <p align="center"><kbd><img src="assets/jv63p5nsi2p.png" width="80%"></kbd></p>
 
@@ -381,7 +379,7 @@
 
 <a id="node-d19dn75"></a>
 
-- **Tính nhất quán của MLE**
+###### Tính nhất quán của MLE
 
 <p align="center"><kbd><img src="assets/5qh7s62fw0s.png" width="80%"></kbd></p>
 
@@ -412,7 +410,7 @@
 
 <a id="node-e2xtw8s"></a>
 
-- **Tính nhất quán và hiệu quả**
+###### Tính nhất quán và hiệu quả
 
 <p align="center"><kbd><img src="assets/f5biezgmq1f.png" width="80%"></kbd></p>
 
@@ -436,7 +434,7 @@
 
 <a id="node-62aug4x"></a>
 
-- **Phương sai tiệm cận và giới hạn**
+###### Phương sai tiệm cận và giới hạn
 
 <p align="center"><kbd><img src="assets/u9uk00unw4.png" width="80%"></kbd></p>
 
@@ -602,7 +600,7 @@
 
 <a id="node-slkl4m8"></a>
 
-- **Example 10.1.10 Large-sample Mixture Variances**
+###### Example 10.1.10 Large-sample Mixture Variances
 
 <p align="center"><kbd><img src="assets/h6lw6s2q3q.png" width="80%"></kbd></p>
 
@@ -747,7 +745,7 @@
 
 <a id="node-bgijdqy"></a>
 
-- **Definition 10.1.11 Asymptotic Efficiency**
+###### Definition 10.1.11 Asymptotic Efficiency
 
 <p align="center"><kbd><img src="assets/nerfte3qyul.png" width="80%"></kbd></p>
 
@@ -828,7 +826,7 @@
 
 <a id="node-n1mqtrr"></a>
 
-- **Theorem 10.1.12 (Asymptotic efficiency of MLEs)**
+###### Theorem 10.1.12 (Asymptotic efficiency of MLEs)
 
 <p align="center"><kbd><img src="assets/yel24x532d9.png" width="80%"></kbd></p>
 
@@ -894,11 +892,9 @@
 
 <a id="node-ucl78tu"></a>
 
-- **Chứng minh Hiệu quả Ước lượng MLE**
+###### Chứng minh Hiệu quả Ước lượng MLE
 
 <p align="center"><kbd><img src="assets/tb0uu0e48t9.png" width="80%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/y2x6re1hg58.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Ở đây ta sẽ chứng minh τ(θ^) = θ^ là efficient sequence of estimator cho θ:
@@ -953,7 +949,11 @@
 >
 >
 >
-> ⇔ √n(θ^ - θ0)  ≈ \[-(1/√n)l'(θ0|**x**)\] / \[(1/n)l''(θ0|**x**)\] (đưa cái √n ở tử thành 1/√n ở mẫu, nhập với 1/√n có sẵn thành ra 1/n luôn)
+> ⇔ √n(θ^ - θ0)  ≈ \[-(1/√n)l'(θ0|**x**)\] / \[(1/n)l''(θ0|**x**)\] 
+>
+>
+>
+> (đưa cái √n ở tử thành 1/√n ở mẫu, nhập với 1/√n có sẵn thành ra 1/n luôn)
 >
 >
 >
@@ -1163,20 +1163,152 @@
 >
 >
 >
->  Quay lại làm tiếp sau.
+>  Tiếp, xét l''(θ|**X**) = ∂/∂θ \[∂/∂θ l'(θ|**X**)\]
+>
+>
+>
+> = ∂/∂θ \[∂/∂θ l'(θ|**X**)\]
+>
+>
+>
+> = ∂/∂θ \[∂/∂θ log f(**X**|θ)\]
+>
+>
+>
+> = ∂/∂θ \[∂/∂θ log Πi f(Xi|θ)\]
+>
+>
+>
+> = ∂/∂θ \[∂/∂θ Σi log f(Xi|θ)\]
+>
+>
+>
+> = ∂/∂θ \[Σi ∂/∂θ log f(Xi|θ)\]
+>
+>
+>
+> = Σi \[∂/∂θ ∂/∂θ log f(Xi|θ)\]
+>
+>
+>
+> = Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
+>
+>
+>
+> Vậy: l''(θ|**X**) = Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
+>
+>
+>
+> ⇔ (1/n) l''(θ|**X**) = (1/n) Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
+>
+>
+>
+> Và (1/n) Σi \[∂^2/∂θ^2 log f(Xi|θ)\] chính là một sample mean, nên theo LLN ta có:
+>
+>
+>
+> (1/n) Σi \[∂^2/∂θ^2 log f(Xi|θ)\] → (p) E\[∂^2/∂θ^2 log f(Xi|θ)\]
+>
+>
+>
+> Cũng là (1/n) l''(θ|**X**) → (p)E\[∂^2/∂θ^2 log f(Xi|θ)\]
+>
+>
+>
+> và ∂^2/∂θ^2 log f(Xi|θ), với tư cách là random variable bởi là hàm của Xi có phân phối f(x|θ), nên E\[∂^2/∂θ^2 log f(Xi|θ)\] sẽ là hàm của θ, nên ta sẽ ghi thêm chữ θ dưới chữ E để thể hiện điều này:
+>
+>
+>
+> (1/n) l''(θ|**X**) → (p)E\_θ\[∂^2/∂θ^2 log f(Xi|θ)\]
+>
+>
+>
+> Và do đó (1/n) l''(θ|**X**)|θ=θ0 → (p) E\_θ\[∂^2/∂θ^2 log f(Xi|θ)\]|θ=θ0
+>
+>
+>
+> hay (1/n) l''(θ0|**X**)→ (p) E\_θ0\[∂^2/∂θ^2 log f(Xi|θ)\]
+>
+>
+>
+> và theo lemma 7.3.11, xem link "Bổ đề Tính toán Hàm mũ", ta có: 
+>
+>
+>
+> E\_θ0\[∂^2/∂θ^2 log f(Xi|θ)\] = -E\_θ0\[(∂/∂θ log f(Xi|θ))^2\]
+>
+>
+>
+> Do đó: (1/n) l''(θ0|**X**)→ (p) -E\_θ0\[(∂/∂θ log f(Xi|θ))^2\], và đây chính là -I1(θ0)
+>
+>
+>
+> Vậy (1/n) l''(θ0|**X**)→ (p) - I1(θ0)
+>
+>
+>
+> ---
+>
+>
+>
+> Kết hợp các kết quả ta có:
+>
+>
+>
+> \[(1/√n) l'(θ|**X**) / √I1(θ0)\] × √I1(θ0) → (d) n(0, I1(θ0))
+>
+>
+>
+> (1/n) l''(θ0|**X**)→ (p) - I1(θ0)
+>
+>
+>
+> nên theo Slusky theorem:
+>
+>
+>
+> \[(1/√n) l'(θ|**X**) / √I1(θ0)\] × √I1(θ0) / (1/n) l''(θ0|**X**) → (d) n(0, I1(θ0)) / \[-I1(θ0)\]
+>
+>
+>
+> ⇔ (√n) l'(θ|**X**) /  l''(θ0|**X**) → (d) n(0, I1(θ0)) / \[-I1(θ0)\], 
+>
+>
+>
+> và vế phải, theo localtion scale theorem, chính là n(0, I1(θ0)/\[I1(θ0)\]^2) = n(0, 1/\[I1(θ0)\])
+>
+>
+>
+> Vậy (√n) l'(θ|**X**) /  l''(θ0|**X**) → (d) n(0, 1/\[I1(θ0)\])
+>
+>
+>
+> Quay lại kết qủa ở trên: √n(θ^ - θ0) ≈ \[-(1/√n)l'(θ0|**x**)\] / \[(1/n)l''(θ0|**x**)\] = - (√n) l'(θ|**X**) /  l''(θ0|**X**)
+>
+>
+>
+> Nên √n(θ^ - θ0) → (d) (-1) × n(0, 1/\[I1(θ0)\]), cũng là n(0, (-1)^2 × 1/\[I1(θ0)\]), cũng là n(0, 1/\[I1(θ0)\])
+>
+>
+>
+> Do đó ta đã chứng minh xong:
+>
+>
+>
+> √n(θ^ - θ0) → n(0, 1/\[I1(θ0)\]), giúp kết luận: phương sai tiệm cận của θ^ là CRLB.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+> **🤖 AI Feedback** — ✅ Score: **98/100**
 >
-> Ghi chép của bạn rất xuất sắc, giải thích vô cùng chi tiết và trực quan từ các bước biến đổi đại số đến bản chất toán học của Fisher Information và định lý giới hạn trung tâm. Tuy nhiên, bài viết vẫn còn dang dở ở phần cuối, chưa hoàn thiện chứng minh sự hội tụ của mẫu số theo Luật số lớn để đi đến kết luận cuối cùng của định lý.
+> Bài viết cực kỳ xuất sắc, giải thích rất chi tiết từng bước biến đổi toán học và bổ sung đầy đủ các cơ sở lý thuyết (CLT, WLLN, Slutsky, Leibniz rule) mà sách giáo khoa lược bớt. Bạn chỉ cần lưu ý ký hiệu đồng nhất giữa thông tin Fisher của 1 quan sát $I_1(\theta_0)$ và của cả mẫu để hoàn thiện hơn.
 
-**🔗 See also:** [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [Stronger Central Limit Theorem](./55_convergence_concepts.md#node-yngnkwh) · [Luật số lớn yếu WLLN](./55_convergence_concepts.md#node-j5m3pa1)
+**🔗 See also:** [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [Stronger Central Limit Theorem](./55_convergence_concepts.md#node-yngnkwh) · [Luật số lớn yếu WLLN](./55_convergence_concepts.md#node-j5m3pa1) · [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4)
 
 <br>
 
 <a id="node-v1s5jks"></a>
 
-- **Chuẩn tiệm cận, nhất quán, hiệu quả**
+###### Chuẩn tiệm cận, nhất quán, hiệu quả
 
 <p align="center"><kbd><img src="assets/hplvktj6ciw.png" width="80%"></kbd></p>
 
@@ -1189,7 +1321,7 @@
 
 <a id="node-iwgmm5t"></a>
 
-- **10.1.3 Calculations and Comparisons**
+###### 10.1.3 Calculations and Comparisons
 
 <p align="center"><kbd><img src="assets/9pfq0mb66la.png" width="80%"></kbd></p>
 
@@ -1390,7 +1522,7 @@
 
 <a id="node-2mwxabg"></a>
 
-- **Delta Method Variance Approximation**
+###### Delta Method Variance Approximation
 
 <p align="center"><kbd><img src="assets/01kuzyikwazi.png" width="80%"></kbd></p>
 
@@ -1552,7 +1684,7 @@
 
 <a id="node-cpdjv2x"></a>
 
-- **Theorem 10.1.6 on Consistent Estimators**
+###### Theorem 10.1.6 on Consistent Estimators
 
 <p align="center"><kbd><img src="assets/p70gp9yp7qr.png" width="80%"></kbd></p>
 
@@ -1633,7 +1765,7 @@
 
 <a id="node-ytulpwg"></a>
 
-- **Approximate binomial variance**
+###### Approximate binomial variance
 
 <p align="center"><kbd><img src="assets/vbhae5v8tcq.png" width="80%"></kbd></p>
 
@@ -1720,7 +1852,7 @@
 
 <a id="node-ct81g3i"></a>
 
-- **Asymptotic Efficiency of Estimator p̂**
+###### Asymptotic Efficiency of Estimator p̂
 
 <p align="center"><kbd><img src="assets/i4lgaqfthyn.png" width="80%"></kbd></p>
 
@@ -1902,7 +2034,7 @@
 
 <a id="node-suvnj6h"></a>
 
-- **Asymptotic Efficiency of Estimator p̂ (bản sao)**
+###### Asymptotic Efficiency of Estimator p̂ (bản sao)
 
 <p align="center"><kbd><img src="assets/rp734ayvn4.png" width="80%"></kbd></p>
 
@@ -2010,7 +2142,7 @@
 
 <a id="node-13p5sy2"></a>
 
-- **Section 10.1 Point Estimation**
+###### Section 10.1 Point Estimation
 
 <p align="center"><kbd><img src="assets/f2f54o58ynm.png" width="80%"></kbd></p>
 
@@ -2285,7 +2417,7 @@
 
 <a id="node-0d20ljz"></a>
 
-- **MLE Variance Approximation Limitations**
+###### MLE Variance Approximation Limitations
 
 <p align="center"><kbd><img src="assets/depno1k7k9o.png" width="80%"></kbd></p>
 
@@ -2300,7 +2432,7 @@
 
 <a id="node-irc30cd"></a>
 
-- **Example 10.1.15 Bernoulli Variance**
+###### Example 10.1.15 Bernoulli Variance
 
 <p align="center"><kbd><img src="assets/q9l4csikf6.png" width="80%"></kbd></p>
 
@@ -2311,7 +2443,7 @@
 
 <a id="node-2y7vyqf"></a>
 
-- **Asymptotic Relative Efficiency**
+###### Asymptotic Relative Efficiency
 
 <p align="center"><kbd><img src="assets/qf9p6fgkwop.png" width="80%"></kbd></p>
 
@@ -2373,7 +2505,7 @@
 
 <a id="node-eej3duv"></a>
 
-- **Example 10.1.17 Poisson Estimators**
+###### Example 10.1.17 Poisson Estimators
 
 <p align="center"><kbd><img src="assets/ontzebnie1s.png" width="80%"></kbd></p>
 
@@ -2437,7 +2569,7 @@
 
 <a id="node-jiyzyog"></a>
 
-- **MLE of e-lambda with Delta Method**
+###### MLE of e-lambda with Delta Method
 
 <p align="center"><kbd><img src="assets/5w17dcipotv.png" width="80%"></kbd></p>
 
@@ -2621,13 +2753,13 @@
 >
 > Bài giải này cực kỳ chính xác và chi tiết, không chỉ nhắc lại các công thức mà còn chứng minh từng bước một. Độ sâu phân tích vượt xa thông tin được cung cấp trong hình ảnh, thể hiện sự hiểu biết vững chắc về các khái niệm.
 
-**🔗 See also:** [Chứng minh tính bất biến MLE](./72_method_of_finding_estimators.md#node-6d46egj) · [Stronger Central Limit Theorem](./55_convergence_concepts.md#node-yngnkwh)
+**🔗 See also:** [Chứng minh tính bất biến MLE](./72_method_of_finding_estimators.md#node-6d46egj) · [Stronger Central Limit Theorem](./55_convergence_concepts.md#node-yngnkwh) · [3.1.0 Linear Regression and Basis Functions *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/310_linear_regression_and_basis_functions.md#node-djmqx0o)
 
 <br>
 
 <a id="node-wgjpxiz"></a>
 
-- **Asymptotic Relative Efficiency Analysis**
+###### Asymptotic Relative Efficiency Analysis
 
 <p align="center"><kbd><img src="assets/2q7cynwhz6u.png" width="80%"></kbd></p>
 
@@ -2703,7 +2835,7 @@
 
 <a id="node-dv9sls8"></a>
 
-- **Estimating a Gamma Mean**
+###### Estimating a Gamma Mean
 
 <p align="center"><kbd><img src="assets/qv079363zf8.png" width="80%"></kbd></p>
 
@@ -2722,7 +2854,7 @@
 
 <a id="node-gumecun"></a>
 
-- **Bootstrap Standard Errors**
+###### Bootstrap Standard Errors
 
 <p align="center"><kbd><img src="assets/pjzm3ffj69.png" width="80%"></kbd></p>
 
@@ -2752,7 +2884,7 @@
 
 <a id="node-f5aaasl"></a>
 
-- **Bootstrapping a variance**
+###### Bootstrapping a variance
 
 <p align="center"><kbd><img src="assets/0tths2o6fcvl.png" width="80%"></kbd></p>
 
@@ -2838,7 +2970,7 @@
 
 <a id="node-3dm7cfv"></a>
 
-- **Point Estimation: Variance Estimation**
+###### Point Estimation: Variance Estimation
 
 <p align="center"><kbd><img src="assets/rozddooqopg.png" width="80%"></kbd></p>
 
@@ -2978,7 +3110,7 @@
 
 <a id="node-6duo97a"></a>
 
-- **Bootstrap Mean and Variance**
+###### Bootstrap Mean and Variance
 
 <p align="center"><kbd><img src="assets/h8pcm17myto.png" width="80%"></kbd></p>
 
@@ -3162,7 +3294,7 @@
 
 <a id="node-uvh5j60"></a>
 
-- **Bootstrap Variance Formula**
+###### Bootstrap Variance Formula
 
 <p align="center"><kbd><img src="assets/84vigtv9ler.png" width="80%"></kbd></p>
 
@@ -3286,7 +3418,7 @@
 
 <a id="node-1gfsb6x"></a>
 
-- **Bootstrapping a Binomial Variance**
+###### Bootstrapping a Binomial Variance
 
 <p align="center"><kbd><img src="assets/jlmeoqita8.png" width="80%"></kbd></p>
 
@@ -3568,7 +3700,7 @@
 
 <a id="node-z5s820i"></a>
 
-- **Bootstrap Variance Estimation**
+###### Bootstrap Variance Estimation
 
 <p align="center"><kbd><img src="assets/2qw9scvza7a.png" width="80%"></kbd></p>
 
@@ -3636,7 +3768,7 @@
 
 <a id="node-fu6c70x"></a>
 
-- **Bootstrap and Delta Method Variances**
+###### Bootstrap and Delta Method Variances
 
 <p align="center"><kbd><img src="assets/32zq1q91v81.png" width="80%"></kbd></p>
 
@@ -3653,7 +3785,7 @@
 
 <a id="node-gy8w62g"></a>
 
-- **Introduction to Parametric Bootstrap**
+###### Introduction to Parametric Bootstrap
 
 <p align="center"><kbd><img src="assets/x0f4ebkkrms.png" width="80%"></kbd></p>
 
@@ -3705,7 +3837,7 @@
 
 <a id="node-s9n2ly7"></a>
 
-- **Example 10.1.22 Parametric Bootstrap**
+###### Example 10.1.22 Parametric Bootstrap
 
 <p align="center"><kbd><img src="assets/eatzp1p4q1.png" width="80%"></kbd></p>
 
@@ -3841,7 +3973,7 @@
 
 <a id="node-lrc4e54"></a>
 
-- **Consistency of the Bootstrap**
+###### Consistency of the Bootstrap
 
 <p align="center"><kbd><img src="assets/viy5ghhxg8.png" width="80%"></kbd></p>
 
