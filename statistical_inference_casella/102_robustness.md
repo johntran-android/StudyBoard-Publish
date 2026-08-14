@@ -1,6 +1,6 @@
 # 10.2 Robustness
 
-📊 **Progress:** `14` Notes | `17` Screenshots | `14` AI Reviews
+📊 **Progress:** `16` Notes | `20` Screenshots | `16` AI Reviews
 
 ---
 <a id="node-o8s85wd"></a>
@@ -1431,6 +1431,250 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Ghi chú giải thích rất chính xác và dễ hiểu bản chất toán học của phân phối tiệm cận đối với Huber estimator từ công thức tổng quát của M-estimator. Để hoàn thiện hơn, bạn có thể bổ sung cách chuyển đổi các tích phân thành xác suất dựa trên tính đối xứng của hàm mật độ.
+
+<br>
+
+<a id="node-58hmrw7"></a>
+
+###### ARE of the Huber Estimator
+
+<p align="center"><kbd><img src="assets/cxk19gyg8x5.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là khi đã có công thức phương sai tiệm cận của Huber estimator, ta sẽ thấy nó giống như một sự thỏa hiệp (compromise) giữa sample mean và sample median.
+>
+>
+>
+> Khi nhìn vào bảng so sánh chỉ số ARE (nhớ là, ARE(W, U) ở đây sẽ luôn là Avar(U)/Avar(W)) ta sẽ thấy khi so với sample mean (mà thằng estimator này chính là MLE của normal) thì ta thấy khi distribution thật sự là normal, logistic thì Huber estimator kém hơn sample mean, nhưng vẫn tốt hơn sample median. và khi chuyển dần sang các distribution như doubld exponential, nơi sample mean kém dần và sample median tốt dần thì Huber estimator lại tốt hơn sample mean dù không bằng sample median.
+>
+>
+>
+> Do đó một kết luận đáng nhớ là: Cho dù là distribution nào (distribution thật sự là gì) thì Huber nó cũng có chất lượng gần bằng cái MLE của distribution đó. Điều này giúp thỏa tiêu chí 1 của roburstness: là dưới giả định về một distribution, thì estimator phải cũng là một estimator tương đối hiệu quả.
+>
+>
+>
+> Ví dụ, giả sử giả định phân phối thật là normal, thì Huber vẫn không kém mấy so với thằng tốt nhất là sample mean.
+>
+>
+>
+> Nhưng vì nếu phân phối thật là cái khác, ví dụ double exponential, Huber vẫn tốt, do đó, đồng nghĩa là, trong trường hợp gỉa định normal là sai, thì thằng sample mean sẽ gãy, nhưng thằng Huber lại vẫn khá, đây chính là thỏa tiêu chí 2 và 3 của roburstness - khi giả định sai chút đỉnh estimator không bị ảnh hưởng nhiều và khi gỉa định là sai hoàn toàn thì estimator không trở thành thảm họa.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **92/100**
+>
+> Ghi chú thể hiện sự hiểu bài rất sâu sắc khi liên hệ chính xác các kết quả số liệu với các tiêu chí của tính vững (robustness). Điểm cần lưu ý duy nhất là với phân phối Logistic, Huber estimator thực chất tốt hơn sample mean một chút (ARE = 1.08 > 1) chứ không phải kém hơn.
+
+<br>
+
+<a id="node-wzfdc2h"></a>
+
+###### Asymptotic Variance of M-Estimators
+
+<p align="center"><kbd><img src="assets/cz64k83t5fn.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/duelkp9r149.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là, sau khi đã thấy trong việc so sánh ARE thực tế ở trên rằng M-estimator là sự thỏa hiệp giữa robustness và efficiency, thì phần này ta sẽ xem kĩ hơn để khẳng định rằng nếu chọn M-estimator để có thêm tính roburstness, thì ta sẽ phải đánh đổi tính efficiency. Nói cách khác, ở đây ta sẽ chứng minh là M-estimator luôn kém efficient hơn MLE (thông qua ARE sẽ luôn nhỏ hơn hoặc bằng 1)
+>
+>
+>
+> Đầu tiên lôi lại kết quả ta đã có ở trên:
+>
+>
+>
+> √n (θ^M - θ0) converge in distribution về n(0, E\_θ0\[(ψ(Xi - θ0))^2\] / {E\_θ0\[ψ'(Xi - θ0)\]}^2) 
+>
+>
+>
+> và từ cái này ta có Avar(θ^M) = E\_θ0\[(ψ(Xi - θ0))^2\] / {E\_θ0\[ψ'(Xi - θ0)\]}^2
+>
+>
+>
+> Tiếp theo gs nhìn vào mẫu số, và xem xét cái cục trong bình phương E\_θ0\[ψ'(Xi - θ0)\], bỏ kí hiệu θ0 đi, dùng θ (ý là dùng θ thay vì θ0 để chỉ true parameter)
+>
+>
+>
+> Bằng vài phép biến đổi tích phân, ta có E\_θ\[ψ'(X - θ0)\] = E\_θ\[ψ(X - θ)l'(θ|X)\]
+>
+>
+>
+>  Và như vậy ARE(θ^M, θ^) = E\_θ(\[ψ(X - θ)l'(θ|X)\]^2) / E\_θ(\[ψ'(Xi - θ)\]^2) E\_θ(\[l'(X-θ)\]^2)
+>
+>
+>
+> và cái này có dạng \[E(AB)\]^2 / E\[(A^2) (B^2)\], nên theo bất đẳng thức Cauchy: \[E(AB)\]^2 ≤ E\[(A^2) (B^2)\] khiến tỉ số này luôn nhỏ hơn hoặc bằng 1. Từ đó kết luận là: M-estimator luôn kém hiệu quả hơn MLE. Và nó chỉ bằng khi hàm ψ tỉ lệ thuận với l' (cái này được giao trong bài tập)
+>
+>
+>
+> ---
+>
+>
+>
+> Sơ lược là vậy, giờ ta sẽ làm rõ vài ý trên
+>
+>
+>
+> Vì sao E\_θ\[ψ'(X - θ)\] = E\_θ\[ψ(X - θ)l'(θ|X)\].
+>
+>
+>
+> Dùng định nghĩa của kì vọng và LOTUS thôi:
+>
+>
+>
+> E\_θ\[ψ'(X - θ)\] là kì vọng của random variable ψ'(X - θ).
+>
+>
+>
+> Nếu nhìn nó dưới góc độ là hàm của random variable X thì ta sẽ có thể dùng LOTUS để tính E\_θ\[ψ'(X - θ)\]
+>
+>
+>
+> (Review nhanh LOTUS cho phép nếu có g(X) và X \~ f(x) thì Eg(X) = ∫g(x)f(x)dx)
+>
+>
+>
+> ⇒ E\_θ\[ψ'(X - θ)\] = ∫ψ'(x - θ) f(x|θ) dx 
+>
+>
+>
+> mà pdf của X là f(x-θ) (xem lại đề bài của Example 10.2.6, nói rằng X1,...Xn iid có pdf f(x-θ), nên:
+>
+>
+>
+> E\_θ\[ψ'(X - θ)\] = ∫ψ'(x - θ) f(x-θ) dx
+>
+>
+>
+> Tiếp, nói về ψ'(x - θ): Ở đây, rất dễ sai nếu cho rằng ψ'(x - θ) là ∂/∂θ(x-θ). Phải hiểu nó là hàm số đạo hàm của hàm ψ(u), tức d/du ψ(u), và evaluate tại x - θ. Nói cách khác ψ'(x - θ) luôn phải hiểu là ψ'(u)|u=x-θ = d/du ψ(u)|u=x-θ = d/d(x-θ) ψ(x-θ).
+>
+>
+>
+> Như vậy ψ'(x - θ) = ∂/∂(x - θ) \[ψ(x - θ)\].
+>
+>
+>
+> mà ∂/∂θ ψ(x - θ) = \[∂/∂(x-θ) ψ(x - θ)\]\[∂/∂θ (x - θ)\] = \[∂/∂(x-θ) ψ(x - θ)\](-1) theo chain rule
+>
+>
+>
+> nên ⇒ ∂/∂(x-θ) ψ(x - θ) = -∂/∂θ ψ(x - θ)
+>
+>
+>
+> ⇒ E\_θ\[ψ'(X - θ)\] = -∫\[∂/∂θ ψ(x - θ)\] f(x-θ)dx, giúp ta có cái hàng đầu tiên trong sách.
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp theo ta sẽ xét d/dθ ∫ψ(x-θ)f(x-θ)dx, còn nhớ trong mấy chương đầu, có lúc ta đã học một theorem **Leibniz's rule** có thể đổi chỗ đạo hàm và tích phân (xem crosslink "Đạo hàm dưới dấu tích phân"), nên ta có:
+>
+>
+>
+> ∫ d/dθ \[ψ(x-θ)f(x-θ)\] dx
+>
+>
+>
+> dùng tính chất differentiation product rule ((uv)' = u'v + u(v'), ta có:
+>
+>
+>
+> ∫ d/dθ \[ψ(x-θ)f(x-θ)\]dx = ∫\[d/dθ ψ(x-θ)\]f(x-θ)dx + ∫ ψ(x-θ) \[d/dθ f(x-θ)\] dx
+>
+>
+>
+> Mà xái cục trong vế trái ∫ψ(x-θ)f(x-θ)dx, = ∫ψ(x-θ)f(x-θ)d(x-θ), thì lại cũng chính là E\[ψ(X-θ)\]
+>
+>
+>
+> và nó phải bằng 0 theo định nghĩa của M-estimator (xem lại đoạn "Now we assume that θ0 satisfies E\_θ0\[ψ(X − θ0)\] = 0 (which is usually taken as the definition of θ0)")
+>
+>
+>
+> Do đó 0 = ∫\[d/dθ ψ(x-θ)\]f(x-θ)dx + ∫ ψ(x-θ) \[d/dθ f(x-θ)\] dx
+>
+>
+>
+> ⇔ -∫\[d/dθ ψ(x-θ)\]f(x-θ)dx = ∫ ψ(x-θ) \[d/dθ f(x-θ)\] dx
+>
+>
+>
+> và nhân và chia phần trong tích phân của vế phải cho f(x-θ):
+>
+>
+>
+> .. = ∫ ψ(x-θ) \[d/dθ f(x-θ)\] dx = ∫ ψ(x-θ) \[1/f(x-θ)\] \[d/dθ f(x-θ)\] f(x-θ) dx
+>
+>
+>
+> thì \[1/f(x-θ)\] \[d/dθ f(x-θ)\] chính là d/dθ (log f(x-θ))
+>
+>
+>
+> = ∫ ψ(x-θ) \[d/dθ log f(x-θ)\] f(x-θ) dx
+>
+>
+>
+> ---
+>
+>
+>
+> Đến đây, với việc ta nhớ rằng f(x-θ) chính là f(x|θ), nên cũng là hàm likelihood L(θ|x), thành ra d/dθ log f(x-θ) chính là d/dθ log L(θ|x) = d/dθ l(θ|x) = l'(θ|x)
+>
+>
+>
+> Do đó ∫ ψ(x-θ) \[d/dθ log f(x-θ)\] f(x-θ) dx = ∫ ψ(x-θ) l'(θ|x) f(x-θ) dx
+>
+>
+>
+> và lại triệu hồi LOTUS, giúp ta thấy cái này chính là E\[ψ(X-θ) l'(θ|X)\], và viết thêm θ ở dưới chân E để thể hiện đây là hàm theo θ: E\_θ\[ψ(X-θ) l'(θ|X)\]. Đến đây ta có kết quả đóng khung màu tím.
+>
+>
+>
+> ---
+>
+>
+>
+> Như vậy quay lại công thức Avar(θ^M) = E\_θ\[(ψ(Xi - θ))^2\] / {E\_θ\[ψ'(Xi - θ)\]}^2
+>
+>
+>
+> thay mẫu số Eθ\[ψ'(X-θ)\] = E\_θ\[ψ(X-θ) l'(θ|X)\] ta có:
+>
+>
+>
+> Avar(θ^M) = E\_θ\[(ψ(Xi - θ))^2\] / {E\_θ\[ψ(X-θ) l'(θ|X)\]}^2 
+>
+>
+>
+> Còn Avar(θ^), tức sample mean, như ta đã chứng minh, chính là CRLB, tức 1/I1(θ)
+>
+>
+>
+> ...
+>
+>
+>
+> = 1/E\[l'(θ|X)^2\]
+>
+>
+>
+> Do đó ARE(θ^M, θ^) =  (E\_θ\[ψ(X - θ)l'(θ|X)\])^2 / E\_θ0{\[ψ'(Xi - θ0)\]^2} E\_θ(\[l'(X-θ)\]^2)
+>
+>
+>
+> Tới đây theo lập đã nói, ta kết luận.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **90/100**
+>
+> Bài viết giải thích rất chi tiết và chính xác quá trình biến đổi chứng minh đẳng thức đạo hàm bằng LOTUS và luật Leibniz. Tuy nhiên, bạn có một lỗi gõ nhỏ ở công thức tính ARE cuối bài khi viết nhầm $\psi'$ thay vì $\psi$ ở mẫu số ($E_\theta[\psi(X-\theta)^2]$).
+
+**🔗 See also:** [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4) · [Giá trị kỳ vọng và LOTUS](./22_expected_value.md#node-p3585vu) · [Đạo hàm dưới dấu tích phân](./24_differentiating_under_integral.md#node-817xtmo)
 
 <br>
 
