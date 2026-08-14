@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1786660842056,
+  "publishedAt": 1786743430695,
   "sections": [
     {
       "title": "📋 Overview",
@@ -269,8 +269,8 @@
     {
       "title": "3.4 Bayesian Model Comparison",
       "path": "pattern_recognition_machine_learning_cbishop/34_bayesian_model_comparison.md",
-      "noteCount": 10,
-      "imageCount": 14
+      "noteCount": 11,
+      "imageCount": 15
     },
     {
       "title": "Appendix C. Matrices",
@@ -285,6 +285,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 358,
-  "totalImages": 523
+  "totalNotes": 359,
+  "totalImages": 524
 }
