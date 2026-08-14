@@ -2395,7 +2395,7 @@
 >
 > E_θ[(∂/∂θ log f(X|θ))^2] = - E_θ[∂^2/∂θ^2 log f(X|θ)]
 
-**🔗 See also:** [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu)
+**🔗 See also:** [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Asymptotic Variance of M-Estimators](./102_robustness.md#node-wzfdc2h)
 
 <br>
 
