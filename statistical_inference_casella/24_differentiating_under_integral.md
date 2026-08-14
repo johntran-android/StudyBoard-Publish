@@ -36,6 +36,8 @@
 > FTC1 thì cho biết, nếu G(x) là nguyên hàm của f(x): Tức d/dx G(x) = f(x)
 > thì ∫a:b f(x)dx = G(b) - G(a)
 
+**🔗 See also:** [Asymptotic Variance of M-Estimators](./102_robustness.md#node-wzfdc2h)
+
 <br>
 
 <a id="node-or3ajbc"></a>
@@ -47,16 +49,15 @@
 <p align="center"><kbd><img src="assets/jylfxjx3mf.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ta sẽ học về Leibnitz rule: 
+> Ta sẽ học về Leibnitz rule:
 >
 >
 >
-> Đại khái là nếu có f(x, θ), a(θ), b(θ) đều khả vi đối với θ (tức tồn tại
-> đạo hàm đối với θ) thì
+> Đại khái là nếu có f(x, θ), a(θ), b(θ) đều khả vi đối với θ (tức tồn tại đạo hàm đối với θ) thì
 >
 >
 >
-> d/dθ ∫a(θ):b(θ) f(x,θ)dx 
+> d/dθ ∫a(θ):b(θ) f(x,θ)dx
 >
 >
 >
@@ -72,15 +73,11 @@
 >
 >
 >
-> Khúc dưới chưa hiểu lắm, nhưng đại khái ý là gs nêu vấn đề rằng
-> liệu có thể biện minh (justify) cho việc đổi vị trí của tích phân và
-> đạo hàm như trong theorem trên hay không.
+> Khúc dưới chưa hiểu lắm, nhưng đại khái ý là gs nêu vấn đề rằng liệu có thể biện minh (justify) cho việc đổi vị trí của tích phân và đạo hàm như trong theorem trên hay không.
 >
 >
 >
-> Thì ông nói câu hỏi này thực chất là liệu có thể biện minh cho việc
-> đổi vị trí của tích phân và limit không, vì bản chất đạo hàm chỉ là
-> một dạng đặc biệt của limit.
+> Thì ông nói câu hỏi này thực chất là liệu có thể biện minh cho việc đổi vị trí của tích phân và limit không, vì bản chất đạo hàm chỉ là một dạng đặc biệt của limit.
 >
 >
 >
@@ -88,22 +85,19 @@
 >
 >
 >
-> MIT 18.01 đã học định nghĩa của đạo hàm (hàm đơn biến f(x))
-> evaluate tại x: d/dx f(x) | x, hay f'(x):
+> MIT 18.01 đã học định nghĩa của đạo hàm (hàm đơn biến f(x)) evaluate tại x: d/dx f(x) | x, hay f'(x):
 >
 >
 >
-> lim δx → 0 [f(x + δx) - f(x)] / δx , tức là giá trị của difference quotient
-> tại limit của δx
+> lim δx → 0 \[f(x + δx) - f(x)\] / δx , tức là giá trị của difference quotient tại limit của δx
 >
 >
 >
-> Với hàm đa biến f(x, θ) ta cũng có tương tự, partial derivative của
-> f wrt θ evaluate tại x, θ  sẽ được định nghĩa là:
+> Với hàm đa biến f(x, θ) ta cũng có tương tự, partial derivative của f wrt θ evaluate tại x, θ sẽ được định nghĩa là:
 >
 >
 >
-> ∂/∂θ f(x, θ) = lim δ → 0 [f(x, θ + δ) - f(x, θ)] / δ
+> ∂/∂θ f(x, θ) = lim δ → 0 \[f(x, θ + δ) - f(x, θ)\] / δ
 >
 >
 >
@@ -119,7 +113,7 @@
 >
 >
 >
-> **d/dθ ∫-inf:inf f(x, θ)dx:** 
+> **d/dθ ∫-inf:inf f(x, θ)dx:**
 >
 >
 >
@@ -127,24 +121,23 @@
 >
 >
 >
-> = lim δ → 0 [∫-inf:inf f(x, θ + δ)dx - ∫-inf:inf f(x, θ)dx] / δ 
+> = lim δ → 0 \[∫-inf:inf f(x, θ + δ)dx - ∫-inf:inf f(x, θ)dx\] / δ
 >
 >
 >
-> = **lim δ → 0 [∫-inf:inf [f(x, θ + δ) - f(x, θ)]dx] / δ** 
+> = **lim δ → 0 \[∫-inf:inf \[f(x, θ + δ) - f(x, θ)\]dx\] / δ**
 >
 >
 >
-> Còn **∫-inf:inf ∂/∂θ f(x, θ)dx:** 
+> Còn **∫-inf:inf ∂/∂θ f(x, θ)dx:**
 >
 >
 >
-> thì lại áp dụng định nghĩa đạo hàm là
-> một cái lim vào cái integrant:
+> thì lại áp dụng định nghĩa đạo hàm là một cái lim vào cái integrant:
 >
 >
 >
-> **= ∫-inf:inf lim δ → 0 [f(x, θ + δ) - f(x, θ)] / δ** 
+> **= ∫-inf:inf lim δ → 0 \[f(x, θ + δ) - f(x, θ)\] / δ**
 >
 >
 >
@@ -152,11 +145,11 @@
 >
 >
 >
-> lim δ → 0 [∫-inf:inf [f(x, θ + δ) - f(x, θ)]dx] / δ BẰNG CÁI
+> lim δ → 0 \[∫-inf:inf \[f(x, θ + δ) - f(x, θ)\]dx\] / δ BẰNG CÁI
 >
 >
 >
-> ∫-inf:inf lim δ → 0 [f(x, θ + δ) - f(x, θ)] / δ 
+> ∫-inf:inf lim δ → 0 \[f(x, θ + δ) - f(x, θ)\] / δ
 >
 >
 >
@@ -164,17 +157,15 @@
 >
 >
 >
-> d/dθ ∫-inf:inf f(x, θ)dx BẰNG ∫-inf:inf ∂/∂θ f(x, θ)dx 
+> d/dθ ∫-inf:inf f(x, θ)dx BẰNG ∫-inf:inf ∂/∂θ f(x, θ)dx
 >
 >
 >
-> Có nghĩa là, nếu chứng minh được việc ta có thể đổi chỗ giữa
-> tích phân là limit, thì sẽ biên minh được cho việc đổi chỗ giữa
-> tích phân và đạo hàm
+> Có nghĩa là, nếu chứng minh được việc ta có thể đổi chỗ giữa tích phân là limit, thì sẽ biên minh được cho việc đổi chỗ giữa tích phân và đạo hàm
 >
 >
 >
-> Và để chứng mih cái này gs cho rằng cần công tục measure theoru
+> Và để chứng minh cái này gs cho rằng cần công tục measure theory
 
 <br>
 
