@@ -1,6 +1,6 @@
 {
   "title": "Statistical Inference - Casella",
-  "publishedAt": 1786644297022,
+  "publishedAt": 1786726976479,
   "sections": [
     {
       "title": "📋 Overview",
@@ -287,10 +287,10 @@
     {
       "title": "10.2 Robustness",
       "path": "statistical_inference_casella/102_robustness.md",
-      "noteCount": 14,
-      "imageCount": 17
+      "noteCount": 16,
+      "imageCount": 20
     }
   ],
-  "totalNotes": 840,
-  "totalImages": 1097
+  "totalNotes": 842,
+  "totalImages": 1100
 }
