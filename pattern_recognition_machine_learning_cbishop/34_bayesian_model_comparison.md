@@ -1,6 +1,6 @@
 # 3.4 Bayesian Model Comparison
 
-📊 **Progress:** `10` Notes | `14` Screenshots | `10` AI Reviews
+📊 **Progress:** `11` Notes | `15` Screenshots | `11` AI Reviews
 
 ---
 <a id="node-8mjaf9g"></a>
@@ -870,6 +870,56 @@
 > Ghi chú rất xuất sắc, giải thích chính xác và đào sâu bản chất toán học khi dùng LOTUS để chứng minh kỳ vọng của log Bayes factor chính là phân kỳ KL. Để hoàn thiện hơn, bạn nên lưu ý ghi rõ 'log Bayes factor' thay vì chỉ 'Bayes factor' ở các bước biến đổi cuối để tránh nhầm lẫn thuật ngữ.
 
 **🔗 See also:** [Model Evidence and Bayes Factor](#node-5ef8t75) · [KL-divergence và tính chất](./16_information_theory.md#node-hh2wohi)
+
+<br>
+
+<a id="node-w40fj3i"></a>
+
+<p align="center"><kbd><img src="assets/xub7au8bux.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, cái đoạn cuối cùng đại ý giáo sư nói thế này, là mình đã thấy cái cách tiếp cận Bayesian nó giúp mình tránh cái vấn đề overfitting rồi, và nó cũng giúp mình có thể so sánh các cái mô hình khác nhau, những cái model khác nhau chỉ cần dựa trên cái bộ dữ liệu huấn luyện thôi, chứ không cần phải có cái gọi là validation set, hay là dùng cái kỹ thuật cross-validation giống như cái cách tiếp cận cổ điển nữa. Tuy nhiên là ông nói rằng dù là cái cách tiếp cận theo Bayesian thì mình vẫn phải đặt ra một số cái giả định nào đó về mô hình, và nếu giả định này sai thì mình sẽ vẫn dẫn đến kết quả sai. Cụ thể là nó rất là bị nhạy cảm với cái phân phối tiên nghiệm (prior) của tham số.
+>
+>
+>
+> Mình nên hiểu thế này: cái model evidence như đã nói ở những cái note trước đó, nó mang ý nghĩa giống như là độ hợp lý của một cái mô hình xác suất, tức là của một cái model đó ℳi, khi mà cái dữ liệu quan sát được là 𝒟. Tuy nhiên là mình cũng đã hiểu rằng, nói về ℳi thì còn phải nói về giá trị tham số của nó w. Do đó, ở đây, ta sẽ lấy trung bình trên mọi cái giá trị khả dĩ của tham số w của cái mô hình đó.
+>
+>
+>
+> f(𝒟|ℳi) = ∫f(𝒟|ℳi, **w**) f(**w**|ℳi) d**w**
+>
+>
+>
+> Như vậy  thì **đương nhiên là nó sẽ phụ thuộc vào cái phân phối tiên nghiệm** f(**w**|ℳ) và cái giả định này nó sẽ ảnh hưởng đến cái model evidence, nếu chọn một phân phối tiên nghiệm không hợp lệ về toán học (gọi là improper), ví dụ, ta muốn thể hiện sự không biết gì về giá trị của w, và dùng constant để thể hiện chuyện này, thì đây sẽ improper (vì nó không thỏa các tiên đề xác suất, tích phân không bằng 1), khi đó, cái model evident cũng sẽ không được định nghĩa đúng về toán học.
+>
+>
+>
+> (Điều này cũng được giải thích khi ta thấy model evidence xuất hiện trong: 
+>
+>
+>
+> f(**w**|ℳi, 𝒟) = f(𝒟|ℳi,**w**)f(**w**|ℳi)/ f(𝒟|ℳi))
+>
+>
+>
+> để thấy f(𝒟|ℳi) chính là đóng vai normalizing constant. Vậy nếu f(w|ℳi) không valid (là một pdf, hay improper) thì normalizing constant sẽ cũng không đúng.
+>
+>
+>
+> Thế thì gs lại nói, nếu ta lại làm theo cách, ví dụ chọn một prior proper, như normal(μ, σ^2) rồi cho cái σ^2 lớn vô hạn để cũng có được cái prior mang tính unbias như hằng số nói trên, khi đó đương nhiên xác suất tiên nghiệm lại sẽ → 0 (xác suất dàn trải ra vô hạn nhưng vì là proper, nên tổng phải bằng 1, nên f(w|ℳi) sẽ → 0). Khi đó, bỏ vào tích phân f(𝒟|ℳi) = ∫f(𝒟|ℳi, **w**) f(**w**|ℳi) d**w**, sẽ khiến ta có f(𝒟|ℳi) → ∫f(𝒟|ℳi, **w**) × 0 d**w** = 0, tức model evidence cũng thành ra zero.
+>
+>
+>
+> Và chốt hạ, trong thực tế, gs nói, ta nên khôn hồn mà giữ lại một bộ data độc lập để test performance cuối cùng.
+>
+>
+>
+> Thì cái này mình nên nhớ nó không phải là validation set. Đây là test set, và mình liên hệ đến cái điều mà mình đã học ở trong cái lớp machine learning của ông Andrew Ng thì cũng nói, hoặc là trong CS221 cũng nói là mình sẽ có cái bộ test set, cái bộ training set, cái bộ validation set. Thì luôn luôn cái bộ test set là cái bộ giữ lại cuối cùng, không đụng tới trong toàn bộ quá trình, chỉ dùng để kiểm tra cái chất lượng của mô hình lần cuối thôi, chứ không được dùng để fine-tune hay là lựa chọn cái gì hết. Thì cái ý này nó cũng đồng cái ý với trong sách ở đoạn này ông Bishop nói đây. Có nghĩa là ở đây nó không phải là bộ validation set, đây là cái bộ test set dùng để test cái performance lần cuối, chứ còn đã theo cái Bayesian framework là mình không có cần validation set nữa.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Ghi chú cực kỳ chính xác và sâu sắc, thể hiện sự hiểu biết vững chắc về toán học đằng sau 'model evidence' và phân biệt rõ ràng giữa validation set và test set. Phân tích chi tiết về giới hạn của phân phối Gaussian khi phương sai tiến ra vô hạn là một điểm cộng lớn.
 
 <br>
 
