@@ -5,8 +5,6 @@
 ---
 <a id="node-2rvwojo"></a>
 
-## 4.1 Trust-Region Methods: Algorithms Based on the Cauchy Point
-
 > [!NOTE]
 > Trust-Region Methods: Algorithms Based on the Cauchy Point
 
@@ -159,7 +157,7 @@
 
 <a id="node-ix5cl2z"></a>
 
-- **Improving on the Cauchy Points**
+###### Improving on the Cauchy Points
 
 <p align="center"><kbd><img src="assets/42uj8txejzo.png" width="80%"></kbd></p>
 
@@ -193,7 +191,7 @@
 
 <a id="node-pf675m8"></a>
 
-- **The Dogleg method**
+###### The Dogleg method
 
 <p align="center"><kbd><img src="assets/roqb7w1a3lc.png" width="80%"></kbd></p>
 
@@ -268,7 +266,7 @@
 
 <a id="node-68pwgig"></a>
 
-- **Bổ đề 4.2**
+###### Bổ đề 4.2
 
 <p align="center"><kbd><img src="assets/5x6r1q2fx3l.png" width="80%"></kbd></p>
 
@@ -366,7 +364,7 @@
 
 <a id="node-h1c2dgh"></a>
 
-- **Giao điểm quỹ đạo gấp khúc**
+###### Giao điểm quỹ đạo gấp khúc
 
 <p align="center"><kbd><img src="assets/i25fchdkvml.png" width="80%"></kbd></p>
 
@@ -393,7 +391,7 @@
 
 <a id="node-6w87m5s"></a>
 
-- **Ma trận B trong Dogleg**
+###### Ma trận B trong Dogleg
 
 <p align="center"><kbd><img src="assets/6z177tjr6ee.png" width="80%"></kbd></p>
 
@@ -423,7 +421,7 @@
 
 <a id="node-nk72thi"></a>
 
-- **Two-dimensional Subspace Minimization**
+###### Two-dimensional Subspace Minimization
 
 <p align="center"><kbd><img src="assets/r01tksxdgp9.png" width="80%"></kbd></p>
 
