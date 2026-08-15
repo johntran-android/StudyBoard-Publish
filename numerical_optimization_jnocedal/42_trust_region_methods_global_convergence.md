@@ -5,8 +5,6 @@
 ---
 <a id="node-rj8tic5"></a>
 
-## 4.2 Trust-Region Methods: Global Convergence
-
 > [!NOTE]
 > Trust-Region Methods: Global Convergence
 
@@ -271,7 +269,7 @@
 
 <a id="node-29hd8yy"></a>
 
-- **Đại ý là dogleg và 2D subspace method thỏa.**
+###### Đại ý là dogleg và 2D subspace method thỏa.
 
 <p align="center"><kbd><img src="assets/7i0dd2qb69r.png" width="80%"></kbd></p>
 
@@ -282,7 +280,7 @@
 
 <a id="node-k0era47"></a>
 
-- **Convergence to Stationary Points**
+###### Convergence to Stationary Points
 
 <p align="center"><kbd><img src="assets/of9u4ub95m.png" width="80%"></kbd></p>
 
@@ -311,7 +309,7 @@
 
 <a id="node-5e0rp1k"></a>
 
-- **Một số giả định trước khi đi vào phân tích**
+###### Một số giả định trước khi đi vào phân tích
 
 <p align="center"><kbd><img src="assets/u8rdwg7bnqn.png" width="80%"></kbd></p>
 
@@ -338,7 +336,7 @@
 
 <a id="node-fg12jtm"></a>
 
-- **Theorem 4.5**
+###### Theorem 4.5
 
 <p align="center"><kbd><img src="assets/2cuevszgtbj.png" width="80%"></kbd></p>
 
@@ -371,7 +369,7 @@
 
 <a id="node-oli585n"></a>
 
-- **Chứng minh theorem 4.5**
+###### Chứng minh theorem 4.5
 
 <p align="center"><kbd><img src="assets/ec76kvxcb4d.png" width="80%"></kbd></p>
 
@@ -537,7 +535,7 @@
 
 <a id="node-c4u2j3o"></a>
 
-- **Chứng minh theorem 4.5 (cont 1)**
+###### Chứng minh theorem 4.5 (cont 1)
 
 <p align="center"><kbd><img src="assets/ta7949t7z4a.png" width="80%"></kbd></p>
 
@@ -583,7 +581,7 @@
 
 <a id="node-ke89jtq"></a>
 
-- **Chứng minh theorem 4.5 (cont 2)**
+###### Chứng minh theorem 4.5 (cont 2)
 
 <p align="center"><kbd><img src="assets/yotc1usayb.png" width="80%"></kbd></p>
 
@@ -653,7 +651,7 @@
 
 <a id="node-i5wiv3l"></a>
 
-- **Theorem 4.6 #QUAY LẠI SAU**
+###### Theorem 4.6 #QUAY LẠI SAU
 
 <p align="center"><kbd><img src="assets/87gq2edwcs.png" width="80%"></kbd></p>
 
