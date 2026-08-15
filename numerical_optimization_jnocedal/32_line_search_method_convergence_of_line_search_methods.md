@@ -5,8 +5,6 @@
 ---
 <a id="node-z8s8xa5"></a>
 
-## 3.2 Line Search Method: Convergence of Line Search Methods
-
 > [!NOTE]
 > Line Search Method: Convergence of Line Search Methods
 
@@ -206,7 +204,7 @@
 
 <a id="node-aepjpf5"></a>
 
-- **Chứng minh theorem 3.2 (tt)**
+###### Chứng minh theorem 3.2 (tt)
 
 <p align="center"><kbd><img src="assets/xslgjrolnr.png" width="80%"></kbd></p>
 
@@ -226,7 +224,7 @@
 
 <a id="node-uvhjcp1"></a>
 
-- **Ý nghĩa của theorem này: Nếu pk là descent direction thì chắc chắn sẽ hội tụ toàn cục**
+###### Ý nghĩa của theorem này: Nếu pk là descent direction thì chắc chắn sẽ hội tụ toàn cục
 
 <p align="center"><kbd><img src="assets/8v4oxdjquc9.png" width="80%"></kbd></p>
 
@@ -258,7 +256,7 @@
 
 <a id="node-cihen3y"></a>
 
-- **Hội tụ toàn cục và cực tiểu**
+###### Hội tụ toàn cục và cực tiểu
 
 <p align="center"><kbd><img src="assets/dmd1g7zqqp7.png" width="80%"></kbd></p>
 
@@ -282,7 +280,7 @@
 
 <a id="node-6goo9bw"></a>
 
-- **Chứng minh Theorem 3.2 với Newton / quasi Newton direct**
+###### Chứng minh Theorem 3.2 với Newton / quasi Newton direct
 
 <p align="center"><kbd><img src="assets/41rm5hj32on.png" width="80%"></kbd></p>
 
@@ -482,7 +480,7 @@
 
 <a id="node-4g13lre"></a>
 
-- **Chứng minh global convergence với các algo khác**
+###### Chứng minh global convergence với các algo khác
 
 <p align="center"><kbd><img src="assets/eev06qqtqro.png" width="80%"></kbd></p>
 
