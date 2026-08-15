@@ -5,8 +5,6 @@
 ---
 <a id="node-n2rjiqi"></a>
 
-## 6.2 The SR1 Method
-
 <br>
 
 <a id="node-i86qemm"></a>
@@ -210,7 +208,7 @@
 
 <a id="node-fsif7wv"></a>
 
-- **Thuật toán SR1 Vùng tin cậy**
+###### Thuật toán SR1 Vùng tin cậy
 
 <p align="center"><kbd><img src="assets/q2sfe12idje.png" width="80%"></kbd></p>
 
@@ -286,7 +284,7 @@
 
 <a id="node-bei9w43"></a>
 
-- **Tính chất của SR1 trong việc xấp xỉ Hessian tốt hơn BFGS**
+###### Tính chất của SR1 trong việc xấp xỉ Hessian tốt hơn BFGS
 
 <p align="center"><kbd><img src="assets/w3kklddnnj.png" width="80%"></kbd></p>
 
