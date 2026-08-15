@@ -5,8 +5,6 @@
 ---
 <a id="node-c51j1cf"></a>
 
-## 10.1 Least-square problem
-
 > [!NOTE]
 > 10.1 Least-square problem
 
@@ -231,7 +229,7 @@
 
 <a id="node-eia5ld9"></a>
 
-- **Các thuật toán Least-Square**
+###### Các thuật toán Least-Square
 
 <p align="center"><kbd><img src="assets/u8ise2jgvf.png" width="80%"></kbd></p>
 
@@ -251,7 +249,7 @@
 
 <a id="node-j9mpkfv"></a>
 
-- **Tối ưu tham số mô hình thuốc**
+###### Tối ưu tham số mô hình thuốc
 
 <p align="center"><kbd><img src="assets/zu3idaurjnb.png" width="80%"></kbd></p>
 
@@ -283,7 +281,7 @@
 
 <a id="node-b2j64k7"></a>
 
-- **Bài toán bình phương nhỏ nhất**
+###### Bài toán bình phương nhỏ nhất
 
 <p align="center"><kbd><img src="assets/urziyx0picq.png" width="80%"></kbd></p>
 
@@ -315,7 +313,7 @@
 
 <a id="node-c4csdge"></a>
 
-- **Mô hình hồi quy cố định và chuẩn**
+###### Mô hình hồi quy cố định và chuẩn
 
 <p align="center"><kbd><img src="assets/fmuzzcyct1b.png" width="80%"></kbd></p>
 
@@ -365,7 +363,7 @@
 
 <a id="node-c5vpak7"></a>
 
-- **Cơ sở thống kê Bình phương nhỏ nhất**
+###### Cơ sở thống kê Bình phương nhỏ nhất
 
 <p align="center"><kbd><img src="assets/qrfswdcrsh.png" width="80%"></kbd></p>
 
@@ -479,7 +477,7 @@
 
 <a id="node-i4dullp"></a>
 
-- **MLE và Bình phương tối thiểu**
+###### MLE và Bình phương tối thiểu
 
 <p align="center"><kbd><img src="assets/pwckl8v5vva.png" width="80%"></kbd></p>
 
