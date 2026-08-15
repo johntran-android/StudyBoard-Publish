@@ -5,8 +5,6 @@
 ---
 <a id="node-jeztztd"></a>
 
-## 3.1 Line Search Method: Step Length
-
 > [!NOTE]
 > Line Search Method: Step Length
 
@@ -154,7 +152,7 @@
 
 <a id="node-a2xp2eh"></a>
 
-- **Điều kiện cong và ý nghĩa**
+###### Điều kiện cong và ý nghĩa
 
 <p align="center"><kbd><img src="assets/0yjlgbn3e81.png" width="80%"></kbd></p>
 
@@ -200,7 +198,7 @@
 
 <a id="node-tmtgy6j"></a>
 
-- **Minh họa điều kiện đường cong**
+###### Minh họa điều kiện đường cong
 
 <p align="center"><kbd><img src="assets/p04lgpe6lo.png" width="80%"></kbd></p>
 
@@ -224,7 +222,7 @@
 
 <a id="node-7kgcs2p"></a>
 
-- **Điều kiện Wolfe và Wolfe mạnh**
+###### Điều kiện Wolfe và Wolfe mạnh
 
 <p align="center"><kbd><img src="assets/nqchbjq5v2q.png" width="80%"></kbd></p>
 
@@ -255,7 +253,7 @@
 
 <a id="node-rf79ndq"></a>
 
-- **Điều kiện Wolfe**
+###### Điều kiện Wolfe
 
 <p align="center"><kbd><img src="assets/2hc92l1tncn.png" width="80%"></kbd></p>
 
@@ -271,7 +269,7 @@
 
 <a id="node-7p4nmz2"></a>
 
-- **Chứng minh tồn tại độ dài bước Wolfe**
+###### Chứng minh tồn tại độ dài bước Wolfe
 
 <p align="center"><kbd><img src="assets/swtvn4neeq8.png" width="80%"></kbd></p>
 
@@ -368,7 +366,7 @@
 
 <a id="node-yhc1w7l"></a>
 
-- **Các điều kiện Goldstein**
+###### Các điều kiện Goldstein
 
 <p align="center"><kbd><img src="assets/52y46nhesal.png" width="80%"></kbd></p>
 
@@ -390,7 +388,7 @@
 
 <a id="node-sf5t6wa"></a>
 
-- **Sufficient Decrease And Bactracking**
+###### Sufficient Decrease And Bactracking
 
 <p align="center"><kbd><img src="assets/e41cb964ygp.png" width="80%"></kbd></p>
 
@@ -416,7 +414,7 @@
 
 <a id="node-rj5oln3"></a>
 
-- **Backtracking: Chiều dài bước nhảy**
+###### Backtracking: Chiều dài bước nhảy
 
 <p align="center"><kbd><img src="assets/48ks1is64m5.png" width="80%"></kbd></p>
 
