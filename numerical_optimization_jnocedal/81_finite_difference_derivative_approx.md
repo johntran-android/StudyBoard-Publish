@@ -1,13 +1,9 @@
-# 8.1 Finite-Difference
-Derivative Approx
+# 8.1 Finite-Difference Derivative Approx
 
 📊 **Progress:** `20` Notes | `29` Screenshots
 
 ---
 <a id="node-f4shfy5"></a>
-
-## 8.1 Finite-Difference
-Derivative Approx
 
 <br>
 
@@ -197,7 +193,7 @@ Derivative Approx
 
 <a id="node-a19cmwl"></a>
 
-- **Xấp xỉ Gradient**
+###### Xấp xỉ Gradient
 
 <p align="center"><kbd><img src="assets/3rh4rhyhf5h.png" width="80%"></kbd></p>
 
@@ -212,7 +208,7 @@ Derivative Approx
 
 <a id="node-ufte9ep"></a>
 
-- **Chứng minh sai phân tiến**
+###### Chứng minh sai phân tiến
 
 <p align="center"><kbd><img src="assets/3kd9b81r9nb.png" width="80%"></kbd></p>
 
@@ -281,7 +277,7 @@ Derivative Approx
 
 <a id="node-xfsgagf"></a>
 
-- **Lỗi làm tròn máy tính**
+###### Lỗi làm tròn máy tính
 
 <p align="center"><kbd><img src="assets/vdeo023di7.png" width="80%"></kbd></p>
 
@@ -410,7 +406,7 @@ Derivative Approx
 
 <a id="node-phg1xjy"></a>
 
-- **Ước lượng sai số đạo hàm**
+###### Ước lượng sai số đạo hàm
 
 <p align="center"><kbd><img src="assets/oo7d1arm9nj.png" width="80%"></kbd></p>
 
@@ -481,7 +477,7 @@ Derivative Approx
 
 <a id="node-vkn2nl4"></a>
 
-- **Tối ưu sai số đạo hàm**
+###### Tối ưu sai số đạo hàm
 
 <p align="center"><kbd><img src="assets/sbj434pbiid.png" width="80%"></kbd></p>
 
@@ -545,7 +541,7 @@ Derivative Approx
 
 <a id="node-9dxfe49"></a>
 
-- **Sai phân trung tâm**
+###### Sai phân trung tâm
 
 <p align="center"><kbd><img src="assets/xcx7f4bzo7.png" width="80%"></kbd></p>
 
@@ -560,7 +556,7 @@ Derivative Approx
 
 <a id="node-1pkg9ki"></a>
 
-- **Sai số đạo hàm Central Difference**
+###### Sai số đạo hàm Central Difference
 
 <p align="center"><kbd><img src="assets/1eboun1go2q.png" width="80%"></kbd></p>
 
@@ -664,7 +660,7 @@ Derivative Approx
 
 <a id="node-0hk8mak"></a>
 
-- **Xấp xỉ Jacobian thưa**
+###### Xấp xỉ Jacobian thưa
 
 <p align="center"><kbd><img src="assets/ummjyxgh0w.png" width="80%"></kbd></p>
 
@@ -726,7 +722,7 @@ Derivative Approx
 
 <a id="node-viyg7u2"></a>
 
-- **Sai số Taylor Jacobian**
+###### Sai số Taylor Jacobian
 
 <p align="center"><kbd><img src="assets/cayourppoom.png" width="80%"></kbd></p>
 
@@ -803,7 +799,7 @@ Derivative Approx
 
 <a id="node-uv0qt75"></a>
 
-- **Xấp xỉ tích Jacobian-vector**
+###### Xấp xỉ tích Jacobian-vector
 
 <p align="center"><kbd><img src="assets/fsyfgoz0i1t.png" width="80%"></kbd></p>
 
@@ -843,7 +839,7 @@ Derivative Approx
 
 <a id="node-hownvpu"></a>
 
-- **Tính Jacobian thưa hiệu quả**
+###### Tính Jacobian thưa hiệu quả
 
 <p align="center"><kbd><img src="assets/30hcr0sp3gb.png" width="80%"></kbd></p>
 
@@ -959,7 +955,7 @@ Derivative Approx
 
 <a id="node-kh08ww8"></a>
 
-- **Tô màu đồ thị Jacobian**
+###### Tô màu đồ thị Jacobian
 
 <p align="center"><kbd><img src="assets/savaf81a39i.png" width="80%"></kbd></p>
 
@@ -998,7 +994,7 @@ Derivative Approx
 
 <a id="node-f5vk967"></a>
 
-- **Xấp xỉ Hessian**
+###### Xấp xỉ Hessian
 
 <p align="center"><kbd><img src="assets/67e4oxq8ztw.png" width="80%"></kbd></p>
 
@@ -1025,7 +1021,7 @@ Derivative Approx
 
 <a id="node-tnspmvs"></a>
 
-- **Công thức xấp xỉ Hessian-vector**
+###### Công thức xấp xỉ Hessian-vector
 
 <p align="center"><kbd><img src="assets/gsqz9fwe4z.png" width="80%"></kbd></p>
 
@@ -1063,7 +1059,7 @@ Derivative Approx
 
 <a id="node-v2rge35"></a>
 
-- **Xấp xỉ Hessian giá trị hàm**
+###### Xấp xỉ Hessian giá trị hàm
 
 <p align="center"><kbd><img src="assets/wzk4dzf3h7f.png" width="80%"></kbd></p>
 
@@ -1077,7 +1073,7 @@ Derivative Approx
 
 <a id="node-h162y4s"></a>
 
-- **Xấp xỉ Hessian thưa**
+###### Xấp xỉ Hessian thưa
 
 <p align="center"><kbd><img src="assets/3z6x9y05rj5.png" width="80%"></kbd></p>
 
