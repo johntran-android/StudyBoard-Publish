@@ -5,8 +5,6 @@
 ---
 <a id="node-ezxbb8s"></a>
 
-## 5.1 Linear Conjugate Gradient
-
 <br>
 
 <a id="node-5lfpgbu"></a>
@@ -184,7 +182,7 @@
 
 <a id="node-aads1j4"></a>
 
-- **Góc nhìn hình học lí giải tính chất của conjugate direction**
+###### Góc nhìn hình học lí giải tính chất của conjugate direction
 
 <p align="center"><kbd><img src="assets/yn0e42muu6.png" width="80%"></kbd></p>
 
@@ -258,7 +256,7 @@
 
 <a id="node-tikzhc4"></a>
 
-- **Chuyển đổi A thành diagonal**
+###### Chuyển đổi A thành diagonal
 
 <p align="center"><kbd><img src="assets/59engrftwp6.png" width="80%"></kbd></p>
 
@@ -373,7 +371,7 @@
 
 <a id="node-b04ox8f"></a>
 
-- **Tối ưu hóa tọa độ Hessian chéo**
+###### Tối ưu hóa tọa độ Hessian chéo
 
 <p align="center"><kbd><img src="assets/ro5lzponre.png" width="80%"></kbd></p>
 
@@ -411,7 +409,7 @@
 
 <a id="node-6z4orxx"></a>
 
-- **Vài suy nghĩ về bản chất của Conjugate Gradient method**
+###### Vài suy nghĩ về bản chất của Conjugate Gradient method
 
 <p align="center"><kbd><img src="assets/gy9iril5ua.png" width="80%"></kbd></p>
 
@@ -597,7 +595,7 @@
 
 <a id="node-0dwz0wg"></a>
 
-- **Một lập luận khác, sẽ cho thuật toán khác**
+###### Một lập luận khác, sẽ cho thuật toán khác
 
 > [!NOTE]
 > Một lập luận khác, sẽ cho thuật toán khác:
@@ -635,7 +633,7 @@
 
 <a id="node-v8xtih8"></a>
 
-- **Theorem 5.2 (Expanding Subspace Minimization)**
+###### Theorem 5.2 (Expanding Subspace Minimization)
 
 <p align="center"><kbd><img src="assets/8teim7g0y9j.png" width="80%"></kbd></p>
 
@@ -747,7 +745,7 @@
 
 <a id="node-q9vjuhz"></a>
 
-- **Chứng minh eigenvector conjugate + ôn lại Gram-Smidth**
+###### Chứng minh eigenvector conjugate + ôn lại Gram-Smidth
 
 <p align="center"><kbd><img src="assets/4x5i9c0xwcv.png" width="80%"></kbd></p>
 
@@ -826,7 +824,7 @@
 
 <a id="node-p6jzgvh"></a>
 
-- **Basic properties of conjugate gradient method**
+###### Basic properties of conjugate gradient method
 
 <p align="center"><kbd><img src="assets/2tmwdnwcb4h.png" width="80%"></kbd></p>
 
@@ -883,7 +881,7 @@
 
 <a id="node-e7cob1z"></a>
 
-- **Theorem 5.3**
+###### Theorem 5.3
 
 <p align="center"><kbd><img src="assets/joi5kb8s7hg.png" width="80%"></kbd></p>
 
@@ -1266,7 +1264,7 @@
 
 <a id="node-h5xdpvv"></a>
 
-- **Cái tên Conjugate Gradient Method gây hiểu sai, gradient không conjugate**
+###### Cái tên Conjugate Gradient Method gây hiểu sai, gradient không conjugate
 
 <p align="center"><kbd><img src="assets/crffcr2mbh.png" width="80%"></kbd></p>
 
@@ -1286,7 +1284,7 @@
 
 <a id="node-jdgssae"></a>
 
-- **A Practical Form Of The Conjugate Gradient Method.**
+###### A Practical Form Of The Conjugate Gradient Method.
 
 <p align="center"><kbd><img src="assets/yg3mqv5tiqs.png" width="80%"></kbd></p>
 
@@ -1422,7 +1420,7 @@
 
 <a id="node-3zg5huu"></a>
 
-- **Rate of Convergence**
+###### Rate of Convergence
 
 <p align="center"><kbd><img src="assets/1tjkkat03yk.png" width="80%"></kbd></p>
 
@@ -1750,7 +1748,7 @@
 
 <a id="node-ji36w8z"></a>
 
-- **Theorem 5.4**
+###### Theorem 5.4
 
 <p align="center"><kbd><img src="assets/ascsw2ygvr5.png" width="80%"></kbd></p>
 
@@ -1834,7 +1832,7 @@
 
 <a id="node-66uzm1b"></a>
 
-- **Theorem 5.5**
+###### Theorem 5.5
 
 <p align="center"><kbd><img src="assets/u7ytp5lazdp.png" width="80%"></kbd></p>
 
@@ -1992,7 +1990,7 @@
 
 <a id="node-du3xr2h"></a>
 
-- **Hội tụ CG: Trị riêng cụm**
+###### Hội tụ CG: Trị riêng cụm
 
 <p align="center"><kbd><img src="assets/i528f94763.png" width="80%"></kbd></p>
 
@@ -2036,7 +2034,7 @@
 
 <a id="node-seub1zs"></a>
 
-- **Thể hiện tính hội tụ theo condition number, và ôn lại condition number một chút.**
+###### Thể hiện tính hội tụ theo condition number, và ôn lại condition number một chút.
 
 <p align="center"><kbd><img src="assets/mnvkcq7lppq.png" width="80%"></kbd></p>
 
@@ -2230,7 +2228,7 @@
 
 <a id="node-30ches9"></a>
 
-- **Preconditioning**
+###### Preconditioning
 
 <p align="center"><kbd><img src="assets/cbymibtj98l.png" width="80%"></kbd></p>
 
@@ -2286,7 +2284,7 @@
 
 <a id="node-f79h1dw"></a>
 
-- **Thuật toán PCG**
+###### Thuật toán PCG
 
 <p align="center"><kbd><img src="assets/p2kn5ertd68.png" width="80%"></kbd></p>
 
@@ -2526,7 +2524,7 @@
 
 <a id="node-hu6jp00"></a>
 
-- **Practical Preconditioners**
+###### Practical Preconditioners
 
 <p align="center"><kbd><img src="assets/6p0qhqgu22b.png" width="80%"></kbd></p>
 
