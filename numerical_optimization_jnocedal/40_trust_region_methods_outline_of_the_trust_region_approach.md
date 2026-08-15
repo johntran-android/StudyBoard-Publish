@@ -5,8 +5,6 @@
 ---
 <a id="node-i345wa4"></a>
 
-## 4.0 Trust-Region Methods: Outline of the Trust-Region Approach
-
 > [!NOTE]
 > Trust-Region Methods: Outline of the Trust-Region Approach
 
@@ -125,7 +123,7 @@
 
 <a id="node-9ozcgzk"></a>
 
-- **#4.1, 4.2, 4.3**
+###### #4.1, 4.2, 4.3
 
 <p align="center"><kbd><img src="assets/hw6x333oen5.png" width="80%"></kbd></p>
 
@@ -194,7 +192,7 @@
 
 <a id="node-464kbau"></a>
 
-- **Outline of the trust-region method**
+###### Outline of the trust-region method
 
 <p align="center"><kbd><img src="assets/h292a77ve1h.png" width="80%"></kbd></p>
 
@@ -244,7 +242,7 @@
 
 <a id="node-c4gu30d"></a>
 
-- **Algorithm 4.1 (Trust Region)**
+###### Algorithm 4.1 (Trust Region)
 
 <p align="center"><kbd><img src="assets/f8e57f8ux2.png" width="80%"></kbd></p>
 
@@ -273,7 +271,7 @@
 
 <a id="node-4oyhvi4"></a>
 
-- **Bài toán (4.5) sẽ là minimize mk(p) = fk + gkTp + (1/2)pTBkp subject to ||pk|| ≤ Δk**
+###### Bài toán (4.5) sẽ là minimize mk(p) = fk + gkTp + (1/2)pTBkp subject to ||pk|| ≤ Δk
 
 <p align="center"><kbd><img src="assets/3grwxoweoot.png" width="80%"></kbd></p>
 
@@ -318,7 +316,7 @@
 
 <a id="node-6p1mgzb"></a>
 
-- **Theorem 4.1**
+###### Theorem 4.1
 
 <p align="center"><kbd><img src="assets/pi2ghxbi63c.png" width="80%"></kbd></p>
 
@@ -394,7 +392,7 @@
 
 <a id="node-do3f7ba"></a>
 
-- **Lập luận lại KKT conditions.**
+###### Lập luận lại KKT conditions.
 
 > [!NOTE]
 > Lập luận lại cái KKT nhé:
@@ -580,7 +578,7 @@
 
 <a id="node-4u120q2"></a>
 
-- **Nói sơ về nội dung sắp tới**
+###### Nói sơ về nội dung sắp tới
 
 <p align="center"><kbd><img src="assets/gl2cj321imf.png" width="80%"></kbd></p>
 
