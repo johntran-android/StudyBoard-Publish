@@ -5,8 +5,6 @@
 ---
 <a id="node-7nocbf5"></a>
 
-## 3.5 Line Search Method: Step-Length Selection Algorithms
-
 > [!NOTE]
 > Line Search Method: Step-Length Selection Algorithms
 
@@ -203,7 +201,7 @@
 
 <a id="node-ih52es1"></a>
 
-- **Phương pháp nội suy tìm α**
+###### Phương pháp nội suy tìm α
 
 <p align="center"><kbd><img src="assets/hakrq019h5g.png" width="80%"></kbd></p>
 
@@ -231,7 +229,7 @@
 
 <a id="node-qjezt4u"></a>
 
-- **Cubic interpolation**
+###### Cubic interpolation
 
 <p align="center"><kbd><img src="assets/rxjlnppx5n.png" width="80%"></kbd></p>
 
@@ -261,7 +259,7 @@
 
 <a id="node-u0gi9ob"></a>
 
-- **Initial Step Length**
+###### Initial Step Length
 
 <p align="center"><kbd><img src="assets/tr1nf3lrp9.png" width="80%"></kbd></p>
 
@@ -365,7 +363,7 @@
 
 <a id="node-umkxucl"></a>
 
-- **A line search algorithm for Wolfe condition**
+###### A line search algorithm for Wolfe condition
 
 <p align="center"><kbd><img src="assets/v52auk7v299.png" width="80%"></kbd></p>
 
@@ -410,7 +408,7 @@
 
 <a id="node-tvwgggg"></a>
 
-- **Thuật toán tìm alpha giúp thỏa strong Wolfe conditions**
+###### Thuật toán tìm alpha giúp thỏa strong Wolfe conditions
 
 <p align="center"><kbd><img src="assets/qsjjd8sd5.png" width="80%"></kbd></p>
 
@@ -461,7 +459,7 @@
 
 <a id="node-mfis7p5"></a>
 
-- **Zoom algorithm**
+###### Zoom algorithm
 
 <p align="center"><kbd><img src="assets/sz9obfr7li.png" width="80%"></kbd></p>
 
@@ -511,7 +509,7 @@
 
 <a id="node-ssfpcl4"></a>
 
-- **Một Số Ghi Chú Về Line Search, Quay Lại Sau**
+###### Một Số Ghi Chú Về Line Search, Quay Lại Sau
 
 <p align="center"><kbd><img src="assets/ms72z6c4sm.png" width="80%"></kbd></p>
 
