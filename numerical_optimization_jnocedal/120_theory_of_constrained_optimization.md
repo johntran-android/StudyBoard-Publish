@@ -5,8 +5,6 @@
 ---
 <a id="node-ib4a59o"></a>
 
-## 12.0 Theory of Constrained Optimization
-
 <br>
 
 <a id="node-zvou6r4"></a>
@@ -156,7 +154,7 @@
 
 <a id="node-erai1kt"></a>
 
-- **Nonsmooth to Smooth Constrained Reformulation**
+###### Nonsmooth to Smooth Constrained Reformulation
 
 <p align="center"><kbd><img src="assets/dtdtytg17jq.png" width="80%"></kbd></p>
 
