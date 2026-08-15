@@ -5,8 +5,6 @@
 ---
 <a id="node-ch96e0i"></a>
 
-## 2.2 Funds of Unconstrained Optim - Overview of Algorithms
-
 > [!NOTE]
 > Overview of Algorithms
 
@@ -136,7 +134,7 @@
 
 <a id="node-ixn27an"></a>
 
-- **Line Search và Trust Region**
+###### Line Search và Trust Region
 
 <p align="center"><kbd><img src="assets/wf5i5aliu7h.png" width="80%"></kbd></p>
 
@@ -160,7 +158,7 @@
 
 <a id="node-6xvbag7"></a>
 
-- **Hướng dốc nhất và Taylor**
+###### Hướng dốc nhất và Taylor
 
 <p align="center"><kbd><img src="assets/1wb6nke517z.png" width="80%"></kbd></p>
 
@@ -232,7 +230,7 @@
 
 <a id="node-k9sqzy0"></a>
 
-- **Steepest descent và bước nhảy**
+###### Steepest descent và bước nhảy
 
 <p align="center"><kbd><img src="assets/eufyfsba2ue.png" width="80%"></kbd></p>
 
@@ -293,7 +291,7 @@
 
 <a id="node-wqcshqx"></a>
 
-- **Hướng Newton qua xấp xỉ Taylor**
+###### Hướng Newton qua xấp xỉ Taylor
 
 <p align="center"><kbd><img src="assets/oja5n3mw5cr.png" width="80%"></kbd></p>
 
@@ -335,7 +333,7 @@
 
 <a id="node-u8epw6t"></a>
 
-- **Độ tin cậy phương pháp Newton**
+###### Độ tin cậy phương pháp Newton
 
 <p align="center"><kbd><img src="assets/13rdtelonyl.png" width="80%"></kbd></p>
 
@@ -367,7 +365,7 @@
 
 <a id="node-yw2hzjc"></a>
 
-- **Hướng Newton là hướng giảm**
+###### Hướng Newton là hướng giảm
 
 <p align="center"><kbd><img src="assets/j0oy9mtoev9.png" width="80%"></kbd></p>
 
@@ -451,7 +449,7 @@
 
 <a id="node-vwfz9t9"></a>
 
-- **Sải bước tự nhiên của Newton**
+###### Sải bước tự nhiên của Newton
 
 <p align="center"><kbd><img src="assets/y8ddnr97jr.png" width="80%"></kbd></p>
 
@@ -477,7 +475,7 @@
 
 <a id="node-nv3sbgy"></a>
 
-- **Newton: Điều kiện và chi phí**
+###### Newton: Điều kiện và chi phí
 
 <p align="center"><kbd><img src="assets/3wxxrokaq2z.png" width="80%"></kbd></p>
 
@@ -507,7 +505,7 @@
 
 <a id="node-p3pvsbu"></a>
 
-- **Nguyên lý phương pháp Quasi-Newton**
+###### Nguyên lý phương pháp Quasi-Newton
 
 <p align="center"><kbd><img src="assets/clijsg2jfhu.png" width="80%"></kbd></p>
 
@@ -574,7 +572,7 @@
 
 <a id="node-cp5fa4k"></a>
 
-- **Hessian xác định dương gần x***
+###### Hessian xác định dương gần x*
 
 <p align="center"><kbd><img src="assets/4e5awe68afl.png" width="80%"></kbd></p>
 
@@ -648,7 +646,7 @@
 
 <a id="node-j9epg7b"></a>
 
-- **Xấp xỉ Hessian và Secant**
+###### Xấp xỉ Hessian và Secant
 
 <p align="center"><kbd><img src="assets/keicvoj2pg.png" width="80%"></kbd></p>
 
@@ -680,7 +678,7 @@
 
 <a id="node-bduulna"></a>
 
-- **Công thức xấp xỉ Hessian SR1, BFGS**
+###### Công thức xấp xỉ Hessian SR1, BFGS
 
 <p align="center"><kbd><img src="assets/ss3uan6yt3.png" width="80%"></kbd></p>
 
@@ -693,7 +691,7 @@
 
 <a id="node-q82d1ll"></a>
 
-- **Cập nhật nghịch đảo Quasi-Newton**
+###### Cập nhật nghịch đảo Quasi-Newton
 
 <p align="center"><kbd><img src="assets/aq38q7i3pmu.png" width="80%"></kbd></p>
 
@@ -729,7 +727,7 @@
 
 <a id="node-p2dwwvl"></a>
 
-- **Tổng quan Conjugate Gradient phi tuyến**
+###### Tổng quan Conjugate Gradient phi tuyến
 
 <p align="center"><kbd><img src="assets/7i8x4gynped.png" width="80%"></kbd></p>
 
@@ -757,7 +755,7 @@
 
 <a id="node-fzsjy59"></a>
 
-- **Steepest Descent trong Trust Region**
+###### Steepest Descent trong Trust Region
 
 <p align="center"><kbd><img src="assets/mi5sprqufj.png" width="80%"></kbd></p>
 
@@ -835,7 +833,7 @@
 
 <a id="node-rlyd3im"></a>
 
-- **Thuật toán vùng tin cậy Hessian**
+###### Thuật toán vùng tin cậy Hessian
 
 <p align="center"><kbd><img src="assets/noattz1gejc.png" width="80%"></kbd></p>
 
@@ -846,7 +844,7 @@
 
 <a id="node-00nhamu"></a>
 
-- **Vấn đề Scaling trong tối ưu**
+###### Vấn đề Scaling trong tối ưu
 
 <p align="center"><kbd><img src="assets/bf0vnej0ryo.png" width="80%"></kbd></p>
 
@@ -878,7 +876,7 @@
 
 <a id="node-bcna8vy"></a>
 
-- **Scaling, Steepest Descent, Newton**
+###### Scaling, Steepest Descent, Newton
 
 <p align="center"><kbd><img src="assets/bibs5qahge8.png" width="80%"></kbd></p>
 
@@ -902,7 +900,7 @@
 
 <a id="node-2myt2fm"></a>
 
-- **Thiết kế thuật toán bất biến tỉ lệ**
+###### Thiết kế thuật toán bất biến tỉ lệ
 
 <p align="center"><kbd><img src="assets/ccmt8o3g9rg.png" width="80%"></kbd></p>
 
