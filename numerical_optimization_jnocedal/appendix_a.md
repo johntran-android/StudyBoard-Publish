@@ -5,8 +5,6 @@
 ---
 <a id="node-i8fk65t"></a>
 
-## Appendix A
-
 <br>
 
 <a id="node-l29rlht"></a>
