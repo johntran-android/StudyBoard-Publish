@@ -5,8 +5,6 @@
 ---
 <a id="node-1tubui3"></a>
 
-## 7.2 Limited-Memory Quasi-Newton Methods
-
 <br>
 
 <a id="node-6itkze4"></a>
@@ -158,7 +156,7 @@
 
 <a id="node-y1png2s"></a>
 
-- **Thuật toán L-BFGS hai vòng**
+###### Thuật toán L-BFGS hai vòng
 
 <p align="center"><kbd><img src="assets/1mqgheqxb5kj.png" width="80%"></kbd></p>
 
@@ -395,7 +393,7 @@
 
 <a id="node-hula40j"></a>
 
-- **L-BFGS Độ phức tạp tính toán**
+###### L-BFGS Độ phức tạp tính toán
 
 <p align="center"><kbd><img src="assets/mb9s2ha896f.png" width="80%"></kbd></p>
 
@@ -445,7 +443,7 @@
 
 <a id="node-knhgroa"></a>
 
-- **Tối ưu hóa khởi tạo H0 BFGS**
+###### Tối ưu hóa khởi tạo H0 BFGS
 
 <p align="center"><kbd><img src="assets/0h8c03tm9g55.png" width="80%"></kbd></p>
 
@@ -592,7 +590,7 @@
 
 <a id="node-p7raki8"></a>
 
-- **Chọn H0k BFGS**
+###### Chọn H0k BFGS
 
 <p align="center"><kbd><img src="assets/fbqd7cj5zhw.png" width="80%"></kbd></p>
 
@@ -607,7 +605,7 @@
 
 <a id="node-g99xogb"></a>
 
-- **Thuật toán L-BFGS**
+###### Thuật toán L-BFGS
 
 <p align="center"><kbd><img src="assets/flbvwoso8dk.png" width="80%"></kbd></p>
 
@@ -685,7 +683,7 @@
 
 <a id="node-hhhhhvj"></a>
 
-- **Hiệu suất thuật toán L-BFGS**
+###### Hiệu suất thuật toán L-BFGS
 
 <p align="center"><kbd><img src="assets/4vbr6atned4.png" width="80%"></kbd></p>
 
@@ -705,7 +703,7 @@
 
 <a id="node-suwi1of"></a>
 
-- **L-BFGS: Ưu nhược điểm**
+###### L-BFGS: Ưu nhược điểm
 
 <p align="center"><kbd><img src="assets/22hp54jhesk.png" width="80%"></kbd></p>
 
@@ -721,7 +719,7 @@
 
 <a id="node-e5ub9jr"></a>
 
-- **BFGS không bộ nhớ & Gradient**
+###### BFGS không bộ nhớ & Gradient
 
 <p align="center"><kbd><img src="assets/mk7mopod2ok.png" width="80%"></kbd></p>
 
@@ -734,7 +732,7 @@
 
 <a id="node-4oo973l"></a>
 
-- **L-BFGS Dạng Compact**
+###### L-BFGS Dạng Compact
 
 <p align="center"><kbd><img src="assets/ae3ckj612c8.png" width="80%"></kbd></p>
 
@@ -760,7 +758,7 @@
 
 <a id="node-00mhcwo"></a>
 
-- **Cập nhật BFGS dạng gọn**
+###### Cập nhật BFGS dạng gọn
 
 <p align="center"><kbd><img src="assets/i5y933ej7r.png" width="80%"></kbd></p>
 
@@ -843,7 +841,7 @@
 
 <a id="node-cht8t3c"></a>
 
-- **L-BFGS Dạng Compact**
+###### L-BFGS Dạng Compact
 
 <p align="center"><kbd><img src="assets/rt7qiogvudm.png" width="80%"></kbd></p>
 
@@ -906,7 +904,7 @@
 
 <a id="node-c850kd8"></a>
 
-- **Chi phí tính Bk v**
+###### Chi phí tính Bk v
 
 <p align="center"><kbd><img src="assets/bryymmesvbh.png" width="80%"></kbd></p>
 
@@ -994,7 +992,7 @@
 
 <a id="node-wpz6td3"></a>
 
-- **L-BFGS: Xấp xỉ Bk, Hk**
+###### L-BFGS: Xấp xỉ Bk, Hk
 
 <p align="center"><kbd><img src="assets/p9p63i12e2b.png" width="80%"></kbd></p>
 
@@ -1015,7 +1013,7 @@
 
 <a id="node-4f0nj34"></a>
 
-- **SR1 Compact Form**
+###### SR1 Compact Form
 
 <p align="center"><kbd><img src="assets/r4iz9xwkar.png" width="80%"></kbd></p>
 
@@ -1101,7 +1099,7 @@
 
 <a id="node-4pszvky"></a>
 
-- **Unrolling công thức BFGS**
+###### Unrolling công thức BFGS
 
 <p align="center"><kbd><img src="assets/wtg1a5h309l.png" width="80%"></kbd></p>
 
@@ -1144,7 +1142,7 @@
 
 <a id="node-m8vxt2t"></a>
 
-- **Chi phí cao hơn compact**
+###### Chi phí cao hơn compact
 
 <p align="center"><kbd><img src="assets/0s6lsf6fekxs.png" width="80%"></kbd></p>
 
