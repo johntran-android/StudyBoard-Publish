@@ -5,8 +5,6 @@
 ---
 <a id="node-i8zrnvn"></a>
 
-## 10.3 Algorithms for nonlinear least-squares problem
-
 <br>
 
 <a id="node-76os6gb"></a>
@@ -216,7 +214,7 @@
 
 <a id="node-xco4cxp"></a>
 
-- **Gauss-Newton steps accumulation**
+###### Gauss-Newton steps accumulation
 
 <p align="center"><kbd><img src="assets/o2nfcubz7yd.png" width="80%"></kbd></p>
 
@@ -237,7 +235,7 @@
 
 <a id="node-z30uszf"></a>
 
-- **Gauss-Newton Search Direction Motivation**
+###### Gauss-Newton Search Direction Motivation
 
 <p align="center"><kbd><img src="assets/vv323iv2jda.png" width="80%"></kbd></p>
 
@@ -274,7 +272,7 @@
 
 <a id="node-2f8rzim"></a>
 
-- **Convergence of the Gauss–Newton Method**
+###### Convergence of the Gauss–Newton Method
 
 <p align="center"><kbd><img src="assets/ex7z6vl63or.png" width="80%"></kbd></p>
 
@@ -282,7 +280,7 @@
 
 <a id="node-p7l4kri"></a>
 
-- **Theorem 10.1**
+###### Theorem 10.1
 
 <p align="center"><kbd><img src="assets/x62bhlf48p.png" width="80%"></kbd></p>
 
@@ -290,7 +288,7 @@
 
 <a id="node-yq2hekh"></a>
 
-- **Algorithms for Nonlinear Least-Squares**
+###### Algorithms for Nonlinear Least-Squares
 
 <p align="center"><kbd><img src="assets/ue330300jqk.png" width="80%"></kbd></p>
 
@@ -304,7 +302,7 @@
 
 <a id="node-fj4b7z2"></a>
 
-- **Phương pháp Levenberg-Marquardt**
+###### Phương pháp Levenberg-Marquardt
 
 <p align="center"><kbd><img src="assets/vwnfq8vvx57.png" width="80%"></kbd></p>
 
@@ -369,7 +367,7 @@
 
 <a id="node-za3zjv6"></a>
 
-- **Lemma 10.2: Trust-Region Solution**
+###### Lemma 10.2: Trust-Region Solution
 
 <p align="center"><kbd><img src="assets/2ssl2no9dw4.png" width="80%"></kbd></p>
 
@@ -711,7 +709,7 @@
 
 <a id="node-1z7vmo9"></a>
 
-- **Solving Least-Squares Subproblem**
+###### Solving Least-Squares Subproblem
 
 <p align="center"><kbd><img src="assets/8ezvxa04l96.png" width="80%"></kbd></p>
 
@@ -831,7 +829,7 @@
 
 <a id="node-gb1ww4r"></a>
 
-- **Triển khai Levenberg-Marquardt**
+###### Triển khai Levenberg-Marquardt
 
 <p align="center"><kbd><img src="assets/i80shtmymeq.png" width="80%"></kbd></p>
 
@@ -971,7 +969,7 @@
 
 <a id="node-yf11h74"></a>
 
-- **Implementation of the Levenberg-Marquardt Method**
+###### Implementation of the Levenberg-Marquardt Method
 
 <p align="center"><kbd><img src="assets/5t6ozcj6qrw.png" width="80%"></kbd></p>
 
@@ -1177,7 +1175,7 @@
 
 <a id="node-pbz00ng"></a>
 
-- **Ellipsoidal Trust-Region Subproblem**
+###### Ellipsoidal Trust-Region Subproblem
 
 <p align="center"><kbd><img src="assets/spd3w870hm.png" width="80%"></kbd></p>
 
@@ -1224,7 +1222,7 @@
 
 <a id="node-9nrimbz"></a>
 
-- **CG-Steihaug with Gauss-Newton Approximation**
+###### CG-Steihaug with Gauss-Newton Approximation
 
 <p align="center"><kbd><img src="assets/kgz30pugc7r.png" width="80%"></kbd></p>
 
@@ -1239,7 +1237,7 @@
 
 <a id="node-mqcb3ri"></a>
 
-- **Convergence of the Levenberg-Marquardt Method**
+###### Convergence of the Levenberg-Marquardt Method
 
 <p align="center"><kbd><img src="assets/9cada89y3rk.png" width="80%"></kbd></p>
 
@@ -1250,7 +1248,7 @@
 
 <a id="node-ggaazzm"></a>
 
-- **Methods for Large-Residual Problems**
+###### Methods for Large-Residual Problems
 
 <p align="center"><kbd><img src="assets/it3wqofppq.png" width="80%"></kbd></p>
 
