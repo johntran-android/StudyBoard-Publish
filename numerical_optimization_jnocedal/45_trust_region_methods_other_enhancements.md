@@ -5,8 +5,6 @@
 ---
 <a id="node-dpbrs26"></a>
 
-## 4.5 Trust-Region Methods: Other Enhancements
-
 > [!NOTE]
 > 4.5 Trust-Region Methods: Other Enhancements
 
