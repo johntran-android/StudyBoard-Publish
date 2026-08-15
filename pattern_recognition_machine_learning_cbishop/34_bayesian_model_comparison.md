@@ -727,8 +727,6 @@
 
 <br>
 
-<a id="node-8yp4pb2"></a>
-
 <a id="node-l55vqkg"></a>
 
 ###### Model Evidence and Complexity
@@ -874,6 +872,8 @@
 <br>
 
 <a id="node-w40fj3i"></a>
+
+###### Độ nhạy của model evidence
 
 <p align="center"><kbd><img src="assets/xub7au8bux.png" width="80%"></kbd></p>
 
