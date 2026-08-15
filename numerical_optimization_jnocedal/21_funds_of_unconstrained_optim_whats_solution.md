@@ -5,8 +5,6 @@
 ---
 <a id="node-neaamfs"></a>
 
-## 2.1 Funds of Unconstrained Optim - What's Solution
-
 > [!NOTE]
 > Funds of Unconstrained Optim - What's Solution
 
@@ -190,7 +188,7 @@
 
 <a id="node-slr4bzx"></a>
 
-- **Cực tiểu cục bộ: Gradient, Hessian**
+###### Cực tiểu cục bộ: Gradient, Hessian
 
 <p align="center"><kbd><img src="assets/5zd2troi6wm.png" width="80%"></kbd></p>
 
@@ -218,7 +216,7 @@
 
 <a id="node-zekxi9u"></a>
 
-- **Theorem 2.1 Taylor's theorem, Taylor theorem**
+###### Theorem 2.1 Taylor's theorem, Taylor theorem
 
 <p align="center"><kbd><img src="assets/zx5jjl59d0h.png" width="80%"></kbd></p>
 
@@ -409,7 +407,7 @@
 
 <a id="node-v0zxbya"></a>
 
-- **Điều kiện cần bậc nhất**
+###### Điều kiện cần bậc nhất
 
 <p align="center"><kbd><img src="assets/p6wu52tel0q.png" width="80%"></kbd></p>
 
@@ -530,7 +528,7 @@
 
 <a id="node-lvmdfpg"></a>
 
-- **Điều kiện cần bậc hai**
+###### Điều kiện cần bậc hai
 
 <p align="center"><kbd><img src="assets/j2wmgdy7hd.png" width="80%"></kbd></p>
 
@@ -619,7 +617,7 @@
 
 <a id="node-4x41639"></a>
 
-- **Chứng minh điều kiện đủ cấp hai**
+###### Chứng minh điều kiện đủ cấp hai
 
 <p align="center"><kbd><img src="assets/lpl5g4sazb.png" width="80%"></kbd></p>
 
@@ -665,7 +663,7 @@
 
 <a id="node-e5vd9lq"></a>
 
-- **Chứng minh điều kiện đủ bậc hai**
+###### Chứng minh điều kiện đủ bậc hai
 
 <p align="center"><kbd><img src="assets/12pt8297t9v.png" width="80%"></kbd></p>
 
@@ -711,7 +709,7 @@
 
 <a id="node-qb85dvq"></a>
 
-- **Cực tiểu: cần, đủ, chặt**
+###### Cực tiểu: cần, đủ, chặt
 
 <p align="center"><kbd><img src="assets/6qlfsdh6c8f.png" width="80%"></kbd></p>
 
@@ -770,7 +768,7 @@
 
 <a id="node-9dw0mi9"></a>
 
-- **Hàm lồi: Local minimizer là global**
+###### Hàm lồi: Local minimizer là global
 
 <p align="center"><kbd><img src="assets/psau3tzsxt.png" width="80%"></kbd></p>
 
@@ -807,7 +805,7 @@
 
 <a id="node-iqziy0r"></a>
 
-- **Điểm dừng và tối ưu toàn cục**
+###### Điểm dừng và tối ưu toàn cục
 
 <p align="center"><kbd><img src="assets/kf86c32m69c.png" width="80%"></kbd></p>
 
@@ -859,7 +857,7 @@
 
 <a id="node-n5yeozz"></a>
 
-- **Minimizer hàm không trơn**
+###### Minimizer hàm không trơn
 
 <p align="center"><kbd><img src="assets/4uwl1oke9ae.png" width="80%"></kbd></p>
 
