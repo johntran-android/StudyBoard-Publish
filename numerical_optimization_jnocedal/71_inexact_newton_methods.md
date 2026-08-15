@@ -5,8 +5,6 @@
 ---
 <a id="node-hfsjg8c"></a>
 
-## 7.1 Inexact Newton Methods
-
 <br>
 
 <a id="node-pvuqi1m"></a>
@@ -83,7 +81,7 @@
 
 <a id="node-em8ep7s"></a>
 
-- **L-BFGS và Hessian thưa**
+###### L-BFGS và Hessian thưa
 
 <p align="center"><kbd><img src="assets/n80r1gazaxk.png" width="80%"></kbd></p>
 
@@ -107,7 +105,7 @@
 
 <a id="node-n0cbr8d"></a>
 
-- **Phương pháp Newton không chính xác**
+###### Phương pháp Newton không chính xác
 
 <p align="center"><kbd><img src="assets/5f1psdt1wjj.png" width="80%"></kbd></p>
 
@@ -129,7 +127,7 @@
 
 <a id="node-ts4mvv1"></a>
 
-- **Local Convergence of Inexact Newtons**
+###### Local Convergence of Inexact Newtons
 
 <p align="center"><kbd><img src="assets/wxf1pxmnxnk.png" width="80%"></kbd></p>
 
@@ -170,16 +168,16 @@
 
 <a id="node-zb201bp"></a>
 
-- **Line-Search Newton-CG Method**
+###### Line-Search Newton-CG Method
 
 <p align="center"><kbd><img src="assets/x33shbc05n.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Nói sơ nhanh về ý tưởng của method này: Ta muốn dùng Newton step (Newton direction) trong các thuật toán lớn nào đó, ví dụ Line Search, Trusted Region. Muốn vậy, ta phải giải hệ này: ∇^2fk pk = - ∇fk. Mà với bài toán quy mô lớn thì việc giải hệ này tìm pk (trong trường hợp này, gọi là pkN, "pk_Newton" sẽ rất tốn kém vì các lí do sau: Tất nhiên nói giải cái này theo công thức pk = -(∇^2fk)inv ∇fk thì cũng không có nghĩa là ta đi tìm Hessian inverse, rồi đem nhân với gradient, mà ta sẽ factor-solve: factor Hessian thành các tích các matrix có cấu trúc đơn giản, và giải lần lượt các hệ đơn giản này. Vấn đề là, sparse factor ko phải lúc nào cũng được: đôi khi Hessian thật thì sparse nhưng factor xong thì dense (= không có simple structure). Do đó, ta sẽ dùng một cách thức để giải hệ ∇^2fk pk = - ∇fk này một cách iteratively, và chapter 5 ta đã học một phương pháp cho việc giải hệ Ax = b theo lối iteratively như vậy: Đó chính là CG: Conjugate Gradient method, là thuật toán mà đã chứng minh rằng nếu matrix hệ số (A, ở đây là Hessian có quy mô n × n thì chỉ tốn nhiều nhất là n step để tìm ra được x* (hay pkN*), thậm chí còn nhanh hơn nếu như cấu trúc của A (ví dụ phân phối của trị riêng của nó) có tính chất đặc biệt nào đó (ví dụ như co cụm lại thành một số ít nhỏ hơn n nhiều lần các cụm). Như vậy, ở đây ta sẽ nói về Line-Search Newton - CG, tức là: dùng thuật toán line search, mà cơ bản là như đã biết, ta sẽ iteratively thực hiện các bước: 
 >
-> - tìm pk, và ở đây ta sẽ dùng Newton step. Và ta sẽ chạy thuật toán CG để tìm pk.
+> \- tìm pk, và ở đây ta sẽ dùng Newton step. Và ta sẽ chạy thuật toán CG để tìm pk.
 >
-> - line search tìm step size: αk, lúc này có thể dùng exact line search (nhưng chắc chả mấy khi dùng), hoặc dùng backtracking line search để tìm αk thỏa Wolfe / strong Wolfe conditions.
+> \- line search tìm step size: αk, lúc này có thể dùng exact line search (nhưng chắc chả mấy khi dùng), hoặc dùng backtracking line search để tìm αk thỏa Wolfe / strong Wolfe conditions.
 >
 > -----
 >
@@ -194,7 +192,7 @@
 
 <a id="node-x4092kb"></a>
 
-- **Vòng lặp trong CG Newton**
+###### Vòng lặp trong CG Newton
 
 <p align="center"><kbd><img src="assets/99t0q5ifgh.png" width="80%"></kbd></p>
 
@@ -222,7 +220,7 @@
 
 <a id="node-rwy213p"></a>
 
-- **Thuật toán Newton-CG**
+###### Thuật toán Newton-CG
 
 <p align="center"><kbd><img src="assets/q4z06dnp36.png" width="80%"></kbd></p>
 
@@ -264,7 +262,7 @@
 
 <a id="node-8vcwotc"></a>
 
-- **Newton-CG Hessian gần suy biến**
+###### Newton-CG Hessian gần suy biến
 
 <p align="center"><kbd><img src="assets/mmbgorzi3h.png" width="80%"></kbd></p>
 
@@ -338,7 +336,7 @@
 
 <a id="node-5hnsref"></a>
 
-- **Phương pháp Newton không Hessian**
+###### Phương pháp Newton không Hessian
 
 <p align="center"><kbd><img src="assets/s0kb6omu88j.png" width="80%"></kbd></p>
 
@@ -390,7 +388,7 @@
 
 <a id="node-8tkd9oh"></a>
 
-- **Phương pháp Trust-Region Newton CG**
+###### Phương pháp Trust-Region Newton CG
 
 <p align="center"><kbd><img src="assets/gzces7q1tzd.png" width="80%"></kbd></p>
 
@@ -422,7 +420,7 @@
 
 <a id="node-4fbrszp"></a>
 
-- **Trust Region Newton CG**
+###### Trust Region Newton CG
 
 <p align="center"><kbd><img src="assets/492m9lfwl72.png" width="80%"></kbd></p>
 
@@ -496,7 +494,7 @@
 
 <a id="node-ngzc1r1"></a>
 
-- **Trust Region & Inexact Newton**
+###### Trust Region & Inexact Newton
 
 <p align="center"><kbd><img src="assets/w29o9lnpwa.png" width="80%"></kbd></p>
 
@@ -516,7 +514,7 @@
 
 <a id="node-lqxn0xz"></a>
 
-- **Điểm Cauchy và hội tụ**
+###### Điểm Cauchy và hội tụ
 
 <p align="center"><kbd><img src="assets/e2wbos8i5dk.png" width="80%"></kbd></p>
 
@@ -626,7 +624,7 @@
 
 <a id="node-iw5i5g4"></a>
 
-- **Trust Region Newton CG**
+###### Trust Region Newton CG
 
 <p align="center"><kbd><img src="assets/d1rd661ckhm.png" width="80%"></kbd></p>
 
@@ -805,7 +803,7 @@
 
 <a id="node-imxeywh"></a>
 
-- **Định lý 7.3: Tính chất dãy**
+###### Định lý 7.3: Tính chất dãy
 
 <p align="center"><kbd><img src="assets/0z1ozskz5om.png" width="80%"></kbd></p>
 
@@ -813,7 +811,7 @@
 
 <a id="node-q78yfdt"></a>
 
-- **Chứng minh norm zj tăng**
+###### Chứng minh norm zj tăng
 
 <p align="center"><kbd><img src="assets/zz9c2hqdw2g.png" width="80%"></kbd></p>
 
@@ -889,7 +887,7 @@
 
 <a id="node-c21ufur"></a>
 
-- **So sánh Dogleg và 7.2**
+###### So sánh Dogleg và 7.2
 
 <p align="center"><kbd><img src="assets/5v4l9wkf4ef.png" width="80%"></kbd></p>
 
@@ -951,7 +949,7 @@
 
 <a id="node-z1vw0a9"></a>
 
-- **Đường Dogleg Newton**
+###### Đường Dogleg Newton
 
 <p align="center"><kbd><img src="assets/i7v24jttt3o.png" width="80%"></kbd></p>
 
@@ -959,7 +957,7 @@
 
 <a id="node-llp166r"></a>
 
-- **Tiền xử lí Trust-Region Newton-CG**
+###### Tiền xử lí Trust-Region Newton-CG
 
 <p align="center"><kbd><img src="assets/g6or5owfo4o.png" width="80%"></kbd></p>
 
@@ -1405,7 +1403,7 @@
 
 <a id="node-yl8no1o"></a>
 
-- **Tiền điều kiện Cholesky không hoàn chỉnh**
+###### Tiền điều kiện Cholesky không hoàn chỉnh
 
 <p align="center"><kbd><img src="assets/v21bjropgmh.png" width="80%"></kbd></p>
 
@@ -1451,7 +1449,7 @@
 
 <a id="node-8qeqega"></a>
 
-- **Cholesky sửa đổi không chính xác**
+###### Cholesky sửa đổi không chính xác
 
 <p align="center"><kbd><img src="assets/9re3izbu2mi.png" width="80%"></kbd></p>
 
@@ -1503,7 +1501,7 @@
 
 <a id="node-b24vre7"></a>
 
-- **Phương pháp Newton-Lanczos Vùng Tin Cậy**
+###### Phương pháp Newton-Lanczos Vùng Tin Cậy
 
 <p align="center"><kbd><img src="assets/698rrfyzef6.png" width="80%"></kbd></p>
 
