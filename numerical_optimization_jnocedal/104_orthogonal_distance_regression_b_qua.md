@@ -5,8 +5,6 @@
 ---
 <a id="node-k5oxhzl"></a>
 
-## 10.4 Orthogonal Distance Regression (bỏ qua)
-
 <br>
 
 <a id="node-0qfm0vt"></a>
