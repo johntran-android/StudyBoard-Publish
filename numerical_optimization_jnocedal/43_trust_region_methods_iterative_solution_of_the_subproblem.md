@@ -5,8 +5,6 @@
 ---
 <a id="node-96w0gh5"></a>
 
-## 4.3 Trust-Region Methods: Iterative Solution of the Subproblem
-
 > [!NOTE]
 > Trust-RegionMethods: Iterative Solution of the Subproblem
 
@@ -539,7 +537,7 @@
 
 <a id="node-o8ah5zo"></a>
 
-- **Tái định hình bài toán để khắc phục hạn chế của Newton method:**
+###### Tái định hình bài toán để khắc phục hạn chế của Newton method:
 
 <p align="center"><kbd><img src="assets/gol68vt8clj.png" width="80%"></kbd></p>
 
@@ -661,7 +659,7 @@
 
 <a id="node-kep1mmi"></a>
 
-- **Thử tự tính đạo hàm của hàm φ2(λ) = 1/Δ - 1/||p(λ)||**
+###### Thử tự tính đạo hàm của hàm φ2(λ) = 1/Δ - 1/||p(λ)||
 
 <p align="center"><kbd><img src="assets/9tbxgi2qio.png" width="80%"></kbd></p>
 
@@ -831,7 +829,7 @@
 
 <a id="node-t3v5vev"></a>
 
-- **Algorithm 4.3 Trust Region Subproblem**
+###### Algorithm 4.3 Trust Region Subproblem
 
 <p align="center"><kbd><img src="assets/jy94jx0umj.png" width="80%"></kbd></p>
 
@@ -967,7 +965,7 @@
 
 <a id="node-ty435bj"></a>
 
-- **The Hard Case: Khi q1Tg = 0**
+###### The Hard Case: Khi q1Tg = 0
 
 <p align="center"><kbd><img src="assets/8asm7k6l21f.png" width="80%"></kbd></p>
 
@@ -1187,7 +1185,7 @@
 
 <a id="node-k08q2ml"></a>
 
-- **Proof of theorem 4.1: Lemma 4.7**
+###### Proof of theorem 4.1: Lemma 4.7
 
 <p align="center"><kbd><img src="assets/tiv4lud7s2.png" width="80%"></kbd></p>
 
@@ -1511,7 +1509,7 @@
 
 <a id="node-4hwl6f7"></a>
 
-- **Một ví dụ minh họa**
+###### Một ví dụ minh họa
 
 <p align="center"><kbd><img src="assets/m8uz594ghbg.png" width="80%"></kbd></p>
 
@@ -1551,7 +1549,7 @@
 
 <a id="node-csqy8ix"></a>
 
-- **Proof of theorem 4.1: Chứng minh điều kiện đủ**
+###### Proof of theorem 4.1: Chứng minh điều kiện đủ
 
 <p align="center"><kbd><img src="assets/nhphb4e82gi.png" width="80%"></kbd></p>
 
@@ -1683,7 +1681,7 @@
 
 <a id="node-seqk8rq"></a>
 
-- **Proof of theorem 4.1: Chứng minh điều kiện cần**
+###### Proof of theorem 4.1: Chứng minh điều kiện cần
 
 <p align="center"><kbd><img src="assets/mes914n64li.png" width="80%"></kbd></p>
 
@@ -1887,7 +1885,7 @@
 
 <a id="node-tr8868m"></a>
 
-- **Convergence of algorithms based on nearly exact solution**
+###### Convergence of algorithms based on nearly exact solution
 
 <p align="center"><kbd><img src="assets/sa6kgx6x6zc.png" width="80%"></kbd></p>
 
@@ -1919,7 +1917,7 @@
 
 <a id="node-rnxo6wt"></a>
 
-- **4.52a và 4.52b đại ý là điều kiện mà ta sẽ đặt ra cho bài toán subproblem giúp đảm bảo sự hội tụ toàn cục của cả bài toán trust region**
+###### 4.52a và 4.52b đại ý là điều kiện mà ta sẽ đặt ra cho bài toán subproblem giúp đảm bảo sự hội tụ toàn cục của cả bài toán trust region
 
 <p align="center"><kbd><img src="assets/16xex6p5ziw.png" width="80%"></kbd></p>
 
@@ -1989,7 +1987,7 @@
 
 <a id="node-falcnsi"></a>
 
-- **Theorem 4.8 (Quay lại sau)**
+###### Theorem 4.8 (Quay lại sau)
 
 <p align="center"><kbd><img src="assets/f4ef0urr05s.png" width="80%"></kbd></p>
 
