@@ -5,8 +5,6 @@
 ---
 <a id="node-r7vnce1"></a>
 
-## 10.2 Linear Least-Square Problem
-
 <br>
 
 <a id="node-1ovdxo4"></a>
@@ -649,7 +647,7 @@
 
 <a id="node-xupdku2"></a>
 
-- **Phương pháp SVD bình phương tối thiểu**
+###### Phương pháp SVD bình phương tối thiểu
 
 <p align="center"><kbd><img src="assets/rtoctgp53v.png" width="80%"></kbd></p>
 
@@ -771,7 +769,7 @@
 
 <a id="node-2tsnkwj"></a>
 
-- **Formula (10.21) Sensitivity**
+###### Formula (10.21) Sensitivity
 
 <p align="center"><kbd><img src="assets/5vt58wog9as.png" width="80%"></kbd></p>
 
@@ -883,7 +881,7 @@
 
 <a id="node-na2d7pw"></a>
 
-- **Cholesky and QR Approaches**
+###### Cholesky and QR Approaches
 
 <p align="center"><kbd><img src="assets/kxltmkd0njf.png" width="80%"></kbd></p>
 
@@ -944,7 +942,7 @@
 
 <a id="node-0hoe8tb"></a>
 
-- **SVD Approach and Singular Values**
+###### SVD Approach and Singular Values
 
 <p align="center"><kbd><img src="assets/f5anpbc48kg.png" width="80%"></kbd></p>
 
@@ -1058,7 +1056,7 @@
 
 <a id="node-x7aktmm"></a>
 
-- **Conjugate Gradient Method Iterations**
+###### Conjugate Gradient Method Iterations
 
 <p align="center"><kbd><img src="assets/e8p6vhwoq8n.png" width="80%"></kbd></p>
 
