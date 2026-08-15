@@ -5,8 +5,6 @@
 ---
 <a id="node-u1570dl"></a>
 
-## 3.3 Line Search Method: Rate of Convergence
-
 > [!NOTE]
 > Line Search Method: Rate of Convergence
 
@@ -243,7 +241,7 @@
 
 <a id="node-ms2did5"></a>
 
-- **Định lượng tốc độ hội tụ**
+###### Định lượng tốc độ hội tụ
 
 <p align="center"><kbd><img src="assets/c9ql3edobn.png" width="80%"></kbd></p>
 
@@ -286,7 +284,7 @@
 
 <a id="node-lut7jz5"></a>
 
-- **Theorem 3.3 Tốc độ hội tụ của Steepest Descent**
+###### Theorem 3.3 Tốc độ hội tụ của Steepest Descent
 
 <p align="center"><kbd><img src="assets/g8k88uopc2e.png" width="80%"></kbd></p>
 
@@ -334,7 +332,7 @@
 
 <a id="node-tziaxo8"></a>
 
-- **Theorem 3.4 Tốc độ hội tụ Steepest Descent**
+###### Theorem 3.4 Tốc độ hội tụ Steepest Descent
 
 <p align="center"><kbd><img src="assets/babj9qcdpbo.png" width="80%"></kbd></p>
 
@@ -387,7 +385,7 @@
 
 <a id="node-wwnb5t0"></a>
 
-- **Qua phân tích Hội tụ phương pháp Newton**
+###### Qua phân tích Hội tụ phương pháp Newton
 
 <p align="center"><kbd><img src="assets/ps3ezawi27h.png" width="80%"></kbd></p>
 
@@ -433,7 +431,7 @@
 
 <a id="node-k782xxo"></a>
 
-- **Theorem 3.5 Hội tụ Newton**
+###### Theorem 3.5 Hội tụ Newton
 
 <p align="center"><kbd><img src="assets/czvq8asbs99.png" width="80%"></kbd></p>
 
@@ -480,7 +478,7 @@
 
 <a id="node-xl5sz2p"></a>
 
-- **Chứng minh Theorem 3.5**
+###### Chứng minh Theorem 3.5
 
 <p align="center"><kbd><img src="assets/88v8rfaaqxm.png" width="80%"></kbd></p>
 
@@ -589,7 +587,7 @@
 
 <a id="node-9fdbaka"></a>
 
-- **Giải thích hội tụ bậc hai**
+###### Giải thích hội tụ bậc hai
 
 <p align="center"><kbd><img src="assets/kyjhghfq33q.png" width="80%"></kbd></p>
 
@@ -696,7 +694,7 @@
 
 <a id="node-137du95"></a>
 
-- **Chứng minh Hội tụ gradient bậc hai**
+###### Chứng minh Hội tụ gradient bậc hai
 
 <p align="center"><kbd><img src="assets/mr1quj9ocbr.png" width="80%"></kbd></p>
 
@@ -782,7 +780,7 @@
 
 <a id="node-tkrsiwv"></a>
 
-- **Bước Newton đầy đủ gần nghiệm**
+###### Bước Newton đầy đủ gần nghiệm
 
 <p align="center"><kbd><img src="assets/gp219srfk3.png" width="80%"></kbd></p>
 
@@ -795,7 +793,7 @@
 
 <a id="node-8g6rf7x"></a>
 
-- **Phương pháp Quasi-Newton**
+###### Phương pháp Quasi-Newton
 
 <p align="center"><kbd><img src="assets/fpbkw5xha9f.png" width="80%"></kbd></p>
 
@@ -820,7 +818,7 @@
 
 <a id="node-sn062tn"></a>
 
-- **Định lý 3.6: Hội tụ siêu tuyến tính**
+###### Định lý 3.6: Hội tụ siêu tuyến tính
 
 <p align="center"><kbd><img src="assets/zzbrfb2wmdc.png" width="80%"></kbd></p>
 
@@ -837,7 +835,7 @@
 
 <a id="node-3acxdua"></a>
 
-- **Phân tích Armijo với c1**
+###### Phân tích Armijo với c1
 
 <p align="center"><kbd><img src="assets/qk9ndv9mamd.png" width="80%"></kbd></p>
 
@@ -923,7 +921,7 @@
 
 <a id="node-3uu0w64"></a>
 
-- **Điều kiện hội tụ siêu tuyến tính Quasi-Newton**
+###### Điều kiện hội tụ siêu tuyến tính Quasi-Newton
 
 <p align="center"><kbd><img src="assets/0pslia57slb.png" width="80%"></kbd></p>
 
@@ -939,7 +937,7 @@
 
 <a id="node-n31da73"></a>
 
-- **Hội tụ siêu tuyến tính Quasi Newton**
+###### Hội tụ siêu tuyến tính Quasi Newton
 
 <p align="center"><kbd><img src="assets/sbpqv13kace.png" width="80%"></kbd></p>
 
