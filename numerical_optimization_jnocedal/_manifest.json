@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1786595814330,
+  "publishedAt": 1786821349274,
   "sections": [
     {
       "title": "📋 Overview",
@@ -123,7 +123,7 @@
       "imageCount": 23
     },
     {
-      "title": "8.1 Finite-Difference\nDerivative Approx",
+      "title": "8.1 Finite-Difference Derivative Approx",
       "path": "numerical_optimization_jnocedal/81_finite_difference_derivative_approx.md",
       "noteCount": 20,
       "imageCount": 29
@@ -177,6 +177,12 @@
       "imageCount": 5
     },
     {
+      "title": "12.5  Second-Order Conditions",
+      "path": "numerical_optimization_jnocedal/125_second_order_conditions.md",
+      "noteCount": 1,
+      "imageCount": 2
+    },
+    {
       "title": "Appendix A",
       "path": "numerical_optimization_jnocedal/appendix_a.md",
       "noteCount": 1,
@@ -195,6 +201,6 @@
       "imageCount": 11
     }
   ],
-  "totalNotes": 397,
-  "totalImages": 560
+  "totalNotes": 398,
+  "totalImages": 562
 }
