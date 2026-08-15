@@ -5,8 +5,6 @@
 ---
 <a id="node-w3fcz5c"></a>
 
-## 8.2 Automatic differentiation(*extremely important for AI)
-
 > [!NOTE]
 > 8.2 Automatic differentiation(*extremely important for AI)
 
@@ -146,7 +144,7 @@
 
 <a id="node-m3rfdci"></a>
 
-- **Mode Forward Đạo hàm theo hướng**
+###### Mode Forward Đạo hàm theo hướng
 
 <p align="center"><kbd><img src="assets/sbrum4l4uys.png" width="80%"></kbd></p>
 
@@ -236,7 +234,7 @@
 
 <a id="node-qwdmdov"></a>
 
-- **Đạo hàm xuôi tự động**
+###### Đạo hàm xuôi tự động
 
 <p align="center"><kbd><img src="assets/dbp0nkzxof9.png" width="80%"></kbd></p>
 
@@ -315,7 +313,7 @@
 
 <a id="node-6izc9q2"></a>
 
-- **Tự động hóa vi phân**
+###### Tự động hóa vi phân
 
 <p align="center"><kbd><img src="assets/y1xqij82alc.png" width="80%"></kbd></p>
 
@@ -335,7 +333,7 @@
 
 <a id="node-4szczss"></a>
 
-- **Tính đạo hàm song song**
+###### Tính đạo hàm song song
 
 <p align="center"><kbd><img src="assets/6vjyw3wzqgy.png" width="80%"></kbd></p>
 
@@ -363,7 +361,7 @@
 
 <a id="node-2c4zey1"></a>
 
-- **Chi phí tính toán gradient**
+###### Chi phí tính toán gradient
 
 <p align="center"><kbd><img src="assets/9v0no4tbo1k.png" width="80%"></kbd></p>
 
@@ -404,7 +402,7 @@
 
 <a id="node-3mxd71o"></a>
 
-- **Triển khai Đạo hàm Tự động**
+###### Triển khai Đạo hàm Tự động
 
 <p align="center"><kbd><img src="assets/9yi7sdt346w.png" width="80%"></kbd></p>
 
@@ -412,7 +410,7 @@
 
 <a id="node-yo2a3su"></a>
 
-- **Backpropagation và Đạo hàm ngược**
+###### Backpropagation và Đạo hàm ngược
 
 <p align="center"><kbd><img src="assets/axjhxpy9lst.png" width="80%"></kbd></p>
 
@@ -453,7 +451,7 @@
 
 <a id="node-2ip03iv"></a>
 
-- **Biến Adjoint (Backward Mode)**
+###### Biến Adjoint (Backward Mode)
 
 <p align="center"><kbd><img src="assets/nf1t9kvm3e.png" width="80%"></kbd></p>
 
@@ -476,7 +474,7 @@
 
 <a id="node-sg5w9ko"></a>
 
-- **Quy tắc chuỗi đảo ngược**
+###### Quy tắc chuỗi đảo ngược
 
 <p align="center"><kbd><img src="assets/e4iwuflfqc.png" width="80%"></kbd></p>
 
@@ -549,7 +547,7 @@
 
 <a id="node-kn7p3hd"></a>
 
-- **Cộng dồn Gradient Backprop**
+###### Cộng dồn Gradient Backprop
 
 <p align="center"><kbd><img src="assets/jgrochys8li.png" width="80%"></kbd></p>
 
@@ -568,7 +566,7 @@
 
 <a id="node-ttdwriw"></a>
 
-- **Node Finalized và Backpropagation**
+###### Node Finalized và Backpropagation
 
 <p align="center"><kbd><img src="assets/ua9i6hv1yvd.png" width="80%"></kbd></p>
 
@@ -607,7 +605,7 @@
 
 <a id="node-tptlh3w"></a>
 
-- **Chế độ đạo hàm tự động**
+###### Chế độ đạo hàm tự động
 
 <p align="center"><kbd><img src="assets/cjf9tnz24t.png" width="80%"></kbd></p>
 
@@ -637,7 +635,7 @@
 
 <a id="node-eru092w"></a>
 
-- **Minh họa chế độ ngược**
+###### Minh họa chế độ ngược
 
 <p align="center"><kbd><img src="assets/jfzuva7mif.png" width="80%"></kbd></p>
 
@@ -654,7 +652,7 @@
 
 <a id="node-1kebxnc"></a>
 
-- **Độ phức tạp Reverse/Forward**
+###### Độ phức tạp Reverse/Forward
 
 <p align="center"><kbd><img src="assets/41yv5cb901x.png" width="80%"></kbd></p>
 
@@ -673,7 +671,7 @@
 
 <a id="node-bbguhtd"></a>
 
-- **Kĩ thuật Checkpointing**
+###### Kĩ thuật Checkpointing
 
 <p align="center"><kbd><img src="assets/rulivug9xoc.png" width="80%"></kbd></p>
 
@@ -712,7 +710,7 @@
 
 <a id="node-d2hzq64"></a>
 
-- **Jacobian hàm vector**
+###### Jacobian hàm vector
 
 <p align="center"><kbd><img src="assets/3e2qgkrq7wv.png" width="80%"></kbd></p>
 
@@ -735,7 +733,7 @@
 
 <a id="node-z03hjvl"></a>
 
-- **Vi phân tự động hàm tách rời**
+###### Vi phân tự động hàm tách rời
 
 <p align="center"><kbd><img src="assets/7a0qsrxiaem.png" width="80%"></kbd></p>
 
@@ -747,7 +745,7 @@
 
 <a id="node-ooabjdi"></a>
 
-- **Gradient Hàm Phân Tách Tô Màu**
+###### Gradient Hàm Phân Tách Tô Màu
 
 <p align="center"><kbd><img src="assets/hmuixhqcdzc.png" width="80%"></kbd></p>
 
@@ -844,7 +842,7 @@
 
 <a id="node-dh6ihgh"></a>
 
-- **Tối ưu hóa đạo hàm**
+###### Tối ưu hóa đạo hàm
 
 <p align="center"><kbd><img src="assets/88v49iedpg.png" width="80%"></kbd></p>
 
@@ -855,7 +853,7 @@
 
 <a id="node-2qrqups"></a>
 
-- **Tính Jacobian Forward Mode**
+###### Tính Jacobian Forward Mode
 
 <p align="center"><kbd><img src="assets/e59d2awkth.png" width="80%"></kbd></p>
 
@@ -893,7 +891,7 @@
 
 <a id="node-uamnzcf"></a>
 
-- **Reverse mode tính Jacobian**
+###### Reverse mode tính Jacobian
 
 <p align="center"><kbd><img src="assets/nvdtrobnwd.png" width="80%"></kbd></p>
 
@@ -963,7 +961,7 @@
 
 <a id="node-s7r8ypk"></a>
 
-- **AD nghịch đảo Jacobian thưa**
+###### AD nghịch đảo Jacobian thưa
 
 <p align="center"><kbd><img src="assets/95ohi1ew4so.png" width="80%"></kbd></p>
 
@@ -999,7 +997,7 @@
 
 <a id="node-yd7auop"></a>
 
-- **Forward mode tính J(x)p**
+###### Forward mode tính J(x)p
 
 <p align="center"><kbd><img src="assets/yontvxbg5qf.png" width="80%"></kbd></p>
 
@@ -1031,7 +1029,7 @@
 
 <a id="node-f7bn6sb"></a>
 
-- **Tính Hessian: Forward Mode**
+###### Tính Hessian: Forward Mode
 
 <p align="center"><kbd><img src="assets/6rpqqky9us.png" width="80%"></kbd></p>
 
@@ -1064,7 +1062,7 @@
 
 <a id="node-gbqu4db"></a>
 
-- **Quy tắc cộng Dpxi Dpqxi**
+###### Quy tắc cộng Dpxi Dpqxi
 
 <p align="center"><kbd><img src="assets/wafrgwowdqd.png" width="80%"></kbd></p>
 
@@ -1104,7 +1102,7 @@
 
 <a id="node-nkc0iap"></a>
 
-- **Đạo hàm biến đổi đơn vị**
+###### Đạo hàm biến đổi đơn vị
 
 <p align="center"><kbd><img src="assets/l7f0a0q1hcp.png" width="80%"></kbd></p>
 
@@ -1158,7 +1156,7 @@
 
 <a id="node-yv1lzbb"></a>
 
-- **Tính Hessian Forward Mode**
+###### Tính Hessian Forward Mode
 
 <p align="center"><kbd><img src="assets/zydy29qrxe.png" width="80%"></kbd></p>
 
@@ -1202,7 +1200,7 @@
 
 <a id="node-b1lwl1i"></a>
 
-- **Chi phí Hessian Forward Mode**
+###### Chi phí Hessian Forward Mode
 
 <p align="center"><kbd><img src="assets/7xzt5hf2w99.png" width="80%"></kbd></p>
 
@@ -1234,7 +1232,7 @@
 
 <a id="node-5qh15d0"></a>
 
-- **Tích Hessian-vector Chế độ Tiến**
+###### Tích Hessian-vector Chế độ Tiến
 
 <p align="center"><kbd><img src="assets/hep4jdmn37l.png" width="80%"></kbd></p>
 
@@ -1255,7 +1253,7 @@
 
 <a id="node-jjxagix"></a>
 
-- **Hessian Forward Mode Hàm Đơn Biến**
+###### Hessian Forward Mode Hàm Đơn Biến
 
 <p align="center"><kbd><img src="assets/k92ac6sq44p.png" width="80%"></kbd></p>
 
@@ -1285,7 +1283,7 @@
 
 <a id="node-mzm0ovb"></a>
 
-- **Hessian Vector Chế độ ngược**
+###### Hessian Vector Chế độ ngược
 
 <p align="center"><kbd><img src="assets/2pgtzcq23yz.png" width="80%"></kbd></p>
 
@@ -1366,7 +1364,7 @@
 
 <a id="node-vr0h89b"></a>
 
-- **Tính toán ma trận Hessian**
+###### Tính toán ma trận Hessian
 
 <p align="center"><kbd><img src="assets/2z3bqxzn81i.png" width="80%"></kbd></p>
 
@@ -1399,7 +1397,7 @@
 
 <a id="node-7vpdp9k"></a>
 
-- **Giới hạn vi phân tự động**
+###### Giới hạn vi phân tự động
 
 <p align="center"><kbd><img src="assets/5ksoy7bqac3.png" width="80%"></kbd></p>
 
