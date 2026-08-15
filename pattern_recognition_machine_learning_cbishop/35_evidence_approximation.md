@@ -459,13 +459,15 @@
 > Khi đó việc tính cái tích phân này là không còn tính được (no longer analytically tracable) Tuy nhiên ta có thể làm bằng cách dùng xấp xỉ Laplace. Tuy nhiên, cách làm này có vài nhược điểm. (chưa hiểu lắm nhưng có thể các chương sau sẽ nói)
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **85/100**
+> **🤖 AI Feedback** — ✅ Score: **90/100**
 >
-> Bạn đã nắm rất tốt bản chất của việc tích phân hóa hai siêu tham số để thu được phân phối Student's t và đề xuất dùng xấp xỉ Laplace. Tuy nhiên, bạn hiểu nhầm cụm 'no longer analytically tractable' (nghĩa là 'không còn giải được bằng giải tích nữa', thay vì 'không còn không thể'), và nên bổ sung lý do Laplace thất bại là do phân phối bị lệch rất mạnh.
+> Bạn đã hiểu rất tốt ý tưởng cốt lõi và biểu diễn toán học của việc tích phân các siêu tham số để tạo ra phân phối Student's t. Tuy nhiên, bạn nên lưu ý thêm lý do xấp xỉ Laplace thất bại ở đây là do hàm dưới dấu tích phân có cực trị bị lệch rất mạnh (strongly skewed), khiến xấp xỉ Gaussian cục bộ bỏ sót phần lớn khối lượng xác suất.
 
 <br>
 
 <a id="node-x5m4676"></a>
+
+###### Maximizing the Log Evidence
 
 <p align="center"><kbd><img src="assets/ikhah3uu15j.png" width="80%"></kbd></p>
 
