@@ -5,8 +5,6 @@
 ---
 <a id="node-ct1hqwj"></a>
 
-## A.1 Matrix Factorizations: Cholesky, LU, QR
-
 <br>
 
 <a id="node-849jazn"></a>
@@ -177,7 +175,7 @@
 
 <a id="node-6eq73rc"></a>
 
-- **Phân tích LU matrix chữ nhật**
+###### Phân tích LU matrix chữ nhật
 
 <p align="center"><kbd><img src="assets/b6sax56fku7.png" width="80%"></kbd></p>
 
@@ -274,7 +272,7 @@
 
 <a id="node-xbi82tp"></a>
 
-- **Phân tích Cholesky và công thức**
+###### Phân tích Cholesky và công thức
 
 <p align="center"><kbd><img src="assets/989i20hitic.png" width="80%"></kbd></p>
 
@@ -442,7 +440,7 @@
 
 <a id="node-dqryyvr"></a>
 
-- **Hoán vị ma trận trong Cholesky**
+###### Hoán vị ma trận trong Cholesky
 
 <p align="center"><kbd><img src="assets/3i6d2a4cy3s.png" width="80%"></kbd></p>
 
@@ -453,7 +451,7 @@
 
 <a id="node-3z2h35t"></a>
 
-- **Ứng dụng phân tách Cholesky**
+###### Ứng dụng phân tách Cholesky
 
 <p align="center"><kbd><img src="assets/m9uinmlk3ln.png" width="80%"></kbd></p>
 
@@ -477,7 +475,7 @@
 
 <a id="node-1eq3gxk"></a>
 
-- **Phân tích QR và Gram-Schmidt**
+###### Phân tích QR và Gram-Schmidt
 
 <p align="center"><kbd><img src="assets/veqzn9m7c3s.png" width="80%"></kbd></p>
 
