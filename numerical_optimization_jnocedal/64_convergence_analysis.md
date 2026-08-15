@@ -5,8 +5,6 @@
 ---
 <a id="node-haesk0l"></a>
 
-## 6.4 Convergence Analysis
-
 <br>
 
 <a id="node-r7rljvg"></a>
@@ -133,7 +131,7 @@
 
 <a id="node-e4msnnl"></a>
 
-- **Lý thuyết hội tụ thuật toán**
+###### Lý thuyết hội tụ thuật toán
 
 <p align="center"><kbd><img src="assets/1yeiesku7id.png" width="80%"></kbd></p>
 
