@@ -5,8 +5,6 @@
 ---
 <a id="node-y3oqxrx"></a>
 
-## A.1 Error Analysis & Floating-Point Arithmetic
-
 <br>
 
 <a id="node-jyibbkg"></a>
@@ -499,7 +497,7 @@
 
 <a id="node-tgd8g2b"></a>
 
-- **Phạm vi số dấu phẩy động**
+###### Phạm vi số dấu phẩy động
 
 <p align="center"><kbd><img src="assets/g4xh8qawxyu.png" width="80%"></kbd></p>
 
@@ -667,7 +665,7 @@
 
 <a id="node-hbttfye"></a>
 
-- **Độ chính xác 15 chữ số**
+###### Độ chính xác 15 chữ số
 
 <p align="center"><kbd><img src="assets/uos2z7uykoc.png" width="80%"></kbd></p>
 
@@ -719,7 +717,7 @@
 
 <a id="node-hfxqoqn"></a>
 
-- **Sai số làm tròn Floating Point**
+###### Sai số làm tròn Floating Point
 
 <p align="center"><kbd><img src="assets/u1nmpbiy4z.png" width="80%"></kbd></p>
 
@@ -754,7 +752,7 @@
 
 <a id="node-0dvsaq0"></a>
 
-- **Sai số hủy bỏ**
+###### Sai số hủy bỏ
 
 <p align="center"><kbd><img src="assets/su99nq17eyl.png" width="80%"></kbd></p>
 
