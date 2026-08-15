@@ -5,8 +5,6 @@
 ---
 <a id="node-b0m9e17"></a>
 
-## 12.3 First Order Optimality Condition
-
 <br>
 
 <a id="node-hvhhcds"></a>
