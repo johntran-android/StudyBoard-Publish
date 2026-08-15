@@ -5,8 +5,6 @@
 ---
 <a id="node-zktnplz"></a>
 
-## 6.1 The BFGS Method
-
 <br>
 
 <a id="node-27tqfbe"></a>
@@ -142,7 +140,7 @@
 
 <a id="node-na1ftse"></a>
 
-- **Curvature condition**
+###### Curvature condition
 
 <p align="center"><kbd><img src="assets/dotfwfnrowl.png" width="80%"></kbd></p>
 
@@ -210,7 +208,7 @@
 
 <a id="node-zk38kse"></a>
 
-- **Liên hệ với Wolfe conditions**
+###### Liên hệ với Wolfe conditions
 
 <p align="center"><kbd><img src="assets/ob49lt0wbn.png" width="80%"></kbd></p>
 
@@ -268,7 +266,7 @@
 
 <a id="node-j54km63"></a>
 
-- **Quasi-Newton bất biến tỉ lệ**
+###### Quasi-Newton bất biến tỉ lệ
 
 <p align="center"><kbd><img src="assets/1edc4rnb5wii.png" width="80%"></kbd></p>
 
@@ -367,7 +365,7 @@
 
 <a id="node-qy13j57"></a>
 
-- **Ôn lại Taylor's theorem**
+###### Ôn lại Taylor's theorem
 
 > [!NOTE]
 > Chỗ này ta sẽ cần ôn lại chút về Taylor's theorem đã học trong chap 2:
@@ -501,7 +499,7 @@
 
 <a id="node-tu6c71d"></a>
 
-- **Nghiệm duy nhất Bk+1**
+###### Nghiệm duy nhất Bk+1
 
 <p align="center"><kbd><img src="assets/xb30pmmxzmh.png" width="80%"></kbd></p>
 
@@ -633,7 +631,7 @@
 
 <a id="node-vykqpaa"></a>
 
-- **Công thức DFP**
+###### Công thức DFP
 
 <p align="center"><kbd><img src="assets/owm8qym22s.png" width="80%"></kbd></p>
 
@@ -710,7 +708,7 @@
 
 <a id="node-9vkdjwo"></a>
 
-- **Công thức BFGS**
+###### Công thức BFGS
 
 <p align="center"><kbd><img src="assets/e79v97w1v6u.png" width="80%"></kbd></p>
 
@@ -732,7 +730,7 @@
 
 <a id="node-fzcv0wd"></a>
 
-- **Lựa chọn H0 trong BFGS**
+###### Lựa chọn H0 trong BFGS
 
 <p align="center"><kbd><img src="assets/1avyfk50j3u.png" width="80%"></kbd></p>
 
@@ -750,7 +748,7 @@
 
 <a id="node-vbixkam"></a>
 
-- **Thuật toán BFGS**
+###### Thuật toán BFGS
 
 <p align="center"><kbd><img src="assets/i3p1yiu7jw.png" width="80%"></kbd></p>
 
@@ -761,7 +759,7 @@
 
 <a id="node-af7o6pq"></a>
 
-- **BFGS: Hiệu quả tính toán**
+###### BFGS: Hiệu quả tính toán
 
 <p align="center"><kbd><img src="assets/x2oxm9g8bm.png" width="80%"></kbd></p>
 
@@ -793,7 +791,7 @@
 
 <a id="node-n50a0yw"></a>
 
-- **Properties of the BFGS methods**
+###### Properties of the BFGS methods
 
 <p align="center"><kbd><img src="assets/1r6h5bwxd52.png" width="80%"></kbd></p>
 
@@ -855,7 +853,7 @@
 
 <a id="node-xhffg00"></a>
 
-- **Tính bất biến Quasi-Newton**
+###### Tính bất biến Quasi-Newton
 
 <p align="center"><kbd><img src="assets/qmw7itkgan.png" width="80%"></kbd></p>
 
@@ -873,7 +871,7 @@
 
 <a id="node-7a6zeqc"></a>
 
-- **BFGS tự sửa lỗi Hessian**
+###### BFGS tự sửa lỗi Hessian
 
 <p align="center"><kbd><img src="assets/hzz76xydbh.png" width="80%"></kbd></p>
 
@@ -901,7 +899,7 @@
 
 <a id="node-xsumq1w"></a>
 
-- **Implementation**
+###### Implementation
 
 <p align="center"><kbd><img src="assets/1w2bj8yek7h.png" width="80%"></kbd></p>
 
@@ -921,7 +919,7 @@
 
 <a id="node-n0cj5j5"></a>
 
-- **Chiến lược chọn H0**
+###### Chiến lược chọn H0
 
 <p align="center"><kbd><img src="assets/s0u0xnmgggr.png" width="80%"></kbd></p>
 
@@ -945,7 +943,7 @@
 
 <a id="node-bxxfjnk"></a>
 
-- **BFGS phân rã Cholesky**
+###### BFGS phân rã Cholesky
 
 <p align="center"><kbd><img src="assets/d9fxm4j6vp.png" width="80%"></kbd></p>
 
@@ -977,7 +975,7 @@
 
 <a id="node-fh2uzxo"></a>
 
-- **BFGS và điều kiện Wolfe**
+###### BFGS và điều kiện Wolfe
 
 <p align="center"><kbd><img src="assets/8abd0x5c2ix.png" width="80%"></kbd></p>
 
