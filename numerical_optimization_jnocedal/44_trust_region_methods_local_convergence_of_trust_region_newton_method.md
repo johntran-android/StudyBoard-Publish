@@ -5,8 +5,6 @@
 ---
 <a id="node-zesw144"></a>
 
-## 4.4 Trust-Region Methods: Local Convergence of Trust-Region Newton Method
-
 > [!NOTE]
 > (QUAY LẠI SAU)
 
