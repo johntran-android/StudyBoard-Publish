@@ -5,8 +5,6 @@
 ---
 <a id="node-t0gw9wr"></a>
 
-## 3.4 Line Search Method: Newton’s Method with Hessian Modification
-
 > [!NOTE]
 > Line Search Method: Newton’s Method with Hessian Modification
 
@@ -211,7 +209,7 @@
 
 <a id="node-dxmqa2m"></a>
 
-- **Hội tụ bậc hai Thuật toán 3.2**
+###### Hội tụ bậc hai Thuật toán 3.2
 
 <p align="center"><kbd><img src="assets/mvfsub4cfus.png" width="80%"></kbd></p>
 
@@ -233,7 +231,7 @@
 
 <a id="node-ul5s5qx"></a>
 
-- **Hội tụ tuyến tính Hessian đơn trị**
+###### Hội tụ tuyến tính Hessian đơn trị
 
 <p align="center"><kbd><img src="assets/kr123zrb7bi.png" width="80%"></kbd></p>
 
@@ -263,7 +261,7 @@
 
 <a id="node-8iaysmh"></a>
 
-- **Sửa đổi giá trị riêng**
+###### Sửa đổi giá trị riêng
 
 <p align="center"><kbd><img src="assets/0f9il2np5jp5.png" width="80%"></kbd></p>
 
@@ -337,7 +335,7 @@
 
 <a id="node-a9edmoj"></a>
 
-- **Các chiến lược sửa đổi Hessian**
+###### Các chiến lược sửa đổi Hessian
 
 <p align="center"><kbd><img src="assets/plsd8rrqmno.png" width="80%"></kbd></p>
 
@@ -354,7 +352,7 @@
 
 <a id="node-915bw72"></a>
 
-- **Matrix delta a có Fnorm nhỏ nhất**
+###### Matrix delta a có Fnorm nhỏ nhất
 
 <p align="center"><kbd><img src="assets/eeqwau8mjym.png" width="80%"></kbd></p>
 
@@ -422,7 +420,7 @@
 
 <a id="node-o2shqb0"></a>
 
-- **Delta A có cấu trúc diagonal và có spectral norm (L2 norm) nhỏ nhất**
+###### Delta A có cấu trúc diagonal và có spectral norm (L2 norm) nhỏ nhất
 
 <p align="center"><kbd><img src="assets/i0kcub7akp.png" width="80%"></kbd></p>
 
@@ -462,7 +460,7 @@
 
 <a id="node-7f8x060"></a>
 
-- **Chiến lược chỉnh sửa ma trận**
+###### Chiến lược chỉnh sửa ma trận
 
 <p align="center"><kbd><img src="assets/rj6y1m470e8.png" width="80%"></kbd></p>
 
@@ -486,7 +484,7 @@
 
 <a id="node-vo3sl8p"></a>
 
-- **Cholesky với cộng ma trận đơn vị**
+###### Cholesky với cộng ma trận đơn vị
 
 <p align="center"><kbd><img src="assets/1fn3dx4dgzrh.png" width="80%"></kbd></p>
 
@@ -543,7 +541,7 @@
 
 <a id="node-pwaeza0"></a>
 
-- **Modified Cholesky factorization**
+###### Modified Cholesky factorization
 
 <p align="center"><kbd><img src="assets/rz393yp1al.png" width="80%"></kbd></p>
 
@@ -575,7 +573,7 @@
 
 <a id="node-ijshp9n"></a>
 
-- **Giải thích cách tính L, D**
+###### Giải thích cách tính L, D
 
 <p align="center"><kbd><img src="assets/b075zob8gsi.png" width="80%"></kbd></p>
 
@@ -604,7 +602,7 @@
 
 <a id="node-bapd4vr"></a>
 
-- **Thuật toán Cholesky LDLT**
+###### Thuật toán Cholesky LDLT
 
 <p align="center"><kbd><img src="assets/5y3lov0gk13.png" width="80%"></kbd></p>
 
@@ -626,7 +624,7 @@
 
 <a id="node-m1ru7a4"></a>
 
-- **Phân tích Cholesky tiêu chuẩn**
+###### Phân tích Cholesky tiêu chuẩn
 
 <p align="center"><kbd><img src="assets/r3a2j426dun.png" width="80%"></kbd></p>
 
@@ -639,7 +637,7 @@
 
 <a id="node-f1zouok"></a>
 
-- **Cholesky Factorization chuẩn**
+###### Cholesky Factorization chuẩn
 
 <p align="center"><kbd><img src="assets/rqp4b7ukzcd.png" width="80%"></kbd></p>
 
@@ -667,7 +665,7 @@
 
 <a id="node-nxpccgq"></a>
 
-- **Modified Cholesky Factorization**
+###### Modified Cholesky Factorization
 
 <p align="center"><kbd><img src="assets/q27pu3dpamh.png" width="80%"></kbd></p>
 
@@ -747,7 +745,7 @@
 
 <a id="node-50cg30c"></a>
 
-- **Quay lại nói về ý nghĩa của thuật toán Modified Cholesky Factorization**
+###### Quay lại nói về ý nghĩa của thuật toán Modified Cholesky Factorization
 
 <p align="center"><kbd><img src="assets/z58gcbcal4r.png" width="80%"></kbd></p>
 
@@ -773,7 +771,7 @@
 
 <a id="node-pcqci56"></a>
 
-- **Thuật toán Cholesky sửa đổi**
+###### Thuật toán Cholesky sửa đổi
 
 <p align="center"><kbd><img src="assets/wskhicc6228.png" width="80%"></kbd></p>
 
@@ -801,7 +799,7 @@
 
 <a id="node-2ltif9d"></a>
 
-- **Phân tích đối xứng bất định sửa đổi**
+###### Phân tích đối xứng bất định sửa đổi
 
 <p align="center"><kbd><img src="assets/wnv00ppymu.png" width="80%"></kbd></p>
 
@@ -839,7 +837,7 @@
 
 <a id="node-g9xdq5g"></a>
 
-- **Ví dụ của P A PT = L B LT**
+###### Ví dụ của P A PT = L B LT
 
 <p align="center"><kbd><img src="assets/izxpdmxmdd.png" width="80%"></kbd></p>
 
@@ -854,7 +852,7 @@
 
 <a id="node-qlg6w8b"></a>
 
-- **Modified indefinite symmetric factorization**
+###### Modified indefinite symmetric factorization
 
 <p align="center"><kbd><img src="assets/dsvqytw869w.png" width="80%"></kbd></p>
 
