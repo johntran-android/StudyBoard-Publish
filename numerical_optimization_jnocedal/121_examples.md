@@ -5,8 +5,6 @@
 ---
 <a id="node-frx2ram"></a>
 
-## 12.1 Examples
-
 <br>
 
 <a id="node-ukukd7b"></a>
@@ -349,7 +347,7 @@
 
 <a id="node-eq84j6p"></a>
 
-- **Lagrangian Function and Lagrange Multipliers**
+###### Lagrangian Function and Lagrange Multipliers
 
 <p align="center"><kbd><img src="assets/zkr2n6pw71d.png" width="80%"></kbd></p>
 
@@ -372,7 +370,7 @@
 
 <a id="node-l2m5qfg"></a>
 
-- **Single Inequality Constraint Optimization**
+###### Single Inequality Constraint Optimization
 
 <p align="center"><kbd><img src="assets/slkskexsoy.png" width="80%"></kbd></p>
 
@@ -385,7 +383,7 @@
 
 <a id="node-i0gcjhq"></a>
 
-- **First-Order Feasible Step Conditions**
+###### First-Order Feasible Step Conditions
 
 <p align="center"><kbd><img src="assets/s2n7kkh7i2f.png" width="80%"></kbd></p>
 
@@ -545,7 +543,7 @@
 
 <a id="node-jyp1xyk"></a>
 
-- **Example 12.3 Two Inequality Constraints**
+###### Example 12.3 Two Inequality Constraints
 
 <p align="center"><kbd><img src="assets/2vj8ghvkeqg.png" width="80%"></kbd></p>
 
@@ -560,7 +558,7 @@
 
 <a id="node-r2pl3pb"></a>
 
-- **Lagrangian Properties at Feasible Points**
+###### Lagrangian Properties at Feasible Points
 
 <p align="center"><kbd><img src="assets/xw6dqe8959j.png" width="80%"></kbd></p>
 
