@@ -819,6 +819,8 @@
 >
 > Σ = AAT, lí do có thể phân tách Σ, hay nói cách khác, có thể tìm được A thỏa điều này là vì Σ là matrix xác định dương (positive definite)
 
+**🔗 See also:** [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8)
+
 <br>
 
 <a id="node-yyj622u"></a>
