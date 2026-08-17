@@ -521,7 +521,7 @@
 >
 > Và tóm tắt lại các kết quả ta đã tự làm trong bảng sau.
 
-**🔗 See also:** [Bayesian Linear Regression Posterior Update](./331_bayesian_linear_regression.md#node-fv65lte) · [3.3.2 Predictive distribution](./332_predictive_distribution.md#node-wdjepxb)
+**🔗 See also:** [Bayesian Linear Regression Posterior Update](./331_bayesian_linear_regression.md#node-fv65lte) · [3.3.2 Predictive distribution](./332_predictive_distribution.md#node-wdjepxb) · [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8)
 
 <br>
 
