@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1787003331469,
+  "publishedAt": 1787093996553,
   "sections": [
     {
       "title": "📋 Overview",
@@ -273,16 +273,16 @@
       "imageCount": 15
     },
     {
+      "title": "3.5.1 Evaluation of the evidence function",
+      "path": "pattern_recognition_machine_learning_cbishop/351_evaluation_of_the_evidence_function.md",
+      "noteCount": 4,
+      "imageCount": 9
+    },
+    {
       "title": "3.5 Evidence Approximation",
       "path": "pattern_recognition_machine_learning_cbishop/35_evidence_approximation.md",
       "noteCount": 6,
       "imageCount": 6
-    },
-    {
-      "title": "3.5.1 Evaluation of the evidence function",
-      "path": "pattern_recognition_machine_learning_cbishop/351_evaluation_of_the_evidence_function.md",
-      "noteCount": 1,
-      "imageCount": 2
     },
     {
       "title": "Appendix C. Matrices",
@@ -297,6 +297,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 366,
-  "totalImages": 532
+  "totalNotes": 369,
+  "totalImages": 539
 }
