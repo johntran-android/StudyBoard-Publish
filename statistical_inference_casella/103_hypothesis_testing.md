@@ -1,6 +1,6 @@
 # 10.3 Hypothesis Testing
 
-📊 **Progress:** `3` Notes | `4` Screenshots | `3` AI Reviews
+📊 **Progress:** `6` Notes | `6` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-zhfsuqo"></a>
@@ -133,7 +133,322 @@
 
 ##### Asymptotic Distribution of the LRT
 
-<p align="center"><kbd><img src="assets/wrzrqn1hqj.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/wgkr53q5a7q.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Định lí 10.3.1, xét một bài toán testing giữa H0: θ = θ0 vs H1: θ ≠ θ0, cho X1,....Xn iid \~f(x|θ), với θ^ là MLE của θ, và f(x|θ) thỏa regularity condition. Khi đó, theorem nói rằng:
+>
+>
+>
+> Under H0 (tức là nếu θ = θ0), thì -2log λ(**X**) → (d) χ²\_1
+>
+>
+>
+> Chứng minh như sau:
+>
+>
+>
+> Đầu tiên, khai triển Taylor quanh θ^ đối với hàm log likelihood l(θ|**x**) = log L(θ|**x**):
+>
+>
+>
+> l(θ|**x**) = l(θ^|**x**) + l'(θ^|**x**)(θ-θ^) + (1/2)l''(θ^|**x**)(θ-θ^)^2 + ....
+>
+>
+>
+> = l(θ^|**x**) + 0 × (θ-θ^) + (1/2)l''(θ^|**x**)(θ-θ^)^2 + ....
+>
+>
+>
+> = l(θ^|**x**) + (1/2)l''(θ^|**x**)(θ-θ^)^2 + ....
+>
+>
+>
+> Thay θ = θ0:
+>
+>
+>
+> l(θ0|**x**) = l(θ^|**x**) + (1/2)l''(θ^|**x**)(θ0-θ^)^2 + ....
+>
+>
+>
+> ⇒ l(θ0|**x**) ≈ l(θ^|**x**) + (1/2)l''(θ^|**x**)(θ0-θ^)^2
+>
+>
+>
+> Tiếp, xét cái -2 log λ(**x**). Như đã ôn lại, λ(**x**) = sup\_Θ0 L(θ|**x**) / sup\_Θ L(θ|**x**),
+>
+>
+>
+> và θ^ là MLE của θ nên mẫu số chính là L(θ^|**x**) nên ta có:
+>
+>
+>
+> và gọi θ^0 là restricted MLE, tức là argmax\_Θ0 L(θ|**x**), và vì ở đây Θ0 = {θ0}, nên θ^0 = θ0
+>
+>
+>
+> ⇒ -2 log λ(**x**) = -2 log \[L(θ0|**x**) / L(θ^|**x**)
+>
+>
+>
+> = -2 (log L(θ0|**x**) - log L(θ^|**x**))
+>
+>
+>
+> = -2 (l(θ0|**x**) - l(θ^|**x**))
+>
+>
+>
+> Thay l(θ0|**x**) ≈ l(θ^|**x**) + (1/2)l''(θ^|**x**)(θ0-θ^)^2 vào:
+>
+>
+>
+> ..= -2 (l(θ^|**x**) + (1/2)l''(θ^|**x**)(θ0-θ^)^2 - l(θ^|**x**))
+>
+>
+>
+> = - l''(θ^|**x**)(θ0-θ^)^2
+>
+>
+>
+> Vậy ta có -2 log λ(**x**) ≈ - l''(θ^|**x**)(θ0-θ^)^2 = (θ0-θ^)^2 \[-l''(θ^|**x**)\]
+>
+>
+>
+> (chỗ này trong sách ghi là chia cho l''(θ^|**x**) mình cho là bị in lỗi thiếu ^(-1), tức mẫu số đúng phải là l''(θ^|**x**)\]^(-1))
+>
+>
+>
+> Vậy -2 log λ(**X**) ≈ (θ0-θ^)^2 \[- l''(θ^|**X**)\]
+>
+>
+>
+> ---
+>
+>
+>
+> Xét - l''(θ^|**X**):
+>
+>
+>
+> \- l''(θ^|**X**) = \[-∂^2/∂θ^2 log L(θ|**X**)\] | θ=θ^
+>
+>
+>
+> Xét -∂^2/∂θ^2 log L(θ|**X**)
+>
+>
+>
+> = -∂^2/∂θ^2 log f(**X**|θ)
+>
+>
+>
+> = - ∂^2/∂θ^2 log Πi f(Xi|θ)
+>
+>
+>
+> = - ∂^2/∂θ^2 (Σi log f(Xi|θ))
+>
+>
+>
+> = - Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
+>
+>
+>
+> Nếu xét random variable -∂^2/∂θ^2 log f(X|θ) thì -∂^2/∂θ^2 log f(Xi|θ) với i=1,2....n sẽ làm một random sample iid size n
+>
+>
+>
+> và sample mean sẽ là:
+>
+>
+>
+> \-Σi \[∂^2/∂θ^2 log f(Xi|θ)\] / n
+>
+>
+>
+> (= -\[∂^2/∂θ^2 log L(θ|**X**)\]/n = -l''(θ^|**X**)/n)
+>
+>
+>
+> Theo luật số lớn nó sẽ hội tụ xác suất về true mean, tức:
+>
+>
+>
+> \-Σi \[∂^2/∂θ^2 log f(Xi|θ)\] / n → (p) E\_θ{-∂^2/∂θ^2 log f(X1|θ)}
+>
+>
+>
+> Và E\_θ{-∂^2/∂θ^2 log f(X1|θ)} theo bổ đề 7.3.11 (xem link) sẽ bằng E\_θ\[∂/∂θ log f(X1|θ)\]^2
+>
+>
+>
+> và cái này chính là I1(θ), tức information number của sample size 1
+>
+>
+>
+> Vậy -l''(θ|**X**)/n → (p) I1(θ)
+>
+>
+>
+> và vì θ^ → θ
+>
+>
+>
+> nên -l''(θ^|**X**)/n = -l''(θ|**X**)/n | θ=θ^ → (p) I1(θ)
+>
+>
+>
+> viết lại -l''(θ^|**X**)/n → (p) I1(θ)
+>
+>
+>
+> ---
+>
+>
+>
+> Đến đây, xét MLE θ^ theo định lý (...) là estimator hiệu quả tiệm cận, nên Avar(θ^) = 1/I1(θ), cũng là:
+>
+>
+>
+> √n(θ^ - θ) → (d) n(0, 1/I1(θ))
+>
+>
+>
+> ⇔ √I1(θ) √n(θ^ - θ) → (d) √I1(θ) n(0, 1/I1(θ)) = n(0, 1)
+>
+>
+>
+> ⇒ \[√I1(θ) √n(θ^ - θ)\]^2 → (d) χ²\_1
+>
+>
+>
+> ⇔ I1(θ) n (θ^ - θ)^2 → (d) χ²\_1
+>
+>
+>
+> ⇔ n (θ^ - θ)^2 → (d) χ²\_1 / I1(θ)
+>
+>
+>
+> ---
+>
+>
+>
+>  Vậy -2 log λ(**X**) ≈ (θ0-θ^)^2 \[- l''(θ^|**X**)\]
+>
+> = n(θ0-θ^)^2 \[- l''(θ^|**X**) / n\]
+>
+>
+>
+> i) n (θ^ - θ)^2 → (d) χ²\_1 / I1(θ)
+>
+>
+>
+> ii) -l''(θ^|**X**) / n → (p) I1(θ)
+>
+>
+>
+> Theo Slusky theorem (nói nếu Xn → (d) X, Yn → (p) Y thì XnYn → (d) XY
+>
+>
+>
+> ⇒ (θ0-θ^)^2 \[- l''(θ^|**X**)\] → (d) I1(θ) × χ²\_1 / I1(θ)
+>
+>
+>
+> ⇔ (θ0-θ^)^2 \[- l''(θ^|**X**)\] → (d) χ²\_1
+>
+>
+>
+> ⇔ -2 log λ(**X**)  → (d) χ²\_1
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Bài viết rất xuất sắc, trình bày cực kỳ chi tiết và chính xác từng bước chứng minh toán học của định lý, đặc biệt là việc phát hiện ra lỗi in ấn ở mẫu số trong sách giáo khoa và giải thích tường tận cách áp dụng Định lý Slutsky.
+
+**🔗 See also:** [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4) · [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr)
+
+<br>
+
+<a id="node-zvfelb6"></a>
+
+###### Poisson Likelihood Ratio Test
+
+<p align="center"><kbd><img src="assets/4l3usqy1ydq.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Áp dụng theorem 10.3.1, -2 log λ(**x**) sẽ hội tụ về một χ²\_1.
+>
+>
+>
+> Nên để ta có một leve α test, tức là test có P(Type I error) ≤ α
+>
+>
+>
+> ⇔ P(reject H0) ≤ α khi θ ∈ Θ0
+>
+>
+>
+> ⇔ P(λ(**X**) ≤ c) ≤ α khi θ ∈ Θ0
+>
+>
+>
+> ⇔ P(log λ(**X**) ≤ log c) ≤ α khi θ ∈ Θ0
+>
+>
+>
+> ⇔ P(-2log λ(**X**) ≥ - 2log c) ≤ α khi θ ∈ Θ0
+>
+>
+>
+> Và với việc khi n rất lớn thì -log λ(**X**) trở thành χ²\_1
+>
+>
+>
+> Ta có ⇔ P(χ²\_1 ≥ - 2log c) ≤ α khi θ ∈ Θ0
+>
+>
+>
+> Từ đó ta có thể tìm ra c1 (=-2log c) khiến thỏa P(χ²\_1 ≥ c1) ≤ α. Và đó chính là χ²\_1,α
+>
+>
+>
+> Như vậy level alpha sẽ test rule là reject H0 khi observed value **x** thỏa: -2log λ(**x**) ≥ χ²\_1,α
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chú của bạn rất xuất sắc, trình bày logic chặt chẽ để chứng minh miền bác bỏ của kiểm định tỷ số khả trị (LRT) dựa trên định lý Wilks. Tuy nhiên, có một lỗi gõ nhỏ ở dòng gần cuối khi ghi thiếu số 2: '-log λ(X)' cần sửa thành '-2log λ(X)'.
+
+<br>
+
+<a id="node-goitpzx"></a>
+
+###### Asymptotics of Poisson LRT Statistic
+
+<p align="center"><kbd><img src="assets/7ccqr1glt2f.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là, ở đây gs sẽ minh họa như sau:
+>
+>
+>
+> Như ta vừa đã hiểu, rằng test rule là reject H0 khi observed value **x** thỏa: -2log λ(**x**) ≥ χ²\_1,α, có nghĩa là, chỉ việc tính -2 log λ(**x**) và so nó với giá trị χ²\_1,α (ví dụ với α = 0.05 thì tra bản xem con số χ²\_1,0.05 là bao nhiêu. Còn -2 log λ(**x**) thì trong bài toán đang xét ta đã có công thức.
+>
+>
+>
+> Như vậy, ở đây gs cho sampling 10000 bộ sample size 25 từ f(x|λ0=5), và tính -2 log λ(**x**) từ 10.000 sample này, vẽ vẽ được histogram trong hình.
+>
+>
+>
+> Sau đó ông vẽ đường pdf của χ²\_1 là đường nét liền
+>
+>
+>
+> Kết quả cho thấy quả thật với n = 25 thôi, nhưng các histogram thể hiện khá sát với pdf của χ²\_1. Minh họa cho ý -2 log λ(**X**) → (d) χ²\_1 mà Theorem lúc nãy đã nói.
 
 <br>
 
