@@ -424,11 +424,11 @@
 >
 >
 >
-> ⇔ C = (β/2) \[**t**T**t** - 2(**m**N)T**Φ**T**t** + (**m**N)T**Φ**T**Φm**N\] +α(**m**N)T**m**N)
+> ⇔ C = (β/2) \[**t**T**t** - 2(**m**N)T**Φ**T**t** + (**m**N)T**Φ**T**Φm**N\] +(α/2)(**m**N)T**m**N)
 >
 >
 >
-> ⇔ C = (β/2) ||**t** - **Φm**N||^2 +α(**m**N)T**m**N) → Đặt là E(**m**N)
+> ⇔ C = (β/2) ||**t** - **Φm**N||^2 + (α/2)(**m**N)T**m**N) → Đặt là E(**m**N)
 >
 >
 >
@@ -456,11 +456,11 @@
 >
 >
 >
-> Ý tiếp theo ông Bishop dùng kết quả 3.54 trong đó nói rằng: Khi prior của **w** chọn là N(0, (1/α)**I**), và dưới mô hình ta giả định T \~ N(**w**TΦ(**x**), (1/β)) thì: 
+> Ý tiếp theo ông Bishop dùng kết quả 3.54 trong đó nói rằng: Khi prior của **w** chọn là N(0, (1/α)**I**), và dưới mô hình ta giả định T \~ N(**w**TΦ(**x**), (1/β)) thì:
 >
 >
 >
-> posterior distribution của **w** sẽ là Normal (**m**N, **S**Ninv) với: 
+> posterior distribution của **w** sẽ là Normal (**m**N, **S**Ninv) với:
 >
 >
 >
@@ -472,7 +472,7 @@
 >
 >
 >
-> Vậy thì ở đây **A** cũng là matrix được ta đặt cho β**Φ**T**Φ**+α**I**. Do đó **A** = **S**Ninv. 
+> Vậy thì ở đây **A** cũng là matrix được ta đặt cho β**Φ**T**Φ**+α**I**. Do đó **A** = **S**Ninv.
 >
 >
 >
@@ -483,7 +483,7 @@
 >
 > Ghi chú rất chi tiết, tự biến đổi toán học xuất sắc và giải thích rõ ràng mối liên hệ giữa ma trận Hessian với các công thức posterior trước đó. Tuy nhiên, bạn lưu ý một lỗi gõ nhỏ ở bước cuối cùng khi bị thiếu hệ số 1/2 ở thành phần alpha trong công thức của E(m_N).
 
-**🔗 See also:** [Gaussian Prior and Posterior Parameters](./331_bayesian_linear_regression.md#node-nt82rck)
+**🔗 See also:** [Gaussian Prior and Posterior Parameters](./331_bayesian_linear_regression.md#node-nt82rck) · [Section 3.5.2 Maximizing the Evidence Function](./352_maximizing_the_evidence_function.md#node-nc5qxnz)
 
 <br>
 
@@ -621,7 +621,7 @@
 >
 > Ghi chú của bạn cực kỳ chi tiết, mạch lạc và chính xác tuyệt đối trong từng bước biến đổi toán học để chứng minh (3.85) và (3.86). Việc giải thích tường minh hằng số chuẩn hóa Gaussian và cách triệt tiêu các đại lượng logarit là một điểm cộng rất lớn giúp người đọc dễ dàng theo kịp.
 
-**🔗 See also:** [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj)
+**🔗 See also:** [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj) · [Section 3.5.2 Maximizing the Evidence Function](./352_maximizing_the_evidence_function.md#node-nc5qxnz)
 
 <br>
 
