@@ -1,6 +1,6 @@
 # 10.3 Hypothesis Testing
 
-📊 **Progress:** `6` Notes | `6` Screenshots | `5` AI Reviews
+📊 **Progress:** `7` Notes | `8` Screenshots | `7` AI Reviews
 
 ---
 <a id="node-zhfsuqo"></a>
@@ -436,19 +436,192 @@
 >
 >
 >
-> Như ta vừa đã hiểu, rằng test rule là reject H0 khi observed value **x** thỏa: -2log λ(**x**) ≥ χ²\_1,α, có nghĩa là, chỉ việc tính -2 log λ(**x**) và so nó với giá trị χ²\_1,α (ví dụ với α = 0.05 thì tra bản xem con số χ²\_1,0.05 là bao nhiêu. Còn -2 log λ(**x**) thì trong bài toán đang xét ta đã có công thức.
+> Như ta vừa đã hiểu, rằng test rule là reject H0 khi observed value **x** thỏa: -2log λ(**x**) ≥ χ²\_1,α, có nghĩa là, chỉ việc tính -2 log λ(**x**) và so nó với giá trị χ²\_1,α (ví dụ với α = 0.05 thì tra bảng xem con số χ²\_1,0.05 là bao nhiêu. Còn -2 log λ(**x**) thì trong bài toán đang xét ta đã có công thức.
 >
 >
 >
-> Như vậy, ở đây gs cho sampling 10000 bộ sample size 25 từ f(x|λ0=5), và tính -2 log λ(**x**) từ 10.000 sample này, vẽ vẽ được histogram trong hình.
+> Như vậy, ở đây gs cho sampling 10.000 bộ sample size 25 từ f(x|λ0=5), và tính -2 log λ(**x**) từ 10.000 sample này, vẽ vẽ được histogram trong hình.
 >
 >
 >
-> Sau đó ông vẽ đường pdf của χ²\_1 là đường nét liền
+> Ta hiểu histogram được vẽ như sau: trục ngang chia thành những ô nhỏ bề rộng Δ. Với mỗi sample **x** (tổng cộng có 10.000 sample), là một bộ 25 con số (x1,...xn), ta sẽ tính -2 log λ(**x**) và xem giá trị của nó rơi vào ô nào thì cho chiều cao cột của ô đó trong histogram tăng lên một đơn vị, và sau cùng thì ta chia cho 10000Δ. Vậy chiều cao của các cột so với nhau của histogram tại một ô sẽ là tỉ lệ số lượng sample **x** có -2 log λ(**x**) rơi vào ô đó.
 >
 >
 >
-> Kết quả cho thấy quả thật với n = 25 thôi, nhưng các histogram thể hiện khá sát với pdf của χ²\_1. Minh họa cho ý -2 log λ(**X**) → (d) χ²\_1 mà Theorem lúc nãy đã nói.
+> (Ví dụ có 3 cột với chiều cao h1 = 1000/10000Δ, h2 = 7000/10000Δ, h3 = 2000/10000Δ) Tổng diện tích các cột = 1: h1 Δ + h2 Δ + h3 Δ = 1)
+>
+>
+>
+> Lúc này có thể coi như một pmf. Và tăng số lượng 10000 lên vô cùng, thì chiều cao tại đó sẽ trở thành:
+>
+>
+>
+> lim N → ∞ \[số điểm giá trị (của random variable Y = -2 log λ(**X**) rơi vào vùng có bề rộng Δ quanh mốc a\] / NΔ
+>
+>
+>
+> Và đây chính là định nghĩa theo trường phái cổ điển (Frequentist) của xác suất Y rơi vào vùng Δ quanh (mốc a nào đó): P(a ≤ Y ≤ a + Δ)
+>
+>
+>
+> Và khi cho Δ → 0, thì ta có: lim Δ → 0 P(a ≤ Y ≤ a + Δ) / Δ,
+>
+>
+>
+> và đây chính là định nghĩa của probability density pdf: f(a).
+>
+>
+>
+> Do đó ta có thể hiểu rằng histogram này là phiên bản chưa tiến hóa của pdf -log λ(**X**), khi số lượng sample là 10.000. Nếu cho con số 10.000 tăng lên vô hạn và cho bề rộng ô nhỏ lại về 0 thì histogram sẽ ngày càng mượt, trở thành đường cong pdf.
+>
+>
+>
+> Tiếp theo người ta lại vẽ pdf của χ²\_1 là đường cong màu đen.
+>
+>
+>
+> Kết quả thể hiện qua hình vẽ 10.3.1 cho thấy nó rất match với histogram dù đây chỉ là phiên bản chưa tiến hóa, nhưng các histogram thể hiện khá sát với pdf của χ²\_1. Và cũng thể hiện qua con số trong cái bảng bên dưới khi ta so các phân vị.
+>
+>
+>
+> Hiểu cái bảng đó như sau:
+>
+>
+>
+> Ví dụ percentile 0.8, theo định nghiã ví dụ percentile 0.80 thì có nghĩa là: Ta lấy cái order statistic mà 80% các sample còn lại đều nhỏ hơn (hoặc bằng). Và khi tính cho bảng này, ta sẽ coi như có sample với size 10.000: X1,...X10.000, rồi xếp từ nhỏ đến lớn thành bộ order statistic X\_{1}, ...X\_{10.000} và lấy ra cái order statistic mà 80% đều nhỏ hơn (hoặc bằng). Giá trị của order statsitic này chính là 1.630.
+>
+>
+>
+> Soi chiếu nó trên cái histogram, thì đây sẽ là cái mốc trên trục ngang mà tại đó: diện tích của caí histogram (tổng diện tích bằng 1) sẽ bị chia làm 2 phần với phần bên trái chiếm 80%. Vì sao? Vì như đã nói cách vẽ cái histogram này: chiều cao mỗi ô là là tỉ lệ của số sample trong 10.000 sample có giá trị -2log λ(**x**) rơi vào ô đó, chia cho 10.000. Vậy nếu giả sử ta có cái mốc a nào đó, thì tổng chiều cao các cột bên trái nó sẽ chính là tỉ lệ của số sample trong 10.000 sample có giá trị -2log λ(x) nhỏ hơn mốc a đó. Và để a đạt 80%. ta sẽ kéo nó về bên phải cho đến khi thỏa. Và dễ thấy là nó sẽ nằm trúng ngay cái order statistic X\_{8000} vì đây là nó sẽ hơn hoặc bằng 8000 thằng trong 10000 (lớn hơn 7999 thằng và kể cả nó là 8000).
+>
+>
+>
+> Vậy ta hiểu vì sao cái X\_{8000}, có giá trị 1.630, chính là cái mốc mà chia histogram thành hai phần tỉ lệ (theo diện tích, hay theo tổng hiểu cao đều được, vì các phần có bề rộng như nhau, nên ví dụ bên trái có 2 cột cao h1, h2 bên phải có 3 cột h3,4. thì tỉ lệ diện tích là (Δ h1 + Δ h2) / (Δ h3 + Δ h4) cũng chính là (h1 + h2) / (h3 + h4).
+>
+>
+>
+> Và khi ta làm vậy với pdf của χ²\_1: Lấy mốc chia diện tích của pdf thành hai phần tỉ lệ 80:20, nó ra con số 1.642. Rất gần với 1.63.
+>
+>
+>
+> Tương tự cho các mốc khác. Minh họa về mặt số liệu cho hình ảnh đường cong pdf của χ²\_1 match với đồ thị histogram.
+>
+>
+>
+> Điều này minh họa cho ý mà theorem vừa rồi đã tuyên bố, khi n tăng lên vô cùng thì -2 log λ(**X**) sẽ hội tụ phân phối về χ²\_1.
+>
+>
+>
+> Và thật ra cần hiểu thế này: Việc phiên bản chưa tiến hóa đã có thể match khá tốt đường pdf của χ²\_1 có ý nghĩa như sau:
+>
+>
+>
+> Có nghĩa là, từ nay về sau, cứ việc lôi χ²\_1 ra mà tính, tức là, cứ dùng bảng tra các mốc phân vị của χ²\_1 để dùng, hay nói cách khác, cứ coi -2 log λ(**X**) như biến χ²\_1.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú giải thích rất xuất sắc, chính xác và trực quan cả về lý thuyết thống kê (định lý Wilks) lẫn cách dựng histogram thực nghiệm. Một điểm lưu ý nhỏ là định nghĩa phân vị nên diễn đạt chặt chẽ hơn một chút (80% số quan sát nhỏ hơn hoặc bằng giá trị đó), nhưng tổng thể tài liệu cực kỳ chất lượng.
+
+**🔗 See also:** [Quy ước làm tròn phân vị mẫu](./54_order_statistic.md#node-87bnmo9) · [Chứng minh P(X=x)=0](./16_pdf_pmf.md#node-29g5dq1)
+
+<br>
+
+<a id="node-pa8m0ub"></a>
+
+###### Theorem 10.3.3 Likelihood Ratio Test
+
+<p align="center"><kbd><img src="assets/ap3adni0r8c.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bo0yzy52oq.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Thế thì, từ cái theorem vừa rồi, khi đại ý nói rằng khi n lớn lên vô cùng thì - 2 log λ(**X**) sẽ trở thành một χ²\_1, do đó, theorem này mới đem áp dụng điều này vào bài toán hypothesis testing, cụ thể là như sau:
+>
+>
+>
+> Như bối cảnh bữa giờ là, ta quan tâm đến bài toán hypothesis testing: H0: θ ∈ Θ0 vs H1: θ ∉ Θ0, và một loại test khá hữu ích là Likelihood Ratio Test (LRT), với test rule là λ(**x**) ≤ c. Và λ(**x**) ≤ c ⇔ -2 log λ(**x**) ≥ -2 log(c)
+>
+>
+>
+> Và để có một level α test, thì c phải là mốc nào đó khiến khi θ ∈ Θ0 thì P(reject H0) = P(**X** ∈ Rejection region) = P(-2 log λ(**X**) ≥ -2 log(c)) ≤ α.
+>
+>
+>
+> Đặt c\* = -2 log(c), bài toán trở thành: tìm c\* để P(-2 log λ(**X**) ≥ c\*) ≤ α.
+>
+>
+>
+> Khi đó tính c từ c\*, thì ta sẽ có một level α LRT test: Reject H0 khi λ(**X**) ≤ c,
+>
+>
+>
+> hay cứ để theo c\* cũng được: Reject H0 khi -2 log λ(**x**) ≥ c\*
+>
+>
+>
+> Vấn đề là để tìm c\* thỏa P(-2 log λ(**X**) ≥ c\*) ≤ α rất khó.
+>
+>
+>
+> Vì, khi xét sự thật rằng đây là xác suất liên của một event liên quan đến statistic -2 log λ(**X**), và ta không biết distribution của nó. Ví dụ như nếu biết nó là Z \~ normal(0, 1) chẳng hạn, thì bài toán trở thành tìm c\* để P(Z ≥ c\*) ≤ α, ta chỉ việc tìm mốc phần diện tích pdf bên phải bằng α là xong, và ta có thể tra bảng để có mốc này, và nó chính là cái được kí hiệu bởi Z\_α.
+>
+>
+>
+> Nhưng sự thật thì ta không biết distribution của Y = -2 log λ(**X**) là gì.
+>
+>
+>
+> Tuy nhiên, một theorem đã chứng minh rằng Y = -2 log λ(**X**) là một random variable hội tụ phân phối về χ²\_1.
+>
+>
+>
+> Từ đó ta có thể xấp xỉ việc tìm c\* thỏa P(-2 log λ(**X**) ≥ c\*) ≤ α bằng bài toán:
+>
+>
+>
+> tìm c\* để P(χ²\_1 ≥ c\*) ≤ α, và như vậy, có thể tra bản để có mốc c\*, tương tự như Z\_α, thì ở đây chính là χ²\_1\_α.
+>
+>
+>
+> ---
+>
+>
+>
+> Tuy nhiên theorem này nói rằng, ta không cần dùng χ²\_1, tứcχ²\_ν với ν = 1, thay vào đó, ông nói ta có thể dùng ν theo định nghĩa trong theorem 10.3.3 mà mình sẽ nói sau (ở đây hiểu bức tranh toàn cảnh trước) Nhưng dù gì đi nữa, cơ bản chỉ là, dựa vào bảng tra của χ²\_ν, ta tra ra mốc χ²\_ν,α. Và đó chính là c\*
+>
+>
+>
+> Từ đó, ta có level α LRT test rule là: Reject H0 khi -2 log λ(**X**) ≥ χ²\_ν,α
+>
+>
+>
+> Và theorem này cũng nói rằng, khi n tăng lên, thì cái test này, không chỉ là level α test, mà nó thậm chí dần trở thành size α test, tức là xác suất mắc Type I error không chỉ ≤ α mà sẽ trở nên gần bằng α. Và gs Casella gọi là **Asymptotic size α test**.
+>
+>
+>
+> ---
+>
+>
+>
+> Recall chút về size α vs level α test. 
+>
+>
+>
+> Với level α test, với định nghĩa là test có xác suất mắc Type I error không lớn hơn α: Tức là sup\_θ∈Θ0 P(reject H0) ≤ α
+>
+>
+>
+> còn size α test, là test có sup\_θ∈Θ0 P(reject H0) = α
+>
+>
+>
+> Vậy thì gs lưu ý rằng, cái định nghĩa **asymptotic size α test** chỉ có nghĩa là: khi n → ∞ thì P(reject H0) → α với mỗi θ ∈ Θ, nhưng có thể chưa chắc (hay đôi khi thì không thỏa) n → ∞ thì sup\_θ∈Θ0 P(reject H0) = α (cái này hơi khó hiểu), nhưng đại ý gs nói là thực tế thì ta có thể coi như khi n → ∞ thì ta sẽ có size α test.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Bài viết giải thích rất trực quan, logic và nắm bắt xuất sắc bản chất việc chuyển từ phân phối chính xác sang phân phối tiệm cận chi-bình phương. Điểm cần lưu ý là định nghĩa chính xác của 'size' (kích thước) của kiểm định là supremum của xác suất sai lầm loại I trên tập giả thuyết không, chứ không chỉ đơn thuần là bằng $\alpha$.
 
 <br>
 
