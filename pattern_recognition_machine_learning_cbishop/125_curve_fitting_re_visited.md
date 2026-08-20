@@ -994,7 +994,7 @@
 > thì thật ra ta đang giải bài toán maximizing posterior distribution với prior được chọn là
 > Normal
 
-**🔗 See also:** [Kỹ thuật Regularization và Shrinkage](./11_example_polynomial_curve_fitting.md#node-bwb4qwy)
+**🔗 See also:** [Kỹ thuật Regularization và Shrinkage](./11_example_polynomial_curve_fitting.md#node-bwb4qwy) · [Iterative Estimation of Alpha](./352_maximizing_the_evidence_function.md#node-vstyyq2)
 
 <br>
 
