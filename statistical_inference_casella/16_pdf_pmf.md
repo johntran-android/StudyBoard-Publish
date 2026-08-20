@@ -159,7 +159,7 @@
 > Chứng minh với continuous random
 > variable thì PMF P(X = x) = 0
 
-**🔗 See also:** [Thuật toán Accept/Reject](./56_generating_random_sample.md#node-aebauln)
+**🔗 See also:** [Thuật toán Accept/Reject](./56_generating_random_sample.md#node-aebauln) · [Asymptotics of Poisson LRT Statistic](./103_hypothesis_testing.md#node-goitpzx)
 
 <br>
 
