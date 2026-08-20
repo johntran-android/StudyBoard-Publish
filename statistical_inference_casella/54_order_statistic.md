@@ -226,7 +226,7 @@
 >
 > Nên quay lại đây, ví dụ như nói về cái statistic: 65th sample percentile, thì nó (theo định nghĩa, hay ý nghĩa, là con số mà, 65% các random variable trong đám X1,...Xn đều nhỏ hơn), còn cụ thể nó là gì, thì theo công thức trên nó là X(n+1-{n(1-p)} = X(12+1-{4.2}) = X(9)
 
-**🔗 See also:** [Definition 10.2.2 Breakdown Value](./102_robustness.md#node-6rvo106)
+**🔗 See also:** [Definition 10.2.2 Breakdown Value](./102_robustness.md#node-6rvo106) · [Asymptotics of Poisson LRT Statistic](./103_hypothesis_testing.md#node-goitpzx)
 
 <br>
 
