@@ -43,6 +43,8 @@
 >
 > Bài ghi chú thể hiện sự hiểu biết sâu sắc về các khái niệm, giải thích chính xác nội dung văn bản và cung cấp những phân tích bổ sung tuyệt vời, đặc biệt là lý do tại sao λ=0 khi tối ưu hóa đồng thời. Đây là một bài phân tích rất chi tiết và chính xác.
 
+**🔗 See also:** [Iterative Estimation of Alpha](./352_maximizing_the_evidence_function.md#node-vstyyq2)
+
 <br>
 
 <a id="node-897hybe"></a>
