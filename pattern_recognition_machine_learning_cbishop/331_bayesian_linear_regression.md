@@ -320,7 +320,7 @@
 >
 > Ghi chú của bạn rất xuất sắc, giải thích rất sâu sắc và trực quan từ trực giác hình chuông của phân phối chuẩn đến sự khác biệt giữa hai trường phái Bayes và tần suất. Điểm trừ duy nhất là lỗi gõ nhầm số thứ tự công thức ở cuối bài từ (3.53, 3.54) thành (5.3, 5.4).
 
-**🔗 See also:** [Section 3.3.3 Equivalent Kernel](./333_equivalent_kernel.md#node-qgf9klh) · [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8) · [Hessian of Regularized Error Function](./351_evaluation_of_the_evidence_function.md#node-vpu7vqs)
+**🔗 See also:** [Section 3.3.3 Equivalent Kernel](./333_equivalent_kernel.md#node-qgf9klh) · [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8) · [Hessian of Regularized Error Function](./351_evaluation_of_the_evidence_function.md#node-vpu7vqs) · [Iterative Estimation of Alpha](./352_maximizing_the_evidence_function.md#node-vstyyq2)
 
 <br>
 
