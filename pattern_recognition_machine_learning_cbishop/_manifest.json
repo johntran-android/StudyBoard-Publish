@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1787093996553,
+  "publishedAt": 1787267374802,
   "sections": [
     {
       "title": "📋 Overview",
@@ -285,6 +285,18 @@
       "imageCount": 6
     },
     {
+      "title": "3.5.2 Maximizing the evidence function",
+      "path": "pattern_recognition_machine_learning_cbishop/352_maximizing_the_evidence_function.md",
+      "noteCount": 3,
+      "imageCount": 4
+    },
+    {
+      "title": "3.5.3 Effective number of parameters",
+      "path": "pattern_recognition_machine_learning_cbishop/353_effective_number_of_parameters.md",
+      "noteCount": 1,
+      "imageCount": 1
+    },
+    {
       "title": "Appendix C. Matrices",
       "path": "pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md",
       "noteCount": 19,
@@ -297,6 +309,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 369,
-  "totalImages": 539
+  "totalNotes": 373,
+  "totalImages": 544
 }
