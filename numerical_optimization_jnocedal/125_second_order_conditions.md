@@ -1,6 +1,6 @@
 # 12.5  Second-Order Conditions
 
-📊 **Progress:** `1` Notes | `2` Screenshots | `1` AI Reviews
+📊 **Progress:** `3` Notes | `6` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-8arnxqj"></a>
@@ -9,71 +9,317 @@
 
 <a id="node-169mbi2"></a>
 
-## Điều kiện bậc hai
+## Tập linearized feasible direction
 
 <p align="center"><kbd><img src="assets/3ngeh3a6oni.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/7n6wlgppql.png" width="80%"></kbd></p>
-
 > [!NOTE]
-> Qua 12.5 ta sẽ bàn đến điều kiện bậc hai, dùng đạo hàm bậc hai.
+> Cần biết một định nghĩa quan trọng: tập linearized feasible direction.
 >
 >
 >
-> Từ phần trước ta đã biết KKT condition (là điều kiện cần bậc 1 của bài toán tối ưu ràng buộc) sẽ giúp ta tìm ra điểm x\* có đặc điểm sau: Khi từ x\* đi theo hướng vector s nào trong ℱ(x\*)
+> Định nghĩa nói rằng, cho một feasible point x và active constraint set 𝒜(x), thì tập này define như sau:
 >
 >
 >
-> (định nghĩa đơn giản là tập các vector s khiến đi từ x\* đến x\*+s thì x\*+s vẫn feasible)
+> ℱ(x)= {d: dT∇ci(x) = 0 ∀ i ∈ ℰ và dT∇ci(x) ≥ 0  ∀ i ∈ 𝒜(x) ∩ ℐ}
 >
 >
 >
-> Trong lập luận đó, ta đã lập luận rằng, nếu tại x mà tôi không tìm thấy hướng đi (vector s) có độ dài rất nhỏ nào, khiến cho khi đi theo hướng đó s hợp ∇f góc tù, và với ∇c1 góc vuông hoặc nhọn, thì x\* chính là ứng cử viên của solution.
+> Hiểu tập này thế nào? Vì sao lại gọi là linearized feasible direction set.
 >
 >
 >
-> Nhưng nó chỉ là điều kiện cần là vì:
+> Đầu tiên, 𝒜(x\*) là gì, là active set, chứa các index i từ ℰ của các ràng buộc đẳng thức và i từ ℐ của các ràng buộc bất đẳng thức mà với các ràng buộc này thì chúng tại x đang active, tức ci(x\*) = 0 (mấy cái i khác mà ci(x\*) &gt; 0) thì khỏi tính vào. Thành ra 𝒜(x\*) = ℰ ∪ {i ∈ ℐ: ci(x\*) = 0}.
 >
 >
 >
-> Nếu tại x có thể tìm ra hướng feasible s (tức x+s vẫn feasible) có ∇f(x)Ts &lt; 0, giảm thêm xấp xỉ bậc 1 của f thì x chắc chắn không phải là solution. Do nếu có thể giảm thêm xấp xỉ bậc 1 thì chắc chắn giảm thêm f.
+> Thế thì, như vậy 𝒜(x\*) ∩ ℐ thì lại chính là {i ∈ ℐ: ci(x\*) = 0}.
 >
 >
 >
-> Nhưng ngược lại, nếu tại x, không thể đi theo feasible s nào giúp giảm thêm xấp xỉ bậc 1 của f tại x, thì cũng chưa chắc là sẽ không thể tìm ra s giúp giảm f.
+> Quay lại tập ℱ. Đầu tiên, có thể thấy nó chứa d sao cho ∇ci(x)Td = 0 với i ∈ ℰ. 
 >
 >
 >
-> Biểu thị toán học như sau:
+> Hiểu thế này và ta sẽ thấy vì sao nó có tên gọi là linearized feasible direction set: Nói ngắn gọn là vì, nếu ta coi hàm số constraint như hàm tuyến tính, thì d trong tập ℱ(x) sẽ khiến x + d vẫn feasible.
 >
 >
 >
-> Cho x không thỏa KKT, tức tồn tại s khiến ∇f(x)Ts &lt; 0, thì chắc chắn f^(x+s) (=f(x) + ∇f(x)Ts) sẽ &lt; f(x), mà cũng đồng nghĩa f(x+s) (theo Taylor expansion, = f(x) + ∇f(x)Ts + term bậc cao..) sẽ &lt; f(x).
+> Cụ thể, gỉa sử ta có constraint c1(x) = 0, là với i = 1 ∈ ℰ. Thì vốn dĩ c1(x) có thể là hàm phi tuyến nào đó. Và xét x\* thỏa c1(x\*) = 0 và ta có vector s, thì c1(x\*+s) chưa chắc đã = 0, đồng nghĩa x\*+s không còn thỏa constraint này. 
 >
 >
 >
-> Nhưng nếu x thỏa KKT, tức ∇f(x)Ts ≥ 0 với mọi s feasible direction (s ∈ ℱ(x\*)) thì:
+> Tuy nhiên, ta tuyến tính hóa c1(x), thay constraint c1(x) = 0 bởi c^1(x) = 0, với c^1(x) = c1(x\*) + ∇c1(x\*)T(x-x\*). Khi đó, với x\* vẫn thỏa c1(x\*) = 0, và d ∈ ℱ(x\*) nên theo định nghĩa của ℱ, d sẽ thỏa ∇c1(x\*)Td = 0. Ta sẽ có c^1(x+s) = c1(x\*) + ∇c1(x\*)T(x\*+s-x\*) = c1(x\*) + ∇c1(x\*)Td = c1(x\*) + 0 = c1(x\*) và từ đó vẫn = 0.
 >
 >
 >
-> Chỉ khẳng định f^(x+s) sẽ không giảm
+> Như vậy, tuy d không phải là exact feasible direction (vì c1(x+s) không thỏa = 0) nhưng với c1 đã tuyến tính hóa, thì x+s vẫn thỏa cái constraint đã tuyến tính hóa.
 >
 >
 >
-> CHỨ KHÔNG KHẲNG ĐỊNH f(x+s) SẼ KHÔNG GIẢM.
+> Tương tự, xét loại thứ hai: d: dT ∇c1(x) ≥ 0 với i ∈ 𝒜(x) ∩ ℐ, mà ở trên ta đã nói, đây chính là  {i ∈ ℐ: ci(x\*) = 0}, tập các index của ℐ mà  tại đó constraint đang active.
 >
 >
 >
-> VÌ, KHI ∇f(x)Ts = 0, f(x+s) (= f(x) + term bậc cao) VẪN CÓ THỂ &lt; f(x)
+> Với d thuộc loại này, thì ví dụ ta có c2(x) ≥ 0 là một inequality constraint mà tại x\* đang active, tức c2(x\*) = 0. Tương tự, tuyến tính hóa c2(x). để thay vì dùng c2(x), ta dùng hàm c2^(x) có công thức c2(x\*) + ∇c2(x\*)(x-x\*). 
 >
 >
 >
-> Do đó ta cần dùng đạo hàm bậc hai.
+> Khi đó, với x\* thỏa c2(x) ≥ 0, nên c2(x\*) ≥ 0, thì d thỏa dT∇c1(x) ≥ 0 với mọi i ∈ 𝒜(x) ∩ I, sẽ chưa chắc khiến c2(x\* + d) cũng ≥ 0. Nhưng nếu ta tuyến tính hóa  c2, để thay c2 bởi c^2(x) = c2(x\*) + ∇c2(x\*)T(x-x\*). Thì ta sẽ có sự thật rằng, c^2(x\*) ≥ 0 thì d trên sẽ khién c^2(x\*+d)  = c2(x\*) + ∇c2(x\*)Td cũng chắc chắn ≥ 0 do d đã thỏa ∇c2(x\*)Td ≥ 0.
+>
+>
+>
+> Như vậy, tóm lại, tập ℱ(x\*) nói ngắn gọn là: Nó không phải là tập chứa các feasible direction. Mà là chứa các direction mà khi ta coi các hàm constraint của 𝒜(x) là tuyến tính, thì direction d trong ℱ(x\*) sẽ khiến x\* + d vẫn feasible.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
-> Ghi chú rất xuất sắc, thể hiện sự hiểu biết sâu sắc về bản chất hình học và toán học của điều kiện KKT cũng như vai trò của đạo hàm bậc hai. Điểm duy nhất cần lưu ý là nên phân biệt rõ hơn giữa tập hướng khả thi thực tế và tập hướng khả thi tuyến tính hóa F(x).
+> Ghi chú xuất sắc, giải thích rất rõ ràng và chính xác bản chất của việc tuyến tính hóa ràng buộc bằng khai triển Taylor bậc nhất. Bạn chỉ cần lưu ý một vài lỗi chính tả nhỏ ở phần công thức (như ghi thiếu dấu * ở x-x* và viết nhầm chỉ số c1, c2) để ghi chú hoàn hảo hơn.
+
+**🔗 See also:** [Definition of the Critical Cone](#node-jebihq1)
+
+<br>
+
+<a id="node-g3ykkko"></a>
+
+### Điều kiện tối ưu bậc hai
+
+<p align="center"><kbd><img src="assets/wsu2vl7s5s8.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đầu tiên, ta giả nói khi một điểm x\* thỏa KKT, thì **đi từ x\* theo w nào với w lấy từ ℱ(x\*) cũng đều giúp tăng** hoặc (ít nhất là giữa nguyên) hàm first order approximation của objective. Thử gỉai thích vì sao lại nói như vậy:
+>
+>
+>
+> Để trả lời đầu tiên là cần ôn lại lập luận trực giác giúp ta xây dựng điều kiện KKT: Nói ngắn gọn, lập trực giác đó chính là: Để tìm ra ứng cử viên cho cho minimizer của bài toán ràng buộc, ta sẽ loại bỏ những điểm mà chắc chắn không thể là minimizer. Đó là những điểm mà khi đứng ở đó, ta vẫn có thể đi tiếp theo hướng d nào đó (với step size nhỏ) làm giảm thêm xấp xỉ bậc 1 của objective. (mà khi step size đủ nhỏ, việc giảm xạp xỉ bậc 1 của f đồng nghĩa sẽ giảm hàm f)
+>
+>
+>
+> Và chính lập luận này đã giúp xây dựng KKT:
+>
+>
+>
+> Ôn nhanh: Xét bài toán minimize f(x), có ràng buộc c1(x) ≥ 0.
+>
+>
+>
+> Xấp xỉ bậc 1 của f(x) tại điểm đang đứng: f(x + s) ≈ f(x) + ∇f(x)Ts (đặt là hàm f^(s))
+>
+>
+>
+> Nếu tại x tồn tại s khiến ∇f(x)Ts &lt; 0, dễ thấy chính là sẽ giúp giảm thêm xấp xỉ bậc 1 của f khi đi từ x theo hướng s. Về mặt hình học, s hợp với ∇f(x) góc tù.
+>
+>
+>
+> Ta sẽ thay ràng buộc gốc bằng bản tuyến tính hóa, vì giúp đơn giản hơn cũng như là dựa trên sự thật rằng, nếu tồn tại s khiến x+s thỏa ràng buộc tuyến tính hóa, thì có nghĩa là, chỉ cần khống chế độ dài của s để hủy vai trò của term bậc cao thì x+s cũng sẽ thỏa ràng buộc gốc.
+>
+>
+>
+> Xấp xỉ bậc 1 của c1(x): c1(x + s) ≈ c1(x) + ∇c1(x)Ts (đặt là c1^(s))
+>
+>
+>
+> Ràng buộc là c1(x) ≥ 0. Nếu ta thay nó bằng c1^(s), ràng buộc trở thành c1^(s) ≥ ⇔ c1(x) + ∇c1(x)Ts ≥ 0. Từ đó, nếu xét s là linearized feasible direction ℱ(x\*) theo định nghĩa là: Hướng mà nếu c1(x\*) = 0 thì s thỏa ∇c1(x\*) ≥ 0) thì khi đó, dù cho c1(x\*) = 0 hay c1(x\*) &gt; 0, thì c1^(s) = c1(x\*) + ∇c1(x\*)Ts sẽ đều ≥ 0 (dù chưa chắc c1(x+s) đã thỏa ≥) tức là luôn thỏa phiên bản đã linearized của ràng buộc c1(x).
+>
+>
+>
+> Như vậy nhiệm vụ để tìm các ứng cử viên là loại bỏ các điểm mà: Tại đó vẫn tồn tại s khiến x+s vẫn thỏa linearized constraint (vì như vậy bằng cách khống chế step size, x+s sẽ vẫn thỏa constraint) và giúp giảm linearized objective (và như vậy với việc khống chế step size, chắc chắn cũng giảm objective)
+>
+>
+>
+> Thế thì ta muốn xem thử khi nào thì không thể tồn tại s khiến x+s vẫn linearized feasible đồng thời khiến giảm xấp xỉ bậc của f.
+>
+>
+>
+> Xét case 1: Tại điểm đang đứng x, ràng buộc inactive: c1(x) &gt; 0. Khi đó để s + x vẫn (linearized) feasible, ta cần c^1(x + s) &gt; 0 ⇔ c^1(s) = c1(x) + ∇c1(x)Ts, với việc c1(x) đã &gt; 0 thì ∇c1(x)Ts có thể dương âm tùy ý, miễn là nếu âm thì đừng quá lớn để cục c1(x) dương còn đủ gánh cho nó. Như vậy s có thể có hướng bất kì. Và để tìm một điểm x không thể có s tạo với ∇f(x) góc tù thì chỉ có thể là tại x, ∇f(x) = 0.
+>
+>
+>
+> Xét case 2: Tại điểm đang đứng x, ràng buộc active: c1(x) = 0. Khi đó c1^(s) = c1(x) + ∇c1(x)Ts = ∇c1(x)Ts, và để thỏa linearized constraint (c1^(s) ≥ 0) thì ∇c1(x)Ts phải ≥ 0, điều này theo hn2h học, là s tạo góc nhọn hoặc vuông với ∇c1. Như vậy, để tìm một điểm x mà ko thể có s tạo góc nhọn hoặc vuông với ∇c1(x) đồng thời tạo góc tù với ∇f(x). Và dễ thấy điểm thỏa điều này chính là x mà tại đó ∇f(x) trùng hướng với ∇c1(x), và diễn đạt theo toán học, là x mà tại đó tồn tại λ khiến ∇f(x) = λ ∇c1(x).
+>
+>
+>
+> Tổng hợp hai case lại, thì ta có điều kiện để x trở thành ứng cử viên (ko bị loại bỏ, chứ chưa chắc là winner) là khi ràng buộc tại x active thì tại x tồn tại λ khiến ∇f(x) = λ ∇c1(x), còn khi ràng buộc tại x không active, thì ∇f(x) phải bằng 0. Và bằng cách thành lập hàm Lagrangian = f(x) - λ1c1(x), người ta thể hiện hai case này bởi hai điều kiện gọi là stationary và complement slackness:
+>
+>
+>
+> ∇\_x L(x\*, λ\*) = 0
+>
+>
+>
+> λ1\* c1(x\*) = 0
+>
+>
+>
+> Khi ràng buộc inactive, tức c1(x\*) &gt; 0 thì (2) khiến λ\* = 0, và (1) trở thành ∇f(x\*) = 0.
+>
+>
+>
+> Khi ràng buộc active, tức c1(x\*) = 0, thì (1) trở thành tồn tại λ1\* không âm khiến ∇f(x) = λ ∇c1(x\*).
+>
+>
+>
+> ---
+>
+>
+>
+> Và nhờ vậy ta sẽ hiểu vì sao cái đoạn đầu ở đây tác giả Nocedal lại nói rằng: Nếu tại x\* điều kiện KKT thỏa, thì khi đi theo hướng w từ ℱ(x\*) sẽ không làm giảm hàm xấp xỉ bậc một của hàm f(x): Thì bởi, theo điều kiện KKT mà ta vừa xây dựng lại ở trên, việc x\* thỏa KKT thì có nghĩa là tại x\* không thể tồn tại hướng mà vẫn thỏa linearized constraint và giảm linearized f. Và như vậy thì cũng đồng nghĩa là, nếu xét các hướng w thỏa linearized constraint (∈ ℱ(x\*)) thì x\* + w chỉ có thể làm tăng hoặc giữ nguyên linearized f chứ gì nữa.
+>
+>
+>
+> Nói chung là khúc này hơi khó hiểu, việc derive lại KKT cũng như phân tích giúp hiểu rõ cái ℱ là gì mới giúp hiểu đoạn này.
+>
+>
+>
+> ---
+>
+>
+>
+> Và như vậy, nếu x\* thỏa KKT, và di chuyển theo hướng w ∈ ℱ(x\*) khiến xấp xỉ bậc 1 của f tăng hoặc giữ nguyên thì x\* là ứng cử viên cho minimizer. 
+>
+>
+>
+> Mình có thể thắc mắc: Tôi hiểu nếu x không thỏa KKT, tức là có thể đi tiếp để giảm xấp xỉ bậc 1, và như vậy chắc chắn là sẽ giảm f khi khống chế step size (để phòng trường hợp giống như trước mặt là dốc xuống nhưng xa hơn thì con đường dốc ngược lên lại) và cũng thỏa linearized constraint (again, điều này đồng nghĩa nếu khống chế step size thì nó sẽ thỏa constraint thật) thì như vậy rõ ràng x không thể là mininizer được.
+>
+>
+>
+> Nhưng liệu ta có bỏ xót điều gì, ví dụ như x nào đó không thỏa KKT, những vẫn có thể là minimizer không. Câu trả lời là có, nhưng rất hiếm, và chính cái điều kiện gọi là LICQ đã đảm bảo ràng với KKT, ta không bỏ xót ứng cử viên nào. Rõ ràng là với LICQ, thông qua cái lập luận trên, nếu x ko thỏa KKT thì chắc chắn nó không phải là minimizer, vì chỉ cần đi theo cái hướng s trong ℱ(x\*) một step size rất nhỏ, là sẽ giảm thêm f và vẫn feasible.
+>
+>
+>
+> Vậy, quay lại đây, ta đặt vấn đề: Thế thì trong các ứng cử viên đó, cần loại bỏ thêm, để có danh sách rút gọn (ví dụ vậy), thì loại bỏ theo tiêu chí gì.
+>
+>
+>
+> Câu trả lời là ta sẽ chia mấy thằng ứng cử viên x\* ra hai phe: Một là phe mà khi đi theo mọi hướng linearized feasible w bất kì nào đó, hàm linearized f luôn tăng. Và hai là phe mà tồn tại hướng linearized feasible w khiến hàm linearized f không tăng.
+>
+>
+>
+> Và ta sẽ tập trung vào phe thứ hai, vì trong đám này, rất có thể xảy ra tình trạng: Đi theo w không làm tăng linearized f, nhưng **sự thật lại đang giảm f**. Điều này khác với phe 1, vì phe 1 là theo mọi hướng linearized feasible direction w thì linearized f luôn tăng, mà như vậy thì chỉ cần khống chế step size thì nhất định f thật cũng tăng.
+>
+>
+>
+> Và do đó, người ta mới quan tâm về tập các linearized feasible direction (∈ ℱ(x\*)) khiến linearized f không tăng, mà điều này (linearized f không tăng) thể hiện bởi: ∇f(x\*)Tw = 0. 
+>
+>
+>
+> Câu trong sách: "For the directions w ∈ F(x∗) for which wT∇f(x ∗) = 0, we cannot determine from first derivative information alone whether a move along this direction will increase or decrease the objective function f . Second-order conditions examine the second derivative terms in" 
+>
+>
+>
+> chính là nói "với w linearized feasible direction, có tính chất khi linearized f không tăng thì TA KHÔNG BIẾT NÓ CÓ THẬT SỰ LÀM GIÚP f KHÔNG TĂNG HAY LÀ ĐANG LÀM GIẢM HÀM f.
+>
+>
+>
+> Và để check var cái đám candidate của phe 2, ta sẽ dùng đạo hàm cấp hai của Lagrangian. Vì nó sẽ cho ta biết, đi theo linearized feasible w khiến **linearized f** không tăng, nhưng **true f** thì giảm hay tăng. Và những hướng này (linearized feasible w khiến **linearized f** không tăng) người ta gọi là **undecided direction.**
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú cực kỳ chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về mặt bản chất hình học lẫn đại số của điều kiện KKT và lý do cần đến điều kiện bậc hai. Bạn chỉ cần rà soát lại vài lỗi chính tả nhỏ (như 'hn2h học', 'gỉai thích') để bài viết hoàn hảo hơn.
+
+<br>
+
+<a id="node-yaiknjh"></a>
+
+#### Điều kiện bậc hai (bản sao) (bản sao)
+
+<p align="center"><kbd><img src="assets/7j7b6vur119.png" width="80%"></kbd></p>
+
+<br>
+
+<a id="node-jebihq1"></a>
+
+#### Definition of the Critical Cone
+
+<p align="center"><kbd><img src="assets/7gm57itms5m.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ix364me2kk8.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ubvvjs8cgmn.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tiếp theo, gs định nghĩa ra cái gọi là Critical Cone C(x\*, λ\*):
+>
+>
+>
+> Cùng phân tích để hiểu cái tập này vì khi không hiểu rõ các định nghĩa thì sẽ dễ dẫn tới confuse sau này.
+>
+>
+>
+> Thật ra chỉ cần hiểu 𝒞(x\*, λ\*) là tập con của ℱ(\*). Mà ℱ(x\*) đã phân tích chán chê để hiểu ngắn gọn, nó chứa các linearized feasible direction, tức các hướng mà x\* + w sẽ thỏa các linearized constraint. Để hiểu 𝒞, ta thử lướt lại quy trình xây dựng ℱ.
+>
+>
+>
+> Ví dụ có 3 ràng buộc c1(x) = 0, c2(x) ≥ 0, c3(x) ≥ 0
+>
+>
+>
+> Ta đi xây dựng ℱ(x\*), theo định nghĩa, nó chứa d đến từ 2 nhóm: 
+>
+>
+>
+> Nhóm 1: d khiến ∇ci(x\*)Td = 0 với i ∈ ℰ 
+>
+>
+>
+> Dịch nghĩa: Tại x\*, xét các ràng buộc đẳng thức mà nó đang thỏa, ở đây vì x\* feasible nên dĩ nhiên c1(x\*) = 0. Ta đặt câu hỏi: Đi hướng d nào khiến c1^(d) = c1(x\*) + ∇c1(x\*)Td vẫn bằng 0, lấy mấy cái d đó bỏ vào ℱ(x\*)
+>
+>
+>
+> Nhóm 2: d thỏa ∇ci(x\*)Td ≥ 0 với i ∈ 𝒜(x\*) ∩ ℐ 
+>
+>
+>
+> Dịch nghĩa: Tại x\*, trong c2 c3, cái nào đang active? Ví dụ c2 active c3 không active. 
+>
+>
+>
+> Ta sẽ xét c2 thôi, và đặt câu hỏi: với c2(x\*) = 0, thì đi hướng nào khiến c2^(d) = c2(x\*) + ∇c2(x\*)Td vẫn lớn hơn hoặc 0.
+>
+>
+>
+> Và giả sử câu trả lời là d1, d2, d3 (trong đó giả sử d1,d2 kiến ∇c2(x\*)Td &gt; 0, và d3 khiến ∇c2(x\*)Td3 = 0) ta bỏ đám d1,d2,d3 này vào ℱ(x\*)
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy thì, trong các w thuộc ℱ(x\*), ta chọn ra những thằng nào để có 𝒞(x\*, λ\*)?
+>
+>
+>
+> → Chính là nhìn vào case thứ 2: Nơi ta lấy cả d1,d2,d3. Thì với 𝒞 TA CHỈ LẤY CÁI d3. 
+>
+>
+>
+> Tuy nhiên, 𝒞 làm theo một bước nữa: Là nó xét λ. Nếu tại x\*, ràng buộc active = c2(x\*) = 0 = tức "đã chạm tường c2". Thì xem λ có dương không. Nếu dương, ta loại d1.d2. Chỉ lấy d3. Còn nếu λ = 0 thì lấy hết d1,d2,d3.  
+>
+>
+>
+> Ý nghĩa của sự khác nhau: 
+>
+>
+>
+> ℱ. Ràng buộc tại c2 active: c2(x\*) = 0: chọn hướng w tạo với ∇c2(x\*) góc nhọn hoặc vuông. Hình ảnh, với bức tường c2, tại x\* đã đụng vách, thì ta chỉ xét các hướng đi ngang men theo vách (tạo góc vuông với ∇c2) hoặc đi vô lại (tạo góc nhọn với ∇c2)
+>
+>
+>
+> 𝒞: Ràng buộc tại c2 actve. Ta chỉ chọn w tạo ∇c2(x\*) góc vuông. HÌnh ảnh: với bức tường c2, tại x\* đã đụng vách. Thì xem λ, đại diện cho lực ép, nếu lực cản đang dương, thì ta chỉ xét hướng đi ngang men theo vách (tạo góc vuông với ∇c2). Còn lực cản đang = 0 thì cứ cho đi vô lại bên trong hay đi men theo vách đều được.
+>
+>
+>
+> Trong lập luận trên ta cần nhớ rằng, ví dụ nói constraint c2(x) ≥ 0, thì ∇c2 sẽ vuông góc với boudary c2(x) = 0 và HƯỚNG VÔ TRONG, vì sao? Vì đi theo ∇c2 sẽ tăng c2. Tại vách, c2(x) = 0. nếu đi ngược vô trong theo ∇c2 thì c2(x) mới tăng lên để c2(x) trở thành &gt; 0.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú giải thích rất chính xác và trực quan về Critical Cone thông qua ví dụ cụ thể, đặc biệt là phần minh họa hình học và ý nghĩa vật lý của nhân tử Lagrange $\lambda^*$. Bài viết xuất sắc, không có điểm yếu nào đáng kể về mặt lý thuyết toán học tối ưu.
+
+**🔗 See also:** [Tập linearized feasible direction](#node-169mbi2)
 
 <br>
 
