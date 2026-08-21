@@ -513,7 +513,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `400 notes · 566 screenshots · 33 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
-> 
 > Sổ tay này đi sâu vào các thuật toán tối ưu hóa số cốt lõi như tìm kiếm đường thẳng, vùng tin cậy, quasi-Newton và gradient liên hợp, cùng các khái niệm thiết yếu như đạo hàm tự động, phân tích hội tụ và kỹ thuật đại số tuyến tính số.
 
 <details open>
@@ -569,6 +568,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `373 notes · 544 screenshots · 51 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
+> 
 > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
