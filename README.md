@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,255 notes` · `~17,682 screenshots` · `18 notebooks`**
+**`~12,256 notes` · `~17,687 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -565,7 +565,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 ### Pattern Recognition Machine Learning_C.Bishop
 <!-- key: pattern_recognition_machine_learning_cbishop -->
 <!-- group: Machine Learning Foundation -->
-`373 notes · 544 screenshots · 51 sections`
+`374 notes · 549 screenshots · 51 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
 > 
@@ -624,7 +624,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [3.5.1 Evaluation of the evidence function](pattern_recognition_machine_learning_cbishop/351_evaluation_of_the_evidence_function.md) | 4 | 9 |
 | [3.5 Evidence Approximation](pattern_recognition_machine_learning_cbishop/35_evidence_approximation.md) | 6 | 6 |
 | [3.5.2 Maximizing the evidence function](pattern_recognition_machine_learning_cbishop/352_maximizing_the_evidence_function.md) | 3 | 4 |
-| [3.5.3 Effective number of parameters](pattern_recognition_machine_learning_cbishop/353_effective_number_of_parameters.md) | 1 | 1 |
+| [3.5.3 Effective number of parameters](pattern_recognition_machine_learning_cbishop/353_effective_number_of_parameters.md) | 2 | 6 |
 | [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) | 19 | 22 |
 | [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) | 5 | 7 |
 
