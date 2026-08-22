@@ -1,6 +1,6 @@
 # 3.5.3 Effective number of parameters
 
-📊 **Progress:** `1` Notes | `1` Screenshots | `1` AI Reviews
+📊 **Progress:** `2` Notes | `6` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-ca7uttw"></a>
@@ -13,7 +13,21 @@
 
 <p align="center"><kbd><img src="assets/aiiljg5ul7.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/mr8v3fq0uhg.png" width="80%"></kbd></p>
+
 > [!NOTE]
+> Ok, tiếp theo gs nói kết quả 3.92 sẽ cho ta một góc nhìn hay ho. Đầu tiên ta sẽ xem xét contours (tức level set) của hàm likelihood.
+>
+>
+>
+> Rồi ông nói ta đã thầm (implicitly) xoay trục để thẳng góc với các **u**i là các eigenvector của **Φ**T**Φ**, và contours này có dạng là hình ellipse thẳng trục.
+>
+>
+>
+> Mình sẽ dừng lại và tìm hiểu khúc này là sao:
+>
+>
+>
 > Likelihood function là hàm L(**w**|𝒟), theo định nghĩa, nó bằng f(𝒟|**w**). Có nghĩa là, nó chính là f(𝒟|**w**) với tư cách là hàm theo **w**.
 >
 >
@@ -262,11 +276,15 @@
 >
 >
 >
-> **Hiểu cái này rất quan trọng: nói A đại diện, thì tức là giả sử ta có vector x có tọa độ trong basis v's là a1, a2,...Thì biến đổi bởi T(.), để thành T(a). Và ta lấy tọa độ của kết qủa này theo basis w's của output space, thì A làm hết mọi chuyện này, tức là Ax sẽ cho ta cái tọa độ của T(x) trong basis w's. Nên:**
+> **Hiểu cái này rất quan trọng: nói A đại diện, thì tức là giả sử ta có vector x có tọa độ trong basis v's là a1, a2,...Thì biến đổi bởi T(.), để thành T(a). Và ta lấy tọa độ của kết qủa này theo basis w's của output space, thì A làm hết mọi chuyện này, tức là Ax sẽ cho ta cái tọa độ của T(x) trong basis w's.**
 >
 >
 >
-> **Ax** là tọa độ của vector T(**x**) trong basis w's: **Ax** = \[T(**x**)\]\_w's. Nhớ: Đây là hai vector tọa độ, khác vector x là vector trừu tượng, trong input space, T(x) trong output space.
+> Nên: **Ax** có bản chất là \[matrix A\] nhân \[vector tọa độ của vector **x** theo input basis v's, tức là \[**x**\]\_v's\] sẽ cho ra kết qủa là tọa độ của vector T(**x**) trong basis w's, \[T(**x**)\]\_w's
+>
+>
+>
+> **A** \[**x**\]\_v's = \[T(**x**)\]\_w's.
 >
 >
 >
@@ -322,11 +340,11 @@
 >
 >
 >
-> Rồi, lại xét **Aa**, theo góc nhìn nhân matrix với vector, chính là linear combination các **vector cột** của matrix A (đặt là các vector **c**1, **c**2,..) bởi hệ số là các phần tử của **a** (cũng là tọa độ a1, a2,...của vector **a**)
+> Rồi, lại xét **Aa**, như đã nói ở trên bản chất chính là **A** \[**a**\]\_v's, tức là matrix A nhân vector cột là vector tọa độ của **a** trong basis v's. Theo góc nhìn nhân matrix với vector, chính là linear combination các **vector cột** của matrix A (đặt là các vector **c**1, **c**2,..) bởi hệ số là các phần tử của **a** (cũng là tọa độ a1, a2,...của vector **a** trong basis v's)
 >
 >
 >
-> **Aa** = a1 **c**1  + a2 **c**2 + ... an **c**n
+> **A**\[**a**\]\_v's = a1 **c**1 + a2 **c**2 + ... an **c**n
 >
 >
 >
@@ -338,15 +356,15 @@
 >
 >
 >
-> **Aa** = \[T(**a**)\]\_w's
+> **A**\[a\]\_v's = \[T(**a**)\]\_w's
 >
 >
 >
-> nên
+> Do đó:
 >
 >
 >
-> a1 × \[vector cột 1\]  + a2 × \[vector cột 2\] + ... an × \[vector cột n\]
+> a1 × \[vector cột 1\] + a2 × \[vector cột 2\] + ... an × \[vector cột n\]
 >
 >
 >
@@ -362,13 +380,15 @@
 >
 >
 >
-> Chuẩn bị input basis **v**1,**v**1.... Biến đổi **v**1,**v**2... bởi T(.), và lấy tọa độ của chúng trong basis **w**'s. 
+> Chuẩn bị input basis **v**1,**v**1.... Biến đổi **v**1,**v**2... bởi T(.), và lấy tọa độ của chúng trong basis **w**'s.
+>
+>
 >
 > Thì **cột j của A** chính là tọa độ của T(**v**j) trong basis **w**'s.
 >
 >
 >
-> \[Cột j của A\]  = \[T(**v**j)\]\_w's
+> \[Cột j của A\] = \[T(**v**j)\]\_w's
 >
 >
 >
@@ -416,11 +436,15 @@
 >
 >
 >
-> Mà \[Cột 1 của A\] = \[**v**1\]\_w's, nói bằng lời thì có nghĩa là giá trị cột 1 của matrix A là tọa độ của vector **v**1 trong basis w's. 
+> Mà **v**1 = linear combination các vector **w**1,...**w**m bởi hệ số là vector tọa độ \[**v**1\]\_w's
 >
 >
 >
-> suy ra **v**1 = linear combination của **w**1,...**w**m với hệ số là cột 1 của A.
+> và vừa nói ở trên ta lại có \[Cột 1 của A\] = \[**v**1\]\_w's
+>
+>
+>
+> suy ra **v**1 = linear combination của **w**1,...**w**m với hệ số là cột 1 của A
 >
 >
 >
@@ -456,19 +480,27 @@
 >
 >
 >
-> Từ đó, quay lại bài này, ta sẽ thấy **Q**T**z** là cái gì? 
+> Từ đó, quay lại bài này, ta sẽ thấy **Q**T**z**, là cái gì?
 >
 >
 >
-> **z** chính là vector **w**-**m**, có tọa độ vẫn là tọa độ trong basis e's.
+> Nhớ rằng, khi viết **Ax**, nếu ko nói gì (về basis của input space), thì tự phải hiểu thực ra chính là đang viết \[matrix A\] \[vector tọa độ của **x** trong basis e's\]
 >
 >
 >
-> Còn **Q**T, do **Q** là orthogonal matrix, nên **Q**T = **Q**inv: **Q**T chính là **Q**inv
+> Ở đây cũng vậy, **Q**T**z**, về bản chất chính là \[matrix **Q**\] \[**z**\]\_e's = \[matrix **Q**\] \[**w-m**\]\_e's
 >
 >
 >
-> Và như đã hiểu ở trên, tọa độ của **Q**inv **u**, chính là chuyển tọa độ của vector **z** từ basis e's sang basis **q**1, **q**2 (hay **u**1, **u**2....) là các cột của **Q**, và chúng chính là các eigenvector của **Φ**T**Φ**. 
+> Còn **Q**T, do **Q** là orthogonal matrix, có tính chất **Q**T**Q** = **QQ**T = **I**, nên **Q**T = **Q**inv: **Q**T chính là **Q**inv
+>
+>
+>
+> Và như đã hiểu ở trên, thì **Q**inv chính là **I** **Q**inv, là change of basis matrix từ basis e's (các cột của **I**) sang basis q's (hay trong sách là u's, các cột của Q, cũng là các eigenvector của **Φ**T**Φ**). Nên **Q**inv **u**, (mà bản chất là **Q**inv \[**u**\]\_e's) **chính là tọa độ của vector** **z trong basis** **q**1, **q**2 (hay **u**1, **u**2....)
+>
+>
+>
+> Và hành động chuyển tọa độ từ basis e's sang basis q's (cả hai đều là basis của R^n) nếu áp dụng cho toàn bộ vector trong không gian thì nó chính là việc ta xoay hệ trục tọa độ, từ hệ trục ban đầu đến khi nó thẳng góc với các vector q's.
 >
 >
 >
@@ -504,23 +536,23 @@
 >
 >
 >
-> Nhân hai vế cho QT:
+> Nhân hai vế cho **Q**T:
 >
 >
 >
-> QTa = QTQx 
+> **Q**Ta = **Q**T**Q**x
 >
 >
 >
-> ⇔ x = QTa
+> ⇔ x = **Q**T**a**
 >
 >
 >
-> À như vậy, ta thấy QTa chính là tọa độ của a trong basis q1,q2,..
+> À như vậy, ta thấy **Q**T**a** chính là tọa độ của a trong basis **q**1, **q**2,..
 >
 >
 >
-> Thì y như vậy, QTz sẽ chính là ta chiếu tọa độ của z lên các eigenvector q1,q2,..để có tọa độ mới. Thì đây cũng chính là cùng ý nghĩa với xoay hệ trục để đổi tọa độ sang basis q's (hay u's, là eigenvector của design matrix)
+> Thì y như vậy, **Q**T**z** sẽ chính là ta chiếu tọa độ của **z** lên các eigenvector **q**1,**q**2,..để có tọa độ mới. Thì đây cũng chính là cùng ý nghĩa với xoay hệ trục để đổi tọa độ sang basis **q**'s (hay u's, là eigenvector của design matrix)
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
@@ -528,6 +560,332 @@
 > Ghi chú vô cùng chi tiết và chính xác, tự chứng minh mạch lạc từ phân phối Gaussian đến phương trình ellipsoid và giải thích rất rõ ràng bản chất đại số tuyến tính của phép xoay trục tọa độ theo eigenvectors. Không có điểm gì cần cải thiện thêm.
 
 **🔗 See also:** [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj) · [Chuyển tọa độ eigenvector](./230_gaussian_distribution.md#node-c9cpfzj)
+
+<br>
+
+<a id="node-mm9hv3a"></a>
+
+### Snapshot
+
+<p align="center"><kbd><img src="assets/vrv0hjuwvqa.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/qvhy109dgp.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2ecbs6na97.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fqgeywfet2p.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, vì sao gs lại nói eigenvalue λi sẽ đo độ cong (curvature) của hàm likelihood? Và trong hình 3.15, λ1 nhỏ hơn λ2 vì độ cong nhỏ hơn sẽ ứng với sự giãn (elongation) lớn hơn của contour, là sao?
+>
+>
+>
+> Lôi hàm likelihood ra lại:
+>
+>
+>
+> L(**w**|**t**) = 𝒩(**t**|**Φw**, (1/β)**I**)
+>
+>
+>
+> = \[(2π)^(-N/2)\] \[β^(-N/2)\] exp\[(-β/2)(**t** - **Φw**)T(**t** - **Φw**)\]
+>
+>
+>
+> = c exp\[(-β/2)(**t** - **Φw**)T(**t** - **Φw**)\]
+>
+>
+>
+> (đặt normarizing constant là c cho gọn)
+>
+>
+>
+> Thử xem Hessian của hàm (với tư cách là hàm theo **w**) là gì:
+>
+>
+>
+> Xét hàm ln L(**w**|**t**), (để loại bỏ exp, ta sẽ tìm cách có Hessian của hàm likelihood sau):
+>
+>
+>
+> ln likelihood = ln { c exp\[(-β/2)(**t** - **Φw**)T(**t** - **Φw**)\] }
+>
+>
+>
+> = ln (c) + ln exp\[(-β/2)(**t** - **Φw**)T(**t** - **Φw**)\]
+>
+>
+>
+> = ln (c) - (β/2)(**t** - **Φw**)T(**t** - **Φw**)
+>
+>
+>
+> = - (β/2)(**t**T**t** - **w**T**Φ**T**t** - **t**T**Φw** + **w**T**Φ**T**Φw**) + ln(c)
+>
+>
+>
+> = - (β/2)(- 2**t**T**Φw** + **w**T**Φ**T**Φw** + **t**T**t**) + ln(c)
+>
+>
+>
+> = - (β/2)(**w**T**Φ**T**Φw** - 2**t**T**Φw** + **t**T**t**) + ln(c)
+>
+>
+>
+> = - (β/2)(**w**T**Φ**T**Φw** - 2**t**T**Φw** + **t**T**t**) + ln(c)
+>
+>
+>
+> = (1/2)**w**T\[-β**Φ**T**Φ**\]**w** + β**t**T**Φw** - β**t**T**t**/2 + ln(c)
+>
+>
+>
+> Đây có dạng hàm quadratic của w: (1/2)**w**T**Pw** + **g**T**w** + **r**. Hessian chính là **P**.
+>
+>
+>
+> Vậy Hessian của hàm ln likelihood là -β**Φ**T**Φ**
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, gọi likelihood là L(**w**) thay vì L(**w**|t) cho gọn, vì dù gì thì ta chỉ đang xem nó như hàm theo **w**.
+>
+>
+>
+> Và đặt G(**w**) = ln L(**w**) ⇒ L(**w**) = exp G(**w**)
+>
+>
+>
+> Lấy đạo hàm bậc 1 theo **w**:
+>
+>
+>
+> d/d**w** L(**w**) = d/d**w** \[exp G(**w**)\]
+>
+>
+>
+> Theo Chain rule:
+>
+>
+>
+> ..= d/d \[G(**w**)\] \[exp G(**w**)\] ⋅ d/d**w** \[G(**w**)\]
+>
+>
+>
+> Dùng d/dx e^x = e^x ⇒ d/d \[G(**w**)\] \[exp G(**w**)\] = exp G(**w**).
+>
+>
+>
+> Và d/d**w** \[G(**w**)\], vì G(**w**) là vector → scalar function (nhận vector **w**, tính ra likelihood của **w**, là một giá trị scalar), nên đạo hàm bậc một của G theo w là vector gradient, kí hiệu ∇G(**w**). Tương tự, d/d**w** L(**w**) cũng là ∇L(**w**)
+>
+>
+>
+> ..= exp G(**w**) ⋅ ∇G(**w**)
+>
+>
+>
+> Với việc đây là scalar và vector nên kí hiệu hàm hợp⋅ trở thành tích bình thường.
+>
+>
+>
+> = \[exp G(**w**)\] ∇G(**w**), và với G(w) = ln L(**w**), thì exp G(**w**) = L(**w**)
+>
+>
+>
+> Viết lại ∇L(**w**) = L(**w**) ∇G(**w**)
+>
+>
+>
+> Giờ, ta lại lấy đạo hàm bậc một theo **w** của hàm d/d**w** L(**w**), thì ta sẽ có đạo hàm bậc hai, và vì ∇L(**w**) là vector → vector function, nên đạo hàm bậc một của ∇L(**w**) gọi là Jacobian matrix, cũng chính là Hessian của L(**w**). Kí hiệu H(**w**), hay có khi ta thấy ∇∇L(**w**)
+>
+>
+>
+> d/d**w** \[∇L(**w**)\] (= H(**w**)) = d/d**w** \[L(**w**) ∇G(**w**)\]
+>
+>
+>
+> Áp dụng product rule: d/dx g(x)h(x) = \[d/dx g(x)\] h(x) + g(x)\[d/dx h(x)\], vế phải thành:
+>
+>
+>
+> ∇∇L(**w**) = d/d**w** \[L(**w**)\] ∇G(**w**) + L(**w**) d/d**w** \[∇G(**w**)\]
+>
+>
+>
+> Xét d/d**w** \[L(**w**)\], nó chính là ∇L(**w**)
+>
+>
+>
+> Còn d/d**w** \[∇G(**w**)\] thì là Hessian của G(**w**). Kí hiệu ∇∇G(**w**)
+>
+>
+>
+> ∇∇L(**w**) = ∇L(**w**) ∇G(**w**) + L(**w**) \[∇∇G(**w**)\]
+>
+>
+>
+> Như vậy là ta đã có Hessian (matrix đạo hàm cấp hai) của Likelihood function.
+>
+>
+>
+> Lấy giá trị Hessian tại đỉnh, tức **w**ML, thì tại đây, dĩ nhiên gradient của hàm likehood vanish. Tức ∇L(**w**ML) = **0** (zero vector). Nên Hessian tại **w**ML là:
+>
+>
+>
+> ∇∇L(**w**ML) = L(**w**ML) \[∇∇G(**w**ML)\]
+>
+>
+>
+> Trong đó L(**w**ML), là giá trị likelihood tại **w**ML, là một constant nào đó. Và ∇∇G(**w**ML) là matrix Hessian của ln likelihood tại **w**ML.
+>
+>
+>
+> Như vậy, tại đỉnh **w**ML, Hessian của likelihood tỉ lệ với Hessian của ln likelihood bởi một constant dương, đặt là Lmax.
+>
+>
+>
+> Mà Hessian của ln likelihood là cái gì? → Ở trên ta đã làm: -β**Φ**T**Φ**, (hoàn tòan là một matrix fixed, không phụ thuộc **w** nữa)
+>
+>
+>
+> Vậy ∇∇L(**w**ML) = Lmax (-β**Φ**T**Φ**) = -βLmax **Φ**T**Φ**
+>
+>
+>
+> Chéo hóa matrix (phân rã **Φ**T**Φ** thành **Q** **Λ** **Q**T như note trước đã làm) ta có:
+>
+>
+>
+> ∇∇L(**w**ML) = -β Lmax **Q** **Λ** **Q**T
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, quay lại xét hàm L(**w**), khai triển Taylor bậc hai (tức là lấy xấp xỉ bậc hai) quanh **w**ML
+>
+>
+>
+> L(**w**) ≈ L(**w**ML) + ∇L(**w**ML)T(**w** - **w**ML) + (1/2)(**w**-**w**ML)T (∇∇L(**w**ML)) (**w**-**w**ML)
+>
+>
+>
+> ⇔ L(**w**) ≈ Lmax + **0**T(**w** - **w**ML) + (1/2)(**w**-**w**ML)T (∇∇L(**w**ML)) (**w**-**w**ML)
+>
+>
+>
+> ⇔ L(**w**) ≈ Lmax + (1/2)(**w**-**w**ML)T (∇∇L(**w**ML)) (**w**-**w**ML)
+>
+>
+>
+> Đặt **v** = **w**-**w**ML
+>
+>
+>
+> L(**v**) ≈ Lmax + (1/2)**v**T (∇∇L(**w**ML)) **v**
+>
+>
+>
+> Thay ∇∇L(**w**ML) = -βLmax **Q** **Λ** **Q**T
+>
+>
+>
+> L(**v**) ≈ Lmax + (1/2)**v**T (-βLmax **Q** **Λ** **Q**T) **v**
+>
+>
+>
+> ⇔ L(**v**) ≈ Lmax - (βLmax/2 )**v**T**Q** **Λ** **Q**T**v**
+>
+>
+>
+> Đặt **y** = **Q**T**v**,
+>
+>
+>
+> ⇔ L(**y**) ≈ Lmax - (βLmax/2) **y**T**Λy**
+>
+>
+>
+> ⇔ L(**y**) ≈ Lmax - (βLmax/2) Σi=1:M λi yi^2
+>
+>
+>
+> Ví dụ M = 2 như ở đây, ta có
+>
+>
+>
+> L(**y**) ≈ Lmax - (βLmax/2) (λ1 y1^2 + λ2 y2^2)
+>
+>
+>
+> Như vậy kết quả này có nghĩa là gì:
+>
+>
+>
+> Có nghĩa là sau khi đã
+>
+>
+>
+> i) dời trục tọa độ về **w**ML (thông qua động tác đổi biến sang **v** = **w** - **w**ML)
+>
+>
+>
+> ii) Xoay hệ trục để dùng hệ trục là vector eigenvalue u1, u2 của **Φ**T**Φ** (thông qua động tác đổi biến lần hai sang **y** = **Q**T**v**)
+>
+>
+>
+> thì khi đó, nếu ta xem xét hàm likelihood tại đỉnh (**w**ML), hay đúng hơn là xấp xỉ bậc hai của nó tại **w**ML (hay nói dễ hiểu là ta coi nó như hàm bậc hai vì Taylor theorem cho phép như vậy) thì ta sẽ thấy nó có một hàm số như vầy:
+>
+>
+>
+> f(y1, y2) = Lmax - (βLmax/2) (λ1 y1^2 + λ2 y2^2)
+>
+>
+>
+> Từ đó, ta lại restrict hàm số theo một phương, cụ thể là phương y2 = 0, thì hàm số này sẽ là hàm bậc hai 1 biến:
+>
+>
+>
+> f1(y1) = Lmax - (βLmax/2) λ1 y1^2
+>
+>
+>
+> Và lấy đạo hàm theo y1 của hàm số này, ta sẽ có gì: chính là - (βLmax/2) 2 λ1 = - βLmax λ1.
+>
+>
+>
+> Như vậy, độ cong của hàm bậc 2 một biến này, chính là tỉ lệ với λ1.
+>
+>
+>
+> Tương tự, nếu xét hàm f2(y2) là hàm f(y1, y2) nhưng restrict theo y1 = 0, thì nó cũng là một hàm bậc hai đơn biến, có đạo hàm bậc 2 của hàm này là - βLmax λ2, tỉ lệ với λ2.
+>
+>
+>
+> Và hình ảnh của hai động tác vừa rồi chính là: Nhìn trong không gian 2D, ta có cái chảo paraboloid có đáy tại wML. Mà nhìn từ trên cao nhìn xuống một level set nào đó thì sẽ có hình ellipse, trục của ellipse song song với hai vector u1, u2 (eigenvector của **Φ**T**Φ**).
+>
+>
+>
+> Sau đó, ta cắt parabol này bởi mặt phẳng qua **w**ML và song song với u1, thì trong mặt cắt đó, ta sẽ thấy một một parabol (chính là đồ thị hàm f1(y1))
+>
+>
+>
+> Còn cắt paraboloid này bởi mặt phẳng qua wML và song song với u2, thì trong mặt cắt đó ta sẽ thấy một parabol, là đồ thị của f2(y2).
+>
+>
+>
+> Và tới đây, với việc λ1, λ2 sẽ ảnh hưởng đến đạo hàm bậc hai của hai cái hàm f1, f2 này, mình đã hiểu tại sao nói λi sẽ phản ánh curvature của likelihood function, bởi vì đạo hàm bậc hai của f1, f2 **CHÍNH LÀ THÔNG TIN CURVATURE CỦA HÀM LIKELIHOOD THEO TỪNG PHƯƠNG** **u**1, **u**2.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bài tự học của bạn cực kỳ chi tiết, chính xác và thể hiện tư duy toán học xuất sắc khi tự chứng minh mối liên hệ giữa eigenvalue và độ cong của likelihood. Điểm trừ duy nhất là lỗi ghi chép nhỏ ở đạo hàm bậc nhất của f1(y1) (thiếu biến y1), nhưng phần kết luận về đạo hàm bậc hai để chỉ curvature vẫn hoàn toàn chính xác.
 
 <br>
 
