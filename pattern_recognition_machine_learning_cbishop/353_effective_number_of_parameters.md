@@ -1,6 +1,6 @@
 # 3.5.3 Effective number of parameters
 
-📊 **Progress:** `2` Notes | `6` Screenshots | `2` AI Reviews
+📊 **Progress:** `3` Notes | `8` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-ca7uttw"></a>
@@ -565,7 +565,7 @@
 
 <a id="node-mm9hv3a"></a>
 
-### Snapshot
+### Eigenvalue và độ cong Likelihood
 
 <p align="center"><kbd><img src="assets/vrv0hjuwvqa.png" width="80%"></kbd></p>
 
@@ -886,6 +886,88 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Bài tự học của bạn cực kỳ chi tiết, chính xác và thể hiện tư duy toán học xuất sắc khi tự chứng minh mối liên hệ giữa eigenvalue và độ cong của likelihood. Điểm trừ duy nhất là lỗi ghi chép nhỏ ở đạo hàm bậc nhất của f1(y1) (thiếu biến y1), nhưng phần kết luận về đạo hàm bậc hai để chỉ curvature vẫn hoàn toàn chính xác.
+
+<br>
+
+<a id="node-jdgevif"></a>
+
+#### Số lượng tham số hiệu dụng
+
+<p align="center"><kbd><img src="assets/i69wgg61fcl.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/qz5rc1h2jvj.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, khi hết cấn vì sao λ (eigenvalue của **Φ**T**Φ**) cũng như cái vụ contours của L(**w**|**t**) có hình ellipses. Ta sẽ có thể nói về cái interpretation của kết quả 3.92:
+>
+>
+>
+> α = γ / (**m**N)T**m**N
+>
+>
+>
+> với γ = Σi λi / (α + λi)
+>
+>
+>
+> Như sau: Dễ hiểu thôi, lấy ví dụ **w** = (w1, w2), và λ1 và λ2 là eigenvalue, với λ1 nhỏ hơn nhiều so với α và λ2 thì ngược lại (nhắc lại cho nhớ: α là tham số của prior distribution của **w**, nơi ta assume nó là 𝒩(0, (1/α)**I**)
+>
+>
+>
+> Vậy thì hiện tượng xảy ra sẽ là như sau:
+>
+>
+>
+> Vì λ1 ≪ α, nên λ1 / (α + λ1) sẽ rất nhỏ, ≈ 0. Và hình vẽ minh họa cho thấy w1 của **w**MAP cũng bị đẩy về gần 0.
+>
+>
+>
+> Còn λ2 ≫ α, nên λ2 / (α + λ2) sẽ gần 1. HÌnh vẽ cho thấy w2 của **w**MAP bị đẩy về gần **w**ML.
+>
+>
+>
+> Vậy có nghĩa là gì:
+>
+>
+>
+> Ở cái hướng eigenvector u1 của design matrix mà eigenvalue nhỏ (ví dụ λ1), chính là cái hướng mà cái contour hình ellipse bị kéo giãn nhiều, và λ1 nhỏ tức độ cong theo hướng này nhỏ để bề mặt cái tô paraboloid sẽ dốc xuống thoai thoải. Thì **w**MAP_1 sẽ gần với 0.
+>
+>
+>
+> Ngược lại, ở hướng eigenvector u2, ứng với λ2 lớn, chính là cái hướng ellipse contour bị giãn ít, bề mặt khối paraboloid cong mạnh. Thì **w**MAP_2 sẽ gần với **w**ML_2.
+>
+>
+>
+> Mà **w**MAP_1 bị bóp về gần 0 có nghĩa là sao mà**w**MAP_2 sẽ gần với **w**ML_2 thì có nghĩa là sao?
+>
+>
+>
+> Ta hình dung có hai thứ kéo **w**MAP: Prior và Likelihood. Prior là cái khối chảo parabol có tâm tại (0,0) còn likelihood cũng là khối chảo parabol có tâm tại **w**ML. Độ cong của khối chảo Prior thì như nhau ở mọi hướng, nhưng của likelihood thì mạnh hơn ở hướng u2 (λ2 lớn) và nhẹ hơn ở u1.
+>
+>
+>
+> Ở cái hướng mà likelihood có mức thay đổi chậm (dốc thoai thoải theo phương u1) thì kiểu như lực kéo về **w**ML yếu, do đó lực kéo về prior lấn át, khiến cho w1 của **w**MAP tiến về w1 của prior mean (=0)
+>
+>
+>
+> Còn ở hướng u2, likelihood có mức thay đổi nhanh (dốc cắm đầu theo phương u2) thì lại giống như lực kéo về **w**ML lấn át lực kéo về prior mean. Do đó, w2 của **w**MAP bị kéo về w2 của **w**ML
+>
+>
+>
+> Đó là góc nhìn thứ nhất.
+>
+>
+>
+> Và insight thứ hai là, γ = Σi λi / (α + λi) = λ1 / (α + λ1) + λ2 / (α + λ2), thì coi như chỉ = λ2 / (α + λ2) (vì cái kia ≈ 0 rồi). Và như vậy trong hai tham số w1, w2 của **w**MAP, w1 bị bóp thành 0, coi như bị phế. Thành ra con số γ chính là số lượng param không bị phế, (vì khi = - thì coi như ko có), gọi là effective parameters, còn gọi là well-determined parameters.
+>
+>
+>
+> Và như vậy, ta có thể hiểu đại khái rằng, prior sẽ khiến cho mô hình phế đi các parameter ko cần thiết (là các parameter w ứng với hướng mà tác động ko mạnh tới likelihood (insensitive).
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chép của bạn rất xuất sắc khi giải thích trực quan hóa hình học qua phép ẩn dụ 'lực kéo' giữa Prior và Likelihood cực kỳ dễ hiểu và chính xác. Điểm cần lưu ý nhỏ duy nhất là các trị riêng $\lambda_i$ thực chất là của ma trận hệ số $\beta\Phi^T\Phi$ chứ không chỉ là $\Phi^T\Phi$, bạn nên lưu ý hệ số nhiễu $\beta$ này.
 
 <br>
 
