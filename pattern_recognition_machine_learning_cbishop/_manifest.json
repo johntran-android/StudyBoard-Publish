@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1787420006818,
+  "publishedAt": 1787521299764,
   "sections": [
     {
       "title": "📋 Overview",
@@ -293,8 +293,8 @@
     {
       "title": "3.5.3 Effective number of parameters",
       "path": "pattern_recognition_machine_learning_cbishop/353_effective_number_of_parameters.md",
-      "noteCount": 2,
-      "imageCount": 6
+      "noteCount": 3,
+      "imageCount": 8
     },
     {
       "title": "Appendix C. Matrices",
@@ -309,6 +309,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 374,
-  "totalImages": 549
+  "totalNotes": 375,
+  "totalImages": 551
 }
