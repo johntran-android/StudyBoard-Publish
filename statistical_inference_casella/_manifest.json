@@ -1,6 +1,6 @@
 {
   "title": "Statistical Inference - Casella",
-  "publishedAt": 1787247282239,
+  "publishedAt": 1787511113277,
   "sections": [
     {
       "title": "📋 Overview",
@@ -293,10 +293,10 @@
     {
       "title": "10.3 Hypothesis Testing",
       "path": "statistical_inference_casella/103_hypothesis_testing.md",
-      "noteCount": 7,
-      "imageCount": 8
+      "noteCount": 9,
+      "imageCount": 12
     }
   ],
-  "totalNotes": 849,
-  "totalImages": 1108
+  "totalNotes": 851,
+  "totalImages": 1112
 }
