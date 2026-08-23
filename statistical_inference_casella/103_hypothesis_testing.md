@@ -1,6 +1,6 @@
 # 10.3 Hypothesis Testing
 
-📊 **Progress:** `7` Notes | `8` Screenshots | `7` AI Reviews
+📊 **Progress:** `9` Notes | `12` Screenshots | `9` AI Reviews
 
 ---
 <a id="node-zhfsuqo"></a>
@@ -622,6 +622,581 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Bài viết giải thích rất trực quan, logic và nắm bắt xuất sắc bản chất việc chuyển từ phân phối chính xác sang phân phối tiệm cận chi-bình phương. Điểm cần lưu ý là định nghĩa chính xác của 'size' (kích thước) của kiểm định là supremum của xác suất sai lầm loại I trên tập giả thuyết không, chứ không chỉ đơn thuần là bằng $\alpha$.
+
+<br>
+
+<a id="node-dtu02mz"></a>
+
+###### Degrees of Freedom for Test Statistic
+
+<p align="center"><kbd><img src="assets/53z1x6iz3t.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Active recall: Trước khi vài ví dụ, đã vài ngày trôi qua nên mình thấy cần gợi nhớ chủ động chút xíu về những gì bữa giờ đang học.
+>
+>
+>
+> Nói chung là, nhìn lại, mình đang hiểu gs Casella đang chỉ cho ta cách để áp dụng likelihood ratio test trong thực tế.
+>
+>
+>
+> Nói vậy là sao, vì sao lại là "trong thực tế", câu hỏi này có phải gợi ý là vì trong lí thuyết nó sẽ khác hay sao?
+>
+>
+>
+> Câu trả lời đúng là vậy, và để hiểu vì sao, ta sẽ nói về bài toán hypothesis testing, và sau đó là likelihood ratio test.
+>
+>
+>
+> Trong bài toán hypothesis testing, dựa trên một observed value của sample **X** = **x**, f(x|θ) ta muốn đưa ra inference: θ thuộc Θ0 hay Θ0c, chính là một trong hai hypothesis: H0: θ ∈ Θ vs H1 ∈ Θ0c. Và để làm điều này, chính là ta sẽ xây dựng một phép thử (hypothesis test), về bản chất, là một decision function, nhận vào giá trị của sample **X**, và đưa ra kết luận là H0 hoặc H1. Và "trong cái ruột của function này", ta sẽ tính ra một hàm số nào đó, rồi có thể là so sánh giá trị của nó với một ngưỡng (threshold) nào đó để kết luận. Thì cái hàm số của sample đó, chính là một statistic, gọi là test statistic.
+>
+>
+>
+> Và với một test, nó sẽ chia không gian 𝒳 thành hai miền: những **x** khiến test kết luận reject H0 và đám còn lại, từ đó ta có khái niệm rejection region: R = {**x** ∈ 𝒳: test statistic (**x**) khiến reject H0}
+>
+>
+>
+> Vậy thì cũng như trong bài toán inference point estimation, trong vô vàn các hàm số có thể dùng để estimate cho θ, thì maximum likelihood estimator là một estimator tốt. Thì ở đây, likelihood ratio test (LRT) là một loại test tốt. Và cái test này có rule có dạng là:
+>
+>
+>
+> Reject H0 khi λ(**x**) ≤ c, với c là threshold nào đó nằm trong khoảng từ 0 tới 1.
+>
+>
+>
+> với λ(**x**) = sup\_Θ0 L(θ|**x**) / sup\_Θ L(θ|**x**) = L(θ^0|**x**) / L(θ^|**x**) (θ^ chính là MLE, còn θ^0 là restricted MLE, tạm hiểu là thằng MLE nửa mùa, khi chỉ tìm kiếm trong phạm vi giới hạn là Θ0)
+>
+>
+>
+> Đương nhiên, đây chỉ là một nửa của một test hoàn chỉnh, vì để có test hoàn chỉnh phải định ra giá trị của threshold nữa.
+>
+>
+>
+> Thế thì, để có c, ta sẽ dựa theo tiêu chí đánh giá một test: Xác suất mắc Type I và Type II error. Và cụ thể ta sẽ tập trung vào Type I error, là loại error khi test reject H0 trong khi θ thực sự thuộc Θ0. Do đó, xác suất một LRT mắc Type I error là:
+>
+>
+>
+> P(observed value của **X** khiến khi đưa vào test, nó reject H0) = P(λ(**X**) ≤ c). Và cái này chỉ dựa trên điều kiện là θ ∈ Θ0 (vì nếu θ ∈ Θ0c) thì event "Test reject H0" không phải là event "Type I error".
+>
+>
+>
+> Một điểm hết sức chú ý, cái event trên, hay tính không chắc chắn của nó, là đến từ tính không chắc của giá trị **X**. Nói đơn giản, đây là một event, mà tính không chắc chắn (để từ đó ta mới nói chuyện xác suất của event) là gắn với một hàm số của random variable (vector) **X**. Chứ đây là cách tiếp cận của trường phái Frequentist, nơi ta coi θ của population distribution là cố định, nhưng chưa biết (fixed & unknown). Do đó, sẽ là sai nếu ta nghĩ xác suất mắc Type I error theo kiểu P(θ ∈ Θ0 và test reject H0) theo cách hiểu đây là joint event: θ ∈ Θ0 và Test reject H0. Thay vào đó, cách hiểu đúng đó là, ta có một random variable λ(**X**) là hàm số của random sample **X**, và sự kiện mà λ(**X**) ≤ c chính là một Type I error nếu như θ thực sự thuộc Θ0. Cũng chính vì vậy, xác suất của event này, vì phụ thuộc vào distribution của **X**, nên cũng phụ thuộc θ. Thành ra người ta ghi là: P\_θ(λ(**X**) ≤ c)
+>
+>
+>
+> Thế thì, để đặt ra tiêu chí cho test, ta có khái niệm level α và size α test: là test có xác suất mắc Type I error không vượt quá α hoặc bằng đúng α. Và ví dụ như ta muốn có một level 0.05 test, tức là ta muốn có phép thử mà dù θ thật sự bằng bao nhiêu, thì xác suất mắc Type I error của nó cũng không qúa 0.05.
+>
+>
+>
+> Và bài toán đặt ra là. chọn c thế nào để ta có một level α likelihood ratio test: Tức là test có:
+>
+>
+>
+> sup\_θ∈Θ0 P\_θ(λ(**X**) ≤ c) ≤ α
+>
+>
+>
+> Vấn đề đặt ra là, nếu ta biết distribution của λ(**X**) (nó cũng là một random variable thôi, vì nó là hàm số của random variable **X**) thì khi đó chọn c để thỏa cái này rất dễ dàng. Ví dụ như, nếu ta có Z \~ normal(0,1), và muốn tìm cái mốc c để P(Z ≤ c) ≤ α (mà cũng chính là ta muốn tìm c để P(Z ≤ c) = α) thì chỉ việc tra bảng cdf của n(0,1), sẽ tìm ra c khiến F(c) = α, cũng là c khiến diện tích pdf bên trái mốc này = α, đây là cái mà người ta gọi là Z\_α
+>
+>
+>
+> Nhưng λ(**X**) là một hàm số phức tạp, nên rất khó để biết distribution của nó.
+>
+>
+>
+> Tuy nhiên một định lí quan trọng giúp ta điều sau đây:
+>
+>
+>
+> Định lí, ý chính cốt lõi của nó nói rằng: Nếu ta có sự thật là θ = θ0, và vài điều kiện cần thiết, thì phân phối limit của cái statistic -2 log λ(**X**) chính là phân phối χ²\_1, thể hiện theo toán là -2 log λ(**X**) → (d) χ²\_1
+>
+>
+>
+> Dựa vào định lí này, ta mới có một hướng đi trong việc áp dùng LRT cho bài toán testing mà Θ0 = {θ0}, Θ0c = {θ: θ ≠ θ0}. Cụ thể là, ta sẽ biến đổi chút xíu λ(**X**) ≤ c như sau:
+>
+>
+>
+> λ(**X**) ≤ c ⇔ log λ(**X**) ≤ log (c) (vì hàm log monotone increasing)
+>
+>
+>
+> ⇔ -2 log λ(**X**) ≥ -2 log (c)
+>
+>
+>
+> ⇒ P\_θ(λ(**X**) ≤ c) = P\_θ(-2 log λ(**X**) ≥ -2 log (c))
+>
+>
+>
+> Từ đó, việc tìm c để LRT test của bài toán này có level α, tức:
+>
+>
+>
+> sup\_θ∈Θ0 P\_θ(λ(**X**) ≤ c) ≤ α
+>
+>
+>
+> tương đương tìm c để:
+>
+>
+>
+> sup\_θ∈Θ0 P\_θ(-2 log λ(**X**) ≥ -2 log (c)) ≤ α
+>
+>
+>
+> ⇔ tìm c để sup\_θ=θ0 P\_θ(-2 log λ(**X**) ≥ -2 log (c)) ≤ α
+>
+>
+>
+> ⇔ tìm c để P\_θ0(-2 log λ(**X**) ≥ -2 log (c)) ≤ α
+>
+>
+>
+> Và nếu dựa trên giả định θ = θ0 thì định lí ở trên nói rằng khi n lớn vô cùng thì -2 log λ(**X**) là một χ²\_1 random variable. Nên khi n rất lớn, ta có thể coi như bài toán trở thành:
+>
+>
+>
+> tìm c để P\_θ0(χ²\_1 ≥ -2 log(c)) ≤ α
+>
+>
+>
+> đặt d = -2 log(c), cũng như χ²\_1 không còn phụ thuộc θ, ta ko cần care về θ nữa, bài toán tiếp tục tương đương:
+>
+>
+>
+> tìm d để P(χ²\_1 ≥ d) ≤ α
+>
+>
+>
+> Và để giải tìm d rất đơn giản, tra bảng pdf của χ²\_1, tìm cái mốc cần thiết, và đây chính là χ²\_1, α.
+>
+>
+>
+> Đó chính là ý tưởng chính của cái theorem 10.3.3 nói rằng: Trong bài toán test ting H0: Θ={θ0} này thì nếu ta dùng cái test rule đó là, giả sử ta muốn level α = 0.05, tra bảng xem χ²\_1,0.05 là bao nhiêu đó chính là d, từ d tình ra c. Thì cái rule "reject H0 khi λ(x) ≤ c" sẽ có thể dần trở thành một level size 0.05 test khi n lớn.
+>
+>
+>
+> Nhưng khái quát hơn, đó là ta không tra bảng χ²\_1, mà tra bảng χ²\_ν với ν là số bậc tự do còn lại. Cũng dễ hiểu thôi, làm như sau:
+>
+>
+>
+> Giả sử ta có Θ là không gian parameter, có q chiều. (Ví dụ, giả sử ta giải bài toán hypothesis mà θ là parameter của normal, thì Θ sẽ là R^2, vì θ lúc này là vector (μ, σ^2)) Sau đó, Θ0 lại chỉ có p &lt; q chiều (ví dụ, ta xét H0 là {(μ, σ^2) ∈ R^2: μ = 5}. Khi đó ν sẽ là q - p = 2 - 1 = 1.
+>
+>
+>
+> (còn trong ví dụ từ trên đến giờ, là θ là đơn, nên Θ là trục R, có số chiều là 1, và Θ0 là {θ0} (1 điểm) có số chiều p = 0, nên ν = 1 - 0 = 1, nên ta theorem mới nói -2 log λ(X) → χ²\_1)
+>
+>
+>
+> Tóm lại, nhờ cái định lý này, gọi là định lý Wilkin, ta có thể dùng bảng tra của χ², để có các threshold, giúp lắp vào LRT test rule, ta sẽ có test rule level α tiệm cận (asymptotically level α test)
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chú của bạn cực kỳ chi tiết, chính xác và thể hiện sự hiểu bài sâu sắc từ bản chất kiểm định tỷ số khả hợp (LRT) cho đến cách tính bậc tự do của định lý Wilks ($q - p$) như trong ảnh. Để hoàn thiện hơn, bạn có thể lưu ý thêm rằng định lý tiệm cận này đòi hỏi một số điều kiện chuẩn tắc (regularity conditions) nhất định để nghiệm đúng.
+
+<br>
+
+<a id="node-geri9d1"></a>
+
+###### Example 10.3.4 Multinomial LRT
+
+<p align="center"><kbd><img src="assets/hru3qhfusyd.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0kzokdhejyen.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9if043d6wlq.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Qua ví dụ này, ta sẽ áp dụng theorem vừa rồi: Cho θ là R^5 vector, (p1,p2,...p5) với tổng pj = 1, và đều không âm. X1,...Xn iid, discrete với P(Xi - j) = pj. Tức là population distribution là một discrete distribution, X có 5 discrete possible value, pmf tại j, P(X = j) pj
+>
+>
+>
+> Thử xem vì sao likelihood function lại là:
+>
+>
+>
+> L(θ|**x**) = Πi=1:n f(xi|θ) = (p1^y1)(p2^y2)(p3^y3)(p4^y4)(p5^y5) với yj là số x1,...xn = j
+>
+>
+>
+> Ta nhớ lại, định nghĩa của hàm likelihood là: Là hàm của tham số θ, kí hiệu L(θ|**x**) (nói vậy có nghĩa là, hàm nhận input là θ, còn **x** chỉ coi như hằng số), mà giá trị của nó tính bởi f(**x**|θ), mang ý nghĩa là độ hợp lí của θ dựa trên giá trị quan sát của data là **x**. Nên L(θ|**x**) = f(**x**|θ).
+>
+>
+>
+> Mà f(**x**|θ), dĩ nhiên là joint pmf của X1,...Xn, đồng thời do tính iid, joint pmf = tích các marginal pmf:
+>
+>
+>
+> f(**x**|θ) = Πi f(xi|θ)
+>
+>
+>
+> đề bài cho các random variable X có pmf f(j|θ) = pj
+>
+>
+>
+> nên nếu xi lần lượt bằng 1,2,3,4,5 thì f(xi|θ) sẽ lần lượt bằng p1,p2,p3,p4,p5
+>
+>
+>
+> Nếu đặt y1 = Σi=1:n I\_{xi=1}, y2 = Σi=1:n I\_{xi=2},... thì dễ thấy Πi f(xi|θ) = (p1^y1)(p2^y2)(p3^y3)(p4^y4)(p5^y5)
+>
+>
+>
+> Không có gì quá khó hiểu.
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, theo, nói đến hai giả thuyết của bài toán testing: H0: p1=p2=p3 và p4=p5 vs H1: H0 ko đúng.
+>
+>
+>
+> Nhiệm vụ cần làm tiếp theo là xác định bậc tự do ν là gì. Vậy thử hỏi q là gì p là gì.
+>
+>
+>
+> q là dimension của parameter space Θ. θ ở đây tuy là 5-D vector, nhưng thật ra ta không thể chọn 5 con số bất kì, mà chúng phải không âm. Nên với ý này, chúng chỉ là một nửa của không gian 5D. Tiếp, chúng có ràng buộc tổng = 1, điều này có nghĩa nếu biết 4 thằng thì sẽ biết thằng số 5. Do đó q = 4.
+>
+>
+>
+> Còn H0, với việc yêu cầu p1=p2=p3 và p4=p5, thì bậc tự do chỉ còn 1, vì chọn p1, là tự biết 4 thằng còn lại.
+>
+>
+>
+> Vậy ν = 4-1 = 3.
+>
+>
+>
+> (trong sách giải thích kĩ hơn nhưng mình hiểu đại khái là vậy được rồi)
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy cái rule cho một tiệm cận level alpha LRT test là: Đi tìm cái mốc χ²\_3, giải bài toán -2 log (c) = χ²\_3 từ đó là ta đã có cái threhold c. Để rồi nhiệm vụ chỉ là nhận **x**, tính ra λ(**x**), và so với c để ra quyết định reject H0 nếu λ(**x**) ≤ c và ngược lại là xong.
+>
+>
+>
+> Vậy còn một bước phải làm, là đi tìm công thức của λ(**x**) trong bài toán cụ thể này (công thức L(θ^0|**x**) / L(θ^|**x**) chỉ là khái quát thôi, đâu biết hình thù nó ra sao mà tính)
+>
+>
+>
+> Như ta phải đi giải 2 bài toán tối ưu: 
+>
+>
+>
+> maximize\_Θ L(θ|**x**)
+>
+>
+>
+> ⇔ maximize\_{pj ≥ 0, Σj pj = 1} (p1^y1)(p2^y2)(p3^y3)(p4^y4)(p5^y5)
+>
+>
+>
+> ⇔ maximize\_{pj ≥ 0, Σj pj = 1} log \[(p1^y1)(p2^y2)(p3^y3)(p4^y4)\] (chuyển thành bài toán tương đương với hàm log)
+>
+>
+>
+> ⇔ maximize\_{pj ≥ 0, Σj pj = 1} {log (p1^y1) + log (p2^y2) + log (p3^y3) + log (p4^y4)}
+>
+>
+>
+> ⇔ maximize\_{pj ≥ 0, Σj pj = 1} {y1 log (p1) + y2 log (p2) + y3 log (p3) + y4 log (p4) + y5 log (p5)}
+>
+>
+>
+> ⇔ maximize\_{pj ≥ 0, Σj pj = 1} Σj yj log(pj)
+>
+>
+>
+> Đây là bài toán tối ưu có ràng buộc đẳng thức + bất đẳng thức. Ta sẽ dùng kiến thức KKT conditions đã học trong Convex Boyd hoặc Numerical Optimization (J. Nocedal).
+>
+>
+>
+> maximize Σj yj log(pj) s.t pj ≥ 0, j=1,2,3,4,5. Σj pj - 1 = 0
+>
+>
+>
+> Lagrangian: L(**p**, **λ**, ω) = Σj yj log(pj) - Σj λj pj + ω (Σj pj - 1)
+>
+>
+>
+> Stationary condition:
+>
+>
+>
+> ∇\_p L(**p\***, **λ\***, ω\*) = 0
+>
+>
+>
+> ⇔ d/d**p** \[Σj yj log(pj) - Σj λj pj + ω (Σj pj - 1)\] = 0
+>
+>
+>
+> ⇔ d/d**p** \[**y**Tlog(**p**) - **λ**T**p** + ω (**p**T**1** - 1)\] = 0
+>
+>
+>
+> ⇔ d/d**p** \[**y**Tlog(**p**)\] - d/d**p** \[**λ**T**p**\] + d/d**p** \[ω (**p**T**1** - 1)\] = 0
+>
+>
+>
+> i) d/d**p** \[**y**Tlog(**p**)\]: d\[**y**Tlog(**p**)\] = **y**Tlog(**p**+d**p**) - **y**Tlog(**p**)
+>
+>
+>
+> = **y**T\[log(**p**+d**p**) - log(**p**)\]
+>
+>
+>
+> = Σi yi × log\[(pi+dpi)/pi\]
+>
+>
+>
+> = Σi yi × log(1+dpi/pi)
+>
+>
+>
+> ≈ Σi yi × dpi/pi
+>
+>
+>
+> = Σi yi/pi × dpi
+>
+>
+>
+> = \[y1/p1, y2/p2...,y5/p5\]T d**p**
+>
+>
+>
+> Vậy d\[**y**Tlog(**p**)\] = \[y1/p1, y2/p2...,ỵ5/p5\]T d**p** ⇒ ∇\[**y**Tlog(**p**)\] = \[y1/p1, y2/p2...,y5/p5\]
+>
+>
+>
+> ii) d/d**p** \[**λ**T**p**\] = **λ**
+>
+>
+>
+> iii) d/d**p** \[ω (**p**T**1** - 1)\] = ω d/d**p** \[**p**T**1**\] = w × **1** (tức là vector \[w,w,w,w,w\]
+>
+>
+>
+> Vậy ∇\_p L(**p\***, **λ\***, ω\*) = 0 ⇔ \[y1/p1, y2/p2...,y5/p5\] - **λ**  + w × **1** = **0**
+>
+>
+>
+> ⇔ yj/pj - λj + ω = 0
+>
+>
+>
+> ⇔ yj/pj = λj - ω
+>
+>
+>
+> ⇔ yj = pjλj - pj ω (j=1,2..5) (1)
+>
+>
+>
+> ---
+>
+>
+>
+> Dùng điều kiện Complementary slackness: λj pj = 0 j=1,2,3,4,5
+>
+>
+>
+> Khi đó (1) tương trở thành:
+>
+>
+>
+> yj = - pj ω (j=1,2..5) 
+>
+>
+>
+> ⇔ pj = -yj/ω  (j=1,2..5) 
+>
+>
+>
+> ---
+>
+>
+>
+> Dùng tới điều kiện Σj pj = 1 
+>
+>
+>
+> ⇔ Σj (-yj/ω) = 1
+>
+>
+>
+> ⇔ -(Σj yj) = ω
+>
+>
+>
+> Mà yj theo định nghĩa trên thì (Σj yj) chính là n
+>
+>
+>
+> ⇔ ω = -n
+>
+>
+>
+> Vậy pj = -yj/(-n) = yj / n  (j=1,2..5). Ta đã tìm được MLE của **p**: p^j = yj / n
+>
+>
+>
+> Thế **p**^ vào L(p|**x**) ta có mẫu số là:
+>
+>
+>
+> Πj=1,2..5 pj^yj | pj=p^j=yj / n
+>
+>
+>
+> = Πj (yj / n)^yj
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp theo là giải bài tóan restricted MLE:
+>
+>
+>
+> ⇔ maximize\_{p1=p2=p3, p4=p5, 3p1 + 2p4 = 1, p1,p4 ≥ 0} (p1^y1)(p2^y2)(p3^y3)(p4^y4)(p5^y5)
+>
+>
+>
+> Lúc này objective chỉ là (p1^y1)(p1^y2)(p1^y3) \[(1-3p1)/2\]^y4 \[(1-3p1)/2\]^y5
+>
+>
+>
+> = p1^(y1+y2+y3) \[(1-3p1)/2\]^(y4+y5)
+>
+>
+>
+> Đặt (y1+y2+y3) là c1, (y4+y5) = c2 cho gọn, Objective trở thành p1^c1 \[(1-3p1)/2\]^c2
+>
+>
+>
+> Bài toán có các constraint p1=p2=p3, p4=p5, 3p1 + 2p4 = 1, p1,p4 ≥ 0 nhưng bằng cách đưa các constraint này vào objective, constraint còn lại chỉ là: p1,p4 ≥ 0
+>
+>
+>
+> DÙng hàm log chuyển thành bài toán tương đương: 
+>
+>
+>
+> log {p1^c1 \[(1-3p1)/2\]^c2} = c1 log p1 + c2 log \[(1-3p1)/2\]
+>
+>
+>
+> = c1 log p1 + c2 log (1-3p1) - c2 log (2)
+>
+>
+>
+> Đạo hàm = c1 / p1 + c2 (-3) \[1/(1-3p1)\]
+>
+>
+>
+> = c1 / p1 - 3c2 / (1-3p1)
+>
+>
+>
+> Đièu kiện tối ưu bậc nhất: c1 / p1 - 3c2 / (1-3p1) = 0
+>
+>
+>
+> ⇔ c1 / p1 = 3c2 / (1-3p1) 
+>
+>
+>
+> ⇔ c1(1-3p1) = 3c2p1 
+>
+>
+>
+> ⇔ c1 - 3c1p1 = 3c2p1 
+>
+> \
+> ⇔ c1 = 3c2p1 + 3c1p1
+>
+>
+>
+> ⇔ c1 = 3(c2+ c1)p1
+>
+>
+>
+> ⇔ c1/3(c2+ c1) = p1
+>
+>
+>
+> Thay c1, c2 vào, ta có p1 = (y1+y2+y3)/3(y1+y2+y3+y4+y5) = (y1+y2+y3)/3n
+>
+>
+>
+> Đây chính là restricted MLE của p1, và từ đó cũng là của p2,p3 và ta suy ra restricted MLE của p4,p5 là:
+>
+>
+>
+> (1-3p1)/2 | p1=(y1+y2+y3)/3n
+>
+>
+>
+> = \[1-3(y1+y2+y3)/3n\] /2
+>
+>
+>
+> = \[y1+y2+y3+y4+y5-(y1+y2+y3)\]/2n
+>
+>
+>
+> = \[y4+y5\]/2n
+>
+>
+>
+> Thế vào L(p|**x**), ta có:
+>
+>
+>
+> \[(y1+y2+y3)/3n\]^c1 \[y4+y5\]/2n\]^c2
+>
+>
+>
+> ---
+>
+>
+>
+> Và từ đó ta có công thức λ(**x**)
+>
+>
+>
+> = {\[(y1+y2+y3)/3n\]^c1 \[y4+y5\]/2n\]^c2} chia Πj (yj / n)^yj  
+>
+>
+>
+> Triệt tiêu bớt ta sẽ còn:
+>
+>
+>
+> cái công thức dài như trong sách.
+>
+>
+>
+> Và như vậy, cùng với việc đã có threshold χ²\_3,α ta sẽ đã có cái level α (tiệm cận) LRT
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú cực kỳ chi tiết và chính xác, tự chứng minh và giải quyết triệt để các bước tối ưu hóa (như dùng điều kiện KKT) mà sách giáo khoa bỏ qua. Bạn đã hiểu rất sâu sắc bản chất toán học của kiểm định tỷ số hợp lý (LRT) này.
 
 <br>
 
