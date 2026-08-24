@@ -1,6 +1,6 @@
 # 12.5  Second-Order Conditions
 
-📊 **Progress:** `3` Notes | `6` Screenshots | `3` AI Reviews
+📊 **Progress:** `5` Notes | `6` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-8arnxqj"></a>
@@ -88,7 +88,7 @@
 <p align="center"><kbd><img src="assets/wsu2vl7s5s8.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên, ta giả nói khi một điểm x\* thỏa KKT, thì **đi từ x\* theo w nào với w lấy từ ℱ(x\*) cũng đều giúp tăng** hoặc (ít nhất là giữa nguyên) hàm first order approximation của objective. Thử gỉai thích vì sao lại nói như vậy:
+> Đầu tiên, tác giả nói khi một điểm x\* thỏa KKT, thì **đi từ x\* theo w nào với w lấy từ ℱ(x\*) cũng đều giúp tăng** hoặc (ít nhất là giữa nguyên) hàm first order approximation của objective. Thử gỉai thích vì sao lại nói như vậy:
 >
 >
 >
@@ -176,7 +176,7 @@
 >
 >
 >
-> Và như vậy, nếu x\* thỏa KKT, và di chuyển theo hướng w ∈ ℱ(x\*) khiến xấp xỉ bậc 1 của f tăng hoặc giữ nguyên thì x\* là ứng cử viên cho minimizer. 
+> Và như vậy, nếu x\* thỏa KKT, và di chuyển theo hướng w ∈ ℱ(x\*) khiến xấp xỉ bậc 1 của f tăng hoặc giữ nguyên thì x\* là ứng cử viên cho minimizer.
 >
 >
 >
@@ -200,11 +200,11 @@
 >
 >
 >
-> Và do đó, người ta mới quan tâm về tập các linearized feasible direction (∈ ℱ(x\*)) khiến linearized f không tăng, mà điều này (linearized f không tăng) thể hiện bởi: ∇f(x\*)Tw = 0. 
+> Và do đó, người ta mới quan tâm về tập các linearized feasible direction (∈ ℱ(x\*)) khiến linearized f không tăng, mà điều này (linearized f không tăng) thể hiện bởi: ∇f(x\*)Tw = 0.
 >
 >
 >
-> Câu trong sách: "For the directions w ∈ F(x∗) for which wT∇f(x ∗) = 0, we cannot determine from first derivative information alone whether a move along this direction will increase or decrease the objective function f . Second-order conditions examine the second derivative terms in" 
+> Câu trong sách: "For the directions w ∈ F(x∗) for which wT∇f(x ∗) = 0, we cannot determine from first derivative information alone whether a move along this direction will increase or decrease the objective function f . Second-order conditions examine the second derivative terms in"
 >
 >
 >
@@ -221,23 +221,11 @@
 
 <br>
 
-<a id="node-yaiknjh"></a>
-
-#### Điều kiện bậc hai (bản sao) (bản sao)
-
-<p align="center"><kbd><img src="assets/7j7b6vur119.png" width="80%"></kbd></p>
-
-<br>
-
 <a id="node-jebihq1"></a>
 
 #### Definition of the Critical Cone
 
 <p align="center"><kbd><img src="assets/7gm57itms5m.png" width="80%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ix364me2kk8.png" width="80%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/ubvvjs8cgmn.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tiếp theo, gs định nghĩa ra cái gọi là Critical Cone C(x\*, λ\*):
@@ -256,11 +244,11 @@
 >
 >
 >
-> Ta đi xây dựng ℱ(x\*), theo định nghĩa, nó chứa d đến từ 2 nhóm: 
+> Ta đi xây dựng ℱ(x\*), theo định nghĩa, nó chứa d đến từ 2 nhóm:
 >
 >
 >
-> Nhóm 1: d khiến ∇ci(x\*)Td = 0 với i ∈ ℰ 
+> Nhóm 1: d khiến ∇ci(x\*)Td = 0 với i ∈ ℰ
 >
 >
 >
@@ -268,15 +256,23 @@
 >
 >
 >
-> Nhóm 2: d thỏa ∇ci(x\*)Td ≥ 0 với i ∈ 𝒜(x\*) ∩ ℐ 
+> Hình ảnh: Với dạng ràng buộc này, cơ bản là ta có 1 cái tường và phải đi trên các thành tường, không được quẹo đi đâu (vì c1(x) = 0, giống như tập x ∈ R^2 thỏa x1 + x2 = 0 trở thành 1 đường thẳng, x phải đi trên đó)
 >
 >
 >
-> Dịch nghĩa: Tại x\*, trong c2 c3, cái nào đang active? Ví dụ c2 active c3 không active. 
+> Nhóm 2: d thỏa ∇ci(x\*)Td ≥ 0 với i ∈ 𝒜(x\*) ∩ ℐ
 >
 >
 >
-> Ta sẽ xét c2 thôi, và đặt câu hỏi: với c2(x\*) = 0, thì đi hướng nào khiến c2^(d) = c2(x\*) + ∇c2(x\*)Td vẫn lớn hơn hoặc 0.
+> Dịch nghĩa: Tại x\*, trong c2 c3, cái nào đang active? Ví dụ c2 active c3 không active.
+>
+>
+>
+> Hình ảnh: Với dạng ràng buộc này, thì chúng quy định chỉ được đi lòng vòng trong phạm vi 1 một bên của một bức tường 
+>
+>
+>
+> Vậy thì ta sẽ xét c2 thôi, và đặt câu hỏi: với c2(x\*) = 0, thì đi hướng nào khiến c2^(d) = c2(x\*) + ∇c2(x\*)Td vẫn lớn hơn hoặc 0.
 >
 >
 >
@@ -284,23 +280,31 @@
 >
 >
 >
+> HÌnh ảnh: Ta chỉ xét các ràng buộc nào mà tại điểm x\*, ta đang ở trạng thái đụng vách. Và xét các hướng men theo tường hoặc đi vào trong (còn mấy cái ràng buộc mà chưa đụng vách, thì dĩ nhiên có thể đi tùy ý nên không xét làm gì)
+>
+>
+>
 > ---
 >
 >
 >
-> Vậy thì, trong các w thuộc ℱ(x\*), ta chọn ra những thằng nào để có 𝒞(x\*, λ\*)?
+> Vậy thì, trong các d thuộc ℱ(x\*), ta chọn ra những thằng nào để có 𝒞(x\*, λ\*)?
 >
 >
 >
-> → Chính là nhìn vào case thứ 2: Nơi ta lấy cả d1,d2,d3. Thì với 𝒞 TA CHỈ LẤY CÁI d3. 
+> Nhóm 1 lấy hết.
 >
 >
 >
-> Tuy nhiên, 𝒞 làm theo một bước nữa: Là nó xét λ. Nếu tại x\*, ràng buộc active = c2(x\*) = 0 = tức "đã chạm tường c2". Thì xem λ có dương không. Nếu dương, ta loại d1.d2. Chỉ lấy d3. Còn nếu λ = 0 thì lấy hết d1,d2,d3.  
+> Nhóm 2: → Chính là nhìn vào case thứ 2: Nơi ta lấy cả d1,d2,d3. Thì với 𝒞 TA CHỈ LẤY CÁI d3.
 >
 >
 >
-> Ý nghĩa của sự khác nhau: 
+> Tuy nhiên, 𝒞 làm thêm một bước nữa: Là nó xét λ. Nếu tại x\*, ràng buộc active = c2(x\*) = 0 = tức "đã chạm tường c2". Thì xem λ có dương không. Nếu dương, ta loại d1,d2. Chỉ lấy d3. Còn nếu λ = 0 thì lấy hết d1,d2,d3.
+>
+>
+>
+> Ý nghĩa của sự khác nhau:
 >
 >
 >
@@ -308,11 +312,51 @@
 >
 >
 >
-> 𝒞: Ràng buộc tại c2 actve. Ta chỉ chọn w tạo ∇c2(x\*) góc vuông. HÌnh ảnh: với bức tường c2, tại x\* đã đụng vách. Thì xem λ, đại diện cho lực ép, nếu lực cản đang dương, thì ta chỉ xét hướng đi ngang men theo vách (tạo góc vuông với ∇c2). Còn lực cản đang = 0 thì cứ cho đi vô lại bên trong hay đi men theo vách đều được.
+> 𝒞: Ràng buộc tại c2 active. HÌnh ảnh: với bức tường c2, tại x\* đã đụng vách. Thì xem λ, đại diện cho lực ép, nếu lực cản đang dương, thì ta chỉ xét hướng đi ngang men theo vách (tạo góc vuông với ∇c2). Còn lực cản đang = 0 thì cứ cho đi vô lại bên trong hay đi men theo vách đều được.
 >
 >
 >
 > Trong lập luận trên ta cần nhớ rằng, ví dụ nói constraint c2(x) ≥ 0, thì ∇c2 sẽ vuông góc với boudary c2(x) = 0 và HƯỚNG VÔ TRONG, vì sao? Vì đi theo ∇c2 sẽ tăng c2. Tại vách, c2(x) = 0. nếu đi ngược vô trong theo ∇c2 thì c2(x) mới tăng lên để c2(x) trở thành &gt; 0.
+>
+>
+>
+> Như vậy trong 𝒞(x\*, λ\*) sẽ khác ℱ ở chỗ:
+>
+>
+>
+> ℱ tìm trong c2,c3, cái nào active. Thì lấy hết d1,d2,d3 khiến ∇c2Td ≥ 0 sẽ có:
+>
+>
+>
+> 𝒞 thì tìm trong c2,c3, cái nào active (là c2), → check λ2. Nếu = 0 thì lấy hết d1,d2,d3 khiến ∇c2Td ≥ 0. Nhưng nếu dương thì chỉ lấy d3, là cái khiến ∇c2Td = 0
+>
+>
+>
+> Hình ảnh:
+>
+>
+>
+> ℱ: Hỏi (trong các constraint) cái nào đụng tường (bao gồm equality constraint, và active inequality constrain). Sau đó, lấy các hướng đi men tường với equality constraint, và đi ngang hoặc quay vô với active inequality constraint.
+>
+>
+>
+> 𝒞: Hỏi: (trong các constraint), cái nào đụng tường (bao gồm equality constraint, và active inequality constrain). Sau đó, lấy các hướng đi men tường với equality constraint. Còn với inequality constraint thì xem thử có đang bị dí ép mạnh vào tường ko. Nếu có thì chỉ được đi men tường. Còn không thì có thể đi ngang hoặc quay vô.
+>
+>
+>
+> Do đó trong 12.53:
+>
+>
+>
+> Dòng 1: Chính là xem các trường hợp đụng tường thuộc diện equality constraint, lấy hết hướng đi men tường (∇ci(x\*)Tw = 0)
+>
+>
+>
+> Dòng 2: Chính là xem các trường hợp đụng tường thuộc diện inequality constrain, và đang bị dí mạnh vào tường (λi\* &gt; 0). Với case này, ta chỉ được đi men theo tường (∇ci(x\*)Tw = 0)
+>
+>
+>
+> Dòng 3: Chính là xem các ca đụng tường thuộc diện inequality constraint nhưng không có lực ép, nên có thể đi men theo tường hoặc quay vô trong đều được.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
@@ -320,6 +364,188 @@
 > Ghi chú giải thích rất chính xác và trực quan về Critical Cone thông qua ví dụ cụ thể, đặc biệt là phần minh họa hình học và ý nghĩa vật lý của nhân tử Lagrange $\lambda^*$. Bài viết xuất sắc, không có điểm yếu nào đáng kể về mặt lý thuyết toán học tối ưu.
 
 **🔗 See also:** [Tập linearized feasible direction](#node-169mbi2)
+
+<br>
+
+<a id="node-yaiknjh"></a>
+
+##### Điều kiện bậc hai (bản sao) (bản sao)
+
+<p align="center"><kbd><img src="assets/fg8rk4kkrxb.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đại ý là như sau:
+>
+>
+>
+> Tác giả nói với định nghĩa của 𝒞(x\*, λ\*) thì nếu w ∈ 𝒞(x\*, λ\*) thì λ\*i ∇ci(x\*)Tw = 0 ∀ i ∈ ℰ ∪ ℐ. Vì sao?
+>
+>
+>
+> (vì định nghĩa của 𝒞(x\*, λ\*) chứa: Hướng w khiến: 
+>
+>
+>
+> với equality constraint, thì ∇ci(x\*)Tw = 0
+>
+>
+>
+> với inequality constraint "đang bị ép dính tường λ\*i &gt; 0" thì ∇ci(x\*)Tw = 0
+>
+>
+>
+> với inequality constraint "chưa dính tường λ\*i = 0" thì ∇ci(x\*)Tw ≥ 0
+>
+>
+>
+> Vậy với mỗi constraint nói trên, ta đều có λ\*i × ∇ci(x\*)Tw có tính chất là ít nhất một thừa số = 0, nên λ\*i × ∇ci(x\*)Tw = 0 ∀ i ∈ ℰ ∪ ℐ.  (1)
+>
+>
+>
+> ---
+>
+>
+>
+> Và đoạn tiếp theo cũng dễ hiểu, đó là ta xét lại cái điều kiện stationary condition của KKT
+>
+>
+>
+> ∇\_x L(x\*, λ\*) = 0
+>
+>
+>
+> ⇔ ∇f(x\*) - Σi λ\*i ∇ci(x) = 0
+>
+>
+>
+> ⇔ ∇f(x\*) = Σi λ\*i ∇ci(x) 
+>
+>
+>
+> Nhân hai vế cho w ∈ 𝒞(x\*, λ\*)
+>
+>
+>
+> ⇔ wT∇f(x\*) = wT Σi λ\*i ∇ci(x\*) 
+>
+>
+>
+> ⇔ wT∇f(x\*) = Σi λ\*i wT∇ci(x\*) 
+>
+>
+>
+> Và với kết quả (1) thì điều kiện stationary trở thành wT∇f(x\*) = 0
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú của bạn cực kỳ xuất sắc, giải thích trực quan và chính xác bản chất của định nghĩa hình nón tới hạn (critical cone). Các bước biến đổi từ điều kiện tối ưu KKT (stationary) sang hệ thức cuối cùng được trình bày rất rõ ràng, chi tiết và dễ hiểu.
+
+<br>
+
+<a id="node-d7g2kxg"></a>
+
+###### The Critical Cone in Constrained Optimization
+
+<p align="center"><kbd><img src="assets/lsxgj6zehga.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/8ug8imrusoo.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Cùng phân tích cái hình này để hiểu thêm lần nữa ℱ(x\*) - linearized feasible direction set khác 𝒞(x\*, λ\*) - critical cone thế nào:
+>
+>
+>
+> Đầu tiên, objective là f(x) = x1, ∇f(x) = (1,0)T.
+>
+>
+>
+> hình vẽ cho thấy -∇f hướng từ trái sang phải, mình cho là đang vẽ sai, đây là hướng của ∇f, nên -∇f phải ngược lại, đi từ phải sang trái.
+>
+>
+>
+> Ràng buộc inequality x2 ≥ 0, hình ảnh chính là x chỉ được nằm trong cái nửa mặt phẳng phía trên
+>
+>
+>
+> Ràng buộc c2(x) ≥ 0 ⇔ 1 - (x1 - 1)^2 - x2^2 ≥ 0, hình ảnh chính là x chỉ được nằm trong phạm vi hình tròn. Tính thử ∇c2: \[-2(x1-1), -2x2\]T ⇒ ∇c2(\[1,1\]) = (0,-2) chỉ vào trong (vector xanh dương)
+>
+>
+>
+> x\* là điểm nào: Theo lập luận trực giác của KKT, nó là điểm mà ko thể đi theo hướng nào tạo góc tù với ∇f(x\*) và tạo góc vuông hoặc nhọn với ∇ci(x\*)
+>
+>
+>
+> Hay tưởng tượng có lực đẩy của gió thổi từ phải sang trái, và ta bị ràng buộc đi trong phạm vi nửa bán cầu phía trên, thì ta sẽ bị đẩy đi đâu? Dễ thấy chính là điểm (0,0)
+>
+>
+>
+> Vậy ℱ(x\*) là gì:
+>
+>
+>
+> Theo định nghĩa, ta sẽ hỏi:
+>
+>
+>
+> Tại x\*, ràng buộc inequality nào đụng vách: Cả c1, và c2 đều đụng vách (nên 𝒜(x\*) = {1,2}, cả hai inequality constraint đều active tại x\*)
+>
+>
+>
+> Vậy thì đi hướng d nào sẽ có ∇c1(x\*)Td và ∇c2(x\*)Td ≥ 0:
+>
+>
+>
+> ∇c1(x\*) = (0,1)T (trên hình là vector tím)
+>
+>
+>
+> ∇c2(x\*) = \[-2(0-1), 0\]T = (2,0)T, mình vẽ vector xanh lục hướng vào tâm đường tròn)
+>
+>
+>
+> Vậy, d hợp với hai vector này góc nhọn hoặc vuông chính là mọi hướng trong góc phần tư ở trên bên phải
+>
+>
+>
+> Còn 𝒞(x\*, λ\*)?
+>
+>
+>
+> Ta phải xem tại x\*, dù đều bị dính vách, nhưng cái nào đang bị ép với lực dương?
+>
+>
+>
+> Dựa vào ∇\_x L(x\*, λ\*) = 0, ta giải tìm λ\*1, λ\*2:
+>
+>
+>
+> ∇f(x\*) - λ\*1 ∇c1(x\*) - λ\*2 ∇c2(x\*) = 0
+>
+>
+>
+> (1,0)T - λ\*1 (0,1)T - λ\*2 (2,0)T = 0
+>
+>
+>
+> ⇔ 1 - 2λ\*2 = 0 & 0 - λ\*1 = 0
+>
+>
+>
+> ⇒ λ\*2 = 1/2, λ\*1 = 0, tức λ\* = (0, 1/2)
+>
+>
+>
+> Như vậy, trong hai constraint dính tường, thì cái c2 là bị ép với lực dương. Do đó chỉ được đi men theo vách. Còn c1 thì dù dính tường nhưng chưa bị ép, thành ra đi vào trong cũng được.
+>
+>
+>
+> Do đó tại x\* = (0,0), theo constraint c2 ta chỉ có thể đi men vách tường tại x\* (theo hướng lên hoặc xuống). Nhưng theo constraint c1, thì trong hai hướng này ta chỉ có thể đi lên trên. Thành ra critical cone chính là cái vector c trong hình
+
+> [!TIP]
+> **🤖 AI Feedback** — ⚠️ Score: **85/100**
+>
+> Ghi chú có trực giác vật lý rất tốt và tính toán toán học hoàn toàn chính xác về các tập hợp và nhân tử Lagrange. Tuy nhiên, bạn đã nhìn nhầm hướng mũi tên $-\nabla f$ trong sách (thực tế nó hướng sang trái là đúng) và vẽ nhầm vector $\nabla c_1(x^*)$ thành hướng nằm ngang thay vì thẳng đứng lên trên.
 
 <br>
 
