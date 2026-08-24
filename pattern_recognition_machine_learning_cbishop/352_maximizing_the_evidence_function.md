@@ -157,7 +157,7 @@
 >
 > Bài viết rất chi tiết và giải thích cực kỳ rõ ràng các bước biến đổi tuyến tính cũng như giải tích đạo hàm mà sách giáo khoa bỏ qua. Tuy nhiên, có một lỗi gõ nhỏ ở bước trung gian khi ghi nhầm đạo hàm của $-\frac{\alpha}{2}\mathbf{m}_N^T\mathbf{m}_N$ thành $-\frac{\alpha}{2}\mathbf{m}_N^T\mathbf{m}_N$ thay vì $-\frac{1}{2}\mathbf{m}_N^T\mathbf{m}_N$, mặc dù dòng sau vẫn biến đổi đúng.
 
-**🔗 See also:** [Hessian of Regularized Error Function](./351_evaluation_of_the_evidence_function.md#node-vpu7vqs) · [Lecture 21: Eigenvalues And Eigenvectors *(Mit 18.06)*](../mit1806_gstrang/lecture_21_eigenvalues_and_eigenvectors.md#node-aiwkaf3) · [Log Marginal Likelihood Derivation](./351_evaluation_of_the_evidence_function.md#node-ddcs0pi) · [Marginal Likelihood Maximization for Beta](#node-l71837c)
+**🔗 See also:** [Hessian of Regularized Error Function](./351_evaluation_of_the_evidence_function.md#node-vpu7vqs) · [Lecture 21: Eigenvalues And Eigenvectors *(Mit 18.06)*](../mit1806_gstrang/lecture_21_eigenvalues_and_eigenvectors.md#node-aiwkaf3) · [Log Marginal Likelihood Derivation](./351_evaluation_of_the_evidence_function.md#node-ddcs0pi) · [Marginal Likelihood Maximization for Beta](#node-l71837c) · [Evidence Re-estimation Limit](./353_effective_number_of_parameters.md#node-00gilsq)
 
 <br>
 
@@ -337,7 +337,7 @@
 >
 > Bản ghi chép cực kỳ chi tiết, chính xác và rõ ràng, đặc biệt là phần giải thích cặn kẽ tại sao $d\lambda_i/d\beta = \lambda_i/\beta$. Các bước biến đổi đại số để đi đến công thức (3.94) và (3.95) đều rất mạch lạc và hoàn hảo.
 
-**🔗 See also:** [Section 3.5.2 Maximizing the Evidence Function](#node-nc5qxnz)
+**🔗 See also:** [Section 3.5.2 Maximizing the Evidence Function](#node-nc5qxnz) · [Evidence Re-estimation Limit](./353_effective_number_of_parameters.md#node-00gilsq)
 
 <br>
 
