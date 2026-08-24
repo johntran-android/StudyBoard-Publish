@@ -1,6 +1,6 @@
 # 3.1.1 Maximum likelihood and least squares
 
-📊 **Progress:** `7` Notes | `9` Screenshots | `6` AI Reviews
+📊 **Progress:** `7` Notes | `10` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-rgglm5o"></a>
@@ -842,6 +842,8 @@
 
 <p align="center"><kbd><img src="assets/ybnsxnlzj0d.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/3eanyo0xogq.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > Ok, nãy giờ là ta chỉ nói về **w**ML, đương nhiên tham số mô hình còn có β - precision của distribution Normal mà ta assump rằng noise ε = T - y(**w**,**x**) sẽ theo phân phối này.
 >
@@ -922,7 +924,7 @@
 >
 > Phần giải thích của bạn cực kỳ chi tiết, chính xác và đào sâu vấn đề một cách xuất sắc, từ việc trình bày bước đạo hàm đến việc làm rõ ý nghĩa thống kê của 1/β_ML và liên hệ chặt chẽ với câu kết luận trong sách. Để bản ghi chú hoàn hảo hơn, bạn có thể nhắc lại định nghĩa đầy đủ của E_D(w) ngay từ đầu phần đạo hàm để người đọc dễ theo dõi hơn.
 
-**🔗 See also:** [Likelihood and Error Functions](#node-urnjdcs)
+**🔗 See also:** [Likelihood and Error Functions](#node-urnjdcs) · [Bayesian and Maximum Likelihood Variance](./353_effective_number_of_parameters.md#node-tdezntx)
 
 <br>
 
