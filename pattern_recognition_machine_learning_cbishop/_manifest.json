@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1787521299764,
+  "publishedAt": 1787613903276,
   "sections": [
     {
       "title": "📋 Overview",
@@ -216,7 +216,7 @@
       "title": "3.1.1 Maximum likelihood and least squares",
       "path": "pattern_recognition_machine_learning_cbishop/311_maximum_likelihood_and_least_squares.md",
       "noteCount": 7,
-      "imageCount": 9
+      "imageCount": 10
     },
     {
       "title": "3.1.2 Geometry of least squares",
@@ -293,8 +293,8 @@
     {
       "title": "3.5.3 Effective number of parameters",
       "path": "pattern_recognition_machine_learning_cbishop/353_effective_number_of_parameters.md",
-      "noteCount": 3,
-      "imageCount": 8
+      "noteCount": 6,
+      "imageCount": 17
     },
     {
       "title": "Appendix C. Matrices",
@@ -309,6 +309,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 375,
-  "totalImages": 551
+  "totalNotes": 378,
+  "totalImages": 561
 }
