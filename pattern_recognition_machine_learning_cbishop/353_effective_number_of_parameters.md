@@ -1,6 +1,6 @@
 # 3.5.3 Effective number of parameters
 
-📊 **Progress:** `3` Notes | `8` Screenshots | `3` AI Reviews
+📊 **Progress:** `6` Notes | `17` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-ca7uttw"></a>
@@ -968,6 +968,378 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Ghi chép của bạn rất xuất sắc khi giải thích trực quan hóa hình học qua phép ẩn dụ 'lực kéo' giữa Prior và Likelihood cực kỳ dễ hiểu và chính xác. Điểm cần lưu ý nhỏ duy nhất là các trị riêng $\lambda_i$ thực chất là của ma trận hệ số $\beta\Phi^T\Phi$ chứ không chỉ là $\Phi^T\Phi$, bạn nên lưu ý hệ số nhiễu $\beta$ này.
+
+<br>
+
+<a id="node-tdezntx"></a>
+
+##### Bayesian and Maximum Likelihood Variance
+
+<p align="center"><kbd><img src="assets/tcytki6ga1l.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bo21hdxast.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7tg5ih4mspg.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/iik21te29j.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Ở đoạn này, giáo sư Bishop muốn giúp ta có vài góc nhìn để hiểu về kết quả 3.95 trong phần trước, nên có lẽ cần thiết nhắc lại bối cảnh của đoạn này chút xíu, trong phần đó cái mà ta đang làm đó là maximize model evidence theo α, β.
+>
+>
+>
+> (model evidence là cái gì, và vì sao phải đi maximize như vậy thì xem lại link)
+>
+>
+>
+> Kết quả cho β là: 1/β = 1/(N - γ) Σi=1:N {ti - (**m**N)T Φ(**x**i)}^2
+>
+>
+>
+> Vậy thì để hiểu về ý nghĩa của kết quả này, gs Bishop muốn ta nhớ lại rằng, khi đi giải bài toán tìm MLE của σ^2, tức variance của phân phối normal(μ, σ^2), thì kết quả ra được là:
+>
+>
+>
+> (σ^2)\_ML = (1/N) Σi (xi - μML)^2
+>
+>
+>
+> trong đó μML, là MLE của μ, và ta còn nhớ nó chính là sample mean: (Σi xi)/N.
+>
+>
+>
+> Thế thì sao? Liên quan gì?
+>
+>
+>
+> Là như vầy: Ở đây có một kiến thức về statistic, mà trong các lớp như Stat110, hay Statistical Inference của Casella đã nói (mình có để link) đó là, sample variance, sách Casella kí hiệu S^2, có công thức là (1/N-1) Σi (Xi - Xbar)^2 là một unbiased estimator của sample variance. Còn nếu dùng công thức (1/N) Σi (Xi - Xbar)^2, thì nó sẽ là biased estimator. Lí do là, khi tính kì vọng E\[(1/N-1) Σi (Xi - Xbar)^2\], ta sẽ ra chính xác σ^2 (và trong 1.58, xem link, tác giả Bishop cũng từng nói vụ này)
+>
+>
+>
+> Còn với công thức mà chia cho N, thì không. (và định nghĩa của biased estimator (của θ) W(**X**) là khi độ bias, tính bởi Bias(W, θ) = E\[W(**X**)\] - θ khác 0)
+>
+>
+>
+> Vậy thì như vậy, ở đây, (σ^2)\_ML chính công thức của sample variance với mẫu số là N, nên nó chính là biased estimator của σ^2. Và trong phần 1.59 ông cũng đã nói rằng nếu ta giải theo Bayesian ta sẽ có (σ^2)\_MAP chính là công thức unbiased, E\[(1/N-1) Σi (Xi - Xbar)^2\].
+>
+>
+>
+> Dừng lại chút để trả lời câu hỏi giải theo Bayesian là sao?
+>
+>
+>
+> Đó là, trong MLE approach (giải ra (σ^2)\_ML), ta coi μ, và σ^2, tức tham số của normal, là fixed cứng, nhưng không biết giá trị. Để rồi ta sẽ đặt ra hàm likelihood, đo độ hợp lí của một giá trị input μ, σ^2 dựa trên data quan sát được **x**, kí hiệu L(μ,σ^2|**x**), và hàm này được định nghĩa là, giá trị độ hợp lí của μ, σ^2 dựa trên data quan sát được **x**, sẽ bằng f(**x**|μ, σ^2). Từ đó, ta sẽ đi giải bài toán tối ưu: tìm μ, σ^2 để hàm độ hợp lí có giá trị cao nhất. Và kết quả của bài toán tối ưu này chính là công thức của maximum likelihood estimator của μ và σ^2.
+>
+>
+>
+> Còn với Bayesian, ta coi μ, σ^2 như biến ngẫu nhiên. Mà như vậy thì chúng sẽ có probability distribution, gồm hai loại: prior distribution, là f(μ, σ^2) và f(μ, σ^2|**x**). Bằng cách chọn prior distribution của μ, và σ^2 là một distribution nào đó, ta sẽ dùng Bayes rule để có posterior: f(μ, σ^2|**x**) ∝ f(x|μ, σ^2)f(μ, σ^2). Và sau khi có posterior distribution. Để đưa ra một point estimator của μ, và σ^2, ta có thể chọn gía trị khiến posterior probability là lớn nhất, đây chính là maximum posterior estimator μ\_MAP và (σ^)\_MAP.
+>
+>
+>
+> Và theo lời gs nói ở đây, kết quả bài toán này ta sẽ có (σ^)\_MAP = (1/N-1) Σi (Xi - Xbar)^2, là cái công thức unbiased estimator của σ^2 nói trên.
+>
+>
+>
+> Như vậy là sao? Như vậy có nghĩa là cách làm của Bayesian tốt hơn, khi cách làm của MLE tạo ra một biased estimator trong khi của Bayesian thì ra unbiased.
+>
+>
+>
+> ---
+>
+>
+>
+> Ở trên chỉ là ông Bishop đang mượn lại bài toán point estimator tham số của một mô hình normal để nói về sự khác nhau của MLE và MAP.
+>
+>
+>
+> Quay lại đây, với việc ta đang tìm insight trong kết quả 3.95, thì cũng y vậy, đại ý là:
+>
+>
+>
+> Với cách là MLE, ta cũng là theo quy trình y như trong bài toán point estimator: tìm β giúp maximize likelihood function L(**w**,β|𝒟)
+>
+>
+>
+> và kết qủa ra được 3.21 ta có:
+>
+>
+>
+> (1/β)\_ML = (1/N) Σi (ti - Σj=0:M-1 wj × Φj(**x**i))^2
+>
+>
+>
+> = (1/N) Σi (ti - (**w**T Φ(**x**i))^2
+>
+>
+>
+> lắp **w**ML vô ta có:
+>
+>
+>
+> (1/β)\_ML = (1/N) Σi (ti - (**w**MLT Φ(**x**i))^2
+>
+>
+>
+> Còn là theo lối đi maximize model evidence thì ta ra công thức:
+>
+>
+>
+> 1/β = 1/(N - γ) Σi=1:N {ti - (**m**N)T Φ(**x**i)}^2, với **m**N là **w**MAP
+>
+>
+>
+> Và từ đó đại khái ta hiểu có sự tương tự:
+>
+>
+>
+> Trong bài toán point estimate σ^2, làm theo lối MLE, ta ra công thức chia cho N → biased
+>
+>
+>
+> Còn làm theo Bayesian, ta ra công thức chia cho N-1 → unbiased. Và ý nghĩa của số 1 là một bậc tự do đã bị mất khi ta dùng để tính sample mean (chính là **w**MAP) để estimate **w** rồi
+>
+>
+>
+> ---
+>
+>
+>
+> Ở đây, làm theo lối ML, ta ra công thức chia cho N → Biased
+>
+>
+>
+> Còn làm theo lối Bayesian, ta ra công thức chia cho N-γ , mà γ là chính là số parameter hiệu dụng (effective) trong M param, nên giống như ta tốn 1 bậc tự do cho wML thì ở đây ta đã tốn γ bậc tự do cho **w**MAP rồi, chỉ còn N-γ, và do đó công thức 1/β = 1/(N - γ) Σi=1:N {ti - (**m**N)T Φ(**x**i)}^2 chính là unbiased.
+>
+>
+>
+> ---
+>
+>
+>
+> Một ý mà ta có thể thấy khó hiểu, là vì sao đi maximize model evidence lại làm theo Bayesian? Trong khi ta đâu có phải là đi maximize posterior của f(α, β|**t**), vốn phải ∝ f(t|α, β)f(α,β)) mà đang maximize f(**t**|α,β) cơ mà.
+>
+>
+>
+> Câu trả lời: Là vì đúng là cách làm này là cách làm nửa mùa. Và giáo sư Bishop đã nói ở phần đầu của phần 3.4 (xem hình)
+>
+>
+>
+> Là sao?
+>
+>
+>
+> Cách làm **hoàn toàn** Bayesian (fully Bayesian) phải là như vầy:
+>
+>
+>
+> Ta phải coi **w**, α, β đều là random variable.
+>
+>
+>
+> Rồi đi xây dựng posterior f(**w**, α, β|𝒟) ∝ f(𝒟|**w**, α, β)f(**w**, α, β). Khi có posterior, ta mới đi lấy trung bình của **w**, β, α dựa trên phân phối này. 
+>
+>
+>
+> Kết quả sẽ là cái tích phân 3 lớp 3.74.
+>
+>
+>
+> Và nếu làm từng bước, thì sẽ là như sau:
+>
+>
+>
+> Coi **w** là random variable trước, prior là f(**w**|α) → posterior f(**w**|𝒟,α, β).
+>
+>
+>
+> Đi marginalizing over **w**: ta sẽ có một hàm không còn phụ thuộc **w**, chính là model evidence f(**t**|α, β)
+>
+>
+>
+> Tiếp, ta sẽ coi α cũng là random variable, có prior f(α) nào đó.
+>
+>
+>
+> Rồi đi derive posterior: f(α|𝒟,β). Và đi marginalizing over α ta sẽ có f(𝒟|β)
+>
+>
+>
+> Rồi, cuối cùng, coi β như random variable, có prior f(β), đi derive posterior f(β|𝒟), và đi lấy trung bìng marginalizing over β, ta sẽ có cáo β (hay 1/β) theo kiểu fully Bayesian.
+>
+>
+>
+> Vấn đề là, khi marginalizing **w** xong, để có f(𝒟|α,β) (cũng là f(**t**|α, β)) thì vì hai bước tiếp theo quá phức tạp (cũng như gs Bishop đã nói, để tích phân 3 lớp (đối với w, với α, β) sẽ intractable) do đó, sau khi có f(𝒟|α, β) người ta lại làm theo kiểu nửa mùa, là lại đi tìm MLE của α, β. Để cho ra cái 1/β 3.95
+>
+>
+>
+> Như vậy, phải hiểu, kết quả 3.95 là Bayesian nửa mùa, có tên gọi là evidence approximation, type 2 maximum likelihood hay empirical Bayes.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **96/100**
+>
+> Ghi chú xuất sắc, giải thích rất rõ ràng bản chất thống kê của việc hiệu chỉnh bậc tự do ($N - \gamma$) và liên hệ chính xác với ước lượng không chệch. Đặc biệt, phân tích về bản chất "nửa mùa" (Empirical Bayes) khi tối đa hóa model evidence thay vì fully Bayesian thể hiện sự hiểu biết rất sâu sắc về bản chất của phương pháp.
+
+**🔗 See also:** [Maximum Likelihood Noise Precision β_ML](./311_maximum_likelihood_and_least_squares.md#node-vz4hsaf) · [Tính không chệch Xbar S^2 *(Statistical Inference - Casella)*](../statistical_inference_casella/73_methods_of_evaluating_estimators.md#node-dgdrvpi) · [Ước lượng không chệch phương sai](./124_the_gaussian_distribution.md#node-wki4nv2) · [Sai lệch phương sai MLE](./124_the_gaussian_distribution.md#node-1g51yok)
+
+<br>
+
+<a id="node-00gilsq"></a>
+
+###### Evidence Re-estimation Limit
+
+<p align="center"><kbd><img src="assets/8xhut6lky9g.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/3l7p5eaa5kg.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/qcl1dhwws1.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Gs Bishop minh họa kết quả của việc ta tìm α thông qua maximize model evidence:
+>
+>
+>
+> Đầu tiên list lại vài công thức cho dễ nhìn:
+>
+>
+>
+> (3.25): E_W\[**w**\] = (1/2)**w**T**w**
+>
+>
+>
+> (3.26): E_D(**w**) = (1/2) Σi {ti - **w**T Φ(xi)}^2
+>
+>
+>
+> (3.87): (β**Φ**T**Φ**)**u**i = λi **u**i
+>
+>
+>
+> và trong phần trước ta đã có các kết quả α, β maximize model evidence
+>
+>
+>
+> α = γ / (**m**N)T(**m**N)
+>
+>
+>
+> γ = Σi=1:M \[λi / (λi + α)\]
+>
+>
+>
+> mà theo 3.25 thì đây chính γ/2E_W(**m**N)
+>
+>
+>
+> 1/β = \[1/(N-γ)\] \[Σi (ti - **m**NTΦ(**x**i))^2\]
+>
+>
+>
+> theo 3.26 thì đây chính là \[1/(N-γ)\] 2E_D(**m**N), = 2E_D(**m**N) / (N-γ)
+>
+>
+>
+> ---
+>
+>
+>
+> Ta có α = γ/2E_W(**m**N), thế thì hình 3.16 trái, đường màu đỏ và màu xanh là γ và 2αE_W(**m**N) (thay đổi theo ln α): Ý nghĩa là sao:
+>
+>
+>
+> bài trước mình đã hiểu rằng, với công thức α = γ/2E_W(**m**N) ⇔ 2αE_W(**m**N) = γ, thì vì γ = Σi=1:M \[λi / (λi + α)\], lại phụ thuộc α, và **m**N cũng vậy, nên công thức này là implicit function. Thành ra phải giải tìm α bằng itererative loop: Chọn α0, tính γ, **m**N, rồi tính ra α1, sau đó lại lặp lại,...cho đến khi converge.
+>
+>
+>
+> Vậy thì nó sẽ converge thế nào tạm hiểu là nó sẽ converge về cái điểm cân bằng nơi mà hai đường xanh đỏ của hình 3.16 bên trái, cắt nhau (để 2αE_W(**m**N) = γ) (Bài trước gs không nói gì về thuật toán giải ra α, nên mình tạm thời chưa hiểu chính xác cách thức)
+>
+>
+>
+> Nhưng ý chính đó là, khi ta vẽ giá trị của hàm model evidence f(**t**|α, β) với β đã chọn fixed, thì sẽ thấy nó đạt đỉnh tại vị trí của α nơi hai đường xanh đỏ giao nhau ở trên (điều này ko có gì ngạc nhiên, vì đương nhiên công thức đó chính là α giúp maximize model evidence). Tuy nhiên hình bên phải còn có đường màu xanh, là test errorr, nó thấp nhất cũng đâu đó tại αMAP này, do đó thể hiện rằng, bằng cách tìm α giúp maximize model evidence, ta đã giống như là tìm ra α giúp model có tính chất generalization tốt nhất, vốn là mục tiêu quan trọng nhất, mà đây cũng là thứ mà cái gọi là hyperparameter tuning (ví dụ với cross validation) muốn đạt được
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, người ta plot đồ thị của 10 tham số w0,...w9 theo γ, mà γ thay đổi cũng là do α thay đổi. Nhằm cho thấy liên hệ giữa: precision của prior distribution của **w** → số effective parameter γ = Σi=1:M \[λi / (λi + α)\]
+>
+>
+>
+> Kết quả cho thấy khi α từ rất nhỏ, đến rất lớn γ giảm từ M về 0.
+>
+>
+>
+> Và khi γ lớn, tức là số parameter hiệu dụng lớn, mọi param đều có gía trị lớn (các xa 0)
+>
+>
+>
+> khi γ nhỏ, số param hiệu dụng bị bóp lại, giá trị của chúng bị bóp về 0.
+>
+>
+>
+> Nhớ lại hình ảnh sự giằng co ảnh hưởng của prior và likelihood, ta thấy rằng khi α nhỏ, tức 1/α lớn, priori trở nên dàn trải xác suất khiến kiểu như niềm tin ban đầu về **w** yếu ớt → sức ảnh hưởng của prior nhỏ, và do đó mọi tham số đều bị likelihood kéo lên khiến cho chúng đề có giá trị lớn (xa mức 0).
+>
+>
+>
+> Ngược lại, khi α lớn, 1/α nhỏ, priori trở nên tập trung cao xác suất, mang ý nghĩa niềm tin ban đầu của **w** rất lớn → sức ảnh hưởng của prior lớn, kéo mọi tham số về 0.
+>
+>
+>
+> ---
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú cực kỳ chính xác và thể hiện sự hiểu biết sâu sắc về mặt toán học lẫn ý nghĩa trực quan của các hình vẽ, đặc biệt là phần giải thích về cơ chế 'giằng co' giữa prior và likelihood ở Hình 3.17. Chỉ có một vài lỗi chính tả rất nhỏ không đáng kể (như 'itererative', 'errorr').
+
+**🔗 See also:** [Section 3.5.2 Maximizing the Evidence Function](./352_maximizing_the_evidence_function.md#node-nc5qxnz) · [3.1.4 Regularized least squares](./314_regularized_least_squares.md#node-y97v4o1) · [Marginal Likelihood Maximization for Beta](./352_maximizing_the_evidence_function.md#node-l71837c)
+
+<br>
+
+<a id="node-urkv3e3"></a>
+
+###### Ước lượng siêu tham số
+
+<p align="center"><kbd><img src="assets/uv91kqlrfff.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4w91xqbysf9.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Và đoạn cuối cùng, gs nói về case khi N lớn hơn M nhiều lần (data nhiều hơn số lượng tham số) thì đại ý là ta có thể khỏi phải giải tìm α, β (maximize model evidence) theo lối iterative, và thậm chí cũng khỏi cần tính các eigenvalue của β**Φ**T**Φ**. Nhờ đó tiết kiệm được chi phí tính toán.
+>
+>
+>
+> Ý chính là vậy, còn cụ thể là vì như sau:
+>
+>
+>
+> Đầu tiên là ta nhớ công thức (3.87): (β**Φ**T**Φ**)**u**i = λi **u**i, ko có gì ghê gớm, chỉ là nói λi là eigenvalue của β**Φ**T**Φ** thôi, nhưng quan trọng là, xét cái design matrix **Φ**T**Φ**, thì dựa vào kiến thức đã học với thầy Strang trong 18.06, rằng, nhân hai matrix AB có 4 cách nhìn, trong đó cách thứ 4 là: AB = tổng của các rank 1 matrix tạo bởi outer product của (cột i của A) và (hàng i của B). Mà Φ là matrix có các hàng là Φ(**x**1)T,...Φ(**x**N)T. Nên **Φ**T chính là có các cột là Φ(**x**1),...Φ(**x**N), và như vậy **Φ**T**Φ** = Σi=1:N Φ(**x**i)Φ(**x**i)T. Mà như vậy thì có nghĩa là khi N rất lớn, design matrix là matrix có giá trị rất lớn theo, dẫn tới eigenvalue λi của nó cũng vậy.
+>
+>
+>
+> Như vậy N ≫ M tức là λi đều lớn ⇒ λi / (λi + α) đều ≈ 1 ⇒ γ ≈ γ = Σi=1:M (1) = M
+>
+>
+>
+> Khi đó α = γ / 2E(**m**N) (vì sao trong note trước đã nói), thì ≈ M / 2E(**m**N)
+>
+>
+>
+> và β = (N-γ) / 2E_D(**m**N) ≈ (N-M) / 2E_D(**m**N) ≈ N / 2E_D(**m**N) (do N ≫ M)
+>
+>
+>
+> Như vậy có nghĩa là sao:
+>
+>
+>
+> Trả lời: Là khỏi tính γ, và như vậy khỏi tính λi, eigenvalue của β**Φ**T**Φ** (cũng là Hessian của likelihood), và từ đó giảm chi phí tính toán chứ sao.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Ghi chú của bạn rất xuất sắc và chính xác, đặc biệt là việc liên hệ kiến thức đại số tuyến tính của thầy Strang để giải thích chi tiết tại sao các eigenvalue lại tăng theo quy mô tập dữ liệu. Các bước lập luận và biến đổi toán học để đi đến công thức xấp xỉ cuối cùng đều rất rõ ràng và dễ hiểu.
 
 <br>
 
