@@ -1749,6 +1749,8 @@
 > Thành ra gs Bishop nói rằng, **trung bình** mà nói thì **maximum likelihood** sẽ cho ta **giá trị
 > đúng của μ** nhưng cho **giá trị underestimate của true variance σ^2**.
 
+**🔗 See also:** [Bayesian and Maximum Likelihood Variance](./353_effective_number_of_parameters.md#node-tdezntx)
+
 <br>
 
 <a id="node-wki4nv2"></a>
@@ -1780,6 +1782,8 @@
 >
 > Ông cũng nói thêm, ta sẽ thấy, biased này có bản chất là hiện tượng **overfit**
 > mà ta đã gặp trong bài toán polynomial fitting.
+
+**🔗 See also:** [Bayesian and Maximum Likelihood Variance](./353_effective_number_of_parameters.md#node-tdezntx)
 
 <br>
 
