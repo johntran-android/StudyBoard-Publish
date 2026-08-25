@@ -1,6 +1,6 @@
 # 10.3 Hypothesis Testing
 
-📊 **Progress:** `9` Notes | `12` Screenshots | `9` AI Reviews
+📊 **Progress:** `10` Notes | `14` Screenshots | `10` AI Reviews
 
 ---
 <a id="node-zhfsuqo"></a>
@@ -1197,6 +1197,38 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Ghi chú cực kỳ chi tiết và chính xác, tự chứng minh và giải quyết triệt để các bước tối ưu hóa (như dùng điều kiện KKT) mà sách giáo khoa bỏ qua. Bạn đã hiểu rất sâu sắc bản chất toán học của kiểm định tỷ số hợp lý (LRT) này.
+
+<br>
+
+<a id="node-22q15ch"></a>
+
+###### Section 10.3.2 Other Large-Sample Tests
+
+<p align="center"><kbd><img src="assets/dzkuykkvx9u.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là phần này sẽ nói về một phương pháp xây dựng large sample test statistic khác trong đó ta sẽ dựa trên một estimator nào đó mà khi n lớn, distribution của nó sẽ converge về standard normal.
+>
+>
+>
+> Có thể liên hệ cái này với phần trước để thấy ý định của nó. Trong phần trước, khi ta nói về likelihood ratio test, ta đã đi đến một ý đó là, một level α LRT sẽ có rule là: Reject H0 khi sup Θ0 P(λ(**X**) ≤ c) ≤ α. Từ đó, ta mới đặt câu hỏi là, làm sao có distribution của statistic λ(**X**) để mà chọn ra mốc c. Thì một trường hợp khi áp dụng cho một hypothesis testing trong đó Θ0 = {θ0} thì nó trở thành P\_θ0(λ(**X**) ≤ c) ≤ α ⇔ P\_θ0(-2log λ(**X**) ≥ -2log c) ≤ α. Lúc này, định lí Wilks cho ta biết rằng -2log λ(**X**) khi n lớn, sẽ có limit distribution là χ²\_1. Và như vậy, khi n đủ lớn, ta có thể dùng phân phối của χ², là một phân phối đã biết để tính ra threshold giúp ta có một asymptotically level α LR test.
+>
+>
+>
+> Vậy thì ở đây cũng tương tự, đó là giả sử nếu ta có thể dùng CLT (chính xác hơn là một dạng nào đó của CLT) để chỉ ra một estimator W(**X**) của θ thỏa mãn: (Wn(**X**) - θ) / σn → (d) n(0,1). Thì khi đó ta có thể dùng n(0,1) để xây dựng test (y như ta dùng χ² để thay cho -2log λ(**X**) (vốn là một statistic mà ta ko biết distribution))
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Ghi chú xuất sắc, không chỉ hiểu đúng nội dung đoạn văn mà còn liên hệ rất tốt với Likelihood Ratio Test và định lý Wilks ở chương trước để thấy rõ bức tranh tổng thể. Tư duy hệ thống này cực kỳ tốt và hoàn toàn chính xác.
+
+<br>
+
+<a id="node-l86tt7u"></a>
+
+<p align="center"><kbd><img src="assets/rptl46k9xoo.png" width="80%"></kbd></p>
+
+**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr)
 
 <br>
 
