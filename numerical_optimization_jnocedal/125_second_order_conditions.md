@@ -1,6 +1,6 @@
 # 12.5  Second-Order Conditions
 
-📊 **Progress:** `5` Notes | `6` Screenshots | `5` AI Reviews
+📊 **Progress:** `6` Notes | `10` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-8arnxqj"></a>
@@ -546,6 +546,239 @@
 > **🤖 AI Feedback** — ⚠️ Score: **85/100**
 >
 > Ghi chú có trực giác vật lý rất tốt và tính toán toán học hoàn toàn chính xác về các tập hợp và nhân tử Lagrange. Tuy nhiên, bạn đã nhìn nhầm hướng mũi tên $-\nabla f$ trong sách (thực tế nó hướng sang trái là đúng) và vẽ nhầm vector $\nabla c_1(x^*)$ thành hướng nằm ngang thay vì thẳng đứng lên trên.
+
+<br>
+
+<a id="node-65rewas"></a>
+
+###### Second-Order Necessary Conditions
+
+<p align="center"><kbd><img src="assets/iqq18q0oh89.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/sf1sw97e0o.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/q23b4nzdzwm.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/w2npzmof8d9.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Cùng tìm hiểu về định lý điều kiện cần bậc hai của bài toán tối ưu có ràng buộc.
+>
+>
+>
+> Đầu tiên, định lý này về đại ý nói rằng: Giả sử ta có x\* là điểm đã thỏa KKT (điều kiện cần bậc nhất), và điều kiện LICQ (tức constraint qualification) thỏa thì nếu xét hướng w thuộc critical cone, thì quadratic form của Hessian của Lagrangian tại x\*, tức wT \[∇^2_xx ℒ(x\*, λ\*)\] w phải không âm.
+>
+>
+>
+> Vậy đầu tiên, mình có thể hiểu về mặt trực giác định lý này nói rằng: Xét các hướng của critical cone, là những hướng feasible mà xấp xỉ tuyến tính hàm f không tăng thì theo hướng đó, hàm Lagrangian tại x\* phải là **cong lên** (hay đúng hơn là **không được cong xuống**) nếu như x\* là minimizer.
+>
+>
+>
+> Để hiểu ý nghĩa của theorem này có lẽ nên ôn nhanh định nghĩa của critical cone 𝒞(x\*, λ\*) mà trong note trước mình đã có kết quả là w thuộc tập này sẽ thỏa wT∇f(x\*) = 0.
+>
+>
+>
+> Nói ngắn gọn thì critical cone 𝒞(x\*, λ\*) sẽ chứa các vector w thỏa hết các tiêu chí sau:
+>
+>
+>
+> Với các ràng buộc đẳng thức ci(x) = 0 i ∈ ℰ thì wT∇ci(x\*) = 0
+>
+>
+>
+> Với ràng buộc đẳng thức đang active tại x\*, tức ci(x\*) = 0, i ∈ ℐ thì xem có đang bị ép dính tường với lực dương hay khong (λ\*i &gt; 0), nếu có thì w sẽ thỏa wT∇ci(x\*) = 0. Còn nếu λ\*i = 0 thì thôi, w chỉ cần wT∇ci(x\*) ≥ 0.
+>
+>
+>
+> Để rồi với định nghĩa như vậy, xét một w ∈ 𝒞(x\*, λ\*), thì:
+>
+>
+>
+> với mọi ràng buộc đẳng thức i ∈ ℰ, wT∇ci(x\*) = 0, nên đương nhiên λi\* × wT∇ci(x\*) = 0
+>
+>
+>
+> và với mọi ràng buộc bất đẳng thức i ∈ ℐ thì λi\* × wT∇ci(x\*) = 0 do nếu active thì thừa số thứ hai bằng 0, mà không active thì λ\*i = 0
+>
+>
+>
+> Nên cộng vế theo vế ta sẽ có:, Σi∈ℰ∪ℐ \[λi\* × wT∇ci(x\*)\] = 0 ⇔ wT Σi (λi\* × ∇ci(x\*)) = 0
+>
+>
+>
+> Và điều kiện stationary mà x\* đang thỏa trở thành wT\[∇f(x\*) - Σi (λi\* × ∇ci(x\*))\] = 0 ⇔ wT∇f(x\*) - wT \[Σi (λi\* × ∇ci(x\*))\] = 0 ⇔ wT∇f(x\*) = 0
+>
+>
+>
+> và **Ý NGHĨA QUAN TRỌNG CỦA ĐIỀU NÀY** **LÀ NẾU TA ĐI THEO HƯỚNG** w, **TỪ** x\* **ĐỂ ĐẾN** x\*+w, **TA SẼ THẤY XẤP XỈ BẬC NHẤT CỦA F KHÔNG TĂNG**
+>
+>
+>
+> f(x\* + w) ≈ f(x\*) + ∇f(x\*)Tw = f(x\*) + 0 = f(x\*)
+>
+>
+>
+> **KHIẾN TA KHÔNG BIẾT RẰNG VỚI CÁC LIEARIZED FEASIBLE DIRECTION NÀY** (vì w thuộc 𝒞(x\*, λ\*) là tập con của linearized feasible direction ℱ(x\*)), **THÌ LIỆU RẰNG CÓ THỂ GIẢM HAY TĂNG HÀM F**.
+>
+>
+>
+> Chú ý là kết quả này cũng làm rõ khác nhau giữa linearized feasible direciton set ℱ(x\*) và critical cone 𝒞(x\*, λ\*):
+>
+>
+>
+> Bốc w từ ℱ(x\*), đi từ x\* theo hướng w thì sẽ dẫn đến hai trường hợp: một là xấp xỉ tuyến tính của f sẽ tăng và hai là xấp xỉ tuyến tính của f giữ nguyên.
+>
+>
+>
+> Trong khi đó, critical cone chỉ lấy w khiến xấp tuyến tính của f giữ nguyên, và vì xấp tuyến tính của f giữ nguyên thì ta không biết liệu là trong thực tế hàm f thật liệu có đang giảm hay đang tăng. Do đó mới lôi các hướng w này ra để mà xét riêng. Và critical cone 𝒞(x\*) là tập con của linearized feasible direction ℱ(x\*)
+>
+>
+>
+> Và đối với các hướng này, **cần đến đạo hàm bậc hai** để xét tới độ cong của Hessian hàm f (và ta sẽ thấy nó cũng là Hessian hàm Lagrangian) để xác định xem là hàm f sẽ tăng hay giảm, từ đó kết luận x\* có phải là minimizer không.
+>
+>
+>
+> ---
+>
+>
+>
+> Cùng tìm hiểu phần chứng minh:
+>
+>
+>
+> Ý tưởng của cách chứng minh là: Ta giả sử x\* là minimizer của bài toán. Sau đó xét việc ta đi từ x\* theo hướng w ∈ 𝒞(x\*, λ\*) sao cho đến được z vẫn feasible. Thì vì tính chất của critical cone nên sẽ khiến ta có kết quả là ℒ(zk, λ\*) = f(zk) - Σi λ\*i ci(zk) = f(zk)
+>
+>
+>
+> Và dùng xấp xỉ bậc hai của Lagrangian ta sẽ có kết quả là vì x\* là mininizer nên bắt buộc quadratic form của Hessian Lagrangian phải không âm.
+>
+>
+>
+> Đoạn khó nhất là hiểu được khúc gs nói về việc dùng kĩ thuật mà ông đã từng làm trong phần chứng minh bổ đề 12.2, với đại ý là ta CHỌN một chuỗi các giá trị tk dương và từ đó tạo nên chuỗi các điểm zk tiến dần về x, thể hiện bởi lim k → ∞ (zk - x\*) / tk = w hay zk - x\* = tk w + o(tk)
+>
+>
+>
+> Hiểu đại khái là: ta biết rằng w, chỉ là chỉ một hướng đi. Nếu từ x\*, đi theo hướng w, ta sẽ đến 1 điểm mới, nằm trên hướng w, nhưng cụ thể là tới đâu thì còn tùy vào step size, là scalar t: x\* + t × w. Vậy thì, tuy w là linearized feasible direction (thuộc critical cone cũng là thuộc ℱ) nhưng không có nghĩa là cứ đi theo hướng này là sẽ mãi feasible. Do đó, hiểu đại ý là, khi đi theo hướng w, step size t để đến x\* + tw, ta sẽ cần phải điều chỉnh, bẻ lái (đi thêm) để giữ trạng thái feasible và thể hiện cái điều đó bằng việc cộng thêm o(t): x\* + t w + \[điều chỉnh\] = z.
+>
+>
+>
+> Và ta hình dung trong ví dụ bữa trước nơi mà w ∈ 𝒞 là tia vuông góc với đường tròn tại x\* = (0,0). Thì hình dung rằng bắt đầu với t0, x\* + t0 w sẽ đưa ta ra khỏi đường tròn một khoảng tương đối lớn, điều này vi phạm yêu cầu feasible, và như vừa nói, ta sẽ cần bẻ lái (một mức kha khá) để có z0 vẫn feasible. Như vậy z0 - x\* = t0 w + \[bẻ lái\]\_0. Tiếp xét t1 nhỏ hơn, thì dễ thấy mức bẻ lái sẽ ít hơn, để có z1 gần x\* hơn. Tiếp tục vậy, với tk đủ nhỏ, thì mức bẻ lái rất nhỏ, và zk tiếp cận x\*.
+>
+>
+>
+> Quá trình này chính là hình ảnh của zk - x\* = tk w + \[mức bẻ lái = o(tk)\]: khi k càng lớn, mức bẻ lái ngày càng nhỏ, và zk ngày càng gần x\*.
+>
+>
+>
+> Xét ci(zk), khai triển Taylor = ci(x\*) + ∇ci(x\*)T(zk - x\*) + term bậc cao
+>
+>
+>
+> = ci(x\*) + ∇ci(x\*)T(tj w + o(tk)) + term bậc cao
+>
+>
+>
+> = ci(x\*) + ∇ci(x\*)T(tj w) + ∇ci(x\*)T o(tk) + term bậc cao
+>
+>
+>
+> = ci(x\*) + tj ∇ci(x\*)Tw + ∇ci(x\*)T o(tk) + term bậc cao
+>
+>
+>
+> Và nếu như ta có xem phần chứng minh bổ đề 12.2, ta sẽ thấy cách chọn chuỗi tk có đặc điểm là khi k càng lớn, zk càng gần x\* và mức bẻ lái càng nhỏ thì ∇ci(x\*)T o(tk) + term bậc cao → 0
+>
+>
+>
+> Giúp ta có: ci(zk) = ci(x\*) + tj ∇ci(x\*)Tw
+>
+>
+>
+> ⇔ ci(zk) = 0 + tj ∇ci(x\*)Tw (do constraint ci đang active tại x\*)
+>
+>
+>
+> Vậy ci(zk) = tj ∇ci(x\*)Tw
+>
+>
+>
+>
+>
+> ---
+>
+>
+>
+> Ta mới làm tiếp bằng cách xấp xỉ bậc 2 hàm Lagrangian quanh x\* (trong sách dùng khai triển Taylor nhưng mình thấy dùng xấp xỉ sẽ gọn hơn vì dù gì thì khi zk → x\* thì term bậc cao cũng sẽ có thể bỏ đi)
+>
+>
+>
+> ℒ(zk, λ\*) ≈ ℒ(x\*, λ\*) + ∇\_x ℒ(x\*, λ\*)(zk - x\*) + (1/2) (zk - x\*)T \[Hessian của ℒ tại x\*\] (zk - x\*)
+>
+>
+>
+> vì x\* đang giả định là minimizer dĩ nhiên nó phải thỏa KKT, nên ∇\_x ℒ(x\*, λ\*) = 0:
+>
+>
+>
+> ℒ(zk, λ\*) ≈ ℒ(x\*, λ\*) + (1/2) (zk - x\*)T \[Hessian của ℒ tại x\*\] (zk - x\*)
+>
+>
+>
+> Xét ℒ(zk, λ\*), nó sẽ bằng f(zk) - Σi λ\*i ci(zk) = f(zk) - Σi λ\*i tj ∇ci(x\*)Tw
+>
+>
+>
+> Và với tính chất của critical cone direction mình đã ôn lại lúc đầu thì Σi λ\*i tj ∇ci(x\*)Tw = 0 dẫn đến ℒ(zk, λ\*) = f(zk)
+>
+>
+>
+> Còn ℒ(x\*, λ\*) thì = f(x\*) - Σi λ\*i ci(x\*) mà với việc x\* thỏa KKT thì complementary condition của KKT đã buộc Σi λ\*i ci(x\*) = 0 rồi. Nên ta có ℒ(x\*, λ\*) thì = f(x\*)
+>
+>
+>
+> Vây ℒ(zk, λ\*) ≈ ℒ(x\*, λ\*) + (1/2) (zk - x\*)T \[Hessian của ℒ tại x\*\] (zk - x\*)
+>
+>
+>
+> trở thành
+>
+>
+>
+> f(zk) ≈ f(x\*) + (1/2) (zk - x\*)T \[Hessian của ℒ tại x\*\] (zk - x\*)
+>
+>
+>
+> Và với zk tiến tới rất gần x\*, ta có thể thay xấp xỉ bằng dấu bằng luôn (vì trong khai triển taylor, các term bậc 3 trở lên sẽ → 0)
+>
+>
+>
+> f(zk) = f(x\*) + (1/2) (zk - x\*)T \[Hessian của ℒ tại x\*\] (zk - x\*)
+>
+>
+>
+> Như vậy, tới đây, với việc từ ban đầu ta đã giả định x\* là minimizer của bài toán, thì f(x\*) phải ≤ f(zk), suy ra
+>
+>
+>
+> (1/2) (zk - x\*)T \[Hessian của ℒ tại x\*\] (zk - x\*) ≥ 0
+>
+>
+>
+> ⇔ (1/2) (tk w)T \[Hessian của ℒ tại x\*\] (tk w) ≥ 0
+>
+>
+>
+> ⇔ (1/2) (tk)^2 wT \[Hessian của ℒ tại x\*\] w ≥ 0
+>
+>
+>
+> ⇔ wT \[Hessian của ℒ tại x\*\] w ≥ 0. Tới đây ta đã chứng minh xong.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **92/100**
+>
+> Bài viết thể hiện trực giác hình học xuất sắc, đặc biệt là cách giải thích dễ hiểu về việc điều chỉnh hướng đi ('bẻ lái') của chuỗi $z_k$. Tuy nhiên, có một chi tiết chưa chính xác khi khẳng định $c_i(z_k) = 0$, vì thực tế $c_i(z_k) = t_k 
+> abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ trong biểu thức Lagrangian.
 
 <br>
 
