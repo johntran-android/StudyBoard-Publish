@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1787597152208,
+  "publishedAt": 1787681025088,
   "sections": [
     {
       "title": "📋 Overview",
@@ -179,8 +179,8 @@
     {
       "title": "12.5  Second-Order Conditions",
       "path": "numerical_optimization_jnocedal/125_second_order_conditions.md",
-      "noteCount": 5,
-      "imageCount": 6
+      "noteCount": 6,
+      "imageCount": 10
     },
     {
       "title": "Appendix A",
@@ -201,6 +201,6 @@
       "imageCount": 11
     }
   ],
-  "totalNotes": 402,
-  "totalImages": 566
+  "totalNotes": 403,
+  "totalImages": 570
 }
