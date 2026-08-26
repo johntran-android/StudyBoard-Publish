@@ -1764,24 +1764,19 @@
 <p align="center"><kbd><img src="assets/o106u371tb.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Như vừa nói, sumof (1/(n-1))Σi (Xi - Xbar), tức sample variance (theo sách
-> Casella) mới là **unbiased estimator cho σ^2**
+> Như vừa nói,  (1/(n-1))Σi (Xi - Xbar), tức sample variance (theo sách Casella) mới là **unbiased estimator cho σ^2**
 >
 >
 >
-> Gs Bishop cho rằng nếu ta giải bài toán theo Bayesian thì ta sẽ ra kết
-> quả này thay vì kết quả biased vừa rồi.
+> Gs Bishop cho rằng nếu ta giải bài toán theo Bayesian thì ta sẽ ra kết quả này thay vì kết quả biased vừa rồi.
 >
 >
 >
-> Cuối cùng, đại ý cũng dễ hiểu là khi N lớn (số data sample) thì biased này
-> không nghiêm trọng mấy. Nhưng trong sách này ta sẽ phân tích những
-> trường hợp mà biased này có thể tạo ra những sai sót nghiêm trọng
+> Cuối cùng, đại ý cũng dễ hiểu là khi N lớn (số data sample) thì biased này không nghiêm trọng mấy. Nhưng trong sách này ta sẽ phân tích những trường hợp mà biased này có thể tạo ra những sai sót nghiêm trọng
 >
 >
 >
-> Ông cũng nói thêm, ta sẽ thấy, biased này có bản chất là hiện tượng **overfit**
-> mà ta đã gặp trong bài toán polynomial fitting.
+> Ông cũng nói thêm, ta sẽ thấy, biased này có bản chất là hiện tượng **overfit**mà ta đã gặp trong bài toán polynomial fitting.
 
 **🔗 See also:** [Bayesian and Maximum Likelihood Variance](./353_effective_number_of_parameters.md#node-tdezntx)
 
