@@ -1861,7 +1861,7 @@
 >
 > Thì Var\_θ(W(**X**)) ≥ \[d/dθ E\_θ\[W(**X**)\]^2\] / \[E\_θ\[(∂/∂θ log f(**X**|θ))^2\]\]
 
-**🔗 See also:** [Definition 10.1.11 Asymptotic Efficiency](./101_point_estimation.md#node-bgijdqy) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [10.1.3 Calculations and Comparisons](./101_point_estimation.md#node-iwgmm5t) · [Robustness of the Sample Mean](./102_robustness.md#node-3pctii6)
+**🔗 See also:** [Definition 10.1.11 Asymptotic Efficiency](./101_point_estimation.md#node-bgijdqy) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [10.1.3 Calculations and Comparisons](./101_point_estimation.md#node-iwgmm5t) · [Robustness of the Sample Mean](./102_robustness.md#node-3pctii6) · [Asymptotic Normality of MLE](./103_hypothesis_testing.md#node-l86tt7u)
 
 <br>
 
