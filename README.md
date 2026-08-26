@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,266 notes` · `~17,709 screenshots` · `18 notebooks`**
+**`~12,270 notes` · `~17,716 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -513,7 +513,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `403 notes · 570 screenshots · 33 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
-> 
 > Sổ tay này đi sâu vào các thuật toán tối ưu hóa số cốt lõi như tìm kiếm đường thẳng, vùng tin cậy, quasi-Newton và gradient liên hợp, cùng các khái niệm thiết yếu như đạo hàm tự động, phân tích hội tụ và kỹ thuật đại số tuyến tính số.
 
 <details open>
@@ -566,13 +565,14 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 ### Pattern Recognition Machine Learning_C.Bishop
 <!-- key: pattern_recognition_machine_learning_cbishop -->
 <!-- group: Machine Learning Foundation -->
-`378 notes · 561 screenshots · 51 sections`
+`382 notes · 568 screenshots · 54 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
+> 
 > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
-<summary>📖 51 sections</summary>
+<summary>📖 54 sections</summary>
 
 | Section | Notes | Screenshots |
 |---|---:|---:|
@@ -612,7 +612,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [2.5.2 Nearest-neighbour methods](pattern_recognition_machine_learning_cbishop/252_nearest_neighbour_methods.md) | 5 | 10 |
 | [3.1.0 Linear Regression and Basis Functions](pattern_recognition_machine_learning_cbishop/310_linear_regression_and_basis_functions.md) | 7 | 9 |
 | [3.1.1 Maximum likelihood and least squares](pattern_recognition_machine_learning_cbishop/311_maximum_likelihood_and_least_squares.md) | 7 | 10 |
-| [3.1.2 Geometry of least squares](pattern_recognition_machine_learning_cbishop/312_geometry_of_least_squares.md) | 1 | 1 |
+| [3.1.2 Geometry of least squares](pattern_recognition_machine_learning_cbishop/312_geometry_of_least_squares.md) | 1 | 2 |
 | [3.1.3 Sequential Learning](pattern_recognition_machine_learning_cbishop/313_sequential_learning.md) | 1 | 2 |
 | [3.1.5 Multiple outputs](pattern_recognition_machine_learning_cbishop/315_multiple_outputs.md) | 3 | 3 |
 | [3.1.4 Regularized least squares](pattern_recognition_machine_learning_cbishop/314_regularized_least_squares.md) | 3 | 7 |
@@ -625,6 +625,9 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [3.5 Evidence Approximation](pattern_recognition_machine_learning_cbishop/35_evidence_approximation.md) | 6 | 6 |
 | [3.5.2 Maximizing the evidence function](pattern_recognition_machine_learning_cbishop/352_maximizing_the_evidence_function.md) | 3 | 4 |
 | [3.5.3 Effective number of parameters](pattern_recognition_machine_learning_cbishop/353_effective_number_of_parameters.md) | 6 | 17 |
+| [3.6 Limitations of Fixed Basis Functions](pattern_recognition_machine_learning_cbishop/36_limitations_of_fixed_basis_functions.md) | 1 | 2 |
+| [3.7 Exercises](pattern_recognition_machine_learning_cbishop/37_exercises.md) | 2 | 3 |
+| [4.0 Linear model for Classification](pattern_recognition_machine_learning_cbishop/40_linear_model_for_classification.md) | 1 | 1 |
 | [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) | 19 | 22 |
 | [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) | 5 | 7 |
 
