@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,270 notes` · `~17,716 screenshots` · `18 notebooks`**
+**`~12,271 notes` · `~17,716 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -568,7 +568,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `382 notes · 568 screenshots · 54 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
-> 
 > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
@@ -693,9 +692,10 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 ### Statistical Inference - Casella
 <!-- key: statistical_inference_casella -->
 <!-- group: Probability & Statistics -->
-`852 notes · 1,114 screenshots · 49 sections`
+`853 notes · 1,114 screenshots · 49 sections`
 
 > This notebook contains detailed study notes and proofs based on Casella and Berger's *Statistical Inference*, covering key topics in probability theory, estimation methods, hypothesis testing, and asymptotic properties.
+> 
 > Sổ tay học tập này tổng hợp các ghi chép và chứng minh chi tiết dựa trên giáo trình *Statistical Inference* của Casella và Berger, bao gồm các chủ đề cốt lõi về lý thuyết xác suất, phương pháp ước lượng, kiểm định giả thuyết và tính chất tiệm cận.
 
 <details open>
@@ -751,7 +751,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [9.3 Methods Of Evaluating Interval Estimators](statistical_inference_casella/93_methods_of_evaluating_interval_estimators.md) | 34 | 35 |
 | [10.1 Point Estimation](statistical_inference_casella/101_point_estimation.md) | 42 | 48 |
 | [10.2 Robustness](statistical_inference_casella/102_robustness.md) | 16 | 20 |
-| [10.3 Hypothesis Testing](statistical_inference_casella/103_hypothesis_testing.md) | 10 | 14 |
+| [10.3 Hypothesis Testing](statistical_inference_casella/103_hypothesis_testing.md) | 11 | 14 |
 
 </details>
 
