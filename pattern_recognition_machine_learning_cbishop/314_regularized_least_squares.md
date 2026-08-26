@@ -235,6 +235,8 @@
 >
 > Bài phân tích của bạn rất sâu sắc và chính xác, thể hiện sự hiểu biết vững vàng về cơ sở toán học và trực giác hình học của regularization, đặc biệt là sự khác biệt giữa L1 và L2. Mặc dù rất chi tiết và đúng, bạn có thể cân nhắc cô đọng một số phần để ghi chú của mình súc tích hơn.
 
+**🔗 See also:** [Lagrange Multipliers in Regularization](./37_exercises.md#node-tu3cct2)
+
 <br>
 
 <a id="node-3n3lhao"></a>
@@ -250,11 +252,11 @@
 >
 >
 >
-> Nói cách khác, nếu không sử dụng kỹ thuật regularization, chúng ta phải đối mặt với việc khống chế độ phức tạp của mô hình bằng cách dùng các hàm cơ sở (basis function) để quyết định tính phi tuyến của hàm số đối với dữ liệu. Việc chọn hàm cơ sở phải phù hợp để hàm số không quá phức tạp gây ra overfit, nhưng cũng không quá đơn giản dẫn đến underfit.Tuy nhiên, với regularization, chúng ta có thể tùy ý sử dụng một hàm cơ sở phức tạp đến mức nào cũng được, và regularization sẽ đảm bảo tránh hiện tượng overfit. 
+> Nói cách khác, nếu không sử dụng kỹ thuật regularization, chúng ta phải đối mặt với việc khống chế độ phức tạp của mô hình bằng cách dùng các hàm cơ sở (basis function) để quyết định tính phi tuyến của hàm số đối với dữ liệu. Việc chọn hàm cơ sở phải phù hợp để hàm số không quá phức tạp gây ra overfit, nhưng cũng không quá đơn giản dẫn đến underfit.Tuy nhiên, với regularization, chúng ta có thể tùy ý sử dụng một hàm cơ sở phức tạp đến mức nào cũng được, và regularization sẽ đảm bảo tránh hiện tượng overfit.
 >
 >
 >
-> Nhưng chúng ta lại phải đối mặt với vấn đề chọn siêu tham số (ví dụ như lambda) sao cho hợp lý. Bởi vì nếu siêu tham số quá lớn hoặc quá nhỏ, mô hình sẽ trở nên quá phức tạp hoặc bị khống chế quá mức, làm giảm hiệu quả.
+> Nhưng chúng ta lại phải đối mặt với vấn đề chọn siêu tham số (ví dụ như λ) sao cho hợp lý. Bởi vì nếu siêu tham số quá lớn hoặc quá nhỏ, mô hình sẽ trở nên quá phức tạp hoặc bị khống chế quá mức, làm giảm hiệu quả.
 
 > [!TIP]
 > **🤖 AI Feedback** — ⚠️ Score: **88/100**
