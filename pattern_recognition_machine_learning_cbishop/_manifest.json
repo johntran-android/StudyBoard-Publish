@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1787613903276,
+  "publishedAt": 1787703563390,
   "sections": [
     {
       "title": "📋 Overview",
@@ -222,7 +222,7 @@
       "title": "3.1.2 Geometry of least squares",
       "path": "pattern_recognition_machine_learning_cbishop/312_geometry_of_least_squares.md",
       "noteCount": 1,
-      "imageCount": 1
+      "imageCount": 2
     },
     {
       "title": "3.1.3 Sequential Learning",
@@ -297,6 +297,24 @@
       "imageCount": 17
     },
     {
+      "title": "3.6 Limitations of Fixed Basis Functions",
+      "path": "pattern_recognition_machine_learning_cbishop/36_limitations_of_fixed_basis_functions.md",
+      "noteCount": 1,
+      "imageCount": 2
+    },
+    {
+      "title": "3.7 Exercises",
+      "path": "pattern_recognition_machine_learning_cbishop/37_exercises.md",
+      "noteCount": 2,
+      "imageCount": 3
+    },
+    {
+      "title": "4.0 Linear model for Classification",
+      "path": "pattern_recognition_machine_learning_cbishop/40_linear_model_for_classification.md",
+      "noteCount": 1,
+      "imageCount": 1
+    },
+    {
       "title": "Appendix C. Matrices",
       "path": "pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md",
       "noteCount": 19,
@@ -309,6 +327,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 378,
-  "totalImages": 561
+  "totalNotes": 382,
+  "totalImages": 568
 }
