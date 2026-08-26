@@ -1,11 +1,13 @@
 # 3.1.2 Geometry of least squares
 
-📊 **Progress:** `1` Notes | `1` Screenshots | `1` AI Reviews
+📊 **Progress:** `1` Notes | `2` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-6e545fx"></a>
 
 <p align="center"><kbd><img src="assets/o8a5bu6pa0d.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/hl5espm95c5.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Qua góc nhìn hình học, phần lớn đều đã hiểu (trong mấy note trước đã có nói rồi).
@@ -114,6 +116,8 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Phân tích cực kỳ sâu sắc và chi tiết, không chỉ nắm vững nội dung bài đọc mà còn mở rộng kiến thức từ đại số tuyến tính (MIT 1806) và tối ưu hóa số (Nocedal) để làm rõ từng khái niệm. Khả năng liên kết các ý tưởng phức tạp, đặc biệt là về phương trình chuẩn và các vấn đề tính toán liên quan đến ma trận gần suy biến, là rất ấn tượng và mang lại giá trị gia tăng đáng kể. 
+
+**🔗 See also:** [Orthogonal Projection and Least Squares](./37_exercises.md#node-2dv7p1f)
 
 <br>
 
