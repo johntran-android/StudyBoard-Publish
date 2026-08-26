@@ -1,6 +1,6 @@
 # 10.3 Hypothesis Testing
 
-📊 **Progress:** `10` Notes | `14` Screenshots | `10` AI Reviews
+📊 **Progress:** `11` Notes | `14` Screenshots | `11` AI Reviews
 
 ---
 <a id="node-zhfsuqo"></a>
@@ -1198,6 +1198,8 @@
 >
 > Ghi chú cực kỳ chi tiết và chính xác, tự chứng minh và giải quyết triệt để các bước tối ưu hóa (như dùng điều kiện KKT) mà sách giáo khoa bỏ qua. Bạn đã hiểu rất sâu sắc bản chất toán học của kiểm định tỷ số hợp lý (LRT) này.
 
+**🔗 See also:** [Các loại bài toán Machine Learning *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/10_into.md#node-qebm7e9)
+
 <br>
 
 <a id="node-22q15ch"></a>
@@ -1226,9 +1228,279 @@
 
 <a id="node-l86tt7u"></a>
 
-<p align="center"><kbd><img src="assets/rptl46k9xoo.png" width="80%"></kbd></p>
+###### Asymptotic Normality of MLE
 
-**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr)
+<p align="center"><kbd><img src="assets/5m7h2iqy1li.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là, vì phương pháp (xây dựng test) này, như đã nói sẽ dựa trên một estimator Wn nào đó mà (Wn - θ) / σn → (d) n(0,1)) thì Wn ở đây có thể là gì, statistic nào có tính chất này?
+>
+>
+>
+> → Đó có thể là MLE, vì định lý 10.1.12 đã học nói rằng với θ^ là MLE của θ, thì √n \[τ(θ^) - τ(θ)\] → n(0, ν(θ)) với ν là CRLB.
+>
+>
+>
+> Để hiểu rõ ngọn ngành đoạn này. Phải ôn lại chút xíu về i) Thế nào gọi là một estimator tiệm cận hiệu quả và ii) Định lý nói MLE là một estimator như vậy.
+>
+>
+>
+> ---
+>
+>
+>
+> i) Trong định nghĩa về khái niệm thế nào là một estimator tiệm cận hiệu quả của τ(θ), đó là:
+>
+>
+>
+> Wn là asymptotically effiicient estimator của τ(θ) thì có phương sai tiệm cận là ν(θ) = \[τ'(θ)\]^2 / I1(θ)
+>
+>
+>
+> thể hiện toán học bởi: √n(Wn - τ(θ)) → n(0, ν(θ) = \[τ'(θ)\]^2 / I1(θ)) (1)
+>
+>
+>
+> (và cái này đồng nghĩa nói Avar(Wn) = \[τ'(θ)\]^2 / I1(θ))
+>
+>
+>
+> và cái này có nghĩa là khi n lớn Var\[√n(Wn - τ(θ))\] ≈ \[τ'(θ)\]^2 / I1(θ)) (1)
+>
+>
+>
+> ⇔ nVar(Wn) ≈ \[τ'(θ)\]^2 / I1(θ))
+>
+>
+>
+> ⇔ Var(Wn) ≈ \[τ'(θ)\]^2 / nI1(θ))
+>
+>
+>
+> ⇔ Var(Wn) ≈ \[τ'(θ)\]^2 / In(θ))
+>
+>
+>
+> Và vế phải chính là CRLB của một estimator unbiased (unbiased: E\[Un\] = τ(θ) hoặc khi n lớn thì E\[Un\] → τ(θ). Vì CRLB của Un define bởi \[d/dθ E(Un)\]^2 / In(θ). Nên mới nói nếu Wn là estimator hiệu qủa tiệm cận của τ(θ) thì variance của nó sẽ dần đạt mức nhỏ nhất của Variance của một unbiased estimator của τ(θ)
+>
+>
+>
+> ---
+>
+>
+>
+> Và ii) định lí 10.1.2 nói rằng với θ^ là MLE của θ thì √n(τ(θ^) - τ(θ)) → n(0, ν(θ)). Cũng chính là nói Avar(τ(θ^)) = ν(θ) = \[τ'(θ)\]^2 / I1(θ) và theo định nghĩa (i) thì MLE τ(θ^) chính là estimator tiệm cận hiệu quả của τ(θ).
+>
+>
+>
+> Nếu ta chọn τ là identity function thì kết quả trên cũng cho biết θ^ cũng là estimator tiệm cận hiệu quả của θ. Và biểu thức toán học là:
+>
+>
+>
+> √n(θ^ - θ) → n(0, ν(θ)) với ν(θ) = \[τ'(θ)\]^2 / I1(θ), vì τ(θ) = θ nên lúc này ν(θ) = \[1\]^2 / I1(θ) = 1/I1(θ)
+>
+>
+>
+> Và như vậy đồng nghĩa khi n lớn, Var\[√n(θ^ - θ)\] ≈ 1/I1(θ) ⇔ Var(θ^) ≈ 1/nI1(θ) = 1/In(θ)
+>
+>
+>
+> Vậy với việc θ^ là MLE của θ thì khi n lớn Var(θ^) ≈ 1/In(θ), cũng là STD(θ^) ≈ 1/√In(θ)
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy thì sao, liên quan gì?
+>
+>
+>
+> Câu trả lời đó là: Wn, nếu là MLE của θ, thì vừa nói ở trên, Wn sẽ là estimator tiệm cận hiệu quả của θ, và thể hiện điều này bởi:
+>
+>
+>
+> √n(Wn - θ) →(d) n(0, 1/I1(θ))
+>
+>
+>
+> (cái này cũng chính là nói Avar(Wn) = 1/I1(θ))
+>
+>
+>
+> Mà √I1(θ) →ᵖ √I1(θ), áp dụng Slutsky theorem, hoặc đơn giản là vì √I1(θ) là constant nên:
+>
+>
+>
+> √n(Wn - θ) × √I1(θ) →(d) √I1(θ) × n(0, ν(θ) = 1/I1(θ)),
+>
+>
+>
+> vế phải lúc này chính là n(0, (√I1(θ))^2 × 1/I1(θ)) = n(0,1)
+>
+>
+>
+> Vậy ta có (với Wn là MLE của θ thì) √n√I1(θ) (Wn - θ) → n(0,1)
+>
+>
+>
+> Tiếp, với việc Wn là MLE thì STD(Wn) ≈ 1/√In(θ)
+>
+>
+>
+> Vậy: √n√I1(θ) (Wn - θ) = (Wn - θ) / \[1/√n√I1(θ)\]
+>
+>
+>
+> = (Wn - θ) / \[1/√nI1(θ)\]
+>
+>
+>
+> chính là (Wn - θ) / STD(Wn), kí hiệu σn\]
+>
+>
+>
+> Như vậy ta có: với Wn là MLE của θ thì: (Wn - θ)/σn → (d) n(0,1)
+>
+>
+>
+> Cũng là khi n đủ lớn ta có thể coi (Wn - θ)/σn như một n(0,1). và từ đó xây dựng hypothesis test.
+>
+>
+>
+> ---
+>
+>
+>
+> Vấn đề là, có thể thấy trong bước lập luận (!!!) ở trên, để từ
+>
+>
+>
+> √n(Wn - θ) →(d) n(0, 1/I1(θ))
+>
+>
+>
+> sang
+>
+>
+>
+> √n√I1(θ) (Wn - θ) → n(0,1)
+>
+>
+>
+> thì ta phải coi như √I1(θ) là constant, fix.
+>
+>
+>
+> Do đó, giúp mình hiểu đại khái gs nói "một cách formally hơn, ta phải hiểu là, với mỗi giá trị θ fixed thì nếu ta dùng phân phối của Wn, và std tương ứng của σn thì (Wn - θ) / σn mới hội tụ về n(0,1))"
+>
+>
+>
+> Để từ đó, ta sẽ áp dụng điều này để xây dựng hypothesis test như sau:
+>
+>
+>
+> (Cần nói trước, sẽ chỉ dùng cho một hypothesis test nào đó mà null hypothesis H0: Θ0 = {θ0})
+>
+>
+>
+> Quy trình sẽ là, tương tự như khi ta xây dựng level α LRT là test thỏa:
+>
+>
+>
+> sup\_Θ0 P\_θ(λ(x) ≤ c) ≤ α
+>
+>
+>
+> với việc Θ0 = {θ0} cho phép cái điều kiện này trở thành P\_θ0(λ(x) ≤ c) ≤ α. (Từ đó chuyển thành điều kiện liên quan đến -2 log λ(x), và dùng định lý Wilks để dùng χ²)
+>
+>
+>
+> Thì ở đây cũng vậy, giả sử ta dùng Wn để xây dựng một test rule có dạng:
+>
+>
+>
+> reject H0 khi (Wn - θ) / σn(θ) ≤ c
+>
+>
+>
+> (Wn là MLE của θ, σn(θ) là STD của Wn, phụ thuộc θ như nói ở trên)
+>
+>
+>
+> thì để có level α, test này sẽ thỏa: sup\_Θ0={θ0} P\_θ((Wn - θ) / σn(θ) ≤ c) ≤ α
+>
+>
+>
+> tương đương P\_θ0((Wn - θ0) / σn(θ0) ≤ c) ≤ α | nhờ Θ0={θ0}, nên ta nhét θ0 vào thay θ)
+>
+>
+>
+> Đến đây, ta dùng lập luận rằng khi n lớn thì (Wn - θ0) / σn(θ0) sẽ giống một n(0,1) để biến điều kiện thành:
+>
+>
+>
+> P\_θ0(Z) ≤ c) ≤ α với Z \~ n(0,1)
+>
+>
+>
+> Và chỉ việc tra bảng normal là tính được c để thỏa yêu cầu level α test.
+>
+>
+>
+> Còn 1 ý nữa:
+>
+>
+>
+> Giả sử khi đó để có α = 0.05, ta tính được threshold c rồi thì ta có hoàn chỉnh một level 0.05 test có test rule như sau: reject H0 nếu (Wn - θ0) / σn(θ0) ≤ c
+>
+>
+>
+> từ đó dùng cái test này như sau: Với observed value **X** = **x**, ta tính Wn, σn(θ0), và so cụm (Wn - θ0) / σn(θ0) với c để ra quyết định.
+>
+>
+>
+> Do đó mình cũng hiểu được vì sao gs Casella nói "σn is a calculable constant may depend on θ but not any other unknown parameters". Là bởi giả sử σn còn phụ thuộc unknown parameters nào khác thì ta sẽ không tính được σn(θ0).
+>
+>
+>
+> ---
+>
+>
+>
+> Đây cũng là điều gs nói ở đoạn kế tiếp, trong trường hợp ta ko tính được σn vì nó phụ thuộc tham số khác chưa biết, thì ông cho rằng ta có thể dùng Sn, một estimator của σn có tính chất σn /Sn →ᵖ 1 với lập luận sau:
+>
+>
+>
+>  σn/Sn →ᵖ 1
+>
+>
+>
+> và (Wn - θ)/σn →(d) n(0,1)
+>
+>
+>
+> Theo định lý Slusky đã học ở chap 5 (xem link), nói rằng nếu ta có Xn →(d) X, Yn →ᵖ Y thì Xn Yn sẽ → (d) XY.
+>
+>
+>
+> Áp dụng vào ta có:
+>
+>
+>
+> (σn/Sn) × (Wn - θ)/σn → (d) n(0,1)
+>
+>
+>
+> ⇔ (Wn - θ)/Sn → (d) n(0,1)
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Ghi chú của bạn cực kỳ xuất sắc, thể hiện sự hiểu biết sâu sắc và chính xác về toán thống kê từ tính hiệu quả tiệm cận của MLE đến việc xây dựng kiểm định giả thuyết. Việc giải thích chi tiết ý nghĩa của việc cố định theta dưới H0 để tính toán sigma_n là hoàn toàn chính xác.
+
+**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c) · [Definition 10.1.11 Asymptotic Efficiency](./101_point_estimation.md#node-bgijdqy)
 
 <br>
 
