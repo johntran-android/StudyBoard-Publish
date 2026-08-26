@@ -747,7 +747,7 @@
 
 ###### Definition 10.1.11 Asymptotic Efficiency
 
-<p align="center"><kbd><img src="assets/nerfte3qyul.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/5d0rs02tpvy.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Nói ngắn gọn, ở đây người ta **định nghĩa** ra cái gọi là khi nào thì **chuỗi estimator Wn** được gọi là **ASYMPTOTICALLY EFFICIENT** của một parameter τ(θ), đó là nếu như **asymptotic variance của nó có thể đạt được giá trị variance nhỏ nhất được thể hiện bởi giá trị chặn dưới Cramer-Rao (lower bound)**.
@@ -797,30 +797,84 @@
 >
 >
 >
-> Mà theo định nghĩa Wn (là estimator của τ(θ)) có phương sai tiệm cận là σ^2: nếu kn(Wn - τ(θ)) → (d) n(0, σ^2). Nên ở đây việc ta có √n(Wn - τ(θ)) → (d) n(0, \[τ'(θ)\]^2 / I1(θ)) chính là nói AsympVar(Wn) = \[τ'(θ)\]^2 / I1(θ)
+> Mà theo định nghĩa của khái niệm phương sai tiệm cận: nếu kn(Wn - τ(θ)) → (d) n(0, σ^2) thì  Wn có phương sai tiệm cận (Avar) là σ^2. Và điều này cũng đồng nghĩa khi n lớn Var\[kn(Wn - τ(θ))\] ≈ σ^2
 >
 >
 >
->  Nếu Wn là unbiased estimator cho τ(θ): E\[Wn\] = τ(θ) ⇨ τ'(θ) = d/dθ E\[Wn\], và từ đó việc √n(Wn - τ(θ)) → (d) n(0, \[τ'(θ)\]^2 / I1(θ)) chính là nói rằng:
+> Chỗ này rất dễ sai: Nói Avar(Wn) = σ^2 không có nghĩa là Wn → n(0, σ^2) để rồi khi n lớn Var(Wn) ≈ σ^2. Đó là sai.
 >
 >
 >
-> AsympVar(Wn) = \[d/dθ E(Wn)\]^2 / I1(θ), và cái này thì bằng n × \[d/dθ E(Wn)\]^2 / nI1(θ), tức n × CRLB.
+> Mà định nghĩa rất rõ, Avar(Wn) = σ^2 thì tương đương kn(Wn - τ(θ)) → n(0, σ^2), để rồi khi n lớn Var(kn(Wn - τ(θ)) ≈ σ^2. Đây mới là đúng
 >
 >
 >
-> Vậy thì thế quái nào trong sách lại tương vào câu "that is, asym var(Wn) archivese CRLB, trong khi nó gấp n lần CRLB?
+> ---
 >
 >
 >
-> Câu trả lời là ông Casella buộc ta hiểu đang nói đến không phải là CRLB của Var(Wn) có công thức \[d/dθ E\[Wn\]\]^2 / n I1(θ). Mà sự thật là đang nói về CRLB của √n Wn, có công thức là \[d/dθ E\[Wn\]\]^2 / I1(θ).
+>
+>
+> Nên ở đây việc ta có √n(Wn - τ(θ)) → (d) n(0, \[τ'(θ)\]^2 / I1(θ)) chính là nói:
+>
+>
+>
+> Avar(Wn) = \[τ'(θ)\]^2 / I1(θ),
+>
+>
+>
+> và khi n lớn Var\[√n(Wn - τ(θ))\] ≈ \[τ'(θ)\]^2 / I1(θ)
+>
+>
+>
+> ⇔ Var(Wn) ≈ \[τ'(θ)\]^2 / n I1(θ) (dùng tính chất Var(αX + β) = α^2 Var(X))
+>
+>
+>
+> Nếu Wn là unbiased estimator cho τ(θ): E\[Wn\] = τ(θ) ⇨ τ'(θ) = d/dθ E\[Wn\], và từ đó cái ở trên tương đương:
+>
+>
+>
+> ⇔ Var(Wn) ≈ \[d/dθ E\[Wn\]\]^2 / n I1(θ) 
+>
+>
+>
+> và đây chính là CRLB của estimator Wn ta vừa ôn lại ở trên kia.
+>
+>
+>
+> Như vậy có thể hiểu rằng, đúng là nếu theo định nghĩa thế nào là một estimator tiệm cận hiệu quả thì estimator Wn sẽ có phương sai tiệm cận bằng đúng CRLB. 
+>
+>
+>
+> Tuy nhiên phải chú ý.
+>
+>
+>
+> Nhìn lại thì τ'(θ)\]^2/In(θ) chỉ là CRLB của estimator có E\[Wn\] = τ(θ) hoặc là một consistent estimator khi khi n lớn vô cùng thì E\[Wn\] = τ(θ), trong khi đó định nghĩa 10.1.11 không đề cập vụ này.
+>
+>
+>
+> Nên thật sự thì cái định nghĩa 10.1.11 có điểm khó hiểu chỗ này: Đó là câu nói (khi Wn là estimator hiệu quả tiệm cận của τ(θ)) thì Avar(Wn) đạt CRLB.
+>
+>
+>
+> Khó hiểu ở chỗ: Đạt CRLB của ai? Nếu nói Avar(Wn) đạt CRLB của Wn, thì Avar(Wn) phải là \[d/dθ E\[Wn\]\]^2 / In(θ) mới đúng chuẩn. Trong khi đó \[d/dθ τ(θ)\]^2 / In(θ) chưa chắc đã là CRLB của Wn, vì có khi E\[Wn\] khác τ(θ) và khi n lớn E\[Wn\] cũng không hội tụ về τ\[θ\].
+>
+>
+>
+> Cho nên để chặt chẽ, hoặc để dễ hiểu hơn ta nên có định nghĩa hiệu quả tiệm cận như sau:
+>
+>
+>
+> Đó là, nếu estimator Wn của τ(θ) thỏa Avar(Wn) = \[τ'(θ)\]^2 / I1(θ) thì Wn sẽ được gọi là estimator hiệu quả tiệm cận. **KHI ĐÓ, AVAR CỦA NÓ ĐẠT ĐÚNG BẰNG CRLB CỦA MỘT ESTIMATOR Un NÀO ĐÓ CÓ TÍNH CHẤT ASYMPTOTICALLY UNBIASED**.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
 >
 > Bài giải thích rất sâu sắc và chi tiết, làm rõ định nghĩa về ước lượng hiệu quả tiệm cận (asymptotically efficient) bằng cách liên hệ chặt chẽ với Cramér-Rao Lower Bound, bao gồm cả bối cảnh và công thức. Độ chính xác và chiều sâu của kiến thức được trình bày rất ấn tượng.
 
-**🔗 See also:** [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c) · [10.1.3 Calculations and Comparisons](#node-iwgmm5t) · [Phương sai tiệm cận và giới hạn](#node-62aug4x)
+**🔗 See also:** [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c) · [10.1.3 Calculations and Comparisons](#node-iwgmm5t) · [Phương sai tiệm cận và giới hạn](#node-62aug4x) · [Asymptotic Normality of MLE](./103_hypothesis_testing.md#node-l86tt7u)
 
 <br>
 
@@ -886,7 +940,7 @@
 >
 > Ghi chú giải thích Theorem 10.1.12 rất chi tiết và chính xác, đặc biệt là phần chứng minh tính consistency bằng định lý Slutsky. Để hoàn thiện hơn, bạn có thể bổ sung giới hạn n → ∞ vào định nghĩa tính consistent.
 
-**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Định lý Slutsky](./55_convergence_concepts.md#node-uwbmbt7) · [Hội tụ xác suất và phân phối](./55_convergence_concepts.md#node-wqcasc6) · [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Chuẩn tiệm cận, nhất quán, hiệu quả](#node-v1s5jks) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s) · [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li) · [linked note](./103_hypothesis_testing.md#node-l86tt7u)
+**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Định lý Slutsky](./55_convergence_concepts.md#node-uwbmbt7) · [Hội tụ xác suất và phân phối](./55_convergence_concepts.md#node-wqcasc6) · [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Chuẩn tiệm cận, nhất quán, hiệu quả](#node-v1s5jks) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s) · [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li) · [Asymptotic Normality of MLE](./103_hypothesis_testing.md#node-l86tt7u)
 
 <br>
 
