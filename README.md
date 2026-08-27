@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,274 notes` · `~17,719 screenshots` · `18 notebooks`**
+**`~12,277 notes` · `~17,723 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -565,7 +565,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 ### Pattern Recognition Machine Learning_C.Bishop
 <!-- key: pattern_recognition_machine_learning_cbishop -->
 <!-- group: Machine Learning Foundation -->
-`383 notes · 569 screenshots · 54 sections`
+`386 notes · 573 screenshots · 54 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
 > 
@@ -627,7 +627,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [3.5.3 Effective number of parameters](pattern_recognition_machine_learning_cbishop/353_effective_number_of_parameters.md) | 6 | 17 |
 | [3.6 Limitations of Fixed Basis Functions](pattern_recognition_machine_learning_cbishop/36_limitations_of_fixed_basis_functions.md) | 1 | 2 |
 | [3.7 Exercises](pattern_recognition_machine_learning_cbishop/37_exercises.md) | 3 | 4 |
-| [4.0 Linear model for Classification](pattern_recognition_machine_learning_cbishop/40_linear_model_for_classification.md) | 1 | 1 |
+| [4.0 Linear model for Classification](pattern_recognition_machine_learning_cbishop/40_linear_model_for_classification.md) | 4 | 5 |
 | [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) | 19 | 22 |
 | [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) | 5 | 7 |
 
