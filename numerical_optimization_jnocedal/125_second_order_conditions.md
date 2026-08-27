@@ -1,6 +1,6 @@
 # 12.5  Second-Order Conditions
 
-📊 **Progress:** `6` Notes | `10` Screenshots | `6` AI Reviews
+📊 **Progress:** `8` Notes | `12` Screenshots | `7` AI Reviews
 
 ---
 <a id="node-8arnxqj"></a>
@@ -779,6 +779,109 @@
 >
 > Bài viết thể hiện trực giác hình học xuất sắc, đặc biệt là cách giải thích dễ hiểu về việc điều chỉnh hướng đi ('bẻ lái') của chuỗi $z_k$. Tuy nhiên, có một chi tiết chưa chính xác khi khẳng định $c_i(z_k) = 0$, vì thực tế $c_i(z_k) = t_k 
 > abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ trong biểu thức Lagrangian.
+
+<br>
+
+<a id="node-dxoyw3c"></a>
+
+###### Second-Order Sufficient Conditions
+
+<p align="center"><kbd><img src="assets/r7obdfsv2yg.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tìm hiểu định lý điều kiện đủ bậc hai của bài toán tối ưu có ràng buộc.
+>
+>
+>
+> Đầu tiên, định lý này đại ý nói rằng, nếu ta có điểm x\* thỏa KKT (đã thỏa điểu kiện cần, là ứng cử viên cho solution) thì nếu như xét hướng w của critical cone, mà có đặc điểm là quadratic form của Hessian Lagragian tại x\* đều dương, thì x\* đích thị là strict minimizer (tức là solution của bài toán tối ưu).
+>
+>
+>
+> ---
+>
+>
+>
+> Trước khi cùng tìm hiểu phần chứng minh, ôn lại tí xíu về crtitical cone, cũng như active recall để có trực giác về toàn bộ quá trình liên kết giữa KKT, điều kiện cần bậc nhất và bậc hai, từ để có thể hình dung ý nghĩa của đặc điểm trên:
+>
+>
+>
+> Trước tiên nên nói về linearized feasible direction ℱ(x\*), là tập hợp các hướng đi (vector d) sao cho khi đi từ x\* đến x\* + d một step size nhỏ thì xấp xỉ tuyến tính của hàm constraint bằng không đối với constraint đẳng thức và không giảm đối với constraint bất đẳng thức để từ đó (với step size nhỏ thì) x\* + d vẫn feasible.
+>
+>
+>
+> Và việc x\* thỏa KKT thì theo lập luận trực giác bữa trước, tại x\*, không thể đi theo hướng linearized feasible nào để giảm f được. Mà về mặt toán học điều này cũng dễ thấy:
+>
+>
+>
+> x\* thỏa KKT, nên thỏa stationary conditon: ∇f(x\*) - Σi λi ∇ci(x\*) = 0 ⇔ ∇f(x\*) = Σi λi ∇ci(x\*)
+>
+>
+>
+> linearized f tại x\*+d = f(x\*) + ∇f(x\*)Td = f(x\*) + \[Σi λi ∇ci(x\*)\]Td
+>
+>
+>
+> = f(x\*) + Σi λi \[∇ci(x\*)Td\]. 
+>
+>
+>
+> Và với việc d là linearized feasible như trên đã nói, đi từ x\* đến x\* + d không làm giảm hàm constraint, tức ∇ci(x\*)Td ≥ 0 ∀i ∈ ℰ ∪ ℐ, và cùng với constraint λi ≥ 0, ta có 
+>
+>
+>
+> Vậy linearized f tại x\*+d = f(x\*) + Σi λi \[∇ci(x\*)Td\] ≥ f(x\*).
+>
+>
+>
+> Như vậy nếu đi từ x\* một step size nhỏ theo hướng d ∈ ℱ(x\*), ta sẽ vẫn feasible, và chia ra hai trường hợp: i) là nếu linearized f tăng thì hàm f cũng sẽ tăng, điều này cho kết luận theo hướng này chắc chắn sẽ luôn đi lên cao hơn so với x\*. ii) nếu linearized f giữ nguyên, thì ta không kết luận được gì rằng f liệu có cũng giữ nguyên hay không. Vì vẫn có thể xảy ra rằng tuy linearized f giữ nguyên nhưng f thật ra đang giảm.
+>
+>
+>
+> Chính vì vậy, ta sẽ xét các hướng d ∈ ℱ mà theo hướng đó, linearized f không tăng: Tức f(x\*) + ∇f(x\*)Td = f(x\*) ⇔ ∇f(x\*)Td = 0. Đây chính là critical cone.
+>
+>
+>
+> Vậy thì điều kiện cần bậc hai hôm trước đã nhận định rằng, nếu như xét các hướng này mà độ cong âm, tức quadratic form của Hessian của Lagrangian tại x\* âm, thì ứng cử viên x\* (đã thỏa KKT) sẽ bị loại. Vì lúc này đạo hàm bậc hai cho thấy khi đi theo hướng critical cone w, hàm f xấp xỉ bậc hai giảm thêm f(x\*) + ∇f(x\*)Td + (1/2) dT ∇²ℒ(x\*, λ) d &lt; f(x\*).
+>
+>
+>
+> Tóm gọn lại là các điều kiện bậc nhất bậc hai này giống như quá trình ta sàng lọc ứng cử viên để tìm nghiệm của bài toán vậy:
+>
+>
+>
+> Vòng một là tìm điểm thỏa KKT: là xét điểm bất kì x, và đi theo hướng linearized feasible, nếu có thể để giảm linearized f đồng nghĩa có thể vẫn feasible và giảm f được → nó chắc chắn không phải solution, loại nó ra khỏi danh sách.
+>
+>
+>
+> Vòng hai, trong danh sách các ứng cử viên x\* đã thỏa KKT, thì đi hướng critical cone, lúc này thì xấp xỉ bậc nhất của f giữ nguyên nên không cho biết là f thật sẽ giảm hay tăng, nên ta phải dùng độ cong, thể hiện qua quadratic form (1/2) dT ∇²ℒ(x\*, λ) d. âm. Nếu nó âm, tức là hàm f giảm → tiếp tục loại nó ra khỏi danh sách
+>
+>
+>
+> Vòng ba, danh sách các điểm thỏa KKT, thỏa điều kiện cần bậc hai, thì nếu dT ∇²ℒ(x\*, λ) d dương, theorem này cho phép kết luận luôn solution.
+>
+>
+>
+> ---
+>
+>
+>
+> Note sau mình sẽ tìm hiểu phần chứng minh
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú rất xuất sắc, thể hiện sự hiểu biết sâu sắc và trực giác tốt về điều kiện tối ưu (KKT, nón tới hạn và điều kiện đủ bậc hai). Bạn nên lưu ý thêm ký hiệu chính xác của các ràng buộc đẳng thức và bất đẳng thức khi viết biểu thức Lagrangian để hoàn thiện hơn.
+
+<br>
+
+<a id="node-o77d3vi"></a>
+
+###### Second-Order Sufficient Condition Proof
+
+<p align="center"><kbd><img src="assets/p0jeqmiss89.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đầu tiên,
 
 <br>
 
