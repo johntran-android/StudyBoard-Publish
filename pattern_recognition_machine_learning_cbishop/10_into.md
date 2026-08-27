@@ -143,6 +143,8 @@
 > Tuy nhiên gs lưu ý phải cẩn thận vì có thể làm mất đi feature / information quan
 > trọng khiến thuật toán giảm chất lượng
 
+**🔗 See also:** [Example 10.3.4 Multinomial LRT *(Statistical Inference - Casella)*](../statistical_inference_casella/103_hypothesis_testing.md#node-geri9d1)
+
 <br>
 
 <a id="node-qebm7e9"></a>
