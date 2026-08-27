@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1787866223126,
+  "publishedAt": 1787872398246,
   "sections": [
     {
       "title": "📋 Overview",
@@ -311,8 +311,8 @@
     {
       "title": "4.0 Linear model for Classification",
       "path": "pattern_recognition_machine_learning_cbishop/40_linear_model_for_classification.md",
-      "noteCount": 1,
-      "imageCount": 1
+      "noteCount": 4,
+      "imageCount": 5
     },
     {
       "title": "Appendix C. Matrices",
@@ -327,6 +327,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 383,
-  "totalImages": 569
+  "totalNotes": 386,
+  "totalImages": 573
 }
