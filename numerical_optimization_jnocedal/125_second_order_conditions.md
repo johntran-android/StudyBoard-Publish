@@ -1,6 +1,6 @@
 # 12.5  Second-Order Conditions
 
-📊 **Progress:** `8` Notes | `12` Screenshots | `7` AI Reviews
+📊 **Progress:** `8` Notes | `12` Screenshots | `8` AI Reviews
 
 ---
 <a id="node-8arnxqj"></a>
@@ -881,7 +881,76 @@
 <p align="center"><kbd><img src="assets/p0jeqmiss89.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên,
+> Đoạn đầu tiên hiểu đại ý thế này: Vì định lý này nói rằng nếu x\* thỏa mãn với mọi critical cone direction d ≠ 0, thì dT ∇²\_xx ℒ(x\*, λ\*) d đều dương thì x\* chính là strict local solution. Nói cách khác, chỉ cần d khác 0, dù nhỏ (norm nhỏ) mấy thì quadratic form này cũng đều dương.
+>
+>
+>
+> Thế thì giả sử ta đi tìm cái quadratic form dương nhỏ nhất có thể, thì nó sẽ là bao nhiêu?
+>
+>
+>
+> Câu trả lời là không thể tìm được.
+>
+>
+>
+> Vì như đã nói trên, chỉ cần critical cone d có norm khác 0, là quadratic form sẽ dương. mà khác 0 thì có thể là bất cứ giá trị cực kì nhỏ, nhỏ ơi là nhỏ tiến dần về 0 (miễn chưa = 0). 
+>
+>
+>
+> Do đó, người ta mới không xét với toàn bộ critical cone nữa. mà giới hạn lại, tìm trong các vector có norm = 1 thôi.
+>
+>
+>
+> Và như vậy, vector trong 𝒞^ (trong sách là 𝒞 gạch trên đầu) đều có norm bằng 1, nên cơ bản là ta chỉ tìm trong các vector d có hướng khác nhau (norm bằng nhau) xem cái nào khiến quadratic form nhỏ nhất. Và nhất định là sẽ ra con số dương hữu hạn (hình dung giống như ta xoay 1 cái vector độ dài 1 cho đến khi quadratic form nhỏ nhất thì sẽ có lúc tìm được, chứ nếu vừa xoay vừa thu nhỏ lại thì trên lí thuyết là cứ thu nhỏ mãi mãi vẫn sẽ không dừng được (giống như trong nghịch lý Zenon: có vô số điểm giữa ta tới bức tường, nên trên lí thuyết có vô số vector khác 0 dù nhỏ cỡ nào)
+>
+>
+>
+> Và con số này chính là σ. Nên σ = giá trị quadratic form dT ∇²\_xx ℒ(x\*, λ\*) d với d ∈ 𝒞^.
+>
+>
+>
+> Vậy dĩ nhiên ta có: Với mọi d ∈ 𝒞^, dT ∇²\_xx ℒ(x\*, λ\*) d ≥ σ
+>
+>
+>
+> thì vì 𝒞^ chỉ là thay vì lấy hết từ 𝒞, ta chỉ lấy những cái có norm = 1 thôi. Nên đương nhiên nếu ta bốc w từ 𝒞, đem chia cho ||w||, để có w' = w / ||w||, thì w' cũng thuộc 𝒞 (vì nó trùng hướng với w), nhưng cũng là thành viên của 𝒞^ (vì norm của c' = || (w/||w||) || = ||w|| / ||w|| = 1)
+>
+>
+>
+> Vậy với mọi w ∈ 𝒞, w' = w/||w|| ∈ 𝒞^, nên w'T ∇²\_xx ℒ(x\*, λ\*) w' ≥ σ
+>
+>
+>
+> tương đương: (w/||w||)T ∇²\_xx ℒ(x\*, λ\*) (w/||w||) ≥ σ
+>
+>
+>
+> Tới đây, (w/||w||) là gì, nó là vector w chia number (scalar) ||w||, nên = vector w nhân (1/||w||)
+>
+>
+>
+> nên (w/||w||)T  = (w (1/||w||))T = (1/||w||)T wT = = (1/||w||) wT (scalar mà chuyển vị thì bằng chính nó)
+>
+>
+>
+> nên cái ở trên tương đương tiếp:  (1/||w||) wT ∇²\_xx ℒ(x\*, λ\*) (w) (1/||w||) ≥ σ 
+>
+>
+>
+> và cái scalar  (1/||w||) ở đuôi muốn chuyển đi đâu tùy ý
+>
+>
+>
+> ⇔ (1/||w||^2) (w)T ∇²\_xx ℒ(x\*, λ\*) (w) ≥ σ 
+>
+>
+>
+> ⇔ (w)T ∇²\_xx ℒ(x\*, λ\*) (w) ≥ σ ||w||^2 → Ta có 12.66
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bài viết giải thích cực kỳ trực quan, chính xác từ bản chất hình học (lý do chuẩn hóa norm bằng 1 để tránh giá trị tiến về 0) cho đến các bước biến đổi đại số chi tiết. Điểm cộng lớn là cách liên hệ thực tế và giải thích phân rã vector rất dễ hiểu cho người tự học.
 
 <br>
 
