@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1787703563390,
+  "publishedAt": 1787797668082,
   "sections": [
     {
       "title": "📋 Overview",
@@ -305,8 +305,8 @@
     {
       "title": "3.7 Exercises",
       "path": "pattern_recognition_machine_learning_cbishop/37_exercises.md",
-      "noteCount": 2,
-      "imageCount": 3
+      "noteCount": 3,
+      "imageCount": 4
     },
     {
       "title": "4.0 Linear model for Classification",
@@ -327,6 +327,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 382,
-  "totalImages": 568
+  "totalNotes": 383,
+  "totalImages": 569
 }
