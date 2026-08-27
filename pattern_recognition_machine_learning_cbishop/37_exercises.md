@@ -1,6 +1,6 @@
 # 3.7 Exercises
 
-📊 **Progress:** `2` Notes | `3` Screenshots | `2` AI Reviews
+📊 **Progress:** `3` Notes | `4` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-rasw876"></a>
@@ -390,6 +390,303 @@
 > Lời giải rất xuất sắc, không chỉ chứng minh đầy đủ sự tương đương toán học thông qua điều kiện KKT mà còn giải thích trực quan rất sâu sắc về KKT. Phần thảo luận về mối quan hệ nghịch biến giữa ̹Η và ̹Λ cũng hoàn toàn chính xác.
 
 **🔗 See also:** [General Regularizer and Lasso](./314_regularized_least_squares.md#node-1msg8km) · [Likelihood and Error Functions](./311_maximum_likelihood_and_least_squares.md#node-urnjdcs)
+
+<br>
+
+<a id="node-y5iamw4"></a>
+
+#### Regularization via Input Noise
+
+<p align="center"><kbd><img src="assets/xlt2gwx6h2.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Cùng làm bài này, trước tiên là dịch sơ cái yêu cầu
+>
+>
+>
+> Ở đây gs xét linear model y(x, **w**) = w0 + Σi=0:D wixi
+>
+>
+>
+> với SSE function ED(**w**) = (1/2) Σi=1:N {y(xi, **w**) - ti}^2 
+>
+>
+>
+> Và cho rằng noise εi \~ N(0, σ²), được add độc lập vào input variable xi.
+>
+>
+>
+> Dùng E\[εi\] = 0 (cái này là do nói εi \~ N(0, σ²)) và E\[εi εj\] = δij σ², yêu cầu chỉ ra rằng minimize ED có được khi average out over noise distirbution sẽ tương đương bài toán mininize SSE mà ko có noise, nhưng có thêm regularization weight-decay, với w0 bỏ ra khỏi regularizer.
+>
+>
+>
+> Đọc cái đề bài thì tạm hiểu là vầy:
+>
+>
+>
+> Nói ngắn gọn, thì gs đề xuất ta thử add noise εi vào input. Để hiểu rõ hơn, nên ôn lại chút về cách mà ta thấy gs Bishop làm trong suốt chapter 3, có thể tóm gọn trong vài ý chính thế này:
+>
+>
+>
+> Ta dùng / giả định data tuân theo một mô hình phân phối như sau, và ta chỉ coi target là random variable: Ti|xi \~ n(y(**w**, xi), 1/β)
+>
+>
+>
+> Và giả định này cũng chính là giả định noise εi = y(xi, **w**) - Ti sẽ \~ n(0, 1/β) 
+>
+>
+>
+> (Ti|xi \~ n(y(**w**, xi), 1/β) ⇔ εi = Ti - y(xi, **w**) sẽ \~ n(0, 1/β) là do dùng location scale theorem, đã học trong Statistical Inference Casella, ngắn gọn như sau: Khi ta có X có distribution thuộc location family ứng với location là μ, thì X - μ sẽ chính random variable thuộc standard member của family đó, tức là location = 0. Nên ở đây, normal là một distribution thuộc loại này, nên khi Ti \~ n(y(**w**, xi), 1/β) thì Ti - y(xi, **w**), tức εi sẽ chính là một n(0, 1/β))
+>
+>
+>
+> Vậy bây giờ, theo đề bài, ta sẽ add noise vào input, tức là thay xi bởi xi + εi, và đi minimizing E_D over distribution của εi. Là sao nhỉ.
+>
+>
+>
+> Đầu tiên nhìn vào E_D, = (1/2) Σi=1:N {y(xi, **w**) - ti}^2
+>
+>
+>
+> Mình hiểu thế này: Bài toán ban đầu là ta có bộ data set (x1, t1), (x2,t2) ...(xN, tN), hay đặt các vector x1,..xN vào vector **x**, và đặt t1,...tN vào vector **t**. Thì ta thể hiện observed data bởi (**x**, **t**).
+>
+>
+>
+> Và với việc coi target variable là random variable (còn input thì không), thì **t** chính là observed value của random sample **T** = (T1, T2,...TN).
+>
+>
+>
+> Như vậy, (y(x, **w**) - T)^2 là hàm số của random variable T, nên dĩ nhiên cũng là random variable.
+>
+>
+>
+> Và vì nó là random variable, ta có thể đặt vấn đề xét trung bình của nó, tức expected value:
+>
+>
+>
+> E\[(y(x, **w**) - T)^2\]
+>
+>
+>
+> Thế thì tuy ta đang giả định y(x, **w**) - T \~ n(0, 1/β), nhưng \[y(x, **w**) - T\]^2 thì ta không biết là phân phối gì. Nên không thể tính E\[(y(x, **w**) - T)^2\], để ra một hàm theo **w**, từ đó đi minimize over **w** cái này.
+>
+>
+>
+> Thay vì vậy, ta xem S = (y(x, **w**) - T) đến từ một uniform discrete distriution có các discrete value là s1 = y(x1, **w**) - t1,..., sN = y(xN, **w**) - tN.
+>
+>
+>
+> Từ đó, E\[(y(x, **w**) - T)^2\] có thể tính cái này nhờ LOTUS
+>
+>
+>
+> = Σn=1:N \[y(xn, **w**) - tn\]^2 P(S = sn)
+>
+>
+>
+> = (1/N) Σn=1:N \[y(**x**n, **w**) - tn\]^2 
+>
+>
+>
+> Và từ đó ta đi minimize over **w** hàm objective E\[(y(**x**, **w**) - T)^2\] = (1/N) Σn=1:N \[y(xn, **w**) - tn\]^2
+>
+>
+>
+> và với N là constant thì bài toán này cũng tương đương minimize (1/2) Σn=1:N \[y(xn, **w**) - tn\]^2
+>
+> và đây chính là sum-of-squares error E_D(**w**)
+>
+>
+>
+> Cách lập luận này giúp ta có cái nhìn sâu hơn vào bản chất của cái hàm SSE để thấy nó chính là kì vọng của S = y(**w**, x) - T với S là uniform discrete với N posible value s1,...sN. 
+>
+>
+>
+> ---
+>
+>
+>
+> Còn ở đây đề bài nói là giả sử thêm noise \~ 𝒩(0, σ²) vào input xi, rồi đi "minimizing E_D average out over noise distribution" thì ta nên hiểu là: "À, có data như vậy, và thiết lập hàm SSE như vậy, thì nay, với viêc xi có thêm noise, nó trở thành một random variable, và ta sẽ tính kì vọng của random variable E_D này, rồi đi minimize nó."
+>
+>
+>
+> Cụ thể hơn: Thay xn bởi xn + εn, lúc này E_D(**w**) = (1/2) Σn=1:N \[y(xn + εn, **w**) - tn\]^2 trở thành random variable.
+>
+>
+>
+> Ta có thể thay kí hiệu là E_D(**w**, **ε**) để thể hiện giờ nó phụ thuộc **ε** = (ε1,...εN) nữa
+>
+>
+>
+> Và vì nó là random variable ta sẽ lấy expected value của cái random variable này (cũng chính là động tác average out over noise distribution). 
+>
+>
+>
+> E\[E_D(**w**, **ε**)\] = E\[(1/2) Σn=1:N \[y(xn + εn, **w**) - tn\]^2\]
+>
+>
+>
+> = (1/2) Σn=1:N E\[\[y(xn + εn, **w**) - tn\]^2\]
+>
+>
+>
+> = (1/2) Σn=1:N E\[y(xn + εn, **w**)^2 - 2y(xn + εn, **w**)tn + tn^2\]
+>
+>
+>
+> dùng tính linearity của kì vọng
+>
+>
+>
+> = (1/2) Σn=1:N {E\[y(**x**n + εn, **w**)^2\] - E\[2y(xn + εn, **w**)tn\] + E\[tn^2\]}
+>
+>
+>
+> = (1/2) Σn=1:N {E\[y(**x**n + εn, **w**)^2\] - 2E\[y(xn + εn, **w**)\]tn + tn^2}
+>
+>
+>
+> Với y(**x**, **w**) = w0 + Σi=1:D xi wi
+>
+>
+>
+> ⇒ y(**x**n + **ε**n, **w**) = w0 + Σi=1:D (xni + εni) wi)
+>
+>
+>
+> = w0 + Σi=1:D (xni wi)  + Σi=1:D (εni wi)
+>
+>
+>
+> = w0 + Σi=1:D (xni wi) + Σi=1:D (εni wi)
+>
+>
+>
+> ⇒ E\[y(xn + **ε**n, w)\] = E\[w0 + Σi=1:D (xni wi) + Σi=1:D (εni wi)\]
+>
+>
+>
+> = E\[w0 + Σi=1:D (xni wi)\] + E\[Σi=1:D (εni wi)\]
+>
+>
+>
+> w0 + Σi=1:D (xni) là constant, và dùng tính linearity của E\[.\]
+>
+>
+>
+> = \[w0 + Σi=1:D (xni wi)\] + Σi=1:D E\[εni wi\] 
+>
+>
+>
+> = \[w0 + Σi=1:D (xni wi)\] + Σi=1:D (E\[εni\] wi)
+>
+>
+>
+> = \[w0 + Σi=1:D (xni wi)\] + Σi=1:D (0 × wi) | do E\[εni\] = 0
+>
+>
+>
+> = w0 + Σi=1:D (xni wi)
+>
+>
+>
+> = y(**w**, **xn**)
+>
+>
+>
+> ---
+>
+>
+>
+> \[y(**x**n + **ε**n, **w**)\]^2 = \[w0 + Σi=1:D (xni + εni) wi\]^2
+>
+>
+>
+> = \[w0 + Σi=1:D (xni wi) + Σi=1:D (εni wi)\]^2
+>
+>
+>
+> = \[y(**w**, **xn**) + Σi=1:D (εni wi)\]^2
+>
+>
+>
+> = y(**w**, **xn**)^2 + 2 y(**w**, **xn**) Σi=1:D (εni wi) + \[Σi=1:D (εni wi)\]^2
+>
+>
+>
+> ⇒ E{\[y(**x**n + **ε**n, **w**)\]^2}
+>
+>
+>
+>  = E{ y(**w**, **xn**)^2 + 2 y(**w**, **xn**) Σi=1:D (εni wi) + \[Σi=1:D (εni wi)\]^2 }
+>
+>
+>
+>  = E{ y(**w**, **xn**)^2 } + 2 y(**w**, **xn**) E{ Σi=1:D (εni wi) } + E{ \[Σi=1:D (εni wi)\]^2 }
+>
+>
+>
+>  = y(**w**, **xn**)^2 + 2 y(**w**, **xn**) { Σi=1:D \[E(εni) wi\] } + E{ \[Σi=1:D (εni wi)\]^2 }
+>
+>
+>
+>  = y(**w**, **xn**)^2 + 2 y(**w**, **xn**) { Σi=1:D \[0 × wi\] } + E{ \[Σi=1:D (εni wi)\]^2 }
+>
+>
+>
+>  = y(**w**, **xn**)^2 + 0 + E{ \[Σi=1:D (εni wi)\]^2 }
+>
+>
+>
+>  = y(**w**, **xn**)^2 + E{ \[Σi=1:D (εni wi)\]^2 }
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy:
+>
+>
+>
+> E\[E_D(**w**, **ε**)\] = (1/2) Σn=1:N {E\[y(**x**n + εn, **w**)^2\] - 2E\[y(xn + εn, **w**)\]tn + tn^2}
+>
+>
+>
+> = (1/2) Σn=1:N { y(**w**, **xn**) + E{ \[Σi=1:D (εni wi)\]^2 } - 2 y(**w**, **xn**) tn + tn^2}
+>
+>
+>
+> = (1/2) Σn=1:N { y(**w**, **xn**) - 2 y(**w**, **xn**) tn + tn^2 + E{ \[Σi=1:D (εni wi)\]^2 } }
+>
+>
+>
+> = (1/2) Σn=1:N { \[y(**w**, **xn**) - tn\]^2 + E{ \[Σi=1:D (εni wi)\]^2 } }
+>
+>
+>
+> = (1/2) Σn=1:N { \[y(**w**, **xn**) - tn\]^2 } + (1/2) Σn=1:N E{ \[Σi=1:D (εni wi)\]^2 } }
+>
+>
+>
+> = E_D(**w**) + (1/2) Σn=1:N E{ \[Σi=1:D (εni wi)\]^2 } }
+>
+>
+>
+> Như vậy tới đây ta có:
+>
+>
+>
+> E\[E_D(**w**, **ε**)\] = E_D(**w**) + (1/2) Σn=1:N E{ \[Σi=1:D (εni wi)\]^2 } }
+>
+>
+>
+> Xét tiếp cái kì vọng trong tổng của cụm thứ hai:
+>
+>
+>
+> E{ \[Σi=1:D (εni wi)\]^2 }
 
 <br>
 
