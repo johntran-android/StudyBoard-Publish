@@ -1150,7 +1150,7 @@
 > Vậy là đã chứng minh xong chiều đi: nếu T(**X**) là sufficient static, thì 
 > f(**x**|θ) = g(T(**x**)|θ)h(**x**)
 
-**🔗 See also:** [Chứng minh Định lý Birnbaum](./63_the_likelihood_principle.md#node-vayutvo) · [Định lý LRT Thống kê đủ](./82_method_of_finding_tests.md#node-gfm4olm) · [linked note](./83_methods_of_evaluating_test.md#node-29b2q27)
+**🔗 See also:** [Chứng minh Định lý Birnbaum](./63_the_likelihood_principle.md#node-vayutvo) · [Định lý LRT Thống kê đủ](./82_method_of_finding_tests.md#node-gfm4olm) · [Kiểm định chính xác Fisher](./83_methods_of_evaluating_test.md#node-29b2q27)
 
 <br>
 
