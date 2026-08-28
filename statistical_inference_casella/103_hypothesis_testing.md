@@ -1,6 +1,6 @@
 # 10.3 Hypothesis Testing
 
-📊 **Progress:** `11` Notes | `14` Screenshots | `11` AI Reviews
+📊 **Progress:** `12` Notes | `15` Screenshots | `12` AI Reviews
 
 ---
 <a id="node-zhfsuqo"></a>
@@ -1421,7 +1421,33 @@
 >
 >
 >
-> reject H0 khi (Wn - θ) / σn(θ) ≤ c
+> reject H0 khi (Wn - θ) / σn(θ) cách quá xa một mốc c nào đó, thể hiện bởi |(Wn - θ) / σn(θ)| ≥ c
+>
+>
+>
+> ---
+>
+>
+>
+> (Ôn nhanh cách hiểu nôm na về cách đặt rule:
+>
+>
+>
+> One-side test (left): H0: θ &lt; θ0, tức là cho rằng θ nhỏ, ta đặt test rule là \[giá trị test statisic lớn (hơn mốc nào đó) thì bác bỏ H0
+>
+>
+>
+> One-side test (right): H0: θ &gt; θ0, tức là cho rằng θ lớn, ta đặt test rule là \[giá trị test statistic nhỏ (hơn mốc nào đó) thì bác bỏ H0
+>
+>
+>
+> Two-side test: H0: θ = θ0, tức là cho rằng θ = giá trị nào đó, thì ta đặt test rule là \[giá trị test statistic không luẩn quẩn quanh mốc nào đó, mà cách xa mốc đó, thì bác bỏ H0))
+>
+>
+>
+> ---
+>
+>
 >
 >
 >
@@ -1429,11 +1455,11 @@
 >
 >
 >
-> thì để có level α, test này sẽ thỏa: sup\_Θ0={θ0} P\_θ((Wn - θ) / σn(θ) ≤ c) ≤ α
+> thì để có level α, test này sẽ thỏa: sup\_Θ0={θ0} P\_θ(|(Wn - θ) / σn(θ)| ≥ c) ≤ α
 >
 >
 >
-> tương đương P\_θ0((Wn - θ0) / σn(θ0) ≤ c) ≤ α | nhờ Θ0={θ0}, nên ta nhét θ0 vào thay θ)
+> tương đương P\_θ0(|(Wn - θ0) / σn(θ0)| ≥ c) ≤ α (nhờ Θ0={θ0}, nên ta nhét θ0 vào thay θ)
 >
 >
 >
@@ -1441,11 +1467,19 @@
 >
 >
 >
-> P\_θ0(Z) ≤ c) ≤ α với Z \~ n(0,1)
+> P\_θ0(|Z| ≥ c) ≤ α với Z \~ n(0,1)
 >
 >
 >
-> Và chỉ việc tra bảng normal là tính được c để thỏa yêu cầu level α test.
+> Và tới đây, với tính chất đối xứng của ta sẽ thấy điều kiện này trở thành:
+>
+>
+>
+> |Z| ≥ z\_α/2
+>
+>
+>
+> Và chỉ việc tra bảng normal là tính được z\_α/2 để thỏa yêu cầu level α test.
 >
 >
 >
@@ -1453,7 +1487,7 @@
 >
 >
 >
-> Giả sử khi đó để có α = 0.05, ta tính được threshold c rồi thì ta có hoàn chỉnh một level 0.05 test có test rule như sau: reject H0 nếu (Wn - θ0) / σn(θ0) ≤ c
+> Giả sử khi đó để có α = 0.05, ta tính được threshold c rồi thì ta có hoàn chỉnh một level 0.05 test có test rule như sau: reject H0 nếu |(Wn - θ0)| / σn ≥ z\_α/2
 >
 >
 >
@@ -1500,7 +1534,197 @@
 >
 > Ghi chú của bạn cực kỳ xuất sắc, thể hiện sự hiểu biết sâu sắc và chính xác về toán thống kê từ tính hiệu quả tiệm cận của MLE đến việc xây dựng kiểm định giả thuyết. Việc giải thích chi tiết ý nghĩa của việc cố định theta dưới H0 để tính toán sigma_n là hoàn toàn chính xác.
 
-**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c) · [Definition 10.1.11 Asymptotic Efficiency](./101_point_estimation.md#node-bgijdqy)
+**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c) · [Definition 10.1.11 Asymptotic Efficiency](./101_point_estimation.md#node-bgijdqy) · [Kiểm định tỉ số khả dĩ cỡ α](./83_methods_of_evaluating_test.md#node-8t9g9rt)
+
+<br>
+
+<a id="node-sh74ft0"></a>
+
+###### Kiểm định giả thuyết thống kê
+
+<p align="center"><kbd><img src="assets/kvlbgt4hbt.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, với những hiểu biết từ hai note trước ta hoàn toàn có thể hiểu đoạn này, đại khái là như sau:
+>
+>
+>
+> Đầu tiên cần nhớ, z\_α/2, theo định nghĩa, nó là cái mốc mà với một normal(0,1), P(|Z| ≥ cái mốc này) = α ⇔ P(Z ≥ z\_α/2 hoặc Z ≤ -z\_α/2) = α. Ý nghĩa là, \[phần diện tích của pdf ở bên phải z\_α/2\] + \[phần diện tích của pdf ở bên trái mốc -z\_α/2\] = α. Nên z\_α/2 sẽ là số cố định, đã biết từ trước, lấy từ bang tra pdf của normal (α bao nhiêu thì ta có z\_α/2 bấy nhiêu)
+>
+>
+>
+> Thế thì, phần trước mình đã hiểu nguyên lý của cái cách xây dựng test này.
+>
+>
+>
+> Giả sử ta có hypothesis test: H0: θ = θ0 vs H1: θ ≠ θ0: Dựa trên một statistic Wn nào đó mà có được tính chất **DƯỚI ĐIỀU KIỆN** θ = θ0 thì (Wn - θ0)/Sn → n(0,1)
+>
+>
+>
+> Chú ý: Cái này **dễ sai, khi nghĩ rằng (Wn - θ0) / Sn là tự động hội tụ về n(0,1)**. Không phải! nó chỉ hội tụ khi θ0 là true param (tức X1,...Xn \~ f(x|θ0)). đó là lí do vì sao tác giả Casella viết "**If H0 is true, then θ = θ0 and Zn converges in distribution to Z \~ n(0,1)**)
+>
+>
+>
+> Thì ta có thể xây dựng một cái test mà level của nó sẽ tiệm cận α như sau.
+>
+>
+>
+> Đầu tiên, vì đây là 2 side test, với H0 nói rằng θ bằng đúng giá trị θ0, nên cái rule ta sẽ đặt là: "nếu như quan sát được data, và tính ra test statistic value ra quá lớn hoặc quá bé, thì ta sẽ bác bỏ H0", thể hiện bởi: Reject H0 khi |test statisitic| ≥ c.
+>
+>
+>
+> Thứ hai, test statistic ta chọn là (Wn - θ0)/Sn để lợi dụng sự thật là cái này, DƯỚI ĐIỀU KIỆN θ = θ0 sẽ hội tụ phân phối về một random variable \~ n(0,1).
+>
+>
+>
+> Khi đó, nhiệm vụ lúc này là tìm c. Thế thì thì theo định nghĩa của level alpha test, đó là test có xác suất mắc Type I error không quá α: sup\_Θ0 P(Reject H0) ≤ α.
+>
+>
+>
+> Nên muốn test "Reject H0 khi |(Wn - θ0)/Sn| ≥ c" có level alpha, ta cần c phải thỏa:
+>
+>
+>
+> sup\_Θ0 P\_θ(|(Wn - θ0)/Sn| ≥ c) ≤ α.
+>
+>
+>
+> Vì Θ chỉ có θ0, nên tương đương
+>
+>
+>
+> P\_θ0(|(Wn - θ0)/Sn| ≥ c) ≤ α (1)
+>
+>
+>
+> Và sử dụng the fact là: dưới điều kiện true param là θ0 thì (Wn - θ0)/Sn → (d) Z \~ n(0,1)
+>
+>
+>
+> (phải nhấn mạnh lần nữa: ko phải (Wn - θ0)/Sn mặc định converge về n(0,1) mà chỉ đúng nếu distribution của **X** có tham số thực sự là θ0)
+>
+>
+>
+> nên P\_θ0(|(Wn - θ0)/Sn| ≥ c) → P\_θ0(|Z| ≥ c), và cái P\_θ0(|Z| ≥ c) này không phụ thuộc θ0 nữa, nên ghi là P(|Z| ≥ c)
+>
+>
+>
+> Do đó khi n lớn ta xấp xỉ điều kiện tìm c để có level alpha test (1) bởi:
+>
+>
+>
+> P(|Z| &gt; c) ≤ α (2), và c thỏa cái này chính là cái z\_α/2 nói lúc đầu.
+>
+>
+>
+> Như vậy, ở (1), P\_θ0(|(Wn - θ0)/Sn| ≥ c) ≤ α, ta không thể tìm được c nếu không biết distribution của cái statistic |(Wn - θ0)/Sn|, nên không thể có được một test có level alpha chính xác.
+>
+>
+>
+> Nhưng vì khi n lớn, các statistic |(Wn - θ0)/Sn| dần trở thành một biến \~ n(0,1), nên (1) cũng dần trở thành (2) và từ đó ta có thể tra bảng tính ra c
+>
+>
+>
+> Nhưng dĩ nhiên trong thực tế n ko thể là vô hạn, chỉ là rất lớn, nên đại ý là cái threshold z\_α/2 chỉ là giá trị gần đúng nên thực tế, level của test: Reject H0 khi |(Wn - θ0)/Sn| ≥ z\_α/2 chỉ được gọi là tiệm cận α.
+>
+>
+>
+> ---
+>
+>
+>
+> Còn đoạn sau, để hiểu cần active recall về cái gọi là power function được định nghĩa là:  β(θ) = P(reject H0) = P\_θ(**X** ∈ R) (Xem link)
+>
+>
+>
+> Trong hai loại error, Type I và Type II, thì với Type I, ta muốn khống chế nó bởi việc đi xây dựng level α test, có xác suất mắc Type I error không quá α.
+>
+>
+>
+> Với Type II error, tức dạng error khi "không reject H0 trong khi nên vậy, tức θ ∈ Θ0c", ta cũng muốn nó nhỏ, và dĩ nhiên đồng nghĩa muốn xác suất "Làm đúng, tức reject H0 khi θ ∈ Θ0c, càng lớn càng tốt".
+>
+>
+>
+> Để rồi cái test mà có power lớn nhất được gọi là **Uniform Most Power** test (UMP): với mọi θ ∈ Θ0c, thì beta của UMP luôn lớn hơn hoặc bằng beta của các test khác.
+>
+>
+>
+> Và dĩ nhiên ta sẽ thấy power lớn nhất là = 1 (vì nó là P\_θ(**X** ∈ R))
+>
+>
+>
+> Cho nên ở đây. Chính là gs chỉ ra rằng, cái test (tiệm cận level alpha) mà ta vừa làm cũng sẽ có power tiệm cận 1. Hiểu đại khái như sau:
+>
+>
+>
+> Đầu tiên cần nhắc lại, ta chỉ muốn power lớn khi θ ∈ Θ0c, vì khi đó power là xác suất làm đúng (reject H0 khi thật sự là nên reject H0). Chứ còn khi θ ∈ Θ0, thì ta muốn power nhỏ.
+>
+>
+>
+> Vậy thì xét trường hợp true parameter θ ∈ Θ0c, và ở đây tức là θ ≠ θ0, thì VỚI MỌI θ như vậy, Wn - θ / Sn → n(0,1). Vì sao?
+>
+>
+>
+> Vì như đã nhấn mạnh ở trên rằng, "(Wn - ?) / Sn → n(0,1)" chỉ đúng khi ta gắn true parameter vào dấu hỏi.
+>
+>
+>
+> Tức là: 
+>
+>
+>
+> "(Wn - θ0) / Sn → n(0,1)" chỉ đúng nếu trong trường hợp param thực sự là θ0, cũng chính là nói rằng "under H0"
+>
+>
+>
+> "(Wn - 5) / Sn → n(0,1)" chỉ đúng nếu trong trường hợp param thực sự là 5
+>
+>
+>
+> Vậy tương tự, khi đang "under H1", tức là đang xét case mà tham số thật sự đang là θ khác θ0 thì ta có "(Wn - θ) / Sn → n(0,1)". 
+>
+>
+>
+> Khi đó (Wn - θ0)/Sn = (Wn - θ + θ - θ0)/Sn = (Wn - θ)/Sn + (θ - θ0)/Sn 
+>
+>
+>
+> hạng tử (Wn - θ)/Sn → Z\~ n(0,1)
+>
+>
+>
+> hạng tử (θ - θ0)/Sn, thì vì Sn trong phần trên được đặt cho một estimator của σn hội tụ về σn ("..In such a case, we look for an estimate Sn of σn with the property that σn/Sn converges in probability to 1") nên Sn → σn và σn thì lại → 0 Do ta đang dùng một statistic mà có tính chất Wn - θ / Sn → n(0,1) và với tính chất này, thì Var(Wn) phải hội tụ về 0
+>
+>
+>
+> Do đó tùy vào (θ - θ0) dương hay âm mà (θ - θ0)/Sn sẽ → ∞ hoặc -∞
+>
+>
+>
+> Khiến tổng hai hạng tử cũng sẽ → Z\~ n(0,1) + ∞ = ∞ hoặc Z\~ n(0,1) -∞ = -∞
+>
+>
+>
+> Từ đó under H1, P(reject H0) = P(|Zn| ≥ z\_α/2) = P(Zn ≤ -z\_α/2 or Zn ≥ z\_α/2) → P(-∞ &lt; -z\_α/2 or z\_α/2 &lt; ∞) và xác xuất này dĩ nhiên = 1.
+>
+>
+>
+> Như vậy mục đích cuối cùng là nói: Giả sử ta muốn alpha = 0.01 đi, cái test rule xây dựng theo kiểu này sẽ có đặc điểm: 
+>
+>
+>
+> Nếu H0 là đúng thì xác suất mắc Type 1 error sẽ nhỏ tiệm cận level 0.01 tức là tốt, good
+>
+>
+>
+> Còn nếu H1 là đúng thì cái test rule này sẽ cũng là cái tiệm cận power 1 với mọi θ, tức cũng là là trùm luôn, là dĩ nhiên cũng tốt.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú của bạn cực kỳ chính xác, chi tiết và làm nổi bật được những điểm mấu chốt dễ sai như sự khác biệt về điều kiện hội tụ dưới H0 và H1. Để hoàn hảo hơn, bạn có thể giải thích rõ thêm định lý Slutsky khi kết hợp giới hạn của hai hạng tử (một hội tụ phân phối, một hội tụ xác suất ra vô cùng).
+
+**🔗 See also:** [Kiểm định giả thuyết tối ưu](./83_methods_of_evaluating_test.md#node-i8kwc7p) · [Khái niệm hàm công suất kiểm định](./83_methods_of_evaluating_test.md#node-bksfmes)
 
 <br>
 
