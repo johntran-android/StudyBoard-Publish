@@ -2052,6 +2052,8 @@
 
 <a id="node-x3ah7f9"></a>
 
+###### Example 8.2.9 Acceptance Sampling
+
 <p align="center"><kbd><img src="assets/96oh1s4y0r.png" width="80%"></kbd></p>
 
 > [!NOTE]
