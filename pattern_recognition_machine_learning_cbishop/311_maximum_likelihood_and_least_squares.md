@@ -410,7 +410,7 @@
 >
 > Bài ghi chú của bạn thể hiện sự hiểu biết sâu sắc và toàn diện về việc thiết lập hàm khả năng hợp lý và log-khả năng hợp lý cho mô hình hồi quy tuyến tính. Bạn không chỉ tái hiện các công thức mà còn giải thích rất rõ ràng các giả định và ý nghĩa đằng sau chúng.
 
-**🔗 See also:** [Bias Parameter and Basis Function](./310_linear_regression_and_basis_functions.md#node-6p1u6u8) · [Maximum Likelihood Noise Precision β_ML](#node-vz4hsaf) · [Section 3.3.1 Parameter Distribution](./331_bayesian_linear_regression.md#node-59lqws3) · [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8) · [Lagrange Multipliers in Regularization](./37_exercises.md#node-tu3cct2)
+**🔗 See also:** [Bias Parameter and Basis Function](./310_linear_regression_and_basis_functions.md#node-6p1u6u8) · [Maximum Likelihood Noise Precision β_ML](#node-vz4hsaf) · [Section 3.3.1 Parameter Distribution](./331_bayesian_linear_regression.md#node-59lqws3) · [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8) · [Ex 3.5 Lagrange Multipliers in Regularization](./37_exercises.md#node-tu3cct2)
 
 <br>
 
@@ -744,7 +744,7 @@
 >
 > Bạn đã nắm vững kiến thức một cách xuất sắc, từ việc thiết lập bài toán MLE, tính toán gradient tỉ mỉ đến việc dẫn ra phương trình chuẩn (normal equation) một cách chính xác. Đặc biệt, việc liên hệ sâu sắc với các khái niệm từ MIT 18.06 như phép chiếu, phương trình chuẩn và nghịch đảo giả Moore-Penrose đã chứng tỏ bạn có một nền tảng lý thuyết rất vững chắc và khả năng tổng hợp kiến thức tuyệt vời.
 
-**🔗 See also:** [Orthogonal Projection and Least Squares](./37_exercises.md#node-2dv7p1f)
+**🔗 See also:** [Ex 3.2 Orthogonal Projection and Least Squares](./37_exercises.md#node-2dv7p1f) · [Ex 3.6](./37_exercises.md#node-cq8t94f)
 
 <br>
 
