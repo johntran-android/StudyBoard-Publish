@@ -1,6 +1,6 @@
 # 3.7 Exercises
 
-📊 **Progress:** `3` Notes | `4` Screenshots | `3` AI Reviews
+📊 **Progress:** `4` Notes | `5` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-rasw876"></a>
@@ -9,7 +9,7 @@
 
 <a id="node-2dv7p1f"></a>
 
-## Orthogonal Projection and Least Squares
+## Ex 3.2 Orthogonal Projection and Least Squares
 
 <p align="center"><kbd><img src="assets/lg2vx7zrt3.png" width="80%"></kbd></p>
 
@@ -103,7 +103,7 @@
 
 <a id="node-tu3cct2"></a>
 
-### Lagrange Multipliers in Regularization
+### Ex 3.5 Lagrange Multipliers in Regularization
 
 <p align="center"><kbd><img src="assets/8np4ha463u5.png" width="80%"></kbd></p>
 
@@ -982,6 +982,438 @@
 > **🤖 AI Feedback** — ✅ Score: **100/100**
 >
 > Bài viết trình bày lời giải vô cùng chi tiết, chính xác và có tư duy ký hiệu rất mạch lạc khi phân biệt rõ vector và scalar. Các phần mở rộng liên hệ với LOTUS và Maximum Likelihood thể hiện sự hiểu biết sâu sắc và toàn diện về bản chất toán học của bài toán.
+
+<br>
+
+<a id="node-cq8t94f"></a>
+
+##### Ex 3.6
+
+<p align="center"><kbd><img src="assets/orzwo0hrgqn.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Giải nhanh bài này, bài này là bối cảnh bài toán dự đoán (từ một input vector **x**) ra nhiều target value, có nghĩa là ta sẽ có **t** = y(**x**) là vector.
+>
+>
+>
+> Quy ước: Xuyên suốt repo này để khỏi gõ Latext rườm ra, mình gõ thường và quy ước nhau T nếu đứng sau matrix **W** tự hiểu là **"W** **tranpose"**. Còn **T**, hay T1, T2,...là chỉ random variable
+>
+>
+>
+> Đề bài nói rằng là ta sẽ vẫn dựa trên giả định: **T** \~ f(**t**|**W**, **Σ**) = 𝒩(**t**|y(**W**,**x**), **Σ**) với y(**W**,**x**) = **W**TΦ(**x**).
+>
+>
+>
+> Đi tìm MLE của **W**
+>
+>
+>
+> Đầu tiên nên nói vài lời liên hệ với bài toán point estimation của Statistical Inference Casella để: Trong chapter 9, ta học về point estimation, với vấn đề đặt ra là, giả sử ta có một observed value **x** của random sample **X** = (X1,..Xn) với Xi \~ f(x|θ), làm sao để estimate θ. Đây gọi là bài toán point estimation, vì nhiệm vụ là đi xây dựng một hàm số của sample W(**X**) (gọi là estimator) để lắp giá trị quan sát được của **X** vào thì ta có W(**x**) là estimate cho θ.
+>
+>
+>
+> Vậy thì theo định nghĩa của estimator, bất cứ cái hàm nào của sample cũng có thể dùng, nhưng tốt hay không thì chưa chắc. Do đó, trong sách Casella dạy ta về 3 loại: Method of Moment estimator, Maximum Likelihood estimator và Bayes estimator.
+>
+>
+>
+> Thế thì như định nghĩa, estimator W(**X**) đơn giản chỉ là một function của sample **X**, vậy ML estimator là function gì? Câu trả lời là function này: argmax\_Θ L(θ|**X**). ý nghĩa: Nhận input **X**, tìm θ ∈ Θ (parameter space) sao cho L(θ|**X**) đạt giá trị max thì trả ra. Đồng nghĩa, estimator này là nghiệm của bài toán tối ưu: maximize (over θ ∈ Θ) L(θ|**X**). Và ta thấy, đây vẫn chỉ là một hàm số của **X** (nhận vào **X**, tìm θ sao cho maximize L, trả θ đó ra)
+>
+>
+>
+> Vậy L(θ|**X**) là gì. Theo định nghĩa, người ta đặt ra hàm L(θ|**x**), là hàm của θ (tức input là θ) mang ý nghĩa là: với θ đưa vào, thì dựa trên data quan sát được thấy **X** = **x** thì độ hợp lí của θ là bao nhiêu. Ví dụ, L(θ=3|**x**=(1,2)) = α sẽ được hiểu là dựa trên việc ta thấy x = (1,2) thì độ hợp lí của θ = 3 là α, với θ = 4 thì có thể độ hợp lí cao hơn. Và ta muốn tìm θ có độ hợp lí cao nhất.
+>
+>
+>
+> Và đó là ý nghĩa của độ hợp lí, còn giá trị của nó, thì người ta đặt (vì họ định nghĩa nên họ có quyền) là bằng f(**x**|θ). Là sao? Có nghĩa là độ hợp lý của θ dựa trên quan sát **X**=**x** sẽ bằng giá trị của joint pdf của **X** tại observed data **x**.
+>
+>
+>
+> Thành ra bài toán tìm θ^ML sẽ là maximize\_θ f(**x**|θ). Và với tính iid, các random sample X1,..Xn đều mutually independent, và identically distributed, tức là có cùng distributoin. Thành ra f(**x**|θ) có thể tách thành tích các marginal pdf (y như X, Y độc lập thì fX,Y(x,y) = fX(x) fY(y) và fX, fY lại là cùng một hàm pdf): f(**x**|θ) = Πi=1:n f(xi|θ)
+>
+>
+>
+> Vậy quay lại bài toán này, ta cơ bản ta đang giả định rằng, ra có một random sample (**T**1, **X**1), (**T**2, **X**2),...(**T**N, **X**N) có observed data là (**t**1, **x**1), (**t**2, **x**2)...(**t**N, **x**N), và (**T**i, **X**i) tuân theo một population distribution f(**t**,**x**|θ) nào đó. Và ta sẽ đi giải bài toán point estimate θ.
+>
+>
+>
+> Tuy nhiên, với bối cảnh ta cần đưa ra hàm dự đoán t từ một input x đã biết chứ không phải là đi xây một generative model giúp sampling ra các giá trị t,X mới, nó sẽ là bài toán khác. Nên ta sẽ COI **X** NHƯ FIX, VÀ chỉ coi T là random variable thôi. Nên bài toán trở thành ta có random sample sẽ là **T**|**x**1,..**x**N = **T**1|**x**1, **T**2|**x**2,....**T**n|**x**n có observed data là **t**|**x**1,..**x**N = **t**1|**x**1,...**t**N|**x**N. Đeo theo **x** chỉ là thể hiện sự phụ thuộc của **t** vào từng **x**, chứ không có gì phức tạp cứ coi như ta có random sample **T** = (**T**1,...**T**n) với observed data **t** = (**t**1,....**t**n) (cho giống setup của bài toán thống kê suy luận ở trên, để ta thấy cách làm thật ra là y như nhau, nhờ đó thấy bài toán machine learning này chỉ là bài toán point estimation của statistial inference)
+>
+>
+>
+> (điểm chú ý là vì **T**1,...**T**N ở đây là random vector, nên khi gom chúng lại, thì **T** là một random matrix, nhưng cũng ko quan trọng)
+>
+>
+>
+> Điểm thứ hai, với bài toán inference ra θ, ta phải giả định f(x|θ) là (pdf/pmf) của phân phối gì. thì đó mới có hàm f mà xài. Ví dụ ta giả định f là normal pdf, thì θ là μ, σ² và f(x|θ) = (1/√2πσ²) exp(-(x-μ)^2/2σ²), để mà hình dạng (công thức) của hàm likelihood. Thì ở đây cũng vậy, ta sẽ giả định dạng của để bài toán trở nên khả thi, ta phải đặt ra giả định của phân phối T. Và giả định đó chính là: **T** \~ f(**t**|**W**, **Σ**) = 𝒩(**t**|y(**W**,**x**), **Σ**) với y(**W**,**x**) = **W**TΦ(**x**)
+>
+>
+>
+> Và như vậy bài toán cứ theo phương pháp của bài toán statistical inference nói ở trên mà làm thôi:
+>
+>
+>
+> θ của f(x|θ) ở đây tương ứng với cặp matrix **W**, **Σ**.
+>
+>
+>
+> observed data **x** thì ở đây chính là giá trị của (**t**1 **x**1), (**t**2, **x**2),....(**t**N, **x**N)
+>
+>
+>
+> Và θ^ML là solution của bài toán maximize L(θ|**x**) = f(**x**|θ) = Πi=1:N f(xi|θ)
+>
+>
+>
+> thì ở đây tương ứng với:
+>
+>
+>
+> **W**^\_ML, **Σ**^\_ML sẽ là solution của bài toán maximize L(**W**, **Σ**|(**t**1 **x**1), (**t**2, **x**2),....(**t**N, **x**N))
+>
+>
+>
+> = f(**t**1, **t**2,...,**t**N | **W**, **Σ**, **x**1,..**x**N)
+>
+>
+>
+> Và cũng vì **T**1,...**T**N iid nên join pdf của chúng cũng tách thành tích marginal pdf:
+>
+>
+>
+> .. = Πi=1:N f(**t**i | **W**, **Σ**, **x**i)
+>
+>
+>
+> Vậy bài toán tối ưu cần giải là:
+>
+>
+>
+> maximize (over **W**, **Σ**) {Πi=1:N f(**t**i | **W**, **Σ**, **x**i)}
+>
+>
+>
+> ---
+>
+>
+>
+> Và để giải bài toán tối ưu, một cách ta luôn làm là dùng hàm monotone để chuyển bài toán thành tương đương dễ giải hơn, để giải bài này sẽ suy ra nghiệm bài gốc. ở đây ta dùng hàm ln: bài toàn tương đương là maximize ln likelihood:
+>
+>
+>
+> maximize (over **W**, **Σ**) **ln** {Πi=1:N f(**t**i | **W**, **Σ**, **x**i)}
+>
+>
+>
+> Xét hàm objective, dùng tính chát hàm ln: ln của tích = tổng của ln:
+>
+>
+>
+> ln {Πi=1:N f(**t**i | **W**, **Σ**, **x**i)} = Σi=1:N ln {f(**t**i | **W**, **Σ**, **x**i)}
+>
+>
+>
+> đổi sang biến chạy là n và tự hiểu n chạy từ 1 tới N cho gọn
+>
+>
+>
+> Σn ln {f(**t**n | **W**, **Σ**, **x**n)}
+>
+>
+>
+> bỏ pdf của **t** vô: f(**t**n | **W**, **Σ**, **x**n) = 𝒩(**t**| **W**TΦ(**x**), **Σ**)
+>
+>
+>
+> (Xem link tới note của phần nói về pdf hàm D-dimensional normal)
+>
+>
+>
+> = \[(2π)^-D/2\] \[1/|**Σ**|^1/2\] exp\[-(**t** - **W**TΦ(**x**))T **Σ**inv (**t** - **μ**)/2\]
+>
+>
+>
+> Đặt \[(2π)^-D/2\] là c1 cho gọn,
+>
+>
+>
+> Ta có:
+>
+>
+>
+> Σn ln { f(**t**n | **W**, **Σ**, **x**n) }
+>
+>
+>
+> = Σn ln { c1 \[1/|**Σ**|^1/2\] exp\[-(**t**n - **W**TΦ(**x**n))T **Σ**inv (**t**n - **W**TΦ(**x**n))/2\] }
+>
+>
+>
+> = Σn ( ln c1 + ln \[|**Σ**|^-1/2\] + ln exp\[-(**t**n - **W**TΦ(**x**n))T **Σ**inv (**t**n - **W**TΦ(**x**n))/2\] } )
+>
+>
+>
+> = N ln c1 + Σn (-1/2 ln |**Σ**|) - Σn \[ (**t**n - **W**TΦ(**x**n))T **Σ**inv (**t**n - **W**TΦ(**x**n))/2 \]
+>
+>
+>
+> = N ln c1 - (N/2) ln |**Σ**| - (1/2) Σn (**t**n - **W**TΦ(**x**n))T **Σ**inv (**t**n - **W**TΦ(**x**n)
+>
+>
+>
+> Tiếp tục chuyển thành bài toán tương đương bằng cách bỏ constant
+>
+>
+>
+> = - (N/2) ln |**Σ**| - (1/2) Σn (**t**n - **W**TΦ(**x**n))T **Σ**inv (**t**n - **W**TΦ(**x**n)
+>
+>
+>
+> Tới đây, bài toán là maximize {-(N/2) ln |**Σ**| - (1/2) Σn (**t**n - **W**TΦ(**x**n))T **Σ**inv (**t**n - **W**TΦ(**x**n) }
+>
+>
+>
+> Với bài toán tối ưu, ta có thể giải theo từng biến, tức maximize over **W** trước để tìm **W**\_ML và khi làm vậy ta coi **Σ** như constant. Do đó lại tiếp tục bỏ constant đi
+>
+>
+>
+> maximize\_**W** {-(1/2) Σn (**t**n - **W**TΦ(**x**n))T **Σ**inv (**t**n - **W**TΦ(**x**n) }
+>
+>
+>
+> Biến đổi hàm objective, để cho gọn **A** = **W**TΦ(**x**n) ⇒ **A**T = Φ(**x**n)T**W**, **B** = **Σ**inv
+>
+>
+>
+> \-(1/2) Σn (**t**n - **A**)T **B** (**t**n -**A**) = -(1/2)\[(**t**n)T**B** - **A**T**B**)(**t**n -**A**)\]
+>
+>
+>
+> = -(1/2) Σn \[(**t**n)T**Bt**n - **A**T**Bt**n - (**t**n)T**BA** + **A**T**BA**\]
+>
+>
+>
+> **A**T**Bt**n là scalar, nên = \[**A**T**Bt**n\]T = (**t**n)T**B**T**A**, và vì **B** là **Σ**inv, nên nó đối xứng do covariance matrix đối xứng và nghịch đảo của matrix đối xứng cũng đối xứng nên .. = (**t**n)T**BA**
+>
+>
+>
+> = -(1/2) Σn \[(**t**n)T**Bt**n - **2**(**t**n)T**BA** + **A**T**BA**\]
+>
+>
+>
+> = -(1/2) Σn \[**A**T**BA** - **2**(**t**n)T**BA** + (**t**n)T**Bt**n\]
+>
+>
+>
+>  Thay **A**, **B** vào lại:
+>
+>
+>
+> = -(1/2) Σn \[Φ(**x**n)T **W Σ**inv **W**T Φ(**x**n) - **2**(**t**n)T **Σ**inv **W**T Φ(**x**n) + (**t**n)T **Σ**inv **t**n\]
+>
+>
+>
+> (nhớ quy ước T ở đây đều là 'tranpose', không phải biến T gì đâu, và Σ đầu là tổng, **Σ** đậm mà matrix **Σ**)
+>
+>
+>
+> = -(1/2) Σn \[Φ(**x**n)T **W Σ**inv **W**T Φ(**x**n) - **2**(**t**n)T **Σ**inv **W**T Φ(**x**n) + (**t**n)T **Σ**inv **t**n\]
+>
+>
+>
+> ---
+>
+>
+>
+> Nhiệm vụ bây giờ là dùng điều kiện tối ưu bậc nhất để cho stationary point: Cho đạo hàm theo **W** của hàm trên = 0
+>
+>
+>
+> Để tìm đạo hàm đối với matrix **W** của hàm objective dài thòn này, là sao đây?
+>
+>
+>
+> Để cho gọn mắt, ta lại mượn các kí hiệu **A**, **B**, **u**, **v**, **z** để ta xét hàm sau đây: f(**A**) = **u**T **A** **B** **A**T **u** - 2 **v**T **B** **A**T **z**
+>
+>
+>
+> Giải tìm ∇f theo cách làm đã học trong MIT 18s096: Cố gắng đưa df thành dạng linear operator act on d**A**:
+>
+>
+>
+> df = **u**T (**A** + d**A**) **B** (**A** + d**A**)T **u** - 2 **v**T **B** (**A** + d**A**)T **z** - \[**u**T **A** **B** **A**T **u** - 2 **v**T **B A**T **z** \]
+>
+>
+>
+> = **u**T (**A B** + d**A B**) \[**A**T + (d**A**)T\] **u** - 2 **v**T **B** \[**A**T + (d**A**)T\] **z** - **u**T **A** **B** **A**T **u** + 2 **v**T **B A**T **z**
+>
+>
+>
+> = (**u**T **A B** + **u**T d**A B**) \[**A**T **u** + (d**A**)T **u**\] - 2 **v**T **B A**T **z** - 2 **v**T **B** (d**A**)T **z** - **u**T **A** **B** **A**T **u** + 2 **v**T **B A**T **z**
+>
+>
+>
+> = **u**T **A B A**T **u** + **u**T d**A B A**T **u** + **u**T **A B** (d**A**)T **u** + **u**T d**A B** (d**A**)T **u** - 2 **v**T **B A**T **z** - 2 **v**T **B** (d**A**)T **z** - **u**T **A** **B** **A**T **u** + 2 **v**T **B A**T **z**
+>
+>
+>
+> Cancel out, và bỏ đi term bậc cao **u**T d**A B** (d**A**)T **u**
+>
+>
+>
+> = **u**T d**A B A**T **u** + **u**T **A B** (d**A**)T **u** - 2 **v**T **B** (d**A**)T **z**
+>
+>
+>
+> hai cái term đầu là scalar, và transpose cái đầu sẽ ra cái sau
+>
+>
+>
+> = 2 **u**T **A B** (d**A**)T **u** - 2 **v**T **B** (d**A**)T **z**
+>
+>
+>
+> = 2 **u**T **A B** (d**A**)T **u** - 2 **v**T **B** (d**A**)T **z**
+>
+>
+>
+> Tới đây nhận thấy cả term cuối cũng là scalar, nên nguyên cụm df trên cái trên là scalar, và với scalar α thì α = trace(α), nên ta có df =:
+>
+>
+>
+> tr\[2 **u**T **A B** (d**A**)T **u** - 2 **v**T **B** (d**A**)T **z**\]
+>
+>
+>
+> dùng tính tuyến tính của trace
+>
+>
+>
+> = tr\[2 **u**T **A B** (d**A**)T **u**\] - tr\[2 **v**T **B** (d**A**)T **z**\]
+>
+>
+>
+> Dùng tính xoay vòng của trace
+>
+>
+>
+> = tr\[2 **uu**T **A B** (d**A**)T\] - tr\[2 **zv**T **B** (d**A**)T \]
+>
+>
+>
+> = tr\[2 **uu**T **A B** (d**A**)T - 2 **zv**T **B** (d**A**)T \]
+>
+>
+>
+> = tr\[2 (**uu**T **A B** - **zv**T **B**) (d**A**)T \]
+>
+>
+>
+> Dùng tính chất trace(**X**) = tr(**X**T)
+>
+>
+>
+> = tr\[2 (d**A**) (**uu**T **A B** - **zv**T **B**)T\]
+>
+>
+>
+> lại dùng tính xoay vòng
+>
+>
+>
+> = tr\[2 (**uu**T **A B** - **zv**T **B**)T (d**A**)\]
+>
+>
+>
+> Tới đây dùng kiến thức tr(**X**T **Y**) chính là **X** . **Y** (inner product của hai matrix X và Y) (xem link tới bài giảng của MIT 18s096) do đó ở trên chính là
+>
+>
+>
+> 2(**uu**T **A B** - **zv**T **B**) . (d**A**)
+>
+>
+>
+> Và đây inner product của chính là linear operator, nên kết quả này chính là một linear operator act on d**A**, giúp cho phép kết luận ∇f = -(1/2) Σn 2 (**uu**T **A B** - **zv**T **B**) = - Σn (**uu**T **A B** - **zv**T **B**)
+>
+>
+>
+> ---
+>
+>
+>
+> Áp dụng kết quả này, gradient của objective là:
+>
+>
+>
+> \- Σn (**uu**T **A B** - **zv**T **B**)  
+>
+>
+>
+> Thay **u** = Φ(**x**n), **A** = **W**, **B** = **Σ**inv, **z** = Φ(**x**n), **v** = **t**n
+>
+>
+>
+> \- Σn (Φ(**x**n) Φ(**x**n)T **W Σ**inv - Φ(**x**n) (**t**n)T **Σ**inv)   
+>
+>
+>
+> Cho bằng 0: Σn (Φ(**x**n) Φ(**x**n)T **W Σ**inv - Φ(**x**n) (**t**n)T **Σ**inv) = 0
+>
+>
+>
+> ⇔ Σn Φ(**x**n) Φ(**x**n)T **W Σ**inv = Σn Φ(**x**n) (**t**n)T **Σ**inv
+>
+>
+>
+> ⇔ \[ Σn Φ(**x**n) Φ(**x**n)T \] **W Σ**inv = \[Σn Φ(**x**n) (**t**n)T\] **Σ**inv
+>
+>
+>
+> ⇔ \[ Σn Φ(**x**n) Φ(**x**n)T \] **W** = \[Σn Φ(**x**n) (**t**n)T\]
+>
+>
+>
+> ⇔ **W** = \[Σn Φ(**x**n) Φ(**x**n)T\]inv \[Σn Φ(**x**n) (**t**n)T\]
+>
+> Đây chính là **W**\_ML
+>
+>
+>
+> ---
+>
+>
+>
+> So với kết quả 3.15, **w**ML = (**Φ**T**Φ**)inv **Φ**T**t**
+>
+>
+>
+> Hiểu như sau, còn nhớ trong MIT 18.06, trong 4 góc nhìn nhân matrix AB, góc nhìn thứ 4 là ta coi AB là tổng các rank 1 matrix tạo bởi cột i của A và hàng i của B: Σi \[cột i của A\] outer product \[hàng i của B\], giúp ta nhìn ra **Φ**T**Φ cũng chính là** Σn Φ(**x**n) Φ(**x**n)T, vì design matrix được define là các hành của nó chính là Φ(**x**1)T, Φ(**x**2)T,..., nên các cột của **Φ**T chính là Φ(**x**1), Φ(**x**2).
+>
+>
+>
+> Như vậy **W** = (**Φ**T**Φ**)inv \[Σn Φ(**x**n) (**t**n)T\]
+>
+>
+>
+> Lại dùng góc nhìn đó ta thấy Σn Φ(**x**n) (**t**n)T chính là **Φ**T \[matrix có các hàng là (**t**1)T,...(**t**N)T\]
+>
+>
+>
+> Đặt matrix có các hàng là (**t**1)T,...(**t**N)T là matrix **H**, thì ta có: 
+>
+>
+>
+> **W**\_ML = (**Φ**T**Φ**)inv **Φ**T **H**, có thể thấy nó giống (**Φ**T**Φ**)inv **Φ**T**t**, chỉ là thay matrix **H** bởi **t** 
+>
+>
+>
+> Tới đây coi như giải xong phần 1, tính MLE của **M**
+
+> [!TIP]
+> **🤖 AI Feedback** — ⚠️ Score: **85/100**
+>
+> Bài viết rất xuất sắc và chi tiết trong việc giải thích bản chất thống kê cũng như biến đổi vi phân ma trận cực kỳ chuẩn xác để tìm ra W_ML. Tuy nhiên, bạn mới chỉ hoàn thành phần 1 mà chưa giải quyết yêu cầu thứ hai của đề bài là chứng minh công thức ước lượng MLE cho ma trận hiệp biến Γ.
+
+**🔗 See also:** [Maximum Likelihood and Gradient](./311_maximum_likelihood_and_least_squares.md#node-ogc31vz) · [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj) · [linked note *(MIT 18S096 Matrix Calculus for ML)*](../mit_18s096_matrix_calculus_for_ml/lec_4_part_1_gradient_and_inner_products_in_other_vector_spaces.md#node-pkow4ed)
 
 <br>
 
