@@ -235,7 +235,7 @@
 >
 > Bài phân tích của bạn rất sâu sắc và chính xác, thể hiện sự hiểu biết vững vàng về cơ sở toán học và trực giác hình học của regularization, đặc biệt là sự khác biệt giữa L1 và L2. Mặc dù rất chi tiết và đúng, bạn có thể cân nhắc cô đọng một số phần để ghi chú của mình súc tích hơn.
 
-**🔗 See also:** [Lagrange Multipliers in Regularization](./37_exercises.md#node-tu3cct2)
+**🔗 See also:** [Ex 3.5 Lagrange Multipliers in Regularization](./37_exercises.md#node-tu3cct2)
 
 <br>
 
