@@ -133,6 +133,8 @@
 >
 > β(θ) = 0 ∀ θ ∈ Θ0 và β(θ) = 1 ∀ θ ∈ Θ0c. Thì đó là hàm β lí tưởng.
 
+**🔗 See also:** [Kiểm định giả thuyết thống kê](./103_hypothesis_testing.md#node-sh74ft0)
+
 <br>
 
 <a id="node-qxpdaeg"></a>
@@ -1441,7 +1443,7 @@
 > define cái rule theo Z: Reject H0 nếu |Xbar-θ0| ≥ (z_α/2)/√n (z_α/2 là thứ có thể tra
 > bảng được, thì ta sẽ có một size α LRT)
 
-**🔗 See also:** [Kiểm định LRT Phân phối Chuẩn](./82_method_of_finding_tests.md#node-kbapjux)
+**🔗 See also:** [Kiểm định LRT Phân phối Chuẩn](./82_method_of_finding_tests.md#node-kbapjux) · [Asymptotic Normality of MLE](./103_hypothesis_testing.md#node-l86tt7u)
 
 <br>
 
@@ -2305,7 +2307,7 @@
 > đó Uniformly Most Powerfull (thằng có xác suất Type II Error thấp nhất) thì
 > nó được gọi là **UMP level α test.**
 
-**🔗 See also:** [linked note](#node-o7dx7qm)
+**🔗 See also:** [Rủi ro kiểm định UMP](#node-o7dx7qm) · [Kiểm định giả thuyết thống kê](./103_hypothesis_testing.md#node-sh74ft0)
 
 <br>
 
@@ -5291,6 +5293,8 @@
 
 <a id="node-1te0ejj"></a>
 
+###### Kích thước kiểm định IUT
+
 <p align="center"><kbd><img src="assets/fg2esotmdav.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -5299,6 +5303,8 @@
 <br>
 
 <a id="node-9tj4tij"></a>
+
+###### Kiểm định giao-hợp
 
 <p align="center"><kbd><img src="assets/ka1zzifw36.png" width="80%"></kbd></p>
 
@@ -6243,6 +6249,8 @@
 
 <a id="node-678mezi"></a>
 
+###### P-value một phía của LRT
+
 <p align="center"><kbd><img src="assets/escjbgjeid5.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -6972,6 +6980,8 @@
 
 <a id="node-29b2q27"></a>
 
+###### Kiểm định chính xác Fisher
+
 <p align="center"><kbd><img src="assets/5sz5kd8ia6r.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -7300,6 +7310,8 @@
 
 <a id="node-wm8y6m7"></a>
 
+###### Hàm loss 0-1 tổng quát
+
 <p align="center"><kbd><img src="assets/oazgcvfcvdr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -7324,6 +7336,8 @@
 <br>
 
 <a id="node-zzb4ycu"></a>
+
+###### Cách tính hàm rủi ro
 
 <p align="center"><kbd><img src="assets/phaomwh7qyf.png" width="80%"></kbd></p>
 
@@ -7412,6 +7426,8 @@
 <br>
 
 <a id="node-o7dx7qm"></a>
+
+###### Rủi ro kiểm định UMP
 
 <p align="center"><kbd><img src="assets/6githtales9.png" width="80%"></kbd></p>
 
@@ -7547,11 +7563,15 @@
 
 <a id="node-n8tzfeq"></a>
 
+###### Hàm rủi ro của kiểm định
+
 <p align="center"><kbd><img src="assets/flanwb1rv0v.png" width="80%"></kbd></p>
 
 <br>
 
 <a id="node-9giw7k8"></a>
+
+###### Hàm tổn thất kiểm định
 
 <p align="center"><kbd><img src="assets/zzrf9bb45ea.png" width="80%"></kbd></p>
 
