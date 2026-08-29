@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1787955939175,
+  "publishedAt": 1787962604791,
   "sections": [
     {
       "title": "📋 Overview",
@@ -315,6 +315,12 @@
       "imageCount": 5
     },
     {
+      "title": "4.1 Discriminant Functions",
+      "path": "pattern_recognition_machine_learning_cbishop/41_discriminant_functions.md",
+      "noteCount": 1,
+      "imageCount": 3
+    },
+    {
       "title": "Appendix C. Matrices",
       "path": "pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md",
       "noteCount": 19,
@@ -327,6 +333,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 387,
-  "totalImages": 574
+  "totalNotes": 388,
+  "totalImages": 577
 }
