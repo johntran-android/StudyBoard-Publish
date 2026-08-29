@@ -105,6 +105,8 @@
 
 <a id="node-u0mzkrg"></a>
 
+#### Hướng tiếp cận phân loại
+
 <p align="center"><kbd><img src="assets/t2rq4fec1um.png" width="80%"></kbd></p>
 
 > [!NOTE]
