@@ -1,6 +1,6 @@
 # 12.5  Second-Order Conditions
 
-📊 **Progress:** `8` Notes | `12` Screenshots | `8` AI Reviews
+📊 **Progress:** `9` Notes | `15` Screenshots | `9` AI Reviews
 
 ---
 <a id="node-8arnxqj"></a>
@@ -951,6 +951,102 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Bài viết giải thích cực kỳ trực quan, chính xác từ bản chất hình học (lý do chuẩn hóa norm bằng 1 để tránh giá trị tiến về 0) cho đến các bước biến đổi đại số chi tiết. Điểm cộng lớn là cách liên hệ thực tế và giải thích phân rã vector rất dễ hiểu cho người tự học.
+
+<br>
+
+<a id="node-tn1n933"></a>
+
+###### Quadratic Growth Proof by Contradiction
+
+<p align="center"><kbd><img src="assets/prg79jzms3.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/q3f46ga7lm.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fgtbjjw1sl.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, đại khái là gs cho rằng ta sẽ chứng minh điều sau đây: là với mọi feasible sequence {zk} approaching x\* thì luôn có đặc điểm: f(zk) ≥ f(x\*) + (σ/4)||zk - x\*||^2 (1)
+>
+>
+>
+> Là sao? Chuỗi điểm di chuyển sao cho luôn feasible và tiếp cận dần điểm x\* thì có thể hình dung đây là các con đường đi trong feasible set và hướng đến x\*. Và mình muốn kết luận rằng (1) vì như vậy cho thấy f(zk) luôn lớn hơn f(x\*), giúp kết luận x\* là strict local minimizer.
+>
+>
+>
+> Và để chứng minh cái này, sẽ dễ hơn nếu chứng minh phủ định của nó không thể xảy ra: Ta giả sử tồn tại một chuỗi {zk} thỏa f(zk) &lt; f(x\*) + (σ/4)||zk - x\*||^2 và chứng minh điều này dẫn đến mâu thuẫn.
+>
+>
+>
+> ---
+>
+>
+>
+> TIếp theo, đại khái là chưa có lập gì, chỉ là ông Nocedal làm động tác chuẩn bị: Đặt ra cái gọi là limiting direction d theo 12.68. Hiểu đại khái là: Như đã nói, ta có chuỗi điểm / quỹ đạo đi lòng vòng trong feasible set và hướng về x\*, thì dĩ nhiên zk sẽ tiến ngày càng sát x\*, thì ta sẽ hình dung như sau: Bắn tia laser từ x\* đến zk trên quỹ đạo này, thì khi zk chạy trên quỹ đạo, tia laser này kiểu như quay lòng vòng, nhưng khi zk tiến đến x\*, tia này sẽ ổn định dần và "converge" về một tia nằm cố định, và ta sẽ đặt cái vector d có độ dài unit là cái vector có hướng bởi tia laser cố định này. Có nghĩa là, ta chỉ đang định nghĩa, đặt tên cho một cái hướng nối x\* tới zk mà nó là kết quả của việc cái tia laser sẽ dần dần trở nên cố định khi zk tiến về x\*.
+>
+>
+>
+> Và theo bổ đề 12.2 cũng như định nghĩa của feasible direction ℱ(x\*) thì d là ∉ ℱ(x\*): ý này có thể hiểu là, về mặt trực giác, với d định nghĩa d sẽ là feasible direction tức là hướng mà khi đi từ x\*, sẽ giúp linearized ci (các constraint equality hoặc constraint inequality mà đang active tại x\*) không giảm.
+>
+>
+>
+> Cái này lập luận như sau: Đầu tiên nhớ lại định nghĩa của linearized feasible direction ℱ(x\*), là tập các hướng w sao cho: nếu đi theo hướng đó thì linearized equality constraint (linearized của ci(x) với i ∈ ℰ) và linearized inequality constraint mà đang active tại x\* (linearized của ci(x) với i ∈ ℐ, và ci(x\*) = 0) sẽ không đổi, và điều này thể hiện bởi với các i này thì ∇ci(x\*)Tw = 0 với i ∈ ℰ và ∇ci(x\*)Tw ≥ 0 với i ∈ 𝒜(x\*) ∩ ℐ. Nên để chứng minh d ở trên ∈ ℱ(x\*) ta cần chứng minh ∇ci(x\*)Td = 0 với i ∈ ℰ và ∇ci(x\*)Td ≥ 0 với i ∈ 𝒜(x\*) ∩ ℐ. (2)
+>
+>
+>
+> Thế thì ta đang gọi zk là feasible point, mà như vậy thì đương nhiên nó sẽ thỏa constraint, với equality constraint i ∈ ℰ thì ci(zk) = 0 và inequality constraint i ∈ ℐ thì ci(zk) ≥ 0. 
+>
+>
+>
+> Khai triển Taylor các hàm ci với i ∈ ℰ hoặc i ∈ 𝒜(x\*) ∩ ℐ, và evaluate tại zk:
+>
+>
+>
+> ci(zk) = ci(x\*) + ∇ci(x\*)T(zk-x\*) + o(||zk-x\*||) (o(||zk-x\*||) là tất cả các term bậc 2 trở lên)
+>
+>
+>
+> chia hai vế cho ||z-x\*||
+>
+>
+>
+> ci(z)/||z-x\*|| = ci(x\*)/||z-x\*|| + ∇ci(x\*)T(z-x\*)/||z-x\*|| + o(||z-x\*||)/||z-x\*||
+>
+>
+>
+> Nhận xét: 
+>
+>
+>
+> i) Hạng tử đầu tiên của vế phải, phải bằng 0, vì ta đang xét các hàm ci với i ∈ ℰ hoặc i ∈ 𝒜(x\*) ∩ ℐ, nên ci(x\*) = 0
+>
+>
+>
+> ii) Khi cho zk → x\* thì ||z-x\*|| → 0, nhưng o(||z-x\*||), chứa các term bậc cao của ||z-x\*|| sẽ còn tiến về 0 nhanh hơn, nên o(||z-x\*||)/||z-x\*|| → 0
+>
+>
+>
+> iii) Khi cho zk → x\*, thì ∇ci(x\*)T(z-x\*)/||z-x\*|| chính là trở thành ∇ci(x\*)Td theo định nghĩa của d ở trên
+>
+>
+>
+> Vậy khi zk → x\*, vế phải trở thành ∇ci(x\*)Td
+>
+>
+>
+> iv) Vì zk feasible nên với i ∈ ℰ, ci(zk) = 0 và với i ∈ 𝒜(x\*) ∩ ℐ thì ci(zk) ≥ 0, nên lim zk → x\* \[ci(z)/||z-x\*||\] cũng vậy
+>
+>
+>
+> Vậy ta có khi zk → x\* thì ∇ci(x\*)Td = 0 và ∇ci(x\*)Td ≥ 0 với mọi i ∈ 𝒜(x\*) ∩ ℐ.
+>
+>
+>
+> Và theo (2) thì ta kết luận d chính là ∈ ℱ(x\*)
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Bài viết thể hiện tư duy trực giác hình học xuất sắc (hình ảnh tia laser) và trình bày chứng minh toán học rất chặt chẽ, chính xác. Tuy nhiên, có một lỗi gõ máy nhỏ ở phần giữa khi ghi nhầm thành 'd là ∉ ℱ(x*)', mặc dù các bước chứng minh chi tiết bên dưới của bạn vẫn đi đúng hướng và kết luận đúng là 'd ∈ ℱ(x*)'.
 
 <br>
 
