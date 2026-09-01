@@ -1,6 +1,6 @@
 # 12.5  Second-Order Conditions
 
-📊 **Progress:** `9` Notes | `15` Screenshots | `9` AI Reviews
+📊 **Progress:** `10` Notes | `19` Screenshots | `10` AI Reviews
 
 ---
 <a id="node-8arnxqj"></a>
@@ -1047,6 +1047,580 @@
 > **🤖 AI Feedback** — ✅ Score: **95/100**
 >
 > Bài viết thể hiện tư duy trực giác hình học xuất sắc (hình ảnh tia laser) và trình bày chứng minh toán học rất chặt chẽ, chính xác. Tuy nhiên, có một lỗi gõ máy nhỏ ở phần giữa khi ghi nhầm thành 'd là ∉ ℱ(x*)', mặc dù các bước chứng minh chi tiết bên dưới của bạn vẫn đi đúng hướng và kết luận đúng là 'd ∈ ℱ(x*)'.
+
+<br>
+
+<a id="node-g5d51xq"></a>
+
+###### Lagrangian Function and Taylor Approximation
+
+<p align="center"><kbd><img src="assets/67j4yr21tto.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/vro8e0x65ai.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/t3to7mman2.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5dr0wy5mj6j.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Ok, note này ta sẽ hoàn thành phần chứng minh. Ôn lại chút xíu:
+>
+>
+>
+> Cái ta đang cố chứng minh là điều kiện đủ bậc hai của nghiệm bài toán tối ưu có ràng buộc: minimize f(x) s.t ci(x) = 0 với i ∈ ℰ và ci(x) ≥ 0 với i ∈ ℐ.
+>
+>
+>
+> Định lý này nói rằng nếu x\* có đặc điểm là quadratic form của Hessian của hàm Lagrangian tại x\* luôn dương với mọi critical cone direction w (wT ∇²\_xx ℒ(x\*, λ\*)w &gt; 0 ∀ w ∈ 𝒞(x\*, λ\*)) thì x\* chính là strict local minimizer (tức là x\* feasible và xét trong mọi điểm lân cận x\* thì f(x\*) là nhỏ nhất)
+>
+>
+>
+> Để tiện cho lát nữa, ta lấy ví dụ ta có 3 ràng buộc với một ràng buộc đẳng thức c1(x) = 0 và hai ràng buộc bất đẳng thức c2(x) ≥ 0, c3(x) ≥ 0 mà trong đó tại x\* chỉ có c2 active, tức c2(x\*) = 0 và c3(x\*) &gt; 0. Theo đó thì ta có chính là ℰ= {1}, ℐ = {2,3}, 𝒜(x\*) tức active set = set chứa index của ràng buộc đẳng thức và ràng buộc bất đẳng thức đang active tại x\*, sẽ là {1, 2}.
+>
+>
+>
+> Trong hình minh họa, constraint c2 active tại x\* nên x\* điểm mày xanh nằm trên đường màu tím (chính là bounadary của tập c2(x) ≥ 0) còn constraint c3 không active tại x\* nên x\* nằm sâu bên trong đường màu cam. (chú ý, ràng buộc bất đẳng thức sẽ yêu cầu x phải nằm trong nửa không gian mà vector gradient hướng vào, phân chia bởi các boundary).
+>
+>
+>
+> Cũng để tiện cho phần lập luận ta nói sẵn: Vì x\* được cho đã thỏa KKT, nên nó đã thỏa các điều kiện sau:
+>
+>
+>
+> Tồn tại λ\*i ≥ 0 với mọi i ∈ ℐ
+>
+>
+>
+> ∇ℒ(x\*, λ\*) = 0
+>
+>
+>
+> Σi∈ℰ∪ℐ λ\*ici(x\*) = 0
+>
+>
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> Thế thì để chứng minh ý tưởng tổng quát là vầy: Muốn chứng minh tại x\* (với đặc điểm đề bài cho) có f nhỏ nhất thì cũng giống như ta muốn chứng minh rằng, ta đang đứng trước là một cái thung lũng mà nơi thấp nhất là x\*.
+>
+>
+>
+> Vậy thì trước khi chứng minh điều này, note trước ta đã chuẩn bị chút xíu bằng lập luận rằng, dựa trên đề bài cho x\* có đặc điểm là với mọi critical cone direction w thì wT ∇²\_xx ℒ(x\*, λ\*)w đều &gt; 0 thì đương nhiên là, nếu xét mọi vector d trong critical cone có norm 1 (tức là chỉ khác nhau về hướng) thì nhất định phải có hướng nào đó mà dT ∇²\_xx ℒ(x\*, λ\*)d đạt giá trị nhỏ nhất, và ta đặt là σ. Điều này nôm na giống như việc ta soi thử xem khi đi về x\* từ các hướng khác nhau trong 360 hướng thì sẽ có một hướng mà theo hướng đó **mặt đất có độ cong nhỏ nhất**.
+>
+>
+>
+> Làm rõ thêm chút xíu chỗ này: Vì sao quadratic form dT ∇²\_xx ℒ(x\*, λ\*)d lại là **độ cong của mặt đất theo hướng d**: Hiểu thế này,
+>
+>
+>
+> Giả sử ta có hàm f(x) (hàm chung chung nào đó, ko ám chỉ hàm objective của bài toán này), là hàm đa biến (x là vector), thì bằng cách giới hạn hàm f theo một hướng p nào đó, tức là ta đặt ra hàm g(α) = f(x+αp), ta sẽ có hàm g là hàm đơn biến mà giá trị của nó sẽ là giá trị hàm f theo hướng vector p. Cái này giống y như f ban đầu là bề mặt đất nhấp nhô xung quanh chỗ ta đứng, còn g là ta xét sự nhấp nhô này khi đi trên một hướng duy nhất. Vậy thì độ dốc của hàm g thể hiện bởi đạo hàm của nó: g'(α) = d/dα g(α) = d/dα f(x+αp) = d/d(x+αp) f(x+αp) . d/dα (x+αp) (chain rule) = ∇f(x+αp)Tp. Và g'(α)|α=0, sẽ là độ dốc của hàm f theo phương p, tại điểm đang đứng (x) sẽ bằng ∇f(x+αp)Tp|α=0 = ∇f(x)Tp, đây chính là công thức của directional derivative của f theo hướng p.
+>
+>
+>
+> Còn độ cong? Ta xét đạo hàm của hàm g'(α), tức d/dα ∇f(x+αp)Tp = d/d(x+αp) ∇f(x+αp)Tp . d/dα(x+αp) = p∇²f(x+αp)Tp. Nên g''(α)|α=0 = p∇²f(x)Tp chính là đạo hàm của độ dốc = độ cong của hàm f theo hướng p tại x.
+>
+>
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> Thế thì, theo logic thông thường để chứng minh x\* là điểm thấp nhất, thấp hơn mọi điểm trong lân cận của nó (strict local minimizer) thì có một cách đó là chứng minh **khi ta đi từ bất kì hướng nào hướng về** x\* **thì hàm f cũng sẽ giảm một khoảng tối thiểu cũng phải bằng mức quy định bởi độ cong nhỏ nhất** (1), và điều này thể hiện bởi:
+>
+>
+>
+> Với mọi chuỗi điểm {z1,..zk} với k đủ lớn (tức zk đủ gần x\*) thì:
+>
+>
+>
+> f(zk) ≥ f(x\*) + (σ/4)||zk-x\*||^2 (2)
+>
+>
+>
+> Vì sao (2) sẽ thể hiện (1)?
+>
+>
+>
+> Là vì (2) ⇔ f(zk)- f(x\*) ≥ (σ/4)||zk-x\*||^2 nói lên rằng, với zk nào, chênh lệch độ lớn của f giữa zk và x\* cũng luôn là một khoảng từ (σ/4)||zk-x\*||^2 trở lên
+>
+>
+>
+> Và nghiệm ra sẽ thấy, điều này cũng có nghĩa là giả sử **đứng ở x\*, nhìn về zk**, và **cho zk càng ra xa dần** khiến ||zk-x\*|| tăng dần thì **chênh lệch độ cao** này sẽ **TĂNG** **NHANH** theo bình phương của ||zk-x\*||. Ngược lại cho zk càng tới gần x\* dần dần khiến ||zk-x\*|| giảm dần thì chênh lệch độ cao này sẽ giảm nhanh.
+>
+>
+>
+> Và ghi nhớ hình ảnh này, vì tí nữa ta sẽ dùng nó để bác bỏ giả định.
+>
+>
+>
+> Tóm lại hiểu đại khái là (2) sẽ cho thấy x\* luôn thấp hơn zk với mọi zk trong lân cận x\*
+>
+>
+>
+> ---
+>
+>
+>
+> Rồi, để chứng minh ta dùng phản chứng, giả sử tồn tại {zk} mà không thỏa (2): f(zk) &lt; f(x\*) + (σ/4)||zk-x\*||^2 ⇔ f(zk) - f(x\*) &lt; (σ/4)||zk-x\*||^2mang ý nghĩa là:
+>
+>
+>
+> (giống như ví von ở trên) **đứng từ x\* phóng tầm mắt ra nhìn về zk, và cho zk đi xa dần** (||zk-x\*|| tăng dần), thì **chênh lệch độ cao** (hàm f) giữa zk và x sẽ **TĂNG RẤT YẾU** (vì khi zk gần x\* thì ||zk-x\*||^2 sẽ rất nhỏ, và mức tăng hàm f lại còn phải bé hơn (σ/4)||zk-x\*||^2). Và ta sẽ chỉ ra điều này vô lý. **(xxx)**
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, để chuẩn bị, ta định nghĩa ra cái hướng d là cái hướng mà dù chuỗi zk chạy vòng vòng kiểu gì nhưng khi nó tiếp cận x\* thì cái hướng từ x\* đến zk sẽ được xác lập (xem lại note trước) Và ta cũng đã hiểu vì sao hướng d này sẽ là linearized feasible direction ℱ(x\*). Trong hình minh họa, d là vector màu xanh lá (hình dung từ x\* nhìn về zk, thì khi k từ 1,2,...thì hướng từ x tới zk sẽ quay qua quay lại nhưng dần ổn định khi zk tiến tới sát x\*)
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì vì zk feasible (đã nói chuỗi zk là chuỗi điểm feasible, tức là nó làm thành quỹ đạo chạy lòng vòng trong tập feasible, đồng nghĩa mọi điểm trên quỹ đạo đều thỏa constraint) nên nó thỏa constraint: ci(zk) = 0 với mọi i ∈ ℰ (constraint đẳng thức) và ci(zk) ≥ 0 với mọi i ∈ ℐ
+>
+>
+>
+> (trong hình mình minh họa một chuỗi {zk} (có thể có chuỗi khác tiếp cận x\* từ phía kia) chú ý, vì có ràng buộc đẳng thức, nên feasible point luôn phải nằm trên đường màu xanh c1(x) = 0, và luôn nằm trong nửa phần không gian (mà mũi tên ∇c2, ∇c3 chia vô) chia bởi đường màu cam và màu tím)
+>
+>
+>
+> Và λ\*i cũng luôn không âm (vì đây là ràng buộc phải thỏa của KKT, nói cách khác, vì x\* là điểm thỏa KKT, nên theo đó phải tồn tại λ\*i luôn không âm, và thỏa các điều kiện stationary, complementary của KKT) nên đương nhiên λ\*i ci(zk) cũng không âm và tổng Σi∈ℰ∪ℐ λ\*i ci(zk) cũng không âm: Σi∈ℰ∪ℐ λ\*i ci(zk) ≥ 0
+>
+>
+>
+> Mà Σi∈ℰ∪ℐ λ\*i ci(zk) đương nhiên có thể tách thành Σi∈𝒜(x\*) λ\*i ci(zk) + Σi∈ℐ∖𝒜(x\*) λ\*i ci(zk)
+>
+>
+>
+> (là sao? Là ta tách ra, thành cụm dính tới các inequality constraint + equality constraint đang active tại x\*, tức i∈𝒜(x\*) và cụm dính tới inequality constraint đang inactive tại x\*, tức ℐ∖𝒜(x\*) với ý nghĩa những i trong ℐ nhưng không trong 𝒜(x\*))
+>
+>
+>
+> Và theo complementary của KKT, với inequality constraint thì λ\*ici(x\*) = 0, nên nếu với i ∈ ℐ mà ci(x\*) &gt; 0 (inactive) thì λ\*i phải = 0
+>
+>
+>
+> ⇔ Σi∈ℰ∪ℐ λ\*i ci(zk) = Σi∈𝒜(x\*) λ\*i ci(zk) + Σi∈ℐ∖𝒜(x\*) 0 × ci(zk)
+>
+>
+>
+> ⇔ Σi∈ℰ∪ℐ λ\*i ci(zk) = Σi∈𝒜(x\*) λ\*i ci(zk)
+>
+>
+>
+> và dĩ nhiên Σi∈ℰ∪ℐ λ\*i ci(zk) ≥ 0 nên Σi∈𝒜(x\*) λ\*i ci(zk) ≥ 0
+>
+>
+>
+> Từ đó, khi ta xét hàm Lagrangian tại zk:
+>
+>
+>
+> Hàm Lagrangian có công thức ℒ(x, λ\*) = f(x) - Σi∈ℰ∪ℐ λ\*i ci(x), nên Lagrangian tại zk:
+>
+>
+>
+> ℒ(zk, λ\*) = f(zk) - Σi∈ℰ∪ℐ λ\*i ci(zk)
+>
+>
+>
+> Thay kết quả Σi∈ℰ∪ℐ λ\*i ci(zk) = Σi∈𝒜(x\*) λ\*i ci(zk)) ta có ở trên:
+>
+>
+>
+> ℒ(zk, λ\*) = f(zk) - Σi∈𝒜(x\*) λ\*i ci(zk)
+>
+>
+>
+> Và vì Σi∈𝒜(x\*) λ\*i ci(zk) ≥ 0 nên ℒ(zk, λ\*) ≤ f(zk) → 12.69
+>
+>
+>
+> Tức là trong bước này, cốt để chỉ ra rằng, cái chuỗi zk (mà ta đang giả sử là có tồn tại để tí nữa sẽ bị bác bỏ) sẽ có đặc điểm 12.69. Để dành đó tí xài.
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, ta mới quay lại nói về thằng vector d ở trên, là cái mà ta đã chứng minh rằng nó là liearized feasible direction. Tuy nhiên ta còn muốn chứng minh nó phải là critical cone direction nữa.
+>
+>
+>
+> Ôn lại nhanh hai cái này khác nhau chỗ nào: Hiểu nôm na thôi, linearized feasible direction ℱ(x\*) là hướng mà đi từ x\* theo hướng đó, hoặc từ đâu đó theo hướng đó tới x\*, thì hàm xấp xỉ tuyến tính của các constraint tại x\* không đổi.
+>
+>
+>
+> Trong ví dụ về c1, c2, c3 ta đang lấy thì có nghĩa nếu d thuộc ℱ(x\*) thì sẽ có thể là:
+>
+>
+>
+> men theo vách c1 (tức ∇c1(x\*)Tw = 0) đồng thời men theo vách hoặc đi vào trong constraint c2,c3: ∇c2(x\*)Tw ≥ 0, ∇c3(x\*)Tw ≥ 0.
+>
+>
+>
+> Nhưng nếu w là critical cone direction thì nó chỉ được men theo vách c1 (∇c1(x\*)Tw = 0) + men theo vách c2 (∇c2(x\*)Tw = 0), và men theo vách hoặc đi vào trong với c3 (∇c1(x\*)Tw ≥ 0
+>
+>
+>
+> Vậy cách chứng minh d phải là critical cone direction ta phải chứng minh với mọi active constraint ci thì ∇ci(x\*)Td đều phải bằng 0
+>
+>
+>
+> Ta mới giả sử d không phải là critical cone 𝒞\*(x\*, λ\*), thì **chắc chắn là tồn tại** một constrain nào đó **đang active** tại x\* (tức cj(x\*) = 0) nhưng ∇cj(x\*)Td &gt; 0, tức d lại không men theo vách cái constraint đó, thể hiện bởi:
+>
+>
+>
+> Tồn tại j ∈ 𝒜(x\*) ∩ ℐ sao cho λ\*j &gt; 0 và ∇cj(x\*)Td &gt; 0 
+>
+>
+>
+> (chú ý λ\*j &gt; 0 cũng đồng nghĩa là cj(x\*) = 0, vì điều kiện complementary)
+>
+>
+>
+> Điều này đồng nghĩa λ\*j ∇cj(x\*)Td &gt; 0 (12.70)
+>
+>
+>
+> Khi đó, ta sẽ khai triển Taylor hàm cj này tại x\*, và evaluate nó taị zk:
+>
+>
+>
+> cj(zk) = cj(x\*) + ∇cj(x\*)T(zk-x\*) + o(||zk-x\*||)
+>
+>
+>
+> (o(||zk-x\*||) là gì? Chính là chỉ tổng term bậc 2 trở lên của zk-x\*, ví dụ gồm (zk-x\*)T∇²cj(x\*)(zk-x\*) + term bậc 3 + term bậc 4,...Và khi zk tiến về x\*, ||zk-x\*|| nhỏ lại thì mấy cái term bậc cao này teo nhỏ về 0 nhanh hơn cả ||zk-x\*||, nên ta kí hiệu nó bởi small-o notation, chữ O nhỏ. Và tí nữa có nhân thêm λ\*j thì cái cục này vẫn teo về 0 nhanh hơn ||zk-x\*||, nên vẫn ghi nó là o(||zk-x\*||))
+>
+>
+>
+> ⇒ λ\*j cj(zk) = λ\*jcj(x\*) + λ\*j∇cj(x\*)T(zk-x\*) + λ\*j o(||zk-x\*||)
+>
+>
+>
+> ⇔ λ\*j cj(zk) = λ\*jcj(x\*) + λ\*j∇cj(x\*)T(zk-x\*) + o(||zk-x\*||)
+>
+>
+>
+> Vì cj đang active tại x\* nên cj(x\*) = 0 ⇒ λ\*jcj(x\*) = 0
+>
+>
+>
+> ..⇔ λ\*j cj(zk) = 0 + λ\*j∇cj(x\*)T(zk-x\*) + o(||zk-x\*||)
+>
+>
+>
+> ..⇔ λ\*j cj(zk) = λ\*j∇cj(x\*)T(zk-x\*) + o(||zk-x\*||)
+>
+>
+>
+> Tới đây ta lôi kết quả 12.69 ở trên ra lại:
+>
+>
+>
+> (12.69): ℒ(zk, λ\*) = f(zk) - Σi∈𝒜(x\*) λ\*i ci(zk)
+>
+>
+>
+> ⇔ Σi∈𝒜(x\*) λ\*i ci(zk) = f(zk) - ℒ(zk, λ\*) (chuyển vế đổi dấu)
+>
+>
+>
+> Vì λ\*j cj(zk) **chỉ là một hạng tử trong tổng các hạng tử** Σi∈𝒜(x\*) λ\*i ci(zk), và các hạng tử khác **đều không âm** nên:
+>
+>
+>
+> Σi∈𝒜(x\*) λ\*i ci(zk) ≥ λ\*j cj(zk)
+>
+>
+>
+> ⇔ f(zk) - ℒ(zk, λ\*) ≥ λ\*j cj(zk)
+>
+>
+>
+> ⇔ f(zk) - λ\*j cj(zk) ≥ ℒ(zk, λ\*)
+>
+>
+>
+> ⇔ ℒ(zk, λ\*) ≤ f(zk) - λ\*j cj(zk)
+>
+>
+>
+> Thay λ\*j cj(zk) = λ\*j∇cj(x\*)T(zk-x\*) + o(||zk-x\*||) ở trên vào:
+>
+>
+>
+> ℒ(zk, λ\*) ≤ f(zk) - λ\*j∇cj(x\*)T(zk-x\*) - o(||zk-x\*||) → 12.71
+>
+>
+>
+> Để đây tí xài tiếp
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, khai triển Taylor ℒ(zk, λ\*):
+>
+>
+>
+> ℒ(zk, λ\*) = f(x\*) + ∇ℒ(x\*, λ\*)T(zk-x\*) + O(||zk-x\*||^2) (3)
+>
+>
+>
+> ---
+>
+> Dừng lại tí chỗ này:
+>
+>
+>
+> Sao lần này lại là O to (Big O)? → là vì ta đang nói về ||zk-x\*||^2.
+>
+>
+>
+> Là sao: Là vì hồi nãy là o(||zk-x\*||) là ta ám chỉ những thứ bậc 2 trở lên của ||zk-x\*||, có tính chất teo lại về 0 nhanh hơn cả ||zk-x\*|| khi ||zk-x\*|| teo về 0)
+>
+>
+>
+> Còn ở đây O(||zk-x\*||^2) cũng chứ các term bậc 2,3... của ||zk-x\*||. Nhưng khi xét trên tương quan với ||zk-x\*||^2 thì khi ||zk-x\*||^2 nhỏ về 0, những term này, vì nó bao gồm term bậc 2 ((zk-x\*)T∇²cj(x\*)(zk-x\*)) nên nó cũng thu về 0 với tốc độ tương đương chứ không nhanh hơn.
+>
+>
+>
+> Nói tóm lại, là vì định nghĩa của o(t) là những thứ teo nhỏ về t nhanh hơn t, còn O(t) là những thứ đồng hạng với t. Thành ra với cùng một chuỗi (zk-x\*)T∇²cj(x\*)(zk-x\*) + term bậc 3 + term bậc 4...thì nó là o (small o) đối với (||zk-x\*||) nhưng là O (big o) với ||zk-x\*||^2
+>
+>
+>
+> ---
+>
+>
+>
+> Quay lại (3), do x\* thỏa KKT, nên theo stationary thì ∇ℒ(x\*, λ\*) = 0
+>
+>
+>
+> nên ℒ(zk, λ\*) = f(x\*) + ∇ℒ(x\*, λ\*)T(zk-x\*) + O(||zk-x\*||^2) 
+>
+>
+>
+> ⇔ ℒ(zk, λ\*) = f(x\*) + 0 + O(||zk-x\*||^2) 
+>
+>
+>
+> ⇔ ℒ(zk, λ\*) = f(x\*) + O(||zk-x\*||^2)
+>
+>
+>
+> ---
+>
+>
+>
+> Như vậy ta có:
+>
+>
+>
+> ℒ(zk, λ\*) = f(x\*) + O(||zk-x\*||^2) 
+>
+>
+>
+> Kết hợp với 12.71 ở trên :
+>
+>
+>
+> ℒ(zk, λ\*) ≤ f(zk) - λ\*j∇cj(x\*)T(zk-x\*) - o(||zk-x\*||) (12.71)
+>
+>
+>
+> Giúp suy ra:
+>
+>
+>
+> f(zk) - λ\*j∇cj(x\*)T(zk-x\*) - o(||zk-x\*||) ≥ f(x\*) + O(||zk-x\*||^2)
+>
+>
+>
+> ⇔ f(zk) ≥ f(x\*) + λ\*j∇cj(x\*)T(zk-x\*)+ O(||zk-x\*||^2) + o(||zk-x\*||)
+>
+>
+>
+> Vứt cái O||zk-x\*|| bên phải đi đương nhiên vẫn không đổi dấu (vì nó không âm)
+>
+>
+>
+> ⇔ f(zk) ≥ f(x\*) + λ\*j∇cj(x\*)T(zk-x\*) + o(||zk-x\*||)
+>
+>
+>
+> Thay zk-x\* = ||zk-x\*|| d (vì sao, vì định nghĩa của d là vector norm 1 có hướng từ x\* tới zk dần ổn định khi zk tiếp cận x\*, nên hướng của d chính là hướng của zk-x\*, và vì nó có norm = 1 nên scale d lên bởi ||zk-x\*|| ta sẽ có vector zk-x\*)
+>
+>
+>
+> ⇔ f(zk) ≥ f(x\*) + λ\*j ∇cj(x\*)T (||zk-x\*|| d) + o(||zk-x\*||)
+>
+>
+>
+> và ||zk-x\*|| chỉ là một scalar, ta move tùy ý, đưa nó lên trước
+>
+>
+>
+> ⇔ f(zk) ≥ f(x\*) + ||zk-x\*|| λ\*j∇cj(x\*)Td + o(||zk-x\*||)
+>
+>
+>
+> Tới đây, kết quả này nói lên điều gì: 
+>
+>
+>
+> Nói lên rằng: nếu ta giả sử d không ∈ critical cone, thì **khi nhìn mặt đường từ x\* tới zk** ta sẽ hấy **hàm số f phải tăng thêm một khoảng tỉ lệ tuyến tính với ||zk-x\*||, có nghĩa là MỨC TĂNG SẼ LỚN, tăng nhiều (y như nhìn lên thấy con dốc lên cao dần đều khi zk đi ra xa dần x\*)**
+>
+>
+>
+> Trong khi đó ta đang giả sử là zk thỏa f(zk) &lt; f(x\*) + (σ/4)||zk-x\*||^2, xem lại điểm **(xxx)** ở trên, ta đã nó điều này có nghĩa là **đứng từ x\* phóng tầm mắt ra nhìn về zk, và cho zk đi xa dần** (||zk-x\*|| tăng dần), thì **chênh lệch độ cao** (hàm f) giữa zk và x sẽ **TĂNG RẤT YẾU** (vì khi zk gần x\* thì ||zk-x\*||^2 sẽ rất nhỏ, và mức tăng hàm f lại còn phải bé hơn (σ/4)||zk-x\*||^2)
+>
+>
+>
+> Như vậy giúp bác bỏ giả định d không thuộc critical cone 𝒞(x\*, λ\*)
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy d thuộc critical cone 𝒞(x\*, λ\*), mà như vậy thì quadratic form theo điều ta đã làm ở lúc đầu là gọi σ là giá trị nhỏ nhất của wT ∇²\_xx ℒ(x\*, λ\*)w với mọi w ∈ 𝒞(x\*, λ\*) có norm = 1, nên nay d thuộc critical cone 𝒞(x\*, λ\*) ta có:
+>
+>
+>
+> dT ∇²\_xx ℒ(x\*, λ\*)d ≥ σ
+>
+>
+>
+> ---
+>
+>
+>
+> Tới đây lôi 12.69 ra lại:
+>
+>
+>
+> ℒ(zk, λ\*) = f(zk) - Σi∈𝒜(x\*) λ\*i ci(zk) ≤ f(zk)
+>
+>
+>
+> Khai triển ℒ(zk, λ\*):
+>
+>
+>
+> = f(x\*) + ∇ℒ(x\*, λ\*)T(zk-x\*) + (1/2)(zk-x\*)T∇²\_xx ℒ(x\*, λ\*)(zk-x\*) + o(||zk-x\*||^2)
+>
+>
+>
+> (ở trên đã nói về o nhỏ o lớn, ở đây ta đang gom các term bậc 3,4,...của ||zk-x\*||. Khi ||zk-x\*||^2 (bậc 2) nhỏ lại, thì term bậc 3,4 dĩ nhiên teo nhỏ còn nhanh hơn ||zk-x\*||^2, nên đây là o nhỏ của cả ||zk-x\*|| và ||zk-x\*||^2) 
+>
+>
+>
+> Tương tự ∇ℒ(x\*, λ\*)T(zk-x\*) = 0T(zk-x\*) do ∇ℒ(x\*, λ\*) = 0 vì x\* thỏa KKT
+>
+>
+>
+> = f(x\*) + 0 + (1/2)(zk-x\*)T∇²\_xx ℒ(x\*, λ\*)(zk-x\*) + o(||zk-x\*||^2)
+>
+>
+>
+> = f(x\*) + (1/2)(zk-x\*)T∇²\_xx ℒ(x\*, λ\*)(zk-x\*) + o(||zk-x\*||^2)
+>
+>
+>
+> Thay zk-x\* bằng ||zk-x\*||d
+>
+>
+>
+> = f(x\*) + (1/2) (||zk-x\*||d) T∇²\_xx ℒ(x\*, λ\*) (||zk-x\*||d) + o(||zk-x\*||^2)
+>
+>
+>
+> Move scalar ||zk-x\*|| lên trước:
+>
+>
+>
+> = f(x\*) + (1/2) (||zk-x\*||^2) dT∇²\_xx ℒ(x\*, λ\*)d + o(||zk-x\*||^2)
+>
+>
+>
+> Viết lại: ℒ(zk, λ\*) = f(x\*) + (1/2) (||zk-x\*||^2) dT∇²\_xx ℒ(x\*, λ\*)d + o(||zk-x\*||^2)
+>
+>
+>
+> Tới đây dùng kết qủa dT ∇²\_xx ℒ(x\*, λ\*)d ≥ σ suy ra:
+>
+>
+>
+> ℒ(zk, λ\*) ≥ f(x\*) + (1/2)||zk-x\*||^2σ + o(||zk-x\*||^2)
+>
+>
+>
+> và kết hợp với kết quả 12.69: ℒ(zk, λ\*) ≤ f(zk), ta suy ra
+>
+>
+>
+> f(zk) ≥ f(x\*) + (1/2)||zk-x\*||^2 σ + o(||zk-x\*||^2)
+>
+>
+>
+> f(zk) ≥ f(x\*) + (σ/2) ||zk-x\*||^2 + o(||zk-x\*||^2)
+>
+>
+>
+> ---
+>
+>
+>
+> Rồi, tới đây, again, kết qủa này ⇔ f(zk) - f(x\*) ≥ (σ/2) ||zk-x\*||^2 + o(||zk-x\*||^2) nói rằng:
+>
+>
+>
+> "khi nhìn từ x tới zk, cho zk xa dần đều thì mức tăng của hàm f (chênh lệch giữa f tai zk và tai x\*) sẽ tăng ít nhất là lớn hơn bình phương của σ||zk-x\*||^2 CHIA 2"
+>
+>
+>
+> và nó lại mâu thuẫn với giả sử lúc đầu là {zk} thỏa f(zk) &lt; f(x\*) + (σ/4)||zk-x\*||^2 lại nói mức tăng sẽ bé hơn cả σ||zk-x\*||^2 CHIA 4.
+>
+>
+>
+> Từ đó bác bỏ cái giả sử ban đầu này. 
+>
+>
+>
+> Như kết luận với mọi chuỗi feasible {zk} tiếp cận x\* thì luôn có đặc đỉêm:\
+> \
+> f(zk) ≥ f(x\*) + (σ/4)||zk-x\*||^2
+>
+>
+>
+> và theo như đầu ghi chú ta nói, cái này giúp kết luận x\* luôn nhỏ hơn mọi điểm trong lân cận của nó, nên nó là strict local minimizer.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Note giải thích cực kỳ chi tiết, chính xác và có tư duy trực quan rất tốt về mặt hình học cũng như giải tích (đặc biệt là phần phân biệt o-nhỏ và O-lớn). Bạn nên tiếp tục phát huy cách tiếp cận kết hợp trực giác trực quan này cho các định lý phức tạp khác.
 
 <br>
 
