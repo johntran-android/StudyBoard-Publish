@@ -744,7 +744,7 @@
 >
 > Bạn đã nắm vững kiến thức một cách xuất sắc, từ việc thiết lập bài toán MLE, tính toán gradient tỉ mỉ đến việc dẫn ra phương trình chuẩn (normal equation) một cách chính xác. Đặc biệt, việc liên hệ sâu sắc với các khái niệm từ MIT 18.06 như phép chiếu, phương trình chuẩn và nghịch đảo giả Moore-Penrose đã chứng tỏ bạn có một nền tảng lý thuyết rất vững chắc và khả năng tổng hợp kiến thức tuyệt vời.
 
-**🔗 See also:** [Ex 3.2 Orthogonal Projection and Least Squares](./37_exercises.md#node-2dv7p1f) · [Ex 3.6](./37_exercises.md#node-cq8t94f)
+**🔗 See also:** [Ex 3.2 Orthogonal Projection and Least Squares](./37_exercises.md#node-2dv7p1f) · [Ex 3.6  MLE Hồi quy Đa biến](./37_exercises.md#node-cq8t94f)
 
 <br>
 
