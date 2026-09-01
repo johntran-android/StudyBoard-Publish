@@ -1,6 +1,6 @@
 # 10.3 Hypothesis Testing
 
-📊 **Progress:** `12` Notes | `15` Screenshots | `12` AI Reviews
+📊 **Progress:** `13` Notes | `16` Screenshots | `13` AI Reviews
 
 ---
 <a id="node-zhfsuqo"></a>
@@ -1549,7 +1549,7 @@
 >
 >
 >
-> Đầu tiên cần nhớ, z\_α/2, theo định nghĩa, nó là cái mốc mà với một normal(0,1), P(|Z| ≥ cái mốc này) = α ⇔ P(Z ≥ z\_α/2 hoặc Z ≤ -z\_α/2) = α. Ý nghĩa là, \[phần diện tích của pdf ở bên phải z\_α/2\] + \[phần diện tích của pdf ở bên trái mốc -z\_α/2\] = α. Nên z\_α/2 sẽ là số cố định, đã biết từ trước, lấy từ bang tra pdf của normal (α bao nhiêu thì ta có z\_α/2 bấy nhiêu)
+> Đầu tiên cần nhớ, z\_α/2, theo định nghĩa, nó là cái mốc mà với một normal(0,1), P(|Z| ≥ cái mốc này) = α ⇔ P(Z ≥ z\_α/2 hoặc Z ≤ -z\_α/2) = α. Ý nghĩa là, \[phần diện tích của pdf ở bên phải z\_α/2\] + \[phần diện tích của pdf ở bên trái mốc -z\_α/2\] = α. Nên z\_α/2 sẽ là số cố định, đã biết từ trước, lấy từ bảng tra pdf của normal (α bao nhiêu thì ta có z\_α/2 bấy nhiêu)
 >
 >
 >
@@ -1577,7 +1577,7 @@
 >
 >
 >
-> Khi đó, nhiệm vụ lúc này là tìm c. Thế thì thì theo định nghĩa của level alpha test, đó là test có xác suất mắc Type I error không quá α: sup\_Θ0 P(Reject H0) ≤ α.
+> Khi đó, nhiệm vụ lúc này là tìm c. Thế thì theo định nghĩa của level alpha test, đó là test có xác suất mắc Type I error không quá α: sup\_Θ0 P(Reject H0) ≤ α.
 >
 >
 >
@@ -1669,7 +1669,7 @@
 >
 >
 >
-> Tức là: 
+> Tức là:
 >
 >
 >
@@ -1681,11 +1681,11 @@
 >
 >
 >
-> Vậy tương tự, khi đang "under H1", tức là đang xét case mà tham số thật sự đang là θ khác θ0 thì ta có "(Wn - θ) / Sn → n(0,1)". 
+> Vậy tương tự, khi đang "under H1", tức là đang xét case mà tham số thật sự đang là θ khác θ0 thì ta có "(Wn - θ) / Sn → n(0,1)".
 >
 >
 >
-> Khi đó (Wn - θ0)/Sn = (Wn - θ + θ - θ0)/Sn = (Wn - θ)/Sn + (θ - θ0)/Sn 
+> Khi đó (Wn - θ0)/Sn = (Wn - θ + θ - θ0)/Sn = (Wn - θ)/Sn + (θ - θ0)/Sn
 >
 >
 >
@@ -1709,7 +1709,7 @@
 >
 >
 >
-> Như vậy mục đích cuối cùng là nói: Giả sử ta muốn alpha = 0.01 đi, cái test rule xây dựng theo kiểu này sẽ có đặc điểm: 
+> Như vậy mục đích cuối cùng là nói: Giả sử ta muốn alpha = 0.01 đi, cái test rule xây dựng theo kiểu này sẽ có đặc điểm:
 >
 >
 >
@@ -1725,6 +1725,134 @@
 > Ghi chú của bạn cực kỳ chính xác, chi tiết và làm nổi bật được những điểm mấu chốt dễ sai như sự khác biệt về điều kiện hội tụ dưới H0 và H1. Để hoàn hảo hơn, bạn có thể giải thích rõ thêm định lý Slutsky khi kết hợp giới hạn của hai hạng tử (một hội tụ phân phối, một hội tụ xác suất ra vô cùng).
 
 **🔗 See also:** [Kiểm định giả thuyết tối ưu](./83_methods_of_evaluating_test.md#node-i8kwc7p) · [Khái niệm hàm công suất kiểm định](./83_methods_of_evaluating_test.md#node-bksfmes)
+
+<br>
+
+<a id="node-viv57fg"></a>
+
+###### Kiểm định một phía
+
+<p align="center"><kbd><img src="assets/tgl0sszgzjg.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này nói về việc nếu ta có one-sided hypothesis có dạng H0: θ ≤ θ0 vs H1: θ &gt; θ0 thì cũng có thể dùng cách này để xây dựng test.
+>
+>
+>
+> Vì bài toán này có dạng H0: θ ≤ θ0, tức nôm na là θ "nhỏ", nên test rule theo quy tắc sẽ là "reject H0 khi test statistic lớn", tức: reject H0 khi test statistic &gt; threshold c nào đó.
+>
+>
+>
+> Rồi, lập luận tương tự. ta sẽ dùng test statistic có dạng (Wn - θ0)/Sn
+>
+>
+>
+> Vậy thì:
+>
+>
+>
+> Để có level α test: ta cần c sao cho sup\_Θ0 Pθ(reject H0) ≤ α
+>
+>
+>
+> ⇔ sup\_θ≤θ0 Pθ(\[(Wn - θ0)/Sn\] ≥ c) ≤ α
+>
+>
+>
+> ⇔ sup\_θ≤θ0 Pθ(\[(Wn - θ + θ - θ0)/Sn\] ≥ c) ≤ α
+>
+>
+>
+> ⇔ sup\_θ≤θ0 Pθ(\[(Wn - θ)/Sn\] + \[(θ - θ0)/Sn\] ≥ c) ≤ α
+>
+>
+>
+> ⇔ sup\_θ≤θ0 Pθ(\[(Wn - θ)/Sn\] ≥ c - \[(θ - θ0)/Sn\]) ≤ α (1)
+>
+>
+>
+> under H0: θ≤θ0 thì \[(Wn - θ)/Sn\] → (d) Z \~ 𝒩(0,1)
+>
+>
+>
+> nên khi n lớn thì c thỏa (1) sẽ cũng xấp xỉ thỏa:
+>
+>
+>
+> sup\_θ≤θ0 Pθ(Z ≥ c - \[(θ - θ0)/Sn\]) ≤ α (2)
+>
+>
+>
+> Xét vế trái, khi θ chạy từ -∞ tới θ0 thì c - \[(θ - θ0)/Sn\] chạy từ +∞ tới 0, tức là từ rất lớn đến c. Đương nhiên xác suất của event một standard normal Z mang giá trị lớn hơn cái threshold như vậy sẽ tăng từ 0 lên Pθ(Z ≥ c) = P(Z ≥ c).
+>
+>
+>
+> Do đó sup\_θ≤θ0 Pθ(Z ≥ c - \[(θ - θ0)/Sn\]) = P(Z ≥ c)
+>
+>
+>
+> Như vậy (2) trở thành P(Z ≥ c) ≤ α ⇒ c = z\_α
+>
+>
+>
+> Như vậy, khi n lớn, ta test rule: reject H0 khi (Wn - θ0)/Sn ≥ z\_α sẽ có level tiệm cận α.
+>
+>
+>
+> ---
+>
+>
+>
+> Còn vì sao nói power sẽ converge về 0, α hoặc 1 tùy theo θ &lt; | = | &gt; θ0?
+>
+>
+>
+> power function là P\_θ(reject H0),
+>
+>
+>
+> = P\_θ(\[(Wn - θ0)/Sn\] ≥ z\_α) = P\_θ(\[(Wn - θ + θ - θ0)/Sn\] ≥ z\_α)
+>
+>
+>
+> = P\_θ(\[(Wn - θ)/Sn\] ≥ z\_α - (θ - θ0)/Sn)
+>
+>
+>
+> khi n → ∞, cái này tương đương:
+>
+>
+>
+> lim n → ∞ P\_θ(\[(Wn - θ)/Sn\] ≥ z\_α - (θ - θ0)/Sn)
+>
+>
+>
+> Nếu θ = θ0:
+>
+>
+>
+> lim n → ∞ P\_θ(\[(Wn - θ)/Sn\] ≥ z\_α - (θ - θ0)/Sn) = lim n → ∞ P\_θ(\[(Wn - θ)/Sn\] ≥ z\_α) = P\_θ(Z ≥ z\_α) = α
+>
+>
+>
+> Nếu θ &lt; θ0: thì - (θ - θ0)/Sn → ∞, khiến
+>
+>
+>
+> lim n → ∞ P\_θ(\[(Wn - θ)/Sn\] ≥ z\_α - (θ - θ0)/Sn) = P\_θ(Z ≥ +∞) = 0
+>
+>
+>
+> Nếu θ &gt; θ0: thì - (θ - θ0)/Sn → -∞, khiến
+>
+>
+>
+> lim n → ∞ P\_θ(\[(Wn - θ)/Sn\] ≥ z\_α - (θ - θ0)/Sn) = P\_θ(Z ≥ -∞) = 1
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **100/100**
+>
+> Ghi chú của bạn giải thích cực kỳ chi tiết, chính xác và chặt chẽ các bước lập luận toán học mà sách đã lược bớt, đặc biệt là phần tìm supremum dưới H0 và phân tích giới hạn của hàm power. Hãy tiếp tục phát huy tư duy phân tích xuất sắc này trong các bài học tiếp theo!
 
 <br>
 
