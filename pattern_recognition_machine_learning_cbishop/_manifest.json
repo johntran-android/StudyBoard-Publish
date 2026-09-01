@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1787962604791,
+  "publishedAt": 1788221120339,
   "sections": [
     {
       "title": "📋 Overview",
@@ -305,8 +305,8 @@
     {
       "title": "3.7 Exercises",
       "path": "pattern_recognition_machine_learning_cbishop/37_exercises.md",
-      "noteCount": 4,
-      "imageCount": 5
+      "noteCount": 5,
+      "imageCount": 6
     },
     {
       "title": "4.0 Linear model for Classification",
@@ -315,10 +315,16 @@
       "imageCount": 5
     },
     {
-      "title": "4.1 Discriminant Functions",
-      "path": "pattern_recognition_machine_learning_cbishop/41_discriminant_functions.md",
+      "title": "4.1.1 Discriminant Functions",
+      "path": "pattern_recognition_machine_learning_cbishop/411_discriminant_functions.md",
       "noteCount": 1,
       "imageCount": 3
+    },
+    {
+      "title": "4.1.2 Multiple Class",
+      "path": "pattern_recognition_machine_learning_cbishop/412_multiple_class.md",
+      "noteCount": 0,
+      "imageCount": 0
     },
     {
       "title": "Appendix C. Matrices",
@@ -333,6 +339,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 388,
-  "totalImages": 577
+  "totalNotes": 389,
+  "totalImages": 578
 }
