@@ -1,6 +1,6 @@
 # 3.7 Exercises
 
-📊 **Progress:** `4` Notes | `5` Screenshots | `4` AI Reviews
+📊 **Progress:** `5` Notes | `6` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-rasw876"></a>
@@ -987,7 +987,7 @@
 
 <a id="node-cq8t94f"></a>
 
-##### Ex 3.6
+##### Ex 3.6  MLE Hồi quy Đa biến
 
 <p align="center"><kbd><img src="assets/orzwo0hrgqn.png" width="80%"></kbd></p>
 
@@ -1414,6 +1414,293 @@
 > Bài viết rất xuất sắc và chi tiết trong việc giải thích bản chất thống kê cũng như biến đổi vi phân ma trận cực kỳ chuẩn xác để tìm ra W_ML. Tuy nhiên, bạn mới chỉ hoàn thành phần 1 mà chưa giải quyết yêu cầu thứ hai của đề bài là chứng minh công thức ước lượng MLE cho ma trận hiệp biến Γ.
 
 **🔗 See also:** [Maximum Likelihood and Gradient](./311_maximum_likelihood_and_least_squares.md#node-ogc31vz) · [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj) · [linked note *(MIT 18S096 Matrix Calculus for ML)*](../mit_18s096_matrix_calculus_for_ml/lec_4_part_1_gradient_and_inner_products_in_other_vector_spaces.md#node-pkow4ed)
+
+<br>
+
+<a id="node-97teyoh"></a>
+
+###### Ex 3.7 Posterior Distribution in Linear Basis Models
+
+<p align="center"><kbd><img src="assets/4a3ntypxntu.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Ok, bài 3.7 là cơ hội để mình luyện tập kĩ thuật gọi là "completing the square" lần nữa.
+>
+>
+>
+> Đề bài muốn ta dùng kĩ thuật này để verify (xác nhận) kết quả 3.49 là f(**w**|**t**) = 𝒩(**w**|**m**N, **S**N) với (3.50) **m**N = **S**N{**S**0inv **m**0 + β**Φ**T**t**} và (3.51) **S**Ninv = **S**0inv + β**Φ**T**Φ**
+>
+>
+>
+> Ôn lại chút xíu bối cảnh bài toán này cũng như completing the square là cái gì?
+>
+>
+>
+> Đại ý thế này, bài này là trong bối cảnh là ta đang đi tìm **w**, tham số của mô hình T \~ 𝒩(y(**w**,**x**), 1/β) theo Bayesian approach trong đó ta coi **w** như random variable (vector), với prior distribution f(**w**), mà ta sẽ chọn dựa trên niềm tin ban đầu về phân phối của **w** để sau đó dùng Bayes theorem giúp ta có f(**w**|data) gọi là posterior distribution. Rồi từ cái distribution này, ta sẽ có thể dùng các cách làm nào đó để đưa ra ước lượng điểm của **w**
+>
+>
+>
+> Hiểu thế này: Ước lượng điểm là gì, là một hàm số mà bỏ giá trị data vào, thì ta có được giá trị ước lượng của vector tham số **w**. Thế thì khi ta có posterior distribution, thì nó là cái probability distribution, nói như giáo sư Joe Blizstein của Stat110, thì nó là một bản thiết kế (blueprint) cho ta biết với giá trị này thì xác suất **w** mang giá trị nào là bao nhiêu, với giá trị kia thì xác suất là bao nhiêu. Nên để từ cái posterior distribution, muốn cho ra một point estimation, ta có thể dùng giá trị của **w** có probability cao nhất, và có khi nó là mean của distribution, nhưng cũng có khi dùng median của distribution thì tốt hơn. Nên cái lí thuyết gọi là decision theory sẽ giúp ta đưa ra ước lượng điểm tối ưu dựa trên posterior distribution.
+>
+>
+>
+> Quay lại đây, lại nói về prior, thì như đã nói, ta chọn theo niềm tin ban đầu, nhưng bên cạnh đó, người ta cũng chọn những loại distribution có tính conjugate prior với loại distribution của likelihood, vì khi đó, khi ta derive ra posterior sẽ thấy nó cũng cùng chung một loại với prior, từ đó thuận lợi hơn trong tính toán.
+>
+>
+>
+> Và bài này cơ bản là ta có prior là **w** \~ 𝒩(**m**0, **S**0) và likelihood (tức L(**w**|data), mà theo định nghĩa cũng chính là hàm joint pdf của data f(data|**w**)) là cũng là normal, mà normal lại là conjigate prior của chính nó, nên posterior sẽ cũng ra là normal, và cái ta cần làm là dùng completing square để chứng minh cái posterior normal có mean và covariance như 3.50, 3.51.
+>
+>
+>
+> Vậy completing the square là sao?
+>
+>
+>
+> Đơn giản là vầy: Nói đủ hơn là completing the square và khớp mẫu (pattern matching): Ví dụ ta biết pdf của univariate normal 𝒩(μ, σ^2) = 1/√2πσ² exp{-(x-μ)^2/2σ²}, vậy thì giả sử ta đang derive pdf của posterior distribution mà ra được có dạng \[cái gì đó\] nhân exp (hàm bậc hai của μ) thì lập tức có thể kết luận đây là pdf của normal (lí thuyết xác suất cho phép). Và từ đó, bằng cách khớp mẫu, ta sẽ có thể kết luận mean và variance của posterior.
+>
+>
+>
+> Rồi, bắt đầu làm:
+>
+>
+>
+> Ta có priori: f(**w**) = 𝒩(**w**|**m**0, **S**0)
+>
+>
+>
+> Posteriori: f(**w**|data), ở đây chính là f(**w**|**t**,**X**) (**t**, **X** là giá trị của data: các **t** = (t1,...tn) còn các vector input **x**1,...**x**N gom thành matrix **X**)
+>
+>
+>
+> Bayes theorem cho ta: f(**w**|data) = f(data|**w**)f(**w**)/f(data)
+>
+>
+>
+> vì f(data) chỉ là constant không âm, ta không quan tâm đến nó, để rồi thay "=" bởi "∝":
+>
+>
+>
+> f(**w**|data) ∝ f(data|**w**)f(**w**) (f(data|**w**) nếu xem như hàm của **w** thì cũng chính là likelihood L(**w**|data)
+>
+>
+>
+> ⇔ f(**w**|**t**,**X**) ∝ f(**t**|**w**,**X**) f(**w**)
+>
+>
+>
+> và f(**t**|**w**,**X**), là joint pdf của T1,...Tn độc lập và có cùng distribution là 𝒩(y(**w**, **x**), 1/β) nên cũng phụ thuộc β, và tách f(**t**|**w**,**X**) thành Πn f(tn|**w**,**X**), nên cái trên trở thành
+>
+>
+>
+> ⇔ f(**w**|**t**,**X**,β,α) ∝ Πn f(tn|**w**,**x**n) f(**w**)
+>
+>
+>
+> Thay công thức của f(tn|**w**,**x**n) là 𝒩(tn|**w**TΦ(**x**n), 1/β) = 1/√2π(1/β) exp{-(tn-**w**TΦ(**x**n))^2/2(1/β)}
+>
+>
+>
+> ⇒ Πn f(tn|**w**,**x**n) = Πn 1/√2π(1/β) exp{-(tn-**w**TΦ(**x**n))^2/2(1/β)}
+>
+>
+>
+> = Πn {\[2π(1/β)\]^(-1/2) exp{-(tn-**w**TΦ(**x**n))^2/2(1/β)}}
+>
+>
+>
+> = \[2π(1/β)\]^(-n/2) Πn exp{-(tn-**w**TΦ(**x**n))^2/2(1/β)}
+>
+>
+>
+> =  c1 exp{-(β/2) Σn (tn-**w**TΦ(**x**n))^2}
+>
+>
+>
+> và f(**w**) = 𝒩(**w**|**m**0, **S**0) = \[(2π)^-M/2\] \[1/|**S**0|^1/2\] exp\[-(1/2)(**w** - **m**0)T **S**0inv (**w** - **m**0)\]
+>
+>
+>
+> = c2 \[|**S**0|^-1/2\] exp\[-(1/2)(**w** - **m**0)T **S**0inv (**w** - **m**0)\] (Đặt c2 = (2π)^-M/2)
+>
+>
+>
+> = c2 c3 exp\[-(1/2)(**w** - **m**0)T **S**0inv (**w** - **m**0)\] (Đặt c3 = \[|**S**0|^-1/2\])
+>
+>
+>
+> Như vậy
+>
+>
+>
+> f(**w**|**t**,**X**,β,α)∝ Πn f(tn|**w**,**x**n) f(**w**)
+>
+>
+>
+> = c1 exp{-(β/2) Σn (tn-**w**TΦ(**x**n))^2} c2 c3 exp\[-(1/2)(**w** - **m**0)T **S**0inv (**w** - **m**0)\]
+>
+>
+>
+> = c1 c2 c3 exp{-(β/2) Σn (tn-**w**TΦ(**x**n))^2} exp\[-(1/2)(**w** - **m**0)T **S**0inv (**w** - **m**0)\] (1)
+>
+>
+>
+> ---
+>
+>
+>
+> Xét riêng cụm Σn (tn-**w**TΦ(**x**n))^2 chút xíu:
+>
+>
+>
+> Có thể thấy nó chính là ||**t** - **Φw**||^2, vì sao? vì design matrix **Φ** được define là matrix có các hàng là \[Φ(**x**1)\]T, \[Φ(**x**2)\]T,...\[Φ(**x**N)\]T. Nên **Φw** chính là vector có các phần tử là \[Φ(**x**1)\]T**w** (cũng là **w**TΦ(**x**1)), \[Φ(**x**2)\]T**w**,.. Và dẫn đến **t** - **Φw** chính là vector có các phần tử là t1-**w**TΦ(**x**1), t2-**w**TΦ(**x**2),...tn-**w**TΦ(**x**n)
+>
+>
+>
+> Và vì ||u|| = uTu nên ||**t** - **Φw**||^2 cũng là (**t** - **Φw**)T(**t** - **Φw**)
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy (1) = c1 c2 c3 exp{-(β/2) (**t** - **Φw**)T(**t** - **Φw**)} exp\[-(1/2)(**w** - **m**0)T **S**0inv (**w** - **m**0)\] 
+>
+>
+>
+>  = c4 exp{-(β/2) (**t** - **Φw**)T(**t** - **Φw**) -(1/2)(**w** - **m**0)T **S**0inv (**w** - **m**0)} (đặt c4 = c1,c2,c3)
+>
+>
+>
+>  = c4 exp{-(1/2) \[(**t** - **Φw**)T (β**I**) (**t** - **Φw**) + (**w** - **m**0)T **S**0inv (**w** - **m**0)\] }
+>
+>
+>
+>  = c4 exp{-(1/2) \[(**t** - **Φw**)T (β**I**) (**t** - **Φw**) + (**w** - **m**0)T **S**0inv (**w** - **m**0)\] }
+>
+>
+>
+>  = c4 exp{-(1/2) \[(**t**Tβ**I** - **w**T**Φ**Tβ**I**)(**t** - **Φw**) + (**w**T**S**0inv - **m**0T**S**0inv)(**w** - **m**0)\] }
+>
+>
+>
+>  = c4 exp{-(1/2) \[**t**Tβ**It** - **w**T**Φ**Tβ**It** - **t**Tβ**IΦw** + **w**T**Φ**Tβ**IΦw** + **w**T**S**0inv**w** - **m**0T**S**0inv**w** - **w**T**S**0inv**m**0 + **m**0T**S**0inv**m**0\] }
+>
+>
+>
+>  = c4 exp{-(1/2) \[β**t**T**t** - β**w**T**Φ**T**t** - β**t**T**Φw** + β**w**T**Φ**T**Φw** + **w**T**S**0inv**w** - **m**0T**S**0inv**w** - **w**T**S**0inv**m**0 + **m**0T**S**0inv**m**0\] }
+>
+>
+>
+>  = c4 exp{-(1/2) \[β**t**T**t** - 2β**t**T**Φw** + β**w**T**Φ**T**Φw** + **w**T**S**0inv**w** - 2**m**0T**S**0inv**w** + **m**0T**S**0inv**m**0\] }
+>
+>
+>
+>  = c4 exp{-(1/2) \[β**w**T**Φ**T**Φw** + **w**T**S**0inv**w** - 2β**t**T**Φw** - 2**m**0T**S**0inv**w** + **m**0T**S**0inv**m**0 + β**t**T**t**\] }
+>
+>
+>
+>  = c4 exp{-(1/2) \[**w**T\[β**Φ**T**Φ**+**S**0inv\]**w** - 2(β**t**T**Φ** + **m**0T**S**0inv)**w** + (**m**0T**S**0inv**m**0 + β**t**T**t**)\] } (2)
+>
+>
+>
+> Rồi tới đây ta mới thực hiện khớp mẫu:
+>
+>
+>
+> Nhớ lại công thức khái quát của 𝒩(**x**|**μ**, **Σ**) = \[(2π)^-D/2\] \[1/|**Σ**|^1/2\] exp\[-(**x** - **μ**)T **Σ**inv (**x** - μ)/2\]
+>
+>
+>
+> và ta sẽ chỉ cần quan tâm -(**x** - **μ**)T **Σ**inv (**x** - μ)/2, 
+>
+>
+>
+> = -(**x**T**Σ**inv - **μ**T**Σ**inv)(**x** - μ)/2
+>
+>
+>
+> = -(**x**T**Σ**inv**x** - **μ**T**Σ**inv**x** - **x**T**Σ**inv**μ** + **μ**T**Σ**inv**μ**)/2
+>
+>
+>
+> = -(**x**T**Σ**inv**x** - 2**μ**T**Σ**inv**x** + **μ**T**Σ**inv**μ**)/2
+>
+>
+>
+> Và lập luận rằng,  vì (2) cũng có dạng quadratic function của **w**, nên đủ kết luận posterior f(**w**|data) là normal
+>
+>
+>
+> Và để xác định mean và covariance ta thực hiện khớp:
+>
+>
+>
+> **x**T**Σ**inv**x** sẽ ứng với **w**T\[β**Φ**T**Φ**+**S**0inv\]**w** → **Σ**inv ứng với β**Φ**T**Φ**+**S**0inv. 
+>
+>
+>
+> Như vậy tới đây đã có thể kết luận inverse của covariance matrix của posterior distribution **S**Ninv = β**Φ**T**Φ**+**S**0inv, → đây chính là (3.51)
+>
+>
+>
+> Tiếp - 2**μ**T**Σ**inv**x** sẽ khớp với - 2(β**t**T**Φ** + **m**0T**S**0inv)**w** → **μ**T**Σ**inv khớp với (β**t**T**Φ** + **m**0T**S**0inv)
+>
+>
+>
+> ⇔ **μ**T**Σ**inv khớp với (β**t**T**Φ** + **m**0T**S**0inv)
+>
+>
+>
+> nên β**t**T**Φ** + **m**0T**S**0inv chính là **m**NT**S**Ninv: β**t**T**Φ** + **m**0T**S**0inv = **m**NT**S**Ninv
+>
+>
+>
+> ⇔ β**t**T**Φ** + **m**0T**S**0inv = **m**NT**S**Ninv
+>
+>
+>
+> ⇔ β**Φ**T**t** + **S**0invT**m**0 = **S**NinvT**m**N
+>
+>
+>
+> ⇔ β**Φ**T**t** + **S**0inv**m**0 = **S**Ninv**m**N (các covariance matrix đối xứng nên bỏ tranpose)
+>
+>
+>
+> Nhân hai vế cho **S**N:
+>
+>
+>
+> ⇔ **S**N(β**Φ**T**t** + **S**0invT**m**0) = **m**N
+>
+>
+>
+> **⇔ m**N = **S**N{**S**0inv **m**0 + β**Φ**T**t**} → Đây chính là 3.50
+>
+>
+>
+> Tới đây ta đã làm xong bài.
+>
+> \
+> Nên tóm lại, nói là complete the square nhưng thật ra là làm theo kiểu khớp mẫu sẽ dễ hơn.
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> ---
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Bài làm rất chi tiết, giải thích rõ ràng cả về bối cảnh lý thuyết lẫn phương pháp hoàn thành bình phương (completing the square). Các bước biến đổi và khớp mẫu (pattern matching) được thực hiện chính xác để đi đến kết quả cuối cùng.
+
+**🔗 See also:** [Bayesian Linear Regression Posterior Update](./331_bayesian_linear_regression.md#node-fv65lte) · [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj)
 
 <br>
 
