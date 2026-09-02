@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,284 notes` · `~17,737 screenshots` · `18 notebooks`**
+**`~12,285 notes` · `~17,738 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -513,7 +513,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `407 notes · 579 screenshots · 33 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
-> 
 > Sổ tay này đi sâu vào các thuật toán tối ưu hóa số cốt lõi như tìm kiếm đường thẳng, vùng tin cậy, quasi-Newton và gradient liên hợp, cùng các khái niệm thiết yếu như đạo hàm tự động, phân tích hội tụ và kỹ thuật đại số tuyến tính số.
 
 <details open>
@@ -694,9 +693,10 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 ### Statistical Inference - Casella
 <!-- key: statistical_inference_casella -->
 <!-- group: Probability & Statistics -->
-`855 notes · 1,116 screenshots · 49 sections`
+`856 notes · 1,117 screenshots · 49 sections`
 
 > This notebook contains detailed study notes and proofs based on Casella and Berger's *Statistical Inference*, covering key topics in probability theory, estimation methods, hypothesis testing, and asymptotic properties.
+> 
 > Sổ tay học tập này tổng hợp các ghi chép và chứng minh chi tiết dựa trên giáo trình *Statistical Inference* của Casella và Berger, bao gồm các chủ đề cốt lõi về lý thuyết xác suất, phương pháp ước lượng, kiểm định giả thuyết và tính chất tiệm cận.
 
 <details open>
@@ -752,7 +752,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [9.3 Methods Of Evaluating Interval Estimators](statistical_inference_casella/93_methods_of_evaluating_interval_estimators.md) | 34 | 35 |
 | [10.1 Point Estimation](statistical_inference_casella/101_point_estimation.md) | 42 | 48 |
 | [10.2 Robustness](statistical_inference_casella/102_robustness.md) | 16 | 20 |
-| [10.3 Hypothesis Testing](statistical_inference_casella/103_hypothesis_testing.md) | 13 | 16 |
+| [10.3 Hypothesis Testing](statistical_inference_casella/103_hypothesis_testing.md) | 14 | 17 |
 
 </details>
 
