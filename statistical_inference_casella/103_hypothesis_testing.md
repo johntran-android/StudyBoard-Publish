@@ -1,6 +1,6 @@
 # 10.3 Hypothesis Testing
 
-📊 **Progress:** `13` Notes | `16` Screenshots | `13` AI Reviews
+📊 **Progress:** `14` Notes | `17` Screenshots | `14` AI Reviews
 
 ---
 <a id="node-zhfsuqo"></a>
@@ -1751,7 +1751,7 @@
 >
 >
 >
-> Để có level α test: ta cần c sao cho sup\_Θ0 Pθ(reject H0) ≤ α
+> Để có level α test: ta cần tìm c sao cho sup\_Θ0 Pθ(reject H0) ≤ α
 >
 >
 >
@@ -1853,6 +1853,292 @@
 > **🤖 AI Feedback** — ✅ Score: **100/100**
 >
 > Ghi chú của bạn giải thích cực kỳ chi tiết, chính xác và chặt chẽ các bước lập luận toán học mà sách đã lược bớt, đặc biệt là phần tìm supremum dưới H0 và phân tích giới hạn của hàm power. Hãy tiếp tục phát huy tư duy phân tích xuất sắc này trong các bài học tiếp theo!
+
+<br>
+
+<a id="node-2zkyopq"></a>
+
+###### The Wald Test Statistic
+
+<p align="center"><kbd><img src="assets/351uvpxtvj2.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này là sao?
+>
+>
+>
+> Đại khái là như ta đã làm bữa giờ, bằng cách dùng một test statistic có dạng (Wn - θ0)/Sn với θ0 là giá trị giả thiết (hypothesized value) của θ, Wn là một estimator của θ và Sn là estimator của σn (standard deviation của Wn).
+>
+>
+>
+> Có lẽ nên active recall chút xíu ý tưởng chính:
+>
+>
+>
+> Ý tưởng chính đó là, nếu (Wn - θ0)/Sn được chọn (chọn Wn, Sn) sao cho nếu θ0 là true parameter, (Wn - θ0)/Sn → (d) n(0,1) thì một test dựa trên statistic này với threshold chọn bằng bảng tra pdf sao cho test dựa trên Z \~ n(0,1) có level alpha sẽ là test có level tiệm cận α. Tức là: Ta dựa trên statistic Z \~ n(0,1), để định ra threshold giúp có test level α, rồi dùng cái threshold này với test statistic (Wn - θ0)/Sn thì ta sẽ có test level tiệm cận α.
+>
+>
+>
+> (một cái test của hypothesis test chỉ là gồm một test statistic nào đó: nhận vào giá trị observed data và trả ra giá trị statistic, và 2) là một decision rule nào đó, mà thường là so cái statistic với một threshold. Nên để định ra một test, cơ bản là trả lời hai chuyện: Dùng test statistic gì và dùng decision rule + threshold gì thôi)
+>
+>
+>
+> Và đây được gọi với tên chung là Wald test.
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy thì khi dùng Wald test, Wn, như yêu cầu, là một estimator của θ.
+>
+>
+>
+> Thật ra mình nghĩ không cần phải nói, vì bản chất định nghĩa của estimator của θ là "any function of sample", thành ra miễn Wn là một statistic, mặc định nó là estimator của θ rồi.
+>
+>
+>
+> Nhưng cái quan trọng là Sn. Ông nói nó phải là standard error cho Wn, tức là một estimator của STD(Wn). Vì sao như vậy?
+>
+>
+>
+> Vì sao, (Wn - θ0)/Sn → (d) n(0,1) thì Sn lại là standard error của Wn?
+>
+>
+>
+> Theo định nghĩa, standard error của Wn, chỉ đơn giản là "estimator của STD(Wn), hay estimator của √Var(Wn)". Và ta đã gặp cái này rồi, ví dụ, ta xét sample mean, Xbar, với variance của nó ta có thể chứng minh được là σ²/n = population variance/n. Thì đương nhiên STD(Xbar) = σ/√n. Và vì ta không có population variance σ², ta dùng sample variance s^2 để thay vào, thì ta sẽ có estimate của STD(Xbar), chính là standard error. Nên mới có công thức nói standard error của Xbar là s/√n là vậy.
+>
+>
+>
+> Có nghĩa là cái định nghĩa của standard error của Wn rất đơn giản:
+>
+>
+>
+> Là estimate của STD(Wn), mà một ví dụ để hiểu estimate là như vừa nói:
+>
+>
+>
+> Công thức chính xác STD(Xbar) = √(σ²/n)
+>
+>
+>
+> Công thức estimate STD(Xbar) = √(s²/n) (thay sample variance cho p. variance), thì đây là standard error.
+>
+>
+>
+> Nhưng vẫn chưa trả lời được **vì sao, (Wn - θ0)/Sn → (d) n(0,1) thì Sn lại là standard error của Wn**?
+>
+>
+>
+> Là vì: với việc ta có (Wn - θ0)/Sn → (d) n(0,1) đồng nghĩa: khi n lớn (và ta có quyền vì ta sẽ chỉ dùng cái lí thuyết này để xây dựng test khi có n lớn) thì ta có:
+>
+>
+>
+> Var\[(Wn - θ0)/Sn\] ≈ 1
+>
+>
+>
+> Khi xét tại n vô cực, Sn sẽ hội tụ về một fixed value nên coi như constant, nên ta có thể áp dụng tính chất Variance đưa nó ra.
+>
+>
+>
+> ⇔ Var\[Wn\]/(Sn)^2 ≈ 1
+>
+>
+>
+> ⇔ Var\[Wn\] ≈ (Sn)^2
+>
+>
+>
+> ⇔ STD\[Wn\] ≈ Sn
+>
+>
+>
+> Như vậy, khi n lớn thì Sn chính là STD\[Wn\], nên khi "n chưa lớn", Sn chính là estimate của STD\[Wn\], và như vậy ta gọi nó là standard error của Wn. (1)
+>
+>
+>
+> ---
+>
+>
+>
+> Rồi, ở trên là nói Wn chung chung, miễn là có (Wn-θ0)/Sn → (d) n(0,1), còn ở đây nói riêng trường hợp khi Wn là MLE của θ0 ông Casella nói rằng lúc này: 1/√In(Wn) là **reasonable standard error** cho Wn. Vì sao vậ?
+>
+>
+>
+> Ý giáo sư Casella là vầy: Như đoạn trên, để xây dựng Wald test, ta phải kiếm được Wn, Sn thỏa (Wn-θ0)/Sn → (d) n(0,1)), và điều này hàm ý **hai thứ**:
+>
+>
+>
+> i) Sn là estimate của STD(Wn), mà ta gọi là standard error, cái này là vì lập luận ở (1) ở trên
+>
+>
+>
+> ii) và Wn và Sn phải thỏa (Wn-θ0)/Sn → (d) n(0,1))
+>
+>
+>
+> Như vậy ta phải **kiếm** **Wn sao cho standard error Sn của nó** (tức estimate ch STD(Wn)) phải thỏa (Wn-θ0)/Sn → (d) n(0,1)) chứ **không phải cứ dùng statistic bất kì nào rồi lấy cái standard error của nó ra** là được. Vì chưa chắc chúng đã thỏa (Wn-θ0)/Sn → (d) n(0,1)).
+>
+>
+>
+> Vậy thì nếu Wn là một MLE của θ, thì Sn có thể chọn cái gì đây: Gs Casella cho biết, đó chính là Sn = 1/√In(Wn).
+>
+>
+>
+> Vậy câu hỏi nên đặt ra là, **vì sao Sn** = **1/√In(Wn) lại là một estimate của STD(Wn)**, và **vì sao Sn này thỏa (Wn-θ0)/Sn → (d) n(0,1))**
+>
+>
+>
+> ---
+>
+>
+>
+> Câu trả lời là đây là dựa trên kết quả đã thảo luận ở 10.1.3. Như sau:
+>
+>
+>
+> Ta có định lí 10.1.12 (xem link) nói nếu Wn là MLE của τ(θ) thì cũng sẽ là estimator tiệm cận hiệu quả (asymptotically efficient), mà điều này thể hiện bởi phương sai tiệm cận của nó đặt CRLB:
+>
+>
+>
+> √n(Wn - τ(θ)) → n\[0, ν(θ)\], ν(θ) = \[τ'(θ)\]^2 / I1(θ))
+>
+>
+>
+> (I1(θ) là information number của sample size 1)
+>
+>
+>
+> Với τ(θ) = θ thì τ'(θ) = 1.
+>
+>
+>
+> Nên áp dụng vào đây, nơi ta đang có **Wn là estimator của θ0**, sẽ cho ta kết qủa sau:
+>
+>
+>
+>  √n(Wn - θ0) → (d) n(0, 1 / I1(θ0))
+>
+>
+>
+> Dùng Slusky theorem: √I1(θ0) →ᵖ √I1(θ0), ta có cái trên tương đương với:
+>
+>
+>
+> √I1(θ0) √n(Wn - θ0) → (d) √I1(θ0) × n(0, 1 / I1(θ0))
+>
+>
+>
+> .. ⇔ (Wn - θ0) / √(1/nI1(θ0)) → (d) n(0, 1)
+>
+>
+>
+> nI1(θ0) = In(θ0) (dùng tính iid, cái này đã nói nhiều lần trước đây)
+>
+>
+>
+> ... ⇔ (Wn - θ0) / (1/√In(θ0)) → (d) n(0, 1) (AAA)
+>
+>
+>
+> ---
+>
+>
+>
+> Kết luận thứ nhất từ (AAA): Cho thấy khi n lớn, Var(Wn) ≈ 1/In(θ0)
+>
+>
+>
+> cũng là STD(Wn) ≈ √(1/In(θ0))
+>
+>
+>
+> Nên nếu ta dùng Wn thay cho θ0, thì √(1/In(Wn)) sẽ trở thành estimate của STD(Wn), chính là được gọi là standard error của Wn.
+>
+>
+>
+> Và Wn là MLE, tính chất tiệm cận hiệu quả còn ngầm cho ta một thứ nữa:
+>
+>
+>
+> Wn là consistent estimator của θ0, tức Wn →ᵖ θ0, giúp cho ta có STD^(Wn) = √(1/In(Wn)) sẽ →ᵖ √(1/In(θ0)), mang ý nghĩa là: Estimator (của STD(Wn), tức standard error) Sn = √(1/In(Wn)) sẽ là một consistent etimator cho STD(Wn)
+>
+>
+>
+> Tóm lại ta có:
+>
+>
+>
+> Nếu đặt Sn = 1/√In(Wn), thì Sn sẽ là một consistent estimator cho √(1/In(θ0)), mà cái này (khi n lớn) chính là STD(Wn). Nên theo định nghĩa standard error đã nói ở trên, Sn = 1/√In(Wn), là estimator của STD(Wn) nên cũng chính là standard error của Wn
+>
+>
+>
+> và ta cũng có Sn →ᵖ (1/√In(θ0)) ⇒ Sn / (1/√In(θ0)) →ᵖ 1
+>
+>
+>
+> ---
+>
+>
+>
+> Kết luận thứ hai từ (AAA):
+>
+>
+>
+> (Wn - θ0) / √(1/In(θ0)) → (d) n(0, 1)
+>
+>
+>
+> ⇔ \[(Wn - θ0) / Sn\] \[Sn / 1/√In(θ0)\] → (d) n(0, 1)
+>
+>
+>
+> và như vậy dùng Slusky và ta có:
+>
+>
+>
+> \[(Wn - θ0) / Sn\] \[Sn / 1/√In(θ0)\] → (d) n(0, 1) × 1 = n(0,1)
+>
+>
+>
+> Vậy \[(Wn - θ0) / Sn\] → (d) n(0,1). Cho thấy việc dùng Sn = 1/√In(Wn) thỏa điều kiện có thể dùng để xây dựng Wald test với Wn là MLE, giúp ta hiểu vì sao nói "1/√In(Wn) là reasonable standard error cho Wn"
+>
+>
+>
+> ---
+>
+>
+>
+> Và ý cuối cùng, ông Casella nói đại ý là ta cũng có thể dùng cách khác (alternatively), đó là dùng..:
+>
+>
+>
+> Sn = 1/√I^n(Wn) với I^n(Wn) = - \[∂²/∂θ² log L(θ|**X**)\] | θ=Wn
+>
+>
+>
+> và cái này gọi là observed information number
+>
+>
+>
+> Là sao ta? Tại sao lại có thể dùng Sn này?
+>
+>
+>
+> Lí do là vì I^n(Wn) sẽ lại là một good estimate cho In(Wn) (xem link tới theorem 10.1.6 giải thích rất kĩ rồi)
+>
+>
+>
+> nên 1/√I^n(Wn) cũng là good estimate cho 1/√In(θ0).
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú rất xuất sắc, chi tiết và có chiều sâu khi tự chứng minh lại tính hội tụ của Wald test bằng định lý Slutsky và tính nhất quán của MLE. Để hoàn thiện hơn, bạn có thể bổ sung thêm lý do toán học tại sao Observed Information hội tụ về Expected Fisher Information (dựa trên Luật số lớn).
+
+**🔗 See also:** [10.1.3 Calculations and Comparisons](./101_point_estimation.md#node-iwgmm5t) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Definition 10.1.11 Asymptotic Efficiency](./101_point_estimation.md#node-bgijdqy) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Theorem 10.1.6 on Consistent Estimators](./101_point_estimation.md#node-cpdjv2x)
 
 <br>
 
