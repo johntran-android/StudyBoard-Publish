@@ -874,7 +874,7 @@
 >
 > Bài giải thích rất sâu sắc và chi tiết, làm rõ định nghĩa về ước lượng hiệu quả tiệm cận (asymptotically efficient) bằng cách liên hệ chặt chẽ với Cramér-Rao Lower Bound, bao gồm cả bối cảnh và công thức. Độ chính xác và chiều sâu của kiến thức được trình bày rất ấn tượng.
 
-**🔗 See also:** [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c) · [10.1.3 Calculations and Comparisons](#node-iwgmm5t) · [Phương sai tiệm cận và giới hạn](#node-62aug4x) · [Asymptotic Normality of MLE](./103_hypothesis_testing.md#node-l86tt7u)
+**🔗 See also:** [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c) · [10.1.3 Calculations and Comparisons](#node-iwgmm5t) · [Phương sai tiệm cận và giới hạn](#node-62aug4x) · [Asymptotic Normality of MLE](./103_hypothesis_testing.md#node-l86tt7u) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq)
 
 <br>
 
@@ -940,7 +940,7 @@
 >
 > Ghi chú giải thích Theorem 10.1.12 rất chi tiết và chính xác, đặc biệt là phần chứng minh tính consistency bằng định lý Slutsky. Để hoàn thiện hơn, bạn có thể bổ sung giới hạn n → ∞ vào định nghĩa tính consistent.
 
-**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Định lý Slutsky](./55_convergence_concepts.md#node-uwbmbt7) · [Hội tụ xác suất và phân phối](./55_convergence_concepts.md#node-wqcasc6) · [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Chuẩn tiệm cận, nhất quán, hiệu quả](#node-v1s5jks) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s) · [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li) · [Asymptotic Normality of MLE](./103_hypothesis_testing.md#node-l86tt7u)
+**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Định lý Slutsky](./55_convergence_concepts.md#node-uwbmbt7) · [Hội tụ xác suất và phân phối](./55_convergence_concepts.md#node-wqcasc6) · [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Chuẩn tiệm cận, nhất quán, hiệu quả](#node-v1s5jks) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s) · [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li) · [Asymptotic Normality of MLE](./103_hypothesis_testing.md#node-l86tt7u) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq)
 
 <br>
 
@@ -1570,7 +1570,7 @@
 >
 > Phần tiếp theo chỉ là dùng công thức để thế vào In(θ), nhưng ý tưởng chính thì mình đã thông.
 
-**🔗 See also:** [Phương pháp Delta](./55_convergence_concepts.md#node-lo99k23) · [Tính nhất quán của MLE](#node-d19dn75) · [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy) · [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c)
+**🔗 See also:** [Phương pháp Delta](./55_convergence_concepts.md#node-lo99k23) · [Tính nhất quán của MLE](#node-d19dn75) · [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy) · [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq)
 
 <br>
 
@@ -1732,7 +1732,7 @@
 >
 > Bài giải thích rất chi tiết và sâu sắc các lập luận để ước lượng phương sai của h(θ̂) bằng CRLB, liên kết chặt chẽ các khái niệm về định lý Delta Method, hiệu quả tiệm cận của MLE và CRLB, hoàn toàn khớp với nội dung trong ảnh. Em đã nắm vững cách áp dụng các công thức và ý nghĩa của chúng.
 
-**🔗 See also:** [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4) · [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li)
+**🔗 See also:** [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4) · [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq)
 
 <br>
 
@@ -1813,7 +1813,7 @@
 >
 > Tóm lại, ý nói, cái việc ta dùng θ^ thay cho θ, và dùng observed information number thay cho expected information number In(θ). thì ta vẫn đang có một consistent estimator: Var^(h(θ^)), hay Var\_θ^(h(θ^)) là consistent estimator của Var\_θ(h(θ^))
 
-**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75)
+**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq)
 
 <br>
 
