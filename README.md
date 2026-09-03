@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,285 notes` · `~17,738 screenshots` · `18 notebooks`**
+**`~12,288 notes` · `~17,745 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -565,13 +565,14 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 ### Pattern Recognition Machine Learning_C.Bishop
 <!-- key: pattern_recognition_machine_learning_cbishop -->
 <!-- group: Machine Learning Foundation -->
-`389 notes · 578 screenshots · 55 sections`
+`392 notes · 585 screenshots · 56 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
+> 
 > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
-<summary>📖 55 sections</summary>
+<summary>📖 56 sections</summary>
 
 | Section | Notes | Screenshots |
 |---|---:|---:|
@@ -627,6 +628,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [3.6 Limitations of Fixed Basis Functions](pattern_recognition_machine_learning_cbishop/36_limitations_of_fixed_basis_functions.md) | 1 | 2 |
 | [3.7 Exercises](pattern_recognition_machine_learning_cbishop/37_exercises.md) | 5 | 6 |
 | [4.0 Linear model for Classification](pattern_recognition_machine_learning_cbishop/40_linear_model_for_classification.md) | 4 | 5 |
+| [4.1.2 Multiple Class](pattern_recognition_machine_learning_cbishop/412_multiple_class.md) | 3 | 7 |
 | [4.1.1 Discriminant Functions](pattern_recognition_machine_learning_cbishop/411_discriminant_functions.md) | 1 | 3 |
 | [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) | 19 | 22 |
 | [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) | 5 | 7 |
@@ -696,7 +698,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `856 notes · 1,117 screenshots · 49 sections`
 
 > This notebook contains detailed study notes and proofs based on Casella and Berger's *Statistical Inference*, covering key topics in probability theory, estimation methods, hypothesis testing, and asymptotic properties.
-> 
 > Sổ tay học tập này tổng hợp các ghi chép và chứng minh chi tiết dựa trên giáo trình *Statistical Inference* của Casella và Berger, bao gồm các chủ đề cốt lõi về lý thuyết xác suất, phương pháp ước lượng, kiểm định giả thuyết và tính chất tiệm cận.
 
 <details open>
