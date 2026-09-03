@@ -1,6 +1,6 @@
 # 10.3 Hypothesis Testing
 
-📊 **Progress:** `14` Notes | `17` Screenshots | `14` AI Reviews
+📊 **Progress:** `16` Notes | `19` Screenshots | `16` AI Reviews
 
 ---
 <a id="node-zhfsuqo"></a>
@@ -2139,6 +2139,386 @@
 > Ghi chú rất xuất sắc, chi tiết và có chiều sâu khi tự chứng minh lại tính hội tụ của Wald test bằng định lý Slutsky và tính nhất quán của MLE. Để hoàn thiện hơn, bạn có thể bổ sung thêm lý do toán học tại sao Observed Information hội tụ về Expected Fisher Information (dựa trên Luật số lớn).
 
 **🔗 See also:** [10.1.3 Calculations and Comparisons](./101_point_estimation.md#node-iwgmm5t) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Definition 10.1.11 Asymptotic Efficiency](./101_point_estimation.md#node-bgijdqy) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Theorem 10.1.6 on Consistent Estimators](./101_point_estimation.md#node-cpdjv2x)
+
+<br>
+
+<a id="node-8xsav7v"></a>
+
+###### Large-Sample Binomial Tests
+
+<p align="center"><kbd><img src="assets/7wjci4qox6.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Qua ví dụ này, ta áp dụng lí thuyết Wald test: Ôn lại nhanh, một cách khái quát, nếu ta có statistic Wn và standard error Sn của nó (là estimate của STD(Wn), và phải là consistent estimate của STD(Wn)) sao cho (Wn - θ0)/Sn → n(0,1), với θ0 là hypothesis value của θ, thì ta có thể dùng để xây dựng Wald test. Và nếu Wn là MLE thì Sn có thể chọn là 1/√In(Wn) hoặc 1/√în(Wn). (1)
+>
+>
+>
+> Vậy thì bài toán ở đây là ta có X1,...Xn là random sample \~ Bern(p). Và xem xét hai hypothesis: H0: p ≤ p0 vs H1: p &gt; p0 với 0 &lt; p0 &lt; 1. MLE của p là p̂ n = (Σi Xi)/n, chính là sample mean.
+>
+>
+>
+> Và vì nó là sample mean, nên theo CLT nói rằng với random sample Xi có mean μ, variance σ² thì: √n(Xbar - μ)/σ → n(0,1) (xem link)
+>
+>
+>
+> Áp dụng ở đây ta có population mean và variance là p và p(1-p) (mean của Bern(p) là p thì dễ rồi, còn variance Var(X) = EX² - (EX)² = \[1²P(X=1)+0²P(X=0)\] - p² = p - p² = p(1-p)), ta có:
+>
+>
+>
+> √n(p̂n - p)/√\[p(1-p)\] → (d) n(0,1)
+>
+>
+>
+> ⇔ (p̂n - p)/√\[p(1-p)\]/n → (d) n(0,1) (1)
+>
+>
+>
+> Thế thì theo lí thuyết, ta cần test có dạng (Wn-θ0)/Sn với Sn là consistent estimator của STD(Wn), vậy ở đây là gì:
+>
+>
+>
+> (1) cho biết khi n lớn Var{√n(p̂n - p)/√\[p(1-p)\]/n} ≈ 1
+>
+>
+>
+> Dùng Var(cX+d) = c² VarX, và ở đây p và √\[p(1-p)\]/n là constant đối với việc tính variance
+>
+>
+>
+> ⇔ Var(p̂n) / {\[p(1-p)\]/n} ≈ 1
+>
+>
+>
+> ⇔ Var(p̂n) ≈ \[p(1-p)\]/n
+>
+>
+>
+> Vậy \[p(1-p)\]/n là variance của p ̂n khi n lớn, tức √{p(1-p)\]/n} là std của p ̂n khi n lớn.
+>
+>
+>
+> Nhưng ở trường hợp này khi p̂n là sample mean, ta biết công thức của variance sample mean Xbar: Var(Xbar) = population varinace / n = σ²/n, do đó đây thật ra \[p(1-p)\]/n cũng chính (công thức chính xác của) Var(p̂n).
+>
+>
+>
+> Tóm lại Var(p̂n) = \[p(1-p)\]/n ⇒ STD(p̂n) = √{\[p(1-p)\]/n }
+>
+>
+>
+> Nên và ta không biết p, nên dùng chính MLE của p, là p ̂n, để estimate cho p, thế chỗ của p trong công thức trên, để được:
+>
+>
+>
+> √{\[p ̂n(1-p ̂n)\]/n}, thì cái này đương nhiên cũng là estimate của standard deviation của p ̂n, nên nó chính là standard error của p ̂n
+>
+>
+>
+> Hơn nữa, như sách nói, bài tập 5.32 đã chứng minh √{\[p ̂n(1-p ̂n)\]/n} →ᵖ √{\[p (1-p )\]/n} do đó √{\[p ̂n(1-p ̂n)\]/n} là consistent estimator của STD(p ̂n).
+>
+>
+>
+> Như vậy đã đủ hết các điều kiện mà ta nhắc lại ở (1), tức là với Wn = p ̂n, Sn = √{\[p ̂n(1-p ̂n)\]/n}, θ0 = p0, ta có (Wn - θ0)/Sn → n(0,1), nên có thể xây dựng Wald test: Vì đây là one-side test với H0: p &lt; p0 nên test rule sẽ là: reject H0 nếu test statistic lớn quá, lớn hơn threshold nào đó:
+>
+>
+>
+> Test rule: Reject H0 nếu Zn = (p ̂n - p0)/ √{\[p ̂n(1-p ̂n)\]/n} ≥ threshold
+>
+>
+>
+> Và để có test level tiệm cận α thì threshold này chính là z\_α. Khi đó:
+>
+>
+>
+> khi n → ∞, (p ̂n - p0)/ √{\[p ̂n(1-p ̂n)\]/n} → (d) Z \~ n(0,1)
+>
+>
+>
+> nên sup\_{p≤p0} P_p((p ̂n - p0)/ √{\[p ̂n(1-p ̂n)\]/n} ≥ z\_α) → sup\_{p≤p0} P(Z ≥ z\_α) = P(Z ≥ z\_α) = α
+>
+>
+>
+> ---
+>
+>
+>
+> Và gs nói ta cũng có thể dễ dàng check để thấy cái Sn = √{\[p ̂n(1-p ̂n)\]/n} chính là In(p̂n) (để từ đó thấy nó chính là 1/In(Wn) mà lí thuyết (1) nói). Check như sau:
+>
+>
+>
+> Công thức của In(θ) là -E\_θ\[∂²/∂θ² log L(θ|**X**)\]
+>
+>
+>
+> Ở đây In(p) là -E_p\[∂²/∂p² log L(p|**X**)\]
+>
+>
+>
+> L(p|**X**) = f(**X**|p) = Πi f(Xi|p) (tính iid và định nghĩa của Likelihood)
+>
+>
+>
+> = Πi (p^Xi)(1-p)^(1-Xi) (pmf của Bern(p): P(X=x) = p ^x(1-p)^(1-x))
+>
+>
+>
+> ⇒ log L(p|**X**) = log Πi (p^Xi)(1-p)^(1-Xi)
+>
+>
+>
+> = Σi \[log (p^Xi)(1-p)^(1-Xi)\]
+>
+>
+>
+> = Σi \[log (p^Xi) + log (1-p)^(1-Xi)\]
+>
+>
+>
+> = Σi \[Xi log(p) + (1-Xi) log (1-p)\]
+>
+>
+>
+> = log(p) Σi Xi + log (1-p) Σi (1-Xi)
+>
+>
+>
+> = log(p) ΣiXi + log (1-p) (n-Σi Xi)
+>
+>
+>
+> ⇒ ∂²/∂p² log L(p|**X**) = ∂/∂p \[∂/∂p L(p|**X**)\]
+>
+>
+>
+> = ∂/∂p \[∂/∂p (log(p) ΣiXi + log (1-p) (n-Σi Xi))\]
+>
+>
+>
+> = ∂/∂p \[(1/p) ΣiXi - \[1/(1-p)\] (n-ΣiXi))\]
+>
+>
+>
+> = ∂/∂p \[(1/p) ΣiXi - \[1/(1-p)\] (n-ΣiXi))\]
+>
+>
+>
+> = (-1/p²) ΣiXi - \[1/(1-p)²\] (n-ΣiXi))\]
+>
+>
+>
+> = (-1/p²) ΣiXi - \[1/(1-p)²\] (n-ΣiXi)
+>
+>
+>
+> ⇒ E_p\[∂²/∂p² log L(p|**X**)\] = E_p{(-1/p²) ΣiXi - \[1/(1-p)²\] (n-ΣiXi)}
+>
+>
+>
+> = E_p{(-1/p²) ΣiXi} - E_p{\[1/(1-p)²\] (n-ΣiXi)}
+>
+>
+>
+> = (-1/p²) E_p{ΣiXi} - \[1/(1-p)²\] E_p{(n-ΣiXi)}
+>
+>
+>
+> = (-1/p²) Σi E_p{Xi} - \[1/(1-p)²\] \[E_p{n} - E_p{ΣiXi)}
+>
+>
+>
+> = (-1/p²) Σi E_p{Xi} - \[1/(1-p)²\] \[E_p{n} - Σi E_p{Xi)}
+>
+>
+>
+> = (-1/p²) Σi p - \[1/(1-p)²\] (n - Σi p)
+>
+>
+>
+> = (-1/p²) np - \[1/(1-p)²\] (n - np)
+>
+>
+>
+> = (-1/p²) np - \[1/(1-p)²\] (n(1 - p))
+>
+>
+>
+> = (-1/p) n - \[1/(1-p)\] (n)
+>
+>
+>
+> = (-n(1-p) - np)/\[p(1-p)\]
+>
+>
+>
+> = (-n + np - np)/\[p(1-p)\]
+>
+>
+>
+> = -n/\[p(1-p)\]
+>
+>
+>
+> Vậy In(p) = -E_p\[∂²/∂p² log L(p|**X**)\] = n/\[p(1-p)\]
+>
+>
+>
+>  ⇒ 1/In(p̂n) = \[p̂n(1-p̂n)\]/n chứng minh xong Sn = √{\[p̂n(1-p̂n)\]/n} chính là 1/√In(p)
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chú rất chi tiết, lập luận chặt chẽ và tự tay tính toán chính xác thông tin Fisher In(p) để liên hệ với công thức lý thuyết. Cần chú ý cách diễn đạt ở một số đoạn nhỏ (như hội tụ phân phối không đồng nghĩa hội tụ phương sai) dù sau đó bạn đã tự đính chính bằng phương sai thực tế.
+
+**🔗 See also:** [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg)
+
+<br>
+
+<a id="node-c96epf4"></a>
+
+###### Kiểm định hai phía
+
+<p align="center"><kbd><img src="assets/5uy6vmgzv96.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này ý là, nếu là bài toán two-sided test: H0: p = p0 vs H1: p ≠ p0 với 0 &lt; p0 &lt; 1. Thì cách làm trên vẫn được, nhưng còn có cách khác:
+>
+>
+>
+> Để thấy nó khác nên nhắc lại cách trước trước:
+>
+>
+>
+> Là dùng statistic Wn, Sn có (Wn - θ0)/Sn → (d) n(0,1) với Sn là standard error, consistent estimator của STD(Wn), để rồi khi Wn là MLE của θ ta có thể dùng Sn = 1/√In(Wn) hay 1/√în(Wn).
+>
+>
+>
+> Và trong note trước Sn = √{\[p̂n(1-p̂n)\]/n}.
+>
+>
+>
+> Thế thì nếu qua bài toán 2-sided hypothesis này, ta vẫn có thể dùng test rule này, tức: Reject H0 khi test statistic là (p̂n - p0) / √{\[p̂n(1-p̂n)\]/n} cách xa một threshold nào đó: |(p̂n - p0) / √{\[p̂n(1-p̂n)\]/n}| &gt; threshold c nào đó.
+>
+>
+>
+> Từ đó, dựa trên việc (p̂n - p0) / √{\[p̂n(1-p̂n)\]/n} → (d) Z \~ n(0,1), ta sẽ chọn c = z\_α/2, giúp có test với level tiệm cận α.
+>
+>
+>
+> Còn cách khác đơn giản là: vì under H0, thì Var(p̂n) chính là p0(1-p0)/n, nên theo CLT:
+>
+>
+>
+> √n(p̂n - p0)/√p0(1-p0) → (d) n(0,1) nên ta khỏi cần phải mượn Sn làm gì nữa. Chỉ việc dùng test statistic là √n(p̂n - p0)/√p0(1-p0)
+>
+>
+>
+> Tóm lại, hai cách nó khác nhau ở cái test statistic (chứ threshold đều là z\_α/2):
+>
+>
+>
+> Cách 1: Test statistic là |(p̂n - p0) / √{\[p̂n(1-p̂n)\]/n}|, tức là bỏ observed value **X** = **x**, tính ra giá trị của cái cục này rồi so với z\_α/2, nếu lớn hơn thì reject H0
+>
+>
+>
+> Cách 2: Test statistic là |√n(p̂n - p0)/√p0(1-p0)|, đồng nghĩa khỏe hơn, không cần phải tính √{\[p̂n(1-p̂n)\]/n} rườm ra. Và cũng là tính giá trị của nó với **X** = **x** rồi so với z\_α/2
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> Và HAI CÁCH CŨNG CÓ CƠ SỞ LÍ THUYẾT KHÁC NHAU:
+>
+>
+>
+> Cơ sở lí thuyết của cách 2 là dùng đơn thuần là CLT: √n(sample mean - true mean)/ true std → (d) n(0,1)
+>
+>
+>
+> Còn cơ sở lí thuyết của cách 1 là nếu ta có Wn, Sn thỏa (Wn - θ0)/Sn → (d) n(0,1). Mà ở đây cụ thể là:
+>
+>
+>
+> Wn = p̂n
+>
+>
+>
+> Sn = √{\[p̂n(1-p̂n)\]/n}, thì nó là 1/√In(Wn), là estimate của 1/√In(p), 
+>
+>
+>
+> Khi xét n lớn, 1/In(p) lại chính là xấp xỉ Var(Wn) , nên 1/√In(p) chính là xấp xỉ √Var(Wn) = STD(Wn) 
+>
+>
+>
+> Vậy nên Sn là estimate của STD(Wn), (nên gọi là standard error) và nó lại là consistant estimator của STD(Wn)
+>
+>
+>
+> Do đó **DỰA TRÊN TÍNH CHẤT HIỆU QUẢ TIỆM CẬN CỦA MLE** (**KHÔNG PHẢI DỰA TRÊN CLT ĐƠN THUẦN**): 
+>
+>
+>
+> √n(p̂n - p) → (d) n(0, 1/I1(p))
+>
+>
+>
+> nên
+>
+>
+>
+> √I1(p)√n(p̂n - p) → (d) √I1(p) × n(0, 1/I1(p))
+>
+>
+>
+> ⇔ (p̂n - p)/ (1/√n√I1(p)) → (d) n(0, 1)
+>
+>
+>
+> ⇔ (p̂n - p)/ (1/√In(p)) → (d) n(0, 1) (chú ý, cái này là do tính hiệu qủa tiệm cận của MLE)
+>
+>
+>
+> Và \[Sn / (1/√In(p))\] →ᵖ 1 (cái này thì là do có thể chứng minh được Sn  = (1/√In(p̂n)) là consistent estimate của (1/√In(p))
+>
+>
+>
+> ⇔ (1/√In(p)) / Sn →ᵖ 1
+>
+>
+>
+> Theo Slusky:
+>
+>
+>
+> (p̂n - p)/ (1/√In(p)) × (1/√In(p)) / Sn →(d) 1 × n(0,1)
+>
+>
+>
+> ⇔ \[(p̂n - p)/ Sn\] × \[(1/√In(p)) / (1/√In(p))\] →(d) n(0,1)
+>
+>
+>
+> ⇔ \[(p̂n - p)/ Sn\] × 1 →(d) n(0,1)
+>
+>
+>
+> ⇔ \[(p̂n - p)/ Sn\]  →(d) n(0,1)
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy khúc cuối nói đại ý là nếu có hai cách thì cách nào nên dùng Câu trả lời là tùy, vì power function của chúng cross nhau nên có khi cách này tốt hơn có khi cách kia tốt hơn
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú cực kỳ xuất sắc và sâu sắc khi phân biệt rõ bản chất kiểm định Wald (kết hợp tính hiệu quả của MLE và định lý Slutsky) với kiểm định dưới H0 dựa trên CLT. Để hoàn thiện hơn nữa về thuật ngữ chuẩn mực, bạn có thể bổ sung rằng hai cách này tương ứng với Wald test và Score test (Rao's score test).
 
 <br>
 
