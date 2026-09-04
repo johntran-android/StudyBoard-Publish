@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1788406320759,
+  "publishedAt": 1788481064818,
   "sections": [
     {
       "title": "📋 Overview",
@@ -327,6 +327,12 @@
       "imageCount": 3
     },
     {
+      "title": "4.1.3 Least squares for classification",
+      "path": "pattern_recognition_machine_learning_cbishop/413_least_squares_for_classification.md",
+      "noteCount": 6,
+      "imageCount": 7
+    },
+    {
       "title": "Appendix C. Matrices",
       "path": "pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md",
       "noteCount": 19,
@@ -339,6 +345,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 392,
-  "totalImages": 585
+  "totalNotes": 398,
+  "totalImages": 592
 }
