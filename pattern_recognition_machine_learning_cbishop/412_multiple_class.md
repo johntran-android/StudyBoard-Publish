@@ -5,11 +5,11 @@
 ---
 <a id="node-ltwr0wj"></a>
 
+<p align="center"><kbd><img src="assets/4noa3379rax.png" width="80%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/sjcsra59y8.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/f70kap7br84.png" width="80%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/4noa3379rax.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Phần này đề cập đến bài toán phân loại nhiều lớp (multiclass classification), tức là bài toán phân loại có nhiều hơn hai lớp dữ liệu. Ban đầu, chúng ta thường có xu hướng kết hợp các hàm phân biệt (discriminant function) nhị phân, vốn dùng để phân loại hai lớp, để giải quyết bài toán phân loại đa lớp.
@@ -65,12 +65,8 @@
 >
 >
 > ⇔ (**w**k - **w**j)T**x** + wk0 - wj0 = 0
->
->
->
-> Hyperplane này có normal vector là **w**k - **w**j
 
-**🔗 See also:** [Section 4.1 Discriminant Functions](./411_discriminant_functions.md#node-fjps9mx)
+**🔗 See also:** [Section 4.1 Discriminant Functions](./411_discriminant_functions.md#node-fjps9mx) · [Least Squares for Classification](./413_least_squares_for_classification.md#node-x9x7ogh)
 
 <br>
 
