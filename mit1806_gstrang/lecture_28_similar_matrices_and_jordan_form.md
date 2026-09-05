@@ -1,13 +1,9 @@
-# Lecture 28: Similar Matrices
-and Jordan Form
+# Lecture 28: Similar Matrices And Jordan Form
 
 📊 **Progress:** `32` Notes | `32` Screenshots
 
 ---
 <a id="node-wbwi6zf"></a>
-
-## Lecture 28: Similar Matrices
-and Jordan Form
 
 <br>
 
@@ -18,10 +14,10 @@ and Jordan Form
 > [!NOTE]
 > bài này ta sẽ thảo luận về **similar matrix**. Tiếp tục về
 > positive definite matrix mà một **ví dụ quan trọng chính** là
-> gặp lại **người bạn cũ ATA**. Ta cũng nhớ lại về **các phép
+> gặp lại **người bạn cũ AᵀA**. Ta cũng nhớ lại về **các phép
 > thử** để kiểm tra matrix có Positive Definite không: pivots,
 > eigenvalues và determinants (mặc dù định nghĩa của nó là
-> quadratic form xTAx dương với mọi x trừ zero)
+> quadratic form xᵀAx dương với mọi x trừ zero)
 
 <br>
 
@@ -39,25 +35,25 @@ and Jordan Form
 >
 > Ta có thể thấy để trả lời câu hỏi này, đầu tiên ta biết gì về
 > pivots của nó -> không nhiều. Nhưng ta biết eigenvalue của
-> nó. Vì như bài trước, **eigenvalue của Ainv sẽ là 1/eigenvalue
+> nó. Vì như bài trước, **eigenvalue của A⁻¹ sẽ là 1/eigenvalue
 > của A** (1) 
 >
 >
 >
 > Và **vì A positive definite** nên **eigenvalue của
-> chúng dương**, **nên eigenvalue của Ainv cũng dương**,
+> chúng dương**, **nên eigenvalue của A⁻¹ cũng dương**,
 >
 >
 >
 > Nên gs nói rằng, **nếu biết A symmetric positive definite thì ta
-> có thể kết luận Ainv cũng vậy**
+> có thể kết luận A⁻¹ cũng vậy**
 >
 >
 >
 > (\~chỗ này có thể hơi thắc mắc là, chỉ nội dựa vào việc  các
 > eigenvalue dương thì chưa đủ, vì như ta đã học ở bài trước,
 > phải xét các pivot, và các 'sub determinant' nữa. Nhưng để
-> xem tí nữa gs có giải thích thêm không)\~ => Đã rõ, vì thật ra
+> xem tí nữa gs có giải thích thêm không)\~ ⇒ Đã rõ, vì thật ra
 > TA KHÔNG CẦN CHECK TOÀN BỘ, MÀ CHỈ MỘT TRONG
 > CÁC PHÉP THỬ ĐÓ ĐÃ ĐỦ KẾT LUẬN POSITIVE DEFINITE
 > RỒI. 
@@ -71,15 +67,15 @@ and Jordan Form
 >
 >
 >
-> (1) Ta chứng minh lại nhanh thôi: lbd, x là eigenvalue và e.vector
-> của A: Ax = λx. Nhân hai vế cho Ainv: AinvAx = Ainvλx
+> (1) Ta chứng minh lại nhanh thôi: λ, x là eigenvalue và e.vector
+> của A: Ax = λx. Nhân hai vế cho A⁻¹: A⁻¹Ax = A⁻¹λx
 >
 >
 >
-> <=> x = Ainvλx <=> x / λ = Ainvx và từ đó đủ kết luận x cũng
-> là eigenvector của Ainv với eigenvalue tương ứng là 1 / λ
+> ⇔ x = A⁻¹λx ⇔ x / λ = A⁻¹x và từ đó đủ kết luận x cũng
+> là eigenvector của A⁻¹ với eigenvalue tương ứng là 1 / λ
 >
-> Nếu A POSITIVE DEFINITE, THÌ Ainv CŨNG VẬY
+> Nếu A POSITIVE DEFINITE, THÌ A⁻¹ CŨNG VẬY
 
 <br>
 
@@ -101,11 +97,13 @@ and Jordan Form
 
 <a id="node-jrc4imr"></a>
 
+##### Positive Definite Matrices Definition
+
 <p align="center"><kbd><img src="assets/nzmibomtp0k.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tuy nhiên n**hờ vụ quadratic function**, ta có xTAx > 0 và
-> xTBx > 0 với mọi x nên ta **dễ dàng suy ra xT(A+B)x > 0
+> Tuy nhiên n**hờ vụ quadratic function**, ta có xᵀAx > 0 và
+> xᵀBx > 0 với mọi x nên ta **dễ dàng suy ra xᵀ(A+B)x > 0
 > với mọi x từ đó kết luận A+B cũng sẽ positive definite**
 >
 > Nếu A, B đều POSITIVE DEFINITE,
@@ -114,6 +112,8 @@ and Jordan Form
 <br>
 
 <a id="node-utujbm5"></a>
+
+###### Properties of Matrix Aᵀ A
 
 <p align="center"><kbd><img src="assets/zcahcbr3t6s.png" width="80%"></kbd></p>
 
@@ -126,16 +126,16 @@ and Jordan Form
 >
 >
 > Nay ta **quay lại matrix (m, n)**. Và ta đã biết **dù A
-> không square, nhưng ATA sẽ square và symmetric.**
+> không square, nhưng AᵀA sẽ square và symmetric.**
 >
 >
 >
-> (Chứng minh ATA symmetric rất dễ: (ATA)T = AT(ATT) = ATA
-> => Symmetric.
+> (Chứng minh AᵀA symmetric rất dễ: (AᵀA)ᵀ = Aᵀ(Aᵀᵀ) = AᵀA
+> ⇒ Symmetric.
 >
 >
 >
-> Và ta sẽ xem xét xem ATA có **positive definite** hay không.
+> Và ta sẽ xem xét xem AᵀA có **positive definite** hay không.
 
 <br>
 
@@ -146,40 +146,40 @@ and Jordan Form
 > [!NOTE]
 > thế thì gs cho rằng, ta **không biết pivots** của nó, **không biết
 > eigenvalue** cũng như det. Nhưng ta **có thể tiếp cận theo
-> cách xem xét quadratic form: xT(ATA)x**.
+> cách xem xét quadratic form: xᵀ(AᵀA)x**.
 >
 >
 >
-> Vậy thì tại sao ta biết **ATA POSITIVE DEFINITE**?
+> Vậy thì tại sao ta biết **AᵀA POSITIVE DEFINITE**?
 >
 >
 >
-> Me: Là bởi vì xTATAx = (Ax)T(Ax) = uTu với u = Ax. Thì có
-> nghĩa là **quadratic form của ATA** CHÍNH LÀ **SQUARE
+> Me: Là bởi vì xᵀAᵀAx = (Ax)ᵀ(Ax) = uᵀu với u = Ax. Thì có
+> nghĩa là **quadratic form của AᵀA** CHÍNH LÀ **SQUARE
 > LENGTH** CỦA **u = Ax**. \~Và vì vậy **đương nhiên nó luôn
 > không âm**, và chỉ bằng 0 khi u = Ax = 0.
 >
 >
 >
-> \~Chỗ này phải **cẩn thận**, **tuy uTu luôn KHÔNG ÂM**
+> \~Chỗ này phải **cẩn thận**, **tuy uᵀu luôn KHÔNG ÂM**
 > nhưng cái (điều kiện để matrix là positive definite) ta cần là
-> xTATAx luôn  **DƯƠNG** với **MỌI X KHÁC 0** và **CHỈ
+> xᵀAᵀAx luôn  **DƯƠNG** với **MỌI X KHÁC 0** và **CHỈ
 > BẰNG 0 KHI X = 0** kìa.
 >
 >
 >
-> Do đó **chưa chắc (Ax)TAx đã đảm bảo điều này**.
+> Do đó **chưa chắc (Ax)ᵀAx đã đảm bảo điều này**.
 >
 >
 >
 > Thành ra phải có điều kiện với A, đó là nó **full-column-rank**,
 > tức mọi columns độc lập, khi đó Ax = 0 chỉ khi x = 0
-> (**nullspace chỉ có mỗi zero**). Dẫn đến **(Ax)T(Ax) = 0 chỉ khi
+> (**nullspace chỉ có mỗi zero**). Dẫn đến **(Ax)ᵀ(Ax) = 0 chỉ khi
 > x = 0, và dương với x khác 0.**
 >
 >
 >
-> Tóm lại **khi A FULL COLUMN RANK thì ATA POSITIVE
+> Tóm lại **khi A FULL COLUMN RANK thì AᵀA POSITIVE
 > DEFINITE**
 
 <br>
@@ -190,7 +190,7 @@ and Jordan Form
 
 > [!NOTE]
 > gs: Correct, thế thì câu hỏi là **khi nào thì ta biết length của
-> Ax**, tức (Ax)T(Ax) **LUÔN DƯƠNG**. Hay nói cách khác
+> Ax**, tức (Ax)ᵀ(Ax) **LUÔN DƯƠNG**. Hay nói cách khác
 > khi nào thì Ax **LUÔN KHÁC 0** với x khác 0 và chỉ bằng 0
 > khi Ax = 0
 >
@@ -218,12 +218,12 @@ and Jordan Form
 
 > [!NOTE]
 > Gs: Correct, và như vậy KHI **A CÓ INDEPENDENT
-> COLUMNS**, QUADRATIC FORM CỦA ATA **LUÔN
+> COLUMNS**, QUADRATIC FORM CỦA AᵀA **LUÔN
 > DƯƠNG VỚI X KHÁC 0**, và chỉ bằng 0 tại x = 0.
 >
 >
 >
-> Thì như vậy **ATA là POSITIVE DEFINITE**
+> Thì như vậy **AᵀA là POSITIVE DEFINITE**
 
 <br>
 
@@ -254,10 +254,10 @@ and Jordan Form
 > [!NOTE]
 > gs nói qua khái niệm **SIMILAR** matrix. Hai matrix A và
 > B **được cho là similar** nếu **tồn tại matrix M** (invertible)
-> sao đó mà **B = M_invAM**
+> sao đó mà **B = M⁻¹AM**
 >
 > A SẼ SIMILAR VỚI B nếu tồn tại matrix M (invertible)
-> sao đó mà B = M_invAM
+> sao đó mà B = M⁻¹AM
 
 <br>
 
@@ -271,7 +271,7 @@ and Jordan Form
 >
 >
 >
-> **A và Λ**, bởi vì ta đã biết **S_invAS** **= Λ**
+> **A và Λ**, bởi vì ta đã biết **S⁻¹AS** **= Λ**
 >
 >
 >
@@ -360,11 +360,13 @@ and Jordan Form
 >
 >
 >
-> Câu hỏi là, tại sao MinvAM lại có cùng eigenvalue với A?
+> Câu hỏi là, tại sao M⁻¹AM lại có cùng eigenvalue với A?
 
 <br>
 
 <a id="node-2ow2x7h"></a>
+
+###### Eigenvalues of Similar Matrices
 
 <p align="center"><kbd><img src="assets/9awsjvc9wr.png" width="80%"></kbd></p>
 
@@ -374,39 +376,39 @@ and Jordan Form
 >
 >
 >
-> <=> AIx = λx
+> ⇔ AIx = λx
 >
 >
 >
-> A(MMinv)x = λx <=> | tiếp, ta sẽ nhân hai vế cho M_inv
+> A(MM⁻¹)x = λx ⇔ | tiếp, ta sẽ nhân hai vế cho M⁻¹
 >
 >
 >
-> **Minv**AMMinvx = **Minv**λx <=>
+> **M⁻¹**AMM⁻¹x = **M⁻¹**λx ⇔
 >
 >
 >
-> (MinvAM)Minvx = λMinvx <=>
+> (M⁻¹AM)M⁻¹x = λM⁻¹x ⇔
 >
 >
 >
-> (B)Minvx = λMinvx <=>
+> (B)M⁻¹x = λM⁻¹x ⇔
 >
 >
 >
-> B**Minvx** = λ**Minvx**
+> B**M⁻¹x** = λ**M⁻¹x**
 >
 >
 >
 > Và equation trên cho thấy **λ CŨNG LÀ EIGENVALUE
-> CỦA B** = MinvAM
+> CỦA B** = M⁻¹AM
 >
 >
 >
-> Với **eigenvectors là Minvx** (có nghĩa là eigenvector thay 
-> đổi bởi Minv)
+> Với **eigenvectors là M⁻¹x** (có nghĩa là eigenvector thay 
+> đổi bởi M⁻¹)
 >
-> Chứng minh MinvAM lại có cùng
+> Chứng minh M⁻¹AM lại có cùng
 > eigenvalue với A
 
 <br>
@@ -471,7 +473,7 @@ and Jordan Form
 >
 >
 >
-> Lấy invertible M BẤT KÌ, thì MinvΛM = Minv(4I)M = 4MinIM = 4 = 4I = Λ
+> Lấy invertible M BẤT KÌ, thì M⁻¹ΛM = M⁻¹(4I)M = 4MinIM = 4 = 4I = Λ
 >
 >
 >
@@ -504,9 +506,9 @@ and Jordan Form
 >
 > Như đã nói, nó không ở chung family với Λ = [4 0; 0 4], mà ở
 > trong một family khác có nhiều thành viên hơn (với các
-> invertible matrix M khác nhau thì sẽ tạo MinvBM có chung
+> invertible matrix M khác nhau thì sẽ tạo M⁻¹BM có chung
 > eigenvalue với B, còn Λ chỉ có một mình, do với mọi invertible
-> M thì đều MinvΛM = Λ)
+> M thì đều M⁻¹ΛM = Λ)
 >
 >
 >
@@ -521,7 +523,7 @@ and Jordan Form
 >
 >
 > Giả sử C có mọi eigenvalue bằng 4 và diagonalizable, khi đó
-> C = SΛSinv, với S là matrix of eigenvectors. Thì ngay lập tức
+> C = SΛS⁻¹, với S là matrix of eigenvectors. Thì ngay lập tức
 > C phải bằng Λ vì như khi ta chứng minh Λ chỉ similar với chính
 > nó.
 >
@@ -538,7 +540,7 @@ and Jordan Form
 >
 >
 > (*) Dù cái này c**hỉ khác [4 0; 0 4] ở chỗ** **có một phần tử
-> ngoài đường chéo khác 0** (số 1) nhưng nó khiến **[A -λ*I]** 
+> ngoài đường chéo khác 0** (số 1) nhưng nó khiến **[A -λ𝐈]** 
 > **TRỞ NÊN CÓ MỘT PIVOT**, thành ra **CHỈ CÒN 1 FREE
 > COLUMN**.
 >
@@ -564,88 +566,60 @@ and Jordan Form
 >
 >
 >
-> Vì **nếu diagonalizable** thì nó **sẽ có dạng S_invΛS**
-> nhưng như ta **đã thấy bên kia**, **với mọi M, thì M_inv
+> Vì **nếu diagonalizable** thì nó **sẽ có dạng S⁻¹ΛS**
+> nhưng như ta **đã thấy bên kia**, **với mọi M, thì M⁻¹
 > [4 0; 0 4] M luôn cho ra Λ = [4 0; 0 4]**
 >
 >
 >
 > Thành ra [5 1; -1 3] không thể tìm được matrix M nào
-> khiến phân tách [5 1; -1 3] = Minv[4 0; 0 4]M bởi matrix 
+> khiến phân tách [5 1; -1 3] = M⁻¹[4 0; 0 4]M bởi matrix 
 > S nào được và cũng chính là không thể diagonalizable
 > (vì diagonalizable có nghĩa là có thể factor matrix thành
-> S_invΛS với Λ chính là [4 0; 0 4]
+> S⁻¹ΛS với Λ chính là [4 0; 0 4]
 
 <br>
 
 <a id="node-9osbdij"></a>
 
+###### Family of 2x2 Matrices
+
 <p align="center"><kbd><img src="assets/rh9eoosvgpi.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và ta có thể có rất nhiều matrix, **đều có eigenvalues
-> là 4, 4** và **chỉ có 1 independent eigenvectors và không
-> thể diagonalizable.**
+> Và ta có thể có rất nhiều matrix, **đều có eigenvalues là 4, 4** và **chỉ có 1 independent eigenvectors và không thể diagonalizable.**
 >
-> Như vậy, có thể hiểu như vầy. Vì eigenvectors x của matrix A là vector được scale
-> với eigenvalue khi nhân với A: **Ax = λx** nên điều này đồng nghĩa với việc x cũng
-> là vector bị "biến thành 0" bởi matrix A - lambda*I, hay, nó chính là vector trong
-> null-space của A - lambda*I
+> Như vậy, có thể hiểu như vầy. Vì eigenvectors x của matrix A là vector được scale với eigenvalue khi nhân với A: **Ax = λx** nên điều này đồng nghĩa với việc x cũng là vector bị "biến thành 0" bởi matrix A - λI, hay, nó chính là vector trong null-space của A - λI
 >
 >
 >
-> Vậy, để tìm x thì ta sẽ tìm null-space của **A - λI**. Nhưng trước hết, vì matrix A
-> luôn có eigenvector, tức là non-zero vector x được biến thành lambda*x nên **A -
-> λI** cũng luôn có non-zero vector x trong null-space. Điều này cho thấy **A - λI** là
-> singular matrix.
+> Vậy, để tìm x thì ta sẽ tìm null-space của **A - λI**. Nhưng trước hết, vì matrix A luôn có eigenvector, tức là non-zero vector x được biến thành λ\*x nên **A - λI** cũng luôn có non-zero vector x trong null-space. Điều này cho thấy **A - λI** là singular matrix.
 >
 >
 >
-> Thế thì dựa vào tính chất này cho phép ta tìm lambda, bởi singular matrix có
-> determinant bằng 0, từ đó việc thiết lập equation determinant  bằng 0 cho ta
-> characteristic equation, giúp giải tìm lambda.
+> Thế thì dựa vào tính chất này cho phép ta tìm λ, bởi singular matrix có determinant bằng 0, từ đó việc thiết lập equation determinant bằng 0 cho ta characteristic equation, giúp giải tìm λ.
 >
 >
 >
-> Khi có lambda, thì như đã nói, ta sẽ lắp vào để có matrix [**A - λI**] và tìm
-> null-space của nó, hay đúng hơn là là tìm basis của null-space,  đó chính là
-> eigenvectors (của A)
+> Khi có λ, thì như đã nói, ta sẽ lắp vào để có matrix \[**A - λI**\] và tìm null-space của nó, hay đúng hơn là là tìm basis của null-space, đó chính là eigenvectors (của A)
 >
 >
 >
-> Vậy thì, giả sử ta có các eigenvalue khác nhau, thì đương nhiên ta có các matrix A
-> - λI khác nhau. Và từ đó, các singular matrix A - λI khác nhau này cho
-> các eigenvector khác nhau (! điểm này phải suy nghĩ thêm, ví dụ như có khi nào
-> các matrix 2x2 khác nhau vẫn có cùng nullspace không?) Dẫn đến là ta luôn có
-> các eigenvector độc lập khi các eigenvalue khác nhau.
+> Vậy thì, giả sử ta có các eigenvalue khác nhau, thì đương nhiên ta có các matrix A - λI khác nhau. Và từ đó, các singular matrix A - λI khác nhau này cho các eigenvector khác nhau (! điểm này phải suy nghĩ thêm, ví dụ như có khi nào các matrix 2x2 khác nhau vẫn có cùng nullspace không?) Dẫn đến là ta luôn có các eigenvector độc lập khi các eigenvalue khác nhau.
 >
 >
 >
-> Nhưng nếu có eigenvalue trùng nhau (repeat eigenvalues) thì ta chỉ có một matrix
-> **A - λI**.  Lấy ví dụ matrix 2x2, có hai eigenvalue 4,4. Thì như đã nói, ta chỉ có một
-> matrix A - lambda*I, dẫn tới hai tình huống. Nếu matrix A - lambda*I có rank 1, tức
-> là có một pivot variable, và từ đó ta chỉ có một free variable, hay, một vector (non
-> zero) độc lập trong nullspace. Đây chính là vấn đề, gọi là defective matrix khi nó
-> không có đủ n eigenvectors độc lập.
+> Nhưng nếu có eigenvalue trùng nhau (repeat eigenvalues) thì ta chỉ có một matrix **A - λI**. Lấy ví dụ matrix 2x2, có hai eigenvalue 4,4. Thì như đã nói, ta chỉ có một matrix A - λI, dẫn tới hai tình huống. Nếu matrix A - λI có rank 1, tức là có một pivot variable, và từ đó ta chỉ có một free variable, hay, một vector (non zero) độc lập trong nullspace. Đây chính là vấn đề, gọi là defective matrix khi nó không có đủ n eigenvectors độc lập.
 >
 >
 >
-> Trường hợp thứ hai, đó là matrix đặc biệt mà khiến A - λI bằng matrix [0 0;
-> 0 0], tức là A chính xác là [lambda 0; 0 lambda], thì khi đó A - λI là matrix
-> rank = 0, và ta có 2 vectors trong basis của nullspace (hay dimension của
-> nullspace bằng 2). Lúc này thì ta vẫn có đủ 2 eigenvector độc lập.
+> Trường hợp thứ hai, đó là matrix đặc biệt mà khiến A - λI bằng matrix \[0 0; 0 0\], tức là A chính xác là \[λ 0; 0 λ\], thì khi đó A - λI là matrix rank = 0, và ta có 2 vectors trong basis của nullspace (hay dimension của nullspace bằng 2). Lúc này thì ta vẫn có đủ 2 eigenvector độc lập.
 >
 >
 >
-> Lập luận trên giúp ra hiểu rằng, giả sử ta có matrix [4 0; 0 4], thì việc có một  giá trị
-> ngoài đường chéo khác 0, ví dụ bằng 1 để matrix trở thành [4 1; 0 4] thì lập tức
-> tạo ra một pivot columns trong A - lambda*I, dẫn tới matrix không còn đủ hai free
-> columns, và dẫn tới tình trạng defective. Thành ra chỉ có độc nhất matrix [4 0; 0 4]
-> là matrix với repeat eigenvalues mà có 2 eigenvector độc lập. Còn lại tất cả các
-> matrix khác đều defective.
+> Lập luận trên giúp ra hiểu rằng, giả sử ta có matrix \[4 0; 0 4\], thì việc có một giá trị ngoài đường chéo khác 0, ví dụ bằng 1 để matrix trở thành \[4 1; 0 4\] thì lập tức tạo ra một pivot columns trong A - λI, dẫn tới matrix không còn đủ hai free columns, và dẫn tới tình trạng defective. Thành ra chỉ có độc nhất matrix \[4 0; 0 4\] là matrix với repeat eigenvalues mà có 2 eigenvector độc lập. Còn lại tất cả các matrix khác đều defective.
 >
-> Sự thật basis của nullspace của A - λI chính là eigenvectors của A. Do đó,  **để
-> matrix A nxn có n eigenvectors độc lập** thì:
+> Sự thật basis của nullspace của A - λI chính là eigenvectors của A. Do đó, **để matrix A nxn có n eigenvectors độc lập** thì:
 >
 >
 >
@@ -653,62 +627,47 @@ and Jordan Form
 >
 >
 >
-> Proof: Giả sử tồn tại x1, x2 là eigenvectors ứng với λ1, λ2 khác nhau nhưng
-> chúng không độc lập, tức x1=kx2.
+> Proof: Giả sử tồn tại x1, x2 là eigenvectors ứng với λ1, λ2 khác nhau nhưng chúng không độc lập, tức x1=kx2.
 >
 >
 >
-> Thế thì từ Ax1 = λ1x1, thay x1 = kx2 vào vế trái, ta có Akx2 = kAx2 = **kλ2x2**
-> (vì Ax2 = λ2x2).Thay x1 = kx2 vào vế phải ta có λ1kx2 = **kλ1x2
+> Thế thì từ Ax1 = λ1x1, thay x1 = kx2 vào vế trái, ta có Akx2 = kAx2 = **kλ2x2**(vì Ax2 = λ2x2).Thay x1 = kx2 vào vế phải ta có λ1kx2 = \*\*kλ1x2
 >
 >
 >
-> Vậy Ax1 = λ1x1 <=> kλ2x2 = λ1kx2 <=> λ2x2 = λ1x2 mâu thuẫn, vì λ1 khác λ2**
+> Vậy Ax1 = λ1x1 ⇔ kλ2x2 = λ1kx2 ⇔ λ2x2 = λ1x2 mâu thuẫn, vì λ1 khác λ2\*\*
 >
 >
 >
-> Có thể hiểu như sau: Muốn mọi eigenvector độc lập thì các nullspace của A -
-> λI  phải KHÁC NHAU, từ đó các NULL-SPACE KHÁC NHAU
+> Có thể hiểu như sau: Muốn mọi eigenvector độc lập thì các nullspace của A - λI phải KHÁC NHAU, từ đó các NULL-SPACE KHÁC NHAU
 >
 >
 >
-> Chứng minh, không thể có hai matrix A-λ1I khác A-λ2I mà có chung nullspace:
-> Xét basis x1 của nullspace của A-λ1I: (A-λ1I)x1=0 <=> Ax1=λ1x1. Xét basis x2
-> của nullspace của A-λ2I: (A-λ1I)x = 0 <=> Ax2=λ2x2. Giả sử x1 trùng x2, tức
-> x1=kx2 Ngay lập tức quay lại phần chứng minh ở trên, để cho thấy mâu thuẫn.
-> Vậy có thể kết luận:
+> Chứng minh, không thể có hai matrix A-λ1I khác A-λ2I mà có chung nullspace: Xét basis x1 của nullspace của A-λ1I: (A-λ1I)x1=0 ⇔ Ax1=λ1x1. Xét basis x2 của nullspace của A-λ2I: (A-λ1I)x = 0 ⇔ Ax2=λ2x2. Giả sử x1 trùng x2, tức x1=kx2 Ngay lập tức quay lại phần chứng minh ở trên, để cho thấy mâu thuẫn. Vậy có thể kết luận:
 >
 >
 >
-> Nếu **λ1 KHÁC λ2** thì **NULLSPACE CỦA (A-λ1*I KHÁC NULLSPACE CỦA
-> A-λ2I** dẫn đến **BASIS CỦA CHÚNG KHÁC NHAU**,
+> Nếu **λ1 KHÁC λ2** thì **NULLSPACE CỦA (A-λ1\*I KHÁC NULLSPACE CỦA A-λ2I** dẫn đến **BASIS CỦA CHÚNG KHÁC NHAU**,
 >
 >
 >
-> Và từ đó **CHÍNH LÀ CÁC EIGENVECTOR  CỦA A ĐỘC LẬP**
+> Và từ đó **CHÍNH LÀ CÁC EIGENVECTOR CỦA A ĐỘC LẬP**
 >
 >
 >
-> II) **Nếu MỌI EIGENVALUES ĐỀU BẰNG = λ**, thì để A **DIAGONALIZABLE**
-> thì A phải = λI
+> II) **Nếu MỌI EIGENVALUES ĐỀU BẰNG = λ**, thì để A **DIAGONALIZABLE**thì A phải = λI
 >
 >
 >
-> Proof: Cho A có mọi eigenvalues là λ, giả sử A diagonalizable thì A=SΛSinv =
-> SλISinv = λ(SISinv) = λI Vậy, nếu muốn diagonalizable thì A phải là λI
+> Proof: Cho A có mọi eigenvalues là λ, giả sử A diagonalizable thì A=SΛS⁻¹ = SλIS⁻¹ = λ(SIS⁻¹) = λI Vậy, nếu muốn diagonalizable thì A phải là λI
 >
 >
 >
-> Lập luận rằng để A có đủ eigenvector độc lập, thì matrix A - λI (lúc bấy giờ chỉ
-> có một matrix A - λI do mọi λ đều bằng nhau) phải là matrix với nullspace có dim
-> = n, mà matrix nxn có dim of nullspace = n chỉ có thể là zero matrix Và như vậy
-> A - λI = 0 => A = λI
+> Lập luận rằng để A có đủ eigenvector độc lập, thì matrix A - λI (lúc bấy giờ chỉ có một matrix A - λI do mọi λ đều bằng nhau) phải là matrix với nullspace có dim = n, mà matrix nxn có dim of nullspace = n chỉ có thể là zero matrix Và như vậy A - λI = 0 ⇒ A = λI
 >
 >
 >
-> III) Khái quát lên, nếu **CÓ S REPEATED EIGENVALUES**, để A có n
-> eigenvectors độc lập thì matrix **A - λI** **PHẢI CÓ NULL-SPACE VỚI
-> DIMENSION = S**, tức là nó phải có **rank = n - s.**
+> III) Khái quát lên, nếu **CÓ S REPEATED EIGENVALUES**, để A có n eigenvectors độc lập thì matrix **A - λI** **PHẢI CÓ NULL-SPACE VỚI DIMENSION = S**, tức là nó phải có **rank = n - s.**
 >
 >
 >
@@ -716,13 +675,11 @@ and Jordan Form
 >
 >
 >
-> i) Có phải bất cứ vị trí ngoài đường chéo nào khác 0 cũng khiến matrix trở
-> thành có thiếu free columns để rồi trở thành thiếu eigenvectors độc lập không.
+> i) Có phải bất cứ vị trí ngoài đường chéo nào khác 0 cũng khiến matrix trở thành có thiếu free columns để rồi trở thành thiếu eigenvectors độc lập không.
 >
 >
 >
-> ii) Gỉa sử xét matrix 3x3, có 2 eigenvalue lambda1 giống nhau, cái còn lại lmd2,
-> thì khác.
+> ii) Gỉa sử xét matrix 3x3, có 2 eigenvalue λ1 giống nhau, cái còn lại lmd2, thì khác.
 
 <br>
 
@@ -741,8 +698,8 @@ and Jordan Form
 >
 >
 >
-> Me: 2: Solve (A-lambda*I)x = 0 <=> Ax = 0, và A có 2 pivot
-> columns => có 2 free columns = 2 special solutions = 2
+> Me: 2: Solve (A-λI)x = 0 ⇔ Ax = 0, và A có 2 pivot
+> columns ⇒ có 2 free columns = 2 special solutions = 2
 > vector trong basis của nullspace = 2 (independent)
 > eigenvectors
 
@@ -768,8 +725,8 @@ and Jordan Form
 >
 > Me: Có thể thấy eigenvectors vẫn là trong nullspace của 
 > A (vì λ vẫn bằng 0, bởi giải characteristic equation
-> det A = 0 <=> λ^4 = 0 <=> λ = 0, từ đó solve 
-> equation (A-0*I)x=0 để tìm eigenvectors <=> Ax=0)
+> det A = 0 ⇔ λ^4 = 0 ⇔ λ = 0, từ đó solve 
+> equation (A-0*I)x=0 để tìm eigenvectors ⇔ Ax=0)
 > Và A vẫn có 2 free columns -> dim N(A) = 2 -> 2 eigenvectors
 >
 >
