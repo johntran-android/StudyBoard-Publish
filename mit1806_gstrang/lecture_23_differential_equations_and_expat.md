@@ -1,13 +1,9 @@
-# Lecture 23: Differential
-equations And Exp(at)
+# Lecture 23: Differential Equations And Exp(at)
 
 📊 **Progress:** `50` Notes | `56` Screenshots
 
 ---
 <a id="node-ond6r17"></a>
-
-## Lecture 23: Differential
-equations And Exp(at)
 
 <br>
 
@@ -44,7 +40,7 @@ equations And Exp(at)
 <p align="center"><kbd><img src="assets/4kz3bdungmm.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs cho một **initial** condition, **u(0) = [1 0].T** và nói rằng
+> Gs cho một **initial** condition, **u(0) = [1 0]ᵀ** và nói rằng
 > điều này có nghĩa **là "lúc đầu" mọi thứ đều nằm trong
 > u1** (ý là mọi giá trị đều trong component thứ nhất của
 > vector u)
@@ -102,25 +98,27 @@ equations And Exp(at)
 
 <a id="node-jvc5y1h"></a>
 
+###### Finding Eigenvalues of a Matrix
+
 <p align="center"><kbd><img src="assets/ns77m38hq3.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Gs: hoàn toàn chính xác. và ta có thể kiểm tra bằng cách
-> xây dựng **characteristic equation** để solve ra lambda
+> xây dựng **characteristic equation** để solve ra λ
 >
 >
 >
 > Review chút, theo định nghĩa, eigenvector là vector (khác 0) mà
-> chỉ bị scale bởi A, tức Ax = lambdax. Điều này đồng nghĩa
-> (A-lambda*I)x = 0, cho thấy eigenvector của A chính là vector
-> trong nullspace của A-lambda*I. Vậy thì nếu x tồn tại, đồng
-> nghĩa nullspace của A-lambda*I không rỗng, do đó matrix này
+> chỉ bị scale bởi A, tức Ax = λx. Điều này đồng nghĩa
+> (A-λI)x = 0, cho thấy eigenvector của A chính là vector
+> trong nullspace của A-λI. Vậy thì nếu x tồn tại, đồng
+> nghĩa nullspace của A-λI không rỗng, do đó matrix này
 > là singular và singular matrix thì det = 0.
 >
 >
 >
-> Vậy từ đó ta sẽ thiết lập equation det (A-lambda*I) = 0 để giải
-> tìm lambda (khiến A-lambda*I) singular, và sau đó ta sẽ tìm
+> Vậy từ đó ta sẽ thiết lập equation det (A-λI) = 0 để giải
+> tìm λ (khiến A-λI) singular, và sau đó ta sẽ tìm
 > nullspace basis của nó để có eigenvector của A. Equation trên
 > gọi là characteristic equation (phương trình đặc trưng)
 
@@ -164,12 +162,12 @@ equations And Exp(at)
 >
 >
 >
-> me: vì lambda = 0 rồi, nun **nullspace của (A - λ*I) cũng là
+> me: vì λ = 0 rồi, nun **nullspace của (A - λ𝐈) cũng là
 > của A**. Nói rõ hơn là, ta đã biết non-zero vector trong
 > nullspace hay có thể nói basis vector của nullspace của
-> A-lambda*I sẽ chính là eigenvector của A ứng với
-> eigenvalue lambda. Mà ở đây lambda = 0, thì A và
-> A-lambda*I là một, nên nullspace của A-lmd*I chính là
+> A-λI sẽ chính là eigenvector của A ứng với
+> eigenvalue λ. Mà ở đây λ = 0, thì A và
+> A-λI là một, nên nullspace của A-lmd*I chính là
 > nullspace của A. Điều này cũng phản ánh **sự thật** đơn
 > giản rằng, **nếu nullspace của A có dim > 0**, thì **basis
 > của N(A) chính là eigenvector** vì đó là non-zero vector
@@ -193,8 +191,8 @@ equations And Exp(at)
 <p align="center"><kbd><img src="assets/avww1r8n4fo.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Với eigenvalue = -3, thì A-lambda*I là [2, 2; 1, 1], tìm special
-> solution (basis của nullspace của A-lambda*I) ra **[-1, 1]** đây
+> Với eigenvalue = -3, thì A-λI là [2, 2; 1, 1], tìm special
+> solution (basis của nullspace của A-λI) ra **[-1, 1]** đây
 > chính là eigenvector thứ 2
 
 <br>
@@ -216,7 +214,7 @@ equations And Exp(at)
 >
 >
 > Vì **mọi vector trong line** đi qua vector đó **đều là thuộc
-> nullspace** (của A-lambda*I) .
+> nullspace** (của A-λI) .
 >
 >
 >
@@ -337,7 +335,7 @@ equations And Exp(at)
 
 > [!NOTE]
 > Và để có c1, c2 ta sẽ dùng đến
-> **initial condition**: u(0) = [1 0]T
+> **initial condition**: u(0) = [1 0]ᵀ
 
 <br>
 
@@ -394,7 +392,7 @@ equations And Exp(at)
 >
 >
 > Từ đó ta có u(t) đạt giá trị ổn định, tức trạng thái
-> **STEADY stage là c1x1 = (1/3)*[2 1]T = [2/3 1/3]T**
+> **STEADY stage là c1x1 = (1/3)*[2 1]ᵀ = [2/3 1/3]ᵀ**
 >
 >
 >
@@ -475,7 +473,7 @@ equations And Exp(at)
 >
 >
 > Nên với case eigenvalue là **số phức với phần thực âm
-> (Re lambda < 0)**, cũng sẽ đạt trạng thái ổn định.
+> (Re λ < 0)**, cũng sẽ đạt trạng thái ổn định.
 
 <br>
 
@@ -583,7 +581,7 @@ equations And Exp(at)
 >
 >
 >
-> Do đó u = Sv => du = Sdv, từ đó **du/dt = Sdv/dt**
+> Do đó u = Sv ⇒ du = Sdv, từ đó **du/dt = Sdv/dt**
 >
 >
 >
@@ -604,11 +602,11 @@ equations And Exp(at)
 <p align="center"><kbd><img src="assets/elw7probnx8.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Nhân hai vế cho **S_inv**:
+> Nhân hai vế cho **S⁻¹**:
 >
 >
 >
-> **S_inv.S dv/dt** = **S_inv A Sv** <=> **dv/dt =** **Λv**
+> **S⁻¹.S dv/dt** = **S⁻¹ A Sv** ⇔ **dv/dt =** **Λv**
 >
 >
 >
@@ -714,7 +712,7 @@ equations And Exp(at)
 >
 >
 >
-> => f(0) =  f''(0) = ... f**(n)(0) = e^0 = 1
+> ⇒ f(0) =  f''(0) = ... f**(n)(0) = e^0 = 1
 >
 >
 >
@@ -749,7 +747,7 @@ equations And Exp(at)
 <p align="center"><kbd><img src="assets/0wp0mdqrimrl.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs có nhắc đến việc triển khai một hàm khác là (I - At)^-1
+> gs có nhắc đến việc triển khai một hàm khác là (I - At)⁻¹
 > tương tự hàm 1/(1-x)
 
 <br>
@@ -853,6 +851,8 @@ equations And Exp(at)
 
 <a id="node-ckdooia"></a>
 
+###### Matrix Exponential and Diagonalization
+
 <p align="center"><kbd><img src="assets/rxpozxm0xmr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -865,16 +865,18 @@ equations And Exp(at)
 >
 >
 >
-> u(t) = **e^(At)**.u(0) cũng bằng **S*(e^Λt)*Sinv** u(0)
+> u(t) = **e^(At)**.u(0) cũng bằng **S*(e^Λt)*S⁻¹** u(0)
 
 <br>
 
 <a id="node-6knut4h"></a>
 
+###### Matrix Exponential Diagonalization
+
 <p align="center"><kbd><img src="assets/ujtiq4m2fvn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> và cái chính cần chứng minh là **e^(At)** = **S*e^(Λt)*Sinv**
+> và cái chính cần chứng minh là **e^(At)** = **S*e^(Λt)*S⁻¹**
 
 <br>
 
@@ -891,12 +893,12 @@ equations And Exp(at)
 
 <a id="node-iq9opcv"></a>
 
+###### Matrix Exponential Series Expansion
+
 <p align="center"><kbd><img src="assets/lr1s9vywy8q.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đại khái là gs cho rằng, **khi eigenvalue của A nhỏ hơn 1** thì
-> (At)**1, (At)**2, (At)**3 ....(At)**n sẽ nhỏ dần nhỏ dần và
-> tổng trên sẽ converge về I + At
+> đại khái là gs cho rằng, **khi eigenvalue của A nhỏ hơn 1** thì (At)^1, (At)^2, (At)^3 ....(At^n sẽ nhỏ dần nhỏ dần và tổng trên sẽ converge về I + At
 
 <br>
 
@@ -906,18 +908,20 @@ equations And Exp(at)
 
 > [!NOTE]
 > rồi, gs quay lại với chuỗi e^(At) , nhớ là ta đang có giải
-> thích tại sao **e^(At) lại chính là Se^(Λt)Sinv**
+> thích tại sao **e^(At) lại chính là Se^(Λt)S⁻¹**
 
 <br>
 
 <a id="node-nvlbs8p"></a>
 
+###### Matrix Exponential and Diagonalization
+
 <p align="center"><kbd><img src="assets/wi0ycm7vsuh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, I gs viết thành S.Sinv luôn. Để rồi cái chuỗi này
+> Rồi, I gs viết thành S.S⁻¹ luôn. Để rồi cái chuỗi này
 > được  gs phân tách thành S (....) Sin thì cái dấu 3
-> chấm chính là  e**Λt bởi vì lấy S bỏ ở đầu, Sinv bỏ ở
+> chấm chính là  e**Λt bởi vì lấy S bỏ ở đầu, S⁻¹ bỏ ở
 > cuối thì ở giữa mỗi term sẽ là:
 >
 >
@@ -943,25 +947,25 @@ equations And Exp(at)
 >
 >
 >
-> thế thì I = SSinv (cái này ko có gì phải bàn, cũng có thể ghi là SISinv = 
-> SΛ^0Sinv, vì Λ^0 cũng là I)
+> thế thì I = SS⁻¹ (cái này ko có gì phải bàn, cũng có thể ghi là SIS⁻¹ = 
+> SΛ^0S⁻¹, vì Λ^0 cũng là I)
 >
 >
 >
-> At = SΛSinvt vì A = SΛSinv, là phép diagonalization matrix A đã học
+> At = SΛS⁻¹t vì A = SΛS⁻¹, là phép diagonalization matrix A đã học
 >
 >
 >
-> (At)2 thì = (At)(At) = (SΛSinv)(SΛSinv) = SΛSinvSΛSinv = SΛIΛSinv  
-> = SΛΛSinv = SΛ^2Sinv
+> (At)2 thì = (At)(At) = (SΛS⁻¹)(SΛS⁻¹) = SΛS⁻¹SΛS⁻¹ = SΛIΛS⁻¹  
+> = SΛΛS⁻¹ = SΛ^2S⁻¹
 >
 >
 >
-> tương tự (At)^n = SΛ^nSinv
+> tương tự (At)^n = SΛ^nS⁻¹
 >
 >
 >
-> Vậy e^At = SΛ^0Sinv + SΛSinv + SΛ^2Sinv/2! + ...SΛ^nSinv/n!
+> Vậy e^At = SΛ^0S⁻¹ + SΛS⁻¹ + SΛ^2S⁻¹/2! + ...SΛ^nS⁻¹/n!
 >
 >
 >
@@ -969,16 +973,16 @@ equations And Exp(at)
 >
 >
 >
-> e^At = S(Λ^0Sinv + ΛSinv + Λ^2Sinv/2! + ...Λ^nSinv/n!)
+> e^At = S(Λ^0S⁻¹ + ΛS⁻¹ + Λ^2S⁻¹/2! + ...Λ^nS⁻¹/n!)
 >
 >
 >
-> Lấy Sinv ra để bên phải (cũng đặt thừa số chung nhưng vì phép nhân
+> Lấy S⁻¹ ra để bên phải (cũng đặt thừa số chung nhưng vì phép nhân
 > matrix không có tính commutative nên phải giữ thứ tự):
 >
 >
 >
-> e^At = S(Λ^0 + Λ + Λ^2/2! + ...Λ^n/n!)Sinv
+> e^At = S(Λ^0 + Λ + Λ^2/2! + ...Λ^n/n!)S⁻¹
 >
 >
 >
@@ -987,7 +991,7 @@ equations And Exp(at)
 >
 >
 >
-> Vậy **e^At = Se^ΛtSinv**
+> Vậy **e^At = Se^ΛtS⁻¹**
 
 **🔗 See also:** [linked note](#node-qz8n3kq)
 
@@ -998,7 +1002,7 @@ equations And Exp(at)
 <p align="center"><kbd><img src="assets/e1x98syufbc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Như vậy ta đã hiểu tại sao **e^(At)** lại chính là **S.e^(Λt). Sinv**
+> Như vậy ta đã hiểu tại sao **e^(At)** lại chính là **S.e^(Λt). S⁻¹**
 
 <br>
 
@@ -1009,7 +1013,7 @@ equations And Exp(at)
 > [!NOTE]
 > đại khái gs nhắc nhở rằng điều này **chỉ đúng nếu A có thể
 > diagonalizable** tức là **N INDEPENDENT EIGENVECTORS**
-> thì mới có A = SΛSinv
+> thì mới có A = SΛS⁻¹
 
 <br>
 
@@ -1033,11 +1037,11 @@ equations And Exp(at)
 >
 >
 >
-> sau đó ta cũng chứng minh rằng e^(At) = S*e^(Λt)*S_inv
+> sau đó ta cũng chứng minh rằng e^(At) = S*e^(Λt)*S⁻¹
 >
 >
 >
-> từ đó u = S*e^(Λt)*S_inv u(0) = S*e^(Λt)*S_inv*S*c = **S*e^(Λt)*c**
+> từ đó u = S*e^(Λt)*S⁻¹ u(0) = S*e^(Λt)*S⁻¹*S*c = **S*e^(Λt)*c**
 >
 >
 >
@@ -1053,11 +1057,13 @@ equations And Exp(at)
 > thì đây cũng chính là **S*e^(Λt)*c**, với S là eigenvector matrix,
 > Λ là eigenvalues diagonal matrix và c là (c1 c2)
 
-**🔗 See also:** [linked note](#node-lwzum6q) · [linked note](#node-nvlbs8p) · [linked note](#node-7bzf5vx)
+**🔗 See also:** [linked note](#node-lwzum6q) · [Matrix Exponential and Diagonalization](#node-nvlbs8p) · [linked note](#node-7bzf5vx)
 
 <br>
 
 <a id="node-4z6si2m"></a>
+
+###### Matrix Exponential and Diagonalization
 
 <p align="center"><kbd><img src="assets/7g3pd9o1p.png" width="80%"></kbd></p>
 
@@ -1073,11 +1079,11 @@ equations And Exp(at)
 >
 >
 >
-> **u(t) = e^(At) = S*e^(Λt)*Sinv**,
+> **u(t) = e^(At) = S*e^(Λt)*S⁻¹**,
 >
 >
 >
-> thì ta thấy S và Sinv thì không đổi, vì n**ó không dính đến
+> thì ta thấy S và S⁻¹ thì không đổi, vì n**ó không dính đến
 > t**. Chỉ có e^(Λt) = diagonal matrix các eigenvalue là dính
 > đến t.
 >
@@ -1085,19 +1091,21 @@ equations And Exp(at)
 >
 > Như vậy nếu **muốn giá trị u(t) ngày càng nhỏ** khi các giá
 > trị t tăng lên thì **e(Λt) phải -> 0** và đồng nghĩa các **e^λ1t,
-> e^λ2t.... tiến tới 0**. Và muốn vậy các **lambda phải âm**
-> (hoặc có phần thực âm nếu lambda là số phức) vì khi đó
-> e^lambda*t sẽ -> 0 theo tính chất hàm exponential
+> e^λ2t.... tiến tới 0**. Và muốn vậy các **λ phải âm**
+> (hoặc có phần thực âm nếu λ là số phức) vì khi đó
+> e^λt sẽ -> 0 theo tính chất hàm exponential
 
 <br>
 
 <a id="node-nu0o4uw"></a>
 
+###### Matrix Exponential and Stability
+
 <p align="center"><kbd><img src="assets/7kyauokxu0c.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Hay cụ thể hơn là p**hần thực của lambda**
-> phải âm: Re lambda < 0
+> Hay cụ thể hơn là p**hần thực của λ**
+> phải âm: Re λ < 0
 
 <br>
 
@@ -1107,7 +1115,7 @@ equations And Exp(at)
 
 > [!NOTE]
 > và gs vẽ minh hoạ cho trường hợp này, trên hai trục thực
-> và phức. Thì lambda phải **nằm bên phần mà giá trị thực 
+> và phức. Thì λ phải **nằm bên phần mà giá trị thực 
 > có giá trị âm**
 
 <br>
@@ -1143,7 +1151,7 @@ equations And Exp(at)
 <p align="center"><kbd><img src="assets/gdihpz8axye.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> vậy thì ở đây ta cũng đặt **u = [y' y].T** và **u' = [y'' y']**
+> vậy thì ở đây ta cũng đặt **u = [y' y]ᵀ** và **u' = [y'' y']**
 > cần được liên hệ với u bởi một matrix A
 >
 >
@@ -1152,7 +1160,7 @@ equations And Exp(at)
 >
 >
 >
-> Dễ thấy nó là product của [-b -k]T và [y' y].T
+> Dễ thấy nó là product của [-b -k]ᵀ và [y' y]ᵀ
 >
 >
 >
@@ -1166,7 +1174,7 @@ equations And Exp(at)
 
 > [!NOTE]
 > còn row 2 của matrix, ta có thể chỉ cần dùng [1 0] để liên hệ
-> y' với [y' y]: y' = [1 0].[y' y]T
+> y' với [y' y]: y' = [1 0].[y' y]ᵀ
 >
 >
 >
