@@ -1,17 +1,15 @@
-# Lecture 3: Multiplication
-and Inverse Matrices
+# Lecture 3: Multiplication And Inverse Matrices
 
 📊 **Progress:** `22` Notes | `24` Screenshots
 
 ---
 <a id="node-ul7s7ar"></a>
 
-## Lecture 3: Multiplication
-and Inverse Matrices
-
 <br>
 
 <a id="node-xai4kws"></a>
+
+## Tích ma trận hàng cột
 
 <p align="center"><kbd><img src="assets/at4ll4snvld.png" width="80%"></kbd></p>
 
@@ -44,6 +42,8 @@ and Inverse Matrices
 
 <a id="node-5x4s87n"></a>
 
+#### Nhân ma trận theo cột
+
 <p align="center"><kbd><img src="assets/p4t5ajzkgso.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -70,6 +70,8 @@ and Inverse Matrices
 
 <a id="node-tru07js"></a>
 
+##### Tổ hợp cột ma trận
+
 <p align="center"><kbd><img src="assets/j41xwjzqsk.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -79,6 +81,8 @@ and Inverse Matrices
 <br>
 
 <a id="node-20avyxm"></a>
+
+###### Nhân ma trận theo hàng
 
 <p align="center"><kbd><img src="assets/eop0noq3909.png" width="80%"></kbd></p>
 
@@ -100,6 +104,8 @@ and Inverse Matrices
 <br>
 
 <a id="node-m7yebf5"></a>
+
+###### Phép nhân ma trận cột-hàng
 
 <p align="center"><kbd><img src="assets/fj5pfxus9ra.png" width="80%"></kbd></p>
 
@@ -141,6 +147,8 @@ and Inverse Matrices
 
 <a id="node-3xcuywk"></a>
 
+###### Tích ma trận cột hàng
+
 <p align="center"><kbd><img src="assets/kihnjdhettf.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -151,6 +159,8 @@ and Inverse Matrices
 <br>
 
 <a id="node-k9bu4fd"></a>
+
+###### Không gian hàng và cột
 
 <p align="center"><kbd><img src="assets/kngg5jz0ts.png" width="80%"></kbd></p>
 
@@ -173,6 +183,8 @@ and Inverse Matrices
 
 <a id="node-u1faq1i"></a>
 
+###### Tính khả nghịch ma trận
+
 <p align="center"><kbd><img src="assets/ajnm0nm1pbw.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -182,11 +194,11 @@ and Inverse Matrices
 >
 >
 >
-> Với **square** matrix, gs cho biết **nếu A_inv tồn tại**
+> Với **square** matrix, gs cho biết **nếu A⁻¹ tồn tại**
 >
 >
 >
-> thì **A_inv @ A = A @ A_inv = I**
+> thì **A⁻¹ × A = A × A⁻¹ = I**
 >
 >
 >
@@ -204,6 +216,8 @@ and Inverse Matrices
 
 <a id="node-ajlmntq"></a>
 
+###### Ma trận không khả nghịch
+
 <p align="center"><kbd><img src="assets/de3j2okb2vr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -214,6 +228,8 @@ and Inverse Matrices
 <br>
 
 <a id="node-ui3rjuh"></a>
+
+###### Nghiệm phi tầm thường Ax=0
 
 <p align="center"><kbd><img src="assets/fwo9i4uw66n.png" width="80%"></kbd></p>
 
@@ -226,6 +242,8 @@ and Inverse Matrices
 
 <a id="node-wazxltv"></a>
 
+###### Tổ hợp cột ma trận
+
 <p align="center"><kbd><img src="assets/im39jm0vqqc.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -237,33 +255,37 @@ and Inverse Matrices
 
 <a id="node-ru11zz5"></a>
 
+###### Ma trận không khả nghịch
+
 <p align="center"><kbd><img src="assets/lquwespx2vm.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Lí do **việc này suy ra A non-invertible** là vì **khi nhân hai
-> vế cho A_inv** thì ta có **x = 0**, điều này **ko đúng** khi **rõ
+> vế cho A⁻¹** thì ta có **x = 0**, điều này **ko đúng** khi **rõ
 > ràng x khác 0**
 >
 >
 >
 > Có nghĩa là ta sẽ chứng minh phản chứng rằng nếu tồn
 > tại non-zero vector x khiến Ax = 0 thì sẽ không thể tồn tại
-> A_inv: 
+> A⁻¹: 
 >
 >
 >
-> Giả sử A_inv tồn tại, ta nhân nó vào hai vế của Ax = 0
-> ta sẽ có A_invAx = Ainv.0 = 0
+> Giả sử A⁻¹ tồn tại, ta nhân nó vào hai vế của Ax = 0
+> ta sẽ có A⁻¹Ax = A⁻¹.0 = 0
 >
 >
 >
-> <=> I.x = 0 <=> x = 0 mà điều này mâu thuẫn với giả định
+> ⇔ I.x = 0 ⇔ x = 0 mà điều này mâu thuẫn với giả định
 > ban đầu rằng x là non-zero vector. Từ đó suy ra không
-> thể tồn tại A_inv
+> thể tồn tại A⁻¹
 
 <br>
 
 <a id="node-lwy3cex"></a>
+
+###### Ma trận không khả nghịch
 
 <p align="center"><kbd><img src="assets/65moq0oavk8.png" width="80%"></kbd></p>
 
@@ -286,6 +308,8 @@ and Inverse Matrices
 
 <a id="node-a4yrkml"></a>
 
+###### Tiêu chuẩn tính khả nghịch
+
 <p align="center"><kbd><img src="assets/g7o0cp7i5r.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -304,11 +328,13 @@ and Inverse Matrices
 
 <a id="node-fl2s39h"></a>
 
+###### Tìm ma trận nghịch đảo
+
 <p align="center"><kbd><img src="assets/0dfb0wzkf59o.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì cho trước rằng A invertible tức A_inv tồn tại. Thì để
-> tìm A_inv tức là ta tìm matrix A_inv sao cho AA_inv = I
+> Thế thì cho trước rằng A invertible tức A⁻¹ tồn tại. Thì để
+> tìm A⁻¹ tức là ta tìm matrix A⁻¹ sao cho AA⁻¹ = I
 >
 >
 >
@@ -316,26 +342,30 @@ and Inverse Matrices
 >
 >
 >
-> tìm col vector [a, b] sao cho nhân A@[a b] ra [1 0] và [c d]
-> sao cho A@[c d] ra [0 1].
+> tìm col vector [a, b] sao cho nhân A×[a b] ra [1 0] và [c d]
+> sao cho A×[c d] ra [0 1].
 >
 >
 >
-> Thì như vậy việc tìm **A_inv** là giải 2 **system of equation**
+> Thì như vậy việc tìm **A⁻¹** là giải 2 **system of equation**
 
 <br>
 
 <a id="node-2b3jgm8"></a>
 
+###### Cột ma trận nghịch đảo
+
 <p align="center"><kbd><img src="assets/zc4db8zamek.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Mỗi equation là: A nhân col của A_inv bằng cột tương
+> Mỗi equation là: A nhân col của A⁻¹ bằng cột tương
 > ứng của I
 
 <br>
 
 <a id="node-o2kdp8j"></a>
+
+###### Phương pháp khử Gauss-Jordan
 
 <p align="center"><kbd><img src="assets/ld4m73ix1xl.png" width="80%"></kbd></p>
 
@@ -352,13 +382,15 @@ and Inverse Matrices
 >
 > Ý tưởng sẽ là: ta sẽ **thực hiện quá trình elimination đối
 > với A ở bên trái để biến nó thành I,  thì I sẽ trở thành
-> A_inv ở bên phải**
+> A⁻¹ ở bên phải**
 
 **🔗 See also:** [linked note](./lecture_10_the_four_fundamental_subspaces.md#node-v0i68k6)
 
 <br>
 
 <a id="node-1loce7y"></a>
+
+###### Phép biến đổi hàng ma trận
 
 <p align="center"><kbd><img src="assets/av8nd85ugup.png" width="80%"></kbd></p>
 
@@ -370,6 +402,8 @@ and Inverse Matrices
 <br>
 
 <a id="node-79xa8ph"></a>
+
+###### Phương pháp khử Gauss-Jordan
 
 <p align="center"><kbd><img src="assets/j5vb0lx006.png" width="80%"></kbd></p>
 
@@ -388,22 +422,26 @@ and Inverse Matrices
 
 <a id="node-k83bwl3"></a>
 
+###### Xác minh ma trận A⁻¹
+
 <p align="center"><kbd><img src="assets/fe30uvtdh3n.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/8gj2hxiixq9.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Kết quả sau khi nhân lại với A ra I cho thấy đúng là nó
-> là Ainv
+> là A⁻¹
 
 <br>
 
 <a id="node-kwi1phe"></a>
 
+###### Cơ chế nghịch đảo Gauss
+
 <p align="center"><kbd><img src="assets/bqgmvr5af4b.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Câu hỏi đặt ra là **tại sao việc này lại cho ra A_inv**
+> Câu hỏi đặt ra là **tại sao việc này lại cho ra A⁻¹**
 >
 >
 >
@@ -413,28 +451,30 @@ and Inverse Matrices
 >
 >
 >
-> **E1@A** ở bước 1 và **E2@(E1@A)** ở bước 2.
+> **E1×A** ở bước 1 và **E2×(E1×A)** ở bước 2.
 >
 >
 >
 > Nên chung lại c**hẳng qua là nhân một matrix E
-> (=E2@E1) với A thô**i.
+> (=E2×E1) với A thô**i.
 
 <br>
 
 <a id="node-lznhgl5"></a>
 
+###### Phép nghịch đảo ma trận
+
 <p align="center"><kbd><img src="assets/fxy3da16iyk.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Như vậy **E@A ra I nên có thể suy ra E chính là Ainv** và
+> Như vậy **E@A ra I nên có thể suy ra E chính là A⁻¹** và
 > **vì apply các bước y chang cho I (ở bên phải),** nên bên
 > phải nó sẽ là **E@I và cái này đương nhiên cũng vẫn là
 > E** (nhân với identity matrix).
 >
 >
 >
-> Vậy phần bên phải sẽ trở thành E, và cũng là Ainv
+> Vậy phần bên phải sẽ trở thành E, và cũng là A⁻¹
 
 <br>
 
