@@ -1,13 +1,9 @@
-# Lecture 26: Complex Matrices;
-fast Fourier Transform
+# Lecture 26: Complex Matrices; Fast Fourier Transform
 
 📊 **Progress:** `27` Notes | `30` Screenshots
 
 ---
 <a id="node-o685qrv"></a>
-
-## Lecture 26: Complex Matrices;
-fast Fourier Transform
 
 <br>
 
@@ -35,14 +31,14 @@ fast Fourier Transform
 > Đại khái là ta sẽ cần **điều chỉnh chút xíu** khi nói về
 > **length** **của vector**. Như có thể thấy, **nếu là R^n**,
 > length của vector là **dot product của vector với chính nó
-> uTu**.
+> uᵀu**.
 >
 >
 >
 > Tuy nhiên v**ới C^n vector**, điều này không đúng. Đơn
 > cử một ví dụ trong C^2, vector u = [1, i] tức là hai phần tử
-> của nó là 1 + 0*i và 0 + 1*i. Khi đó uTu sẽ là 1*1 + i*i = 1 +
-> -1 (vì i^2 = -1) Khi đó uTu = 0, dù rằng rõ ràng chiều dài
+> của nó là 1 + 0*i và 0 + 1*i. Khi đó uᵀu sẽ là 1*1 + i*i = 1 +
+> -1 (vì i^2 = -1) Khi đó uᵀu = 0, dù rằng rõ ràng chiều dài
 > vector hoàn toàn không phải là bằng 0.
 >
 >
@@ -54,11 +50,13 @@ fast Fourier Transform
 
 <a id="node-lg4l87s"></a>
 
+#### Length of Complex Vectors
+
 <p align="center"><kbd><img src="assets/5wzvpmst6dy.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> **Khi định nghĩa length** bằng **z_bar.Tz**, thì nó trở thành 
-> đúng ví dụ **u_barTu** = 1*1 - i*i = 1 + 1 = 2
+> **Khi định nghĩa length** bằng **z_barᵀz**, thì nó trở thành 
+> đúng ví dụ **u_barᵀu** = 1*1 - i*i = 1 + 1 = 2
 
 <br>
 
@@ -67,7 +65,7 @@ fast Fourier Transform
 <p align="center"><kbd><img src="assets/o3st9lb2u5e.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và ta gọi việc **transpose** đồng thời **conjugate** z_bar.T là
+> Và ta gọi việc **transpose** đồng thời **conjugate** z_barᵀ là
 > **Hermitian** z^H
 
 <br>
@@ -78,9 +76,9 @@ fast Fourier Transform
 
 > [!NOTE]
 > Và tương tự với **inner product giữa hai vector khác nhau**
-> cũng vậy, **với real value vector thì nó là yTx**, nhưng với
+> cũng vậy, **với real value vector thì nó là yᵀx**, nhưng với
 > complex vector thì như đã nói, ta sẽ dùng conjugate. Và
-> **inner product giữa y và x** sẽ là: **y_barTx**, hay **yHx**
+> **inner product giữa y và x** sẽ là: **y_barᵀx**, hay **yHx**
 > (đọc là "y_Hermit" = vừa transpose vừa lấy conjugate)
 
 <br>
@@ -91,8 +89,8 @@ fast Fourier Transform
 
 > [!NOTE]
 > Thế thì tương tự, **với complex matri**x, tính chất
-> symmetric không còn chỉ thể hiện bởi **AT = A**, mà phải
-> là **vừa transpose vừa conjugate**. Tức A_bar.T hay
+> symmetric không còn chỉ thể hiện bởi **Aᵀ = A**, mà phải
+> là **vừa transpose vừa conjugate**. Tức A_barᵀ hay
 >
 >
 >
@@ -120,13 +118,13 @@ fast Fourier Transform
 
 > [!NOTE]
 > Tương tự, với **perpendicular** cũng vậy, trong complex vector
-> / matrix. **Thay vì nói rằng qTq = 0** thì chúng perpendicular,
+> / matrix. **Thay vì nói rằng qᵀq = 0** thì chúng perpendicular,
 > thì nay sẽ là **qHq = 0**
 >
 >
 >
 > Và với orthogonal matrix Q mang giá trị complex thì ta sẽ có
-> **Q_hermitQ = I thay vì QTQ = I**.
+> **Q_hermitQ = I thay vì QᵀQ = I**.
 >
 >
 >
@@ -169,15 +167,15 @@ fast Fourier Transform
 >
 >
 >
-> Cột 2: j=1, i=0,1,2... => cột 2 sẽ là w^0=1, w^1=w, w^2, w^3...
+> Cột 2: j=1, i=0,1,2... ⇒ cột 2 sẽ là w^0=1, w^1=w, w^2, w^3...
 >
 >
 >
-> Cột 3: j=2, i=0,1,2... => cột 3 sẽ là w^0=1, w^2, w^4...
+> Cột 3: j=2, i=0,1,2... ⇒ cột 3 sẽ là w^0=1, w^2, w^4...
 >
 >
 >
-> Cột 4: j=3, i=0,1,2... => cột 4 sẽ là 1, w^3, w^6
+> Cột 4: j=3, i=0,1,2... ⇒ cột 4 sẽ là 1, w^3, w^6
 
 <br>
 
@@ -206,7 +204,7 @@ fast Fourier Transform
 >
 >
 >
-> <=> **(e^iθ)^n = 1** <=> **e^iθn = 1**
+> ⇔ **(e^iθ)^n = 1** ⇔ **e^iθn = 1**
 >
 >
 >
@@ -214,15 +212,15 @@ fast Fourier Transform
 >
 >
 >
-> e^i**θn** = 1 <=> e^i**α** = 1
+> e^i**θn** = 1 ⇔ e^i**α** = 1
 >
 >
 >
-> <=> cos(α) + i*sin(α) = 1
+> ⇔ cos(α) + i*sin(α) = 1
 >
 >
 >
-> => α = 2π => **θ = 2π/n**
+> ⇒ α = 2π ⇒ **θ = 2π/n**
 >
 >
 >
@@ -346,7 +344,7 @@ fast Fourier Transform
 <p align="center"><kbd><img src="assets/x5cn7tfm6bo.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và ta như đã biết với orthogonal matrix Q, QTQ = I.
+> Và ta như đã biết với orthogonal matrix Q, QᵀQ = I.
 > Nên **F4_hermit.F4 = I**
 
 <br>
