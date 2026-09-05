@@ -1,13 +1,9 @@
-# Lecture 10: The Four
-fundamental Subspaces
+# Lecture 10: The Four Fundamental Subspaces
 
 📊 **Progress:** `24` Notes | `29` Screenshots
 
 ---
 <a id="node-no1m6a6"></a>
-
-## Lecture 10: The Four
-fundamental Subspaces
 
 <br>
 
@@ -70,17 +66,19 @@ fundamental Subspaces
 >
 >
 > Rồi, tiếp gs nói tôi không thích làm việc với row vector, nên
-> tôi có thể dùng **columns của A.T** để chỉ row của A. Vậy **rowspace
-> của A là columns space của A.T**
+> tôi có thể dùng **columns của Aᵀ** để chỉ row của A. Vậy **rowspace
+> của A là columns space của Aᵀ**
 
 <br>
 
 <a id="node-cvbcftc"></a>
 
+##### The Four Fundamental Subspaces
+
 <p align="center"><kbd><img src="assets/i8445mfza.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và fundamental subspace thứ 4 là **null-space của AT** hay
+> Và fundamental subspace thứ 4 là **null-space của Aᵀ** hay
 > còn được gọi là **LEFT NULLSPACE** của A
 >
 >
@@ -95,12 +93,12 @@ fundamental Subspaces
 >
 >
 >
-> **C(AT) cũng là subspace của Rn**, mỗi row là vector có n
+> **C(Aᵀ) cũng là subspace của Rn**, mỗi row là vector có n
 > phần tử.
 >
 >
 >
-> Và **N(AT) sẽ là subspace của Rm**
+> Và **N(Aᵀ) sẽ là subspace của Rm**
 
 <br>
 
@@ -110,7 +108,7 @@ fundamental Subspaces
 
 > [!NOTE]
 > Gs phác thảo **rowspace và null-space là subspace
-> của Rn** và **columns space và nullspace of A.T là
+> của Rn** và **columns space và nullspace of Aᵀ là
 > subspace của Rm**
 
 <br>
@@ -196,7 +194,7 @@ fundamental Subspaces
 > Và đây là một tính chất tuyệt vời. **Cols space và rows
 > space của A đều có dimension là r**
 
-**🔗 See also:** [linked note](./lecture_12_graphs_networks_incidence_matrices.md#node-xk4c9wi)
+**🔗 See also:** [Dimension of Left Nullspace](./lecture_12_graphs_networks_incidence_matrices.md#node-xk4c9wi)
 
 <br>
 
@@ -281,7 +279,7 @@ fundamental Subspaces
 >
 >
 > Vậy với matrix n cột, rank r, thì có r pivot, nên có n-r free
-> variable => có n-r special solution và như vậy dimension
+> variable ⇒ có n-r special solution và như vậy dimension
 > của nullspace là n-r**
 >
 > Hãy xét thêm hai câu hỏi sau: Tại sao chắc chắn rằng các special solution sẽ span
@@ -361,7 +359,7 @@ fundamental Subspaces
 >
 >
 >
-> <=> Ax' != A*(alpha*x_spec1) + A*(beta*x_spec2) với mọi alpha, beta
+> ⇔ Ax' != A*(alpha*x_spec1) + A*(beta*x_spec2) với mọi alpha, beta
 >
 >
 >
@@ -374,7 +372,7 @@ fundamental Subspaces
 >
 >
 >
-> <=> 0 != 0 + 0 với mọi alpha, beta
+> ⇔ 0 != 0 + 0 với mọi alpha, beta
 >
 >
 >
@@ -437,7 +435,7 @@ fundamental Subspaces
 > dimension của nullspace là n-r. **Tổng dimension là n-r + r
 > = n = số cols của A**
 
-**🔗 See also:** [linked note](./lecture_12_graphs_networks_incidence_matrices.md#node-6w3cdka)
+**🔗 See also:** [Incidence Matrix of a Graph](./lecture_12_graphs_networks_incidence_matrices.md#node-6w3cdka)
 
 <br>
 
@@ -446,37 +444,39 @@ fundamental Subspaces
 <p align="center"><kbd><img src="assets/b4v5cjgputj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và dimension của nullspace của A.T sẽ là m-r: Vì sao?
+> Và dimension của nullspace của Aᵀ sẽ là m-r: Vì sao?
 >
 >
 >
-> Vì A.T sẽ là matrix có n hàng, m cột (vì A là matrix mxn).
+> Vì Aᵀ sẽ là matrix có n hàng, m cột (vì A là matrix mxn).
 > Thế thì đã nói bên kia **cols space của A và row space
 > của A đều có dimension là rank r của A**. Mà **rowspace
-> của A chính là column space của A.T.**
+> của A chính là column space của Aᵀ.**
 >
 >
 >
-> Vậy **columns space A.T có dimension = r** có nghĩa là
-> **A.T cũng có r pivot.**
+> Vậy **columns space Aᵀ có dimension = r** có nghĩa là
+> **Aᵀ cũng có r pivot.**
 >
 >
 >
-> Nên (A.T)x=0 cũng có r pivot var, nên số free var là m-r.
+> Nên (Aᵀ)x=0 cũng có r pivot var, nên số free var là m-r.
 >
 >
 >
-> Và do đó (A.T)x=0 có m-r special solution, vậy dimension
-> cuả nullspace của A.T là m-r
+> Và do đó (Aᵀ)x=0 có m-r special solution, vậy dimension
+> cuả nullspace của Aᵀ là m-r
 >
 >
 >
-> Và có thể thấy **nó cũng tuân theo cùng một rule: dim C(A.T)
-> + dim N(A.T) = r + m - r = m = số columns của A.T**
+> Và có thể thấy **nó cũng tuân theo cùng một rule: dim C(Aᵀ)
+> + dim N(Aᵀ) = r + m - r = m = số columns của Aᵀ**
 
 <br>
 
 <a id="node-p2z62ax"></a>
+
+###### Column Space and Pivot Columns
 
 <p align="center"><kbd><img src="assets/ztel5leojpb.png" width="80%"></kbd></p>
 
@@ -491,13 +491,13 @@ fundamental Subspaces
 >
 >
 > Thế thế gs cho biết, tìm basis của C(A) thì ta biết rồi, đó là tìm ra
-> các pivot cols. Thế thì basis của rowspace C(AT) thì sao?
+> các pivot cols. Thế thì basis của rowspace C(Aᵀ) thì sao?
 >
 >
 >
 > Gs nói rằng, ừ thì đại khái là các bạn cũng có thể cho rằng ta
-> có thể lật cái A lại thành A.T để rồi dùng elimination để tìm
-> pivot cols của A.T, khi đó transpose chúng lại ta sẽ có các
+> có thể lật cái A lại thành Aᵀ để rồi dùng elimination để tìm
+> pivot cols của Aᵀ, khi đó transpose chúng lại ta sẽ có các
 > linear independent row.
 >
 >
@@ -622,19 +622,18 @@ fundamental Subspaces
 
 <a id="node-dx3ms8b"></a>
 
+###### The Left Nullspace N(Aᵀ)
+
 <p align="center"><kbd><img src="assets/bx0g6q59p5n.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ai6sv9lm6pr.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> rồi, gs xét qua **nullspace của AT**. hay còn gọi là **left
-> nullspace** như nãy đã nói.
+> rồi, gs xét qua **nullspace của Aᵀ**. hay còn gọi là **left nullspace** như nãy đã nói.
 >
 >
 >
-> Thế thì đầu tiên nullspace của A.T đương nhiên theo
-> định nghĩa là **mọi linear combination của các solution
-> của ATy=0**
+> Thế thì đầu tiên nullspace của Aᵀ đương nhiên theo định nghĩa là **mọi linear combination của các solution của Aᵀy=0**
 >
 >
 >
@@ -642,11 +641,7 @@ fundamental Subspaces
 >
 >
 >
-> đại khái là vì, ta có thể transpose hai vế của ATy = 0 để
-> có yTA = 0. Có nghĩa là nullspace của AT là linear
-> combination của mọi vector y thì nó cũng là linear
-> combination của mọi yT và vì yT nằm bên trái A nên
-> mới nói **nullspace của A.T là left nullspace của A.**
+> đại khái là vì, ta có thể transpose hai vế của Aᵀy = 0 để có yᵀA = 0. Có nghĩa là nullspace của Aᵀ là linear combination của mọi vector y thì nó cũng là linear combination của mọi yᵀ và vì yᵀ nằm bên trái A nên mới nói **nullspace của Aᵀ là left nullspace của A.**
 >
 >
 >
@@ -660,7 +655,7 @@ fundamental Subspaces
 
 > [!NOTE]
 > thế thì gs cho rằng elimination biến A thành R cũng có
-> reveal ít nhiều về matrix AT, do đó, ta sẽ ôn lại một
+> reveal ít nhiều về matrix Aᵀ, do đó, ta sẽ ôn lại một
 > chút về qúa trình elimination biến A thành R (Reduced
 > Row Echelon Form)
 >
@@ -672,7 +667,7 @@ fundamental Subspaces
 > đối với matrix I**. Từ đó **khi A thành R**, **I trở thành matrix nào
 > đó, gọi là E** (cố tình đặt tên là E)
 
-**🔗 See also:** [linked note](./lecture_3_multiplication_and_inverse_matrices.md#node-o2kdp8j)
+**🔗 See also:** [Phương pháp khử Gauss-Jordan](./lecture_3_multiplication_and_inverse_matrices.md#node-o2kdp8j)
 
 <br>
 
@@ -716,22 +711,24 @@ fundamental Subspaces
 
 <a id="node-99u7kja"></a>
 
+###### Reduced Row Echelon Form
+
 <p align="center"><kbd><img src="assets/60cpxg194q.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ok, quay lại đây, nhớ rằng ta đang đi tìm basis của nullspace  của A.T (hay còn
+> Ok, quay lại đây, nhớ rằng ta đang đi tìm basis của nullspace  của Aᵀ (hay còn
 > gọi là left-nullspace của A)
 >
 >
 >
 > Thế thì như đã nói, ta không cần phải transpose A, để rồi tìm basis của nullspace
-> của A.T bằng các xét solution của  (A.T)y = 0, tức là làm theo cách thông thường
+> của Aᵀ bằng các xét solution của  (Aᵀ)y = 0, tức là làm theo cách thông thường
 > khi tìm nullspace của A.
 >
 >
 >
 > Mà ở đây ta đang nói rằng quá trình elimination từ A trở thành R CŨNG ĐÃ CÓ
-> REVEAL THÔNG TIN VỀ NULLSPACE CỦA A.T RỒI. Đó là:
+> REVEAL THÔNG TIN VỀ NULLSPACE CỦA Aᵀ RỒI. Đó là:
 >
 >
 >
@@ -743,7 +740,7 @@ fundamental Subspaces
 >
 >
 > Rồi, thế thì, EA = R. Và đây chính là lúc mà quá trình elimination biến A thành R
-> cũng reveal thông tin cho ta biết basis của nullspace của A.T đây:
+> cũng reveal thông tin cho ta biết basis của nullspace của Aᵀ đây:
 >
 >
 >
@@ -767,10 +764,10 @@ fundamental Subspaces
 >
 >
 >
-> Thì điều này theo định nghĩa của nullspace của A.T là mọi vector y khiến A.Ty=0
-> tương đương mọi vector y khiến y.T@A = 0, tương đương mọi vector y mà hệ số
+> Thì điều này theo định nghĩa của nullspace của Aᵀ là mọi vector y khiến Aᵀy=0
+> tương đương mọi vector y khiến yᵀ@A = 0, tương đương mọi vector y mà hệ số
 > của nó sẽ tạo linear combination các hàng của A cho ra zero. Thế thì theo **đó,
-> ROW 3 CỦA E CHÍNH LÀ MỘT VECTOR TRONG NULLSPACE CỦA A.T
+> ROW 3 CỦA E CHÍNH LÀ MỘT VECTOR TRONG NULLSPACE CỦA Aᵀ
 >
 >
 >
@@ -779,20 +776,20 @@ fundamental Subspaces
 >
 >
 > Là bởi như bài trước ta đã cũng nhau chứng minh để đi đến kết luận là
-> **dimension của nullspace của A.T sẽ là m - r**. Vậy thì đối với matrix A này m = 3,
-> n = 4 và rank = 2. Vậy dimension của nullspace của A.T = m-r=3-2 = 1
+> **dimension của nullspace của Aᵀ sẽ là m - r**. Vậy thì đối với matrix A này m = 3,
+> n = 4 và rank = 2. Vậy dimension của nullspace của Aᵀ = m-r=3-2 = 1
 >
 >
 >
-> À, vậy **dimension của nullspace của A.T = 1** nên basis của nullspace của A.T
+> À, vậy **dimension của nullspace của Aᵀ = 1** nên basis của nullspace của Aᵀ
 > cũng **CHỈ CÓ 1 VECTOR** (vì như đã biết theo định nghĩa dimension của vector
 > Space là số vector trong basis của nó). Từ đó suy ra, **cái row thứ 3 của E chính
-> là một basis của nullspace của A.T
+> là một basis của nullspace của Aᵀ
 >
 >
 >
 > Và từ đó ta đã biết cách thông qua elimination biến A thành R mà cũng giúp
-> review được basis của nullspace của A.T**
+> review được basis của nullspace của Aᵀ**
 
 <br>
 
