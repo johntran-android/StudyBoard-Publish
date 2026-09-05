@@ -1,13 +1,9 @@
-# Lecture 33: Left And Right
-inverse; Pseudoinverse
+# Lecture 33: Left And Right Inverse; Pseudoinverse
 
 📊 **Progress:** `30` Notes | `33` Screenshots
 
 ---
 <a id="node-ox87q7t"></a>
-
-## Lecture 33: Left And Right
-inverse; Pseudoinverse
 
 <br>
 
@@ -34,7 +30,7 @@ inverse; Pseudoinverse
 >
 >
 >
-> AA_inv = A_invA = I**
+> AA⁻¹ = A⁻¹A = I**
 >
 >
 >
@@ -97,8 +93,8 @@ inverse; Pseudoinverse
 >
 >
 >
-> THeo định lí Rank-Nullity: C(AT) và N(A) orthogonal
-> complement, tổng dim của chúng bằng n mà dim C(AT) = n
+> THeo định lí Rank-Nullity: C(Aᵀ) và N(A) orthogonal
+> complement, tổng dim của chúng bằng n mà dim C(Aᵀ) = n
 > suy ra dim N(A) = 0
 >
 >
@@ -149,35 +145,37 @@ inverse; Pseudoinverse
 
 <a id="node-llvpyyw"></a>
 
+###### Left Inverses and Full Column Rank
+
 <p align="center"><kbd><img src="assets/jzkvvrlcefq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> ok, thế thì lúc này **ATA** như thế nào?
+> ok, thế thì lúc này **AᵀA** như thế nào?
 >
 >
 >
 > me: Có thể nhớ rằng ta đã cùng nhau chứng minh rằng
 > **khi A có full-column rank**, tức có **mọi column đều
-> độc lập** thì khi đó, **ATA sẽ full-rank.**
+> độc lập** thì khi đó, **AᵀA sẽ full-rank.**
 >
 >
 >
-> Có thể lập luận như sau: Xét ATAx = 0, **nhân  hai vế
-> cho xT** ta có **xTATAx** = 0 <=> **(Ax)T(Ax)** = 0, mà
+> Có thể lập luận như sau: Xét AᵀAx = 0, **nhân  hai vế
+> cho xᵀ** ta có **xᵀAᵀAx** = 0 ⇔ **(Ax)ᵀ(Ax)** = 0, mà
 > vế trái là **square norm của vector u = Ax**. Nên nó
 > **bằng 0 chỉ khi u = Ax = 0**.
 >
 >
 >
 > Thế mà, với điều kiện ban đầu rằng vì A full-column rank
-> nên N(A) = {0} => Ax=0 chỉ có zero là solution duy nhất
-> **nên x = 0 cũng là giá trị duy nhất khiến Ax = 0 và ATAx
+> nên N(A) = {0} ⇒ Ax=0 chỉ có zero là solution duy nhất
+> **nên x = 0 cũng là giá trị duy nhất khiến Ax = 0 và AᵀAx
 > = 0**
 >
 >
 >
-> Vậy **ATAx = 0 chỉ có thể có một solution là x = 0**, nên
-> ATA cũng full column rank. Mà ATA lại square. Nên ATA
+> Vậy **AᵀAx = 0 chỉ có thể có một solution là x = 0**, nên
+> AᵀA cũng full column rank. Mà AᵀA lại square. Nên AᵀA
 > full-rank.
 
 <br>
@@ -187,7 +185,7 @@ inverse; Pseudoinverse
 <p align="center"><kbd><img src="assets/nswetddru3b.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và từ đó ta có **(ATA)_invAT** được gọi là **left inverse** **của A.**
+> Và từ đó ta có **(AᵀA)⁻¹Aᵀ** được gọi là **left inverse** **của A.**
 >
 >
 >
@@ -195,7 +193,7 @@ inverse; Pseudoinverse
 >
 >
 >
-> (ATA)invATA đương nhiên ra [ATA)inv (ATA) = I
+> (AᵀA)⁻¹AᵀA đương nhiên ra [AᵀA)⁻¹ (AᵀA) = I
 
 <br>
 
@@ -271,7 +269,7 @@ inverse; Pseudoinverse
 >
 >
 >
-> me: **AT(AAT)_inv**
+> me: **Aᵀ(AAᵀ)⁻¹**
 >
 >
 >
@@ -280,31 +278,31 @@ inverse; Pseudoinverse
 >
 >
 > Với trạng thái full row rank thì cũng như ta có một matrix **B
-> = AT có dạng full-column rank**.
+> = Aᵀ có dạng full-column rank**.
 >
 >
 >
-> Nên BTB cũng full rank, invertible, tồn tại BTB_inv
+> Nên BᵀB cũng full rank, invertible, tồn tại BᵀB⁻¹
 >
 >
 >
-> Vậy thì (BTB)(BTB_inv) = I
+> Vậy thì (BᵀB)(BᵀB⁻¹) = I
 >
 >
 >
-> Thay B bằng AT lại thì ta có:
+> Thay B bằng Aᵀ lại thì ta có:
 >
 >
 >
-> ((ATT)AT) [(ATT)AT]_inv = I <=>
+> ((Aᵀᵀ)Aᵀ) [(Aᵀᵀ)Aᵀ]⁻¹ = I ⇔
 >
 >
 >
-> (A**AT)(AAT)_inv** = I <=>
+> (A**Aᵀ)(AAᵀ)⁻¹** = I ⇔
 >
 >
 >
-> Vậy right inverse là **AT(AAT)_inv**
+> Vậy right inverse là **Aᵀ(AAᵀ)⁻¹**
 
 <br>
 
@@ -348,13 +346,12 @@ inverse; Pseudoinverse
 
 <a id="node-z093u5z"></a>
 
+###### Projection Matrix Formula
+
 <p align="center"><kbd><img src="assets/fofce0tlrq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đại khái là như hồi nãy nói, ta khôngthể có I khi đặt left
-> inverse vào bên phải A, được. Nhưng vẫn nhân được,
-> và matrix mà ta có **CHÍNH LÀ PROJECTION (ONTO
-> C(A)) MATRIX**
+> đại khái là như hồi nãy nói, ta khôngthể có I khi đặt left inverse vào bên phải A, được. Nhưng vẫn nhân được, và matrix mà ta có **CHÍNH LÀ PROJECTION (ONTO C(A)) MATRIX**
 >
 >
 >
@@ -366,42 +363,31 @@ inverse; Pseudoinverse
 >
 >
 >
-> Project b on C(A), thành p, nên p thuộc C(A) => có thể
-> express p bởi linear combination of A's columns: p =
-> Ax^. e = b - p sẽ vuông góc với C(A) => ATe = 0 mang
-> ý nghĩa e vuông góc với mọi row của AT, tức column
-> của A (điều này cũng cho thấy e chính là thuộc left
-> nullspace của A, như đã biết là solution của ATy=0)
+> Project b on C(A), thành p, nên p thuộc C(A) =&gt; có thể express p bởi linear combination of A's columns: p = Ax^. e = b - p sẽ vuông góc với C(A) =&gt; Aᵀe = 0 mang ý nghĩa e vuông góc với mọi row của Aᵀ, tức column của A (điều này cũng cho thấy e chính là thuộc left nullspace của A, như đã biết là solution của Aᵀy=0)
 >
 >
 >
-> Vậy AT(b-Ax^) = 0  (Đây chính là NORMAL EQUATION)
+> Vậy Aᵀ(b-Ax^) = 0 (Đây chính là NORMAL EQUATION)
 >
 >
 >
-> <=> ATb = ATAx^ 
+> &lt;=&gt; Aᵀb = AᵀAx^
 >
 >
 >
-> <=> x^ = (ATA)_invATb
+> &lt;=&gt; x^ = (AᵀA)⁻¹Aᵀb
 >
 >
 >
-> và p = Ax^ = A(ATA)invATb => P = A(ATA)invAT là
-> matrix giúp projection b lên C(A) để p = Pb thuộc C(A)
+> và p = Ax^ = A(AᵀA)⁻¹Aᵀb =&gt; P = A(AᵀA)⁻¹Aᵀ là matrix giúp projection b lên C(A) để p = Pb thuộc C(A)
 >
 >
 >
-> Khi A invertible thì (ATA)inv sẽ bằng Ainv(AT)inv (dựa
-> trên tính chất (AB)inv = BinvAinv) từ đó P = A(ATA)invAT
-> = AAinv(AT)invAT = I.I = I tức là projection lên C(A) không
-> cần làm gì. 
+> Khi A invertible thì (AᵀA)⁻¹ sẽ bằng A⁻¹(Aᵀ)⁻¹ (dựa trên tính chất (AB)⁻¹ = B⁻¹A⁻¹) từ đó P = A(AᵀA)⁻¹Aᵀ = AA⁻¹(Aᵀ)⁻¹Aᵀ = I.I = I tức là projection lên C(A) không cần làm gì.
 >
 >
 >
-> Có thể hiểu lí do ra vậy là vì khi A invertible tức full rank,
-> thì C(A) chính là toàn bộ R^m, nên b thuộc R^m thì nó đã
-> thuộc C(A) rồi, dẫn đến projection lên C(A) chả phải làm gì
+> Có thể hiểu lí do ra vậy là vì khi A invertible tức full rank, thì C(A) chính là toàn bộ R^m, nên b thuộc R^m thì nó đã thuộc C(A) rồi, dẫn đến projection lên C(A) chả phải làm gì
 >
 >
 >
@@ -416,7 +402,7 @@ inverse; Pseudoinverse
 > [!NOTE]
 > và tương tự, nếu ta để right inverse bên trái
 > A, thì ta sẽ có **PROJECTION ONTO ROW
-> SPACE C(AT) MATRIX**
+> SPACE C(Aᵀ) MATRIX**
 
 <br>
 
@@ -451,7 +437,7 @@ inverse; Pseudoinverse
 > Thì **không có x khác 0 nào mà Ax = 0** cả, tức là Ax luôn
 > khác 0 với mọi x khác 0. Và trong trạng thái này **luôn có thể
 > khôi phục lại để từ Ax cho ra lại x** thông qua quy trình đảo
-> ngược, thể hiện **bằng việc nhân với matrix A_inv**: A_invAx
+> ngược, thể hiện **bằng việc nhân với matrix A⁻¹**: A⁻¹Ax
 > = x
 >
 >
@@ -460,11 +446,11 @@ inverse; Pseudoinverse
 > R^n (cũng là rows space**, vì đủ independent row để span
 > R^n) khác 0 nào **bị biến thành 0**: Ax khác 0 với mọi x khác
 > 0. Nên **luôn có thể đảo ngược lại quá trình từ Ax -> x**, thể
-> hiện qua việc dùng matrix **A_left inverse** = (ATA)invAT
+> hiện qua việc dùng matrix **A_left inverse** = (AᵀA)⁻¹Aᵀ
 >
 >
 >
-> **A_left_inverse Ax = x: (ATA)invATAx = Ix = x**
+> **A_left_inverse Ax = x: (AᵀA)⁻¹AᵀAx = Ix = x**
 
 <br>
 
@@ -595,9 +581,9 @@ inverse; Pseudoinverse
 >
 >
 > Ôn lại tí về việc dùng Projection để solve least square
-> problem. Ax = b. b = p + e = Ax^ + e <=> e = b - Ax^ ATe = 0
-> <=> AT(b-Ax^) = 0 <=> ATb - ATAx^ = 0 <=> ATb = ATAx^
-> <=> x^ = (ATA)inv ATb -> đây là best solution to Ax = b. Và
+> problem. Ax = b. b = p + e = Ax^ + e ⇔ e = b - Ax^ Aᵀe = 0
+> ⇔ Aᵀ(b-Ax^) = 0 ⇔ Aᵀb - AᵀAx^ = 0 ⇔ Aᵀb = AᵀAx^
+> ⇔ x^ = (AᵀA)⁻¹ Aᵀb -> đây là best solution to Ax = b. Và
 > như vậy **x^** chính là **A_left_inverse*b**
 >
 >
@@ -605,8 +591,8 @@ inverse; Pseudoinverse
 > Thế thì đại khái là gs nói rằng, nhiều khi việc lặp lại các phép
 > đo đạc khiến statistician có một **matrix A không full column
 > rank**, tức **không có các column independent**. Mà như
-> vậy thì **ATA  không invertible** như ta đã biết, khiến **không
-> thể có ATA_inv** để mà có x^ = (ATA)inv ATb như trên được.
+> vậy thì **AᵀA  không invertible** như ta đã biết, khiến **không
+> thể có AᵀA⁻¹** để mà có x^ = (AᵀA)⁻¹ Aᵀb như trên được.
 
 <br>
 
@@ -623,7 +609,7 @@ inverse; Pseudoinverse
 >
 >
 > Bài trước ta biết A bất kì đều có thể factorized thành
-> USigmaVT với U và V là orthogonal matrices, Sigma là
+> USigmaVᵀ với U và V là orthogonal matrices, Sigma là
 > diagonal matrix có các stretching factor như vầy,
 >
 > Nhìn lại hình này, có thể hiểu matrix Sigma chính
@@ -663,15 +649,15 @@ inverse; Pseudoinverse
 <p align="center"><kbd><img src="assets/nn4bgxrilh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> và công thức của **pseudo inverse** of A: A+ = VΣ+UT
+> và công thức của **pseudo inverse** of A: A+ = VΣ+Uᵀ
 >
 >
 >
 > (nhớ rằng U và V là orthogonal matrix nên inverse chính là
 > transpose - nhớ rằng orthogonal matrix là matrix square có
 > các columns orthonormal, chứ chỉ orthonormal columns thôi
-> thì chưa đủ, phải square nữa. Khi đó QTQ = I = QQT, nên
-> QT chính là Qinv)
+> thì chưa đủ, phải square nữa. Khi đó QᵀQ = I = QQᵀ, nên
+> Qᵀ chính là Q⁻¹)
 
 **🔗 See also:** [linked note](./lecture_17_orthogonal_matrices_and_gram_schmidt.md#node-9bg3l8w)
 
@@ -683,7 +669,7 @@ inverse; Pseudoinverse
 
 > [!NOTE]
 > và theo gs đại khái **đây là giải pháp khi least square fail** vì
-> **ATA không full rank (khi các columns không independent)**
+> **AᵀA không full rank (khi các columns không independent)**
 
 <br>
 
@@ -695,7 +681,7 @@ inverse; Pseudoinverse
 > gs đề nghị đọc thêm trong sách. Đây là một cách trong
 > nhiều cách để tìm pseudo inverse A+ và có thể coi là
 > cách dễ nhất khi có thể dễ dàng phân tách A thành U
-> Sigma V Nhờ ATA và AAT như bài trước đã biết, sau đó
+> Sigma V Nhờ AᵀA và AAᵀ như bài trước đã biết, sau đó
 > tính pseudo inverse của Sigma, U, V cũng dễ dàng luôn
 
 <br>
