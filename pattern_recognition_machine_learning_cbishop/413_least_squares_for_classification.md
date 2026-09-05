@@ -1,6 +1,6 @@
 # 4.1.3 Least squares for classification
 
-📊 **Progress:** `6` Notes | `7` Screenshots | `6` AI Reviews
+📊 **Progress:** `7` Notes | `9` Screenshots | `7` AI Reviews
 
 ---
 <a id="node-f00j3uu"></a>
@@ -554,6 +554,120 @@
 > **🤖 AI Feedback** — ✅ Score: **96/100**
 >
 > Ghi chú xuất sắc! Bạn không chỉ hiểu đúng bản chất lý thuyết mà còn tự tạo ví dụ số học (numerical example) cực kỳ trực quan để giải thích hiện tượng 'too correct' bị phạt bởi Sum-of-Squares Error (SSE).
+
+<br>
+
+<a id="node-axnutml"></a>
+
+###### Limitations of Least Squares Classification
+
+<p align="center"><kbd><img src="assets/blrzsb1wp19.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/lo1wxgmm4t9.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là, cái vụ phạt nặng với dự đoán quá đúng, khiến mô hình bị sensitive với outlier (gọi là thiếu tính robust) cũng chưa phải là cái tệ nhất, mà chất lượng dự đoán của nó cũng tệ hơn so với các mô hình khác.
+>
+>
+>
+> Ôn nhanh khái niệm roburstness đã được học trong chapter 10 sách Casella: Đại ý là robustness là khả năng chống chọi của mô hình khi các giả định ban đầu bị sai. Bao gồm 3 tiêu chí: a) Trước hết nó phải là một estimator tốt (vì chống chọi tốt như estimate chất lượng kém thì cũng như không) b) Khi giả định ban đầu (về dạng thật sự của phân phối dữ liệu) khác đi chút đỉnh thì mô hình không bị ảnh hưởng mấy c) Khi giả định ban đầu sai hoàn toàn, thì cũng không dẫn đến thảm họa. Vậy hiểu trong bốic cảnh này, nếu như xuất hiện outliner, là một tín hiệu cho thấy giả định ban đầu sai mà mô hình vẫn dự đoán tốt thì nó là robustness
+>
+>
+>
+> Quay lại đây ví dụ 4.5, người ta tạo bộ data mà các điểm dữ liệu có thể phân tách hoàn toàn bởi các đường (hyperplane) tuyến tính (gọi là linearly separable, ý là dễ). Nhưng bên trái là kết quả của discriminant least square, cho thấy nó fail khá rõ. Còn bên phải là logistic regression, tốt hơn nhiều.
+>
+>
+>
+> Ý quan trọng là, điểm mấu chốt là vì: mô hình least square, cách tiếp cận theo kiểu minimize sum squared error function ta biết trong chapter 3, nó có bản chất là ta đang dùng giả định về phân phối xác suất của dữ liệu là như sau: Ta đang giả định target variable dựa trên một input **x**, thì T \~ 𝒩(y(**w**,**x**), 1/β), và sau đó ta đi giải bài toán point estimate tham số w của mô hình thông qua cách tiếp cận của trường phái cổ điển: Maximum likelihood estimation. Làm lại nhanh không thừa:
+>
+>
+>
+> Nói nhanh: Bài toán point estimation là bài toán mà ta có obsered data của random sample X1, X2,...XN iid, và Xi \~ f(x|θ). Mục tiêu là đi tìm một point estimator của θ, bản chất là một hàm θ(**X**). Thì một cách làm thông thường của trường phái Classic là: Đi tìm θ để maximize hàm likelihood L(θ|**x**), và kết quả ta sẽ có hàm W(**X**), hay với MLE ta dùng θ̂\_ml(**X**) = argmax\_Θ L(θ|**X**). Và ý nghĩa của nó là, với data quan sát được của X bỏ vào, thì hàm này sẽ lấy ra cho ta giá trị của θ có độ hợp lí cao nhất. Và hàm likelihood thì được định nghĩa chính là có giá trị bằng joint pdf của **X** tại **x** dựa trên tham số θ: L(θ|**x**) = f(**x**|θ)
+>
+>
+>
+> Vậy thì ở đây, giả sử beta đã biết, ta dùng cách này để tìm **w**\_ml:
+>
+>
+>
+> Hàm likelihood L(𝐰|data) = L(𝐰|𝐭, 𝐗) = f(𝐭|𝐰,𝐗,β) = Πi=1:N f(𝐭|𝐰,𝐗,β) 
+>
+>
+>
+> = Πi=1:N f(ti|y(𝐰,𝐱i),β) = Πi=1:N 1/√2π(1/β)\] exp{-(ti-y(𝐰,𝐱i))²/(2/β)}
+>
+>
+>
+> Lấy log, vì tí nữa khi minimize hàm L, ta sẽ chuyển thành bài toán tương đương là minimize hàm ln (log base e), vì nó là hàm monotone increasing.
+>
+>
+>
+> ln L(𝐰|data) = ln Πi=1:N 1/√2π(1/β)\] exp{-(ti-y(𝐰,𝐱i))²/(2/β)}
+>
+>
+>
+> = Σi=1:N ln 1/√2π(1/β)\] exp{-(ti-y(𝐰,𝐱i))²/(2/β)}
+>
+>
+>
+> = Σi=1:N \[ln 1/√2π(1/β)\]  + ln exp{-(ti-y(𝐰,𝐱i))²/(2/β)}\]
+>
+>
+>
+> = Σi=1:N \[ln 1/√2π(1/β)\]  + Σi=1:N ln exp{-(ti-y(𝐰,𝐱i))²/(2/β)}\]
+>
+>
+>
+> = Σi=1:N \[ln \[2π(1/β)\]^-1/2  + Σi=1:N {-(ti-y(𝐰,𝐱i))²/(2/β)}\]
+>
+>
+>
+> = Σi=1:N \[-1/2 ln \[2π/β\]  + (β/2) Σi=1:N {-(ti-y(𝐰,𝐱i))²}\]
+>
+>
+>
+> = \[-N/2 ln (2π/β) - (β/2) Σi=1:N {(ti-y(𝐰,𝐱i))²}\]
+>
+>
+>
+> bỏ đi constant  ta chuyển thành bài toán tối ưu tương đương:
+>
+>
+>
+> maximize\_𝐰 -(β/2) Σi=1:N {(ti-y(𝐰,𝐱i))²}
+>
+>
+>
+> tương đương (maximize hàm f tương đương minimize -f)
+>
+>
+>
+> minimize\_𝐰 (β/2) Σi=1:N {(ti-y(𝐰,𝐱i))²}
+>
+>
+>
+> Và đây cũng chính là minimize hàm sum of square error.
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy thì vì sao mô hình này sẽ tệ. À bởi vì cái thứ ta muốn dự đoán ở đây, là target variable T mà cái này trong classification là class label hoặc one-hot vector, không phải một biến liên tục Gaussian quanh y(**w**,**x**). Với binary classification, ta có thể dùng Bernoulli; với multiclass, ta dùng categorical/multinomial với xác suất được chuẩn hóa như logistic/softmax.
+>
+>
+>
+> Trong khi đó với least square discriminant ta lại đang dùng giả định 𝒩(y(**w**,**x**), 1/β)). Thành ra việc ta lấy mô hình này để dự đoán cho t làm sao đúng được.
+>
+>
+>
+> Những phần sau ta sẽ nói về các mô hình xác suất tốt hơn (Hàm tuyến tính y(w,x) cũng không tự động là xác suất vì nó không bị ép nằm trong \[0,1\] hoặc tổng bằng 1 không thể fit với ý nghĩa xác suất.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú xuất sắc, thể hiện sự am hiểu sâu sắc và liên hệ chặt chẽ giữa các chương trong giáo trình cũng như kiến thức thống kê bổ trợ.
 
 <br>
 
