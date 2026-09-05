@@ -1,13 +1,9 @@
-# Lecture 29: Singular Value
-decomposition
+# Lecture 29: Singular Value Decomposition
 
 📊 **Progress:** `33` Notes | `37` Screenshots
 
 ---
 <a id="node-1jjuteo"></a>
-
-## Lecture 29: Singular Value
-decomposition
 
 <br>
 
@@ -29,10 +25,10 @@ decomposition
 >
 > Nhưng nó có thể **apply với MỌI MATRIX A**, thay vì chỉ áp
 > dụng được với một square matrix A có đủ bộ
-> eigenvectors độc lập như trong diagonalization A = SΛSinv
+> eigenvectors độc lập như trong diagonalization A = SΛS⁻¹
 >
 > SVD: MỌI MATRIX A  ĐỀU CÓ THỂ PHÂN TÁCH THÀNH
-> U∑VT
+> U∑Vᵀ
 >
 >
 >
@@ -54,15 +50,15 @@ decomposition
 >
 >
 > Nếu **A SQUARE và có ĐỦ n INDEPENDENT
-> eigenvectors**,  thì **A = SASinv**
+> eigenvectors**,  thì **A = SAS⁻¹**
 >
 >
 >
 > Và nếu A lại là **SYMMETRIC** matrix, thì như đã biết, khi đó
 > các **eigenvectors sẽ ORTHOGONAL**, để rồi S sẽ trở thành
 > **Q** - ORTHOGONAL MATRIX (thêm việc normalize vector
-> về unit length). Và với orthogonal matrix Q, thì **Qinv = QT**
-> nên **diagonalization với A sẽ là QΛQT**
+> về unit length). Và với orthogonal matrix Q, thì **Q⁻¹ = Qᵀ**
+> nên **diagonalization với A sẽ là QΛQᵀ**
 >
 >
 >
@@ -81,7 +77,7 @@ decomposition
 >
 >
 > **SINGULAR VALUE DECOMPOSITION** CŨNG CHÍNH LÀ
-> **DIAGONALIZATION** **QΛQT** 
+> **DIAGONALIZATION** **QΛQᵀ** 
 >
 >
 >
@@ -98,14 +94,14 @@ decomposition
 >
 >
 > Điều đó có nghĩa là nếu A không symmetric, mà chỉ
-> là A = SΛSinv thì ta sẽ không care, vì S không phải là
+> là A = SΛS⁻¹ thì ta sẽ không care, vì S không phải là
 > **ORTHOGONAL** matrix
 >
 > Nếu A là SYMMETRIC matrix, thì:
 >
 >
 >
-> SVD CŨNG CHÍNH LÀ DIAGONALIZATION QΛQT 
+> SVD CŨNG CHÍNH LÀ DIAGONALIZATION QΛQᵀ 
 >
 >
 >
@@ -162,6 +158,8 @@ decomposition
 
 <a id="node-hiqtbrn"></a>
 
+###### Geometry of Singular Value Decomposition
+
 <p align="center"><kbd><img src="assets/oq1iuopnfhn.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -181,25 +179,25 @@ decomposition
 >
 >
 > A = a. B = phần dư khi project B xuống C(A): B = b - p = b -
-> (aaT/aTa)b
+> (aaᵀ/aᵀa)b
 >
 >
 >
-> (Ôn nhanh project xuống vector a: p = ax = xa. e = b - p. aTe =
-> 0 <=> aT(b-p) = 0 <=> aTb = aTp <=> aTb = aTax <=> x =
-> aTb/aTa => p = ax = a(aTb/aTa) => e = b - p = b - a(aTb)/aTa)
+> (Ôn nhanh project xuống vector a: p = ax = xa. e = b - p. aᵀe =
+> 0 ⇔ aᵀ(b-p) = 0 ⇔ aᵀb = aᵀp ⇔ aᵀb = aᵀax ⇔ x =
+> aᵀb/aᵀa ⇒ p = ax = a(aᵀb/aᵀa) ⇒ e = b - p = b - a(aᵀb)/aᵀa)
 >
 >
 >
 > C = phần dư khi project C xuống span{A,B}, gọi A là matrix có
 > columns space span bởi A, B (hoặc a, b cũng được vì chúng
-> đều là basis) C = c - A(ATA)invATc
+> đều là basis) C = c - A(AᵀA)⁻¹Aᵀc
 >
 >
 >
-> Ôn nhanh project xuống C(A): p = Ax, ATe = 0 <=> AT(b-p) = 0
-> <=> ATb = ATp <=> ATb = ATAx <=> x = (ATA)_invATb  => p =
-> Ax = A(ATA)invATb => e = b - p = b - A(ATA)invATb
+> Ôn nhanh project xuống C(A): p = Ax, Aᵀe = 0 ⇔ Aᵀ(b-p) = 0
+> ⇔ Aᵀb = Aᵀp ⇔ Aᵀb = AᵀAx ⇔ x = (AᵀA)⁻¹Aᵀb  ⇒ p =
+> Ax = A(AᵀA)⁻¹Aᵀb ⇒ e = b - p = b - A(AᵀA)⁻¹Aᵀb
 >
 >
 >
@@ -235,7 +233,7 @@ decomposition
 
 > [!NOTE]
 > Và ta sẽ thể hiện luôn **nullspace** và **left
-> nullspace** (nullspace of AT) trong đây
+> nullspace** (nullspace of Aᵀ) trong đây
 
 <br>
 
@@ -455,19 +453,19 @@ decomposition
 <p align="center"><kbd><img src="assets/kkdh77hbix.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và ta có thể **nhân (vào bên phải) hai vế cho VT**
+> Và ta có thể **nhân (vào bên phải) hai vế cho Vᵀ**
 >
 >
 >
-> để ta có **AVVT = UΣVT**
+> để ta có **AVVᵀ = UΣVᵀ**
 >
 >
 >
-> Và vế phải VVT chính là matrix chiếu lên rowspace của A.
+> Và vế phải VVᵀ chính là matrix chiếu lên rowspace của A.
 >
 >
 >
-> Nên A (VVT) sẽ là matrix có hàng i hình chiếu của hàng i của A lên C(AT), dĩ nhiên là chính nó. Do đó A (VVT) = A.
+> Nên A (VVᵀ) sẽ là matrix có hàng i hình chiếu của hàng i của A lên C(Aᵀ), dĩ nhiên là chính nó. Do đó A (VVᵀ) = A.
 
 <br>
 
@@ -486,39 +484,41 @@ decomposition
 >
 >
 >
-> Và ta sẽ mượn đến **ATA**:
+> Và ta sẽ mượn đến **AᵀA**:
 >
 >
 >
-> ATA = [UΣ(VT)]T UΣ(VT) = VΣT(**UT)U**Σ(VT)
+> AᵀA = [UΣ(Vᵀ)]ᵀ UΣ(Vᵀ) = VΣT(**Uᵀ)U**Σ(Vᵀ)
 >
 >
 >
-> Và có thể thấy (UT)U = I, vì U là orthogonal matrix, ta đã
-> biết các columns của chúng orthogonal, nên (UT)U = I
+> Và có thể thấy (Uᵀ)U = I, vì U là orthogonal matrix, ta đã
+> biết các columns của chúng orthogonal, nên (Uᵀ)U = I
 >
 >
 >
-> Vậy **ATA = V(ΣT)Σ(VT)**
+> Vậy **AᵀA = V(Σᵀ)Σ(Vᵀ)**
 
 <br>
 
 <a id="node-45y7iwh"></a>
 
+###### SVD and Eigendecomposition of A^T A
+
 <p align="center"><kbd><img src="assets/lu3rdef8wh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và **Σ là diagonal matrix** nên (ΣT)Σ **cũng là diagonal matrix**
+> Và **Σ là diagonal matrix** nên (Σᵀ)Σ **cũng là diagonal matrix**
 > chứa **bình phương của các stretching factor {σ1^2, σ2^2...}** 
 >
 >
 >
 > Và đây chính là eigen-decomposition **(diagonalization) đối với
-> matrix ATA** (giống như A = SΛSinv) vậy. Hơn nữa việc
-> factorization **có dạng của A = QΛQT** thay vì chỉ là SΛSinv càng
-> cho thấy sự phù hợp với sự thật rằng **ATA là SYMMETRIC**
+> matrix AᵀA** (giống như A = SΛS⁻¹) vậy. Hơn nữa việc
+> factorization **có dạng của A = QΛQᵀ** thay vì chỉ là SΛS⁻¹ càng
+> cho thấy sự phù hợp với sự thật rằng **AᵀA là SYMMETRIC**
 > matrix (thì mới có orthonormal eigenvectors để S trở thành Q (*)
-> và Sinv trở thành Qinv = QT (**)
+> và S⁻¹ trở thành Q⁻¹ = Qᵀ (**)
 >
 >
 >
@@ -526,11 +526,11 @@ decomposition
 >
 >
 >
-> (**): Vì là orthogonal matrix nên QTQ = I ⇨ QT=Qinv
+> (**): Vì là orthogonal matrix nên QᵀQ = I ⇨ Qᵀ=Q⁻¹
 >
 >
 >
-> (*): Symmetric ⇨  A = AT: Giả sử x, y là eigenvector với e.values là
+> (*): Symmetric ⇨  A = Aᵀ: Giả sử x, y là eigenvector với e.values là
 > µ1, µ2 với µ1 ≠ µ2 ⇨ Ax = µ1x, Ay = µ2y
 >
 >
@@ -539,55 +539,51 @@ decomposition
 >
 >
 >
-> (Ax)Ty = xTAy ⇔ (µ1x)Ty = xTµ2y ⇔ µ1xTy = µ2xTy ⇔ (μ1 - μ2)xTy 
-> ⇨ xTy = 0 (do μ1 khác μ2) ⇨ x vuông góc y
+> (Ax)ᵀy = xᵀAy ⇔ (µ1x)ᵀy = xᵀµ2y ⇔ µ1xᵀy = µ2xᵀy ⇔ (μ1 - μ2)xᵀy 
+> ⇨ xᵀy = 0 (do μ1 khác μ2) ⇨ x vuông góc y
 >
 >
 >
-> Có nghĩa là thông qua việc có thể thể hiện ATA dưới dạng như
+> Có nghĩa là thông qua việc có thể thể hiện AᵀA dưới dạng như
 > vậy cho thấy (các cột của) **V CHÍNH LÀ EIGENVECTORS CỦA
-> ATA**, các stretching factors bình phương **σ1^2, σ2^2**..chính
-> là **EIGENVALUES** của ATA
+> AᵀA**, các stretching factors bình phương **σ1^2, σ2^2**..chính
+> là **EIGENVALUES** của AᵀA
 >
 > **KHÔNG THỂ TÌM CẢ U VÀ V CÙNG LÚC**, TÌM V TRƯỚC:
-> MƯỢN ATA
+> MƯỢN AᵀA
 >
 >
 >
-> ATA = (U∑VT)T(U∑VT) = V(∑T)(UT)U∑(VT) = V(∑T)∑VT
+> AᵀA = (U∑Vᵀ)ᵀ(U∑Vᵀ) = V(∑ᵀ)(Uᵀ)U∑(Vᵀ) = V(∑ᵀ)∑Vᵀ
 >
 >
 >
-> = V∑^2(VT) => ĐÂY CHÍNH LÀ **DIAGONALIZATION** CỦA **ATA**
+> = V∑^2(Vᵀ) ⇒ ĐÂY CHÍNH LÀ **DIAGONALIZATION** CỦA **AᵀA**
 >
 >
 >
-> => **V CHÍNH LÀ CÁC EIGENVECTOR CỦA  ATA**, VÀ **∑^2**
-> CHÍNH LÀ **EIGENVALUES MATRIX CỦA ATA** (đồng nghĩa
-> stretching factor chính là sqrt eigenvalues của ATA)
+> ⇒ **V CHÍNH LÀ CÁC EIGENVECTOR CỦA  AᵀA**, VÀ **∑^2**
+> CHÍNH LÀ **EIGENVALUES MATRIX CỦA AᵀA** (đồng nghĩa
+> stretching factor chính là sqrt eigenvalues của AᵀA)
 
 <br>
 
 <a id="node-t52tipz"></a>
 
+###### Singular Value Decomposition
+
 <p align="center"><kbd><img src="assets/0zi4n3ccq8t.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Làm tương tự: AAT = (U∑VT)(U∑VT)T = (U∑VT)(V(∑T)UT =
-> U∑∑TUT = U(∑^2)UT => Đây chính là diagonalization của AAT
+> Làm tương tự: AAᵀ = (U∑Vᵀ)(U∑Vᵀ)ᵀ = (U∑Vᵀ)(V(∑ᵀ)Uᵀ = U∑∑TUᵀ = U(∑^2)Uᵀ =&gt; Đây chính là diagonalization của AAᵀ
 >
 >
 >
-> Do đó U CHÍNH LÀ MATRIX CÁC EIGENVECTOR CỦA AATVà EIGENVALUE CỦA AAT CŨNG LÀ BÌNH PHƯƠNG CỦA
-> STRETCHING FACTORNHỚ RẰNG, MỤC TIÊU CỦA BÀI TOÁN LÀ **TÌM BỘ BASIS
-> ORTHONORMAL BASIS CỦA ROW SPACE OF A (V)** VÀ
-> **ORTHONORMAL BASIS CỦA COLUMN SPACE OF A (U)**.
-> **SAO CHO AV = UΣ**
+> Do đó U CHÍNH LÀ MATRIX CÁC EIGENVECTOR CỦA AAᵀVà EIGENVALUE CỦA AAᵀ CŨNG LÀ BÌNH PHƯƠNG CỦA STRETCHING FACTORNHỚ RẰNG, MỤC TIÊU CỦA BÀI TOÁN LÀ **TÌM BỘ BASIS ORTHONORMAL BASIS CỦA ROW SPACE OF A (V)** VÀ **ORTHONORMAL BASIS CỦA COLUMN SPACE OF A (U)**. **SAO CHO AV = UΣ**
 >
 >
 >
-> (Có thể có rất nhiều bộ orthonormal basis của rowspace và
-> columns space nhưng không thỏa)
+> (Có thể có rất nhiều bộ orthonormal basis của rowspace và columns space nhưng không thỏa)
 >
 >
 >
@@ -595,39 +591,31 @@ decomposition
 >
 >
 >
-> AV = UΣ, **DẪN TỚI ATA = V(ΣT)Σ(VT)**, VÀ ĐIỀU NÀY **CHO
-> THẤY V CẦN TÌM ĐỂ THỎA AV = UΣ**  THÌ NÓ **CHÍNH LÀ
-> EIGENVECTORS CỦA ATA
+> AV = UΣ, **DẪN TỚI AᵀA = V(Σᵀ)Σ(Vᵀ)**, VÀ ĐIỀU NÀY **CHO THẤY V CẦN TÌM ĐỂ THỎA AV = UΣ** THÌ NÓ \*\*CHÍNH LÀ EIGENVECTORS CỦA AᵀA
 >
 >
 >
-> AV = UΣ dẫn tới AAT = UΣ(ΣT)(UT) CHO THẤY U CẦN TÌM
-> CHÍNH LÀ EIGENVECTORS CỦA AAT**
+> AV = UΣ dẫn tới AAᵀ = UΣ(Σᵀ)(Uᵀ) CHO THẤY U CẦN TÌM CHÍNH LÀ EIGENVECTORS CỦA AAᵀ\*\*
 >
-> MƯỢN AAT
->
->
->
-> AAT = (U∑VT)(U∑VT)T = (U∑VT)(V(∑T)UT = U∑∑TUT 
+> MƯỢN AAᵀ
 >
 >
 >
-> = U(∑^2)UT
+> AAᵀ = (U∑Vᵀ)(U∑Vᵀ)ᵀ = (U∑Vᵀ)(V(∑ᵀ)Uᵀ = U∑∑TUᵀ
 >
 >
 >
-> => ĐÂY CHÍNH LÀ **DIAGONALIZATION** CỦA **AAT**
+> = U(∑^2)Uᵀ
 >
 >
 >
-> => **U CHÍNH LÀ CÁC EIGENVECTOR CỦA  AAT**, VÀ **∑^2**
-> CHÍNH LÀ **EIGENVALUES MATRIX CỦA AAT** (đồng nghĩa
-> stretching factor chính là sqrt eigenvalues của ATA)
+> =&gt; ĐÂY CHÍNH LÀ **DIAGONALIZATION** CỦA **AAᵀ**
 >
-> Vậy chẳng lẽ eigenvalues của AAT cũng là eigenvalues của
-> ATA vì như trên ta thấy AAT=U(Σ^2)UT và ATA = V(Σ^2)VT 
-> cho thấy chúng đều là bình phương của stretching factor 
-> trong phép SVD: A = UΣVT
+>
+>
+> =&gt; **U CHÍNH LÀ CÁC EIGENVECTOR CỦA AAT**, VÀ **∑^2**CHÍNH LÀ **EIGENVALUES MATRIX CỦA AAT** (đồng nghĩa stretching factor chính là sqrt eigenvalues của AᵀA)
+>
+> Vậy chẳng lẽ eigenvalues của AAᵀ cũng là eigenvalues của AᵀA vì như trên ta thấy AAᵀ=U(Σ^2)Uᵀ và AᵀA = V(Σ^2)Vᵀ cho thấy chúng đều là bình phương của stretching factor trong phép SVD: A = UΣVᵀ
 >
 >
 >
@@ -635,13 +623,11 @@ decomposition
 >
 >
 >
-> Giả sử µ khác 0 là eigenvalue khác 0 của ATA, ATAx = µx, x
-> là eigenvector đương nhiên là nonzero vector
+> Giả sử µ khác 0 là eigenvalue khác 0 của AᵀA, AᵀAx = µx, x là eigenvector đương nhiên là nonzero vector
 >
 >
 >
-> Xét y = Ax thì vì x khác 0 và là eigenvector của ATA nên nó
-> ko thể là nullspace của A, vì khi đó ATAx cũng bằng 0. 
+> Xét y = Ax thì vì x khác 0 và là eigenvector của AᵀA nên nó ko thể là nullspace của A, vì khi đó AᵀAx cũng bằng 0.
 >
 >
 >
@@ -649,13 +635,11 @@ decomposition
 >
 >
 >
-> Tính thử AATy = AATAx = Aµx = µAx = µy
+> Tính thử AAᵀy = AAᵀAx = Aµx = µAx = µy
 >
 >
 >
-> Vậy y là nonzero vector thỏa AATy = µy => y là eigenvector
-> của AAT với eigenvalue là µ ⇨ µ đều là eigenvalue của ATA
-> và AAT
+> Vậy y là nonzero vector thỏa AAᵀy = µy =&gt; y là eigenvector của AAT với eigenvalue là µ ⇨ µ đều là eigenvalue của AᵀA và AAT
 
 <br>
 
@@ -664,13 +648,13 @@ decomposition
 <p align="center"><kbd><img src="assets/cafyqfl1vdl.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs lấy ví dụ matrix A này, và ta có matrix ATA.
+> gs lấy ví dụ matrix A này, và ta có matrix AᵀA.
 >
 >
 >
-> Ta sẽ **tìm eigenvectors ATA sẽ chính là V cần tìm**, và
-> **eigenvalues của ATA sẽ là Σ^2, hay Σ chính là square
-> root của (matrix of) eigenvalues của ATA**
+> Ta sẽ **tìm eigenvectors AᵀA sẽ chính là V cần tìm**, và
+> **eigenvalues của AᵀA sẽ là Σ^2, hay Σ chính là square
+> root của (matrix of) eigenvalues của AᵀA**
 
 <br>
 
@@ -700,8 +684,8 @@ decomposition
 <p align="center"><kbd><img src="assets/x6uu7zjatnp.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Từ đó ta có **Σ** là square root của **ATA's eigenvalues**
-> và **V** là **eigenvector của ATA**
+> Từ đó ta có **Σ** là square root của **AᵀA's eigenvalues**
+> và **V** là **eigenvector của AᵀA**
 
 <br>
 
@@ -710,19 +694,19 @@ decomposition
 <p align="center"><kbd><img src="assets/pv0u3wvkx7q.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> còn U như đã nói là eigenvectors của AATVà như gs cho
-> thấy ở đây AAT sẽ trở thành UΣ(ΣT)(UT)
+> còn U như đã nói là eigenvectors của AAᵀVà như gs cho
+> thấy ở đây AAᵀ sẽ trở thành UΣ(Σᵀ)(Uᵀ)
 >
 >
 >
-> Đây chính là diagonalization của AAT.
+> Đây chính là diagonalization của AAᵀ.
 >
 >
 >
-> Từ đó cho thấy AAT cũng là một **symmetric** matrix, và
+> Từ đó cho thấy AAᵀ cũng là một **symmetric** matrix, và
 > khi factored như vậy nên **U chính là eigenvectors của
-> AAT**, và **Σ(ΣT) là diagonal matrix chứa eigenvalues
-> của AAT
+> AAᵀ**, và **Σ(Σᵀ) là diagonal matrix chứa eigenvalues
+> của AAᵀ
 >
 >
 >
@@ -731,8 +715,8 @@ decomposition
 >
 >
 >
-> NHƯNG QUA VIỆC DIAGONALIZATION VỚI AAT, CHO
-> THẤY U CŨNG SẼ LÀ EIGENVECTORS CỦA AAT**
+> NHƯNG QUA VIỆC DIAGONALIZATION VỚI AAᵀ, CHO
+> THẤY U CŨNG SẼ LÀ EIGENVECTORS CỦA AAᵀ**
 
 <br>
 
@@ -743,7 +727,7 @@ decomposition
 <p align="center"><kbd><img src="assets/gmt7m0oqvb7.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> rồi, xét matrix AAT **với ví dụ này** thì thấy nó **hóa ra là
+> rồi, xét matrix AAᵀ **với ví dụ này** thì thấy nó **hóa ra là
 > diagonal matrix**. Và như vậy **trên đường chéo của nó
 > chính là eigenvalues**.
 >
@@ -762,13 +746,13 @@ decomposition
 
 > [!NOTE]
 > và ta thấy hai con số 32 và 18 không phải ngẫu nhiên cũng
-> là eigenvalue của ATA. Là **bởi hai matrix AB và BA có cùng
+> là eigenvalue của AᵀA. Là **bởi hai matrix AB và BA có cùng
 > eigenvalues**
 >
 >
 >
 > Trong bài giảng 4 của 18.065 gs có nói đại khái là chỉ cần
-> cho BA = BA(BBinv) = **B(AB)Binv** Thì việc BA = B(AB)Binv 
+> cho BA = BA(BB⁻¹) = **B(AB)B⁻¹** Thì việc BA = B(AB)B⁻¹ 
 > đã đủ để cho thấy BA và AB là **SIMILAR** **MATRICES**, do đó 
 > chúng sẽ có cùng eigen values. 
 >
@@ -779,7 +763,7 @@ decomposition
 >
 >
 >
-> Và do đó ATA và AAT cũng có cùng non-zero eigenvalues
+> Và do đó AᵀA và AAᵀ cũng có cùng non-zero eigenvalues
 
 <br>
 
@@ -788,7 +772,7 @@ decomposition
 <p align="center"><kbd><img src="assets/nofqsgjif4.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và với eigenvectors của AAT, ta có U. Tới đây khi lắp vào
+> Và với eigenvectors của AAᵀ, ta có U. Tới đây khi lắp vào
 > thì gs **kì vọng rằng ta sẽ có phương trình đúng**
 
 <br>
@@ -814,7 +798,7 @@ decomposition
 >
 >
 >
-> Vậy giả sử như lúc tìm eigenvector của AAT, ta chọn -1 cho free
+> Vậy giả sử như lúc tìm eigenvector của AAᵀ, ta chọn -1 cho free
 > variable thì cũng được, hay **nói cách khác, U không nhất thiết
 > phải là [1 0; 0 1] mà hoàn toàn có thể là [1 0; 0 -1] hoặc [-1 0, 0
 > -1]**.
@@ -826,7 +810,7 @@ decomposition
 >
 >
 >
-> Thành ra, **khi ta tìm U một cách độc lập với V** thông qua AAT thì
+> Thành ra, **khi ta tìm U một cách độc lập với V** thông qua AAᵀ thì
 > theo gs T**A CÓ 50% CHỌN ĐƯỢC DẤU ĐÚNG**. 
 >
 >
@@ -838,7 +822,7 @@ decomposition
 >
 > Do đó để tìm U chính xác khớp được với AV = UΣ thì **phải tìm nó
 > trong quan hệ với V**, đương nhiên cách dễ nhất chính xác nhất là
-> thông qua AV = UΣ <=> **AVΣinv = U**
+> thông qua AV = UΣ ⇔ **AVΣinv = U**
 
 <br>
 
@@ -849,10 +833,10 @@ decomposition
 > [!NOTE]
 > Gs có giải thích lỗi này trong bài sau. Nhưng đại khái là
 > ví dụ này cho thấy nếu ta tìm V và ∑ bằng cách tìm
-> **eigenvectors và eigenvalues của ATA**, sau đó tìm U
-> thông qua e**igenvectors của AAT**, và **ĐẢM BẢO**
+> **eigenvectors và eigenvalues của AᵀA**, sau đó tìm U
+> thông qua e**igenvectors của AAᵀ**, và **ĐẢM BẢO**
 > dấu của chúng phù hợp nhau thì ta sẽ thấy **qủa thật là
-> A có thể được phân tách thành U∑VT**.
+> A có thể được phân tách thành U∑Vᵀ**.
 >
 >
 >
@@ -888,7 +872,7 @@ decomposition
 >
 > Và có thể dễ dàng nhẩm tính một vector vuông góc với
 > một row, để có ngay basis của nullspace (vì đã biết
-> dim N(A) = 1 nên chỉ cần 1 vector, và N(A) và C(AT) ortho
+> dim N(A) = 1 nên chỉ cần 1 vector, và N(A) và C(Aᵀ) ortho
 > gonal complement). Và nó sẽ tham gia vào làm các cột
 > thứ r+1 đến n của V, trong trường hợp này, V sẽ chỉ có 2 
 > cột, một cột là basis của rowspace, cái kia là basis của
@@ -897,12 +881,14 @@ decomposition
 >
 >
 > Tương tự, nhẩm tính một vector vuông góc với columns,
-> để có ngay một basis của left-nullspace N(AT), và nó sẽ
+> để có ngay một basis của left-nullspace N(Aᵀ), và nó sẽ
 > là cột thứ 2 của U (cột đầu của U là basis của C(A))
 
 <br>
 
 <a id="node-snr0nn9"></a>
+
+###### SVD of Rank One Matrix
 
 <p align="center"><kbd><img src="assets/ikkbsc0pw2l.png" width="80%"></kbd></p>
 
@@ -922,14 +908,14 @@ decomposition
 >
 >
 > Và ta **cần tìm bộ U, V sao cho thỏa  AV = UΣ.** Thì với
-> vô số basis của C(A) và C(AT) thì biết tìm U, V như thế
+> vô số basis của C(A) và C(Aᵀ) thì biết tìm U, V như thế
 > nào?
 >
 >
 >
 > Cho nên **phải dựa vào việc V chính là eigenvectors của
-> ATA** cũng như U chính là eigenvectors của AAT và **Σ
-> là square root  của ATA eigenvalues matrix.**
+> AᵀA** cũng như U chính là eigenvectors của AAᵀ và **Σ
+> là square root  của AᵀA eigenvalues matrix.**
 >
 >
 >
@@ -943,7 +929,7 @@ decomposition
 > (Vì chọn cái nào thì cũng là trên line đó thôi, khác với
 > việc column-space  là **một plane** thì **các cặp basis
 > vector có thể khác nhau hoàn toàn  về hướng để rồi phải
-> tìm cặp basis của C(AT) và basis của C(A)  giúp thỏa AV
+> tìm cặp basis của C(Aᵀ) và basis của C(A)  giúp thỏa AV
 > = U∑**)
 >
 >
@@ -954,10 +940,10 @@ decomposition
 >
 > Tóm lại ý là vầy, nếu A (2x2) full rank, thì đương nhiên
 > có **vô số bộ orthonormal basis của column space C(A)
-> và row space C(AT)**. Thành ra muốn có U, V sao cho
+> và row space C(Aᵀ)**. Thành ra muốn có U, V sao cho
 > AV = UΣ, ta **không thể chỉ lấy columns của nó làm U và
 > row của nó làm V** được. Mà ta **phải tìm thông qua
-> diagonalization đối với matrix ATA** và AAT
+> diagonalization đối với matrix AᵀA** và AAᵀ
 >
 >
 >
@@ -968,7 +954,7 @@ decomposition
 >
 >
 > Nhắc lại nếu các cột của U, V chỉ là basis của C(A) và
-> C(AT) thì đó là phiên bản SVD thu gọn.
+> C(Aᵀ) thì đó là phiên bản SVD thu gọn.
 >
 >
 >
@@ -976,11 +962,11 @@ decomposition
 > basis của left nullspace nữa thì ta có Full SVD
 >
 > Có thể thấy ở đây nếu ta tìm U thông qua **tìm eigenvector của
-> AAT,** thì kết quả cũng sẽ chứa **HAI** vector, trong đó:
+> AAᵀ,** thì kết quả cũng sẽ chứa **HAI** vector, trong đó:
 >
 >
 >
-> i)  **EIGENVECTOR của AAT ỨNG VỚI EIGENVALUE KHÁC 0**
+> i)  **EIGENVECTOR của AAᵀ ỨNG VỚI EIGENVALUE KHÁC 0**
 > và đó **chính là basis của COLUMN SPACE của A** (1, 2), có
 > thể thấy nó là scaled của các column (4, 8) (3, 6)
 >
@@ -993,16 +979,16 @@ decomposition
 >
 >
 >
-> Tóm lại, **eigenvectors của AAT** chính là U, trong đó một cái là
+> Tóm lại, **eigenvectors của AAᵀ** chính là U, trong đó một cái là
 > **basis của C(A)** (1, 2), cái kia là **basis của left nullspace
-> N(AT)** (-2, 1).
+> N(Aᵀ)** (-2, 1).
 >
 >
 >
 > Chẳng qua như đã nói trong case này A chỉ có mỗi hai cột, và
 > **có một cột độc lập** dĩ nhiên là **lấy cột nào cũng là basis của
 > C(A)**, và **nhẩm tính vector vuông góc với nó thì có basis của
-> N(AT)**
+> N(Aᵀ)**
 
 <br>
 
@@ -1012,27 +998,27 @@ decomposition
 
 > [!NOTE]
 > để **tìm Σ**, như đã biết ta sẽ mượn đến sự thật rằng Σ
-> chính là square root của eigenvalues của ATA. Gs tính ATA,
+> chính là square root của eigenvalues của AᵀA. Gs tính AᵀA,
 > và bữa trước, ta biết rằng chỉ khi nào A full column rank, tức
-> là nó có n columns độc lập thì ATA mới full rank.
+> là nó có n columns độc lập thì AᵀA mới full rank.
 >
 >
 >
-> (Lập luận lại để ôn như sau: Nếu ATA full rank tức là null
-> space của nó chỉ chứa zero, hay, ATAx=0 chỉ có thể suy ra x
+> (Lập luận lại để ôn như sau: Nếu AᵀA full rank tức là null
+> space của nó chỉ chứa zero, hay, AᵀAx=0 chỉ có thể suy ra x
 > = 0. Vậy thì ta sẽ lập luận rằng, **nếu A không full column
 > rank**, tức **tồn tại free columns**. Thì **nullspace của A có
 > chứa vector khác 0**. Khi đó đương nhiên **NÓ CŨNG LÀ
-> SOLUTION KHÁC 0 CỦA CỦA ATAx = 0**.  Từ đó dẫn đến
-> nullspace ATA không phải bằng zero  -> ATA không full-rank.
-> Thành ra để ATA full rank thì bắt  buộc x = 0 là solution duy
+> SOLUTION KHÁC 0 CỦA CỦA AᵀAx = 0**.  Từ đó dẫn đến
+> nullspace AᵀA không phải bằng zero  -> AᵀA không full-rank.
+> Thành ra để AᵀA full rank thì bắt  buộc x = 0 là solution duy
 > nhất của Ax = 0, tức là A phải  full column rank)
 >
 >
 >
 > Vậy vì A có 2 cột mà chỉ có rank 1 tức là **A KHÔNG FULL
-> COLUMN RANK**, nên **ATA CHẮC CHẮN KHÔNG FULL
-> RANK**, hay, **ATA LÀ NONINVERTIBLE / SINGULAR
+> COLUMN RANK**, nên **AᵀA CHẮC CHẮN KHÔNG FULL
+> RANK**, hay, **AᵀA LÀ NONINVERTIBLE / SINGULAR
 > MATRIX**.
 >
 >
@@ -1042,15 +1028,15 @@ decomposition
 >
 >
 >
-> Và eigenvector (của ATA) đó **CHÍNH LÀ BASIS CỦA
+> Và eigenvector (của AᵀA) đó **CHÍNH LÀ BASIS CỦA
 > NULLSPACE** của A (và sẽ l**àm thành các cột từ r+1 đến n
 > của V**)
 >
 >
 >
-> Và từ trace (tổng đường chéo của ATA = 125, và cũng là tổng
+> Và từ trace (tổng đường chéo của AᵀA = 125, và cũng là tổng
 > các eigenvalue)  ta suy ra eigenvalue còn lại là **125**. Vậy
-> là ta đã xác định được **Σ = sqrt của ATA's eigenvalues là 0
+> là ta đã xác định được **Σ = sqrt của AᵀA's eigenvalues là 0
 > và 25**
 
 <br>
@@ -1064,15 +1050,15 @@ decomposition
 >
 >
 >
-> Việc ATA singular, không full-rank có nguyên
+> Việc AᵀA singular, không full-rank có nguyên
 > do là các cols / rows của A không independent. Dẫn tới
-> ATA có (ít nhất) một eigenvalue bằng 0. Và dẫn tới:
+> AᵀA có (ít nhất) một eigenvalue bằng 0. Và dẫn tới:
 >
 >
 >
 > Các eigenvector ứng với eigenvalue bằng 0 sẽ chính là
 > basis của nullspace của A. (Mà điều hay ho là nó cũng là
-> basis của nullspace của ATA luôn, phải không, vì ta biết
+> basis của nullspace của AᵀA luôn, phải không, vì ta biết
 > eigen vector ứng với eigenvalue bằng 0 của matrix chính
 > là vector nằm trong nullspace của matrix đó)
 >
@@ -1086,7 +1072,7 @@ decomposition
 > Thành ra trong ví dụ này ta có thể lắp ngay v1 (là basis
 > vector của rowspace) và một vector trong đường vuông
 > góc với nó (là nullspace) để có v2, tạo thành V. Nhưng
-> nếu giải tìm eigevector của ATA thì cũng ra hai vector
+> nếu giải tìm eigevector của AᵀA thì cũng ra hai vector
 > này (nên hiểu là ra hai cái vector nằm trên hai cái line
 > này - hay, hai cái phương này còn giá trị cụ thể, hướng 
 > thế nào thì do tùy chọn free variable)
@@ -1098,20 +1084,20 @@ decomposition
 >
 >
 > Tiếp tương tự như đã nói, ta có thể tìm eigenvectors của
-> AAT để có U, và trong ví dụ matrix A 2x2 này, vì A không
+> AAᵀ để có U, và trong ví dụ matrix A 2x2 này, vì A không
 > có trạng thái mọi column/row đều independent, thì sẽ dẫn
-> tới ATA và AAT đều không fullrank, nên chúng đều có 
+> tới AᵀA và AAᵀ đều không fullrank, nên chúng đều có 
 > ít nhất một eigenvalue = 0
 >
 >
 >
-> Nên khi tìm eigenvalue/eigenvector của AAT: Ta sẽ có:
+> Nên khi tìm eigenvalue/eigenvector của AAᵀ: Ta sẽ có:
 >
 >
 >
 > Một eigenvector ứng với eigenvalue = 0, đây chính là 
 > basis vector của left nullspace của A, và tương tự như 
-> trên, nó cũng là basis của nullspace của AAT
+> trên, nó cũng là basis của nullspace của AAᵀ
 >
 >
 >
@@ -1154,7 +1140,7 @@ decomposition
 >
 >
 >
-> Và thông qua tìm eigenvector của ATA và AAT thì nó
+> Và thông qua tìm eigenvector của AᵀA và AAᵀ thì nó
 > sẽ cho ra đầy đủ V [các basis của rowspace, các basis
 > của nullspace] và U = [các basis của column space,
 > các basis của left nullspace]**
