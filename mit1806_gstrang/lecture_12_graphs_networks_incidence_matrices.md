@@ -1,15 +1,9 @@
-# Lecture 12: Graphs,
-networks, Incidence
-matrices
+# Lecture 12: Graphs, Networks, Incidence Matrices
 
 📊 **Progress:** `37` Notes | `40` Screenshots
 
 ---
 <a id="node-26mdg03"></a>
-
-## Lecture 12: Graphs,
-networks, Incidence
-matrices
 
 <br>
 
@@ -199,12 +193,14 @@ matrices
 > Me: Tiếp nối lập luận trước, **nếu mọi cols đều
 > independent**, thì tức là **chúng đều là pivots**, và do đó
 > **không có free cols**. Dẫn đến **không có vector nào
-> trong basis** => **nullspace chỉ chứa zero**, và mang ý
+> trong basis** ⇒ **nullspace chỉ chứa zero**, và mang ý
 > nghĩa là **solution duy nhất của Ax=0 chính là x=0**
 
 <br>
 
 <a id="node-52mke2b"></a>
+
+###### Graph Incidence Matrix
 
 <p align="center"><kbd><img src="assets/556imnbs6q.png" width="80%"></kbd></p>
 
@@ -348,6 +344,8 @@ matrices
 
 <a id="node-6w3cdka"></a>
 
+###### Incidence Matrix of a Graph
+
 <p align="center"><kbd><img src="assets/kpjxuap3ar.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -355,9 +353,7 @@ matrices
 >
 >
 >
-> -> **3**, vì đã nói **dim của nullspace N(A) là 1**. Bữa trước
-> đã biết (**rank / dim cols space C(A) / dim row space C(AT))**
-> + dims của nullspace N(A) = số cột n
+> \-&gt; **3**, vì đã nói **dim của nullspace N(A) là 1**. Bữa trước đã biết (**rank / dim cols space C(A) / dim row space C(Aᵀ))** dims của nullspace N(A) = số cột n
 >
 >
 >
@@ -365,10 +361,7 @@ matrices
 >
 >
 >
-> Cũng có thể lập luận vì có **dim nullspace N(A) = 1**, nên Ax
-> = 0, **có 1 special solution**, đồng nghĩa **có 3 pivots** -> **3
-> linearly independent cols** ->  **basis của cols space có 3
-> vector -> dim của columns space = 3 -> rank = 3**
+> Cũng có thể lập luận vì có **dim nullspace N(A) = 1**, nên Ax = 0, **có 1 special solution**, đồng nghĩa **có 3 pivots** -&gt; **3 linearly independent cols** -&gt; **basis của cols space có 3 vector -&gt; dim của columns space = 3 -&gt; rank = 3**
 
 **🔗 See also:** [linked note](./lecture_10_the_four_fundamental_subspaces.md#node-bsozk2k) · [linked note](#node-e7n8l7p)
 
@@ -376,39 +369,32 @@ matrices
 
 <a id="node-xk4c9wi"></a>
 
+###### Dimension of Left Nullspace
+
 <p align="center"><kbd><img src="assets/hlhxedlasi4.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, **giờ xét A.T**, nullspace của A.T là gì (basis, dim)
+> Rồi, **giờ xét Aᵀ**, nullspace của Aᵀ là gì (basis, dim)
 >
 >
 >
-> Thử lập luận: Ta biết **A có rank 3**, vậy **A.T cũng có rank
-> 3**. Vì sao? Vì với matrix A thì **số linear independent
-> columns** (dim của cols space) cũng **chính là bằng số
-> linear independent rows** (dim của row space).
+> Thử lập luận: Ta biết **A có rank 3**, vậy **Aᵀ cũng có rank 3**. Vì sao? Vì với matrix A thì **số linear independent columns** (dim của cols space) cũng **chính là bằng số linear independent rows** (dim của row space).
 >
 >
 >
-> Hay nói cách khác, **dimension của cols space =
-> dimension của row space = rank**.
+> Hay nói cách khác, **dimension của cols space = dimension của row space = rank**.
 >
 >
 >
-> Các **vector trong basis của row space của A**, khi
-> transpose  **đương nhiên cũng là tạo một basis của A.T**
+> Các **vector trong basis của row space của A**, khi transpose **đương nhiên cũng là tạo một basis của Aᵀ**
 >
 >
 >
-> Do đó **basis của column space của A.T** cũng có **số
-> vector bằng số vector trong basis của row space của A**
-> -> **dimension của column space A.T = rank A = 3**
+> Do đó **basis của column space của Aᵀ** cũng có **số vector bằng số vector trong basis của row space của A**-&gt; **dimension của column space Aᵀ = rank A = 3**
 >
 >
 >
-> Và từ đó **A.T sẽ có 3 pivots / independent cols**, nên
-> **đồng nghĩa với 5-3 = 2 free cols**. -> 2 special solution ->
-> **Basis của nullspace của A.T = 2 -> dim của N(A.T) = 2**
+> Và từ đó **Aᵀ sẽ có 3 pivots / independent cols**, nên **đồng nghĩa với 5-3 = 2 free cols**. -&gt; 2 special solution -&gt; **Basis của nullspace của Aᵀ = 2 -&gt; dim của N(Aᵀ) = 2**
 >
 >
 >
@@ -416,13 +402,7 @@ matrices
 >
 >
 >
-> Có thể giải thích ngắn hơn: Ta biết định lý **Rank-Nullity** nói
-> rằng với **matrix A [m,n] thì C(A) và N(AT) đều là subspace
-> của Rm** (có m rows  nên columns có m components, cũng
-> là cần m coefficients để combine m rows để cho ra 0 (ý nói
-> ATy = 0). Và **cùng với nhau chúng sẽ cover Rm**: dim C(A) +
-> dim N(AT) = m từ đó dim N(AT) = m - dim C(A) = m - r = 5 -
-> 3 = 2
+> Có thể giải thích ngắn hơn: Ta biết định lý **Rank-Nullity** nói rằng với **matrix A \[m,n\] thì C(A) và N(Aᵀ) đều là subspace của Rm** (có m rows nên columns có m components, cũng là cần m coefficients để combine m rows để cho ra 0 (ý nói Aᵀy = 0). Và **cùng với nhau chúng sẽ cover Rm**: dim C(A) + dim N(Aᵀ) = m từ đó dim N(Aᵀ) = m - dim C(A) = m - r = 5 - 3 = 2
 
 **🔗 See also:** [linked note](./lecture_10_the_four_fundamental_subspaces.md#node-z9zvfsz)
 
@@ -430,16 +410,18 @@ matrices
 
 <a id="node-jo7yn12"></a>
 
+###### Finding the Left Nullspace
+
 <p align="center"><kbd><img src="assets/gx33v9k7cr4.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs: Chính xác. Thế còn **basis của N(A.T)?**
+> Gs: Chính xác. Thế còn **basis của N(Aᵀ)?**
 >
 >
 >
 > Lập luận: Để tìm basis của nullspace thì ta có thể **tìm
-> 2 special solution của A.Ty=0**. Muốn vậy **theo cách
-> thông thường**, ta sẽ **đưa A.T về row echelon**, và **xác
+> 2 special solution của Aᵀy=0**. Muốn vậy **theo cách
+> thông thường**, ta sẽ **đưa Aᵀ về row echelon**, và **xác
 > định 3 pivots columns**, từ đó **xác định 2 free columns** ->
 > đó sẽ là một basis.
 
@@ -472,23 +454,27 @@ matrices
 
 <a id="node-azy49wh"></a>
 
+###### Kirchhoff's Current Law in Networks
+
 <p align="center"><kbd><img src="assets/k1zfzgc0r9i.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và phương trình **A.Ty = 0** liên quan đến một
+> Và phương trình **Aᵀy = 0** liên quan đến một
 > định luật có tên là **Kirchoff's Current Law**
 
 <br>
 
 <a id="node-3nqiskq"></a>
 
+###### Kirchhoff's Current Law and Networks
+
 <p align="center"><kbd><img src="assets/z4y1k8g0fv.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/dycpd6g73sh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, triển khai A.Ty = 0 ra (nhân y vô, để ta có equation
-> thứ nhất của A.Ty = 0 là - y1 - y3 - y4 = 0
+> Rồi, triển khai Aᵀy = 0 ra (nhân y vô, để ta có equation
+> thứ nhất của Aᵀy = 0 là - y1 - y3 - y4 = 0
 >
 >
 >
@@ -513,11 +499,11 @@ matrices
 >
 > Thì ý chính là, CỘT 1 CỦA A, chính là thể hiện các CHIỀU 
 > / SỰ KIỆN ĐI RA HOẶC VÀO NODE 1. Nên khi nhân với y
-> để có ATy thì
+> để có Aᵀy thì
 >
 >
 >
-> Equation HÀNG 1 CỦA AT (CHÍNH LÀ CỘT 1 CỦA A) 
+> Equation HÀNG 1 CỦA Aᵀ (CHÍNH LÀ CỘT 1 CỦA A) 
 > DOT PRODUCT VỚI VECTOR Y  = 0 sẽ thể hiện rằng
 > TỔNG CURRENT ĐI RA / VÀO NODE 1 SẼ BẰNG 0
 
@@ -528,7 +514,7 @@ matrices
 <p align="center"><kbd><img src="assets/8eurquwwqba.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> tiếp equation thứ 2 (của A.Ty = 0) là y1-y2 = 0, cho
+> tiếp equation thứ 2 (của Aᵀy = 0) là y1-y2 = 0, cho
 > biết **tổng hai flow (current) liên quan đến node 2 phải
 > bằng 0** -> dòng đi vào (y1) bằng dòng đi ra (y2)
 
@@ -557,46 +543,40 @@ matrices
 
 <a id="node-gw5p6wb"></a>
 
+###### Kirchhoff's Current Law on Graphs
+
 <p align="center"><kbd><img src="assets/o9s3arlqt2.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs: Giờ ta sẽ **quay lại linear algebra** để trả lời câu hỏi: y
-> giúp solve equation system này là gì hay solution của 
-> ATy = 0 cũng là hỏi về left nullspace N(AT)?
+> gs: Giờ ta sẽ **quay lại linear algebra** để trả lời câu hỏi: y giúp solve equation system này là gì hay solution của Aᵀy = 0 cũng là hỏi về left nullspace N(Aᵀ)?
 >
 >
 >
-> gs cho rằng ta đã biết cách tìm y, cũng chính là tìm
-> nullspace của A.T, bằng cách dùng elimination đưa  A.T
-> về echelon form U hay reduced echelon form R. Để rồi
-> xác định các pivot cols, từ đó xác định các free cols, và
-> ứng với mỗi free cols sẽ là một special solution, và các
-> special solutions sẽ tạo một basis của nullspace of A.T ->
-> từ đó cho ta các solutions của A.Ty = 0 (là các linear
-> combination của các vector trong basis)
+> gs cho rằng ta đã biết cách tìm y, cũng chính là tìm nullspace của Aᵀ, bằng cách dùng elimination đưa Aᵀ về echelon form U hay reduced echelon form R. Để rồi xác định các pivot cols, từ đó xác định các free cols, và ứng với mỗi free cols sẽ là một special solution, và các special solutions sẽ tạo một basis của nullspace of Aᵀ -&gt; từ đó cho ta các solutions của Aᵀy = 0 (là các linear combination của các vector trong basis)
 >
 >
 >
-> Có điều, bây giờ gs đề nghị xác định basis của nullspace
-> of A.T **không cần dùng elimination**, mà **dựa vào Graph.**
+> Có điều, bây giờ gs đề nghị xác định basis của nullspace of Aᵀ **không cần dùng elimination**, mà **dựa vào Graph.**
 
 <br>
 
 <a id="node-5qjh8qt"></a>
 
+###### Left Nullspace of Incidence Matrix
+
 <p align="center"><kbd><img src="assets/jn4odj9jsq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs hỏi, giả sử ta làm elimination trên AT thì cái hàng cuối nó
+> Gs hỏi, giả sử ta làm elimination trên Aᵀ thì cái hàng cuối nó
 > thành ra cái gì?
 >
 >
 >
 > Me: Zero. Lí do là vì: Ta đã lí luận ở trên để kết luận
-> dimension của nullspace của A.T là 2. Thế thì, như đã biết,
+> dimension của nullspace của Aᵀ là 2. Thế thì, như đã biết,
 > dimension của column space of A sẽ là số pivot cols,
 > dimension của nullspace of A, là số free cols, nên **tổng dim
-> C(A.T) + dim N(A.T) sẽ là số cols = 5**. Vậy ta có dimension
+> C(Aᵀ) + dim N(Aᵀ) sẽ là số cols = 5**. Vậy ta có dimension
 > của cols space of A là 5 - 2 =
 > 3.
 >
@@ -604,12 +584,12 @@ matrices
 >
 > Rồi, mà **dimension của cols space** và **dimension row
 > space** là **bằng nhau và bằng rank**, nên dimension của
-> row space of A.T cũng là bằng 3.
+> row space of Aᵀ cũng là bằng 3.
 >
 >
 >
-> Vậy có nghĩa là basis của row space of A.T có 3 vector, hay
-> A.T có 3 linear independence row. Vậy thì cái **hàng cuối,
+> Vậy có nghĩa là basis của row space of Aᵀ có 3 vector, hay
+> Aᵀ có 3 linear independence row. Vậy thì cái **hàng cuối,
 > sau khi thực hiện elimination sẽ thành 0**. (trong quá trình
 > elimination, nên nhớ là sẽ **có các bước row - exchange**, nên
 > dù thế nào thì row cuối cùng thành 0)
@@ -625,16 +605,16 @@ matrices
 > [!NOTE]
 > Gs: Rồi, đúng. Elimination sẽ cho biết hết những chuyện
 > đó. Nhưng giờ ta **muốn dựa vào Graph để tìm basis của
-> nullspace of A.T**
+> nullspace of Aᵀ**
 >
 >
 >
-> Ta sẽ tìm basis của nullspace of A.T N(A.T), đầu tiên gs hỏi
-> **có bao nhiêu vector trong basis của N(A.T)**
+> Ta sẽ tìm basis của nullspace of Aᵀ N(Aᵀ), đầu tiên gs hỏi
+> **có bao nhiêu vector trong basis của N(Aᵀ)**
 >
 >
 >
-> Me: Như đã rồi, ta đã biết dim N(A.T) = 2, nên basis của
+> Me: Như đã rồi, ta đã biết dim N(Aᵀ) = 2, nên basis của
 > nó có 2 vector.
 
 <br>
@@ -666,7 +646,7 @@ matrices
 >
 >
 >
-> Và **hai vector** trong **basis của N(A.T) sẽ ứng với hai
+> Và **hai vector** trong **basis của N(Aᵀ) sẽ ứng với hai
 > loop**
 
 **🔗 See also:** [linked note](#node-s7plvzp)
@@ -708,7 +688,7 @@ matrices
 >
 > Do đó dim của rowspace of A là 3.
 
-**🔗 See also:** [linked note](#node-6w3cdka)
+**🔗 See also:** [Incidence Matrix of a Graph](#node-6w3cdka)
 
 <br>
 
@@ -718,7 +698,7 @@ matrices
 
 > [!NOTE]
 > Ok, chính xác, vậy thì đó cũng là dimension của cols
-> space của A.T = 3
+> space của Aᵀ = 3
 >
 >
 >
@@ -781,12 +761,12 @@ matrices
 <p align="center"><kbd><img src="assets/krkt24d20wn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> thế thì từ đây, từ dim N(A.T) = m - r mà mình đã nhận
+> thế thì từ đây, từ dim N(Aᵀ) = m - r mà mình đã nhận
 > định ta sẽ có:
 >
 >
 >
-> Hồi nãy ta nhận định: **dimension của nullspace of A.T
+> Hồi nãy ta nhận định: **dimension của nullspace of Aᵀ
 > chính là số loop = 2**
 >
 >
@@ -803,11 +783,13 @@ matrices
 > edge thành một loop, do đó trừ 1 để thành ra một bộ 
 > các edge không tạo loop.
 
-**🔗 See also:** [linked note](#node-5qjh8qt) · [linked note](#node-4497kkv)
+**🔗 See also:** [Left Nullspace of Incidence Matrix](#node-5qjh8qt) · [linked note](#node-4497kkv)
 
 <br>
 
 <a id="node-ujucby7"></a>
+
+###### Euler's Formula for Graphs
 
 <p align="center"><kbd><img src="assets/e94b2515cd.png" width="80%"></kbd></p>
 
@@ -816,12 +798,12 @@ matrices
 >
 >
 >
-> Dựa theo Rank-Nullity ta đã biết C(A) và N(AT) đều là subspace
+> Dựa theo Rank-Nullity ta đã biết C(A) và N(Aᵀ) đều là subspace
 > của Rm và cùng nhau cover Rm.
 >
 >
 >
-> m (số hàng, dim của Rm) = r (rank, dim C(A)) + m - r (dim N(AT)
+> m (số hàng, dim của Rm) = r (rank, dim C(A)) + m - r (dim N(Aᵀ)
 >
 >
 >
@@ -837,7 +819,7 @@ matrices
 >
 >
 >
-> m - r là dim của N(AT) và là **số loop**
+> m - r là dim của N(Aᵀ) và là **số loop**
 >
 >
 >
@@ -845,7 +827,7 @@ matrices
 >
 >
 >
-> <=> **#Số loop = #Số edge - (#Số node - 1)**
+> ⇔ **#Số loop = #Số edge - (#Số node - 1)**
 >
 >
 >
@@ -879,7 +861,7 @@ matrices
 >
 >
 >
-> Và **(A.T)y = 0** như đã biết, thể hiện luật Kirchhoff: tổng các
+> Và **(Aᵀ)y = 0** như đã biết, thể hiện luật Kirchhoff: tổng các
 > (cường độ) dòng ra / vào một node = 0
 >
 >
@@ -888,16 +870,16 @@ matrices
 >
 >
 >
-> (AT)y = **(A.T)CAx = 0**
+> (Aᵀ)y = **(Aᵀ)CAx = 0**
 >
 >
 >
 > Và giả sử ta đưa vào "sơ đồ mạch điện" nguồn điện 
-> current source như pin chẳng hạn, thì (A.T)Y = f
+> current source như pin chẳng hạn, thì (Aᵀ)Y = f
 >
 >
 >
-> Ta sẽ có (A.T)CAx = f
+> Ta sẽ có (Aᵀ)CAx = f
 
 <br>
 
