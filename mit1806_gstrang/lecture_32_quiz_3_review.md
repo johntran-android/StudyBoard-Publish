@@ -5,8 +5,6 @@
 ---
 <a id="node-dzqj7ga"></a>
 
-## Lecture 32: Quiz 3 Review
-
 <br>
 
 <a id="node-pv5tt1s"></a>
@@ -20,7 +18,7 @@
 >
 > i) với eigenvector và eigenvalues, gs nhắc lại rằng ta đã
 > biết cách tìm chúng, thông qua việc solve characteristic
-> equation A - lambda*I = 0. Tuy nhiên cũng có khi ta dùng
+> equation A - λI = 0. Tuy nhiên cũng có khi ta dùng
 > một số shortcut để tìm nhanh hơn. 
 >
 >
@@ -33,7 +31,7 @@
 > iii) và ta sẽ làm việc với symmetric matrix, có tính chất
 > là các eigenvalue đều real, và luôn có đủ các eigenvector
 > độc lập, để rồi ta luôn có thể chọn các eigenvector orthogonal
-> để rồi ta có S = Q, và A = SLambdaSinv = QLambdaQT
+> để rồi ta có S = Q, và A = SLambdaS⁻¹ = QLambdaQᵀ
 >
 >
 >
@@ -68,9 +66,9 @@
 > thế thì gs đề nghị trước tiên hãy viết general solution của
 > nó như này. Bài trước, gs đã cho thấy bước chứng minh tại
 > sao đây là các special solution bằng cách thế nó, ví dụ
-> special solution thứ nhất (e^lambda1t)*x, vào equation,  và
-> tính du/dt để cho ra kết quả là lambda_1*x1 = Ax1, và điều
-> này đúng vì x1 và lambda_1 là eigenvector và eigenvalue
+> special solution thứ nhất (e^λ1t)*x, vào equation,  và
+> tính du/dt để cho ra kết quả là λ_1*x1 = Ax1, và điều
+> này đúng vì x1 và λ_1 là eigenvector và eigenvalue
 > tương ứng của A
 >
 >
@@ -110,12 +108,12 @@
 > Từ đó (ít nhất) một eigenvalue = 0. Đó là eigenvalue ứng
 > với vector trong nullspace, vì sao matrix singular thì suy ra
 > có eigenvalue = 0? Là bởi singular có nghĩa là tồn tại
-> vector khác 0 BỊ MATRIX A hoặc AT BIẾN THÀNH 0: Ax =
-> 0 hoặc ATy = 0. và vì A square nên trong case này cả row
+> vector khác 0 BỊ MATRIX A hoặc Aᵀ BIẾN THÀNH 0: Ax =
+> 0 hoặc Aᵀy = 0. và vì A square nên trong case này cả row
 > lẫn column **ĐỀU KHÔNG INDEPENDENT**, nên tồn tại cả x
 > trong Rn bị biến thành 0, đó là solution của Ax = 0 hay
-> vector trong nullspace và tồn tại cả y trong Rn bị AT biến
-> thành 0, nó là solution của ATy = 0, hay vector trong left
+> vector trong nullspace và tồn tại cả y trong Rn bị Aᵀ biến
+> thành 0, nó là solution của Aᵀy = 0, hay vector trong left
 > nullspace.
 >
 >
@@ -136,24 +134,24 @@
 > matrix có 3 hàng), vậy thì chúng **span một 2D plane trong R^3**, và đây **chính là
 > column space của matrix A**. Và nếu liên hệ định lý về **dimension của 4 foundational**
 > subspace, thì ta nhớ **tổng dimension của columns space C(A) và the left nullspace,
-> hay nullspace của AT sẽ bằng m, trong ví dụ này là 3**, tức là hai subspaceC(A) và
-> N(AT) sẽ **hợp lại thành R^3**, và trong đó **C(A) orthogonal với N(AT)**
+> hay nullspace của Aᵀ sẽ bằng m, trong ví dụ này là 3**, tức là hai subspaceC(A) và
+> N(Aᵀ) sẽ **hợp lại thành R^3**, và trong đó **C(A) orthogonal với N(Aᵀ)**
 >
 >
 >
 > Vậy **việc C(A) là một 2D plane**, cho ta chắc chắn rằng left nullspace không chỉ có
 > zero, mà có một vector (độc lập), hay, nó **span một line trong R^3**, cụ thể hơn, nó
 > c**hính là cái line vuông góc với C(A) plane tại zero**. Và zero là điểm duy nhất nằm
-> trong cả C(A) và N(AT).
+> trong cả C(A) và N(Aᵀ).
 >
 >
 >
 > Thế thì, **vector khác 0 trong left nullspace** là vector gì? Nó **chính là vector BỊ
-> MATRIX AT SUY BIẾN THÀNH ZERO**: Nói cách khác, nó **chính là solution của ATy =
+> MATRIX Aᵀ SUY BIẾN THÀNH ZERO**: Nói cách khác, nó **chính là solution của Aᵀy =
 > 0**. Và ta sẽ hiểu ra rằng, một vector trong R^3, là **không gian 3 chiều**, bị **suy biến
 > thành một plane**
-> - là C(A), vì vì mọi vector trong N(AT) - thứ làm nên chiều không gian thứ 3 của R3 đã
-> bị biến thành 0 qua ATy = 0
+> \- là C(A), vì vì mọi vector trong N(Aᵀ) - thứ làm nên chiều không gian thứ 3 của R3 đã
+> bị biến thành 0 qua Aᵀy = 0
 >
 >
 >
@@ -164,7 +162,7 @@
 > dependent**, đồng nghĩa với việc **có thể tìm ra một bộ coefficient để tạo linear
 > combination giữa hai independent rows** cho ra cái dependent rows, và bằng việc
 > chuyển vế, ta cũng **sẽ có một bộ 3 coefficients các rows để cho ra 0**. Và đây **chính
-> là một vector trong R^3 bị matrix AT biến thành zero**, hay nói cách  khác, nó **chính là
+> là một vector trong R^3 bị matrix Aᵀ biến thành zero**, hay nói cách  khác, nó **chính là
 > một vector khác 0 của the left nullspace nói trên**.
 >
 >
@@ -172,16 +170,16 @@
 > Vậy thì, ở đây ta có liên hệ thứ nhất: **Chính cái row bị thừa** (dependent row) đã **tạo
 > nên một linear combination giữa 3 rows cho ra 0**, từ đó **tạo nên một non-zero vector
 > trong R^3 bị map thành 0**. Dẫn đến c**ác vector khác 0 trong left nullspace - subspace
-> của R3 đều bị map thành 0**: ATy = 0, **chỉ còn lại các vector trong column space là
+> của R3 đều bị map thành 0**: Aᵀy = 0, **chỉ còn lại các vector trong column space là
 > được map với vector khác 0 trong rowspace.**
 >
 >
 >
-> Như vậy, thông qua AT:
+> Như vậy, thông qua Aᵀ:
 >
 >
 >
-> Input y **trong R^3**, qua AT, output ATy **chỉ còn trong 2D plane** (rowspace) là sự suy
+> Input y **trong R^3**, qua Aᵀ, output Aᵀy **chỉ còn trong 2D plane** (rowspace) là sự suy
 > biến **mất đi một chiều không gian**
 >
 >
@@ -229,15 +227,15 @@
 >
 >
 >
-> - Stability (nhỏ dần về 0)
+> \- Stability (nhỏ dần về 0)
 >
 >
 >
-> - Steady (tiến về giá trị ổn định)
+> \- Steady (tiến về giá trị ổn định)
 >
 >
 >
-> - Blow-up (ngày càng lớn)
+> \- Blow-up (ngày càng lớn)
 >
 >
 >
@@ -261,6 +259,8 @@
 
 <a id="node-w47ou86"></a>
 
+###### Normal Matrices and Orthogonal Eigenvectors
+
 <p align="center"><kbd><img src="assets/zlgge6t5hl.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -275,7 +275,7 @@
 >
 >
 >
-> Xong gs cho biết rằng nếu matrix A thỏa tính chất AAT = ATA
+> Xong gs cho biết rằng nếu matrix A thỏa tính chất AAᵀ = AᵀA
 > thì A là orthogonal eigenvectors.
 
 <br>
@@ -286,20 +286,20 @@
 
 > [!NOTE]
 > và ta có thể check tại sao symmetric matrix có orthogonal
-> eigenvectors. Là bởi nếu A = AT thì đương nhiên AAT = A^2,
-> và cũng bằng ATA
+> eigenvectors. Là bởi nếu A = Aᵀ thì đương nhiên AAᵀ = A^2,
+> và cũng bằng AᵀA
 >
 >
 >
 > Rồi gs đề nghị kiểm tra anti-symmetric matrix (là matrix mà
-> AT = -A. Thì thấy nó cũng thỏa AAT = ATA, nên với matrix
+> Aᵀ = -A. Thì thấy nó cũng thỏa AAᵀ = AᵀA, nên với matrix
 > này thì nó cũng có orthogonal eigenvectors.
 >
 >
 >
 > Cuối cùng là với orthogonal matrix Q. Ta nhớ nó có các cols
-> perpendicular, và Qinv = QT. Và dễ thấy QTQ = I và cũng
-> bằng QQT. Thành ra orthogonal matrix cũng có eigenvector
+> perpendicular, và Q⁻¹ = Qᵀ. Và dễ thấy QᵀQ = I và cũng
+> bằng QQᵀ. Thành ra orthogonal matrix cũng có eigenvector
 > vuông góc
 
 <br>
@@ -323,7 +323,7 @@
 > [!NOTE]
 > tiếp, hỏi e^At là gì. Trong bài giảng bữa trước, ta đã biết rằng
 > nếu A có đủ n eigenvectors độc lập, thì A có thể phân tách
-> thành SΛSinv, và từ đó e^At = S*e^Λt*Sinv
+> thành SΛS⁻¹, và từ đó e^At = S*e^Λt*S⁻¹
 >
 >
 >
@@ -341,7 +341,7 @@
 >
 >
 >
-> Lí do u = c_i*e^lambda_it*x_i là special solution là ta có thể
+> Lí do u = c_i*e^λ_it*x_i là special solution là ta có thể
 > thế vào để kiểm tra xem xem note sát bên. Và thể hiện ở dạng
 > matrix thì solution của du/dt = Au là e^At. cái này đã chứng minh
 > ở trong bài giảng (theo link để xem lại)
@@ -414,7 +414,7 @@
 > Như vậy với u = e^At tính du/dt cho ra Au chứng tỏ nó chính là solution
 > của du/dt = Au
 >
-> Và ta có thể tiếp tục: vì A = SΛSinv, nên: 
+> Và ta có thể tiếp tục: vì A = SΛS⁻¹, nên: 
 >
 >
 >
@@ -426,19 +426,19 @@
 >
 >
 >
-> Tổng n: [(SΛSinv*t)^n]/n!. 
+> Tổng n: [(SΛS⁻¹*t)^n]/n!. 
 >
 >
 >
-> Trong đó **(SΛSinv*t)^n = S*(Λ^n)*Sinv*(t^n)**
+> Trong đó **(SΛS⁻¹*t)^n = S*(Λ^n)*S⁻¹*(t^n)**
 >
 >
 >
-> Ví dụ (SΛSinv*t)^2 = SΛ/Sinv*tS/ΛSinv*t = S(Λ^2)Sinv(t^2)
+> Ví dụ (SΛS⁻¹*t)^2 = SΛ/S⁻¹*tS/ΛS⁻¹*t = S(Λ^2)S⁻¹(t^2)
 >
 >
 >
-> Vậy e^At = **Tổng n: [S*(Λ^n)*Sinv*(t^n)]/n!**
+> Vậy e^At = **Tổng n: [S*(Λ^n)*S⁻¹*(t^n)]/n!**
 >
 >
 >
@@ -446,23 +446,23 @@
 >
 >
 >
-> S * { Tổng n: [(Λ^n)*Sinv*(t^n)]/n! }
+> S * { Tổng n: [(Λ^n)*S⁻¹*(t^n)]/n! }
 >
 >
 >
-> **Bỏ S_inv ra khỏi tổng:**
+> **Bỏ S⁻¹ ra khỏi tổng:**
 >
 >
 >
-> S * {  Tổng n: [(Λ^n)*(t^n)]/n! } * Sinv =
+> S * {  Tổng n: [(Λ^n)*(t^n)]/n! } * S⁻¹ =
 >
 >
 >
-> S * {  Tổng n: (Λt)^n)/n! } * Sinv
+> S * {  Tổng n: (Λt)^n)/n! } * S⁻¹
 >
 >
 >
-> Thì ở giữa chính là e^Λt. Do đó **e^At = S*(e^Λt)S_inv
+> Thì ở giữa chính là e^Λt. Do đó **e^At = S*(e^Λt)S⁻¹
 >
 >
 >
@@ -581,7 +581,7 @@
 >
 >
 >
-> Vậy ta sẽ yêu cầu c dương. Tuy nhiên vì lambda1 đã
+> Vậy ta sẽ yêu cầu c dương. Tuy nhiên vì λ1 đã
 > bằng 0 rồi, nên matrix không thể POSITIVE DEFINITE,
 > mà chỉ có thể SEMI POSITIVE DEFINITE **khi c không âm
 > thôi**
@@ -613,13 +613,13 @@
 >
 >
 >
-> Thì điều này cũng có nghĩa là AT[1 1 ..] = [1 1 ...] và
-> như vậy [1 1 ...] là eigenvector của AT với eigenvalue =
+> Thì điều này cũng có nghĩa là Aᵀ[1 1 ..] = [1 1 ...] và
+> như vậy [1 1 ...] là eigenvector của Aᵀ với eigenvalue =
 > 1.
 >
 >
 >
-> Thế thì vì A và AT share chung eigenvalue nên như vậy
+> Thế thì vì A và Aᵀ share chung eigenvalue nên như vậy
 > 1 cũng phải là eigenvalue của A, nên c phải bằng 1.
 > Nhưng khi c = 1 thì eigenvector tương ứng của nó phải
 > là [1 1 ....] nên điều này mâu thuẫn với giá trị hiện tại
@@ -644,6 +644,8 @@
 
 <a id="node-p1cxqlu"></a>
 
+###### Matrix Properties from Eigenvalues
+
 <p align="center"><kbd><img src="assets/f8801pj65mk.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -652,17 +654,17 @@
 >
 >
 > Lập luận thế này nếu P là projection matrix thì P^2 = P.
-> Mà theo tính chất của eigenvalue thì nếu lambda là eigenvalue
-> của P thì ta có Px = lambdax <=> PPx  = P*lambda*x = lambda*Px
-> = lambda*lambda*x = lambda^2*x
+> Mà theo tính chất của eigenvalue thì nếu λ là eigenvalue
+> của P thì ta có Px = λx ⇔ PPx  = P*λx = λPx
+> = λλx = λ^2*x
 >
 >
 >
-> Vậy P^2 = P <=> lambda^2*x = lambda*x
+> Vậy P^2 = P ⇔ λ^2*x = λx
 >
 >
 >
-> <=>lambda^2 = lambda
+> ⇔λ^2 = λ
 >
 >
 >
@@ -672,7 +674,7 @@
 >
 > Vậy matrix A/2 phải có eigenvalue là 1 hoặc 0. Rồi mà matrix A/2 sẽ
 > có eigenvalue là 1/2 * eigenvalue của A (dễ hiểu điều này vì nếu Ax
-> = lambda*x thì tương đương Ax/2 = lambda/2*x -> hai matrix cùng
+> = λx thì tương đương Ax/2 = λ/2*x -> hai matrix cùng
 > eigenvector nhưng eigenvalue bằng 1 nửa của nhau)
 >
 >
@@ -683,6 +685,8 @@
 
 <a id="node-e5fdx0v"></a>
 
+###### Singular Value Decomposition Definition
+
 <p align="center"><kbd><img src="assets/pj2jyxr6jar.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -691,11 +695,11 @@
 >
 >
 >
-> [orthogonal matrix U]*[diagonal matrix SIGMA]*[diagonal matrix VT]
+> [orthogonal matrix U]*[diagonal matrix SIGMA]*[diagonal matrix Vᵀ]
 >
 >
 >
-> (Vinverse, nhưng orthogonal matrix thì nó chính là tranpose)
+> (V⁻¹, nhưng orthogonal matrix thì nó chính là tranpose)
 
 <br>
 
@@ -705,9 +709,9 @@
 
 > [!NOTE]
 > Xong như trong lecture bữa trước ta đã thấy, ta sẽ cần tìm lần lượt
-> U và V. Thành ra ta sẽ tính ATA, để cho thấy V của SVD đối với A,
+> U và V. Thành ra ta sẽ tính AᵀA, để cho thấy V của SVD đối với A,
 > ĐÓNG VAI TRÒ CHÍNH LÀ CẢ U VÀ V TRONG PHÉP SVD ĐỐI
-> VỚI ATA.
+> VỚI AᵀA.
 >
 >
 >
@@ -716,14 +720,14 @@
 >
 >
 >
-> **Nên khi ta có ATA = V(ΣTΣ)VT** thì nó cũng **VỪA LÀ SVD CỦA
-> ATA CŨNG VỪA LÀ DIAGONALIZATION CỦA ATA**:
+> **Nên khi ta có AᵀA = V(ΣTΣ)Vᵀ** thì nó cũng **VỪA LÀ SVD CỦA
+> AᵀA CŨNG VỪA LÀ DIAGONALIZATION CỦA AᵀA**:
 >
 >
 >
-> Ta biết khi diagonalization ATA = QΛQT THÌ **Q** là
-> **ORTHOGONAL EIGENVECTORS Q CỦA ATA** (với Qinv = QT)
-> và **Λ là DIAGONAL EIGENVALUES MATRIX CỦA ATA**
+> Ta biết khi diagonalization AᵀA = QΛQᵀ THÌ **Q** là
+> **ORTHOGONAL EIGENVECTORS Q CỦA AᵀA** (với Q⁻¹ = Qᵀ)
+> và **Λ là DIAGONAL EIGENVALUES MATRIX CỦA AᵀA**
 >
 >
 >
@@ -732,11 +736,11 @@
 >
 >
 > Tại sao V lại đóng vai trò của cả left singular matrix (U) và right
-> singular matrix (V) trong phép SVD đối với ATA?
+> singular matrix (V) trong phép SVD đối với AᵀA?
 >
 >
 >
-> Vì ta nhớ với SVD matrix A shape (m, n): A = UΣVT:
+> Vì ta nhớ với SVD matrix A shape (m, n): A = UΣVᵀ:
 >
 >
 >
@@ -746,13 +750,13 @@
 >
 >
 >
-> Thế thì nếu A là symmetric, ta biết A = AT thì đương nhiên
+> Thế thì nếu A là symmetric, ta biết A = Aᵀ thì đương nhiên
 > **columns space chính là rowspace**. Nên **U chính là V**.
 >
 >
 >
 > Điều này biện minh cho việc tại sao V đóng vai trò của cả V và U
-> khi SVD matrix ATA.
+> khi SVD matrix AᵀA.
 
 <br>
 
@@ -762,7 +766,7 @@
 
 > [!NOTE]
 > và ta có thể có Σ bằng cách tìm square root của
-> eigenvalues của ATA
+> eigenvalues của AᵀA
 
 <br>
 
@@ -773,7 +777,7 @@
 > [!NOTE]
 > tới đây là khúc đã xem qua, khi gs giải thích lại rằng nếu
 > ta tìm U bằng cách tiếp cận tương tự đó là thông qua
-> dùng eigenvectors của AAT thì ta có thể không đúng về
+> dùng eigenvectors của AAᵀ thì ta có thể không đúng về
 > dấu. Có nghĩa là ta phải tìm U từ AV = USIGMA, để có
 > dấu phù hợp. Chứ nếu tìm U riêng thì ta vẫn tìm ra đúng
 > vector U nhưng sai dấu. Bởi lẽ một eigenvector chỉ nói
@@ -789,8 +793,8 @@
 
 > [!NOTE]
 > gs cho ví dụ, câu hỏi là giả sử có matrix A được factorized
-> thành UΣVT với U có 2 columns u1, u2. VT (như đã biết,
-> cũng là Vinv) có hai column v1, v2 và Σ là diagonal matrix
+> thành UΣVᵀ với U có 2 columns u1, u2. Vᵀ (như đã biết,
+> cũng là V⁻¹) có hai column v1, v2 và Σ là diagonal matrix
 > với đường chéo là 3, 2
 >
 >
@@ -804,7 +808,7 @@
 >
 >
 >
-> Ta biết gốc rể của SVD: A = UΣVinv chính là từ AV = UΣ:
+> Ta biết gốc rể của SVD: A = UΣV⁻¹ chính là từ AV = UΣ:
 > Và equation này thể hiện ý nghĩa của phép SVD đó là tìm ra
 > hai bộ ORTHOGONAL BASIS: của input space Rn (V) và
 > output space Rm (U) để map chúng thông qua A. Hay nói
@@ -878,6 +882,8 @@
 
 <a id="node-p26exdy"></a>
 
+###### Eigenvalues of Symmetric Orthogonal Matrices
+
 <p align="center"><kbd><img src="assets/sj71tbo5dw.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -887,31 +893,31 @@
 >
 >
 > Chứng minh: Gọi Q là orthogonal matrix, và x
-> là eigenvector ứng với eigenvalue lambda:
+> là eigenvector ứng với eigenvalue λ:
 >
 >
 >
-> Qx = lambda.x
+> Qx = λx
 >
 >
 >
 > Thế thì ta có thể tính length của hai vector, ý là
 > từ equation này, suy ra length của Qx (đương
 > nhiên cũng là vector trong C(Q) cũng bằng length
-> của lambda.x
+> của λx
 >
 >
 >
-> Vế trái: length của Qx là (Qx)T(Qx) = xTQTQx. Và
-> vì Q orthogonal nên QTQ = I. Vậy ta có xTx = length x
+> Vế trái: length của Qx là (Qx)ᵀ(Qx) = xᵀQᵀQx. Và
+> vì Q orthogonal nên QᵀQ = I. Vậy ta có xᵀx = length x
 >
 >
 >
-> Vế phải đương nhiên là lambda*length x
+> Vế phải đương nhiên là λlength x
 >
 >
 >
-> Vậy để có equation, lambda phải bằng 1
+> Vậy để có equation, λ phải bằng 1
 >
 >
 >
@@ -941,10 +947,10 @@
 >
 > -> Có, gs nói rằng mọi orthogonal matrices và mọi symmetric
 > matrix đều diagonalizable và thậm chí như gs đã nói hồi nãy
-> ở đầu lecture, matrix nào có tính chất AAT = ATA thì đều có
+> ở đầu lecture, matrix nào có tính chất AAᵀ = AᵀA thì đều có
 > các eigenvector orthogonal, tức là không những ta có thể
-> diagonalize dưới dạng SΛSinv mà S còn là
-> orthogonal matrix để ta có A = QΛQT
+> diagonalize dưới dạng SΛS⁻¹ mà S còn là
+> orthogonal matrix để ta có A = QΛQᵀ
 >
 >
 >
@@ -961,7 +967,7 @@
 >
 >
 >
-> Thử trả lời: Vì lambda khác 0, nên không có vector khác 0
+> Thử trả lời: Vì λ khác 0, nên không có vector khác 0
 > trong nullspace (vì nếu có thì phải có eigenvalues bằng 0)
 > Đương nhiên matrix vuông (symmetric mà, dù sao khi nói
 > eigenvector thì dĩ nhiên phải xét square matrix), có nullspace
@@ -985,6 +991,8 @@
 
 <a id="node-p3i6h08"></a>
 
+###### Constructing a Projection Matrix
+
 <p align="center"><kbd><img src="assets/kcqmo7azq3k.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -993,7 +1001,7 @@
 >
 >
 > Một cách là ta dùng properties của Projection matrix**. P^2 =
-> P** và **P là symmetric P = PT**
+> P** và **P là symmetric P = Pᵀ**
 >
 >
 >
@@ -1001,8 +1009,8 @@
 >
 >
 >
-> Và dễ thấy vì A symmetric và orthogonal nên A = AT = Ainv
-> Nên A^2 = AA=AAinv = I. Thế vô chứng minh được P^2 = P
+> Và dễ thấy vì A symmetric và orthogonal nên A = Aᵀ = A⁻¹
+> Nên A^2 = AA=AA⁻¹ = I. Thế vô chứng minh được P^2 = P
 >
 >
 >
@@ -1024,7 +1032,7 @@
 >
 >
 >
-> Ta có b = p + e = Pb + e => e = b = Pb
+> Ta có b = p + e = Pb + e ⇒ e = b = Pb
 >
 >
 >
@@ -1033,26 +1041,28 @@
 >
 >
 >
-> eTp = 0 <=> (b - Pb)T(Pb) = 0 <=> [bT - (Pb)T](Pb) = 0
+> eᵀp = 0 ⇔ (b - Pb)ᵀ(Pb) = 0 ⇔ [bᵀ - (Pb)ᵀ](Pb) = 0
 >
 >
 >
-> <=> bTPb - bTPTPb = 0 <=> bTPb = bTPTPb
+> ⇔ bᵀPb - bᵀPᵀPb = 0 ⇔ bᵀPb = bᵀPᵀPb
 >
 >
 >
-> <=> P = PTP
+> ⇔ P = PᵀP
 >
 >
 >
-> Và vì projection matrix có P^2 = P nên P^2 = PTP <=> PP =
-> PTP suy ra P = PT
+> Và vì projection matrix có P^2 = P nên P^2 = PᵀP ⇔ PP =
+> PᵀP suy ra P = Pᵀ
 
 **🔗 See also:** [First-Order Feasible Step Derivation *(Numerical Optimization_J.Nocedal)*](../numerical_optimization_jnocedal/121_examples.md#node-98w7rek)
 
 <br>
 
 <a id="node-io8o5sr"></a>
+
+###### Symmetric Orthogonal Matrices and Projections
 
 <p align="center"><kbd><img src="assets/p39xj4jrosd.png" width="80%"></kbd></p>
 
@@ -1061,19 +1071,19 @@
 >
 >
 >
-> -> nếu lbd là eigenvalue của A ta có Ax = lbd*x
+> -> nếu λ là eigenvalue của A ta có Ax = λx
 >
 >
 >
-> <=> Ax + Ix = lbd*x + x
+> ⇔ Ax + Ix = λx + x
 >
 >
 >
-> <=> (A+I)x = (lbd + 1)x
+> ⇔ (A+I)x = (λ + 1)x
 >
 >
 >
-> <=> 0.5(A+I)x = 0.5(lbd + 1)x
+> ⇔ 0.5(A+I)x = 0.5(λ + 1)x
 >
 >
 >
