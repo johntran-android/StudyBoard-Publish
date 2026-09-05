@@ -1,6 +1,6 @@
 # 12.5  Second-Order Conditions
 
-📊 **Progress:** `10` Notes | `19` Screenshots | `10` AI Reviews
+📊 **Progress:** `12` Notes | `22` Screenshots | `12` AI Reviews
 
 ---
 <a id="node-8arnxqj"></a>
@@ -1056,11 +1056,11 @@
 
 <p align="center"><kbd><img src="assets/67j4yr21tto.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/5dr0wy5mj6j.png" width="80%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/vro8e0x65ai.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/t3to7mman2.png" width="80%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/5dr0wy5mj6j.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Ok, note này ta sẽ hoàn thành phần chứng minh. Ôn lại chút xíu:
@@ -1621,6 +1621,172 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Note giải thích cực kỳ chi tiết, chính xác và có tư duy trực quan rất tốt về mặt hình học cũng như giải tích (đặc biệt là phần phân biệt o-nhỏ và O-lớn). Bạn nên tiếp tục phát huy cách tiếp cận kết hợp trực giác trực quan này cho các định lý phức tạp khác.
+
+<br>
+
+<a id="node-hl4nx39"></a>
+
+###### Điều kiện tối ưu KKT
+
+<p align="center"><kbd><img src="assets/06b5hgqvciy3.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi thì cái ví dụ này là quay lại cái ví dụ 12.2. Hàm objective là x1 + x2, có một cái inequality constraint, tức là có một ràng buộc bất đẳng thức. Cái tập ℰ là tập rỗng, có nghĩa là không có ràng buộc đẳng thức, chỉ có một ràng buộc bất đẳng thức.
+>
+>
+>
+> Thì ở đây người ta thiết lập cái hàm Lagrangian = (x1 + x2) - λ1(2 - x1² - x2²)
+>
+>
+>
+> ⇒ ∇\_x ℒ(x, λ) = \[1 + 2λ1x1, 1 + 2λ1x2\]ᵀ
+>
+>
+>
+> ∇\_xx ℒ(x, λ) = \[2λ1, 0; 0, 2λ2\]
+>
+>
+>
+> Thì cái điểm x\* = (-1, -1) nó thỏa cái KKT condition, gồm
+>
+>
+>
+> Stationary condition: ∇\_x ℒ(x\*, λ\*) = \[1 + 2(1/2)(-1), 1 + 2(1/2)(-1)\]ᵀ = \[0, 0\]ᵀ → thỏa.
+>
+>
+>
+> Complementary: λ\*c(x\*) = (1/2)\[2-(-1)²-(-1)²\] = (1/2) × 0 = 0 → thỏa.
+>
+>
+>
+> Ma trận Hessian của hàm Lagrangian:
+>
+>
+>
+> ∇\_xx ℒ(x\*, λ\*) =  \[2(1/2), 0; 0, 2(1/2)\] = I, đương nhiên nó sẽ là một cái ma trận xác định dương. 
+>
+>
+>
+> Lý do: ma trận đơn vị có determinant bằng 1, có tất cả các eigenvalue đều bằng 1, đều dương, cho nên nó là ma trận xác định dương. Và vì vậy, bất cứ vector nào thì quadratic form của cái ma trận Hessian sẽ đều dương, là điều chắc chắn. Và do đó là cái điểm x\* này nó cũng thỏa điều kiện đủ bậc hai. Và như vậy mình kết luận nó là một cái strict local solution của bài toán tối ưu.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **92/100**
+>
+> Ghi chú rất tốt, bạn đã tự giải chi tiết các bước mà sách giáo trình lược bớt như tính đạo hàm và kiểm tra điều kiện KKT. Có một lỗi gõ nhỏ ở ký hiệu ma trận Hessian tổng quát nhưng nhìn chung bạn nắm bản chất rất vững.
+
+<br>
+
+<a id="node-em6wh1p"></a>
+
+###### Example 12.9 Nonconvex Constrained Optimization
+
+<p align="center"><kbd><img src="assets/3nlzzw6u7e4.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/r0t10lp7wtc.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, ví dụ này, objective f(x) = -0.1(x1 - 4)² + x2² với một ràng buộc bất đẳng thức: x1² + x2² - 1 ≥ 0 
+>
+>
+>
+> Với constraint này dễ thấy feasible set là vùng bên ngoài đường tròn bán kính 1 (có tính cái viền đường tròn), do đó hình dung thế này, vì feasible set là ở mọi điểm trong mặt phẳng miễn là "ở ngoài" đường tròn, thành ra ta di chuyển ra  vô cực thì vẫn feasible. hàm f(x) thì nếu cố định x2 và cho khi x1 lớn vô cùng thì hàm sẽ giảm vô hạn, nên mới nói nó không bị chặn dưới (not bounded below)
+>
+>
+>
+> Như vậy đương nhiên không có global minimizer, nhưng có thể vẫn có local minimizer, ta sẽ tìm bằng KKT và điều kiện đủ bậc hai, trước tiên ta cần hàm Lagrangian:
+>
+>
+>
+> ℒ(x, λ) = f(x) - λ1c1(x)
+>
+>
+>
+> = -0.1(x1 - 4)² + x2² - λ1(x1² + x2² - 1)
+>
+>
+>
+> Gradient: ∇\_x ℒ(x, λ) (sẵn đây có thể nói vì sao lại là ∇\_x. À là vì đây là ta đang lấy đạo hàm riêng theo x, vì hàm Lagrangian là hàm của cả x và λ, nên ∇ℒ sẽ phải là lấy đạo hàm của cả x và λ, còn đây ta chỉ lấy đạo hàm theo x thôi, đương nhiên vì ℒ đối x là vector → scalar function, nên đạo hàm đối với x là gradient vector:
+>
+>
+>
+> ∇\_x ℒ(x, λ) = \[∂/∂x1 ℒ(x, λ), ∂/∂x2 ℒ(x, λ)\]ᵀ
+>
+>
+>
+> = \[-0.2(x1 - 4) - 2λ1x1, 2x2 - 2λ1x2\]ᵀ
+>
+>
+>
+> Với x\* = \[1,0\]ᵀ
+>
+>
+>
+> ∇\_x ℒ(x, λ)|x=x\*,λ = λ\*1
+>
+>
+>
+> = \[-0.2(1 - 4) - 2 × (0.3) × 1, 2 × 0 - 2 × (0.3) × 0\]ᵀ = \[0.6 -0.6, 0\]ᵀ = \[0, 0\]ᵀ.
+>
+>
+>
+> Như vậy đúng là x\* thỏa điều kiện stationary của KKT
+>
+>
+>
+> Còn λ\*1 c1(x\*) = (0.3) × (1² +0² - 1) = 0 nên đúng là λ\*1, x\* cũng thỏa complementary condition của KKT
+>
+>
+>
+> Bên cạnh đó việc λ\*1 = 0.3 &gt; 0 cũng cho thấy (mà bắt buộc) c1(x\*) = 0 mang ý nghĩa là constraint c1 đang active tại x\*, hình ảnh là x\* đang nằm ngay trên biên của constraint. Qủa thật với feasible set nói trên thì (1,0) đúng là nằm ngay trên đường tròn. Và cũng vì vậy mà 𝒜(x\*) = {1} (nhớ ko? active set là tập chứ các index của các equality constraint (đây không có) và inequality constraint đang active tại x\*, nếu không c1(x\*) khác 0, thì λ1\* phải = 0, và 𝒜(x\*) = ∅)
+>
+>
+>
+> Như vậy x\* là ứng cử viên cho local minimizer, nhưng chưa chốt được vì KKT chỉ là điều kiện cần.
+>
+>
+>
+> Xem xét điều kiện đủ ta cần Hessian của ℒ, again, cũng là đạo hàm của đạo hàm hàm ℒ theo x (chứ không phải là Hessian đầy đủ khi ta lấy đạo hàm theo cả λ) 
+>
+>
+>
+> ∇²\_xx ℒ(x, λ), như đã biết, Hessian đơn giản là matrix đạo hàm cấp 2:
+>
+>
+>
+> = \[∂²ℒ/∂x1², ∂²ℒ/∂x2x1;  ∂²ℒ/∂x2x1, ∂²ℒ/∂x2\]
+>
+>
+>
+> = \[-0.2 - 2λ1, 0; 0, 2 - 2λ1\]ᵀ
+>
+>
+>
+> Thế thì nhớ lại điều kiện đủ bậc 2: Đó là nếu ứng cử viên x\* thỏa: với mọi vector w ∈ critical cone 𝒞(x\*, λ\*) thì quadratic form wT ∇²\_xx ℒ(x, λ) w đều dương.
+>
+>
+>
+> Vậy cần xác định critical cone, còn nhớ định nghĩa của cái này, trước tiên nó là tập con của linearized feasible set ℱ.
+>
+>
+>
+> ℱ(x\*) ở đây là gì? Theo định nghĩa, nó là hướng di chuyển từ x\* sao cho linearized ci(x) không giảm. Vậy thì x\* = (1, 0)ᵀ tức là nằm ngay biên của feasible set. Nó có thể đi men theo biên (vuông góc ∇c1(x\*)) hoặc đi ra ngoài (hướng ra khỏi hình tròn).
+>
+>
+>
+> Nhưng với critical cone: Ta sẽ xem tại x\*, chọn hướng men theo biên của constraint đẳng thức (ở đây không có constraint đẳng thức) và men theo biên của constraint bất đẳng thức nào đang active. Vậy thì ở đây chỉ có một constraint bất đẳng thức, c1, cũng đang active, nên ta sẽ lấy hướng men theo biên của constraint này: Tức là vuông góc với ∇c1(x\*).
+>
+>
+>
+> Chính vì vậy, 𝒞(x\*, λ1\*) là vector (0, w2)ᵀ với mọi w2 ∈ R (và cũng là w2 × (0,1)ᵀ) vì w2 bằng mấy thì (0, w2)ᵀ ∇c1(x\*) = (0, w2)ᵀ(2,0) = 0 × 2 + w2 × 0 = 0.
+>
+>
+>
+> Thế thì, điều kiện đủ bậc hai nói nếu với mọi vector trong critical cone, quadratic form của Hessian tại x\* đều dương thì x\* chính là strict local minimizer. Check thử ta thấy nó = 1.4 w2² luôn &gt; 0 (với w2 khác 0), tức là quadratic form wᵀ ∇\_xx ℒ(x\*, λ1\*) w luôn &gt; 0 với moi w khác vector 0, theo định lí điều kiện đủ bậc 2, x\* là strict local minimizer.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **94/100**
+>
+> Ghi chú xuất sắc, thể hiện sự thấu hiểu tường tận từ điều kiện cần (KKT) đến điều kiện đủ bậc hai (SOSC) và trực giác hình học của nón tới hạn (critical cone).
 
 <br>
 
