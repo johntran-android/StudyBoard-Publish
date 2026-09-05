@@ -1,6 +1,6 @@
 # 10.3 Hypothesis Testing
 
-📊 **Progress:** `19` Notes | `22` Screenshots | `18` AI Reviews
+📊 **Progress:** `20` Notes | `23` Screenshots | `19` AI Reviews
 
 ---
 <a id="node-zhfsuqo"></a>
@@ -2366,7 +2366,7 @@
 >
 > Ghi chú rất chi tiết, lập luận chặt chẽ và tự tay tính toán chính xác thông tin Fisher In(p) để liên hệ với công thức lý thuyết. Cần chú ý cách diễn đạt ở một số đoạn nhỏ (như hội tụ phân phối không đồng nghĩa hội tụ phương sai) dù sau đó bạn đã tự đính chính bằng phương sai thực tế.
 
-**🔗 See also:** [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg)
+**🔗 See also:** [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Binomial Score Test](#node-3qjyz3i)
 
 <br>
 
@@ -3004,6 +3004,176 @@
 > Ghi chú xuất sắc, bạn đã tự giải mã và chứng minh chi tiết định lý hội tụ theo luật số lớn/CLT vốn bị sách giáo trình giản lược.
 
 **🔗 See also:** [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr)
+
+<br>
+
+<a id="node-3qjyz3i"></a>
+
+###### Binomial Score Test
+
+<p align="center"><kbd><img src="assets/bgwgt7f58xj.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Active recall về lí thuyết score test:
+>
+>
+>
+> Là test dùng statistic Z_S = S(θ0) / √In(θ0), để rồi với bài toán 2-sided test H0: θ=θ0 thì test rule có level tiệm cận α sẽ là: Reject H0 khi |Z_S| ≥ z\_α/2
+>
+>
+>
+> Trong đó S(θ) = ∂/∂θ log f(𝐗|θ), với chú ý đã nói trong note trước θ ở đây chỉ là dummies name, nên có thể thay bằng S(ε), S(ω) gì cũng được mà cái chính là S là statistic define bởi g(𝐱, ω) áp dụng lên random sample 𝐗 với g(𝐱, ω) = ∂/∂ω log f(𝐗|ω).
+>
+>
+>
+> Nói bằng lời cho dễ hiểu hàm g(𝐱, ω) nó như cái function trong code: nhận vào input 𝐱, ω, để rồi trong ruột của nó, nó coi ω như parameter của hàm pdf: f(𝐱|ω), rồi lấy đạo hàm theo ω, được một hàm cũng theo 𝐱 và ω, và evaluate hàm này tại 𝐱 và trả ra kết quả. Từ đó khi lấy hàm này áp lên random variable 𝐗 ta có statistic S(ω).
+>
+>
+>
+> Và dùng chain rule, S(ω) = \[∂/∂ω f(𝐗|ω)\] / f(𝐗|ω)
+>
+>
+>
+> Cho nên nếu lấy kì vọng của S(ω), với 𝐱 \~ f(𝐱|θ) ta sẽ có:
+>
+>
+>
+> E\_θ\[S(ω)\] = ∫\[\[∂/∂ω f(𝐱|ω)\] / f(𝐱|ω)\] f(𝐱|θ) d𝐱
+>
+>
+>
+> ∫\[\[∂/∂ω f(𝐱|ω)\] / f(𝐱|ω)\] f(𝐱|θ) d𝐱
+>
+>
+>
+> và kết quả sẽ không rút gọn được gì.
+>
+>
+>
+> Nhưng nếu xét E\_θ\[S(θ)\], thì sẽ bằng:
+>
+>
+>
+> = ∫\[∂/∂θ f(𝐱|θ)\]d𝐱 = ∂/∂θ \[∫f(𝐱|θ) d𝐱\] = ∂/∂θ \[1\] = 0.
+>
+>
+>
+> Do đó E\_θ\[S(θ)\] luôn bằng 0 với mọi θ.
+>
+>
+>
+> Từ đó Under H0, tức dưới giả định θ = θ0, ta có E\_θ0\[S(θ0)\] = 0.
+>
+>
+>
+> Kế tới, nếu đặt Z_S = S(θ0)/√In(θ0) ta chứng minh được là dưới giả định Z_S → (d) n(0,1) nên từ đó ta dùng Z_S để tạo test nói trên.
+>
+>
+>
+> ---
+>
+>
+>
+> Quay lại đây, ta áp dụng:
+>
+>
+>
+> S(p) = ∂/∂p log f(𝐗|p)
+>
+>
+>
+> = ∂/∂p log f(𝐗|p)
+>
+>
+>
+> Xét f(𝐗|p) = Πi f(Xi|p) = Πi \[p^(Xi)(1-p)^(1-Xi)\] = p^(ΣiXi) (1-p)^(n-ΣiXi)
+>
+>
+>
+> ⇒ ∂/∂p log f(𝐗|p) = ∂/∂p log \[p^(ΣiXi) (1-p)^(n-ΣiXi)\]
+>
+>
+>
+> = ∂/∂p { log \[p^(ΣiXi)\] + log \[(1-p)^(n-ΣiXi)\] }
+>
+>
+>
+> = ∂/∂p { (ΣiXi) log(p) + (n-ΣiXi) log(1-p) }
+>
+>
+>
+> = ∂/∂p \[(ΣiXi) log(p)\] + ∂/∂p \[(n-ΣiXi) log(1-p)\]
+>
+>
+>
+> = (ΣiXi) ∂/∂p log(p) + (n-ΣiXi) ∂/∂p log(1-p)
+>
+>
+>
+> = (ΣiXi)/p + (n-ΣiXi) \[∂/∂(1-p) log(1-p)\] \[∂/∂p (1-p)\]
+>
+>
+>
+> = (ΣiXi)/p + (n-ΣiXi) \[1/(1-p)\] (-1)
+>
+>
+>
+> = (ΣiXi)/p - (n-ΣiXi)/(1-p)
+>
+>
+>
+> = \[(ΣiXi)(1-p) - (n-ΣiXi)p\] / p(1-p)
+>
+>
+>
+> = \[(ΣiXi) - (ΣiXi)p - np + (ΣiXi)p\] / p(1-p)
+>
+>
+>
+> = \[(ΣiXi) - np\] / p(1-p)
+>
+>
+>
+> = n\[(ΣiXi)/n - p\] / p(1-p)
+>
+>
+>
+> = n\[p̂n - p\] / p(1-p)
+>
+>
+>
+> = \[p̂n - p\] / \[p(1-p)/n\]
+>
+>
+>
+> Vậy S(p) = (p̂n - p) / \[p(1-p)/n\]
+>
+>
+>
+> ---
+>
+>
+>
+> Còn In(p) thì trong ví dụ 10.3.5 (xem link) mình đã derive ra công thức = n/\[p(1-p)\]
+>
+>
+>
+> Vậy Z_S = {(p̂n - p0) / \[p0(1-p0)/n\]} / √n/\[p0(1-p0)\]
+>
+>
+>
+> = {(p̂n - p0) / √\[p0(1-p0)/n\]
+>
+>
+>
+> và kết quả này giống y như 10.3.4 nơi mà đã nói cái cách thứ hai đó chính là Score test
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú xuất sắc, thể hiện sự hiểu biết sâu sắc về bản chất lý thuyết Score test và các bước biến đổi đại số hoàn toàn chính xác.
+
+**🔗 See also:** [Large-Sample Binomial Tests](#node-8xsav7v)
 
 <br>
 
