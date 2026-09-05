@@ -1,13 +1,9 @@
-# Lecture 2: Elimination With
-matrices
+# Lecture 2: Elimination With Matrices
 
 📊 **Progress:** `30` Notes | `31` Screenshots
 
 ---
 <a id="node-7bup4vs"></a>
-
-## Lecture 2: Elimination With
-matrices
 
 <br>
 
@@ -62,7 +58,7 @@ matrices
 
 <a id="node-ftpzuie"></a>
 
-- **Khử hệ số ma trận**
+###### Khử hệ số ma trận
 
 <p align="center"><kbd><img src="assets/bqk69rby1t.png" width="80%"></kbd></p>
 
@@ -79,7 +75,7 @@ matrices
 
 <a id="node-5jfuigm"></a>
 
-- **Tích pivot tính định thức**
+###### Tích pivot tính định thức
 
 <p align="center"><kbd><img src="assets/7x33y001eqf.png" width="80%"></kbd></p>
 
@@ -103,7 +99,7 @@ matrices
 
 <a id="node-xw4qqql"></a>
 
-- **Thất bại ma trận do số 0**
+###### Thất bại ma trận do số 0
 
 <p align="center"><kbd><img src="assets/axm1kzoq207.png" width="80%"></kbd></p>
 
@@ -131,7 +127,7 @@ matrices
 
 <a id="node-wvucdql"></a>
 
-- **Chuyển đổi vế phải thành c**
+###### Chuyển đổi vế phải thành c
 
 <p align="center"><kbd><img src="assets/4nzpvu2eiuw.png" width="80%"></kbd></p>
 
@@ -143,7 +139,7 @@ matrices
 
 <a id="node-sgjdv0i"></a>
 
-- **Hệ phương trình và thay thế ngược**
+###### Hệ phương trình và thay thế ngược
 
 <p align="center"><kbd><img src="assets/bgwi7kgmsie.png" width="80%"></kbd></p>
 
@@ -158,7 +154,7 @@ matrices
 
 <a id="node-cbidsa4"></a>
 
-- **Tích ma trận vector theo cột**
+###### Tích ma trận vector theo cột
 
 <p align="center"><kbd><img src="assets/g8u4s8fe74w.png" width="80%"></kbd></p>
 
@@ -172,7 +168,7 @@ matrices
 
 <a id="node-596cn5u"></a>
 
-- **Phép nhân ma trận và tổ hợp**
+###### Phép nhân ma trận và tổ hợp
 
 <p align="center"><kbd><img src="assets/xx032xuhcm.png" width="80%"></kbd></p>
 
@@ -193,7 +189,7 @@ matrices
 
 <a id="node-bb6donm"></a>
 
-- **Ma trận biến đổi hàng sơ cấp**
+###### Ma trận biến đổi hàng sơ cấp
 
 <p align="center"><kbd><img src="assets/5agbctfm3fo.png" width="80%"></kbd></p>
 
@@ -206,7 +202,7 @@ matrices
 
 <a id="node-cm4or4d"></a>
 
-- **Tính hàng ma trận cần tìm**
+###### Tính hàng ma trận cần tìm
 
 <p align="center"><kbd><img src="assets/xgka7nofqbf.png" width="80%"></kbd></p>
 
@@ -233,6 +229,8 @@ matrices
 
 <a id="node-wi2iape"></a>
 
+###### Cách xác định hàng ma trận
+
 <p align="center"><kbd><img src="assets/oiroe2o38c.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -244,7 +242,7 @@ matrices
 
 <a id="node-ols4hv1"></a>
 
-- **Tính chất ma trận đơn vị**
+###### Tính chất ma trận đơn vị
 
 <p align="center"><kbd><img src="assets/qv5q9seuh9.png" width="80%"></kbd></p>
 
@@ -256,7 +254,7 @@ matrices
 
 <a id="node-vs9k0ap"></a>
 
-- **Tổ hợp tuyến tính hàng ma trận**
+###### Tổ hợp tuyến tính hàng ma trận
 
 <p align="center"><kbd><img src="assets/bqvwebml1o6.png" width="80%"></kbd></p>
 
@@ -269,7 +267,7 @@ matrices
 
 <a id="node-zi97w9p"></a>
 
-- **Phần tử ma trận tích**
+###### Phần tử ma trận tích
 
 <p align="center"><kbd><img src="assets/rm8craomt7.png" width="80%"></kbd></p>
 
@@ -293,6 +291,8 @@ matrices
 
 <a id="node-115obvu"></a>
 
+###### Ma trận khử E_21
+
 <p align="center"><kbd><img src="assets/0d8689pfw4k.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -302,6 +302,8 @@ matrices
 <br>
 
 <a id="node-s9rlcic"></a>
+
+###### Ma trận sơ cấp E32
 
 <p align="center"><kbd><img src="assets/rca1fducvm.png" width="80%"></kbd></p>
 
@@ -324,6 +326,8 @@ matrices
 
 <a id="node-szgupqg"></a>
 
+###### Biến đổi A thành U
+
 <p align="center"><kbd><img src="assets/4wzwm7fvy0x.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -342,6 +346,8 @@ matrices
 
 <a id="node-pwjwrwl"></a>
 
+###### Ma trận đưa về U
+
 <p align="center"><kbd><img src="assets/d2kcqx0dzhw.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -351,6 +357,8 @@ matrices
 <br>
 
 <a id="node-gxgmk0r"></a>
+
+###### Luật kết hợp phép nhân ma trận
 
 <p align="center"><kbd><img src="assets/khbabvgmv4.png" width="80%"></kbd></p>
 
@@ -365,6 +373,8 @@ matrices
 <br>
 
 <a id="node-rpr9msy"></a>
+
+###### Ma trận đổi hai hàng
 
 <p align="center"><kbd><img src="assets/ahmsa9of5mp.png" width="80%"></kbd></p>
 
@@ -386,6 +396,8 @@ matrices
 
 <a id="node-swa33vs"></a>
 
+###### Ma trận hoán vị
+
 <p align="center"><kbd><img src="assets/2brhnu6i75d.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -396,6 +408,8 @@ matrices
 
 <a id="node-slwolcs"></a>
 
+###### Ma trận hoán vị cột
+
 <p align="center"><kbd><img src="assets/9ztuihm86k.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -405,6 +419,8 @@ matrices
 <br>
 
 <a id="node-b1vx0pe"></a>
+
+###### Hoán vị cột ma trận
 
 <p align="center"><kbd><img src="assets/00tyz3tz8ems.png" width="80%"></kbd></p>
 
@@ -421,6 +437,8 @@ matrices
 
 <a id="node-bvqtt2v"></a>
 
+###### Thứ tự nhân ma trận
+
 <p align="center"><kbd><img src="assets/tlqwlczu1h.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -435,6 +453,8 @@ matrices
 
 <a id="node-c45tfqh"></a>
 
+###### Ma trận khả nghịch
+
 <p align="center"><kbd><img src="assets/pnn7f37l3p.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -445,6 +465,8 @@ matrices
 <br>
 
 <a id="node-5hkmnie"></a>
+
+###### Ma trận sơ cấp nghịch đảo
 
 <p align="center"><kbd><img src="assets/i6ut9ryx9i.png" width="80%"></kbd></p>
 
@@ -473,10 +495,12 @@ matrices
 
 <a id="node-e8b965t"></a>
 
+###### Ký hiệu ma trận E⁻¹
+
 <p align="center"><kbd><img src="assets/wjb0j72lbvi.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì ta kí hiệu matrix này là là **E^-1**
+> Thế thì ta kí hiệu matrix này là là **E⁻¹**
 
 <br>
 
