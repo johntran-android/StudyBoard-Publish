@@ -1,13 +1,9 @@
-# Lecture 6: Column Space
-and Null Space
+# Lecture 6: Column Space And Null Space
 
 📊 **Progress:** `24` Notes | `24` Screenshots
 
 ---
 <a id="node-rygeqzz"></a>
-
-## Lecture 6: Column Space
-and Null Space
 
 <br>
 
@@ -336,7 +332,7 @@ and Null Space
 <p align="center"><kbd><img src="assets/m9gfbqw599.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Dễ thấy một solution nữa là [1 1 -1].T
+> Dễ thấy một solution nữa là [1 1 -1]ᵀ
 >
 >
 >
@@ -349,7 +345,7 @@ and Null Space
 <p align="center"><kbd><img src="assets/ciqeq019he4.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Khái quát hơn ta sẽ thấy nó là **mọi vector c*[1 1 -1].T**
+> Khái quát hơn ta sẽ thấy nó là **mọi vector c*[1 1 -1]ᵀ**
 >
 >
 >
@@ -444,7 +440,7 @@ and Null Space
 > phải thỏa mọi scalar kể cả 0, nhân vector v vẫn phải ra
 > vector thuộc space, nên nếu 0 ko thuộc solution space thì
 > một vector thuộc solution space * 0 sẽ dc kết quả nằm ngoài
-> solution space => solution space không thỏa điều kiện vector
+> solution space ⇒ solution space không thỏa điều kiện vector
 > space)
 
 **🔗 See also:** [linked note](./lecture_5_transpose_permutations_spaces_rn.md#node-47m7mjs)
