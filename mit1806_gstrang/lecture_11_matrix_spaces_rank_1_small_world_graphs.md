@@ -1,13 +1,9 @@
-# Lecture 11: Matrix Spaces;
-rank 1; Small World Graphs
+# Lecture 11: Matrix Spaces; Rank 1; Small World Graphs
 
 📊 **Progress:** `33` Notes | `34` Screenshots
 
 ---
 <a id="node-4n31leg"></a>
-
-## Lecture 11: Matrix Spaces;
-rank 1; Small World Graphs
 
 <br>
 
@@ -321,7 +317,7 @@ rank 1; Small World Graphs
 >
 >
 >
-> **A = u(v.T)**
+> **A = u(vᵀ)**
 >
 >
 >
@@ -428,7 +424,7 @@ rank 1; Small World Graphs
 >
 >
 >
-> = **dễ thấy cũng sẽ = 0** => m **cũng sẽ thuộc S**, nên thỏa hai
+> = **dễ thấy cũng sẽ = 0** ⇒ m **cũng sẽ thuộc S**, nên thỏa hai
 > tính chất của vector space: Cộng hai vector và scale vector
 > thuộc S đều cho ra thêm một vector thuộc S
 
@@ -481,7 +477,7 @@ rank 1; Small World Graphs
 >
 > (hoặc không cần nhớ công thức n - r làm gì, vì chỉ cần thấy
 > vì rank = 1 nên **trong 4 column chỉ có 1 pivot column**, và
-> như vậy có **3 free columns** => số **special solution** của
+> như vậy có **3 free columns** ⇒ số **special solution** của
 > Ax=0 = **số vector trong basis** của nullspace = **dimension
 > của nullspace**  = 3.
 >
@@ -568,23 +564,23 @@ rank 1; Small World Graphs
 
 > [!NOTE]
 > và fundamental subspace cuối cùng: left nullspace /
-> nullspace of A.T:
+> nullspace of Aᵀ:
 >
 >
 >
-> Như đã biết nó là tập hợp solution của (A.T)y = 0. Mà A.T chỉ
+> Như đã biết nó là tập hợp solution của (Aᵀ)y = 0. Mà Aᵀ chỉ
 > có 1 cols, nên y sẽ chỉ có 1 component, suy ra nullspace of
-> A.T cũng là subspace của R1.
+> Aᵀ cũng là subspace của R1.
 >
 >
 >
-> Thế thì dễ thấy **chỉ có thể y = 0 thì mới khiến (A.T)y = 0**
-> nên nullspace của A.T **chỉ chứa zero vector**.
+> Thế thì dễ thấy **chỉ có thể y = 0 thì mới khiến (Aᵀ)y = 0**
+> nên nullspace của Aᵀ **chỉ chứa zero vector**.
 >
 >
 >
-> Đối chiếu với bài trước, ta có **dimension của N(A.T) là m - r
-> = 1 - 1 = 0** là **cũng có thể suy ra nullspace của A.T chỉ chứa
+> Đối chiếu với bài trước, ta có **dimension của N(Aᵀ) là m - r
+> = 1 - 1 = 0** là **cũng có thể suy ra nullspace của Aᵀ chỉ chứa
 > zero.**
 
 <br>
@@ -595,11 +591,13 @@ rank 1; Small World Graphs
 
 > [!NOTE]
 > Đúng vậy, nullspace của
-> A.T chỉ chứa zero và có dim = 0
+> Aᵀ chỉ chứa zero và có dim = 0
 
 <br>
 
 <a id="node-i918k6o"></a>
+
+###### Fundamental Subspaces Matrix Dimensions
 
 <p align="center"><kbd><img src="assets/x5kcqe484q.png" width="80%"></kbd></p>
 
@@ -613,11 +611,11 @@ rank 1; Small World Graphs
 >
 >
 >
-> C(A) và N(AT) đều là subspace của R1:
+> C(A) và N(Aᵀ) đều là subspace của R1:
 >
 >
 >
-> dim C(A) + dim N(AT)  = 1 + 0 = r + m - r = m = 1
+> dim C(A) + dim N(Aᵀ)  = 1 + 0 = r + m - r = m = 1
 >
 >
 >
@@ -625,11 +623,11 @@ rank 1; Small World Graphs
 >
 >
 >
-> C(AT) và N(A)  đều là subspace của R4
+> C(Aᵀ) và N(A)  đều là subspace của R4
 >
 >
 >
-> dim C(AT) + dim N(A) = 1 + 3 = r + n - r = n = 4
+> dim C(Aᵀ) + dim N(A) = 1 + 3 = r + n - r = n = 4
 
 <br>
 
