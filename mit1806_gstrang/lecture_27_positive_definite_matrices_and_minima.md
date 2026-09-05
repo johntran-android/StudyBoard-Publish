@@ -1,13 +1,9 @@
-# Lecture 27: Positive Definite
-matrices And Minima
+# Lecture 27: Positive Definite Matrices And Minima
 
 📊 **Progress:** `36` Notes | `39` Screenshots
 
 ---
 <a id="node-tua6sxk"></a>
-
-## Lecture 27: Positive Definite
-matrices And Minima
 
 <br>
 
@@ -20,7 +16,7 @@ matrices And Minima
 > (Symmetric)** matrix, trong đó ta **gom lại mọi thứ** đã
 > học từ đầu tới giờ: **pivot**, **determinant**,
 > **eigenvector**... Và có thêm một người bạn mới đó là
-> **xTAx (quadratic form)
+> **xᵀAx (quadratic form)
 >
 >
 >
@@ -82,7 +78,7 @@ matrices And Minima
 >
 >
 >
-> **4) QUADRATIC FORM xTAx >= 0**, và **CHỈ BẰNG 0 KHI x = 0**
+> **4) QUADRATIC FORM xᵀAx >= 0**, và **CHỈ BẰNG 0 KHI x = 0**
 
 <br>
 
@@ -187,7 +183,7 @@ matrices And Minima
 > ====
 > Một cách khác cũng gần với cách 1, đó là ta thấy hàng
 > 2 = 3*hàng 1, tức là, nó depend hàng 1. Vậy kết luận
-> ngay khi elimination, hàng 2 sẽ bị biến thành 0. => vị
+> ngay khi elimination, hàng 2 sẽ bị biến thành 0. ⇒ vị
 > trí thứ 2 của đường chéo = 0
 
 <br>
@@ -197,7 +193,7 @@ matrices And Minima
 <p align="center"><kbd><img src="assets/2ogqotb9wdj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ta sẽ thử tính **xTAx**
+> Ta sẽ thử tính **xᵀAx**
 
 <br>
 
@@ -220,7 +216,7 @@ matrices And Minima
 > Và nếu nó **luôn DƯƠNG với MỌI x** thì matrix **A chắc chắn
 > là Positive Definite matrix**
 >
-> Nếu **QUADRATIC** FORM xTAx luôn **DƯƠNG** với **MỌI x**
+> Nếu **QUADRATIC** FORM xᵀAx luôn **DƯƠNG** với **MỌI x**
 > thì matrix A chắc chắn là **POSITIVE** **DEFINITE**
 
 <br>
@@ -304,7 +300,7 @@ matrices And Minima
 
 > [!NOTE]
 > **và điều kiện các "sub det" dương hết cũng thỏa**, gs cho
-> rằng ta sẽ expect **xTAx sẽ DƯƠNG VỚI MỌI X KHÁC 0**,
+> rằng ta sẽ expect **xᵀAx sẽ DƯƠNG VỚI MỌI X KHÁC 0**,
 > VÀ **BẰNG 0 = MINIMUM TẠI X = 0**
 
 <br>
@@ -504,6 +500,8 @@ matrices And Minima
 
 <a id="node-hm0v21z"></a>
 
+###### Positive Definiteness and Multivariable Minimization
+
 <p align="center"><kbd><img src="assets/4py8vpdhdvo.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -610,7 +608,7 @@ matrices And Minima
 >
 >
 >
-> ii) **Quadratic form xTAx** của nó là gì
+> ii) **Quadratic form xᵀAx** của nó là gì
 >
 >
 >
@@ -708,14 +706,14 @@ matrices And Minima
 <p align="center"><kbd><img src="assets/apu9wdo2xuj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và **quadratic form xTAx** là như thế này: Và ở đây ta
+> Và **quadratic form xᵀAx** là như thế này: Và ở đây ta
 > sẽ **tin rằng nó dương** (vì gs **đang cho một Positive
 > Definite matrix** mà các bài test về det của sub matrix
 > đã giúp kết luận)
 >
 >
 >
-> Và sự thật nếu triển khai tính xTAx, và COMPLETE
+> Và sự thật nếu triển khai tính xᵀAx, và COMPLETE
 > THE SQUARE ta sẽ thấy nó luôn > 0 với x khác 0
 >
 >
@@ -787,7 +785,7 @@ matrices And Minima
 
 > [!NOTE]
 > Gs: và ta có thể phát biểu, diễn đạt ý tưởng vừa rồi
-> chính là bằng factorization: **A = QΛQT**
+> chính là bằng factorization: **A = QΛQᵀ**
 >
 >
 >
@@ -796,10 +794,10 @@ matrices And Minima
 >
 >
 >
-> Và đây là matrix symmetric nên thay vì Qinv ta có thể
-> dùng Q.T (matrix symmetric nên nó có các eigenvector
-> orthonormal, thành ra S trở thành Q, và Sinv chính là
-> Qinv mà cũng là Q.T)
+> Và đây là matrix symmetric nên thay vì Q⁻¹ ta có thể
+> dùng Qᵀ (matrix symmetric nên nó có các eigenvector
+> orthonormal, thành ra S trở thành Q, và S⁻¹ chính là
+> Q⁻¹ mà cũng là Qᵀ)
 
 <br>
 
