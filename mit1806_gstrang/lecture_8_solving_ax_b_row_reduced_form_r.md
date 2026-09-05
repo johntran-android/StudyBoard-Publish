@@ -1,13 +1,9 @@
-# Lecture 8: Solving Ax = B:
-row Reduced Form R
+# Lecture 8: Solving Ax = B: Row Reduced Form R
 
 📊 **Progress:** `35` Notes | `37` Screenshots
 
 ---
 <a id="node-lqdrk5u"></a>
-
-## Lecture 8: Solving Ax = B:
-row Reduced Form R
 
 <br>
 
@@ -99,16 +95,16 @@ row Reduced Form R
 >
 >
 >
-> - Pivot (đương nhiên phải khác 0) của hàng dưới **luôn
+> \- Pivot (đương nhiên phải khác 0) của hàng dưới **luôn
 > nằm  bên phải hàng trên.**
 >
 >
 >
-> - **Bên dưới pivot = 0**.
+> \- **Bên dưới pivot = 0**.
 >
 >
 >
-> - Ở dạng **Reduce** Row Echelon thì có thêm yêu cầu
+> \- Ở dạng **Reduce** Row Echelon thì có thêm yêu cầu
 > **chuyển  pivot = 1**, và **khử luôn các giá trị bên trên
 > pivot** để trong pivot col **chỉ có pivot là khác 0**.
 >
@@ -244,7 +240,7 @@ row Reduced Form R
 >
 >
 >
-> Ax_p + Ax_null = b + 0 <=>
+> Ax_p + Ax_null = b + 0 ⇔
 >
 >
 >
@@ -427,7 +423,7 @@ row Reduced Form R
 >
 >
 >
-> => Thử trả lời: r = n tức bằng số cột, có nghĩa là ta có
+> ⇒ Thử trả lời: r = n tức bằng số cột, có nghĩa là ta có
 > trạng thái **mọi column đều là pivot column**, hay, ta có
 > **n pivot** và **ko có free variable nào.**
 
@@ -560,7 +556,7 @@ row Reduced Form R
 >
 >
 > Vậy quay lại đây, nếu elimination không tạo ra hàng 0 nào
-> thì đồng nghĩa cũng k**hông có yêu cầu nào với b** => Luôn
+> thì đồng nghĩa cũng k**hông có yêu cầu nào với b** ⇒ Luôn
 > có solution với mọi b
 >
 > Full Row Rank: Ax=b luôn có solutions với mọi b
@@ -582,6 +578,8 @@ row Reduced Form R
 <br>
 
 <a id="node-0gyei7q"></a>
+
+###### Full Row Rank Properties
 
 <p align="center"><kbd><img src="assets/5udvh6q8ckm.png" width="80%"></kbd></p>
 
@@ -671,7 +669,7 @@ row Reduced Form R
 > Me: Identity matrix, vậy A sau khi elimination sẽ thành I. Và vì 
 > mình biết elimination apply với A chính là nhân A với matrix E
 > thể hiện các bước elimination. Vậy EA = I. Điều này chứng tỏ
-> E chính là A_inv, đồng nghĩa A là **INVERTIBLE** MATRIX
+> E chính là A⁻¹, đồng nghĩa A là **INVERTIBLE** MATRIX
 
 **🔗 See also:** [linked note](./lecture_9_independece_basis_and_dimension.md#node-ojpu0lh)
 
@@ -693,7 +691,7 @@ row Reduced Form R
 >
 >
 >
-> Vậy Ax=0 chỉ có một solution duy nhất đó là [0 0].T, cho
+> Vậy Ax=0 chỉ có một solution duy nhất đó là [0 0]ᵀ, cho
 > nên **nullspace của A chỉ chứa zero vector**
 >
 >
@@ -739,6 +737,8 @@ row Reduced Form R
 
 <a id="node-t0v2ovx"></a>
 
+###### Four Cases of Matrix Rank
+
 <p align="center"><kbd><img src="assets/wt0ev3m21in.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -750,12 +750,12 @@ row Reduced Form R
 >
 >
 >
-> r=n<m: **FULL COLUMNS RANK**, matrix gầy, cao. R = [I O].T (thông cảm, note
-> không ghi được thành cột nên đành ghi là [I O].T nhé)
+> r=n<m: **FULL COLUMNS RANK**, matrix gầy, cao. R = [I O]ᵀ (thông cảm, note
+> không ghi được thành cột nên đành ghi là [I O]ᵀ nhé)
 >
 >
 >
-> Vì elimination tạo các zero row ở dưới (cái chữ O ở trong R =[I O].T đó)
+> Vì elimination tạo các zero row ở dưới (cái chữ O ở trong R =[I O]ᵀ đó)
 > nên **b phải có điều kiện nào đó** đã nói hồi nãy **thì hệ mới có nghiệm**. Vậy
 > case này có **0 solution hoặc 1 solution** (nếu tồn tại x_particular). Không có
 > dependent columns nên **không có free columns** / special solution / non-zero 
