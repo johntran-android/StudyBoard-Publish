@@ -842,7 +842,7 @@
 >
 > **√n (Xnbar - μ) / σ hội tụ phân phối về standard normal random variable**
 
-**🔗 See also:** [Phương pháp Delta 1/Xbar](#node-1zfrnml) · [Stronger Central Limit Theorem](#node-yngnkwh) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq) · [Large-Sample Binomial Tests](./103_hypothesis_testing.md#node-8xsav7v)
+**🔗 See also:** [Phương pháp Delta 1/Xbar](#node-1zfrnml) · [Stronger Central Limit Theorem](#node-yngnkwh) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq) · [Large-Sample Binomial Tests](./103_hypothesis_testing.md#node-8xsav7v) · [Kiểm định hai phía](./103_hypothesis_testing.md#node-c96epf4)
 
 <br>
 
