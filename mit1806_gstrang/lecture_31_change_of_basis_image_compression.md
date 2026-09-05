@@ -1,13 +1,9 @@
-# Lecture 31: Change Of Basis;
-image Compression
+# Lecture 31: Change Of Basis; Image Compression
 
 📊 **Progress:** `35` Notes | `36` Screenshots
 
 ---
 <a id="node-olan1za"></a>
-
-## Lecture 31: Change Of Basis;
-image Compression
 
 <br>
 
@@ -375,8 +371,8 @@ image Compression
 <p align="center"><kbd><img src="assets/odceo4nknm.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> thế thì ta có thể tính ra **c = W_inv p**. Và từ đó một **bộ basis tốt**
-> (tức matrix W) là khi có thể **tính toán nhanh** khi tính **W*c** hoặc **W_inv*p**
+> thế thì ta có thể tính ra **c = W⁻¹ p**. Và từ đó một **bộ basis tốt**
+> (tức matrix W) là khi có thể **tính toán nhanh** khi tính **W*c** hoặc **W⁻¹*p**
 
 <br>
 
@@ -421,7 +417,7 @@ image Compression
 >
 >
 > Me: Nhớ lạ**i orthogonal matrix** (nếu các cols orthonormal)
-> thì ta sẽ có tính chất rất lợi đó là **Qinv = Q.T**
+> thì ta sẽ có tính chất rất lợi đó là **Q⁻¹ = Qᵀ**
 
 <br>
 
@@ -435,7 +431,7 @@ image Compression
 >
 >
 > Me: mới nói luôn, vì **W là orthogonal matrix** (sau khi ta đã
-> normalize các cols để có unit length) thì **Winv chính là W.T**
+> normalize các cols để có unit length) thì **W⁻¹ chính là Wᵀ**
 
 <br>
 
@@ -444,7 +440,7 @@ image Compression
 <p align="center"><kbd><img src="assets/pbnc83aup1.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs: Đúng vậy, nhờ đó **tính Winv rất nhan**h, nó giúp
+> Gs: Đúng vậy, nhờ đó **tính W⁻¹ rất nhan**h, nó giúp
 > **Wavelets basis pass điều kiện (làm basis tốt) đầu tiên**
 
 <br>
@@ -525,7 +521,7 @@ image Compression
 > Gs cho biết quan hệ đó chính là: **A và B sẽ là hai SIMILAR
 > MATRICES**, ta đã học ở bài trước, hai matrix similar khi
 > một matrix có thể **tồn tại một matrix M** để giúp phân tách
-> thành matrix **B = M.A.Minv**
+> thành matrix **B = M.A.M⁻¹**
 >
 >
 >
@@ -549,7 +545,7 @@ image Compression
 >
 > II) MỌI **MATRIX ĐỨNG SAU MỘT LINEAR TRANSFORMATION** 
 > (vector x, hay p ở slide trước) CŨNG SẼ THAY ĐỔI. Thể hiện bởi 
-> **B = Minv A M**
+> **B = M⁻¹ A M**
 >
 >
 >
