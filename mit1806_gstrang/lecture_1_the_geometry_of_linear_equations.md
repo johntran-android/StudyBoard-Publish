@@ -1,13 +1,9 @@
-# Lecture 1: The Geometry
-of Linear Equations
+# Lecture 1: The Geometry Of Linear Equations
 
 📊 **Progress:** `18` Notes | `20` Screenshots
 
 ---
 <a id="node-ogsrfvl"></a>
-
-## Lecture 1: The Geometry
-of Linear Equations
 
 <br>
 
@@ -73,7 +69,7 @@ of Linear Equations
 
 <a id="node-2a7ry6h"></a>
 
-- **Quan điểm hình ảnh cột**
+###### Quan điểm hình ảnh cột
 
 <p align="center"><kbd><img src="assets/i4j2mlqpq2h.png" width="80%"></kbd></p>
 
@@ -84,7 +80,7 @@ of Linear Equations
 
 <a id="node-y5vhoqu"></a>
 
-- **Bài toán tổ hợp tuyến tính**
+###### Bài toán tổ hợp tuyến tính
 
 <p align="center"><kbd><img src="assets/8vwpgwy4s0x.png" width="80%"></kbd></p>
 
@@ -101,7 +97,7 @@ of Linear Equations
 
 <a id="node-158ugd2"></a>
 
-- **Tổ hợp tuyến tính vector**
+###### Tổ hợp tuyến tính vector
 
 <p align="center"><kbd><img src="assets/023ci5carlw8.png" width="80%"></kbd></p>
 
@@ -114,7 +110,7 @@ of Linear Equations
 
 <a id="node-a52nsrr"></a>
 
-- **Tổ hợp tuyến tính vector**
+###### Tổ hợp tuyến tính vector
 
 <p align="center"><kbd><img src="assets/a4lwosojoue.png" width="80%"></kbd></p>
 
@@ -131,7 +127,7 @@ of Linear Equations
 
 <a id="node-qvkntxf"></a>
 
-- **Tổ hợp tạo thành mặt phẳng**
+###### Tổ hợp tạo thành mặt phẳng
 
 <p align="center"><kbd><img src="assets/vxvgdp78am.png" width="80%"></kbd></p>
 
@@ -144,7 +140,7 @@ of Linear Equations
 
 <a id="node-zhc8f3r"></a>
 
-- **Hệ 3 phương trình**
+###### Hệ 3 phương trình
 
 <p align="center"><kbd><img src="assets/dj3kxmbn26m.png" width="80%"></kbd></p>
 
@@ -156,7 +152,7 @@ of Linear Equations
 
 <a id="node-oh2x0hz"></a>
 
-- **Mặt phẳng giải phương trình thứ hai**
+###### Mặt phẳng giải phương trình thứ hai
 
 <p align="center"><kbd><img src="assets/obsrjo4yu1s.png" width="80%"></kbd></p>
 
@@ -174,7 +170,7 @@ of Linear Equations
 
 <a id="node-fall77a"></a>
 
-- **Giao điểm ba mặt phẳng**
+###### Giao điểm ba mặt phẳng
 
 <p align="center"><kbd><img src="assets/h51zeznpih.png" width="80%"></kbd></p>
 
@@ -186,7 +182,7 @@ of Linear Equations
 
 <a id="node-rapcmit"></a>
 
-- **Tổ hợp tuyến tính theo hình cột**
+###### Tổ hợp tuyến tính theo hình cột
 
 <p align="center"><kbd><img src="assets/pjcxczupf5d.png" width="80%"></kbd></p>
 
@@ -199,7 +195,7 @@ of Linear Equations
 
 <a id="node-2yb0qo0"></a>
 
-- **Vector b trùng vector cột**
+###### Vector b trùng vector cột
 
 <p align="center"><kbd><img src="assets/5nsnqudz8jv.png" width="80%"></kbd></p>
 
@@ -219,7 +215,7 @@ of Linear Equations
 
 <a id="node-ysn3p6t"></a>
 
-- **Tính bao trùm của vector**
+###### Tính bao trùm của vector
 
 <p align="center"><kbd><img src="assets/t38x8jx7kec.png" width="80%"></kbd></p>
 
@@ -240,7 +236,7 @@ of Linear Equations
 
 <a id="node-82d5i46"></a>
 
-- **Ma trận A phủ không gian**
+###### Ma trận A phủ không gian
 
 <p align="center"><kbd><img src="assets/tm8rgfreibd.png" width="80%"></kbd></p>
 
@@ -262,7 +258,7 @@ of Linear Equations
 
 <a id="node-sli3re4"></a>
 
-- **Ba vector đồng phẳng**
+###### Ba vector đồng phẳng
 
 <p align="center"><kbd><img src="assets/e805txofrz.png" width="80%"></kbd></p>
 
@@ -285,7 +281,7 @@ of Linear Equations
 
 <a id="node-waclvp3"></a>
 
-- **Hệ phương trình và độc lập tuyến tính**
+###### Hệ phương trình và độc lập tuyến tính
 
 <p align="center"><kbd><img src="assets/kts45th1idf.png" width="80%"></kbd></p>
 
@@ -321,7 +317,7 @@ of Linear Equations
 
 <a id="node-dzza0yp"></a>
 
-- **Nhân ma trận-vector: 2 cách nhìn**
+###### Nhân ma trận-vector: 2 cách nhìn
 
 <p align="center"><kbd><img src="assets/6bz2u9mqe7t.png" width="80%"></kbd></p>
 
