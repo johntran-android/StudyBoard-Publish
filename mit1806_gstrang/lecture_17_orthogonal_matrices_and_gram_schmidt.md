@@ -1,13 +1,9 @@
-# Lecture 17: Orthogonal Matrices
-and Gram-schmidt
+# Lecture 17: Orthogonal Matrices And Gram-schmidt
 
 📊 **Progress:** `38` Notes | `39` Screenshots
 
 ---
 <a id="node-s1s4vin"></a>
-
-## Lecture 17: Orthogonal Matrices
-and Gram-schmidt
 
 <br>
 
@@ -55,12 +51,12 @@ and Gram-schmidt
 
 > [!NOTE]
 > Đầu tiên gs cho ta **Q**, là matrix mà **các cols là các
-> orthonormal vector q_i**, gs hỏi **QTQ sẽ là gì?**
+> orthonormal vector q_i**, gs hỏi **QᵀQ sẽ là gì?**
 >
 >
 >
 > Me: vì như đã nói, các cols của Q orthonormal,
-> nên dễ thấy **QTQ CHÍNH LÀ IDENTITY MATRIX**
+> nên dễ thấy **QᵀQ CHÍNH LÀ IDENTITY MATRIX**
 
 <br>
 
@@ -69,18 +65,18 @@ and Gram-schmidt
 <p align="center"><kbd><img src="assets/hlq5gsgeo39.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs: correct, và **Q cũng ko cần phải square**, **QTQ luôn
+> Gs: correct, và **Q cũng ko cần phải square**, **QᵀQ luôn
 > là Identity matrix** 
 >
 >
 >
-> Điều này l**iên hệ với ATA** bữa trước. Ta đã cùng nhau
-> chứng minh rằng **nếu A full column rank**, thì ATA sẽ
+> Điều này l**iên hệ với AᵀA** bữa trước. Ta đã cùng nhau
+> chứng minh rằng **nếu A full column rank**, thì AᵀA sẽ
 > fullrank / invertible. 
 >
 >
 >
-> Thì với Q, **QTQ** đặc biệt hơn là nó **chính là I**
+> Thì với Q, **QᵀQ** đặc biệt hơn là nó **chính là I**
 
 <br>
 
@@ -117,13 +113,13 @@ and Gram-schmidt
 >
 >
 >
-> Thế thì **QTQ = I**, và **Q invertible** sẽ cho ta kết luận: **QT
-> chính là Q_inv: QT = Qinv**
+> Thế thì **QᵀQ = I**, và **Q invertible** sẽ cho ta kết luận: **Qᵀ
+> chính là Q⁻¹: Qᵀ = Q⁻¹**
 >
 >
 >
 > Cái này không cần chứng minh gì cả vì nếu Q vuông mà
-> QTQ = I thì ngay lập tức có thể kết luận QT = Qinv
+> QᵀQ = I thì ngay lập tức có thể kết luận Qᵀ = Q⁻¹
 
 **🔗 See also:** [linked note](./lecture_33_left_and_right_inverse_pseudoinverse.md#node-1e8cob4)
 
@@ -180,7 +176,7 @@ and Gram-schmidt
 >
 >
 > Đó là ôn lại tí về permutation matrix. Còn gs cho thấy nhân permQ với
-> permQ.T cho ra I
+> permQᵀ cho ra I
 
 <br>
 
@@ -223,6 +219,8 @@ and Gram-schmidt
 
 <a id="node-5qlg0pc"></a>
 
+###### Projection Matrix with Orthonormal Columns
+
 <p align="center"><kbd><img src="assets/7wj6jz1th7c.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -241,32 +239,32 @@ and Gram-schmidt
 > C(A)**: gọi x^ là coeff giúp linear combination các A's cols
 > cho ra p: **Ax^ = p**. Và **e = b - p sẽ vuông góc với C(A)** nên
 > nó **nằm trong C(A)** perp (tức subspace orthogonal
-> complement với C(A)) và đó **chính là nullspace of AT**
-> (N(AT))
+> complement với C(A)) và đó **chính là nullspace of Aᵀ**
+> (N(Aᵀ))
 >
 >
 >
-> vậy **ATe = 0** <=> **AT(b-p)** = **AT(b - Ax^) = 0**
+> vậy **Aᵀe = 0** ⇔ **Aᵀ(b-p)** = **Aᵀ(b - Ax^) = 0**
 >
 >
 >
-> <=> **ATb - ATAx^ = 0**
+> ⇔ **Aᵀb - AᵀAx^ = 0**
 >
 >
 >
-> <=> ATb = ATAx^ (tới đây ta có cái gọi là **Normal equation**)
+> ⇔ Aᵀb = AᵀAx^ (tới đây ta có cái gọi là **Normal equation**)
 >
 >
 >
-> <=> x^ = (ATA)_invATb
+> ⇔ x^ = (AᵀA)⁻¹Aᵀb
 >
 >
 >
-> Từ đó **p = Ax^ = A.(ATA)_inv.ATb**
+> Từ đó **p = Ax^ = A.(AᵀA)⁻¹.Aᵀb**
 >
 >
 >
-> Và từ đó P (projection matrix) là **A.(ATA)_inv.AT**
+> Và từ đó P (projection matrix) là **A.(AᵀA)⁻¹.Aᵀ**
 
 <br>
 
@@ -276,7 +274,7 @@ and Gram-schmidt
 
 > [!NOTE]
 > Nên O giúp project  lên C(Q)
-> sẽ là: Q(QTQ)_invQT
+> sẽ là: Q(QᵀQ)⁻¹Qᵀ
 
 <br>
 
@@ -285,18 +283,18 @@ and Gram-schmidt
 <p align="center"><kbd><img src="assets/delvy8esb76.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và vì **QTQ = I** nên **P chỉ còn là QQT**
+> Và vì **QᵀQ = I** nên **P chỉ còn là QQᵀ**
 >
 >
 >
 > Tại đây ta nhận thấy, như bữa trước thầy có nói về cái vụ ta
-> sẽ mắc sai lầm nếu thay (ATA)inv = Ainv.AT_inv vào P =
-> A(ATA)invAT để có P = I.
+> sẽ mắc sai lầm nếu thay (AᵀA)⁻¹ = A⁻¹.Aᵀ⁻¹ vào P =
+> A(AᵀA)⁻¹Aᵀ để có P = I.
 >
 >
 >
 > Bởi vì điều này **CHỈ ĐÚNG NẾU A INVERTIBLE**. Và khi
-> đó, **A invertible (Ainv tồn tại) / full-rank**, tức là **cols của nó
+> đó, **A invertible (A⁻¹ tồn tại) / full-rank**, tức là **cols của nó
 > sẽ span toàn bộ Rn**, dẫn tới **b nằm ở đâu trong Rn thì việc
 > project b lên C(A) cũng chỉ là chính nó**. Nên **P = I.**
 >
@@ -304,13 +302,13 @@ and Gram-schmidt
 >
 > Thì ở đây, Q, vì tính chất có **orthonormal columns** (Q chưa
 > square nhá, nên không thể gọi là orthogonal matrix), dẫn tới
-> (QTQ)_inv đã bị hủy (thành I). **Chỉ còn QQT**.
+> (QᵀQ)⁻¹ đã bị hủy (thành I). **Chỉ còn QQᵀ**.
 >
 >
 >
 > Thì **điều tương tự cũng xẩy ra**, đó là **nếu Q square**, thì
-> nó **invertible** và khi đó **QT=Qinv** nên **QQT ngay lập
-> tức trở thành QQinv** và **trở thành I**.
+> nó **invertible** và khi đó **Qᵀ=Q⁻¹** nên **QQᵀ ngay lập
+> tức trở thành QQ⁻¹** và **trở thành I**.
 >
 >
 >
@@ -332,60 +330,63 @@ and Gram-schmidt
 
 <a id="node-iuyrs14"></a>
 
+###### Projection Matrix with Orthonormal Columns
+
 <p align="center"><kbd><img src="assets/uwhujoj669d.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đương nhiên **nếu Q không square** thì **P vẫn là QQT**.
+> đương nhiên **nếu Q không square** thì **P vẫn là QQᵀ**.
 > Nhưng gs đề nghị ta **check lại hai tính chất của
 > Projection matrix**:
 >
 >
 >
-> i) **Symmetric**: Cái này dễ thấy **(QQT)T** = QTTQT = **QQT**
+> i) **Symmetric**: Cái này dễ thấy **(QQᵀ)ᵀ** = QᵀᵀQᵀ = **QQᵀ**
 > -> **symmetric**.
 >
 >
 >
-> ii) P.P = P: **(QQT)(QQT)** = Q(QTQ)QT = QIQT = **QQT** ->
+> ii) P.P = P: **(QQᵀ)(QQᵀ)** = Q(QᵀQ)Qᵀ = QIQᵀ = **QQᵀ** ->
 > đúng là như vậy
 
 <br>
 
 <a id="node-kdggv4x"></a>
 
+###### Least Squares with Orthonormal Columns
+
 <p align="center"><kbd><img src="assets/r4c6mvriaep.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp gs nói các **equation mà ta biết sẽ đều trở nên
-> đơn giản với Q**. Ví dụ như **normal equation** (Hồi nãy 
-> ta đã ôn lại cái này) ATb = ATAx^
+> Tiếp gs nói các **equation mà ta biết sẽ đều trở nên đơn giản với Q**. Ví dụ như **normal equation** (Hồi nãy ta đã ôn lại cái này) Aᵀb = AᵀAx^
 >
 >
 >
-> Thì ý chính là nếu muốn tìm x^ ta phải tìm và nhân hai
-> vế cho ATA_inv để có **x^ = (ATAinv)ATb**
+> Thì ý chính là nếu muốn tìm x^ ta phải tìm và nhân hai vế cho (AᵀA)⁻¹ để có **x^ = (AᵀA)⁻¹ Aᵀb**
 
 <br>
 
 <a id="node-5z6qpxb"></a>
 
+###### Least Squares with Orthonormal Columns
+
 <p align="center"><kbd><img src="assets/wturhxqhoi.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Còn với Q thì QTQ = I bên phải tự huỷ nên ta k**hông cần
-> thực hiện bước tính ATA inverse** (để nhân hai vế, cho ra
-> x^) nào mà có ngay luôn x^ = QTb
+> Còn với Q thì QᵀQ = I bên phải tự huỷ nên ta k**hông cần
+> thực hiện bước tính AᵀA inverse** (để nhân hai vế, cho ra
+> x^) nào mà có ngay luôn x^ = Qᵀb
 >
 >
 >
-> Và việc **x^ = QTb** **CÓ NGHĨA** LÀ **PHẨN TỬ THỨ i
+> Và việc **x^ = Qᵀb** **CÓ NGHĨA** LÀ **PHẨN TỬ THỨ i
 > CỦA x^** CHỈ LÀ **BASIS VECTOR THỨ i DOT PRODUCT
 > VỚI b**
 >
 >
 >
-> (Ta đừng nhìn theo QTb theo linear combination các
-> columns của QT, mà hãy nhìn QTb theo góc nhìn là row của
+> (Ta đừng nhìn theo Qᵀb theo linear combination các
+> columns của Qᵀ, mà hãy nhìn Qᵀb theo góc nhìn là row của
 > Q dot product với b)
 
 <br>
@@ -461,16 +462,16 @@ and Gram-schmidt
 >
 >
 >
-> p = ax, e = b - p vuông góc với a => aTe = 0 <=> aT(b-ax) = 0
-> <=> aTb = aTax <=> x = aTb/aTa => p = aaTb/aTa
+> p = ax, e = b - p vuông góc với a ⇒ aᵀe = 0 ⇔ aᵀ(b-ax) = 0
+> ⇔ aᵀb = aᵀax ⇔ x = aᵀb/aᵀa ⇒ p = aaᵀb/aᵀa
 >
 >
 >
-> Nhưng mà ta cần e chứ không phải p, nên e = b - aaTb/aTa
+> Nhưng mà ta cần e chứ không phải p, nên e = b - aaᵀb/aᵀa
 >
 >
 >
-> Với A = a, ta có **e = b - (ATb/ATA)A**
+> Với A = a, ta có **e = b - (Aᵀb/AᵀA)A**
 
 <br>
 
@@ -499,21 +500,21 @@ and Gram-schmidt
 >
 >
 >
-> = ATb  - AT.ATb.A / ATA 
+> = Aᵀb  - Aᵀ.Aᵀb.A / AᵀA 
 >
 >
 >
-> Vậy vì sao cái này = 0. Chú ý là ATb là scalar, do A,b
+> Vậy vì sao cái này = 0. Chú ý là Aᵀb là scalar, do A,b
 > đều là vector. 
 >
 >
 >
-> Nên AT.scalar.A có thể  trở thành scalar. AT.A để từ đó 
-> vế [b - (ATb/ATA)A] trở thành ATb.ATA/ATA = ATb. 
+> Nên Aᵀ.scalar.A có thể  trở thành scalar. Aᵀ.A để từ đó 
+> vế [b - (Aᵀb/AᵀA)A] trở thành Aᵀb.AᵀA/AᵀA = Aᵀb. 
 >
 >
 >
-> Dẫn tới ATB = ATb - ATb = 0
+> Dẫn tới AᵀB = Aᵀb - Aᵀb = 0
 
 <br>
 
@@ -564,7 +565,7 @@ and Gram-schmidt
 >
 >
 >
-> Gs: Nếu tôi **trừ c cho ATcA/ATA thì tôi đã làm gì**:
+> Gs: Nếu tôi **trừ c cho AᵀcA/AᵀA thì tôi đã làm gì**:
 >
 >
 >
@@ -579,13 +580,13 @@ and Gram-schmidt
 <p align="center"><kbd><img src="assets/34t1xec0djr.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs: Correct. Và **trừ tiếp cho BTc.B/BTB** ta đã **bỏ đi
+> Gs: Correct. Và **trừ tiếp cho Bᵀc.B/BᵀB** ta đã **bỏ đi
 > projection của c nằm trên b**. Để phần dư còn lại chính là
 > **vuông góc với b**, và tất nhiên đã vuông góc với cả a
 >
 >
 >
-> Vậy sau khi trừ cho ATcA/ATA và BTc.B/BTB thì phần còn lại
+> Vậy sau khi trừ cho AᵀcA/AᵀA và Bᵀc.B/BᵀB thì phần còn lại
 > **đã vuông góc với cả A và B**.
 >
 >
@@ -619,15 +620,15 @@ and Gram-schmidt
 >
 >
 >
-> B = b - p = b - ax^ = b - a (aTb)/aTa = [1 0 2] - 3/3* [1 1 1]
+> B = b - p = b - ax^ = b - a (aᵀb)/aᵀa = [1 0 2] - 3/3* [1 1 1]
 >
 >
 >
-> Ôn lại: Bắt đầu từ aTe aT(b-p) = 0 <=> aT(b - ax^) = 0 
+> Ôn lại: Bắt đầu từ aᵀe aᵀ(b-p) = 0 ⇔ aᵀ(b - ax^) = 0 
 >
 >
 >
-> <=> aTb = aTax^ <=> x^ = aTb/aTa
+> ⇔ aᵀb = aᵀax^ ⇔ x^ = aᵀb/aᵀa
 
 <br>
 
@@ -640,7 +641,7 @@ and Gram-schmidt
 >
 >
 >
-> me: ta sẽ **xem ATB có bằng 0 không**
+> me: ta sẽ **xem AᵀB có bằng 0 không**
 
 <br>
 
@@ -681,7 +682,7 @@ and Gram-schmidt
 >
 >
 >
-> Thế thì vì B = b - (aTb/aTa).a, tức là nó là linear combination
+> Thế thì vì B = b - (aᵀb/aᵀa).a, tức là nó là linear combination
 > của a,b. Thành ra B cũng nằm trong column space của A.
 > Còn A thì là a rồi.
 >
