@@ -1,13 +1,9 @@
-# Lecture 18: Properties Of
-determinants
+# Lecture 18: Properties Of Determinants
 
 📊 **Progress:** `34` Notes | `39` Screenshots
 
 ---
 <a id="node-hqraa6p"></a>
-
-## Lecture 18: Properties Of
-determinants
 
 <br>
 
@@ -535,15 +531,15 @@ determinants
 >
 >
 >
-> Vậy gs hỏi từ 9, tính thử **det A_inv**
+> Vậy gs hỏi từ 9, tính thử **det A⁻¹**
 >
 >
 >
-> Me: A.Ainv = I, nên det I = det A * det A_inv 
+> Me: A.A⁻¹ = I, nên det I = det A * det A⁻¹ 
 >
 >
 >
-> => det A_inv = det I / det A = **1 / det A**
+> ⇒ det A⁻¹ = det I / det A = **1 / det A**
 
 <br>
 
@@ -568,23 +564,25 @@ determinants
 >
 >
 >
-> Và AinvA = I, nên ta cũng biết Ainv sẽ có giá trị 1/2,1/3 trên
-> đường chéo. (nhân AinvA là nhìn vậy chứ không phải là
-> element wise đâu, mà nhân matrix bình thường cả AAinv hay
-> AinvA đều cho ra I)
+> Và A⁻¹A = I, nên ta cũng biết A⁻¹ sẽ có giá trị 1/2,1/3 trên
+> đường chéo. (nhân A⁻¹A là nhìn vậy chứ không phải là
+> element wise đâu, mà nhân matrix bình thường cả AA⁻¹ hay
+> A⁻¹A đều cho ra I)
 
 <br>
 
 <a id="node-k45tta5"></a>
 
+###### Determinants of Products and Inverses
+
 <p align="center"><kbd><img src="assets/hybamfzgq0f.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, gs: det (A**2)?
+> Tiếp, gs: det (A²)?
 >
 >
 >
-> det A.A = detA detA = detA **2
+> det A.A = detA detA = (detA)²
 
 <br>
 
@@ -612,11 +610,11 @@ determinants
 <p align="center"><kbd><img src="assets/85rt0u1bbzn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Như vậy property 9 giúp ta có **det Ainv = 1/det A** hoàn toàn
+> Như vậy property 9 giúp ta có **det A⁻¹ = 1/det A** hoàn toàn
 > giúp ta liên hệ tới việc **nếu A invertible** (hay non singular)
-> t**hì det A khác 0**, do đó **det Ainv = 1/det A** là công thức 
-> có hiệu lực. Ngược lại, **nếu A singular, thì Ainv không
-> tồn tại thì công thức det Ainv cũng không hiệu lực** vì 
+> t**hì det A khác 0**, do đó **det A⁻¹ = 1/det A** là công thức 
+> có hiệu lực. Ngược lại, **nếu A singular, thì A⁻¹ không
+> tồn tại thì công thức det A⁻¹ cũng không hiệu lực** vì 
 > lúc này det A = 0
 
 <br>
@@ -626,7 +624,7 @@ determinants
 <p align="center"><kbd><img src="assets/x69ntey4dxg.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> property 10 cho biết **det của AT = det A**. Kiểm tra bằng
+> property 10 cho biết **det của Aᵀ = det A**. Kiểm tra bằng
 > 2x2 matrix ta thấy đúng là đều bằng ad-bc
 >
 >
@@ -643,38 +641,40 @@ determinants
 
 <a id="node-tvgpm3z"></a>
 
+###### Determinant of Transpose Matrix
+
 <p align="center"><kbd><img src="assets/8jk96e6unj.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Để chứng minh, ta có **elimination chuyển A -> U**, và
-> được thể hiện qua phương trình **A = LU** tương tự **AT
-> = UT.LT**
+> được thể hiện qua phương trình **A = LU** tương tự **Aᵀ
+> = Uᵀ.Lᵀ**
 >
 >
 >
 > Gs: **det L là gì -> 1**. Bởi gs nhắc ta nhớ **L là Lower
 > Triangular matrix có diagonal là 1** nên theo property 7,
 > det nó là **tích các  pivot trên đường chéo ->  = 1**. Còn
-> LT đương nhiên là Upper triangular nên det cũng = 1.
+> Lᵀ đương nhiên là Upper triangular nên det cũng = 1.
 >
 >
 >
-> Vậy vì A = LU => det A = det L * det U = det U vì det L = 1
-> và từ A = LU <=> AT = (LU)T = UTLT nên ta có:
+> Vậy vì A = LU ⇒ det A = det L * det U = det U vì det L = 1
+> và từ A = LU ⇔ Aᵀ = (LU)ᵀ = UᵀLᵀ nên ta có:
 >
 >
 >
-> det (AT) = det UT * det LT = det UT (vì det LT cũng = 1)
+> det (Aᵀ) = det Uᵀ * det Lᵀ = det Uᵀ (vì det Lᵀ cũng = 1)
 >
 >
 >
 > và cuối cùng matrix U là triangular matrix, det của nó bằng
-> tích các giá trị trên đường chéo, mà khi UT cũng có cùng
-> đường chéo  với U, thành ra det UT cũng bằng det U.
+> tích các giá trị trên đường chéo, mà khi Uᵀ cũng có cùng
+> đường chéo  với U, thành ra det Uᵀ cũng bằng det U.
 >
 >
 >
-> Vậy từ đó đủ cơ sở để kết luận **det A = det AT**
+> Vậy từ đó đủ cơ sở để kết luận **det A = det Aᵀ**
 
 <br>
 
