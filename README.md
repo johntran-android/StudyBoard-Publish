@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,302 notes` · `~17,762 screenshots` · `18 notebooks`**
+**`~12,303 notes` · `~17,766 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -565,14 +565,14 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 ### Pattern Recognition Machine Learning_C.Bishop
 <!-- key: pattern_recognition_machine_learning_cbishop -->
 <!-- group: Machine Learning Foundation -->
-`399 notes · 594 screenshots · 57 sections`
+`400 notes · 598 screenshots · 58 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
 > 
 > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
-<summary>📖 57 sections</summary>
+<summary>📖 58 sections</summary>
 
 | Section | Notes | Screenshots |
 |---|---:|---:|
@@ -631,6 +631,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [4.1.2 Multiple Class](pattern_recognition_machine_learning_cbishop/412_multiple_class.md) | 3 | 7 |
 | [4.1.1 Discriminant Functions](pattern_recognition_machine_learning_cbishop/411_discriminant_functions.md) | 1 | 3 |
 | [4.1.3 Least squares for classification](pattern_recognition_machine_learning_cbishop/413_least_squares_for_classification.md) | 7 | 9 |
+| [4.1.4 Fisher's linear discriminant](pattern_recognition_machine_learning_cbishop/414_fishers_linear_discriminant.md) | 1 | 4 |
 | [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) | 19 | 22 |
 | [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) | 5 | 7 |
 
