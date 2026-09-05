@@ -1,13 +1,11 @@
-# Lecture 21: Eigenvalues
-and Eigenvectors
+# Lecture 21: Eigenvalues And Eigenvectors
 
 📊 **Progress:** `38` Notes | `39` Screenshots
 
 ---
 <a id="node-aiwkaf3"></a>
 
-## Lecture 21: Eigenvalues
-and Eigenvectors
+**🔗 See also:** [Section 3.5.2 Maximizing the Evidence Function *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/352_maximizing_the_evidence_function.md#node-nc5qxnz)
 
 <br>
 
@@ -148,12 +146,14 @@ and Eigenvectors
 
 <a id="node-ta4khq9"></a>
 
+###### Introduction to Eigenvalues and Eigenvectors
+
 <p align="center"><kbd><img src="assets/qx199ejml8n.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Thế thì ta sẽ **đi tìm mọi eigenvector và eigenvalue**. Và gs
 > cảnh báo rằng ta không còn làm việc với Ax=b nữa, mà
-> Ax=λ*x thì **cả λ và x đều là variable**. Do đó ta
+> Ax=λx thì **cả λ và x đều là variable**. Do đó ta
 > **không còn dùng elimination** được nữa
 
 <br>
@@ -307,12 +307,14 @@ and Eigenvectors
 
 <a id="node-j52xv8w"></a>
 
+###### Solving the Eigenvalue Problem
+
 <p align="center"><kbd><img src="assets/oa04bmrqvs.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > ta sẽ bắt đầu tìm **quy trình để tìm egenvalue** và
-> **eigenvector**. Thế thì ta có thể chuyển **λ*x qua bên
-> trái** và để x ra ngoài, để trở thành **(A - λ*I)x = 0**
+> **eigenvector**. Thế thì ta có thể chuyển **λx qua bên
+> trái** và để x ra ngoài, để trở thành **(A - λ𝐈)x = 0**
 >
 >
 >
@@ -332,16 +334,16 @@ and Eigenvectors
 >
 >
 > Thế thì do eigenvector khác zero của A nếu có sẽ là vector
-> x khiến (A-lambda*I)x=0, điều này cho thấy nó chính là
-> vector khác 0, trong nullspace của (A-lambda*I).
+> x khiến (A-λI)x=0, điều này cho thấy nó chính là
+> vector khác 0, trong nullspace của (A-λI).
 >
 >
 >
 > Và như vậy, đồng nghĩa với việc tồn tại non-zero vector
 > trong nullspace. Dẫn đến để điều này xảy ra ta sẽ **cần
-> matrix (A - λ*I) có tính chất singular**, hay các cols của
+> matrix (A - λ𝐈) có tính chất singular**, hay các cols của
 > chúng không linear independence **bởi vì như vậy thì
-> (A-lambda*I)x = 0 mới có solution khác 0**.
+> (A-λI)x = 0 mới có solution khác 0**.
 >
 >
 >
@@ -373,14 +375,14 @@ and Eigenvectors
 <p align="center"><kbd><img src="assets/44kj6ht75w2.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và khi đã solve ra eigenvalue, ta sẽ **thay vào (A-λ*I)x=0**
+> Và khi đã solve ra eigenvalue, ta sẽ **thay vào (A-λ𝐈)x=0**
 > và **tìm nullspace của nó** (tức là tìm các special solution,
 > và cũng chính là tạo nên một bộ basis).
 >
 >
 >
 > Mà cái này thì ta đã biết cách làm, đó là **dùng elimination**
-> để **xác định các pivot cols** của (A-lambda*I), từ đó có
+> để **xác định các pivot cols** của (A-λI), từ đó có
 > **free  cols**.
 >
 >
@@ -413,10 +415,12 @@ and Eigenvectors
 
 <a id="node-pldjw5w"></a>
 
+###### Characteristic Polynomial and Eigenvalues
+
 <p align="center"><kbd><img src="assets/wknqz8qvbe.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì đầu tiên ta sẽ solve equation det (A-λ.I) = 0
+> Thế thì đầu tiên ta sẽ solve equation det (A-λI) = 0
 > để tìm eigenvalues
 >
 >
@@ -462,6 +466,8 @@ and Eigenvectors
 
 <a id="node-9lb7oqk"></a>
 
+###### Eigenvalues and Eigenvectors Calculation
+
 <p align="center"><kbd><img src="assets/yqpqmbep7yi.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -486,7 +492,7 @@ and Eigenvectors
 >
 >
 >
-> Vậy x1 = [1, 1].T là một eigenvector ứng với eigenvalue = 4.
+> Vậy x1 = [1, 1]ᵀ là một eigenvector ứng với eigenvalue = 4.
 > Đương nhiên mọi scaled version của x1, hay mọi vector trên
 > line đi qua x1 đều là eigenvector ứng với eigenvalue = 4
 
@@ -542,7 +548,7 @@ and Eigenvectors
 >
 >
 >
-> thì khi đó (A + 3*I)x = Ax + 3Ix = λ*x + 3x = (λ + 3)x
+> thì khi đó (A + 3*I)x = Ax + 3Ix = λx + 3x = (λ + 3)x
 >
 >
 >
@@ -562,7 +568,7 @@ and Eigenvectors
 >
 >
 >
-> Hay gs hỏi giả sử tôi lập luận thế này, vì **Ax = λ*x** và
+> Hay gs hỏi giả sử tôi lập luận thế này, vì **Ax = λx** và
 > **Bx = α*x** nên cộng hai vế của hai equation lại ta có
 > **(A+B)x = (λ+α)x** từ đó suy ra eigenvalue của A+B là
 > λ+α được không? **Lập luận này sai chỗ nào**.
@@ -570,7 +576,7 @@ and Eigenvectors
 >
 >
 > Me: Có thể thấy nó **sai ở chỗ x không giống nhau**.
-> Tức là x trong Ax = λ*x - là eigenvector của A ứng với
+> Tức là x trong Ax = λx - là eigenvector của A ứng với
 > eigenvalue λ. Còn Bx = α*x sẽ là eigenvector của B có
 > eigenvalue là α. Vậy thì **x không phải là một để mà
 > cộng hai vế** rồi đặt A+B trong ngoặc như vậy
@@ -607,6 +613,8 @@ and Eigenvectors
 
 <a id="node-tww78p6"></a>
 
+###### 90-Degree Rotation Matrix Q
+
 <p align="center"><kbd><img src="assets/6abuycstgfp.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -619,7 +627,7 @@ and Eigenvectors
 >
 >
 >
-> Hình dung vector x = [1 0].T thì Qx sẽ là [0 1], đúng là
+> Hình dung vector x = [1 0]ᵀ thì Qx sẽ là [0 1], đúng là
 > nó xoay 90 độ. 
 >
 >
@@ -633,11 +641,11 @@ and Eigenvectors
 >
 >
 >
-> Qx =  x1[0 1]T+x2*[-1 0]T **= [-x2 x1]T**
+> Qx =  x1[0 1]ᵀ+x2*[-1 0]ᵀ **= [-x2 x1]ᵀ**
 >
 >
 >
-> Tính **dot product của (Qx)Tx** = -x2x1 + x1x2 = 0
+> Tính **dot product của (Qx)ᵀx** = -x2x1 + x1x2 = 0
 > -> **Qx vuông góc với x**
 
 <br>
@@ -650,7 +658,7 @@ and Eigenvectors
 > Gs cho **biết thêm một sự thật** nữa bên cạnh **tổng
 > eigenvalue chính là trace** thì ta còn có **tích của chúng
 > chính là determinant**. Và hồi nãy ta đã thấy ví dụ có
-> lambda là 2,4, det matrix là 8
+> λ là 2,4, det matrix là 8
 
 <br>
 
@@ -679,7 +687,7 @@ and Eigenvectors
 
 > [!NOTE]
 > Thế thì, ta cứ đi **tìm eigenvector** theo **quy trình đã
-> biết** đó là giải **characteristic equation:** **det(Q-λ*I) =
+> biết** đó là giải **characteristic equation:** **det(Q-λ𝐈) =
 > 0** và ta có **λ**2 + 1 = 0**. Và equation này có 2 nghiệm
 > **PHỨC** (**COMPLEX**  NUMBER)
 >
@@ -745,7 +753,7 @@ and Eigenvectors
 
 > [!NOTE]
 > Có thể chứng minh điều này điều này. Thiết lập
-> characteristic equation **det(A-λ*I) = 0**
+> characteristic equation **det(A-λ𝐈) = 0**
 >
 >
 >
@@ -755,14 +763,16 @@ and Eigenvectors
 >
 >
 >
-> Nên giải equation **det(A-λ*I)** = 0 trở thành phương
+> Nên giải equation **det(A-λ𝐈)** = 0 trở thành phương
 > trình **tích của các ("component trên đường chéo" - λ)
-> = 0 từ đó giải ra lambda đúng là các giá trị trên đường
+> = 0 từ đó giải ra λ đúng là các giá trị trên đường
 > chéo của A**
 
 <br>
 
 <a id="node-njg5q0s"></a>
+
+###### Finding Eigenvectors Using (A - λI)x = 0
 
 <p align="center"><kbd><img src="assets/vihhx56j3sc.png" width="80%"></kbd></p>
 
@@ -773,18 +783,18 @@ and Eigenvectors
 >
 >
 >
-> Nhưng **vấn đề là** khi có **lambda**, **giải tìm ra eigenvector**.
+> Nhưng **vấn đề là** khi có **λ**, **giải tìm ra eigenvector**.
 >
 >
 >
-> Thế lambda vào A - lambda*I ta có matrix này, gs hỏi
+> Thế λ vào A - λI ta có matrix này, gs hỏi
 > matrix này có đặc điểm gì?
 >
 >
 >
 > -> cols 1 là free col. col 2 là pivot. nên x1 là free var, x2 là
-> pivot var. Chọn x1 = 1, thế vào: 0*0 + x2*1 = 0 => x2 = 0
-> và special solution là [1 0].T cũng là basis của nullspace
+> pivot var. Chọn x1 = 1, thế vào: 0*0 + x2*1 = 0 ⇒ x2 = 0
+> và special solution là [1 0]ᵀ cũng là basis của nullspace
 
 <br>
 
