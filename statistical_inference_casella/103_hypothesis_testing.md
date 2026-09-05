@@ -1,6 +1,6 @@
 # 10.3 Hypothesis Testing
 
-📊 **Progress:** `16` Notes | `19` Screenshots | `16` AI Reviews
+📊 **Progress:** `19` Notes | `22` Screenshots | `18` AI Reviews
 
 ---
 <a id="node-zhfsuqo"></a>
@@ -1317,7 +1317,7 @@
 >
 >
 >
-> Câu trả lời đó là: Wn, nếu là MLE của θ, thì vừa nói ở trên, Wn sẽ là estimator tiệm cận hiệu quả của θ, và thể hiện điều này bởi:
+> Câu trả lời đó là: Wn, nếu là MLE của θ, thì vừa nói ở trên, Wn sẽ là estimator tiệm cận hiệu quả của θ, và thể hiện bởi:
 >
 >
 >
@@ -1357,7 +1357,7 @@
 >
 >
 >
-> chính là (Wn - θ) / STD(Wn), kí hiệu σn\]
+> chính là (Wn - θ) / STD(Wn) = (Wn - θ) /  σn
 >
 >
 >
@@ -1446,8 +1446,6 @@
 >
 >
 > ---
->
->
 >
 >
 >
@@ -2395,7 +2393,11 @@
 >
 >
 >
-> Thế thì nếu qua bài toán 2-sided hypothesis này, ta vẫn có thể dùng test rule này, tức: Reject H0 khi test statistic là (p̂n - p0) / √{\[p̂n(1-p̂n)\]/n} cách xa một threshold nào đó: |(p̂n - p0) / √{\[p̂n(1-p̂n)\]/n}| &gt; threshold c nào đó.
+> Thế thì nếu qua bài toán 2-sided hypothesis này, ta vẫn có thể dùng test rule này, tức: 
+>
+>
+>
+> Reject H0 khi test statistic là (p̂n - p0) / √{\[p̂n(1-p̂n)\]/n} cách xa một threshold nào đó: |(p̂n - p0) / √{\[p̂n(1-p̂n)\]/n}| &gt; threshold c nào đó.
 >
 >
 >
@@ -2403,15 +2405,83 @@
 >
 >
 >
-> Còn cách khác đơn giản là: vì under H0, thì Var(p̂n) chính là p0(1-p0)/n, nên theo CLT:
+> **Cơ sở lí thuyết của cái này là do Wn là MLE**, nên có tính **tiệm cận hiệu quả**: 
 >
 >
 >
-> √n(p̂n - p0)/√p0(1-p0) → (d) n(0,1) nên ta khỏi cần phải mượn Sn làm gì nữa. Chỉ việc dùng test statistic là √n(p̂n - p0)/√p0(1-p0)
+> √n(Wn - p) → n(0, 1/I1(θ))
 >
 >
 >
-> Tóm lại, hai cách nó khác nhau ở cái test statistic (chứ threshold đều là z\_α/2):
+> nên khi n lớn, Var(√n(Wn-p)) ≈ 1/I1(θ) ⇔ Var(Wn) = 1/n I1(θ) = 1/In(θ). 
+>
+>
+>
+> Và vì vậy 1/In(p) là phương sai của của Wn khi n lớn vô cùng 
+>
+>
+>
+> Do đó cho nên ta cũng có thể được phép coi nó là phương sai Wn n lớn) và như vậy **thay θ bởi Wn**, thì 1/In(p) sẽ là estimate của Var(Wn), 1/√In(Wn) là **estimate của STD(Wn).**
+>
+>
+>
+> Thêm nữa, √n(Wn - p) → n(0, 1/I1(θ)) thì √I1(θ)√n(Wn - p) → √I1(θ) × n(0, 1/I1(θ)) ⇔ √I1(θ)√n(Wn - p) → n(0,1) ⇔ (Wn - p) / (1/√In(θ)) → n(0,1) ⇔ (Wn - p) / STD(Wn) → n(0,1).
+>
+>
+>
+> Nhưng vì 1/√In(Wn) là consitent estimate của STD(Wn) = 1/√In(θ) nên theo Slusky:
+>
+>
+>
+> \[(Wn - p) / STD(Wn)\] × STD(Wn) / \[estimate của STD(Wn)\] → n(0,1) × 1
+>
+>
+>
+> \[(Wn - p) / \[estimate của STD(Wn)\]\] → n(0,1) 
+>
+>
+>
+> chính là \[(Wn - p) / \[1/√In(Wn)\] → n(0,1) 
+>
+>
+>
+> Đây là lí thuyết của **Wald** **test**, là kiếm cái test statistic có tính (Wn - θ) / Sn → (d) n(0,1), với **Sn là estimate của STD(Wn)**, nên gọi là **standard error** của Wn, và ở đây có thể dùng 1/√In(Wn) hoặc 1/√în(Wn)
+>
+>
+>
+> ---
+>
+>
+>
+> Còn cách thứ hai nói ở đây, lại không phải là dựa trên cơ sở lí thuyết trên
+>
+>
+>
+> Còn cách khác đơn giản là: vì under H0, thì Var(p̂n) chính là p0(1-p0)/n, nên theo thuần túy CLT, là định lý nói rằng:
+>
+>
+>
+> Với sample X1,...Xn có EX = μ, Var(X) = σ² &lt; ∞ thì ta sẽ có: √n(Xbar - μ)/ σ → (d) n(0,1) 
+>
+>
+>
+> do đó ở đây dưới giả định H0: thì sample có true mean là p0 và variance là p0(1-p0), STD là √p0(1-p0) nên: 
+>
+>
+>
+> √n(p̂n - p0)/√p0(1-p0) → (d) n(0,1) 
+>
+>
+>
+> nên ta khỏi cần phải mượn Sn =  √{\[p̂n(1-p̂n)\]/n} như cách ở trên làm gì nữa, mà chỉ việc dùng test statistic là √n(p̂n - p0)/√p0(1-p0), từ đó test rule là: Reject H0 nếu |√n(p̂n - p0)/√p0(1-p0)| ≥  z\_α/2
+>
+>
+>
+> ---
+>
+>
+>
+> Tóm lại, hai cách **khác nhau ở cái test statistic** (còn threshold đều là z\_α/2):
 >
 >
 >
@@ -2427,85 +2497,40 @@
 >
 >
 >
+>  Vậy khúc cuối nói đại ý là nếu có hai cách thì cách nào nên dùng Câu trả lời là tùy, vì power function của chúng cross nhau nên có khi cách này tốt hơn có khi cách kia tốt hơn
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
 >
->
-> Và HAI CÁCH CŨNG CÓ CƠ SỞ LÍ THUYẾT KHÁC NHAU:
->
->
->
-> Cơ sở lí thuyết của cách 2 là dùng đơn thuần là CLT: √n(sample mean - true mean)/ true std → (d) n(0,1)
->
->
->
-> Còn cơ sở lí thuyết của cách 1 là nếu ta có Wn, Sn thỏa (Wn - θ0)/Sn → (d) n(0,1). Mà ở đây cụ thể là:
->
->
->
-> Wn = p̂n
->
->
->
-> Sn = √{\[p̂n(1-p̂n)\]/n}, thì nó là 1/√In(Wn), là estimate của 1/√In(p), 
->
->
->
-> Khi xét n lớn, 1/In(p) lại chính là xấp xỉ Var(Wn) , nên 1/√In(p) chính là xấp xỉ √Var(Wn) = STD(Wn) 
->
->
->
-> Vậy nên Sn là estimate của STD(Wn), (nên gọi là standard error) và nó lại là consistant estimator của STD(Wn)
->
->
->
-> Do đó **DỰA TRÊN TÍNH CHẤT HIỆU QUẢ TIỆM CẬN CỦA MLE** (**KHÔNG PHẢI DỰA TRÊN CLT ĐƠN THUẦN**): 
->
->
->
-> √n(p̂n - p) → (d) n(0, 1/I1(p))
+> Ghi chú cực kỳ xuất sắc và sâu sắc khi phân biệt rõ bản chất kiểm định Wald (kết hợp tính hiệu quả của MLE và định lý Slutsky) với kiểm định dưới H0 dựa trên CLT. Để hoàn thiện hơn nữa về thuật ngữ chuẩn mực, bạn có thể bổ sung rằng hai cách này tương ứng với Wald test và Score test (Rao's score test).
+
+**🔗 See also:** [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg)
+
+<br>
+
+<a id="node-ebeglx6"></a>
+
+###### Continuity Correction in Approximate Tests
+
+<p align="center"><kbd><img src="assets/5v0abomn2fc.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> (Quay lại ý này sau)
+
+<br>
+
+<a id="node-wzyceag"></a>
+
+###### Kỳ vọng của Score Statistic
+
+<p align="center"><kbd><img src="assets/kh6h6brsed9.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Phần này gs nói về một loại large-sample test tên là Score test, với score statistic là:
 >
 >
 >
-> nên
->
->
->
-> √I1(p)√n(p̂n - p) → (d) √I1(p) × n(0, 1/I1(p))
->
->
->
-> ⇔ (p̂n - p)/ (1/√n√I1(p)) → (d) n(0, 1)
->
->
->
-> ⇔ (p̂n - p)/ (1/√In(p)) → (d) n(0, 1) (chú ý, cái này là do tính hiệu qủa tiệm cận của MLE)
->
->
->
-> Và \[Sn / (1/√In(p))\] →ᵖ 1 (cái này thì là do có thể chứng minh được Sn  = (1/√In(p̂n)) là consistent estimate của (1/√In(p))
->
->
->
-> ⇔ (1/√In(p)) / Sn →ᵖ 1
->
->
->
-> Theo Slusky:
->
->
->
-> (p̂n - p)/ (1/√In(p)) × (1/√In(p)) / Sn →(d) 1 × n(0,1)
->
->
->
-> ⇔ \[(p̂n - p)/ Sn\] × \[(1/√In(p)) / (1/√In(p))\] →(d) n(0,1)
->
->
->
-> ⇔ \[(p̂n - p)/ Sn\] × 1 →(d) n(0,1)
->
->
->
-> ⇔ \[(p̂n - p)/ Sn\]  →(d) n(0,1)
+> S(θ) = ∂/∂θ log f(𝐗|θ) = ∂/∂θ log L(θ|𝐗)
 >
 >
 >
@@ -2513,12 +2538,472 @@
 >
 >
 >
-> Vậy khúc cuối nói đại ý là nếu có hai cách thì cách nào nên dùng Câu trả lời là tùy, vì power function của chúng cross nhau nên có khi cách này tốt hơn có khi cách kia tốt hơn
+> Vì sao E\_θ(S(θ)) = 0 với mọi θ. Chú ý cái này là điểm rất dễ lú.
+>
+>
+>
+> Làm từng bước, đầu tiên hãy xem kĩ hàm g(𝐱, θ) = ∂/∂θ log f(𝐱|θ):
+>
+>
+>
+> đạo hàm của hàm log f(𝐱|θ) = log L(θ|𝐱) đối với θ, sẽ là một hàm theo θ.
+>
+>
+>
+> nên g vẫn là hàm theo θ: nên phải sửa lại là g(𝐱, θ)
+>
+>
+>
+> và áp hàm này lên random sample 𝐗 ta có random variable S(θ) = g(𝐗, θ).
+>
+>
+>
+> Vậy thì S(θ)|θ=10, tức S(10) có phải là random variable không. Vẫn là random variable, có được bởi việc áp hàm g(𝐱, 10) lên random sample 𝐗. Và S(5), S(100) vẫn vậy, là random variable.
+>
+>
+>
+> Giờ nói tới kì vọng của S(10), theo LOTUS (ôn nhanh LOTUS (xem link): Ta có X \~ fX(x), và Y = g(X), thì LOTUS cho phép tính EY = Eg(X) = ∫g(x)fX(x)dx)
+>
+>
+>
+> Theo đó:
+>
+>
+>
+> E\[S(10)\] = ∫g(𝐱,10)f(𝐱|θ)d𝐱
+>
+>
+>
+> Tới đây, ta sẽ thây g(𝐱,10) vào, nhưng cần cẩn thận hai thứ:
+>
+>
+>
+> i) g(𝐱, θ) theo định nghĩa ở trên ta vừa nói là hàm này: g(𝐱, θ) = ∂/∂θ log f(𝐱|θ), là một hàm theo θ có được khi đạo hàm hàm log f đối với θ. Nên g(**x**, 10) là giá trị của hàm số g(𝐱, θ) này tại θ = 10, tức g(𝐱, θ)|θ=10, và nó cũng là \[∂/∂θ log f(𝐱|θ)\]|θ=10. Sẽ là hoàn toàn sai nếu ghi là ∂/∂θ log f(𝐱|10), vì lúc này nó lại là đạo hàm của hàm số log f(𝐱|10) theo θ, và cái này bằng 0 vì hàm log f(𝐱|10) không còn phụ thuộc θ nữa.
+>
+>
+>
+> ii) θ trong g(𝐱, θ) = ∂/∂θ log f(𝐱|θ) chỉ là dummies variable. Nó đang đóng vai trò y như h(u) = u² vậy, tức là ta có thể thay bằng v, s gì cũng được: h(s) = s², h(v) = v² mà vẫn không thay đổi bản chất định nghĩa hàm h.
+>
+>
+>
+> Tương tự, nếu gọi / đặt tên tham số là θ thì ta có hàm log f(𝐱|θ), và đạo hàm là ∂/∂u log f(𝐱|θ). Đặt tên tham số là ω thì ta có hàm log f(𝐱|ω), và đạo hàm là ∂/∂ω log f(𝐱|ω).
+>
+>
+>
+> Do đó ta dùng chữ khác thay cho θ cũng không thay đổi bản chất hàm g: g(𝐱, u) = ∂/∂u log f(𝐱|u), vẫn mang bản chất là lấy đạo hàm của hàm log likelihood của tham số của population theo tham số đó.
+>
+>
+>
+> Mục đích của bước này là, để khi ta thay vào tích phân, nơi có sẵn f(𝐱|θ) đứng ở đó, thì không bị trùng tên biến. Vì θ trong f(𝐱|θ) mang ý nghĩa khác: là giá trị thật của tham số, không phải là dummies variable.
+>
+>
+>
+> Tóm lại ta sẽ thay g(𝐱, 10) = \[∂/∂u log f(𝐱|u)\]|u=10
+>
+>
+>
+> (ở trên) = ∫ \[\[∂/∂u log f(𝐱|u)\]|u=10\] f(𝐱|θ)d𝐱
+>
+>
+>
+> ---
+>
+>
+>
+> Tới đây, vì ∂/∂u log f(𝐱|u) theo chain rule, = (1/f(𝐱|u)) . ∂/∂u f(𝐱|u), nên:
+>
+>
+>
+> \[∂/∂u log f(𝐱|u)\]|u=10 = \[(1/f(𝐱|u)) . ∂/∂u f(𝐱|u)\]|u=10
+>
+>
+>
+> và ta có thể thay số 10 vào cái chữ u của 1/f(𝐱|u) (vì nó đã không còn đạo hàm nữa), để có: (1/f(𝐱|10)) . \[∂/∂u f(𝐱|u)\]|u=10
+>
+>
+>
+> ---
+>
+> nên đẳng thức tiếp tục bằng:
+>
+>
+>
+> ...= ∫ (1/f(𝐱|10)) × \[∂/∂u f(𝐱|u)\]|u=10 × f(𝐱|θ)d𝐱
+>
+>
+>
+> = ∫ \[∂/∂u f(𝐱|u)\]|u=10 × f(𝐱|θ) / f(𝐱|10) d𝐱 (1)
+>
+>
+>
+> Tới đây ta sẽ thấy rõ: **chỉ khi giá trị thật sự của population parameter θ** **là 10 thì cái kết quả trên mới trở thành**:
+>
+>
+>
+> = ∫ \[∂/∂u f(𝐱|u)\]|u=10 × f(𝐱|10) / f(𝐱|10) d𝐱
+>
+>
+>
+> = ∫ \[∂/∂u f(𝐱|u)\]|u=10 d𝐱
+>
+>
+>
+> = \[∂/∂u ∫ f(𝐱|u) d𝐱\] | u=10
+>
+>
+>
+> = \[∂/∂u (1)\] | u=10
+>
+>
+>
+> = 0 | u=10
+>
+>
+>
+> tới đây u=10 không còn ý nghĩa gì nữa.
+>
+>
+>
+> = 0
+>
+>
+>
+> ---
+>
+>
+>
+> Như vậy, mean của S(10) = 0 khi và chỉ khi θ = 10, tương tự mean của S(5) = 0 khi và chỉ khi θ = 5.
+>
+>
+>
+> Và như vậy E\[S(θ)\] chỉ bằng 0 khi và chỉ khi true distribution là θ (2)
+>
+>
+>
+> Hơn nữa, nhìn lại công thức E\[S(10)\] = ∫ \[∂/∂u f(𝐱|u)\]|u=10 × f(𝐱|θ) / f(𝐱|10) d𝐱 ở trên, ta thấy nếu chưa biết θ thì đây vẫn là kết quả phụ thuộc / chứa θ, do đó ta ghi là E\_θ\[S(10)\] để biểu thị ý nghĩa này.
+>
+>
+>
+> Và như vậy kết hợp ý (2) nói trên ta hiểu E_10\[S(10)\] = 0, E_5\[S(5)\] = 0, ...và E\_θ\[S(θ)\] với mọi θ chính là như vậy. Nhưng E_10\[S(5)\], E_10\[S(1 tỷ)\] thì chưa chắc bằng 0.
+>
+>
+>
+> Do đó cái chỗ nói E\_θ\[S(θ)\] với mọi θ rất dễ gây lú lẫn. Nhưng hiểu được rồi ta sẽ hiểu ý sau của giáo sư Casella khi nói: Under H0 (dưới giả định giá trị thật θ là θ0) thì mean của S(θ0) bằng 0. Nhờ đoạn trên ta hiểu điều này là đương nhiên: Vì chỉ khi θ = θ0, thì mean của S(θ0) mới là E\_θ0(S(θ0)), và cái này mới bằng 0.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> **🤖 AI Feedback** — ✅ Score: **95/100**
 >
-> Ghi chú cực kỳ xuất sắc và sâu sắc khi phân biệt rõ bản chất kiểm định Wald (kết hợp tính hiệu quả của MLE và định lý Slutsky) với kiểm định dưới H0 dựa trên CLT. Để hoàn thiện hơn nữa về thuật ngữ chuẩn mực, bạn có thể bổ sung rằng hai cách này tương ứng với Wald test và Score test (Rao's score test).
+> Ghi chú xuất sắc! Bạn đã bóc tách chính xác và tường minh một điểm cực kỳ dễ gây nhầm lẫn trong thống kê suy luận: sự phân biệt giữa giá trị tham số dùng để định giá hàm Score và tham số thực của phân phối dùng để lấy kỳ vọng.
+
+**🔗 See also:** [Giá trị kỳ vọng và LOTUS](./22_expected_value.md#node-p3585vu) · [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4)
+
+<br>
+
+<a id="node-xudioev"></a>
+
+###### The Score Test Statistic
+
+<p align="center"><kbd><img src="assets/6qqwq5kgn66.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Note trước ta đã qua được chỗ dễ gây lú nhất.
+>
+>
+>
+> Nay xét Var\_θ\[S(θ)\]
+>
+>
+>
+> dùng công thức variance VarX = E\[X²\] - (EX)², ta có:
+>
+>
+>
+> Var\_θ\[S(θ)\]
+>
+>
+>
+> = E\_θ\[S(θ)²\] - (E\_θ\[S(θ)\])²
+>
+>
+>
+> = E\_θ\[S(θ)²\] (do E\_θ\[S(θ)\] = 0 với mọi θ như đã hiểu ở note trước)
+>
+>
+>
+> = E\_θ\[(∂/∂θ log L(θ|𝐗))²\]. Và theo Lemma 7.3.11, cái này chính là -E\_θ\[∂²/∂θ² log f(𝐗|θ)\], cũng là In(θ) (information number of sample size n)
+>
+>
+>
+> Rồi, như vậy. Nếu đặt Z_S = S(θ0) / √In(θ0) thì dưới giả định H0:
+>
+>
+>
+> E\_θ0(Z_S) = E\_θ0\[S(θ0) / √In(θ0)\]
+>
+>
+>
+> = E\_θ0\[S(θ0)\] / √In(θ0) (dùng tính linearity của kì vọng)
+>
+>
+>
+> = 0 / √In(θ0) = 0
+>
+>
+>
+> Var\_θ0(Z_S) = Var\_θ0(S(θ0) / √In(θ0))
+>
+>
+>
+> = Var\_θ0(S(θ0)) / In(θ0) (dùng tính Var(cX) = c²Var(X))
+>
+>
+>
+> = In(θ0)/In(θ0) = 1
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy theo 10.1.12 nói rằng Z_S → n(0,1) là sao?
+>
+>
+>
+> Phân tích S(θ) chút xíu:
+>
+>
+>
+> S(θ) = ∂/∂θ log L(θ|𝐗) = ∂/∂θ log f(𝐗|θ) (chỉ là d=lôi lại định nghĩa S(θ)
+>
+>
+>
+> = ∂/∂θ log Πi f(Xi|θ)
+>
+>
+>
+> = ∂/∂θ Σi log f(Xi|θ)
+>
+>
+>
+> = Σi ∂/∂θ log f(Xi|θ)
+>
+>
+>
+> Nên S(θ0) = \[Σi ∂/∂θ log f(Xi|θ)\]θ=θ0
+>
+>
+>
+> = Σi \[∂/∂θ log f(Xi|θ)\]θ=θ0
+>
+>
+>
+> Đặt Yi = \[∂/∂θ log f(Xi|θ)\]θ=θ0, ta có S0 = Σi Yi
+>
+>
+>
+> Xét ∂/∂θ log f(Xi|θ) = (1/f(Xi|θ)) ∂/∂θ f(Xi|θ) (chain rule)
+>
+>
+>
+> Nên Yi = \[∂/∂θ log f(Xi|θ)\]θ=θ0 = {(1/f(Xi|θ)) ∂/∂θ f(Xi|θ) }|θ=θ0
+>
+>
+>
+> ⇔ Yi = {(1/f(Xi|θ0)) ∂/∂θ f(Xi|θ) }|θ=θ0
+>
+>
+>
+> ⇔ Yi = \[∂/∂θ f(Xi|θ)\]|θ=θ0 / f(Xi|θ0)
+>
+>
+>
+> Lấy kì vọng theo LOTUS: E\_θ0(Yi) = ∫ {\[∂/∂θ f(xi|θ)\]|θ=θ0 / f(xi|θ0)} f(xi|θ0) dxi
+>
+>
+>
+>  = ∫ {\[∂/∂θ f(xi|θ)\]|θ=θ0 dxi
+>
+>
+>
+>  = (∂/∂θ ∫f(xi|θ) dxi) |θ=θ0
+>
+>
+>
+>  = (∂/∂θ (1) |θ=θ0
+>
+>
+>
+>  = 0 |θ=θ0
+>
+>
+>
+> = 0
+>
+>
+>
+> Vậy E\_θ0(Yi) = 0 với mọi i
+>
+>
+>
+> Var\_θ0(Yi) = E\_θ0(Yi²) - \[E\_θ0(Yi)\]² = E\_θ0(Yi²)
+>
+>
+>
+> = ∫ {\[∂/∂θ f(xi|θ)\]|θ=θ0 / f(xi|θ0)}²  f(xi|θ0) dxi
+>
+>
+>
+> = ∫ \[\[∂/∂θ f(xi|θ)\]|θ=θ0\]² / \[f(xi|θ0)\]² × f(xi|θ0) dxi
+>
+>
+>
+> = ∫ \[\[∂/∂θ f(xi|θ)\]|θ=θ0\]² / \[f(xi|θ0)\] dxi
+>
+>
+>
+> = ∫ \[\[∂/∂θ f(xi|θ)\]|θ=θ0\]² / \[f(xi|θ0)\] dxi (1) 
+>
+>
+>
+> ---
+>
+>
+>
+> Tới đây nếu biến đổi tiếp để cho ra I1(θ) thì hơi rối ta sẽ nhìn lại định nghĩa của I1(θ) = E\_θ\[(∂/∂θ log f(Xi|θ))² \], và triển khai ra để cho thấy nó chính là kết quả trên (1):
+>
+>
+>
+> Dùng LOTUS triển khai ra:
+>
+>
+>
+> I1(θ) = E\_θ\[(∂/∂θ log f(Xi|θ))²\] = ∫ (∂/∂θ log f(xi|θ))² f(xi|θ) dxi
+>
+>
+>
+> ⇔ I1(θ) = ∫ \[(1/f(xi|θ)) ∂/∂θ f(xi|θ)\]² f(xi|θ) dxi
+>
+>
+>
+> ⇔ I1(θ) = ∫ \[\[∂/∂θ f(xi|θ)\]² / f(xi|θ) dxi
+>
+>
+>
+> Vậy ⇔ I1(θ0) = ∫ \[\[∂/∂θ f(xi|θ)\]² / f(xi|θ) dxi |θ=θ0
+>
+>
+>
+> = ∫ \[\[∂/∂θ f(xi|θ)|θ=θ0\]² / f(xi|θ0) dxi  → ta thấy nó chính là (1)
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy Var\_θ0(Yi) = I1(θ0)
+>
+>
+>
+> E\_θ0(Yi) = 0
+>
+>
+>
+> Gọi Sample mean Ybar = (Σi Yi)/n 
+>
+>
+>
+> Theo CLT: √n(Ybar - E\_θ0(Yi)) / √Var\_θ0(Yi) → (d) n(0,1)
+>
+>
+>
+> tức là √n(Ybar) /  √I1(θ0) → (d) n(0,1)
+>
+>
+>
+>
+>
+> Mà √n(Ybar) / √I1(θ0) là cái gì, thế công thức Yi vào lại:
+>
+>
+>
+> Ybar = (Σi Yi)/n  = S0/n
+>
+>
+>
+> Như vậy ta có √n(S0/n) /  √I1(θ0) → (d) n(0,1)
+>
+>
+>
+> ⇔ (S0/√n√I1(θ0) → (d) n(0,1)
+>
+>
+>
+> ⇔ (S0/√nI1(θ0) → (d) n(0,1)
+>
+>
+>
+> ⇔ (S0/√In(θ0) → (d) n(0,1)
+>
+>
+>
+> Vế trái chính là Z_S, vậy ta chứng minh xong Z_S → (d) n(0,1)
+>
+>
+>
+> ---
+>
+>
+>
+> Và khi đã có Z_S → (d) n(0,1), ta có thể dùng nó để tạo large sample test cho bài toán two-sides test, như đã làm nhiều lần: Reject H0 khi |Z_S| lớn hơn mốc nào đó 
+>
+>
+>
+> Để rồi nếu chọn mốc này là z\_α/2, là giá trị của normal(0,1) sao cho P(Z ≥ z\_α/2) = α/2 và P(Z ≤ -z\_α/2) = α/2 ta sẽ có level của cái test này như sau:
+>
+>
+>
+> sup\_Θ0 P\_θ(Reject H0) = sup\_θ=θ0 P\_θ(Reject H0)
+>
+>
+>
+>  = P\_θ0(Reject H0)
+>
+>
+>
+>  = P\_θ0(|Z_S| ≥ z\_α/2)
+>
+>
+>
+>  = P\_θ0(Z_S ≥ z\_α/2 or Z_S ≤ -z\_α/2)
+>
+>
+>
+>  = P\_θ0(Z_S ≥ z\_α/2) + P\_θ0(Z_S ≤ -z\_α/2)
+>
+>
+>
+> Và vì khi n → ∞ thì Z_S → (d) n(0,1) nên:
+>
+>
+>
+> sup\_Θ0 P\_θ(Reject H0) → P\_θ0(Z ≥ z\_α/2) + P\_θ0(Z ≤ -z\_α/2), và cái này theo định nghĩa của z\_α/2 ở trên, sẽ = α/2 + α/2 = α. Có nghĩa là ta có test dựa trên Z_S sẽ là một phép thử có level tiệm cận α
+>
+>
+>
+> ---
+>
+>
+>
+> Còn khúc cuối nói về Lagrangian multipler test, quay lại sau.
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **93/100**
+>
+> Ghi chú xuất sắc, bạn đã tự giải mã và chứng minh chi tiết định lý hội tụ theo luật số lớn/CLT vốn bị sách giáo trình giản lược.
+
+**🔗 See also:** [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr)
 
 <br>
 
