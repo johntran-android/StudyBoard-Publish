@@ -1,13 +1,9 @@
-# Lecture 9: Independece,
-basis, And Dimension
+# Lecture 9: Independece, Basis, And Dimension
 
 📊 **Progress:** `35` Notes | `37` Screenshots
 
 ---
 <a id="node-t2djvda"></a>
-
-## Lecture 9: Independece,
-basis, And Dimension
 
 <br>
 
@@ -18,6 +14,8 @@ basis, And Dimension
 <br>
 
 <a id="node-x5sbp5v"></a>
+
+### Nonzero Solutions to Ax = 0
 
 <p align="center"><kbd><img src="assets/sgyjxpp1cz.png" width="80%"></kbd></p>
 
@@ -30,6 +28,8 @@ basis, And Dimension
 <br>
 
 <a id="node-che36ei"></a>
+
+#### Nonzero Solutions to Homogeneous Systems
 
 <p align="center"><kbd><img src="assets/5p50jhsjx38.png" width="80%"></kbd></p>
 
@@ -59,6 +59,8 @@ basis, And Dimension
 <br>
 
 <a id="node-efjctea"></a>
+
+##### Definition of Linear Independence
 
 <p align="center"><kbd><img src="assets/m7axls960f.png" width="80%"></kbd></p>
 
@@ -170,7 +172,7 @@ basis, And Dimension
 >
 > Vậy nếu ta xét matrix A có 3 cột là 3 column vector v1,v2,v3
 > thì đương nhiên ta có matrix A với m<n như vậy. Từ đó
-> Ax=0 luôn có solution khác 0, gọi nó là [c1, c2, c3].T đi
+> Ax=0 luôn có solution khác 0, gọi nó là [c1, c2, c3]ᵀ đi
 >
 >
 >
@@ -354,7 +356,7 @@ basis, And Dimension
 >
 >
 >
-> Vậy **nullspace của I chỉ có zero vector** => như hồi nãy đã
+> Vậy **nullspace của I chỉ có zero vector** ⇒ như hồi nãy đã
 > biết, điều này có thể **kết luận các cols independence.**
 
 <br>
@@ -369,7 +371,7 @@ basis, And Dimension
 >
 >
 >
-> Chỉ 2 vec được không? => Không, **vì 2 vector (independence)
+> Chỉ 2 vec được không? ⇒ Không, **vì 2 vector (independence)
 > chỉ span được một 2D plane trong R3**
 
 <br>
@@ -432,8 +434,8 @@ basis, And Dimension
 >
 >
 > Đồng nghĩa **EA = I** (E là elimination matrix). Từ đó suy
-> ra **E chính là A_inv** đồng nghĩa **A là invertible matrix (vì
-> tồn tại A_inv)**
+> ra **E chính là A⁻¹** đồng nghĩa **A là invertible matrix (vì
+> tồn tại A⁻¹)**
 
 **🔗 See also:** [linked note](./lecture_8_solving_ax_b_row_reduced_form_r.md#node-i0hzrgh)
 
@@ -444,7 +446,7 @@ basis, And Dimension
 <p align="center"><kbd><img src="assets/ljfhs3py4a.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> thế thì gs hỏi rằng, nếu tôi x**óa đi một vector**, (3 3 8).T thì
+> thế thì gs hỏi rằng, nếu tôi x**óa đi một vector**, (3 3 8)ᵀ thì
 > **hai vector còn lại** này **có là basis của một space nào ko**?
 
 <br>
@@ -505,10 +507,10 @@ basis, And Dimension
 > columns/variable, vì sao, vì ngay cả khi mỗi hàng có một
 > pivot, thì nó c**ũng chỉ có 3 pivot**, cùng **đồng nghĩa là
 > chỉ có 3 pivot columns** -> **dư một columns** là **free**
-> columns => Ax=0 **có specials solution** cũng là **basis của
-> nullspace** => nullspace không chỉ chứa zero vector => **có
+> columns ⇒ Ax=0 **có specials solution** cũng là **basis của
+> nullspace** ⇒ nullspace không chỉ chứa zero vector ⇒ **có
 > bộ non-zero coefficient tạo linear combination giữa các
-> columns bằng 0** => c**ác cols không independence.**
+> columns bằng 0** ⇒ c**ác cols không independence.**
 
 <br>
 
@@ -620,7 +622,7 @@ basis, And Dimension
 >
 >
 >
-> => một vector khác 0 của nulls-pace: (**1 0 0 -1)**
+> ⇒ một vector khác 0 của nulls-pace: (**1 0 0 -1)**
 
 <br>
 
@@ -679,6 +681,8 @@ basis, And Dimension
 
 <a id="node-dh6f1jg"></a>
 
+###### Rank and Column Space Dimension
+
 <p align="center"><kbd><img src="assets/c1je95btaet.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -694,6 +698,8 @@ basis, And Dimension
 <br>
 
 <a id="node-fr6cto4"></a>
+
+###### Column Space and Matrix Rank
 
 <p align="center"><kbd><img src="assets/t0r1al8gfkq.png" width="80%"></kbd></p>
 
