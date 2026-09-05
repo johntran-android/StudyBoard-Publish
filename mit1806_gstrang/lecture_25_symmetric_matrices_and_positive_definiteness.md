@@ -1,13 +1,9 @@
-# Lecture 25: Symmetric Matrices
-and Positive Definiteness
+# Lecture 25: Symmetric Matrices And Positive Definiteness
 
 📊 **Progress:** `28` Notes | `30` Screenshots
 
 ---
 <a id="node-wp5txiq"></a>
-
-## Lecture 25: Symmetric Matrices
-and Positive Definiteness
 
 <br>
 
@@ -69,7 +65,7 @@ and Positive Definiteness
 > Và đối với matrix **SYMMETRIC** **LUÔN CÓ** **ĐỦ BỘ (n, là số
 > column của A) EIGENVECTOR ĐỘC LẬP** - Là điều kiện mà
 > trong bài trước ta đã biết, để matrix có thể phân tách thành A =
-> SΛSinv và AS = SΛ (Diagonalization hay Eigen-decomposition)
+> SΛS⁻¹ và AS = SΛ (Diagonalization hay Eigen-decomposition)
 >
 >
 >
@@ -88,7 +84,7 @@ and Positive Definiteness
 > SYMMETRIC LUÔN CÓ ĐỦ BỘ (n, là số
 > column của A) EIGENVECTOR ĐỘC LẬP
 
-**🔗 See also:** [linked note](./lecture_22_diagonalization_and_powers_of_a.md#node-2jhlbd4)
+**🔗 See also:** [Matrix Diagonalization AS = SΛ](./lecture_22_diagonalization_and_powers_of_a.md#node-2jhlbd4)
 
 <br>
 
@@ -136,6 +132,8 @@ and Positive Definiteness
 
 <a id="node-by156v3"></a>
 
+###### Diagonalization of Symmetric Matrices
+
 <p align="center"><kbd><img src="assets/5xcu8yxdwnp.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -157,7 +155,7 @@ and Positive Definiteness
 >
 >
 > Gọi x, y là eigenvector của A với eigenvalue tương ứng là
-> lambda1, lambda2:
+> λ1, λ2:
 >
 >
 >
@@ -169,28 +167,28 @@ and Positive Definiteness
 >
 >
 >
-> (**λ1x)Ty** = (Ax)Ty (vì Ax = λ1x)
+> (**λ1x)ᵀy** = (Ax)ᵀy (vì Ax = λ1x)
 >
 >
 >
-> = xTATy ((Ax)T = xTAT)
+> = xᵀAᵀy ((Ax)ᵀ = xᵀAᵀ)
 >
 >
 >
-> = xTAy (vì AT=A do symmetric)
+> = xᵀAy (vì Aᵀ=A do symmetric)
 >
 >
 >
-> = xTλ2y (do Ay = λ2y)
+> = xᵀλ2y (do Ay = λ2y)
 >
 >
 >
-> = λ2**xTy** (đưa λ2 lên trước vì là scalar)
+> = λ2**xᵀy** (đưa λ2 lên trước vì là scalar)
 >
 >
 >
-> Vậy **λ1xTy = λ2xTy, mà λ1 khác λ2 do ta đang assum hai 
-> eigenvalue khác nhau. Vậy suy ra xTy = 0 => x,y vuông góc**
+> Vậy **λ1xᵀy = λ2xᵀy, mà λ1 khác λ2 do ta đang assum hai 
+> eigenvalue khác nhau. Vậy suy ra xᵀy = 0 ⇒ x,y vuông góc**
 >
 > Với Symmetric matrix, S (matrix các eigenvectors) lúc
 > này trở thành Q - ORTHOGONAL matrix
@@ -199,11 +197,13 @@ and Positive Definiteness
 
 <a id="node-jeo4tcj"></a>
 
+###### Factorization of Symmetric Matrices
+
 <p align="center"><kbd><img src="assets/ee3v0m6oavc.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Và như ta đã biết với orthogonal matrix, **Q inverse** chính là
-> **Q transpose (*)**, Từ đó ta có **A = QΛQT**
+> **Q transpose (*)**, Từ đó ta có **A = QΛQᵀ**
 >
 >
 >
@@ -212,14 +212,14 @@ and Positive Definiteness
 >
 >
 >
-> Và dễ hiểu rằng **khi nào ta có một matrix A thỏa A = QΛQT**
+> Và dễ hiểu rằng **khi nào ta có một matrix A thỏa A = QΛQᵀ**
 > thì ta cũng có thể **suy ra nó symmetric**, đơn giản bằng
-> cách tính **AT** = (QΛQT)T = [(QΛ)QT]T = (QTT)(Q.Λ)T
-> Q(ΛTQT) = **QΛQT = A**
+> cách tính **Aᵀ** = (QΛQᵀ)ᵀ = [(QΛ)Qᵀ]ᵀ = (Qᵀᵀ)(Q.Λ)ᵀ
+> Q(ΛTQᵀ) = **QΛQᵀ = A**
 >
 >
 >
-> (dùng (AB)T = BTAT và ΛT = Λ, diagonal matrix, đương nhiên
+> (dùng (AB)ᵀ = BᵀAᵀ và ΛT = Λ, diagonal matrix, đương nhiên
 > cũng symmetric)
 >
 >
@@ -229,12 +229,12 @@ and Positive Definiteness
 >
 >
 > (*): Ôn lại nhanh, là vì với Q, các columns **orthogonal** và
-> **length bằng 1**. Nên **QTQ = QQT = I** (các columns dot
+> **length bằng 1**. Nên **QᵀQ = QQᵀ = I** (các columns dot
 > product với chính nó thì bằng norm = 1, còn dot product với
-> khác nó thì thành 0 do perpendicular) => **QT chính là Q_inv**
+> khác nó thì thành 0 do perpendicular) ⇒ **Qᵀ chính là Q⁻¹**
 >
 > Và vì với orthogonal matrix thì
-> QT = Qinv nên A = QΛQT
+> Qᵀ = Q⁻¹ nên A = QΛQᵀ
 
 <br>
 
@@ -362,6 +362,8 @@ and Positive Definiteness
 
 <a id="node-tlpoiae"></a>
 
+###### Proof of Real Eigenvalues
+
 <p align="center"><kbd><img src="assets/51iqzrmghch.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fqvd4ezuzsj.png" width="80%"></kbd></p>
@@ -371,7 +373,7 @@ and Positive Definiteness
 >
 >
 >
-> i) Từ Ax = λx, nhân hai vế (vào bên trái) với (**x_conj)T** ,
+> i) Từ Ax = λx, nhân hai vế (vào bên trái) với (**x_conj)ᵀ** ,
 >
 >
 >
@@ -385,11 +387,11 @@ and Positive Definiteness
 >
 >
 >
-> Ax = λx<=> **(x_bar)T**Ax = **(x_bar)T**λx
+> Ax = λx⇔ **(x_bar)ᵀ**Ax = **(x_bar)ᵀ**λx
 >
 >
 >
-> ii) Từ (x_bar)TA = (x_bar)T(λ_bar)
+> ii) Từ (x_bar)ᵀA = (x_bar)ᵀ(λ_bar)
 >
 >
 >
@@ -397,23 +399,25 @@ and Positive Definiteness
 >
 >
 >
-> (x_bar)TA**x** = (x_bar)T(λ_bar)**x** 
+> (x_bar)ᵀA**x** = (x_bar)ᵀ(λ_bar)**x** 
 >
 >
 >
-> <=> (x_bar)TAx =λ_bar(x_bar)T**x** (dời λ_bar lên trước)
+> ⇔ (x_bar)ᵀAx =λ_bar(x_bar)ᵀ**x** (dời λ_bar lên trước)
 >
 >
 >
-> <=> (x_bar)Tλx = λ_bar(x_bar)Tx (Ax = λx)
+> ⇔ (x_bar)ᵀλx = λ_bar(x_bar)ᵀx (Ax = λx)
 >
 > Nếu matrix A, REAL & **SYMMETRIC** THÌ
 > EIGENVECTOR VÀ EIGENVALUE CŨNG REAL, khi đó
-> đương nhiên x_conj và lambda_conj cũng bằng chính nó
+> đương nhiên x_conj và λ_conj cũng bằng chính nó
 
 <br>
 
 <a id="node-5tsdqv5"></a>
+
+###### Real Eigenvalues of Symmetric Matrices
 
 <p align="center"><kbd><img src="assets/zrhmjy77cu.png" width="80%"></kbd></p>
 
@@ -422,20 +426,20 @@ and Positive Definiteness
 >
 >
 >
-> (x_bar)Tλx = λ_bar(x_bar)Tx
+> (x_bar)ᵀλx = λ_bar(x_bar)ᵀx
 >
 >
 >
-> <=> λ(x_bar)Tx = λ_bar(x_bar)Tx
+> ⇔ λ(x_bar)ᵀx = λ_bar(x_bar)ᵀx
 >
 >
 >
-> vì (**x_bar)Tx** (chính là norm của xTx) **khác 0** (gs nói ta sẽ
+> vì (**x_bar)ᵀx** (chính là norm của xᵀx) **khác 0** (gs nói ta sẽ
 > nói cái nay sau) 
 >
 >
 >
-> Chia hai vế cho (x_bar)Tx ta có:  
+> Chia hai vế cho (x_bar)ᵀx ta có:  
 >
 >
 >
@@ -453,7 +457,7 @@ and Positive Definiteness
 <p align="center"><kbd><img src="assets/0frta9r3thw.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì ta sẽ xem xét **x_barTx**: Nhắc lại **x_bar** là
+> Thế thì ta sẽ xem xét **x_barᵀx**: Nhắc lại **x_bar** là
 > **vector** mà **mỗi component** là **conjugate của các
 > phần tử** tương ứng **của** **x**
 >
@@ -471,7 +475,7 @@ and Positive Definiteness
 >
 >
 >
-> Vậy **x_barTx** là dot product của hai vector:
+> Vậy **x_barᵀx** là dot product của hai vector:
 >
 >
 >
@@ -485,7 +489,7 @@ and Positive Definiteness
 >
 >
 >
-> Và từ đó cho ta **kết luận là x_barTx dương** (? không âm thì
+> Và từ đó cho ta **kết luận là x_barᵀx dương** (? không âm thì
 > đúng hơn chứ, vì norm vector có thể bằng 0), và **ta
 > có thể cancel out hai vế**
 
@@ -509,7 +513,7 @@ and Positive Definiteness
 
 > [!NOTE]
 > Đầu tiên **good matrix** là matrix **real** và **symmetric**
-> cho phép **A = AT**
+> cho phép **A = Aᵀ**
 
 <br>
 
@@ -542,7 +546,7 @@ and Positive Definiteness
 >
 >
 >
-> **A = QΛQT**
+> **A = QΛQᵀ**
 >
 >
 >
@@ -554,48 +558,50 @@ and Positive Definiteness
 
 <a id="node-jjn8o5a"></a>
 
+###### Spectral Decomposition of Symmetric Matrices
+
 <p align="center"><kbd><img src="assets/u5dqnh5aaml.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và ta có thể triển khai ra để thấy, đầu tiên là **ΛQT**:
+> Và ta có thể triển khai ra để thấy, đầu tiên là **ΛQᵀ**:
 >
 >
 >
 > Hãy nhớ "**góc nhìn row**", **nhân một row** **với một matrix** thì sẽ
 > là thực hiện linear combination của các row của matrix, với coefficients
 > là các components của row vector.Ở đây các row vector là các row của của Λ. Ví dụ nhân **row đầu tiên
-> của Λ**, là **[λ1, 0,.. 0] với matrix** QT có các rows là q1T, q2T...)
+> của Λ**, là **[λ1, 0,.. 0] với matrix** Qᵀ có các rows là q1T, q2ᵀ...)
 >
 >
 >
-> Kết qủa sẽ **là một row mới**: là λ1q1T + 0q2T+...0qnT = **λ1q1T**,
-> chính là **row đầu tiên của ΛQT**
+> Kết qủa sẽ **là một row mới**: là λ1q1ᵀ + 0q2ᵀ+...0qnᵀ = **λ1q1ᵀ**,
+> chính là **row đầu tiên của ΛQᵀ**
 >
 >
 >
-> Vậy đây chính là nó **CHỈ** **LẤY ROW 1** của QT, **CHÍNH LÀ
+> Vậy đây chính là nó **CHỈ** **LẤY ROW 1** của Qᵀ, **CHÍNH LÀ
 > EIGENVECTOR THỨ 1 CỦA A**, và **SCALE NÓ VỚI λ1** để hàng
-> thứ 1 của ΛQT sẽ là λ1q1T
+> thứ 1 của ΛQᵀ sẽ là λ1q1ᵀ
 >
 >
 >
-> Tương tự row thứ 2 của Λ khi nhân với QT, sẽ có kết quả là nó sẽ
-> **CHỈ LẤY ROW 2** của **QT, CHÍNH LÀ EIGENVECTOR THỨ 2 CỦA
-> A**, và **SCALE NÓ BỞI λ2** để hàng thứ 2 của ΛQT sẽ  là λ2q2T
+> Tương tự row thứ 2 của Λ khi nhân với Qᵀ, sẽ có kết quả là nó sẽ
+> **CHỈ LẤY ROW 2** của **Qᵀ, CHÍNH LÀ EIGENVECTOR THỨ 2 CỦA
+> A**, và **SCALE NÓ BỞI λ2** để hàng thứ 2 của ΛQᵀ sẽ  là λ2q2ᵀ
 >
 >
 >
 > Và các row vector tiếp theo (của matrix Λ) cũng tạo nên các linear
-> combination của các QT's row, để làm thành các row tiếp theo của
+> combination của các Qᵀ's row, để làm thành các row tiếp theo của
 > matrix kết quả.
 >
 >
 >
-> Dễ thấy sẽ lần lượt là λ2q2T, λ3q3T...
+> Dễ thấy sẽ lần lượt là λ2q2ᵀ, λ3q3ᵀ...
 >
 >
 >
-> Và kết quả này giống y như **nhân từng mỗi row của QT với
+> Và kết quả này giống y như **nhân từng mỗi row của Qᵀ với
 > eigenvalue tương ứng** vậy.
 >
 >
@@ -604,9 +610,9 @@ and Positive Definiteness
 >
 >
 >
-> Tiếp kết quả đó (matrix ΛQT) khi nhân với Q: Q(ΛQT) ta sẽ nhân  theo
-> kiểu **từng cột của Q** nhân với **từng hàng của ΛQT**, cho ra **các
-> rank 1 matrix**: λ1.**q1q1T**, λ2.q2q2T...
+> Tiếp kết quả đó (matrix ΛQᵀ) khi nhân với Q: Q(ΛQᵀ) ta sẽ nhân  theo
+> kiểu **từng cột của Q** nhân với **từng hàng của ΛQᵀ**, cho ra **các
+> rank 1 matrix**: λ1.**q1q1ᵀ**, λ2.q2q2ᵀ...
 >
 >
 >
@@ -616,39 +622,43 @@ and Positive Definiteness
 
 <a id="node-9mqrs37"></a>
 
+###### Spectral Decomposition of Symmetric Matrix
+
 <p align="center"><kbd><img src="assets/5c6u08qgmpo.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì gs nhắc ta nhớ rằng, matrix **q1q1T** **CHÍNH LÀ**
+> Thế thì gs nhắc ta nhớ rằng, matrix **q1q1ᵀ** **CHÍNH LÀ**
 > **PROJECTION MATRIX** giúp **project lên vector q1**
 >
 >
 >
 > Ta nhớ lại công thức của projection matrix lên vector a
-> là P = aaT/aTa (lập luận nhanh: aTe = 0 <=> aT(b-p) =
-> 0 <=> aT(b-ax) = 0 <=> aTb - aTax = 0 <=> x = aTb/aTa
-> => p = ax = aaTb/aTa =Pb => P = **aaT/aTa**)
+> là P = aaᵀ/aᵀa (lập luận nhanh: aᵀe = 0 ⇔ aᵀ(b-p) =
+> 0 ⇔ aᵀ(b-ax) = 0 ⇔ aᵀb - aᵀax = 0 ⇔ x = aᵀb/aᵀa
+> ⇒ p = ax = aaᵀb/aᵀa =Pb ⇒ P = **aaᵀ/aᵀa**)
 >
 >
 >
-> mà **q đã là unit norm** nên đương nhiên **qTq = 1**, thì
-> thành ra **q1q1T** **chính là q1q1T/q1Tq1**, và là projection
+> mà **q đã là unit norm** nên đương nhiên **qᵀq = 1**, thì
+> thành ra **q1q1ᵀ** **chính là q1q1ᵀ/q1Tq1**, và là projection
 > matrix lên vector q1.
 >
 >
 >
-> tương tự **q2q2T** chính là **Projection matrix giúp project
+> tương tự **q2q2ᵀ** chính là **Projection matrix giúp project
 > lên q2..**.
 >
 >
 >
 > Gs kiểm tra lại tính chất P^2 = P của các projection
-> matrix này: (q1q1T)^2 =  q1q1T q1q1T = q1 (q1Tq1)
-> q1T = q1q1T -> thỏa tính chất này vì (q1Tq1) = 1
+> matrix này: (q1q1ᵀ)^2 =  q1q1ᵀ q1q1ᵀ = q1 (q1Tq1)
+> q1ᵀ = q1q1ᵀ -> thỏa tính chất này vì (q1Tq1) = 1
 
 <br>
 
 <a id="node-p41rf2c"></a>
+
+###### Spectral Theorem for Symmetric Matrices
 
 <p align="center"><kbd><img src="assets/7biirbhznai.png" width="80%"></kbd></p>
 
@@ -669,20 +679,20 @@ and Positive Definiteness
 >
 >
 >
-> Ax = QΛQTx  = (λ1q1q1T + λ2q2q2T + ..)x
+> Ax = QΛQᵀx  = (λ1q1q1ᵀ + λ2q2q2ᵀ + ..)x
 >
 >
 >
-> = λ1q1q1Tx + λ2q2q2Tx + ..
+> = λ1q1q1ᵀx + λ2q2q2ᵀx + ..
 >
 >
 >
-> Thì **λ1q1q1Tx** cho ta **vector projection của x lên q1**, 
+> Thì **λ1q1q1ᵀx** cho ta **vector projection của x lên q1**, 
 > sau đó **scale với λ1**
 >
 >
 >
-> Tương tự **λ2q2q2Tx** cho ta **vector projection của x lên
+> Tương tự **λ2q2q2ᵀx** cho ta **vector projection của x lên
 > q2**, sau đó **scale với λ2**.
 >
 >
