@@ -1,13 +1,9 @@
-# Lecture 24: Markow
-matrices; Fourier Series
+# Lecture 24: Markow Matrices; Fourier Series
 
 📊 **Progress:** `35` Notes | `37` Screenshots
 
 ---
 <a id="node-4mnj2a5"></a>
-
-## Lecture 24: Markow
-matrices; Fourier Series
 
 <br>
 
@@ -59,7 +55,7 @@ matrices; Fourier Series
 > về phương trình vi phân mà có hai eigenvalue, trong đó
 > **một eigenvalue = 0** giúp **e^0 = 1** khiến cho u(t) có
 > một term **mang giá trị hằng số**, và một term còn lại thì
-> **lambda âm** khiến khi t lớn lên thì exponential của cái
+> **λ âm** khiến khi t lớn lên thì exponential của cái
 > đó sẽ -> e^[trừ vô cùng] = 0
 >
 >
@@ -86,7 +82,7 @@ matrices; Fourier Series
 
 > [!NOTE]
 > và gs cho biết thực tế steady state c**hính là
-> eigenvector ứng với lambda = 1**
+> eigenvector ứng với λ = 1**
 
 <br>
 
@@ -172,11 +168,11 @@ matrices; Fourier Series
 >
 >
 >
-> **[c1*λ1^k, c2*λ2^k......cn*λn^k].T**
+> **[c1*λ1^k, c2*λ2^k......cn*λn^k]ᵀ**
 >
 >
 >
-> Và do đó u(k) = S[c1*λ1^k, c2*λ2^k......cn*λn^k]T
+> Và do đó u(k) = S[c1*λ1^k, c2*λ2^k......cn*λn^k]ᵀ
 >
 >
 >
@@ -235,8 +231,8 @@ matrices; Fourier Series
 >
 >
 >
-> Ta hiểu là gs cho rằng cái lambda = 1 đó là λ1, còn các
-> lambda khác thì đều nhỏ hơn 1. Nên khi k lớn, λ_j^k sẽ
+> Ta hiểu là gs cho rằng cái λ = 1 đó là λ1, còn các
+> λ khác thì đều nhỏ hơn 1. Nên khi k lớn, λ_j^k sẽ
 > nhỏ dần nhỏ dần thành 0.
 >
 >
@@ -290,7 +286,7 @@ matrices; Fourier Series
 >
 > (review một chút, là bởi vì phát xuất từ định nghĩa của
 > eigenvector và eigenvalue là Ax = λx, nên tương đương
-> (A-λI)x = 0 => x là vector nonzero trong nullspace của A-λI,
+> (A-λI)x = 0 ⇒ x là vector nonzero trong nullspace của A-λI,
 > mà để điều này xảy ra thì A-λI phải singular thì dimension
 > của nullspace mới khác 0. Từ đó giúp ta thiết lập điều kiện
 > để tìm λ: là det(A-λI) = 0 (vì singular matrix có det = 0)
@@ -326,12 +322,14 @@ matrices; Fourier Series
 > bằng 1, nói cách khác là tổng các hàng sẽ thành 1 hàng
 > toàn số 1, thành ra nếu trừ mỗi cột đi cho 1, thì tổng các
 > entries trong mỗi cột sẽ bằng 0, đồng nghĩa tổng các hàng
-> sẽ thành một hàng toàn 0 => kết luận ngay các row phụ
+> sẽ thành một hàng toàn 0 ⇒ kết luận ngay các row phụ
 > thuộc nhau -> singular matrix
 
 <br>
 
 <a id="node-ueu3jed"></a>
+
+###### Singularity of A Minus I
 
 <p align="center"><kbd><img src="assets/2svzof1e527.png" width="80%"></kbd></p>
 
@@ -339,9 +337,9 @@ matrices; Fourier Series
 
 > [!NOTE]
 > Gs: correct, nói cách khác, (**1,1,1)** **nằm trong nullspace
-> của (A-I)T,** ý là việc tổng các hàng bằng 0, có nghĩa là
+> của (A-I)ᵀ,** ý là việc tổng các hàng bằng 0, có nghĩa là
 > combine các hàng với bộ coefficient (1,1,1) = 0, thì đây
-> cho thấy (1,1,1) là solution của (A-I)Ty = 0 => đó chính là một
+> cho thấy (1,1,1) là solution của (A-I)ᵀy = 0 ⇒ đó chính là một
 > basis vector của left nullspace của (A-I) 
 >
 >
@@ -356,17 +354,17 @@ matrices; Fourier Series
 > hiện bởi việc **tồn tại vector khác 0** trong nullspace, hoặc
 > left nullspace. Nên matrix non-singular, invertible chỉ khi
 > **không có non-zero vector nào bị biến thành 0 bởi A** (tức
-> Ax=0) **hoặc AT** (tức ATy = 0).
+> Ax=0) **hoặc Aᵀ** (tức Aᵀy = 0).
 >
 >
 >
-> Nên nếu gọi u = (1,1,1) thì (AT-I)u = 0 <=> ATu-u = 0 
-> <=> ATu = u, điều này suy ra u = (1,1,1) LÀ EIGENVECTOR 
-> CỦA AT, VỚI EIGENVALUE = 1
+> Nên nếu gọi u = (1,1,1) thì (Aᵀ-I)u = 0 ⇔ Aᵀu-u = 0 
+> ⇔ Aᵀu = u, điều này suy ra u = (1,1,1) LÀ EIGENVECTOR 
+> CỦA Aᵀ, VỚI EIGENVALUE = 1
 >
 >
 >
-> (*): Chỗ này có vẻ như gs đang ghi nhầm là N(AT), bởi vì rõ
+> (*): Chỗ này có vẻ như gs đang ghi nhầm là N(Aᵀ), bởi vì rõ
 > ràng là ta đang xét matrix (A - I)
 
 **🔗 See also:** [linked note](#node-ulnm7rm)
@@ -379,18 +377,18 @@ matrices; Fourier Series
 
 > [!NOTE]
 > Gs hỏi tiếp, ta đã biết (1,1,1) là **nằm trong nullspace of
-> AT-I** và là eigenvector của AT (với eigenvalue = 1) thế thì
+> Aᵀ-I** và là eigenvector của Aᵀ (với eigenvalue = 1) thế thì
 > **cái gì trong nullspace của A - I**
 >
 >
 >
-> Thì có thể lập luận thế này: Vì (A-I)T SINGULAR, nên dĩ
+> Thì có thể lập luận thế này: Vì (A-I)ᵀ SINGULAR, nên dĩ
 > nhiên A-I cũng SINGULAR nên cũng tồn tại non-zero vector
 > bị biến thành 0 bởi (A-I):
 >
 >
 >
-> (A - I)x1 = 0 <=> Ax1 = x1
+> (A - I)x1 = 0 ⇔ Ax1 = x1
 >
 >
 >
@@ -417,42 +415,44 @@ matrices; Fourier Series
 > [!NOTE]
 > Tiếp gs nói rằng vì eigenvalue không phải lúc nào
 > cũng dễ tìm nên sẽ thuận tiện hơn nếu ta biết một số
-> sự thật. Ví dụ **eigenvalue của A và AT là giống nhau**
+> sự thật. Ví dụ **eigenvalue của A và Aᵀ là giống nhau**
 
 <br>
 
 <a id="node-206k1i3"></a>
+
+###### Eigenvalues of Transposed Matrices
 
 <p align="center"><kbd><img src="assets/mloml2lpj2.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Lập luận là: vì **λ là eigenvalue của A** thì ta có **det (A - λI)
 > = 0**, mà theo property #10 của determinant bữa trước ta đã
-> biết là **det A = det AT**
+> biết là **det A = det Aᵀ**
 >
 >
 >
-> Dẫn tới: **det (A - λI)T cũng bằng 0.**
+> Dẫn tới: **det (A - λI)ᵀ cũng bằng 0.**
 >
 >
 >
-> Mà (A - λI)T = AT - (λI)T = AT - λI
+> Mà (A - λI)ᵀ = Aᵀ - (λI)ᵀ = Aᵀ - λI
 >
 >
 >
-> Vậy det (AT - λI) = 0
+> Vậy det (Aᵀ - λI) = 0
 >
 >
 >
-> Và điều này chứng tỏ AT - λI là SINGULAR matrix Dẫn
+> Và điều này chứng tỏ Aᵀ - λI là SINGULAR matrix Dẫn
 > đến, tồn tại non-zero vector trong nullspace của nó, gọi nó là
-> x, ta có (AT - λI)x = 0 hay, ATx = λx
+> x, ta có (Aᵀ - λI)x = 0 hay, Aᵀx = λx
 >
 >
 >
-> ATx = λx **chứng tỏ λ CŨNG LÀ EIGENVALUE CỦA AT**
+> Aᵀx = λx **chứng tỏ λ CŨNG LÀ EIGENVALUE CỦA Aᵀ**
 >
-> EIGENVALUE CỦA A VÀ AT GIỐNG NHAU
+> EIGENVALUE CỦA A VÀ Aᵀ GIỐNG NHAU
 
 <br>
 
@@ -484,12 +484,12 @@ matrices; Fourier Series
 >
 > Chú thích (*): Chỗ này có vẻ hơi dư, bởi lẽ bằng việc
 > chứng minh **matrix A - 1*I singular** đã suy ra **det (A-1*I)**
-> = 0 => tồn tại x khiến (A -1*I)x = 0 hay Ax = x, đồng
+> = 0 ⇒ tồn tại x khiến (A -1*I)x = 0 hay Ax = x, đồng
 > nghĩa là x chính là eigenvector của A với eigenvalue = 1
-> rồi. Đâu có cần phải dựa vào việc biết eigenvalue của AT
+> rồi. Đâu có cần phải dựa vào việc biết eigenvalue của Aᵀ
 > rồi suy ra nó cũng là eigenvalue của A
 
-**🔗 See also:** [linked note](#node-ueu3jed)
+**🔗 See also:** [Singularity of A Minus I](#node-ueu3jed)
 
 <br>
 
@@ -548,7 +548,7 @@ matrices; Fourier Series
 >
 >
 >
-> 0*[.9, .1]T + 1000*[.2, .8]T = [200, 800]T
+> 0*[.9, .1]ᵀ + 1000*[.2, .8]ᵀ = [200, 800]ᵀ
 >
 >
 >
@@ -653,7 +653,7 @@ matrices; Fourier Series
 >
 >
 > Thế λ2 vào, và cũng không khó để tìm thấy eigenvector
-> x2 = [-1 1].T
+> x2 = [-1 1]ᵀ
 >
 >
 >
@@ -736,35 +736,28 @@ matrices; Fourier Series
 
 <a id="node-fv5ig2v"></a>
 
+###### Projections with Orthonormal Basis
+
 <p align="center"><kbd><img src="assets/afqyt8u5tzg.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì gs nói rằng tất nhiên ta cũng có thể dùng cách
-> tiếp cận bữa trước - **project một vector lên subspace**
-> (**cols space của A**, hay Q trong trường hợp một matrix
-> có các cols orthonormal).
+> Thế thì gs nói rằng tất nhiên ta cũng có thể dùng cách tiếp cận bữa trước - **project một vector lên subspace**(**cols space của A**, hay Q trong trường hợp một matrix có các cols orthonormal).
 >
 >
 >
-> Nhưng kiểu như gs muốn **add thêm comment** vào
-> **trường hợp đặc biệt** này, khi ta có một **subspace
-> span bởi một bộ orthonormal** và **"ĐẦY ĐỦ"** (ý nói **đủ
-> vector để span hết Rn**)
+> Nhưng kiểu như gs muốn **add thêm comment** vào **trường hợp đặc biệt** này, khi ta có một **subspace span bởi một bộ orthonormal** và **"ĐẦY ĐỦ"** (ý nói **đủ vector để span hết Rn**)
 >
 >
 >
-> Vậy thì **đầu tiên** gs chỉ ra ta có thể **tìm ngay x1**
-> (coefficient gắn với q1) bằng cách **nhân hai vế với q1**.
+> Vậy thì **đầu tiên** gs chỉ ra ta có thể **tìm ngay x1**(coefficient gắn với q1) bằng cách **nhân hai vế với q1**.
 >
 >
 >
-> Các phép dot product **giữa q1 và các q_khác sẽ thành
-> 0**, vì các vector **orthogonal**)
+> Các phép dot product **giữa q1 và các q_khác sẽ thành 0**, vì các vector **orthogonal**)
 >
 >
 >
-> Chỉ còn **x1q1Tq1 sẽ bằng x1** vì **q1Tq1 là norm của
-> vector**, vốn dĩ đã nói là orthonormal nên norm = 1.
+> Chỉ còn **x1q1Tq1 sẽ bằng x1** vì **q1Tq1 là norm của vector**, vốn dĩ đã nói là orthonormal nên norm = 1.
 >
 >
 >
@@ -774,16 +767,15 @@ matrices; Fourier Series
 >
 > Nếu làm tương tự ta sẽ có **x2 = q2Tv, x3 = q3Tv...**
 >
-> PROJECTION vector v WITH ORTHONORMAL 
-> BASIS q1, q2 ...
+> PROJECTION vector v WITH ORTHONORMAL BASIS q1, q2 ...
 >
 >
 >
-> x1 = q1Tv 
+> x1 = q1Tv
 >
 >
 >
-> x2 = q2Tv, 
+> x2 = q2Tv,
 >
 >
 >
@@ -797,18 +789,18 @@ matrices; Fourier Series
 
 > [!NOTE]
 > Và viết theo matrix thì nó như vầy, **Qx = v**. Và nhân hai
-> vế cho **Q_inv** ta có **x = Q_inv.v** (điều này cho phép vì lẽ
+> vế cho **Q⁻¹** ta có **x = Q⁻¹.v** (điều này cho phép vì lẽ
 > dĩ nhiên **Q là nxn full-rank / invertible matrix**)
 >
 >
 >
 > Và đặc biệt hơn vì Q là **orthogonal**, **square**
 > matrix, có **orthonormal columns**, nên Q là orthogonal
-> matrix) nên như hồi bữa ta đã biết **Q_inv cũng là Q.T**
+> matrix) nên như hồi bữa ta đã biết **Q⁻¹ cũng là Qᵀ**
 >
 >
 >
-> Vậy **x = QTv**
+> Vậy **x = Qᵀv**
 >
 >
 >
@@ -871,6 +863,8 @@ matrices; Fourier Series
 
 <a id="node-8jcwpi3"></a>
 
+###### Orthonormal Bases and Fourier Series
+
 <p align="center"><kbd><img src="assets/tnx5pcdyl6d.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -910,7 +904,7 @@ matrices; Fourier Series
 >
 >
 >
-> f(x)Tg(x) là **tích phân từ 0 đến 2*pi f(x)g(x)dx**
+> f(x)ᵀg(x) là **tích phân từ 0 đến 2*pi f(x)g(x)dx**
 
 <br>
 
