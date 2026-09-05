@@ -1,13 +1,9 @@
-# Lecture 15: Projections
-onto Subspaces
+# Lecture 15: Projections Onto Subspaces
 
 📊 **Progress:** `45` Notes | `47` Screenshots
 
 ---
 <a id="node-l9qi36h"></a>
-
-## Lecture 15: Projections
-onto Subspaces
 
 <br>
 
@@ -58,7 +54,7 @@ onto Subspaces
 >
 >
 >
-> aTe = 0 <=> aT(b-p) = 0 <=> aT(b-xa) = 0 <=> aT(b-xa) = 0
+> aᵀe = 0 ⇔ aᵀ(b-p) = 0 ⇔ aᵀ(b-xa) = 0 ⇔ aᵀ(b-xa) = 0
 
 <br>
 
@@ -71,11 +67,11 @@ onto Subspaces
 >
 >
 >
-> aT(b-xa) = 0 <=> aTb-aTxa = 0
+> aᵀ(b-xa) = 0 ⇔ aᵀb-aᵀxa = 0
 >
 >
 >
-> <=> aTb = aTxa = xaTa (vì x là scalar nên move đi đâu cũng
+> ⇔ aᵀb = aᵀxa = xaᵀa (vì x là scalar nên move đi đâu cũng
 > được)
 
 <br>
@@ -85,7 +81,7 @@ onto Subspaces
 <p align="center"><kbd><img src="assets/4x8af1nwlm6.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> và chia hai vế cho aTa, ta có x = aTb / aTa 
+> và chia hai vế cho aᵀa, ta có x = aᵀb / aᵀa 
 >
 >
 >
@@ -140,8 +136,8 @@ onto Subspaces
 <p align="center"><kbd><img src="assets/8i9txq96566.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và **aaT/aTa chính là matrix P**, mẫu số là một
-> **scalar** (dot product của a với chính nó) và **aaT
+> Và **aaᵀ/aᵀa chính là matrix P**, mẫu số là một
+> **scalar** (dot product của a với chính nó) và **aaᵀ
 > là một cols x một row** -> như ta đã biết nó là
 > một **RANK 1 MATRIX**
 
@@ -192,6 +188,8 @@ onto Subspaces
 
 <a id="node-xra2vuk"></a>
 
+###### Projection Matrix Column Space
+
 <p align="center"><kbd><img src="assets/vd8k607eus.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -200,15 +198,15 @@ onto Subspaces
 >
 >
 >
-> Có, vì PT = **(aaT/aTa)T** = (aaT)T/(aTa) = aTTaT/aTa 
+> Có, vì Pᵀ = **(aaᵀ/aᵀa)ᵀ** = (aaᵀ)ᵀ/(aᵀa) = aᵀᵀaᵀ/aᵀa 
 >
 >
 >
-> = **aaT/aTa** = P
+> = **aaᵀ/aᵀa** = P
 >
 >
 >
-> => tức là vẫn transpose bằng chính nó, nên nó mà 
+> ⇒ tức là vẫn transpose bằng chính nó, nên nó mà 
 > **symmetric** matrix
 
 <br>
@@ -232,7 +230,7 @@ onto Subspaces
 
 > [!NOTE]
 > Từ đó ta có hai tính chất của
-> matrix P: **P.T = P và P**2 = P**
+> matrix P: **Pᵀ = P và P**2 = P**
 
 <br>
 
@@ -434,19 +432,21 @@ onto Subspaces
 >
 >
 > a1T và a2T - tức là transpose hai columns của A, đương nhiên 
-> sẽ có matrix AT, ta có: **AT(b-Ax^) = 0**
+> sẽ có matrix Aᵀ, ta có: **Aᵀ(b-Ax^) = 0**
 >
 >
 >
-> để ý rằng hồi nãy, equation ta có là **aTe = aT(b-Ax^) = 0**
+> để ý rằng hồi nãy, equation ta có là **aᵀe = aᵀ(b-Ax^) = 0**
 > còn bây giờ ta có hai vector a1 a2 basis của C(A) nên ta
-> có : **AT(b-Ax^) = 0**
+> có : **Aᵀ(b-Ax^) = 0**
 
 **🔗 See also:** [linked note](#node-u1oddq3)
 
 <br>
 
 <a id="node-jksn63q"></a>
+
+###### Projection onto Column Space
 
 <p align="center"><kbd><img src="assets/o6y76936t9e.png" width="80%"></kbd></p>
 
@@ -456,13 +456,13 @@ onto Subspaces
 >
 >
 >
-> Đầu tiên đó là, trong AT(b-Ax^) = 0, thì e=b-Ax^ connect với
+> Đầu tiên đó là, trong Aᵀ(b-Ax^) = 0, thì e=b-Ax^ connect với
 > subspace nào?
 >
 >
 >
-> Me: Đương nhiên V**Ì e LÀ SOLUTION CỦA ATy=0** nên nó
-> chính là **nằm trong nullspace của A.T,** HAY CÒN **GỌI LÀ
+> Me: Đương nhiên V**Ì e LÀ SOLUTION CỦA Aᵀy=0** nên nó
+> chính là **nằm trong nullspace của Aᵀ,** HAY CÒN **GỌI LÀ
 > LEFT NULLSPACE** **CỦA A**
 
 <br>
@@ -472,11 +472,11 @@ onto Subspaces
 <p align="center"><kbd><img src="assets/sotam9ye729.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp equation ATe = 0 có nghĩa là **e nằm trong nullspace
-> của AT**, và vì vậy **nó sẽ vuông góc với columns space
+> Tiếp equation Aᵀe = 0 có nghĩa là **e nằm trong nullspace
+> của Aᵀ**, và vì vậy **nó sẽ vuông góc với columns space
 > của A** vì bài trước ta đã biết các **cặp subspace
 > orthogonal** là (nullspace of A và rowspace of A),
-> (nullspace of A.T và columspace of A)
+> (nullspace of Aᵀ và columspace of A)
 
 <br>
 
@@ -485,8 +485,8 @@ onto Subspaces
 <p align="center"><kbd><img src="assets/mkww9e2rchf.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> nhân AT vào (b-Ax^), chuyển ATb qua bên
-> phải ta có equation **ATAx^ = ATb**
+> nhân Aᵀ vào (b-Ax^), chuyển Aᵀb qua bên
+> phải ta có equation **AᵀAx^ = Aᵀb**
 
 <br>
 
@@ -497,13 +497,15 @@ onto Subspaces
 <p align="center"><kbd><img src="assets/qguoooienz.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs nhận xét rằng, hồi nãy với 1 dimension, ta có **aTa là
-> scalar**, aTb cũng là scalar, và x sẽ là một factor giữa hai con
-> số đó. Còn bây giờ ta có **ATA là nxn matrix.**
+> gs nhận xét rằng, hồi nãy với 1 dimension, ta có **aᵀa là
+> scalar**, aᵀb cũng là scalar, và x sẽ là một factor giữa hai con
+> số đó. Còn bây giờ ta có **AᵀA là nxn matrix.**
 
 <br>
 
 <a id="node-73wd1s0"></a>
+
+###### Projection Matrix and Least Squares
 
 <p align="center"><kbd><img src="assets/zgzuhl7rj6o.png" width="80%"></kbd></p>
 
@@ -512,38 +514,37 @@ onto Subspaces
 >
 >
 >
-> Vậy thì từ **ATAx^ = ATb**, **nhân hai vế cho (ATA)_inv** ta sẽ có 
-> **x^** = **(ATA)_invATb**
+> Vậy thì từ **AᵀAx^ = Aᵀb**, **nhân hai vế cho (AᵀA)⁻¹** ta sẽ có **x^** = **(AᵀA)⁻¹Aᵀb**
 >
 >
 >
-> Và p = Ax^ (hồi nãy đã nói, p là projection của b lên column
-> space của A nên p là linear combination của các A cols hay **p
-> = Ax^**)
+> Và p = Ax^ (hồi nãy đã nói, p là projection của b lên column space của A nên p là linear combination của các A cols hay **p = Ax^**)
 >
 >
 >
-> Giờ **có x^ rồi** thì thế vào ta có **p = A(ATA)^-1ATb**
+> Giờ **có x^ rồi** thì thế vào ta có **p = A(AᵀA)⁻¹Aᵀb**
 >
 >
 >
-> Và gs liên hệ nó với trường hợp 1D hồi nãy, a là vector, thì
-> **p = aaT/aTab** còn bây giờ A là matrix thì công thức là vậy.
+> Và gs liên hệ nó với trường hợp 1D hồi nãy, a là vector, thì **p = aaᵀ/aᵀab** còn bây giờ A là matrix thì công thức là vậy.
 >
 >
 >
-> Thì nó cũng như nhau thôi vì **1/aTa cũng chính là (aTa)^-1**
->  - có thể coi là inverse của aTa
+> Thì nó cũng như nhau thôi vì **1/aᵀa cũng chính là (aᵀa)⁻¹**
+>
+> \- có thể coi là inverse của aᵀa
 
 <br>
 
 <a id="node-e4ftlh2"></a>
 
+###### Projection Matrix Formula
+
 <p align="center"><kbd><img src="assets/qkwz0z7286l.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > và projection matrix P
-> chính là **A(ATA)invAT**
+> chính là **A(AᵀA)⁻¹Aᵀ**
 
 <br>
 
@@ -556,11 +557,11 @@ onto Subspaces
 >
 >
 >
-> (ATA)inv = Ainv(AT)inv
+> (AᵀA)⁻¹ = A⁻¹(Aᵀ)⁻¹
 >
 >
 >
-> thì khi đó P sẽ hóa ra AAinv(AT)invAT = I.I = I
+> thì khi đó P sẽ hóa ra AA⁻¹(Aᵀ)⁻¹Aᵀ = I.I = I
 >
 >
 >
@@ -570,11 +571,11 @@ onto Subspaces
 >
 >
 >
-> **DO ĐÓ Ainv KHÔNG TỒN TẠI.**
+> **DO ĐÓ A⁻¹ KHÔNG TỒN TẠI.**
 >
 >
 >
-> Và **cái rule ở (ATA)inv = Ainv(AT)inv chỉ đúng khi A square
+> Và **cái rule ở (AᵀA)⁻¹ = A⁻¹(Aᵀ)⁻¹ chỉ đúng khi A square
 > & invertible matrix** mà thôi
 
 <br>
@@ -633,6 +634,8 @@ onto Subspaces
 
 <a id="node-ai915ln"></a>
 
+###### Projection Matrix and Properties
+
 <p align="center"><kbd><img src="assets/g7pm6yp6ys.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -641,13 +644,15 @@ onto Subspaces
 >
 >
 >
-> Điều này dễ thấy vì **(ATA)inv**  sẽ symmetric vì **ATA
-> symmetric**. Nên [**A(ATA)invAT]T sẽ vẫn bằng
-> A(ATA)invAT thôi**
+> Điều này dễ thấy vì **(AᵀA)⁻¹**  sẽ symmetric vì **AᵀA
+> symmetric**. Nên [**A(AᵀA)⁻¹Aᵀ]ᵀ sẽ vẫn bằng
+> A(AᵀA)⁻¹Aᵀ thôi**
 
 <br>
 
 <a id="node-zgn8vgy"></a>
+
+###### Properties of Projection Matrix
 
 <p align="center"><kbd><img src="assets/239aumwa2d4.png" width="80%"></kbd></p>
 
@@ -658,7 +663,7 @@ onto Subspaces
 >
 >
 >
-> PP =** A(ATA)inv**AT A(ATA)inv**AT = A(ATA)invAT = P
+> PP =** A(AᵀA)⁻¹**Aᵀ A(AᵀA)⁻¹**Aᵀ = A(AᵀA)⁻¹Aᵀ = P
 
 <br>
 
@@ -736,7 +741,7 @@ onto Subspaces
 
 > [!NOTE]
 > và cái matrix A ở đây sẽ là matrix 3x2 (cao ốm) có hai
-> cols là [1, 1, 1].T và [1 2 3].T,
+> cols là [1, 1, 1]ᵀ và [1 2 3]ᵀ,
 >
 >
 >
@@ -744,7 +749,7 @@ onto Subspaces
 >
 >
 >
-> và vector b là [1, 2, 2].T
+> và vector b là [1, 2, 2]ᵀ
 
 <br>
 
@@ -766,8 +771,8 @@ onto Subspaces
 >
 >
 >
-> Đó là **thay vì giải equation Ax = b**, ta sẽ **giải equation ATAx^ =
-> ATb**
+> Đó là **thay vì giải equation Ax = b**, ta sẽ **giải equation AᵀAx^ =
+> Aᵀb**
 
 <br>
 
