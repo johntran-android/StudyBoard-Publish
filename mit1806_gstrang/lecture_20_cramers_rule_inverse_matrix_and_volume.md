@@ -1,13 +1,9 @@
-# Lecture 20: Cramer's Rule,
-inverse Matrix And Volume
+# Lecture 20: Cramer's Rule, Inverse Matrix And Volume
 
 📊 **Progress:** `29` Notes | `30` Screenshots
 
 ---
 <a id="node-b0bcyt0"></a>
-
-## Lecture 20: Cramer's Rule,
-inverse Matrix And Volume
 
 <br>
 
@@ -24,12 +20,14 @@ inverse Matrix And Volume
 
 <a id="node-tb42dnd"></a>
 
+### Formula for Matrix Inverse
+
 <p align="center"><kbd><img src="assets/8kpgd6q152x.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đầu tiên gs nói về **công thức inverse của một 2x2**
 > matrix. Thì ta thấy **1/(ad-bc)** chính là **1/det A** từ đó
-> nhận thấy sự hợp lí, vì **nếu Ainv tồn tại thì det A mới
+> nhận thấy sự hợp lí, vì **nếu A⁻¹ tồn tại thì det A mới
 > khác 0**
 >
 >
@@ -40,10 +38,10 @@ inverse Matrix And Volume
 >
 >
 >
-> Còn lí do det(A_inv) = 1 / det(A). Là bởi vì, ta đã chứng
-> minh nếu A invertible: AAinv = I, thì dựa vào tính chất #9
-> det(AB) = det(A)*det(B) nên det(AAinv) = det(A)*det(Ainv)
-> <=> det(A)*det(Ainv) = 1 => det(Ainv) = 1/det(A)
+> Còn lí do det(A⁻¹) = 1 / det(A). Là bởi vì, ta đã chứng
+> minh nếu A invertible: AA⁻¹ = I, thì dựa vào tính chất #9
+> det(AB) = det(A)*det(B) nên det(AA⁻¹) = det(A)*det(A⁻¹)
+> ⇔ det(A)*det(A⁻¹) = 1 ⇒ det(A⁻¹) = 1/det(A)
 
 <br>
 
@@ -67,7 +65,7 @@ inverse Matrix And Volume
 <p align="center"><kbd><img src="assets/3hjafy8fdaq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và ta có công thức của **A_inv = (1 / det A) C.T**
+> Và ta có công thức của **A⁻¹ = (1 / det A) Cᵀ**
 >
 >
 >
@@ -96,7 +94,7 @@ inverse Matrix And Volume
 > Gs nhắc lại hồi trước ta **tìm inverse matrix** bằng cách
 > **ghép matrix I vào bên phải matrix A** (gọi là augmented
 > matrix) và **thực hiện elimination để biến A thành I** thì
-> **khi đó I sẽ trở thành E** và **nó chính là Ainv (đương
+> **khi đó I sẽ trở thành E** và **nó chính là A⁻¹ (đương
 > nhien với điều kiện matrix A invertible)**
 >
 >
@@ -112,10 +110,10 @@ inverse Matrix And Volume
 
 > [!NOTE]
 > Gs nói tuy vậy ta sẽ **cần chứng minh** lại nó, bằng cách
-> **chứng minh AAinv = I**  thế thì khi ghi ra ta có thể thấy,
-> kết qủa A(CT) đương nhiên là matrix nxn. Và hãy nói về
+> **chứng minh AA⁻¹ = I**  thế thì khi ghi ra ta có thể thấy,
+> kết qủa A(Cᵀ) đương nhiên là matrix nxn. Và hãy nói về
 > phần tử [1,1] của kết qủa. Nó sẽ là **dot product của hàng 1
-> matrix A** [a11, ....a1n] và **cột 1 matrix CT** [c11 c12..c1n]
+> matrix A** [a11, ....a1n] và **cột 1 matrix Cᵀ** [c11 c12..c1n]
 >
 >
 >
@@ -133,7 +131,7 @@ inverse Matrix And Volume
 >
 >
 > Và khi làm vậy thì chính là lấy hàng 1 của A dot product cột 1 
-> của CT. Vậy phần tử [1,1] của matrix kết quả **chính là det A**.
+> của Cᵀ. Vậy phần tử [1,1] của matrix kết quả **chính là det A**.
 >
 >
 >
@@ -183,7 +181,7 @@ inverse Matrix And Volume
 > [!NOTE]
 > Gs quay lại xem xét 2x2 matrix này, thì ta có thể thấy **nếu
 > nhân row 1 với vector cofactor của row 2** (tức là cột 2 của
-> CT) thì ta sẽ thấy mình **đang tính det (theo cofactor
+> Cᵀ) thì ta sẽ thấy mình **đang tính det (theo cofactor
 > formula) của matrix mà hai row đều là [a b]**. Đương nhiên
 > đó là singular matrix và do đó **det = 0**
 >
@@ -211,27 +209,27 @@ inverse Matrix And Volume
 >
 >
 >
-> Và do đó A(CT) = (detA)I
+> Và do đó A(Cᵀ) = (detA)I
 >
 >
 >
-> Nhân hai vế cho Ainv ta có:
+> Nhân hai vế cho A⁻¹ ta có:
 >
 >
 >
-> AinvA(CT) = (detA)IAinv = (detA)Ainv
+> A⁻¹A(Cᵀ) = (detA)IA⁻¹ = (detA)A⁻¹
 >
 >
 >
-> <=> CT = detA Ainv
+> ⇔ Cᵀ = detA A⁻¹
 >
 >
 >
-> <=> **Ainv = CT / det A
+> ⇔ **A⁻¹ = Cᵀ / det A
 >
 >
 >
-> Và đây chính là công thức giúp tính Ainv**
+> Và đây chính là công thức giúp tính A⁻¹**
 
 <br>
 
@@ -241,8 +239,8 @@ inverse Matrix And Volume
 
 > [!NOTE]
 > Rồi, tiếp theo **ứng dụng thứ hai** khi ta đã có công thức
-> của Ainv đó là ta **dùng nó trong solution của Ax = b** <=>
-> **x = Ainv b = (1/det A) CTb**
+> của A⁻¹ đó là ta **dùng nó trong solution của Ax = b** ⇔
+> **x = A⁻¹ b = (1/det A) Cᵀb**
 >
 >
 >
@@ -251,7 +249,7 @@ inverse Matrix And Volume
 >
 >
 > Gs cho rằng ta đang **tính một phép nhân giữa các
-> cofactor (từ CT)** và **các number (từ b)** thì **ta luôn đang
+> cofactor (từ Cᵀ)** và **các number (từ b)** thì **ta luôn đang
 > tính determinant của một matrix nào đó.**
 >
 >
@@ -347,6 +345,8 @@ inverse Matrix And Volume
 
 <a id="node-mq5qt88"></a>
 
+###### Determinant as Volume of Box
+
 <p align="center"><kbd><img src="assets/k2yfng2ckzh.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -406,31 +406,33 @@ inverse Matrix And Volume
 <p align="center"><kbd><img src="assets/pbqapqzb5n.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> O**rthogonal matrix sẽ có tính chất là QTQ = I**, gs hỏi rằng
+> O**rthogonal matrix sẽ có tính chất là QᵀQ = I**, gs hỏi rằng
 > **tại sao det của nó bằng 1**
 
 <br>
 
 <a id="node-ntyj2ga"></a>
 
+###### Determinant as Volume of Box
+
 <p align="center"><kbd><img src="assets/ewrt94nuoni.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đó là vì ta sẽ **lấy det ở hai vế:** **det QTQ = det I** (điều
+> đó là vì ta sẽ **lấy det ở hai vế:** **det QᵀQ = det I** (điều
 > này có gì đâu khó hiểu, A = B thì det A = det B**)**
 >
 >
 >
-> <=> det QT * det Q = 1 (áp dụng product rule: det AB = det
-> A * det B, để có det (QT)Q = det QT * det Q)
+> ⇔ det Qᵀ * det Q = 1 (áp dụng product rule: det AB = det
+> A * det B, để có det (Qᵀ)Q = det Qᵀ * det Q)
 >
 >
 >
-> <=> [det Q ]**2 = 1 (mà det A = det AT nên det QT = det Q)
+> ⇔ [det Q ]² = 1 (mà det A = det Aᵀ nên det Qᵀ = det Q)
 >
 >
 >
-> <=> **det Q = +- 1** => thỏa mãn **volume của Q là |det Q| = 1
+> ⇔ **det Q = +- 1** ⇒ thỏa mãn **volume của Q là |det Q| = 1
 >
 >
 >
