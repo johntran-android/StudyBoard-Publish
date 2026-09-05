@@ -1,13 +1,9 @@
-# Lecture 14: Orthogonal
-vectors And Subspaces
+# Lecture 14: Orthogonal Vectors And Subspaces
 
 📊 **Progress:** `37` Notes | `37` Screenshots
 
 ---
 <a id="node-cmamy5b"></a>
-
-## Lecture 14: Orthogonal
-vectors And Subspaces
 
 <br>
 
@@ -51,8 +47,8 @@ vectors And Subspaces
 >
 > (đây là kiến thức đã học ở 18.02, trong bài 1 ta đã biết rằng
 > dot product (tích vô hướng) của hai vector a, b sẽ là
-> |a|*|b|*cos(theta) do đó nếu aTb (cách viết của 18.06 về dot
-> product của a,b) = 0 thì cos(theta) = 0 => theta (là góc giữa
+> |a|*|b|*cos(theta) do đó nếu aᵀb (cách viết của 18.06 về dot
+> product của a,b) = 0 thì cos(theta) = 0 ⇒ theta (là góc giữa
 > hai vector) = 90
 
 <br>
@@ -65,21 +61,23 @@ vectors And Subspaces
 > Thế thì câu hỏi gs đặt ra là **tại sao dot product bằng 0
 > lại là dấu hiệu của hai vector vuông góc**. Hai nói cách
 > khác, gs đề nghị tìm **liên hệ giữa định lý pythagores**
-> với dot product xTy = 0.
+> với dot product xᵀy = 0.
 
 <br>
 
 <a id="node-8p6a4lu"></a>
 
+###### Properties of Transpose Matrix A^T
+
 <p align="center"><kbd><img src="assets/ol4yte0s3qs.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Gs: thế thì đầu tiên nếu cho vector (1,2,3) thì length square
-> ||u||**2 là gì?
+> ||u||² là gì?
 >
 >
 >
-> Me: [sqrt(1**2 + 2**2 + 3**2)]**2 = 1**2 + 2**2 + 3**2
+> Me: [sqrt(1² + 2² + 3²)]² = 1² + 2² + 3²
 
 <br>
 
@@ -88,7 +86,7 @@ vectors And Subspaces
 <p align="center"><kbd><img src="assets/5akqzowbay4.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs: đúng, và có thể thể hiện dưới dạng xTx
+> gs: đúng, và có thể thể hiện dưới dạng xᵀx
 
 <br>
 
@@ -103,6 +101,8 @@ vectors And Subspaces
 
 <a id="node-bre0ecl"></a>
 
+###### Pythagorean Theorem in Linear Algebra
+
 <p align="center"><kbd><img src="assets/zah494af62.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -110,11 +110,11 @@ vectors And Subspaces
 >
 >
 >
-> Với (x+y)T(x+y) triển khai như vầy:
+> Với (x+y)ᵀ(x+y) triển khai như vầy:
 >
 >
 >
-> = (xT+yT)(x+y) = xTx+xTy + yTx + yTy
+> = (xᵀ+yᵀ)(x+y) = xᵀx+xᵀy + yᵀx + yᵀy
 
 <br>
 
@@ -123,8 +123,8 @@ vectors And Subspaces
 <p align="center"><kbd><img src="assets/22nu6tm1ldk.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Khử đi hai vế và gom xTy và yTx (đều giống nhau)
-> ta có **2xTy = 0**
+> Khử đi hai vế và gom xᵀy và yᵀx (đều giống nhau)
+> ta có **2xᵀy = 0**
 >
 >
 >
@@ -301,27 +301,29 @@ vectors And Subspaces
 
 <a id="node-h8zlxjg"></a>
 
+###### Orthogonality of Fundamental Subspaces
+
 <p align="center"><kbd><img src="assets/hjijrz0mwa5.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tương tự, ta sẽ xem thử tại sao **C(A) lại orthogonal với
-> N(AT)**
+> N(Aᵀ)**
 >
 >
 >
-> Me: Là bởi với y của N(AT) tức ATy = 0, thì tương tự, ta
-> sẽ có **CÁC ROW CỦA AT vuông góc với các y trong
-> N(AT).**
+> Me: Là bởi với y của N(Aᵀ) tức Aᵀy = 0, thì tương tự, ta
+> sẽ có **CÁC ROW CỦA Aᵀ vuông góc với các y trong
+> N(Aᵀ).**
 >
 >
 >
-> Mà c**ác row của AT THÌ CHÍNH LÀ CÁC COLS CỦA A**.
+> Mà c**ác row của Aᵀ THÌ CHÍNH LÀ CÁC COLS CỦA A**.
 >
 >
 >
-> Vậy nên ta có **mọi vector y của N(AT)** **đều orthogonal** với
-> mọi row của rowspace của AT cũng là **mọi cols của A**.
-> Vậy column space của A orthogonal với null space of A.T
+> Vậy nên ta có **mọi vector y của N(Aᵀ)** **đều orthogonal** với
+> mọi row của rowspace của Aᵀ cũng là **mọi cols của A**.
+> Vậy column space của A orthogonal với null space of Aᵀ
 
 <br>
 
@@ -385,10 +387,12 @@ vectors And Subspaces
 
 <a id="node-mp2yafb"></a>
 
+###### Dimension of Matrix Nullspace
+
 <p align="center"><kbd><img src="assets/z2tvt30yotk.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs: correct, ta có **rowspace là 1 line**: vector [1 2 5].T và
+> gs: correct, ta có **rowspace là 1 line**: vector [1 2 5]ᵀ và
 > **nullspace là một plane**.
 >
 >
@@ -411,8 +415,8 @@ vectors And Subspaces
 > Và liên hệ với 18.02 ta biết <1, 2, 5> **chính là NORMAL
 > VECTOR** (vector pháp tuyến) của mặt phẳng, nó sẽ
 > **vuông góc với mọi vector trong mặt phẳng**. Vậy từ đó
-> trong trường hợp này bức tranh về rowspace C(AT) và
-> nullspace N(A) rất rõ rằng, **C(AT) chính là line đi qua
+> trong trường hợp này bức tranh về rowspace C(Aᵀ) và
+> nullspace N(A) rất rõ rằng, **C(Aᵀ) chính là line đi qua
 > normal vector** và  **N(A) chính là plane**. Và xác nhận lại
 > rằng mọi vector trong plane (nullspace) đều vuông góc với
 > normal vector (mọi vector trong row space)
@@ -432,6 +436,8 @@ vectors And Subspaces
 <br>
 
 <a id="node-wrqltex"></a>
+
+###### Solving Ax=b With No Solution
 
 <p align="center"><kbd><img src="assets/6d8gcpjj12b.png" width="80%"></kbd></p>
 
@@ -480,32 +486,31 @@ vectors And Subspaces
 
 <a id="node-kuaxxp9"></a>
 
+###### Matrix Multiplication A Transpose A
+
 <p align="center"><kbd><img src="assets/m9qezlwotqo.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs đề nghị ta **nghĩ về matrix này ATA**, câu hỏi là, nó là
-> matrix ntn?
+> Gs đề nghị ta **nghĩ về matrix này AᵀA**, câu hỏi là, nó là matrix ntn?
 >
 >
 >
-> me: **square**, điều này dễ thấy. Và cũng **đối xứng
-> (symmetric)**: Và ta cũng đã chứng minh cái này mà cũng
-> dễ chứng minh lại:
+> me: **square**, điều này dễ thấy. Và cũng **đối xứng (symmetric)**: Và ta cũng đã chứng minh cái này mà cũng dễ chứng minh lại:
 >
 >
 >
-> (ATA)T = AT(ATT) = ATA. Tức là bằng cách cho thấy **ATA
-> transpose của nó bằng chính nó nên ATA đối xứng.**
+> (AᵀA)ᵀ = Aᵀ(Aᵀᵀ) = AᵀA. Tức là bằng cách cho thấy **AᵀA transpose của nó bằng chính nó nên AᵀA đối xứng.**
 
 <br>
 
 <a id="node-yqftgl5"></a>
 
+###### Symmetric Matrix A Transpose A
+
 <p align="center"><kbd><img src="assets/7np6fbubadb.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đúng vậy, nó **square**, và còn **đối xứng**. vì
-> **(ATA)T cũng bằng ATA**
+> đúng vậy, nó **square**, và còn **đối xứng**. vì **(AᵀA)ᵀ cũng bằng AᵀA**
 
 <br>
 
@@ -521,26 +526,27 @@ vectors And Subspaces
 
 <a id="node-0mymuub"></a>
 
+###### Least Squares Normal Equations
+
 <p align="center"><kbd><img src="assets/kcibi8tc8w.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, từ Ax=b, là equation mà gs đã nói ở trên đại ý
-> là **khả năng cao nó không có solution** (vì như đã nói C(A)
-> không span toàn bộ Rm)
+> Đại khái là, từ Ax=b, là equation mà gs đã nói ở trên đại ý là **khả năng cao nó không có solution** (vì như đã nói C(A) không span toàn bộ Rm)
 >
 >
 >
-> gs cho rằng tôi sẽ **nhân hai vế của Ax=b với AT** để hi vọng
-> rằng **có thể có solution của phương trình này**, gs gọi là **x^**
+> gs cho rằng tôi sẽ **nhân hai vế của Ax=b với Aᵀ** để hi vọng rằng **có thể có solution của phương trình này**, gs gọi là **x^**
 
 <br>
 
 <a id="node-7al9iez"></a>
 
+###### Least Squares Normal Equation
+
 <p align="center"><kbd><img src="assets/sri5jlz4kb.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và khi đó **ATAx^ = ATb** sẽ là equation mà ông gọi là **good
+> Và khi đó **AᵀAx^ = Aᵀb** sẽ là equation mà ông gọi là **good
 > equation**
 
 <br>
@@ -555,30 +561,32 @@ vectors And Subspaces
 >
 >
 > Và như đã nói chỉ khi nào b **NẰM TRÊN COLS SPACE
-> - LÀ 2D PLANE TRONG R3**, THÌ mới system of equation
+> \- LÀ 2D PLANE TRONG R3**, THÌ mới system of equation
 > này mới solvable
 
 <br>
 
 <a id="node-30t8kt0"></a>
 
+###### Normal Equations for Least Squares
+
 <p align="center"><kbd><img src="assets/h09681vvdmg.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và **tính ATA** ra, ta **có thể thấy nó invertible** vì nó
+> Và **tính AᵀA** ra, ta **có thể thấy nó invertible** vì nó
 > fullrank
 >
 >
 >
 > Tuy nhiên gs cho biết **không phải lúc nào ta cũng có
-> invertible ATA**
+> invertible AᵀA**
 >
 >
 >
-> (Ta sẽ gặp lại ATA sau, trong đó ta s**ẽ chứng minh ATA
+> (Ta sẽ gặp lại AᵀA sau, trong đó ta s**ẽ chứng minh AᵀA
 > fullrank chỉ khi nào A full column rank (theo link)**
 
-**🔗 See also:** [linked note](#node-3l4hkq3)
+**🔗 See also:** [Invertibility of Aᵀ A](#node-3l4hkq3)
 
 <br>
 
@@ -594,12 +602,14 @@ vectors And Subspaces
 
 <a id="node-0jz8zbz"></a>
 
+###### Rank of Matrix Product A Transpose A
+
 <p align="center"><kbd><img src="assets/tq1x9etj3go.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > và gs nói rằng ông đã biết chắc kết quả sẽ không invertible
-> vì **ATA SẼ CÓ RANK CHÍNH XÁC BẰNG RANK CỦA A**.
-> mà trong trường hợp này RANK A = 1, NÊN ATA CŨNG
+> vì **AᵀA SẼ CÓ RANK CHÍNH XÁC BẰNG RANK CỦA A**.
+> mà trong trường hợp này RANK A = 1, NÊN AᵀA CŨNG
 > CÓ RANK BẰNG 1, TRONG KHI NÓ LÀ MATRIX 2X2
 > NÊN NÓ KHÔNG FULLRANK
 
@@ -610,8 +620,8 @@ vectors And Subspaces
 <p align="center"><kbd><img src="assets/2pdzjt4h9e1.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Như vậy **Nullspace của A cũng chính là nullspace của ATA**
-> (vì **Ax=0 tương đương ATAx = 0**)
+> Như vậy **Nullspace của A cũng chính là nullspace của AᵀA**
+> (vì **Ax=0 tương đương AᵀAx = 0**)
 >
 >
 >
@@ -621,50 +631,52 @@ vectors And Subspaces
 
 <a id="node-3l4hkq3"></a>
 
+###### Invertibility of Aᵀ A
+
 <p align="center"><kbd><img src="assets/1o0i9aalgtn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và từ đó gs kết luận **ATA INVERTIBLE CHỈ KHI A CÓ CÁC
+> Và từ đó gs kết luận **AᵀA INVERTIBLE CHỈ KHI A CÓ CÁC
 > COLS INDEPENDENT (FULL COLUMNS RANK)**
 >
 >
 >
-> \~Điều này có thể dễ hiểu bởi, vì ATA có shape (n, n) và rank
+> \~Điều này có thể dễ hiểu bởi, vì AᵀA có shape (n, n) và rank
 > của nó bằng rank A, vậy rõ ràng chỉ khi nào rank A bằng n thì
-> ATA mới full-rank. Và điều này xảy ra tức là khi CÁC COLS
+> AᵀA mới full-rank. Và điều này xảy ra tức là khi CÁC COLS
 > CỦA ĐỀU LÀ PIVOT, và cũng chính là nullspace của A CHỈ
 > CÓ ZERO (vì không có free cols nào)\~
 >
 >
 >
-> Chứng minh **ATAx=0 <=> Ax = 0 như sau (sau này gs sẽ
+> Chứng minh **AᵀAx=0 ⇔ Ax = 0 như sau (sau này gs sẽ
 > chứng minh cái này (theo link)**:
 >
 >
 >
-> Nếu Ax = 0 thì nhân hai vế cho AT đương nhiên ta có  ATAx
-> = 0. Vậy Ax = 0 => ATAx = 0.
+> Nếu Ax = 0 thì nhân hai vế cho Aᵀ đương nhiên ta có  AᵀAx
+> = 0. Vậy Ax = 0 ⇒ AᵀAx = 0.
 >
 >
 >
-> Ngược lại, nếu ATAx = 0, nhân hai vế cho xT ta có:
+> Ngược lại, nếu AᵀAx = 0, nhân hai vế cho xᵀ ta có:
 >
 >
 >
-> xTATAx = 0 <=> (Ax)T(Ax) = 0 <=> ||Ax|| = 0, mà length của
-> vector Ax >= 0 nên dấu bằng xảy chỉ khi Ax = 0. Vậy ATAx = 0
-> => Ax = 0
+> xᵀAᵀAx = 0 ⇔ (Ax)ᵀ(Ax) = 0 ⇔ ||Ax|| = 0, mà length của
+> vector Ax >= 0 nên dấu bằng xảy chỉ khi Ax = 0. Vậy AᵀAx = 0
+> ⇒ Ax = 0
 >
 >
 >
-> Từ đó giúp kết luận ATAx = 0 <=> Ax = 0, hai matrix ATA  và A
-> chung nullspace **N(ATA) = N(A)**. Vậy thì đương nhiên để
-> **ATA fullrank/non-singular/invertible** thì **N(ATA) phải bằng
+> Từ đó giúp kết luận AᵀAx = 0 ⇔ Ax = 0, hai matrix AᵀA  và A
+> chung nullspace **N(AᵀA) = N(A)**. Vậy thì đương nhiên để
+> **AᵀA fullrank/non-singular/invertible** thì **N(AᵀA) phải bằng
 > {0}**, đồng nghĩa **N(A) cũng vậy**, mà điều này dễ thấy sẽ
 > tương đương với việc **A Full Column Rank khi đó dim C(A)
-> =  rank = n => dim N(A) = 0**
+> =  rank = n ⇒ dim N(A) = 0**
 
-**🔗 See also:** [linked note](#node-30t8kt0) · [linked note](./lecture_16_projection_matrices_and_least_squares.md#node-ho17455)
+**🔗 See also:** [Normal Equations for Least Squares](#node-30t8kt0) · [linked note](./lecture_16_projection_matrices_and_least_squares.md#node-ho17455)
 
 <br>
 
@@ -673,7 +685,7 @@ vectors And Subspaces
 <p align="center"><kbd><img src="assets/v0zqqsjg2y.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và bài sau ta sẽ thấy ATA đóg vai trò **CRUCIAL**
+> Và bài sau ta sẽ thấy AᵀA đóg vai trò **CRUCIAL**
 
 <br>
 
