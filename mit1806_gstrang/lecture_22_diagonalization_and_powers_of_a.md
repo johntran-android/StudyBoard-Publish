@@ -1,13 +1,9 @@
-# Lecture 22: Diagonalization
-and Powers Of A
+# Lecture 22: Diagonalization And Powers Of A
 
 📊 **Progress:** `40` Notes | `42` Screenshots
 
 ---
 <a id="node-0yo30y7"></a>
-
-## Lecture 22: Diagonalization
-and Powers Of A
 
 <br>
 
@@ -134,6 +130,8 @@ and Powers Of A
 
 <a id="node-2jhlbd4"></a>
 
+###### Matrix Diagonalization AS = SΛ
+
 <p align="center"><kbd><img src="assets/3rfudpw9z4o.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -163,7 +161,7 @@ and Powers Of A
 >
 >
 > Điều **DỄ HIỂU SAI** là EIGENVECTORS **CHỈ THUỘC
-> COLUMN SPACE**  của A khi ta thấy **Ax = lambda*x**, để
+> COLUMN SPACE**  của A khi ta thấy **Ax = λx**, để
 > rồi LẦM TƯỞNG m tưởng rằng **nếu ta có n independent
 > eigenvectors thì nó sẽ là basis của column space**, từ đó
 > cho rằng column space là Rn. Điều này LÀ SAI, bởi vì, **X
@@ -180,8 +178,8 @@ and Powers Of A
 <p align="center"><kbd><img src="assets/4v2wuongpea.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> và vì vậy **Sinv** tồn tại nên ta có thể nhân Sinv
-> vào hai vế để có **SinvAS = SinvSΛ = Λ**
+> và vì vậy **S⁻¹** tồn tại nên ta có thể nhân S⁻¹
+> vào hai vế để có **S⁻¹AS = S⁻¹SΛ = Λ**
 
 <br>
 
@@ -204,12 +202,12 @@ and Powers Of A
 <p align="center"><kbd><img src="assets/0e59c8iq2s8.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> thế thì SinvAS = Λ gọi là **DIAGONALIZATION**.
+> thế thì S⁻¹AS = Λ gọi là **DIAGONALIZATION**.
 >
 >
 >
-> Nhưng ta cũng có thể **nhân Sinv vào bên phải** của AS =
-> SΛ để có **A = SΛS_inv, cái này gọi là
+> Nhưng ta cũng có thể **nhân S⁻¹ vào bên phải** của AS =
+> SΛ để có **A = SΛS⁻¹, cái này gọi là
 > EIGEN-DECOMPOSITION**
 >
 >
@@ -225,6 +223,8 @@ and Powers Of A
 
 <a id="node-b80km3h"></a>
 
+###### Eigenvalues of Matrix Powers
+
 <p align="center"><kbd><img src="assets/r4jmew0foz.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -232,19 +232,19 @@ and Powers Of A
 >
 >
 >
-> Thế thì ta cho rằng x và lambda là eigenvector và
-> eigenvalue của matrix A. nên ta có **Ax = lambda.x**
+> Thế thì ta cho rằng x và λ là eigenvector và
+> eigenvalue của matrix A. nên ta có **Ax = λx**
 >
 >
 >
-> Và ta **nhân hai vế cho A** thì ta có **A^2x = A.lambda.x** 
-> = **lambda.Ax** (lambda là **scalar** nên **chuyển nó lên trước** 
+> Và ta **nhân hai vế cho A** thì ta có **A^2x = Aλx** 
+> = **λAx** (λ là **scalar** nên **chuyển nó lên trước** 
 > được 
 >
 >
 >
-> Khi đó thay Ax = lambda.x ta sẽ có **lambda.Ax = lambda^2.x**
-> từ đó ta có: **A^2x = lambda^2.x**
+> Khi đó thay Ax = λx ta sẽ có **λAx = λ^2.x**
+> từ đó ta có: **A^2x = λ^2.x**
 >
 >
 >
@@ -264,25 +264,25 @@ and Powers Of A
 >
 >
 >
-> A^2 = S.Λ.Sinv.S.Λ.Sinv
+> A^2 = S.Λ.S⁻¹.S.Λ.S⁻¹
 >
 >
 >
-> Và Sinv.S = I từ đó A^2 = S.Λ.Λ.Sinv
+> Và S⁻¹.S = I từ đó A^2 = S.Λ.Λ.S⁻¹
 >
 >
 >
-> = **S.Λ^2.Sinv**
+> = **S.Λ^2.S⁻¹**
 >
 >
 >
-> Như vậy qua việc phân tách A^2 = S.Λ^2.Sinv có thể thấy
+> Như vậy qua việc phân tách A^2 = S.Λ^2.S⁻¹ có thể thấy
 >
 >
 >
 > 1) **EIGENVECTOR của A^2** **CÙNG LÀ EIGENVECTOR**
 > **CỦA A** (VÌ S LÀ EIGENVECTOR CỦA A, nên A = S.Λ.
-> Sinv)
+> S⁻¹)
 >
 >
 >
@@ -296,7 +296,7 @@ and Powers Of A
 <p align="center"><kbd><img src="assets/79zzfdgsd2b.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và tương tự ta hòan toàn dễ hiểu rằng **A^k = S.Λ^K.Sinv** ,
+> Và tương tự ta hòan toàn dễ hiểu rằng **A^k = S.Λ^K.S⁻¹** ,
 > và cho ta biết **eigenvector của A mũ bao nhiêu thì nó vẫn là
 > eigenvector của A**. Và eigenvalue của A^k thì bằng
 > **lũy thừa k của A's eigenvalue**.
@@ -336,13 +336,13 @@ and Powers Of A
 
 > [!NOTE]
 > Gs nhấn mạnh rằng để cho phép EIGEN-DECOMPOSITION
-> factorize **A thành S.LAMDA.Sinv** thì **phải thỏa mãn điều
+> factorize **A thành S.LAMDA.S⁻¹** thì **phải thỏa mãn điều
 > kiện** là **A có N INDEPENDENT EIGENVECTORS.** 
 >
 >
 >
 > Cụ thể hơn là chỉ khi **n eigenvector**, tức các cols của S
-> **independent** thì S mới **full-rank** và invertible **giúp S_inv tồn
+> **independent** thì S mới **full-rank** và invertible **giúp S⁻¹ tồn
 > tại** thì mới có phép factorization này được
 
 <br>
@@ -420,7 +420,7 @@ and Powers Of A
 >
 >
 > Và trong trường hợp của I, A = I thì phép factorization sẽ là
-> Sinv. A.S = Sinv. I.S = Sinv.S = I = **LAMBDA**.
+> S⁻¹. A.S = S⁻¹. I.S = S⁻¹.S = I = **LAMBDA**.
 >
 >
 >
@@ -448,7 +448,7 @@ and Powers Of A
 <p align="center"><kbd><img src="assets/n9unafyb2c.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Giải ra **hai giá trị lambda đều bằng 2** (tuy **bằng nhau**
+> Giải ra **hai giá trị λ đều bằng 2** (tuy **bằng nhau**
 > nhưng **vẫn là 2 eigenvalues)**. mà gs nói là con đường
 > đại số, **algebraic** route, **dẫn ta tới 2 eigenvalue**
 >
@@ -489,7 +489,7 @@ and Powers Of A
 
 > [!NOTE]
 > Nên gs nhấn mạnh là, diagonalization hay cái vụ A^k -> 0
-> khi k -> infi nếu mọi lambda đều nhỏ hơn 1, **CHỈ ĐÚNG NẾU
+> khi k -> infi nếu mọi λ đều nhỏ hơn 1, **CHỈ ĐÚNG NẾU
 > MARIX A CÓ N INDEPENDENT EIGENVECTORS.**
 >
 >
@@ -523,13 +523,15 @@ and Powers Of A
 
 <a id="node-eegruj7"></a>
 
+###### Linear Combination of Eigenvectors
+
 <p align="center"><kbd><img src="assets/s9vh2tbemb.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > thế thì cho **u_0 là linear combination các eigenvectors** của
 > A, \~u ở đây đều nằm trong cols space của A\~. Và phải chú ý
 > rằng \~eigenvectors đương nhiên thuộc column space của A,
-> vì Ax = lambda.x, x  là linear combination của  các columns.\~
+> vì Ax = λx, x  là linear combination của  các columns.\~
 >
 >
 >
@@ -578,8 +580,8 @@ and Powers Of A
 >
 >
 >
-> Việc Ax = lambda*x **thật ra chẳng cho kết luận rằng x là
-> thuộc columns space**, vì sao, vì **khi lambda = 0, x thuộc
+> Việc Ax = λx **thật ra chẳng cho kết luận rằng x là
+> thuộc columns space**, vì sao, vì **khi λ = 0, x thuộc
 > nullspace**. Vậy thì ta chỉ có thể kết luận là **mọi vector
 > thuộc nullspace là eigenvectors với eigenvalue = 0**, và
 > **các eigen vectors còn lại thì thuộc columns space**. Chứ
@@ -685,7 +687,7 @@ and Powers Of A
 
 > [!NOTE]
 > Thế thì đại khái là gs nói về việc **chuyển bài toán gốc
-> thành bài toán này**. Đặt **u_k = [F_k+1 F_k].T**
+> thành bài toán này**. Đặt **u_k = [F_k+1 F_k]ᵀ**
 >
 >
 >
@@ -699,7 +701,7 @@ and Powers Of A
 >
 >
 >
-> Nhưng bằng cách đặt **u_k = [F_k+1 F_k].T** thì dãy số sẽ trở
+> Nhưng bằng cách đặt **u_k = [F_k+1 F_k]ᵀ** thì dãy số sẽ trở
 > thành (0, 1), (1, 1), (1, 2) ...trong đó u_k+1 chỉ cần depend u_k 
 > bài toán trở thành **system of first order equations**.
 >
@@ -880,25 +882,25 @@ and Powers Of A
 >
 > Sau đó ta sẽ **viết u_0 dưới dạng linear combination
 > của eigen-vectors**. Khi đó, ta sẽ **có thể có được u_k tính
-> theo lambda_j^k, c_j, x_j**
+> theo λ_j^k, c_j, x_j**
 >
 > Ôn nhanh như sau:
 >
 >
 >
-> Dựa vào A = S.Λ.Sinv dẫn tới 
+> Dựa vào A = S.Λ.S⁻¹ dẫn tới 
 >
 >
 >
-> u_1 = S.Λ.Sinv u_0 
+> u_1 = S.Λ.S⁻¹ u_0 
 >
 >
 >
-> u_2 = Au_1 = S.Λ.Sinv S.Λ.Sinv u_0 = S.Λ^2Sinv u_0
+> u_2 = Au_1 = S.Λ.S⁻¹ S.Λ.S⁻¹ u_0 = S.Λ^2S⁻¹ u_0
 >
 >
 >
-> tương tự sẽ dễ thấy u_k = S.Λ^k.Sinv u_0
+> tương tự sẽ dễ thấy u_k = S.Λ^k.S⁻¹ u_0
 >
 >
 >
@@ -920,7 +922,7 @@ and Powers Of A
 >
 >
 >
-> thành ra u_k trở thành S.Λ. Sinv Sc = S.Λ.c
+> thành ra u_k trở thành S.Λ. S⁻¹ Sc = S.Λ.c
 >
 >
 >
