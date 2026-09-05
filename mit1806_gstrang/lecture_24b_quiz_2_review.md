@@ -5,8 +5,6 @@
 ---
 <a id="node-oah9gxk"></a>
 
-## Lecture 24b: Quiz 2 Review
-
 <br>
 
 <a id="node-uijan80"></a>
@@ -43,19 +41,19 @@
 >
 > Và thế là ta có thể biểu diễn **e = b - p = b - x.a** Từ đó ta dùng
 > sự thật thứ hai, liên quan đến e, đó là **e perpendicular với a**
-> để có **aTe = 0**, từ đó ta có **aT(b - xa) = 0**
+> để có **aᵀe = 0**, từ đó ta có **aᵀ(b - xa) = 0**
 >
 >
 >
-> Triển khai ra ta có **aT(b - xa) = 0** <=> **aTb - aTxa = 0**
+> Triển khai ra ta có **aᵀ(b - xa) = 0** ⇔ **aᵀb - aᵀxa = 0**
 >
 >
 >
-> <=> aTxa = aTb <=> aTa.x = aTb <=> **x = aTb/aTa**
+> ⇔ aᵀxa = aᵀb ⇔ aᵀa.x = aᵀb ⇔ **x = aᵀb/aᵀa**
 >
 >
 >
-> => **p = xa = (aTb/aTa) a**
+> ⇒ **p = xa = (aᵀb/aᵀa) a**
 >
 >
 >
@@ -63,15 +61,17 @@
 >
 >
 >
-> p = a (aTb/aTa)
+> p = a (aᵀb/aᵀa)
 >
 >
 >
-> **=> P = aaT/aTa**
+> **⇒ P = aaᵀ/aᵀa**
 
 <br>
 
 <a id="node-gmnip5m"></a>
+
+#### Projection Matrix onto a Line
 
 <p align="center"><kbd><img src="assets/40w2g18g9qu.png" width="80%"></kbd></p>
 
@@ -152,7 +152,7 @@
 >
 >
 > Ở đây mình có thể nảy sinh một câu hỏi khi thấy matrix P giúp project lên
-> vector [2 1 2]T có rank 1, câu hỏi là, có phải có sự liên quan gì giữa rank của
+> vector [2 1 2]ᵀ có rank 1, câu hỏi là, có phải có sự liên quan gì giữa rank của
 > matrix và dimension của subspace mà ta muốn project lên:
 >
 >
@@ -164,7 +164,7 @@
 >
 >
 >
-> dim C(AT) + dim N(A) = 3
+> dim C(Aᵀ) + dim N(A) = 3
 >
 >
 >
@@ -174,7 +174,7 @@
 >
 >
 >
-> dim C(A) + dim N(AT) = 3
+> dim C(A) + dim N(Aᵀ) = 3
 >
 >
 >
@@ -204,12 +204,12 @@
 >
 >
 > **output space chỉ còn 1 line** cho thấy **dim C(A) = 1**, mọi vector trong plane
-> vuông góc với line đều thành 0: **dim N(A) = 2, nên suy ra dim (CT)** cũng = 1
+> vuông góc với line đều thành 0: **dim N(A) = 2, nên suy ra dim (Cᵀ)** cũng = 1
 >
 >
 >
 > Vậy nên rank matrix = 1, matrix có shape 3x3. Và qủa thật công thức của P =
-> aaT/aTA cho thấy đúng là vậy.
+> aaᵀ/aᵀA cho thấy đúng là vậy.
 >
 >
 >
@@ -392,7 +392,7 @@
 
 > [!NOTE]
 > Tiếp với bài toán này, ta sẽ tiếp cận bằng cách thay vì cố tìm D, là coefficient 
-> giúp tạo một linear combination của A's column để cho ra b = [4,5,6].T, và đây
+> giúp tạo một linear combination của A's column để cho ra b = [4,5,6]ᵀ, và đây
 > là nhiệm vụ bất khả thi, vì b NẰM NGOÀI COLUMN SPACE của A. Thế thì, ta
 > sẽ TÌM MỘT ĐIỂM NẰM TRONG COLUMN SPACE SAO CHO GẦN NHẤT
 > VỚI b, và đây chính là projection của b lên C(A). Và khi đó, p, vì nằm trên C(A)
@@ -401,30 +401,30 @@
 >
 >
 > Vậy thì ta sẽ tìm D^ bằng các lập luận theo phép chiếu b lên C(A), mà ở đây
-> là vector a = [1, 2, 3].T:
+> là vector a = [1, 2, 3]ᵀ:
 >
 >
 >
 > Gọi x là coefficient của linear combination của a cho ra p - projection của b lên
-> a: p = ax, hay xa. Thế thì b = p + e => e = b - p = b - ax
+> a: p = ax, hay xa. Thế thì b = p + e ⇒ e = b - p = b - ax
 >
 >
 >
-> Từ thực tế e vuông góc với a nên ta có aTe = 0 <=> aT(b - ax) = 0
-> <=> aTb - aTax = 0 <=> aTb = aTax <=> aTb / (aTa) = x 
+> Từ thực tế e vuông góc với a nên ta có aᵀe = 0 ⇔ aᵀ(b - ax) = 0
+> ⇔ aᵀb - aᵀax = 0 ⇔ aᵀb = aᵀax ⇔ aᵀb / (aᵀa) = x 
 >
 >
 >
-> => p = ax = a (aTb) / (aTa), và Projection matrix P = aaT/aTa
+> ⇒ p = ax = a (aᵀb) / (aᵀa), và Projection matrix P = aaᵀ/aᵀa
 >
 >
 >
-> khi đó, đường thẳng y = D^x, với **D^ = aTb / (aTa)**, sẽ là least square line, giảm
+> khi đó, đường thẳng y = D^x, với **D^ = aᵀb / (aᵀa)**, sẽ là least square line, giảm
 > thiểu sai sót giữa line và các điểm.
 >
 >
 >
-> Như gs viết ở đây, thế vào ta tính ra aTa = 14, aTb = 38 -> D^ = 38/14
+> Như gs viết ở đây, thế vào ta tính ra aᵀa = 14, aᵀb = 38 -> D^ = 38/14
 
 <br>
 
@@ -455,7 +455,7 @@
 <p align="center"><kbd><img src="assets/m7pkrg3nlej.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Câu hỏi thứ 3: Cho matrix 4x4, câu hỏi là, điều kiện của **lambdas** như thế
+> Câu hỏi thứ 3: Cho matrix 4x4, câu hỏi là, điều kiện của **λs** như thế
 > nào để **matrix invertible**
 >
 >
@@ -512,14 +512,16 @@
 
 <a id="node-wyk6l73"></a>
 
+###### Invertibility and Matrix Eigenvalues
+
 <p align="center"><kbd><img src="assets/yo7j3n144zc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs: correct. Câu b: det của A_inv?
+> gs: correct. Câu b: det của A⁻¹?
 >
 >
 >
-> me: det A_inv = 1 / det A = 1/ tích lambdas
+> me: det A⁻¹ = 1 / det A = 1/ tích λs
 >
 >
 >
@@ -527,7 +529,7 @@
 >
 >
 >
-> AinvA = I, dựa vào tính chất của determinant: 
+> A⁻¹A = I, dựa vào tính chất của determinant: 
 >
 >
 >
@@ -535,16 +537,16 @@
 >
 >
 >
-> ta có: det I = det (AinvA) = det Ainv * det A
+> ta có: det I = det (A⁻¹A) = det A⁻¹ * det A
 >
 >
 >
-> <=> 1 = det Ainv * det A => det Ainv = 1/det A. Và det A là bằng
+> ⇔ 1 = det A⁻¹ * det A ⇒ det A⁻¹ = 1/det A. Và det A là bằng
 > tích của các eigenvalue của A = λ1λ2λ3λ4
 >
 >
 >
-> Nên det Ainv = 1/(λ1λ2λ3λ4)
+> Nên det A⁻¹ = 1/(λ1λ2λ3λ4)
 >
 >
 >
@@ -552,7 +554,7 @@
 >
 >
 >
-> Mà ta cũng có thể lập luận như sau để có eigenvalue của Ainv
+> Mà ta cũng có thể lập luận như sau để có eigenvalue của A⁻¹
 >
 >
 >
@@ -560,7 +562,7 @@
 >
 >
 >
-> Ax = λx <=> AinvAx = Ainvλx <=> x = Ainvλx 
+> Ax = λx ⇔ A⁻¹Ax = A⁻¹λx ⇔ x = A⁻¹λx 
 >
 >
 >
@@ -568,13 +570,13 @@
 >
 >
 >
-> Vậy x = Ainvλx =  λAinvx <=> x/λ = Ainvx. Có thể chia cho lambda
-> vì **lambda chắc chắn khác 0 do Ainv tồn tại chứng tỏ matrix 
+> Vậy x = A⁻¹λx =  λA⁻¹x ⇔ x/λ = A⁻¹x. Có thể chia cho λ
+> vì **λ chắc chắn khác 0 do A⁻¹ tồn tại chứng tỏ matrix 
 > non-singular khiến determinant = tích các eigenvalue khác 0**.
 >
 >
 >
-> Từ đó cho thấy **x cũng là eigenvector của Ainv với eigenvalue 
+> Từ đó cho thấy **x cũng là eigenvector của A⁻¹ với eigenvalue 
 > là 1/λ**
 
 <br>
@@ -598,7 +600,7 @@
 >
 >
 > me: Lí luận như sau: nếu **gọi x là eigenvector của A với
-> eigenvalue là lambda**. Thì ta có **Ax = λx**
+> eigenvalue là λ**. Thì ta có **Ax = λx**
 >
 >
 >
@@ -606,7 +608,7 @@
 >
 >
 >
-> <=> (A+I)x = (λ+1)x
+> ⇔ (A+I)x = (λ+1)x
 >
 >
 >
@@ -692,6 +694,8 @@
 
 <a id="node-99gi8o9"></a>
 
+###### Determinant Recurrence Relation Matrix
+
 <p align="center"><kbd><img src="assets/t8f84a41og.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -711,7 +715,7 @@
 >
 >
 >
-> <=> λ**2- λ + 1 = 0
+> ⇔ λ²- λ + 1 = 0
 >
 >
 >
@@ -719,7 +723,7 @@
 >
 >
 >
-> λ = [-b +/- sqrt(b**2 - 4ac)] / 2a = [-(-1) +/- sqrt(b^2 - 4ac)]/2a = 
+> λ = [-b +/- sqrt(b² - 4ac)] / 2a = [-(-1) +/- sqrt(b^2 - 4ac)]/2a = 
 >
 >
 >
@@ -753,31 +757,31 @@
 >
 >
 >
-> ax**2 + bx + c = 0 <=> 
+> ax² + bx + c = 0 ⇔ 
 >
 >
 >
-> x**2 + (b/a)x + c/a = 0 <=>
+> x² + (b/a)x + c/a = 0 ⇔
 >
 >
 >
-> x**2 + 2(b/2a)x + (b/2a)**2 + c/a - b**2/4a**2 = 0 <=>
+> x² + 2(b/2a)x + (b/2a)² + c/a - b²/4a² = 0 ⇔
 >
 >
 >
-> (x + b/2a)**2 = (b/2a)**2 - c/a <=>
+> (x + b/2a)² = (b/2a)² - c/a ⇔
 >
 >
 >
-> (x + b/2a)**2 = (b**2 - 4ac)/4a**2 <=>
+> (x + b/2a)² = (b² - 4ac)/4a² ⇔
 >
 >
 >
-> x + b/2a = +/- sqrt(b**2 - 4ac)/2a
+> x + b/2a = +/- sqrt(b² - 4ac)/2a
 >
 >
 >
-> **x = -b/2a +/- sqrt(b**2 - 4ac)/2a**
+> **x = -b/2a +/- sqrt(b² - 4ac)/2a**
 
 <br>
 
@@ -798,7 +802,7 @@
 >
 >
 >
-> Và ta có (1/2)**2 + [(+/-) sqrt(3)*i / 2]**2 = 1/4 + 3/4 = 1.
+> Và ta có (1/2)² + [(+/-) sqrt(3)*i / 2]² = 1/4 + 3/4 = 1.
 >
 >
 >
@@ -832,7 +836,7 @@
 >
 >
 >
-> => **θ = (+/-) pi/3 (60 độ)**  
+> ⇒ **θ = (+/-) pi/3 (60 độ)**  
 >
 >
 >
@@ -862,7 +866,7 @@
 
 > [!NOTE]
 > rồi, đại khái là khi ta đã biết hai eigenvalues như vậy, thì gs đề
-> nghị hãy **tính thử lambda^6**
+> nghị hãy **tính thử λ^6**
 >
 >
 >
@@ -882,13 +886,13 @@
 >
 >
 >
-> Khi đó, gs cho rằng, ta đã biết nếu lambda là eigenvalue của
+> Khi đó, gs cho rằng, ta đã biết nếu λ là eigenvalue của
 > matrix A, thì **khi lũy thừa A lên, thì eigenvalue cũng sẽ được lũy
 > thừa**. Điều này có thể lập luận lại như sau:
 >
 >
 >
-> Ax = λx => A^2x = AAx = Aλx = λAx = λλx = λ^2x
+> Ax = λx ⇒ A^2x = AAx = Aλx = λAx = λλx = λ^2x
 >
 >
 >
@@ -926,6 +930,8 @@
 
 <a id="node-36lm40b"></a>
 
+###### Projection Matrix onto Column Space
+
 <p align="center"><kbd><img src="assets/hi2sxdpvers.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/qczuy22fogr.png" width="80%"></kbd></p>
@@ -952,7 +958,7 @@
 >
 >
 >
-> Vậy a21*C21 = 1*(-)*0 = 0. Vậy det của A3 = 0 => A3 singular
+> Vậy a21*C21 = 1*(-)*0 = 0. Vậy det của A3 = 0 ⇒ A3 singular
 >
 >
 >
@@ -976,8 +982,8 @@
 >
 >
 >
-> mà dim N(A) + dim C(AT) = n <=> dim C(AT) = n - dim N(A) = r,
-> mà dim N(A) > 0 nên dim C(AT) = r < n, và do đó **dim C(A)
+> mà dim N(A) + dim C(Aᵀ) = n ⇔ dim C(Aᵀ) = n - dim N(A) = r,
+> mà dim N(A) > 0 nên dim C(Aᵀ) = r < n, và do đó **dim C(A)
 > cũng < n.**
 >
 > Thế thì để **tìm projection matrix**, ta có thể lập luận lại công thức như
@@ -1003,8 +1009,8 @@
 >
 >
 >
-> ii) **e vuông góc với C(A)**, do đó **e chính là nằm trên Nullspace của A.T**
-> (the left nullspace), vậy **e là solution của equation ATy = 0**. Ta có ATe
+> ii) **e vuông góc với C(A)**, do đó **e chính là nằm trên Nullspace của Aᵀ**
+> (the left nullspace), vậy **e là solution của equation Aᵀy = 0**. Ta có Aᵀe
 > = 0
 >
 >
@@ -1013,27 +1019,27 @@
 >
 >
 >
-> Và như vậy ATe = 0 <=> AT(b-Ax) = 0 <=> ATb - ATAx = 0 <=> ATb =
-> ATAx
+> Và như vậy Aᵀe = 0 ⇔ Aᵀ(b-Ax) = 0 ⇔ Aᵀb - AᵀAx = 0 ⇔ Aᵀb =
+> AᵀAx
 >
 >
 >
-> Tiếp, nếu **A có INDEPENDENT COLS THÌ ATA INVERTIBLE (**)
+> Tiếp, nếu **A có INDEPENDENT COLS THÌ AᵀA INVERTIBLE (**)
 >
 >
 >
-> Khi đó ta có thể nhân hai vế cho (ATA)^-1:**
+> Khi đó ta có thể nhân hai vế cho (AᵀA)⁻¹:**
 >
 >
 >
-> x = (ATA)^-1ATb, và p = Ax = A(ATA)^-1ATb từ đây projection matrix
-> sẽ là **P = A(ATA)^-1AT**
+> x = (AᵀA)⁻¹Aᵀb, và p = Ax = A(AᵀA)⁻¹Aᵀb từ đây projection matrix
+> sẽ là **P = A(AᵀA)⁻¹Aᵀ**
 >
 >
 >
 > Có thể hiểu vầy, câu hỏi của bài toán thực ra là cho matrix A3  như
 > vậy, yêu cầu tìm Projection matrix giúp project lên column space của
-> A3. **Tuy nhiên trong công thức A(ATA)^-1ATb, ta cần hiểu A là matrix
+> A3. **Tuy nhiên trong công thức A(AᵀA)⁻¹Aᵀb, ta cần hiểu A là matrix
 > có các cột độc lập tạo bởi một basis của một subspace mà ta cần
 > project lên. (Search #lec15 để đi tới bài giảng để xem lại chỗ này)
 >
@@ -1050,23 +1056,23 @@
 >
 >
 >
-> Giả sử A có independent cols, ta xét ATAx = 0 và nếu **chứng minh
-> được ATAx = 0 không có solution khác 0**, hay, ATA nullspace chỉ
+> Giả sử A có independent cols, ta xét AᵀAx = 0 và nếu **chứng minh
+> được AᵀAx = 0 không có solution khác 0**, hay, AᵀA nullspace chỉ
 > chứ zero vector, thì từ đó ta có thể suy ra khi mọi col của A đều
-> independent, hoặc rowspace của ATA là Rn, mà ATA square nữa, thì
-> suy ra ATA full rank, hay invertible.
+> independent, hoặc rowspace của AᵀA là Rn, mà AᵀA square nữa, thì
+> suy ra AᵀA full rank, hay invertible.
 >
 >
 >
-> Thế thì nhân hai vế của ATAx = 0 cho xT ta có xTATAx = 0 Điều này
-> tương đương: (Ax)T(Ax) = 0.
+> Thế thì nhân hai vế của AᵀAx = 0 cho xᵀ ta có xᵀAᵀAx = 0 Điều này
+> tương đương: (Ax)ᵀ(Ax) = 0.
 >
 >
 >
-> Mà Ax (là vector, giả sử gọi là u), thì uTu là scalar. Và chính là  L2
-> norm của vector u, vốn là giá trị không âm. Do đó (Ax)T(Ax) = 0 chỉ
+> Mà Ax (là vector, giả sử gọi là u), thì uᵀu là scalar. Và chính là  L2
+> norm của vector u, vốn là giá trị không âm. Do đó (Ax)ᵀ(Ax) = 0 chỉ
 > có thể suy ra x = 0. Vậy có nghĩa là solution 0 là solution duy  nhất
-> của ATAx = 0, như trên đã nói, có thể kết luận ATA full rank.
+> của AᵀAx = 0, như trên đã nói, có thể kết luận AᵀA full rank.
 
 <br>
 
@@ -1076,7 +1082,7 @@
 
 > [!NOTE]
 > để tìm eigenvalue, như thường lệ ta sẽ solve
-> characteristic equation: det (A - lambda*I) = 0
+> characteristic equation: det (A - λI) = 0
 
 <br>
 
@@ -1140,7 +1146,7 @@
 <p align="center"><kbd><img src="assets/8ra8ki9btbx.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs: correct!. det A4 = 9, -> non singular => P chính là I
+> Gs: correct!. det A4 = 9, -> non singular ⇒ P chính là I
 
 <br>
 
