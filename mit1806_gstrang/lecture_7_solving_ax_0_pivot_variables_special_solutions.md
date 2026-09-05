@@ -1,15 +1,9 @@
-# Lecture 7: Solving Ax = 0:
-pivot Variables, Special
-solutions
+# Lecture 7: Solving Ax = 0: Pivot Variables, Special Solutions
 
 📊 **Progress:** `32` Notes | `37` Screenshots
 
 ---
 <a id="node-7xjaxan"></a>
-
-## Lecture 7: Solving Ax = 0:
-pivot Variables, Special
-solutions
 
 <br>
 
@@ -131,7 +125,7 @@ solutions
 >
 > Mình có thể hiểu thêm rằng, quá trình elimination cho ta
 > EA = U Thế thì nếu x là solution của Ax=0 thì đương nhiên
-> điều này suy ra EAx = 0 và suy ra luôn Ux=0 => x cũng là
+> điều này suy ra EAx = 0 và suy ra luôn Ux=0 ⇒ x cũng là
 > solution của Ux=0. Vậy nullspace của A cũng là nullspace
 > của U
 >
@@ -144,6 +138,8 @@ solutions
 
 <a id="node-iw4p78u"></a>
 
+###### Vector in the Null Space
+
 <p align="center"><kbd><img src="assets/9ni28xdpi9g.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -153,7 +149,7 @@ solutions
 >
 >
 >
-> để có một solution đầu tiên x = [-2, 1, 0, 0].T
+> để có một solution đầu tiên x = [-2, 1, 0, 0]ᵀ
 >
 >
 >
@@ -197,7 +193,7 @@ solutions
 >
 >
 >
-> **x = c * [-2, 1, 0, 0].T + d * [2, 0, 1, 1**]
+> **x = c * [-2, 1, 0, 0]ᵀ + d * [2, 0, 1, 1**]
 >
 >
 >
@@ -358,20 +354,18 @@ solutions
 
 <a id="node-1hhdal7"></a>
 
+###### Nullspace Matrix from RREF Form
+
 <p align="center"><kbd><img src="assets/4stquqnxiwc.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/d8vmj88tj3s.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs nói rằng với dạng typical này, tôi sẽ tìm mọi solution của
-> Rx=0 "cùng một lúc" - tức là một dạng khái quát của solution
-> luôn. Gs mới nói để làm vậy tôi sẽ tìm nullspace matrix của R
-> - là matrix N khiến RN = 0 trong đó column của N sẽ là special
-> solution.
+> Gs nói rằng với dạng typical này, tôi sẽ tìm mọi solution của Rx=0 "cùng một lúc" - tức là một dạng khái quát của solution luôn. Gs mới nói để làm vậy tôi sẽ tìm nullspace matrix của R là matrix N khiến RN = 0 trong đó column của N sẽ là special solution.
 >
 >
 >
-> Vậy thì để RN=0 thì N sẽ có dạng như vầy [-F I ].T
+> Vậy thì để RN=0 thì N sẽ có dạng như vầy \[-F I \]ᵀ
 >
 >
 >
@@ -379,25 +373,19 @@ solutions
 >
 >
 >
-> RN = -F * [I O].T + I * [F O].T (nhân matrix A với col b = linear
-> combination của matrix A's col với coeff là các phần tử của
-> b)
+> RN = -F \* \[I O\]ᵀ + I \* \[F O\]ᵀ (nhân matrix A với col b = linear combination của matrix A's col với coeff là các phần tử của b)
 >
 >
 >
-> = [-FI -FO].T + [IF + IO] = [(-FI + IF) (O + O)] = [O O]
+> = \[-FI -FO\]ᵀ + \[IF + IO\] = \[(-FI + IF) (O + O)\] = \[O O\]
 >
 >
 >
-> Và như vậy đã có thể c**hứng minh rằng special solution
-> đương nhiên phải có dạng như hồi nãy** nói đó là bao gồm
-> cột của I và cột của F. Ví dụ solution thứ 1 là [1 0 -2 0].T
-> solution thứ 2 là [0 1 2 -2].T
+> Và như vậy đã có thể c**hứng minh rằng special solution đương nhiên phải có dạng như hồi nãy** nói đó là bao gồm cột của I và cột của F. Ví dụ solution thứ 1 là \[1 0 -2 0\]ᵀ solution thứ 2 là \[0 1 2 -2\]ᵀ
 >
 >
 >
-> (Chú ý là đang xét **dạng điển hình**, thì **pivot cols/rows đứng
-> trước free cols/rows**
+> (Chú ý là đang xét **dạng điển hình**, thì **pivot cols/rows đứng trước free cols/rows**
 
 <br>
 
@@ -540,7 +528,7 @@ solutions
 >
 > Có nghĩa là có 1 special solution ứng với 1 free columns
 
-**🔗 See also:** [linked note](#node-iw4p78u)
+**🔗 See also:** [Vector in the Null Space](#node-iw4p78u)
 
 <br>
 
@@ -557,7 +545,7 @@ solutions
 > [!NOTE]
 > Và gs chọn x3 (free variable) = 1, thế vô hệ phương
 > trình tính ra x2 = -1, x1 = -1. Vậy một solution tìm được
-> là [-1 -1 1].T
+> là [-1 -1 1]ᵀ
 >
 >
 >
@@ -675,11 +663,13 @@ solutions
 
 <a id="node-cdcpg1u"></a>
 
+###### Nullspace and Special Solutions
+
 <p align="center"><kbd><img src="assets/69d2659yp5d.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Và khi soi chiếu với công thức của null space mà ta đã
-> cùng nhau chứng minh hồi nãy: N = [-F I].T
+> cùng nhau chứng minh hồi nãy: N = [-F I]ᵀ
 >
 >
 >
@@ -687,11 +677,11 @@ solutions
 >
 >
 >
-> Rx=I*xpivot + F*xfree = 0 <=> xpivot = -F*xfree
+> Rx=I*xpivot + F*xfree = 0 ⇔ xpivot = -F*xfree
 >
 >
 >
-> Chọn xfree = I thì xpivot = -F. Nên special solution là [-F I].T
+> Chọn xfree = I thì xpivot = -F. Nên special solution là [-F I]ᵀ
 >
 >
 >
