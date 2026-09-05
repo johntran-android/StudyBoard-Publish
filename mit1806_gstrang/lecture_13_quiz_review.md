@@ -5,8 +5,6 @@
 ---
 <a id="node-pxluqi6"></a>
 
-## Lecture 13: Quiz Review
-
 <br>
 
 <a id="node-3owvu21"></a>
@@ -216,7 +214,7 @@
 >
 >
 >
-> Me: 3, dễ thấy vì REF của nó là [U O].T vẫn chỉ có 3 (rank
+> Me: 3, dễ thấy vì REF của nó là [U O]ᵀ vẫn chỉ có 3 (rank
 > of U) hàng độc lập
 
 <br>
@@ -226,8 +224,8 @@
 <p align="center"><kbd><img src="assets/2t1ylms5wnu.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Xét C.T, các cols của nó là các rows của C. Ta cần quan tâm
-> C.T có mấy cols độc lập, nên mình sẽ đặt câu hỏi là C có
+> Xét Cᵀ, các cols của nó là các rows của C. Ta cần quan tâm
+> Cᵀ có mấy cols độc lập, nên mình sẽ đặt câu hỏi là C có
 > mấy rows độc lập.
 >
 >
@@ -241,15 +239,15 @@
 >
 >
 >
-> Vậy C.T tương ứng sẽ có 6 cột independent, và 4 cột
-> dependent. Từ đó khi xét nullspace của C.T tức là ta quan
-> tâm số special solution của (C.T)y=0, và như đã biết nó bằng
+> Vậy Cᵀ tương ứng sẽ có 6 cột independent, và 4 cột
+> dependent. Từ đó khi xét nullspace của Cᵀ tức là ta quan
+> tâm số special solution của (Cᵀ)y=0, và như đã biết nó bằng
 > số free cols, chính là số dependent cols. Vậy ta có 4 special
-> solution, làm thành 1 basis của nullspace of C.T
+> solution, làm thành 1 basis của nullspace of Cᵀ
 >
 >
 >
-> Vậy dim N(C.T) = 4
+> Vậy dim N(Cᵀ) = 4
 
 <br>
 
@@ -335,12 +333,12 @@
 
 > [!NOTE]
 > Rồi, tiếp ta sẽ đi tìm A. Thế thì việc vector x_particular =
-> [2, 0, 0].T là solution có nghĩa là: 2*col1 + 0*col2 + 0*col3
+> [2, 0, 0]ᵀ là solution có nghĩa là: 2*col1 + 0*col2 + 0*col3
 > = b = [2, 4, 2]
 >
 >
 >
-> Từ đó suy ra, col1 của A sẽ là b/2 = [1, 2, 1].T
+> Từ đó suy ra, col1 của A sẽ là b/2 = [1, 2, 1]ᵀ
 
 <br>
 
@@ -357,7 +355,7 @@
 >
 >
 >
-> Ta có hai basis của nullspace của A là [1,1,0].T và [0,0,1].T
+> Ta có hai basis của nullspace của A là [1,1,0]ᵀ và [0,0,1]ᵀ
 >
 >
 >
@@ -365,7 +363,7 @@
 >
 >
 >
-> Vậy với solution thứ nhất là [1,1,0].T 
+> Vậy với solution thứ nhất là [1,1,0]ᵀ 
 >
 >
 >
@@ -373,11 +371,11 @@
 >
 >
 >
-> Tương tự, với solution thứ hai là [0,0,1].T
+> Tương tự, với solution thứ hai là [0,0,1]ᵀ
 >
 >
 >
-> Ta có 0*col1 + 0*col2 + 1*col3 = 0 Suy ra col3 = **[0, 0, 0].T**
+> Ta có 0*col1 + 0*col2 + 1*col3 = 0 Suy ra col3 = **[0, 0, 0]ᵀ**
 
 <br>
 
@@ -409,12 +407,14 @@
 >
 >
 >
-> Vậy b phải có dạng a*col1 + b*col2 + c*col3 tức là a*[1,2,1].T
+> Vậy b phải có dạng a*col1 + b*col2 + c*col3 tức là a*[1,2,1]ᵀ
 > +  b*[-1, -2, -1]
 
 <br>
 
 <a id="node-c2s0kvc"></a>
+
+###### Null Space of A Transpose
 
 <p align="center"><kbd><img src="assets/kmehbt39dg.png" width="80%"></kbd></p>
 
@@ -435,8 +435,8 @@
 > là số cột. Và vì rank của A cũng là dim của row space. Suy
 > ra A cũng có  số pivot rows là rank A (=số cột). Và vì số
 > hàng bằng số cột (A square) Nên suy ra cũng không có row
-> nào phụ thuộc tuyến tính, tức là khi A.Ty=0 thì nullspace
-> của A.T **cũng sẽ chỉ có zero vector** (vì mọi cols của A.T
+> nào phụ thuộc tuyến tính, tức là khi Aᵀy=0 thì nullspace
+> của Aᵀ **cũng sẽ chỉ có zero vector** (vì mọi cols của Aᵀ
 > cũng đều là pivot**)
 >
 >
@@ -471,14 +471,14 @@
 >
 >
 >
-> - Xét về việc nhân 2 vector độc lập, với cùng một số, thì dễ thấy vẫn tạo
+> \- Xét về việc nhân 2 vector độc lập, với cùng một số, thì dễ thấy vẫn tạo
 > hai vector độc lập vì **scale vector không làm thay đổi phương của
 > vector**. Nên với hai vector độc lập tức là nó không cùng phương với
 > nhau thì có  scale chúng thì chúng vẫn không cùng phương.
 >
 >
 >
-> - Xét việc cộng hai vector độc lập với hai vector độc lập khác, thế thì việc
+> \- Xét việc cộng hai vector độc lập với hai vector độc lập khác, thế thì việc
 > **cộng hai vector thay đổi phương của chúng**. Dẫn đến là kết quả của
 > hai việc **cộng hai vector khác phương với hai vector khác  phương
 > khác** **có thể tạo ra hai vector cùng phương** -> không còn  độc lập
@@ -600,8 +600,8 @@
 >
 >
 > Thế thì, nếu A như ở đây nói, là mọi cols đều independent. Thì chính là ta có
-> matrix full rank / invertible / non-singular. Và 3 cols đủ span toàn bộ R3 => b
-> (vector trong R3) luôn nằm trong columns space C(A) => Ax=b luôn có duy
+> matrix full rank / invertible / non-singular. Và 3 cols đủ span toàn bộ R3 ⇒ b
+> (vector trong R3) luôn nằm trong columns space C(A) ⇒ Ax=b luôn có duy
 > nhất 1 solution.
 >
 >
@@ -673,7 +673,7 @@
 >
 >
 >
-> Bx = 0 <=> ACx = 0 Từ đó, x là solution của Bx=0, thì Cx là
+> Bx = 0 ⇔ ACx = 0 Từ đó, x là solution của Bx=0, thì Cx là
 > solution của Ay=0.
 >
 >
@@ -694,8 +694,8 @@
 >
 > (ở đây khi review sau khi đã học **determinant** ta có thể dùng 
 > **cofactor formula** để tính nhanh det của A theo cột 3: + 1 * det
-> của matrix [1 1; 0 1] = 1*1 = 1 => khác 0 nên matrix non-singular
-> hay fullrank => nullspace chỉ có zero.
+> của matrix [1 1; 0 1] = 1*1 = 1 ⇒ khác 0 nên matrix non-singular
+> hay fullrank ⇒ nullspace chỉ có zero.
 >
 >
 >
@@ -736,12 +736,12 @@
 > invertible matrix (vì khi một fullrank (dĩ nhiên sẽ là square
 > matrix) matrix được eliminate thì kết quả RREF sẽ là Identity
 > matrix. Đồng nghĩa ta có EC=I, với E là elimination matrix, thì
-> cũng tức là E chính là C_inv => C invertible)
+> cũng tức là E chính là C⁻¹ ⇒ C invertible)
 >
 >
 >
-> Vậy xét Bx = 0, ta **có thể nhân hai vế cho E, (hay C_inv)** để
-> có C_invCDx = 0 <=> **Dx=0**.
+> Vậy xét Bx = 0, ta **có thể nhân hai vế cho E, (hay C⁻¹)** để
+> có C⁻¹CDx = 0 ⇔ **Dx=0**.
 >
 >
 >
@@ -769,11 +769,11 @@
 >
 >
 >
-> thế vô equation 2: 0*x1 + 1*x2 + 1*1 -1*0 = 0 => x2 = -1.
+> thế vô equation 2: 0*x1 + 1*x2 + 1*1 -1*0 = 0 ⇒ x2 = -1.
 >
 >
 >
-> thế vô equation 1: 1*x1 + 0*x2 - 1*1 +2*0 = 0  => x1 = 1
+> thế vô equation 1: 1*x1 + 0*x2 - 1*1 +2*0 = 0  ⇒ x1 = 1
 >
 >
 >
@@ -801,7 +801,7 @@
 
 > [!NOTE]
 > Câu trả lời là vầy: ta dễ thấy [1 0 0 0] là một solution của Bx
-> = [1 0 1].T
+> = [1 0 1]ᵀ
 >
 >
 >
@@ -823,13 +823,13 @@
 >
 >
 >
-> Thế thì ta thấy cột đầu tiên của matrix C là [1 0 1].T, và cột
-> đầu tiên của D là [1 0 0].T Thành ra ta sẽ có cột đầu tiên của
+> Thế thì ta thấy cột đầu tiên của matrix C là [1 0 1]ᵀ, và cột
+> đầu tiên của D là [1 0 0]ᵀ Thành ra ta sẽ có cột đầu tiên của
 > B là [1 0 1]*1 + [1 1 0]*0 + [0 0 1]*0 = [1 0 1]
 >
 >
 >
-> Vậy từ đó, khi xét equation Bx = [1 0 1].T, lại lần nữa, x sẽ
+> Vậy từ đó, khi xét equation Bx = [1 0 1]ᵀ, lại lần nữa, x sẽ
 > là linear combination của 4 cols của B. Vậy nên vì col 1
 > của B đã là [1 0 1], nên dễ thấy một solution sẽ là [1 0 0 0]
 >
