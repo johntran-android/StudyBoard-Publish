@@ -1,13 +1,9 @@
-# Lecture 5: Transpose,
-permutations, Spaces R^n
+# Lecture 5: Transpose, Permutations, Spaces R^n
 
 📊 **Progress:** `23` Notes | `24` Screenshots
 
 ---
 <a id="node-xmto5t3"></a>
-
-## Lecture 5: Transpose,
-permutations, Spaces R^n
 
 <br>
 
@@ -49,7 +45,7 @@ permutations, Spaces R^n
 >
 >
 >
-> P_inv = P.T**
+> P⁻¹ = Pᵀ**
 
 <br>
 
@@ -101,17 +97,16 @@ permutations, Spaces R^n
 
 <a id="node-ql1u0gu"></a>
 
+###### Proving Rᵀ R is Symmetric
+
 <p align="center"><kbd><img src="assets/s84j7ig00ca.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Bằng cách **xem thử transpose của (RT)R có là chính nó hay ko**. Thế
-> thì dựa vào luật giống như inverse: (AB)T = (BT)(AT) ta có ((**RT)R**)T ra
-> dc lại (RT)((RT)T) là (**RT)R
+> Bằng cách **xem thử transpose của (Rᵀ)R có là chính nó hay ko**. Thế thì dựa vào luật giống như inverse: (AB)ᵀ = (Bᵀ)(Aᵀ) ta có ((**Rᵀ)R**)ᵀ ra dc lại (Rᵀ)((Rᵀ)ᵀ) là (\*\*Rᵀ)R
 >
 >
 >
-> Như vậy (RT)R khi lấy transpose được chính nó suy ra nó là symmetric
-> matrix**
+> Như vậy (Rᵀ)R khi lấy transpose được chính nó suy ra nó là symmetric matrix\*\*
 
 <br>
 
