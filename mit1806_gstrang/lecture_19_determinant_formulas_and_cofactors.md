@@ -1,13 +1,9 @@
-# Lecture 19: Determinant
-formulas And Cofactors
+# Lecture 19: Determinant Formulas And Cofactors
 
 📊 **Progress:** `39` Notes | `41` Screenshots
 
 ---
 <a id="node-za6dy21"></a>
-
-## Lecture 19: Determinant
-formulas And Cofactors
 
 <br>
 
@@ -44,7 +40,7 @@ formulas And Cofactors
 >
 >
 > -> Đó là hai cái **có zero column** (vì như ta đã biết det A =
-> det AT, và **matrix có row = 0 thì det = 0 theo property #6
+> det Aᵀ, và **matrix có row = 0 thì det = 0 theo property #6
 > nên matrix có cột bằng 0 thì det = 0**
 >
 >
@@ -543,6 +539,8 @@ formulas And Cofactors
 
 <a id="node-8atc15b"></a>
 
+###### Cofactor Formula for Determinants
+
 <p align="center"><kbd><img src="assets/fm388fxatcl.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -651,7 +649,7 @@ formulas And Cofactors
 
 > [!NOTE]
 > Và matrix nhỏ là matrix xanh lá cây, gs sẽ tính det của
-> nó theo cofactor của cột 1, vì **tính chất det A = det A.T
+> nó theo cofactor của cột 1, vì **tính chất det A = det Aᵀ
 > nên làm theo cột theo hàng đều được cả**. Và có thể
 > thấy nó bằng 1.det của cái matrix nhỏ hơn nữa (màu
 > vàng) và cái này chính là A2.
