@@ -45,7 +45,7 @@
 >
 > Eg(X) = Σi g(x)P(X=x) hoặc ∫-inf:inf g(x)fX(x)dx
 
-**🔗 See also:** [Asymptotic Variance of M-Estimators](./102_robustness.md#node-wzfdc2h)
+**🔗 See also:** [Asymptotic Variance of M-Estimators](./102_robustness.md#node-wzfdc2h) · [Kỳ vọng của Score Statistic](./103_hypothesis_testing.md#node-wzyceag)
 
 <br>
 
