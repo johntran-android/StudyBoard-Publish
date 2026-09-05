@@ -1,15 +1,9 @@
-# Lecture 30: Linear
-transformations And Their
-matrices
+# Lecture 30: Linear Transformations And Their Matrices
 
 📊 **Progress:** `42` Notes | `46` Screenshots
 
 ---
 <a id="node-4lvk0vf"></a>
-
-## Lecture 30: Linear
-transformations And Their
-matrices
 
 <br>
 
@@ -41,6 +35,8 @@ matrices
 
 <a id="node-n59g2fq"></a>
 
+#### Definition of Linear Transformation
+
 <p align="center"><kbd><img src="assets/v72h6gqkuu9.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -53,7 +49,7 @@ matrices
 >
 >
 >
-> Có thể viết gom lại thành T(cv+dw) = cT(v) + dT(w)**
+> Có thể viết gom lại thành T(cv+dw) = cT(v) + dᵀ(w)**
 
 <br>
 
@@ -69,6 +65,8 @@ matrices
 <br>
 
 <a id="node-5ktt0ak"></a>
+
+###### Linear Transformation Definition
 
 <p align="center"><kbd><img src="assets/krgme07db78.png" width="80%"></kbd></p>
 
@@ -433,7 +431,7 @@ matrices
 >
 >
 > Và từ đó dựa theo tính chất của Linear Transformation ta sẽ
-> có **T(v) = T(c*v1+d*v2) = c*T(v1) + d*T(v2) => chỉ cần biết
+> có **T(v) = T(c*v1+d*v2) = c*T(v1) + d*T(v2) ⇒ chỉ cần biết
 > T(v1) và T(v2) là có thể biết T(v) với v bất kì**
 >
 > NẾU BIẾT LINEAR TRANSFORMATION CỦA BASIS
@@ -536,7 +534,7 @@ matrices
 >
 >
 >
-> v = **3***(1 0 0) + **2***(0 1 0) + **4***(0 0 1) => (**3, 2, 4**) là
+> v = **3***(1 0 0) + **2***(0 1 0) + **4***(0 0 1) ⇒ (**3, 2, 4**) là
 > các **COEFFICIENTS**
 >
 >
@@ -687,7 +685,7 @@ matrices
 >
 >
 >
-> hay **A*[c1 c2]T = [c1 0]T
+> hay **A*[c1 c2]ᵀ = [c1 0]ᵀ
 >
 >
 >
@@ -940,7 +938,7 @@ matrices
 >
 >
 > Thì A là matrix này, chính là matrix P tính theo
-> cách aaT/aTa (a = (1,1))
+> cách aaᵀ/aᵀa (a = (1,1))
 
 <br>
 
@@ -1091,7 +1089,7 @@ matrices
 >
 >
 >
-> Khi đó Av1 = T(v1) <=> [col1]*1+[col2]*0 = T(v1) <=> col1 =
+> Khi đó Av1 = T(v1) ⇔ [col1]*1+[col2]*0 = T(v1) ⇔ col1 =
 > T(v1) Mà điều này mang ý nghĩa là, column vector 1 của A thể
 > hiện trong basis của output cũng có cùng coordinate với T(v1),
 > vậy col1 sẽ có coordinate (cũng là các component của nó) là
@@ -1099,7 +1097,7 @@ matrices
 >
 >
 >
-> Tương tự Av2 = T(v2) => [col1]*0 + [col2]*1 = T(v2) <=> col2 =
+> Tương tự Av2 = T(v2) ⇒ [col1]*0 + [col2]*1 = T(v2) ⇔ col2 =
 > T(v2) Và, again, điều này đương nhiên có nghĩa là vector col2
 > (column vector thứ 2 của A) có cùng coordinate với T(v2), vậy
 > nó là (7, 8, 9, 10)
@@ -1180,6 +1178,8 @@ matrices
 
 <a id="node-4l7ui60"></a>
 
+###### Matrix Representation of Differentiation
+
 <p align="center"><kbd><img src="assets/wobak4q23x9.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1204,7 +1204,7 @@ matrices
 >
 >
 >
-> Thử lại A [c1 c2 c3]T = c1*[0 0] + c2*[1 0] + c3*[0 2] = 
+> Thử lại A [c1 c2 c3]ᵀ = c1*[0 0] + c2*[1 0] + c3*[0 2] = 
 >
 >
 >
