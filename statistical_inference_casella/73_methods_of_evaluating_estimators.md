@@ -2041,11 +2041,11 @@
 >
 >
 >
-> 1. Cov {W(**X**) , ∂/∂θ log f(**X**|θ)} có phải là d/dθ E\_θ W(**X**)
+> i) Cov {W(**X**) , ∂/∂θ log f(**X**|θ)} có phải là d/dθ E\_θ W(**X**)
 >
 >
 >
-> 2. Var\_θ\[∂/∂θ log f(**X**|θ)\] có phải là E\_θ\[(∂/∂θ log f(**X**|θ)^2\]
+> ii) Var\_θ\[∂/∂θ log f(**X**|θ)\] có phải là E\_θ\[(∂/∂θ log f(**X**|θ)^2\]
 >
 >
 >
@@ -2177,7 +2177,7 @@
 >
 >
 >
-> Tiếp, cái (2): E\_θ\[(∂/∂θ log f(**X**|θ)^2\] có phải là Var\_θ\[∂/∂θ log f(**X**|θ)\] :
+> Tiếp, cái (ii): E\_θ\[(∂/∂θ log f(**X**|θ)^2\] có phải là Var\_θ\[∂/∂θ log f(**X**|θ)\] :
 >
 >
 >
@@ -2205,7 +2205,7 @@
 >
 >
 >
-> 1) Bắt đầu với Cauchy-Schwarz inequality \[Cov(X,Y)\]^2 ≤ VarX VarY
+> a) Bắt đầu với Cauchy-Schwarz inequality \[Cov(X,Y)\]^2 ≤ VarX VarY
 >
 >
 >
@@ -2213,7 +2213,7 @@
 >
 >
 >
-> 2. Áp dụng nó với W(**X**) (trong vai X) và \[∂/∂θ log f(**X**|θ)\] (trong vai Y)
+> b) Áp dụng nó với W(**X**) (trong vai X) và \[∂/∂θ log f(**X**|θ)\] (trong vai Y)
 >
 >
 >
@@ -2221,11 +2221,11 @@
 >
 >
 >
-> 3. Và sau đó ta chứng minh:
+> c) Và sau đó ta chứng minh:
 >
 >
 >
-> 1. Cov {W(**X**), ∂/∂θ log f(**X**|θ)} chính là d/dθ E\_θ\[W(**X**)\]
+> Cov {W(**X**), ∂/∂θ log f(**X**|θ)} chính là d/dθ E\_θ\[W(**X**)\]
 >
 >
 >
@@ -2395,7 +2395,7 @@
 >
 > E_θ[(∂/∂θ log f(X|θ))^2] = - E_θ[∂^2/∂θ^2 log f(X|θ)]
 
-**🔗 See also:** [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Asymptotic Variance of M-Estimators](./102_robustness.md#node-wzfdc2h) · [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li)
+**🔗 See also:** [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Asymptotic Variance of M-Estimators](./102_robustness.md#node-wzfdc2h) · [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li) · [Kỳ vọng của Score Statistic](./103_hypothesis_testing.md#node-wzyceag) · [The Score Test Statistic](./103_hypothesis_testing.md#node-xudioev)
 
 <br>
 
