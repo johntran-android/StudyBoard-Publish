@@ -1,13 +1,9 @@
-# Lecture 34: Final Course
-review
+# Lecture 34: Final Course Review
 
 📊 **Progress:** `32` Notes | `34` Screenshots
 
 ---
 <a id="node-dbt0id9"></a>
-
-## Lecture 34: Final Course
-review
 
 <br>
 
@@ -26,7 +22,7 @@ review
 >
 >
 >
-> Me: vì Ax = [1 0 0]T no solution -> (1,0,0) nằm ngoài C(A). Và
+> Me: vì Ax = [1 0 0]ᵀ no solution -> (1,0,0) nằm ngoài C(A). Và
 > ngược lại vì Ax = (0 1 0) có 1 solution nên (0,1,0) nằm trong
 > C(A).
 >
@@ -43,7 +39,7 @@ review
 >
 >
 >
-> Vậy dim N(A) = 0, mà dim N(A) + dim C(AT) = n <=> **0 + r = n**
+> Vậy dim N(A) = 0, mà dim N(A) + dim C(Aᵀ) = n ⇔ **0 + r = n**
 >
 >
 >
@@ -109,13 +105,13 @@ review
 >
 >
 >
-> Ta đã biết ATA invertible / full-rank nếu A full-column
+> Ta đã biết AᵀA invertible / full-rank nếu A full-column
 > rank. Và điều này đã được chứng minh  nhiều lần
 > trong các bài trước.
 >
 >
 >
-> Và ở case này ta đã có full column rank nên Yes, ATA
+> Và ở case này ta đã có full column rank nên Yes, AᵀA
 > full rank
 >
 >
@@ -123,12 +119,12 @@ review
 > Chứng minh lại như sau: Giả sử A full column rank,
 > tức nullspace của nó chỉ có {0}, hay các cols độc lập.
 > Khi đó Ax = 0 không có nghiệm khác 0.
-> Nhân hai vế cho AT ta cũng sẽ có ATAx = 0 không có
-> nghiệm khác 0, tức, nullspace của ATA cũng chỉ có {0}
+> Nhân hai vế cho Aᵀ ta cũng sẽ có AᵀAx = 0 không có
+> nghiệm khác 0, tức, nullspace của AᵀA cũng chỉ có {0}
 >
 >
 >
-> Mà ATA square, nên suy ra ATA full-rank.
+> Mà AᵀA square, nên suy ra AᵀA full-rank.
 
 <br>
 
@@ -137,7 +133,7 @@ review
 <p align="center"><kbd><img src="assets/xmi1zx2wz8.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs: Correct. Và ATA ở đây là gì?
+> Gs: Correct. Và AᵀA ở đây là gì?
 >
 >
 >
@@ -147,43 +143,32 @@ review
 
 <a id="node-n3tyiq4"></a>
 
+###### Properties of Aᵀ A and AAᵀ
+
 <p align="center"><kbd><img src="assets/a7f04sa67n.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ý thứ 3: AAT có positive definite không?
+> Ý thứ 3: AAᵀ có positive definite không?
 >
 >
 >
-> me: Thử lập luận như sau: ta sẽ check xem liệu quadratic form
-> của nó tức xT(AAT)x có luôn dương với x khác 0 hay không?
-> Nếu có thì kết luận là AAT positive definite mà khỏi cần biết pivot,
-> eigenvalues hay subdet.
+> me: Thử lập luận như sau: ta sẽ check xem liệu quadratic form của nó tức xᵀ(AAᵀ)x có luôn dương với x khác 0 hay không? Nếu có thì kết luận là AAᵀ positive definite mà khỏi cần biết pivot, eigenvalues hay subdet.
 >
 >
 >
-> Thế thì xTAATx = xT(ATT)(ATx) = (ATx)T(ATx). Đặt ATx là u thì
-> quadratic form là length của u.
+> Thế thì xᵀAAᵀx = xᵀ(Aᵀᵀ)(Aᵀx) = (Aᵀx)ᵀ(Aᵀx). Đặt Aᵀx là u thì quadratic form là length của u. 
 >
 >
 >
-> Câu hỏi sẽ trở thànhlà ATx có luôn khác không với x khác 0 hay
-> không, và điều này tương đương câu hỏi left nullspace của A có
-> vector khác 0 nào không (vì nếu có, thì nó chính là non-zero
-> solution của ATx = 0)
+> Câu hỏi sẽ trở thànhlà Aᵀx có luôn khác không với x khác 0 hay không, và điều này tương đương câu hỏi left nullspace của A có vector khác 0 nào không (vì nếu có, thì nó chính là non-zero solution của Aᵀx = 0)
 >
 >
 >
-> Thế thì câu trả lời đã rõ, vì r < m, nên tồn tại non zero vector của
-> Rm bị biến thành 0, và đó chính là vector trong left nullspace.
-> Hay trả lời cách khác, vì r < m, nên tồn tại dependent row, nó
-> cũng chính là dependent column của AT, tạo nên một special
-> solution của ATy = 0 -> 1 vector trong basis của N(AT)
+> Thế thì câu trả lời đã rõ, vì r &lt; m, nên tồn tại non zero vector của Rm bị biến thành 0, và đó chính là vector trong left nullspace. Hay trả lời cách khác, vì r &lt; m, nên tồn tại dependent row, nó cũng chính là dependent column của Aᵀ, tạo nên một special solution của Aᵀy = 0 -&gt; 1 vector trong basis của N(Aᵀ)
 >
 >
 >
-> Vậy kết luận: Tồn tại vector khác 0 khiến ATx = 0 tức là tồn tại
-> vector khác 0 khiến quadratic form của AAT bằng 0, suy ra nó
-> **KHÔNG POSITIVE DEFINITE.**
+> Vậy kết luận: Tồn tại vector khác 0 khiến Aᵀx = 0 tức là tồn tại vector khác 0 khiến quadratic form của AAᵀ bằng 0, suy ra nó **KHÔNG POSITIVE DEFINITE.**
 
 <br>
 
@@ -194,12 +179,12 @@ review
 > [!NOTE]
 > gs: Đúng, nếu nó chỉ POSITIVE SEMI-DEFINITE
 > (dễ hiểu vì quadratic form như đã thấy có thể chứng
-> minh được là luôn không âm : uTu luôn không âm).
+> minh được là luôn không âm : uᵀu luôn không âm).
 >
 >
 >
-> gs ko nói rõ, nhưng chỉ nói là ta có thể tính thử AAT
-> và thấy ngay trong ví dụ này AAT có 1 row là 0.
+> gs ko nói rõ, nhưng chỉ nói là ta có thể tính thử AAᵀ
+> và thấy ngay trong ví dụ này AAᵀ có 1 row là 0.
 > Mà từ đó thì suy ra ngay det của nó bằng 0 (vì ta có
 > tính chất matrix có row hay col bằng 0 thì det = 0)
 > Và matrix có det = 0 thì không thể Positive definite.
@@ -207,8 +192,8 @@ review
 >
 >
 >
-> Và từ đây ta trả lời ý 1: False. Vì **det AAT = 0** như mới
-> nói, trong khi ATA full rank, nên nullspace chỉ có {0}
+> Và từ đây ta trả lời ý 1: False. Vì **det AAᵀ = 0** như mới
+> nói, trong khi AᵀA full rank, nên nullspace chỉ có {0}
 > dẫn đến không có eigenvalue nào bằng 0 khiến det
 > khác 0 (có thể nói ngắn gọn là non-singular matrix 
 > thì **det khác 0**)
@@ -221,13 +206,13 @@ review
 
 > [!NOTE]
 > Gs: Và đây là câu hỏi mà ta có thể trả lời ngay từ đầu,
-> vì **det của AAT chỉ bằng det ATA khi A square.**
+> vì **det của AAᵀ chỉ bằng det AᵀA khi A square.**
 >
 >
 >
 > Bởi lẽ ta có det AB = detA * detB nên chỉ khi A square
-> thì det A và det AT mới tồn tại để det A * det AT = det
-> AAT = det AT * det A = det ATA
+> thì det A và det Aᵀ mới tồn tại để det A * det Aᵀ = det
+> AAᵀ = det Aᵀ * det A = det AᵀA
 
 <br>
 
@@ -242,13 +227,13 @@ review
 >
 >
 >
-> i)...dependent / free column của AT, ứng với một special solution
-> của ATy = 0 -> ta có m - r vector trong basis của left nullspace N(AT)
+> i)...dependent / free column của Aᵀ, ứng với một special solution
+> của Aᵀy = 0 -> ta có m - r vector trong basis của left nullspace N(Aᵀ)
 >
 >
 >
 > ii) tạo nên một bộ linear combination của các row cho ra zero,
-> đó chính là một solution của ATy = 0 -> Có m - r solution, tức left
+> đó chính là một solution của Aᵀy = 0 -> Có m - r solution, tức left
 > nullspace có **dim = m - r** > 0
 >
 >
@@ -257,11 +242,11 @@ review
 >
 >
 >
-> Tiếp, xét matrix AT, có m columns là vector trong R^n, trong đó có r 
+> Tiếp, xét matrix Aᵀ, có m columns là vector trong R^n, trong đó có r 
 > columns độc lập. Thế mà ta có n = r, vậy r columns độc lập này 
 > ĐÃ ĐỦ SPAN TOÀN BỘ R^n. Do đó bất kì vector c thuộc Rn nào 
-> đương nhiên cũng thuộc column space C(AT), hay nói cách khác
-> ATy = c luôn có solution particular với mọi c.
+> đương nhiên cũng thuộc column space C(Aᵀ), hay nói cách khác
+> Aᵀy = c luôn có solution particular với mọi c.
 >
 >
 >
@@ -375,6 +360,8 @@ review
 
 <a id="node-krjnvjz"></a>
 
+###### Markov Matrix Eigenvalues
+
 <p align="center"><kbd><img src="assets/ylayzx74oqr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -389,42 +376,42 @@ review
 >
 >
 > Điểm thứ hai, ta đã biết Markov matrix có tổng các row bằng 1 nên
-> row 1 + row 2 + row 3 = 1. Xét AT thì điều này đồng nghĩa col 1 +
+> row 1 + row 2 + row 3 = 1. Xét Aᵀ thì điều này đồng nghĩa col 1 +
 > col 2 + col3 = 1
 >
 >
 >
-> Suy ra (AT)[1 1 1]T = [1 1 1]T
+> Suy ra (Aᵀ)[1 1 1]ᵀ = [1 1 1]ᵀ
 >
 >
 >
-> Và equation trên đã đủ cho thấy **[1 1 1]T là eigenvector  của AT
+> Và equation trên đã đủ cho thấy **[1 1 1]ᵀ là eigenvector  của Aᵀ
 > với eigenvalue là 1.**
 >
 >
 >
-> Và ta đã nghe nói ở đâu đó rằng **A và AT có cùng eigenvalues**.
-> Có thể chứng minh lại như sau: Giả sử lbd là eigenvalue của A
+> Và ta đã nghe nói ở đâu đó rằng **A và Aᵀ có cùng eigenvalues**.
+> Có thể chứng minh lại như sau: Giả sử λ là eigenvalue của A
 >
 >
 >
-> Ax = lbd*x <=> (A-lbd*I)x = 0 có solution là eigenvector x khác 0
-> nên A-lbd*I singular. Mà điều đó cũng suy ra (A-lbd*I)T cũng
+> Ax = λx ⇔ (A-λ𝐈)x = 0 có solution là eigenvector x khác 0
+> nên A-λ𝐈 singular. Mà điều đó cũng suy ra (A-λ𝐈)ᵀ cũng
 > singular.
 >
 >
 >
-> Nên ta sẽ có (A-lbd*I)Ty = (AT - lbd*I)y  = 0  cũng có non-zero
+> Nên ta sẽ có (A-λ𝐈)ᵀy = (Aᵀ - λ𝐈)y  = 0  cũng có non-zero
 > solution
 >
 >
 >
-> mà điều này cũng tương đương ATy = lbd*y, tức là solution y chính
-> là eigenvector của AT với eigenvalue lbd.
+> mà điều này cũng tương đương Aᵀy = λy, tức là solution y chính
+> là eigenvector của Aᵀ với eigenvalue λ.
 >
 >
 >
-> Từ đó đã chứng minh A và AT có cùng eigenvalue.
+> Từ đó đã chứng minh A và Aᵀ có cùng eigenvalue.
 >
 >
 >
@@ -437,7 +424,7 @@ review
 >
 >
 > Và cái thứ 3 thì dựa vào trace = tổng entries trên đường chéo =
-> 0.8 = tổng eigenvalues vậy lambda 3 = 0.8 - 1 = - **0.2**
+> 0.8 = tổng eigenvalues vậy λ 3 = 0.8 - 1 = - **0.2**
 
 <br>
 
@@ -452,6 +439,8 @@ review
 
 <a id="node-1gnwljk"></a>
 
+###### Powers of Markov Matrix
+
 <p align="center"><kbd><img src="assets/qk2tghwy85.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -465,15 +454,15 @@ review
 >
 >
 >
-> A = S.Λ.Sinv
+> A = S.Λ.S⁻¹
 >
 >
 >
-> => A^2 = AA = S.Λ.SinvS.Λ.Sinv  = S.Λ^2Sinv
+> ⇒ A^2 = AA = S.Λ.S⁻¹S.Λ.S⁻¹  = S.Λ^2S⁻¹
 >
 >
 >
-> và A^k = S.Λ^k.Sinv
+> và A^k = S.Λ^k.S⁻¹
 >
 >
 >
@@ -483,7 +472,7 @@ review
 >
 >
 >
-> Nên u = A^ku_0 = S.Λ^k.Sinv Sc = **S.Λ^k*c**
+> Nên u = A^ku_0 = S.Λ^k.S⁻¹ Sc = **S.Λ^k*c**
 >
 >
 >
@@ -526,8 +515,8 @@ review
 <p align="center"><kbd><img src="assets/in4en3qgh8.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và ta thế eigenvalue vào A - lambda*I và giải equation (A -
-> lambda*I)x = 0 (lambda = 1)
+> Và ta thế eigenvalue vào A - λI và giải equation (A -
+> λI)x = 0 (λ = 1)
 >
 >
 >
@@ -560,7 +549,7 @@ review
 >
 >
 >
-> me: aaT/aTa, việc xây dựng công thức này tương đối
+> me: aaᵀ/aᵀa, việc xây dựng công thức này tương đối
 > dễ và đã làm nhiều lần nên khỏi lập luận lại
 
 <br>
@@ -583,7 +572,7 @@ review
 <p align="center"><kbd><img src="assets/m1s6fg0e2t.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> rất dễ, chỉ cần lắp vào A = SΛSinv
+> rất dễ, chỉ cần lắp vào A = SΛS⁻¹
 
 <br>
 
@@ -596,21 +585,23 @@ review
 >
 >
 >
-> i) tìm matrix A sao cho nó khác BTB với mọi B, thì câu trả
-> lời chỉ đơn giản là vì BTB có tính symmetric nên miễn là A
+> i) tìm matrix A sao cho nó khác BᵀB với mọi B, thì câu trả
+> lời chỉ đơn giản là vì BᵀB có tính symmetric nên miễn là A
 > không symmetric là được.
 >
 >
 >
 > ii) matrix có orthogonal eigenvector nhưng không
-> symmetric thì đơn giản là anti-symmetric (là cái có A = -AT)
+> symmetric thì đơn giản là anti-symmetric (là cái có A = -Aᵀ)
 > hoặc orthogonal matrix *như đã biết đây là 3 nhóm tiêu
-> biểu của loại matrix có tính chất AAT = ATA, và có
+> biểu của loại matrix có tính chất AAᵀ = AᵀA, và có
 > eigenvector vuông góc
 
 <br>
 
 <a id="node-r2ib0as"></a>
+
+###### Projection onto Column Space
 
 <p align="center"><kbd><img src="assets/ps0476xrq9b.png" width="80%"></kbd></p>
 
@@ -619,19 +610,19 @@ review
 >
 >
 >
-> ATe = 0 <=> AT(b - Ax) = 0 <=> ATb = ATAx 
+> Aᵀe = 0 &lt;=&gt; Aᵀ(b - Ax) = 0 &lt;=&gt; Aᵀb = AᵀAx
 >
 >
 >
-> <=> x = (ATA inv)ATb
+> &lt;=&gt; x = (AᵀA)⁻¹ Aᵀb
 >
 >
 >
-> p = Ax = A(ATA inv)ATb = Pb 
+> p = Ax = A (AᵀA)⁻¹ Aᵀb = Pb
 >
 >
 >
-> **=> P = A(ATA inv)AT**
+> **=&gt; P = A (AᵀA)⁻¹ Aᵀ**
 
 <br>
 
@@ -666,12 +657,12 @@ review
 >
 >
 > me: Để x^ = [0 0] tức là p = 0. Như vậy b = e + p = e
-> Mà ta biết ATe = 0, hay e là left nullspace của A, là subspace
+> Mà ta biết Aᵀe = 0, hay e là left nullspace của A, là subspace
 > orthogonal complement với rows space of A.
 >
 >
 >
-> Vậy b nằm trên N(AT) là được.
+> Vậy b nằm trên N(Aᵀ) là được.
 
 <br>
 
@@ -683,7 +674,7 @@ review
 
 > [!NOTE]
 > gs: Correct, chỉ cần tìm
-> basis của N(AT)
+> basis của N(Aᵀ)
 
 <br>
 
