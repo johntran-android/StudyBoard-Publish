@@ -1,13 +1,9 @@
-# Lecture 4: Factorization
-into A = Lu
+# Lecture 4: Factorization Into A = Lu
 
 📊 **Progress:** `23` Notes | `25` Screenshots
 
 ---
 <a id="node-0cpgc9q"></a>
-
-## Lecture 4: Factorization
-into A = Lu
 
 <br>
 
@@ -18,6 +14,8 @@ into A = Lu
 <br>
 
 <a id="node-mucx15u"></a>
+
+### Nghịch đảo tích ma trận
 
 <p align="center"><kbd><img src="assets/wxbw5qg0g4j.png" width="80%"></kbd></p>
 
@@ -30,34 +28,40 @@ into A = Lu
 
 <a id="node-hoh4tph"></a>
 
+#### Nghịch đảo tích ma trận
+
 <p align="center"><kbd><img src="assets/koixhifd69p.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đáp án chính là **tích của Ainv và Binv, theo thứ tự
-> ngược lại = Binv@Ainv**
+> Đáp án chính là **tích của A⁻¹ và B⁻¹, theo thứ tự
+> ngược lại = B⁻¹@A⁻¹**
 >
 >
 >
-> Chứng minh: rất dễ là hiểu là khi nhân AB và BinvAinv,
+> Chứng minh: rất dễ là hiểu là khi nhân AB và B⁻¹A⁻¹,
 > theo bài trước đã biết ta hoàn toàn có thể di chuyển
-> các dấu ngoặc để rồi ta sẽ tính BBinv trước ra bằng I.
-> Sau đó AIAinv sẽ ra AAinv ra I
+> các dấu ngoặc để rồi ta sẽ tính BB⁻¹ trước ra bằng I.
+> Sau đó AIA⁻¹ sẽ ra AA⁻¹ ra I
 >
-> (AB)_inv = B_invA_inv
+> (AB)⁻¹ = B⁻¹A⁻¹
 
 <br>
 
 <a id="node-e6gf99i"></a>
 
+##### Nghịch đảo tích ma trận
+
 <p align="center"><kbd><img src="assets/3ipiy9tti9b.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Vậy BinvAinv là
+> Vậy B⁻¹A⁻¹ là
 > inverse của AB
 
 <br>
 
 <a id="node-d1uoihy"></a>
+
+###### Transpose of an Inverse Matrix
 
 <p align="center"><kbd><img src="assets/agpzk6av9v.png" width="80%"></kbd></p>
 
@@ -66,24 +70,25 @@ into A = Lu
 >
 >
 >
-> Gs bắt đầu với AAinv = I, transpose hai vế thì (I)T vẫn
-> là I, còn (AAinv)T = AinvT AT
+> Gs bắt đầu với AA⁻¹ = I, transpose hai vế thì (I)ᵀ vẫn là I, còn (AA⁻¹)ᵀ = (A⁻¹)ᵀ Aᵀ
 
 <br>
 
 <a id="node-h1jebsw"></a>
 
+###### Inverse of Transpose Matrix
+
 <p align="center"><kbd><img src="assets/gno478o85d4.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Vậy từ (Ainv)T (AT) = I cho thấy inverse của AT chính
-> là (Ainv)T:
+> Vậy từ (A⁻¹)ᵀ (Aᵀ) = I cho thấy inverse của Aᵀ chính
+> là (A⁻¹)ᵀ:
 >
 >
 >
-> (AT)_inv = (A_inv)T
+> (Aᵀ)⁻¹ = (A⁻¹)ᵀ
 >
-> (AT)_inv = (A_inv)T
+> (Aᵀ)⁻¹ = (A⁻¹)ᵀ
 
 <br>
 
@@ -94,6 +99,8 @@ into A = Lu
 <br>
 
 <a id="node-46g4o54"></a>
+
+###### Ma trận khử E21
 
 <p align="center"><kbd><img src="assets/hythx5beirq.png" width="80%"></kbd></p>
 
@@ -127,6 +134,8 @@ into A = Lu
 
 <a id="node-v1t9ron"></a>
 
+###### Nghịch đảo ma trận khử
+
 <p align="center"><kbd><img src="assets/ftiibl0jwf.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -140,12 +149,12 @@ into A = Lu
 >
 >
 >
-> **Nên bây giờ L đảo ngược chuyện đó nên L chính là E_inv** 
+> **Nên bây giờ L đảo ngược chuyện đó nên L chính là E⁻¹** 
 >
 >
 >
-> Ta có thể hiểu như vầy: EA = U và LU = A <=> L(EA) = A
-> <=> (LE)A = A <=> LE = I từ đó suy ra **L = E_inv**
+> Ta có thể hiểu như vầy: EA = U và LU = A ⇔ L(EA) = A
+> ⇔ (LE)A = A ⇔ LE = I từ đó suy ra **L = E⁻¹**
 >
 >
 >
@@ -155,7 +164,7 @@ into A = Lu
 >
 > Gs cho biết **inverse của Elimination rất dễ, chỉ việc đổi
 > dấu của cái coeff ở vị trí 21 lại** (để từ hàng 2 của E21 là
-> [-4 1] thành [4 1] là ta sẽ có hàng 2 của E21_inv, hàng 1
+> [-4 1] thành [4 1] là ta sẽ có hàng 2 của E21⁻¹, hàng 1
 > thì giữ nguyên)
 >
 >
@@ -194,6 +203,8 @@ into A = Lu
 
 <a id="node-p7d5pv5"></a>
 
+###### Phân tích ma trận LDU
+
 <p align="center"><kbd><img src="assets/x9h1v12yc7.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -213,6 +224,8 @@ into A = Lu
 <br>
 
 <a id="node-4uvnf3v"></a>
+
+###### Phép khử ma trận 3x3
 
 <p align="center"><kbd><img src="assets/0scgy3l80jer.png" width="80%"></kbd></p>
 
@@ -237,10 +250,12 @@ into A = Lu
 
 <a id="node-fx6m8tb"></a>
 
+###### Xây dựng ma trận L
+
 <p align="center"><kbd><img src="assets/x9ngjkhsl9.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Lập luận thế này, E32 biến đổi E31E21A thành U, vậy E32inv
+> Lập luận thế này, E32 biến đổi E31E21A thành U, vậy E32⁻¹
 > sẽ biến đổi U về lại E31E21A:
 >
 >
@@ -249,32 +264,34 @@ into A = Lu
 >
 >
 >
-> => E32inv(E32E31E21A) = (E32invE32)E31E21A = E31E21A
+> ⇒ E32⁻¹(E32E31E21A) = (E32⁻¹E32)E31E21A = E31E21A
 >
 >
 >
-> Tiếp tục, E31inv sẽ biến đổi E31E21A về lại E21A:
+> Tiếp tục, E31⁻¹ sẽ biến đổi E31E21A về lại E21A:
 >
 >
 >
-> E31inv(E31E21A) = (E31invE31)E21A = E21A
+> E31⁻¹(E31E21A) = (E31⁻¹E31)E21A = E21A
 >
 >
 >
-> Và E21inv sẽ biến đổi E21A về lại A
+> Và E21⁻¹ sẽ biến đổi E21A về lại A
 >
 >
 >
-> E21inv(E21A) = A
+> E21⁻¹(E21A) = A
 >
 >
 >
-> Nên L = **E32invE31invE21inv** là matrix sẽ đảo ngược quá
+> Nên L = **E32⁻¹E31⁻¹E21⁻¹** là matrix sẽ đảo ngược quá
 > trình từ A thành U
 
 <br>
 
 <a id="node-1cd08mx"></a>
+
+###### Nghịch đảo ma trận E
 
 <p align="center"><kbd><img src="assets/wwgxgg21bwl.png" width="80%"></kbd></p>
 
@@ -285,11 +302,11 @@ into A = Lu
 >
 >
 >
-> Và L bằng E21invE32inv là matrix đảo ngược lại LU = A
+> Và L bằng E21⁻¹E32⁻¹ là matrix đảo ngược lại LU = A
 >
 >
 >
-> Để ý đã **biết cách tính E21inv** ở trên, cơ bản E21 chỉ là
+> Để ý đã **biết cách tính E21⁻¹** ở trên, cơ bản E21 chỉ là
 > matrix mà **nếu với nhân A nó sẽ thực hiện việc lấy
 > hàng 2 của A  trừ đi 2 * hàng 1 của A để thành**,
 > hàng 2 của E21A
@@ -300,7 +317,7 @@ into A = Lu
 >
 >
 >
-> thì E21inv sẽ đảo ngược bằng cách: **Lấy hàng 2 của E21A 
+> thì E21⁻¹ sẽ đảo ngược bằng cách: **Lấy hàng 2 của E21A 
 > cộng 2 * hàng 1 của E21A (cũng bằng hàng 1 của A vì E21
 > không thay đổi hàng 1 so với A)** để có hàng 2 của A.
 >
@@ -315,11 +332,13 @@ into A = Lu
 >
 >
 >
-> Tương tự với E32 và E32inv
+> Tương tự với E32 và E32⁻¹
 
 <br>
 
 <a id="node-igiuj79"></a>
+
+###### Chi phí phép khử Gauss
 
 <p align="center"><kbd><img src="assets/vaw6pjr2wm.png" width="80%"></kbd></p>
 
@@ -340,6 +359,8 @@ into A = Lu
 
 <a id="node-3a24uc8"></a>
 
+###### Số phép tính khử cột
+
 <p align="center"><kbd><img src="assets/ougrcp5q8gg.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -354,54 +375,52 @@ into A = Lu
 
 <a id="node-tw056b1"></a>
 
+###### Operation Count in Gaussian Elimination
+
 <p align="center"><kbd><img src="assets/hn96lh2g0p8.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs đặt câu hỏi **liệu số operations có proportional với
-> n theo n**2, hay n**3.**..
+> Gs đặt câu hỏi liệu số operations có proportional với n theo n², hay n³ **.**..
 
 <br>
 
 <a id="node-q0hdmo1"></a>
 
+###### Gaussian Elimination Operation Count
+
 <p align="center"><kbd><img src="assets/9de7ddo2sea.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Vậy ở bước đầu tiên này gs **cho rằng ta sẽ tốn 100**2 operations**
+> Vậy ở bước đầu tiên này gs **cho rằng ta sẽ tốn 100²** operations\*\*
 >
 >
 >
-> Chưa hiểu lắm tại sao, đại khái là gs cho rằng ta phải thay đổi 100x100
-> con số (coi như thay đổi luôn hàng đầu tiên)
+> Chưa hiểu lắm tại sao, đại khái là gs cho rằng ta phải thay đổi 100x100 con số (coi như thay đổi luôn hàng đầu tiên)
 >
 >
 >
-> Có thể hiểu là ở bước đầu tiên, ta sẽ muốn khử mọi phần tử không phải
-> pivot của cột 1: a21, a31....Mà để khử a21 ta sẽ **trừ** row 2 cho (một
-> con số nào đó **nhân** row 1). Như đã nói ta sẽ tính một phép nhân và
-> một phép trừ là một operation.
+> Có thể hiểu là ở bước đầu tiên, ta sẽ muốn khử mọi phần tử không phải pivot của cột 1: a21, a31....Mà để khử a21 ta sẽ **trừ** row 2 cho (một con số nào đó **nhân** row 1). Như đã nói ta sẽ tính một phép nhân và một phép trừ là một operation.
 >
 >
 >
-> Thế thì việc lấy row 2 **trừ** [(something) **nhân** (row 1)] sẽ bao gồm
-> 100 operation vì ta có 100 item mỗi hàng.
+> Thế thì việc lấy row 2 **trừ** \[(something) **nhân** (row 1)\] sẽ bao gồm 100 operation vì ta có 100 item mỗi hàng.
 >
 >
 >
-> Số operation cần thiết cũng tương tự khi khử a31, a41... và ta có
-> khoảng 99 cái. Do đó số operation là **100*99** và **gs cho nó khoảng
-> 100*100 luôn, là 100^2**
+> Số operation cần thiết cũng tương tự khi khử a31, a41... và ta có khoảng 99 cái. Do đó số operation là **100 × 99** và **gs cho nó khoảng 100 × 100 luôn, là 100²**
 
 <br>
 
 <a id="node-as80yh1"></a>
+
+###### Operation Count in Gaussian Elimination
 
 <p align="center"><kbd><img src="assets/ijzm5ky8sl.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là bước thứ hai, vấn đề cũng tương tự nhưng nhỏ
 > hơn vì ta chỉ có 99 item mỗi hàng và có 98 hàng, nên số
-> operation tính **gần đúng coi như có 99**2 operations**
+> operation tính **gần đúng coi như có 99² operations**
 >
 >
 >
@@ -413,7 +432,7 @@ into A = Lu
 >
 >
 >
-> **n**2 + (n-1)**2 +....2**2+1**2**
+> **n² + (n-1)² +....2²+1²**
 >
 >
 >
@@ -426,32 +445,27 @@ into A = Lu
 <p align="center"><kbd><img src="assets/3d8hzkq8kp.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs lập luận là đây là **tổng** của **n term**, mà **bự nhất là n**2**,
-> nên **nó ko thể to hơn n*n**2=n**3** được.
+> Gs lập luận là đây là **tổng** của **n term**, mà **bự nhất là n²**, nên **nó ko thể to hơn n × n² = n³** được.
 >
 >
 >
-> Gs cho biết nó **sẽ cỡ n**3/3**
+> Gs cho biết nó **sẽ cỡ n³**/3\*\*
 >
 >
 >
-> Cái này là **tích phân từ 1 tới n của hàm x**2**.
+> Cái này là **tích phân từ 1 tới n của hàm x²\*\*.
 >
 >
 >
-> Cái này thật ra sẽ cần kiến thức của 18.01 nên mình có thể sẽ quay
-> lại sau nhưng hiểu đại khái là vầy
+> Cái này thật ra sẽ cần kiến thức của 18.01 nên mình có thể sẽ quay lại sau nhưng hiểu đại khái là vầy
 >
 >
 >
-> Để tính tổng 1^2 + 2^2 + ...(n-1)^2 + n^2 ta sẽ lấy tích phân từ 1 đến n
-> của số hạng tổng quát. Và số hạng tổng quát là x^2. Do đó ta có:
+> Để tính tổng 1^2 + 2^2 + ...(n-1)^2 + n^2 ta sẽ lấy tích phân từ 1 đến n của số hạng tổng quát. Và số hạng tổng quát là x^2. Do đó ta có:
 >
 >
 >
-> tích phân từ 0 đến n của x^2dx. và theo Fundamental  Theorem of
-> Calculus Part 2, tích phân này sẽ bằng [nguyên hàm của f] n:0 = x^3/3
-> | n:0 = n^3/3
+> tích phân từ 0 đến n của x^2dx. và theo Fundamental Theorem of Calculus Part 2, tích phân này sẽ bằng \[nguyên hàm của f\] n:0 = x^3/3 | n:0 = n^3/3
 >
 >
 >
@@ -463,11 +477,13 @@ into A = Lu
 
 <a id="node-qhc9zhe"></a>
 
+###### Elimination Operation Count
+
 <p align="center"><kbd><img src="assets/k2fo2mmo4k.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Còn với vector b (việc biến đổi còn có vector b bên phải
-> equation Ax=b nữa nhớ ko). Sẽ **tốn n**2 operations** (gs
+> equation Ax=b nữa nhớ ko). Sẽ **tốn n² operations** (gs
 > không giải thích tại sao)
 
 <br>
@@ -478,7 +494,7 @@ into A = Lu
 
 > [!NOTE]
 > Rồi, h gs nói qua việc nếu ta có tính tới row exchange,
-> - nhớ lại là khi trong quá trình row elimination ta gặp
+> \- nhớ lại là khi trong quá trình row elimination ta gặp
 > pivot = 0 thì ta phải row exchange.
 >
 >
@@ -518,6 +534,8 @@ into A = Lu
 
 <a id="node-82ectl5"></a>
 
+###### 3x3 Permutation Matrices
+
 <p align="center"><kbd><img src="assets/vld5sxzsahs.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -529,7 +547,7 @@ into A = Lu
 >
 >
 >
-> P12 = P12_inv**
+> P12 = P12⁻¹**
 
 <br>
 
@@ -539,7 +557,7 @@ into A = Lu
 
 > [!NOTE]
 > Và gs cho biết **permutation matrix** có **tính chất đặc biệt** đó
-> là **inverse cũng chính là transpose**: **Pinv = P.T**
+> là **inverse cũng chính là transpose**: **P⁻¹ = Pᵀ**
 
 <br>
 
