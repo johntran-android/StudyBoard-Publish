@@ -1,13 +1,9 @@
-# Lecture 16: Projection
-matrices And Least Squares
+# Lecture 16: Projection Matrices And Least Squares
 
 📊 **Progress:** `38` Notes | `43` Screenshots
 
 ---
 <a id="node-cp1tmdc"></a>
-
-## Lecture 16: Projection
-matrices And Least Squares
 
 <br>
 
@@ -32,13 +28,13 @@ matrices And Least Squares
 >
 >
 >
-> - Nếuvector **b ĐÃ NẰM trong column space** thì khi
+> \- Nếuvector **b ĐÃ NẰM trong column space** thì khi
 > project b lên column space của A (bằng projection matrix
 > P) đương nhiên sẽ c**hẳng thay đổi g**ì: **Pb = b**
 >
 >
 >
-> - Nếu vector **b VUÔNG GÓC VỚI cols space của A**,  thì
+> \- Nếu vector **b VUÔNG GÓC VỚI cols space của A**,  thì
 > dễ thấy sau khi project, ta sẽ **chỉ còn zero vector**. (hình
 > dung vector b, và đường thẳng đi qua gốc (vì phải như vậy
 > mới là subspace, nhớ không) thì nếu vector b vuông góc
@@ -48,6 +44,8 @@ matrices And Least Squares
 <br>
 
 <a id="node-yg6paoj"></a>
+
+##### Projection Matrix Properties
 
 <p align="center"><kbd><img src="assets/6yu8ojkop13.png" width="80%"></kbd></p>
 
@@ -60,25 +58,27 @@ matrices And Least Squares
 >
 >
 >
-> + Khi b thuộc column space của A, đương nhiên có thể ghi
-> là b = Ax (x là vector chứa các coefficient của linear
-> combination các A's columns)
+> Khi b thuộc column space của A, đương nhiên có thể ghi là b = Ax (x là vector chứa các coefficient của linear combination các A's columns)
 >
 >
 >
-> nên **p** = Pb = A(ATA)invATAx = A[**(ATA)invATA**]x = Ax = **b**
-> (cái ATAinv và ATA nhân nhau thành I. Thành ra kết quả vẫn
-> là b
+> nên **p** = Pb = A (AᵀA)⁻¹ (AᵀA)x = Ax = **b** 
 >
 >
 >
-> + khi b vuông góc với C(A) thì như đã biết nó sẽ thuộc
-> nullspace của AT (solution của ATy=0). Vậy **ATb = 0**
+> (cái (AᵀA)⁻¹ và AᵀA nhân nhau thành I)
 >
 >
 >
-> Thành ra Pb = A(ATA)invATb =  A(ATA)inv 0 = 0 -> kết quả
-> projection của b lên C(A) ra 0
+> Thành ra kết quả vẫn là b
+>
+>
+>
+> Khi b vuông góc với C(A) thì như đã biết nó sẽ thuộc nullspace của Aᵀ (solution của Aᵀy=0). Vậy **Aᵀb = 0**
+>
+>
+>
+> Thành ra Pb = A(AᵀA)⁻¹Aᵀb = A(AᵀA)⁻¹ 0 = 0 -&gt; kết quả projection của b lên C(A) ra 0
 
 <br>
 
@@ -100,34 +100,34 @@ matrices And Least Squares
 > [!NOTE]
 > Một hình ảnh **rất hay** và cũng có thể hiểu. Khi b nằm trong
 > Rm (không gian lớn, chứa cols space của A). Và cols space
-> của A, cùng với nullspace của A.T sẽ có tổng dimension là m,
+> của A, cùng với nullspace của Aᵀ sẽ có tổng dimension là m,
 > tức là chúng **hợp lại** sẽ là toàn bộ Rm
 >
 >
 >
-> (gọi là C(A) và N(AT) **ORTHOGONAL** **COMPLEMENT**)
+> (gọi là C(A) và N(Aᵀ) **ORTHOGONAL** **COMPLEMENT**)
 >
 >
 >
 > Vậy thì nếu ta project b lên C(A), để có p NẰM TRÊN C(A), thì
 > vì b = p + e **nên phần còn lại - e, CHÍNH LÀ NẰM TRÊN
-> NULLSPACE CỦA AT**
+> NULLSPACE CỦA Aᵀ**
 >
 >
 >
-> Mà việc ATe = 0 thể hiện **e vuông góc** **với các row của AT
+> Mà việc Aᵀe = 0 thể hiện **e vuông góc** **với các row của Aᵀ
 > cũng là vuông góc các cột của A**, vì theo hình học, chiếu b
 > xuống C(A) để có p thì e = b - p phải vuông góc với C(A), cũng
 > đồng nghĩa với việc nó vuông góc với mọi column của A) thì ý
-> chính là ATe = 0 cũng thể hiện e là solution của ATy = 0, mà
+> chính là Aᵀe = 0 cũng thể hiện e là solution của Aᵀy = 0, mà
 > theo định nghĩa, đó chính là LEFT NULLSPACE.
 >
 >
 >
 > Vậy ý nói, ngay từ định nghĩa đã cho thấy e thuộc left nullspace
 > để rồi khi project b lên C(A), để có p thuộc C(A) = Ax^, và e là b
-> - p thì ta đã tách b thành 2 vector: một thuộc C(A) và một thuộc
-> N(AT)
+> \- p thì ta đã tách b thành 2 vector: một thuộc C(A) và một thuộc
+> N(Aᵀ)
 
 <br>
 
@@ -137,7 +137,7 @@ matrices And Least Squares
 
 > [!NOTE]
 > Thế thì gs chỉ ra rằng, ta **cũng có một projection matrix
-> khác** làm cái việc **project b lên nullspace của AT N(AT)**, 
+> khác** làm cái việc **project b lên nullspace của Aᵀ N(Aᵀ)**, 
 > để có e
 >
 >
@@ -162,7 +162,7 @@ matrices And Least Squares
 >
 >
 > Và I - P cũng thỏa các tính chất của projection matrix:
-> **(I-P)T = I-P** , (**I-P)**2 = I-P**
+> **(I-P)ᵀ = I-P** , (**I-P)**2 = I-P**
 
 <br>
 
@@ -384,7 +384,7 @@ matrices And Least Squares
 
 > [!NOTE]
 > Thế thì, như đã biết từ bài trước, ta **đã có công thức của x^**
-> - đương nhiên là **coeffs** của **linear combination các cols
+> \- đương nhiên là **coeffs** của **linear combination các cols
 > của A** để **cho ra p** với **p là projection của b lên cols space
 > của A**
 >
@@ -406,12 +406,12 @@ matrices And Least Squares
 >
 >
 >
-> và **e=b-p** sẽ v**uông góc với C(A)** => **e thuộc N(AT)** nên
-> ta có **ATe = 0**
+> và **e=b-p** sẽ v**uông góc với C(A)** ⇒ **e thuộc N(Aᵀ)** nên
+> ta có **Aᵀe = 0**
 >
 >
 >
-> <=> AT(b-Ax^) = 0 <=> **ATb = ATAx^**
+> ⇔ Aᵀ(b-Ax^) = 0 ⇔ **Aᵀb = AᵀAx^**
 
 <br>
 
@@ -420,15 +420,15 @@ matrices And Least Squares
 <p align="center"><kbd><img src="assets/4qffqw00u0x.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs nhắc lại bài trước ta đã nhận định **ATA** có tính chất
+> Gs nhắc lại bài trước ta đã nhận định **AᵀA** có tính chất
 > **symmetric**, và ông **kì vọng nó invertible** cũng như là
 > **positive definite** (cái này sẽ học trong tương lai)
 >
 >
 >
-> Gs chưa nói vì sao ATA invertible (có lẽ ông thấy hai cols
+> Gs chưa nói vì sao AᵀA invertible (có lẽ ông thấy hai cols
 > của nó independent, vì bài trước ta đã chứng minh nếu
-> A full column rank tức mọi columns đều độc lập thì ATA
+> A full column rank tức mọi columns đều độc lập thì AᵀA
 > sẽ full rank)
 
 **🔗 See also:** [linked note](#node-taomu1c)
@@ -440,12 +440,12 @@ matrices And Least Squares
 <p align="center"><kbd><img src="assets/shwgv6ksqhh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tương tự, gs triển khai ATb (bằng cách stack vector b
+> Tương tự, gs triển khai Aᵀb (bằng cách stack vector b
 > = (1 2 2) vào bên phải A, để nhân.
 >
 >
 >
-> Nói chung là ATAx^ = ATb triển khai ra chính là hệ
+> Nói chung là AᵀAx^ = Aᵀb triển khai ra chính là hệ
 > phương trình
 >
 >
@@ -476,7 +476,7 @@ matrices And Least Squares
 >
 > Dễ thấy df/dC = 2(C+D-1) + 2(C+2D-2) + 2(C+3D-2)
 > =2C+2D-2+2C+4D-4+2C+6D-4=6C+12D-10 nên df/dC = 0
-> <=> 6C+12D-10=0<=>**3C+6D=5**
+> ⇔ 6C+12D-10=0⇔**3C+6D=5**
 >
 >
 >
@@ -548,15 +548,15 @@ matrices And Least Squares
 >
 >
 >
-> - Chúng **cộng lại bằng b**, cái này rõ rồi.
+> \- Chúng **cộng lại bằng b**, cái này rõ rồi.
 >
 >
 >
-> - Chúng **orthogonal**: thử tính pTe = -7/36 + 20/36 -13/36 = 0
+> \- Chúng **orthogonal**: thử tính pᵀe = -7/36 + 20/36 -13/36 = 0
 >
 >
 >
-> - Và **e cũng orthogonal với C(A)**. Ví dụ như thử tính dot
+> \- Và **e cũng orthogonal với C(A)**. Ví dụ như thử tính dot
 > product của e với hai cols của A: (1, 1, 1) và (1, 2, 3)
 >
 >
@@ -607,7 +607,7 @@ matrices And Least Squares
 <p align="center"><kbd><img src="assets/mu8ul7a0efb.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Bây giờ gs muốn quay lại **xem xét matrix ATA** mà hồi
+> Bây giờ gs muốn quay lại **xem xét matrix AᵀA** mà hồi
 > nãy ông nhận định rằng ta sẽ kì vọng nó **invertible**,
 > và xa hơn là **positive definite**
 
@@ -621,7 +621,7 @@ matrices And Least Squares
 
 > [!NOTE]
 > Gs nhắc lại tuyên bố hồi nãy của ông rằng **nếu A có các
-> cột độc lập**, tức không có free cols **thì ATA sẽ invertible.**
+> cột độc lập**, tức không có free cols **thì AᵀA sẽ invertible.**
 >
 >
 >
@@ -635,18 +635,18 @@ matrices And Least Squares
 
 > [!NOTE]
 > Ta sẽ đi chứng minh điều này. Gs bắt đầu rằng, **giả sử ta
-> cho rằng ATAx=0**, thì ta **phải chứng minh điều gì để cho
-> thấy rằng ATA invertible**
+> cho rằng AᵀAx=0**, thì ta **phải chứng minh điều gì để cho
+> thấy rằng AᵀA invertible**
 >
 >
 >
-> Đó là ta **phải chứng minh nếu ATAx = 0 thì x phải bằng 0**
-> tức là **zero vector là solution duy nhất của ATAx=0**.
+> Đó là ta **phải chứng minh nếu AᵀAx = 0 thì x phải bằng 0**
+> tức là **zero vector là solution duy nhất của AᵀAx=0**.
 >
 >
 >
-> Điều này cũng đồng nghĩa **nullspace của (ATA) chỉ có duy
-> nhất là zero vector**. Và đồng nghĩa các **cols của ATA linear
+> Điều này cũng đồng nghĩa **nullspace của (AᵀA) chỉ có duy
+> nhất là zero vector**. Và đồng nghĩa các **cols của AᵀA linear
 > independent** (có thể giải thích bởi ta đã biết tính chất  là
 > nếu một set các independent vector thì **linear combination
 > duy nhất khiến chúng bằng 0 đó là các coeff bằng zero**,
@@ -657,12 +657,12 @@ matrices And Least Squares
 >
 >
 >
-> Và vì ATA là symmetric, mà lại có mọi cols đều là pivot
+> Và vì AᵀA là symmetric, mà lại có mọi cols đều là pivot
 > nữa tức là nó full rank -> invertible
 >
 >
 >
-> hint search: ATA full rank
+> hint search: AᵀA full rank
 
 <br>
 
@@ -671,8 +671,8 @@ matrices And Least Squares
 <p align="center"><kbd><img src="assets/3dxtkq6og1w.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì cách chứng minh là ta sẽ nhân xT vào hai vế.
-> Thì ATAx = 0 sẽ tương đương xTATAx = 0
+> Thế thì cách chứng minh là ta sẽ nhân xᵀ vào hai vế.
+> Thì AᵀAx = 0 sẽ tương đương xᵀAᵀAx = 0
 >
 >
 >
@@ -683,22 +683,24 @@ matrices And Least Squares
 
 <a id="node-54qkul5"></a>
 
+###### Invertibility of A Transpose A
+
 <p align="center"><kbd><img src="assets/rltgdhfqfrp.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs: ta có thể dễ thấy đây **chính là (Ax)T(Ax)**. Và viêc nó
+> Gs: ta có thể dễ thấy đây **chính là (Ax)ᵀ(Ax)**. Và viêc nó
 > bằng 0 suy ra điều gì?
 >
 >
 >
-> Me: Sau khi gpt nhắc cho ta nhớ **uTu chính là bình phương
+> Me: Sau khi gpt nhắc cho ta nhớ **uᵀu chính là bình phương
 > norm của vector**. Tức tổng bình phương các component của
 > nó. Và nó là số **không âm**. Nên việc nó bằng 0 chứng tỏ u là
 > zero vector.
 >
 >
 >
-> Vậy (Ax)T(Ax) luôn >= 0 nên dấu bằng chỉ xảy ra khi Ax=0
+> Vậy (Ax)ᵀ(Ax) luôn >= 0 nên dấu bằng chỉ xảy ra khi Ax=0
 
 <br>
 
@@ -712,33 +714,33 @@ matrices And Least Squares
 >
 >
 > me: À vậy có thể thấy, ta đang muốn chứng minh rằng,
-> với việc A's columns independent thì ATA invertible.
+> với việc A's columns independent thì AᵀA invertible.
 >
 >
 >
-> Và ta muốn chứng minh bằng cách giả sử với ATAx=0 thì
+> Và ta muốn chứng minh bằng cách giả sử với AᵀAx=0 thì
 > với việc A cols independent thì điều này chỉ có thể xảy ra
 > khi x = 0. Nếu chứng minh được điều này thì có thể kết
 > luận rằng nếu A's cols độc lập thì AtA invertible.
 >
 >
 >
-> Thế thì từ việc **ATAx = 0, ta tương đương ra với Ax=0**.
+> Thế thì từ việc **AᵀAx = 0, ta tương đương ra với Ax=0**.
 > Thế thì với **điều kiện các cols của A độc lập tuyến tính
 > thì việc Ax=0 chỉ có thể x = 0**.
 >
 >
 >
 > Vậy ta đã cho thấy rằng, **nếu cols của A độc lập tuyến
-> tính thì nếu ATAx=0 thì x chỉ có thể là 0**.
+> tính thì nếu AᵀAx=0 thì x chỉ có thể là 0**.
 >
 >
 >
-> Và điều này như nãy đã nói, **sẽ suy ra các cols của ATA
+> Và điều này như nãy đã nói, **sẽ suy ra các cols của AᵀA
 > độc lập**, và nó lại là **square matrix** nên suy ra nó
 > **full rank -> invertible**
 
-**🔗 See also:** [linked note](./lecture_14_orthogonal_vectors_and_subspaces.md#node-3l4hkq3)
+**🔗 See also:** [Invertibility of Aᵀ A](./lecture_14_orthogonal_vectors_and_subspaces.md#node-3l4hkq3)
 
 <br>
 
@@ -748,7 +750,7 @@ matrices And Least Squares
 
 > [!NOTE]
 > Vậy là ta đã chứng minh được: nếu A có các cột độc
-> lập, tức không có free cols thì ATA sẽ invertible.
+> lập, tức không có free cols thì AᵀA sẽ invertible.
 >
 >
 >
@@ -756,14 +758,14 @@ matrices And Least Squares
 >
 >
 >
-> ATAx = 0 sẽ tương đương xTATAx = 0 và tương đương
-> tiếp (Ax)T(Ax) = 0. Mà vế trái là bình phương của length của
+> AᵀAx = 0 sẽ tương đương xᵀAᵀAx = 0 và tương đương
+> tiếp (Ax)ᵀ(Ax) = 0. Mà vế trái là bình phương của length của
 > Ax nên luôn >= 0. Và dấu bằng chỉ xẩy ra khi Ax = 0. Vậy
-> ATAx = 0 <=> Ax = 0.
+> AᵀAx = 0 ⇔ Ax = 0.
 >
 >
 >
-> Thế thì điều này suy ra N(ATA) = N(A).
+> Thế thì điều này suy ra N(AᵀA) = N(A).
 >
 >
 >
@@ -774,8 +776,8 @@ matrices And Least Squares
 >
 >
 >
-> Vậy N(ATA) cũng = {0} và với square matrix có Nullspace
-> chỉ chứa zero thì nó là matrix fullrank => invertible
+> Vậy N(AᵀA) cũng = {0} và với square matrix có Nullspace
+> chỉ chứa zero thì nó là matrix fullrank ⇒ invertible
 
 <br>
 
@@ -791,11 +793,13 @@ matrices And Least Squares
 
 <a id="node-qq18y6p"></a>
 
+###### Invertibility of Matrix A^T A
+
 <p align="center"><kbd><img src="assets/ke1bvpxnxw.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Và gs mào đầu cho bài sau, đó là ta đang nói đến việc
-> **nếu matrix A có các cols độc lập** thì **ATA chắc chắn
+> **nếu matrix A có các cols độc lập** thì **AᵀA chắc chắn
 > invertible**. Thế thì không gì **ĐẢM BẢO CÁC COLS ĐỘC
 > LẬP NHAU** tốt hơn bằng việc **CHÚNG**
 > P**ERPENDICULAR NHAU**
@@ -825,7 +829,7 @@ matrices And Least Squares
 >
 >
 >
-> nếu c1u1 + c2u2 + ...cnun = 0 (1) <=> c1 = c2 = ...cn = 0 (2)
+> nếu c1u1 + c2u2 + ...cnun = 0 (1) ⇔ c1 = c2 = ...cn = 0 (2)
 >
 >
 >
@@ -833,23 +837,23 @@ matrices And Least Squares
 >
 >
 >
-> c1u1Tuk + c2u2Tuk + ...cnunTuk = 0 
+> c1u1ᵀuk + c2u2ᵀuk + ...cnunᵀuk = 0 
 >
 >
 >
-> Và cái này tương đương ckukTuk = 0 vì với mọi uj với j khác
-> k thì chúng đều vuông góc với uk nên ujTuk = 0
+> Và cái này tương đương ckukᵀuk = 0 vì với mọi uj với j khác
+> k thì chúng đều vuông góc với uk nên ujᵀuk = 0
 >
 >
 >
-> Thế thì ckukuk = 0 rõ ràng khi và chỉ khi ck = 0 vì ukTuk là
+> Thế thì ckukuk = 0 rõ ràng khi và chỉ khi ck = 0 vì ukᵀuk là
 > (bình phương chiều dài vector k nên luôn >= 0 và chỉ bằng
 > 0 khi uk = 0, nhưng ta đang assume set các vector đều
 > khác 0)
 >
 >
 >
-> Vậy ck = 0, mà k là bất kì. Do đó mọi ck đều bằng 0 => (2)
+> Vậy ck = 0, mà k là bất kì. Do đó mọi ck đều bằng 0 ⇒ (2)
 
 <br>
 
