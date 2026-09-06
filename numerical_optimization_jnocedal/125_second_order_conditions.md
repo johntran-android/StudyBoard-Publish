@@ -1,6 +1,6 @@
 # 12.5  Second-Order Conditions
 
-📊 **Progress:** `12` Notes | `22` Screenshots | `12` AI Reviews
+📊 **Progress:** `13` Notes | `25` Screenshots | `13` AI Reviews
 
 ---
 <a id="node-8arnxqj"></a>
@@ -1685,11 +1685,11 @@
 <p align="center"><kbd><img src="assets/r0t10lp7wtc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, ví dụ này, objective f(x) = -0.1(x1 - 4)² + x2² với một ràng buộc bất đẳng thức: x1² + x2² - 1 ≥ 0 
+> Rồi, ví dụ này, objective f(x) = -0.1(x1 - 4)² + x2² với một ràng buộc bất đẳng thức: x1² + x2² - 1 ≥ 0
 >
 >
 >
-> Với constraint này dễ thấy feasible set là vùng bên ngoài đường tròn bán kính 1 (có tính cái viền đường tròn), do đó hình dung thế này, vì feasible set là ở mọi điểm trong mặt phẳng miễn là "ở ngoài" đường tròn, thành ra ta di chuyển ra  vô cực thì vẫn feasible. hàm f(x) thì nếu cố định x2 và cho khi x1 lớn vô cùng thì hàm sẽ giảm vô hạn, nên mới nói nó không bị chặn dưới (not bounded below)
+> Với constraint này dễ thấy feasible set là vùng bên ngoài đường tròn bán kính 1 (có tính cái viền đường tròn), do đó hình dung thế này, vì feasible set là ở mọi điểm trong mặt phẳng miễn là "ở ngoài" đường tròn, thành ra ta di chuyển ra vô cực thì vẫn feasible. hàm f(x) thì nếu cố định x2 và cho khi x1 lớn vô cùng thì hàm sẽ giảm vô hạn, nên mới nói nó không bị chặn dưới (not bounded below)
 >
 >
 >
@@ -1745,7 +1745,7 @@
 >
 >
 >
-> Xem xét điều kiện đủ ta cần Hessian của ℒ, again, cũng là đạo hàm của đạo hàm hàm ℒ theo x (chứ không phải là Hessian đầy đủ khi ta lấy đạo hàm theo cả λ) 
+> Xem xét điều kiện đủ ta cần Hessian của ℒ, again, cũng là đạo hàm của đạo hàm hàm ℒ theo x (chứ không phải là Hessian đầy đủ khi ta lấy đạo hàm theo cả λ)
 >
 >
 >
@@ -1753,7 +1753,7 @@
 >
 >
 >
-> = \[∂²ℒ/∂x1², ∂²ℒ/∂x2x1;  ∂²ℒ/∂x2x1, ∂²ℒ/∂x2\]
+> = \[∂²ℒ/∂x1², ∂²ℒ/∂x2x1; ∂²ℒ/∂x2x1, ∂²ℒ/∂x2\]
 >
 >
 >
@@ -1787,6 +1787,188 @@
 > **🤖 AI Feedback** — ✅ Score: **94/100**
 >
 > Ghi chú xuất sắc, thể hiện sự thấu hiểu tường tận từ điều kiện cần (KKT) đến điều kiện đủ bậc hai (SOSC) và trực giác hình học của nón tới hạn (critical cone).
+
+<br>
+
+<a id="node-fe62xya"></a>
+
+###### Second-Order Conditions and Projected Hessians
+
+<p align="center"><kbd><img src="assets/y0ni60kah9a.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6owoq6fdgt.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1w9cep6wjy4.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý đoạn này: Là một trường hợp mà ta có thể kiểm tra một điểm x\* có phải là local minimizer không bằng một cách dễ hơn so với việc check xem nó có thỏa điều kiện cần bậc hai và điều kiện đủ bậc hai.
+>
+>
+>
+> Điều kiện cần bậc hai nói rằng, nếu với mọi critical cone w, thì wᵀ∇²\_xx ℒ(x\*, λ\*)w đều không âm thì x\* là ứng cử viên của local minimizer (vẫn chỉ là ứng cử viên, vì thỏa cái này chưa đủ để kết luận x\* là minimizer, nó chỉ là vòng loại thứ hai, sau vòng loại thứ nhất là KKT)
+>
+>
+>
+> Điều kiện đủ bậc hai nói rằng, nếu với mọi critical cone w mà wᵀ∇²\_xx ℒ(x\*, λ\*)w dương, thì x\* nhất định là strict local minimizer.
+>
+>
+>
+> Vấn đề là, để kết luận một quadratic form (wᵀ∇²\_xx ℒ(x\*, λ\*)w) không âm với mọi w trong critical cone 𝒞(x\*, λ\*) mà critical cone nói chung thì hơi khó.
+>
+>
+>
+> Do đó người ta mới bàn tới một case khiến cho mọi chuyện trở nên dễ hơn nhiều: Đó là: Khi các critical cone w của 𝒞(x\*, λ\*) đều là thuộc dạng "Đi men theo vách". Là sao?
+>
+>
+>
+> Còn nhớ định nghĩa của critical cone 𝒞(x\*, λ\*): Là ta xét các hướng linearized feasible, w ∈ ℱ(x\*) sao cho:
+>
+> i) Men theo vách của constraint đẳng thức: wᵀ∇ci(x\*) = 0, i ∈ ℰ.
+>
+>
+>
+> ii) cũng men theo vách hoặc đi vào trong của constraint bất đẳng thức đang active tại x\* nhưng λ\*i = 0: wᵀ∇ci(x\*) ≥ 0, i ∈ ℐ.
+>
+>
+>
+> iii) men theo vách của constraint bất đẳng thức đang active tại x\* nhưng λ\*i &gt; 0: wᵀ∇ci(x\*) = 0, i ∈ ℐ
+>
+>
+>
+> Thế thì một trường hợp đặc biệt là: Tại x\*, các inequality constraint ci active lại đều có λ\*i dương thì thì w sẽ chỉ được men theo vách, tức wᵀ∇ci(x\*) = 0.
+>
+>
+>
+> Lúc này tại x\*, các hướng critical cone w sẽ chỉ là: vuông góc với constraint ci(x) i ∈ 𝒜(x\*)
+>
+>
+>
+> Khi đó, ta làm như sau: Lấy các gradient ∇ci(x\*), chuyển vị (quay ngang lại) và đặt vào thành các hàng của một matrix, gọi là matrix A(x\*) đi. Thì rõ ràng, vì với mọi cricical cone w, ∇ci(x\*)ᵀw = 0, nên với matrix A(x\*) cấu tạo như trên, thì A(x\*)w = 0, và cái này chính là đồng nghĩa w chính là null-space vector của A(x\*): w ∈ N(A(x\*)) (kí hiệu theo thầy Strang trong 18.06).
+>
+>
+>
+> Vậy với trường hợp đặc biệt này thì critical cone 𝒞(x\*, λ\*) chính là N(M), và giáo sư Nocedal viết trong sách : Null\[∇ci(x\*)ᵀ\] i∈𝒜(x\*) = Null(A(x\*)) chính là cùng một ý nghĩa đó. (chú ý, matrix A(x\*) với chữa A bình thường là matrix có các hàng là ∇ci(x\*)ᵀ, i∈𝒜(x\*) như trên, còn chữ A của active set là 𝒜(x\*), font chữ khác nhau)
+>
+>
+>
+> Thế thì như vậy, với việc critical cone 𝒞(x\*, λ\*) trong trường hợp đặc biệt này có dạng là nullspace của matrix A(x\*). Nên nếu ta tìm ra được một basis của nullspace này, đặt nó vào thành cột của một matrix Z, thì theo kiến thức đại số tuyến tính, với vector u bất kì nào, thì Zu với ý nghĩa là linear combination các cột của Z, cũng sẽ nằm trong column space của Z, tức nullspace của A(x\*), cũng là 𝒞(x\*, λ\*).
+>
+>
+>
+> Tóm lại, có nghĩa là, lúc này, ta lấy một vector u bất kì, rồi tính w = Zu, thì ta sẽ có một vector w thuộc 𝒞(x\*, λ\*).
+>
+>
+>
+> Từ đó, điều kiện cần bậc hai như đã biết là:
+>
+>
+>
+> ∀w ∈ 𝒞(x\*, λ\*), wᵀ∇²\_xx ℒ(x\*, λ\*)w ≥ 0
+>
+>
+>
+> sẽ trở thành tương đương với:
+>
+>
+>
+> (Zu)ᵀ∇²\_xx ℒ(x\*, λ\*)(Zu) ≥ 0 ∀u
+>
+>
+>
+> tương tự với điều kiện đủ bậc hai cũng vậy:
+>
+>
+>
+> ∀w ∈ 𝒞(x\*, λ\*), wᵀ∇²\_xx ℒ(x\*, λ\*)w &gt; 0 w≠0
+>
+>
+>
+> trở thành :
+>
+>
+>
+> (Zu)ᵀ∇²\_xx ℒ(x\*, λ\*)(Zu) &gt; 0 ∀u≠0
+>
+>
+>
+> ---
+>
+>
+>
+> Và (Zu)ᵀ∇²\_xx ℒ(x\*, λ\*)(Zu) ≥ 0 ⇔ uᵀ Zᵀ∇²\_xx ℒ(x\*, λ\*)Z u ≥ 0 ∀u, và như đã biết trong lớp đại số tuyến tính thì điều kiện này chính là đồng nghĩa: matrix Zᵀ∇²\_xx ℒ(x\*, λ\*)Z bán xác định dương (positive semi definite)
+>
+>
+>
+> Và như vậy việc check xem x\* có phải là thỏa điều kiện cần, hay đủ bậc hai không, sẽ trở thành các bước như sau:
+>
+>
+>
+> i) Đi tính matrix Z, là matrix có column space cũng chính là nullspace A(x\*), và như đã nói, ta muốn các cột của Z chứa một basis của nulllspace này, nên đương nhiên các cột của Z độc lập tuyến tính, và đủ số lượng để span nullspace này, do đó Z là matrix full column rank.
+>
+>
+>
+> ii) Dùng thuật toán để check tính xác định dương của matrix Zᵀ∇²\_xx ℒ(x\*, λ\*)Z
+>
+>
+>
+> ---
+>
+>
+>
+> Và đoạn cuối nói về cách tính matrix Z, có nhiều cách, nhưng một cách đó là: Dùng QR factorization đối với matrix A(x\*)ᵀ:
+>
+>
+>
+> A(x\*)ᵀ = Q \[R; 0\] = \[Q1, Q2\]\[R; 0\] = Q1 R + Q2 0 = Q1R (QR factorization thì xem lại trong appendix)
+>
+>
+>
+> Khi đó nếu R non-singular thì ta có Z = Q2.
+>
+>
+>
+> Là sao: Ta còn nhớ trong MIT 1806 đã học, QR factorization, tiêu biểu là Gram-Smidth là quá trình ta đi từ một bộ basis của column-space của matrix A, và dựng một bộ orthogonal-normal basis Q: A = QR.
+>
+>
+>
+> Vậy thì cứ hiểu là thuật toán nào đó sẽ cho ta kết quả phân tách cho là A(x\*)ᵀ = Q1R, thử xem vì sao Q2 lại là matrix Z cần tìm:
+>
+>
+>
+> Transpose hai vế: A(x\*) = RᵀQ1ᵀ
+>
+>
+>
+> Thử nhân vector w = Q2u với A(x\*): A(x\*)w = A(x\*)Q2u = RᵀQ1ᵀQ2u
+>
+>
+>
+> Mà Q = \[Q1, Q2\] là orthogonal matrix (đã nói quá trình QR factor là ta dựng một bộ orthogonal-normal basis của C(A) mà, tức Q là matrix có các cột vuông góc và unit norm), nên xét Q1ᵀQ2, là matrix có các phần tử ij là kết qủa của phép dot product của hàng i của Q1ᵀ và cột j của Q2, và đây đều là hai cột nào đó của Q, nên kết quả ra 0. Do đó Q1ᵀQ2 là matrix 0 (không phải số 0 nhé)
+>
+>
+>
+> Vậy A(x\*)w = A(x\*)Q2u = Rᵀ \[matrix 0\] u = 0, chứng tỏ Q2u chính là nullspace vector, và Q2 chính là matrix Z cần tìm.
+>
+>
+>
+> ---
+>
+>
+>
+> Còn nếu R singular thì dùng một phiên bản cải tiến tí xíu của cái này ta se có được Z.
+>
+>
+>
+> Nhưng nói chung là ý tưởng chính của phần này là giúp ta có thể có một cách check điều kiện cần / đủ bậc hai dễ hơn so với lý thuyết khái quát.
+>
+>
+>
+> Thế còn vì sao có vụ singular hay không singular?
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **98/100**
+>
+> Ghi chú cực kỳ xuất sắc, nắm bắt trọn vẹn bản chất toán học từ lý thuyết tối ưu đến đại số tuyến tính. Phần giải thích trực giác về critical cone và chứng minh đại số cho $Z = Q_2$ rất rõ ràng và chuẩn xác.
 
 <br>
 
