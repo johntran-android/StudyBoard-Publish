@@ -341,7 +341,7 @@
 >
 > Bài viết xuất sắc, tự chứng minh rất chi tiết bằng phép chiếu và kiểm tra tính bán xác định dương của ma trận P cực kỳ chặt chẽ. Bạn chỉ lưu ý một lỗi nhỏ ở ví dụ cuối: điểm tối ưu trên đường tròn đơn vị phải là (-1/√2, -1/√2) chứ không phải là (-1, -1).
 
-**🔗 See also:** [linked note *(Mit 18.06)*](../mit1806_gstrang/lecture_32_quiz_3_review.md#node-p3i6h08)
+**🔗 See also:** [Constructing a Projection Matrix *(Mit 18.06)*](../mit1806_gstrang/lecture_32_quiz_3_review.md#node-p3i6h08)
 
 <br>
 
