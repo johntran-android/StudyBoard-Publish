@@ -646,15 +646,15 @@
 >
 >
 >
-> 1. Factor A thành QR,
+> i) Factor A thành QR,
 >
 >
 >
-> 2. Tính Qinv b, mà vì Q là orthogonal matrix, nên Qinv = QT, tính Qinvb chỉ là tính QTb, là phép nhân matrix với vector. (gán kết quả thành b\~)
+> ii) Tính Qinv b, mà vì Q là orthogonal matrix, nên Qinv = QT, tính Qinvb chỉ là tính QTb, là phép nhân matrix với vector. (gán kết quả thành b\~)
 >
 >
 >
-> 3. Giải Rinv b\~, dĩ nhiên là không phải đi tìm Rinv, mà là ta sẽ giải Rx = b\~, và đây là hệ có matrx tam giác ⇨ chỉ là back-substitution.
+> iii) Giải Rinv b\~, dĩ nhiên là không phải đi tìm Rinv, mà là ta sẽ giải Rx = b\~, và đây là hệ có matrix tam giác ⇨ chỉ là back-substitution.
 >
 >
 >
