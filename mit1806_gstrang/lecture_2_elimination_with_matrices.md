@@ -69,7 +69,7 @@
 >
 >
 > Ta sẽ làm **bước (3,2): hủy a32 đang bằng 4** bằng cách
-> trừ hàng 3 cho 2*hàng 2
+> trừ hàng 3 cho 2 × hàng 2
 
 <br>
 
@@ -196,7 +196,7 @@
 > [!NOTE]
 > Câu hỏi là **nhân matrix gì cho matrix A** **để tương đương
 > với bước thứ nhất trong quá trình eliminating** hồi
-> nãy: **trừ hàng 2 cho 3*hàng 1**
+> nãy: **trừ hàng 2 cho 3 × hàng 1**
 
 <br>
 
@@ -260,7 +260,7 @@
 
 > [!NOTE]
 > Vậy **nhờ cách hiểu linear combination of A's row** nên ta
-> dễ thấy ta cần **(-3)*row 1+ 1*row 2+ 0*row 3**. Nên **row thứ
+> dễ thấy ta cần **(-3)*row 1+ 1 × row 2+ 0 × row 3**. Nên **row thứ
 > 2 của matrix cần tìm là [-3 1 0]**
 
 <br>
@@ -362,7 +362,7 @@
 
 > [!NOTE]
 > Câu trả lời **đó là**: **ta có thể thay đổi vị trí dấu ngoặc**, tức là
-> ta có thể t**ính E32*E21 trước**, rồi **nhân nó cho A**.
+> ta có thể t**ính E32 × E21 trước**, rồi **nhân nó cho A**.
 >
 >
 >
