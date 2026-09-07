@@ -383,7 +383,7 @@
 >
 >
 >
-> Khi A invertible thì (AᵀA)⁻¹ sẽ bằng A⁻¹(Aᵀ)⁻¹ (dựa trên tính chất (AB)⁻¹ = B⁻¹A⁻¹) từ đó P = A(AᵀA)⁻¹Aᵀ = AA⁻¹(Aᵀ)⁻¹Aᵀ = I.I = I tức là projection lên C(A) không cần làm gì.
+> Khi A invertible thì (AᵀA)⁻¹ sẽ bằng A⁻¹(Aᵀ)⁻¹ (dựa trên tính chất (AB)⁻¹ = B⁻¹A⁻¹) từ đó P = A(AᵀA)⁻¹Aᵀ = AA⁻¹(Aᵀ)⁻¹Aᵀ = I × I = I tức là projection lên C(A) không cần làm gì.
 >
 >
 >
