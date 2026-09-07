@@ -58,23 +58,23 @@
 >
 >
 >
-> Vậy thì, bài toán đi tìm cái hàm f chi phối quy luật của data thật sự là rất phức tạp, vì ta không biết phải làm gì, hay dạng của f thật sự là gì cả. Do đó, ta mới tiếp cận theo lối: chấp nhận rủi ro, thông qua việc đặt ra vài giả định, nhằm đơn giản bớt bài toán. Ví dụ, ta giả định phân phối f là một phân phối có dạng nào đó, ví dụ normal(μ, σ^2), và từ đó dùng các cách tiếp cận như MLE, Bayes, ta đi tìm cách estimator ra μ, σ^2. Đây chính là bài toán inference - point estimation cho population parameter. Như vậy, đã giả định thì có thể sai, có thể phân phối gốc hoàn toàn không phải là normal, thì cái estimator của ta tìm ra dù có tốt mấy cũng thành sai. Từ đó mới đẻ ra các tiêu chí như Roburstness mà mình đang học ở Chapter 10 - Casella, đó là: dưới sự thật rằng giả định ban đầu bị sai thì estimator còn tốt không?
+> Vậy thì, bài toán đi tìm cái hàm f chi phối quy luật của data thật sự là rất phức tạp, vì ta không biết phải làm gì, hay dạng của f thật sự là gì cả. Do đó, ta mới tiếp cận theo lối: chấp nhận rủi ro, thông qua việc đặt ra vài giả định, nhằm đơn giản bớt bài toán. Ví dụ, ta giả định phân phối f là một phân phối có dạng nào đó, ví dụ normal(μ, σ²), và từ đó dùng các cách tiếp cận như MLE, Bayes, ta đi tìm cách estimator ra μ, σ². Đây chính là bài toán inference - point estimation cho population parameter. Như vậy, đã giả định thì có thể sai, có thể phân phối gốc hoàn toàn không phải là normal, thì cái estimator của ta tìm ra dù có tốt mấy cũng thành sai. Từ đó mới đẻ ra các tiêu chí như Roburstness mà mình đang học ở Chapter 10 - Casella, đó là: dưới sự thật rằng giả định ban đầu bị sai thì estimator còn tốt không?
 >
 >
 >
-> Quay lại bối cảnh machine learning với bài toán regression, giả sử quan sát được bộ dữ liệu (**x**1, t1), ....(**x**n, tn), mục đích tối thượng cũng là, ta muốn mô phỏng cái quy luật giúp map **x** với t. Vậy thì để mô phỏng, ta cũng có thể dùng parametric model, đi tìm một hàm số y(**x**,**w**) với dạng và giá trị **w** sao cho hàm này phản ánh, mô phỏng sát nhất với quy luật thực tế giữa **x** và t. Hoặc cũng có thể dùng non-parametric model.
+> Quay lại bối cảnh machine learning với bài toán regression, giả sử quan sát được bộ dữ liệu (𝐱1, t1), ....(𝐱n, tn), mục đích tối thượng cũng là, ta muốn mô phỏng cái quy luật giúp map 𝐱 với t. Vậy thì để mô phỏng, ta cũng có thể dùng parametric model, đi tìm một hàm số y(𝐱,𝐰) với dạng và giá trị 𝐰 sao cho hàm này phản ánh, mô phỏng sát nhất với quy luật thực tế giữa 𝐱 và t. Hoặc cũng có thể dùng non-parametric model.
 >
 >
 >
-> Vậy thì giả sử chọn parametric model, ta cũng sẽ thấy bài toán đặt ra quá phức tạp, vì đâu có biết cái quy luật thực tế của **x** và t nó có hình thù ra sao. Do đó, ta cũng đơn giản hóa bài toán, bằng cách đặt ra các giả định. Ví dụ, ta cho rằng quy luật này là một hàm tuyến tính đối với **w**, và phi tuyến đối với **x**, để rồi theo các cách tiếp cận đã biết, ta đi tìm ra **w**.
+> Vậy thì giả sử chọn parametric model, ta cũng sẽ thấy bài toán đặt ra quá phức tạp, vì đâu có biết cái quy luật thực tế của 𝐱 và t nó có hình thù ra sao. Do đó, ta cũng đơn giản hóa bài toán, bằng cách đặt ra các giả định. Ví dụ, ta cho rằng quy luật này là một hàm tuyến tính đối với 𝐰, và phi tuyến đối với 𝐱, để rồi theo các cách tiếp cận đã biết, ta đi tìm ra 𝐰.
 >
 >
 >
-> Tới đây ta đã hiểu model là cái gì - nó chỉ là mô hình ta muốn xây dựng để mô phỏng thực tế. Với bài toán population paramter inference, thì mô hình là cái hàm f(**x**|θ) mà ta muốn tìm dạng của nó và giá trị parameter θ. Với bài toán regression, mô hình là cái hàm y(**w**,**x**) mà ta muốn tìm **w**, cũng như dạng của nó và giá trị w của nó. Và trong cả hai, thường thì ta đặt ra giả định về dạng của nó (giả định f là normal, hay y là hàm tuyến tính của w) để giúp đơn giản hóa bớt, chỉ còn phải đi tìm tham số của nó (μ, σ^2, hay **w**) thôi.
+> Tới đây ta đã hiểu model là cái gì - nó chỉ là mô hình ta muốn xây dựng để mô phỏng thực tế. Với bài toán population paramter inference, thì mô hình là cái hàm f(𝐱|θ) mà ta muốn tìm dạng của nó và giá trị parameter θ. Với bài toán regression, mô hình là cái hàm y(𝐰,𝐱) mà ta muốn tìm 𝐰, cũng như dạng của nó và giá trị w của nó. Và trong cả hai, thường thì ta đặt ra giả định về dạng của nó (giả định f là normal, hay y là hàm tuyến tính của w) để giúp đơn giản hóa bớt, chỉ còn phải đi tìm tham số của nó (μ, σ², hay 𝐰) thôi.
 >
 >
 >
-> Vậy sao phải so sánh model với nhau. À thì là vì, ví dụ như trong bài toán regression, nếu data ít, và ta giả định dùng mô hình (hàm y(**w**,**x**) có độ phức tạp cao (ví dụ dùng nhiều hàm basis - cũng là nhiều tham số) thì kết quả prediction sẽ tệ (không generalize tốt) 
+> Vậy sao phải so sánh model với nhau. À thì là vì, ví dụ như trong bài toán regression, nếu data ít, và ta giả định dùng mô hình (hàm y(𝐰,𝐱) có độ phức tạp cao (ví dụ dùng nhiều hàm basis - cũng là nhiều tham số) thì kết quả prediction sẽ tệ (không generalize tốt) 
 >
 >
 >
@@ -102,11 +102,11 @@
 >
 >
 >
-> Trước khi nói tiếp, gs Bishop nhấn mạnh một ý cực quan trọng: Model ở đây phải hiểu, là **cái phân phối xác suất chi phối giá trị của data mà ta đang dùng để mô phỏng quan hệ thật / phân phối thật của chúng**. Ví dụ như trong bài toán polynomial curve fitting ta làm bữa giờ, thì đó là distribution của **t**|**X**. (**X** là matrix observed data **x**1,...**x**N, tức coi **X** fixed, đã biết). Hay với model dạng khác, thì nó là joint distribution của **X**, và **t** (coi **X** như random variable luôn).
+> Trước khi nói tiếp, gs Bishop nhấn mạnh một ý cực quan trọng: Model ở đây phải hiểu, là **cái phân phối xác suất chi phối giá trị của data mà ta đang dùng để mô phỏng quan hệ thật / phân phối thật của chúng**. Ví dụ như trong bài toán polynomial curve fitting ta làm bữa giờ, thì đó là distribution của 𝐭|𝐗. (𝐗 là matrix observed data 𝐱1,...𝐱N, tức coi 𝐗 fixed, đã biết). Hay với model dạng khác, thì nó là joint distribution của 𝐗, và 𝐭 (coi 𝐗 như random variable luôn).
 >
 >
 >
-> Cái này y như cách tiếp cận Bayesian cho bài toán point estimator của tham số mô hình **w** vậy. Đó là, ta coi nó như random variable. Rồi chọn priori f(**w**), và dùng Bayes rule để có posterior distribution f(**w**|𝒟) ∝ f(𝒟|**w**) f(**w**). Có nghĩa là, nguyên lý chung của Bayesian, là cái gì mà ta ko chắc chắn thì cứ coi nó là biến ngẫu nhiên, rồi đi xây dựng posterior distribution cho nó, từ đó, dựa vào decision theory để mà ra quyết định.
+> Cái này y như cách tiếp cận Bayesian cho bài toán point estimator của tham số mô hình 𝐰 vậy. Đó là, ta coi nó như random variable. Rồi chọn priori f(𝐰), và dùng Bayes rule để có posterior distribution f(𝐰|𝒟) ∝ f(𝒟|𝐰) f(𝐰). Có nghĩa là, nguyên lý chung của Bayesian, là cái gì mà ta ko chắc chắn thì cứ coi nó là biến ngẫu nhiên, rồi đi xây dựng posterior distribution cho nó, từ đó, dựa vào decision theory để mà ra quyết định.
 >
 >
 >
@@ -148,11 +148,11 @@
 >
 >
 >
-> Mình nghĩ để dễ hiểu cứ thử liên hệ nó với θ (là tham số mô hình, mà trong chương này ví dụ nó là **w**)
+> Mình nghĩ để dễ hiểu cứ thử liên hệ nó với θ (là tham số mô hình, mà trong chương này ví dụ nó là 𝐰)
 >
 >
 >
-> posterior distribution của θ: π(θ|**x**) ∝ f(**x**|θ) π(θ) = L(θ|**x**) π(θ)
+> posterior distribution của θ: π(θ|𝐱) ∝ f(𝐱|θ) π(θ) = L(θ|𝐱) π(θ)
 >
 >
 >
@@ -160,7 +160,7 @@
 >
 >
 >
-> còn f(**x**|θ) = L(θ|**x**), như đã biết, thể hiện độ hợp lí của θ khi quan sát được giá trị của data.
+> còn f(𝐱|θ) = L(θ|𝐱), như đã biết, thể hiện độ hợp lí của θ khi quan sát được giá trị của data.
 >
 >
 >
@@ -176,7 +176,7 @@
 >
 >
 >
-> còn f(𝒟|**ℳ**), tương tự như f(**x**|θ) = L(θ|**x**), ta cũng có thể gọi nó là L(ℳ|𝒟), marginal likelihood function mang ý nghĩa, **độ hợp lí của model ℳ khi giá trị dữ liệu quan sát được là 𝒟**.
+> còn f(𝒟|**ℳ**), tương tự như f(𝐱|θ) = L(θ|𝐱), ta cũng có thể gọi nó là L(ℳ|𝒟), marginal likelihood function mang ý nghĩa, **độ hợp lí của model ℳ khi giá trị dữ liệu quan sát được là 𝒟**.
 >
 >
 >
@@ -206,7 +206,7 @@
 >
 >
 >
-> f(t|**x**, 𝒟) = Σi=1:L f(t|**x**, ℳi, 𝒟) f(ℳi|𝒟)
+> f(t|𝐱, 𝒟) = Σi=1:L f(t|𝐱, ℳi, 𝒟) f(ℳi|𝒟)
 >
 >
 >
@@ -218,11 +218,11 @@
 >
 >
 >
-> với việc ta coi ℳ là random variable có các possible value ℳ1,...ℳL thì thì joint distribution của T|**x** và ℳ là f(t, ℳ|**x**, **𝒟**). Marginalizing joint pdf của T|**x** và ℳ, ta sẽ có pdf của T|**x**:
+> với việc ta coi ℳ là random variable có các possible value ℳ1,...ℳL thì thì joint distribution của T|𝐱 và ℳ là f(t, ℳ|𝐱, **𝒟**). Marginalizing joint pdf của T|𝐱 và ℳ, ta sẽ có pdf của T|𝐱:
 >
 >
 >
-> f(t|**x**, 𝒟) = Σi=1:L f(t|**x**, ℳi, 𝒟) f(ℳi|𝒟)
+> f(t|𝐱, 𝒟) = Σi=1:L f(t|𝐱, ℳi, 𝒟) f(ℳi|𝒟)
 >
 >
 >
@@ -230,15 +230,15 @@
 >
 >
 >
-> Trước đây predictive distribution f(t|**x**, 𝒟) thật ra là đang dựa trên một model cụ thể (ví dụ như mô hình linear với regularization factor là bao nhiêu đó), kí hiệu nó là **ℳ**, nên ta có thể ghi là f(t|**x**, ℳ, 𝒟) với ℳ chỉ là fix value, chỉ một mô hình cụ thể. Và với ℳ, 𝒟, **x** đều fix, thì f(t|**x**, ℳ, 𝒟) là một fixed value.
+> Trước đây predictive distribution f(t|𝐱, 𝒟) thật ra là đang dựa trên một model cụ thể (ví dụ như mô hình linear với regularization factor là bao nhiêu đó), kí hiệu nó là **ℳ**, nên ta có thể ghi là f(t|𝐱, ℳ, 𝒟) với ℳ chỉ là fix value, chỉ một mô hình cụ thể. Và với ℳ, 𝒟, 𝐱 đều fix, thì f(t|𝐱, ℳ, 𝒟) là một fixed value.
 >
 >
 >
-> Nhưng nay, với cách tiếp cận Bayesian, ta coi ℳ là random variable, và posterior distribution là f(ℳ|𝒟). Thì lúc này f(t|**x**, ℳ, 𝒟) không còn là fixed value nữa, nó là hàm của random variable ℳ nên bây giờ nó trở thành random variable luôn (nhớ thần chú thầy Joe mập trong Stat110: hàm của random variable là random variable). Và vì là random variable ta có thể lấy kì vọng:
+> Nhưng nay, với cách tiếp cận Bayesian, ta coi ℳ là random variable, và posterior distribution là f(ℳ|𝒟). Thì lúc này f(t|𝐱, ℳ, 𝒟) không còn là fixed value nữa, nó là hàm của random variable ℳ nên bây giờ nó trở thành random variable luôn (nhớ thần chú thầy Joe mập trong Stat110: hàm của random variable là random variable). Và vì là random variable ta có thể lấy kì vọng:
 >
 >
 >
-> E\[f(t|**x**, ℳ, 𝒟)\] với chú thích đây là E\[g(ℳ)\] với g(ℳ) = f(t|**x**, ℳ, 𝒟) và **ℳ** \~ f(ℳ|𝒟)
+> E\[f(t|𝐱, ℳ, 𝒟)\] với chú thích đây là E\[g(ℳ)\] với g(ℳ) = f(t|𝐱, ℳ, 𝒟) và **ℳ** \~ f(ℳ|𝒟)
 >
 >
 >
@@ -250,19 +250,19 @@
 >
 >
 >
-> thế hàm g(ℳ) = f(t|**x**, ℳ, 𝒟) vô lại ta sẽ có:
+> thế hàm g(ℳ) = f(t|𝐱, ℳ, 𝒟) vô lại ta sẽ có:
 >
 >
 >
-> E\[f(t|**x**, ℳ, 𝒟)\] = Σi=1:L f(t|**x**, ℳi, 𝒟) f(ℳi|𝒟)
+> E\[f(t|𝐱, ℳ, 𝒟)\] = Σi=1:L f(t|𝐱, ℳi, 𝒟) f(ℳi|𝒟)
 >
 >
 >
-> Như vậy, góc nhìn này giúp ta thấy rõ hơn bản chất chỉ là ta đang lấy average (của f(t|**x**, ℳ, 𝒟) trên mọi possible value của ℳ (bản chất của kì vọng / expected value chỉ là lấy trung bình thôi có trọng số thôi)
+> Như vậy, góc nhìn này giúp ta thấy rõ hơn bản chất chỉ là ta đang lấy average (của f(t|𝐱, ℳ, 𝒟) trên mọi possible value của ℳ (bản chất của kì vọng / expected value chỉ là lấy trung bình thôi có trọng số thôi)
 >
 >
 >
-> Và nhờ đó ta cũng hiểu câu dưới khi gs Bishop nói cái này là một ví dụ của MIXTURE DISTRIBUTION, trong đó ta averaging các predictive distribution f(t|**x**, ℳi, 𝒟) với trọng số (weight) là posterior distribution f(ℳi|𝒟).
+> Và nhờ đó ta cũng hiểu câu dưới khi gs Bishop nói cái này là một ví dụ của MIXTURE DISTRIBUTION, trong đó ta averaging các predictive distribution f(t|𝐱, ℳi, 𝒟) với trọng số (weight) là posterior distribution f(ℳi|𝒟).
 >
 >
 >
@@ -270,7 +270,7 @@
 >
 >
 >
-> Ông cho biết thêm, lấy ví dụ, nếu ta có hai model ℳ1, ℳ2, có posterior equally likely (ý là xác suất bằng nhau). Và trong đó một cái cho ra predictive distribution f(t|**x**, ℳ1, 𝒟) có dạng tập trung quanh mốc t = a. Còn cái kia cho f(t|**x**, ℳ2, 𝒟) có dạng tập trung quanh mốc t = b. Thì cái overal predictive distribution sẽ là BI-MODAL (!) model - tức là một mô hình có 2 đỉnh tại a, b thay vì chỉ có một đỉnh tại (a+b)/2
+> Ông cho biết thêm, lấy ví dụ, nếu ta có hai model ℳ1, ℳ2, có posterior equally likely (ý là xác suất bằng nhau). Và trong đó một cái cho ra predictive distribution f(t|𝐱, ℳ1, 𝒟) có dạng tập trung quanh mốc t = a. Còn cái kia cho f(t|𝐱, ℳ2, 𝒟) có dạng tập trung quanh mốc t = b. Thì cái overal predictive distribution sẽ là BI-MODAL (!) model - tức là một mô hình có 2 đỉnh tại a, b thay vì chỉ có một đỉnh tại (a+b)/2
 >
 >
 >
@@ -294,15 +294,15 @@
 >
 >
 >
-> Cái này nó y chang như khi ta tìm **w** (nói theo ngôn ngữ thống kê là ta đi infer (suy luận) giá trị của **w** bằng cách tìm một point estimation (là một hàm số dựa trên data) cho **w**) mà khi theo Bayesian approach, ta sẽ đi tìm posterior distribution của nó: f(**w**|𝒟), từ đó, ta có thể dựa vào decision theory giúp chỉ cho ta cách để đưa ra point estimation thế nào cho tối ưu, và kết quả có thể là mean hoặc median hoặc gì gì đó của posterior distribution. Ví dụ như khi tìm ra posterior là Normal, thì một cách hợp lý để point estimate đó là dùng cái mean nơi có posterior probability cao nhất. Nhưng đi xây dựng posterior distribution rồi lại lấy một point estimation để lắp vào hàm dự đoán y(**w**,**x**) thì nó mang tính Bayesian nửa mùa. Do đó, cách làm Bayesian hoàn chỉnh là không cần care về ước lượng điểm cho w làm gì, mà chỉ việc dùng cái distribution đó, để marginalizing f(t|**x**,**w**) over mọi possible value của **w** tuân theo f(**w**|𝒟). Khi đó predictive distribution f(t|**x**,𝒟) mang ý nghĩa đã tính trung bình trên mọi **w** rồi.
+> Cái này nó y chang như khi ta tìm 𝐰 (nói theo ngôn ngữ thống kê là ta đi infer (suy luận) giá trị của 𝐰 bằng cách tìm một point estimation (là một hàm số dựa trên data) cho 𝐰) mà khi theo Bayesian approach, ta sẽ đi tìm posterior distribution của nó: f(𝐰|𝒟), từ đó, ta có thể dựa vào decision theory giúp chỉ cho ta cách để đưa ra point estimation thế nào cho tối ưu, và kết quả có thể là mean hoặc median hoặc gì gì đó của posterior distribution. Ví dụ như khi tìm ra posterior là Normal, thì một cách hợp lý để point estimate đó là dùng cái mean nơi có posterior probability cao nhất. Nhưng đi xây dựng posterior distribution rồi lại lấy một point estimation để lắp vào hàm dự đoán y(𝐰,𝐱) thì nó mang tính Bayesian nửa mùa. Do đó, cách làm Bayesian hoàn chỉnh là không cần care về ước lượng điểm cho w làm gì, mà chỉ việc dùng cái distribution đó, để marginalizing f(t|𝐱,𝐰) over mọi possible value của 𝐰 tuân theo f(𝐰|𝒟). Khi đó predictive distribution f(t|𝐱,𝒟) mang ý nghĩa đã tính trung bình trên mọi 𝐰 rồi.
 >
 >
 >
-> Vậy thì ở đây cũng y hệt, khi ta có posterior distribution của model f(ℳ|𝒟), thì cách làm trọn vẹn theo Bayesian chính là ta sẽ dùng distribution này để marginalizing over mọi possible value của model, để có predictive distribution. Thế thì cái ở đoạn trên ta cũng có predictive distribution nhưng phải hiểu là đang làm việc với một model cụ thể nào đó, ví dụ có thể gọi là f(t|**x**) ở trên là f(t|**x**,ℳ,𝒟). Còn bây giờ, ta cũng tính trung bình trên mọi possible value của model, để có f(t|**x**,𝒟) không còn phụ thuộc model cụ thể nào nữa.
+> Vậy thì ở đây cũng y hệt, khi ta có posterior distribution của model f(ℳ|𝒟), thì cách làm trọn vẹn theo Bayesian chính là ta sẽ dùng distribution này để marginalizing over mọi possible value của model, để có predictive distribution. Thế thì cái ở đoạn trên ta cũng có predictive distribution nhưng phải hiểu là đang làm việc với một model cụ thể nào đó, ví dụ có thể gọi là f(t|𝐱) ở trên là f(t|𝐱,ℳ,𝒟). Còn bây giờ, ta cũng tính trung bình trên mọi possible value của model, để có f(t|𝐱,𝒟) không còn phụ thuộc model cụ thể nào nữa.
 >
 >
 >
-> Thế thì, tuy đó là cách làm mang tính là thuần túy Bayesian, nhưng quay ngược lại, ta cũng có thể làm theo kiểu nửa mùa Bayessian, đó là lại đi chọn một cái point estimation của model ℳ (y như làm nửa mùa bằng cách lấy point estimation của **w** và ráp vào y(**w**,**x**) đã nói ở trên). Và một cách hợp lý để chọn là lấy cái model có xác suất cao nhất (y như lấy **w** có posterior probability cao nhất), à cái này được gọi là model selection.
+> Thế thì, tuy đó là cách làm mang tính là thuần túy Bayesian, nhưng quay ngược lại, ta cũng có thể làm theo kiểu nửa mùa Bayessian, đó là lại đi chọn một cái point estimation của model ℳ (y như làm nửa mùa bằng cách lấy point estimation của 𝐰 và ráp vào y(𝐰,𝐱) đã nói ở trên). Và một cách hợp lý để chọn là lấy cái model có xác suất cao nhất (y như lấy 𝐰 có posterior probability cao nhất), à cái này được gọi là model selection.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
@@ -322,7 +322,7 @@
 >
 >
 >
-> Ta đã hiểu rằng model thì có tham số **w**. Ý là, nói về một model cụ thể nào đó, ví dụ ℳ1, thì bản thân nó, cũng có vô số giá trị tham số **w**. Vậy thì đại ý là dùng sum rule và product rule, ta sẽ thấy f(𝒟|**ℳ**) chính là kết quả khi ta tính trung bình f(𝒟|**ℳ**) trên mọi giá trị khả dĩ của tham số **w**.
+> Ta đã hiểu rằng model thì có tham số 𝐰. Ý là, nói về một model cụ thể nào đó, ví dụ ℳ1, thì bản thân nó, cũng có vô số giá trị tham số 𝐰. Vậy thì đại ý là dùng sum rule và product rule, ta sẽ thấy f(𝒟|**ℳ**) chính là kết quả khi ta tính trung bình f(𝒟|**ℳ**) trên mọi giá trị khả dĩ của tham số 𝐰.
 >
 >
 >
@@ -330,35 +330,35 @@
 >
 >
 >
-> xét hàm số sau: nhận input là model ℳi, và giá trị tham số **w**, và dưới mô hình này, thì ta sinh ra (sampling ra) data 𝒟, thì ta tính xác suất của giá trị cụ thể data 𝒟 là bao nhiêu (tương tự như f(**x**|θ), mang ý nghĩa dựa giá trị population parameter θ thì xác xuất sample **X** mang giá trị cụ thể **x** là bao nhiêu). Và ta kí hiệu nó là f(𝒟|**ℳ**i, **w**).
+> xét hàm số sau: nhận input là model ℳi, và giá trị tham số 𝐰, và dưới mô hình này, thì ta sinh ra (sampling ra) data 𝒟, thì ta tính xác suất của giá trị cụ thể data 𝒟 là bao nhiêu (tương tự như f(𝐱|θ), mang ý nghĩa dựa giá trị population parameter θ thì xác xuất sample 𝐗 mang giá trị cụ thể 𝐱 là bao nhiêu). Và ta kí hiệu nó là f(𝒟|**ℳ**i, 𝐰).
 >
 >
 >
-> Dĩ nhiên, với ℳi fixed, **w** fixed, thì đây chỉ là một fixed number.
+> Dĩ nhiên, với ℳi fixed, 𝐰 fixed, thì đây chỉ là một fixed number.
 >
 >
 >
-> Thế rồi, ta mới không coi w là fixed nữa, mà nó là một random variable có phân phối là f(**w**|ℳi)...
+> Thế rồi, ta mới không coi w là fixed nữa, mà nó là một random variable có phân phối là f(𝐰|ℳi)...
 >
 >
 >
-> (chú ý chỗ này dễ lú: chỗ này không phải là f(**w**|𝒟), mà ở đây ý là nói về prior distribution của **w** khi mô hình là ℳi. Hay nói cách khác, bữa giờ ta nói về prior và posterior distribution của **w**, thì có thể hiểu là với model cụ thể nào đó, nên chúng là f(**w**|ℳ) và f(**w**|𝒟, ℳ) thì cái đang nói ở đây chính là cái prior distribution như vậy)
+> (chú ý chỗ này dễ lú: chỗ này không phải là f(𝐰|𝒟), mà ở đây ý là nói về prior distribution của 𝐰 khi mô hình là ℳi. Hay nói cách khác, bữa giờ ta nói về prior và posterior distribution của 𝐰, thì có thể hiểu là với model cụ thể nào đó, nên chúng là f(𝐰|ℳ) và f(𝐰|𝒟, ℳ) thì cái đang nói ở đây chính là cái prior distribution như vậy)
 >
 >
 >
-> ..thì lúc này, f(𝒟|**ℳ**i, **w**), là hàm số của một random variable, nên cũng là random variable. Và ta sẽ lấy kì vọng của cái random variable này, tức E\[f(𝒟|**ℳ**i, **w**)\] với **w** \~ f(**w**|ℳi) Theo LOTUS, nhắc lại nhanh, nói rằng khi ta có X có distribution pdf f(x), và Y = g(X), thì EY = ∫g(x)f(x)dx, vậy thì ở đây áp dụng LOTUS ta cũng có:
+> ..thì lúc này, f(𝒟|**ℳ**i, 𝐰), là hàm số của một random variable, nên cũng là random variable. Và ta sẽ lấy kì vọng của cái random variable này, tức E\[f(𝒟|**ℳ**i, 𝐰)\] với 𝐰 \~ f(𝐰|ℳi) Theo LOTUS, nhắc lại nhanh, nói rằng khi ta có X có distribution pdf f(x), và Y = g(X), thì EY = ∫g(x)f(x)dx, vậy thì ở đây áp dụng LOTUS ta cũng có:
 >
 >
 >
-> E\[f(𝒟|**ℳ**i, **w**)\] với **w** \~ f(**w**|ℳi) = ∫f(𝒟|**ℳ**i, **w**) f(**w**|ℳ) d**w**, chính là công thức 3.68.
+> E\[f(𝒟|**ℳ**i, 𝐰)\] với 𝐰 \~ f(𝐰|ℳi) = ∫f(𝒟|**ℳ**i, 𝐰) f(𝐰|ℳ) d𝐰, chính là công thức 3.68.
 >
 >
 >
-> Như vậy, ta có thể thấy f(𝒟|ℳ) có bản chất chỉ là ta đang tính f(𝒟|**ℳ**i, **w**) - mang ý nghĩa là xác suất của data 𝒟 dựa trên model ℳi có bộ tham số giá trị cụ thể **w**, nhưng lấy trung bình qua mọi possible value của **w**, với **w** \~ f(**w**|ℳi)
+> Như vậy, ta có thể thấy f(𝒟|ℳ) có bản chất chỉ là ta đang tính f(𝒟|**ℳ**i, 𝐰) - mang ý nghĩa là xác suất của data 𝒟 dựa trên model ℳi có bộ tham số giá trị cụ thể 𝐰, nhưng lấy trung bình qua mọi possible value của 𝐰, với 𝐰 \~ f(𝐰|ℳi)
 >
 >
 >
-> Và đây cũng chính là ý tiếp theo khi gs nói, với góc nhìn (perspective) sampling, thì cái này chính là xác suất của việc sinh ra dataset 𝒟 từ một model (**ℳ**i) có giá trị tham số là **w** được sampled randomly từ prior distribution f(**w**|ℳi). Hiểu thế này, nói rằng theo sampling perspective, thì tức là ta sẽ làm như sau:
+> Và đây cũng chính là ý tiếp theo khi gs nói, với góc nhìn (perspective) sampling, thì cái này chính là xác suất của việc sinh ra dataset 𝒟 từ một model (**ℳ**i) có giá trị tham số là 𝐰 được sampled randomly từ prior distribution f(𝐰|ℳi). Hiểu thế này, nói rằng theo sampling perspective, thì tức là ta sẽ làm như sau:
 >
 >
 >
@@ -386,7 +386,7 @@
 >
 >
 >
-> Theo Law Of Large number, đã học (Casella, hay Stat110, xem link) thì sample mean sẽ converge in probabililty về true mean, mà true mean ở đây chính là E\[F\], chính là E\[f(𝒟|**ℳ**i, **w**)\] ở trên.
+> Theo Law Of Large number, đã học (Casella, hay Stat110, xem link) thì sample mean sẽ converge in probabililty về true mean, mà true mean ở đây chính là E\[F\], chính là E\[f(𝒟|**ℳ**i, 𝐰)\] ở trên.
 >
 >
 >
@@ -398,11 +398,11 @@
 >
 >
 >
-> Đơn giản là, ta xét joint probability: f(𝒟, **w**|ℳi), và đi marginalizing over mọi possible value của **w** với **w** \~ f(**w**|ℳi) thì như đã học ở Stat110 hay Casella, khi marginalizing joint pdf của X, Y over y thì ta có marginal pdf của X: fX(x) = ∫f(x,y)dy. Thay f(x,y) bằng f(x|y)f(y), ta có fX(x) = ∫f(x|y)f(y)dy. Vậy ở đây cũng vậy:
+> Đơn giản là, ta xét joint probability: f(𝒟, 𝐰|ℳi), và đi marginalizing over mọi possible value của 𝐰 với 𝐰 \~ f(𝐰|ℳi) thì như đã học ở Stat110 hay Casella, khi marginalizing joint pdf của X, Y over y thì ta có marginal pdf của X: fX(x) = ∫f(x,y)dy. Thay f(x,y) bằng f(x|y)f(y), ta có fX(x) = ∫f(x|y)f(y)dy. Vậy ở đây cũng vậy:
 >
 >
 >
-> f(𝒟|**ℳ**i) = ∫f(𝒟, **w**|**ℳ**i)d**w** = ∫f(𝒟|**ℳ**i,**w**)f(**w**|ℳi)d**w**
+> f(𝒟|**ℳ**i) = ∫f(𝒟, 𝐰|**ℳ**i)d𝐰 = ∫f(𝒟|**ℳ**i,𝐰)f(𝐰|ℳi)d𝐰
 >
 >
 >
@@ -450,7 +450,7 @@
 >
 >
 >
-> Đầu tiên, để đơn giản ta xét **w** chỉ là scalar, tức là model chỉ có một paramter thôi.
+> Đầu tiên, để đơn giản ta xét 𝐰 chỉ là scalar, tức là model chỉ có một paramter thôi.
 >
 >
 >
@@ -482,11 +482,11 @@
 >
 >
 >
-> Rồi, thế thì lôi lại công thức f(𝒟|**ℳ**i) = ∫f(𝒟|**ℳ**i, **w**) f(**w**|ℳ) d**w**
+> Rồi, thế thì lôi lại công thức f(𝒟|**ℳ**i) = ∫f(𝒟|**ℳ**i, 𝐰) f(𝐰|ℳ) d𝐰
 >
 >
 >
-> và bỏ đi ℳi cho gọn như đã nói, cũng như **w** là scalar (nên viết chữ thường) ta sẽ có:
+> và bỏ đi ℳi cho gọn như đã nói, cũng như 𝐰 là scalar (nên viết chữ thường) ta sẽ có:
 >
 >
 >
@@ -680,7 +680,7 @@
 >
 >
 >
-> ln f(𝒟) = ln \[f(𝒟|**w**MAP)\] + M ln \[Δw_posterior / Δw_prior\] (w giờ là vector, nên viết đậm **w**)
+> ln f(𝒟) = ln \[f(𝒟|𝐰MAP)\] + M ln \[Δw_posterior / Δw_prior\] (w giờ là vector, nên viết đậm 𝐰)
 >
 >
 >
@@ -886,11 +886,11 @@
 >
 >
 >
-> f(𝒟|ℳi) = ∫f(𝒟|ℳi, **w**) f(**w**|ℳi) d**w**
+> f(𝒟|ℳi) = ∫f(𝒟|ℳi, 𝐰) f(𝐰|ℳi) d𝐰
 >
 >
 >
-> Như vậy  thì **đương nhiên là nó sẽ phụ thuộc vào cái phân phối tiên nghiệm** f(**w**|ℳ) và cái giả định này nó sẽ ảnh hưởng đến cái model evidence, nếu chọn một phân phối tiên nghiệm không hợp lệ về toán học (gọi là improper), ví dụ, ta muốn thể hiện sự không biết gì về giá trị của w, và dùng constant để thể hiện chuyện này, thì đây sẽ improper (vì nó không thỏa các tiên đề xác suất, tích phân không bằng 1), khi đó, cái model evident cũng sẽ không được định nghĩa đúng về toán học.
+> Như vậy  thì **đương nhiên là nó sẽ phụ thuộc vào cái phân phối tiên nghiệm** f(𝐰|ℳ) và cái giả định này nó sẽ ảnh hưởng đến cái model evidence, nếu chọn một phân phối tiên nghiệm không hợp lệ về toán học (gọi là improper), ví dụ, ta muốn thể hiện sự không biết gì về giá trị của w, và dùng constant để thể hiện chuyện này, thì đây sẽ improper (vì nó không thỏa các tiên đề xác suất, tích phân không bằng 1), khi đó, cái model evident cũng sẽ không được định nghĩa đúng về toán học.
 >
 >
 >
@@ -898,7 +898,7 @@
 >
 >
 >
-> f(**w**|ℳi, 𝒟) = f(𝒟|ℳi,**w**)f(**w**|ℳi)/ f(𝒟|ℳi))
+> f(𝐰|ℳi, 𝒟) = f(𝒟|ℳi,𝐰)f(𝐰|ℳi)/ f(𝒟|ℳi))
 >
 >
 >
@@ -906,7 +906,7 @@
 >
 >
 >
-> Thế thì gs lại nói, nếu ta lại làm theo cách, ví dụ chọn một prior proper, như normal(μ, σ^2) rồi cho cái σ^2 lớn vô hạn để cũng có được cái prior mang tính unbias như hằng số nói trên, khi đó đương nhiên xác suất tiên nghiệm lại sẽ → 0 (xác suất dàn trải ra vô hạn nhưng vì là proper, nên tổng phải bằng 1, nên f(w|ℳi) sẽ → 0). Khi đó, bỏ vào tích phân f(𝒟|ℳi) = ∫f(𝒟|ℳi, **w**) f(**w**|ℳi) d**w**, sẽ khiến ta có f(𝒟|ℳi) → ∫f(𝒟|ℳi, **w**) × 0 d**w** = 0, tức model evidence cũng thành ra zero.
+> Thế thì gs lại nói, nếu ta lại làm theo cách, ví dụ chọn một prior proper, như normal(μ, σ²) rồi cho cái σ² lớn vô hạn để cũng có được cái prior mang tính unbias như hằng số nói trên, khi đó đương nhiên xác suất tiên nghiệm lại sẽ → 0 (xác suất dàn trải ra vô hạn nhưng vì là proper, nên tổng phải bằng 1, nên f(w|ℳi) sẽ → 0). Khi đó, bỏ vào tích phân f(𝒟|ℳi) = ∫f(𝒟|ℳi, 𝐰) f(𝐰|ℳi) d𝐰, sẽ khiến ta có f(𝒟|ℳi) → ∫f(𝒟|ℳi, 𝐰) × 0 d𝐰 = 0, tức model evidence cũng thành ra zero.
 >
 >
 >
