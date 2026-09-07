@@ -584,7 +584,7 @@
 > problem. Ax = b. b = p + e = Ax̂ + e ⇔ e = b - Ax̂ Aᵀe = 0
 > ⇔ Aᵀ(b-Ax̂) = 0 ⇔ Aᵀb - AᵀAx̂ = 0 ⇔ Aᵀb = AᵀAx̂
 > ⇔ x̂ = (AᵀA)⁻¹ Aᵀb → đây là best solution to Ax = b. Và
-> như vậy **x̂** chính là **A_left_inverse*b**
+> như vậy **x̂** chính là **A_left_inverse × b**
 >
 >
 >
@@ -664,6 +664,8 @@
 <br>
 
 <a id="node-ij69zxa"></a>
+
+###### Finding Pseudoinverse via SVD
 
 <p align="center"><kbd><img src="assets/omw5cosjd7n.png" width="80%"></kbd></p>
 
