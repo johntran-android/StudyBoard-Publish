@@ -9,6 +9,8 @@
 
 <a id="node-d4e9nj5"></a>
 
+## Không gian vector cốt lõi
+
 <p align="center"><kbd><img src="assets/i0g29k5v4tf.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -18,6 +20,8 @@
 <br>
 
 <a id="node-1gmfgna"></a>
+
+### Tính chất không gian vector
 
 <p align="center"><kbd><img src="assets/ahqrfk8u9sd.png" width="80%"></kbd></p>
 
@@ -34,6 +38,8 @@
 <br>
 
 <a id="node-f7gi33v"></a>
+
+#### Không gian con trong R3
 
 <p align="center"><kbd><img src="assets/zasmvz6naw.png" width="80%"></kbd></p>
 
@@ -52,6 +58,8 @@
 <br>
 
 <a id="node-t2rhzz5"></a>
+
+##### Hợp hai không gian con
 
 <p align="center"><kbd><img src="assets/9cwxgza221r.png" width="80%"></kbd></p>
 
@@ -323,7 +331,7 @@
 > vector space, subspace của R3 (vì như đã kết luận,
 > muốn là vector space thì nó đầu tiên phải chứa gốc O)**
 
-**🔗 See also:** [linked note](./lecture_5_transpose_permutations_spaces_rn.md#node-47m7mjs)
+**🔗 See also:** [Gốc tọa độ trong subspace](./lecture_5_transpose_permutations_spaces_rn.md#node-47m7mjs)
 
 <br>
 
@@ -443,7 +451,7 @@
 > solution space ⇒ solution space không thỏa điều kiện vector
 > space)
 
-**🔗 See also:** [linked note](./lecture_5_transpose_permutations_spaces_rn.md#node-47m7mjs)
+**🔗 See also:** [Gốc tọa độ trong subspace](./lecture_5_transpose_permutations_spaces_rn.md#node-47m7mjs)
 
 <br>
 
