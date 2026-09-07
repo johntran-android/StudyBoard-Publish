@@ -195,7 +195,7 @@
 >
 >
 >
-> -> ta đang tính det của matrix có ít nhất 2 row giống nhau**
+> → ta đang tính det của matrix có ít nhất 2 row giống nhau**
 
 <br>
 
