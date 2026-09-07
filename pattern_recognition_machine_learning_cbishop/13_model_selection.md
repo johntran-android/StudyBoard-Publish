@@ -19,8 +19,8 @@
 > tiêu chí generalization - dự đoán cho các data mới - test set)
 > '
 > Thì trong cách làm theo cách tiếp cận regularized least squares (tức là
-> add thêm vào error function một term (λ/2) **w**T**w** giúp gỉam overfit, mà
-> ta cũng đã thấy bản chất của nó chính là maximize posteriori của **w**)
+> add thêm vào error function một term (λ/2) 𝐰ᵀ𝐰 giúp gỉam overfit, mà
+> ta cũng đã thấy bản chất của nó chính là maximize posteriori của 𝐰)
 > **thì λ, là siêu tham số giúp kiểm soát độ phức tạp (complexity) của
 > mô hình.**
 >
