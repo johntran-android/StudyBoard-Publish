@@ -34,7 +34,7 @@
 
 > [!NOTE]
 > Đáp án chính là **tích của A⁻¹ và B⁻¹, theo thứ tự
-> ngược lại = B⁻¹@A⁻¹**
+> ngược lại = B⁻¹×A⁻¹**
 >
 >
 >
@@ -184,11 +184,13 @@
 >
 >
 >
-> **[1, 0; -4, 1]** --(đổi dấu ở vị trí 21)--> **[1 0; 4 1]**
+> **[1, 0; -4, 1]** --(đổi dấu ở vị trí 21)-→ **[1 0; 4 1]**
 
 <br>
 
 <a id="node-lgkwott"></a>
+
+###### Ma trận tam giác LU
 
 <p align="center"><kbd><img src="assets/z0yo3evdyg.png" width="80%"></kbd></p>
 
@@ -238,6 +240,8 @@
 <br>
 
 <a id="node-nxeypno"></a>
+
+###### Ma trận L cỡ 3x3
 
 <p align="center"><kbd><img src="assets/0f9s4n2i2kkv.png" width="80%"></kbd></p>
 
@@ -442,6 +446,8 @@
 
 <a id="node-qly18l3"></a>
 
+###### Ước lượng tổng bình phương
+
 <p align="center"><kbd><img src="assets/3d8hzkq8kp.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -453,7 +459,7 @@
 >
 >
 >
-> Cái này là **tích phân từ 1 tới n của hàm x²\*\*.
+> Cái này là \*\*tích phân từ 1 tới n của hàm x²\*\*.
 >
 >
 >
@@ -461,11 +467,11 @@
 >
 >
 >
-> Để tính tổng 1^2 + 2^2 + ...(n-1)^2 + n^2 ta sẽ lấy tích phân từ 1 đến n của số hạng tổng quát. Và số hạng tổng quát là x^2. Do đó ta có:
+> Để tính tổng 1² + 2² + ...(n-1)^2 + n² ta sẽ lấy tích phân từ 1 đến n của số hạng tổng quát. Và số hạng tổng quát là x². Do đó ta có:
 >
 >
 >
-> tích phân từ 0 đến n của x^2dx. và theo Fundamental Theorem of Calculus Part 2, tích phân này sẽ bằng \[nguyên hàm của f\] n:0 = x^3/3 | n:0 = n^3/3
+> tích phân từ 0 đến n của x²dx. và theo Fundamental Theorem of Calculus Part 2, tích phân này sẽ bằng \[nguyên hàm của f\] n:0 = x³/3 | n:0 = n³/3
 >
 >
 >
@@ -490,45 +496,40 @@
 
 <a id="node-echzbau"></a>
 
+###### Ma trận hoán vị hàng
+
 <p align="center"><kbd><img src="assets/s8m0svfgdcd.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, h gs nói qua việc nếu ta có tính tới row exchange,
-> \- nhớ lại là khi trong quá trình row elimination ta gặp
-> pivot = 0 thì ta phải row exchange.
+> Rồi, h gs nói qua việc nếu ta có tính tới row exchange
 >
 >
 >
-> Thì việc đó thực hiện bằng p**ermutation matrix**, ví dụ
-> **p12 là chỉ permutation matrix giúp exchange row 1 và
-> row 2.**
+> Nhớ lại là khi trong quá trình row elimination ta gặp pivot = 0 thì ta phải row exchange.
 >
 >
 >
-> Thế thì, gs đặt câu hỏi là **nếu ta có matrix 3x3, thì có
-> mấy permutation matrix**. Là các matrix giúp exchange
-> row ví dụ 1-2, 1-3, 2-3.
+> Thì việc đó thực hiện bằng p**ermutation matrix**, ví dụ **p12 là chỉ permutation matrix giúp exchange row 1 và row 2.**
 >
 >
 >
-> P12 sẽ có hàng 1 là [0 1 0] vì khi nhân với A nó sẽ ra
-> matrix P12A có hàng 1 là 0*a1+1*a2+0*a3=a2,
+> Thế thì, gs đặt câu hỏi là **nếu ta có matrix 3x3, thì có mấy permutation matrix**. Là các matrix giúp exchange row ví dụ 1-2, 1-3, 2-3.
 >
 >
 >
-> và P12 có hàng 2 là [1 0 0] để P12A có hàng 2 sẽ là
-> 1*a1+0*a2+0*a3=a1, tức là đã **switch hàng 1 và hàng 2
-> của A rồi**
+> P12 sẽ có hàng 1 là \[0 1 0\] vì khi nhân với A nó sẽ ra matrix P12A có hàng 1 là 0*a1+1*a2+0\*a3=a2,
 >
 >
 >
-> (*a1,a2,a3 là ám chỉ row 1,2,3 của A)
+> và P12 có hàng 2 là \[1 0 0\] để P12A có hàng 2 sẽ là 1*a1+0*a2+0\*a3=a1, tức là đã **switch hàng 1 và hàng 2 của A rồi**
 >
 >
 >
-> Ở trên cần nhớ lại khi **nhân row vector hàng cho
-> matrix** là ta **linear combination các row của matrix**
-> với c**oeff là các component của row vector**
+> (\*a1,a2,a3 là ám chỉ row 1,2,3 của A)
+>
+>
+>
+> Ở trên cần nhớ lại khi **nhân row vector hàng cho matrix** là ta **linear combination các row của matrix**với c**oeff là các component của row vector**
 
 <br>
 
@@ -552,6 +553,8 @@
 <br>
 
 <a id="node-gbf4mgt"></a>
+
+###### Ma trận hoán vị
 
 <p align="center"><kbd><img src="assets/lvuwcw1lobb.png" width="80%"></kbd></p>
 
