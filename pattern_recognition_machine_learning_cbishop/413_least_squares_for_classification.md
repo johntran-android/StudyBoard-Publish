@@ -1,6 +1,6 @@
 # 4.1.3 Least squares for classification
 
-📊 **Progress:** `7` Notes | `9` Screenshots | `7` AI Reviews
+📊 **Progress:** `8` Notes | `11` Screenshots | `7` AI Reviews
 
 ---
 <a id="node-f00j3uu"></a>
@@ -18,29 +18,29 @@
 >
 >
 >
-> Đầu tiên đại ý gs nói trong chương 3, bài toán linear regression, ta đã thấy cách làm trong đó ta đi minimize least squares error function đã dẫn đến một closed-formed solution của tham số **w**, nên có lẽ mình cũng muốn tiếp cận kiểu này với bài toán classification.
+> Đầu tiên đại ý gs nói trong chương 3, bài toán linear regression, ta đã thấy cách làm trong đó ta đi minimize least squares error function đã dẫn đến một closed-formed solution của tham số 𝐰, nên có lẽ mình cũng muốn tiếp cận kiểu này với bài toán classification.
 >
 >
 >
-> Thì đại ý là, trong bài toán regression, mình dùng hàm y(**w**,**x**) để dự đoán target value, với giả định T|**x** \~ 𝒩(y(**x**,**w**), 1/β). Và điều này đồng nghĩa ta đang dùng y(**w**,**x**) để estimate cho E\[T|**x**\], vì với phân phối normal, mean của nó chính là location.
+> Thì đại ý là, trong bài toán regression, mình dùng hàm y(𝐰,𝐱) để dự đoán target value, với giả định T|𝐱 \~ 𝒩(y(𝐱,𝐰), 1/β). Và điều này đồng nghĩa ta đang dùng y(𝐰,𝐱) để estimate cho E\[T|𝐱\], vì với phân phối normal, mean của nó chính là location.
 >
 > \
-> Thì với classification, ta cũng muốn dự đoán E\[**T**|**x**\], với **T** theo phân phối theo kiểu 1-of-K binary coding scheme: Tức là random variable **T** có K possible discrete value \[1,0,..0\]T, \[0,1,...0\]T, ..., \[0,0,...,1\]T ứng với class 𝒞1,𝒞2,...𝒞K. Điều này cũng đồng nghĩa các random variable T1,...TK của random variable vector **T**, sẽ đều là random variable với chỉ 2 possible value: 0 hoặc 1. Và dễ thấy, điều này có nghĩa là: T1,..TK đều là các Bernouli random variable (Stat110 đã học: Bất cứ khi nào random variable chỉ có 2 possible value thì nó \~ Bernouli)
+> Thì với classification, ta cũng muốn dự đoán E\[𝐓|𝐱\], với 𝐓 theo phân phối theo kiểu 1-of-K binary coding scheme: Tức là random variable 𝐓 có K possible discrete value \[1,0,..0\]ᵀ, \[0,1,...0\]ᵀ, ..., \[0,0,...,1\]ᵀ ứng với class 𝒞1,𝒞2,...𝒞K. Điều này cũng đồng nghĩa các random variable T1,...TK của random variable vector 𝐓, sẽ đều là random variable với chỉ 2 possible value: 0 hoặc 1. Và dễ thấy, điều này có nghĩa là: T1,..TK đều là các Bernouli random variable (Stat110 đã học: Bất cứ khi nào random variable chỉ có 2 possible value thì nó \~ Bernouli)
 >
 >
 >
-> Và ta dự đoán bằng y(**w**,**x**) là hàm vector \[y1(**x**), y2(**x**),...yK(**x**)\] = \[**w**1T**x** + w10, **w**2T**x** + w20, ..., **w**KT**x** + wK0\] (xem link bài trước) 
+> Và ta dự đoán bằng y(𝐰,𝐱) là hàm vector \[y1(𝐱), y2(𝐱),...yK(𝐱)\] = \[𝐰1T𝐱 + w10, 𝐰2T𝐱 + w20, ..., 𝐰Kᵀ𝐱 + wK0\] (xem link bài trước) 
 >
 >
 >
-> Và như vậy E\[**T**|**x**\] là gì? 
+> Và như vậy E\[𝐓|𝐱\] là gì? 
 >
 >
 >
 > Kì vọng của random vector là vector các kì vọng từng random variable phần tử thôi, và conditional expected value thì cũng vậy.
 >
 > \
-> E\[**T**|**x**\] = \[E(T1|**x**), E(T2|**x**),...,E(TK|**x**)\]T
+> E\[𝐓|𝐱\] = \[E(T1|𝐱), E(T2|𝐱),...,E(TK|𝐱)\]ᵀ
 >
 >
 >
@@ -48,31 +48,31 @@
 >
 >
 >
-> E\[T1|**x**\] = 0 × P(T1=0|**x**) + 1 × P(T1=1|**x**) = P(T1=1|**x**)
+> E\[T1|𝐱\] = 0 × P(T1=0|𝐱) + 1 × P(T1=1|𝐱) = P(T1=1|𝐱)
 >
 >
 >
-> Mà T1=1, thì cũng chính là **T** = \[1,0,...0\]T, và cũng chính là đại diện cho "Class 𝒞1"
+> Mà T1=1, thì cũng chính là 𝐓 = \[1,0,...0\]ᵀ, và cũng chính là đại diện cho "Class 𝒞1"
 >
 >
 >
-> Nên E\[T1|**x**\] = P(T1=1|**x**) = P(**T** = \[1,0,...0\]T|**x**) = P(𝒞1|**x**), và đây chính là posterior probability của f(𝒞|**x**) evaluate tại 𝒞 = 𝒞1, tức xác suất random variable (class 𝒞) mang giá trị 𝒞1 dựa trên giá trị input **x**. 
+> Nên E\[T1|𝐱\] = P(T1=1|𝐱) = P(𝐓 = \[1,0,...0\]ᵀ|𝐱) = P(𝒞1|𝐱), và đây chính là posterior probability của f(𝒞|𝐱) evaluate tại 𝒞 = 𝒞1, tức xác suất random variable (class 𝒞) mang giá trị 𝒞1 dựa trên giá trị input 𝐱. 
 >
 >
 >
-> (tức là ta coi 𝒞 là random variable có các possible value 𝒞1, 𝒞2,...𝒞K, thì f(𝒞|**x**) đương nhiên là posterior distribution. prior distribution là f(𝒞), dùng Bayes rule: f(𝒞|**x**) = f(**x**|𝒞)f(𝒞)/f(**x**)
+> (tức là ta coi 𝒞 là random variable có các possible value 𝒞1, 𝒞2,...𝒞K, thì f(𝒞|𝐱) đương nhiên là posterior distribution. prior distribution là f(𝒞), dùng Bayes rule: f(𝒞|𝐱) = f(𝐱|𝒞)f(𝒞)/f(𝐱)
 >
 >
 >
-> Tương tự E\[Ti|**x**\] = P(𝒞i|**x**)
+> Tương tự E\[Ti|𝐱\] = P(𝒞i|𝐱)
 >
 >
 >
-> Vậy E\[**T**|**x**\] = \[P(T1=1|**x**), P(T2=1|**x**),...,P(TK=1|**x**)\]T
+> Vậy E\[𝐓|𝐱\] = \[P(T1=1|𝐱), P(T2=1|𝐱),...,P(TK=1|𝐱)\]ᵀ
 >
 >
 >
-> = \[f(𝒞1|**x**), f(𝒞2|**x**),...,f(𝒞K|**x**)\]T
+> = \[f(𝒞1|𝐱), f(𝒞2|𝐱),...,f(𝒞K|𝐱)\]ᵀ
 >
 >
 >
@@ -88,11 +88,11 @@
 >
 >
 >
-> Với regression, việc ta muốn dùng hàm tuyến tính y(**w**,**x**) = **w**TΦ(**x**) để approximate (estimate) cho E\[T|**x**\] không vấn đề gì, vì do T là continous random variable có giá trị có thể lớn bé tùy ý nên nó không ràng buộc gì, không mâu thuẫn gì với range của **w**TΦ(**x**), là hàm tuyến tính, cũng có thể lớn bé tùy ý.
+> Với regression, việc ta muốn dùng hàm tuyến tính y(𝐰,𝐱) = 𝐰ᵀΦ(𝐱) để approximate (estimate) cho E\[T|𝐱\] không vấn đề gì, vì do T là continous random variable có giá trị có thể lớn bé tùy ý nên nó không ràng buộc gì, không mâu thuẫn gì với range của 𝐰ᵀΦ(𝐱), là hàm tuyến tính, cũng có thể lớn bé tùy ý.
 >
 >
 >
-> Nhưng với cái hoàn cảnh của ta trong classification: Nếu ta dùng linear function y(**w**,**x**), là vector \[y(**w**1,**x**), y(**w**2,**x**),....y(**w**K,**x**) để dự đoán E\[**T**|**x**\], ...
+> Nhưng với cái hoàn cảnh của ta trong classification: Nếu ta dùng linear function y(𝐰,𝐱), là vector \[y(𝐰1,𝐱), y(𝐰2,𝐱),....y(𝐰K,𝐱) để dự đoán E\[𝐓|𝐱\], ...
 >
 >
 >
@@ -100,11 +100,11 @@
 >
 >
 >
-> lấy y(**w**1,**x**) = w10 + w11x1 + w12x2 + ..w1DxD, để dự đoán E\[T1|**x**\] = f(𝒞1|**x**) 
+> lấy y(𝐰1,𝐱) = w10 + w11x1 + w12x2 + ..w1DxD, để dự đoán E\[T1|𝐱\] = f(𝒞1|𝐱) 
 >
 >
 >
-> lấy y(**w**2,**x**) = w20 + w21x1 + w22x2 + ..w2DxD, để dự đoán E\[T2|**x**\] = f(𝒞2|**x**)
+> lấy y(𝐰2,𝐱) = w20 + w21x1 + w22x2 + ..w2DxD, để dự đoán E\[T2|𝐱\] = f(𝒞2|𝐱)
 >
 >
 >
@@ -112,11 +112,11 @@
 >
 >
 >
-> Thì ta thấy vấn đề ngay: Đó là f(𝒞1|**x**), f(𝒞2|**x**),..đều phải là giá trị xác suất, nên phải i) Không âm ii) Bé hơn hoặc bằng 1. iii) Tổng phải bằng 1.
+> Thì ta thấy vấn đề ngay: Đó là f(𝒞1|𝐱), f(𝒞2|𝐱),..đều phải là giá trị xác suất, nên phải i) Không âm ii) Bé hơn hoặc bằng 1. iii) Tổng phải bằng 1.
 >
 >
 >
-> Trong khi đó các hàm tuyến tính y(**w**1,**x**), y(**w**2,**x**)...thì lại có range lớn bé tùy ý.
+> Trong khi đó các hàm tuyến tính y(𝐰1,𝐱), y(𝐰2,𝐱)...thì lại có range lớn bé tùy ý.
 >
 >
 >
@@ -138,11 +138,11 @@
 <p align="center"><kbd><img src="assets/h1syc45w2qs.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, như vừa nói ở note trước, ta sẽ dùng yk(**x**) = **w**kᵀ**x** + wk0 để dự đoán f(𝒞k|**x**), k=1,2...K
+> Rồi, như vừa nói ở note trước, ta sẽ dùng yk(𝐱) = 𝐰kᵀ𝐱 + wk0 để dự đoán f(𝒞k|𝐱), k=1,2...K
 >
 >
 >
-> Thì ở đây, ta thể hiện vector y(**x**) = \[y1(**x**), y2(**x**),..yK(**x**)\]T theo cách gọn hơn (gọi là vectorization) như sau:
+> Thì ở đây, ta thể hiện vector y(𝐱) = \[y1(𝐱), y2(𝐱),..yK(𝐱)\]ᵀ theo cách gọn hơn (gọi là vectorization) như sau:
 >
 >
 >
@@ -150,7 +150,7 @@
 >
 >
 >
-> Nên ở đây cũng là vậy, đặt 𝐱̃ = (1, x1,x2,..), 𝐰̃k = (wk0, wk1,...) thì yk(**x**) chính là 𝐰̃kᵀ𝐱̃.
+> Nên ở đây cũng là vậy, đặt 𝐱̃ = (1, x1,x2,..), 𝐰̃k = (wk0, wk1,...) thì yk(𝐱) chính là 𝐰̃kᵀ𝐱̃.
 >
 >
 >
@@ -158,11 +158,11 @@
 >
 >
 >
-> Do đó cho nên 𝐖̃ᵀ𝐱̃ sẽ chính là vector y(**x**) = \[y1(**x**), y2(**x**),..yK(**x**)\]T
+> Do đó cho nên 𝐖̃ᵀ𝐱̃ sẽ chính là vector y(𝐱) = \[y1(𝐱), y2(𝐱),..yK(𝐱)\]ᵀ
 >
 >
 >
-> Và như đã biết ở phần 4.1.2, cách làm của mô hình dự đoán sẽ là tính ra y(**x**) và xem chỉ số k nào trong các số từ 1, 2, ..K là ứng với phần tử lớn nhất, thì assign class 𝒞k cho input
+> Và như đã biết ở phần 4.1.2, cách làm của mô hình dự đoán sẽ là tính ra y(𝐱) và xem chỉ số k nào trong các số từ 1, 2, ..K là ứng với phần tử lớn nhất, thì assign class 𝒞k cho input
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -178,19 +178,19 @@
 <p align="center"><kbd><img src="assets/3mxhdb46h4v.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, như đã nói, ta sẽ đi định ra, tìm ra giá trị của matrix tham số 𝐖̃ theo cách làm là đi minimize hàm sum of squares error (còn gọi là cách làm least square). Thì đầu tiên cần define thêm hai matrix: **T** và 𝐗̃ (**X** tilde):
+> Rồi, như đã nói, ta sẽ đi định ra, tìm ra giá trị của matrix tham số 𝐖̃ theo cách làm là đi minimize hàm sum of squares error (còn gọi là cách làm least square). Thì đầu tiên cần define thêm hai matrix: 𝐓 và 𝐗̃ (𝐗 tilde):
 >
 >
 >
-> Chỗ này cần để ý, trong bài toán regression, ta có bộ data là các cặp (vector **x**1, giá trị target t1), (**x**2, t2)...(**x**N, tN). Để rồi ta gom các vector **x** lại thành matrix **X** (và trong phần lớn thời gian, ta đều lờ nó đi, vì chỉ coi t là random variable, nhớ không) và gom các scalar t thành **VECTOR** **t** = (t1,...tN).
+> Chỗ này cần để ý, trong bài toán regression, ta có bộ data là các cặp (vector 𝐱1, giá trị target t1), (𝐱2, t2)...(𝐱N, tN). Để rồi ta gom các vector 𝐱 lại thành matrix 𝐗 (và trong phần lớn thời gian, ta đều lờ nó đi, vì chỉ coi t là random variable, nhớ không) và gom các scalar t thành **VECTOR** 𝐭 = (t1,...tN).
 >
 >
 >
-> Nhưng ở đây, data set là các cặp (vector **x**1, VECTOR target **t**1), (**x**2, **t**2),....Với **t**1, **t**2,... là vector one-hot vector, ví dụ **t**1 = (0,1,0,...0)T nếu như giá trị quan sát được của loại của **x**1 là class 𝒞2. Và vì vậy, ta gom các vector **t**1,**t**2...**t**N lại thành MATRIX **T** có các hàng là **t**1ᵀ, **t**2ᵀ,...
+> Nhưng ở đây, data set là các cặp (vector 𝐱1, VECTOR target 𝐭1), (𝐱2, 𝐭2),....Với 𝐭1, 𝐭2,... là vector one-hot vector, ví dụ 𝐭1 = (0,1,0,...0)ᵀ nếu như giá trị quan sát được của loại của 𝐱1 là class 𝒞2. Và vì vậy, ta gom các vector 𝐭1,𝐭2...𝐭N lại thành MATRIX 𝐓 có các hàng là 𝐭1ᵀ, 𝐭2ᵀ,...
 >
 >
 >
-> Còn với các input **x** thì cũng gom thành matrix **X** như cũ, nhưng vì nay các 𝐱̃i có thêm số 1 ở đầu (tức là **x**1 = \[x11,x12,...\]ᵀ thì 𝐱̃i = \[1, x11, x12,...\]ᵀ, nên có các hàng là 𝐱̃1ᵀ, 𝐱̃2ᵀ... nên ta gọi là 𝐗̃ (**X** tilde). 
+> Còn với các input 𝐱 thì cũng gom thành matrix 𝐗 như cũ, nhưng vì nay các 𝐱̃i có thêm số 1 ở đầu (tức là 𝐱1 = \[x11,x12,...\]ᵀ thì 𝐱̃i = \[1, x11, x12,...\]ᵀ, nên có các hàng là 𝐱̃1ᵀ, 𝐱̃2ᵀ... nên ta gọi là 𝐗̃ (𝐗 tilde). 
 >
 >
 >
@@ -206,59 +206,59 @@
 >
 >
 >
-> Error là khác biệt giữa dự đoán và thực tế, ví dụ input **x**1, dự đoán là vector y(**x**1) = 𝐖̃ᵀ𝐱̃1,
+> Error là khác biệt giữa dự đoán và thực tế, ví dụ input 𝐱1, dự đoán là vector y(𝐱1) = 𝐖̃ᵀ𝐱̃1,
 >
 >
 >
-> Còn thực tế là vector **t**1. Nên error 1 là vector **e**1 = 𝐖̃ᵀ𝐱̃1 - **t**1.
+> Còn thực tế là vector 𝐭1. Nên error 1 là vector 𝐞1 = 𝐖̃ᵀ𝐱̃1 - 𝐭1.
 >
 >
 >
-> Tương tự error 2 là vector **e**2 = 𝐖̃ᵀ𝐱̃2 - **t**2,..
+> Tương tự error 2 là vector 𝐞2 = 𝐖̃ᵀ𝐱̃2 - 𝐭2,..
 >
 >
 >
-> Vậy **e**1ᵀ**e**1 sẽ là là tổng bình phương các phần tử của **e**1, tương tự **e**2ᵀ**e**2 là tổng bình phương các phần tử của **e**2,...
+> Vậy 𝐞1ᵀ𝐞1 sẽ là là tổng bình phương các phần tử của 𝐞1, tương tự 𝐞2ᵀ𝐞2 là tổng bình phương các phần tử của 𝐞2,...
 >
 >
 >
-> Giờ có **e**1 = 𝐖̃ᵀ𝐱̃1 - **t**1, **e**2 = 𝐖̃ᵀ𝐱̃2 - **t**2,...(1)
+> Giờ có 𝐞1 = 𝐖̃ᵀ𝐱̃1 - 𝐭1, 𝐞2 = 𝐖̃ᵀ𝐱̃2 - 𝐭2,...(1)
 >
 >
 >
-> ⇒ **e**1ᵀ = 𝐱̃1ᵀ𝐖̃ - **t**1ᵀ, **e**2ᵀ = 𝐱̃2ᵀ𝐖̃ - **t**2ᵀ
+> ⇒ 𝐞1ᵀ = 𝐱̃1ᵀ𝐖̃ - 𝐭1ᵀ, 𝐞2ᵀ = 𝐱̃2ᵀ𝐖̃ - 𝐭2ᵀ
 >
 >
 >
-> Đặt **e**1ᵀ, **e**2ᵀ...thành cách hàng của matrix **E**
+> Đặt 𝐞1ᵀ, 𝐞2ᵀ...thành cách hàng của matrix 𝐄
 >
 >
 >
-> Và đặt 𝐱̃1ᵀ𝐖̃, 𝐱̃2ᵀ𝐖̃,...vào thành các hàng của matrix **U**
+> Và đặt 𝐱̃1ᵀ𝐖̃, 𝐱̃2ᵀ𝐖̃,...vào thành các hàng của matrix 𝐔
 >
 >
 >
-> và **t**1ᵀ, **t**2ᵀ,...thành các hàng của matrix **V**
+> và 𝐭1ᵀ, 𝐭2ᵀ,...thành các hàng của matrix 𝐕
 >
 >
 >
-> thì dễ thấy (1) tương đương **E** = **U** - **V** (vì trừ hai matrix thì các hàng tương ứng trừ nhau)
+> thì dễ thấy (1) tương đương 𝐄 = 𝐔 - 𝐕 (vì trừ hai matrix thì các hàng tương ứng trừ nhau)
 >
 >
 >
-> Tuy nhiên nhìn lại thì thấy **U**, có các hàng là 𝐱̃1ᵀ𝐖̃, 𝐱̃2ᵀ𝐖̃,...Và điều này đồng nghĩa hàng 1 của U là linear combination các hàng của 𝐖̃ bởi hệ số là 𝐱̃1ᵀ, hàng 2 của U là linear combination các hàng của 𝐖̃ bởi hệ số là 𝐱̃2ᵀ...
+> Tuy nhiên nhìn lại thì thấy 𝐔, có các hàng là 𝐱̃1ᵀ𝐖̃, 𝐱̃2ᵀ𝐖̃,...Và điều này đồng nghĩa hàng 1 của U là linear combination các hàng của 𝐖̃ bởi hệ số là 𝐱̃1ᵀ, hàng 2 của U là linear combination các hàng của 𝐖̃ bởi hệ số là 𝐱̃2ᵀ...
 >
 >
 >
-> Tới đây ta nhớ lại ở MIT 18.06, góc nhìn thứ hai khi nhân hai matrix AB = C nói rằng hàng i của C là linear combination các hàng của B bởi hệ số là hàng i của A. Nhờ góc nhìn này, ta thấy **U** chính là 𝐗̃𝐖̃,
+> Tới đây ta nhớ lại ở MIT 18.06, góc nhìn thứ hai khi nhân hai matrix AB = C nói rằng hàng i của C là linear combination các hàng của B bởi hệ số là hàng i của A. Nhờ góc nhìn này, ta thấy 𝐔 chính là 𝐗̃𝐖̃,
 >
 >
 >
-> Còn **V** dễ thấy chính là **T** ở trên
+> Còn 𝐕 dễ thấy chính là 𝐓 ở trên
 >
 >
 >
-> Do đó **E** = 𝐗̃𝐖̃ - **T**
+> Do đó 𝐄 = 𝐗̃𝐖̃ - 𝐓
 >
 >
 >
@@ -266,21 +266,21 @@
 >
 >
 >
-> Bên cạnh đó: **EE**ᵀ sẽ là matrix có đường chéo tạo bởi dot product của hàng j của **E** (chính là **e**1ᵀ, **e**2ᵀ...) và cột j của là **E**ᵀ (chính là **e**1, **e**2,...) ⇒ đường chéo của **EE**ᵀ là **e**1ᵀ**e**1, **e**2ᵀ**e**2,...
+> Bên cạnh đó: **EE**ᵀ sẽ là matrix có đường chéo tạo bởi dot product của hàng j của 𝐄 (chính là 𝐞1ᵀ, 𝐞2ᵀ...) và cột j của là 𝐄ᵀ (chính là 𝐞1, 𝐞2,...) ⇒ đường chéo của **EE**ᵀ là 𝐞1ᵀ𝐞1, 𝐞2ᵀ𝐞2,...
 >
 >
 >
-> Và lấy trace, ta có tổng đường chéo **e**1ᵀ**e**1 + **e**2ᵀ**e**2,... cũng chính là tổng bình phương các phần tử của **e**1,...**e**N. Đây chính là sum of squares error. \
+> Và lấy trace, ta có tổng đường chéo 𝐞1ᵀ𝐞1 + 𝐞2ᵀ𝐞2,... cũng chính là tổng bình phương các phần tử của 𝐞1,...𝐞N. Đây chính là sum of squares error. \
 > \
 > Do đó E_D(𝐖̃) = (1/2) trace(**EE**ᵀ)
 >
 >
 >
-> Nhưng trace lại có tính xoay vòng, tr(AB) = tr(BA), nên trace(**EE**ᵀ) = trace(**E**ᵀ**E**)
+> Nhưng trace lại có tính xoay vòng, tr(AB) = tr(BA), nên trace(**EE**ᵀ) = trace(𝐄ᵀ𝐄)
 >
 >
 >
-> Vậy E_D(𝐖̃) = (1/2) trace(**E**ᵀ**E**) =(1/2) trace((𝐗̃𝐖̃-**T**)ᵀ(𝐗̃𝐖̃-**T**))
+> Vậy E_D(𝐖̃) = (1/2) trace(𝐄ᵀ𝐄) =(1/2) trace((𝐗̃𝐖̃-𝐓)ᵀ(𝐗̃𝐖̃-𝐓))
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
@@ -296,7 +296,7 @@
 <p align="center"><kbd><img src="assets/brg555p8hnb.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, khi đã hiểu sum of squares error function E_D(𝐖̃) = (1/2) trace(**E**ᵀ**E**) = (1/2) trace((𝐗̃𝐖̃-**T**)ᵀ(𝐗̃𝐖̃-**T**)), để đi (tìm 𝐖̃) giúp minimize cái này. Ta dùng các định lý của toán tối ưu thôi: Đầu tiên là định lý điều kiện cần bậc nhất: đạo hàm theo 𝐖̃ tại minimizer phải = 0.
+> Rồi, khi đã hiểu sum of squares error function E_D(𝐖̃) = (1/2) trace(𝐄ᵀ𝐄) = (1/2) trace((𝐗̃𝐖̃-𝐓)ᵀ(𝐗̃𝐖̃-𝐓)), để đi (tìm 𝐖̃) giúp minimize cái này. Ta dùng các định lý của toán tối ưu thôi: Đầu tiên là định lý điều kiện cần bậc nhất: đạo hàm theo 𝐖̃ tại minimizer phải = 0.
 >
 >
 >
@@ -312,7 +312,7 @@
 >
 >
 >
-> = d/d𝐖̃ \[(1/2) trace((𝐗̃𝐖̃-**T**)ᵀ(𝐗̃𝐖̃-**T**))\]
+> = d/d𝐖̃ \[(1/2) trace((𝐗̃𝐖̃-𝐓)ᵀ(𝐗̃𝐖̃-𝐓))\]
 >
 >
 >
@@ -320,39 +320,39 @@
 >
 >
 >
-> (𝐗̃𝐖̃-**T**)ᵀ(𝐗̃𝐖̃-**T**) = (𝐖̃ᵀ𝐗̃ᵀ-**T**ᵀ)(𝐗̃𝐖̃-**T**) = 𝐖̃ᵀ𝐗̃ᵀ𝐗̃𝐖̃ - **T**ᵀ𝐗̃𝐖̃ - 𝐖̃ᵀ𝐗̃ᵀ**T**+**T**ᵀ**T**
+> (𝐗̃𝐖̃-𝐓)ᵀ(𝐗̃𝐖̃-𝐓) = (𝐖̃ᵀ𝐗̃ᵀ-𝐓ᵀ)(𝐗̃𝐖̃-𝐓) = 𝐖̃ᵀ𝐗̃ᵀ𝐗̃𝐖̃ - 𝐓ᵀ𝐗̃𝐖̃ - 𝐖̃ᵀ𝐗̃ᵀ𝐓+𝐓ᵀ𝐓
 >
 >
 >
-> = 𝐖̃ᵀ𝐗̃ᵀ𝐗̃𝐖̃ - **T**ᵀ𝐗̃𝐖̃ - 𝐖̃ᵀ𝐗̃ᵀ**T** + **T**ᵀ**T**
+> = 𝐖̃ᵀ𝐗̃ᵀ𝐗̃𝐖̃ - 𝐓ᵀ𝐗̃𝐖̃ - 𝐖̃ᵀ𝐗̃ᵀ𝐓 + 𝐓ᵀ𝐓
 >
 >
 >
-> ⇒ trace((𝐗̃𝐖̃-**T**)ᵀ(𝐗̃𝐖̃-**T**)), do tính tuýến tính của trace, nên:
+> ⇒ trace((𝐗̃𝐖̃-𝐓)ᵀ(𝐗̃𝐖̃-𝐓)), do tính tuýến tính của trace, nên:
 >
 >
 >
-> = tr(𝐖̃ᵀ𝐗̃ᵀ𝐗̃𝐖̃) - tr(**T**ᵀ𝐗̃𝐖̃) - tr(𝐖̃ᵀ𝐗̃ᵀ**T**) + tr(**T**ᵀ**T**)
+> = tr(𝐖̃ᵀ𝐗̃ᵀ𝐗̃𝐖̃) - tr(𝐓ᵀ𝐗̃𝐖̃) - tr(𝐖̃ᵀ𝐗̃ᵀ𝐓) + tr(𝐓ᵀ𝐓)
 >
 >
 >
-> = tr(𝐖̃ᵀ𝐗̃ᵀ𝐗̃𝐖̃) - tr(**T**ᵀ𝐗̃𝐖̃) - tr(**T**ᵀ𝐗̃𝐖̃) + tr(**T**ᵀ**T**) (dùng tính chất tr(**A**) = tr(**A**ᵀ))
+> = tr(𝐖̃ᵀ𝐗̃ᵀ𝐗̃𝐖̃) - tr(𝐓ᵀ𝐗̃𝐖̃) - tr(𝐓ᵀ𝐗̃𝐖̃) + tr(𝐓ᵀ𝐓) (dùng tính chất tr(𝐀) = tr(𝐀ᵀ))
 >
 >
 >
-> = tr(𝐖̃ᵀ𝐗̃ᵀ**X**𝐖̃) - 2tr(**T**ᵀ𝐗̃𝐖̃) + tr(**T**ᵀ**T**)
+> = tr(𝐖̃ᵀ𝐗̃ᵀ𝐗𝐖̃) - 2tr(𝐓ᵀ𝐗̃𝐖̃) + tr(𝐓ᵀ𝐓)
 >
 >
 >
-> ⇒ d/d𝐖̃ \[(1/2) trace((𝐗̃𝐖̃-**T**)ᵀ(𝐗̃𝐖̃-**T**))\]
+> ⇒ d/d𝐖̃ \[(1/2) trace((𝐗̃𝐖̃-𝐓)ᵀ(𝐗̃𝐖̃-𝐓))\]
 >
 >
 >
-> = (1/2) { d/d𝐖̃ tr(𝐖̃ᵀ𝐗̃ᵀ𝐗̃𝐖̃) - 2 d/d𝐖̃ tr(**T**ᵀ𝐗̃𝐖̃) + d/d𝐖̃ tr(**T**ᵀ**T**) }
+> = (1/2) { d/d𝐖̃ tr(𝐖̃ᵀ𝐗̃ᵀ𝐗̃𝐖̃) - 2 d/d𝐖̃ tr(𝐓ᵀ𝐗̃𝐖̃) + d/d𝐖̃ tr(𝐓ᵀ𝐓) }
 >
 >
 >
-> = (1/2) { d/d𝐖̃ tr(𝐖̃ᵀ𝐗̃ᵀ𝐗̃𝐖̃) - 2 d/d𝐖̃ tr(**T**ᵀ𝐗̃𝐖̃) + 0 }
+> = (1/2) { d/d𝐖̃ tr(𝐖̃ᵀ𝐗̃ᵀ𝐗̃𝐖̃) - 2 d/d𝐖̃ tr(𝐓ᵀ𝐗̃𝐖̃) + 0 }
 >
 >
 >
@@ -360,7 +360,7 @@
 >
 >
 >
-> ∂/∂**A** tr(**ABA**ᵀ) = **A**(**B**ᵀ+**B**)
+> ∂/∂𝐀 tr(**ABA**ᵀ) = 𝐀(𝐁ᵀ+𝐁)
 >
 >
 >
@@ -368,7 +368,7 @@
 >
 >
 >
-> ∂/∂**A** tr(**A**ᵀ**BA**) = (**B**ᵀ+**B**)**A**
+> ∂/∂𝐀 tr(𝐀ᵀ**BA**) = (𝐁ᵀ+𝐁)𝐀
 >
 >
 >
@@ -380,7 +380,7 @@
 >
 >
 >
-> ∂/∂**A** tr(**AB**) = **B**ᵀ (xem link)
+> ∂/∂𝐀 tr(**AB**) = 𝐁ᵀ (xem link)
 >
 >
 >
@@ -388,23 +388,23 @@
 >
 >
 >
-> 2 d/d𝐖̃ tr(**T**ᵀ**X**𝐖̃) = 2 d/d𝐖̃ tr(𝐖̃**T**ᵀ𝐗̃) (tính xoay vòng của trace)
+> 2 d/d𝐖̃ tr(𝐓ᵀ𝐗𝐖̃) = 2 d/d𝐖̃ tr(𝐖̃𝐓ᵀ𝐗̃) (tính xoay vòng của trace)
 >
 >
 >
-> = 2(**T**ᵀ𝐗̃)ᵀ = 2𝐗̃ᵀ**T**
+> = 2(𝐓ᵀ𝐗̃)ᵀ = 2𝐗̃ᵀ𝐓
 >
 >
 >
->  Vậy kết qủa đạo hàm là (1/2)\[2𝐗̃ᵀ𝐗̃𝐖̃ - 2𝐗̃ᵀ**T**\] = 𝐗̃ᵀ𝐗̃𝐖̃ - 𝐗̃ᵀ**T**
+>  Vậy kết qủa đạo hàm là (1/2)\[2𝐗̃ᵀ𝐗̃𝐖̃ - 2𝐗̃ᵀ𝐓\] = 𝐗̃ᵀ𝐗̃𝐖̃ - 𝐗̃ᵀ𝐓
 >
 >
 >
-> Cho đạo hàm = 0:  𝐗̃ᵀ𝐗̃𝐖̃ - 𝐗̃ᵀ**T** = 0
+> Cho đạo hàm = 0:  𝐗̃ᵀ𝐗̃𝐖̃ - 𝐗̃ᵀ𝐓 = 0
 >
 >
 >
-> ⇔ 𝐗̃ᵀ𝐗̃𝐖̃ = 𝐗̃ᵀ**T**
+> ⇔ 𝐗̃ᵀ𝐗̃𝐖̃ = 𝐗̃ᵀ𝐓
 >
 >
 >
@@ -412,7 +412,7 @@
 >
 >
 >
-> ⇔ 𝐖̃ = (𝐗̃ᵀ𝐗̃)⁻¹ 𝐗̃ᵀ**T**
+> ⇔ 𝐖̃ = (𝐗̃ᵀ𝐗̃)⁻¹ 𝐗̃ᵀ𝐓
 >
 >
 >
@@ -424,7 +424,7 @@
 >
 >
 >
-> Vậy 𝐖̃ = (𝐗̃ᵀ𝐗̃)⁻¹ 𝐗̃ᵀ**T** là W thõa điều kiện cần, đúng ra phải xét tiếp đạo hàm bậc hai mới kết luận được 𝐖̃ là minimizer. Nhưng cũng dễ thấy với đạo hàm là 𝐗̃ᵀ𝐗̃𝐖̃ - 𝐗̃ᵀ**T**, thì đạo hàm bậc hai đối với 𝐖̃ chính là 𝐗̃ᵀ𝐗̃, và theo MIT 18.06 ta đã biết đây là matrix positive semi definite, nên có thể kết luận chính là minimizer của hàm objective.
+> Vậy 𝐖̃ = (𝐗̃ᵀ𝐗̃)⁻¹ 𝐗̃ᵀ𝐓 là W thõa điều kiện cần, đúng ra phải xét tiếp đạo hàm bậc hai mới kết luận được 𝐖̃ là minimizer. Nhưng cũng dễ thấy với đạo hàm là 𝐗̃ᵀ𝐗̃𝐖̃ - 𝐗̃ᵀ𝐓, thì đạo hàm bậc hai đối với 𝐖̃ chính là 𝐗̃ᵀ𝐗̃, và theo MIT 18.06 ta đã biết đây là matrix positive semi definite, nên có thể kết luận chính là minimizer của hàm objective.
 >
 >
 >
@@ -432,19 +432,19 @@
 >
 >
 >
-> Cuối cùng lắp 𝐖̃ = (𝐗̃ᵀ𝐗̃)⁻¹ 𝐗̃ᵀ**T** vào y(**x**) = 𝐖̃ᵀ𝐱̃ 
+> Cuối cùng lắp 𝐖̃ = (𝐗̃ᵀ𝐗̃)⁻¹ 𝐗̃ᵀ𝐓 vào y(𝐱) = 𝐖̃ᵀ𝐱̃ 
 >
 >
 >
-> = \[(𝐗̃ᵀ𝐗̃)⁻¹ 𝐗̃ᵀ**T**\]ᵀ𝐱̃
+> = \[(𝐗̃ᵀ𝐗̃)⁻¹ 𝐗̃ᵀ𝐓\]ᵀ𝐱̃
 >
 >
 >
-> = **T**ᵀ ((𝐗̃ᵀ𝐗̃)⁻¹ 𝐗̃ᵀ)ᵀ 𝐱̃
+> = 𝐓ᵀ ((𝐗̃ᵀ𝐗̃)⁻¹ 𝐗̃ᵀ)ᵀ 𝐱̃
 >
 >
 >
-> = **T**ᵀ (𝐗̃⁺)ᵀ 𝐱̃
+> = 𝐓ᵀ (𝐗̃⁺)ᵀ 𝐱̃
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
@@ -462,7 +462,7 @@
 <p align="center"><kbd><img src="assets/snutq5x02rc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đoạn này có thể quay lại sau, nhưng đại ý là dù cho giả sử các vector target **t**n trong training set thỏa điều kiện 4.18 thì khi đó sẽ giúp cho các phần tử của prediction vector y(**x**) có tổng bằng 1. Tuy vậy, nó vẫn không đảm bảo các phần tử nằm trong range (0,1) do đó không thể khớp với yêu cầu của một phân phối xác suất (tức y(**x**) không thể là một mô hình xác suất)
+> Đoạn này có thể quay lại sau, nhưng đại ý là dù cho giả sử các vector target 𝐭n trong training set thỏa điều kiện 4.18 thì khi đó sẽ giúp cho các phần tử của prediction vector y(𝐱) có tổng bằng 1. Tuy vậy, nó vẫn không đảm bảo các phần tử nằm trong range (0,1) do đó không thể khớp với yêu cầu của một phân phối xác suất (tức y(𝐱) không thể là một mô hình xác suất)
 
 > [!TIP]
 > **🤖 AI Feedback** — ⚠️ Score: **88/100**
@@ -484,7 +484,7 @@
 >
 >
 >
-> Và discriminant function thì như ta cũng đã biết, chỉ là một hàm mapping, nhận input, nhả ra predicted class, chứ không thể giải thích, có cách nhìn theo xác suất (vì sao thì nãy đã nói, các giá trị của y(**x**) không thể được coi như, không thể dùng để approximate một phân phối xác suất, vì nó vi phạm các tiên đề)
+> Và discriminant function thì như ta cũng đã biết, chỉ là một hàm mapping, nhận input, nhả ra predicted class, chứ không thể giải thích, có cách nhìn theo xác suất (vì sao thì nãy đã nói, các giá trị của y(𝐱) không thể được coi như, không thể dùng để approximate một phân phối xác suất, vì nó vi phạm các tiên đề)
 >
 >
 >
@@ -508,11 +508,11 @@
 >
 >
 >
-> Ví dụ ở đây là K = 2, y(**x**) = \[y1(**x**), y2(**x**)\]ᵀ
+> Ví dụ ở đây là K = 2, y(𝐱) = \[y1(𝐱), y2(𝐱)\]ᵀ
 >
 >
 >
-> Nên error với input **x** có target (t1, t2)ᵀ sẽ là: (y1(**x**) - t1)² + (y2(**x**) - t2)²
+> Nên error với input 𝐱 có target (t1, t2)ᵀ sẽ là: (y1(𝐱) - t1)² + (y2(𝐱) - t2)²
 >
 >
 >
@@ -520,11 +520,11 @@
 >
 >
 >
-> Đồng thời model 1 đoán rất tự tin và cũng chuẩn xác bằng cách cho y1(**x**) rất lớn, ví dụ 10, y2(**x**) rất bé (theo đó thì nó đoán class là 𝒞1), ví dụ = -1
+> Đồng thời model 1 đoán rất tự tin và cũng chuẩn xác bằng cách cho y1(𝐱) rất lớn, ví dụ 10, y2(𝐱) rất bé (theo đó thì nó đoán class là 𝒞1), ví dụ = -1
 >
 >
 >
-> Trong khi đó một model khác (bộ giá trị **w** khác) đoán trật lấc khi cho y1(**x**) = 0, y2(**x**) = 2 (đồng nghĩa nó gán class 𝒞2).
+> Trong khi đó một model khác (bộ giá trị 𝐰 khác) đoán trật lấc khi cho y1(𝐱) = 0, y2(𝐱) = 2 (đồng nghĩa nó gán class 𝒞2).
 >
 >
 >
@@ -548,7 +548,7 @@
 >
 >
 >
-> Đây chính là ý "sum of squares function penalize - trừng phạt dự đoán 'too correct' - chính là khi model 1 đoán y1(**x**) = 10 , là 'too correct'.
+> Đây chính là ý "sum of squares function penalize - trừng phạt dự đoán 'too correct' - chính là khi model 1 đoán y1(𝐱) = 10 , là 'too correct'.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **96/100**
@@ -578,15 +578,15 @@
 >
 >
 >
-> Ý quan trọng là, điểm mấu chốt là vì: mô hình least square, cách tiếp cận theo kiểu minimize sum squared error function ta biết trong chapter 3, nó có bản chất là ta đang dùng giả định về phân phối xác suất của dữ liệu là như sau: Ta đang giả định target variable dựa trên một input **x**, thì T \~ 𝒩(y(**w**,**x**), 1/β), và sau đó ta đi giải bài toán point estimate tham số w của mô hình thông qua cách tiếp cận của trường phái cổ điển: Maximum likelihood estimation. Làm lại nhanh không thừa:
+> Ý quan trọng là, điểm mấu chốt là vì: mô hình least square, cách tiếp cận theo kiểu minimize sum squared error function ta biết trong chapter 3, nó có bản chất là ta đang dùng giả định về phân phối xác suất của dữ liệu là như sau: Ta đang giả định target variable dựa trên một input 𝐱, thì T \~ 𝒩(y(𝐰,𝐱), 1/β), và sau đó ta đi giải bài toán point estimate tham số w của mô hình thông qua cách tiếp cận của trường phái cổ điển: Maximum likelihood estimation. Làm lại nhanh không thừa:
 >
 >
 >
-> Nói nhanh: Bài toán point estimation là bài toán mà ta có obsered data của random sample X1, X2,...XN iid, và Xi \~ f(x|θ). Mục tiêu là đi tìm một point estimator của θ, bản chất là một hàm θ(**X**). Thì một cách làm thông thường của trường phái Classic là: Đi tìm θ để maximize hàm likelihood L(θ|**x**), và kết quả ta sẽ có hàm W(**X**), hay với MLE ta dùng θ̂\_ml(**X**) = argmax\_Θ L(θ|**X**). Và ý nghĩa của nó là, với data quan sát được của X bỏ vào, thì hàm này sẽ lấy ra cho ta giá trị của θ có độ hợp lí cao nhất. Và hàm likelihood thì được định nghĩa chính là có giá trị bằng joint pdf của **X** tại **x** dựa trên tham số θ: L(θ|**x**) = f(**x**|θ)
+> Nói nhanh: Bài toán point estimation là bài toán mà ta có obsered data của random sample X1, X2,...XN iid, và Xi \~ f(x|θ). Mục tiêu là đi tìm một point estimator của θ, bản chất là một hàm θ(𝐗). Thì một cách làm thông thường của trường phái Classic là: Đi tìm θ để maximize hàm likelihood L(θ|𝐱), và kết quả ta sẽ có hàm W(𝐗), hay với MLE ta dùng θ̂\_ml(𝐗) = argmax\_Θ L(θ|𝐗). Và ý nghĩa của nó là, với data quan sát được của X bỏ vào, thì hàm này sẽ lấy ra cho ta giá trị của θ có độ hợp lí cao nhất. Và hàm likelihood thì được định nghĩa chính là có giá trị bằng joint pdf của 𝐗 tại 𝐱 dựa trên tham số θ: L(θ|𝐱) = f(𝐱|θ)
 >
 >
 >
-> Vậy thì ở đây, giả sử beta đã biết, ta dùng cách này để tìm **w**\_ml:
+> Vậy thì ở đây, giả sử beta đã biết, ta dùng cách này để tìm 𝐰\_ml:
 >
 >
 >
@@ -652,11 +652,11 @@
 >
 >
 >
-> Vậy thì vì sao mô hình này sẽ tệ. À bởi vì cái thứ ta muốn dự đoán ở đây, là target variable T mà cái này trong classification là class label hoặc one-hot vector, không phải một biến liên tục Gaussian quanh y(**w**,**x**). Với binary classification, ta có thể dùng Bernoulli; với multiclass, ta dùng categorical/multinomial với xác suất được chuẩn hóa như logistic/softmax.
+> Vậy thì vì sao mô hình này sẽ tệ. À bởi vì cái thứ ta muốn dự đoán ở đây, là target variable T mà cái này trong classification là class label hoặc one-hot vector, không phải một biến liên tục Gaussian quanh y(𝐰,𝐱). Với binary classification, ta có thể dùng Bernoulli; với multiclass, ta dùng categorical/multinomial với xác suất được chuẩn hóa như logistic/softmax.
 >
 >
 >
-> Trong khi đó với least square discriminant ta lại đang dùng giả định 𝒩(y(**w**,**x**), 1/β)). Thành ra việc ta lấy mô hình này để dự đoán cho t làm sao đúng được.
+> Trong khi đó với least square discriminant ta lại đang dùng giả định 𝒩(y(𝐰,𝐱), 1/β)). Thành ra việc ta lấy mô hình này để dự đoán cho t làm sao đúng được.
 >
 >
 >
@@ -666,6 +666,27 @@
 > **🤖 AI Feedback** — ✅ Score: **98/100**
 >
 > Ghi chú xuất sắc, thể hiện sự am hiểu sâu sắc và liên hệ chặt chẽ giữa các chương trong giáo trình cũng như kiến thức thống kê bổ trợ.
+
+<br>
+
+<a id="node-vhsr51g"></a>
+
+###### The Fisher Criterion
+
+<p align="center"><kbd><img src="assets/o0bk60o3rsh.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/xb5f10otis9.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Thế thì đại ý là, cách làm vừa rồi trong đó ta tìm 𝐰 để maximize khoảng cách giữa hình chiếu của hai tâm 𝐦1 và 𝐦2 của hai đám data thuộc hai class có chỗ không ổn. Hình 4.6 bên trái cho thấy dù hai đám data phân tách nhau tuyến tính rất tốt, nhưng sau khi chiếu lên 𝐰 tìm được theo cách này lại cho thấy rất nhiều chồng lấn, và nguyên nhân là do "strongly non-diagonal covariance" (chưa hiểu lắm)
+>
+>
+>
+> Một đề xuất bởi Fisher làm như sau:
+>
+>
+>
+> Đó là ta sẽ đặt ra một tiêu chí khác: vẫn maximize khoảng cách giữa hình chiếu của tâm như trên, nhưng đồng thời minimize variance giữa mỗi class, từ đó giúp giảm đi phần chồng lấn.
 
 <br>
 
