@@ -126,7 +126,7 @@
 >
 >
 >
-> Và **Ax_null = 0** -> **Ax = Ax_r = b** mang ý nghĩa là, A sẽ
+> Và **Ax_null = 0** → **Ax = Ax_r = b** mang ý nghĩa là, A sẽ
 > map **vector trong nullspace x_null thành zero**. Và **map
 > vector trong rowspace x_r** thành **vector trong columns 
 > space** **Ax_r**
@@ -370,7 +370,7 @@
 >
 >
 > Và V CHÍNH LÀ CHỨA **n ORTHONORMAL BASIS**
-> CỦA **R^n**: r col đầu là basis của **rows-space**, và n - r
+> CỦA **Rⁿ**: r col đầu là basis của **rows-space**, và n - r
 > column sau là basis của **nullspace**.
 
 <br>
@@ -509,7 +509,7 @@
 
 > [!NOTE]
 > Và **Σ là diagonal matrix** nên (Σᵀ)Σ **cũng là diagonal matrix**
-> chứa **bình phương của các stretching factor {σ1^2, σ2^2...}** 
+> chứa **bình phương của các stretching factor {σ1², σ2²...}** 
 >
 >
 >
@@ -546,7 +546,7 @@
 >
 > Có nghĩa là thông qua việc có thể thể hiện AᵀA dưới dạng như
 > vậy cho thấy (các cột của) **V CHÍNH LÀ EIGENVECTORS CỦA
-> AᵀA**, các stretching factors bình phương **σ1^2, σ2^2**..chính
+> AᵀA**, các stretching factors bình phương **σ1², σ2²**..chính
 > là **EIGENVALUES** của AᵀA
 >
 > **KHÔNG THỂ TÌM CẢ U VÀ V CÙNG LÚC**, TÌM V TRƯỚC:
@@ -735,7 +735,7 @@
 >
 > Và eigenvectors là [1 0] và [0 1] (cái này thì có vẻ như là
 > mẹo - đối với diagonal matrix nhưng cũng **có thể dễ
-> dàng tìm ra với việc tìm nullspace của A-lambda*I = 0**
+> dàng tìm ra với việc tìm nullspace của A-λI = 0**
 > thôi.)
 
 <br>
@@ -778,6 +778,8 @@
 <br>
 
 <a id="node-ojog5s8"></a>
+
+###### Singular Value Decomposition Example
 
 <p align="center"><kbd><img src="assets/icdi45celwm.png" width="80%"></kbd></p>
 
@@ -898,7 +900,7 @@
 > Tới đây **gs điền u1 = unit basis của column space** vào
 > đây (U). Vì ta nhớ rằng U là bộ orthonormal basis của
 > columns space. Hồi nãy khi **A full rank**, **column space
-> của nó span toàn bộ R^2**, thì khi đó **có vô số bộ
+> của nó span toàn bộ R²**, thì khi đó **có vô số bộ
 > basis** như vậy.
 >
 >
@@ -1010,7 +1012,7 @@
 > rank**, tức **tồn tại free columns**. Thì **nullspace của A có
 > chứa vector khác 0**. Khi đó đương nhiên **NÓ CŨNG LÀ
 > SOLUTION KHÁC 0 CỦA CỦA AᵀAx = 0**.  Từ đó dẫn đến
-> nullspace AᵀA không phải bằng zero  -> AᵀA không full-rank.
+> nullspace AᵀA không phải bằng zero  → AᵀA không full-rank.
 > Thành ra để AᵀA full rank thì bắt  buộc x = 0 là solution duy
 > nhất của Ax = 0, tức là A phải  full column rank)
 >
