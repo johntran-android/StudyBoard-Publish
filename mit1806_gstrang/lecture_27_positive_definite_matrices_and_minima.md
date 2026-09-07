@@ -182,7 +182,7 @@
 >
 > ====
 > Một cách khác cũng gần với cách 1, đó là ta thấy hàng
-> 2 = 3*hàng 1, tức là, nó depend hàng 1. Vậy kết luận
+> 2 = 3 × hàng 1, tức là, nó depend hàng 1. Vậy kết luận
 > ngay khi elimination, hàng 2 sẽ bị biến thành 0. ⇒ vị
 > trí thứ 2 của đường chéo = 0
 
@@ -388,7 +388,7 @@
 >
 >
 >
-> ii) **Second derivative test: f_xx dương và (fxx*fyy - fxy²) > 0**
+> ii) **Second derivative test: f_xx dương và (fxx × fyy - fxy²) > 0**
 >
 >
 >
@@ -512,7 +512,7 @@
 >
 > Và gs nói đại khái là **nếu như ta học 18.02** về bài
 > minimum sẽ thấy **điều kiện để có minimum là fxx > 0, và
-> fxx*fyy-fxy*fyx lớn hơn 0**.
+> fxx × fyy-fxy × fyx lớn hơn 0**.
 >
 >
 >
