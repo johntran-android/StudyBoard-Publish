@@ -260,11 +260,11 @@
 >
 >
 >
-> Từ đó **p = Ax̂ = A.(AᵀA)⁻¹.Aᵀb**
+> Từ đó **p = Ax̂ = A × (AᵀA)⁻¹.Aᵀb**
 >
 >
 >
-> Và từ đó P (projection matrix) là **A.(AᵀA)⁻¹.Aᵀ**
+> Và từ đó P (projection matrix) là **A × (AᵀA)⁻¹.Aᵀ**
 
 <br>
 
@@ -346,7 +346,7 @@
 >
 >
 >
-> ii) P.P = P: **(QQᵀ)(QQᵀ)** = Q(QᵀQ)Qᵀ = QIQᵀ = **QQᵀ** →
+> ii) P × P = P: **(QQᵀ)(QQᵀ)** = Q(QᵀQ)Qᵀ = QIQᵀ = **QQᵀ** →
 > đúng là như vậy
 
 <br>
@@ -500,7 +500,7 @@
 >
 >
 >
-> = Aᵀb  - Aᵀ.Aᵀb.A / AᵀA 
+> = Aᵀb  - Aᵀ.Aᵀb × A / AᵀA 
 >
 >
 >
@@ -509,8 +509,8 @@
 >
 >
 >
-> Nên Aᵀ.scalar.A có thể  trở thành scalar. Aᵀ.A để từ đó 
-> vế [b - (Aᵀb/AᵀA)A] trở thành Aᵀb.AᵀA/AᵀA = Aᵀb. 
+> Nên Aᵀ.scalar × A có thể  trở thành scalar. Aᵀ.A để từ đó 
+> vế [b - (Aᵀb/AᵀA)A] trở thành Aᵀb × AᵀA/AᵀA = Aᵀb. 
 >
 >
 >
@@ -580,13 +580,13 @@
 <p align="center"><kbd><img src="assets/34t1xec0djr.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs: Correct. Và **trừ tiếp cho Bᵀc.B/BᵀB** ta đã **bỏ đi
+> Gs: Correct. Và **trừ tiếp cho Bᵀc × B/BᵀB** ta đã **bỏ đi
 > projection của c nằm trên b**. Để phần dư còn lại chính là
 > **vuông góc với b**, và tất nhiên đã vuông góc với cả a
 >
 >
 >
-> Vậy sau khi trừ cho AᵀcA/AᵀA và Bᵀc.B/BᵀB thì phần còn lại
+> Vậy sau khi trừ cho AᵀcA/AᵀA và Bᵀc × B/BᵀB thì phần còn lại
 > **đã vuông góc với cả A và B**.
 >
 >
@@ -682,7 +682,7 @@
 >
 >
 >
-> Thế thì vì B = b - (aᵀb/aᵀa).a, tức là nó là linear combination
+> Thế thì vì B = b - (aᵀb/aᵀa) × a, tức là nó là linear combination
 > của a,b. Thành ra B cũng nằm trong column space của A.
 > Còn A thì là a rồi.
 >
