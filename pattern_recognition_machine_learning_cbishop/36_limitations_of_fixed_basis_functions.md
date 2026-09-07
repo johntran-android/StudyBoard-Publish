@@ -16,7 +16,7 @@
 <p align="center"><kbd><img src="assets/vvfi2yvn8l.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là gs nói rằng trong chapter này ta đã thảo luận xoay quanh mô hình có dạng linear combination của các hàm phi tuyến (là sao, thì chính là ý nói cái hàm dự đoán y(**w**, **x**) = **w**TΦ(**x**) = w0 + w1 Φ1(**x**) + ...wM-1 ΦM-1(**x**) đó, nó chính là một linear combination, chính xác hơn là affine combination các hàm phi tuyến Φ1, Φ2,.. của **x**).
+> Đại ý là gs nói rằng trong chapter này ta đã thảo luận xoay quanh mô hình có dạng linear combination của các hàm phi tuyến (là sao, thì chính là ý nói cái hàm dự đoán y(𝐰, 𝐱) = 𝐰ᵀΦ(𝐱) = w0 + w1 Φ1(𝐱) + ...wM-1 ΦM-1(𝐱) đó, nó chính là một linear combination, chính xác hơn là affine combination các hàm phi tuyến Φ1, Φ2,.. của 𝐱).
 >
 >
 >
@@ -24,7 +24,7 @@
 >
 >
 >
-> Và hơn nữa, với việc dùng các hàm phi tuyến (basis function) thì tuy mô hình là tuyến tính đối với tham số nhưng phi tuyến đối với **x**, do đó vẫn có thể có khả năng biểu diễn bất cứ non-linearity phức tạp nào (arbitrary nonlinearities trong data)
+> Và hơn nữa, với việc dùng các hàm phi tuyến (basis function) thì tuy mô hình là tuyến tính đối với tham số nhưng phi tuyến đối với 𝐱, do đó vẫn có thể có khả năng biểu diễn bất cứ non-linearity phức tạp nào (arbitrary nonlinearities trong data)
 >
 >
 >
