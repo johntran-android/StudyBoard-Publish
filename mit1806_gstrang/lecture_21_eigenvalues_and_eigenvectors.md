@@ -514,7 +514,7 @@
 > ngay vector nullspace thì chỉ việc làm theo phương pháp
 > chuẩn để tìm nullspace bắt đầu bằng việc elimination, để
 > tìm ra pivot + free cols, từ đó chọn 1 cho free var và tính
-> ra pivot var -> từ đó có special solution cũng là 1 vector
+> ra pivot var → từ đó có special solution cũng là 1 vector
 > trong basis của nullspace
 
 <br>
@@ -646,7 +646,7 @@
 >
 >
 > Tính **dot product của (Qx)ᵀx** = -x2x1 + x1x2 = 0
-> -> **Qx vuông góc với x**
+> → **Qx vuông góc với x**
 
 <br>
 
@@ -682,6 +682,8 @@
 <br>
 
 <a id="node-5h40uce"></a>
+
+###### Eigenvalues of Rotation Matrix
 
 <p align="center"><kbd><img src="assets/1qw1a2pnmiji.png" width="80%"></kbd></p>
 
@@ -792,7 +794,7 @@
 >
 >
 >
-> -> cols 1 là free col. col 2 là pivot. nên x1 là free var, x2 là
+> → cols 1 là free col. col 2 là pivot. nên x1 là free var, x2 là
 > pivot var. Chọn x1 = 1, thế vào: 0*0 + x2*1 = 0 ⇒ x2 = 0
 > và special solution là [1 0]ᵀ cũng là basis của nullspace
 
