@@ -414,13 +414,13 @@
 >
 >
 >
-> Me: Vì giả sử **xét u, v thuộc S**, thì **xét m = c1*u+c2*v.** Ta sẽ
+> Me: Vì giả sử **xét u, v thuộc S**, thì **xét m = c1 × u+c2 × v.** Ta sẽ
 > có tổng các component của m:
 >
 >
 >
-> c1*u1 + c1*u2 + c1*u3 + c1*u4 + c2*v1 + c2*v2 + v2*v3 +
-> v2*v4
+> c1 × u1 + c1 × u2 + c1 × u3 + c1 × u4 + c2 × v1 + c2 × v2 + v2 × v3 +
+> v2 × v4
 >
 >
 >
@@ -455,7 +455,7 @@
 > Me: là **nullspace của (1x4) matrix A = [1, 1, 1, 1]**, vì theo
 > định nghĩa nullspace của nó sẽ là mọi vector x sao cho Ax =
 > 0, và như vậy với x là <x1, x2, x3, x4> thì ta sẽ có nullspace
-> của A là mọi vector x sao cho x1*1 + x2*1 + x3*1 + x4*1 = 0
+> của A là mọi vector x sao cho x1 × 1 + x2 × 1 + x3 × 1 + x4 × 1 = 0
 
 <br>
 
