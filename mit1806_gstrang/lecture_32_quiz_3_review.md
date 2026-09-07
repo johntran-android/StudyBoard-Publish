@@ -101,8 +101,7 @@
 <p align="center"><kbd><img src="assets/cakflbsq8uj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs: correct, ta có thể tính det hoặc nhìn thấy rằng row_3 =
-> -1*row_1 để nhận định các rows và cả columns ko
+> gs: correct, ta có thể tính det hoặc nhìn thấy rằng row_3 =−1*row_1 để nhận định các rows và cả columns ko
 > independent → **Singular**
 >
 >
