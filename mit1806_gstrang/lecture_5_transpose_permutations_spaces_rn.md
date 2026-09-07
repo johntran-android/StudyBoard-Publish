@@ -9,6 +9,8 @@
 
 <a id="node-s6u6z7z"></a>
 
+## Phân rã ma trận PA=LU
+
 <p align="center"><kbd><img src="assets/f6h0ml6ka1t.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -27,6 +29,8 @@
 
 <a id="node-dtt4xxe"></a>
 
+### Ma trận hoán vị
+
 <p align="center"><kbd><img src="assets/fifmtsj7n9p.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -36,6 +40,8 @@
 <br>
 
 <a id="node-0ttzo0r"></a>
+
+#### Ma trận hoán vị
 
 <p align="center"><kbd><img src="assets/0vqvduxl8nl.png" width="80%"></kbd></p>
 
@@ -57,6 +63,8 @@
 
 <a id="node-60oozvz"></a>
 
+###### Phép chuyển vị ma trận
+
 <p align="center"><kbd><img src="assets/01fcmou5lqnk.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -65,6 +73,8 @@
 <br>
 
 <a id="node-2zajozy"></a>
+
+###### Ma trận đối xứng
 
 <p align="center"><kbd><img src="assets/eqofzlbej9t.png" width="80%"></kbd></p>
 
@@ -76,6 +86,8 @@
 
 <a id="node-bmtnqkp"></a>
 
+###### Tích ma trận đối xứng
+
 <p align="center"><kbd><img src="assets/0uqmmsb7nt9i.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -86,6 +98,8 @@
 <br>
 
 <a id="node-mp0yar1"></a>
+
+###### Chứng minh tính đối xứng
 
 <p align="center"><kbd><img src="assets/h2ksdf1coml.png" width="80%"></kbd></p>
 
@@ -111,6 +125,8 @@
 <br>
 
 <a id="node-ii0pkkm"></a>
+
+###### Khái niệm không gian vector
 
 <p align="center"><kbd><img src="assets/xfkdz69tbl.png" width="80%"></kbd></p>
 
@@ -138,6 +154,8 @@
 
 <a id="node-w1e9hss"></a>
 
+###### Vai trò của vector không
+
 <p align="center"><kbd><img src="assets/2sp8ttobenc.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -156,16 +174,20 @@
 
 <a id="node-bqfp74j"></a>
 
+###### Không gian vector Rⁿ
+
 <p align="center"><kbd><img src="assets/u56vh8aygaj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Như vậy vector space **R^n** là **mọi vector có n** **component giá trị
+> Như vậy vector space **Rⁿ** là **mọi vector có n** **component giá trị
 > thực**. Thỏa quy định **cộng 2 vector hay nhân vector với scalar sẽ dc
 > một vector vẫn nằm trong space**
 
 <br>
 
 <a id="node-sgvnd7f"></a>
+
+###### Tập vectơ không âm
 
 <p align="center"><kbd><img src="assets/v0k0ui71qf.png" width="80%"></kbd></p>
 
@@ -179,6 +201,8 @@
 
 <a id="node-mxw4gq2"></a>
 
+###### Không gian con của R2
+
 <p align="center"><kbd><img src="assets/1756mpnbpt3.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -188,6 +212,8 @@
 <br>
 
 <a id="node-oj89pez"></a>
+
+###### Không gian con trong R2
 
 <p align="center"><kbd><img src="assets/vxcxl19irb.png" width="80%"></kbd></p>
 
@@ -200,6 +226,8 @@
 <br>
 
 <a id="node-47m7mjs"></a>
+
+###### Gốc tọa độ trong subspace
 
 <p align="center"><kbd><img src="assets/mv7ruzim56.png" width="80%"></kbd></p>
 
@@ -219,6 +247,8 @@
 <br>
 
 <a id="node-9ztjlat"></a>
+
+###### Không gian con của R2
 
 <p align="center"><kbd><img src="assets/9blxoqahwsn.png" width="80%"></kbd></p>
 
@@ -254,6 +284,8 @@
 <br>
 
 <a id="node-sobom5t"></a>
+
+###### Không gian cột ma trận
 
 <p align="center"><kbd><img src="assets/cccshd2w96m.png" width="80%"></kbd></p>
 
@@ -308,6 +340,8 @@
 
 <a id="node-zsw4lti"></a>
 
+###### Không gian cột C(A)
+
 <p align="center"><kbd><img src="assets/n0ghyy7fl1j.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -317,6 +351,8 @@
 <br>
 
 <a id="node-luak2g3"></a>
+
+###### Mặt phẳng không gian cột
 
 <p align="center"><kbd><img src="assets/3h8uh0rd2u5.png" width="80%"></kbd></p>
 
@@ -330,6 +366,8 @@
 <br>
 
 <a id="node-l1yr59y"></a>
+
+###### Hình học không gian con
 
 <p align="center"><kbd><img src="assets/yrxt8b0ypkp.png" width="80%"></kbd></p>
 
@@ -359,6 +397,8 @@
 <br>
 
 <a id="node-lmrio0y"></a>
+
+###### Không gian vectơ và Ax=b
 
 <p align="center"><kbd><img src="assets/8aut9umclcn.png" width="80%"></kbd></p>
 
