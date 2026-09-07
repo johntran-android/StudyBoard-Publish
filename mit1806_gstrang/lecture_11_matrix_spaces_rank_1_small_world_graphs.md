@@ -389,7 +389,7 @@
 >
 >
 > Thì có vẻ như là, có thể đoán là có thể ta sẽ 5 cols của U+V
-> là independence -> U+V có rank = 5
+> là independence → U+V có rank = 5
 
 <br>
 
