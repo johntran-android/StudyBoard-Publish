@@ -181,7 +181,7 @@
 >
 >
 >
-> **c1*λ1^k*x1 + c2*λ2^k*x2......+cn*λn^k*xn**
+> **c1*λ1^k × x1 + c2*λ2^k × x2......+cn*λn^k × xn**
 
 **🔗 See also:** [linked note](./lecture_22_diagonalization_and_powers_of_a.md#node-fmdbu9q)
 
@@ -227,7 +227,7 @@
 >
 >
 >
-> Thế thì u(k) = **c1*λ1^k*x1** + c2*λ2^k*x2......+cn*λn^k*xn
+> Thế thì u(k) = **c1*λ1^k × x1** + c2*λ2^k × x2......+cn*λn^k × xn
 >
 >
 >
@@ -275,12 +275,12 @@
 
 > [!NOTE]
 > Thế thì lập luận như sau: Để **chứng minh eigenvalue của A
-> là 1**, thì theo định nghĩa eigenvalue, ta sẽ có **det(A-1*I) =
+> là 1**, thì theo định nghĩa eigenvalue, ta sẽ có **det(A-1 × I) =
 > 0**
 >
 >
 >
-> Do đó ta cần **chứng minh matrix (A - 1*I) này SINGULAR.**
+> Do đó ta cần **chứng minh matrix (A - 1 × I) này SINGULAR.**
 >
 >
 >
@@ -293,7 +293,7 @@
 >
 >
 >
-> Vậy gs hỏi tại sao (A - 1*I) lại SINGULAR?
+> Vậy gs hỏi tại sao (A - 1 × I) lại SINGULAR?
 
 <br>
 
@@ -483,8 +483,8 @@
 >
 >
 > Chú thích (*): Chỗ này có vẻ hơi dư, bởi lẽ bằng việc
-> chứng minh **matrix A - 1*I singular** đã suy ra **det (A-1*I)**
-> = 0 ⇒ tồn tại x khiến (A -1*I)x = 0 hay Ax = x, đồng
+> chứng minh **matrix A - 1 × I singular** đã suy ra **det (A-1 × I)**
+> = 0 ⇒ tồn tại x khiến (A -1 × I)x = 0 hay Ax = x, đồng
 > nghĩa là x chính là eigenvector của A với eigenvalue = 1
 > rồi. Đâu có cần phải dựa vào việc biết eigenvalue của Aᵀ
 > rồi suy ra nó cũng là eigenvalue của A
@@ -523,12 +523,12 @@
 >
 > Ví dụ cột thứ nhất của matrix A = [0.9 0.1] sẽ thể hiện
 > rằng **u_cal (k+1) sẽ bằng 0.9 u_cal (k)** có nghĩa là cứ mỗi
-> năm chỉ còn **0.9*u_cal** và **0.1*u_cal** sẽ add thêm vào 
+> năm chỉ còn **0.9 × u_cal** và **0.1 × u_cal** sẽ add thêm vào 
 > u_mass.
 >
 >
 >
-> Tương tự, mỗi năm, sẽ có **0.2*u_mass** được **add vào u_cal**
+> Tương tự, mỗi năm, sẽ có **0.2 × u_mass** được **add vào u_cal**
 > và **0.8 u_mass ở lại u_mass.**
 
 <br>
@@ -595,7 +595,7 @@
 >
 >
 >
-> (nhắc lại vì u_k = Au_0 sẽ trở thành c1*λ1^k*x1 + c2*λ2^k*x2 + ..., 
+> (nhắc lại vì u_k = Au_0 sẽ trở thành c1*λ1^k × x1 + c2*λ2^k × x2 + ..., 
 > và khi k→ infi thì với λ1 = 1, λ khác < 1 thì giá trị của chuỗi 
 > sẽ **converge về c1x1**)
 >
@@ -607,7 +607,7 @@
 >
 >
 >
-> Còn về việc tại sao u_k lại bằng c1*λ1^kx1 + c2*λ2^k*x2... thì
+> Còn về việc tại sao u_k lại bằng c1*λ1^kx1 + c2*λ2^k × x2... thì
 > ôn nhanh thế này: 
 >
 >
@@ -818,8 +818,8 @@
 >
 >
 >
-> bắt đầu bằng một **initial term a_0**, sau đó là **a1*cos(x)**
-> **+ b1*sin(x)**  **+ a2*cos(2x) + a2*sin(2x)....**
+> bắt đầu bằng một **initial term a_0**, sau đó là **a1 × cos(x)**
+> **+ b1 × sin(x)**  **+ a2 × cos(2x) + a2 × sin(2x)....**
 >
 >
 >
@@ -895,7 +895,7 @@
 > Và dẫn đến ta **phải xác định giới hạn cuả tích phân**. Ở
 > đây ta đang xét / dùng các function **sin(x) cos(x)** có tính
 > cách là lặp lại sau mỗi c**hu kì 2pi (periodic)**. Nên ta dùng
-> **giới hạn là 0 - 2*pi** (tạm hiểu, chấp nhận logic chỗ này)
+> **giới hạn là 0 - 2 × pi** (tạm hiểu, chấp nhận logic chỗ này)
 >
 >
 >
@@ -904,7 +904,7 @@
 >
 >
 >
-> f(x)ᵀg(x) là **tích phân từ 0 đến 2*pi f(x)g(x)dx**
+> f(x)ᵀg(x) là **tích phân từ 0 đến 2 × pi f(x)g(x)dx**
 
 <br>
 
@@ -914,7 +914,7 @@
 
 > [!NOTE]
 > và ta có thể **thử tính dot product của sin(x) và cos(x)** =
-> **tích phân từ 0→2*pi sin(x)*cos(x)dx** sẽ được **0,** từ đó
+> **tích phân từ 0→2 × pi sin(x)*cos(x)dx** sẽ được **0,** từ đó
 > cho thấy thỏa yêu cầu các basis "vector" orthogonal nhau.
 >
 >
