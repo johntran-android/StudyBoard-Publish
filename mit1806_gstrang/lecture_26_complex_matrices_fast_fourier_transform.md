@@ -19,26 +19,28 @@
 
 <a id="node-y9jhqqw"></a>
 
+### Vector Length in Complex Space
+
 <p align="center"><kbd><img src="assets/u9phn9y5qe.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, đầu tiên, là nếu ta deal với vector trong **C^n** (tức là
+> Rồi, đầu tiên, là nếu ta deal với vector trong **Cⁿ** (tức là
 > không gian vector có **n dimension** nhưng các **giá trị là
 > complex**, thay vì chỉ là số thực R)
 >
 >
 >
 > Đại khái là ta sẽ cần **điều chỉnh chút xíu** khi nói về
-> **length** **của vector**. Như có thể thấy, **nếu là R^n**,
+> **length** **của vector**. Như có thể thấy, **nếu là Rⁿ**,
 > length của vector là **dot product của vector với chính nó
 > uᵀu**.
 >
 >
 >
-> Tuy nhiên v**ới C^n vector**, điều này không đúng. Đơn
-> cử một ví dụ trong C^2, vector u = [1, i] tức là hai phần tử
+> Tuy nhiên v**ới Cⁿ vector**, điều này không đúng. Đơn
+> cử một ví dụ trong C², vector u = [1, i] tức là hai phần tử
 > của nó là 1 + 0*i và 0 + 1*i. Khi đó uᵀu sẽ là 1*1 + i*i = 1 +
-> -1 (vì i^2 = -1) Khi đó uᵀu = 0, dù rằng rõ ràng chiều dài
+> -1 (vì i² = -1) Khi đó uᵀu = 0, dù rằng rõ ràng chiều dài
 > vector hoàn toàn không phải là bằng 0.
 >
 >
@@ -167,15 +169,15 @@
 >
 >
 >
-> Cột 2: j=1, i=0,1,2... ⇒ cột 2 sẽ là w^0=1, w^1=w, w^2, w^3...
+> Cột 2: j=1, i=0,1,2... ⇒ cột 2 sẽ là w^0=1, w^1=w, w², w³...
 >
 >
 >
-> Cột 3: j=2, i=0,1,2... ⇒ cột 3 sẽ là w^0=1, w^2, w^4...
+> Cột 3: j=2, i=0,1,2... ⇒ cột 3 sẽ là w^0=1, w², w⁴...
 >
 >
 >
-> Cột 4: j=3, i=0,1,2... ⇒ cột 4 sẽ là 1, w^3, w^6
+> Cột 4: j=3, i=0,1,2... ⇒ cột 4 sẽ là 1, w³, w^6
 
 <br>
 
@@ -184,7 +186,7 @@
 <p align="center"><kbd><img src="assets/sh4gve5g51r.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và trong đó w là một con số đặc biệt: **w^n = 1**, và
+> Và trong đó w là một con số đặc biệt: **wⁿ = 1**, và
 > vì vậy w sẽ là **e^i*2π/n**. Note sau sẽ giải thích vì sao.
 
 <br>
@@ -200,7 +202,7 @@
 >
 >
 >
-> Vậy thì **w là số mà w^n = 1**,
+> Vậy thì **w là số mà wⁿ = 1**,
 >
 >
 >
@@ -241,7 +243,7 @@
 <p align="center"><kbd><img src="assets/uf664rshkd.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ, n = 4, thì w là số complex sao cho w^4 = 1, từ đó
+> Ví dụ, n = 4, thì w là số complex sao cho w⁴ = 1, từ đó
 > ta sẽ tìm cụ thể w là số mấy khi n = 4 như sau.
 >
 >
@@ -270,12 +272,12 @@
 >
 >
 >
-> để rồi ta thử check lại xem có phải w^4 = 1 không.**
+> để rồi ta thử check lại xem có phải w⁴ = 1 không.**
 >
 >
 >
-> thì rõ ràng i^2 = -1, i^3 = i*i^2 = i(-1) = -i, i^4 = i*i^3 = i*(-i) 
-> = -i^2 = -(-1) = **1
+> thì rõ ràng i² = -1, i³ = i*i² = i(-1) = -i, i⁴ = i*i³ = i*(-i) 
+> = -i² = -(-1) = **1
 >
 >
 >
@@ -284,6 +286,8 @@
 <br>
 
 <a id="node-1beluvt"></a>
+
+###### Fourier Matrix F4 Orthogonality
 
 <p align="center"><kbd><img src="assets/zddw6qvrutj.png" width="80%"></kbd></p>
 
@@ -296,8 +300,8 @@
 >
 >
 >
-> Còn cột 1 sẽ là: i^0 = **1**, i^1 = **i**, i^2 = **-1**, i^3 = i*i^2 = **-i, 
-> i^4 = i^2*i^2 = (-1)(-1) = 1...**
+> Còn cột 1 sẽ là: i^0 = **1**, i^1 = **i**, i² = **-1**, i³ = i*i² = **-i, 
+> i⁴ = i²*i² = (-1)(-1) = 1...**
 >
 >
 >
@@ -305,7 +309,7 @@
 >
 >
 >
-> Cột 2 sẽ là: i^0=**1**, i^2= **-1**, i^4= **1, i^6 = -1,...**
+> Cột 2 sẽ là: i^0=**1**, i²= **-1**, i⁴= **1, i^6 = -1,...**
 >
 >
 >
@@ -384,19 +388,19 @@
 >
 >
 > Ý tưởng chính đó là, giả sử khi ta phải **nhân với một
-> matrix F64**, thì ta **cần 64^2 phép tính multiplication**.
+> matrix F64**, thì ta **cần 64² phép tính multiplication**.
 >
 >
 >
 > (Ví dụ nhân matrix A với vector x, dễ thấy mỗi phần tử của
 > vector kết quả sẽ là dot product của c với một hàng của
 > matrix A, bao gồm 64 phép nhân, và có 64 hàng nên tổng
-> cộng là 64^2 phép nhân
+> cộng là 64² phép nhân
 >
 >
 >
 > Thì, **bằng cách phân tách** này, ta sẽ **chỉ tốn ít hơn**
-> thay vì 64^2 phép tính mà thôi, vì matrix ở giữa tạm hiểu
+> thay vì 64² phép tính mà thôi, vì matrix ở giữa tạm hiểu
 > là có 1 nửa là zero rồi.
 >
 >
@@ -545,12 +549,14 @@
 
 <a id="node-warcuq1"></a>
 
+###### FFT Matrix Factorization
+
 <p align="center"><kbd><img src="assets/vvq759wsnl.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > và ta sẽ thấy việc **nhân với P hay các I matrix không "
 > tốn"**, thành ra tốn kém các phép tính toán sẽ c**hỉ rơi
-> vào khi ta tính với F32**, (2 cái, mỗi cái tốn 32^2 phép
+> vào khi ta tính với F32**, (2 cái, mỗi cái tốn 32² phép
 > tính).
 >
 >
@@ -568,13 +574,13 @@
 > một vị trí khác 0, nên nếu tính phép nhân thì chỉ tốn có 1
 > phép nhân cho mỗi hàng, thành ra tổng cộng có 64  phép
 > nhân. Nói chung chỗ này có thể không quan trọng lắm, vì
-> dù là 64 hay vài ngàn thì nó cũng rất nhỏ so với 64^2.
+> dù là 64 hay vài ngàn thì nó cũng rất nhỏ so với 64².
 >
 >
 >
-> Cái chính là so với 64^2, việc chuyển thành 3 matrix
-> khiến số phép tính chỉ ~ 2*(32^2) = **2048** nhỏ hơn một
-> nửa so với 64^2 = **4096**
+> Cái chính là so với 64², việc chuyển thành 3 matrix
+> khiến số phép tính chỉ ~ 2*(32²) = **2048** nhỏ hơn một
+> nửa so với 64² = **4096**
 
 <br>
 
@@ -590,7 +596,7 @@
 
 > [!NOTE]
 > Đó **chính là Fast Fourier transform**. ý tưởng chính là
-> **thay vì tốn 64^2 phép tính** thì ta sẽ **giảm đi rất nhiều**
+> **thay vì tốn 64² phép tính** thì ta sẽ **giảm đi rất nhiều**
 
 <br>
 
@@ -604,7 +610,7 @@
 
 > [!NOTE]
 > và điều này giúp ta tiếp tục thay vì tốn
-> 32^2 thì sẽ là 2*16^2 + 16
+> 32² thì sẽ là 2*16² + 16
 >
 > Tiếp tục áp dụng cách làm tương tự để factor
 > F32 ra nữa
@@ -616,7 +622,7 @@
 <p align="center"><kbd><img src="assets/fknwnctbt9h.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Từ đó **thay vì n^2** ta sẽ chỉ tốn
+> Từ đó **thay vì n²** ta sẽ chỉ tốn
 > **(1/2)nlog(n)** phép tính
 
 <br>
