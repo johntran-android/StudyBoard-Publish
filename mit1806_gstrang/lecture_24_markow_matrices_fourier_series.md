@@ -513,7 +513,7 @@
 <p align="center"><kbd><img src="assets/23fv22tpo2t.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đại khái là, gs lấy một ví dụ về **bài toán u_k+1 = A.u_k**
+> đại khái là, gs lấy một ví dụ về **bài toán u_k+1 = A × u_k**
 > giống như bữa trước. Và dùng một ví dụ để mô phỏng
 > một bài toán thực tế đó là, ..kiểu như mà matrix A sẽ mang
 > thông tin thể hiện fraction / **tỉ lệ dân cư di cư từ bang
@@ -632,7 +632,7 @@
 >
 >
 > tương tự vậy ta sẽ có u_k = SΛ^Kc và triển khai ra lại thì chính
-> là c1.λ1^k.x1 + c2.λ2^k.x2 + ....
+> là c1.λ1^k × x1 + c2.λ2^k × x2 + ....
 
 <br>
 
