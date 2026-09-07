@@ -15,6 +15,8 @@
 
 <a id="node-ge3wmw6"></a>
 
+### Projection Matrix onto a Line
+
 <p align="center"><kbd><img src="assets/va1w5mrhx3.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -35,11 +37,11 @@
 > Thế thì, **vì p nằm trên a nên có thể "tính p bởi a"**, có nghĩa là
 > có thể **biểu diễn p là một linear combination của a**, mà trong
 > trường hợp này đương nhiên linear combination chỉ gồm
-> một vector. Và ta gọi **x là (scalar) coefficient: p = x.a**
+> một vector. Và ta gọi **x là (scalar) coefficient: p = x × a**
 >
 >
 >
-> Và thế là ta có thể biểu diễn **e = b - p = b - x.a** Từ đó ta dùng
+> Và thế là ta có thể biểu diễn **e = b - p = b - x × a** Từ đó ta dùng
 > sự thật thứ hai, liên quan đến e, đó là **e perpendicular với a**
 > để có **aᵀe = 0**, từ đó ta có **aᵀ(b - xa) = 0**
 >
@@ -49,7 +51,7 @@
 >
 >
 >
-> ⇔ aᵀxa = aᵀb ⇔ aᵀa.x = aᵀb ⇔ **x = aᵀb/aᵀa**
+> ⇔ aᵀxa = aᵀb ⇔ aᵀa × x = aᵀb ⇔ **x = aᵀb/aᵀa**
 >
 >
 >
@@ -290,6 +292,8 @@
 
 <a id="node-3ifjnod"></a>
 
+###### Matrix Powers and Eigenvectors
+
 <p align="center"><kbd><img src="assets/114pcnqp80m.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -299,7 +303,7 @@
 >
 >
 >
-> Từ đó ta sẽ có **u_k = A^k.u_0 = S.Λ^k.c**
+> Từ đó ta sẽ có **u_k = A^k × u_0 = S.Λ^k × c**
 
 <br>
 
@@ -396,7 +400,7 @@
 > là nhiệm vụ bất khả thi, vì b NẰM NGOÀI COLUMN SPACE của A. Thế thì, ta
 > sẽ TÌM MỘT ĐIỂM NẰM TRONG COLUMN SPACE SAO CHO GẦN NHẤT
 > VỚI b, và đây chính là projection của b lên C(A). Và khi đó, p, vì nằm trên C(A)
-> nên p = A.D^. Và y = D^t sẽ là best line giúp fit các điểm.
+> nên p = A × D^. Và y = D^t sẽ là best line giúp fit các điểm.
 >
 >
 >
