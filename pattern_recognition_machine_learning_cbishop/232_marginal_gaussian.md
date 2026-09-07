@@ -18,11 +18,11 @@
 <p align="center"><kbd><img src="assets/vzil7lp5nbq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, phần trước mình đã thấy nếu f(**X**) với \[**Xa**; **Xb**\] là Normal thì f(**Xa**|**Xb**) cũng là Normal. Nay xét marginal distribution của **Xa** (cũng như **Xb**) thì mr Bishop cho rằng ta cũng sẽ thấy nó là Normal. Và ta cũng sẽ làm theo cách làm như trước, chỉ quan tâm kernel (phần exp(...)) để chỉ ra rằng nó cũng là quadratic function của **Xa** (hoặc **Xb**), đồng nghĩa là nó có dạng của kernel của một phân phối Gaussian, và dùng cách là khớp mẫu, ta sẽ suy ra được mean và covariance matrix.
+> Tiếp, phần trước mình đã thấy nếu f(𝐗) với \[**Xa**; **Xb**\] là Normal thì f(**Xa**|**Xb**) cũng là Normal. Nay xét marginal distribution của **Xa** (cũng như **Xb**) thì mr Bishop cho rằng ta cũng sẽ thấy nó là Normal. Và ta cũng sẽ làm theo cách làm như trước, chỉ quan tâm kernel (phần exp(...)) để chỉ ra rằng nó cũng là quadratic function của **Xa** (hoặc **Xb**), đồng nghĩa là nó có dạng của kernel của một phân phối Gaussian, và dùng cách là khớp mẫu, ta sẽ suy ra được mean và covariance matrix.
 >
 >
 >
-> Thế thì như đã biết trong Stat110, Casella, khi ta có joint pdf của **Xa**, **Xb** (tức pdf của **X**), thì bằng cách marginalize over mọi possible value của **Xb**, thì ta sẽ có marginal pdf của **Xa**:
+> Thế thì như đã biết trong Stat110, Casella, khi ta có joint pdf của **Xa**, **Xb** (tức pdf của 𝐗), thì bằng cách marginalize over mọi possible value của **Xb**, thì ta sẽ có marginal pdf của **Xa**:
 >
 >
 >
@@ -30,11 +30,11 @@
 >
 >
 >
-> Với f(**xa**, **xb**), là công thức dài dòng bữa trước đã biết, ta tạm không quan tâm chi tiết, chỉ cần thấy nó có dạng \[normalizing constant\] exp\[-(1/2)...\] và phần trong exp\[-(1/2)...\] là quadratic form (**x**-**μ**)T**Λ**(**x**-**μ**) và thể hiện nó dưới dạng:
+> Với f(**xa**, **xb**), là công thức dài dòng bữa trước đã biết, ta tạm không quan tâm chi tiết, chỉ cần thấy nó có dạng \[normalizing constant\] exp\[-(1/2)...\] và phần trong exp\[-(1/2)...\] là quadratic form (𝐱-**μ**)ᵀ**Λ**(𝐱-**μ**) và thể hiện nó dưới dạng:
 >
 >
 >
-> (**xa**-**μa**)T**Λaa**(**xa**-**μa**) + (**xa**-**μa**)T**Λab**(**xb**-**μb**) + (**xb**-**μb**)T**Λba**(**xa**-**μa**) + (**xb**-**μb**)T**Λbb**(**xb**-**μb**)
+> (**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**) + (**xa**-**μa**)ᵀ**Λab**(**xb**-**μb**) + (**xb**-**μb**)ᵀ**Λba**(**xa**-**μa**) + (**xb**-**μb**)ᵀ**Λbb**(**xb**-**μb**)
 >
 >
 >
@@ -66,23 +66,23 @@
 >
 >
 >
-> (**xa**-**μa**)T**Λaa**(**xa**-**μa**) + (**xa**-**μa**)T**Λab**(**xb**-**μb**) + (**xb**-**μb**)T**Λba**(**xa**-**μa**) + (**xb**-**μb**)T**Λbb**(**xb**-**μb**)
+> (**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**) + (**xa**-**μa**)ᵀ**Λab**(**xb**-**μb**) + (**xb**-**μb**)ᵀ**Λba**(**xa**-**μa**) + (**xb**-**μb**)ᵀ**Λbb**(**xb**-**μb**)
 >
 >
 >
-> Đầu tiên gom hai thằng giữa lại, vì chúng giống nhau: đều là scalar, và có cùng giá trị: thằng thứ 2 = (**xa**-**μa**)T**Λab**(**xb**-**μb**) = \[(**xa**-**μa**)T**Λab**(**xb**-**μb**)\]T = (**xb**-**μb**)T(**Λab**)T(**xa**-**μa**) = (**xb**-**μb**)T**Λba**(**xa**-**μa**) = thằng thứ 3
+> Đầu tiên gom hai thằng giữa lại, vì chúng giống nhau: đều là scalar, và có cùng giá trị: thằng thứ 2 = (**xa**-**μa**)ᵀ**Λab**(**xb**-**μb**) = \[(**xa**-**μa**)ᵀ**Λab**(**xb**-**μb**)\]ᵀ = (**xb**-**μb**)ᵀ(**Λab**)ᵀ(**xa**-**μa**) = (**xb**-**μb**)ᵀ**Λba**(**xa**-**μa**) = thằng thứ 3
 >
 >
 >
-> = (**xa**-**μa**)T**Λaa**(**xa**-**μa**) + 2(**xa**-**μa**)T**Λab**(**xb**-**μb**) + (**xb**-**μb**)T**Λbb**(**xb**-**μb**)
+> = (**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**) + 2(**xa**-**μa**)ᵀ**Λab**(**xb**-**μb**) + (**xb**-**μb**)ᵀ**Λbb**(**xb**-**μb**)
 >
 >
 >
-> = (**xa**-**μa**)T**Λaa**(**xa**-**μa**) + 2(**xa**-**μa**)T**Λabxb** - 2(**xa**-**μa**)T**Λabμb** + (**xb**-**μb**)T**Λbb**(**xb**-**μb**)
+> = (**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**) + 2(**xa**-**μa**)ᵀ**Λabxb** - 2(**xa**-**μa**)ᵀ**Λabμb** + (**xb**-**μb**)ᵀ**Λbb**(**xb**-**μb**)
 >
 >
 >
-> = (**xb**-**μb**)T**Λbb**(**xb**-**μb**) + 2(**xa**-**μa**)T**Λabxb** - 2(**xa**-**μa**)T**Λabμb** + (**xa**-**μa**)T**Λaa**(**xa**-**μa**)
+> = (**xb**-**μb**)ᵀ**Λbb**(**xb**-**μb**) + 2(**xa**-**μa**)ᵀ**Λabxb** - 2(**xa**-**μa**)ᵀ**Λabμb** + (**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**)
 >
 >
 >
@@ -90,7 +90,7 @@
 >
 >
 >
-> f(**xa**) = f(**xa**,**xb**) d**x** = ∫ \[constant 1\] exp{-(1/2) g(**xb**)} exp{-(1/2) h(**xa**)} d**xb**
+> f(**xa**) = f(**xa**,**xb**) d𝐱 = ∫ \[constant 1\] exp{-(1/2) g(**xb**)} exp{-(1/2) h(**xa**)} d**xb**
 >
 >
 >
@@ -98,15 +98,15 @@
 >
 >
 >
-> g(**xb**) = (**xb**-**μb**)T**Λbb**(**xb**-**μb**) + 2(**xa**-**μa**)T**Λabxb**
+> g(**xb**) = (**xb**-**μb**)ᵀ**Λbb**(**xb**-**μb**) + 2(**xa**-**μa**)ᵀ**Λabxb**
 >
 >
 >
-> h(**xa**) = -2(**xa**-**μa**)T**Λabμb** + (**xa**-**μa**)T**Λaa**(**xa**-**μa**)
+> h(**xa**) = -2(**xa**-**μa**)ᵀ**Λabμb** + (**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**)
 >
 >
 >
-> Constant 1 là normalizing constant của pdf của **X**, = \[1/(2π)^(D/2)\] \[1/|**Σ**|^(1/2)\])
+> Constant 1 là normalizing constant của pdf của 𝐗, = \[1/(2π)^(D/2)\] \[1/|**Σ**|^(1/2)\])
 >
 >
 >
@@ -118,43 +118,43 @@
 >
 >
 >
-> Xét exp{-(1/2) g(**xb**)}, = exp{-(1/2) \[(**xb**-**μb**)T**Λbb**(**xb**-**μb**) + 2(**xa**-**μa**)T**Λabxb**\]}
+> Xét exp{-(1/2) g(**xb**)}, = exp{-(1/2) \[(**xb**-**μb**)ᵀ**Λbb**(**xb**-**μb**) + 2(**xa**-**μa**)ᵀ**Λabxb**\]}
 >
 >
 >
-> = exp{-(1/2)(**xb**-**μb**)T**Λbb**(**xb**-**μb**) - (**xa**-**μa**)T**Λabxb**}
+> = exp{-(1/2)(**xb**-**μb**)ᵀ**Λbb**(**xb**-**μb**) - (**xa**-**μa**)ᵀ**Λabxb**}
 >
 >
 >
-> = exp{-(1/2)(**xb**T**Λbbxb** - **μb**T**Λbbxb** - **xb**T**Λbbμb** + **μb**T**Λbbμb**) - **xa**T**Λabxb** + **μa**T**Λabxb**}
+> = exp{-(1/2)(**xb𝐓Λbbxb** - **μb**ᵀ**Λbbxb** - **xb**ᵀ**Λbbμb** + **μb**ᵀ**Λbbμb**) - **xa**ᵀ**Λabxb** + **μa**ᵀ**Λabxb**}
 >
 >
 >
-> = exp{-(1/2)(**xb**T**Λbbxb** - 2**μb**T**Λbbxb** + **μb**T**Λbbμb**) - **xa**T**Λabxb** + **μa**T**Λabxb**}
+> = exp{-(1/2)(**xb**ᵀ**Λbbxb** - 2**μb**ᵀ**Λbbxb** + **μb**ᵀ**Λbbμb**) - **xa**ᵀ**Λabxb** + **μa**ᵀ**Λabxb**}
 >
 >
 >
-> = exp{-(1/2)**xb**T**Λbbxb** + **μb**T**Λbbxb** -(1/2)**μb**T**Λbbμb** - **xa**T**Λabxb** + **μa**T**Λabxb**}
+> = exp{-(1/2)**xb**ᵀ**Λbbxb** + **μb**ᵀ**Λbbxb** -(1/2)**μb**ᵀ**Λbbμb** - **xa**ᵀ**Λabxb** + **μa**ᵀ**Λabxb**}
 >
 >
 >
-> = exp{-(1/2)**xb**T**Λbbxb** + \[**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**\]**xb** -(1/2)**μb**T**Λbbμb**}
+> = exp{-(1/2)**xb**ᵀ**Λbbxb** + \[**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**\]**xb** -(1/2)**μb**ᵀ**Λbbμb**}
 >
 >
 >
-> = exp{-(1/2)**xb**T**Λbbxb** + \[**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**\]**xb**} exp\[-(1/2)**μb**T**Λbbμb**}
+> = exp{-(1/2)**xb**ᵀ**Λbbxb** + \[**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**\]**xb**} exp\[-(1/2)**μb**ᵀ**Λbbμb**}
 >
 >
 >
-> Tới đây thừa số đầu dính tới **xb**, cái sau thì không, ta đưa exp\[-(1/2)**μb**T**Λbbμb**} ra ngoài tích phân:
+> Tới đây thừa số đầu dính tới **xb**, cái sau thì không, ta đưa exp\[-(1/2)**μb**ᵀ**Λbbμb**} ra ngoài tích phân:
 >
 >
 >
-> Ở ngoài tích phân lúc này là \[constant 1\] exp{-(1/2) h(**xa**)} exp\[-(1/2)**μb**T**Λbbμb**}
+> Ở ngoài tích phân lúc này là \[constant 1\] exp{-(1/2) h(**xa**)} exp\[-(1/2)**μb**ᵀ**Λbbμb**}
 >
 >
 >
-> còn tích phân, trở thành ∫ exp{-(1/2)**xb**T**Λbbxb** + (**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**xb**} d**xb** 
+> còn tích phân, trở thành ∫ exp{-(1/2)**xb**ᵀ**Λbbxb** + (**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**xb**} d**xb** 
 >
 >
 >
@@ -162,23 +162,23 @@
 >
 >
 >
-> **Xét riêng cái tích phân**, tí nữa nhớ rằng ở ngoài còn \[constant 1\] exp{-(1/2) h(**xa**)} exp\[-(1/2)**μb**T**Λbbμb**}
+> **Xét riêng cái tích phân**, tí nữa nhớ rằng ở ngoài còn \[constant 1\] exp{-(1/2) h(**xa**)} exp\[-(1/2)**μb**ᵀ**Λbbμb**}
 >
 >
 >
-> Đến đây, làm lại cái vụ ta phân tích cái kernel của multi Normal (**μ**, **Σ**): exp\[-(1/2)(**x**-**μ**)T Σinv (**x**-**μ**)\] và triển khai cái cụm -(1/2)(**x**-**μ**)T Σinv (**x**-**μ**) này ra:
+> Đến đây, làm lại cái vụ ta phân tích cái kernel của multi Normal (**μ**, **Σ**): exp\[-(1/2)(𝐱-**μ**)ᵀ Σ⁻¹ (𝐱-**μ**)\] và triển khai cái cụm -(1/2)(𝐱-**μ**)ᵀ Σ⁻¹ (𝐱-**μ**) này ra:
 >
 >
 >
-> exp\[-(1/2)(**x**-**μ**)T Σinv (**x**-**μ**) = -(1/2)(**x**T**Σinvx** - **μ**T**Σinvx** - **x**T**Σinvμ** + **μ**T**Σinvμ**)\]
+> exp\[-(1/2)(𝐱-**μ**)ᵀ Σ⁻¹ (𝐱-**μ**) = -(1/2)(𝐱ᵀ**Σ⁻¹x** - **μ**ᵀ**Σ⁻¹x** - 𝐱ᵀ**Σ⁻¹μ** + **μ**ᵀ**Σ⁻¹μ**)\]
 >
 >
 >
-> = exp\[-(1/2)(**x**T**Σinvx** - 2**μ**T**Σinvx** + **μ**T**Σinvμ**)\]
+> = exp\[-(1/2)(𝐱ᵀ**Σ⁻¹x** - 2**μ**ᵀ**Σ⁻¹x** + **μ**ᵀ**Σ⁻¹μ**)\]
 >
 >
 >
-> = exp\[-(1/2)**x**T**Σinvx** + **μ**T**Σinvx** -(1/2)**μ**T**Σinvμ**)\]
+> = exp\[-(1/2)𝐱ᵀ**Σ⁻¹x** + **μ**ᵀ**Σ⁻¹x** -(1/2)**μ**ᵀ**Σ⁻¹μ**)\]
 >
 >
 >
@@ -186,47 +186,47 @@
 >
 >
 >
-> i) Khớp **Λbb với Σinv**
+> i) Khớp **Λbb với Σ⁻¹**
 >
 >
 >
-> ii) Khớp **μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab** với **μ**T**Σinv**
+> ii) Khớp **μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab** với **μ**ᵀ**Σ⁻¹**
 >
 >
 >
-> **⇨ μ sẽ tương ứng với:** \[(**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**Λbb_inv**\]T.
+> **⇨ μ sẽ tương ứng với:** \[(**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**Λbb⁻¹**\]ᵀ.
 >
 >
 >
-> Để rồi, ta sẽ cộng thêm và trừ bớt cho một hằng số tương ứng với **μ**T**Σinvμ**, tức là:
+> Để rồi, ta sẽ cộng thêm và trừ bớt cho một hằng số tương ứng với **μ**ᵀ**Σ⁻¹μ**, tức là:
 >
 >
 >
-> {\[(**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**Λbb_inv**\]T}T **Λbb** {\[(**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**Λbb_inv**\]T} (đặt là constant 2)
+> {\[(**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**Λbb⁻¹**\]ᵀ}T **Λbb** {\[(**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**Λbb⁻¹**\]ᵀ} (đặt là constant 2)
 >
 >
 >
-> Khi đó có thể kết luận cái tích phân ∫ exp{-(1/2)**xb**T**Λbbxb** + (**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**xb**} d**xb**  sẽ chính là:
+> Khi đó có thể kết luận cái tích phân ∫ exp{-(1/2)**xb**ᵀ**Λbbxb** + (**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**xb**} d**xb**  sẽ chính là:
 >
 >
 >
-> = ∫ kernel của pdf của Normal(-(1/2)\[(**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**Λbb_inv**\]T, **Λbb_inv**) exp \[hằng số mà ta đã thêm, constant 2\]
+> = ∫ kernel của pdf của Normal(-(1/2)\[(**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**Λbb⁻¹**\]ᵀ, **Λbb⁻¹**) exp \[hằng số mà ta đã thêm, constant 2\]
 >
 >
 >
-> = exp \[-(1/2)(-constant 2)\] ∫ kernel của pdf của Normal(-(1/2)\[(**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**Λbb_inv**\]T, **Λbb_inv**)
+> = exp \[-(1/2)(-constant 2)\] ∫ kernel của pdf của Normal(-(1/2)\[(**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**Λbb⁻¹**\]ᵀ, **Λbb⁻¹**)
 >
 >
 >
-> Tiếp, nhân thêm và chia bớt cái normalizing constant của cái normal(-(1/2)\[(**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**Λbb_inv**\]T, **Λbb_inv**), đặt là constant 3, ta có:
+> Tiếp, nhân thêm và chia bớt cái normalizing constant của cái normal(-(1/2)\[(**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**Λbb⁻¹**\]ᵀ, **Λbb⁻¹**), đặt là constant 3, ta có:
 >
 >
 >
-> exp \[(1/2) constant 2\] \[1constant 3\] ∫ \[pdf của normal(-(1/2)\[(**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**Λbb_inv**\]T, **Λbb_inv**)\] d**xb**
+> exp \[(1/2) constant 2\] \[1constant 3\] ∫ \[pdf của normal(-(1/2)\[(**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**Λbb⁻¹**\]ᵀ, **Λbb⁻¹**)\] d**xb**
 >
 >
 >
-> Nhờ tính valid của pdf → ∫ \[pdf của normal(-(1/2)\[(**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**Λbb_inv**\]T, **Λbb_inv**)\] d**xb = 1**
+> Nhờ tính valid của pdf → ∫ \[pdf của normal(-(1/2)\[(**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**Λbb⁻¹**\]ᵀ, **Λbb⁻¹**)\] d**xb = 1**
 >
 >
 >
@@ -242,7 +242,7 @@
 >
 >
 >
-> \[constant 1\] exp{-(1/2) h(**xa**)} exp\[-(1/2)**μb**T**Λbbμb**} exp \[(1/2) constant 2\] \[constant 3\]
+> \[constant 1\] exp{-(1/2) h(**xa**)} exp\[-(1/2)**μb**ᵀ**Λbbμb**} exp \[(1/2) constant 2\] \[constant 3\]
 >
 >
 >
@@ -254,11 +254,11 @@
 >
 >
 >
-> constant 1, còn nhớ, là normalizing constant của pdf của **X**: \[1/(2π)^(D/2)\] \[1/|**Σ**|^(1/2)\])
+> constant 1, còn nhớ, là normalizing constant của pdf của 𝐗: \[1/(2π)^(D/2)\] \[1/|**Σ**|^(1/2)\])
 >
 >
 >
-> constant 3, là normalizing constant của cái normal(\[(**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**Λbb_inv**\]T, **Λbb_inv**)
+> constant 3, là normalizing constant của cái normal(\[(**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**Λbb⁻¹**\]ᵀ, **Λbb⁻¹**)
 >
 >
 >
@@ -266,11 +266,11 @@
 >
 >
 >
-> Còn constant 3, vì ta nhớ rằng, normalizing constant của Normal (**μ**, **Σ**) chỉ dính tới **Σ**, nên constant 3 chỉ dính tới **Λbb_inv**, không dính tới **xa**, nên ta cũng tiếp tục mặc kệ nó.
+> Còn constant 3, vì ta nhớ rằng, normalizing constant của Normal (**μ**, **Σ**) chỉ dính tới **Σ**, nên constant 3 chỉ dính tới **Λbb⁻¹**, không dính tới **xa**, nên ta cũng tiếp tục mặc kệ nó.
 >
 >
 >
-> (1/2) constant 2, = (1/2) {\[(**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**Λbb_inv**\]T}T **Λbb** {\[(**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**Λbb_inv**\]T}
+> (1/2) constant 2, = (1/2) {\[(**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**Λbb⁻¹**\]ᵀ}T **Λbb** {\[(**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**Λbb⁻¹**\]ᵀ}
 >
 >
 >
@@ -278,7 +278,7 @@
 >
 >
 >
-> Vậy trong \[constant 1\] exp{-(1/2) h(**xa**)} exp\[-(1/2)**μb**T**Λbbμb**} exp \[constant 2\] \[1/constant 3\] ta chỉ cần quan tâm exp{-(1/2) h(**xa**)} exp \[constant 2\]
+> Vậy trong \[constant 1\] exp{-(1/2) h(**xa**)} exp\[-(1/2)**μb**ᵀ**Λbbμb**} exp \[constant 2\] \[1/constant 3\] ta chỉ cần quan tâm exp{-(1/2) h(**xa**)} exp \[constant 2\]
 >
 >
 >
@@ -294,47 +294,47 @@
 >
 >
 >
-> \-(1/2)\[-2(**xa**-**μa**)T**Λabμb** + (**xa**-**μa**)T**Λaa**(**xa**-**μa**)\] + (1/2) \[(**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**Λbb_inv**\] **Λbb** \[(**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**Λbb_inv**\]T
+> \-(1/2)\[-2(**xa**-**μa**)ᵀ**Λabμb** + (**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**)\] + (1/2) \[(**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**Λbb⁻¹**\] **Λbb** \[(**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**Λbb⁻¹**\]ᵀ
 >
 >
 >
-> = (**xa**-**μa**)T**Λabμb** + -(1/2(**xa**-**μa**)T**Λaa**(**xa**-**μa**) + (1/2) {(**μb**T**Λbb** - **xa**T**Λab** + **μa**T**Λab**)**Λbb_inv** **Λbb** \[(**μb**T**ΛbbΛbb_inv** - **xa**T**ΛabΛbb_inv** + **μa**T**ΛabΛbb_inv**)\]T}
+> = (**xa**-**μa**)ᵀ**Λabμb** + -(1/2(**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**) + (1/2) {(**μb**ᵀ**Λbb** - **xa**ᵀ**Λab** + **μa**ᵀ**Λab**)**Λbb⁻¹** **Λbb** \[(**μb**ᵀ**ΛbbΛbb⁻¹** - **xa**ᵀ**ΛabΛbb⁻¹** + **μa**ᵀ**ΛabΛbb⁻¹**)\]ᵀ}
 >
 >
 >
-> = (**xa**-**μa**)T**Λabμb** - (1/2)(**xa**-**μa**)T**Λaa**(**xa**-**μa**) + (1/2) {\[**μb**T**Λbb** - (**xa**T - **μa**T)**Λab**\] (**μb**T - **xa**T**ΛabΛbb_inv** + **μa**T**ΛabΛbb_inv**)T}
+> = (**xa**-**μa**)ᵀ**Λabμb** - (1/2)(**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**) + (1/2) {\[**μb**ᵀ**Λbb** - (**xa**ᵀ - **μa**ᵀ)**Λab**\] (**μb**ᵀ - **xa**ᵀ**ΛabΛbb⁻¹** + **μa**ᵀ**ΛabΛbb⁻¹**)ᵀ}
 >
 >
 >
-> = (**xa**-**μa**)T**Λabμb** - (1/2)(**xa**-**μa**)T**Λaa**(**xa**-**μa**) + (1/2) {\[**μb**T**Λbb** - (**xa**T - **μa**T)**Λab**\] (**μb**T - (**xa - μa**)T**ΛabΛbb_inv**)T}
+> = (**xa**-**μa**)ᵀ**Λabμb** - (1/2)(**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**) + (1/2) {\[**μb**ᵀ**Λbb** - (**xa**ᵀ - **μa**ᵀ)**Λab**\] (**μb**ᵀ - (**xa - μa**)ᵀ**ΛabΛbb⁻¹**)ᵀ}
 >
 >
 >
-> = (**xa**-**μa**)T**Λabμb** -(1/2) (**xa**-**μa**)T**Λaa**(**xa**-**μa**) + (1/2) {**μb**T**Λbbμb** - (**xa**T - **μa**T)**Λabμb** - **μb**T**ΛbbΛbb_inv**T**Λab**T(**xa - μa**) + (**xa**T - **μa**T)**ΛabΛbb_inv**T**Λab**T(**xa - μa**)}
+> = (**xa**-**μa**)ᵀ**Λabμb** -(1/2) (**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**) + (1/2) {**μb**ᵀ**Λbbμb** - (**xa**ᵀ - **μa**ᵀ)**Λabμb** - **μb**ᵀ**ΛbbΛbb⁻¹**ᵀ**Λab**ᵀ(**xa - μa**) + (**xa**ᵀ - **μa**ᵀ)**ΛabΛbb⁻¹**ᵀ**Λab**ᵀ(**xa - μa**)}
 >
 >
 >
-> = (**xa**-**μa**)T**Λabμb** -(1/2) (**xa**-**μa**)T**Λaa**(**xa**-**μa**) + (1/2) {**μb**T**Λbbμb** - (**xa**T - **μa**T)**Λabμb** - **μb**T**Λab**T(**xa - μa**) + (**xa** - **μa**)T**ΛabΛbb_inv**T**Λab**T(**xa - μa**)}
+> = (**xa**-**μa**)ᵀ**Λabμb** -(1/2) (**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**) + (1/2) {**μb**ᵀ**Λbbμb** - (**xa**ᵀ - **μa**ᵀ)**Λabμb** - **μb**ᵀ**Λab**ᵀ(**xa - μa**) + (**xa** - **μa**)ᵀ**ΛabΛbb⁻¹**ᵀ**Λab**ᵀ(**xa - μa**)}
 >
 >
 >
-> = (**xa**-**μa**)T**Λabμb** -(1/2) (**xa**-**μa**)T**Λaa**(**xa**-**μa**) + (1/2) **μb**T**Λbbμb** - **μb**T**Λab**T(**xa - μa**) + (1/2)(**xa** - **μa**)T**ΛabΛbb_inv**T**Λab**T(**xa - μa**)}
+> = (**xa**-**μa**)ᵀ**Λabμb** -(1/2) (**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**) + (1/2) **μb**ᵀ**Λbbμb** - **μb**ᵀ**Λab**ᵀ(**xa - μa**) + (1/2)(**xa** - **μa**)ᵀ**ΛabΛbb⁻¹**ᵀ**Λab**ᵀ(**xa - μa**)}
 >
 >
 >
-> = -(1/2) (**xa**-**μa**)T**Λaa**(**xa**-**μa**) + (1/2) **μb**T**Λbbμb** + (1/2)(**xa** - **μa**)T**ΛabΛbb_inv**T**Λab**T(**xa - μa**)}
+> = -(1/2) (**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**) + (1/2) **μb**ᵀ**Λbbμb** + (1/2)(**xa** - **μa**)ᵀ**ΛabΛbb⁻¹**ᵀ**Λab**ᵀ(**xa - μa**)}
 >
 >
 >
-> Đưa cái (1/2) **μb**T**Λbbμb** ra khỏi cụm này (nó sẽ nhập vào phần constant)
+> Đưa cái (1/2) **μb**ᵀ**Λbbμb** ra khỏi cụm này (nó sẽ nhập vào phần constant)
 >
 >
 >
-> Ta còn lại phần trong exp có dính **xa**: exp{-(1/2) \[(**xa**-**μa**)T**Λaa**(**xa**-**μa**) - (**xa** - **μa**)T**ΛabΛbb_inv**T**Λab**T(**xa - μa**)}
+> Ta còn lại phần trong exp có dính **xa**: exp{-(1/2) \[(**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**) - (**xa** - **μa**)ᵀ**ΛabΛbb⁻¹**ᵀ**Λab**ᵀ(**xa - μa**)}
 >
 >
 >
-> = exp{-(1/2) \[(**xa**-**μa**)T\[**Λaa** - **ΛabΛbb_inv**T**Λab**T\](**xa**-**μa**)}
+> = exp{-(1/2) \[(**xa**-**μa**)ᵀ\[**Λaa** - **ΛabΛbb⁻¹**ᵀ**Λab**ᵀ\](**xa**-**μa**)}
 >
 >
 >
@@ -346,19 +346,19 @@
 >
 >
 >
-> Inverse của covariance matrix, kí hiệu **Σa**, chính là: **Λaa** - **ΛabΛbb_inv**T**Λab**T
+> Inverse của covariance matrix, kí hiệu **Σa**, chính là: **Λaa** - **ΛabΛbb⁻¹**ᵀ**Λab**ᵀ
 >
 >
 >
-> ⇨ **Σa =** \[**Λaa** - **ΛabΛbb_inv**T**Λab**T\]**inv,**
+> ⇨ **Σa =** \[**Λaa** - **ΛabΛbb⁻¹**ᵀ**Λab**ᵀ\]**inv,**
 >
 >
 >
-> dùng tính đối xứng của **Λbb_inv**: **Λbb_invT** = **Λbb_inv** và **Λab**T = **Λba**
+> dùng tính đối xứng của **Λbb⁻¹**: **Λbb⁻¹ᵀ** = **Λbb⁻¹** và **Λab**ᵀ = **Λba**
 >
 >
 >
-> **=** \[**Λaa** - **ΛabΛbb_invΛba**\]**inv**, **→ đây là kết luận 2.88 trong sách.**
+> **=** \[**Λaa** - **ΛabΛbb⁻¹Λba**\]**inv**, **→ đây là kết luận 2.88 trong sách.**
 >
 >
 >
@@ -366,7 +366,7 @@
 >
 >
 >
-> Vậy **Xa** có phân phối Normal(**μa**, **Λaa** - **ΛabΛbb_invΛba**\]**inv**)
+> Vậy **Xa** có phân phối Normal(**μa**, **Λaa** - **ΛabΛbb⁻¹Λba**\]**inv**)
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -412,15 +412,15 @@
 <p align="center"><kbd><img src="assets/77kiwab961a.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cuối cùng, tóm tắt lại việc ta chứng minh rằng với random variable vector **X** có phân phối Normal(**μ**, **Σ**) phân tách thành hai random variable vector \[**Xa**; **Xb**\].
+> Cuối cùng, tóm tắt lại việc ta chứng minh rằng với random variable vector 𝐗 có phân phối Normal(**μ**, **Σ**) phân tách thành hai random variable vector \[**Xa**; **Xb**\].
 >
 >
 >
-> (nói là Partitioned Gaussians, có ý nghĩa chỉ là. ta có D-dimensional random vector **X**, mà dĩ nhiên cũng chỉ là một bộ các random vector X1,...XD, có joint distribution là thuộc loại Normal(**μ**, **Σ**). Nay ta tách ra (partition) làm hai bộ X1,..XM (đặt là vector **Xa**) và và XM+1,...XD (đặt là vector **Xb**)). Thì dĩ nhiên vẫn có thể nói hai random variable vector **Xa** và **Xb** có joint distribution là Normal(**μ**, **Σ**). Nên gọi là partitioned Gaussian, ko có gì ghê gớm cả)
+> (nói là Partitioned Gaussians, có ý nghĩa chỉ là. ta có D-dimensional random vector 𝐗, mà dĩ nhiên cũng chỉ là một bộ các random vector X1,...XD, có joint distribution là thuộc loại Normal(**μ**, **Σ**). Nay ta tách ra (partition) làm hai bộ X1,..XM (đặt là vector **Xa**) và và XM+1,...XD (đặt là vector **Xb**)). Thì dĩ nhiên vẫn có thể nói hai random variable vector **Xa** và **Xb** có joint distribution là Normal(**μ**, **Σ**). Nên gọi là partitioned Gaussian, ko có gì ghê gớm cả)
 >
 >
 >
-> Khi đó, với **Σ** là Cov(**X**), thì nó có thể thể hiện bởi \[**Σaa, Σab; Σba Σbb**\]
+> Khi đó, với **Σ** là Cov(𝐗), thì nó có thể thể hiện bởi \[**Σaa, Σab; Σba Σbb**\]
 >
 >
 >
@@ -436,7 +436,7 @@
 >
 >
 >
-> **μa|b** = **μa** - **Λaa_inv Λab** (**xb** - **μb**)
+> **μa|b** = **μa** - **Λaa⁻¹ Λab** (**xb** - **μb**)
 >
 >
 >
@@ -448,7 +448,7 @@
 >
 >
 >
-> Hình ảnh minh họa cho D=2, ramdom vector **X** tách thành hai single random variable Xa, Xb. Thì hình bên trái thể hiện joint pdf, là một 2D normal. HÌnh bên phải, màu xanh, là pdf của 1D normal của Xa. Và hình màu đỏ là f(xa|xb), cũng là normal.
+> Hình ảnh minh họa cho D=2, ramdom vector 𝐗 tách thành hai single random variable Xa, Xb. Thì hình bên trái thể hiện joint pdf, là một 2D normal. HÌnh bên phải, màu xanh, là pdf của 1D normal của Xa. Và hình màu đỏ là f(xa|xb), cũng là normal.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
