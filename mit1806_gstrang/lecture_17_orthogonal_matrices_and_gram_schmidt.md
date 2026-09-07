@@ -153,7 +153,7 @@
 >
 > Và góc nhìn row sẽ cho ta thấy permQ.A sẽ là mỗi row của permQ sẽ là
 > coeff của một linear combination giữa các row của A. Nên với row1 của
-> permQ = [0 0 1], nó sẽ tạo kết quả  là 0*row A_1 + 0*row A_2 + 1*row
+> permQ = [0 0 1], nó sẽ tạo kết quả  là 0 × row A_1 + 0 × row A_2 + 1 × row
 > A_3 = row A_3 và đây chính là hàng 1 của kết quả. Vậy nó đã chuyển
 > row 3 của A lên đầu tiên. Hay dễ hiểu hơn khi nói "hàng 1 của QA chính
 > là hàng 3 của A"
