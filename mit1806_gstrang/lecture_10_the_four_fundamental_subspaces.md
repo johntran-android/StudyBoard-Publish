@@ -226,6 +226,8 @@
 
 <a id="node-u74al81"></a>
 
+###### Dimensions of Four Fundamental Subspaces
+
 <p align="center"><kbd><img src="assets/yz9nc3pi9qb.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -311,8 +313,7 @@
 >
 >
 >
-> Và đương nhiên các linear combination của hai special solution: **alpha*(a,1,b,c,0)
-> + beta*(m,0,n,l,1) cũng thuộc nullspace, với mọi** alpha, beta.
+> Và đương nhiên các linear combination của hai special solution: **alpha*(a,1,b,c,0) + beta*(m,0,n,l,1) cũng thuộc nullspace, với mọi** alpha, beta.
 >
 >
 >
@@ -441,6 +442,8 @@
 
 <a id="node-8mhy0ir"></a>
 
+###### Dimensions of Fundamental Subspaces
+
 <p align="center"><kbd><img src="assets/b4v5cjgputj.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -469,8 +472,7 @@
 >
 >
 >
-> Và có thể thấy **nó cũng tuân theo cùng một rule: dim C(Aᵀ)
-> + dim N(Aᵀ) = r + m - r = m = số columns của Aᵀ**
+> Và có thể thấy **nó cũng tuân theo cùng một rule: dim C(Aᵀ) + dim N(Aᵀ) = r + m - r = m = số columns của Aᵀ**
 
 <br>
 
