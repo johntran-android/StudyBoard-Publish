@@ -24,7 +24,7 @@
 <p align="center"><kbd><img src="assets/jxrwkex847s.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs lấy ví dụ một rectangular matrix A, có col 2 = 2*col 1, tức
+> Gs lấy ví dụ một rectangular matrix A, có col 2 = 2 × col 1, tức
 > là chúng **dependent** (không linear independent). Và **row 1 +
 > row 2 = row 3**. Tức là **row 3 cũng ko independent với 2 row
 > kia**
@@ -59,8 +59,8 @@
 <p align="center"><kbd><img src="assets/3xgyf0ztme5.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên trừ hàng 2 cho 2*hàng 1, trừ hàng 3
-> cho 3*hàng 1. Ta eliminate được a21 và a31
+> Đầu tiên trừ hàng 2 cho 2 × hàng 1, trừ hàng 3
+> cho 3 × hàng 1. Ta eliminate được a21 và a31
 
 <br>
 
@@ -455,7 +455,7 @@
 >
 >
 >
-> Trừ hàng 2 cho 2*hàng 1. 
+> Trừ hàng 2 cho 2 × hàng 1. 
 >
 >
 >
@@ -463,7 +463,7 @@
 >
 >
 >
-> Trừ hàng 4 cho 2*hàng 1
+> Trừ hàng 4 cho 2 × hàng 1
 
 <br>
 
@@ -484,7 +484,7 @@
 
 > [!NOTE]
 > Thế là ta có 2 pivot hợp lệ. Tiếp ta sẽ trừ hàng 4
-> cho 2*hàng 2 để khử vị trí số 4.
+> cho 2 × hàng 2 để khử vị trí số 4.
 
 <br>
 
@@ -679,7 +679,7 @@
 >
 >
 >
-> Rx=I*xpivot + F*xfree = 0 ⇔ xpivot = -F*xfree
+> Rx=I × xpivot + F × xfree = 0 ⇔ xpivot = -F × xfree
 >
 >
 >
