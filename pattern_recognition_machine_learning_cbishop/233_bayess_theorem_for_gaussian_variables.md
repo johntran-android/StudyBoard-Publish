@@ -14,11 +14,11 @@
 <p align="center"><kbd><img src="assets/jwsklv9mz5t.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua phần này, đầu tiên gs nhắc lại, hai phần trước, ta bắt đầu với **X** \~ Normal(**μ**, **Σ**), sau đó tách **X** thành hai subvector **Xa**, **Xb**, để rồi ta chứng minh rằng f(**xa**|**xb**) và f(**xa**) đều là pdf của normal. Và trong quá trình đó, ta đã đề cập đến một điểm, mean f(**xa**|**xb**) là một hàm tuyến tính theo **xb**
+> Qua phần này, đầu tiên gs nhắc lại, hai phần trước, ta bắt đầu với 𝐗 \~ Normal(**μ**, **Σ**), sau đó tách 𝐗 thành hai subvector **Xa**, **Xb**, để rồi ta chứng minh rằng f(**xa**|**xb**) và f(**xa**) đều là pdf của normal. Và trong quá trình đó, ta đã đề cập đến một điểm, mean f(**xa**|**xb**) là một hàm tuyến tính theo **xb**
 >
 >
 >
-> Xem link tới note trước, ta có **μa|b** = **μa** - **Λaa_inv Λab** (**xb** - **μb**) thế thì vì sao nó là hàm tuyến tính với **xb**? à là vì nó có dạng \[matrix\] **xb** + constant, mà matrix nhân vector có bản chất là một linear transformation như đã học trong MIT 18.06.
+> Xem link tới note trước, ta có **μa|b** = **μa** - **Λaa⁻¹ Λab** (**xb** - **μb**) thế thì vì sao nó là hàm tuyến tính với **xb**? à là vì nó có dạng \[matrix\] **xb** + constant, mà matrix nhân vector có bản chất là một linear transformation như đã học trong MIT 18.06.
 >
 >
 >
@@ -30,7 +30,7 @@
 >
 >
 >
-> Thế thì, trong bài toán này, cho rằng ta được cho f(**x**) và f(**y**|**x**) đều là Normal trong đó mean của f(**y**|**x**) là hàm phụ thuộc **x** và covariance matrix không phụ thuộc **x**. Đây là ví dụ của linear Gaussian model, và ta sẽ đi tìm f(**y**) cũng như f(**x**|**y**). Và đại khái là đây là bài toán gặp nhiều trong các chap sau nên ta sẽ phân tích nó ở đây trước.
+> Thế thì, trong bài toán này, cho rằng ta được cho f(𝐱) và f(𝐲|𝐱) đều là Normal trong đó mean của f(𝐲|𝐱) là hàm phụ thuộc 𝐱 và covariance matrix không phụ thuộc 𝐱. Đây là ví dụ của linear Gaussian model, và ta sẽ đi tìm f(𝐲) cũng như f(𝐱|𝐲). Và đại khái là đây là bài toán gặp nhiều trong các chap sau nên ta sẽ phân tích nó ở đây trước.
 
 **🔗 See also:** [Mô hình Gaussian tuyến tính](./231_conditional_gaussian.md#node-usyapsm)
 
@@ -47,39 +47,39 @@
 <p align="center"><kbd><img src="assets/3x26fcigfs.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, như đã nói, ta có **X** \~ Normal và **Y**|**X** \~ Normal với mean là hàm tuyến tinh của **x**, và covariance không phụ thuộc **x**. Nên ta gọi distribution của **X** là Normal(**μ**, **Λinv**) và **Y|X** \~ Normal(A**x**+b, **Linv**).
+> Rồi, như đã nói, ta có 𝐗 \~ Normal và 𝐘|𝐗 \~ Normal với mean là hàm tuyến tinh của 𝐱, và covariance không phụ thuộc 𝐱. Nên ta gọi distribution của 𝐗 là Normal(**μ**, **Λ⁻¹**) và **Y|X** \~ Normal(A𝐱+b, **L⁻¹**).
 >
 >
 >
-> (Chú ý, cách ghi của gs f(**x**) = N(**x**|**μ**, **Λinv**), chỉ cũng đồng nghĩa với việc nói hàm pdf của **X** là hàm pdf của Normal(**μ**, **Λinv**), thì nó cùng ý nghĩa với việc nói distribution của **X** là Normal(**μ**, **Λinv**), mình ít thấy cách ghi này trong Casella và Stat110)
+> (Chú ý, cách ghi của gs f(𝐱) = N(𝐱|**μ**, **Λ⁻¹**), chỉ cũng đồng nghĩa với việc nói hàm pdf của 𝐗 là hàm pdf của Normal(**μ**, **Λ⁻¹**), thì nó cùng ý nghĩa với việc nói distribution của 𝐗 là Normal(**μ**, **Λ⁻¹**), mình ít thấy cách ghi này trong Casella và Stat110)
 >
 >
 >
-> Một điểm lưu ý nữa, như đã biết, khi nói đến Normal(**μ**, **Σ**), thì Σ, như đã chứng minh, là covariance matrix, Cov(**X**), và inverse của nó, **Σinv**, gọi là precision matrix. Nên nay khi ghi **X** \~ Normal(**μ**, **Λinv**) thì **Λinv** chính là covariance matrix, và **Λ**, dĩ nhiên là precision matrix. Tương tự với **Linv**, cũng là covariance matrix của f(**y**|**x**)
+> Một điểm lưu ý nữa, như đã biết, khi nói đến Normal(**μ**, **Σ**), thì Σ, như đã chứng minh, là covariance matrix, Cov(𝐗), và inverse của nó, **Σ⁻¹**, gọi là precision matrix. Nên nay khi ghi 𝐗 \~ Normal(**μ**, **Λ⁻¹**) thì **Λ⁻¹** chính là covariance matrix, và **Λ**, dĩ nhiên là precision matrix. Tương tự với **L⁻¹**, cũng là covariance matrix của f(𝐲|𝐱)
 >
 >
 >
-> Rồi, nói thêm rằng M, và D là số chiều (tức số phần tử) của **X** và **Y**. Và ta sẽ đi derive joint pdf của **X**, **Y**.
+> Rồi, nói thêm rằng M, và D là số chiều (tức số phần tử) của 𝐗 và 𝐘. Và ta sẽ đi derive joint pdf của 𝐗, 𝐘.
 >
 >
 >
-> Một điểm có thể có bạn thấy bị ngáo: khi nói về random vector **X** = (X1,...XM), thì nói về pdf của **X**, cũng chính là nói về joint pdf của X1,...XM. Tương tự, pdf của random vector **Y**, cũng chính là joint pdf của các single random variable Y1,....YD. Vậy thì nay, nói đi tìm joint pdf của **X**, **Y** cũng chính là tìm joint pdf của X1,..XM, Y1,...YD. Hiểu vậy sẽ thấy việc ta tạo vector **Z** = \[**X**; **Y**\] (gắn nó lại thành vector M + D chiều) thì pdf của **Z** cũng chính là joint pdf của X1,..XM, Y1,...YD, hay joint pdf của **X**, **Y**
+> Một điểm có thể có bạn thấy bị ngáo: khi nói về random vector 𝐗 = (X1,...XM), thì nói về pdf của 𝐗, cũng chính là nói về joint pdf của X1,...XM. Tương tự, pdf của random vector 𝐘, cũng chính là joint pdf của các single random variable Y1,....YD. Vậy thì nay, nói đi tìm joint pdf của 𝐗, 𝐘 cũng chính là tìm joint pdf của X1,..XM, Y1,...YD. Hiểu vậy sẽ thấy việc ta tạo vector 𝐙 = \[𝐗; 𝐘\] (gắn nó lại thành vector M + D chiều) thì pdf của 𝐙 cũng chính là joint pdf của X1,..XM, Y1,...YD, hay joint pdf của 𝐗, 𝐘
 >
 >
 >
-> Thế thì như đã học trong Casella và Stat119, dùng Bayes theorem, cho ta: f(**x**, **y**) = f(**y**|**x**)f(**x**) (mà ta nhớ cái theorem này thực ra chỉ là hệ quả từ định nghĩa của conditional probability mà thôi)
+> Thế thì như đã học trong Casella và Stat119, dùng Bayes theorem, cho ta: f(𝐱, 𝐲) = f(𝐲|𝐱)f(𝐱) (mà ta nhớ cái theorem này thực ra chỉ là hệ quả từ định nghĩa của conditional probability mà thôi)
 >
 >
 >
-> ⇨ f(**z**) = f(**x**,**y**) = f(**y**|**x**)f(**x**)
+> ⇨ f(𝐳) = f(𝐱,𝐲) = f(𝐲|𝐱)f(𝐱)
 >
 >
 >
-> Và ta mới xét log của f(**z**): log f(**z**) = log \[f(**y**|**x**)f(**x**)\], dùng tính chất hàm log: log(ab) = log(a) + log(b).
+> Và ta mới xét log của f(𝐳): log f(𝐳) = log \[f(𝐲|𝐱)f(𝐱)\], dùng tính chất hàm log: log(ab) = log(a) + log(b).
 >
 >
 >
-> ⇨ log(f(**z**)) = log f(**x**) + log f(**y**|**x**)
+> ⇨ log(f(𝐳)) = log f(𝐱) + log f(𝐲|𝐱)
 >
 >
 >
@@ -87,11 +87,11 @@
 >
 >
 >
-> Mình hiểu: là để **dễ làm**, vì mục đích cuối cùng là chỉ ra rằng log f(**z**) có dạng của log của một hàm số mà phần phụ thuộc **z** có dạng kernel của pdf của một Normal distribution. khi đó, ta sẽ kết luận **Z** cũng là Normal variable.
+> Mình hiểu: là để **dễ làm**, vì mục đích cuối cùng là chỉ ra rằng log f(𝐳) có dạng của log của một hàm số mà phần phụ thuộc 𝐳 có dạng kernel của pdf của một Normal distribution. khi đó, ta sẽ kết luận 𝐙 cũng là Normal variable.
 >
 >
 >
->  Vì sao dễ làm, là vì với log f(**x**) + log f(**y**|**x**), cùng với việc hai cái f đều có dạng: \[normalizing constant\] exp\[-(1/2) quadratic form\], thì ta có:
+>  Vì sao dễ làm, là vì với log f(𝐱) + log f(𝐲|𝐱), cùng với việc hai cái f đều có dạng: \[normalizing constant\] exp\[-(1/2) quadratic form\], thì ta có:
 >
 >
 >
@@ -99,7 +99,7 @@
 >
 >
 >
-> log {C1 exp\[-(1/2) (**x**-**μ**)T**Λ**(**x**-**μ**)\] } + log {C2 exp\[-(1/2)(**y**-A**x**-b)T**L**(**y**-A**x**-b)\]}
+> log {C1 exp\[-(1/2) (𝐱-**μ**)ᵀ**Λ**(𝐱-**μ**)\] } + log {C2 exp\[-(1/2)(𝐲-A𝐱-b)ᵀ𝐋(𝐲-A𝐱-b)\]}
 >
 >
 >
@@ -107,19 +107,19 @@
 >
 >
 >
-> log {C1} + log exp\[-(1/2) (**x**-**μ**)T**Λ**(**x**-**μ**)\] } + log {C2} + log exp\[-(1/2)(**y**-A**x**-b)T**L**(**y**-A**x**-b)\]}
+> log {C1} + log exp\[-(1/2) (𝐱-**μ**)ᵀ**Λ**(𝐱-**μ**)\] } + log {C2} + log exp\[-(1/2)(𝐲-A𝐱-b)ᵀ𝐋(𝐲-A𝐱-b)\]}
 >
 >
 >
-> = -(1/2) (**x**-**μ**)T**Λ**(**x**-**μ**) -(1/2)(**y**-A**x**-b)T**L**(**y**-A**x**-b) + log {C1} + log {C2}
+> = -(1/2) (𝐱-**μ**)ᵀ**Λ**(𝐱-**μ**) -(1/2)(𝐲-A𝐱-b)ᵀ𝐋(𝐲-A𝐱-b) + log {C1} + log {C2}
 >
 >
 >
->  = -(1/2) (**x**-**μ**)T**Λ**(**x**-**μ**) -(1/2)(**y**-A**x**-b)T**L**(**y**-**Ax**-b) + conts (hai term cuối ko dính gì đến **x**, **y**, ta ko care)
+>  = -(1/2) (𝐱-**μ**)ᵀ**Λ**(𝐱-**μ**) -(1/2)(𝐲-A𝐱-b)ᵀ𝐋(𝐲-**Ax**-b) + conts (hai term cuối ko dính gì đến 𝐱, 𝐲, ta ko care)
 >
 >
 >
-> = -(1/2) \[**x**T**Λx** - **μ**T**Λx** - **x**T**Λμ** + **μ**T**Λμ** + **y**T**Ly** - **x**T**A**T**Ly** - **b**T**Ly** - **y**T**LAx** + **x**T**A**T**LAx** + **b**T**LAx** - **y**T**Lb** + **x**T**A**T**Lb** + **b**T**Lb**\]
+> = -(1/2) \[𝐱ᵀ**Λx** - **μ**ᵀ**Λx** - 𝐱ᵀ**Λμ** + **μ**ᵀ**Λμ** + 𝐲ᵀ**Ly** - 𝐱ᵀ𝐀ᵀ**Ly** - 𝐛ᵀ**Ly** - 𝐲ᵀ**LAx** + 𝐱ᵀ𝐀ᵀ**LAx** + 𝐛ᵀ**LAx** - 𝐲ᵀ**Lb** + 𝐱ᵀ𝐀ᵀ**Lb** + 𝐛ᵀ**Lb**\]
 >
 >
 >
@@ -127,43 +127,43 @@
 >
 >
 >
-> Đầu tiên kể ra các term bậc hai (tức có dính 2 cái **x**, 2 cái **y** hoặc dính **x** và **y**):
+> Đầu tiên kể ra các term bậc hai (tức có dính 2 cái 𝐱, 2 cái 𝐲 hoặc dính 𝐱 và 𝐲):
 >
 >
 >
-> = -(1/2) \[**x**T**Λx** + **y**T**Ly** - **x**T**A**T**Ly** - **y**T**LAx** + **x**T**A**T**LAx**\]
+> = -(1/2) \[𝐱ᵀ**Λx** + 𝐲ᵀ**Ly** - 𝐱ᵀ𝐀ᵀ**Ly** - 𝐲ᵀ**LAx** + 𝐱ᵀ𝐀ᵀ**LAx**\]
 >
 >
 >
-> = -(1/2) \[**x**T(**Λx** + **A**T**LA**)**x** + **y**T**Ly** - **y**T**LAx** - **x**T**A**T**Ly**\]
+> = -(1/2) \[𝐱ᵀ(**Λx** + 𝐀ᵀ**LA**)𝐱 + 𝐲ᵀ**Ly** - 𝐲ᵀ**LAx** - 𝐱ᵀ𝐀ᵀ**Ly**\]
 >
 >
 >
-> Bằng các xét cái matrix tạo bởi các block: \[**Λ** + **A**T**LA**, -**A**T**L**; -**LA**, **L**\], đặt là **R**, thì ta sẽ thấy cái trên chính là: -(1/2) **z**T**Rz**
+> Bằng các xét cái matrix tạo bởi các block: \[**Λ** + 𝐀ᵀ**LA**, -𝐀ᵀ𝐋; -**LA**, 𝐋\], đặt là 𝐑, thì ta sẽ thấy cái trên chính là: -(1/2) 𝐳ᵀ**Rz**
 >
 >
 >
-> Tiếp, ra các term bậc một: (có dính tới **x** hoặc **y**):
+> Tiếp, ra các term bậc một: (có dính tới 𝐱 hoặc 𝐲):
 >
 >
 >
-> \-(1/2) \[- **μ**T**Λx** - **x**T**Λμ** - **b**T**Ly** + **b**T**LAx** - **y**T**Lb** + **x**T**A**T**Lb** + **b**T**Lb**\]
+> \-(1/2) \[- **μ**ᵀ**Λx** - 𝐱ᵀ**Λμ** - 𝐛ᵀ**Ly** + 𝐛ᵀ**LAx** - 𝐲ᵀ**Lb** + 𝐱ᵀ𝐀ᵀ**Lb** + 𝐛ᵀ**Lb**\]
 >
 >
 >
-> = -(1/2) \[- 2**μ**T**Λx** - 2**b**T**Ly** + 2**b**T**LAx**\]
+> = -(1/2) \[- 2**μ**ᵀ**Λx** - 2𝐛ᵀ**Ly** + 2𝐛ᵀ**LAx**\]
 >
 >
 >
-> = -(1/2) \[- 2(**μ**T**Λ**-**b**T**LA**)**x** - 2**b**T**Ly**\]
+> = -(1/2) \[- 2(**μ**ᵀ**Λ**-𝐛ᵀ**LA**)𝐱 - 2𝐛ᵀ**Ly**\]
 >
 >
 >
-> = (**μ**T**Λ**-**b**T**LA**)**x** + **b**T**Ly**
+> = (**μ**ᵀ**Λ**-𝐛ᵀ**LA**)𝐱 + 𝐛ᵀ**Ly**
 >
 >
 >
-> Bằng cách define vector **h** = \[(**μ**T**Λ**-**b**T**LA**)T, (**b**T**L**)T\] = (**Λ**T**μ**-**A**T**L**T**b**, **L**T**b**) = (**Λμ**-**A**T**Lb**, **Lb**) (do tính đối xứng của L, **Λ**) , ta sẽ thấy đây chính là **h**T**z**
+> Bằng cách define vector 𝐡 = \[(**μ**ᵀ**Λ**-𝐛ᵀ**LA**)ᵀ, (𝐛ᵀ𝐋)ᵀ\] = (**Λ**ᵀ**μ**-𝐀ᵀ𝐋ᵀ𝐛, 𝐋ᵀ𝐛) = (**Λμ**-𝐀ᵀ**Lb**, **Lb**) (do tính đối xứng của L, **Λ**) , ta sẽ thấy đây chính là 𝐡ᵀ𝐳
 >
 >
 >
@@ -171,7 +171,7 @@
 >
 >
 >
-> và do đó, nó có dạng quadratic function của **z**: =(1/2)**z**T**Rz** + **h**T**z** + const giúp kết luận rằng: Với việc log f(**z**) **có dạng log** **exp** \[**quadratic function** của **z**\] ta **suy ra** f(**z**) **có dạng exp\[quadratic function của z\] nhân some constant**, **và điều này đủ kết luận** **Z nhất định là random variable vector có phân phối Normal**.
+> và do đó, nó có dạng quadratic function của 𝐳: =(1/2)𝐳ᵀ**Rz** + 𝐡ᵀ𝐳 + const giúp kết luận rằng: Với việc log f(𝐳) **có dạng log** **exp** \[**quadratic function** của 𝐳\] ta **suy ra** f(𝐳) **có dạng exp\[quadratic function của z\] nhân some constant**, **và điều này đủ kết luận** **Z nhất định là random variable vector có phân phối Normal**.
 >
 >
 >
@@ -179,11 +179,11 @@
 >
 >
 >
-> Với công thức Normal μ, Σ tổng quát, quadratic form sẽ có dạng: -(1/2) \[**x**T**Σinvx** - 2**μ**T**Σinvx** + **μ**T**Σinvμ**\]
+> Với công thức Normal μ, Σ tổng quát, quadratic form sẽ có dạng: -(1/2) \[𝐱ᵀ**Σ⁻¹x** - 2**μ**ᵀ**Σ⁻¹x** + **μ**ᵀ**Σ⁻¹μ**\]
 >
 >
 >
-> = -(1/2) **x**T**Σinvx** + **μ**T**Σinvx** -(1/2) **μ**T**Σinvμ**
+> = -(1/2) 𝐱ᵀ**Σ⁻¹x** + **μ**ᵀ**Σ⁻¹x** -(1/2) **μ**ᵀ**Σ⁻¹μ**
 >
 >
 >
@@ -191,19 +191,19 @@
 >
 >
 >
-> **z**T**Rz** khớp với **x**T**Σinvx → Covariance matriz, Cov(Z) chính là Rinv, hay Precision matrix chính là R**
+> 𝐳ᵀ**Rz** khớp với 𝐱ᵀ**Σ⁻¹x → Covariance matriz, Cov(Z) chính là R⁻¹, hay Precision matrix chính là R**
 >
 >
 >
-> **μ**T**Σinvx** khớp với **h**T**z ⇨** **μ**T**Σinv** khớp với **h**T ⇔ (**μ**\_**z**)T**R** = **h** ⇔ **μ**\_**z** = (**hR**inv)T = **R**invT**h**T = **R**inv**h**
+> **μ**ᵀ**Σ⁻¹x** khớp với 𝐡ᵀ**z ⇨** **μ**ᵀ**Σ⁻¹** khớp với 𝐡ᵀ ⇔ (**μ**\_𝐳)ᵀ𝐑 = 𝐡 ⇔ **μ**\_𝐳 = (**hR**inv)ᵀ = 𝐑invᵀ𝐡ᵀ = 𝐑inv𝐡
 >
 >
 >
->  Nhân vào, kết quả sẽ ra (**μ**; **Aμ** + **b**)
+>  Nhân vào, kết quả sẽ ra (**μ**; **Aμ** + 𝐛)
 >
 >
 >
-> Và để tính ra covariance matrix, Rinv, ta có thể dùng công thức 2.76 Schur complement để tính inverse của **R** = \[**Λ** + **A**T**LA**, -**A**T**L**; -**LA**, **L**\] = \[**Λ**inv, **Λ**inv**A**T; **AΛ**inv, **L**inv + **AΛ**inv**A**T\] (chỉ là bài toán đại số).
+> Và để tính ra covariance matrix, R⁻¹, ta có thể dùng công thức 2.76 Schur complement để tính inverse của 𝐑 = \[**Λ** + 𝐀ᵀ**LA**, -𝐀ᵀ𝐋; -**LA**, 𝐋\] = \[**Λ**inv, **Λ**inv𝐀ᵀ; **AΛ**inv, 𝐋inv + **AΛ**inv𝐀ᵀ\] (chỉ là bài toán đại số).
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
@@ -221,7 +221,7 @@
 <p align="center"><kbd><img src="assets/flck50han1h.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, khi đã có joint distribution f(**z**), cho thấy cũng là Normal. Ta sẽ đi tìm f(**y**).
+> Tiếp, khi đã có joint distribution f(𝐳), cho thấy cũng là Normal. Ta sẽ đi tìm f(𝐲).
 >
 >
 >
@@ -233,15 +233,15 @@
 >
 >
 >
-> Nếu có random vector **X tách thành hai subvector Xa, Xb**, và joint distribution của chúng là Normal(**μ**, **Σ**) hay Normal(**μ**, **Λinv**), ứng với việc **X** = \[**Xa**; **Xb**\] thì **Σ** và **Λ** (precision matrix) đều thể hiện ở dạng các matrix khối \[**Σaa, Σab; Σba, Σbb\]**, \[**Λaa, Λab; Λba, Λbb**\] thì f(**xa**|**xb**) và f(**xa**) đều là Gaussian. Trong đó với f(**xa**|**xb**) có covariance matrix thể hiện theo các matrix **Λ** sẽ gọn hơn là thể hiện theo **Σ**. Còn với f(**xa**) thì ngược lại, cụ thể ta còn **Xa** \~ Gaussian(**μa**, **Σaa**) (1) (công thức 2.92, 2.93, xem link).
+> Nếu có random vector **X tách thành hai subvector Xa, Xb**, và joint distribution của chúng là Normal(**μ**, **Σ**) hay Normal(**μ**, **Λ⁻¹**), ứng với việc 𝐗 = \[**Xa**; **Xb**\] thì **Σ** và **Λ** (precision matrix) đều thể hiện ở dạng các matrix khối \[**Σaa, Σab; Σba, Σbb\]**, \[**Λaa, Λab; Λba, Λbb**\] thì f(**xa**|**xb**) và f(**xa**) đều là Gaussian. Trong đó với f(**xa**|**xb**) có covariance matrix thể hiện theo các matrix **Λ** sẽ gọn hơn là thể hiện theo **Σ**. Còn với f(**xa**) thì ngược lại, cụ thể ta còn **Xa** \~ Gaussian(**μa**, **Σaa**) (1) (công thức 2.92, 2.93, xem link).
 >
 >
 >
-> Sau đó, ta qua bài toán khác là có marginal và conditional đều là nornal: f(**x**) là normal (**μ**, **Λ**inv), conditional f(**y**|**x**) cũng là normal(**Aμ** + **b**, Linv), thì a đã chứng minh cho thấy joint distribution f(**z**), **z** = \[**x**; **y**\] cũng là normal. Và tiếp tục ở đây, ta sẽ nói về marginal f(**y**).
+> Sau đó, ta qua bài toán khác là có marginal và conditional đều là nornal: f(𝐱) là normal (**μ**, **Λ**inv), conditional f(𝐲|𝐱) cũng là normal(**Aμ** + 𝐛, L⁻¹), thì a đã chứng minh cho thấy joint distribution f(𝐳), 𝐳 = \[𝐱; 𝐲\] cũng là normal. Và tiếp tục ở đây, ta sẽ nói về marginal f(𝐲).
 >
 >
 >
-> Thế thì, lần này ko cần chứng minh gì, chỉ cần áp dụng kết luận đã làm: Vì ta đã có f(**z**) là normal với mean E(**Z**) = \[**μ**; **Aμ** + **b**\] và covariance Cov(**Z**) = \[**Λ**inv, **Λ**inv**A**T; **AΛ**inv, **L**inv + **AΛ**inv**A**T\], theo ý (1) ở trên, có thể kết luận: marginal f(**y**) cũng là Normal. Với tham số là:
+> Thế thì, lần này ko cần chứng minh gì, chỉ cần áp dụng kết luận đã làm: Vì ta đã có f(𝐳) là normal với mean E(𝐙) = \[**μ**; **Aμ** + 𝐛\] và covariance Cov(𝐙) = \[**Λ**inv, **Λ**inv𝐀ᵀ; **AΛ**inv, 𝐋inv + **AΛ**inv𝐀ᵀ\], theo ý (1) ở trên, có thể kết luận: marginal f(𝐲) cũng là Normal. Với tham số là:
 >
 >
 >
@@ -249,11 +249,11 @@
 >
 >
 >
-> Covariance matrix: Trong chứng minh trước **Σ** = \[**Σaa, Σab; Σba, Σbb\]** là cov(**X** = \[**Xa**; **Xb**\]) thì cov(**Xa**) là **Σaa**, nên ở đây Cov(Y) chính là **L**inv + **AΛ**inv**A**T.
+> Covariance matrix: Trong chứng minh trước **Σ** = \[**Σaa, Σab; Σba, Σbb\]** là cov(𝐗 = \[**Xa**; **Xb**\]) thì cov(**Xa**) là **Σaa**, nên ở đây Cov(Y) chính là 𝐋inv + **AΛ**inv𝐀ᵀ.
 >
 >
 >
-> ⇨ **Y** \~ Normal(**Aμ** + **b**, **L**inv + **AΛ**inv**A**T)
+> ⇨ 𝐘 \~ Normal(**Aμ** + 𝐛, 𝐋inv + **AΛ**inv𝐀ᵀ)
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
@@ -275,15 +275,15 @@
 >
 >
 >
-> Ôn lại bối cảnh một chút, bài toán đang làm là, cho marginal và conditional distribution đều là Normal (Gaussian) trong đó mean của f(**y**|**x**) là hàm tuyến tính theo **x**, còn covariance độc lập với **x**. Nên ta có f(**x**) \~ Normal(**μ**, **Λ**inv) và f(**y**|**x**) \~ Normal(**A**x+**b**, **L**inv).
+> Ôn lại bối cảnh một chút, bài toán đang làm là, cho marginal và conditional distribution đều là Normal (Gaussian) trong đó mean của f(𝐲|𝐱) là hàm tuyến tính theo 𝐱, còn covariance độc lập với 𝐱. Nên ta có f(𝐱) \~ Normal(**μ**, **Λ**inv) và f(𝐲|𝐱) \~ Normal(𝐀x+𝐛, 𝐋inv).
 >
 >
 >
-> Nhiệm vụ là tìm joint distribution, và ta đã thấy nó cũng là Gaussian. Một khi có joint distribution, ta sẽ áp dụng kết quả ở phần trước, để thấy marginal distribution f(**y**) cũng là Gaussian, có mean là E\[**Y**\] = **Aμ** + **b** và cov(**Y**) = **L**inv + **A** **Λ**inv **A**T.
+> Nhiệm vụ là tìm joint distribution, và ta đã thấy nó cũng là Gaussian. Một khi có joint distribution, ta sẽ áp dụng kết quả ở phần trước, để thấy marginal distribution f(𝐲) cũng là Gaussian, có mean là E\[𝐘\] = **Aμ** + 𝐛 và cov(𝐘) = 𝐋inv + 𝐀 **Λ**inv 𝐀ᵀ.
 >
 >
 >
->  Thế thì ở đây mr Bishop nói rằng khi **A** là **Identity matrix** thì distribution của Y hóa ra là convolution của hai Gaussian. Trong Stat110, thực sự thì gs Joe Blizstein chỉ nói rất sơ sơ về convolution. Cụ thể là ông cho ta biết convolution là tổng của hai random variable (ông nói convolution chỉ là một từ bóng bẩy của sum, tổng) X, Y. Có điều, ông chỉ nói nhiêu đó trong bối cảnh là nói về hàm MGF, rằng, MGF sẽ cho ta cách derive pdf của một tổng các random variable dễ hơn là dùng convolution, lợi dụng một tính chất của MGF đó là nếu X, Y độc lập thì MGF của X + Y = MGF của X nhân MGF của Y: M\_(X+Y)(t) = MX(t) × MY(t).
+>  Thế thì ở đây mr Bishop nói rằng khi 𝐀 là **Identity matrix** thì distribution của Y hóa ra là convolution của hai Gaussian. Trong Stat110, thực sự thì gs Joe Blizstein chỉ nói rất sơ sơ về convolution. Cụ thể là ông cho ta biết convolution là tổng của hai random variable (ông nói convolution chỉ là một từ bóng bẩy của sum, tổng) X, Y. Có điều, ông chỉ nói nhiêu đó trong bối cảnh là nói về hàm MGF, rằng, MGF sẽ cho ta cách derive pdf của một tổng các random variable dễ hơn là dùng convolution, lợi dụng một tính chất của MGF đó là nếu X, Y độc lập thì MGF của X + Y = MGF của X nhân MGF của Y: M\_(X+Y)(t) = MX(t) × MY(t).
 >
 >
 >
@@ -307,7 +307,7 @@
 >
 >
 >
-> Jacobinan: ∇x(z,v) = (∂x/∂z, ∂x/∂v)T =  (0, 1)T. ∇y(z,v) = (∂y/∂z, ∂y/v∂) = (1, -1)T
+> Jacobinan: ∇x(z,v) = (∂x/∂z, ∂x/∂v)ᵀ =  (0, 1)ᵀ. ∇y(z,v) = (∂y/∂z, ∂y/v∂) = (1, -1)ᵀ
 >
 >
 >
@@ -343,55 +343,55 @@
 >
 >
 >
-> Rồi, nãy giờ là kiểu như để mình hiểu bản chất cái công thức convolution thật ra chỉ là đổi biến. Quay lại đây, ta sẽ cùng nhau xem thử vì sao gs lại nói "nói rằng khi **A** là **Identity matrix** thì distribution của Y hóa ra là convolution của hai Gaussian"
+> Rồi, nãy giờ là kiểu như để mình hiểu bản chất cái công thức convolution thật ra chỉ là đổi biến. Quay lại đây, ta sẽ cùng nhau xem thử vì sao gs lại nói "nói rằng khi 𝐀 là **Identity matrix** thì distribution của Y hóa ra là convolution của hai Gaussian"
 >
 >
 >
->  Đầu tiên, ta đã kết luận **Y** given **x**, f(**y**|**x**) \~ Normal(**Ax**+**b**, **L**inv), theo location scalae family theorem, khi random variable X \~ một pdf thuộc location scalar familty có location μ thì X - μ sẽ là random varialbe có pdf là standard member của familty đó, tức location = 0. Với normal, nó là một dạng location scale family, nên **T** = **Y** - E**Y** = **Y** - **Ax** - **b** chính là một Normal(**0**, **L**inv).
+>  Đầu tiên, ta đã kết luận 𝐘 given 𝐱, f(𝐲|𝐱) \~ Normal(**Ax**+𝐛, 𝐋inv), theo location scalae family theorem, khi random variable X \~ một pdf thuộc location scalar familty có location μ thì X - μ sẽ là random varialbe có pdf là standard member của familty đó, tức location = 0. Với normal, nó là một dạng location scale family, nên 𝐓 = 𝐘 - E𝐘 = 𝐘 - **Ax** - 𝐛 chính là một Normal(**0**, 𝐋inv).
 >
 >
 >
-> vậy ta có **T** = **Y** - **Ax** - **b** ⇔ **Y** = **T** + **Ax** + **b**.
+> vậy ta có 𝐓 = 𝐘 - **Ax** - 𝐛 ⇔ 𝐘 = 𝐓 + **Ax** + 𝐛.
 >
 >
 >
-> Nếu **A** = **I**, ta có **Y** = **T** + **x** + **b**
+> Nếu 𝐀 = 𝐈, ta có 𝐘 = 𝐓 + 𝐱 + 𝐛
 >
 >
 >
-> Dĩ nhiên ta đang xét **x** fixed, là một observed value của **X**.
+> Dĩ nhiên ta đang xét 𝐱 fixed, là một observed value của 𝐗.
 >
 >
 >
-> Bây giờ, nếu ta tính đến với **X** là random variable, có distribution f(**x**) là Normal(**μ**, **Λ**inv), thì theo location scale, ta cũng sẽ có **U** = **X** + **b** sẽ là Normal(**μ** + **b**, **Λ**inv)
+> Bây giờ, nếu ta tính đến với 𝐗 là random variable, có distribution f(𝐱) là Normal(**μ**, **Λ**inv), thì theo location scale, ta cũng sẽ có 𝐔 = 𝐗 + 𝐛 sẽ là Normal(**μ** + 𝐛, **Λ**inv)
 >
 >
 >
->  Lúc này, **Y** = **T** + **X** + **b** = **T** + **U chính là tổng của hai Normal:**
+>  Lúc này, 𝐘 = 𝐓 + 𝐗 + 𝐛 = 𝐓 + **U chính là tổng của hai Normal:**
 >
 >
 >
-> **T** \~ Normal(**0**, **L**inv) và U \~ Normal(**μ** + **b**, **Λ**inv)
+> 𝐓 \~ Normal(**0**, 𝐋inv) và U \~ Normal(**μ** + 𝐛, **Λ**inv)
 >
 >
 >
-> Nếu áp dụng công thức covolution ở trên, và giải cái tích phân f(**y**) = ∫f**T**(**t**)f**U**(**y**-**t**)d**t** thay công thức pdf của **T** và **U** vào, ta có thể chứng minh rằng quả thật đây là Gaussian có mean là tổng mean, covariance là tổng covariance. Hoặc làm như trong Stat110, dùng MGF, ta cũng có thể chứng minh điều này. Nhưng cái chính là, một khi đã chỉ ra **Y** là tổng của **T**, **U** thì dùng tính linearity ta nhất định phải có mean bằng tổng mean. Và vì tính độc lập của T, U ta sẽ có covariance bằng tổng covariance:
+> Nếu áp dụng công thức covolution ở trên, và giải cái tích phân f(𝐲) = ∫f𝐓(𝐭)f𝐔(𝐲-𝐭)d𝐭 thay công thức pdf của 𝐓 và 𝐔 vào, ta có thể chứng minh rằng quả thật đây là Gaussian có mean là tổng mean, covariance là tổng covariance. Hoặc làm như trong Stat110, dùng MGF, ta cũng có thể chứng minh điều này. Nhưng cái chính là, một khi đã chỉ ra 𝐘 là tổng của 𝐓, 𝐔 thì dùng tính linearity ta nhất định phải có mean bằng tổng mean. Và vì tính độc lập của T, U ta sẽ có covariance bằng tổng covariance:
 >
 >
 >
-> Và mean của **Y**, E**Y** = **μ** + **b**, bằng **0** + **μ** + **b =** E**T +** E**U**.
+> Và mean của 𝐘, E𝐘 = **μ** + 𝐛, bằng **0** + **μ** + **b =** E**T +** E𝐔.
 >
 >
 >
-> Còn covarinance Cov(**Y**) = **L**inv + **Λ**inv = Cov(**T**) + Cov(**U**)
+> Còn covarinance Cov(𝐘) = 𝐋inv + **Λ**inv = Cov(𝐓) + Cov(𝐔)
 >
 >
 >
-> Và kết quả mà mình đã làm ở phần trước - marginal pdf của **Y**, f(**y**) cho thấy nó Normal(**Aμ** + **b**, **L**inv + **AΛ**inv**A**T) , với **A** = **I**, Normal(**μ** + **b**, **L**inv + **Λ**inv) đã xác nhận điều này.
+> Và kết quả mà mình đã làm ở phần trước - marginal pdf của 𝐘, f(𝐲) cho thấy nó Normal(**Aμ** + 𝐛, 𝐋inv + **AΛ**inv𝐀ᵀ) , với 𝐀 = 𝐈, Normal(**μ** + 𝐛, 𝐋inv + **Λ**inv) đã xác nhận điều này.
 >
 >
 >
-> Do đó, gs mới nói, với **A** = **I** thì hóa ra **Y** chính là tổng của hai Normal random variable
+> Do đó, gs mới nói, với 𝐀 = 𝐈 thì hóa ra 𝐘 chính là tổng của hai Normal random variable
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
@@ -409,93 +409,93 @@
 <p align="center"><kbd><img src="assets/gudg6jzgga8.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, cuối cùng là ta sẽ tìm f(**x**|**y**) (nhắc lại nhé, đề bài cho ta có f(**x**) \~ Normal(**μ**, **Λ**inv), f(**y**|**x**) là Normal(**Ax**+**b**, **L**inv), xong chứng minh f(**x**,**y**) và f(**y**) cũng là Gaussian, giờ đến cái f(**x**|**y**):
+> Rồi, cuối cùng là ta sẽ tìm f(𝐱|𝐲) (nhắc lại nhé, đề bài cho ta có f(𝐱) \~ Normal(**μ**, **Λ**inv), f(𝐲|𝐱) là Normal(**Ax**+𝐛, 𝐋inv), xong chứng minh f(𝐱,𝐲) và f(𝐲) cũng là Gaussian, giờ đến cái f(𝐱|𝐲):
 >
 >
 >
-> Thì nhờ đã có f(**x**,**y**) ta cũng chỉ dùng cái kết quả ở mấy phần trước, khi trong đó ta có **X** = \[**Xa**; **Xb**\] có pdf Normal(**μ**, **Σ**) với **Σ** = \[**Σaa**, **Σab**; **Σba**, **Σbb**\] và **Σ**inv = **Λ** = \[**Λaa**, **Λab**; **Λba**, **Λbb**\], thì f(**xa**|**xb**) sẽ là Normal có **μa|b** = **μa** - **Λaa_inv Λab** (**xb** - **μb**) và covariance matrix là **Σa|b** = (**Λaa**)inv.
+> Thì nhờ đã có f(𝐱,𝐲) ta cũng chỉ dùng cái kết quả ở mấy phần trước, khi trong đó ta có 𝐗 = \[**Xa**; **Xb**\] có pdf Normal(**μ**, **Σ**) với **Σ** = \[**Σaa**, **Σab**; **Σba**, **Σbb**\] và **Σ**inv = **Λ** = \[**Λaa**, **Λab**; **Λba**, **Λbb**\], thì f(**xa**|**xb**) sẽ là Normal có **μa|b** = **μa** - **Λaa⁻¹ Λab** (**xb** - **μb**) và covariance matrix là **Σa|b** = (**Λaa**)⁻¹.
 >
 >
 >
-> Vậy thì áp dụng kết quả đó, cùng với ta có joint distribution của **X**, **Y** là Normal có mean = \[**μ**; **Aμ** + **b**\], precision = \[**Λ** + **A**T**LA**, -**A**T**L**; -**LA**, **L**\]
+> Vậy thì áp dụng kết quả đó, cùng với ta có joint distribution của 𝐗, 𝐘 là Normal có mean = \[**μ**; **Aμ** + 𝐛\], precision = \[**Λ** + 𝐀ᵀ**LA**, -𝐀ᵀ𝐋; -**LA**, 𝐋\]
 >
 >
 >
-> và distribution của **Y** là Normal(**μ** + **b**, **L**inv + **Λ**inv)
+> và distribution của 𝐘 là Normal(**μ** + 𝐛, 𝐋inv + **Λ**inv)
 >
 >
 >
-> ⇨ **Λaa** ứng với **Λ** + **A**T**LA**, **Λ**ab ứng với -**A**T**L**, **xb** ứng với **y**, **μb** ứng với E\[**Y**\] =
+> ⇨ **Λaa** ứng với **Λ** + 𝐀ᵀ**LA**, **Λ**ab ứng với -𝐀ᵀ𝐋, **xb** ứng với 𝐲, **μb** ứng với E\[𝐘\] =
 >
-> Rồi, cuối cùng là ta sẽ tìm f(**x**|**y**) (nhắc lại nhé, đề bài cho ta có f(**x**) \~ Normal(**μ**, **Λ**inv), f(**y**|**x**) là Normal(**Ax**+**b**, **L**inv), xong chứng minh f(**x**,**y**) và f(**y**) cũng là Gaussian, giờ đến cái f(**x**|**y**):
+> Rồi, cuối cùng là ta sẽ tìm f(𝐱|𝐲) (nhắc lại nhé, đề bài cho ta có f(𝐱) \~ Normal(**μ**, **Λ**inv), f(𝐲|𝐱) là Normal(**Ax**+𝐛, 𝐋inv), xong chứng minh f(𝐱,𝐲) và f(𝐲) cũng là Gaussian, giờ đến cái f(𝐱|𝐲):
 >
 >
 >
-> Thì nhờ đã có f(**x**,**y**) ta cũng chỉ dùng cái kết quả ở mấy phần trước, khi trong đó ta có **X** = \[**Xa**; **Xb**\] có pdf Normal(**μ**, **Σ**) với **Σ** = \[**Σaa**, **Σab**; **Σba**, **Σbb**\] và **Σ**inv = **Λ** = \[**Λaa**, **Λab**; **Λba**, **Λbb**\], thì f(**xa**|**xb**) sẽ là Normal có **μa|b** = **μa** - **Λaa_inv Λab** (**xb** - **μb**) và covariance matrix là **Σa|b** = (**Λaa**)inv.
+> Thì nhờ đã có f(𝐱,𝐲) ta cũng chỉ dùng cái kết quả ở mấy phần trước, khi trong đó ta có 𝐗 = \[**Xa**; **Xb**\] có pdf Normal(**μ**, **Σ**) với **Σ** = \[**Σaa**, **Σab**; **Σba**, **Σbb**\] và **Σ**inv = **Λ** = \[**Λaa**, **Λab**; **Λba**, **Λbb**\], thì f(**xa**|**xb**) sẽ là Normal có **μa|b** = **μa** - **Λaa⁻¹ Λab** (**xb** - **μb**) và covariance matrix là **Σa|b** = (**Λaa**)⁻¹.
 >
 >
 >
-> Vậy thì áp dụng kết quả đó, cùng với ta có joint distribution của **X**, **Y** là Normal có mean = \[**μ**; **Aμ** + **b**\], precision = \[**Λ** + **A**T**LA**, -**A**T**L**; -**LA**, **L**\]
+> Vậy thì áp dụng kết quả đó, cùng với ta có joint distribution của 𝐗, 𝐘 là Normal có mean = \[**μ**; **Aμ** + 𝐛\], precision = \[**Λ** + 𝐀ᵀ**LA**, -𝐀ᵀ𝐋; -**LA**, 𝐋\]
 >
 >
 >
-> và distribution của **Y** là Normal(**Aμ** + **b**, **L**inv + **AΛ**inv**A**T)
+> và distribution của 𝐘 là Normal(**Aμ** + 𝐛, 𝐋inv + **AΛ**inv𝐀ᵀ)
 >
 >
 >
-> ⇨ **Λaa** ứng với **Λ** + **A**T**LA**, **Λ**ab ứng với -**A**T**L**, **xb** ứng với **y**, **μb** ứng với E\[**Y**\] = **Aμ** + **b**
+> ⇨ **Λaa** ứng với **Λ** + 𝐀ᵀ**LA**, **Λ**ab ứng với -𝐀ᵀ𝐋, **xb** ứng với 𝐲, **μb** ứng với E\[𝐘\] = **Aμ** + 𝐛
 >
 >
 >
-> ta có thể nói ngay: f(**x**|**y**) cũng là pdf của Normal, có mean:
+> ta có thể nói ngay: f(𝐱|𝐲) cũng là pdf của Normal, có mean:
 >
 >
 >
-> E\[**X**|**y**\]  
+> E\[𝐗|𝐲\]  
 >
 >
 >
-> (sẽ áp vào công thức tương ứng với **μa** - **Λaa_inv Λab** (**xb** - **μb**))
+> (sẽ áp vào công thức tương ứng với **μa** - **Λaa⁻¹ Λab** (**xb** - **μb**))
 >
 >
 >
-> = **μ** - (**Λ** + **A**T**LA**)\_inv (-**A**T**L**)(**y** - **Aμ** - **b**)
+> = **μ** - (**Λ** + 𝐀ᵀ**LA**)\⁻¹ (-𝐀ᵀ𝐋)(𝐲 - **Aμ** - 𝐛)
 >
 >
 >
-> = **μ** + (**Λ** + **A**T**LA**)\_inv (**A**T**L**)(**y** - **Aμ** - **b**) 
+> = **μ** + (**Λ** + 𝐀ᵀ**LA**)\⁻¹ (𝐀ᵀ𝐋)(𝐲 - **Aμ** - 𝐛) 
 >
 >
 >
-> = (**Λ** + **A**T**LA**)inv(**Λ** + **A**T**LA**)**μ** + (**Λ** + **A**T**LA**)\_inv\[**A**T**L**(**y** - **b**) - **A**T**LAμ**\] 
+> = (**Λ** + 𝐀ᵀ**LA**)⁻¹(**Λ** + 𝐀ᵀ**LA**)**μ** + (**Λ** + 𝐀ᵀ**LA**)\⁻¹\[𝐀ᵀ𝐋(𝐲 - 𝐛) - 𝐀ᵀ**LAμ**\] 
 >
 >
 >
-> = (**Λ** + **A**T**LA**)inv{(**Λ** + **A**T**LA**)**μ** + \[**A**T**L**(**y** - **b**) - **A**T**LAμ**\]}
+> = (**Λ** + 𝐀ᵀ**LA**)⁻¹{(**Λ** + 𝐀ᵀ**LA**)**μ** + \[𝐀ᵀ𝐋(𝐲 - 𝐛) - 𝐀ᵀ**LAμ**\]}
 >
 >
 >
-> = (**Λ** + **A**T**LA**)inv \[**Λμ** + **A**T**LAμ** + **A**T**L**(**y** - **b**) - **A**T**LAμ**\]
+> = (**Λ** + 𝐀ᵀ**LA**)⁻¹ \[**Λμ** + 𝐀ᵀ**LAμ** + 𝐀ᵀ𝐋(𝐲 - 𝐛) - 𝐀ᵀ**LAμ**\]
 >
 >
 >
-> = (**Λ** + **A**T**LA**)inv \[**Λμ** + **A**T**L**(**y** - **b**)\]
+> = (**Λ** + 𝐀ᵀ**LA**)⁻¹ \[**Λμ** + 𝐀ᵀ𝐋(𝐲 - 𝐛)\]
 >
 >
 >
-> = (**Λ** + **A**T**LA**)inv \[**A**T**L**(**y** - **b**) + **Λμ**\] → Đây là 2.111
+> = (**Λ** + 𝐀ᵀ**LA**)⁻¹ \[𝐀ᵀ𝐋(𝐲 - 𝐛) + **Λμ**\] → Đây là 2.111
 >
 >
 >
-> Cov(**X**|**y**) 
+> Cov(𝐗|𝐲) 
 >
 >
 >
-> (sẽ áp vào công thức (**Λaa**)inv) 
+> (sẽ áp vào công thức (**Λaa**)⁻¹) 
 >
 >
 >
-> = (**Λ** + **A**T**LA**)inv → Đây là 2.112
+> = (**Λ** + 𝐀ᵀ**LA**)⁻¹ → Đây là 2.112
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
@@ -515,7 +515,7 @@
 <p align="center"><kbd><img src="assets/jvtbxctroo.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cuối cùng, gs cho rằng ta có thể coi f(**x**) như prior distribution của **X** và f(**x**|**y**) là posterior distribution của **X** dựa trên **Y** = **y**. 
+> Cuối cùng, gs cho rằng ta có thể coi f(𝐱) như prior distribution của 𝐗 và f(𝐱|𝐲) là posterior distribution của 𝐗 dựa trên 𝐘 = 𝐲. 
 >
 >
 >
