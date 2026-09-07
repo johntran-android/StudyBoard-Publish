@@ -25,7 +25,7 @@
 >
 >
 > Trong Stat110, gs Joe Blizstein nói về Normal(0,1) từ standard normal trước,
-> có pdf là f(z) = 1/√2π exp[-z^2/2]
+> có pdf là f(z) = 1/√2π exp[-z²/2]
 >
 >
 >
@@ -52,7 +52,7 @@
 >
 >
 >
-> với x = g(z) = σz + u ⇨ z = ginv(x) = (x - μ) / σ
+> với x = g(z) = σz + u ⇨ z = g⁻¹(x) = (x - μ) / σ
 >
 >
 >
@@ -60,19 +60,19 @@
 >
 >
 >
-> fZ(ginv(x)) |d/dx ginv(x)|
+> fZ(g⁻¹(x)) |d/dx g⁻¹(x)|
 >
 >
 >
-> = 1/√2π exp[-[(x-μ)/σ]^2/2] . (1/σ)
+> = 1/√2π exp[-[(x-μ)/σ]²/2] . (1/σ)
 >
 >
 >
-> = 1/√2π exp[-(x-μ)^2/2σ^2] . (1/σ)
+> = 1/√2π exp[-(x-μ)²/2σ²] . (1/σ)
 >
 >
 >
-> = 1/σ√2π exp[-(x-μ)^2/2σ^2]
+> = 1/σ√2π exp[-(x-μ)²/2σ²]
 >
 >
 >
@@ -82,7 +82,7 @@
 >
 >
 >
-> Ở đây có thể có điểm mà có thể Casella đã nói nhưng ít để ý, 1/σ^2 gọi là
+> Ở đây có thể có điểm mà có thể Casella đã nói nhưng ít để ý, 1/σ² gọi là
 > precision.
 
 <br>
@@ -112,43 +112,43 @@
 >
 >
 >
-> EZ = ∫-inf:inf zfZ(z)dz = ∫-inf:inf z (1/√2π) e^-z^2/2 dz
+> EZ = ∫-inf:inf zfZ(z)dz = ∫-inf:inf z (1/√2π) e^-z²/2 dz
 >
 >
 >
-> = (1/√2π)∫-inf:inf z e^-z^2/2 dz
+> = (1/√2π)∫-inf:inf z e^-z²/2 dz
 >
 >
 >
-> = (1/√2π) [nguyên hàm của z e^-z^2/2] | -inf:inf
+> = (1/√2π) [nguyên hàm của z e^-z²/2] | -inf:inf
 >
 >
 >
-> nguyên hàm của z e^-z^2/2 chính là -e^-z^2/2, 
+> nguyên hàm của z e^-z²/2 chính là -e^-z²/2, 
 >
 >
 >
-> vì d/dz (-e^-z^2/2) = - d(-z^2/2) e^-z^2/2 . d/dz -z^2/2 (chain rule)
+> vì d/dz (-e^-z²/2) = - d(-z²/2) e^-z²/2 . d/dz -z²/2 (chain rule)
 >
 >
 >
-> = - e^-z^2/2  (-z)
+> = - e^-z²/2  (-z)
 >
 >
 >
-> = z e^-z^2/2
+> = z e^-z²/2
 >
 >
 >
-> = (1/√2π) [e^-z^2/2] | -inf:inf
+> = (1/√2π) [e^-z²/2] | -inf:inf
 >
 >
 >
-> z → -inf → -z^2/2 → -inf → [e^-z^2/2] → 0
+> z → -inf → -z²/2 → -inf → [e^-z²/2] → 0
 >
 >
 >
-> z → inf → -z^2/2 → -inf → [e^-z^2/2] → 0
+> z → inf → -z²/2 → -inf → [e^-z²/2] → 0
 >
 >
 >
@@ -160,7 +160,7 @@
 >
 >
 >
-> k(-z) = (-z)fZ(-z) = -z (1/√2π) e^-(-z)^2/2 = -z (1/√2π) e^-z^2/2 = -k(z)
+> k(-z) = (-z)fZ(-z) = -z (1/√2π) e^-(-z)²/2 = -z (1/√2π) e^-z²/2 = -k(z)
 >
 >
 >
@@ -187,7 +187,7 @@
 
 > [!NOTE]
 > Tiếp, còn nhớ trong stat110 và Casella đã học khái niệm mgf (moment generating
-> function) - hàm sinh moment. Với moment được định nghĩa là EX là first moment, EX^2
+> function) - hàm sinh moment. Với moment được định nghĩa là EX là first moment, EX²
 > là second moment.
 >
 >
@@ -196,7 +196,7 @@
 >
 >
 >
-> Thế thì có thể tính second moment bằng cách dùng lotus: ∫x^2fX(x)dx
+> Thế thì có thể tính second moment bằng cách dùng lotus: ∫x²fX(x)dx
 >
 >
 >
@@ -205,16 +205,16 @@
 >
 >
 >
-> Tính theo cách 1: E[X^2] = ∫x^2fX(x)dx (fX(x) là pdf của normal(μ, σ) nếu muốn ghi rườm
+> Tính theo cách 1: E[X²] = ∫x²fX(x)dx (fX(x) là pdf của normal(μ, σ) nếu muốn ghi rườm
 > ra thì ghi là f(x|μ, σ) như trong sách này gs Bishop kí hiệu là chữ N hoa luôn)
 >
 >
 >
-> = ∫x^2 (1/σ√2π) exp[-(x-μ)^2/2σ^2] dx
+> = ∫x² (1/σ√2π) exp[-(x-μ)²/2σ²] dx
 >
 >
 >
-> = (1/σ√2π) ∫x^2 exp[-(x-μ)^2/2σ^2] dx
+> = (1/σ√2π) ∫x² exp[-(x-μ)²/2σ²] dx
 >
 >
 >
@@ -239,7 +239,7 @@
 >
 >
 >
-> Còn làm theo cách kia, thì mgf của X là exp[μt + (1/2)σ^2t^2]
+> Còn làm theo cách kia, thì mgf của X là exp[μt + (1/2)σ²t²]
 >
 >
 >
@@ -248,52 +248,52 @@
 >
 >
 >
-> d/dt [exp[μt + (1/2)σ^2t^2]]
+> d/dt [exp[μt + (1/2)σ²t²]]
 >
 >
 >
-> = d/d[μt + (1/2)σ^2t^2] exp[μt + (1/2)σ^2t^2] . d/dt [μt + (1/2)σ^2t^2]
+> = d/d[μt + (1/2)σ²t²] exp[μt + (1/2)σ²t²] . d/dt [μt + (1/2)σ²t²]
 >
 >
 >
-> = exp[μt + (1/2)σ^2t^2] . (μ + σ^2t)
+> = exp[μt + (1/2)σ²t²] . (μ + σ²t)
 >
 >
 >
-> ⇨ d/dt [exp[μt + (1/2)σ^2t^2]] | t = 0 =  exp[0] . (μ) = μ
+> ⇨ d/dt [exp[μt + (1/2)σ²t²]] | t = 0 =  exp[0] . (μ) = μ
 >
 >
 >
-> Lấy đạo hàm bậc 2, evaluate tại t = 0 ta sẽ có second moment, EX^2:
+> Lấy đạo hàm bậc 2, evaluate tại t = 0 ta sẽ có second moment, EX²:
 >
 >
 >
-> d/dt [đạo hàm bậc nhất] = d/dt [exp[μt + (1/2)σ^2t^2] . (μ + σ^2t)]
+> d/dt [đạo hàm bậc nhất] = d/dt [exp[μt + (1/2)σ²t²] . (μ + σ²t)]
 >
 >
 >
-> = { d/dt exp[μt + (1/2)σ^2t^2] } (μ + σ^2t)] + [exp[μt + (1/2)σ^2t^2]  d/dt  (μ + σ^2t)] |
+> = { d/dt exp[μt + (1/2)σ²t²] } (μ + σ²t)] + [exp[μt + (1/2)σ²t²]  d/dt  (μ + σ²t)] |
 > product rule
 >
 >
 >
-> = { đạo hàm bậc nhất } (μ + σ^2t)] + [exp[μt + (1/2)σ^2t^2]  σ^2]
+> = { đạo hàm bậc nhất } (μ + σ²t)] + [exp[μt + (1/2)σ²t²]  σ²]
 >
 >
 >
-> ⇨ [đạo hàm bậc 2] | t = 0 = { đạo hàm bậc nhất | t=0} (μ)] + [exp[0]  σ^2]
+> ⇨ [đạo hàm bậc 2] | t = 0 = { đạo hàm bậc nhất | t=0} (μ)] + [exp[0]  σ²]
 >
 >
 >
-> = [μ (μ)] + [exp[0]  σ^2]
+> = [μ (μ)] + [exp[0]  σ²]
 >
 >
 >
-> = μ^2 + σ^2 → như trong sách
+> = μ² + σ² → như trong sách
 >
 >
 >
-> Và dùng công thức thứ hai của Variance: VarX = EX^2 - (EX)^2 = μ^2 + σ^2 - μ^2 = σ^2.
+> Và dùng công thức thứ hai của Variance: VarX = EX² - (EX)² = μ² + σ² - μ² = σ².
 >
 >
 >
@@ -317,47 +317,47 @@
 >
 >
 >
-> Nhưng có thể xây dựng công thức của trường hợp iid standard normal trước, tức là joint pdf của iid Zi \~n(0,1) Khi đó **Z** sẽ có mean E**Z** = **0** và covariance matrix Cov(**Z**) = **I**.
+> Nhưng có thể xây dựng công thức của trường hợp iid standard normal trước, tức là joint pdf của iid Zi \~n(0,1) Khi đó 𝐙 sẽ có mean E𝐙 = **0** và covariance matrix Cov(𝐙) = 𝐈.
 >
 >
 >
-> Từ đó, đổi biến **X** = A**Z** + **μ** để E**X** = μ và covariance matrix Cov(**X**) = Σ
+> Từ đó, đổi biến 𝐗 = A𝐙 + **μ** để E𝐗 = μ và covariance matrix Cov(𝐗) = Σ
 >
 >
 >
-> Đầu tiên xây dựng joint pdf của **Z**:
+> Đầu tiên xây dựng joint pdf của 𝐙:
 >
 >
 >
-> f(z1,...zn) = Πi f(zi) (do tính iid) = Πi (1/√2π) exp\[-zi^2/2\]
+> f(z1,...zn) = Πi f(zi) (do tính iid) = Πi (1/√2π) exp\[-zi²/2\]
 >
 >
 >
-> = \[(2π)^-n/2\] Πi exp\[-zi^2/2\]
+> = \[(2π)^-n/2\] Πi exp\[-zi²/2\]
 >
 >
 >
-> = \[(2π)^-n/2\] exp\[-Σizi^2/2\]
+> = \[(2π)^-n/2\] exp\[-Σizi²/2\]
 >
 >
 >
-> Thể hiện dưới dạng vector: Σizi^2 = **z**T**z**
+> Thể hiện dưới dạng vector: Σizi² = 𝐳ᵀ𝐳
 >
 >
 >
-> .. = \[(2π)^-n/2\] exp\[-**z**T**z**/2\]
+> .. = \[(2π)^-n/2\] exp\[-𝐳ᵀ𝐳/2\]
 >
 >
 >
-> Thế thì, tất nhiên E**Z** = \[EZ1, EZ2,...EZd\] = \[0, ...0\] = **0** Bữa trước đã nói covariance của hai random variable vector **X**, **Y** sẽ là một matrix: Cov(**X**, **Y**) = E\[(**X** - E**X**)(**Y** - E**Y**)T\], để rồi phần tử hàng i cột j: ij sẽ là E\[(Xi - EXi)(Yj - EYj)\] chính là Cov(Xi, Yj)
+> Thế thì, tất nhiên E𝐙 = \[EZ1, EZ2,...EZd\] = \[0, ...0\] = **0** Bữa trước đã nói covariance của hai random variable vector 𝐗, 𝐘 sẽ là một matrix: Cov(𝐗, 𝐘) = E\[(𝐗 - E𝐗)(𝐘 - E𝐘)ᵀ\], để rồi phần tử hàng i cột j: ij sẽ là E\[(Xi - EXi)(Yj - EYj)\] chính là Cov(Xi, Yj)
 >
 >
 >
-> ⇨ Cov(**Z**, **Z**), có thể viết tắt là Cov(**Z**), = E\[(**Z** - E**Z**)(**Z** - E**Z**)T\]
+> ⇨ Cov(𝐙, 𝐙), có thể viết tắt là Cov(𝐙), = E\[(𝐙 - E𝐙)(𝐙 - E𝐙)ᵀ\]
 >
 >
 >
-> = E\[**ZZ**T\] (kì vọng của **Z** outer product với **Z**)
+> = E\[**ZZ**ᵀ\] (kì vọng của 𝐙 outer product với 𝐙)
 >
 >
 >
@@ -377,7 +377,7 @@
 >
 >
 >
-> Do đó Cov(**Z**,**Z**) CHÍNH LÀ IDENTITY MATRIX.
+> Do đó Cov(𝐙,𝐙) CHÍNH LÀ IDENTITY MATRIX.
 >
 >
 >
@@ -385,7 +385,7 @@
 >
 >
 >
-> Đổi biến **X** = g(**Z**) = **AZ** + **μ** với **Σ = AA**T là covariance matrix mong muốn, **μ** là vector \[μ1, ...,μn\]. Và ta sẽ xây dựng pdf của **X**, mà ta cho rằng nó sẽ chính là pdf của multivariate Normal(**μ**, **Σ**)
+> Đổi biến 𝐗 = g(𝐙) = **AZ** + **μ** với **Σ = AA**ᵀ là covariance matrix mong muốn, **μ** là vector \[μ1, ...,μn\]. Và ta sẽ xây dựng pdf của 𝐗, mà ta cho rằng nó sẽ chính là pdf của multivariate Normal(**μ**, **Σ**)
 >
 >
 >
@@ -393,7 +393,7 @@
 >
 >
 >
-> 1. Đổi biến như vậy, thì **X** có phải là normal không.
+> 1. Đổi biến như vậy, thì 𝐗 có phải là normal không.
 >
 >
 >
@@ -409,7 +409,7 @@
 >
 >
 >
-> Với **X** = **AZ** + **μ**, Xi = \[hàng i của A\]TZ + μi
+> Với 𝐗 = **AZ** + **μ**, Xi = \[hàng i của A\]ᵀZ + μi
 >
 >
 >
@@ -465,31 +465,31 @@
 >
 >
 >
-> Áp dụng theorem này, nếu X \~ normal(μ1, σ1^2) và Y \~ normal(μ2, σ2^2)
+> Áp dụng theorem này, nếu X \~ normal(μ1, σ1²) và Y \~ normal(μ2, σ2²)
 >
 >
 >
-> và với normal μ, σ ta biết mgf có dạng: exp(μt + σ^2t^2/2)
+> và với normal μ, σ ta biết mgf có dạng: exp(μt + σ²t²/2)
 >
 >
 >
-> thì ΜU(t) = MX(t) \* MY(t) = exp(μ1t + σ1^2t^2/2) exp(μ2t + σ2^2t^2/2)
+> thì ΜU(t) = MX(t) \* MY(t) = exp(μ1t + σ1²t²/2) exp(μ2t + σ2²t²/2)
 >
 >
 >
-> = exp(μ1t+μ2t + σ1^2t^2/2 + σ2^2t^2/2)
+> = exp(μ1t+μ2t + σ1²t²/2 + σ2²t²/2)
 >
 >
 >
-> = exp\[(μ1+μ2)t + \[σ1^2/2 + σ2^2/2\]t^2)
+> = exp\[(μ1+μ2)t + \[σ1²/2 + σ2²/2\]t²)
 >
 >
 >
-> có dạng một mgf của normal(μ1 + μ2, σ1^2 + σ2^2)
+> có dạng một mgf của normal(μ1 + μ2, σ1² + σ2²)
 >
 >
 >
-> và như đã biết trong Stat110, hay Casella, MGF, cũng như CDF, PDF, PMF có thể định nghĩa một distribution. Có nghĩa là ta có thể kết luận U = X + U chính là một normal(μ1 + μ2, σ1^2 + σ2^2).
+> và như đã biết trong Stat110, hay Casella, MGF, cũng như CDF, PDF, PMF có thể định nghĩa một distribution. Có nghĩa là ta có thể kết luận U = X + U chính là một normal(μ1 + μ2, σ1² + σ2²).
 >
 >
 >
@@ -501,31 +501,31 @@
 >
 >
 >
-> Vậy ở đây a1iZi chính là thành viên ứng với location 0, scale a1i. Cũng đồng nghĩa, nó là normal(0, a1i^2) với với i = 1,...,d.
+> Vậy ở đây a1iZi chính là thành viên ứng với location 0, scale a1i. Cũng đồng nghĩa, nó là normal(0, a1i²) với với i = 1,...,d.
 >
 >
 >
-> Vậy thì xét a11Z1 + a12Z2, đây là tổng của hai rvs: a11Z1\~ normal(0, a11^2) và a12Z2 \~ normal(0, a12^2)
+> Vậy thì xét a11Z1 + a12Z2, đây là tổng của hai rvs: a11Z1\~ normal(0, a11²) và a12Z2 \~ normal(0, a12²)
 >
 >
 >
-> Nên theo điều vừa ôn lại, nó chính là rv \~ normal(0+0, a11^2 + a12^2)
+> Nên theo điều vừa ôn lại, nó chính là rv \~ normal(0+0, a11² + a12²)
 >
 >
 >
-> Và lặp lại lập luận này, ta sẽ có Σj a1jZj chính là một normal(0, Σj a1j^2), tức là variance của rv này là tổng các phần từ hàng 1 của A.
+> Và lặp lại lập luận này, ta sẽ có Σj a1jZj chính là một normal(0, Σj a1j²), tức là variance của rv này là tổng các phần từ hàng 1 của A.
 >
 >
 >
-> Tiếp, ta, theo location scale cũng dễ thấy Σj a1jZj + μ1 cũng là một normal(μ1, Σj a1j^2)
+> Tiếp, ta, theo location scale cũng dễ thấy Σj a1jZj + μ1 cũng là một normal(μ1, Σj a1j²)
 >
 >
 >
-> Vậy X1 là normal(μ1, Σj a1j^2), ..
+> Vậy X1 là normal(μ1, Σj a1j²), ..
 >
 >
 >
-> Xi \~ normal(μi, Σj aij^2)
+> Xi \~ normal(μi, Σj aij²)
 >
 >
 >
@@ -533,47 +533,47 @@
 >
 >
 >
-> Với Xi \~ normal(μi, Σj aij) ⇨ E\[**X**\] = \[EX1,...EXd\] = \[μ1, ..μd\] = **μ**.
+> Với Xi \~ normal(μi, Σj aij) ⇨ E\[𝐗\] = \[EX1,...EXd\] = \[μ1, ..μd\] = **μ**.
 >
 >
 >
-> Cov(**X**, **X**) = E\[(**X** - E**X**)(**X** - E**X**)T\]
+> Cov(𝐗, 𝐗) = E\[(𝐗 - E𝐗)(𝐗 - E𝐗)ᵀ\]
 >
 >
 >
-> = E\[(**X** - E**X**)(**X**T - (E**X**)T)\]
+> = E\[(𝐗 - E𝐗)(𝐗ᵀ - (E𝐗)ᵀ)\]
 >
 >
 >
-> = E\[(A**Z** + **μ** - **μ**)((A**Z** + **μ**)T - **μ**T)\]
+> = E\[(A𝐙 + **μ** - **μ**)((A𝐙 + **μ**)ᵀ - **μ**ᵀ)\]
 >
 >
 >
-> = E\[(A**Z**)(**Z**T**A**T + μT - μT)\]
+> = E\[(A𝐙)(𝐙ᵀ𝐀ᵀ + μT - μT)\]
 >
 >
 >
-> = E\[**AZZ**T**A**T\]
+> = E\[**AZZ**ᵀ𝐀ᵀ\]
 >
 >
 >
-> = **A**E\[**ZZ**T\]**A**T (Linearity)
+> = 𝐀E\[**ZZ**ᵀ\]𝐀ᵀ (Linearity)
 >
 >
 >
-> Xét E\[**ZZ**T\]: Để thấy nó là cái gì, ta xét Cov(**Z**,**Z**) = E\[(**Z**-E**Z**)(**Z**-E**Z**)T\] = E\[(**Z** - **0**)(**Z**T - **0**T\] (**0** là vector zero)
+> Xét E\[**ZZ**ᵀ\]: Để thấy nó là cái gì, ta xét Cov(𝐙,𝐙) = E\[(𝐙-E𝐙)(𝐙-E𝐙)ᵀ\] = E\[(𝐙 - **0**)(𝐙ᵀ - **0**ᵀ\] (**0** là vector zero)
 >
 >
 >
-> = E\[**ZZ**T\]. À như vậy,E\[ZZT\] = Cov(**Z,Z**) và như ở trên mình đã biết, nó là Identity matrix: I
+> = E\[**ZZ**ᵀ\]. À như vậy,E\[ZZᵀ\] = Cov(**Z,Z**) và như ở trên mình đã biết, nó là Identity matrix: I
 >
 >
 >
-> Vậy.. = A I AT = AAT và như đã nói, ta chọn A sao cho Σ (covariance matrix mong muuốn) = AAT
+> Vậy.. = A I Aᵀ = AAᵀ và như đã nói, ta chọn A sao cho Σ (covariance matrix mong muuốn) = AAᵀ
 >
 >
 >
-> ⇨ Cov(**X**,**X**) = **Σ**
+> ⇨ Cov(𝐗,𝐗) = **Σ**
 >
 >
 >
@@ -581,7 +581,7 @@
 >
 >
 >
-> Tới đây ta đã chứng minh xong **X** sẽ là normal(**μ**, **Σ**). Việc bây giờ là xây dựng pdf của X
+> Tới đây ta đã chứng minh xong 𝐗 sẽ là normal(**μ**, **Σ**). Việc bây giờ là xây dựng pdf của X
 >
 >
 >
@@ -597,7 +597,7 @@
 >
 >
 >
-> (support set của X còn nhớ, đại khái là subset của range X sao cho tại đó / trên đó pdf/pmf của X dương, vậy thì support set của random vector \[X, Y\], là subset của R^2, sao cho trên đó joint pdf fX,Y(x,y) dương)
+> (support set của X còn nhớ, đại khái là subset của range X sao cho tại đó / trên đó pdf/pmf của X dương, vậy thì support set của random vector \[X, Y\], là subset của R², sao cho trên đó joint pdf fX,Y(x,y) dương)
 >
 >
 >
@@ -621,11 +621,11 @@
 >
 >
 >
-> Thế thì giả sử \[U,V\]T = A \[X,Y\]T + μ (tức là cũng là một affine transformation)
+> Thế thì giả sử \[U,V\]ᵀ = A \[X,Y\]ᵀ + μ (tức là cũng là một affine transformation)
 >
 >
 >
-> Ôn lại kiến thức giải tích nếu ta có f(x) = Ax + b là R^n → R^m function ⇨ ∇f(x), cũng là Jacobian.
+> Ôn lại kiến thức giải tích nếu ta có f(x) = Ax + b là Rⁿ → R^m function ⇨ ∇f(x), cũng là Jacobian.
 >
 >
 >
@@ -633,15 +633,15 @@
 >
 >
 >
-> Nếu A invertible, ta có quan hệ ngược lại: x = Ainv(f - b) = Ainvf - Ainvb
+> Nếu A invertible, ta có quan hệ ngược lại: x = A⁻¹(f - b) = A⁻¹f - A⁻¹b
 >
 >
 >
-> Và khi đó ∇x(f), là Jacobian của phép biến đởi f → x chính là Ainv.
+> Và khi đó ∇x(f), là Jacobian của phép biến đởi f → x chính là A⁻¹.
 >
 >
 >
-> Vậy thì quay lại đây nếu gọi vector **f** = \[u,v\]T và **x** = (x,y) thì Jacobian ∂(x,y) / ∂(u,v) chính là Ainv.
+> Vậy thì quay lại đây nếu gọi vector **f** = \[u,v\]ᵀ và 𝐱 = (x,y) thì Jacobian ∂(x,y) / ∂(u,v) chính là A⁻¹.
 >
 >
 >
@@ -649,11 +649,11 @@
 >
 >
 >
-> Và ta cũng đã biết trong MIT 1806: det Ainv = 1/ det A. Chứng minh rất dễ: AAinv = Ainv A = I ⇨ det(AAinv) = det I = 1 (tính chất đầu tiên của det thầy Strang dạy trong bài định thức chính là det I = 1)
+> Và ta cũng đã biết trong MIT 1806: det A⁻¹ = 1/ det A. Chứng minh rất dễ: AA⁻¹ = A⁻¹ A = I ⇨ det(AA⁻¹) = det I = 1 (tính chất đầu tiên của det thầy Strang dạy trong bài định thức chính là det I = 1)
 >
 >
 >
-> Rồi det(AB) = det A det B ⇨ det (AAinv) = det A det Ainv = 1 ⇨ det Ainv = 1 / det A
+> Rồi det(AB) = det A det B ⇨ det (AA⁻¹) = det A det A⁻¹ = 1 ⇨ det A⁻¹ = 1 / det A
 >
 >
 >
@@ -685,23 +685,23 @@
 >
 >
 >
-> Thay fZ(z) vô: = \[(2π)^-d/2\] exp\[-**z**T**z**/2\]
+> Thay fZ(z) vô: = \[(2π)^-d/2\] exp\[-𝐳ᵀ𝐳/2\]
 >
 >
 >
-> Với **x** = A**z** + **μ** ⇨ z = Ainv**x** - Ainv**μ**
+> Với 𝐱 = A𝐳 + **μ** ⇨ z = A⁻¹𝐱 - A⁻¹**μ**
 >
 >
 >
-> ⇨ **z**T**z** = (Ainv**x** - Ainv**μ**)T(Ainv**x** - Ainv**μ**)
+> ⇨ 𝐳ᵀ𝐳 = (A⁻¹𝐱 - A⁻¹**μ**)ᵀ(A⁻¹𝐱 - A⁻¹**μ**)
 >
 >
 >
-> = (**x**TAinv - **μ**TAinvT)(Ainv**x** - Ainv**μ**)
+> = (𝐱ᵀA⁻¹ - **μ**ᵀA⁻¹ᵀ)(A⁻¹𝐱 - A⁻¹**μ**)
 >
 >
 >
-> = **x**TAinvTAinv**x** - **μ**TAinvTAinv**x** - **x**TAinvTAinv**μ** + **μ**TAinvTAinv**μ**
+> = 𝐱ᵀA⁻¹ᵀA⁻¹𝐱 - **μ**ᵀA⁻¹ᵀA⁻¹𝐱 - 𝐱ᵀA⁻¹ᵀA⁻¹**μ** + **μ**ᵀA⁻¹ᵀA⁻¹**μ**
 >
 >
 >
@@ -709,51 +709,51 @@
 >
 >
 >
-> (AB)inv = BinvAinv (nếu A, B invertible). chứng minh dễ ẹt: (AB)(BinvAinv) = A I Ainv = AAinv = I ⇨ invert của AB chính là BinvAinv
+> (AB)⁻¹ = B⁻¹A⁻¹ (nếu A, B invertible). chứng minh dễ ẹt: (AB)(B⁻¹A⁻¹) = A I A⁻¹ = AA⁻¹ = I ⇨ invert của AB chính là B⁻¹A⁻¹
 >
 >
 >
-> Và (Ainv)T = (AT)inv, cũng dễ chứng minh: AAinv = I ⇔ (AAinv)T = I ⇔ AinvT AT = I ⇨ inverse của AT chính là AinvT
+> Và (A⁻¹)ᵀ = (Aᵀ)⁻¹, cũng dễ chứng minh: AA⁻¹ = I ⇔ (AA⁻¹)ᵀ = I ⇔ A⁻¹ᵀ Aᵀ = I ⇨ inverse của Aᵀ chính là A⁻¹ᵀ
 >
 >
 >
-> ⇨ AinvTAinv = (AT)invAinv = (AAT)inv = Σinv
+> ⇨ A⁻¹ᵀA⁻¹ = (Aᵀ)⁻¹A⁻¹ = (AAᵀ)⁻¹ = Σ⁻¹
 >
 >
 >
-> ⇨ **x**TAinvTAinv**x** - μTAinvTAinv**x** - **x**TAinvTAinv**μ** + **μ**TAinvTAinv**μ**
+> ⇨ 𝐱ᵀA⁻¹ᵀA⁻¹𝐱 - μTA⁻¹ᵀA⁻¹𝐱 - 𝐱ᵀA⁻¹ᵀA⁻¹**μ** + **μ**ᵀA⁻¹ᵀA⁻¹**μ**
 >
 >
 >
-> = (**x**T - μT)Σinv**x** - (**x**T- **μ**T)Σinv**μ**
+> = (𝐱ᵀ - μT)Σ⁻¹𝐱 - (𝐱ᵀ- **μ**ᵀ)Σ⁻¹**μ**
 >
 >
 >
-> = (**x**T - **μ**T)(Σinv**x** - Σinv**μ**)
+> = (𝐱ᵀ - **μ**ᵀ)(Σ⁻¹𝐱 - Σ⁻¹**μ**)
 >
 >
 >
-> = (**x**T - **μ**T)Σinv(**x** - **μ**)
+> = (𝐱ᵀ - **μ**ᵀ)Σ⁻¹(𝐱 - **μ**)
 >
 >
 >
-> = (**x** - **μ**)TΣinv(**x** - **μ**)
+> = (𝐱 - **μ**)ᵀΣ⁻¹(𝐱 - **μ**)
 >
 >
 >
-> Vậy f**X**(**x**) = \[(2π)^-d/2\] exp\[-(**x** - **μ**)TΣinv(**x** - **μ**)/2\] \[1 / |det A|\]
+> Vậy f𝐗(𝐱) = \[(2π)^-d/2\] exp\[-(𝐱 - **μ**)ᵀΣ⁻¹(𝐱 - **μ**)/2\] \[1 / |det A|\]
 >
 >
 >
-> = \[(2π)^-d/2\] \[1/|det A|\] exp\[-(**x** - **μ**)TΣinv(**x** - **μ**)/2\]
+> = \[(2π)^-d/2\] \[1/|det A|\] exp\[-(𝐱 - **μ**)ᵀΣ⁻¹(𝐱 - **μ**)/2\]
 >
 >
 >
-> Và Σ = AAT ⇨ det Σ = det A det AT
+> Và Σ = AAᵀ ⇨ det Σ = det A det Aᵀ
 >
 >
 >
-> Và det A = det AT: Vì sao?
+> Và det A = det Aᵀ: Vì sao?
 >
 >
 >
@@ -777,23 +777,23 @@
 >
 >
 >
-> AT = (LU)T = LT UT ⇨ det (AT) = det LT det UT
+> Aᵀ = (LU)ᵀ = Lᵀ Uᵀ ⇨ det (Aᵀ) = det Lᵀ det Uᵀ
 >
 >
 >
-> = 1 \* det UT = det U
+> = 1 \* det Uᵀ = det U
 >
 >
 >
-> Vậy det A = det AT vì đều bằng det U
+> Vậy det A = det Aᵀ vì đều bằng det U
 >
 >
 >
-> VẬY det Σ = det A det AT = (det A)^2 ⇨ |det A| = (det Σ)^1/2
+> VẬY det Σ = det A det Aᵀ = (det A)² ⇨ |det A| = (det Σ)^1/2
 >
 >
 >
-> Và kết quả cuối cùng là f**X**(**x**) = \[(2π)^-d/2\] \[1/(det Σ)^1/2\] exp\[-(**x** - **μ**)TΣinv(**x** - **μ**)/2\]
+> Và kết quả cuối cùng là f𝐗(𝐱) = \[(2π)^-d/2\] \[1/(det Σ)^1/2\] exp\[-(𝐱 - **μ**)ᵀΣ⁻¹(𝐱 - **μ**)/2\]
 >
 >
 >
@@ -805,7 +805,7 @@
 >
 >
 >
-> \[(2π)^-D/2\] \[1/|Σ|^1/2\] exp\[-(**x** - **μ**)TΣinv(**x** - μ)/2\]
+> \[(2π)^-D/2\] \[1/|Σ|^1/2\] exp\[-(𝐱 - **μ**)ᵀΣ⁻¹(𝐱 - μ)/2\]
 >
 >
 >
@@ -817,7 +817,7 @@
 >
 >
 >
-> Σ = AAT, lí do có thể phân tách Σ, hay nói cách khác, có thể tìm được A thỏa điều này là vì Σ là matrix xác định dương (positive definite)
+> Σ = AAᵀ, lí do có thể phân tách Σ, hay nói cách khác, có thể tìm được A thỏa điều này là vì Σ là matrix xác định dương (positive definite)
 
 **🔗 See also:** [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8) · [Log Marginal Likelihood Derivation](./351_evaluation_of_the_evidence_function.md#node-ddcs0pi) · [Section 3.5.3 Effective Number of Parameters](./353_effective_number_of_parameters.md#node-2wanjgv) · [Ex 3.6  MLE Hồi quy Đa biến](./37_exercises.md#node-cq8t94f) · [Ex 3.7 Posterior Distribution in Linear Basis Models](./37_exercises.md#node-97teyoh)
 
@@ -840,7 +840,7 @@
 >
 >
 >
-> Khi đó xét random vector **X** = [X1,...Xn] có pdf, cũng là joint pdf của X1,..Xn f(**x**).
+> Khi đó xét random vector 𝐗 = [X1,...Xn] có pdf, cũng là joint pdf của X1,..Xn f(𝐱).
 > Do tính iid, = Πi=1:n f(xi|θ)
 >
 >
@@ -849,33 +849,33 @@
 >
 >
 >
-> ông nói x = (x1,....xD)T để chỉ một observed value của random variable vector.
+> ông nói x = (x1,....xD)ᵀ để chỉ một observed value của random variable vector.
 >
 >
 >
-> Còn **x** = (x1,....xN) là chỉ một tập các observed value được drawn iid từ Normal (μ,
-> σ^2)
+> Còn 𝐱 = (x1,....xN) là chỉ một tập các observed value được drawn iid từ Normal (μ,
+> σ²)
 >
 >
 >
 > Hồi nãy, khi xây dựng công thức multivariate Gaussian (**μ**, **Σ**), mình đã bắt đầu với
-> **Z** = (Z1,...ZD) là random variable vector, với Zi ~ normal(0,1). Để rồi đổi biến với X =
-> A**Z** + **μ** ta có **X** là vector (X1,...XD)
+> 𝐙 = (Z1,...ZD) là random variable vector, với Zi ~ normal(0,1). Để rồi đổi biến với X =
+> A𝐙 + **μ** ta có 𝐗 là vector (X1,...XD)
 >
 >
 >
-> Thế thì theo đó (x1,...xD) đúng là một observed value của **X**, là một R-D dimensional
+> Thế thì theo đó (x1,...xD) đúng là một observed value của 𝐗, là một R-D dimensional
 > random variable vector ~ Normal(**μ**, **Σ**).
 >
 >
 >
 > Thật ra nếu theo notation Casella, thì nếu đặt x = (x1,...xD) thì ta cũng sẽ viết x bold vì
-> quy ước luôn là bold cho vector, thường cho scalar. Nên **x** = (x1,... xD)
+> quy ước luôn là bold cho vector, thường cho scalar. Nên 𝐱 = (x1,... xD)
 >
 >
 >
-> Còn ở đây, **X** = (X1,...,Xn) chính là một random sample, như định nghĩa vừa nhắc lại
-> ở trên. Do đó vector thì lúc này **x** = (x1,...xn) lại là vector các observed values tức là
+> Còn ở đây, 𝐗 = (X1,...,Xn) chính là một random sample, như định nghĩa vừa nhắc lại
+> ở trên. Do đó vector thì lúc này 𝐱 = (x1,...xn) lại là vector các observed values tức là
 > X1 = x1, X2 = x2,...
 >
 >
@@ -884,14 +884,14 @@
 >
 >
 >
-> Nhưng nếu cứ theo toán mà làm, thì thật ra cũng đều là **X**, random variable vector và
-> **x** là giá trị quan sát được của nó.
+> Nhưng nếu cứ theo toán mà làm, thì thật ra cũng đều là 𝐗, random variable vector và
+> 𝐱 là giá trị quan sát được của nó.
 >
 >
 >
-> Và sự thật thì distribution của **X** trong bối cảnh sau cũng là N-dimensional Normal chỉ
-> có điều μ và Σ = diag(σ^2) = σ^2 I (vì các biến X1,...Xn độc lập, nên Covariance matrix
-> sẽ là matrix chéo có đường chéo là variance của các Xi, đều là σ^2, còn ngoài đường
+> Và sự thật thì distribution của 𝐗 trong bối cảnh sau cũng là N-dimensional Normal chỉ
+> có điều μ và Σ = diag(σ²) = σ² I (vì các biến X1,...Xn độc lập, nên Covariance matrix
+> sẽ là matrix chéo có đường chéo là variance của các Xi, đều là σ², còn ngoài đường
 > chéo thì = 0 hết do Cov(Xi, Xj) = 0
 >
 >
@@ -904,7 +904,7 @@
 >
 >
 >
-> Nếu ta có **X** là một D-dimensional Normal(**μ, Σ**), thì một observed value của nó, sẽ
+> Nếu ta có 𝐗 là một D-dimensional Normal(**μ, Σ**), thì một observed value của nó, sẽ
 > là vector:
 >
 >
@@ -934,7 +934,7 @@
 >
 >
 > Rồi, nếu bây giờ, đổi distribution của X đi chút, để nó là **D-dimensional Normal**(μ
-> **1**, σ^2 **I**)
+> **1**, σ² 𝐈)
 >
 >
 >
@@ -942,12 +942,12 @@
 >
 >
 >
-> σ^2 * **I** có nghĩa là nhân scalar σ^2 cho Identity matrix để có matrix với diagonal là
-> [σ^2, ...σ^2]
+> σ² * 𝐈 có nghĩa là nhân scalar σ² cho Identity matrix để có matrix với diagonal là
+> [σ², ...σ²]
 >
 >
 >
-> Thì khi đó, Xi sẽ ~ Normal(μ, σ^2) ∀i, và Cov(Xi, Xj) = 0
+> Thì khi đó, Xi sẽ ~ Normal(μ, σ²) ∀i, và Cov(Xi, Xj) = 0
 >
 >
 >
@@ -959,21 +959,21 @@
 >
 >
 >
-> Nhưng nếu, ta có **1-dimensional distribution Normal**(μ, σ^2), và ta sampling từ nó N
+> Nhưng nếu, ta có **1-dimensional distribution Normal**(μ, σ²), và ta sampling từ nó N
 > lần, để tạo random sample size N: X1,..Xn, independent identically distributed.
 >
 >
 >
-> Thì khi đó Xi cũng ~ Normal (μ, σ^2) với mọi i
+> Thì khi đó Xi cũng ~ Normal (μ, σ²) với mọi i
 >
 >
 >
-> Và nếu gom tụi nó lại, để có vector **X**' = (X1,...XN) thì VỀ BẢN CHẤT, X' SẼ CÓ
-> DISTRIBUTION LÀ Normal(μ * **1**, σ^2 * I) y như ở case trên
+> Và nếu gom tụi nó lại, để có vector 𝐗' = (X1,...XN) thì VỀ BẢN CHẤT, X' SẼ CÓ
+> DISTRIBUTION LÀ Normal(μ * **1**, σ² * I) y như ở case trên
 >
 >
 >
-> Chẳng qua chỉ khác đây là **N-dimensional Normal**(μ * **1**, σ^2 * I).
+> Chẳng qua chỉ khác đây là **N-dimensional Normal**(μ * **1**, σ² * I).
 >
 >
 >
@@ -981,15 +981,15 @@
 >
 >
 >
-> Rồi, thế thì như vậy giúp hoàn toàn rõ ràng rằng, ở đây ta có **X** (mà gs dùng chữ
-> **x**, vốn là đã khiến ta mệt mỏi, vì ông làm vậy ông đã không còn theo quy tắc đặt tên
+> Rồi, thế thì như vậy giúp hoàn toàn rõ ràng rằng, ở đây ta có 𝐗 (mà gs dùng chữ
+> 𝐱, vốn là đã khiến ta mệt mỏi, vì ông làm vậy ông đã không còn theo quy tắc đặt tên
 > của toán rồi nhưng may mà mình học Casella nên hiểu rõ để ko bị lú. Nên cứ viết theo
 > notation của Stat110 hay Casella: Viết hoa cho biến, viết thường cho giá trị biến, chữ
 > đậm cho vector, chữ ốm cho scalar) là random sample của các X1,...XN có population
-> distribution là Normal (μ, σ^2) (và như đã nói, đồng nghĩa **X** = (X1,..Xn) sẽ ~
-> N-dimensional Normal(μ * **1**, σ^2 * I) Để rồi sampling từ cái 1-dimensional Normal(μ,
-> σ^2) n lần để có **x** = (x1,...xn) thì cũng Y CHANG sampling đúng một lần, từ
-> N-dimensional Normal(μ * **1**, σ^2 * I) để có **x** = (x1,...xn)
+> distribution là Normal (μ, σ²) (và như đã nói, đồng nghĩa 𝐗 = (X1,..Xn) sẽ ~
+> N-dimensional Normal(μ * **1**, σ² * I) Để rồi sampling từ cái 1-dimensional Normal(μ,
+> σ²) n lần để có 𝐱 = (x1,...xn) thì cũng Y CHANG sampling đúng một lần, từ
+> N-dimensional Normal(μ * **1**, σ² * I) để có 𝐱 = (x1,...xn)
 >
 >
 >
@@ -1009,7 +1009,7 @@
 >
 >
 >
-> GIÁ TRỊ JOINT PDF CỦA RANDOM SAMPLE **X** = (X1,.. XN) TẠI OBSERVED VALUE **X** = **x**
+> GIÁ TRỊ JOINT PDF CỦA RANDOM SAMPLE 𝐗 = (X1,.. XN) TẠI OBSERVED VALUE 𝐗 = 𝐱
 >
 >
 >
@@ -1018,28 +1018,28 @@
 >
 >
 >
-> f**X**(x1,...xn|μ,σ^2), với X1,...Xn iid, tức independent, nên joint pdf  = tích marginal pdf:
+> f𝐗(x1,...xn|μ,σ²), với X1,...Xn iid, tức independent, nên joint pdf  = tích marginal pdf:
 >
 >
 >
-> = f(x1|μ,σ^2)f(x2|μ,σ^2)...f(xN|μ,σ^2)
+> = f(x1|μ,σ²)f(x2|μ,σ²)...f(xN|μ,σ²)
 >
 >
 >
-> = Πi=1:N f(xi|μ,σ^2) với f(x|μ, σ^2) là pdf của Normal(μ, σ^2)
+> = Πi=1:N f(xi|μ,σ²) với f(x|μ, σ²) là pdf của Normal(μ, σ²)
 >
 >
 >
-> Còn nếu theo góc nhìn là giá trị của pdf của **X, ~ N-dimensional Normal**(μ * **1**, σ^2
-> * I), tại **X** = **x**, thì ta có:
+> Còn nếu theo góc nhìn là giá trị của pdf của **X, ~ N-dimensional Normal**(μ * **1**, σ²
+> * I), tại 𝐗 = 𝐱, thì ta có:
 >
 >
 >
-> f**X**(**x**) với f**X**(**x**) là pdf của **X** ~ N-dimensional Normal(μ * 1, σ^2 * I)
+> f𝐗(𝐱) với f𝐗(𝐱) là pdf của 𝐗 ~ N-dimensional Normal(μ * 1, σ² * I)
 >
 >
 >
-> và nó là công thức vector mà ta chứng minh hồi nãy chỉ thay μ = μ * 1 và Σ = σ^2 * I vô
+> và nó là công thức vector mà ta chứng minh hồi nãy chỉ thay μ = μ * 1 và Σ = σ² * I vô
 > thôi
 >
 >
@@ -1052,7 +1052,7 @@
 >
 >
 >
-> Πi=1:N /N/(xi| μ, σ^2) cũng chính là N(**x**| μ***1**, σ^2***I**)
+> Πi=1:N /N/(xi| μ, σ²) cũng chính là N(𝐱| μ***1**, σ²*𝐈)
 
 <br>
 
@@ -1067,8 +1067,8 @@
 > [!NOTE]
 > Rồi, thế thì, đã nhắc lại vài lần trong các note trước, trong Casella, ta đã biết
 > khái niệm likelihood function, nó làm hàm của θ, (mang ý nghĩa độ hợp lí của θ
-> nếu như observed value là **x**), kí hiệu L(θ|**x**) và hàm này được định nghĩa
-> là L(θ|**x**) = f(**x**|θ), tức joint pdf của random sample tại **x**.
+> nếu như observed value là 𝐱), kí hiệu L(θ|𝐱) và hàm này được định nghĩa
+> là L(θ|𝐱) = f(𝐱|θ), tức joint pdf của random sample tại 𝐱.
 >
 >
 >
@@ -1076,17 +1076,17 @@
 >
 >
 >
-> N(**x** | μ**1**, σ^2*I) = Πi=1:N N(xi | μ, σ^2)  **CHÍNH LÀ** **LIKELIHOOD
-> FUNCTION CỦA** θ = (μ***1,** σ^2*I) **TẠI X = x**
+> N(𝐱 | μ**1**, σ²*I) = Πi=1:N N(xi | μ, σ²)  **CHÍNH LÀ** **LIKELIHOOD
+> FUNCTION CỦA** θ = (μ***1,** σ²*I) **TẠI X = x**
 >
 >
 >
-> L(μ***1**, σ^2*I | **x**), hoặc coi là hàm theo scalar μ, σ^2 thôi cũng được
-> L((μ, σ^2)| **x**)
+> L(μ***1**, σ²*I | 𝐱), hoặc coi là hàm theo scalar μ, σ² thôi cũng được
+> L((μ, σ²)| 𝐱)
 >
 >
 >
-> = N(**x** | μ**1**, σ^2*I) = Πi=1:N N(xi| μ, σ^2)
+> = N(𝐱 | μ**1**, σ²*I) = Πi=1:N N(xi| μ, σ²)
 >
 >
 >
@@ -1102,7 +1102,7 @@
 >
 >
 >
-> Vì hàm likelihood là hàm của (μ, σ^2)
+> Vì hàm likelihood là hàm của (μ, σ²)
 >
 >
 >
@@ -1114,13 +1114,13 @@
 >
 >
 >
-> giá trị marginal pdf của Normal(μ, σ^2) tại đó f(x1| μ, σ^2),...f(xn | μ, σ^2) là các
+> giá trị marginal pdf của Normal(μ, σ²) tại đó f(x1| μ, σ²),...f(xn | μ, σ²) là các
 > đoạn xanh lá)
 >
 >
 >
-> THÌ **TÍCH CỦA CHÚNG**, MỚI LÀ GIÁ TRỊ CỦA LIKELIHOOD TẠI (μ, σ^2):
-> L((μ, σ^2) | **x**)
+> THÌ **TÍCH CỦA CHÚNG**, MỚI LÀ GIÁ TRỊ CỦA LIKELIHOOD TẠI (μ, σ²):
+> L((μ, σ²) | 𝐱)
 >
 >
 >
@@ -1132,29 +1132,29 @@
 >
 >
 >
-> NÓ CŨNG KHÔNG PHẢI LÀ ĐỒ THỊ CỦA POPULATION NORMAL N(μ, σ^2)
-> VÌ BẢN CHẤT TA KO BIẾT μ, σ^2 là bao nhiêu.
+> NÓ CŨNG KHÔNG PHẢI LÀ ĐỒ THỊ CỦA POPULATION NORMAL N(μ, σ²)
+> VÌ BẢN CHẤT TA KO BIẾT μ, σ² là bao nhiêu.
 >
 >
 >
 > SỰ THẬT, NÓ CHỈ LÀ MINH HỌA CHO ĐỒ THỊ CỦA NORMAL
-> TẠI MỘT CẶP (μ, σ^2) **NÀO ĐÓ**.
+> TẠI MỘT CẶP (μ, σ²) **NÀO ĐÓ**.
 >
 >
 >
 > ĐỂ RỒI TA SẼ ĐI MAXIMIZE CÁI LIKELIHOOD, CHÍNH LÀ ĐI TÌM MỘT
-> CẶP (μ, σ^2) SAO CHO TÍCH CỦA MẤY CÁCH ĐOẠN MÀU XANH LÁ NÀY
+> CẶP (μ, σ²) SAO CHO TÍCH CỦA MẤY CÁCH ĐOẠN MÀU XANH LÁ NÀY
 > LỚN NHẤT.
 >
 >
 >
-> Vì với mỗi 1 cặp μ, σ^2, ta sẽ có f(x1|μ, σ^2), f(x2|μ, σ^2) khác nhau, và nhân
-> tụi nó lại để được L(μ, σ^2|**x**) khác nhau. Và sẽ có 1 cặp nào đó maximize
+> Vì với mỗi 1 cặp μ, σ², ta sẽ có f(x1|μ, σ²), f(x2|μ, σ²) khác nhau, và nhân
+> tụi nó lại để được L(μ, σ²|𝐱) khác nhau. Và sẽ có 1 cặp nào đó maximize
 > giá trị này.
 >
 >
 >
-> Và đó chính là MAXIMUM LIKELIHOOD ESTIMATOR CỦA θ = (μ, σ^2)
+> Và đó chính là MAXIMUM LIKELIHOOD ESTIMATOR CỦA θ = (μ, σ²)
 
 <br>
 
@@ -1177,9 +1177,9 @@
 >
 >
 > Như đã biết, dựa vào Bayes rule, ta xây dựng posterior distribution của θ:
-> π(θ|**x**) = f(**x**|θ) π(θ) / f**(**x) và với f(**x**|θ) = L(θ|**x**) nên  π(θ|**x**) = L(θ|**x**) π(θ) / f(**x**)
-> và nếu π(θ) chọn là uniform, tức π(θ) = constant thì maximize L(θ|**x**) cũng
-> chính là maximize π(θ|**x**)
+> π(θ|𝐱) = f(𝐱|θ) π(θ) / f**(**x) và với f(𝐱|θ) = L(θ|𝐱) nên  π(θ|𝐱) = L(θ|𝐱) π(θ) / f(𝐱)
+> và nếu π(θ) chọn là uniform, tức π(θ) = constant thì maximize L(θ|𝐱) cũng
+> chính là maximize π(θ|𝐱)
 
 <br>
 
@@ -1192,13 +1192,13 @@
 <p align="center"><kbd><img src="assets/qth6ji8fxv.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, đại khái là, vừa rồi nói rằng ta sẽ đi tìm θ để sao cho maximize cái π(θ|**x**) và ta sẽ thấy rằng
-> nó có liên hệ với việc maximize L(θ|**x**) sau.
+> Rồi, đại khái là, vừa rồi nói rằng ta sẽ đi tìm θ để sao cho maximize cái π(θ|𝐱) và ta sẽ thấy rằng
+> nó có liên hệ với việc maximize L(θ|𝐱) sau.
 >
 >
 >
-> Còn giờ, ta thử đi tìm θ maximize likelihood L(θ|**x**) trước, cụ thể là với θ là params của normal
-> distribution: θ = (μ, σ^2).
+> Còn giờ, ta thử đi tìm θ maximize likelihood L(θ|𝐱) trước, cụ thể là với θ là params của normal
+> distribution: θ = (μ, σ²).
 >
 >
 >
@@ -1208,9 +1208,9 @@
 >
 >
 > Đầu tiên ôn lại chút, bối cảnh chương 7 sách Casella là ta deal với bài toán: point estimator - Dựa
-> trên giá trị quan sát được của random sample **X** ~ f(**x**|θ) ta muốn thực hiện một suy luận về
+> trên giá trị quan sát được của random sample 𝐗 ~ f(𝐱|θ) ta muốn thực hiện một suy luận về
 > giá trị của θ, và mục tiêu là xây dựng một point estimator, được định nghĩa là một hàm của sample,
-> một statistic W(**X**)  bất kì (tức là bất kì hàm số nào của random sample thì đều có thể đóng vai
+> một statistic W(𝐗)  bất kì (tức là bất kì hàm số nào của random sample thì đều có thể đóng vai
 > một point estimator của θ)
 >
 >
@@ -1221,18 +1221,18 @@
 >
 >
 >
-> Thế thì, với MLE, định nghĩa của nó là: ta sẽ maximize hàm likelihood L(θ|**x**) là hàm của θ, define
-> bởi L(θ|**x**) = f(**x**|θ), nên θ^_mle(**x**) = argmax_θ L(θ|**x**) = argmax_θ f(**x**|θ), và vì tính iid
-> của random sample, f(x|θ) = Πi=1:n f(xi|θ) ⇨ θ^_mle(**x**) = argmax_θ Πi=1:n f(xi|θ)
+> Thế thì, với MLE, định nghĩa của nó là: ta sẽ maximize hàm likelihood L(θ|𝐱) là hàm của θ, define
+> bởi L(θ|𝐱) = f(𝐱|θ), nên θ^_mle(𝐱) = argmax_θ L(θ|𝐱) = argmax_θ f(𝐱|θ), và vì tính iid
+> của random sample, f(x|θ) = Πi=1:n f(xi|θ) ⇨ θ^_mle(𝐱) = argmax_θ Πi=1:n f(xi|θ)
 >
 >
 >
 > Và từ đó, maximum likelihood estimator của θ, như định nghĩa nói trên, là một function của random
-> sample: W(**X**), thì ở đây nó chính là:
+> sample: W(𝐗), thì ở đây nó chính là:
 >
 >
 >
-> argmax_θ f(**X**|θ) = argmax_θ Πi=1:n f(Xi|θ)
+> argmax_θ f(𝐗|θ) = argmax_θ Πi=1:n f(Xi|θ)
 >
 >
 >
@@ -1240,36 +1240,36 @@
 >
 >
 >
-> maximize_(μ, σ^2) { L[(μ,σ^2)|**x**) }
+> maximize_(μ, σ²) { L[(μ,σ²)|𝐱) }
 >
 >
 >
-> = maximize_(μ, σ^2) { f(**x**|μ, σ^2) }
+> = maximize_(μ, σ²) { f(𝐱|μ, σ²) }
 >
 >
 >
-> L[(μ,σ^2)|**x**) = f(**x**|μ, σ^2) (kí hiệu như sách là p(**x**|μ, σ^2) nhưng mình cứ dùng kí hiệu
+> L[(μ,σ²)|𝐱) = f(𝐱|μ, σ²) (kí hiệu như sách là p(𝐱|μ, σ²) nhưng mình cứ dùng kí hiệu
 > chuẩn toán học cho dễ)
 >
 >
 >
-> = Πi=1:n f(xi|μ, σ^2)
+> = Πi=1:n f(xi|μ, σ²)
 >
 >
 >
-> = Πi=1:n (1/σ√2π) exp[-(xi-μ)^2/2σ^2]
+> = Πi=1:n (1/σ√2π) exp[-(xi-μ)²/2σ²]
 >
 >
 >
-> = (1/σ√2π)^n Πi=1:n exp[-(xi-μ)^2/2σ^2] (tích n cái cục (1/σ√2π))
+> = (1/σ√2π)ⁿ Πi=1:n exp[-(xi-μ)²/2σ²] (tích n cái cục (1/σ√2π))
 >
 >
 >
-> = (1/σ√2π)^n exp[Σi=1:n -(xi-μ)^2/2σ^2] (e^a * e^b = e^(a+b))
+> = (1/σ√2π)ⁿ exp[Σi=1:n -(xi-μ)²/2σ²] (e^a * e^b = e^(a+b))
 >
 >
 >
-> = (1/σ√2π)^n exp[(1/2σ^2) Σi=1:n -(xi-μ)^2]
+> = (1/σ√2π)ⁿ exp[(1/2σ²) Σi=1:n -(xi-μ)²]
 >
 >
 >
@@ -1283,23 +1283,23 @@
 >
 >
 >
-> log L(**x**|μ, σ^2) = log { (1/σ√2π)^n exp[(1/2σ^2) Σi=1:n -(xi-μ)^2] }
+> log L(𝐱|μ, σ²) = log { (1/σ√2π)ⁿ exp[(1/2σ²) Σi=1:n -(xi-μ)²] }
 >
 >
 >
-> = log { (1/σ√2π)^n } + log { exp[(1/2σ^2) Σi=1:n -(xi-μ)^2] }
+> = log { (1/σ√2π)ⁿ } + log { exp[(1/2σ²) Σi=1:n -(xi-μ)²] }
 >
 >
 >
-> = n log (1/σ√2π) + (1/2σ^2) Σi=1:n -(xi-μ)^2
+> = n log (1/σ√2π) + (1/2σ²) Σi=1:n -(xi-μ)²
 >
 >
 >
-> = n log (σ√2π)^-1 + (1/2σ^2) Σi=1:n -(xi-μ)^2
+> = n log (σ√2π)^-1 + (1/2σ²) Σi=1:n -(xi-μ)²
 >
 >
 >
-> = -n log (σ√2π) + (1/2σ^2) Σi=1:n -(xi-μ)^2
+> = -n log (σ√2π) + (1/2σ²) Σi=1:n -(xi-μ)²
 >
 >
 >
@@ -1308,11 +1308,11 @@
 >
 >
 >
-> ∇F(μ, σ^2) = **0**
+> ∇F(μ, σ²) = **0**
 >
 >
 >
-> ⇔ [∂F(μ, σ^2)/∂μ, ∂F(μ, σ^2)/∂σ^2] = 0
+> ⇔ [∂F(μ, σ²)/∂μ, ∂F(μ, σ²)/∂σ²] = 0
 >
 >
 >
@@ -1320,79 +1320,79 @@
 >
 >
 >
-> ∂F(μ, σ^2)/∂μ
+> ∂F(μ, σ²)/∂μ
 >
 >
 >
-> = ∂/∂μ [-n log (σ√2π) + (1/2σ^2) Σi=1:n -(xi-μ)^2]
+> = ∂/∂μ [-n log (σ√2π) + (1/2σ²) Σi=1:n -(xi-μ)²]
 >
 >
 >
-> Tính đạo hàm theo μ thì coi σ^2 như constant:
+> Tính đạo hàm theo μ thì coi σ² như constant:
 >
 >
 >
-> = (1/2σ^2) ∂/∂μ [Σi=1:n -(xi-μ)^2]
+> = (1/2σ²) ∂/∂μ [Σi=1:n -(xi-μ)²]
 >
 >
 >
-> = (1/2σ^2)  [Σi=1:n -∂/∂μ (xi-μ)^2]
+> = (1/2σ²)  [Σi=1:n -∂/∂μ (xi-μ)²]
 >
 >
 >
-> = (1/2σ^2)  [Σi=1:n -∂/∂(xi-μ) (xi-μ)^2 . ∂/∂μ (xi-μ)] | chain rule
+> = (1/2σ²)  [Σi=1:n -∂/∂(xi-μ) (xi-μ)² . ∂/∂μ (xi-μ)] | chain rule
 >
 >
 >
-> = (1/2σ^2)  [Σi=1:n -2(xi-μ) . (-1)]
+> = (1/2σ²)  [Σi=1:n -2(xi-μ) . (-1)]
 >
 >
 >
-> = (1/2σ^2)  [Σi=1:n 2(xi-μ)]
+> = (1/2σ²)  [Σi=1:n 2(xi-μ)]
 >
 >
 >
-> = (1/σ^2)  [Σi=1:n (xi-μ)]
+> = (1/σ²)  [Σi=1:n (xi-μ)]
 >
 >
 >
-> = (1/σ^2)  (Σixi-nμ)
+> = (1/σ²)  (Σixi-nμ)
 >
 >
 >
-> ∂F(μ, σ^2)/∂σ^2:
+> ∂F(μ, σ²)/∂σ²:
 >
 >
 >
-> = ∂/∂σ^2 [-n log (σ√2π) + (1/2σ^2) Σi=1:n -(xi-μ)^2]
+> = ∂/∂σ² [-n log (σ√2π) + (1/2σ²) Σi=1:n -(xi-μ)²]
 >
 >
 >
-> = -n ∂/∂σ^2 [log (σ√2π)] + ∂/∂σ^2 [(1/2σ^2) Σi=1:n -(xi-μ)^2]
+> = -n ∂/∂σ² [log (σ√2π)] + ∂/∂σ² [(1/2σ²) Σi=1:n -(xi-μ)²]
 >
 >
 >
-> = -n ∂/∂σ^2 [log (√2πσ^2)] + [Σi=1:n -(xi-μ)^2] ∂/∂σ^2 (1/2[σ^2])
+> = -n ∂/∂σ² [log (√2πσ²)] + [Σi=1:n -(xi-μ)²] ∂/∂σ² (1/2[σ²])
 >
 >
 >
-> = -n [∂/∂(√2πσ^2) log (√2πσ^2) . ∂/∂σ^2 (√2πσ^2)] + (1/2) [Σi=1:n -(xi-μ)^2] ∂/∂σ^2 (1/(σ^2)) }
+> = -n [∂/∂(√2πσ²) log (√2πσ²) . ∂/∂σ² (√2πσ²)] + (1/2) [Σi=1:n -(xi-μ)²] ∂/∂σ² (1/(σ²)) }
 >
 >
 >
-> = -n [1/(√2πσ^2) . √2π ∂/∂σ^2 (σ^2)^1/2] + (1/2) [Σi=1:n -(xi-μ)^2] (-1/(σ^2)^2)
+> = -n [1/(√2πσ²) . √2π ∂/∂σ² (σ²)^1/2] + (1/2) [Σi=1:n -(xi-μ)²] (-1/(σ²)²)
 >
 >
 >
-> = -n [1/(√2πσ^2) . √2π (1/2) (σ^2)^-1/2] + (-1/2(σ^4)) [Σi=1:n -(xi-μ)^2]
+> = -n [1/(√2πσ²) . √2π (1/2) (σ²)^-1/2] + (-1/2(σ⁴)) [Σi=1:n -(xi-μ)²]
 >
 >
 >
-> = -n [1/2σ . (σ^-1)]  - (1/2σ^4) [Σi=1:n -(xi-μ)^2]
+> = -n [1/2σ . (σ^-1)]  - (1/2σ⁴) [Σi=1:n -(xi-μ)²]
 >
 >
 >
-> = -n/2σ^2  - (1/2σ^4) [Σi=1:n -(xi-μ)^2]
+> = -n/2σ²  - (1/2σ⁴) [Σi=1:n -(xi-μ)²]
 >
 >
 >
@@ -1400,7 +1400,7 @@
 >
 >
 >
-> ∂F(μ, σ^2)/∂μ = 0 ⇔ (1/σ^2)  (Σixi-nμ) = 0
+> ∂F(μ, σ²)/∂μ = 0 ⇔ (1/σ²)  (Σixi-nμ) = 0
 >
 >
 >
@@ -1408,7 +1408,7 @@
 >
 >
 >
-> ∂F(μ, σ^2)/∂σ^2 = 0 ⇔ -n/2σ^2  - (1/2σ^4) [Σi=1:n -(xi-μ)^2] = 0
+> ∂F(μ, σ²)/∂σ² = 0 ⇔ -n/2σ²  - (1/2σ⁴) [Σi=1:n -(xi-μ)²] = 0
 >
 >
 >
@@ -1416,31 +1416,31 @@
 >
 >
 >
-> ⇔ -(1/2σ^4) n σ^2 - (1/2σ^4) [Σi-(xi - xbar)^2] = 0
+> ⇔ -(1/2σ⁴) n σ² - (1/2σ⁴) [Σi-(xi - xbar)²] = 0
 >
 >
 >
-> ⇔ -(1/2σ^4) [n σ^2 + Σi-(xi - xbar)^2] = 0
+> ⇔ -(1/2σ⁴) [n σ² + Σi-(xi - xbar)²] = 0
 >
 >
 >
-> ⇨ n σ^2 + Σi-(xi - xbar)^2 = 0
+> ⇨ n σ² + Σi-(xi - xbar)² = 0
 >
 >
 >
-> ⇔ n σ^2 = Σi(xi - xbar)^2
+> ⇔ n σ² = Σi(xi - xbar)²
 >
 >
 >
-> ⇔ σ^2 = Σi(xi - xbar)^2 / n
+> ⇔ σ² = Σi(xi - xbar)² / n
 >
 >
 >
-> Và đây chính là công thức **biased sample variance**: [Σi (Xi - Xbar)^2] / n
+> Và đây chính là công thức **biased sample variance**: [Σi (Xi - Xbar)²] / n
 >
 >
 >
-> vs **unbiased sample variance** S^2 = [Σi (Xi - Xbar)^2] / (n - 1)
+> vs **unbiased sample variance** S² = [Σi (Xi - Xbar)²] / (n - 1)
 >
 >
 >
@@ -1452,7 +1452,7 @@
 >
 >
 >
-> Để chứng minh nó là maximizer, ta sẽ phải chứng minh Hessian tại (μ^_mle, (σ^2)^_mle) xác định
+> Để chứng minh nó là maximizer, ta sẽ phải chứng minh Hessian tại (μ^_mle, (σ²)^_mle) xác định
 > âm (để tại đó hàm số cong xuống). Và để làm vậy thì việc tính toán rất dài.  Phải chứng minh det
 > của Hessian âm. Nên trong sách Casella ở ví dụ 7.2.12 đề cập đến  điều này, trong đó ông cũng ko
 > làm việc này, mà chỉ nói sự thật thì kết quả trên chính là normal MLE.
@@ -1467,12 +1467,12 @@
 >
 >
 >
-> μ_ML(**X**) = Xbar, sample mean
+> μ_ML(𝐗) = Xbar, sample mean
 >
 >
 >
-> (Mình cũng có thể viết Xbar(**X**), viết vậy để nhớ trong Casella từng nói, Xbar chỉ là viết tắt của
-> Xbar(**X**) vì nó là một hàm của sample **X**)
+> (Mình cũng có thể viết Xbar(𝐗), viết vậy để nhớ trong Casella từng nói, Xbar chỉ là viết tắt của
+> Xbar(𝐗) vì nó là một hàm của sample 𝐗)
 >
 >
 >
@@ -1484,7 +1484,7 @@
 >
 >
 >
-> (σ^2)_ml = [Σi (Xi - Xbar)^2] / n
+> (σ²)_ml = [Σi (Xi - Xbar)²] / n
 >
 >
 >
@@ -1492,7 +1492,7 @@
 >
 >
 >
-> (σ^2)_ml = [Σi=1:N (xi - μ_ML)^2] / N
+> (σ²)_ml = [Σi=1:N (xi - μ_ML)²] / N
 >
 >
 >
@@ -1501,9 +1501,9 @@
 >
 >
 > Khúc cuối gs Bishop đại ý là nói, như ta làm ở trên, chính là maximize likelihood cùng lúc over μ,
-> σ^2 Nhưng trong EE364a, ta biết cái vụ nếu ta có hàm f(x, y), thì có thể maximize over x trước sau
+> σ² Nhưng trong EE364a, ta biết cái vụ nếu ta có hàm f(x, y), thì có thể maximize over x trước sau
 > đó maximize over y: sup_x,y f(x,) = sup_x [sup_y f(x,y)] = sup_y [sup_x f(x,uy)]. Có thể là ông đang 
-> nói đến việc ta có thể giải bài toán maximize over μ  trước rồi giải bài toán maximize over σ^2 sau.
+> nói đến việc ta có thể giải bài toán maximize over μ  trước rồi giải bài toán maximize over σ² sau.
 
 **🔗 See also:** [Ước lượng hợp lí cực đại](./125_curve_fitting_re_visited.md#node-r1gqc9l)
 
@@ -1517,8 +1517,8 @@
 
 > [!NOTE]
 > Đạon này ông nói về việc MLE có những hạn chế. Cụ thể là như mình vừa làm
-> xong, μ_ML(**X**) = Xbar, theo Casella đã biết, gọi là unbiased estimator của
-> μ, còn (σ^2)_ML(**X**) = (1/n) Σi (Xi - Xbar)^2 thì lại là biased estimator của σ^2.
+> xong, μ_ML(𝐗) = Xbar, theo Casella đã biết, gọi là unbiased estimator của
+> μ, còn (σ²)_ML(𝐗) = (1/n) Σi (Xi - Xbar)² thì lại là biased estimator của σ².
 >
 >
 >
@@ -1527,16 +1527,16 @@
 >
 >
 >
-> Bias_θ(W(**X**)) = E[W(**X**)] - θ,
+> Bias_θ(W(𝐗)) = E[W(𝐗)] - θ,
 >
 >
 >
-> để rồi nếu kì vọng E[W(**X**)] mà  = θ thì gọi là unbiased estimator còn không thì là
+> để rồi nếu kì vọng E[W(𝐗)] mà  = θ thì gọi là unbiased estimator còn không thì là
 > biased estimatoe
 >
 >
 >
-> Xem thử μ_ML và σ^2_ML có phải là biased estimator không:
+> Xem thử μ_ML và σ²_ML có phải là biased estimator không:
 >
 >
 >
@@ -1544,11 +1544,11 @@
 >
 >
 >
-> Nên Bias_μ[Xbar] = E_μ,σ^2[Xbar] - μ = E_μ[(ΣiXi)/n] - μ 
+> Nên Bias_μ[Xbar] = E_μ,σ²[Xbar] - μ = E_μ[(ΣiXi)/n] - μ 
 >
 >
 >
-> = Σi E_μ,σ^2 (Xi)/n - μ (linearity)
+> = Σi E_μ,σ² (Xi)/n - μ (linearity)
 >
 >
 >
@@ -1560,47 +1560,47 @@
 >
 >
 >
-> Bias_σ^2[(σ^2)_ML] = E_μ,σ^2[(1/n) Σi (Xi - Xbar)^2] - σ^2
+> Bias_σ²[(σ²)_ML] = E_μ,σ²[(1/n) Σi (Xi - Xbar)²] - σ²
 >
 >
 >
-> Để tính kì vọng của (1/n) Σi (Xi - Xbar)^2, theo sách Casella, sẽ 
+> Để tính kì vọng của (1/n) Σi (Xi - Xbar)², theo sách Casella, sẽ 
 >
 >
 >
-> khai triển Σi (xi - a)^2 như sau: 
+> khai triển Σi (xi - a)² như sau: 
 >
 >
 >
-> Σi (xi - a)^2 = Σi (xi - xbar + xbar - a)^2 
+> Σi (xi - a)² = Σi (xi - xbar + xbar - a)² 
 >
 >
 >
-> = Σi [(xi - xbar)^2 + 2(xi - xbar)(xbar - a) + (xbar - a)^2]
+> = Σi [(xi - xbar)² + 2(xi - xbar)(xbar - a) + (xbar - a)²]
 >
 >
 >
-> =  Σi (xi - xbar)^2 + 2Σi [(xi - xbar)(xbar - a)] + Σi (xbar - a)^2
+> =  Σi (xi - xbar)² + 2Σi [(xi - xbar)(xbar - a)] + Σi (xbar - a)²
 >
 >
 >
-> =  Σi (xi - xbar)^2 + 2(xbar - a) Σi [(xi - xbar)] + Σi (xbar - a)^2
+> =  Σi (xi - xbar)² + 2(xbar - a) Σi [(xi - xbar)] + Σi (xbar - a)²
 >
 >
 >
-> =  Σi (xi - xbar)^2 + 2(xbar - a) [(n xbar - n xbar)] + Σi (xbar - a)^2
+> =  Σi (xi - xbar)² + 2(xbar - a) [(n xbar - n xbar)] + Σi (xbar - a)²
 >
 >
 >
-> =  Σi (xi - xbar)^2 + 2(xbar - a) * 0 + Σi (xbar - a)^2
+> =  Σi (xi - xbar)² + 2(xbar - a) * 0 + Σi (xbar - a)²
 >
 >
 >
-> =  Σi (xi - xbar)^2 + Σi (xbar - a)^2
+> =  Σi (xi - xbar)² + Σi (xbar - a)²
 >
 >
 >
-> Viết lại: Σi (xi - a)^2 = Σi (xi - xbar)^2 + Σi (xbar - a)^2
+> Viết lại: Σi (xi - a)² = Σi (xi - xbar)² + Σi (xbar - a)²
 >
 >
 >
@@ -1609,11 +1609,11 @@
 >
 >
 >
-> Và áp dụng a = 0, thì ta sẽ có công thức: Σi (xi)^2 = Σi (xi - xbar)^2 + Σi (xbar)^2
+> Và áp dụng a = 0, thì ta sẽ có công thức: Σi (xi)² = Σi (xi - xbar)² + Σi (xbar)²
 >
 >
 >
-> ⇔ Σi (xi - xbar)^2 = Σi (xi)^2 - Σi (xbar)^2, đây là ý b) của Theorem 5.2.4 Casella.
+> ⇔ Σi (xi - xbar)² = Σi (xi)² - Σi (xbar)², đây là ý b) của Theorem 5.2.4 Casella.
 >
 >
 >
@@ -1621,43 +1621,43 @@
 >
 >
 >
-> Như vậy E[(1/n) Σi (Xi - Xbar)^2]
+> Như vậy E[(1/n) Σi (Xi - Xbar)²]
 >
 >
 >
-> = E[(1/n) [Σi (Xi)^2 - Σi (Xbar)^2]]
+> = E[(1/n) [Σi (Xi)² - Σi (Xbar)²]]
 >
 >
 >
-> = (1/n) E[Σi (Xi)^2 - Σi (Xbar)^2] | linearity E[cX] = cEX
+> = (1/n) E[Σi (Xi)² - Σi (Xbar)²] | linearity E[cX] = cEX
 >
 >
 >
-> = (1/n) [Σi E(Xi)^2 - Σi E(Xbar)^2] | linearity E[X + Y] = EX + EY (1)
+> = (1/n) [Σi E(Xi)² - Σi E(Xbar)²] | linearity E[X + Y] = EX + EY (1)
 >
 >
 >
-> Tới đây ta cần E(Xi)^2 và E(Xbar)^2
+> Tới đây ta cần E(Xi)² và E(Xbar)²
 >
 >
 >
-> Xét E(Xi)^2, ta đã biết công thức hai của VarX = EX^2 - (EX)^2 ⇨ EX^2 = Var(X) + (EX)^2
+> Xét E(Xi)², ta đã biết công thức hai của VarX = EX² - (EX)² ⇨ EX² = Var(X) + (EX)²
 >
 >
 >
-> ⇨ E(Xi)^2 = Var(Xi) + (EXi)^2 
+> ⇨ E(Xi)² = Var(Xi) + (EXi)² 
 >
 >
 >
->  = σ^2 + μ^2
+>  = σ² + μ²
 >
 >
 >
-> (Dĩ nhiên vì X1,...Xn là các rv ~ normal(μ, σ^2) nên EXi chính là μ, VarXi = σ^2)
+> (Dĩ nhiên vì X1,...Xn là các rv ~ normal(μ, σ²) nên EXi chính là μ, VarXi = σ²)
 >
 >
 >
-> Tương tự E(Xbar)^2 = Var(Xbar) + [E(Xbar)]^2
+> Tương tự E(Xbar)² = Var(Xbar) + [E(Xbar)]²
 >
 >
 >
@@ -1665,7 +1665,7 @@
 >
 >
 >
-> EXbar = μ, Var(Xbar) = σ^2/n, chứng minh dễ:
+> EXbar = μ, Var(Xbar) = σ²/n, chứng minh dễ:
 >
 >
 >
@@ -1673,35 +1673,35 @@
 >
 >
 >
-> Var[Xbar] = E[Xbar - EXbar]^2 = E[Xbar - μ]^2 = E[(Σi Xi) / n - μ]^2
+> Var[Xbar] = E[Xbar - EXbar]² = E[Xbar - μ]² = E[(Σi Xi) / n - μ]²
 >
 >
 >
-> = E[(Σi Xi - n μ) / n]^2
+> = E[(Σi Xi - n μ) / n]²
 >
 >
 >
-> = E[Σi (Xi - μ) / n]^2
+> = E[Σi (Xi - μ) / n]²
 >
 >
 >
-> = (1/n^2) E[Σi (Xi - μ)]^2
+> = (1/n²) E[Σi (Xi - μ)]²
 >
 >
 >
-> = (1/n^2) Σi Var(Xi)
+> = (1/n²) Σi Var(Xi)
 >
 >
 >
-> = (1/n^2) n σ^2 = σ^2 / n
+> = (1/n²) n σ² = σ² / n
 >
 >
 >
-> ⇨ E(Xbar)^2 = Var(Xbar) + [E(Xbar)]^2
+> ⇨ E(Xbar)² = Var(Xbar) + [E(Xbar)]²
 >
 >
 >
-> = σ^2 / n + μ^2
+> = σ² / n + μ²
 >
 >
 >
@@ -1709,36 +1709,36 @@
 >
 >
 >
-> (1/n) [Σi E(Xi)^2 - Σi E(Xbar)^2]
+> (1/n) [Σi E(Xi)² - Σi E(Xbar)²]
 >
 >
 >
-> = (1/n) [Σi [σ^2 + μ^2] - Σi [σ^2 / n + μ^2]]
+> = (1/n) [Σi [σ² + μ²] - Σi [σ² / n + μ²]]
 >
 >
 >
-> = (1/n) [nσ^2 + nμ^2 - σ^2 - nμ^2]
+> = (1/n) [nσ² + nμ² - σ² - nμ²]
 >
 >
 >
-> = (1/n) [(n - 1)σ^2 ]
+> = (1/n) [(n - 1)σ² ]
 >
 >
 >
-> = [(n - 1)/n]σ^2 
+> = [(n - 1)/n]σ² 
 >
 >
 >
-> Vậy Bias_σ^2[(σ^2)_ML] = E_μ,σ^2[(1/n) Σi (Xi - Xbar)^2] - σ^2
+> Vậy Bias_σ²[(σ²)_ML] = E_μ,σ²[(1/n) Σi (Xi - Xbar)²] - σ²
 >
 >
 >
-> = [(n - 1)/n]σ^2 - σ^2, khác 0 nên (**σ^2)_ML là biased estimator của σ^2**
+> = [(n - 1)/n]σ² - σ², khác 0 nên (**σ²)_ML là biased estimator của σ²**
 >
 >
 >
-> Phiên bản unbiased như đã biết, chính là S^2, sample variance = (1/n-1) Σi (Xi - Xbar)^2
-> (nếu tính kì vọng sẽ ra đúng bằng σ^2)
+> Phiên bản unbiased như đã biết, chính là S², sample variance = (1/n-1) Σi (Xi - Xbar)²
+> (nếu tính kì vọng sẽ ra đúng bằng σ²)
 >
 >
 >
@@ -1747,7 +1747,7 @@
 >
 >
 > Thành ra gs Bishop nói rằng, **trung bình** mà nói thì **maximum likelihood** sẽ cho ta **giá trị
-> đúng của μ** nhưng cho **giá trị underestimate của true variance σ^2**.
+> đúng của μ** nhưng cho **giá trị underestimate của true variance σ²**.
 
 **🔗 See also:** [Bayesian and Maximum Likelihood Variance](./353_effective_number_of_parameters.md#node-tdezntx)
 
@@ -1764,7 +1764,7 @@
 <p align="center"><kbd><img src="assets/o106u371tb.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Như vừa nói,  (1/(n-1))Σi (Xi - Xbar), tức sample variance (theo sách Casella) mới là **unbiased estimator cho σ^2**
+> Như vừa nói,  (1/(n-1))Σi (Xi - Xbar), tức sample variance (theo sách Casella) mới là **unbiased estimator cho σ²**
 >
 >
 >
