@@ -517,11 +517,11 @@
 >
 >
 >
-> P12 sẽ có hàng 1 là \[0 1 0\] vì khi nhân với A nó sẽ ra matrix P12A có hàng 1 là 0*a1+1*a2+0\*a3=a2,
+> P12 sẽ có hàng 1 là \[0 1 0\] vì khi nhân với A nó sẽ ra matrix P12A có hàng 1 là 0 × a1+1 × a2+0\*a3=a2,
 >
 >
 >
-> và P12 có hàng 2 là \[1 0 0\] để P12A có hàng 2 sẽ là 1*a1+0*a2+0\*a3=a1, tức là đã **switch hàng 1 và hàng 2 của A rồi**
+> và P12 có hàng 2 là \[1 0 0\] để P12A có hàng 2 sẽ là 1 × a1+0 × a2+0\*a3=a1, tức là đã **switch hàng 1 và hàng 2 của A rồi**
 >
 >
 >
