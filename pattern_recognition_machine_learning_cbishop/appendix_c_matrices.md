@@ -29,19 +29,19 @@
 >
 >
 >
-> (AB)T = BT AT
+> (AB)ᵀ = Bᵀ Aᵀ
 >
 >
 >
-> AAinv = Ainv A = I
+> AA⁻¹ = A⁻¹ A = I
 >
 >
 >
-> AAinv = I ⇔ ABBinvB = I ⇨ (AB)inv = BinvAinv
+> AA⁻¹ = I ⇔ ABB⁻¹B = I ⇨ (AB)⁻¹ = B⁻¹A⁻¹
 >
 >
 >
-> Vì I = IT ⇨ I = (AAinv)T = AinvTAT ⇨ (AT)inv = (Ainv)T
+> Vì I = Iᵀ ⇨ I = (AA⁻¹)ᵀ = A⁻¹ᵀAᵀ ⇨ (Aᵀ)⁻¹ = (A⁻¹)ᵀ
 
 <br>
 
@@ -56,11 +56,11 @@
 >
 >
 >
-> (Pinv + BT Rinv B)invBTRinv = PBT(BPBT + R)inv
+> (P⁻¹ + Bᵀ R⁻¹ B)⁻¹BᵀR⁻¹ = PBᵀ(BPBᵀ + R)⁻¹
 >
 >
 >
-> Ông nói chứng minh rất dễ vì chỉ cần nhân hai vế cho BPBT + R, cứ tạm tin vậy. Cái ý quan trọng là gs nói giả sử P có shape NxN, R có shape MxM, thì B sẽ là MxN. Khi đó, nếu M &lt;&lt; N thì tính bên phải sẽ rẻ hơn tính bằng cái vế bên trái. Là sao nhỉ?
+> Ông nói chứng minh rất dễ vì chỉ cần nhân hai vế cho BPBᵀ + R, cứ tạm tin vậy. Cái ý quan trọng là gs nói giả sử P có shape NxN, R có shape MxM, thì B sẽ là MxN. Khi đó, nếu M &lt;&lt; N thì tính bên phải sẽ rẻ hơn tính bằng cái vế bên trái. Là sao nhỉ?
 >
 >
 >
@@ -68,15 +68,15 @@
 >
 >
 >
-> Nếu P shape NxN thì Pinv cũng vậy, và xét cục (Pinv BT RinvB), là cái cục cần inverse (để nhân tiếp với BTRinv), thì nó sẽ cũng có shape NxN.
+> Nếu P shape NxN thì P⁻¹ cũng vậy, và xét cục (P⁻¹ Bᵀ R⁻¹B), là cái cục cần inverse (để nhân tiếp với BᵀR⁻¹), thì nó sẽ cũng có shape NxN.
 >
 >
 >
-> Trong khi đó, cái cục cần inverse ở vế phải là BPBT + R, chỉ có shape MxM.
+> Trong khi đó, cái cục cần inverse ở vế phải là BPBᵀ + R, chỉ có shape MxM.
 >
 >
 >
-> Mà như đã nói thì M &lt;&lt; N. Đồng thời, ta biết chi phí của inverse matrix A có shape DxD sẽ là O(D^3). Như vậy, rõ ràng là tính bằng vế phải sẽ ít tốn kém hơn.
+> Mà như đã nói thì M &lt;&lt; N. Đồng thời, ta biết chi phí của inverse matrix A có shape DxD sẽ là O(D³). Như vậy, rõ ràng là tính bằng vế phải sẽ ít tốn kém hơn.
 >
 >
 >
@@ -194,27 +194,27 @@
 >
 >
 >
-> Ví dụ đạo hàm của vector **a** đối với scalar x, sẽ là vector có các phần tử là đạo
+> Ví dụ đạo hàm của vector 𝐚 đối với scalar x, sẽ là vector có các phần tử là đạo
 >
 > hàm của các phần tử của a đối với x:
 >
 >
 >
-> (∂**a**/∂x)i = ∂ai/∂x
+> (∂𝐚/∂x)i = ∂ai/∂x
 >
 >
 >
-> Rồi đạo hàm của x đối vector **a**, hay ta thường gặp hơn là đạo hàm của vector → scalar function **a** → f(**a**) sẽ là vector các partial derivative (∂f/∂a1, ∂f/∂a2,... ), hay (∂f/∂a)i = ∂f/∂ai gọi là gradient vector.
+> Rồi đạo hàm của x đối vector 𝐚, hay ta thường gặp hơn là đạo hàm của vector → scalar function 𝐚 → f(𝐚) sẽ là vector các partial derivative (∂f/∂a1, ∂f/∂a2,... ), hay (∂f/∂a)i = ∂f/∂ai gọi là gradient vector.
 >
 >
 >
-> Với matrix thì cũng vậy, giả sử có hàm matrix → scalar **A** → f(**A**) thì đạo hàm
+> Với matrix thì cũng vậy, giả sử có hàm matrix → scalar 𝐀 → f(𝐀) thì đạo hàm
 >
-> của f đối với **A** sẽ là matrix các partial derivative mà phần tử ij của nó (∂f/∂A)ij , chính là đạo hàm của f đối với phần tử ij của A: ∂f/∂Aij
+> của f đối với 𝐀 sẽ là matrix các partial derivative mà phần tử ij của nó (∂f/∂A)ij , chính là đạo hàm của f đối với phần tử ij của A: ∂f/∂Aij
 >
 >
 >
-> Còn trường hợp ta có vector → vector function **b** → **a**. Thì đạo hàm của **a** đối với **b**, sẽ là matrix mà hàng i sẽ là gradienet vector của ai đối với vector **b**: (∂a/∂b)ij = ∂ai/∂bj và matrix này gọi là Jacobian
+> Còn trường hợp ta có vector → vector function 𝐛 → 𝐚. Thì đạo hàm của 𝐚 đối với 𝐛, sẽ là matrix mà hàng i sẽ là gradienet vector của ai đối với vector 𝐛: (∂a/∂b)ij = ∂ai/∂bj và matrix này gọi là Jacobian
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -230,27 +230,27 @@
 <p align="center"><kbd><img src="assets/zzwzyarm57e.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, ∂/∂x (xTa) = ∂/∂x (aTx) = a. Thử giải thích vì sao?
+> Tiếp, ∂/∂x (xᵀa) = ∂/∂x (aᵀx) = a. Thử giải thích vì sao?
 >
 >
 >
-> Đây là derivative của hàm vector → scalar f(**x**) = **x**T**a**. Nhờ kiến thức ở
+> Đây là derivative của hàm vector → scalar f(𝐱) = 𝐱ᵀ𝐚. Nhờ kiến thức ở
 >
-> lớp MIT 18s096 mình dễ dàng chứng minh cái này:
->
->
->
-> df = f(**x**+**dx**) - f(x) = (**x**+**dx**)T**a** - **x**T**a** = **x**T**a** + d**x**T**a** - **x**T**a** = d**x**T**a**
+> lớp MIᵀ 18s096 mình dễ dàng chứng minh cái này:
 >
 >
 >
-> = **a**T**dx** (vì dxTa là scalar, nên transpose tùy ý)
+> df = f(𝐱+**dx**) - f(x) = (𝐱+**dx**)ᵀ𝐚 - 𝐱ᵀ𝐚 = 𝐱ᵀ𝐚 + d𝐱ᵀ𝐚 - 𝐱ᵀ𝐚 = d𝐱ᵀ𝐚
 >
 >
 >
-> Lúc này ta đã có dạng df = f'(x)\[dx\], tức **a**T**dx** một linear operator act on
+> = 𝐚ᵀ**dx** (vì dxᵀa là scalar, nên transpose tùy ý)
 >
-> **dx**. Vì f là scalar, nên df cũng là scalar, còn **x** là vector nên **dx** cũng là vector. Vậy thì linear operator act on vector **dx** để cho ra scalar df chỉ có thể là một phép dot product của vector nào đó với vector **dx**. Và vector đó chính là gradient. ⇨ ∇f = **a**
+>
+>
+> Lúc này ta đã có dạng df = f'(x)\[dx\], tức 𝐚ᵀ**dx** một linear operator act on
+>
+> **dx**. Vì f là scalar, nên df cũng là scalar, còn 𝐱 là vector nên **dx** cũng là vector. Vậy thì linear operator act on vector **dx** để cho ra scalar df chỉ có thể là một phép dot product của vector nào đó với vector **dx**. Và vector đó chính là gradient. ⇨ ∇f = 𝐚
 >
 >
 >
@@ -288,43 +288,43 @@
 >
 >
 >
-> Cái này hồi học MIT 18s096 đã làm rồi, để tìm derivative của f(x) = Ainv đối với x, ta sẽ tìm cách đưa df trở thành dạng một linear operator act on dx: f'(x)\[dx\].
+> Cái này hồi học MIT 18s096 đã làm rồi, để tìm derivative của f(x) = A⁻¹ đối với x, ta sẽ tìm cách đưa df trở thành dạng một linear operator act on dx: f'(x)\[dx\].
 >
 >
 >
-> Ở đây mình hiểu Ainv, là hàm của x, để rồi khi x thay đổi một khoảng dx, thì f(x) = Ainv sẽ thay đổi một khoảng dAinv.
+> Ở đây mình hiểu A⁻¹, là hàm của x, để rồi khi x thay đổi một khoảng dx, thì f(x) = A⁻¹ sẽ thay đổi một khoảng dA⁻¹.
 >
 >
 >
-> Nhưng để cho dễ, ta coi Ainv là hàm của A trước: là function nhận vào matrix A, và trả ra inverse của nó. Và ta sẽ tìm dAinv = cái gì đó của dA, sau đó, dA = cái gì đó của dx, dùng chain rule, ta sẽ có dAinv = cái gì đó của dx.
+> Nhưng để cho dễ, ta coi A⁻¹ là hàm của A trước: là function nhận vào matrix A, và trả ra inverse của nó. Và ta sẽ tìm dA⁻¹ = cái gì đó của dA, sau đó, dA = cái gì đó của dx, dùng chain rule, ta sẽ có dA⁻¹ = cái gì đó của dx.
 >
 >
 >
-> Thế thì AAinv = I, điều này có nghĩa là, function f(A) =AAinv là một constant function. nên dù cho A có perturb một khoảng dA, khiến Ainv perturb một khoảng dAinv, thì f vẫn bằng I. Do đó df = 0:
+> Thế thì AA⁻¹ = I, điều này có nghĩa là, function f(A) =AA⁻¹ là một constant function. nên dù cho A có perturb một khoảng dA, khiến A⁻¹ perturb một khoảng dA⁻¹, thì f vẫn bằng I. Do đó df = 0:
 >
 >
 >
-> df = d(AAinv) = 0.
+> df = d(AA⁻¹) = 0.
 >
 >
 >
-> Áp dụng product rule với d(AAinv): d(AAinv) = dA Ainv + A d(Ainv)
+> Áp dụng product rule với d(AA⁻¹): d(AA⁻¹) = dA A⁻¹ + A d(A⁻¹)
 >
 >
 >
-> ⇨ dA Ainv + A d(Ainv) = 0
+> ⇨ dA A⁻¹ + A d(A⁻¹) = 0
 >
 >
 >
-> ⇔ - dA Ainv = A d(Ainv)
+> ⇔ - dA A⁻¹ = A d(A⁻¹)
 >
 >
 >
-> ⇔ - Ainv dA Ainv = d(Ainv)
+> ⇔ - A⁻¹ dA A⁻¹ = d(A⁻¹)
 >
 >
 >
-> Đến đây ta đã có dAinv = some thing dA, tức là một lienar operator act on dA, nên đây cũng là cách viết vi phân của đạo hàm hàm f(A) = Ainv đối với A.
+> Đến đây ta đã có dA⁻¹ = some thing dA, tức là một lienar operator act on dA, nên đây cũng là cách viết vi phân của đạo hàm hàm f(A) = A⁻¹ đối với A.
 >
 >
 >
@@ -332,19 +332,19 @@
 >
 >
 >
-> ⇨ d(Ainv) = - Ainv \[(∂A/∂x) dx\] Ainv, thì ta sẽ có d(Ainv) = linear operator act on dx, từ đây giúp rút ra đạo hàm của Ainv đối với x:
+> ⇨ d(A⁻¹) = - A⁻¹ \[(∂A/∂x) dx\] A⁻¹, thì ta sẽ có d(A⁻¹) = linear operator act on dx, từ đây giúp rút ra đạo hàm của A⁻¹ đối với x:
 >
 >
 >
-> Vì x là scalar, nên trong phép nhân \[matrix Ainv\] \[matrix ∂A/∂x\] \[scalar dx\] \[matrix Ainv\], ta có thể di chuyển dx tùy ý.:
+> Vì x là scalar, nên trong phép nhân \[matrix A⁻¹\] \[matrix ∂A/∂x\] \[scalar dx\] \[matrix A⁻¹\], ta có thể di chuyển dx tùy ý.:
 >
 >
 >
-> ⇨ d(Ainv) = -Ainv (∂A/∂x) Ainv dx
+> ⇨ d(A⁻¹) = -A⁻¹ (∂A/∂x) A⁻¹ dx
 >
 >
 >
-> Từ đó có thể kết luận, matrix partial derivative của Ainv đối với x chính là -Ainv (∂A/∂x) Ainv
+> Từ đó có thể kết luận, matrix partial derivative của A⁻¹ đối với x chính là -A⁻¹ (∂A/∂x) A⁻¹
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
@@ -416,23 +416,23 @@
 >
 >
 >
-> = (λ1λ2 + λ1λ)(λ3 + λ) + (λλ2 + λ^2)(λ3 + λ)
+> = (λ1λ2 + λ1λ)(λ3 + λ) + (λλ2 + λ²)(λ3 + λ)
 >
 >
 >
-> = λ1λ2(λ3 + λ) + λ1λ(λ3 + λ) + λλ2(λ3 + λ) + λ^2(λ3 + λ)
+> = λ1λ2(λ3 + λ) + λ1λ(λ3 + λ) + λλ2(λ3 + λ) + λ²(λ3 + λ)
 >
 >
 >
-> = λ1λ2λ3 + λ1λ2λ + λ1λλ3 + λ1λ^2 + λλ2λ3 + λ^2λ2λ + λ^2λ3 +λ^3
+> = λ1λ2λ3 + λ1λ2λ + λ1λλ3 + λ1λ² + λλ2λ3 + λ²λ2λ + λ²λ3 +λ³
 >
 >
 >
-> = λ^3 + λ^2(λ1 + λ2 + λ3) + λ(λ1λ2 + λ1λ3 + λ2λ3 + λ1λ2λ3
+> = λ³ + λ²(λ1 + λ2 + λ3) + λ(λ1λ2 + λ1λ3 + λ2λ3 + λ1λ2λ3
 >
 >
 >
-> λ^n
+> λⁿ
 >
 >
 >
@@ -462,7 +462,7 @@
 >
 > Thế thì, giả sử trị riêng của M rất nhỏ, thì ta có thể xấp xỉ bằng cách bỏ đi các hạng tử còn lại
 >
-> (những cái có dạng tổng của tích các trị riêng của M). Để chỉ còn: det (λI + M) = λ^n + λ^(n-1)
+> (những cái có dạng tổng của tích các trị riêng của M). Để chỉ còn: det (λI + M) = λⁿ + λ^(n-1)
 >
 > trace(M)
 >
@@ -472,35 +472,35 @@
 >
 >
 >
-> ⇨ df = det (A + dA) - det A = det(A + AAinv dA) - det A
+> ⇨ df = det (A + dA) - det A = det(A + AA⁻¹ dA) - det A
 >
 >
 >
-> = det\[A(I + Ainv dA)\] - det A
+> = det\[A(I + A⁻¹ dA)\] - det A
 >
 >
 >
-> = det A det(I + Ainv dA) - det A (dùng tính chất det AB = det A det B)
+> = det A det(I + A⁻¹ dA) - det A (dùng tính chất det AB = det A det B)
 >
 >
 >
-> Tới đây, áp dụng kết quả trên với λ = 1, M = Ainv dA, với dA là matrix vi phân, Ainv dA cũng có
+> Tới đây, áp dụng kết quả trên với λ = 1, M = A⁻¹ dA, với dA là matrix vi phân, A⁻¹ dA cũng có
 >
-> giá trị nhỏ → trị riêng nhỏ, từ đó ta sẽ dùng công thức xấp xỉ det(I + Ainv dA) ≈ 1^n + 1^(n-1)
+> giá trị nhỏ → trị riêng nhỏ, từ đó ta sẽ dùng công thức xấp xỉ det(I + A⁻¹ dA) ≈ 1ⁿ + 1^(n-1)
 >
-> trace(Ainv dA) = 1 + tr(Ainv dA)
->
->
->
-> ⇨ det A det(I + Ainv dA) - det A = det A \[1 + tr(Ainv dA)\] - det A
+> trace(A⁻¹ dA) = 1 + tr(A⁻¹ dA)
 >
 >
 >
-> = det A + det A tr(Ainv dA) - det A
+> ⇨ det A det(I + A⁻¹ dA) - det A = det A \[1 + tr(A⁻¹ dA)\] - det A
 >
 >
 >
-> = det A tr(Ainv dA)
+> = det A + det A tr(A⁻¹ dA) - det A
+>
+>
+>
+> = det A tr(A⁻¹ dA)
 >
 >
 >
@@ -508,31 +508,31 @@
 >
 > product của A và B: A . B =Σij AijBij, thì nó cũng chính là Σi \[cột i của A dot product cột i của B\] =
 >
-> tổng các phần tử đường chéo của matrix ATB = tr(ATB). Vậy A.B = tr(ATB) (A.B là inner
+> tổng các phần tử đường chéo của matrix AᵀB = tr(AᵀB). Vậy A.B = tr(AᵀB) (A.B là inner
 >
 > product)
 >
 >
 >
-> ⇨ tr(AinvdA) = AinvT . dA
+> ⇨ tr(A⁻¹dA) = A⁻¹ᵀ . dA
 >
 >
 >
-> ⇨ df = det(A) (AinvT . dA)
+> ⇨ df = det(A) (A⁻¹ᵀ . dA)
 >
 >
 >
 > Vì inner product là một linear operator, nên đến đây ta đã có dạng df = linear operator act on
 >
-> dA: linear oerator đó chính là: lấy dA, inner product với AinvT, và nhân cho scalar det A (hoặc là
+> dA: linear oerator đó chính là: lấy dA, inner product với A⁻¹ᵀ, và nhân cho scalar det A (hoặc là
 >
-> scalar Ainv bởi scalar det A, rồi lấy matrix đó, đem inner product với dA).
+> scalar A⁻¹ bởi scalar det A, rồi lấy matrix đó, đem inner product với dA).
 >
 >
 >
 > Vậy, theo MIT 18s096, ta có thể kết luận đạo hàm của f(A) = det A đối với matrix A chính là
 >
-> det(A) AinvT
+> det(A) A⁻¹ᵀ
 >
 >
 >
@@ -548,19 +548,19 @@
 >
 >
 >
-> = \[1/det(A)\] det(A) (AinvT . dA)
+> = \[1/det(A)\] det(A) (A⁻¹ᵀ . dA)
 >
 >
 >
-> = AinvT . dA
+> = A⁻¹ᵀ . dA
 >
 >
 >
-> Vậy ta có dg(A) = d(log\[det(A)\]) = AinvT . dA
+> Vậy ta có dg(A) = d(log\[det(A)\]) = A⁻¹ᵀ . dA
 >
 >
 >
-> ⇨ đạo hàm của log det A đối với A là AinvT (A inverse transpose)
+> ⇨ đạo hàm của log det A đối với A là A⁻¹ᵀ (A inverse transpose)
 >
 >
 >
@@ -568,7 +568,7 @@
 >
 >
 >
-> ⇨ d(log\[det(A)\]) = AinvT . ∂A/∂x dx
+> ⇨ d(log\[det(A)\]) = A⁻¹ᵀ . ∂A/∂x dx
 >
 >
 >
@@ -576,21 +576,21 @@
 >
 > lấy det của A, và cuối cùng lấy log), thì cái ta đang có chính là df được thể hiện bởi linear
 >
-> operator act on dx, và linear operator đó chính là: Lấy inner product của matrix AinvT và matrix
+> operator act on dx, và linear operator đó chính là: Lấy inner product của matrix A⁻¹ᵀ và matrix
 >
 > ∂A/∂x, sẽ ra một scalar, rồi nhân với dx. Do đó, đạo hàm của f(x) đối x chính là bằng scalar này:
 >
-> AinvT . ∂A/∂x,
+> A⁻¹ᵀ . ∂A/∂x,
 >
 >
 >
-> Và again, lại chuyển cách thể hiện nó về lại trace: tr(Ainv (∂A/∂x)).
+> Và again, lại chuyển cách thể hiện nó về lại trace: tr(A⁻¹ (∂A/∂x)).
 >
 >
 >
 > thì như phát biểu lần cuối: đạo hàm của hàm log\[det(A(x))\] đối với x (kí hiệu là ∂/∂x \[log det A\],
 >
-> hay ∂/∂x ln |A|) chính là tr(Ainv (∂A/∂x)). Đây chính là công thức C.22
+> hay ∂/∂x ln |A|) chính là tr(A⁻¹ (∂A/∂x)). Đây chính là công thức C.22
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -634,23 +634,23 @@
 >
 >
 >
-> Và như note trước đã làm, ta chuyển nó thành inner product của BT và dA: &lt;B . dA&gt;, hay ghi là BT . dA cũng được
+> Và như note trước đã làm, ta chuyển nó thành inner product của Bᵀ và dA: &lt;B . dA&gt;, hay ghi là Bᵀ . dA cũng được
 >
 >
 >
-> Như vậy tới đây ta đã có df(A) = linear operator act on dA: lấy dA inner product với matrix BT (B tranpose). Vậy đạo hàm của f(A) = tr(AB) đối với matrix A chính là BT, viết theo toán học:
+> Như vậy tới đây ta đã có df(A) = linear operator act on dA: lấy dA inner product với matrix Bᵀ (B tranpose). Vậy đạo hàm của f(A) = tr(AB) đối với matrix A chính là Bᵀ, viết theo toán học:
 >
 >
 >
->  ∂/∂A tr(AB) = BT (→ đây chính là công thức C.24)
+>  ∂/∂A tr(AB) = Bᵀ (→ đây chính là công thức C.24)
 >
 >
 >
-> đương nhiên function f(A) = tr(AB) là matrix → scalar function, nên ∂f/∂A là matrix. Và BT cũng là matrix
+> đương nhiên function f(A) = tr(AB) là matrix → scalar function, nên ∂f/∂A là matrix. Và Bᵀ cũng là matrix
 >
 >
 >
-> Nên ta có: \[∂/∂A tr(AB)\]ij = \[BT\]ij
+> Nên ta có: \[∂/∂A tr(AB)\]ij = \[Bᵀ\]ij
 >
 >
 >
@@ -658,11 +658,11 @@
 >
 >
 >
-> ∂/∂Aij \[tr(AB)\] = \[BT\]ij
+> ∂/∂Aij \[tr(AB)\] = \[Bᵀ\]ij
 >
 >
 >
-> Tới đây, ta mới bỏ tranpose của B đi: \[BT\]ij = Bji (đổi index ij thành ji)
+> Tới đây, ta mới bỏ tranpose của B đi: \[Bᵀ\]ij = Bji (đổi index ij thành ji)
 >
 >
 >
@@ -688,11 +688,11 @@
 >
 >
 >
-> d\[tr(ATB)\] = tr(ATB + (dA)TB) - tr(ATB) = tr\[(dA)TB\] 
+> d\[tr(AᵀB)\] = tr(AᵀB + (dA)ᵀB) - tr(AᵀB) = tr\[(dA)ᵀB\] 
 >
 >
 >
-> = tr(BTdA) (vì tr(M) = tr(MT))
+> = tr(BᵀdA) (vì tr(M) = tr(Mᵀ))
 >
 >
 >
@@ -700,7 +700,7 @@
 >
 >
 >
-> ⇨ và tại đây có thể kết luận ∂/∂A \[tr(ATB)\] = B
+> ⇨ và tại đây có thể kết luận ∂/∂A \[tr(AᵀB)\] = B
 >
 >
 >
@@ -716,67 +716,67 @@
 >
 >
 >
-> d\[tr(ABAT)\] = tr\[(A+dA)B(A+dA)T\] - tr(ABAT)
+> d\[tr(ABAᵀ)\] = tr\[(A+dA)B(A+dA)ᵀ\] - tr(ABAᵀ)
 >
 >
 >
-> = tr\[(AB+dAB)(AT+(dA)T)\] - tr(ABAT)
+> = tr\[(AB+dAB)(Aᵀ+(dA)ᵀ)\] - tr(ABAᵀ)
 >
 >
 >
-> = tr\[(ABAT+(dA)BAT+AB(dA)T+(dA)B(dA)T\] - tr(ABAT)
+> = tr\[(ABAᵀ+(dA)BAᵀ+AB(dA)ᵀ+(dA)B(dA)ᵀ\] - tr(ABAᵀ)
 >
 >
 >
-> = tr\[(dA)BAT+AB(dA)T+(dA)B(dA)T\] 
+> = tr\[(dA)BAᵀ+AB(dA)ᵀ+(dA)B(dA)ᵀ\] 
 >
 >
 >
-> = tr\[(dA)BAT+AB(dA)T\]  (bỏ term bậc cao (dA)B(dA)T)
+> = tr\[(dA)BAᵀ+AB(dA)ᵀ\]  (bỏ term bậc cao (dA)B(dA)ᵀ)
 >
 >
 >
-> = tr\[(dA)BAT\] + tr\[AB(dA)T\]
+> = tr\[(dA)BAᵀ\] + tr\[AB(dA)ᵀ\]
 >
 >
 >
-> = tr\[(dA)BAT\] + tr\[(dA)(AB)T\]
+> = tr\[(dA)BAᵀ\] + tr\[(dA)(AB)ᵀ\]
 >
 >
 >
-> = tr\[(dA)BAT\] + tr\[(dA)(BTAT)\]
+> = tr\[(dA)BAᵀ\] + tr\[(dA)(BᵀAᵀ)\]
 >
 >
 >
-> = (dA)T. (BAT) + (dA)T.(BTAT)
+> = (dA)ᵀ. (BAᵀ) + (dA)ᵀ.(BᵀAᵀ)
 >
 >
 >
-> = (dA)T . \[BAT + BTAT\]
+> = (dA)ᵀ . \[BAᵀ + BᵀAᵀ\]
 >
 >
 >
-> = (dA)T . (B + BT)AT
+> = (dA)ᵀ . (B + Bᵀ)Aᵀ
 >
 >
 >
-> inner product A.B cũng bằng AT . BT
+> inner product A.B cũng bằng Aᵀ . Bᵀ
 >
 >
 >
-> = dA . ((B + BT)AT)T 
+> = dA . ((B + Bᵀ)Aᵀ)ᵀ 
 >
 >
 >
-> = dA . A\[(B+BT)T\]
+> = dA . A\[(B+Bᵀ)ᵀ\]
 >
 >
 >
-> = dA . A(BT+B)
+> = dA . A(Bᵀ+B)
 >
 >
 >
-> ⇨ đạo hàm của tr(ABAT) wrt A là A(BT+B)
+> ⇨ đạo hàm của tr(ABAᵀ) wrt A là A(Bᵀ+B)
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **90/100**
@@ -854,11 +854,11 @@
 >
 >
 >
->  Thế thì đầu tiên nếu A đối xứng thì Ainv cũng đối xứng. Cái này dễ chứng minh:
+>  Thế thì đầu tiên nếu A đối xứng thì A⁻¹ cũng đối xứng. Cái này dễ chứng minh:
 >
 >
 >
-> AAinv = I ⇔ (AAinv)T = IT ⇔ AinvTAT = I ⇔ AinvT A = AinvA (thì IT = I, AT=A, và AinvA = I) → AinvT = Ainv ⇨ Ainv đối xứng.
+> AA⁻¹ = I ⇔ (AA⁻¹)ᵀ = Iᵀ ⇔ A⁻¹ᵀAᵀ = I ⇔ A⁻¹ᵀ A = A⁻¹A (thì Iᵀ = I, Aᵀ=A, và A⁻¹A = I) → A⁻¹ᵀ = A⁻¹ ⇨ A⁻¹ đối xứng.
 >
 >
 >
@@ -870,15 +870,15 @@
 >
 >
 >
-> Có lẽ nên recall lại chút kiến thức conjugate: Đại khái là một số phức sẽ có dạng a + ib với a là phần thực, b là phần ảo (imaginary). Thì khi đó số phức liên hợp của nó sẽ là a - ib. Để rồi nhân chúng với nhau ta sẽ có (a +ib)(a - ib) = a^2 -aib + aib - i^2 b^2 = a^2 + b^2, và kết quả là số thực, không còn là số phức nữa.
+> Có lẽ nên recall lại chút kiến thức conjugate: Đại khái là một số phức sẽ có dạng a + ib với a là phần thực, b là phần ảo (imaginary). Thì khi đó số phức liên hợp của nó sẽ là a - ib. Để rồi nhân chúng với nhau ta sẽ có (a +ib)(a - ib) = a² -aib + aib - i² b² = a² + b², và kết quả là số thực, không còn là số phức nữa.
 >
 >
 >
-> Như vậy nếu u là vector phức, và gọi u\* là vector complex conjugate của nó, tức là mọi phần tử của u\* đều là complex conjugate của u. Khi tích vô hướng của chúng, ta sẽ có uTu\* = Σi ui\*u\*i và đây sẽ là một tổng các số thực, nên là số thực.
+> Như vậy nếu u là vector phức, và gọi u\* là vector complex conjugate của nó, tức là mọi phần tử của u\* đều là complex conjugate của u. Khi tích vô hướng của chúng, ta sẽ có uᵀu\* = Σi ui\*u\*i và đây sẽ là một tổng các số thực, nên là số thực.
 >
 >
 >
-> Thế thì Au = λu, nhân bên trái hai vế với u\*T: u\*TAu = u\*Tλu ⇔ u\*TAu = λ u\*Tu (1)
+> Thế thì Au = λu, nhân bên trái hai vế với u\*ᵀ: u\*ᵀAu = u\*ᵀλu ⇔ u\*ᵀAu = λ u\*ᵀu (1)
 >
 >
 >
@@ -894,27 +894,27 @@
 >
 >
 >
-> Nhân hai vế với uT: A\*u\* = λ\*u\* ⇔ uTA\*u\* = uT λ\*u\*
+> Nhân hai vế với uᵀ: A\*u\* = λ\*u\* ⇔ uᵀA\*u\* = uᵀ λ\*u\*
 >
 >
 >
-> ⇔ uTA\*u\* = λ\* uT u\*
+> ⇔ uᵀA\*u\* = λ\* uᵀ u\*
 >
 >
 >
-> ⇔ uTAu\* = λ\* uT u\* (2) (Vì với matrix A, ta sẽ luôn dùng matrix số thực, nên A\* = A)
+> ⇔ uᵀAu\* = λ\* uᵀ u\* (2) (Vì với matrix A, ta sẽ luôn dùng matrix số thực, nên A\* = A)
 >
 >
 >
-> Tới đây (1) ta có u\*TAu = λ u\*Tu và (2) ta có uTAu\* = λ\* uT u\*
+> Tới đây (1) ta có u\*ᵀAu = λ u\*ᵀu và (2) ta có uᵀAu\* = λ\* uᵀ u\*
 >
 >
 >
-> Vế trái u\*TAu và uTAu\* là giống nhau, vì là scalar nên bằng tranpose của chính nó.
+> Vế trái u\*ᵀAu và uᵀAu\* là giống nhau, vì là scalar nên bằng tranpose của chính nó.
 >
 >
 >
-> Suy ra vế phải bằng nhau λ u\*Tu = λ\* uT u\* ⇨ λ = λ\*. Và khi một số bằng số phức liên hợp của nó thì thì nó chính là số thực.
+> Suy ra vế phải bằng nhau λ u\*ᵀu = λ\* uᵀ u\* ⇨ λ = λ\*. Và khi một số bằng số phức liên hợp của nó thì thì nó chính là số thực.
 >
 >
 >
@@ -922,7 +922,7 @@
 >
 >
 >
-> Ngoài ra thì như mình còn nhớ trong MIT 1806 đã học với matrix đối xứng thì ta luôn có đủ n eigenvector độc lập, để có thể tách thành Q Λ QT, với Q là các orthogonal eigenvector, Λ là diagonal matrix các eigenvalue.
+> Ngoài ra thì như mình còn nhớ trong MIT 1806 đã học với matrix đối xứng thì ta luôn có đủ n eigenvector độc lập, để có thể tách thành Q Λ Qᵀ, với Q là các orthogonal eigenvector, Λ là diagonal matrix các eigenvalue.
 
 > [!TIP]
 > **🤖 AI Feedback** — ⚠️ Score: **85/100**
@@ -950,45 +950,45 @@
 >
 >
 >
-> A ui = λi ui ⇔ ujT A ui = ujT λi ui (nhân hai vế cho ujT (uj tranpose)
+> A ui = λi ui ⇔ ujᵀ A ui = ujᵀ λi ui (nhân hai vế cho ujᵀ (uj tranpose)
 >
 >
 >
-> ⇔ ujT A ui = λi ujT ui
+> ⇔ ujᵀ A ui = λi ujᵀ ui
 >
 >
 >
-> ⇔ (ujT A ui)T = λi ujT ui (do vế trái là scalar, với scalar a thì a = aT)
+> ⇔ (ujᵀ A ui)ᵀ = λi ujᵀ ui (do vế trái là scalar, với scalar a thì a = aᵀ)
 >
 >
 >
-> ⇔ uiT AT uj = λi ujT ui
+> ⇔ uiᵀ Aᵀ uj = λi ujᵀ ui
 >
 >
 >
-> ⇔ uiT A uj = λi ujT ui (do A đối xứng nên A = AT)
+> ⇔ uiᵀ A uj = λi ujᵀ ui (do A đối xứng nên A = Aᵀ)
 >
 >
 >
-> Tiếp từ A uj = λj uj ⇔ uiT A uj = uiT λj uj
+> Tiếp từ A uj = λj uj ⇔ uiᵀ A uj = uiᵀ λj uj
 >
 >
 >
-> ⇔ uiT A uj = λj uiT uj
+> ⇔ uiᵀ A uj = λj uiᵀ uj
 >
 >
 >
-> Trừ vế theo vế (1) và (2): 0 = λi ujT ui - λj uiT uj ⇔ 0 = λi ujT ui - λj ujT ui
+> Trừ vế theo vế (1) và (2): 0 = λi ujᵀ ui - λj uiᵀ uj ⇔ 0 = λi ujᵀ ui - λj ujᵀ ui
 >
-> (do uiTuj = ujTui, cũng là do chúng là scalar)
->
->
->
-> ⇔ 0 = (λi - λj) uiTuj.
+> (do uiᵀuj = ujᵀui, cũng là do chúng là scalar)
 >
 >
 >
-> Tới đây vì λi khác λj nên suy ra uiTuj = 0 ⇨ chúng orthogonal (vuông
+> ⇔ 0 = (λi - λj) uiᵀuj.
+>
+>
+>
+> Tới đây vì λi khác λj nên suy ra uiᵀuj = 0 ⇨ chúng orthogonal (vuông
 >
 > góc). Và vì ui uj tùy ý, nên mọi có thể kết luận là tồn tại bộ eigenvector
 >
@@ -1046,11 +1046,11 @@
 >
 >
 >
-> UTU = I ⇨ UT = Uinv. ⇨ UUT = UUinv = I. Vậy U UT = I ⇨ các row orthogonal nhau.
+> UᵀU = I ⇨ Uᵀ = U⁻¹. ⇨ UUᵀ = UU⁻¹ = I. Vậy U Uᵀ = I ⇨ các row orthogonal nhau.
 >
 >
 >
-> Cuối cùng, vì UTU = UUT = I ⇨ det (UT U) = det(I) = 1 ⇔ det(UT) det(U) = 1 ⇔ \[det(U)\]^2 = 1 (vì det(U) = det(UT)) ⇨ det(U) = +/- 1.
+> Cuối cùng, vì UᵀU = UUᵀ = I ⇨ det (Uᵀ U) = det(I) = 1 ⇔ det(Uᵀ) det(U) = 1 ⇔ \[det(U)\]² = 1 (vì det(U) = det(Uᵀ)) ⇨ det(U) = +/- 1.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
@@ -1090,9 +1090,9 @@
 >
 > diag(λ1, λ2,...). Khi đó ta sẽ có AU = UΛ. Và vì U này là orthogonal
 >
-> matrix (dĩ nhiên là full rank) nên A = UΛ Uinv = U Λ UT, hay trong MIT
+> matrix (dĩ nhiên là full rank) nên A = UΛ U⁻¹ = U Λ Uᵀ, hay trong MIT
 >
-> 1806 gs Strang dùng Q: A = Q Λ QT.
+> 1806 gs Strang dùng Q: A = Q Λ Qᵀ.
 >
 >
 >
@@ -1106,7 +1106,7 @@
 >
 >
 >
-> Chứng minh dễ ẹt: Ta xét bình phương của norm Ux, ||Ux||^2 = = (Ux)T(Ux) = xTUTUx = xTIx = xTx = ||x||^2. Vậy suy ra ||Ux|| = ||x||.
+> Chứng minh dễ ẹt: Ta xét bình phương của norm Ux, ||Ux||² = = (Ux)ᵀ(Ux) = xᵀUᵀUx = xᵀIx = xᵀx = ||x||². Vậy suy ra ||Ux|| = ||x||.
 >
 >
 >
@@ -1114,19 +1114,19 @@
 >
 >
 >
-> Ta biết công thức uTv = ||u|| ||v|| cos(u,v) ⇨ cos(u,v) = uTv / (||u|| ||v||)
+> Ta biết công thức uᵀv = ||u|| ||v|| cos(u,v) ⇨ cos(u,v) = uᵀv / (||u|| ||v||)
 >
 >
 >
-> ⇨ cos(Ux, Uy) = (Ux)T(Uy) / ||Ux|| ||Uy|| 
+> ⇨ cos(Ux, Uy) = (Ux)ᵀ(Uy) / ||Ux|| ||Uy|| 
 >
 >
 >
-> = xTUTUy / ||x|| ||y|| (dùng kết quả trên: ||Ux|| = ||x||, ||Uy|| = y)
+> = xᵀUᵀUy / ||x|| ||y|| (dùng kết quả trên: ||Ux|| = ||x||, ||Uy|| = y)
 >
 >
 >
-> = xTy / ||x|| ||y|| = cos(x, y) 
+> = xᵀy / ||x|| ||y|| = cos(x, y) 
 >
 >
 >
@@ -1150,11 +1150,11 @@
 <p align="center"><kbd><img src="assets/8i84hi6rdyv.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, như note trước ta đã biết A = U Λ UT, và cũng là U Λ Uinv. Nhân hai vế cho UT và U: UT A U = Λ. thì cái biểu thức này được gọi là matrix A bị chéo hóa (diagonalized) bởi matrix U.
+> Rồi, như note trước ta đã biết A = U Λ Uᵀ, và cũng là U Λ U⁻¹. Nhân hai vế cho Uᵀ và U: Uᵀ A U = Λ. thì cái biểu thức này được gọi là matrix A bị chéo hóa (diagonalized) bởi matrix U.
 >
 >
 >
-> Rồi từ A = U Λ UT, inverse hai vế ta có Ainv = U Λinv UT (cái này dùng các identity như (AB)inv = Binv Ainv là ra, ko có gì khó)
+> Rồi từ A = U Λ Uᵀ, inverse hai vế ta có A⁻¹ = U Λ⁻¹ Uᵀ (cái này dùng các identity như (AB)⁻¹ = B⁻¹ A⁻¹ là ra, ko có gì khó)
 >
 >
 >
@@ -1166,7 +1166,7 @@
 >
 >
 >
-> A = U Λ UT 
+> A = U Λ Uᵀ 
 >
 >
 >
@@ -1174,19 +1174,19 @@
 >
 >
 >
-> Sau đó nhân U Λ với UT: Ta sẽ nhìn theo góc nhìn thứ 4: Tổng j=1:n các rank 1 matrix tạo bởi outer product của một cột j của (U Λ) (chính là λj uj) và hàng j của UT (chính là ujT). Do đó U Λ UT = Σj=1:n λj ujujT.
+> Sau đó nhân U Λ với Uᵀ: Ta sẽ nhìn theo góc nhìn thứ 4: Tổng j=1:n các rank 1 matrix tạo bởi outer product của một cột j của (U Λ) (chính là λj uj) và hàng j của Uᵀ (chính là ujᵀ). Do đó U Λ Uᵀ = Σj=1:n λj ujujᵀ.
 >
 >
 >
-> Tương tự vậy với C.46. Chỉ chú ý là Λinv, sẽ có các component đường chéo  = nghịch đảo của component đường chéo của Λ. Vì sao?
+> Tương tự vậy với C.46. Chỉ chú ý là Λ⁻¹, sẽ có các component đường chéo  = nghịch đảo của component đường chéo của Λ. Vì sao?
 >
 >
 >
-> Là vì Λ Λinv = Λinv Λ = I. Gọi α1, α2,.. là diagonal entries của Λinv thì
+> Là vì Λ Λ⁻¹ = Λ⁻¹ Λ = I. Gọi α1, α2,.. là diagonal entries của Λ⁻¹ thì
 >
 >
 >
-> Λ Λinv = Λinv Λ = I ⇔ λi αi = 1, i =1,2... ⇨ αi = 1 / λi
+> Λ Λ⁻¹ = Λ⁻¹ Λ = I ⇔ λi αi = 1, i =1,2... ⇨ αi = 1 / λi
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **97/100**
