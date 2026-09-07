@@ -109,7 +109,7 @@
 > [!NOTE]
 > Và tính chất quan trọng của nó đó là, **nếu Q square**, thì **Q**
 > **invertible** (vì đã nói các cols orthonormal - tức dependent
-> rồi, mà còn square nữa thì nó full rank -> invertible)
+> rồi, mà còn square nữa thì nó full rank → invertible)
 >
 >
 >
@@ -236,31 +236,31 @@
 >
 >
 > i) Vì vector p, là **projection của b lên C(A)**, nên **p thuộc
-> C(A)**: gọi x^ là coeff giúp linear combination các A's cols
-> cho ra p: **Ax^ = p**. Và **e = b - p sẽ vuông góc với C(A)** nên
+> C(A)**: gọi x̂ là coeff giúp linear combination các A's cols
+> cho ra p: **Ax̂ = p**. Và **e = b - p sẽ vuông góc với C(A)** nên
 > nó **nằm trong C(A)** perp (tức subspace orthogonal
 > complement với C(A)) và đó **chính là nullspace of Aᵀ**
 > (N(Aᵀ))
 >
 >
 >
-> vậy **Aᵀe = 0** ⇔ **Aᵀ(b-p)** = **Aᵀ(b - Ax^) = 0**
+> vậy **Aᵀe = 0** ⇔ **Aᵀ(b-p)** = **Aᵀ(b - Ax̂) = 0**
 >
 >
 >
-> ⇔ **Aᵀb - AᵀAx^ = 0**
+> ⇔ **Aᵀb - AᵀAx̂ = 0**
 >
 >
 >
-> ⇔ Aᵀb = AᵀAx^ (tới đây ta có cái gọi là **Normal equation**)
+> ⇔ Aᵀb = AᵀAx̂ (tới đây ta có cái gọi là **Normal equation**)
 >
 >
 >
-> ⇔ x^ = (AᵀA)⁻¹Aᵀb
+> ⇔ x̂ = (AᵀA)⁻¹Aᵀb
 >
 >
 >
-> Từ đó **p = Ax^ = A.(AᵀA)⁻¹.Aᵀb**
+> Từ đó **p = Ax̂ = A.(AᵀA)⁻¹.Aᵀb**
 >
 >
 >
@@ -342,11 +342,11 @@
 >
 >
 > i) **Symmetric**: Cái này dễ thấy **(QQᵀ)ᵀ** = QᵀᵀQᵀ = **QQᵀ**
-> -> **symmetric**.
+> → **symmetric**.
 >
 >
 >
-> ii) P.P = P: **(QQᵀ)(QQᵀ)** = Q(QᵀQ)Qᵀ = QIQᵀ = **QQᵀ** ->
+> ii) P.P = P: **(QQᵀ)(QQᵀ)** = Q(QᵀQ)Qᵀ = QIQᵀ = **QQᵀ** →
 > đúng là như vậy
 
 <br>
@@ -358,11 +358,11 @@
 <p align="center"><kbd><img src="assets/r4c6mvriaep.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp gs nói các **equation mà ta biết sẽ đều trở nên đơn giản với Q**. Ví dụ như **normal equation** (Hồi nãy ta đã ôn lại cái này) Aᵀb = AᵀAx^
+> Tiếp gs nói các **equation mà ta biết sẽ đều trở nên đơn giản với Q**. Ví dụ như **normal equation** (Hồi nãy ta đã ôn lại cái này) Aᵀb = AᵀAx̂
 >
 >
 >
-> Thì ý chính là nếu muốn tìm x^ ta phải tìm và nhân hai vế cho (AᵀA)⁻¹ để có **x^ = (AᵀA)⁻¹ Aᵀb**
+> Thì ý chính là nếu muốn tìm x̂ ta phải tìm và nhân hai vế cho (AᵀA)⁻¹ để có **x̂ = (AᵀA)⁻¹ Aᵀb**
 
 <br>
 
@@ -375,12 +375,12 @@
 > [!NOTE]
 > Còn với Q thì QᵀQ = I bên phải tự huỷ nên ta k**hông cần
 > thực hiện bước tính AᵀA inverse** (để nhân hai vế, cho ra
-> x^) nào mà có ngay luôn x^ = Qᵀb
+> x̂) nào mà có ngay luôn x̂ = Qᵀb
 >
 >
 >
-> Và việc **x^ = Qᵀb** **CÓ NGHĨA** LÀ **PHẨN TỬ THỨ i
-> CỦA x^** CHỈ LÀ **BASIS VECTOR THỨ i DOT PRODUCT
+> Và việc **x̂ = Qᵀb** **CÓ NGHĨA** LÀ **PHẨN TỬ THỨ i
+> CỦA x̂** CHỈ LÀ **BASIS VECTOR THỨ i DOT PRODUCT
 > VỚI b**
 >
 >
@@ -620,15 +620,15 @@
 >
 >
 >
-> B = b - p = b - ax^ = b - a (aᵀb)/aᵀa = [1 0 2] - 3/3* [1 1 1]
+> B = b - p = b - ax̂ = b - a (aᵀb)/aᵀa = [1 0 2] - 3/3* [1 1 1]
 >
 >
 >
-> Ôn lại: Bắt đầu từ aᵀe aᵀ(b-p) = 0 ⇔ aᵀ(b - ax^) = 0 
+> Ôn lại: Bắt đầu từ aᵀe aᵀ(b-p) = 0 ⇔ aᵀ(b - ax̂) = 0 
 >
 >
 >
-> ⇔ aᵀb = aᵀax^ ⇔ x^ = aᵀb/aᵀa
+> ⇔ aᵀb = aᵀax̂ ⇔ x̂ = aᵀb/aᵀa
 
 <br>
 
