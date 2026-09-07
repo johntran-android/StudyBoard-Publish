@@ -20,7 +20,7 @@
 >
 >
 >
-> f(**x**|**η**) = h(**x**)g(**η**)exp{**η**T**u**(**x**)}
+> f(𝐱|**η**) = h(𝐱)g(**η**)exp{**η**ᵀ𝐮(𝐱)}
 >
 >
 >
@@ -32,7 +32,7 @@
 >
 >
 >
-> **u**(**x**) là function nào đó của **x**.
+> 𝐮(𝐱) là function nào đó của 𝐱.
 >
 >
 >
@@ -40,7 +40,7 @@
 >
 >
 >
-> dĩ nhiên Σi wi(**θ**)ti(x) cũng tương đương với **η**T**u**(**x**) ở đây
+> dĩ nhiên Σi wi(**θ**)ti(x) cũng tương đương với **η**ᵀ𝐮(𝐱) ở đây
 
 **🔗 See also:** [2.4.1 Maximum likelihood & sufficient statistic](./241_maximum_likelihood_sufficient_statistic.md#node-niekuox)
 
@@ -71,7 +71,7 @@
 >
 >
 >
-> f(**x**|η) = h(**x**)g(**η**)exp{**η**Tu(**x**)} không
+> f(𝐱|η) = h(𝐱)g(**η**)exp{**η**ᵀu(𝐱)} không
 >
 >
 >
@@ -115,7 +115,7 @@
 >
 >
 >
-> để từ đó pmf của Bern(η) có dạng h(x)g(η) exp{η u(x)} (công thức **η**T**u**(**x**) trong trường hợp này chính là ηu(x) = ηx) nên đây chính là thành viên của Exponential family.
+> để từ đó pmf của Bern(η) có dạng h(x)g(η) exp{η u(x)} (công thức **η**ᵀ𝐮(𝐱) trong trường hợp này chính là ηu(x) = ηx) nên đây chính là thành viên của Exponential family.
 >
 >
 >
@@ -191,7 +191,7 @@
 >
 >
 >
-> f(**x**|**μ**) (hay Multinomial(**x**|**μ**)) = ∏k=1:M μk^xk
+> f(𝐱|**μ**) (hay Multinomial(𝐱|**μ**)) = ∏k=1:M μk^xk
 >
 >
 >
@@ -199,11 +199,11 @@
 >
 >
 >
->  f(**x**|N, **μ**) = N! ∏k=1:M (μk^xk)/xk!
+>  f(𝐱|N, **μ**) = N! ∏k=1:M (μk^xk)/xk!
 >
 >
 >
-> Nhưng chú ý ông Bishop **ĐANG XÉT** **N = 1**, khi ổng nói "for a single observation **x**". 
+> Nhưng chú ý ông Bishop **ĐANG XÉT** **N = 1**, khi ổng nói "for a single observation 𝐱". 
 >
 >
 >
@@ -222,11 +222,11 @@
 >
 >
 >
-> Đặt vector **η** = \[η1, η2,...\]T = \[ln(μ1), ln(μ2),... \]T và u(**x**) = **x** ta sẽ thấy cái cụm trên chính là exp(**η**Tu(**x**))
+> Đặt vector **η** = \[η1, η2,...\]ᵀ = \[ln(μ1), ln(μ2),... \]ᵀ và u(𝐱) = 𝐱 ta sẽ thấy cái cụm trên chính là exp(**η**ᵀu(𝐱))
 >
 >
 >
-> và do đó exp {∑k=1:M \[xk ln (μk)\]} = h(**x**) g(**η**) exp(**η**Tu(**x**)) với h(**x**) = 1, g(**η**) = 1 là đã đủ để chỉ ra pmf của multinomial distribution có dạng của một exponential family
+> và do đó exp {∑k=1:M \[xk ln (μk)\]} = h(𝐱) g(**η**) exp(**η**ᵀu(𝐱)) với h(𝐱) = 1, g(**η**) = 1 là đã đủ để chỉ ra pmf của multinomial distribution có dạng của một exponential family
 >
 >
 >
@@ -258,7 +258,7 @@
 >
 >
 >
-> Rồi, thử xét event **X** = (2,2,1) tương ứng với nhiều kết quả, trong đó có kết quả cho ra chuỗi cụ thể 12312 ở trên
+> Rồi, thử xét event 𝐗 = (2,2,1) tương ứng với nhiều kết quả, trong đó có kết quả cho ra chuỗi cụ thể 12312 ở trên
 >
 >
 >
@@ -306,11 +306,11 @@
 >
 >
 >
-> = μ1μ2μ3μ1μ2 = (μ1^2)(μ2^2)μ3
+> = μ1μ2μ3μ1μ2 = (μ1²)(μ2²)μ3
 >
 >
 >
-> Và lập luận tiếp theo là, với bất kì cách sắp xếp nào khác của 2 banh 1, 2 banh 2, và 1 banh 3, thì cách tính cũng y chang, nên dễ thấy P(E221_j) đều bằng (μ1^2)(μ2^2)μ3 với mọi j.
+> Và lập luận tiếp theo là, với bất kì cách sắp xếp nào khác của 2 banh 1, 2 banh 2, và 1 banh 3, thì cách tính cũng y chang, nên dễ thấy P(E221_j) đều bằng (μ1²)(μ2²)μ3 với mọi j.
 >
 >
 >
@@ -350,7 +350,7 @@
 >
 >
 >
-> ⇨ P(**X** = (x1=2,x2=2,x3=1) = ∑j=1:J P(E221_j) = 5!/(2!2!1!) (μ1^2)(μ2^2)μ3
+> ⇨ P(𝐗 = (x1=2,x2=2,x3=1) = ∑j=1:J P(E221_j) = 5!/(2!2!1!) (μ1²)(μ2²)μ3
 >
 >
 >
@@ -358,11 +358,11 @@
 >
 >
 >
-> P(**X**=(x1,x2,..xK)) = \[n!/(x1!x2!...xK!)\] (μ1^x1)(μ2^x2)...(μK^xK)
+> P(𝐗=(x1,x2,..xK)) = \[n!/(x1!x2!...xK!)\] (μ1^x1)(μ2^x2)...(μK^xK)
 >
 >
 >
-> = N! ∏k=1:K (μk^xk)/xk! → Đây chính là pdf của **X** = (X1,...XK) \~ multinomial(N, **μ**)
+> = N! ∏k=1:K (μk^xk)/xk! → Đây chính là pdf của 𝐗 = (X1,...XK) \~ multinomial(N, **μ**)
 >
 >
 >
@@ -476,7 +476,7 @@
 >
 >
 >
-> f(**x**|μ) = exp {∑k=1:M-1 \[xk ln(μk/\[1 - ∑j=1:M-1 μj\])\] + ln(1 - ∑j=1:M-1 μj)}
+> f(𝐱|μ) = exp {∑k=1:M-1 \[xk ln(μk/\[1 - ∑j=1:M-1 μj\])\] + ln(1 - ∑j=1:M-1 μj)}
 >
 >
 >
@@ -484,7 +484,7 @@
 >
 >
 >
-> Tiếp, cái việc ta đang làm vẫn chỉ là chỉ ra cho thấy công thức pdf của multinomial có dạng của exponential family (mà lúc nãy đã làm xong rồi), chẳng qua muốn xem với việc bỏ bớt tham số nhờ constraint nói trên thì kết quả sẽ cho thấy dạng exponential family sẽ trông như thế nào. (lúc nãy kết quả ra là: exp {∑k=1:M \[xk ln (μk)\]} = h(**x**) g(**η**) exp(**η**Tu(**x**)) với h(**x**) = 1, g(**η**) = 1)
+> Tiếp, cái việc ta đang làm vẫn chỉ là chỉ ra cho thấy công thức pdf của multinomial có dạng của exponential family (mà lúc nãy đã làm xong rồi), chẳng qua muốn xem với việc bỏ bớt tham số nhờ constraint nói trên thì kết quả sẽ cho thấy dạng exponential family sẽ trông như thế nào. (lúc nãy kết quả ra là: exp {∑k=1:M \[xk ln (μk)\]} = h(𝐱) g(**η**) exp(**η**ᵀu(𝐱)) với h(𝐱) = 1, g(**η**) = 1)
 >
 >
 >
@@ -492,7 +492,7 @@
 >
 >
 >
-> f(**x**|μ) = exp {∑k=1:M-1 \[xk ln(μk/\[1 - ∑j=1:M-1 μj\])\] + ln(1 - ∑j=1:M-1 μj)}
+> f(𝐱|μ) = exp {∑k=1:M-1 \[xk ln(μk/\[1 - ∑j=1:M-1 μj\])\] + ln(1 - ∑j=1:M-1 μj)}
 >
 >
 >
@@ -520,11 +520,11 @@
 >
 >
 >
-> f(x|η) = \[1 + ∑k=1:M-1 exp(ηk)\]^-1 exp(**η**T**x**)
+> f(x|η) = \[1 + ∑k=1:M-1 exp(ηk)\]^-1 exp(**η**ᵀ𝐱)
 >
 >
 >
-> chính là công thức của exponential familty với u(**x**) = **x**, h(**x**) = 1, g(η) = \[1 + ∑k=1:M-1 exp(ηk)\]^-1
+> chính là công thức của exponential familty với u(𝐱) = 𝐱, h(𝐱) = 1, g(η) = \[1 + ∑k=1:M-1 exp(ηk)\]^-1
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
@@ -542,75 +542,75 @@
 <p align="center"><kbd><img src="assets/zqtlcvc6yb.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cuối cùng là Normal, cái này bên Casella đã biết rồi. Cơ bản thì vì Normal nó đã có cái exp sẵn, nên chỉ cần xử lí nó để lòi ra **η**Tu(**x**):
+> Cuối cùng là Normal, cái này bên Casella đã biết rồi. Cơ bản thì vì Normal nó đã có cái exp sẵn, nên chỉ cần xử lí nó để lòi ra **η**ᵀu(𝐱):
 >
 >
 >
-> Normal(x|μ, σ^2) = \[1/√(2πσ^2)\] exp{-(x-μ)^2/2σ^2}
+> Normal(x|μ, σ²) = \[1/√(2πσ²)\] exp{-(x-μ)²/2σ²}
 >
 >
 >
-> = \[1/√(2πσ^2)\] exp{-(x^2-2μx+μ^2)/2σ^2}
+> = \[1/√(2πσ²)\] exp{-(x²-2μx+μ²)/2σ²}
 >
 >
 >
-> = \[1/√(2πσ^2)\] exp{-x^2/2σ^2+2μx/2σ^2-μ^2/2σ^2)}
+> = \[1/√(2πσ²)\] exp{-x²/2σ²+2μx/2σ²-μ²/2σ²)}
 >
 >
 >
-> = \[1/√(2πσ^2)\] exp{-x^2/2σ^2+μx/σ^2-μ^2/2σ^2)}
+> = \[1/√(2πσ²)\] exp{-x²/2σ²+μx/σ²-μ²/2σ²)}
 >
 >
 >
-> = \[1/√(2πσ^2)\] exp{(-1/2σ^2)x^2+(μ/σ^2)x} × exp{-μ^2/2σ^2)}
+> = \[1/√(2πσ²)\] exp{(-1/2σ²)x²+(μ/σ²)x} × exp{-μ²/2σ²)}
 >
 >
 >
-> = \[1/√(2πσ^2)\] exp{-μ^2/2σ^2) exp{(-1/2σ^2)x^2+(μ/σ^2)x}}
+> = \[1/√(2πσ²)\] exp{-μ²/2σ²) exp{(-1/2σ²)x²+(μ/σ²)x}}
 >
 >
 >
-> Đặt **η** = \[-1/2σ^2, μ/σ^2\]T
+> Đặt **η** = \[-1/2σ², μ/σ²\]ᵀ
 >
 >
 >
-> u(x) = \[x^2, x\]
+> u(x) = \[x², x\]
 >
 >
 >
-> ⇨ trong exponential chính là **η**Tu(x)
+> ⇨ trong exponential chính là **η**ᵀu(x)
 >
 >
 >
->  và ở ngoài \[1/√(2πσ^2)\] exp{-μ^2/2σ^2) ta có thể tin là h(x) g(**η**) luôn cũng được. Hoặc giải tìm cụ thể chúng là gì:
+>  và ở ngoài \[1/√(2πσ²)\] exp{-μ²/2σ²) ta có thể tin là h(x) g(**η**) luôn cũng được. Hoặc giải tìm cụ thể chúng là gì:
 >
 >
 >
-> Ta đặt **η** (= (η1, η2)) = \[-1/2σ^2, μ/σ^2\]T ⇨ η1 = -1/2σ^2 ⇨ σ^2 = -1/2η1
+> Ta đặt **η** (= (η1, η2)) = \[-1/2σ², μ/σ²\]ᵀ ⇨ η1 = -1/2σ² ⇨ σ² = -1/2η1
 >
 >
 >
-> η2 = μ/σ^2 ⇨ μ = σ^2 η2 = -η2/2η1
+> η2 = μ/σ² ⇨ μ = σ² η2 = -η2/2η1
 >
 >
 >
-> ⇨ \[1/√(2πσ^2)\] exp{-μ^2/2σ^2) = \[1/√(2π)\] \[1/√σ^2)\] exp{-μ^2/2σ^2)
+> ⇨ \[1/√(2πσ²)\] exp{-μ²/2σ²) = \[1/√(2π)\] \[1/√σ²)\] exp{-μ²/2σ²)
 >
 >
 >
->  = \[1/√(2π)\] \[1/√(-1/2η1)\] exp{-(-η2/2η1)^2/2(-1/2η1))
+>  = \[1/√(2π)\] \[1/√(-1/2η1)\] exp{-(-η2/2η1)²/2(-1/2η1))
 >
 >
 >
-> = \[1/√(2π)\] \[1/√1/(-2η1)\] exp{-(η2^2/4η1^2)/(-η1))
+> = \[1/√(2π)\] \[1/√1/(-2η1)\] exp{-(η2²/4η1²)/(-η1))
 >
 >
 >
-> = \[1/√(2π)\] \[√(-2η1)\] exp{η2^2/4η1)
+> = \[1/√(2π)\] \[√(-2η1)\] exp{η2²/4η1)
 >
 >
 >
-> = \[1/√(2π)\] (-2η1)^1/2 exp{η2^2/4η1) → 2.223 (mình đặt eta và u(x) thứ tự ngược lại với trong sách nhưng ko quan trọng.
+> = \[1/√(2π)\] (-2η1)^1/2 exp{η2²/4η1) → 2.223 (mình đặt eta và u(x) thứ tự ngược lại với trong sách nhưng ko quan trọng.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
