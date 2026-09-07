@@ -120,11 +120,12 @@
 
 <a id="node-d0gbu4a"></a>
 
+###### Matrix Diagonalization Formula
+
 <p align="center"><kbd><img src="assets/yvz1vmvsf1.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Dễ thấy matrix đó là một **diagonal matrix** mà diagonal
-> components là các **eigenvalues,** kí hiệu là Λ (LAMBDA)
+> Dễ thấy matrix đó là một **diagonal matrix** mà diagonal components là các **eigenvalues,** kí hiệu là Λ
 
 <br>
 
@@ -243,8 +244,8 @@
 >
 >
 >
-> Khi đó thay Ax = λx ta sẽ có **λAx = λ^2.x**
-> từ đó ta có: **A²x = λ^2.x**
+> Khi đó thay Ax = λx ta sẽ có **λAx = λ^2 × x**
+> từ đó ta có: **A²x = λ^2 × x**
 >
 >
 >
@@ -272,11 +273,11 @@
 >
 >
 >
-> = **S.Λ^2.S⁻¹**
+> = **S.Λ^2 × S⁻¹**
 >
 >
 >
-> Như vậy qua việc phân tách A² = S.Λ^2.S⁻¹ có thể thấy
+> Như vậy qua việc phân tách A² = S.Λ^2 × S⁻¹ có thể thấy
 >
 >
 >
@@ -296,7 +297,7 @@
 <p align="center"><kbd><img src="assets/79zzfdgsd2b.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và tương tự ta hòan toàn dễ hiểu rằng **A^k = S.Λ^K.S⁻¹** ,
+> Và tương tự ta hòan toàn dễ hiểu rằng **A^k = S.Λ^K × S⁻¹** ,
 > và cho ta biết **eigenvector của A mũ bao nhiêu thì nó vẫn là
 > eigenvector của A**. Và eigenvalue của A^k thì bằng
 > **lũy thừa k của A's eigenvalue**.
@@ -336,7 +337,7 @@
 
 > [!NOTE]
 > Gs nhấn mạnh rằng để cho phép EIGEN-DECOMPOSITION
-> factorize **A thành S.LAMDA.S⁻¹** thì **phải thỏa mãn điều
+> factorize **A thành S × LAMDA × S⁻¹** thì **phải thỏa mãn điều
 > kiện** là **A có N INDEPENDENT EIGENVECTORS.** 
 >
 >
@@ -398,6 +399,8 @@
 
 <a id="node-i3svf3p"></a>
 
+###### Matrix Diagonalization and Powers of A
+
 <p align="center"><kbd><img src="assets/eascrfvn93w.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -420,16 +423,16 @@
 >
 >
 > Và trong trường hợp của I, A = I thì phép factorization sẽ là
-> S⁻¹. A.S = S⁻¹. I.S = S⁻¹.S = I = **LAMBDA**.
+> S⁻¹. A × S = S⁻¹. I × S = S⁻¹.S = I = **Λ**.
 >
 >
 >
-> Tức là, với I, thì **NÓ CŨNG CHÍNH LÀ LAMBDA LUÔN**,vì
+> Tức là, với I, thì **NÓ CŨNG CHÍNH LÀ Λ LUÔN**,vì
 > ta cũng biết **với triangular matrix thì eigenvalue nó đã nằm
 > sẵn trên đường chéo rồi**, nên nếu các vị trí khác đường
 > chéo mà bằng 0 như đối với Identity matrix nói riêng hay
 > diagonal matrix nói chung thì **bản thân nó chính là
-> LAMBDA LUÔN.**
+> Λ LUÔN.**
 
 <br>
 
@@ -618,7 +621,7 @@
 >
 >
 >
-> A(c1λ1x1 + c2λ2x2 + ...) = c1λ1Ax1 + c2λ2.Ax2 +
+> A(c1λ1x1 + c2λ2x2 + ...) = c1λ1Ax1 + c2λ2 × Ax2 +
 > ....
 >
 >
@@ -635,7 +638,7 @@
 >
 >
 >
-> **A^100u_0 = c1.λ1^100.x1 + c2.λ2^100.x2 + ......**
+> **A^100u_0 = c1.λ1^100 × x1 + c2.λ2^100 × x2 + ......**
 
 <br>
 
@@ -855,7 +858,7 @@
 <p align="center"><kbd><img src="assets/kph4nsavgep.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Từ đó ta có thể **dùng u_0** = c1.x1 + c2.x2 **để tìm c1, c2**.
+> Từ đó ta có thể **dùng u_0** = c1 × x1 + c2 × x2 **để tìm c1, c2**.
 >
 >
 >
@@ -900,7 +903,7 @@
 >
 >
 >
-> tương tự sẽ dễ thấy u_k = S.Λ^k.S⁻¹ u_0
+> tương tự sẽ dễ thấy u_k = S.Λ^k × S⁻¹ u_0
 >
 >
 >
