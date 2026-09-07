@@ -101,6 +101,8 @@
 
 <a id="node-wp737iz"></a>
 
+###### Rank and Number of Pivots
+
 <p align="center"><kbd><img src="assets/7uyaeggff2c.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -162,7 +164,7 @@
 >
 >
 >
->  -> x = c * [-2, 1, 0, 0].T
+>  → x = c * [-2, 1, 0, 0].T
 
 **🔗 See also:** [linked note](#node-o9zdw8l)
 
@@ -245,7 +247,7 @@
 >
 >
 >
-> -> Nó là vì **row 3 = linear combination của row 1, 2** của
+> → Nó là vì **row 3 = linear combination của row 1, 2** của
 > matrix A và **quá trình elimination đã phát hiện ra và
 > eliminate nó đi**
 
@@ -263,7 +265,7 @@
 >
 >
 > Có thể tiếp tục clean hơn nữa: **CHO PIVOT BẰNG 1
-> HẾT**. -> Chia row 2 cho pivot
+> HẾT**. → Chia row 2 cho pivot
 
 **🔗 See also:** [linked note](#node-r7qd5ov)
 
@@ -494,7 +496,7 @@
 > Thế là ta đã có matrix U - mà mình nhớ là viết tắt của
 > **Upper triangular matrix** (số khác 0 ở trên đường chéo)
 
-**🔗 See also:** [linked note](./lecture_4_factorization_into_a_lu.md#node-lgkwott)
+**🔗 See also:** [Ma trận tam giác LU](./lecture_4_factorization_into_a_lu.md#node-lgkwott)
 
 <br>
 
@@ -560,7 +562,7 @@
 >
 >
 >
-> <-> **col 3 = col 1 + col 2**
+> <→ **col 3 = col 1 + col 2**
 
 **🔗 See also:** [Phép nhân ma trận và tổ hợp](./lecture_2_elimination_with_matrices.md#node-596cn5u)
 
@@ -575,7 +577,7 @@
 >
 >
 >
-> -> Thử trả lời: Đó là **mọi linear combination của
+> → Thử trả lời: Đó là **mọi linear combination của
 > special solution** mà chỉ có 1 special solution nên
 > (mọi linear combination của nó) là một line trong 3D
 > space.
@@ -603,7 +605,7 @@
 >
 >
 > ii) sau đó **chọn giá trị tùy ý cho free variable** và **back 
-> substitution để tính ra pivot variable** -> **Special solutions**
+> substitution để tính ra pivot variable** → **Special solutions**
 >
 >
 >
