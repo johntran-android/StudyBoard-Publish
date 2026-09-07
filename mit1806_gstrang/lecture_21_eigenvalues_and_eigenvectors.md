@@ -91,7 +91,7 @@
 > Và đó **chính là các vector trong nullspace of A: N(A)**. Thật
 > vậy, mọi vector (KHÁC 0) trong nullspace đều là eigenvector
 > với eigenvalue = 0. Vì **mọi vector trong nullspace đều thỏa
-> Ax = 0*x**
+> Ax = 0 × x**
 >
 >
 >
@@ -101,7 +101,7 @@
 >
 >
 > VÀ CHÚ Ý ZERO VECTOR KHÔNG PHẢI EIGENVECTOR
-> DÙ A*ZERO_VECTOR = 0*0. VÌ VỚI EIGENVECTOR TA
+> DÙ A × ZERO_VECTOR = 0 × 0. VÌ VỚI EIGENVECTOR TA
 > **CHỈ XÉT CÁC NON-ZERO VECTOR**
 
 <br>
@@ -349,7 +349,7 @@
 >
 > Chứ nếu nó full-rank, hay invertible thì đương nhiên như
 > đã biết nullspace chỉ có duy nhất một zero vector, thì có
-> nghĩa là không có non zero vector nào mà khiến (A-ld*I)x =
+> nghĩa là không có non zero vector nào mà khiến (A-ld × I)x =
 > 0
 
 <br>
@@ -449,17 +449,17 @@
 
 > [!NOTE]
 > Và từ đó, lần lượt ta sẽ **tìm nullspace** của matrix
-> (**A** - **4*I)**,  ta sẽ có **eigenvectors** ứng với
+> (**A** - **4 × I)**,  ta sẽ có **eigenvectors** ứng với
 > **eigenvalue = 4**
 >
 >
 >
-> Và tìm **nullspace của matrix (A - 2*I)**, ta sẽ có
+> Và tìm **nullspace của matrix (A - 2 × I)**, ta sẽ có
 > **eigenvectors** ứng với **eigenvalue = 2** 
 >
 >
 >
-> Gs: Vậy  có thể thấy A - 4*I là matrix như thế
+> Gs: Vậy  có thể thấy A - 4 × I là matrix như thế
 > nào?
 
 <br>
@@ -473,7 +473,7 @@
 > [!NOTE]
 > Trả lời: Đó là nó **singular**, có nghĩa ta sẽ hiểu rằng gs
 > nhấn mạnh rằng **A có thể không singular**, nhưng **A -
-> 4*I** phải  singular để rồi **nullspace của nó khác zero**, và
+> 4 × I** phải  singular để rồi **nullspace của nó khác zero**, và
 > sẽ chứa các eigenvectors tương ứng với eigenvalue = 4
 >
 >
@@ -503,7 +503,7 @@
 <p align="center"><kbd><img src="assets/cri5ti4h3mt.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Còn với λ = 2, ta có A - 2*I là vầy. Và đương nhiên nó
+> Còn với λ = 2, ta có A - 2 × I là vầy. Và đương nhiên nó
 > **cũng** **singular**, và ta có thể **nhìn ra một vector của
 > nullspace là [-1, 1]** (đương nhiên cũng là một basis vì
 > dim của nullspace cũng bằng 1)
@@ -525,7 +525,7 @@
 
 > [!NOTE]
 > Thế thì gs đề nghị ta nhận xét thế này: matrix [0 1; 1 0]
-> so với A [3 1; 1 3] **chỉ là cộng thêm 3*I**
+> so với A [3 1; 1 3] **chỉ là cộng thêm 3 × I**
 >
 >
 >
@@ -548,12 +548,12 @@
 >
 >
 >
-> thì khi đó (A + 3*I)x = Ax + 3Ix = λx + 3x = (λ + 3)x
+> thì khi đó (A + 3 × I)x = Ax + 3Ix = λx + 3x = (λ + 3)x
 >
 >
 >
 > Như vậy, **(A + 3I)x = (λ + 3)x** nên **x CŨNG là eigenvector
-> của (A + 3*I)** và **eigenvalue sẽ là  λ + 3**
+> của (A + 3 × I)** và **eigenvalue sẽ là  λ + 3**
 
 <br>
 
@@ -601,13 +601,13 @@
 > Nên phải ghi là **By = α*y** và cộng hai vế của hai
 > equation lại **chẳng giúp ta rút ra được gì**. Do đó việc
 > **biết eigenvalue của A, B không giúp tính eigenvalue
-> của A+B hay A*B**
+> của A+B hay A × B**
 >
 >
 >
 > Do đó **chỉ khi B là α*I thì khi đó A+B = A+α*I** thì như
 > hồi nãy ta sẽ **biết matrix này có eigenvalue là
-> eigenvalue của A cộng thêm alpha.**
+> eigenvalue của A cộng thêm α.**
 
 <br>
 
@@ -677,7 +677,7 @@
 >
 > Hơn nữa nhìn vào **trace** = 0, cho **thấy eigenvalue phải 
 > một âm một dương**. Thế mà **tích của chúng lại bằng 
-> det và = 1 (0*0-(-1)*1))**
+> det và = 1 (0 × 0-(-1)*1))**
 
 <br>
 
@@ -794,7 +794,7 @@
 >
 >
 > → cols 1 là free col. col 2 là pivot. nên x1 là free var, x2 là
-> pivot var. Chọn x1 = 1, thế vào: 0*0 + x2*1 = 0 ⇒ x2 = 0
+> pivot var. Chọn x1 = 1, thế vào: 0 × 0 + x2 × 1 = 0 ⇒ x2 = 0
 > và special solution là [1 0]ᵀ cũng là basis của nullspace
 
 <br>
