@@ -22,27 +22,27 @@
 >
 >
 >
-> Và ta sẽ chỉ xem xét linear discriminant function, có dạng y(**x**) = **w**T**x** + w0.
+> Và ta sẽ chỉ xem xét linear discriminant function, có dạng y(𝐱) = 𝐰ᵀ𝐱 + w0.
 >
 >
 >
-> Đây là lần đầu tiên mình nghe gs gọi **w** là weight vector và bias w0.
+> Đây là lần đầu tiên mình nghe gs gọi 𝐰 là weight vector và bias w0.
 >
 >
 >
-> Và bias này khác với bias của estimator trong thống kê (ôn nhanh cho vui, Bias của estimator W(**X**) của θ là hàm tính bởi Bias(W, θ) = E\_θ\[W(**X**)\] - θ)
+> Và bias này khác với bias của estimator trong thống kê (ôn nhanh cho vui, Bias của estimator W(𝐗) của θ là hàm tính bởi Bias(W, θ) = E\_θ\[W(𝐗)\] - θ)
 >
 >
 >
-> Và decision rule là: Gán C1 khi y(**x**) ≥ 0 và C2 khi y(**x**) &lt; 0.
+> Và decision rule là: Gán C1 khi y(𝐱) ≥ 0 và C2 khi y(𝐱) &lt; 0.
 >
 >
 >
-> Như vậy decision boundary là y(**x**) = 0 ⇔ **w**T**x** + w0 = 0, dễ hiểu đây sẽ là phương trình của hyperplane (ví dụ D = 2 nó chính là đường thẳng w1 x1 + w0 = 0)
+> Như vậy decision boundary là y(𝐱) = 0 ⇔ 𝐰ᵀ𝐱 + w0 = 0, dễ hiểu đây sẽ là phương trình của hyperplane (ví dụ D = 2 nó chính là đường thẳng w1 x1 + w0 = 0)
 >
 >
 >
-> Cũng dễ thấy w sẽ vuông góc với hyperplane, vì với xA, xB bất kì trên hyperplane (và sẽ tạo vector bất kì thuộc hyperplane), ta có wT(xA - xB) = wTxA - wTxB = wTxA + w0 - wTxB - w0 = y(xA) - y(xB) = 0 - 0 = 0, vậy w vuông góc với vector bất kì của hyperplane nên nó vuông góc với hyperplane.
+> Cũng dễ thấy w sẽ vuông góc với hyperplane, vì với xA, xB bất kì trên hyperplane (và sẽ tạo vector bất kì thuộc hyperplane), ta có wᵀ(xA - xB) = wᵀxA - wᵀxB = wᵀxA + w0 - wᵀxB - w0 = y(xA) - y(xB) = 0 - 0 = 0, vậy w vuông góc với vector bất kì của hyperplane nên nó vuông góc với hyperplane.
 >
 >
 >
@@ -54,7 +54,7 @@
 >
 >
 >
-> Dùng công thức dot product aTb = ||a|| ||b|| cos(θ(a,b)) (w/||w||)T x = ||(w/||w||)| ||x|| cos α = ||x|| cos α.
+> Dùng công thức dot product aᵀb = ||a|| ||b|| cos(θ(a,b)) (w/||w||)ᵀ x = ||(w/||w||)| ||x|| cos α = ||x|| cos α.
 >
 >
 >
@@ -62,7 +62,7 @@
 >
 >
 >
-> Bên cạnh đó (w/||w||) T x cũng bằng (wTx) / ||w|| (vì 1/||w|| chỉ là scalar)
+> Bên cạnh đó (w/||w||) T x cũng bằng (wᵀx) / ||w|| (vì 1/||w|| chỉ là scalar)
 >
 >
 >
@@ -86,11 +86,11 @@
 >
 >
 >
-> nhân hai vế cho wT: wT(EF) = wTx - wT(x⊥) = wTx + w0 - wT(x⊥) - w0 = y(x) - y(x⊥) = y(x) - 0 (do x⊥ ∈ hyperplane)
+> nhân hai vế cho wᵀ: wᵀ(EF) = wᵀx - wᵀ(x⊥) = wᵀx + w0 - wᵀ(x⊥) - w0 = y(x) - y(x⊥) = y(x) - 0 (do x⊥ ∈ hyperplane)
 >
 >
 >
-> Vậy wT(EF) = y(x)
+> Vậy wᵀ(EF) = y(x)
 >
 >
 >
