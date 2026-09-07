@@ -34,7 +34,7 @@
 >
 >
 > Ta có thể thấy để trả lời câu hỏi này, đầu tiên ta biết gì về
-> pivots của nó -> không nhiều. Nhưng ta biết eigenvalue của
+> pivots của nó → không nhiều. Nhưng ta biết eigenvalue của
 > nó. Vì như bài trước, **eigenvalue của A⁻¹ sẽ là 1/eigenvalue
 > của A** (1) 
 >
@@ -489,7 +489,7 @@
 >
 >
 >
-> Do đó **NULLSPACE LÀ TOÀN BỘ R^2** để rồi **BẤT KÌ CẶP VECTOR
+> Do đó **NULLSPACE LÀ TOÀN BỘ R²** để rồi **BẤT KÌ CẶP VECTOR
 > NÀO INDEPENDENT ĐỀU LÀ BASIS CỦA NULLSPACE** và cùng **đều
 > là eigenvectors của A**
 
@@ -727,7 +727,7 @@
 > A (vì λ vẫn bằng 0, bởi giải characteristic equation
 > det A = 0 ⇔ λ^4 = 0 ⇔ λ = 0, từ đó solve 
 > equation (A-0*I)x=0 để tìm eigenvectors ⇔ Ax=0)
-> Và A vẫn có 2 free columns -> dim N(A) = 2 -> 2 eigenvectors
+> Và A vẫn có 2 free columns → dim N(A) = 2 → 2 eigenvectors
 >
 >
 >
