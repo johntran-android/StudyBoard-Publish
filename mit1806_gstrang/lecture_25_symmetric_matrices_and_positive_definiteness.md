@@ -278,15 +278,15 @@
 >
 >
 >
-> Ví dụ **a = u + v*i**, thì conjugate của a là **u - v*i** để rồi
+> Ví dụ **a = u + v × i**, thì conjugate của a là **u - v × i** để rồi
 >
 >
 >
-> a*(conjugate of a) = (u + v*i)(u - v*i) 
+> a*(conjugate of a) = (u + v × i)(u - v × i) 
 >
 >
 >
-> = u² - (v*i)^2 
+> = u² - (v × i)^2 
 >
 >
 >
@@ -464,8 +464,8 @@
 >
 >
 > (**conjugate** là khái niệm nhắc lại lần nữa, nếu một
-> **complex number** n = a + b*i thì conjugate của nó là
-> n_bar = a - b*i, tức là nó **đổi dấu của phần ảo, và cũng
+> **complex number** n = a + b × i thì conjugate của nó là
+> n_bar = a - b × i, tức là nó **đổi dấu của phần ảo, và cũng
 > dễ hiểu với số thực, tức không có phần ảo thì lấy gì đổi
 > dấu, thì conjugate của số thực cũng là chính nó**)
 >
@@ -479,11 +479,11 @@
 >
 >
 >
-> Đương nhiên là = **x1_bar*x1** + **x2_bar*x2** + ....
+> Đương nhiên là = **x1_bar × x1** + **x2_bar × x2** + ....
 >
 >
 >
-> và **x1_bar*x1** chỉ còn **tổng bình phương của các real
+> và **x1_bar × x1** chỉ còn **tổng bình phương của các real
 > part** như lúc nãy đã nói, không còn phần ảo (imaginary)
 > nữa
 >
