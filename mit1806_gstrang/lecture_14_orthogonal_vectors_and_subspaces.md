@@ -138,7 +138,7 @@
 <p align="center"><kbd><img src="assets/lq3n18bvwhn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp gs hỏi thế zero vector thì sao -> với zero vector thì
+> Tiếp gs hỏi thế zero vector thì sao → với zero vector thì
 > vì chúng dot product với vector nào cũng bằng 0 nên cứ
 > theo luật mà làm, **nó sẽ orthogonal với mọi vector**
 
@@ -216,7 +216,7 @@
 >
 > ii) **hai line qua origin** (là hai subpace) mà **vuông góc nhau**.
 > Đương nhiên mọi vector trong line này cũng sẽ đều vuông
-> góc mọi vector trong line kia -> thỏa mãn điều kiện hai
+> góc mọi vector trong line kia → thỏa mãn điều kiện hai
 > orthogonal subspace.
 
 <br>
@@ -247,7 +247,7 @@
 > 1 cols) sẽ cho ra linear combination CÁC HÀNG CỦA x (mà mỗi hàng
 > chỉ có 1 phần tử) với coefficient là các phần tử của row 1 của A. Và
 > đương nhiên kết quả của cũng là một hàng - và cũng chỉ có 1 phần tử
-> -> đó chính là phần tử đầu tiên của vector kết qủa.
+> → đó chính là phần tử đầu tiên của vector kết qủa.
 >
 >
 >
@@ -333,7 +333,7 @@
 
 > [!NOTE]
 > gs: correct. Và ta có thể thấy kiểu như **2 subspace
-> Rowspace và Nullspace khắc họa nên R^n**.
+> Rowspace và Nullspace khắc họa nên Rⁿ**.
 >
 >
 >
@@ -347,22 +347,22 @@
 <p align="center"><kbd><img src="assets/y3qfkevyg4q.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp gs đặt câu hỏi là, tưởng tượng trong R^3, ta lấy hai
+> Tiếp gs đặt câu hỏi là, tưởng tượng trong R³, ta lấy hai
 > subspace là **2 orthogonal line** (đương nhiên đi qua gốc
 > zero), và chúng **KHÔNG** **CÙNG NHAU KHẮC HỌA NÊN CẢ
-> R^3** (vì chúng chỉ tạo một plane)
+> R³** (vì chúng chỉ tạo một plane)
 >
 >
 >
 > Thì gs hỏi là: Có khi nào một rowspace và nullspace đóng
 > vai của hai line đó - tức 2 subspace orthogonal nhưng
-> không tạo toàn bộ R^3
+> không tạo toàn bộ R³
 >
 >
 >
 > Me: Không, vì tính chất **tổng dimension của rowspace (r)
 > và nullspace (n-r) phải bằng n**. Do đó không thể có vụ 
-> rowspace và nullspace đều là subspace của R^3 (matrix có
+> rowspace và nullspace đều là subspace của R³ (matrix có
 > 3 cols) mà mỗi cái đều là một line (dim = 1) được
 
 <br>
@@ -372,10 +372,10 @@
 <p align="center"><kbd><img src="assets/mq6q62tsyt.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs cho ví dụ này, dễ thấy hai row dependent, -> chỉ có **1
-> independent row** -> **rowspace có dim = 1**, và do đó
+> Gs cho ví dụ này, dễ thấy hai row dependent, → chỉ có **1
+> independent row** → **rowspace có dim = 1**, và do đó
 > matrix rank 1, và cũng dẫn tới chỉ có 1 independent cols,
-> nên chỉ có **2 free cols** ứng với 2 special solution -> chỉ
+> nên chỉ có **2 free cols** ứng với 2 special solution → chỉ
 > có 2 vector trong basis và do đó **nullspace có dim = 2
 >
 >
@@ -535,7 +535,7 @@
 >
 >
 >
-> gs cho rằng tôi sẽ **nhân hai vế của Ax=b với Aᵀ** để hi vọng rằng **có thể có solution của phương trình này**, gs gọi là **x^**
+> gs cho rằng tôi sẽ **nhân hai vế của Ax=b với Aᵀ** để hi vọng rằng **có thể có solution của phương trình này**, gs gọi là **x̂**
 
 <br>
 
@@ -546,23 +546,23 @@
 <p align="center"><kbd><img src="assets/sri5jlz4kb.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và khi đó **AᵀAx^ = Aᵀb** sẽ là equation mà ông gọi là **good
+> Và khi đó **AᵀAx̂ = Aᵀb** sẽ là equation mà ông gọi là **good
 > equation**
 
 <br>
 
 <a id="node-wmm3bkn"></a>
 
+###### Normal Equations for Least Squares
+
 <p align="center"><kbd><img src="assets/m3l6sddpvp8.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs lấy ví dụ như matrix này, 3 rows, 2 cols. **Dễ thấy rank = 2** 
+> Gs lấy ví dụ như matrix này, 3 rows, 2 cols. **Dễ thấy rank = 2**
 >
 >
 >
-> Và như đã nói chỉ khi nào b **NẰM TRÊN COLS SPACE
-> \- LÀ 2D PLANE TRONG R3**, THÌ mới system of equation
-> này mới solvable
+> Và như đã nói chỉ khi nào b **NẰM TRÊN COLS SPACE − LÀ 2D PLANE TRONG R3**, THÌ mới system of equation này mới solvable
 
 <br>
 
