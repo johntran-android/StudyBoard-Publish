@@ -29,7 +29,7 @@
 >
 >
 >
-> -> Thử trả lời: **3**, vì với 3 vector, thì giả sử không cùng
+> → Thử trả lời: **3**, vì với 3 vector, thì giả sử không cùng
 > phương thì chúng chỉ có thể span một **3D subspace trong
 > R7**
 >
@@ -447,6 +447,8 @@
 
 <a id="node-imhf1gg"></a>
 
+###### Do They Form a Subspace
+
 <p align="center"><kbd><img src="assets/27z25e98qgy.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -470,18 +472,16 @@
 > độc lập không**.
 >
 >
->
-> \- Xét về việc nhân 2 vector độc lập, với cùng một số, thì dễ thấy vẫn tạo
+> − Xét về việc nhân 2 vector độc lập, với cùng một số, thì dễ thấy vẫn tạo
 > hai vector độc lập vì **scale vector không làm thay đổi phương của
 > vector**. Nên với hai vector độc lập tức là nó không cùng phương với
 > nhau thì có  scale chúng thì chúng vẫn không cùng phương.
 >
 >
->
-> \- Xét việc cộng hai vector độc lập với hai vector độc lập khác, thế thì việc
+> − Xét việc cộng hai vector độc lập với hai vector độc lập khác, thế thì việc
 > **cộng hai vector thay đổi phương của chúng**. Dẫn đến là kết quả của
 > hai việc **cộng hai vector khác phương với hai vector khác  phương
-> khác** **có thể tạo ra hai vector cùng phương** -> không còn  độc lập
+> khác** **có thể tạo ra hai vector cùng phương** → không còn  độc lập
 > nhau.
 >
 >
@@ -514,7 +514,7 @@
 <p align="center"><kbd><img src="assets/raga1q7gfxg.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs: Next question: Cho square matrix B, nếu B^2 = 0 thì B
+> Gs: Next question: Cho square matrix B, nếu B² = 0 thì B
 > = 0. True or False?
 >
 >
@@ -560,6 +560,8 @@
 
 <a id="node-xop82on"></a>
 
+###### Solvability of Linear Systems Ax = b
+
 <p align="center"><kbd><img src="assets/lexy8sxugi.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fx1e54ry1jc.png" width="80%"></kbd></p>
@@ -580,10 +582,10 @@
 >
 > Thế thì, ta có mọi cols, đều independent, cho nên basis
 > của cols space có n vector. Đương nhiên ta đang xét
-> không gian R^n (vector có n phần tử). Thế thì basis của 
+> không gian Rⁿ (vector có n phần tử). Thế thì basis của 
 > column space có n vector cũng chính là dimension của
 > column space bằng n. Thì điều này có nghĩa là colums
-> space CHÍNH LÀ R^n. Và khi đó đương nhiên b sẽ luôn
+> space CHÍNH LÀ Rⁿ. Và khi đó đương nhiên b sẽ luôn
 > nằm trong columns space.
 >
 >
@@ -714,7 +716,7 @@
 >
 >
 >
-> Rồi, xét C, dễ thấy nó có 2 pivot row -> dim rowspace = 2, và
+> Rồi, xét C, dễ thấy nó có 2 pivot row → dim rowspace = 2, và
 > từ đó cũng suy ra dim của cols space = 2 (và bằng luôn rank)
 > Vậy trong 4 cols, có 2 pivot cols, 2 free cols. Từ đó như đã
 > biết 2 free cols ứng với 2 special solution cũng chính là 2
