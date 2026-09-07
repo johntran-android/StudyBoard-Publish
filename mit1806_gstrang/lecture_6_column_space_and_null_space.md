@@ -112,6 +112,8 @@
 
 <a id="node-n982soj"></a>
 
+###### Không gian cột ma trận
+
 <p align="center"><kbd><img src="assets/9c9c9pdtdb5.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -129,6 +131,8 @@
 <br>
 
 <a id="node-e7vsh8q"></a>
+
+###### Độ rộng không gian cột
 
 <p align="center"><kbd><img src="assets/3qcl7vtdamk.png" width="80%"></kbd></p>
 
@@ -153,6 +157,8 @@
 
 <a id="node-pg48b1e"></a>
 
+###### Sự tồn tại nghiệm Ax=b
+
 <p align="center"><kbd><img src="assets/zo3qo4jzfj.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -166,6 +172,8 @@
 <br>
 
 <a id="node-1l4280y"></a>
+
+###### Điều kiện có nghiệm Ax=b
 
 <p align="center"><kbd><img src="assets/b6dv9lqwvvs.png" width="80%"></kbd></p>
 
@@ -194,6 +202,8 @@
 <br>
 
 <a id="node-y52qsp1"></a>
+
+###### Điều kiện có nghiệm Ax=b
 
 <p align="center"><kbd><img src="assets/dt9oqxsqgei.png" width="80%"></kbd></p>
 
@@ -231,6 +241,8 @@
 
 <a id="node-zwb0s52"></a>
 
+###### Số chiều không gian cột
+
 <p align="center"><kbd><img src="assets/g32hp1zij8j.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -266,6 +278,8 @@
 
 <a id="node-3pwjj2d"></a>
 
+###### Khái niệm không gian NullSpace
+
 <p align="center"><kbd><img src="assets/mz3gco2m5t.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -285,7 +299,7 @@
 > và x2 là solution của Ax=0, tức Ax1=0 và Ax2=0 thì khi đó 
 > Ax1+Ax2 = A(x1+x2) cũng đương nhiên bằng 0. Do đó x1+x2
 > cũng là nằm trong tập hợp này (tập hợp các vector khiến Ax=0)
-> Và tương tự nếu A*c*x1 cũng bằng 0 với c bất kì, nên cx1 cũng
+> Và tương tự nếu A × c × x1 cũng bằng 0 với c bất kì, nên cx1 cũng
 > thuộc tập hợp này.
 >
 >
@@ -307,6 +321,8 @@
 <br>
 
 <a id="node-hy1lb2i"></a>
+
+###### Khái niệm Null Space
 
 <p align="center"><kbd><img src="assets/ml2uk64jw3.png" width="80%"></kbd></p>
 
@@ -344,7 +360,7 @@
 >
 >
 >
-> (vì 1*col1 + 1*col2 -1*col3 = 0)
+> (vì 1 × col1 + 1 × col2 -1 × col3 = 0)
 
 <br>
 
@@ -398,7 +414,7 @@
 >
 >
 >
-> Tương tự, nếu **Ax1=0 thì mọi Ac*x1 cũng = 0**, tức scale bất
+> Tương tự, nếu **Ax1=0 thì mọi Ac × x1 cũng = 0**, tức scale bất
 > kì vector trong tập solution thì vẫn dc một vector trong tập
 > solution
 
