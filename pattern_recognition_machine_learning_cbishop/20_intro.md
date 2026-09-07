@@ -29,7 +29,7 @@
 >
 >
 > Thế thì ông nói, một vai trò của các distribution sẽ thảo luận là dùng để
-> mô hình hóa một phân phối p(x) của các random variable **X**, cho biết
+> mô hình hóa một phân phối p(x) của các random variable 𝐗, cho biết
 > **x1**, ..., **xN** là các giá trị quan sát của chúng. Bài toán này gọi là DENSITY
 > ESTIMATION. Và ta sẽ giả định tính iid.
 >
@@ -38,7 +38,7 @@
 > Dừng lại chút, sau khi đã học Casella, thì mình thấy đây chính là bài 
 > toán statistical inference. Vì mục đích cũng là, dựa trên giá trị quan sát
 > được cuả một random sample X1,X2,...,Xn iid (mutually independent
-> và identically distributed) ~ f(**x**|θ), ta sẽ muốn estimate ra θ
+> và identically distributed) ~ f(𝐱|θ), ta sẽ muốn estimate ra θ
 >
 >
 >
