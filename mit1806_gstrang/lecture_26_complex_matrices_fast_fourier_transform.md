@@ -24,29 +24,19 @@
 <p align="center"><kbd><img src="assets/u9phn9y5qe.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, đầu tiên, là nếu ta deal với vector trong **Cⁿ** (tức là
-> không gian vector có **n dimension** nhưng các **giá trị là
-> complex**, thay vì chỉ là số thực R)
+> Rồi, đầu tiên, là nếu ta deal với vector trong **Cⁿ** (tức là không gian vector có **n dimension** nhưng các **giá trị là complex**, thay vì chỉ là số thực R)
 >
 >
 >
-> Đại khái là ta sẽ cần **điều chỉnh chút xíu** khi nói về
-> **length** **của vector**. Như có thể thấy, **nếu là Rⁿ**,
-> length của vector là **dot product của vector với chính nó
-> uᵀu**.
+> Đại khái là ta sẽ cần **điều chỉnh chút xíu** khi nói về **length** **của vector**. Như có thể thấy, **nếu là Rⁿ**, length của vector là **dot product của vector với chính nó uᵀu**.
 >
 >
 >
-> Tuy nhiên v**ới Cⁿ vector**, điều này không đúng. Đơn
-> cử một ví dụ trong C², vector u = [1, i] tức là hai phần tử
-> của nó là 1 + 0*i và 0 + 1*i. Khi đó uᵀu sẽ là 1*1 + i*i = 1 +
-> -1 (vì i² = -1) Khi đó uᵀu = 0, dù rằng rõ ràng chiều dài
-> vector hoàn toàn không phải là bằng 0.
+> Tuy nhiên v**ới Cⁿ vector**, điều này không đúng. Đơn cử một ví dụ trong C², vector u = \[1, i\] tức là hai phần tử của nó là 1 + 0*i và 0 + 1*i. Khi đó uᵀu sẽ là 1*1 + i*i = 1 + −1 (vì i² = -1) Khi đó uᵀu = 0, dù rằng rõ ràng chiều dài vector hoàn toàn không phải là bằng 0.
 >
 >
 >
-> Do đó, **cần phải thay đổ**i, và như bữa trước ta đã gặp,
-> bằng **cách dùng conjugate** (**số phức liên hợp)**
+> Do đó, **cần phải thay đổ**i, và như bữa trước ta đã gặp, bằng **cách dùng conjugate** (**số phức liên hợp)**
 
 <br>
 
