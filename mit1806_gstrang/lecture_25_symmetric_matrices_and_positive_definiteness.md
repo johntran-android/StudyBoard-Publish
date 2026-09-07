@@ -612,7 +612,7 @@
 >
 > Tiếp kết quả đó (matrix ΛQᵀ) khi nhân với Q: Q(ΛQᵀ) ta sẽ nhân  theo
 > kiểu **từng cột của Q** nhân với **từng hàng của ΛQᵀ**, cho ra **các
-> rank 1 matrix**: λ1.**q1q1ᵀ**, λ2.q2q2ᵀ...
+> rank 1 matrix**: λ1.**q1q1ᵀ**, λ2 × q2q2ᵀ...
 >
 >
 >
