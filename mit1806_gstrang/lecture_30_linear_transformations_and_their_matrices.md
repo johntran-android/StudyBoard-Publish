@@ -49,7 +49,7 @@
 >
 >
 >
-> Có thể viết gom lại thành T(cv+dw) = cT(v) + dᵀ(w)**
+> Có thể viết gom lại thành T(cv+dw) = cT(v) + dT(w)**
 
 <br>
 
@@ -123,7 +123,7 @@
 >
 > Me: thử lập luận như sau: (u+v)+v0 không bằng (u+v0)
 > + (v+v0) thành ra ko thỏa yêu cầu T(cu+dv) = cT(u) +
-> dT(v) -> **Không** phải linear transformation
+> dT(v) → **Không** phải linear transformation
 
 <br>
 
@@ -159,7 +159,7 @@
 <p align="center"><kbd><img src="assets/qujkrh3jt6k.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Một (non) example nữa là một transformation map **R^3
+> Một (non) example nữa là một transformation map **R³
 > với R^1:
 >
 >
@@ -352,13 +352,13 @@
 <p align="center"><kbd><img src="assets/7pcmtzgub0o.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs lấy ví dụ một linear transformation map **R^3
-> input thành R^2** **output**. Thì **mọi matrix A có shape
+> Gs lấy ví dụ một linear transformation map **R³
+> input thành R²** **output**. Thì **mọi matrix A có shape
 > 2x3 đều làm được điều này.**
 >
 >
 >
-> Nói thêm vì việc biến R^3 vector thành R^2 vector: Sẽ dễ
+> Nói thêm vì việc biến R³ vector thành R² vector: Sẽ dễ
 > hình dung nếu ta nhìn theo column-viewpoint khi nhân A
 > cho x để có Ax. 
 >
@@ -376,8 +376,8 @@
 >
 >
 >
-> Vậy, để output là R^2 vector dĩ nhiên cột của A phải là
-> R^2 vector, hay, A phải có 2 hàng. 
+> Vậy, để output là R² vector dĩ nhiên cột của A phải là
+> R² vector, hay, A phải có 2 hàng. 
 >
 >
 >
@@ -415,7 +415,7 @@
 
 > [!NOTE]
 > Đại khái lập luận thế này, giả sử ta có **2 INDEPENDENT**
-> **VECTOR v1, v2 span toàn bộ một plane R^2**.
+> **VECTOR v1, v2 span toàn bộ một plane R²**.
 >
 >
 >
@@ -572,12 +572,14 @@
 
 <a id="node-202axmm"></a>
 
+###### Matrix of a Linear Transformation
+
 <p align="center"><kbd><img src="assets/90fbw3w7086.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Vậy thì **bài toán đặt ra** là: **XÂY DỰNG MỘT MATRIX A**
 > ĐẠI DIỆN CHO MỘT **LINEAR TRASFORMATION** T(v):
-> R^n -> R^m
+> Rⁿ → R^m
 >
 >
 >
@@ -585,7 +587,7 @@
 >
 >
 >
-> 1) CHỌN MỘT BASIS v1, v2....vn** **CHO** **INPUT** in R^n
+> 1) CHỌN MỘT BASIS v1, v2....vn** **CHO** **INPUT** in Rⁿ
 > và **CHỌN MỘT  BASIS w1, w2...wm CHO OUTPUT** in
 > R^m
 >
@@ -650,12 +652,12 @@
 >
 >
 > Bây giờ, gs hỏi rằng **nếu project c1v1 lên line này** thì
-> ta có gì? -> vẫn là **c1v1**, vì **v1 đã nằm trong line như
+> ta có gì? → vẫn là **c1v1**, vì **v1 đã nằm trong line như
 > đã nói**
 >
 >
 >
-> Còn **c2v2? -> sẽ trở thành 0, vì v2 vuông góc với line**
+> Còn **c2v2? → sẽ trở thành 0, vì v2 vuông góc với line**
 >
 >
 >
@@ -818,7 +820,7 @@
 > project mọi điểm bất kì lên line vì A đã project đúng hai
 > basis vector rồi.**
 
-**🔗 See also:** [linked note](./lecture_31_change_of_basis_image_compression.md#node-3y08di6)
+**🔗 See also:** [Matrix in Eigenvector Basis](./lecture_31_change_of_basis_image_compression.md#node-3y08di6)
 
 <br>
 
@@ -953,14 +955,14 @@
 > luôn chọn một basis tiện nhất**, hay, **có sẵn** (handiest
 > basis) và k**ết quả cho ra** matrix P **cũng không tệ** khi
 > nó là **symmetric matrix**, c**ũng thỏa các tính chất như
-> P^2 = P**
+> P² = P**
 >
 >
 >
 > **Nhưng với good basis** là hai vector trên line và vuông
 > góc với line, **ta được (projection) matrix CŨNG
 > SYMMETRIC, NHƯNG CÒN DIAGONAL**. Ngoài ra thì
-> việc A^2 = A rất dễ thấy
+> việc A² = A rất dễ thấy
 
 <br>
 
@@ -1058,7 +1060,7 @@
 >
 >
 >
-> Nhắc lại ta đang xét phép linear transform R^2 vector -> R^4
+> Nhắc lại ta đang xét phép linear transform R² vector → R⁴
 > vector.
 >
 >
@@ -1131,6 +1133,8 @@
 
 <a id="node-k8fprb0"></a>
 
+###### Differentiation as a Linear Transformation
+
 <p align="center"><kbd><img src="assets/5fledrrsvpa.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1142,22 +1146,22 @@
 > **input basis** là 3 vector (again, ta đã biết **function có thể
 > đóng vai trò là vector**, hay khái niệm vector hay vector space
 > không chỉ giới hạn trong vector thông thường mà còn mở
-> rộng với function): {1, x, x^2} và **output basis là {1, x}**
+> rộng với function): {1, x, x²} và **output basis là {1, x}**
 >
 >
 >
 > Để input có thể express là linear combination các input basis 
-> c1 + c2x + c3x^2, tương tự như hồi nãy, ta có c1, c2, c3 là
+> c1 + c2x + c3x², tương tự như hồi nãy, ta có c1, c2, c3 là
 > coordinates.
 >
 >
 >
 > Và output ta cũng thể hiện là linear combination của output
-> basis c2 + 2c3x -> coordinate là [c2, 2c3]
+> basis c2 + 2c3x → coordinate là [c2, 2c3]
 >
 >
 >
-> Nên đây giống như là linear transformation R3-> R2
+> Nên đây giống như là linear transformation R3→R2
 
 <br>
 
@@ -1194,9 +1198,9 @@
 >
 >
 >
-> T(v1) =  d(1)/dx = 0 = **0***1 + **0***x -> cột 1 của A là **[0 0]**
-> T(v2) = d(x)/dx = 1 = **1***1 + **0***x -> cột 2 của A là **[1 0]**
-> T(v3) = d(x^2)/dx = 2x = **0***1 + **2***x -> cột 3 của A là **[0 2]**
+> T(v1) =  d(1)/dx = 0 = **0***1 + **0***x → cột 1 của A là **[0 0]**
+> T(v2) = d(x)/dx = 1 = **1***1 + **0***x → cột 2 của A là **[1 0]**
+> T(v3) = d(x²)/dx = 2x = **0***1 + **2***x → cột 3 của A là **[0 2]**
 >
 >
 >
@@ -1212,7 +1216,7 @@
 >
 >
 >
-> -> Đúng
+> → Đúng
 
 <br>
 
