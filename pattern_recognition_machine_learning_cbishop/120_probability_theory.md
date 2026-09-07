@@ -484,24 +484,24 @@
 >
 >
 > Cái này có một case mà mình sẽ thấy hữu ích. Ví dụ như khi xây dựng
-> posterior distribution của θ: π(θ|**x**), ta sẽ dùng Bayes theorem:
+> posterior distribution của θ: π(θ|𝐱), ta sẽ dùng Bayes theorem:
 >
 >
 >
-> π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**)
+> π(θ|𝐱) = f(𝐱|θ) π(θ) / f(𝐱)
 >
 >
 >
-> Khi ta đã có priori, π(θ), và joint distribution của random sample f(**x**|θ), thì
-> mình sẽ cần care f(**x**), mà chỉ cần đối xử với nó như constant nào đó đảm
-> bảo rằng khi sum π(θ|**x**) trên range của θ thì nó sẽ ra 1, nói cách khác,
-> f(**x**) sẽ là constant nào đó đảm bảo π(θ|x) là một valid pdf/pmf, gọi là
+> Khi ta đã có priori, π(θ), và joint distribution của random sample f(𝐱|θ), thì
+> mình sẽ cần care f(𝐱), mà chỉ cần đối xử với nó như constant nào đó đảm
+> bảo rằng khi sum π(θ|𝐱) trên range của θ thì nó sẽ ra 1, nói cách khác,
+> f(𝐱) sẽ là constant nào đó đảm bảo π(θ|x) là một valid pdf/pmf, gọi là
 > normalizing constant.
 >
 >
 >
-> Dĩ nhiên, ta còn nhớ định nghĩa của likelihood function L(θ|**x**) được định
-> nghĩa chính là = f(**x**|θ), tức joint distribution của **X** tại overseved value **x**.
+> Dĩ nhiên, ta còn nhớ định nghĩa của likelihood function L(θ|𝐱) được định
+> nghĩa chính là = f(𝐱|θ), tức joint distribution của 𝐗 tại overseved value 𝐱.
 
 <br>
 
@@ -530,7 +530,7 @@
 >
 >
 >
-> Để rồi sau đó, gs Bishop nói một ý quan trọng: việc **MÔ HÌNH HÓA DISTRIBUTION TỪ DỮ LIỆU (HỮU HẠN) ĐÓNG VAI TRÒ LÀ TRÁI TIM CỦA PATTERN RECOGNITION**: Câu nói này liên quan trực tiếp đến những gì đã học trong Casella: Ví dụ trong bài toán point estimator, cái ta làm chính là dựa trên giá trị quan sát được của sample **X**, để xây dựng một statistic δ(**X**) làm point estimator cho θ. Nó chính là ý gs Bishop nói ở đây.
+> Để rồi sau đó, gs Bishop nói một ý quan trọng: việc **MÔ HÌNH HÓA DISTRIBUTION TỪ DỮ LIỆU (HỮU HẠN) ĐÓNG VAI TRÒ LÀ TRÁI TIM CỦA PATTERN RECOGNITION**: Câu nói này liên quan trực tiếp đến những gì đã học trong Casella: Ví dụ trong bài toán point estimator, cái ta làm chính là dựa trên giá trị quan sát được của sample 𝐗, để xây dựng một statistic δ(𝐗) làm point estimator cho θ. Nó chính là ý gs Bishop nói ở đây.
 
 **🔗 See also:** [Histogram Density Estimation](./25_non_parametric_model.md#node-qmfgqko)
 
@@ -608,7 +608,7 @@
 >
 >
 > Trong casella, như nãy đã nhắc lại, prior distribution của θ là π(θ) và
-> posterior distribution của θ là π(θ|**x**)
+> posterior distribution của θ là π(θ|𝐱)
 
 <br>
 
