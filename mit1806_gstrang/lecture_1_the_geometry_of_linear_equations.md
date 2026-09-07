@@ -115,12 +115,12 @@
 <p align="center"><kbd><img src="assets/a4lwosojoue.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thành ra ta sẽ cộng **1*col1 với 2*col2**
+> Thành ra ta sẽ cộng **1 × col1 với 2 × col2**
 >
 >
 >
-> Hình ảnh sẽ là ta **đi theo hướng col1 một đoạn = 1*col1** và
-> **đi theo hướng col2 một đoạn = 2*col2** sẽ **dẫn tới chính là
+> Hình ảnh sẽ là ta **đi theo hướng col1 một đoạn = 1 × col1** và
+> **đi theo hướng col2 một đoạn = 2 × col2** sẽ **dẫn tới chính là
 > vector b (0,3)**
 
 <br>
@@ -205,7 +205,7 @@
 >
 >
 >
-> 0*col1 + 0*col2 + 1*col3
+> 0 × col1 + 0 × col2 + 1 × col3
 >
 >
 >
