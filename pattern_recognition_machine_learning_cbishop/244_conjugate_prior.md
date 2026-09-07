@@ -14,11 +14,11 @@
 <p align="center"><kbd><img src="assets/ylavqwzofti.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs nói đại khái là mình đã quen với khái niệm prior distribution rồi. Ôn nhanh: Nói về prior distribution / posterior distribution thì thường là sẽ đang đi qua trường phái Bayesian khi coi tham số θ (ở đây là **η**) là random variable (vector), để rồi từ việc chọn một prior distribution cho nó (thường sách toán Casellla kí hiệu π(θ) ta sẽ dùng Bayes theorem để xây dựng posterior distribution π(θ|**x**) = f(**x**|θ)π(θ)/f(**x**). Thế thì khi prior được chọn là một distribution thuộc loại conjugate prior với distribution của sample f(x|θ) thì khi đó, posterior sẽ cho ra kết quả là cùng một loại với prior distribution, tạo ra nhiều thuận lợi trong tính toán và diễn giải.
+> Gs nói đại khái là mình đã quen với khái niệm prior distribution rồi. Ôn nhanh: Nói về prior distribution / posterior distribution thì thường là sẽ đang đi qua trường phái Bayesian khi coi tham số θ (ở đây là **η**) là random variable (vector), để rồi từ việc chọn một prior distribution cho nó (thường sách toán Casellla kí hiệu π(θ) ta sẽ dùng Bayes theorem để xây dựng posterior distribution π(θ|𝐱) = f(𝐱|θ)π(θ)/f(𝐱). Thế thì khi prior được chọn là một distribution thuộc loại conjugate prior với distribution của sample f(x|θ) thì khi đó, posterior sẽ cho ra kết quả là cùng một loại với prior distribution, tạo ra nhiều thuận lợi trong tính toán và diễn giải.
 >
 >
 >
-> Vậy thì vài ví dụ đã gặp, như khi f(x|θ) là Bernuoilly, thì conjugate prior của population mean θ chính là beta distribution. Còn khi f(x|μ, σ^2) là pdf của normal μ, σ^2, thì conjugate prior của μ cũng là Normal, và conjugate prior của precision (1/σ^2) là Wishart distribution.
+> Vậy thì vài ví dụ đã gặp, như khi f(x|θ) là Bernuoilly, thì conjugate prior của population mean θ chính là beta distribution. Còn khi f(x|μ, σ²) là pdf của normal μ, σ², thì conjugate prior của μ cũng là Normal, và conjugate prior của precision (1/σ²) là Wishart distribution.
 >
 >
 >
@@ -26,7 +26,7 @@
 >
 >
 >
-> f(**η**|**χ**, ν) = f(**χ**, ν)g(**η**)^ν exp{ν**η**T**χ**}
+> f(**η**|**χ**, ν) = f(**χ**, ν)g(**η**)^ν exp{ν**η**ᵀ**χ**}
 >
 >
 >
@@ -38,13 +38,13 @@
 >
 >
 >
-> f(**x**|**η**) = h(**x**)g(**η**)exp{**η**T**u**(**x**)}
+> f(𝐱|**η**) = h(𝐱)g(**η**)exp{**η**ᵀ𝐮(𝐱)}
 >
 >
 >
-> ⇨ Joint pdf của mọi data point f(**x**1,..,**x**N|**η**), như đã biết do tính iid, tách thành tích các marginal pdf:
+> ⇨ Joint pdf của mọi data point f(𝐱1,..,𝐱N|**η**), như đã biết do tính iid, tách thành tích các marginal pdf:
 >
-> f(**x**1,..,**x**N|**η**) = Πi=1:N h(**x**i)g(**η**)exp{**η**T**u**(**x**i)}
+> f(𝐱1,..,𝐱N|**η**) = Πi=1:N h(𝐱i)g(**η**)exp{**η**ᵀ𝐮(𝐱i)}
 >
 >
 >
@@ -52,7 +52,7 @@
 >
 >
 >
-> f(**η**|**x**1,...**x**N,**χ**, ν) (trong sách là p(**η**|**X**,**χ**, ν)) = f(**x**1,...**,x**N|**η**) × f(**η**|**χ**, ν) / f(**x**1,...**,x**N)
+> f(**η**|𝐱1,...𝐱N,**χ**, ν) (trong sách là p(**η**|𝐗,**χ**, ν)) = f(𝐱1,...**,x**N|**η**) × f(**η**|**χ**, ν) / f(𝐱1,...**,x**N)
 >
 >
 >
@@ -60,31 +60,31 @@
 >
 >
 >
-> f(**η**|**x**1,...**x**N,**χ**, ν) ∝ f(**x**1,...**,x**N|**η**) × f(**η**|**χ**, ν)
+> f(**η**|𝐱1,...𝐱N,**χ**, ν) ∝ f(𝐱1,...**,x**N|**η**) × f(**η**|**χ**, ν)
 >
 >
 >
-> = Πi=1:N \[ h(**x**i)g(**η**)exp{**η**T**u**(**x**i)} \] × f(**χ**, ν)g(**η**)^ν exp{ν**η**T**χ**}
+> = Πi=1:N \[ h(𝐱i)g(**η**)exp{**η**ᵀ𝐮(𝐱i)} \] × f(**χ**, ν)g(**η**)^ν exp{ν**η**ᵀ**χ**}
 >
 >
 >
-> = \[Πi=1:N h(**x**i)\] × g(**η**)^N × exp{**η**T\[∑i **u**(**x**i)\]} × f(**χ**, ν) × g(**η**)^ν × exp{ν**η**T**χ**}
+> = \[Πi=1:N h(𝐱i)\] × g(**η**)^N × exp{**η**ᵀ\[∑i 𝐮(𝐱i)\]} × f(**χ**, ν) × g(**η**)^ν × exp{ν**η**ᵀ**χ**}
 >
 >
 >
-> = \[Πi=1:N h(**x**i)\] × f(**χ**, ν) × g(**η**)^N × g(**η**)^ν × exp{**η**T\[∑i **u**(**x**i)\]} × exp{ν**η**T**χ**}
+> = \[Πi=1:N h(𝐱i)\] × f(**χ**, ν) × g(**η**)^N × g(**η**)^ν × exp{**η**ᵀ\[∑i 𝐮(𝐱i)\]} × exp{ν**η**ᵀ**χ**}
 >
 >
 >
-> ∝ g(**η**)^(N+ν) × exp{**η**T\[∑i **u**(**x**i)\] + ν**η**T**χ**}
+> ∝ g(**η**)^(N+ν) × exp{**η**ᵀ\[∑i 𝐮(𝐱i)\] + ν**η**ᵀ**χ**}
 >
 >
 >
-> ∝ g(**η**)^(N+ν) × exp{**η**T\[∑i **u**(**x**i) + ν**χ**\]}
+> ∝ g(**η**)^(N+ν) × exp{**η**ᵀ\[∑i 𝐮(𝐱i) + ν**χ**\]}
 >
 >
 >
-> Tới đây, có thể thấy posteriori có dạng của priori với param là ∑i **u**(**x**i) + ν**χ** (so với ν**χ** của priori) và N+ν (so với ν của priori).
+> Tới đây, có thể thấy posteriori có dạng của priori với param là ∑i 𝐮(𝐱i) + ν**χ** (so với ν**χ** của priori) và N+ν (so với ν của priori).
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **97/100**
