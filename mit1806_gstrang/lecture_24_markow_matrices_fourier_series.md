@@ -42,7 +42,7 @@
 >
 >
 > Và gs cho biết hai tính chất này sẽ **giữ nguyên** khi ta
-> **bình phương matrix lên**, nên **A^2 cũng là Markov matrix**
+> **bình phương matrix lên**, nên **A² cũng là Markov matrix**
 
 <br>
 
@@ -56,7 +56,7 @@
 > **một eigenvalue = 0** giúp **e^0 = 1** khiến cho u(t) có
 > một term **mang giá trị hằng số**, và một term còn lại thì
 > **λ âm** khiến khi t lớn lên thì exponential của cái
-> đó sẽ -> e^[trừ vô cùng] = 0
+> đó sẽ → e^[trừ vô cùng] = 0
 >
 >
 >
@@ -117,7 +117,7 @@
 >
 >
 >
-> u(1) = Au(0), u(2)=Au(1)=A^2u(0).....u(k) = A^ku(0))
+> u(1) = Au(0), u(2)=Au(1)=A²u(0).....u(k) = A^ku(0))
 >
 >
 >
@@ -314,7 +314,7 @@
 > bằng **linear combination các row còn lại** với **bộ
 > coefficient khác zero**. Như vậy đồng nghĩa **các row
 > không independent**. Từ đó có thể kết luận matrix không
-> full-rank -> **SINGULAR**
+> full-rank → **SINGULAR**
 >
 >
 >
@@ -323,7 +323,7 @@
 > toàn số 1, thành ra nếu trừ mỗi cột đi cho 1, thì tổng các
 > entries trong mỗi cột sẽ bằng 0, đồng nghĩa tổng các hàng
 > sẽ thành một hàng toàn 0 ⇒ kết luận ngay các row phụ
-> thuộc nhau -> singular matrix
+> thuộc nhau → singular matrix
 
 <br>
 
@@ -596,7 +596,7 @@
 >
 >
 > (nhắc lại vì u_k = Au_0 sẽ trở thành c1*λ1^k*x1 + c2*λ2^k*x2 + ..., 
-> và khi k-> infi thì với λ1 = 1, λ khác < 1 thì giá trị của chuỗi 
+> và khi k→ infi thì với λ1 = 1, λ khác < 1 thì giá trị của chuỗi 
 > sẽ **converge về c1x1**)
 >
 >
@@ -659,7 +659,7 @@
 >
 > (Lập luận nhanh như sau: đương nhiên col1 là pivot col,
 > col 2 là free col, cho free variable = 1, thế vào tìm pivot
-> var ra -1 -> [-1 1] là special solution và chính là basis
+> var ra -1 → [-1 1] là special solution và chính là basis
 > của nullspace của A-λ2I và cũng chính là eigenvector
 > x2 của A)
 
@@ -914,7 +914,7 @@
 
 > [!NOTE]
 > và ta có thể **thử tính dot product của sin(x) và cos(x)** =
-> **tích phân từ 0->2*pi sin(x)*cos(x)dx** sẽ được **0,** từ đó
+> **tích phân từ 0→2*pi sin(x)*cos(x)dx** sẽ được **0,** từ đó
 > cho thấy thỏa yêu cầu các basis "vector" orthogonal nhau.
 >
 >
@@ -950,7 +950,7 @@
 >
 >
 > Và vế trái, việc **dot product giữa f(x) và cos(x)** như nãy
-> đã định nghĩa thì chính là **tích phân từ 0 -> 2pi f(x)cos(x)dx**
+> đã định nghĩa thì chính là **tích phân từ 0 → 2pi f(x)cos(x)dx**
 >
 >
 >
@@ -960,7 +960,7 @@
 >
 >
 > Thế thì gs cho rằng **ta sẽ có phần lớn thành 0**, chỉ còn
-> **một term khác 0**, đó là **tích phân từ 0-> 2pi cos(x)^2 dx**, và
+> **một term khác 0**, đó là **tích phân từ 0→ 2pi cos(x)^2 dx**, và
 > ta sẽ tính ra được giá trị của nó **chính là pi**.
 >
 >
