@@ -14,7 +14,7 @@
 >
 >
 >
-> Đầu tiên ông maximum likelihood solution là một dạng của batch technique, mình hiểu đại ý là, nói về kĩ thuật mà ta dùng một gói data (observation) để mà "làm" (ví dụ như với maximum likelihood, cơ bản là ta tìm θ giúp maximile hàm likelihood L(θ|**x**), và cái hàm này thì được define bởi f(**x**|θ), tức joint pdf của data tại các observation có được, thì dĩ nhiên ta cần có một batch / gói, các observation)
+> Đầu tiên ông maximum likelihood solution là một dạng của batch technique, mình hiểu đại ý là, nói về kĩ thuật mà ta dùng một gói data (observation) để mà "làm" (ví dụ như với maximum likelihood, cơ bản là ta tìm θ giúp maximile hàm likelihood L(θ|𝐱), và cái hàm này thì được define bởi f(𝐱|θ), tức joint pdf của data tại các observation có được, thì dĩ nhiên ta cần có một batch / gói, các observation)
 >
 >
 >
@@ -46,54 +46,54 @@
 >
 >
 >
-> Ví dụ như data thứ n vừa đến", đồng nghĩa ta có data set (**x**1,...**x**n), (t1,...tn). Đặt ra bài toán:
+> Ví dụ như data thứ n vừa đến", đồng nghĩa ta có data set (𝐱1,...𝐱n), (t1,...tn). Đặt ra bài toán:
 >
 >
 >
-> minimize over **w** f(**w**) = error En(**w**) = (1/2) (tn - **w**TΦ(**x**n)\]^2
+> minimize over 𝐰 f(𝐰) = error En(𝐰) = (1/2) (tn - 𝐰ᵀΦ(𝐱n)\]²
 >
 > \
-> Có nghĩa là hàm objective chỉ là bình phương difference giữa tn và **w**TΦ(**x**n).
+> Có nghĩa là hàm objective chỉ là bình phương difference giữa tn và 𝐰ᵀΦ(𝐱n).
 >
 >
 >
-> Và cơ bản là ta đang dùng một dạng steepest descent algorithm đơn giản: đứng tại vị trí hiện tại **w**\_τ (tức giá trị **w** hiện có), ta sẽ đi theo hướng dốc nhất (steepest descent direction) = - ∇f(**w**\_τ), và đi theo hướng này với **step size η**, để đến được điểm tiếp theo:
+> Và cơ bản là ta đang dùng một dạng steepest descent algorithm đơn giản: đứng tại vị trí hiện tại 𝐰\_τ (tức giá trị 𝐰 hiện có), ta sẽ đi theo hướng dốc nhất (steepest descent direction) = - ∇f(𝐰\_τ), và đi theo hướng này với **step size η**, để đến được điểm tiếp theo:
 >
 >
 >
-> **w**\_(τ+1) = **w**\_τ + η \[- ∇f(**w**\_τ)\]
+> 𝐰\_(τ+1) = 𝐰\_τ + η \[- ∇f(𝐰\_τ)\]
 >
 >
 >
-> ⇔ **w**\_(τ+1) = **w**\_τ - η ∇f(**w**\_τ)
+> ⇔ 𝐰\_(τ+1) = 𝐰\_τ - η ∇f(𝐰\_τ)
 >
 >
 >
-> Vì sao - ∇f(**w**\_τ) là hướng dốc nhất thì nhờ học Boyd hay Nocedal thì đã biết rồi.
+> Vì sao - ∇f(𝐰\_τ) là hướng dốc nhất thì nhờ học Boyd hay Nocedal thì đã biết rồi.
 >
 >
 >
-> Thế thì ∇f(**w**\_τ) là gradient của objective function evaluate tại **w**\_τ, với objective function = En = (1/2) \[tn - **w**TΦ(**x**n)\]^2 thì:
+> Thế thì ∇f(𝐰\_τ) là gradient của objective function evaluate tại 𝐰\_τ, với objective function = En = (1/2) \[tn - 𝐰ᵀΦ(𝐱n)\]² thì:
 >
 >
 >
-> ∇En = (1/2) d/d**w** \[tn - **w**TΦ(**x**n)\]^2
+> ∇En = (1/2) d/d𝐰 \[tn - 𝐰ᵀΦ(𝐱n)\]²
 >
 >
 >
-> = (1/2) d/d\[tn - **w**TΦ(**x**n)\] \[tn - **w**TΦ(**x**n)\]^2 . d/d**w** \[tn - **w**TΦ(**x**n)\] (chain rule)
+> = (1/2) d/d\[tn - 𝐰ᵀΦ(𝐱n)\] \[tn - 𝐰ᵀΦ(𝐱n)\]² . d/d𝐰 \[tn - 𝐰ᵀΦ(𝐱n)\] (chain rule)
 >
 >
 >
-> = \[tn - **w**TΦ(**x**n)\] . d/d**w** \[- **w**TΦ(**x**n)\]
+> = \[tn - 𝐰ᵀΦ(𝐱n)\] . d/d𝐰 \[- 𝐰ᵀΦ(𝐱n)\]
 >
 >
 >
-> = \[tn - **w**TΦ(**x**n)\] . \[-Φ(**x**n)\]
+> = \[tn - 𝐰ᵀΦ(𝐱n)\] . \[-Φ(𝐱n)\]
 >
 >
 >
-> = - \[tn - **w**TΦ(**x**n)\] Φ(**x**n)
+> = - \[tn - 𝐰ᵀΦ(𝐱n)\] Φ(𝐱n)
 >
 >
 >
@@ -101,15 +101,15 @@
 >
 >
 >
-> **w**\_(τ+1) = **w**\_τ - η ∇f(**w**\_τ)
+> 𝐰\_(τ+1) = 𝐰\_τ - η ∇f(𝐰\_τ)
 >
 >
 >
-> ⇔ **w**\_(τ+1) = **w**\_τ - η \[- \[tn - **w**TΦ(**x**n)\] Φ(**x**n)\] |**w**=**w**\_τ
+> ⇔ 𝐰\_(τ+1) = 𝐰\_τ - η \[- \[tn - 𝐰ᵀΦ(𝐱n)\] Φ(𝐱n)\] |𝐰=𝐰\_τ
 >
 >
 >
-> ⇔ **w**\_(τ+1) = **w**\_τ + η\[tn - **w**\_τTΦ(**x**n)\] Φ(**x**n)\]
+> ⇔ 𝐰\_(τ+1) = 𝐰\_τ + η\[tn - 𝐰\_τTΦ(𝐱n)\] Φ(𝐱n)\]
 >
 >
 >
