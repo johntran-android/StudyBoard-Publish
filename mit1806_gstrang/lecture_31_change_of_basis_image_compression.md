@@ -523,7 +523,7 @@
 > Gs cho biết quan hệ đó chính là: **A và B sẽ là hai SIMILAR
 > MATRICES**, ta đã học ở bài trước, hai matrix similar khi
 > một matrix có thể **tồn tại một matrix M** để giúp phân tách
-> thành matrix **B = M.A.M⁻¹**
+> thành matrix **B = M × A.M⁻¹**
 >
 >
 >
@@ -698,11 +698,11 @@
 >
 >
 >
-> Vậy matrix A là diagonal matrix **LAMBDA chứa các eigenvalues của A**
+> Vậy matrix A là diagonal matrix **Λ chứa các eigenvalues của A**
 >
 >
 >
-> Như vậy với một linear transformation T(v) = Ax. Mà ta sử dụng basis vector là eigenvectors của A thì matrix sẽ chính là LAMBDA
+> Như vậy với một linear transformation T(v) = Ax. Mà ta sử dụng basis vector là eigenvectors của A thì matrix sẽ chính là Λ
 
 **🔗 See also:** [Diagonal Matrix from Eigenvector Basis](./lecture_30_linear_transformations_and_their_matrices.md#node-bq2tfnb)
 
