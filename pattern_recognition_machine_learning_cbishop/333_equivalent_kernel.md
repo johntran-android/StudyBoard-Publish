@@ -14,11 +14,11 @@
 <p align="center"><kbd><img src="assets/obce5vt6q1o.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, đại khái là, đầu tiên gs nói rằng, cái posterior mean solution **m**N = β**S**N**Φ**T**t**, có một cách diễn giải thú vị, sẽ giúp chuẩn bị cho kernel method, bao gồm Gaussian process đã nhắc đến ở trên. (Dừng lại tí, vì sao gọi là posterior mean solution? À thì là vì, như đã giải thích trong ghi chú "Gaussian Prior and Posterior Parameters", khi đã có posterior, thì một cách để đưa ra point estimate cho **w** chính là dùng cái **w** khiến maximize posterior distribution)
+> Rồi, đại khái là, đầu tiên gs nói rằng, cái posterior mean solution 𝐦N = β**S𝐍Φ**ᵀ𝐭, có một cách diễn giải thú vị, sẽ giúp chuẩn bị cho kernel method, bao gồm Gaussian process đã nhắc đến ở trên. (Dừng lại tí, vì sao gọi là posterior mean solution? À thì là vì, như đã giải thích trong ghi chú "Gaussian Prior and Posterior Parameters", khi đã có posterior, thì một cách để đưa ra point estimate cho 𝐰 chính là dùng cái 𝐰 khiến maximize posterior distribution)
 >
 >
 >
-> Như vậy, dùng wMAP, (tức là, tương tự như wML, viết tắt, ám chỉ cho w có được nhờ maximum likelihood, thì wMAP, là w khiến maximum posterior distribution) ta sẽ có hàm dự đoán là y(**w**, **x**) = (**w**MAP)TΦ(**x**) = (β**S**N**Φ**T**t**)TΦ(**x**) 
+> Như vậy, dùng wMAP, (tức là, tương tự như wML, viết tắt, ám chỉ cho w có được nhờ maximum likelihood, thì wMAP, là w khiến maximum posterior distribution) ta sẽ có hàm dự đoán là y(𝐰, 𝐱) = (𝐰MAP)ᵀΦ(𝐱) = (β**S𝐍Φ**ᵀ𝐭)ᵀΦ(𝐱) 
 >
 >
 >
@@ -26,39 +26,39 @@
 >
 >
 >
-> (β**S**N**Φ**T**t**)TΦ(**x**) 
+> (β**S𝐍Φ**ᵀ𝐭)ᵀΦ(𝐱) 
 >
 >
 >
-> = β(**S**N**Φ**T**t**)TΦ(**x**) (β chỉ là scalar, bỏ nó ra khỏi khối matrix transpose)
+> = β(**S𝐍Φ**ᵀ𝐭)ᵀΦ(𝐱) (β chỉ là scalar, bỏ nó ra khỏi khối matrix transpose)
 >
 >
 >
-> = β\[(**Φ**T**t**)T(**S**N)T\]Φ(**x**) (dùng identity (AB)T = BT AT)
+> = β\[(**Φ**ᵀ𝐭)ᵀ(𝐒N)ᵀ\]Φ(𝐱) (dùng identity (AB)ᵀ = Bᵀ Aᵀ)
 >
 >
 >
-> = β**t**T**Φ**(**S**N)TΦ(**x**)
+> = β𝐭ᵀ**Φ**(𝐒N)ᵀΦ(𝐱)
 >
 >
 >
-> = β\[**t**T**Φ**(**S**N)TΦ(**x**)\]T (do **t**T**Φ**(**S**N)TΦ(**x**) là scalar, có thể transpose tự do)
+> = β\[𝐭ᵀ**Φ**(𝐒N)ᵀΦ(𝐱)\]ᵀ (do 𝐭ᵀ**Φ**(𝐒N)ᵀΦ(𝐱) là scalar, có thể transpose tự do)
 >
 >
 >
-> Mấy biến đổi dưới chỉ là dùng identity (AB)T = BT AT 
+> Mấy biến đổi dưới chỉ là dùng identity (AB)ᵀ = Bᵀ Aᵀ 
 >
 >
 >
-> = β\[**Φ**(**S**N)TΦ(**x**)\]T**t**
+> = β\[**Φ**(𝐒N)ᵀΦ(𝐱)\]ᵀ𝐭
 >
 >
 >
-> = β\[Φ(**x**)T\[**Φ**(**S**N)T\]T\]**t**
+> = β\[Φ(𝐱)ᵀ\[**Φ**(𝐒N)ᵀ\]ᵀ\]𝐭
 >
 >
 >
-> = βΦ(**x**)T(**S**N)**Φ**T**t**
+> = βΦ(𝐱)ᵀ(𝐒N)**Φ**ᵀ𝐭
 >
 >
 >
@@ -66,35 +66,35 @@
 >
 >
 >
-> Tiếp, **Φ**T là gì: còn nhớ **Φ**, là matrix có các hàng là các vector Φ(**x**1)T, ...Φ(**x**N)T, nên **Φ**T là matrix có các cột là Φ(**x**1), ...Φ(**x**N)
+> Tiếp, **Φ**ᵀ là gì: còn nhớ **Φ**, là matrix có các hàng là các vector Φ(𝐱1)ᵀ, ...Φ(𝐱N)ᵀ, nên **Φ**ᵀ là matrix có các cột là Φ(𝐱1), ...Φ(𝐱N)
 >
 >
 >
-> Vậy **Φ**T**t,** theo góc nhìn thứ hai đã học trong MIT 1806 khi nhân matrix với vector, kết quả sẽ là linear combination các cột của **Φ**T với hệ số là các phần tử của **t**.
+> Vậy **Φ**ᵀ**t,** theo góc nhìn thứ hai đã học trong MIᵀ 1806 khi nhân matrix với vector, kết quả sẽ là linear combination các cột của **Φ**ᵀ với hệ số là các phần tử của 𝐭.
 >
 >
 >
-> **Φ**T**t** = Σn=1:N Φ(**x**n) tn 
+> **Φ**ᵀ𝐭 = Σn=1:N Φ(𝐱n) tn 
 >
 >
 >
-> Nên βΦ(**x**)T(**S**N)**Φ**T**t** = βΦ(**x**)T(**S**N)\[Σn=1:N Φ(**x**n) tn\]
+> Nên βΦ(𝐱)ᵀ(𝐒N)**Φ**ᵀ𝐭 = βΦ(𝐱)ᵀ(𝐒N)\[Σn=1:N Φ(𝐱n) tn\]
 >
 >
 >
-> = Σn=1:N {βΦ(**x**)T(**S**N)Φ(**x**n) tn} → 3.60
+> = Σn=1:N {βΦ(𝐱)ᵀ(𝐒N)Φ(𝐱n) tn} → 3.60
 >
 >
 >
-> Tiếp, phân tích kĩ hơn, βΦ(**x**)T(**S**N)Φ(**x**n) tn sẽ là tích của scalar βΦ(**x**)T(**S**N)Φ(**x**n) với target variable tn Nên cái 3.60 chính là linear combination của các scalar t1,...tN với bộ hệ số là βΦ(**x**)T(**S**N)Φ(**x**1),....βΦ(**x**)T(**S**N)Φ(**x**N)
+> Tiếp, phân tích kĩ hơn, βΦ(𝐱)ᵀ(𝐒N)Φ(𝐱n) tn sẽ là tích của scalar βΦ(𝐱)ᵀ(𝐒N)Φ(𝐱n) với target variable tn Nên cái 3.60 chính là linear combination của các scalar t1,...tN với bộ hệ số là βΦ(𝐱)ᵀ(𝐒N)Φ(𝐱1),....βΦ(𝐱)ᵀ(𝐒N)Φ(𝐱N)
 >
 >
 >
-> Và người ta đặt hàm k(**x**, **x**') = βΦ(**x**)T(**S**N)Φ(**x**') là k(**x**, **x**'), gọi là **smoother matrix**, hoặc **equivalent kernel**.
+> Và người ta đặt hàm k(𝐱, 𝐱') = βΦ(𝐱)ᵀ(𝐒N)Φ(𝐱') là k(𝐱, 𝐱'), gọi là **smoother matrix**, hoặc **equivalent kernel**.
 >
 >
 >
-> thì bộ hệ số trên chính là k(**x**, **x**1), k(**x**, **x**2),...k(**x**, **x**N) 
+> thì bộ hệ số trên chính là k(𝐱, 𝐱1), k(𝐱, 𝐱2),...k(𝐱, 𝐱N) 
 >
 >
 >
@@ -102,7 +102,7 @@
 >
 >
 >
-> y(**w**, **x**) = Σn=1:N {k(**x**, **x**n) tn}
+> y(𝐰, 𝐱) = Σn=1:N {k(𝐱, 𝐱n) tn}
 
 **🔗 See also:** [Gaussian Prior and Posterior Parameters](./331_bayesian_linear_regression.md#node-nt82rck) · [Bias Parameter and Basis Function](./310_linear_regression_and_basis_functions.md#node-6p1u6u8)
 
@@ -123,19 +123,19 @@
 >
 >
 >
-> Trong note trước mình đã hiểu vì sao có được kết qủa y(**w**, **x**) = Σn=1:N {k(**x**, **x**n) tn}, để thấy hàm y dự đoán t cho một input **x** sẽ đưa ra dự đoán bằng cách tổ hợp tuyến tính (linear combination) các giá trị target t trong data (t1,....tN), với hệ số tổ hợp quy định bởi hàm kernel k(**x**, **x**1),...k(**x**, **x**N).
+> Trong note trước mình đã hiểu vì sao có được kết qủa y(𝐰, 𝐱) = Σn=1:N {k(𝐱, 𝐱n) tn}, để thấy hàm y dự đoán t cho một input 𝐱 sẽ đưa ra dự đoán bằng cách tổ hợp tuyến tính (linear combination) các giá trị target t trong data (t1,....tN), với hệ số tổ hợp quy định bởi hàm kernel k(𝐱, 𝐱1),...k(𝐱, 𝐱N).
 >
 >
 >
-> Mà phân tích kĩ hàm kernel, với công thức k(**x**, **x**') = β Φ(**x**)T**S**N Φ(**x**'), ta sẽ thấy nó có các đặc điểm sau:
+> Mà phân tích kĩ hàm kernel, với công thức k(𝐱, 𝐱') = β Φ(𝐱)ᵀ𝐒N Φ(𝐱'), ta sẽ thấy nó có các đặc điểm sau:
 >
 >
 >
-> Thứ nhất, nó là scalar, tức là, nhận vào hai input (có thể là vector hoặc scalar) là **x** (input đang muốn dự đoán t) và **x**' (có thể là là input trong data, ví dụ **x**1,...**x**N), và nó sẽ dùng công thức trên để tính ra một scalar value. Muốn nhấn mạnh chỗ này vì nó nó làm rõ rằng các hàm k(x, x1), ...k(x, N) sẽ tạo ra một bộ hệ số, giúp tổ hợp tuyến tính các vector x1,..xN.
+> Thứ nhất, nó là scalar, tức là, nhận vào hai input (có thể là vector hoặc scalar) là 𝐱 (input đang muốn dự đoán t) và 𝐱' (có thể là là input trong data, ví dụ 𝐱1,...𝐱N), và nó sẽ dùng công thức trên để tính ra một scalar value. Muốn nhấn mạnh chỗ này vì nó nó làm rõ rằng các hàm k(x, x1), ...k(x, N) sẽ tạo ra một bộ hệ số, giúp tổ hợp tuyến tính các vector x1,..xN.
 >
 >
 >
-> Thứ hai, thông qua việc công thức của nó có **S**N, là posterior variance của **w**, mà posterior distribution, sẽ được xây dựng thông qua Bayes rule: f(w|data) = f(data|w)f(w)/f(data), nên đương nhiên là nó sẽ phụ thuộc data. Do đó, hàm kernel, cũng sẽ phụ thuộc data, chứ không phải là một hàm fixed, hay nói cách khác, tùy vào việc data như thế nào sẽ chi phối hàm kernel.
+> Thứ hai, thông qua việc công thức của nó có 𝐒N, là posterior variance của 𝐰, mà posterior distribution, sẽ được xây dựng thông qua Bayes rule: f(w|data) = f(data|w)f(w)/f(data), nên đương nhiên là nó sẽ phụ thuộc data. Do đó, hàm kernel, cũng sẽ phụ thuộc data, chứ không phải là một hàm fixed, hay nói cách khác, tùy vào việc data như thế nào sẽ chi phối hàm kernel.
 >
 >
 >
@@ -171,7 +171,7 @@
 >
 >
 >
-> Do đó khi phân tích cái tổ hợp y(**x**,**w**) = k(**x**,**x**1) t1 + k(**x**,**x**2) t2 + ....k(**x**,**x**N) tN ta sẽ thấy như đã nói, nó sẽ lấy tổ hợp tuyến tính của các t1,...tN để làm dự đoán cho input **x**, nhưng hệ số lấy như thế nào thì tùy xem **x** gần hay xa các **x**1,...**x**N.
+> Do đó khi phân tích cái tổ hợp y(𝐱,𝐰) = k(𝐱,𝐱1) t1 + k(𝐱,𝐱2) t2 + ....k(𝐱,𝐱N) tN ta sẽ thấy như đã nói, nó sẽ lấy tổ hợp tuyến tính của các t1,...tN để làm dự đoán cho input 𝐱, nhưng hệ số lấy như thế nào thì tùy xem 𝐱 gần hay xa các 𝐱1,...𝐱N.
 >
 >
 >
@@ -200,11 +200,11 @@
 >
 >
 >
-> Trong khi đó, với hàm đa thức, giả sử xét hàm Φ(x) = x^2. Thì nó sẽ có dạng đường cong phi tuyến (parabol) kéo dài đến vô cùng. Và nếu xét hàm w1 x^2 + w2 x^3,  thì nếu ta thay đổi w1, hay w2 thì giá trị của hàm y trên toàn bộ trục số sẽ thay đổi. Điều này hoàn toàn khác với hàm basis cục bộ ta ví dụ ở trên nơi mà khi thay đổi w1, hay w2 sẽ chỉ khiến đồ thị của hàm y thay đổi một cách cục bộ tại các vùng tương ứng thôi. Trong khi đó ở đây, nó việc thay đổi w1, w2 sẽ kéo theo đồ thị của y trên toàn trục số thay đổi. Đó chính là tính toàn cục.
+> Trong khi đó, với hàm đa thức, giả sử xét hàm Φ(x) = x². Thì nó sẽ có dạng đường cong phi tuyến (parabol) kéo dài đến vô cùng. Và nếu xét hàm w1 x² + w2 x³,  thì nếu ta thay đổi w1, hay w2 thì giá trị của hàm y trên toàn bộ trục số sẽ thay đổi. Điều này hoàn toàn khác với hàm basis cục bộ ta ví dụ ở trên nơi mà khi thay đổi w1, hay w2 sẽ chỉ khiến đồ thị của hàm y thay đổi một cách cục bộ tại các vùng tương ứng thôi. Trong khi đó ở đây, nó việc thay đổi w1, w2 sẽ kéo theo đồ thị của y trên toàn trục số thay đổi. Đó chính là tính toàn cục.
 >
 >
 >
-> Như vậy, ở đây gs muốn nói đến một sự vi diệu, thông qua kernel function, thì dù basis function có là hàm toàn cục hay cục bộ, thì kết quả vẫn là: tính cục bộ - dùng giá trị target của data t1,...tN với trọng số lớn với các **x**j ở gần input **x** và trọng số nhỏ với **x**j ở xa input **x**.
+> Như vậy, ở đây gs muốn nói đến một sự vi diệu, thông qua kernel function, thì dù basis function có là hàm toàn cục hay cục bộ, thì kết quả vẫn là: tính cục bộ - dùng giá trị target của data t1,...tN với trọng số lớn với các 𝐱j ở gần input 𝐱 và trọng số nhỏ với 𝐱j ở xa input 𝐱.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -220,23 +220,23 @@
 <p align="center"><kbd><img src="assets/nhgnvrggvqn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo, đoại này đại ý là: Bữa trước trong note (Covariance of Predictive Distributions, xem link) mình đã hiểu rằng Cov(y(**x**), y(**x**')) chính là Φ(**x**) **S**n Φ(**x**').
+> Tiếp theo, đoại này đại ý là: Bữa trước trong note (Covariance of Predictive Distributions, xem link) mình đã hiểu rằng Cov(y(𝐱), y(𝐱')) chính là Φ(𝐱) 𝐒n Φ(𝐱').
 >
 >
 >
-> Và với việc k(**x**,**x**') = β Φ(**x**) **S**n Φ(**x**') thì như vậy Cov(y(**x**), y(**x**')) = (1/β) k(**x**,**x**')
+> Và với việc k(𝐱,𝐱') = β Φ(𝐱) 𝐒n Φ(𝐱') thì như vậy Cov(y(𝐱), y(𝐱')) = (1/β) k(𝐱,𝐱')
 >
 >
 >
-> Và từ đó giúp ta có thể dẫn đến một góc nhìn khác giúp giải thích cho hiện tượng đường cong màu đỏ trong hình 3.9 (là đường cong đồ thị hàm y(**w**,**x**) với **w** được sampling từ posterior distribution) có đặc điểm cong lên cong xuống mượt mà như vậy (mà không phải là nhảy lên nhảy xuống đột ngột như răng cưa). 
+> Và từ đó giúp ta có thể dẫn đến một góc nhìn khác giúp giải thích cho hiện tượng đường cong màu đỏ trong hình 3.9 (là đường cong đồ thị hàm y(𝐰,𝐱) với 𝐰 được sampling từ posterior distribution) có đặc điểm cong lên cong xuống mượt mà như vậy (mà không phải là nhảy lên nhảy xuống đột ngột như răng cưa). 
 >
 >
 >
-> Cụ thể là, như bữa trước, ta giải thích đặc điểm này bằng cách chỉ ra rằng vì Cov(y(**x**), y(**x**')) = Φ(**x**) **S**n Φ(**x**'), nên nó chắc chắn là một giá trị dương, đo đó y(**x**) và y(**x**') có sự tương quan dương nên khi thằng này cao thì thằng kia cũng cao, dẫn đến với x' nằm kề x, thì covariance cao sẽ khiến hàm số tại x và x' sẽ cao thấp cùng nhau, dẫn tới kết quả là sự lên xuống mượt mà hàm y(**x**,**w**).
+> Cụ thể là, như bữa trước, ta giải thích đặc điểm này bằng cách chỉ ra rằng vì Cov(y(𝐱), y(𝐱')) = Φ(𝐱) 𝐒n Φ(𝐱'), nên nó chắc chắn là một giá trị dương, đo đó y(𝐱) và y(𝐱') có sự tương quan dương nên khi thằng này cao thì thằng kia cũng cao, dẫn đến với x' nằm kề x, thì covariance cao sẽ khiến hàm số tại x và x' sẽ cao thấp cùng nhau, dẫn tới kết quả là sự lên xuống mượt mà hàm y(𝐱,𝐰).
 >
 >
 >
-> Vậy thì nay, với kernel function, ta càng thấy rõ điều đó: khi **x** gần **x**', hàm kernel sẽ lớn, và covariance của y(**x**) và y(**x**') sẽ lớn, dẫn đến kết quả như vừa nói. Còn khi **x** xa **x**', kernel k(x,x') nhỏ → sự tương quan của y(**x**) và y(**x**') sẽ kém, biểu hiện là hai điểm xa nhau trên đồ thị sẽ có có giá trị ít liên quan nhau
+> Vậy thì nay, với kernel function, ta càng thấy rõ điều đó: khi 𝐱 gần 𝐱', hàm kernel sẽ lớn, và covariance của y(𝐱) và y(𝐱') sẽ lớn, dẫn đến kết quả như vừa nói. Còn khi 𝐱 xa 𝐱', kernel k(x,x') nhỏ → sự tương quan của y(𝐱) và y(𝐱') sẽ kém, biểu hiện là hai điểm xa nhau trên đồ thị sẽ có có giá trị ít liên quan nhau
 >
 >
 >
@@ -258,7 +258,7 @@
 <p align="center"><kbd><img src="assets/f4h2xb89gbt.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Trong đoạn tiếp theo, tác giả chỉ ra rằng thông qua các kết quả vừa phân tích, hàm hồi quy (regression) y(**w**, **x**)—dùng để dự đoán giá trị mục tiêu t cho đầu vào **x**—thực chất có thể đ**ược biểu diễn dưới dạng tổ hợp tuyến tính của các giá trị mục tiêu t1, t2, ..., tN, với hệ số được xác định bởi hàm kernel.** 
+> Trong đoạn tiếp theo, tác giả chỉ ra rằng thông qua các kết quả vừa phân tích, hàm hồi quy (regression) y(𝐰, 𝐱)—dùng để dự đoán giá trị mục tiêu t cho đầu vào 𝐱—thực chất có thể đ**ược biểu diễn dưới dạng tổ hợp tuyến tính của các giá trị mục tiêu t1, t2, ..., tN, với hệ số được xác định bởi hàm kernel.** 
 >
 >
 >
@@ -266,7 +266,7 @@
 >
 >
 >
-> Có nghĩa là việc định nghĩa các hàm cơ sở ban đầu nhằm đưa tính phi tuyến vào để biến hàm y(**w**, **x**) thành phi tuyến đối với **x**, nhưng **kết quả cuối cùng của quá trình dự đoán vẫn chỉ là tổ hợp tuyến tính của các giá trị mục tiêu thông qua hệ số kernel**. Vì vậy, thay vì thực hiện toàn bộ các bước phức tạp bắt đầu từ việc định nghĩa các hàm cơ sở, chúng ta có thể **bỏ qua các bước trung gian này để định nghĩa trực tiếp một hàm kernel cục bộ (localized kernel)**. Phương thức trực tiếp này giúp đưa ra dự đoán cho một vectơ **x** dựa trên tập huấn luyện (training set) một cách tương tự, và đây chính là nội dung sẽ được nghiên cứu trong phần 6.4 với tên gọi **Quá trình Gaussian (Gaussian Process).**
+> Có nghĩa là việc định nghĩa các hàm cơ sở ban đầu nhằm đưa tính phi tuyến vào để biến hàm y(𝐰, 𝐱) thành phi tuyến đối với 𝐱, nhưng **kết quả cuối cùng của quá trình dự đoán vẫn chỉ là tổ hợp tuyến tính của các giá trị mục tiêu thông qua hệ số kernel**. Vì vậy, thay vì thực hiện toàn bộ các bước phức tạp bắt đầu từ việc định nghĩa các hàm cơ sở, chúng ta có thể **bỏ qua các bước trung gian này để định nghĩa trực tiếp một hàm kernel cục bộ (localized kernel)**. Phương thức trực tiếp này giúp đưa ra dự đoán cho một vectơ 𝐱 dựa trên tập huấn luyện (training set) một cách tương tự, và đây chính là nội dung sẽ được nghiên cứu trong phần 6.4 với tên gọi **Quá trình Gaussian (Gaussian Process).**
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -284,15 +284,15 @@
 <p align="center"><kbd><img src="assets/v8lzvhpykea.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, còn vài ý cuối. Thì ý tiếp theo đại khái gs nói là, ta có thể chứng minh Σj=1=N k(**x**j, **x**) = 1. Và chứng minh cũng đơn giản chỉ cần lập luận như vầy:
+> Rồi, còn vài ý cuối. Thì ý tiếp theo đại khái gs nói là, ta có thể chứng minh Σj=1=N k(𝐱j, 𝐱) = 1. Và chứng minh cũng đơn giản chỉ cần lập luận như vầy:
 >
 >
 >
-> Đó là giả sử ta có rất nhiều data, với mọi t1,...tN đều bằng 1. Dĩ nhiên, như đã nói, việc đưa ra hàm dự đoán cho giá trị t của một input **x** mới cuối cùng cũng chỉ là xây dựng hàm kernel k(**x**, **x**'), để rồi dùng Σj=1:N k(**x**j, **x**) tj để dự đoán cho t. Và kiểu như là, với data rất nhiều, thì chắc chắn là ta có thể xây dựng một hàm số fit tuyệt đối dataset. Và vì mọi t1,...tN đều bằng 1 nên kiểu như ta sẽ tin rằng hàm regress sẽ dự đoán t cho một input **x** nào đó cũng phải bằng 1.
+> Đó là giả sử ta có rất nhiều data, với mọi t1,...tN đều bằng 1. Dĩ nhiên, như đã nói, việc đưa ra hàm dự đoán cho giá trị t của một input 𝐱 mới cuối cùng cũng chỉ là xây dựng hàm kernel k(𝐱, 𝐱'), để rồi dùng Σj=1:N k(𝐱j, 𝐱) tj để dự đoán cho t. Và kiểu như là, với data rất nhiều, thì chắc chắn là ta có thể xây dựng một hàm số fit tuyệt đối dataset. Và vì mọi t1,...tN đều bằng 1 nên kiểu như ta sẽ tin rằng hàm regress sẽ dự đoán t cho một input 𝐱 nào đó cũng phải bằng 1.
 >
 >
 >
-> ⇔ Σj=1:N k(**x**j, **x**) = 1, chứng minh xong tính chất này.
+> ⇔ Σj=1:N k(𝐱j, 𝐱) = 1, chứng minh xong tính chất này.
 >
 >
 >
