@@ -278,7 +278,7 @@
 
 > [!NOTE]
 > Khi đó det B1 ta sẽ tính theo cofactor formula theo **col1** sẽ
-> là **b1*det(X)** + **b2*[-detY]** + ....và det X chính là cofactor
+> là **b1 × det(X)** + **b2*[-detY]** + ....và det X chính là cofactor
 > của a11, kí hiệu **C11**. và det Y chính là cofactor của a21,
 > kí hiệu **C21**.
 >
@@ -447,8 +447,8 @@
 > [!NOTE]
 > Và khi **ta nhân 2 một cạnh**, **giữ nguyên các cạnh kia** thì
 > volume sẽ nhân 2. Thế thì cái này tương ứng với property
-> 3a khi ta **scale một row với alpha thì det cũng scale theo
-> factor alpha**
+> 3a khi ta **scale một row với α thì det cũng scale theo
+> factor α**
 
 <br>
 
