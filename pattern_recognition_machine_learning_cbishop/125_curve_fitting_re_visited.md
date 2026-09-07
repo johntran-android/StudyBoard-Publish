@@ -49,7 +49,7 @@
 >
 >
 >
-> Dựa trên cơ sở là ta có một training data set gồm N input (x1,...xn)T và n
+> Dựa trên cơ sở là ta có một training data set gồm N input (x1,...xn)ᵀ và n
 > target value (t1,...tN).
 >
 >
@@ -67,11 +67,11 @@
 >
 > Và ta sẽ đặt ra giả định là biến T (như đã nói, mình cứ theo notation của toán
 > thống kê, viết hoa cho tên biến, viết thường cho giá trị) sẽ có phân phối
-> Normal với mean là y(x, **w**) và variance là 1/β.
+> Normal với mean là y(x, 𝐰) và variance là 1/β.
 >
 >
 >
-> Để rồi pdf của T: f(t | y(x,**w**),1/β) sẽ là pdf của Normal(y(x, **w**),1/β),
+> Để rồi pdf của T: f(t | y(x,𝐰),1/β) sẽ là pdf của Normal(y(x, 𝐰),1/β),
 >
 >
 >
@@ -80,7 +80,7 @@
 >
 >
 > Và cũng có có thể ghi là f(t | x,w,β) để nhìn nó như hàm của t dựa trên các giá
-> trị x, **w**, β (thông qua trung gian y(x, **w**) và 1/β)
+> trị x, 𝐰, β (thông qua trung gian y(x, 𝐰) và 1/β)
 
 <br>
 
@@ -94,7 +94,7 @@
 
 > [!NOTE]
 > Như vậy, với góc nhìn này, dựa trên x,
-> **w**, β thì T ~ normal(y(**x**, w), 1/β)
+> 𝐰, β thì T ~ normal(y(𝐱, w), 1/β)
 
 <br>
 
@@ -109,11 +109,11 @@
 >
 >
 >
-> Vừa rồi, ta COI gắn với x=x0 thì T  ~ Normal(y(x0, **w**), 1/β)
+> Vừa rồi, ta COI gắn với x=x0 thì T  ~ Normal(y(x0, 𝐰), 1/β)
 >
 >
 >
-> để rồi pdf của nó là f_T(t| y(x0, **w**), 1/β)
+> để rồi pdf của nó là f_T(t| y(x0, 𝐰), 1/β)
 >
 >
 >
@@ -122,7 +122,7 @@
 >
 >
 >
-> Ti ~ Normal(y(xi, **w**), 1/β), có (marginal) pdf f_Ti(ti | y(x0, **w**), 1/β)
+> Ti ~ Normal(y(xi, 𝐰), 1/β), có (marginal) pdf f_Ti(ti | y(x0, 𝐰), 1/β)
 >
 >
 >
@@ -146,7 +146,7 @@
 >
 >
 > Nguồn cơn thắc mắc là ở chỗ, mean của distribution của Ti lại là hàm phụ thuộc
-> x: y(x, **w**). Nên rõ ràng là với x khác nhau, ETi = y(xi,w) sẽ khác nhau cho nên
+> x: y(x, 𝐰). Nên rõ ràng là với x khác nhau, ETi = y(xi,w) sẽ khác nhau cho nên
 > không thể nói T1 và T2 ứng với x1, x2 là cùng một distribution được.
 >
 >
@@ -161,7 +161,7 @@
 >
 >
 >
-> fT1,...Tn(**t**|x1,..xn,**w**,β), hay f**T**(**t**|**x**,**w**,β)
+> fT1,...Tn(𝐭|x1,..xn,𝐰,β), hay f𝐓(𝐭|𝐱,𝐰,β)
 >
 >
 >
@@ -170,11 +170,11 @@
 >
 >
 >
-> = fT1(t1|y(x1, **w**), 1/β) * fT2(t2|y(x2, **w**), 1/β) *...* fTn(tn|y(xn, **w**), 1/β)
+> = fT1(t1|y(x1, 𝐰), 1/β) * fT2(t2|y(x2, 𝐰), 1/β) *...* fTn(tn|y(xn, 𝐰), 1/β)
 >
 >
 >
-> = Πi=1:n f(ti| y(xi, **w**), 1/β)
+> = Πi=1:n f(ti| y(xi, 𝐰), 1/β)
 >
 >
 >
@@ -182,14 +182,14 @@
 >
 >
 >
-> p(**t** | **x**,**w**,β) = Πi=1:n N(ti| y(xi, **w**), 1/β).
+> p(𝐭 | 𝐱,𝐰,β) = Πi=1:n N(ti| y(xi, 𝐰), 1/β).
 >
 >
 >
 > Và như đã nhắc lại về định nghĩa của hàm likelihood trong các note trước, Với
-> sample **X** ~ f(**x**|θ)thì likelihood là hàm số của θ, kí hiệu: L(θ|**x**), có độ
-> lớn  được đặt bởi độ lớn của hàm joint pdf của **X** tại **x**: f(**x**|θ), và mang ý
-> nghĩa là độ hợp lí của θ khi ta quan sát thấy giá trị **X** = **x** (nói nôm na là:
+> sample 𝐗 ~ f(𝐱|θ)thì likelihood là hàm số của θ, kí hiệu: L(θ|𝐱), có độ
+> lớn  được đặt bởi độ lớn của hàm joint pdf của 𝐗 tại 𝐱: f(𝐱|θ), và mang ý
+> nghĩa là độ hợp lí của θ khi ta quan sát thấy giá trị 𝐗 = 𝐱 (nói nôm na là:
 > tao biết giá trị của **X bị quy định bởi θ**, vậy thì nếu tao thấy giá trị cụ thể x của
 > nó, thì với các giá trị θ = θ1 thì có hợp lí không / độ hợp lí là bao nhiêu để giải
 > thích hiện tượng này (quan  sát được giá trị này của X), thì cái độ hợp lí đó là
@@ -201,9 +201,9 @@
 >
 >
 >
-> Theo định nghĩa trên, nó là likelihood của tham số θ, chi phối distribution của **X**.
-> Vậy ở đây, dĩ nhiên là nói về likelihood của tham số chi phối distribution của **T**
-> = (T1,...Tn). Và trong cái nùi Πi=1:n N(ti| y(xi, **w**), 1/β), dĩ nhiên tham số là **w**, và 
+> Theo định nghĩa trên, nó là likelihood của tham số θ, chi phối distribution của 𝐗.
+> Vậy ở đây, dĩ nhiên là nói về likelihood của tham số chi phối distribution của 𝐓
+> = (T1,...Tn). Và trong cái nùi Πi=1:n N(ti| y(xi, 𝐰), 1/β), dĩ nhiên tham số là 𝐰, và 
 > β (còn x1,..xn đều là giá trị đã biết)
 >
 >
@@ -212,7 +212,7 @@
 >
 >
 >
-> L((**w**,β)|**t,x**) = f**T**(**t**|**x**,**w**,β) = Πi=1:n f(ti| y(xi, **w**), 1/β)
+> L((𝐰,β)|**t,x**) = f𝐓(𝐭|𝐱,𝐰,β) = Πi=1:n f(ti| y(xi, 𝐰), 1/β)
 
 **🔗 See also:** [Phân phối hậu nghiệm Normal](./126_bayesian_curve_fitting.md#node-6vqfvyl)
 
@@ -233,19 +233,19 @@
 >
 >
 >
-> Ôn nhanh: trong bài toán thống kê suy luận, point estimation là bài toán mà ta muốn xây dựng một estimator, được định nghĩa là một hàm của sample W(**X**) để mục đích là với observed data **X** = **x**, ta có estimate value W(**x**) cho θ sao cho chính xác. Và những phương pháp chính bao gồm method of moment, maximum likelihood estimator và Bayes estimator.
+> Ôn nhanh: trong bài toán thống kê suy luận, point estimation là bài toán mà ta muốn xây dựng một estimator, được định nghĩa là một hàm của sample W(𝐗) để mục đích là với observed data 𝐗 = 𝐱, ta có estimate value W(𝐱) cho θ sao cho chính xác. Và những phương pháp chính bao gồm method of moment, maximum likelihood estimator và Bayes estimator.
 >
 >
 >
-> Với ML estimator, được định nghĩa là θ^\_mle(**X**) = argmax\_θ L(θ|**X**), mang ý nghĩa là θ khiến tối đa hóa độ hợp lí khi quan sát được giá trị của **X**
+> Với ML estimator, được định nghĩa là θ^\_mle(𝐗) = argmax\_θ L(θ|𝐗), mang ý nghĩa là θ khiến tối đa hóa độ hợp lí khi quan sát được giá trị của 𝐗
 >
 >
 >
-> Còn Bayes estimator, được định nghĩa là, mean hoặc median của phân phối posterior π(θ|**x**).
+> Còn Bayes estimator, được định nghĩa là, mean hoặc median của phân phối posterior π(θ|𝐱).
 >
 >
 >
-> Vậy thì ở đây, θ chính là (**w**, β), ta sẽ làm theo cách thứ nhất, xây dựng ML estimator của (**w**, β). Để rồi lát nữa, ở phần sau ta sẽ làm theo Bayes estimator.
+> Vậy thì ở đây, θ chính là (𝐰, β), ta sẽ làm theo cách thứ nhất, xây dựng ML estimator của (𝐰, β). Để rồi lát nữa, ở phần sau ta sẽ làm theo Bayes estimator.
 >
 >
 >
@@ -253,7 +253,7 @@
 >
 >
 >
-> maximize\_**w**, β L(**w**, β | **t**,**x**) = Πi f(ti| y(xi, w), 1/β)
+> maximize\_𝐰, β L(𝐰, β | 𝐭,𝐱) = Πi f(ti| y(xi, w), 1/β)
 >
 >
 >
@@ -265,7 +265,7 @@
 >
 >
 >
-> log L(w, β | **t**, **x**) = log Πi f(ti| y(xi, **w**), 1/β)
+> log L(w, β | 𝐭, 𝐱) = log Πi f(ti| y(xi, 𝐰), 1/β)
 >
 >
 >
@@ -273,31 +273,31 @@
 >
 >
 >
-> = log { Πi \[1/√\[2π(1/β)\]\] exp\[-\[ti-y(xi,**w**)\]^2/2(1/β)\] }
+> = log { Πi \[1/√\[2π(1/β)\]\] exp\[-\[ti-y(xi,𝐰)\]²/2(1/β)\] }
 >
 >
 >
-> = log { \[1/β^(-1/2)√2π\]^n exp\[Σi-\[ti-y(xi,**w**)\]^2/2(1/β)\] }
+> = log { \[1/β^(-1/2)√2π\]ⁿ exp\[Σi-\[ti-y(xi,𝐰)\]²/2(1/β)\] }
 >
 >
 >
-> = log { \[β^(1/2)/√2π\]^n } + log exp\[Σi-\[ti-y(xi,**w**)\]^2)/2(1/β)\]
+> = log { \[β^(1/2)/√2π\]ⁿ } + log exp\[Σi-\[ti-y(xi,𝐰)\]²)/2(1/β)\]
 >
 >
 >
-> = n log \[β^(1/2)/√2π\] - (β/2) Σi \[ti-y(xi,**w**)\]^2
+> = n log \[β^(1/2)/√2π\] - (β/2) Σi \[ti-y(xi,𝐰)\]²
 >
 >
 >
-> = n log β^(1/2) - n log√2π - (β/2) Σi \[ti-y(xi,**w**)\]^2
+> = n log β^(1/2) - n log√2π - (β/2) Σi \[ti-y(xi,𝐰)\]²
 >
 >
 >
-> = (n/2) log β - (n/2) log (2π) - (β/2) Σi \[ti-y(xi,**w**)\]^2
+> = (n/2) log β - (n/2) log (2π) - (β/2) Σi \[ti-y(xi,𝐰)\]²
 >
 >
 >
-> = - (β/2) Σi \[ti-y(xi,**w**)\]^2 + (n/2) log β - (n/2) log (2π), đây chính là 1.62
+> = - (β/2) Σi \[ti-y(xi,𝐰)\]² + (n/2) log β - (n/2) log (2π), đây chính là 1.62
 >
 >
 >
@@ -325,19 +325,19 @@
 >
 >
 >
-> maximize_w - (β/2) Σi \[ti-y(xi,**w**)\]^2 + (n/2) log β - (n/2) log (2π)
+> maximize_w - (β/2) Σi \[ti-y(xi,𝐰)\]² + (n/2) log β - (n/2) log (2π)
 >
 >
 >
-> ⇔ maximize_w - (β/2) Σi \[ti-y(xi,**w**)\]^2 | bỏ constant
+> ⇔ maximize_w - (β/2) Σi \[ti-y(xi,𝐰)\]² | bỏ constant
 >
 >
 >
-> ⇔ minimize_w (β/2) Σi \[ti-y(xi,**w**)\]^2 | maximize objective = minimize negative objective
+> ⇔ minimize_w (β/2) Σi \[ti-y(xi,𝐰)\]² | maximize objective = minimize negative objective
 >
 >
 >
-> ⇔ minimize_w (1/2) Σi \[ti-y(xi,**w**)\]^2 | vì nhân objective cho cho constant 1/β
+> ⇔ minimize_w (1/2) Σi \[ti-y(xi,𝐰)\]² | vì nhân objective cho cho constant 1/β
 >
 >
 >
@@ -353,27 +353,27 @@
 >
 >
 >
-> ta đã thấy gs giả định Ti \~ Normal(y(xi, **w**), 1/β)
+> ta đã thấy gs giả định Ti \~ Normal(y(xi, 𝐰), 1/β)
 >
 >
 >
-> Thế thì, Ti - y(xi, **w**) chính là gì:
+> Thế thì, Ti - y(xi, 𝐰) chính là gì:
 >
 >
 >
-> Y như việc ta có X \~ Normal(μ, σ^2) thì theo location scale theorem X - μ chính là một Normal(0, σ^2).
+> Y như việc ta có X \~ Normal(μ, σ²) thì theo location scale theorem X - μ chính là một Normal(0, σ²).
 >
 >
 >
-> Vậy, Ti - y(xi, **w**) chính là random variable \~ Normal(0, 1/β)
+> Vậy, Ti - y(xi, 𝐰) chính là random variable \~ Normal(0, 1/β)
 >
 >
 >
-> Như vậy rv có được bằng cách áp hàm error(Ti, y(xi, **w**)) = Ti - y(xi, **w**) sẽ chính là một random variable \~ Normal(0,1/β)
+> Như vậy rv có được bằng cách áp hàm error(Ti, y(xi, 𝐰)) = Ti - y(xi, 𝐰) sẽ chính là một random variable \~ Normal(0,1/β)
 >
 >
 >
-> Mà ta đã biết y(xi, w) là prediction của mô hình, thì e = error(ti, y(xi, **w**)) = ti-y(xi, **w**) là sai số của dự đoán.
+> Mà ta đã biết y(xi, w) là prediction của mô hình, thì e = error(ti, y(xi, 𝐰)) = ti-y(xi, 𝐰) là sai số của dự đoán.
 >
 >
 >
@@ -392,7 +392,7 @@
 <p align="center"><kbd><img src="assets/yqrxkupiyad.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> minimize_w (1/2) Σi [ti-y(xi,w)]^2
+> minimize_w (1/2) Σi [ti-y(xi,w)]²
 >
 >
 >
@@ -400,39 +400,39 @@
 >
 >
 >
-> y(xi, w) = **w**TΦ(xi) với Φ(xi) = [1, xi, xi^2,...]
+> y(xi, w) = 𝐰ᵀΦ(xi) với Φ(xi) = [1, xi, xi²,...]
 >
 >
 >
-> ⇨ (1/2) Σi [ti - y(xi,**w**)]^2 = (1/2) Σi [ti - **w**TΦ(xi)]^2
+> ⇨ (1/2) Σi [ti - y(xi,𝐰)]² = (1/2) Σi [ti - 𝐰ᵀΦ(xi)]²
 >
 >
 >
-> = (1/2) (**t** - X**w**)T(**t** - X**w**) với row i của X = Φ(xi)T
+> = (1/2) (𝐭 - X𝐰)ᵀ(𝐭 - X𝐰) với row i của X = Φ(xi)ᵀ
 >
 >
 >
-> = (1/2) (**t**T - **w**TXT)(**t** - X**w**)
+> = (1/2) (𝐭ᵀ - 𝐰ᵀXᵀ)(𝐭 - X𝐰)
 >
 >
 >
-> = (1/2) (**t**T**t** - **w**TXT**t** - **t**TX**w** + **w**TXTX**w**)
+> = (1/2) (𝐭ᵀ𝐭 - 𝐰ᵀXᵀ𝐭 - 𝐭ᵀX𝐰 + 𝐰ᵀXᵀX𝐰)
 >
 >
 >
-> = (1/2) (**t**T**t** - 2**t**TX**w** + **w**TXTX**w**)
+> = (1/2) (𝐭ᵀ𝐭 - 2𝐭ᵀX𝐰 + 𝐰ᵀXᵀX𝐰)
 >
 >
 >
-> = (1/2)**w**TXTX**w** - **t**TX**w** + (1/2) **t**T**t**
+> = (1/2)𝐰ᵀXᵀX𝐰 - 𝐭ᵀX𝐰 + (1/2) 𝐭ᵀ𝐭
 >
 >
 >
-> Đây là quadratic function của **w**.
+> Đây là quadratic function của 𝐰.
 >
 >
 >
-> Với quadratic function f(x) = (1/2)xTPx + qTx + r (x là vector)
+> Với quadratic function f(x) = (1/2)xᵀPx + qᵀx + r (x là vector)
 >
 >
 >
@@ -440,19 +440,19 @@
 >
 >
 >
-> ∇f(**w**) = XTX**w** - XT**t**
+> ∇f(𝐰) = XᵀX𝐰 - Xᵀ𝐭
 >
 >
 >
-> Điều kiện cần tối ưu bậc nhất: ∇f(**w**) = 0
+> Điều kiện cần tối ưu bậc nhất: ∇f(𝐰) = 0
 >
 >
 >
-> ⇔ XTX**w** - XT**t** = 0
+> ⇔ XᵀX𝐰 - Xᵀ𝐭 = 0
 >
 >
 >
-> ⇔ **w** = (XTX)_invXT**t**
+> ⇔ 𝐰 = (XᵀX)⁻¹Xᵀ𝐭
 >
 >
 >
@@ -461,19 +461,19 @@
 >
 >
 >
-> Dễ thấy Hessian chính là XTX, và đương nhiên nhờ MIT 1806 ta biết,  nó gọi là
+> Dễ thấy Hessian chính là XᵀX, và đương nhiên nhờ MIT 1806 ta biết,  nó gọi là
 > Gram matrix, chắc chắn là positive semi definite vì: Check quadratic form:
-> zT(XTX)z = (XTz)T(XTz) = ||Xz||^2 ≥ 0 ∀z.Và đây chính là **w**_ML, dĩ nhiên nó là hàm của **t**,**x** (vì **X** là hàm
-> của **x**)(nói vậy để soi chiếu kiến thức trong Casella: point estimator của θ  ,
-> θ^_ml(**X**) là hàm của sample **X**)
+> zᵀ(XᵀX)z = (Xᵀz)ᵀ(Xᵀz) = ||Xz||² ≥ 0 ∀z.Và đây chính là 𝐰_ML, dĩ nhiên nó là hàm của 𝐭,𝐱 (vì 𝐗 là hàm
+> của 𝐱)(nói vậy để soi chiếu kiến thức trong Casella: point estimator của θ  ,
+> θ^_ml(𝐗) là hàm của sample 𝐗)
 >
 >
 >
-> Sau đó, ta tiếp tục giải bài toán minimize - log L(**w**_ML, β|t,x) để tìm β_ML.
+> Sau đó, ta tiếp tục giải bài toán minimize - log L(𝐰_ML, β|t,x) để tìm β_ML.
 >
 >
 >
-> Nhưng tiện thể nói thêm tí về w_ML = (XTX)_invXT**t**
+> Nhưng tiện thể nói thêm tí về w_ML = (XᵀX)_⁻¹Xᵀ𝐭
 >
 >
 >
@@ -485,48 +485,48 @@
 > luận như sau: giả sử có vector b, để tìm p là hình chiếu của b lên C(A) Ta làm
 > như sau: p ∈ C(A) ⇨ p = Ax^ (p thuộc C(A) nên chắc chắn tồn tại linear
 > combination các cột của A để tạo ra p). Phần dư e = b - p sẽ vuông góc với
-> C(A), mà C(A) và left nullspace N(AT) orthogonal complement, nên e phải ∈
-> N(AT), đồng nghĩa: ATe = 0. Vậy AT(b-p) = 0 ⇔ ATb = ATp ⇔ ATb = ATAx^. Đây
+> C(A), mà C(A) và left nullspace N(Aᵀ) orthogonal complement, nên e phải ∈
+> N(Aᵀ), đồng nghĩa: Aᵀe = 0. Vậy Aᵀ(b-p) = 0 ⇔ Aᵀb = Aᵀp ⇔ Aᵀb = AᵀAx^. Đây
 > chính là normal equation.
 >
 >
 >
-> Và nếu A full column rank, ATA sẽ full rank / invertible
+> Và nếu A full column rank, AᵀA sẽ full rank / invertible
 >
 >
 >
-> ⇨ x^ = (ATA)invATb ⇨ p^ = Ax^ = (ATA)invATb = Pb
+> ⇨ x^ = (AᵀA)⁻¹Aᵀb ⇨ p^ = Ax^ = (AᵀA)⁻¹Aᵀb = Pb
 >
 >
 >
-> ⇨ P = A(ATA)invAT chính là projection onto C(A) matrix
+> ⇨ P = A(AᵀA)⁻¹Aᵀ chính là projection onto C(A) matrix
 >
 >
 >
-> Vậy xem lại cái phương trình XTX**w** - XT**t** = 0 ở trên để thấy nó chính là
-> normal equation, đi tìm **w**, là hệ số giúp linear combination các cột của XTX
-> cho ra **t**.
+> Vậy xem lại cái phương trình XᵀX𝐰 - Xᵀ𝐭 = 0 ở trên để thấy nó chính là
+> normal equation, đi tìm 𝐰, là hệ số giúp linear combination các cột của XᵀX
+> cho ra 𝐭.
 >
 >
 >
-> Và X**w** = chính là gì, chính là projection của **t** lên C(**X**)
+> Và X𝐰 = chính là gì, chính là projection của 𝐭 lên C(𝐗)
 >
 >
 >
-> Mà X**w là gì nhìn lại coi:** Với X là matrix mà row i là Φ(xi)T thì X**w** chính là
-> vector [Φ(x1)T**w**, Φ(x2)T**w**, ...]  = [y(x1,**w**),...y(xn,**w**)]
+> Mà X**w là gì nhìn lại coi:** Với X là matrix mà row i là Φ(xi)ᵀ thì X𝐰 chính là
+> vector [Φ(x1)ᵀ𝐰, Φ(x2)ᵀ𝐰, ...]  = [y(x1,𝐰),...y(xn,𝐰)]
 >
 >
 >
 > Từ đó giúp mình hiểu bản chất của bài toán least square này cũng chỉ là t**ìm
-> hình chiếu của vector** **t** **lên không gian** C(**X**), như trong MIT 1806 đã học
+> hình chiếu của vector** 𝐭 **lên không gian** C(𝐗), như trong MIT 1806 đã học
 > với thầy Strang
 >
-> Tiếp, giải bài toán minimize - log L(**w**_ML, β|t,x) để tìm 1/β_ML.
+> Tiếp, giải bài toán minimize - log L(𝐰_ML, β|t,x) để tìm 1/β_ML.
 >
 >
 >
-> Xét hàm objective - (β/2) Σi [ti-y(xi,**w**_ML)]^2 + (n/2) log β - (n/2) log (2π), lúc này
+> Xét hàm objective - (β/2) Σi [ti-y(xi,𝐰_ML)]² + (n/2) log β - (n/2) log (2π), lúc này
 >
 >
 >
@@ -534,29 +534,29 @@
 >
 >
 >
-> (chú ý (β/2) Σi [ti-y(xi,**w**_ML)]^2 + (n/2) log β - (n/2) log (2π) đã đang là log L rồi,
+> (chú ý (β/2) Σi [ti-y(xi,𝐰_ML)]² + (n/2) log β - (n/2) log (2π) đã đang là log L rồi,
 > giờ ta chỉ thêm dấu trừ để chuyển maximize thành minimize và bỏ các constant
 > đi thôi)
 >
 >
 >
-> minimize_β - { - (β/2) Σi [ti-y(xi,**w**_ML)]^2 + (n/2) log β] }, đặt là f(β)
+> minimize_β - { - (β/2) Σi [ti-y(xi,𝐰_ML)]² + (n/2) log β] }, đặt là f(β)
 >
 >
 >
-> df(β)/dβ = d/dβ {(β/2) Σi [ti-y(xi,**w**_ML)]^2 - (n/2) log β]}
+> df(β)/dβ = d/dβ {(β/2) Σi [ti-y(xi,𝐰_ML)]² - (n/2) log β]}
 >
 >
 >
-> = d/dβ { (β/2) Σi [ti-y(xi,**w**_ML)]^2} - d/dβ [(n/2) log β]
+> = d/dβ { (β/2) Σi [ti-y(xi,𝐰_ML)]²} - d/dβ [(n/2) log β]
 >
 >
 >
-> = Σi [ti-y(xi,**w**_ML)]^2 d/dβ (β/2) - (n/2) d/dβ (log β)
+> = Σi [ti-y(xi,𝐰_ML)]² d/dβ (β/2) - (n/2) d/dβ (log β)
 >
 >
 >
-> = (1/2) Σi [ti-y(xi,**w**_ML)]^2 - (n/2) 1/β
+> = (1/2) Σi [ti-y(xi,𝐰_ML)]² - (n/2) 1/β
 >
 >
 >
@@ -564,23 +564,23 @@
 >
 >
 >
-> df(β)/dβ = 0 ⇔ (1/2) Σi [ti-y(xi,**w**_ML)]^2 - (n/2) 1/β = 0
+> df(β)/dβ = 0 ⇔ (1/2) Σi [ti-y(xi,𝐰_ML)]² - (n/2) 1/β = 0
 >
 >
 >
-> ⇔ Σi [ti-y(xi,**w**_ML)]^2 - n/β = 0
+> ⇔ Σi [ti-y(xi,𝐰_ML)]² - n/β = 0
 >
 >
 >
-> ⇔ Σi [ti-y(xi,**w**_ML)]^2 = n/β 
+> ⇔ Σi [ti-y(xi,𝐰_ML)]² = n/β 
 >
 >
 >
-> ⇔ (1/n) Σi [ti-y(xi,**w**_ML)]^2 = 1/β
+> ⇔ (1/n) Σi [ti-y(xi,𝐰_ML)]² = 1/β
 >
 >
 >
-> Vậy 1/β_ml = (1/n) Σi [ti-y(xi, **w**_ML)]^2 chính là công thức 1.63 trong sách.
+> Vậy 1/β_ml = (1/n) Σi [ti-y(xi, 𝐰_ML)]² chính là công thức 1.63 trong sách.
 
 <br>
 
@@ -597,23 +597,23 @@
 >
 >
 > Trong Casella, để thực hiện một inference point estimation cho θ, tham số chi phối
-> phân phối xác suất của sample **X**: (X1,...,Xn) ~ f(**x**|θ). Thì ta có ba phương
+> phân phối xác suất của sample 𝐗: (X1,...,Xn) ~ f(𝐱|θ). Thì ta có ba phương
 > pháp quan trọng. MoM, MLE và Bayes.
 >
 >
 >
-> Với MLE: được định nghĩa là θ^_mle(**X**) = argmax_θ L(θ|**X**),
+> Với MLE: được định nghĩa là θ^_mle(𝐗) = argmax_θ L(θ|𝐗),
 >
 >
 >
 > Với Bayes: Thì ta sẽ theo trường phái Bayesian để coi θ như random variable có
-> prior và posterior distribution π(θ) và π(θ|**x**), từ đó bằng cách lấy mean hoặc
-> median của π(θ|**x**): Ví dụ E[θ|**X**], thì đó chính là Bayes estimator 
+> prior và posterior distribution π(θ) và π(θ|𝐱), từ đó bằng cách lấy mean hoặc
+> median của π(θ|𝐱): Ví dụ E[θ|𝐗], thì đó chính là Bayes estimator 
 > minimize Bayes risk  với squared error loss 
 >
 >
 >
-> (Bayes risk = ∫R(θ, δ(**X**))π(θ)dθ) = R(θ, δ(**X**)) = E_θ[L(δ(**X**), θ)])
+> (Bayes risk = ∫R(θ, δ(𝐗))π(θ)dθ) = R(θ, δ(𝐗)) = E_θ[L(δ(𝐗), θ)])
 >
 >
 >
@@ -624,8 +624,8 @@
 >
 > Ta thấy điểm quan trọng trong lập luận sẽ là: Ta thể hiện tính chất uncertainty theo
 > góc nhìn xác suất, bằng cách giả định Ti là biến ngẫu nhiên tuân theo phân phối
-> Normal(y(xi, **w**), 1/β), điều này đồng nghĩa ta cũng đang giả định sai số giữa dự
-> đoán của mô hình y(xi, **w**) và Ti: error(Tn) = Ti - y(xi, **w**) là biến số tuân theo
+> Normal(y(xi, 𝐰), 1/β), điều này đồng nghĩa ta cũng đang giả định sai số giữa dự
+> đoán của mô hình y(xi, 𝐰) và Ti: error(Tn) = Ti - y(xi, 𝐰) là biến số tuân theo
 > phân phối N(0, 1/β).
 >
 >
@@ -634,21 +634,21 @@
 >
 >
 >
-> f**T**(**t**|**w**,β) = Πi f(ti|**w**, β) = Πi N(ti|y(xi, **w**),1/β)
+> f𝐓(𝐭|𝐰,β) = Πi f(ti|𝐰, β) = Πi N(ti|y(xi, 𝐰),1/β)
 >
 >
 >
-> Và từ đó ta xây dựng hàm likelihood của **w**, β: L(**w**, β | **t**, **x**) = fT(t|**w**,β)
+> Và từ đó ta xây dựng hàm likelihood của 𝐰, β: L(𝐰, β | 𝐭, 𝐱) = fT(t|𝐰,β)
 >
 >
 >
-> = Πi N(ti|y(xi, **w**),1/β)
+> = Πi N(ti|y(xi, 𝐰),1/β)
 >
 >
 >
-> Và đi maximize hàm này ta sẽ có (**w**, β)_ML(**X**,**T**) là ML estimator của
-> (**w**, β)  Và (w, β)_ML(**x**, **t**) chính là ML estimate của (**w**, β), mang ý
-> nghĩa là với giá trị quan sát được (**x**, **t**) thì (w, β)_ML(x, t) là giá trị của w, β
+> Và đi maximize hàm này ta sẽ có (𝐰, β)_ML(𝐗,𝐓) là ML estimator của
+> (𝐰, β)  Và (w, β)_ML(𝐱, 𝐭) chính là ML estimate của (𝐰, β), mang ý
+> nghĩa là với giá trị quan sát được (𝐱, 𝐭) thì (w, β)_ML(x, t) là giá trị của w, β
 > có độ hơp lí cao nhất.
 >
 >
@@ -685,7 +685,7 @@
 >
 >
 >
-> Với một giá trị x mới, ta có predictive distribution của t: N(y(x, **w**_ML), 1/β_ML).
+> Với một giá trị x mới, ta có predictive distribution của t: N(y(x, 𝐰_ML), 1/β_ML).
 >
 >
 >
@@ -731,10 +731,10 @@
 > Rồi, đây mới là lúc tiến sang lãnh địa Bayesian. Như đã ôn lại ở note trước,
 > trong Casella, khi ta coi θ là random variable để rồi chọn cho nó một prior
 > distribution nào đó phản ảnh hiểu biết sơ khai của ta về nó, sau đó, dùng
-> Bayes rule để xây dựng distribution của θ dựa trên quan sát **X** = **x**, mang
-> ý nghĩa là cập nhật lại hiểu biết của ta về θ nhờ quan sát thấy sự kiện **X** =
-> **x** xảy ra. Và dùng cái distribution này để làm inference / estimator θ. Thì đó
-> chính là Bayes estiamtor θ^_B(**X**).
+> Bayes rule để xây dựng distribution của θ dựa trên quan sát 𝐗 = 𝐱, mang
+> ý nghĩa là cập nhật lại hiểu biết của ta về θ nhờ quan sát thấy sự kiện 𝐗 =
+> 𝐱 xảy ra. Và dùng cái distribution này để làm inference / estimator θ. Thì đó
+> chính là Bayes estiamtor θ^_B(𝐗).
 >
 >
 >
@@ -743,26 +743,26 @@
 >
 >
 >
-> Cụ thể là với w, gs Bishop cho rằng nó có phân phối Normal(0, α^-1 * **I**). Cái
+> Cụ thể là với w, gs Bishop cho rằng nó có phân phối Normal(0, α^-1 * 𝐈). Cái
 > này là sao?
 >
 >
 >
-> Ta biết **w**, là **vector** các hệ số của hàm đa thức: [1, w1, w2,...wM] vì hàm
-> đa thức là 1 + w1x^1 + w2x^2 + ...wMx^M. Nên giờ coi nó là random variable,
+> Ta biết 𝐰, là **vector** các hệ số của hàm đa thức: [1, w1, w2,...wM] vì hàm
+> đa thức là 1 + w1x^1 + w2x² + ...wMx^M. Nên giờ coi nó là random variable,
 > thì tức là **w lúc này là vector of random variables [1, w1, w2,...wM]**  Đáng lẽ
-> tới đây mình nên chuyển thành **W** = [1, W1,...WM] để nhất quán với quy tắc
+> tới đây mình nên chuyển thành 𝐖 = [1, W1,...WM] để nhất quán với quy tắc
 > kí hiệu của Casella: Chữ hoa cho tên biến, chữ thường cho giá trị biến.
 >
 >
 >
-> Thế thì, chọn phân phối Normal(0, α^-1 * **I**) cho **W** chỉ đơn giản nói là: Wi
+> Thế thì, chọn phân phối Normal(0, α^-1 * 𝐈) cho 𝐖 chỉ đơn giản nói là: Wi
 > đều có phân phối Normal(0, (1/α))
 >
 >
 >
 > Mấy phần trước gs đã nói về pdf của multivariate Normal, mình cũng đã tự
-> derive lại để hiểu bản chất. thì covariance matrix Σ = (1/α) * **I** cho thấy
+> derive lại để hiểu bản chất. thì covariance matrix Σ = (1/α) * 𝐈 cho thấy
 > variance của W1,..WM đều bằng 1/α và covariance giữa chúng đều bằng 0.
 >
 >
@@ -780,23 +780,23 @@
 >
 >
 >
-> = [1/(2π)^D/2] (1/|**Σ**|^1/2) exp {-1/2(**x** - **μ**)T Σinv (**x** - **μ**)}
+> = [1/(2π)^D/2] (1/|**Σ**|^1/2) exp {-1/2(𝐱 - **μ**)ᵀ Σ⁻¹ (𝐱 - **μ**)}
 >
 >
 >
-> **Σ** = (1/α) **I** ⇨det **Σ** = (1/α)^(M+1);
+> **Σ** = (1/α) 𝐈 ⇨det **Σ** = (1/α)^(M+1);
 >
 >
 >
-> pdf của W: f(**w**|α) = N(**w**|0, (1/α) **I**)
+> pdf của W: f(𝐰|α) = N(𝐰|0, (1/α) 𝐈)
 >
 >
 >
-> = [1/(2π)^(M+1)/2] (1/1/α)^(M+1)) exp {-1/2(**w** - 0)T α (**w** - 0)}
+> = [1/(2π)^(M+1)/2] (1/1/α)^(M+1)) exp {-1/2(𝐰 - 0)ᵀ α (𝐰 - 0)}
 >
 >
 >
-> = [α/(2π)^(M+1)/2] exp {-(α/2)**w**T**w**} → đây là 1.65 trong sách
+> = [α/(2π)^(M+1)/2] exp {-(α/2)𝐰ᵀ𝐰} → đây là 1.65 trong sách
 >
 >
 >
@@ -818,10 +818,10 @@
 >
 >
 >
-> π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**) với f(x|θ) là joint distribution của sample **X**,
-> f(**x**) có thể coi là prior distribution của **X** cũng được nhưng thường ta không
+> π(θ|𝐱) = f(𝐱|θ) π(θ) / f(𝐱) với f(x|θ) là joint distribution của sample 𝐗,
+> f(𝐱) có thể coi là prior distribution của 𝐗 cũng được nhưng thường ta không
 > care nó, mà chỉ coi nó như hằng số, và nó đóng vai trò là normalizing constant,
-> giúp đảm bảo tính valid của pdf π(θ|**x**) (sum / integral over range θ ra được
+> giúp đảm bảo tính valid của pdf π(θ|𝐱) (sum / integral over range θ ra được
 > 1 và không âm)
 >
 >
@@ -830,15 +830,15 @@
 >
 >
 >
-> π(θ|**x**) ∝ f(**x**|θ) π(θ)
+> π(θ|𝐱) ∝ f(𝐱|θ) π(θ)
 >
 >
 >
-> Vậy thì ở đây cũng vậy:Gs Bishop nói rằng posterior distribution của **w**:
+> Vậy thì ở đây cũng vậy:Gs Bishop nói rằng posterior distribution của 𝐰:
 >
 >
 >
-> π(**w**|**x**,**t**,α,β) ∝ f(**t**|**x**,**w**,β) π(**w**|α) (mình vẫn dùng kí hiệu π, và f,
+> π(𝐰|𝐱,𝐭,α,β) ∝ f(𝐭|𝐱,𝐰,β) π(𝐰|α) (mình vẫn dùng kí hiệu π, và f,
 > chả sao)
 >
 >
@@ -856,13 +856,13 @@
 >
 >
 >
-> ii) vì sao lại là π(**w**|α), prior trong casella là π(θ) thôi mà:
+> ii) vì sao lại là π(𝐰|α), prior trong casella là π(θ) thôi mà:
 >
 >
 >
-> → Là vì **w** ~ Normal(0, (1/α) * **I**), nên nó vẫn phụ thuộc α, nhưng đây vẫn
-> là prior distribution vì posterior là distribution dựa trên quan sát **X** = **x** (tức
-> là **T** = **t**) kìa.
+> → Là vì 𝐰 ~ Normal(0, (1/α) * 𝐈), nên nó vẫn phụ thuộc α, nhưng đây vẫn
+> là prior distribution vì posterior là distribution dựa trên quan sát 𝐗 = 𝐱 (tức
+> là 𝐓 = 𝐭) kìa.
 
 <br>
 
@@ -873,7 +873,7 @@
 <p align="center"><kbd><img src="assets/g9o488zi7x9.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, tới đây, với việc ta có π(**w**|**x**,**t**,α,β) ∝ f(**t**|**x**,**w**,β) π(**w**|α)
+> Rồi, tới đây, với việc ta có π(𝐰|𝐱,𝐭,α,β) ∝ f(𝐭|𝐱,𝐰,β) π(𝐰|α)
 >
 >
 >
@@ -882,11 +882,11 @@
 >
 >
 > Đối chiếu với việc tìm Bayes estimator trong Casella: Với công thức posteriori
-> π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**), mình sẽ áp công thức f(**x**|θ) và π(θ) vô, triển khai
-> ra và xác định được nó là kernel của pdf của distribution nào đó, và từ đó với f(**x**)
-> đóng vai normalizing constant thì ta sẽ kết luận distribution của θ given **X** = **x**.Xong, ta sẽ lấy kì vọng của cái này E[θ|**x**], và đó sẽ chính Bayes estimator giúp
+> π(θ|𝐱) = f(𝐱|θ) π(θ) / f(𝐱), mình sẽ áp công thức f(𝐱|θ) và π(θ) vô, triển khai
+> ra và xác định được nó là kernel của pdf của distribution nào đó, và từ đó với f(𝐱)
+> đóng vai normalizing constant thì ta sẽ kết luận distribution của θ given 𝐗 = 𝐱.Xong, ta sẽ lấy kì vọng của cái này E[θ|𝐱], và đó sẽ chính Bayes estimator giúp
 > minimize sum squared error loss Bayes risk function.(nếu chọn loss là absolute error loss thì
-> Bayes estimator minimize Bayes risk sẽ là median của π(θ|**x**)
+> Bayes estimator minimize Bayes risk sẽ là median của π(θ|𝐱)
 >
 >
 >
@@ -894,12 +894,12 @@
 >
 >
 >
-> → Ta sẽ thay f(**x**|θ) = L(θ|**x**) (cơ bản chỉ là đổi tên gọi, hay đổi góc nhìn từ việc
-> xem nó là hàm pdf của **X** tại **x** sang góc nhìn là hàm likelihood của θ)
+> → Ta sẽ thay f(𝐱|θ) = L(θ|𝐱) (cơ bản chỉ là đổi tên gọi, hay đổi góc nhìn từ việc
+> xem nó là hàm pdf của 𝐗 tại 𝐱 sang góc nhìn là hàm likelihood của θ)
 >
 >
 >
-> Khi đó ta có π(θ|**x**) = L(θ|**x**) π(θ) / f(**x**), xem nó như hàm g(θ|**x**) nào đó. Và
+> Khi đó ta có π(θ|𝐱) = L(θ|𝐱) π(θ) / f(𝐱), xem nó như hàm g(θ|𝐱) nào đó. Và
 > ta sẽ đi maximize over θ cái này.
 >
 >
@@ -910,7 +910,7 @@
 >
 > Chỗ này suy ngẫm tí xíu: Trong sách Casella khi nói về Bayes estimator thì thường
 > **chỉ nói rằng ta sẽ lấy mean của posterior distribution**. Còn ở đây, trong machine
-> learning, ta **lại đi tìm θ khiến maximize** π(θ|**x**). Ngẫm lại, thì không phải
+> learning, ta **lại đi tìm θ khiến maximize** π(θ|𝐱). Ngẫm lại, thì không phải
 > distribution nào cái mean cũng là nơi có pdf cao nhất.
 >
 >
@@ -931,32 +931,32 @@
 >
 >
 >
-> ta sẽ đi giải bài toán: maximize_**w** π(**w**|**x**,**t**,α,β)
+> ta sẽ đi giải bài toán: maximize_𝐰 π(𝐰|𝐱,𝐭,α,β)
 >
 >
 >
-> nó sẽ tương đương maximize_**w** f(**t**|**x**,**w**,β) π(**w**|α)
+> nó sẽ tương đương maximize_𝐰 f(𝐭|𝐱,𝐰,β) π(𝐰|α)
 >
 >
 >
-> equivalent: maximize_**w** log [L(**w**|**t**,**x**,β) π(**w**|α)] = log L(**w**|t,x,β) + log
-> [π(**w**|α)]
+> equivalent: maximize_𝐰 log [L(𝐰|𝐭,𝐱,β) π(𝐰|α)] = log L(𝐰|t,x,β) + log
+> [π(𝐰|α)]
 >
 >
 >
-> term đầu tiên chính là 1.62: [- (β/2) Σi [ti-y(xi,**w**)]^2 + (n/2) log β - (n/2) log (2π) ]
+> term đầu tiên chính là 1.62: [- (β/2) Σi [ti-y(xi,𝐰)]² + (n/2) log β - (n/2) log (2π) ]
 >
 >
 >
-> term thứ hai: log { [α/(2π)^(M+1)/2] exp {-(α/2)**w**T**w**} }
+> term thứ hai: log { [α/(2π)^(M+1)/2] exp {-(α/2)𝐰ᵀ𝐰} }
 >
 >
 >
-> = log [α/(2π)^(M+1)/2] + log exp {-(α/2)**w**T**w**}
+> = log [α/(2π)^(M+1)/2] + log exp {-(α/2)𝐰ᵀ𝐰}
 >
 >
 >
-> = log [α/(2π)^(M+1)/2] - (α/2)**w**T**w**
+> = log [α/(2π)^(M+1)/2] - (α/2)𝐰ᵀ𝐰
 >
 >
 >
@@ -964,13 +964,13 @@
 >
 >
 >
-> \- (β/2) Σi [ti-y(xi,**w**)]^2 + (n/2) log β - (n/2) log (2π) ] + log [α/(2π)^(M+1)/2 -
-> (α/2)**w**T**w**
+> \- (β/2) Σi [ti-y(xi,𝐰)]² + (n/2) log β - (n/2) log (2π) ] + log [α/(2π)^(M+1)/2 -
+> (α/2)𝐰ᵀ𝐰
 >
 >
 >
 > và ta sẽ chuyển thành bài toán tương đương tiếp: bỏ các constant không dính tới w
-> đi,  nhân cho constant dương 2/β, maximize_**w** { - Σi [ti-y(xi,**w**)]^2 - (α/β) **w**T**w** }
+> đi,  nhân cho constant dương 2/β, maximize_𝐰 { - Σi [ti-y(xi,𝐰)]² - (α/β) 𝐰ᵀ𝐰 }
 >
 >
 >
@@ -978,7 +978,7 @@
 >
 >
 >
-> minimize_**w** { Σi [ti-y(xi,**w**)]^2 + (α/β)**w**T**w** }
+> minimize_𝐰 { Σi [ti-y(xi,𝐰)]² + (α/β)𝐰ᵀ𝐰 }
 >
 >
 >
