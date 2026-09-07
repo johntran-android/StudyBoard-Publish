@@ -48,7 +48,7 @@
 >
 >
 > Nhưng khi **t tăng lên**, thì vì **du2/dt** có một thành phần
-> **+ u1**  và - 2*u2 và du1/dt thì - u1, + 2*u2 nên kiểu như là
+> **+ u1**  và - 2 × u2 và du1/dt thì - u1, + 2 × u2 nên kiểu như là
 > nó sẽ **move ra khỏi u1, đi vào u2**
 
 <br>
@@ -167,11 +167,11 @@
 > nullspace hay có thể nói basis vector của nullspace của
 > A-λI sẽ chính là eigenvector của A ứng với
 > eigenvalue λ. Mà ở đây λ = 0, thì A và
-> A-λI là một, nên nullspace của A-lmd*I chính là
+> A-λI là một, nên nullspace của A-lmd × I chính là
 > nullspace của A. Điều này cũng phản ánh **sự thật** đơn
 > giản rằng, **nếu nullspace của A có dim > 0**, thì **basis
 > của N(A) chính là eigenvector** vì đó là non-zero vector
-> **ứng với eigenvalue = 0**, do Ax=0*x)
+> **ứng với eigenvalue = 0**, do Ax=0 × x)
 >
 >
 >
@@ -272,7 +272,7 @@
 >
 >
 >
-> **= e^(λ1t)*λ1x1** (vì e^(λ1*t) là scalar nên move tùy ý)====
+> **= e^(λ1t)*λ1x1** (vì e^(λ1 × t) là scalar nên move tùy ý)====
 >
 >
 >
@@ -280,7 +280,7 @@
 >
 >
 >
-> = e^(λ1t)*Ax1** (vì e^(λ1*t) là scalar, nên có thể move tùy
+> = e^(λ1t)*Ax1** (vì e^(λ1 × t) là scalar, nên có thể move tùy
 > ý)
 >
 >
@@ -294,7 +294,7 @@
 >
 >
 >
-> nên u1(t) = **e^(λ1*t)*x1** là một special solution của **du/dt
+> nên u1(t) = **e^(λ1 × t)*x1** là một special solution của **du/dt
 > = Au**
 >
 >
@@ -361,6 +361,8 @@
 
 <a id="node-7bzf5vx"></a>
 
+###### Differential Equations and Matrix Exponential
+
 <p align="center"><kbd><img src="assets/r9txmszicd9.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -374,7 +376,7 @@
 >
 >
 >
-> u(t) = **c1*(e^λ1*t)*x1 + c2*(e^λ2t)*x2**
+> u(t) = **c1*(e^λ1 × t)*x1 + c2*(e^λ2t)*x2**
 >
 >
 >
@@ -387,7 +389,7 @@
 >
 >
 >
-> Còn **c2*(e^λ2t)*x2** trở thành **c2*0*x2 = 0** (vì e^[-infinity] = 0)
+> Còn **c2*(e^λ2t)*x2** trở thành **c2 × 0 × x2 = 0** (vì e^[-infinity] = 0)
 >
 >
 >
@@ -431,7 +433,7 @@
 >
 >
 > Khi đó khi t → infinity, **e^(λt) → 0 dẫn đến mọi solution
-> c_i*(e^λ_i*t)*x_i đều trở thành c_i*0*x_i = 0**
+> c_i*(e^λ_i × t)*x_i đều trở thành c_i × 0 × x_i = 0**
 
 <br>
 
@@ -455,7 +457,7 @@
 >
 >
 > Thì gs cho rằng **trị tuyệt đối của e^(-3+6i)t bằng
-> e^(-3t)**. Lí do là vì **trị** **tuyệt đối của e^(6i*t), bằng 1**.
+> e^(-3t)**. Lí do là vì **trị** **tuyệt đối của e^(6i × t), bằng 1**.
 >
 >
 >
@@ -620,7 +622,7 @@
 <p align="center"><kbd><img src="assets/dc0hp35w16.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Từ đó ta có **dv1/dt = λ_1*v_1**, **dv2/dt = λ_2*v_2**
+> Từ đó ta có **dv1/dt = λ_1 × v_1**, **dv2/dt = λ_2 × v_2**
 > ...
 
 <br>
@@ -878,7 +880,7 @@
 <p align="center"><kbd><img src="assets/ujtiq4m2fvn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> và cái chính cần chứng minh là **e^(At)** = **S*e^(Λt)*S⁻¹**
+> và cái chính cần chứng minh là **e^(At)** = **S × e^(Λt)*S⁻¹**
 
 <br>
 
@@ -1039,11 +1041,11 @@
 >
 >
 >
-> sau đó ta cũng chứng minh rằng e^(At) = S*e^(Λt)*S⁻¹
+> sau đó ta cũng chứng minh rằng e^(At) = S × e^(Λt)*S⁻¹
 >
 >
 >
-> từ đó u = S*e^(Λt)*S⁻¹ u(0) = S*e^(Λt)*S⁻¹*S*c = **S*e^(Λt)*c**
+> từ đó u = S × e^(Λt)*S⁻¹ u(0) = S × e^(Λt)*S⁻¹*S × c = **S × e^(Λt)*c**
 >
 >
 >
@@ -1052,14 +1054,14 @@
 >
 >
 >
-> u(t) = c1*(e^λ1*t)*x1 + c2*(e^λ2t)*x2, 
+> u(t) = c1*(e^λ1 × t)*x1 + c2*(e^λ2t)*x2, 
 >
 >
 >
-> thì đây cũng chính là **S*e^(Λt)*c**, với S là eigenvector matrix,
+> thì đây cũng chính là **S × e^(Λt)*c**, với S là eigenvector matrix,
 > Λ là eigenvalues diagonal matrix và c là (c1 c2)
 
-**🔗 See also:** [linked note](#node-lwzum6q) · [Matrix Exponential and Diagonalization](#node-nvlbs8p) · [linked note](#node-7bzf5vx)
+**🔗 See also:** [linked note](#node-lwzum6q) · [Matrix Exponential and Diagonalization](#node-nvlbs8p) · [Differential Equations and Matrix Exponential](#node-7bzf5vx)
 
 <br>
 
@@ -1081,7 +1083,7 @@
 >
 >
 >
-> **u(t) = e^(At) = S*e^(Λt)*S⁻¹**,
+> **u(t) = e^(At) = S × e^(Λt)*S⁻¹**,
 >
 >
 >
