@@ -390,6 +390,8 @@
 
 <a id="node-6vl2lxf"></a>
 
+###### Conditions for Solving Ax = b
+
 <p align="center"><kbd><img src="assets/fzs0txms93e.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -407,8 +409,7 @@
 >
 >
 >
-> Vậy b phải có dạng a*col1 + b*col2 + c*col3 tức là a*[1,2,1]ᵀ
-> +  b*[-1, -2, -1]
+> Vậy b phải có dạng a*col1 + b*col2 + c*col3 tức là a*[1,2,1]ᵀ +  b*[-1, -2, -1]
 
 <br>
 
