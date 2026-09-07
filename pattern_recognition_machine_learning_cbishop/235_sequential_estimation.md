@@ -24,47 +24,47 @@
 >
 >
 >
-> **μml**^(N) = **xbar** = (Σi=1:N-1 **x**i) + **x**N\] / N
+> **μml**^(N) = **xbar** = (Σi=1:N-1 𝐱i) + 𝐱N\] / N
 >
 >
 >
-> = (Σi=1:N-1 **x**i) / N + **x**N / N
+> = (Σi=1:N-1 𝐱i) / N + 𝐱N / N
 >
 >
 >
-> = **x**N/N + (Σi=1:N-1 **x**i) / N
+> = 𝐱N/N + (Σi=1:N-1 𝐱i) / N
 >
 >
 >
-> Nhân và chia term thứ hai cho N-1, mục đích để có (Σi=1:N-1 **x**i) / (N-1), chính là **μml**^(N-1), sample mean size N-1
+> Nhân và chia term thứ hai cho N-1, mục đích để có (Σi=1:N-1 𝐱i) / (N-1), chính là **μml**^(N-1), sample mean size N-1
 >
 >
 >
-> = **x**N/N + (Σi=1:N-1 **x**i) (N-1) / N (N-1)
+> = 𝐱N/N + (Σi=1:N-1 𝐱i) (N-1) / N (N-1)
 >
 >
 >
-> = **x**N/N + \[(N-1) / N\] (Σi=1:N-1 **x**i) / (N-1)
+> = 𝐱N/N + \[(N-1) / N\] (Σi=1:N-1 𝐱i) / (N-1)
 >
 >
 >
-> = **x**N/N + (1 - 1/N) **μml**^(N-1)
+> = 𝐱N/N + (1 - 1/N) **μml**^(N-1)
 >
 >
 >
-> = **x**N/N + **μml**^(N-1) - **μml**^(N-1)/N
+> = 𝐱N/N + **μml**^(N-1) - **μml**^(N-1)/N
 >
 >
 >
-> = **μml**^(N-1) + **x**N/N - **μml**^(N-1)/N
+> = **μml**^(N-1) + 𝐱N/N - **μml**^(N-1)/N
 >
 >
 >
-> = **μml**^(N-1) + \[**x**N - **μml**^(N-1)\]/N
+> = **μml**^(N-1) + \[𝐱N - **μml**^(N-1)\]/N
 >
 >
 >
-> Kết quả này, ông nói, cho ta một cách nhìn (interpretation) nhận như sau: với một data point / data sample **x**N mới được quan sát thấy, thì nó giúp cập nhật ml estimate theo hướng của data mới (thể hiện qua việc term thứ hai, có **x**N - **μml**^(N-1), chính là hướng từ estimation point cũ (sample mean size N-1) tới điểm **x**N. Và độ lớn của bước cập nhật, di chuyển này là tỉ lệ với 1/N.
+> Kết quả này, ông nói, cho ta một cách nhìn (interpretation) nhận như sau: với một data point / data sample 𝐱N mới được quan sát thấy, thì nó giúp cập nhật ml estimate theo hướng của data mới (thể hiện qua việc term thứ hai, có 𝐱N - **μml**^(N-1), chính là hướng từ estimation point cũ (sample mean size N-1) tới điểm 𝐱N. Và độ lớn của bước cập nhật, di chuyển này là tỉ lệ với 1/N.
 >
 >
 >
@@ -116,7 +116,7 @@
 >
 >
 >
-> Hiểu nôm na là, nếu ta có nhiều data của Z và θ, thì mình sẽ mô phỏng lại "hình dạng" hành vi của hàm f(θ), từ đó tìm / estimate điểm θ khiến f(θ) = 0. Mô phỏng ở đây mình cứ hiểu là thế này: hàm f(θ) nhất định phải có dạng sao đó, ví dụ như hàm f(θ) = θ^2 thì nó có hình dạng parabol, đáy (root) tại θ = 0, kiểu kiểu vậy. Và giả sử như ta biết nó có dạng a θ^2 + b θ + c, thì bằng cách thu thập các điểm (θ, f(θ)) thì ta có thể giải tìm các hệ số, để từ đó có được phương trình chính xác của f(θ), khi đó có thể giải chính xác θ nào khiến f(θ) = 0. Thì ở đây cũng vậy, f(θ) = E\[Z|θ\] cũng sẽ là một phương trình có công thức nào đó. Như vậy nếu ta có nhiều cặp data (θ, f(θ)) thì đại khái là cũng có thể dùng thông tin đó để mô phỏng lại hàm f(θ), để rồi tìm root.
+> Hiểu nôm na là, nếu ta có nhiều data của Z và θ, thì mình sẽ mô phỏng lại "hình dạng" hành vi của hàm f(θ), từ đó tìm / estimate điểm θ khiến f(θ) = 0. Mô phỏng ở đây mình cứ hiểu là thế này: hàm f(θ) nhất định phải có dạng sao đó, ví dụ như hàm f(θ) = θ² thì nó có hình dạng parabol, đáy (root) tại θ = 0, kiểu kiểu vậy. Và giả sử như ta biết nó có dạng a θ² + b θ + c, thì bằng cách thu thập các điểm (θ, f(θ)) thì ta có thể giải tìm các hệ số, để từ đó có được phương trình chính xác của f(θ), khi đó có thể giải chính xác θ nào khiến f(θ) = 0. Thì ở đây cũng vậy, f(θ) = E\[Z|θ\] cũng sẽ là một phương trình có công thức nào đó. Như vậy nếu ta có nhiều cặp data (θ, f(θ)) thì đại khái là cũng có thể dùng thông tin đó để mô phỏng lại hàm f(θ), để rồi tìm root.
 >
 >
 >
@@ -142,7 +142,7 @@
 >
 >
 >
-> Nếu thấy khó hiểu về conditional variance thì cũng dễ thôi: chỉ cần xuất xứ từ định nghĩa của variance: Ví dụ với random variable X, Var(X) = E\[(X-EX)^2\], và ta nên nhớ, (X-EX)^2, biểu hiện một hàm số áp lên X, là cái hàm sau đây: g(x) = \[x - EX\]^2 (EX là một contant nào đó). Như vậy (X-EX)^2 có bản chất chỉ là g(X), là áp hàm g lên X, theo gs Joe luôn nhấn mạnh trong Stat110, khi áp hàm số lên random variable thì ta có một random variable, do đó và Var(X) thật ra chính là kì vọng của cái random variable g(X) này: E\[g(X)\] = E\[(X-EX)^2\].
+> Nếu thấy khó hiểu về conditional variance thì cũng dễ thôi: chỉ cần xuất xứ từ định nghĩa của variance: Ví dụ với random variable X, Var(X) = E\[(X-EX)²\], và ta nên nhớ, (X-EX)², biểu hiện một hàm số áp lên X, là cái hàm sau đây: g(x) = \[x - EX\]² (EX là một contant nào đó). Như vậy (X-EX)² có bản chất chỉ là g(X), là áp hàm g lên X, theo gs Joe luôn nhấn mạnh trong Stat110, khi áp hàm số lên random variable thì ta có một random variable, do đó và Var(X) thật ra chính là kì vọng của cái random variable g(X) này: E\[g(X)\] = E\[(X-EX)²\].
 >
 >
 >
@@ -158,7 +158,7 @@
 >
 >
 >
-> Tóm lại tuy biết công thức là Var(X) = E\[(X-EX)^2\], nhưng ta hiểu bản chất của nó là kì vọng của biến ngẫu nhiên g(X), và khi tính, ta sẽ dùng pdf của X, f(x) để tính. 
+> Tóm lại tuy biết công thức là Var(X) = E\[(X-EX)²\], nhưng ta hiểu bản chất của nó là kì vọng của biến ngẫu nhiên g(X), và khi tính, ta sẽ dùng pdf của X, f(x) để tính. 
 >
 >
 >
@@ -170,23 +170,23 @@
 >
 >
 >
-> = ∫(x - E\[X|y\])^2 f(x|y)dx
+> = ∫(x - E\[X|y\])² f(x|y)dx
 >
 >
 >
-> = ∫(x - ∫xf(x|y)^2dx) f(x|y)dx
+> = ∫(x - ∫xf(x|y)²dx) f(x|y)dx
 >
 >
 >
-> Nói tóm lại, Var(X) là kì vọng của biến g(X) = (X-EX)^2, được tính dựa theo marginal pdf của X: f(x)
+> Nói tóm lại, Var(X) là kì vọng của biến g(X) = (X-EX)², được tính dựa theo marginal pdf của X: f(x)
 >
 >
 >
-> Còn Var(X|Y) là kì vọng của biến g(X) = (X - E(X|Y))^2, được tính dựa thep conditional pdf của X: f(x|y)
+> Còn Var(X|Y) là kì vọng của biến g(X) = (X - E(X|Y))², được tính dựa thep conditional pdf của X: f(x|y)
 >
 >
 >
-> Như vậy, cũng giúp ta hiểu Var\[Z|θ\] = E\[(Z - E\[Z|θ\])^2\] = E\[(Z - f)^2\]
+> Như vậy, cũng giúp ta hiểu Var\[Z|θ\] = E\[(Z - E\[Z|θ\])²\] = E\[(Z - f)²\]
 >
 >
 >
@@ -230,7 +230,7 @@
 >
 >
 >
-> Thế thì ta đã nói trong phần trước rằng, nói về phương pháp maximum likelihood là ta đang tìm cách ước lượng (estimate) tham số của một population mà các data được lấy từ đó. Cụ thể là với random sample X1,...Xn iid \~ f(x|θ), ta muốn tìm một statistic W(**X**) để estimate cho θ, và một cách tiếp cận, đó là dùng W(**X**) = argmax\_θ L(θ|**x**), với định nghĩa của hàm L(θ|**x**) là = f(**x**|θ), thì W(**X**) = argmax\_θ f(**x**|θ). Và với việc nó là ML estimator của θ, ta kí hiệu θ^ml, hay viết θ^ml(**X**) cũng được để nhớ rằng nó là một statistic - tức một random variable có được bởi việc áp một hàm số lên random sample **X**. Ta có θ^ml(**X**) = argmax\_θ f(**x**|θ).
+> Thế thì ta đã nói trong phần trước rằng, nói về phương pháp maximum likelihood là ta đang tìm cách ước lượng (estimate) tham số của một population mà các data được lấy từ đó. Cụ thể là với random sample X1,...Xn iid \~ f(x|θ), ta muốn tìm một statistic W(𝐗) để estimate cho θ, và một cách tiếp cận, đó là dùng W(𝐗) = argmax\_θ L(θ|𝐱), với định nghĩa của hàm L(θ|𝐱) là = f(𝐱|θ), thì W(𝐗) = argmax\_θ f(𝐱|θ). Và với việc nó là ML estimator của θ, ta kí hiệu θ^ml, hay viết θ^ml(𝐗) cũng được để nhớ rằng nó là một statistic - tức một random variable có được bởi việc áp một hàm số lên random sample 𝐗. Ta có θ^ml(𝐗) = argmax\_θ f(𝐱|θ).
 >
 >
 >
@@ -238,23 +238,23 @@
 >
 >
 >
-> Vậy thì ở đây log là một hàm montone, nên solution của bài toán maximize hàm log (hay ln để thể hiện log base e) likelihood, nhân thêm constant (1/N), thì cũng là solution của bài toán gốc: θ^ml(**X**) = argmax\_θ {(1/N) log L(θ|**x**) = (1/N) log \[f(**x**|θ)\]
+> Vậy thì ở đây log là một hàm montone, nên solution của bài toán maximize hàm log (hay ln để thể hiện log base e) likelihood, nhân thêm constant (1/N), thì cũng là solution của bài toán gốc: θ^ml(𝐗) = argmax\_θ {(1/N) log L(θ|𝐱) = (1/N) log \[f(𝐱|θ)\]
 >
 >
 >
-> và với việc data, hay random sample thường sẽ có tính iid, nên joint pdf của chúng sẽ có thể tách thành tích các marginal pdf: f(**x**|θ) = Πi=1:N f(**x**i|θ) Dẫn đến ln \[f(**x**|θ)\] = ln \[Πi=1:N f(**x**i|θ)\]. Dùng tính chất hàm log, ta có Σi=1:N ln f(**x**i|θ). Và bài toán tối ưu lúc này là:
+> và với việc data, hay random sample thường sẽ có tính iid, nên joint pdf của chúng sẽ có thể tách thành tích các marginal pdf: f(𝐱|θ) = Πi=1:N f(𝐱i|θ) Dẫn đến ln \[f(𝐱|θ)\] = ln \[Πi=1:N f(𝐱i|θ)\]. Dùng tính chất hàm log, ta có Σi=1:N ln f(𝐱i|θ). Và bài toán tối ưu lúc này là:
 >
 >
 >
-> maximize\_θ {(1/N) Σi=1:N ln f(**x**i|θ)}
+> maximize\_θ {(1/N) Σi=1:N ln f(𝐱i|θ)}
 >
 >
 >
-> Như vậy, đây là bài toán tối ưu ko ràng buộc có objective là (1/N) Σi=1:N ln f(**x**i|θ), thì để giải ta sẽ dùng điều kiện cần tối ưu bậc nhất (first order optimality necessary condition) để tìm stationary point, nơi có gradient vanish:
+> Như vậy, đây là bài toán tối ưu ko ràng buộc có objective là (1/N) Σi=1:N ln f(𝐱i|θ), thì để giải ta sẽ dùng điều kiện cần tối ưu bậc nhất (first order optimality necessary condition) để tìm stationary point, nơi có gradient vanish:
 >
 >
 >
-> ∇{(1/N) Σi=1:N ln f(**x**i|θ)} = 0,
+> ∇{(1/N) Σi=1:N ln f(𝐱i|θ)} = 0,
 >
 >
 >
@@ -262,19 +262,19 @@
 >
 >
 >
-> ∂/∂θ {(1/N) Σi=1:N ln f(**x**i|θ)} = 0 → đây là công thức 2.133 trong sách.
+> ∂/∂θ {(1/N) Σi=1:N ln f(𝐱i|θ)} = 0 → đây là công thức 2.133 trong sách.
 >
 >
 >
-> (kí hiệu .. |θml trong sách chỉ đơn giản là, cái ∂/∂θ {(1/N) Σi=1:N ln f(**x**i|θ)}, là hàm số theo θ, và với θ = θml, thì giá trị của hàm số này phải bằng 0)
+> (kí hiệu .. |θml trong sách chỉ đơn giản là, cái ∂/∂θ {(1/N) Σi=1:N ln f(𝐱i|θ)}, là hàm số theo θ, và với θ = θml, thì giá trị của hàm số này phải bằng 0)
 >
 >
 >
-> Tất nhiên, (1/N) Σi=1:N ln f(**x**i|θ) là tổng của N hàm, áp dụng đạo hàm của tổng = tổng đạo hàm (sum rule) ta có:
+> Tất nhiên, (1/N) Σi=1:N ln f(𝐱i|θ) là tổng của N hàm, áp dụng đạo hàm của tổng = tổng đạo hàm (sum rule) ta có:
 >
 >
 >
-> ⇔ (1/N) Σi=1:N ∂/∂θ \[ln f(**x**i|θ)\]
+> ⇔ (1/N) Σi=1:N ∂/∂θ \[ln f(𝐱i|θ)\]
 >
 >
 >
@@ -282,11 +282,11 @@
 >
 >
 >
-> lim N→∞ {(1/N) Σi=1:N ∂/∂θ \[ln f(**x**i|θ)\]}
+> lim N→∞ {(1/N) Σi=1:N ∂/∂θ \[ln f(𝐱i|θ)\]}
 >
 >
 >
-> Thế thì mình hãy tạm bỏ qua cái lim, mà nhìn vào cụm Σi=1:N ∂/∂θ \[ln f(**x**i|θ)\]. Nếu mình xét cái hàm T(**u**) sau đây: T(**u**) = ∂/∂θ \[ln f(**u**|θ)\], thì khi đem áp nó lên một random variable vector **Xi**, ta sẽ có một random variable mới: T(**Xi**) = ∂/∂θ \[ln f(**Xi**|θ)\]. Khi đó ứng với mỗi random variable trong **X1**, **X2**, ....**XN**, ta sẽ có T1 = T(**X1**), T2 = T(**X2**),...cũng tạo thành một random sample Ti.
+> Thế thì mình hãy tạm bỏ qua cái lim, mà nhìn vào cụm Σi=1:N ∂/∂θ \[ln f(𝐱i|θ)\]. Nếu mình xét cái hàm T(𝐮) sau đây: T(𝐮) = ∂/∂θ \[ln f(𝐮|θ)\], thì khi đem áp nó lên một random variable vector **Xi**, ta sẽ có một random variable mới: T(**Xi**) = ∂/∂θ \[ln f(**Xi**|θ)\]. Khi đó ứng với mỗi random variable trong **X1**, **X2**, ....**XN**, ta sẽ có T1 = T(**X1**), T2 = T(**X2**),...cũng tạo thành một random sample Ti.
 >
 >
 >
@@ -306,11 +306,11 @@
 >
 >
 >
-> ⇔ lim N→∞ {(1/N) Σi=1:N ∂/∂θ \[ln f(**X**i|θ)\]} = E\[∂/∂θ \[ln f(**Xi**|θ)\], giúp ta hiểu công thức 2.134 ở đâu ra.
+> ⇔ lim N→∞ {(1/N) Σi=1:N ∂/∂θ \[ln f(𝐗i|θ)\]} = E\[∂/∂θ \[ln f(**Xi**|θ)\], giúp ta hiểu công thức 2.134 ở đâu ra.
 >
 >
 >
-> Thêm nữa, ta đã biết cái việc giải bài toán MLE, thì điều kiện cần tối ưu bậc nhất giúp giải ra stationary point chính là Σi=1:N ∂/∂θ \[ln f(**X**i|θ)\], cũng ⇔ (1/N) Σi=1:N ∂/∂θ \[ln f(**X**i|θ)\] = 0. Thì nếu vậy giá trị của nó khi xét tại limit N → ∞ cũng phải bằng 0. Do đó, điều kiện giải tìm stationary point trở thành tương đương với E\[∂/∂θ \[ln f(**Xi**|θ)\] = 0. Mà như ta đã đặt ∂/∂θ \[ln f(**Xi**|θ) = Ti, = T(**Xi**). Nên ta có điều kiện cần giải là E\[T\] = 0. Và dĩ nhiên E\[T\] là hàm phụ thuộc θ, nên ghi là E\_θ\[T\], hoặc ông Bishop ghi là E\[T|θ\] để áp cái Robbins-Monroes vào, dù rằng cách ghi này hơi khiên cưỡng vì nó có thể khiến ta lầm tưởng θ được xem như random variable, thật sự thì không phải vậy, θ trong bối cảnh bài toán MLE, chắc chắn là fixed unknown, nên đáng lí phải ghi E\_θ\[T\] thôi.
+> Thêm nữa, ta đã biết cái việc giải bài toán MLE, thì điều kiện cần tối ưu bậc nhất giúp giải ra stationary point chính là Σi=1:N ∂/∂θ \[ln f(𝐗i|θ)\], cũng ⇔ (1/N) Σi=1:N ∂/∂θ \[ln f(𝐗i|θ)\] = 0. Thì nếu vậy giá trị của nó khi xét tại limit N → ∞ cũng phải bằng 0. Do đó, điều kiện giải tìm stationary point trở thành tương đương với E\[∂/∂θ \[ln f(**Xi**|θ)\] = 0. Mà như ta đã đặt ∂/∂θ \[ln f(**Xi**|θ) = Ti, = T(**Xi**). Nên ta có điều kiện cần giải là E\[T\] = 0. Và dĩ nhiên E\[T\] là hàm phụ thuộc θ, nên ghi là E\_θ\[T\], hoặc ông Bishop ghi là E\[T|θ\] để áp cái Robbins-Monroes vào, dù rằng cách ghi này hơi khiên cưỡng vì nó có thể khiến ta lầm tưởng θ được xem như random variable, thật sự thì không phải vậy, θ trong bối cảnh bài toán MLE, chắc chắn là fixed unknown, nên đáng lí phải ghi E\_θ\[T\] thôi.
 >
 >
 >
@@ -376,7 +376,7 @@
 <p align="center"><kbd><img src="assets/llgwye2nvh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, sau khi đã THẤY rằng việc giải first order necessary optimality condition gíup tìm stationary point của bài toán MLE chính là giải bài toán tìm root của hàm regression f(θ) = E\[T|θ\] với T(**X**) = ∂/∂θ \[ln f(**X**|θ)\] (tìm root tức là f(θ) = ⇔ E\[T|θ\] = 0) thì ta sẽ áp dụng cơ chế của Robbin-Monroes (R-M)
+> Thế thì, sau khi đã THẤY rằng việc giải first order necessary optimality condition gíup tìm stationary point của bài toán MLE chính là giải bài toán tìm root của hàm regression f(θ) = E\[T|θ\] với T(𝐗) = ∂/∂θ \[ln f(𝐗|θ)\] (tìm root tức là f(θ) = ⇔ E\[T|θ\] = 0) thì ta sẽ áp dụng cơ chế của Robbin-Monroes (R-M)
 >
 >
 >
@@ -424,39 +424,39 @@
 >
 >
 >
-> = ∂/∂μ \[ln {\[1/√(2πσ^2)\] exp\[-(x-μ)^2/2σ^2\]) | μ = μML
+> = ∂/∂μ \[ln {\[1/√(2πσ²)\] exp\[-(x-μ)²/2σ²\]) | μ = μML
 >
 >
 >
-> = ∂/∂μ \[ln {\[(2πσ^2)^(-1/2)\] exp\[-(x-μ)^2/2σ^2\]) | μ = μML
+> = ∂/∂μ \[ln {\[(2πσ²)^(-1/2)\] exp\[-(x-μ)²/2σ²\]) | μ = μML
 >
 >
 >
-> = ∂/∂μ \[ln \[(2πσ^2)^(-1/2)\] + ln exp\[-(x-μ)^2/2σ^2\])\] | μ = μML
+> = ∂/∂μ \[ln \[(2πσ²)^(-1/2)\] + ln exp\[-(x-μ)²/2σ²\])\] | μ = μML
 >
 >
 >
-> = ∂/∂μ \[(-1/2) ln (2πσ^2) - (x-μ)^2/2σ^2\] | μ = μML
+> = ∂/∂μ \[(-1/2) ln (2πσ²) - (x-μ)²/2σ²\] | μ = μML
 >
 >
 >
-> = {∂/∂μ \[(-1/2) ln (2πσ^2)\] - ∂/∂μ \[(x-μ)^2/2σ^2\] } | μ = μML
+> = {∂/∂μ \[(-1/2) ln (2πσ²)\] - ∂/∂μ \[(x-μ)²/2σ²\] } | μ = μML
 >
 >
 >
-> = {0 - (1/2σ^2) ∂/∂μ \[(x-μ)^2\] } | μ = μML
+> = {0 - (1/2σ²) ∂/∂μ \[(x-μ)²\] } | μ = μML
 >
 >
 >
-> = (1/2σ^2) 2(x-μ) | μ = μML
+> = (1/2σ²) 2(x-μ) | μ = μML
 >
 >
 >
-> = (1/σ^2)(x-μ) | μ = μML
+> = (1/σ²)(x-μ) | μ = μML
 >
 >
 >
-> = (1/σ^2)(x-μML) → Đây chính là 2.136
+> = (1/σ²)(x-μML) → Đây chính là 2.136
 >
 >
 >
@@ -464,7 +464,7 @@
 >
 >
 >
-> Vậy T = (tương ứng với Z khi xét lí thuyết Robbin-Monros ta nói về Z và θ) = (1/σ^2)(x-μML)
+> Vậy T = (tương ứng với Z khi xét lí thuyết Robbin-Monros ta nói về Z và θ) = (1/σ²)(x-μML)
 >
 >
 >
@@ -472,11 +472,11 @@
 >
 >
 >
-> μML^(N) = μML^(N-1) + a_N-1 (1/σ^2)(x - μML) với ý nghĩa là, gỉa sử ta đang có μML = μML^(N-1). Và data mới xuất hiện X = xN. Ta sẽ dùng nó để ráp vào công thức để tính μML mới (μML^(N)).
+> μML^(N) = μML^(N-1) + a_N-1 (1/σ²)(x - μML) với ý nghĩa là, gỉa sử ta đang có μML = μML^(N-1). Và data mới xuất hiện X = xN. Ta sẽ dùng nó để ráp vào công thức để tính μML mới (μML^(N)).
 >
 >
 >
-> Và ví dụ ta chọn a_N = σ^2 / N, thì công thức để update sẽ là:
+> Và ví dụ ta chọn a_N = σ² / N, thì công thức để update sẽ là:
 >
 >
 >
