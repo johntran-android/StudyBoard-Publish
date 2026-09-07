@@ -78,7 +78,7 @@
 
 > [!NOTE]
 > Tiếp, ta sẽ **TÁCH EIGENVALUE RA**. Thì với cols đầu tiên
-> =λ1*x1, ta sẽ thấy nó là kết quả của matrix **S nhân với
+> =λ1 × x1, ta sẽ thấy nó là kết quả của matrix **S nhân với
 > vector (λ1, 0, 0...0)**
 >
 >
@@ -106,7 +106,7 @@
 <p align="center"><kbd><img src="assets/g24yeba9mgp.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tương tự, cols thứ hai (=λ2*x2) sẽ là **matrix S nhân với
+> Tương tự, cols thứ hai (=λ2 × x2) sẽ là **matrix S nhân với
 > vector (0, λ2, 0...0)**. Và ta sẽ đặt vector này **làm cols thứ
 > hai của matrix**.
 >
@@ -464,11 +464,11 @@
 <p align="center"><kbd><img src="assets/5wkpe7ivqna.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Sau đó t**hế vào** để có matrix **A - 2*I** và **tìm
+> Sau đó t**hế vào** để có matrix **A - 2 × I** và **tìm
 > nullspace** của nó (ý là vector trong nullspace, hay basis
-> của nullspace của matrix (A - 2*I) để rồi chúng cũng
+> của nullspace của matrix (A - 2 × I) để rồi chúng cũng
 > chính là eigenvector của A) thì ta thấy nullspace của (A -
-> 2*I) **chỉ có dimension = 1** (chỉ có 1 free cols = chỉ có 1
+> 2 × I) **chỉ có dimension = 1** (chỉ có 1 free cols = chỉ có 1
 > vector trong basis).
 >
 >
