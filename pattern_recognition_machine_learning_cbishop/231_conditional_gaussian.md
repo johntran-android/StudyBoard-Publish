@@ -18,11 +18,11 @@
 >
 >
 >
-> Lấy ví dụ ta sẽ xét random vector **X** có D-dimensions, dĩ nhiên có nghĩa là ta có D random variable X1,...XD. Và **X** \~ Normal(**μ**, **Σ**), tức X1,...XD có joint distribution là Normal(**μ**, **Σ**).
+> Lấy ví dụ ta sẽ xét random vector 𝐗 có D-dimensions, dĩ nhiên có nghĩa là ta có D random variable X1,...XD. Và 𝐗 \~ Normal(**μ**, **Σ**), tức X1,...XD có joint distribution là Normal(**μ**, **Σ**).
 >
 >
 >
-> Sau đó, ta mới tách random vector **X** thành **Xa** và **Xb**, với **Xa** là M phần tử đầu tiên của **X**, **Xb** là phần còn lại. Dĩ nhiên **Xa** là M-dimensinal random variable vector và **Xb** là D-M dimensional random variables vector.
+> Sau đó, ta mới tách random vector 𝐗 thành **Xa** và **Xb**, với **Xa** là M phần tử đầu tiên của 𝐗, **Xb** là phần còn lại. Dĩ nhiên **Xa** là M-dimensinal random variable vector và **Xb** là D-M dimensional random variables vector.
 >
 >
 >
@@ -30,11 +30,11 @@
 >
 >
 >
-> Suy ngẫm chút xíu: Vì sao **X** = \[**Xa**; **Xb**\] thì **μ** = \[**μa; μb**\] và **Σ =** \[**Σaa Σab; Σba Σbb**\]
+> Suy ngẫm chút xíu: Vì sao 𝐗 = \[**Xa**; **Xb**\] thì **μ** = \[**μa; μb**\] và **Σ =** \[**Σaa Σab; Σba Σbb**\]
 >
 >
 >
-> **μ** là location của distribution Normal(**μ**, **Σ**), và ta đã chứng minh nó chính là mean của X: E**X** = **μ**, nên khi X tách ra thành Xa và Xb, để **X** = \[**Xa**; **Xb**\] thì EX dĩ nhiên cũng tách thành E\[**Xa**; **Xb**\] = \[E(**Xa**); E(**Xb**)\] và người ta đặt E(**Xa**) là **μa**, E(**Xa**) là **μb**. Nên **μ** = \[**μa; μb**\]
+> **μ** là location của distribution Normal(**μ**, **Σ**), và ta đã chứng minh nó chính là mean của X: E𝐗 = **μ**, nên khi X tách ra thành Xa và Xb, để 𝐗 = \[**Xa**; **Xb**\] thì EX dĩ nhiên cũng tách thành E\[**Xa**; **Xb**\] = \[E(**Xa**); E(**Xb**)\] và người ta đặt E(**Xa**) là **μa**, E(**Xa**) là **μb**. Nên **μ** = \[**μa; μb**\]
 >
 >
 >
@@ -53,7 +53,7 @@
 >
 >
 >
-> Và với việc **X** = \[**Xa**; **Xb**\], **Λ** cũng tách thành \[**Λaa Λab; Λba Λbb**\] 
+> Và với việc 𝐗 = \[**Xa**; **Xb**\], **Λ** cũng tách thành \[**Λaa Λab; Λba Λbb**\] 
 >
 >
 >
@@ -76,7 +76,7 @@
 >
 >
 >
-> Mình nghĩ cái này đơn giản chỉ là gs đang nói đến định nghĩa của conditional distribution. Ta biết theo định nghĩa, giả sử ta có hai random variable X, Y: thì fX|Y(x|y) = fX,Y(x, y) / fY(y). Áp dụng với trường hợp này, ta có f(**xa**|**xb**) = f(**xa**, **xb**) / f(**xb**). Thì như vậy nếu ta có joint pdf của f(**xa**, **xb**) với evaluate tại **xb** (tức là joint pdf **Xa**, **Xb**, cũng là pdf của **X**, f(**xa**, **xb**) chỉ là hàm theo **xa**) và chia nó f(**xb**) là joint pdf của **Xb** tại **xb**, thì ta sẽ có conditional pdf của **xa** given **xb**. Và cái bước chia cho f(**xb**) này chính là bước normalizing the resulting expression mà gs Bishop nói đến.
+> Mình nghĩ cái này đơn giản chỉ là gs đang nói đến định nghĩa của conditional distribution. Ta biết theo định nghĩa, giả sử ta có hai random variable X, Y: thì fX|Y(x|y) = fX,Y(x, y) / fY(y). Áp dụng với trường hợp này, ta có f(**xa**|**xb**) = f(**xa**, **xb**) / f(**xb**). Thì như vậy nếu ta có joint pdf của f(**xa**, **xb**) với evaluate tại **xb** (tức là joint pdf **Xa**, **Xb**, cũng là pdf của 𝐗, f(**xa**, **xb**) chỉ là hàm theo **xa**) và chia nó f(**xb**) là joint pdf của **Xb** tại **xb**, thì ta sẽ có conditional pdf của **xa** given **xb**. Và cái bước chia cho f(**xb**) này chính là bước normalizing the resulting expression mà gs Bishop nói đến.
 >
 >
 >
@@ -84,31 +84,31 @@
 >
 >
 >
-> Thế thì phần kernel của pdf của **X** là exp\[-(1/2)(**x**-**μ**)T **Σinv** (**x**-**μ**)\]
+> Thế thì phần kernel của pdf của 𝐗 là exp\[-(1/2)(𝐱-**μ**)ᵀ **Σ⁻¹** (𝐱-**μ**)\]
 >
 >
 >
-> Xét cái quaratic form: -(1/2)(**x**-**μ**)T **Σinv** (**x**-**μ**)
+> Xét cái quaratic form: -(1/2)(𝐱-**μ**)ᵀ **Σ⁻¹** (𝐱-**μ**)
 >
 >
 >
-> = -(1/2)(**x**-**μ**)T **Λ** (**x**-**μ**)
+> = -(1/2)(𝐱-**μ**)ᵀ **Λ** (𝐱-**μ**)
 >
 >
 >
-> = -(1/2)(**x**-**μ**)T \[**Λaa**, **Λab**; **Λba**, **Λbb**\] (**x**-**μ**)
+> = -(1/2)(𝐱-**μ**)ᵀ \[**Λaa**, **Λab**; **Λba**, **Λbb**\] (𝐱-**μ**)
 >
 >
 >
-> = -(1/2)(**x**-**μ**)T \[**Λaa**, **Λab**; **Λba**, **Λbb**\] (**x**-**μ**)
+> = -(1/2)(𝐱-**μ**)ᵀ \[**Λaa**, **Λab**; **Λba**, **Λbb**\] (𝐱-**μ**)
 >
 >
 >
-> = -(1/2)\[**xa**-**μa**; **xb**-**μb**\]T \[**Λaa**, **Λab**; **Λba**, **Λbb**\] \[**xa**-**μa**; **xb**-**μb**\]
+> = -(1/2)\[**xa**-**μa**; **xb**-**μb**\]ᵀ \[**Λaa**, **Λab**; **Λba**, **Λbb**\] \[**xa**-**μa**; **xb**-**μb**\]
 >
 >
 >
-> = -(1/2)(**xa**-**μa**)T**Λaa**(**xa**-**μa**) - (1/2)(**xa**-**μa**)T**Λab**(**xb**-**μb**) - (1/2)(**xb**-**μb**)**Λba**(**xa**-**μa**) - (1/2)(**xb**-**μb**)**Λbb**(**xb**-**μb**)
+> = -(1/2)(**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**) - (1/2)(**xa**-**μa**)ᵀ**Λab**(**xb**-**μb**) - (1/2)(**xb**-**μb**)**Λba**(**xa**-**μa**) - (1/2)(**xb**-**μb**)**Λbb**(**xb**-**μb**)
 >
 >
 >
@@ -134,7 +134,7 @@
 <p align="center"><kbd><img src="assets/bln82ndpiz4.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo, đại khái là vầy, xét cái cụm này: (**xa**-**μa**)T**Λaa**(**xa**-**μa**) + (**xa**-**μa**)T**Λab**(**xb**-**μb**) + (**xb**-**μb**)T**Λba**(**xa**-**μa**) + (**xb**-**μb**)T**Λbb**(**xb**-**μb**), nếu ta triển khai ra và chỉ quan tâm những cái có dính đến **xa**, ta sẽ có:
+> Tiếp theo, đại khái là vầy, xét cái cụm này: (**xa**-**μa**)ᵀ**Λaa**(**xa**-**μa**) + (**xa**-**μa**)ᵀ**Λab**(**xb**-**μb**) + (**xb**-**μb**)ᵀ**Λba**(**xa**-**μa**) + (**xb**-**μb**)ᵀ**Λbb**(**xb**-**μb**), nếu ta triển khai ra và chỉ quan tâm những cái có dính đến **xa**, ta sẽ có:
 >
 >
 >
@@ -142,7 +142,7 @@
 >
 >
 >
-> .. = **xa**T**Λaaxa** - **μa**T**Λaaxa** - **xa**T**Λaaμa** + **μa**T**Λaaμa** + **xa**T**Λabxb** - **μa**T**Λabxb** - **xa**T**Λabμb**+**μa**T**Λabμb** + (**xb**T**Λbaxa** - **μb**T**Λbaxa** - **xb**T**Λbaμa** + **μb**T**Λbaμa** + const
+> .. = **xa**ᵀ**Λaaxa** - **μa**ᵀ**Λaaxa** - **xa**ᵀ**Λaaμa** + **μa**ᵀ**Λaaμa** + **xa**ᵀ**Λabxb** - **μa**ᵀ**Λabxb** - **xa**ᵀ**Λabμb**+**μa**ᵀ**Λabμb** + (**xb**ᵀ**Λbaxa** - **μb**ᵀ**Λbaxa** - **xb**ᵀ**Λbaμa** + **μb**ᵀ**Λbaμa** + const
 >
 >
 >
@@ -150,23 +150,23 @@
 >
 >
 >
-> .. = **xa**T**Λaaxa** - 2**μa**T**Λaaxa** + **xa**T**Λabxb** - **xa**T**Λabμb** + **xb**T**Λbaxa** - **μb**T**Λbaxa** + const
+> .. = **xa**ᵀ**Λaaxa** - 2**μa**ᵀ**Λaaxa** + **xa**ᵀ**Λabxb** - **xa**ᵀ**Λabμb** + **xb**ᵀ**Λbaxa** - **μb**ᵀ**Λbaxa** + const
 >
 >
 >
-> **xa**T**Λabxb** là scalar nên nó = (**xa**T**Λabxb**)T = **xb**T (**Λab**)T **xa** = **xb**T**Λba** **xa**, nhập với **xb**T**Λbaxa** thành 2**xb**T**Λbaxa**
+> **xa**ᵀ**Λabxb** là scalar nên nó = (**xa**ᵀ**Λabxb**)ᵀ = **xb**ᵀ (**Λab**)ᵀ **xa** = **xb**ᵀ**Λba** **xa**, nhập với **xb**ᵀ**Λbaxa** thành 2**xb**ᵀ**Λbaxa**
 >
 >
 >
-> **xa**T**Λabμb**, là scalar, nên nó = (**xa**T**Λabμb**)T = **μb**T (**Λab**)T **xa** = **μb**T **Λba** **xa**, nhập với **μb**T**Λbaxa** thành 2**μb**T**Λbaxa**
+> **xa**ᵀ**Λabμb**, là scalar, nên nó = (**xa**ᵀ**Λabμb**)ᵀ = **μb**ᵀ (**Λab**)ᵀ **xa** = **μb**ᵀ **Λba** **xa**, nhập với **μb**ᵀ**Λbaxa** thành 2**μb**ᵀ**Λbaxa**
 >
 >
 >
-> ..= **xa**T**Λaaxa** - 2**μa**T**Λaaxa** + 2**xb**T**Λbaxa** - 2**μb**T**Λbaxa** + const
+> ..= **xa**ᵀ**Λaaxa** - 2**μa**ᵀ**Λaaxa** + 2**xb**ᵀ**Λbaxa** - 2**μb**ᵀ**Λbaxa** + const
 >
 >
 >
-> = **xa**T**Λaaxa** + 2(**xb**T**Λba** - **μa**T**Λaa** - **μb**T**Λba**)**xa** + const
+> = **xa**ᵀ**Λaaxa** + 2(**xb**ᵀ**Λba** - **μa**ᵀ**Λaa** - **μb**ᵀ**Λba**)**xa** + const
 >
 >
 >
@@ -174,7 +174,7 @@
 >
 >
 >
-> exp{(-1/2)\[**xa**T**Λaaxa** + 2(**xb**T**Λba** - **μa**T**Λaa** - **μb**T**Λba**)**xa** + const\]}
+> exp{(-1/2)\[**xa**ᵀ**Λaaxa** + 2(**xb**ᵀ**Λba** - **μa**ᵀ**Λaa** - **μb**ᵀ**Λba**)**xa** + const\]}
 >
 >
 >
@@ -182,19 +182,19 @@
 >
 >
 >
-> exp{(-1/2)\[**xa**T**Λaaxa** + 2(**xb**T**Λba** - **μa**T**Λaa** - **μb**T**Λba**)**xa**\]} (1)
+> exp{(-1/2)\[**xa**ᵀ**Λaaxa** + 2(**xb**ᵀ**Λba** - **μa**ᵀ**Λaa** - **μb**ᵀ**Λba**)**xa**\]} (1)
 >
 >
 >
-> Tới đây, ta mới xét... cái kernel của multi Normal (**μ**, **Σ**): exp\[-(1/2)(**x**-**μ**)T Σinv (**x**-**μ**)\] và triển khai cái cụm -(1/2)(**x**-**μ**)T Σinv (**x**-**μ**) này ra:
+> Tới đây, ta mới xét... cái kernel của multi Normal (**μ**, **Σ**): exp\[-(1/2)(𝐱-**μ**)ᵀ Σ⁻¹ (𝐱-**μ**)\] và triển khai cái cụm -(1/2)(𝐱-**μ**)ᵀ Σ⁻¹ (𝐱-**μ**) này ra:
 >
 >
 >
-> \-(1/2)(**x**-**μ**)T Σinv (**x**-**μ**) = -(1/2)(**x**T**Σinvx** - **μ**T**Σinvx** - **x**T**Σinvμ** + **μ**T**Σinvμ**)
+> \-(1/2)(𝐱-**μ**)ᵀ Σ⁻¹ (𝐱-**μ**) = -(1/2)(𝐱ᵀ**Σ⁻¹x** - **μ**ᵀ**Σ⁻¹x** - 𝐱ᵀ**Σ⁻¹μ** + **μ**ᵀ**Σ⁻¹μ**)
 >
 >
 >
-> = -(1/2)(**x**T**Σinvx** - 2**μ**T**Σinvx** + **μ**T**Σinvμ**) (2)
+> = -(1/2)(𝐱ᵀ**Σ⁻¹x** - 2**μ**ᵀ**Σ⁻¹x** + **μ**ᵀ**Σ⁻¹μ**) (2)
 >
 >
 >
@@ -202,63 +202,63 @@
 >
 >
 >
-> exp{(-1/2)\[**xa**T**Λaaxa** + 2(**xb**T**Λba** - **μa**T**Λaa** - **μb**T**Λba**)**xa**\]}
+> exp{(-1/2)\[**xa**ᵀ**Λaaxa** + 2(**xb**ᵀ**Λba** - **μa**ᵀ**Λaa** - **μb**ᵀ**Λba**)**xa**\]}
 >
 >
 >
-> exp{-(1/2)(**x**T**Σinvx** - 2**μ**T**Σinvx** + **μ**T**Σinvμ**)}
+> exp{-(1/2)(𝐱ᵀ**Σ⁻¹x** - 2**μ**ᵀ**Σ⁻¹x** + **μ**ᵀ**Σ⁻¹μ**)}
 >
 >
 >
-> Thì ta sẽ thấy **Λaa** tương ứng với **Σinv**, và **xb**T**Λba** - **μa**T**Λaa** - **μb**T**Λba** tương ứng với -**μ**T**Σinv ⇨ μ**T ứng với -(**xb**T**Λba** - **μa**T**Λaa** - **μb**T**Λba**)(**Λaa**\_**inv**)
+> Thì ta sẽ thấy **Λaa** tương ứng với **Σ⁻¹**, và **xb**ᵀ**Λba** - **μa**ᵀ**Λaa** - **μb**ᵀ**Λba** tương ứng với -**μ**ᵀ**Σ⁻¹ ⇨ μ**ᵀ ứng với -(**xb**ᵀ**Λba** - **μa**ᵀ**Λaa** - **μb**ᵀ**Λba**)(**Λaa**\_**inv**)
 >
 >
 >
-> Nói chung là từ đó, ta có thể cộng thêm và trừ bớt cho cụm **μ**T**Σinvμ**, và đưa phần dư ra ngoài lại, ta sẽ có thể đưa cái cụm trong exp về dạng quadratic form. Và từ đó kết luận đây là một multi-Normal.
+> Nói chung là từ đó, ta có thể cộng thêm và trừ bớt cho cụm **μ**ᵀ**Σ⁻¹μ**, và đưa phần dư ra ngoài lại, ta sẽ có thể đưa cái cụm trong exp về dạng quadratic form. Và từ đó kết luận đây là một multi-Normal.
 >
 >
 >
-> Và để xác định tham số, thì thật ra cũng là cái ta vừa làm đó. Gọi **μa|b**, và **Σa|b** là mean và covariance matrix của distribution Gaussian này, thì với việc **Λaa** khớp với **Σinv**, ta có thể kết luận:
+> Và để xác định tham số, thì thật ra cũng là cái ta vừa làm đó. Gọi **μa|b**, và **Σa|b** là mean và covariance matrix của distribution Gaussian này, thì với việc **Λaa** khớp với **Σ⁻¹**, ta có thể kết luận:
 >
 >
 >
-> **Σa|b**\_inv **CHÍNH LÀ Λaa**, ⇔ **Σa|b** = (**Λaa**)inv ⇨ đây là kết luận 2.73 trong sách.
+> **Σa|b**\⁻¹ **CHÍNH LÀ Λaa**, ⇔ **Σa|b** = (**Λaa**)⁻¹ ⇨ đây là kết luận 2.73 trong sách.
 >
 >
 >
-> Và với việc μT ứng với -(**xb**T**Λba** - **μa**T**Λaa** - **μb**T**Λba**)(**Λaa**\_**inv**), thì ta cũng kết luận cái cụm này chính là (**μa|b**)T
+> Và với việc μT ứng với -(**xb**ᵀ**Λba** - **μa**ᵀ**Λaa** - **μb**ᵀ**Λba**)(**Λaa**\_**inv**), thì ta cũng kết luận cái cụm này chính là (**μa|b**)ᵀ
 >
 >
 >
-> ⇨ **μa|b =** \[-(**xb**T**Λba** - **μa**T**Λaa** - **μb**T**Λba**)(**Λaa**\_**inv**)\]T
+> ⇨ **μa|b =** \[-(**xb**ᵀ**Λba** - **μa**ᵀ**Λaa** - **μb**ᵀ**Λba**)(**Λaa**\_**inv**)\]ᵀ
 >
 >
 >
-> = \[-**xb**T**ΛbaΛaa**\_**inv** + **μa**T + **μb**T**ΛbaΛaa**\_**inv**\]T
+> = \[-**xb**ᵀ**ΛbaΛaa**\_**inv** + **μa**ᵀ + **μb**ᵀ**ΛbaΛaa**\_**inv**\]ᵀ
 >
 >
 >
-> = \[-**xb**T**ΛbaΛaa**\_**inv** + **μa**T + **μb**T**ΛbaΛaa**\_**inv**\]T
+> = \[-**xb**ᵀ**ΛbaΛaa**\_**inv** + **μa**ᵀ + **μb**ᵀ**ΛbaΛaa**\_**inv**\]ᵀ
 >
 >
 >
-> = \[-**Λaa_inv**T**Λba**T**xb** + **μa**T + **Λaa**\_**inv**T**Λba**T**μb**
+> = \[-**Λaa⁻¹**ᵀ**Λba**ᵀ**xb** + **μa**ᵀ + **Λaa**\_**inv**ᵀ**Λba**ᵀ**μb**
 >
 >
 >
-> = **μa** - **Λaa_inv**T**Λba**T**xb** + **Λaa**\_**inv**T**Λba**T**μb**
+> = **μa** - **Λaa⁻¹**ᵀ**Λba**ᵀ**xb** + **Λaa**\_**inv**ᵀ**Λba**ᵀ**μb**
 >
 >
 >
-> = **μa** - **Λaa_inv Λab xb** + **Λaa**\_**inv** **Λab μb** (dùng tính đối xứng của **Λaa_inv**, và (**Λba**)T = **Λab**)
+> = **μa** - **Λaa⁻¹ Λab xb** + **Λaa**\_**inv** **Λab μb** (dùng tính đối xứng của **Λaa⁻¹**, và (**Λba**)ᵀ = **Λab**)
 >
 >
 >
-> = **μa** - **Λaa_inv Λab** (**xb** - **μb**)
+> = **μa** - **Λaa⁻¹ Λab** (**xb** - **μb**)
 >
 >
 >
-> Vậy, **μa|b** = **μa** - **Λaa_inv Λab** (**xb** - **μb**) → Đây chính là 2.75.
+> Vậy, **μa|b** = **μa** - **Λaa⁻¹ Λab** (**xb** - **μb**) → Đây chính là 2.75.
 >
 >
 >
@@ -266,7 +266,7 @@
 >
 >
 >
-> Để rồi ta có thể kết luận f(**xa**|**xb**) chính là pdf của Gaussian có mean là **μa|b** = **μa** - **Λaa_inv Λab** (**xb** - **μb**) và covariance matrix là **Σa|b** = (**Λaa**)inv
+> Để rồi ta có thể kết luận f(**xa**|**xb**) chính là pdf của Gaussian có mean là **μa|b** = **μa** - **Λaa⁻¹ Λab** (**xb** - **μb**) và covariance matrix là **Σa|b** = (**Λaa**)⁻¹
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
