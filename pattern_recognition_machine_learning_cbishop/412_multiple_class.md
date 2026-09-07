@@ -44,7 +44,7 @@
 <p align="center"><kbd><img src="assets/xmfb0xssloj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi đoạn này đại khái là nói một cách làm khắc phục được vấn đề của cách làm vừa rồi như sau: Dùng K linear function có dạng yk(**x**) = **w**kT**x** + wk0. Tức là, ta sẽ dùng một vector to vector function: nhận vào **x**, tính ra vector \[y1(**x**),....yK(**x**)\]T
+> Rồi đoạn này đại khái là nói một cách làm khắc phục được vấn đề của cách làm vừa rồi như sau: Dùng K linear function có dạng yk(𝐱) = 𝐰kᵀ𝐱 + wk0. Tức là, ta sẽ dùng một vector to vector function: nhận vào 𝐱, tính ra vector \[y1(𝐱),....yK(𝐱)\]ᵀ
 >
 >
 >
@@ -52,19 +52,19 @@
 >
 >
 >
-> Và như vậy, decision boundary giữa class Ck và Cj sẽ là nơi mà yk(**x**) = yj(**x**). Tức là tập {x ∈ R^D: yk(**x**) = yj(**x**)}, và cái này sẽ define ra một D-1 hyperplane (vì sao là D-1 thì xem link, note trước đã giải thích).
+> Và như vậy, decision boundary giữa class Ck và Cj sẽ là nơi mà yk(𝐱) = yj(𝐱). Tức là tập {x ∈ R^D: yk(𝐱) = yj(𝐱)}, và cái này sẽ define ra một D-1 hyperplane (vì sao là D-1 thì xem link, note trước đã giải thích).
 >
 >
 >
-> Và  yk(**x**) = yj(**x**) ⇔ **w**kT**x** + wk0 = **w**jT**x** + wj0
+> Và  yk(𝐱) = yj(𝐱) ⇔ 𝐰kᵀ𝐱 + wk0 = 𝐰jᵀ𝐱 + wj0
 >
 >
 >
-> ⇔ **w**kT**x** - **w**jT**x** + wk0 - wj0 = 0
+> ⇔ 𝐰kᵀ𝐱 - 𝐰jᵀ𝐱 + wk0 - wj0 = 0
 >
 >
 >
-> ⇔ (**w**k - **w**j)T**x** + wk0 - wj0 = 0
+> ⇔ (𝐰k - 𝐰j)ᵀ𝐱 + wk0 - wj0 = 0
 
 **🔗 See also:** [Section 4.1 Discriminant Functions](./411_discriminant_functions.md#node-fjps9mx) · [Least Squares for Classification](./413_least_squares_for_classification.md#node-x9x7ogh)
 
@@ -89,7 +89,7 @@
 >
 >
 >
-> Vậy để chứng minh Rk convex, người ta lấy **x**A, **x**B ∈ Rk. Và xét **x**^ = λ**x**A + (1-λ)**x**B ∀ 0 ≤ λ ≤ 1 (đây chính là tổ hợp lồi - vì hai hệ số λ và 1-λ sẽ không âm (do 0 ≤ λ ≤ 1) và có tổng bằng 1). Dễ thấy với λ chạy từ 0 tới 1, **x**^ sẽ chạy từ **x**B tới **x**A, nên tập {**x**^ = λ**x**A + (1-λ)**x**B ∀ 0 ≤ λ ≤ 1} chính là đoạn thẳng nối **x**A, **x**B. Và ta sẽ chứng minh x^ luôn thuộc Rk. Để từ đó kết luận với mọi **x**A, **x**B ∈ Rk thì mọi tổ hợp lồi của chúng cũng thuộc Rk, suy ra Rk là tập lồi.
+> Vậy để chứng minh Rk convex, người ta lấy 𝐱A, 𝐱B ∈ Rk. Và xét 𝐱^ = λ𝐱A + (1-λ)𝐱B ∀ 0 ≤ λ ≤ 1 (đây chính là tổ hợp lồi - vì hai hệ số λ và 1-λ sẽ không âm (do 0 ≤ λ ≤ 1) và có tổng bằng 1). Dễ thấy với λ chạy từ 0 tới 1, 𝐱^ sẽ chạy từ 𝐱B tới 𝐱A, nên tập {𝐱^ = λ𝐱A + (1-λ)𝐱B ∀ 0 ≤ λ ≤ 1} chính là đoạn thẳng nối 𝐱A, 𝐱B. Và ta sẽ chứng minh x^ luôn thuộc Rk. Để từ đó kết luận với mọi 𝐱A, 𝐱B ∈ Rk thì mọi tổ hợp lồi của chúng cũng thuộc Rk, suy ra Rk là tập lồi.
 >
 >
 >
@@ -97,55 +97,55 @@
 >
 >
 >
-> vì **x**A, **x**B ∈ Rk nên đương nhiên trong các y1(**x**A),..yk(**x**A),.yK(**x**A) thì yk(**x**A) sẽ luôn lớn hơn hoặc bằng mấy thằng khác nhất, nên yk(**x**A) ≥ yj(**x**A) ∀j=1,2...K
+> vì 𝐱A, 𝐱B ∈ Rk nên đương nhiên trong các y1(𝐱A),..yk(𝐱A),.yK(𝐱A) thì yk(𝐱A) sẽ luôn lớn hơn hoặc bằng mấy thằng khác nhất, nên yk(𝐱A) ≥ yj(𝐱A) ∀j=1,2...K
 >
 >
 >
-> Tương tự yk(**x**B) ≥ yj(**x**B) ∀j=1,2...K
+> Tương tự yk(𝐱B) ≥ yj(𝐱B) ∀j=1,2...K
 >
 >
 >
-> Tiếp từ việc **x**^ = λ**x**A + (1-λ)**x**B
+> Tiếp từ việc 𝐱^ = λ𝐱A + (1-λ)𝐱B
 >
 >
 >
-> ⇒ yk(**x^**) = **w**kT**x^** + wk0 = **w**kT(λ**x**A + (1-λ)**x**B ) + wk0
+> ⇒ yk(**x^**) = 𝐰kᵀ**x^** + wk0 = 𝐰kᵀ(λ𝐱A + (1-λ)𝐱B ) + wk0
 >
 >
 >
-> = **w**kTλ**x**A + **w**kT(1-λ)**x**B + wk0
+> = 𝐰kᵀλ𝐱A + 𝐰kᵀ(1-λ)𝐱B + wk0
 >
 >
 >
-> = λ**w**kT**x**A + (1-λ)**w**kT**x**B + wk0
+> = λ𝐰kᵀ𝐱A + (1-λ)𝐰kᵀ𝐱B + wk0
 >
 >
 >
-> = λ**w**kT**x**A + λwk0 + (1-λ)**w**kT**x**B + (1-λ)wk0 (tách wk0 thành λwk0 + (1-λ)wk0)
+> = λ𝐰kᵀ𝐱A + λwk0 + (1-λ)𝐰kᵀ𝐱B + (1-λ)wk0 (tách wk0 thành λwk0 + (1-λ)wk0)
 >
 >
 >
-> = λ(**w**kT**x**A + wk0) + (1-λ)(**w**kT**x**B + wk0)
+> = λ(𝐰kᵀ𝐱A + wk0) + (1-λ)(𝐰kᵀ𝐱B + wk0)
 >
 >
 >
-> = λyk(**x**A) + (1-λ)yk(**x**B)
+> = λyk(𝐱A) + (1-λ)yk(𝐱B)
 >
 >
 >
-> Dùng yk(**x**A) ≥ yj(**x**A) ∀j=1,2...K và yk(**x**B) ≥ yj(**x**B) ∀j=1,2...K
+> Dùng yk(𝐱A) ≥ yj(𝐱A) ∀j=1,2...K và yk(𝐱B) ≥ yj(𝐱B) ∀j=1,2...K
 >
 >
 >
-> ta suy ra yk(**x^**) = λyk(**x**A) + (1-λ)yk(x**B**) ≥ λyj(**x**A) + (1-λ)yj(**x**B)
+> ta suy ra yk(**x^**) = λyk(𝐱A) + (1-λ)yk(x𝐁) ≥ λyj(𝐱A) + (1-λ)yj(𝐱B)
 >
 >
 >
-> và tương tự như yk(**x^**) = λyk(**x**A) + (1-λ)yk(**x**B) thì λyj(**x**A) + (1-λ)yj(**x**B) chính là yj(**x**^)
+> và tương tự như yk(**x^**) = λyk(𝐱A) + (1-λ)yk(𝐱B) thì λyj(𝐱A) + (1-λ)yj(𝐱B) chính là yj(𝐱^)
 >
 >
 >
-> Vậy yk(**x^**) ≥ yj(**x**^) ∀**x**^ suy ra **x**^ ∈ Rk.
+> Vậy yk(**x^**) ≥ yj(𝐱^) ∀𝐱^ suy ra 𝐱^ ∈ Rk.
 >
 >
 >
@@ -153,7 +153,7 @@
 >
 >
 >
-> Còn vì sao gọi là singly connect, thì đại khái là khi không có chuyện giữa hai điểm **x**A, **x**B ∈ Rk lại có điểm nào đó trên đoạn thằng **x**A, **x**B không thuộc Rk. Và tính convex đã bao hàm tính chất này, vì ta vừa chứng minh luôn rằng, với mọi **x**^ giữa **x**A, **x**B thì nó đều thuộc Rk.
+> Còn vì sao gọi là singly connect, thì đại khái là khi không có chuyện giữa hai điểm 𝐱A, 𝐱B ∈ Rk lại có điểm nào đó trên đoạn thằng 𝐱A, 𝐱B không thuộc Rk. Và tính convex đã bao hàm tính chất này, vì ta vừa chứng minh luôn rằng, với mọi 𝐱^ giữa 𝐱A, 𝐱B thì nó đều thuộc Rk.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
