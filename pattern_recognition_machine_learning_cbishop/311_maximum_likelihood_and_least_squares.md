@@ -24,23 +24,23 @@
 >
 >
 >
-> Và giả định sai số Ei = Ti - y(**w**, **x**i) \~ normal(0, 1/β), điều này có nghĩa là, ta xây dựng function để dự đoán t, nhưng tin rằng, kể cả có đoán chính xác, thì vẫn tồn tại noise, khiến tạo ra sai số, và noise là đại lượng ngẫu nhiên, ta thể hiện nó bởi random variable Ei, có phân phối normal(0, 1/β) (precision β nào đó)
+> Và giả định sai số Ei = Ti - y(𝐰, 𝐱i) \~ normal(0, 1/β), điều này có nghĩa là, ta xây dựng function để dự đoán t, nhưng tin rằng, kể cả có đoán chính xác, thì vẫn tồn tại noise, khiến tạo ra sai số, và noise là đại lượng ngẫu nhiên, ta thể hiện nó bởi random variable Ei, có phân phối normal(0, 1/β) (precision β nào đó)
 >
 >
 >
-> Như vậy, theo location family, nếu Ei = Ti - y(**w**, **x**i) \~ normal(0, 1/β), thì Ti \~ normal(y(**w**, **x**i), 1/β).
+> Như vậy, theo location family, nếu Ei = Ti - y(𝐰, 𝐱i) \~ normal(0, 1/β), thì Ti \~ normal(y(𝐰, 𝐱i), 1/β).
 >
 >
 >
-> Cần nhấn mạnh: Mấu chốt là lập luận rằng: Coi target variable là một đại lượng mang tính ngẫu nhiên - điều này hợp lí vì, với một đối tác là **x**i, ti có thể có nhiều possible value, nó mang tính uncertainty. Và hàm dự đoán của ta y(**w**, **x**i) dù có làm tốt đến mấy trong việc nắm bắt được quy luật, thì vẫn còn đó sai sót do nhiễu, và nhiễu này, ta cho rằng, tuân theo phân phối chuẩn.
+> Cần nhấn mạnh: Mấu chốt là lập luận rằng: Coi target variable là một đại lượng mang tính ngẫu nhiên - điều này hợp lí vì, với một đối tác là 𝐱i, ti có thể có nhiều possible value, nó mang tính uncertainty. Và hàm dự đoán của ta y(𝐰, 𝐱i) dù có làm tốt đến mấy trong việc nắm bắt được quy luật, thì vẫn còn đó sai sót do nhiễu, và nhiễu này, ta cho rằng, tuân theo phân phối chuẩn.
 >
 >
 >
-> Rồi, như vậy, bài toán trở thành, cho random sample T1,...Tn (n hay m, hay N gì đó, chỉ số sample), với Ti \~ normal(y(**w**, xi), 1/β), i = 1,2,...n. Và các random variable Ti này độc lập nhau (vì data được collect một cách độc lập). Chú ý, độc lập nhưng không identically distributed, vì các normal đều có mean khác nhau, nên không có tính iid, chỉ độc lập thôi.
+> Rồi, như vậy, bài toán trở thành, cho random sample T1,...Tn (n hay m, hay N gì đó, chỉ số sample), với Ti \~ normal(y(𝐰, xi), 1/β), i = 1,2,...n. Và các random variable Ti này độc lập nhau (vì data được collect một cách độc lập). Chú ý, độc lập nhưng không identically distributed, vì các normal đều có mean khác nhau, nên không có tính iid, chỉ độc lập thôi.
 >
 >
 >
->  Dĩ nhiên, ta có bài toán quen thuộc: tìm point estimator cho **w** - tham số chi phối distribution của Ti (given **x**i)
+>  Dĩ nhiên, ta có bài toán quen thuộc: tìm point estimator cho 𝐰 - tham số chi phối distribution của Ti (given 𝐱i)
 >
 >
 >
@@ -48,7 +48,7 @@
 >
 >
 >
-> Thế thì, để làm, đầu tiên cần xét joint pdf của **T** = (T1,...Tn), ta sẽ thấy dù chúng không cùng distribution, nhưng vẫn độc lập, cho phép tách joint pdf thành tích các marginal pdf: Πi=1:n f(ti|y(**w**,**x**i), 1/β).
+> Thế thì, để làm, đầu tiên cần xét joint pdf của 𝐓 = (T1,...Tn), ta sẽ thấy dù chúng không cùng distribution, nhưng vẫn độc lập, cho phép tách joint pdf thành tích các marginal pdf: Πi=1:n f(ti|y(𝐰,𝐱i), 1/β).
 >
 >
 >
@@ -56,7 +56,7 @@
 >
 >
 >
-> L(**w**, β|**t**, **x**1,...**x**n) = f(**t**|**w**, **x**1,..**x**n, 1/β) = Πi=1:n f(ti|y(**w**,**x**i), 1/β)
+> L(𝐰, β|𝐭, 𝐱1,...𝐱n) = f(𝐭|𝐰, 𝐱1,..𝐱n, 1/β) = Πi=1:n f(ti|y(𝐰,𝐱i), 1/β)
 >
 >
 >
@@ -64,7 +64,7 @@
 >
 >
 >
-> maximize (over **w**, β) L(**w**, β|**t**, **x**1,...**x**n)
+> maximize (over 𝐰, β) L(𝐰, β|𝐭, 𝐱1,...𝐱n)
 >
 >
 >
@@ -72,37 +72,37 @@
 >
 >
 >
-> L(**w**, β|**t**, **x**1,...**x**n) ∝ ln {L(**w**, β|**t**, **x**1,...**x**n)}
+> L(𝐰, β|𝐭, 𝐱1,...𝐱n) ∝ ln {L(𝐰, β|𝐭, 𝐱1,...𝐱n)}
 >
 >
 >
-> = ln {Πi=1:n f(ti|y(**w**, **x**i), 1/β)} = Σi=1:n ln {f(ti|y(**w**, **x**i), 1/β)}
+> = ln {Πi=1:n f(ti|y(𝐰, 𝐱i), 1/β)} = Σi=1:n ln {f(ti|y(𝐰, 𝐱i), 1/β)}
 >
 >
 >
-> = Σi=1:n ln {N(ti|y(**w**, **x**i), 1/β)}
+> = Σi=1:n ln {N(ti|y(𝐰, 𝐱i), 1/β)}
 >
 >
 >
-> = Σi=1:n \[ ln { Πi \[1/√\[2π(1/β)\]\] exp\[-\[ti-y(xi,**w**)\]^2/2(1/β)\] } \]
+> = Σi=1:n \[ ln { Πi \[1/√\[2π(1/β)\]\] exp\[-\[ti-y(xi,𝐰)\]²/2(1/β)\] } \]
 >
 > (....biến đổi, thu gọn)\
 > \
-> = (n/2) ln β - (n/2) ln (2π) - (β/2) Σi \[ti-y(xi,**w**)\]^2\
+> = (n/2) ln β - (n/2) ln (2π) - (β/2) Σi \[ti-y(xi,𝐰)\]²\
 > \
-> = - (β/2) Σi \[ti-y(xi,**w**)\]^2 + (n/2) ln β - (n/2) ln (2π)
+> = - (β/2) Σi \[ti-y(xi,𝐰)\]² + (n/2) ln β - (n/2) ln (2π)
 >
 >
 >
-> ∝ - Σi \[ti-y(xi,**w**)\]^2
+> ∝ - Σi \[ti-y(xi,𝐰)\]²
 >
 >
 >
-> Như vậy, bài toán euivalent là: maximize (over **w**) - Σi \[ti-y(xi,**w**)\]^2
+> Như vậy, bài toán euivalent là: maximize (over 𝐰) - Σi \[ti-y(xi,𝐰)\]²
 >
 >
 >
-> equivalent tiếp: minimize (over **w**) {Σi \[ti-y(xi,**w**)\]^2}
+> equivalent tiếp: minimize (over 𝐰) {Σi \[ti-y(xi,𝐰)\]²}
 >
 >
 >
@@ -122,11 +122,11 @@
 <p align="center"><kbd><img src="assets/2rls6cmh4h4.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, như vừa ôn lại, ta sẽ giả định noise \~ normal(0, β^-1) cũng đồng nghĩa giả định T = y(**x**, **w**) + ε \~ normal(y(**x**, **w**), β^-1), nên f(t|**x**, **w**, β) = N(t|y(**x**, **w**), β^-1) (đây chỉ là kí hiệu normal(y(**x**, **w**), β^-1))
+> Rồi, như vừa ôn lại, ta sẽ giả định noise \~ normal(0, β^-1) cũng đồng nghĩa giả định T = y(𝐱, 𝐰) + ε \~ normal(y(𝐱, 𝐰), β^-1), nên f(t|𝐱, 𝐰, β) = N(t|y(𝐱, 𝐰), β^-1) (đây chỉ là kí hiệu normal(y(𝐱, 𝐰), β^-1))
 >
 >
 >
-> Tới đây, ông nói, ta đã biết trong chap 1 rằng, khi đã có distribution của T (f(t|**x**, **w**, β) thì nếu ta cần **đưa ra dự đoán sao cho tối ưu** (**optimal prediction**), thì khi **loss là squared loss**, thì prediction tối ưu đó chính là dùng **conditional mean**.
+> Tới đây, ông nói, ta đã biết trong chap 1 rằng, khi đã có distribution của T (f(t|𝐱, 𝐰, β) thì nếu ta cần **đưa ra dự đoán sao cho tối ưu** (**optimal prediction**), thì khi **loss là squared loss**, thì prediction tối ưu đó chính là dùng **conditional mean**.
 >
 >
 >
@@ -134,7 +134,7 @@
 >
 >
 >
-> Thật ra cái này y như một điểm mà mình đã viết trong note trước (3.1.0) khi liên hệ với Casella, trong đó mình nói rằng, khi đã có posterior distribution của θ, π(θ|**x**), thì Bayes estimator cho θ giúp giảm thiểu Bayes risk với loss tính bằng squared loss chính là mean của posterior: E\[θ|**x**\]. Ở đây cũng y vậy, nên mình có thể chứng minh lại:
+> Thật ra cái này y như một điểm mà mình đã viết trong note trước (3.1.0) khi liên hệ với Casella, trong đó mình nói rằng, khi đã có posterior distribution của θ, π(θ|𝐱), thì Bayes estimator cho θ giúp giảm thiểu Bayes risk với loss tính bằng squared loss chính là mean của posterior: E\[θ|𝐱\]. Ở đây cũng y vậy, nên mình có thể chứng minh lại:
 >
 >
 >
@@ -142,11 +142,11 @@
 >
 >
 >
-> Squared error loss function: L(W(**X**), θ) = \[W(**X**) - θ\]^2
+> Squared error loss function: L(W(𝐗), θ) = \[W(𝐗) - θ\]²
 >
 >
 >
-> Risk function: average over all possible **x**: ∫L(W(**x**), θ) f(**x**|θ) d**x**
+> Risk function: average over all possible 𝐱: ∫L(W(𝐱), θ) f(𝐱|θ) d𝐱
 >
 >
 >
@@ -154,47 +154,47 @@
 >
 >
 >
-> ∫ \[ ∫L(W(**x**), θ) f(**x**|θ) d**x** \] π(θ) dθ
+> ∫ \[ ∫L(W(𝐱), θ) f(𝐱|θ) d𝐱 \] π(θ) dθ
 >
 >
 >
-> = ∫ \[ ∫L(W(**x**), θ) f(θ|**x**) f(**x**) / π(θ) d**x** \] π(θ) dθ
+> = ∫ \[ ∫L(W(𝐱), θ) f(θ|𝐱) f(𝐱) / π(θ) d𝐱 \] π(θ) dθ
 >
 >
 >
-> = ∫∫L(W(**x**), θ) f(θ|**x**) f(**x**) d**x** dθ
+> = ∫∫L(W(𝐱), θ) f(θ|𝐱) f(𝐱) d𝐱 dθ
 >
 >
 >
-> = ∫∫L(W(**x**), θ) f(θ|**x**) dθ f(**x**) d**x**
+> = ∫∫L(W(𝐱), θ) f(θ|𝐱) dθ f(𝐱) d𝐱
 >
 >
 >
-> = ∫ \[∫L(W(**x**), θ) f(θ|**x**) dθ\] f(**x**) d**x**
+> = ∫ \[∫L(W(𝐱), θ) f(θ|𝐱) dθ\] f(𝐱) d𝐱
 >
 >
 >
-> = ∫ \[posterior expected loss\] f(**x**) d**x** (posterior expected loss = ∫L(W(**x**), θ) f(θ|**x**) dθ)
+> = ∫ \[posterior expected loss\] f(𝐱) d𝐱 (posterior expected loss = ∫L(W(𝐱), θ) f(θ|𝐱) dθ)
 >
 >
 >
-> Và minimize (over W) Bayes risk sẽ trở thành mininize posterior expected loss với mọi **x**
+> Và minimize (over W) Bayes risk sẽ trở thành mininize posterior expected loss với mọi 𝐱
 >
 >
 >
-> ⇔ minimize E\[L(W(**x**),θ)\], θ \~ π(θ|**x**) với mọi **x**
+> ⇔ minimize E\[L(W(𝐱),θ)\], θ \~ π(θ|𝐱) với mọi 𝐱
 >
 >
 >
-> ⇔ minimize E\[(W(**x**) - θ)^2\], θ \~ π(θ|**x**) với mọi **x**
+> ⇔ minimize E\[(W(𝐱) - θ)²\], θ \~ π(θ|𝐱) với mọi 𝐱
 >
 >
 >
-> Và solution là W(**x**) = E\[θ|**x**\], là posterior mean.
+> Và solution là W(𝐱) = E\[θ|𝐱\], là posterior mean.
 >
 >
 >
-> ⇔ minimize (over W) (W(**x**)- θ)^2 với mọi x
+> ⇔ minimize (over W) (W(𝐱)- θ)² với mọi x
 >
 >
 >
@@ -202,23 +202,23 @@
 >
 >
 >
-> Loss function, cụ thể là square error loss: L(T, y(**w**, **x**)) = \[T - y(**w**, **x**)\]^2
+> Loss function, cụ thể là square error loss: L(T, y(𝐰, 𝐱)) = \[T - y(𝐰, 𝐱)\]²
 >
 >
 >
-> Risk function, là average over all **t**: E(\[T - y(**w**, **x**)\]^2), T \~ n(y(**w**, **x**), 1/β)
+> Risk function, là average over all 𝐭: E(\[T - y(𝐰, 𝐱)\]²), T \~ n(y(𝐰, 𝐱), 1/β)
 >
 >
 >
-> Y như trên với T đóng vai θ, y(**w**,**x**) đóng vai W(**x**), ta có bài toán minimize risk function:
+> Y như trên với T đóng vai θ, y(𝐰,𝐱) đóng vai W(𝐱), ta có bài toán minimize risk function:
 >
 >
 >
-> minimize over y(w,x) {E(\[T - y(**w**, **x**)\]^2)}, với T \~ n(y(**w**, **x**), 1/β)
+> minimize over y(w,x) {E(\[T - y(𝐰, 𝐱)\]²)}, với T \~ n(y(𝐰, 𝐱), 1/β)
 >
 >
 >
-> Và solution cũng sẽ là posterior mean: E\[T\], T \~ n(y(**w**, **x**), 1/β), và có thể ghi là E\[T|**w**,**x**,β\]
+> Và solution cũng sẽ là posterior mean: E\[T\], T \~ n(y(𝐰, 𝐱), 1/β), và có thể ghi là E\[T|𝐰,𝐱,β\]
 >
 >
 >
@@ -230,11 +230,11 @@
 >
 >
 >
-> Bài toán thứ nhất là: với data quan sát được, và dưới giả định Ti \~ n(y(**w**,**x**i), 1/β) thì một estimator tốt của **w** là gì. Và nếu ta làm theo lối tìm maximum likelihood estimator cho w, kết quả ta tìm ra là: chính là w khiến minimize sum squared error {Σi=1:n \[ti - y(**w**, **x**i)\]^2}.
+> Bài toán thứ nhất là: với data quan sát được, và dưới giả định Ti \~ n(y(𝐰,𝐱i), 1/β) thì một estimator tốt của 𝐰 là gì. Và nếu ta làm theo lối tìm maximum likelihood estimator cho w, kết quả ta tìm ra là: chính là w khiến minimize sum squared error {Σi=1:n \[ti - y(𝐰, 𝐱i)\]²}.
 >
 >
 >
-> Còn bài toán thứ hai, là, giả sử ta có distribution của T là f(t|**x**), gọi là predictive distribution, thì để dự đoán t với một **x cho trước** mới, thì hành động tối ưu là gì. Và lập luận cho thấy, giá trị tối ưu là E\[t|**x**\], tức là mean của distribution f(t|**x**) nếu như ta chọn loss là square error.
+> Còn bài toán thứ hai, là, giả sử ta có distribution của T là f(t|𝐱), gọi là predictive distribution, thì để dự đoán t với một **x cho trước** mới, thì hành động tối ưu là gì. Và lập luận cho thấy, giá trị tối ưu là E\[t|𝐱\], tức là mean của distribution f(t|𝐱) nếu như ta chọn loss là square error.
 >
 >
 >
@@ -242,7 +242,7 @@
 >
 >
 >
-> Kết hợp hai bài toán: là ta dùng giả định Ti \~ n(y(**w**,**x**i), 1/β), để tìm ra ML estimator cho **w**: **w**^ML. Thì khi đó, ta có predictive distribution là T \~ f(t|**x**) = pdf của n(y(**w**^ML,**x**), 1/β). Và theo bài toán thứ hai, dự đoán tối ưu cho giá trị t của một x cho trước chính là mean của n(y(**w**^ML,**x**), 1/β), và ngay tại đây xảy ra sự tiện lợi ở chỗ, nó chính là y(**w**^ML,**x**).
+> Kết hợp hai bài toán: là ta dùng giả định Ti \~ n(y(𝐰,𝐱i), 1/β), để tìm ra ML estimator cho 𝐰: 𝐰^ML. Thì khi đó, ta có predictive distribution là T \~ f(t|𝐱) = pdf của n(y(𝐰^ML,𝐱), 1/β). Và theo bài toán thứ hai, dự đoán tối ưu cho giá trị t của một x cho trước chính là mean của n(y(𝐰^ML,𝐱), 1/β), và ngay tại đây xảy ra sự tiện lợi ở chỗ, nó chính là y(𝐰^ML,𝐱).
 >
 >
 >
@@ -250,11 +250,11 @@
 >
 >
 >
-> Nếu ta có T \~ f(t|**x**) = pdf của n(y(**w**^ML,**x**), 1/β), nhưng tiêu chí của bài toán thứ hai không phải là squared error, khi đó, hành động tối ưu không phải là dùng mean của n(y(**w**^ML,**x**), 1/β), mà là dùng cái gì khác, khi đó ta phải tính toán thêm.
+> Nếu ta có T \~ f(t|𝐱) = pdf của n(y(𝐰^ML,𝐱), 1/β), nhưng tiêu chí của bài toán thứ hai không phải là squared error, khi đó, hành động tối ưu không phải là dùng mean của n(y(𝐰^ML,𝐱), 1/β), mà là dùng cái gì khác, khi đó ta phải tính toán thêm.
 >
 >
 >
-> Hoặc nếu ta trong bài toán thứ nhất, ta không giả định Ti \~ n(y(**w**,**x**i), 1/β), thì việc giải tìm ML estimator của w sẽ không phải là tìm w khiến mininize sum square error. Và giả sử ta tìm ra w^ML, thì nó chưa chắc là mean của f(t|**x**).Để rồi nếu trong bài toán thứ hai ta vẫn dùng tiêu chí squarer error loss, để có solution tối ưu là mean của f(t|**x**), thì lúc này, ta sẽ phải tính tiếp mean của f(t|**x**), thay vì có thể tiện lợi dùng y(**x**,**w**)
+> Hoặc nếu ta trong bài toán thứ nhất, ta không giả định Ti \~ n(y(𝐰,𝐱i), 1/β), thì việc giải tìm ML estimator của w sẽ không phải là tìm w khiến mininize sum square error. Và giả sử ta tìm ra w^ML, thì nó chưa chắc là mean của f(t|𝐱).Để rồi nếu trong bài toán thứ hai ta vẫn dùng tiêu chí squarer error loss, để có solution tối ưu là mean của f(t|𝐱), thì lúc này, ta sẽ phải tính tiếp mean của f(t|𝐱), thay vì có thể tiện lợi dùng y(𝐱,𝐰)
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
@@ -272,7 +272,7 @@
 <p align="center"><kbd><img src="assets/59fgkkhkh25.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cụ thể, chúng ta giả định rằng nhiễu tuân theo phân phối chuẩn với giá trị trung bình bằng 0 và độ chính xác là beta. Điều này cũng có nghĩa là biến ngẫu nhiên T có phân phối đơn đỉnh là phân phối chuẩn, với giá trị trung bình tại giá trị của hàm dự đoán y(**x**, **w**) và tham số precision là beta. 
+> Cụ thể, chúng ta giả định rằng nhiễu tuân theo phân phối chuẩn với giá trị trung bình bằng 0 và độ chính xác là beta. Điều này cũng có nghĩa là biến ngẫu nhiên T có phân phối đơn đỉnh là phân phối chuẩn, với giá trị trung bình tại giá trị của hàm dự đoán y(𝐱, 𝐰) và tham số precision là beta. 
 >
 >
 >
@@ -291,11 +291,11 @@
 >
 >
 >
-> Như đã biết, ta có bộ data, là các observed value (**x**i, ti) i=1,...N. Gom lại thành matrix **X** (có thể là mỗi **x**i làm một hàng) và vector **t** = (t1,...tN).
+> Như đã biết, ta có bộ data, là các observed value (𝐱i, ti) i=1,...N. Gom lại thành matrix 𝐗 (có thể là mỗi 𝐱i làm một hàng) và vector 𝐭 = (t1,...tN).
 >
 >
 >
-> Và như đã nói, ta dùng một distribution để thể hiện tính uncertainty của target variable, tức là coi t1,t2,...tN là observed value của các random variable T1, ...TN. Và giả định thêm rằng noise εi = Ti - y(**w**, **x**) sẽ \~ Norm al(0,1/β), nên Ti \~ normal(y(**w**, **x**i), 1/β).
+> Và như đã nói, ta dùng một distribution để thể hiện tính uncertainty của target variable, tức là coi t1,t2,...tN là observed value của các random variable T1, ...TN. Và giả định thêm rằng noise εi = Ti - y(𝐰, 𝐱) sẽ \~ Norm al(0,1/β), nên Ti \~ normal(y(𝐰, 𝐱i), 1/β).
 >
 >
 >
@@ -303,7 +303,7 @@
 >
 >
 >
-> f(**t**|**X**, **w**, β) = f(t1,t2,..tN|**X**, **w**, β).
+> f(𝐭|𝐗, 𝐰, β) = f(t1,t2,..tN|𝐗, 𝐰, β).
 >
 >
 >
@@ -311,95 +311,95 @@
 >
 >
 >
-> .. = Πi=1:N f(ti|**x**i, **w**, β)
+> .. = Πi=1:N f(ti|𝐱i, 𝐰, β)
 >
 >
 >
-> thay kí hiệu f(ti|**x**i, **w**, β) bằng N(ti|y(**x**i, **w**), 1/β) (vì đã nói ở trên, Ti \~ normal(y(**w**, **x**i), 1/β))
+> thay kí hiệu f(ti|𝐱i, 𝐰, β) bằng N(ti|y(𝐱i, 𝐰), 1/β) (vì đã nói ở trên, Ti \~ normal(y(𝐰, 𝐱i), 1/β))
 >
 >
 >
-> .. = Πi=1:N N(ti|y(**x**i, **w**), 1/β)
+> .. = Πi=1:N N(ti|y(𝐱i, 𝐰), 1/β)
 >
 >
 >
-> Tới đây, nhớ lại bối cảnh ở đây là ta đang nói về linear model: với y(**x**i, **w**) = **w**TΦ(**x**i), là hàm tuyến tính đối với w và phi tuyến với **x**i (nhờ basis function Φ, nhớ không). Nên ta có:
+> Tới đây, nhớ lại bối cảnh ở đây là ta đang nói về linear model: với y(𝐱i, 𝐰) = 𝐰ᵀΦ(𝐱i), là hàm tuyến tính đối với w và phi tuyến với 𝐱i (nhờ basis function Φ, nhớ không). Nên ta có:
 >
 >
 >
-> .. = Πi=1:N N(ti|**w**TΦ(**x**i), 1/β) → Đây là 3.10 (trong sách dùng index variable là n, mình dùng i cũng được)
+> .. = Πi=1:N N(ti|𝐰ᵀΦ(𝐱i), 1/β) → Đây là 3.10 (trong sách dùng index variable là n, mình dùng i cũng được)
 >
 >
 >
-> Vậy ta có f(**t**|**X**, **w**, β) = Πi=1:N N(ti|**w**TΦ(**x**i), 1/β)
+> Vậy ta có f(𝐭|𝐗, 𝐰, β) = Πi=1:N N(ti|𝐰ᵀΦ(𝐱i), 1/β)
 >
 >
 >
-> Ở đây gs nói rằng, trong bài toán regression, ta sẽ chỉ mô hình hóa distribution của T, chứ ko care distribution của **X**, (tức các input vector). Cũng như để cho gọn, ta sẽ bỏ bớt **x** trong điều kiện. Đây là bước giải thích nếu ko đọc kĩ có thể gây confused.
+> Ở đây gs nói rằng, trong bài toán regression, ta sẽ chỉ mô hình hóa distribution của T, chứ ko care distribution của 𝐗, (tức các input vector). Cũng như để cho gọn, ta sẽ bỏ bớt 𝐱 trong điều kiện. Đây là bước giải thích nếu ko đọc kĩ có thể gây confused.
 >
 >
 >
-> Vậy ln f(**t**|**X**, **w**, β) = f(**t**|**w**, β) (bỏ **X** cho gọn) 
+> Vậy ln f(𝐭|𝐗, 𝐰, β) = f(𝐭|𝐰, β) (bỏ 𝐗 cho gọn) 
 >
 >
 >
-> = Πi=1:N N(ti|**w**TΦ(**x**i), 1/β)
+> = Πi=1:N N(ti|𝐰ᵀΦ(𝐱i), 1/β)
 >
 >
 >
-> Rồi, tiếp theo, như cách làm thông thường đến giờ đã quen, vì kiểu gì mình cũng sẽ đi thiết lập bài toán maximize likelihood, và sau đó, chuyển thành bài toán tương đương với hàm ln (nhờ tính monotone của hàm ln, nên **w** khiến maximize ln likelihood cũng là maximize likelihood) nên ta sẽ chuẩn bị hàm ln likelihood luôn là vừa:
+> Rồi, tiếp theo, như cách làm thông thường đến giờ đã quen, vì kiểu gì mình cũng sẽ đi thiết lập bài toán maximize likelihood, và sau đó, chuyển thành bài toán tương đương với hàm ln (nhờ tính monotone của hàm ln, nên 𝐰 khiến maximize ln likelihood cũng là maximize likelihood) nên ta sẽ chuẩn bị hàm ln likelihood luôn là vừa:
 >
 >
 >
-> Hàm likelihood, thì như đã nói nhiều lần, theo định nghĩa, là hàm của parameter θ, define bởi L(θ|**x**) = f(**x**|θ) (chú ý, đây chẳng có gì là Bayes theorem hay gì cả, nó chỉ là cách người ta define ra hàm likelihood, với ý nghĩa là: L(θ|**x**) sẽ thể hiện độ hợp lí của θ, khi giá trị quan sát thấy của **X** là **x**, và độ hợp lí này, được tính bằng giá trị của hàm pdf của **X** (**X** \~ f(**x**|θ)) tại observed value **x**. Vậy thì ở đây ln likelihood của param **w**, β là:
+> Hàm likelihood, thì như đã nói nhiều lần, theo định nghĩa, là hàm của parameter θ, define bởi L(θ|𝐱) = f(𝐱|θ) (chú ý, đây chẳng có gì là Bayes theorem hay gì cả, nó chỉ là cách người ta define ra hàm likelihood, với ý nghĩa là: L(θ|𝐱) sẽ thể hiện độ hợp lí của θ, khi giá trị quan sát thấy của 𝐗 là 𝐱, và độ hợp lí này, được tính bằng giá trị của hàm pdf của 𝐗 (𝐗 \~ f(𝐱|θ)) tại observed value 𝐱. Vậy thì ở đây ln likelihood của param 𝐰, β là:
 >
 >
 >
-> ln L(**w**, β|**X**,**t**) = ln f(**t**|**X**, **w**, β)
+> ln L(𝐰, β|𝐗,𝐭) = ln f(𝐭|𝐗, 𝐰, β)
 >
 >
 >
-> = ln Πi=1:N N(ti|**w**TΦ(**x**i), 1/β)
+> = ln Πi=1:N N(ti|𝐰ᵀΦ(𝐱i), 1/β)
 >
 >
 >
-> = ln Πi N(ti|**w**TΦ(**x**i), 1/β) (tự hiểu i chạy từ 1:N)
+> = ln Πi N(ti|𝐰ᵀΦ(𝐱i), 1/β) (tự hiểu i chạy từ 1:N)
 >
 >
 >
-> = ln { Πi { (2π (1/β))^(-1/2) exp{-(ti-**w**TΦ(**x**i))^2/2(1/β)} } }
+> = ln { Πi { (2π (1/β))^(-1/2) exp{-(ti-𝐰ᵀΦ(𝐱i))²/2(1/β)} } }
 >
 >
 >
-> = ln { Πi { (2π)^(-1/2) β^(1/2) exp{-β(ti-**w**TΦ(**x**i))^2/2} } }
+> = ln { Πi { (2π)^(-1/2) β^(1/2) exp{-β(ti-𝐰ᵀΦ(𝐱i))²/2} } }
 >
 >
 >
-> = ln { (2π)^(-N/2) β^(N/2) Πi { exp{-β(ti-**w**TΦ(**x**i))^2/2} } }
+> = ln { (2π)^(-N/2) β^(N/2) Πi { exp{-β(ti-𝐰ᵀΦ(𝐱i))²/2} } }
 >
 >
 >
-> = ln\[(2π)^(-N/2)\] + ln \[β^(N/2)\] + ln {Πi { exp{-β(ti-**w**TΦ(**x**i))^2/2} }
+> = ln\[(2π)^(-N/2)\] + ln \[β^(N/2)\] + ln {Πi { exp{-β(ti-𝐰ᵀΦ(𝐱i))²/2} }
 >
 >
 >
-> = (-N/2) ln(2π) + (N/2) ln(β) + Σi { ln {exp{-β(ti-**w**TΦ(**x**i))^2/2} }
+> = (-N/2) ln(2π) + (N/2) ln(β) + Σi { ln {exp{-β(ti-𝐰ᵀΦ(𝐱i))²/2} }
 >
 >
 >
-> = (N/2) ln(β) -( N/2) ln(2π) + Σi {-β(ti-**w**TΦ(**x**i))^2/2} 
+> = (N/2) ln(β) -( N/2) ln(2π) + Σi {-β(ti-𝐰ᵀΦ(𝐱i))²/2} 
 >
 >
 >
-> = (N/2) ln(β) -( N/2) ln(2π) - β Σi {(ti-**w**TΦ(**x**i))^2/2} 
+> = (N/2) ln(β) -( N/2) ln(2π) - β Σi {(ti-𝐰ᵀΦ(𝐱i))²/2} 
 >
 >
 >
-> Đặt E_D(**w**) = Σi {(ti-**w**TΦ(**x**i))^2/2}
+> Đặt E_D(𝐰) = Σi {(ti-𝐰ᵀΦ(𝐱i))²/2}
 >
 >
 >
-> .. = (N/2) ln(β) -( N/2) ln(2π) - β E_D(**w**) → chính là 3.11
+> .. = (N/2) ln(β) -( N/2) ln(2π) - β E_D(𝐰) → chính là 3.11
 >
 >
 >
@@ -423,15 +423,15 @@
 <p align="center"><kbd><img src="assets/86hraecza5x.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, như đã biết, đây là bài toán point estimation: tìm hàm số để từ data tính ra estimate tốt cho tham số **w**, β. Thì cách tiếp cận phổ biến là MLE: (**w**, β)^mle = argmax\_**w**, β {L(**w**, β|**X**, **t**)}.
+> Rồi, như đã biết, đây là bài toán point estimation: tìm hàm số để từ data tính ra estimate tốt cho tham số 𝐰, β. Thì cách tiếp cận phổ biến là MLE: (𝐰, β)^mle = argmax\_𝐰, β {L(𝐰, β|𝐗, 𝐭)}.
 >
 >
 >
-> Và ta có thể giải theo từng biến, tìm **w**^mle trước (hay kí hiệu **w**^ cũng được). Ta có bài toán:
+> Và ta có thể giải theo từng biến, tìm 𝐰^mle trước (hay kí hiệu 𝐰^ cũng được). Ta có bài toán:
 >
 >
 >
-> maximize\_**w** {L(**w**, β|**X**, **t**)}
+> maximize\_𝐰 {L(𝐰, β|𝐗, 𝐭)}
 >
 >
 >
@@ -439,75 +439,75 @@
 >
 >
 >
-> minimize\_**w** E_D(**w**) = Σi {(ti-**w**TΦ(**x**i))^2/2}
+> minimize\_𝐰 E_D(𝐰) = Σi {(ti-𝐰ᵀΦ(𝐱i))²/2}
 >
 >
 >
-> Vậy tới đây chỉ là ta đối mặt bài toán tối ưu không ràng buộc, hơn nữa, đây là hàm bậc hai đối với **w**, nên ta có bài toán tối ưu lồi, việc tìm được stationary point sẽ đủ kết luận là optimal.
+> Vậy tới đây chỉ là ta đối mặt bài toán tối ưu không ràng buộc, hơn nữa, đây là hàm bậc hai đối với 𝐰, nên ta có bài toán tối ưu lồi, việc tìm được stationary point sẽ đủ kết luận là optimal.
 >
 >
 >
-> Dùng điều kiện tối ưu cần bậc nhất (first order necessary optimality condition) để tìm stationary point (nơi gradient = 0). Đầu tiên chuẩn bị công thức gradient, tức đạo hàm đối với **w**:
+> Dùng điều kiện tối ưu cần bậc nhất (first order necessary optimality condition) để tìm stationary point (nơi gradient = 0). Đầu tiên chuẩn bị công thức gradient, tức đạo hàm đối với 𝐰:
 >
 >
 >
-> ∇ ln L(**w**, β|**X**, **t**) = -∇ E_D(**w**) = - d/d**w** \[(Σi {(ti-**w**TΦ(**x**i))^2/2})\]
+> ∇ ln L(𝐰, β|𝐗, 𝐭) = -∇ E_D(𝐰) = - d/d𝐰 \[(Σi {(ti-𝐰ᵀΦ(𝐱i))²/2})\]
 >
 >
 >
-> = -(1/2) Σi { d/d**w** ( (ti-**w**TΦ(**x**i))^2)}
+> = -(1/2) Σi { d/d𝐰 ( (ti-𝐰ᵀΦ(𝐱i))²)}
 >
 >
 >
-> Xét d/d**w** (ti-**w**TΦ(**x**i))^2, dùng chain rule:
+> Xét d/d𝐰 (ti-𝐰ᵀΦ(𝐱i))², dùng chain rule:
 >
 >
 >
-> = d/d(ti-**w**TΦ(**x**i)) \[(ti-**w**TΦ(**x**i))^2\] . d/d**w** (ti-**w**TΦ(**x**i))
+> = d/d(ti-𝐰ᵀΦ(𝐱i)) \[(ti-𝐰ᵀΦ(𝐱i))²\] . d/d𝐰 (ti-𝐰ᵀΦ(𝐱i))
 >
 >
 >
-> = \[2(ti-**w**TΦ(**x**i)) . d/d**w** (ti-**w**TΦ(**x**i))
+> = \[2(ti-𝐰ᵀΦ(𝐱i)) . d/d𝐰 (ti-𝐰ᵀΦ(𝐱i))
 >
 >
 >
-> = \[2(ti-**w**TΦ(**x**i)) . \[- d/d**w** (**w**TΦ(**x**i))\]
+> = \[2(ti-𝐰ᵀΦ(𝐱i)) . \[- d/d𝐰 (𝐰ᵀΦ(𝐱i))\]
 >
 >
 >
-> = - 2(ti-**w**TΦ(**x**i)) Φ(**x**i)T
+> = - 2(ti-𝐰ᵀΦ(𝐱i)) Φ(𝐱i)ᵀ
 >
 >
 >
-> (vì **w**TΦ(**x**i) là vector (**w**) → scalar function, áp dụng d/d**x** (**x**T**a**) **=** d/d**x** (aT**x**) = aT)
+> (vì 𝐰ᵀΦ(𝐱i) là vector (𝐰) → scalar function, áp dụng d/d𝐱 (𝐱ᵀ𝐚) **=** d/d𝐱 (aᵀ𝐱) = aᵀ)
 >
 >
 >
-> ⇨ ∇ ln L(**w**, β|**X**, **t**) = -(1/2) Σi {- 2(ti-**w**TΦ(**x**i)) Φ(**x**i)T }
+> ⇨ ∇ ln L(𝐰, β|𝐗, 𝐭) = -(1/2) Σi {- 2(ti-𝐰ᵀΦ(𝐱i)) Φ(𝐱i)ᵀ }
 >
 >
 >
-> = Σi {(ti-**w**TΦ(**x**i)) Φ(**x**i)T}
+> = Σi {(ti-𝐰ᵀΦ(𝐱i)) Φ(𝐱i)ᵀ}
 >
 >
 >
-> Điều kiện cần bậc nhất: ∇ ln L(**w**, β|**X**, **t**) = 0
+> Điều kiện cần bậc nhất: ∇ ln L(𝐰, β|𝐗, 𝐭) = 0
 >
 >
 >
-> ⇔ Σi {(ti-**w**TΦ(**x**i)) Φ(**x**i)T} = 0
+> ⇔ Σi {(ti-𝐰ᵀΦ(𝐱i)) Φ(𝐱i)ᵀ} = 0
 >
 >
 >
-> ⇔ Σi {tiΦ(**x**i)T - **w**TΦ(**x**i)Φ(**x**i)T} = 0
+> ⇔ Σi {tiΦ(𝐱i)ᵀ - 𝐰ᵀΦ(𝐱i)Φ(𝐱i)ᵀ} = 0
 >
 >
 >
-> ⇔ Σi {tiΦ(**x**i)T} = Σi {**w**TΦ(**x**i)Φ(**x**i)T}
+> ⇔ Σi {tiΦ(𝐱i)ᵀ} = Σi {𝐰ᵀΦ(𝐱i)Φ(𝐱i)ᵀ}
 >
 >
 >
-> ⇔ Σi {tiΦ(**x**i)T} = **w**TΣi{Φ(**x**i)Φ(**x**i)T}
+> ⇔ Σi {tiΦ(𝐱i)ᵀ} = 𝐰ᵀΣi{Φ(𝐱i)Φ(𝐱i)ᵀ}
 >
 >
 >
@@ -515,43 +515,43 @@
 >
 >
 >
-> bên trái, chỉ là tổng của các (scalar ti) × \[vector Φ(**x**i) transosed\]
+> bên trái, chỉ là tổng của các (scalar ti) × \[vector Φ(𝐱i) transosed\]
 >
 >
 >
-> bên phải, cái tổng Σi{Φ(**x**i)Φ(**x**i)T}, chính là tổng các N marix rank 1 trong đó mỗi matrix được tạo bởi outer product của vector Φ(**x**i) và chính nó. Theo góc nhìn thứ tư của việc nhân hai matrix mình đã học trong MIT18.06, nói rằng AB là tích các rank 1 matrix tạo bởi \[cột i của A\] outer product với hàng i của B, thì ta sẽ thấy nếu đặt các cột của A là Φ(**x**i) và các hàng của B là Φ(**x**i)T, thì Σi{Φ(**x**i)Φ(**x**i)T} chính là AB. Và dĩ nhiên B = AT, và A = BT, nên cũng có thể thấy đây chính là BTB (B tranpose B). Và trong sách, ta sẽ dùng **Φ** thay cho chữ B, là matrix có các hàng là các vector Φ(**x**i) transpose, gọi là **DESIGN MATRIX**
+> bên phải, cái tổng Σi{Φ(𝐱i)Φ(𝐱i)ᵀ}, chính là tổng các N marix rank 1 trong đó mỗi matrix được tạo bởi outer product của vector Φ(𝐱i) và chính nó. Theo góc nhìn thứ tư của việc nhân hai matrix mình đã học trong MIᵀ18.06, nói rằng AB là tích các rank 1 matrix tạo bởi \[cột i của A\] outer product với hàng i của B, thì ta sẽ thấy nếu đặt các cột của A là Φ(𝐱i) và các hàng của B là Φ(𝐱i)ᵀ, thì Σi{Φ(𝐱i)Φ(𝐱i)ᵀ} chính là AB. Và dĩ nhiên B = Aᵀ, và A = Bᵀ, nên cũng có thể thấy đây chính là BᵀB (B tranpose B). Và trong sách, ta sẽ dùng **Φ** thay cho chữ B, là matrix có các hàng là các vector Φ(𝐱i) transpose, gọi là **DESIGN MAᵀRIX**
 >
 >
 >
-> Nên từ đó giúp hiểu rằng Σi{Φ(**x**i)Φ(**x**i)T} chính là **Φ**T**Φ**.
+> Nên từ đó giúp hiểu rằng Σi{Φ(𝐱i)Φ(𝐱i)ᵀ} chính là **Φ**ᵀ**Φ**.
 >
 >
 >
-> Và vế phải sẽ là **w**T(**Φ**T**Φ**)
+> Và vế phải sẽ là 𝐰ᵀ(**Φ**ᵀ**Φ**)
 >
 >
 >
-> Đồng thời, với việc đặt ra matrix **Φ** cũng giúp ta thấy vế trái chính là transposed của một linear combination của các cột của **Φ**T, bởi bộ hệ số t1,...tN. Vậy, theo góc nhìn nhân matrix với vector trong MIT 1806, thì Σi {tiΦ(**x**i)T} chính là (**Φ**T**t**)T = **t**T**Φ**
+> Đồng thời, với việc đặt ra matrix **Φ** cũng giúp ta thấy vế trái chính là transposed của một linear combination của các cột của **Φ**ᵀ, bởi bộ hệ số t1,...tN. Vậy, theo góc nhìn nhân matrix với vector trong MIᵀ 1806, thì Σi {tiΦ(𝐱i)ᵀ} chính là (**Φ**ᵀ𝐭)ᵀ = 𝐭ᵀ**Φ**
 >
 >
 >
-> Do đó Σi {tiΦ(**x**i)T} = **w**TΣi{Φ(**x**i)Φ(**x**i)T} có thể thể hiện bởi:
+> Do đó Σi {tiΦ(𝐱i)ᵀ} = 𝐰ᵀΣi{Φ(𝐱i)Φ(𝐱i)ᵀ} có thể thể hiện bởi:
 >
 >
 >
-> **t**T**Φ = w**T(**Φ**T**Φ**)
+> 𝐭ᵀ**Φ = w**ᵀ(**Φ**ᵀ**Φ**)
 >
 >
 >
-> ⇔ **Φ**T**t =** (**Φ**T**Φ**)T**w** (Transposed hai vế)
+> ⇔ **Φ**ᵀ**t =** (**Φ**ᵀ**Φ**)ᵀ𝐰 (Transposed hai vế)
 >
 >
 >
-> ⇔ **Φ**T**t =** (**Φ**T**Φ**)**w** (do **Φ**T**Φ** đối xứng nên (**Φ**T**Φ**)T = **Φ**T**Φ**)
+> ⇔ **Φ**ᵀ**t =** (**Φ**ᵀ**Φ**)𝐰 (do **Φ**ᵀ**Φ** đối xứng nên (**Φ**ᵀ**Φ**)ᵀ = **Φ**ᵀ**Φ**)
 >
 >
 >
-> Tới đây có thể ôn lại tí, kiến thức MIT 18.06 cũng là sẽ giúp ta hiểu vì sao gs Bishop nói đây là normal equation.
+> Tới đây có thể ôn lại tí, kiến thức MIᵀ 18.06 cũng là sẽ giúp ta hiểu vì sao gs Bishop nói đây là normal equation.
 >
 >
 >
@@ -559,45 +559,45 @@
 >
 >
 >
-> Phần dư e = b - p, sẽ vuông góc với C(A), và do đó, nó nằm trong left nullspace của A, kí hiệu N(AT) (N(A transpose)), vì hai subspace này orthogonal complement. Như vậy e là solution của equation ATy = 0 ⇨ ta có ATe = 0.
+> Phần dư e = b - p, sẽ vuông góc với C(A), và do đó, nó nằm trong left nullspace của A, kí hiệu N(Aᵀ) (N(A transpose)), vì hai subspace này orthogonal complement. Như vậy e là solution của equation Aᵀy = 0 ⇨ ta có Aᵀe = 0.
 >
 >
 >
-> Thay e = b - p = b - Ax vào, ta có: AT(b - Ax) = 0
+> Thay e = b - p = b - Ax vào, ta có: Aᵀ(b - Ax) = 0
 >
 >
 >
-> ⇔ ATb = ATAx. Đây chính là normal equation.
+> ⇔ Aᵀb = AᵀAx. Đây chính là normal equation.
 >
 >
 >
-> Nên trong bài toán của ta, **Φ**T**t =** (**Φ**T**Φ**)**w** chính là normal equation.
+> Nên trong bài toán của ta, **Φ**ᵀ**t =** (**Φ**ᵀ**Φ**)𝐰 chính là normal equation.
 >
 >
 >
-> Nếu tiếp tục với ATb = ATAx, thì ta sẽ lập luận tiếp như sau:
+> Nếu tiếp tục với Aᵀb = AᵀAx, thì ta sẽ lập luận tiếp như sau:
 >
 >
 >
-> Vì A full column rank, nên ATA full rank, và do đó invertible.Nhân hai vế cho (ATA)inv, ta có x = (ATA)inv ATb.
+> Vì A full column rank, nên AᵀA full rank, và do đó invertible.Nhân hai vế cho (AᵀA)⁻¹, ta có x = (AᵀA)⁻¹ Aᵀb.
 >
 >
 >
-> Và như vậy p, là hình chiếu của b lên C(A), sẽ bằng Ax = A(ATA)inv ATb,
+> Và như vậy p, là hình chiếu của b lên C(A), sẽ bằng Ax = A(AᵀA)⁻¹ Aᵀb,
 >
-> và từ đó, nếu gọi P = A(ATA)inv AT, để rồi p = Pb, thì P chính là matrix giúp chiếu vector b lên C(A) (projection onto C(A) matrix)
->
->
->
-> Như vậy, y chang như vậy, nhân hai vế cho (**Φ**T**Φ**)inv, ta có:
+> và từ đó, nếu gọi P = A(AᵀA)⁻¹ Aᵀ, để rồi p = Pb, thì P chính là matrix giúp chiếu vector b lên C(A) (projection onto C(A) matrix)
 >
 >
 >
-> **Φ**T**t =** (**Φ**T**Φ**)**w** ⇨ **w** = (**Φ**T**Φ**)inv **Φ**T**t**
+> Như vậy, y chang như vậy, nhân hai vế cho (**Φ**ᵀ**Φ**)⁻¹, ta có:
 >
 >
 >
-> và đây chính là maximum likelihood estimator của **w**, kí hiệu **w**ML
+> **Φ**ᵀ**t =** (**Φ**ᵀ**Φ**)𝐰 ⇨ 𝐰 = (**Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ𝐭
+>
+>
+>
+> và đây chính là maximum likelihood estimator của 𝐰, kí hiệu 𝐰ML
 >
 >
 >
@@ -605,39 +605,39 @@
 >
 >
 >
-> Một điểm kiến thức nữa trong MIT 1806 đã học:
+> Một điểm kiến thức nữa trong MIᵀ 1806 đã học:
 >
 >
 >
-> Xét equation Ax = b, mình đã biết, nếu A full rank, invertible thì mới có thể có x = Ainv b. Còn trong các trường hợp khác thì sao:
+> Xét equation Ax = b, mình đã biết, nếu A full rank, invertible thì mới có thể có x = A⁻¹ b. Còn trong các trường hợp khác thì sao:
 >
 >
 >
-> Nếu A full column rank, lúc này ATA full rank, nên tồn tại (ATA)inv.
+> Nếu A full column rank, lúc này AᵀA full rank, nên tồn tại (AᵀA)⁻¹.
 >
 >
 >
-> Nhân hai vế của Ax = b với (ATA)inv AT (gọi là left inverse của A), ta có:
+> Nhân hai vế của Ax = b với (AᵀA)⁻¹ Aᵀ (gọi là left inverse của A), ta có:
 >
 >
 >
-> (ATA)inv ATAx = (ATA)inv ATb
+> (AᵀA)⁻¹ AᵀAx = (AᵀA)⁻¹ Aᵀb
 >
 >
 >
-> ⇔ x = (ATA)inv ATb
+> ⇔ x = (AᵀA)⁻¹ Aᵀb
 >
 >
 >
-> (chú ý, chưa chắc x là solution của Ax = b, vì Ax = b ⇨ (ATA)inv ATAx = (ATA)inv ATb chứ ngược lại chưa chắc đúng, nói cách khác, đây không phải hai phương trình tương đương)
+> (chú ý, chưa chắc x là solution của Ax = b, vì Ax = b ⇨ (AᵀA)⁻¹ AᵀAx = (AᵀA)⁻¹ Aᵀb chứ ngược lại chưa chắc đúng, nói cách khác, đây không phải hai phương trình tương đương)
 >
 >
 >
-> Đặt (ATA)inv ATb này là x', thế ngược vào vế trái: Ax', = A(ATA)inv ATb và lập luận như sau.
+> Đặt (AᵀA)⁻¹ Aᵀb này là x', thế ngược vào vế trái: Ax', = A(AᵀA)⁻¹ Aᵀb và lập luận như sau.
 >
 >
 >
-> Ta thấy với P = A(ATA)inv AT, là matrix chiếu lên C(A) ở trên, thì Ax' ở đây chính là Pb
+> Ta thấy với P = A(AᵀA)⁻¹ Aᵀ, là matrix chiếu lên C(A) ở trên, thì Ax' ở đây chính là Pb
 >
 >
 >
@@ -645,11 +645,11 @@
 >
 >
 >
-> Nếu b ∈ C(A), thì Pb = b, do đó Ax' = b → x' = (ATA)inv ATb chính là solution của Ax = b.
+> Nếu b ∈ C(A), thì Pb = b, do đó Ax' = b → x' = (AᵀA)⁻¹ Aᵀb chính là solution của Ax = b.
 >
 >
 >
-> Nếu b không ∈ C(A) thì Pb = p khác b, thì Ax' chỉ là điểm trong C(A) gần với b nhất. x' = (ATA)inv ATb **chỉ là hệ số giúp kết hợp C(A) basis để ra hình chiếu của b lên C(A)**.
+> Nếu b không ∈ C(A) thì Pb = p khác b, thì Ax' chỉ là điểm trong C(A) gần với b nhất. x' = (AᵀA)⁻¹ Aᵀb **chỉ là hệ số giúp kết hợp C(A) basis để ra hình chiếu của b lên C(A)**.
 >
 >
 >
@@ -657,23 +657,23 @@
 >
 >
 >
-> **w**ML = (**Φ**T**Φ**)inv **Φ**T**t chính là tương ứng với x' trong lập luận trên, để rồi:**
+> 𝐰ML = (**Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ**t chính là tương ứng với x' trong lập luận trên, để rồi:**
 >
 >
 >
-> Nó chính là nghiệm của **Φw** = **t** nếu **t** ∈ C(**Φ**), là hệ số giúp combine linearly các cột của **Φ** để tạo ra **t**
+> Nó chính là nghiệm của **Φw** = 𝐭 nếu 𝐭 ∈ C(**Φ**), là hệ số giúp combine linearly các cột của **Φ** để tạo ra 𝐭
 >
 >
 >
-> Còn nếu **t** không thuộc C(**Φ**), thì **w**ML chính là hệ số giúp combine linearly các cột của **Φ** để tạo ra điểm trong C(**Φ**) gần với **t** nhất (hình chiếu của t lên C(**Φ**))
+> Còn nếu 𝐭 không thuộc C(**Φ**), thì 𝐰ML chính là hệ số giúp combine linearly các cột của **Φ** để tạo ra điểm trong C(**Φ**) gần với 𝐭 nhất (hình chiếu của t lên C(**Φ**))
 >
 >
 >
-> Và ta cũng biết trong MIT 1806, cái matrix (ATA)inv AT, là left inverse của A, cũng có tên là **Moore-Penrose pseudo-inverse**, kí hiệu A^(+)
+> Và ta cũng biết trong MIᵀ 1806, cái matrix (AᵀA)⁻¹ Aᵀ, là left inverse của A, cũng có tên là **Moore-Penrose pseudo-inverse**, kí hiệu A^(+)
 >
 >
 >
-> Nên giúp ta hiểu ở đây khi gs nói **Φ**^(+) = **Φ**T**Φ**)inv **Φ**T là **Moore-Penrose pseudo-inverse của Φ là vậy**
+> Nên giúp ta hiểu ở đây khi gs nói **Φ**^(+) = **Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ là **Moore-Penrose pseudo-inverse của Φ là vậy**
 >
 >
 >
@@ -693,7 +693,7 @@
 >
 >
 >
-> Khi đó A^(+) sẽ là **right inverse** = AT (AAT)inv, **giúp tìm ra cái x có norm nhỏ nhất**, như sau:
+> Khi đó A^(+) sẽ là **right inverse** = Aᵀ (AAᵀ)⁻¹, **giúp tìm ra cái x có norm nhỏ nhất**, như sau:
 >
 >
 >
@@ -705,15 +705,15 @@
 >
 >
 >
-> Vậy ta lại dựa vào lập luận, vì x\* nằm trong rowspace, nên tồn tại linear combination các rows của A tạo ra x\*: ATy = x\*, phần dư nằm trong nullspace x - ATy ⇨ A(x - ATy) = 0 ⇔ Ax - AATy = 0 ⇔ b = AATy ⇔ y = (AAT)inv b.
+> Vậy ta lại dựa vào lập luận, vì x\* nằm trong rowspace, nên tồn tại linear combination các rows của A tạo ra x\*: Aᵀy = x\*, phần dư nằm trong nullspace x - Aᵀy ⇨ A(x - Aᵀy) = 0 ⇔ Ax - AAᵀy = 0 ⇔ b = AAᵀy ⇔ y = (AAᵀ)⁻¹ b.
 >
 >
 >
-> Vậy x\* = ATy = AT(AAT)inv b chính là nghiệm có norm nhỏ nhất trong vô số nghiệm của Ax = b
+> Vậy x\* = Aᵀy = Aᵀ(AAᵀ)⁻¹ b chính là nghiệm có norm nhỏ nhất trong vô số nghiệm của Ax = b
 >
 >
 >
-> Và cái A^(+) lúc này chính là right inverse của A, AT(AAT)inv, giúp tìm ra nghiệm có norm nhỏ nhất.
+> Và cái A^(+) lúc này chính là right inverse của A, Aᵀ(AAᵀ)⁻¹, giúp tìm ra nghiệm có norm nhỏ nhất.
 >
 >
 >
@@ -721,19 +721,19 @@
 >
 >
 >
-> Còn khi A invertible, thì đơn giản A^(+) chính là Ainv, vì dùng left hay right inverse thì đều ra Ainv cả: 
+> Còn khi A invertible, thì đơn giản A^(+) chính là A⁻¹, vì dùng left hay right inverse thì đều ra A⁻¹ cả: 
 >
 >
 >
-> (ATA)inv AT = Ainv (AT)inv AT = Ainv I = Ainv
+> (AᵀA)⁻¹ Aᵀ = A⁻¹ (Aᵀ)⁻¹ Aᵀ = A⁻¹ I = A⁻¹
 >
 >
 >
-> AT(AAT)inv = AT (AT)inv Ainv = I Ainv = Ainv
+> Aᵀ(AAᵀ)⁻¹ = Aᵀ (Aᵀ)⁻¹ A⁻¹ = I A⁻¹ = A⁻¹
 >
 >
 >
-> Trong cả hai ta đều dùng tính chất (AB)inv = Binv Ainv (identity này chỉ đúng khi A, B invertible)
+> Trong cả hai ta đều dùng tính chất (AB)⁻¹ = B⁻¹ A⁻¹ (identity này chỉ đúng khi A, B invertible)
 >
 >
 >
@@ -755,15 +755,15 @@
 <p align="center"><kbd><img src="assets/56zc94csmfj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ý tưởng đoạn này đại khái là muốn xem thử với **w**ML, tức maximum likelihood estimator của **w** thì **w**0 là cái gì?
+> Ý tưởng đoạn này đại khái là muốn xem thử với 𝐰ML, tức maximum likelihood estimator của 𝐰 thì 𝐰0 là cái gì?
 >
 >
 >
-> Thì lôi cái phần từ đầu tiên của **w**ML ra (chính là w0_ML) sẽ khó hơn là làm theo cách này: Dù gì thì **w**ML cũng là cái có được khi ta giải first condition d/d**w** log Likelihood = 0, và cũng tương đương d/d**w** E_D(**w**) = 0. Và bản chất cái này cũng chỉ là hệ các phương trình ∂/∂wi E_D(**w**) = 0. Trong đó có ∂/∂w0 E_D(**w**) = 0. Nên bằng cách giải ∂/∂w0 E_D(**w**) = 0, ta sẽ có w0_ML (phần tử đầu tiên của **w**ML), từ đó thông qua việc xem nó là gì sẽ giúp ta hiểu về vai trò của w0, vốn là tham số chỉ gắn với hàm Φ0(**x**) = 1, không gắn với non-linear function nào của input **x** nào.
+> Thì lôi cái phần từ đầu tiên của 𝐰ML ra (chính là w0_ML) sẽ khó hơn là làm theo cách này: Dù gì thì 𝐰ML cũng là cái có được khi ta giải first condition d/d𝐰 log Likelihood = 0, và cũng tương đương d/d𝐰 E_D(𝐰) = 0. Và bản chất cái này cũng chỉ là hệ các phương trình ∂/∂wi E_D(𝐰) = 0. Trong đó có ∂/∂w0 E_D(𝐰) = 0. Nên bằng cách giải ∂/∂w0 E_D(𝐰) = 0, ta sẽ có w0_ML (phần tử đầu tiên của 𝐰ML), từ đó thông qua việc xem nó là gì sẽ giúp ta hiểu về vai trò của w0, vốn là tham số chỉ gắn với hàm Φ0(𝐱) = 1, không gắn với non-linear function nào của input 𝐱 nào.
 >
 >
 >
-> Tự làm để hiểu: E_D(**w**), còn nhớ, là hàm đặt cho (1/2) Σi (ti - **w**T**Φ**(**x**))^2 = (1/2) Σi (ti - Σj=0:M-1 wj × Φ(**x**i))^2
+> Tự làm để hiểu: E_D(𝐰), còn nhớ, là hàm đặt cho (1/2) Σi (ti - 𝐰ᵀ**Φ**(𝐱))² = (1/2) Σi (ti - Σj=0:M-1 wj × Φ(𝐱i))²
 >
 >
 >
@@ -771,15 +771,15 @@
 >
 >
 >
-> = (1/2) Σi {ti - w0 × Φ0(**x**i) - Σj wj × Φj(**x**i)}^2
+> = (1/2) Σi {ti - w0 × Φ0(𝐱i) - Σj wj × Φj(𝐱i)}²
 >
 >
 >
-> = (1/2) Σi {ti - w0 × 1 - Σj wj × Φj(**x**i)}^2 (Φ0(**x**i) = 1, nhớ không)
+> = (1/2) Σi {ti - w0 × 1 - Σj wj × Φj(𝐱i)}² (Φ0(𝐱i) = 1, nhớ không)
 >
 >
 >
-> = (1/2) Σi {ti - w0 - Σj wj × Φj(**x**i)}^2
+> = (1/2) Σi {ti - w0 - Σj wj × Φj(𝐱i)}²
 >
 >
 >
@@ -787,27 +787,27 @@
 >
 >
 >
-> ⇔ d/dw0 \[(1/2) Σi {ti - w0 - Σj wj × Φj(**x**i)}^2\] = 0
+> ⇔ d/dw0 \[(1/2) Σi {ti - w0 - Σj wj × Φj(𝐱i)}²\] = 0
 >
 >
 >
-> ⇔ (1/2) (-2) (Σi ti - Σi w0 - Σi\[Σj wj × Φj(**x**i))\] ) = 0
+> ⇔ (1/2) (-2) (Σi ti - Σi w0 - Σi\[Σj wj × Φj(𝐱i))\] ) = 0
 >
 >
 >
-> ⇔ (Σi ti - Σi w0 - Σi\[Σj wj × Φj(**x**i))\] ) = 0
+> ⇔ (Σi ti - Σi w0 - Σi\[Σj wj × Φj(𝐱i))\] ) = 0
 >
 >
 >
-> ⇔ Σi w0 = Σi ti - Σi\[Σj wj × Φj(**x**i))\]  
+> ⇔ Σi w0 = Σi ti - Σi\[Σj wj × Φj(𝐱i))\]  
 >
 >
 >
-> ⇔ N w0 = Σi ti - Σj \[wj × Σi Φj(**x**i)\]  
+> ⇔ N w0 = Σi ti - Σj \[wj × Σi Φj(𝐱i)\]  
 >
 >
 >
-> ⇔ w0 = (Σi ti)/N - Σj \[wj × (1/N)Σi Φj(**x**i)\]  
+> ⇔ w0 = (Σi ti)/N - Σj \[wj × (1/N)Σi Φj(𝐱i)\]  
 >
 >
 >
@@ -815,19 +815,19 @@
 >
 >
 >
-> và (1/N)Σi Φj(**x**i) là Φj^, là trung bình của các phần tử j của các vector Φ(**x**i). Mà Φ(**x**) như đã nói, là basis function, là function mà ta dùng để tạo ra một set các non-linear feature, nên Φj(**x**) có thể coi là feature thứ j của sample **x**. Vậy (1/N)Σi Φj(**x**i) là trung bình các feature thứ j
+> và (1/N)Σi Φj(𝐱i) là Φj^, là trung bình của các phần tử j của các vector Φ(𝐱i). Mà Φ(𝐱) như đã nói, là basis function, là function mà ta dùng để tạo ra một set các non-linear feature, nên Φj(𝐱) có thể coi là feature thứ j của sample 𝐱. Vậy (1/N)Σi Φj(𝐱i) là trung bình các feature thứ j
 >
 >
 >
-> Như vậy Σj \[wj × (1/N)Σi Φj(**x**i)\] sẽ là weighted sum của các trung bình của các feature.
+> Như vậy Σj \[wj × (1/N)Σi Φj(𝐱i)\] sẽ là weighted sum của các trung bình của các feature.
 >
 >
 >
-> Nói cụ thể cho dễ hiểu, giả sử x1 là diện tích nhà, x2 là chiều dài nhà, x3 là số lầu,...thì Φ1(**x**) là quy mô căn nhà (là hàm phi tuyến nào đó dựa trên các feature gốc x1, x2,..., Φ2(**x**) là ưu thế về vị trí của căn nhà (cũng là hàm phi tuyến nào đó của feature gốc). Khi đó (1/N) Σi Φ1(**x**i) sẽ là trung bình các quy mô căn nhà trong mọi căn nhà (**x**i) trong dataset, (1/N) Σi Φ2(**x**i) là trung bình ưu thế về vị trí của mọi căn nhà. Và Σj \[wj × (1/N)Σi Φj(**x**i)\] = w1 × (1/N) Σi Φ1(**x**i) + w2 × (1/N) Σi Φ2(**x**i) + ...chính là tổng tất cả các trung bình trên, nhưng có trọng số là w1,w2,....
+> Nói cụ thể cho dễ hiểu, giả sử x1 là diện tích nhà, x2 là chiều dài nhà, x3 là số lầu,...thì Φ1(𝐱) là quy mô căn nhà (là hàm phi tuyến nào đó dựa trên các feature gốc x1, x2,..., Φ2(𝐱) là ưu thế về vị trí của căn nhà (cũng là hàm phi tuyến nào đó của feature gốc). Khi đó (1/N) Σi Φ1(𝐱i) sẽ là trung bình các quy mô căn nhà trong mọi căn nhà (𝐱i) trong dataset, (1/N) Σi Φ2(𝐱i) là trung bình ưu thế về vị trí của mọi căn nhà. Và Σj \[wj × (1/N)Σi Φj(𝐱i)\] = w1 × (1/N) Σi Φ1(𝐱i) + w2 × (1/N) Σi Φ2(𝐱i) + ...chính là tổng tất cả các trung bình trên, nhưng có trọng số là w1,w2,....
 >
 >
 >
-> Do đó, từ việc w0 = (Σi ti)/N - Σj \[wj × (1/N)Σi Φj(**x**i)\]  cho thấy rằng mô hình sẽ học ra cách (nói vậy là vì, w0 ta đang xét chính là maximum likelihood estimator của w0, là thứ mà ta tìm được để tối ưu likelihood) để BÙ ĐẮP (compensate) cho sự thiếu hụt giữa trung bình target value (t^) và weighted sum của trung bình các basis function values.
+> Do đó, từ việc w0 = (Σi ti)/N - Σj \[wj × (1/N)Σi Φj(𝐱i)\]  cho thấy rằng mô hình sẽ học ra cách (nói vậy là vì, w0 ta đang xét chính là maximum likelihood estimator của w0, là thứ mà ta tìm được để tối ưu likelihood) để BÙ ĐẮP (compensate) cho sự thiếu hụt giữa trung bình target value (t^) và weighted sum của trung bình các basis function values.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
@@ -847,47 +847,47 @@
 <p align="center"><kbd><img src="assets/3eanyo0xogq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ok, nãy giờ là ta chỉ nói về **w**ML, đương nhiên tham số mô hình còn có β - precision của distribution Normal mà ta assump rằng noise ε = T - y(**w**,**x**) sẽ theo phân phối này.
+> Ok, nãy giờ là ta chỉ nói về 𝐰ML, đương nhiên tham số mô hình còn có β - precision của distribution Normal mà ta assump rằng noise ε = T - y(𝐰,𝐱) sẽ theo phân phối này.
 >
 >
 >
-> Để tìm βML, thì cũng chỉ đơn giản là cho đạo hàm của hàm log likelihood (**w** ở đây đều là **w**ML) đối với β = 0:
+> Để tìm βML, thì cũng chỉ đơn giản là cho đạo hàm của hàm log likelihood (𝐰 ở đây đều là 𝐰ML) đối với β = 0:
 >
 >
 >
-> d/dβ \[(N/2) ln(β) -( N/2) ln(2π) - β E_D(**w**)\] = 0
+> d/dβ \[(N/2) ln(β) -( N/2) ln(2π) - β E_D(𝐰)\] = 0
 >
 >
 >
-> ⇔ d/dβ \[(N/2) ln(β)\] - d/dβ \[β E_D(**w**)\] = 0
+> ⇔ d/dβ \[(N/2) ln(β)\] - d/dβ \[β E_D(𝐰)\] = 0
 >
 >
 >
-> ⇔ d/dβ \[(N/2) ln(β)\] = d/dβ \[β E_D(**w**)\]
+> ⇔ d/dβ \[(N/2) ln(β)\] = d/dβ \[β E_D(𝐰)\]
 >
 >
 >
-> ⇔(N/2) (1/β) = E_D(**w**)
+> ⇔(N/2) (1/β) = E_D(𝐰)
 >
 >
 >
-> ⇔ 1/β = 2E_D(**w**)/N = (2/N) (1/2) Σi (ti - Σj=0:M-1 wj × Φj(**x**i))^2
+> ⇔ 1/β = 2E_D(𝐰)/N = (2/N) (1/2) Σi (ti - Σj=0:M-1 wj × Φj(𝐱i))²
 >
 >
 >
-> = (1/N) Σi (ti - Σj=0:M-1 wj × Φj(**x**i))^2
+> = (1/N) Σi (ti - Σj=0:M-1 wj × Φj(𝐱i))²
 >
 >
 >
-> Và đây chính là (1/β)ML (tức maximum likelihood estimator của 1/β, hay cũng là σ^2_ML)
+> Và đây chính là (1/β)ML (tức maximum likelihood estimator của 1/β, hay cũng là σ²_ML)
 >
 >
 >
->  Chỗ này nói rõ chút: Nên nhớ từ đầu đến giờ ta dựa trên assumption là noise, cũng là residual = phần dư, phần sai lệch của T sau khi trừ đi y(**w**,**x**), sẽ là random variable tuân theo normal(0, 1/β), và đièu này cũng đồng nghĩa rằng ta đang assume T \~ normal(y(**w**,**x**), 1/β). Với 1/β là ngịch đảo của precision, cũng chính là variance. Nên giờ khi ta dùng maximum likelihood esimator approach để tìm esimator cho 1/β (1/β)ML, thì cũng chính là maximum likelihood estimator cho variance của Normal distribution noise.
+>  Chỗ này nói rõ chút: Nên nhớ từ đầu đến giờ ta dựa trên assumption là noise, cũng là residual = phần dư, phần sai lệch của T sau khi trừ đi y(𝐰,𝐱), sẽ là random variable tuân theo normal(0, 1/β), và đièu này cũng đồng nghĩa rằng ta đang assume T \~ normal(y(𝐰,𝐱), 1/β). Với 1/β là ngịch đảo của precision, cũng chính là variance. Nên giờ khi ta dùng maximum likelihood esimator approach để tìm esimator cho 1/β (1/β)ML, thì cũng chính là maximum likelihood estimator cho variance của Normal distribution noise.
 >
 >
 >
-> Và kết quả cho ra (1/β)ML = σ^2_ml = (1/N) Σi (ti - Σj=0:M-1 wj × Φj(**x**i))^2, thì cho ta gì?
+> Và kết quả cho ra (1/β)ML = σ²_ml = (1/N) Σi (ti - Σj=0:M-1 wj × Φj(𝐱i))², thì cho ta gì?
 >
 >
 >
@@ -895,7 +895,7 @@
 >
 >
 >
-> Đầu bài ta đã nói rằng T là random variable, nên các data sample hình thành một bộ các random variable T1,T2,...TN. Và tương ứng với mỗi T ta có εi = Ti - y(w, **x**i), cũng là các random variable.
+> Đầu bài ta đã nói rằng T là random variable, nên các data sample hình thành một bộ các random variable T1,T2,...TN. Và tương ứng với mỗi T ta có εi = Ti - y(w, 𝐱i), cũng là các random variable.
 >
 >
 >
@@ -903,19 +903,19 @@
 >
 >
 >
-> Variance, Var(ε) = E\[ε^2\] - \[E(ε)\]^2
+> Variance, Var(ε) = E\[ε²\] - \[E(ε)\]²
 >
 >
 >
-> Nhưng vì residual ε có mean là 0: E\[ε\] = 0, nên: Var(ε) = E\[ε^2\]
+> Nhưng vì residual ε có mean là 0: E\[ε\] = 0, nên: Var(ε) = E\[ε²\]
 >
 >
 >
-> và (1/N) Σi (εi^2) có thể **coi như một giá trị thực nghiệm ước lượng mức biến động của ε**
+> và (1/N) Σi (εi²) có thể **coi như một giá trị thực nghiệm ước lượng mức biến động của ε**
 >
 >
 >
-> và mang ý nghĩa cho thấy trung bình độ biến động của Ti xung quanh mean y(**x**i,w)
+> và mang ý nghĩa cho thấy trung bình độ biến động của Ti xung quanh mean y(𝐱i,w)
 >
 >
 >
