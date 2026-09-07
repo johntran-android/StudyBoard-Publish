@@ -81,7 +81,7 @@
 >
 >
 > me: 1, vì dễ thấy nó **chỉ có 1 col independent cols**, cols
-> 2, 3 đều depend on col 1 -> matrix có 1 pivot col, 2 free
+> 2, 3 đều depend on col 1 → matrix có 1 pivot col, 2 free
 > cols. Rank = 1
 >
 >
@@ -123,7 +123,7 @@
 > lập, do chúng chứa một Identity matrix (phần từ bằng 0 ở
 > vector này tương ứng với phần tử bằng 1 ở vector kia, thì
 > không thể có một scalar nào giúp biến vector này thành
-> vector kia được -> chúng độc lập)
+> vector kia được → chúng độc lập)
 
 <br>
 
@@ -157,10 +157,10 @@
 >
 >
 >
-> Có vẻ đúng. Trong bài toán này ta cần **project một vector trong R^3** tới **một
-> line trong R^3**, dễ hiểu là ta **mất đi 2 chiều không gian**, từ 3D còn 1D. Thế
-> thì việc **input là R^3 vector cho thấy matrix cần có 3 cột**, để phép nhân  Ax
-> mới hợp lệ. Vậy rowspace và nullspace là subspace của R^3:
+> Có vẻ đúng. Trong bài toán này ta cần **project một vector trong R³** tới **một
+> line trong R³**, dễ hiểu là ta **mất đi 2 chiều không gian**, từ 3D còn 1D. Thế
+> thì việc **input là R³ vector cho thấy matrix cần có 3 cột**, để phép nhân  Ax
+> mới hợp lệ. Vậy rowspace và nullspace là subspace của R³:
 >
 >
 >
@@ -168,9 +168,9 @@
 >
 >
 >
-> **Kết quả của phép chiếu** vẫn là **vector trong R^3** (nằm trên một line trong
-> R^3 thì vẫn là subspace của R^3), nên **matrix A sẽ phải có 3 hàng** để column
-> space (Ax nằm trong column space) là subspace của R^3:
+> **Kết quả của phép chiếu** vẫn là **vector trong R³** (nằm trên một line trong
+> R³ thì vẫn là subspace của R³), nên **matrix A sẽ phải có 3 hàng** để column
+> space (Ax nằm trong column space) là subspace của R³:
 >
 >
 >
@@ -245,7 +245,7 @@
 >
 >
 > me: Không, vì **đây là Projection matrix**, có tính chất
-> là P^2 = P, mang ý nghĩa là, **khi đã project một matrix
+> là P² = P, mang ý nghĩa là, **khi đã project một matrix
 > lên vector a rồi**, thì **project tiếp cũng không thay đổi**
 > nữa. Nên u_k=....u_2 = u_1
 
@@ -275,7 +275,7 @@
 > Tiếp, u_1 = ASc = SΛc. Tiếp u_2 = Au_1 = SΛΛc = SΛ^2c
 > tiếp tục vậy ta có **u_k = SΛ^kc**. Và điều này sẽ cho phép
 > nhìn vào eigenvalue và eigenvector để xác định trạng thái
-> của u_k khi k -> infinity
+> của u_k khi k → infinity
 >
 > Sửa lại chỗ hiểu sai trong chỗ bị gạch dưới đây: Lập luận
 > đúng phải là: Vì A có n independent eigenvectors nên
@@ -368,8 +368,8 @@
 >
 > Điều này khác với khi xét matrix A là matrix **cũng rank 1**, nhưng có shape là
 > **1x3**, tức là nó **chỉ có 1 row**, nhưng 3 columns. Lúc bấy giờ, row-space là và
-> nullspace là **subspace của R^3** (thay vì R^1), và **với 1 pivot row**, hay, 1 vector
-> trong basis của row space, nó **chỉ đủ để span một line trong R^3**. Và vì vậy, vì
+> nullspace là **subspace của R³** (thay vì R^1), và **với 1 pivot row**, hay, 1 vector
+> trong basis của row space, nó **chỉ đủ để span một line trong R³**. Và vì vậy, vì
 > định lý **tổng dimension của rowspace và nullspace bằng 3**, nên **nullspace sẽ có
 > dimension = 2**, tức là một plane.
 >
@@ -424,7 +424,7 @@
 >
 >
 >
-> Như gs viết ở đây, thế vào ta tính ra aᵀa = 14, aᵀb = 38 -> D^ = 38/14
+> Như gs viết ở đây, thế vào ta tính ra aᵀa = 14, aᵀb = 38 → D^ = 38/14
 
 <br>
 
@@ -434,7 +434,7 @@
 
 > [!NOTE]
 > câu hỏi tiếp theo là **Gram Smidth**. Cho hai vector a1, a2
-> tạo một plane trong R^3. yêu cầu tìm một **bộ** **hai vector
+> tạo một plane trong R³. yêu cầu tìm một **bộ** **hai vector
 > orthogonal trong plane** đó. Thế thì theo gs,  **đương nhiên
 > có vô số** cặp vector orthogonal trong plane. Và ta sẽ làm
 > theo cách tiếp cận của Gram Smith bắt đầu bằng việc
@@ -667,7 +667,7 @@
 >
 >
 >
-> -> a21*(-(1*det A2)) = - det A2 = - Dn-2
+> → a21*(-(1*det A2)) = - det A2 = - Dn-2
 >
 >
 >
@@ -723,7 +723,7 @@
 >
 >
 >
-> λ = [-b +/- sqrt(b² - 4ac)] / 2a = [-(-1) +/- sqrt(b^2 - 4ac)]/2a = 
+> λ = [-b +/- sqrt(b² - 4ac)] / 2a = [-(-1) +/- sqrt(b² - 4ac)]/2a = 
 >
 >
 >
@@ -731,7 +731,7 @@
 >
 >
 >
-> Chỗ này ôn chút xíu về imaginary number i: i^2 = -1 s
+> Chỗ này ôn chút xíu về imaginary number i: i² = -1 s
 >
 >
 >
@@ -806,7 +806,7 @@
 >
 >
 >
-> Như vậy nó nằm trên UNIT CIRCLE -> modulus r = 1
+> Như vậy nó nằm trên UNIT CIRCLE → modulus r = 1
 >
 >
 >
@@ -882,7 +882,7 @@
 >
 >
 >
-> -> e^ i*(+/-2π) = cos(+/-2π) + i*sin(+/-2π) =  1 + i*0 = **1**
+> → e^ i*(+/-2π) = cos(+/-2π) + i*sin(+/-2π) =  1 + i*0 = **1**
 >
 >
 >
@@ -892,11 +892,11 @@
 >
 >
 >
-> Ax = λx ⇒ A^2x = AAx = Aλx = λAx = λλx = λ^2x
+> Ax = λx ⇒ A²x = AAx = Aλx = λAx = λλx = λ^2x
 >
 >
 >
-> Như vậy A^2x = λ^2x suy ra **x cũng là eigenvector của A^2** với
+> Như vậy A²x = λ^2x suy ra **x cũng là eigenvector của A²** với
 > **eigenvalue = λ^2**
 >
 >
@@ -1120,10 +1120,10 @@
 >
 >
 >
-> me: vì **C(A) là subspace của R^4** (do matrix có 4 hàng,
+> me: vì **C(A) là subspace của R⁴** (do matrix có 4 hàng,
 > vector column có 4 components). Vậy **nếu A invertible**,
 > tức là full-rank, thì **4 cols của nó sẽ là 4 vector độc lập**,
-> SPAN TOÀN BỘ R^4. Khi đó **projection lên Column
+> SPAN TOÀN BỘ R⁴. Khi đó **projection lên Column
 > space** của A **chính là projection một vector trong R4 lên
 > R**4, đương nhiên chỉ là chính nó. Khi đó ta sẽ có
 > **projection matrix chính là Identity matrix.**
@@ -1146,7 +1146,7 @@
 <p align="center"><kbd><img src="assets/8ra8ki9btbx.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs: correct!. det A4 = 9, -> non singular ⇒ P chính là I
+> Gs: correct!. det A4 = 9, → non singular ⇒ P chính là I
 
 <br>
 
