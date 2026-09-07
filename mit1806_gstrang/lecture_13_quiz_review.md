@@ -116,7 +116,7 @@
 >
 >
 > Thử trả lời: Matrix B dù có 10 hàng thì vì 5 hàng dưới là
-> bằng 2*5 hàng trên. Tức là, chúng dependent 5 hàng trên.
+> bằng 2 × 5 hàng trên. Tức là, chúng dependent 5 hàng trên.
 > Và ta biết U có rank = 3, tức là nó có 3 independent cols
 > cũng như row.
 >
@@ -199,6 +199,8 @@
 
 <a id="node-mhdamh8"></a>
 
+###### Rank of Block Matrices
+
 <p align="center"><kbd><img src="assets/6daytim4y6n.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -206,7 +208,7 @@
 >
 >
 >
-> Me: 2*rank U = 2*3 = 6. Lí do là vì ta có 6 hàng độc lập
+> Me: 2 × rank U = 2 × 3 = 6. Lí do là vì ta có 6 hàng độc lập
 >
 >
 >
@@ -230,11 +232,11 @@
 >
 >
 >
-> Thì như đã nói C có rank là 2*rankU = 6
+> Thì như đã nói C có rank là 2 × rankU = 6
 >
 >
 >
-> và C có 2*5 = 10 hàng, tức là ta có 6 hàng độc lập, 4 hàng
+> và C có 2 × 5 = 10 hàng, tức là ta có 6 hàng độc lập, 4 hàng
 > phụ thuộc.
 >
 >
@@ -333,7 +335,7 @@
 
 > [!NOTE]
 > Rồi, tiếp ta sẽ đi tìm A. Thế thì việc vector x_particular =
-> [2, 0, 0]ᵀ là solution có nghĩa là: 2*col1 + 0*col2 + 0*col3
+> [2, 0, 0]ᵀ là solution có nghĩa là: 2 × col1 + 0 × col2 + 0 × col3
 > = b = [2, 4, 2]
 >
 >
@@ -367,7 +369,7 @@
 >
 >
 >
-> Ta có 1*col1 + 1*col2 + 0*col3 = 0 suy ra col2 = -col1 = **[-1,-2,-1]**
+> Ta có 1 × col1 + 1 × col2 + 0 × col3 = 0 suy ra col2 = -col1 = **[-1,-2,-1]**
 >
 >
 >
@@ -375,7 +377,7 @@
 >
 >
 >
-> Ta có 0*col1 + 0*col2 + 1*col3 = 0 Suy ra col3 = **[0, 0, 0]ᵀ**
+> Ta có 0 × col1 + 0 × col2 + 1 × col3 = 0 Suy ra col3 = **[0, 0, 0]ᵀ**
 
 <br>
 
@@ -409,7 +411,7 @@
 >
 >
 >
-> Vậy b phải có dạng a*col1 + b*col2 + c*col3 tức là a*[1,2,1]ᵀ +  b*[-1, -2, -1]
+> Vậy b phải có dạng a × col1 + b × col2 + c × col3 tức là a*[1,2,1]ᵀ +  b*[-1, -2, -1]
 
 <br>
 
@@ -697,7 +699,7 @@
 >
 > (ở đây khi review sau khi đã học **determinant** ta có thể dùng 
 > **cofactor formula** để tính nhanh det của A theo cột 3: + 1 * det
-> của matrix [1 1; 0 1] = 1*1 = 1 ⇒ khác 0 nên matrix non-singular
+> của matrix [1 1; 0 1] = 1 × 1 = 1 ⇒ khác 0 nên matrix non-singular
 > hay fullrank ⇒ nullspace chỉ có zero.
 >
 >
@@ -772,11 +774,11 @@
 >
 >
 >
-> thế vô equation 2: 0*x1 + 1*x2 + 1*1 -1*0 = 0 ⇒ x2 = -1.
+> thế vô equation 2: 0 × x1 + 1 × x2 + 1 × 1 -1 × 0 = 0 ⇒ x2 = -1.
 >
 >
 >
-> thế vô equation 1: 1*x1 + 0*x2 - 1*1 +2*0 = 0  ⇒ x1 = 1
+> thế vô equation 1: 1 × x1 + 0 × x2 - 1 × 1 +2 × 0 = 0  ⇒ x1 = 1
 >
 >
 >
@@ -923,7 +925,7 @@
 
 > [!NOTE]
 > Gs: Thế ngược lại, nếu A và B có cùng 4 fundamental
-> subspaces thì có phải là A = alpha*B không?
+> subspaces thì có phải là A = α*B không?
 >
 >
 >
@@ -966,7 +968,7 @@
 
 > [!NOTE]
 > Me bởi vì nếu v vừa là 1 row vừa nằm trong
-> nullspace thì ta sẽ có 1*1 + 2*2 + 3*3 = 0 mà
+> nullspace thì ta sẽ có 1 × 1 + 2 × 2 + 3 × 3 = 0 mà
 > điều này không đúng
 
 <br>
