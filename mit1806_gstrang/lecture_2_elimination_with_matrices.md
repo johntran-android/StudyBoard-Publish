@@ -173,13 +173,13 @@
 <p align="center"><kbd><img src="assets/xx032xuhcm.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> **matrix** A @ **col x** là **linear combination** của các
+> **matrix** A × **col x** là **linear combination** của các
 > matrix column, với **coeff là components của x** nên sẽ
 > **được column**
 >
 >
 >
-> **row x @ matrix A** thì sẽ là **linear combination của các
+> **row x × matrix A** thì sẽ là **linear combination của các
 > row của matrix A** với **coeff là components của x**, nên
 > sẽ **được row.**
 
@@ -385,7 +385,7 @@
 >
 >
 > Để **dc hàng thứ 1** ra **[c d]** ta cần hàng thứ 1 của
-> matrix abcd * 0 + hàng thứ 2 của abcd * 1 -> **row 1
+> matrix abcd * 0 + hàng thứ 2 của abcd * 1 → **row 1
 > của matrix cần tìm là [0 1]**
 >
 >
@@ -442,8 +442,8 @@
 <p align="center"><kbd><img src="assets/tlqwlczu1h.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs nhắc nhở rằng **nhân matrix phải theo thứ tự, A@B
-> KHÔNG BẲNG B@A**
+> Gs nhắc nhở rằng **nhân matrix phải theo thứ tự, A×B
+> KHÔNG BẲNG B×A**
 >
 >
 >
