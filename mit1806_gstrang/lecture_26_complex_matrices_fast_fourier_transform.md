@@ -339,7 +339,7 @@
 
 > [!NOTE]
 > Và ta như đã biết với orthogonal matrix Q, QᵀQ = I.
-> Nên **F4_hermit.F4 = I**
+> Nên **F4_hermit × F4 = I**
 
 <br>
 
