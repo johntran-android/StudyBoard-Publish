@@ -104,7 +104,7 @@
 
 > [!NOTE]
 > Ví dụ khác, v1 và v2 = 0. Cũng là dependence. Vì có thể
-> có 0*v1 + 100*v2 = 0 + 0 = 0. Vẫn thỏa điều kiện là **tồn tại
+> có 0 × v1 + 100 × v2 = 0 + 0 = 0. Vẫn thỏa điều kiện là **tồn tại
 > bộ non-zero coefficients để tạo linear combination = zero**
 
 <br>
@@ -209,7 +209,7 @@
 > space, nên nó nhất định, ít nhất thì cũng chứa vector zero (ôn lại
 > tiếp, vì vector space có tính chất linear combination của hai vector
 > đều tạo một véctơ cũng nằm trong space, nên vector space luôn
-> phải có zero, vì nếu không 0*a = 0 sẽ không nằm trong space thì sẽ
+> phải có zero, vì nếu không 0 × a = 0 sẽ không nằm trong space thì sẽ
 > không thỏa điều kiện vừa nói)
 >
 >
@@ -343,7 +343,7 @@
 >
 >
 > Thì dễ thấy chúng là 3 vector **trùng với 3 trục của không
-> gian R³**, nên nếu **muốn c1*v1 + c2*v2 + c3*v3 = 0** thì
+> gian R³**, nên nếu **muốn c1 × v1 + c2 × v2 + c3 × v3 = 0** thì
 > **chỉ có một case là c1=c2=c3=0.**
 >
 >
@@ -479,6 +479,8 @@
 
 <a id="node-ydjty85"></a>
 
+###### Basis of Column Space
+
 <p align="center"><kbd><img src="assets/w3bjr7fbqbm.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -603,7 +605,7 @@
 >
 > Me: **Không**, vì **chúng không independence**, cols 4 =
 > cols 1 hay cols 4 là một linear combination của các cols
-> khác với hệ số 1*col1 + 0*col2 + 0*col3
+> khác với hệ số 1 × col1 + 0 × col2 + 0 × col3
 
 <br>
 
@@ -617,7 +619,7 @@
 >
 >
 >
-> Me: như đã nói col4 = 1*col1 + 0*col2 + 0*col3
+> Me: như đã nói col4 = 1 × col1 + 0 × col2 + 0 × col3
 > nên **1***col1 + **0***col2 + **0***col3 **- 1***col4 = **0**
 >
 >
