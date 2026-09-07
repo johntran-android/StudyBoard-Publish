@@ -81,14 +81,14 @@
 >
 >
 > me: vì mọi columns đều independent, nên không có free
-> columns -> không có special solutions. -> không có vector
+> columns → không có special solutions. → không có vector
 > nào trong basis của nullspace, hay nullspace chỉ có độc mỗi
 > zero vector, dim cuả nullspace = 0
 >
 >
 >
 > Cũng có thể giải thích cách khác: Ta có n cols < m,  rồi thì
-> row vector là vector trong R^n. Thế mà ta có n independent
+> row vector là vector trong Rⁿ. Thế mà ta có n independent
 > columns thì tức là cũng có n independent rows.
 >
 >
@@ -99,8 +99,8 @@
 >
 >
 >
-> Hoặc lập luận kiểu khác vì n independent R^n (row) vector
-> này đã đủ span the whole space R^n. Vậy **mọi vector trong
+> Hoặc lập luận kiểu khác vì n independent Rⁿ (row) vector
+> này đã đủ span the whole space Rⁿ. Vậy **mọi vector trong
 > Rn** thì **cũng là trong rowspace** và ta biết mọi vector
 > trong rowspace đều được map với vector trong columns
 > space. Nên k**hông có (nonzero) vector nào bị map thành
@@ -138,7 +138,7 @@
 > thể span được một n-D subspace trong Rm, nên hoàn
 > tòan có thể tồn tại b nằm ngoài subspace này) khi đó,
 > **không thể có linear combination nào của các columns
-> để tạo ra b** -> không có x_particular -> Ax = b **no
+> để tạo ra b** → không có x_particular → Ax = b **no
 > solution.**
 
 <br>
@@ -363,23 +363,23 @@
 >
 >
 >
-> Project b on C(A), thành p, nên p thuộc C(A) =&gt; có thể express p bởi linear combination of A's columns: p = Ax^. e = b - p sẽ vuông góc với C(A) =&gt; Aᵀe = 0 mang ý nghĩa e vuông góc với mọi row của Aᵀ, tức column của A (điều này cũng cho thấy e chính là thuộc left nullspace của A, như đã biết là solution của Aᵀy=0)
+> Project b on C(A), thành p, nên p thuộc C(A) =&gt; có thể express p bởi linear combination of A's columns: p = Ax̂. e = b - p sẽ vuông góc với C(A) =&gt; Aᵀe = 0 mang ý nghĩa e vuông góc với mọi row của Aᵀ, tức column của A (điều này cũng cho thấy e chính là thuộc left nullspace của A, như đã biết là solution của Aᵀy=0)
 >
 >
 >
-> Vậy Aᵀ(b-Ax^) = 0 (Đây chính là NORMAL EQUATION)
+> Vậy Aᵀ(b-Ax̂) = 0 (Đây chính là NORMAL EQUATION)
 >
 >
 >
-> &lt;=&gt; Aᵀb = AᵀAx^
+> &lt;=&gt; Aᵀb = AᵀAx̂
 >
 >
 >
-> &lt;=&gt; x^ = (AᵀA)⁻¹Aᵀb
+> &lt;=&gt; x̂ = (AᵀA)⁻¹Aᵀb
 >
 >
 >
-> và p = Ax^ = A(AᵀA)⁻¹Aᵀb =&gt; P = A(AᵀA)⁻¹Aᵀ là matrix giúp projection b lên C(A) để p = Pb thuộc C(A)
+> và p = Ax̂ = A(AᵀA)⁻¹Aᵀb =&gt; P = A(AᵀA)⁻¹Aᵀ là matrix giúp projection b lên C(A) để p = Pb thuộc C(A)
 >
 >
 >
@@ -443,9 +443,9 @@
 >
 >
 > Hay khi A full column rank, thì cũng vậy, **không có x trong
-> R^n (cũng là rows space**, vì đủ independent row để span
-> R^n) khác 0 nào **bị biến thành 0**: Ax khác 0 với mọi x khác
-> 0. Nên **luôn có thể đảo ngược lại quá trình từ Ax -> x**, thể
+> Rⁿ (cũng là rows space**, vì đủ independent row để span
+> Rⁿ) khác 0 nào **bị biến thành 0**: Ax khác 0 với mọi x khác
+> 0. Nên **luôn có thể đảo ngược lại quá trình từ Ax → x**, thể
 > hiện qua việc dùng matrix **A_left inverse** = (AᵀA)⁻¹Aᵀ
 >
 >
@@ -493,7 +493,7 @@
 <p align="center"><kbd><img src="assets/5eocgy396wp.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs: đại khái là với mọi vector trong **R^n**, ta có thể có 3 loại: 
+> gs: đại khái là với mọi vector trong **Rⁿ**, ta có thể có 3 loại: 
 >
 >
 >
@@ -581,10 +581,10 @@
 >
 >
 > Ôn lại tí về việc dùng Projection để solve least square
-> problem. Ax = b. b = p + e = Ax^ + e ⇔ e = b - Ax^ Aᵀe = 0
-> ⇔ Aᵀ(b-Ax^) = 0 ⇔ Aᵀb - AᵀAx^ = 0 ⇔ Aᵀb = AᵀAx^
-> ⇔ x^ = (AᵀA)⁻¹ Aᵀb -> đây là best solution to Ax = b. Và
-> như vậy **x^** chính là **A_left_inverse*b**
+> problem. Ax = b. b = p + e = Ax̂ + e ⇔ e = b - Ax̂ Aᵀe = 0
+> ⇔ Aᵀ(b-Ax̂) = 0 ⇔ Aᵀb - AᵀAx̂ = 0 ⇔ Aᵀb = AᵀAx̂
+> ⇔ x̂ = (AᵀA)⁻¹ Aᵀb → đây là best solution to Ax = b. Và
+> như vậy **x̂** chính là **A_left_inverse*b**
 >
 >
 >
@@ -592,7 +592,7 @@
 > đo đạc khiến statistician có một **matrix A không full column
 > rank**, tức **không có các column independent**. Mà như
 > vậy thì **AᵀA  không invertible** như ta đã biết, khiến **không
-> thể có AᵀA⁻¹** để mà có x^ = (AᵀA)⁻¹ Aᵀb như trên được.
+> thể có AᵀA⁻¹** để mà có x̂ = (AᵀA)⁻¹ Aᵀb như trên được.
 
 <br>
 
