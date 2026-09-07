@@ -877,15 +877,15 @@
 >
 >
 >
-> d/dp \[Σi pi ln(pi)\] = d/dp \[pTln(p)\]
+> d/dp \[Σi pi ln(pi)\] = d/dp \[pᵀln(p)\]
 >
 >
 >
-> Xét df, f(p) = pTln(p).
+> Xét df, f(p) = pᵀln(p).
 >
 >
 >
-> df = (p + dp)Tln(p + dp) - pTln(p) = pTln(p + dp) + dpTln(p + dp) - pTln(p)
+> df = (p + dp)ᵀln(p + dp) - pᵀln(p) = pᵀln(p + dp) + dpᵀln(p + dp) - pᵀln(p)
 >
 >
 >
@@ -897,7 +897,7 @@
 >
 >
 >
-> ⇨ pTln(p + dp) + dpTln(p + dp) - pTln(p)
+> ⇨ pᵀln(p + dp) + dpᵀln(p + dp) - pᵀln(p)
 >
 >
 >
@@ -933,11 +933,11 @@
 >
 >
 >
-> = \[1 + ln(p)\]Tdp
+> = \[1 + ln(p)\]ᵀdp
 >
 >
 >
-> Vậy df(p) = \[1 + ln(p)\]Tdp ⇨ ∇f = 1 + ln(p) giống cách 1.
+> Vậy df(p) = \[1 + ln(p)\]ᵀdp ⇨ ∇f = 1 + ln(p) giống cách 1.
 >
 >
 >
@@ -949,7 +949,7 @@
 >
 >
 >
-> Còn d/dp (Σi pi - 1) = d/dp (Σi pi) = d/dp (pT1) = 1 (tự hiểu đây là vector \[1,...1\])
+> Còn d/dp (Σi pi - 1) = d/dp (Σi pi) = d/dp (pᵀ1) = 1 (tự hiểu đây là vector \[1,...1\])
 >
 >
 >
@@ -989,15 +989,15 @@
 >
 >
 >
-> Viết lại entropy dạng vectorized: Σi pi ln pi = pTln(p)
+> Viết lại entropy dạng vectorized: Σi pi ln pi = pᵀln(p)
 >
 >
 >
-> Như đã làm, gradient ∇\[pTln(p)\] = 1 + ln(p)
+> Như đã làm, gradient ∇\[pᵀln(p)\] = 1 + ln(p)
 >
 >
 >
-> Để tìm Hessian của entropy, thì cũng là Jacobian của ∇\[pTln(p)\], tức d/dp \[1 + ln(p)\]
+> Để tìm Hessian của entropy, thì cũng là Jacobian của ∇\[pᵀln(p)\], tức d/dp \[1 + ln(p)\]
 >
 >
 >
@@ -1005,7 +1005,7 @@
 >
 >
 >
-> d∇\[pTln(p)\] = 1 + ln(p + dp) - 1 - ln(p) = ln(p + dp) - ln(p)
+> d∇\[pᵀln(p)\] = 1 + ln(p + dp) - 1 - ln(p) = ln(p + dp) - ln(p)
 >
 >
 >
@@ -1037,11 +1037,11 @@
 >
 >
 >
-> Vậy d∇\[pTln(p)\] = diag(1/p1, 1/p2,....)dp
+> Vậy d∇\[pᵀln(p)\] = diag(1/p1, 1/p2,....)dp
 >
 >
 >
-> ⇨ Jacobian của ∇\[pTln(p)\]\] cũng chính là Hessian của pTln(p) chính là diag(1/p1, 1/p2,....)
+> ⇨ Jacobian của ∇\[pᵀln(p)\]\] cũng chính là Hessian của pᵀln(p) chính là diag(1/p1, 1/p2,....)
 >
 >
 >
@@ -1231,7 +1231,7 @@
 <p align="center"><kbd><img src="assets/aacvt8kkzf.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Với random vector **X**, differential entropy H(**X**) = ∫f(**x**)ln(f(**x**))d**x**(f(**x**) lúc này là joint pdf)
+> Với random vector 𝐗, differential entropy H(𝐗) = ∫f(𝐱)ln(f(𝐱))d𝐱(f(𝐱) lúc này là joint pdf)
 
 <br>
 
@@ -1334,7 +1334,7 @@
 >
 >
 >
-> vì yêu cầu f(x) phải là valid pdf, nên tương tự như discrete case ta có ràng buộc ∫f(x)dx = 1. Bên cạnh đó, gọi μ và σ^2 là mean và variance, ta cũng sẽ có ∫xf(x)dx = μ và ∫(x - μ)^2f(x)dx = σ^2, là hai ràng buộc khác.
+> vì yêu cầu f(x) phải là valid pdf, nên tương tự như discrete case ta có ràng buộc ∫f(x)dx = 1. Bên cạnh đó, gọi μ và σ² là mean và variance, ta cũng sẽ có ∫xf(x)dx = μ và ∫(x - μ)²f(x)dx = σ², là hai ràng buộc khác.
 >
 >
 >
@@ -1342,23 +1342,23 @@
 >
 >
 >
-> maximize_f(x) { -∫f(x)ln\[f(x)\]dx } s.t ∫f(x)dx = 1, ∫xf(x)dx = μ, ∫(x - μ)^2f(x)dx = σ^2.
+> maximize_f(x) { -∫f(x)ln\[f(x)\]dx } s.t ∫f(x)dx = 1, ∫xf(x)dx = μ, ∫(x - μ)²f(x)dx = σ².
 >
 >
 >
-> Lagrangian: L(x, λ) = -∫f(x)ln\[f(x)\]dx + λ1(∫f(x)dx - 1) + λ2(∫xf(x)dx - μ) + λ3(∫(x - μ)^2f(x)dx - σ^2)
+> Lagrangian: L(x, λ) = -∫f(x)ln\[f(x)\]dx + λ1(∫f(x)dx - 1) + λ2(∫xf(x)dx - μ) + λ3(∫(x - μ)²f(x)dx - σ²)
 >
 >
 >
-> = -∫f(x)ln\[f(x)\]dx + λ1∫f(x)dx - λ1 + λ2∫xf(x)dx - λ2μ + λ3∫(x - μ)^2f(x)dx - λ3σ^2
+> = -∫f(x)ln\[f(x)\]dx + λ1∫f(x)dx - λ1 + λ2∫xf(x)dx - λ2μ + λ3∫(x - μ)²f(x)dx - λ3σ²
 >
 >
 >
-> = -∫f(x)ln\[f(x)\]dx + λ1∫f(x)dx + λ2∫xf(x)dx + λ3∫(x - μ)^2f(x)dx - λ1 - λ2μ - λ3σ^2
+> = -∫f(x)ln\[f(x)\]dx + λ1∫f(x)dx + λ2∫xf(x)dx + λ3∫(x - μ)²f(x)dx - λ1 - λ2μ - λ3σ²
 >
 >
 >
-> = ∫ {-f(x)ln\[f(x)\] + λ1f(x) + λ2xf(x) + λ3(x - μ)^2f(x)} dx - λ1 - λ2μ - λ3σ^2
+> = ∫ {-f(x)ln\[f(x)\] + λ1f(x) + λ2xf(x) + λ3(x - μ)²f(x)} dx - λ1 - λ2μ - λ3σ²
 >
 >
 >
@@ -1382,7 +1382,7 @@
 >
 >
 >
-> G(f(x),x) = {-f(x)ln\[f(x)\] + λ1f(x) + λ2xf(x) + λ3(x - μ)^2f(x)}
+> G(f(x),x) = {-f(x)ln\[f(x)\] + λ1f(x) + λ2xf(x) + λ3(x - μ)²f(x)}
 >
 >
 >
@@ -1394,35 +1394,35 @@
 >
 >
 >
-> ⇔ ∂/∂f(x) {-f(x)ln\[f(x)\] + λ1f(x) + λ2xf(x) + λ3(x - μ)^2f(x)} = 0
+> ⇔ ∂/∂f(x) {-f(x)ln\[f(x)\] + λ1f(x) + λ2xf(x) + λ3(x - μ)²f(x)} = 0
 >
 >
 >
-> ⇔ ∂/∂f(x) {-f(x)ln\[f(x)\]} + ∂/∂f(x) {λ1f(x)} + ∂/∂f(x) {\[λ2xf(x)\] + ∂/∂f(x) {λ3(x - μ)^2f(x)} = 0
+> ⇔ ∂/∂f(x) {-f(x)ln\[f(x)\]} + ∂/∂f(x) {λ1f(x)} + ∂/∂f(x) {\[λ2xf(x)\] + ∂/∂f(x) {λ3(x - μ)²f(x)} = 0
 >
 >
 >
-> ⇔ {∂/∂f(x) \[-f(x)\]} ln\[f(x)\] + {-f(x) \[∂/∂f(x) \[f(x)\]} + λ1 ∂/∂f(x) {f(x)} + λ2x ∂/∂f(x) {f(x)} + λ3(x - μ)^2 ∂/∂f(x) {f(x)} = 0
+> ⇔ {∂/∂f(x) \[-f(x)\]} ln\[f(x)\] + {-f(x) \[∂/∂f(x) \[f(x)\]} + λ1 ∂/∂f(x) {f(x)} + λ2x ∂/∂f(x) {f(x)} + λ3(x - μ)² ∂/∂f(x) {f(x)} = 0
 >
 >
 >
-> ⇔ - ln f(x) + {-f(x) \[1/f(x)\]} + λ1 + λ2x + λ3(x - μ)^2 = 0
+> ⇔ - ln f(x) + {-f(x) \[1/f(x)\]} + λ1 + λ2x + λ3(x - μ)² = 0
 >
 >
 >
-> ⇔ - ln f(x) - 1 + λ1 + λ2x + λ3(x - μ)^2 = 0
+> ⇔ - ln f(x) - 1 + λ1 + λ2x + λ3(x - μ)² = 0
 >
 >
 >
-> ⇔ - 1 + λ1 + λ2x + λ3(x - μ)^2 = lnf(x)
+> ⇔ - 1 + λ1 + λ2x + λ3(x - μ)² = lnf(x)
 >
 >
 >
-> ⇔ exp\[-1 + λ1 + λ2x + λ3(x - μ)^2\] = f(x) ⇨ Đây là 1.108 trong sách Bishop
+> ⇔ exp\[-1 + λ1 + λ2x + λ3(x - μ)²\] = f(x) ⇨ Đây là 1.108 trong sách Bishop
 >
 >
 >
-> Viết lại f(x) = exp\[-1 + λ1\] exp\[λ2x + λ3(x - μ)^2\]
+> Viết lại f(x) = exp\[-1 + λ1\] exp\[λ2x + λ3(x - μ)²\]
 >
 >
 >
@@ -1430,47 +1430,47 @@
 >
 >
 >
-> Đầu tiên xét exp\[λ2x + λ3(x - μ)^2\]
+> Đầu tiên xét exp\[λ2x + λ3(x - μ)²\]
 >
 >
 >
-> = exp\[λ2x + λ3(x^2 - 2xμ + μ^2)\]
+> = exp\[λ2x + λ3(x² - 2xμ + μ²)\]
 >
 >
 >
-> = exp\[λ2x + λ3x^2 - 2λ3xμ + λ3μ^2\]
+> = exp\[λ2x + λ3x² - 2λ3xμ + λ3μ²\]
 >
 >
 >
-> = exp\[λ3x^2 - 2λ3xμ + λ2λ3x/λ3 + λ3μ^2\]
+> = exp\[λ3x² - 2λ3xμ + λ2λ3x/λ3 + λ3μ²\]
 >
 >
 >
-> = exp{λ3\[x^2 - 2xμ + λ2x/λ3 + μ^2\]}
+> = exp{λ3\[x² - 2xμ + λ2x/λ3 + μ²\]}
 >
 >
 >
-> = exp{λ3\[x^2 - 2x(μ - λ2/2λ3) + μ^2\]}
+> = exp{λ3\[x² - 2x(μ - λ2/2λ3) + μ²\]}
 >
 >
 >
-> = exp{λ3\[x^2 - 2x(μ - λ2/2λ3) + (μ - λ2/2λ3)^2 - (μ - λ2/2λ3)^2 + μ^2\]}
+> = exp{λ3\[x² - 2x(μ - λ2/2λ3) + (μ - λ2/2λ3)² - (μ - λ2/2λ3)² + μ²\]}
 >
 >
 >
-> = exp{λ3\[x - (μ - λ2/2λ3)\]^2 - λ3(μ - λ2/2λ3)^2 + λ3μ^2\]}
+> = exp{λ3\[x - (μ - λ2/2λ3)\]² - λ3(μ - λ2/2λ3)² + λ3μ²\]}
 >
 >
 >
-> = exp{λ3\[x - (μ - λ2/2λ3)\]^2 - λ3\[(μ - λ2/2λ3)^2 - μ^2\]}
+> = exp{λ3\[x - (μ - λ2/2λ3)\]² - λ3\[(μ - λ2/2λ3)² - μ²\]}
 >
 >
 >
-> = exp{λ3\[x - (μ - λ2/2λ3)\]^2} / exp {λ3\[(μ - λ2/2λ3)^2 - μ^2\]}
+> = exp{λ3\[x - (μ - λ2/2λ3)\]²} / exp {λ3\[(μ - λ2/2λ3)² - μ²\]}
 >
 >
 >
-> ⇨ f(x) = exp(-1 + λ1) / exp {λ3\[(μ - λ2/2λ3)^2 - μ^2\]} exp{-\[x - (μ - λ2/2λ3)\]^2 / (-2/2λ3)}
+> ⇨ f(x) = exp(-1 + λ1) / exp {λ3\[(μ - λ2/2λ3)² - μ²\]} exp{-\[x - (μ - λ2/2λ3)\]² / (-2/2λ3)}
 >
 >
 >
@@ -1482,7 +1482,7 @@
 >
 >
 >
-> và exp(-1 + λ1) / exp {λ3\[(μ - λ2/2λ3)^2 - μ^2\]} đóng vai trò là normalizing constant.
+> và exp(-1 + λ1) / exp {λ3\[(μ - λ2/2λ3)² - μ²\]} đóng vai trò là normalizing constant.
 >
 >
 >
@@ -1490,43 +1490,43 @@
 >
 >
 >
-> Để variance = σ^2 ⇨ -1/2λ3 = σ^2 ⇨ λ3 = -1/2σ^2
+> Để variance = σ² ⇨ -1/2λ3 = σ² ⇨ λ3 = -1/2σ²
 >
 >
 >
-> và exp(-1 + λ1) / exp {λ3\[(μ - λ2/2λ3)^2 - μ^2\]} = 1/√2πσ^2
+> và exp(-1 + λ1) / exp {λ3\[(μ - λ2/2λ3)² - μ²\]} = 1/√2πσ²
 >
 >
 >
-> ⇔ exp(-1 + λ1) / exp {λ3\[μ^2 - μ^2\]} = 1/√2πσ^2
+> ⇔ exp(-1 + λ1) / exp {λ3\[μ² - μ²\]} = 1/√2πσ²
 >
 >
 >
-> ⇔ exp(-1 + λ1) = 1/√2πσ^2
+> ⇔ exp(-1 + λ1) = 1/√2πσ²
 >
 >
 >
-> ⇔ -1 + λ1 = ln\[1/√2πσ^2\]
+> ⇔ -1 + λ1 = ln\[1/√2πσ²\]
 >
 >
 >
-> ⇔ -1 + λ1 = ln1 - ln\[√2πσ^2\]
+> ⇔ -1 + λ1 = ln1 - ln\[√2πσ²\]
 >
 >
 >
-> ⇔ λ1 = 1 + 0 - ln\[√2πσ^2\]
+> ⇔ λ1 = 1 + 0 - ln\[√2πσ²\]
 >
 >
 >
-> ⇔ λ1 = 1 - ln\[(2πσ^2)^1/2\]
+> ⇔ λ1 = 1 - ln\[(2πσ²)^1/2\]
 >
 >
 >
-> ⇔ λ1 = 1 - 1/2 ln\[2πσ^2\]
+> ⇔ λ1 = 1 - 1/2 ln\[2πσ²\]
 >
 >
 >
-> Vậy, kết quả là f(x) = pdf của normal(μ, σ^2). như kết quả 1.109 trong sách
+> Vậy, kết quả là f(x) = pdf của normal(μ, σ²). như kết quả 1.109 trong sách
 
 **🔗 See also:** [Phân phối Gaussian](./230_gaussian_distribution.md#node-arii2cl)
 
@@ -1547,71 +1547,71 @@
 >
 >
 >
-> = -∫ [1/√2πσ^2] exp[-(x-μ)^2/2σ^2] ln {[1/√2πσ^2] exp[-(x-μ)^2/2σ^2]} dx
+> = -∫ [1/√2πσ²] exp[-(x-μ)²/2σ²] ln {[1/√2πσ²] exp[-(x-μ)²/2σ²]} dx
 >
 >
 >
-> = -∫ [1/√2πσ^2] exp[-(x-μ)^2/2σ^2] {ln [1/√2πσ^2] + ln exp[-(x-μ)^2/2σ^2]} dx | ln(ab) = lna + lnb
+> = -∫ [1/√2πσ²] exp[-(x-μ)²/2σ²] {ln [1/√2πσ²] + ln exp[-(x-μ)²/2σ²]} dx | ln(ab) = lna + lnb
 >
 >
 >
-> = -∫ [1/√2πσ^2] exp[-(x-μ)^2/2σ^2] {ln [1/√2πσ^2] - (x-μ)^2/2σ^2} dx
+> = -∫ [1/√2πσ²] exp[-(x-μ)²/2σ²] {ln [1/√2πσ²] - (x-μ)²/2σ²} dx
 >
 >
 >
-> = -∫ [1/√2πσ^2] exp[-(x-μ)^2/2σ^2] {ln [1/√2πσ^2]} dx  +  ∫ [1/√2πσ^2] exp[-(x-μ)^2/2σ^2] (x-μ)^2/2σ^2} dx}
+> = -∫ [1/√2πσ²] exp[-(x-μ)²/2σ²] {ln [1/√2πσ²]} dx  +  ∫ [1/√2πσ²] exp[-(x-μ)²/2σ²] (x-μ)²/2σ²} dx}
 >
 >
 >
-> = - ln [1/√2πσ^2] ∫[1/√2πσ^2] exp[-(x-μ)^2/2σ^2] dx  +  ∫ [1/√2πσ^2] exp[-(x-μ)^2/2σ^2] (x-μ)^2/2σ^2} dx}
+> = - ln [1/√2πσ²] ∫[1/√2πσ²] exp[-(x-μ)²/2σ²] dx  +  ∫ [1/√2πσ²] exp[-(x-μ)²/2σ²] (x-μ)²/2σ²} dx}
 >
 >
 >
-> Vì tính valid của pdf: ∫[1/√2πσ^2] exp[-(x-μ)^2/2σ^2] dx = 1
+> Vì tính valid của pdf: ∫[1/√2πσ²] exp[-(x-μ)²/2σ²] dx = 1
 >
 >
 >
-> = -ln [1/√2πσ^2] * 1 + ∫ [1/√2πσ^2] exp[-(x-μ)^2/2σ^2] (x-μ)^2/2σ^2} dx
+> = -ln [1/√2πσ²] * 1 + ∫ [1/√2πσ²] exp[-(x-μ)²/2σ²] (x-μ)²/2σ²} dx
 >
 >
 >
-> Xét  ∫[1/√2πσ^2] exp[-(x-μ)^2/2σ^2] (x-μ)^2/2σ^2} dx
+> Xét  ∫[1/√2πσ²] exp[-(x-μ)²/2σ²] (x-μ)²/2σ²} dx
 >
 >
 >
-> ∫(1/√2πσ^2) exp[-(x-μ)^2/2σ^2] (x-μ)^2/2σ^2} dx
+> ∫(1/√2πσ²) exp[-(x-μ)²/2σ²] (x-μ)²/2σ²} dx
 >
 >
 >
-> = (1/2σ^2) ∫(1/√2πσ^2) exp[-(x-μ)^2/2σ^2] (x-μ)^2} dx
+> = (1/2σ²) ∫(1/√2πσ²) exp[-(x-μ)²/2σ²] (x-μ)²} dx
 >
 >
 >
-> = (1/2σ^2) ∫f(x) (x - μ)^2 dx
+> = (1/2σ²) ∫f(x) (x - μ)² dx
 >
 >
 >
-> = (1/2σ^2) E[(X - μ)^2] | X ~ f(x)
+> = (1/2σ²) E[(X - μ)²] | X ~ f(x)
 >
 >
 >
-> = (1/2σ^2) σ^2 = 1/2
+> = (1/2σ²) σ² = 1/2
 >
 >
 >
-> Vậy kết quả là -ln [1/√2πσ^2] + 1/2 = - ln [(2πσ^2)^-1/2] + 1/2
+> Vậy kết quả là -ln [1/√2πσ²] + 1/2 = - ln [(2πσ²)^-1/2] + 1/2
 >
 >
 >
-> = 1/2 ln (2πσ^2) + 1/2
+> = 1/2 ln (2πσ²) + 1/2
 >
 >
 >
-> = 1/2 [ln (2πσ^2) + 1] → Đây là kết quả 1.110
+> = 1/2 [ln (2πσ²) + 1] → Đây là kết quả 1.110
 >
 >
 >
-> Nhờ kết quả này ta có nhận xét: khi σ^2 tăng (variance tăng) thì 1/2 [ln (2πσ^2) + 1] cũng tăng theo.
+> Nhờ kết quả này ta có nhận xét: khi σ² tăng (variance tăng) thì 1/2 [ln (2πσ²) + 1] cũng tăng theo.
 >
 >
 >
@@ -1630,8 +1630,8 @@
 
 > [!NOTE]
 > Cuối cùng ta được học một khái niệm nữa, đại khái là xét một joint distribution
-> f(**x**,**y**). Và draw **X**, **Y** từ đó. Tác giả cho biết giả sử đã biết **X=x**, thì lượng thông
-> tin cần thiết để xác định giá trị của Y tương ứng là -ln f(**y**|**x**).
+> f(𝐱,𝐲). Và draw 𝐗, 𝐘 từ đó. Tác giả cho biết giả sử đã biết **X=x**, thì lượng thông
+> tin cần thiết để xác định giá trị của Y tương ứng là -ln f(𝐲|𝐱).
 >
 >
 >
@@ -1642,7 +1642,7 @@
 > → Thì cái này chỉ là định nghĩa thôi. giống như khi ta định nghĩa lượng thông
 > tin chứa trong một giá trị khả dĩ của X: info(x) = - log(f(x)). Thì ở đây, tương tự
 > ta định nghĩa thông tin chứa trong giá trị khả dĩ y khi đã biết X=x là -log(f(y|x))
-> Và ta dùng log base e, nên có -ln f(y|x). Hay ở đây là vector, nên là -ln(f(**y**|**x**))
+> Và ta dùng log base e, nên có -ln f(y|x). Hay ở đây là vector, nên là -ln(f(𝐲|𝐱))
 >
 >
 >
@@ -1651,27 +1651,27 @@
 >
 >
 >
-> thì nay, trung bình của -ln(f(**y**|**x**)), tức E[-ln(f(**Y**|**X**))] = ∫∫-ln(f(**y**,**x**))f(**y**,**x**)d**y**d**x**
+> thì nay, trung bình của -ln(f(𝐲|𝐱)), tức E[-ln(f(𝐘|𝐗))] = ∫∫-ln(f(𝐲,𝐱))f(𝐲,𝐱)d𝐲d𝐱
 >
 >
 >
-> được gọi là **CONDITIONAL ENTROPY** của **Y** given **X:** H(**Y**|**X**)Mình hiểu cái này như vầy:
+> được gọi là **CONDITIONAL ENTROPY** của 𝐘 given **X:** H(𝐘|𝐗)Mình hiểu cái này như vầy:
 >
 >
 >
-> Người ta gọi, định nghĩa additional information needed to specify **y** given
-> **x** là -ln(f(**y**|**x**)), thì nên hiểu ý nghĩa của nó đó là:
+> Người ta gọi, định nghĩa additional information needed to specify 𝐲 given
+> 𝐱 là -ln(f(𝐲|𝐱)), thì nên hiểu ý nghĩa của nó đó là:
 >
 >
 >
-> khi đã biết **X** = **x** thì lượng thông tin cần thiết để xác định ra giá trị **y** của biến
-> **Y** là -ln(f(**y**|**x**)).
+> khi đã biết 𝐗 = 𝐱 thì lượng thông tin cần thiết để xác định ra giá trị 𝐲 của biến
+> 𝐘 là -ln(f(𝐲|𝐱)).
 >
 >
 >
 > Nên cơ bản là mình đang có một random variable W có được bằng cách áp
-> hàm g(**x**,**y**) lên hai biến **X**,**Y**: W = -ln(f(**Y**|**X**)). Và ta sẽ gọi EW là conditional
-> entropy of **Y** given **X**.
+> hàm g(𝐱,𝐲) lên hai biến 𝐗,𝐘: W = -ln(f(𝐘|𝐗)). Và ta sẽ gọi EW là conditional
+> entropy of 𝐘 given 𝐗.
 >
 >
 >
@@ -1679,44 +1679,44 @@
 >
 >
 >
-> EW = Eg(**X**,**Y**) = ∫∫g(x,y)f(x,y)dxdy
+> EW = Eg(𝐗,𝐘) = ∫∫g(x,y)f(x,y)dxdy
 >
 >
 >
-> = ∫∫-ln(f(**y**|**x**))f(**x**,**y**)d**x**d**y**
-> Ta có H(**Y**|**X**) = ∫∫-ln(f(**y**|**x**))f(**y**,**x**)d**x**d**y**
+> = ∫∫-ln(f(𝐲|𝐱))f(𝐱,𝐲)d𝐱d𝐲
+> Ta có H(𝐘|𝐗) = ∫∫-ln(f(𝐲|𝐱))f(𝐲,𝐱)d𝐱d𝐲
 >
 >
 >
-> ∫∫-ln(f(**y**,**x**)/f(**x**))f(**y**,**x**)d**x**d**y**
+> ∫∫-ln(f(𝐲,𝐱)/f(𝐱))f(𝐲,𝐱)d𝐱d𝐲
 >
 >
 >
-> = ∫∫-[lnf(**y**,**x**) - lnf(**x**)]f(**y**,**x**)d**x**d**y** 
+> = ∫∫-[lnf(𝐲,𝐱) - lnf(𝐱)]f(𝐲,𝐱)d𝐱d𝐲 
 >
 >
 >
-> = ∫∫-ln(f(**y**,**x**))f(**y**,**x**)d**x**d**y** - ∫∫-ln(f(**x**))f(**y**,**x**)d**x**d**y**
+> = ∫∫-ln(f(𝐲,𝐱))f(𝐲,𝐱)d𝐱d𝐲 - ∫∫-ln(f(𝐱))f(𝐲,𝐱)d𝐱d𝐲
 >
 >
 >
-> = ∫∫-ln(f(**y**,**x**))f(**y**,**x**)d**x**d**y** - ∫-ln(f(**x**))[∫f(**y**,**x**)d**y**]d**x** 
+> = ∫∫-ln(f(𝐲,𝐱))f(𝐲,𝐱)d𝐱d𝐲 - ∫-ln(f(𝐱))[∫f(𝐲,𝐱)d𝐲]d𝐱 
 >
 >
 >
-> = ∫∫-ln(f(**y**,**x**))f(**y**,**x**)d**x**d**y** - ∫-ln(f(**x**))f(**x**)d**x**
+> = ∫∫-ln(f(𝐲,𝐱))f(𝐲,𝐱)d𝐱d𝐲 - ∫-ln(f(𝐱))f(𝐱)d𝐱
 >
 >
 >
-> = ∫∫-ln(f(**y**,**x**))f(**y**,**x**)d**x**d**y** - ∫-ln(f(**x**))f(**x**)d**x**
+> = ∫∫-ln(f(𝐲,𝐱))f(𝐲,𝐱)d𝐱d𝐲 - ∫-ln(f(𝐱))f(𝐱)d𝐱
 >
 >
 >
-> Đây chính là H(**X**,**Y**) - H(**X**)
+> Đây chính là H(𝐗,𝐘) - H(𝐗)
 >
 >
 >
-> Vậy H(**Y**|**X**) = H(**X**,**Y**) - H(**X**)
+> Vậy H(𝐘|𝐗) = H(𝐗,𝐘) - H(𝐗)
 
 <br>
 
@@ -1738,61 +1738,61 @@
 >
 >
 >
-> Giả sử ta có một population distribution p(**x**). (đến đây mình sẽ dùng chữ
+> Giả sử ta có một population distribution p(𝐱). (đến đây mình sẽ dùng chữ
 > p, thay vì bữa giờ vẫn xài chữ f cho thuận theo notation convention của
-> toán), và ta trong quá trình làm việc đã mô phỏng p(**x**) bằng một
+> toán), và ta trong quá trình làm việc đã mô phỏng p(𝐱) bằng một
 > distribution xấp xỉ q(x).
 >
 >
 >
 > Vậy thì như đã biết khái niệm entropy, là trung bình thông tin của một biến
-> ngẫu nhiên có phân phối xác suất f(x) là: E[Info(**X**)] = [E[-ln(f(**X**))] =
-> -∫f(**x**)lnf(**x**)d**x**.
+> ngẫu nhiên có phân phối xác suất f(x) là: E[Info(𝐗)] = [E[-ln(f(𝐗))] =
+> -∫f(𝐱)lnf(𝐱)d𝐱.
 >
 >
 >
-> Vậy thì ở đây, E[Info(**X**)] = E[-ln(p(**X**))]= -∫p(**x**)lnp(**x**)dx là trung
-> bình thông tin của random  variable **X** ~ p(**x**)
+> Vậy thì ở đây, E[Info(𝐗)] = E[-ln(p(𝐗))]= -∫p(𝐱)lnp(𝐱)dx là trung
+> bình thông tin của random  variable 𝐗 ~ p(𝐱)
 >
 >
 >
-> Nhưng bây giờ, nếu như đã nói ở trên, ta dùng q(**x**) để xấp xỉ cho / mô
-> phỏng cho p(**x**), để rồi thông tin của **X** sẽ được tính từ q(**x**) thay vì
-> p(**x**). Info(**X**) = -ln(q(**X**)).  Và trung bình thông tin của x sẽ là
-> E[Info(**X**)] = E[-ln(q(**X**)]
+> Nhưng bây giờ, nếu như đã nói ở trên, ta dùng q(𝐱) để xấp xỉ cho / mô
+> phỏng cho p(𝐱), để rồi thông tin của 𝐗 sẽ được tính từ q(𝐱) thay vì
+> p(𝐱). Info(𝐗) = -ln(q(𝐗)).  Và trung bình thông tin của x sẽ là
+> E[Info(𝐗)] = E[-ln(q(𝐗)]
 >
 >
 >
-> thì đây cũng là kì vọng của biến ngẫu nhiên có được từ việc áp hàm g(**x**)
-> = -ln(q(**x**)) lên **X**
+> thì đây cũng là kì vọng của biến ngẫu nhiên có được từ việc áp hàm g(𝐱)
+> = -ln(q(𝐱)) lên 𝐗
 >
 >
 >
-> theo **lotus** cho phép ta tính: = E[-ln(q(**X**)] = -∫p(**x**)lnq(**x**)d**x**.
+> theo **lotus** cho phép ta tính: = E[-ln(q(𝐗)] = -∫p(𝐱)lnq(𝐱)d𝐱.
 >
 >
 >
 > Nói vậy để **hiểu bản chất giúp ta khỏi thắc mắc** vì sao ko phải là
-> -∫q(**x**)lnq(**x**)dx.
+> -∫q(𝐱)lnq(𝐱)dx.
 >
 >
 >
 > Thế thì mức chênh lệch giữa chúng, gọi là lượng thông tin bổ sung
-> (additional) để có thể xác định được giá trị của **x** một cách đầy đủ mà sự
-> thiếu hụt gây ra là do ta dùng q(**x**) thay vì p(**x**), chính là relative
+> (additional) để có thể xác định được giá trị của 𝐱 một cách đầy đủ mà sự
+> thiếu hụt gây ra là do ta dùng q(𝐱) thay vì p(𝐱), chính là relative
 > entropy hay KL Divergence, kí hiệu LK(p||q)
 >
 >
 >
-> -∫p(x)lnq(x)dx -[-∫p(**x**)lnp(**x**)d**x**]
+> -∫p(x)lnq(x)dx -[-∫p(𝐱)lnp(𝐱)d𝐱]
 >
 >
 >
-> = -∫[p(**x**)ln[q(**x**)-lnp(**x**)]d**x**
+> = -∫[p(𝐱)ln[q(𝐱)-lnp(𝐱)]d𝐱
 >
 >
 >
-> = -∫p(**x**)ln[q(**x**)/p(**x**)]d**x**.
+> = -∫p(𝐱)ln[q(𝐱)/p(𝐱)]d𝐱.
 >
 >
 >
@@ -1810,7 +1810,7 @@
 
 > [!NOTE]
 > Thế thì đại ý là tiếp theo ta sẽ đi chứng minh rằng LK(p||q) sẽ không âm, và chỉ
-> bằng 0 khi và chỉ khi p(**x**) = q(**x**).
+> bằng 0 khi và chỉ khi p(𝐱) = q(𝐱).
 >
 >
 >
@@ -1876,11 +1876,11 @@
 >
 >
 >
-> f(y) = f(x) + f'(x)(y-x) + f''(x+α(y-x))(y-x)^2/2 for some α ∈ (0,1)
+> f(y) = f(x) + f'(x)(y-x) + f''(x+α(y-x))(y-x)²/2 for some α ∈ (0,1)
 >
 >
 >
-> Vì (1) ⇨ f''(x+α(y-x))(y-x)^2/2 ≥ 0
+> Vì (1) ⇨ f''(x+α(y-x))(y-x)²/2 ≥ 0
 >
 >
 >
@@ -2311,7 +2311,7 @@
 >
 >
 > Vì sao lại approx như vậy? Mình có thể liên tưởng đến Xbar, vì ta ko biết θ
-> của population f(x|θ, σ^2), tức có mean θ, variance σ^2, nơi sinh ra các giá trị
+> của population f(x|θ, σ²), tức có mean θ, variance σ², nơi sinh ra các giá trị
 > quan sát được của random sample X1,..Xn. Thì ta mới dùng Xbar = (Σi Xi)/n để
 > estimator cho θ. Và quả thật, đây là một unbiased estimator của θ khi E(Xbar)
 > = θ và theo LLN (law of large number) khi kích thước mẫu n → inf thì Xbar  sẽ
@@ -2378,21 +2378,21 @@
 >
 >
 >
-> joint distribution của cả bộ f(**x**|θ) = tích các marginal distribution Πi f(xi|θ)
+> joint distribution của cả bộ f(𝐱|θ) = tích các marginal distribution Πi f(xi|θ)
 >
 >
 >
 > Và lại nhớ định nghĩa của likelihood function, là hàm của θ, mang ý nghĩa độ
-> hợp lí của θ khi giá trị quan sát được của random sample là **X** = **x**:
+> hợp lí của θ khi giá trị quan sát được của random sample là 𝐗 = 𝐱:
 >
 >
 >
-> L(θ|**x**) = f(**x**|θ), theo tính iid nói trên, tiếp tục = Πi f(xi|θ).
+> L(θ|𝐱) = f(𝐱|θ), theo tính iid nói trên, tiếp tục = Πi f(xi|θ).
 >
 >
 >
 > Nếu ta đi maximize likelihood, ta sẽ tìm được maximize likelihood estimator
-> của θ, kí hiệu θ^_ml(**X**), và trong quá trình làm vậy, ta có thể chuyển thành
+> của θ, kí hiệu θ^_ml(𝐗), và trong quá trình làm vậy, ta có thể chuyển thành
 > bài toán tương đương là minimize - ln likelihood: - ln L(θ|x) = - ln Πi f(xi|θ)
 >
 >
@@ -2423,14 +2423,14 @@
 
 > [!NOTE]
 > Tiếp, phần này cũng dễ hiểu, nói rằng nếu ta xét hai random variable
-> (vector) **X**  và **Y**, thì từ Stat110 hay Casella ta cũng đã biết nếu chúng
-> độc lập nhau, thì joint pdf f**X**,**Y**(**x**,**y**) sẽ có thể tách thành tích các
-> marginal pdf f**X**(**x**)f**Y**(**y**).
+> (vector) 𝐗  và 𝐘, thì từ Stat110 hay Casella ta cũng đã biết nếu chúng
+> độc lập nhau, thì joint pdf f𝐗,𝐘(𝐱,𝐲) sẽ có thể tách thành tích các
+> marginal pdf f𝐗(𝐱)f𝐘(𝐲).
 >
 >
 >
 > Vậy thì ý tưởng ở đây là, người ta dùng KL-divergence giữa joint pdf và tích
-> marginal pdf để mà đánh giá tính độc lập của **X**, **Y**.
+> marginal pdf để mà đánh giá tính độc lập của 𝐗, 𝐘.
 >
 >
 >
@@ -2440,8 +2440,8 @@
 >
 >
 > Nên tương tự, KL(fX,Y(x,y)||fY(x)fY(y)) sẽ = 0 khi fX,Y(x,y) = fX(x)fY(y) ∀ x,y
-> tức là khi **X**, **Y** độc lập. Thành ra KL-divergence này có thể dùng để
-> thể hiện **mức độ** độc lập giữa **X**, **Y**
+> tức là khi 𝐗, 𝐘 độc lập. Thành ra KL-divergence này có thể dùng để
+> thể hiện **mức độ** độc lập giữa 𝐗, 𝐘
 
 <br>
 
