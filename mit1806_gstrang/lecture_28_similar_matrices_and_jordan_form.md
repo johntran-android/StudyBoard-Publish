@@ -726,7 +726,7 @@
 > Me: Có thể thấy eigenvectors vẫn là trong nullspace của 
 > A (vì λ vẫn bằng 0, bởi giải characteristic equation
 > det A = 0 ⇔ λ^4 = 0 ⇔ λ = 0, từ đó solve 
-> equation (A-0*I)x=0 để tìm eigenvectors ⇔ Ax=0)
+> equation (A-0 × I)x=0 để tìm eigenvectors ⇔ Ax=0)
 > Và A vẫn có 2 free columns → dim N(A) = 2 → 2 eigenvectors
 >
 >
