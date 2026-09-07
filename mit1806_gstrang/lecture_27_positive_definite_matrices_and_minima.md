@@ -93,7 +93,7 @@
 >
 >
 > me: ta có thể **dùng điều kiện det** của matrix 2x2 **dương**
-> (submatrix [2] thì đã có det dương rồi) -> như vậy phải
+> (submatrix [2] thì đã có det dương rồi) → như vậy phải
 > **lớn hơn 18**
 
 <br>
@@ -388,7 +388,7 @@
 >
 >
 >
-> ii) **Second derivative test: f_xx dương và (fxx*fyy - fxy^2) > 0**
+> ii) **Second derivative test: f_xx dương và (fxx*fyy - fxy²) > 0**
 >
 >
 >
@@ -428,15 +428,15 @@
 <p align="center"><kbd><img src="assets/9iw4xgddj6.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì lướt lại nếu **như ta có 18y^2 thay vì 20** (mà hồi nãy
+> Thế thì lướt lại nếu **như ta có 18y² thay vì 20** (mà hồi nãy
 > nói là đây là **marginal** case) thì có thể thấy khi đó ta sẽ có
-> **2(x+3y)^2 + 0y^2**, **vẫn đảm bảo function luôn ko âm**.
+> **2(x+3y)^2 + 0y²**, **vẫn đảm bảo function luôn ko âm**.
 >
 >
 >
 > Nhưng **dưới mức đó** (cái mức mà ta xác định cho d để
-> matrix [[a b][c d]] có det dương), ví dụ như 17y^2, thì nó sẽ
-> thành ra 2(x+3y)^2 **- y^2,** rõ ràng **dấu (-) không giúp đảm
+> matrix [[a b][c d]] có det dương), ví dụ như 17y², thì nó sẽ
+> thành ra 2(x+3y)^2 **- y²,** rõ ràng **dấu (-) không giúp đảm
 > bảo function luôn không âm**
 
 <br>
@@ -449,7 +449,7 @@
 > Và sự thật ta có **đồ thị của function sẽ có dạng cái tô**,
 > hướng lên trên, **đáy tô ở (0,0)** và nếu cắt cái tô bởi
 > mặt phẳng z = 1 thì ta sẽ có đường elipe của equation:
-> 2x^2 + 12xy + 20y^2 = 1
+> 2x² + 12xy + 20y² = 1
 
 <br>
 
@@ -493,7 +493,7 @@
 >
 > bởi vậy **NẾU MỌI PIVOT ĐỀU DƯƠNG** thì ta sẽ có
 > quadratic function với **TỔNG CÁC SQUARE CÓ HỆ  SỐ
-> DƯƠNG** -> QUADRATIC FUNCTION LUÔN DƯƠNG
+> DƯƠNG** → QUADRATIC FUNCTION LUÔN DƯƠNG
 > HOẶC  BẰNG 0 TẠI ORIGIN
 
 <br>
@@ -540,7 +540,7 @@
 >
 >
 >
-> A là f_xx(x0,y0), kí hiệu khác là ∂^2f/∂x^2
+> A là f_xx(x0,y0), kí hiệu khác là ∂^2f/∂x²
 > (tất nhiên evaluate tại critical point x0,y0)
 >
 >
@@ -549,7 +549,7 @@
 >
 >
 >
-> C = f_yy(x0,y0) hay ∂^f/∂y^2
+> C = f_yy(x0,y0) hay ∂^f/∂y²
 >
 >
 >
@@ -557,16 +557,16 @@
 >
 >
 >
-> 1) Nếu AC-B^2 > 0, khi đó nếu A dương thì kết luận (critical
+> 1) Nếu AC-B² > 0, khi đó nếu A dương thì kết luận (critical
 > point) là MINIMUM. Nếu A âm thì là MAXIMUM
 >
 >
 >
-> 2) Nếu AC-B^2 < 0, kết luận critical point là SADDLE POINT
+> 2) Nếu AC-B² < 0, kết luận critical point là SADDLE POINT
 >
 >
 >
-> 3) Nếu AC-B^2 = 0: Ko kết luận được.
+> 3) Nếu AC-B² = 0: Ko kết luận được.
 >
 >
 >
@@ -575,7 +575,7 @@
 >
 >
 > Vậy có thể thấy, với ma trận đạo hàm cấp 2 (matrix of second
-> partial derivative): [f_xx, f_xy; f_yx f_yy] thì AC-B^2 CHÍNH LÀ
+> partial derivative): [f_xx, f_xy; f_yx f_yy] thì AC-B² CHÍNH LÀ
 > DETERMINANT CỦA NÓ 
 >
 >
@@ -584,13 +584,13 @@
 >
 >
 >
-> Vậy nếu A > 0 (mà A là set của sub matrix 1x1) và  AC-B^2 > 0
+> Vậy nếu A > 0 (mà A là set của sub matrix 1x1) và  AC-B² > 0
 > thì CHÍNH LÀ ĐỦ ĐỂ KẾT LUẬN MATRIX ĐẠO HÀM CẤP
 > 2 LÀ MỘT **POSITIVE DEFINITE SYMMETRIC MATRIX
 >
 >
 >
-> Nói thêm, nếu A < 0, và AC-B^2 > 0 Hessian là NEGATIVE
+> Nói thêm, nếu A < 0, và AC-B² > 0 Hessian là NEGATIVE
 > DEFINITE MATRIX, và tại critical point là Maximum**
 
 <br>
