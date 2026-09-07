@@ -8,27 +8,27 @@
 <p align="center"><kbd><img src="assets/7swge4ekywk.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua phần này, ta sẽ bàn về việc estimate parameter **η** của exponential family thông qua phương pháp MLE. Cũng đã quen với MLE, chỉ nhắc lại nha, MLE vốn dĩ là một trong các phương pháp để giải bài toán point estimation - là một trong những bài toán suy luận thống kê: Cho random sample **X** = (X1,...Xn), có giá trị quan sát được là **x** = (x1,x2,...xn), là các random varialle independent & identically distributed - iid \~ f(**x**|θ) (θ là parameter của population distribution). Nhiệm vụ của bài toán point estimation là tìm một hàm W(**X**), để với giá trị quan sát được của **X**: **X** = **x**, thì W(**x**) sẽ là estimate tốt cho θ. Phải nói thêm, với cách tiếp cận MLE, thì nó thuộc trường phái Classic hay Frequentist, vì ta chỉ xem θ như giá trị cố định nhưng chưa biết, chứ không xem nó như biến ngẫu nhiên.
+> Qua phần này, ta sẽ bàn về việc estimate parameter **η** của exponential family thông qua phương pháp MLE. Cũng đã quen với MLE, chỉ nhắc lại nha, MLE vốn dĩ là một trong các phương pháp để giải bài toán point estimation - là một trong những bài toán suy luận thống kê: Cho random sample 𝐗 = (X1,...Xn), có giá trị quan sát được là 𝐱 = (x1,x2,...xn), là các random varialle independent & identically distributed - iid \~ f(𝐱|θ) (θ là parameter của population distribution). Nhiệm vụ của bài toán point estimation là tìm một hàm W(𝐗), để với giá trị quan sát được của 𝐗: 𝐗 = 𝐱, thì W(𝐱) sẽ là estimate tốt cho θ. Phải nói thêm, với cách tiếp cận MLE, thì nó thuộc trường phái Classic hay Frequentist, vì ta chỉ xem θ như giá trị cố định nhưng chưa biết, chứ không xem nó như biến ngẫu nhiên.
 >
 >
 >
-> Vậy thì theo sách Casella, estimator, có thể là bất kì function nào của sample, và với một định nghĩa mơ hồ như vậy, ta cần có những phương pháp tiếp cận để dẫn đến một estimator tốt, và tiêu biểu là MoM (method of moment). MLE (maximum likelihood estimator) và Bayes estimator. Thế thì, với MLE, nói ngắn gọn, cái hàm W(**X**) mà ta dùng sẽ là hàm số sau: W(**x**) = argmax (over θ) L(θ|**x**), với L(θ|**x**) là likelihood function, là hàm số theo θ, được define (có giá trị bởi) f(**x**|θ), tức giá trị của likelihood L(θ|**x**) tại θ được tính bằng giá trị của joint pdf của sample tại observed value **x**. 
+> Vậy thì theo sách Casella, estimator, có thể là bất kì function nào của sample, và với một định nghĩa mơ hồ như vậy, ta cần có những phương pháp tiếp cận để dẫn đến một estimator tốt, và tiêu biểu là MoM (method of moment). MLE (maximum likelihood estimator) và Bayes estimator. Thế thì, với MLE, nói ngắn gọn, cái hàm W(𝐗) mà ta dùng sẽ là hàm số sau: W(𝐱) = argmax (over θ) L(θ|𝐱), với L(θ|𝐱) là likelihood function, là hàm số theo θ, được define (có giá trị bởi) f(𝐱|θ), tức giá trị của likelihood L(θ|𝐱) tại θ được tính bằng giá trị của joint pdf của sample tại observed value 𝐱. 
 >
 >
 >
-> (Chú ý, L(θ|**x**) cũng chính là L(θ|(x1,x2,...xn), và f(**x**|θ) cũng là f(x1,x2,...xn|θ), mà nhờ tính chất iid sẽ tách thành f(x1|θ)f(x2|θ)...f(xn|θ))
+> (Chú ý, L(θ|𝐱) cũng chính là L(θ|(x1,x2,...xn), và f(𝐱|θ) cũng là f(x1,x2,...xn|θ), mà nhờ tính chất iid sẽ tách thành f(x1|θ)f(x2|θ)...f(xn|θ))
 >
 >
 >
-> Và viết W(**x**) = argmax (over θ) L(θ|**x**) có ý nghĩa là ta sẽ giải bài toán tối ưu: maximize over θ L(θ|**x**), cũng là maximize f(**x**|θ), cũng là f(x1,x2,...xn), và với tính chất iid của X1,...Xn, thì f(**x**|θ) = f(x1,...xn|θ) có thể được tách thành tích các marginal pdf: f(**x**|θ) = f(x1,...xn|θ) = f(x1|θ) × f(x1|θ) × .. f(xn|θ) = Πi=1:n f(xi|θ)
+> Và viết W(𝐱) = argmax (over θ) L(θ|𝐱) có ý nghĩa là ta sẽ giải bài toán tối ưu: maximize over θ L(θ|𝐱), cũng là maximize f(𝐱|θ), cũng là f(x1,x2,...xn), và với tính chất iid của X1,...Xn, thì f(𝐱|θ) = f(x1,...xn|θ) có thể được tách thành tích các marginal pdf: f(𝐱|θ) = f(x1,...xn|θ) = f(x1|θ) × f(x1|θ) × .. f(xn|θ) = Πi=1:n f(xi|θ)
 >
 >
 >
-> Quay lại đây, express theo cái khung của bài toán point estimation trên thì ta sẽ nói thế này: cho **X**1, ...**X**N là iid \~ f(**x**|**η**), và muốn tìm ML estimator cho **η**. Thì theo định nghĩa, likelihood function là hàm theo **η**, được define bởi giá trị của joint pdf của sample tại observed value. do đó, likelihood tại **η**, kí hiêu7 tính bằng f(**x**1, **x**2,....**x**N|**η**). Hay gom các random vector **X**1, ...**X**N, lại thành random matrix **X**, có observed value là **x**, hay mình ghi là \[**matrix x**\] cho dễ phân biệt.
+> Quay lại đây, express theo cái khung của bài toán point estimation trên thì ta sẽ nói thế này: cho 𝐗1, ...𝐗N là iid \~ f(𝐱|**η**), và muốn tìm ML estimator cho **η**. Thì theo định nghĩa, likelihood function là hàm theo **η**, được define bởi giá trị của joint pdf của sample tại observed value. do đó, likelihood tại **η**, kí hiêu7 tính bằng f(𝐱1, 𝐱2,....𝐱N|**η**). Hay gom các random vector 𝐗1, ...𝐗N, lại thành random matrix 𝐗, có observed value là 𝐱, hay mình ghi là \[**matrix x**\] cho dễ phân biệt.
 >
 >
 >
-> Khi đó, likelihood sẽ kí hiệu là L(**η**|\[**matrix** **x**\]) = f(\[**matrix x**\]|**η**) = f(**x**1,**x**2,..,**x**N|**η**) = f(**x**1|**η**)f(**x**2|**η**)...f(**x**N|**η**) = Πi=1:N f(**x**i|**η**).
+> Khi đó, likelihood sẽ kí hiệu là L(**η**|\[**matrix** 𝐱\]) = f(\[**matrix x**\]|**η**) = f(𝐱1,𝐱2,..,𝐱N|**η**) = f(𝐱1|**η**)f(𝐱2|**η**)...f(𝐱N|**η**) = Πi=1:N f(𝐱i|**η**).
 >
 >
 >
@@ -36,11 +36,11 @@
 >
 >
 >
-> maximize over **η** {Πi=1:N f(**x**i|**η**)} với f(**x**i|**η**) = h(**x**i)g(**η**)exp{**η**T**u**(**x**i)}
+> maximize over **η** {Πi=1:N f(𝐱i|**η**)} với f(𝐱i|**η**) = h(𝐱i)g(**η**)exp{**η**ᵀ𝐮(𝐱i)}
 >
 >
 >
-> (trong sách, gs Bishop dùng **X** để chỉ observed value của mọi sample, tức là tương ứng \[**matrix x**\] của mình, (vì đã nói nhiều lần, gs Bishop ko theo chuẩn kí hiệu thông thường, việc dùng X rất dễ gây lầm lẫn là một random vector X nào đó)
+> (trong sách, gs Bishop dùng 𝐗 để chỉ observed value của mọi sample, tức là tương ứng \[**matrix x**\] của mình, (vì đã nói nhiều lần, gs Bishop ko theo chuẩn kí hiệu thông thường, việc dùng X rất dễ gây lầm lẫn là một random vector X nào đó)
 >
 >
 >
@@ -52,23 +52,23 @@
 >
 >
 >
-> ∫f(**x**|**η**) d**x** = 1, để rồi, đạo hàm hai vế thế **η**, ta sẽ có một kết quả đó là - ∇ln g(**η**) = E\[u(**x**)\] đặng tí nữa dùng. Thử xem các bước như thế nào mà ra kết quả này:
+> ∫f(𝐱|**η**) d𝐱 = 1, để rồi, đạo hàm hai vế thế **η**, ta sẽ có một kết quả đó là - ∇ln g(**η**) = E\[u(𝐱)\] đặng tí nữa dùng. Thử xem các bước như thế nào mà ra kết quả này:
 >
 >
 >
-> ∫f(**x**|**η**) d**x** = 1
+> ∫f(𝐱|**η**) d𝐱 = 1
 >
 >
 >
-> ⇨ d/d**η** \[∫f(**x**|**η**) d**x**\] = d/d**η** \[1\]
+> ⇨ d/d**η** \[∫f(𝐱|**η**) d𝐱\] = d/d**η** \[1\]
 >
 >
 >
-> ⇔ d/d**η** \[∫h(**x**)g(**η**)exp{**η**T**u**(**x**)} d**x**\] = 0
+> ⇔ d/d**η** \[∫h(𝐱)g(**η**)exp{**η**ᵀ𝐮(𝐱)} d𝐱\] = 0
 >
 >
 >
-> ⇔ d/d**η** \[g(**η**) ∫h(**x**)exp{**η**T**u**(**x**)} d**x**\] = 0
+> ⇔ d/d**η** \[g(**η**) ∫h(𝐱)exp{**η**ᵀ𝐮(𝐱)} d𝐱\] = 0
 >
 >
 >
@@ -76,39 +76,39 @@
 >
 >
 >
-> ⇔ d/d**η** \[g(**η**)\] × ∫h(**x**)exp{**η**T**u**(**x**)} d**x**\] + g(**η**) d/d**η**\[∫h(**x**)exp{**η**T**u**(**x**)} d**x**\] = 0
+> ⇔ d/d**η** \[g(**η**)\] × ∫h(𝐱)exp{**η**ᵀ𝐮(𝐱)} d𝐱\] + g(**η**) d/d**η**\[∫h(𝐱)exp{**η**ᵀ𝐮(𝐱)} d𝐱\] = 0
 >
 >
 >
->  ⇔ ∇g(**η**) × ∫h(**x**) exp{**η**T**u**(**x**)} d**x** + g(**η**) × d/d**η**\[∫h(**x**)exp{**η**T**u**(**x**)} d**x**\] = 0
+>  ⇔ ∇g(**η**) × ∫h(𝐱) exp{**η**ᵀ𝐮(𝐱)} d𝐱 + g(**η**) × d/d**η**\[∫h(𝐱)exp{**η**ᵀ𝐮(𝐱)} d𝐱\] = 0
 >
 >
 >
-> Xét cái d/d**η**\[∫h(**x**)exp{**η**T**u**(**x**)} d**x**\] trong term thứ 2: Đây là ta đang đạo hàm theo η của một cái tích phân theo **x**, được phép đưa đạo hàm vào trong, vì biên của tích phân không phụ thuộc **η**, cái này giống như ta đạo hàm theo **η** của một cái tổng các hàm số thôi.
+> Xét cái d/d**η**\[∫h(𝐱)exp{**η**ᵀ𝐮(𝐱)} d𝐱\] trong term thứ 2: Đây là ta đang đạo hàm theo η của một cái tích phân theo 𝐱, được phép đưa đạo hàm vào trong, vì biên của tích phân không phụ thuộc **η**, cái này giống như ta đạo hàm theo **η** của một cái tổng các hàm số thôi.
 >
 >
 >
-> d/d**η**\[∫h(**x**)exp{**η**T**u**(**x**)} d**x**\] = ∫d/d**η**\[h(**x**)exp{**η**T**u**(**x**)}\] d**x**
+> d/d**η**\[∫h(𝐱)exp{**η**ᵀ𝐮(𝐱)} d𝐱\] = ∫d/d**η**\[h(𝐱)exp{**η**ᵀ𝐮(𝐱)}\] d𝐱
 >
 >
 >
-> = ∫h(**x**) d/d**η**\[exp{**η**T**u**(**x**)}\] d**x**
+> = ∫h(𝐱) d/d**η**\[exp{**η**ᵀ𝐮(𝐱)}\] d𝐱
 >
 >
 >
-> Dùng chain rule: d/d**η**\[exp{**η**T**u**(**x**)}\] = d/d\[**η**T**u**(**x**)\]\[exp{**η**T**u**(**x**)}\] . d/d**η** \[**η**T**u**(**x**)\]
+> Dùng chain rule: d/d**η**\[exp{**η**ᵀ𝐮(𝐱)}\] = d/d\[**η**ᵀ𝐮(𝐱)\]\[exp{**η**ᵀ𝐮(𝐱)}\] . d/d**η** \[**η**ᵀ𝐮(𝐱)\]
 >
 >
 >
-> = ∫h(**x**) d/d\[**η**T**u**(**x**)\]\[exp{**η**T**u**(**x**)}\] . d/d**η** \[**η**T**u**(**x**)\] d**x**
+> = ∫h(𝐱) d/d\[**η**ᵀ𝐮(𝐱)\]\[exp{**η**ᵀ𝐮(𝐱)}\] . d/d**η** \[**η**ᵀ𝐮(𝐱)\] d𝐱
 >
 >
 >
-> Dùng đạo hàm hàm sơ cấp: d/dx e^x = e^x, d/dx xTa = a
+> Dùng đạo hàm hàm sơ cấp: d/dx e^x = e^x, d/dx xᵀa = a
 >
 >
 >
-> = ∫h(**x**) exp{**η**T**u**(**x**)} **u**(**x**)d**x**
+> = ∫h(𝐱) exp{**η**ᵀ𝐮(𝐱)} 𝐮(𝐱)d𝐱
 >
 >
 >
@@ -116,23 +116,23 @@
 >
 >
 >
-> ∇g(**η**) × ∫h(**x**) exp{**η**T**u**(**x**)} d**x** + g(**η**)∫h(**x**) exp{**η**T**u**(**x**)} **u**(**x**)d**x** = 0 → đây là 2.224
+> ∇g(**η**) × ∫h(𝐱) exp{**η**ᵀ𝐮(𝐱)} d𝐱 + g(**η**)∫h(𝐱) exp{**η**ᵀ𝐮(𝐱)} 𝐮(𝐱)d𝐱 = 0 → đây là 2.224
 >
 >
 >
->  ⇔ ∇g(**η**) \[1/g(**η**)\] g(**η**) ∫h(**x**) exp{**η**T**u**(**x**)} d**x** = - g(**η**)∫h(**x**) exp{**η**T**u**(**x**)} **u**(**x**)d**x**
+>  ⇔ ∇g(**η**) \[1/g(**η**)\] g(**η**) ∫h(𝐱) exp{**η**ᵀ𝐮(𝐱)} d𝐱 = - g(**η**)∫h(𝐱) exp{**η**ᵀ𝐮(𝐱)} 𝐮(𝐱)d𝐱
 >
 >
 >
-> Dùng tiếp cái kết quả 2.195: g(**η**)∫h(**x**)exp{**η**T**u**(**x**)} d**x** d**x** = 1
+> Dùng tiếp cái kết quả 2.195: g(**η**)∫h(𝐱)exp{**η**ᵀ𝐮(𝐱)} d𝐱 d𝐱 = 1
 >
 >
 >
-> ⇔ ∇g(**η**) \[1/g(**η**)\] × 1 = - g(**η**)∫h(**x**) exp{**η**T**u**(**x**)} **u**(**x**)d**x**
+> ⇔ ∇g(**η**) \[1/g(**η**)\] × 1 = - g(**η**)∫h(𝐱) exp{**η**ᵀ𝐮(𝐱)} 𝐮(𝐱)d𝐱
 >
 >
 >
->  ⇔ -\[1/g(**η**)\] ∇g(**η**) = g(**η**)∫h(**x**) exp{**η**T**u**(**x**)} **u**(**x**)d**x**
+>  ⇔ -\[1/g(**η**)\] ∇g(**η**) = g(**η**)∫h(𝐱) exp{**η**ᵀ𝐮(𝐱)} 𝐮(𝐱)d𝐱
 >
 >
 >
@@ -140,11 +140,11 @@
 >
 >
 >
-> g(**η**)∫h(**x**) exp{**η**T**u**(**x**)} **u**(**x**)d**x** = ∫h(**x**) g(**η**) exp{**η**T**u**(**x**)} **u**(**x**)d**x** chính là = ∫**u**(**x**)f(**x**|**η**)d**x**, còn nhớ kiến thức về LOTUS, khi ta có X \~ pdf f(x), và Y = g(X), thì EY = Eg(X) = ∫g(x)f(x)dx. Nên tương tự, ta sẽ thấy ở đây cái ta đang có chính là E\[u(**X**)\]
+> g(**η**)∫h(𝐱) exp{**η**ᵀ𝐮(𝐱)} 𝐮(𝐱)d𝐱 = ∫h(𝐱) g(**η**) exp{**η**ᵀ𝐮(𝐱)} 𝐮(𝐱)d𝐱 chính là = ∫𝐮(𝐱)f(𝐱|**η**)d𝐱, còn nhớ kiến thức về LOTUS, khi ta có X \~ pdf f(x), và Y = g(X), thì EY = Eg(X) = ∫g(x)f(x)dx. Nên tương tự, ta sẽ thấy ở đây cái ta đang có chính là E\[u(𝐗)\]
 >
 >
 >
-> Vậy -\[1/g(**η**)\] ∇g(**η**) = E\[**u**(**X**)\]
+> Vậy -\[1/g(**η**)\] ∇g(**η**) = E\[𝐮(𝐗)\]
 >
 >
 >
@@ -152,11 +152,11 @@
 >
 >
 >
-> Vậy ta có kết quả để dành tí nữa xài: - 1/g(**η**) ∇g(**η**) = E\[**u**(**X**)\] → 2.226
+> Vậy ta có kết quả để dành tí nữa xài: - 1/g(**η**) ∇g(**η**) = E\[𝐮(𝐗)\] → 2.226
 >
 >
 >
-> (nhiệm vụ của ta vẫn là giải bài toán tối ưu: maximize ln L(**η**|**x**))
+> (nhiệm vụ của ta vẫn là giải bài toán tối ưu: maximize ln L(**η**|𝐱))
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
@@ -189,11 +189,11 @@
 >
 >
 >
-> maximize over η {ln Πi=1:N f(**x**i|**η**)}
+> maximize over η {ln Πi=1:N f(𝐱i|**η**)}
 >
 >
 >
-> Xét hàm likelihood, L(η|\[**matrix x**\]) = Πi=1:N f(**x**i|**η**)
+> Xét hàm likelihood, L(η|\[**matrix x**\]) = Πi=1:N f(𝐱i|**η**)
 >
 >
 >
@@ -201,15 +201,15 @@
 >
 >
 >
-> = Πi=1:N h(**x**i)g(**η**)exp\[**η**T**u**(**x**i)\]
+> = Πi=1:N h(𝐱i)g(**η**)exp\[**η**ᵀ𝐮(𝐱i)\]
 >
 >
 >
-> = \[Πi=1:N h(**x**i)\] \[g(**η**)\]^N {Πi=1:N exp\[**η**T**u**(**x**i)\]}
+> = \[Πi=1:N h(𝐱i)\] \[g(**η**)\]^N {Πi=1:N exp\[**η**ᵀ𝐮(𝐱i)\]}
 >
 >
 >
-> = \[Πi=1:N h(**x**i)\] \[g(**η**)\]^N exp{∑i=1:N\[**η**T**u**(**x**i)\]} → đây là 2.227
+> = \[Πi=1:N h(𝐱i)\] \[g(**η**)\]^N exp{∑i=1:N\[**η**ᵀ𝐮(𝐱i)\]} → đây là 2.227
 >
 >
 >
@@ -221,15 +221,15 @@
 >
 >
 >
-> = ln \[Πi=1:N h(**x**i)\] \[g(**η**)\]^N exp{∑i=1:N\[**η**T**u**(**x**i)\]}
+> = ln \[Πi=1:N h(𝐱i)\] \[g(**η**)\]^N exp{∑i=1:N\[**η**ᵀ𝐮(𝐱i)\]}
 >
 >
 >
-> = ln \[Πi=1:N h(**x**i)\]  + ln \[g(**η**)\]^N  + ln exp{∑i=1:N\[**η**T**u**(**x**i)\]}
+> = ln \[Πi=1:N h(𝐱i)\]  + ln \[g(**η**)\]^N  + ln exp{∑i=1:N\[**η**ᵀ𝐮(𝐱i)\]}
 >
 >
 >
-> = ln \[Πi=1:N h(**x**i)\]  + N ln \[g(**η**)\]  + ∑i=1:N\[**η**T**u**(**x**i)\]
+> = ln \[Πi=1:N h(𝐱i)\]  + N ln \[g(**η**)\]  + ∑i=1:N\[**η**ᵀ𝐮(𝐱i)\]
 >
 >
 >
@@ -237,7 +237,7 @@
 >
 >
 >
-> maximize (over η) {N ln \[g(**η**)\] + ∑i=1:N\[**η**T**u**(**x**i)\] (tức là ta bỏ constant ln \[Πi=1:N h(**x**i)\] đi)
+> maximize (over η) {N ln \[g(**η**)\] + ∑i=1:N\[**η**ᵀ𝐮(𝐱i)\] (tức là ta bỏ constant ln \[Πi=1:N h(𝐱i)\] đi)
 >
 >
 >
@@ -245,19 +245,19 @@
 >
 >
 >
-> d/dη \[N ln \[g(**η**)\] + ∑i=1:N\[**η**T**u**(**x**i)\]
+> d/dη \[N ln \[g(**η**)\] + ∑i=1:N\[**η**ᵀ𝐮(𝐱i)\]
 >
 >
 >
-> = N d/dη \[ln \[g(**η**)\] + d/dη ∑i=1:N\[**η**T**u**(**x**i)\]
+> = N d/dη \[ln \[g(**η**)\] + d/dη ∑i=1:N\[**η**ᵀ𝐮(𝐱i)\]
 >
 >
 >
-> = N \[1/g(**η**)\] ∇g(**η**) + ∑i=1:N d/dη \[**η**T**u**(**x**i)\]
+> = N \[1/g(**η**)\] ∇g(**η**) + ∑i=1:N d/dη \[**η**ᵀ𝐮(𝐱i)\]
 >
 >
 >
-> = N \[∇g(**η**)/g(**η**)\]  + ∑i=1:N d/dη **u**(**x**i)
+> = N \[∇g(**η**)/g(**η**)\]  + ∑i=1:N d/dη 𝐮(𝐱i)
 >
 >
 >
@@ -265,15 +265,15 @@
 >
 >
 >
-> N \[∇g(**η**)/g(**η**)\] + ∑i=1:N **u**(**x**i) = 0
+> N \[∇g(**η**)/g(**η**)\] + ∑i=1:N 𝐮(𝐱i) = 0
 >
 >
 >
-> ⇔ N \[-∇g(**η**)/g(**η**)\] = ∑i=1:N **u**(**x**i) 
+> ⇔ N \[-∇g(**η**)/g(**η**)\] = ∑i=1:N 𝐮(𝐱i) 
 >
 >
 >
-> ⇔  \[-∇g(**η**)/g(**η**)\] = (1/N) ∑i=1:N **u**(**x**i) 
+> ⇔  \[-∇g(**η**)/g(**η**)\] = (1/N) ∑i=1:N 𝐮(𝐱i) 
 >
 >
 >
@@ -297,7 +297,7 @@
 >
 >
 >
-> Vậy thì, có thể thấy, **η**ML chỉ là hàm phụ thuộc ∑i u(xi), và đây lại chính là một sufficient statistic. Cái này mình đã nói trước đây (xem link) trong Casella, đã học đại khái là, nếu một statistic T(**X**) được định nghĩa là nếu T(**X**) có tính chất đó là khiến f(**x**|T(**X**) = T(**x**)) không còn là hàm phụ thuộc θ, thì nó chính là sufficient statistic. Và nhờ Factorization theorem nói rằng nếu pdf f(**x**|θ) có thể tách thành g(T(**x**)|θ)h(**x**), tức một hàm h(**x**) ko phụ thuộc θ chỉ phụ thuộc **x**, và hàm g phụ thuộc cả θ và **x** nhưng chỉ phụ thuộc **x** thông qua một statistic T(**x**) thì T(**X**) chính là sufficient statistic.
+> Vậy thì, có thể thấy, **η**ML chỉ là hàm phụ thuộc ∑i u(xi), và đây lại chính là một sufficient statistic. Cái này mình đã nói trước đây (xem link) trong Casella, đã học đại khái là, nếu một statistic T(𝐗) được định nghĩa là nếu T(𝐗) có tính chất đó là khiến f(𝐱|T(𝐗) = T(𝐱)) không còn là hàm phụ thuộc θ, thì nó chính là sufficient statistic. Và nhờ Factorization theorem nói rằng nếu pdf f(𝐱|θ) có thể tách thành g(T(𝐱)|θ)h(𝐱), tức một hàm h(𝐱) ko phụ thuộc θ chỉ phụ thuộc 𝐱, và hàm g phụ thuộc cả θ và 𝐱 nhưng chỉ phụ thuộc 𝐱 thông qua một statistic T(𝐱) thì T(𝐗) chính là sufficient statistic.
 >
 >
 >
@@ -305,35 +305,35 @@
 >
 >
 >
-> f(\[matrix **X**\]|**η**) = Πi=1:N f(**x**i|**η**)
+> f(\[matrix 𝐗\]|**η**) = Πi=1:N f(𝐱i|**η**)
 >
 >
 >
-> = Πi=1:N h(**x**i)g(**η**)exp{ηTu(**x**i)}
+> = Πi=1:N h(𝐱i)g(**η**)exp{ηTu(𝐱i)}
 >
 >
 >
-> = \[Πi=1:N h(**x**i)\] \[g(**η**)\]^N Πi=1:N exp{**η**Tu(**x**i)}
+> = \[Πi=1:N h(𝐱i)\] \[g(**η**)\]^N Πi=1:N exp{**η**ᵀu(𝐱i)}
 >
 >
 >
-> = \[Πi=1:N h(**x**i)\] \[g(**η**)\]^N exp{∑i=1:N **η**Tu(**x**i)}
+> = \[Πi=1:N h(𝐱i)\] \[g(**η**)\]^N exp{∑i=1:N **η**ᵀu(𝐱i)}
 >
 >
 >
-> = \[Πi=1:N h(**x**i)\] \[g(**η**)\]^N exp{**η**T\[∑i=1:N u(**x**i)\]}
+> = \[Πi=1:N h(𝐱i)\] \[g(**η**)\]^N exp{**η**ᵀ\[∑i=1:N u(𝐱i)\]}
 >
 >
 >
-> ta thấy đúng là có thể tách thành h(**x**) g(T(**x**), **η**) với:
+> ta thấy đúng là có thể tách thành h(𝐱) g(T(𝐱), **η**) với:
 >
 >
 >
-> h(**x**) = h(x1,x2...xN) = \[Πi=1:N h(xi)\]
+> h(𝐱) = h(x1,x2...xN) = \[Πi=1:N h(xi)\]
 >
 >
 >
-> T(**x**) = T(x1, x2, ...xN) = ∑i=1:N u(xi)
+> T(𝐱) = T(x1, x2, ...xN) = ∑i=1:N u(xi)
 >
 >
 >
@@ -345,7 +345,7 @@
 >
 >
 >
-> Làm cụ thể với Bern(μ) distribution, f(**x**|μ) = Πi=1:N f(xi|μ) = Πi=1:N μ^xi ×(1-μ)^(1-xi)
+> Làm cụ thể với Bern(μ) distribution, f(𝐱|μ) = Πi=1:N f(xi|μ) = Πi=1:N μ^xi ×(1-μ)^(1-xi)
 >
 >
 >
@@ -353,19 +353,19 @@
 >
 >
 >
-> = (1-μ)^n Πi=1:N exp {ln\[μ/(1-μ)\] xi}
+> = (1-μ)ⁿ Πi=1:N exp {ln\[μ/(1-μ)\] xi}
 >
 >
 >
-> = (1-μ)^n exp {∑i=1:N ln\[μ/(1-μ)\] xi}
+> = (1-μ)ⁿ exp {∑i=1:N ln\[μ/(1-μ)\] xi}
 >
 >
 >
-> = (1-μ)^n exp {ln\[μ/(1-μ)\] ∑i=1:N xi}
+> = (1-μ)ⁿ exp {ln\[μ/(1-μ)\] ∑i=1:N xi}
 >
 >
 >
-> kết qủa này có dạng h(**x**)g(T(**x**), μ) với h(**x**) = 1, g(T(**x**), μ) = (1-μ)^n exp {ln\[μ/(1-μ)\] ∑i=1:N xi}, và T(**x**) = ∑i=1:N xi
+> kết qủa này có dạng h(𝐱)g(T(𝐱), μ) với h(𝐱) = 1, g(T(𝐱), μ) = (1-μ)ⁿ exp {ln\[μ/(1-μ)\] ∑i=1:N xi}, và T(𝐱) = ∑i=1:N xi
 >
 >
 >
@@ -377,47 +377,47 @@
 >
 >
 >
-> f(x|μ, σ^2) = \[1/√(2πσ^2)\] exp{-μ^2/2σ^2} exp{(-1/2σ^2)x^2+(μ/σ^2)x}
+> f(x|μ, σ²) = \[1/√(2πσ²)\] exp{-μ²/2σ²} exp{(-1/2σ²)x²+(μ/σ²)x}
 >
 >
 >
-> ⇨ f(**x**|μ, σ^2) = Πi=1:n f(xi|μ, σ^2)
+> ⇨ f(𝐱|μ, σ²) = Πi=1:n f(xi|μ, σ²)
 >
 >
 >
-> = Πi=1:n { \[1/√(2πσ^2)\] exp{-μ^2/2σ^2)} exp{(-1/2σ^2)xi^2+(μ/σ^2)xi}}
+> = Πi=1:n { \[1/√(2πσ²)\] exp{-μ²/2σ²)} exp{(-1/2σ²)xi²+(μ/σ²)xi}}
 >
 >
 >
-> = \[1/√(2πσ^2) exp{-μ^2/2σ^2)}\]^n exp{∑i=1:n(-1/2σ^2)xi^2 + ∑i=1:n(μ/σ^2)xi}
+> = \[1/√(2πσ²) exp{-μ²/2σ²)}\]ⁿ exp{∑i=1:n(-1/2σ²)xi² + ∑i=1:n(μ/σ²)xi}
 >
 >
 >
-> = \[1/√(2πσ^2) exp{-μ^2/2σ^2)}\]^n exp{(-1/2σ^2)∑i=1:n xi^2 + (μ/σ^2)∑i=1:nxi}
+> = \[1/√(2πσ²) exp{-μ²/2σ²)}\]ⁿ exp{(-1/2σ²)∑i=1:n xi² + (μ/σ²)∑i=1:nxi}
 >
 >
 >
-> Kết quả này có dạng h(**x**)g(T(x), μ, σ^2)
+> Kết quả này có dạng h(𝐱)g(T(x), μ, σ²)
 >
 >
 >
-> với h(**x**) = 1
+> với h(𝐱) = 1
 >
 >
 >
-> g(T(**x**), μ, σ^2) = \[1/√(2πσ^2) exp{-μ^2/2σ^2)}\]^n exp{(-1/2σ^2)∑i=1:n xi^2 + (μ/σ^2)∑i=1:nxi}
+> g(T(𝐱), μ, σ²) = \[1/√(2πσ²) exp{-μ²/2σ²)}\]ⁿ exp{(-1/2σ²)∑i=1:n xi² + (μ/σ²)∑i=1:nxi}
 >
 >
 >
-> và T(**x**) = (∑i=1:n xi^2, ∑i=1:nxi)
+> và T(𝐱) = (∑i=1:n xi², ∑i=1:nxi)
 >
 >
 >
-> Nên theo Factorization theorem, sufficient statistic là T(**X**) = \[∑i=1:n **X**i^2, ∑i=1:n **X**i\]
+> Nên theo Factorization theorem, sufficient statistic là T(𝐗) = \[∑i=1:n 𝐗i², ∑i=1:n 𝐗i\]
 >
 >
 >
-> do đó gs Bishop nói với Normal ta cần giữ lại cả tổng xi và tổng bình phương xi là vậy (should keep both the sum of {xn} and the sum of {xn^2})
+> do đó gs Bishop nói với Normal ta cần giữ lại cả tổng xi và tổng bình phương xi là vậy (should keep both the sum of {xn} and the sum of {xn²})
 >
 >
 >
@@ -427,11 +427,11 @@
 >
 >
 >
->   Kết quả 2.226: ∇g(**η**)/g(**η**) = E\[u(**X**)\]
+>   Kết quả 2.226: ∇g(**η**)/g(**η**) = E\[u(𝐗)\]
 >
 >
 >
-> còn ở note trước ta có ηML sẽ thỏa: \[-∇g(**η**)/g(**η**)\] = (1/N) ∑i=1:N u(**x**i)
+> còn ở note trước ta có ηML sẽ thỏa: \[-∇g(**η**)/g(**η**)\] = (1/N) ∑i=1:N u(𝐱i)
 >
 >
 >
@@ -439,7 +439,7 @@
 >
 >
 >
-> lim N→∞ \[-∇g(**η**ML)/g(**η**ML)\] = lim N→∞ \[(1/N) ∑i=1:N u(**x**i)\]
+> lim N→∞ \[-∇g(**η**ML)/g(**η**ML)\] = lim N→∞ \[(1/N) ∑i=1:N u(𝐱i)\]
 >
 >
 >
@@ -463,7 +463,7 @@
 >
 >
 >
-> khi đó thì chuỗi Wn(**X**) được gọi là một sequence of **consistent** estimator của θ. Vậy thì ở đây, dựa trên kiến thức này, ta thấy ML estimator của **η**, tức **η**ML chính là một consistent estimator của **η**.
+> khi đó thì chuỗi Wn(𝐗) được gọi là một sequence of **consistent** estimator của θ. Vậy thì ở đây, dựa trên kiến thức này, ta thấy ML estimator của **η**, tức **η**ML chính là một consistent estimator của **η**.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
