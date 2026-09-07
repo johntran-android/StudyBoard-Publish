@@ -133,7 +133,7 @@
 
 > [!NOTE]
 > Gs mở rộng ý tưởng ra, vậy thì **mọi possible
-> combination** sẽ cho ta kết quả là gì -> **Toàn bộ mặt
+> combination** sẽ cho ta kết quả là gì → **Toàn bộ mặt
 > phẳng**
 
 <br>
@@ -274,7 +274,7 @@
 >
 > **Khi đó 3 col vector chỉ cover được 1 plane** nên
 > **mọi điểm b nằm ngoài plane này sẽ đều không
-> reachable bằng 3 col vector** -> không thể solve
+> reachable bằng 3 col vector** → không thể solve
 > equasys với 3 vector này được
 
 <br>
