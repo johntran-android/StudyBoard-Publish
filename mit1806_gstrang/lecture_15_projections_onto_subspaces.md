@@ -138,7 +138,7 @@
 > [!NOTE]
 > Và **aaᵀ/aᵀa chính là matrix P**, mẫu số là một
 > **scalar** (dot product của a với chính nó) và **aaᵀ
-> là một cols x một row** -> như ta đã biết nó là
+> là một cols x một row** → như ta đã biết nó là
 > một **RANK 1 MATRIX**
 
 <br>
@@ -168,7 +168,7 @@
 >
 >
 >
-> -> matrix **P là rank 1 matrix**, có **cols space với dim = 1**,
+> → matrix **P là rank 1 matrix**, có **cols space với dim = 1**,
 > và vector a chính là vector duy nhất trong basis. Nên **cols
 > space của P chính là line đi qua vector a**. Nên kết quả của
 > **Pb sẽ vẫn nằm trên line này**
@@ -213,6 +213,8 @@
 
 <a id="node-eo7tabw"></a>
 
+###### Projection onto a Line
+
 <p align="center"><kbd><img src="assets/5ef2nutgm4h.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -220,17 +222,18 @@
 >
 >
 >
-> -> Rõ ràng ta **sẽ vẫn ở đó**. Vậy là **P**2 = P**
+> \-&gt; Rõ ràng ta **sẽ vẫn ở đó**. Vậy là PP = P
 
 <br>
 
 <a id="node-ltdmtzs"></a>
 
+###### Properties of Projection Matrices
+
 <p align="center"><kbd><img src="assets/fc4kwsud19.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Từ đó ta có hai tính chất của
-> matrix P: **Pᵀ = P và P**2 = P**
+> Từ đó ta có hai tính chất của matrix P: Pᵀ = P và P² = P
 
 <br>
 
@@ -260,14 +263,14 @@
 >
 >
 > Thành ra để giải quyết, ta có thể **GIẢI MỘT BÀI TOÁN
-> KHÁC GẦN VỚI BÀI TOÁN GỐC: Ax^ = p**, với p là b
+> KHÁC GẦN VỚI BÀI TOÁN GỐC: Ax̂ = p**, với p là b
 > project lên Cols space của A C(A). Và điều này cũng có
 > nghĩa là p **CHẮC CHẮN NẰM TRONG C(A) ĐỂ TỪ ĐÓ
-> Ax^ = p CHẮC CHẮN SOLVABLE**
+> Ax̂ = p CHẮC CHẮN SOLVABLE**
 >
 >
 >
-> Kí hiệu x^ để ám chỉ solution này là của bài toán gần với
+> Kí hiệu x̂ để ám chỉ solution này là của bài toán gần với
 > bài toán gốc
 
 <br>
@@ -354,6 +357,8 @@
 
 <a id="node-lqy8n3u"></a>
 
+###### Projection Vector Formula
+
 <p align="center"><kbd><img src="assets/rf6c2wz2umi.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -363,12 +368,12 @@
 >
 >
 >
-> Và 2 coefficient trong linear combination này CHÍNH LÀ x^: 
-> **[x^1, x^2]**
+> Và 2 coefficient trong linear combination này CHÍNH LÀ x̂: 
+> **[x^1, x²]**
 >
 >
 >
-> **p = x^1*a1 +x^2*a2** hay ghi thế này cũng được **p = Ax^**
+> **p = x^1*a1 +x²*a2** hay ghi thế này cũng được **p = Ax̂**
 
 <br>
 
@@ -381,7 +386,7 @@
 >
 >
 >
-> Việc tìm projection của b trên C(A) sẽ là **TÌM x^ SAO CHO e
+> Việc tìm projection của b trên C(A) sẽ là **TÌM x̂ SAO CHO e
 >  = b-p VUÔNG GÓC VỚI C(A)**
 
 <br>
@@ -391,8 +396,8 @@
 <p align="center"><kbd><img src="assets/xzjlhx5mfgh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Viết lại bài toán đặt ra: tìm x^ sao cho
-> **e = b-p = b-Ax^ vuông góc với plane
+> Viết lại bài toán đặt ra: tìm x̂ sao cho
+> **e = b-p = b-Ax̂ vuông góc với plane
 > C(A)**
 
 <br>
@@ -432,13 +437,13 @@
 >
 >
 > a1T và a2T - tức là transpose hai columns của A, đương nhiên 
-> sẽ có matrix Aᵀ, ta có: **Aᵀ(b-Ax^) = 0**
+> sẽ có matrix Aᵀ, ta có: **Aᵀ(b-Ax̂) = 0**
 >
 >
 >
-> để ý rằng hồi nãy, equation ta có là **aᵀe = aᵀ(b-Ax^) = 0**
+> để ý rằng hồi nãy, equation ta có là **aᵀe = aᵀ(b-Ax̂) = 0**
 > còn bây giờ ta có hai vector a1 a2 basis của C(A) nên ta
-> có : **Aᵀ(b-Ax^) = 0**
+> có : **Aᵀ(b-Ax̂) = 0**
 
 **🔗 See also:** [linked note](#node-u1oddq3)
 
@@ -456,7 +461,7 @@
 >
 >
 >
-> Đầu tiên đó là, trong Aᵀ(b-Ax^) = 0, thì e=b-Ax^ connect với
+> Đầu tiên đó là, trong Aᵀ(b-Ax̂) = 0, thì e=b-Ax̂ connect với
 > subspace nào?
 >
 >
@@ -485,8 +490,8 @@
 <p align="center"><kbd><img src="assets/mkww9e2rchf.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> nhân Aᵀ vào (b-Ax^), chuyển Aᵀb qua bên
-> phải ta có equation **AᵀAx^ = Aᵀb**
+> nhân Aᵀ vào (b-Ax̂), chuyển Aᵀb qua bên
+> phải ta có equation **AᵀAx̂ = Aᵀb**
 
 <br>
 
@@ -510,19 +515,19 @@
 <p align="center"><kbd><img src="assets/zgzuhl7rj6o.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì câu hỏi là **x^ là gì**, và **projection p là gì**.
+> Thế thì câu hỏi là **x̂ là gì**, và **projection p là gì**.
 >
 >
 >
-> Vậy thì từ **AᵀAx^ = Aᵀb**, **nhân hai vế cho (AᵀA)⁻¹** ta sẽ có **x^** = **(AᵀA)⁻¹Aᵀb**
+> Vậy thì từ **AᵀAx̂ = Aᵀb**, **nhân hai vế cho (AᵀA)⁻¹** ta sẽ có **x̂** = **(AᵀA)⁻¹Aᵀb**
 >
 >
 >
-> Và p = Ax^ (hồi nãy đã nói, p là projection của b lên column space của A nên p là linear combination của các A cols hay **p = Ax^**)
+> Và p = Ax̂ (hồi nãy đã nói, p là projection của b lên column space của A nên p là linear combination của các A cols hay **p = Ax̂**)
 >
 >
 >
-> Giờ **có x^ rồi** thì thế vào ta có **p = A(AᵀA)⁻¹Aᵀb**
+> Giờ **có x̂ rồi** thì thế vào ta có **p = A(AᵀA)⁻¹Aᵀb**
 >
 >
 >
@@ -531,8 +536,7 @@
 >
 >
 > Thì nó cũng như nhau thôi vì **1/aᵀa cũng chính là (aᵀa)⁻¹**
->
-> \- có thể coi là inverse của aᵀa
+> − có thể coi là inverse của aᵀa
 
 <br>
 
@@ -593,7 +597,7 @@
 >
 >
 >
-> -> **Rn**, vì khi đó **mọi n cols và n rows của A đều là
+> → **Rn**, vì khi đó **mọi n cols và n rows của A đều là
 > independent**, chúng sẽ **span toàn bộ Rn**
 
 <br>
@@ -612,7 +616,7 @@
 >
 > Me: Đương nhiên **b đã nằm trong Rn** rồi mà **giờ project
 > nó "lên" Rn** thì đương nhiên **chả cần làm gì**, tức là 
-> chỉ cần nhân với Identity matrix -> **P = I**
+> chỉ cần nhân với Identity matrix → **P = I**
 
 <br>
 
@@ -627,8 +631,8 @@
 >
 >
 >
-> Nhưng khi C(A) không phải là R^n mà chỉ là một subspace
-> của R^n thì ta không được làm vậy
+> Nhưng khi C(A) không phải là Rⁿ mà chỉ là một subspace
+> của Rⁿ thì ta không được làm vậy
 
 <br>
 
@@ -717,15 +721,15 @@
 >
 >
 >
-> t = 1, b = 1 ->  C + D = 1 
+> t = 1, b = 1 →  C + D = 1 
 >
 >
 >
-> t = 2, b = 2 -> C + 2D = 2 
+> t = 2, b = 2 → C + 2D = 2 
 >
 >
 >
-> t = 3, b = 2 -> C + 3D = 2
+> t = 3, b = 2 → C + 3D = 2
 >
 >
 >
@@ -771,7 +775,7 @@
 >
 >
 >
-> Đó là **thay vì giải equation Ax = b**, ta sẽ **giải equation AᵀAx^ =
+> Đó là **thay vì giải equation Ax = b**, ta sẽ **giải equation AᵀAx̂ =
 > Aᵀb**
 
 <br>
@@ -781,7 +785,7 @@
 <p align="center"><kbd><img src="assets/e4s0ym8heg7.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Khi đó ta sẽ có được **x^**, và từ đó ta có **best projection** 
+> Khi đó ta sẽ có được **x̂**, và từ đó ta có **best projection** 
 > Nội dung này sẽ tiếp tục ở lecture 16
 
 <br>
