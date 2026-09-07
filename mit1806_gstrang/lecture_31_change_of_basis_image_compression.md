@@ -374,7 +374,7 @@
 
 > [!NOTE]
 > thế thì ta có thể tính ra **c = W⁻¹ p**. Và từ đó một **bộ basis tốt**
-> (tức matrix W) là khi có thể **tính toán nhanh** khi tính **W*c** hoặc **W⁻¹*p**
+> (tức matrix W) là khi có thể **tính toán nhanh** khi tính **W × c** hoặc **W⁻¹*p**
 
 <br>
 
@@ -580,7 +580,7 @@
 
 > [!NOTE]
 > Vì theo tính chất của linear transformation,
-> T(c1*v1+c2*v2+...) = c1T(v1) + c2T(v2) + ...
+> T(c1 × v1+c2 × v2+...) = c1T(v1) + c2T(v2) + ...
 >
 >
 >
@@ -646,23 +646,19 @@
 <p align="center"><kbd><img src="assets/i0l0x9akcgn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì ví dụ ta dùng basis là một eigenvector basis của matrix
-> A (ý là, ta muốn construct A (**của / đại diện / đứng sau linear
-> transformation này T(v) = Av**) sao cho cái **basis {v1, v2...vn}
-> ở đây chính là eigenvectors của A**)
+> Thế thì ví dụ ta dùng basis là một eigenvector basis của matrix A (ý là, ta muốn construct A (**của / đại diện / đứng sau linear transformation này T(v) = Av**) sao cho cái **basis {v1, v2...vn} ở đây chính là eigenvectors của A**)
 >
 >
 >
-> Khi đó, vì v_i là eigenvector của A nên Av_i = λ_i*v_
+> Khi đó, vì v_i là eigenvector của A nên Av_i = λ\_i\*v_i
 >
 >
 >
-> Như vậy linear transformation apply lên các (input) basis vector
-> là: T(v_i) = A*v_i= λ_i*v_i.
+> Như vậy linear transformation apply lên các (input) basis vector là: T(v_i) = A × v_i= λ\_i × v_i.
 >
 >
 >
-> Vậy thì **matrix A sẽ là gì?** 
+> Vậy thì **matrix A sẽ là gì?**
 >
 >
 >
@@ -670,21 +666,19 @@
 >
 >
 >
-> Như quy trình nói rằng, đầu tiên ta sẽ **thể hiện T(v_1) là linear
-> combination của các output basis (và cũng là input basis) 
-> v_i** thì **coefficients chính là column 1 của A.** 
+> Như quy trình nói rằng, đầu tiên ta sẽ **thể hiện T(v_1) là linear combination của các output basis (và cũng là input basis) v_i** thì **coefficients chính là column 1 của A.**
 >
 >
 >
-> T(v_1) = **A*v_1**= **λ1*v1** ta sẽ thể hiện thành:
+> T(v_1) = **A\*v_1**= **λ1\*v1** ta sẽ thể hiện thành:
 >
 >
 >
-> **T(v_1) =  λ1*v1 = λ1***v1 + **0***v2 + ...**0***v8
+> **T(v_1) = λ1 × v1 = λ1***v1 + **0***v2 + ...**0****8
 >
 >
 >
-> → cột 1 của A là **[λ1, 0, ...0]**
+> → cột 1 của A là **\[λ1, 0, ...0\]**
 >
 >
 >
@@ -692,11 +686,11 @@
 >
 >
 >
-> **T(v_2)** = **λ2*v2** = **0***v1 + **λ2***v2 + ...**0***v8
+> **T(v_2)** = **λ2\*v2** = **0***v1 + **λ2****2 + ...**0**\*v8
 >
 >
 >
-> → cột 2 của A là **[0, λ2, ...0]**
+> → cột 2 của A là **\[0, λ2, ...0\]**
 >
 >
 >
@@ -704,15 +698,13 @@
 >
 >
 >
-> Vậy matrix A là diagonal matrix **LAMBDA chứa các eigenvalues 
-> của A**
+> Vậy matrix A là diagonal matrix **LAMBDA chứa các eigenvalues của A**
 >
 >
 >
-> Như vậy với một linear transformation T(v) = Ax. Mà ta sử dụng
-> basis vector là eigenvectors của A thì matrix sẽ chính là LAMBDA
+> Như vậy với một linear transformation T(v) = Ax. Mà ta sử dụng basis vector là eigenvectors của A thì matrix sẽ chính là LAMBDA
 
-**🔗 See also:** [linked note](./lecture_30_linear_transformations_and_their_matrices.md#node-bq2tfnb)
+**🔗 See also:** [Diagonal Matrix from Eigenvector Basis](./lecture_30_linear_transformations_and_their_matrices.md#node-bq2tfnb)
 
 <br>
 
