@@ -18,7 +18,7 @@
 >
 >
 >
-> Đầu tiên gs nói rằng, cách làm của kernel densitiy nó có hạn chế là: h ở đâu cũng bằng nhau. Còn nhớ, h đại khái là phạm vi mà ta dùng để xác định tầm ảnh hưởng của một data point. Ví dụ như khi dùng hàm kernel là Parzen window, thì h là cạnh của một hyper-cube, để từ đó nếu khoảng cách của **x** đến data point **x**i nhỏ hơn h/2, thì pdf tại x sẽ "bị ảnh hưởng bởi **x**i" (hàm parzen window kernel sẽ = 1, khiến pdf của x sẽ tăng thêm một khoảng do ảnh hưởng của **x**i). Với kernel function khác, như Normal kernel thì cũng vậy.
+> Đầu tiên gs nói rằng, cách làm của kernel densitiy nó có hạn chế là: h ở đâu cũng bằng nhau. Còn nhớ, h đại khái là phạm vi mà ta dùng để xác định tầm ảnh hưởng của một data point. Ví dụ như khi dùng hàm kernel là Parzen window, thì h là cạnh của một hyper-cube, để từ đó nếu khoảng cách của 𝐱 đến data point 𝐱i nhỏ hơn h/2, thì pdf tại x sẽ "bị ảnh hưởng bởi 𝐱i" (hàm parzen window kernel sẽ = 1, khiến pdf của x sẽ tăng thêm một khoảng do ảnh hưởng của 𝐱i). Với kernel function khác, như Normal kernel thì cũng vậy.
 >
 >
 >
@@ -42,19 +42,19 @@
 <p align="center"><kbd><img src="assets/a6k6bve7uld.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Để hiểu cần recall lại chút (công thức 2.246: f(**x**) ≈ K / NV)
+> Để hiểu cần recall lại chút (công thức 2.246: f(𝐱) ≈ K / NV)
 >
 >
 >
-> Nói chung là, công thức này cho ta một cách để estimate giá trị của hàm density (probability density, tức pdf) tại một điểm **x**. Với K, còn nhớ, là ∑i I\_(**x**i ∈ R), là số data point (sample) rơi vào vùng R (lân cận **x**). V là volume của vùng R. Và N là kích thước sample.
+> Nói chung là, công thức này cho ta một cách để estimate giá trị của hàm density (probability density, tức pdf) tại một điểm 𝐱. Với K, còn nhớ, là ∑i I\_(𝐱i ∈ R), là số data point (sample) rơi vào vùng R (lân cận 𝐱). V là volume của vùng R. Và N là kích thước sample.
 >
 >
 >
-> Thế thì dựa vào công thức này, bằng cách fixed V, và xác định K nhờ data, ta sẽ có cách tiếp cận non-parameteric đầu tiên của bài toán density estimation - kernel approach. Trong đó, ta sẽ dùng một hàm kernel để tính xem có bao nhiêu data point **x**i nằm trong phạm vi R của **x** (mà cũng là có x nằm trong phạm vi của bao nhiêu data point, và nhân với) và từ đó sẽ định ra giá trị cao hay thấp của density tại **x**.
+> Thế thì dựa vào công thức này, bằng cách fixed V, và xác định K nhờ data, ta sẽ có cách tiếp cận non-parameteric đầu tiên của bài toán density estimation - kernel approach. Trong đó, ta sẽ dùng một hàm kernel để tính xem có bao nhiêu data point 𝐱i nằm trong phạm vi R của 𝐱 (mà cũng là có x nằm trong phạm vi của bao nhiêu data point, và nhân với) và từ đó sẽ định ra giá trị cao hay thấp của density tại 𝐱.
 >
 >
 >
-> Qua cách thứ hai, ta sẽ fix K, và dựa vào data để tính V, thì cách làm là: tại **x** (nơi cần tính f(**x**)), ta sẽ mở rộng vùng R (là một sphare - khối cầu) quanh nó ra cho đến khi chứa đủ K data sample **x**i, hoặc cũng có thể nhìn theo cách khác, mở rộng R (chính là tăng, hay xác định V) sao cho **x** nằm trong vùng ảnh hưởng của K data sample **x**i.
+> Qua cách thứ hai, ta sẽ fix K, và dựa vào data để tính V, thì cách làm là: tại 𝐱 (nơi cần tính f(𝐱)), ta sẽ mở rộng vùng R (là một sphare - khối cầu) quanh nó ra cho đến khi chứa đủ K data sample 𝐱i, hoặc cũng có thể nhìn theo cách khác, mở rộng R (chính là tăng, hay xác định V) sao cho 𝐱 nằm trong vùng ảnh hưởng của K data sample 𝐱i.
 >
 >
 >
@@ -92,7 +92,7 @@
 >
 >
 >
-> Giả sử ta có N data sample **X**1,...**X**N. Và **x** là điểm cần classify. Cũng theo KNN technique: fixed K, dựa vào data tính V → ta dựng một quả cầu tâm **x**, chứa đủ K điểm data.
+> Giả sử ta có N data sample 𝐗1,...𝐗N. Và 𝐱 là điểm cần classify. Cũng theo KNN technique: fixed K, dựa vào data tính V → ta dựng một quả cầu tâm 𝐱, chứa đủ K điểm data.
 >
 >
 >
@@ -100,23 +100,23 @@
 >
 >
 >
-> Và với điểm **x** và quả cầu của nó, chứa K điểm data, thì ta gọi Kk là số điểm dữ liệu thuộc class Tk. Ta có Σk Kk = K.
+> Và với điểm 𝐱 và quả cầu của nó, chứa K điểm data, thì ta gọi Kk là số điểm dữ liệu thuộc class Tk. Ta có Σk Kk = K.
 >
 >
 >
-> Với mỗi class Ck, ta sẽ xây dựng một K nearest neighbor (estimate) density function: f(**x**|Ck)
+> Với mỗi class Ck, ta sẽ xây dựng một K nearest neighbor (estimate) density function: f(𝐱|Ck)
 >
 >
 >
-> Y như công thức f(**x**) = K/NV với K, dùng parzen window kernel, thì ta dùng hàm đếm xem có bao nhiêu điểm data **x**i nằm trong phạm vi của **x** 
+> Y như công thức f(𝐱) = K/NV với K, dùng parzen window kernel, thì ta dùng hàm đếm xem có bao nhiêu điểm data 𝐱i nằm trong phạm vi của 𝐱 
 >
 >
 >
-> Vậy thì ta sẽ lập luận về f(**x**|Ck) như sau
+> Vậy thì ta sẽ lập luận về f(𝐱|Ck) như sau
 >
 >
 >
-> Dù gs không nói, nhưng cần hiểu rằng, ta đang xét một random variable C (class), có các discrete possible value C1,...CK Và f(**x**|Ck) dĩ nhiên là f(**x**|C=Ck), tức, dựa trên event C=Ck thì pdf tại **x** là gì.
+> Dù gs không nói, nhưng cần hiểu rằng, ta đang xét một random variable C (class), có các discrete possible value C1,...CK Và f(𝐱|Ck) dĩ nhiên là f(𝐱|C=Ck), tức, dựa trên event C=Ck thì pdf tại 𝐱 là gì.
 >
 >
 >
@@ -176,19 +176,19 @@
 >
 >
 >
-> Thế thì cũng như lập luận trên khi ta đã hiểu P(A|B) mang ý nghĩa là **khi B đã xảy ra thì sample space thu lại chỉ còn các possible outcome của B**, thì ở đây f(**x**|C=Ck) cũng có ý nghĩa tương tự, do đó nếu f(**x**) là K/NV thì f(**x**|Ck) = Kk/(Nk×V) với ý nghĩa là ta **áp dụng công thức** K/NV **cho những data point thuộc class k thôi, bỏ hết các data point khác**. Nên Kk = **chỉ xét những điểm data thuộc class k, và sau đó trong số chúng, bao nhiêu điểm nằm trong phạm vi của** **x**. Và Nk là **số data point thuộc class k**
+> Thế thì cũng như lập luận trên khi ta đã hiểu P(A|B) mang ý nghĩa là **khi B đã xảy ra thì sample space thu lại chỉ còn các possible outcome của B**, thì ở đây f(𝐱|C=Ck) cũng có ý nghĩa tương tự, do đó nếu f(𝐱) là K/NV thì f(𝐱|Ck) = Kk/(Nk×V) với ý nghĩa là ta **áp dụng công thức** K/NV **cho những data point thuộc class k thôi, bỏ hết các data point khác**. Nên Kk = **chỉ xét những điểm data thuộc class k, và sau đó trong số chúng, bao nhiêu điểm nằm trong phạm vi của** 𝐱. Và Nk là **số data point thuộc class k**
 >
 >
 >
-> (Ôn nhanh về K trong lập luận gốc, khi ta derive ra công thức f(**x**) ≈ K/VN, thì K = Σi {I\_(**X**i ∈ R}, với I\_(**X**i ∈ **R**), hay I\_(**X**i ∈ R(**x**) là indicator function, gắn với event **X**i ∈ R(**x**), mang giá trị bằng 1 khi **X**i nằm trong region lân cận **x** và bằng 0 khi ngược lại. Để rồi, với việc fixed V, dùng data để tính K, ta có kernel density approach, trong đó ta có thể dùng hàm Parzen window k(u) = I\_|u ≤ 1/2| để đếm K = Σi=1:N k((**x**i-**x**)/h), hoặc Gaussian kernel để K = Σi=1:N \[(1/√2πh^2) exp{-(**x**-**x**i)^2/2h^2}\]. Hoặc với việc fixed K, tính V từ data ta sẽ có KNN density approach)
+> (Ôn nhanh về K trong lập luận gốc, khi ta derive ra công thức f(𝐱) ≈ K/VN, thì K = Σi {I\_(𝐗i ∈ R}, với I\_(𝐗i ∈ 𝐑), hay I\_(𝐗i ∈ R(𝐱) là indicator function, gắn với event 𝐗i ∈ R(𝐱), mang giá trị bằng 1 khi 𝐗i nằm trong region lân cận 𝐱 và bằng 0 khi ngược lại. Để rồi, với việc fixed V, dùng data để tính K, ta có kernel density approach, trong đó ta có thể dùng hàm Parzen window k(u) = I\_|u ≤ 1/2| để đếm K = Σi=1:N k((𝐱i-𝐱)/h), hoặc Gaussian kernel để K = Σi=1:N \[(1/√2πh²) exp{-(𝐱-𝐱i)²/2h²}\]. Hoặc với việc fixed K, tính V từ data ta sẽ có KNN density approach)
 >
 >
 >
-> Vậy thì, tiếp theo với f(**x**) = K/VN, ta sẽ dùng Bayes theorem:
+> Vậy thì, tiếp theo với f(𝐱) = K/VN, ta sẽ dùng Bayes theorem:
 >
 >
 >
-> f(Ck|**x**) = f(**x**|Ck)f(Ck)/f(**x**)
+> f(Ck|𝐱) = f(𝐱|Ck)f(Ck)/f(𝐱)
 >
 >
 >
@@ -196,7 +196,7 @@
 >
 >
 >
-> ⇨ f(Ck|**x**) = f(**x**|Ck)f(Ck)/f(**x**) = (Kk/VNk) (Nk/N) / (K/VN)
+> ⇨ f(Ck|𝐱) = f(𝐱|Ck)f(Ck)/f(𝐱) = (Kk/VNk) (Nk/N) / (K/VN)
 >
 >
 >
@@ -218,7 +218,7 @@
 <p align="center"><kbd><img src="assets/iswbyvvfra.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì gs nói, với giá trị posterior f(Ck|**x**) như vừa rồi (mình hiểu nó là hàm conditional pmf P(C=Ck|**X**=**x**) được estimate dựa trên KNN density approach) thì để có được một decision rule giảm thiểu mis-classificate rate, thì cái rule đó sẽ là: assign class k có f(Ck|**x**) lớn nhất, tức Kk/K
+> Thế thì gs nói, với giá trị posterior f(Ck|𝐱) như vừa rồi (mình hiểu nó là hàm conditional pmf P(C=Ck|𝐗=𝐱) được estimate dựa trên KNN density approach) thì để có được một decision rule giảm thiểu mis-classificate rate, thì cái rule đó sẽ là: assign class k có f(Ck|𝐱) lớn nhất, tức Kk/K
 >
 >
 >
@@ -226,15 +226,15 @@
 >
 >
 >
-> **CHỌN RA CÁI NÀO NHỎ NHẤT TRONG ĐÁM**: {Σk=1:K Lk1 f(x, Ck), Σk=1:K Lk2 f(x, Ck), ..Σk=1:K LkK f(x, Ck)} sau đó **LẤY INDEX** ĐỂ GÁN CLASS cho data point **x**.
+> **CHỌN RA CÁI NÀO NHỎ NHẤT TRONG ĐÁM**: {Σk=1:K Lk1 f(x, Ck), Σk=1:K Lk2 f(x, Ck), ..Σk=1:K LkK f(x, Ck)} sau đó **LẤY INDEX** ĐỂ GÁN CLASS cho data point 𝐱.
 >
 >
 >
-> Và trong bài toán này, ta cho loss là như nhau (hệ số misclassification error là như nhau, tức coi như L = 1 hết), và f(**x**, Ck) = f(Ck|**x**)f(**x**), nên so f(Ck|**x**) cũng là so sánh f(Ck, **x**).
+> Và trong bài toán này, ta cho loss là như nhau (hệ số misclassification error là như nhau, tức coi như L = 1 hết), và f(𝐱, Ck) = f(Ck|𝐱)f(𝐱), nên so f(Ck|𝐱) cũng là so sánh f(Ck, 𝐱).
 >
 >
 >
-> Như vậy phân tích thì dài dòng chứ cuối cùng cái rule rất đơn giản: Xem trong K điểm data gần nhất với **x**, thì class k nào chiếm đa số thì dùng class đó để assign cho **x**
+> Như vậy phân tích thì dài dòng chứ cuối cùng cái rule rất đơn giản: Xem trong K điểm data gần nhất với 𝐱, thì class k nào chiếm đa số thì dùng class đó để assign cho 𝐱
 >
 >
 >
