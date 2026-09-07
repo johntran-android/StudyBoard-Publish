@@ -76,23 +76,23 @@
 >
 >
 >
-> ⇔ |y'(x + tε)ε - y'(x)ε| ≤ Ltε^2 
+> ⇔ |y'(x + tε)ε - y'(x)ε| ≤ Ltε² 
 >
 >
 >
 > ⇨ Vì sai số giữa y'(x + tε)ε và y'(x)ε bị chặn trên bởi một term bậc hai
 > theo ε nên dĩ nhiên bản thân nó sẽ nhỏ quadratically theo ε: Ta thay sai
-> số này bằng kí hiệu O(ε^2) 
+> số này bằng kí hiệu O(ε²) 
 >
-> ⇨ y'(x + tε)ε = y'(x)ε + O(ε^2) 
->
->
->
-> ⇨ y(x + ε) = y(x) + y'(x)ε + O(ε^2) Đây chính là D.1
+> ⇨ y'(x + tε)ε = y'(x)ε + O(ε²) 
 >
 >
 >
-> Khi lấy limit ε → 0, thì term O(ε^2) sẽ → 0 rất nhanh, để cho ta:
+> ⇨ y(x + ε) = y(x) + y'(x)ε + O(ε²) Đây chính là D.1
+>
+>
+>
+> Khi lấy limit ε → 0, thì term O(ε²) sẽ → 0 rất nhanh, để cho ta:
 >
 >
 >
@@ -118,7 +118,7 @@
 >
 >
 >
-> y(x + ε) = y(x) + ∇y(x + tε)Tε for some t ∈ (0,1)
+> y(x + ε) = y(x) + ∇y(x + tε)ᵀε for some t ∈ (0,1)
 >
 >
 >
@@ -138,35 +138,35 @@
 >
 >
 >
-> (vì |aTb| = ||a|| ||b|| |cos θ(a,b)| ≤ ||a|| ||b||)
+> (vì |aᵀb| = ||a|| ||b|| |cos θ(a,b)| ≤ ||a|| ||b||)
 >
 >
 >
-> ⇨ |∇y(x + tε) - ∇y(x)]Tε| ≤ ||∇y(x + tε) - ∇y(x)||||ε|| 
+> ⇨ |∇y(x + tε) - ∇y(x)]ᵀε| ≤ ||∇y(x + tε) - ∇y(x)||||ε|| 
 >
 >
 >
-> ⇔ |∇y(x + tε) - ∇y(x)]Tε| ≤ ||∇y(x + tε) - ∇y(x)||||ε|| ≤ Lt||ε|| ||ε|| = Lt||ε||^2
+> ⇔ |∇y(x + tε) - ∇y(x)]ᵀε| ≤ ||∇y(x + tε) - ∇y(x)||||ε|| ≤ Lt||ε|| ||ε|| = Lt||ε||²
 >
 >
 >
-> Vậy ta có |∇y(x + tε) - ∇y(x)]Tε| ≤ ||∇y(x + tε) - ∇y(x)||||ε|| ≤ Lt||ε||^2
+> Vậy ta có |∇y(x + tε) - ∇y(x)]ᵀε| ≤ ||∇y(x + tε) - ∇y(x)||||ε|| ≤ Lt||ε||²
 >
 >
 >
-> ⇔ |∇y(x + tε)Tε - ∇y(x)Tε| ≤ Lt||ε||^2
+> ⇔ |∇y(x + tε)ᵀε - ∇y(x)ᵀε| ≤ Lt||ε||²
 >
 >
 >
-> ⇨ ∇y(x + tε)Tε = ∇y(x)Tε + O(||ε||^2)
+> ⇨ ∇y(x + tε)ᵀε = ∇y(x)ᵀε + O(||ε||²)
 >
 >
 >
->  ⇨ y(x + ε) = y(x) + ∇y(x)Tε + O(||ε||^2)
+>  ⇨ y(x + ε) = y(x) + ∇y(x)ᵀε + O(||ε||²)
 >
 >
 >
-> Đây chính là D.2 (phải viết O(||ε||^2) mới đúng, thay vì O(ε^2) vì ε giờ đang là vector)
+> Đây chính là D.2 (phải viết O(||ε||²) mới đúng, thay vì O(ε²) vì ε giờ đang là vector)
 
 <br>
 
@@ -188,17 +188,17 @@
 >
 >
 >
-> y(x + ε) = y(x) + ∇y(x)Tε + O(||ε||^2)
+> y(x + ε) = y(x) + ∇y(x)ᵀε + O(||ε||²)
 >
 >
 >
-> cũng là dy = y(x + ε) - y(x) = ∇y(x)Tε + O(||ε||^2) = Σi [∂y(x)/∂xi * εi]  + O(||ε||^2)
+> cũng là dy = y(x + ε) - y(x) = ∇y(x)ᵀε + O(||ε||²) = Σi [∂y(x)/∂xi * εi]  + O(||ε||²)
 >
 >
 >
 > để mang ý nghĩa là, khi các phần tử x1,x2,...xD lần lượt nhúc nhích (perturb) các
 > khoảng ε1, ε2,...εD thì hàm y sẽ nhúc nhích một khoảng bằng Σi [∂y(x)/∂xi * εi]
-> cộng một term O(||ε||^2)
+> cộng một term O(||ε||²)
 >
 >
 >
@@ -236,7 +236,7 @@
 >
 >
 >
-> F[y(x) + εη(x)] = F[y(x)] + Σi [∂F(x)/∂y(xi)] ε η(xi) + O(ε^2)
+> F[y(x) + εη(x)] = F[y(x)] + Σi [∂F(x)/∂y(xi)] ε η(xi) + O(ε²)
 >
 >
 >
@@ -246,7 +246,7 @@
 >
 >
 >
-> F[y(x) + εη(x)] = F[y(x)] + ∫ [δF(x)/δy(x)] η(x) dx + O(ε^2)
+> F[y(x) + εη(x)] = F[y(x)] + ∫ [δF(x)/δy(x)] η(x) dx + O(ε²)
 >
 >
 >
@@ -254,13 +254,13 @@
 >
 >
 >
-> Rồi, thế thì, bây giờ quay lại D2, Δy = y(x + ε) - y(x) = ∇y(x)Tε + O(||ε||^2)
+> Rồi, thế thì, bây giờ quay lại D2, Δy = y(x + ε) - y(x) = ∇y(x)ᵀε + O(||ε||²)
 >
 >
 >
 > nếu ta xét điều kiện này tại điểm stationary / critical point, có nghĩa là  tại điểm
 > mà khi di chuyển ra khỏi đó chút xíu, thì hàm y không đổi, thì ta sẽ có y(x + ε) -
-> y(x) = 0 ⇔ ∇y(x)Tε + O(||ε||^2) = 0 Xét tại limit ε → 0 thì cái này trở thành ∇y(x)Tε
+> y(x) = 0 ⇔ ∇y(x)ᵀε + O(||ε||²) = 0 Xét tại limit ε → 0 thì cái này trở thành ∇y(x)ᵀε
 > = 0 (1a)
 >
 >
@@ -282,18 +282,18 @@
 >
 >
 > Nói rõ thêm ý này: ε trong (1a, 1b) là vector [ε1, ε2,...εD] đóng vai trò là vector có
-> độ lớn vi phân, và chỉ theo hướng nào đó trong R^D. Và ∇y(x)Tε chính là
+> độ lớn vi phân, và chỉ theo hướng nào đó trong R^D. Và ∇y(x)ᵀε chính là
 > directional derivative của y(x) wrt hướng vector ε: Độ dốc của hàm y(x) theo
 > hướng ε tại x. Mà để cho x là stationary point, có nghĩa là đi ra khỏi x theo
 > hướng ε bất kì một khoảng nhỏ đều phải không khiến hàm y(x) thay đổi. Nên
 > đây cũng chính là nói độ dốc của hàm y(x) theo hướng ε tại x phải = 0 với mọi
-> hướng ε: ∇y(x)Tε = 0 ∀ε.
+> hướng ε: ∇y(x)ᵀε = 0 ∀ε.
 >
 >
 >
-> (nói chuẩn xác hơn thì ∇y(x)Tε = ||ε|| * directional derivative của y(x) wrt ε.
-> còn ∇y(x)Tε thật ra dễ thấy chính là Σi [∂y(x)/xi] εi, chính là total differential) 
-> Nhưng đôi khi người ta gọi luôn ∇y(x)Tε là directional derivative, như mình thường
+> (nói chuẩn xác hơn thì ∇y(x)ᵀε = ||ε|| * directional derivative của y(x) wrt ε.
+> còn ∇y(x)ᵀε thật ra dễ thấy chính là Σi [∂y(x)/xi] εi, chính là total differential) 
+> Nhưng đôi khi người ta gọi luôn ∇y(x)ᵀε là directional derivative, như mình thường
 > thấy trong sách Nocedal.)
 >
 >
@@ -349,7 +349,7 @@
 >
 >
 >
-> G(y + εη, y' + εη', x) = G(y, y', x) + ∂G/∂y (εη) + ∂G/∂y' (εη') + O(ε^2)
+> G(y + εη, y' + εη', x) = G(y, y', x) + ∂G/∂y (εη) + ∂G/∂y' (εη') + O(ε²)
 >
 >
 >
@@ -370,7 +370,7 @@
 >
 >
 >
-> F[y(x) + ε η(x)] = F[y(x)] + ∫ δF/δy(x) . εη(x) dx + O(ε^2) (1)
+> F[y(x) + ε η(x)] = F[y(x)] + ∫ δF/δy(x) . εη(x) dx + O(ε²) (1)
 >
 >
 >
@@ -414,7 +414,7 @@
 >
 >
 >
-> Trong câu chuyện này, F vẫn là functional, vì thay các function y(x) khác nhau (ví dụ ln(x), x^2,...e^x) thì ta sẽ có các
+> Trong câu chuyện này, F vẫn là functional, vì thay các function y(x) khác nhau (ví dụ ln(x), x²,...e^x) thì ta sẽ có các
 > scalar F khác nhau
 >
 >
