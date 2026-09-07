@@ -16,35 +16,35 @@
 <p align="center"><kbd><img src="assets/5jwvkqoof24.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cùng tìm hiểu phần này. Đầu tiên gs nói ta sẽ đi maximizing model evidence f(**t**|α, β) theo α. Ý nghĩa về model evidence này trong các note trước mình đã nói nhiều nên ko nói lại nữa cho bớt, dài nhưng có thể nói cực nhanh, rằng cái này chính là f(𝒟|**ℳ**i) là kết qủa khi đã average out f(𝒟|**ℳ**i, **w**) over **w** \~ f(**w**|α) và với ℳi là distribution model cụ thể sau đây: T|**x** \~ n(**w**TΦ(**x**), 1/β). Nên f(𝒟|ℳi) này chính là f(**t**|β, α,**X**), bỏ đi (lờ đi để cho gọn bớt) thì ta có f(**t**|α, β).
+> Cùng tìm hiểu phần này. Đầu tiên gs nói ta sẽ đi maximizing model evidence f(𝐭|α, β) theo α. Ý nghĩa về model evidence này trong các note trước mình đã nói nhiều nên ko nói lại nữa cho bớt, dài nhưng có thể nói cực nhanh, rằng cái này chính là f(𝒟|**ℳ**i) là kết qủa khi đã average out f(𝒟|**ℳ**i, 𝐰) over 𝐰 \~ f(𝐰|α) và với ℳi là distribution model cụ thể sau đây: T|𝐱 \~ n(𝐰ᵀΦ(𝐱), 1/β). Nên f(𝒟|ℳi) này chính là f(𝐭|β, α,𝐗), bỏ đi (lờ đi để cho gọn bớt) thì ta có f(𝐭|α, β).
 >
 >
 >
-> Thế thì trước khi đi giải bài toán tối ưu maximize over α {f(**t**|α, β}, tức tìm α, để f(t|α, β) lớn nhất gs làm vài công tác chuẩn bị: định nghĩa ra equation (β**Φ**T**Φ**)ui = λi ui và nói với 3.81 thì **A** có eigenvalues là α + λi. Thế là thế nào nhỉ?
+> Thế thì trước khi đi giải bài toán tối ưu maximize over α {f(𝐭|α, β}, tức tìm α, để f(t|α, β) lớn nhất gs làm vài công tác chuẩn bị: định nghĩa ra equation (β**Φ**ᵀ**Φ**)ui = λi ui và nói với 3.81 thì 𝐀 có eigenvalues là α + λi. Thế là thế nào nhỉ?
 >
 >
 >
-> Là vầy: Theo link (Hessian of Regularized Error Function) ta thấy phần trước, ta đã đặt matrix **A** = α**I** + β **Φ**T**Φ**. Mà (β**Φ**T**Φ**)**u**i = λi **u**i ở đây chỉ đơn giản là có nghĩa là ta gọi λi và **u**i là eigenvalue và eigenvector tương ứng của matrix β**Φ**T**Φ** (vì như đã học trong MIT 18.06, eigenvector và eigenvalue của matrix **A** là scalar λ và vector thỏa **Au** = λ**u**, mang ý nghĩa là thông qua linear transformation bởi matrix A, vector **u** chỉ bị kéo giãn bởi scalar λ chứ không bị đổi hướng). Thế thì lập luận như sau:
+> Là vầy: Theo link (Hessian of Regularized Error Function) ta thấy phần trước, ta đã đặt matrix 𝐀 = α𝐈 + β **Φ**ᵀ**Φ**. Mà (β**Φ**ᵀ**Φ**)𝐮i = λi 𝐮i ở đây chỉ đơn giản là có nghĩa là ta gọi λi và 𝐮i là eigenvalue và eigenvector tương ứng của matrix β**Φ**ᵀ**Φ** (vì như đã học trong MIᵀ 18.06, eigenvector và eigenvalue của matrix 𝐀 là scalar λ và vector thỏa **Au** = λ𝐮, mang ý nghĩa là thông qua linear transformation bởi matrix A, vector 𝐮 chỉ bị kéo giãn bởi scalar λ chứ không bị đổi hướng). Thế thì lập luận như sau:
 >
 >
 >
-> (β**Φ**T**Φ**)**u**i = λi **u**i, cộng hai vế cho **u**i
+> (β**Φ**ᵀ**Φ**)𝐮i = λi 𝐮i, cộng hai vế cho 𝐮i
 >
 >
 >
-> ⇔ (β**Φ**T**Φ**)**u**i + α**u**i= λi **u**i + α **u**i
+> ⇔ (β**Φ**ᵀ**Φ**)𝐮i + α𝐮i= λi 𝐮i + α 𝐮i
 >
 >
 >
-> ⇔ (β**Φ**T**Φ** + α**I**) **u**i= λi **u**i + α **u**i
+> ⇔ (β**Φ**ᵀ**Φ** + α𝐈) 𝐮i= λi 𝐮i + α 𝐮i
 >
 >
 >
-> ⇔ (β**Φ**T**Φ** + α**I**) **u**i= (λi + α) **u**i
+> ⇔ (β**Φ**ᵀ**Φ** + α𝐈) 𝐮i= (λi + α) 𝐮i
 >
 >
 >
-> và với equation này, theo định nghĩa của eigenvector ta kết luận ui cũng là eigenvector của **A** = β**Φ**T**Φ** + α**I** với eigenvalue là λi + α.
+> và với equation này, theo định nghĩa của eigenvector ta kết luận ui cũng là eigenvector của 𝐀 = β**Φ**ᵀ**Φ** + α𝐈 với eigenvalue là λi + α.
 >
 >
 >
@@ -54,11 +54,11 @@
 >
 > Tiếp, lôi ra lại công thức 3.86 bữa trước (xem link Log Marginal Likelihood Derivation):
 >
-> ln f(**t**|α, β) = (M/2) ln(α) + (N/2) ln (β) - E(**m**N) - 1/2 ln |**A**| - (N/2) ln(2π),
+> ln f(𝐭|α, β) = (M/2) ln(α) + (N/2) ln (β) - E(𝐦N) - 1/2 ln |𝐀| - (N/2) ln(2π),
 >
 >
 >
-> và xét ln |**A**|:
+> và xét ln |𝐀|:
 >
 >
 >
@@ -66,7 +66,7 @@
 >
 >
 >
-> d/dα ln |**A**| = d/dα ln |β**Φ**T**Φ** + α**I**|, có kết quả như công thức 3.88. Thử giải thích xem vì sao?
+> d/dα ln |𝐀| = d/dα ln |β**Φ**ᵀ**Φ** + α𝐈|, có kết quả như công thức 3.88. Thử giải thích xem vì sao?
 >
 >
 >
@@ -96,19 +96,19 @@
 >
 >
 >
-> d/dα ln f(**t**|α, β) = 0 
+> d/dα ln f(𝐭|α, β) = 0 
 >
 >
 >
-> Thay công thức ln f(**t**|α, β) bữa trước vào: 
+> Thay công thức ln f(𝐭|α, β) bữa trước vào: 
 >
 >
 >
-> ⇔ d/dα \[(M/2) ln(α) + (N/2) ln (β) - E(**m**N) - 1/2 ln |**A**| - (N/2) ln(2π)\] = 0
+> ⇔ d/dα \[(M/2) ln(α) + (N/2) ln (β) - E(𝐦N) - 1/2 ln |𝐀| - (N/2) ln(2π)\] = 0
 >
 >
 >
-> nhớ lại E(**m**N) = (β/2) ||**t** - **Φm**N||^2 + (α/2)(**m**N)T**m**N), chỉ có term sau dính tới α  
+> nhớ lại E(𝐦N) = (β/2) ||𝐭 - **Φm**N||² + (α/2)(𝐦N)ᵀ𝐦N), chỉ có term sau dính tới α  
 >
 >
 >
@@ -116,27 +116,27 @@
 >
 >
 >
-> ⇔ d/dα \[(M/2) ln(α) - α(**m**N)T**m**N - 1/2 ln |**A**|\] = 0
+> ⇔ d/dα \[(M/2) ln(α) - α(𝐦N)ᵀ𝐦N - 1/2 ln |𝐀|\] = 0
 >
 >
 >
-> ⇔ M/2α - (α/2) (**m**N)T**m**N - 1/2 \[Σi \[1 / (λi + α)\]\] = 0 → 3.89
+> ⇔ M/2α - (α/2) (𝐦N)ᵀ𝐦N - 1/2 \[Σi \[1 / (λi + α)\]\] = 0 → 3.89
 >
 >
 >
-> ⇔ M - α(**m**N)T**m**N - α \[Σi \[1 / (λi + α)\]\] = 0
+> ⇔ M - α(𝐦N)ᵀ𝐦N - α \[Σi \[1 / (λi + α)\]\] = 0
 >
 >
 >
-> ⇔ α(**m**N)T**m**N = M - α Σi \[1 / (λi + α)\], đặt là γ
+> ⇔ α(𝐦N)ᵀ𝐦N = M - α Σi \[1 / (λi + α)\], đặt là γ
 >
 >
 >
-> ⇔ α = γ / (**m**N)T**m**N, đây là critical point (hay statationary point).
+> ⇔ α = γ / (𝐦N)ᵀ𝐦N, đây là critical point (hay statationary point).
 >
 >
 >
-> Và tới đây để kết luận γ / (**m**N)T**m**N là maximizer thì đúng ra ta phải check điều kiện bậc hai nữa: Nhưng gs bỏ qua, ta cũng tạm tin theo vậy.
+> Và tới đây để kết luận γ / (𝐦N)ᵀ𝐦N là maximizer thì đúng ra ta phải check điều kiện bậc hai nữa: Nhưng gs bỏ qua, ta cũng tạm tin theo vậy.
 >
 >
 >
@@ -168,7 +168,7 @@
 <p align="center"><kbd><img src="assets/xqrk194gewl.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> **m**N = β**S**N**Φ**T**t**
+> 𝐦N = β**S𝐍Φ**ᵀ𝐭
 >
 >
 >
@@ -176,7 +176,7 @@
 >
 >
 >
-> Rồi, thế thì, đại khái là trong công thức minimizer của bài tóan, α = γ / (**m**N)T**m**N, thì có đặc điểm là γ, cũng phụ thuộc α và **m**N, với ý nghĩa như ta đã biết bữa trước rằng nó là mean của posterior f(**w**|𝒟,α), mà cái này ∝ f(𝒟|**w**)f(**w**|α) nên dĩ nhiên **m**N cũng phụ thuộc α. Vậy công thức trên vẫn chỉ là một hàm theo α.
+> Rồi, thế thì, đại khái là trong công thức minimizer của bài tóan, α = γ / (𝐦N)ᵀ𝐦N, thì có đặc điểm là γ, cũng phụ thuộc α và 𝐦N, với ý nghĩa như ta đã biết bữa trước rằng nó là mean của posterior f(𝐰|𝒟,α), mà cái này ∝ f(𝒟|𝐰)f(𝐰|α) nên dĩ nhiên 𝐦N cũng phụ thuộc α. Vậy công thức trên vẫn chỉ là một hàm theo α.
 >
 >
 >
@@ -184,7 +184,7 @@
 >
 >
 >
-> Một điểm nữa, trong quá trình tính ta sẽ cần λi, là eigenvalue của β**Φ**T**Φ**, và ta sẽ tính eigenvalue của **Φ**T**Φ** rồi nhân β (cái này đơn giản, vì dĩ nhiên eigenvalue của β**Φ**T**Φ** = β × eigenvalue của **Φ**T**Φ**)
+> Một điểm nữa, trong quá trình tính ta sẽ cần λi, là eigenvalue của β**Φ**ᵀ**Φ**, và ta sẽ tính eigenvalue của **Φ**ᵀ**Φ** rồi nhân β (cái này đơn giản, vì dĩ nhiên eigenvalue của β**Φ**ᵀ**Φ** = β × eigenvalue của **Φ**ᵀ**Φ**)
 >
 >
 >
@@ -216,7 +216,7 @@
 <p align="center"><kbd><img src="assets/l2y2r0uaog.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tương tự, ta làm cho β, maximize over β f(**t**|α, β), và cũng equivalent với maximize ln f(**t**|α,β):
+> Tương tự, ta làm cho β, maximize over β f(𝐭|α, β), và cũng equivalent với maximize ln f(𝐭|α,β):
 >
 >
 >
@@ -224,41 +224,41 @@
 >
 >
 >
-> d/dβ ln f(**t**|α,β)\] = 0
+> d/dβ ln f(𝐭|α,β)\] = 0
 >
 >
 >
-> ⇔ d/dβ \[(M/2) ln(α) + (N/2) ln (β) - E(**m**N) - 1/2 ln |**A**| - (N/2) ln(2π)\] = 0\
+> ⇔ d/dβ \[(M/2) ln(α) + (N/2) ln (β) - E(𝐦N) - 1/2 ln |𝐀| - (N/2) ln(2π)\] = 0\
 > \
-> với E(**m**N) = (β/2) ||**t** - **Φm**N||^2 + (α/2)(**m**N)T**m**N), chỉ có term đầu dính tới β
+> với E(𝐦N) = (β/2) ||𝐭 - **Φm**N||² + (α/2)(𝐦N)ᵀ𝐦N), chỉ có term đầu dính tới β
 >
 >
 >
-> ⇔d/dβ \[(N/2) ln (β) - (β/2) ||**t** - **Φm**N||^2 - 1/2 ln |**A**|\] = 0
+> ⇔d/dβ \[(N/2) ln (β) - (β/2) ||𝐭 - **Φm**N||² - 1/2 ln |𝐀|\] = 0
 >
 >
 >
-> ⇔ d/dβ \[(N/2) ln (β) - (β/2) ||**t** - **Φm**N||^2 - 1/2 ln \[Πi (λi + α)\]\] = 0
+> ⇔ d/dβ \[(N/2) ln (β) - (β/2) ||𝐭 - **Φm**N||² - 1/2 ln \[Πi (λi + α)\]\] = 0
 >
 >
 >
-> ⇔ N/2β - (1/2) ||**t** - **Φm**N||^2 - d/dβ\[1/2 ln \[Πi (λi + α)\]\] = 0
+> ⇔ N/2β - (1/2) ||𝐭 - **Φm**N||² - d/dβ\[1/2 ln \[Πi (λi + α)\]\] = 0
 >
 >
 >
-> ⇔ N/2β - (1/2) ||**t** - **Φm**N||^2 - (1/2) Σi d/dβ ln(λi + α)\] = 0
+> ⇔ N/2β - (1/2) ||𝐭 - **Φm**N||² - (1/2) Σi d/dβ ln(λi + α)\] = 0
 >
 >
 >
-> ⇔ N/2β - (1/2) ||**t** - **Φm**N||^2 - (1/2) Σi \[1/ (λi + α) . dλi/dβ\] = 0
+> ⇔ N/2β - (1/2) ||𝐭 - **Φm**N||² - (1/2) Σi \[1/ (λi + α) . dλi/dβ\] = 0
 >
 >
 >
-> Đến đây ta cần dλi/dβ, lập luận như sau. Xét (β**Φ**T**Φ**)**u**i = λi **u**i, chia hai vế cho β, ta có **Φ**T**Φ u**i = (λi/β) **u**i ⇒ (λi/β) là eigenvalue của **Φ**T**Φ**, với eigenvector là **u**i, ta đặt scalar này là **e**i: ei = λi/β.
+> Đến đây ta cần dλi/dβ, lập luận như sau. Xét (β**Φ**ᵀ**Φ**)𝐮i = λi 𝐮i, chia hai vế cho β, ta có **Φ**ᵀ**Φ u**i = (λi/β) 𝐮i ⇒ (λi/β) là eigenvalue của **Φ**ᵀ**Φ**, với eigenvector là 𝐮i, ta đặt scalar này là 𝐞i: ei = λi/β.
 >
 >
 >
-> Như vậy với ei là eigenvalue của **Φ**T**Φ**, ta có hàm λi = ei β, là hàm tuyến tính theo β vì ei chỉ là constant. Do đó dλi/dβ = ei.
+> Như vậy với ei là eigenvalue của **Φ**ᵀ**Φ**, ta có hàm λi = ei β, là hàm tuyến tính theo β vì ei chỉ là constant. Do đó dλi/dβ = ei.
 >
 >
 >
@@ -274,15 +274,15 @@
 >
 >
 >
-> ..⇔ N/2β - (1/2) ||**t** - **Φm**N||^2 - (1/2) Σi \[1/ (λi + α) . λi/β\] = 0
+> ..⇔ N/2β - (1/2) ||𝐭 - **Φm**N||² - (1/2) Σi \[1/ (λi + α) . λi/β\] = 0
 >
 >
 >
-> ⇔ N/2β - (1/2) ||**t** - **Φm**N||^2 - (1/2) Σi \[λi/(λi + α)β\] = 0
+> ⇔ N/2β - (1/2) ||𝐭 - **Φm**N||² - (1/2) Σi \[λi/(λi + α)β\] = 0
 >
 >
 >
-> ⇔ N/2β - (1/2) ||**t** - **Φm**N||^2 - (1/2β) Σi \[λi/(λi + α)\] = 0
+> ⇔ N/2β - (1/2) ||𝐭 - **Φm**N||² - (1/2β) Σi \[λi/(λi + α)\] = 0
 >
 >
 >
@@ -290,43 +290,43 @@
 >
 >
 >
-> ⇔ N/2β - (1/2) ||**t** - **Φm**N||^2 - (1/2β) γ = 0
+> ⇔ N/2β - (1/2) ||𝐭 - **Φm**N||² - (1/2β) γ = 0
 >
 >
 >
-> ⇔ N/2β - (1/2) ||**t** - **Φm**N||^2 - γ/2β = 0 → đây là 3.94
+> ⇔ N/2β - (1/2) ||𝐭 - **Φm**N||² - γ/2β = 0 → đây là 3.94
 >
 >
 >
-> ⇔ N/2β - (1/2) ||**t** - **Φm**N||^2 = γ/2β
+> ⇔ N/2β - (1/2) ||𝐭 - **Φm**N||² = γ/2β
 >
 >
 >
-> ⇔ N/β -  ||**t** - **Φm**N||^2 = γ/β 
+> ⇔ N/β -  ||𝐭 - **Φm**N||² = γ/β 
 >
 >
 >
-> ⇔ - ||**t** - **Φm**N||^2 = γ/β - N/β
+> ⇔ - ||𝐭 - **Φm**N||² = γ/β - N/β
 >
 >
 >
-> ⇔ - ||**t** - **Φm**N||^2 = 1/β(γ - N)
+> ⇔ - ||𝐭 - **Φm**N||² = 1/β(γ - N)
 >
 >
 >
-> ⇔ \[- 1/(γ - N)\] ||**t** - **Φm**N||^2 = 1/β
+> ⇔ \[- 1/(γ - N)\] ||𝐭 - **Φm**N||² = 1/β
 >
 >
 >
-> ⇔ \[1/(N-γ)\] ||**t** - **Φm**N||^2 = 1/β
+> ⇔ \[1/(N-γ)\] ||𝐭 - **Φm**N||² = 1/β
 >
 >
 >
-> Tới đây nhớ lại **Φ** là design matrix có các hàng chính là Φi(**x**)T,...ΦM(**x**). Nên **Φm**N là vector có các phần tử là dot product của mN với các vector hàng này.
+> Tới đây nhớ lại **Φ** là design matrix có các hàng chính là Φi(𝐱)ᵀ,...ΦM(𝐱). Nên **Φm**N là vector có các phần tử là dot product của mN với các vector hàng này.
 >
 >
 >
-> .. ⇔ 1/β = \[1/(N-γ)\] \[Σi (ti - **m**NTΦ(**x**i))^2\] 
+> .. ⇔ 1/β = \[1/(N-γ)\] \[Σi (ti - 𝐦NᵀΦ(𝐱i))²\] 
 >
 >
 >
