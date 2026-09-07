@@ -207,7 +207,7 @@
 >
 >
 >
-> -> eigenvector x2 = [1 -1] nhưng ta biết là mình tính ra
+> → eigenvector x2 = [1 -1] nhưng ta biết là mình tính ra
 > [-1 1] thì vẫn đúng thôi vì với eigenvector ta chỉ quan tâm
 > phương
 >
@@ -430,7 +430,7 @@
 >
 >
 >
-> Khi đó khi t -> infinity, **e^(λt) -> 0 dẫn đến mọi solution
+> Khi đó khi t → infinity, **e^(λt) → 0 dẫn đến mọi solution
 > c_i*(e^λ_i*t)*x_i đều trở thành c_i*0*x_i = 0**
 
 <br>
@@ -440,7 +440,7 @@
 <p align="center"><kbd><img src="assets/e7e82c4f7vi.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> khi x -> -infinity thì e^x -> 0
+> khi x → -infinity thì e^x → 0
 
 <br>
 
@@ -468,7 +468,7 @@
 >
 >
 > Vậy nếu phần thực của số phức âm (ví dụ chính là -3
-> trong ví dụ này) thì khi t->infinity thì e^-3t cũng -> 0
+> trong ví dụ này) thì khi t→infinity thì e^-3t cũng → 0
 >
 >
 >
@@ -482,7 +482,7 @@
 <p align="center"><kbd><img src="assets/9qwdh56o8yh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Còn trạng thái **STEADY**: tức là u(t) -> [**một giá trị ổn định]**
+> Còn trạng thái **STEADY**: tức là u(t) → [**một giá trị ổn định]**
 > như ví dụ vừa rồi đó là **CÓ ÍT NHẤT MỘT EIGENVALUE =
 > 0**, và **CÁC EIGENVALUE KHÁC** CÓ **GIÁ TRỊ THỰC ÂM**
 > (số thực hoặc phần thực của số phức)
@@ -653,6 +653,8 @@
 
 <a id="node-145irtj"></a>
 
+###### Geometric and Exponential Power Series
+
 <p align="center"><kbd><img src="assets/fnatzx7jpyq.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -683,7 +685,7 @@
 >
 >
 >
-> = **f(0) + f'(0)*x + f''(0)*x^2/2! +...+ f^(n)(0)*x^n/n!**
+> = **f(0) + f'(0)*x + f''(0)*x²/2! +...+ f^(n)(0)*xⁿ/n!**
 >
 >
 >
@@ -720,11 +722,11 @@
 >
 >
 >
-> f(x) = 1 + x/1! + x^2/2! + ... = x^0/0! + x^1/1! + x^2/2! + ....
+> f(x) = 1 + x/1! + x²/2! + ... = x^0/0! + x^1/1! + x²/2! + ....
 >
 >
 >
-> **= Sum n=0:infinity [x^n/n!]**
+> **= Sum n=0:infinity [xⁿ/n!]**
 >
 > Đầu tiên ta cần ôn lại về **chuỗi Taylor** (gs có nhắc đến,
 > nhưng ở những phần sau, nhưng ở đây mình đưa
@@ -898,7 +900,7 @@
 <p align="center"><kbd><img src="assets/lr1s9vywy8q.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đại khái là gs cho rằng, **khi eigenvalue của A nhỏ hơn 1** thì (At)^1, (At)^2, (At)^3 ....(At^n sẽ nhỏ dần nhỏ dần và tổng trên sẽ converge về I + At
+> đại khái là gs cho rằng, **khi eigenvalue của A nhỏ hơn 1** thì (At)^1, (At)^2, (At)^3 ....(Atⁿ sẽ nhỏ dần nhỏ dần và tổng trên sẽ converge về I + At
 
 <br>
 
@@ -926,7 +928,7 @@
 >
 >
 >
-> I + Λ t  + Λ t^2 / 2 + Λ t^3 / 3! + ... (trong hình vẽ thiếu
+> I + Λ t  + Λ t² / 2 + Λ t³ / 3! + ... (trong hình vẽ thiếu
 > cái fraction 1/2!, 1/3!
 >
 >
@@ -1090,10 +1092,10 @@
 >
 >
 > Như vậy nếu **muốn giá trị u(t) ngày càng nhỏ** khi các giá
-> trị t tăng lên thì **e(Λt) phải -> 0** và đồng nghĩa các **e^λ1t,
+> trị t tăng lên thì **e(Λt) phải → 0** và đồng nghĩa các **e^λ1t,
 > e^λ2t.... tiến tới 0**. Và muốn vậy các **λ phải âm**
 > (hoặc có phần thực âm nếu λ là số phức) vì khi đó
-> e^λt sẽ -> 0 theo tính chất hàm exponential
+> e^λt sẽ → 0 theo tính chất hàm exponential
 
 <br>
 
