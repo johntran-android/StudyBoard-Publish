@@ -139,11 +139,11 @@
 >
 > me: Không. Vì như đã biết, **vì v1, v2 independence**,
 > **nên mọi linear combination của chúng đã tạo thành
-> plane R^2**.
+> plane R²**.
 >
 >
 >
-> Và **v3 nằm trong R^2**, nên **nó cũng là kết quả của
+> Và **v3 nằm trong R²**, nên **nó cũng là kết quả của
 > một linear combination giữa v1 và v2**. Vậy ba vector
 > này không independence.
 
@@ -164,7 +164,7 @@
 > là vì soi lại cái ta vừa nhận định: Nếu matrix A có **số hàng
 > nhỏ hơn số cột** thì kiểu gì cũng sẽ **có solution khác 0** (như
 > đã giải thích, vì số pivot lớn nhất **sẽ chỉ là m < n** nên sẽ
-> **luôn có free column** / free variable -> nên chắc chắn có thể
+> **luôn có free column** / free variable → nên chắc chắn có thể
 > chọn giá trị khác không cho free variable và thế vào ta tính
 > ra pivot variable để **có special solution khác 0**.
 >
@@ -177,7 +177,7 @@
 >
 >
 > Thì như đã biết Ac=0 chính là linear combination của các
-> cột với coefficient là các phần tử của c = 0 -> Dependence.
+> cột với coefficient là các phần tử của c = 0 → Dependence.
 
 <br>
 
@@ -216,14 +216,14 @@
 >
 > Vậy thì **nếu nullspace của A chỉ có mỗi zero vector**, thì có nghĩa là
 > **ngoài bộ coeffs toàn 0**, thì **chẳng có bộ nào khác** tạo ra linear
-> combination của A's column để **cho ra 0** -> nên các **column của
+> combination của A's column để **cho ra 0** → nên các **column của
 > A independence**
 >
 >
 >
 > Còn nếu nullspace của A **có vector khác zero vector**, thì có
 > nghĩa là **có một coeff khác mà không** **phải là 0** hết có thể tạo linear
-> combination của A's cols ra 0 -> **dependence.**
+> combination của A's cols ra 0 → **dependence.**
 
 <br>
 
@@ -234,7 +234,7 @@
 > [!NOTE]
 > Vậy, với trường hợp **mọi cols của A đều independence**, thì
 > chính là ta có **mỗi cột một pivot**, nên trường hợp này ta
-> có n pivot -> **rank = n**. Nhớ lại, rank là số pivot
+> có n pivot → **rank = n**. Nhớ lại, rank là số pivot
 >
 >
 >
@@ -261,7 +261,7 @@
 > cũng chính là nói rằng **CÁC COLUMNS CỦA A SPAN
 > COLUMN SPACE C(A)**
 
-**🔗 See also:** [linked note](./lecture_5_transpose_permutations_spaces_rn.md#node-sobom5t)
+**🔗 See also:** [Không gian cột ma trận](./lecture_5_transpose_permutations_spaces_rn.md#node-sobom5t)
 
 <br>
 
@@ -331,7 +331,7 @@
 <p align="center"><kbd><img src="assets/6ikx6h2yek8.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs lấy ví dụ space là **R^3**. Thì một **basis** của nó là (1 0
+> Gs lấy ví dụ space là **R³**. Thì một **basis** của nó là (1 0
 > 0), (0 1 0), (0 0 1) (Đây gọi là **STANDARD** BASIS).
 >
 >
@@ -343,7 +343,7 @@
 >
 >
 > Thì dễ thấy chúng là 3 vector **trùng với 3 trục của không
-> gian R^3**, nên nếu **muốn c1*v1 + c2*v2 + c3*v3 = 0** thì
+> gian R³**, nên nếu **muốn c1*v1 + c2*v2 + c3*v3 = 0** thì
 > **chỉ có một case là c1=c2=c3=0.**
 >
 >
@@ -408,7 +408,7 @@
 >
 >
 >
-> -> **Full rank, hay invertible**.
+> → **Full rank, hay invertible**.
 >
 >
 >
@@ -496,9 +496,9 @@
 > [!NOTE]
 > kết luận đầu tiên đó là **CÓ RẤT NHIỀU BASIS**, bất kể
 > khi nào ta lấy một **Invertible matrix 3x3**, thì **3 columns
-> của nó sẽ tạo một basis của R^3**  Vì sao phải 3x3, 4x3
-> được không? Không vì lúc này các cols trong R^4 rồi,
-> đang nói R^3 mà.
+> của nó sẽ tạo một basis của R³**  Vì sao phải 3x3, 4x3
+> được không? Không vì lúc này các cols trong R⁴ rồi,
+> đang nói R³ mà.
 >
 >
 >
@@ -506,7 +506,7 @@
 > cột tạo bởi 4 cột của matrix này sẽ chắc chắn có free
 > columns/variable, vì sao, vì ngay cả khi mỗi hàng có một
 > pivot, thì nó c**ũng chỉ có 3 pivot**, cùng **đồng nghĩa là
-> chỉ có 3 pivot columns** -> **dư một columns** là **free**
+> chỉ có 3 pivot columns** → **dư một columns** là **free**
 > columns ⇒ Ax=0 **có specials solution** cũng là **basis của
 > nullspace** ⇒ nullspace không chỉ chứa zero vector ⇒ **có
 > bộ non-zero coefficient tạo linear combination giữa các
