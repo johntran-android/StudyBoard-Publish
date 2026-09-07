@@ -232,7 +232,7 @@
 > Và ta cũng có thể nghĩ theo cách nghĩ rằng, **matrix có hai
 > row giống nhau thì đương nhiên sẽ sẽ có dependent row**,
 > khiến nó **không thể full row rank** (và đang nói về square
-> matrix nên nó **không thể full rank -> không invertible**. Và
+> matrix nên nó **không thể full rank → không invertible**. Và
 > như lúc nãy nói, **non-invertible matrix sẽ có det = 0**
 
 <br>
@@ -312,7 +312,7 @@
 > Thế thì gs cho rằng ta có thể dễ hiểu ngay properties này vì **row
 > = 0 tức là nó chính là một row dependent** (vì nó = một row khác
 > * 0). Thành ra matrix **không thể full rank**, do đó cũng non-invertible 
-> -> **det = 0**
+> → **det = 0**
 >
 >
 >
@@ -462,7 +462,7 @@
 >
 >
 >
-> U có một row = 0 -> det U = 0 (property 6)
+> U có một row = 0 → det U = 0 (property 6)
 >
 >
 >
@@ -471,7 +471,7 @@
 >
 >
 > Gs: Chính xác là như vậy. Nếu **A singular, elimination sẽ
-> cho ra ít nhất một row = 0 -> det = 0**
+> cho ra ít nhất một row = 0 → det = 0**
 >
 >
 >
@@ -588,10 +588,12 @@
 
 <a id="node-k4zmedt"></a>
 
+###### Properties of Matrix Determinants
+
 <p align="center"><kbd><img src="assets/jknrx6erzio.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> còn det (2*A) = 2^n det A
+> còn det (2*A) = 2ⁿ det A
 
 <br>
 
@@ -646,15 +648,15 @@
 <p align="center"><kbd><img src="assets/8jk96e6unj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Để chứng minh, ta có **elimination chuyển A -> U**, và
+> Để chứng minh, ta có **elimination chuyển A → U**, và
 > được thể hiện qua phương trình **A = LU** tương tự **Aᵀ
 > = Uᵀ.Lᵀ**
 >
 >
 >
-> Gs: **det L là gì -> 1**. Bởi gs nhắc ta nhớ **L là Lower
+> Gs: **det L là gì → 1**. Bởi gs nhắc ta nhớ **L là Lower
 > Triangular matrix có diagonal là 1** nên theo property 7,
-> det nó là **tích các  pivot trên đường chéo ->  = 1**. Còn
+> det nó là **tích các  pivot trên đường chéo →  = 1**. Còn
 > Lᵀ đương nhiên là Upper triangular nên det cũng = 1.
 >
 >
