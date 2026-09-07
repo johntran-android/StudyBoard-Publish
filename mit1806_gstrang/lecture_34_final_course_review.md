@@ -22,13 +22,13 @@
 >
 >
 >
-> Me: vì Ax = [1 0 0]ᵀ no solution -> (1,0,0) nằm ngoài C(A). Và
+> Me: vì Ax = [1 0 0]ᵀ no solution → (1,0,0) nằm ngoài C(A). Và
 > ngược lại vì Ax = (0 1 0) có 1 solution nên (0,1,0) nằm trong
 > C(A).
 >
 >
 >
-> C(A) là subspace của **R^m = R^3**. Mà không span hết R^3
+> C(A) là subspace của **R^m = R³**. Mà không span hết R³
 > chứng tỏ dim C(A) < 3 hay **r < m**,
 >
 >
@@ -218,6 +218,8 @@
 
 <a id="node-ae6pb78"></a>
 
+###### Solutions to Transpose Linear System
+
 <p align="center"><kbd><img src="assets/hfffndx7sb.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -228,12 +230,12 @@
 >
 >
 > i)...dependent / free column của Aᵀ, ứng với một special solution
-> của Aᵀy = 0 -> ta có m - r vector trong basis của left nullspace N(Aᵀ)
+> của Aᵀy = 0 → ta có m - r vector trong basis của left nullspace N(Aᵀ)
 >
 >
 >
 > ii) tạo nên một bộ linear combination của các row cho ra zero,
-> đó chính là một solution của Aᵀy = 0 -> Có m - r solution, tức left
+> đó chính là một solution của Aᵀy = 0 → Có m - r solution, tức left
 > nullspace có **dim = m - r** > 0
 >
 >
@@ -242,9 +244,9 @@
 >
 >
 >
-> Tiếp, xét matrix Aᵀ, có m columns là vector trong R^n, trong đó có r 
+> Tiếp, xét matrix Aᵀ, có m columns là vector trong Rⁿ, trong đó có r 
 > columns độc lập. Thế mà ta có n = r, vậy r columns độc lập này 
-> ĐÃ ĐỦ SPAN TOÀN BỘ R^n. Do đó bất kì vector c thuộc Rn nào 
+> ĐÃ ĐỦ SPAN TOÀN BỘ Rⁿ. Do đó bất kì vector c thuộc Rn nào 
 > đương nhiên cũng thuộc column space C(Aᵀ), hay nói cách khác
 > Aᵀy = c luôn có solution particular với mọi c.
 >
@@ -324,7 +326,7 @@
 >
 > Nếu v3 cũng nằm trong subspace này, thì điểm S12 mà  gần
 > nhất của v3 đương nhiên là chính nó. Nhưng v1,v2, v3
-> orthogonal, do đó v3 perpendicular với hai basis của S12 ->
+> orthogonal, do đó v3 perpendicular với hai basis của S12 →
 > v3 không nằm trong S12, thậm chí, v3 perpendicular với S12.
 >
 >
@@ -458,7 +460,7 @@
 >
 >
 >
-> ⇒ A^2 = AA = S.Λ.S⁻¹S.Λ.S⁻¹  = S.Λ^2S⁻¹
+> ⇒ A² = AA = S.Λ.S⁻¹S.Λ.S⁻¹  = S.Λ^2S⁻¹
 >
 >
 >
@@ -467,7 +469,7 @@
 >
 >
 > Với u_0  = u_0 = Sc (vì 3 eigenvectors của A độc lập, nên span
-> toàn bộ R^3, cho phép luôn có thể tìm dc c để linear combination
+> toàn bộ R³, cho phép luôn có thể tìm dc c để linear combination
 > các eigenvectors cho ra u_0)
 >
 >
@@ -628,10 +630,12 @@
 
 <a id="node-sxueefz"></a>
 
+###### Projection onto Column Space
+
 <p align="center"><kbd><img src="assets/bnwqa78hrm.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> thật ra câu hỏi là p = Ax^ thì có x^ (tức
+> thật ra câu hỏi là p = Ax̂ thì có x̂ (tức
 > [c^, d^]) thì nhân với A thôi
 
 <br>
@@ -652,11 +656,11 @@
 
 > [!NOTE]
 > câu cuối cùng của MIT1806: Tìm b để
-> least square solution x^ = [0, 0]
+> least square solution x̂ = [0, 0]
 >
 >
 >
-> me: Để x^ = [0 0] tức là p = 0. Như vậy b = e + p = e
+> me: Để x̂ = [0 0] tức là p = 0. Như vậy b = e + p = e
 > Mà ta biết Aᵀe = 0, hay e là left nullspace của A, là subspace
 > orthogonal complement với rows space of A.
 >
