@@ -44,13 +44,13 @@
 >
 >
 >
-> Như vậy mình sẽ xem xét một random variable vector: **X** = (X1,...X6)
+> Như vậy mình sẽ xem xét một random variable vector: 𝐗 = (X1,...X6)
 > mà trong đó X1,...X6 là các Bernoulli random variables. Và có ràng buộc
 > X1 + ...+X6 = 1,  X1,X2,...X6 ∈ {0,1}
 >
 >
 >
-> U = u3 sẽ TƯƠNG ỨNG **X** = [0,0,1,0,0,0]T
+> U = u3 sẽ TƯƠNG ỨNG 𝐗 = [0,0,1,0,0,0]ᵀ
 >
 >
 >
@@ -62,7 +62,7 @@
 >
 >
 >
-> ⇔ P_**μ**(**X**=[1,0,0,0,0,0]T) = μ1
+> ⇔ P_**μ**(𝐗=[1,0,0,0,0,0]ᵀ) = μ1
 >
 >
 >
@@ -74,7 +74,7 @@
 >
 >
 >
-> Vậy thì thể hiện khái quát là P_**μ**(**X**=**x**) = Πk=1:K μk^**x**k
+> Vậy thì thể hiện khái quát là P_**μ**(𝐗=𝐱) = Πk=1:K μk^𝐱k
 >
 >
 >
@@ -94,23 +94,23 @@
 >
 >
 >
-> Còn xem thử E[**X**|**μ**] là sao ? Câu trả lời là theo định nghĩa của  kì vọng
-> thôi - là weighted average các possible value của **X** với weight là pmf
+> Còn xem thử E[𝐗|**μ**] là sao ? Câu trả lời là theo định nghĩa của  kì vọng
+> thôi - là weighted average các possible value của 𝐗 với weight là pmf
 > tương ứng:
 >
 >
 >
-> E[**X**|**μ**] = Σ_{xi=**x**1,..**x**K} **x**iP(**X**=**x**i) (***x**i là các one-hot vector, hay cũng dễ nhận 
-> dưới góc nhìn đại số tuyến tính, đây chính là các standard basis **e**i )
+> E[𝐗|**μ**] = Σ_{xi=𝐱1,..𝐱K} 𝐱iP(𝐗=𝐱i) (*𝐱i là các one-hot vector, hay cũng dễ nhận 
+> dưới góc nhìn đại số tuyến tính, đây chính là các standard basis 𝐞i )
 >
 >
 >
-> = Σ_{**x**i=**x**1,..**x**K} **x**i μi
+> = Σ_{𝐱i=𝐱1,..𝐱K} 𝐱i μi
 >
 >
 >
-> Và cái này chính là gì? ⇨ linear combination các vector **x**i với hệ số μi. và
-> dễ hiểu kết quả là vector **μ** (vì μ1*[1,0,..0]T + μ2*([0,1,0..]T + .. = [μ1, μ2,..]T
+> Và cái này chính là gì? ⇨ linear combination các vector 𝐱i với hệ số μi. và
+> dễ hiểu kết quả là vector **μ** (vì μ1*[1,0,..0]ᵀ + μ2*([0,1,0..]ᵀ + .. = [μ1, μ2,..]ᵀ
 > = **μ**)
 
 <br>
@@ -122,9 +122,9 @@
 <p align="center"><kbd><img src="assets/42uvvtzw56m.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, thế thì gs cho rằng ta sẽ xem xét một dataset D = {**x**1,...**x**N} (tức là
+> Rồi, thế thì gs cho rằng ta sẽ xem xét một dataset D = {𝐱1,...𝐱N} (tức là
 > các observation của U, hiểu theo góc nhìn Casella, thì ta có một random
-> sample U1, U2..UN iid, ~ fU(u), nhưng ta represent U bởi **X** như đã nói để rồi
+> sample U1, U2..UN iid, ~ fU(u), nhưng ta represent U bởi 𝐗 như đã nói để rồi
 > observed value {u1,u2,...uN} của random sample **U1,..Un**  sẽ được represent
 > bởi {**x1**, **x2**,..**xN**} của random sample **X1**, **X2, ..XN**
 >
@@ -132,7 +132,7 @@
 >
 > (chú ý, chỗ này dễ confuse về kí hiệu nên nói rõ tí:  **X1** là random variable
 > vector [**X1**1, **X1**2,...**X1**K] mà giá trị quan sát thấy của nó là **x1**, là
-> một one hot vector nào đó (số 1 nằm ở đâu đó) ví dụ (0,1,0,..0)T
+> một one hot vector nào đó (số 1 nằm ở đâu đó) ví dụ (0,1,0,..0)ᵀ
 >
 >
 >
@@ -150,23 +150,23 @@
 >
 >
 > Trong Casella, mình được học định nghĩa của hàm likelihood như sau. Giả sử
-> ta có random sample **X** = X1,...Xn iid ~ f(x|θ), có observed value **X** = **x**
-> Thì hàm likelihood là hàm số của θ, kí hiệu L(θ|**x**) được định nghĩa là =
-> f(**x**|θ) mang ý nghĩa là độ hợp lí của θ khi quan sát thấy **X** = **x**.
+> ta có random sample 𝐗 = X1,...Xn iid ~ f(x|θ), có observed value 𝐗 = 𝐱
+> Thì hàm likelihood là hàm số của θ, kí hiệu L(θ|𝐱) được định nghĩa là =
+> f(𝐱|θ) mang ý nghĩa là độ hợp lí của θ khi quan sát thấy 𝐗 = 𝐱.
 >
 >
 >
-> L(θ|**x**) = f(**x**|θ). Mà vì tính iid, nên joint pdf của X có thể tách thành tích các
-> marginal pdf: f(**x**|θ) = Πi=1:N f(xi|θ).
+> L(θ|𝐱) = f(𝐱|θ). Mà vì tính iid, nên joint pdf của X có thể tách thành tích các
+> marginal pdf: f(𝐱|θ) = Πi=1:N f(xi|θ).
 >
 >
 >
-> Nên lúc này L(θ|**x**) = Πi=1:N f(xi|θ)
+> Nên lúc này L(θ|𝐱) = Πi=1:N f(xi|θ)
 >
 >
 >
 > Quay lại đây, bối cảnh là ta cũng đang có D = **X1**, **X2**,...**XN** iid ~
-> f(**x**|**μ**).
+> f(𝐱|**μ**).
 >
 >
 >
@@ -200,26 +200,26 @@
 >
 >
 > Tiếp, như đã ôn lại về sufficient statistic bữa trước, theo Factorization theorem
-> khi pdf của **X**: f(x|θ) có thể được factor thành tích của một hàm h(**x**) chỉ
-> phụ thuộc **x** và một hàm phụ thuộc **x** và tham số θ nhưng chỉ phụ thuộc x
-> thông qua một hàm T(**x**) nào đó: g(T(**x**)|θ). Tức f(**x**|θ) =
-> g(T(**x**)|θ)h(**x**), thì khi đó, T(**x**) chính là sufficient statistic của θ.
+> khi pdf của 𝐗: f(x|θ) có thể được factor thành tích của một hàm h(𝐱) chỉ
+> phụ thuộc 𝐱 và một hàm phụ thuộc 𝐱 và tham số θ nhưng chỉ phụ thuộc x
+> thông qua một hàm T(𝐱) nào đó: g(T(𝐱)|θ). Tức f(𝐱|θ) =
+> g(T(𝐱)|θ)h(𝐱), thì khi đó, T(𝐱) chính là sufficient statistic của θ.
 >
 >
 >
-> Ở đây ta vừa thấy f(**x**|μ) = Πk=1:K μk^ { Σi=1:N **xi**k }
+> Ở đây ta vừa thấy f(𝐱|μ) = Πk=1:K μk^ { Σi=1:N **xi**k }
 >
 >
 >
-> có dạng g(T(**x**)|**μ**)h(**x**) với h(**x**) = 1, g(T(**x**)|**μ**) = Πk=1:K μk^{T(**x**)_k}
+> có dạng g(T(𝐱)|**μ**)h(𝐱) với h(𝐱) = 1, g(T(𝐱)|**μ**) = Πk=1:K μk^{T(𝐱)_k}
 >
 >
 >
-> với T(**x**) = Σi=1:N **xi,** T(**x**)_k là phần tử thứ k của vector T(**x**)
+> với T(𝐱) = Σi=1:N **xi,** T(𝐱)_k là phần tử thứ k của vector T(𝐱)
 >
 >
 >
-> Như vậy T(**X**) = Σi=1:N **Xi chính là sufficient statistic**
+> Như vậy T(𝐗) = Σi=1:N **Xi chính là sufficient statistic**
 >
 >
 >
@@ -227,7 +227,7 @@
 >
 >
 >
-> Cũng ko khó để hiểu T(**x**)_K, tổng các phần tử thứ k của các vector **x1**,...**xN**
+> Cũng ko khó để hiểu T(𝐱)_K, tổng các phần tử thứ k của các vector **x1**,...**xN**
 > thì cũng chính là tổng số các observed value ứng với U = uk.
 
 <br>
@@ -286,31 +286,31 @@
 >
 >
 >
-> = **m**Tln(**μ**) + λ(**μ**T**1**-1)
+> = 𝐦ᵀln(**μ**) + λ(**μ**ᵀ**1**-1)
 >
 >
 >
-> (**m** là vector (m1, m2,...mK)T, **1** là vector (1,1,..1)T)
+> (𝐦 là vector (m1, m2,...mK)ᵀ, **1** là vector (1,1,..1)ᵀ)
 >
 >
 >
-> ∇_μ L(**μ**, λ) = d/d**μ** [**m**Tln(**μ**) + λ(**μ**T**1**-1)]
+> ∇_μ L(**μ**, λ) = d/d**μ** [𝐦ᵀln(**μ**) + λ(**μ**ᵀ**1**-1)]
 >
 >
 >
-> = d/d**μ** [**m**Tln(**μ**)] +  d/d**μ** [λ(**μ**T**1**-1)]
+> = d/d**μ** [𝐦ᵀln(**μ**)] +  d/d**μ** [λ(**μ**ᵀ**1**-1)]
 >
 >
 >
-> = d/d**μ** [**m**Tln(**μ**)] +  λ d/d**μ** (**μ**T**1**-1)
+> = d/d**μ** [𝐦ᵀln(**μ**)] +  λ d/d**μ** (**μ**ᵀ**1**-1)
 >
 >
 >
-> Xét d/dμ [**m**Tln(**μ**)], tính gradient theo cách đã học trong MIT 18.s096:
+> Xét d/dμ [𝐦ᵀln(**μ**)], tính gradient theo cách đã học trong MIᵀ 18.s096:
 >
 >
 >
-> d[**m**Tln(**μ**)] = **m**Tln(**μ**+d**μ**) - mTln(**μ**)
+> d[𝐦ᵀln(**μ**)] = 𝐦ᵀln(**μ**+d**μ**) - mᵀln(**μ**)
 >
 >
 >
@@ -342,28 +342,28 @@
 >
 >
 >
-> = (m1/μ1,...mK/μK)Td**μ**
+> = (m1/μ1,...mK/μK)ᵀd**μ**
 >
 >
 >
-> ⇨ ∇_**μ** [**m**Tln(**μ**)] = (m1/μ1,...mK/μK)
+> ⇨ ∇_**μ** [𝐦ᵀln(**μ**)] = (m1/μ1,...mK/μK)
 >
 >
 >
-> Xét d/dμ (**μ**T**1**-1)
+> Xét d/dμ (**μ**ᵀ**1**-1)
 >
 >
 >
-> d(**μ**T1-1) = (**μ**+d**μ**)T**1**-1) - (**μ**T**1**-1) = dμT**1** = **1**Td**μ**
+> d(**μ**ᵀ1-1) = (**μ**+d**μ**)ᵀ**1**-1) - (**μ**ᵀ**1**-1) = dμT**1** = **1**ᵀd**μ**
 >
 >
 >
-> ⇨ ∇_**μ** [**μ**T**1**-1]= **1**
+> ⇨ ∇_**μ** [**μ**ᵀ**1**-1]= **1**
 >
 >
 >
 > Vậy ∇_μ L(**μ**, λ) = (m1/μ1,...mK/μK) + λ **1** (chú ý **1** là K-dimensional vector
-> **1** = (1,1,...1)T)=(m1/μ1 + λ ,...,mK/μK + λ)
+> **1** = (1,1,...1)ᵀ)=(m1/μ1 + λ ,...,mK/μK + λ)
 >
 >
 >
@@ -388,11 +388,11 @@
 >
 >
 >
-> Objective = **m**Tln(**μ**)
+> Objective = 𝐦ᵀln(**μ**)
 >
 >
 >
-> ln(.) là hàm concave ⇨ mTln(**μ**) là tổng các mk ln(μk) với mk = Σi=1:N **xi**k chắc
+> ln(.) là hàm concave ⇨ mᵀln(**μ**) là tổng các mk ln(μk) với mk = Σi=1:N **xi**k chắc
 > chắn là không âm ⇨  cũng là hàm concave, và tổng của chúng cũng sẽ là hàm
 > concave.
 >
@@ -411,12 +411,12 @@
 >
 >
 >
-> = d/d**μ** [(m1/μ1,...mK/μK)T]
+> = d/d**μ** [(m1/μ1,...mK/μK)ᵀ]
 >
 >
 >
-> Dễ thấy Jacobian của (m1/μ1,...mK/μK)T cũng là Hessian của objective chính là
-> diagonal matrix: diag(-m1/μ1^2, -m2/μ2^2,...,-mK/μK^2):
+> Dễ thấy Jacobian của (m1/μ1,...mK/μK)ᵀ cũng là Hessian của objective chính là
+> diagonal matrix: diag(-m1/μ1², -m2/μ2²,...,-mK/μK²):
 >
 >
 >
@@ -424,11 +424,11 @@
 >
 >
 >
-> thì sẽ là [-m1/μ1^2, 0,..,0]
+> thì sẽ là [-m1/μ1², 0,..,0]
 >
 >
 >
-> tương tự hàng 2 của Jacobian là [0, -m2/μ2^2, 0,...0]
+> tương tự hàng 2 của Jacobian là [0, -m2/μ2², 0,...0]
 >
 >
 >
@@ -511,7 +511,7 @@
 >
 >
 >
-> và từ đó **M** = (M1, M2,...MK) là random variable vector.
+> và từ đó 𝐌 = (M1, M2,...MK) là random variable vector.
 >
 >
 >
@@ -575,7 +575,7 @@
 >
 >
 >
-> Xét vector random variable **M** = (M1,M2,...MK)
+> Xét vector random variable 𝐌 = (M1,M2,...MK)
 >
 >
 >
@@ -599,7 +599,7 @@
 >
 >
 >
-> Vậy xác suất P(**M**=(m1,m2,...mK))
+> Vậy xác suất P(𝐌=(m1,m2,...mK))
 >
 >
 >
@@ -771,7 +771,7 @@
 >
 >
 >
-> f(**m**|**μ**,N) = P\_**μ**(M1,M2,..MK =m1,m2,...mK) = N!/(m1!m2!...mK!) (Πi=1:K μk^mk)
+> f(𝐦|**μ**,N) = P\_**μ**(M1,M2,..MK =m1,m2,...mK) = N!/(m1!m2!...mK!) (Πi=1:K μk^mk)
 >
 >
 >
@@ -779,7 +779,7 @@
 >
 >
 >
-> Thế thì nhìn vào đó ta thấy để mà posterior có cùng dạng với prior thì prior phải có dạng là tích của các lũy thừa của μ: Πk=1:K μk^(something). Vì khi đó, khi nhân với cái cụm ở trên, để tạo ra kernel của posterior, thì nó cũng sẽ có dạng Πk=1:K μk^(something). Đây là lí do gs Bishop nói p(**μ**|**α**) ∝ Πk=1:K μk^(αk-1) với αk-1 chính là something, dĩ nhiên **α** = (α1, α2,...αK)T là parameter của prior.
+> Thế thì nhìn vào đó ta thấy để mà posterior có cùng dạng với prior thì prior phải có dạng là tích của các lũy thừa của μ: Πk=1:K μk^(something). Vì khi đó, khi nhân với cái cụm ở trên, để tạo ra kernel của posterior, thì nó cũng sẽ có dạng Πk=1:K μk^(something). Đây là lí do gs Bishop nói p(**μ**|**α**) ∝ Πk=1:K μk^(αk-1) với αk-1 chính là something, dĩ nhiên **α** = (α1, α2,...αK)ᵀ là parameter của prior.
 >
 >
 >
@@ -799,11 +799,11 @@
 >
 >
 >
-> **X** = (X1,X2) \~ f(x1,x2|α,β) = \[Γ(α+β)/Γ(α)Γ(b)\] x1^(α-1) x2^(β-1) với x1 + x2 = 1
+> 𝐗 = (X1,X2) \~ f(x1,x2|α,β) = \[Γ(α+β)/Γ(α)Γ(b)\] x1^(α-1) x2^(β-1) với x1 + x2 = 1
 >
 >
 >
-> Từ đó ta có pdf của **X** = (X1,..XK) \~ Dirichlet distribution f(x1,x2...xK|α1,α2,...,αK)
+> Từ đó ta có pdf của 𝐗 = (X1,..XK) \~ Dirichlet distribution f(x1,x2...xK|α1,α2,...,αK)
 >
 >
 >
@@ -857,7 +857,7 @@
 >
 >
 >
-> Và cái này lại có dạng kernel của một Dirichlet có tham số là (α1+m1, α2+m2,....), tức Dir(**α** + **m**) Và dĩ nhiên mình hiểu là tất cả các cụm constant \[N!/(m1!m2!...mK!)\] \[Γ(α0)/ Γ(α1)...Γ(αK)\] / f(**μ**) sẽ làm thành normalizing constant của distribution này, nên ta biết chắc nó phải
+> Và cái này lại có dạng kernel của một Dirichlet có tham số là (α1+m1, α2+m2,....), tức Dir(**α** + 𝐦) Và dĩ nhiên mình hiểu là tất cả các cụm constant \[N!/(m1!m2!...mK!)\] \[Γ(α0)/ Γ(α1)...Γ(αK)\] / f(**μ**) sẽ làm thành normalizing constant của distribution này, nên ta biết chắc nó phải
 >
 >
 >
