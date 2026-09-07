@@ -163,7 +163,7 @@
 >
 > Property #3a: Khi nhân một row (row bất kì, nhưng ví dụ là
 > row đầu) của A cho t, và các row còn lại giữ nguyên thì
-> determinant = t*det(A)
+> determinant = t × det(A)
 
 <br>
 
@@ -276,11 +276,11 @@
 >
 >
 > Dùng property 3b để có det của matrix này bằng tổng det của 
-> A và det của matrix A2 (có hàng 2 là [-t*a -t*a])
+> A và det của matrix A2 (có hàng 2 là [-t × a -t × a])
 >
 >
 >
-> Tiếp dựa vào property 3b để tách t ra. Tức det A2 = -t*det B2
+> Tiếp dựa vào property 3b để tách t ra. Tức det A2 = -t × det B2
 >
 >
 >
@@ -289,7 +289,7 @@
 >
 >
 >
-> Vậy **det của matrix không đổi** khi **trừ một row cho t*row 
+> Vậy **det của matrix không đổi** khi **trừ một row cho t × row 
 > khác**
 
 <br>
@@ -373,7 +373,7 @@
 <p align="center"><kbd><img src="assets/p4264dmpc3o.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Me: lấy ví dụ matrix này, đầu tiên dễ thấy nó là d3*det
+> Me: lấy ví dụ matrix này, đầu tiên dễ thấy nó là d3 × det
 > U1 (đây là tính chất 3a)
 >
 >
@@ -383,7 +383,7 @@
 >
 >
 >
-> Tương tự vậy, cuối cùng ta sẽ có det(U) = d1d2...dn*det(I)
+> Tương tự vậy, cuối cùng ta sẽ có det(U) = d1d2...dn × det(I)
 >
 >
 >
@@ -477,7 +477,7 @@
 >
 > Và nếu A **invertible**, ta biết nó full rank, tức mọi row đều là
 > pivot, thì **elimination sẽ đưa nó thành U, và ta có det là
-> d1*d2....dn và do đó sẽ khác 0**
+> d1 × d2....dn và do đó sẽ khác 0**
 
 <br>
 
@@ -560,7 +560,7 @@
 
 > [!NOTE]
 > Và ta có thể thấy lấy ví dụ A là matrix **upper triangular** như
-> vậy,  thì ta biết det A = 2*3 = 6
+> vậy,  thì ta biết det A = 2 × 3 = 6
 >
 >
 >
@@ -593,7 +593,7 @@
 <p align="center"><kbd><img src="assets/jknrx6erzio.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> còn det (2*A) = 2ⁿ det A
+> còn det (2 × A) = 2ⁿ det A
 
 <br>
 
