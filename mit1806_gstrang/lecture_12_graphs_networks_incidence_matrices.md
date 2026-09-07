@@ -147,7 +147,7 @@
 >
 >
 >
-> Và do đó matrix (m, n) với m row sẽ **chỉ có 2*m vị trí khác
+> Và do đó matrix (m, n) với m row sẽ **chỉ có 2 × m vị trí khác
 > 0**. Do đó nó **rất sparse** (thưa thớt)
 >
 >
