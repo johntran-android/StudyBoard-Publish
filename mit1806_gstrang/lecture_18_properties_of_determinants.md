@@ -535,7 +535,7 @@
 >
 >
 >
-> Me: A.A⁻¹ = I, nên det I = det A * det A⁻¹ 
+> Me: A × A⁻¹ = I, nên det I = det A * det A⁻¹ 
 >
 >
 >
@@ -582,7 +582,7 @@
 >
 >
 >
-> det A.A = detA detA = (detA)²
+> det A × A = detA detA = (detA)²
 
 <br>
 
