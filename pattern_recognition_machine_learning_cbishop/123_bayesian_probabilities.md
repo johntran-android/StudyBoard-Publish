@@ -148,26 +148,26 @@
 >
 >
 > Đầu tiên, ta nhớ lại định nghĩa của hàm likelihood, là một hàm của θ, phản
-> ánh độ hợp lí của θ, khi quan sát được dữ liệu **X** = **x**, kí hiệu bởiL(θ|**x**), và nó được define bởi: f(**x**|θ), tức là hàm joint pdf/pmf của **X**, evaluate
+> ánh độ hợp lí của θ, khi quan sát được dữ liệu 𝐗 = 𝐱, kí hiệu bởiL(θ|𝐱), và nó được define bởi: f(𝐱|θ), tức là hàm joint pdf/pmf của 𝐗, evaluate
 > tại x.
 >
 >
 >
-> Khi đó, maximum likelihood estimator của θsẽ được define như vầy:Ta sẽ giải bài toán: maximize_θ L(θ|**x**), thì minimizer của bài toán này, chính
-> là MLE, dĩ nhiên khi maximize L(θ|**x**), ta sẽ được một hàm không còn phụ
-> thuộc θ, chỉ còn phụ thuộc **x**.
+> Khi đó, maximum likelihood estimator của θsẽ được define như vầy:Ta sẽ giải bài toán: maximize_θ L(θ|𝐱), thì minimizer của bài toán này, chính
+> là MLE, dĩ nhiên khi maximize L(θ|𝐱), ta sẽ được một hàm không còn phụ
+> thuộc θ, chỉ còn phụ thuộc 𝐱.
 >
 >
 >
-> Nói cách khác, MLE, θ^_mle(**X**) = argmax_θ L(θ|**X**)
+> Nói cách khác, MLE, θ^_mle(𝐗) = argmax_θ L(θ|𝐗)
 >
 >
 >
-> và theo định nghĩa của likelihood function, L(θ|**x**) = f(**x**|θ)
+> và theo định nghĩa của likelihood function, L(θ|𝐱) = f(𝐱|θ)
 >
 >
 >
-> ⇨ θ^_mle(**X**) = argmax_θ f(**X**|θ), và vì tính iid của random sample **X**
+> ⇨ θ^_mle(𝐗) = argmax_θ f(𝐗|θ), và vì tính iid của random sample 𝐗
 >
 >
 >
@@ -175,8 +175,8 @@
 >
 >
 >
-> Nếu soi chiếu với định nghĩa của estimator - là any function of sample W(**X**),
-> thì với MLE, cái function đó chính là W(**x**) = argmax_θ L(θ|**x**)
+> Nếu soi chiếu với định nghĩa của estimator - là any function of sample W(𝐗),
+> thì với MLE, cái function đó chính là W(𝐱) = argmax_θ L(θ|𝐱)
 >
 >
 >
@@ -186,11 +186,11 @@
 >
 > Nói về cái thứ hai, Bayes estimator, thì như đã nói ở note nào đó gần đây
 > Ta sẽ coi θ như random variable, có prior distribution π(θ). Dựa vào Bayes
-> theorem, ta xây dựng distribution của θ dựa trên việc quan sát **X** = **x**:
+> theorem, ta xây dựng distribution của θ dựa trên việc quan sát 𝐗 = 𝐱:
 >
 >
 >
-> π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**)
+> π(θ|𝐱) = f(𝐱|θ) π(θ) / f(𝐱)
 >
 >
 >
@@ -199,17 +199,17 @@
 >
 >
 >
-> θ^_B(**X**) = E[θ|**X**] với θ ~ π(θ|**x**)soi chiếu theo định nghĩa của estimator, thì hàm W(**x**) chính là hàm E[θ|**x**]
-> với θ ~ π(θ|**x**)
+> θ^_B(𝐗) = E[θ|𝐗] với θ ~ π(θ|𝐱)soi chiếu theo định nghĩa của estimator, thì hàm W(𝐱) chính là hàm E[θ|𝐱]
+> với θ ~ π(θ|𝐱)
 >
 >
 >
-> Thế thì ở đây, f(**x**|θ), dĩ nhiên là joint distribution của **X**, tại **x** và như trên đã
-> thấy nó lại chính là likelihood function L(θ|**x**).
+> Thế thì ở đây, f(𝐱|θ), dĩ nhiên là joint distribution của 𝐗, tại 𝐱 và như trên đã
+> thấy nó lại chính là likelihood function L(θ|𝐱).
 >
 >
 >
-> Nên posterior distribution của θ có thể ghi là π(θ|**x**) = L(θ|**x**) π(θ) / f(**x**)
+> Nên posterior distribution của θ có thể ghi là π(θ|𝐱) = L(θ|𝐱) π(θ) / f(𝐱)
 >
 >
 >
@@ -219,23 +219,23 @@
 >
 > Với hành trang đó của Casella, quay lại đây để xem gs Bishop nói gì. Thì
 > chính là ông coi tham số của mô hình polynomial như θ. Và observed value
-> **X** = **x** chính là D = {t1,...tn}
+> 𝐗 = 𝐱 chính là D = {t1,...tn}
 >
 >
 >
 > Để rồi, trước khi quan sát / có data D, ta có thể dùng kinh nghiệm để chọn
-> distribution của **w**, tức **prior distribution của** **w**, kí hiệu là p(**w**) (tương ứng
+> distribution của 𝐰, tức **prior distribution của** 𝐰, kí hiệu là p(𝐰) (tương ứng
 > với việc ta dùng kinh nghiệm để chọn π(θ), mà phổ biến có thể là dùng
 > Normal hay Unform) cho rằng.
 >
 >
 >
-> Sau đó, với giá trị quan sát thấy **X** = **x** (có D), ta sẽ cập nhật lại distribution
+> Sau đó, với giá trị quan sát thấy 𝐗 = 𝐱 (có D), ta sẽ cập nhật lại distribution
 > của **w, để có posterior distribution của w**:
 >
 >
 >
-> p(**w**|D) = p(D|**w**) p(**w**) / p(D)  (y chang như π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**) ở trên)
+> p(𝐰|D) = p(D|𝐰) p(𝐰) / p(D)  (y chang như π(θ|𝐱) = f(𝐱|θ) π(θ) / f(𝐱) ở trên)
 >
 >
 >
@@ -243,9 +243,9 @@
 >
 >
 >
-> Và vì sự chuẩn bị trên, ta cũng dễ hiểu khi gs Bishop nói, với p(D|**w**), nếu coi
-> nó là hàm theo **w**, thì nó chính là likelihood function L(**w**|D) (y như f(**x**|θ) chính
-> là L(θ|**x**) vậy)
+> Và vì sự chuẩn bị trên, ta cũng dễ hiểu khi gs Bishop nói, với p(D|𝐰), nếu coi
+> nó là hàm theo 𝐰, thì nó chính là likelihood function L(𝐰|D) (y như f(𝐱|θ) chính
+> là L(θ|𝐱) vậy)
 >
 >
 >
@@ -254,16 +254,16 @@
 >
 >
 >
-> Nói thêm, trong Casella, ta cũng biết L(θ|**x**) không phải là / sẽ là sai nếu diễn
-> dịch là xác suất của θ given **x**, mà phải là độ hợp lí của θ dựa trên **X** = **x**.
-> Bởi vì, dù được định nghĩa = f(**x**|θ), như L(θ|**x**) là hàm theo θ, coi **x** như cố
+> Nói thêm, trong Casella, ta cũng biết L(θ|𝐱) không phải là / sẽ là sai nếu diễn
+> dịch là xác suất của θ given 𝐱, mà phải là độ hợp lí của θ dựa trên 𝐗 = 𝐱.
+> Bởi vì, dù được định nghĩa = f(𝐱|θ), như L(θ|𝐱) là hàm theo θ, coi 𝐱 như cố
 > định, không mắc mớ gì mà cho phép tự nhiên nó là một pdf. Hàm pdf/pmf
-> phải là π(θ|**x**).
+> phải là π(θ|𝐱).
 >
 >
 >
 > Hoặc như cách để check pdf, là dựa vào tính valid của pdf/pmf, thì chỉ cần
-> summarize hàm L(θ|**x**) trên mọi possible value của θ, thì nó không ra 1
+> summarize hàm L(θ|𝐱) trên mọi possible value của θ, thì nó không ra 1
 > nên nó ko phải là pdf
 
 <br>
@@ -283,47 +283,47 @@
 >
 >
 >
-> π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**)
+> π(θ|𝐱) = f(𝐱|θ) π(θ) / f(𝐱)
 >
 >
 >
-> ⇔ π(θ|**x**) = L(θ|**x**) π(θ) / f(**x**) 
+> ⇔ π(θ|𝐱) = L(θ|𝐱) π(θ) / f(𝐱) 
 >
 >
 >
-> Thế thì, với **x**, là observed value, vai trò của nó trong các term của đẳng thức 
-> trên là fixed. Mà f(**x**), là marginal pdf của **X**, evaluate tại **x**, dĩ nhiên, nó không
+> Thế thì, với 𝐱, là observed value, vai trò của nó trong các term của đẳng thức 
+> trên là fixed. Mà f(𝐱), là marginal pdf của 𝐗, evaluate tại 𝐱, dĩ nhiên, nó không
 > âm (tính valid của pdf)
 >
 >
 >
-> nên có thể coi như vế trái = hàm theo θ (L(θ|**x**) π(θ)) chia cho hằng số f(**x**)
+> nên có thể coi như vế trái = hàm theo θ (L(θ|𝐱) π(θ)) chia cho hằng số f(𝐱)
 > không âm
 >
 >
 >
-> ⇨ vế trái sẽ tỉ lệ thuận với L(θ|**x**) π(θ), đó là kí hiệu tỉ lệ thuận xuát hiện ở đây
+> ⇨ vế trái sẽ tỉ lệ thuận với L(θ|𝐱) π(θ), đó là kí hiệu tỉ lệ thuận xuát hiện ở đây
 >
 >
 >
-> Và vì vế trái là π(θ|**x**), là một pdf/pmf hợp lệ nên summarize trên range của θ, 
+> Và vì vế trái là π(θ|𝐱), là một pdf/pmf hợp lệ nên summarize trên range của θ, 
 > ta phải được 1:
 >
 >
 >
-> ∫_{range_θ} π(θ|**x**) dθ = 1
+> ∫_{range_θ} π(θ|𝐱) dθ = 1
 >
 >
 >
-> ⇔ ∫_{range_θ} f(**x**|θ) π(θ) / f(**x**) dθ  = 1
+> ⇔ ∫_{range_θ} f(𝐱|θ) π(θ) / f(𝐱) dθ  = 1
 >
 >
 >
-> ⇔[ ∫_{range_θ} f(**x**|θ) π(θ) dθ] / f(**x**)  = 1 | Đưa hằng số ra khỏi tích phân
+> ⇔[ ∫_{range_θ} f(𝐱|θ) π(θ) dθ] / f(𝐱)  = 1 | Đưa hằng số ra khỏi tích phân
 >
 >
 >
-> ⇨ f(**x**) =  ∫_{range_θ} f(**x**|θ) π(θ) dθ]
+> ⇨ f(𝐱) =  ∫_{range_θ} f(𝐱|θ) π(θ) dθ]
 >
 >
 >
@@ -331,7 +331,7 @@
 >
 >
 >
-> p(D) = ∫p(D|**w**)p(**w**)d**w**
+> p(D) = ∫p(D|𝐰)p(𝐰)d𝐰
 
 <br>
 
@@ -369,33 +369,33 @@
 >
 > Với confidence interval (hay interval estimator), còn nhớ, theo định nghĩa, nó
 > là bài toán mà ta muốn đưa ra một suy luận (inference) về θ theo kiểu θ ∈
-> C(**X**), tức là ước lượng một tập, mà trong phần lớn trường hợp, là một
-> interval, có dạng [L(**X**), U(**X**)] mà ta đoán sẽ bao phủ được θ.
+> C(𝐗), tức là ước lượng một tập, mà trong phần lớn trường hợp, là một
+> interval, có dạng [L(𝐗), U(𝐗)] mà ta đoán sẽ bao phủ được θ.
 >
 >
 >
 > Thế thì, sau đó để đánh giá (evaluate) chất lượng của interval estimator, ta
 > mới xây dựng khái niệm coverage probability của một interval estimator,
-> được định nghĩa là một hàm theo θ, define bởi P_θ[θ ∈ C(**X**)]
+> được định nghĩa là một hàm theo θ, define bởi P_θ[θ ∈ C(𝐗)]
 >
 >
 >
-> (Và lấy nhỏ nhất trên toàn param space Θ,  inf_θ ∈ θ P_θ[θ ∈ C(**X**)] ta sẽ
+> (Và lấy nhỏ nhất trên toàn param space Θ,  inf_θ ∈ θ P_θ[θ ∈ C(𝐗)] ta sẽ
 > có confidence coefficient)
 >
 >
 >
 > Thế thì, cái chính muốn nói là, trong góc nhìn này, VIỆC TA KHÔNG CHẮC
-> C(**X**) sẽ chứa θ (để rồi mới đặt vấn đề thể hiện sự không chắc này bằng
+> C(𝐗) sẽ chứa θ (để rồi mới đặt vấn đề thể hiện sự không chắc này bằng
 > coverage probability) **ĐẾN TỪ BẢN THÂN TÍNH KHÔNG CHẮC CHẮN
-> CỦA** C(**X**).
+> CỦA** C(𝐗).
 >
 >
 >
 > Vì bản chất nó là một random set, mà nếu set này là interval, nó sẽ được
-> cấu thành bởi hai random variable  / statistic L(**X**) và U(**X**). Và **X** thì
-> ~ f(**x**|θ) có distribution phụ thuộc θ, nên L(**X**) và U(**X**) cũng vậy, và
-> xác suất này sẽ được tính dựa trên distribution của L(**X**) và U(**X**) → sẽ
+> cấu thành bởi hai random variable  / statistic L(𝐗) và U(𝐗). Và 𝐗 thì
+> ~ f(𝐱|θ) có distribution phụ thuộc θ, nên L(𝐗) và U(𝐗) cũng vậy, và
+> xác suất này sẽ được tính dựa trên distribution của L(𝐗) và U(𝐗) → sẽ
 > là một hàm phụ thuộc θ
 >
 >
@@ -403,7 +403,7 @@
 > Và theo góc nhìn xác suất của Frequentist / Classical, thì như đầu sách đến
 > giờ gs Bishop đã nói nhiều lần, góc nhìn đó sẽ là: Cho thử nghiệm vô số  lần
 > thì TỈ LỆ XẢY RA LÀ BAO NHIÊU. Với góc nhìn này, ta sẽ hiểu theo kiểu:
-> LẤY MẪU (SAMPLING) **X** V**Ô SỐ LẦN** THÌ **TỈ LỆ MÀ TA CÓ ĐƯỢC
+> LẤY MẪU (SAMPLING) 𝐗 V**Ô SỐ LẦN** THÌ **TỈ LỆ MÀ TA CÓ ĐƯỢC
 > KHOẢNG [L(X), U(X)] CHỨA θ TRONG ĐÓ LÀ BAO NHIÊU.
 >
 >
@@ -418,15 +418,15 @@
 >
 >
 >
-> Thế thì lúc này, nếu quan sát được **X** = **x**, ta sẽ xâu dựng posterior
-> distribution của θ: π(θ|**x**). Và với một set, C(**x**), hay interval [L(**x**),
-> U(**x**)], thì khi xét xác suất nó chứa / cover θ sẽ mang ý nghĩa khác:
+> Thế thì lúc này, nếu quan sát được 𝐗 = 𝐱, ta sẽ xâu dựng posterior
+> distribution của θ: π(θ|𝐱). Và với một set, C(𝐱), hay interval [L(𝐱),
+> U(𝐱)], thì khi xét xác suất nó chứa / cover θ sẽ mang ý nghĩa khác:
 >
 >
 >
-> P_θ[θ ∈ C(**x**)|**x**] lại chính là xác suất của một event gắn với random
-> variable θ, dưới phân phối π(θ|**x**). Và dĩ nhiên, do đó, yếu tố ko chắc,
-> hoàn tàon đến từ θ, chứ **x** coi như cố định rồi. Và người ta gọi C(**x**) là
+> P_θ[θ ∈ C(𝐱)|𝐱] lại chính là xác suất của một event gắn với random
+> variable θ, dưới phân phối π(θ|𝐱). Và dĩ nhiên, do đó, yếu tố ko chắc,
+> hoàn tàon đến từ θ, chứ 𝐱 coi như cố định rồi. Và người ta gọi C(𝐱) là
 > Credible set để phân biệt với Confidence set.
 >
 >
@@ -452,16 +452,16 @@
 >
 >
 >
-> Định nghĩa của MLE: θ^_mle(**X**) = argmax_θ L(θ|**X**). Và đây, là estimator
+> Định nghĩa của MLE: θ^_mle(𝐗) = argmax_θ L(θ|𝐗). Và đây, là estimator
 > của trường phái Classical / Frequentist, coi θ như fixed, thì tìm θ khiến
-> maximize hàm likelihood L(θ|**x**) mà bản thân hàm này mang ý nghĩa là
-> độ hợp lí của θ khi quan sát thấy **X** = **x**. Nói cách ngắn gọn, khi observed
-> **X** = **x** thì ML estimate θ^_mle(**x**) là cái giá trị θ mà việc xuất hiện giá trị
-> **x** này của **X** là hợp lí nhất.
+> maximize hàm likelihood L(θ|𝐱) mà bản thân hàm này mang ý nghĩa là
+> độ hợp lí của θ khi quan sát thấy 𝐗 = 𝐱. Nói cách ngắn gọn, khi observed
+> 𝐗 = 𝐱 thì ML estimate θ^_mle(𝐱) là cái giá trị θ mà việc xuất hiện giá trị
+> 𝐱 này của 𝐗 là hợp lí nhất.
 >
 >
 >
-> Thế thì ở đây, trước tiên phải nhắc lại, **w** là tham số của hàm y(w, **x**) mà 
+> Thế thì ở đây, trước tiên phải nhắc lại, 𝐰 là tham số của hàm y(w, 𝐱) mà 
 > giúp sinh ra giá trị quan sát D.
 >
 >
@@ -470,7 +470,7 @@
 >
 >
 >
-> Để rồi, tương tự như MLE của θ, = argmax_θ L(θ|**x**)
+> Để rồi, tương tự như MLE của θ, = argmax_θ L(θ|𝐱)
 >
 >
 >
@@ -546,7 +546,7 @@
 >
 >
 > Cách làm đại khái là thực hiện sampling with replacement từ bộ data  gốc
-> **X** = {x1,....xN} L lần, để có L bộ data **X**B. Và dùng nó để đánh giá  chất
+> 𝐗 = {x1,....xN} L lần, để có L bộ data 𝐗B. Và dùng nó để đánh giá  chất
 > lượng của parameter estimate bằng cách xem xét sự biến động của
 > prediction giữa các bootstrap data set (Sau này gs sẽ nói rõ hơn)
 
@@ -585,16 +585,16 @@
 >
 >
 >
-> Bối cảnh này, là bài toán ta có **X** = X1, X2, X3 là iid ~ Bern(θ) và x1 =
+> Bối cảnh này, là bài toán ta có 𝐗 = X1, X2, X3 là iid ~ Bern(θ) và x1 =
 > x2 = x3 = 1.
 >
 >
 >
-> Xây dựng MLE của θ: = argmax_θ L(θ|**x**)
+> Xây dựng MLE của θ: = argmax_θ L(θ|𝐱)
 >
 >
 >
-> Theo định nghĩa likelihood function L(θ|**x**) = f(**x**|θ) với f là joint pdf
+> Theo định nghĩa likelihood function L(θ|𝐱) = f(𝐱|θ) với f là joint pdf
 > của X1, X2, X3
 >
 >
@@ -615,7 +615,7 @@
 >
 >
 >
-> Giải bài toán maximize L(θ|**x**) = f(**x**|θ) = θ^Σixi (1-θ)^Σi(1-xi)
+> Giải bài toán maximize L(θ|𝐱) = f(𝐱|θ) = θ^Σixi (1-θ)^Σi(1-xi)
 >
 >
 >
@@ -623,7 +623,7 @@
 >
 >
 >
-> maximize log L(θ|**x**) = log [θ^Σixi (1-θ)^Σi(1-xi)]
+> maximize log L(θ|𝐱) = log [θ^Σixi (1-θ)^Σi(1-xi)]
 >
 >
 >
@@ -692,7 +692,7 @@
 >
 >
 >
-> Như vậy MLE của θ chính là: sample mean: θ^_mle(**X**) = Xbar
+> Như vậy MLE của θ chính là: sample mean: θ^_mle(𝐗) = Xbar
 >
 >
 >
@@ -711,12 +711,12 @@
 >
 >
 >
-> Giờ ta sẽ đi tính Bayes estimator: θ^B(**X**)
+> Giờ ta sẽ đi tính Bayes estimator: θ^B(𝐗)
 >
 >
 >
 > Như đã ôn lại bữa trước, ta sẽ xây dựng posterior distribution của θ,
-> π(θ|**x**) và dùng mean / median để đóng vai trò là point estimator.
+> π(θ|𝐱) và dùng mean / median để đóng vai trò là point estimator.
 >
 >
 >
@@ -725,7 +725,7 @@
 >
 >
 >
-> π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**)
+> π(θ|𝐱) = f(𝐱|θ) π(θ) / f(𝐱)
 >
 >
 >
@@ -739,7 +739,7 @@
 >
 >
 >
-> π(θ|**x**) = [Πi f(xi|θ) [1/B(a, b)] θ^(a-1)(1-θ)^b-1 ] / f(**x**)
+> π(θ|𝐱) = [Πi f(xi|θ) [1/B(a, b)] θ^(a-1)(1-θ)^b-1 ] / f(𝐱)
 >
 >
 >
@@ -759,7 +759,7 @@
 >
 >
 >
-> ⇨ π(θ|**x**) = [1/f(**x**) B(a, b)] θ^[(Σixi+a)-1] (1-θ)^[(n-Σixi+b)-1]
+> ⇨ π(θ|𝐱) = [1/f(𝐱) B(a, b)] θ^[(Σixi+a)-1] (1-θ)^[(n-Σixi+b)-1]
 >
 >
 >
@@ -781,7 +781,7 @@
 >
 >
 > Như vậy prior belief của ta về phân phối của θ, là theo phân phối β với
-> tham số a, b thì việc quan sát thấy giá trị của **X**, giúp cập nhật lại tham
+> tham số a, b thì việc quan sát thấy giá trị của 𝐗, giúp cập nhật lại tham
 > số của β, trở thành Σixi+a và n-Σixi+b
 >
 >
