@@ -373,7 +373,7 @@
 >
 >
 >
-> **p = x^1*a1 +x²*a2** hay ghi thế này cũng được **p = Ax̂**
+> **p = x^1 × a1 +x²*a2** hay ghi thế này cũng được **p = Ax̂**
 
 <br>
 
@@ -712,7 +712,7 @@
 >
 >
 >
-> Vậy ta gọi đường thẳng cần tìm là **b = C + D*t**
+> Vậy ta gọi đường thẳng cần tìm là **b = C + D × t**
 >
 >
 >
