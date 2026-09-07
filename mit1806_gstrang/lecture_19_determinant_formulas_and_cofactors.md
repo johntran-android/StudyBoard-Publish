@@ -656,7 +656,7 @@
 > Và matrix nhỏ là matrix xanh lá cây, gs sẽ tính det của
 > nó theo cofactor của cột 1, vì **tính chất det A = det Aᵀ
 > nên làm theo cột theo hàng đều được cả**. Và có thể
-> thấy nó bằng 1.det của cái matrix nhỏ hơn nữa (màu
+> thấy nó bằng 1 × det của cái matrix nhỏ hơn nữa (màu
 > vàng) và cái này chính là A2.
 >
 >
