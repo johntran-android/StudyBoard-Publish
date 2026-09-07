@@ -395,9 +395,9 @@
 <p align="center"><kbd><img src="assets/av8nd85ugup.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Như đã biết, bước 1 sẽ là trừ hàng 2 cho 2*hàng 1 để
+> Như đã biết, bước 1 sẽ là trừ hàng 2 cho 2 × hàng 1 để
 > khử số 2 của hàng 2. Bên kia cũng làm tương tự, trừ
-> hàng 2 cho 2*hàng 1 ra dc [-2 1]
+> hàng 2 cho 2 × hàng 1 ra dc [-2 1]
 
 <br>
 
@@ -412,7 +412,7 @@
 > upper triangular matrix / row echelon form) rồi thì nhưng
 > Jordan thì làm tiếp tức là tiếp tục khử đi số 3 để đưa
 > matrix bên trái thành I (reduced echelon form) bằng cách
-> trừ hàng 1 cho 3*hàng 2.
+> trừ hàng 1 cho 3 × hàng 2.
 >
 >
 >
