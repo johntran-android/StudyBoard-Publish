@@ -28,43 +28,43 @@
 <p align="center"><kbd><img src="assets/ffy6lygz9ov.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, giả sử ta có input vector **x**, tương ứng là vector **t**, và mục
+> Đại khái là, giả sử ta có input vector 𝐱, tương ứng là vector 𝐭, và mục
 > đích là dự đoán t từ new value x. Thì với bài toán regression, t sẽ là biến
 > liên tục. còn classification, t sẽ là class label.
 >
 >
 >
-> Khi đó joint probability của **X**,**T** (ở đây mình cứ theo quy tắc Casella,
-> biến thì viết hoa, cũng như xài chữ f cho quen thuộc) f(**x**,**t**) sẽ phản
+> Khi đó joint probability của 𝐗,𝐓 (ở đây mình cứ theo quy tắc Casella,
+> biến thì viết hoa, cũng như xài chữ f cho quen thuộc) f(𝐱,𝐭) sẽ phản
 > ánh toàn diện mọi tính uncertainty gắn với các random variables này. Và
-> bài toán đi xác định phân phối xác suất của **X**,**T** được gọi là
+> bài toán đi xác định phân phối xác suất của 𝐗,𝐓 được gọi là
 > **INFERENCE**.
 >
 >
 >
 > Có thể hiểu ý này, vì xuyên suốt cuốn Statistical Inference của Casella,
 > mình chính là deal với bài toán này: cho random sample X = (X1,...Xn) ~
-> f(**x**|θ) thì mục tiêu của ta là suy đoán giá trị của θ, tham số chi phối phân
-> phối xác suất của **X**, và 3 bài toán lớn là
+> f(𝐱|θ) thì mục tiêu của ta là suy đoán giá trị của θ, tham số chi phối phân
+> phối xác suất của 𝐗, và 3 bài toán lớn là
 >
 >
 >
-> i) point estimation - tìm cách đưa ra một function của sample W(**X**) sao
-> cho với giá trị quan sát **X** = **x** thì ta có một estimate W(**x**) cho θ.
+> i) point estimation - tìm cách đưa ra một function của sample W(𝐗) sao
+> cho với giá trị quan sát 𝐗 = 𝐱 thì ta có một estimate W(𝐱) cho θ.
 >
 >
 >
 > ii) hypothesis testing - tìm cách đưa ra một nhận định rằng θ ∈ Θ0 hoặc θ ∈
-> Θ0c, và cụ thể là đi xây dựng một rejection region R = {**x**: reject H0}
+> Θ0c, và cụ thể là đi xây dựng một rejection region R = {𝐱: reject H0}
 > cũng  chính là một hypothesis test, có bản chất là một decision rule: nhận
-> vào **x**, tính toán giá trị của test statistic và dùng nó để quyết định xem
+> vào 𝐱, tính toán giá trị của test statistic và dùng nó để quyết định xem
 > nên tuyên bố θ ∈ Θ0 hay Θ0c.
 >
 >
 >
 > iii) interval estimator - tìm cách xây dựng một random interval hay khái quát
-> hơn là random set C(**X**) để khi quan sát **X** = **x** ta sẽ đưa ra một
-> nhận định là θ ∈ C(**X**)
+> hơn là random set C(𝐗) để khi quan sát 𝐗 = 𝐱 ta sẽ đưa ra một
+> nhận định là θ ∈ C(𝐗)
 >
 >
 >
@@ -86,7 +86,7 @@
 > Lấy ví dụ bài toán y khoa, ta muốn dựa trên input x là vector các giá trị điểm
 > ảnh của ảnh chụp x quang, để dự đoán t mang một trong hai giá trị 0 hoặc 1
 > để đại diện là C1 và C2 là tên hai class: có bị ung thư hay không bị. Thì ở
-> đây nếu ta tìm được phân phối xác suất f(**x**, t) hay f(**x**, Ck)
+> đây nếu ta tìm được phân phối xác suất f(𝐱, t) hay f(𝐱, Ck)
 >
 >
 >
@@ -125,18 +125,18 @@
 >
 > Như nãy đã nói, trong bối cảnh bài toán ta muốn dựa trên tấm ảnh chụp 
 > x quang để đưa ra dự đoán bệnh hay không bệnh. Thì ta sẽ muốn xem
-> xét f(t|**x**) 
+> xét f(t|𝐱) 
 >
 >
 >
-> Theo Bayes theorem: f(t|**x**) = f(**x**|t) f(t) / f(**x**)
+> Theo Bayes theorem: f(t|𝐱) = f(𝐱|t) f(t) / f(𝐱)
 >
 >
 >
 > Y như trong Bayesian approach ta coi θ là random variable để gán cho nó
 > prior distribution π(θ), và dựa vào Bayes theorem để cập nhật xác suất
-> của θ dựa trên **X** = **x**, để có posterior distribution π(θ|**x**). Thì ở đây, f(t)
-> (trong sách là p(Ck) cũng sẽ là prior distribution của T, và f(t|**x**) là posterior
+> của θ dựa trên 𝐗 = 𝐱, để có posterior distribution π(θ|𝐱). Thì ở đây, f(t)
+> (trong sách là p(Ck) cũng sẽ là prior distribution của T, và f(t|𝐱) là posterior
 > distribution, với ý nghĩa là:
 >
 >
@@ -146,7 +146,7 @@
 >
 >
 >
-> Nhưng sau khi có x-ray thì xác suất của T sẽ do f(t|**x**) quyết định.
+> Nhưng sau khi có x-ray thì xác suất của T sẽ do f(t|𝐱) quyết định.
 >
 >
 >
@@ -156,8 +156,8 @@
 >
 >
 >
-> Vậy thì ở đây, tính được f(t, **x**) coi như là bài toán inference, khi đó, ta
-> sẽ tính được f(t|**x**) và việc lấy giá trị nào có posterior cao hơn để gán / báo 
+> Vậy thì ở đây, tính được f(t, 𝐱) coi như là bài toán inference, khi đó, ta
+> sẽ tính được f(t|𝐱) và việc lấy giá trị nào có posterior cao hơn để gán / báo 
 > cho bệnh nhân chính là bước dựa vào decision theory để take action
 
 <br>
@@ -170,7 +170,7 @@
 
 > [!NOTE]
 > Thế thì đại ý là nếu như mục tiêu của ta là giảm thiểu tỉ lệ phân loại nhầm
-> (misclassification rate) thì ta sẽ cần một bộ quy tắc để gán giá trị cho của **x** cho
+> (misclassification rate) thì ta sẽ cần một bộ quy tắc để gán giá trị cho của 𝐱 cho
 > một trong các class đang xét.
 >
 >
@@ -182,37 +182,37 @@
 >
 > Như lúc nãy cũng đã review lại sơ sơ: Bài toán hypothesis testing là bài toán suy
 > luận thống kê mà trong đó ta muốn xây dựng một cái hypothesis test - có bản
-> chất chỉ là một decision rule: dựa vào gía trị quan sát của **X**, tính toán ra test
-> stastisic λ(**X**) và theo một cái rule nào đó để đưa ra kết luận rằng H0: θ ∈ Θ0,
+> chất chỉ là một decision rule: dựa vào gía trị quan sát của 𝐗, tính toán ra test
+> stastisic λ(𝐗) và theo một cái rule nào đó để đưa ra kết luận rằng H0: θ ∈ Θ0,
 > gọi là accept null hypothesis, hay kết luận H1: θ ∈ Θ0c gọi là reject null
 > hypothesis.
 >
 >
 >
 > Thế thì, như vậy việc định ra một cái test, cũng chính là định ra cái rule, để rồi áp
-> dụng cái rule này với mọi **x** ∈ range **X**, nó sẽ chia range **X** thành hai
-> phần, Rejection region R = {**x** ∈ range **X**: reject H0} và Rc = {**x** ∈ range
-> **X**: accept H0}, gọi là Acceptance region.
+> dụng cái rule này với mọi 𝐱 ∈ range 𝐗, nó sẽ chia range 𝐗 thành hai
+> phần, Rejection region R = {𝐱 ∈ range 𝐗: reject H0} và Rc = {𝐱 ∈ range
+> 𝐗: accept H0}, gọi là Acceptance region.
 >
 >
 >
 > Để rồi, khi đó, khi bàn tới việc đánh giá một hypothesis test, ta sẽ muốn giảm
-> thiểu hai loại sai sót: Type I error, là khi θ ∈ Θ0 nhưng lại reject H0 (**X** ∈ R), và
-> Type II error, là khi θ ∈ Θ0c nhưng lại accept H0 (**X** ∈ Rc).
+> thiểu hai loại sai sót: Type I error, là khi θ ∈ Θ0 nhưng lại reject H0 (𝐗 ∈ R), và
+> Type II error, là khi θ ∈ Θ0c nhưng lại accept H0 (𝐗 ∈ Rc).
 >
 >
 >
-> Để rồi từ đó ta có các khái niệm như power function: β(θ) = P_θ(**X** ∈ R), với
+> Để rồi từ đó ta có các khái niệm như power function: β(θ) = P_θ(𝐗 ∈ R), với
 > định nghĩa này, ta sẽ muốn một cái test có Type I error thấp thì có nghĩa là với θ ∈
 > Θ0 β(θ) nên thấp, từ đó ta có định nghĩa level α test là test mà:
 >
 >
 >
-> sup_θ∈Θ0 P_θ(**X** ∈ R) ≤ α.
+> sup_θ∈Θ0 P_θ(𝐗 ∈ R) ≤ α.
 >
 >
 >
-> Và định nghĩa size α test, là test có sup_θ∈Θ0 P_θ(**X** ∈ R) = α.
+> Và định nghĩa size α test, là test có sup_θ∈Θ0 P_θ(𝐗 ∈ R) = α.
 >
 >
 >
@@ -223,7 +223,7 @@
 > Ta sẽ muốn tìm thằng có xác suất mắc Type II error thấp nhất trong đó, cũng là
 > thằng mà khi θ ∈ Θ0c thì xác suất reject H0 là cao nhất mọi thằng khác, đó chính
 > là most power level α test, với power function chính là định nghĩa bởi β(θ) =
-> P_θ(**X** ∈ R): một test gọi là most power trong các test level α là khi với mọi θ ∈
+> P_θ(𝐗 ∈ R): một test gọi là most power trong các test level α là khi với mọi θ ∈
 > Θ0c, thì β(θ) của nó luôn ≥ β'(θ) của mọi test khác trong đám đó.
 >
 >
@@ -262,7 +262,7 @@
 >
 >
 >
-> cũng là (θ ∈ Θ0, **X** ∈ R) hoặc (θ ∈ Θ0c, **X** ∈ Rc)
+> cũng là (θ ∈ Θ0, 𝐗 ∈ R) hoặc (θ ∈ Θ0c, 𝐗 ∈ Rc)
 >
 >
 >
@@ -274,7 +274,7 @@
 >
 >
 >
-> cũng là (T = C1, **X** ∈ R2) hoặc T = C2, **X** ∈ R1)
+> cũng là (T = C1, 𝐗 ∈ R2) hoặc T = C2, 𝐗 ∈ R1)
 >
 >
 >
@@ -284,10 +284,10 @@
 >
 > Với bài toán hypothesis testing, phải chú ý rằng, vì theo Frequentist approach, ta
 > không coi θ như random variable, cho nên xác suất mắc Type 1 Error không phải
-> là P_θ(θ ∈ Θ0, **X** ∈ R) mà phải define là P_θ(**X** ∈ R) khi θ ∈ Θ0, mang ý
-> nghĩa: Khi giá trị của θ, vốn là fixed và unknown, thật sự là ∈ Θ0 thì P_θ(**X** ∈ R)
+> là P_θ(θ ∈ Θ0, 𝐗 ∈ R) mà phải define là P_θ(𝐗 ∈ R) khi θ ∈ Θ0, mang ý
+> nghĩa: Khi giá trị của θ, vốn là fixed và unknown, thật sự là ∈ Θ0 thì P_θ(𝐗 ∈ R)
 > chính là xác suất mắc Type I error. (vì sao có chữ θ ở dưới P: P_θ(...) thì là vì
-> **X** ~ f(**x**|θ) nên dĩ nhiên xác suất này phụ thuộc θ)
+> 𝐗 ~ f(𝐱|θ) nên dĩ nhiên xác suất này phụ thuộc θ)
 >
 >
 >
@@ -295,18 +295,18 @@
 >
 >
 >
-> P_θ(**X** ∈ Rc) khi θ ∈ Θ0c.
+> P_θ(𝐗 ∈ Rc) khi θ ∈ Θ0c.
 >
 >
 >
-> Nhưng với bài toán này, vì **X** và T đều là random variable / random vectors,
+> Nhưng với bài toán này, vì 𝐗 và T đều là random variable / random vectors,
 >
 >
 >
-> (Chú ý, **X** là random vectors, nên trong sách gs Bishop dùng bold font, nhưng
+> (Chú ý, 𝐗 là random vectors, nên trong sách gs Bishop dùng bold font, nhưng
 > như đã nói ông ko theo convention nữa, nên viết chữ thường (vẫn in đậm, nhưng
-> chữ thường **x**) còn mình thì theo convention của Casella, nên in đậm, chữ hoa
-> **X**)
+> chữ thường 𝐱) còn mình thì theo convention của Casella, nên in đậm, chữ hoa
+> 𝐗)
 >
 >
 >
@@ -314,11 +314,11 @@
 >
 >
 >
-> P[(T = C1, **X** ∈ R2) or (T = C2, **X** ∈ R1)]
+> P[(T = C1, 𝐗 ∈ R2) or (T = C2, 𝐗 ∈ R1)]
 >
 >
 >
-> = P[(T = C1, **X** ∈ R2) U (T = C2, **X** ∈ R1)]
+> = P[(T = C1, 𝐗 ∈ R2) U (T = C2, 𝐗 ∈ R1)]
 >
 >
 >
@@ -327,16 +327,16 @@
 >
 >
 >
-> = P(T = C1, **X** ∈ R2) + P(T = C2, **X** ∈ R1)
+> = P(T = C1, 𝐗 ∈ R2) + P(T = C2, 𝐗 ∈ R1)
 >
 >
 >
-> Và đây là xác suất của joint event liên quan đến T, và **X**, nên ta sẽ dùng thể
-> hiện nó / tính toán nó bởi joint distribution của T và **X**:
+> Và đây là xác suất của joint event liên quan đến T, và 𝐗, nên ta sẽ dùng thể
+> hiện nó / tính toán nó bởi joint distribution của T và 𝐗:
 >
 >
 >
-> f(t,**x**) | t=C1, **x**∈R2 + f(t,**x**) | t=C2, **x**∈R1
+> f(t,𝐱) | t=C1, 𝐱∈R2 + f(t,𝐱) | t=C2, 𝐱∈R1
 >
 >
 >
@@ -348,7 +348,7 @@
 >
 > Ở đây nó hơi lạ là đây là joint distribution của một biến discrete và một biến liên
 > tục nhưng nguyên lí cũng  vậy thôi, có thể coi cái ta cần tính ở đây là xác suất của
-> event T ∈ {C1}, **X** ∈ R2 **⇨** ∫{C1}∫R2 f(t, **x**)d**x** dt = ∫R2 f(C1, **x**)d**x**
+> event T ∈ {C1}, 𝐗 ∈ R2 **⇨** ∫{C1}∫R2 f(t, 𝐱)d𝐱 dt = ∫R2 f(C1, 𝐱)d𝐱
 >
 >
 >
@@ -356,7 +356,7 @@
 >
 >
 >
-> ∫R2 f(C1,**x**)d**x** + ∫R1 f(C2,**x**)d**x**
+> ∫R2 f(C1,𝐱)d𝐱 + ∫R1 f(C2,𝐱)d𝐱
 
 <br>
 
@@ -370,8 +370,8 @@
 
 > [!NOTE]
 > Tiếp, cùng tìm hiểu sao ông Bishop nói dễ thấy là cái rule mà sẽ giúp ta giảm thiểu
-> xác suất mistake này sẽ là cái rule sau đây: gán cho **x** cái class nào mà f(**x**,
-> Ck) nhỏ hơn. Ví dụ nếu f(**x**, C1) < f(**x**, C2) thì kết luận C2, ngược lại thì kết luận C1.
+> xác suất mistake này sẽ là cái rule sau đây: gán cho 𝐱 cái class nào mà f(𝐱,
+> Ck) nhỏ hơn. Ví dụ nếu f(𝐱, C1) < f(𝐱, C2) thì kết luận C2, ngược lại thì kết luận C1.
 >
 >
 >
@@ -400,7 +400,7 @@
 > À, như đã biết trong bài toán Hypothesis testing, nói về một cái test, hay test rule,
 > thì bản chất cũng chính là nói về cái rejection region hay acceptance region. Vì một
 > cái rule, sẽ gắn với cái rejection region có được khi áp cái rule đó để mà chia range
-> **X** thành R và Rc.
+> 𝐗 thành R và Rc.
 >
 >
 >
@@ -414,33 +414,33 @@
 >
 >
 >
-> minimize_R1,R2 {∫R2 f(C1,**x**)d**x** + ∫R1 f(C2,**x**)d**x**}
+> minimize_R1,R2 {∫R2 f(C1,𝐱)d𝐱 + ∫R1 f(C2,𝐱)d𝐱}
 >
 >
 >
 > (chỗ này vì X là vector nên ta phải hiểu đây là tích phân đa biến ∫...∫ nếu ghi
-> chặt chẽ theo toán học, chỉ là ghi ∫ cho gọn, cũng như range **X** đây là subset của R^n
+> chặt chẽ theo toán học, chỉ là ghi ∫ cho gọn, cũng như range 𝐗 đây là subset của Rⁿ
 > chứ ko phải R)
 >
 >
 >
-> Tuy nhiên, R1,R2 sẽ có ràng buộc: R1 U R2 = range **X**, và R1, R2 disjoint:  R1 ∩
+> Tuy nhiên, R1,R2 sẽ có ràng buộc: R1 U R2 = range 𝐗, và R1, R2 disjoint:  R1 ∩
 > R2 = ∅
 >
 >
 >
 > Nhưng tích phân trên miền R2, có thể được tách thành tích phân trên toàn miền trừ
-> tích phân trên miền R1: ∫R2 f(C1,**x**)d**x** = ∫{Range **X**} f(C1,**x**)d**x** - ∫R1
-> f(C1,**x**)d**x**
+> tích phân trên miền R1: ∫R2 f(C1,𝐱)d𝐱 = ∫{Range 𝐗} f(C1,𝐱)d𝐱 - ∫R1
+> f(C1,𝐱)d𝐱
 >
 >
 >
-> Và xét cái này ∫{Range **X**} f(C1,**x**)d**x**, Ta biết là marginalizing joint pdf/pmf
-> của **X**, T trên toàn miền xác định của **X** ta sẽ được marginal pdf/pmf của T.
+> Và xét cái này ∫{Range 𝐗} f(C1,𝐱)d𝐱, Ta biết là marginalizing joint pdf/pmf
+> của 𝐗, T trên toàn miền xác định của 𝐗 ta sẽ được marginal pdf/pmf của T.
 >
 >
 >
-> Do đó ∫{Range **X**} f(C1,**x**)d**x** chính là f(t)|t=C1, tức prior distribution của T,
+> Do đó ∫{Range 𝐗} f(C1,𝐱)d𝐱 chính là f(t)|t=C1, tức prior distribution của T,
 > evaluate tại t = C1
 >
 >
@@ -449,8 +449,8 @@
 >
 >
 >
-> minimize_R1 {f(C1) - ∫R1 f(C1,**x**)d**x** + ∫R1 f(C2,**x**)d**x**} = {f(C1) + ∫R1 [f(C2,
-> **x**) - f(C1,**x**)]d**x** }
+> minimize_R1 {f(C1) - ∫R1 f(C1,𝐱)d𝐱 + ∫R1 f(C2,𝐱)d𝐱} = {f(C1) + ∫R1 [f(C2,
+> 𝐱) - f(C1,𝐱)]d𝐱 }
 >
 >
 >
@@ -458,7 +458,7 @@
 >
 >
 >
-> minimize_R1 { ∫R1 [f(C2,**x**) - f(C1,**x**)]d**x** }
+> minimize_R1 { ∫R1 [f(C2,𝐱) - f(C1,𝐱)]d𝐱 }
 >
 >
 >
@@ -466,8 +466,8 @@
 >
 >
 >
-> Nếu là bối cảnh bài toán tối ưu với biến **x** thông thường, có lẽ tới đây mình sẽ dùng
-> first order necessary condition để tìm **x** khiến gradient = 0, để ra critical point rồi xét
+> Nếu là bối cảnh bài toán tối ưu với biến 𝐱 thông thường, có lẽ tới đây mình sẽ dùng
+> first order necessary condition để tìm 𝐱 khiến gradient = 0, để ra critical point rồi xét
 > phép thử bậc hai các kiểu.
 >
 >
@@ -477,24 +477,24 @@
 >
 >
 > Ta sẽ dựa vào lập luận: mục đích là tìm vùng R1 sao cho minimize tích phân này.
-> Mà bản chất tích phân này là tổng: tổng các giá trị [f(C2,**x**) - f(C1,**x**)] trên miền
-> R1 ∈ range **X**
+> Mà bản chất tích phân này là tổng: tổng các giá trị [f(C2,𝐱) - f(C1,𝐱)] trên miền
+> R1 ∈ range 𝐗
 >
 >
 >
-> Nên có thể diễn dịch yêu cầu là tìm trong miền **X**, để nhặt ra, gom lại những
-> giá trị **x** nào đó sao cho tổng [f(C2,**x**) - f(C1,**x**)] trên tập đó là nhỏ nhất.
+> Nên có thể diễn dịch yêu cầu là tìm trong miền 𝐗, để nhặt ra, gom lại những
+> giá trị 𝐱 nào đó sao cho tổng [f(C2,𝐱) - f(C1,𝐱)] trên tập đó là nhỏ nhất.
 >
 >
 >
-> Để làm được điều này, về trực giác, ta sẽ chọn các **x** khiến cái cụm này âm, thì
+> Để làm được điều này, về trực giác, ta sẽ chọn các 𝐱 khiến cái cụm này âm, thì
 > khi đó, tổng của một đám mang giá trị âm mới khiến đẩy giá trị ngày càng nhỏ
 > lại.
 >
 >
 >
-> Và ta cũng chỉ có thể lập luận như vậy, để kết luận R1 tối ưu nên là tập các **x** ∈ range **X**
-> sao cho [f(C2,**x**) - f(C1,**x**)] < 0 ⇔ f(C2,**x**) < f(C1,**x**).
+> Và ta cũng chỉ có thể lập luận như vậy, để kết luận R1 tối ưu nên là tập các 𝐱 ∈ range 𝐗
+> sao cho [f(C2,𝐱) - f(C1,𝐱)] < 0 ⇔ f(C2,𝐱) < f(C1,𝐱).
 >
 >
 >
@@ -507,20 +507,20 @@
 >
 >
 >
-> Assign class C1 nếu f(C2,**x**) < f(C1,**x**) và ngược lại.
+> Assign class C1 nếu f(C2,𝐱) < f(C1,𝐱) và ngược lại.
 >
 >
 >
-> Và cũng dễ hiểu rằng vì f(t,**x**) = f(t|**x**)f(**x**) **⇨** f(C2,**x**) = f(C2|**x**)f(**x**)
+> Và cũng dễ hiểu rằng vì f(t,𝐱) = f(t|𝐱)f(𝐱) **⇨** f(C2,𝐱) = f(C2|𝐱)f(𝐱)
 >
 >
 >
-> và f(C1,**x**) = f(C1|**x**)f(**x**)
+> và f(C1,𝐱) = f(C1|𝐱)f(𝐱)
 >
 >
 >
-> nên decision rule tối ưu cũng là: Assign class C1 nếu f(C2|**x**) (tức posterior pdf
-> tại C2) < f(C1|**x**)
+> nên decision rule tối ưu cũng là: Assign class C1 nếu f(C2|𝐱) (tức posterior pdf
+> tại C2) < f(C1|𝐱)
 
 <br>
 
@@ -531,14 +531,14 @@
 <p align="center"><kbd><img src="assets/kjgaatltwb8.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Minh họa bằng hình ảnh này. Vẽ đồ thị của hàm f(C1, **x**) và f(C2, **x**) theo **x**.
+> Minh họa bằng hình ảnh này. Vẽ đồ thị của hàm f(C1, 𝐱) và f(C2, 𝐱) theo 𝐱.
 >
 >
 >
-> Mình phải nói trước: hình ảnh chỉ nên hiểu mang tính minh họa, vì **x** vốn
+> Mình phải nói trước: hình ảnh chỉ nên hiểu mang tính minh họa, vì 𝐱 vốn
 > đang là vector, ko thể thể hiện nó trên 1 trục như vậy được, hay nói cách
-> khác, ở đây coi như **x** chỉ là vector 1-D, do nên ta thấy gs Bishop dùng
-> kí hiệu x thường (ko phải x bold: **x** như trong phần trước)
+> khác, ở đây coi như 𝐱 chỉ là vector 1-D, do nên ta thấy gs Bishop dùng
+> kí hiệu x thường (ko phải x bold: 𝐱 như trong phần trước)
 >
 >
 >
@@ -633,13 +633,13 @@
 >
 >
 >
-> "Correct" = (T = C1, **X** ∈ R1) hoặc (T = C2, **X** ∈ R2) ,...(T = CK, **X** ∈
+> "Correct" = (T = C1, 𝐗 ∈ R1) hoặc (T = C2, 𝐗 ∈ R2) ,...(T = CK, 𝐗 ∈
 > Rk)
 >
 >
 >
-> ⇨ P("Correct") = P[(T = C1, **X** ∈ R1) U (T = C2, **X** ∈ R2) U...U( T = CK,
-> **X** ∈ Rk)]
+> ⇨ P("Correct") = P[(T = C1, 𝐗 ∈ R1) U (T = C2, 𝐗 ∈ R2) U...U( T = CK,
+> 𝐗 ∈ Rk)]
 >
 >
 >
@@ -648,22 +648,22 @@
 >
 >
 >
-> .. = P[(T = C1, **X** ∈ R1) + P(T = C2, **X** ∈ R2) +...+ P(T = CK, **X** ∈ Rk)]
+> .. = P[(T = C1, 𝐗 ∈ R1) + P(T = C2, 𝐗 ∈ R2) +...+ P(T = CK, 𝐗 ∈ Rk)]
 >
 >
 >
-> và tương tự như hồi nãy, nó chính là ∫R1 f(C1,**x**)d**x** + ...∫RK f(CK,
-> **x**)d**x**
+> và tương tự như hồi nãy, nó chính là ∫R1 f(C1,𝐱)d𝐱 + ...∫RK f(CK,
+> 𝐱)d𝐱
 >
 >
 >
-> = Σk=1:K ∫Rk f(Ck,**x**)d**x**
+> = Σk=1:K ∫Rk f(Ck,𝐱)d𝐱
 >
 >
 >
 > Và tương tự như khi K = 2, cái decision rule khiến maximize P("correct") có
 > thể đoán được cũng sẽ chính là cái rule này: Assign class Ck nếu joint  pdf
-> f(Ck, **x**) và cũng là posterior pdf f(Ck|**x**) là cao nhất trong các k = 1,..K
+> f(Ck, 𝐱) và cũng là posterior pdf f(Ck|𝐱) là cao nhất trong các k = 1,..K
 >
 >
 >
@@ -707,7 +707,7 @@
 > Lại liên hệ nó với hypothesis testing cho vui. Mình đã review lại một ít
 > trong các note trước, rằng trong bài toán này, ta cũng sẽ có hai loại error:
 > Type I error, là khi θ thật sự thuộc Θ0, nhưng lại kết luận là reject H0, hay
-> **X** ∈ R và Type II error là khi θ ∈ Θ0c mà lại kết luận là accept H0: **X**
+> 𝐗 ∈ R và Type II error là khi θ ∈ Θ0c mà lại kết luận là accept H0: 𝐗
 > ∈ Rc.
 >
 >
@@ -757,38 +757,38 @@
 > vào bối cảnh point estimation thì action đó là "(đưa ra) một estimation của θ", để rồi action
 > space, là tập hợp mọi estimation của θ. Thế thì, theo decision theory, một action sẽ tạo ra
 > một loss, và hàm loss sẽ là hàm được định nghĩa để phản ánh mức độ nghiêm trọng của
-> action. Với bài toán estimation, thì loss có thể dùng **squared error loss** L(θ, δ(**x**)) =
-> (δ(**x**)-θ)^2 hoặc **absolute error loss** L(θ,δ(**x**)) = |δ(**x**) - θ|
+> action. Với bài toán estimation, thì loss có thể dùng **squared error loss** L(θ, δ(𝐱)) =
+> (δ(𝐱)-θ)² hoặc **absolute error loss** L(θ,δ(𝐱)) = |δ(𝐱) - θ|
 >
 >
 >
 > Và như vậy thì, với loss function, ta sẽ có một hàm số phụ thuộc θ phản ánh chất lượng
-> của estimator δ(**X**) ứng với θ cụ thể nào đó.
+> của estimator δ(𝐗) ứng với θ cụ thể nào đó.
 >
 >
 >
-> Và để có một con số duy nhất, không phụ thuộc **X**, phản ánh chất lượng của estimator
-> δ(**X**) nói chung, ta sẽ định nghĩa cái gọi là risk function:
+> Và để có một con số duy nhất, không phụ thuộc 𝐗, phản ánh chất lượng của estimator
+> δ(𝐗) nói chung, ta sẽ định nghĩa cái gọi là risk function:
 >
 >
 >
-> R(δ(**X**), θ) = E_θ[L(δ(**X**), θ)], với phân tích ý nghĩa như sau:
+> R(δ(𝐗), θ) = E_θ[L(δ(𝐗), θ)], với phân tích ý nghĩa như sau:
 >
 >
 >
-> L(δ(**X**), θ) sẽ là một random variable, vì nó là kết quả do áp một function lên δ(**X**)
-> nên phụ thuộc δ(**X**), nên phụ thuộc **X**.
+> L(δ(𝐗), θ) sẽ là một random variable, vì nó là kết quả do áp một function lên δ(𝐗)
+> nên phụ thuộc δ(𝐗), nên phụ thuộc 𝐗.
 >
 >
 >
 > Lấy kì vọng cái random variable này, thì tính cái này, thì ta sẽ dùng distribution của
-> L(δ(**X**),θ), mang ý nghĩa là marginalizing mọi giá trị khả dĩ của L, nên kết quả sẽ là fix,
-> không còn là random variable nữa, không phụ thuộc **X** nữa. nhưng nó vẫn là hàm theo
+> L(δ(𝐗),θ), mang ý nghĩa là marginalizing mọi giá trị khả dĩ của L, nên kết quả sẽ là fix,
+> không còn là random variable nữa, không phụ thuộc 𝐗 nữa. nhưng nó vẫn là hàm theo
 > θ.
 >
 >
 >
-> Và bằng cách tìm cái δ(**X**) có risk nhỏ nhất với mọi θ thì ta sẽ có cái estimator tốt nhất,
+> Và bằng cách tìm cái δ(𝐗) có risk nhỏ nhất với mọi θ thì ta sẽ có cái estimator tốt nhất,
 > tức là minimum risk estimator.
 >
 >
@@ -797,11 +797,11 @@
 >
 >
 >
-> R(δ(**X**), θ) = E_θ[(δ(**X**) - θ)^2] thì đây chính là định nghĩa của hàm MSE:
+> R(δ(𝐗), θ) = E_θ[(δ(𝐗) - θ)²] thì đây chính là định nghĩa của hàm MSE:
 >
 >
 >
-> MSE củan estimator W(**X**), define bởi: MSE(W(**X**),θ) = E_θ[(W(**X**) - θ)^2].
+> MSE củan estimator W(𝐗), define bởi: MSE(W(𝐗),θ) = E_θ[(W(𝐗) - θ)²].
 >
 >
 >
@@ -814,60 +814,60 @@
 >
 >
 >
-> Dùng VarX = EX^2 - (EX)^2 ⇨ Var[W(**X**) - θ] = E[(W(**X**) - θ)^2] - E[W(**X**) - θ])^2
+> Dùng VarX = EX² - (EX)² ⇨ Var[W(𝐗) - θ] = E[(W(𝐗) - θ)²] - E[W(𝐗) - θ])²
 >
 >
 >
-> Do đó MSE(W(**X**), θ) = R(W(**X**), θ)_squared error loss = E_θ[(W(**X**) - θ)^2]
+> Do đó MSE(W(𝐗), θ) = R(W(𝐗), θ)_squared error loss = E_θ[(W(𝐗) - θ)²]
 >
 >
 >
-> = Var[Var(**X**) - θ] + (E[W(**X**) - θ])^2
+> = Var[Var(𝐗) - θ] + (E[W(𝐗) - θ])²
 >
 >
 >
-> = Var[Var(**X**)] + (E[W(X) - θ])^2
+> = Var[Var(𝐗)] + (E[W(X) - θ])²
 >
 >
 >
-> Và E[W(**X**) - θ] lại chính là definition của Bias(W(X), θ)
+> Và E[W(𝐗) - θ] lại chính là definition của Bias(W(X), θ)
 >
 >
 >
-> ⇨ MSE(W(**X**), θ) = Var[W(**X**)] + [Bias(W(**X**), θ)]^2
+> ⇨ MSE(W(𝐗), θ) = Var[W(𝐗)] + [Bias(W(𝐗), θ)]²
 >
 >
 >
-> Nếu là theo trường phái Bayesian với Bayes estimator, thì từ risk function R(δ(**X**), θ) 
+> Nếu là theo trường phái Bayesian với Bayes estimator, thì từ risk function R(δ(𝐗), θ) 
 > người ta sẽ lấy trung bình trên mọi possible value của θ:
 >
 >
 >
-> ∫R(δ(**X**), θ) π(θ) dθ, đây gọi là Bayes risk
+> ∫R(δ(𝐗), θ) π(θ) dθ, đây gọi là Bayes risk
 >
 >
 >
-> Thay R(δ(**X**), θ) = E_θ[L(δ(**X**), θ)] = ∫_/**X** /L(δ(**x**), θ) f(**x**|θ) d**x** vào:
+> Thay R(δ(𝐗), θ) = E_θ[L(δ(𝐗), θ)] = ∫_/𝐗 /L(δ(𝐱), θ) f(𝐱|θ) d𝐱 vào:
 >
 >
 >
-> Bayes risk = ∫_Θ ∫_/**X**/ L(δ(**x**), θ) f(**x**|θ) d**x** π(θ) dθ 
+> Bayes risk = ∫_Θ ∫_/𝐗/ L(δ(𝐱), θ) f(𝐱|θ) d𝐱 π(θ) dθ 
 >
 >
 >
-> = ∫_Θ ∫_/**X**/ L(δ(**x**), θ) [f(θ|**x**) f(**x**)/π(θ)] / d**x** π(θ) dθ
+> = ∫_Θ ∫_/𝐗/ L(δ(𝐱), θ) [f(θ|𝐱) f(𝐱)/π(θ)] / d𝐱 π(θ) dθ
 >
 >
 >
-> = ∫_Θ ∫_**X** L(δ(**x**), θ) f(θ|**x**) f(**x**) d**x** dθ
+> = ∫_Θ ∫_𝐗 L(δ(𝐱), θ) f(θ|𝐱) f(𝐱) d𝐱 dθ
 >
 >
 >
-> = ∫_**X** [ ∫_Θ L(δ(**x**), θ) f(θ|**x**) dθ ] f(**x**) d**x** 
+> = ∫_𝐗 [ ∫_Θ L(δ(𝐱), θ) f(θ|𝐱) dθ ] f(𝐱) d𝐱 
 >
 >
 >
-> Thì cái ∫_Θ L(δ(**x**), θ) f(θ|**x**) dθ = E[L(δ, θ)|**X**=**x**] được gọi là **posterior expected loss**
+> Thì cái ∫_Θ L(δ(𝐱), θ) f(θ|𝐱) dθ = E[L(δ, θ)|𝐗=𝐱] được gọi là **posterior expected loss**
 >
 >
 >
@@ -876,13 +876,13 @@
 >
 >
 > Sang tới interval estimator, thì lúc này loss function cần phản ánh hai thứ: độ chính xác
-> (C(**X**) chứa θ và kích thước C(**X**). Do đó, loss sẽ là kết hợp  của một indicator
-> function I_{C(**X**) chứa θ} (= 0 khi C(**X**) chứa và bằng 1 khi  C(**X**) không chứa θ) và
-> Size(C(**X**)) với một tham số b giúp điều chỉnh tương quan giữa hai sub-objective này:
+> (C(𝐗) chứa θ và kích thước C(𝐗). Do đó, loss sẽ là kết hợp  của một indicator
+> function I_{C(𝐗) chứa θ} (= 0 khi C(𝐗) chứa và bằng 1 khi  C(𝐗) không chứa θ) và
+> Size(C(𝐗)) với một tham số b giúp điều chỉnh tương quan giữa hai sub-objective này:
 >
 >
 >
-> L(C(**X**), θ) = I_{θ ∈ C(**X**)} + b Size(C(**X**)), thể hiện: nếu C(**X**) chứa θ và có size
+> L(C(𝐗), θ) = I_{θ ∈ C(𝐗)} + b Size(C(𝐗)), thể hiện: nếu C(𝐗) chứa θ và có size
 > nhỏ thì loss sẽ nhỏ.
 >
 >
@@ -892,7 +892,7 @@
 >
 >
 >
-> R(C(**X**), θ) = E_θ[L(C(**X**), θ)].
+> R(C(𝐗), θ) = E_θ[L(C(𝐗), θ)].
 >
 >
 >
@@ -919,33 +919,33 @@
 >
 >
 > Chỗ này cần nói rõ cho dễ hiểu: Định nghĩa của loss, luôn gắn với một action. Với point
-> estimator, loss kí hiệu là L(δ(**X**), θ), để rồi nó là một random variable, mà khi nhận giá trị
-> **X** = **x**, kéo theo δ(**X**) mang giá trị estimate cho θ: δ(**x**) (là một action), kéo theo
-> phát sinh loss L(δ(**x**), **θ**) từ action này. Và vì L(δ(**X**), θ) là random variable, nên
+> estimator, loss kí hiệu là L(δ(𝐗), θ), để rồi nó là một random variable, mà khi nhận giá trị
+> 𝐗 = 𝐱, kéo theo δ(𝐗) mang giá trị estimate cho θ: δ(𝐱) (là một action), kéo theo
+> phát sinh loss L(δ(𝐱), **θ**) từ action này. Và vì L(δ(𝐗), θ) là random variable, nên
 > risk = lấy kì vọng, chính là dựa trên distribution của cái thằng L này, và truy nguyên nguòn
-> gốc thì c**ũng chỉ là xuất phát từ distribution của X**: f(**x**|θ), do đó risk mới là hàm phụ
+> gốc thì c**ũng chỉ là xuất phát từ distribution của X**: f(𝐱|θ), do đó risk mới là hàm phụ
 > thuộc θ.
 >
 >
 >
-> Tương tự, với interval estimator, thì action là một interval C(**x**), loss L(C(**X**), θ) cũng
-> là random variable, mà yếu tố random của nó đến từ C(**X**). Khi quan sát **X** = **x**,
-> C(**X**) mang giá trị C(**x**), thì nó mang ý nghĩa là một action được đưa ra: một interval
-> được dự đoán sẽ chứa θ, và với action đó, phát sinh loss: L(C(**x**), θ). Nên lấy kì vọng
-> cái này để có risk, thì ta sẽ dựa trên **distribution của C(X)**, tất nhiên, C(**X**), nếu là
-> random interval, thì cũng sẽ được cấu thành bởi hai random variable L(**X**), U(**X**), nên
-> tương tự, cũng chỉ là xuất phát từ distribution của **X**
+> Tương tự, với interval estimator, thì action là một interval C(𝐱), loss L(C(𝐗), θ) cũng
+> là random variable, mà yếu tố random của nó đến từ C(𝐗). Khi quan sát 𝐗 = 𝐱,
+> C(𝐗) mang giá trị C(𝐱), thì nó mang ý nghĩa là một action được đưa ra: một interval
+> được dự đoán sẽ chứa θ, và với action đó, phát sinh loss: L(C(𝐱), θ). Nên lấy kì vọng
+> cái này để có risk, thì ta sẽ dựa trên **distribution của C(X)**, tất nhiên, C(𝐗), nếu là
+> random interval, thì cũng sẽ được cấu thành bởi hai random variable L(𝐗), U(𝐗), nên
+> tương tự, cũng chỉ là xuất phát từ distribution của 𝐗
 >
 >
 >
 > Còn trong hypothesis testing, action là một kết luận mang một trong hai giá trị a0 hoặc a1,
-> nên ta có thể thể hiện nó bởi λ(**X**) nào đó, là một Bernoulli random variable, để rồi khi
-> quan sát **X** = **x**, λ(**X**) ghi nhận giá trị cụ thể λ(**x**) (= a0 hoặc a1), loss ghi nhận
-> giá trị cụ thể L(θ, λ(**x**)) (là L(θ, a0) hoặc L(θ, a1)).
+> nên ta có thể thể hiện nó bởi λ(𝐗) nào đó, là một Bernoulli random variable, để rồi khi
+> quan sát 𝐗 = 𝐱, λ(𝐗) ghi nhận giá trị cụ thể λ(𝐱) (= a0 hoặc a1), loss ghi nhận
+> giá trị cụ thể L(θ, λ(𝐱)) (là L(θ, a0) hoặc L(θ, a1)).
 >
 >
 >
-> Nhờ vậy, ta hiểu trong hypothesis testing, loss L(θ, λ(**X**)) là một Bernoulli random
+> Nhờ vậy, ta hiểu trong hypothesis testing, loss L(θ, λ(𝐗)) là một Bernoulli random
 > variable
 >
 >
@@ -954,19 +954,19 @@
 >
 >
 >
-> R(θ, λ(**X**)) = E_θ[L(θ, λ(**X**)]
+> R(θ, λ(𝐗)) = E_θ[L(θ, λ(𝐗)]
 >
 >
 >
-> = L(θ, a0) * P_θ[L(θ, λ(**X**)) = L(θ, a0)] + L_θ(θ, a1) * P[L(θ, λ(**X**) = L(θ, a1)]
+> = L(θ, a0) * P_θ[L(θ, λ(𝐗)) = L(θ, a0)] + L_θ(θ, a1) * P[L(θ, λ(𝐗) = L(θ, a1)]
 >
 >
 >
-> = L(θ, a0) * P_θ(λ(**X**) = a0) + L_θ(θ, a1) * P(λ(**X**) =  a1)
+> = L(θ, a0) * P_θ(λ(𝐗) = a0) + L_θ(θ, a1) * P(λ(𝐗) =  a1)
 >
 >
 >
-> = L(θ, a0) * P_θ(**X** ∈ Acceptance region Rc) + L(θ, a1) * P_θ(**X** ∈ Rejection region R)
+> = L(θ, a0) * P_θ(𝐗 ∈ Acceptance region Rc) + L(θ, a1) * P_θ(𝐗 ∈ Rejection region R)
 >
 >
 >
@@ -974,11 +974,11 @@
 >
 >
 >
-> θ ∈ Θ0 ⇨ R = 0 * P_θ(**X** ∈ Rc) + 1 * P_θ(**X** ∈ R) = β(θ)
+> θ ∈ Θ0 ⇨ R = 0 * P_θ(𝐗 ∈ Rc) + 1 * P_θ(𝐗 ∈ R) = β(θ)
 >
 >
 >
-> θ ∈ Θ0c = R = 1 * P_θ(**X** ∈ Rc) + 0 * P_θ(**X** ∈ R) = P_θ(**X** ∈ Rc) = 1 - β(θ)
+> θ ∈ Θ0c = R = 1 * P_θ(𝐗 ∈ Rc) + 0 * P_θ(𝐗 ∈ R) = P_θ(𝐗 ∈ Rc) = 1 - β(θ)
 >
 >
 >
@@ -995,15 +995,15 @@
 >
 >
 >
-> Khi đó R(θ, λ(**X**)):
+> Khi đó R(θ, λ(𝐗)):
 >
 >
 >
-> Khi θ ∈ Θ0: R = cI * P_θ(**X** ∈ R) + 0 * P_θ(X ∈ Rc) = cI * β(θ)
+> Khi θ ∈ Θ0: R = cI * P_θ(𝐗 ∈ R) + 0 * P_θ(X ∈ Rc) = cI * β(θ)
 >
 >
 >
-> Khi θ ∈ Θ0c: R = cII * P_θ(**X** ∈ R) + 0 * P_θ(X ∈ Rc) = cII * (1 - β(θ))
+> Khi θ ∈ Θ0c: R = cII * P_θ(𝐗 ∈ R) + 0 * P_θ(X ∈ Rc) = cII * (1 - β(θ))
 
 <br>
 
@@ -1089,59 +1089,59 @@
 >
 >
 > Còn **trong bối cảnh Bishop**, T **cũng là random variable**. Nên **ứng với mỗi ô
-> trong loss matrix, là một joint event** của T và **X**.
+> trong loss matrix, là một joint event** của T và 𝐗.
 >
 >
 >
 > Ví dụ, ô Lkj sẽ là loss của event: T = k (class thật là j) và "mô hình phân lại là
-> class j" , cũng là **X** ∈ Rj
+> class j" , cũng là 𝐗 ∈ Rj
 >
 >
 >
 > Vậy thì ở đây gs Bishop chính là đang tính Bayes risk: Trong Casella, khi ta 
-> xét Bayes estimator, thì ngoài risk function R(δ(**X**), θ), người ta còn average nó,
+> xét Bayes estimator, thì ngoài risk function R(δ(𝐗), θ), người ta còn average nó,
 > theo prior distribution của θ: Nghĩa là, hàm risk function, vốn dĩ đã chỉ còn phụ
 > thuộc θ, vì theo trường phái Bayes, lúc này θ là random variable, nên risk function
 > cũng thành random variable nốt, ta mới đi average nó, đặt là Bayes risk:
 >
 >
 >
-> Bayes risk của δ(**X**): E[R(θ, δ(**X**)] = ∫_Θ R(θ, δ(**X**)) π(θ) dθ 
+> Bayes risk của δ(𝐗): E[R(θ, δ(𝐗)] = ∫_Θ R(θ, δ(𝐗)) π(θ) dθ 
 >
 >
 >
-> Lắp R(θ, δ(**X**)) = E_θ[L(δ(**X**), θ)] = ∫_/**X** /L(δ(**x**), θ) f(**x**|θ) d**x** vào.
+> Lắp R(θ, δ(𝐗)) = E_θ[L(δ(𝐗), θ)] = ∫_/𝐗 /L(δ(𝐱), θ) f(𝐱|θ) d𝐱 vào.
 >
 >
 >
-> Bayes risk của δ(**X**): = ∫_Θ ∫_/**X**/ L(δ(**x**), θ) f(**x**|θ) d**x** π(θ) dθ 
+> Bayes risk của δ(𝐗): = ∫_Θ ∫_/𝐗/ L(δ(𝐱), θ) f(𝐱|θ) d𝐱 π(θ) dθ 
 >
 >
 >
-> Tới đây biến đổi chút xíu (thay f(**x**|θ) = π(θ|**x**) f(**x**) / π(θ), ta sẽ thấy nó 
-> trở thành ∫_/**X** /[/**∫**/_Θ L(δ(**x**), θ) π(θ|**x**) dθ] f(**x**) d**x**, trong đó ∫_Θ L(δ(**x**), θ) π(θ|**x**) dθ
-> chính là E[L(δ(X),θ)|**X**=**x**], là kì vọng của loss dưới phân phối posterior: posterior
-> expected loss. (hiểu nó thế này: với **X** = **x**, L(δ(**X**), θ) là random variable tạo bởi
-> θ, và θ ~ posterior π(θ|**x**) ⇨ lấy kì vọng, theo lotus)
+> Tới đây biến đổi chút xíu (thay f(𝐱|θ) = π(θ|𝐱) f(𝐱) / π(θ), ta sẽ thấy nó 
+> trở thành ∫_/𝐗 /[/**∫**/_Θ L(δ(𝐱), θ) π(θ|𝐱) dθ] f(𝐱) d𝐱, trong đó ∫_Θ L(δ(𝐱), θ) π(θ|𝐱) dθ
+> chính là E[L(δ(X),θ)|𝐗=𝐱], là kì vọng của loss dưới phân phối posterior: posterior
+> expected loss. (hiểu nó thế này: với 𝐗 = 𝐱, L(δ(𝐗), θ) là random variable tạo bởi
+> θ, và θ ~ posterior π(θ|𝐱) ⇨ lấy kì vọng, theo lotus)
 >
 >
 >
-> Nhưng nếu làm tiếp từ ∫_Θ ∫_/**X**/ L(δ(**x**), θ) f(**x**|θ) d**x** π(θ) dθ, nhập f(**x**|θ) π(θ)
-> lại = f(**x**, θ), ta sẽ có:
+> Nhưng nếu làm tiếp từ ∫_Θ ∫_/𝐗/ L(δ(𝐱), θ) f(𝐱|θ) d𝐱 π(θ) dθ, nhập f(𝐱|θ) π(θ)
+> lại = f(𝐱, θ), ta sẽ có:
 >
 >
 >
-> ∫_Θ ∫_/**X**/ L(δ(**x**), θ) f(**x**, θ) d**x** dθ 
+> ∫_Θ ∫_/𝐗/ L(δ(𝐱), θ) f(𝐱, θ) d𝐱 dθ 
 >
 >
 >
 > Đây chính là gì? **CHÍNH LÀ** **LẤY TRUNG BÌNH CỦA LOSS DỰA TRÊN
-> JOINT DISTRIBUTION CỦA** **X** và θ
+> JOINT DISTRIBUTION CỦA** 𝐗 và θ
 >
 >
 >
 > Để rồi ta sẽ thấy **CHÍNH XÁC LÀ** **NGÀI BISHOP ĐANG TÍNH BAYES RISK** (tính **kì
-> vọng của loss (tổng loss) trên joint distribution của** T **và** **X**)
+> vọng của loss (tổng loss) trên joint distribution của** T **và** 𝐗)
 
 <br>
 
@@ -1169,7 +1169,7 @@
 >
 >
 >
-> Loss = L12 khi "class thật là 1, phân loại của decision rule là 2", thể hiện toán học của event này: (T = 1, **X** ∈ R2).
+> Loss = L12 khi "class thật là 1, phân loại của decision rule là 2", thể hiện toán học của event này: (T = 1, 𝐗 ∈ R2).
 >
 >
 >
@@ -1177,23 +1177,23 @@
 >
 >
 >
-> Loss = Lkj khi (T = k, **X** ∈ Rj)
+> Loss = Lkj khi (T = k, 𝐗 ∈ Rj)
 >
 >
 >
-> Nên Loss, là một **DISCRETE** random variable mà được **tạo ra bởi việc áp một hàm số sau đây** lên T, và **X**:
+> Nên Loss, là một **DISCRETE** random variable mà được **tạo ra bởi việc áp một hàm số sau đây** lên T, và 𝐗:
 >
 >
 >
-> g(t,**x**) = Lkj (giá trị của matrix loss tại hàng k, cột j) khi T = t, **X** = **x**.
+> g(t,𝐱) = Lkj (giá trị của matrix loss tại hàng k, cột j) khi T = t, 𝐗 = 𝐱.
 >
 >
 >
-> Nói cách khác, ta hãy nhìn loss matrix chính là định nghĩa một hàm số g(t,**x**):
+> Nói cách khác, ta hãy nhìn loss matrix chính là định nghĩa một hàm số g(t,𝐱):
 >
 >
 >
-> i) nhận vào input là t, và **x**, nó sẽ hỏi xem:
+> i) nhận vào input là t, và 𝐱, nó sẽ hỏi xem:
 >
 >
 >
@@ -1201,7 +1201,7 @@
 >
 >
 >
-> **x** thuộc R mấy (R1, R2 hay RK), ví dụ bằng Rj
+> 𝐱 thuộc R mấy (R1, R2 hay RK), ví dụ bằng Rj
 >
 >
 >
@@ -1209,11 +1209,11 @@
 >
 >
 >
-> Nên hiểu g(t,**x**) = Lkj là như vậy.
+> Nên hiểu g(t,𝐱) = Lkj là như vậy.
 >
 >
 >
-> Hay g(t,**x**) = Lkj với k là index từ 1,..K sao cho t = Ck, j là index từ 1,..K sao cho **x** ∈ Rj
+> Hay g(t,𝐱) = Lkj với k là index từ 1,..K sao cho t = Ck, j là index từ 1,..K sao cho 𝐱 ∈ Rj
 >
 >
 >
@@ -1225,11 +1225,11 @@
 >
 >
 >
-> I_(**x** ∈ Rj), có giá trị = 1 khi **x** ∈ Rj, = 0 khi x không thuộc Rj
+> I_(𝐱 ∈ Rj), có giá trị = 1 khi 𝐱 ∈ Rj, = 0 khi x không thuộc Rj
 >
 >
 >
-> g(t, **x**) = Σk=1:K Σj=1:K Lkj I_(t = Ck) I_(**x** ∈ Rj)
+> g(t, 𝐱) = Σk=1:K Σj=1:K Lkj I_(t = Ck) I_(𝐱 ∈ Rj)
 >
 >
 >
@@ -1246,58 +1246,58 @@
 >
 >
 >
-> Vậy thì đây, ta có LOSS, là **biến ngẫu nhiên có được bằng cách áp hàm** g(t,**x**) lên hai biến ngẫu nhiên T, **X**, thì việc
+> Vậy thì đây, ta có LOSS, là **biến ngẫu nhiên có được bằng cách áp hàm** g(t,𝐱) lên hai biến ngẫu nhiên T, 𝐗, thì việc
 > tính E[LOSS] **cũng theo LOTUS**:
 >
 >
 >
-> E[LOSS] = marginalizing mọi possible value của T và **X** đối với g(t,**x**)f(t,**x**).
+> E[LOSS] = marginalizing mọi possible value của T và 𝐗 đối với g(t,𝐱)f(t,𝐱).
 >
 >
 >
-> Và để thực hiện cái việc marginalizing, vì ở đây T là biến rời rạc, nhận các giá trị possible value C1, C2,... CK. Còn **X** là
+> Và để thực hiện cái việc marginalizing, vì ở đây T là biến rời rạc, nhận các giá trị possible value C1, C2,... CK. Còn 𝐗 là
 > biến liên tục. nên công thức sẽ là:
 >
 >
 >
-> Σ_{mọi possible value Cm của T} ∫_range_**X** g(t, **x**) f(t, **x**) d**x**
+> Σ_{mọi possible value Cm của T} ∫_range_𝐗 g(t, 𝐱) f(t, 𝐱) d𝐱
 >
 >
 >
-> = Σ_{mọi possible value Cm của T} ∫_range_**X** [Σk=1:K Σj=1:K Lkj I_(t = Ck) I_(**x** ∈ Rj)] f(t, **x**) d**x**
+> = Σ_{mọi possible value Cm của T} ∫_range_𝐗 [Σk=1:K Σj=1:K Lkj I_(t = Ck) I_(𝐱 ∈ Rj)] f(t, 𝐱) d𝐱
 >
 >
 >
-> = Σ_{mọi possible value Cm của T} ∫_range_**X** [Σk=1:K Σj=1:K Lkj I_(t = Ck) I_(**x** ∈ Rj)] | t=Cm f(Cm, **x**) d**x**
+> = Σ_{mọi possible value Cm của T} ∫_range_𝐗 [Σk=1:K Σj=1:K Lkj I_(t = Ck) I_(𝐱 ∈ Rj)] | t=Cm f(Cm, 𝐱) d𝐱
 >
 >
 >
-> Với t = Cm, [Σk=1:K Σj=1:K Lkj I_(t = Ck) I_(**x** ∈ Rj)] | t=Cm = [Σj=1:K Lkj I_(**x** ∈ Rj)]
+> Với t = Cm, [Σk=1:K Σj=1:K Lkj I_(t = Ck) I_(𝐱 ∈ Rj)] | t=Cm = [Σj=1:K Lkj I_(𝐱 ∈ Rj)]
 >
 >
 >
-> = Σ_{mọi possible value Cm của T} ∫_range_**X** [Σj=1:K Lmj I_(**x** ∈ Rj)] f(Cm, **x**) d**x**
+> = Σ_{mọi possible value Cm của T} ∫_range_𝐗 [Σj=1:K Lmj I_(𝐱 ∈ Rj)] f(Cm, 𝐱) d𝐱
 >
 >
 >
-> = Σ_m=1:K ∫_range_**X** [Σj=1:K Lmj I_(**x** ∈ Rj)] f(Cm, **x**) d**x**
+> = Σ_m=1:K ∫_range_𝐗 [Σj=1:K Lmj I_(𝐱 ∈ Rj)] f(Cm, 𝐱) d𝐱
 >
 >
 >
-> Tách cái tích phân trên toàn range **X** thành tổng tích phân các vùng R1,... RK
+> Tách cái tích phân trên toàn range 𝐗 thành tổng tích phân các vùng R1,... RK
 >
 >
 >
-> = Σ_m=1:K Σn=1,..K ∫_Rn [ Σj=1:K Lmj I(**x** ∈ Rj) ] f(Cm,**x**) d**x**
+> = Σ_m=1:K Σn=1,..K ∫_Rn [ Σj=1:K Lmj I(𝐱 ∈ Rj) ] f(Cm,𝐱) d𝐱
 >
 >
 >
-> với việc đã xét n=1,...K ở miền ngoài tích phân thì cái tổng [ Σj=1:K Lmj I_(t = Ck) I(**x** ∈ Rj) ] bên trong vòng lặp này chỉ
-> còn [ Σj=1:K Lmj I_(t = Ck) I(**x** ∈ Rj) ] | j=n ] chỉ còn là [ Lmn ]
+> với việc đã xét n=1,...K ở miền ngoài tích phân thì cái tổng [ Σj=1:K Lmj I_(t = Ck) I(𝐱 ∈ Rj) ] bên trong vòng lặp này chỉ
+> còn [ Σj=1:K Lmj I_(t = Ck) I(𝐱 ∈ Rj) ] | j=n ] chỉ còn là [ Lmn ]
 >
 >
 >
-> = Σ_m=1:K Σn=1,..K ∫_Rn [  Lmn ] f(Cm,**x**) d**x**
+> = Σ_m=1:K Σn=1,..K ∫_Rn [  Lmn ] f(Cm,𝐱) d𝐱
 >
 >
 >
@@ -1305,7 +1305,7 @@
 >
 >
 >
-> Σ_k=1:K Σj=1,..K ∫_Rj Lkj f(Ck,**x**) d**x**
+> Σ_k=1:K Σj=1,..K ∫_Rj Lkj f(Ck,𝐱) d𝐱
 >
 >
 >
@@ -1338,12 +1338,12 @@
 >
 >
 >
-> Trong Casella, mình được nghe về khái niệm Bayes risk khi nói về việc đánh giá (evaluate) Bayes estimator của θ: δ^B(**X**). Như đã ôn lại ở các note
-> trước, risk function là function được định nghĩa bằng trung bình của loss function. R(δ(**X**), θ) = E_θ[L(δ(**X**), θ], nên với risk function, trước tiên ta cần
+> Trong Casella, mình được nghe về khái niệm Bayes risk khi nói về việc đánh giá (evaluate) Bayes estimator của θ: δ^B(𝐗). Như đã ôn lại ở các note
+> trước, risk function là function được định nghĩa bằng trung bình của loss function. R(δ(𝐗), θ) = E_θ[L(δ(𝐗), θ], nên với risk function, trước tiên ta cần
 > biết đang dùng loss gì (ví dụ squared error hay absolute error). Thế thì, ta cũng nhớ, khi nói về Bayes estimator, điểm quan trọng là hiểu rằng ta đang theo
 > trường phái Bayesian, nên coi θ như biến ngẫu nhiên và từ đó đi xây dựng posterior distribution của θ. Và với distribution này, khi cần một point estimator
-> cho θ, ta có thể nghĩ đến mean của nó: E[θ|**X**] Tuy nhiên, chưa chắc nó luôn là mean của posterior. Mà sự thật là: E[θ|**X**] chỉ là Bayes estimator khiến
-> minimize Bayes risk ∫_Θ E_θ[L(δ(**X**), θ)] π(θ) dθ  với L(δ(**X**), θ) đang dùng là squared error loss. Còn nếu loss là absolute error thì Bayes estimator khiến minimize
+> cho θ, ta có thể nghĩ đến mean của nó: E[θ|𝐗] Tuy nhiên, chưa chắc nó luôn là mean của posterior. Mà sự thật là: E[θ|𝐗] chỉ là Bayes estimator khiến
+> minimize Bayes risk ∫_Θ E_θ[L(δ(𝐗), θ)] π(θ) dθ  với L(δ(𝐗), θ) đang dùng là squared error loss. Còn nếu loss là absolute error thì Bayes estimator khiến minimize
 > Bayes risk sẽ là median của posterior.
 >
 >
@@ -1353,7 +1353,7 @@
 >
 >
 >
-> Rồi, vậy thì như đã nói, khi đặt vấn đề minimize E[L] với công thức 1.80, biến số tối ưu ở đây là: **Cách chia range** **X** ra **thành một phân hoạch**
+> Rồi, vậy thì như đã nói, khi đặt vấn đề minimize E[L] với công thức 1.80, biến số tối ưu ở đây là: **Cách chia range** 𝐗 ra **thành một phân hoạch**
 > (partition): R1,....RK.
 >
 >
@@ -1383,7 +1383,7 @@
 >
 >
 >
-> minimize_{phân hoạch R1,...RK} Σk=1:K Σj=1,..K ∫_Rj Lkj f(Ck,**x**) d**x**
+> minimize_{phân hoạch R1,...RK} Σk=1:K Σj=1,..K ∫_Rj Lkj f(Ck,𝐱) d𝐱
 >
 >
 >
@@ -1391,7 +1391,7 @@
 >
 >
 >
-> Σk=1:K Σj=1,..K ∫_Rj Lkj f(Ck,**x**) d**x**
+> Σk=1:K Σj=1,..K ∫_Rj Lkj f(Ck,𝐱) d𝐱
 >
 >
 >
@@ -1399,29 +1399,29 @@
 >
 >
 >
-> = Σj=1,..K ∫_Rj Σk=1:K Lkj f(Ck,**x**) d**x**
+> = Σj=1,..K ∫_Rj Σk=1:K Lkj f(Ck,𝐱) d𝐱
 >
 >
 >
-> = Σj=1,..K ∫_Rj  [Σk=1:K Lkj f(Ck,**x**)] d**x**
+> = Σj=1,..K ∫_Rj  [Σk=1:K Lkj f(Ck,𝐱)] d𝐱
 >
 >
 >
-> Đặt hàm gj(**x**) = Σk=1:K Lkj f(Ck,**x**), ta sẽ xem xét ý nghĩa của cái cụm này sau.
+> Đặt hàm gj(𝐱) = Σk=1:K Lkj f(Ck,𝐱), ta sẽ xem xét ý nghĩa của cái cụm này sau.
 >
 >
 >
-> = Σj=1,..K ∫_Rj  gj(**x**) d**x**
+> = Σj=1,..K ∫_Rj  gj(𝐱) d𝐱
 >
 >
 >
-> Dùng **indicator** **function** để chuyển tổng tích phân trên các vùng Rj thành tích phân trên toàn range **X**: Ij(**x**) = I_(**x** ∈ Rj), mang giá trị 1 hoặc 0
-> tùy vào **x** ∈ Rj hay không
+> Dùng **indicator** **function** để chuyển tổng tích phân trên các vùng Rj thành tích phân trên toàn range 𝐗: Ij(𝐱) = I_(𝐱 ∈ Rj), mang giá trị 1 hoặc 0
+> tùy vào 𝐱 ∈ Rj hay không
 >
 >
 >
-> ⇨..= Σj=1,..K ∫_range_**X**  Ij(**x**) gj(**x**) d**x** Đưa nốt tổng j vào tích phân:=  ∫_range_**X** Σj=1,..K Ij(x) gj(x) dx  Đến đây viết lại bài toán:Tìm kiếm bộ phân hoạch R1,..RK / cũng là cái decision rule để gán class cho các data point **x** ∈ range **X**  sao cho minimize ∫_range_**X** Σj=1,..K
-> Ij(**x**) gj(**x**) d**x**
+> ⇨..= Σj=1,..K ∫_range_𝐗  Ij(𝐱) gj(𝐱) d𝐱 Đưa nốt tổng j vào tích phân:=  ∫_range_𝐗 Σj=1,..K Ij(x) gj(x) dx  Đến đây viết lại bài toán:Tìm kiếm bộ phân hoạch R1,..RK / cũng là cái decision rule để gán class cho các data point 𝐱 ∈ range 𝐗  sao cho minimize ∫_range_𝐗 Σj=1,..K
+> Ij(𝐱) gj(𝐱) d𝐱
 >
 >
 >
@@ -1429,7 +1429,7 @@
 >
 >
 >
-> i) gj(**x**) = Σk=1:K Lkj f(**x**, Ck) là cái gì, ý nghĩa là gì?
+> i) gj(𝐱) = Σk=1:K Lkj f(𝐱, Ck) là cái gì, ý nghĩa là gì?
 >
 >
 >
@@ -1439,15 +1439,15 @@
 >
 >
 >
-> Vậy thì ở đây trong công thức trên Lkj là mức phạt quy định khi gán **x** có T = k vào class j
+> Vậy thì ở đây trong công thức trên Lkj là mức phạt quy định khi gán 𝐱 có T = k vào class j
 >
 >
 >
-> Và f(**x**, Ck) về cơ bản cũng có thể tương đương với xác suất mà T = Ck xảy ra.
+> Và f(𝐱, Ck) về cơ bản cũng có thể tương đương với xác suất mà T = Ck xảy ra.
 >
 >
 >
-> Nên Σk=1:K Lkj f(**x**, Ck) = Σk=1:K [mức phạt khi gán một data point thuộc class Ck vào class j] * [Xác xuất data point thuộc class Ck]
+> Nên Σk=1:K Lkj f(𝐱, Ck) = Σk=1:K [mức phạt khi gán một data point thuộc class Ck vào class j] * [Xác xuất data point thuộc class Ck]
 >
 >
 >
@@ -1455,7 +1455,7 @@
 >
 >
 >
-> Vậy gj(**x**): mức phạt trung bình khi gán data point x vào class Cj
+> Vậy gj(𝐱): mức phạt trung bình khi gán data point x vào class Cj
 >
 >
 >
@@ -1463,28 +1463,28 @@
 >
 >
 >
-> ii) Σj=1:K Ij(**x**)gj(**x**) là cái gì:
+> ii) Σj=1:K Ij(𝐱)gj(𝐱) là cái gì:
 >
 >
 >
-> triển khai ra, = I1(**x**)g1(**x**) + I2(**x**)g2(**x**) + ..IK(**x**)gK(**x**)
+> triển khai ra, = I1(𝐱)g1(𝐱) + I2(𝐱)g2(𝐱) + ..IK(𝐱)gK(𝐱)
 >
 >
 >
-> và nó sẽ có kết quả chỉ là một hạng tử trong đám này. Cái nào thì tùy vào **CÁCH PHÂN LOẠI ĐANG GÁN** **x** **CHO RỔ NÀO TRONG R1,..RK**, ví dụ
-> gán x cho R2, thì I2(x) = 1, mấy cái khác = 0 ⇨ tổng này = 1*g2(**x**) = g2(**x**)
+> và nó sẽ có kết quả chỉ là một hạng tử trong đám này. Cái nào thì tùy vào **CÁCH PHÂN LOẠI ĐANG GÁN** 𝐱 **CHO RỔ NÀO TRONG R1,..RK**, ví dụ
+> gán x cho R2, thì I2(x) = 1, mấy cái khác = 0 ⇨ tổng này = 1*g2(𝐱) = g2(𝐱)
 >
 >
 >
-> Như vậy, nếu gj(**x**) là **mức phạt trung bình khi gán x vào class Cj**, mang ý nghĩa là: Mức phạt được **QUY ĐỊNH TRONG LUẬT**
+> Như vậy, nếu gj(𝐱) là **mức phạt trung bình khi gán x vào class Cj**, mang ý nghĩa là: Mức phạt được **QUY ĐỊNH TRONG LUẬT**
 >
 >
 >
-> thì Σj=1:K Ij(**x**) gj(**x**) là **mức phạt THỰC TẾ, ghi nhận được khi mô hình THỰC HIỆN PHÂN LOẠI MỘT DATA POINT x.**
+> thì Σj=1:K Ij(𝐱) gj(𝐱) là **mức phạt THỰC TẾ, ghi nhận được khi mô hình THỰC HIỆN PHÂN LOẠI MỘT DATA POINT x.**
 >
 >
 >
-> iii) Vậy ∫_range_**X** Σj=1:K Ij(**x**)gj(**x**) là gì?
+> iii) Vậy ∫_range_𝐗 Σj=1:K Ij(𝐱)gj(𝐱) là gì?
 >
 >
 >
@@ -1503,31 +1503,31 @@
 >
 >
 >
-> Đó là lí do mà ta có thể chuyển bài toán tối ưu minimize ∫rangeX Σj=1:K Ij(**x**)gj(**x**) thành minimize Σj=1:K Ij(**x**)gj(**x**)
+> Đó là lí do mà ta có thể chuyển bài toán tối ưu minimize ∫rangeX Σj=1:K Ij(𝐱)gj(𝐱) thành minimize Σj=1:K Ij(𝐱)gj(𝐱)
 >
 >
 >
-> Và như vậy, kiểu như ta sẽ có vô số bài toán tối ưu, mỗi cái ứng với với mỗi **x**:
+> Và như vậy, kiểu như ta sẽ có vô số bài toán tối ưu, mỗi cái ứng với với mỗi 𝐱:
 >
 >
 >
-> minimize Σj=1:K Ij(**x**)gj(**x**)
+> minimize Σj=1:K Ij(𝐱)gj(𝐱)
 >
 >
 >
-> ⇔ minimize Σj=1:K Ij(**x**)gj(**x**)
+> ⇔ minimize Σj=1:K Ij(𝐱)gj(𝐱)
 >
 >
 >
-> = I1(**x**) g1(**x**) + ... + IK(**x**) gK(**x**)
+> = I1(𝐱) g1(𝐱) + ... + IK(𝐱) gK(𝐱)
 >
 >
 >
-> Và nên nhớ biến tối ưu là phân hoạch R1,...RK, hay cũng là bộ các hàm I1(**x**), I2(**x**),...Ik(**x**),
+> Và nên nhớ biến tối ưu là phân hoạch R1,...RK, hay cũng là bộ các hàm I1(𝐱), I2(𝐱),...Ik(𝐱),
 >
 >
 >
-> Vì là một phân hoạch nên ràng buộc của chúng là: Chỉ một trong số các indicator function được  phép bằng 1. Ví dụ I1(**x**) = 1, thì I2(**x**) = ...IK(**x**) = 0,
+> Vì là một phân hoạch nên ràng buộc của chúng là: Chỉ một trong số các indicator function được  phép bằng 1. Ví dụ I1(𝐱) = 1, thì I2(𝐱) = ...IK(𝐱) = 0,
 > thể hiện rằng decision rule assign data point x cho class 1.
 >
 >
@@ -1536,7 +1536,7 @@
 >
 >
 >
-> **TRONG SỐ CÁC HÀM INDICATOR** Ij(**x**) j = 1...K thì **CHO CÁI NÀO BẰNG 1 ĐỂ RA KẾT QUẢ NHỎ NHẤT**.
+> **TRONG SỐ CÁC HÀM INDICATOR** Ij(𝐱) j = 1...K thì **CHO CÁI NÀO BẰNG 1 ĐỂ RA KẾT QUẢ NHỎ NHẤT**.
 >
 >
 >
@@ -1579,11 +1579,11 @@
 >
 > **CHỌN RA CÁI NÀO NHỎ NHẤT TRONG ĐÁM**: {Σk=1:K Lk1 f(x, Ck), Σk=1:K
 > Lk2 f(x, Ck), ..Σk=1:K LkK f(x, Ck)} sau đó **LẤY INDEX** ĐỂ GÁN CLASS cho
-> data point **x**.
+> data point 𝐱.
 >
 >
 >
-> Gọi là j = argmin_{Σk=1:K Lkj f(**x**, Ck)}, mang ý nghĩa là **trong K cục** Σk=1:K
+> Gọi là j = argmin_{Σk=1:K Lkj f(𝐱, Ck)}, mang ý nghĩa là **trong K cục** Σk=1:K
 > Lkj f(x, Ck) j = 1,2..K thì **cục nhỏ nhất ứng với j bằng mấy**
 >
 >
@@ -1601,15 +1601,15 @@
 >
 >
 >
-> Và vì f(**x**, Ck) = f(Ck|**x**)f(**x**) nên f(x) là như nhau và không âm
+> Và vì f(𝐱, Ck) = f(Ck|𝐱)f(𝐱) nên f(x) là như nhau và không âm
 >
 >
 >
-> xem trong đám {Σk=1:K Lkj f(**x**, Ck)} j =1,...K cái nào nhỏ nhất
+> xem trong đám {Σk=1:K Lkj f(𝐱, Ck)} j =1,...K cái nào nhỏ nhất
 >
 >
 >
-> thì cũng là xem trong đám {Σk=1:K Lkj f(Ck|**x**)} j =1,...K cái nào nhỏ nhất
+> thì cũng là xem trong đám {Σk=1:K Lkj f(Ck|𝐱)} j =1,...K cái nào nhỏ nhất
 >
 >
 >
@@ -1617,7 +1617,7 @@
 >
 >
 >
-> Với mỗi **x**, gán cho nó class Cj với j = argmin Σk=1:K Lkj f(Ck|**x**)
+> Với mỗi 𝐱, gán cho nó class Cj với j = argmin Σk=1:K Lkj f(Ck|𝐱)
 
 **🔗 See also:** [K-Nearest Neighbor Classification](./252_nearest_neighbour_methods.md#node-mtmr0qc)
 
@@ -1633,8 +1633,8 @@
 
 > [!NOTE]
 > Đại ý là, như ta đã thấy vừa rồi, cái decision rule / hay classifier tối ưu xét theo
-> tiêu chí giảm thiểu Bayes risk là cái mà ta assign class Ck cho data point **x**
-> với k = argmin_j [trung bình loss khi assign class j cho **x,** = Σk Lkj f(Ck|**x**)]
+> tiêu chí giảm thiểu Bayes risk là cái mà ta assign class Ck cho data point 𝐱
+> với k = argmin_j [trung bình loss khi assign class j cho **x,** = Σk Lkj f(Ck|𝐱)]
 >
 >
 >
@@ -1643,8 +1643,8 @@
 >
 >
 >
-> Khi đó, gj(x) = Σk=1:K Lkj f(Ck|**x**) = Σk≠j f(Ck|**x**) = 1 - f(Cj|**x**) (do Σk
-> f(Ck|**x**) = 1)
+> Khi đó, gj(x) = Σk=1:K Lkj f(Ck|𝐱) = Σk≠j f(Ck|𝐱) = 1 - f(Cj|𝐱) (do Σk
+> f(Ck|𝐱) = 1)
 >
 >
 >
@@ -1652,15 +1652,15 @@
 >
 >
 >
-> Assign Ck cho **x**, với k = argmin_j [1 - f(Cj|**x**)]
+> Assign Ck cho 𝐱, với k = argmin_j [1 - f(Cj|𝐱)]
 >
 >
 >
-> cũng là k = argmax_j [f(Cj|**x**) - 1]
+> cũng là k = argmax_j [f(Cj|𝐱) - 1]
 >
 >
 >
-> = argmax_j f(Cj|**x**)
+> = argmax_j f(Cj|𝐱)
 >
 >
 >
@@ -1674,8 +1674,8 @@
 >
 >
 >
-> Có nghĩa là, cái Ck với k = argmax_j f(Cj|**x**) không có gì đảm bảo chính là
-> class thật sự của **x**.
+> Có nghĩa là, cái Ck với k = argmax_j f(Cj|𝐱) không có gì đảm bảo chính là
+> class thật sự của 𝐱.
 >
 >
 >
@@ -1683,14 +1683,14 @@
 >
 >
 >
-> Và nó xảy ra khi: ví dụ với **x1,** posterior f(C2|**x**) là cao nhất, nhưng nó
-> không vượt trội, để rồi, f(C1|**x**) cũng ko nhỏ. Và sự thật thì C1 mới là class
+> Và nó xảy ra khi: ví dụ với **x1,** posterior f(C2|𝐱) là cao nhất, nhưng nó
+> không vượt trội, để rồi, f(C1|𝐱) cũng ko nhỏ. Và sự thật thì C1 mới là class
 > đúng.
 >
 >
 >
-> Nên lúc này, khi f(C2|**x**) và f(C1|**x**) xem xem nhau, tuy f(C2|**x**) là lớn nhất. Và
-> cũng đồng nghĩa là f(C2|**x**) cách khá xa mức tuyệt đối (=1, gs Bishop gọi là
+> Nên lúc này, khi f(C2|𝐱) và f(C1|𝐱) xem xem nhau, tuy f(C2|𝐱) là lớn nhất. Và
+> cũng đồng nghĩa là f(C2|𝐱) cách khá xa mức tuyệt đối (=1, gs Bishop gọi là
 > unity).
 >
 >
@@ -1700,8 +1700,8 @@
 >
 >
 > Nói chung là, ta chỉ có thể đảm bảo misclassification error không xảy ra khi
-> f(C2|**x**) = 1, để rồi assign class C2 cho data point x thì sẽ đảm bảo chính xác.
-> Tuy nhiên chỉ cần f(C2|**x**) < 1, thì đồng nghĩa vẫn có xác suất class đúng là class
+> f(C2|𝐱) = 1, để rồi assign class C2 cho data point x thì sẽ đảm bảo chính xác.
+> Tuy nhiên chỉ cần f(C2|𝐱) < 1, thì đồng nghĩa vẫn có xác suất class đúng là class
 > khác chứ ko phải C2.
 >
 >
@@ -1743,15 +1743,15 @@
 
 > [!NOTE]
 > Đại khái gs nói là bữa giờ ta đang tiếp cận bài toán classification theo hai
-> bước: bước một là dựa trên data, đi xây dựng posterior distribution f(t|**x**)
-> (trong sách là p(Ck|**x**)), đây chính là bước gọi là inference state
+> bước: bước một là dựa trên data, đi xây dựng posterior distribution f(t|𝐱)
+> (trong sách là p(Ck|𝐱)), đây chính là bước gọi là inference state
 >
 >
 >
 > (liên hệ với Statistical Inference - Casella,  bài toán inference là bài toán đi
 > xây dựng một suy đoán về tham số của population distribution, có thể là một
-> point estimator W(**X**) để estimate giá trị của θ, hypothesis test  để đưa ra
-> suy đoán về θ nằm ở Θ0 hay Θ0c, hoặc một interval estimator C(**X**) để
+> point estimator W(𝐗) để estimate giá trị của θ, hypothesis test  để đưa ra
+> suy đoán về θ nằm ở Θ0 hay Θ0c, hoặc một interval estimator C(𝐗) để
 > estimate một khoảng / một set mà có thể chứa θ, thì nói chung, ta hiểu
 > inference là việc ta muốn suy đoán về sự thật của phân phối xác suất chi
 > phối dữ liệu quan sát thấy)
@@ -1797,12 +1797,12 @@
 >
 >
 >
-> Học / xây dựng f(**x**|t) với từng possible value của t: C1,...CK. (tức là
-> theo kí hiệu của gs Bishop: p(**x**|Ck).
+> Học / xây dựng f(𝐱|t) với từng possible value của t: C1,...CK. (tức là
+> theo kí hiệu của gs Bishop: p(𝐱|Ck).
 >
 >
 >
-> Học / xây dựng f(**t**).
+> Học / xây dựng f(𝐭).
 >
 >
 >
@@ -1810,19 +1810,19 @@
 >
 >
 >
-> f(t|**x**) = f(**x**|t) f(t) / f(**x**).
+> f(t|𝐱) = f(𝐱|t) f(t) / f(𝐱).
 >
 >
 >
-> Với f(**x**) có thể dùng LOTP để tách thành:
+> Với f(𝐱) có thể dùng LOTP để tách thành:
 >
 >
 >
-> Σ{mọi possible value của t} f(**x**, t)
+> Σ{mọi possible value của t} f(𝐱, t)
 >
 >
 >
-> = Σ{mọi possible value của t} f(**x**|t)f(t)
+> = Σ{mọi possible value của t} f(𝐱|t)f(t)
 >
 >
 >
@@ -1839,7 +1839,7 @@
 >
 >
 > Gs cho biết những cách tiếp cận mà trong đó ta thực hiện bước suy luận về
-> **distribution của input và** output, tức là học ra f(t, **x**) thì gọi là **generative** model.
+> **distribution của input và** output, tức là học ra f(t, 𝐱) thì gọi là **generative** model.
 > Vì, nếu ta có distribution của input, ta có thể thực hiện sampling từ đó,
 > để có thể có một dạng dữ liệu synthetic (ý là ví dụ như ảnh do ta tạo ra, 
 > không phải ảnh chụp ở ngoài đời thật, ví dụ mấy mô hình tảo ảnh hiện nay
@@ -1854,13 +1854,13 @@
 <p align="center"><kbd><img src="assets/2ymhk9wtcrz.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cách tiếp cận thứ hai, là inference ra trực tiếp posterior f(t|**x**) và sau đó thì
+> Cách tiếp cận thứ hai, là inference ra trực tiếp posterior f(t|𝐱) và sau đó thì
 > dùng nó để make decision. 
 >
 >
 >
-> Nó khác cái trước ở chỗ, ta không cần học ra f(**x**|t) f(t). Mà chỉ học thẳng
-> ra f(t|**x**) thôi.
+> Nó khác cái trước ở chỗ, ta không cần học ra f(𝐱|t) f(t). Mà chỉ học thẳng
+> ra f(t|𝐱) thôi.
 >
 >
 >
@@ -1895,20 +1895,20 @@
 >
 >
 > Cách đầu tiên, đại khái là vì ta dù implicitly hay explicitly (tường minh hoặc
-> ngầm định) xây dựng joint distribution f(t,**x**) (vì infer f(**x**|t), f(t) thì cũng là
-> xây f(**x**,t)) thì đều cần nhiều data.
+> ngầm định) xây dựng joint distribution f(t,𝐱) (vì infer f(𝐱|t), f(t) thì cũng là
+> xây f(𝐱,t)) thì đều cần nhiều data.
 >
 >
 >
-> Ưu điểm là, ta có thể có f(**x**) (bằng cách marginalizing f(**x**, t) over range T
+> Ưu điểm là, ta có thể có f(𝐱) (bằng cách marginalizing f(𝐱, t) over range T
 > và cái này, là prior distribution của x. Do đó có thể dùng nó để tính  xác suất
 > của một input. Và áp dụng vào bài toán phát hiện bất thường.
 >
 >
 >
 > Nói rõ hơn tí, thì đại ý là: ví dụ trong bài toán phân loại ảnh, thì input x, là
-> ảnh, t là phân loại (class), thì ý nghĩa của f(**x**) là hàm xác suất của ảnh,
-> công dụng là, bỏ vào một **x** - vector đại diện của một ảnh, nó sẽ cho biết xác
+> ảnh, t là phân loại (class), thì ý nghĩa của f(𝐱) là hàm xác suất của ảnh,
+> công dụng là, bỏ vào một 𝐱 - vector đại diện của một ảnh, nó sẽ cho biết xác
 > suất là cao hay thấp. Vậy ta có thể dùng nó như một hàm check để phát
 > hiện khi nào thì ta có một x có xác suất thấp → thì đó chính là một tấm ảnh
 > có sự bất thường gọi là outlier
@@ -1925,17 +1925,17 @@
 
 > [!NOTE]
 > Tuy nhiên, nếu như ta chỉ muốn làm bài toán classification thì việc học ra joint 
-> distribution f(**x**, t) là quá lãng phí. Vì như đã biết, cũng như trong cách b, 
-> để phân loại, ta chỉ cần dựa trên posterior f(t|**x**). 
+> distribution f(𝐱, t) là quá lãng phí. Vì như đã biết, cũng như trong cách b, 
+> để phân loại, ta chỉ cần dựa trên posterior f(t|𝐱). 
 >
 >
 >
-> Nên sẽ ít tốn kém hơn nếu ta học trực tiếp hàm posterior thay vì đi tìm f(**x**, t)
+> Nên sẽ ít tốn kém hơn nếu ta học trực tiếp hàm posterior thay vì đi tìm f(𝐱, t)
 > rồi mới dùng để có posterior.
 >
 >
 >
-> Ông nó nói cái ý, f(**x**|t) với t = C1,...CK có những cấu trúc ít ảnh hưởng đến 
+> Ông nó nói cái ý, f(𝐱|t) với t = C1,...CK có những cấu trúc ít ảnh hưởng đến 
 > posterior, thì ý là do đó việc làm theo cách a) để tiếp cận bài toán classification
 > là không mang lại lợi ích gì cả.
 >
@@ -2021,7 +2021,7 @@
 >
 >
 >
-> Nhưng vấn đề là, posterior, f(t|**x**) theo bayes rule = f(**x**|t)f(t)/f(**x**), nên dễ thấy
+> Nhưng vấn đề là, posterior, f(t|𝐱) theo bayes rule = f(𝐱|t)f(t)/f(𝐱), nên dễ thấy
 > nó sẽ tỉ lệ thuận với f(t) - tức priori.
 >
 >
@@ -2042,7 +2042,7 @@
 >
 >
 > sau khi dùng một dataset cân bằng (50% là hình có cancer, 50% là hình
-> không cancer) để train ra posterior f(t|**x**)
+> không cancer) để train ra posterior f(t|𝐱)
 >
 >
 >
@@ -2050,7 +2050,7 @@
 >
 >
 >
-> f^(C1|**x**) = f(C1|**x**) * 0.9/c
+> f^(C1|𝐱) = f(C1|𝐱) * 0.9/c
 >
 >
 >
@@ -2058,11 +2058,11 @@
 >
 >
 >
-> f^(C2|**x**) =  f(C2|**x**) * 0.1/c
+> f^(C2|𝐱) =  f(C2|𝐱) * 0.1/c
 >
 >
 >
-> với c là normalizing constant giúp f^(C1|**x**) + f^(C2|**x**) = 1
+> với c là normalizing constant giúp f^(C1|𝐱) + f^(C2|𝐱) = 1
 >
 >
 >
@@ -2094,13 +2094,13 @@
 >
 >
 > Ví dụ: Dự đoán bệnh cancer hay không dựa trên ảnh X-quang và kết  quả xét
-> nghiệm máu. Khi đó ta muốn xây dựng posterior: f(t|**x**I, **x**B)  distribution
-> của T dựa trên vector X-ray image **x**I, và kết quả xét nghiệm máu **x**B
+> nghiệm máu. Khi đó ta muốn xây dựng posterior: f(t|𝐱I, 𝐱B)  distribution
+> của T dựa trên vector X-ray image 𝐱I, và kết quả xét nghiệm máu 𝐱B
 >
 >
 >
-> thì đại khái là, bằng cách đặt assumption rằng f(**x**I,**x**B|Ck) =
-> f(**x**I|Ck)f(**x**B|Ck) ta sẽ dựa trên Bayes rule như thường lệ để xây dựng
+> thì đại khái là, bằng cách đặt assumption rằng f(𝐱I,𝐱B|Ck) =
+> f(𝐱I|Ck)f(𝐱B|Ck) ta sẽ dựa trên Bayes rule như thường lệ để xây dựng
 > posterior:
 >
 >
@@ -2139,7 +2139,7 @@
 >
 >
 > Nói nó Naive
-> (ngây thơ) là vì, ta đang giả định là dựa trên T = Ck thì **X**_image và **X**_blood
+> (ngây thơ) là vì, ta đang giả định là dựa trên T = Ck thì 𝐗_image và 𝐗_blood
 > độc lập. Nhưng sự thật đâu phải vậy, ví dụ, nếu đã biết là Ck rồi, thì việc biết
 > ảnh **X_image** có thể đoán được chỉ số máu **X_blood**
 
@@ -2153,13 +2153,13 @@
 
 > [!NOTE]
 > Chuyển qua bài toán decision theory trong linear regression. Trong đó,  ta
-> đưa ra dự đóan t = y(**x**) cho mỗi input **x**, mỗi một dự đoán như vậy, tạo
-> ra loss L(t, y(**x**)). Và average loss E[L] theo công thức 1.86. Vì sao?
+> đưa ra dự đóan t = y(𝐱) cho mỗi input 𝐱, mỗi một dự đoán như vậy, tạo
+> ra loss L(t, y(𝐱)). Và average loss E[L] theo công thức 1.86. Vì sao?
 >
 >
 >
-> Đơn giản, L(**t**,y(**x**)) là hàm, nên Loss = L(**T**, y(**X**)) là random
-> variable   tạo ra bởi việc áp một hàm số lên hai random variable T, **X**. Và
+> Đơn giản, L(𝐭,y(𝐱)) là hàm, nên Loss = L(𝐓, y(𝐗)) là random
+> variable   tạo ra bởi việc áp một hàm số lên hai random variable T, 𝐗. Và
 > như đã học ở Stat110, Casella, 2D LOTUS cho phép ta tính EZ của Y = g(X,
 > Y) dựa theo joint pdf/pmf f(x,y) của X, Y:
 >
@@ -2170,11 +2170,11 @@
 >
 >
 > Vậy thì đây cũng vậy, LOTUS cho phép tính EL dựa theo joint distribution
-> của T, **X**
+> của T, 𝐗
 >
 >
 >
-> E[L] = ∫∫L(t, y(**x**)) f(t,**x**) d**x** dt
+> E[L] = ∫∫L(t, y(𝐱)) f(t,𝐱) d𝐱 dt
 
 <br>
 
@@ -2187,11 +2187,11 @@
 <p align="center"><kbd><img src="assets/5whe6nton69.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Một lựa chọn phổ biến cho loss trong regression problem là squared loss, L(t, y(**x**)) = (y(**x**) - t)^2
+> Một lựa chọn phổ biến cho loss trong regression problem là squared loss, L(t, y(𝐱)) = (y(𝐱) - t)²
 >
 >
 >
-> khi đó E\[L\] = ∫∫\[y(**x**) - t\]^2 f(**x**, t) d**x** dt
+> khi đó E\[L\] = ∫∫\[y(𝐱) - t\]² f(𝐱, t) d𝐱 dt
 >
 >
 >
@@ -2207,11 +2207,11 @@
 >
 >
 >
-> ⇔ ∂/∂y ∫∫\[y(x) - t\]^2 f(**x**, t) d**x** dt = 0
+> ⇔ ∂/∂y ∫∫\[y(x) - t\]² f(𝐱, t) d𝐱 dt = 0
 >
 >
 >
-> Đạo hàm của tích phân, mình còn nhớ trong Casella có nói đến theorem nói rằng trong một số điều kiện, có thể đổi chỗ hai cái này, (trường hợp này là khi cận tích phân ko phụ thuộc y(**x**))
+> Đạo hàm của tích phân, mình còn nhớ trong Casella có nói đến theorem nói rằng trong một số điều kiện, có thể đổi chỗ hai cái này, (trường hợp này là khi cận tích phân ko phụ thuộc y(𝐱))
 >
 >
 >
@@ -2219,39 +2219,39 @@
 >
 >
 >
-> ⇔ ∫∫ ∂/∂y(**x**) {\[y(**x**) - t\]^2 f(**x**, t)} d**x** dt = 0
+> ⇔ ∫∫ ∂/∂y(𝐱) {\[y(𝐱) - t\]² f(𝐱, t)} d𝐱 dt = 0
 >
 >
 >
-> ⇔ ∫∫ \[∂/∂y(**x**) \[y(**x**) - t\]^2\] f(**x**, t) d**x** dt = 0
+> ⇔ ∫∫ \[∂/∂y(𝐱) \[y(𝐱) - t\]²\] f(𝐱, t) d𝐱 dt = 0
 >
 >
 >
-> Xét ∂/∂y(x) \[y(x) - t\]^2
+> Xét ∂/∂y(x) \[y(x) - t\]²
 >
 >
 >
-> = ∂/∂\[y(**x**)-t\] \[y(**x**) - t\]^2 . d/dy(**x**) \[y(**x**) - t\]
+> = ∂/∂\[y(𝐱)-t\] \[y(𝐱) - t\]² . d/dy(𝐱) \[y(𝐱) - t\]
 >
 >
 >
-> = 2\[y(**x**) - t\]
+> = 2\[y(𝐱) - t\]
 >
 >
 >
-> .. ⇔ ∫∫ 2\[y(**x**) - t\] f(**x**, t) d**x** dt = 0
+> .. ⇔ ∫∫ 2\[y(𝐱) - t\] f(𝐱, t) d𝐱 dt = 0
 >
 >
 >
-> ⇔ 2 ∫∫ \[y(**x**) - t\] f(**x**, t) dx dt = 0
+> ⇔ 2 ∫∫ \[y(𝐱) - t\] f(𝐱, t) dx dt = 0
 >
 >
 >
-> ⇔ ∫∫ y(**x**) f(**x**, t) d**x** dt - ∫∫ t f(**x**, t) d**x** dt = 0
+> ⇔ ∫∫ y(𝐱) f(𝐱, t) d𝐱 dt - ∫∫ t f(𝐱, t) d𝐱 dt = 0
 >
 >
 >
-> ⇔ ∫∫ y(**x**) f(**x**, t) d**x** dt = ∫∫ t f(**x**, t) d**x** dt
+> ⇔ ∫∫ y(𝐱) f(𝐱, t) d𝐱 dt = ∫∫ t f(𝐱, t) d𝐱 dt
 >
 >
 >
@@ -2259,19 +2259,19 @@
 >
 >
 >
-> ∫∫ y(**x**) f(**x**, t) d**x** dt = ∫\_range X ∫\_range_T y(**x**) f(**x**, t) dt d**x**
+> ∫∫ y(𝐱) f(𝐱, t) d𝐱 dt = ∫\_range X ∫\_range_T y(𝐱) f(𝐱, t) dt d𝐱
 >
 >
 >
-> = ∫*range***X** y(x) {∫*range***T** f(**x**, t) dt} d**x**
+> = ∫*range*𝐗 y(x) {∫*range*𝐓 f(𝐱, t) dt} d𝐱
 >
 >
 >
-> ∫\_range_T f(x, t) dt chính là marginalizing joint pdf của **X**, T với mọi mọi T, sẽ được marginal pdf của **X**
+> ∫\_range_T f(x, t) dt chính là marginalizing joint pdf của 𝐗, T với mọi mọi T, sẽ được marginal pdf của 𝐗
 >
 >
 >
-> .. = ∫*range***X** y(**x**) f(**x**) d**x**
+> .. = ∫*range*𝐗 y(𝐱) f(𝐱) d𝐱
 >
 >
 >
@@ -2279,43 +2279,43 @@
 >
 >
 >
-> ∫∫ t f(**x**, t) d**x** dt = ∫\_range **X** \[∫\_range **T** t f(**x**, t) dt \] d**x** Vậy phương trình trở thành ∫*range***X** y(**x**) f(**x**) d**x** = ∫\_range **X** \[∫\_range T t f(**x**, t) dt \] d**x**
+> ∫∫ t f(𝐱, t) d𝐱 dt = ∫\_range 𝐗 \[∫\_range 𝐓 t f(𝐱, t) dt \] d𝐱 Vậy phương trình trở thành ∫*range*𝐗 y(𝐱) f(𝐱) d𝐱 = ∫\_range 𝐗 \[∫\_range T t f(𝐱, t) dt \] d𝐱
 >
 >
 >
-> Vì tính chất complete flexible của y(**x**), cho phép:
+> Vì tính chất complete flexible của y(𝐱), cho phép:
 >
 >
 >
-> ⇔ y(**x**) f(**x**)= ∫\_range T t f(**x**, t) dt
+> ⇔ y(𝐱) f(𝐱)= ∫\_range T t f(𝐱, t) dt
 >
 >
 >
-> ⇔ y(**x**) = \[∫\_range T t f(**x**, t) dt\] / f(**x**)
+> ⇔ y(𝐱) = \[∫\_range T t f(𝐱, t) dt\] / f(𝐱)
 >
 >
 >
-> = \[∫\_range T t f(t|**x**) f(**x**) dt\] / f(**x**)
+> = \[∫\_range T t f(t|𝐱) f(𝐱) dt\] / f(𝐱)
 >
 >
 >
-> = \[∫\_range T t f(t|**x**) dt\] f(**x**) / f(**x**)
+> = \[∫\_range T t f(t|𝐱) dt\] f(𝐱) / f(𝐱)
 >
 >
 >
-> = ∫\_range T t f(t|**x**) dt
+> = ∫\_range T t f(t|𝐱) dt
 >
 >
 >
-> Đây chính là E(T|**x**), trung bình của T \~ posterior distribution f(t|**x**)
+> Đây chính là E(T|𝐱), trung bình của T \~ posterior distribution f(t|𝐱)
 >
 >
 >
-> Như vậy, khi dùng squared loss thì cái hàm y(**x**) giúp minimize trung bình loss E\[L\] chính là cái hàm y(**x**) dùng mean của posterior f(t|**x**) để dự đoán.
+> Như vậy, khi dùng squared loss thì cái hàm y(𝐱) giúp minimize trung bình loss E\[L\] chính là cái hàm y(𝐱) dùng mean của posterior f(t|𝐱) để dự đoán.
 >
 >
 >
-> Thật ra cái này trong Casella đã học rồi cụ thể là khi ta học về Bayes estimator cho θ, thì ta đi tìm posterior π(θ|**x**).
+> Thật ra cái này trong Casella đã học rồi cụ thể là khi ta học về Bayes estimator cho θ, thì ta đi tìm posterior π(θ|𝐱).
 >
 >
 >
@@ -2323,7 +2323,7 @@
 >
 >
 >
-> Nhưng mean, E\[θ|**x**\] sẽ là cái Bayes estimator giúp **minimize Bayes risk khi loss là square error loss**. Còn median của posterior sẽ là Bayes estimator giúp **giảm Bayes risk là absolute error loss**.
+> Nhưng mean, E\[θ|𝐱\] sẽ là cái Bayes estimator giúp **minimize Bayes risk khi loss là square error loss**. Còn median của posterior sẽ là Bayes estimator giúp **giảm Bayes risk là absolute error loss**.
 >
 >
 >
@@ -2331,23 +2331,23 @@
 >
 >
 >
-> Loss function, là hàm của estimator L\_θ(δ(**X**), θ), có thể là square error loss: \[δ(**X**) - θ\]^2 hoặc absolute error loss: |δ(**X**) - θ|.
+> Loss function, là hàm của estimator L\_θ(δ(𝐗), θ), có thể là square error loss: \[δ(𝐗) - θ\]² hoặc absolute error loss: |δ(𝐗) - θ|.
 >
 >
 >
-> Risk function: E\_θ\[L(δ(**X**), θ)\], mang ý nghĩa: Average loss over mọi **X**, để còn lại là hàm theo θ, để so với nhau giúp evaluate δ(**X**).
+> Risk function: E\_θ\[L(δ(𝐗), θ)\], mang ý nghĩa: Average loss over mọi 𝐗, để còn lại là hàm theo θ, để so với nhau giúp evaluate δ(𝐗).
 >
 >
 >
-> Bayes risk = ∫\_Θ R(δ(**X**), θ) π(θ) dθ = ∫*Θ* ∫**X** L(δ(**x**), θ) f(θ, **x**) d**x** dθ
+> Bayes risk = ∫\_Θ R(δ(𝐗), θ) π(θ) dθ = ∫*Θ* ∫𝐗 L(δ(𝐱), θ) f(θ, 𝐱) d𝐱 dθ
 >
 >
 >
-> Vậy ở đây cũng y chang, cái E\[L\] mà gs Bishop nói ở đây chính là tương đương với Bayes risk (lấy kì vọng của Loss dưới joint distribution của T và **X** f(**x**, t))
+> Vậy ở đây cũng y chang, cái E\[L\] mà gs Bishop nói ở đây chính là tương đương với Bayes risk (lấy kì vọng của Loss dưới joint distribution của T và 𝐗 f(𝐱, t))
 >
 >
 >
-> Do đó kết quả cũng là: khi ta muốn từ posterior f(t|**x**) để đưa ra một point estimator cho T thì mean E\[T|**x**\] sẽ là cái giúp giảm thiểu E\[L\], y như E\[θ|**x**\] là point estimator cho θ giúp giảm thiểu Bayes risk khi loss là squared error vậy
+> Do đó kết quả cũng là: khi ta muốn từ posterior f(t|𝐱) để đưa ra một point estimator cho T thì mean E\[T|𝐱\] sẽ là cái giúp giảm thiểu E\[L\], y như E\[θ|𝐱\] là point estimator cho θ giúp giảm thiểu Bayes risk khi loss là squared error vậy
 >
 >
 >
@@ -2355,7 +2355,7 @@
 >
 >
 >
-> Và từ đây cũng giúp mình nhớ lại để hiểu vì sao trong bài revising curve fitting, ta thấy gs Bishop assume Ti \~ Normal(y(xi,**w**), 1/β), hành động này chính là dùng mean của posterior f(ti|xi), tức E\[Ti|xi\] để làm point estimate cho t, và theo decision theory, nó là tối ưu. Nếu ông dùng median của posterior để point estimate cho T thì nó sẽ cũng là tối ưu nhưng theo tiêu chí giảm thiểu average absolute error loss.
+> Và từ đây cũng giúp mình nhớ lại để hiểu vì sao trong bài revising curve fitting, ta thấy gs Bishop assume Ti \~ Normal(y(xi,𝐰), 1/β), hành động này chính là dùng mean của posterior f(ti|xi), tức E\[Ti|xi\] để làm point estimate cho t, và theo decision theory, nó là tối ưu. Nếu ông dùng median của posterior để point estimate cho T thì nó sẽ cũng là tối ưu nhưng theo tiêu chí giảm thiểu average absolute error loss.
 >
 > Sẵn tiện đang nói bài toán linear regression, sẽ có ích nếu ta ôn lại chút.
 >
@@ -2369,59 +2369,59 @@
 >
 >
 >
-> Và assume distribution của nó là Ti \~ Normal(y(xi, **w**), 1/β)
+> Và assume distribution của nó là Ti \~ Normal(y(xi, 𝐰), 1/β)
 >
 >
 >
-> và cái assumption này cũng chính là assume Ei = Ti - y(xi, **w**), tức sai số của dự đoán và giá trị thật sẽ là một Normal(0, 1/β).
+> và cái assumption này cũng chính là assume Ei = Ti - y(xi, 𝐰), tức sai số của dự đoán và giá trị thật sẽ là một Normal(0, 1/β).
 >
 >
 >
-> Chú ý, cho tới đây, **w**, tham số của polynomial function, vẫn đang được coi như fixed & unknown, nên y(xi, **w**) cũng vậy, fixed & unknown, báo hiệu rằng ta vẫn đang ở trong trường phái cổ điển.
+> Chú ý, cho tới đây, 𝐰, tham số của polynomial function, vẫn đang được coi như fixed & unknown, nên y(xi, 𝐰) cũng vậy, fixed & unknown, báo hiệu rằng ta vẫn đang ở trong trường phái cổ điển.
 >
 >
 >
-> Rồi, từ đó, ta mới xây dựng joint distribution của T1,...TM f**T**(**t**). Nhờ tính chất độc lập của các cặp (xi, Ti) ta mới phân tách joint probability bằng tích marginal probability
+> Rồi, từ đó, ta mới xây dựng joint distribution của T1,...TM f𝐓(𝐭). Nhờ tính chất độc lập của các cặp (xi, Ti) ta mới phân tách joint probability bằng tích marginal probability
 >
 >
 >
-> fT(**t**) = Πi=1:N f(ti)
+> fT(𝐭) = Πi=1:N f(ti)
 >
 >
 >
-> Thể hiện sự phụ thuộc với xi, **w**, β ta sẽ có:
+> Thể hiện sự phụ thuộc với xi, 𝐰, β ta sẽ có:
 >
 >
 >
-> f**T**(**t**|**x**, **w**, β) = Πi=1:N f(ti|**w**, xi, β)Tới đây sao nữa? Nhớ lại các cách tiếp cận trong Casella trong bài toán point estimator cụ thể là maximum likelihood estimator.
+> f𝐓(𝐭|𝐱, 𝐰, β) = Πi=1:N f(ti|𝐰, xi, β)Tới đây sao nữa? Nhớ lại các cách tiếp cận trong Casella trong bài toán point estimator cụ thể là maximum likelihood estimator.
 >
 >
 >
-> Theo định nghĩa θ^\_ml(**X**) = argmax\_θ L(θ|**X**), là θ giúp giải thích hợp lí nhất cho gía trị quan sát được của **X**. Với hàm likelihood được định nghĩa là L(θ|**x**) = f(**x**|θ) Do đó θ^\_ml(X) = argmax\_θ f(**x**|θ).
+> Theo định nghĩa θ^\_ml(𝐗) = argmax\_θ L(θ|𝐗), là θ giúp giải thích hợp lí nhất cho gía trị quan sát được của 𝐗. Với hàm likelihood được định nghĩa là L(θ|𝐱) = f(𝐱|θ) Do đó θ^\_ml(X) = argmax\_θ f(𝐱|θ).
 >
 >
 >
-> Vậy thì ở đây, để đi tìm **w** (cũng chính là tìm y(xi,**w**), ta cũng có thể đi theo hướng này, đó là, tìm **w** giúp giải thích hợp lí nhất cho giá trị quan sát được t1,t2..tNứng với x1,..xN (chú ý, chỉ có T là random variable, chứ **X** thì không, nên vector **x** không phải là giá trị quan sát được của vector random variable **X** nào cả.
+> Vậy thì ở đây, để đi tìm 𝐰 (cũng chính là tìm y(xi,𝐰), ta cũng có thể đi theo hướng này, đó là, tìm 𝐰 giúp giải thích hợp lí nhất cho giá trị quan sát được t1,t2..tNứng với x1,..xN (chú ý, chỉ có T là random variable, chứ 𝐗 thì không, nên vector 𝐱 không phải là giá trị quan sát được của vector random variable 𝐗 nào cả.
 >
 >
 >
-> **w***ML = argmax***w** L(**w**|**t**)
+> 𝐰*ML = argmax*𝐰 L(𝐰|𝐭)
 >
 >
 >
-> và likelihood L(**w**|**t**) cũng define bởi f(**t**|**x,w**,β) = Πi=1:N f(ti|xi,**w**,β) với f là pdf của Normal(y(xi, **w**), 1/β)
+> và likelihood L(𝐰|𝐭) cũng define bởi f(𝐭|**x,w**,β) = Πi=1:N f(ti|xi,𝐰,β) với f là pdf của Normal(y(xi, 𝐰), 1/β)
 >
 >
 >
-> nên bài toán là: maximize Πi=1:N f(ti|xi,**w**,β)
+> nên bài toán là: maximize Πi=1:N f(ti|xi,𝐰,β)
 >
 >
 >
-> và cũng dùng các trick để đưa về bài toán tối ưu tương đương, như thay maximize objective likelihood bằng minimize - log likelihood,..ta sẽ giải ra **w**\_ML. và tương tự (1/β)\_ML
+> và cũng dùng các trick để đưa về bài toán tối ưu tương đương, như thay maximize objective likelihood bằng minimize - log likelihood,..ta sẽ giải ra 𝐰\_ML. và tương tự (1/β)\_ML
 >
 >
 >
-> Và khi làm vậy ta sẽ thấy, bài toán tối ưu tương đương giúp tìm w_ML chính là đi minimize error function là sum squared error Σi (y(**w**,xi) - ti)^2 mà trong phần đầu tiên, khi làm quen với bài toán polynomial curve fitting ta đã làm (lúc đó chưa theo góc nhìn xác suất gì cả)
+> Và khi làm vậy ta sẽ thấy, bài toán tối ưu tương đương giúp tìm w_ML chính là đi minimize error function là sum squared error Σi (y(𝐰,xi) - ti)² mà trong phần đầu tiên, khi làm quen với bài toán polynomial curve fitting ta đã làm (lúc đó chưa theo góc nhìn xác suất gì cả)
 >
 >
 >
@@ -2433,7 +2433,7 @@
 >
 >
 >
-> Khi gs Bishop giả định Ti \~ Normal(y(xi,**w**), 1/β) thì chính là dùng mean của posterior f(ti|xi): E\[Ti|xi\] để làm point estimate cho T thì **theo decision theory**:
+> Khi gs Bishop giả định Ti \~ Normal(y(xi,𝐰), 1/β) thì chính là dùng mean của posterior f(ti|xi): E\[Ti|xi\] để làm point estimate cho T thì **theo decision theory**:
 >
 >
 >
@@ -2445,11 +2445,11 @@
 >
 >
 >
-> Nhưng việc nhắc đến square loss của decision theory vừa rồi không liên quan gì đến việc khi ta maximize likelihood dưới giả định Ti \~ normal(y(xi,**w**),1/β) ta thấy nó hóa ra cũng là minimize sum squared error, cái này chỉ là trùng hợp.
+> Nhưng việc nhắc đến square loss của decision theory vừa rồi không liên quan gì đến việc khi ta maximize likelihood dưới giả định Ti \~ normal(y(xi,𝐰),1/β) ta thấy nó hóa ra cũng là minimize sum squared error, cái này chỉ là trùng hợp.
 >
 >
 >
-> Vì giả sử ta assume Ti là expo(y(xi,**w**)), hay distribution nào khác: tức cũng là mean của posterior f(ti|xi), để rồi đi maximize likelihood, khi đó, ta sẽ thấy nó chưa chắc đã là minimize sum squared error. Tuy nhiên, miễn là ta lấy mean của posterior f(ti|xi) để làm point estimator cho T thì theo decision theory, đó vẫn là tốt nhất theo tiêu chí giảm average squared error loss.
+> Vì giả sử ta assume Ti là expo(y(xi,𝐰)), hay distribution nào khác: tức cũng là mean của posterior f(ti|xi), để rồi đi maximize likelihood, khi đó, ta sẽ thấy nó chưa chắc đã là minimize sum squared error. Tuy nhiên, miễn là ta lấy mean của posterior f(ti|xi) để làm point estimator cho T thì theo decision theory, đó vẫn là tốt nhất theo tiêu chí giảm average squared error loss.
 >
 >
 >
@@ -2457,7 +2457,7 @@
 >
 >
 >
-> Sẵn trớn recall lại luôn: Sau đó, qua phần Bayesian inference, gs Bishop bắt đầu mới nói về việc trong Bayesian, ta sẽ coi tham số **w, cũng là random variable nốt**, từ đó viết hoa **W** để chỉ random variable vector. Mà cái này như mình đã biết ở Casella, khi ta bước sang trường phái Bayesian, thì ta cũng coi θ là random quantity. Để rồi nó sẽ có prior distribution π(θ), thường được chọn do kinh nghiệm của experimenter, sau đó dùng Bayes theorem, ta tìm distribution của θ khi đã biết **X** = **x**: π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**). Áp dụng vài bài toán curve fitting. Ta sẽ chọn Normal(0, (1/α)**I**) làm priori.
+> Sẵn trớn recall lại luôn: Sau đó, qua phần Bayesian inference, gs Bishop bắt đầu mới nói về việc trong Bayesian, ta sẽ coi tham số **w, cũng là random variable nốt**, từ đó viết hoa 𝐖 để chỉ random variable vector. Mà cái này như mình đã biết ở Casella, khi ta bước sang trường phái Bayesian, thì ta cũng coi θ là random quantity. Để rồi nó sẽ có prior distribution π(θ), thường được chọn do kinh nghiệm của experimenter, sau đó dùng Bayes theorem, ta tìm distribution của θ khi đã biết 𝐗 = 𝐱: π(θ|𝐱) = f(𝐱|θ) π(θ) / f(𝐱). Áp dụng vài bài toán curve fitting. Ta sẽ chọn Normal(0, (1/α)𝐈) làm priori.
 >
 >
 >
@@ -2465,43 +2465,43 @@
 >
 >
 >
-> π(**w**|**t**,**x**,β,α) = f(**t**|**x**,**w**,β) π(**w**|α) / f(**t**|**x**)
+> π(𝐰|𝐭,𝐱,β,α) = f(𝐭|𝐱,𝐰,β) π(𝐰|α) / f(𝐭|𝐱)
 >
 >
 >
-> Với f(**t**|**x**,**w**,β) là joint distribution của T1,..Ti, = Πi=1:N f(ti|xi,**w**,β) = Πi=1:N Normal(ti|y(xi,**w**),1/β)
+> Với f(𝐭|𝐱,𝐰,β) là joint distribution của T1,..Ti, = Πi=1:N f(ti|xi,𝐰,β) = Πi=1:N Normal(ti|y(xi,𝐰),1/β)
 >
 >
 >
-> Còn π(**w**|α) là priori = Normal(**w**|0,(1/α)\***I**)
+> Còn π(𝐰|α) là priori = Normal(𝐰|0,(1/α)\*𝐈)
 >
 >
 >
-> Đến đây, nếu trong Casella, khi nói về Bayes estimator, sau khi xây dựng posterior xong, ta sẽ lấy mean hay median của nó để làm point estimator cho θ. Cụ thể, E\[θ|**x**\] chính là Bayes estimator giúp minimize Bayes risk function khi loss dùng squared error loss. Còn khi loss dùng absolute error thì Bayes estimator giúp minimize Bayes risk sẽ là median của posterior distribution.
+> Đến đây, nếu trong Casella, khi nói về Bayes estimator, sau khi xây dựng posterior xong, ta sẽ lấy mean hay median của nó để làm point estimator cho θ. Cụ thể, E\[θ|𝐱\] chính là Bayes estimator giúp minimize Bayes risk function khi loss dùng squared error loss. Còn khi loss dùng absolute error thì Bayes estimator giúp minimize Bayes risk sẽ là median của posterior distribution.
 >
 >
 >
-> Còn trong Bishop, một hướng đi, là ta đi tìm **w** giúp maximize cái posterior π(**w**|t,x) này. Mà thực ra, trong bài toán này p**osterior hóa ra cũng là Gaussian**, nên tìm w có posterior lớn nhất **cũng là lấy mean của posterior** thôi
+> Còn trong Bishop, một hướng đi, là ta đi tìm 𝐰 giúp maximize cái posterior π(𝐰|t,x) này. Mà thực ra, trong bài toán này p**osterior hóa ra cũng là Gaussian**, nên tìm w có posterior lớn nhất **cũng là lấy mean của posterior** thôi
 >
 >
 >
-> Và khi đó ta sẽ thấy cách làm này cũng sẽ chính là tương đương với giải bài toán regularized least square: tức là minimize sum squared error với regularization term là hàm bậc hai của **w**.
+> Và khi đó ta sẽ thấy cách làm này cũng sẽ chính là tương đương với giải bài toán regularized least square: tức là minimize sum squared error với regularization term là hàm bậc hai của 𝐰.
 >
 >
 >
-> Và khi có **w**\* maximize posterior rồi thì ta có thể dùng nó để dự đoán cho new x: y(x, **w**\*)
+> Và khi có 𝐰\* maximize posterior rồi thì ta có thể dùng nó để dự đoán cho new x: y(x, 𝐰\*)
 >
 >
 >
-> Cũng đồng nghĩa là lấy mean của f(t|x,**w**\*) là Normal(y(x, **w**\*), 1/β) để dự đoán cho t.
+> Cũng đồng nghĩa là lấy mean của f(t|x,𝐰\*) là Normal(y(x, 𝐰\*), 1/β) để dự đoán cho t.
 >
 >
 >
-> Nhưng cách làm Bayesian toàn diện hơn: là bằng cách marginalizing over **w** của f(t,**w**|x,**x,t**) ta sẽ có f(t|x, **x**,**t**) không phụ thuộc **w**, tức là predictive distribution:
+> Nhưng cách làm Bayesian toàn diện hơn: là bằng cách marginalizing over 𝐰 của f(t,𝐰|x,**x,t**) ta sẽ có f(t|x, 𝐱,𝐭) không phụ thuộc 𝐰, tức là predictive distribution:
 >
 >
 >
-> f(t|x,**x**,**t**) = ∫f(t,**w**|x,**x**,**t**)d**w** = ∫f(t|x, **w**) π(**w**|**x**,**t**) d**w** với π(**w**|**x**,**t**) là posterior của **w**.
+> f(t|x,𝐱,𝐭) = ∫f(t,𝐰|x,𝐱,𝐭)d𝐰 = ∫f(t|x, 𝐰) π(𝐰|𝐱,𝐭) d𝐰 với π(𝐰|𝐱,𝐭) là posterior của 𝐰.
 
 <br>
 
@@ -2516,7 +2516,7 @@
 >
 >
 >
-> Giai đoạn inference, đối với bài toán regression, có thể coi như là đi tìm predictive distribution, f(t|**x**), là posterior distribution của t (vs prior distribution là f(t) - phân phối marginal của t).
+> Giai đoạn inference, đối với bài toán regression, có thể coi như là đi tìm predictive distribution, f(t|𝐱), là posterior distribution của t (vs prior distribution là f(t) - phân phối marginal của t).
 >
 >
 >
@@ -2524,47 +2524,47 @@
 >
 >
 >
-> Thế thì giống như trong Casella, khi nói về Bayes estimator cho θ, ta bắt đầu coi θ là random variable, để rồi đi tìm posterior của nó π(θ|**x**). Khi đó, câu hỏi là, vậy ta nên point estimate cho θ thế nào, vì yêu cầu vẫn là point estimate. Câu trả lời là, mình mới nói về loss và risk function trước: Loss function L(δ(**x**), θ) được định nghĩa là hàm phản ánh sai số giữa estimate δ(**x**) và θ, có thể dùng squared difference \[δ(**x**) - θ\]^2 hoặc absolute difference |δ(**x**) - θ|. Và ý nghĩa của L(δ(**x**), θ) là: với observed **X**= **x** như vậy, và θ như vậy, thì theo quy trình của δ(**.**) để tính ra δ(**x**) estimate cho θ, thì sai số là bao nhiêu.
+> Thế thì giống như trong Casella, khi nói về Bayes estimator cho θ, ta bắt đầu coi θ là random variable, để rồi đi tìm posterior của nó π(θ|𝐱). Khi đó, câu hỏi là, vậy ta nên point estimate cho θ thế nào, vì yêu cầu vẫn là point estimate. Câu trả lời là, mình mới nói về loss và risk function trước: Loss function L(δ(𝐱), θ) được định nghĩa là hàm phản ánh sai số giữa estimate δ(𝐱) và θ, có thể dùng squared difference \[δ(𝐱) - θ\]² hoặc absolute difference |δ(𝐱) - θ|. Và ý nghĩa của L(δ(𝐱), θ) là: với observed 𝐗= 𝐱 như vậy, và θ như vậy, thì theo quy trình của δ(**.**) để tính ra δ(𝐱) estimate cho θ, thì sai số là bao nhiêu.
 >
 >
 >
-> Để rồi sau đó, ta muốn đánh giá khả năng của δ(**X**) một cách tổng quát,xét trên mọi giá trị khả dĩ **x** của **X** luôn, bằng cách tính trung bình của loss trên mọi **x**: E\_θ\[L(δ(**X**), θ\], đây chính là risk function, và nó chỉ còn là một hàm theo θ. Từ đó, ta có thể so sánh risk function của δ(**X**) này với risk function của δ(**X**) khác, xem với θ cụ thể thì cái nào nhỏ hơn (có nghĩa là estimator đó tốt hơn), và từ đó, bằng cách minimize cái risk, ta sẽ có được cái tốt nhất.
+> Để rồi sau đó, ta muốn đánh giá khả năng của δ(𝐗) một cách tổng quát,xét trên mọi giá trị khả dĩ 𝐱 của 𝐗 luôn, bằng cách tính trung bình của loss trên mọi 𝐱: E\_θ\[L(δ(𝐗), θ\], đây chính là risk function, và nó chỉ còn là một hàm theo θ. Từ đó, ta có thể so sánh risk function của δ(𝐗) này với risk function của δ(𝐗) khác, xem với θ cụ thể thì cái nào nhỏ hơn (có nghĩa là estimator đó tốt hơn), và từ đó, bằng cách minimize cái risk, ta sẽ có được cái tốt nhất.
 >
 >
 >
-> Nhưng nếu tiếp cận theo Bayesian, θ cũng là biến, khi đó R(δ(X), θ) cũng là biến ngẫu nhiên tạo bởi θ, nên ta có thể tính kì vọng của nó, dưới phân phối prior của θ, E\[R(δ(**X**), θ)\] = ∫\_Θ R(δ(**X**), θ)) π(θ) dθ, đây là Bayes risk biến đổi chút nó sẽ bằng
+> Nhưng nếu tiếp cận theo Bayesian, θ cũng là biến, khi đó R(δ(X), θ) cũng là biến ngẫu nhiên tạo bởi θ, nên ta có thể tính kì vọng của nó, dưới phân phối prior của θ, E\[R(δ(𝐗), θ)\] = ∫\_Θ R(δ(𝐗), θ)) π(θ) dθ, đây là Bayes risk biến đổi chút nó sẽ bằng
 >
 >
 >
-> i) ∫\_X \[ ∫\_Θ L(θ, δ(**x**)) π(θ|**x**) dθ \] f(**x**) d**x**, thì ∫\_Θ L(θ, δ(**x**)) π(θ|**x**) dθ là E\[L(θ, δ(**x**)|**X**=**x**\] là posterior expected loss (kì vọng của loss, là hàm theo θ, với θ \~ posterior)
+> i) ∫\_X \[ ∫\_Θ L(θ, δ(𝐱)) π(θ|𝐱) dθ \] f(𝐱) d𝐱, thì ∫\_Θ L(θ, δ(𝐱)) π(θ|𝐱) dθ là E\[L(θ, δ(𝐱)|𝐗=𝐱\] là posterior expected loss (kì vọng của loss, là hàm theo θ, với θ \~ posterior)
 >
 >
 >
-> ii) ∫\_X ∫\_Θ L(θ, δ(**x**) f(**x**, θ) d**x** dθ, đây là kì vọng của loss, dưới joint distribution của X và θ.
+> ii) ∫\_X ∫\_Θ L(θ, δ(𝐱) f(𝐱, θ) d𝐱 dθ, đây là kì vọng của loss, dưới joint distribution của X và θ.
 >
 >
 >
-> Và khi ta giải bài toán minimize Bayes risk với loss là squared error thì δ(x) tìm được sẽ chính là mean của posterior E\[θ|**x**\].
+> Và khi ta giải bài toán minimize Bayes risk với loss là squared error thì δ(x) tìm được sẽ chính là mean của posterior E\[θ|𝐱\].
 >
 >
 >
-> Vậy thì ở phần này trong sách Bishop, ông đang đặt vấn đề tương tự: Ta có posterior distribution f(t|**x**) thì nên predict T bằng mấy thì sẽ tối ưu theo decision theory? (cũng chính là y chang trong Casella rằng ta đã có posterior π(θ|**x**) thì nên point estimate cho θ bằng bao nhiêu để tối ưu)
+> Vậy thì ở phần này trong sách Bishop, ông đang đặt vấn đề tương tự: Ta có posterior distribution f(t|𝐱) thì nên predict T bằng mấy thì sẽ tối ưu theo decision theory? (cũng chính là y chang trong Casella rằng ta đã có posterior π(θ|𝐱) thì nên point estimate cho θ bằng bao nhiêu để tối ưu)
 >
 >
 >
-> Để trả lời, ông Bishop mới tính kì vọng của loss với loss tính bằng squared error dưới joint distribution của **X**, T f(**x**, t). Dưới ánh sáng của cuốn Casella, mình thấy rõ đây chính là tương ứng với Bayes risk.
+> Để trả lời, ông Bishop mới tính kì vọng của loss với loss tính bằng squared error dưới joint distribution của 𝐗, T f(𝐱, t). Dưới ánh sáng của cuốn Casella, mình thấy rõ đây chính là tương ứng với Bayes risk.
 >
 >
 >
-> Và ta mới đi minimize cái E\[L\] này bằng giải tích, kết quả cho ra y như trong Casella: Là mean của posterior E\[T|**x**\]
+> Và ta mới đi minimize cái E\[L\] này bằng giải tích, kết quả cho ra y như trong Casella: Là mean của posterior E\[T|𝐱\]
 >
 >
 >
-> Trong Casella, khi mininize Bayes risk để chứng minh kết quả tương tự, ta làm hơi khác: là xem xét Bayes risk theo công thức i) để rồi, thứ cần minimize là cái posterior expected loss E\[L(θ, δ(**x**)|**X**=**x**\] (vì nó mới dính tới δ)
+> Trong Casella, khi mininize Bayes risk để chứng minh kết quả tương tự, ta làm hơi khác: là xem xét Bayes risk theo công thức i) để rồi, thứ cần minimize là cái posterior expected loss E\[L(θ, δ(𝐱)|𝐗=𝐱\] (vì nó mới dính tới δ)
 >
 >
 >
-> minimize E\[(δ(**x**) - θ)^2\] |**X**=**x**\], và ví dụ 2.2.6 Chap 2 của Casella nói rằng b khiến minimize E\[(X - b)^2\] chính là b = EX nên sẽ cho phép kết luận δ(x) khiến minimize E\[(δ(**x**) - θ)^2\] |**X**=**x**\] chính là E\[θ|**x**\].
+> minimize E\[(δ(𝐱) - θ)²\] |𝐗=𝐱\], và ví dụ 2.2.6 Chap 2 của Casella nói rằng b khiến minimize E\[(X - b)²\] chính là b = EX nên sẽ cho phép kết luận δ(x) khiến minimize E\[(δ(𝐱) - θ)²\] |𝐗=𝐱\] chính là E\[θ|𝐱\].
 >
 >
 >
@@ -2576,19 +2576,19 @@
 >
 >
 >
-> Chứng minh minimize_b E\[(X - b)^2\]
+> Chứng minh minimize_b E\[(X - b)²\]
 >
 >
 >
-> Xét hàm mục tiêu E\[(X - b)^2\] = E\[(X - EX + EX - b)^2\]
+> Xét hàm mục tiêu E\[(X - b)²\] = E\[(X - EX + EX - b)²\]
 >
 >
 >
-> = E\[(X - EX)^2 + (EX - b)^2 +2(X - EX)(EX - b)\]
+> = E\[(X - EX)² + (EX - b)² +2(X - EX)(EX - b)\]
 >
 >
 >
-> = E\[(X - EX)^2\] + E\[(EX - b)^2\] +2E\[(X - EX)(EX - b)\]
+> = E\[(X - EX)²\] + E\[(EX - b)²\] +2E\[(X - EX)(EX - b)\]
 >
 >
 >
@@ -2600,15 +2600,15 @@
 >
 >
 >
-> ⇨ .. = E\[(X - EX)^2\] + E\[(EX - b)^2\]
+> ⇨ .. = E\[(X - EX)²\] + E\[(EX - b)²\]
 >
 >
 >
-> Bài toán trở thành minimize_b E\[(X - EX)^2\] + E\[(EX - b)^2\]
+> Bài toán trở thành minimize_b E\[(X - EX)²\] + E\[(EX - b)²\]
 >
 >
 >
-> tương đương minimize_b E\[(EX - b)^2\] (bỏ term ko liên quan biến tối ưu b đi)
+> tương đương minimize_b E\[(EX - b)²\] (bỏ term ko liên quan biến tối ưu b đi)
 >
 >
 >
@@ -2616,55 +2616,55 @@
 >
 >
 >
-> Áp dụng y chang để chứng minh E\[θ|**x**\] cũng là minimizer của Bayes risk:
+> Áp dụng y chang để chứng minh E\[θ|𝐱\] cũng là minimizer của Bayes risk:
 >
 >
 >
-> minimize\_δ(**x**) ∫\_**X** \[ ∫\_Θ L(θ, δ(**x**)) π(θ|**x**) dθ \] f(**x**) d**x**
+> minimize\_δ(𝐱) ∫\_𝐗 \[ ∫\_Θ L(θ, δ(𝐱)) π(θ|𝐱) dθ \] f(𝐱) d𝐱
 >
 >
 >
-> dĩ nhiên tương đương minimize\_δ(**x**) ∫\_Θ L(θ, δ(**x**)) π(θ|**x**) dθ, vì chỉ có cái nhân này mới phụ thuộc biến tối ưu δ(**x**), nếu nó nhỏ nhất, thì tích phân trên toàn miền range X cũng sẽ nhỏ nhất.
+> dĩ nhiên tương đương minimize\_δ(𝐱) ∫\_Θ L(θ, δ(𝐱)) π(θ|𝐱) dθ, vì chỉ có cái nhân này mới phụ thuộc biến tối ưu δ(𝐱), nếu nó nhỏ nhất, thì tích phân trên toàn miền range X cũng sẽ nhỏ nhất.
 >
 >
 >
-> Và again, cũng là minimize E\[L(δ(**x**), θ)|**X**=**x**\], tức posterior expected loss.
+> Và again, cũng là minimize E\[L(δ(𝐱), θ)|𝐗=𝐱\], tức posterior expected loss.
 >
 >
 >
-> Với L(δ(**x**), θ) = \[δ(**x**) - θ\]^2 thì bài toán có thể chứng minh y chang theo cách trên:
+> Với L(δ(𝐱), θ) = \[δ(𝐱) - θ\]² thì bài toán có thể chứng minh y chang theo cách trên:
 >
 >
 >
-> E\[L(δ(**x**), θ)|**X**=**x**\] = E\[\[δ(**x**) - θ\]^2|**X**=**x**\]
+> E\[L(δ(𝐱), θ)|𝐗=𝐱\] = E\[\[δ(𝐱) - θ\]²|𝐗=𝐱\]
 >
 >
 >
-> = E\[\[δ(**x**) - E(θ|**X**=**x**) + E(θ|**X**=**x**) - θ\]^2|**X**=**x**\]
+> = E\[\[δ(𝐱) - E(θ|𝐗=𝐱) + E(θ|𝐗=𝐱) - θ\]²|𝐗=𝐱\]
 >
 >
 >
-> = E\[\[δ(**x**) - E(θ|**X**=**x**)\]^2 + \[E(θ|**X**=**x**) - θ\]^2 + 2(δ(**x**) - E(θ|**X**=**x**))(E(θ|**X**=**x**) - θ) |**X**=**x**\]
+> = E\[\[δ(𝐱) - E(θ|𝐗=𝐱)\]² + \[E(θ|𝐗=𝐱) - θ\]² + 2(δ(𝐱) - E(θ|𝐗=𝐱))(E(θ|𝐗=𝐱) - θ) |𝐗=𝐱\]
 >
 >
 >
-> = E{\[δ(**x**) - E(θ|**X**=**x**)\]^2 |**X**=**x**} + E{\[E(θ|**X**=**x**) - θ\]^2|**X**=**x**} + 2E{(δ(x) - E(θ|**X**=**x**))(E(θ|**X**=**x**) - θ) |**X**=**x**}
+> = E{\[δ(𝐱) - E(θ|𝐗=𝐱)\]² |𝐗=𝐱} + E{\[E(θ|𝐗=𝐱) - θ\]²|𝐗=𝐱} + 2E{(δ(x) - E(θ|𝐗=𝐱))(E(θ|𝐗=𝐱) - θ) |𝐗=𝐱}
 >
 >
 >
-> Xét 2E{(δ(**x**) - E(θ|**X**=**x**))(E(θ|**X**=**x**) - θ) |**X**=**x**}
+> Xét 2E{(δ(𝐱) - E(θ|𝐗=𝐱))(E(θ|𝐗=𝐱) - θ) |𝐗=𝐱}
 >
 >
 >
-> = 2(δ(**x**) - E(θ|**X**=**x**) E{E(θ|**X**=**x**) - θ |**X**=**x**}
+> = 2(δ(𝐱) - E(θ|𝐗=𝐱) E{E(θ|𝐗=𝐱) - θ |𝐗=𝐱}
 >
 >
 >
-> = 2(δ(**x**) - E(θ|**X**=**x**) {E\[E(θ|**X**=**x**)\] - E\[θ|**X**=**x**\]}
+> = 2(δ(𝐱) - E(θ|𝐗=𝐱) {E\[E(θ|𝐗=𝐱)\] - E\[θ|𝐗=𝐱\]}
 >
 >
 >
-> = 2(δ(**x**) - E(θ|**X**=**x**) {E(θ|**X**=**x**) - E\[θ|**X**=**x**\]}
+> = 2(δ(𝐱) - E(θ|𝐗=𝐱) {E(θ|𝐗=𝐱) - E\[θ|𝐗=𝐱\]}
 >
 >
 >
@@ -2676,19 +2676,19 @@
 >
 >
 >
-> Và bài toán cũng trở thành minimize\_δ(**x**) = E{\[δ(**x**) - E(θ|**X**=**x**)\]^2 |**X**=**x**} + E{\[E(θ|**X**=**x**) - θ\]^2|**X**=**x**}
+> Và bài toán cũng trở thành minimize\_δ(𝐱) = E{\[δ(𝐱) - E(θ|𝐗=𝐱)\]² |𝐗=𝐱} + E{\[E(θ|𝐗=𝐱) - θ\]²|𝐗=𝐱}
 >
 >
 >
-> tương đương minimize\_δ(x) E{\[δ(**x**) - E(θ|**X**=**x**)\]^2 |**X**=**x**}
+> tương đương minimize\_δ(x) E{\[δ(𝐱) - E(θ|𝐗=𝐱)\]² |𝐗=𝐱}
 >
 >
 >
-> kết qủa là δ(**x**) = E(θ|**X**=**x**), là mean của posterior π(θ|**x**).
+> kết qủa là δ(𝐱) = E(θ|𝐗=𝐱), là mean của posterior π(θ|𝐱).
 >
 >
 >
-> nói chung chỉ là nhìn nó rắc rối là do nó đeo thêm cái đuôi conditional on **X**=**x** để nhắc nhở rằng θ là biến ngẫu nhiên đang tuân theo distribution là posterior π(θ|**x**) thôi.
+> nói chung chỉ là nhìn nó rắc rối là do nó đeo thêm cái đuôi conditional on 𝐗=𝐱 để nhắc nhở rằng θ là biến ngẫu nhiên đang tuân theo distribution là posterior π(θ|𝐱) thôi.
 >
 >
 >
@@ -2704,11 +2704,11 @@
 >
 >
 >
-> PHẦN DƯỚI ĐÂY XIN QUY ƯỚC TẤT CẢ CHỮ x ĐỀU TỰ HIỂU LÀ VIẾT ĐẬM (**x**) ĐỂ ĐỠ MẤT THỜI GIAN GÕ,
+> PHẦN DƯỚI ĐÂY XIN QUY ƯỚC TẤT CẢ CHỮ x ĐỀU TỰ HIỂU LÀ VIẾT ĐẬM (𝐱) ĐỂ ĐỠ MẤT THỜI GIAN GÕ,
 >
 >
 >
-> Hàm mục tiêu E\[L(y(x), t)\] = ∫∫ L(y(x),t) f(x,t)dxdt (tự hiểu hai cái tích phân là theo range T và **X**, y như tích phân ∫\_X ∫\_Θ ở trên vậy)
+> Hàm mục tiêu E\[L(y(x), t)\] = ∫∫ L(y(x),t) f(x,t)dxdt (tự hiểu hai cái tích phân là theo range T và 𝐗, y như tích phân ∫\_X ∫\_Θ ở trên vậy)
 >
 >
 >
@@ -2716,35 +2716,35 @@
 >
 >
 >
-> Hàm mục tiêu = ∫∫ {y(x) - t}^2 f(x,t)dxdt
+> Hàm mục tiêu = ∫∫ {y(x) - t}² f(x,t)dxdt
 >
 >
 >
-> = ∫∫ {y(x) - t}^2 f(t|x)f(x)dxdt
+> = ∫∫ {y(x) - t}² f(t|x)f(x)dxdt
 >
 >
 >
-> = ∫∫ {y(x) - t}^2 f(t|x)f(x)dtdx
+> = ∫∫ {y(x) - t}² f(t|x)f(x)dtdx
 >
 >
 >
-> = ∫ \[ ∫ {y(x) - t}^2 f(t|x)dt \] f(x)dx
+> = ∫ \[ ∫ {y(x) - t}² f(t|x)dt \] f(x)dx
 >
 >
 >
-> Bài toán minimize hàm mục tiêu ∫ \[ ∫ {y(x) - t}^2 f(t|x)dt \] f(x)dx
+> Bài toán minimize hàm mục tiêu ∫ \[ ∫ {y(x) - t}² f(t|x)dt \] f(x)dx
 >
 >
 >
-> trở thành tương đương minimize cái cụm này, minimize ∫ {y(x) - t}^2 f(t|x)dt
+> trở thành tương đương minimize cái cụm này, minimize ∫ {y(x) - t}² f(t|x)dt
 >
 >
 >
-> Và cái cụm này, chính là kì vọng của (y(x) - T)^2 dưới posterior distribution f(t|x): E\[(y(x) - T)^2|X=x\]
+> Và cái cụm này, chính là kì vọng của (y(x) - T)² dưới posterior distribution f(t|x): E\[(y(x) - T)²|X=x\]
 >
 >
 >
-> (Cái cụm ∫ {y(x) - t}^2 f(t|x)dt cũng chính là tương đương với ∫\_Θ L(δ(**x**), θ) π(θ|**x**) dθ = E\[L(δ(**x**), θ)|**X**=**x**\], posterior expected loss ở trên)
+> (Cái cụm ∫ {y(x) - t}² f(t|x)dt cũng chính là tương đương với ∫\_Θ L(δ(𝐱), θ) π(θ|𝐱) dθ = E\[L(δ(𝐱), θ)|𝐗=𝐱\], posterior expected loss ở trên)
 >
 >
 >
@@ -2752,7 +2752,7 @@
 >
 >
 >
-> Rồi, thế thì bài toán là minimize_y(x) {E\[(y(x) - T)^2|X=x\]}, để bớt phải đeo cái đuôi X=x nhằm nhắc nhớ T \~ f(t|x), khiến công thức trở nên phức tạp như trên đã thấy ta cứ tạm bỏ cái đuôi này, với chú thích T \~ f(t|x) ở cuối là được.
+> Rồi, thế thì bài toán là minimize_y(x) {E\[(y(x) - T)²|X=x\]}, để bớt phải đeo cái đuôi X=x nhằm nhắc nhớ T \~ f(t|x), khiến công thức trở nên phức tạp như trên đã thấy ta cứ tạm bỏ cái đuôi này, với chú thích T \~ f(t|x) ở cuối là được.
 >
 >
 >
@@ -2760,11 +2760,11 @@
 >
 >
 >
-> E\[(y(x) - T)^2\] = E\[(y(x) - ET + ET - T)^2\]
+> E\[(y(x) - T)²\] = E\[(y(x) - ET + ET - T)²\]
 >
 >
 >
-> = E\[(y(x) - ET)^2 + E\[(ET - T)^2\] + 2E\[(y(x) - ET)(ET - T)\]
+> = E\[(y(x) - ET)² + E\[(ET - T)²\] + 2E\[(y(x) - ET)(ET - T)\]
 >
 >
 >
@@ -2800,11 +2800,11 @@
 >
 >
 >
-> Kết quả còn lại: E\[(y(x) - ET)^2 + E\[(ET - T)^2\] (T \~ f(t|x))
+> Kết quả còn lại: E\[(y(x) - ET)² + E\[(ET - T)²\] (T \~ f(t|x))
 >
 >
 >
-> Nếu tại đây ta lắp E\[(y(x) - ET)^2 + E\[(ET - T)^2\] (T \~ f(t|x)) = ∫ \[y(x) - E(T|X=x\]^2 f(t|x) dt + ∫ \[E(T|X=x) - t\]^2 f(t|x) dt
+> Nếu tại đây ta lắp E\[(y(x) - ET)² + E\[(ET - T)²\] (T \~ f(t|x)) = ∫ \[y(x) - E(T|X=x\]² f(t|x) dt + ∫ \[E(T|X=x) - t\]² f(t|x) dt
 >
 >
 >
@@ -2812,23 +2812,23 @@
 >
 >
 >
-> ∫ \[ ∫ \[y(x) - E(T|X=x\]^2 f(t|x) dt + ∫ \[E(T|X=x) - t\]^2 f(t|x) dt \] f(x)dx
+> ∫ \[ ∫ \[y(x) - E(T|X=x\]² f(t|x) dt + ∫ \[E(T|X=x) - t\]² f(t|x) dt \] f(x)dx
 >
 >
 >
-> ∫∫ \[y(x) - E(T|X=x\]^2 f(t|x) f(x) dt dx + ∫∫ \[E(T|X=x) - t\]^2 f(t|x) f(x) dt dx
+> ∫∫ \[y(x) - E(T|X=x\]² f(t|x) f(x) dt dx + ∫∫ \[E(T|X=x) - t\]² f(t|x) f(x) dt dx
 >
 >
 >
-> ∫∫ \[y(x) - E(T|X=x\]^2 f(t, x) dt dx + ∫∫ \[E(T|X=x) - t\]^2 f(t|x) f(x) dt dx
+> ∫∫ \[y(x) - E(T|X=x\]² f(t, x) dt dx + ∫∫ \[E(T|X=x) - t\]² f(t|x) f(x) dt dx
 >
 >
 >
-> Xét cụm thứ nhất, cái cụm \[y(x) - E(T|X=x\]^2 ko phụ thuộc t, nên khi tính tích phân theo t, ta đưa ra
+> Xét cụm thứ nhất, cái cụm \[y(x) - E(T|X=x\]² ko phụ thuộc t, nên khi tính tích phân theo t, ta đưa ra
 >
 >
 >
-> Cụm thứ nhất = ∫\_X \[y(x) - E(T|X=x\]^2 ∫\_T f(t, x) dt dx
+> Cụm thứ nhất = ∫\_X \[y(x) - E(T|X=x\]² ∫\_T f(t, x) dt dx
 >
 >
 >
@@ -2836,11 +2836,11 @@
 >
 >
 >
-> ⇨ Cụm thứ nhất = ∫\_X \[y(x) - E(T|X=x\]^2 f(x) dx
+> ⇨ Cụm thứ nhất = ∫\_X \[y(x) - E(T|X=x\]² f(x) dx
 >
 >
 >
-> .. = ∫\_X \[y(x) - E(T|X=x\]^2 f(x) dx + ∫∫ \[E(T|X=x) - t\]^2 f(t|x) f(x) dt dx ⇨ Đây chính là 1.90
+> .. = ∫\_X \[y(x) - E(T|X=x\]² f(x) dx + ∫∫ \[E(T|X=x) - t\]² f(t|x) f(x) dt dx ⇨ Đây chính là 1.90
 >
 >
 >
@@ -2848,11 +2848,11 @@
 >
 >
 >
-> Trong sách, term thứ hai của 1.90 là ∫ {E\[T|X=x\] - t}^2 f(x) dx. Mình cho rằng: **term thứ hai có vẻ bị viết tắt** hoặc **thiếu phần tích phân theo t**.
+> Trong sách, term thứ hai của 1.90 là ∫ {E\[T|X=x\] - t}² f(x) dx. Mình cho rằng: **term thứ hai có vẻ bị viết tắt** hoặc **thiếu phần tích phân theo t**.
 >
 >
 >
-> Dạng đầy đủ về mặt toán học nên là ∫∫ \[E(T|X=x) - t\]^2 f(t|x) f(x) dt dx,
+> Dạng đầy đủ về mặt toán học nên là ∫∫ \[E(T|X=x) - t\]² f(t|x) f(x) dt dx,
 >
 >
 >
@@ -2872,11 +2872,11 @@
 >
 >
 >
-> Để rồi trong 1.90, ∫\_X \[y(x) - E(T|X=x\]^2 f(x) dx sẽ = 0,
+> Để rồi trong 1.90, ∫\_X \[y(x) - E(T|X=x\]² f(x) dx sẽ = 0,
 >
 >
 >
-> chỉ còn lại ∫∫ \[E(T|X=x) - t\]^2 f(t|x) f(x) dt dx
+> chỉ còn lại ∫∫ \[E(T|X=x) - t\]² f(t|x) f(x) dt dx
 >
 >
 >
@@ -2888,19 +2888,19 @@
 >
 >
 >
-> Vậy đây là \[E(T|X=x) - t\]^2 hàm tính ra bình phương của difference giữa T, \~ f(t|x) và mean E\[T|X=x)
+> Vậy đây là \[E(T|X=x) - t\]² hàm tính ra bình phương của difference giữa T, \~ f(t|x) và mean E\[T|X=x)
 >
 >
 >
-> Nên ∫∫ \[E(T|X=x) - t\]^2 f(t|x) f(x) dt dx
+> Nên ∫∫ \[E(T|X=x) - t\]² f(t|x) f(x) dt dx
 >
 >
 >
-> = ∫*{range x} \[ ∫*{range t} \[E(T|X=x) - t\]^2 f(t|x) dt \] f(x) dx
+> = ∫*{range x} \[ ∫*{range t} \[E(T|X=x) - t\]² f(t|x) dt \] f(x) dx
 >
 >
 >
-> Cụm ∫\_{range t} \[E(T|X=x) - t\]^2 f(t|x) dt chính là Variance của T dưới phân phối posterior f(t|x): Var(T|X=x)
+> Cụm ∫\_{range t} \[E(T|X=x) - t\]² f(t|x) dt chính là Variance của T dưới phân phối posterior f(t|x): Var(T|X=x)
 >
 >
 >
