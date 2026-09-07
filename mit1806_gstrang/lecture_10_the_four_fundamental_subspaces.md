@@ -235,58 +235,37 @@
 >
 >
 >
-> Gs nhắc lại ta nhớ lại việc tìm **solution của Ax=0** (solution
-> của nó chính là thuộc nullspace): Ta sẽ **elimination**, đưa A
-> về row echelon form **U**, thậm chí reduced row echelon form
-> **R**.
+> Gs nhắc lại ta nhớ lại việc tìm **solution của Ax=0** (solution của nó chính là thuộc nullspace): Ta sẽ **elimination**, đưa A về row echelon form **U**, thậm chí reduced row echelon form **R**.
 >
 >
 >
-> Sau đó ta sẽ **tìm ra pivol cols/variable** đồng nghĩa biết **free
-> cols/variable**. Và với từ đó gán giá trị tùy ý cho các free
-> variable để back-substitution tính ra pivot variable.
+> Sau đó ta sẽ **tìm ra pivol cols/variable** đồng nghĩa biết **free cols/variable**. Và với từ đó gán giá trị tùy ý cho các free variable để back-substitution tính ra pivot variable.
 >
 >
 >
-> Và nhớ lại, ta thường cho lần lượt mỗi free variable một lần
-> mang giá trị 1, mấy cái còn lại 0 (ý là ví dụ có 2 free
-> variable x1, x3 thì **lần đầu ta cho x1=1, x3=0**, lần sau cho
-> **x3=1, x1=0** để tính ra pivot var. Và đó các solution tìm theo
-> cách gán này được gọi là các **special solution**.
+> Và nhớ lại, ta thường cho lần lượt mỗi free variable một lần mang giá trị 1, mấy cái còn lại 0 (ý là ví dụ có 2 free variable x1, x3 thì **lần đầu ta cho x1=1, x3=0**, lần sau cho **x3=1, x1=0** để tính ra pivot var. Và đó các solution tìm theo cách gán này được gọi là các **special solution**.
 >
 >
 >
-> Vậy dễ thấy **các special solution này independence** (vì ta 
-> được phép chọn giá trị bất kì cho free variable, thì dĩ nhiên
-> luôn có thể chọn gía trị khiến các special solution độc lập.)
+> Vậy dễ thấy **các special solution này independence** (vì ta được phép chọn giá trị bất kì cho free variable, thì dĩ nhiên luôn có thể chọn gía trị khiến các special solution độc lập.)
 >
 >
 >
-> Và gs vì vậy (**independence** và **span** **nullspace**) nên đó 
-> **cũng chính là basis vector** của nullspace.
+> Và gs vì vậy (**independence** và **span** **nullspace**) nên đó **cũng chính là basis vector** của nullspace.
 >
 >
 >
-> Như vậy, mỗi free variable sẽ cho ta một special solution
-> (again, gán 1 cho nó, gán 0 cho mấy free variable khác và
-> thế vào tính ra pivot var, để có một special solution)
+> Như vậy, mỗi free variable sẽ cho ta một special solution (again, gán 1 cho nó, gán 0 cho mấy free variable khác và thế vào tính ra pivot var, để có một special solution)
 >
 >
 >
-> mà các special solution tạo thành một basis, cho nên **số
-> special solution = số free column chính là dimension 
-> của nullspace cũng như là số pivot column chính là 
-> dimension của column space / row space
+> mà các special solution tạo thành một basis, cho nên \*\*số special solution = số free column chính là dimension của nullspace cũng như là số pivot column chính là dimension của column space / row space
 >
 >
 >
-> Vậy với matrix n cột, rank r, thì có r pivot, nên có n-r free
-> variable ⇒ có n-r special solution và như vậy dimension
-> của nullspace là n-r**
+> Vậy với matrix n cột, rank r, thì có r pivot, nên có n-r free variable ⇒ có n-r special solution và như vậy dimension của nullspace là n-r\*\*
 >
-> Hãy xét thêm hai câu hỏi sau: Tại sao chắc chắn rằng các special solution sẽ span
-> nullspace, và tại sao chúng independence? (để từ đó kết luận chúng là basis của
-> nullspace)
+> Hãy xét thêm hai câu hỏi sau: Tại sao chắc chắn rằng các special solution sẽ span nullspace, và tại sao chúng independence? (để từ đó kết luận chúng là basis của nullspace)
 >
 >
 >
@@ -294,26 +273,15 @@
 >
 >
 >
-> Như đã biết, special solution được tìm bằng cách tìm free variable. Và gán giá trị
-> tùy ý cho nó, thế ngược vào Ax=0 và giải ra các pivot variable. Vậy không làm mất
-> đi tính khái quát, có thể xét matrix A có 5 cột, tức có 5 variable x1,x2,x3,x4,x5. Và
-> cũng không làm mất tính khái quát, ta có thể giả sử sau khi đưa A về row echelon
-> form ta có 3 pivot cols ứng với x1,x3,x4 và hai free columns x2, x5. Vậy ta sẽ gán
-> x2=1, x5=0 để thế vào hệ phương trình lúc này còn 3 phương trình (vì có 3 pivot),
-> để giải ra 3 biến pivot x1,x3,x4 (cho bằng a,b,c). Như vậy là ta có một special
-> solution đầu tiên gọi là x_spec(1) = (a,1,b,c, 0). Và đương nhiên alpha*x_spec(1)
-> cũng là solution với mọi alpha. Và đây cũng tương đương với việc chọn x2=alpha,
-> x5=0, giải tìm các pivot var
+> Như đã biết, special solution được tìm bằng cách tìm free variable. Và gán giá trị tùy ý cho nó, thế ngược vào Ax=0 và giải ra các pivot variable. Vậy không làm mất đi tính khái quát, có thể xét matrix A có 5 cột, tức có 5 variable x1,x2,x3,x4,x5. Và cũng không làm mất tính khái quát, ta có thể giả sử sau khi đưa A về row echelon form ta có 3 pivot cols ứng với x1,x3,x4 và hai free columns x2, x5. Vậy ta sẽ gán x2=1, x5=0 để thế vào hệ phương trình lúc này còn 3 phương trình (vì có 3 pivot), để giải ra 3 biến pivot x1,x3,x4 (cho bằng a,b,c). Như vậy là ta có một special solution đầu tiên gọi là x_spec(1) = (a,1,b,c, 0). Và đương nhiên α\*x_spec(1) cũng là solution với mọi α. Và đây cũng tương đương với việc chọn x2=α, x5=0, giải tìm các pivot var
 >
 >
 >
-> Tương tự ta gán x2=0, x5=1, để tìm ra ba pivot var để có special solution thứ hai là
-> x_spec(2) = (m,0,n,l,1). Tương tự, đương nhiên beta*x_spec(2) cũng là solution với
-> mọi beta. Đây cũng tương đương với việc chọn x5=beta, x2=0, giải tìm pivot var
+> Tương tự ta gán x2=0, x5=1, để tìm ra ba pivot var để có special solution thứ hai là x_spec(2) = (m,0,n,l,1). Tương tự, đương nhiên β\*x_spec(2) cũng là solution với mọi β. Đây cũng tương đương với việc chọn x5=β, x2=0, giải tìm pivot var
 >
 >
 >
-> Và đương nhiên các linear combination của hai special solution: **alpha*(a,1,b,c,0) + beta*(m,0,n,l,1) cũng thuộc nullspace, với mọi** alpha, beta.
+> Và đương nhiên các linear combination của hai special solution: *α(a,1,b,c,0) + β*(m,0,n,l,1) cũng thuộc nullspace, với mọi\*\* α, β.
 >
 >
 >
@@ -321,7 +289,7 @@
 >
 >
 >
-> *****Chứng minh special solutions span nullspace bằng phản chứng**
+> **Chứng minh special solutions span nullspace bằng phản chứng**
 >
 >
 >
@@ -329,18 +297,15 @@
 >
 >
 >
-> Đương nhiên tương đương alpha*x_spec1 cũng là solution với mọi alpha và
-> beta*x_spec2 cũng vậy với mọi beta. Và từ đó suy ra alpha*x_spec1 +
-> beta*x_spec2, hay mọi linear combination của các special solution đều là solution
+> Đương nhiên tương đương α*x_spec1 cũng là solution với mọi α và β*x_spec2 cũng vậy với mọi β. Và từ đó suy ra α*x_spec1 + β*x_spec2, hay mọi linear combination của các special solution đều là solution
 >
 >
 >
-> Giả sử có một solution không phải là linear combination của hai special solution.
-> Vậy x' thỏa Ax'=0 nhưng không tồn tại alpha, beta khiến
+> Giả sử có một solution không phải là linear combination của hai special solution. Vậy x' thỏa Ax'=0 nhưng không tồn tại α, β khiến
 >
 >
 >
-> x' = alpha*x_spec1 + beta*x_spec2 với mọi alpha, beta
+> x' = α*x_spec1 + β*x_spec2 với mọi α, β
 >
 >
 >
@@ -348,7 +313,7 @@
 >
 >
 >
-> x' != alpha*x_spec1 + beta*x_spec2 với mọi alpha, beta
+> x' != α*x_spec1 + β*x_spec2 với mọi α, β
 >
 >
 >
@@ -356,16 +321,15 @@
 >
 >
 >
-> Ax' != A(alpha*x_spec1 + beta*x_spec2) với mọi alpha, beta
+> Ax' != A(α*x_spec1 + β*x_spec2) với mọi α, β
 >
 >
 >
-> ⇔ Ax' != A*(alpha*x_spec1) + A*(beta*x_spec2) với mọi alpha, beta
+> ⇔ Ax' != A\*(α*x_spec1) + A*(β\*x_spec2) với mọi α, β
 >
 >
 >
-> Mà ta đã có Ax'=0, A*(alpha*x_spec1) = 0, A*(beta*x_spec2) = 0 vì x',
-> alpha*x_spec1, beta*x_spec2 như nói trên đều là solution của Ax=0
+> Mà ta đã có Ax'=0, A\*(α*x_spec1) = 0, A*(β*x_spec2) = 0 vì x', α*x_spec1, β\*x_spec2 như nói trên đều là solution của Ax=0
 >
 >
 >
@@ -373,35 +337,31 @@
 >
 >
 >
-> ⇔ 0 != 0 + 0 với mọi alpha, beta
+> ⇔ 0 != 0 + 0 với mọi α, β
 >
 >
 >
-> Điều này là vô lý, vậy có thể kết luận rằng điều gỉa sử trên - tồn tại một solution
-> không phải linear combination của các special solution - là sai. Từ đó có thể kết
-> luận mọi solution của Ax=0 đều là linear combination  của các special solution. **SUY
-> RA SPECIAL SOLUTION SPAN NULLSPACE**
+> Điều này là vô lý, vậy có thể kết luận rằng điều gỉa sử trên - tồn tại một solution không phải linear combination của các special solution - là sai. Từ đó có thể kết luận mọi solution của Ax=0 đều là linear combination của các special solution. **SUY RA SPECIAL SOLUTION SPAN NULLSPACE**
 >
 >
 >
-> ======
-> ****Chứng minh các special solution independence**
+> ====== \*\***Chứng minh các special solution independence**
 >
 >
 >
-> Giả sử các special solution phụ thuộc: tức ta có thể viết x_spec2 = gamma*x_spec1
+> Giả sử các special solution phụ thuộc: tức ta có thể viết x_spec2 = γ\*x_spec1
 >
 >
 >
-> tương đương x_spec2 - gamma*x_spec1 = 0
+> tương đương x_spec2 - γ\*x_spec1 = 0
 >
 >
 >
-> Vậy alpha*x_spec1 + beta*gamma*xpec1 = 0
+> Vậy α*x_spec1 + β*γ\*xpec1 = 0
 >
 >
 >
-> tương đương (alpha + beta*gamma)*xspec1 = 0
+> tương đương (α + β\*γ)\*xspec1 = 0
 >
 >
 >
@@ -409,8 +369,7 @@
 >
 >
 >
-> Điều này mâu thuẫn với giả thiết rằng x_spec 1 khác 0 (chọn free variable = 1
-> và các free variable khác = 0). 
+> Điều này mâu thuẫn với giả thiết rằng x_spec 1 khác 0 (chọn free variable = 1 và các free variable khác = 0).
 >
 >
 >
@@ -422,7 +381,7 @@
 >
 >
 >
-> **từ đó kết luận các SPECIAL SOLUTION LÀ BASIS CỦA NULLSPACE**
+> từ đó kết luận các SPECIAL SOLUTION LÀ BASIS CỦA NULLSPACE
 
 <br>
 
@@ -688,7 +647,7 @@
 >
 >
 > Vì sao? Vì EA=R thì cũng những bước biến đổi đó áp 
-> dụng lên I, thì kết quả chính là kết quả của E*I. Mà vì I là
+> dụng lên I, thì kết quả chính là kết quả của E × I. Mà vì I là
 > Identity matrix nên **EI = E**. Vậy suy ra **cái matrix kết quả
 > của I trở thành chính là E.**
 
@@ -814,15 +773,15 @@
 >
 >
 > Ví dụ hai vector v1,v2 có 3 phần tử. (thuộc R3). Thì v1+v2,
-> hay v1*c đều tạo một vector cũng có 3 phần tử (tức cũng
+> hay v1 × c đều tạo một vector cũng có 3 phần tử (tức cũng
 > thuộc R3)
 >
 >
 >
 > Thì tương tự vậy, ta xét 2 matrix 3x3: V1, V2. Thì V1+V2,
-> hay V1*c đều cho ra matrix 3x3 khác. **Do đó có thể xét
+> hay V1 × c đều cho ra matrix 3x3 khác. **Do đó có thể xét
 > vector space R3x3: tập hợp mọi matrix 3x3**. Thì nếu V1,V2
-> thuộc R3x3 thì ta cũng có **V1+V2, V1*c cũng thuộc R3x3**.
+> thuộc R3x3 thì ta cũng có **V1+V2, V1 × c cũng thuộc R3x3**.
 >
 >
 >
