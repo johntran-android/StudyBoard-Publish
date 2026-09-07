@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,306 notes` · `~17,772 screenshots` · `18 notebooks`**
+**`~12,306 notes` · `~17,773 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -565,7 +565,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 ### Pattern Recognition Machine Learning_C.Bishop
 <!-- key: pattern_recognition_machine_learning_cbishop -->
 <!-- group: Machine Learning Foundation -->
-`401 notes · 600 screenshots · 58 sections`
+`401 notes · 601 screenshots · 58 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
 > 
@@ -630,7 +630,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [4.0 Linear model for Classification](pattern_recognition_machine_learning_cbishop/40_linear_model_for_classification.md) | 4 | 5 |
 | [4.1.2 Multiple Class](pattern_recognition_machine_learning_cbishop/412_multiple_class.md) | 3 | 7 |
 | [4.1.1 Discriminant Functions](pattern_recognition_machine_learning_cbishop/411_discriminant_functions.md) | 1 | 3 |
-| [4.1.3 Least squares for classification](pattern_recognition_machine_learning_cbishop/413_least_squares_for_classification.md) | 8 | 11 |
+| [4.1.3 Least squares for classification](pattern_recognition_machine_learning_cbishop/413_least_squares_for_classification.md) | 8 | 12 |
 | [4.1.4 Fisher's linear discriminant](pattern_recognition_machine_learning_cbishop/414_fishers_linear_discriminant.md) | 1 | 4 |
 | [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) | 19 | 22 |
 | [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) | 5 | 7 |
