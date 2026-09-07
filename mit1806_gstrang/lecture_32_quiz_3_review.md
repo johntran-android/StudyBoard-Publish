@@ -60,6 +60,8 @@
 
 <a id="node-bh72n2j"></a>
 
+#### Solving Linear Differential Equation du/dt = Au
+
 <p align="center"><kbd><img src="assets/fibxd7sxwre.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -67,7 +69,7 @@
 > nó như này. Bài trước, gs đã cho thấy bước chứng minh tại
 > sao đây là các special solution bằng cách thế nó, ví dụ
 > special solution thứ nhất (e^λ1t)*x, vào equation,  và
-> tính du/dt để cho ra kết quả là λ_1*x1 = Ax1, và điều
+> tính du/dt để cho ra kết quả là λ_1 × x1 = Ax1, và điều
 > này đúng vì x1 và λ_1 là eigenvector và eigenvalue
 > tương ứng của A
 >
@@ -101,7 +103,7 @@
 <p align="center"><kbd><img src="assets/cakflbsq8uj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs: correct, ta có thể tính det hoặc nhìn thấy rằng row_3 =−1*row_1 để nhận định các rows và cả columns ko
+> gs: correct, ta có thể tính det hoặc nhìn thấy rằng row_3 =−1 × row_1 để nhận định các rows và cả columns ko
 > independent → **Singular**
 >
 >
@@ -239,13 +241,13 @@
 >
 >
 > Vậy thì rõ ràng vì ta có một eigenvalue bằng 0, nên một
-> term trong general solution là c1*e^0t*x1 = c1x1, đương
+> term trong general solution là c1 × e^0t × x1 = c1x1, đương
 > nhiên không đổi, vậy u(t) không thể nhỏ về 0 để có trạng
 > thái Stability được.
 >
 >
 >
-> Ta có hai term kia là c2*e^√2it*x2 và c3*e^-√2it*x3.
+> Ta có hai term kia là c2 × e^√2it × x2 và c3 × e^-√2it × x3.
 >
 >
 >
@@ -264,11 +266,11 @@
 
 > [!NOTE]
 > Sau đó, câu hỏi là chu kì bao nhiêu thì nó quay về giá trị ban
-> đầu. Thì ta có thể giải ra là pi√2 từ việc cho √2iT = 2pi*i
+> đầu. Thì ta có thể giải ra là pi√2 từ việc cho √2iT = 2pi × i
 >
 >
 >
-> Bởi vì e²pi*i  = cos(2pi) + sin(2pi)*i = 1 + 0*i = 1 nên muốn
+> Bởi vì e²pi × i  = cos(2pi) + sin(2pi)*i = 1 + 0 × i = 1 nên muốn
 > quay về ban đầy thì chu kì T phải bằng giá trị sao cho √2iT
 > bằng 2pi.
 >
@@ -322,7 +324,7 @@
 > [!NOTE]
 > tiếp, hỏi e^At là gì. Trong bài giảng bữa trước, ta đã biết rằng
 > nếu A có đủ n eigenvectors độc lập, thì A có thể phân tách
-> thành SΛS⁻¹, và từ đó e^At = S*e^Λt*S⁻¹
+> thành SΛS⁻¹, và từ đó e^At = S × e^Λt × S⁻¹
 >
 >
 >
@@ -336,11 +338,11 @@
 >
 >
 >
-> Tổng i c_i*(e^λ_i*t)*x_i
+> Tổng i c_i*(e^λ_i × t)*x_i
 >
 >
 >
-> Lí do u = c_i*e^λ_it*x_i là special solution là ta có thể
+> Lí do u = c_i × e^λ_it × x_i là special solution là ta có thể
 > thế vào để kiểm tra xem xem note sát bên. Và thể hiện ở dạng
 > matrix thì solution của du/dt = Au là e^At. cái này đã chứng minh
 > ở trong bài giảng (theo link để xem lại)
@@ -466,7 +468,7 @@
 >
 >
 > Và đây chính là dạng thể hiện matrix của general
-> solution hồi nãy: Tổng i c_i*(e^λ_i*t)*x_i
+> solution hồi nãy: Tổng i c_i*(e^λ_i × t)*x_i
 >
 >
 >
@@ -655,11 +657,11 @@
 > Lập luận thế này nếu P là projection matrix thì P² = P.
 > Mà theo tính chất của eigenvalue thì nếu λ là eigenvalue
 > của P thì ta có Px = λx ⇔ PPx  = P*λx = λPx
-> = λλx = λ^2*x
+> = λλx = λ^2 × x
 >
 >
 >
-> Vậy P² = P ⇔ λ^2*x = λx
+> Vậy P² = P ⇔ λ^2 × x = λx
 >
 >
 >
@@ -673,7 +675,7 @@
 >
 > Vậy matrix A/2 phải có eigenvalue là 1 hoặc 0. Rồi mà matrix A/2 sẽ
 > có eigenvalue là 1/2 * eigenvalue của A (dễ hiểu điều này vì nếu Ax
-> = λx thì tương đương Ax/2 = λ/2*x → hai matrix cùng
+> = λx thì tương đương Ax/2 = λ/2 × x → hai matrix cùng
 > eigenvector nhưng eigenvalue bằng 1 nửa của nhau)
 >
 >
@@ -703,6 +705,8 @@
 <br>
 
 <a id="node-cdvpdjs"></a>
+
+###### Singular Value Decomposition (SVD)
 
 <p align="center"><kbd><img src="assets/co1w4ctu0sq.png" width="80%"></kbd></p>
 
@@ -823,7 +827,7 @@
 >
 >
 >
-> tức là 3*u1 và 2u2
+> tức là 3 × u1 và 2u2
 >
 >
 >
@@ -874,7 +878,7 @@
 <p align="center"><kbd><img src="assets/wdwt3i3nuxb.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs: correct, chính là v2, vì Av1 = 3u1 và Av2 = 0*v2, v2
+> gs: correct, chính là v2, vì Av1 = 3u1 và Av2 = 0 × v2, v2
 > chính là trong nullspace
 
 <br>
