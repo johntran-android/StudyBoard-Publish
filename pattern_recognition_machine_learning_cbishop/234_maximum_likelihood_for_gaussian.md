@@ -18,15 +18,15 @@
 >
 >
 >
-> Review cực nhanh về MLE, đã học trong Casella: Nói ngắn gọn, trong Casella, chap 6, ta học bài toán inference: Point estimation, trong đó, với random sample size n X1,...Xn (gom thành random vector vector **X**) iid \~ f(**x**|θ), ta muốn xây dựng một hàm số W(**x**), để W(**X**), là một statistic, sao cho với oserved value **x** của **X**, ta có một giá trị estimate cho θ. Thế thì, làm sao để tìm W(**x**) cho ra estimate tốt, thì một cách tiếp cận đó là (trong sách Casella nói về 3 cách: Method of moment, MLE, và Bayes estimator) MLE: Dùng cái hàm sau đây: W_mle(**X**) = argmax\_θ L(θ|**x**), với L(θ|**x**) là likelihood function, được định nghĩa bằng (mang giá trị bằng) f(**x**|θ), và mang ý nghĩa là với input θ, L(θ|**x**) sẽ là độ hợp lí của θ đó giúp giải thích cho việc ta quan sát thấy **X** = **x**. Và ý nghĩa của argmax\_..là, ta giải bài toán tối ưu: maximize\_θ L(θ|**x**), tìm cái θ khíến có likelihood cao nhất, thì đó chính là maximum likelihood estimator cho θ, kí hiệu W_mle(**X**) hay θ^mle(**X**) đều được. Và thường ta sẽ chuyển thành bài toán tương đương: maximize log của hàm L(θ|**x**), vì hàm log monotone increasing, nên giải ra θ\* khiến log L lớn nhất thì cũng là cái khiến L lớn nhất.
+> Review cực nhanh về MLE, đã học trong Casella: Nói ngắn gọn, trong Casella, chap 6, ta học bài toán inference: Point estimation, trong đó, với random sample size n X1,...Xn (gom thành random vector vector 𝐗) iid \~ f(𝐱|θ), ta muốn xây dựng một hàm số W(𝐱), để W(𝐗), là một statistic, sao cho với oserved value 𝐱 của 𝐗, ta có một giá trị estimate cho θ. Thế thì, làm sao để tìm W(𝐱) cho ra estimate tốt, thì một cách tiếp cận đó là (trong sách Casella nói về 3 cách: Method of moment, MLE, và Bayes estimator) MLE: Dùng cái hàm sau đây: W_mle(𝐗) = argmax\_θ L(θ|𝐱), với L(θ|𝐱) là likelihood function, được định nghĩa bằng (mang giá trị bằng) f(𝐱|θ), và mang ý nghĩa là với input θ, L(θ|𝐱) sẽ là độ hợp lí của θ đó giúp giải thích cho việc ta quan sát thấy 𝐗 = 𝐱. Và ý nghĩa của argmax\_..là, ta giải bài toán tối ưu: maximize\_θ L(θ|𝐱), tìm cái θ khíến có likelihood cao nhất, thì đó chính là maximum likelihood estimator cho θ, kí hiệu W_mle(𝐗) hay θ^mle(𝐗) đều được. Và thường ta sẽ chuyển thành bài toán tương đương: maximize log của hàm L(θ|𝐱), vì hàm log monotone increasing, nên giải ra θ\* khiến log L lớn nhất thì cũng là cái khiến L lớn nhất.
 >
 >
 >
-> Vậy thì quay lại đây, cũng y chang vậy. ta có random sample size N, mà mỗi sample là một D-dimensional RANDOM VECTOR **Xi** i=1,...N. Thành ra cả bộ random sample được thể hiện bởi một **MATRIX**: Tới đây mình có lẽ hiểu vì sao ông Bishop không theo quy ước của toán thống kê thông thường đó là viết hoa cho tên biến, viết thường (lowercase) cho giá trị biến (dù vẫn viết đậm với vector, viết nét thường với với giá trị biến), là vì ổng để dành chữ **X** hoa cho matrix.
+> Vậy thì quay lại đây, cũng y chang vậy. ta có random sample size N, mà mỗi sample là một D-dimensional RANDOM VECTOR **Xi** i=1,...N. Thành ra cả bộ random sample được thể hiện bởi một **MATRIX**: Tới đây mình có lẽ hiểu vì sao ông Bishop không theo quy ước của toán thống kê thông thường đó là viết hoa cho tên biến, viết thường (lowercase) cho giá trị biến (dù vẫn viết đậm với vector, viết nét thường với với giá trị biến), là vì ổng để dành chữ 𝐗 hoa cho matrix.
 >
 >
 >
-> Còn mình, vì theo cách kí hiệu chuẩn toán trong Casella, Stat110, trong đó viết **X** thì hiểu là vector, dẫn đến giờ muốn viết matrix X chứa các random vector **X1**, **X2**,....thì buộc phải mượn một font chữ khác, phải chú thích (hoặc tự hiểu).
+> Còn mình, vì theo cách kí hiệu chuẩn toán trong Casella, Stat110, trong đó viết 𝐗 thì hiểu là vector, dẫn đến giờ muốn viết matrix X chứa các random vector **X1**, **X2**,....thì buộc phải mượn một font chữ khác, phải chú thích (hoặc tự hiểu).
 >
 >
 >
@@ -38,25 +38,25 @@
 >
 >
 >
-> Và do đó, ta sẽ giải bài toán: maximize\_(**μ**, **Σ**) L((**μ**, **Σ**)|**x**) với **x**, là observed value của matrix **X** nói trên.
+> Và do đó, ta sẽ giải bài toán: maximize\_(**μ**, **Σ**) L((**μ**, **Σ**)|𝐱) với 𝐱, là observed value của matrix 𝐗 nói trên.
 >
 >
 >
-> Thế thì, đầu tiên phải xây dựng hàm likelihood L((**μ**, **Σ**)|**x**): Theo định nghĩa đã ôn lại vừa nãy,
+> Thế thì, đầu tiên phải xây dựng hàm likelihood L((**μ**, **Σ**)|𝐱): Theo định nghĩa đã ôn lại vừa nãy,
 >
 > vì dễ sai nên cần nói lại:
 >
 >
 >
-> Với random sample là vector **X**, tạo bởi các single variable X1,...Xn độc lập, có chung distribution với pdf f(x|θ), khi đó joint pdf của X1,...Xn (cũng là pdf của random vector **X**) là, f(**x**|θ). Và định nghĩa của likelihood là: L(θ|**x**) = f(**x**|θ), tức là joint pdf của mọi random sample, tại observed value **x** của **X**, và vì tính iid, nên joint pdf f(**x**|θ) tách thành Πi=1:n f(**xi**|θ), nên bài toán tìm mle lúc này là: maximize\_θ Πi=1:n f(**xi**|θ)
+> Với random sample là vector 𝐗, tạo bởi các single variable X1,...Xn độc lập, có chung distribution với pdf f(x|θ), khi đó joint pdf của X1,...Xn (cũng là pdf của random vector 𝐗) là, f(𝐱|θ). Và định nghĩa của likelihood là: L(θ|𝐱) = f(𝐱|θ), tức là joint pdf của mọi random sample, tại observed value 𝐱 của 𝐗, và vì tính iid, nên joint pdf f(𝐱|θ) tách thành Πi=1:n f(**xi**|θ), nên bài toán tìm mle lúc này là: maximize\_θ Πi=1:n f(**xi**|θ)
 >
 >
 >
-> Nhưng ở đây, mỗi một sample trong N sample, là một random vector (**X1**,...**XN** đều là random vector) có pdf là f(**x**|**μ**, **Σ**). Thì gom chúng lại, ta có random sample là **matrix X**, và joint pdf của chúng, ta phải kí hiệu là f(**matrix x** | **μ**, **Σ**) để phân biệt với f(**x**|**μ**, **Σ**), nhưng vì tính iid, ta cũng tách nó thành tích các marginal pdf: f(**matrix x** | **μ**, **Σ**) = Πi=1:N f(**xi**|**μ**, **Σ**)
+> Nhưng ở đây, mỗi một sample trong N sample, là một random vector (**X1**,...**XN** đều là random vector) có pdf là f(𝐱|**μ**, **Σ**). Thì gom chúng lại, ta có random sample là **matrix X**, và joint pdf của chúng, ta phải kí hiệu là f(**matrix x** | **μ**, **Σ**) để phân biệt với f(𝐱|**μ**, **Σ**), nhưng vì tính iid, ta cũng tách nó thành tích các marginal pdf: f(**matrix x** | **μ**, **Σ**) = Πi=1:N f(**xi**|**μ**, **Σ**)
 >
 >
 >
-> và L((**μ**, **Σ**)|**x**), độ hợp lí của (**μ**, **Σ**) khi quan sát thấy **matrix** **X** = **matrix** **x**, sẽ được define bởi giá trị của joint pdf của random sample trong trường hợp matrix **X** tại **x**: f(**matrix** **x**|(**μ**, **Σ**)) = Πi=1:N f(**xi**|**μ**, **Σ**).
+> và L((**μ**, **Σ**)|𝐱), độ hợp lí của (**μ**, **Σ**) khi quan sát thấy **matrix** 𝐗 = **matrix** 𝐱, sẽ được define bởi giá trị của joint pdf của random sample trong trường hợp matrix 𝐗 tại 𝐱: f(**matrix** 𝐱|(**μ**, **Σ**)) = Πi=1:N f(**xi**|**μ**, **Σ**).
 >
 >
 >
@@ -68,11 +68,11 @@
 >
 >
 >
-> f(**x**|(**μ**, **Σ**)) = \[1/(2π)^(D/2)\] \[1/|**Σ**|^1/2\] exp\[-1/2(**x**-**μ**)T **Σ**inv(**x**-**μ**)\]
+> f(𝐱|(**μ**, **Σ**)) = \[1/(2π)^(D/2)\] \[1/|**Σ**|^1/2\] exp\[-1/2(𝐱-**μ**)ᵀ **Σ**inv(𝐱-**μ**)\]
 >
 >
 >
-> ⇨  f(**xi**|(**μ**, **Σ**)) = \[1/(2π)^(D/2)\] \[1/|**Σ**|^1/2\] exp\[-1/2(**xi**-**μ**)T **Σ**inv(**xi**-**μ**)\]
+> ⇨  f(**xi**|(**μ**, **Σ**)) = \[1/(2π)^(D/2)\] \[1/|**Σ**|^1/2\] exp\[-1/2(**xi**-**μ**)ᵀ **Σ**inv(**xi**-**μ**)\]
 >
 >
 >
@@ -80,7 +80,7 @@
 >
 >
 >
-> maximize\_(over (**μ**, **Σ**)) {Πi=1:N \[1/(2π)^(D/2)\] \[1/|**Σ**|^1/2\] exp\[-1/2(**xi**-**μ**)T **Σ**inv(**xi**-**μ**)\]}
+> maximize\_(over (**μ**, **Σ**)) {Πi=1:N \[1/(2π)^(D/2)\] \[1/|**Σ**|^1/2\] exp\[-1/2(**xi**-**μ**)ᵀ **Σ**inv(**xi**-**μ**)\]}
 >
 >
 >
@@ -88,7 +88,7 @@
 >
 >
 >
-> maximize\_(over (**μ**, **Σ**)) log {Πi=1:N \[1/(2π)^(D/2)\] \[1/|**Σ**|^1/2\] exp\[-1/2(**xi**-**μ**)T **Σ**inv(**xi**-**μ**)\]} 
+> maximize\_(over (**μ**, **Σ**)) log {Πi=1:N \[1/(2π)^(D/2)\] \[1/|**Σ**|^1/2\] exp\[-1/2(**xi**-**μ**)ᵀ **Σ**inv(**xi**-**μ**)\]} 
 >
 >
 >
@@ -96,15 +96,15 @@
 >
 >
 >
-> log {Πi=1:N \[1/(2π)^(D/2)\] \[1/|**Σ**|^1/2\] exp\[-1/2(**xi**-**μ**)T **Σ**inv(**xi**-**μ**)\]} 
+> log {Πi=1:N \[1/(2π)^(D/2)\] \[1/|**Σ**|^1/2\] exp\[-1/2(**xi**-**μ**)ᵀ **Σ**inv(**xi**-**μ**)\]} 
 >
 >
 >
-> = log {Πi=1:N \[1/(2π)^(D/2)\] × Πi=1:N \[1/|**Σ**|^1/2\] × Πi=1:N exp\[-1/2(**xi**-**μ**)T **Σ**inv(**xi**-**μ**)\]} 
+> = log {Πi=1:N \[1/(2π)^(D/2)\] × Πi=1:N \[1/|**Σ**|^1/2\] × Πi=1:N exp\[-1/2(**xi**-**μ**)ᵀ **Σ**inv(**xi**-**μ**)\]} 
 >
 >
 >
-> = log {Πi=1:N \[1/(2π)^(D/2)\]} + log {Πi=1:N \[1/|**Σ**|^1/2\]} + log {Πi=1:N exp\[-1/2(**xi**-**μ**)T **Σ**inv(**xi**-**μ**)\]} 
+> = log {Πi=1:N \[1/(2π)^(D/2)\]} + log {Πi=1:N \[1/|**Σ**|^1/2\]} + log {Πi=1:N exp\[-1/2(**xi**-**μ**)ᵀ **Σ**inv(**xi**-**μ**)\]} 
 >
 >
 >
@@ -152,23 +152,23 @@
 >
 >
 >
-> Term thứ ba: log {Πi=1:N exp\[-1/2(**xi**-**μ**)T **Σ**inv(**xi**-**μ**)\]} 
+> Term thứ ba: log {Πi=1:N exp\[-1/2(**xi**-**μ**)ᵀ **Σ**inv(**xi**-**μ**)\]} 
 >
 >
 >
-> = Σi=1:N {log exp\[-1/2(**xi**-**μ**)T **Σ**inv(**xi**-**μ**)\]} 
+> = Σi=1:N {log exp\[-1/2(**xi**-**μ**)ᵀ **Σ**inv(**xi**-**μ**)\]} 
 >
 >
 >
-> = Σi=1:N {-1/2(**xi**-**μ**)T **Σ**inv(**xi**-**μ**)} 
+> = Σi=1:N {-1/2(**xi**-**μ**)ᵀ **Σ**inv(**xi**-**μ**)} 
 >
 >
 >
-> = -(1/2) Σi=1:N {(**xi**-**μ**)T **Σ**inv(**xi**-**μ**)} 
+> = -(1/2) Σi=1:N {(**xi**-**μ**)ᵀ **Σ**inv(**xi**-**μ**)} 
 >
 >
 >
-> = -(1/2) Σi=1:N {(**xi**-**μ**)T **Σ**inv(**xi**-**μ**)} 
+> = -(1/2) Σi=1:N {(**xi**-**μ**)ᵀ **Σ**inv(**xi**-**μ**)} 
 >
 >
 >
@@ -176,7 +176,7 @@
 >
 >
 >
-> maximize\_(over (**μ**, **Σ**)) {(-ND/2) log (2π) -(N/2) log |**Σ**|-(1/2) Σi=1:N {(**xi**-**μ**)T **Σ**inv(**xi**-**μ**)}  → objective này chính là công thức 2.118
+> maximize\_(over (**μ**, **Σ**)) {(-ND/2) log (2π) -(N/2) log |**Σ**|-(1/2) Σi=1:N {(**xi**-**μ**)ᵀ **Σ**inv(**xi**-**μ**)}  → objective này chính là công thức 2.118
 >
 >
 >
@@ -184,35 +184,35 @@
 >
 >
 >
-> maximize\_(over (**μ**, **Σ**)) {-(N/2) log |**Σ**| -(1/2) Σi=1:N {(**xi**-**μ**)T **Σ**inv(**xi**-**μ**)}
+> maximize\_(over (**μ**, **Σ**)) {-(N/2) log |**Σ**| -(1/2) Σi=1:N {(**xi**-**μ**)ᵀ **Σ**inv(**xi**-**μ**)}
 >
 >
 >
-> Biến đổi sắp xếp tiếp cái cục Σi=1:N {(**xi**-**μ**)T **Σ**inv(**xi**-**μ**)}:
+> Biến đổi sắp xếp tiếp cái cục Σi=1:N {(**xi**-**μ**)ᵀ **Σ**inv(**xi**-**μ**)}:
 >
 >
 >
-> = Σi=1:N {**xi**T**Σ**inv**xi** - **μ**T**Σ**inv**xi** - **xi**T**Σ**inv**μ** + **μ**T**Σ**inv**μ**}
+> = Σi=1:N {**xi**ᵀ**Σ**inv**xi** - **μ**ᵀ**Σ**inv**xi** - **xi**ᵀ**Σ**inv**μ** + **μ**ᵀ**Σ**inv**μ**}
 >
 >
 >
-> = Σi=1:N {**xi**T**Σ**inv**xi** - 2**μ**T**Σ**inv**xi** + **μ**T**Σ**inv**μ**}
+> = Σi=1:N {**xi**ᵀ**Σ**inv**xi** - 2**μ**ᵀ**Σ**inv**xi** + **μ**ᵀ**Σ**inv**μ**}
 >
 >
 >
-> = Σi=1:N {**xi**T**Σ**inv**xi**} - Σi=1:N{2**μ**T**Σ**inv**xi**} + Σi=1:N{**μ**T**Σ**inv**μ**}
+> = Σi=1:N {**xi**ᵀ**Σ**inv**xi**} - Σi=1:N{2**μ**ᵀ**Σ**inv**xi**} + Σi=1:N{**μ**ᵀ**Σ**inv**μ**}
 >
 >
 >
-> = Σi=1:N {**xi**T**Σ**inv**xi**} - 2**μ**T**Σ**invΣi=1:N{**xi**} + Σi=1:N{**μ**T**Σ**inv**μ**}
+> = Σi=1:N {**xi**ᵀ**Σ**inv**xi**} - 2**μ**ᵀ**Σ**invΣi=1:N{**xi**} + Σi=1:N{**μ**ᵀ**Σ**inv**μ**}
 >
 >
 >
-> ⇨ -(1/2) Σi=1:N {(**xi**-**μ**)T **Σ**inv(**xi**-**μ**)}
+> ⇨ -(1/2) Σi=1:N {(**xi**-**μ**)ᵀ **Σ**inv(**xi**-**μ**)}
 >
 >
 >
-> = -(1/2) Σi=1:N {**xi**T**Σ**inv**xi**} + **μ**T**Σ**invΣi=1:N{**xi**} -(1/2) Σi=1:N{**μ**T**Σ**inv**μ**}
+> = -(1/2) Σi=1:N {**xi**ᵀ**Σ**inv**xi**} + **μ**ᵀ**Σ**invΣi=1:N{**xi**} -(1/2) Σi=1:N{**μ**ᵀ**Σ**inv**μ**}
 >
 >
 >
@@ -220,23 +220,23 @@
 >
 >
 >
-> maximize\_(over (**μ**, **Σ**)) {-(N/2) log |**Σ**| -(1/2) Σi=1:N {**xi**T**Σ**inv**xi**} + **μ**T**Σ**inv Σi=1:N{**xi**} -(1/2) Σi=1:N{**μ**T**Σ**inv**μ**
+> maximize\_(over (**μ**, **Σ**)) {-(N/2) log |**Σ**| -(1/2) Σi=1:N {**xi**ᵀ**Σ**inv**xi**} + **μ**ᵀ**Σ**inv Σi=1:N{**xi**} -(1/2) Σi=1:N{**μ**ᵀ**Σ**inv**μ**
 >
 >
 >
-> Tới đây, ta có thể làm rõ vì sao gs Bishop nói: "**we see that the likelihood function depends on the data set only through the two quantities** Σn=1:N **x**n, và Σn=1:N **x**n**x**nT", là vì:
+> Tới đây, ta có thể làm rõ vì sao gs Bishop nói: "**we see that the likelihood function depends on the data set only through the two quantities** Σn=1:N 𝐱n, và Σn=1:N 𝐱n𝐱nᵀ", là vì:
 >
 >
 >
-> nhìn vào những chỗ có x: term thứ hai: -(1/2) Σi=1:N {**xi**T**Σ**inv**xi**}, thì bỏ qua cái -1/2, thì cái tổng chính là gì? Nhờ MIT 18.06 ta sẽ xem nó là cái gì:
+> nhìn vào những chỗ có x: term thứ hai: -(1/2) Σi=1:N {**xi**ᵀ**Σ**inv**xi**}, thì bỏ qua cái -1/2, thì cái tổng chính là gì? Nhờ MIT 18.06 ta sẽ xem nó là cái gì:
 >
 >
 >
-> Đầu tiên, **xi**, nên nhắc lại, là giá trị của vector **Xi**, chủ yếu muốn nhấn mạnh đây là vector. Do đó **xi**T**Σ**inv**xi** là quadratic form của **Σ**inv, và nó là một scalar. Với scalar a ta sẽ dùng tính chất: a = tr(a) (trace a):
+> Đầu tiên, **xi**, nên nhắc lại, là giá trị của vector **Xi**, chủ yếu muốn nhấn mạnh đây là vector. Do đó **xi**ᵀ**Σ**inv**xi** là quadratic form của **Σ**inv, và nó là một scalar. Với scalar a ta sẽ dùng tính chất: a = tr(a) (trace a):
 >
 >
 >
-> **xi**T**Σ**inv**xi** = tr(**xi**T**Σ**inv**xi**)
+> **xi**ᵀ**Σ**inv**xi** = tr(**xi**ᵀ**Σ**inv**xi**)
 >
 >
 >
@@ -244,11 +244,11 @@
 >
 >
 >
-> ..= tr(**Σ**inv**xixi**T)
+> ..= tr(**Σ**inv**xixi**ᵀ)
 >
 >
 >
-> ⇨ Σi=1:N {**xi**T**Σ**inv**xi**} = Σi=1:N { tr(**Σ**inv**xixi**T) }
+> ⇨ Σi=1:N {**xi**ᵀ**Σ**inv**xi**} = Σi=1:N { tr(**Σ**inv**xixi**ᵀ) }
 >
 >
 >
@@ -256,7 +256,7 @@
 >
 >
 >
-> .. = tr(Σi=1:N {**Σ**inv**xixi**T})
+> .. = tr(Σi=1:N {**Σ**inv**xixi**ᵀ})
 >
 >
 >
@@ -264,7 +264,7 @@
 >
 >
 >
-> = tr(**Σ**inv Σi=1:N{**xixi**T})
+> = tr(**Σ**inv Σi=1:N{**xixi**ᵀ})
 >
 >
 >
@@ -272,19 +272,19 @@
 >
 >
 >
-> maximize\_(over (**μ**, **Σ**)) {-(N/2) log |**Σ**| -(1/2) tr(**Σ**inv Σi=1:N{**xixi**T}) + **μ**T**Σ**inv Σi=1:N{**xi**} -(1/2) Σi=1:N{**μ**T**Σ**inv**μ**
+> maximize\_(over (**μ**, **Σ**)) {-(N/2) log |**Σ**| -(1/2) tr(**Σ**inv Σi=1:N{**xixi**ᵀ}) + **μ**ᵀ**Σ**inv Σi=1:N{**xi**} -(1/2) Σi=1:N{**μ**ᵀ**Σ**inv**μ**
 >
 >
 >
-> Như vậy rõ ràng objective, (log likelihood) phụ thuộc vào các vector xi ở:  cụm Σi=1:N{**xixi**T} và cụm Σi=1:N{**xi**} → đây chính là điều gs nói ở 2.119
+> Như vậy rõ ràng objective, (log likelihood) phụ thuộc vào các vector xi ở:  cụm Σi=1:N{**xixi**ᵀ} và cụm Σi=1:N{**xi**} → đây chính là điều gs nói ở 2.119
 >
 >
 >
-> Có thể biến đổi thêm thêm tí ở cái term thứ 3: nhận ra Σi=1:N{**xixi**T}, là tổng của các rank 1 matrix, theo góc nhìn thứ 4 của việc nhân hai matrix, đây chính là tích của hai matrix: matrix thứ nhất có các cột là các vector **xi** (có thể thấy, đây chính là \[**matrix X**\]T) và matrix thứ hai có các hàng là các vector **xiT** (đây chính là \[**matrix X**\]).
+> Có thể biến đổi thêm thêm tí ở cái term thứ 3: nhận ra Σi=1:N{**xixi**ᵀ}, là tổng của các rank 1 matrix, theo góc nhìn thứ 4 của việc nhân hai matrix, đây chính là tích của hai matrix: matrix thứ nhất có các cột là các vector **xi** (có thể thấy, đây chính là \[**matrix X**\]ᵀ) và matrix thứ hai có các hàng là các vector **xiᵀ** (đây chính là \[**matrix X**\]).
 >
 >
 >
-> Vậy tr(**Σ**inv Σi=1:N{**xixi**T}) = tr(**Σ**inv \[**matrix X**\]T\[**matrix X**\]}), đặt matrix **G** là \[**matrix X**\]T\[**matrix X**\], G mình cố tình chọn, là vì ta còn nhớ trong MIT 1806, matrix ATA (A transposed nhân A) có tên gọi là Gram matrix. Thì cái cụm này là tr(**Σ**inv **G**).
+> Vậy tr(**Σ**inv Σi=1:N{**xixi**ᵀ}) = tr(**Σ**inv \[**matrix X**\]ᵀ\[**matrix X**\]}), đặt matrix 𝐆 là \[**matrix X**\]ᵀ\[**matrix X**\], G mình cố tình chọn, là vì ta còn nhớ trong MIT 1806, matrix AᵀA (A transposed nhân A) có tên gọi là Gram matrix. Thì cái cụm này là tr(**Σ**inv 𝐆).
 >
 >
 >
@@ -296,7 +296,7 @@
 >
 >
 >
-> Vì sao? Dựa vào việc đã học Casella, mình có thể hiểu ý này. Còn nhớ, trong chap 6 của Casella, sufficient statistic được định nghĩa statistic mà giá trị của nó đã phản ánh đủ thông tin giúp suy luận ra θ chứa trong **X** rồi, nói nôm na là, khi đã biết **T**=**t**, thì dù không biết **X** bằng bao nhiêu, ta vẫn có đủ thông tin để suy luận ra θ, y như việc biết **X**=**x** . Và có một theorem giúp tìm ra sufficient statistic đó là Factorization theorem, nói rằng, nếu pdf f(**x**|θ) có thể được tách thành tích của g(T(**x**)|θ) h(**x**), tức là một hàm phụ thuộc **x** không phụ thuộc θ, và một hàm phụ thuộc cả **x** và θ nhưng chỉ phụ thuộc **x** thông qua hàm T(**x**), thì khi đó, T(**X**) chính là một sufficient statistic.
+> Vì sao? Dựa vào việc đã học Casella, mình có thể hiểu ý này. Còn nhớ, trong chap 6 của Casella, sufficient statistic được định nghĩa statistic mà giá trị của nó đã phản ánh đủ thông tin giúp suy luận ra θ chứa trong 𝐗 rồi, nói nôm na là, khi đã biết 𝐓=𝐭, thì dù không biết 𝐗 bằng bao nhiêu, ta vẫn có đủ thông tin để suy luận ra θ, y như việc biết 𝐗=𝐱 . Và có một theorem giúp tìm ra sufficient statistic đó là Factorization theorem, nói rằng, nếu pdf f(𝐱|θ) có thể được tách thành tích của g(T(𝐱)|θ) h(𝐱), tức là một hàm phụ thuộc 𝐱 không phụ thuộc θ, và một hàm phụ thuộc cả 𝐱 và θ nhưng chỉ phụ thuộc 𝐱 thông qua hàm T(𝐱), thì khi đó, T(𝐗) chính là một sufficient statistic.
 >
 >
 >
@@ -304,11 +304,11 @@
 >
 >
 >
-> = -(N/2) log |**Σ**| -(1/2) tr(**Σ**inv Σi=1:N{**xixi**T}) + **μ**T**Σ**inv Σi=1:N{**xi**} -(1/2) Σi=1:N{**μ**T**Σ**inv**μ**
+> = -(N/2) log |**Σ**| -(1/2) tr(**Σ**inv Σi=1:N{**xixi**ᵀ}) + **μ**ᵀ**Σ**inv Σi=1:N{**xi**} -(1/2) Σi=1:N{**μ**ᵀ**Σ**inv**μ**
 >
 >
 >
-> Đặt T1(**x1,..xN**) = Σi=1:N{**xixi**T, và T2(**x1,..xN**) = Σi=1:N{**xi**}, thì có thể thấy log likelihood hiện tại nó có dạng g1(**Σ**) + g2(T1(**x1,..xN**), **Σ**) + g3( **μ**, T2(**x1,..xN**))
+> Đặt T1(**x1,..xN**) = Σi=1:N{**xixi**ᵀ, và T2(**x1,..xN**) = Σi=1:N{**xi**}, thì có thể thấy log likelihood hiện tại nó có dạng g1(**Σ**) + g2(T1(**x1,..xN**), **Σ**) + g3( **μ**, T2(**x1,..xN**))
 >
 >
 >
@@ -316,7 +316,7 @@
 >
 >
 >
-> Để rồi, nếu coi h(**x1**,**x2**,...) = 1, thì joint pdf của **X**1,..**X**N, cũng là likelihood, chính là tích của g(T1,T2,**μ**,**Σ**)h(**x1**,**x2**,...), và theo factorization theorem, vector T(**x1,..xN**) = (T1(**x1,..xN**), T2(**x1,..xN**)) **CHÍNH LÀ SUFFICIENT STATISTIC.**
+> Để rồi, nếu coi h(**x1**,**x2**,...) = 1, thì joint pdf của 𝐗1,..𝐗N, cũng là likelihood, chính là tích của g(T1,T2,**μ**,**Σ**)h(**x1**,**x2**,...), và theo factorization theorem, vector T(**x1,..xN**) = (T1(**x1,..xN**), T2(**x1,..xN**)) **CHÍNH LÀ SUFFICIENT STATISTIC.**
 >
 >
 >
@@ -340,19 +340,19 @@
 >
 >
 >
-> maximize\_(over (**μ**, **Σ**)) {-(N/2) log |**Σ**| -(1/2) tr(**Σ**inv Σi=1:N{**xixi**T}) + **μ**T**Σ**inv Σi=1:N{**xi**} -(1/2) Σi=1:N{**μ**T**Σ**inv**μ**}
+> maximize\_(over (**μ**, **Σ**)) {-(N/2) log |**Σ**| -(1/2) tr(**Σ**inv Σi=1:N{**xixi**ᵀ}) + **μ**ᵀ**Σ**inv Σi=1:N{**xi**} -(1/2) Σi=1:N{**μ**ᵀ**Σ**inv**μ**}
 >
 >
 >
-> thay cái cụm thứ 2 bởi dạng thể hiện với matrix Gram cho gọn tr(**Σ**inv **G**)
+> thay cái cụm thứ 2 bởi dạng thể hiện với matrix Gram cho gọn tr(**Σ**inv 𝐆)
 >
 >
 >
-> maximize\_(over (**μ**, **Σ**)) {-(N/2) log |**Σ**| -(1/2) tr(**Σ**inv **G**) + **μ**T**Σ**inv Σi=1:N{**xi**}
+> maximize\_(over (**μ**, **Σ**)) {-(N/2) log |**Σ**| -(1/2) tr(**Σ**inv 𝐆) + **μ**ᵀ**Σ**inv Σi=1:N{**xi**}
 >
 >
 >
-> maximize\_(over (**μ**, **Σ**)) {-(N/2) log |**Σ**| -(1/2) tr(**Σ**inv **G**) + **μ**T**Σ**inv Σi=1:N{**xi**} -(1/2) Σi=1:N{**μ**T**Σ**inv**μ**}
+> maximize\_(over (**μ**, **Σ**)) {-(N/2) log |**Σ**| -(1/2) tr(**Σ**inv 𝐆) + **μ**ᵀ**Σ**inv Σi=1:N{**xi**} -(1/2) Σi=1:N{**μ**ᵀ**Σ**inv**μ**}
 >
 >
 >
@@ -368,27 +368,27 @@
 >
 >
 >
-> ∇\_**μ** \[objective\], = ∇\_**μ** \[{-(N/2) log |**Σ**| -(1/2) tr(**Σ**inv **G**) + **μ**T**Σ**inv Σi=1:N{**xi**} -(1/2) Σi=1:N{**μ**T**Σ**inv**μ**}}
+> ∇\_**μ** \[objective\], = ∇\_**μ** \[{-(N/2) log |**Σ**| -(1/2) tr(**Σ**inv 𝐆) + **μ**ᵀ**Σ**inv Σi=1:N{**xi**} -(1/2) Σi=1:N{**μ**ᵀ**Σ**inv**μ**}}
 >
 >
 >
-> = ∇\_**μ** \[**μ**T**Σ**inv Σi=1:N{**xi**} - (1/2) Σi=1:N{**μ**T**Σ**inv**μ**}\] (hai term đầu ko dính tới **μ**, nên đạo hàm = 0)
+> = ∇\_**μ** \[**μ**ᵀ**Σ**inv Σi=1:N{**xi**} - (1/2) Σi=1:N{**μ**ᵀ**Σ**inv**μ**}\] (hai term đầu ko dính tới **μ**, nên đạo hàm = 0)
 >
 >
 >
-> = ∇\_**μ** \[**μ**T**Σ**inv Σi=1:N{**xi**} - (1/2) Σi=1:N{**μ**T**Σ**inv**μ**}\]
+> = ∇\_**μ** \[**μ**ᵀ**Σ**inv Σi=1:N{**xi**} - (1/2) Σi=1:N{**μ**ᵀ**Σ**inv**μ**}\]
 >
 >
 >
-> Nguyên cục **Σ**inv Σi=1:N{**xi**} này, thật ra chỉ là một vector, đặt là **u**, thì **μ**T**Σ**inv Σi=1:N{**xi**} = **μ**T**u** ⇨ đạo hàm đối với **μ** của **μ**T**u**, dễ thấy, chính là = **u**.
+> Nguyên cục **Σ**inv Σi=1:N{**xi**} này, thật ra chỉ là một vector, đặt là 𝐮, thì **μ**ᵀ**Σ**inv Σi=1:N{**xi**} = **μ**ᵀ𝐮 ⇨ đạo hàm đối với **μ** của **μ**ᵀ𝐮, dễ thấy, chính là = 𝐮.
 >
 >
 >
-> Còn cục thứ hai: -(1/2) Σi=1:N {**μ**T**Σ**inv**μ**} = -(N/2) **μ**T**Σ**inv**μ**, đạo hàm theo **μ** chính là -N **Σ**inv **μ**
+> Còn cục thứ hai: -(1/2) Σi=1:N {**μ**ᵀ**Σ**inv**μ**} = -(N/2) **μ**ᵀ**Σ**inv**μ**, đạo hàm theo **μ** chính là -N **Σ**inv **μ**
 >
 >
 >
-> (nhờ MIT 18s096, với f(x) = xTPx + qTx với P đối xứng mình nhớ ∇f(x) = (1/2) Px + q, cũng ko khó để derive)
+> (nhờ MIT 18s096, với f(x) = xᵀPx + qᵀx với P đối xứng mình nhớ ∇f(x) = (1/2) Px + q, cũng ko khó để derive)
 >
 >
 >
@@ -455,11 +455,11 @@
 <p align="center"><kbd><img src="assets/p3qbakh5888.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cuối cùng, là một cái mà mình đã biết từ Casella, đó là, với một estimator W(**X**) nào đó của θ, thì Bias(W(**X**)) được define bởi E\_θ\[W(**X**) - θ\], theo tính linearity, = E\_θ\[W(**X**)\] - θ, để rồi, nếu bias = 0, thì ta có một unbiased estimator của θ.
+> Cuối cùng, là một cái mà mình đã biết từ Casella, đó là, với một estimator W(𝐗) nào đó của θ, thì Bias(W(𝐗)) được define bởi E\_θ\[W(𝐗) - θ\], theo tính linearity, = E\_θ\[W(𝐗)\] - θ, để rồi, nếu bias = 0, thì ta có một unbiased estimator của θ.
 >
 >
 >
-> Còn nhớ, trong Casella, mình cũng đã thấy, sample mean Xbar = (Σi Xi)/n là unbiased estimator của population mean, còn sample variance S^2 = (1/n) Σi (Xi-EX)^2 lại là biased estimator của population variance σ^2.
+> Còn nhớ, trong Casella, mình cũng đã thấy, sample mean Xbar = (Σi Xi)/n là unbiased estimator của population mean, còn sample variance S² = (1/n) Σi (Xi-EX)² lại là biased estimator của population variance σ².
 >
 >
 >
@@ -475,75 +475,75 @@
 >
 >
 >
-> Còn E\[**Σ**^ml\] = E\[(1/N) Σi=1:N (**Xi** - **μ**^ml)(**Xi** - **μ**^ml)T\]
+> Còn E\[**Σ**^ml\] = E\[(1/N) Σi=1:N (**Xi** - **μ**^ml)(**Xi** - **μ**^ml)ᵀ\]
 >
 >
 >
-> = (1/N) Σi=1:N E\[(**Xi** - **μ**^ml)(**Xi** - **μ**^ml)T\] (dùng tính linearity của kì vọng)
+> = (1/N) Σi=1:N E\[(**Xi** - **μ**^ml)(**Xi** - **μ**^ml)ᵀ\] (dùng tính linearity của kì vọng)
 >
 >
 >
-> = (1/N) Σi=1:N E\[(**Xi** - **μ** + **μ** - **μ**^ml)(**Xi** - **μ** + **μ** - **μ**^ml)T\]
+> = (1/N) Σi=1:N E\[(**Xi** - **μ** + **μ** - **μ**^ml)(**Xi** - **μ** + **μ** - **μ**^ml)ᵀ\]
 >
 >
 >
-> = (1/N) Σi=1:N E{\[(**Xi** - **μ**) + (**μ** - **μ**^ml)\]\[(**Xi** - **μ**) + (**μ** - **μ**^ml)\]T}
+> = (1/N) Σi=1:N E{\[(**Xi** - **μ**) + (**μ** - **μ**^ml)\]\[(**Xi** - **μ**) + (**μ** - **μ**^ml)\]ᵀ}
 >
 >
 >
-> = (1/N) Σi=1:N E{\[(**Xi** - **μ**) + (**μ** - **μ**^ml)\]\[(**Xi** - **μ**)T + (**μ** - **μ**^ml)T\]}
+> = (1/N) Σi=1:N E{\[(**Xi** - **μ**) + (**μ** - **μ**^ml)\]\[(**Xi** - **μ**)ᵀ + (**μ** - **μ**^ml)ᵀ\]}
 >
 >
 >
-> = (1/N) Σi=1:N E\[(**Xi** - **μ**)(**Xi** - **μ**)T + (**μ** - **μ**^ml)(**Xi** - **μ**)T + (**Xi** - **μ**)(**μ** - **μ**^ml)T + (**μ** - **μ**^ml)(**μ** - **μ**^ml)T\]
+> = (1/N) Σi=1:N E\[(**Xi** - **μ**)(**Xi** - **μ**)ᵀ + (**μ** - **μ**^ml)(**Xi** - **μ**)ᵀ + (**Xi** - **μ**)(**μ** - **μ**^ml)ᵀ + (**μ** - **μ**^ml)(**μ** - **μ**^ml)ᵀ\]
 >
 >
 >
-> = (1/N) Σi E\[(**Xi** - **μ**)(**Xi** - **μ**)T\] +
+> = (1/N) Σi E\[(**Xi** - **μ**)(**Xi** - **μ**)ᵀ\] +
 >
 >
 >
-> (1/N) Σi E\[(**μ** - **μ**^ml)(**Xi** - **μ**)T\] +
+> (1/N) Σi E\[(**μ** - **μ**^ml)(**Xi** - **μ**)ᵀ\] +
 >
 >
 >
-> (1/N) Σi E\[(**Xi** - **μ**)(**μ** - **μ**^ml)T\] +
+> (1/N) Σi E\[(**Xi** - **μ**)(**μ** - **μ**^ml)ᵀ\] +
 >
 >
 >
-> (1/N) Σi E\[(**μ** - **μ**^ml)(**μ** - **μ**^ml)T\]
+> (1/N) Σi E\[(**μ** - **μ**^ml)(**μ** - **μ**^ml)ᵀ\]
 >
 >
 >
->  Xét term thứ 2: (1/N) Σi E\[(**μ** - **μ**^ml)(**Xi** - **μ**)T\]
+>  Xét term thứ 2: (1/N) Σi E\[(**μ** - **μ**^ml)(**Xi** - **μ**)ᵀ\]
 >
 >
 >
-> = (1/N) E\[Σi (**μ** - **μ**^ml)(**Xi** - **μ**)T\]
+> = (1/N) E\[Σi (**μ** - **μ**^ml)(**Xi** - **μ**)ᵀ\]
 >
 >
 >
-> = (1/N) E\[(**μ** - **μ**^ml) Σi (**Xi** - **μ**)T\]
+> = (1/N) E\[(**μ** - **μ**^ml) Σi (**Xi** - **μ**)ᵀ\]
 >
 >
 >
-> = E\[(**μ** - **μ**^ml) ((1/N)Σi **Xi** - **μ**)T\] 
+> = E\[(**μ** - **μ**^ml) ((1/N)Σi **Xi** - **μ**)ᵀ\] 
 >
 >
 >
-> = E\[(**μ** - **μ**^ml) (**μ**^ml - **μ**)T\] 
+> = E\[(**μ** - **μ**^ml) (**μ**^ml - **μ**)ᵀ\] 
 >
 >
 >
-> Xét term thứ 3 (1/N) Σi E\[(**Xi** - **μ**)(**μ** - **μ**^ml)T\]
+> Xét term thứ 3 (1/N) Σi E\[(**Xi** - **μ**)(**μ** - **μ**^ml)ᵀ\]
 >
 >
 >
-> tương tự, sẽ ra - E\[(**μ** - **μ**^ml) (**μ**^ml - **μ**)T\]
+> tương tự, sẽ ra - E\[(**μ** - **μ**^ml) (**μ**^ml - **μ**)ᵀ\]
 >
 >
 >
-> Do đó chỉ còn (1/N) Σi E\[(**Xi** - **μ**)(**Xi** - **μ**)T\] + (1/N) Σi E\[(**μ** - **μ**^ml)(**μ** - **μ**^ml)T\]
+> Do đó chỉ còn (1/N) Σi E\[(**Xi** - **μ**)(**Xi** - **μ**)ᵀ\] + (1/N) Σi E\[(**μ** - **μ**^ml)(**μ** - **μ**^ml)ᵀ\]
 >
 >
 >
