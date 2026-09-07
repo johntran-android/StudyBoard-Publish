@@ -32,7 +32,7 @@
 >
 >
 >
-> Tuy nhiên v**ới Cⁿ vector**, điều này không đúng. Đơn cử một ví dụ trong C², vector u = \[1, i\] tức là hai phần tử của nó là 1 + 0*i và 0 + 1*i. Khi đó uᵀu sẽ là 1*1 + i*i = 1 + −1 (vì i² = -1) Khi đó uᵀu = 0, dù rằng rõ ràng chiều dài vector hoàn toàn không phải là bằng 0.
+> Tuy nhiên v**ới Cⁿ vector**, điều này không đúng. Đơn cử một ví dụ trong C², vector u = \[1, i\] tức là hai phần tử của nó là 1 + 0 × i và 0 + 1 × i. Khi đó uᵀu sẽ là 1 × 1 + i × i = 1 + −1 (vì i² = -1) Khi đó uᵀu = 0, dù rằng rõ ràng chiều dài vector hoàn toàn không phải là bằng 0.
 >
 >
 >
@@ -48,7 +48,7 @@
 
 > [!NOTE]
 > **Khi định nghĩa length** bằng **z_barᵀz**, thì nó trở thành 
-> đúng ví dụ **u_barᵀu** = 1*1 - i*i = 1 + 1 = 2
+> đúng ví dụ **u_barᵀu** = 1 × 1 - i × i = 1 + 1 = 2
 
 <br>
 
@@ -146,11 +146,11 @@
 >
 >
 > Dạng tổng quát của nó là thế này: phần tử thứ i, j là
-> **w^(i*j)** với **i, j bắt đầu từ 0 đến n-1**
+> **w^(i × j)** với **i, j bắt đầu từ 0 đến n-1**
 >
 >
 >
-> Ví dụ cột 1 (với j=0, i = 0,1,...) đương nhiên i*j = 0, thành
+> Ví dụ cột 1 (với j=0, i = 0,1,...) đương nhiên i × j = 0, thành
 > ra mọi component của cột 1 đều là w^0 = 1
 >
 >
@@ -177,7 +177,7 @@
 
 > [!NOTE]
 > Và trong đó w là một con số đặc biệt: **wⁿ = 1**, và
-> vì vậy w sẽ là **e^i*2π/n**. Note sau sẽ giải thích vì sao.
+> vì vậy w sẽ là **e^i × 2π/n**. Note sau sẽ giải thích vì sao.
 
 <br>
 
@@ -188,7 +188,7 @@
 > [!NOTE]
 > Thế thì với complex number ta nhớ là **có thể biểu diễn w
 > theo công thức Euler**: w = **e^iθ** và cũng bằng **cos(θ) +
-> i*sin(θ)** (Cần bổ sung kiến thức về complex number)
+> i × sin(θ)** (Cần bổ sung kiến thức về complex number)
 >
 >
 >
@@ -208,7 +208,7 @@
 >
 >
 >
-> ⇔ cos(α) + i*sin(α) = 1
+> ⇔ cos(α) + i × sin(α) = 1
 >
 >
 >
@@ -216,7 +216,7 @@
 >
 >
 >
-> Vậy **w = e^i*2π/n là công thức tổng quát của w**
+> Vậy **w = e^i × 2π/n là công thức tổng quát của w**
 >
 >
 >
@@ -246,15 +246,15 @@
 >
 >
 >
-> w = e^i*2π/n= e^i*2π/4 = **e^i*(π/2)** 
+> w = e^i × 2π/n= e^i × 2π/4 = **e^i*(π/2)** 
 >
 >
 >
-> Và lắp vào công thức e^i*θ = cosθ + i*sinθ ta có: 
+> Và lắp vào công thức e^i*θ = cosθ + i × sinθ ta có: 
 >
 >
 >
-> e^i*(π/2) = cos(π/2) + i*sin(π/2) = 0 + i*1 = **i**
+> e^i*(π/2) = cos(π/2) + i × sin(π/2) = 0 + i × 1 = **i**
 >
 >
 >
@@ -266,7 +266,7 @@
 >
 >
 >
-> thì rõ ràng i² = -1, i³ = i*i² = i(-1) = -i, i⁴ = i*i³ = i*(-i) 
+> thì rõ ràng i² = -1, i³ = i × i² = i(-1) = -i, i⁴ = i × i³ = i*(-i) 
 > = -i² = -(-1) = **1
 >
 >
@@ -290,7 +290,7 @@
 >
 >
 >
-> Còn cột 1 sẽ là: i^0 = **1**, i^1 = **i**, i² = **-1**, i³ = i*i² = **-i, 
+> Còn cột 1 sẽ là: i^0 = **1**, i^1 = **i**, i² = **-1**, i³ = i × i² = **-i, 
 > i⁴ = i²*i² = (-1)(-1) = 1...**
 >
 >
@@ -444,8 +444,8 @@
 >
 >
 >
-> Thành ra, nếu P có giá trị như hiện tại, p1x sẽ = 1*x1 + 0*x2
-> +.. 0*xn và kết qủa là x1, mang ý nghĩa là "P giữ nguyên,
+> Thành ra, nếu P có giá trị như hiện tại, p1x sẽ = 1 × x1 + 0 × x2
+> +.. 0 × xn và kết qủa là x1, mang ý nghĩa là "P giữ nguyên,
 > không động tới x1"
 >
 >
@@ -592,6 +592,8 @@
 
 <a id="node-mm2dyn7"></a>
 
+###### FFT Matrix Factorization Complexity
+
 <p align="center"><kbd><img src="assets/jm3ngfy9bcg.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/6vhjjb4b2d.png" width="80%"></kbd></p>
@@ -600,7 +602,7 @@
 
 > [!NOTE]
 > và điều này giúp ta tiếp tục thay vì tốn
-> 32² thì sẽ là 2*16² + 16
+> 32² thì sẽ là 2 × 16² + 16
 >
 > Tiếp tục áp dụng cách làm tương tự để factor
 > F32 ra nữa
@@ -623,7 +625,7 @@
 
 > [!NOTE]
 > Ví dụ với n = 1024 thì việc factoring đã giảm số tính
-> toán từ n**^2 (> 1 triệu)** xuống **chỉ còn 5*1024**, tức **giảm
+> toán từ n**^2 (> 1 triệu)** xuống **chỉ còn 5 × 1024**, tức **giảm
 > gần 200 lần**
 
 <br>
