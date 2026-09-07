@@ -21,20 +21,20 @@
 
 <a id="node-6a96qa7"></a>
 
+#### Projection Matrix Formula and Properties
+
 <p align="center"><kbd><img src="assets/aqub9celwln.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > gs đề nghị ta nghĩ về **2 extreme case**:
 >
 >
->
-> \- Nếuvector **b ĐÃ NẰM trong column space** thì khi
+> − Nếuvector **b ĐÃ NẰM trong column space** thì khi
 > project b lên column space của A (bằng projection matrix
 > P) đương nhiên sẽ c**hẳng thay đổi g**ì: **Pb = b**
 >
 >
->
-> \- Nếu vector **b VUÔNG GÓC VỚI cols space của A**,  thì
+> − Nếu vector **b VUÔNG GÓC VỚI cols space của A**,  thì
 > dễ thấy sau khi project, ta sẽ **chỉ còn zero vector**. (hình
 > dung vector b, và đường thẳng đi qua gốc (vì phải như vậy
 > mới là subspace, nhớ không) thì nếu vector b vuông góc
@@ -95,6 +95,8 @@
 
 <a id="node-kov66sh"></a>
 
+###### Orthogonal Projection onto Column Space
+
 <p align="center"><kbd><img src="assets/rpk5v1zr04l.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -125,8 +127,7 @@
 >
 >
 > Vậy ý nói, ngay từ định nghĩa đã cho thấy e thuộc left nullspace
-> để rồi khi project b lên C(A), để có p thuộc C(A) = Ax^, và e là b
-> \- p thì ta đã tách b thành 2 vector: một thuộc C(A) và một thuộc
+> để rồi khi project b lên C(A), để có p thuộc C(A) = Ax̂, và e là b− p thì ta đã tách b thành 2 vector: một thuộc C(A) và một thuộc
 > N(Aᵀ)
 
 <br>
@@ -194,7 +195,7 @@
 >
 >
 >
-> Để rồi ta **tìm solution của bài toán Ax^ = p** (vốn lúc này đã
+> Để rồi ta **tìm solution của bài toán Ax̂ = p** (vốn lúc này đã
 > có thể **solvable do p đã nằm trong C(A)**) thì solution đó là
 > một **solution của bài toán gần nhất** với bài toán đầu
 > không thể giải.
@@ -372,19 +373,20 @@
 >
 >
 >
-> THÌ KHI ĐÓ **SOLVE RA C, D (tức component của x^ khiến 
-> Ax^ = p)** THÌ ĐÓ CHÍNH LÀ HAI HỆ SỐ LÀM NÊN LINE CÓ 
+> THÌ KHI ĐÓ **SOLVE RA C, D (tức component của x̂ khiến 
+> Ax̂ = p)** THÌ ĐÓ CHÍNH LÀ HAI HỆ SỐ LÀM NÊN LINE CÓ 
 > ERROR NHỎ NHẤT
 
 <br>
 
 <a id="node-gpz01cc"></a>
 
+###### Projection Matrix and Normal Equations
+
 <p align="center"><kbd><img src="assets/dodhg9rciw.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, như đã biết từ bài trước, ta **đã có công thức của x^**
-> \- đương nhiên là **coeffs** của **linear combination các cols
+> Thế thì, như đã biết từ bài trước, ta **đã có công thức của x̂**− đương nhiên là **coeffs** của **linear combination các cols
 > của A** để **cho ra p** với **p là projection của b lên cols space
 > của A**
 >
@@ -402,7 +404,7 @@
 >
 > Đó là ta bắt đầu với việc vì **p là projection của b lên C(A)**
 > nên **p nằm trong cols space** của A nên **p là linear
-> combination của A's cols** (gọi x^ là vector coeff): **Ax^ = p**
+> combination của A's cols** (gọi x̂ là vector coeff): **Ax̂ = p**
 >
 >
 >
@@ -411,7 +413,7 @@
 >
 >
 >
-> ⇔ Aᵀ(b-Ax^) = 0 ⇔ **Aᵀb = AᵀAx^**
+> ⇔ Aᵀ(b-Ax̂) = 0 ⇔ **Aᵀb = AᵀAx̂**
 
 <br>
 
@@ -445,7 +447,7 @@
 >
 >
 >
-> Nói chung là AᵀAx^ = Aᵀb triển khai ra chính là hệ
+> Nói chung là AᵀAx̂ = Aᵀb triển khai ra chính là hệ
 > phương trình
 >
 >
@@ -504,7 +506,7 @@
 >
 >
 > Hay BẰNG VIỆC **PROJECT B LÊN C(A) ĐỂ CÓ p** VÀ
-> **GIẢI HỆ PHƯƠNG TRÌNH THAY THẾ Ax^ = p** thì solution
+> **GIẢI HỆ PHƯƠNG TRÌNH THAY THẾ Ax̂ = p** thì solution
 > chính là **best solution** - là hệ số của đường thẳng đi qua
 > **gần nhất** với các điểm b (giúp giảm tối thiểu square error)
 
@@ -540,6 +542,8 @@
 
 <a id="node-6eofzkb"></a>
 
+###### Orthogonal Projection Vector Decomposition
+
 <p align="center"><kbd><img src="assets/goj8exaj7c.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -547,16 +551,13 @@
 > e**:
 >
 >
->
-> \- Chúng **cộng lại bằng b**, cái này rõ rồi.
->
+> − Chúng **cộng lại bằng b**, cái này rõ rồi.
 >
 >
-> \- Chúng **orthogonal**: thử tính pᵀe = -7/36 + 20/36 -13/36 = 0
+> − Chúng **orthogonal**: thử tính pᵀe = -7/36 + 20/36 -13/36 = 0
 >
 >
->
-> \- Và **e cũng orthogonal với C(A)**. Ví dụ như thử tính dot
+> − Và **e cũng orthogonal với C(A)**. Ví dụ như thử tính dot
 > product của e với hai cols của A: (1, 1, 1) và (1, 2, 3)
 >
 >
@@ -596,7 +597,7 @@
 
 > [!NOTE]
 > đó là xong bài toán least square, ta chỉ
-> việc giải equation này để có x^
+> việc giải equation này để có x̂
 
 <br>
 
@@ -658,7 +659,7 @@
 >
 >
 > Và vì AᵀA là symmetric, mà lại có mọi cols đều là pivot
-> nữa tức là nó full rank -> invertible
+> nữa tức là nó full rank → invertible
 >
 >
 >
@@ -738,7 +739,7 @@
 >
 > Và điều này như nãy đã nói, **sẽ suy ra các cols của AᵀA
 > độc lập**, và nó lại là **square matrix** nên suy ra nó
-> **full rank -> invertible**
+> **full rank → invertible**
 
 **🔗 See also:** [Invertibility of Aᵀ A](./lecture_14_orthogonal_vectors_and_subspaces.md#node-3l4hkq3)
 
