@@ -214,7 +214,7 @@
 > dimensions của rowspace chính là rank, mà trong 3 row
 > vector, ta chỉ có  2 row vector độc lập nên basis của
 > rowspace chỉ có 2 vector, nên dimension của rowspace là 2
-> -> rank = 2)
+> → rank = 2)
 >
 >
 >
@@ -765,7 +765,7 @@
 >
 >
 > Thì điều này theo định nghĩa của nullspace của Aᵀ là mọi vector y khiến Aᵀy=0
-> tương đương mọi vector y khiến yᵀ@A = 0, tương đương mọi vector y mà hệ số
+> tương đương mọi vector y khiến yᵀ×A = 0, tương đương mọi vector y mà hệ số
 > của nó sẽ tạo linear combination các hàng của A cho ra zero. Thế thì theo **đó,
 > ROW 3 CỦA E CHÍNH LÀ MỘT VECTOR TRONG NULLSPACE CỦA Aᵀ
 >
@@ -795,6 +795,8 @@
 
 <a id="node-2a32a1k"></a>
 
+###### Subspaces of Matrix Spaces
+
 <p align="center"><kbd><img src="assets/6nqo89rum7w.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -822,7 +824,7 @@
 >
 >
 >
-> Đây chính là sự **mở rộng vector space R^n thành R^nxn**
+> Đây chính là sự **mở rộng vector space Rⁿ thành R^nxn**
 >
 >
 >
