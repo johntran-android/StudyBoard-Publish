@@ -20,7 +20,7 @@
 >
 >
 >
-> Rồi ông nói ta đã thầm (implicitly) xoay trục để thẳng góc với các **u**i là các eigenvector của **Φ**T**Φ**, và contours này có dạng là hình ellipse thẳng trục.
+> Rồi ông nói ta đã thầm (implicitly) xoay trục để thẳng góc với các 𝐮i là các eigenvector của **Φ**ᵀ**Φ**, và contours này có dạng là hình ellipse thẳng trục.
 >
 >
 >
@@ -28,83 +28,83 @@
 >
 >
 >
-> Likelihood function là hàm L(**w**|𝒟), theo định nghĩa, nó bằng f(𝒟|**w**). Có nghĩa là, nó chính là f(𝒟|**w**) với tư cách là hàm theo **w**.
+> Likelihood function là hàm L(𝐰|𝒟), theo định nghĩa, nó bằng f(𝒟|𝐰). Có nghĩa là, nó chính là f(𝒟|𝐰) với tư cách là hàm theo 𝐰.
 >
 >
 >
-> Ta đang trong mô hình ℳi cụ thể: T|**x**\~ n(**w**TΦ(**x**), 1/β). Từ đó:
+> Ta đang trong mô hình ℳi cụ thể: T|𝐱\~ n(𝐰ᵀΦ(𝐱), 1/β). Từ đó:
 >
 >
 >
-> f(𝒟|**w**) = f(**t**|**w**,β,**X**)
+> f(𝒟|𝐰) = f(𝐭|𝐰,β,𝐗)
 >
 >
 >
-> = Πi=1:N 𝒩(ti|**w**TΦ(**x**i),1/β)
+> = Πi=1:N 𝒩(ti|𝐰ᵀΦ(𝐱i),1/β)
 >
 >
 >
-> và cái này ta đã derive ra kết quả chính là 𝒩(**Φw**, (1/β)**I**).
+> và cái này ta đã derive ra kết quả chính là 𝒩(**Φw**, (1/β)𝐈).
 >
 >
 >
-> Thế thì vẽ contour của f(𝒟|**w**) tức là ta cho nó bằng hằng số:
+> Thế thì vẽ contour của f(𝒟|𝐰) tức là ta cho nó bằng hằng số:
 >
 >
 >
-> 𝒩(**t**|**Φw**, (1/β)**I**) = c
+> 𝒩(𝐭|**Φw**, (1/β)𝐈) = c
 >
 >
 >
-> ⇔ \[(2π)^(-N/2)\] \[1/|((1/β)**I**)|^1/2\] exp\[-(**t** - **Φw**)T ((1/β)**I**)inv (**t** - **Φw**)/2\] = c
+> ⇔ \[(2π)^(-N/2)\] \[1/|((1/β)𝐈)|^1/2\] exp\[-(𝐭 - **Φw**)ᵀ ((1/β)𝐈)⁻¹ (𝐭 - **Φw**)/2\] = c
 >
 >
 >
-> |(1/β)**I**| = (1/β)^N = β^(-N) ⇒ 1/|((1/β)**I**)|^1/2 = β^(-N/2)
+> |(1/β)𝐈| = (1/β)^N = β^(-N) ⇒ 1/|((1/β)𝐈)|^1/2 = β^(-N/2)
 >
 >
 >
-> ..⇔ \[(2π)^(-N/2)\] \[β^(-N/2)\] exp\[(-β/2)(**t** - **Φw**)T(**t** - **Φw**)\] = c
+> ..⇔ \[(2π)^(-N/2)\] \[β^(-N/2)\] exp\[(-β/2)(𝐭 - **Φw**)ᵀ(𝐭 - **Φw**)\] = c
 >
 >
 >
-> ⇔ \[(2π)^(-N/2)\] \[β^(-N/2)\] exp\[(-β/2)(**t** - **Φw**)T(**t** - **Φw**)\] = c
+> ⇔ \[(2π)^(-N/2)\] \[β^(-N/2)\] exp\[(-β/2)(𝐭 - **Φw**)ᵀ(𝐭 - **Φw**)\] = c
 >
 >
 >
-> ⇔ exp\[(-β/2)(**t** - **Φw**)T(**t** - **Φw**)\] = c2 (nhập hằng số bên vế trái vào c bên phải)
+> ⇔ exp\[(-β/2)(𝐭 - **Φw**)ᵀ(𝐭 - **Φw**)\] = c2 (nhập hằng số bên vế trái vào c bên phải)
 >
 >
 >
-> ⇔ (-β/2)(**t** - **Φw**)T(**t** - **Φw**) = c3 (lấy ln hai vế)
+> ⇔ (-β/2)(𝐭 - **Φw**)ᵀ(𝐭 - **Φw**) = c3 (lấy ln hai vế)
 >
 >
 >
-> ⇔ (**t** - **Φw**)T(**t** - **Φw**) = c4
+> ⇔ (𝐭 - **Φw**)ᵀ(𝐭 - **Φw**) = c4
 >
 >
 >
-> ⇔ **t**T**t** - **w**T**Φ**T**t** - **t**T**Φw** + **w**T**Φ**T**Φw** = c4
+> ⇔ 𝐭ᵀ𝐭 - 𝐰ᵀ**Φ**ᵀ𝐭 - 𝐭ᵀ**Φw** + 𝐰ᵀ**Φ**ᵀ**Φw** = c4
 >
 >
 >
-> ⇔ **w**T**Φ**T**Φw** - 2**t**T**Φw** + **t**T**t** = c4
+> ⇔ 𝐰ᵀ**Φ**ᵀ**Φw** - 2𝐭ᵀ**Φw** + 𝐭ᵀ𝐭 = c4
 >
 >
 >
-> ⇔ **w**T**Φ**T**Φw** - 2**t**T**Φw** = c5
+> ⇔ 𝐰ᵀ**Φ**ᵀ**Φw** - 2𝐭ᵀ**Φw** = c5
 >
 >
 >
-> Và đây, với tư cách là phương trình theo của **w**, biến đổi thêm ta sẽ thấy nó chính là phương trình đường ellipse.  
+> Và đây, với tư cách là phương trình theo của 𝐰, biến đổi thêm ta sẽ thấy nó chính là phương trình đường ellipse.  
 >
 >
 >
-> Đặt A = **Φ**T**Φ**, **b** = **Φ**T**t**, phương trình trở thành:
+> Đặt A = **Φ**ᵀ**Φ**, 𝐛 = **Φ**ᵀ𝐭, phương trình trở thành:
 >
 >
 >
-> **w**T**Aw** - 2**b**T**w** = c5
+> 𝐰ᵀ**Aw** - 2𝐛ᵀ𝐰 = c5
 >
 >
 >
@@ -116,27 +116,27 @@
 >
 >
 >
-> Thì trong phương trình theo cái biến mới, sẽ có dạng **u**T**Au** = c6 với **u** = **w** - **m** (giá trị m là cái cần tìm)
+> Thì trong phương trình theo cái biến mới, sẽ có dạng 𝐮ᵀ**Au** = c6 với 𝐮 = 𝐰 - 𝐦 (giá trị m là cái cần tìm)
 >
 >
 >
-> Thế thì bắt đầu với cái đích mong muốn (**w** - **m**)T**A**(**w** - **m**) = c6.
+> Thế thì bắt đầu với cái đích mong muốn (𝐰 - 𝐦)ᵀ𝐀(𝐰 - 𝐦) = c6.
 >
 >
 >
-> Khai triển vế trái ta có **w**T**Aw** - **m**T**Aw** + **w**T**Am** - **m**T**Am**
+> Khai triển vế trái ta có 𝐰ᵀ**Aw** - 𝐦ᵀ**Aw** + 𝐰ᵀ**Am** - 𝐦ᵀ**Am**
 >
 >
 >
-> = **w**T**Aw** - 2**m**T**Aw** - **m**T**Am**
+> = 𝐰ᵀ**Aw** - 2𝐦ᵀ**Aw** - 𝐦ᵀ**Am**
 >
 >
 >
-> Cho -2**b**T**w** = - 2**m**T**Aw**, ta suy ra **b**T = **m**T**A** ⇔ **A**T**m** = **b**
+> Cho -2𝐛ᵀ𝐰 = - 2𝐦ᵀ**Aw**, ta suy ra 𝐛ᵀ = 𝐦ᵀ𝐀 ⇔ 𝐀ᵀ𝐦 = 𝐛
 >
 >
 >
-> ⇔ **m** = (**A**T)inv **b** = **A**inv **b** =(**Φ**T**Φ**)inv **Φ**T**t**
+> ⇔ 𝐦 = (𝐀ᵀ)⁻¹ 𝐛 = 𝐀inv 𝐛 =(**Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ𝐭
 >
 >
 >
@@ -144,27 +144,27 @@
 >
 >
 >
-> Từ **w**T**Aw** - 2**b**T**w** = c5
+> Từ 𝐰ᵀ**Aw** - 2𝐛ᵀ𝐰 = c5
 >
 >
 >
-> Ta sẽ cộng thêm hai vế cho (- **m**T**Am**) với **m** = **A**inv **b** =(**Φ**T**Φ**)inv **Φ**T**t**, ta có:
+> Ta sẽ cộng thêm hai vế cho (- 𝐦ᵀ**Am**) với 𝐦 = 𝐀inv 𝐛 =(**Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ𝐭, ta có:
 >
 >
 >
-> **w**T**Aw** - 2**b**T**w** - **m**T**Am** = c5 - **m**T**Am**
+> 𝐰ᵀ**Aw** - 2𝐛ᵀ𝐰 - 𝐦ᵀ**Am** = c5 - 𝐦ᵀ**Am**
 >
 >
 >
-> Khi đó vế trái sẽ trở thành (**w** - **m**)T**A**(**w** - **m**), và vế phải vẫn là constant, đặt là c6. Ta có:
+> Khi đó vế trái sẽ trở thành (𝐰 - 𝐦)ᵀ𝐀(𝐰 - 𝐦), và vế phải vẫn là constant, đặt là c6. Ta có:
 >
 >
 >
-> (**w** - **m**)T**A**(**w** - **m**) = c6.
+> (𝐰 - 𝐦)ᵀ𝐀(𝐰 - 𝐦) = c6.
 >
 >
 >
-> Và đặt **z** = **w** - **m** thì, phương trình trên là **z**T**Az** = c6.
+> Và đặt 𝐳 = 𝐰 - 𝐦 thì, phương trình trên là 𝐳ᵀ**Az** = c6.
 >
 >
 >
@@ -172,11 +172,11 @@
 >
 >
 >
-> Thay **A** = **Φ**T**Φ** vào lại:
+> Thay 𝐀 = **Φ**ᵀ**Φ** vào lại:
 >
 >
 >
-> **z**T**Φ**T**Φz** = c6.
+> 𝐳ᵀ**Φ**ᵀ**Φz** = c6.
 >
 >
 >
@@ -184,23 +184,23 @@
 >
 >
 >
-> Nhớ lại trong MIT 18.06 đã học, là với symmetric matrix size n × n thì luôn tồn tại đủ bộ eigenvector độc lập, và hơn thế nữa, ta còn luôn có thể chọn được một bộ orthogonal eigenvector. Do đó matrix này luôn có thể phân tách nó thành **Q** **Λ** **Q**T với **Q** là orthogonal matrix có các cột là bộ orthonormal eigenvector (vuông góc, và đã chuyển về unit norm) và **Λ** là diagonal matrix chứa các eigenvalue trên đường chéo. Vậy thì **A** = **Φ**T**Φ** đương nhiên là matrix đối xứng (vì (**Φ**T**Φ**)T = **Φ**T(**Φ**T)T = **Φ**T**Φ**). Nên ta có **Φ**T**Φ** = **Q** **Λ** **Q**T
+> Nhớ lại trong MIT 18.06 đã học, là với symmetric matrix size n × n thì luôn tồn tại đủ bộ eigenvector độc lập, và hơn thế nữa, ta còn luôn có thể chọn được một bộ orthogonal eigenvector. Do đó matrix này luôn có thể phân tách nó thành 𝐐 **Λ** 𝐐ᵀ với 𝐐 là orthogonal matrix có các cột là bộ orthonormal eigenvector (vuông góc, và đã chuyển về unit norm) và **Λ** là diagonal matrix chứa các eigenvalue trên đường chéo. Vậy thì 𝐀 = **Φ**ᵀ**Φ** đương nhiên là matrix đối xứng (vì (**Φ**ᵀ**Φ**)ᵀ = **Φ**ᵀ(**Φ**ᵀ)ᵀ = **Φ**ᵀ**Φ**). Nên ta có **Φ**ᵀ**Φ** = 𝐐 **Λ** 𝐐ᵀ
 >
 >
 >
-> Khi đó, phương trình trở thành **z**T**Q** **Λ** **Q**T**z** = c6.
+> Khi đó, phương trình trở thành 𝐳ᵀ𝐐 **Λ** 𝐐ᵀ𝐳 = c6.
 >
 >
 >
-> Đặt **y** = **Q**T**z**, ta có **y**T**Λy** = c6.
+> Đặt 𝐲 = 𝐐ᵀ𝐳, ta có 𝐲ᵀ**Λy** = c6.
 >
 >
 >
-> và với **Λ** là diagonal matrix mà đường chéo là các eigenvalue λ1,....λM của ΦTΦ thì **y**T**Λy** = Σi=1:M λi × yi^2. Ta có:
+> và với **Λ** là diagonal matrix mà đường chéo là các eigenvalue λ1,....λM của ΦTΦ thì 𝐲ᵀ**Λy** = Σi=1:M λi × yi². Ta có:
 >
 >
 >
-> λ1 × y1^2 + λ2 × y2^2 + ...λM × yM^2 = c6
+> λ1 × y1² + λ2 × y2² + ...λM × yM² = c6
 >
 >
 >
@@ -208,15 +208,15 @@
 >
 >
 >
-> λ1/c6 × y1^2 + λ2/c6 × y2^2 + ...λM/c6 × yM^2 = 1
+> λ1/c6 × y1² + λ2/c6 × y2² + ...λM/c6 × yM² = 1
 >
 >
 >
-> ⇔ y1^2 / (c6/λ1) + y2^2/(c6/λ2) + ...+ yM^2/(c6/λM) = 1
+> ⇔ y1² / (c6/λ1) + y2²/(c6/λ2) + ...+ yM²/(c6/λM) = 1
 >
 >
 >
-> Đây chính là phương trình ellipsoid có dạng tổng quát trong 3D đã học hồi cấp 3 là: x^2/a^2 + y^2/b^2 + z^2/c^2 = 1.
+> Đây chính là phương trình ellipsoid có dạng tổng quát trong 3D đã học hồi cấp 3 là: x²/a² + y²/b² + z²/c² = 1.
 >
 >
 >
@@ -224,7 +224,7 @@
 >
 >
 >
-> Tóm lại, quả thật cái contour của f(𝒟|**w**) tức là ta cho nó bằng hằng số: 𝒩(**t**|**Φw**, (1/β)**I**) = c
+> Tóm lại, quả thật cái contour của f(𝒟|𝐰) tức là ta cho nó bằng hằng số: 𝒩(𝐭|**Φw**, (1/β)𝐈) = c
 >
 >
 >
@@ -232,7 +232,7 @@
 >
 >
 >
-> ⇔ **w**T**Φ**T**Φw** - 2**t**T**Φw** = c5
+> ⇔ 𝐰ᵀ**Φ**ᵀ**Φw** - 2𝐭ᵀ**Φw** = c5
 >
 >
 >
@@ -240,15 +240,15 @@
 >
 >
 >
-> Đặt **z** = **w** - **m**, với **m** = **A**inv **b** =(**Φ**T**Φ**)inv **Φ**T**t**, có thể thấy đây chính là phép tịnh tiến
+> Đặt 𝐳 = 𝐰 - 𝐦, với 𝐦 = 𝐀inv 𝐛 =(**Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ𝐭, có thể thấy đây chính là phép tịnh tiến
 >
 >
 >
-> Và **y** = **Q**T**z**, với Q là orthogonal matrix, ta biết đây là phép (biến đổi tuyến tính) xoay
+> Và 𝐲 = 𝐐ᵀ𝐳, với Q là orthogonal matrix, ta biết đây là phép (biến đổi tuyến tính) xoay
 >
 >
 >
-> thì kết quả ta có **y**T**Λy** = c6, là phương trình của ellipsoid.
+> thì kết quả ta có 𝐲ᵀ**Λy** = c6, là phương trình của ellipsoid.
 >
 >
 >
@@ -256,11 +256,11 @@
 >
 >
 >
-> Giờ nói thêm chút về cái bước y = **Q**T**z**.
+> Giờ nói thêm chút về cái bước y = 𝐐ᵀ𝐳.
 >
 >
 >
-> Cũng là dịp để ôn kiến thức đã học trong MIT 18.06: Linear transformation. Sẽ giúp ta hiểu rõ vì sao nói **cái ellipse nói trên nó axis aligned với eigenvector ui** (eigenvectorcủa **Φ**T**Φ**):
+> Cũng là dịp để ôn kiến thức đã học trong MIT 18.06: Linear transformation. Sẽ giúp ta hiểu rõ vì sao nói **cái ellipse nói trên nó axis aligned với eigenvector ui** (eigenvectorcủa **Φ**ᵀ**Φ**):
 >
 >
 >
@@ -268,11 +268,11 @@
 >
 >
 >
-> Đầu tiên, ta đã được biết, thế nào gọi là phép biến đổi tuyến tính (linear transformation): Là phép biến đổi thỏa mãn tính chất T(c**u** + d**v**) = cT(**u**) + dT(**v**) (c, d ở đây là scalar, **u**, **v** là vector). Thế thì từ đó, ta thấy nếu lấy phép biến đổi T(**v**) là là: Lấy **A** nhân vector **u**, T(**u**) = **Au** thì T(c**u** + d**v**) = **A**(c**u** + d**v**) cũng bằng c × A**u** + d × A**v** = c T(**u**) + d T(**v**). Do đó phép nhân matrix **A** với vector **u** cũng là một linear transformation.
+> Đầu tiên, ta đã được biết, thế nào gọi là phép biến đổi tuyến tính (linear transformation): Là phép biến đổi thỏa mãn tính chất T(c𝐮 + d𝐯) = cT(𝐮) + dT(𝐯) (c, d ở đây là scalar, 𝐮, 𝐯 là vector). Thế thì từ đó, ta thấy nếu lấy phép biến đổi T(𝐯) là là: Lấy 𝐀 nhân vector 𝐮, T(𝐮) = **Au** thì T(c𝐮 + d𝐯) = 𝐀(c𝐮 + d𝐯) cũng bằng c × A𝐮 + d × A𝐯 = c T(𝐮) + d T(𝐯). Do đó phép nhân matrix 𝐀 với vector 𝐮 cũng là một linear transformation.
 >
 >
 >
-> Thế thì câu hỏi là, giả sử ta có matrix **A**, ta sẽ thực hiện phép biến đổi bởi nó thì dễ rồi. Nhưng nếu ta có phép biến đổi tuyến tính, và muốn biết matrix **A** đứng sau nó là gì thì sao. Ví dụ, phép xoay một góc α, ta biết nó là phép biến đổi tuyến tính, vậy matrix **A** của nó là gì?
+> Thế thì câu hỏi là, giả sử ta có matrix 𝐀, ta sẽ thực hiện phép biến đổi bởi nó thì dễ rồi. Nhưng nếu ta có phép biến đổi tuyến tính, và muốn biết matrix 𝐀 đứng sau nó là gì thì sao. Ví dụ, phép xoay một góc α, ta biết nó là phép biến đổi tuyến tính, vậy matrix 𝐀 của nó là gì?
 >
 >
 >
@@ -280,31 +280,31 @@
 >
 >
 >
-> Nên: **Ax** có bản chất là \[matrix A\] nhân \[vector tọa độ của vector **x** theo input basis v's, tức là \[**x**\]\_v's\] sẽ cho ra kết qủa là tọa độ của vector T(**x**) trong basis w's, \[T(**x**)\]\_w's
+> Nên: **Ax** có bản chất là \[matrix A\] nhân \[vector tọa độ của vector 𝐱 theo input basis v's, tức là \[𝐱\]\_v's\] sẽ cho ra kết qủa là tọa độ của vector T(𝐱) trong basis w's, \[T(𝐱)\]\_w's
 >
 >
 >
-> **A** \[**x**\]\_v's = \[T(**x**)\]\_w's.
+> 𝐀 \[𝐱\]\_v's = \[T(𝐱)\]\_w's.
 >
 >
 >
-> Và ta sẽ có cách lập luận để tìm **A** đại diện cho / đứng sau phép biến đổi tuyến tính T(.) như sau:
+> Và ta sẽ có cách lập luận để tìm 𝐀 đại diện cho / đứng sau phép biến đổi tuyến tính T(.) như sau:
 >
 >
 >
-> Gọi **v**1,...**v**n và **w**1,...**w**m là basis của input space và output space
+> Gọi 𝐯1,...𝐯n và 𝐰1,...𝐰m là basis của input space và output space
 >
 >
 >
-> Xét vector **a** có tọa độ (a1,...an) trong input space, kí hiệu \[**a**\]\_v's. Ta có:
+> Xét vector 𝐚 có tọa độ (a1,...an) trong input space, kí hiệu \[𝐚\]\_v's. Ta có:
 >
 >
 >
-> **a** = a1 **v**1 + a2 **v**2 + ...an **v**n.
+> 𝐚 = a1 𝐯1 + a2 𝐯2 + ...an 𝐯n.
 >
 >
 >
-> Biến đổi **a** bởi T(.), ta có T(**a**)
+> Biến đổi 𝐚 bởi T(.), ta có T(𝐚)
 >
 >
 >
@@ -312,27 +312,27 @@
 >
 >
 >
-> T(**a**) = T(a1 **v**1 + a2 **v**2 + ...an **v**n) = a1 T(**v**1) + a2 T(**v**2) + ... + an T(**v**n)
+> T(𝐚) = T(a1 𝐯1 + a2 𝐯2 + ...an 𝐯n) = a1 T(𝐯1) + a2 T(𝐯2) + ... + an T(𝐯n)
 >
 >
 >
-> Ở đây ta có vector T(**a**) của vế trái = vector (là tổng của các vector a1 T(**v**1) + a2 T(**v**2) + ... + an T(**v**n)) bên vế phải. Mà hai vector bằng nhau, thì tọa độ của chúng trong một hệ tọa độ phải bằng nhau. **Nên tọa độ trong basis w's của chúng bằng nhau**, ta có:
+> Ở đây ta có vector T(𝐚) của vế trái = vector (là tổng của các vector a1 T(𝐯1) + a2 T(𝐯2) + ... + an T(𝐯n)) bên vế phải. Mà hai vector bằng nhau, thì tọa độ của chúng trong một hệ tọa độ phải bằng nhau. **Nên tọa độ trong basis w's của chúng bằng nhau**, ta có:
 >
 >
 >
-> ⇒ \[T(**a**)\]\_w's = \[a1 T(**v**1) + a2 T(**v**2) + ... + an T(**v**n)\]\_w's
+> ⇒ \[T(𝐚)\]\_w's = \[a1 T(𝐯1) + a2 T(𝐯2) + ... + an T(𝐯n)\]\_w's
 >
 >
 >
-> mà vế phải là **tọa độ của một tổng các vector**, sẽ là **tổng các tọa độ**. Ví dụ α\[u1, u2\]T + β\[v1, v2\]T = \[αu1 + βv1, αu2 + βv2\]T. Nên ta có:
+> mà vế phải là **tọa độ của một tổng các vector**, sẽ là **tổng các tọa độ**. Ví dụ α\[u1, u2\]ᵀ + β\[v1, v2\]ᵀ = \[αu1 + βv1, αu2 + βv2\]ᵀ. Nên ta có:
 >
 >
 >
-> \[T(**a**)\]\_w's = \[a1 T(**v**1)\]\_w's + \[a2 T(**v**2)\]\_w's + ... + \[an T(**v**n)\]\_w's
+> \[T(𝐚)\]\_w's = \[a1 T(𝐯1)\]\_w's + \[a2 T(𝐯2)\]\_w's + ... + \[an T(𝐯n)\]\_w's
 >
 >
 >
-> ⇔ \[T(**a**)\]\_w's = a1 × \[T(**v**1)\]\_w's + a2 × \[T(**v**2)\]\_w's + ... + an × \[T(**v**n)\]\_w's
+> ⇔ \[T(𝐚)\]\_w's = a1 × \[T(𝐯1)\]\_w's + a2 × \[T(𝐯2)\]\_w's + ... + an × \[T(𝐯n)\]\_w's
 >
 >
 >
@@ -340,11 +340,11 @@
 >
 >
 >
-> Rồi, lại xét **Aa**, như đã nói ở trên bản chất chính là **A** \[**a**\]\_v's, tức là matrix A nhân vector cột là vector tọa độ của **a** trong basis v's. Theo góc nhìn nhân matrix với vector, chính là linear combination các **vector cột** của matrix A (đặt là các vector **c**1, **c**2,..) bởi hệ số là các phần tử của **a** (cũng là tọa độ a1, a2,...của vector **a** trong basis v's)
+> Rồi, lại xét **Aa**, như đã nói ở trên bản chất chính là 𝐀 \[𝐚\]\_v's, tức là matrix A nhân vector cột là vector tọa độ của 𝐚 trong basis v's. Theo góc nhìn nhân matrix với vector, chính là linear combination các **vector cột** của matrix A (đặt là các vector 𝐜1, 𝐜2,..) bởi hệ số là các phần tử của 𝐚 (cũng là tọa độ a1, a2,...của vector 𝐚 trong basis v's)
 >
 >
 >
-> **A**\[**a**\]\_v's = a1 **c**1 + a2 **c**2 + ... an **c**n
+> 𝐀\[𝐚\]\_v's = a1 𝐜1 + a2 𝐜2 + ... an 𝐜n
 >
 >
 >
@@ -352,11 +352,11 @@
 >
 >
 >
-> Mà giá trị của column vector này chính là tọa độ của T(**a**) trong basis w's vì ta đang đi xây dựng matrix **A** đại diện cho phép biến đổi tuýến tính T(), nên theo định nghĩa nó sẽ giúp tính ra tọa độ của T(**a**) trong basis w's
+> Mà giá trị của column vector này chính là tọa độ của T(𝐚) trong basis w's vì ta đang đi xây dựng matrix 𝐀 đại diện cho phép biến đổi tuýến tính T(), nên theo định nghĩa nó sẽ giúp tính ra tọa độ của T(𝐚) trong basis w's
 >
 >
 >
-> **A**\[a\]\_v's = \[T(**a**)\]\_w's
+> 𝐀\[a\]\_v's = \[T(𝐚)\]\_w's
 >
 >
 >
@@ -368,11 +368,11 @@
 >
 >
 >
-> = a1 × \[T(**v**1)\]\_w's + a2 × \[T(**v**2)\]\_w's + ... + an × \[T(**v**n)\]\_w's
+> = a1 × \[T(𝐯1)\]\_w's + a2 × \[T(𝐯2)\]\_w's + ... + an × \[T(𝐯n)\]\_w's
 >
 >
 >
-> Vậy \[vector cột 1\] của **A** chính là \[T(**v**1)\]\_w's, \[vector cột 2\] của **A** chính là \[T(**v**2)\]\_w's....
+> Vậy \[vector cột 1\] của 𝐀 chính là \[T(𝐯1)\]\_w's, \[vector cột 2\] của 𝐀 chính là \[T(𝐯2)\]\_w's....
 >
 >
 >
@@ -380,15 +380,15 @@
 >
 >
 >
-> Chuẩn bị input basis **v**1,**v**1.... Biến đổi **v**1,**v**2... bởi T(.), và lấy tọa độ của chúng trong basis **w**'s.
+> Chuẩn bị input basis 𝐯1,𝐯1.... Biến đổi 𝐯1,𝐯2... bởi T(.), và lấy tọa độ của chúng trong basis 𝐰's.
 >
 >
 >
-> Thì **cột j của A** chính là tọa độ của T(**v**j) trong basis **w**'s.
+> Thì **cột j của A** chính là tọa độ của T(𝐯j) trong basis 𝐰's.
 >
 >
 >
-> \[Cột j của A\] = \[T(**v**j)\]\_w's
+> \[Cột j của A\] = \[T(𝐯j)\]\_w's
 >
 >
 >
@@ -396,7 +396,7 @@
 >
 >
 >
-> Tiếp ta sẽ xét phép biến đổi identity: T(**x**) = **x**, tức là không làm gì, chỉ thay basis từ v's sang w's
+> Tiếp ta sẽ xét phép biến đổi identity: T(𝐱) = 𝐱, tức là không làm gì, chỉ thay basis từ v's sang w's
 >
 >
 >
@@ -404,11 +404,11 @@
 >
 >
 >
-> Biến đổi **v**1, thể hiện nó trong basis **w**'s, tọa độ của nó trong basis w's chính là giá trị cột 1 của A:
+> Biến đổi 𝐯1, thể hiện nó trong basis 𝐰's, tọa độ của nó trong basis w's chính là giá trị cột 1 của A:
 >
 >
 >
-> \[Cột 1 của A\] = \[T(**v**1)\]\_w's
+> \[Cột 1 của A\] = \[T(𝐯1)\]\_w's
 >
 >
 >
@@ -416,11 +416,11 @@
 >
 >
 >
-> \[Cột 2 của A\] = \[T(**v**2)\]\_w's
+> \[Cột 2 của A\] = \[T(𝐯2)\]\_w's
 >
 >
 >
-> Mà T(**v**1) = **v**1, T(**v**2) = **v**2,...do T(.) đang xét là phép biến đổi identity.
+> Mà T(𝐯1) = 𝐯1, T(𝐯2) = 𝐯2,...do T(.) đang xét là phép biến đổi identity.
 >
 >
 >
@@ -428,27 +428,27 @@
 >
 >
 >
-> \[T(**v**1)\]\_w's = \[**v**1\]\_w's, \[T(**v**2)\]\_w's = \[**v**2\]\_w's,...
+> \[T(𝐯1)\]\_w's = \[𝐯1\]\_w's, \[T(𝐯2)\]\_w's = \[𝐯2\]\_w's,...
 >
 >
 >
-> Vậy \[Cột 1 của A\] = \[**v**1\]\_w's, \[Cột 2 của A\] = \[**v**2\]\_w's,...
+> Vậy \[Cột 1 của A\] = \[𝐯1\]\_w's, \[Cột 2 của A\] = \[𝐯2\]\_w's,...
 >
 >
 >
-> Mà **v**1 = linear combination các vector **w**1,...**w**m bởi hệ số là vector tọa độ \[**v**1\]\_w's
+> Mà 𝐯1 = linear combination các vector 𝐰1,...𝐰m bởi hệ số là vector tọa độ \[𝐯1\]\_w's
 >
 >
 >
-> và vừa nói ở trên ta lại có \[Cột 1 của A\] = \[**v**1\]\_w's
+> và vừa nói ở trên ta lại có \[Cột 1 của A\] = \[𝐯1\]\_w's
 >
 >
 >
-> suy ra **v**1 = linear combination của **w**1,...**w**m với hệ số là cột 1 của A
+> suy ra 𝐯1 = linear combination của 𝐰1,...𝐰m với hệ số là cột 1 của A
 >
 >
 >
-> Đặt **W** là matrix các cột **w**1, **w**2,...thì điều này chính là **v**1 = **W** **c**1
+> Đặt 𝐖 là matrix các cột 𝐰1, 𝐰2,...thì điều này chính là 𝐯1 = 𝐖 𝐜1
 >
 >
 >
@@ -456,7 +456,7 @@
 >
 >
 >
-> \[Cột 2 của A\] = \[**v**2\]\_w's nên **v**2 = **W** **c**2.
+> \[Cột 2 của A\] = \[𝐯2\]\_w's nên 𝐯2 = 𝐖 𝐜2.
 >
 >
 >
@@ -464,15 +464,15 @@
 >
 >
 >
-> Và đặt **v**1, **v**2 vào thành các cột của matrix **V** ta sẽ có **V** = **W** **A**
+> Và đặt 𝐯1, 𝐯2 vào thành các cột của matrix 𝐕 ta sẽ có 𝐕 = 𝐖 𝐀
 >
 >
 >
-> ⟹ **A** = **W**inv **V**
+> ⟹ 𝐀 = 𝐖inv 𝐕
 >
 >
 >
-> Và do đó, nếu input space là basis e's, **V** = **I**, thì change of basis sang basis w's chính là **W**inv.
+> Và do đó, nếu input space là basis e's, 𝐕 = 𝐈, thì change of basis sang basis w's chính là 𝐖inv.
 >
 >
 >
@@ -480,27 +480,27 @@
 >
 >
 >
-> Từ đó, quay lại bài này, ta sẽ thấy **Q**T**z**, là cái gì?
+> Từ đó, quay lại bài này, ta sẽ thấy 𝐐ᵀ𝐳, là cái gì?
 >
 >
 >
-> Nhớ rằng, khi viết **Ax**, nếu ko nói gì (về basis của input space), thì tự phải hiểu thực ra chính là đang viết \[matrix A\] \[vector tọa độ của **x** trong basis e's\]
+> Nhớ rằng, khi viết **Ax**, nếu ko nói gì (về basis của input space), thì tự phải hiểu thực ra chính là đang viết \[matrix A\] \[vector tọa độ của 𝐱 trong basis e's\]
 >
 >
 >
-> Ở đây cũng vậy, **Q**T**z**, về bản chất chính là \[matrix **Q**\] \[**z**\]\_e's = \[matrix **Q**\] \[**w-m**\]\_e's
+> Ở đây cũng vậy, 𝐐ᵀ𝐳, về bản chất chính là \[matrix 𝐐\] \[𝐳\]\_e's = \[matrix 𝐐\] \[**w-m**\]\_e's
 >
 >
 >
-> Còn **Q**T, do **Q** là orthogonal matrix, có tính chất **Q**T**Q** = **QQ**T = **I**, nên **Q**T = **Q**inv: **Q**T chính là **Q**inv
+> Còn 𝐐ᵀ, do 𝐐 là orthogonal matrix, có tính chất 𝐐ᵀ𝐐 = **QQ**ᵀ = 𝐈, nên 𝐐ᵀ = 𝐐inv: 𝐐ᵀ chính là 𝐐inv
 >
 >
 >
-> Và như đã hiểu ở trên, thì **Q**inv chính là **I** **Q**inv, là change of basis matrix từ basis e's (các cột của **I**) sang basis q's (hay trong sách là u's, các cột của Q, cũng là các eigenvector của **Φ**T**Φ**). Nên **Q**inv **u**, (mà bản chất là **Q**inv \[**u**\]\_e's) **chính là tọa độ của vector** **z trong basis** **q**1, **q**2 (hay **u**1, **u**2....)
+> Và như đã hiểu ở trên, thì 𝐐inv chính là 𝐈 𝐐inv, là change of basis matrix từ basis e's (các cột của 𝐈) sang basis q's (hay trong sách là u's, các cột của Q, cũng là các eigenvector của **Φ**ᵀ**Φ**). Nên 𝐐inv 𝐮, (mà bản chất là 𝐐inv \[𝐮\]\_e's) **chính là tọa độ của vector** **z trong basis** **q**1, **q**2 (hay 𝐮1, 𝐮2....)
 >
 >
 >
-> Và hành động chuyển tọa độ từ basis e's sang basis q's (cả hai đều là basis của R^n) nếu áp dụng cho toàn bộ vector trong không gian thì nó chính là việc ta xoay hệ trục tọa độ, từ hệ trục ban đầu đến khi nó thẳng góc với các vector q's.
+> Và hành động chuyển tọa độ từ basis e's sang basis q's (cả hai đều là basis của Rⁿ) nếu áp dụng cho toàn bộ vector trong không gian thì nó chính là việc ta xoay hệ trục tọa độ, từ hệ trục ban đầu đến khi nó thẳng góc với các vector q's.
 >
 >
 >
@@ -512,7 +512,7 @@
 >
 >
 >
-> Gọi **q**1,**q**2,.. (trong sách là **u**1,**u**2,..) là các orthogonal eigenvector của **Φ**T**Φ**.
+> Gọi **q**1,**q**2,.. (trong sách là 𝐮1,𝐮2,..) là các orthogonal eigenvector của **Φ**ᵀ**Φ**.
 >
 >
 >
@@ -520,39 +520,39 @@
 >
 >
 >
-> Xét vector **a** có tọa độ **a**1,**a**2,...trong basis e's
+> Xét vector 𝐚 có tọa độ 𝐚1,𝐚2,...trong basis e's
 >
 >
 >
-> Chiếu **a** lên span{q1,q2,..} Thì ta có p, với p = linear combination của q's bởi hệ số x1,x2,.. nào đó **p** = **q**1x1 + **q**2x2 + ...
+> Chiếu 𝐚 lên span{q1,q2,..} Thì ta có p, với p = linear combination của q's bởi hệ số x1,x2,.. nào đó 𝐩 = **q**1x1 + **q**2x2 + ...
 >
 >
 >
-> Tuy nhiên, sự thật là **Q** full rank, nên a vốn đã nằm trong span{**q**1,**q**2,..}. Nên hình chiếu của a lên subspace này là chính nó. Ta có
+> Tuy nhiên, sự thật là 𝐐 full rank, nên a vốn đã nằm trong span{**q**1,**q**2,..}. Nên hình chiếu của a lên subspace này là chính nó. Ta có
 >
 >
 >
-> **a** = **Qx** với **x** là vector tọa độ của **a** (cũng là p) trong basis q's.
+> 𝐚 = **Qx** với 𝐱 là vector tọa độ của 𝐚 (cũng là p) trong basis q's.
 >
 >
 >
-> Nhân hai vế cho **Q**T:
+> Nhân hai vế cho 𝐐ᵀ:
 >
 >
 >
-> **Q**Ta = **Q**T**Q**x
+> 𝐐ᵀa = 𝐐ᵀ𝐐x
 >
 >
 >
-> ⇔ x = **Q**T**a**
+> ⇔ x = 𝐐ᵀ𝐚
 >
 >
 >
-> À như vậy, ta thấy **Q**T**a** chính là tọa độ của a trong basis **q**1, **q**2,..
+> À như vậy, ta thấy 𝐐ᵀ𝐚 chính là tọa độ của a trong basis **q**1, **q**2,..
 >
 >
 >
-> Thì y như vậy, **Q**T**z** sẽ chính là ta chiếu tọa độ của **z** lên các eigenvector **q**1,**q**2,..để có tọa độ mới. Thì đây cũng chính là cùng ý nghĩa với xoay hệ trục để đổi tọa độ sang basis **q**'s (hay u's, là eigenvector của design matrix)
+> Thì y như vậy, 𝐐ᵀ𝐳 sẽ chính là ta chiếu tọa độ của 𝐳 lên các eigenvector **q**1,**q**2,..để có tọa độ mới. Thì đây cũng chính là cùng ý nghĩa với xoay hệ trục để đổi tọa độ sang basis **q**'s (hay u's, là eigenvector của design matrix)
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
@@ -584,15 +584,15 @@
 >
 >
 >
-> L(**w**|**t**) = 𝒩(**t**|**Φw**, (1/β)**I**)
+> L(𝐰|𝐭) = 𝒩(𝐭|**Φw**, (1/β)𝐈)
 >
 >
 >
-> = \[(2π)^(-N/2)\] \[β^(-N/2)\] exp\[(-β/2)(**t** - **Φw**)T(**t** - **Φw**)\]
+> = \[(2π)^(-N/2)\] \[β^(-N/2)\] exp\[(-β/2)(𝐭 - **Φw**)ᵀ(𝐭 - **Φw**)\]
 >
 >
 >
-> = c exp\[(-β/2)(**t** - **Φw**)T(**t** - **Φw**)\]
+> = c exp\[(-β/2)(𝐭 - **Φw**)ᵀ(𝐭 - **Φw**)\]
 >
 >
 >
@@ -600,51 +600,51 @@
 >
 >
 >
-> Thử xem Hessian của hàm (với tư cách là hàm theo **w**) là gì:
+> Thử xem Hessian của hàm (với tư cách là hàm theo 𝐰) là gì:
 >
 >
 >
-> Xét hàm ln L(**w**|**t**), (để loại bỏ exp, ta sẽ tìm cách có Hessian của hàm likelihood sau):
+> Xét hàm ln L(𝐰|𝐭), (để loại bỏ exp, ta sẽ tìm cách có Hessian của hàm likelihood sau):
 >
 >
 >
-> ln likelihood = ln { c exp\[(-β/2)(**t** - **Φw**)T(**t** - **Φw**)\] }
+> ln likelihood = ln { c exp\[(-β/2)(𝐭 - **Φw**)ᵀ(𝐭 - **Φw**)\] }
 >
 >
 >
-> = ln (c) + ln exp\[(-β/2)(**t** - **Φw**)T(**t** - **Φw**)\]
+> = ln (c) + ln exp\[(-β/2)(𝐭 - **Φw**)ᵀ(𝐭 - **Φw**)\]
 >
 >
 >
-> = ln (c) - (β/2)(**t** - **Φw**)T(**t** - **Φw**)
+> = ln (c) - (β/2)(𝐭 - **Φw**)ᵀ(𝐭 - **Φw**)
 >
 >
 >
-> = - (β/2)(**t**T**t** - **w**T**Φ**T**t** - **t**T**Φw** + **w**T**Φ**T**Φw**) + ln(c)
+> = - (β/2)(𝐭ᵀ𝐭 - 𝐰ᵀ**Φ**ᵀ𝐭 - 𝐭ᵀ**Φw** + 𝐰ᵀ**Φ**ᵀ**Φw**) + ln(c)
 >
 >
 >
-> = - (β/2)(- 2**t**T**Φw** + **w**T**Φ**T**Φw** + **t**T**t**) + ln(c)
+> = - (β/2)(- 2𝐭ᵀ**Φw** + 𝐰ᵀ**Φ**ᵀ**Φw** + 𝐭ᵀ𝐭) + ln(c)
 >
 >
 >
-> = - (β/2)(**w**T**Φ**T**Φw** - 2**t**T**Φw** + **t**T**t**) + ln(c)
+> = - (β/2)(𝐰ᵀ**Φ**ᵀ**Φw** - 2𝐭ᵀ**Φw** + 𝐭ᵀ𝐭) + ln(c)
 >
 >
 >
-> = - (β/2)(**w**T**Φ**T**Φw** - 2**t**T**Φw** + **t**T**t**) + ln(c)
+> = - (β/2)(𝐰ᵀ**Φ**ᵀ**Φw** - 2𝐭ᵀ**Φw** + 𝐭ᵀ𝐭) + ln(c)
 >
 >
 >
-> = (1/2)**w**T\[-β**Φ**T**Φ**\]**w** + β**t**T**Φw** - β**t**T**t**/2 + ln(c)
+> = (1/2)𝐰ᵀ\[-β**Φ**ᵀ**Φ**\]𝐰 + β𝐭ᵀ**Φw** - β𝐭ᵀ𝐭/2 + ln(c)
 >
 >
 >
-> Đây có dạng hàm quadratic của w: (1/2)**w**T**Pw** + **g**T**w** + **r**. Hessian chính là **P**.
+> Đây có dạng hàm quadratic của w: (1/2)𝐰ᵀ**Pw** + 𝐠ᵀ𝐰 + 𝐫. Hessian chính là 𝐏.
 >
 >
 >
-> Vậy Hessian của hàm ln likelihood là -β**Φ**T**Φ**
+> Vậy Hessian của hàm ln likelihood là -β**Φ**ᵀ**Φ**
 >
 >
 >
@@ -652,19 +652,19 @@
 >
 >
 >
-> Tiếp, gọi likelihood là L(**w**) thay vì L(**w**|t) cho gọn, vì dù gì thì ta chỉ đang xem nó như hàm theo **w**.
+> Tiếp, gọi likelihood là L(𝐰) thay vì L(𝐰|t) cho gọn, vì dù gì thì ta chỉ đang xem nó như hàm theo 𝐰.
 >
 >
 >
-> Và đặt G(**w**) = ln L(**w**) ⇒ L(**w**) = exp G(**w**)
+> Và đặt G(𝐰) = ln L(𝐰) ⇒ L(𝐰) = exp G(𝐰)
 >
 >
 >
-> Lấy đạo hàm bậc 1 theo **w**:
+> Lấy đạo hàm bậc 1 theo 𝐰:
 >
 >
 >
-> d/d**w** L(**w**) = d/d**w** \[exp G(**w**)\]
+> d/d𝐰 L(𝐰) = d/d𝐰 \[exp G(𝐰)\]
 >
 >
 >
@@ -672,19 +672,19 @@
 >
 >
 >
-> ..= d/d \[G(**w**)\] \[exp G(**w**)\] ⋅ d/d**w** \[G(**w**)\]
+> ..= d/d \[G(𝐰)\] \[exp G(𝐰)\] ⋅ d/d𝐰 \[G(𝐰)\]
 >
 >
 >
-> Dùng d/dx e^x = e^x ⇒ d/d \[G(**w**)\] \[exp G(**w**)\] = exp G(**w**).
+> Dùng d/dx e^x = e^x ⇒ d/d \[G(𝐰)\] \[exp G(𝐰)\] = exp G(𝐰).
 >
 >
 >
-> Và d/d**w** \[G(**w**)\], vì G(**w**) là vector → scalar function (nhận vector **w**, tính ra likelihood của **w**, là một giá trị scalar), nên đạo hàm bậc một của G theo w là vector gradient, kí hiệu ∇G(**w**). Tương tự, d/d**w** L(**w**) cũng là ∇L(**w**)
+> Và d/d𝐰 \[G(𝐰)\], vì G(𝐰) là vector → scalar function (nhận vector 𝐰, tính ra likelihood của 𝐰, là một giá trị scalar), nên đạo hàm bậc một của G theo w là vector gradient, kí hiệu ∇G(𝐰). Tương tự, d/d𝐰 L(𝐰) cũng là ∇L(𝐰)
 >
 >
 >
-> ..= exp G(**w**) ⋅ ∇G(**w**)
+> ..= exp G(𝐰) ⋅ ∇G(𝐰)
 >
 >
 >
@@ -692,19 +692,19 @@
 >
 >
 >
-> = \[exp G(**w**)\] ∇G(**w**), và với G(w) = ln L(**w**), thì exp G(**w**) = L(**w**)
+> = \[exp G(𝐰)\] ∇G(𝐰), và với G(w) = ln L(𝐰), thì exp G(𝐰) = L(𝐰)
 >
 >
 >
-> Viết lại ∇L(**w**) = L(**w**) ∇G(**w**)
+> Viết lại ∇L(𝐰) = L(𝐰) ∇G(𝐰)
 >
 >
 >
-> Giờ, ta lại lấy đạo hàm bậc một theo **w** của hàm d/d**w** L(**w**), thì ta sẽ có đạo hàm bậc hai, và vì ∇L(**w**) là vector → vector function, nên đạo hàm bậc một của ∇L(**w**) gọi là Jacobian matrix, cũng chính là Hessian của L(**w**). Kí hiệu H(**w**), hay có khi ta thấy ∇∇L(**w**)
+> Giờ, ta lại lấy đạo hàm bậc một theo 𝐰 của hàm d/d𝐰 L(𝐰), thì ta sẽ có đạo hàm bậc hai, và vì ∇L(𝐰) là vector → vector function, nên đạo hàm bậc một của ∇L(𝐰) gọi là Jacobian matrix, cũng chính là Hessian của L(𝐰). Kí hiệu H(𝐰), hay có khi ta thấy ∇∇L(𝐰)
 >
 >
 >
-> d/d**w** \[∇L(**w**)\] (= H(**w**)) = d/d**w** \[L(**w**) ∇G(**w**)\]
+> d/d𝐰 \[∇L(𝐰)\] (= H(𝐰)) = d/d𝐰 \[L(𝐰) ∇G(𝐰)\]
 >
 >
 >
@@ -712,19 +712,19 @@
 >
 >
 >
-> ∇∇L(**w**) = d/d**w** \[L(**w**)\] ∇G(**w**) + L(**w**) d/d**w** \[∇G(**w**)\]
+> ∇∇L(𝐰) = d/d𝐰 \[L(𝐰)\] ∇G(𝐰) + L(𝐰) d/d𝐰 \[∇G(𝐰)\]
 >
 >
 >
-> Xét d/d**w** \[L(**w**)\], nó chính là ∇L(**w**)
+> Xét d/d𝐰 \[L(𝐰)\], nó chính là ∇L(𝐰)
 >
 >
 >
-> Còn d/d**w** \[∇G(**w**)\] thì là Hessian của G(**w**). Kí hiệu ∇∇G(**w**)
+> Còn d/d𝐰 \[∇G(𝐰)\] thì là Hessian của G(𝐰). Kí hiệu ∇∇G(𝐰)
 >
 >
 >
-> ∇∇L(**w**) = ∇L(**w**) ∇G(**w**) + L(**w**) \[∇∇G(**w**)\]
+> ∇∇L(𝐰) = ∇L(𝐰) ∇G(𝐰) + L(𝐰) \[∇∇G(𝐰)\]
 >
 >
 >
@@ -732,35 +732,35 @@
 >
 >
 >
-> Lấy giá trị Hessian tại đỉnh, tức **w**ML, thì tại đây, dĩ nhiên gradient của hàm likehood vanish. Tức ∇L(**w**ML) = **0** (zero vector). Nên Hessian tại **w**ML là:
+> Lấy giá trị Hessian tại đỉnh, tức 𝐰ML, thì tại đây, dĩ nhiên gradient của hàm likehood vanish. Tức ∇L(𝐰ML) = **0** (zero vector). Nên Hessian tại 𝐰ML là:
 >
 >
 >
-> ∇∇L(**w**ML) = L(**w**ML) \[∇∇G(**w**ML)\]
+> ∇∇L(𝐰ML) = L(𝐰ML) \[∇∇G(𝐰ML)\]
 >
 >
 >
-> Trong đó L(**w**ML), là giá trị likelihood tại **w**ML, là một constant nào đó. Và ∇∇G(**w**ML) là matrix Hessian của ln likelihood tại **w**ML.
+> Trong đó L(𝐰ML), là giá trị likelihood tại 𝐰ML, là một constant nào đó. Và ∇∇G(𝐰ML) là matrix Hessian của ln likelihood tại 𝐰ML.
 >
 >
 >
-> Như vậy, tại đỉnh **w**ML, Hessian của likelihood tỉ lệ với Hessian của ln likelihood bởi một constant dương, đặt là Lmax.
+> Như vậy, tại đỉnh 𝐰ML, Hessian của likelihood tỉ lệ với Hessian của ln likelihood bởi một constant dương, đặt là Lmax.
 >
 >
 >
-> Mà Hessian của ln likelihood là cái gì? → Ở trên ta đã làm: -β**Φ**T**Φ**, (hoàn tòan là một matrix fixed, không phụ thuộc **w** nữa)
+> Mà Hessian của ln likelihood là cái gì? → Ở trên ta đã làm: -β**Φ**ᵀ**Φ**, (hoàn tòan là một matrix fixed, không phụ thuộc 𝐰 nữa)
 >
 >
 >
-> Vậy ∇∇L(**w**ML) = Lmax (-β**Φ**T**Φ**) = -βLmax **Φ**T**Φ**
+> Vậy ∇∇L(𝐰ML) = Lmax (-β**Φ**ᵀ**Φ**) = -βLmax **Φ**ᵀ**Φ**
 >
 >
 >
-> Chéo hóa matrix (phân rã **Φ**T**Φ** thành **Q** **Λ** **Q**T như note trước đã làm) ta có:
+> Chéo hóa matrix (phân rã **Φ**ᵀ**Φ** thành 𝐐 **Λ** 𝐐ᵀ như note trước đã làm) ta có:
 >
 >
 >
-> ∇∇L(**w**ML) = -β Lmax **Q** **Λ** **Q**T
+> ∇∇L(𝐰ML) = -β Lmax 𝐐 **Λ** 𝐐ᵀ
 >
 >
 >
@@ -768,51 +768,51 @@
 >
 >
 >
-> Tiếp, quay lại xét hàm L(**w**), khai triển Taylor bậc hai (tức là lấy xấp xỉ bậc hai) quanh **w**ML
+> Tiếp, quay lại xét hàm L(𝐰), khai triển Taylor bậc hai (tức là lấy xấp xỉ bậc hai) quanh 𝐰ML
 >
 >
 >
-> L(**w**) ≈ L(**w**ML) + ∇L(**w**ML)T(**w** - **w**ML) + (1/2)(**w**-**w**ML)T (∇∇L(**w**ML)) (**w**-**w**ML)
+> L(𝐰) ≈ L(𝐰ML) + ∇L(𝐰ML)ᵀ(𝐰 - 𝐰ML) + (1/2)(𝐰-𝐰ML)ᵀ (∇∇L(𝐰ML)) (𝐰-𝐰ML)
 >
 >
 >
-> ⇔ L(**w**) ≈ Lmax + **0**T(**w** - **w**ML) + (1/2)(**w**-**w**ML)T (∇∇L(**w**ML)) (**w**-**w**ML)
+> ⇔ L(𝐰) ≈ Lmax + **0**ᵀ(𝐰 - 𝐰ML) + (1/2)(𝐰-𝐰ML)ᵀ (∇∇L(𝐰ML)) (𝐰-𝐰ML)
 >
 >
 >
-> ⇔ L(**w**) ≈ Lmax + (1/2)(**w**-**w**ML)T (∇∇L(**w**ML)) (**w**-**w**ML)
+> ⇔ L(𝐰) ≈ Lmax + (1/2)(𝐰-𝐰ML)ᵀ (∇∇L(𝐰ML)) (𝐰-𝐰ML)
 >
 >
 >
-> Đặt **v** = **w**-**w**ML
+> Đặt 𝐯 = 𝐰-𝐰ML
 >
 >
 >
-> L(**v**) ≈ Lmax + (1/2)**v**T (∇∇L(**w**ML)) **v**
+> L(𝐯) ≈ Lmax + (1/2)𝐯ᵀ (∇∇L(𝐰ML)) 𝐯
 >
 >
 >
-> Thay ∇∇L(**w**ML) = -βLmax **Q** **Λ** **Q**T
+> Thay ∇∇L(𝐰ML) = -βLmax 𝐐 **Λ** 𝐐ᵀ
 >
 >
 >
-> L(**v**) ≈ Lmax + (1/2)**v**T (-βLmax **Q** **Λ** **Q**T) **v**
+> L(𝐯) ≈ Lmax + (1/2)𝐯ᵀ (-βLmax 𝐐 **Λ** 𝐐ᵀ) 𝐯
 >
 >
 >
-> ⇔ L(**v**) ≈ Lmax - (βLmax/2 )**v**T**Q** **Λ** **Q**T**v**
+> ⇔ L(𝐯) ≈ Lmax - (βLmax/2 )𝐯ᵀ𝐐 **Λ** 𝐐ᵀ𝐯
 >
 >
 >
-> Đặt **y** = **Q**T**v**,
+> Đặt 𝐲 = 𝐐ᵀ𝐯,
 >
 >
 >
-> ⇔ L(**y**) ≈ Lmax - (βLmax/2) **y**T**Λy**
+> ⇔ L(𝐲) ≈ Lmax - (βLmax/2) 𝐲ᵀ**Λy**
 >
 >
 >
-> ⇔ L(**y**) ≈ Lmax - (βLmax/2) Σi=1:M λi yi^2
+> ⇔ L(𝐲) ≈ Lmax - (βLmax/2) Σi=1:M λi yi²
 >
 >
 >
@@ -820,7 +820,7 @@
 >
 >
 >
-> L(**y**) ≈ Lmax - (βLmax/2) (λ1 y1^2 + λ2 y2^2)
+> L(𝐲) ≈ Lmax - (βLmax/2) (λ1 y1² + λ2 y2²)
 >
 >
 >
@@ -832,19 +832,19 @@
 >
 >
 >
-> i) dời trục tọa độ về **w**ML (thông qua động tác đổi biến sang **v** = **w** - **w**ML)
+> i) dời trục tọa độ về 𝐰ML (thông qua động tác đổi biến sang 𝐯 = 𝐰 - 𝐰ML)
 >
 >
 >
-> ii) Xoay hệ trục để dùng hệ trục là vector eigenvalue u1, u2 của **Φ**T**Φ** (thông qua động tác đổi biến lần hai sang **y** = **Q**T**v**)
+> ii) Xoay hệ trục để dùng hệ trục là vector eigenvalue u1, u2 của **Φ**ᵀ**Φ** (thông qua động tác đổi biến lần hai sang 𝐲 = 𝐐ᵀ𝐯)
 >
 >
 >
-> thì khi đó, nếu ta xem xét hàm likelihood tại đỉnh (**w**ML), hay đúng hơn là xấp xỉ bậc hai của nó tại **w**ML (hay nói dễ hiểu là ta coi nó như hàm bậc hai vì Taylor theorem cho phép như vậy) thì ta sẽ thấy nó có một hàm số như vầy:
+> thì khi đó, nếu ta xem xét hàm likelihood tại đỉnh (𝐰ML), hay đúng hơn là xấp xỉ bậc hai của nó tại 𝐰ML (hay nói dễ hiểu là ta coi nó như hàm bậc hai vì Taylor theorem cho phép như vậy) thì ta sẽ thấy nó có một hàm số như vầy:
 >
 >
 >
-> f(y1, y2) = Lmax - (βLmax/2) (λ1 y1^2 + λ2 y2^2)
+> f(y1, y2) = Lmax - (βLmax/2) (λ1 y1² + λ2 y2²)
 >
 >
 >
@@ -852,7 +852,7 @@
 >
 >
 >
-> f1(y1) = Lmax - (βLmax/2) λ1 y1^2
+> f1(y1) = Lmax - (βLmax/2) λ1 y1²
 >
 >
 >
@@ -868,11 +868,11 @@
 >
 >
 >
-> Và hình ảnh của hai động tác vừa rồi chính là: Nhìn trong không gian 2D, ta có cái chảo paraboloid có đáy tại wML. Mà nhìn từ trên cao nhìn xuống một level set nào đó thì sẽ có hình ellipse, trục của ellipse song song với hai vector u1, u2 (eigenvector của **Φ**T**Φ**).
+> Và hình ảnh của hai động tác vừa rồi chính là: Nhìn trong không gian 2D, ta có cái chảo paraboloid có đáy tại wML. Mà nhìn từ trên cao nhìn xuống một level set nào đó thì sẽ có hình ellipse, trục của ellipse song song với hai vector u1, u2 (eigenvector của **Φ**ᵀ**Φ**).
 >
 >
 >
-> Sau đó, ta cắt parabol này bởi mặt phẳng qua **w**ML và song song với u1, thì trong mặt cắt đó, ta sẽ thấy một một parabol (chính là đồ thị hàm f1(y1))
+> Sau đó, ta cắt parabol này bởi mặt phẳng qua 𝐰ML và song song với u1, thì trong mặt cắt đó, ta sẽ thấy một một parabol (chính là đồ thị hàm f1(y1))
 >
 >
 >
@@ -880,7 +880,7 @@
 >
 >
 >
-> Và tới đây, với việc λ1, λ2 sẽ ảnh hưởng đến đạo hàm bậc hai của hai cái hàm f1, f2 này, mình đã hiểu tại sao nói λi sẽ phản ánh curvature của likelihood function, bởi vì đạo hàm bậc hai của f1, f2 **CHÍNH LÀ THÔNG TIN CURVATURE CỦA HÀM LIKELIHOOD THEO TỪNG PHƯƠNG** **u**1, **u**2.
+> Và tới đây, với việc λ1, λ2 sẽ ảnh hưởng đến đạo hàm bậc hai của hai cái hàm f1, f2 này, mình đã hiểu tại sao nói λi sẽ phản ánh curvature của likelihood function, bởi vì đạo hàm bậc hai của f1, f2 **CHÍNH LÀ THÔNG TIN CURVATURE CỦA HÀM LIKELIHOOD THEO TỪNG PHƯƠNG** 𝐮1, 𝐮2.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
@@ -898,11 +898,11 @@
 <p align="center"><kbd><img src="assets/qz5rc1h2jvj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, khi hết cấn vì sao λ (eigenvalue của **Φ**T**Φ**) cũng như cái vụ contours của L(**w**|**t**) có hình ellipses. Ta sẽ có thể nói về cái interpretation của kết quả 3.92:
+> Rồi, khi hết cấn vì sao λ (eigenvalue của **Φ**ᵀ**Φ**) cũng như cái vụ contours của L(𝐰|𝐭) có hình ellipses. Ta sẽ có thể nói về cái interpretation của kết quả 3.92:
 >
 >
 >
-> α = γ / (**m**N)T**m**N
+> α = γ / (𝐦N)ᵀ𝐦N
 >
 >
 >
@@ -910,7 +910,7 @@
 >
 >
 >
-> Như sau: Dễ hiểu thôi, lấy ví dụ **w** = (w1, w2), và λ1 và λ2 là eigenvalue, với λ1 nhỏ hơn nhiều so với α và λ2 thì ngược lại (nhắc lại cho nhớ: α là tham số của prior distribution của **w**, nơi ta assume nó là 𝒩(0, (1/α)**I**)
+> Như sau: Dễ hiểu thôi, lấy ví dụ 𝐰 = (w1, w2), và λ1 và λ2 là eigenvalue, với λ1 nhỏ hơn nhiều so với α và λ2 thì ngược lại (nhắc lại cho nhớ: α là tham số của prior distribution của 𝐰, nơi ta assume nó là 𝒩(0, (1/α)𝐈)
 >
 >
 >
@@ -918,11 +918,11 @@
 >
 >
 >
-> Vì λ1 ≪ α, nên λ1 / (α + λ1) sẽ rất nhỏ, ≈ 0. Và hình vẽ minh họa cho thấy w1 của **w**MAP cũng bị đẩy về gần 0.
+> Vì λ1 ≪ α, nên λ1 / (α + λ1) sẽ rất nhỏ, ≈ 0. Và hình vẽ minh họa cho thấy w1 của 𝐰MAP cũng bị đẩy về gần 0.
 >
 >
 >
-> Còn λ2 ≫ α, nên λ2 / (α + λ2) sẽ gần 1. HÌnh vẽ cho thấy w2 của **w**MAP bị đẩy về gần **w**ML.
+> Còn λ2 ≫ α, nên λ2 / (α + λ2) sẽ gần 1. HÌnh vẽ cho thấy w2 của 𝐰MAP bị đẩy về gần 𝐰ML.
 >
 >
 >
@@ -930,27 +930,27 @@
 >
 >
 >
-> Ở cái hướng eigenvector u1 của design matrix mà eigenvalue nhỏ (ví dụ λ1), chính là cái hướng mà cái contour hình ellipse bị kéo giãn nhiều, và λ1 nhỏ tức độ cong theo hướng này nhỏ để bề mặt cái tô paraboloid sẽ dốc xuống thoai thoải. Thì **w**MAP_1 sẽ gần với 0.
+> Ở cái hướng eigenvector u1 của design matrix mà eigenvalue nhỏ (ví dụ λ1), chính là cái hướng mà cái contour hình ellipse bị kéo giãn nhiều, và λ1 nhỏ tức độ cong theo hướng này nhỏ để bề mặt cái tô paraboloid sẽ dốc xuống thoai thoải. Thì 𝐰MAP_1 sẽ gần với 0.
 >
 >
 >
-> Ngược lại, ở hướng eigenvector u2, ứng với λ2 lớn, chính là cái hướng ellipse contour bị giãn ít, bề mặt khối paraboloid cong mạnh. Thì **w**MAP_2 sẽ gần với **w**ML_2.
+> Ngược lại, ở hướng eigenvector u2, ứng với λ2 lớn, chính là cái hướng ellipse contour bị giãn ít, bề mặt khối paraboloid cong mạnh. Thì 𝐰MAP_2 sẽ gần với 𝐰ML_2.
 >
 >
 >
-> Mà **w**MAP_1 bị bóp về gần 0 có nghĩa là sao mà**w**MAP_2 sẽ gần với **w**ML_2 thì có nghĩa là sao?
+> Mà 𝐰MAP_1 bị bóp về gần 0 có nghĩa là sao mà𝐰MAP_2 sẽ gần với 𝐰ML_2 thì có nghĩa là sao?
 >
 >
 >
-> Ta hình dung có hai thứ kéo **w**MAP: Prior và Likelihood. Prior là cái khối chảo parabol có tâm tại (0,0) còn likelihood cũng là khối chảo parabol có tâm tại **w**ML. Độ cong của khối chảo Prior thì như nhau ở mọi hướng, nhưng của likelihood thì mạnh hơn ở hướng u2 (λ2 lớn) và nhẹ hơn ở u1.
+> Ta hình dung có hai thứ kéo 𝐰MAP: Prior và Likelihood. Prior là cái khối chảo parabol có tâm tại (0,0) còn likelihood cũng là khối chảo parabol có tâm tại 𝐰ML. Độ cong của khối chảo Prior thì như nhau ở mọi hướng, nhưng của likelihood thì mạnh hơn ở hướng u2 (λ2 lớn) và nhẹ hơn ở u1.
 >
 >
 >
-> Ở cái hướng mà likelihood có mức thay đổi chậm (dốc thoai thoải theo phương u1) thì kiểu như lực kéo về **w**ML yếu, do đó lực kéo về prior lấn át, khiến cho w1 của **w**MAP tiến về w1 của prior mean (=0)
+> Ở cái hướng mà likelihood có mức thay đổi chậm (dốc thoai thoải theo phương u1) thì kiểu như lực kéo về 𝐰ML yếu, do đó lực kéo về prior lấn át, khiến cho w1 của 𝐰MAP tiến về w1 của prior mean (=0)
 >
 >
 >
-> Còn ở hướng u2, likelihood có mức thay đổi nhanh (dốc cắm đầu theo phương u2) thì lại giống như lực kéo về **w**ML lấn át lực kéo về prior mean. Do đó, w2 của **w**MAP bị kéo về w2 của **w**ML
+> Còn ở hướng u2, likelihood có mức thay đổi nhanh (dốc cắm đầu theo phương u2) thì lại giống như lực kéo về 𝐰ML lấn át lực kéo về prior mean. Do đó, w2 của 𝐰MAP bị kéo về w2 của 𝐰ML
 >
 >
 >
@@ -958,7 +958,7 @@
 >
 >
 >
-> Và insight thứ hai là, γ = Σi λi / (α + λi) = λ1 / (α + λ1) + λ2 / (α + λ2), thì coi như chỉ = λ2 / (α + λ2) (vì cái kia ≈ 0 rồi). Và như vậy trong hai tham số w1, w2 của **w**MAP, w1 bị bóp thành 0, coi như bị phế. Thành ra con số γ chính là số lượng param không bị phế, (vì khi = - thì coi như ko có), gọi là effective parameters, còn gọi là well-determined parameters.
+> Và insight thứ hai là, γ = Σi λi / (α + λi) = λ1 / (α + λ1) + λ2 / (α + λ2), thì coi như chỉ = λ2 / (α + λ2) (vì cái kia ≈ 0 rồi). Và như vậy trong hai tham số w1, w2 của 𝐰MAP, w1 bị bóp thành 0, coi như bị phế. Thành ra con số γ chính là số lượng param không bị phế, (vì khi = - thì coi như ko có), gọi là effective parameters, còn gọi là well-determined parameters.
 >
 >
 >
@@ -992,15 +992,15 @@
 >
 >
 >
-> Kết quả cho β là: 1/β = 1/(N - γ) Σi=1:N {ti - (**m**N)T Φ(**x**i)}^2
+> Kết quả cho β là: 1/β = 1/(N - γ) Σi=1:N {ti - (𝐦N)ᵀ Φ(𝐱i)}²
 >
 >
 >
-> Vậy thì để hiểu về ý nghĩa của kết quả này, gs Bishop muốn ta nhớ lại rằng, khi đi giải bài toán tìm MLE của σ^2, tức variance của phân phối normal(μ, σ^2), thì kết quả ra được là:
+> Vậy thì để hiểu về ý nghĩa của kết quả này, gs Bishop muốn ta nhớ lại rằng, khi đi giải bài toán tìm MLE của σ², tức variance của phân phối normal(μ, σ²), thì kết quả ra được là:
 >
 >
 >
-> (σ^2)\_ML = (1/N) Σi (xi - μML)^2
+> (σ²)\_ML = (1/N) Σi (xi - μML)²
 >
 >
 >
@@ -1012,15 +1012,15 @@
 >
 >
 >
-> Là như vầy: Ở đây có một kiến thức về statistic, mà trong các lớp như Stat110, hay Statistical Inference của Casella đã nói (mình có để link) đó là, sample variance, sách Casella kí hiệu S^2, có công thức là (1/N-1) Σi (Xi - Xbar)^2 là một unbiased estimator của sample variance. Còn nếu dùng công thức (1/N) Σi (Xi - Xbar)^2, thì nó sẽ là biased estimator. Lí do là, khi tính kì vọng E\[(1/N-1) Σi (Xi - Xbar)^2\], ta sẽ ra chính xác σ^2 (và trong 1.58, xem link, tác giả Bishop cũng từng nói vụ này)
+> Là như vầy: Ở đây có một kiến thức về statistic, mà trong các lớp như Stat110, hay Statistical Inference của Casella đã nói (mình có để link) đó là, sample variance, sách Casella kí hiệu S², có công thức là (1/N-1) Σi (Xi - Xbar)² là một unbiased estimator của sample variance. Còn nếu dùng công thức (1/N) Σi (Xi - Xbar)², thì nó sẽ là biased estimator. Lí do là, khi tính kì vọng E\[(1/N-1) Σi (Xi - Xbar)²\], ta sẽ ra chính xác σ² (và trong 1.58, xem link, tác giả Bishop cũng từng nói vụ này)
 >
 >
 >
-> Còn với công thức mà chia cho N, thì không. (và định nghĩa của biased estimator (của θ) W(**X**) là khi độ bias, tính bởi Bias(W, θ) = E\[W(**X**)\] - θ khác 0)
+> Còn với công thức mà chia cho N, thì không. (và định nghĩa của biased estimator (của θ) W(𝐗) là khi độ bias, tính bởi Bias(W, θ) = E\[W(𝐗)\] - θ khác 0)
 >
 >
 >
-> Vậy thì như vậy, ở đây, (σ^2)\_ML chính công thức của sample variance với mẫu số là N, nên nó chính là biased estimator của σ^2. Và trong phần 1.59 ông cũng đã nói rằng nếu ta giải theo Bayesian ta sẽ có (σ^2)\_MAP chính là công thức unbiased, E\[(1/N-1) Σi (Xi - Xbar)^2\].
+> Vậy thì như vậy, ở đây, (σ²)\_ML chính công thức của sample variance với mẫu số là N, nên nó chính là biased estimator của σ². Và trong phần 1.59 ông cũng đã nói rằng nếu ta giải theo Bayesian ta sẽ có (σ²)\_MAP chính là công thức unbiased, E\[(1/N-1) Σi (Xi - Xbar)²\].
 >
 >
 >
@@ -1028,15 +1028,15 @@
 >
 >
 >
-> Đó là, trong MLE approach (giải ra (σ^2)\_ML), ta coi μ, và σ^2, tức tham số của normal, là fixed cứng, nhưng không biết giá trị. Để rồi ta sẽ đặt ra hàm likelihood, đo độ hợp lí của một giá trị input μ, σ^2 dựa trên data quan sát được **x**, kí hiệu L(μ,σ^2|**x**), và hàm này được định nghĩa là, giá trị độ hợp lí của μ, σ^2 dựa trên data quan sát được **x**, sẽ bằng f(**x**|μ, σ^2). Từ đó, ta sẽ đi giải bài toán tối ưu: tìm μ, σ^2 để hàm độ hợp lí có giá trị cao nhất. Và kết quả của bài toán tối ưu này chính là công thức của maximum likelihood estimator của μ và σ^2.
+> Đó là, trong MLE approach (giải ra (σ²)\_ML), ta coi μ, và σ², tức tham số của normal, là fixed cứng, nhưng không biết giá trị. Để rồi ta sẽ đặt ra hàm likelihood, đo độ hợp lí của một giá trị input μ, σ² dựa trên data quan sát được 𝐱, kí hiệu L(μ,σ²|𝐱), và hàm này được định nghĩa là, giá trị độ hợp lí của μ, σ² dựa trên data quan sát được 𝐱, sẽ bằng f(𝐱|μ, σ²). Từ đó, ta sẽ đi giải bài toán tối ưu: tìm μ, σ² để hàm độ hợp lí có giá trị cao nhất. Và kết quả của bài toán tối ưu này chính là công thức của maximum likelihood estimator của μ và σ².
 >
 >
 >
-> Còn với Bayesian, ta coi μ, σ^2 như biến ngẫu nhiên. Mà như vậy thì chúng sẽ có probability distribution, gồm hai loại: prior distribution, là f(μ, σ^2) và f(μ, σ^2|**x**). Bằng cách chọn prior distribution của μ, và σ^2 là một distribution nào đó, ta sẽ dùng Bayes rule để có posterior: f(μ, σ^2|**x**) ∝ f(x|μ, σ^2)f(μ, σ^2). Và sau khi có posterior distribution. Để đưa ra một point estimator của μ, và σ^2, ta có thể chọn gía trị khiến posterior probability là lớn nhất, đây chính là maximum posterior estimator μ\_MAP và (σ^)\_MAP.
+> Còn với Bayesian, ta coi μ, σ² như biến ngẫu nhiên. Mà như vậy thì chúng sẽ có probability distribution, gồm hai loại: prior distribution, là f(μ, σ²) và f(μ, σ²|𝐱). Bằng cách chọn prior distribution của μ, và σ² là một distribution nào đó, ta sẽ dùng Bayes rule để có posterior: f(μ, σ²|𝐱) ∝ f(x|μ, σ²)f(μ, σ²). Và sau khi có posterior distribution. Để đưa ra một point estimator của μ, và σ², ta có thể chọn gía trị khiến posterior probability là lớn nhất, đây chính là maximum posterior estimator μ\_MAP và (σ^)\_MAP.
 >
 >
 >
-> Và theo lời gs nói ở đây, kết quả bài toán này ta sẽ có (σ^)\_MAP = (1/N-1) Σi (Xi - Xbar)^2, là cái công thức unbiased estimator của σ^2 nói trên.
+> Và theo lời gs nói ở đây, kết quả bài toán này ta sẽ có (σ^)\_MAP = (1/N-1) Σi (Xi - Xbar)², là cái công thức unbiased estimator của σ² nói trên.
 >
 >
 >
@@ -1056,7 +1056,7 @@
 >
 >
 >
-> Với cách là MLE, ta cũng là theo quy trình y như trong bài toán point estimator: tìm β giúp maximize likelihood function L(**w**,β|𝒟)
+> Với cách là MLE, ta cũng là theo quy trình y như trong bài toán point estimator: tìm β giúp maximize likelihood function L(𝐰,β|𝒟)
 >
 >
 >
@@ -1064,19 +1064,19 @@
 >
 >
 >
-> (1/β)\_ML = (1/N) Σi (ti - Σj=0:M-1 wj × Φj(**x**i))^2
+> (1/β)\_ML = (1/N) Σi (ti - Σj=0:M-1 wj × Φj(𝐱i))²
 >
 >
 >
-> = (1/N) Σi (ti - (**w**T Φ(**x**i))^2
+> = (1/N) Σi (ti - (𝐰ᵀ Φ(𝐱i))²
 >
 >
 >
-> lắp **w**ML vô ta có:
+> lắp 𝐰ML vô ta có:
 >
 >
 >
-> (1/β)\_ML = (1/N) Σi (ti - (**w**MLT Φ(**x**i))^2
+> (1/β)\_ML = (1/N) Σi (ti - (𝐰MLᵀ Φ(𝐱i))²
 >
 >
 >
@@ -1084,7 +1084,7 @@
 >
 >
 >
-> 1/β = 1/(N - γ) Σi=1:N {ti - (**m**N)T Φ(**x**i)}^2, với **m**N là **w**MAP
+> 1/β = 1/(N - γ) Σi=1:N {ti - (𝐦N)ᵀ Φ(𝐱i)}², với 𝐦N là 𝐰MAP
 >
 >
 >
@@ -1092,11 +1092,11 @@
 >
 >
 >
-> Trong bài toán point estimate σ^2, làm theo lối MLE, ta ra công thức chia cho N → biased
+> Trong bài toán point estimate σ², làm theo lối MLE, ta ra công thức chia cho N → biased
 >
 >
 >
-> Còn làm theo Bayesian, ta ra công thức chia cho N-1 → unbiased. Và ý nghĩa của số 1 là một bậc tự do đã bị mất khi ta dùng để tính sample mean (chính là **w**MAP) để estimate **w** rồi
+> Còn làm theo Bayesian, ta ra công thức chia cho N-1 → unbiased. Và ý nghĩa của số 1 là một bậc tự do đã bị mất khi ta dùng để tính sample mean (chính là 𝐰MAP) để estimate 𝐰 rồi
 >
 >
 >
@@ -1108,7 +1108,7 @@
 >
 >
 >
-> Còn làm theo lối Bayesian, ta ra công thức chia cho N-γ , mà γ là chính là số parameter hiệu dụng (effective) trong M param, nên giống như ta tốn 1 bậc tự do cho wML thì ở đây ta đã tốn γ bậc tự do cho **w**MAP rồi, chỉ còn N-γ, và do đó công thức 1/β = 1/(N - γ) Σi=1:N {ti - (**m**N)T Φ(**x**i)}^2 chính là unbiased.
+> Còn làm theo lối Bayesian, ta ra công thức chia cho N-γ , mà γ là chính là số parameter hiệu dụng (effective) trong M param, nên giống như ta tốn 1 bậc tự do cho wML thì ở đây ta đã tốn γ bậc tự do cho 𝐰MAP rồi, chỉ còn N-γ, và do đó công thức 1/β = 1/(N - γ) Σi=1:N {ti - (𝐦N)ᵀ Φ(𝐱i)}² chính là unbiased.
 >
 >
 >
@@ -1116,7 +1116,7 @@
 >
 >
 >
-> Một ý mà ta có thể thấy khó hiểu, là vì sao đi maximize model evidence lại làm theo Bayesian? Trong khi ta đâu có phải là đi maximize posterior của f(α, β|**t**), vốn phải ∝ f(t|α, β)f(α,β)) mà đang maximize f(**t**|α,β) cơ mà.
+> Một ý mà ta có thể thấy khó hiểu, là vì sao đi maximize model evidence lại làm theo Bayesian? Trong khi ta đâu có phải là đi maximize posterior của f(α, β|𝐭), vốn phải ∝ f(t|α, β)f(α,β)) mà đang maximize f(𝐭|α,β) cơ mà.
 >
 >
 >
@@ -1132,11 +1132,11 @@
 >
 >
 >
-> Ta phải coi **w**, α, β đều là random variable.
+> Ta phải coi 𝐰, α, β đều là random variable.
 >
 >
 >
-> Rồi đi xây dựng posterior f(**w**, α, β|𝒟) ∝ f(𝒟|**w**, α, β)f(**w**, α, β). Khi có posterior, ta mới đi lấy trung bình của **w**, β, α dựa trên phân phối này. 
+> Rồi đi xây dựng posterior f(𝐰, α, β|𝒟) ∝ f(𝒟|𝐰, α, β)f(𝐰, α, β). Khi có posterior, ta mới đi lấy trung bình của 𝐰, β, α dựa trên phân phối này. 
 >
 >
 >
@@ -1148,11 +1148,11 @@
 >
 >
 >
-> Coi **w** là random variable trước, prior là f(**w**|α) → posterior f(**w**|𝒟,α, β).
+> Coi 𝐰 là random variable trước, prior là f(𝐰|α) → posterior f(𝐰|𝒟,α, β).
 >
 >
 >
-> Đi marginalizing over **w**: ta sẽ có một hàm không còn phụ thuộc **w**, chính là model evidence f(**t**|α, β)
+> Đi marginalizing over 𝐰: ta sẽ có một hàm không còn phụ thuộc 𝐰, chính là model evidence f(𝐭|α, β)
 >
 >
 >
@@ -1168,7 +1168,7 @@
 >
 >
 >
-> Vấn đề là, khi marginalizing **w** xong, để có f(𝒟|α,β) (cũng là f(**t**|α, β)) thì vì hai bước tiếp theo quá phức tạp (cũng như gs Bishop đã nói, để tích phân 3 lớp (đối với w, với α, β) sẽ intractable) do đó, sau khi có f(𝒟|α, β) người ta lại làm theo kiểu nửa mùa, là lại đi tìm MLE của α, β. Để cho ra cái 1/β 3.95
+> Vấn đề là, khi marginalizing 𝐰 xong, để có f(𝒟|α,β) (cũng là f(𝐭|α, β)) thì vì hai bước tiếp theo quá phức tạp (cũng như gs Bishop đã nói, để tích phân 3 lớp (đối với w, với α, β) sẽ intractable) do đó, sau khi có f(𝒟|α, β) người ta lại làm theo kiểu nửa mùa, là lại đi tìm MLE của α, β. Để cho ra cái 1/β 3.95
 >
 >
 >
@@ -1202,15 +1202,15 @@
 >
 >
 >
-> (3.25): E_W\[**w**\] = (1/2)**w**T**w**
+> (3.25): E_W\[𝐰\] = (1/2)𝐰ᵀ𝐰
 >
 >
 >
-> (3.26): E_D(**w**) = (1/2) Σi {ti - **w**T Φ(xi)}^2
+> (3.26): E_D(𝐰) = (1/2) Σi {ti - 𝐰ᵀ Φ(xi)}²
 >
 >
 >
-> (3.87): (β**Φ**T**Φ**)**u**i = λi **u**i
+> (3.87): (β**Φ**ᵀ**Φ**)𝐮i = λi 𝐮i
 >
 >
 >
@@ -1218,7 +1218,7 @@
 >
 >
 >
-> α = γ / (**m**N)T(**m**N)
+> α = γ / (𝐦N)ᵀ(𝐦N)
 >
 >
 >
@@ -1226,35 +1226,15 @@
 >
 >
 >
-> mà theo 3.25 thì đây chính γ/2E_W(**m**N)
+> mà theo 3.25 thì đây chính γ/2E_W(𝐦N)
 >
 >
 >
-> 1/β = \[1/(N-γ)\] \[Σi (ti - **m**NTΦ(**x**i))^2\]
+> 1/β = \[1/(N-γ)\] \[Σi (ti - 𝐦NᵀΦ(𝐱i))²\]
 >
 >
 >
-> theo 3.26 thì đây chính là \[1/(N-γ)\] 2E_D(**m**N), = 2E_D(**m**N) / (N-γ)
->
->
->
-> ---
->
->
->
-> Ta có α = γ/2E_W(**m**N), thế thì hình 3.16 trái, đường màu đỏ và màu xanh là γ và 2αE_W(**m**N) (thay đổi theo ln α): Ý nghĩa là sao:
->
->
->
-> bài trước mình đã hiểu rằng, với công thức α = γ/2E_W(**m**N) ⇔ 2αE_W(**m**N) = γ, thì vì γ = Σi=1:M \[λi / (λi + α)\], lại phụ thuộc α, và **m**N cũng vậy, nên công thức này là implicit function. Thành ra phải giải tìm α bằng itererative loop: Chọn α0, tính γ, **m**N, rồi tính ra α1, sau đó lại lặp lại,...cho đến khi converge.
->
->
->
-> Vậy thì nó sẽ converge thế nào tạm hiểu là nó sẽ converge về cái điểm cân bằng nơi mà hai đường xanh đỏ của hình 3.16 bên trái, cắt nhau (để 2αE_W(**m**N) = γ) (Bài trước gs không nói gì về thuật toán giải ra α, nên mình tạm thời chưa hiểu chính xác cách thức)
->
->
->
-> Nhưng ý chính đó là, khi ta vẽ giá trị của hàm model evidence f(**t**|α, β) với β đã chọn fixed, thì sẽ thấy nó đạt đỉnh tại vị trí của α nơi hai đường xanh đỏ giao nhau ở trên (điều này ko có gì ngạc nhiên, vì đương nhiên công thức đó chính là α giúp maximize model evidence). Tuy nhiên hình bên phải còn có đường màu xanh, là test errorr, nó thấp nhất cũng đâu đó tại αMAP này, do đó thể hiện rằng, bằng cách tìm α giúp maximize model evidence, ta đã giống như là tìm ra α giúp model có tính chất generalization tốt nhất, vốn là mục tiêu quan trọng nhất, mà đây cũng là thứ mà cái gọi là hyperparameter tuning (ví dụ với cross validation) muốn đạt được
+> theo 3.26 thì đây chính là \[1/(N-γ)\] 2E_D(𝐦N), = 2E_D(𝐦N) / (N-γ)
 >
 >
 >
@@ -1262,7 +1242,27 @@
 >
 >
 >
-> Tiếp, người ta plot đồ thị của 10 tham số w0,...w9 theo γ, mà γ thay đổi cũng là do α thay đổi. Nhằm cho thấy liên hệ giữa: precision của prior distribution của **w** → số effective parameter γ = Σi=1:M \[λi / (λi + α)\]
+> Ta có α = γ/2E_W(𝐦N), thế thì hình 3.16 trái, đường màu đỏ và màu xanh là γ và 2αE_W(𝐦N) (thay đổi theo ln α): Ý nghĩa là sao:
+>
+>
+>
+> bài trước mình đã hiểu rằng, với công thức α = γ/2E_W(𝐦N) ⇔ 2αE_W(𝐦N) = γ, thì vì γ = Σi=1:M \[λi / (λi + α)\], lại phụ thuộc α, và 𝐦N cũng vậy, nên công thức này là implicit function. Thành ra phải giải tìm α bằng itererative loop: Chọn α0, tính γ, 𝐦N, rồi tính ra α1, sau đó lại lặp lại,...cho đến khi converge.
+>
+>
+>
+> Vậy thì nó sẽ converge thế nào tạm hiểu là nó sẽ converge về cái điểm cân bằng nơi mà hai đường xanh đỏ của hình 3.16 bên trái, cắt nhau (để 2αE_W(𝐦N) = γ) (Bài trước gs không nói gì về thuật toán giải ra α, nên mình tạm thời chưa hiểu chính xác cách thức)
+>
+>
+>
+> Nhưng ý chính đó là, khi ta vẽ giá trị của hàm model evidence f(𝐭|α, β) với β đã chọn fixed, thì sẽ thấy nó đạt đỉnh tại vị trí của α nơi hai đường xanh đỏ giao nhau ở trên (điều này ko có gì ngạc nhiên, vì đương nhiên công thức đó chính là α giúp maximize model evidence). Tuy nhiên hình bên phải còn có đường màu xanh, là test errorr, nó thấp nhất cũng đâu đó tại αMAP này, do đó thể hiện rằng, bằng cách tìm α giúp maximize model evidence, ta đã giống như là tìm ra α giúp model có tính chất generalization tốt nhất, vốn là mục tiêu quan trọng nhất, mà đây cũng là thứ mà cái gọi là hyperparameter tuning (ví dụ với cross validation) muốn đạt được
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, người ta plot đồ thị của 10 tham số w0,...w9 theo γ, mà γ thay đổi cũng là do α thay đổi. Nhằm cho thấy liên hệ giữa: precision của prior distribution của 𝐰 → số effective parameter γ = Σi=1:M \[λi / (λi + α)\]
 >
 >
 >
@@ -1278,11 +1278,11 @@
 >
 >
 >
-> Nhớ lại hình ảnh sự giằng co ảnh hưởng của prior và likelihood, ta thấy rằng khi α nhỏ, tức 1/α lớn, priori trở nên dàn trải xác suất khiến kiểu như niềm tin ban đầu về **w** yếu ớt → sức ảnh hưởng của prior nhỏ, và do đó mọi tham số đều bị likelihood kéo lên khiến cho chúng đề có giá trị lớn (xa mức 0).
+> Nhớ lại hình ảnh sự giằng co ảnh hưởng của prior và likelihood, ta thấy rằng khi α nhỏ, tức 1/α lớn, priori trở nên dàn trải xác suất khiến kiểu như niềm tin ban đầu về 𝐰 yếu ớt → sức ảnh hưởng của prior nhỏ, và do đó mọi tham số đều bị likelihood kéo lên khiến cho chúng đề có giá trị lớn (xa mức 0).
 >
 >
 >
-> Ngược lại, khi α lớn, 1/α nhỏ, priori trở nên tập trung cao xác suất, mang ý nghĩa niềm tin ban đầu của **w** rất lớn → sức ảnh hưởng của prior lớn, kéo mọi tham số về 0.
+> Ngược lại, khi α lớn, 1/α nhỏ, priori trở nên tập trung cao xác suất, mang ý nghĩa niềm tin ban đầu của 𝐰 rất lớn → sức ảnh hưởng của prior lớn, kéo mọi tham số về 0.
 >
 >
 >
@@ -1306,7 +1306,7 @@
 <p align="center"><kbd><img src="assets/4w91xqbysf9.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và đoạn cuối cùng, gs nói về case khi N lớn hơn M nhiều lần (data nhiều hơn số lượng tham số) thì đại ý là ta có thể khỏi phải giải tìm α, β (maximize model evidence) theo lối iterative, và thậm chí cũng khỏi cần tính các eigenvalue của β**Φ**T**Φ**. Nhờ đó tiết kiệm được chi phí tính toán.
+> Và đoạn cuối cùng, gs nói về case khi N lớn hơn M nhiều lần (data nhiều hơn số lượng tham số) thì đại ý là ta có thể khỏi phải giải tìm α, β (maximize model evidence) theo lối iterative, và thậm chí cũng khỏi cần tính các eigenvalue của β**Φ**ᵀ**Φ**. Nhờ đó tiết kiệm được chi phí tính toán.
 >
 >
 >
@@ -1314,7 +1314,7 @@
 >
 >
 >
-> Đầu tiên là ta nhớ công thức (3.87): (β**Φ**T**Φ**)**u**i = λi **u**i, ko có gì ghê gớm, chỉ là nói λi là eigenvalue của β**Φ**T**Φ** thôi, nhưng quan trọng là, xét cái design matrix **Φ**T**Φ**, thì dựa vào kiến thức đã học với thầy Strang trong 18.06, rằng, nhân hai matrix AB có 4 cách nhìn, trong đó cách thứ 4 là: AB = tổng của các rank 1 matrix tạo bởi outer product của (cột i của A) và (hàng i của B). Mà Φ là matrix có các hàng là Φ(**x**1)T,...Φ(**x**N)T. Nên **Φ**T chính là có các cột là Φ(**x**1),...Φ(**x**N), và như vậy **Φ**T**Φ** = Σi=1:N Φ(**x**i)Φ(**x**i)T. Mà như vậy thì có nghĩa là khi N rất lớn, design matrix là matrix có giá trị rất lớn theo, dẫn tới eigenvalue λi của nó cũng vậy.
+> Đầu tiên là ta nhớ công thức (3.87): (β**Φ**ᵀ**Φ**)𝐮i = λi 𝐮i, ko có gì ghê gớm, chỉ là nói λi là eigenvalue của β**Φ**ᵀ**Φ** thôi, nhưng quan trọng là, xét cái design matrix **Φ**ᵀ**Φ**, thì dựa vào kiến thức đã học với thầy Strang trong 18.06, rằng, nhân hai matrix AB có 4 cách nhìn, trong đó cách thứ 4 là: AB = tổng của các rank 1 matrix tạo bởi outer product của (cột i của A) và (hàng i của B). Mà Φ là matrix có các hàng là Φ(𝐱1)ᵀ,...Φ(𝐱N)ᵀ. Nên **Φ**ᵀ chính là có các cột là Φ(𝐱1),...Φ(𝐱N), và như vậy **Φ**ᵀ**Φ** = Σi=1:N Φ(𝐱i)Φ(𝐱i)ᵀ. Mà như vậy thì có nghĩa là khi N rất lớn, design matrix là matrix có giá trị rất lớn theo, dẫn tới eigenvalue λi của nó cũng vậy.
 >
 >
 >
@@ -1322,11 +1322,11 @@
 >
 >
 >
-> Khi đó α = γ / 2E(**m**N) (vì sao trong note trước đã nói), thì ≈ M / 2E(**m**N)
+> Khi đó α = γ / 2E(𝐦N) (vì sao trong note trước đã nói), thì ≈ M / 2E(𝐦N)
 >
 >
 >
-> và β = (N-γ) / 2E_D(**m**N) ≈ (N-M) / 2E_D(**m**N) ≈ N / 2E_D(**m**N) (do N ≫ M)
+> và β = (N-γ) / 2E_D(𝐦N) ≈ (N-M) / 2E_D(𝐦N) ≈ N / 2E_D(𝐦N) (do N ≫ M)
 >
 >
 >
@@ -1334,7 +1334,7 @@
 >
 >
 >
-> Trả lời: Là khỏi tính γ, và như vậy khỏi tính λi, eigenvalue của β**Φ**T**Φ** (cũng là Hessian của likelihood), và từ đó giảm chi phí tính toán chứ sao.
+> Trả lời: Là khỏi tính γ, và như vậy khỏi tính λi, eigenvalue của β**Φ**ᵀ**Φ** (cũng là Hessian của likelihood), và từ đó giảm chi phí tính toán chứ sao.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
