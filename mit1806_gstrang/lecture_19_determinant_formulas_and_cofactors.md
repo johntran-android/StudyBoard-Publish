@@ -39,15 +39,15 @@
 >
 >
 >
-> -> Đó là hai cái **có zero column** (vì như ta đã biết det A =
+> → Đó là hai cái **có zero column** (vì như ta đã biết det A =
 > det Aᵀ, và **matrix có row = 0 thì det = 0 theo property #6
 > nên matrix có cột bằng 0 thì det = 0**
 >
 >
 >
 > Hoặc cũng có thể **nghĩ theo cách, matrix có col = 0 thì nó
-> không thể full rank vì cột bằng 0 đó dependent** -> 
-> non-invertible, hay singular -> det = 0)
+> không thể full rank vì cột bằng 0 đó dependent** → 
+> non-invertible, hay singular → det = 0)
 
 **🔗 See also:** [linked note](./lecture_18_properties_of_determinants.md#node-enxuz0g)
 
@@ -83,6 +83,8 @@
 
 <a id="node-prlj63n"></a>
 
+###### Formula for det A
+
 <p align="center"><kbd><img src="assets/yvg2rawua3f.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -105,21 +107,21 @@
 >
 >
 >
-> Vậy **tổng cộng có 27 matrix = 3^3**.
+> Vậy **tổng cộng có 27 matrix = 3³**.
 >
 >
 >
-> Nhận xét **với matrix 2x2 thì ta có 2^2.**
+> Nhận xét **với matrix 2x2 thì ta có 2².**
 >
 >
 >
 > Vậy có thể khái quát matrix **nxn ta sẽ tách thành nxn =
-> n^2 matrix**
+> n² matrix**
 >
 >
 >
 > PHẢI HIỂU LÀ ĐỂ RỒI TA CÓ **DET CỦA MATRIX BAN
-> ĐẦU** BẰNG **TỔNG DET CỦA N^2 MATRIX NÀY**. Và
+> ĐẦU** BẰNG **TỔNG DET CỦA N² MATRIX NÀY**. Và
 > gs nói rằng **phần lớn các matrix sẽ có det = 0**, giống
 > như trong case 2x2 matrix, các matrix có cols = 0 sẽ có det
 > = 0
