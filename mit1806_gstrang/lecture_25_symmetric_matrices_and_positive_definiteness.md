@@ -286,19 +286,19 @@
 >
 >
 >
-> = u^2 - (v*i)^2 
+> = u² - (v*i)^2 
 >
 >
 >
-> = u^2 - (v^2)*(i^2) 
+> = u² - (v²)*(i²) 
 >
 >
 >
-> = u^2 - v^2(-1)  (i^2 = -1)
+> = u² - v²(-1)  (i² = -1)
 >
 >
 >
-> = **u^2 + v^2 chính là square của modulus.**
+> = **u² + v² chính là square của modulus.**
 
 **🔗 See also:** [linked note](#node-rfbv3be)
 
@@ -650,9 +650,9 @@
 >
 >
 >
-> Gs kiểm tra lại tính chất P^2 = P của các projection
+> Gs kiểm tra lại tính chất P² = P của các projection
 > matrix này: (q1q1ᵀ)^2 =  q1q1ᵀ q1q1ᵀ = q1 (q1Tq1)
-> q1ᵀ = q1q1ᵀ -> thỏa tính chất này vì (q1Tq1) = 1
+> q1ᵀ = q1q1ᵀ → thỏa tính chất này vì (q1Tq1) = 1
 
 <br>
 
