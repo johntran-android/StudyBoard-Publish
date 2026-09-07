@@ -54,27 +54,27 @@
 >
 >
 >
-> = E[(X - EX)^2], = E[(X - μ)^2],
+> = E[(X - EX)²], = E[(X - μ)²],
 >
 >
 >
->  áp dụng LOTUS = Σ{x=1,0} (x-μ)^2f(x) 
+>  áp dụng LOTUS = Σ{x=1,0} (x-μ)²f(x) 
 >
 >
 >
-> = (1-μ)^2 μ + (0-μ)^2 (1-μ) 
+> = (1-μ)² μ + (0-μ)² (1-μ) 
 >
 >
 >
-> = (1-μ)^2 μ + μ^2(1-μ)
+> = (1-μ)² μ + μ²(1-μ)
 >
 >
 >
-> = (1-2μ+μ^2)μ + μ^2 - μ^3
+> = (1-2μ+μ²)μ + μ² - μ³
 >
 >
 >
-> = μ - 2μ^2 + μ^3 + μ^2 - μ^3 = μ - μ^2 = μ(1-μ)
+> = μ - 2μ² + μ³ + μ² - μ³ = μ - μ² = μ(1-μ)
 
 <br>
 
@@ -98,27 +98,27 @@
 >
 >
 > Khi đó, nếu xét joint pdf/pmf của X1,...Xn thì nhờ tính chất independent, ta có thể tách
-> thành tích các marginal pdf: f(**x**|θ) = Πi=1:n f(xi|θ)
+> thành tích các marginal pdf: f(𝐱|θ) = Πi=1:n f(xi|θ)
 >
 >
 >
 > Và ta trong các bài trước nhiều lần nhắc đến likelihood function, được định nghĩa là hàm
-> của θ: L(θ|**x**) = f(**x**|θ) mang ý nghĩa độ hợp lí của θ khi giá trị quan sát được của **X**
-> là **x**.
+> của θ: L(θ|𝐱) = f(𝐱|θ) mang ý nghĩa độ hợp lí của θ khi giá trị quan sát được của 𝐗
+> là 𝐱.
 >
 >
 >
-> và đi giải bài toán maximize_θ ∈ Θ L(θ|**x**) ta sẽ tìm được Maximum Likelihood estimator
-> của θ: θ^_ml(**X**)
+> và đi giải bài toán maximize_θ ∈ Θ L(θ|𝐱) ta sẽ tìm được Maximum Likelihood estimator
+> của θ: θ^_ml(𝐗)
 >
 >
 >
-> Quay lại đây, cái mà ta có cũng chính là một observed value của một random sample **X**
+> Quay lại đây, cái mà ta có cũng chính là một observed value của một random sample 𝐗
 > =(X1,...XN) iid: chúng mutually independent và indicator distributed Xi ~ Bern(μ).
 >
 >
 >
-> Nên likelihood function L(μ|**x**), như định nghĩa = f(**x**|μ), nhờ tính iid,...
+> Nên likelihood function L(μ|𝐱), như định nghĩa = f(𝐱|μ), nhờ tính iid,...
 >
 >
 >
@@ -165,20 +165,20 @@
 > không phải là biến ngẫu nhiên). Trong Casella, ngay sau khi học về ML estimator ta học về
 > Bayes estimator, thì chính là làm theo trường phái Bayesian, nơi ta coi θ là random
 > variables. Từ đó ta chọn prior distribution cho θ, kí hiệu là π(θ). Và dùng Bayes rule để xây
-> dựng distribution của θ conditioned on **X** = **x**: π(θ|**x**)  = f(**x**|θ)π(θ)/f(**x**). Khi
+> dựng distribution của θ conditioned on 𝐗 = 𝐱: π(θ|𝐱)  = f(𝐱|θ)π(θ)/f(𝐱). Khi
 > đó, ta sẽ làm theo optimality theory để xây dựng Bayes  estimator:
 >
 >
 >
-> Chọn **loss function** L(W(**X**), θ), ví dụ squared error loss hay absolute error loss,
+> Chọn **loss function** L(W(𝐗), θ), ví dụ squared error loss hay absolute error loss,
 >
 >
 >
-> từ đó có **risk function** là lấy trung bình của loss trên mọi **x**:
+> từ đó có **risk function** là lấy trung bình của loss trên mọi 𝐱:
 >
 >
 >
-> R(W(**X**), θ) = E_θ[L(W(**X**), θ] = ∫L(W(**x**),θ)f(**x**|θ) d**x** là hàm số theo θ.
+> R(W(𝐗), θ) = E_θ[L(W(𝐗), θ] = ∫L(W(𝐱),θ)f(𝐱|θ) d𝐱 là hàm số theo θ.
 >
 >
 >
@@ -190,32 +190,32 @@
 >
 >
 >
-> E_θ~π(θ) [R(W(**X**),θ)] để được một fixed value không còn phụ thuộc θ, gọi là Bayes
+> E_θ~π(θ) [R(W(𝐗),θ)] để được một fixed value không còn phụ thuộc θ, gọi là Bayes
 > risk.
 >
 >
 >
-> = ∫[∫L(W(**x**),θ)f(**x**|θ)d**x**]π(θ)dθ
+> = ∫[∫L(W(𝐱),θ)f(𝐱|θ)d𝐱]π(θ)dθ
 >
 >
 >
-> = ∫∫L(W(**x**),θ)[π(θ|**x**)f(**x**)/π(θ)]π(θ)dθd**x**
+> = ∫∫L(W(𝐱),θ)[π(θ|𝐱)f(𝐱)/π(θ)]π(θ)dθd𝐱
 >
 >
 >
-> = ∫∫L(W(**x**),θ)π(θ|**x**)f(**x**)dθd**x**
+> = ∫∫L(W(𝐱),θ)π(θ|𝐱)f(𝐱)dθd𝐱
 >
 >
 >
-> = ∫ {∫L(W(**x**),θ)π(θ|**x**)dθ} f(**x**)d**x**
+> = ∫ {∫L(W(𝐱),θ)π(θ|𝐱)dθ} f(𝐱)d𝐱
 >
 >
 >
-> Thì cái này ∫L(W(**x**),θ)π(θ|**x**)dθ gọi là **posterior expected loss** 
+> Thì cái này ∫L(W(𝐱),θ)π(θ|𝐱)dθ gọi là **posterior expected loss** 
 >
 >
 >
-> Từ đó, đi minimize_W(**X**) E_θ~π(θ|x) [R(W(**X**), θ)] cũng là minimize posterior
+> Từ đó, đi minimize_W(𝐗) E_θ~π(θ|x) [R(W(𝐗), θ)] cũng là minimize posterior
 > expected loss  ta sẽ có "Bayes estimator that minimize Bayes risk" cho θ.
 
 <br>
@@ -251,36 +251,36 @@
 >
 > Dừng lại chút, chap 6, phần 1 của Casella mình đã được học về Sufficient
 > principle, cũng như sufficient statistic, nói ngắn gọn, đây là loại statistic  chứa
-> đủ thông tin về θ mà sample **X** mang lại rồi. Để rồi, giả sử ta ko biết  giá trị
-> của **X**, nhưng thay vào đó, chỉ cần biết giá trị của t của T(**X**), với T(**X**)
+> đủ thông tin về θ mà sample 𝐗 mang lại rồi. Để rồi, giả sử ta ko biết  giá trị
+> của 𝐗, nhưng thay vào đó, chỉ cần biết giá trị của t của T(𝐗), với T(𝐗)
 > là một sufficient statistic, thì từ t ta vẫn có thể inference ra giá trị của θ một cách
-> đầy đủ giống như ta có **x** vậy.
+> đầy đủ giống như ta có 𝐱 vậy.
 >
 >
 >
 > Hiểu theo cách trực giác là như vậy, nhưng định nghĩa chính thức là nếu
-> T(**X**) có tính chất đó là khiến f(**x**|T(**X**) = T(**x**)) không còn là hàm phụ
+> T(𝐗) có tính chất đó là khiến f(𝐱|T(𝐗) = T(𝐱)) không còn là hàm phụ
 > thuộc θ, thì nó chính là sufficient statistic. Trong sách Casella, với định nghĩa
 > này, ta mới đi chứng minh cho thấy rằng, giả sử có hai ông A, và B, ông A biết
-> **X** = **x**, và T(**X**) = T(**x**), còn ông B chỉ biết T(**X**) = T(**x**). Sau đó
-> ông A dựa vào T(**X**) = T(**x**), generate các giá trị của **Y** sao cho P(**Y** =
-> **y** | T(**X**) = T(**x**)) = P(**X** = **y** | T(**X**) = T(**x**)) thì ta chứng minh
-> được cái random variable **Y** này qủa thật chính là ~ marginal pmf của **X**:
-> f(**x**|θ) (hay P(**X**=**y**) = P(**Y**=**y**) ∀**y**) Điều này giúp kết luận là chỉ
-> cần dựa trên T(**x**) cũng đủ để xây dựng hiểu biết của ta về θ
+> 𝐗 = 𝐱, và T(𝐗) = T(𝐱), còn ông B chỉ biết T(𝐗) = T(𝐱). Sau đó
+> ông A dựa vào T(𝐗) = T(𝐱), generate các giá trị của 𝐘 sao cho P(𝐘 =
+> 𝐲 | T(𝐗) = T(𝐱)) = P(𝐗 = 𝐲 | T(𝐗) = T(𝐱)) thì ta chứng minh
+> được cái random variable 𝐘 này qủa thật chính là ~ marginal pmf của 𝐗:
+> f(𝐱|θ) (hay P(𝐗=𝐲) = P(𝐘=𝐲) ∀𝐲) Điều này giúp kết luận là chỉ
+> cần dựa trên T(𝐱) cũng đủ để xây dựng hiểu biết của ta về θ
 >
 >
 >
 > Sau đó ta được học một theorem quan trọng giúp chứng minh sufficient
-> statistic: **Factorization**, nói rằng, miễn f(**x**|θ) có thể được factor thành
-> g(T(**x**)|θ)h(**x**) tức là tích của hàm h(**x**) chỉ phụ thuộc **x** và hàm g phụ
-> thuộc  cả **x** lẫn θ nhưng chỉ phụ thuộc **x** thông qua T(**x**), thì khi đó T
+> statistic: **Factorization**, nói rằng, miễn f(𝐱|θ) có thể được factor thành
+> g(T(𝐱)|θ)h(𝐱) tức là tích của hàm h(𝐱) chỉ phụ thuộc 𝐱 và hàm g phụ
+> thuộc  cả 𝐱 lẫn θ nhưng chỉ phụ thuộc 𝐱 thông qua T(𝐱), thì khi đó T
 > **chính là  sufficient statistic**.
 >
 >
 >
-> Nhờ theorem này, ta có cách tìm sufficient statistic: tìm các factor f(**x**|θ)
-> thành dạng trên thì cái cụm nào chứa **x** trong g(T(**x**)|θ) chính là sufficient
+> Nhờ theorem này, ta có cách tìm sufficient statistic: tìm các factor f(𝐱|θ)
+> thành dạng trên thì cái cụm nào chứa 𝐱 trong g(T(𝐱)|θ) chính là sufficient
 > statistic function.
 >
 >
@@ -290,22 +290,22 @@
 >
 >
 >
-> f(**x**|μ), như vừa làm = Πn=1:N μ^xn(1-μ)^(1-xn)
+> f(𝐱|μ), như vừa làm = Πn=1:N μ^xn(1-μ)^(1-xn)
 >
 >
 >
-> xét Pμ(**X**=**x**|T(**X**)=T(**x**)), trước khi chứng minh nó ko phụ thuộc θ, ta
+> xét Pμ(𝐗=𝐱|T(𝐗)=T(𝐱)), trước khi chứng minh nó ko phụ thuộc θ, ta
 > biến đổi chút xíu:
 >
 >
 >
-> Pμ(**X**=**x**|T(**X**)=T(**x**)) = Pμ(**X**=**x**, T(**X**)=T(**x**)) /
-> P(T(**X**)=T(**x**))
+> Pμ(𝐗=𝐱|T(𝐗)=T(𝐱)) = Pμ(𝐗=𝐱, T(𝐗)=T(𝐱)) /
+> P(T(𝐗)=T(𝐱))
 >
 >
 >
-> Vì **X**=**x** ⇨ T(**X**)=T(**x**) ⇨ (**X**=**x**) ⊂ T(**X**)=T(**x**) ⇨
-> (**X**=**x**, T(**X**)=T(**x**) = (**X**=**x**)
+> Vì 𝐗=𝐱 ⇨ T(𝐗)=T(𝐱) ⇨ (𝐗=𝐱) ⊂ T(𝐗)=T(𝐱) ⇨
+> (𝐗=𝐱, T(𝐗)=T(𝐱) = (𝐗=𝐱)
 >
 >
 >
@@ -313,11 +313,11 @@
 >
 >
 >
-> ⇨ Pμ(**X**=**x**, T(**X**)=T(**x**)) / P(T(**X**)=T(**x**))
+> ⇨ Pμ(𝐗=𝐱, T(𝐗)=T(𝐱)) / P(T(𝐗)=T(𝐱))
 >
 >
 >
-> = Pμ(**X**=**x**) / P(T(**X**)=T(**x**))
+> = Pμ(𝐗=𝐱) / P(T(𝐗)=T(𝐱))
 >
 >
 >
@@ -325,11 +325,11 @@
 >
 >
 >
-> Từ số Pμ(**X**=**x**) = f(**x**|μ) = Πn=1:N μ^xn(1-μ)^(1-xn)
+> Từ số Pμ(𝐗=𝐱) = f(𝐱|μ) = Πn=1:N μ^xn(1-μ)^(1-xn)
 >
 >
 >
-> Còn mẫu số, với T(**X**) = ΣXi với Xi iid Bern(μ) thì ΣXi chính là binomial(n, μ)
+> Còn mẫu số, với T(𝐗) = ΣXi với Xi iid Bern(μ) thì ΣXi chính là binomial(n, μ)
 >
 >
 >
@@ -339,8 +339,8 @@
 >
 >
 >
-> Nên P(T(**X**)=T(**x**)) = (n choose T(**x**)) μ^T(**x**) (1-μ)^[n-T(**x**)] ,với
-> T(**x**) = Σnxn.
+> Nên P(T(𝐗)=T(𝐱)) = (n choose T(𝐱)) μ^T(𝐱) (1-μ)^[n-T(𝐱)] ,với
+> T(𝐱) = Σnxn.
 >
 >
 >
@@ -373,7 +373,7 @@
 >
 >
 >
-> f(**x**|μ) =  Πn=1:N μ^xn(1-μ)^(1-xn) =
+> f(𝐱|μ) =  Πn=1:N μ^xn(1-μ)^(1-xn) =
 >
 >
 >
@@ -613,8 +613,8 @@
 >
 >
 > Và pmf của M ~ binomial(N,μ) thì ông kí hiệu nó là Bin(m|N, μ) (giống  như
-> pdf của Normal(μ, σ^2) thì thay vì như sách toán người ta ghi f(x|μ, σ^2)
-> thì ổng chơi luôn N(x|μ, σ^2), thật hay.
+> pdf của Normal(μ, σ²) thì thay vì như sách toán người ta ghi f(x|μ, σ²)
+> thì ổng chơi luôn N(x|μ, σ²), thật hay.
 >
 >
 >
@@ -622,12 +622,12 @@
 >
 >
 >
-> Var[M], thì theo định nghĩa gốc của variance thôi: E[(M - EM)^2], và dùng
-> LOTUS, ta có Σ{mọi possible value m của M} (m -EM)^2 P(M=m)
+> Var[M], thì theo định nghĩa gốc của variance thôi: E[(M - EM)²], và dùng
+> LOTUS, ta có Σ{mọi possible value m của M} (m -EM)² P(M=m)
 >
 >
 >
-> = Σ{m=0,1,...N} (m - EM)^2 Bin(m|N,μ)
+> = Σ{m=0,1,...N} (m - EM)² Bin(m|N,μ)
 
 <br>
 
@@ -686,9 +686,9 @@
 >
 >
 >
-> Đây nhé, mình có hàm joint pdf của data (observation) f(**x**|μ) của random 
-> sample iid X1,..Xn ~ Bern(μ) → f(**x**|μ) = Πi f(xi|μ). Theo định nghĩa hàm
-> likelihood thì L(μ|**x**) = f(**x**|μ).
+> Đây nhé, mình có hàm joint pdf của data (observation) f(𝐱|μ) của random 
+> sample iid X1,..Xn ~ Bern(μ) → f(𝐱|μ) = Πi f(xi|μ). Theo định nghĩa hàm
+> likelihood thì L(μ|𝐱) = f(𝐱|μ).
 >
 >
 >
@@ -701,13 +701,13 @@
 >
 >
 >
-> π(μ|**x**) = f(**x**|μ) π(μ) / f(**x**)
+> π(μ|𝐱) = f(𝐱|μ) π(μ) / f(𝐱)
 >
 >
 >
-> vì f(**x**) chỉ là marginal pdf của **X** tại **x**, ta biết nó chỉ là một constant,dù không
-> biết f(**x**) là gì nhưng theo lí thuyết chắc chắc nó phải tham gia vào normalizing
-> constant của π(μ|**x**), vì cái này là một valid pdf (giúp đảm bảo ∫π(μ|**x**)dμ  = 1)
+> vì f(𝐱) chỉ là marginal pdf của 𝐗 tại 𝐱, ta biết nó chỉ là một constant,dù không
+> biết f(𝐱) là gì nhưng theo lí thuyết chắc chắc nó phải tham gia vào normalizing
+> constant của π(μ|𝐱), vì cái này là một valid pdf (giúp đảm bảo ∫π(μ|𝐱)dμ  = 1)
 >
 >
 >
@@ -716,8 +716,8 @@
 >
 >
 >
-> π(μ|**x**) ∝ f(**x**|μ) π(μ) và đây cũng là L(μ|**x**) π(μ), đó là lí do mà gs nhắc đến
-> likelihood ở đây, nhưng cái chính ta hiểu nó là joint distribution của **x:** f(**x**|μ)
+> π(μ|𝐱) ∝ f(𝐱|μ) π(μ) và đây cũng là L(μ|𝐱) π(μ), đó là lí do mà gs nhắc đến
+> likelihood ở đây, nhưng cái chính ta hiểu nó là joint distribution của **x:** f(𝐱|μ)
 >
 >
 >
@@ -733,8 +733,8 @@
 >
 >
 >
-> tiếp tục, ta lại ko cần care cái constant, vì nó sẽ nhập với cái constant f(**x**) 
-> tạo thành normalizing constant của π(x|μ), giúp đảm bảo ∫π(μ|**x**)dμ = 1
+> tiếp tục, ta lại ko cần care cái constant, vì nó sẽ nhập với cái constant f(𝐱) 
+> tạo thành normalizing constant của π(x|μ), giúp đảm bảo ∫π(μ|𝐱)dμ = 1
 >
 >
 >
@@ -794,7 +794,7 @@
 >
 >
 >
-> Để cho dễ ta sẽ đi tính EX^n luôn, gọi là n'th moment:
+> Để cho dễ ta sẽ đi tính EXⁿ luôn, gọi là n'th moment:
 >
 >
 >
@@ -803,7 +803,7 @@
 >
 >
 >
-> ⇨ EX^n = ∫x^n f(x)dx = ∫x^n [Γ(a+b)/Γ(a)Γ(b)] x^(a-1)(1-x)^(b-1) dx
+> ⇨ EXⁿ = ∫xⁿ f(x)dx = ∫xⁿ [Γ(a+b)/Γ(a)Γ(b)] x^(a-1)(1-x)^(b-1) dx
 >
 >
 >
@@ -861,7 +861,7 @@
 >
 >
 >
-> EX^2 = Γ(a+b)Γ(2+a)/Γ(a)Γ(2+a+b)
+> EX² = Γ(a+b)Γ(2+a)/Γ(a)Γ(2+a+b)
 >
 >
 >
@@ -877,7 +877,7 @@
 >
 >
 >
-> Từ đó, áp dụng công thức thứ 2 của VarX = EX^2 - (EX)^2
+> Từ đó, áp dụng công thức thứ 2 của VarX = EX² - (EX)²
 >
 >
 >
@@ -926,7 +926,7 @@
 >
 > Và cũng như mình đã làm, gs Bishop cũng nói rằng nó có dạng kernel của
 > β(m+a,l+b), nên ta có quyền suy ra giá trị constant (lúc nãy ta làm thì trên tử có
-> constant C = [Γ(a+b)/Γ(a)Γ(b)], và chia cho f(**x**) ở dưới) còn lại phải là
+> constant C = [Γ(a+b)/Γ(a)Γ(b)], và chia cho f(𝐱) ở dưới) còn lại phải là
 > normalizing constant của β(m+a,l+b)
 
 <br>
@@ -985,7 +985,7 @@
 >
 >
 >
-> HIểu đơn giản. Còn **nhớ chính nhờ iid**, nên **joint pdf** f(**x**|θ) **mới tách thành
+> HIểu đơn giản. Còn **nhớ chính nhờ iid**, nên **joint pdf** f(𝐱|θ) **mới tách thành
 > tích các** f(xi|θ). Ví dụ ta có x1,x2. Thì nhờ iid mà f(x1,x2|θ) = f(x1|θ)f(x2|θ).
 >
 >
@@ -1040,7 +1040,7 @@
 > là, với cách tiếp cận Bayesian, ta coi θ (hay ở đây là μ) như random variable,
 > để rồi ta chọn prior distribution cho nó, kí hiệu π(θ) (ví dụ như ta chọn β(a,b)
 > cho làm prior distribution của μ vậy), rồi dùng Bayes rule để xây dựng posterior
-> π(θ|**x**) ∝ f(**x**|θ) π(θ) (ví dụ như ta vừa tìm ra posterior của μ là β(a+m,b+l)
+> π(θ|𝐱) ∝ f(𝐱|θ) π(θ) (ví dụ như ta vừa tìm ra posterior của μ là β(a+m,b+l)
 > đó). Thế thì giờ đặt vấn đề muốn dùng kết quả này để đưa ra dự đoán cho lần
 > thử tiếp theo, cũng đồng nghĩa là dựa trên đó, ta muốn tính xác suất của hai
 > giá trị khả dĩ x=1 và x=0.
@@ -1063,7 +1063,7 @@
 > Thế thì, nếu nhớ lại trong sách Casella, khi nói về Bayes estimator, sau khi đã
 > có posterior, thì tùy vào việc ta muốn dùng loss là gì thì ta sẽ dùng mean hoặc
 > median của posterior distribution để làm point estimator cho param θ. Ví dụ,
-> nếu dùng square error loss, thì mean E[θ|**X**] θ ~ π(θ|**x**) chính là Bayes
+> nếu dùng square error loss, thì mean E[θ|𝐗] θ ~ π(θ|𝐱) chính là Bayes
 > estimator mà minimize Bayes risk, cũng là minimize posterior expected loss,
 > ngược lại nếu dùng absolute error loss, thì Bayes estimator là median của
 > posterior.
@@ -1071,7 +1071,7 @@
 >
 >
 > Như vậy, theo cách cách làm này, giả sử ta dùng squared error loss, thì
-> E[μ|**x**] với μ ~ β(a+m,b+l), = a+m/(a+m+b+l) sẽ chính là Bayes estimator
+> E[μ|𝐱] với μ ~ β(a+m,b+l), = a+m/(a+m+b+l) sẽ chính là Bayes estimator
 > minimize Bayes risk, và từ đó ta đưa ra dự đoán xác suất trial tiếp theo  ra x=1
 > sẽ là a+m/(a+m+b+l).
 >
@@ -1086,16 +1086,16 @@
 > tiếp theo,  thông qua việc tính xác suất của việc ra X = 1 hay X = 0. Do đó, thay
 > vì dùng một point estimator của μ (ví dụ dùng posterior mean, hay median) ta
 > sẽ lấy trung bình f(x|μ) over mọi possible value của μ với μ ~ posterior
-> π(μ|**x**), để có P(X=x|**x**) gọi là **predictive distribution**
+> π(μ|𝐱), để có P(X=x|𝐱) gọi là **predictive distribution**
 >
 >
 >
 > Và hành động này cũng chính marginalizing joint pdf của x, μ: f(x, μ) với mọi giá
-> trị khả dĩ của μ ~ posterior: ∫f(x, μ|**x**) dμ = ∫f(x|μ) π(μ|**x**) dμ
+> trị khả dĩ của μ ~ posterior: ∫f(x, μ|𝐱) dμ = ∫f(x|μ) π(μ|𝐱) dμ
 >
 >
 >
-> P(X=x|**x**) = E[f(x|μ)|**x**] với μ ~ π(μ|**x**), = ∫f(x|μ)π(μ|**x**)dμ
+> P(X=x|𝐱) = E[f(x|μ)|𝐱] với μ ~ π(μ|𝐱), = ∫f(x|μ)π(μ|𝐱)dμ
 >
 >
 >
@@ -1103,11 +1103,11 @@
 >
 >
 >
-> ⇨ E[f(x|μ)|**x**] = ∫μ^x(1-μ)^(1-x) β(μ|a+m,b+l) dμ
+> ⇨ E[f(x|μ)|𝐱] = ∫μ^x(1-μ)^(1-x) β(μ|a+m,b+l) dμ
 >
 >
 >
-> Để rồi P(X=x|**x**) = E[f(x|μ)|**x**]|x=1 = ∫μ^1(1-μ)^(1-1) β(μ|a+m,b+l) dμ
+> Để rồi P(X=x|𝐱) = E[f(x|μ)|𝐱]|x=1 = ∫μ^1(1-μ)^(1-1) β(μ|a+m,b+l) dμ
 >
 >
 >
@@ -1115,12 +1115,12 @@
 >
 >
 >
-> và cái này cũng lại chính là E[μ|**x**] (hay E[μ|/D/] tức mean của posterior
+> và cái này cũng lại chính là E[μ|𝐱] (hay E[μ|/D/] tức mean của posterior
 > distribution.
 >
 >
 >
-> (chữ D in hoa trong sách Bishop cũng chính là observed data **x** thôi)
+> (chữ D in hoa trong sách Bishop cũng chính là observed data 𝐱 thôi)
 >
 >
 >
@@ -1128,7 +1128,7 @@
 >
 >
 >
-> Nói thêm chút, vì sao ∫f(x|μ)π(μ|**x**)dμ lại là E[f(x|μ)] với μ ~ π(μ|**x**)?
+> Nói thêm chút, vì sao ∫f(x|μ)π(μ|𝐱)dμ lại là E[f(x|μ)] với μ ~ π(μ|𝐱)?
 >
 >
 >
@@ -1157,7 +1157,7 @@
 >
 >
 >
-> (hoặc chặt chẽ hơn thì ghi E[f(x|μ)|**x**])
+> (hoặc chặt chẽ hơn thì ghi E[f(x|μ)|𝐱])
 >
 >
 >
@@ -1166,17 +1166,17 @@
 >
 >
 > → LOTUS: Vì nó là hàm của μ, là random variable có distribution posterior
-> π(μ|**x**) nên theo LOTUS, khi một biến Y được tạo thành bởi áp hàm g lên
+> π(μ|𝐱) nên theo LOTUS, khi một biến Y được tạo thành bởi áp hàm g lên
 > biến X, thì  EY = ∫g(x)f(x)dx.
 >
 >
 >
-> Vậy E[f(x|μ)|**x**] = ∫f(x|μ) π(μ|**x**)dμ
+> Vậy E[f(x|μ)|𝐱] = ∫f(x|μ) π(μ|𝐱)dμ
 >
 >
 >
 > và trong trường hợp đặc biệt này (trường hợp khác thì chưa chắc) là khi f(x|μ)
-> = μ  thì E[f(x|μ)|**x**] = ∫μ π(μ|**x**)dμ và cái này chính là E[μ|**x**], tức mean
+> = μ  thì E[f(x|μ)|𝐱] = ∫μ π(μ|𝐱)dμ và cái này chính là E[μ|𝐱], tức mean
 > của posterior, như đã nói, cũng chính là Bayes esimator của μ khiến minimize
 > Bayes risk với squared error loss function.
 
@@ -1301,7 +1301,7 @@
 > Thế thì để chứng minh rằng, tính chất vừa nói: khi càng có nhiều data thì độ
 > không chắc chắn (uncertainty) của param μ thể hiện bởi posterior  distribution
 > càng giảm sẽ càng, ta xét bài toán inference khái quát với  θ là population
-> parameter và D là dữ liệu quan sát được (y như trong Casella là **X** - random
+> parameter và D là dữ liệu quan sát được (y như trong Casella là 𝐗 - random
 > sample lấy từ distribution).
 >
 >
@@ -1371,8 +1371,8 @@
 >
 >
 > Vậy thì dừng lại đây, để nhớ một lời dạy khác của gs Joe trong Stat110: Bất kì
-> khi nào ta có hàm g(x), ví dụ g(x) = x^2 + 1. Và ta đem áp vào random variable
-> X: Để có g(X) = X^2 + 1, thì ta sẽ có MỘT RANDOM VARIABLE MỚI. Tức là
+> khi nào ta có hàm g(x), ví dụ g(x) = x² + 1. Và ta đem áp vào random variable
+> X: Để có g(X) = X² + 1, thì ta sẽ có MỘT RANDOM VARIABLE MỚI. Tức là
 > g(X) là một random variable.
 >
 >
@@ -1480,7 +1480,7 @@
 >
 >
 > Như vậy ta đã tự chứng minh lại công thức mà trong Stat110 gs Jow gọi là
-> Adam's Law, áp dụng cho **θ** và D (D tương đương với **X**, tức random
+> Adam's Law, áp dụng cho **θ** và D (D tương đương với 𝐗, tức random
 > sample lấy (draw) từ population distribution trong bối cảnh thống kê dĩ nhiên
 > cũng  là random variable (vector)):
 >
@@ -1581,23 +1581,23 @@
 >
 >
 >
-> Var(Y) = E[(Y - EY)^2] (định nghiã của variance)
+> Var(Y) = E[(Y - EY)²] (định nghiã của variance)
 >
 >
 >
-> = E[(Y - E[Y|X] + E[Y|X] - EY)^2]
+> = E[(Y - E[Y|X] + E[Y|X] - EY)²]
 >
 >
 >
-> = E[(Y - E[Y|X])^2 + 2(Y - E[Y|X])(E[Y|X] - EY) + (E[Y|X] - EY)^2]
+> = E[(Y - E[Y|X])² + 2(Y - E[Y|X])(E[Y|X] - EY) + (E[Y|X] - EY)²]
 >
 >
 >
-> = E[(Y - E[Y|X])^2 + 2E[(Y - E[Y|X])(E[Y|X] - EY)] + E[(E[Y|X] - EY)^2]
+> = E[(Y - E[Y|X])² + 2E[(Y - E[Y|X])(E[Y|X] - EY)] + E[(E[Y|X] - EY)²]
 >
 >
 >
-> Xét hạng tử đầu tiên: E[(Y - E[Y|X])^2], đặt Z = (Y - E[Y|X])^2
+> Xét hạng tử đầu tiên: E[(Y - E[Y|X])²], đặt Z = (Y - E[Y|X])²
 >
 >
 >
@@ -1605,7 +1605,7 @@
 >
 >
 >
-> = E[E[(Y - E[Y|X])^2|X]]
+> = E[E[(Y - E[Y|X])²|X]]
 >
 >
 >
@@ -1613,15 +1613,15 @@
 >
 >
 >
-> Vì theo định nghĩa của variance của Y, Var(Y) = E[(Y - EY)^2]
+> Vì theo định nghĩa của variance của Y, Var(Y) = E[(Y - EY)²]
 >
 >
 >
-> thì variance của Y conditioned on X sẽ là Var(Y|X) = E[(Y - E(Y|X)^2|X]
+> thì variance của Y conditioned on X sẽ là Var(Y|X) = E[(Y - E(Y|X)²|X]
 >
 >
 >
-> Xét hạng tử thứ ba: E[(E[Y|X] - EY)^2]
+> Xét hạng tử thứ ba: E[(E[Y|X] - EY)²]
 >
 >
 >
@@ -1633,9 +1633,9 @@
 >
 >
 >
-> vậy E[(E[Y|X] - EY)^2] = E[(E[Y|X] - E[E[Y|X]])^2] nhìn thì rối, nhưng nếu đặt cái random variable E[Y|X] là Z ta sẽ thấy nó là
+> vậy E[(E[Y|X] - EY)²] = E[(E[Y|X] - E[E[Y|X]])²] nhìn thì rối, nhưng nếu đặt cái random variable E[Y|X] là Z ta sẽ thấy nó là
 > E[(Z
-> \- EZ)^2] nên đây chính là Var(Z).
+> \- EZ)²] nên đây chính là Var(Z).
 >
 >
 >
