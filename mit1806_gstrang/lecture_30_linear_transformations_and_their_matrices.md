@@ -137,12 +137,12 @@
 >
 >
 >
-> Vì **khi đó mới thỏa T(c*v) = cT(c)** VỚI MỌI c. Bởi vì khi v
-> = 0, vế trái là T(c*0) = T(0), vế phải = c*T(0).
+> Vì **khi đó mới thỏa T(c × v) = cT(c)** VỚI MỌI c. Bởi vì khi v
+> = 0, vế trái là T(c × 0) = T(0), vế phải = c × T(0).
 >
 >
 >
-> Để **T(0) = c*T(0) với mọi c thì bắt buộc T(0) = 0**.
+> Để **T(0) = c × T(0) với mọi c thì bắt buộc T(0) = 0**.
 >
 >
 >
@@ -156,6 +156,8 @@
 <br>
 
 <a id="node-zkwc39d"></a>
+
+###### Linear Transformations Definition and Examples
 
 <p align="center"><kbd><img src="assets/qujkrh3jt6k.png" width="80%"></kbd></p>
 
@@ -174,9 +176,9 @@
 >
 >
 >
-> Nhưng **không thỏa T(c*u) = c*T(u)**. Vì giả sử **nhân
-> vector u cho -2** thì length của nó sẽ là 2*length u
-> (tức là 2*T(u)) chứ **không phải là -2*T(u).**
+> Nhưng **không thỏa T(c × u) = c × T(u)**. Vì giả sử **nhân
+> vector u cho -2** thì length của nó sẽ là 2 × length u
+> (tức là 2 × T(u)) chứ **không phải là -2 × T(u).**
 >
 >
 >
@@ -241,15 +243,17 @@
 
 <a id="node-yyj98pn"></a>
 
+###### Matrix as a Linear Transformation
+
 <p align="center"><kbd><img src="assets/plrwimz3lpl.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và **check hai điều kiện** T(c*u) = cT(u), và T(c*u + d*v) = c*T(u) + d*T(v) thì thấy nó thỏa:
+> Và **check hai điều kiện** T(c × u) = cT(u), và T(c × u + d × v) = c × T(u) + d × T(v) thì thấy nó thỏa:
 >
 >
 >
-> T(cv+du) = A(c*v+d*u) = A*c*v + A*d*u = c*Av + d*Au
-> và cái này chính là c*T(v) + d*T(u)
+> T(cv+du) = A(c × v+d × u) = A × c × v + A × d × u = c × Av + d × Au
+> và cái này chính là c × T(v) + d × T(u)
 >
 >
 >
@@ -425,12 +429,12 @@
 >
 >
 > Bởi vì **v1, v2 là một basis** nên có thể express v bất kì dưới
-> dạng linear combination của v1, v2: **v = c*v1 + d*v2**
+> dạng linear combination của v1, v2: **v = c × v1 + d × v2**
 >
 >
 >
 > Và từ đó dựa theo tính chất của Linear Transformation ta sẽ
-> có **T(v) = T(c*v1+d*v2) = c*T(v1) + d*T(v2) ⇒ chỉ cần biết
+> có **T(v) = T(c × v1+d × v2) = c × T(v1) + d × T(v2) ⇒ chỉ cần biết
 > T(v1) và T(v2) là có thể biết T(v) với v bất kì**
 >
 > NẾU BIẾT LINEAR TRANSFORMATION CỦA BASIS
@@ -467,8 +471,8 @@
 >
 >
 >
-> T(v) = T(c1v1 + c2v2 + ...cnvn) = c1*T(v1) + c2*T(v2) + ...
-> cn*T(vn)
+> T(v) = T(c1v1 + c2v2 + ...cnvn) = c1 × T(v1) + c2 × T(v2) + ...
+> cn × T(vn)
 >
 >
 >
@@ -550,7 +554,7 @@
 >
 >
 >
-> V = 3*i^ + 2*j^ + 4*u^
+> V = 3 × i^ + 2 × j^ + 4 × u^
 
 <br>
 
@@ -720,6 +724,8 @@
 
 <a id="node-bq2tfnb"></a>
 
+###### Diagonal Matrix from Eigenvector Basis
+
 <p align="center"><kbd><img src="assets/q9khpjgt0z.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -741,7 +747,7 @@
 >
 >
 >
-> Cho nên Av1 = 1*v1
+> Cho nên Av1 = 1 × v1
 >
 >
 >
@@ -750,11 +756,11 @@
 >
 >
 >
-> Nên Av2 = 0*v2Để rồi:
+> Nên Av2 = 0 × v2Để rồi:
 >
 >
 >
-> **T(c1v1) = A(c1v1)** = c1Av1 = **c1*1*v1 = c1v1**  
+> **T(c1v1) = A(c1v1)** = c1Av1 = **c1 × 1 × v1 = c1v1**  
 >
 >
 >
@@ -762,7 +768,7 @@
 >
 >
 >
-> **T(c2v2) = A(c2v2)** = c2Av2 = **c2*0*v2** = **0** Và đây là good basis, vì **giúp cho matrix A cần xây
+> **T(c2v2) = A(c2v2)** = c2Av2 = **c2 × 0 × v2** = **0** Và đây là good basis, vì **giúp cho matrix A cần xây
 > dựng có dạng** là một **DIAGONAL matrix** với **eigenvalue
 > nằm trên diagonal.** Và diagonal matrix với các eigenvalue
 > nằm trên đường chéo chính là matrix ΛVà như đã nói, vì ta đã xây dựng A giúp transform hai
@@ -789,7 +795,7 @@
 >
 >
 >
-> Cho nên Av1 = 1*v1
+> Cho nên Av1 = 1 × v1
 >
 >
 >
@@ -798,11 +804,11 @@
 >
 >
 >
-> Nên Av2 = 0*v2Để rồi:
+> Nên Av2 = 0 × v2Để rồi:
 >
 >
 >
-> **T(c1v1) = A(c1v1)** = c1Av1 = **c1*1*v1 = c1v1**  
+> **T(c1v1) = A(c1v1)** = c1Av1 = **c1 × 1 × v1 = c1v1**  
 >
 >
 >
@@ -810,7 +816,7 @@
 >
 >
 >
-> **T(c2v2) = A(c2v2)** = c2Av2 = **c2*0*v2** = **0** Và đây là good basis, vì **giúp cho matrix A cần xây
+> **T(c2v2) = A(c2v2)** = c2Av2 = **c2 × 0 × v2** = **0** Và đây là good basis, vì **giúp cho matrix A cần xây
 > dựng có dạng** là một **DIAGONAL matrix** với **eigenvalue
 > nằm trên diagonal.** Và diagonal matrix với các eigenvalue
 > nằm trên đường chéo chính là matrix ΛVà như đã nói, vì ta đã xây dựng A giúp transform hai
@@ -1075,13 +1081,13 @@
 > là COORDINATE của T(v1) mà như đã biết, coordinates sẽ tùy
 > theo một basis cụ thể. Nên cứ gọi basis hiện tại của output
 > đang chọn để thể hiện T(v1) là {u1, u2, u3, u4}. Vậy ta đang có
-> T(v1) = 1*u1 + 3*u2 + 5*u3 + 7*u4
+> T(v1) = 1 × u1 + 3 × u2 + 5 × u3 + 7 × u4
 >
 >
 >
 > Tương tự giả sử kết quả apply linear transformation lên v2 là
 > T(v2) là vector có coordinate là (7, 8, 9, 10), đồng nghĩa: T(v2)
-> = 7*u1 + 8*u2 + 9*u3 + 10*u4
+> = 7 × u1 + 8 × u2 + 9 × u3 + 10 × u4
 >
 >
 >
@@ -1211,7 +1217,7 @@
 >
 >
 >
-> [c1*0 + c2*1 + c3*0; c1*0 + c2*0 + c3*2] = [c2; 2c3]
+> [c1 × 0 + c2 × 1 + c3 × 0; c1 × 0 + c2 × 0 + c3 × 2] = [c2; 2c3]
 >
 >
 >
