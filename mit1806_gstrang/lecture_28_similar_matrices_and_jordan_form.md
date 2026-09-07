@@ -797,7 +797,7 @@
 >
 >
 >
-> Và trong trạng thái tốt nhất J chính là **LAMBDA**.
+> Và trong trạng thái tốt nhất J chính là **Λ**.
 
 <br>
 
