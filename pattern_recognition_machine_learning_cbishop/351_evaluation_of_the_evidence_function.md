@@ -16,7 +16,7 @@
 <p align="center"><kbd><img src="assets/unlta074jgk.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua phần này, đại khái là ta sẽ evaluate evidence function. Đầu tiên, có lẽ nên ôn lại chút xíu về marginal likelihood f(**t**|α, β) và để hiểu rõ bản chất mình nên viết tường minh đầy đủ các yếu tố phụ thuộc thay vì bỏ bớt cho gọn (nhưng sẽ dễ khiến ta hiểu sai).
+> Qua phần này, đại khái là ta sẽ evaluate evidence function. Đầu tiên, có lẽ nên ôn lại chút xíu về marginal likelihood f(𝐭|α, β) và để hiểu rõ bản chất mình nên viết tường minh đầy đủ các yếu tố phụ thuộc thay vì bỏ bớt cho gọn (nhưng sẽ dễ khiến ta hiểu sai).
 >
 >
 >
@@ -24,19 +24,19 @@
 >
 >
 >
-> Và dưới một model ℳi, để sinh ra data 𝒟 ta còn phải xét đến giá trị tham số **w** cụ thể, vậy thì f(𝒟|ℳi) chính là kết quả mang ý nghĩa ta trung bình f(𝒟|**ℳ**i, **w**) trên mọi possible value của **w** với **w** \~ phân phối nào đó.
+> Và dưới một model ℳi, để sinh ra data 𝒟 ta còn phải xét đến giá trị tham số 𝐰 cụ thể, vậy thì f(𝒟|ℳi) chính là kết quả mang ý nghĩa ta trung bình f(𝒟|**ℳ**i, 𝐰) trên mọi possible value của 𝐰 với 𝐰 \~ phân phối nào đó.
 >
 >
 >
-> f(𝒟|**ℳ**i,α) = ∫f(𝒟|**ℳ**i,**w**)\[hàm probability distribution của **w**\]d**w**
+> f(𝒟|**ℳ**i,α) = ∫f(𝒟|**ℳ**i,𝐰)\[hàm probability distribution của 𝐰\]d𝐰
 >
 >
 >
-> Và phân phối của **w** ở đây là distribution f(**w**|α)
+> Và phân phối của 𝐰 ở đây là distribution f(𝐰|α)
 >
 >
 >
-> f(𝒟|**ℳ**i,α) = ∫f(𝒟|**ℳ**i,**w**)f(**w**|α)d**w**
+> f(𝒟|**ℳ**i,α) = ∫f(𝒟|**ℳ**i,𝐰)f(𝐰|α)d𝐰
 >
 >
 >
@@ -44,23 +44,23 @@
 >
 >
 >
-> f(**t**|**ℳ**i,α,**X**) = ∫f(**t**|**ℳ**i,**w**,**X**)f(**w**|α)d**w**
+> f(𝐭|**ℳ**i,α,𝐗) = ∫f(𝐭|**ℳ**i,𝐰,𝐗)f(𝐰|α)d𝐰
 >
 >
 >
-> và nếu xét mô hình ℳi cụ thể nơi ta giả định T \~ n(y(**w**,x), 1/β) thì ta sẽ bỏ đi ℳi, cái trên trở thành:
+> và nếu xét mô hình ℳi cụ thể nơi ta giả định T \~ n(y(𝐰,x), 1/β) thì ta sẽ bỏ đi ℳi, cái trên trở thành:
 >
 >
 >
-> f(**t**|α,β,**X**) = ∫f(**t**|**w**,β,**X**)f(**w**|α)d**w**
+> f(𝐭|α,β,𝐗) = ∫f(𝐭|𝐰,β,𝐗)f(𝐰|α)d𝐰
 >
 >
 >
-> Và bỏ nốt **X** đi cho gọn (dù luôn phải hiểu nó phải nằm ở đó)
+> Và bỏ nốt 𝐗 đi cho gọn (dù luôn phải hiểu nó phải nằm ở đó)
 >
 >
 >
-> f(**t**|α, β) = ∫f(**t**|**w**,β)f(**w**|α)d**w**. Đây chính là 3.77
+> f(𝐭|α, β) = ∫f(𝐭|𝐰,β)f(𝐰|α)d𝐰. Đây chính là 3.77
 >
 >
 >
@@ -68,7 +68,7 @@
 >
 >
 >
-> f(𝒟|**ℳ**i,α) = ∫f(𝒟|**ℳ**i,**w**)f(**w**|α)d**w**, **với trường hợp rất cụ thể khi mô hình ℳi là**: T \~ n(y(**w**,**x**), 1/β) và prior là f(**w**|α)
+> f(𝒟|**ℳ**i,α) = ∫f(𝒟|**ℳ**i,𝐰)f(𝐰|α)d𝐰, **với trường hợp rất cụ thể khi mô hình ℳi là**: T \~ n(y(𝐰,𝐱), 1/β) và prior là f(𝐰|α)
 >
 >
 >
@@ -76,7 +76,7 @@
 >
 >
 >
-> Rồi, tiếp, để mà tính cái tích phân này, tác giả cho rằng ta có thể xài kết quả 2.115 (xem link), mà đại khái trong đó mình đã kết luận về công thức tham số của mô hình Normal là kết quả của nhân hai (pdf của) normal với nhau. Cụ thể là khi f(**x**) = 𝒩(**x**|**μ**, **Λ**inv), f(**y**|**x**) = 𝒩(**y**|**Ax**+**b**, **L**inv). Thì f(**y**) sẽ là 𝒩(**y**|**Aμ** + **b**, **L**inv + **A** **Λ**inv **A**T)
+> Rồi, tiếp, để mà tính cái tích phân này, tác giả cho rằng ta có thể xài kết quả 2.115 (xem link), mà đại khái trong đó mình đã kết luận về công thức tham số của mô hình Normal là kết quả của nhân hai (pdf của) normal với nhau. Cụ thể là khi f(𝐱) = 𝒩(𝐱|**μ**, **Λ**inv), f(𝐲|𝐱) = 𝒩(𝐲|**Ax**+𝐛, 𝐋inv). Thì f(𝐲) sẽ là 𝒩(𝐲|**Aμ** + 𝐛, 𝐋inv + 𝐀 **Λ**inv 𝐀ᵀ)
 >
 >
 >
@@ -84,39 +84,39 @@
 >
 >
 >
-> f(**w**|α) = 𝒩(**w**|**0**,(1/α)**I**) (chính là 3.52), cái này tương ứng với f(**x**) = 𝒩(**x**|**μ**, **Λ**inv)
+> f(𝐰|α) = 𝒩(𝐰|**0**,(1/α)𝐈) (chính là 3.52), cái này tương ứng với f(𝐱) = 𝒩(𝐱|**μ**, **Λ**inv)
 >
 >
 >
-> Tức **μ** = **0**, **Λ**inv = (1/α)**I**
+> Tức **μ** = **0**, **Λ**inv = (1/α)𝐈
 >
 >
 >
-> f(**t**|β,**w**) thì là joint pdf của T1.....TN, với Ti \~ 𝒩(ti|**w**TΦ(**x**), 1/β), nên theo tính iid, f(**t**|β,**w**) = Πi=1:N 𝒩(ti|**w**TΦ(**x**), 1/β).
+> f(𝐭|β,𝐰) thì là joint pdf của T1.....TN, với Ti \~ 𝒩(ti|𝐰ᵀΦ(𝐱), 1/β), nên theo tính iid, f(𝐭|β,𝐰) = Πi=1:N 𝒩(ti|𝐰ᵀΦ(𝐱), 1/β).
 >
 >
 >
-> và trước đây ta đã làm cái này, nó chính là 𝒩(**t**|**Φw**, (1/β)**I**).
+> và trước đây ta đã làm cái này, nó chính là 𝒩(𝐭|**Φw**, (1/β)𝐈).
 >
 >
 >
-> Và cái này tương ứng với f(**y**|**x**) = 𝒩(**y**|**Ax**+**b**, **L**inv), tức
+> Và cái này tương ứng với f(𝐲|𝐱) = 𝒩(𝐲|**Ax**+𝐛, 𝐋inv), tức
 >
 >
 >
-> **t** = **y**
+> 𝐭 = 𝐲
 >
 >
 >
-> **w** = **x**
+> 𝐰 = 𝐱
 >
 >
 >
-> **Ax** + **b** = **Φw** + **0**
+> **Ax** + 𝐛 = **Φw** + **0**
 >
 >
 >
-> **L**inv = (1/β)**I**
+> 𝐋inv = (1/β)𝐈
 >
 >
 >
@@ -124,31 +124,31 @@
 >
 >
 >
-> Vậy ∫f(**t**|**w**,β)f(**w**|α)d**w** sẽ là 𝒩(**y**|**Aμ** + **b**, **L**inv + **A** **Λ**inv **A**T)
+> Vậy ∫f(𝐭|𝐰,β)f(𝐰|α)d𝐰 sẽ là 𝒩(𝐲|**Aμ** + 𝐛, 𝐋inv + 𝐀 **Λ**inv 𝐀ᵀ)
 >
 >
 >
-> = 𝒩(**t**|**Φ0** + **0**, (1/β)**I** + **Φ** (1/α)**I** **Φ**T)
+> = 𝒩(𝐭|**Φ0** + **0**, (1/β)𝐈 + **Φ** (1/α)𝐈 **Φ**ᵀ)
 >
 >
 >
-> = 𝒩(**t**|**0**, (1/β)**I** + (1/α)**ΦΦ**T)
+> = 𝒩(𝐭|**0**, (1/β)𝐈 + (1/α)**ΦΦ**ᵀ)
 >
 >
 >
-> Vậy f(**t**|α, β) = 𝒩(**t**|**0**, (1/β)**I** + (1/α)**ΦΦ**T)
+> Vậy f(𝐭|α, β) = 𝒩(𝐭|**0**, (1/β)𝐈 + (1/α)**ΦΦ**ᵀ)
 >
 >
 >
-> Đặt **Σ** = (1/β)**I** + (1/α)**ΦΦ**T, ta có f(**t**|α, β) = 𝒩(**t**|**0**, **Σ**)
+> Đặt **Σ** = (1/β)𝐈 + (1/α)**ΦΦ**ᵀ, ta có f(𝐭|α, β) = 𝒩(𝐭|**0**, **Σ**)
 >
 >
 >
-> Thay pdf của multivariate normal (1.52 xem link, nói rằng 𝒩(**x**|**μ**, **Σ**) = \[1/(2π)^D/2\] \[1/|**Σ**|^1/2\] exp {-0.5(**x**-**μ**)T **Σ**inv (**x**-**μ**)}
+> Thay pdf của multivariate normal (1.52 xem link, nói rằng 𝒩(𝐱|**μ**, **Σ**) = \[1/(2π)^D/2\] \[1/|**Σ**|^1/2\] exp {-0.5(𝐱-**μ**)ᵀ **Σ**inv (𝐱-**μ**)}
 >
 >
 >
-> ..= \[1/(2π)^N/2\] \[1/|**Σ**|^1/2\] exp {-0.5(**t**)T **Σ**inv (**t**)}
+> ..= \[1/(2π)^N/2\] \[1/|**Σ**|^1/2\] exp {-0.5(𝐭)ᵀ **Σ**inv (𝐭)}
 >
 >
 >
@@ -164,43 +164,43 @@
 >
 >
 >
-> ∫𝒩(**t**|**Φw**, (1/β)**I**)𝒩(**w**|**0**,(1/α)**I**) d**w**
+> ∫𝒩(𝐭|**Φw**, (1/β)𝐈)𝒩(𝐰|**0**,(1/α)𝐈) d𝐰
 >
 >
 >
-> = ∫𝒩(**t**|**Φw**, (1/β)**I**) 𝒩(**w**|**0**,(1/α)**I**) d**w**
+> = ∫𝒩(𝐭|**Φw**, (1/β)𝐈) 𝒩(𝐰|**0**,(1/α)𝐈) d𝐰
 >
 >
 >
-> Xét 𝒩(**t**|**Φw**, (1/β)**I**) 𝒩(**w**|**0**,(1/α)**I**)
+> Xét 𝒩(𝐭|**Φw**, (1/β)𝐈) 𝒩(𝐰|**0**,(1/α)𝐈)
 >
 >
 >
-> Với 𝒩(**t**|**Φw**, (1/β)**I**) = \[1/(2π)^N/2\] \[1/|(1/β)**I**|^1/2\] exp {-0.5(**t**-**Φw**)T ((1/β)**I**)inv (**t**-**Φw**)}
+> Với 𝒩(𝐭|**Φw**, (1/β)𝐈) = \[1/(2π)^N/2\] \[1/|(1/β)𝐈|^1/2\] exp {-0.5(𝐭-**Φw**)ᵀ ((1/β)𝐈)⁻¹ (𝐭-**Φw**)}
 >
 >
 >
-> = \[1/(2π)^N/2\] \[1/|(1/β)**I**|^1/2\] exp {-0.5β(**t**-**Φw**)T(**t**-**Φw**)}
+> = \[1/(2π)^N/2\] \[1/|(1/β)𝐈|^1/2\] exp {-0.5β(𝐭-**Φw**)ᵀ(𝐭-**Φw**)}
 >
 >
 >
-> = \[1/(2π)^N/2\] \[β^N/2\] exp {-0.5β(**t**-**Φw**)T(**t**-**Φw**)} (do determinant của (1/β)**I** với **I** là identity matrix N × N = (1/β)^N = 1/β^N
+> = \[1/(2π)^N/2\] \[β^N/2\] exp {-0.5β(𝐭-**Φw**)ᵀ(𝐭-**Φw**)} (do determinant của (1/β)𝐈 với 𝐈 là identity matrix N × N = (1/β)^N = 1/β^N
 >
 >
 >
-> = \[(β/2π)^N/2\] exp {-0.5β(**t**-**Φw**)T(**t**-**Φw**)}
+> = \[(β/2π)^N/2\] exp {-0.5β(𝐭-**Φw**)ᵀ(𝐭-**Φw**)}
 >
 >
 >
-> Còn 𝒩(**w**|**0**,(1/α)**I**) = 𝒩(**x**|**μ**, **Σ**) = \[1/(2π)^M/2\] \[1/|(1/α)**I**|^1/2\] exp {-0.5(**w**-**0**)T ((1/α)**I**)inv (**w**-**0**)}
+> Còn 𝒩(𝐰|**0**,(1/α)𝐈) = 𝒩(𝐱|**μ**, **Σ**) = \[1/(2π)^M/2\] \[1/|(1/α)𝐈|^1/2\] exp {-0.5(𝐰-**0**)ᵀ ((1/α)𝐈)⁻¹ (𝐰-**0**)}
 >
 >
 >
-> = \[1/(2π)^M/2\] \[α^M/2\] exp {-0.5α**w**T**w**} (do determinant của (1/α)**I** với **I** là identity matrix M × M = (1/α)^M = 1/α^M
+> = \[1/(2π)^M/2\] \[α^M/2\] exp {-0.5α𝐰ᵀ𝐰} (do determinant của (1/α)𝐈 với 𝐈 là identity matrix M × M = (1/α)^M = 1/α^M
 >
 >
 >
-> = \[(α/2π)^M/2\] exp {-0.5α**w**T**w**}
+> = \[(α/2π)^M/2\] exp {-0.5α𝐰ᵀ𝐰}
 >
 >
 >
@@ -208,15 +208,15 @@
 >
 >
 >
-> ∫𝒩(**t**|**Φw**, (1/β)**I**)𝒩(**w**|**0**,(1/α)**I**) d**w**
+> ∫𝒩(𝐭|**Φw**, (1/β)𝐈)𝒩(𝐰|**0**,(1/α)𝐈) d𝐰
 >
 >
 >
-> = ∫\[(β/2π)^N/2\] exp {-0.5β(**t**-**Φw**)T(**t**-**Φw**)} \[(α/2π)^M/2\] exp {-0.5α**w**T**w**} d**w**
+> = ∫\[(β/2π)^N/2\] exp {-0.5β(𝐭-**Φw**)ᵀ(𝐭-**Φw**)} \[(α/2π)^M/2\] exp {-0.5α𝐰ᵀ𝐰} d𝐰
 >
 >
 >
-> = \[(β/2π)^N/2\] \[(α/2π)^M/2\] ∫ exp {-0.5β(**t**-**Φw**)T(**t**-**Φw**)} exp {-0.5α**w**T**w**} d**w**
+> = \[(β/2π)^N/2\] \[(α/2π)^M/2\] ∫ exp {-0.5β(𝐭-**Φw**)ᵀ(𝐭-**Φw**)} exp {-0.5α𝐰ᵀ𝐰} d𝐰
 >
 >
 >
@@ -226,23 +226,23 @@
 >
 >
 >
-> Tới đây, xét ∫ exp {-0.5β(**t**-**Φw**)T(**t**-**Φw**)} exp {-0.5α**w**T**w**} d**w**, xem nó là cái gì
+> Tới đây, xét ∫ exp {-0.5β(𝐭-**Φw**)ᵀ(𝐭-**Φw**)} exp {-0.5α𝐰ᵀ𝐰} d𝐰, xem nó là cái gì
 >
 >
 >
-> Cục (**t**-**Φw**)T(**t**-**Φw**), dễ thấy chính là ||**Φw**-**t**||^2 (hay ||**t**-**Φw**||^2)
+> Cục (𝐭-**Φw**)ᵀ(𝐭-**Φw**), dễ thấy chính là ||**Φw**-𝐭||² (hay ||𝐭-**Φw**||²)
 >
 >
 >
-> và **w**T**w** thì là ||**w**||^2, nên ta có:
+> và 𝐰ᵀ𝐰 thì là ||𝐰||², nên ta có:
 >
 >
 >
-> ∫ exp {-0.5β(**t**-**Φw**)T(**t**-**Φw**)} exp {-0.5α**w**T**w**} d**w**
+> ∫ exp {-0.5β(𝐭-**Φw**)ᵀ(𝐭-**Φw**)} exp {-0.5α𝐰ᵀ𝐰} d𝐰
 >
 >
 >
-> = ∫ exp {-0.5β||**t**-**Φw**||^2} exp {-0.5α||**w**||^2} d**w**
+> = ∫ exp {-0.5β||𝐭-**Φw**||²} exp {-0.5α||𝐰||²} d𝐰
 >
 >
 >
@@ -250,31 +250,31 @@
 >
 >
 >
-> = ∫ exp {-0.5β||**t**-**Φw**||^2 -0.5α||**w**||^2} d**w**
+> = ∫ exp {-0.5β||𝐭-**Φw**||² -0.5α||𝐰||²} d𝐰
 >
 >
 >
-> Và bằng cách **DEFINE** E_D\[**w**\] = (1/2) ||**t**-**Φw**||^2
+> Và bằng cách **DEFINE** E_D\[𝐰\] = (1/2) ||𝐭-**Φw**||²
 >
 >
 >
-> E_W(**w**) = 0.5||**w**||^2 = 0.5 **w**T**w**
+> E_W(𝐰) = 0.5||𝐰||² = 0.5 𝐰ᵀ𝐰
 >
 >
 >
-> và E(**w**) = βE_D\[**w**\] + α E_W\[**w**\] thì:
+> và E(𝐰) = βE_D\[𝐰\] + α E_W\[𝐰\] thì:
 >
 >
 >
-> f(**t**|α,β) = ∫𝒩(**t**|**Φw**, (1/β)**I**)𝒩(**w**|**0**,(1/α)**I**) d**w chính là:**
+> f(𝐭|α,β) = ∫𝒩(𝐭|**Φw**, (1/β)𝐈)𝒩(𝐰|**0**,(1/α)𝐈) d**w chính là:**
 >
 >
 >
-> \[(β/2π)^N/2\] \[(α/2π)^M/2\] ∫ exp {-E(**w**)} d**w**, → 3.78
+> \[(β/2π)^N/2\] \[(α/2π)^M/2\] ∫ exp {-E(𝐰)} d𝐰, → 3.78
 >
 >
 >
-> Mình hiểu E ở đây là Error, chứ ko phải kì vọng (Expectation của **w**) nhé.
+> Mình hiểu E ở đây là Error, chứ ko phải kì vọng (Expectation của 𝐰) nhé.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
@@ -296,67 +296,15 @@
 >
 >
 >
-> f(**t**|α,β) = \[(β/2π)^N/2\] \[(α/2π)^M/2\] ∫ exp {-E(**w**)} d**w**
+> f(𝐭|α,β) = \[(β/2π)^N/2\] \[(α/2π)^M/2\] ∫ exp {-E(𝐰)} d𝐰
 >
 >
 >
-> Mà mình đã biết rằng, bằng cách dùng kết quả từ chap 2, ta sẽ có đây chính là pdf của 𝒩(**t**|**0**, **Σ**), **Σ** = (1/β)**I** + (1/α)**ΦΦ**T
+> Mà mình đã biết rằng, bằng cách dùng kết quả từ chap 2, ta sẽ có đây chính là pdf của 𝒩(𝐭|**0**, **Σ**), **Σ** = (1/β)𝐈 + (1/α)**ΦΦ**ᵀ
 >
 >
 >
-> Còn ở đây, ta sẽ đại ý là đi làm động tác complete the square: tức là biến đổi cái cục trong exp(...) để cho ra kết quả có dạng là quadratic function của **w**, và từ đó kết luận đây là pdf của normal, rồi dùng khớp mẫu, ta sẽ xác định được mean và covariance (mà kết qủa sẽ ra cái vừa nói: 𝒩(**t**|**0**, **Σ**), **Σ** = (1/β)**I** + (1/α)**ΦΦ**T). Có nghĩa là thay vì áp dụng kết quả từ chapter 2, ta đi làm lại vậy.
->
->
->
-> ---
->
->
->
-> Xét E(**w**) = βE_D\[**w**\] + α E_W\[**w**\] với E_D\[**w**\] = (1/2) ||**t**-**Φw**||^2 và E_W(**w**) = 0.5||**w**||^2 = 0.5 **w**T**w**, ta có:
->
->
->
-> E(**w**) = β\[(1/2) ||**t**-**Φw**||^2\] + α (1/2) **w**T**w**
->
->
->
-> = (β/2) (**t**-**Φw**)T(**t**-**Φw**) + (α/2) **w**T**w**
->
->
->
-> = (β/2) (**t**T - **w**T**Φ**T)(**t** - **Φw**) + (α/2) **w**T**w**
->
->
->
-> = (β/2) (**t**T**t** - **w**T**Φ**T**t** - **t**T**Φw** + **w**T**Φ**T**Φw**) + (α/2) **w**T**w**
->
->
->
-> = (β/2) (**t**T**t** - 2**t**T**Φw** + **w**T**Φ**T**Φw**) + (α/2) **w**T**w**
->
->
->
-> = (β/2) **t**T**t** - (β/2)2**t**T**Φw** + (β/2) **w**T**Φ**T**Φw** + (α/2) **w**T**w**
->
->
->
-> = (β/2) **t**T**t** - β**w**T**Φ**T**t** + (β/2) **w**T**Φ**T**Φw** + (α/2) **w**T**w**
->
->
->
-> = (β/2) **t**T**t** - β**w**T**Φ**T**t** + **w**T\[(β/2)**Φ**T**Φ**\]**w** + **w**T\[(α/2)**I**\]**w**
->
->
->
-> = (β/2) **t**T**t** - β**w**T**Φ**T**t** + **w**T\[(β/2)**Φ**T**Φ**+(α/2)**I**\]**w**
->
->
->
-> Đặt **A** = β**Φ**T**Φ**+α**I** 
->
->
->
-> = (1/2)**w**T**Aw** - β**w**T**Φ**T**t** + (β/2) **t**T**t**
+> Còn ở đây, ta sẽ đại ý là đi làm động tác complete the square: tức là biến đổi cái cục trong exp(...) để cho ra kết quả có dạng là quadratic function của 𝐰, và từ đó kết luận đây là pdf của normal, rồi dùng khớp mẫu, ta sẽ xác định được mean và covariance (mà kết qủa sẽ ra cái vừa nói: 𝒩(𝐭|**0**, **Σ**), **Σ** = (1/β)𝐈 + (1/α)**ΦΦ**ᵀ). Có nghĩa là thay vì áp dụng kết quả từ chapter 2, ta đi làm lại vậy.
 >
 >
 >
@@ -364,19 +312,71 @@
 >
 >
 >
-> Đến đây lập luận là, ta sẽ muốn biến đổi cái trên để trở thành dạng (1/2)(**w** - **m**N)T**A**(**w** - **m**N) + C
+> Xét E(𝐰) = βE_D\[𝐰\] + α E_W\[𝐰\] với E_D\[𝐰\] = (1/2) ||𝐭-**Φw**||² và E_W(𝐰) = 0.5||𝐰||² = 0.5 𝐰ᵀ𝐰, ta có:
 >
 >
 >
-> = (1/2)(**w**T**Aw** - (**m**N)T**Aw** - **w**T**Am**N + (**m**N)T**Am**N) + C
+> E(𝐰) = β\[(1/2) ||𝐭-**Φw**||²\] + α (1/2) 𝐰ᵀ𝐰
 >
 >
 >
-> = (1/2)(**w**T**Aw** - 2**w**T**Am**N + (**m**N)T**Am**N) + C
+> = (β/2) (𝐭-**Φw**)ᵀ(𝐭-**Φw**) + (α/2) 𝐰ᵀ𝐰
 >
 >
 >
-> = (1/2)**w**T**Aw** - **w**T**Am**N + (1/2)(**m**N)T**Am**N) + C
+> = (β/2) (𝐭ᵀ - 𝐰ᵀ**Φ**ᵀ)(𝐭 - **Φw**) + (α/2) 𝐰ᵀ𝐰
+>
+>
+>
+> = (β/2) (𝐭ᵀ𝐭 - 𝐰ᵀ**Φ**ᵀ𝐭 - 𝐭ᵀ**Φw** + 𝐰ᵀ**Φ**ᵀ**Φw**) + (α/2) 𝐰ᵀ𝐰
+>
+>
+>
+> = (β/2) (𝐭ᵀ𝐭 - 2𝐭ᵀ**Φw** + 𝐰ᵀ**Φ**ᵀ**Φw**) + (α/2) 𝐰ᵀ𝐰
+>
+>
+>
+> = (β/2) 𝐭ᵀ𝐭 - (β/2)2𝐭ᵀ**Φw** + (β/2) 𝐰ᵀ**Φ**ᵀ**Φw** + (α/2) 𝐰ᵀ𝐰
+>
+>
+>
+> = (β/2) 𝐭ᵀ𝐭 - β𝐰ᵀ**Φ**ᵀ𝐭 + (β/2) 𝐰ᵀ**Φ**ᵀ**Φw** + (α/2) 𝐰ᵀ𝐰
+>
+>
+>
+> = (β/2) 𝐭ᵀ𝐭 - β𝐰ᵀ**Φ**ᵀ𝐭 + 𝐰ᵀ\[(β/2)**Φ**ᵀ**Φ**\]𝐰 + 𝐰ᵀ\[(α/2)𝐈\]𝐰
+>
+>
+>
+> = (β/2) 𝐭ᵀ𝐭 - β𝐰ᵀ**Φ**ᵀ𝐭 + 𝐰ᵀ\[(β/2)**Φ**ᵀ**Φ**+(α/2)𝐈\]𝐰
+>
+>
+>
+> Đặt 𝐀 = β**Φ**ᵀ**Φ**+α𝐈 
+>
+>
+>
+> = (1/2)𝐰ᵀ**Aw** - β𝐰ᵀ**Φ**ᵀ𝐭 + (β/2) 𝐭ᵀ𝐭
+>
+>
+>
+> ---
+>
+>
+>
+> Đến đây lập luận là, ta sẽ muốn biến đổi cái trên để trở thành dạng (1/2)(𝐰 - 𝐦N)ᵀ𝐀(𝐰 - 𝐦N) + C
+>
+>
+>
+> = (1/2)(𝐰ᵀ**Aw** - (𝐦N)ᵀ**Aw** - 𝐰ᵀ**Am**N + (𝐦N)ᵀ**Am**N) + C
+>
+>
+>
+> = (1/2)(𝐰ᵀ**Aw** - 2𝐰ᵀ**Am**N + (𝐦N)ᵀ**Am**N) + C
+>
+>
+>
+> = (1/2)𝐰ᵀ**Aw** - 𝐰ᵀ**Am**N + (1/2)(𝐦N)ᵀ**Am**N) + C
 >
 >
 >
@@ -384,59 +384,51 @@
 >
 >
 >
-> i) β**w**T**Φ**T**t** = **w**T**Am**N ⇒ β**Φ**T**t** = **Am**N
+> i) β𝐰ᵀ**Φ**ᵀ𝐭 = 𝐰ᵀ**Am**N ⇒ β**Φ**ᵀ𝐭 = **Am**N
 >
 >
 >
-> ⇔ **m**N = **A**inv β**Φ**T**t** = β**A**inv **Φ**T**t** → đây là 3.84
+> ⇔ 𝐦N = 𝐀inv β**Φ**ᵀ𝐭 = β𝐀inv **Φ**ᵀ𝐭 → đây là 3.84
 >
 >
 >
-> ii) (β/2) **t**T**t** = (1/2)(**m**N)T**Am**N) + C
+> ii) (β/2) 𝐭ᵀ𝐭 = (1/2)(𝐦N)ᵀ**Am**N) + C
 >
 >
 >
-> ⇔ C = -(1/2)(**m**N)T**Am**N) + (β/2) **t**T**t**
+> ⇔ C = -(1/2)(𝐦N)ᵀ**Am**N) + (β/2) 𝐭ᵀ𝐭
 >
 >
 >
-> ⇔ C = - (**m**N)T**Am**N) + (1/2)(**m**N)T**Am**N) + (β/2) **t**T**t**
+> ⇔ C = - (𝐦N)ᵀ**Am**N) + (1/2)(𝐦N)ᵀ**Am**N) + (β/2) 𝐭ᵀ𝐭
 >
 >
 >
-> Thay β**Φ**T**t** = **Am**N, và **A** = β**Φ**T**Φ**+α**I**
+> Thay β**Φ**ᵀ𝐭 = **Am**N, và 𝐀 = β**Φ**ᵀ**Φ**+α𝐈
 >
 >
 >
-> ⇔ C = - (**m**N)T(β**Φ**T**t**) + (1/2)(**m**N)T(β**Φ**T**Φ**+α**I**)**m**N) + (β/2) **t**T**t**
+> ⇔ C = - (𝐦N)ᵀ(β**Φ**ᵀ𝐭) + (1/2)(𝐦N)ᵀ(β**Φ**ᵀ**Φ**+α𝐈)𝐦N) + (β/2) 𝐭ᵀ𝐭
 >
 >
 >
-> ⇔ C = (β/2) **t**T**t** - (**m**N)T(β**Φ**T**t**) + (1/2)(**m**N)T(β**Φ**T**Φ**+α**I**)**m**N
+> ⇔ C = (β/2) 𝐭ᵀ𝐭 - (𝐦N)ᵀ(β**Φ**ᵀ𝐭) + (1/2)(𝐦N)ᵀ(β**Φ**ᵀ**Φ**+α𝐈)𝐦N
 >
 >
 >
-> ⇔ C = (β/2) **t**T**t** - β(**m**N)T**Φ**T**t** + (1/2)(**m**N)T(β**Φ**T**Φ**)**m**N + (1/2)(**m**N)T(α**I**)**m**N
+> ⇔ C = (β/2) 𝐭ᵀ𝐭 - β(𝐦N)ᵀ**Φ**ᵀ𝐭 + (1/2)(𝐦N)ᵀ(β**Φ**ᵀ**Φ**)𝐦N + (1/2)(𝐦N)ᵀ(α𝐈)𝐦N
 >
 >
 >
-> ⇔ C = (β/2) **t**T**t** - β(**m**N)T**Φ**T**t** + (β/2)(**m**N)T**Φ**T**Φm**N + (α/2)(**m**N)T**m**N
+> ⇔ C = (β/2) 𝐭ᵀ𝐭 - β(𝐦N)ᵀ**Φ**ᵀ𝐭 + (β/2)(𝐦N)ᵀ**Φ**ᵀ**Φm**N + (α/2)(𝐦N)ᵀ𝐦N
 >
 >
 >
-> ⇔ C = (β/2) \[**t**T**t** - 2(**m**N)T**Φ**T**t** + (**m**N)T**Φ**T**Φm**N\] +(α/2)(**m**N)T**m**N)
+> ⇔ C = (β/2) \[𝐭ᵀ𝐭 - 2(𝐦N)ᵀ**Φ**ᵀ𝐭 + (𝐦N)ᵀ**Φ**ᵀ**Φm**N\] +(α/2)(𝐦N)ᵀ𝐦N)
 >
 >
 >
-> ⇔ C = (β/2) ||**t** - **Φm**N||^2 + (α/2)(**m**N)T**m**N) → Đặt là E(**m**N)
->
->
->
-> ---
->
->
->
-> Kết quả sau khi complete the square ta có: E(**w**) = E(**m**N) + (1/2)(**w** - **m**N)T**A**(**w** - **m**N)
+> ⇔ C = (β/2) ||𝐭 - **Φm**N||² + (α/2)(𝐦N)ᵀ𝐦N) → Đặt là E(𝐦N)
 >
 >
 >
@@ -444,11 +436,7 @@
 >
 >
 >
-> Tác gỉa lưu ý: A chính là Hessian của E(**w**), kí hiệu ∇∇E(**w**). Là sao?
->
->
->
-> Trả lời đơn giản là vì ta E(**w**) = (1/2)**w**T**Aw** - β**w**T**Φ**T**t** + (β/2) **t**T**t**, Mà với quadratic function của **w**: (1/2)**w**T**Pw** + **q**T**w** + r, nên với Hessian chính là **P**, nên Hessian của E(**w**) chính là **A**.
+> Kết quả sau khi complete the square ta có: E(𝐰) = E(𝐦N) + (1/2)(𝐰 - 𝐦N)ᵀ𝐀(𝐰 - 𝐦N)
 >
 >
 >
@@ -456,27 +444,39 @@
 >
 >
 >
-> Ý tiếp theo ông Bishop dùng kết quả 3.54 trong đó nói rằng: Khi prior của **w** chọn là N(0, (1/α)**I**), và dưới mô hình ta giả định T \~ N(**w**TΦ(**x**), (1/β)) thì:
+> Tác gỉa lưu ý: A chính là Hessian của E(𝐰), kí hiệu ∇∇E(𝐰). Là sao?
 >
 >
 >
-> posterior distribution của **w** sẽ là Normal (**m**N, **S**Ninv) với:
+> Trả lời đơn giản là vì ta E(𝐰) = (1/2)𝐰ᵀ**Aw** - β𝐰ᵀ**Φ**ᵀ𝐭 + (β/2) 𝐭ᵀ𝐭, Mà với quadratic function của 𝐰: (1/2)𝐰ᵀ**Pw** + **q**ᵀ𝐰 + r, nên với Hessian chính là 𝐏, nên Hessian của E(𝐰) chính là 𝐀.
 >
 >
 >
-> **m**N = β**S**N**Φ**T**t** (3.53)
+> ---
 >
 >
 >
-> **S**Ninv = α**I** + β **Φ**T**Φ** (3.54)
+> Ý tiếp theo ông Bishop dùng kết quả 3.54 trong đó nói rằng: Khi prior của 𝐰 chọn là N(0, (1/α)𝐈), và dưới mô hình ta giả định T \~ N(𝐰ᵀΦ(𝐱), (1/β)) thì:
 >
 >
 >
-> Vậy thì ở đây **A** cũng là matrix được ta đặt cho β**Φ**T**Φ**+α**I**. Do đó **A** = **S**Ninv.
+> posterior distribution của 𝐰 sẽ là Normal (𝐦N, 𝐒N⁻¹) với:
 >
 >
 >
-> Và như vậy cái mN ta đặt ở trên: **m**N = **A**inv β**Φ**T**t** sẽ bằng (**S**Ninv)inv β**Φ**T**t** = **S**N β**Φ**T**t** = β**S**N**Φ**T**t**, **CHÍNH LÀ MEAN CỦA POSTERIOR DISTRIBUTION 3.53**
+> 𝐦N = β**S𝐍Φ**ᵀ𝐭 (3.53)
+>
+>
+>
+> 𝐒N⁻¹ = α𝐈 + β **Φ**ᵀ**Φ** (3.54)
+>
+>
+>
+> Vậy thì ở đây 𝐀 cũng là matrix được ta đặt cho β**Φ**ᵀ**Φ**+α𝐈. Do đó 𝐀 = 𝐒N⁻¹.
+>
+>
+>
+> Và như vậy cái mN ta đặt ở trên: 𝐦N = 𝐀inv β**Φ**ᵀ𝐭 sẽ bằng (𝐒N⁻¹)⁻¹ β**Φ**ᵀ𝐭 = 𝐒N β**Φ**ᵀ𝐭 = β**S𝐍Φ**ᵀ𝐭, **CHÍNH LÀ MEAN CỦA POSTERIOR DISTRIBUTION 3.53**
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -494,23 +494,23 @@
 <p align="center"><kbd><img src="assets/rj6zq21cue.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, tới đây, quay lại nhiệm vụ chính (nên nhớ ta vẫn đang muốn tính cái tích phân f(**t**|α,β) = \[(β/2π)^N/2\] \[(α/2π)^M/2\] ∫ exp {-E(**w**)} d**w**)
+> Rồi, tới đây, quay lại nhiệm vụ chính (nên nhớ ta vẫn đang muốn tính cái tích phân f(𝐭|α,β) = \[(β/2π)^N/2\] \[(α/2π)^M/2\] ∫ exp {-E(𝐰)} d𝐰)
 >
 >
 >
-> Xét ∫ exp {-E(**w**)} d**w**, thay E(**w**) = E(**m**N) + (1/2)(**w** - **m**N)T**A**(**w** - **m**N)
+> Xét ∫ exp {-E(𝐰)} d𝐰, thay E(𝐰) = E(𝐦N) + (1/2)(𝐰 - 𝐦N)ᵀ𝐀(𝐰 - 𝐦N)
 >
 >
 >
-> = ∫ exp {-\[E(**m**N) + (1/2)(**w** - **m**N)T**A**(**w** - **m**N)\]} d**w**
+> = ∫ exp {-\[E(𝐦N) + (1/2)(𝐰 - 𝐦N)ᵀ𝐀(𝐰 - 𝐦N)\]} d𝐰
 >
 >
 >
-> = ∫ exp {-\[E(**m**N) + (1/2)(**w** - **m**N)T**A**(**w** - **m**N)\]} d**w**
+> = ∫ exp {-\[E(𝐦N) + (1/2)(𝐰 - 𝐦N)ᵀ𝐀(𝐰 - 𝐦N)\]} d𝐰
 >
 >
 >
-> = ∫ exp {-E(**m**N) - \[(1/2)(**w** - **m**N)T**A**(**w** - **m**N)\]} d**w**
+> = ∫ exp {-E(𝐦N) - \[(1/2)(𝐰 - 𝐦N)ᵀ𝐀(𝐰 - 𝐦N)\]} d𝐰
 >
 >
 >
@@ -518,59 +518,19 @@
 >
 >
 >
-> = ∫ exp {-E(**m**N)} exp{-\[(1/2)(**w** - **m**N)T**A**(**w** - **m**N)\]} d**w**
+> = ∫ exp {-E(𝐦N)} exp{-\[(1/2)(𝐰 - 𝐦N)ᵀ𝐀(𝐰 - 𝐦N)\]} d𝐰
 >
 >
 >
-> exp {-E(**m**N)} không dính **w**, đưa ra tích phân
+> exp {-E(𝐦N)} không dính 𝐰, đưa ra tích phân
 >
 >
 >
-> = exp {-E(**m**N)} ∫ exp{-\[(1/2)(**w** - **m**N)T**A**(**w** - **m**N)\]} d**w**
+> = exp {-E(𝐦N)} ∫ exp{-\[(1/2)(𝐰 - 𝐦N)ᵀ𝐀(𝐰 - 𝐦N)\]} d𝐰
 >
 >
 >
-> Viết lại: ∫ exp {-E(**w**)} d**w**  = exp {-E(**m**N)} ∫ exp{-\[(1/2)(**w** - **m**N)T**A**(**w** - **m**N)\]} d**w**
->
->
->
-> ---
->
->
->
-> Tới đây sao nữa: Lập luận như sau, xét cái tích phân ∫ exp{-\[(1/2)(**w** - **m**N)T**A**(**w** - **m**N)\]} d**w**, nó có dạng là kernel của một Normal(**m**N, **A**inv) do đó, bằng cách nhân thêm normalizing constant của pdf này, tạm gọi là C1. 
->
->
->
-> Ta sẽ có: (1/C1) ∫ C1 exp{-\[(1/2)(**w** - **m**N)T**A**(**w** - **m**N)\]} d**w**.  
->
->
->
-> Để rồi do tính valid của pdf, ∫ C1 exp{-\[(1/2)(**w** - **m**N)T**A**(**w** - **m**N)\]} d**w** phải bằng 1.
->
->
->
-> nên ∫ exp {-E(**w**)} d**w** = exp {-E(**m**N)} (1/C1), chỉ việc thay C1 vô, C1 là gì?
->
->
->
-> theo công thức pdf D-dimensional Normal(**x**|**μ**, **Σ**) = \[(2π)^-D/2\] \[1/|**Σ**|^1/2\] exp\[(**x** - **μ**)T**Σ**inv(**x** - μ)/2\], thì normalizing constant C1 của M-dimensional Normal (vì **w** có M phần tử) ở đây chính là:
->
->
->
-> C1 = \[(2π)^-M/2\] (|**A**inv|^-1/2) 
->
->
->
-> ⇒ ∫ exp {-E(**w**)} d**w** = exp {-E(**m**N)} \[(2π)^M/2\] (|**A**inv|^1/2)
->
->
->
-> Nhớ tính chất det matrix đã học trong MIT 1806: |Ainv| = 1/|A|, nên:
->
->
->
-> ∫ exp {-E(**w**)} d**w** = exp {-E(**m**N)} \[(2π)^M/2\] (|**A**|^-1/2) → 3.85
+> Viết lại: ∫ exp {-E(𝐰)} d𝐰  = exp {-E(𝐦N)} ∫ exp{-\[(1/2)(𝐰 - 𝐦N)ᵀ𝐀(𝐰 - 𝐦N)\]} d𝐰
 >
 >
 >
@@ -578,39 +538,79 @@
 >
 >
 >
-> Vậy f(**t**|α,β) = \[(β/2π)^N/2\] \[(α/2π)^M/2\] ∫ exp {-E(**w**)} d**w**)
+> Tới đây sao nữa: Lập luận như sau, xét cái tích phân ∫ exp{-\[(1/2)(𝐰 - 𝐦N)ᵀ𝐀(𝐰 - 𝐦N)\]} d𝐰, nó có dạng là kernel của một Normal(𝐦N, 𝐀inv) do đó, bằng cách nhân thêm normalizing constant của pdf này, tạm gọi là C1. 
 >
 >
 >
-> ⇔ f(**t**|α,β) = \[(β/2π)^N/2\] \[(α/2π)^M/2\] exp {-E(**m**N)} \[(2π)^M/2\] (|**A**|^-1/2)
+> Ta sẽ có: (1/C1) ∫ C1 exp{-\[(1/2)(𝐰 - 𝐦N)ᵀ𝐀(𝐰 - 𝐦N)\]} d𝐰.  
 >
 >
 >
-> ⇒ ln f(**t**|α,β) = ln { \[(β/2π)^N/2\] \[(α/2π)^M/2\] exp {-E(**m**N)} \[(2π)^M/2 (|**A**|^-1/2)\]
+> Để rồi do tính valid của pdf, ∫ C1 exp{-\[(1/2)(𝐰 - 𝐦N)ᵀ𝐀(𝐰 - 𝐦N)\]} d𝐰 phải bằng 1.
 >
 >
 >
-> = ln \[(β/2π)^N/2\] + ln \[(α/2π)^M/2\] + ln \[exp {-E(**m**N)} \[(2π)^M/2 (|**A**|^-1/2)\]
+> nên ∫ exp {-E(𝐰)} d𝐰 = exp {-E(𝐦N)} (1/C1), chỉ việc thay C1 vô, C1 là gì?
 >
 >
 >
-> = (N/2) ln (β/2π) + (M/2) ln (α/2π) + ln \[exp {-E(**m**N)}\] + ln \[(2π)^M/2 (|**A**|^-1/2)\]
+> theo công thức pdf D-dimensional Normal(𝐱|**μ**, **Σ**) = \[(2π)^-D/2\] \[1/|**Σ**|^1/2\] exp\[(𝐱 - **μ**)ᵀ**Σ**inv(𝐱 - μ)/2\], thì normalizing constant C1 của M-dimensional Normal (vì 𝐰 có M phần tử) ở đây chính là:
 >
 >
 >
-> = (N/2) \[ln (β) - ln(2π)\] + (M/2) \[ln(α) - ln (2π)\] - E(**m**N) + ln \[(2π)^M/2\] + ln \[(|**A**|^-1/2)\]
+> C1 = \[(2π)^-M/2\] (|𝐀inv|^-1/2) 
 >
 >
 >
-> = (N/2) ln (β) - (N/2) ln(2π) + (M/2) ln(α) - (M/2) ln (2π) - E(**m**N) + (M/2) ln (2π) -1/2 ln |**A**|
+> ⇒ ∫ exp {-E(𝐰)} d𝐰 = exp {-E(𝐦N)} \[(2π)^M/2\] (|𝐀inv|^1/2)
 >
 >
 >
-> = (N/2) ln (β) - (N/2) ln(2π) + (M/2) ln(α)  - E(**m**N) - 1/2 ln |**A**|
+> Nhớ tính chất det matrix đã học trong MIT 1806: |A⁻¹| = 1/|A|, nên:
 >
 >
 >
-> = (M/2) ln(α) + (N/2) ln (β) + - E(**m**N) - 1/2 ln |**A**|  - (N/2) ln(2π) 
+> ∫ exp {-E(𝐰)} d𝐰 = exp {-E(𝐦N)} \[(2π)^M/2\] (|𝐀|^-1/2) → 3.85
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy f(𝐭|α,β) = \[(β/2π)^N/2\] \[(α/2π)^M/2\] ∫ exp {-E(𝐰)} d𝐰)
+>
+>
+>
+> ⇔ f(𝐭|α,β) = \[(β/2π)^N/2\] \[(α/2π)^M/2\] exp {-E(𝐦N)} \[(2π)^M/2\] (|𝐀|^-1/2)
+>
+>
+>
+> ⇒ ln f(𝐭|α,β) = ln { \[(β/2π)^N/2\] \[(α/2π)^M/2\] exp {-E(𝐦N)} \[(2π)^M/2 (|𝐀|^-1/2)\]
+>
+>
+>
+> = ln \[(β/2π)^N/2\] + ln \[(α/2π)^M/2\] + ln \[exp {-E(𝐦N)} \[(2π)^M/2 (|𝐀|^-1/2)\]
+>
+>
+>
+> = (N/2) ln (β/2π) + (M/2) ln (α/2π) + ln \[exp {-E(𝐦N)}\] + ln \[(2π)^M/2 (|𝐀|^-1/2)\]
+>
+>
+>
+> = (N/2) \[ln (β) - ln(2π)\] + (M/2) \[ln(α) - ln (2π)\] - E(𝐦N) + ln \[(2π)^M/2\] + ln \[(|𝐀|^-1/2)\]
+>
+>
+>
+> = (N/2) ln (β) - (N/2) ln(2π) + (M/2) ln(α) - (M/2) ln (2π) - E(𝐦N) + (M/2) ln (2π) -1/2 ln |𝐀|
+>
+>
+>
+> = (N/2) ln (β) - (N/2) ln(2π) + (M/2) ln(α)  - E(𝐦N) - 1/2 ln |𝐀|
+>
+>
+>
+> = (M/2) ln(α) + (N/2) ln (β) + - E(𝐦N) - 1/2 ln |𝐀|  - (N/2) ln(2π) 
 >
 >
 >
@@ -640,15 +640,15 @@
 <p align="center"><kbd><img src="assets/4o7z8kl333x.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp tục phần cuối, dựa vào kết quả ta đã có của ln f(**t**|α, β) = (M/2) ln(α) + (N/2) ln (β) - E(**m**N) - 1/2 ln |**A**| - (N/2) ln(2π), gs mới ốp vào bài toán polynomial curve fitting đã học.
+> Tiếp tục phần cuối, dựa vào kết quả ta đã có của ln f(𝐭|α, β) = (M/2) ln(α) + (N/2) ln (β) - E(𝐦N) - 1/2 ln |𝐀| - (N/2) ln(2π), gs mới ốp vào bài toán polynomial curve fitting đã học.
 >
 >
 >
-> Trước hết mình sẽ nói lại tí về ý nghĩa của f(**t**|α, β), là model evidence, hay marginal likelihood, mà như các note trước mình đã hiểu bản chất của nó chính là: f(𝒟|**ℳ**i), hay f(**t**|ℳi,**X**) với ℳi là mô hình cụ thể trong đó ta cho T \~ n(y(**w**,**x**), 1/β). Và f(𝒟|**ℳ**i) = f(**t**|ℳi,**X**) được hiểu là kết quả có được khi ta marginalizing f(𝒟|**ℳ**i, **w**) = f(t|ℳi, **w**, **X**) over mọi possible value của **w**, với **w** \~ n(0, 1/α)**I**).
+> Trước hết mình sẽ nói lại tí về ý nghĩa của f(𝐭|α, β), là model evidence, hay marginal likelihood, mà như các note trước mình đã hiểu bản chất của nó chính là: f(𝒟|**ℳ**i), hay f(𝐭|ℳi,𝐗) với ℳi là mô hình cụ thể trong đó ta cho T \~ n(y(𝐰,𝐱), 1/β). Và f(𝒟|**ℳ**i) = f(𝐭|ℳi,𝐗) được hiểu là kết quả có được khi ta marginalizing f(𝒟|**ℳ**i, 𝐰) = f(t|ℳi, 𝐰, 𝐗) over mọi possible value của 𝐰, với 𝐰 \~ n(0, 1/α)𝐈).
 >
 >
 >
-> Do đó f(𝒟|**ℳ**i), cũng là f(**t**|ℳi,**X**), và viết thêm sự phụ thuộc vào α, β ta có f(**t**|ℳi, α, β, **X**), cũng như bỏ đi ℳi, **X** cho gọn (vì đã xét ℳi cụ thể cũng như tự biết sẽ phải phụ thuộc **X**) ta sẽ có f(**t**|α, β). Và bản chất của nó mang ý nghĩa là: Giả định mô hình phân phối của data là ℳi, với tham số **w** có giả định prior như vậy, thì khi ta lấy trung bình trên mọi giá trị của **w**, thì xác suất quan sát được bộ data set 𝒟 là bao nhiêu.
+> Do đó f(𝒟|**ℳ**i), cũng là f(𝐭|ℳi,𝐗), và viết thêm sự phụ thuộc vào α, β ta có f(𝐭|ℳi, α, β, 𝐗), cũng như bỏ đi ℳi, 𝐗 cho gọn (vì đã xét ℳi cụ thể cũng như tự biết sẽ phải phụ thuộc 𝐗) ta sẽ có f(𝐭|α, β). Và bản chất của nó mang ý nghĩa là: Giả định mô hình phân phối của data là ℳi, với tham số 𝐰 có giả định prior như vậy, thì khi ta lấy trung bình trên mọi giá trị của 𝐰, thì xác suất quan sát được bộ data set 𝒟 là bao nhiêu.
 >
 >
 >
@@ -656,7 +656,7 @@
 >
 >
 >
-> ln f(**t**|α, β) = (M/2) ln(α) + (N/2) ln (β) - E(**m**N) - 1/2 ln |**A**| - (N/2) ln(2π). Người ta mới vẽ nó là hàm theo M, để có hình 3.14. Và tương ứng với hình 1.4, 1.4 Ta sẽ có thể giải thích bản chất.
+> ln f(𝐭|α, β) = (M/2) ln(α) + (N/2) ln (β) - E(𝐦N) - 1/2 ln |𝐀| - (N/2) ln(2π). Người ta mới vẽ nó là hàm theo M, để có hình 3.14. Và tương ứng với hình 1.4, 1.4 Ta sẽ có thể giải thích bản chất.
 >
 >
 >
@@ -664,37 +664,37 @@
 >
 >
 >
-> (M/2) ln(α) + (N/2) ln (β) - E(**m**N) - 1/2 ln |**A**| - (N/2) ln(2π)
+> (M/2) ln(α) + (N/2) ln (β) - E(𝐦N) - 1/2 ln |𝐀| - (N/2) ln(2π)
 >
 >
 >
-> = - E(**m**N) + (M/2) ln(α) + (N/2) ln (β) - 1/2 ln |**A**| - (N/2) ln(2π)
+> = - E(𝐦N) + (M/2) ln(α) + (N/2) ln (β) - 1/2 ln |𝐀| - (N/2) ln(2π)
 >
 >
 >
-> = - (β/2) ||**t** - **Φm**N||^2 - (α/2) **m**NT**m**N + (M/2) ln(α) + (N/2) ln (β) - 1/2 ln |**A**| - (N/2) ln(2π)
+> = - (β/2) ||𝐭 - **Φm**N||² - (α/2) 𝐦Nᵀ𝐦N + (M/2) ln(α) + (N/2) ln (β) - 1/2 ln |𝐀| - (N/2) ln(2π)
 >
 >
 >
-> Xét term - (β/2) ||**t** - **Φm**N||^2 = - (β/2) ||**t** - **Φm**N||^2:
+> Xét term - (β/2) ||𝐭 - **Φm**N||² = - (β/2) ||𝐭 - **Φm**N||²:
 >
 >
 >
-> Với **m**N = β**S**N**Φ**T**t** mà ta nhận định chính là posterior mean của **w**, thì **Φm**N chính là gì? Chính là **Φw**MAP, và - (1/2) ||**t** - **Φm**N||^2 chính là sum squared error của mô hình khi dùng **w**MAP để lắp vào hàm dự đoán y(**w**, **x**) = **w**TΦ(**x**). Và bữa trước ta cũng đã biết, khi có posterior distribution của **w**, thì một cách point estimate tốt cho **w** là dùng **w**MAP (mà ta gọi là làm Bayesian kiểu nửa mùa đó).
+> Với 𝐦N = β**S𝐍Φ**ᵀ𝐭 mà ta nhận định chính là posterior mean của 𝐰, thì **Φm**N chính là gì? Chính là **Φw**MAP, và - (1/2) ||𝐭 - **Φm**N||² chính là sum squared error của mô hình khi dùng 𝐰MAP để lắp vào hàm dự đoán y(𝐰, 𝐱) = 𝐰ᵀΦ(𝐱). Và bữa trước ta cũng đã biết, khi có posterior distribution của 𝐰, thì một cách point estimate tốt cho 𝐰 là dùng 𝐰MAP (mà ta gọi là làm Bayesian kiểu nửa mùa đó).
 >
 >
 >
-> Như vậy - (β/2) ||**t** - **Φm**N||^2 chính là (negative) của β × sum square error. Dĩ nhiên khi model fit data càng tốt thì sum square error càng nhỏ → - (β/2) ||**t** - **Φm**N||^2 càng bớt âm, đồng nghĩa sẽ kéo f(**t**|α, β) tăng lên.
+> Như vậy - (β/2) ||𝐭 - **Φm**N||² chính là (negative) của β × sum square error. Dĩ nhiên khi model fit data càng tốt thì sum square error càng nhỏ → - (β/2) ||𝐭 - **Φm**N||² càng bớt âm, đồng nghĩa sẽ kéo f(𝐭|α, β) tăng lên.
 >
 >
 >
 > ---
 >
-> Xét -(α/2) **m**NT**m**N = -(α/2) ||**m**N||^2, đây chỉ là penalty của regularization loss khi dùng **w**MAP, đương nhiên nó là norm của vector **w**MAP, nên nếu M càng lớn, thì norm vector cũng sẽ tăng, từ đó dấu trừ phía trước sẽ kéo cục này giảm, do đó, kéo f(**t**|α, β) giảm
+> Xét -(α/2) 𝐦Nᵀ𝐦N = -(α/2) ||𝐦N||², đây chỉ là penalty của regularization loss khi dùng 𝐰MAP, đương nhiên nó là norm của vector 𝐰MAP, nên nếu M càng lớn, thì norm vector cũng sẽ tăng, từ đó dấu trừ phía trước sẽ kéo cục này giảm, do đó, kéo f(𝐭|α, β) giảm
 >
 >
 >
-> Xét - 1/2 ln |**A**|. Thì **A** như đã nói ở note trước, chính là nghịch đảo covariance của posterior của **w**, hay, chính là posterior precision matrix. Khi M càng lớn, thì det của matrix covariance đương nhiên càng nhỏ (vì càng nhiều data thì phương sai hậu nghiệm sẽ nhỏ lại → det càng nhỏ → det precision matrix |**A**| càng lớn → ln |**A**| sẽ càng lớn , và thêm dấu trừ đằng trước thì - 1/2 ln |**A**| sẽ càng nhỏ 
+> Xét - 1/2 ln |𝐀|. Thì 𝐀 như đã nói ở note trước, chính là nghịch đảo covariance của posterior của 𝐰, hay, chính là posterior precision matrix. Khi M càng lớn, thì det của matrix covariance đương nhiên càng nhỏ (vì càng nhiều data thì phương sai hậu nghiệm sẽ nhỏ lại → det càng nhỏ → det precision matrix |𝐀| càng lớn → ln |𝐀| sẽ càng lớn , và thêm dấu trừ đằng trước thì - 1/2 ln |𝐀| sẽ càng nhỏ 
 >
 >
 >
@@ -726,7 +726,7 @@
 >
 >
 >
-> Khi M tăng lên 2, dựa trên sự thật là data sinh ra từ hàm sin, có bản chất là hàm lẻ, nên hiểu đại khái là dùng polynomial bậc hai (w0 + w1x + wx^2) không giúp tạo ra model fit tốt hơn hơn data này. Do đó, SSE ko giảm bao nhiêu → không kéo model evidence lên bao nhiêu dẫn lực kéo lên bị yếu thế so với lực kéo model xuống → model evidence bị kéo xuống, tạo nên cái thung lũng ở hình 3.14.
+> Khi M tăng lên 2, dựa trên sự thật là data sinh ra từ hàm sin, có bản chất là hàm lẻ, nên hiểu đại khái là dùng polynomial bậc hai (w0 + w1x + wx²) không giúp tạo ra model fit tốt hơn hơn data này. Do đó, SSE ko giảm bao nhiêu → không kéo model evidence lên bao nhiêu dẫn lực kéo lên bị yếu thế so với lực kéo model xuống → model evidence bị kéo xuống, tạo nên cái thung lũng ở hình 3.14.
 >
 >
 >
