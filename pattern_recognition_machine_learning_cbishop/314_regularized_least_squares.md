@@ -10,15 +10,15 @@
 <p align="center"><kbd><img src="assets/uaa7w0fxr7h.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, đoạn này gs Bishop nhắc lại một kĩ thuật gọi là regularization mà trong chap 1 khi làm ví dụ về bài toán polynomial curve-fitting mình đã gặp, trong đó ta add thêm vào loss function một hàm của parameter, gắn trọng số λ đóng vai trò điều chỉnh tương quan giữa regularization loss term là main loss term, để rồi total error sẽ là: E_D(**w**) + λ E_W(**w**). Với E_D(**w**) là main loss (error), có phụ thuộc data, còn E_W(**w**) thì chỉ phụ thuộc w, ko phụ thuộc data.
+> Đại khái là, đoạn này gs Bishop nhắc lại một kĩ thuật gọi là regularization mà trong chap 1 khi làm ví dụ về bài toán polynomial curve-fitting mình đã gặp, trong đó ta add thêm vào loss function một hàm của parameter, gắn trọng số λ đóng vai trò điều chỉnh tương quan giữa regularization loss term là main loss term, để rồi total error sẽ là: E_D(𝐰) + λ E_W(𝐰). Với E_D(𝐰) là main loss (error), có phụ thuộc data, còn E_W(𝐰) thì chỉ phụ thuộc w, ko phụ thuộc data.
 >
 >
 >
-> Và một dạng đơn giản nhất chính là: (1/2)**w**T**w**, tức (1/2) tổng bình phương của các wi. Khi đó, nếu main error ta vẫn dùng sum squared error: E_D(**w**) = (1/2) Σi \[ti - **w**TΦ(**x**i)\]^2 (cũng là ||**Φw** - **t**||^2, với **Φ** là design matrix, thì total loss sẽ là:
+> Và một dạng đơn giản nhất chính là: (1/2)𝐰ᵀ𝐰, tức (1/2) tổng bình phương của các wi. Khi đó, nếu main error ta vẫn dùng sum squared error: E_D(𝐰) = (1/2) Σi \[ti - 𝐰ᵀΦ(𝐱i)\]² (cũng là ||**Φw** - 𝐭||², với **Φ** là design matrix, thì total loss sẽ là:
 >
 >
 >
-> (1/2)||**Φw** - **t**||^2 + (1/2)λ**w**T**w**
+> (1/2)||**Φw** - 𝐭||² + (1/2)λ𝐰ᵀ𝐰
 >
 >
 >
@@ -26,67 +26,67 @@
 >
 >
 >
-> = (1/2)\[||**Φw** - **t**||^2 + λ**w**T**w**\]
+> = (1/2)\[||**Φw** - 𝐭||² + λ𝐰ᵀ𝐰\]
 >
 >
 >
-> = (1/2)\[(**Φw** - **t**)T(**Φw** - **t**) + λ**w**T**w**\]
+> = (1/2)\[(**Φw** - 𝐭)ᵀ(**Φw** - 𝐭) + λ𝐰ᵀ𝐰\]
 >
 >
 >
-> = (1/2)\[(**w**T**Φ**T - **t**T)(**Φw** - **t**) + λ**w**T**w**\]
+> = (1/2)\[(𝐰ᵀ**Φ**ᵀ - 𝐭ᵀ)(**Φw** - 𝐭) + λ𝐰ᵀ𝐰\]
 >
 >
 >
-> = (1/2)\[(**w**T**Φ**T**Φw** - **t**T**Φw** - **w**T**Φ**T**t** + **t**T**t** + λ**w**T**w**\]
+> = (1/2)\[(𝐰ᵀ**Φ**ᵀ**Φw** - 𝐭ᵀ**Φw** - 𝐰ᵀ**Φ**ᵀ𝐭 + 𝐭ᵀ𝐭 + λ𝐰ᵀ𝐰\]
 >
 >
 >
-> = (1/2)\[(**w**T**Φ**T**Φw** + λ**w**T**w**- 2**t**T**Φw** + **t**T**t**\]
+> = (1/2)\[(𝐰ᵀ**Φ**ᵀ**Φw** + λ𝐰ᵀ𝐰- 2𝐭ᵀ**Φw** + 𝐭ᵀ𝐭\]
 >
 >
 >
-> = (1/2)\[(**w**T(**Φ**T**Φ**+λ)**w** - 2**t**T**Φw** + **t**T**t**\]
+> = (1/2)\[(𝐰ᵀ(**Φ**ᵀ**Φ**+λ)𝐰 - 2𝐭ᵀ**Φw** + 𝐭ᵀ𝐭\]
 >
 >
 >
-> = (1/2)**w**T(**Φ**T**Φ**+λ)**w** - **t**T**Φw** + (1/2)**t**T**t**
+> = (1/2)𝐰ᵀ(**Φ**ᵀ**Φ**+λ)𝐰 - 𝐭ᵀ**Φw** + (1/2)𝐭ᵀ𝐭
 >
 >
 >
-> Có thể thấy rõ đây vẫn là quadratic functionc của **w**, có dạng f(**w**) = (1/2)**w**TP**w** + **q**T**w** + r, và để có gradient của hàm này, MIT 18s096 dạy ta cách tìm cực dễ, rằng ∇f chính là PTw + q, và Hessian chính là P. 
+> Có thể thấy rõ đây vẫn là quadratic functionc của 𝐰, có dạng f(𝐰) = (1/2)𝐰ᵀP𝐰 + **q**ᵀ𝐰 + r, và để có gradient của hàm này, MIT 18s096 dạy ta cách tìm cực dễ, rằng ∇f chính là Pᵀw + q, và Hessian chính là P. 
 >
 >
 >
-> Nên ở đây ∇E(**w**) = (**Φ**T**Φ**+λ)T**w** - **Φ**T**t**, cho gradient bằng 0 (điều kiện cần tối ưu bậc nhất) ta sẽ có:
+> Nên ở đây ∇E(𝐰) = (**Φ**ᵀ**Φ**+λ)ᵀ𝐰 - **Φ**ᵀ𝐭, cho gradient bằng 0 (điều kiện cần tối ưu bậc nhất) ta sẽ có:
 >
 >
 >
-> (**Φ**T**Φ**+λ)T**w** - **Φ**T**t** = 0
+> (**Φ**ᵀ**Φ**+λ)ᵀ𝐰 - **Φ**ᵀ𝐭 = 0
 >
 >
 >
-> ⇔ (**Φ**T**Φ**+λ)T**w** = **Φ**T**t** 
+> ⇔ (**Φ**ᵀ**Φ**+λ)ᵀ𝐰 = **Φ**ᵀ𝐭 
 >
 >
 >
-> ⇔ (**Φ**T**Φ**+λ)**w** = **Φ**T**t**  (vì (**Φ**T**Φ**+λ) đối xứng)
+> ⇔ (**Φ**ᵀ**Φ**+λ)𝐰 = **Φ**ᵀ𝐭  (vì (**Φ**ᵀ**Φ**+λ) đối xứng)
 >
 >
 >
-> ⇔ **w** = (**Φ**T**Φ**+λ)inv**Φ**T**t** → đây là 3.28
+> ⇔ 𝐰 = (**Φ**ᵀ**Φ**+λ)⁻¹**Φ**ᵀ𝐭 → đây là 3.28
 >
 >
 >
-> Nói chung cũng không có gì khó hiểu, đại ý là nếu vẫn dùng sum squared error và add thêm một regularization term là quadratic function của w, thì dĩ nhiên hàm error vẫn là hàm bậc hai của **w**, điều đó đương nhiên khiến cho gradient vẫn là hàm bậc một của **w**, nên sẽ có thể có closed form solution.
+> Nói chung cũng không có gì khó hiểu, đại ý là nếu vẫn dùng sum squared error và add thêm một regularization term là quadratic function của w, thì dĩ nhiên hàm error vẫn là hàm bậc hai của 𝐰, điều đó đương nhiên khiến cho gradient vẫn là hàm bậc một của 𝐰, nên sẽ có thể có closed form solution.
 >
 >
 >
-> Và ông nói một điểm mà trong Casella mình cũng đã gặp, đó là cái này, trong bối cảnh machine learning, người ta gọi là weight decay, còn trong bối cảnh thống kê, người ta gọi là parameter shrinkage. (decay là shrinkage đều có nghĩa làm giảm, làm nhỏ lại). Còn vì sao lại gọi vậy thì dễ hiểu thôi, để giảm cái term thứ hai thì **w** sẽ phải nhỏ, và gs Bishop giải thích là, vì các thuật toán sẽ tìm cách làm giảm nhỏ các parameter trừ khi chúng được chống lưng bởi data (có nghĩa là, khi mô hình học, nó sẽ ép các param nhỏ lại, trừ những param thật sự cần thiết để nắm bắt quy luật của data)  
+> Và ông nói một điểm mà trong Casella mình cũng đã gặp, đó là cái này, trong bối cảnh machine learning, người ta gọi là weight decay, còn trong bối cảnh thống kê, người ta gọi là parameter shrinkage. (decay là shrinkage đều có nghĩa làm giảm, làm nhỏ lại). Còn vì sao lại gọi vậy thì dễ hiểu thôi, để giảm cái term thứ hai thì 𝐰 sẽ phải nhỏ, và gs Bishop giải thích là, vì các thuật toán sẽ tìm cách làm giảm nhỏ các parameter trừ khi chúng được chống lưng bởi data (có nghĩa là, khi mô hình học, nó sẽ ép các param nhỏ lại, trừ những param thật sự cần thiết để nắm bắt quy luật của data)  
 >
 >
 >
-> Nhìn lại công thức **w** = (**Φ**T**Φ**+λ)inv**Φ**T**t**, thì mình cũng dễ thấy nó chỉ khác cái 3.15 (công thức của **w** không có regularization term, **w** = (**Φ**T**Φ**)inv**Φ**T**t**) ở chỗ có thêm việc cộng λ vào **Φ**T**Φ**
+> Nhìn lại công thức 𝐰 = (**Φ**ᵀ**Φ**+λ)⁻¹**Φ**ᵀ𝐭, thì mình cũng dễ thấy nó chỉ khác cái 3.15 (công thức của 𝐰 không có regularization term, 𝐰 = (**Φ**ᵀ**Φ**)⁻¹**Φ**ᵀ𝐭) ở chỗ có thêm việc cộng λ vào **Φ**ᵀ**Φ**
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
@@ -128,7 +128,7 @@
 >
 >
 >
-> minimize (over **w**) (1/2 E_D(**w**) + (λ/2) Σj |wj|
+> minimize (over 𝐰) (1/2 E_D(𝐰) + (λ/2) Σj |wj|
 >
 >
 >
@@ -140,11 +140,11 @@
 >
 >
 >
-> Vậy thì ở đây, mình gặp lại cái vụ: chuyển thành bài toán tương đương bằng cách tích hợp constraint vào objective, và ngược lại. Có nghĩa là, thực chất bài toán không ràng buộc: minimize hàm (1/2 E_D(**w**) + (λ/2) Σj |wj| có thể chuyển thành bài toán tối ưu ràng buộc tương đương:
+> Vậy thì ở đây, mình gặp lại cái vụ: chuyển thành bài toán tương đương bằng cách tích hợp constraint vào objective, và ngược lại. Có nghĩa là, thực chất bài toán không ràng buộc: minimize hàm (1/2 E_D(𝐰) + (λ/2) Σj |wj| có thể chuyển thành bài toán tối ưu ràng buộc tương đương:
 >
 >
 >
-> minimize (1/2 E_D(**w**) subject to \[constrain nào đó\]
+> minimize (1/2 E_D(𝐰) subject to \[constrain nào đó\]
 >
 >
 >
@@ -180,11 +180,11 @@
 >
 >
 >
-> để rồi bài toán unconstrain minimize E_D(**w**) + (λ/2) Σj |wj| có thể equivalent bởi bài toán constraint: minimize E_D(**w**) subject to Σj |wj| - η ≤ 0 ⇔ Σj |wj| ≤ η, η ≥ 0.
+> để rồi bài toán unconstrain minimize E_D(𝐰) + (λ/2) Σj |wj| có thể equivalent bởi bài toán constraint: minimize E_D(𝐰) subject to Σj |wj| - η ≤ 0 ⇔ Σj |wj| ≤ η, η ≥ 0.
 >
 >
 >
-> Thế thì, trong MIT 1802 đã học về cái trực giác của Lagrange multiplier: Đại ý là hình 3.4 có thể hiểu như sau: Đường tròn đồng tâm màu xanh dương chính là contour plot của hàm E_D(**w**) (với D=2, nó đồ thị hàm số của nó là cái paraboloid), và hình màu cam là contour plot của hàm regularizer. Dĩ nhiên, contour plot cũng chính là khái niệm level set/ level curve trong MIT 1802 - là tập các điểm mà hàm số có cùng giá trị (constant). Và vì vậy, khi di chuyển trên contour plot, giá trị hàm không đổi, đồng nghĩa, đạo hàm của hàm số theo hướng tiếp tuyến với contour plot tại điểm đang xét phải bằng 0.
+> Thế thì, trong MIT 1802 đã học về cái trực giác của Lagrange multiplier: Đại ý là hình 3.4 có thể hiểu như sau: Đường tròn đồng tâm màu xanh dương chính là contour plot của hàm E_D(𝐰) (với D=2, nó đồ thị hàm số của nó là cái paraboloid), và hình màu cam là contour plot của hàm regularizer. Dĩ nhiên, contour plot cũng chính là khái niệm level set/ level curve trong MIT 1802 - là tập các điểm mà hàm số có cùng giá trị (constant). Và vì vậy, khi di chuyển trên contour plot, giá trị hàm không đổi, đồng nghĩa, đạo hàm của hàm số theo hướng tiếp tuyến với contour plot tại điểm đang xét phải bằng 0.
 >
 >
 >
@@ -200,15 +200,15 @@
 >
 >
 >
-> ⇔ ∇E_D(**w**) + λ ∇E_W(**w**) = 0
+> ⇔ ∇E_D(𝐰) + λ ∇E_W(𝐰) = 0
 >
 >
 >
-> ⇔ ∇E_D(**w**) = - λ ∇E_W(**w**)  
+> ⇔ ∇E_D(𝐰) = - λ ∇E_W(𝐰)  
 >
 >
 >
-> ⇨ **w**\* phải là điểm mà tại đó gradient của hàm E_D(**w**) cùng phương và ngược hướng với gradient hàm E_W(**w**).
+> ⇨ 𝐰\* phải là điểm mà tại đó gradient của hàm E_D(𝐰) cùng phương và ngược hướng với gradient hàm E_W(𝐰).
 >
 >
 >
@@ -216,7 +216,7 @@
 >
 >
 >
-> (Còn vì sao gradient phải vuông góc với level curve thì dễ rồi: vì đã nói ở trên, di chuyển theo level curve thì hàm số không đổi ⇨ đạo hàm của hàm số theo hướng tiếp tuyến với level curve phải bằng 0. Tức là nếu gọi d là hướng tiếp tuyến của level curve tại x thì directional derivative của hàm f theo vector d tại x, có công thức là ∇f(x)Td, phải bằng 0: ∇f(x)Td = 0, và cái này suy ra ∇f(x) phải vuông góc với d → tức vuông góc với level curve)
+> (Còn vì sao gradient phải vuông góc với level curve thì dễ rồi: vì đã nói ở trên, di chuyển theo level curve thì hàm số không đổi ⇨ đạo hàm của hàm số theo hướng tiếp tuyến với level curve phải bằng 0. Tức là nếu gọi d là hướng tiếp tuyến của level curve tại x thì directional derivative của hàm f theo vector d tại x, có công thức là ∇f(x)ᵀd, phải bằng 0: ∇f(x)ᵀd = 0, và cái này suy ra ∇f(x) phải vuông góc với d → tức vuông góc với level curve)
 >
 >
 >
