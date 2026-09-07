@@ -27,7 +27,7 @@
 > chứa một gray-scale number trong range [0:255] chiếm
 > 8 bits bộ nhớ. Và nếu xét image có kích thước 512x512
 > thì ta có vector x chứa các giá trị của các pixel thì nó ở
-> trong R^n với n = 512^2 = 262144
+> trong Rⁿ với n = 512² = 262144
 
 <br>
 
@@ -49,7 +49,7 @@
 > đoạn này đại khái là vầy: ví dụ như **một image** mà ta
 > đang nhìn thấy đi và cho rằng nó là **ảnh trắng đen** để
 > giả sử nó cũng là 512x512, thì ta có thể **represent** nó
-> thành một **vector có 512^2 = 262144 components**.
+> thành một **vector có 512² = 262144 components**.
 >
 >
 >
@@ -71,13 +71,15 @@
 
 > [!NOTE]
 > Thế thì nếu trong hoàn cảnh này, ta dùng **standard**
-> **basis** thì ta sẽ có **tới 512^2 = 262144 vector** (vì ta
-> đang trong R^(262144), cũng như **R^2 thì có 2
+> **basis** thì ta sẽ có **tới 512² = 262144 vector** (vì ta
+> đang trong R^(262144), cũng như **R² thì có 2
 > standard basis vậy)**
 
 <br>
 
 <a id="node-s4iajxi"></a>
+
+###### Standard Basis vs Better Basis
 
 <p align="center"><kbd><img src="assets/etbjxjrnd2f.png" width="80%"></kbd></p>
 
@@ -143,10 +145,10 @@
 >
 >
 >
-> Cho dễ hiểu đầu tiên hãy nghĩ về vector trong **R^2** (2D
-> plane) thì đương nhiên R^2 với dimension bằng 2 thì sẽ có
-> **2 vector độc lập** để **span R^2**. Cũng đồng nghĩa là
-> **basis của R^2 sẽ có 2 vectors**. Mà standard basis là hai
+> Cho dễ hiểu đầu tiên hãy nghĩ về vector trong **R²** (2D
+> plane) thì đương nhiên R² với dimension bằng 2 thì sẽ có
+> **2 vector độc lập** để **span R²**. Cũng đồng nghĩa là
+> **basis của R² sẽ có 2 vectors**. Mà standard basis là hai
 > vector (1,0) và (0,1)
 >
 >
@@ -639,6 +641,8 @@
 
 <a id="node-3y08di6"></a>
 
+###### Matrix in Eigenvector Basis
+
 <p align="center"><kbd><img src="assets/i0l0x9akcgn.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -680,7 +684,7 @@
 >
 >
 >
-> -> cột 1 của A là **[λ1, 0, ...0]**
+> → cột 1 của A là **[λ1, 0, ...0]**
 >
 >
 >
@@ -692,7 +696,7 @@
 >
 >
 >
-> -> cột 2 của A là **[0, λ2, ...0]**
+> → cột 2 của A là **[0, λ2, ...0]**
 >
 >
 >
