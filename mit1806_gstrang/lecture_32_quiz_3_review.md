@@ -96,12 +96,14 @@
 
 <a id="node-jbnr5vv"></a>
 
+###### Systems of Linear Differential Equations
+
 <p align="center"><kbd><img src="assets/cakflbsq8uj.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > gs: correct, ta có thể tính det hoặc nhìn thấy rằng row_3 =
 > -1*row_1 để nhận định các rows và cả columns ko
-> independent -> **Singular**
+> independent → **Singular**
 >
 >
 >
@@ -130,17 +132,17 @@
 >
 >
 >
-> Thế thì ta có **2 columns independent**, chúng là **hai vector trong R^3** (đơn giản vì
-> matrix có 3 hàng), vậy thì chúng **span một 2D plane trong R^3**, và đây **chính là
+> Thế thì ta có **2 columns independent**, chúng là **hai vector trong R³** (đơn giản vì
+> matrix có 3 hàng), vậy thì chúng **span một 2D plane trong R³**, và đây **chính là
 > column space của matrix A**. Và nếu liên hệ định lý về **dimension của 4 foundational**
 > subspace, thì ta nhớ **tổng dimension của columns space C(A) và the left nullspace,
 > hay nullspace của Aᵀ sẽ bằng m, trong ví dụ này là 3**, tức là hai subspaceC(A) và
-> N(Aᵀ) sẽ **hợp lại thành R^3**, và trong đó **C(A) orthogonal với N(Aᵀ)**
+> N(Aᵀ) sẽ **hợp lại thành R³**, và trong đó **C(A) orthogonal với N(Aᵀ)**
 >
 >
 >
 > Vậy **việc C(A) là một 2D plane**, cho ta chắc chắn rằng left nullspace không chỉ có
-> zero, mà có một vector (độc lập), hay, nó **span một line trong R^3**, cụ thể hơn, nó
+> zero, mà có một vector (độc lập), hay, nó **span một line trong R³**, cụ thể hơn, nó
 > c**hính là cái line vuông góc với C(A) plane tại zero**. Và zero là điểm duy nhất nằm
 > trong cả C(A) và N(Aᵀ).
 >
@@ -148,28 +150,27 @@
 >
 > Thế thì, **vector khác 0 trong left nullspace** là vector gì? Nó **chính là vector BỊ
 > MATRIX Aᵀ SUY BIẾN THÀNH ZERO**: Nói cách khác, nó **chính là solution của Aᵀy =
-> 0**. Và ta sẽ hiểu ra rằng, một vector trong R^3, là **không gian 3 chiều**, bị **suy biến
-> thành một plane**
-> \- là C(A), vì vì mọi vector trong N(Aᵀ) - thứ làm nên chiều không gian thứ 3 của R3 đã
+> 0**. Và ta sẽ hiểu ra rằng, một vector trong R³, là **không gian 3 chiều**, bị **suy biến
+> thành một plane**− là C(A), vì vì mọi vector trong N(Aᵀ) - thứ làm nên chiều không gian thứ 3 của R3 đã
 > bị biến thành 0 qua Aᵀy = 0
 >
 >
 >
 > Nói qua các rows của matrix A, như đã nói, có 3 rows, 2 columns, nên **3 rows** là **3
-> vectors trong R^2**. Thế mà **chỉ có 2 pivot** (**2 independent columns** nói trên) nên
+> vectors trong R²**. Thế mà **chỉ có 2 pivot** (**2 independent columns** nói trên) nên
 > cũng sẽ chỉ **có 2 independent rows** (quá trình elimination sẽ chỉ ra rows nào là
 > independent, và biến cái dependent rows thành zero). Thế thì, chính vì **có một row
 > dependent**, đồng nghĩa với việc **có thể tìm ra một bộ coefficient để tạo linear
 > combination giữa hai independent rows** cho ra cái dependent rows, và bằng việc
 > chuyển vế, ta cũng **sẽ có một bộ 3 coefficients các rows để cho ra 0**. Và đây **chính
-> là một vector trong R^3 bị matrix Aᵀ biến thành zero**, hay nói cách  khác, nó **chính là
+> là một vector trong R³ bị matrix Aᵀ biến thành zero**, hay nói cách  khác, nó **chính là
 > một vector khác 0 của the left nullspace nói trên**.
 >
 >
 >
 > Vậy thì, ở đây ta có liên hệ thứ nhất: **Chính cái row bị thừa** (dependent row) đã **tạo
 > nên một linear combination giữa 3 rows cho ra 0**, từ đó **tạo nên một non-zero vector
-> trong R^3 bị map thành 0**. Dẫn đến c**ác vector khác 0 trong left nullspace - subspace
+> trong R³ bị map thành 0**. Dẫn đến c**ác vector khác 0 trong left nullspace - subspace
 > của R3 đều bị map thành 0**: Aᵀy = 0, **chỉ còn lại các vector trong column space là
 > được map với vector khác 0 trong rowspace.**
 >
@@ -179,19 +180,19 @@
 >
 >
 >
-> Input y **trong R^3**, qua Aᵀ, output Aᵀy **chỉ còn trong 2D plane** (rowspace) là sự suy
+> Input y **trong R³**, qua Aᵀ, output Aᵀy **chỉ còn trong 2D plane** (rowspace) là sự suy
 > biến **mất đi một chiều không gian**
 >
 >
 >
-> Bàn thêm về rows, vì ta **có 2 independent rows**, là 2 vector trong R^2, nên chúng đã
-> **đủ span toàn bộ R^2**, dẫn đến **KHÔNG CÓ CHIỀU KHÔNG GIAN NÀO CỦA R2 BỊ
-> SUY BIẾN THÀNH 0 CẢ** ĐỂ RỒI **vector x nào trong R^2** cũng đều được matrix A
+> Bàn thêm về rows, vì ta **có 2 independent rows**, là 2 vector trong R², nên chúng đã
+> **đủ span toàn bộ R²**, dẫn đến **KHÔNG CÓ CHIỀU KHÔNG GIAN NÀO CỦA R2 BỊ
+> SUY BIẾN THÀNH 0 CẢ** ĐỂ RỒI **vector x nào trong R²** cũng đều được matrix A
 > **map nó với Ax khác 0 thuộc 2D plane column space**.
 >
 >
 >
-> Input x trong **R^2** qua A, output Ax **vẫn trong một 2D plane** của R3, không có sự suy biến
+> Input x trong **R²** qua A, output Ax **vẫn trong một 2D plane** của R3, không có sự suy biến
 > chiều không gian.
 >
 >
@@ -218,6 +219,8 @@
 
 <a id="node-3cilycu"></a>
 
+###### Differential Equations with Imaginary Eigenvalues
+
 <p align="center"><kbd><img src="assets/ue9ccku053o.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -226,16 +229,13 @@
 > trạng thái:
 >
 >
->
-> \- Stability (nhỏ dần về 0)
->
+> − Stability (nhỏ dần về 0)
 >
 >
-> \- Steady (tiến về giá trị ổn định)
+> − Steady (tiến về giá trị ổn định)
 >
 >
->
-> \- Blow-up (ngày càng lớn)
+> − Blow-up (ngày càng lớn)
 >
 >
 >
@@ -269,7 +269,7 @@
 >
 >
 >
-> Bởi vì e^2pi*i  = cos(2pi) + sin(2pi)*i = 1 + 0*i = 1 nên muốn
+> Bởi vì e²pi*i  = cos(2pi) + sin(2pi)*i = 1 + 0*i = 1 nên muốn
 > quay về ban đầy thì chu kì T phải bằng giá trị sao cho √2iT
 > bằng 2pi.
 >
@@ -286,7 +286,7 @@
 
 > [!NOTE]
 > và ta có thể check tại sao symmetric matrix có orthogonal
-> eigenvectors. Là bởi nếu A = Aᵀ thì đương nhiên AAᵀ = A^2,
+> eigenvectors. Là bởi nếu A = Aᵀ thì đương nhiên AAᵀ = A²,
 > và cũng bằng AᵀA
 >
 >
@@ -366,7 +366,7 @@
 >
 >
 >
-> Với a = 0, thì ta có: Tổng n: [gía trị đạo hàm cấp n của f tại 0]*[x^n]/[n!] 
+> Với a = 0, thì ta có: Tổng n: [gía trị đạo hàm cấp n của f tại 0]*[xⁿ]/[n!] 
 >
 >
 >
@@ -375,7 +375,7 @@
 >
 >
 >
-> Ta có Tổng n: [giá trị e^x tại 0]*[x^n]/[n!] = [1]*[x^n]/[n!] = [x^n]/[n!]Vậy **e^x = Tổng n [x^n]/[n!]**
+> Ta có Tổng n: [giá trị e^x tại 0]*[xⁿ]/[n!] = [1]*[xⁿ]/[n!] = [xⁿ]/[n!]Vậy **e^x = Tổng n [xⁿ]/[n!]**
 >
 >
 >
@@ -430,15 +430,15 @@
 >
 >
 >
-> Trong đó **(SΛS⁻¹*t)^n = S*(Λ^n)*S⁻¹*(t^n)**
+> Trong đó **(SΛS⁻¹*t)^n = S*(Λ^n)*S⁻¹*(tⁿ)**
 >
 >
 >
-> Ví dụ (SΛS⁻¹*t)^2 = SΛ/S⁻¹*tS/ΛS⁻¹*t = S(Λ^2)S⁻¹(t^2)
+> Ví dụ (SΛS⁻¹*t)^2 = SΛ/S⁻¹*tS/ΛS⁻¹*t = S(Λ^2)S⁻¹(t²)
 >
 >
 >
-> Vậy e^At = **Tổng n: [S*(Λ^n)*S⁻¹*(t^n)]/n!**
+> Vậy e^At = **Tổng n: [S*(Λ^n)*S⁻¹*(tⁿ)]/n!**
 >
 >
 >
@@ -446,7 +446,7 @@
 >
 >
 >
-> S * { Tổng n: [(Λ^n)*S⁻¹*(t^n)]/n! }
+> S * { Tổng n: [(Λ^n)*S⁻¹*(tⁿ)]/n! }
 >
 >
 >
@@ -454,7 +454,7 @@
 >
 >
 >
-> S * {  Tổng n: [(Λ^n)*(t^n)]/n! } * S⁻¹ =
+> S * {  Tổng n: [(Λ^n)*(tⁿ)]/n! } * S⁻¹ =
 >
 >
 >
@@ -530,7 +530,7 @@
 > [!NOTE]
 > gs: đúng vậy, chỉ cần xem ba eigenvectors có independent
 > không. Và có thể để ý thấy chúng orthogonal LẪN NHAU
-> do đó đ**ương nhiên chúng independent -> matrix có thể
+> do đó đ**ương nhiên chúng independent → matrix có thể
 > diagonalizable , ko phụ thuộc c**
 
 <br>
@@ -653,14 +653,14 @@
 >
 >
 >
-> Lập luận thế này nếu P là projection matrix thì P^2 = P.
+> Lập luận thế này nếu P là projection matrix thì P² = P.
 > Mà theo tính chất của eigenvalue thì nếu λ là eigenvalue
 > của P thì ta có Px = λx ⇔ PPx  = P*λx = λPx
 > = λλx = λ^2*x
 >
 >
 >
-> Vậy P^2 = P ⇔ λ^2*x = λx
+> Vậy P² = P ⇔ λ^2*x = λx
 >
 >
 >
@@ -674,7 +674,7 @@
 >
 > Vậy matrix A/2 phải có eigenvalue là 1 hoặc 0. Rồi mà matrix A/2 sẽ
 > có eigenvalue là 1/2 * eigenvalue của A (dễ hiểu điều này vì nếu Ax
-> = λx thì tương đương Ax/2 = λ/2*x -> hai matrix cùng
+> = λx thì tương đương Ax/2 = λ/2*x → hai matrix cùng
 > eigenvector nhưng eigenvalue bằng 1 nửa của nhau)
 >
 >
@@ -828,7 +828,7 @@
 >
 >
 >
-> Vậy suy ra nullspace của A = {0} -> A non-singular
+> Vậy suy ra nullspace của A = {0} → A non-singular
 
 <br>
 
@@ -858,15 +858,15 @@
 >
 >
 >
-> Rank? -> 1
+> Rank? → 1
 >
 >
 >
-> dim N(A)? -> 1
+> dim N(A)? → 1
 >
 >
 >
-> vector trong N(A)? -> v2, vì v2 bị map thành 0
+> vector trong N(A)? → v2, vì v2 bị map thành 0
 
 <br>
 
@@ -936,7 +936,7 @@
 >
 >
 >
-> -> Rõ ràng là không vì eigenvalue của nó có thể là -1 < 0 mà
+> → Rõ ràng là không vì eigenvalue của nó có thể là -1 < 0 mà
 > muốn là Positive definite thì mọi eigenvalue phải dương
 >
 >
@@ -945,7 +945,7 @@
 >
 >
 >
-> -> Có, gs nói rằng mọi orthogonal matrices và mọi symmetric
+> → Có, gs nói rằng mọi orthogonal matrices và mọi symmetric
 > matrix đều diagonalizable và thậm chí như gs đã nói hồi nãy
 > ở đầu lecture, matrix nào có tính chất AAᵀ = AᵀA thì đều có
 > các eigenvector orthogonal, tức là không những ta có thể
@@ -1000,17 +1000,17 @@
 >
 >
 >
-> Một cách là ta dùng properties của Projection matrix**. P^2 =
+> Một cách là ta dùng properties của Projection matrix**. P² =
 > P** và **P là symmetric P = Pᵀ**
 >
 >
 >
-> Vậy ta chứng minh P^2 = 1/4(A^2 + 2A + I) = 1/2(A+I)
+> Vậy ta chứng minh P² = 1/4(A² + 2A + I) = 1/2(A+I)
 >
 >
 >
 > Và dễ thấy vì A symmetric và orthogonal nên A = Aᵀ = A⁻¹
-> Nên A^2 = AA=AA⁻¹ = I. Thế vô chứng minh được P^2 = P
+> Nên A² = AA=AA⁻¹ = I. Thế vô chứng minh được P² = P
 >
 >
 >
@@ -1053,7 +1053,7 @@
 >
 >
 >
-> Và vì projection matrix có P^2 = P nên P^2 = PᵀP ⇔ PP =
+> Và vì projection matrix có P² = P nên P² = PᵀP ⇔ PP =
 > PᵀP suy ra P = Pᵀ
 
 **🔗 See also:** [First-Order Feasible Step Derivation *(Numerical Optimization_J.Nocedal)*](../numerical_optimization_jnocedal/121_examples.md#node-98w7rek)
@@ -1071,7 +1071,7 @@
 >
 >
 >
-> -> nếu λ là eigenvalue của A ta có Ax = λx
+> → nếu λ là eigenvalue của A ta có Ax = λx
 >
 >
 >
