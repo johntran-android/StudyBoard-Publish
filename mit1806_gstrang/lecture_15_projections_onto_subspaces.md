@@ -565,7 +565,7 @@
 >
 >
 >
-> thì khi đó P sẽ hóa ra AA⁻¹(Aᵀ)⁻¹Aᵀ = I.I = I
+> thì khi đó P sẽ hóa ra AA⁻¹(Aᵀ)⁻¹Aᵀ = I × I = I
 >
 >
 >
