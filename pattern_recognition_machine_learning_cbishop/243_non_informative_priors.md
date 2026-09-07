@@ -48,7 +48,7 @@
 >
 >
 >
-> Tuy vậy, trong thực tế, gs nói vẫn có thể dùng improper prior nếu posterior là proper distribution (tức là dù priori improper, nhưng nếu posterior pdf/pmf vẫn có thể thỏa yêu cầu valid). Lấy ví dụ khi ta dùng uniform (cái này mình hiểu là hàm uniform (-inf, inf), tức f(λ) = constant với mọi λ từ -inf tới inf, như đã nói, đây không phải một phân phối xác suất hợp lệ. trong Stat110, mình chỉ được học uniform(a,b) chứ không cho phép có uniform(-inf, inf)) để làm priori cho mean của Normal (sample X \~ Normal(μ, σ^2)), thì posterior sẽ vẫn là một valid pdf (proper)
+> Tuy vậy, trong thực tế, gs nói vẫn có thể dùng improper prior nếu posterior là proper distribution (tức là dù priori improper, nhưng nếu posterior pdf/pmf vẫn có thể thỏa yêu cầu valid). Lấy ví dụ khi ta dùng uniform (cái này mình hiểu là hàm uniform (-inf, inf), tức f(λ) = constant với mọi λ từ -inf tới inf, như đã nói, đây không phải một phân phối xác suất hợp lệ. trong Stat110, mình chỉ được học uniform(a,b) chứ không cho phép có uniform(-inf, inf)) để làm priori cho mean của Normal (sample X \~ Normal(μ, σ²)), thì posterior sẽ vẫn là một valid pdf (proper)
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
@@ -68,23 +68,23 @@
 >
 >
 >
-> Như ta đã nói, giả sử ta muốn chọn một hàm constant làm prior để thể hiện tính non-informative, và ta muốn nó ít ảnh hưởng tới posterior nhất có thể. Nhưng thực tế, lấy ví dụ ta chọn prior f(λ) (hay π(λ), theo cách viết quen thuộc của sách Casella về prior/posterior) = constant c. Rồi, trong quá trình tính toán, giả sử ta đổi biến (change of variable) với λ = η^2 chẳng hạn. Thì pdf của η sẽ không còn là constant nữa:
+> Như ta đã nói, giả sử ta muốn chọn một hàm constant làm prior để thể hiện tính non-informative, và ta muốn nó ít ảnh hưởng tới posterior nhất có thể. Nhưng thực tế, lấy ví dụ ta chọn prior f(λ) (hay π(λ), theo cách viết quen thuộc của sách Casella về prior/posterior) = constant c. Rồi, trong quá trình tính toán, giả sử ta đổi biến (change of variable) với λ = η² chẳng hạn. Thì pdf của η sẽ không còn là constant nữa:
 >
 >
 >
-> Ôn nhanh kiến thức change of variable: Stat110 đã học, khi ta có X với pdf fX(x) và Y = g(X), với g là invertible function, tức y = g(x) thì x = ginv(y). Khi đó, pdf của Y sẽ được tính như sau: fY(y) = fX(x) |dx/dy| ⇔ fY(y) = fX(ginv(y)) |d/dy ginv(y)|.
+> Ôn nhanh kiến thức change of variable: Stat110 đã học, khi ta có X với pdf fX(x) và Y = g(X), với g là invertible function, tức y = g(x) thì x = g⁻¹(y). Khi đó, pdf của Y sẽ được tính như sau: fY(y) = fX(x) |dx/dy| ⇔ fY(y) = fX(g⁻¹(y)) |d/dy g⁻¹(y)|.
 >
 >
 >
-> Vậy thì ở đây ta có λ (như vai trò X), η như vai trò Y, hàm ginv(y) = η^2.
+> Vậy thì ở đây ta có λ (như vai trò X), η như vai trò Y, hàm g⁻¹(y) = η².
 >
 >
 >
-> λ có pdf f(λ), và λ = η^2
+> λ có pdf f(λ), và λ = η²
 >
 >
 >
-> fη(η) = fλ(λ) |d/dη η^2|
+> fη(η) = fλ(λ) |d/dη η²|
 >
 >
 >
@@ -112,7 +112,7 @@
 >
 >
 >
-> Nói rõ thêm ý này: Ta nhớ, với MLE thì cơ bản ta chỉ giải bài toán tối ưu: maximize over λ hàm likelihood L(λ|data). Thế thì, chỉ đơn giản là vì, với MLE, TA ĐÂU CÓ NÓI VỀ PRIOR DISTRIBUTION GÌ ĐÂU mà bị ảnh hưởng hay không. Bản chất của MLE, ta còn nhớ, nó là trường phái cổ điển (frequentist), coi parameter là giá trị cố định nhưng chưa biết (fixed & uknown), và đi tìm một hàm số, một statistic W(sample **X**) để khi ráp vào observed value của data, W(**x**) sẽ estimate giá trị của nó, và MLE là một cách làm cụ thể, khi ta chọn dùng hàm W(x) = argmax\_λ L(λ|sample **x**). Và trong cách làm này, nếu có đổi biến, thì cũng chả sao, vì bản chất likelihood, như đã nói, chỉ là một hàm số theo λ, KHÔNG PHẢI LÀ HÀM PDF, nên có đổi biến thì cũng chả ảnh hưởng gì (đây là lí mr Bishop nói rằng nếu h(λ) là constant thì h^(η) = h(η^2) (h^(η) ý là, khi thay λ = η^2 vào h(λ) và coi nó  như hàm của η, thì ta có hàm khác - h^(η)) vẫn là constant. 
+> Nói rõ thêm ý này: Ta nhớ, với MLE thì cơ bản ta chỉ giải bài toán tối ưu: maximize over λ hàm likelihood L(λ|data). Thế thì, chỉ đơn giản là vì, với MLE, TA ĐÂU CÓ NÓI VỀ PRIOR DISTRIBUTION GÌ ĐÂU mà bị ảnh hưởng hay không. Bản chất của MLE, ta còn nhớ, nó là trường phái cổ điển (frequentist), coi parameter là giá trị cố định nhưng chưa biết (fixed & uknown), và đi tìm một hàm số, một statistic W(sample 𝐗) để khi ráp vào observed value của data, W(𝐱) sẽ estimate giá trị của nó, và MLE là một cách làm cụ thể, khi ta chọn dùng hàm W(x) = argmax\_λ L(λ|sample 𝐱). Và trong cách làm này, nếu có đổi biến, thì cũng chả sao, vì bản chất likelihood, như đã nói, chỉ là một hàm số theo λ, KHÔNG PHẢI LÀ HÀM PDF, nên có đổi biến thì cũng chả ảnh hưởng gì (đây là lí mr Bishop nói rằng nếu h(λ) là constant thì h^(η) = h(η²) (h^(η) ý là, khi thay λ = η² vào h(λ) và coi nó  như hàm của η, thì ta có hàm khác - h^(η)) vẫn là constant. 
 >
 >
 >
@@ -138,7 +138,7 @@
 > [!NOTE]
 > Gs giới thiệu hai ví dụ về non-informative prior. Đầu tiên là distribution có dạng f(x|μ) = g(x - μ)
 >
-> (mình dùng f từ đầu tương đương với p của gs, nên chỗ này gs xài f cho hàm f(x-μ), thì mình phải dùng chữ g, vì f(x|μ) ám chỉ làm pdf của X, còn g(x - μ) ám chỉ một hàm g cụ thể nào đó là hàm phụ thuộc term (x - μ), ví dụ pdf của X \~ normal(μ, σ^2) là f(x|μ, σ^2) = 1/√(2πσ^2) exp{-(x-μ)^2/2σ^2}, và nó là hàm g(x - μ) với g(u) = 1/√(2πσ^2) exp{-u^2/2σ^2}.
+> (mình dùng f từ đầu tương đương với p của gs, nên chỗ này gs xài f cho hàm f(x-μ), thì mình phải dùng chữ g, vì f(x|μ) ám chỉ làm pdf của X, còn g(x - μ) ám chỉ một hàm g cụ thể nào đó là hàm phụ thuộc term (x - μ), ví dụ pdf của X \~ normal(μ, σ²) là f(x|μ, σ²) = 1/√(2πσ²) exp{-(x-μ)²/2σ²}, và nó là hàm g(x - μ) với g(u) = 1/√(2πσ²) exp{-u²/2σ²}.
 >
 >
 >
@@ -176,11 +176,11 @@
 <p align="center"><kbd><img src="assets/4evznsafhs8.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái lập luận là như sau: Ta đã biết và nhắc lại hồi nãy, nói về prior là nói về Bayesian inference. Ta coi μ là random variable, rồi chọn prior distribution của μ, kí hiệu π(μ) và dùng Bayes theorem để derive π(μ|**x**) = f(**x**|μ) π(μ) / f(**x**), cũng là ∝ f(**x**|μ) π(μ).
+> Đại khái lập luận là như sau: Ta đã biết và nhắc lại hồi nãy, nói về prior là nói về Bayesian inference. Ta coi μ là random variable, rồi chọn prior distribution của μ, kí hiệu π(μ) và dùng Bayes theorem để derive π(μ|𝐱) = f(𝐱|μ) π(μ) / f(𝐱), cũng là ∝ f(𝐱|μ) π(μ).
 >
 >
 >
-> Thế thì, ở đây ta đang xét trường hợp mà density (tức đang nói đến f(**x**|μ) là một location family. Thì vì nó là một pdf thuộc location family (nên có dạng g(x - μ)) nên **khi μ thay đổi, dạng của distribution không đổi, chỉ đổi location**. 
+> Thế thì, ở đây ta đang xét trường hợp mà density (tức đang nói đến f(𝐱|μ) là một location family. Thì vì nó là một pdf thuộc location family (nên có dạng g(x - μ)) nên **khi μ thay đổi, dạng của distribution không đổi, chỉ đổi location**. 
 >
 >
 >
@@ -196,7 +196,7 @@
 >
 >
 >
-> Gs cho biết một ví dụ đó là ta chọn prior distribution của Normal mean (như đã biết từ Casella, normal là một loại location scale family, cũng có nghĩa là fixed σ^2 thì normal là một location family), thì prior conjugate, như đã biết của normal mean, là normal). Vậy để thể hiện non-informative, ta cho cái normal này có variance lớn vô cực → cái chuông bẹp dí và rộng vô cực, → coi như hàm hằng.
+> Gs cho biết một ví dụ đó là ta chọn prior distribution của Normal mean (như đã biết từ Casella, normal là một loại location scale family, cũng có nghĩa là fixed σ² thì normal là một location family), thì prior conjugate, như đã biết của normal mean, là normal). Vậy để thể hiện non-informative, ta cho cái normal này có variance lớn vô cực → cái chuông bẹp dí và rộng vô cực, → coi như hàm hằng.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -347,27 +347,27 @@
 >
 >
 >
-> pdf của normal(μ, σ^2)
+> pdf của normal(μ, σ²)
 >
 >
 >
-> N(x|μ, σ^2) = (1/σ√2π) exp(-(x-μ)^2/2σ^2)
+> N(x|μ, σ²) = (1/σ√2π) exp(-(x-μ)²/2σ²)
 >
 >
 >
-> ∝ (1/σ) exp(-(x-μ)^2/2σ^2) (bỏ đi constant dương 1/√2π)
+> ∝ (1/σ) exp(-(x-μ)²/2σ²) (bỏ đi constant dương 1/√2π)
 >
 >
 >
-> ∝ (1/σ) exp(-(x-μ)^2/σ^2) (bỏ đi constant 1/2 trong hàm mũ, vì nó là hàm monotone increasing)
+> ∝ (1/σ) exp(-(x-μ)²/σ²) (bỏ đi constant 1/2 trong hàm mũ, vì nó là hàm monotone increasing)
 >
 >
 >
-> = (1/σ) exp(-(x^/σ)^2) (đặt x^ = x - μ)
+> = (1/σ) exp(-(x^/σ)²) (đặt x^ = x - μ)
 >
 >
 >
-> Rồi, thế thì trong mấy phần trước mình cũng đã thấy gs nói làm việc với precision thì thuận lợi hơn variance (tức thay vì giải bài toán inference σ^2, ta sẽ giải bài toán inference 1/σ^2, gọi là precision, kí hiệu λ.
+> Rồi, thế thì trong mấy phần trước mình cũng đã thấy gs nói làm việc với precision thì thuận lợi hơn variance (tức thay vì giải bài toán inference σ², ta sẽ giải bài toán inference 1/σ², gọi là precision, kí hiệu λ.
 >
 >
 >
@@ -375,7 +375,7 @@
 >
 >
 >
-> λ = 1/σ^2 ⇔ σ^2 = 1/λ ⇔ 2σ dσ = -1/λ^2 dλ ⇔ dσ/ dλ = -1/2σλ^2
+> λ = 1/σ² ⇔ σ² = 1/λ ⇔ 2σ dσ = -1/λ² dλ ⇔ dσ/ dλ = -1/2σλ²
 >
 >
 >
@@ -383,7 +383,7 @@
 >
 >
 >
-> fλ(λ) = fσ(σ) |dσ/dλ| = π(σ) |-1/(2σλ^2)| = π(σ) 1/(2σλ^2)
+> fλ(λ) = fσ(σ) |dσ/dλ| = π(σ) |-1/(2σλ²)| = π(σ) 1/(2σλ²)
 >
 >
 >
@@ -391,15 +391,15 @@
 >
 >
 >
-> ⇨ fλ(λ) = constant × (1/σ) × 1/(2σλ^2)
+> ⇨ fλ(λ) = constant × (1/σ) × 1/(2σλ²)
 >
 >
 >
-> = constant × (1/σ^2) × 1/(2λ^2)
+> = constant × (1/σ²) × 1/(2λ²)
 >
 >
 >
-> = constant × λ × 1/(2λ^2)
+> = constant × λ × 1/(2λ²)
 >
 >
 >
