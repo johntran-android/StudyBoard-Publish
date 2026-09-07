@@ -923,7 +923,7 @@
 <p align="center"><kbd><img src="assets/wi0ycm7vsuh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, I gs viết thành S.S⁻¹ luôn. Để rồi cái chuỗi này
+> Rồi, I gs viết thành S × S⁻¹ luôn. Để rồi cái chuỗi này
 > được  gs phân tách thành S (....) Sin thì cái dấu 3
 > chấm chính là  e**Λt bởi vì lấy S bỏ ở đầu, S⁻¹ bỏ ở
 > cuối thì ở giữa mỗi term sẽ là:
@@ -1006,7 +1006,7 @@
 <p align="center"><kbd><img src="assets/e1x98syufbc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Như vậy ta đã hiểu tại sao **e^(At)** lại chính là **S.e^(Λt). S⁻¹**
+> Như vậy ta đã hiểu tại sao **e^(At)** lại chính là **S × e^(Λt). S⁻¹**
 
 <br>
 
