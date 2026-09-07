@@ -78,7 +78,7 @@
 > dạng bậc thang, trong đó bên dưới pivot = 0)
 >
 >
-> −Khử A22: Trừ hàng 2 cho 2*hàng 1 → [0 0 2 4 b2-2b1]−Khử A32: Trừ hàng 3 cho 3*hàng 1 →[0 0 2 4 b3-3b1]
+> −Khử A22: Trừ hàng 2 cho 2 × hàng 1 → [0 0 2 4 b2-2b1]−Khử A32: Trừ hàng 3 cho 3 × hàng 1 →[0 0 2 4 b3-3b1]
 
 <br>
 
@@ -288,7 +288,7 @@
 >
 >
 >
-> Me: Không, vì **tuy Ax=b thì A*constant *x chưa chắc
+> Me: Không, vì **tuy Ax=b thì A × constant *x chưa chắc
 > bằng b**, nên **scale của x không phải là solution mới của
 > Ax=b**
 
@@ -630,8 +630,8 @@
 >
 > Cột 1 và 2 là pivot: Có thể nhẩm: cột một có A11 khác
 > không thì đương nhiên là một pivot rồi.
-> Nếu làm elimination, thì trừ hàng 2 cho 3*hàng 1 để
-> khử A21, khi đó A22 sẽ thành (1-3*2) = -5, là giá trị
+> Nếu làm elimination, thì trừ hàng 2 cho 3 × hàng 1 để
+> khử A21, khi đó A22 sẽ thành (1-3 × 2) = -5, là giá trị
 > khác không nên đây sẽ là pivot thứ 2. Vậy cột 1 và 2
 > là hai pivot.
 
