@@ -784,47 +784,32 @@
 <p align="center"><kbd><img src="assets/icdi45celwm.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Có điều nó lại **ra như vầy, sai dấu**. Vậy thì ở đây gs mắc một sai
-> sót mà bên dưới **comment** có phản ánh cũng như qua bài
-> review (bài 32) gs có nói lại.
+> Có điều nó lại **ra như vầy, sai dấu**. Vậy thì ở đây gs mắc một sai sót mà bên dưới **comment** có phản ánh cũng như qua bài review (bài 32) gs có nói lại.
 >
 >
 >
-> Đó là bởi vì, với **eigenvectors,** thì khi **ta nhân nó với -1**, để
-> đổi ngược hướng của nó lại, thì **nó vẫn là eigenvectors**. Liên hệ
-> với việc ta tìm eigenvector thông qua xác định special solution của
-> A-λI = 0, hay basis của nullspace của A-λI thì trong đó ta xác định
-> free columns / variables từ đó **có thể chọn giá trị TÙY Ý CHO
-> CHÚNG**, dù thông thường ta chọn 1 cho free variable và 0 cho
-> các free variable khác để back-substitute tìm ra pivot variable.
+> Đó là bởi vì, với **eigenvectors,** thì khi **ta nhân nó với -1**, để đổi ngược hướng của nó lại, thì **nó vẫn là eigenvectors**. Liên hệ với việc ta tìm eigenvector thông qua xác định special solution của A-λI = 0, hay basis của nullspace của A-λI thì trong đó ta xác định free columns / variables từ đó **có thể chọn giá trị TÙY Ý CHO CHÚNG**, dù thông thường ta chọn 1 cho free variable và 0 cho các free variable khác để back-substitute tìm ra pivot variable.
 >
 >
 >
-> Vậy giả sử như lúc tìm eigenvector của AAᵀ, ta chọn -1 cho free
-> variable thì cũng được, hay **nói cách khác, U không nhất thiết
-> phải là [1 0; 0 1] mà hoàn toàn có thể là [1 0; 0 -1] hoặc [-1 0, 0
-> -1]**.
+> Vậy giả sử như lúc tìm eigenvector của AAᵀ, ta chọn -1 cho free variable thì cũng được, hay **nói cách khác, U không nhất thiết phải là \[1 0; 0 1\] mà hoàn toàn có thể là \[1 0; 0 -1\] hoặc \[-1 0, 0 −1\]**.
 >
 >
 >
-> Tuy nhiên **khi muốn thỏa mãn AV = UΣ** thì **CÓ SỰ RÀNG
-> BUỘC về dấu giữa V và U**.
+> Tuy nhiên **khi muốn thỏa mãn AV = UΣ** thì **CÓ SỰ RÀNG BUỘC về dấu giữa V và U**.
 >
 >
 >
-> Thành ra, **khi ta tìm U một cách độc lập với V** thông qua AAᵀ thì
-> theo gs T**A CÓ 50% CHỌN ĐƯỢC DẤU ĐÚNG**. 
+> Thành ra, **khi ta tìm U một cách độc lập với V** thông qua AAᵀ thì theo gs T**A CÓ 50% CHỌN ĐƯỢC DẤU ĐÚNG**.
 >
 >
 >
-> Và trong trường hợp này **GS ĐÃ RƠI VÀO 50% CÒN LẠI, TỨC  
+> Và trong trường hợp này **GS ĐÃ RƠI VÀO 50% CÒN LẠI, TỨC\
 > LÀ CHỌN U SAI DẤU.**
 >
 >
 >
-> Do đó để tìm U chính xác khớp được với AV = UΣ thì **phải tìm nó
-> trong quan hệ với V**, đương nhiên cách dễ nhất chính xác nhất là
-> thông qua AV = UΣ ⇔ **AVΣinv = U**
+> Do đó để tìm U chính xác khớp được với AV = UΣ thì **phải tìm nó trong quan hệ với V**, đương nhiên cách dễ nhất chính xác nhất là thông qua AV = UΣ ⇔ **AVΣinv = U**
 
 <br>
 
