@@ -80,16 +80,16 @@
 >
 >
 >
-> y(x, **w**) = Σj=0:M wj*x^j
+> y(x, 𝐰) = Σj=0:M wj*x^j
 >
 >
 >
-> Và **w** là vector các hệ số của đa thức (polynomial coefficient) [w0, w1,...wM]
+> Và 𝐰 là vector các hệ số của đa thức (polynomial coefficient) [w0, w1,...wM]
 >
 >
 >
 > Gs nói đến việc đây tuy là hàm bậc M theo biến x, nhưng là hàm tuyến tính
-> theo wj. Cũng dễ hiểu, ta có thể thể hiện ở dạng y(x, **w**) = **w**T[1, x, x^2,...,x^M]
+> theo wj. Cũng dễ hiểu, ta có thể thể hiện ở dạng y(x, 𝐰) = 𝐰ᵀ[1, x, x²,...,x^M]
 > Và ông đây là một function thuộc họ linear models, sẽ bàn kĩ ở chap 4
 
 **🔗 See also:** [Curve Fitting Góc Nhìn Xác Suất](./125_curve_fitting_re_visited.md#node-21cf3yh) · [Gaussian Basis Functions](./310_linear_regression_and_basis_functions.md#node-2e9r7fm)
@@ -115,13 +115,13 @@
 >
 >
 >
-> E(**w**) = (1/2) Σn=1:N (y(xn, **w**) - tn)^2
+> E(𝐰) = (1/2) Σn=1:N (y(xn, 𝐰) - tn)²
 >
 >
 >
 > Con số 1/2 như chỉ là số dương nhân vào, nếu muốn nói dài dòng theo
 > kiểu ee364a thì nó giúp ta có một equivalent optimization problem, tức là
-> không làm thay đổi bản chất bài toán, tức là **w*** minimize (1/2) sum
+> không làm thay đổi bản chất bài toán, tức là 𝐰* minimize (1/2) sum
 > squared error cũng sẽ minimize sum squared error, nhưng dễ thấy nó sẽ
 > giúp tính toán thuận tiện hơn.
 >
@@ -141,7 +141,7 @@
 >
 >
 >
-> L(δ(**X**), θ) = [δ(**X**) - θ]^2,  L(δ(**X**), θ) = |δ(**X**) - θ|
+> L(δ(𝐗), θ) = [δ(𝐗) - θ]²,  L(δ(𝐗), θ) = |δ(𝐗) - θ|
 >
 >
 >
@@ -150,11 +150,11 @@
 >
 >
 >
-> R(δ, θ) = E_θ[L(δ(**X**), θ)]
+> R(δ, θ) = E_θ[L(δ(𝐗), θ)]
 >
 >
 >
-> Và risk function sẽ cho ta một hàm theo θ gắn với estimator δ(**X**), để
+> Và risk function sẽ cho ta một hàm theo θ gắn với estimator δ(𝐗), để
 > rồi, ta muốn tạo ra estimator mà risk của nó tại θ bất kì đều nhỏ hơn risk
 > của mọi estimator khác tại đó. 
 >
@@ -162,36 +162,36 @@
 >
 > Rồi, khi theo Bayesian, θ là random variable, người ta lại average cái 
 > này, tức là nhìn theo góc độ R lúc bấy giờ là random variable tạo bởi
-> hàm theo θ, để đi average nó: E[R(θ, δ(**X**)) = ∫_Θ R(θ, δ(**X**) π(θ) dθ.
+> hàm theo θ, để đi average nó: E[R(θ, δ(𝐗)) = ∫_Θ R(θ, δ(𝐗) π(θ) dθ.
 > Thì đây gọi là Bayes risk.
 >
 >
 >
-> Và thay R(θ, δ(**X**)) = E_θ[L(δ(**X**), θ] = ∫_/**X** /L(δ(**x**), θ) f(**x**|θ) d**x**  vào:
+> Và thay R(θ, δ(𝐗)) = E_θ[L(δ(𝐗), θ] = ∫_/𝐗 /L(δ(𝐱), θ) f(𝐱|θ) d𝐱  vào:
 >
 >
 >
-> Bayes risk: ∫_Θ R(θ, δ(**X**) π(θ) dθ = ∫_Θ  ∫_/**X**/ L(δ(**x**), θ) f(**x**|θ) d**x** π(θ) dθ
+> Bayes risk: ∫_Θ R(θ, δ(𝐗) π(θ) dθ = ∫_Θ  ∫_/𝐗/ L(δ(𝐱), θ) f(𝐱|θ) d𝐱 π(θ) dθ
 >
 >
 >
-> = ∫_/**X**/ ∫_Θ L(δ(**x**), θ) f(**x**|θ) π(θ) dθ d**x** 
+> = ∫_/𝐗/ ∫_Θ L(δ(𝐱), θ) f(𝐱|θ) π(θ) dθ d𝐱 
 >
 >
 >
-> = ∫_/**X**/ ∫_Θ L(δ(**x**), θ) [f(θ|**x**) f(**x**) / π(θ)] π(θ) dθ d**x**  
+> = ∫_/𝐗/ ∫_Θ L(δ(𝐱), θ) [f(θ|𝐱) f(𝐱) / π(θ)] π(θ) dθ d𝐱  
 >
 >
 >
-> = ∫_/**X**/ ∫_Θ L(δ(**x**), θ) f(θ|**x**) f(**x**) dθ d**x**  
+> = ∫_/𝐗/ ∫_Θ L(δ(𝐱), θ) f(θ|𝐱) f(𝐱) dθ d𝐱  
 >
 >
 >
-> = ∫_**X** [ ∫_Θ L(δ(**x**), θ) f(θ|**x**) dθ] f(**x**) d**x**  
+> = ∫_𝐗 [ ∫_Θ L(δ(𝐱), θ) f(θ|𝐱) dθ] f(𝐱) d𝐱  
 >
 >
 >
-> Thì cái cụm [ ∫_Θ L(δ(**x**), θ) f(θ|**x**) dθ], chính là E_θ[L(δ(**x**), θ)|**X**=**x**] được 
+> Thì cái cụm [ ∫_Θ L(δ(𝐱), θ) f(θ|𝐱) dθ], chính là E_θ[L(δ(𝐱), θ)|𝐗=𝐱] được 
 > gọi là **posterior expected loss**
 >
 >
@@ -200,7 +200,7 @@
 >
 >
 >
-> Thế thì quay lại đây, nhìn cái E(**w**), mình có thể thấy đây chính là gì:
+> Thế thì quay lại đây, nhìn cái E(𝐰), mình có thể thấy đây chính là gì:
 >
 >
 >
@@ -209,16 +209,16 @@
 >
 >
 > Y như việc ta dùng squared error loss để đo độ sai của suy luận:
-> L(δ(**X**), θ) = [δ(**X**) - θ]^2
+> L(δ(𝐗), θ) = [δ(𝐗) - θ]²
 >
 >
 >
 > Thì ở đây, ta cũng dùng squared error loss để đo độ sai của dự đoán:
-> [y(w, x) - t]^2
+> [y(w, x) - t]²
 >
 >
 >
-> Chỉ khác ở chỗ, cái trên, δ(**X**) là suy luận (statistical inference) cho giá
+> Chỉ khác ở chỗ, cái trên, δ(𝐗) là suy luận (statistical inference) cho giá
 > trị tham số population θ.
 >
 >
@@ -231,7 +231,7 @@
 >
 >
 >
-> [g(δ(X) - g(θ)]^2 với g mang ý nghĩa là một prediction function nào đó.
+> [g(δ(X) - g(θ)]² với g mang ý nghĩa là một prediction function nào đó.
 >
 >
 >
@@ -255,7 +255,7 @@
 >
 >
 > Quay lại đây, dễ thấy vì objective là hàm không âm, nên nó sẽ nhỏ nhất
-> khi nó bằng 0, và khi đó (với **w***) hàm đa thức y(**w***, x) sẽ có đồ thị đi
+> khi nó bằng 0, và khi đó (với 𝐰*) hàm đa thức y(𝐰*, x) sẽ có đồ thị đi
 > qua một cách chính xác mọi điểm {xi, ti} trong training dataset
 >
 >
@@ -269,48 +269,48 @@
 >
 >
 >
-> Viết lại hàm objective: E(w) = (1/2) Σi=1:N [y(xi, w) - tn]^2
+> Viết lại hàm objective: E(w) = (1/2) Σi=1:N [y(xi, w) - tn]²
 >
 >
 >
-> Đặt h(x) là hàm scalar → vector: f(x) = [1, x, x^2,...x^M]
+> Đặt h(x) là hàm scalar → vector: f(x) = [1, x, x²,...x^M]
 >
 >
 >
-> thì E(w) = (1/2) Σi=1:N [wThi - ti]^2
+> thì E(w) = (1/2) Σi=1:N [wᵀhi - ti]²
 >
 >
 >
-> Đặt H là matrix các hàng là hi và vector t là [t1, ..tM]T thì E(w)  trên chính
+> Đặt H là matrix các hàng là hi và vector t là [t1, ..tM]ᵀ thì E(w)  trên chính
 > là
 >
 >
 >
-> = (1/2)(Hw - t)T(Hw - t)
+> = (1/2)(Hw - t)ᵀ(Hw - t)
 >
 >
 >
-> = (1/2)(wTHT - tT)(Hw - t)
+> = (1/2)(wᵀHᵀ - tᵀ)(Hw - t)
 >
 >
 >
-> = (1/2)(wTHTHw - tTHw - wTHTt + tTt)
+> = (1/2)(wᵀHᵀHw - tᵀHw - wᵀHᵀt + tᵀt)
 >
 >
 >
-> tTHw là scalar, nên = (tTHw)T = wTHTt
+> tᵀHw là scalar, nên = (tᵀHw)ᵀ = wᵀHᵀt
 >
 >
 >
-> = (1/2)(wTHTHw - 2tTHw + tTt)
+> = (1/2)(wᵀHᵀHw - 2tᵀHw + tᵀt)
 >
 >
 >
-> = (1/2)wTHTHw - tTHw + (1/2) tTt)
+> = (1/2)wᵀHᵀHw - tᵀHw + (1/2) tᵀt)
 >
 >
 >
-> Đây là dạng của hàm quadratic xTPx + qTx + r
+> Đây là dạng của hàm quadratic xᵀPx + qᵀx + r
 >
 >
 >
@@ -322,55 +322,55 @@
 >
 >
 >
-> ⇔ HTHw - (tTH)T = 0
+> ⇔ HᵀHw - (tᵀH)ᵀ = 0
 >
 >
 >
-> ⇔ HTHw - HTt = 0
+> ⇔ HᵀHw - Hᵀt = 0
 >
 >
 >
-> ⇔ HTHw = HTt
+> ⇔ HᵀHw = Hᵀt
 >
 >
 >
-> ⇔ w = (HTH)inv HTt
+> ⇔ w = (HᵀH)⁻¹ Hᵀt
 >
 >
 >
-> Dĩ nhiên matrix Hessian ∇^2E(w) chính là HTH
+> Dĩ nhiên matrix Hessian ∇²E(w) chính là HᵀH
 >
 >
 >
-> Hessian tại w* = HTH, có xác positive semi definite không?
+> Hessian tại w* = HᵀH, có xác positive semi definite không?
 >
 >
 >
-> Có, theo MIT 1806, ta chỉ cần check quadratic form:
+> Có, theo MIᵀ 1806, ta chỉ cần check quadratic form:
 >
 >
 >
-> zTHTHz xem có không âm với mọi z không.
+> zᵀHᵀHz xem có không âm với mọi z không.
 >
 >
 >
-> = (Hz)T(Hz) = ||Hz||^2 ≥ 0 với mọi z ⇨ positive semi definite
+> = (Hz)ᵀ(Hz) = ||Hz||² ≥ 0 với mọi z ⇨ positive semi definite
 >
 >
 >
-> Thế vào, E(w*) = (1/2)(Hw - t)T(Hw - t) | w = (HTH)inv HTt
+> Thế vào, E(w*) = (1/2)(Hw - t)ᵀ(Hw - t) | w = (HᵀH)⁻¹ Hᵀt
 >
 >
 >
-> = (1/2)||Hw - t||^2 | w = (HTH)inv HTt
+> = (1/2)||Hw - t||² | w = (HᵀH)⁻¹ Hᵀt
 >
 >
 >
-> = (1/2)||H(HTH)inv HTt - t||^2
+> = (1/2)||H(HᵀH)⁻¹ Hᵀt - t||²
 >
 >
 >
-> Thế thì H(HTH)inv HTt chính là gì?
+> Thế thì H(HᵀH)⁻¹ Hᵀt chính là gì?
 >
 >
 >
@@ -379,8 +379,8 @@
 >
 >
 > Chiếu b lên C(A): được p ∈ C(A), residual: e = b - p sẽ vuông góc C(A) →
-> e ∈ N(AT) ⇨ ATe = 0 ⇨ AT(b - Ax^) = 0 ⇔ ATb = ATAx^ ⇔ x^ = (ATA)inv
-> ATb ⇨ p = Ax^ = A(ATA)invATb
+> e ∈ N(Aᵀ) ⇨ Aᵀe = 0 ⇨ Aᵀ(b - Ax^) = 0 ⇔ Aᵀb = AᵀAx^ ⇔ x^ = (AᵀA)⁻¹
+> Aᵀb ⇨ p = Ax^ = A(AᵀA)⁻¹Aᵀb
 >
 >
 >
@@ -388,11 +388,11 @@
 >
 >
 >
-> P = A(ATA)invAT
+> P = A(AᵀA)⁻¹Aᵀ
 >
 >
 >
-> Vậy H(HTH)inv HTt chính là chiếu t lên C(H).
+> Vậy H(HᵀH)⁻¹ Hᵀt chính là chiếu t lên C(H).
 >
 >
 >
@@ -405,7 +405,7 @@
 >
 >
 > Dễ thấy các cột độc lập vì mọi cột đều là power của cột 2. Do đó chỉ cần
-> M + 1 ≥ N, thì C(H) trùng R^N và t nhất định ∈ C(H) ⇨ H(HTH)inv HTt = t
+> M + 1 ≥ N, thì C(H) trùng R^N và t nhất định ∈ C(H) ⇨ H(HᵀH)⁻¹ Hᵀt = t
 >
 >
 >
@@ -429,7 +429,7 @@
 > đoạn này nói về việc ta sẽ minimize E(w) và như đã thấy ở note vừa rồi, nó
 > là hàm bậc hai theo w, lấy đạo hàm (để dùng điều kiện tối ưu cần bậc nhất)
 > sẽ là hàm bậc 1, và đại ý là chắc chắn sẽ có một nghiệm duy nhất, giải
-> được ở dạng closed-form (kết quả mình vừa tính ra w = (HTH)inv HTt chính
+> được ở dạng closed-form (kết quả mình vừa tính ra w = (HᵀH)⁻¹ Hᵀt chính
 > là closed form solution.
 >
 >
@@ -675,17 +675,17 @@
 >
 >
 > Point estimator (của tham số θ), đầu tiên, theo định nghĩa, là any function
-> of sample **X**): W(**X**). Thế thì với MLE, cái hàm W đó chính là hàm
+> of sample 𝐗): W(𝐗). Thế thì với MLE, cái hàm W đó chính là hàm
 > này:
 >
 >
 >
-> W(**x**) = argmax_θ L(θ|**x**), với L(θ|**x**) là likelihood function, là
-> function theo θ, define bởi L(θ|**x**) = f(**x**|θ), là joint pdf/pmf của sample
-> **X** tại observed value **x**. mang ý nghĩa là độ hợp lí của θ khi quan sát
-> thấy **X** = **x.**  Và ta sẽ maximize L(θ|**x**) over θ ∈ Θ: tìm θ khiến độ
-> hợp lí khi quan sát thấy  **X** = **x** là lớn nhất. Và đó chính là ML
-> estimate of θ: δ^_mle(**x**)
+> W(𝐱) = argmax_θ L(θ|𝐱), với L(θ|𝐱) là likelihood function, là
+> function theo θ, define bởi L(θ|𝐱) = f(𝐱|θ), là joint pdf/pmf của sample
+> 𝐗 tại observed value 𝐱. mang ý nghĩa là độ hợp lí của θ khi quan sát
+> thấy 𝐗 = **x.**  Và ta sẽ maximize L(θ|𝐱) over θ ∈ Θ: tìm θ khiến độ
+> hợp lí khi quan sát thấy  𝐗 = 𝐱 là lớn nhất. Và đó chính là ML
+> estimate of θ: δ^_mle(𝐱)
 >
 >
 >
@@ -699,15 +699,15 @@
 > Bayesian sẽ coi θ là quantity of random (coi như random variable). Và đã
 > là random variable thì sẽ có distribution: kí hiệu là prior distribution π(θ).
 > Thông qua Bayes rule, ta có thể có một distribution khác của θ: condition
-> on **X** = **x**:
+> on 𝐗 = 𝐱:
 >
 >
 >
-> Bayes rule: f(**x**|θ) π(θ) = π(θ|x) f(**x**) ⇨ π(θ|x) = f(**x**|θ) π(θ) / f(**x**)
+> Bayes rule: f(𝐱|θ) π(θ) = π(θ|x) f(𝐱) ⇨ π(θ|x) = f(𝐱|θ) π(θ) / f(𝐱)
 >
 >
 >
-> Và ý nghĩa của cái distribution này là: việc quan sát được **X** = **x sẽ
+> Và ý nghĩa của cái distribution này là: việc quan sát được 𝐗 = **x sẽ
 > giúp ta cập nhật lại distribution của θ, mà ban đầu dựa trên niềm tin của
 > experimenter (prior), và người ta gọi nó là posterior distribution, kí hiệu
 > π(θ|x)**
@@ -720,8 +720,8 @@
 >
 >
 >
-> δ^B(**X**) = Expectation của [θ] với θ ~ π(θ|**x**) và phải kí hiệu cho đúng
-> là E[]θ|**X**=**x**], là kì vọng của θ  với θ ~ theo phân phối dựa trên **x**
+> δ^B(𝐗) = Expectation của [θ] với θ ~ π(θ|𝐱) và phải kí hiệu cho đúng
+> là E[]θ|𝐗=𝐱], là kì vọng của θ  với θ ~ theo phân phối dựa trên 𝐱
 
 <br>
 
@@ -750,7 +750,7 @@
 > interval estimator theo lối tiếp cận optimality function: Trong bài toán interval
 > estimator, ta đã biết là mình quan tâm đến hai thứ: Muốn nó chứa θ, và size
 > (length) nhỏ. Do đó, ta sẽ thiết kế hàm loss của một interval estimator:
-> L(C(X), θ) = b * Length[C(**X**)] + I_C(θ)
+> L(C(X), θ) = b * Length[C(𝐗)] + I_C(θ)
 >
 >
 >
@@ -766,7 +766,7 @@
 > hai objective, dùng trọng số λ/2 để điều chỉnh mức độ quan trọng tương đối
 > của hai mục tiêu: [Học được cách biểu diễn quy luật, thông qua giảm sum
 > squared error] và [không cho hệ số mang giá trị lớn, thể hiện bởi việc giảm
-> sum squared các hệ số: ||w||^2 = wTw = Σi wi^2]
+> sum squared các hệ số: ||w||² = wᵀw = Σi wi²]
 >
 >
 >
