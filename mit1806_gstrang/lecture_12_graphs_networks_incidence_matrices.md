@@ -277,12 +277,12 @@
 
 <a id="node-q6kc865"></a>
 
+###### Nullspace of Incidence Matrix
+
 <p align="center"><kbd><img src="assets/hyun6tf9sc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> **Một solution khác** có thể lấy là (1, 1, 1, 1). Và nó **cũng
-> tạo một basis** luôn, để **scale nó c với c sẽ cho ra một
-> solution**
+> **Một solution khác** có thể lấy là (1, 1, 1, 1). Và nó **cũng tạo một basis** luôn, để **scale nó c với c sẽ cho ra một solution**
 >
 >
 >
@@ -290,38 +290,27 @@
 >
 >
 >
-> Thông thường **khi xét nullspace của A**, tức solution của
-> Ax = 0, ta phải **tìm các pivot columns**, cũng các
-> **independent cols** và **suy ra các free cols**.
+> Thông thường **khi xét nullspace của A**, tức solution của Ax = 0, ta phải **tìm các pivot columns**, cũng các **independent cols** và **suy ra các free cols**.
 >
 >
 >
-> Để rồi **mỗi free cols sẽ ứng với một special solution**,
-> cũng chính là **ứng với một vector trong basis**. Hay nói
-> cách khác, **tìm ra các free cols sẽ cho ta một basis của
-> nullspace.**
+> Để rồi **mỗi free cols sẽ ứng với một special solution**, cũng chính là **ứng với một vector trong basis**. Hay nói cách khác, **tìm ra các free cols sẽ cho ta một basis của nullspace.**
 >
 >
 >
-> Và để xác định đâu là pivots columns, thì ta sẽ dùng row
-> elimination để đưa A về row echelon form.
+> Và để xác định đâu là pivots columns, thì ta sẽ dùng row elimination để đưa A về row echelon form.
 >
 >
 >
-> Tuy nhiên **trong trường hợp** này với incidence matrix A,
-> **có thế thấy Ax = 0 khi mọi phần tử của x đều bằng nhau**
-> bởi vì Ax = <x2-x1, x3-x2, ....> thì để Ax = 0 thì ta suy ra
-> x1 = x2 = ...x4. Do đó chỉ cần các component của x bằng
-> nhau thì nó sẽ là solution. Hay nói cách tổng quát: 
+> Tuy nhiên **trong trường hợp** này với incidence matrix A, **có thế thấy Ax = 0 khi mọi phần tử của x đều bằng nhau**bởi vì Ax = &lt;x2-x1, x3-x2, ....&gt; thì để Ax = 0 thì ta suy ra x1 = x2 = ...x4. Do đó chỉ cần các component của x bằng nhau thì nó sẽ là solution. Hay nói cách tổng quát:
 >
 >
 >
-> Hay x = **c***[1, 1, 1, 1]. 
+> Hay x = **c**\*\[1, 1, 1, 1\].
 >
 >
 >
-> Từ đó **có thể kết luận [1, 1, 1, 1] là một basis**, 
-> và **dimension của N(A) là 1.**
+> Từ đó **có thể kết luận \[1, 1, 1, 1\] là một basis**, và **dimension của N(A) là 1.**
 
 <br>
 
@@ -422,7 +411,7 @@
 > Lập luận: Để tìm basis của nullspace thì ta có thể **tìm
 > 2 special solution của Aᵀy=0**. Muốn vậy **theo cách
 > thông thường**, ta sẽ **đưa Aᵀ về row echelon**, và **xác
-> định 3 pivots columns**, từ đó **xác định 2 free columns** ->
+> định 3 pivots columns**, từ đó **xác định 2 free columns** →
 > đó sẽ là một basis.
 
 <br>
@@ -516,7 +505,7 @@
 > [!NOTE]
 > tiếp equation thứ 2 (của Aᵀy = 0) là y1-y2 = 0, cho
 > biết **tổng hai flow (current) liên quan đến node 2 phải
-> bằng 0** -> dòng đi vào (y1) bằng dòng đi ra (y2)
+> bằng 0** → dòng đi vào (y1) bằng dòng đi ra (y2)
 
 <br>
 
