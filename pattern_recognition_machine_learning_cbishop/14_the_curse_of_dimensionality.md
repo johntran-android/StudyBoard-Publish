@@ -85,8 +85,8 @@
 > số chiều dữ liệu lên: Đơn giản là vầy: giả sử ta có không gian 1 chiều (input
 > x chỉ là scalar, thì giả sử ta chia một đoạn từ a đến b thành n vùng, thì ta 
 > có n vùng. Rồi, giả sử giờ input x là 2 chiều, thì lúc bấy giờ, trong không gian
-> dữ liệu ta có thể chia thành nxn là n^2 vùng (ô vuông), Tiến lên input 3 chiều,
-> thì số vùng (khối lập phương) sẽ là n^3, cứ thể giả sử là bài toán 12 inputs,
+> dữ liệu ta có thể chia thành nxn là n² vùng (ô vuông), Tiến lên input 3 chiều,
+> thì số vùng (khối lập phương) sẽ là n³, cứ thể giả sử là bài toán 12 inputs,
 > thì số phân vùng sẽ là n^12, là con số đã rất khổng lồ. Nếu chưa nói, có những
 > bài toán thực tế mà input là hàng ngàn.
 >
@@ -130,7 +130,7 @@
 > gian 1,2,3 chiều): Ông lấy ví dụ, xét một cái quả banh bán kính r (ví dụ 
 > trong 2D là hình tròn, 3D là hình cầu,...) thì luật toán học cho ta biết thể
 > tích của quả banh đó sẽ tỉ lệ với bán kính mũ D (ví dụ diện tích hình
-> tròn 2D là πr^2, thể tích của hình cầu là 4/3πr^3....
+> tròn 2D là πr², thể tích của hình cầu là 4/3πr³....
 >
 >
 >
