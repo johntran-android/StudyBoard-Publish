@@ -736,7 +736,7 @@
 >
 >
 >
-> ta có B = CD (gs gọi là C.D thay vì mình gọi là AC) mà C như
+> ta có B = CD (gs gọi là C × D thay vì mình gọi là AC) mà C như
 > theo cách lập luận trước ta có fullrank matrix, do đó nó là
 > invertible matrix (vì khi một fullrank (dĩ nhiên sẽ là square
 > matrix) matrix được eliminate thì kết quả RREF sẽ là Identity
@@ -810,8 +810,8 @@
 >
 >
 >
-> Thế thì lập luận như sau: B=C.D (3x3)(3x4) = (3x4) ta đã
-> biết rằng, có thể coi kết qủa của C.D sẽ là việc lấy matrix C
+> Thế thì lập luận như sau: B=C × D (3x3)(3x4) = (3x4) ta đã
+> biết rằng, có thể coi kết qủa của C × D sẽ là việc lấy matrix C
 > nhân với các column vector của matrix D, mà mỗi khi một
 > matrix C nhân với một column vector d_i thì nó chính là tính
 > một linear combination của các column của C với hệ số là
