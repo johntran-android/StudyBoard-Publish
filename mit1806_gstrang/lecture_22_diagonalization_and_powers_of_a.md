@@ -148,7 +148,7 @@
 >
 > (Đương nhiên bữa giờ là luôn đang làm việc với **square**
 > matrix nxn và ở đây S có **N** cols - các eigenvector có **N**
-> component -> là square matrix **NxN** mà **các columns
+> component → là square matrix **NxN** mà **các columns
 > independent** nên full-rank / **invertible**)
 >
 > Và cần phải chú ý rằng việc matrix A square và có **N
@@ -228,7 +228,7 @@
 <p align="center"><kbd><img src="assets/r4jmew0foz.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs đề nghị ta **xét eigenvalue và eigenvector** của **A^2.**
+> Gs đề nghị ta **xét eigenvalue và eigenvector** của **A².**
 >
 >
 >
@@ -237,19 +237,19 @@
 >
 >
 >
-> Và ta **nhân hai vế cho A** thì ta có **A^2x = Aλx** 
+> Và ta **nhân hai vế cho A** thì ta có **A²x = Aλx** 
 > = **λAx** (λ là **scalar** nên **chuyển nó lên trước** 
 > được 
 >
 >
 >
 > Khi đó thay Ax = λx ta sẽ có **λAx = λ^2.x**
-> từ đó ta có: **A^2x = λ^2.x**
+> từ đó ta có: **A²x = λ^2.x**
 >
 >
 >
-> Điều này nói lên rằng **matrix A^2** sẽ **cũng có eigenvector**
-> là x (tức là eigenvector của A^2 cũng là của A) nhưng 
+> Điều này nói lên rằng **matrix A²** sẽ **cũng có eigenvector**
+> là x (tức là eigenvector của A² cũng là của A) nhưng 
 > eigenvalue t**ương ứng của nó thì bằng bình phương** eigen
 > value của A
 
@@ -264,11 +264,11 @@
 >
 >
 >
-> A^2 = S.Λ.S⁻¹.S.Λ.S⁻¹
+> A² = S.Λ.S⁻¹.S.Λ.S⁻¹
 >
 >
 >
-> Và S⁻¹.S = I từ đó A^2 = S.Λ.Λ.S⁻¹
+> Và S⁻¹.S = I từ đó A² = S.Λ.Λ.S⁻¹
 >
 >
 >
@@ -276,17 +276,17 @@
 >
 >
 >
-> Như vậy qua việc phân tách A^2 = S.Λ^2.S⁻¹ có thể thấy
+> Như vậy qua việc phân tách A² = S.Λ^2.S⁻¹ có thể thấy
 >
 >
 >
-> 1) **EIGENVECTOR của A^2** **CÙNG LÀ EIGENVECTOR**
+> 1) **EIGENVECTOR của A²** **CÙNG LÀ EIGENVECTOR**
 > **CỦA A** (VÌ S LÀ EIGENVECTOR CỦA A, nên A = S.Λ.
 > S⁻¹)
 >
 >
 >
-> 2) **EIGENVALUE CỦA A^2 THÌ LÀ BÌNH PHƯƠNG CỦA
+> 2) **EIGENVALUE CỦA A² THÌ LÀ BÌNH PHƯƠNG CỦA
 > EIGENVALUE CỦA A**
 
 <br>
@@ -488,8 +488,8 @@
 <p align="center"><kbd><img src="assets/4lwyn0w9rz.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Nên gs nhấn mạnh là, diagonalization hay cái vụ A^k -> 0
-> khi k -> infi nếu mọi λ đều nhỏ hơn 1, **CHỈ ĐÚNG NẾU
+> Nên gs nhấn mạnh là, diagonalization hay cái vụ A^k → 0
+> khi k → infi nếu mọi λ đều nhỏ hơn 1, **CHỈ ĐÚNG NẾU
 > MARIX A CÓ N INDEPENDENT EIGENVECTORS.**
 >
 >
@@ -627,7 +627,7 @@
 >
 >
 >
-> = c1λ1^2x1 + c2λ2^2x2 + .....
+> = c1λ1²x1 + c2λ2²x2 + .....
 >
 >
 >
@@ -927,7 +927,7 @@
 >
 >
 > Như vậy để tìm u_k thì việc tìm S, và eigenvalues của A là
-> xong, còn c thì dựa vào giá trị u_0: u_0 = Sc -> tính được c.
+> xong, còn c thì dựa vào giá trị u_0: u_0 = Sc → tính được c.
 
 <br>
 
