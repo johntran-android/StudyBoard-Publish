@@ -696,7 +696,7 @@
 >
 >
 >
-> [orthogonal matrix U]*[diagonal matrix SIGMA]*[diagonal matrix Vᵀ]
+> [orthogonal matrix U]*[diagonal matrix Σ]*[diagonal matrix Vᵀ]
 >
 >
 >
@@ -775,13 +775,15 @@
 
 <a id="node-umse8ys"></a>
 
+###### Singular Value Decomposition Derivation
+
 <p align="center"><kbd><img src="assets/fskapc5miw8.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > tới đây là khúc đã xem qua, khi gs giải thích lại rằng nếu
 > ta tìm U bằng cách tiếp cận tương tự đó là thông qua
 > dùng eigenvectors của AAᵀ thì ta có thể không đúng về
-> dấu. Có nghĩa là ta phải tìm U từ AV = USIGMA, để có
+> dấu. Có nghĩa là ta phải tìm U từ AV = UΣ, để có
 > dấu phù hợp. Chứ nếu tìm U riêng thì ta vẫn tìm ra đúng
 > vector U nhưng sai dấu. Bởi lẽ một eigenvector chỉ nói
 > về phương, còn chiều nào cũng là eigenvector thôi,
