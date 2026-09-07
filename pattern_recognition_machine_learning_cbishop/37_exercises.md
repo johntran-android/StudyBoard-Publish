@@ -24,55 +24,55 @@
 >
 >
 >
-> Trong bài nói về projection matrix thầy Strang giúp ta lập luận ra cái công thức của matrix projection onto C(A) rất dễ như sau, ta có matrix A size m × n. Thì C(A), column space, theo định nghĩa chính là subspace tạo bởi mọi linear combination của các column vector của matrix A. Thế thì, xét một vector b ∈ R^m, khi chiếu nó lên C(A), được p, thì dĩ nhiên p ∈ C(A), nên theo định nghĩa của C(A), p phải là linear combination các vector column của A vói hệ số tổ hợp nào đó, ta gọi là x, tức p = Ax. Và phần dư, e = b - p, theo góc nhìn hình học sẽ phải vuông góc với C(A) (như việc ta chiếu 1 điểm trong R^3 lên mặt phẳng, thì vector b tách thành 2 phần, 1 nằm trong mặt phẳng, một vuông góc với mặt phẳng vậy). Như vậy, e ⊥ C(A) mà theo định lý cơ bản của của đại số tuyến tính, nói rằng ta có hai cặp subspace bù nhau và vuông góc đó là column space và left nullspace, rowspace và nullspace. Vậy thì theo đó, khi e ⊥ C(A) suy ra e ∈ left nullspace N(AT). Điều này đồng nghĩa phương trình e là nghiệm của ATx = 0, tức ATe = 0 (A transpose e = 0, trong cách ghi chú của mình, mình luôn dùng T là cho transpose cho gọn, khi nào cần dùng chữ T thì sẽ ghi rõ). Vậy ta có:
+> Trong bài nói về projection matrix thầy Strang giúp ta lập luận ra cái công thức của matrix projection onto C(A) rất dễ như sau, ta có matrix A size m × n. Thì C(A), column space, theo định nghĩa chính là subspace tạo bởi mọi linear combination của các column vector của matrix A. Thế thì, xét một vector b ∈ R^m, khi chiếu nó lên C(A), được p, thì dĩ nhiên p ∈ C(A), nên theo định nghĩa của C(A), p phải là linear combination các vector column của A vói hệ số tổ hợp nào đó, ta gọi là x, tức p = Ax. Và phần dư, e = b - p, theo góc nhìn hình học sẽ phải vuông góc với C(A) (như việc ta chiếu 1 điểm trong R³ lên mặt phẳng, thì vector b tách thành 2 phần, 1 nằm trong mặt phẳng, một vuông góc với mặt phẳng vậy). Như vậy, e ⊥ C(A) mà theo định lý cơ bản của của đại số tuyến tính, nói rằng ta có hai cặp subspace bù nhau và vuông góc đó là column space và left nullspace, rowspace và nullspace. Vậy thì theo đó, khi e ⊥ C(A) suy ra e ∈ left nullspace N(Aᵀ). Điều này đồng nghĩa phương trình e là nghiệm của Aᵀx = 0, tức Aᵀe = 0 (A transpose e = 0, trong cách ghi chú của mình, mình luôn dùng T là cho transpose cho gọn, khi nào cần dùng chữ T thì sẽ ghi rõ). Vậy ta có:
 >
 >
 >
-> ATe = 0 ⇔ AT(b - p) = 0 ⇔ ATb = ATp ⇔ ATb = ATAx đây chính là normal equation.
+> Aᵀe = 0 ⇔ Aᵀ(b - p) = 0 ⇔ Aᵀb = Aᵀp ⇔ Aᵀb = AᵀAx đây chính là normal equation.
 >
 >
 >
-> Tiếp, khi A full column rank, thì ATA sẽ full rank cũng là invertible khiến ta có thể nhân hai vế cho (ATA)inv, ta sẽ có: x = (ATA)inv ATb, và p = Ax = A(ATA)inv ATb, đặt P = A(ATA)inv AT, ta có p = Pb, đồng nghĩa, projection giúp chiếu b lên C(A) chính là P = A(ATA)inv AT
+> Tiếp, khi A full column rank, thì AᵀA sẽ full rank cũng là invertible khiến ta có thể nhân hai vế cho (AᵀA)⁻¹, ta sẽ có: x = (AᵀA)⁻¹ Aᵀb, và p = Ax = A(AᵀA)⁻¹ Aᵀb, đặt P = A(AᵀA)⁻¹ Aᵀ, ta có p = Pb, đồng nghĩa, projection giúp chiếu b lên C(A) chính là P = A(AᵀA)⁻¹ Aᵀ
 >
 >
 >
-> Vậy tới đây ta chỉ việc áp dụng kết quả này, để có matrix giúp chiếu v lên space spanned bởi columns của **Φ** (cái này chính là column space của **Φ** thôi, tức C(**Φ**)) sẽ là: **Φ**(**Φ**T**Φ**)inv **Φ**T.
+> Vậy tới đây ta chỉ việc áp dụng kết quả này, để có matrix giúp chiếu v lên space spanned bởi columns của **Φ** (cái này chính là column space của **Φ** thôi, tức C(**Φ**)) sẽ là: **Φ**(**Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ.
 >
 >
 >
-> Trong bài giảng đó, thấy thầy cũng check lại hai tính chất của projection matrix, là PP = P (chiểu b lên C(A) rồi thì chiếu lần nữa sẽ giữ nguyên, và PT = P) ta thử xem: 
+> Trong bài giảng đó, thấy thầy cũng check lại hai tính chất của projection matrix, là PP = P (chiểu b lên C(A) rồi thì chiếu lần nữa sẽ giữ nguyên, và Pᵀ = P) ta thử xem: 
 >
 >
 >
-> \[**Φ**(**Φ**T**Φ**)inv **Φ**T\] \[**Φ**(**Φ**T**Φ**)inv **Φ**T\] 
+> \[**Φ**(**Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ\] \[**Φ**(**Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ\] 
 >
 >
 >
-> = **Φ**(**Φ**T**Φ**)inv **Φ**T**Φ**(**Φ**T**Φ**)inv **Φ**T
+> = **Φ**(**Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ**Φ**(**Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ
 >
 >
 >
-> = **Φ I** (**Φ**T**Φ**)inv **Φ**T
+> = **Φ I** (**Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ
 >
 >
 >
-> = **Φ** (**Φ**T**Φ**)inv **Φ**T → đúng là PP = P
+> = **Φ** (**Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ → đúng là PP = P
 >
 >
 >
-> Và Xét \[**Φ**(**Φ**T**Φ**)inv **Φ**T\]T, dùng rule (AB)T = BT AT:
+> Và Xét \[**Φ**(**Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ\]ᵀ, dùng rule (AB)ᵀ = Bᵀ Aᵀ:
 >
 >
 >
-> = (**Φ**T)T \[**Φ**(**Φ**T**Φ**)inv\]T\]
+> = (**Φ**ᵀ)ᵀ \[**Φ**(**Φ**ᵀ**Φ**)⁻¹\]ᵀ\]
 >
 >
 >
-> = **Φ** \[(**Φ**T**Φ**)inv\]T **Φ**T\]
+> = **Φ** \[(**Φ**ᵀ**Φ**)⁻¹\]ᵀ **Φ**ᵀ\]
 >
 >
 >
-> = **Φ** \[(**Φ**T**Φ**)inv\] **Φ**T\] (do **Φ**T**Φ** đối xứng nên **(Φ**T**Φ**)inv cũng vậy.
+> = **Φ** \[(**Φ**ᵀ**Φ**)⁻¹\] **Φ**ᵀ\] (do **Φ**ᵀ**Φ** đối xứng nên **(Φ**ᵀ**Φ**)⁻¹ cũng vậy.
 >
 >
 >
@@ -82,15 +82,15 @@
 >
 >
 >
-> Và như vậy, công thức 3.15, tức MLE của **w**, **w**ML:\*\* = (**Φ**T**Φ**)inv **Φ**T**t** thì **Φw**ML sẽ là:
+> Và như vậy, công thức 3.15, tức MLE của 𝐰, 𝐰ML:\*\* = (**Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ𝐭 thì **Φw**ML sẽ là:
 >
 >
 >
-> **Φ**(**Φ**T**Φ**)inv **Φ**T**t**, chính là tương ứng với p = A(ATA)inv ATb hình chiếu của b lên C(A), thì cái này chính là hình chiếu của **t lên** C(**Φ**) chứ gì nữa.
+> **Φ**(**Φ**ᵀ**Φ**)⁻¹ **Φ**ᵀ𝐭, chính là tương ứng với p = A(AᵀA)⁻¹ Aᵀb hình chiếu của b lên C(A), thì cái này chính là hình chiếu của **t lên** C(**Φ**) chứ gì nữa.
 >
 >
 >
-> Như vậy **w**ML sẽ là có vai trò như **x** ở trên đó là BỘ HỆ SỐ TỔ HỢP GIÚP LINEARLY COMBINE CÁC COLUMN VECTOR CỦA **Φ** ĐỂ ĐƯỢC PROJECTION CỦA **t** LÊN C(**Φ**).
+> Như vậy 𝐰ML sẽ là có vai trò như 𝐱 ở trên đó là BỘ HỆ SỐ TỔ HỢP GIÚP LINEARLY COMBINE CÁC COLUMN VECTOR CỦA **Φ** ĐỂ ĐƯỢC PROJECTION CỦA 𝐭 LÊN C(**Φ**).
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
@@ -112,11 +112,11 @@
 >
 >
 >
-> (3.29): minimize (over **w**) (1/2 E_D(**w**) + (λ/2) Σj |wj|^q
+> (3.29): minimize (over 𝐰) (1/2 E_D(𝐰) + (λ/2) Σj |wj|^q
 >
 >
 >
-> minimize (3.12) E_D(**w**) = Σi {(ti-**w**TΦ(**x**i))^2/2} với ràng buộc (3/30) Σj |wj|^q ≤ η
+> minimize (3.12) E_D(𝐰) = Σi {(ti-𝐰ᵀΦ(𝐱i))²/2} với ràng buộc (3/30) Σj |wj|^q ≤ η
 >
 >
 >
@@ -136,7 +136,7 @@
 >
 >
 >
-> Đầu tiên xét tại x\*, định lý Taylor cho phép ta rằng, khi x đủ gần x\*, thì hàm f(x) ≈ f(x\*) + ∇f(x\*)T(x-x\*), ý nghĩa là, trong phạm vi lân cận x\*, hàm f (có thể là hàm phi tuyến) hành xử gần giống hàm tuyến tính f^(x) = f(x\*) + ∇f(x\*)T(x-x\*).
+> Đầu tiên xét tại x\*, định lý Taylor cho phép ta rằng, khi x đủ gần x\*, thì hàm f(x) ≈ f(x\*) + ∇f(x\*)ᵀ(x-x\*), ý nghĩa là, trong phạm vi lân cận x\*, hàm f (có thể là hàm phi tuyến) hành xử gần giống hàm tuyến tính f^(x) = f(x\*) + ∇f(x\*)ᵀ(x-x\*).
 >
 >
 >
@@ -156,7 +156,7 @@
 >
 >
 >
-> Còn để s là feasible direction, ta sẽ cần c1(x + s) vẫn ≥ 0, với s nhỏ, c1(x + s) cũng hành xử gần giống hàm tuyến tính, nên điều kiện trở thành c1(x) + ∇c1(x)Ts ≥ 0 (2)
+> Còn để s là feasible direction, ta sẽ cần c1(x + s) vẫn ≥ 0, với s nhỏ, c1(x + s) cũng hành xử gần giống hàm tuyến tính, nên điều kiện trở thành c1(x) + ∇c1(x)ᵀs ≥ 0 (2)
 >
 >
 >
@@ -164,7 +164,7 @@
 >
 >
 >
-> Case i) Gỉa sử tại x\*, constraint đang inactive: c1(x\*) &gt; 0, khi đó, dễ thấy là để thỏa tồn tại feasible direcition s: c1(x\*) + ∇c1(x\*)Ts ≥ 0, thì thật ra s có thể là vector có hướng tùy ý, miễn là giả sử nếu hướng của nó khiến ∇c1(x)Ts âm, thì chỉ cần khống chế độ lớn của s để giá trị âm ko quá nhỏ, giúp c1(x\*) dương vẫn đủ gánh. Như vậy có thể nói trong trường hợp này luôn tồn tại s giúp x\* + s vẫn feasible. Vậy câu hỏi để tìm candidate là, điểm x\* này nên như thế nào thì không thể đi theo s bất kì giúp giảm f^? Câu trả lời đó là: x\* là điểm mà gradient hàm f tại đó đang = 0. Vì khi đó f^(x\* + s) = f(x\*) + ∇f(x\*)Ts = f(x\*) bất kể s có là gì.
+> Case i) Gỉa sử tại x\*, constraint đang inactive: c1(x\*) &gt; 0, khi đó, dễ thấy là để thỏa tồn tại feasible direcition s: c1(x\*) + ∇c1(x\*)ᵀs ≥ 0, thì thật ra s có thể là vector có hướng tùy ý, miễn là giả sử nếu hướng của nó khiến ∇c1(x)ᵀs âm, thì chỉ cần khống chế độ lớn của s để giá trị âm ko quá nhỏ, giúp c1(x\*) dương vẫn đủ gánh. Như vậy có thể nói trong trường hợp này luôn tồn tại s giúp x\* + s vẫn feasible. Vậy câu hỏi để tìm candidate là, điểm x\* này nên như thế nào thì không thể đi theo s bất kì giúp giảm f^? Câu trả lời đó là: x\* là điểm mà gradient hàm f tại đó đang = 0. Vì khi đó f^(x\* + s) = f(x\*) + ∇f(x\*)ᵀs = f(x\*) bất kể s có là gì.
 >
 >
 >
@@ -174,7 +174,7 @@
 >
 >
 >
-> Case ii) Tại x\*, constraint đang active: c1(x\*) = 0. Lúc này, điều kiện c1(x\*) + ∇c1(x\*)Ts ≥ 0 ⇔ ∇c1(x\*)Ts ≥ 0, tức s hợp góc nhọn hoặc tù với ∇c1(x\*). Trong khi đó, để thỏa việc giảm f^, thì ∇f(x\*)Ts phải &lt; 0 tức s hợp với ∇f(x\*) góc tù. Như vậy, cách duy nhất để tại x\* không thể tồn tại s thỏa hai cái này chính là ∇f(x\*) trùng hướng ∇c1(x\*). vì khi đó ko thể có s vừa hợp góc tù | nhọn với vector ∇f(x\*) mà lại vừa hợp góc tù với ∇f(x\*) được. Và điều kiện này thể hiện theo toán học là:
+> Case ii) Tại x\*, constraint đang active: c1(x\*) = 0. Lúc này, điều kiện c1(x\*) + ∇c1(x\*)ᵀs ≥ 0 ⇔ ∇c1(x\*)ᵀs ≥ 0, tức s hợp góc nhọn hoặc tù với ∇c1(x\*). Trong khi đó, để thỏa việc giảm f^, thì ∇f(x\*)ᵀs phải &lt; 0 tức s hợp với ∇f(x\*) góc tù. Như vậy, cách duy nhất để tại x\* không thể tồn tại s thỏa hai cái này chính là ∇f(x\*) trùng hướng ∇c1(x\*). vì khi đó ko thể có s vừa hợp góc tù | nhọn với vector ∇f(x\*) mà lại vừa hợp góc tù với ∇f(x\*) được. Và điều kiện này thể hiện theo toán học là:
 >
 >
 >
@@ -258,23 +258,23 @@
 >
 >
 >
-> Xét bài toán 1: minimize (over **w**) (1/2 E_D(**w**) + (λ/2) Σj |wj|^q, đây là bài toán unconstraint nên điều kiện cần tối ưu bậc nhất đơn giản là: gradient của objective = 0:
+> Xét bài toán 1: minimize (over 𝐰) (1/2 E_D(𝐰) + (λ/2) Σj |wj|^q, đây là bài toán unconstraint nên điều kiện cần tối ưu bậc nhất đơn giản là: gradient của objective = 0:
 >
 >
 >
-> ∇\_**w** \[(1/2 E_D(**w**) + (λ/2) Σj |wj|^q\] = 0
+> ∇\_𝐰 \[(1/2 E_D(𝐰) + (λ/2) Σj |wj|^q\] = 0
 >
 >
 >
-> ⇔ ∇\_**w** (1/2 E_D(**w**)\] + ∇\_**w** \[(λ/2) Σj |wj|^q\] = 0
+> ⇔ ∇\_𝐰 (1/2 E_D(𝐰)\] + ∇\_𝐰 \[(λ/2) Σj |wj|^q\] = 0
 >
 >
 >
-> ⇔ 1/2 ∇\_**w** \[E_D(**w**)\] + (λ/2) ∇\_**w** \[ Σj |wj|^q\] = 0 (a)
+> ⇔ 1/2 ∇\_𝐰 \[E_D(𝐰)\] + (λ/2) ∇\_𝐰 \[ Σj |wj|^q\] = 0 (a)
 >
 >
 >
-> Còn bài toàn 2: minimize (3.12) E_D(**w**) = Σi {(ti-**w**TΦ(**x**i))^2/2} với ràng buộc (3/30) Σj |wj|^q ≤ η
+> Còn bài toàn 2: minimize (3.12) E_D(𝐰) = Σi {(ti-𝐰ᵀΦ(𝐱i))²/2} với ràng buộc (3/30) Σj |wj|^q ≤ η
 >
 >
 >
@@ -286,7 +286,7 @@
 >
 >
 >
-> Lagrangian: ℒ(**w**, λ) = E_D(**w**) - λ\[η - Σj |wj|^q\]
+> Lagrangian: ℒ(𝐰, λ) = E_D(𝐰) - λ\[η - Σj |wj|^q\]
 >
 >
 >
@@ -294,27 +294,27 @@
 >
 >
 >
-> ∇\_**w** ℒ(**w**, λ) = 0 ⇔ ∇\_**w** \[E_D(**w**) - λ\[η - Σj |wj|^q\]\] = 0
+> ∇\_𝐰 ℒ(𝐰, λ) = 0 ⇔ ∇\_𝐰 \[E_D(𝐰) - λ\[η - Σj |wj|^q\]\] = 0
 >
 >
 >
-> ⇔ ∇\_**w** E_D(**w**) - ∇\_**w** λ\[η - Σj |wj|^q\]\] = 0
+> ⇔ ∇\_𝐰 E_D(𝐰) - ∇\_𝐰 λ\[η - Σj |wj|^q\]\] = 0
 >
 >
 >
-> ⇔ ∇\_**w** E_D(**w**) - λ ∇\_**w** \[η - Σj |wj|^q\]\] = 0
+> ⇔ ∇\_𝐰 E_D(𝐰) - λ ∇\_𝐰 \[η - Σj |wj|^q\]\] = 0
 >
 >
 >
-> ⇔ ∇\_**w** E_D(**w**) - λ ∇\_**w** \[η\] + λ ∇\_**w** \[Σj |wj|^q\] = 0
+> ⇔ ∇\_𝐰 E_D(𝐰) - λ ∇\_𝐰 \[η\] + λ ∇\_𝐰 \[Σj |wj|^q\] = 0
 >
 >
 >
-> ⇔ ∇\_**w** E_D(**w**) - 0 + λ ∇\_**w** \[Σj |wj|^q\] = 0 (đạo hàm theo w của constant η dĩ nhiên = 0)
+> ⇔ ∇\_𝐰 E_D(𝐰) - 0 + λ ∇\_𝐰 \[Σj |wj|^q\] = 0 (đạo hàm theo w của constant η dĩ nhiên = 0)
 >
 >
 >
-> ⇔ (1/2) ∇\_**w** E_D(**w**) + (1/2) λ ∇\_**w** \[Σj |wj|^q\] = 0 (b) (nhân thêm 1/2)
+> ⇔ (1/2) ∇\_𝐰 E_D(𝐰) + (1/2) λ ∇\_𝐰 \[Σj |wj|^q\] = 0 (b) (nhân thêm 1/2)
 >
 >
 >
@@ -326,7 +326,7 @@
 >
 >
 >
-> E_D(**w**) là hàm lồi vì là hàm bậc hai theo w.
+> E_D(𝐰) là hàm lồi vì là hàm bậc hai theo w.
 >
 >
 >
@@ -374,11 +374,11 @@
 >
 >
 >
-> Nếu ta tăng hệ số regularization λ, điều này sẽ khiến giảm E_w(**w**) = Σj |w\*j|^q, và vì η = E_w(**w**) nên η sẽ giảm.
+> Nếu ta tăng hệ số regularization λ, điều này sẽ khiến giảm E_w(𝐰) = Σj |w\*j|^q, và vì η = E_w(𝐰) nên η sẽ giảm.
 >
 >
 >
-> Còn nếu ta cho hệ số regularization = 0, tức là không penalized khi **w** lớn, thì E_w(**w**) có thể sẽ lớn, khiến η với yeu cầu ≥ E_W(**w**) nên sẽ lớn lên.
+> Còn nếu ta cho hệ số regularization = 0, tức là không penalized khi 𝐰 lớn, thì E_w(𝐰) có thể sẽ lớn, khiến η với yeu cầu ≥ E_W(𝐰) nên sẽ lớn lên.
 >
 >
 >
@@ -404,11 +404,11 @@
 >
 >
 >
-> Ở đây gs xét linear model y(**x**, **w**) = w0 + Σi=0:D wixi
+> Ở đây gs xét linear model y(𝐱, 𝐰) = w0 + Σi=0:D wixi
 >
 >
 >
-> với SSE function ED(**w**) = (1/2) Σn=1:N {y(**x**n, **w**) - tn}^2
+> với SSE function ED(𝐰) = (1/2) Σn=1:N {y(𝐱n, 𝐰) - tn}²
 >
 >
 >
@@ -424,15 +424,15 @@
 >
 >
 >
-> Trước khi làm nên làm rõ vài ý: Khi ông viết 3.105, ông ghi là y(x, **w**) = w0 + Σi wi xi. → chỗ gây lú: ông viết nét đậm cho **w**, ám chỉ nó là vector, nên dễ hiểu là wi là phần tử thứ i của vector **w**. Còn x, nó cũng là vector cơ mà (thể hiện qua Σi=1:D wi xi), sao ổng lại ko viết nét đậm, nên mình tự động viết nét đậm cho thấy **x** là vector.
+> Trước khi làm nên làm rõ vài ý: Khi ông viết 3.105, ông ghi là y(x, 𝐰) = w0 + Σi wi xi. → chỗ gây lú: ông viết nét đậm cho 𝐰, ám chỉ nó là vector, nên dễ hiểu là wi là phần tử thứ i của vector 𝐰. Còn x, nó cũng là vector cơ mà (thể hiện qua Σi=1:D wi xi), sao ổng lại ko viết nét đậm, nên mình tự động viết nét đậm cho thấy 𝐱 là vector.
 >
 >
 >
-> Như vậy bộ input sẽ là **x**1,**x**2,..**x**n...**x**N. và vector **x**n có các phần tử là xn1 xn2,...xnD.
+> Như vậy bộ input sẽ là 𝐱1,𝐱2,..𝐱n...𝐱N. và vector 𝐱n có các phần tử là xn1 xn2,...xnD.
 >
 >
 >
-> Tương tự, nhiễu (noise) εi cộng vào mỗi xi (của vector **x**) sẽ thì thì hợp lại với mỗi vector **x**1,**x**2,..**x**n...**x**N, nó sẽ được cộng một VECTOR **ε**1, **ε**2,...**ε**N. và vector **ε**n có các phần tử là εn1,...εnD.
+> Tương tự, nhiễu (noise) εi cộng vào mỗi xi (của vector 𝐱) sẽ thì thì hợp lại với mỗi vector 𝐱1,𝐱2,..𝐱n...𝐱N, nó sẽ được cộng một VECTOR **ε**1, **ε**2,...**ε**N. và vector **ε**n có các phần tử là εn1,...εnD.
 >
 >
 >
@@ -440,11 +440,11 @@
 >
 >
 >
-> Trước khi có noise: input là **x**1 = (x11,x12,..x1D), **x**2 = (x21, x22,...x2D) ...
+> Trước khi có noise: input là 𝐱1 = (x11,x12,..x1D), 𝐱2 = (x21, x22,...x2D) ...
 >
 >
 >
-> Sau khi cộng thêm noise: input là **x**1 = (x11 + ε11,x12 + ε12,..x1D + ε1D), ...
+> Sau khi cộng thêm noise: input là 𝐱1 = (x11 + ε11,x12 + ε12,..x1D + ε1D), ...
 >
 >
 >
@@ -452,9 +452,9 @@
 >
 >
 >
-> **x**n vector input thứ n (n =1,...N), và xni là phần tử thứ i của nó 
+> 𝐱n vector input thứ n (n =1,...N), và xni là phần tử thứ i của nó 
 >
-> tương tự và vector noise **ε**n là vector noise add vào input **x**n, εni là phần tử thứ i của nó
+> tương tự và vector noise **ε**n là vector noise add vào input 𝐱n, εni là phần tử thứ i của nó
 >
 >
 >
@@ -470,7 +470,7 @@
 >
 >
 >
-> Cụ thể hơn: Thay **x**n bởi **x**n + **ε**n, lúc này E_D(**w**) = (1/2) Σn=1:N \[y(**x**n + **ε**n, **w**) - tn\]^2 **TRỞ THÀNH RANDOM VARIABLE.**
+> Cụ thể hơn: Thay 𝐱n bởi 𝐱n + **ε**n, lúc này E_D(𝐰) = (1/2) Σn=1:N \[y(𝐱n + **ε**n, 𝐰) - tn\]² **TRỞ THÀNH RANDOM VARIABLE.**
 >
 >
 >
@@ -478,7 +478,7 @@
 >
 >
 >
-> Ta có thể thay kí hiệu là E_D(**w**, **ε**) để thể hiện giờ nó phụ thuộc **ε** = (ε1,...εN) nữa
+> Ta có thể thay kí hiệu là E_D(𝐰, **ε**) để thể hiện giờ nó phụ thuộc **ε** = (ε1,...εN) nữa
 >
 >
 >
@@ -486,15 +486,15 @@
 >
 >
 >
-> E\[E_D(**w**, **ε**)\] = E\[(1/2) Σn=1:N \[y(**x**n + **ε**n, **w**) - tn\]^2\]
+> E\[E_D(𝐰, **ε**)\] = E\[(1/2) Σn=1:N \[y(𝐱n + **ε**n, 𝐰) - tn\]²\]
 >
 >
 >
-> = (1/2) Σn=1:N E\[\[y(**x**n + **ε**n, **w**) - tn\]^2\]
+> = (1/2) Σn=1:N E\[\[y(𝐱n + **ε**n, 𝐰) - tn\]²\]
 >
 >
 >
-> = (1/2) Σn=1:N E\[y(**x**n + **ε**n, **w**)^2 - 2y(xn + εn, **w**)tn + tn^2\]
+> = (1/2) Σn=1:N E\[y(𝐱n + **ε**n, 𝐰)² - 2y(xn + εn, 𝐰)tn + tn²\]
 >
 >
 >
@@ -502,23 +502,19 @@
 >
 >
 >
-> = (1/2) Σn=1:N {E\[y(**x**n + **ε**n, **w**)^2\] - E\[2y(xn + **ε**n, **w**)tn\] + E\[tn^2\]}
+> = (1/2) Σn=1:N {E\[y(𝐱n + **ε**n, 𝐰)²\] - E\[2y(xn + **ε**n, 𝐰)tn\] + E\[tn²\]}
 >
 >
 >
-> = (1/2) Σn=1:N {E\[y(**x**n + **ε**n, **w**)^2\] - 2E\[y(xn + **ε**n, **w**)\]tn + tn^2}
+> = (1/2) Σn=1:N {E\[y(𝐱n + **ε**n, 𝐰)²\] - 2E\[y(xn + **ε**n, 𝐰)\]tn + tn²}
 >
 >
 >
-> Với y(**x**, **w**) = w0 + Σi=1:D xi wi
+> Với y(𝐱, 𝐰) = w0 + Σi=1:D xi wi
 >
 >
 >
-> ⇒ y(**x**n + **ε**n, **w**) = w0 + Σi=1:D (xni + εni) wi)
->
->
->
-> = w0 + Σi=1:D (xni wi) + Σi=1:D (εni wi)
+> ⇒ y(𝐱n + **ε**n, 𝐰) = w0 + Σi=1:D (xni + εni) wi)
 >
 >
 >
@@ -526,7 +522,11 @@
 >
 >
 >
-> ⇒ E\[y(**x**n + **ε**n, w)\] = E\[w0 + Σi=1:D (xni wi) + Σi=1:D (εni wi)\]
+> = w0 + Σi=1:D (xni wi) + Σi=1:D (εni wi)
+>
+>
+>
+> ⇒ E\[y(𝐱n + **ε**n, w)\] = E\[w0 + Σi=1:D (xni wi) + Σi=1:D (εni wi)\]
 >
 >
 >
@@ -554,7 +554,7 @@
 >
 >
 >
-> = y(**w**, **x**n)
+> = y(𝐰, 𝐱n)
 >
 >
 >
@@ -562,47 +562,47 @@
 >
 >
 >
-> \[y(**x**n + **ε**n, **w**)\]^2 = \[w0 + Σi=1:D (xni + εni) wi\]^2
+> \[y(𝐱n + **ε**n, 𝐰)\]² = \[w0 + Σi=1:D (xni + εni) wi\]²
 >
 >
 >
-> = \[w0 + Σi=1:D (xni wi) + Σi=1:D (εni wi)\]^2
+> = \[w0 + Σi=1:D (xni wi) + Σi=1:D (εni wi)\]²
 >
 >
 >
-> = \[y(**w**, **x**n) + Σi=1:D (εni wi)\]^2
+> = \[y(𝐰, 𝐱n) + Σi=1:D (εni wi)\]²
 >
 >
 >
-> = y(**w**, **x**n)^2 + 2 y(**w**, **x**n) Σi=1:D (εni wi) + \[Σi=1:D (εni wi)\]^2
+> = y(𝐰, 𝐱n)² + 2 y(𝐰, 𝐱n) Σi=1:D (εni wi) + \[Σi=1:D (εni wi)\]²
 >
 >
 >
-> ⇒ E{\[y(**x**n + **ε**n, **w**)\]^2}
+> ⇒ E{\[y(𝐱n + **ε**n, 𝐰)\]²}
 >
 >
 >
-> = E{ y(**w**, **x**n)^2 + 2 y(**w**, **x**n) Σi=1:D (εni wi) + \[Σi=1:D (εni wi)\]^2 }
+> = E{ y(𝐰, 𝐱n)² + 2 y(𝐰, 𝐱n) Σi=1:D (εni wi) + \[Σi=1:D (εni wi)\]² }
 >
 >
 >
-> = E{ y(**w**, **x**n)^2 } + 2 y(**w**, **x**n) E{ Σi=1:D (εni wi) } + E{ \[Σi=1:D (εni wi)\]^2 }
+> = E{ y(𝐰, 𝐱n)² } + 2 y(𝐰, 𝐱n) E{ Σi=1:D (εni wi) } + E{ \[Σi=1:D (εni wi)\]² }
 >
 >
 >
-> = y(**w**, **x**n)^2 + 2 y(**w**, **x**n) { Σi=1:D \[E(εni) wi\] } + E{ \[Σi=1:D (εni wi)\]^2 }
+> = y(𝐰, 𝐱n)² + 2 y(𝐰, 𝐱n) { Σi=1:D \[E(εni) wi\] } + E{ \[Σi=1:D (εni wi)\]² }
 >
 >
 >
-> = y(**w**, **x**n)^2 + 2 y(**w**, **x**n) { Σi=1:D \[0 × wi\] } + E{ \[Σi=1:D (εni wi)\]^2 }
+> = y(𝐰, 𝐱n)² + 2 y(𝐰, 𝐱n) { Σi=1:D \[0 × wi\] } + E{ \[Σi=1:D (εni wi)\]² }
 >
 >
 >
-> = y(**w**, **x**n)^2 + 0 + E{ \[Σi=1:D (εni wi)\]^2 }
+> = y(𝐰, 𝐱n)² + 0 + E{ \[Σi=1:D (εni wi)\]² }
 >
 >
 >
-> = y(**w**, **x**n)^2 + E{ \[Σi=1:D (εni wi)\]^2 }
+> = y(𝐰, 𝐱n)² + E{ \[Σi=1:D (εni wi)\]² }
 >
 >
 >
@@ -614,33 +614,33 @@
 >
 >
 >
-> E\[E_D(**w**, **ε**)\] = (1/2) Σn=1:N {E\[y(**x**n + **ε**n, **w**)^2\] - 2E\[y(**x**n + **ε**n, **w**)\]tn + tn^2}
+> E\[E_D(𝐰, **ε**)\] = (1/2) Σn=1:N {E\[y(𝐱n + **ε**n, 𝐰)²\] - 2E\[y(𝐱n + **ε**n, 𝐰)\]tn + tn²}
 >
 >
 >
-> = (1/2) Σn=1:N { y(**w**, **x**n) + E{ \[Σi=1:D (εni wi)\]^2 } - 2 y(**w**, **xn**) tn + tn^2}
+> = (1/2) Σn=1:N { y(𝐰, 𝐱n) + E{ \[Σi=1:D (εni wi)\]² } - 2 y(𝐰, **xn**) tn + tn²}
 >
 >
 >
-> = (1/2) Σn=1:N { y(**w**, **x**n) - 2 y(**w**, **xn**) tn + tn^2 + E{ \[Σi=1:D (εni wi)\]^2 } }
+> = (1/2) Σn=1:N { y(𝐰, 𝐱n) - 2 y(𝐰, **xn**) tn + tn² + E{ \[Σi=1:D (εni wi)\]² } }
 >
 >
 >
-> = (1/2) Σn=1:N { \[y(**w**, **x**n) - tn\]^2 + E{ \[Σi=1:D (εni wi)\]^2 } }
+> = (1/2) Σn=1:N { \[y(𝐰, 𝐱n) - tn\]² + E{ \[Σi=1:D (εni wi)\]² } }
 >
 >
 >
-> = (1/2) Σn=1:N { \[y(**w**, **x**n) - tn\]^2 } + (1/2) Σn=1:N E{ \[Σi=1:D (εni wi)\]^2 } }
+> = (1/2) Σn=1:N { \[y(𝐰, 𝐱n) - tn\]² } + (1/2) Σn=1:N E{ \[Σi=1:D (εni wi)\]² } }
 >
 >
 >
-> = E_D(**w**) + (1/2) Σn=1:N E{ \[Σi=1:D (εni wi)\]^2 } }
+> = E_D(𝐰) + (1/2) Σn=1:N E{ \[Σi=1:D (εni wi)\]² } }
 >
 > Như vậy tới đây ta có:
 >
 >
 >
-> E\[E_D(**w**, **ε**)\] = E_D(**w**) + (1/2) Σn=1:N E{ \[Σi=1:D (εni wi)\]^2 } }
+> E\[E_D(𝐰, **ε**)\] = E_D(𝐰) + (1/2) Σn=1:N E{ \[Σi=1:D (εni wi)\]² } }
 >
 >
 >
@@ -652,7 +652,7 @@
 >
 >
 >
-> E{ \[Σi=1:D (εni wi)\]^2 }
+> E{ \[Σi=1:D (εni wi)\]² }
 >
 >
 >
@@ -660,7 +660,7 @@
 >
 >
 >
-> (Σi (εni wi))^2
+> (Σi (εni wi))²
 >
 >
 >
@@ -672,11 +672,11 @@
 >
 >
 >
-> = Σi (εni wi)^2 + 2 Σi≠j (εni wi)(εnj wj)
+> = Σi (εni wi)² + 2 Σi≠j (εni wi)(εnj wj)
 >
 >
 >
-> = Σi εni εni (wi)^2 + 2 Σi≠j (εni εnj wiwj)
+> = Σi εni εni (wi)² + 2 Σi≠j (εni εnj wiwj)
 >
 >
 >
@@ -684,19 +684,19 @@
 >
 >
 >
-> E { Σi εni εni (wi)^2 + 2 Σi≠j (εni εnj wiwj) }
+> E { Σi εni εni (wi)² + 2 Σi≠j (εni εnj wiwj) }
 >
 >
 >
-> = E\[Σi εni εni (wi)^2\] + E\[2 Σi≠j (εni εnj wiwj)\]
+> = E\[Σi εni εni (wi)²\] + E\[2 Σi≠j (εni εnj wiwj)\]
 >
 >
 >
-> = Σi (wi)^2 E\[εni εni\] + 2Σi≠j (wiwj) E\[εni εnj\]
+> = Σi (wi)² E\[εni εni\] + 2Σi≠j (wiwj) E\[εni εnj\]
 >
 >
 >
-> = Σi (wi)^2 E\[εni εni\] + 2Σi≠j (wiwj) E\[εni εnj\]
+> = Σi (wi)² E\[εni εni\] + 2Σi≠j (wiwj) E\[εni εnj\]
 >
 >
 >
@@ -704,19 +704,19 @@
 >
 >
 >
-> E\[εi εj\] = δij σ^2 và hàm δij = 1 khi i = j, và = 0 khi i ≠ j ta có
+> E\[εi εj\] = δij σ² và hàm δij = 1 khi i = j, và = 0 khi i ≠ j ta có
 >
 >
 >
-> = Σi (wi)^2 × (1 × σ^2) + 2Σi≠j (wiwj) × (0 × σ^2)
+> = Σi (wi)² × (1 × σ²) + 2Σi≠j (wiwj) × (0 × σ²)
 >
 >
 >
-> = Σi (wi)^2 × σ^2
+> = Σi (wi)² × σ²
 >
 >
 >
-> = σ^2 Σi (wi)^2
+> = σ² Σi (wi)²
 >
 >
 >
@@ -724,19 +724,19 @@
 >
 >
 >
-> Thay vào E\[E_D(**w**, **ε**)\] = E_D(**w**) + (1/2) Σn=1:N E{ \[Σi=1:D (εni wi)\]^2 } }:
+> Thay vào E\[E_D(𝐰, **ε**)\] = E_D(𝐰) + (1/2) Σn=1:N E{ \[Σi=1:D (εni wi)\]² } }:
 >
 >
 >
-> = E_D(**w**) + (1/2) Σn=1:N \[σ^2 Σi (wi)^2\]
+> = E_D(𝐰) + (1/2) Σn=1:N \[σ² Σi (wi)²\]
 >
 >
 >
-> = E_D(**w**) + (N/2) σ^2 Σi (wi)^2
+> = E_D(𝐰) + (N/2) σ² Σi (wi)²
 >
 >
 >
-> = E_D(**w**) + (Nσ^2/2) Σi (wi)^2
+> = E_D(𝐰) + (Nσ²/2) Σi (wi)²
 >
 >
 >
@@ -748,7 +748,7 @@
 >
 >
 >
-> E\[E_D(**w**, **ε**)\] = E_D(**w**) + (Nσ^2/2) Σi (wi)^2
+> E\[E_D(𝐰, **ε**)\] = E_D(𝐰) + (Nσ²/2) Σi (wi)²
 >
 >
 >
@@ -756,15 +756,15 @@
 >
 >
 >
-> Thì có nghĩa là, nếu ta đi minimize E\[E_D(**w**, **ε**)\] (đi tìm w để cái này có giá trị nhỏ nhất) thì tức ta sẽ thấy đây tương đương với bài toán minimize hàm error sau đây,
+> Thì có nghĩa là, nếu ta đi minimize E\[E_D(𝐰, **ε**)\] (đi tìm w để cái này có giá trị nhỏ nhất) thì tức ta sẽ thấy đây tương đương với bài toán minimize hàm error sau đây,
 >
 >
 >
-> Error function = E_D(**w**) + λ Σi (wi)^2 , λ = Nσ^2/2
+> Error function = E_D(𝐰) + λ Σi (wi)² , λ = Nσ²/2
 >
 >
 >
-> thì cái này chính là bài toán minimize sum square error (là cái E_D(w) đó) có thẹm L2 regularization (là cái Σi (wi)^2, chính là ||**w**||^2) với regularization coefficient là Nσ^2/2.
+> thì cái này chính là bài toán minimize sum square error (là cái E_D(w) đó) có thẹm L2 regularization (là cái Σi (wi)², chính là ||𝐰||²) với regularization coefficient là Nσ²/2.
 >
 >
 >
@@ -772,15 +772,15 @@
 >
 >
 >
-> Ta có hàm SSE E_D(**w**) = (1/2) Σi=1:N {y(**xi**, **w**) - ti}^2
+> Ta có hàm SSE E_D(𝐰) = (1/2) Σi=1:N {y(**xi**, 𝐰) - ti}²
 >
 >
 >
-> Xong ta thay **xi** = **x**i + **ε**i vì đề nói ta add noise εi vào
+> Xong ta thay **xi** = 𝐱i + **ε**i vì đề nói ta add noise εi vào
 >
 >
 >
-> Lúc này cái E_D(**w**), trở thành random variable: E_D(**w, ε**)
+> Lúc này cái E_D(𝐰), trở thành random variable: E_D(**w, ε**)
 >
 >
 >
@@ -796,7 +796,7 @@
 >
 >
 >
-> Kết quả khi ra được tới E\[εni εni\] và E\[εni εnj\] thì dùng cái đề bài cho: E\[εi εj\] = δij σ^2. Và δij là kí hiệu của hàm Kronecker, = 1 khi i = j, và = 0 khi i khác j gs Bishop không nói.
+> Kết quả khi ra được tới E\[εni εni\] và E\[εni εnj\] thì dùng cái đề bài cho: E\[εi εj\] = δij σ². Và δij là kí hiệu của hàm Kronecker, = 1 khi i = j, và = 0 khi i khác j gs Bishop không nói.
 >
 >
 >
@@ -812,15 +812,15 @@
 >
 >
 >
-> Mình hiểu thế này: Bài toán ban đầu là ta có bộ data set (x1, t1), (x2,t2) ...(xN, tN), hay đặt các vector x1,..xN vào vector **x**, và đặt t1,...tN vào vector **t**. Thì ta thể hiện observed data bởi (**x**, **t**).
+> Mình hiểu thế này: Bài toán ban đầu là ta có bộ data set (x1, t1), (x2,t2) ...(xN, tN), hay đặt các vector x1,..xN vào vector 𝐱, và đặt t1,...tN vào vector 𝐭. Thì ta thể hiện observed data bởi (𝐱, 𝐭).
 >
 >
 >
-> Và với việc coi target variable là random variable (còn input thì không), thì **t** chính là observed value của random sample **T** = (T1, T2,...TN).
+> Và với việc coi target variable là random variable (còn input thì không), thì 𝐭 chính là observed value của random sample 𝐓 = (T1, T2,...TN).
 >
 >
 >
-> Như vậy, (y(x, **w**) - T)^2 là hàm số của random variable T, nên dĩ nhiên cũng là random variable.
+> Như vậy, (y(x, 𝐰) - T)² là hàm số của random variable T, nên dĩ nhiên cũng là random variable.
 >
 >
 >
@@ -828,39 +828,39 @@
 >
 >
 >
-> E\[(y(x, **w**) - T)^2\]
+> E\[(y(x, 𝐰) - T)²\]
 >
 >
 >
-> Thế thì tuy ta đang giả định y(x, **w**) - T \~ n(0, 1/β), nhưng \[y(x, **w**) - T\]^2 thì ta không biết là phân phối gì. Nên không thể tính E\[(y(x, **w**) - T)^2\], để ra một hàm theo **w**, từ đó đi minimize over **w** cái này.
+> Thế thì tuy ta đang giả định y(x, 𝐰) - T \~ n(0, 1/β), nhưng \[y(x, 𝐰) - T\]² thì ta không biết là phân phối gì. Nên không thể tính E\[(y(x, 𝐰) - T)²\], để ra một hàm theo 𝐰, từ đó đi minimize over 𝐰 cái này.
 >
 >
 >
-> Thay vì vậy, ta xem S = (y(x, **w**) - T) đến từ một uniform discrete distriution có các discrete value là s1 = y(x1, **w**) - t1,..., sN = y(xN, **w**) - tN.
+> Thay vì vậy, ta xem S = (y(x, 𝐰) - T) đến từ một uniform discrete distriution có các discrete value là s1 = y(x1, 𝐰) - t1,..., sN = y(xN, 𝐰) - tN.
 >
 >
 >
-> Từ đó, E\[(y(x, **w**) - T)^2\] có thể tính cái này nhờ LOTUS
+> Từ đó, E\[(y(x, 𝐰) - T)²\] có thể tính cái này nhờ LOTUS
 >
 >
 >
-> = Σn=1:N \[y(xn, **w**) - tn\]^2 P(S = sn)
+> = Σn=1:N \[y(xn, 𝐰) - tn\]² P(S = sn)
 >
 >
 >
-> = (1/N) Σn=1:N \[y(**x**n, **w**) - tn\]^2
+> = (1/N) Σn=1:N \[y(𝐱n, 𝐰) - tn\]²
 >
 >
 >
-> Và từ đó ta đi minimize over **w** hàm objective E\[(y(**x**, **w**) - T)^2\] = (1/N) Σn=1:N \[y(xn, **w**) - tn\]^2
+> Và từ đó ta đi minimize over 𝐰 hàm objective E\[(y(𝐱, 𝐰) - T)²\] = (1/N) Σn=1:N \[y(xn, 𝐰) - tn\]²
 >
 >
 >
-> và với N là constant thì bài toán này cũng tương đương minimize (1/2) Σn=1:N \[y(xn, **w**) - tn\]^2 và đây chính là sum-of-squares error E_D(**w**)
+> và với N là constant thì bài toán này cũng tương đương minimize (1/2) Σn=1:N \[y(xn, 𝐰) - tn\]² và đây chính là sum-of-squares error E_D(𝐰)
 >
 >
 >
-> Cách lập luận này giúp ta có cái nhìn sâu hơn vào bản chất của cái hàm SSE để thấy nó chính là kì vọng của S = \[y(**w**, x) - T\]^2 với S là uniform discrete với N posible value s1,...sN.
+> Cách lập luận này giúp ta có cái nhìn sâu hơn vào bản chất của cái hàm SSE để thấy nó chính là kì vọng của S = \[y(𝐰, x) - T\]² với S là uniform discrete với N posible value s1,...sN.
 >
 >
 >
@@ -872,15 +872,15 @@
 >
 >
 >
-> Đó là ta xét một khái niệm trong statistic gọi là likelihood, định nghĩa của nó là hàm của tham số (ở đây là **w**), thể hiện độ hợp lí của tham số khi dữ liệu quan sát có giá trị (observed data) ta đã thấy, kí hiệu L(**w**|observed data), Ở đây observed data chính là \[**x**1,...**x**N\], (t1,...tN). Và giá trị của nó tính bằng xác suất của event data mang giá trị observed data dựa trên **w**:
+> Đó là ta xét một khái niệm trong statistic gọi là likelihood, định nghĩa của nó là hàm của tham số (ở đây là 𝐰), thể hiện độ hợp lí của tham số khi dữ liệu quan sát có giá trị (observed data) ta đã thấy, kí hiệu L(𝐰|observed data), Ở đây observed data chính là \[𝐱1,...𝐱N\], (t1,...tN). Và giá trị của nó tính bằng xác suất của event data mang giá trị observed data dựa trên 𝐰:
 >
 >
 >
-> L(**w**|observed data) = f(observed data|**w**)
+> L(𝐰|observed data) = f(observed data|𝐰)
 >
 >
 >
-> Cụ thể ở đây L(**w**|\[**x**1,...**x**N\], (t1,...tN)) = P(data = \[**x**1,...**x**N\], (t1,...tN)|**w**)
+> Cụ thể ở đây L(𝐰|\[𝐱1,...𝐱N\], (t1,...tN)) = P(data = \[𝐱1,...𝐱N\], (t1,...tN)|𝐰)
 >
 >
 >
@@ -888,15 +888,15 @@
 >
 >
 >
-> f(data = \[**x**1,...**x**N\], (t1,...tN)|**w**) = P(T1,...TN = (t1,...tN)|**w,** \[**x**1,...**x**N\])
+> f(data = \[𝐱1,...𝐱N\], (t1,...tN)|𝐰) = P(T1,...TN = (t1,...tN)|**w,** \[𝐱1,...𝐱N\])
 >
 >
 >
-> đặt **T** là vector (T1,...TN), matrix **X** matrix có các hàng là (**x**1)T,...(**x**N)T thì và f là pdf của của T, cũng là joint pdf của T1,...TN
+> đặt 𝐓 là vector (T1,...TN), matrix 𝐗 matrix có các hàng là (𝐱1)ᵀ,...(𝐱N)ᵀ thì và f là pdf của của T, cũng là joint pdf của T1,...TN
 >
 >
 >
-> L(**w**|observed data) = f(**t**|**w**, **X**).
+> L(𝐰|observed data) = f(𝐭|𝐰, 𝐗).
 >
 >
 >
@@ -904,15 +904,15 @@
 >
 >
 >
-> maximize (over **w**) f(**t**|**w**, **X**)
+> maximize (over 𝐰) f(𝐭|𝐰, 𝐗)
 >
 >
 >
-> Dùng tính iid f(**t**|**w**, **X**) = Πn=1:N f(tn|**w**, **xn**), bài toán trở thành.
+> Dùng tính iid f(𝐭|𝐰, 𝐗) = Πn=1:N f(tn|𝐰, **xn**), bài toán trở thành.
 >
 >
 >
-> maximize (over **w**) Πn=1:N f(tn|**w**, **xn**)
+> maximize (over 𝐰) Πn=1:N f(tn|𝐰, **xn**)
 >
 >
 >
@@ -920,19 +920,19 @@
 >
 >
 >
-> maximize (over **w**) ln \[Πn=1:N f(tn|**w**, **xn**)\]
+> maximize (over 𝐰) ln \[Πn=1:N f(tn|𝐰, **xn**)\]
 >
 >
 >
-> Biến đổi hàm mục tiêu: ln \[Πn=1:N f(tn|**w**, **xn**)\] = Σn=1:N \[ln f(tn|**w**, **xn**)\]
+> Biến đổi hàm mục tiêu: ln \[Πn=1:N f(tn|𝐰, **xn**)\] = Σn=1:N \[ln f(tn|𝐰, **xn**)\]
 >
 >
 >
-> và thay pdf của Tn vô, dùng giả định là Tn \~ 𝒩(y(**x**n, **w**), 1/β),
+> và thay pdf của Tn vô, dùng giả định là Tn \~ 𝒩(y(𝐱n, 𝐰), 1/β),
 >
 >
 >
-> f(tn|w, xn) = \[constant c, là term dính tới β\] exp {-(tn - y(**x**n, **w**))^2/2(1/β)},
+> f(tn|w, xn) = \[constant c, là term dính tới β\] exp {-(tn - y(𝐱n, 𝐰))²/2(1/β)},
 >
 >
 >
@@ -940,19 +940,19 @@
 >
 >
 >
-> Σn \[ln (c exp {-(tn - y(**x**n, **w**))^2/2(1/β) } \]
+> Σn \[ln (c exp {-(tn - y(𝐱n, 𝐰))²/2(1/β) } \]
 >
 >
 >
-> = Σn \[ln c + ln exp {-(tn - y(**x**n, **w**))^2/2(1/β)} \]
+> = Σn \[ln c + ln exp {-(tn - y(𝐱n, 𝐰))²/2(1/β)} \]
 >
 >
 >
-> = Σn \[ln c\] + Σn ln exp {-(tn - y(**x**n, **w**))^2/2(1/β)}
+> = Σn \[ln c\] + Σn ln exp {-(tn - y(𝐱n, 𝐰))²/2(1/β)}
 >
 >
 >
-> = Σn \[ln c\] + Σn {-(tn - y(**x**n, **w**))^2/2(1/β)}
+> = Σn \[ln c\] + Σn {-(tn - y(𝐱n, 𝐰))²/2(1/β)}
 >
 >
 >
@@ -960,11 +960,11 @@
 >
 >
 >
->  maximize\_**w** Σn {-(tn - y(**x**n, **w**))^2/2(1/β) }
+>  maximize\_𝐰 Σn {-(tn - y(𝐱n, 𝐰))²/2(1/β) }
 >
 >
 >
->  maximize\_**w** (-1/2) Σn (tn - y(**x**n, **w**))^2
+>  maximize\_𝐰 (-1/2) Σn (tn - y(𝐱n, 𝐰))²
 >
 >
 >
@@ -972,7 +972,7 @@
 >
 >
 >
-> minimize \_**w** (1/2) Σn(tn - y(**x**n, **w**))^2
+> minimize \_𝐰 (1/2) Σn(tn - y(𝐱n, 𝐰))²
 >
 >
 >
@@ -992,23 +992,23 @@
 <p align="center"><kbd><img src="assets/orzwo0hrgqn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Giải nhanh bài này, bài này là bối cảnh bài toán dự đoán (từ một input vector **x**) ra nhiều target value, có nghĩa là ta sẽ có **t** = y(**x**) là vector.
+> Giải nhanh bài này, bài này là bối cảnh bài toán dự đoán (từ một input vector 𝐱) ra nhiều target value, có nghĩa là ta sẽ có 𝐭 = y(𝐱) là vector.
 >
 >
 >
-> Quy ước: Xuyên suốt repo này để khỏi gõ Latext rườm ra, mình gõ thường và quy ước nhau T nếu đứng sau matrix **W** tự hiểu là **"W** **tranpose"**. Còn **T**, hay T1, T2,...là chỉ random variable
+> Quy ước: Xuyên suốt repo này để khỏi gõ Latext rườm ra, mình gõ thường và quy ước nhau T nếu đứng sau matrix 𝐖 tự hiểu là **"W** **tranpose"**. Còn 𝐓, hay T1, T2,...là chỉ random variable
 >
 >
 >
-> Đề bài nói rằng là ta sẽ vẫn dựa trên giả định: **T** \~ f(**t**|**W**, **Σ**) = 𝒩(**t**|y(**W**,**x**), **Σ**) với y(**W**,**x**) = **W**TΦ(**x**).
+> Đề bài nói rằng là ta sẽ vẫn dựa trên giả định: 𝐓 \~ f(𝐭|𝐖, **Σ**) = 𝒩(𝐭|y(𝐖,𝐱), **Σ**) với y(𝐖,𝐱) = 𝐖TΦ(𝐱).
 >
 >
 >
-> Đi tìm MLE của **W**
+> Đi tìm MLE của 𝐖
 >
 >
 >
-> Đầu tiên nên nói vài lời liên hệ với bài toán point estimation của Statistical Inference Casella để: Trong chapter 9, ta học về point estimation, với vấn đề đặt ra là, giả sử ta có một observed value **x** của random sample **X** = (X1,..Xn) với Xi \~ f(x|θ), làm sao để estimate θ. Đây gọi là bài toán point estimation, vì nhiệm vụ là đi xây dựng một hàm số của sample W(**X**) (gọi là estimator) để lắp giá trị quan sát được của **X** vào thì ta có W(**x**) là estimate cho θ.
+> Đầu tiên nên nói vài lời liên hệ với bài toán point estimation của Statistical Inference Casella để: Trong chapter 9, ta học về point estimation, với vấn đề đặt ra là, giả sử ta có một observed value 𝐱 của random sample 𝐗 = (X1,..Xn) với Xi \~ f(x|θ), làm sao để estimate θ. Đây gọi là bài toán point estimation, vì nhiệm vụ là đi xây dựng một hàm số của sample W(𝐗) (gọi là estimator) để lắp giá trị quan sát được của 𝐗 vào thì ta có W(𝐱) là estimate cho θ.
 >
 >
 >
@@ -1016,35 +1016,35 @@
 >
 >
 >
-> Thế thì như định nghĩa, estimator W(**X**) đơn giản chỉ là một function của sample **X**, vậy ML estimator là function gì? Câu trả lời là function này: argmax\_Θ L(θ|**X**). ý nghĩa: Nhận input **X**, tìm θ ∈ Θ (parameter space) sao cho L(θ|**X**) đạt giá trị max thì trả ra. Đồng nghĩa, estimator này là nghiệm của bài toán tối ưu: maximize (over θ ∈ Θ) L(θ|**X**). Và ta thấy, đây vẫn chỉ là một hàm số của **X** (nhận vào **X**, tìm θ sao cho maximize L, trả θ đó ra)
+> Thế thì như định nghĩa, estimator W(𝐗) đơn giản chỉ là một function của sample 𝐗, vậy ML estimator là function gì? Câu trả lời là function này: argmax\_Θ L(θ|𝐗). ý nghĩa: Nhận input 𝐗, tìm θ ∈ Θ (parameter space) sao cho L(θ|𝐗) đạt giá trị max thì trả ra. Đồng nghĩa, estimator này là nghiệm của bài toán tối ưu: maximize (over θ ∈ Θ) L(θ|𝐗). Và ta thấy, đây vẫn chỉ là một hàm số của 𝐗 (nhận vào 𝐗, tìm θ sao cho maximize L, trả θ đó ra)
 >
 >
 >
-> Vậy L(θ|**X**) là gì. Theo định nghĩa, người ta đặt ra hàm L(θ|**x**), là hàm của θ (tức input là θ) mang ý nghĩa là: với θ đưa vào, thì dựa trên data quan sát được thấy **X** = **x** thì độ hợp lí của θ là bao nhiêu. Ví dụ, L(θ=3|**x**=(1,2)) = α sẽ được hiểu là dựa trên việc ta thấy x = (1,2) thì độ hợp lí của θ = 3 là α, với θ = 4 thì có thể độ hợp lí cao hơn. Và ta muốn tìm θ có độ hợp lí cao nhất.
+> Vậy L(θ|𝐗) là gì. Theo định nghĩa, người ta đặt ra hàm L(θ|𝐱), là hàm của θ (tức input là θ) mang ý nghĩa là: với θ đưa vào, thì dựa trên data quan sát được thấy 𝐗 = 𝐱 thì độ hợp lí của θ là bao nhiêu. Ví dụ, L(θ=3|𝐱=(1,2)) = α sẽ được hiểu là dựa trên việc ta thấy x = (1,2) thì độ hợp lí của θ = 3 là α, với θ = 4 thì có thể độ hợp lí cao hơn. Và ta muốn tìm θ có độ hợp lí cao nhất.
 >
 >
 >
-> Và đó là ý nghĩa của độ hợp lí, còn giá trị của nó, thì người ta đặt (vì họ định nghĩa nên họ có quyền) là bằng f(**x**|θ). Là sao? Có nghĩa là độ hợp lý của θ dựa trên quan sát **X**=**x** sẽ bằng giá trị của joint pdf của **X** tại observed data **x**.
+> Và đó là ý nghĩa của độ hợp lí, còn giá trị của nó, thì người ta đặt (vì họ định nghĩa nên họ có quyền) là bằng f(𝐱|θ). Là sao? Có nghĩa là độ hợp lý của θ dựa trên quan sát 𝐗=𝐱 sẽ bằng giá trị của joint pdf của 𝐗 tại observed data 𝐱.
 >
 >
 >
-> Thành ra bài toán tìm θ^ML sẽ là maximize\_θ f(**x**|θ). Và với tính iid, các random sample X1,..Xn đều mutually independent, và identically distributed, tức là có cùng distributoin. Thành ra f(**x**|θ) có thể tách thành tích các marginal pdf (y như X, Y độc lập thì fX,Y(x,y) = fX(x) fY(y) và fX, fY lại là cùng một hàm pdf): f(**x**|θ) = Πi=1:n f(xi|θ)
+> Thành ra bài toán tìm θ^ML sẽ là maximize\_θ f(𝐱|θ). Và với tính iid, các random sample X1,..Xn đều mutually independent, và identically distributed, tức là có cùng distributoin. Thành ra f(𝐱|θ) có thể tách thành tích các marginal pdf (y như X, Y độc lập thì fX,Y(x,y) = fX(x) fY(y) và fX, fY lại là cùng một hàm pdf): f(𝐱|θ) = Πi=1:n f(xi|θ)
 >
 >
 >
-> Vậy quay lại bài toán này, ta cơ bản ta đang giả định rằng, ra có một random sample (**T**1, **X**1), (**T**2, **X**2),...(**T**N, **X**N) có observed data là (**t**1, **x**1), (**t**2, **x**2)...(**t**N, **x**N), và (**T**i, **X**i) tuân theo một population distribution f(**t**,**x**|θ) nào đó. Và ta sẽ đi giải bài toán point estimate θ.
+> Vậy quay lại bài toán này, ta cơ bản ta đang giả định rằng, ra có một random sample (𝐓1, 𝐗1), (𝐓2, 𝐗2),...(𝐓N, 𝐗N) có observed data là (𝐭1, 𝐱1), (𝐭2, 𝐱2)...(𝐭N, 𝐱N), và (𝐓i, 𝐗i) tuân theo một population distribution f(𝐭,𝐱|θ) nào đó. Và ta sẽ đi giải bài toán point estimate θ.
 >
 >
 >
-> Tuy nhiên, với bối cảnh ta cần đưa ra hàm dự đoán t từ một input x đã biết chứ không phải là đi xây một generative model giúp sampling ra các giá trị t,X mới, nó sẽ là bài toán khác. Nên ta sẽ COI **X** NHƯ FIX, VÀ chỉ coi T là random variable thôi. Nên bài toán trở thành ta có random sample sẽ là **T**|**x**1,..**x**N = **T**1|**x**1, **T**2|**x**2,....**T**n|**x**n có observed data là **t**|**x**1,..**x**N = **t**1|**x**1,...**t**N|**x**N. Đeo theo **x** chỉ là thể hiện sự phụ thuộc của **t** vào từng **x**, chứ không có gì phức tạp cứ coi như ta có random sample **T** = (**T**1,...**T**n) với observed data **t** = (**t**1,....**t**n) (cho giống setup của bài toán thống kê suy luận ở trên, để ta thấy cách làm thật ra là y như nhau, nhờ đó thấy bài toán machine learning này chỉ là bài toán point estimation của statistial inference)
+> Tuy nhiên, với bối cảnh ta cần đưa ra hàm dự đoán t từ một input x đã biết chứ không phải là đi xây một generative model giúp sampling ra các giá trị t,X mới, nó sẽ là bài toán khác. Nên ta sẽ COI 𝐗 NHƯ FIX, VÀ chỉ coi T là random variable thôi. Nên bài toán trở thành ta có random sample sẽ là 𝐓|𝐱1,..𝐱N = 𝐓1|𝐱1, 𝐓2|𝐱2,....𝐓n|𝐱n có observed data là 𝐭|𝐱1,..𝐱N = 𝐭1|𝐱1,...𝐭N|𝐱N. Đeo theo 𝐱 chỉ là thể hiện sự phụ thuộc của 𝐭 vào từng 𝐱, chứ không có gì phức tạp cứ coi như ta có random sample 𝐓 = (𝐓1,...𝐓n) với observed data 𝐭 = (𝐭1,....𝐭n) (cho giống setup của bài toán thống kê suy luận ở trên, để ta thấy cách làm thật ra là y như nhau, nhờ đó thấy bài toán machine learning này chỉ là bài toán point estimation của statistial inference)
 >
 >
 >
-> (điểm chú ý là vì **T**1,...**T**N ở đây là random vector, nên khi gom chúng lại, thì **T** là một random matrix, nhưng cũng ko quan trọng)
+> (điểm chú ý là vì 𝐓1,...𝐓N ở đây là random vector, nên khi gom chúng lại, thì 𝐓 là một random matrix, nhưng cũng ko quan trọng)
 >
 >
 >
-> Điểm thứ hai, với bài toán inference ra θ, ta phải giả định f(x|θ) là (pdf/pmf) của phân phối gì. thì đó mới có hàm f mà xài. Ví dụ ta giả định f là normal pdf, thì θ là μ, σ² và f(x|θ) = (1/√2πσ²) exp(-(x-μ)^2/2σ²), để mà hình dạng (công thức) của hàm likelihood. Thì ở đây cũng vậy, ta sẽ giả định dạng của để bài toán trở nên khả thi, ta phải đặt ra giả định của phân phối T. Và giả định đó chính là: **T** \~ f(**t**|**W**, **Σ**) = 𝒩(**t**|y(**W**,**x**), **Σ**) với y(**W**,**x**) = **W**TΦ(**x**)
+> Điểm thứ hai, với bài toán inference ra θ, ta phải giả định f(x|θ) là (pdf/pmf) của phân phối gì. thì đó mới có hàm f mà xài. Ví dụ ta giả định f là normal pdf, thì θ là μ, σ² và f(x|θ) = (1/√2πσ²) exp(-(x-μ)²/2σ²), để mà hình dạng (công thức) của hàm likelihood. Thì ở đây cũng vậy, ta sẽ giả định dạng của để bài toán trở nên khả thi, ta phải đặt ra giả định của phân phối T. Và giả định đó chính là: 𝐓 \~ f(𝐭|𝐖, **Σ**) = 𝒩(𝐭|y(𝐖,𝐱), **Σ**) với y(𝐖,𝐱) = 𝐖TΦ(𝐱)
 >
 >
 >
@@ -1052,15 +1052,15 @@
 >
 >
 >
-> θ của f(x|θ) ở đây tương ứng với cặp matrix **W**, **Σ**.
+> θ của f(x|θ) ở đây tương ứng với cặp matrix 𝐖, **Σ**.
 >
 >
 >
-> observed data **x** thì ở đây chính là giá trị của (**t**1 **x**1), (**t**2, **x**2),....(**t**N, **x**N)
+> observed data 𝐱 thì ở đây chính là giá trị của (𝐭1 𝐱1), (𝐭2, 𝐱2),....(𝐭N, 𝐱N)
 >
 >
 >
-> Và θ^ML là solution của bài toán maximize L(θ|**x**) = f(**x**|θ) = Πi=1:N f(xi|θ)
+> Và θ^ML là solution của bài toán maximize L(θ|𝐱) = f(𝐱|θ) = Πi=1:N f(xi|θ)
 >
 >
 >
@@ -1068,19 +1068,19 @@
 >
 >
 >
-> **W**^\_ML, **Σ**^\_ML sẽ là solution của bài toán maximize L(**W**, **Σ**|(**t**1 **x**1), (**t**2, **x**2),....(**t**N, **x**N))
+> 𝐖^\_ML, **Σ**^\_ML sẽ là solution của bài toán maximize L(𝐖, **Σ**|(𝐭1 𝐱1), (𝐭2, 𝐱2),....(𝐭N, 𝐱N))
 >
 >
 >
-> = f(**t**1, **t**2,...,**t**N | **W**, **Σ**, **x**1,..**x**N)
+> = f(𝐭1, 𝐭2,...,𝐭N | 𝐖, **Σ**, 𝐱1,..𝐱N)
 >
 >
 >
-> Và cũng vì **T**1,...**T**N iid nên join pdf của chúng cũng tách thành tích marginal pdf:
+> Và cũng vì 𝐓1,...𝐓N iid nên join pdf của chúng cũng tách thành tích marginal pdf:
 >
 >
 >
-> .. = Πi=1:N f(**t**i | **W**, **Σ**, **x**i)
+> .. = Πi=1:N f(𝐭i | 𝐖, **Σ**, 𝐱i)
 >
 >
 >
@@ -1088,7 +1088,7 @@
 >
 >
 >
-> maximize (over **W**, **Σ**) {Πi=1:N f(**t**i | **W**, **Σ**, **x**i)}
+> maximize (over 𝐖, **Σ**) {Πi=1:N f(𝐭i | 𝐖, **Σ**, 𝐱i)}
 >
 >
 >
@@ -1100,7 +1100,7 @@
 >
 >
 >
-> maximize (over **W**, **Σ**) **ln** {Πi=1:N f(**t**i | **W**, **Σ**, **x**i)}
+> maximize (over 𝐖, **Σ**) **ln** {Πi=1:N f(𝐭i | 𝐖, **Σ**, 𝐱i)}
 >
 >
 >
@@ -1108,7 +1108,7 @@
 >
 >
 >
-> ln {Πi=1:N f(**t**i | **W**, **Σ**, **x**i)} = Σi=1:N ln {f(**t**i | **W**, **Σ**, **x**i)}
+> ln {Πi=1:N f(𝐭i | 𝐖, **Σ**, 𝐱i)} = Σi=1:N ln {f(𝐭i | 𝐖, **Σ**, 𝐱i)}
 >
 >
 >
@@ -1116,11 +1116,11 @@
 >
 >
 >
-> Σn ln {f(**t**n | **W**, **Σ**, **x**n)}
+> Σn ln {f(𝐭n | 𝐖, **Σ**, 𝐱n)}
 >
 >
 >
-> bỏ pdf của **t** vô: f(**t**n | **W**, **Σ**, **x**n) = 𝒩(**t**| **W**TΦ(**x**), **Σ**)
+> bỏ pdf của 𝐭 vô: f(𝐭n | 𝐖, **Σ**, 𝐱n) = 𝒩(𝐭| 𝐖TΦ(𝐱), **Σ**)
 >
 >
 >
@@ -1128,7 +1128,7 @@
 >
 >
 >
-> = \[(2π)^-D/2\] \[1/|**Σ**|^1/2\] exp\[-(**t** - **W**TΦ(**x**))T **Σ**inv (**t** - **μ**)/2\]
+> = \[(2π)^-D/2\] \[1/|**Σ**|^1/2\] exp\[-(𝐭 - 𝐖TΦ(𝐱))ᵀ **Σ**inv (𝐭 - **μ**)/2\]
 >
 >
 >
@@ -1140,23 +1140,23 @@
 >
 >
 >
-> Σn ln { f(**t**n | **W**, **Σ**, **x**n) }
+> Σn ln { f(𝐭n | 𝐖, **Σ**, 𝐱n) }
 >
 >
 >
-> = Σn ln { c1 \[1/|**Σ**|^1/2\] exp\[-(**t**n - **W**TΦ(**x**n))T **Σ**inv (**t**n - **W**TΦ(**x**n))/2\] }
+> = Σn ln { c1 \[1/|**Σ**|^1/2\] exp\[-(𝐭n - 𝐖TΦ(𝐱n))ᵀ **Σ**inv (𝐭n - 𝐖TΦ(𝐱n))/2\] }
 >
 >
 >
-> = Σn ( ln c1 + ln \[|**Σ**|^-1/2\] + ln exp\[-(**t**n - **W**TΦ(**x**n))T **Σ**inv (**t**n - **W**TΦ(**x**n))/2\] } )
+> = Σn ( ln c1 + ln \[|**Σ**|^-1/2\] + ln exp\[-(𝐭n - 𝐖TΦ(𝐱n))ᵀ **Σ**inv (𝐭n - 𝐖TΦ(𝐱n))/2\] } )
 >
 >
 >
-> = N ln c1 + Σn (-1/2 ln |**Σ**|) - Σn \[ (**t**n - **W**TΦ(**x**n))T **Σ**inv (**t**n - **W**TΦ(**x**n))/2 \]
+> = N ln c1 + Σn (-1/2 ln |**Σ**|) - Σn \[ (𝐭n - 𝐖TΦ(𝐱n))ᵀ **Σ**inv (𝐭n - 𝐖TΦ(𝐱n))/2 \]
 >
 >
 >
-> = N ln c1 - (N/2) ln |**Σ**| - (1/2) Σn (**t**n - **W**TΦ(**x**n))T **Σ**inv (**t**n - **W**TΦ(**x**n)
+> = N ln c1 - (N/2) ln |**Σ**| - (1/2) Σn (𝐭n - 𝐖TΦ(𝐱n))ᵀ **Σ**inv (𝐭n - 𝐖TΦ(𝐱n)
 >
 >
 >
@@ -1164,51 +1164,51 @@
 >
 >
 >
-> = - (N/2) ln |**Σ**| - (1/2) Σn (**t**n - **W**TΦ(**x**n))T **Σ**inv (**t**n - **W**TΦ(**x**n)
+> = - (N/2) ln |**Σ**| - (1/2) Σn (𝐭n - 𝐖TΦ(𝐱n))ᵀ **Σ**inv (𝐭n - 𝐖TΦ(𝐱n)
 >
 >
 >
-> Tới đây, bài toán là maximize {-(N/2) ln |**Σ**| - (1/2) Σn (**t**n - **W**TΦ(**x**n))T **Σ**inv (**t**n - **W**TΦ(**x**n) }
+> Tới đây, bài toán là maximize {-(N/2) ln |**Σ**| - (1/2) Σn (𝐭n - 𝐖TΦ(𝐱n))ᵀ **Σ**inv (𝐭n - 𝐖TΦ(𝐱n) }
 >
 >
 >
-> Với bài toán tối ưu, ta có thể giải theo từng biến, tức maximize over **W** trước để tìm **W**\_ML và khi làm vậy ta coi **Σ** như constant. Do đó lại tiếp tục bỏ constant đi
+> Với bài toán tối ưu, ta có thể giải theo từng biến, tức maximize over 𝐖 trước để tìm 𝐖\_ML và khi làm vậy ta coi **Σ** như constant. Do đó lại tiếp tục bỏ constant đi
 >
 >
 >
-> maximize\_**W** {-(1/2) Σn (**t**n - **W**TΦ(**x**n))T **Σ**inv (**t**n - **W**TΦ(**x**n) }
+> maximize\_𝐖 {-(1/2) Σn (𝐭n - 𝐖TΦ(𝐱n))ᵀ **Σ**inv (𝐭n - 𝐖TΦ(𝐱n) }
 >
 >
 >
-> Biến đổi hàm objective, để cho gọn **A** = **W**TΦ(**x**n) ⇒ **A**T = Φ(**x**n)T**W**, **B** = **Σ**inv
+> Biến đổi hàm objective, để cho gọn 𝐀 = 𝐖TΦ(𝐱n) ⇒ 𝐀T = Φ(𝐱n)ᵀ𝐖, 𝐁 = **Σ**inv
 >
 >
 >
-> \-(1/2) Σn (**t**n - **A**)T **B** (**t**n -**A**) = -(1/2)\[(**t**n)T**B** - **A**T**B**)(**t**n -**A**)\]
+> \-(1/2) Σn (𝐭n - 𝐀)ᵀ 𝐁 (𝐭n -𝐀) = -(1/2)\[(𝐭n)ᵀ𝐁 - 𝐀T𝐁)(𝐭n -𝐀)\]
 >
 >
 >
-> = -(1/2) Σn \[(**t**n)T**Bt**n - **A**T**Bt**n - (**t**n)T**BA** + **A**T**BA**\]
+> = -(1/2) Σn \[(𝐭n)ᵀ**Bt**n - 𝐀T**Bt**n - (𝐭n)ᵀ**BA** + 𝐀T**BA**\]
 >
 >
 >
-> **A**T**Bt**n là scalar, nên = \[**A**T**Bt**n\]T = (**t**n)T**B**T**A**, và vì **B** là **Σ**inv, nên nó đối xứng do covariance matrix đối xứng và nghịch đảo của matrix đối xứng cũng đối xứng nên .. = (**t**n)T**BA**
+> 𝐀T**Bt**n là scalar, nên = \[𝐀T**Bt**n\]ᵀ = (𝐭n)ᵀ𝐁T𝐀, và vì 𝐁 là **Σ**inv, nên nó đối xứng do covariance matrix đối xứng và nghịch đảo của matrix đối xứng cũng đối xứng nên .. = (𝐭n)ᵀ**BA**
 >
 >
 >
-> = -(1/2) Σn \[(**t**n)T**Bt**n - **2**(**t**n)T**BA** + **A**T**BA**\]
+> = -(1/2) Σn \[(𝐭n)ᵀ**Bt**n - **2**(𝐭n)ᵀ**BA** + 𝐀T**BA**\]
 >
 >
 >
-> = -(1/2) Σn \[**A**T**BA** - **2**(**t**n)T**BA** + (**t**n)T**Bt**n\]
+> = -(1/2) Σn \[𝐀T**BA** - **2**(𝐭n)ᵀ**BA** + (𝐭n)ᵀ**Bt**n\]
 >
 >
 >
->  Thay **A**, **B** vào lại:
+>  Thay 𝐀, 𝐁 vào lại:
 >
 >
 >
-> = -(1/2) Σn \[Φ(**x**n)T **W Σ**inv **W**T Φ(**x**n) - **2**(**t**n)T **Σ**inv **W**T Φ(**x**n) + (**t**n)T **Σ**inv **t**n\]
+> = -(1/2) Σn \[Φ(𝐱n)ᵀ **W Σ**inv 𝐖T Φ(𝐱n) - **2**(𝐭n)ᵀ **Σ**inv 𝐖T Φ(𝐱n) + (𝐭n)ᵀ **Σ**inv 𝐭n\]
 >
 >
 >
@@ -1216,7 +1216,7 @@
 >
 >
 >
-> = -(1/2) Σn \[Φ(**x**n)T **W Σ**inv **W**T Φ(**x**n) - **2**(**t**n)T **Σ**inv **W**T Φ(**x**n) + (**t**n)T **Σ**inv **t**n\]
+> = -(1/2) Σn \[Φ(𝐱n)ᵀ **W Σ**inv 𝐖T Φ(𝐱n) - **2**(𝐭n)ᵀ **Σ**inv 𝐖T Φ(𝐱n) + (𝐭n)ᵀ **Σ**inv 𝐭n\]
 >
 >
 >
@@ -1224,43 +1224,43 @@
 >
 >
 >
-> Nhiệm vụ bây giờ là dùng điều kiện tối ưu bậc nhất để cho stationary point: Cho đạo hàm theo **W** của hàm trên = 0
+> Nhiệm vụ bây giờ là dùng điều kiện tối ưu bậc nhất để cho stationary point: Cho đạo hàm theo 𝐖 của hàm trên = 0
 >
 >
 >
-> Để tìm đạo hàm đối với matrix **W** của hàm objective dài thòn này, là sao đây?
+> Để tìm đạo hàm đối với matrix 𝐖 của hàm objective dài thòn này, là sao đây?
 >
 >
 >
-> Để cho gọn mắt, ta lại mượn các kí hiệu **A**, **B**, **u**, **v**, **z** để ta xét hàm sau đây: f(**A**) = **u**T **A** **B** **A**T **u** - 2 **v**T **B** **A**T **z**
+> Để cho gọn mắt, ta lại mượn các kí hiệu 𝐀, 𝐁, 𝐮, 𝐯, 𝐳 để ta xét hàm sau đây: f(𝐀) = 𝐮ᵀ 𝐀 𝐁 𝐀T 𝐮 - 2 𝐯ᵀ 𝐁 𝐀T 𝐳
 >
 >
 >
-> Giải tìm ∇f theo cách làm đã học trong MIT 18s096: Cố gắng đưa df thành dạng linear operator act on d**A**:
+> Giải tìm ∇f theo cách làm đã học trong MIT 18s096: Cố gắng đưa df thành dạng linear operator act on d𝐀:
 >
 >
 >
-> df = **u**T (**A** + d**A**) **B** (**A** + d**A**)T **u** - 2 **v**T **B** (**A** + d**A**)T **z** - \[**u**T **A** **B** **A**T **u** - 2 **v**T **B A**T **z** \]
+> df = 𝐮ᵀ (𝐀 + d𝐀) 𝐁 (𝐀 + d𝐀)ᵀ 𝐮 - 2 𝐯ᵀ 𝐁 (𝐀 + d𝐀)ᵀ 𝐳 - \[𝐮ᵀ 𝐀 𝐁 𝐀T 𝐮 - 2 𝐯ᵀ **B A\*\*ᵀ 𝐳 \]
 >
 >
 >
-> = **u**T (**A B** + d**A B**) \[**A**T + (d**A**)T\] **u** - 2 **v**T **B** \[**A**T + (d**A**)T\] **z** - **u**T **A** **B** **A**T **u** + 2 **v**T **B A**T **z**
+> = 𝐮ᵀ (**A B** + d**A B**) \[𝐀T + (d𝐀)ᵀ\] 𝐮 - 2 𝐯ᵀ 𝐁 \[𝐀T + (d𝐀)ᵀ\] 𝐳 - 𝐮ᵀ 𝐀 𝐁 𝐀T 𝐮 + 2 𝐯ᵀ **B A\*\*ᵀ 𝐳
 >
 >
 >
-> = (**u**T **A B** + **u**T d**A B**) \[**A**T **u** + (d**A**)T **u**\] - 2 **v**T **B A**T **z** - 2 **v**T **B** (d**A**)T **z** - **u**T **A** **B** **A**T **u** + 2 **v**T **B A**T **z**
+> = (𝐮ᵀ **A B** + 𝐮ᵀ d**A B**) \[𝐀T 𝐮 + (d𝐀)ᵀ 𝐮\] - 2 𝐯ᵀ **B A\*\*ᵀ 𝐳 - 2 𝐯ᵀ 𝐁 (d𝐀)ᵀ 𝐳 - 𝐮ᵀ 𝐀 𝐁 𝐀T 𝐮 + 2 𝐯ᵀ **B A\*\*ᵀ 𝐳
 >
 >
 >
-> = **u**T **A B A**T **u** + **u**T d**A B A**T **u** + **u**T **A B** (d**A**)T **u** + **u**T d**A B** (d**A**)T **u** - 2 **v**T **B A**T **z** - 2 **v**T **B** (d**A**)T **z** - **u**T **A** **B** **A**T **u** + 2 **v**T **B A**T **z**
+> = 𝐮ᵀ **A B A\*\*ᵀ 𝐮 + 𝐮ᵀ d**A B A\*\*ᵀ 𝐮 + 𝐮ᵀ **A B** (d𝐀)ᵀ 𝐮 + 𝐮ᵀ d**A B** (d𝐀)ᵀ 𝐮 - 2 𝐯ᵀ **B A\*\*ᵀ 𝐳 - 2 𝐯ᵀ 𝐁 (d𝐀)ᵀ 𝐳 - 𝐮ᵀ 𝐀 𝐁 𝐀T 𝐮 + 2 𝐯ᵀ **B A\*\*ᵀ 𝐳
 >
 >
 >
-> Cancel out, và bỏ đi term bậc cao **u**T d**A B** (d**A**)T **u**
+> Cancel out, và bỏ đi term bậc cao 𝐮ᵀ d**A B** (d𝐀)ᵀ 𝐮
 >
 >
 >
-> = **u**T d**A B A**T **u** + **u**T **A B** (d**A**)T **u** - 2 **v**T **B** (d**A**)T **z**
+> = 𝐮ᵀ d**A B A\*\*ᵀ 𝐮 + 𝐮ᵀ **A B** (d𝐀)ᵀ 𝐮 - 2 𝐯ᵀ 𝐁 (d𝐀)ᵀ 𝐳
 >
 >
 >
@@ -1268,11 +1268,11 @@
 >
 >
 >
-> = 2 **u**T **A B** (d**A**)T **u** - 2 **v**T **B** (d**A**)T **z**
+> = 2 𝐮ᵀ **A B** (d𝐀)ᵀ 𝐮 - 2 𝐯ᵀ 𝐁 (d𝐀)ᵀ 𝐳
 >
 >
 >
-> = 2 **u**T **A B** (d**A**)T **u** - 2 **v**T **B** (d**A**)T **z**
+> = 2 𝐮ᵀ **A B** (d𝐀)ᵀ 𝐮 - 2 𝐯ᵀ 𝐁 (d𝐀)ᵀ 𝐳
 >
 >
 >
@@ -1280,7 +1280,7 @@
 >
 >
 >
-> tr\[2 **u**T **A B** (d**A**)T **u** - 2 **v**T **B** (d**A**)T **z**\]
+> tr\[2 𝐮ᵀ **A B** (d𝐀)ᵀ 𝐮 - 2 𝐯ᵀ 𝐁 (d𝐀)ᵀ 𝐳\]
 >
 >
 >
@@ -1288,7 +1288,7 @@
 >
 >
 >
-> = tr\[2 **u**T **A B** (d**A**)T **u**\] - tr\[2 **v**T **B** (d**A**)T **z**\]
+> = tr\[2 𝐮ᵀ **A B** (d𝐀)ᵀ 𝐮\] - tr\[2 𝐯ᵀ 𝐁 (d𝐀)ᵀ 𝐳\]
 >
 >
 >
@@ -1296,23 +1296,23 @@
 >
 >
 >
-> = tr\[2 **uu**T **A B** (d**A**)T\] - tr\[2 **zv**T **B** (d**A**)T \]
+> = tr\[2 **uu\*\*ᵀ **A B** (d𝐀)ᵀ\] - tr\[2 **zv\*\*ᵀ 𝐁 (d𝐀)ᵀ \]
 >
 >
 >
-> = tr\[2 **uu**T **A B** (d**A**)T - 2 **zv**T **B** (d**A**)T \]
+> = tr\[2 **uu\*\*ᵀ **A B** (d𝐀)ᵀ - 2 **zv\*\*ᵀ 𝐁 (d𝐀)ᵀ \]
 >
 >
 >
-> = tr\[2 (**uu**T **A B** - **zv**T **B**) (d**A**)T \]
+> = tr\[2 (**uu\*\*ᵀ **A B** - **zv\*\*ᵀ 𝐁) (d𝐀)ᵀ \]
 >
 >
 >
-> Dùng tính chất trace(**X**) = tr(**X**T)
+> Dùng tính chất trace(𝐗) = tr(𝐗T)
 >
 >
 >
-> = tr\[2 (d**A**) (**uu**T **A B** - **zv**T **B**)T\]
+> = tr\[2 (d𝐀) (**uu\*\*ᵀ **A B** - **zv\*\*ᵀ 𝐁)ᵀ\]
 >
 >
 >
@@ -1320,19 +1320,19 @@
 >
 >
 >
-> = tr\[2 (**uu**T **A B** - **zv**T **B**)T (d**A**)\]
+> = tr\[2 (**uu\*\*ᵀ **A B** - **zv\*\*ᵀ 𝐁)ᵀ (d𝐀)\]
 >
 >
 >
-> Tới đây dùng kiến thức tr(**X**T **Y**) chính là **X** . **Y** (inner product của hai matrix X và Y) (xem link tới bài giảng của MIT 18s096) do đó ở trên chính là
+> Tới đây dùng kiến thức tr(𝐗T 𝐘) chính là 𝐗 . 𝐘 (inner product của hai matrix X và Y) (xem link tới bài giảng của MIT 18s096) do đó ở trên chính là
 >
 >
 >
-> 2(**uu**T **A B** - **zv**T **B**) . (d**A**)
+> 2(**uu\*\*ᵀ **A B** - **zv\*\*ᵀ 𝐁) . (d𝐀)
 >
 >
 >
-> Và đây inner product của chính là linear operator, nên kết quả này chính là một linear operator act on d**A**, giúp cho phép kết luận ∇f = -(1/2) Σn 2 (**uu**T **A B** - **zv**T **B**) = - Σn (**uu**T **A B** - **zv**T **B**)
+> Và đây inner product của chính là linear operator, nên kết quả này chính là một linear operator act on d𝐀, giúp cho phép kết luận ∇f = -(1/2) Σn 2 (**uu\*\*ᵀ **A B** - **zv\*\*ᵀ 𝐁) = - Σn (**uu\*\*ᵀ **A B** - **zv\*\*ᵀ 𝐁)
 >
 >
 >
@@ -1344,37 +1344,37 @@
 >
 >
 >
-> \- Σn (**uu**T **A B** - **zv**T **B**)  
+> \- Σn (**uu\*\*ᵀ **A B** - **zv\*\*ᵀ 𝐁)  
 >
 >
 >
-> Thay **u** = Φ(**x**n), **A** = **W**, **B** = **Σ**inv, **z** = Φ(**x**n), **v** = **t**n
+> Thay 𝐮 = Φ(𝐱n), 𝐀 = 𝐖, 𝐁 = **Σ**inv, 𝐳 = Φ(𝐱n), 𝐯 = 𝐭n
 >
 >
 >
-> \- Σn (Φ(**x**n) Φ(**x**n)T **W Σ**inv - Φ(**x**n) (**t**n)T **Σ**inv)   
+> \- Σn (Φ(𝐱n) Φ(𝐱n)ᵀ **W Σ**inv - Φ(𝐱n) (𝐭n)ᵀ **Σ**inv)   
 >
 >
 >
-> Cho bằng 0: Σn (Φ(**x**n) Φ(**x**n)T **W Σ**inv - Φ(**x**n) (**t**n)T **Σ**inv) = 0
+> Cho bằng 0: Σn (Φ(𝐱n) Φ(𝐱n)ᵀ **W Σ**inv - Φ(𝐱n) (𝐭n)ᵀ **Σ**inv) = 0
 >
 >
 >
-> ⇔ Σn Φ(**x**n) Φ(**x**n)T **W Σ**inv = Σn Φ(**x**n) (**t**n)T **Σ**inv
+> ⇔ Σn Φ(𝐱n) Φ(𝐱n)ᵀ **W Σ**inv = Σn Φ(𝐱n) (𝐭n)ᵀ **Σ**inv
 >
 >
 >
-> ⇔ \[ Σn Φ(**x**n) Φ(**x**n)T \] **W Σ**inv = \[Σn Φ(**x**n) (**t**n)T\] **Σ**inv
+> ⇔ \[ Σn Φ(𝐱n) Φ(𝐱n)ᵀ \] **W Σ**inv = \[Σn Φ(𝐱n) (𝐭n)ᵀ\] **Σ**inv
 >
 >
 >
-> ⇔ \[ Σn Φ(**x**n) Φ(**x**n)T \] **W** = \[Σn Φ(**x**n) (**t**n)T\]
+> ⇔ \[ Σn Φ(𝐱n) Φ(𝐱n)ᵀ \] 𝐖 = \[Σn Φ(𝐱n) (𝐭n)ᵀ\]
 >
 >
 >
-> ⇔ **W** = \[Σn Φ(**x**n) Φ(**x**n)T\]inv \[Σn Φ(**x**n) (**t**n)T\]
+> ⇔ 𝐖 = \[Σn Φ(𝐱n) Φ(𝐱n)ᵀ\]⁻¹ \[Σn Φ(𝐱n) (𝐭n)ᵀ\]
 >
-> Đây chính là **W**\_ML
+> Đây chính là 𝐖\_ML
 >
 >
 >
@@ -1382,31 +1382,31 @@
 >
 >
 >
-> So với kết quả 3.15, **w**ML = (**Φ**T**Φ**)inv **Φ**T**t**
+> So với kết quả 3.15, 𝐰ML = (**Φ𝐓Φ**)⁻¹ **Φ𝐓t**
 >
 >
 >
-> Hiểu như sau, còn nhớ trong MIT 18.06, trong 4 góc nhìn nhân matrix AB, góc nhìn thứ 4 là ta coi AB là tổng các rank 1 matrix tạo bởi cột i của A và hàng i của B: Σi \[cột i của A\] outer product \[hàng i của B\], giúp ta nhìn ra **Φ**T**Φ cũng chính là** Σn Φ(**x**n) Φ(**x**n)T, vì design matrix được define là các hành của nó chính là Φ(**x**1)T, Φ(**x**2)T,..., nên các cột của **Φ**T chính là Φ(**x**1), Φ(**x**2).
+> Hiểu như sau, còn nhớ trong MIT 18.06, trong 4 góc nhìn nhân matrix AB, góc nhìn thứ 4 là ta coi AB là tổng các rank 1 matrix tạo bởi cột i của A và hàng i của B: Σi \[cột i của A\] outer product \[hàng i của B\], giúp ta nhìn ra **Φ𝐓Φ cũng chính là** Σn Φ(𝐱n) Φ(𝐱n)ᵀ, vì design matrix được define là các hành của nó chính là Φ(𝐱1)ᵀ, Φ(𝐱2)ᵀ,..., nên các cột của **Φ\*\*ᵀ chính là Φ(𝐱1), Φ(𝐱2).
 >
 >
 >
-> Như vậy **W** = (**Φ**T**Φ**)inv \[Σn Φ(**x**n) (**t**n)T\]
+> Như vậy 𝐖 = (**Φ𝐓Φ**)⁻¹ \[Σn Φ(𝐱n) (𝐭n)ᵀ\]
 >
 >
 >
-> Lại dùng góc nhìn đó ta thấy Σn Φ(**x**n) (**t**n)T chính là **Φ**T \[matrix có các hàng là (**t**1)T,...(**t**N)T\]
+> Lại dùng góc nhìn đó ta thấy Σn Φ(𝐱n) (𝐭n)ᵀ chính là **Φ\*\*ᵀ \[matrix có các hàng là (𝐭1)ᵀ,...(𝐭N)ᵀ\]
 >
 >
 >
-> Đặt matrix có các hàng là (**t**1)T,...(**t**N)T là matrix **H**, thì ta có: 
+> Đặt matrix có các hàng là (𝐭1)ᵀ,...(𝐭N)ᵀ là matrix 𝐇, thì ta có: 
 >
 >
 >
-> **W**\_ML = (**Φ**T**Φ**)inv **Φ**T **H**, có thể thấy nó giống (**Φ**T**Φ**)inv **Φ**T**t**, chỉ là thay matrix **H** bởi **t** 
+> 𝐖\_ML = (**Φ𝐓Φ**)⁻¹ **Φ\*\*ᵀ 𝐇, có thể thấy nó giống (**Φ𝐓Φ**)⁻¹ **Φ𝐓t**, chỉ là thay matrix 𝐇 bởi 𝐭 
 >
 >
 >
-> Tới đây coi như giải xong phần 1, tính MLE của **M**
+> Tới đây coi như giải xong phần 1, tính MLE của 𝐌
 
 > [!TIP]
 > **🤖 AI Feedback** — ⚠️ Score: **85/100**
@@ -1428,7 +1428,7 @@
 >
 >
 >
-> Đề bài muốn ta dùng kĩ thuật này để verify (xác nhận) kết quả 3.49 là f(**w**|**t**) = 𝒩(**w**|**m**N, **S**N) với (3.50) **m**N = **S**N{**S**0inv **m**0 + β**Φ**T**t**} và (3.51) **S**Ninv = **S**0inv + β**Φ**T**Φ**
+> Đề bài muốn ta dùng kĩ thuật này để verify (xác nhận) kết quả 3.49 là f(𝐰|𝐭) = 𝒩(𝐰|𝐦N, 𝐒N) với (3.50) 𝐦N = 𝐒N{𝐒0inv 𝐦0 + β**Φ**ᵀ𝐭} và (3.51) 𝐒N⁻¹ = 𝐒0inv + β**Φ**ᵀ**Φ**
 >
 >
 >
@@ -1436,11 +1436,11 @@
 >
 >
 >
-> Đại ý thế này, bài này là trong bối cảnh là ta đang đi tìm **w**, tham số của mô hình T \~ 𝒩(y(**w**,**x**), 1/β) theo Bayesian approach trong đó ta coi **w** như random variable (vector), với prior distribution f(**w**), mà ta sẽ chọn dựa trên niềm tin ban đầu về phân phối của **w** để sau đó dùng Bayes theorem giúp ta có f(**w**|data) gọi là posterior distribution. Rồi từ cái distribution này, ta sẽ có thể dùng các cách làm nào đó để đưa ra ước lượng điểm của **w**
+> Đại ý thế này, bài này là trong bối cảnh là ta đang đi tìm 𝐰, tham số của mô hình T \~ 𝒩(y(𝐰,𝐱), 1/β) theo Bayesian approach trong đó ta coi 𝐰 như random variable (vector), với prior distribution f(𝐰), mà ta sẽ chọn dựa trên niềm tin ban đầu về phân phối của 𝐰 để sau đó dùng Bayes theorem giúp ta có f(𝐰|data) gọi là posterior distribution. Rồi từ cái distribution này, ta sẽ có thể dùng các cách làm nào đó để đưa ra ước lượng điểm của 𝐰
 >
 >
 >
-> Hiểu thế này: Ước lượng điểm là gì, là một hàm số mà bỏ giá trị data vào, thì ta có được giá trị ước lượng của vector tham số **w**. Thế thì khi ta có posterior distribution, thì nó là cái probability distribution, nói như giáo sư Joe Blizstein của Stat110, thì nó là một bản thiết kế (blueprint) cho ta biết với giá trị này thì xác suất **w** mang giá trị nào là bao nhiêu, với giá trị kia thì xác suất là bao nhiêu. Nên để từ cái posterior distribution, muốn cho ra một point estimation, ta có thể dùng giá trị của **w** có probability cao nhất, và có khi nó là mean của distribution, nhưng cũng có khi dùng median của distribution thì tốt hơn. Nên cái lí thuyết gọi là decision theory sẽ giúp ta đưa ra ước lượng điểm tối ưu dựa trên posterior distribution.
+> Hiểu thế này: Ước lượng điểm là gì, là một hàm số mà bỏ giá trị data vào, thì ta có được giá trị ước lượng của vector tham số 𝐰. Thế thì khi ta có posterior distribution, thì nó là cái probability distribution, nói như giáo sư Joe Blizstein của Stat110, thì nó là một bản thiết kế (blueprint) cho ta biết với giá trị này thì xác suất 𝐰 mang giá trị nào là bao nhiêu, với giá trị kia thì xác suất là bao nhiêu. Nên để từ cái posterior distribution, muốn cho ra một point estimation, ta có thể dùng giá trị của 𝐰 có probability cao nhất, và có khi nó là mean của distribution, nhưng cũng có khi dùng median của distribution thì tốt hơn. Nên cái lí thuyết gọi là decision theory sẽ giúp ta đưa ra ước lượng điểm tối ưu dựa trên posterior distribution.
 >
 >
 >
@@ -1448,7 +1448,7 @@
 >
 >
 >
-> Và bài này cơ bản là ta có prior là **w** \~ 𝒩(**m**0, **S**0) và likelihood (tức L(**w**|data), mà theo định nghĩa cũng chính là hàm joint pdf của data f(data|**w**)) là cũng là normal, mà normal lại là conjigate prior của chính nó, nên posterior sẽ cũng ra là normal, và cái ta cần làm là dùng completing square để chứng minh cái posterior normal có mean và covariance như 3.50, 3.51.
+> Và bài này cơ bản là ta có prior là 𝐰 \~ 𝒩(𝐦0, 𝐒0) và likelihood (tức L(𝐰|data), mà theo định nghĩa cũng chính là hàm joint pdf của data f(data|𝐰)) là cũng là normal, mà normal lại là conjigate prior của chính nó, nên posterior sẽ cũng ra là normal, và cái ta cần làm là dùng completing square để chứng minh cái posterior normal có mean và covariance như 3.50, 3.51.
 >
 >
 >
@@ -1456,7 +1456,7 @@
 >
 >
 >
-> Đơn giản là vầy: Nói đủ hơn là completing the square và khớp mẫu (pattern matching): Ví dụ ta biết pdf của univariate normal 𝒩(μ, σ^2) = 1/√2πσ² exp{-(x-μ)^2/2σ²}, vậy thì giả sử ta đang derive pdf của posterior distribution mà ra được có dạng \[cái gì đó\] nhân exp (hàm bậc hai của μ) thì lập tức có thể kết luận đây là pdf của normal (lí thuyết xác suất cho phép). Và từ đó, bằng cách khớp mẫu, ta sẽ có thể kết luận mean và variance của posterior.
+> Đơn giản là vầy: Nói đủ hơn là completing the square và khớp mẫu (pattern matching): Ví dụ ta biết pdf của univariate normal 𝒩(μ, σ²) = 1/√2πσ² exp{-(x-μ)²/2σ²}, vậy thì giả sử ta đang derive pdf của posterior distribution mà ra được có dạng \[cái gì đó\] nhân exp (hàm bậc hai của μ) thì lập tức có thể kết luận đây là pdf của normal (lí thuyết xác suất cho phép). Và từ đó, bằng cách khớp mẫu, ta sẽ có thể kết luận mean và variance của posterior.
 >
 >
 >
@@ -1464,15 +1464,15 @@
 >
 >
 >
-> Ta có priori: f(**w**) = 𝒩(**w**|**m**0, **S**0)
+> Ta có priori: f(𝐰) = 𝒩(𝐰|𝐦0, 𝐒0)
 >
 >
 >
-> Posteriori: f(**w**|data), ở đây chính là f(**w**|**t**,**X**) (**t**, **X** là giá trị của data: các **t** = (t1,...tn) còn các vector input **x**1,...**x**N gom thành matrix **X**)
+> Posteriori: f(𝐰|data), ở đây chính là f(𝐰|𝐭,𝐗) (𝐭, 𝐗 là giá trị của data: các 𝐭 = (t1,...tn) còn các vector input 𝐱1,...𝐱N gom thành matrix 𝐗)
 >
 >
 >
-> Bayes theorem cho ta: f(**w**|data) = f(data|**w**)f(**w**)/f(data)
+> Bayes theorem cho ta: f(𝐰|data) = f(data|𝐰)f(𝐰)/f(data)
 >
 >
 >
@@ -1480,51 +1480,51 @@
 >
 >
 >
-> f(**w**|data) ∝ f(data|**w**)f(**w**) (f(data|**w**) nếu xem như hàm của **w** thì cũng chính là likelihood L(**w**|data)
+> f(𝐰|data) ∝ f(data|𝐰)f(𝐰) (f(data|𝐰) nếu xem như hàm của 𝐰 thì cũng chính là likelihood L(𝐰|data)
 >
 >
 >
-> ⇔ f(**w**|**t**,**X**) ∝ f(**t**|**w**,**X**) f(**w**)
+> ⇔ f(𝐰|𝐭,𝐗) ∝ f(𝐭|𝐰,𝐗) f(𝐰)
 >
 >
 >
-> và f(**t**|**w**,**X**), là joint pdf của T1,...Tn độc lập và có cùng distribution là 𝒩(y(**w**, **x**), 1/β) nên cũng phụ thuộc β, và tách f(**t**|**w**,**X**) thành Πn f(tn|**w**,**X**), nên cái trên trở thành
+> và f(𝐭|𝐰,𝐗), là joint pdf của T1,...Tn độc lập và có cùng distribution là 𝒩(y(𝐰, 𝐱), 1/β) nên cũng phụ thuộc β, và tách f(𝐭|𝐰,𝐗) thành Πn f(tn|𝐰,𝐗), nên cái trên trở thành
 >
 >
 >
-> ⇔ f(**w**|**t**,**X**,β,α) ∝ Πn f(tn|**w**,**x**n) f(**w**)
+> ⇔ f(𝐰|𝐭,𝐗,β,α) ∝ Πn f(tn|𝐰,𝐱n) f(𝐰)
 >
 >
 >
-> Thay công thức của f(tn|**w**,**x**n) là 𝒩(tn|**w**TΦ(**x**n), 1/β) = 1/√2π(1/β) exp{-(tn-**w**TΦ(**x**n))^2/2(1/β)}
+> Thay công thức của f(tn|𝐰,𝐱n) là 𝒩(tn|𝐰ᵀΦ(𝐱n), 1/β) = 1/√2π(1/β) exp{-(tn-𝐰ᵀΦ(𝐱n))²/2(1/β)}
 >
 >
 >
-> ⇒ Πn f(tn|**w**,**x**n) = Πn 1/√2π(1/β) exp{-(tn-**w**TΦ(**x**n))^2/2(1/β)}
+> ⇒ Πn f(tn|𝐰,𝐱n) = Πn 1/√2π(1/β) exp{-(tn-𝐰ᵀΦ(𝐱n))²/2(1/β)}
 >
 >
 >
-> = Πn {\[2π(1/β)\]^(-1/2) exp{-(tn-**w**TΦ(**x**n))^2/2(1/β)}}
+> = Πn {\[2π(1/β)\]^(-1/2) exp{-(tn-𝐰ᵀΦ(𝐱n))²/2(1/β)}}
 >
 >
 >
-> = \[2π(1/β)\]^(-n/2) Πn exp{-(tn-**w**TΦ(**x**n))^2/2(1/β)}
+> = \[2π(1/β)\]^(-n/2) Πn exp{-(tn-𝐰ᵀΦ(𝐱n))²/2(1/β)}
 >
 >
 >
-> =  c1 exp{-(β/2) Σn (tn-**w**TΦ(**x**n))^2}
+> =  c1 exp{-(β/2) Σn (tn-𝐰ᵀΦ(𝐱n))²}
 >
 >
 >
-> và f(**w**) = 𝒩(**w**|**m**0, **S**0) = \[(2π)^-M/2\] \[1/|**S**0|^1/2\] exp\[-(1/2)(**w** - **m**0)T **S**0inv (**w** - **m**0)\]
+> và f(𝐰) = 𝒩(𝐰|𝐦0, 𝐒0) = \[(2π)^-M/2\] \[1/|𝐒0|^1/2\] exp\[-(1/2)(𝐰 - 𝐦0)ᵀ 𝐒0inv (𝐰 - 𝐦0)\]
 >
 >
 >
-> = c2 \[|**S**0|^-1/2\] exp\[-(1/2)(**w** - **m**0)T **S**0inv (**w** - **m**0)\] (Đặt c2 = (2π)^-M/2)
+> = c2 \[|𝐒0|^-1/2\] exp\[-(1/2)(𝐰 - 𝐦0)ᵀ 𝐒0inv (𝐰 - 𝐦0)\] (Đặt c2 = (2π)^-M/2)
 >
 >
 >
-> = c2 c3 exp\[-(1/2)(**w** - **m**0)T **S**0inv (**w** - **m**0)\] (Đặt c3 = \[|**S**0|^-1/2\])
+> = c2 c3 exp\[-(1/2)(𝐰 - 𝐦0)ᵀ 𝐒0inv (𝐰 - 𝐦0)\] (Đặt c3 = \[|𝐒0|^-1/2\])
 >
 >
 >
@@ -1532,31 +1532,15 @@
 >
 >
 >
-> f(**w**|**t**,**X**,β,α)∝ Πn f(tn|**w**,**x**n) f(**w**)
+> f(𝐰|𝐭,𝐗,β,α)∝ Πn f(tn|𝐰,𝐱n) f(𝐰)
 >
 >
 >
-> = c1 exp{-(β/2) Σn (tn-**w**TΦ(**x**n))^2} c2 c3 exp\[-(1/2)(**w** - **m**0)T **S**0inv (**w** - **m**0)\]
+> = c1 exp{-(β/2) Σn (tn-𝐰ᵀΦ(𝐱n))²} c2 c3 exp\[-(1/2)(𝐰 - 𝐦0)ᵀ 𝐒0inv (𝐰 - 𝐦0)\]
 >
 >
 >
-> = c1 c2 c3 exp{-(β/2) Σn (tn-**w**TΦ(**x**n))^2} exp\[-(1/2)(**w** - **m**0)T **S**0inv (**w** - **m**0)\] (1)
->
->
->
-> ---
->
->
->
-> Xét riêng cụm Σn (tn-**w**TΦ(**x**n))^2 chút xíu:
->
->
->
-> Có thể thấy nó chính là ||**t** - **Φw**||^2, vì sao? vì design matrix **Φ** được define là matrix có các hàng là \[Φ(**x**1)\]T, \[Φ(**x**2)\]T,...\[Φ(**x**N)\]T. Nên **Φw** chính là vector có các phần tử là \[Φ(**x**1)\]T**w** (cũng là **w**TΦ(**x**1)), \[Φ(**x**2)\]T**w**,.. Và dẫn đến **t** - **Φw** chính là vector có các phần tử là t1-**w**TΦ(**x**1), t2-**w**TΦ(**x**2),...tn-**w**TΦ(**x**n)
->
->
->
-> Và vì ||u|| = uTu nên ||**t** - **Φw**||^2 cũng là (**t** - **Φw**)T(**t** - **Φw**)
+> = c1 c2 c3 exp{-(β/2) Σn (tn-𝐰ᵀΦ(𝐱n))²} exp\[-(1/2)(𝐰 - 𝐦0)ᵀ 𝐒0inv (𝐰 - 𝐦0)\] (1)
 >
 >
 >
@@ -1564,43 +1548,59 @@
 >
 >
 >
-> Vậy (1) = c1 c2 c3 exp{-(β/2) (**t** - **Φw**)T(**t** - **Φw**)} exp\[-(1/2)(**w** - **m**0)T **S**0inv (**w** - **m**0)\] 
+> Xét riêng cụm Σn (tn-𝐰ᵀΦ(𝐱n))² chút xíu:
 >
 >
 >
->  = c4 exp{-(β/2) (**t** - **Φw**)T(**t** - **Φw**) -(1/2)(**w** - **m**0)T **S**0inv (**w** - **m**0)} (đặt c4 = c1,c2,c3)
+> Có thể thấy nó chính là ||𝐭 - **Φw**||², vì sao? vì design matrix **Φ** được define là matrix có các hàng là \[Φ(𝐱1)\]ᵀ, \[Φ(𝐱2)\]ᵀ,...\[Φ(𝐱N)\]ᵀ. Nên **Φw** chính là vector có các phần tử là \[Φ(𝐱1)\]ᵀ𝐰 (cũng là 𝐰ᵀΦ(𝐱1)), \[Φ(𝐱2)\]ᵀ𝐰,.. Và dẫn đến 𝐭 - **Φw** chính là vector có các phần tử là t1-𝐰ᵀΦ(𝐱1), t2-𝐰ᵀΦ(𝐱2),...tn-𝐰ᵀΦ(𝐱n)
 >
 >
 >
->  = c4 exp{-(1/2) \[(**t** - **Φw**)T (β**I**) (**t** - **Φw**) + (**w** - **m**0)T **S**0inv (**w** - **m**0)\] }
+> Và vì ||u|| = uᵀu nên ||𝐭 - **Φw**||² cũng là (𝐭 - **Φw**)ᵀ(𝐭 - **Φw**)
 >
 >
 >
->  = c4 exp{-(1/2) \[(**t** - **Φw**)T (β**I**) (**t** - **Φw**) + (**w** - **m**0)T **S**0inv (**w** - **m**0)\] }
+> ---
 >
 >
 >
->  = c4 exp{-(1/2) \[(**t**Tβ**I** - **w**T**Φ**Tβ**I**)(**t** - **Φw**) + (**w**T**S**0inv - **m**0T**S**0inv)(**w** - **m**0)\] }
+> Vậy (1) = c1 c2 c3 exp{-(β/2) (𝐭 - **Φw**)ᵀ(𝐭 - **Φw**)} exp\[-(1/2)(𝐰 - 𝐦0)ᵀ 𝐒0inv (𝐰 - 𝐦0)\] 
 >
 >
 >
->  = c4 exp{-(1/2) \[**t**Tβ**It** - **w**T**Φ**Tβ**It** - **t**Tβ**IΦw** + **w**T**Φ**Tβ**IΦw** + **w**T**S**0inv**w** - **m**0T**S**0inv**w** - **w**T**S**0inv**m**0 + **m**0T**S**0inv**m**0\] }
+>  = c4 exp{-(β/2) (𝐭 - **Φw**)ᵀ(𝐭 - **Φw**) -(1/2)(𝐰 - 𝐦0)ᵀ 𝐒0inv (𝐰 - 𝐦0)} (đặt c4 = c1,c2,c3)
 >
 >
 >
->  = c4 exp{-(1/2) \[β**t**T**t** - β**w**T**Φ**T**t** - β**t**T**Φw** + β**w**T**Φ**T**Φw** + **w**T**S**0inv**w** - **m**0T**S**0inv**w** - **w**T**S**0inv**m**0 + **m**0T**S**0inv**m**0\] }
+>  = c4 exp{-(1/2) \[(𝐭 - **Φw**)ᵀ (β𝐈) (𝐭 - **Φw**) + (𝐰 - 𝐦0)ᵀ 𝐒0inv (𝐰 - 𝐦0)\] }
 >
 >
 >
->  = c4 exp{-(1/2) \[β**t**T**t** - 2β**t**T**Φw** + β**w**T**Φ**T**Φw** + **w**T**S**0inv**w** - 2**m**0T**S**0inv**w** + **m**0T**S**0inv**m**0\] }
+>  = c4 exp{-(1/2) \[(𝐭 - **Φw**)ᵀ (β𝐈) (𝐭 - **Φw**) + (𝐰 - 𝐦0)ᵀ 𝐒0inv (𝐰 - 𝐦0)\] }
 >
 >
 >
->  = c4 exp{-(1/2) \[β**w**T**Φ**T**Φw** + **w**T**S**0inv**w** - 2β**t**T**Φw** - 2**m**0T**S**0inv**w** + **m**0T**S**0inv**m**0 + β**t**T**t**\] }
+>  = c4 exp{-(1/2) \[(𝐭ᵀβ𝐈 - 𝐰ᵀ**Φ**ᵀβ𝐈)(𝐭 - **Φw**) + (𝐰ᵀ𝐒0inv - 𝐦0T𝐒0inv)(𝐰 - 𝐦0)\] }
 >
 >
 >
->  = c4 exp{-(1/2) \[**w**T\[β**Φ**T**Φ**+**S**0inv\]**w** - 2(β**t**T**Φ** + **m**0T**S**0inv)**w** + (**m**0T**S**0inv**m**0 + β**t**T**t**)\] } (2)
+>  = c4 exp{-(1/2) \[𝐭ᵀβ**It** - 𝐰ᵀ**Φ**ᵀβ**It** - 𝐭ᵀβ**IΦw** + 𝐰ᵀ**Φ**ᵀβ**IΦw** + 𝐰ᵀ𝐒0inv𝐰 - 𝐦0T𝐒0inv𝐰 - 𝐰ᵀ𝐒0inv𝐦0 + 𝐦0T𝐒0inv𝐦0\] }
+>
+>
+>
+>  = c4 exp{-(1/2) \[β𝐭ᵀ𝐭 - β𝐰ᵀ**Φ**ᵀ𝐭 - β𝐭ᵀ**Φw** + β𝐰ᵀ**Φ**ᵀ**Φw** + 𝐰ᵀ𝐒0inv𝐰 - 𝐦0T𝐒0inv𝐰 - 𝐰ᵀ𝐒0inv𝐦0 + 𝐦0T𝐒0inv𝐦0\] }
+>
+>
+>
+>  = c4 exp{-(1/2) \[β𝐭ᵀ𝐭 - 2β𝐭ᵀ**Φw** + β𝐰ᵀ**Φ**ᵀ**Φw** + 𝐰ᵀ𝐒0inv𝐰 - 2𝐦0T𝐒0inv𝐰 + 𝐦0T𝐒0inv𝐦0\] }
+>
+>
+>
+>  = c4 exp{-(1/2) \[β𝐰ᵀ**Φ**ᵀ**Φw** + 𝐰ᵀ𝐒0inv𝐰 - 2β𝐭ᵀ**Φw** - 2𝐦0T𝐒0inv𝐰 + 𝐦0T𝐒0inv𝐦0 + β𝐭ᵀ𝐭\] }
+>
+>
+>
+>  = c4 exp{-(1/2) \[𝐰ᵀ\[β**Φ**ᵀ**Φ**+𝐒0inv\]𝐰 - 2(β𝐭ᵀ**Φ** + 𝐦0T𝐒0inv)𝐰 + (𝐦0T𝐒0inv𝐦0 + β𝐭ᵀ𝐭)\] } (2)
 >
 >
 >
@@ -1608,27 +1608,27 @@
 >
 >
 >
-> Nhớ lại công thức khái quát của 𝒩(**x**|**μ**, **Σ**) = \[(2π)^-D/2\] \[1/|**Σ**|^1/2\] exp\[-(**x** - **μ**)T **Σ**inv (**x** - μ)/2\]
+> Nhớ lại công thức khái quát của 𝒩(𝐱|**μ**, **Σ**) = \[(2π)^-D/2\] \[1/|**Σ**|^1/2\] exp\[-(𝐱 - **μ**)ᵀ **Σ**inv (𝐱 - μ)/2\]
 >
 >
 >
-> và ta sẽ chỉ cần quan tâm -(**x** - **μ**)T **Σ**inv (**x** - μ)/2, 
+> và ta sẽ chỉ cần quan tâm -(𝐱 - **μ**)ᵀ **Σ**inv (𝐱 - μ)/2, 
 >
 >
 >
-> = -(**x**T**Σ**inv - **μ**T**Σ**inv)(**x** - μ)/2
+> = -(𝐱ᵀ**Σ**inv - **μ**ᵀ**Σ**inv)(𝐱 - μ)/2
 >
 >
 >
-> = -(**x**T**Σ**inv**x** - **μ**T**Σ**inv**x** - **x**T**Σ**inv**μ** + **μ**T**Σ**inv**μ**)/2
+> = -(𝐱ᵀ**Σ**inv𝐱 - **μ**ᵀ**Σ**inv𝐱 - 𝐱ᵀ**Σ**inv**μ** + **μ**ᵀ**Σ**inv**μ**)/2
 >
 >
 >
-> = -(**x**T**Σ**inv**x** - 2**μ**T**Σ**inv**x** + **μ**T**Σ**inv**μ**)/2
+> = -(𝐱ᵀ**Σ**inv𝐱 - 2**μ**ᵀ**Σ**inv𝐱 + **μ**ᵀ**Σ**inv**μ**)/2
 >
 >
 >
-> Và lập luận rằng,  vì (2) cũng có dạng quadratic function của **w**, nên đủ kết luận posterior f(**w**|data) là normal
+> Và lập luận rằng,  vì (2) cũng có dạng quadratic function của 𝐰, nên đủ kết luận posterior f(𝐰|data) là normal
 >
 >
 >
@@ -1636,47 +1636,47 @@
 >
 >
 >
-> **x**T**Σ**inv**x** sẽ ứng với **w**T\[β**Φ**T**Φ**+**S**0inv\]**w** → **Σ**inv ứng với β**Φ**T**Φ**+**S**0inv. 
+> 𝐱ᵀ**Σ**inv𝐱 sẽ ứng với 𝐰ᵀ\[β**Φ**ᵀ**Φ**+𝐒0inv\]𝐰 → **Σ**inv ứng với β**Φ**ᵀ**Φ**+𝐒0inv. 
 >
 >
 >
-> Như vậy tới đây đã có thể kết luận inverse của covariance matrix của posterior distribution **S**Ninv = β**Φ**T**Φ**+**S**0inv, → đây chính là (3.51)
+> Như vậy tới đây đã có thể kết luận inverse của covariance matrix của posterior distribution 𝐒N⁻¹ = β**Φ**ᵀ**Φ**+𝐒0inv, → đây chính là (3.51)
 >
 >
 >
-> Tiếp - 2**μ**T**Σ**inv**x** sẽ khớp với - 2(β**t**T**Φ** + **m**0T**S**0inv)**w** → **μ**T**Σ**inv khớp với (β**t**T**Φ** + **m**0T**S**0inv)
+> Tiếp - 2**μ**ᵀ**Σ**inv𝐱 sẽ khớp với - 2(β𝐭ᵀ**Φ** + 𝐦0T𝐒0inv)𝐰 → **μ**ᵀ**Σ**inv khớp với (β𝐭ᵀ**Φ** + 𝐦0T𝐒0inv)
 >
 >
 >
-> ⇔ **μ**T**Σ**inv khớp với (β**t**T**Φ** + **m**0T**S**0inv)
+> ⇔ **μ**ᵀ**Σ**inv khớp với (β𝐭ᵀ**Φ** + 𝐦0T𝐒0inv)
 >
 >
 >
-> nên β**t**T**Φ** + **m**0T**S**0inv chính là **m**NT**S**Ninv: β**t**T**Φ** + **m**0T**S**0inv = **m**NT**S**Ninv
+> nên β𝐭ᵀ**Φ** + 𝐦0T𝐒0inv chính là 𝐦Nᵀ𝐒N⁻¹: β𝐭ᵀ**Φ** + 𝐦0T𝐒0inv = 𝐦Nᵀ𝐒N⁻¹
 >
 >
 >
-> ⇔ β**t**T**Φ** + **m**0T**S**0inv = **m**NT**S**Ninv
+> ⇔ β𝐭ᵀ**Φ** + 𝐦0T𝐒0inv = 𝐦Nᵀ𝐒N⁻¹
 >
 >
 >
-> ⇔ β**Φ**T**t** + **S**0invT**m**0 = **S**NinvT**m**N
+> ⇔ β**Φ**ᵀ𝐭 + 𝐒0invᵀ𝐦0 = 𝐒N⁻¹ᵀ𝐦N
 >
 >
 >
-> ⇔ β**Φ**T**t** + **S**0inv**m**0 = **S**Ninv**m**N (các covariance matrix đối xứng nên bỏ tranpose)
+> ⇔ β**Φ**ᵀ𝐭 + 𝐒0inv𝐦0 = 𝐒N⁻¹𝐦N (các covariance matrix đối xứng nên bỏ tranpose)
 >
 >
 >
-> Nhân hai vế cho **S**N:
+> Nhân hai vế cho 𝐒N:
 >
 >
 >
-> ⇔ **S**N(β**Φ**T**t** + **S**0invT**m**0) = **m**N
+> ⇔ 𝐒N(β**Φ**ᵀ𝐭 + 𝐒0invᵀ𝐦0) = 𝐦N
 >
 >
 >
-> **⇔ m**N = **S**N{**S**0inv **m**0 + β**Φ**T**t**} → Đây chính là 3.50
+> **⇔ m**N = 𝐒N{𝐒0inv 𝐦0 + β**Φ**ᵀ𝐭} → Đây chính là 3.50
 >
 >
 >
