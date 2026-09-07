@@ -139,9 +139,9 @@
 >
 >
 > Và để xác định eigenvector ứng với eigenvalue bằng 1
-> này, ta không cần phải tìm nullspace của A - 1*I. Mà chỉ
+> này, ta không cần phải tìm nullspace của A - 1 × I. Mà chỉ
 > cần nhận xét rằng, đây là Projection matrix giúp project
-> lên vector a,  nên vector khiến **Px = 1*x tức là project lên
+> lên vector a,  nên vector khiến **Px = 1 × x tức là project lên
 > vector a mà vẫn giữ nguyên hướng** thì chỉ có thể là vector
 > nằm trên line qua a. Hay có thể nói **a chính là
 > eigenvector.**
@@ -648,14 +648,14 @@
 
 > [!NOTE]
 > Tính det A4 (kí hiệu là D4) bằng cofactor formula theo row 1
-> D4 = a11*C11 + a12*C12 (a13, a14 bằng 0 rồi thì khỏi xét)
+> D4 = a11 × C11 + a12 × C12 (a13, a14 bằng 0 rồi thì khỏi xét)
 >
 >
 >
 > Tiếp, C11 là gì, theo công thức cofactor formula, thì nó sẽ là
 > (+, vì a11:i+j=2 chẵn) det của matrix nhỏ sau khi đã bỏ cột 1,
 > hàng 1 của A4 đi. Thì đây chính là matrix A3 (vẽ màu xanh lá).
-> Vậy a11*det A3 = 1*Dn-1 (n đang = 4)
+> Vậy a11 × det A3 = 1 × Dn-1 (n đang = 4)
 >
 >
 >
@@ -667,11 +667,11 @@
 >
 >
 >
-> → a21*(-(1*det A2)) = - det A2 = - Dn-2
+> → a21*(-(1 × det A2)) = - det A2 = - Dn-2
 >
 >
 >
-> Vậy Dn = 1*Dn-1 - 1*Dn-2
+> Vậy Dn = 1 × Dn-1 - 1 × Dn-2
 
 <br>
 
@@ -727,7 +727,7 @@
 >
 >
 >
-> = [1 +/- sqrt(1 - 4*1*1)]/2*1 = [1 +/- sqrt(-3)]/2
+> = [1 +/- sqrt(1 - 4 × 1 × 1)]/2 × 1 = [1 +/- sqrt(-3)]/2
 >
 >
 >
@@ -816,11 +816,11 @@
 >
 >
 >
-> **z = r*e^(i*θ) = cos(θ) +i*sin(θ)**
+> **z = r × e^(i*θ) = cos(θ) +i × sin(θ)**
 >
 >
 >
-> và ta đã có z = cos(θ) + i*sin(θ) = 1/2 + i*[+/- sqrt(3)/2]thì ta sẽ tính theta để thể hiện z dưới dạng Euler = **r*e^(i*θ)**
+> và ta đã có z = cos(θ) + i × sin(θ) = 1/2 + i*[+/- sqrt(3)/2]thì ta sẽ tính theta để thể hiện z dưới dạng Euler = **r × e^(i*θ)**
 >
 >
 >
@@ -840,7 +840,7 @@
 >
 >
 >
-> Và theo công thức Euler: r*e^(i*θ), thay θ vào: 
+> Và theo công thức Euler: r × e^(i*θ), thay θ vào: 
 >
 >
 >
@@ -874,7 +874,7 @@
 >
 >
 >
-> và theo công thức Euler: **r*e^(i*θ) = cos(θ) + i*sin(θ)**
+> và theo công thức Euler: **r × e^(i*θ) = cos(θ) + i × sin(θ)**
 >
 >
 >
@@ -882,7 +882,7 @@
 >
 >
 >
-> → e^ i*(+/-2π) = cos(+/-2π) + i*sin(+/-2π) =  1 + i*0 = **1**
+> → e^ i*(+/-2π) = cos(+/-2π) + i × sin(+/-2π) =  1 + i × 0 = **1**
 >
 >
 >
@@ -952,13 +952,13 @@
 >
 >
 > Hoặc ta có thể **tính det của A3 theo cofactor formula** theo
-> column 1, thì chỉ cần tính a21*C21 = 1*(- det của matrix A3 bỏ
+> column 1, thì chỉ cần tính a21 × C21 = 1*(- det của matrix A3 bỏ
 > đi hàng 2 cột 1) dễ thấy matrix này có hai row là [1 0] [2 0], tức
 > là nó **có một zero column**. Vậy **det của nó = 0**.
 >
 >
 >
-> Vậy a21*C21 = 1*(-)*0 = 0. Vậy det của A3 = 0 ⇒ A3 singular
+> Vậy a21 × C21 = 1*(-)*0 = 0. Vậy det của A3 = 0 ⇒ A3 singular
 >
 >
 >
