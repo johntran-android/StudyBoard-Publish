@@ -58,7 +58,7 @@
 >
 >
 >
-> f(**x**) = Σk=1:K πk N(**x**| **μ**k, **Σ**k)
+> f(𝐱) = Σk=1:K πk N(𝐱| **μ**k, **Σ**k)
 >
 >
 >
@@ -66,7 +66,7 @@
 >
 >
 >
-> Hình 2.23 minh họa một superposition với K = 3. các coefficient là 0.5, 0.3, 0,2 với contour plot của f(**x**)
+> Hình 2.23 minh họa một superposition với K = 3. các coefficient là 0.5, 0.3, 0,2 với contour plot của f(𝐱)
 >
 >
 >
@@ -96,15 +96,15 @@
 >
 >
 >
-> f(**x**) = Σk=1:K πk N(**x**| **μ**k, **Σ**k)
+> f(𝐱) = Σk=1:K πk N(𝐱| **μ**k, **Σ**k)
 >
 >
 >
-> ⇔ ∫f(**x**)d**x** = ∫Σk=1:K πk N(**x**| **μ**k, **Σ**k) d**x**
+> ⇔ ∫f(𝐱)d𝐱 = ∫Σk=1:K πk N(𝐱| **μ**k, **Σ**k) d𝐱
 >
 >
 >
-> ⇔ ∫f(**x**)d**x** = Σk=1:K πk ∫N(**x**| **μ**k, **Σ**k)d**x**
+> ⇔ ∫f(𝐱)d𝐱 = Σk=1:K πk ∫N(𝐱| **μ**k, **Σ**k)d𝐱
 >
 >
 >
@@ -152,27 +152,27 @@
 >
 >
 >
-> Vậy thì ở đây, nếu ta xét Y là discrete random variable có các possible value 1,2,....K. Và f(x, k) là joint pmf của **X**, và K, áp dụng cái trên ta có:
+> Vậy thì ở đây, nếu ta xét Y là discrete random variable có các possible value 1,2,....K. Và f(x, k) là joint pmf của 𝐗, và K, áp dụng cái trên ta có:
 >
 >
 >
-> f(**x**) = Σk=1:K f(**x**, k)
+> f(𝐱) = Σk=1:K f(𝐱, k)
 >
 >
 >
-> Dựa theo conditional probability theore f(**x**, k) = f(**x**|k) f(k) = f(k)f(**x**|k)
+> Dựa theo conditional probability theore f(𝐱, k) = f(𝐱|k) f(k) = f(k)f(𝐱|k)
 >
 >
 >
-> ⇨ f(**x**) = Σk=1:K f(k) f(**x**|k) → Chính là 2.191
+> ⇨ f(𝐱) = Σk=1:K f(k) f(𝐱|k) → Chính là 2.191
 >
 >
 >
-> Và nếu ta coi pmf của Y là P(K=k) = πk, tức coi các coefficient πk chính là giá trị của pmf của K tại k, và đồng thời coi f(**x**|k) là pdf của Normal(**μ**k, **Σ**k), hay ghi la N(**x**|**μ**k, **Σ**k) thì
+> Và nếu ta coi pmf của Y là P(K=k) = πk, tức coi các coefficient πk chính là giá trị của pmf của K tại k, và đồng thời coi f(𝐱|k) là pdf của Normal(**μ**k, **Σ**k), hay ghi la N(𝐱|**μ**k, **Σ**k) thì
 >
 >
 >
-> f(**x**) = Σk=1:K πk f(**x**|k) chính là định nghĩa của Gaussian mixture
+> f(𝐱) = Σk=1:K πk f(𝐱|k) chính là định nghĩa của Gaussian mixture
 >
 >
 >
@@ -180,27 +180,27 @@
 >
 >
 >
-> Thêm nữa, pmf của Y: f(k) = πk, gs cho rằng, có thể xem nó là prior probability của việc chọn component thứ k'th, và vài bữa ta sẽ xét đến posterior probability f(k|**x**), là một khái niệm quan trọng, mang tên **responsibilities**
+> Thêm nữa, pmf của Y: f(k) = πk, gs cho rằng, có thể xem nó là prior probability của việc chọn component thứ k'th, và vài bữa ta sẽ xét đến posterior probability f(k|𝐱), là một khái niệm quan trọng, mang tên **responsibilities**
 >
 >
 >
-> Dùng Bayes theorem để derive f(k|**x**) như sau:
+> Dùng Bayes theorem để derive f(k|𝐱) như sau:
 >
 >
 >
-> f(k|**x**) = f(**x**|k)f(k) / f(**x**)
+> f(k|𝐱) = f(𝐱|k)f(k) / f(𝐱)
 >
 >
 >
-> Thay f(**x**) bằng công thức trên, nhưng dùng l cho index variable thay cho k để khỏi lẫn lộn với k ở tử số:
+> Thay f(𝐱) bằng công thức trên, nhưng dùng l cho index variable thay cho k để khỏi lẫn lộn với k ở tử số:
 >
 >
 >
-> = f(**x**|k)f(k) / Σl=1:K \[πl f(**x**|l)\] 
+> = f(𝐱|k)f(k) / Σl=1:K \[πl f(𝐱|l)\] 
 >
 >
 >
-> = πk N(**x**|**μ**k, **Σ**k) / Σl=1:K \[πl N(**x**|**μ**l, **Σ**l)\] → 2.192
+> = πk N(𝐱|**μ**k, **Σ**k) / Σl=1:K \[πl N(𝐱|**μ**l, **Σ**l)\] → 2.192
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
@@ -216,7 +216,7 @@
 <p align="center"><kbd><img src="assets/2j92ki9mpou.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là, ko khó để thấy distribution của Gaussian mixtures (f(**x**) = Σk=1:K πk N(**x**| **μ**k, **Σ**k)) sẽ phụ thuộc vào các tham số: πk, **μ**k, **Σ**k với k = 1,2,...K (Gom lại thành **π** = {π1, π2,...πK}, **μ** = {**μ**1, **μ**2,...**μ**K}, **Σ** = {**Σ**1, **Σ**2,....**Σ**K})
+> Đại ý là, ko khó để thấy distribution của Gaussian mixtures (f(𝐱) = Σk=1:K πk N(𝐱| **μ**k, **Σ**k)) sẽ phụ thuộc vào các tham số: πk, **μ**k, **Σ**k với k = 1,2,...K (Gom lại thành **π** = {π1, π2,...πK}, **μ** = {**μ**1, **μ**2,...**μ**K}, **Σ** = {**Σ**1, **Σ**2,....**Σ**K})
 >
 >
 >
@@ -228,7 +228,7 @@
 >
 >
 >
-> Nói về likelihood function, như đã nói nhiều, theo định nghĩa, nó là hàm của tham số (θ, hay cụ thể ở đây là cả cụm **π**, **μ**, **Σ**) có giá trị (được định nghĩa) bằng giá trị của joint pdf/pmf của toàn bộ các random variable trong sample tại observed data của nó, chính là **matrix** **X** (data / hay sample gồm N random vector **X**1,**X**2,... có observed value là x1,x2,..., gom lại làm thành random \[**matrix** **X**\] (hay D) có observed value là \[**matrix** **x**\].
+> Nói về likelihood function, như đã nói nhiều, theo định nghĩa, nó là hàm của tham số (θ, hay cụ thể ở đây là cả cụm **π**, **μ**, **Σ**) có giá trị (được định nghĩa) bằng giá trị của joint pdf/pmf của toàn bộ các random variable trong sample tại observed data của nó, chính là **matrix** 𝐗 (data / hay sample gồm N random vector 𝐗1,𝐗2,... có observed value là x1,x2,..., gom lại làm thành random \[**matrix** 𝐗\] (hay D) có observed value là \[**matrix** 𝐱\].
 >
 > (chỗ này phải nói lại vì rất lằng nhằng trong cách kí hiệu mà xuất phát cũng vì ông Bishop khi viết sách này ko tuân thủ quy tắc kí hiệu trong toán thống kê thông thường:
 >
@@ -246,23 +246,23 @@
 >
 >
 >
-> nếu là vector các biến ngẫu nhiên thì viết nét đậm **X**, có giá trị là **x**
+> nếu là vector các biến ngẫu nhiên thì viết nét đậm 𝐗, có giá trị là 𝐱
 >
 >
 >
-> Còn ông Bishop thì dùng chữ p thay vì f, và tên biến thì viết thường hết, nên không biết khi thấy x, là nói về biến hay về giá trị của nó, mà phải xem ngữ cảnh. Ổng vẫn theo lối viết đậm đối với vector, nên thấy ta thấy **x**, nhưng cũng ko biết là nói về biến hay nói về giá trị của nó.
+> Còn ông Bishop thì dùng chữ p thay vì f, và tên biến thì viết thường hết, nên không biết khi thấy x, là nói về biến hay về giá trị của nó, mà phải xem ngữ cảnh. Ổng vẫn theo lối viết đậm đối với vector, nên thấy ta thấy 𝐱, nhưng cũng ko biết là nói về biến hay nói về giá trị của nó.
 >
 >
 >
-> Νhưng theo cách kí hiểu của ông Bishop, thì khi ổng muốn gom các random variable vector lại thì ổng lại dùng chữ **X** (viết hoa, nét đậm), để chỉ toàn bộ mọi data, và ta cũng ko biết **X** sẽ là bản thân cái random variable matrix hay giá trị quan sát của nó
+> Νhưng theo cách kí hiểu của ông Bishop, thì khi ổng muốn gom các random variable vector lại thì ổng lại dùng chữ 𝐗 (viết hoa, nét đậm), để chỉ toàn bộ mọi data, và ta cũng ko biết 𝐗 sẽ là bản thân cái random variable matrix hay giá trị quan sát của nó
 >
 >
 >
-> Thành ra nếu ai đó theo chuẩn kí hiệu Casella sẽ thấy bối rối khi gặp **X**, vì lẽ thường nó ám chỉ random variable vector nhưng ở đây lại phải hiểu nó là random variable matrix mà cũng ko biết là chỉ biến hay chỉ giá trị, hoặc phải tự hiểu rằng khi nói công thức thì chỉ biến, khi tính thì thay giá trị vào.
+> Thành ra nếu ai đó theo chuẩn kí hiệu Casella sẽ thấy bối rối khi gặp 𝐗, vì lẽ thường nó ám chỉ random variable vector nhưng ở đây lại phải hiểu nó là random variable matrix mà cũng ko biết là chỉ biến hay chỉ giá trị, hoặc phải tự hiểu rằng khi nói công thức thì chỉ biến, khi tính thì thay giá trị vào.
 >
 >
 >
-> Còn mình do theo chuẩn Casella, nên mình sẽ ghi là data, tức sample sẽ gồm các random variable vector **X**1, ...**X**N, có observed value là **x**1, **x**2,...**x**N. Gom các random vector lại thành một random matrix: \[**matrix** **X**\] có observed value là \[**matrix** **x**\] (mà mỗi hàng là các observed value **x**1, **x**2, ...của **X**1,**X**2...**X**N.)
+> Còn mình do theo chuẩn Casella, nên mình sẽ ghi là data, tức sample sẽ gồm các random variable vector 𝐗1, ...𝐗N, có observed value là 𝐱1, 𝐱2,...𝐱N. Gom các random vector lại thành một random matrix: \[**matrix** 𝐗\] có observed value là \[**matrix** 𝐱\] (mà mỗi hàng là các observed value 𝐱1, 𝐱2, ...của 𝐗1,𝐗2...𝐗N.)
 >
 >
 >
@@ -278,7 +278,7 @@
 >
 >
 >
-> Nên L(**π**, **μ**, **Σ**|**matrix** **x**) = f(**matrix** **x**|**π**, **μ**, **Σ**)
+> Nên L(**π**, **μ**, **Σ**|**matrix** 𝐱) = f(**matrix** 𝐱|**π**, **μ**, **Σ**)
 >
 >
 >
@@ -286,11 +286,11 @@
 >
 >
 >
-> = Πn=1:N f(**x**n|**π**, **μ**, **Σ**)
+> = Πn=1:N f(𝐱n|**π**, **μ**, **Σ**)
 >
 >
 >
-> = Πn=1:N { Σk=1:K πk N(**x**n|**μ**k, **Σ**k) }
+> = Πn=1:N { Σk=1:K πk N(𝐱n|**μ**k, **Σ**k) }
 >
 >
 >
@@ -298,11 +298,11 @@
 >
 >
 >
-> ln L(**π**, **μ**, **Σ**|**x**) = ln {Πn=1:N { Σk=1:K πk N(**x**n|**μ**k, **Σ**k) }}
+> ln L(**π**, **μ**, **Σ**|𝐱) = ln {Πn=1:N { Σk=1:K πk N(𝐱n|**μ**k, **Σ**k) }}
 >
 >
 >
-> = Σn=1:N ln {Σk=1:K πk N(**x**n|**μ**k, **Σ**k) } → Đây chính là 2.193
+> = Σn=1:N ln {Σk=1:K πk N(𝐱n|**μ**k, **Σ**k) } → Đây chính là 2.193
 >
 >
 >
