@@ -69,7 +69,7 @@
 >
 > Cái matrix đầu tiên có a, d trên đường chéo thì đương
 > nhiên là chỉ cần dùng tính chất det của Triangular matrix
-> để tính det = a*d
+> để tính det = a × d
 >
 >
 >
@@ -160,7 +160,7 @@
 >
 >
 >
-> Thế thì ta đã biết **det của diagonal là a11*a22*a33**. Câu
+> Thế thì ta đã biết **det của diagonal là a11 × a22 × a33**. Câu
 > hỏi là **matrix kia det là bao nhiêu**?
 >
 >
@@ -286,19 +286,20 @@
 
 <a id="node-vzy778c"></a>
 
+###### Big Formula for Determinants
+
 <p align="center"><kbd><img src="assets/qokbz3k7h8n.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và từ đó công thức sẽ là như vầy: **tổng của n! term**.
-> Mỗi term là **tích của n component khác 0 ở các cột**
+> Và từ đó công thức sẽ là như vầy: **tổng của n! term**. Mỗi term là **tích của n component khác 0 ở các cột**
 >
 >
 >
-> Hiểu như vầy: 
+> Hiểu như vầy:
 >
 >
 >
-> **a_1α** là **vị trí khác 0 ở hàng 1 cột alpha**, 
+> **a_1α** là **vị trí khác 0 ở hàng 1 cột α**,
 >
 >
 >
@@ -324,7 +325,7 @@
 > Dễ thấy với A = I thì khi tách ra như vừa rồi, thì đương nhiên
 > **chỉ còn có một term có det khác 0**, mà đó **cũng là cái
 > matrix mà vị trí khác 0 là a11, a22**,.... và **cũng chính là 1
-> luôn**. Và det sẽ là 1*1....1 = 1
+> luôn**. Và det sẽ là 1 × 1....1 = 1
 
 <br>
 
@@ -356,11 +357,13 @@
 
 <a id="node-lscwfvd"></a>
 
+###### Big Formula for Determinants
+
 <p align="center"><kbd><img src="assets/py23imrqngr.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tính det với công thức trên: Thì đại khái cũng sẽ **coi thử
-> trong 4*4=16 term,** **ứng với 16 matrix có các survivor
+> trong 4 × 4=16 term,** **ứng với 16 matrix có các survivor
 > term** nào, thì ta **thấy chỉ có 2 term, ứng với 2 matrix**:
 >
 >
@@ -375,7 +378,7 @@
 >
 >
 >
-> Nên det là + 1*1*1*1 - 1*1*1*1 = 0
+> Nên det là + 1 × 1 × 1 × 1 - 1 × 1 × 1 × 1 = 0
 >
 >
 >
@@ -602,7 +605,7 @@
 > gs: correct, ông thì làm vầy: trừ hàng 2 (nhớ là đang nói
 > matrix A3 gồm hàng 1,2,3, cột 1,2,3) cho hàng 3, khíến
 > nó chỉ còn [1 0 0]. Và làm vậy vì biết properties 5: trừ row 
-> cho t*row khác không khiến thay đổi det 
+> cho t × row khác không khiến thay đổi det 
 >
 >
 >
@@ -658,7 +661,7 @@
 >
 >
 >
-> Và gs không tính theo a13*C13, a14*C14 nữa (có thể
+> Và gs không tính theo a13 × C13, a14 × C14 nữa (có thể
 > thấy vì a13, a14 bằng 0 rồi)
 >
 >
