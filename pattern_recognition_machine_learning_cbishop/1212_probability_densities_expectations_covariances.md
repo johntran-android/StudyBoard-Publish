@@ -90,12 +90,12 @@
 >
 > Nhớ lại trong Stat110, Casella, nếu ta có X ~ fX(x) và Y = g(X) và
 > mapping giữa x ∈ range X tới y ∈ range Y là 1-1. Tức là nếu y = g(x) thì
-> tồn tại duy nhất x trong range X = ginv(y) trong range X (vẫn cho phép có
+> tồn tại duy nhất x trong range X = g⁻¹(y) trong range X (vẫn cho phép có
 > thể có x' khác cũng map với y nhưng x' phải không thuộc range X)
 >
 >
 >
-> Khi đó fY(y) = fX(x) |dx/dy| = fX(ginv(y) |d/dy x| = fX(ginv(y)) |d/dy ginv(y)|
+> Khi đó fY(y) = fX(x) |dx/dy| = fX(g⁻¹(y) |d/dy x| = fX(g⁻¹(y)) |d/dy g⁻¹(y)|
 >
 >
 >
@@ -129,11 +129,11 @@
 >
 >
 >
-> Ta có fY(y) = fX(x) |d/dy ginv(y)|
+> Ta có fY(y) = fX(x) |d/dy g⁻¹(y)|
 >
 >
 >
-> Đặt ginv là h cho gọn: fY(y) =  fX(x) |h'(y)| = fX(h(y)) |h'(y)|
+> Đặt g⁻¹ là h cho gọn: fY(y) =  fX(x) |h'(y)| = fX(h(y)) |h'(y)|
 >
 >
 >
@@ -185,25 +185,25 @@
 >
 >
 >
-> Còn d/dy |h'(g(x*))| là d/dy [d/dy ginv(y)] | y = g(x*).
+> Còn d/dy |h'(g(x*))| là d/dy [d/dy g⁻¹(y)] | y = g(x*).
 >
 >
 >
-> tức là đạo hàm cấp hai của ginv, evaluate tại y = g(x*)
+> tức là đạo hàm cấp hai của g⁻¹, evaluate tại y = g(x*)
 >
 >
 >
-> Nếu g là hàm phi tuyến thì ginv cũng vậy, nên đạo hàm cấp 1 của nó của
+> Nếu g là hàm phi tuyến thì g⁻¹ cũng vậy, nên đạo hàm cấp 1 của nó của
 > nó ko phải hằng số (ví dụ hàm đa thức bậc 2 thì đạo hàm là bậc một),  và
 > khi đó đạo hàm cấp 2 chắc chắn là khác 0
 >
 >
 >
-> (ví dụ nếu ginv(x) = x^2, thì d/dx ginv(x) = 2x, d/dx [d/dx ginv(x)] = 2
+> (ví dụ nếu g⁻¹(x) = x², thì d/dx g⁻¹(x) = 2x, d/dx [d/dx g⁻¹(x)] = 2
 >
 >
 >
-> d/dx [d/dx ginv(x)] chỉ bằng 0 khi d/dx ginv(x) = constant, và khi đó ginv(x)
+> d/dx [d/dx g⁻¹(x)] chỉ bằng 0 khi d/dx g⁻¹(x) = constant, và khi đó g⁻¹(x)
 > phải là hàm bậc 1, cũng là g phải là phép biến đổi tuýen tính)
 >
 >
@@ -238,7 +238,7 @@
 
 > [!NOTE]
 > Gs tiếp tục lướt qua joint pdf của nhiều random variables X1,...Xn làm thành
-> vector **X** = [X1,...Xn] (ở đây là x = [x1,...xn], again, phải hiểu là đang nói
+> vector 𝐗 = [X1,...Xn] (ở đây là x = [x1,...xn], again, phải hiểu là đang nói
 > đến random variable vì mr Bishop đã thoát li khỏi convention kí hiệu của
 > toán như trong Casella, Stat110, vốn viết hoa để chỉ rv, viết thường để 
 > chỉ possible value của rv)
@@ -496,19 +496,19 @@
 >
 >
 > Và thật ra cái này mình đã gặp hoài trong chap 7 - Point estimator của  Casella:
-> MSE của một point estimator của θ, δ(**X**), được định nghĩa là
+> MSE của một point estimator của θ, δ(𝐗), được định nghĩa là
 >
 >
 >
-> MSE(δ, θ) = E_θ[L(δ(**X**), θ)] với L(δ, θ) là squared error loss
+> MSE(δ, θ) = E_θ[L(δ(𝐗), θ)] với L(δ, θ) là squared error loss
 >
 >
 >
-> L(δ(**X**), θ) = [δ(**X**) - θ]^2
+> L(δ(𝐗), θ) = [δ(𝐗) - θ]²
 >
 >
 >
-> ⇨ MSE(δ, θ) = E_θ[[δ(**X**) - θ]^2]
+> ⇨ MSE(δ, θ) = E_θ[[δ(𝐗) - θ]²]
 >
 >
 >
@@ -516,7 +516,7 @@
 >
 >
 >
-> [δ(**X**) - θ]^2, dĩ nhiên là một hàm apply lên sample **X** (và θ), nên nó là  một
+> [δ(𝐗) - θ]², dĩ nhiên là một hàm apply lên sample 𝐗 (và θ), nên nó là  một
 > random variable.
 >
 >
@@ -525,7 +525,7 @@
 >
 >
 >
-> ∫..∫[δ(**x**) - θ]^2 f(**x**|θ)d**x**  với f(**x**|θ) là distribution của sample
+> ∫..∫[δ(𝐱) - θ]² f(𝐱|θ)d𝐱  với f(𝐱|θ) là distribution của sample
 >
 >
 >
@@ -533,7 +533,7 @@
 >
 >
 >
-> Ở đây mình hiểu kí hiệu E_θ[[δ(**X**) - θ]^2], ý là, nó sẽ là hàm phụ thuộc θ
+> Ở đây mình hiểu kí hiệu E_θ[[δ(𝐗) - θ]²], ý là, nó sẽ là hàm phụ thuộc θ
 >
 >
 >
@@ -552,15 +552,15 @@
 >
 >
 >
-> Nên lúc này tính MSE(δ(**X**), θ)) với δ là Bayes estimator thì quả thật cả δ(X) và θ
-> đều là rv thì khi đó MSE(δ(**X**), θ)) là ví dụ điển hình của cái mà gs Bishop đang
+> Nên lúc này tính MSE(δ(𝐗), θ)) với δ là Bayes estimator thì quả thật cả δ(X) và θ
+> đều là rv thì khi đó MSE(δ(𝐗), θ)) là ví dụ điển hình của cái mà gs Bishop đang
 > nói tới.
 >
 >
 >
-> Và MSE có ý nghĩa là: Nếu với L(δ(**X**), θ) ta có loss của estimator trong dựa trên
-> observed value **X** = **x**. Thì bằng cách tính trung bình loss trên mọi possible value
-> của **X**, ta sẽ không còn phụ thuộc **X** nữa.
+> Và MSE có ý nghĩa là: Nếu với L(δ(𝐗), θ) ta có loss của estimator trong dựa trên
+> observed value 𝐗 = 𝐱. Thì bằng cách tính trung bình loss trên mọi possible value
+> của 𝐗, ta sẽ không còn phụ thuộc 𝐗 nữa.
 
 <br>
 
@@ -584,7 +584,7 @@
 >
 >
 > Còn nhớ, trong chap 7 Casella, cái estiamator thứ 3 được học chính là
-> Bayes estimator. δB(**X**)
+> Bayes estimator. δB(𝐗)
 >
 >
 >
@@ -595,9 +595,9 @@
 >
 >
 >
-> Nhưng khi thấy **X** = **x**, dùng Bayes theorem, ta có thể xây dựng
-> distribution của θ dựa trên biết **X** = **x**, π(θ|**x**) = f(**x**|θ) π(θ) /
-> f(**x**), gọi là posterior distribution.
+> Nhưng khi thấy 𝐗 = 𝐱, dùng Bayes theorem, ta có thể xây dựng
+> distribution của θ dựa trên biết 𝐗 = 𝐱, π(θ|𝐱) = f(𝐱|θ) π(θ) /
+> f(𝐱), gọi là posterior distribution.
 >
 >
 >
@@ -607,15 +607,15 @@
 >
 >
 > Ví dụ khi tính dùng loss là squared error loss, Bayes estimator sẽ là
-> E[θ|**x**] với θ ~ π(θ|**x**)
+> E[θ|𝐱] với θ ~ π(θ|𝐱)
 >
 >
 >
-> Khi đó, E[θ|**x**] = ∫θ π(θ|**x**) dθ thì nếu coi θ = f(θ) (identity function)
+> Khi đó, E[θ|𝐱] = ∫θ π(θ|𝐱) dθ thì nếu coi θ = f(θ) (identity function)
 >
 >
 >
-> thì nó chính là E[f|**x**] = ∫f(θ) π(θ|**x**) dθ = ∫π(θ|**x**) f(θ) dθ
+> thì nó chính là E[f|𝐱] = ∫f(θ) π(θ|𝐱) dθ = ∫π(θ|𝐱) f(θ) dθ
 >
 >
 >
@@ -640,7 +640,7 @@
 >
 >
 > Do đó, ta có thể lấy trị tuyệt đối nhưng có cách hay hơn là bình phương lên.
-> Và đó chính là Variance: VarX = E[(X - EX)^2].
+> Và đó chính là Variance: VarX = E[(X - EX)²].
 >
 >
 >
@@ -648,23 +648,23 @@
 >
 >
 >
-> VarX = E[(X - EX)^2] = E[X^2 -2XEX + (EX)^2] 
+> VarX = E[(X - EX)²] = E[X² -2XEX + (EX)²] 
 >
 >
 >
-> = EX^2 -E[2XEX] + E[(EX)^2]
+> = EX² -E[2XEX] + E[(EX)²]
 >
 >
 >
-> = EX^2 -2EXE[X] + (EX)^2 | EX là constant, dùng linearity E[cX] = cEX
+> = EX² -2EXE[X] + (EX)² | EX là constant, dùng linearity E[cX] = cEX
 >
 >
 >
-> = EX^2 -2(EX)^2 + (EX)^2
+> = EX² -2(EX)² + (EX)²
 >
 >
 >
-> = EX^2 - (EX)^2
+> = EX² - (EX)²
 >
 >
 >
@@ -783,7 +783,7 @@
 <p align="center"><kbd><img src="assets/swdd6klfenh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, gs nhắc đến việc khi **X**, **Y** là random variables vector (chữ thường là biến,
+> Rồi, gs nhắc đến việc khi 𝐗, 𝐘 là random variables vector (chữ thường là biến,
 > chữ đậm là vector)(Nếu có ai đọc note này ngoài mình thì sorry các bạn, ở đây, mình cứ dùng
 > notation theo chuẩn toán học (như sách Casella, Stat110-Joe Blizstein) (viết hoa với
 > biến, viết thường với giá trị của biến, cho đỡ rối, và so nó với công thức trong  sách,
@@ -792,36 +792,36 @@
 >
 >
 >
-> Khi đó Cov[**X**, **Y**] = E[(**X** - E**X**)(**Y**T - E[**Y**T])] (T ý là cách ghi
+> Khi đó Cov[𝐗, 𝐘] = E[(𝐗 - E𝐗)(𝐘ᵀ - E[𝐘ᵀ])] (T ý là cách ghi
 > transpose của mình)
 >
 >
 >
 > Cái này thì quả thật trong Casella lẫn Stat110 thật sự chưa từng nói tới. Nhưng có
-> thể nó cũng ko có gì khó, vì cơ bản là trong case này, Covariance giữa **X**, **Y**
-> sẽ là phản ánh covariance giữa từng random variable Xi (phần tử của **X**) và Yj
-> (phần tử của **Y**) thôi.
+> thể nó cũng ko có gì khó, vì cơ bản là trong case này, Covariance giữa 𝐗, 𝐘
+> sẽ là phản ánh covariance giữa từng random variable Xi (phần tử của 𝐗) và Yj
+> (phần tử của 𝐘) thôi.
 >
 >
 >
-> Khi **X** là vector, = [X1,...Xn]T, thì E**X** cũng là vector**:** [EX1, EX2, ... EXn]T
+> Khi 𝐗 là vector, = [X1,...Xn]ᵀ, thì E𝐗 cũng là vector**:** [EX1, EX2, ... EXn]ᵀ
 >
 >
 >
-> → **X** - E**X** sẽ là vector [X1 - EX1, X2 - EX2, ...Xn - EXn]
+> → 𝐗 - E𝐗 sẽ là vector [X1 - EX1, X2 - EX2, ...Xn - EXn]
 >
 >
 >
-> Tương tự, **Y** - E**Y** là vector [Y1 - EY1, ...Yn - EYn]
+> Tương tự, 𝐘 - E𝐘 là vector [Y1 - EY1, ...Yn - EYn]
 >
 >
 >
-> → (**X** - E**X**)(**Y**T - E(**Y**T) sẽ là gì?
+> → (𝐗 - E𝐗)(𝐘ᵀ - E(𝐘ᵀ) sẽ là gì?
 >
 >
 >
-> chính là [**X** - E**X**)(**Y** - E**Y**)T] và theo MIT 1806 đã biết, nhân vector u với
-> vT chính chính là outer product (tích ngoài), kết quả sẽ là một rank 1 matrix.
+> chính là [𝐗 - E𝐗)(𝐘 - E𝐘)ᵀ] và theo MIT 1806 đã biết, nhân vector u với
+> vᵀ chính chính là outer product (tích ngoài), kết quả sẽ là một rank 1 matrix.
 >
 >
 >
@@ -841,14 +841,14 @@
 >
 >
 >
-> Cũng dễ thấy nếu tính Covariance của **X** với chính nó: Cov(**X**, **X**) thì phần
-> tử trên đường chéo, sẽ chính là E[(Xi - EXi)(Ei - EXi)] = E[(Xi - EXi)^2] chính là
+> Cũng dễ thấy nếu tính Covariance của 𝐗 với chính nó: Cov(𝐗, 𝐗) thì phần
+> tử trên đường chéo, sẽ chính là E[(Xi - EXi)(Ei - EXi)] = E[(Xi - EXi)²] chính là
 > Var(Xi)
 >
 >
 >
-> Và trong sách này, gs Bishop sẽ ghi là Cov(**X**) cho gọn, tự hiểu là Cov(**X**,
-> **X**)
+> Và trong sách này, gs Bishop sẽ ghi là Cov(𝐗) cho gọn, tự hiểu là Cov(𝐗,
+> 𝐗)
 >
 >
 >
@@ -856,27 +856,27 @@
 >
 >
 >
-> Biến đổi tương tự, E{[**X** - E**X**)(**Y** - E**Y**)T]}
+> Biến đổi tương tự, E{[𝐗 - E𝐗)(𝐘 - E𝐘)ᵀ]}
 >
 >
 >
-> = E{[**X** - E**X**)(**Y**T - E(**Y**T)]}
+> = E{[𝐗 - E𝐗)(𝐘ᵀ - E(𝐘ᵀ)]}
 >
 >
 >
-> = E{**XY**T - (E**X**)(**Y**T) - **X**E(**Y**T) + E**X**E(**Y**T)} (nhân phân phối vô)
+> = E{**XY**ᵀ - (E𝐗)(𝐘ᵀ) - 𝐗E(𝐘ᵀ) + E𝐗E(𝐘ᵀ)} (nhân phân phối vô)
 >
 >
 >
-> = E[**XY**T] - E[(E**X**)(**Y**T)] - E[**X**E(**Y**T)] + E[E**X**E(**Y**T)] (linearity)
+> = E[**XY**ᵀ] - E[(E𝐗)(𝐘ᵀ)] - E[𝐗E(𝐘ᵀ)] + E[E𝐗E(𝐘ᵀ)] (linearity)
 >
 >
 >
-> = E[**XY**T] - (E**X**) E[(**Y**T)] - E(**Y**T) E[**X**] + E**X**E(**Y**T) (linearity)
+> = E[**XY**ᵀ] - (E𝐗) E[(𝐘ᵀ)] - E(𝐘ᵀ) E[𝐗] + E𝐗E(𝐘ᵀ) (linearity)
 >
 >
 >
-> = E[**XY**T] - (E**X**)E(**Y**T), chính là công thức 1.42
+> = E[**XY**ᵀ] - (E𝐗)E(𝐘ᵀ), chính là công thức 1.42
 
 **🔗 See also:** [Covariance of Predictive Distributions](./332_predictive_distribution.md#node-yslp52z)
 
