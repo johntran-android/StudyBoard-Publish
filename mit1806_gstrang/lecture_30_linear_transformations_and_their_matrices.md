@@ -112,6 +112,8 @@
 
 <a id="node-w1s2trw"></a>
 
+###### Shifting the Plane by Vector
+
 <p align="center"><kbd><img src="assets/3py7yheu4jp.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -121,8 +123,7 @@
 >
 >
 >
-> Me: thử lập luận như sau: (u+v)+v0 không bằng (u+v0)
-> + (v+v0) thành ra ko thỏa yêu cầu T(cu+dv) = cT(u) +
+> Me: thử lập luận như sau: (u+v)+v0 không bằng (u+v0) + (v+v0) thành ra ko thỏa yêu cầu T(cu+dv) = cT(u) +
 > dT(v) → **Không** phải linear transformation
 
 <br>
@@ -243,8 +244,7 @@
 <p align="center"><kbd><img src="assets/plrwimz3lpl.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và **check hai điều kiện** T(c*u) = cT(u), và T(c*u
-> + d*v) = c*T(u) + d*T(v) thì thấy nó thỏa:
+> Và **check hai điều kiện** T(c*u) = cT(u), và T(c*u + d*v) = c*T(u) + d*T(v) thì thấy nó thỏa:
 >
 >
 >
@@ -263,8 +263,7 @@
 >
 >
 >
-> Nhưng bài này cũng giúp mình hiểu rằng **T(v) = Av
-> + b** **KHÔNG PHẢI LÀ LINEAR TRANSFORMATION**.
+> Nhưng bài này cũng giúp mình hiểu rằng **T(v) = Av + b** **KHÔNG PHẢI LÀ LINEAR TRANSFORMATION**.
 >
 >
 >
