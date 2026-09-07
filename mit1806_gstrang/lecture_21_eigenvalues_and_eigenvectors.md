@@ -232,7 +232,7 @@
 >
 >
 >
-> Px = 0.x nên mọi vector trong nullspace sẽ đều là
+> Px = 0 × x nên mọi vector trong nullspace sẽ đều là
 > **eigenvector** với **eigenvalue = 0**
 
 <br>
