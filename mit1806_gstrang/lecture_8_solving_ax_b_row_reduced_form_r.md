@@ -78,9 +78,7 @@
 > dạng bậc thang, trong đó bên dưới pivot = 0)
 >
 >
->
-> -Khử A22: Trừ hàng 2 cho 2*hàng 1 → [0 0 2 4 b2-2b1]
-> -Khử A32: Trừ hàng 3 cho 3*hàng 1 →[0 0 2 4 b3-3b1]
+> −Khử A22: Trừ hàng 2 cho 2*hàng 1 → [0 0 2 4 b2-2b1]−Khử A32: Trừ hàng 3 cho 3*hàng 1 →[0 0 2 4 b3-3b1]
 
 <br>
 
@@ -325,6 +323,8 @@
 
 <a id="node-zekg2z1"></a>
 
+###### Particular and Nullspace Solutions
+
 <p align="center"><kbd><img src="assets/nu5hjt7vn1d.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -340,8 +340,7 @@
 >
 >
 >
-> Thành ra tập hợp mọi nghiệm sẽ là: vector (tức điểm) x_p
-> + một vector bất kì của cái 2D plane của nullspace, thì sẽ
+> Thành ra tập hợp mọi nghiệm sẽ là: vector (tức điểm) x_p + một vector bất kì của cái 2D plane của nullspace, thì sẽ
 > thành ra là một **CÁI 2D PLANE CÓ ĐI QUA X_P:** Nói rõ
 > hơn là, nullspace (mọi linear combination của special solution)
 > là một 2D plane (đương nhiên có đi qua O) và x_p là một điểm
