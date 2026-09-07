@@ -586,31 +586,28 @@
 
 <a id="node-vpxmij3"></a>
 
+###### Nullspace and Free Variables
+
 <p align="center"><kbd><img src="assets/y3g40wgpw1.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Chính xác: multiple với với C, bất kì (cũng chính là
-> linear combination của vector x) ta sẽ có nullspace, là
-> một line.
+> Chính xác: multiple với với C, bất kì (cũng chính là linear combination của vector x) ta sẽ có nullspace, là một line.
 >
 >
 >
-> Và gs cho biết khi gặp **câu hỏi tìm null space của
-> matrix**, mình sẽ làm tương tự đó là 
+> Và gs cho biết khi gặp **câu hỏi tìm null space của matrix**, mình sẽ làm tương tự đó là
 >
 >
 >
-> i) elimination, để **xác định được pivot cols** và **free cols**. 
+> i) elimination, để **xác định được pivot cols** và **free cols**.
 >
 >
 >
-> ii) sau đó **chọn giá trị tùy ý cho free variable** và **back 
-> substitution để tính ra pivot variable** → **Special solutions**
+> ii) sau đó **chọn giá trị tùy ý cho free variable** và **back substitution để tính ra pivot variable** → **Special solutions**
 >
 >
 >
-> iii) có được special solution rồi thì **mọi linear combination
-> của chúng chính là nullspace.**
+> iii) có được special solution rồi thì **mọi linear combination của chúng chính là nullspace.**
 >
 >
 >
@@ -618,8 +615,11 @@
 >
 >
 >
-> Ngoài ra nói thêm, nếu hỏi **basis của null space** thì nó
-> chính là **vector special solution**
+> ---
+>
+>
+>
+> Ngoài ra nói thêm, nếu hỏi **basis của null space** thì nó chính là **vector special solution**
 
 <br>
 
