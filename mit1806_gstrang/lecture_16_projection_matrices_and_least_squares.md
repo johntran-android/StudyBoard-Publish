@@ -819,7 +819,7 @@
 >
 >
 > Gỉa sử có bộ vector vuông góc nhau u1, u2...un thì tức là
-> ui.uj = 0 với mọi i khác j. Để chứng minh chúng độc lập,
+> ui × uj = 0 với mọi i khác j. Để chứng minh chúng độc lập,
 > theo định nghĩa của độc lập tuyến tính thì set các coefficient
 > duy nhất khiến linearly combine các vector thành 0 chỉ có
 > thể là mọi coeffcient đều bằng 0, tức là ta phải chứng minh 
