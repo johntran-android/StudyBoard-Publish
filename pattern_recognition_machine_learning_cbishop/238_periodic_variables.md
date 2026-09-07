@@ -16,7 +16,7 @@
 >
 >
 >
-> Ví dụ như ta có 2 observed value của hai random variable θ1, θ2 với θ1 = 1 độ, và θ2 = 359 độ. (θ1, θ2, chỉ là như X1, X2 thôi, là random variable trong sample, chẳng qua là vì trong bài toán này người ta sẽ dùng / đo hướng gió nên các random variable đây thể hiện góc của hướng gió. Có thể hiểu là θ1, θ2 là iid random sample \~ f(θ|μ, σ^2) Thì nếu lấy chọn gốc lại tại 0 độ, thì sample mean sẽ là 180, với standard deviation là 179. Nhưng nếu chọn gốc tại θ0 = 180 thì sample mean lại là 0, và standard deviation lại là 1.
+> Ví dụ như ta có 2 observed value của hai random variable θ1, θ2 với θ1 = 1 độ, và θ2 = 359 độ. (θ1, θ2, chỉ là như X1, X2 thôi, là random variable trong sample, chẳng qua là vì trong bài toán này người ta sẽ dùng / đo hướng gió nên các random variable đây thể hiện góc của hướng gió. Có thể hiểu là θ1, θ2 là iid random sample \~ f(θ|μ, σ²) Thì nếu lấy chọn gốc lại tại 0 độ, thì sample mean sẽ là 180, với standard deviation là 179. Nhưng nếu chọn gốc tại θ0 = 180 thì sample mean lại là 0, và standard deviation lại là 1.
 >
 >
 >
@@ -40,23 +40,23 @@
 <p align="center"><kbd><img src="assets/a49fz5ytbgh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ok, đại khái là, cách tiếp cận khác sẽ là như sau: Vì mục đích là mô hình hóa hướng gió, và đại lượng hướng, ngoài cách làm dùng hệ tọa độ cực (polar coordinate) và dùng thông số góc, để đại diện, thì vẫn có thể dùng một cặp giá trị (x1,x2), tức một 2D vector **x**, nằm trên unit circle để đại diện, vì lẽ dĩ nhiên mỗi một điểm như vậy, sẽ mang thông tin của một giá trị góc, và vì ta chỉ quan tâm đến hướng, nên ta chỉ cần xét những điểm nằm trên unit circle thôi.
+> Ok, đại khái là, cách tiếp cận khác sẽ là như sau: Vì mục đích là mô hình hóa hướng gió, và đại lượng hướng, ngoài cách làm dùng hệ tọa độ cực (polar coordinate) và dùng thông số góc, để đại diện, thì vẫn có thể dùng một cặp giá trị (x1,x2), tức một 2D vector 𝐱, nằm trên unit circle để đại diện, vì lẽ dĩ nhiên mỗi một điểm như vậy, sẽ mang thông tin của một giá trị góc, và vì ta chỉ quan tâm đến hướng, nên ta chỉ cần xét những điểm nằm trên unit circle thôi.
 >
 >
 >
-> Νhư vậy, giả sử với observed value của sample θ1, θ2,...θN, sẽ tương ứng với sampe, **x**1, **x**2, ...**x**N.
+> Νhư vậy, giả sử với observed value của sample θ1, θ2,...θN, sẽ tương ứng với sampe, 𝐱1, 𝐱2, ...𝐱N.
 >
 >
 >
-> Từ đó sample mean θbar = (Σi θi)/N sẽ tương ứng với sample mean **x**bar = (Σi **x**i)/N
+> Từ đó sample mean θbar = (Σi θi)/N sẽ tương ứng với sample mean 𝐱bar = (Σi 𝐱i)/N
 >
 >
 >
-> Rồi, vì θn sẽ liên hệ với **x**n thông qua: **x**n = (**x**n_1, **x**n_2) = (cos θn, sin θn) nên 
+> Rồi, vì θn sẽ liên hệ với 𝐱n thông qua: 𝐱n = (𝐱n_1, 𝐱n_2) = (cos θn, sin θn) nên 
 >
 >
 >
-> **xbar** = (**x**bar_1, **x**bar_2) = (rbar × cos(θbar), rbar × sin(θbar)).
+> **xbar** = (𝐱bar_1, 𝐱bar_2) = (rbar × cos(θbar), rbar × sin(θbar)).
 >
 >
 >
@@ -64,19 +64,19 @@
 >
 >
 >
-> tan(θbar) = **x**bar_1 / **x**bar_2 
+> tan(θbar) = 𝐱bar_1 / 𝐱bar_2 
 >
 >
 >
-> = \[(1/N) Σi **x**i_1\] / \[(1/N) Σi **x**i_2\] 
+> = \[(1/N) Σi 𝐱i_1\] / \[(1/N) Σi 𝐱i_2\] 
 >
 >
 >
-> = Σi **x**i_1 / Σi **x**i_2 
+> = Σi 𝐱i_1 / Σi 𝐱i_2 
 >
 >
 >
-> = Σi **x**i_1 / Σi **x**i_2
+> = Σi 𝐱i_1 / Σi 𝐱i_2
 >
 >
 >
@@ -88,7 +88,7 @@
 >
 >
 >
-> Nói chung ko có gì khó hiểu cả, chỉ là, thay vì ta dùng thước đo là góc θ để ghi nhận, thể hiện giá trị của các data (đồng nghĩa ta dùng Polar coordinate), thì ta dùng 2D vector **x** trên đường tròn unit, để ghi nhận cùng một quan sát. Từ đó, bằng cách này, ta không còn bị cái vụ phụ thuộc vào mốc làm chuẩn nữa.
+> Nói chung ko có gì khó hiểu cả, chỉ là, thay vì ta dùng thước đo là góc θ để ghi nhận, thể hiện giá trị của các data (đồng nghĩa ta dùng Polar coordinate), thì ta dùng 2D vector 𝐱 trên đường tròn unit, để ghi nhận cùng một quan sát. Từ đó, bằng cách này, ta không còn bị cái vụ phụ thuộc vào mốc làm chuẩn nữa.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **92/100**
@@ -120,7 +120,7 @@
 >
 >
 >
-> Và ta sẽ bắt đầu việc derive ra công thức của pdf von Mises như sau: Xét một phân phối Normal 2D: **X** \~ Normal(**μ**, **Σ**) có mean là **μ** = (μ1, μ2), covariance là σ^2 **I** (là 2x2 matrix).
+> Và ta sẽ bắt đầu việc derive ra công thức của pdf von Mises như sau: Xét một phân phối Normal 2D: 𝐗 \~ Normal(**μ**, **Σ**) có mean là **μ** = (μ1, μ2), covariance là σ² 𝐈 (là 2x2 matrix).
 >
 >
 >
@@ -132,31 +132,31 @@
 >
 >
 >
-> f**X**(**x**|**μ**,Σ) = công thức 2.43 = \[1/(2π)^(D/2)\] \[1/|**Σ**|^1/2\] exp\[-1/2(**x**-**μ**)T **Σ**inv(**x**-**μ**)\]
+> f𝐗(𝐱|**μ**,Σ) = công thức 2.43 = \[1/(2π)^(D/2)\] \[1/|**Σ**|^1/2\] exp\[-1/2(𝐱-**μ**)ᵀ **Σ**inv(𝐱-**μ**)\]
 >
 >
 >
-> Thì ở đây với D = 2, và **Σ** = σ^2 **I**, thì |**Σ**| = (σ^2)^2 ⇨ |**Σ**|^1/2 = σ^2.
+> Thì ở đây với D = 2, và **Σ** = σ² 𝐈, thì |**Σ**| = (σ²)² ⇨ |**Σ**|^1/2 = σ².
 >
 >
 >
-> Và **Σinv** sẽ là (1/σ^2) **I ⇨ Σ**inv(**x**-**μ**) = \[(x1-μ1)/σ^2; (x2-μ2)/σ^2\]T
+> Và **Σ⁻¹** sẽ là (1/σ²) **I ⇨ Σ**inv(𝐱-**μ**) = \[(x1-μ1)/σ²; (x2-μ2)/σ²\]ᵀ
 >
 >
 >
-> ⇨ (**x**-**μ**)T **Σ**inv(**x**-**μ**) = \[x1-μ1; x2-μ2\] dot product \[(x1-μ1)/σ^2; (x2-μ2)/σ^2\]
+> ⇨ (𝐱-**μ**)ᵀ **Σ**inv(𝐱-**μ**) = \[x1-μ1; x2-μ2\] dot product \[(x1-μ1)/σ²; (x2-μ2)/σ²\]
 >
 >
 >
-> = (x1-μ1)^2/σ^2 + (x2-μ2)^2/σ^2
+> = (x1-μ1)²/σ² + (x2-μ2)²/σ²
 >
 >
 >
-> = \[(x1-μ1)^2 + (x2-μ2)^2\] /σ^2
+> = \[(x1-μ1)² + (x2-μ2)²\] /σ²
 >
 >
 >
-> Thay vào ta sẽ có f(**x**|**μ**,**Σ**) = (1/2πσ^2) exp{-(1/2σ^2)\[(x1-μ1)^2 + (x2-μ2)^2\]}
+> Thay vào ta sẽ có f(𝐱|**μ**,**Σ**) = (1/2πσ²) exp{-(1/2σ²)\[(x1-μ1)² + (x2-μ2)²\]}
 >
 >
 >
@@ -172,19 +172,19 @@
 >
 >
 >
-> ⇔ (1/2πσ^2) exp{-(1/2σ^2)\[(x1-μ1)^2 + (x2-μ2)^2\]} = c
+> ⇔ (1/2πσ²) exp{-(1/2σ²)\[(x1-μ1)² + (x2-μ2)²\]} = c
 >
 >
 >
-> ⇔ exp{-(1/2σ^2)\[(x1-μ1)^2 + (x2-μ2)^2\]} = c 2πσ^2
+> ⇔ exp{-(1/2σ²)\[(x1-μ1)² + (x2-μ2)²\]} = c 2πσ²
 >
 >
 >
-> ⇔ -(1/2σ^2)\[(x1-μ1)^2 + (x2-μ2)^2\] = log(c 2πσ^2)
+> ⇔ -(1/2σ²)\[(x1-μ1)² + (x2-μ2)²\] = log(c 2πσ²)
 >
 >
 >
-> ⇔ (x1-μ1)^2 + (x2-μ2)^2 = - log(c 2πσ^2) 2σ^2  = constant d
+> ⇔ (x1-μ1)² + (x2-μ2)² = - log(c 2πσ²) 2σ²  = constant d
 >
 >
 >
@@ -208,7 +208,7 @@
 <p align="center"><kbd><img src="assets/az9ecki9hz7.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Từ note trước ta đã hiểu f(**x**|**μ**,**Σ**) = (1/2πσ^2) exp{-(1/2σ^2)\[(x1-μ1)^2 + (x2-μ2)^2\]}
+> Từ note trước ta đã hiểu f(𝐱|**μ**,**Σ**) = (1/2πσ²) exp{-(1/2σ²)\[(x1-μ1)² + (x2-μ2)²\]}
 >
 >
 >
@@ -238,7 +238,7 @@
 >
 >
 >
-> (có thể tính |det J| ra ko khó, vì matrix này là matrix 2x2: \[∂x1/∂θ, ∂x1/∂r; ∂x2/∂θ, ∂x2/∂r\] = \[cos(θ), -rsin(θ); sin(θ), rcos(θ)\] = rcos(θ)cos(θ) - \[-rsin(θ)sin(θ)\] = r\[cos(θ)^2 + sin(θ)^2\] = r ⇨ |det J| = |r| = r)
+> (có thể tính |det J| ra ko khó, vì matrix này là matrix 2x2: \[∂x1/∂θ, ∂x1/∂r; ∂x2/∂θ, ∂x2/∂r\] = \[cos(θ), -rsin(θ); sin(θ), rcos(θ)\] = rcos(θ)cos(θ) - \[-rsin(θ)sin(θ)\] = r\[cos(θ)² + sin(θ)²\] = r ⇨ |det J| = |r| = r)
 >
 >
 >
@@ -246,7 +246,7 @@
 >
 >
 >
-> = (r/2πσ^2) exp{-(1/2σ^2)\[(r cos(θ)-μ1)^2 + (r sin(θ)-μ2)^2\]}
+> = (r/2πσ²) exp{-(1/2σ²)\[(r cos(θ)-μ1)² + (r sin(θ)-μ2)²\]}
 >
 >
 >
@@ -254,15 +254,15 @@
 >
 >
 >
-> = -(1/2σ^2)\[(r cos(θ)-μ1)^2 + (r sin(θ)-μ2)^2\]
+> = -(1/2σ²)\[(r cos(θ)-μ1)² + (r sin(θ)-μ2)²\]
 >
 >
 >
-> = -(1/2σ^2)\[r^2 cos(θ)^2 - 2r μ1 cos(θ) + μ1^2 + r^2 sin(θ)^2 - 2r μ2 sin(θ) + μ2^2\]
+> = -(1/2σ²)\[r² cos(θ)² - 2r μ1 cos(θ) + μ1² + r² sin(θ)² - 2r μ2 sin(θ) + μ2²\]
 >
 >
 >
-> = -(1/2σ^2)\[r^2 (cos(θ)^2 + sin(θ)^2) - 2 r μ1 cos(θ) - 2 r μ2 sin(θ) + μ1^2 + μ2^2\]
+> = -(1/2σ²)\[r² (cos(θ)² + sin(θ)²) - 2 r μ1 cos(θ) - 2 r μ2 sin(θ) + μ1² + μ2²\]
 >
 >
 >
@@ -270,7 +270,7 @@
 >
 >
 >
-> = -(1/2σ^2)\[r^2 - 2 r r0 cos(θ0) cos(θ) - 2 r r0 sin(θ0) sin(θ) + (r0 cos θ0)^2 + (r0 sin θ0)^2\]
+> = -(1/2σ²)\[r² - 2 r r0 cos(θ0) cos(θ) - 2 r r0 sin(θ0) sin(θ) + (r0 cos θ0)² + (r0 sin θ0)²\]
 >
 >
 >
@@ -278,31 +278,31 @@
 >
 >
 >
-> = -(1/2σ^2)\[1 - 2 r0 cos(θ0) cos(θ) - 2 r0 sin(θ0) sin(θ) + r0^2\]
+> = -(1/2σ²)\[1 - 2 r0 cos(θ0) cos(θ) - 2 r0 sin(θ0) sin(θ) + r0²\]
 >
 >
 >
-> = -(1/2σ^2)\[1 + r0^2 - 2 r0 cos(θ0) cos(θ) - 2 r0 sin(θ0) sin(θ)\]
+> = -(1/2σ²)\[1 + r0² - 2 r0 cos(θ0) cos(θ) - 2 r0 sin(θ0) sin(θ)\]
 >
 >
 >
-> = -(1/2σ^2)\[1 + r0^2 - 2 r0 cos(θ0) cos(θ) - 2 r0 sin(θ0) sin(θ)\]
+> = -(1/2σ²)\[1 + r0² - 2 r0 cos(θ0) cos(θ) - 2 r0 sin(θ0) sin(θ)\]
 >
 >
 >
-> = -(1/2σ^2)(1 + r0^2) + (1/2σ^2)\[2 r0 cos(θ0) cos(θ) + 2 r0 sin(θ0) sin(θ)\]
+> = -(1/2σ²)(1 + r0²) + (1/2σ²)\[2 r0 cos(θ0) cos(θ) + 2 r0 sin(θ0) sin(θ)\]
 >
 >
 >
-> = const + (r0/σ^2)\[cos(θ0) cos(θ) + sin(θ0) sin(θ)\]
+> = const + (r0/σ²)\[cos(θ0) cos(θ) + sin(θ0) sin(θ)\]
 >
 >
 >
-> = (r0/2σ^2)\[cos(θ0) cos(θ) + sin(θ0) sin(θ)\] + const
+> = (r0/2σ²)\[cos(θ0) cos(θ) + sin(θ0) sin(θ)\] + const
 >
 >
 >
-> = (r0/σ^2)\[cos(θ - θ0)\] + const
+> = (r0/σ²)\[cos(θ - θ0)\] + const
 >
 >
 >
@@ -314,7 +314,7 @@
 >
 >
 >
-> f(θ) = (1/2πσ^2) exp{(r0/σ^2)cos(θ - θ0) + const} |J|
+> f(θ) = (1/2πσ²) exp{(r0/σ²)cos(θ - θ0) + const} |J|
 >
 >
 >
@@ -322,7 +322,7 @@
 >
 >
 >
-> Đặt m = r0 / σ^2
+> Đặt m = r0 / σ²
 >
 >
 >
@@ -434,7 +434,7 @@
 >
 >
 >
-> Thế rồi, để đi xây dựng một phân phối chuẩn nhưng dành cho biến chu kì (periodic variable), người ta có ý tưởng làm như sau: Lôi một phân phối 2D Normal(**μ**, σ^2 × **I**), và phương hướng làm (xây dựng một hàm density có tính chất của một phân phối Normal hình chuông nhưng lại có tính chu kì, đó là pdf tại θ + 2π phải bằng pdf tại θ (theo quy ước, người ta dùng chu kì 2π) như sau: CHUYỂN HÀM NORMAL SANG BIẾN θ, r (dùng change of variable, để xây dựng pdf của θ, r từ pdf của X1, X2), sau đó, GIỚI HẠN NÓ TRÊN RÀNG BUỘC R = 1. Lúc này, ta được một cái hàm density có tính chất chu kì (có được là do ràng buộc r = 1, khiến khi θ thay đổi, sẽ tương ứng ta chạy vòng quanh đường tròn đơn vị → mang lại tính chu kì) và đồng thời thừa hưởng đặc điểm của phân phối Normal, vì kiểu như khi chạy một vòng quanh đường tròn đơn vị, giá trị hàm số cũng thay đổi theo hình chuông: cao khi tới gần góc phần tư thứ 1, giảm khi đi xa ra khỏi đó.
+> Thế rồi, để đi xây dựng một phân phối chuẩn nhưng dành cho biến chu kì (periodic variable), người ta có ý tưởng làm như sau: Lôi một phân phối 2D Normal(**μ**, σ² × 𝐈), và phương hướng làm (xây dựng một hàm density có tính chất của một phân phối Normal hình chuông nhưng lại có tính chu kì, đó là pdf tại θ + 2π phải bằng pdf tại θ (theo quy ước, người ta dùng chu kì 2π) như sau: CHUYỂN HÀM NORMAL SANG BIẾN θ, r (dùng change of variable, để xây dựng pdf của θ, r từ pdf của X1, X2), sau đó, GIỚI HẠN NÓ TRÊN RÀNG BUỘC R = 1. Lúc này, ta được một cái hàm density có tính chất chu kì (có được là do ràng buộc r = 1, khiến khi θ thay đổi, sẽ tương ứng ta chạy vòng quanh đường tròn đơn vị → mang lại tính chu kì) và đồng thời thừa hưởng đặc điểm của phân phối Normal, vì kiểu như khi chạy một vòng quanh đường tròn đơn vị, giá trị hàm số cũng thay đổi theo hình chuông: cao khi tới gần góc phần tư thứ 1, giảm khi đi xa ra khỏi đó.
 >
 >
 >
@@ -514,7 +514,7 @@
 >
 >
 >
-> (chỗ này dễ lú, nên nhắc lại lí thuyết chút: trong cách thể hiện theo lí thuyết trong sách Casella, ta có random sample X = X1,X2,...Xn, độc lập, và có cùng phân phối f(x|θ), và ta muốn infer θ, tức là xây dựng hàm W(**X**), sao cho giá trị W(**x**), tức W(**X**) evaluate tại giá trị quan sát **X** = **x** = (x1,x2,....xn) sẽ có thể estimate tốt cho giá trị θ chưa biết. Và một trong cách làm, đó là dùng hàm W(**X**) = argmax L(θ|**X**), gọi là maximum likelihood, có nghĩa là, viêc đi giải bài tóan tối ưu này sẽ cho ta ra một cái hàm theo **X**, mà khi lắp giá trị quan sát được của **X** vào, tức W(**x**) = argmax L(θ|**x**), thì ta sẽ có giá trị θ hợp lí nhất giải thích cho sự kiện **X** = **x**.
+> (chỗ này dễ lú, nên nhắc lại lí thuyết chút: trong cách thể hiện theo lí thuyết trong sách Casella, ta có random sample X = X1,X2,...Xn, độc lập, và có cùng phân phối f(x|θ), và ta muốn infer θ, tức là xây dựng hàm W(𝐗), sao cho giá trị W(𝐱), tức W(𝐗) evaluate tại giá trị quan sát 𝐗 = 𝐱 = (x1,x2,....xn) sẽ có thể estimate tốt cho giá trị θ chưa biết. Và một trong cách làm, đó là dùng hàm W(𝐗) = argmax L(θ|𝐗), gọi là maximum likelihood, có nghĩa là, viêc đi giải bài tóan tối ưu này sẽ cho ta ra một cái hàm theo 𝐗, mà khi lắp giá trị quan sát được của 𝐗 vào, tức W(𝐱) = argmax L(θ|𝐱), thì ta sẽ có giá trị θ hợp lí nhất giải thích cho sự kiện 𝐗 = 𝐱.
 >
 >
 >
@@ -540,11 +540,11 @@
 >
 >
 >
-> = \[1/2πI0(m)\]^n Πi=1:n \[exp{m cos(θi - θ0)}\]
+> = \[1/2πI0(m)\]ⁿ Πi=1:n \[exp{m cos(θi - θ0)}\]
 >
 >
 >
-> = {\[1/2πI0(m)\]^n} × exp{m Σi=1:n cos(θi - θ0)}
+> = {\[1/2πI0(m)\]ⁿ} × exp{m Σi=1:n cos(θi - θ0)}
 >
 >
 >
@@ -556,7 +556,7 @@
 >
 >
 >
-> ∝ ln { \[1/2πI0(m)\]^n × exp{m Σi=1:n cos(θi - θ0)}}
+> ∝ ln { \[1/2πI0(m)\]ⁿ × exp{m Σi=1:n cos(θi - θ0)}}
 >
 >
 >
