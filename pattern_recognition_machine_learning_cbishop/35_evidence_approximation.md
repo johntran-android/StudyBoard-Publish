@@ -18,11 +18,11 @@
 >
 >
 >
-> Có thể tóm tắt nhanh vài ý chính: Khi tiếp cận bài toán regression theo Bayesian approach, ta sẽ coi tham số **w** như random variable, sau đó, chọn prior distribution f(**w**) (ví dụ f(**w**|α) là normal(0, (1/α)**I**) và dùng Bayes theorem xây dựng posterior distribution f(**w**|𝒟) (ví dụ ra một normal distribution). Để rồi, nếu theo Bayesian "nửa mùa", ta sẽ lấy một point estimate của **w** từ posterior (ví dụ dùng **w** có posterior probability cao nhất, **w**MAP) để gắn vào hàm prediction y(**w**, **x**). Hoặc làm Bayesian "hoàn toàn", thì ta marginalizing f(t|x, **w**, 𝒟) over w theo posterior distribution của, để có predictive distribution f(t|**x**, 𝒟) không còn phụ thuộc **w** nữa. Vậy thì có thể thấy, trong quá trình đó ta cũng đã đặt ra giả định về prior distribution của **w**, cụ thể là dạng của nó và (siêu) tham số α.
+> Có thể tóm tắt nhanh vài ý chính: Khi tiếp cận bài toán regression theo Bayesian approach, ta sẽ coi tham số 𝐰 như random variable, sau đó, chọn prior distribution f(𝐰) (ví dụ f(𝐰|α) là normal(0, (1/α)𝐈) và dùng Bayes theorem xây dựng posterior distribution f(𝐰|𝒟) (ví dụ ra một normal distribution). Để rồi, nếu theo Bayesian "nửa mùa", ta sẽ lấy một point estimate của 𝐰 từ posterior (ví dụ dùng 𝐰 có posterior probability cao nhất, 𝐰MAP) để gắn vào hàm prediction y(𝐰, 𝐱). Hoặc làm Bayesian "hoàn toàn", thì ta marginalizing f(t|x, 𝐰, 𝒟) over w theo posterior distribution của, để có predictive distribution f(t|𝐱, 𝒟) không còn phụ thuộc 𝐰 nữa. Vậy thì có thể thấy, trong quá trình đó ta cũng đã đặt ra giả định về prior distribution của 𝐰, cụ thể là dạng của nó và (siêu) tham số α.
 >
 >
 >
-> Bên cạnh đó, trong lúc xây dựng mô hình dự đoán, ta cũng đặt giả định là nhiễu (error, ε = T - y(**w**, **x**) sẽ tuân theo phân phối n(0, 1/β). Và β, lại là một giá trị mà ta chọn / giả định.
+> Bên cạnh đó, trong lúc xây dựng mô hình dự đoán, ta cũng đặt giả định là nhiễu (error, ε = T - y(𝐰, 𝐱) sẽ tuân theo phân phối n(0, 1/β). Và β, lại là một giá trị mà ta chọn / giả định.
 >
 >
 >
@@ -34,7 +34,7 @@
 >
 >
 >
-> Do đó ở đây, ta sẽ thảo luận một hướng, trong đó ta sẽ làm theo lối XẤP XỈ HÓA. Và ý tưởng cũng đơn giản, giống như khi ta không marginalizing over mọi **w**, để có predictive distribution, thì ta có thể làm theo lối xấp xỉ bằng cách dùng **w** có posterior distribution cao nhất rồi lắp vào hàm prediction mà ta nói là làm theo kiểu nửa mùa ở trên. Thì đây cũng vậy, ta không marginalizing over mọi α, β. Thì ta chọn point estimate α, β theo tiêu chí nào đó, Và cụ thể là: maximize marginal likelihood (và cách làm này có vài tên khác như empirical Bayes, ....)
+> Do đó ở đây, ta sẽ thảo luận một hướng, trong đó ta sẽ làm theo lối XẤP XỈ HÓA. Và ý tưởng cũng đơn giản, giống như khi ta không marginalizing over mọi 𝐰, để có predictive distribution, thì ta có thể làm theo lối xấp xỉ bằng cách dùng 𝐰 có posterior distribution cao nhất rồi lắp vào hàm prediction mà ta nói là làm theo kiểu nửa mùa ở trên. Thì đây cũng vậy, ta không marginalizing over mọi α, β. Thì ta chọn point estimate α, β theo tiêu chí nào đó, Và cụ thể là: maximize marginal likelihood (và cách làm này có vài tên khác như empirical Bayes, ....)
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
@@ -58,27 +58,27 @@
 >
 >
 >
-> Câu chuyện là, ta đã có prior / và posterior distribution của **w**: f(**w**|α) và f(**w**|𝒟,α,β)
+> Câu chuyện là, ta đã có prior / và posterior distribution của 𝐰: f(𝐰|α) và f(𝐰|𝒟,α,β)
 >
 >
 >
-> với 𝒟 là observed data, mà ở đây, chính là (các cặp (**x**1, t1),...(**x**N, tN) làm thành matrix **X** và vector **t**). Gs Bishop ghi là p(**w**|**t**,α,β) thì phải hiểu nó là p(**w**|**t**,**X**,α, β), hay p(**w**|𝒟,α,β).
+> với 𝒟 là observed data, mà ở đây, chính là (các cặp (𝐱1, t1),...(𝐱N, tN) làm thành matrix 𝐗 và vector 𝐭). Gs Bishop ghi là p(𝐰|𝐭,α,β) thì phải hiểu nó là p(𝐰|𝐭,𝐗,α, β), hay p(𝐰|𝒟,α,β).
 >
 >
 >
-> Từ đó ta có predictive distribution f(t|𝒟,α,β), hay f(t|**t**,α,β) bằng cách marginalizing over all **w** \~ posterior.
+> Từ đó ta có predictive distribution f(t|𝒟,α,β), hay f(t|𝐭,α,β) bằng cách marginalizing over all 𝐰 \~ posterior.
 >
 >
 >
-> f(t|**t**,α,β) = ∫f(t|**w**,β)f(**w**|**t**,α,β)d**w** (1)
+> f(t|𝐭,α,β) = ∫f(t|𝐰,β)f(𝐰|𝐭,α,β)d𝐰 (1)
 >
 >
 >
-> Nay coi α, β là random variable có joint distribution f(α, β|**t**) nữa, thì ta lại marginalizing f(t|**t**,α,β) over distribution này, để ko còn α, β:
+> Nay coi α, β là random variable có joint distribution f(α, β|𝐭) nữa, thì ta lại marginalizing f(t|𝐭,α,β) over distribution này, để ko còn α, β:
 >
 >
 >
-> ∫∫f(t|**t**,α,β) f(α, β|**t**) dα dβ (tích phân kép, vì ta đang tích phân over α và β)
+> ∫∫f(t|𝐭,α,β) f(α, β|𝐭) dα dβ (tích phân kép, vì ta đang tích phân over α và β)
 >
 >
 >
@@ -86,11 +86,11 @@
 >
 >
 >
-> = ∫∫∫f(t|**w**,β)f(**w**|**t**,α,β)d**w** f(α, β|**t**) dα dβ
+> = ∫∫∫f(t|𝐰,β)f(𝐰|𝐭,α,β)d𝐰 f(α, β|𝐭) dα dβ
 >
 >
 >
-> = ∫∫∫f(t|**w**,β)f(**w**|**t**,α,β)f(α, β|**t**) d**w** dα dβ → 3.74
+> = ∫∫∫f(t|𝐰,β)f(𝐰|𝐭,α,β)f(α, β|𝐭) d𝐰 dα dβ → 3.74
 >
 >
 >
@@ -106,43 +106,43 @@
 >
 >
 >
-> Ban đầu, ta có bộ dữ liệu quan sát được, là những cặp (vector input, và target value): (**x**1, t1),...,(**x**N, tN).
+> Ban đầu, ta có bộ dữ liệu quan sát được, là những cặp (vector input, và target value): (𝐱1, t1),...,(𝐱N, tN).
 >
 >
 >
-> Ta gom **x**1,...**x**N thành matrix **X**, có các hàng là (**x**1)T,....(**x**N)T
+> Ta gom 𝐱1,...𝐱N thành matrix 𝐗, có các hàng là (𝐱1)ᵀ,....(𝐱N)ᵀ
 >
 >
 >
-> Gom t1,...tN thành vector **t**.
+> Gom t1,...tN thành vector 𝐭.
 >
 >
 >
-> Và có thể đặt 𝒟 (data), là cái cục (**X**, t) này, là toàn bộ dữ liệu quan sát được.
+> Và có thể đặt 𝒟 (data), là cái cục (𝐗, t) này, là toàn bộ dữ liệu quan sát được.
 >
 >
 >
-> Rồi, kế đến ta xây dựng mô hình dựa đoán, có bản chất chỉ là cái hàm y(**w**, **x**), nhận vào input vector x, và dự đoán ra t. Ví dụ ta chọn hàm tuyến tính của **w**: y(**w**, **x**) = **w**TΦ(**x**).
+> Rồi, kế đến ta xây dựng mô hình dựa đoán, có bản chất chỉ là cái hàm y(𝐰, 𝐱), nhận vào input vector x, và dự đoán ra t. Ví dụ ta chọn hàm tuyến tính của 𝐰: y(𝐰, 𝐱) = 𝐰ᵀΦ(𝐱).
 >
 >
 >
-> Và để tìm **w** theo trường phái Bayesian, ta coi nó như random variable, giả định prior distribution của nó là f(**w**|α), ví dụ n(0, (1/α)**I**). Đến đây, cái vụ ghi là "|α" trong f(**w**|α) là vì hàm pdf của **w** phụ thuộc α, vậy thôi.
+> Và để tìm 𝐰 theo trường phái Bayesian, ta coi nó như random variable, giả định prior distribution của nó là f(𝐰|α), ví dụ n(0, (1/α)𝐈). Đến đây, cái vụ ghi là "|α" trong f(𝐰|α) là vì hàm pdf của 𝐰 phụ thuộc α, vậy thôi.
 >
 >
 >
-> Rồi, dùng Bayes theorem, ta mới derive posterior của **w**:
+> Rồi, dùng Bayes theorem, ta mới derive posterior của 𝐰:
 >
 >
 >
-> Và Bayes rule nói rằng f(x|y) = f(y|x)f(x)/f(y). Áp dụng cho **w**, và 𝒟 thì đáng lí nếu chỉ chỉ cần ghi thế này là gọn.
+> Và Bayes rule nói rằng f(x|y) = f(y|x)f(x)/f(y). Áp dụng cho 𝐰, và 𝒟 thì đáng lí nếu chỉ chỉ cần ghi thế này là gọn.
 >
 >
 >
-> f(**w**|𝒟) = f(𝒟|**w**)f(**w**)/f(𝒟)
+> f(𝐰|𝒟) = f(𝒟|𝐰)f(𝐰)/f(𝒟)
 >
 >
 >
-> hay f(**w**|(**X**,**t**)) = f((**X**,**t**)|**w**)f(**w**)/f((**X**,**t**))
+> hay f(𝐰|(𝐗,𝐭)) = f((𝐗,𝐭)|𝐰)f(𝐰)/f((𝐗,𝐭))
 >
 >
 >
@@ -150,19 +150,19 @@
 >
 >
 >
-> f(**w**|𝒟) ∝ f(𝒟|**w**)f(**w**)
+> f(𝐰|𝒟) ∝ f(𝒟|𝐰)f(𝐰)
 >
 >
 >
-> hay f(**w**|(**X**,**t**)) ∝ f((**X**,**t**)|**w**)f(**w**)
+> hay f(𝐰|(𝐗,𝐭)) ∝ f((𝐗,𝐭)|𝐰)f(𝐰)
 >
 >
 >
-> Có điều, rắc rối là, f(**w**) phụ thuộc α, nên phải ghi là f(**w**|α). Nên trở thành:
+> Có điều, rắc rối là, f(𝐰) phụ thuộc α, nên phải ghi là f(𝐰|α). Nên trở thành:
 >
 >
 >
-> f(**w**|𝒟) ∝ f(𝒟|**w**)f(**w**|α)
+> f(𝐰|𝒟) ∝ f(𝒟|𝐰)f(𝐰|α)
 >
 >
 >
@@ -170,79 +170,51 @@
 >
 >
 >
-> f(**w**|𝒟,α) ∝ f(𝒟|**w**)f(**w**|α)
+> f(𝐰|𝒟,α) ∝ f(𝒟|𝐰)f(𝐰|α)
 >
 >
 >
-> hay f(**w**|(**X**,**t**),α) ∝ f((**X**,**t**)|**w**)f(**w**|α)
+> hay f(𝐰|(𝐗,𝐭),α) ∝ f((𝐗,𝐭)|𝐰)f(𝐰|α)
 >
 >
 >
-> Tiếp, lại thêm một vụ nữa, rằng khi ta đặt ra gỉa định nhiễu \~ n(0,1/β), để rồi điều này tương đương gỉa định T \~ n(y(**x**,**w**), 1/β). Thì lúc này ta có phân phối của T,**X** sẽ phụ thuộc thêm β nữa: f(**x**,t|**w**,β). Do đó f((**X**,**t**)|**w**) cũng thành f((**X**,**t**)|**w**,β)
+> Tiếp, lại thêm một vụ nữa, rằng khi ta đặt ra gỉa định nhiễu \~ n(0,1/β), để rồi điều này tương đương gỉa định T \~ n(y(𝐱,𝐰), 1/β). Thì lúc này ta có phân phối của T,𝐗 sẽ phụ thuộc thêm β nữa: f(𝐱,t|𝐰,β). Do đó f((𝐗,𝐭)|𝐰) cũng thành f((𝐗,𝐭)|𝐰,β)
 >
 >
 >
-> f(**w**|𝒟,α) ∝ f(𝒟|**w**,β)f(**w**|α)
+> f(𝐰|𝒟,α) ∝ f(𝒟|𝐰,β)f(𝐰|α)
 >
 >
 >
-> hay f(**w**|(**X**,**t**),α,β) ∝ f((**X**,**t**)|**w**,β)f(**w**|α)
+> hay f(𝐰|(𝐗,𝐭),α,β) ∝ f((𝐗,𝐭)|𝐰,β)f(𝐰|α)
 >
 >
 >
-> Tiếp theo, lại rắc rối ở chỗ, trong bài toàn regression, người ta CHỈ COI t, TỨC TARGET LÀ RANDOM VARIABLE. Nên thay vì xem (**X**, **t**) là observed value của \[random variable matrix **X**, random variable vector **T**\]. Nay, ta chỉ coi **t**|**X** là observed value của random variable vector **T** dựa trên input là matrix **X**.
+> Tiếp theo, lại rắc rối ở chỗ, trong bài toàn regression, người ta CHỈ COI t, TỨC TARGET LÀ RANDOM VARIABLE. Nên thay vì xem (𝐗, 𝐭) là observed value của \[random variable matrix 𝐗, random variable vector 𝐓\]. Nay, ta chỉ coi 𝐭|𝐗 là observed value của random variable vector 𝐓 dựa trên input là matrix 𝐗.
 >
 >
 >
-> Nên f(**w**|𝒟,α,β) ∝ f(𝒟|**w**,β)f(**w**|α) trở thành:
+> Nên f(𝐰|𝒟,α,β) ∝ f(𝒟|𝐰,β)f(𝐰|α) trở thành:
 >
 >
 >
-> f(**w**|**t**,α,β,**X**) ∝ f(**t**|**w**,β,**X**)f(**w**|α)
+> f(𝐰|𝐭,α,β,𝐗) ∝ f(𝐭|𝐰,β,𝐗)f(𝐰|α)
 >
 >
 >
-> với **X** đứng trong điều kiện của bên chỉ như là hằng số. Thành ra người ta (ông Bishop) mới lờ nó đi luôn. Và viết thành:
+> với 𝐗 đứng trong điều kiện của bên chỉ như là hằng số. Thành ra người ta (ông Bishop) mới lờ nó đi luôn. Và viết thành:
 >
 >
 >
-> f(**w**|**t**,α,β) ∝ f(**t**|**w**,β)f(**w**|α)
+> f(𝐰|𝐭,α,β) ∝ f(𝐭|𝐰,β)f(𝐰|α)
 >
 >
 >
-> Nhưng nếu ta không lờ thằng **X** đi, ta sẽ có
+> Nhưng nếu ta không lờ thằng 𝐗 đi, ta sẽ có
 >
 >
 >
-> f(**w**|**t**,α,β,**X**) ∝ f(**t**|**w**,β,**X**)f(**w**|α)
->
->
->
-> ---
->
->
->
-> Tới đây, lôi cái f(t,**x**|**w**,β), lúc này (sau khi nói chỉ coi T là random variable), nó trở thành f(t|**x**,**w**,β). Thì, ta mới marginalizing over **w** để có predictive distribution, không còn phụ thuộc **w**:
->
->
->
-> mà bản chất chỉ là ta coi f(t|**x**,**w**,β) như random variable phụ thuộc random variable **w**, và ta lấy kì vọng của random variable này:
->
->
->
-> E\[f(t|**x**,**w**,β)\] với **w** \~ f(**w**|**t**,α,β,**X**), sẽ bằng:
->
->
->
-> ∫f(t|**x**,**w**,β)f(**w**|**t**,α,β,**X**)d**w**
->
->
->
-> và cái này dĩ nhiên là không còn phụ thuộc **w**, nhưng nó vẫn phải phụ thuộc đầy đủ bộ sậu: input **x** (là cái input vào y(**x**,**w**)), **t**, α, β, **X**. Nên nó sẽ phải là f(t|**t**,**x**,β,α,**X**)
->
->
->
-> Và nếu lờ **x**, **X cho gọn** đi như cách gs Bishop làm, thì nó ra f(t|**t**,α,β) chính là cái predictive distribution 3.57 (xem link), nhưng ta biết đầy đủ của nó phải là f(t|**t**,**x**,β,α,**X**).
+> f(𝐰|𝐭,α,β,𝐗) ∝ f(𝐭|𝐰,β,𝐗)f(𝐰|α)
 >
 >
 >
@@ -250,23 +222,51 @@
 >
 >
 >
-> Tới đây, cầm cái f(t|**t**,**x**,β,α,**X**) này, ta lại coi α, β như random variable.
+> Tới đây, lôi cái f(t,𝐱|𝐰,β), lúc này (sau khi nói chỉ coi T là random variable), nó trở thành f(t|𝐱,𝐰,β). Thì, ta mới marginalizing over 𝐰 để có predictive distribution, không còn phụ thuộc 𝐰:
 >
 >
 >
-> Để rồi y như khi ta marginalize f(t|**x**,**w**,β) với **w** \~ f(**w**|**t**,α,β,**X**)...
+> mà bản chất chỉ là ta coi f(t|𝐱,𝐰,β) như random variable phụ thuộc random variable 𝐰, và ta lấy kì vọng của random variable này:
 >
 >
 >
-> thì nay ta marginalizing f(t|**t**,**x**,β,α,**X**) over (α, β) \~ f(α,β|**t**,**X**)
+> E\[f(t|𝐱,𝐰,β)\] với 𝐰 \~ f(𝐰|𝐭,α,β,𝐗), sẽ bằng:
 >
 >
 >
-> Và như vậy, với t fixed, **x** fixed, **X** fixed, nhưng α, β biến ngẫu nhiên, thì f(t|**t**,**x**,β,α,**X**) **LẠI LÀ BIẾN NGẪU NHIÊN**, và ta lại marginalizing, hay nói cách khác là lấy kì vọng của biến ngẫu nhiên này:
+> ∫f(t|𝐱,𝐰,β)f(𝐰|𝐭,α,β,𝐗)d𝐰
 >
 >
 >
-> E\[f(t|**t**,**x**,β,α,**X**)\] với α,β \~ joint distribution f(α,β|**t**,**X**)
+> và cái này dĩ nhiên là không còn phụ thuộc 𝐰, nhưng nó vẫn phải phụ thuộc đầy đủ bộ sậu: input 𝐱 (là cái input vào y(𝐱,𝐰)), 𝐭, α, β, 𝐗. Nên nó sẽ phải là f(t|𝐭,𝐱,β,α,𝐗)
+>
+>
+>
+> Và nếu lờ 𝐱, **X cho gọn** đi như cách gs Bishop làm, thì nó ra f(t|𝐭,α,β) chính là cái predictive distribution 3.57 (xem link), nhưng ta biết đầy đủ của nó phải là f(t|𝐭,𝐱,β,α,𝐗).
+>
+>
+>
+> ---
+>
+>
+>
+> Tới đây, cầm cái f(t|𝐭,𝐱,β,α,𝐗) này, ta lại coi α, β như random variable.
+>
+>
+>
+> Để rồi y như khi ta marginalize f(t|𝐱,𝐰,β) với 𝐰 \~ f(𝐰|𝐭,α,β,𝐗)...
+>
+>
+>
+> thì nay ta marginalizing f(t|𝐭,𝐱,β,α,𝐗) over (α, β) \~ f(α,β|𝐭,𝐗)
+>
+>
+>
+> Và như vậy, với t fixed, 𝐱 fixed, 𝐗 fixed, nhưng α, β biến ngẫu nhiên, thì f(t|𝐭,𝐱,β,α,𝐗) **LẠI LÀ BIẾN NGẪU NHIÊN**, và ta lại marginalizing, hay nói cách khác là lấy kì vọng của biến ngẫu nhiên này:
+>
+>
+>
+> E\[f(t|𝐭,𝐱,β,α,𝐗)\] với α,β \~ joint distribution f(α,β|𝐭,𝐗)
 >
 >
 >
@@ -274,27 +274,27 @@
 >
 >
 >
-> ∫∫f(t|**t**,**x**,β,α,**X**) f(α,β|**t**,**X**) dα dβ
+> ∫∫f(t|𝐭,𝐱,β,α,𝐗) f(α,β|𝐭,𝐗) dα dβ
 >
 >
 >
-> thay f(t|**t**,**x**,β,α,**X**) = ∫f(t|**x**,**w**,β)f(**w**|**t**,α,β,**X**)d**w** ta có
+> thay f(t|𝐭,𝐱,β,α,𝐗) = ∫f(t|𝐱,𝐰,β)f(𝐰|𝐭,α,β,𝐗)d𝐰 ta có
 >
 >
 >
-> ∫∫∫f(t|**x**,**w**,β)f(**w**|**t**,α,β,**X**)d**w** f(α,β|**t**,**X**) dα dβ
+> ∫∫∫f(t|𝐱,𝐰,β)f(𝐰|𝐭,α,β,𝐗)d𝐰 f(α,β|𝐭,𝐗) dα dβ
 >
 >
 >
-> = ∫∫∫f(t|**x**,**w**,β)f(**w**|**t**,α,β,**X**) f(α,β|**t**,**X**) d**w** dα dβ
+> = ∫∫∫f(t|𝐱,𝐰,β)f(𝐰|𝐭,α,β,𝐗) f(α,β|𝐭,𝐗) d𝐰 dα dβ
 >
 >
 >
-> và bỏ đi / lờ đi cái **x**, **X** cho bớt dài dòng thì nó chính là
+> và bỏ đi / lờ đi cái 𝐱, 𝐗 cho bớt dài dòng thì nó chính là
 >
 >
 >
-> = ∫∫∫f(t|**w**,β)f(**w**|**t**,α,β) f(α,β|**t**) d**w** dα dβ
+> = ∫∫∫f(t|𝐰,β)f(𝐰|𝐭,α,β) f(α,β|𝐭) d𝐰 dα dβ
 >
 >
 >
@@ -302,7 +302,7 @@
 >
 >
 >
-> = ∫∫∫p(t|**w**,β) p(**w**|**t**,α,β) p(α,β|**t**) d**w** dα dβ
+> = ∫∫∫p(t|𝐰,β) p(𝐰|𝐭,α,β) p(α,β|𝐭) d𝐰 dα dβ
 >
 >
 >
@@ -310,7 +310,7 @@
 >
 >
 >
-> Và với ở đây ta cũng có thể có một thắc mắc, rằng gọi f(α,β|**t**,**X**) (hay như ông Bishop bỏ đi X, là p(α,β|**t**)) mà ông gọi là HYPER-PRIOR, tức hyperparameter prior distribution của α, β. Mình cho là không đúng, vì nó rõ ràng là posterior distribution (giống như f(**w**|**t**,α,β,**X**) vậy). Do đó mình đoán phải hiểu cái hyper-prior không phải là nói về f(α,β|**t**,**X**) hay p(α,β|**t**), mà cái này là hyper-posterior. Còn ông Bishop nói vậy là ý là, "à nếu ta cũng coi α, β là random variable có prior distribution f(α,β) và dùng Bayes rule để derive posterior cho nó f(α,β|**t**,**X**), thì ta sẽ marginalizing over cả α và β theo posterior distribution này để có 3.74.
+> Và với ở đây ta cũng có thể có một thắc mắc, rằng gọi f(α,β|𝐭,𝐗) (hay như ông Bishop bỏ đi X, là p(α,β|𝐭)) mà ông gọi là HYPER-PRIOR, tức hyperparameter prior distribution của α, β. Mình cho là không đúng, vì nó rõ ràng là posterior distribution (giống như f(𝐰|𝐭,α,β,𝐗) vậy). Do đó mình đoán phải hiểu cái hyper-prior không phải là nói về f(α,β|𝐭,𝐗) hay p(α,β|𝐭), mà cái này là hyper-posterior. Còn ông Bishop nói vậy là ý là, "à nếu ta cũng coi α, β là random variable có prior distribution f(α,β) và dùng Bayes rule để derive posterior cho nó f(α,β|𝐭,𝐗), thì ta sẽ marginalizing over cả α và β theo posterior distribution này để có 3.74.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **100/100**
@@ -332,11 +332,11 @@
 >
 >
 >
-> Đầu tiên như trong note trước, mình đã nói, bản chất của ∫∫∫f(t|**w**,β)f(**w**|**t**,α,β)f(α, β|**t**) d**w** dα dβ, chỉ là:
+> Đầu tiên như trong note trước, mình đã nói, bản chất của ∫∫∫f(t|𝐰,β)f(𝐰|𝐭,α,β)f(α, β|𝐭) d𝐰 dα dβ, chỉ là:
 >
 >
 >
-> giá trị trung bình, expectation của f(t|**t**,α,β), với tư cách nó là random variable có được bởi vì nó là hàm số của hai random variable α, β: E\[f(t|**t**,α,β)\], với α,β \~ f(α,β|**t**). 
+> giá trị trung bình, expectation của f(t|𝐭,α,β), với tư cách nó là random variable có được bởi vì nó là hàm số của hai random variable α, β: E\[f(t|𝐭,α,β)\], với α,β \~ f(α,β|𝐭). 
 >
 >
 >
@@ -344,11 +344,11 @@
 >
 >
 >
-> Vậy thì ở đây nói nếu như distribution f(α,β|**t**) nó có dạng là tập trung hầu hết xác suất vào hai giá trị α^ và β^. lúc này mình có thể hiểu như sau: Ta sẽ coi tích phân ∫f(t|**t**,α,β) dα dβ, dưới dạng Riemann sum như trên:
+> Vậy thì ở đây nói nếu như distribution f(α,β|𝐭) nó có dạng là tập trung hầu hết xác suất vào hai giá trị α^ và β^. lúc này mình có thể hiểu như sau: Ta sẽ coi tích phân ∫f(t|𝐭,α,β) dα dβ, dưới dạng Riemann sum như trên:
 >
 >
 >
-> ∫f(t|**t**,α,β) dα dβ ≈ Σi f(t|**t**,αi,βi) f(αi,βi|**t**) δα,β (δα ,δβ rất nhỏ)
+> ∫f(t|𝐭,α,β) dα dβ ≈ Σi f(t|𝐭,αi,βi) f(αi,βi|𝐭) δα,β (δα ,δβ rất nhỏ)
 >
 >
 >
@@ -356,11 +356,11 @@
 >
 >
 >
-> tại vị trí tương ứng với α^ và β^, f(αi,βi|**t**) δαδβ ≈ 1 và
+> tại vị trí tương ứng với α^ và β^, f(αi,βi|𝐭) δαδβ ≈ 1 và
 >
 >
 >
-> còn những chỗ còn lại, f(αi,βi|**t**) δαδβ ≈ 0
+> còn những chỗ còn lại, f(αi,βi|𝐭) δαδβ ≈ 0
 >
 >
 >
@@ -368,19 +368,19 @@
 >
 >
 >
-> ≈ f(t|**t**,α^,β^) × 1 + Σ{các hạng tử khác} f(t|**t**,αi,βi) × 0
+> ≈ f(t|𝐭,α^,β^) × 1 + Σ{các hạng tử khác} f(t|𝐭,αi,βi) × 0
 >
 >
 >
-> ≈ f(t|**t**,α^,β^)
+> ≈ f(t|𝐭,α^,β^)
 >
 >
 >
-> Do đó E\[f(t|**t**,α,β)\] ≈ f(t|**t**,α^,β^)
+> Do đó E\[f(t|𝐭,α,β)\] ≈ f(t|𝐭,α^,β^)
 >
 >
 >
-> và = ∫f(t|**w**,β)f(**w**|**t**,α^,β^) d**w** → chính là 3.75
+> và = ∫f(t|𝐰,β)f(𝐰|𝐭,α^,β^) d𝐰 → chính là 3.75
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -396,19 +396,19 @@
 <p align="center"><kbd><img src="assets/gwambpfmgxq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là, tiếp tục nói về f(t|**t**) = E\[f(t|**t**,α,β)\] dưới α,β \~ f(α,β|**t**), thì note vừa rồi chỉ là trường hợp đặc biệt nếu phân phối xác suất của f(α,β|**t**) dồn hết tại α^, β^, thì khi đó E\[f(t|**t**,α,β)\] ≈ f(t|**t**,α^,β^) = ∫f(t|**w**,β)f(**w**|**t**,α^,β^) d**w** như đã hiểu.
+> Đại ý là, tiếp tục nói về f(t|𝐭) = E\[f(t|𝐭,α,β)\] dưới α,β \~ f(α,β|𝐭), thì note vừa rồi chỉ là trường hợp đặc biệt nếu phân phối xác suất của f(α,β|𝐭) dồn hết tại α^, β^, thì khi đó E\[f(t|𝐭,α,β)\] ≈ f(t|𝐭,α^,β^) = ∫f(t|𝐰,β)f(𝐰|𝐭,α^,β^) d𝐰 như đã hiểu.
 >
 >
 >
-> Nhưng trong trường hợp khác, mình hiểu đại ý là ta vẫn dùng một point estimate α^ β^ để thay vào E\[f(t|**t**,α,β)\] ≈ f(t|**t**,α^,β^), và đó là maximum posterior estimator.
+> Nhưng trong trường hợp khác, mình hiểu đại ý là ta vẫn dùng một point estimate α^ β^ để thay vào E\[f(t|𝐭,α,β)\] ≈ f(t|𝐭,α^,β^), và đó là maximum posterior estimator.
 >
 >
 >
-> Chú ý, nhắc lại: Trên hết, ta muốn tính E\[f(t|**t**,α,β)\] với α,β \~ f(α,β|**t**). Nhưng, nếu tình huống thuận lợi, khi xác suất f(α,β|**t**) tập trung hết vào α^, β^, thì ta sẽ có thể xấp xỉ tốt E\[f(t|**t**,α,β)\] bởi f(t|**t**,α^,β^). Nhưng khi không được như vậy, ta đành gắn một point estimate khác vào. Và dùng point estimate nào thì câu chuyện y chang như khi ta có posterior distribution của **w**: f(**w**|𝒟) hay f(**w**|**t**,α,β), ta lấy cái wMAP - tức là cái khiến f(**w**|𝒟) lớn nhất, để gắn vào f(t|**x**,**w**,𝒟,α,β) thay vì marginalizing over **w** để có predictive distribution f(t|**x**,α,β,𝒟) và từ đó đưa ra hàm dự đoán chỉ phụ thuộc **x**, 𝒟.
+> Chú ý, nhắc lại: Trên hết, ta muốn tính E\[f(t|𝐭,α,β)\] với α,β \~ f(α,β|𝐭). Nhưng, nếu tình huống thuận lợi, khi xác suất f(α,β|𝐭) tập trung hết vào α^, β^, thì ta sẽ có thể xấp xỉ tốt E\[f(t|𝐭,α,β)\] bởi f(t|𝐭,α^,β^). Nhưng khi không được như vậy, ta đành gắn một point estimate khác vào. Và dùng point estimate nào thì câu chuyện y chang như khi ta có posterior distribution của 𝐰: f(𝐰|𝒟) hay f(𝐰|𝐭,α,β), ta lấy cái wMAP - tức là cái khiến f(𝐰|𝒟) lớn nhất, để gắn vào f(t|𝐱,𝐰,𝒟,α,β) thay vì marginalizing over 𝐰 để có predictive distribution f(t|𝐱,α,β,𝒟) và từ đó đưa ra hàm dự đoán chỉ phụ thuộc 𝐱, 𝒟.
 >
 >
 >
-> Cho nên điều ta sẽ làm là (tìm α,β giúp) maximize posterior f(α,β|**t**). Mà theo Bayes rule, nó ∝ f(**t**|α,β)f(α,β). Để rồi nếu coi f(α,β) là giống như uniform, (relative flat), đồng nghĩa f(α,β) giống như hằng số, thì bài toán này sẽ trở thành đi tìm α,β giúp maximize f(**t**|α,β), và cái này lại chính là evidence,hay marginal likelihood.
+> Cho nên điều ta sẽ làm là (tìm α,β giúp) maximize posterior f(α,β|𝐭). Mà theo Bayes rule, nó ∝ f(𝐭|α,β)f(α,β). Để rồi nếu coi f(α,β) là giống như uniform, (relative flat), đồng nghĩa f(α,β) giống như hằng số, thì bài toán này sẽ trở thành đi tìm α,β giúp maximize f(𝐭|α,β), và cái này lại chính là evidence,hay marginal likelihood.
 >
 >
 >
@@ -420,7 +420,7 @@
 >
 >
 >
-> BÀI TOÁN MÀ MÌNH VỪA NÓI: ĐI TÌM α, β GIÚP MAXIMIZE f(α,β|**t**), CHÍNH LÀ CÁCH ĐỂ TUNING REGULARIZATION HYPERPARAMETER MÀ KHÔNG CẦN DÙNG VALIDATION SET.
+> BÀI TOÁN MÀ MÌNH VỪA NÓI: ĐI TÌM α, β GIÚP MAXIMIZE f(α,β|𝐭), CHÍNH LÀ CÁCH ĐỂ TUNING REGULARIZATION HYPERPARAMETER MÀ KHÔNG CẦN DÙNG VALIDATION SET.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **95/100**
@@ -436,11 +436,11 @@
 <p align="center"><kbd><img src="assets/y5lo9wfhcfh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, đoạn tiếp theo đại ý là" nhớ hồi nãy gs có nói, nếu ta coi α,β (bên cạnh w bữa giờ) là random variable, rồi đi marginalizing hết (tính cái tích phân 3 lớp hồi nãy), thì ta sẽ có f(t|**t**):
+> Rồi, đoạn tiếp theo đại ý là" nhớ hồi nãy gs có nói, nếu ta coi α,β (bên cạnh w bữa giờ) là random variable, rồi đi marginalizing hết (tính cái tích phân 3 lớp hồi nãy), thì ta sẽ có f(t|𝐭):
 >
 >
 >
-> f(t|**t**) = ∫∫∫f(t|**w**,β)f(**w**|**t**,α,β) f(α,β|**t**) d**w** dα dβ
+> f(t|𝐭) = ∫∫∫f(t|𝐰,β)f(𝐰|𝐭,α,β) f(α,β|𝐭) d𝐰 dα dβ
 >
 >
 >
@@ -448,11 +448,11 @@
 >
 >
 >
-> Thì khi marginalizing over α,β ta sẽ có ∫f(**w**|**t**,α,β)f(α,β)dαdβ hóa ra là phân phối Student't (là cái phân phối rất khó chịu)
+> Thì khi marginalizing over α,β ta sẽ có ∫f(𝐰|𝐭,α,β)f(α,β)dαdβ hóa ra là phân phối Student't (là cái phân phối rất khó chịu)
 >
 >
 >
-> Và như vậy cái tích phân 3 lớp trên trở thành ∫f(t|**w**,β)f(**w**|**t**) d**w** với f(**w**|**t**) là pdf của Student t's. 
+> Và như vậy cái tích phân 3 lớp trên trở thành ∫f(t|𝐰,β)f(𝐰|𝐭) d𝐰 với f(𝐰|𝐭) là pdf của Student t's. 
 >
 >
 >
