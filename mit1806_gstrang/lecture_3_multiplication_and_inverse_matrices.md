@@ -467,9 +467,9 @@
 <p align="center"><kbd><img src="assets/fxy3da16iyk.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Như vậy **E@A ra I nên có thể suy ra E chính là A⁻¹** và
+> Như vậy **E×A ra I nên có thể suy ra E chính là A⁻¹** và
 > **vì apply các bước y chang cho I (ở bên phải),** nên bên
-> phải nó sẽ là **E@I và cái này đương nhiên cũng vẫn là
+> phải nó sẽ là **E×I và cái này đương nhiên cũng vẫn là
 > E** (nhân với identity matrix).
 >
 >
