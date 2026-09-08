@@ -835,6 +835,8 @@
 >
 > Ghi chú của bạn rất xuất sắc, chính xác và có chiều sâu khi tự chứng minh bài toán tối ưu cho sample mean và liên hệ tốt với Huber loss trong Machine Learning. Để hoàn thiện hơn, bạn nên chú ý viết đầy đủ ký hiệu tổng cho trường hợp median và rà soát một vài lỗi chính tả nhỏ như 'roburst estmator'.
 
+**🔗 See also:** [Robust Tests with M-Estimators](./103_hypothesis_testing.md#node-h69718k)
+
 <br>
 
 <a id="node-xv75rqm"></a>
@@ -916,7 +918,7 @@
 >
 >
 >
-> Với ρ(x-θ) = -l(θ|x) thì ρ(xi-θ) = -l(θ|xi), khi đó bài toán tối ưu sẽ là: 
+> Với ρ(x-θ) = -l(θ|x) thì ρ(xi-θ) = -l(θ|xi), khi đó bài toán tối ưu sẽ là:
 >
 >
 >
@@ -928,7 +930,7 @@
 >
 >
 >
-> cũng là maximize maximize ln Πi f(xi|θ), nhờ tính iid, nên đây chính là maximize ln L(θ|**x**), và do đó solution của nó chính là MLE.
+> cũng là maximize ln Πi f(xi|θ), nhờ tính iid, nên đây chính là maximize ln L(θ|**x**), và do đó solution của nó chính là MLE.
 
 > [!TIP]
 > **🤖 AI Feedback** — ✅ Score: **98/100**
@@ -1380,7 +1382,7 @@
 >
 > Ghi chú giải thích cực kỳ chi tiết, chính xác từng bước biến đổi toán học từ khai triển Taylor đến việc áp dụng các định lý giới hạn (CLT, WLLN, Slutsky). Cách viết rất sư phạm, mạch lạc và giúp người đọc hiểu sâu bản chất thống kê của từng đại lượng.
 
-**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Định lý Slutsky](./55_convergence_concepts.md#node-uwbmbt7) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Luật số lớn yếu WLLN](./55_convergence_concepts.md#node-j5m3pa1)
+**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Định lý Slutsky](./55_convergence_concepts.md#node-uwbmbt7) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Luật số lớn yếu WLLN](./55_convergence_concepts.md#node-j5m3pa1) · [Robust Tests with M-Estimators](./103_hypothesis_testing.md#node-h69718k)
 
 <br>
 
