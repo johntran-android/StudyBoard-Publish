@@ -1,6 +1,6 @@
 # 10.3 Hypothesis Testing
 
-📊 **Progress:** `20` Notes | `23` Screenshots | `19` AI Reviews
+📊 **Progress:** `21` Notes | `24` Screenshots | `20` AI Reviews
 
 ---
 <a id="node-zhfsuqo"></a>
@@ -3174,6 +3174,335 @@
 > Ghi chú xuất sắc, thể hiện sự hiểu biết sâu sắc về bản chất lý thuyết Score test và các bước biến đổi đại số hoàn toàn chính xác.
 
 **🔗 See also:** [Large-Sample Binomial Tests](#node-8xsav7v)
+
+<br>
+
+<a id="node-h69718k"></a>
+
+###### Robust Tests with M-Estimators
+
+<p align="center"><kbd><img src="assets/iex06pzbt1.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Để hiểu phần này nên active recall về khái niệm M-estimator chút xíu:
+>
+>
+>
+> Khi được học về M-estimator, đầu tiên ta được khai sáng bởi một ý như sau: Có nhiều estimator thực chất là kết qủa có được khi giải một bài toán tối ưu với tiêu chí nào đó.
+>
+>
+>
+> Ví dụ, với random sample X1,...Xn iid \~ f(x|θ), và ta muốn xây dựng một point estimator cho θ.
+>
+>
+>
+> Một điển hình là MLE: W là nghiệm của bài toán: maximize L(W|𝐱) = f(𝐱|W)
+>
+>
+>
+> Còn nếu dùng objective là {Σi (W - xi)²} thử giải bài toán này: minimize (over W) {Σi (W - xi)²}.
+>
+>
+>
+> {Σi (W - Xi)²}
+>
+>
+>
+> Đặt W𝟏 là scalar W nhân vector 𝟏, với 𝟏 là vector có n phần tử là 1: \[1, 1,...,1\]ᵀ:
+>
+>
+>
+> = (W𝟏 - 𝐱)ᵀ(W𝟏 - 𝐱)
+>
+>
+>
+> = (W𝟏ᵀ - 𝐱ᵀ)(W𝟏 - 𝐱)
+>
+>
+>
+> = W𝟏ᵀW𝟏 - 𝐱ᵀW𝟏 - W𝟏ᵀ𝐱 + 𝐱ᵀ𝐱
+>
+>
+>
+> = W² 𝟏ᵀ𝟏 - W𝐱ᵀ𝟏 - W𝟏ᵀ𝐱 + 𝐱ᵀ𝐱
+>
+>
+>
+> 𝟏ᵀ𝟏 = n
+>
+>
+>
+> = n W² - 2W𝐱ᵀ𝟏 + 𝐱ᵀ𝐱
+>
+>
+>
+> d/dW \[{Σi (W - Xi)²}\] = 2nW - 2𝐱ᵀ𝟏
+>
+>
+>
+> Điều kiện tối ưu cần bậc nhất: 2nW - 2𝐱ᵀ𝟏 = 0
+>
+>
+>
+> ⇔ W = (𝐱ᵀ𝟏)/n = (Σi xi)/n, chính là sample mean.
+>
+>
+>
+> ---
+>
+>
+>
+> Tương tự nếu đặt objective là Σi |xi - w|, thì nghiệm bài toán sẽ cho ra sample median.
+>
+>
+>
+> Như vậy sample mean, MLE, sample meadian đều thuộc dạng này.
+>
+>
+>
+> Và ta lại biết sample mean và sample median đều có những ưu nhược điểm. Từ đó, để có một estimator có tính robust tốt, cân bằng ưu nhược điểm của hai loại này, người ta đặt ra Huber estimator, là nghiệm của bài toán với objective lai tạo: Minimize Σi ρ(xi - w) với ρ(x) = (1/2) x² khi |x| ≤ k và k|x| - k²/2 khi |x| ≥ k
+>
+>
+>
+> ---
+>
+>
+>
+> Và ở dạng khái quát, khi ρ là function bất kì nào đó, ta gọi estimator tạo ra kiểu này là M-estimator.
+>
+>
+>
+> Vậy thì để ý chỗ này: VÌ CÁCH ĐỊNH NGHĨA CỦA M-ESTIMATOR, LÀ NGHIỆM CỦA MỘT BÀI TOÁN TỐI ƯU có objective function là Σi ρ(xi - w). Nên ta sẽ dùng sự thật rằng, tại M-estimator = θ^\_M, đạo hàm hàm ojective bằng 0, từ đó ta sẽ có thể lợi dụng nó như sau:
+>
+>
+>
+> Đặt ψ(xi - w) là ρ'(xi - w). 
+>
+>
+>
+> ρ'(xi - w)|(w=θ^\_M) = ψ(θ^\_M) = 0
+>
+>
+>
+> Xấp xỉ tuyến tính hàm Σi ψ(xi - w) tại θ:
+>
+>
+>
+> Σi ψ(xi - w) ≈ Σi ψ(xi - θ) + \[Σi ψ'(xi - θ)\](w-θ)
+>
+> \
+> Evaluate tại w = θ^\_M, vế trái thành 0:
+>
+>
+>
+> 0 ≈ Σi ψ(xi - θ) + \[Σi ψ'(xi - θ)\](θ^\_M-θ)
+>
+>
+>
+> ⇔ -Σi ψ(xi - θ) = \[Σi ψ'(xi - θ)\](θ^\_M-θ)
+>
+>
+>
+> ⇔ \[-Σi ψ(xi - θ)\]/\[Σi ψ'(xi - θ)\] = (θ^\_M-θ)
+>
+>
+>
+> ⇔ θ^\_M - θ = \[-Σi ψ(xi - θ)\] / \[Σi ψ'(xi - θ)\]
+>
+>
+>
+> ---
+>
+>
+>
+> Tới đây, nhân tử số và mẫu số vế phải hai vế cho 1/n:
+>
+>
+>
+> ⇔ (θ^\_M - θ) = - (1/n) \[Σi ψ(xi - θ)\] / (1/n) \[Σi ψ'(xi - θ)\]
+>
+>
+>
+> Cái này thầm hiểu đang là (θ^\_M(𝐱) - θ), tức là hàm của 𝐱, giờ ta sẽ xét cái này tư cách là hàm của random sample (tức là thay các xi bởi Xi)
+>
+>
+>
+> (θ^\_M(𝐗) - θ) = - (1/n) \[Σi ψ(Xi - θ)\] / (1/n) \[Σi ψ'(Xi - θ)\]
+>
+>
+>
+> Nhân hai vế cho √n:
+>
+>
+>
+> √n(θ^\_M(𝐗) - θ) = - √n (1/n) \[Σi ψ(Xi - θ)\] / (1/n) \[Σi ψ'(Xi - θ)\]
+>
+>
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> Ta sẽ thấy tử số của bên phải, - √n (1/n) \[Σi ψ(Xi - θ)\]:
+>
+>
+>
+> Phần (1/n) \[Σi ψ(Xi - θ)\] có dạng của sample mean: \[Σi ψ(Xi - θ)\]/n. Thật vậy, với random sample X1,....Xn, iid thì cũng tương ứng một random sample iid: Y1 = ψ(X1 - θ), Y2 = ψ(X2 - θ),....Với sample mean là (1/n) Σi ψ(Xi - θ).
+>
+>
+>
+> Theo CLT, nói rằng nếu ta có random sample X1,...Xn có true mean μ, true variance σ², thì:
+>
+>
+>
+> √n(X̄ - μ)/σ → (d) n(0,1)
+>
+>
+>
+> Vậy áp dụng CLT, ở đây, ta giả định true mean E\[Yi\] = 0. Thì Var(Yi) = E\[Yi²\], ta có:
+>
+>
+>
+> √n\[(1/n) Σi ψ(Xi - θ) - 0\] / √E\[Yi²\] → (d) n(0,1)
+>
+>
+>
+> Áp dụng Sluky:
+>
+>
+>
+> ⇔ - √n\[(1/n) Σi ψ(Xi - θ)\] → (d) (-√E\[Yi²\]) × n(0, 1)
+>
+>
+>
+> ⇔ - √n\[(1/n) Σi ψ(Xi - θ)\] → (d) n(0, E\[Yi²\])
+>
+>
+>
+> ⇔ -(1/√n) Σi ψ(Xi - θ) → (d) n(0, E\_θ\[(ψ(X - θ))²\])
+>
+>
+>
+> ---
+>
+>
+>
+> Giờ xét mẫu số: (1/n) Σi ψ'(Xi - θ), có thể thấy cũng là sample mean, nên theo LLN, sẽ hội tụ xác suất về true mean
+>
+>
+>
+> (1/n) Σi ψ'(Xi - θ) →ᵖ E\_θ\[ψ'(Xi - θ)\] = E\_θ\[ψ'(X - θ)\]
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy tử số → (d) n(0, E\_θ\[(ψ(X - θ))²\])
+>
+>
+>
+> còn mẫu số →ᵖ E\_θ\[ψ'(X - θ)\]
+>
+>
+>
+> Nên theo định lý Slusky:
+>
+>
+>
+> Tử số / mẫu số → (d) n(0, E\_θ\[(ψ(X - θ))²\]) / E\_θ\[ψ'(X - θ)\])
+>
+>
+>
+> Tức là: √n(θ^\_M(𝐗) - θ)→ (d) n(0, E\_θ\[(ψ(X - θ))²\]) / E\_θ\[ψ'(X - θ)\]) = n(0, E\_θ\[(ψ(X - θ))²\] / (E\_θ\[ψ'(X - θ)\])²
+>
+>
+>
+> Và theo định nghĩa của phương sai tiệm cận (asymptotic variance) thì đây chính là nói Avar(θ^\_M(𝐗)) = E\_θ\[(ψ(X - θ))²\] / (E\_θ\[ψ'(Xi - θ)\])²
+>
+>
+>
+> Cũng là nói khi n lớn Var\[√n(θ^\_M(𝐗) - θ)\] ≈ E\_θ\[(ψ(X - θ))²\] / (E\_θ\[ψ'(Xi - θ)\])²
+>
+>
+>
+> ⇔ Var(θ^\_M(𝐗)) ≈ E\_θ\[(ψ(X - θ))²\] / n(E\_θ\[ψ'(Xi - θ)\])²
+>
+>
+>
+> ---
+>
+>
+>
+> Rồi, như vậy, mình có thấy framework của Wald test:
+>
+>
+>
+> Wn chính θ^\_M(𝐗), Sn là consistent estimate của STD(Wn), tức là √{ E\_θ\[(ψ(X - θ))²\] / n(E\_θ\[ψ'(Xi - θ)\])² }
+>
+>
+>
+> thì cơ sở lí thuyết trên √n(θ^\_M(𝐗) - θ)→ (d) n(0, E\_θ\[(ψ(X - θ))²\] / (E\_θ\[ψ'(X - θ)\])²
+>
+>
+>
+> Cũng là (θ^\_M(𝐗) - θ) / √Var(θ^\_M(𝐗)) → (d) n(0,1)
+>
+>
+>
+> chính là cơ sở của một Wald test.
+>
+>
+>
+> Do đó, ta sẽ dùng test statistic là: (θ^\_M(𝐗) - θ) / (√Var^(θ^\_M(𝐗))/√n)
+>
+>
+>
+> Đây chính là Z_GW, và có thể thấy nó nằm trong framework của Wald test, nên ta gọi là generalized Wald statistic.
+>
+>
+>
+> Và để có Sn, (standard error của Wn) estimate cho STD(θ^\_M(𝐗)), tức (√Var^(θ^\_M(𝐗))/√n)
+>
+>
+>
+> = √ {E\_θ\[(ψ(X - θ))²\] / n(E\_θ\[ψ'(X - θ)\])²}
+>
+>
+>
+> thì một cách làm là thay θ bởi θ^\_M(𝐗):
+>
+>
+>
+> √ {E\_θ\[(ψ(X - θ^\_M(𝐗)))²\] / n(E\_θ\[ψ'(X - θ^\_M(𝐗))\])²}
+>
+>
+>
+> Đồng thời thay kì vọng bằng trung bình mẫu luôn:
+>
+>
+>
+> √ { \[(1/n) Σi (ψ(Xi - θ^\_M(𝐗)))²\] / n \[(1/n) Σi \[ψ'(X - θ^\_M(𝐗))\]\]² }
+>
+>
+>
+> (đây là một cách trong nhiều cách để có Sn, estimate của STD(Wn), với Wn = θ^\_M(𝐗))
+>
+>
+>
+> ---
+
+> [!TIP]
+> **🤖 AI Feedback** — ✅ Score: **95/100**
+>
+> Ghi chú xuất sắc, thể hiện tư duy toán thống kê rất sâu sắc khi chủ động chứng minh lại phân phối tiệm cận của M-estimator và giải thích bản chất của generalized Wald test.
+
+**🔗 See also:** [Section 10.2.2 M-Estimators](./102_robustness.md#node-wq8irqn) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s)
 
 <br>
 
