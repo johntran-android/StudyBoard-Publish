@@ -194,8 +194,9 @@
 >
 > Và dĩ nhiên kết quả này cũng chính là cái giáo sư Bishop nói: "we then find 𝐰 ∝ 𝐦2 - 𝐦1.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Ghi chú thể hiện sự hiểu biết sâu sắc, diễn đạt mạch lạc bản chất bài toán giảm chiều và tự chứng minh bài tập 4.4 rất chặt chẽ bằng giải tích ma trận và điều kiện KKT.
 
@@ -216,8 +217,6 @@ Ghi chú thể hiện sự hiểu biết sâu sắc, diễn đạt mạch lạc 
 > - Sử dụng công cụ vi phân ma trận để tính gradient một cách hình thức và chặt chẽ.
 > - Nhận diện được ma trận rank-1 (m1 - m2)(m1 - m2)^T và quy về bài toán tìm eigenvector ứng với eigenvalue của ma trận này.
 > - Vận dụng kiến thức tối ưu hóa nâng cao (KKT, điều kiện bậc nhất stationary condition) để giải quyết bài tập trong giáo trình.
-
-</details>
 
 <br>
 
@@ -510,8 +509,9 @@ Ghi chú thể hiện sự hiểu biết sâu sắc, diễn đạt mạch lạc 
 >
 > Ngẫm nghĩ tí, ta sẽ thấy kết quả này rất dễ hiểu: Vì khi hai đám mây xanh đỏ trở thành tròn, thì chiếu theo phương nào mà độ phân tán chả bằng nhau, nên khi đó độ phân tán within class sẽ cố định, thành ra nhiệm vụ lại quay về việc maximize khoảng cách giữa hình chiếu của hai tâm thôi.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú xuất sắc! Bạn đã tái hiện và giải thích chi tiết toàn bộ quá trình biến đổi toán học cũng như trực giác hình học đằng sau Fisher's Linear Discriminant.
 
@@ -534,8 +534,6 @@ Ghi chú xuất sắc! Bạn đã tái hiện và giải thích chi tiết toàn
 > [!TIP]
 > - Tự tính đạo hàm dạng ma trận của hàm phân thức bậc hai (Rayleigh quotient) bằng quy tắc thương rất chính xác.
 > - Giải thích trực giác hình học xuất sắc cho trường hợp ma trận hiệp phương sai đẳng hướng (isotropic).
-
-</details>
 
 <br>
 
@@ -742,8 +740,9 @@ Ghi chú xuất sắc! Bạn đã tái hiện và giải thích chi tiết toàn
 >
 > từ đó chọn threshold là y khiến f(𝒞1|y) = f(𝒞2|y) ⇔ f(y|𝒞1)f(𝒞1) = f(y|𝒞2)f(𝒞2)
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Ghi chú của bạn thể hiện sự hiểu biết xuất sắc, sâu sắc và liên hệ toán học rất chặt chẽ giữa Bishop PRML và kiến thức Thống kê toán (Casella & Berger).
 
@@ -763,8 +762,6 @@ Ghi chú của bạn thể hiện sự hiểu biết xuất sắc, sâu sắc v�
 > - Liên hệ chính xác dạng phát biểu cổ điển của Định lý Giới hạn Trung tâm (CLT) từ sách Thống kê suy luận của Casella & Berger.
 > - Tự diễn giải và biến đổi chi tiết hàm Log-Likelihood để chứng minh nghiệm MLE của phân phối chuẩn 1 chiều.
 > - Giải thích chuẩn xác cách chọn ngưỡng tối ưu dựa trên quy tắc Bayes và xác suất hậu nghiệm theo Section 1.5.1 của Bishop.
-
-</details>
 
 <br>
 
