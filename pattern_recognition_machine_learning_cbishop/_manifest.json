@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1788910707543,
+  "publishedAt": 1788999388098,
   "sections": [
     {
       "title": "📋 Overview",
@@ -339,6 +339,18 @@
       "imageCount": 9
     },
     {
+      "title": "4.1.5 Relation to least square",
+      "path": "pattern_recognition_machine_learning_cbishop/415_relation_to_least_square.md",
+      "noteCount": 2,
+      "imageCount": 3
+    },
+    {
+      "title": "4.1.6 Fisher’s discriminant for multiple classes",
+      "path": "pattern_recognition_machine_learning_cbishop/416_fishers_discriminant_for_multiple_classes.md",
+      "noteCount": 2,
+      "imageCount": 4
+    },
+    {
       "title": "Appendix C. Matrices",
       "path": "pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md",
       "noteCount": 19,
@@ -351,6 +363,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 402,
-  "totalImages": 603
+  "totalNotes": 406,
+  "totalImages": 610
 }
