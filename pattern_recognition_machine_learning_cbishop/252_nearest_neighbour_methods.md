@@ -27,7 +27,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú đã tóm tắt rất hiệu quả hạn chế chính của tham số 'h' cố định trong ước lượng mật độ kernel, giải thích rõ ràng hậu quả của nó trong các vùng mật độ dữ liệu cao và thấp. Việc bổ sung giải thích về tham số 'h' và các hàm kernel khác nhau đã giúp làm sâu sắc thêm sự hiểu biết về ngữ cảnh, rất đáng khen.
+Ghi chú đã tóm tắt rất hiệu quả hạn chế chính của tham số 'h' cố định trong ước lượng mật độ kernel, giải thích rõ ràng hậu quả của nó trong các vùng mật độ dữ liệu cao và thấp. Việc bổ sung giải thích về tham số 'h' và các hàm kernel khác nhau đã giúp làm sâu sắc thêm sự hiểu biết về ngữ cảnh, rất đáng khen.
 
 </details>
 
@@ -77,7 +77,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Bài viết thể hiện sự hiểu biết sâu sắc về phương pháp K-nearest neighbour, phân biệt rõ ràng với kernel method và mô tả chính xác ảnh hưởng của K đến độ mượt. Để hoàn thiện hơn, hãy giải thích trực tiếp lý do nó không phải "true density model" là vì tích phân trên toàn không gian phân kỳ.
+Bài viết thể hiện sự hiểu biết sâu sắc về phương pháp K-nearest neighbour, phân biệt rõ ràng với kernel method và mô tả chính xác ảnh hưởng của K đến độ mượt. Để hoàn thiện hơn, hãy giải thích trực tiếp lý do nó không phải "true density model" là vì tích phân trên toàn không gian phân kỳ.
 
 
 ### Phân tích chi tiết
@@ -100,8 +100,8 @@
 *   **Ghi nhớ các giới hạn của mô hình:** Luôn chú ý đến các hạn chế lý thuyết của mỗi phương pháp. Việc K-nearest neighbor không phải là một mô hình mật độ "thực sự" vì tích phân trên toàn bộ không gian phân kỳ là một chi tiết quan trọng.
 *   **Xem xét ảnh hưởng của khoảng cách:** Suy nghĩ về cách định nghĩa "gần" hoặc "phạm vi R" trong các không gian chiều cao hơn, và liệu việc sử dụng "khối cầu" có luôn là lựa chọn tốt nhất hay không.
 
-#### ⭐ Bonus points
-- Bạn đã nhận diện chính xác phương pháp "fixed V" là kernel approach, thể hiện kiến thức liên quan vượt ra ngoài phần chính của đoạn văn bản được highlight.
+> [!TIP]
+> - Bạn đã nhận diện chính xác phương pháp "fixed V" là kernel approach, thể hiện kiến thức liên quan vượt ra ngoài phần chính của đoạn văn bản được highlight.
 
 </details>
 
@@ -233,7 +233,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **93/100** · ✓ Move on</summary>
 
-**Summary:** Bạn đã nắm vững cách áp dụng kỹ thuật KNN cho bài toán phân loại và suy ra công thức cuối cùng một cách chính xác. Để note ngắn gọn và tập trung hơn, bạn có thể tóm lược phần giải thích sâu về xác suất có điều kiện và đảm bảo tính nhất quán trong ký hiệu.
+Bạn đã nắm vững cách áp dụng kỹ thuật KNN cho bài toán phân loại và suy ra công thức cuối cùng một cách chính xác. Để note ngắn gọn và tập trung hơn, bạn có thể tóm lược phần giải thích sâu về xác suất có điều kiện và đảm bảo tính nhất quán trong ký hiệu.
 
 </details>
 
@@ -273,7 +273,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **92/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú thể hiện sự hiểu biết sâu sắc về mối liên hệ giữa KNN, xác suất hậu nghiệm và rủi ro Bayes, đặc biệt là trong trường hợp lỗi phân loại đồng đều. Tuy nhiên, việc trình bày công thức rủi ro Bayes có thể được làm rõ hơn để tránh sự nhầm lẫn về ký hiệu.
+Ghi chú thể hiện sự hiểu biết sâu sắc về mối liên hệ giữa KNN, xác suất hậu nghiệm và rủi ro Bayes, đặc biệt là trong trường hợp lỗi phân loại đồng đều. Tuy nhiên, việc trình bày công thức rủi ro Bayes có thể được làm rõ hơn để tránh sự nhầm lẫn về ký hiệu.
 
 </details>
 
@@ -309,7 +309,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú này rất toàn diện và nắm bắt chính xác tất cả các điểm cốt lõi từ văn bản gốc, từ ví dụ minh họa về K đến các hạn chế của phương pháp. Để tăng thêm độ sâu, bạn có thể giải thích rõ hơn về bản chất 'không cần huấn luyện' của KNN liên quan đến việc nó là một phương pháp phi tham số.
+Ghi chú này rất toàn diện và nắm bắt chính xác tất cả các điểm cốt lõi từ văn bản gốc, từ ví dụ minh họa về K đến các hạn chế của phương pháp. Để tăng thêm độ sâu, bạn có thể giải thích rõ hơn về bản chất 'không cần huấn luyện' của KNN liên quan đến việc nó là một phương pháp phi tham số.
 
 </details>
 
