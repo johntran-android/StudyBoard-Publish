@@ -131,10 +131,12 @@
 >
 > Nhưng trong machine learning như ở đây vài bữa gs sẽ nói về cái này kĩ hơn.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Phân tích của bạn rất sâu sắc và chính xác, đặc biệt là việc làm rõ sự khác biệt giữa học tuần tự và các phương pháp tối ưu hóa lặp, cùng với việc đạo hàm công thức (3.23) một cách hoàn hảo. Bạn thể hiện khả năng kết nối kiến thức và hiểu biết vững chắc về các khái niệm.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Phân tích của bạn rất sâu sắc và chính xác, đặc biệt là việc làm rõ sự khác biệt giữa học tuần tự và các phương pháp tối ưu hóa lặp, cùng với việc đạo hàm công thức (3.23) một cách hoàn hảo. Bạn thể hiện khả năng kết nối kiến thức và hiểu biết vững chắc về các khái niệm.
+
+</details>
 
 <br>
 
