@@ -36,12 +36,11 @@
 >
 > Do đó ở đây, ta sẽ thảo luận một hướng, trong đó ta sẽ làm theo lối XẤP XỈ HÓA. Và ý tưởng cũng đơn giản, giống như khi ta không marginalizing over mọi 𝐰, để có predictive distribution, thì ta có thể làm theo lối xấp xỉ bằng cách dùng 𝐰 có posterior distribution cao nhất rồi lắp vào hàm prediction mà ta nói là làm theo kiểu nửa mùa ở trên. Thì đây cũng vậy, ta không marginalizing over mọi α, β. Thì ta chọn point estimate α, β theo tiêu chí nào đó, Và cụ thể là: maximize marginal likelihood (và cách làm này có vài tên khác như empirical Bayes, ....)
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú rất xuất sắc, giải thích trực quan và chính xác sự khác biệt giữa MAP, fully Bayesian và phương pháp xấp xỉ bằng cách tối đa hóa marginal likelihood. Để hoàn thiện hơn, bạn có thể bổ sung thêm các tên gọi học thuật khác được đề cập trong bài như empirical Bayes hay type 2 maximum likelihood.
-
-</details>
 
 <br>
 
@@ -314,12 +313,11 @@ Ghi chú rất xuất sắc, giải thích trực quan và chính xác sự khá
 >
 > Và với ở đây ta cũng có thể có một thắc mắc, rằng gọi f(α,β|𝐭,𝐗) (hay như ông Bishop bỏ đi X, là p(α,β|𝐭)) mà ông gọi là HYPER-PRIOR, tức hyperparameter prior distribution của α, β. Mình cho là không đúng, vì nó rõ ràng là posterior distribution (giống như f(𝐰|𝐭,α,β,𝐗) vậy). Do đó mình đoán phải hiểu cái hyper-prior không phải là nói về f(α,β|𝐭,𝐗) hay p(α,β|𝐭), mà cái này là hyper-posterior. Còn ông Bishop nói vậy là ý là, "à nếu ta cũng coi α, β là random variable có prior distribution f(α,β) và dùng Bayes rule để derive posterior cho nó f(α,β|𝐭,𝐗), thì ta sẽ marginalizing over cả α và β theo posterior distribution này để có 3.74.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Ghi chú cực kỳ chi tiết và chính xác khi làm rõ các biến bị ẩn như X và x, đồng thời phân biệt rất tốt giữa hyperprior và hyper-posterior. Cách giải thích từng bước tích phân và chuẩn hóa ký hiệu toán học giúp làm sáng tỏ hoàn toàn bản chất của công thức 3.74.
-
-</details>
 
 **🔗 See also:** [3.3.2 Predictive distribution](./332_predictive_distribution.md#node-wdjepxb)
 
@@ -386,12 +384,11 @@ Ghi chú cực kỳ chi tiết và chính xác khi làm rõ các biến bị ẩ
 >
 > và = ∫f(t|𝐰,β)f(𝐰|𝐭,α^,β^) d𝐰 → chính là 3.75
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Ghi chú giải thích rất chính xác và trực quan bản chất của việc xấp xỉ tích phân khi phân phối posterior tập trung cao độ bằng cách liên hệ với Riemann sum và kỳ vọng. Để hoàn thiện hơn, bạn có thể bổ sung khái niệm hàm Dirac delta vốn là mô tả toán học chính thức cho trường hợp phân phối cực kỳ nhọn này.
-
-</details>
 
 <br>
 
@@ -428,12 +425,11 @@ Ghi chú giải thích rất chính xác và trực quan bản chất của vi�
 >
 > BÀI TOÁN MÀ MÌNH VỪA NÓI: ĐI TÌM α, β GIÚP MAXIMIZE f(α,β|𝐭), CHÍNH LÀ CÁCH ĐỂ TUNING REGULARIZATION HYPERPARAMETER MÀ KHÔNG CẦN DÙNG VALIDATION SET.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Ghi chú rất xuất sắc, thể hiện sự hiểu biết sâu sắc và chính xác về bản chất của phương pháp Evidence Approximation cũng như cách xấp xỉ phân phối dự đoán bằng point estimate. Bạn đã giải thích rất rõ ràng lý do tại sao phương pháp này giúp tối ưu hóa hyperparameter trực tiếp từ training data mà không cần dùng cross-validation.
-
-</details>
 
 <br>
 
@@ -466,12 +462,11 @@ Ghi chú rất xuất sắc, thể hiện sự hiểu biết sâu sắc và chí
 >
 > Khi đó việc tính cái tích phân này là không còn tính được (no longer analytically tracable) Tuy nhiên ta có thể làm bằng cách dùng xấp xỉ Laplace. Tuy nhiên, cách làm này có vài nhược điểm. (chưa hiểu lắm nhưng có thể các chương sau sẽ nói)
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **90/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 
 Bạn đã hiểu rất tốt ý tưởng cốt lõi và biểu diễn toán học của việc tích phân các siêu tham số để tạo ra phân phối Student's t. Tuy nhiên, bạn nên lưu ý thêm lý do xấp xỉ Laplace thất bại ở đây là do hàm dưới dấu tích phân có cực trị bị lệch rất mạnh (strongly skewed), khiến xấp xỉ Gaussian cục bộ bỏ sót phần lớn khối lượng xác suất.
-
-</details>
 
 <br>
 
