@@ -205,10 +205,12 @@
 >
 > Và để tính ra covariance matrix, R⁻¹, ta có thể dùng công thức 2.76 Schur complement để tính inverse của 𝐑 = \[**Λ** + 𝐀ᵀ**LA**, -𝐀ᵀ𝐋; -**LA**, 𝐋\] = \[**Λ**inv, **Λ**inv𝐀ᵀ; **AΛ**inv, 𝐋inv + **AΛ**inv𝐀ᵀ\] (chỉ là bài toán đại số).
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Bài viết giải thích rất chi tiết và sâu sắc từng bước một, từ định nghĩa phân phối đến lý do chọn log và cách các hệ số kết hợp thành dạng bậc hai của Z, cho thấy sự hiểu biết vững chắc. Để hoàn thiện hơn, bạn có thể thử tự xây dựng tường minh vector mean và ma trận precision/covariance của Z khi nó đã được chứng minh là phân phối Gaussian.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Bài viết giải thích rất chi tiết và sâu sắc từng bước một, từ định nghĩa phân phối đến lý do chọn log và cách các hệ số kết hợp thành dạng bậc hai của Z, cho thấy sự hiểu biết vững chắc. Để hoàn thiện hơn, bạn có thể thử tự xây dựng tường minh vector mean và ma trận precision/covariance của Z khi nó đã được chứng minh là phân phối Gaussian.
+
+</details>
 
 **🔗 See also:** [Phân phối Gaussian có điều kiện](#node-2d1tmn5)
 
@@ -255,10 +257,12 @@
 >
 > ⇨ 𝐘 \~ Normal(**Aμ** + 𝐛, 𝐋inv + **AΛ**inv𝐀ᵀ)
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Phân tích rất chính xác và sâu sắc, giải thích rõ ràng cách suy ra phân phối biên của y từ phân phối hợp Gaussian, khớp hoàn toàn với các công thức và ý tưởng trong hình ảnh. Việc tổng hợp các kiến thức nền trước đó cũng rất hữu ích và làm tăng độ sâu của ghi chú.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Phân tích rất chính xác và sâu sắc, giải thích rõ ràng cách suy ra phân phối biên của y từ phân phối hợp Gaussian, khớp hoàn toàn với các công thức và ý tưởng trong hình ảnh. Việc tổng hợp các kiến thức nền trước đó cũng rất hữu ích và làm tăng độ sâu của ghi chú.
+
+</details>
 
 **🔗 See also:** [Hiệp phương sai phân phối biên Σaa](./232_marginal_gaussian.md#node-tmn4pn3)
 
@@ -393,10 +397,12 @@
 >
 > Do đó, gs mới nói, với 𝐀 = 𝐈 thì hóa ra 𝐘 chính là tổng của hai Normal random variable
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
->
-> Bài viết rất chính xác và có chiều sâu vượt trội. Cách giải thích cặn kẽ về bản chất của phép tích chập (convolution) thông qua đổi biến, cùng với việc áp dụng chi tiết vào trường hợp A=I, giúp người đọc nắm vững kiến thức một cách toàn diện. Đây là một phân tích xuất sắc.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+
+**Summary:** Bài viết rất chính xác và có chiều sâu vượt trội. Cách giải thích cặn kẽ về bản chất của phép tích chập (convolution) thông qua đổi biến, cùng với việc áp dụng chi tiết vào trường hợp A=I, giúp người đọc nắm vững kiến thức một cách toàn diện. Đây là một phân tích xuất sắc.
+
+</details>
 
 **🔗 See also:** [Variance of the Predictive Distribution](./332_predictive_distribution.md#node-w88dcdy)
 
@@ -497,10 +503,12 @@
 >
 > = (**Λ** + 𝐀ᵀ**LA**)⁻¹ → Đây là 2.112
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Bài giải rất chi tiết, logic và chính xác từng bước một trong việc áp dụng kết quả từ phân phối Gaussian có điều kiện và ma trận độ chính xác, hoàn toàn khớp với hình ảnh gốc. Việc tự sửa lỗi nhỏ về phân phối biên của Y cho thấy sự cẩn trọng và hiểu biết sâu sắc.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Bài giải rất chi tiết, logic và chính xác từng bước một trong việc áp dụng kết quả từ phân phối Gaussian có điều kiện và ma trận độ chính xác, hoàn toàn khớp với hình ảnh gốc. Việc tự sửa lỗi nhỏ về phân phối biên của Y cho thấy sự cẩn trọng và hiểu biết sâu sắc.
+
+</details>
 
 **🔗 See also:** [Hiệp phương sai Gaussian điều kiện](./231_conditional_gaussian.md#node-mm664xt) · [Phân phối kết hợp Gaussian](#node-axpsoob)
 
