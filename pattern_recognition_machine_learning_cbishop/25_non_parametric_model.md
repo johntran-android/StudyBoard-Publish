@@ -117,7 +117,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Phân tích của bạn cực kỳ chính xác và sâu sắc, nắm bắt tốt các điểm cốt lõi về ảnh hưởng của bề rộng bin (Δ) đến ước lượng mật độ histogram, từ trường hợp quá spiky đến quá mượt, cũng như giá trị tối ưu và yếu tố vị trí cạnh bin. Để bài phân tích thêm hoàn hảo, bạn có thể cân nhắc việc trực tiếp đề cập đến thuật ngữ 'tính chất hai đỉnh' (bimodal property) khi mô tả sự thất bại của histogram trong việc nắm bắt hình dạng hàm PDF thật khi Δ quá lớn.
+Phân tích của bạn cực kỳ chính xác và sâu sắc, nắm bắt tốt các điểm cốt lõi về ảnh hưởng của bề rộng bin (Δ) đến ước lượng mật độ histogram, từ trường hợp quá spiky đến quá mượt, cũng như giá trị tối ưu và yếu tố vị trí cạnh bin. Để bài phân tích thêm hoàn hảo, bạn có thể cân nhắc việc trực tiếp đề cập đến thuật ngữ 'tính chất hai đỉnh' (bimodal property) khi mô tả sự thất bại của histogram trong việc nắm bắt hình dạng hàm PDF thật khi Δ quá lớn.
 
 </details>
 
@@ -147,7 +147,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **97/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn rất chính xác và có chiều sâu, đặc biệt trong việc giải thích "lời nguyền của chiều dữ liệu" một cách dễ hiểu. Để hoàn thiện hơn, bạn có thể cân nhắc sử dụng ngôn ngữ học thuật hơn một chút trong các phần giải thích ban đầu.
+Ghi chú của bạn rất chính xác và có chiều sâu, đặc biệt trong việc giải thích "lời nguyền của chiều dữ liệu" một cách dễ hiểu. Để hoàn thiện hơn, bạn có thể cân nhắc sử dụng ngôn ngữ học thuật hơn một chút trong các phần giải thích ban đầu.
 
 </details>
 
@@ -177,7 +177,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Bản tóm tắt rất chính xác và sâu sắc, nắm bắt đầy đủ các bài học quan trọng và so sánh với khớp hàm đa thức một cách chi tiết. Để hoàn thiện hơn, bạn có thể cân nhắc giữ nguyên cách diễn đạt ở phần mở đầu và bổ sung chi tiết về lợi ích của các kỹ thuật phi tham số cuối cùng.
+Bản tóm tắt rất chính xác và sâu sắc, nắm bắt đầy đủ các bài học quan trọng và so sánh với khớp hàm đa thức một cách chi tiết. Để hoàn thiện hơn, bạn có thể cân nhắc giữ nguyên cách diễn đạt ở phần mở đầu và bổ sung chi tiết về lợi ích của các kỹ thuật phi tham số cuối cùng.
 
 </details>
 
