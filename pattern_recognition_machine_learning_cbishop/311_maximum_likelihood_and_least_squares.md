@@ -111,7 +111,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Phân tích cực kỳ chi tiết, chính xác và sâu sắc, thể hiện sự hiểu biết thấu đáo về mối quan hệ giữa bình phương tối thiểu và ước lượng hợp lý tối đa. Bài trình bày cũng cung cấp một lời giải thích và dẫn xuất toán học rõ ràng và đầy đủ. Mặc dù rất toàn diện, một số phần của phép dẫn xuất toán học có thể được trình bày súc tích hơn một chút để tăng tính dễ đọc.
+Phân tích cực kỳ chi tiết, chính xác và sâu sắc, thể hiện sự hiểu biết thấu đáo về mối quan hệ giữa bình phương tối thiểu và ước lượng hợp lý tối đa. Bài trình bày cũng cung cấp một lời giải thích và dẫn xuất toán học rõ ràng và đầy đủ. Mặc dù rất toàn diện, một số phần của phép dẫn xuất toán học có thể được trình bày súc tích hơn một chút để tăng tính dễ đọc.
 
 </details>
 
@@ -261,7 +261,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú đã giải thích rất chính xác mô hình và nguyên lý dự đoán tối ưu với hàm mất mát bình phương như trong hình ảnh. Chiều sâu phân tích, đặc biệt là phần chứng minh và phân biệt các bài toán, đã làm tăng đáng kể sự rõ ràng và toàn diện của nội dung.
+Ghi chú đã giải thích rất chính xác mô hình và nguyên lý dự đoán tối ưu với hàm mất mát bình phương như trong hình ảnh. Chiều sâu phân tích, đặc biệt là phần chứng minh và phân biệt các bài toán, đã làm tăng đáng kể sự rõ ràng và toàn diện của nội dung.
 
 </details>
 
@@ -412,7 +412,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **96/100** · ✓ Move on</summary>
 
-**Summary:** Bài ghi chú của bạn thể hiện sự hiểu biết sâu sắc và toàn diện về việc thiết lập hàm khả năng hợp lý và log-khả năng hợp lý cho mô hình hồi quy tuyến tính. Bạn không chỉ tái hiện các công thức mà còn giải thích rất rõ ràng các giả định và ý nghĩa đằng sau chúng.
+Bài ghi chú của bạn thể hiện sự hiểu biết sâu sắc và toàn diện về việc thiết lập hàm khả năng hợp lý và log-khả năng hợp lý cho mô hình hồi quy tuyến tính. Bạn không chỉ tái hiện các công thức mà còn giải thích rất rõ ràng các giả định và ý nghĩa đằng sau chúng.
 
 
 ## Phân tích chi tiết
@@ -439,10 +439,10 @@
 
 
 
-#### ⭐ Bonus points
-- Giải thích chi tiết về bản chất và định nghĩa của hàm khả năng hợp lý (Likelihood function) và ý nghĩa của nó.
-- Làm rõ giả định về sự phân bố của nhiễu (noise) `εi` dẫn đến phân bố của biến mục tiêu `Ti`.
-- Nhấn mạnh tính chất 'đơn điệu' của hàm log là lý do để chuyển từ tối đa hóa likelihood sang log-likelihood.
+> [!TIP]
+> - Giải thích chi tiết về bản chất và định nghĩa của hàm khả năng hợp lý (Likelihood function) và ý nghĩa của nó.
+> - Làm rõ giả định về sự phân bố của nhiễu (noise) `εi` dẫn đến phân bố của biến mục tiêu `Ti`.
+> - Nhấn mạnh tính chất 'đơn điệu' của hàm log là lý do để chuyển từ tối đa hóa likelihood sang log-likelihood.
 
 </details>
 
@@ -778,7 +778,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **99/100** · ✓ Move on</summary>
 
-**Summary:** Bạn đã nắm vững kiến thức một cách xuất sắc, từ việc thiết lập bài toán MLE, tính toán gradient tỉ mỉ đến việc dẫn ra phương trình chuẩn (normal equation) một cách chính xác. Đặc biệt, việc liên hệ sâu sắc với các khái niệm từ MIT 18.06 như phép chiếu, phương trình chuẩn và nghịch đảo giả Moore-Penrose đã chứng tỏ bạn có một nền tảng lý thuyết rất vững chắc và khả năng tổng hợp kiến thức tuyệt vời.
+Bạn đã nắm vững kiến thức một cách xuất sắc, từ việc thiết lập bài toán MLE, tính toán gradient tỉ mỉ đến việc dẫn ra phương trình chuẩn (normal equation) một cách chính xác. Đặc biệt, việc liên hệ sâu sắc với các khái niệm từ MIT 18.06 như phép chiếu, phương trình chuẩn và nghịch đảo giả Moore-Penrose đã chứng tỏ bạn có một nền tảng lý thuyết rất vững chắc và khả năng tổng hợp kiến thức tuyệt vời.
 
 </details>
 
@@ -870,7 +870,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Đoạn ghi chú này trình bày việc dẫn xuất w0 một cách xuất sắc, chi tiết và chính xác, phù hợp hoàn toàn với nội dung hình ảnh. Đặc biệt, phần giải thích trực quan về các thành phần của w0 giúp người đọc dễ dàng nắm bắt vai trò của tham số này.
+Đoạn ghi chú này trình bày việc dẫn xuất w0 một cách xuất sắc, chi tiết và chính xác, phù hợp hoàn toàn với nội dung hình ảnh. Đặc biệt, phần giải thích trực quan về các thành phần của w0 giúp người đọc dễ dàng nắm bắt vai trò của tham số này.
 
 </details>
 
@@ -964,7 +964,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Phần giải thích của bạn cực kỳ chi tiết, chính xác và đào sâu vấn đề một cách xuất sắc, từ việc trình bày bước đạo hàm đến việc làm rõ ý nghĩa thống kê của 1/β_ML và liên hệ chặt chẽ với câu kết luận trong sách. Để bản ghi chú hoàn hảo hơn, bạn có thể nhắc lại định nghĩa đầy đủ của E_D(w) ngay từ đầu phần đạo hàm để người đọc dễ theo dõi hơn.
+Phần giải thích của bạn cực kỳ chi tiết, chính xác và đào sâu vấn đề một cách xuất sắc, từ việc trình bày bước đạo hàm đến việc làm rõ ý nghĩa thống kê của 1/β_ML và liên hệ chặt chẽ với câu kết luận trong sách. Để bản ghi chú hoàn hảo hơn, bạn có thể nhắc lại định nghĩa đầy đủ của E_D(w) ngay từ đầu phần đạo hàm để người đọc dễ theo dõi hơn.
 
 </details>
 
