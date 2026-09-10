@@ -91,7 +91,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **99/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn rất chính xác và chi tiết, đặc biệt xuất sắc khi bạn đã phát hiện ra lỗi đánh máy trong công thức 2.243 của văn bản gốc. Khả năng liên hệ kiến thức với các giáo trình thống kê khác và giải thích cặn kẽ các khái niệm cơ bản cho thấy sự hiểu biết sâu sắc của bạn.
+Ghi chú của bạn rất chính xác và chi tiết, đặc biệt xuất sắc khi bạn đã phát hiện ra lỗi đánh máy trong công thức 2.243 của văn bản gốc. Khả năng liên hệ kiến thức với các giáo trình thống kê khác và giải thích cặn kẽ các khái niệm cơ bản cho thấy sự hiểu biết sâu sắc của bạn.
 
 </details>
 
@@ -149,7 +149,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Phân tích rất chi tiết và chính xác, không chỉ tái hiện các công thức mà còn giải thích sâu sắc ý nghĩa của chúng, đặc biệt là khi liên hệ với Định luật Số lớn Yếu. Cấu trúc trình bày có thể gọn gàng hơn một chút để dễ đọc hơn.
+Phân tích rất chi tiết và chính xác, không chỉ tái hiện các công thức mà còn giải thích sâu sắc ý nghĩa của chúng, đặc biệt là khi liên hệ với Định luật Số lớn Yếu. Cấu trúc trình bày có thể gọn gàng hơn một chút để dễ đọc hơn.
 
 </details>
 
@@ -281,7 +281,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú rất chính xác và đi sâu vào giải thích các giả định mâu thuẫn, đặc biệt là liên kết giả định thứ hai với điều kiện của Định luật số lớn yếu và ảnh hưởng của thể tích V đến phương sai. Giải thích rõ ràng và sâu sắc hơn nhiều so với văn bản gốc.
+Ghi chú rất chính xác và đi sâu vào giải thích các giả định mâu thuẫn, đặc biệt là liên kết giả định thứ hai với điều kiện của Định luật số lớn yếu và ảnh hưởng của thể tích V đến phương sai. Giải thích rõ ràng và sâu sắc hơn nhiều so với văn bản gốc.
 
 </details>
 
@@ -356,7 +356,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn rất chính xác và đầy đủ, giải thích rõ ràng các khái niệm và công thức từ hình ảnh. Việc trình bày hai cách hiểu về tổng sigma cũng cho thấy sự hiểu biết sâu sắc về nội dung.
+Ghi chú của bạn rất chính xác và đầy đủ, giải thích rõ ràng các khái niệm và công thức từ hình ảnh. Việc trình bày hai cách hiểu về tổng sigma cũng cho thấy sự hiểu biết sâu sắc về nội dung.
 
 </details>
 
@@ -404,7 +404,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **92/100** · ✓ Move on</summary>
 
-**Summary:** Bài giải thích rất sâu sắc về cách thức kernel function giúp làm mượt hàm mật độ và vai trò của tham số h, thể hiện sự hiểu biết vượt trội so với văn bản. Để hoàn thiện hơn, hãy làm rõ thêm về mối liên hệ trực tiếp giữa hàm Gaussian kernel được sử dụng và đặc tính của phân phối Gaussian.
+Bài giải thích rất sâu sắc về cách thức kernel function giúp làm mượt hàm mật độ và vai trò của tham số h, thể hiện sự hiểu biết vượt trội so với văn bản. Để hoàn thiện hơn, hãy làm rõ thêm về mối liên hệ trực tiếp giữa hàm Gaussian kernel được sử dụng và đặc tính của phân phối Gaussian.
 
 </details>
 
