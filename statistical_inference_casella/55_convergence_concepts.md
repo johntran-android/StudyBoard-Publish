@@ -1678,7 +1678,7 @@
 > (ý là tính approx variance của một random variable khi apply hàm g chung chung nào đó lên các rv đã biết) mà chỉ cần dùng variance và covariance của rvs)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú giải thích từng bước đạo hàm công thức phương sai xấp xỉ một cách cực kỳ chi tiết, rõ ràng và chính xác, bao gồm cả những giả định quan trọng. Phần giải thích về tính hữu ích của công thức cũng được trình bày rất tốt, thể hiện sự hiểu biết sâu sắc.
 
@@ -1806,7 +1806,7 @@
 > mang ý nghĩa là tổng của các possible value của p^/(1-p^), với weight là xác suất f(p^). Vì p^, là sample mean, có distribution (tại limit) là normal(p, σ^2/n), nên trong cái tổng (tích phân coi như tổng vô hạn phần tử) này, sẽ có lúc p^ = 1 khiến \[p^/(1-p^)\] = inf, nhưng f(p^) vẫn dương. vì phân phối normal tại p^ = 1 sẽ luôn dương dù rất nhỏ. Như vậy E\[p^/(1-p^)\] sẽ = inf. Và đại khái là sẽ khiến Var cũng vậy. Mình sẽ gặp lại cái này trong Chap 10. Xem link
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Ghi chú của bạn cực kỳ chính xác và có chiều sâu vượt trội so với nội dung hình ảnh, giải thích cặn kẽ từng bước và cơ sở lý thuyết. Để nâng cao hơn nữa, bạn có thể cân nhắc nêu rõ tên "phương pháp Delta" ngay từ đầu.
 
