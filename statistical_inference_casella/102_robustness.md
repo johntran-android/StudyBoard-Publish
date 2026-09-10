@@ -33,7 +33,7 @@
 > Vậy hình dung thế này, W1(**X**), như đã nói, là cái tốt nhất dựa trên các tiêu chí tối ưu, và cái W2(**X**) chỉ xếp sau. Tuy nhiên, nếu giả định là sai, thì estimate của W1(**X**) là thảm họa, tụt dốc không phanh, trong khi đó, nếu giả định là sai, thì W2(**X**) vẫn là một estimator không đến nỗi nào. Khi đó, người ta sẽ cân nhắc việc dùng W2(**X**) thay vì W1(**X**), và như vậy, ta hi sinh chút tính chất optimality nhưng đổi lại được tính chất "chống chọi với giả định sai". Và tính chất này, người ta gọi là Robustness.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Your explanation is exceptionally clear and uses fantastic, concrete examples comparing W1 and W2 to perfectly capture the trade-off between optimality and robustness. To make it even more precise, you could note that robust estimators specifically guard against small-to-medium deviations from the assumed model rather than any complete model failure.
 
@@ -61,7 +61,7 @@
 > Và ý thứ ba đó là ngay cả một cái sự sai lệch lớn, ví dụ như ban đầu giả định như vậy nhưng mà nó sai hoàn toàn, thì đối với một cái robust estimator đó, cái điều đó nó không ảnh hưởng đến mức gây ra thảm họa. Thì ba cái ý đó nó chính là mô tả cho một cái khái niệm là robustness.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú phân tích rất xuất sắc và có chiều sâu khi liên hệ chính xác khái niệm 'efficiency' với tính hiệu quả tiệm cận (asymptotic efficiency) và CRLB. Để hoàn thiện hơn, bạn có thể lấy thêm ví dụ thực tế (như trung vị vs trung bình khi có outliers) để minh họa trực quan cho ý (2) và (3).
 
@@ -181,7 +181,7 @@
 > Như vậy đúng là Var(Xbar) đạt Cramer Rao Lower Bound.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú rất xuất sắc và chi tiết khi bạn đã chủ động tự chứng minh lại định lý Cramer-Rao Lower Bound để làm rõ ví dụ trong sách. Có một lỗi nhỏ về dấu ở bước trung gian khi lấy đạo hàm theo $\mu$, nhưng kết quả biến đổi cuối cùng vẫn hoàn toàn chính xác.
 
@@ -397,7 +397,7 @@
 > Tuy nhiên, chỉ cần f(x) là Cauchy, thì τ^2 lập tức là ∞ (đây là tính chất của Cauchy). khi đó, dù xác suất rất nhỏ δ, và n rất lớn, cũng không thể ngăn δ τ^2/n biến thành con số rất lớn → Var(Xbar) trở nên rất lớn, không còn là một efficient estimator nữa.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Ghi chú của bạn cực kỳ xuất sắc và chính xác, đặc biệt là phần tự chứng minh chi tiết công thức bằng Luật phương sai toàn phần vốn không có sẵn trong sách. Cách bạn giải thích ý nghĩa thực tế khi mô hình bị nhiễu bởi phân phối Cauchy cũng rất trực quan và rõ ràng.
 
@@ -459,7 +459,7 @@
 > Do đó ta hình dung b giống như cái ngưỡng mà Tn chịu hết nổi, giống như con lừa đang bị chở nặng đến mức cực hạn, để gánh thêm cái áo nhẹ thênh thì cũng đủ nó quỵ xuống.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú giải thích rất trực quan, chính xác bản chất toán học của breakdown value và sử dụng hình ảnh so sánh sinh động (con lừa gánh nặng). Để hoàn thiện hơn, bạn có thể nhấn mạnh thêm rằng b đại diện cho tỷ lệ phần trăm dữ liệu bị lỗi tối đa mà statistic có thể chịu đựng.
 
@@ -485,7 +485,7 @@
 > Trong khi đó, với sample median, là giá trị của thằng đứng giữa (ví dụ X1,X2,...X10 thì sample median = (X4+X6)/2 thì ví dụ kéo X7,X8,X9,X10 (40%) ra ∞ thì sample median vẫn ko tạch. Nhưng nếu kéo thêm X6 (thành ra 5/10 = 50%) thì nó tạch, nên ngưỡng tạch nhỏ nhất của nó là 50%
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **93/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **93/100** · ✓ Move on
 >
 > Ghi chú giải thích rất trực quan và chính xác bản chất breakdown value của trung bình và trung vị qua ví dụ 10 phần tử rất dễ hiểu. Bạn chỉ mắc một lỗi nhỏ khi viết nhầm công thức trung vị của 10 số là trung bình của X5 và X6 (thay vì X4 và X6).
 
@@ -513,7 +513,7 @@
 > Còn nhớ định nghĩa của cái này đó là tỉ lệ phương sai tiệm cận của hai estimator.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú của bạn thể hiện sự hiểu biết sâu sắc và chính xác về sự đánh đổi giữa tính vững (robustness) và tính tối ưu (optimality) thông qua công cụ ARE. Bạn chỉ cần lưu ý sửa một vài lỗi chính tả nhỏ như 'roburst' (robust) hay 'công cụL' để ghi chú thêm phần hoàn hảo.
 
@@ -717,7 +717,7 @@
 > Vậy limit distribution của √n(Mn - μ) là normal(0, \[1/2f(μ)\]^2), nên theo định nghĩa của phương sai tiệm cận, ta nói Avar(Mn) = \[1/2f(μ)\]^2.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú vô cùng chi tiết và chính xác, đặc biệt là phần tự khai triển xấp xỉ Taylor rất trực quan mà sách giáo khoa đã bỏ qua. Điểm trừ duy nhất là một lỗi ký hiệu nhỏ ở mẫu số vế trái trong bước biến đổi trung gian, nhưng không ảnh hưởng đến tính đúng đắn của toàn bộ bài viết.
 
@@ -763,7 +763,7 @@
 > Nhưng khi distribution ngày càng khác normal, có dạng heavy tail (khác với light tail của normal) thì ARE lớn cho thấy phương sai tiệm cận của sample median nhỏ hơn → sample median tốt hơn
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú rất chính xác và chi tiết, giải thích rõ ràng công thức ARE cũng như ý nghĩa thực tế đối với phân phối đuôi nặng dựa trên tài liệu. Bạn chỉ cần viết rõ hơn ký hiệu toán học ở mẫu số [1/(2f(μ))]^2 để tránh hiểu nhầm về mặt toán học.
 
@@ -831,11 +831,11 @@
 > Và đại ý là, cái này giống như **kết hợp tiêu chí square và absolute** lại. Với k là constant gọi là tuning parameter.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú của bạn rất xuất sắc, chính xác và có chiều sâu khi tự chứng minh bài toán tối ưu cho sample mean và liên hệ tốt với Huber loss trong Machine Learning. Để hoàn thiện hơn, bạn nên chú ý viết đầy đủ ký hiệu tổng cho trường hợp median và rà soát một vài lỗi chính tả nhỏ như 'roburst estmator'.
 
-**🔗 See also:** [Robust Tests with M-Estimators](./103_hypothesis_testing.md#node-h69718k)
+**🔗 See also:** [Robust Tests with M-Estimators](./103_hypothesis_testing.md#node-h69718k) · [Tests Based on Huber Estimator](./103_hypothesis_testing.md#node-sza0hhp)
 
 <br>
 
@@ -893,9 +893,11 @@
 > khi k tăng dần, Huber estimator sẽ chuyển dịch từ sample median (có độ robusrt tốt hơn sample mean) sang sample mean, có độ roburst kém hơn. Do đó trong sách nói nó sẽ giảm tính robusrtness đối với outlier so khi k tăng (outlier ý là, trong data quan sát được xuất hiện những giá trị cực hạn, bất thường, mà điều đó đồng nghĩa là giả định ban đầu của ta về phân phối thật không đúng, và tính robusrt thì giúp chống lại ảnh hưởng từ điều này. Nên giảm tính robursness với outliner có nghĩa là giảm khả năng chống chọi với việc giả định ban đầu là sai.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Note giải thích rất chi tiết và chính xác bản chất toán học của các estimator dưới dạng bài toán tối ưu, cũng như giải nghĩa rõ ràng về tính chất robust đối với outlier khi k thay đổi. Để hoàn thiện hơn, bạn có thể giải thích ngắn gọn cách Huber loss chuyển hóa về L1-loss khi k tiến về 0 và L2-loss khi k tiến ra vô cùng.
+
+**🔗 See also:** [Tests Based on Huber Estimator](./103_hypothesis_testing.md#node-sza0hhp)
 
 <br>
 
@@ -933,7 +935,7 @@
 > cũng là maximize ln Πi f(xi|θ), nhờ tính iid, nên đây chính là maximize ln L(θ|**x**), và do đó solution của nó chính là MLE.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú rất xuất sắc, không chỉ hiểu rõ nội dung sách mà còn chỉ ra điểm dễ nhầm lẫn trong ký hiệu và tự chứng minh lại một cách chặt chẽ. Bạn chỉ cần lưu ý làm rõ hơn giả định i.i.d. khi biến đổi từ tổng log-likelihood thành tích likelihood.
 
@@ -1378,7 +1380,7 @@
 > ---
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú giải thích cực kỳ chi tiết, chính xác từng bước biến đổi toán học từ khai triển Taylor đến việc áp dụng các định lý giới hạn (CLT, WLLN, Slutsky). Cách viết rất sư phạm, mạch lạc và giúp người đọc hiểu sâu bản chất thống kê của từng đại lượng.
 
@@ -1430,7 +1432,7 @@
 > và áp dụng vào ví dụ cụ thể này thì cũng vậy ta sẽ có Huber estimator sẽ tiệm cận là một normal mean θ
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú giải thích rất chính xác và dễ hiểu bản chất toán học của phân phối tiệm cận đối với Huber estimator từ công thức tổng quát của M-estimator. Để hoàn thiện hơn, bạn có thể bổ sung cách chuyển đổi các tích phân thành xác suất dựa trên tính đối xứng của hàm mật độ.
 
@@ -1462,7 +1464,7 @@
 > Nhưng vì nếu phân phối thật là cái khác, ví dụ double exponential, Huber vẫn tốt, do đó, đồng nghĩa là, trong trường hợp gỉa định normal là sai, thì thằng sample mean sẽ gãy, nhưng thằng Huber lại vẫn khá, đây chính là thỏa tiêu chí 2 và 3 của roburstness - khi giả định sai chút đỉnh estimator không bị ảnh hưởng nhiều và khi gỉa định là sai hoàn toàn thì estimator không trở thành thảm họa.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **92/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
 > Ghi chú thể hiện sự hiểu bài rất sâu sắc khi liên hệ chính xác các kết quả số liệu với các tiêu chí của tính vững (robustness). Điểm cần lưu ý duy nhất là với phân phối Logistic, Huber estimator thực chất tốt hơn sample mean một chút (ARE = 1.08 > 1) chứ không phải kém hơn.
 
@@ -1672,7 +1674,7 @@
 > Tới đây theo lập đã nói, ta kết luận.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bài viết giải thích rất chi tiết và chính xác quá trình biến đổi chứng minh đẳng thức đạo hàm bằng LOTUS và luật Leibniz. Tuy nhiên, bạn có một lỗi gõ nhỏ ở công thức tính ARE cuối bài khi viết nhầm $\psi'$ thay vì $\psi$ ở mẫu số ($E_\theta[\psi(X-\theta)^2]$).
 
