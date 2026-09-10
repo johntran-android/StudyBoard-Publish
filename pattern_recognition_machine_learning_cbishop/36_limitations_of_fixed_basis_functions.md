@@ -42,10 +42,12 @@
 >
 > Cuối cùng là ông nói về việc các mô hình như SVM, neural network sở dĩ có thể khắc phục vấn đề của linear model là vì đại ý là dù cho input space có số chiều lớn, nhưng data thực tế lại thường tập trung trong một dải có số chiều nhỏ hơn, xuất phát từ việc có sự tương quan giữa các biến input. Cái vụ này hồi chapter 1 đã từng nghe qua rồi, dễ hình dung nhất là lấy ví dụ hình ảnh. Ví dụ bức ảnh size 1000 x 1000 chụp mèo trong thực tế, thì tuy kích thước không gian input là 3000.000, nhưng vì hình ảnh chụp được sẽ luôn tuân theo một số quy luật nhất định nào đó, do đó nếu có thể vẽ các bức ảnh chụp được này trong không gian 3000.000 chiều, thì ta sẽ thấy thật ra chúng sẽ co cụm lại và tạo thành một mạng lưới có cấu trúc với số chiều thấp hơn 3000.000. Và các phương pháp như SVM, neural net sẽ khai thác đặc điểm này.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
->
-> Ghi chú của bạn cực kỳ xuất sắc khi giải thích rất chi tiết, dễ hiểu và liên hệ trực quan tốt các khái niệm toán học từ văn bản gốc (như manifold và ví dụ về ảnh). Để hoàn thiện hơn nữa, bạn có thể tóm tắt thêm thuộc tính thứ hai được đề cập ở cuối trang là biến mục tiêu thường chỉ phụ thuộc vào một số ít hướng quan trọng trong manifold.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú của bạn cực kỳ xuất sắc khi giải thích rất chi tiết, dễ hiểu và liên hệ trực quan tốt các khái niệm toán học từ văn bản gốc (như manifold và ví dụ về ảnh). Để hoàn thiện hơn nữa, bạn có thể tóm tắt thêm thuộc tính thứ hai được đề cập ở cuối trang là biến mục tiêu thường chỉ phụ thuộc vào một số ít hướng quan trọng trong manifold.
+
+</details>
 
 <br>
 
