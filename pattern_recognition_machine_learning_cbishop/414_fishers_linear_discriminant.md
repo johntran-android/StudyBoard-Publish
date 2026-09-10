@@ -197,7 +197,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú thể hiện sự hiểu biết sâu sắc, diễn đạt mạch lạc bản chất bài toán giảm chiều và tự chứng minh bài tập 4.4 rất chặt chẽ bằng giải tích ma trận và điều kiện KKT.
+Ghi chú thể hiện sự hiểu biết sâu sắc, diễn đạt mạch lạc bản chất bài toán giảm chiều và tự chứng minh bài tập 4.4 rất chặt chẽ bằng giải tích ma trận và điều kiện KKT.
 
 
 ### Điểm mạnh (Strengths)
@@ -212,10 +212,10 @@
 ### Gợi ý phát triển (Suggestions)
 * Hãy tiếp tục đọc phần tiếp theo của Bishop để thấy vì sao việc chỉ tối đa hóa khoảng cách giữa hai tâm (như trong hình minh họa) vẫn thất bại khi các lớp có phương sai/độ phân tán lớn theo chiều chiếu, từ đó dẫn tới tiêu chuẩn Fisher thực sự (tỉ số giữa between-class scatter và within-class scatter).
 
-#### ⭐ Bonus points
-- Sử dụng công cụ vi phân ma trận để tính gradient một cách hình thức và chặt chẽ.
-- Nhận diện được ma trận rank-1 (m1 - m2)(m1 - m2)^T và quy về bài toán tìm eigenvector ứng với eigenvalue của ma trận này.
-- Vận dụng kiến thức tối ưu hóa nâng cao (KKT, điều kiện bậc nhất stationary condition) để giải quyết bài tập trong giáo trình.
+> [!TIP]
+> - Sử dụng công cụ vi phân ma trận để tính gradient một cách hình thức và chặt chẽ.
+> - Nhận diện được ma trận rank-1 (m1 - m2)(m1 - m2)^T và quy về bài toán tìm eigenvector ứng với eigenvalue của ma trận này.
+> - Vận dụng kiến thức tối ưu hóa nâng cao (KKT, điều kiện bậc nhất stationary condition) để giải quyết bài tập trong giáo trình.
 
 </details>
 
@@ -513,7 +513,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú xuất sắc! Bạn đã tái hiện và giải thích chi tiết toàn bộ quá trình biến đổi toán học cũng như trực giác hình học đằng sau Fisher's Linear Discriminant.
+Ghi chú xuất sắc! Bạn đã tái hiện và giải thích chi tiết toàn bộ quá trình biến đổi toán học cũng như trực giác hình học đằng sau Fisher's Linear Discriminant.
 
 
 ### Điểm mạnh
@@ -531,9 +531,9 @@
 3. **Giả định ma trận khả nghịch:**
    - Để có $\mathbf{w} \propto \mathbf{S}_W^{-1}(\mathbf{m}_2 - \mathbf{m}_1)$, ta ngầm giả định $\mathbf{S}_W$ là khả nghịch (nonsingular), điều này yêu cầu số lượng mẫu $N > D$ (số chiều dữ liệu).
 
-#### ⭐ Bonus points
-- Tự tính đạo hàm dạng ma trận của hàm phân thức bậc hai (Rayleigh quotient) bằng quy tắc thương rất chính xác.
-- Giải thích trực giác hình học xuất sắc cho trường hợp ma trận hiệp phương sai đẳng hướng (isotropic).
+> [!TIP]
+> - Tự tính đạo hàm dạng ma trận của hàm phân thức bậc hai (Rayleigh quotient) bằng quy tắc thương rất chính xác.
+> - Giải thích trực giác hình học xuất sắc cho trường hợp ma trận hiệp phương sai đẳng hướng (isotropic).
 
 </details>
 
@@ -745,7 +745,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn thể hiện sự hiểu biết xuất sắc, sâu sắc và liên hệ toán học rất chặt chẽ giữa Bishop PRML và kiến thức Thống kê toán (Casella & Berger).
+Ghi chú của bạn thể hiện sự hiểu biết xuất sắc, sâu sắc và liên hệ toán học rất chặt chẽ giữa Bishop PRML và kiến thức Thống kê toán (Casella & Berger).
 
 
 ### Ưu điểm (Strengths)
@@ -759,10 +759,10 @@
 ### Gợi ý mở rộng (Suggestions)
 - Bạn có thể giải tiếp phương trình bậc hai $p(y|\mathcal{C}_1)p(\mathcal{C}_1) = p(y|\mathcal{C}_2)p(\mathcal{C}_2)$ để thấy dạng nghiệm đại số của ngưỡng $y_0$. Đặc biệt, hãy xét trường hợp hai class có phương sai xấp xỉ bằng nhau ($\sigma_1^2 = \sigma_2^2$) và priors bằng nhau ($p(\mathcal{C}_1) = p(\mathcal{C}_2)$), khi đó ngưỡng $y_0$ sẽ rơi vào chính giữa trung bình hai lớp: $y_0 = \frac{1}{2}(\mu_1 + \mu_2)$.
 
-#### ⭐ Bonus points
-- Liên hệ chính xác dạng phát biểu cổ điển của Định lý Giới hạn Trung tâm (CLT) từ sách Thống kê suy luận của Casella & Berger.
-- Tự diễn giải và biến đổi chi tiết hàm Log-Likelihood để chứng minh nghiệm MLE của phân phối chuẩn 1 chiều.
-- Giải thích chuẩn xác cách chọn ngưỡng tối ưu dựa trên quy tắc Bayes và xác suất hậu nghiệm theo Section 1.5.1 của Bishop.
+> [!TIP]
+> - Liên hệ chính xác dạng phát biểu cổ điển của Định lý Giới hạn Trung tâm (CLT) từ sách Thống kê suy luận của Casella & Berger.
+> - Tự diễn giải và biến đổi chi tiết hàm Log-Likelihood để chứng minh nghiệm MLE của phân phối chuẩn 1 chiều.
+> - Giải thích chuẩn xác cách chọn ngưỡng tối ưu dựa trên quy tắc Bayes và xác suất hậu nghiệm theo Section 1.5.1 của Bishop.
 
 </details>
 
