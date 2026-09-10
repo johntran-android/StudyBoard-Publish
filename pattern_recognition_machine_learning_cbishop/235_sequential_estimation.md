@@ -73,7 +73,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Phân tích rất chính xác và chi tiết từng bước, từ động cơ của ước lượng tuần tự đến việc diễn giải công thức cập nhật μ_ML^(N). Tuy nhiên, cách trình bày các bước đạo hàm hơi dài dòng một chút so với văn bản gốc và bạn có thể nhấn mạnh hơn thuật ngữ "tín hiệu lỗi" (error signal).
+Phân tích rất chính xác và chi tiết từng bước, từ động cơ của ước lượng tuần tự đến việc diễn giải công thức cập nhật μ_ML^(N). Tuy nhiên, cách trình bày các bước đạo hàm hơi dài dòng một chút so với văn bản gốc và bạn có thể nhấn mạnh hơn thuật ngữ "tín hiệu lỗi" (error signal).
 
 </details>
 
@@ -127,7 +127,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn rất chính xác và có chiều sâu vượt trội, giải thích rõ ràng từng khái niệm và mối liên hệ giữa chúng. Bạn đã kết nối kiến thức một cách xuất sắc, làm nổi bật sự cần thiết của thuật toán Robbins-Monro trong học tuần tự.
+Ghi chú của bạn rất chính xác và có chiều sâu vượt trội, giải thích rõ ràng từng khái niệm và mối liên hệ giữa chúng. Bạn đã kết nối kiến thức một cách xuất sắc, làm nổi bật sự cần thiết của thuật toán Robbins-Monro trong học tuần tự.
 
 </details>
 
@@ -219,7 +219,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn thể hiện sự hiểu biết sâu sắc, đặc biệt là phần giải thích chi tiết về phương sai có điều kiện và cách liên hệ với các định nghĩa cơ bản cùng định lý LOTUS. Cách bạn làm rõ ký hiệu lũy thừa trong công thức thuật toán cũng rất tốt. Để ghi chú hoàn thiện hơn, bạn có thể mô tả điều kiện của hàm f(θ) chính xác theo văn bản gốc (f(θ) > 0 khi θ > θ* và f(θ) < 0 khi θ < θ*) thay vì chỉ nói hàm f đồng biến.
+Ghi chú của bạn thể hiện sự hiểu biết sâu sắc, đặc biệt là phần giải thích chi tiết về phương sai có điều kiện và cách liên hệ với các định nghĩa cơ bản cùng định lý LOTUS. Cách bạn làm rõ ký hiệu lũy thừa trong công thức thuật toán cũng rất tốt. Để ghi chú hoàn thiện hơn, bạn có thể mô tả điều kiện của hàm f(θ) chính xác theo văn bản gốc (f(θ) > 0 khi θ > θ* và f(θ) < 0 khi θ < θ*) thay vì chỉ nói hàm f đồng biến.
 
 </details>
 
@@ -369,7 +369,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **99/100** · ✓ Move on</summary>
 
-**Summary:** Phần giải thích rất chi tiết, chính xác và sâu sắc, làm rõ cả quá trình từ bài toán MLE đến ý nghĩa của công thức 2.134 thông qua định luật số lớn. Bạn đã xuất sắc trong việc phân tích các sắc thái của ký hiệu kỳ vọng, giúp người đọc nắm vững ngữ cảnh. Tuy nhiên, để tối ưu trải nghiệm đọc, có thể xem xét cô đọng một số phần.
+Phần giải thích rất chi tiết, chính xác và sâu sắc, làm rõ cả quá trình từ bài toán MLE đến ý nghĩa của công thức 2.134 thông qua định luật số lớn. Bạn đã xuất sắc trong việc phân tích các sắc thái của ký hiệu kỳ vọng, giúp người đọc nắm vững ngữ cảnh. Tuy nhiên, để tối ưu trải nghiệm đọc, có thể xem xét cô đọng một số phần.
 
 </details>
 
@@ -493,7 +493,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Điểm mạnh: Bài ghi chú này thể hiện sự nắm bắt xuất sắc về thủ tục Robbins-Monro và ứng dụng của nó vào ước lượng MLE tuần tự cho giá trị trung bình của phân phối Gaussian. Bạn đã trình bày chi tiết quá trình đạo hàm gradient và giải thích chính xác quy tắc cập nhật, cùng với quan sát sâu sắc về ký hiệu trong sách giáo khoa. Điểm yếu: Không có điểm yếu đáng kể nào, bài ghi chú rất kỹ lưỡng, chính xác và cung cấp cái nhìn sâu sắc vượt ngoài sách giáo khoa.
+Điểm mạnh: Bài ghi chú này thể hiện sự nắm bắt xuất sắc về thủ tục Robbins-Monro và ứng dụng của nó vào ước lượng MLE tuần tự cho giá trị trung bình của phân phối Gaussian. Bạn đã trình bày chi tiết quá trình đạo hàm gradient và giải thích chính xác quy tắc cập nhật, cùng với quan sát sâu sắc về ký hiệu trong sách giáo khoa. Điểm yếu: Không có điểm yếu đáng kể nào, bài ghi chú rất kỹ lưỡng, chính xác và cung cấp cái nhìn sâu sắc vượt ngoài sách giáo khoa.
 
 </details>
 
