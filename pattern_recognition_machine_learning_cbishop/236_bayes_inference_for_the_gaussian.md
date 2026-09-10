@@ -78,10 +78,12 @@
 >
 > Thế thì, nhờ Casella, tiếp theo ta cũng hiểu vì sao ông Bishop nói p(𝐗|μ) không phải là một distribution over μ. Bởi lẽ đơn giản đây là hàm của θ, chỉ là được define theo cách thức mà giá trị của nó tại θ, L(θ|𝐱), chính là giá trị của joint pdf của 𝐗 tại 𝐱: f(𝐱|θ), thì tuy đúng là f(𝐱|θ) là một valid pdf, nhưng nó là khi xét nó là hàm theo 𝐱, thì ta mới có f(𝐱|θ) sẽ luôn ko âm với mọi 𝐱, và ∫f(𝐱|θ)d𝐱 = 1. Còn khi coi nó là hàm theo θ, thì CHƯA CHẮC ∫f(𝐱|θ)dθ ĐÃ = 1.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Bài viết cực kỳ chi tiết, chính xác và sâu sắc, thể hiện sự hiểu biết vững chắc về cả phương pháp Maximum Likelihood và Bayesian Inference. Việc kết nối kiến thức với sách Casella, giải thích cặn kẽ từng khái niệm và thậm chí phân tích chi tiết về ký hiệu cho thấy khả năng tổng hợp và tư duy phản biện xuất sắc.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Bài viết cực kỳ chi tiết, chính xác và sâu sắc, thể hiện sự hiểu biết vững chắc về cả phương pháp Maximum Likelihood và Bayesian Inference. Việc kết nối kiến thức với sách Casella, giải thích cặn kẽ từng khái niệm và thậm chí phân tích chi tiết về ký hiệu cho thấy khả năng tổng hợp và tư duy phản biện xuất sắc.
+
+</details>
 
 <br>
 
@@ -268,10 +270,12 @@
 >
 > → Đây chính là kết quả 2.141 trong sách
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Bản ghi chú này rất xuất sắc, cung cấp một phân tích sâu sắc và chi tiết từng bước để suy ra phân phối hậu nghiệm. Bạn đã thành công trong việc trình bày rõ ràng các bước đại số phức tạp, dẫn đến các công thức khớp chính xác với sách giáo khoa.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Bản ghi chú này rất xuất sắc, cung cấp một phân tích sâu sắc và chi tiết từng bước để suy ra phân phối hậu nghiệm. Bạn đã thành công trong việc trình bày rõ ràng các bước đại số phức tạp, dẫn đến các công thức khớp chính xác với sách giáo khoa.
+
+</details>
 
 <br>
 
@@ -318,10 +322,12 @@
 >
 > Cuối cùng, một nhận xét nữa là nếu data ko vô hạn, chỉ hữu hạn, nhưng ta cho variance của prior tăng vô hạn, thì mean của posterior cũng trở thành μML: Điều này nghĩa là sao? Mình hiểu thế này, cái việc chọn prior là Normal(μ0, σ0²) phản ánh một kinh nghiệm nào đó, một hiểu biết nào đó về μ. Nhưng nếu ta không biết gì hết, thì ta sẽ phản ánh sự "không biết gì hết này" bằng cách cho xác suất dàn trải ra rất rộng: tăng σ0 → ∞ (khi đó, giống như coi như ta có uniform vậy, mặc dù chính xác thì ko phải), thì khi đó, dĩ nhiên với việc ta chả có kinh nghiệm gì, thì prior chẳng đóng góp gì, mọi dự đoán sẽ đều do data mà ra, tức là, ta sẽ dựa hoàn toàn vào μML và hai cái công thức trên phản ánh điều này.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Phân tích của bạn rất chính xác và có chiều sâu, bao gồm cả những diễn giải quan trọng về sự hội tụ của phương pháp Bayesian về kết quả ML và sự khác biệt về quan điểm giữa Bayesian và Frequentist. Bạn đã nắm bắt rất tốt các điểm chính được nêu trong tài liệu.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Phân tích của bạn rất chính xác và có chiều sâu, bao gồm cả những diễn giải quan trọng về sự hội tụ của phương pháp Bayesian về kết quả ML và sự khác biệt về quan điểm giữa Bayesian và Frequentist. Bạn đã nắm bắt rất tốt các điểm chính được nêu trong tài liệu.
+
+</details>
 
 <br>
 
@@ -391,10 +397,12 @@
 >
 > Với ý quan trọng là chỉ khi ta assumption (giả định) data có tính iid thì Bayesian inference mới có thể được nhìn nhận theo sequential view.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Đây là một ghi chú xuất sắc và rất sâu sắc, giải thích rõ ràng sự khác biệt giữa Bayesian và Frequentist, cũng như cơ chế cập nhật tuần tự một cách chi tiết. Việc nhấn mạnh vai trò của giả định i.i.d. là rất chính xác và quan trọng.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Đây là một ghi chú xuất sắc và rất sâu sắc, giải thích rõ ràng sự khác biệt giữa Bayesian và Frequentist, cũng như cơ chế cập nhật tuần tự một cách chi tiết. Việc nhấn mạnh vai trò của giả định i.i.d. là rất chính xác và quan trọng.
+
+</details>
 
 <br>
 
@@ -567,10 +575,12 @@
 >
 > Và dĩ nhiên mình cũng hiểu câu cuối gs nói ta ko cần phải quan tâm mấy cái constant (mà nãy giờ mình đã nói bỏ qua) làm gì, vì nội cái kernel và thực hiện khớp mẫu đã giúp ta xác định được posterior là gamma có hai tham số trên, muốn tính ra normalizing constant thì chỉ việc ráp vào công thức mà tính ra
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Bài viết của bạn rất xuất sắc, vừa chính xác từng bước trong các phép chứng minh toán học, vừa có chiều sâu trong việc giải thích các khái niệm như conjugate prior và lý do chọn precision. Độ chi tiết và khả năng kết nối với các công thức trong sách giáo trình là rất ấn tượng.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Bài viết của bạn rất xuất sắc, vừa chính xác từng bước trong các phép chứng minh toán học, vừa có chiều sâu trong việc giải thích các khái niệm như conjugate prior và lý do chọn precision. Độ chi tiết và khả năng kết nối với các công thức trong sách giáo trình là rất ấn tượng.
+
+</details>
 
 <br>
 
@@ -607,10 +617,12 @@
 >
 > Và một sự thật nữa, là cả Beta và Gamma đều thuộc exponential family (vụ này đã biết ở Casella, và mình nhớ Normal cũng thuộc họ này), nên ta sẽ thấy cách diễn giải này, là điểm chung của các distribution trong exponential family
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
->
-> Ghi chú giải thích rất đầy đủ và chính xác các điểm chính từ văn bản gốc, bao gồm cả cách giải thích các tham số tiên nghiệm như những quan sát hiệu quả và tính tổng quát của phương pháp này cho exponential family. Các công thức tính toán và kiến thức nền bổ sung cho thấy sự hiểu biết sâu sắc và toàn diện về chủ đề.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú giải thích rất đầy đủ và chính xác các điểm chính từ văn bản gốc, bao gồm cả cách giải thích các tham số tiên nghiệm như những quan sát hiệu quả và tính tổng quát của phương pháp này cho exponential family. Các công thức tính toán và kiến thức nền bổ sung cho thấy sự hiểu biết sâu sắc và toàn diện về chủ đề.
+
+</details>
 
 <br>
 
@@ -825,10 +837,12 @@
 >
 >  Và lẽ dĩ nhiên priori π(μ, λ) ở đây ko phải là tích của Normal pdf và Gamma pdf, vì trong cái Normal, nó phụ thuộc λ \~ Gamma(a,b)
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Bài viết của bạn rất xuất sắc, đã đi sâu vào từng bước tính toán từ việc phân tích hàm likelihood đến việc xác định dạng của prior và posterior, làm nổi bật sự phụ thuộc giữa μ và λ trong phân phối Normal-Gamma một cách rõ ràng và chính xác. Một lưu ý nhỏ là hãy kiểm tra lại các biến khi chuyển đổi (ví dụ: c/b nên là c/β) để đảm bảo tính nhất quán tuyệt đối, nhưng điều này không ảnh hưởng đến độ chính xác tổng thể của bài giải.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Bài viết của bạn rất xuất sắc, đã đi sâu vào từng bước tính toán từ việc phân tích hàm likelihood đến việc xác định dạng của prior và posterior, làm nổi bật sự phụ thuộc giữa μ và λ trong phân phối Normal-Gamma một cách rõ ràng và chính xác. Một lưu ý nhỏ là hãy kiểm tra lại các biến khi chuyển đổi (ví dụ: c/b nên là c/β) để đảm bảo tính nhất quán tuyệt đối, nhưng điều này không ảnh hưởng đến độ chính xác tổng thể của bài giải.
+
+</details>
 
 <br>
 
@@ -847,10 +861,12 @@
 >
 > Nói chung cái này nó chỉ là mở rộng hoặc là khái quát hơn của những cái gì nãy giờ làm. Nãy giờ làm là với biết cái covariance matrix xin lỗi, biết cái cái variance rồi để infer mean thì cái prior conjugate là normal để rồi cái posterior cũng là normal. Nếu như mà biết mean và infer cái precision thì cái prior sẽ là gamma để rồi cái posterior cũng là gamma. Cũng đồng nghĩa là nói rằng cái cái prior conjugate của cái trường hợp đó là một cái beta à một cái gamma. Còn nếu như infer cả hai cùng lúc mean và variance thì cái prior conjugate sẽ là một cái phân phối gọi là normal gamma. Đó thì cái case ở đây nó là nó nó khái quát hơn cái chuyện đó.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
->
-> Bài giải thích của bạn rất rõ ràng và chính xác, bao quát đầy đủ cả ba trường hợp của phân phối tiên nghiệm liên hợp cho phân phối Gaussian đa biến, và việc liên hệ với các trường hợp đơn biến thể hiện sự hiểu biết sâu sắc. Để bài làm thêm hoàn thiện, bạn có thể cân nhắc sử dụng ngôn ngữ học thuật hơn một chút.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+
+**Summary:** Bài giải thích của bạn rất rõ ràng và chính xác, bao quát đầy đủ cả ba trường hợp của phân phối tiên nghiệm liên hợp cho phân phối Gaussian đa biến, và việc liên hệ với các trường hợp đơn biến thể hiện sự hiểu biết sâu sắc. Để bài làm thêm hoàn thiện, bạn có thể cân nhắc sử dụng ngôn ngữ học thuật hơn một chút.
+
+</details>
 
 <br>
 
