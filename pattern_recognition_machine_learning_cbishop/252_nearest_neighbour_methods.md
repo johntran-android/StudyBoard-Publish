@@ -24,10 +24,12 @@
 >
 > Thế thì vấn đề là, việc h như nhau ở mọi nơi khiến cho nó bị cứng nhắc. Vì khi xét trong **vùng có nhiều data sample, thì nên cho h nhỏ lại, và ngược lại trong vùng thưa data sample thì nên cho h lớn lên**. Vì nếu trong vùng nhiều data sample mà h lớn quá quá sẽ khiến dẫn đến over-smoothing effect, xóa xạch các cấu trúc có thể được nắm bắt từ data. Ngược lại, nơi data density thấp mà h nhỏ quá sẽ khiến noisy. Nói chung **chỉ cần hiểu là h như nhau ở mọi nơi thì không tối ưu.**
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Ghi chú đã tóm tắt rất hiệu quả hạn chế chính của tham số 'h' cố định trong ước lượng mật độ kernel, giải thích rõ ràng hậu quả của nó trong các vùng mật độ dữ liệu cao và thấp. Việc bổ sung giải thích về tham số 'h' và các hàm kernel khác nhau đã giúp làm sâu sắc thêm sự hiểu biết về ngữ cảnh, rất đáng khen.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú đã tóm tắt rất hiệu quả hạn chế chính của tham số 'h' cố định trong ước lượng mật độ kernel, giải thích rõ ràng hậu quả của nó trong các vùng mật độ dữ liệu cao và thấp. Việc bổ sung giải thích về tham số 'h' và các hàm kernel khác nhau đã giúp làm sâu sắc thêm sự hiểu biết về ngữ cảnh, rất đáng khen.
+
+</details>
 
 <br>
 
@@ -72,10 +74,36 @@
 >
 > Vậy thì ở đây, gs nói, với K-nearest neighbor, khi ta fixed K và tính V, để từ đó tỉ số K/NV cao thấp tương đối so với nhau, thì vấn đề là, nó không có cái nào đóng vai normalizing constant cả,  do đó KNN density không phải là một valid pdf.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
->
-> Bài viết thể hiện sự hiểu biết sâu sắc về phương pháp K-nearest neighbour, phân biệt rõ ràng với kernel method và mô tả chính xác ảnh hưởng của K đến độ mượt. Để hoàn thiện hơn, hãy giải thích trực tiếp lý do nó không phải "true density model" là vì tích phân trên toàn không gian phân kỳ.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+
+**Summary:** Bài viết thể hiện sự hiểu biết sâu sắc về phương pháp K-nearest neighbour, phân biệt rõ ràng với kernel method và mô tả chính xác ảnh hưởng của K đến độ mượt. Để hoàn thiện hơn, hãy giải thích trực tiếp lý do nó không phải "true density model" là vì tích phân trên toàn không gian phân kỳ.
+
+
+### Phân tích chi tiết
+
+#### Điểm mạnh
+*   **Nắm vững công thức cơ bản:** Bạn đã recall chính xác công thức 2.246 `f(x) ≈ K / NV` và các thành phần của nó (K là số điểm dữ liệu trong vùng R, V là thể tích vùng R, N là kích thước mẫu). Đây là nền tảng vững chắc để hiểu các phương pháp ước lượng mật độ.
+*   **Phân biệt rõ ràng hai cách tiếp cận:** Bạn đã nhận diện đúng hai cách tiếp cận chính từ công thức:
+    *   Cố định V và xác định K từ dữ liệu (phương pháp kernel).
+    *   Cố định K và xác định V từ dữ liệu (phương pháp K-nearest neighbor).
+*   **Giải thích chi tiết phương pháp K-nearest neighbor:** Mô tả của bạn về cách phương pháp K-nearest neighbor hoạt động rất chính xác, bao gồm việc mở rộng vùng R (khối cầu) quanh điểm `x` cho đến khi nó chứa đủ K điểm dữ liệu. Điều này thể hiện sự hiểu biết sâu sắc về cơ chế hoạt động.
+*   **Hiểu rõ ảnh hưởng của K đến độ mượt:** Bạn đã giải thích rất tốt cách giá trị K ảnh hưởng đến độ mượt của ước lượng. Đặc biệt, việc bạn nhận ra rằng K nhỏ dẫn đến ước lượng nhiễu (noisy) và K lớn quá sẽ làm mất đi cấu trúc thực sự của hàm mật độ (cụ thể là làm mất các đỉnh của phân phối nhị thức - "hai cái đỉnh (modal) của đường màu xanh lá cây") là một điểm mạnh lớn, cho thấy bạn đã phân tích hình 2.26 một cách kỹ lưỡng.
+
+#### Các điểm cần cải thiện
+*   **Cơ chế Kernel:** Mặc dù bạn đã xác định đúng phương pháp "fixed V" là tiếp cận kernel, phần giải thích "Trong đó, ta sẽ dùng một hàm kernel để tính xem có bao nhiêu data point xi nằm trong phạm vi R của x (mà cũng là có x nằm trong phạm vi của bao nhiêu data point, và nhân với)" còn hơi mơ hồ. Hàm kernel thường *gán trọng số* cho các điểm dữ liệu dựa trên khoảng cách đến `x` thay vì chỉ đếm cứng nhắc trong một vùng `R` cố định (đây là cách tiếp cận đơn giản hơn như histogram). Cụm từ "mà cũng là có x nằm trong phạm vi của bao nhiêu data point, và nhân với" chưa thật sự rõ ràng và có thể gây hiểu nhầm về cách thức hoạt động của kernel.
+*   **Hạn chế của K-nearest neighbor:** Bạn đã bỏ qua một chi tiết quan trọng được đề cập trong tài liệu tham khảo: "Note that the model produced by K nearest neighbours is not a true density model because the integral over all space diverges." Đây là một hạn chế lý thuyết quan trọng của phương pháp này cần được ghi nhận.
+*   **Lỗi chính tả nhỏ:** Từ "sphare" nên là "sphere" (khối cầu).
+
+#### Gợi ý để làm sâu sắc thêm sự hiểu biết
+*   **Tìm hiểu thêm về hàm Kernel:** Để làm rõ hơn về phương pháp kernel, bạn có thể tìm hiểu cách các hàm kernel (ví dụ: Gaussian kernel, Epanechnikov kernel) được sử dụng để tạo ra "vùng ảnh hưởng" (bandwidth) linh hoạt xung quanh mỗi điểm dữ liệu và cách chúng gán trọng số cho các điểm lân cận.
+*   **Ghi nhớ các giới hạn của mô hình:** Luôn chú ý đến các hạn chế lý thuyết của mỗi phương pháp. Việc K-nearest neighbor không phải là một mô hình mật độ "thực sự" vì tích phân trên toàn bộ không gian phân kỳ là một chi tiết quan trọng.
+*   **Xem xét ảnh hưởng của khoảng cách:** Suy nghĩ về cách định nghĩa "gần" hoặc "phạm vi R" trong các không gian chiều cao hơn, và liệu việc sử dụng "khối cầu" có luôn là lựa chọn tốt nhất hay không.
+
+#### ⭐ Bonus points
+- Bạn đã nhận diện chính xác phương pháp "fixed V" là kernel approach, thể hiện kiến thức liên quan vượt ra ngoài phần chính của đoạn văn bản được highlight.
+
+</details>
 
 **🔗 See also:** [Density Estimate Formula](./251_kernel_density_estimators.md#node-a23maxi)
 
@@ -202,10 +230,12 @@
 >
 > = Kk / K → 2.256
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **93/100**
->
-> Bạn đã nắm vững cách áp dụng kỹ thuật KNN cho bài toán phân loại và suy ra công thức cuối cùng một cách chính xác. Để note ngắn gọn và tập trung hơn, bạn có thể tóm lược phần giải thích sâu về xác suất có điều kiện và đảm bảo tính nhất quán trong ký hiệu.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **93/100** · ✓ Move on</summary>
+
+**Summary:** Bạn đã nắm vững cách áp dụng kỹ thuật KNN cho bài toán phân loại và suy ra công thức cuối cùng một cách chính xác. Để note ngắn gọn và tập trung hơn, bạn có thể tóm lược phần giải thích sâu về xác suất có điều kiện và đảm bảo tính nhất quán trong ký hiệu.
+
+</details>
 
 <br>
 
@@ -240,10 +270,12 @@
 >
 > Và khi K = 1, ta gọi nó là nearest neighbor: xem thằng gần nhất thuộc class gì thì kết luận class đó.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **92/100**
->
-> Ghi chú thể hiện sự hiểu biết sâu sắc về mối liên hệ giữa KNN, xác suất hậu nghiệm và rủi ro Bayes, đặc biệt là trong trường hợp lỗi phân loại đồng đều. Tuy nhiên, việc trình bày công thức rủi ro Bayes có thể được làm rõ hơn để tránh sự nhầm lẫn về ký hiệu.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **92/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú thể hiện sự hiểu biết sâu sắc về mối liên hệ giữa KNN, xác suất hậu nghiệm và rủi ro Bayes, đặc biệt là trong trường hợp lỗi phân loại đồng đều. Tuy nhiên, việc trình bày công thức rủi ro Bayes có thể được làm rõ hơn để tránh sự nhầm lẫn về ký hiệu.
+
+</details>
 
 **🔗 See also:** [Luật quyết định Bayes tối ưu](./15_decision_theory.md#node-ym5yp89)
 
@@ -274,10 +306,12 @@
 >
 > Bên cạnh đó, chưa kể, ta đã thấy nó có nhiều vấn đề trong việc estimate distribution. Thành ra trong các chapter sau, ta sẽ bàn đến các cách tiếp cận khác, flexible hơn, với độ phức tạp có thể được kiểm soát một cách độc lập với kích thước training set.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
->
-> Ghi chú này rất toàn diện và nắm bắt chính xác tất cả các điểm cốt lõi từ văn bản gốc, từ ví dụ minh họa về K đến các hạn chế của phương pháp. Để tăng thêm độ sâu, bạn có thể giải thích rõ hơn về bản chất 'không cần huấn luyện' của KNN liên quan đến việc nó là một phương pháp phi tham số.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú này rất toàn diện và nắm bắt chính xác tất cả các điểm cốt lõi từ văn bản gốc, từ ví dụ minh họa về K đến các hạn chế của phương pháp. Để tăng thêm độ sâu, bạn có thể giải thích rõ hơn về bản chất 'không cần huấn luyện' của KNN liên quan đến việc nó là một phương pháp phi tham số.
+
+</details>
 
 <br>
 
