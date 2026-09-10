@@ -152,10 +152,12 @@
 >
 > = Σi=1:M \[λi / (λi + α)\] → 3.91
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
->
-> Bài viết rất chi tiết và giải thích cực kỳ rõ ràng các bước biến đổi tuyến tính cũng như giải tích đạo hàm mà sách giáo khoa bỏ qua. Tuy nhiên, có một lỗi gõ nhỏ ở bước trung gian khi ghi nhầm đạo hàm của $-\frac{\alpha}{2}\mathbf{m}_N^T\mathbf{m}_N$ thành $-\frac{\alpha}{2}\mathbf{m}_N^T\mathbf{m}_N$ thay vì $-\frac{1}{2}\mathbf{m}_N^T\mathbf{m}_N$, mặc dù dòng sau vẫn biến đổi đúng.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+
+**Summary:** Bài viết rất chi tiết và giải thích cực kỳ rõ ràng các bước biến đổi tuyến tính cũng như giải tích đạo hàm mà sách giáo khoa bỏ qua. Tuy nhiên, có một lỗi gõ nhỏ ở bước trung gian khi ghi nhầm đạo hàm của $-\frac{\alpha}{2}\mathbf{m}_N^T\mathbf{m}_N$ thành $-\frac{\alpha}{2}\mathbf{m}_N^T\mathbf{m}_N$ thay vì $-\frac{1}{2}\mathbf{m}_N^T\mathbf{m}_N$, mặc dù dòng sau vẫn biến đổi đúng.
+
+</details>
 
 **🔗 See also:** [Hessian of Regularized Error Function](./351_evaluation_of_the_evidence_function.md#node-vpu7vqs) · [Lecture 21: Eigenvalues And Eigenvectors *(Mit 18.06)*](../mit1806_gstrang/lecture_21_eigenvalues_and_eigenvectors.md#node-aiwkaf3) · [Log Marginal Likelihood Derivation](./351_evaluation_of_the_evidence_function.md#node-ddcs0pi) · [Marginal Likelihood Maximization for Beta](#node-l71837c) · [Evidence Re-estimation Limit](./353_effective_number_of_parameters.md#node-00gilsq)
 
@@ -200,10 +202,12 @@
 >
 > Trong khi đó, với cách làm maximize model evidence, thì chỉ cần làm trực tiếp trên training set. Vì trong cả hai trường hợp là mô hình quá phức tạp hay quá đơn giản thì model evidence đều sẽ cao, mà ta đã thấy minh họa trong bài trước khi đã thấy đồ thị của model evidence theo M (M ở đây cũng là hyperparameter quy định độ phức tạp của mô hình).  Tương tự, với α, β cũng vậy, đều sẽ chi phối độ phức tạp của mô hình. Và việc tìm chúng theo cách maximize model evidence sẽ ra kết quả là giá trị khiến mô hình ko quá phức tạp cũng ko quá đơn giản
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **92/100**
->
-> Ghi chú rất tốt, tóm tắt chính xác quy trình lặp và cách tính tối ưu trị riêng của ma trận hệ số. Điểm cần làm rõ thêm là phương pháp Maximum Likelihood cần tập dữ liệu độc lập (validation set) để chọn siêu tham số tránh overfit, trong khi phương pháp Bayes có thể tối ưu hóa độ phức tạp trực tiếp trên training data thông qua marginal likelihood.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **92/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú rất tốt, tóm tắt chính xác quy trình lặp và cách tính tối ưu trị riêng của ma trận hệ số. Điểm cần làm rõ thêm là phương pháp Maximum Likelihood cần tập dữ liệu độc lập (validation set) để chọn siêu tham số tránh overfit, trong khi phương pháp Bayes có thể tối ưu hóa độ phức tạp trực tiếp trên training data thông qua marginal likelihood.
+
+</details>
 
 **🔗 See also:** [Gaussian Prior and Posterior Parameters](./331_bayesian_linear_regression.md#node-nt82rck) · [3.2.0 The Bias-Variance Decomposition](./320_the_bias_variance_decomposition.md#node-0nolzxg) · [Ước lượng Bayes và MAP](./125_curve_fitting_re_visited.md#node-8z48xwr)
 
@@ -332,10 +336,12 @@
 >
 > Và tương tự như α ta cũng phải giải tìm β theo lối iterative.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
->
-> Bản ghi chép cực kỳ chi tiết, chính xác và rõ ràng, đặc biệt là phần giải thích cặn kẽ tại sao $d\lambda_i/d\beta = \lambda_i/\beta$. Các bước biến đổi đại số để đi đến công thức (3.94) và (3.95) đều rất mạch lạc và hoàn hảo.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+
+**Summary:** Bản ghi chép cực kỳ chi tiết, chính xác và rõ ràng, đặc biệt là phần giải thích cặn kẽ tại sao $d\lambda_i/d\beta = \lambda_i/\beta$. Các bước biến đổi đại số để đi đến công thức (3.94) và (3.95) đều rất mạch lạc và hoàn hảo.
+
+</details>
 
 **🔗 See also:** [Section 3.5.2 Maximizing the Evidence Function](#node-nc5qxnz) · [Evidence Re-estimation Limit](./353_effective_number_of_parameters.md#node-00gilsq)
 
