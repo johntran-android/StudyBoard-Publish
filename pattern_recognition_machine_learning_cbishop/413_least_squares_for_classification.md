@@ -125,7 +125,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú rất xuất sắc, giải thích cặn kẽ và chính xác bản chất toán học của kỳ vọng có điều kiện và lý do mô hình tuyến tính thất bại khi xấp xỉ xác suất. Bạn chỉ cần chú ý ký hiệu xác suất để tránh nhầm lẫn giữa hàm mật độ xác suất và xác suất rời rạc.
+Ghi chú rất xuất sắc, giải thích cặn kẽ và chính xác bản chất toán học của kỳ vọng có điều kiện và lý do mô hình tuyến tính thất bại khi xấp xỉ xác suất. Bạn chỉ cần chú ý ký hiệu xác suất để tránh nhầm lẫn giữa hàm mật độ xác suất và xác suất rời rạc.
 
 </details>
 
@@ -169,7 +169,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú giải thích rất trực quan, chính xác về cơ chế ghép vector (vectorization) và quy tắc ra quyết định theo đúng nội dung sách. Tuy nhiên, cần lưu ý không nên ký hiệu thành f(Ck|x) vì hàm phân biệt tuyến tính ở đây chỉ trả về giá trị discriminant trực tiếp chứ chưa phải xác suất hay hàm mật độ điều kiện.
+Ghi chú giải thích rất trực quan, chính xác về cơ chế ghép vector (vectorization) và quy tắc ra quyết định theo đúng nội dung sách. Tuy nhiên, cần lưu ý không nên ký hiệu thành f(Ck|x) vì hàm phân biệt tuyến tính ở đây chỉ trả về giá trị discriminant trực tiếp chứ chưa phải xác suất hay hàm mật độ điều kiện.
 
 </details>
 
@@ -289,7 +289,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú giải thích rất cặn kẽ, chính xác bản chất đại số tuyến tính từ góc nhìn phép nhân ma trận đến tính chất của hàm Trace. Bạn chỉ cần chú ý đồng nhất ký hiệu dấu ngã trên ma trận thiết kế ($\widetilde{\mathbf{X}}$) để tránh nhầm lẫn với ma trận không có bias.
+Ghi chú giải thích rất cặn kẽ, chính xác bản chất đại số tuyến tính từ góc nhìn phép nhân ma trận đến tính chất của hàm Trace. Bạn chỉ cần chú ý đồng nhất ký hiệu dấu ngã trên ma trận thiết kế ($\widetilde{\mathbf{X}}$) để tránh nhầm lẫn với ma trận không có bias.
 
 </details>
 
@@ -455,7 +455,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú rất xuất sắc, chi tiết và hoàn toàn chính xác trong từng bước đạo hàm ma trận cũng như phân tích điều kiện tối ưu bậc hai. Bạn chỉ cần lưu ý một điểm nhỏ là khi $\widetilde{\mathbf{X}}$ có full column rank thì $\widetilde{\mathbf{X}}^T\widetilde{\mathbf{X}}$ sẽ là ma trận xác định dương (strictly positive definite), đảm bảo cực tiểu toàn cục duy nhất.
+Ghi chú rất xuất sắc, chi tiết và hoàn toàn chính xác trong từng bước đạo hàm ma trận cũng như phân tích điều kiện tối ưu bậc hai. Bạn chỉ cần lưu ý một điểm nhỏ là khi $\widetilde{\mathbf{X}}$ có full column rank thì $\widetilde{\mathbf{X}}^T\widetilde{\mathbf{X}}$ sẽ là ma trận xác định dương (strictly positive definite), đảm bảo cực tiểu toàn cục duy nhất.
 
 </details>
 
@@ -475,7 +475,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ⚠️ **88/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú nắm rất chuẩn ý chính về việc đầu ra có tổng bằng 1 nhưng không thỏa mãn phân phối xác suất do thiếu ràng buộc khoảng (0, 1). Bạn chỉ cần lưu ý thêm rằng công thức (4.18) là ràng buộc tuyến tính tổng quát, và chỉ khi áp dụng cho mã hóa 1-of-K thì nó mới tạo ra tính chất tổng các phần tử bằng 1.
+Ghi chú nắm rất chuẩn ý chính về việc đầu ra có tổng bằng 1 nhưng không thỏa mãn phân phối xác suất do thiếu ràng buộc khoảng (0, 1). Bạn chỉ cần lưu ý thêm rằng công thức (4.18) là ràng buộc tuyến tính tổng quát, và chỉ khi áp dụng cho mã hóa 1-of-K thì nó mới tạo ra tính chất tổng các phần tử bằng 1.
 
 </details>
 
@@ -563,7 +563,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **96/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú xuất sắc! Bạn không chỉ hiểu đúng bản chất lý thuyết mà còn tự tạo ví dụ số học (numerical example) cực kỳ trực quan để giải thích hiện tượng 'too correct' bị phạt bởi Sum-of-Squares Error (SSE).
+Ghi chú xuất sắc! Bạn không chỉ hiểu đúng bản chất lý thuyết mà còn tự tạo ví dụ số học (numerical example) cực kỳ trực quan để giải thích hiện tượng 'too correct' bị phạt bởi Sum-of-Squares Error (SSE).
 
 
 ### Điểm mạnh
@@ -578,9 +578,9 @@
 ### Gợi ý đào sâu
 - Hãy thử tự đặt câu hỏi: *'Tại sao Logistic Regression hay Cross-Entropy loss lại không bị vấn đề penalize too correct này?'* (Gợi ý: Hàm sigmoid nén giá trị ra khoảng $(0, 1)$ và tiệm cận với target mà không bị bùng nổ khoảng cách Euclidean).
 
-#### ⭐ Bonus points
-- Tự xây dựng ví dụ số học định lượng (numerical proof) để minh họa cụ thể cho khái niệm 'too correct' vốn trừu tượng trong sách giáo trình.
-- Liên kết chính xác bản chất của regression loss (bình phương khoảng cách Euclidean) với sự sai lệch trong bài toán classification.
+> [!TIP]
+> - Tự xây dựng ví dụ số học định lượng (numerical proof) để minh họa cụ thể cho khái niệm 'too correct' vốn trừu tượng trong sách giáo trình.
+> - Liên kết chính xác bản chất của regression loss (bình phương khoảng cách Euclidean) với sự sai lệch trong bài toán classification.
 
 </details>
 
@@ -694,7 +694,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú xuất sắc, thể hiện sự am hiểu sâu sắc và liên hệ chặt chẽ giữa các chương trong giáo trình cũng như kiến thức thống kê bổ trợ.
+Ghi chú xuất sắc, thể hiện sự am hiểu sâu sắc và liên hệ chặt chẽ giữa các chương trong giáo trình cũng như kiến thức thống kê bổ trợ.
 
 
 ### Điểm mạnh
@@ -709,10 +709,10 @@
 ### Gợi ý mở rộng
 - Tìm hiểu thêm về việc tại sao least squares lại tạo ra 'masking effect' đối với các lớp nằm ở giữa các lớp khác khi sử dụng mã hóa 1-of-K.
 
-#### ⭐ Bonus points
-- Liên hệ và giải thích chính xác định nghĩa tính bền vững (robustness) theo sách Thống kê của Casella & Berger.
-- Chứng minh chi tiết và chính xác mối liên hệ toán học giữa Maximum Likelihood Estimation (MLE) dưới phân phối Gauss và hàm mất mát Least Squares.
-- Mở rộng phân tích chính xác về phân phối mục tiêu phù hợp trong phân loại (Bernoulli, Categorical) cùng hàm kích hoạt chuẩn hóa (logistic, softmax).
+> [!TIP]
+> - Liên hệ và giải thích chính xác định nghĩa tính bền vững (robustness) theo sách Thống kê của Casella & Berger.
+> - Chứng minh chi tiết và chính xác mối liên hệ toán học giữa Maximum Likelihood Estimation (MLE) dưới phân phối Gauss và hàm mất mát Least Squares.
+> - Mở rộng phân tích chính xác về phân phối mục tiêu phù hợp trong phân loại (Bernoulli, Categorical) cùng hàm kích hoạt chuẩn hóa (logistic, softmax).
 
 </details>
 
