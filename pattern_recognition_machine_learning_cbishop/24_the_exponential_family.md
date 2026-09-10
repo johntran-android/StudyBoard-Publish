@@ -173,10 +173,12 @@
 >
 > (thật ra ta có thể dừng ngay ở trên, vì khi η = ln\[μ/(1-μ)\], thì kiểu gì 1-μ cũng là hàm g(η) với hàm g có công thức nào đó, chẳng qua là nếu giải chi tiết ra sẽ thấy đó chính là σ(-η))
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
->
-> Bạn đã thực hiện biến đổi đại số một cách hoàn hảo và chi tiết, làm nổi bật từng bước để đưa phân phối Bernoulli về dạng của họ Exponential. Việc xác định rõ ràng các thành phần h(x), g(η), η, u(x) chứng tỏ bạn đã nắm rất vững cấu trúc của Exponential Family và vượt xa độ sâu trình bày của tài liệu gốc.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+
+**Summary:** Bạn đã thực hiện biến đổi đại số một cách hoàn hảo và chi tiết, làm nổi bật từng bước để đưa phân phối Bernoulli về dạng của họ Exponential. Việc xác định rõ ràng các thành phần h(x), g(η), η, u(x) chứng tỏ bạn đã nắm rất vững cấu trúc của Exponential Family và vượt xa độ sâu trình bày của tài liệu gốc.
+
+</details>
 
 <br>
 
@@ -380,10 +382,12 @@
 >
 > = ∏k=1:M (μk^xk)/xk!
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Ghi chú của bạn giải thích rất chi tiết và chính xác quá trình biến đổi công thức phân phối đa thức (multinomial distribution) sang dạng exponential family, khớp hoàn hảo với hình ảnh gốc. Đặc biệt ấn tượng là việc bạn đã tự mình đạo hàm công thức tổng quát của phân phối đa thức và sau đó lý giải một cách sáng tỏ tại sao công thức trong sách lại chỉ áp dụng cho trường hợp 'một lần quan sát' (N=1).
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú của bạn giải thích rất chi tiết và chính xác quá trình biến đổi công thức phân phối đa thức (multinomial distribution) sang dạng exponential family, khớp hoàn hảo với hình ảnh gốc. Đặc biệt ấn tượng là việc bạn đã tự mình đạo hàm công thức tổng quát của phân phối đa thức và sau đó lý giải một cách sáng tỏ tại sao công thức trong sách lại chỉ áp dụng cho trường hợp 'một lần quan sát' (N=1).
+
+</details>
 
 <br>
 
@@ -458,10 +462,12 @@
 >
 > = exp {∑k=1:M-1 \[xk ln(μk/\[1 - ∑j=1:M-1 μj\])\] + ln(1 - ∑j=1:M-1 μj)} → đây là 2.211
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Phần trình bày của bạn rất chi tiết và chính xác từng bước trong quá trình biến đổi đại số, thể hiện sự hiểu biết sâu sắc về việc loại bỏ tham số và cách các biến xk được xử lý. Bạn đã khớp thành công với công thức (2.211) và có nhận định đúng về trường hợp N=1 cho tổng xk. Để hoàn thiện hơn nữa, bạn có thể giải thích rõ ràng hơn về lý do ban đầu bạn chọn xử lý trường hợp N=1 trong biến đổi của mình.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Phần trình bày của bạn rất chi tiết và chính xác từng bước trong quá trình biến đổi đại số, thể hiện sự hiểu biết sâu sắc về việc loại bỏ tham số và cách các biến xk được xử lý. Bạn đã khớp thành công với công thức (2.211) và có nhận định đúng về trường hợp N=1 cho tổng xk. Để hoàn thiện hơn nữa, bạn có thể giải thích rõ ràng hơn về lý do ban đầu bạn chọn xử lý trường hợp N=1 trong biến đổi của mình.
+
+</details>
 
 <br>
 
@@ -526,10 +532,12 @@
 >
 > chính là công thức của exponential familty với u(𝐱) = 𝐱, h(𝐱) = 1, g(η) = \[1 + ∑k=1:M-1 exp(ηk)\]^-1
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
->
-> Bài làm rất chính xác và sâu sắc. Bạn không chỉ tái hiện lại các công thức mà còn giải thích chi tiết ý nghĩa của các biến đổi và ràng buộc, thể hiện sự hiểu biết toàn diện về nội dung.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+
+**Summary:** Bài làm rất chính xác và sâu sắc. Bạn không chỉ tái hiện lại các công thức mà còn giải thích chi tiết ý nghĩa của các biến đổi và ràng buộc, thể hiện sự hiểu biết toàn diện về nội dung.
+
+</details>
 
 <br>
 
@@ -612,10 +620,12 @@
 >
 > = \[1/√(2π)\] (-2η1)^1/2 exp{η2²/4η1) → 2.223 (mình đặt eta và u(x) thứ tự ngược lại với trong sách nhưng ko quan trọng.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
->
-> Bạn đã thể hiện sự hiểu biết sâu sắc bằng cách trình bày chi tiết từng bước chuyển đổi phân phối Gaussian sang dạng exponential family, bao gồm cả việc rút gọn h(x)g(η) một cách chính xác. Việc bạn nhận ra và giải thích sự khác biệt trong thứ tự các thành phần của η so với tài liệu gốc cho thấy một tư duy phản biện và cực kỳ chính xác.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+
+**Summary:** Bạn đã thể hiện sự hiểu biết sâu sắc bằng cách trình bày chi tiết từng bước chuyển đổi phân phối Gaussian sang dạng exponential family, bao gồm cả việc rút gọn h(x)g(η) một cách chính xác. Việc bạn nhận ra và giải thích sự khác biệt trong thứ tự các thành phần của η so với tài liệu gốc cho thấy một tư duy phản biện và cực kỳ chính xác.
+
+</details>
 
 <br>
 
