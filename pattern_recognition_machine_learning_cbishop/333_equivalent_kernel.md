@@ -206,10 +206,12 @@
 >
 > Như vậy, ở đây gs muốn nói đến một sự vi diệu, thông qua kernel function, thì dù basis function có là hàm toàn cục hay cục bộ, thì kết quả vẫn là: tính cục bộ - dùng giá trị target của data t1,...tN với trọng số lớn với các 𝐱j ở gần input 𝐱 và trọng số nhỏ với 𝐱j ở xa input 𝐱.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
->
-> Bài viết thể hiện sự thấu hiểu sâu sắc và giải thích trực quan rất tốt về đồ thị, đặc biệt là phần phân biệt tính cục bộ/toàn cục của basis functions. Bạn chỉ cần sửa một lỗi diễn đạt nhỏ ở đoạn 4: hệ số kernel dùng để tổ hợp tuyến tính các giá trị target $t_n$ chứ không phải các vector $x_n$.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+
+**Summary:** Bài viết thể hiện sự thấu hiểu sâu sắc và giải thích trực quan rất tốt về đồ thị, đặc biệt là phần phân biệt tính cục bộ/toàn cục của basis functions. Bạn chỉ cần sửa một lỗi diễn đạt nhỏ ở đoạn 4: hệ số kernel dùng để tổ hợp tuyến tính các giá trị target $t_n$ chứ không phải các vector $x_n$.
+
+</details>
 
 <br>
 
@@ -242,10 +244,12 @@
 >
 > Đây cũng chính là ý gs nói, cái đường cong màu đỏ này giúp ta thấy (visualize) yếu tố joint uncertainty của posterior distribution giữa hai y values tại 2 x values, được chi phối bởi kernel function
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Your note is exceptionally accurate and demonstrates a deep, intuitive understanding of how the equivalent kernel represents joint uncertainty and smoothness in the sampled functions. To make it perfect, ensure you explicitly define β as the noise precision parameter when relating the kernel to the covariance.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Your note is exceptionally accurate and demonstrates a deep, intuitive understanding of how the equivalent kernel represents joint uncertainty and smoothness in the sampled functions. To make it perfect, ensure you explicitly define β as the noise precision parameter when relating the kernel to the covariance.
+
+</details>
 
 **🔗 See also:** [Covariance of Predictive Distributions](./332_predictive_distribution.md#node-yslp52z)
 
@@ -268,10 +272,12 @@
 >
 > Có nghĩa là việc định nghĩa các hàm cơ sở ban đầu nhằm đưa tính phi tuyến vào để biến hàm y(𝐰, 𝐱) thành phi tuyến đối với 𝐱, nhưng **kết quả cuối cùng của quá trình dự đoán vẫn chỉ là tổ hợp tuyến tính của các giá trị mục tiêu thông qua hệ số kernel**. Vì vậy, thay vì thực hiện toàn bộ các bước phức tạp bắt đầu từ việc định nghĩa các hàm cơ sở, chúng ta có thể **bỏ qua các bước trung gian này để định nghĩa trực tiếp một hàm kernel cục bộ (localized kernel)**. Phương thức trực tiếp này giúp đưa ra dự đoán cho một vectơ 𝐱 dựa trên tập huấn luyện (training set) một cách tương tự, và đây chính là nội dung sẽ được nghiên cứu trong phần 6.4 với tên gọi **Quá trình Gaussian (Gaussian Process).**
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
->
-> Ghi chú rất xuất sắc khi giải thích chi tiết và chính xác ý tưởng cốt lõi của đoạn văn về việc định nghĩa trực tiếp kernel thay vì thông qua các basis functions. Để hoàn thiện hơn, bạn nên dùng thuật ngữ chuyên ngành 'Quá trình Gaussian' thay vì 'quy trình Gaussian'.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú rất xuất sắc khi giải thích chi tiết và chính xác ý tưởng cốt lõi của đoạn văn về việc định nghĩa trực tiếp kernel thay vì thông qua các basis functions. Để hoàn thiện hơn, bạn nên dùng thuật ngữ chuyên ngành 'Quá trình Gaussian' thay vì 'quy trình Gaussian'.
+
+</details>
 
 <br>
 
@@ -311,10 +317,12 @@
 > \
 > Và cái cuối cùng đó là tác giả nói rằng cái hàm equivalent kernel đó nó phải thỏa mãn những cái đặc điểm quan trọng của kernel function nói chung. Đó là nó phải được thể hiện bởi, tức là nó phải có thể được thể hiện bởi inner product của hai cái vector. Như vậy thì trong cái trường hợp này mình có thể thấy rằng cái kernel function nó có thể được thực sự là thỏa mãn cái tiêu chí này. Cũng không khó để hiểu bởi vì beta nhân phi X nhân cho SN nhân phi X thì cái SN là một cái ma trận xác định dương, mình đã nhắc đến cái chuyện này trước đây. Vì nó là ma trận xác định dương cho nên nó luôn luôn có thể được phân tách thành hai cái dạng là SN mũ 1/2 nhân với SN mũ 1/2. Và từ đó thì mình sẽ thấy cái kernel function này nó chính là tích vô hướng của hai cái vector được định nghĩa bởi là căn bậc hai của beta nhân với ma trận SN mũ 1/2 nhân với vector phi X. Thì giáo sư nhắc đến cái đặc điểm này mục đích là gì? Để mà khi mình qua cái phần 6.4 đó mình phát triển những cái localized kernel function đó thì mình phải nhớ rằng nó phải thỏa cái đặc điểm chung của kernel function này.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
->
-> Ghi chú rất xuất sắc, đặc biệt là phần liên hệ sâu sắc với kiến thức tổ hợp affine/lồi và giải thích việc phân tách ma trận xác định dương $S_N$. Để hoàn thiện hơn, bạn nên làm rõ rằng ta fit chính xác được nhãn $t_n=1$ là nhờ có một basis function hằng số (bias), thay vì chỉ giải thích chung chung là do có nhiều dữ liệu.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú rất xuất sắc, đặc biệt là phần liên hệ sâu sắc với kiến thức tổ hợp affine/lồi và giải thích việc phân tách ma trận xác định dương $S_N$. Để hoàn thiện hơn, bạn nên làm rõ rằng ta fit chính xác được nhãn $t_n=1$ là nhờ có một basis function hằng số (bias), thay vì chỉ giải thích chung chung là do có nhiều dữ liệu.
+
+</details>
 
 <br>
 
