@@ -172,10 +172,12 @@
 >
 > Và khi lấy ν → inf, thì nó sẽ trở thành Normal(μ, 1/λ)
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Điểm mạnh của bạn là khả năng phân tích toán học rất sâu sắc và chi tiết, đặc biệt là việc tự giải thích và chứng minh lại các công thức 2.158 và 2.159 một cách chính xác. Bạn cũng đã kết nối các khái niệm về xác suất có điều kiện, Bayes và các phân phối khác (Cauchy, Normal) một cách rất mạch lạc. Để nâng cao hơn nữa, hãy chú ý một chút đến cách diễn đạt về "precision" và "variance" trong phần đầu để tránh nhầm lẫn, và đảm bảo mọi thuật ngữ được sử dụng nhất quán.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Điểm mạnh của bạn là khả năng phân tích toán học rất sâu sắc và chi tiết, đặc biệt là việc tự giải thích và chứng minh lại các công thức 2.158 và 2.159 một cách chính xác. Bạn cũng đã kết nối các khái niệm về xác suất có điều kiện, Bayes và các phân phối khác (Cauchy, Normal) một cách rất mạch lạc. Để nâng cao hơn nữa, hãy chú ý một chút đến cách diễn đạt về "precision" và "variance" trong phần đầu để tránh nhầm lẫn, và đảm bảo mọi thuật ngữ được sử dụng nhất quán.
+
+</details>
 
 <br>
 
@@ -231,10 +233,12 @@
 >
 > Normal. vì phải cố giải thích sự xuất hiện của extreme data, nên nó buộc phải tăng scale lên, hình ảnh sẽ là nó phải phình to ra, để giúp cho với mô hình đó, outlier có xác suất cao hơn, cũng chính là với scale đó, có thể giải thích tốt hơn cho các giá trị outlier này. Và không những vậy, nếu việc phình to (tăng scale / variance) còn chưa đủ, nó thậm chí phải dịch chuyển cái location / mean về phía đó nữa.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
->
-> Ghi chú của bạn rất chính xác và sâu sắc, nắm bắt tốt các khái niệm chính về phân phối t của Student, mối quan hệ với hỗn hợp Gaussian và tính bền vững trước các giá trị ngoại lệ. Để hoàn thiện hơn, bạn có thể diễn đạt rõ hơn rằng phân phối t chứa Gaussian như một trường hợp đặc biệt khi ν tiến tới vô cùng, thay vì "bản chất" là Normal.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú của bạn rất chính xác và sâu sắc, nắm bắt tốt các khái niệm chính về phân phối t của Student, mối quan hệ với hỗn hợp Gaussian và tính bền vững trước các giá trị ngoại lệ. Để hoàn thiện hơn, bạn có thể diễn đạt rõ hơn rằng phân phối t chứa Gaussian như một trường hợp đặc biệt khi ν tiến tới vô cùng, thay vì "bản chất" là Normal.
+
+</details>
 
 <br>
 
@@ -251,10 +255,12 @@
 >
 > Và như vậy, ta còn nhớ bài toán least square, có bản chất chính là bài toán ta đi tìm ML estimator của Normal mean: Tức là ta giả định T|𝐱 \~ Normal(y(𝐱, 𝐰), σ²), và ý muốn nói, vì ta dùng Normal làm distribution giả định cho T, nên nó không có tính Robust. Nếu ta thay Normal bằng Student's t, ta sẽ có thể có cách tiếp cận Robust hơn.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
->
-> Phân tích của bạn rất chính xác và sâu sắc, nắm bắt tốt bản chất về tính vững (robustness) của phân phối t-Student và mối liên hệ với phương pháp bình phương tối thiểu. Để cô đọng hơn, bạn có thể tóm tắt trực tiếp hơn ý chính về việc thay thế phân phối giả định từ Gaussian sang t-Student mang lại sự vững vàng.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+
+**Summary:** Phân tích của bạn rất chính xác và sâu sắc, nắm bắt tốt bản chất về tính vững (robustness) của phân phối t-Student và mối liên hệ với phương pháp bình phương tối thiểu. Để cô đọng hơn, bạn có thể tóm tắt trực tiếp hơn ý chính về việc thay thế phân phối giả định từ Gaussian sang t-Student mang lại sự vững vàng.
+
+</details>
 
 <br>
 
@@ -269,10 +275,12 @@
 > [!NOTE]
 > Cái phân phối về cơ bản chỉ là giáo sư nói về cái phiên bản khái quát lên cái trường hợp đa biến của phân phối student T. Thì công thức của cái hàm student T đa biến mình chưa gặp ở Casella cũng như start 110. Nhưng mà ở đây mình tạm chấp nhận cái công thức đó thay vì cố gắng giải cái tích phân 2.161.
 
-> [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **85/100**
->
-> Học viên nắm bắt chính xác trọng tâm của đoạn văn về việc khái quát phân phối Student-T sang dạng đa biến và hiểu công thức 2.162 là kết quả của tích phân 2.161. Để sâu sắc hơn, hãy xem xét các yếu tố mới như khoảng cách Mahalanobis (Δ²) và các tính chất của phân phối đa biến này.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ⚠️ **85/100** · ✓ Move on</summary>
+
+**Summary:** Học viên nắm bắt chính xác trọng tâm của đoạn văn về việc khái quát phân phối Student-T sang dạng đa biến và hiểu công thức 2.162 là kết quả của tích phân 2.161. Để sâu sắc hơn, hãy xem xét các yếu tố mới như khoảng cách Mahalanobis (Δ²) và các tính chất của phân phối đa biến này.
+
+</details>
 
 <br>
 
