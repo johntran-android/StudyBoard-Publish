@@ -317,27 +317,24 @@
 >
 > Có nghĩa là sao, có nghĩa là nó cho ta luôn một threshold, để coi như là có đầy đủ hàm discriminant khỏi cần phải làm thêm bước chiếu xuống 𝐰, giải bài toán point estimation giả định distribution là Gaussian, rồi mới từ đó tìm threshold nơi posterior f(𝒞1|y) = f(𝒞2|y).
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
-
-Ghi chú cực kỳ chi tiết, mạch lạc và thể hiện sự hiểu biết sâu sắc về mặt toán học cũng như trực giác đằng sau mối liên hệ giữa Least Squares và Fisher's LDA.
-
-
-### Điểm mạnh
-- **Đạo hàm tường minh và chuẩn xác**: Các bước tính toán đạo hàm theo $w_0$ và $\mathbf{w}$ rất chi tiết, áp dụng đúng chain rule và giải thích cặn kẽ vì sao $\frac{d}{d\mathbf{w}}(\mathbf{w}^T\mathbf{x}) = \mathbf{x}$.
-- **Biến đổi đại số khéo léo**: Thao tác biến đổi vế trái từ $\sum_i \mathbf{x}_i(\mathbf{x}_i - \mathbf{m})^T$ sang $\sum_i (\mathbf{x}_i - \mathbf{m})(\mathbf{x}_i - \mathbf{m})^T$ bằng cách trừ đi đại lượng triệt tiêu $\mathbf{m}\sum_i(\mathbf{x}_i - \mathbf{m})^T = 0$ là một kỹ thuật đại số tuyến tính rất đẹp và chính xác.
-- **Liên hệ sâu sắc**: Nhận định đúng về lợi thế của Least Squares so với Fisher criterion thuần túy (tự động cho ra threshold $w_0$ mà không cần mô hình hóa phân phối 1D sau khi chiếu).
-
-### Điểm cần lưu ý & cải thiện
-- **Lỗi chính tả ký hiệu mẫu số**: Ở dòng phân tích vế phải, biểu thức thứ hai viết nhầm mẫu số thành $N_1$: `N (Σi∈𝒞2 𝐱i)/N1` (đúng ra phải chia cho $N_2$), dù dòng sau bạn vẫn rút ra đúng kết quả $N\mathbf{m}_2$.
-- **Ký hiệu đạo hàm**: Ký hiệu `d/d0 (𝐰ᵀ𝐱i + w0 - ti)` ở bước chain rule bị gõ thiếu chữ $w$ (`d/dw0`).
-- **Bước nối từ tổng phương sai sang $S_W$ và $S_B$**: Bạn đã bỏ qua chi tiết phân rã ma trận phương sai tổng thành $\mathbf{S}_W + \frac{N_1 N_2}{N}\mathbf{S}_B$. Dù hiểu bản chất, việc viết thêm 2-3 dòng khai triển này sẽ làm ghi chú hoàn chỉnh 100%.
-
-### Gợi ý mở rộng
-- Hãy thử chứng minh nốt tính chất $\mathbf{S}_B\mathbf{w} \parallel (\mathbf{m}_1 - \mathbf{m}_2)$ để thấy rõ tại sao ta có thể bỏ qua thành phần này và suy ra $\mathbf{w} \propto \mathbf{S}_W^{-1}(\mathbf{m}_1 - \mathbf{m}_2)$.
-
 > [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú cực kỳ chi tiết, mạch lạc và thể hiện sự hiểu biết sâu sắc về mặt toán học cũng như trực giác đằng sau mối liên hệ giữa Least Squares và Fisher's LDA.
+> ### Điểm mạnh
+> - **Đạo hàm tường minh và chuẩn xác**: Các bước tính toán đạo hàm theo $w_0$ và $\mathbf{w}$ rất chi tiết, áp dụng đúng chain rule và giải thích cặn kẽ vì sao $\frac{d}{d\mathbf{w}}(\mathbf{w}^T\mathbf{x}) = \mathbf{x}$.
+> - **Biến đổi đại số khéo léo**: Thao tác biến đổi vế trái từ $\sum_i \mathbf{x}_i(\mathbf{x}_i - \mathbf{m})^T$ sang $\sum_i (\mathbf{x}_i - \mathbf{m})(\mathbf{x}_i - \mathbf{m})^T$ bằng cách trừ đi đại lượng triệt tiêu $\mathbf{m}\sum_i(\mathbf{x}_i - \mathbf{m})^T = 0$ là một kỹ thuật đại số tuyến tính rất đẹp và chính xác.
+> - **Liên hệ sâu sắc**: Nhận định đúng về lợi thế của Least Squares so với Fisher criterion thuần túy (tự động cho ra threshold $w_0$ mà không cần mô hình hóa phân phối 1D sau khi chiếu).
+>
+> ### Điểm cần lưu ý & cải thiện
+> - **Lỗi chính tả ký hiệu mẫu số**: Ở dòng phân tích vế phải, biểu thức thứ hai viết nhầm mẫu số thành $N_1$: `N (Σi∈𝒞2 𝐱i)/N1` (đúng ra phải chia cho $N_2$), dù dòng sau bạn vẫn rút ra đúng kết quả $N\mathbf{m}_2$.
+> - **Ký hiệu đạo hàm**: Ký hiệu `d/d0 (𝐰ᵀ𝐱i + w0 - ti)` ở bước chain rule bị gõ thiếu chữ $w$ (`d/dw0`).
+> - **Bước nối từ tổng phương sai sang $S_W$ và $S_B$**: Bạn đã bỏ qua chi tiết phân rã ma trận phương sai tổng thành $\mathbf{S}_W + \frac{N_1 N_2}{N}\mathbf{S}_B$. Dù hiểu bản chất, việc viết thêm 2-3 dòng khai triển này sẽ làm ghi chú hoàn chỉnh 100%.
+>
+> ### Gợi ý mở rộng
+> - Hãy thử chứng minh nốt tính chất $\mathbf{S}_B\mathbf{w} \parallel (\mathbf{m}_1 - \mathbf{m}_2)$ để thấy rõ tại sao ta có thể bỏ qua thành phần này và suy ra $\mathbf{w} \propto \mathbf{S}_W^{-1}(\mathbf{m}_1 - \mathbf{m}_2)$.
+>
+> **⭐ Bonus points**
 > - Áp dụng kiến thức vi phân toàn phần (linear operator / Frechet derivative) từ MIT 18.S096 để giải thích đạo hàm ma trận.
 > - Chỉ ra được ưu điểm vượt trội của Least Squares so với Fisher gốc: tự động xác định ngưỡng phân lớp (bias w0) mà không cần bước ước lượng phân phối Gaussian trên không gian 1 chiều chiếu.
 
