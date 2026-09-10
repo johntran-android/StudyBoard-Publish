@@ -47,7 +47,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú cực kỳ xuất sắc, không chỉ tóm tắt chính xác nội dung từ sách mà còn có liên hệ thực tế sâu sắc với bài toán kiểm định giả thuyết và giải thích trực quan, rõ ràng về mặt hình học tại sao số chiều của hyperplane lại là D-1. Bạn hãy tiếp tục duy trì cách tự học và đào sâu bản chất toán học rất hiệu quả này nhé!
+Ghi chú cực kỳ xuất sắc, không chỉ tóm tắt chính xác nội dung từ sách mà còn có liên hệ thực tế sâu sắc với bài toán kiểm định giả thuyết và giải thích trực quan, rõ ràng về mặt hình học tại sao số chiều của hyperplane lại là D-1. Bạn hãy tiếp tục duy trì cách tự học và đào sâu bản chất toán học rất hiệu quả này nhé!
 
 </details>
 
@@ -101,7 +101,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn cực kỳ xuất sắc và đào sâu bản chất khi phân biệt rõ giá trị thực tế (0, 1) với dự đoán xác suất, đồng thời liên hệ rất tốt với khái niệm 'one-hot vector'. Để hoàn thiện hơn nữa, bạn có thể tự liên hệ thêm cách biểu diễn nhãn trong các mô hình phi xác suất như SVM (thường dùng -1 và 1) để so sánh.
+Ghi chú của bạn cực kỳ xuất sắc và đào sâu bản chất khi phân biệt rõ giá trị thực tế (0, 1) với dự đoán xác suất, đồng thời liên hệ rất tốt với khái niệm 'one-hot vector'. Để hoàn thiện hơn nữa, bạn có thể tự liên hệ thêm cách biểu diễn nhãn trong các mô hình phi xác suất như SVM (thường dùng -1 và 1) để so sánh.
 
 </details>
 
@@ -186,7 +186,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Note rất xuất sắc, giải thích cực kỳ cặn kẽ và chính xác bản chất toán học của Generalized Linear Model, đặc biệt là việc làm rõ lý do tại sao decision boundary vẫn là tuyến tính dù có sử dụng hàm kích hoạt phi tuyến. Bạn chỉ cần lưu ý tránh một vài lỗi gõ phím nhỏ (như 'classfication', 'TUYẾNTÍNH') để ghi chú thêm phần hoàn hảo.
+Note rất xuất sắc, giải thích cực kỳ cặn kẽ và chính xác bản chất toán học của Generalized Linear Model, đặc biệt là việc làm rõ lý do tại sao decision boundary vẫn là tuyến tính dù có sử dụng hàm kích hoạt phi tuyến. Bạn chỉ cần lưu ý tránh một vài lỗi gõ phím nhỏ (như 'classfication', 'TUYẾNTÍNH') để ghi chú thêm phần hoàn hảo.
 
 </details>
 
