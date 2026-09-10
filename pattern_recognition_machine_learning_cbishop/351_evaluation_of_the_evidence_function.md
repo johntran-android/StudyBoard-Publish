@@ -276,12 +276,11 @@
 >
 > Mình hiểu E ở đây là Error, chứ ko phải kì vọng (Expectation của 𝐰) nhé.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Ghi chú vô cùng chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về cả hai phương pháp tính tích phân (dùng công thức phân phối Gaussian tuyến tính và biến đổi trực tiếp qua hàm năng lượng). Các bước phân tích rõ ràng và việc làm tường minh các biến phụ thuộc ẩn rất xuất sắc.
-
-</details>
 
 **🔗 See also:** [Phân bố tiên nghiệm và hậu nghiệm](./233_bayess_theorem_for_gaussian_variables.md#node-zswmsts) · [Likelihood and Error Functions](./311_maximum_likelihood_and_least_squares.md#node-urnjdcs) · [Gaussian Prior and Posterior Parameters](./331_bayesian_linear_regression.md#node-nt82rck) · [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj)
 
@@ -480,12 +479,11 @@ Ghi chú vô cùng chi tiết, chính xác và thể hiện sự hiểu biết s
 >
 > Và như vậy cái mN ta đặt ở trên: 𝐦N = 𝐀inv β**Φ**ᵀ𝐭 sẽ bằng (𝐒N⁻¹)⁻¹ β**Φ**ᵀ𝐭 = 𝐒N β**Φ**ᵀ𝐭 = β**S𝐍Φ**ᵀ𝐭, **CHÍNH LÀ MEAN CỦA POSTERIOR DISTRIBUTION 3.53**
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Ghi chú rất chi tiết, tự biến đổi toán học xuất sắc và giải thích rõ ràng mối liên hệ giữa ma trận Hessian với các công thức posterior trước đó. Tuy nhiên, bạn lưu ý một lỗi gõ nhỏ ở bước cuối cùng khi bị thiếu hệ số 1/2 ở thành phần alpha trong công thức của E(m_N).
-
-</details>
 
 **🔗 See also:** [Gaussian Prior and Posterior Parameters](./331_bayesian_linear_regression.md#node-nt82rck) · [Section 3.5.2 Maximizing the Evidence Function](./352_maximizing_the_evidence_function.md#node-nc5qxnz)
 
@@ -620,8 +618,9 @@ Ghi chú rất chi tiết, tự biến đổi toán học xuất sắc và giả
 >
 > Đây là kết quả 3.86
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Ghi chú của bạn cực kỳ chi tiết, mạch lạc và chính xác tuyệt đối trong từng bước biến đổi toán học để chứng minh (3.85) và (3.86). Việc giải thích tường minh hằng số chuẩn hóa Gaussian và cách triệt tiêu các đại lượng logarit là một điểm cộng rất lớn giúp người đọc dễ dàng theo kịp.
 
@@ -643,8 +642,6 @@ u)^M/2] (|Ainv|^1/2)`
 > [!TIP]
 > - Áp dụng chính xác tính chất định thức của ma trận nghịch đảo để đơn giản hóa biểu thức chứa ma trận A.
 > - Liên hệ thành công phương pháp tính tích phân bằng cách đưa về hàm mật độ xác suất Gaussian chuẩn hóa.
-
-</details>
 
 **🔗 See also:** [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj) · [Section 3.5.2 Maximizing the Evidence Function](./352_maximizing_the_evidence_function.md#node-nc5qxnz)
 
@@ -765,12 +762,11 @@ u)^M/2] (|Ainv|^1/2)`
 >
 > Và như vậy câu chốt một ý quan trọng, đó là nếu chỉ nhìn hình 1.5, ta sẽ thấy khi M = 3 → 7, thì ra sẽ ko biết nên dùng M bao nhiêu (vì khi dựa vào test performance (màu đỏ), nó đi ngang. Nhưng nếu dùng hình 3.14 thì rõ ràng là ta sẽ chọn M = 3, nơi có model evidence cao nhất.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chép cực kỳ xuất sắc, giải thích rất sâu sắc và chính xác bản chất toán học của các thành phần trong công thức model evidence cùng sự liên hệ hoàn hảo với các đồ thị. Để hoàn thiện hơn, bạn có thể giải thích rõ hơn về mặt toán học tại sao định thức của ma trận precision A tăng lên khi số chiều M tăng.
-
-</details>
 
 <br>
 
