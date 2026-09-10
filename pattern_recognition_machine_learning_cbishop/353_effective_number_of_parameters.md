@@ -554,11 +554,10 @@
 >
 > Thì y như vậy, 𝐐ᵀ𝐳 sẽ chính là ta chiếu tọa độ của 𝐳 lên các eigenvector **q**1,**q**2,..để có tọa độ mới. Thì đây cũng chính là cùng ý nghĩa với xoay hệ trục để đổi tọa độ sang basis **q**'s (hay u's, là eigenvector của design matrix)
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
-
-Ghi chú vô cùng chi tiết và chính xác, tự chứng minh mạch lạc từ phân phối Gaussian đến phương trình ellipsoid và giải thích rất rõ ràng bản chất đại số tuyến tính của phép xoay trục tọa độ theo eigenvectors. Không có điểm gì cần cải thiện thêm.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú vô cùng chi tiết và chính xác, tự chứng minh mạch lạc từ phân phối Gaussian đến phương trình ellipsoid và giải thích rất rõ ràng bản chất đại số tuyến tính của phép xoay trục tọa độ theo eigenvectors. Không có điểm gì cần cải thiện thêm.
 
 **🔗 See also:** [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj) · [Chuyển tọa độ eigenvector](./230_gaussian_distribution.md#node-c9cpfzj)
 
@@ -883,11 +882,10 @@ Ghi chú vô cùng chi tiết và chính xác, tự chứng minh mạch lạc t�
 >
 > Và tới đây, với việc λ1, λ2 sẽ ảnh hưởng đến đạo hàm bậc hai của hai cái hàm f1, f2 này, mình đã hiểu tại sao nói λi sẽ phản ánh curvature của likelihood function, bởi vì đạo hàm bậc hai của f1, f2 **CHÍNH LÀ THÔNG TIN CURVATURE CỦA HÀM LIKELIHOOD THEO TỪNG PHƯƠNG** 𝐮1, 𝐮2.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
-
-Bài tự học của bạn cực kỳ chi tiết, chính xác và thể hiện tư duy toán học xuất sắc khi tự chứng minh mối liên hệ giữa eigenvalue và độ cong của likelihood. Điểm trừ duy nhất là lỗi ghi chép nhỏ ở đạo hàm bậc nhất của f1(y1) (thiếu biến y1), nhưng phần kết luận về đạo hàm bậc hai để chỉ curvature vẫn hoàn toàn chính xác.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Bài tự học của bạn cực kỳ chi tiết, chính xác và thể hiện tư duy toán học xuất sắc khi tự chứng minh mối liên hệ giữa eigenvalue và độ cong của likelihood. Điểm trừ duy nhất là lỗi ghi chép nhỏ ở đạo hàm bậc nhất của f1(y1) (thiếu biến y1), nhưng phần kết luận về đạo hàm bậc hai để chỉ curvature vẫn hoàn toàn chính xác.
 
 <br>
 
@@ -966,11 +964,10 @@ Bài tự học của bạn cực kỳ chi tiết, chính xác và thể hiện 
 >
 > Và như vậy, ta có thể hiểu đại khái rằng, prior sẽ khiến cho mô hình phế đi các parameter ko cần thiết (là các parameter w ứng với hướng mà tác động ko mạnh tới likelihood (insensitive).
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
-
-Ghi chép của bạn rất xuất sắc khi giải thích trực quan hóa hình học qua phép ẩn dụ 'lực kéo' giữa Prior và Likelihood cực kỳ dễ hiểu và chính xác. Điểm cần lưu ý nhỏ duy nhất là các trị riêng $\lambda_i$ thực chất là của ma trận hệ số $\beta\Phi^T\Phi$ chứ không chỉ là $\Phi^T\Phi$, bạn nên lưu ý hệ số nhiễu $\beta$ này.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chép của bạn rất xuất sắc khi giải thích trực quan hóa hình học qua phép ẩn dụ 'lực kéo' giữa Prior và Likelihood cực kỳ dễ hiểu và chính xác. Điểm cần lưu ý nhỏ duy nhất là các trị riêng $\lambda_i$ thực chất là của ma trận hệ số $\beta\Phi^T\Phi$ chứ không chỉ là $\Phi^T\Phi$, bạn nên lưu ý hệ số nhiễu $\beta$ này.
 
 <br>
 
@@ -1177,11 +1174,10 @@ Ghi chép của bạn rất xuất sắc khi giải thích trực quan hóa hìn
 >
 > Như vậy, phải hiểu, kết quả 3.95 là Bayesian nửa mùa, có tên gọi là evidence approximation, type 2 maximum likelihood hay empirical Bayes.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
-
-Ghi chú xuất sắc, giải thích rất rõ ràng bản chất thống kê của việc hiệu chỉnh bậc tự do ($N - \gamma$) và liên hệ chính xác với ước lượng không chệch. Đặc biệt, phân tích về bản chất "nửa mùa" (Empirical Bayes) khi tối đa hóa model evidence thay vì fully Bayesian thể hiện sự hiểu biết rất sâu sắc về bản chất của phương pháp.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
+>
+> Ghi chú xuất sắc, giải thích rất rõ ràng bản chất thống kê của việc hiệu chỉnh bậc tự do ($N - \gamma$) và liên hệ chính xác với ước lượng không chệch. Đặc biệt, phân tích về bản chất "nửa mùa" (Empirical Bayes) khi tối đa hóa model evidence thay vì fully Bayesian thể hiện sự hiểu biết rất sâu sắc về bản chất của phương pháp.
 
 **🔗 See also:** [Maximum Likelihood Noise Precision β_ML](./311_maximum_likelihood_and_least_squares.md#node-vz4hsaf) · [Tính không chệch Xbar S^2 *(Statistical Inference - Casella)*](../statistical_inference_casella/73_methods_of_evaluating_estimators.md#node-dgdrvpi) · [Ước lượng không chệch phương sai](./124_the_gaussian_distribution.md#node-wki4nv2) · [Sai lệch phương sai MLE](./124_the_gaussian_distribution.md#node-1g51yok)
 
@@ -1292,11 +1288,10 @@ Ghi chú xuất sắc, giải thích rất rõ ràng bản chất thống kê c�
 >
 > ---
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
-
-Ghi chú cực kỳ chính xác và thể hiện sự hiểu biết sâu sắc về mặt toán học lẫn ý nghĩa trực quan của các hình vẽ, đặc biệt là phần giải thích về cơ chế 'giằng co' giữa prior và likelihood ở Hình 3.17. Chỉ có một vài lỗi chính tả rất nhỏ không đáng kể (như 'itererative', 'errorr').
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú cực kỳ chính xác và thể hiện sự hiểu biết sâu sắc về mặt toán học lẫn ý nghĩa trực quan của các hình vẽ, đặc biệt là phần giải thích về cơ chế 'giằng co' giữa prior và likelihood ở Hình 3.17. Chỉ có một vài lỗi chính tả rất nhỏ không đáng kể (như 'itererative', 'errorr').
 
 **🔗 See also:** [Section 3.5.2 Maximizing the Evidence Function](./352_maximizing_the_evidence_function.md#node-nc5qxnz) · [3.1.4 Regularized least squares](./314_regularized_least_squares.md#node-y97v4o1) · [Marginal Likelihood Maximization for Beta](./352_maximizing_the_evidence_function.md#node-l71837c)
 
@@ -1341,11 +1336,10 @@ Ghi chú cực kỳ chính xác và thể hiện sự hiểu biết sâu sắc v
 >
 > Trả lời: Là khỏi tính γ, và như vậy khỏi tính λi, eigenvalue của β**Φ**ᵀ**Φ** (cũng là Hessian của likelihood), và từ đó giảm chi phí tính toán chứ sao.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
-
-Ghi chú của bạn rất xuất sắc và chính xác, đặc biệt là việc liên hệ kiến thức đại số tuyến tính của thầy Strang để giải thích chi tiết tại sao các eigenvalue lại tăng theo quy mô tập dữ liệu. Các bước lập luận và biến đổi toán học để đi đến công thức xấp xỉ cuối cùng đều rất rõ ràng và dễ hiểu.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú của bạn rất xuất sắc và chính xác, đặc biệt là việc liên hệ kiến thức đại số tuyến tính của thầy Strang để giải thích chi tiết tại sao các eigenvalue lại tăng theo quy mô tập dữ liệu. Các bước lập luận và biến đổi toán học để đi đến công thức xấp xỉ cuối cùng đều rất rõ ràng và dễ hiểu.
 
 <br>
 
