@@ -426,7 +426,7 @@
 > Có nghĩa là, hiểu đại khái là consistency nói đến việc: à, chuỗi estimator (với sample size tăng dần) sẽ có thể ngày càng estimate chính xác giá trị của param không. Thì efficiency sẽ đánh giá rằng khi sample size tăng dần thì mức biến động của estimator sẽ thế nào.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **92/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
 > Bài làm thể hiện sự hiểu biết sâu sắc và chính xác về các khái niệm consistency và efficiency như được trình bày. Tuy nhiên, cần sử dụng ngôn ngữ học thuật trang trọng hơn thay vì các cụm từ không chính thức để nâng cao chất lượng trình bày.
 
@@ -590,7 +590,7 @@
 > Và một điểm thú vị nữa, đó là asymptotic variance thì luôn nhỏ hơn limiting variance.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú của bạn rất chính xác và có chiều sâu đáng kinh ngạc. Bạn không chỉ tóm tắt nội dung mà còn giải thích chi tiết lý do tại sao Var(1/Xbar_n) lại là vô cùng và tự mình chứng minh lại phương pháp Delta, thể hiện sự hiểu biết sâu sắc và khả năng suy luận tốt.
 
@@ -870,7 +870,7 @@
 > Đó là, nếu estimator Wn của τ(θ) thỏa Avar(Wn) = \[τ'(θ)\]^2 / I1(θ) thì Wn sẽ được gọi là estimator hiệu quả tiệm cận. **KHI ĐÓ, AVAR CỦA NÓ ĐẠT ĐÚNG BẰNG CRLB CỦA MỘT ESTIMATOR Un NÀO ĐÓ CÓ TÍNH CHẤT ASYMPTOTICALLY UNBIASED**.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Bài giải thích rất sâu sắc và chi tiết, làm rõ định nghĩa về ước lượng hiệu quả tiệm cận (asymptotically efficient) bằng cách liên hệ chặt chẽ với Cramér-Rao Lower Bound, bao gồm cả bối cảnh và công thức. Độ chính xác và chiều sâu của kiến thức được trình bày rất ấn tượng.
 
@@ -936,7 +936,7 @@
 > Và nhờ phân tích trên mình cũng sẽ thấy rằng, thật ra efficient chính là sẽ consistent. Là sao? Là vì theo định nghĩa của efficient: √n (τ(θ^) - τ(θ)) sẽ hội tụ phân phối về n(0, ν(θ)) với ν(θ) là Cramer Rao Lower Bound, thì dựa vào cái định nghĩa này, ta chứng minh như ở trên để cho thấy tính consistent. Vậy thì một sequence estimator thỏa định nghĩa này, sẽ là efficient và cũng tự nhiên là consistent, nên nói cách khác, efficient bao hàm consistent, thành ra nói vừa efficient vừa consistent là thừa (redundant), mà trong phần sau gs nói chính là này.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú giải thích Theorem 10.1.12 rất chi tiết và chính xác, đặc biệt là phần chứng minh tính consistency bằng định lý Slutsky. Để hoàn thiện hơn, bạn có thể bổ sung giới hạn n → ∞ vào định nghĩa tính consistent.
 
@@ -1352,7 +1352,7 @@
 > √n(θ^ - θ0) → n(0, 1/\[I1(θ0)\]), giúp kết luận: phương sai tiệm cận của θ^ là CRLB.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài viết cực kỳ xuất sắc, giải thích rất chi tiết từng bước biến đổi toán học và bổ sung đầy đủ các cơ sở lý thuyết (CLT, WLLN, Slutsky, Leibniz rule) mà sách giáo khoa lược bớt. Bạn chỉ cần lưu ý ký hiệu đồng nhất giữa thông tin Fisher của 1 quan sát $I_1(\theta_0)$ và của cả mẫu để hoàn thiện hơn.
 
@@ -1728,7 +1728,7 @@
 > Var(h(θ^)) ≈ \[h'(θ) / -∂^2/∂θ^2 log L(θ|**X**)\] | θ=θ^. Và đây là cách ta estimate variance của một hàm của một mle.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài giải thích rất chi tiết và sâu sắc các lập luận để ước lượng phương sai của h(θ̂) bằng CRLB, liên kết chặt chẽ các khái niệm về định lý Delta Method, hiệu quả tiệm cận của MLE và CRLB, hoàn toàn khớp với nội dung trong ảnh. Em đã nắm vững cách áp dụng các công thức và ý nghĩa của chúng.
 
@@ -2078,7 +2078,7 @@
 > iii) Khi đó 1/\[kết quả mẫu số\], chính là cũng sẽ cho ra Var^(θ^), mà trong ví dụ cụ thể này, đó là Var^(p^) ≈ p^(1-p^)/n
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bài làm rất chi tiết và có chiều sâu, giải thích rõ ràng từng bước và mục đích của việc áp dụng công thức xấp xỉ phương sai, đồng thời so sánh kết quả với công thức đã biết. Tuy nhiên, trong quá trình tính đạo hàm bậc hai của hàm log likelihood, bạn đã mắc lỗi về dấu ở thành phần thứ hai (∂/∂p [n(1-p^) [-1/(1-p)]] phải là -n(1-p^)/(1-p)^2 chứ không phải dương), dù kết quả cuối cùng vẫn chính xác.
 
@@ -2188,7 +2188,7 @@
 > Vậy √n(p^-p)/√\[p(1-p)\] → (d) n(0, 1).
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Phân tích của bạn rất sâu sắc và chính xác, đặc biệt là phần dẫn xuất Fisher Information để chứng minh phương sai. Bạn đã giải thích rất rõ ràng cách áp dụng Định lý Slutsky và chuẩn hóa phân phối để đạt được kết quả cuối cùng.
 
@@ -2549,7 +2549,7 @@
 > ARE(Vn, Wn) = Avar(Wn) / Avar(Vn)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài giải thích rất rõ ràng, bám sát nội dung gốc và còn mở rộng thêm chiều sâu bằng cách liên hệ với Cramer-Rao Lower Bound và định nghĩa phương sai tiệm cận (Avar), giúp người đọc dễ hiểu hơn về bản chất của Hiệu quả tiệm cận tương đối (ARE). Không có điểm yếu đáng kể, đây là một ghi chú xuất sắc.
 
@@ -2615,7 +2615,7 @@
 > ⇔ √n(τ^ - e^-λ) → (d) n(0, (e^-λ)(1-e^-λ), tí nữa ta sẽ dùng cái này.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Phân tích của bạn rất sâu sắc và chính xác, thể hiện sự hiểu rõ các khái niệm và khả năng đặt câu hỏi phản biện. Bạn đã giải thích rất rõ ràng nguồn gốc và ý nghĩa của các công thức, làm nền tảng vững chắc cho việc tìm hiểu về AREs.
 
@@ -2803,7 +2803,7 @@
 > ⇔ E\_λ\[e^-(λ^)\] ≈ e^-λ → Xong.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Bài giải này cực kỳ chính xác và chi tiết, không chỉ nhắc lại các công thức mà còn chứng minh từng bước một. Độ sâu phân tích vượt xa thông tin được cung cấp trong hình ảnh, thể hiện sự hiểu biết vững chắc về các khái niệm.
 
@@ -2881,7 +2881,7 @@
 > Tuy nhiên, là trong một số tình huống khác thì những estimator khác tuy có phương sai tiệm cận lớn hơn phương sai tiệm cận của MLE nhưng có thể nó sẽ tốt hơn MLE ở những tiêu chí khác ví dụ như robustness mà ở phần tiếp theo là mình sẽ nói. thử ra trong những cái tình huống như vậy giáo sư kết luận rằng cái tính hiệu quả của MLE nó trở thành một một yếu tố có thể khiến mình phải đắn đo trong cái việc là sử dụng những estimator khác: kiểu như nếu dùng cái khác thì phải hi sinh bao nhiêu mức efficient
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **85/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **85/100** · ✓ Move on
 >
 > Bài làm đã thể hiện sự hiểu biết sâu sắc về cách tính toán và rút gọn biểu thức ARE, các bước đạo hàm và rút gọn đại số đều chính xác. Tuy nhiên, mô tả về hành vi của hàm số chưa hoàn toàn đúng; hàm ARE này thực tế là giảm nghiêm ngặt thay vì tăng liên tục đến giá trị lớn nhất.
 
@@ -2928,7 +2928,7 @@
 > Và để có nhiều sample phục vụ cho việc tìm ra những đặc điểm tương tự, người ta sẽ làm động tác là take các **resample** (tạm hiểu là **lấy mẫu từ mẫu ban đầu**) theo lối **sampling with replacement**.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **85/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **85/100** · ✓ Move on
 >
 > Ghi chú đã nắm bắt rất tốt ý tưởng cốt lõi của Bootstrap, từ việc sử dụng mẫu để hiểu quần thể cho đến quá trình resample với việc bổ sung chi tiết 'sampling with replacement' rất giá trị. Tuy nhiên, ghi chú có thể hoàn thiện hơn nếu đề cập rõ ràng hơn về mục đích chính của Bootstrap là một phương pháp thay thế để tính toán sai số chuẩn.
 
@@ -3014,7 +3014,7 @@
 > Và như vậy, không thể coi nó là original sample space, thì ko thể coi nó là random sample được, vì với định nghĩa của random sample như nói trên, thì original sample space có thể coi như một version đặc biệt của random sample, khi **có size bằng đúng original sample space size**, và các observed value của các random variable **chứa đủ mọi possible value của original sample space** - đây chẳng phải là một **random sample lí tưởng** sao - khi chắc chắn nó chính là cái có kích thước nhỏ nhất nhưng chứa đủ mọi thông tin của population.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **88/100** · ✓ Move on
 >
 > Bạn đã tóm tắt và phân tích rất tốt bối cảnh bài toán, sự khác biệt giữa 35 giá trị trung bình phân biệt và 256 mẫu con có thứ tự, cũng như vai trò của tính đồng xác suất. Tuy nhiên, phần diễn giải về "có thể coi như một random sample" cho 256 mẫu con có thể đơn giản hơn, tập trung vào việc mỗi mẫu con có thứ tự đều có xác suất xuất hiện như nhau (1/256), tạo nên một không gian mẫu đồng xác suất.
 
@@ -3154,7 +3154,7 @@
 > Tóm lại, phải hiểu ý nghĩa của việc nói "có thể treat bộ observed value (g(s_1), g(s_2), ...g(s_N)) là một random sample thì ý là, vì bộ giá trị quan sát được này, nó phản ánh được phân phối xác suất của sample space. Còn nếu dùng unordered value thì không.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài giải thích rất sâu sắc và chi tiết về bản chất của công thức ước lượng phương sai bootstrap, đặc biệt là việc làm rõ vì sao tập hợp các giá trị trung bình từ không gian mẫu có thứ tự (n^n resamples) có thể được coi là một mẫu ngẫu nhiên để tính phương sai. Bạn đã đi sâu vào lý thuyết và giải thích rõ ràng các khái niệm phức tạp.
 
@@ -3340,7 +3340,7 @@
 > Variance của bootstrap sample mean Var\*(Xbar) **3.921875**.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài viết này rất chi tiết và chính xác trong việc giải thích phương pháp bootstrap, đặc biệt là cách tính toán mean và variance của bootstrap sample. Các giá trị số liệu trong bài khớp hoàn toàn với ví dụ được cung cấp, thể hiện sự hiểu biết sâu sắc. Để hoàn hảo hơn, có thể cân nhắc cô đọng một số đoạn giải thích để bài viết mạch lạc và dễ tiếp thu hơn.
 
@@ -3462,7 +3462,7 @@
 > θ^\*\_bar = Σi (θ^\*i) / 256.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bạn đã giải thích rất chi tiết và dễ hiểu về phương pháp bootstrap, đặc biệt là việc làm rõ ưu điểm thực sự của nó khi áp dụng cho các ước lượng tổng quát. Việc sử dụng ví dụ số học cụ thể giúp minh họa các khái niệm một cách xuất sắc, và công thức bootstrap variance được trình bày rất chính xác.
 
@@ -3746,7 +3746,7 @@
 > = \[1/(n^n-1)\] Σi=1: n^n (\[p^(1-p^)\]\*j - \[p^(1-p^)\]\*bar)^2
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú cực kỳ chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về phương pháp Bootstrap cũng như cách giải thích ký hiệu toán học trong sách. Bạn chỉ cần lưu ý thêm rằng trong thực tế khi n lớn, người ta thường dùng mô phỏng Monte Carlo (chọn B mẫu ngẫu nhiên) thay vì tính toàn bộ $n^n$ trường hợp vì giới hạn tính toán.
 
@@ -3814,7 +3814,7 @@
 > Var\*(θ^) = (1/B-1) Σj=1:B  \[θ^\*j - (θ^\*)bar\]^2.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú của bạn rất chính xác và chi tiết, giải thích rõ ràng sự chuyển đổi từ tính toán bootstrap chính xác (với $N = n^n$) sang phương pháp xấp xỉ thực tế bằng cách chọn $B$ mẫu tái chọn. Để hoàn thiện hơn, bạn có thể nhấn mạnh thêm rằng việc lấy $B$ lần độc lập này chính là phương pháp Monte Carlo để xấp xỉ phân phối bootstrap thực nghiệm.
 
@@ -3883,7 +3883,7 @@
 > Như vậy, B bộ sample ở đây, KHÔNG ĐƯỢC GỌI LÀ RESAMPLE, dễ hiểu lí do là vì, ta drawing  f(x|θ^) chứ ko phải f(x|θ), và f(x|θ^) người ta gọi là PLUG-IN distribution.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **92/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
 > Ghi chú của bạn rất chi tiết, thể hiện sự hiểu bài sâu sắc khi phân biệt rõ ràng giữa hai phương pháp bootstrap. Điểm cần lưu ý nhỏ là ta rút mẫu ngẫu nhiên trực tiếp từ phân phối plug-in f(x|θ̂) để tạo ra các X*i, chứ không phải là rút mẫu 'từ' các x*i.
 
@@ -4017,7 +4017,7 @@
 > Như vậy 4.33 gần với 4 hơn là 5.81, giúp kết luận trong ví dụ này parameter bootstrap estimate tốt Var(S^2) hơn là công thức Var^(S^2)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Ghi chú cực kỳ chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về bản chất của parametric bootstrap, đặc biệt là việc phân biệt tính ngẫu nhiên của mô phỏng bootstrap so với công thức lý thuyết định tính. Không có điểm gì cần cải thiện thêm vì bài viết đã giải thích xuất sắc mọi khía cạnh của ví dụ.
 
@@ -4061,7 +4061,7 @@
 > (ta thường nói θ^ là estimator của θ. Còn ở đây Var\*(θ^) cũng là estimator của Var(θ^))
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú của bạn rất chính xác và thể hiện sự hiểu biết sâu sắc khi giải thích rõ ý nghĩa của hai giới hạn (B -> vô cùng và n -> vô cùng) cũng như bản chất của Var*(theta^). Để hoàn thiện hơn, bạn có thể bổ sung thêm lưu ý rằng tính nhất quán (consistency) ở phần b thường đòi hỏi điều kiện lấy mẫu i.i.d như giáo trình đề cập.
 
