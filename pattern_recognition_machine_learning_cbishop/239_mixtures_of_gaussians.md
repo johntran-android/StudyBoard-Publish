@@ -38,11 +38,10 @@
 >
 > Nhìn chung, việc sử dụng một mô hình Gaussian đơn lẻ có những hạn chế bởi vì dữ liệu thực tế thường tuân theo các phân phối rất phức tạp. Một mô hình Gaussian (hoặc bất kỳ mô hình đơn lẻ nào) không thể nắm bắt hết được sự phức tạp đó. Tuy nhiên, bằng cách kết hợp (mixture) các mô hình này lại, chúng ta có thể tạo ra những phân phối rất phức tạp và biểu diễn dữ liệu một cách hiệu quả.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
-
-Bài tóm tắt rất chính xác và đầy đủ các ý chính từ văn bản gốc, bao gồm cả việc giải thích các hình ảnh minh họa. Để bài viết mạch lạc hơn, bạn có thể cân nhắc tránh lặp lại một số cụm từ và tổng hợp ý một cách ngắn gọn hơn.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Bài tóm tắt rất chính xác và đầy đủ các ý chính từ văn bản gốc, bao gồm cả việc giải thích các hình ảnh minh họa. Để bài viết mạch lạc hơn, bạn có thể cân nhắc tránh lặp lại một số cụm từ và tổng hợp ý một cách ngắn gọn hơn.
 
 <br>
 
@@ -73,11 +72,10 @@ Bài tóm tắt rất chính xác và đầy đủ các ý chính từ văn bả
 >
 > Mình nghĩ, có vẻ như tổng hệ số bằng 1, mà như vậy thì nói đúng hơn, đây không phải linear combination, mà là **CONVEX COMBINATION**, và khi đó, như mình đã học bên Convex Optim S.Boyd, thì đúng là nó gọi là **MIXTURE**, vì convex combination còn có tên khác là mixture. Khác với linear combination, là tổ hợp tuyến tính với hệ số âm dương bất kì, nếu tổng phải bằng 1, thì ta sẽ có affine combination, và nếu **không âm + tổng bằng 1** thì ta sẽ convex combination.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
-
-Bạn đã nắm vững khái niệm về Hỗn hợp Gaussian (Mixture of Gaussians) và giải thích công thức (2.188) một cách chính xác, cùng với việc đọc đúng các hệ số từ hình minh họa. Phân tích sâu sắc về convex combination là một điểm cộng lớn, thể hiện sự hiểu biết vượt trội về lý thuyết.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Bạn đã nắm vững khái niệm về Hỗn hợp Gaussian (Mixture of Gaussians) và giải thích công thức (2.188) một cách chính xác, cùng với việc đọc đúng các hệ số từ hình minh họa. Phân tích sâu sắc về convex combination là một điểm cộng lớn, thể hiện sự hiểu biết vượt trội về lý thuyết.
 
 **🔗 See also:** [MLE cho Mô hình Hỗn hợp Gaussian](#node-ftegw07)
 
@@ -124,11 +122,10 @@ Bạn đã nắm vững khái niệm về Hỗn hợp Gaussian (Mixture of Gauss
 >
 > Như vậy là tất cả các hệ số đều không âm và tổng hệ số bằng 1 cho nên đây nhất định nó chính là một cái convex combination. Như đã học ở trong convex optimization của giáo sư Steven Boyd. Tức là mình hiểu rằng nói là một tổ hợp tuyến tính thì cũng đúng nhưng mà tổ hợp lồi thì nó là một cái trường hợp hẹp hơn, đặc biệt hơn của tổ hợp tuyến tính bởi vì khi đó các hệ số nó phải không âm và có tổng bằng 1.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
-
-Rất xuất sắc. Bạn đã giải thích chi tiết và chính xác mọi điểm trong văn bản, đặc biệt là việc làm rõ các bước tích phân và khái niệm "tổ hợp lồi" đã bổ sung thêm chiều sâu đáng kể cho phần giải thích.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Rất xuất sắc. Bạn đã giải thích chi tiết và chính xác mọi điểm trong văn bản, đặc biệt là việc làm rõ các bước tích phân và khái niệm "tổ hợp lồi" đã bổ sung thêm chiều sâu đáng kể cho phần giải thích.
 
 <br>
 
@@ -205,11 +202,10 @@ Rất xuất sắc. Bạn đã giải thích chi tiết và chính xác mọi đ
 >
 > = πk N(𝐱|**μ**k, **Σ**k) / Σl=1:K \[πl N(𝐱|**μ**l, **Σ**l)\] → 2.192
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
-
-Ghi chú của bạn cực kỳ rõ ràng, chính xác và cung cấp một cách suy luận từng bước kỹ lưỡng cho cả hai phương trình (2.191) và (2.192), thể hiện sự hiểu biết sâu sắc về các khái niệm. Việc liên kết với các định lý xác suất cốt lõi (LOTP, Bayes) là một điểm mạnh đáng kể.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú của bạn cực kỳ rõ ràng, chính xác và cung cấp một cách suy luận từng bước kỹ lưỡng cho cả hai phương trình (2.191) và (2.192), thể hiện sự hiểu biết sâu sắc về các khái niệm. Việc liên kết với các định lý xác suất cốt lõi (LOTP, Bayes) là một điểm mạnh đáng kể.
 
 <br>
 
@@ -316,11 +312,10 @@ Ghi chú của bạn cực kỳ rõ ràng, chính xác và cung cấp một các
 >
 > Còn ở đây, ta thấy trong cái log có một cái tổng, khiến không thể nào đơn giản được. Và bài toán trở nên không có closed form solution, mà phải giải bằng các thuật toán tối ưu mà trong chap 9 mình sẽ bàn đến (khi đó các kiến thức về optimization mình đã cày bên Nocedal sẽ phát huy tác dụng)
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
-
-Bài viết rất chính xác và cực kỳ chi tiết, giải thích rõ ràng từng bước hình thành hàm log-likelihood và lý do vì sao không có nghiệm dạng đóng. Phần bình luận về ký hiệu của Bishop cũng rất sâu sắc, giúp làm rõ những điểm gây bối rối cho người đọc.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Bài viết rất chính xác và cực kỳ chi tiết, giải thích rõ ràng từng bước hình thành hàm log-likelihood và lý do vì sao không có nghiệm dạng đóng. Phần bình luận về ký hiệu của Bishop cũng rất sâu sắc, giúp làm rõ những điểm gây bối rối cho người đọc.
 
 **🔗 See also:** [Gaussian Mixture Density Formula](#node-gm8wqi8)
 
