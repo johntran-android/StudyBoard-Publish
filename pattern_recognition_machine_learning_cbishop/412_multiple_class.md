@@ -33,7 +33,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **96/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú rất xuất sắc, giải thích chi tiết, chính xác bản chất và nguyên nhân tạo ra vùng nhập nhằng (ambiguous regions) ở cả hai phương pháp. Bạn có thể bổ sung rõ hơn thuật ngữ 'bầu chọn theo đa số' (majority vote) ở phương pháp one-versus-one để lập luận về sự bế tắc khi xảy ra mâu thuẫn phiếu bầu được chặt chẽ hơn.
+Ghi chú rất xuất sắc, giải thích chi tiết, chính xác bản chất và nguyên nhân tạo ra vùng nhập nhằng (ambiguous regions) ở cả hai phương pháp. Bạn có thể bổ sung rõ hơn thuật ngữ 'bầu chọn theo đa số' (majority vote) ở phương pháp one-versus-one để lập luận về sự bế tắc khi xảy ra mâu thuẫn phiếu bầu được chặt chẽ hơn.
 
 </details>
 
@@ -160,7 +160,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú rất xuất sắc, bạn đã diễn giải và biến đổi đại số chứng minh tính lồi của vùng quyết định một cách cực kỳ chi tiết, chặt chẽ. Điểm cần lưu ý nhỏ là trong sách dùng bất đẳng thức ngặt (>) cho bên trong miền, và khái niệm 'singly connected' (đơn liên) thường ngụ ý miền liên thông không có lỗ hổng, tính lồi tự động thỏa mãn điều này.
+Ghi chú rất xuất sắc, bạn đã diễn giải và biến đổi đại số chứng minh tính lồi của vùng quyết định một cách cực kỳ chi tiết, chặt chẽ. Điểm cần lưu ý nhỏ là trong sách dùng bất đẳng thức ngặt (>) cho bên trong miền, và khái niệm 'singly connected' (đơn liên) thường ngụ ý miền liên thông không có lỗ hổng, tính lồi tự động thỏa mãn điều này.
 
 </details>
 
