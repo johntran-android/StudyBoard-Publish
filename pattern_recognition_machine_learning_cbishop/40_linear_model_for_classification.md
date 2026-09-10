@@ -44,12 +44,11 @@
 >
 > Do đó khái quát lên, với 𝐱 ∈ R^D, thì một decision rule tuyến tính về cơ bản chỉ là áp hàm tuyến tính f(𝐱) lên 𝐱 và so với một threshold nào đó để ra quyết định, nên cái decison boundary chỉ là một **phương trình tuyến tính** của 𝐱: α1 x1 + ...αD xD = β với αj, β nào đó. Và như vậy thì với constraint này, nếu biết D-1 biến thì sẽ biết biến còn lại. Nên dimension của boudary là D-1.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Ghi chú cực kỳ xuất sắc, không chỉ tóm tắt chính xác nội dung từ sách mà còn có liên hệ thực tế sâu sắc với bài toán kiểm định giả thuyết và giải thích trực quan, rõ ràng về mặt hình học tại sao số chiều của hyperplane lại là D-1. Bạn hãy tiếp tục duy trì cách tự học và đào sâu bản chất toán học rất hiệu quả này nhé!
-
-</details>
 
 <br>
 
@@ -98,12 +97,11 @@ Ghi chú cực kỳ xuất sắc, không chỉ tóm tắt chính xác nội dung
 >
 > Còn nếu bài toán có K class, cũng có nhiều cách biểu diễn target, phổ biến nhất là 1-of-K coding scheme, trong đó 𝐭 là vector, ví dụ như data point x1 thuộc class 3 thì 𝐭1 = \[0,0,1,0,0\]ᵀ. Cái này chính là one-hot vector
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú của bạn cực kỳ xuất sắc và đào sâu bản chất khi phân biệt rõ giá trị thực tế (0, 1) với dự đoán xác suất, đồng thời liên hệ rất tốt với khái niệm 'one-hot vector'. Để hoàn thiện hơn nữa, bạn có thể tự liên hệ thêm cách biểu diễn nhãn trong các mô hình phi xác suất như SVM (thường dùng -1 và 1) để so sánh.
-
-</details>
 
 <br>
 
@@ -183,12 +181,11 @@ Ghi chú của bạn cực kỳ xuất sắc và đào sâu bản chất khi ph�
 >
 > Do được gọi là **GENERALIZED LINEAR MODEL** (ý là, vẫn là hàm tuyến tính, nhưng được biến tấu cho bài toán classification)
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Note rất xuất sắc, giải thích cực kỳ cặn kẽ và chính xác bản chất toán học của Generalized Linear Model, đặc biệt là việc làm rõ lý do tại sao decision boundary vẫn là tuyến tính dù có sử dụng hàm kích hoạt phi tuyến. Bạn chỉ cần lưu ý tránh một vài lỗi gõ phím nhỏ (như 'classfication', 'TUYẾNTÍNH') để ghi chú thêm phần hoàn hảo.
-
-</details>
 
 <br>
 
