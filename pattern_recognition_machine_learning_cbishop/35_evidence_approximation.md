@@ -39,7 +39,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú rất xuất sắc, giải thích trực quan và chính xác sự khác biệt giữa MAP, fully Bayesian và phương pháp xấp xỉ bằng cách tối đa hóa marginal likelihood. Để hoàn thiện hơn, bạn có thể bổ sung thêm các tên gọi học thuật khác được đề cập trong bài như empirical Bayes hay type 2 maximum likelihood.
+Ghi chú rất xuất sắc, giải thích trực quan và chính xác sự khác biệt giữa MAP, fully Bayesian và phương pháp xấp xỉ bằng cách tối đa hóa marginal likelihood. Để hoàn thiện hơn, bạn có thể bổ sung thêm các tên gọi học thuật khác được đề cập trong bài như empirical Bayes hay type 2 maximum likelihood.
 
 </details>
 
@@ -317,7 +317,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú cực kỳ chi tiết và chính xác khi làm rõ các biến bị ẩn như X và x, đồng thời phân biệt rất tốt giữa hyperprior và hyper-posterior. Cách giải thích từng bước tích phân và chuẩn hóa ký hiệu toán học giúp làm sáng tỏ hoàn toàn bản chất của công thức 3.74.
+Ghi chú cực kỳ chi tiết và chính xác khi làm rõ các biến bị ẩn như X và x, đồng thời phân biệt rất tốt giữa hyperprior và hyper-posterior. Cách giải thích từng bước tích phân và chuẩn hóa ký hiệu toán học giúp làm sáng tỏ hoàn toàn bản chất của công thức 3.74.
 
 </details>
 
@@ -389,7 +389,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú giải thích rất chính xác và trực quan bản chất của việc xấp xỉ tích phân khi phân phối posterior tập trung cao độ bằng cách liên hệ với Riemann sum và kỳ vọng. Để hoàn thiện hơn, bạn có thể bổ sung khái niệm hàm Dirac delta vốn là mô tả toán học chính thức cho trường hợp phân phối cực kỳ nhọn này.
+Ghi chú giải thích rất chính xác và trực quan bản chất của việc xấp xỉ tích phân khi phân phối posterior tập trung cao độ bằng cách liên hệ với Riemann sum và kỳ vọng. Để hoàn thiện hơn, bạn có thể bổ sung khái niệm hàm Dirac delta vốn là mô tả toán học chính thức cho trường hợp phân phối cực kỳ nhọn này.
 
 </details>
 
@@ -431,7 +431,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú rất xuất sắc, thể hiện sự hiểu biết sâu sắc và chính xác về bản chất của phương pháp Evidence Approximation cũng như cách xấp xỉ phân phối dự đoán bằng point estimate. Bạn đã giải thích rất rõ ràng lý do tại sao phương pháp này giúp tối ưu hóa hyperparameter trực tiếp từ training data mà không cần dùng cross-validation.
+Ghi chú rất xuất sắc, thể hiện sự hiểu biết sâu sắc và chính xác về bản chất của phương pháp Evidence Approximation cũng như cách xấp xỉ phân phối dự đoán bằng point estimate. Bạn đã giải thích rất rõ ràng lý do tại sao phương pháp này giúp tối ưu hóa hyperparameter trực tiếp từ training data mà không cần dùng cross-validation.
 
 </details>
 
@@ -469,7 +469,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **90/100** · ✓ Move on</summary>
 
-**Summary:** Bạn đã hiểu rất tốt ý tưởng cốt lõi và biểu diễn toán học của việc tích phân các siêu tham số để tạo ra phân phối Student's t. Tuy nhiên, bạn nên lưu ý thêm lý do xấp xỉ Laplace thất bại ở đây là do hàm dưới dấu tích phân có cực trị bị lệch rất mạnh (strongly skewed), khiến xấp xỉ Gaussian cục bộ bỏ sót phần lớn khối lượng xác suất.
+Bạn đã hiểu rất tốt ý tưởng cốt lõi và biểu diễn toán học của việc tích phân các siêu tham số để tạo ra phân phối Student's t. Tuy nhiên, bạn nên lưu ý thêm lý do xấp xỉ Laplace thất bại ở đây là do hàm dưới dấu tích phân có cực trị bị lệch rất mạnh (strongly skewed), khiến xấp xỉ Gaussian cục bộ bỏ sót phần lớn khối lượng xác suất.
 
 </details>
 
