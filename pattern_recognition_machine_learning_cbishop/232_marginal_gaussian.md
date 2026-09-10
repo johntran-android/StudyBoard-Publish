@@ -371,7 +371,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn đã cung cấp một phân tích cực kỳ chi tiết và chính xác về quá trình suy diễn phân phối biên của Gaussian, đi theo sát logic và các kết quả trong sách giáo khoa. Tuy nhiên, việc trình bày có thể được tinh gọn hơn ở một số bước biến đổi đại số để tăng tính súc tích.
+Ghi chú của bạn đã cung cấp một phân tích cực kỳ chi tiết và chính xác về quá trình suy diễn phân phối biên của Gaussian, đi theo sát logic và các kết quả trong sách giáo khoa. Tuy nhiên, việc trình bày có thể được tinh gọn hơn ở một số bước biến đổi đại số để tăng tính súc tích.
 
 </details>
 
@@ -397,7 +397,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Bài phân tích rất chính xác, nắm bắt được cả các công thức biến đổi và kết luận quan trọng về sự đơn giản hóa trong biểu diễn cho phân phối biên và có điều kiện. Để bài phân tích súc tích hơn, bạn có thể cân nhắc rút gọn một số phần diễn đạt.
+Bài phân tích rất chính xác, nắm bắt được cả các công thức biến đổi và kết luận quan trọng về sự đơn giản hóa trong biểu diễn cho phân phối biên và có điều kiện. Để bài phân tích súc tích hơn, bạn có thể cân nhắc rút gọn một số phần diễn đạt.
 
 </details>
 
@@ -457,7 +457,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Bài tóm tắt rất đầy đủ và chính xác các kết quả về phân phối Gaussian phân hoạch, từ định nghĩa đến các công thức và minh họa hình ảnh. Phần giải thích về ý nghĩa của "Partitioned Gaussians" rất trực quan, giúp người đọc dễ hiểu hơn.
+Bài tóm tắt rất đầy đủ và chính xác các kết quả về phân phối Gaussian phân hoạch, từ định nghĩa đến các công thức và minh họa hình ảnh. Phần giải thích về ý nghĩa của "Partitioned Gaussians" rất trực quan, giúp người đọc dễ hiểu hơn.
 
 </details>
 
