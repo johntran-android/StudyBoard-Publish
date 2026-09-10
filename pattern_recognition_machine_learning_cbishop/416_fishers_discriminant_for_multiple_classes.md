@@ -504,25 +504,21 @@ Deeper notes:
 
 </details>
 
----
-
-🤖 **AI Check** — 🟡 Minor issues — ✅ **96/100** · ✓ Move on
-
-Ghi chú xuất sắc, nắm rất vững bản chất hình học, đại số và thống kê của Fisher LDA đa lớp. Đặc biệt, bạn đã tự phát hiện chính xác lỗi in sai ký hiệu (erratum) trong công thức (4.51) của sách Bishop.
-
-> [!WARNING]
-> **1.** *"𝐬k = Σi∈𝒞k (𝐲i-𝛍k)(𝐱i-𝛍k)ᵀ (tương tự thôi)"*\
-> Có một lỗi gõ nhầm nhỏ biến 𝐱i thay vì 𝐲i ở thừa số thứ hai. Dù ngay dòng dưới bạn đã viết lại chính xác là (𝐲i-𝛍k)(𝐲i-𝛍k)ᵀ, bạn vẫn nên chỉnh lại dòng này để tránh nhầm lẫn khi đọc lại.
->
-> **2.** *"J(𝐖) = tr(𝐬W⁻¹ 𝐬B}"*\
-> Biểu thức tồn tại nghịch đảo 𝐬W⁻¹ (và 𝐒W⁻¹) ngầm định rằng ma trận scatter trong lớp khả nghịch. Điều này đòi hỏi số lượng mẫu dữ liệu phải đủ lớn so với số chiều (N - K ≥ D), nếu không sẽ gặp hiện tượng kỳ dị (small sample size problem) cần kỹ thuật chính quy hóa (regularization).
-
 > [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **96/100** · ✓ Move on
+>
+> Ghi chú xuất sắc, nắm rất vững bản chất hình học, đại số và thống kê của Fisher LDA đa lớp. Đặc biệt, bạn đã tự phát hiện chính xác lỗi in sai ký hiệu (erratum) trong công thức (4.51) của sách Bishop.
+>
+> **🟡 Minor issues**
+> **1.** *"𝐬k = Σi∈𝒞k (𝐲i-𝛍k)(𝐱i-𝛍k)ᵀ (tương tự thôi)"* — Có một lỗi gõ nhầm nhỏ biến 𝐱i thay vì 𝐲i ở thừa số thứ hai. Dù ngay dòng dưới bạn đã viết lại chính xác là (𝐲i-𝛍k)(𝐲i-𝛍k)ᵀ, bạn vẫn nên chỉnh lại dòng này để tránh nhầm lẫn khi đọc lại.
+> **2.** *"J(𝐖) = tr(𝐬W⁻¹ 𝐬B}"* — Biểu thức tồn tại nghịch đảo 𝐬W⁻¹ (và 𝐒W⁻¹) ngầm định rằng ma trận scatter trong lớp khả nghịch. Điều này đòi hỏi số lượng mẫu dữ liệu phải đủ lớn so với số chiều (N - K ≥ D), nếu không sẽ gặp hiện tượng kỳ dị (small sample size problem) cần kỹ thuật chính quy hóa (regularization).
+>
+> **✓ Strengths**
 > - Phát hiện cực kỳ chuẩn xác lỗi sai in ấn (erratum chính thức) của giáo sư Bishop ở công thức (4.51) khi hoán đổi vị trí giữa 𝐖 và 𝐖ᵀ.
 > - Lập luận rất sâu sắc và trực quan về nguồn gốc ma trận covariance/scatter thông qua phân phối thực nghiệm (empirical distribution).
 > - Phân biệt rạch ròi giữa phép chiếu tuyến tính (linear projection/mapping) với phép chiếu vuông góc (orthogonal projection) trong bình phương tối thiểu.
-
-> [!NOTE]
+>
+> **💡 Deeper notes**
 > - Do 𝐒B là tổng của K ma trận rank 1 có ràng buộc tổng trọng số bằng 0 (vì tổng Nk(𝐦k - 𝐦) = 0), rank của 𝐒B tối đa chỉ là K - 1. Vì vậy, số lượng eigenvalue khác 0 của 𝐒W⁻¹𝐒B tối đa chỉ là K - 1, dẫn tới số chiều nén D' tối đa có ý nghĩa phân lớp là K - 1.
 > - Trường hợp nhiều hơn 2 lớp không đảm bảo chiếu về 1 chiều là tối ưu mà cần chiếu về D' chiều (với 1 < D' ≤ K - 1).
 
