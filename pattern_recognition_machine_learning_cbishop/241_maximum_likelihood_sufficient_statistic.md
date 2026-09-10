@@ -158,11 +158,10 @@
 >
 > (nhiệm vụ của ta vẫn là giải bài toán tối ưu: maximize ln L(**η**|𝐱))
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
-
-Phân tích cực kỳ chi tiết và sâu sắc, giải thích rõ ràng từng bước trong quá trình suy luận và các quy tắc toán học áp dụng, vượt xa nội dung được trình bày trong hình ảnh gốc. Độ chính xác cao và kiến thức nền được củng cố vững chắc.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Phân tích cực kỳ chi tiết và sâu sắc, giải thích rõ ràng từng bước trong quá trình suy luận và các quy tắc toán học áp dụng, vượt xa nội dung được trình bày trong hình ảnh gốc. Độ chính xác cao và kiến thức nền được củng cố vững chắc.
 
 **🔗 See also:** [2.4 The Exponential Family](./24_the_exponential_family.md#node-1hlelhn)
 
@@ -280,11 +279,10 @@ Phân tích cực kỳ chi tiết và sâu sắc, giải thích rõ ràng từng
 >
 > → đây chính là 2.228 (vì ta đã thay d/dη \[ln \[g(**η**)\] = ∇g(**η**)/g(**η**))
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
-
-Bài giải cực kỳ chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về các bước tính toán từ hàm likelihood đến điều kiện đạo hàm bằng 0. Cách bạn tách rời các thành phần và áp dụng quy tắc logarit, cùng với việc nhận diện hằng số, là rất ấn tượng. Chỉ có một chi tiết nhỏ về ký hiệu đạo hàm của tổng có thể được làm rõ hơn, nhưng kết quả cuối cùng hoàn toàn đúng.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Bài giải cực kỳ chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về các bước tính toán từ hàm likelihood đến điều kiện đạo hàm bằng 0. Cách bạn tách rời các thành phần và áp dụng quy tắc logarit, cùng với việc nhận diện hằng số, là rất ấn tượng. Chỉ có một chi tiết nhỏ về ký hiệu đạo hàm của tổng có thể được làm rõ hơn, nhưng kết quả cuối cùng hoàn toàn đúng.
 
 <br>
 
@@ -467,11 +465,10 @@ Bài giải cực kỳ chi tiết, chính xác và thể hiện sự hiểu bi�
 >
 > khi đó thì chuỗi Wn(𝐗) được gọi là một sequence of **consistent** estimator của θ. Vậy thì ở đây, dựa trên kiến thức này, ta thấy ML estimator của **η**, tức **η**ML chính là một consistent estimator của **η**.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
-
-Bài phân tích rất chi tiết, sâu sắc và chính xác, chứng minh rõ ràng các khái niệm bằng Định lý Factorization và áp dụng cụ thể cho các phân phối. Bạn thể hiện sự hiểu biết vững chắc về lý thuyết, bao gồm cả việc bổ sung điều kiện lồi cho MLE, mặc dù có thể mở rộng thêm một chút về ứng dụng trong Bayesian inference.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Bài phân tích rất chi tiết, sâu sắc và chính xác, chứng minh rõ ràng các khái niệm bằng Định lý Factorization và áp dụng cụ thể cho các phân phối. Bạn thể hiện sự hiểu biết vững chắc về lý thuyết, bao gồm cả việc bổ sung điều kiện lồi cho MLE, mặc dù có thể mở rộng thêm một chút về ứng dụng trong Bayesian inference.
 
 <br>
 
