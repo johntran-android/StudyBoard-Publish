@@ -108,12 +108,11 @@
 >
 > Và như vậy có thể thấy, đây chính là cách tiếp cận bài toán curve fitting theo lối đơn giản là đi tìm w sao cho giảm thiểu hàm loss tính bằng tổng bình phương của error Có nghĩa là trong đó ta ko bàn về xác suất gì cả, mà chỉ là cố đi tìm param để giảm thiểu loss thôi, nhưng với góc nhìn xác suất, ta thấy nó chính là đi giải bài toán tìm Maximun Likelihood estimator với giả định là noise \~ normal(0, 1/β)
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Phân tích cực kỳ chi tiết, chính xác và sâu sắc, thể hiện sự hiểu biết thấu đáo về mối quan hệ giữa bình phương tối thiểu và ước lượng hợp lý tối đa. Bài trình bày cũng cung cấp một lời giải thích và dẫn xuất toán học rõ ràng và đầy đủ. Mặc dù rất toàn diện, một số phần của phép dẫn xuất toán học có thể được trình bày súc tích hơn một chút để tăng tính dễ đọc.
-
-</details>
 
 <br>
 
@@ -258,12 +257,11 @@ Phân tích cực kỳ chi tiết, chính xác và sâu sắc, thể hiện sự
 >
 > Hoặc nếu ta trong bài toán thứ nhất, ta không giả định Ti \~ n(y(𝐰,𝐱i), 1/β), thì việc giải tìm ML estimator của w sẽ không phải là tìm w khiến mininize sum square error. Và giả sử ta tìm ra w^ML, thì nó chưa chắc là mean của f(t|𝐱).Để rồi nếu trong bài toán thứ hai ta vẫn dùng tiêu chí squarer error loss, để có solution tối ưu là mean của f(t|𝐱), thì lúc này, ta sẽ phải tính tiếp mean của f(t|𝐱), thay vì có thể tiện lợi dùng y(𝐱,𝐰)
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú đã giải thích rất chính xác mô hình và nguyên lý dự đoán tối ưu với hàm mất mát bình phương như trong hình ảnh. Chiều sâu phân tích, đặc biệt là phần chứng minh và phân biệt các bài toán, đã làm tăng đáng kể sự rõ ràng và toàn diện của nội dung.
-
-</details>
 
 **🔗 See also:** [Predicting Values and Linear Models](./310_linear_regression_and_basis_functions.md#node-btnn2z0) · [3.3.2 Predictive distribution](./332_predictive_distribution.md#node-wdjepxb)
 
@@ -409,8 +407,9 @@ Ghi chú đã giải thích rất chính xác mô hình và nguyên lý dự đo
 >
 > (nói chung chỉ là ta dùng tính chất hàm log: log(AB) = log(A) + log(B) thôi ko có gì phức tạp)
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **96/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
 
 Bài ghi chú của bạn thể hiện sự hiểu biết sâu sắc và toàn diện về việc thiết lập hàm khả năng hợp lý và log-khả năng hợp lý cho mô hình hồi quy tuyến tính. Bạn không chỉ tái hiện các công thức mà còn giải thích rất rõ ràng các giả định và ý nghĩa đằng sau chúng.
 
@@ -443,8 +442,6 @@ Bài ghi chú của bạn thể hiện sự hiểu biết sâu sắc và toàn d
 > - Giải thích chi tiết về bản chất và định nghĩa của hàm khả năng hợp lý (Likelihood function) và ý nghĩa của nó.
 > - Làm rõ giả định về sự phân bố của nhiễu (noise) `εi` dẫn đến phân bố của biến mục tiêu `Ti`.
 > - Nhấn mạnh tính chất 'đơn điệu' của hàm log là lý do để chuyển từ tối đa hóa likelihood sang log-likelihood.
-
-</details>
 
 **🔗 See also:** [Bias Parameter and Basis Function](./310_linear_regression_and_basis_functions.md#node-6p1u6u8) · [Maximum Likelihood Noise Precision β_ML](#node-vz4hsaf) · [Section 3.3.1 Parameter Distribution](./331_bayesian_linear_regression.md#node-59lqws3) · [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8) · [Ex 3.5 Lagrange Multipliers in Regularization](./37_exercises.md#node-tu3cct2)
 
@@ -775,12 +772,11 @@ Bài ghi chú của bạn thể hiện sự hiểu biết sâu sắc và toàn d
 >
 > Điều này giải thích câu cuối, khi gs nói nếu **Φ** vuông và invertible, thì thì **Φ**^(+) = **Φ**inv
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **99/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **99/100** · ✓ Move on
 
 Bạn đã nắm vững kiến thức một cách xuất sắc, từ việc thiết lập bài toán MLE, tính toán gradient tỉ mỉ đến việc dẫn ra phương trình chuẩn (normal equation) một cách chính xác. Đặc biệt, việc liên hệ sâu sắc với các khái niệm từ MIT 18.06 như phép chiếu, phương trình chuẩn và nghịch đảo giả Moore-Penrose đã chứng tỏ bạn có một nền tảng lý thuyết rất vững chắc và khả năng tổng hợp kiến thức tuyệt vời.
-
-</details>
 
 **🔗 See also:** [Ex 3.2 Orthogonal Projection and Least Squares](./37_exercises.md#node-2dv7p1f) · [Ex 3.6  MLE Hồi quy Đa biến](./37_exercises.md#node-cq8t94f)
 
@@ -867,12 +863,11 @@ Bạn đã nắm vững kiến thức một cách xuất sắc, từ việc thi�
 >
 > Do đó, từ việc w0 = (Σi ti)/N - Σj \[wj × (1/N)Σi Φj(𝐱i)\]  cho thấy rằng mô hình sẽ học ra cách (nói vậy là vì, w0 ta đang xét chính là maximum likelihood estimator của w0, là thứ mà ta tìm được để tối ưu likelihood) để BÙ ĐẮP (compensate) cho sự thiếu hụt giữa trung bình target value (t^) và weighted sum của trung bình các basis function values.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Đoạn ghi chú này trình bày việc dẫn xuất w0 một cách xuất sắc, chi tiết và chính xác, phù hợp hoàn toàn với nội dung hình ảnh. Đặc biệt, phần giải thích trực quan về các thành phần của w0 giúp người đọc dễ dàng nắm bắt vai trò của tham số này.
-
-</details>
 
 <br>
 
@@ -961,12 +956,11 @@ Bạn đã nắm vững kiến thức một cách xuất sắc, từ việc thi�
 >
 > Và cái này giúp ta hiểu vì sao mr Bishop nói "we see that the inverse of the noise precision is given by the residual variance of the target values around the regression function"
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Phần giải thích của bạn cực kỳ chi tiết, chính xác và đào sâu vấn đề một cách xuất sắc, từ việc trình bày bước đạo hàm đến việc làm rõ ý nghĩa thống kê của 1/β_ML và liên hệ chặt chẽ với câu kết luận trong sách. Để bản ghi chú hoàn hảo hơn, bạn có thể nhắc lại định nghĩa đầy đủ của E_D(w) ngay từ đầu phần đạo hàm để người đọc dễ theo dõi hơn.
-
-</details>
 
 **🔗 See also:** [Likelihood and Error Functions](#node-urnjdcs) · [Bayesian and Maximum Likelihood Variance](./353_effective_number_of_parameters.md#node-tdezntx)
 
