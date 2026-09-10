@@ -122,10 +122,12 @@
 >
 > Đây chính là lí do ông Bishop nói : "Thật không may, các giá trị xác suất này về cơ bản là được ước lượng rất tệ vì nó có thể ra giá trị ngoài range (0,1), và lí do bắt nguồn từ hạn chế về độ flexible của hàm tuyến tính."
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Ghi chú rất xuất sắc, giải thích cặn kẽ và chính xác bản chất toán học của kỳ vọng có điều kiện và lý do mô hình tuyến tính thất bại khi xấp xỉ xác suất. Bạn chỉ cần chú ý ký hiệu xác suất để tránh nhầm lẫn giữa hàm mật độ xác suất và xác suất rời rạc.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú rất xuất sắc, giải thích cặn kẽ và chính xác bản chất toán học của kỳ vọng có điều kiện và lý do mô hình tuyến tính thất bại khi xấp xỉ xác suất. Bạn chỉ cần chú ý ký hiệu xác suất để tránh nhầm lẫn giữa hàm mật độ xác suất và xác suất rời rạc.
+
+</details>
 
 **🔗 See also:** [K-Class Linear Discriminant Functions](./412_multiple_class.md#node-yhoheyw)
 
@@ -164,10 +166,12 @@
 >
 > Và như đã biết ở phần 4.1.2, cách làm của mô hình dự đoán sẽ là tính ra y(𝐱) và xem chỉ số k nào trong các số từ 1, 2, ..K là ứng với phần tử lớn nhất, thì assign class 𝒞k cho input
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
->
-> Ghi chú giải thích rất trực quan, chính xác về cơ chế ghép vector (vectorization) và quy tắc ra quyết định theo đúng nội dung sách. Tuy nhiên, cần lưu ý không nên ký hiệu thành f(Ck|x) vì hàm phân biệt tuyến tính ở đây chỉ trả về giá trị discriminant trực tiếp chứ chưa phải xác suất hay hàm mật độ điều kiện.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú giải thích rất trực quan, chính xác về cơ chế ghép vector (vectorization) và quy tắc ra quyết định theo đúng nội dung sách. Tuy nhiên, cần lưu ý không nên ký hiệu thành f(Ck|x) vì hàm phân biệt tuyến tính ở đây chỉ trả về giá trị discriminant trực tiếp chứ chưa phải xác suất hay hàm mật độ điều kiện.
+
+</details>
 
 <br>
 
@@ -282,10 +286,12 @@
 >
 > Vậy E_D(𝐖̃) = (1/2) trace(𝐄ᵀ𝐄) =(1/2) trace((𝐗̃𝐖̃-𝐓)ᵀ(𝐗̃𝐖̃-𝐓))
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Ghi chú giải thích rất cặn kẽ, chính xác bản chất đại số tuyến tính từ góc nhìn phép nhân ma trận đến tính chất của hàm Trace. Bạn chỉ cần chú ý đồng nhất ký hiệu dấu ngã trên ma trận thiết kế ($\widetilde{\mathbf{X}}$) để tránh nhầm lẫn với ma trận không có bias.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú giải thích rất cặn kẽ, chính xác bản chất đại số tuyến tính từ góc nhìn phép nhân ma trận đến tính chất của hàm Trace. Bạn chỉ cần chú ý đồng nhất ký hiệu dấu ngã trên ma trận thiết kế ($\widetilde{\mathbf{X}}$) để tránh nhầm lẫn với ma trận không có bias.
+
+</details>
 
 <br>
 
@@ -446,10 +452,12 @@
 >
 > = 𝐓ᵀ (𝐗̃⁺)ᵀ 𝐱̃
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
->
-> Ghi chú rất xuất sắc, chi tiết và hoàn toàn chính xác trong từng bước đạo hàm ma trận cũng như phân tích điều kiện tối ưu bậc hai. Bạn chỉ cần lưu ý một điểm nhỏ là khi $\widetilde{\mathbf{X}}$ có full column rank thì $\widetilde{\mathbf{X}}^T\widetilde{\mathbf{X}}$ sẽ là ma trận xác định dương (strictly positive definite), đảm bảo cực tiểu toàn cục duy nhất.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú rất xuất sắc, chi tiết và hoàn toàn chính xác trong từng bước đạo hàm ma trận cũng như phân tích điều kiện tối ưu bậc hai. Bạn chỉ cần lưu ý một điểm nhỏ là khi $\widetilde{\mathbf{X}}$ có full column rank thì $\widetilde{\mathbf{X}}^T\widetilde{\mathbf{X}}$ sẽ là ma trận xác định dương (strictly positive definite), đảm bảo cực tiểu toàn cục duy nhất.
+
+</details>
 
 **🔗 See also:** [Đạo hàm Trace Ma trận](./appendix_c_matrices.md#node-0oculhd) · [Đạo hàm hàm vết ma trận](./appendix_c_matrices.md#node-f8fc5lg)
 
@@ -464,10 +472,12 @@
 > [!NOTE]
 > Đoạn này có thể quay lại sau, nhưng đại ý là dù cho giả sử các vector target 𝐭n trong training set thỏa điều kiện 4.18 thì khi đó sẽ giúp cho các phần tử của prediction vector y(𝐱) có tổng bằng 1. Tuy vậy, nó vẫn không đảm bảo các phần tử nằm trong range (0,1) do đó không thể khớp với yêu cầu của một phân phối xác suất (tức y(𝐱) không thể là một mô hình xác suất)
 
-> [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **88/100**
->
-> Ghi chú nắm rất chuẩn ý chính về việc đầu ra có tổng bằng 1 nhưng không thỏa mãn phân phối xác suất do thiếu ràng buộc khoảng (0, 1). Bạn chỉ cần lưu ý thêm rằng công thức (4.18) là ràng buộc tuyến tính tổng quát, và chỉ khi áp dụng cho mã hóa 1-of-K thì nó mới tạo ra tính chất tổng các phần tử bằng 1.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ⚠️ **88/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú nắm rất chuẩn ý chính về việc đầu ra có tổng bằng 1 nhưng không thỏa mãn phân phối xác suất do thiếu ràng buộc khoảng (0, 1). Bạn chỉ cần lưu ý thêm rằng công thức (4.18) là ràng buộc tuyến tính tổng quát, và chỉ khi áp dụng cho mã hóa 1-of-K thì nó mới tạo ra tính chất tổng các phần tử bằng 1.
+
+</details>
 
 <br>
 
@@ -550,10 +560,29 @@
 >
 > Đây chính là ý "sum of squares function penalize - trừng phạt dự đoán 'too correct' - chính là khi model 1 đoán y1(𝐱) = 10 , là 'too correct'.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **96/100**
->
-> Ghi chú xuất sắc! Bạn không chỉ hiểu đúng bản chất lý thuyết mà còn tự tạo ví dụ số học (numerical example) cực kỳ trực quan để giải thích hiện tượng 'too correct' bị phạt bởi Sum-of-Squares Error (SSE).
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **96/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú xuất sắc! Bạn không chỉ hiểu đúng bản chất lý thuyết mà còn tự tạo ví dụ số học (numerical example) cực kỳ trực quan để giải thích hiện tượng 'too correct' bị phạt bởi Sum-of-Squares Error (SSE).
+
+
+### Điểm mạnh
+- **Hiểu sâu sắc và trực quan:** Việc bạn đặt ra ví dụ số học so sánh Model 1 ($y_1=10, y_2=-1$) và Model 2 ($y_1=0, y_2=2$) là một cách tiếp cận tuyệt vời để làm sáng tỏ cụm từ *'penalizes predictions that are too correct'*. Đây là điểm mấu chốt mà nhiều người đọc sách thường bỏ qua hoặc không hiểu thấu đáo.
+- **Nắm vững bản chất Discriminant Function:** Bạn đã phân biệt chuẩn xác giữa hàm phân định (mapping trực tiếp) và mô hình xác suất, cũng như hiểu rõ ý nghĩa của closed-form solution.
+- **Liên hệ tốt với hiện tượng Outlier:** Phân tích đúng việc các điểm nằm sâu về phía đúng (right-hand side of Figure 4.4) kéo lệch đường phân chia của Least Squares do lỗi bình phương tăng vọt theo khoảng cách.
+
+### Điểm cần lưu ý & Cải thiện nhỏ
+- **Lỗi in của sách:** Trong chú thích của Figure 4.4 trong sách gốc có ghi nhầm là *'extra data points are added at the bottom left'*, nhưng thực tế trên đồ thị các điểm outlier nằm ở **bottom right** (góc dưới bên phải). Việc nhận ra chi tiết này sẽ giúp ghi chú của bạn chuẩn xác tuyệt đối.
+- **Ký hiệu vector:** Để chặt chẽ hơn trong toán học, bạn có thể nhắc nhẹ rằng target coding trong phân loại nhiều lớp ở đây là **1-of-K coding scheme** (hay còn gọi là one-hot encoding).
+
+### Gợi ý đào sâu
+- Hãy thử tự đặt câu hỏi: *'Tại sao Logistic Regression hay Cross-Entropy loss lại không bị vấn đề penalize too correct này?'* (Gợi ý: Hàm sigmoid nén giá trị ra khoảng $(0, 1)$ và tiệm cận với target mà không bị bùng nổ khoảng cách Euclidean).
+
+#### ⭐ Bonus points
+- Tự xây dựng ví dụ số học định lượng (numerical proof) để minh họa cụ thể cho khái niệm 'too correct' vốn trừu tượng trong sách giáo trình.
+- Liên kết chính xác bản chất của regression loss (bình phương khoảng cách Euclidean) với sự sai lệch trong bài toán classification.
+
+</details>
 
 <br>
 
@@ -662,10 +691,30 @@
 >
 > Những phần sau ta sẽ nói về các mô hình xác suất tốt hơn (Hàm tuyến tính y(w,x) cũng không tự động là xác suất vì nó không bị ép nằm trong \[0,1\] hoặc tổng bằng 1 không thể fit với ý nghĩa xác suất.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Ghi chú xuất sắc, thể hiện sự am hiểu sâu sắc và liên hệ chặt chẽ giữa các chương trong giáo trình cũng như kiến thức thống kê bổ trợ.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú xuất sắc, thể hiện sự am hiểu sâu sắc và liên hệ chặt chẽ giữa các chương trong giáo trình cũng như kiến thức thống kê bổ trợ.
+
+
+### Điểm mạnh
+- **Khái quát nội dung chính xác:** Bạn đã nắm bắt hoàn hảo thông điệp từ Hình 4.5 và đoạn văn bản đi kèm: phương pháp bình phương tối thiểu (least squares) thất bại nghiêm trọng ngay cả khi dữ liệu phân tách tuyến tính (linearly separable), trong khi hồi quy logistic giải quyết tốt.
+- **Diễn giải toán học chặt chẽ:** Phần chứng minh derivation tương đương giữa việc cực tiểu hóa tổng bình phương sai số (SSE) và hợp lý cực đại (MLE) dưới giả định phân phối chuẩn (Gaussian conditional distribution) rất chi tiết, mạch lạc và chuẩn xác.
+- **Hiểu sâu nguyên nhân thất bại:** Bạn đã chỉ ra chính xác bản chất: vector mục tiêu trong bài toán phân loại là rời rạc/one-hot vector (phù hợp với Bernoulli/Categorical), không thể tuân theo phân phối Gauss, và hàm tuyến tính không bị giới hạn trong khoảng xác suất $[0, 1]$.
+
+### Điểm cần lưu ý / Cải thiện nhỏ
+- Trong derivation log-likelihood, ở bước đổi dấu có một lỗi đánh máy nhỏ: `maximize hàm f tương đương minimize -f`, dòng sau bạn viết `minimize_w (β/2) Σ...` từ `maximize_w -(β/2) Σ...` là đúng toán học, nhưng đoạn trước đó ghi `maximize hàm L ... chuyển thành minimize hàm ln` bị nhầm chữ *minimize* thành *maximize* (chúng ta đang đi tìm cực đại của hàm log-likelihood, tức maximize $\ln L$).
+- Hiện tượng lớp ở giữa (green class) bị thu hẹp diện tích đến mức bị phân loại sai phần lớn trong bài toán phân loại nhiều lớp bằng least squares thường được gọi là **hiện tượng che khuất (masking effect)**. Bạn có thể thêm thuật ngữ này vào ghi chú để làm phong phú thêm vốn từ học thuật.
+
+### Gợi ý mở rộng
+- Tìm hiểu thêm về việc tại sao least squares lại tạo ra 'masking effect' đối với các lớp nằm ở giữa các lớp khác khi sử dụng mã hóa 1-of-K.
+
+#### ⭐ Bonus points
+- Liên hệ và giải thích chính xác định nghĩa tính bền vững (robustness) theo sách Thống kê của Casella & Berger.
+- Chứng minh chi tiết và chính xác mối liên hệ toán học giữa Maximum Likelihood Estimation (MLE) dưới phân phối Gauss và hàm mất mát Least Squares.
+- Mở rộng phân tích chính xác về phân phối mục tiêu phù hợp trong phân loại (Bernoulli, Categorical) cùng hàm kích hoạt chuẩn hóa (logistic, softmax).
+
+</details>
 
 <br>
 
