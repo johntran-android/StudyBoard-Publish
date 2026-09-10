@@ -35,7 +35,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú cực kỳ chi tiết, nắm bắt chính xác các ý cốt lõi như tránh over-fitting bằng cách marginalizing và lợi ích của việc không cần tập validation. Bạn chỉ cần lưu ý thêm ý về khả năng tự động xác định đồng thời nhiều tham số phức tạp (complexity parameters) trong quá trình huấn luyện.
+Ghi chú cực kỳ chi tiết, nắm bắt chính xác các ý cốt lõi như tránh over-fitting bằng cách marginalizing và lợi ích của việc không cần tập validation. Bạn chỉ cần lưu ý thêm ý về khả năng tự động xác định đồng thời nhiều tham số phức tạp (complexity parameters) trong quá trình huấn luyện.
 
 </details>
 
@@ -121,7 +121,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chép rất sâu sắc khi liên hệ được nền tảng thống kê cổ điển với bài toán so sánh mô hình theo quan điểm Bayesian một cách chính xác. Tuy nhiên, phần dẫn nhập có thể cô đọng hơn để người đọc nhanh chóng nắm bắt cơ chế cốt lõi của công thức Bayes áp dụng cho tập hợp mô hình.
+Ghi chép rất sâu sắc khi liên hệ được nền tảng thống kê cổ điển với bài toán so sánh mô hình theo quan điểm Bayesian một cách chính xác. Tuy nhiên, phần dẫn nhập có thể cô đọng hơn để người đọc nhanh chóng nắm bắt cơ chế cốt lõi của công thức Bayes áp dụng cho tập hợp mô hình.
 
 </details>
 
@@ -193,7 +193,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn rất xuất sắc, thể hiện sự hiểu sâu sắc khi tự liên hệ phép tương tự giữa cấp độ tham số và cấp độ mô hình để giải thích marginal likelihood. Để hoàn thiện hơn, bạn có thể viết rõ công thức toán học thể hiện việc tích phân loại bỏ (marginalize out) tham số w.
+Ghi chú của bạn rất xuất sắc, thể hiện sự hiểu sâu sắc khi tự liên hệ phép tương tự giữa cấp độ tham số và cấp độ mô hình để giải thích marginal likelihood. Để hoàn thiện hơn, bạn có thể viết rõ công thức toán học thể hiện việc tích phân loại bỏ (marginalize out) tham số w.
 
 </details>
 
@@ -285,7 +285,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú rất xuất sắc khi giải thích công thức dưới hai góc nhìn (marginalization và LOTUS) vô cùng trực quan và hiểu đúng bản chất bimodal. Để hoàn thiện hơn, bạn nên bổ sung giải thích tại sao điều kiện x biến mất ở f(ℳ_i|ᆒ) (do sự độc lập giữa mô hình và dữ liệu kiểm thử mới).
+Ghi chú rất xuất sắc khi giải thích công thức dưới hai góc nhìn (marginalization và LOTUS) vô cùng trực quan và hiểu đúng bản chất bimodal. Để hoàn thiện hơn, bạn nên bổ sung giải thích tại sao điều kiện x biến mất ở f(ℳ_i|ᆒ) (do sự độc lập giữa mô hình và dữ liệu kiểm thử mới).
 
 </details>
 
@@ -315,7 +315,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú cực kỳ xuất sắc, giải thích rất sâu sắc và chính xác bản chất của 'model selection' bằng cách so sánh tương quan hoàn hảo với việc ước lượng điểm tham số trong thống kê Bayes. Lối tư duy liên hệ bản chất này vô cùng tốt và giúp hiểu rõ ngọn ngành của phương pháp xấp xỉ.
+Ghi chú cực kỳ xuất sắc, giải thích rất sâu sắc và chính xác bản chất của 'model selection' bằng cách so sánh tương quan hoàn hảo với việc ước lượng điểm tham số trong thống kê Bayes. Lối tư duy liên hệ bản chất này vô cùng tốt và giúp hiểu rõ ngọn ngành của phương pháp xấp xỉ.
 
 </details>
 
@@ -437,7 +437,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú cực kỳ xuất sắc, giải thích rất sâu sắc dưới cả góc độ kỳ vọng (LOTUS) và luật số lớn (LLN). Bạn chỉ cần lưu ý sửa một lỗi gõ nhỏ ở tích phân phần marginalizing khi viết thiếu điều kiện w trong f(D|M_i).
+Ghi chú cực kỳ xuất sắc, giải thích rất sâu sắc dưới cả góc độ kỳ vọng (LOTUS) và luật số lớn (LLN). Bạn chỉ cần lưu ý sửa một lỗi gõ nhỏ ở tích phân phần marginalizing khi viết thiếu điều kiện w trong f(D|M_i).
 
 </details>
 
@@ -579,7 +579,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Giải thích của bạn cực kỳ xuất sắc, trực quan và chính xác khi phân tích mối liên hệ giữa posterior và likelihood để làm rõ bản chất tích phân. Tư duy suy luận tự do nhưng logic này giúp hiểu sâu sắc công thức (3.70) thay vì chỉ đọc thuộc lòng.
+Giải thích của bạn cực kỳ xuất sắc, trực quan và chính xác khi phân tích mối liên hệ giữa posterior và likelihood để làm rõ bản chất tích phân. Tư duy suy luận tự do nhưng logic này giúp hiểu sâu sắc công thức (3.70) thay vì chỉ đọc thuộc lòng.
 
 </details>
 
@@ -735,7 +735,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chép rất xuất sắc, trình bày mạch lạc và chính xác bản chất toán học lẫn trực quan của việc phạt độ phức tạp mô hình qua các phương trình 3.71 và 3.72. Việc bạn chủ động bổ sung ký hiệu điều kiện theo mô hình Mi giúp lập luận trở nên vô cùng chặt chẽ.
+Ghi chép rất xuất sắc, trình bày mạch lạc và chính xác bản chất toán học lẫn trực quan của việc phạt độ phức tạp mô hình qua các phương trình 3.71 và 3.72. Việc bạn chủ động bổ sung ký hiệu điều kiện theo mô hình Mi giúp lập luận trở nên vô cùng chặt chẽ.
 
 </details>
 
@@ -807,7 +807,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn vô cùng chính xác, sắc sảo và ví dụ ẩn dụ về ba họa sĩ rất sáng tạo, trực quan để giải thích hiện tượng tự động phạt các mô hình quá phức tạp (Bayesian Occam's razor). Một lưu ý nhỏ là trục hoành biểu diễn không gian của cả tập dữ liệu (datasets) chứ không chỉ là từng điểm dữ liệu đơn lẻ (data points), nhưng điều này không làm ảnh hưởng đến lập luận xuất sắc của bạn.
+Ghi chú của bạn vô cùng chính xác, sắc sảo và ví dụ ẩn dụ về ba họa sĩ rất sáng tạo, trực quan để giải thích hiện tượng tự động phạt các mô hình quá phức tạp (Bayesian Occam's razor). Một lưu ý nhỏ là trục hoành biểu diễn không gian của cả tập dữ liệu (datasets) chứ không chỉ là từng điểm dữ liệu đơn lẻ (data points), nhưng điều này không làm ảnh hưởng đến lập luận xuất sắc của bạn.
 
 </details>
 
@@ -883,7 +883,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú rất xuất sắc, giải thích chính xác và đào sâu bản chất toán học khi dùng LOTUS để chứng minh kỳ vọng của log Bayes factor chính là phân kỳ KL. Để hoàn thiện hơn, bạn nên lưu ý ghi rõ 'log Bayes factor' thay vì chỉ 'Bayes factor' ở các bước biến đổi cuối để tránh nhầm lẫn thuật ngữ.
+Ghi chú rất xuất sắc, giải thích chính xác và đào sâu bản chất toán học khi dùng LOTUS để chứng minh kỳ vọng của log Bayes factor chính là phân kỳ KL. Để hoàn thiện hơn, bạn nên lưu ý ghi rõ 'log Bayes factor' thay vì chỉ 'Bayes factor' ở các bước biến đổi cuối để tránh nhầm lẫn thuật ngữ.
 
 </details>
 
@@ -939,7 +939,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú cực kỳ chính xác và sâu sắc, thể hiện sự hiểu biết vững chắc về toán học đằng sau 'model evidence' và phân biệt rõ ràng giữa validation set và test set. Phân tích chi tiết về giới hạn của phân phối Gaussian khi phương sai tiến ra vô hạn là một điểm cộng lớn.
+Ghi chú cực kỳ chính xác và sâu sắc, thể hiện sự hiểu biết vững chắc về toán học đằng sau 'model evidence' và phân biệt rõ ràng giữa validation set và test set. Phân tích chi tiết về giới hạn của phân phối Gaussian khi phương sai tiến ra vô hạn là một điểm cộng lớn.
 
 </details>
 
