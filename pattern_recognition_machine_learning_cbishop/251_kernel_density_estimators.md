@@ -88,12 +88,11 @@
 >
 > Và nhận xét thêm việc ông tương chữ K (viết hoa) vô làm ta dễ rối. vì theo nguyên tắc K là random variable, thì giá trị của nó là k (viết thường), ông ghi luôn K viết hoa trong công thức khiến khó hiểu.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **99/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **99/100** · ✓ Move on
 
 Ghi chú của bạn rất chính xác và chi tiết, đặc biệt xuất sắc khi bạn đã phát hiện ra lỗi đánh máy trong công thức 2.243 của văn bản gốc. Khả năng liên hệ kiến thức với các giáo trình thống kê khác và giải thích cặn kẽ các khái niệm cơ bản cho thấy sự hiểu biết sâu sắc của bạn.
-
-</details>
 
 <br>
 
@@ -146,12 +145,11 @@ Ghi chú của bạn rất chính xác và chi tiết, đặc biệt xuất sắ
 >
 > Một điểm nữa, hãy để ý, nếu ta đặt Ij = là indicator random variable gắn với event **Xj** ∈ R, j = 1,...N. Khi đó bối cảnh bài toán ta sẽ random sample I1, I2, ...IN iid \~ Bern(P) Và K/N = (∑j Ij) / N chính là sample mean. Khi đó, nhớ lại Weak Law of Large Number theorem, nói rằng: với một số điều kiện, thì sample mean sẽ hội tụ phân phối về population mean. Vậy nên ở đây K/N = (∑j Ij) / N sẽ hội tụ về E\[Ij\] = P: K/N → P. Viết ở dạng toán học: lim N→∞ K/N = P, hay có thể ghi là tại limit khi N lớn, K/N ≈ P ⇔ K ≈ PN
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Phân tích rất chi tiết và chính xác, không chỉ tái hiện các công thức mà còn giải thích sâu sắc ý nghĩa của chúng, đặc biệt là khi liên hệ với Định luật Số lớn Yếu. Cấu trúc trình bày có thể gọn gàng hơn một chút để dễ đọc hơn.
-
-</details>
 
 <br>
 
@@ -278,12 +276,11 @@ Phân tích rất chi tiết và chính xác, không chỉ tái hiện các côn
 >
 > Đó là lí do ở đây ta có hai assumption mâu thuẫn: V phải nhỏ để f(𝐱) là constant trong R, nhưng phải lớn để có thể áp dụng WLLN để có ước lượng f(𝐱) ≈ K / NV.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Ghi chú rất chính xác và đi sâu vào giải thích các giả định mâu thuẫn, đặc biệt là liên kết giả định thứ hai với điều kiện của Định luật số lớn yếu và ảnh hưởng của thể tích V đến phương sai. Giải thích rõ ràng và sâu sắc hơn nhiều so với văn bản gốc.
-
-</details>
 
 **🔗 See also:** [Local Density Estimation Method](./252_nearest_neighbour_methods.md#node-qpzx5xr)
 
@@ -353,12 +350,11 @@ Ghi chú rất chính xác và đi sâu vào giải thích các giả định m�
 >
 >  Và xét cái tổng Σn=1:N k((𝐱-𝐱n)/h), hoàn toàn có thể nhìn nó theo hai cách: là check xem có bao nhiêu 𝐱i thuộc cái hộp (hypercubic) có tâm 𝐱. Nhưng cũng có thể nhìn theo cách khác: là check xem 𝐱 thuộc bao nhiêu cái hộp tậm 𝐱i.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú của bạn rất chính xác và đầy đủ, giải thích rõ ràng các khái niệm và công thức từ hình ảnh. Việc trình bày hai cách hiểu về tổng sigma cũng cho thấy sự hiểu biết sâu sắc về nội dung.
-
-</details>
 
 <br>
 
@@ -401,12 +397,11 @@ Ghi chú của bạn rất chính xác và đầy đủ, giải thích rõ ràng
 >
 > Cuối cùng, gs cho minh họa để thấy rằng h cũng đóng vai trò là smoothing parameter, khi h nhỏ quá thì hàm density cũng sẽ noisy mà lớn quá thì nó lại quá smooth khiến mất đi, lu mờ đi hai cái đỉnh của hàm pdf gốc (bimodal, màu xanh lá). Dĩ nhiên điều này đồng nghĩa h nhỏ quá hay lớn quá đều khiến estimate density không capture được pattern của true density. Cái này rất tương ứng với việc chọn bề rộng bins của histogram density cũng như chọn bậc của polynomial function trong bài toán curve fitting của chap 1.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **92/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 
 Bài giải thích rất sâu sắc về cách thức kernel function giúp làm mượt hàm mật độ và vai trò của tham số h, thể hiện sự hiểu biết vượt trội so với văn bản. Để hoàn thiện hơn, hãy làm rõ thêm về mối liên hệ trực tiếp giữa hàm Gaussian kernel được sử dụng và đặc tính của phân phối Gaussian.
-
-</details>
 
 <br>
 
