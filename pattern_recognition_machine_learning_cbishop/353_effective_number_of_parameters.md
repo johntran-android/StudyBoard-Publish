@@ -557,7 +557,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú vô cùng chi tiết và chính xác, tự chứng minh mạch lạc từ phân phối Gaussian đến phương trình ellipsoid và giải thích rất rõ ràng bản chất đại số tuyến tính của phép xoay trục tọa độ theo eigenvectors. Không có điểm gì cần cải thiện thêm.
+Ghi chú vô cùng chi tiết và chính xác, tự chứng minh mạch lạc từ phân phối Gaussian đến phương trình ellipsoid và giải thích rất rõ ràng bản chất đại số tuyến tính của phép xoay trục tọa độ theo eigenvectors. Không có điểm gì cần cải thiện thêm.
 
 </details>
 
@@ -887,7 +887,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Bài tự học của bạn cực kỳ chi tiết, chính xác và thể hiện tư duy toán học xuất sắc khi tự chứng minh mối liên hệ giữa eigenvalue và độ cong của likelihood. Điểm trừ duy nhất là lỗi ghi chép nhỏ ở đạo hàm bậc nhất của f1(y1) (thiếu biến y1), nhưng phần kết luận về đạo hàm bậc hai để chỉ curvature vẫn hoàn toàn chính xác.
+Bài tự học của bạn cực kỳ chi tiết, chính xác và thể hiện tư duy toán học xuất sắc khi tự chứng minh mối liên hệ giữa eigenvalue và độ cong của likelihood. Điểm trừ duy nhất là lỗi ghi chép nhỏ ở đạo hàm bậc nhất của f1(y1) (thiếu biến y1), nhưng phần kết luận về đạo hàm bậc hai để chỉ curvature vẫn hoàn toàn chính xác.
 
 </details>
 
@@ -971,7 +971,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chép của bạn rất xuất sắc khi giải thích trực quan hóa hình học qua phép ẩn dụ 'lực kéo' giữa Prior và Likelihood cực kỳ dễ hiểu và chính xác. Điểm cần lưu ý nhỏ duy nhất là các trị riêng $\lambda_i$ thực chất là của ma trận hệ số $\beta\Phi^T\Phi$ chứ không chỉ là $\Phi^T\Phi$, bạn nên lưu ý hệ số nhiễu $\beta$ này.
+Ghi chép của bạn rất xuất sắc khi giải thích trực quan hóa hình học qua phép ẩn dụ 'lực kéo' giữa Prior và Likelihood cực kỳ dễ hiểu và chính xác. Điểm cần lưu ý nhỏ duy nhất là các trị riêng $\lambda_i$ thực chất là của ma trận hệ số $\beta\Phi^T\Phi$ chứ không chỉ là $\Phi^T\Phi$, bạn nên lưu ý hệ số nhiễu $\beta$ này.
 
 </details>
 
@@ -1183,7 +1183,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **96/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú xuất sắc, giải thích rất rõ ràng bản chất thống kê của việc hiệu chỉnh bậc tự do ($N - \gamma$) và liên hệ chính xác với ước lượng không chệch. Đặc biệt, phân tích về bản chất "nửa mùa" (Empirical Bayes) khi tối đa hóa model evidence thay vì fully Bayesian thể hiện sự hiểu biết rất sâu sắc về bản chất của phương pháp.
+Ghi chú xuất sắc, giải thích rất rõ ràng bản chất thống kê của việc hiệu chỉnh bậc tự do ($N - \gamma$) và liên hệ chính xác với ước lượng không chệch. Đặc biệt, phân tích về bản chất "nửa mùa" (Empirical Bayes) khi tối đa hóa model evidence thay vì fully Bayesian thể hiện sự hiểu biết rất sâu sắc về bản chất của phương pháp.
 
 </details>
 
@@ -1299,7 +1299,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú cực kỳ chính xác và thể hiện sự hiểu biết sâu sắc về mặt toán học lẫn ý nghĩa trực quan của các hình vẽ, đặc biệt là phần giải thích về cơ chế 'giằng co' giữa prior và likelihood ở Hình 3.17. Chỉ có một vài lỗi chính tả rất nhỏ không đáng kể (như 'itererative', 'errorr').
+Ghi chú cực kỳ chính xác và thể hiện sự hiểu biết sâu sắc về mặt toán học lẫn ý nghĩa trực quan của các hình vẽ, đặc biệt là phần giải thích về cơ chế 'giằng co' giữa prior và likelihood ở Hình 3.17. Chỉ có một vài lỗi chính tả rất nhỏ không đáng kể (như 'itererative', 'errorr').
 
 </details>
 
@@ -1349,7 +1349,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn rất xuất sắc và chính xác, đặc biệt là việc liên hệ kiến thức đại số tuyến tính của thầy Strang để giải thích chi tiết tại sao các eigenvalue lại tăng theo quy mô tập dữ liệu. Các bước lập luận và biến đổi toán học để đi đến công thức xấp xỉ cuối cùng đều rất rõ ràng và dễ hiểu.
+Ghi chú của bạn rất xuất sắc và chính xác, đặc biệt là việc liên hệ kiến thức đại số tuyến tính của thầy Strang để giải thích chi tiết tại sao các eigenvalue lại tăng theo quy mô tập dữ liệu. Các bước lập luận và biến đổi toán học để đi đến công thức xấp xỉ cuối cùng đều rất rõ ràng và dễ hiểu.
 
 </details>
 
