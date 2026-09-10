@@ -45,7 +45,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn cực kỳ xuất sắc khi giải thích rất chi tiết, dễ hiểu và liên hệ trực quan tốt các khái niệm toán học từ văn bản gốc (như manifold và ví dụ về ảnh). Để hoàn thiện hơn nữa, bạn có thể tóm tắt thêm thuộc tính thứ hai được đề cập ở cuối trang là biến mục tiêu thường chỉ phụ thuộc vào một số ít hướng quan trọng trong manifold.
+Ghi chú của bạn cực kỳ xuất sắc khi giải thích rất chi tiết, dễ hiểu và liên hệ trực quan tốt các khái niệm toán học từ văn bản gốc (như manifold và ví dụ về ảnh). Để hoàn thiện hơn nữa, bạn có thể tóm tắt thêm thuộc tính thứ hai được đề cập ở cuối trang là biến mục tiêu thường chỉ phụ thuộc vào một số ít hướng quan trọng trong manifold.
 
 </details>
 
