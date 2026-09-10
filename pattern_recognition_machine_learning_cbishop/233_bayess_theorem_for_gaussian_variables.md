@@ -208,7 +208,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Bài viết giải thích rất chi tiết và sâu sắc từng bước một, từ định nghĩa phân phối đến lý do chọn log và cách các hệ số kết hợp thành dạng bậc hai của Z, cho thấy sự hiểu biết vững chắc. Để hoàn thiện hơn, bạn có thể thử tự xây dựng tường minh vector mean và ma trận precision/covariance của Z khi nó đã được chứng minh là phân phối Gaussian.
+Bài viết giải thích rất chi tiết và sâu sắc từng bước một, từ định nghĩa phân phối đến lý do chọn log và cách các hệ số kết hợp thành dạng bậc hai của Z, cho thấy sự hiểu biết vững chắc. Để hoàn thiện hơn, bạn có thể thử tự xây dựng tường minh vector mean và ma trận precision/covariance của Z khi nó đã được chứng minh là phân phối Gaussian.
 
 </details>
 
@@ -260,7 +260,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Phân tích rất chính xác và sâu sắc, giải thích rõ ràng cách suy ra phân phối biên của y từ phân phối hợp Gaussian, khớp hoàn toàn với các công thức và ý tưởng trong hình ảnh. Việc tổng hợp các kiến thức nền trước đó cũng rất hữu ích và làm tăng độ sâu của ghi chú.
+Phân tích rất chính xác và sâu sắc, giải thích rõ ràng cách suy ra phân phối biên của y từ phân phối hợp Gaussian, khớp hoàn toàn với các công thức và ý tưởng trong hình ảnh. Việc tổng hợp các kiến thức nền trước đó cũng rất hữu ích và làm tăng độ sâu của ghi chú.
 
 </details>
 
@@ -400,7 +400,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Bài viết rất chính xác và có chiều sâu vượt trội. Cách giải thích cặn kẽ về bản chất của phép tích chập (convolution) thông qua đổi biến, cùng với việc áp dụng chi tiết vào trường hợp A=I, giúp người đọc nắm vững kiến thức một cách toàn diện. Đây là một phân tích xuất sắc.
+Bài viết rất chính xác và có chiều sâu vượt trội. Cách giải thích cặn kẽ về bản chất của phép tích chập (convolution) thông qua đổi biến, cùng với việc áp dụng chi tiết vào trường hợp A=I, giúp người đọc nắm vững kiến thức một cách toàn diện. Đây là một phân tích xuất sắc.
 
 </details>
 
@@ -506,7 +506,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Bài giải rất chi tiết, logic và chính xác từng bước một trong việc áp dụng kết quả từ phân phối Gaussian có điều kiện và ma trận độ chính xác, hoàn toàn khớp với hình ảnh gốc. Việc tự sửa lỗi nhỏ về phân phối biên của Y cho thấy sự cẩn trọng và hiểu biết sâu sắc.
+Bài giải rất chi tiết, logic và chính xác từng bước một trong việc áp dụng kết quả từ phân phối Gaussian có điều kiện và ma trận độ chính xác, hoàn toàn khớp với hình ảnh gốc. Việc tự sửa lỗi nhỏ về phân phối biên của Y cho thấy sự cẩn trọng và hiểu biết sâu sắc.
 
 </details>
 
