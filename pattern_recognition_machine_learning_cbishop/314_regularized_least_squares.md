@@ -88,11 +88,10 @@
 >
 > Nhìn lại công thức 𝐰 = (**Φ**ᵀ**Φ**+λ)⁻¹**Φ**ᵀ𝐭, thì mình cũng dễ thấy nó chỉ khác cái 3.15 (công thức của 𝐰 không có regularization term, 𝐰 = (**Φ**ᵀ**Φ**)⁻¹**Φ**ᵀ𝐭) ở chỗ có thêm việc cộng λ vào **Φ**ᵀ**Φ**
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
-
-Bài phân tích rất chính xác và có chiều sâu, đặc biệt là phần dẫn giải chi tiết các bước biến đổi ma trận để tìm ra nghiệm đóng. Bạn đã nắm vững các khái niệm và mối liên hệ giữa chúng.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Bài phân tích rất chính xác và có chiều sâu, đặc biệt là phần dẫn giải chi tiết các bước biến đổi ma trận để tìm ra nghiệm đóng. Bạn đã nắm vững các khái niệm và mối liên hệ giữa chúng.
 
 **🔗 See also:** [Bias-Variance Trade-off Explained](./320_the_bias_variance_decomposition.md#node-mqos0pj) · [Evidence Re-estimation Limit](./353_effective_number_of_parameters.md#node-00gilsq)
 
@@ -231,11 +230,10 @@ Bài phân tích rất chính xác và có chiều sâu, đặc biệt là phầ
 >
 > Hệ quả là, nếu dùng lasso, ta có một mô hình với các tham số thưa thớt (sparse)
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **97/100** · ✓ Move on
-
-Bài phân tích của bạn rất sâu sắc và chính xác, thể hiện sự hiểu biết vững vàng về cơ sở toán học và trực giác hình học của regularization, đặc biệt là sự khác biệt giữa L1 và L2. Mặc dù rất chi tiết và đúng, bạn có thể cân nhắc cô đọng một số phần để ghi chú của mình súc tích hơn.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **97/100** · ✓ Move on
+>
+> Bài phân tích của bạn rất sâu sắc và chính xác, thể hiện sự hiểu biết vững vàng về cơ sở toán học và trực giác hình học của regularization, đặc biệt là sự khác biệt giữa L1 và L2. Mặc dù rất chi tiết và đúng, bạn có thể cân nhắc cô đọng một số phần để ghi chú của mình súc tích hơn.
 
 **🔗 See also:** [Ex 3.5 Lagrange Multipliers in Regularization](./37_exercises.md#node-tu3cct2)
 
@@ -260,11 +258,10 @@ Bài phân tích của bạn rất sâu sắc và chính xác, thể hiện sự
 >
 > Nhưng chúng ta lại phải đối mặt với vấn đề chọn siêu tham số (ví dụ như λ) sao cho hợp lý. Bởi vì nếu siêu tham số quá lớn hoặc quá nhỏ, mô hình sẽ trở nên quá phức tạp hoặc bị khống chế quá mức, làm giảm hiệu quả.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ⚠️ **88/100** · ✓ Move on
-
-Ghi chú giải thích rất rõ ràng về vai trò của regularization và sự dịch chuyển trong việc quản lý độ phức tạp của mô hình, đồng thời đào sâu vào ý nghĩa của siêu tham số lambda. Tuy nhiên, bạn đã bỏ sót thông tin về loại regularization cụ thể mà chương này sẽ tập trung nghiên cứu.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **88/100** · ✓ Move on
+>
+> Ghi chú giải thích rất rõ ràng về vai trò của regularization và sự dịch chuyển trong việc quản lý độ phức tạp của mô hình, đồng thời đào sâu vào ý nghĩa của siêu tham số lambda. Tuy nhiên, bạn đã bỏ sót thông tin về loại regularization cụ thể mà chương này sẽ tập trung nghiên cứu.
 
 <br>
 
