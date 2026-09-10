@@ -504,8 +504,9 @@ Deeper notes:
 
 </details>
 
-<details>
-<summary>🤖 AI Check — 🟡 Minor issues — ✅ **96/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟡 Minor issues — ✅ **96/100** · ✓ Move on
 
 Ghi chú xuất sắc, nắm rất vững bản chất hình học, đại số và thống kê của Fisher LDA đa lớp. Đặc biệt, bạn đã tự phát hiện chính xác lỗi in sai ký hiệu (erratum) trong công thức (4.51) của sách Bishop.
 
@@ -524,8 +525,6 @@ Ghi chú xuất sắc, nắm rất vững bản chất hình học, đại số 
 > [!NOTE]
 > - Do 𝐒B là tổng của K ma trận rank 1 có ràng buộc tổng trọng số bằng 0 (vì tổng Nk(𝐦k - 𝐦) = 0), rank của 𝐒B tối đa chỉ là K - 1. Vì vậy, số lượng eigenvalue khác 0 của 𝐒W⁻¹𝐒B tối đa chỉ là K - 1, dẫn tới số chiều nén D' tối đa có ý nghĩa phân lớp là K - 1.
 > - Trường hợp nhiều hơn 2 lớp không đảm bảo chiếu về 1 chiều là tối ưu mà cần chiếu về D' chiều (với 1 < D' ≤ K - 1).
-
-</details>
 
 <br>
 
