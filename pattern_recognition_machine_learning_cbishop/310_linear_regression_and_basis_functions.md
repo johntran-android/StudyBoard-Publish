@@ -22,11 +22,10 @@
 >
 > Nói ngắn gọn thì hiểu đơn giản, là, cái hàm dùng để dự đoán t, là hàm của cả param θ và input x. Thì ta sẽ luôn dùng các hàm tuyến tính đối với θ, có nghĩa là, coi x như constant, thì f(θ, x) = g(θ) là hàm tuyến tính, nhưng với input x thì hàm là phi tuyến. Ví dụ như f(x) = θ1 x1 + θ2 x2², là hàm tuyến tính theo θ = θ1, θ2 nhưng nhưng phi tuyến theo x = (x1, x2)
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
-
-Bạn đã tóm tắt rất chính xác về trọng tâm thay đổi sang học có giám sát và định nghĩa của hồi quy. Điểm mạnh lớn nhất là cách bạn giải thích và minh họa bằng ví dụ về việc hàm có thể tuyến tính theo tham số nhưng phi tuyến theo biến đầu vào, thể hiện sự hiểu biết sâu sắc. Chỉ cần lưu ý thêm rằng các 'basis function' thường là các hàm phi tuyến của biến đầu vào, và chúng ta kết hợp tuyến tính các hàm cơ sở này.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
+>
+> Bạn đã tóm tắt rất chính xác về trọng tâm thay đổi sang học có giám sát và định nghĩa của hồi quy. Điểm mạnh lớn nhất là cách bạn giải thích và minh họa bằng ví dụ về việc hàm có thể tuyến tính theo tham số nhưng phi tuyến theo biến đầu vào, thể hiện sự hiểu biết sâu sắc. Chỉ cần lưu ý thêm rằng các 'basis function' thường là các hàm phi tuyến của biến đầu vào, và chúng ta kết hợp tuyến tính các hàm cơ sở này.
 
 <br>
 
@@ -237,11 +236,10 @@ Bạn đã tóm tắt rất chính xác về trọng tâm thay đổi sang học
 >
 > Và để ra quyết định tối ưu, hoàn toàn tương tự, ta cũng giải bài toán minimize expected loss, và kết quả nếu loss là squared error, sẽ là E\[t|𝐱\]
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
-
-Điểm mạnh: Bạn đã tóm tắt nội dung văn bản một cách cực kỳ chính xác và đi sâu vào giải thích các khái niệm phức tạp như kỳ vọng có điều kiện và hàm lỗi bình phương bằng cách liên hệ chặt chẽ với lý thuyết thống kê Bayesian. Điều này thể hiện sự hiểu biết sâu rộng, mặc dù một chi tiết nhỏ về ký hiệu f(t|θ,x) ở cuối có thể được làm rõ thêm.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Điểm mạnh: Bạn đã tóm tắt nội dung văn bản một cách cực kỳ chính xác và đi sâu vào giải thích các khái niệm phức tạp như kỳ vọng có điều kiện và hàm lỗi bình phương bằng cách liên hệ chặt chẽ với lý thuyết thống kê Bayesian. Điều này thể hiện sự hiểu biết sâu rộng, mặc dù một chi tiết nhỏ về ký hiệu f(t|θ,x) ở cuối có thể được làm rõ thêm.
 
 **🔗 See also:** [Optimal Prediction with Gaussian Noise](./311_maximum_likelihood_and_least_squares.md#node-wsglxqn)
 
@@ -276,11 +274,10 @@ Bạn đã tóm tắt rất chính xác về trọng tâm thay đổi sang học
 >
 > Nói chung, điểm mấu chốt là, thay vì dùng 𝐱 = x1,...xD như input, và linear combination chúng lại, thì ta chế biến các x1,...xD thành một bộ input khác Φ1(x1,..xD), Φ2(x1,...xD),...là các hàm phi tuyến đối với 𝐱, khi đó tuy vẫn tổ hợp tuyến tính chúng lại với w0,w1,...: w0 + w1Φ1(𝐱) + w2Φ2(𝐱) + ...nhưng lúc này, đối với 𝐱, ta có hàm phi tuyếm, nhưng đối với 𝐰 vẫn là hàm tuyến tính. Và mô hình này sẽ mạnh hơn.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
-
-Bạn đã nắm vững các khái niệm trọng tâm rất tốt, đặc biệt là sự phân biệt chính xác giữa hàm tuyến tính và hàm affine, điều này thể hiện sự hiểu biết sâu sắc. Cách bạn tóm tắt lại điểm mấu chốt của Basis Function Models cũng rất rõ ràng và đầy đủ.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Bạn đã nắm vững các khái niệm trọng tâm rất tốt, đặc biệt là sự phân biệt chính xác giữa hàm tuyến tính và hàm affine, điều này thể hiện sự hiểu biết sâu sắc. Cách bạn tóm tắt lại điểm mấu chốt của Basis Function Models cũng rất rõ ràng và đầy đủ.
 
 <br>
 
@@ -305,11 +302,10 @@ Bạn đã nắm vững các khái niệm trọng tâm rất tốt, đặc biệ
 >
 > Ông nói đại ý rằng trong nhiều bài toán pattern reconition thực tế, thì ta thường có bước feature engineering hay pre-processing (như đã biết, đại khái là ta tiền xử lí data, hoặc chế cháo tạo các feature mới từ các feature gốc) thì khi đó, chúng có thể được thể hiện thông qua các basis function này. (nói đơn giản, là ta có thể hiểu hàm Φ sẽ đại diện cho các bước preprocessing hay feature engineering này trong thực tế)
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
-
-Ghi chú rất chính xác và chi tiết, đặc biệt là phần giải thích về vai trò của φ₀(x) và sự khác biệt giữa "bias" trong mô hình và "bias" trong thống kê. Cách bạn liên hệ hàm cơ sở với feature engineering thực tế cũng rất rõ ràng.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và chi tiết, đặc biệt là phần giải thích về vai trò của φ₀(x) và sự khác biệt giữa "bias" trong mô hình và "bias" trong thống kê. Cách bạn liên hệ hàm cơ sở với feature engineering thực tế cũng rất rõ ràng.
 
 **🔗 See also:** [Likelihood and Error Functions](./311_maximum_likelihood_and_least_squares.md#node-urnjdcs) · [Section 3.3.3 Equivalent Kernel](./333_equivalent_kernel.md#node-qgf9klh)
 
@@ -336,11 +332,10 @@ Ghi chú rất chính xác và chi tiết, đặc biệt là phần giải thíc
 >
 > Ông lưu ý, đại khái là cái này đừng coi nó hay đòi hỏi nó phải là một valid pdf, hay cũng đừng cho rằng nó có ý nghĩa xác suất gì, cái này có thể hiểu cũng giống như với Gaussian kernel, ta chỉ muốn hàm kernel có cái hành vi như đường cong cái chuông của phân phối Normal pdf mà thôi, chứ chả có hàm ý xác suất gì cả. Nên ở đây cũng vậy, ta sẽ ko đòi hỏi Φj(x) phải có các tính chất valid của một hàm pdf (như intergrate = 1). Hơn nữa, kiểu gì thì ta cũng sẽ nhân với hệ số wj.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
-
-Ghi chú của bạn rất chính xác và sâu sắc. Đặc biệt, cách bạn giải thích sự khác biệt giữa hàm cơ sở toàn cục và cục bộ bằng ví dụ minh họa và phép so sánh với Gaussian kernel thể hiện sự hiểu biết sâu rộng. Một chút rõ ràng hơn về vai trò của 's' trong 'spatial scale' sẽ làm cho ghi chú trở nên hoàn hảo.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú của bạn rất chính xác và sâu sắc. Đặc biệt, cách bạn giải thích sự khác biệt giữa hàm cơ sở toàn cục và cục bộ bằng ví dụ minh họa và phép so sánh với Gaussian kernel thể hiện sự hiểu biết sâu rộng. Một chút rõ ràng hơn về vai trò của 's' trong 'spatial scale' sẽ làm cho ghi chú trở nên hoàn hảo.
 
 **🔗 See also:** [Khớp đường cong hàm đa thức](./11_example_polynomial_curve_fitting.md#node-79h9mtc)
 
@@ -369,11 +364,10 @@ Ghi chú của bạn rất chính xác và sâu sắc. Đặc biệt, cách bạ
 >
 > Nói thêm chút về hàm sigmoid và tanh, mình đã gặp chúng trong các lớp machine learning của Andrew Ng, cũng như sau này với các lớp deep learning. Bây giờ gặp lại trong bối cảnh Bishop, thì mình được hiểu thêm chúng là thuộc loại basis function, là function nhằm tạo ra tính chất "non-linearity đối với input", mà nhờ đó, ta vẫn có linear model - là hàm tuyến tính đối với tham số, nhưng là hàm phi tuyến đối với input → giúp mạnh hơn.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
-
-Bạn đã ghi chú rất chính xác các định nghĩa và mối quan hệ giữa hàm sigmoid và tanh. Phần ví dụ minh họa chi tiết về tổ hợp tuyến tính cho thấy sự hiểu biết sâu sắc và khả năng áp dụng kiến thức của bạn.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Bạn đã ghi chú rất chính xác các định nghĩa và mối quan hệ giữa hàm sigmoid và tanh. Phần ví dụ minh họa chi tiết về tổ hợp tuyến tính cho thấy sự hiểu biết sâu sắc và khả năng áp dụng kiến thức của bạn.
 
 <br>
 
