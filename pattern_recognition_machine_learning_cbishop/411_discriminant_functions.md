@@ -119,7 +119,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chép vô cùng xuất sắc và trực quan, đặc biệt là phần tự chứng minh hình học cho công thức 4.5 và khoảng cách r rất rõ ràng, chính xác. Bạn đã nắm rất vững bản chất hình học của vector pháp tuyến w và các phép chiếu vector.
+Ghi chép vô cùng xuất sắc và trực quan, đặc biệt là phần tự chứng minh hình học cho công thức 4.5 và khoảng cách r rất rõ ràng, chính xác. Bạn đã nắm rất vững bản chất hình học của vector pháp tuyến w và các phép chiếu vector.
 
 </details>
 
