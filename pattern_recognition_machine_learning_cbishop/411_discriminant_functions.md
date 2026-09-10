@@ -116,12 +116,11 @@
 >
 > và như vậy, bài toàn tăng thành D+1 chiều, trong đó hyperplane y(x) = 0 sẽ là hyperplane đi qua gốc O.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Ghi chép vô cùng xuất sắc và trực quan, đặc biệt là phần tự chứng minh hình học cho công thức 4.5 và khoảng cách r rất rõ ràng, chính xác. Bạn đã nắm rất vững bản chất hình học của vector pháp tuyến w và các phép chiếu vector.
-
-</details>
 
 **🔗 See also:** [K-Class Linear Discriminant Functions](./412_multiple_class.md#node-yhoheyw)
 
