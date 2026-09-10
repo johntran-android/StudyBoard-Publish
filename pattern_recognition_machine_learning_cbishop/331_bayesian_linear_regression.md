@@ -25,7 +25,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Bản ghi chú vô cùng xuất sắc khi giải thích rất sâu sắc, liên hệ chính xác các công thức toán học đã học để làm rõ nghĩa cho đoạn văn bản. Để hoàn hảo hơn, bạn có thể bổ sung ý nhỏ của tác giả về tầm quan trọng của việc lựa chọn số lượng và dạng thức của basis functions đối với hành vi của mô hình.
+Bản ghi chú vô cùng xuất sắc khi giải thích rất sâu sắc, liên hệ chính xác các công thức toán học đã học để làm rõ nghĩa cho đoạn văn bản. Để hoàn hảo hơn, bạn có thể bổ sung ý nhỏ của tác giả về tầm quan trọng của việc lựa chọn số lượng và dạng thức của basis functions đối với hành vi của mô hình.
 
 </details>
 
@@ -199,7 +199,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú cực kỳ chi tiết, chính xác và có chiều sâu khi kết nối từ lý thuyết nền tảng đến các bước biến đổi toán học cụ thể của hàm likelihood. Điểm lưu ý nhỏ duy nhất là bạn viết nhầm ký hiệu vector kỳ vọng của prior thành w0 thay vì m0 như trong sách (phương trình 3.48).
+Ghi chú cực kỳ chi tiết, chính xác và có chiều sâu khi kết nối từ lý thuyết nền tảng đến các bước biến đổi toán học cụ thể của hàm likelihood. Điểm lưu ý nhỏ duy nhất là bạn viết nhầm ký hiệu vector kỳ vọng của prior thành w0 thay vì m0 như trong sách (phương trình 3.48).
 
 </details>
 
@@ -291,7 +291,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú cực kỳ chính xác và chi tiết khi liên kết thành công công thức tổng quát từ Chương 2 để chứng minh công thức Chương 3 một cách tường minh. Để hoàn hảo hơn, bạn có thể bổ sung thêm giải thích ngắn gọn về ý nghĩa vật lý của các tham số đóng vai trò là độ chính xác (precision) trong việc cập nhật phân phối.
+Ghi chú cực kỳ chính xác và chi tiết khi liên kết thành công công thức tổng quát từ Chương 2 để chứng minh công thức Chương 3 một cách tường minh. Để hoàn hảo hơn, bạn có thể bổ sung thêm giải thích ngắn gọn về ý nghĩa vật lý của các tham số đóng vai trò là độ chính xác (precision) trong việc cập nhật phân phối.
 
 </details>
 
@@ -324,7 +324,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn rất xuất sắc, giải thích rất sâu sắc và trực quan từ trực giác hình chuông của phân phối chuẩn đến sự khác biệt giữa hai trường phái Bayes và tần suất. Điểm trừ duy nhất là lỗi gõ nhầm số thứ tự công thức ở cuối bài từ (3.53, 3.54) thành (5.3, 5.4).
+Ghi chú của bạn rất xuất sắc, giải thích rất sâu sắc và trực quan từ trực giác hình chuông của phân phối chuẩn đến sự khác biệt giữa hai trường phái Bayes và tần suất. Điểm trừ duy nhất là lỗi gõ nhầm số thứ tự công thức ở cuối bài từ (3.53, 3.54) thành (5.3, 5.4).
 
 </details>
 
@@ -428,7 +428,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú cực kỳ xuất sắc, thể hiện sự hiểu biết sâu sắc và chính xác về mối liên hệ giữa tối đa hóa hậu nghiệm (MAP) và việc giảm thiểu sai số có Regularization L2. Bạn chỉ cần lưu ý thêm hệ số 1/2 ở phần phạt L2 (tức là α/2 thay vì α) để công thức hoàn toàn đồng nhất với tài liệu học.
+Ghi chú cực kỳ xuất sắc, thể hiện sự hiểu biết sâu sắc và chính xác về mối liên hệ giữa tối đa hóa hậu nghiệm (MAP) và việc giảm thiểu sai số có Regularization L2. Bạn chỉ cần lưu ý thêm hệ số 1/2 ở phần phạt L2 (tức là α/2 thay vì α) để công thức hoàn toàn đồng nhất với tài liệu học.
 
 </details>
 
@@ -486,7 +486,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn rất chính xác và thể hiện sự hiểu biết sâu sắc về quá trình sinh dữ liệu giả lập cũng như mô hình Bayesian Regression. Bạn chỉ cần lưu ý làm rõ mô hình sử dụng hai hàm cơ sở là phi_0(x) = 1 và phi_1(x) = x để tránh nhầm lẫn khi định nghĩa vector basis function.
+Ghi chú của bạn rất chính xác và thể hiện sự hiểu biết sâu sắc về quá trình sinh dữ liệu giả lập cũng như mô hình Bayesian Regression. Bạn chỉ cần lưu ý làm rõ mô hình sử dụng hai hàm cơ sở là phi_0(x) = 1 và phi_1(x) = x để tránh nhầm lẫn khi định nghĩa vector basis function.
 
 </details>
 
@@ -636,7 +636,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn cực kỳ xuất sắc, thể hiện sự hiểu biết sâu sắc khi tự giải thích được bản chất toán học đằng sau các hình ảnh trực quan của đồ thị likelihood và posterior. Để hoàn thiện hơn nữa, bạn có thể bổ sung thêm giải thích về ký hiệu toán học cụ thể của nhiễu precision ̢͂ beta để liên kết chặt chẽ hơn với văn bản gốc.
+Ghi chú của bạn cực kỳ xuất sắc, thể hiện sự hiểu biết sâu sắc khi tự giải thích được bản chất toán học đằng sau các hình ảnh trực quan của đồ thị likelihood và posterior. Để hoàn thiện hơn nữa, bạn có thể bổ sung thêm giải thích về ký hiệu toán học cụ thể của nhiễu precision ̢͂ beta để liên kết chặt chẽ hơn với văn bản gốc.
 
 </details>
 
@@ -658,7 +658,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú rất chính xác và thể hiện sự hiểu biết sâu sắc về mối liên hệ giữa hàm prior khái quát hóa, tính liên hợp (conjugate) và các đặc trưng của phân phối posterior (mean và mode). Việc bạn tự suy luận hệ quả khi $q \neq 2$ dựa trên kiến thức về conjugate prior là một điểm cộng lớn.
+Ghi chú rất chính xác và thể hiện sự hiểu biết sâu sắc về mối liên hệ giữa hàm prior khái quát hóa, tính liên hợp (conjugate) và các đặc trưng của phân phối posterior (mean và mode). Việc bạn tự suy luận hệ quả khi $q \neq 2$ dựa trên kiến thức về conjugate prior là một điểm cộng lớn.
 
 </details>
 
