@@ -1,6 +1,6 @@
 # 10.3 Hypothesis Testing
 
-📊 **Progress:** `21` Notes | `24` Screenshots | `20` AI Reviews
+📊 **Progress:** `22` Notes | `25` Screenshots | `21` AI Reviews
 
 ---
 <a id="node-zhfsuqo"></a>
@@ -45,7 +45,7 @@
 > Và từ đó, cũng như ta có các cách tiếp cận để có point estimator W(**X**) tối ưu, thì ở đây ta cũng sẽ đánh giá để tìm ra hypothesis testing tối ưu.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bạn đã tóm tắt chính xác ý chính và có tư duy liên hệ xuất sắc khi chủ động ôn lại các khái niệm nền tảng từ chương trước. Tuy nhiên, để đầy đủ hơn, bạn nên bổ sung hai phương pháp cụ thể được nhắc đến ở cuối bài là kiểm định tỷ số khả biến mẫu lớn và các kiểm định xấp xỉ mẫu lớn.
 
@@ -91,9 +91,24 @@
 > Và theo gs Casella, dù cho việc tính hai cái đỉnh của hàm likelihood khi xét θ trong Θ0 hay Θ có thể không tính được theo lối analytic (ví dụ như dùng giải tích để có closed form formula để tính) thì ta vẫn có thể tính theo lối numerically (ám chỉ các thuật toán tối ưu). Do đó dù không có công thức tính tử số và mẫu số ta vẫn có thể tính giá trị của λ(**x**) dựa trên thuật toán.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú cực kỳ chi tiết và chính xác, thể hiện sự hiểu biết sâu sắc về mặt toán học cũng như ý nghĩa thực tiễn của phương pháp LRT. Bạn chỉ cần lưu ý một chút về ký hiệu truyền thống của hàm likelihood là L(\theta|\mathbf{x}) thay vì viết ngược lại, nhưng tổng thể bài viết là xuất sắc.
+> ### Điểm mạnh
+> - **Hiểu rõ bản chất trực quan:** Bạn đã giải thích rất hay và chính xác ý nghĩa của tỷ số $\lambda(\mathbf{x})$: đó là sự so sánh giữa độ hợp lý tối đa trong tập giả thuyết không $H_0$ (phạm vi hẹp) so với toàn bộ không gian tham số $\Theta$ (phạm vi rộng).
+> - **Liên hệ kiến thức tốt:** Việc bạn tự nhận ra mẫu số chính là giá trị của hàm khả hợp tại điểm MLE $\hat{\theta}$ cho thấy nền tảng kiến thức thống kê của bạn rất vững chắc.
+> - **Hiểu đúng về tính toán số học (numerical computation):** Bạn đã giải thích chính xác ý kiến của tác giả về việc sử dụng các thuật toán tối ưu để tính toán giá trị của $\lambda(\mathbf{x})$ ngay cả khi không có công thức dạng closed-form giải tích.
+>
+> ### Điểm cần cải thiện
+> - **Nhầm lẫn ký hiệu tập hợp:** Ở đoạn cuối, bạn viết "*khi xét $\theta$ trong $\Theta_0^c$ hay $\Theta$*". Thực chất, hai tập hợp được lấy cực trị (supremum) là $\Theta_0$ (ở tử số) và $\Theta$ (ở mẫu số) như công thức định nghĩa, chứ không phải tập đối thuyết $\Theta_0^c$.
+> - **Kí hiệu hàm khả hợp (Likelihood function):** Trong công thức viết lại, bạn dùng $L(\mathbf{x}|\theta)$. Trong sách của Casella & Berger, ký hiệu chuẩn là $L(\theta|\mathbf{x})$ để nhấn mạnh rằng sau khi có dữ liệu $\mathbf{x}$, hàm khả hợp là một hàm theo biến tham số $\theta$.
+>
+> ### Gợi ý học tập
+> - Hãy cẩn thận hơn khi viết các ký hiệu tập hợp trong phần diễn giải để tránh những nhầm lẫn nhỏ giữa $\Theta_0$ và $\Theta_0^c$.
+> - Bạn có thể tìm hiểu thêm về định lý Wilks (Wilks' Theorem) để thấy được phân phối tiệm cận của $-2\log\lambda(\mathbf{X})$ sẽ quy về phân phối Chi-bình phương như thế nào khi cỡ mẫu lớn, đây là bước tiếp theo rất quan trọng của phần học này.
+>
+> **⭐ Bonus points**
+> - Học viên tự liên hệ chính xác mẫu số của công thức LRT với giá trị của hàm khả hợp tại ước lượng hợp lệ cực đại (MLE).
 
 <br>
 
@@ -123,7 +138,7 @@
 > Và từ đó ta có định nghĩa của level α test: Đó là phép thử mà xác suất mắc Type error I không vượt quá α: sup\_θ∈Θ0 P(λ(**X**) ≤ c) ≤ α.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú rất tốt và chính xác khi giải thích rõ mối liên hệ giữa sai lầm Loại I (Type I error) và định nghĩa của level-α test từ hình ảnh. Điểm cần lưu ý nhỏ là ở câu cuối bạn nên viết rõ là 'sai lầm Loại I' thay vì ghi chung chung là 'Type error' để tránh nhầm lẫn.
 
@@ -365,7 +380,7 @@
 > ⇔ -2 log λ(**X**)  → (d) χ²\_1
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Bài viết rất xuất sắc, trình bày cực kỳ chi tiết và chính xác từng bước chứng minh toán học của định lý, đặc biệt là việc phát hiện ra lỗi in ấn ở mẫu số trong sách giáo khoa và giải thích tường tận cách áp dụng Định lý Slutsky.
 
@@ -419,7 +434,7 @@
 > Như vậy level alpha sẽ test rule là reject H0 khi observed value **x** thỏa: -2log λ(**x**) ≥ χ²\_1,α
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú của bạn rất xuất sắc, trình bày logic chặt chẽ để chứng minh miền bác bỏ của kiểm định tỷ số khả trị (LRT) dựa trên định lý Wilks. Tuy nhiên, có một lỗi gõ nhỏ ở dòng gần cuối khi ghi thiếu số 2: '-log λ(X)' cần sửa thành '-2log λ(X)'.
 
@@ -519,7 +534,7 @@
 > Có nghĩa là, từ nay về sau, cứ việc lôi χ²\_1 ra mà tính, tức là, cứ dùng bảng tra các mốc phân vị của χ²\_1 để dùng, hay nói cách khác, cứ coi -2 log λ(**X**) như biến χ²\_1.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú giải thích rất xuất sắc, chính xác và trực quan cả về lý thuyết thống kê (định lý Wilks) lẫn cách dựng histogram thực nghiệm. Một điểm lưu ý nhỏ là định nghĩa phân vị nên diễn đạt chặt chẽ hơn một chút (80% số quan sát nhỏ hơn hoặc bằng giá trị đó), nhưng tổng thể tài liệu cực kỳ chất lượng.
 
@@ -619,7 +634,7 @@
 > Vậy thì gs lưu ý rằng, cái định nghĩa **asymptotic size α test** chỉ có nghĩa là: khi n → ∞ thì P(reject H0) → α với mỗi θ ∈ Θ, nhưng có thể chưa chắc (hay đôi khi thì không thỏa) n → ∞ thì sup\_θ∈Θ0 P(reject H0) = α (cái này hơi khó hiểu), nhưng đại ý gs nói là thực tế thì ta có thể coi như khi n → ∞ thì ta sẽ có size α test.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài viết giải thích rất trực quan, logic và nắm bắt xuất sắc bản chất việc chuyển từ phân phối chính xác sang phân phối tiệm cận chi-bình phương. Điểm cần lưu ý là định nghĩa chính xác của 'size' (kích thước) của kiểm định là supremum của xác suất sai lầm loại I trên tập giả thuyết không, chứ không chỉ đơn thuần là bằng $\alpha$.
 
@@ -791,7 +806,7 @@
 > Tóm lại, nhờ cái định lý này, gọi là định lý Wilkin, ta có thể dùng bảng tra của χ², để có các threshold, giúp lắp vào LRT test rule, ta sẽ có test rule level α tiệm cận (asymptotically level α test)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú của bạn cực kỳ chi tiết, chính xác và thể hiện sự hiểu bài sâu sắc từ bản chất kiểm định tỷ số khả hợp (LRT) cho đến cách tính bậc tự do của định lý Wilks ($q - p$) như trong ảnh. Để hoàn thiện hơn, bạn có thể lưu ý thêm rằng định lý tiệm cận này đòi hỏi một số điều kiện chuẩn tắc (regularity conditions) nhất định để nghiệm đúng.
 
@@ -1194,7 +1209,7 @@
 > Và như vậy, cùng với việc đã có threshold χ²\_3,α ta sẽ đã có cái level α (tiệm cận) LRT
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú cực kỳ chi tiết và chính xác, tự chứng minh và giải quyết triệt để các bước tối ưu hóa (như dùng điều kiện KKT) mà sách giáo khoa bỏ qua. Bạn đã hiểu rất sâu sắc bản chất toán học của kiểm định tỷ số hợp lý (LRT) này.
 
@@ -1220,7 +1235,7 @@
 > Vậy thì ở đây cũng tương tự, đó là giả sử nếu ta có thể dùng CLT (chính xác hơn là một dạng nào đó của CLT) để chỉ ra một estimator W(**X**) của θ thỏa mãn: (Wn(**X**) - θ) / σn → (d) n(0,1). Thì khi đó ta có thể dùng n(0,1) để xây dựng test (y như ta dùng χ² để thay cho -2log λ(**X**) (vốn là một statistic mà ta ko biết distribution))
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Ghi chú xuất sắc, không chỉ hiểu đúng nội dung đoạn văn mà còn liên hệ rất tốt với Likelihood Ratio Test và định lý Wilks ở chương trước để thấy rõ bức tranh tổng thể. Tư duy hệ thống này cực kỳ tốt và hoàn toàn chính xác.
 
@@ -1528,7 +1543,7 @@
 > ⇔ (Wn - θ)/Sn → (d) n(0,1)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Ghi chú của bạn cực kỳ xuất sắc, thể hiện sự hiểu biết sâu sắc và chính xác về toán thống kê từ tính hiệu quả tiệm cận của MLE đến việc xây dựng kiểm định giả thuyết. Việc giải thích chi tiết ý nghĩa của việc cố định theta dưới H0 để tính toán sigma_n là hoàn toàn chính xác.
 
@@ -1718,7 +1733,7 @@
 > Còn nếu H1 là đúng thì cái test rule này sẽ cũng là cái tiệm cận power 1 với mọi θ, tức cũng là là trùm luôn, là dĩ nhiên cũng tốt.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú của bạn cực kỳ chính xác, chi tiết và làm nổi bật được những điểm mấu chốt dễ sai như sự khác biệt về điều kiện hội tụ dưới H0 và H1. Để hoàn hảo hơn, bạn có thể giải thích rõ thêm định lý Slutsky khi kết hợp giới hạn của hai hạng tử (một hội tụ phân phối, một hội tụ xác suất ra vô cùng).
 
@@ -1848,7 +1863,7 @@
 > lim n → ∞ P\_θ(\[(Wn - θ)/Sn\] ≥ z\_α - (θ - θ0)/Sn) = P\_θ(Z ≥ -∞) = 1
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Ghi chú của bạn giải thích cực kỳ chi tiết, chính xác và chặt chẽ các bước lập luận toán học mà sách đã lược bớt, đặc biệt là phần tìm supremum dưới H0 và phân tích giới hạn của hàm power. Hãy tiếp tục phát huy tư duy phân tích xuất sắc này trong các bài học tiếp theo!
 
@@ -2132,7 +2147,7 @@
 > nên 1/√I^n(Wn) cũng là good estimate cho 1/√In(θ0).
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú rất xuất sắc, chi tiết và có chiều sâu khi tự chứng minh lại tính hội tụ của Wald test bằng định lý Slutsky và tính nhất quán của MLE. Để hoàn thiện hơn, bạn có thể bổ sung thêm lý do toán học tại sao Observed Information hội tụ về Expected Fisher Information (dựa trên Luật số lớn).
 
@@ -2362,7 +2377,7 @@
 >  ⇒ 1/In(p̂n) = \[p̂n(1-p̂n)\]/n chứng minh xong Sn = √{\[p̂n(1-p̂n)\]/n} chính là 1/√In(p)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú rất chi tiết, lập luận chặt chẽ và tự tay tính toán chính xác thông tin Fisher In(p) để liên hệ với công thức lý thuyết. Cần chú ý cách diễn đạt ở một số đoạn nhỏ (như hội tụ phân phối không đồng nghĩa hội tụ phương sai) dù sau đó bạn đã tự đính chính bằng phương sai thực tế.
 
@@ -2500,7 +2515,7 @@
 >  Vậy khúc cuối nói đại ý là nếu có hai cách thì cách nào nên dùng Câu trả lời là tùy, vì power function của chúng cross nhau nên có khi cách này tốt hơn có khi cách kia tốt hơn
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú cực kỳ xuất sắc và sâu sắc khi phân biệt rõ bản chất kiểm định Wald (kết hợp tính hiệu quả của MLE và định lý Slutsky) với kiểm định dưới H0 dựa trên CLT. Để hoàn thiện hơn nữa về thuật ngữ chuẩn mực, bạn có thể bổ sung rằng hai cách này tương ứng với Wald test và Score test (Rao's score test).
 
@@ -2691,9 +2706,24 @@
 > Do đó cái chỗ nói E\_θ\[S(θ)\] với mọi θ rất dễ gây lú lẫn. Nhưng hiểu được rồi ta sẽ hiểu ý sau của giáo sư Casella khi nói: Under H0 (dưới giả định giá trị thật θ là θ0) thì mean của S(θ0) bằng 0. Nhờ đoạn trên ta hiểu điều này là đương nhiên: Vì chỉ khi θ = θ0, thì mean của S(θ0) mới là E\_θ0(S(θ0)), và cái này mới bằng 0.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú xuất sắc! Bạn đã bóc tách chính xác và tường minh một điểm cực kỳ dễ gây nhầm lẫn trong thống kê suy luận: sự phân biệt giữa giá trị tham số dùng để định giá hàm Score và tham số thực của phân phối dùng để lấy kỳ vọng.
+> ### Điểm mạnh
+> - **Tư duy toán học rất chặt chẽ:** Bạn đã chỉ ra chính xác sự khác nhau giữa biến hình thức (dummy variable) khi lấy đạo hàm và tham số thực sự của phân phối dữ liệu.
+> - **Làm rõ bản chất ngẫu nhiên:** Giải thích rất chuẩn xác rằng $S(10)$ hay $S(\theta_0)$ vẫn là biến ngẫu nhiên vì nó là hàm của mẫu ngẫu nhiên $\mathbf{X}$.
+> - **Chứng minh logic:** Phân tích bước đổi tỷ số $f(\mathbf{x}|\theta) / f(\mathbf{x}|10) = 1$ khi $\theta = 10$ giúp soi sáng hoàn toàn lý do tại sao $\mathbb{E}_\theta[S(\theta)] = 0$ với mọi $\theta$, nhưng $\mathbb{E}_{\theta_1}[S(\theta_2)] \neq 0$ nói chung.
+>
+> ### Điểm cần lưu ý & cải thiện
+> - **Điều kiện tráo tích phân và đạo hàm (Regularity Conditions):** Bước trích đạo hàm ra ngoài dấu tích phân $\int \left[\frac{\partial}{\partial u} f(\mathbf{x}|u)\right] d\mathbf{x} = \frac{\partial}{\partial u} \int f(\mathbf{x}|u) d\mathbf{x}$ đòi hỏi điều kiện trơn (Cramér-Rao regularity conditions), cụ thể là miền giá trị (support) của $X$ không được phụ thuộc vào $\theta$ (ví dụ: phân phối $\text{Uniform}(0, \theta)$ sẽ không thỏa).
+> - **Ký hiệu:** Đoạn $\partial / \partial u \log f(\mathbf{x}|\theta)$ ở mục ii có gõ nhầm nhẹ biến lấy vi phân so với biến trong hàm, dù phần sau bạn đã đính chính lại chuẩn xác là $\partial / \partial u \log f(\mathbf{x}|u)$.
+>
+> ### Gợi ý đào sâu
+> - Tìm hiểu thêm về mối liên hệ giữa $\mathbb{E}_\theta[S(\theta)] = 0$ và Ma trận thông tin Fisher (Fisher Information) $\mathcal{I}(\theta) = \text{Var}_\theta(S(\theta)) = \mathbb{E}_\theta[S^2(\theta)]$.
+>
+> **⭐ Bonus points**
+> - Nhận thức rõ ràng và phân biệt được tham số hình thức (dummy variable) khi đạo hàm log-likelihood với tham số thực của phân phối.
+> - Chỉ ra được kỳ vọng chéo E_10[S(5)] khác 0, giải thích trọn vẹn tại sao Score test chỉ có kỳ vọng bằng 0 dưới giả thuyết H0.
 
 **🔗 See also:** [Giá trị kỳ vọng và LOTUS](./22_expected_value.md#node-p3585vu) · [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4)
 
@@ -2999,9 +3029,24 @@
 > Còn khúc cuối nói về Lagrangian multipler test, quay lại sau.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **93/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **93/100** · ✓ Move on
 >
 > Ghi chú xuất sắc, bạn đã tự giải mã và chứng minh chi tiết định lý hội tụ theo luật số lớn/CLT vốn bị sách giáo trình giản lược.
+> ### Điểm mạnh
+> - **Tư duy toán học rất chặt chẽ**: Bạn không chấp nhận mù quáng kết luận 'Z_S hội tụ về Normal(0,1)' từ định lý 10.1.12 mà chủ động phân rã score statistic $S(\theta_0)$ thành tổng các biến ngẫu nhiên độc lập $Y_i = \frac{\partial}{\partial \theta} \log f(X_i|\theta_0)$.
+> - **Triển khai chuẩn xác CLT**: Việc chỉ ra $E_{\theta_0}(Y_i) = 0$ và $\text{Var}_{\theta_0}(Y_i) = I_1(\theta_0)$, từ đó áp dụng CLT cổ điển để suy ra $Z_S = \frac{S(\theta_0)}{\sqrt{I_n(\theta_0)}} \xrightarrow{d} \mathcal{N}(0,1)$ là hoàn toàn chính xác và sáng sủa.
+> - **Hiểu rõ bản chất kiểm định tiệm cận**: Phần diễn giải mức ý nghĩa tiệm cận (asymptotic level) $\alpha$ với giá trị tới hạn $z_{\alpha/2}$ được lập luận đúng định nghĩa xác suất lỗi loại I.
+>
+> ### Điểm cần cải thiện & Lưu ý
+> - **Điều kiện chính quy (Regularity Conditions)**: Khi bạn hoán đổi vị trí giữa phép lấy đạo hàm $\frac{\partial}{\partial \theta}$ và tích phân $\int f(x|\theta)dx$, hãy ghi chú thêm là bước này yêu cầu các điều kiện chính quy của họ phân phối (miền giá trị của $X$ không phụ thuộc vào $\theta$).
+> - **Giả định i.i.d**: Khi viết $I_n(\theta_0) = n I_1(\theta_0)$ và áp dụng CLT, cần nêu rõ giả định mẫu ngẫu nhiên độc lập cùng phân phối (i.i.d).
+>
+> ### Gợi ý nâng cao
+> - Hãy kết nối trực giác hình học: Hàm Score là độ dốc (slope) của hàm log-likelihood. Tại sao ta chỉ cần đánh giá độ dốc này tại $\theta_0$? Điều này tạo nên lợi thế vượt trội gì về mặt tính toán của Score Test so với Wald Test hay Likelihood Ratio Test?
+>
+> **⭐ Bonus points**
+> - Tự chứng minh trọn vẹn sự hội tụ phân phối chuẩn của Score test thông qua định lý giới hạn trung tâm (CLT) mà sách đã lược bỏ.
+> - Chứng minh chặt chẽ tính chất $E[Y_i] = 0$ và $\text{Var}(Y_i) = I_1(\theta_0)$ bằng định nghĩa tích phân và LOTUS.
 
 **🔗 See also:** [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr)
 
@@ -3169,9 +3214,26 @@
 > và kết quả này giống y như 10.3.4 nơi mà đã nói cái cách thứ hai đó chính là Score test
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú xuất sắc, thể hiện sự hiểu biết sâu sắc về bản chất lý thuyết Score test và các bước biến đổi đại số hoàn toàn chính xác.
+> ### Điểm mạnh
+> - **Hiểu sâu về mặt khái niệm:** Bạn giải thích rất sáng tạo và chính xác về vai trò của biến/tham số trong hàm Score $S(\theta)$ thông qua góc nhìn hàm lập trình, giúp tránh nhầm lẫn giữa tham số thực $\theta$ và biến hình thức $\omega$.
+> - **Chứng minh nền tảng toán học:** Việc tự chứng minh $E_\theta[S(\theta)] = 0$ bằng quy tắc hoán đổi tích phân và đạo hàm là một điểm cộng lớn, chứng minh bạn nắm chắc điều kiện chính quy (regularity conditions).
+> - **Khai triển đại số chi tiết:** Các bước đạo hàm hàm log-likelihood của phân phối Bernoulli và biến đổi để đưa về dạng $S(p) = \frac{\hat{p}_n - p}{p(1-p)/n}$ rất cẩn thận, tường minh và chính xác.
+> - **Tính toán kiểm định hoàn chỉnh:** Rút gọn đại số tỷ số $Z_S = \frac{S(p_0)}{\sqrt{I_n(p_0)}}$ thành công thức kinh điển của kiểm định tỉ lệ rất mượt mà.
+>
+> ### Điểm cần lưu ý / Cải thiện
+> - Trong đoạn rút gọn cuối: `Z_S = {(p̂n - p0) / [p0(1-p0)/n]} / √n/[p0(1-p0)]`, chú ý đặt đúng ngoặc căn thức cho mẫu số: $\sqrt{I_n(p_0)} = \sqrt{\frac{n}{p_0(1-p_0)}}$ để tránh hiểu nhầm khi đọc nhanh.
+> - Khi hoán đổi dấu đạo hàm và tích phân $\int \frac{\partial}{\partial \theta} f = \frac{\partial}{\partial \theta} \int f$, trên lý thuyết cần nhắc thêm giả định mô hình thỏa mãn các điều kiện chính quy (regularity conditions - hỗ trợ của $X$ không phụ thuộc vào $\theta$).
+>
+> ### Gợi ý mở rộng
+> - Thử tính phương sai $Var_\theta(S(\theta))$ để tự nghiệm lại định lý quan trọng: $Var_\theta(S(\theta)) = I_n(\theta)$, từ đó hiểu rõ vì sao việc chia cho $\sqrt{I_n(p_0)}$ lại chuẩn hóa $Z_S$ về phương sai bằng $1$.
+>
+> **⭐ Bonus points**
+> - Tự chứng minh tính chất kỳ vọng của hàm Score triệt tiêu: E_θ[S(θ)] = 0 bằng cách hoán đổi đạo hàm và tích phân.
+> - Giải thích trực quan và chính xác về mặt toán học vai trò của tham số như một đối số hàm lập trình (dummy variable).
+> - Nêu rõ quy tắc bác bỏ giả thuyết H0 và tính hội tụ tiệm cận phân phối chuẩn Z_S → N(0,1).
 
 **🔗 See also:** [Large-Sample Binomial Tests](#node-8xsav7v)
 
@@ -3276,7 +3338,7 @@
 >
 >
 >
-> Đặt ψ(xi - w) là ρ'(xi - w). 
+> Đặt ψ(xi - w) là ρ'(xi - w).
 >
 >
 >
@@ -3335,7 +3397,7 @@
 >
 >
 >
-> √n(θ^\_M(𝐗) - θ) = - √n (1/n) \[Σi ψ(Xi - θ)\] / (1/n) \[Σi ψ'(Xi - θ)\]
+> √n(θ^\_M(𝐗) - θ) = - √n (1/n) \[Σi ψ(Xi - θ)\] / (1/n) \[Σi ψ'(Xi - θ)\] 
 >
 >
 >
@@ -3498,11 +3560,599 @@
 > ---
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú xuất sắc, thể hiện tư duy toán thống kê rất sâu sắc khi chủ động chứng minh lại phân phối tiệm cận của M-estimator và giải thích bản chất của generalized Wald test.
+> ### Điểm mạnh (Strengths)
+> - **Tư duy toán học rất chặt chẽ và sâu sắc:** Bạn không chỉ đọc công thức trong sách mà còn tự mình tái hiện lại toàn bộ quá trình chứng minh phân phối tiệm cận của M-estimator thông qua khai triển Taylor bậc nhất, Luật số lớn (LLN), Định lý giới hạn trung tâm (CLT) và Định lý Slutsky.
+> - **Trực quan hóa và hệ thống hóa kiến thức tốt:** Việc liên hệ M-estimator từ bài toán tối ưu với sample mean (chuẩn $L_2$), sample median (chuẩn $L_1$) và Huber estimator giúp bạn hiểu rõ bản chất thống kê bền vững (robust statistics).
+> - **Kết nối chính xác với sách:** Bạn đã suy luận chính xác dạng phương sai tiệm cận $\text{Var}_{\theta_0}(\hat{\theta}_M)$ cũng như công thức ước lượng plug-in ở công thức (10.3.6) trong bài đọc.
+>
+> ### Điểm cần cải thiện (Areas for Improvement)
+> - **Quy tắc đạo hàm hợp (Chain Rule):** Khi đạo hàm theo $w$ biểu thức $\sum_i \rho(x_i - w)$, đạo hàm của $\rho(x_i - w)$ theo $w$ thực chất là $-\psi(x_i - w)$ do dấu âm trước $w$. Tương tự, đạo hàm của $\psi(x_i - w)$ theo $w$ sẽ là $-\psi'(x_i - w)$. Do hai dấu trừ triệt tiêu lẫn nhau và mẫu số sau này được bình phương nên kết quả phương sai tiệm cận không bị ảnh hưởng, nhưng bạn nên chú ý tính chính xác về mặt giải tích.
+> - **Lỗi chính tả thuật ngữ:** Bạn viết nhầm tên định lý *Slutsky* thành *Sluky*.
+> - **Generalized Score statistic ($Z_{GS}$):** Bạn mới tập trung giải thích kiểm định Wald ($Z_{GW}$). Chú ý rằng sách còn đề cập $Z_{GS}$, trong đó mẫu số dùng trực tiếp $\text{Var}_{\theta_0}(\hat{\theta}_M)$ được tính tại giá trị giả thuyết không $\theta_0$ chứ không cần ước lượng $\widehat{\text{Var}}$.
+>
+> ### Gợi ý nâng cao (Suggestions)
+> - Hãy thử đối chiếu thêm: Tại sao khi áp dụng công thức này cho MLE (tức $\rho(x) = -\log f(x)$), đại lượng $\text{Var}_{\theta_0}(\hat{\theta}_M)$ lại suy biến về nghịch đảo của thông tin Fisher $1/I(\theta_0)$ nhờ đồng nhất thức Bartlett (Bartlett's identity)?
+>
+> **⭐ Bonus points**
+> - Tự suy diễn và chứng minh phân phối chuẩn tiệm cận của M-estimator bằng khai triển Taylor, CLT, LLN và định lý Slutsky.
+> - Kết nối M-estimator với các trường hợp đặc biệt như sample mean (bình phương cực tiểu), sample median (độ lệch tuyệt đối) và hàm mất mát kết hợp Huber.
+> - Sử dụng đại số tuyến tính dạng vector để chứng minh sample mean là nghiệm bài toán tối ưu OLS.
 
 **🔗 See also:** [Section 10.2.2 M-Estimators](./102_robustness.md#node-wq8irqn) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s)
+
+<br>
+
+<a id="node-sza0hhp"></a>
+
+###### Tests Based on Huber Estimator
+
+<p align="center"><kbd><img src="assets/zalet2qjr57.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Active recall nhanh:
+>
+>
+>
+> Với M-estimator của θ, kí hiệu θM thì theo định nghĩa nó là nghiệm của d/dw \[Σi ρ(Xi - θM)\] = 0.
+>
+>
+>
+> ⇔ Σi \[d/dw ρ(Xi - w)\] = 0
+>
+>
+>
+> ⇔ Σi \[d/d(Xi - w) ρ(Xi - w) . d/dw (Xi - w)\] = 0 (chain rule)
+>
+>
+>
+> ⇔ Σi \[ρ'(Xi - w) . (-1)\] = 0
+>
+>
+>
+> ⇔ - Σi \[ρ'(Xi - w)\] = 0
+>
+>
+>
+> ⇔ - Σi \[ψ(Xi - w)\] = 0 (ψ = ρ')
+>
+>
+>
+> Vậy - Σi \[ψ(Xi - w)\] | w=θM = 0
+>
+>
+>
+> ⇔ - Σi \[ψ(Xi - θM)\] = 0 (1)
+>
+>
+>
+> ---
+>
+>
+>
+> Xét hàm Σi \[ψ(Xi - w)\], xấp xỉ bậc nhất tại θ (true param)
+>
+>
+>
+> Σi \[ψ(Xi - w)\] ≈ Σi \[ψ(Xi - θ)\] + \[d/dw Σi \[ψ(Xi - w)\]\]|w=θ (w-θ)
+>
+>
+>
+> = Σi \[ψ(Xi - θ)\] + \[Σi d/dw \[ψ(Xi - w)\]\]|w=θ (w-θ)
+>
+>
+>
+> = Σi \[ψ(Xi - θ)\] - \[Σi \[ψ'(Xi - w)\]|w=θ (w-θ)
+>
+>
+>
+> = Σi \[ψ(Xi - θ)\] - \[Σi \[ψ'(Xi - θ)\] (w-θ)
+>
+>
+>
+> Evaluate hai vế tại w = θM
+>
+>
+>
+> Σi \[ψ(Xi - w)\] |w=θM ≈ Σi ψ(Xi - θ) - \[Σi \[ψ'(Xi - θ)\] (w-θ)\] |w=θM
+>
+>
+>
+> ⇔ Σi \[ψ(Xi - θM)\] ≈ Σi ψ(Xi - θ) - \[Σi \[ψ'(Xi - θ)\] (θM-θ)\]
+>
+>
+>
+> ⇔ 0 ≈ Σi ψ(Xi - θ) - Σi \[ψ'(Xi - θ)\] (θM-θ)
+>
+>
+>
+> ⇔ Σi ψ(Xi - θ) = Σi \[ψ'(Xi - θ)\] (θM-θ)
+>
+>
+>
+> ⇔ θM-θ = Σi ψ(Xi - θ) / Σi \[ψ'(Xi - θ)\]
+>
+>
+>
+> ⇔ √n(θM-θ) = √n (1/n)Σi ψ(Xi - θ) / (1/n) Σi \[ψ'(Xi - θ)\]
+>
+>
+>
+> Xét tử số √n (1/n)Σi ψ(Xi - θ). Đặt Ui = ψ(Xi - θ), thì cái ta có là √n Ū
+>
+>
+>
+> Giả định E\[Ui\] = 0, Var\[Ui\] = E\[Ui²\] = E\[(ψ(Xi - θ))²\].
+>
+>
+>
+> Ta có (√n Ū - 0) / √E\[(ψ(Xi - θ))²\] → (d) n(0,1) theo CLT
+>
+>
+>
+> ⇔ (√n Ū) / √E\[(ψ(Xi - θ))²\] → (d) n(0,1)
+>
+>
+>
+> ⇔ (√n Ū) → (d) n(0, E\[(ψ(Xi - θ))²)
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> Xét mẫu số: (1/n) Σi \[ψ'(Xi - θ)\], đặt Vi = ψ'(Xi - θ) thì đây là V̄, theo LLN, sẽ →ᵖ E\[Vi\]
+>
+>
+>
+> Vậy theo Slusky: (√n Ū) / V̄ → (d) n(0, E\[(ψ(Xi - θ))²) / E\[Vi\]
+>
+>
+>
+> ⇔ (√n Ū) / V̄ → (d) n(0, E\[(ψ(Xi - θ))² / (E\[ψ'(Xi - θ)\])²)
+>
+>
+>
+> Như vậy vế trái √n(θM-θ) cũng → (d) n(0, E\[(ψ(Xi - θ))² / (E\[ψ'(Xi - θ)\])²)
+>
+>
+>
+> Cũng là √n(θM-θ) / √\[E\[(ψ(Xi - θ))² / (E\[ψ'(Xi - θ)\])²)\] → (d) n(0,1)
+>
+>
+>
+> Và điều này đồng nghĩa: Avar(θM) = E\[(ψ(Xi - θ))² / (E\[ψ'(Xi - θ)\])²
+>
+>
+>
+> Khi n lớn Var(√n(θM-θ)) ≈ E\[(ψ(Xi - θ))² / (E\[ψ'(Xi - θ)\])²
+>
+>
+>
+> ⇔ Var(θM) ≈ E\[(ψ(Xi - θ))² / n(E\[ψ'(Xi - θ)\])²
+>
+>
+>
+> Do đó nếu ta có Sn là consistent estimator của σn = √Var(θM), thì:
+>
+>
+>
+> (θM - θ)/Sn = \[(θM - θ)/σn\] (σn/Sn) → n(0,1) × 1 = n(0,1)
+>
+>
+>
+> Điều này biện minh cho việc dùng statistic (θM - θ)/ Sn
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy nhiệm vụ ở đây là: Tìm một estimate của √Var(θM)
+>
+>
+>
+> Trước tiên là derive công thức của Var(θM) đã:
+>
+>
+>
+> Var(θM) ≈ E\[(ψ(X - θ))²\] / n(E\[ψ'(X - θ)\])²
+>
+>
+>
+> Với Huber estimator, ρ(x) = {x²/2 khi |x| ≤ k và k|x| - (1/2)k² khi |x| ≥ k}
+>
+>
+>
+> E\[(ψ(X - θ))²\]
+>
+>
+>
+> Đặt Y = X - θ ⇒ E\[(ψ(X - θ))²\] = E\[ψ(Y)²\]
+>
+>
+>
+> Dĩ nhiên đây là expected value của random varialble có được bởi việc áp hàm ψ(y)² lên random variable Y, nên nếu gọi fY(y) là pdf của y, theo LOTUS, ta có:
+>
+>
+>
+> E\[ψ(Y)²\] = ∫(ψ(y))² fY(y)dy
+>
+>
+>
+> Với ρ(x) = {x²/2 khi |x| ≤ k và k|x| - (1/2)k² khi |x| ≥ k}
+>
+>
+>
+> ⇒ ψ(x) = {x khi |x| ≤ k và k sign(x) khi |x| ≥ k}
+>
+>
+>
+> (đạo hàm của |x| đối với x sẽ là +1 hoặc -1 tùy theo x ban đầu mang dấu gì, thì trong toán, ta có hàm sign(x), mang dấu +1 hoặc -1 tùy theo dấu của x.)
+>
+>
+>
+> ⇒ ψ(y) = {y khi |y| ≤ k và k sign(y) khi |y| ≥ k}
+>
+>
+>
+> Ta sẽ thay ψ(y) vào tích phân, nhưng trước đó, tách thành hai miền trước:
+>
+>
+>
+> E\[ψ(Y)²\] = ∫\_{|y| ≤ k}(ψ(y))² fY(y)dy + ∫\_{|y| &gt; k}(ψ(y))² fY(y)dy
+>
+>
+>
+> Thay ψ(y) tương ứng ở mỗi miền vào:
+>
+>
+>
+> ∫\_{|y| ≤ k} y² fY(y)dy + ∫\_{|y| &gt; k}(k sign(y))² fY(y)dy
+>
+>
+>
+> = ∫\_{|y| ≤ k} y² fY(y)dy + ∫\_{|y| &gt; k} k² \[sign(y)\]² fY(y)dy
+>
+>
+>
+> = ∫\_{|y| ≤ k} y² fY(y)dy + k² ∫\_{|y| &gt; k} fY(y)dy
+>
+>
+>
+> (Do \[sign(y)\]² = 1, và đưa k² ra ngoài)
+>
+>
+>
+> = ∫\_{|y| ≤ k} y² fY(y)dy + k² \[∫\_{y &gt; k} fY(y)dy + ∫\_{y &lt; -k} fY(y)dy
+>
+>
+>
+> = ∫\_{|y| ≤ k} y² fY(y)dy + k² \[P\_θ(Y &gt; k) + P\_θ(Y &lt; -k)\]
+>
+>
+>
+> = ∫\_{|y| ≤ k} y² fY(y)dy + k² P\_θ(|Y| &gt; k)
+>
+>
+>
+> Tới đây, để tính được cái này, ta sẽ phải đi tìm fY(y):
+>
+>
+>
+> Đề bài cho X có pdf fX(x|θ) = f(x-θ), dùng transformation để tìm pdf của Y
+>
+>
+>
+> Theo transformation theorem, pdf của Y và của X liên hệ với nhau như sau:
+>
+>
+>
+> fY(y) = fX(x) |dx/dy|
+>
+>
+>
+> y = x + θ ⇔ x = y + θ
+>
+>
+>
+> nên vế phải = fX(y+θ) |d/dy (y + θ)|
+>
+>
+>
+> = fX(y+θ) (do d/dy (y + θ) = 1)
+>
+>
+>
+> Vậy fY(y) = fX(y+θ), mà fX(x) = f(x - θ), nên fY(y) = fX(y+θ) = f(y+θ - θ) = f(y). Vậy pdf của Y, fY(y) = f(y) là hàm không còn phụ thuộc θ nữa.
+>
+>
+>
+> Nên E\[ψ(Y)²\]= ∫\_{|y| ≤ k} y² f(y)dy + k² P(|Y| ≥ k)
+>
+>
+>
+> Thay lại Y = X - θ, thay f(y) = f(x - θ), dy = dx
+>
+>
+>
+> E\[ψ(X - θ)²\]= ∫\_{|(x-θ)| ≤ k} (x-θ)² f(x - θ)dx + k² P(|X - θ| ≥ k) (2)
+>
+>
+>
+> Mà vì **pdf của Y không phụ thuộc θ**, nên cả vế phải hai trái đều hoàn toàn không phụ thuộc θ. Nên ta cho nó bằng bao nhiêu cũng được. Và ta sẽ cho nó bằng 0, đẳng thức trở thành
+>
+>
+>
+> E\[ψ(Y)²\] = E\[ψ(X - 0)²\] = E\[ψ(X)²\]
+>
+>
+>
+> = ∫\_{|x| ≤ k} x² f(x)dx + k² P_0(|X| ≥ k) (lúc này θ = 0, nên ta ghi P_0(|X| ≥ k))
+>
+>
+>
+> = ∫\_{-k ≤ x ≤ k} x² f(x)dx + k² P_0(|X| ≥ k)
+>
+>
+>
+> Đây chính là tử số của công thức 10.3.7
+>
+>
+>
+> ---
+>
+>
+>
+> Còn mẫu số n(E\[ψ'(X - θ)\])², tương tự, với Y = X - θ
+>
+>
+>
+> n(E\[ψ'(X - θ)\])² = n(E\[ψ'(Y)\])²
+>
+>
+>
+> (dùng LOTUS)
+>
+>
+>
+> = n \[∫ψ'(y)f(y)dy\]²
+>
+>
+>
+> Xét ψ(x) = {x khi |x| ≤ k và k sign(x) khi |x| ≥ k}
+>
+>
+>
+> nên ψ'(x) = {1 khi |x| ≤ k và 0 khi |x| ≥ k}
+>
+>
+>
+> Nên ở trên bằng tiếp:
+>
+>
+>
+> = n \[∫\_|y| ≤ k f(y)dy\]²
+>
+>
+>
+> = n (P(|Y| ≤ k)²
+>
+>
+>
+> = n (P(|X - θ| ≤ k)² 
+>
+>
+>
+> Vậy n(E\[ψ'(X - θ)\])² = n (P(|X - θ| ≤ k)² (3)
+>
+>
+>
+> Và again, pdf của Y không phụ thuộc θ, nên n (P(|X - θ| ≤ k)² cũng không phụ thuộc θ, nên ta có quyền chọn θ = 0, để cái này trở thành:
+>
+>
+>
+> n (P0(|X| ≤ k)²
+>
+>
+>
+> Từ đó ta có:
+>
+>
+>
+> Variance của θM với θ = 0:
+>
+>
+>
+> Var_0(θM)≈ \[∫\_{|x| ≤ k} x² f(x)dx + k² P0(|X| ≥ k)\] / n(P0(|X| ≤ k)² → 10.3.7
+>
+>
+>
+> ---
+>
+>
+>
+> Tuy nhiên, nếu ta ko biết pdf của X, thì cũng ko tể tính được cái tích phân này. Do đó, ta sẽ consistent estimate của Var_0(θM):
+>
+>
+>
+> Lôi ra lại công thức ban đầu: Var(θM) ≈ E\[(ψ(X - θ))²\] / n(E\[ψ'(X - θ)\])²
+>
+>
+>
+> và dùng lại kết quả (2) và (3) 
+>
+>
+>
+> E\[ψ(X - θ)²\] = ∫\_{|(x-θ)| ≤ k} (x-θ)² f(x - θ)dx + k² P(|X - θ| ≥ k) 
+>
+>
+>
+>  n(E\[ψ'(X - θ)\])² = n (P(|X - θ| ≤ k)² 
+>
+>
+>
+> Ta sẽ coi như x1,...xn là possible value của discrete uniform X. Có nghĩa là thay vì sự thật X là random varible mà ta ko biết distribution, ta sẽ xem nó là discrete uniform có các possible value = x1,...xn với xác suất bằng nhau = 1/n.
+>
+>
+>
+> Khi đó E\[ψ(X - θ)²\] tính bằng:
+>
+>
+>
+> ∫\_{|(x-θ)| ≤ k} (x-θ)² f(x - θ)dx sẽ thay bằng:
+>
+>
+>
+> Σ\_{xi: |xi-θ| ≤ k} (x-θ)² × (1/n)
+>
+>
+>
+> = Σi (x-θ)² × (1/n) × I\_{|xi-θ| ≤ k}
+>
+>
+>
+> = (1/n) Σi (x-θ)² × I\_{|xi-θ| ≤ k}
+>
+>
+>
+> Còn k² P(|X - θ| ≥ k) tính bằng:
+>
+>
+>
+> k² P(|X - θ| ≥ k) = k² \[P(X - θ ≥ k) + P(X - θ ≤ -k)\]
+>
+>
+>
+> = k² \[∪i P({X=xi | xi - θ ≥ k}) + ∪i P({X=xi: xi - θ ≤ -k}\]
+>
+>
+>
+> = k² \[∪i P({X=xi | |xi| - θ ≥ k})
+>
+>
+>
+> = k² \[Σi (1/n) × I\_{|xi| - θ ≥ k})
+>
+>
+>
+> = k² ((1/n) Σi I\_{|xi| - θ ≥ k})
+>
+>
+>
+> Vậy tử số trở thành (estimate):
+>
+>
+>
+> (1/n) Σi (x-θ)² × I\_{|xi-θ| ≤ k} + k² ((1/n) Σi I\_{|xi| - θ ≥ k})
+>
+>
+>
+> Còn mẫu số: n (P(|X - θ| ≤ k)² :
+>
+>
+>
+> Xét P(|X - θ| ≤ k) = Σ\_{xi:|xi-θ|≤k} P(X=xi)
+>
+>
+>
+> = Σ\_{xi:|xi-θ|≤k} (1/n)
+>
+>
+>
+> = (1/n) Σ\_{xi:|xi-θ|≤k} 
+>
+>
+>
+> = (1/n) Σi I\_{|xi-θ|≤k} 
+>
+>
+>
+> Nên n (P(|X - θ| ≤ k)² = n ((1/n) Σi I\_{|xi-θ|≤k} )²
+>
+>
+>
+> = (1/n) \[Σi I\_{|xi-θ|≤k} \]²
+>
+>
+>
+> ---
+>
+>
+>
+> Và động tác cuối cùng là: Thay θ bởi θM:
+>
+>
+>
+> (1/n) Σi (x-θM)² × I\_{|xi-θM| ≤ k} + k² ((1/n) Σi I\_{|xi| - θM ≥ k}) chia (1/n) \[Σi I\_{|X - θM| ≤ k}\]² 
+>
+>
+>
+> Chỗ này hình như sách Casella viết sai, vì tự nhiên lại ghi mẫu số của 10.3.8 là 1 - (1/n) \[Σi I\_{|X - θM| ≤ k}\]²
+>
+>
+>
+> Nói chung, động tác estimate cho Var(θM) ở đây là coi X có discrete uniform có các possible value x1,...xn. Và thay θ (giá trị thật) bởi giá trị estimate θM.
+>
+>
+>
+> ---
+>
+>
+>
+> Trong sách cũng nói một công thức đơn giản hơn nữa để estimate cho Var(θM)
+>
+>
+>
+> đó là dùng công thức của Variance của sample mean, và thay θM thế chỗ cho θ:
+>
+>
+>
+> Var^\_3(θM) = (1/n) Σi (xi - θM)².
+>
+>
+>
+> ---
+>
+>
+>
+> (Tiếp sau)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
+>
+> Bản ghi chép xuất sắc, tái hiện mạch lạc toàn bộ quá trình khai triển Taylor dẫn đến phân phối tiệm cận của M-estimator và tính toán tiệm cận phương sai cho Huber estimator. Người học đặc biệt tinh ý khi phát hiện ra điểm bất hợp lý (lỗi in ấn quen thuộc) ở mẫu số công thức (10.3.8) trong sách giáo khoa.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"y = x + θ ⇔ x = y + θ"*
+>
+> Lỗi gõ nhầm (typo) nhỏ: ở dòng trên đặt Y = X - θ nhưng dòng dưới lại viết nhầm thành y = x + θ. Tuy nhiên biểu thức chuyển đổi x = y + θ và đạo hàm ngay sau đó vẫn hoàn toàn chính xác.
+>
+> **2.** *"k² [∪i P({X=xi | xi - θ ≥ k}) + ∪i P({X=xi: xi - θ ≤ -k}]"*
+>
+> Ký hiệu phép hợp (∪) đặt trong xác suất chưa chuẩn xác về mặt hình thức (thực chất đang lấy tổng xác suất rời rạc theo empirical distribution).
+>
+> **3.** *"Avar(θM) = E[(ψ(Xi - θ))² / (E[ψ'(Xi - θ)])²"*
+>
+> Quy ước chuẩn trong thống kê: phương sai tiệm cận (Asymptotic Variance) là giới hạn phương sai của đại lượng chuẩn hóa √n(θM - θ). Đại lượng Var(θM) thực tế xấp xỉ Avar/n.
+>
+>
+> **✓ Strengths**
+> - Khai triển Taylor bậc nhất cho phương trình ước lượng ψ để tìm phân phối tiệm cận qua CLT và định lý Slutsky rất rõ ràng và chuẩn xác.
+> - Sử dụng định lý LOTUS và biến đổi biến ngẫu nhiên để chỉ ra tích phân không phụ thuộc vào tham số θ một cách chặt chẽ.
+> - Rất nhạy bén khi đối chiếu giữa lý thuyết và công thức (10.3.8) trong sách để phát hiện ra lỗi đánh máy của tác giả (viết nhầm 1 - P(|X| < k) thay vì P(|X| <= k) hoặc 1 - P(|X| > k)).
+>
+> **💡 Deeper notes**
+> - Hàm ψ của Huber không khả vi tại 2 điểm x = ±k; trong lý thuyết M-estimator chuẩn, điều kiện kỳ vọng E[ψ'(X - θ)] được hiểu dưới dạng đạo hàm yếu hoặc hoán đổi đạo hàm tích phân theo phân phối liên tục của X.
+
+**🔗 See also:** [Example 10.2.5 Huber Estimator](./102_robustness.md#node-xv75rqm) · [Section 10.2.2 M-Estimators](./102_robustness.md#node-wq8irqn)
 
 <br>
 
