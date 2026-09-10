@@ -155,7 +155,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Bài viết rất chi tiết và giải thích cực kỳ rõ ràng các bước biến đổi tuyến tính cũng như giải tích đạo hàm mà sách giáo khoa bỏ qua. Tuy nhiên, có một lỗi gõ nhỏ ở bước trung gian khi ghi nhầm đạo hàm của $-\frac{\alpha}{2}\mathbf{m}_N^T\mathbf{m}_N$ thành $-\frac{\alpha}{2}\mathbf{m}_N^T\mathbf{m}_N$ thay vì $-\frac{1}{2}\mathbf{m}_N^T\mathbf{m}_N$, mặc dù dòng sau vẫn biến đổi đúng.
+Bài viết rất chi tiết và giải thích cực kỳ rõ ràng các bước biến đổi tuyến tính cũng như giải tích đạo hàm mà sách giáo khoa bỏ qua. Tuy nhiên, có một lỗi gõ nhỏ ở bước trung gian khi ghi nhầm đạo hàm của $-\frac{\alpha}{2}\mathbf{m}_N^T\mathbf{m}_N$ thành $-\frac{\alpha}{2}\mathbf{m}_N^T\mathbf{m}_N$ thay vì $-\frac{1}{2}\mathbf{m}_N^T\mathbf{m}_N$, mặc dù dòng sau vẫn biến đổi đúng.
 
 </details>
 
@@ -205,7 +205,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **92/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú rất tốt, tóm tắt chính xác quy trình lặp và cách tính tối ưu trị riêng của ma trận hệ số. Điểm cần làm rõ thêm là phương pháp Maximum Likelihood cần tập dữ liệu độc lập (validation set) để chọn siêu tham số tránh overfit, trong khi phương pháp Bayes có thể tối ưu hóa độ phức tạp trực tiếp trên training data thông qua marginal likelihood.
+Ghi chú rất tốt, tóm tắt chính xác quy trình lặp và cách tính tối ưu trị riêng của ma trận hệ số. Điểm cần làm rõ thêm là phương pháp Maximum Likelihood cần tập dữ liệu độc lập (validation set) để chọn siêu tham số tránh overfit, trong khi phương pháp Bayes có thể tối ưu hóa độ phức tạp trực tiếp trên training data thông qua marginal likelihood.
 
 </details>
 
@@ -339,7 +339,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Bản ghi chép cực kỳ chi tiết, chính xác và rõ ràng, đặc biệt là phần giải thích cặn kẽ tại sao $d\lambda_i/d\beta = \lambda_i/\beta$. Các bước biến đổi đại số để đi đến công thức (3.94) và (3.95) đều rất mạch lạc và hoàn hảo.
+Bản ghi chép cực kỳ chi tiết, chính xác và rõ ràng, đặc biệt là phần giải thích cặn kẽ tại sao $d\lambda_i/d\beta = \lambda_i/\beta$. Các bước biến đổi đại số để đi đến công thức (3.94) và (3.95) đều rất mạch lạc và hoàn hảo.
 
 </details>
 
