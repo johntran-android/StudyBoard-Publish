@@ -82,12 +82,11 @@
 >
 > Khúc dưới có nói về một dạng đặc biệt của identity này.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Bài phân tích rất chính xác, bạn đã nắm vững cả công thức và lý do sâu xa đằng sau lợi ích tính toán của vế phải. Việc giải thích chi tiết về kích thước ma trận và độ phức tạp O(D^3) đã thể hiện sự hiểu biết sâu sắc.
-
-</details>
 
 <br>
 
@@ -112,12 +111,11 @@ Bài phân tích rất chính xác, bạn đã nắm vững cả công thức v�
 >
 > Độc lập tuyến tính thì dễ. Theo cái định nghĩa hiểu nôm na là cứ một cái vector, ví dụ như một cái bộ vector mà không có vector nào có thể được tạo ra bởi mấy thằng khác thì nó là một bộ vector độc lập tuyến tính. Còn định nghĩa chính thức thì một cái bộ vector mà cái tổ hợp tuyến tính duy nhất của chúng để tạo ra vector zero thì chỉ có thể là một cái tổ hợp tuyến tính với bộ hệ số là tất cả đều bằng 0. Tổ hợp tuyến tính thì có nghĩa là gì? Tổ hợp tuyến tính là một cái tổng thôi. Tổng tất cả các vector và mỗi vector được nhân với một cái hệ số, một cái trọng số, một cái hệ số. Như vậy thì với những cái bộ hệ số khác nhau thì mình sẽ có những cái tổ hợp tuyến tính khác nhau. Vậy thì nếu như mà một cái bộ vector mà mình muốn tạo ra vector zero chỉ có một cách là dùng các cái hệ số bằng 0 để tổ hợp tụi nó thì đó là một cái bộ độc lập tuyến tính. Thì đó là định nghĩa chính thức của độc lập tuyến tính nhưng mà hiểu một cách nôm na thì độc lập tuyến tính thì có nghĩa là một cái bộ vector mà không có cái vector nào trong đó được tạo ra bởi cách kết hợp những cái vector còn lại.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Ghi chú của bạn giải thích rất tốt về công dụng thực tế của Woodbury identity và khái niệm độc lập tuyến tính một cách rõ ràng, dễ hiểu. Để hoàn thiện hơn, bạn có thể bổ sung định nghĩa cụ thể về hạng của ma trận (rank) được đề cập trong bài.
-
-</details>
 
 <br>
 
@@ -138,12 +136,11 @@ Ghi chú của bạn giải thích rất tốt về công dụng thực tế c�
 > \
 > Còn tiếp theo là nói về định thức. Thì giáo sư nhắc sơ về một cái công thức tính định thức là mình liên tưởng tới một cái bài trong MIT 1806 đã học. Đó là cái cofactor formula, công thức cofactor. Mà theo cái công thức đó, giả sử mình gặp một cái ma trận A mình muốn tính định thức thì mình sẽ làm như sau, mình sẽ chọn ra một hàng hoặc là một cột bất kỳ. Giả sử mình chọn cái hàng đầu tiên. Vậy thì mình sẽ làm như sau, mình sẽ lấy một cái phần tử. Lần lượt mình lấy một cái phần tử của cái hàng đó và mình mới nhân nó với định thức của cái ma trận nhỏ hơn. Mà cái ma trận đó được hình thành bằng cách là loại bỏ cái hàng và cái cột của mà chứa cái phần tử mình đang xét, giả sử mình đang xét cái phần tử A11. Vậy thì mình bỏ cái cột 1 và hàng 1 thì mình sẽ có một cái ma trận nhỏ hơn, mình sẽ tính định thức của ma trận đó. Rồi mình lấy cái định thức của ma trận đó mình nhân với A11. Đồng thời nhân 1 hoặc là -1 tùy vào việc là tổng của hai index của cái phần tử A11 là chẵn hay lẻ. Trong trường hợp này nó là số chẵn cho nên mình sẽ nhân với 1. Còn nếu là số lẻ thì mình sẽ nhân với -1. Như vậy có nghĩa là mình sẽ lấy A11, mình nhân với định thức của cái ma trận nhỏ hơn được tạo thành bằng cách loại bỏ hàng 1 cột 1. Xong, mình mới cộng tiếp cho cái phần tử A12 nhân với cái định thức của một cái ma trận nhỏ hơn bằng cách bỏ đi hàng 1 cột 2 và nhân với -1. Vì lần này ta có cái tổng hệ số của cái A12 là bằng 3 là số lẻ. Cứ thế cho đến hết các phần tử của cái hàng 1 của ma trận A. Thì đó mình sẽ có được là cái cách tính định thức của ma trận A theo cái cofactor formula. Thì nếu mình tiếp tục tính định thức của mấy cái ma trận nhỏ hơn theo cái kiểu đó thì mình sẽ ra được cái công thức C10 nói ở trong sách Bishop.
 
-<details>
-<summary>🤖 AI Check — 🟡 Minor issues — ❌ **65/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟡 Minor issues — ❌ **65/100** · ✓ Move on
 
 Phần giải thích về "Trace" rất rõ ràng và chính xác. Tuy nhiên, bạn đã nhầm lẫn công thức C.10 được định nghĩa trong văn bản (dựa trên hoán vị) với công thức khai triển cofactor; chúng là hai khái niệm khác nhau, mặc dù cả hai đều dùng để tính định thức.
-
-</details>
 
 <br>
 
@@ -182,12 +179,11 @@ Phần giải thích về "Trace" rất rõ ràng và chính xác. Tuy nhiên, b
 >
 > Vậy thì cái việc mà mình nhớ cái identity này là chỉ để dùng khi mà mình gặp những cái phép tính mà mình có thể dùng những cái identity này để tính một cách rẻ hơn.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Phân tích của bạn rất sâu sắc và chính xác. Đặc biệt, cách bạn giải thích công thức C.13 dựa trên trị riêng và làm rõ lợi ích tính toán của C.14 và C.15 dựa trên kích thước ma trận là rất ấn tượng, vượt xa nội dung trực tiếp có trong hình ảnh.
-
-</details>
 
 <br>
 
@@ -224,12 +220,11 @@ Phân tích của bạn rất sâu sắc và chính xác. Đặc biệt, cách b
 >
 > Còn trường hợp ta có vector → vector function 𝐛 → 𝐚. Thì đạo hàm của 𝐚 đối với 𝐛, sẽ là matrix mà hàng i sẽ là gradienet vector của ai đối với vector 𝐛: (∂a/∂b)ij = ∂ai/∂bj và matrix này gọi là Jacobian
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Bạn đã giải thích chính xác và đầy đủ các khái niệm đạo hàm vector và ma trận được trình bày trong hình ảnh, đồng thời bổ sung các thuật ngữ quan trọng như gradient và Jacobian. Để bài viết khách quan hơn, bạn nên tránh những nhận xét mang tính cá nhân ngay từ đầu.
-
-</details>
 
 <br>
 
@@ -280,12 +275,11 @@ Bạn đã giải thích chính xác và đầy đủ các khái niệm đạo h
 >
 > → đây chính là product rule
 
-<details>
-<summary>🤖 AI Check — 🟡 Minor issues — ❌ **65/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟡 Minor issues — ❌ **65/100** · ✓ Move on
 
 Bạn đã giải thích rất chi tiết và chính xác công thức (C.19) bằng phương pháp vi phân, thể hiện sự hiểu biết sâu sắc về đạo hàm của hàm vô hướng theo vector và khái niệm gradient. Tuy nhiên, công thức (C.20) và cách chứng minh bằng quy tắc tích cho hàm vô hướng f(uv) chưa chính xác cho đạo hàm của tích ma trận theo vector; bạn cần xem xét kỹ hơn định nghĩa của đạo hàm tensor khi các ma trận phụ thuộc vào vector x.
-
-</details>
 
 <br>
 
@@ -358,12 +352,11 @@ Bạn đã giải thích rất chi tiết và chính xác công thức (C.19) b�
 >
 > Từ đó có thể kết luận, matrix partial derivative của A⁻¹ đối với x chính là -A⁻¹ (∂A/∂x) A⁻¹
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Bài giải thích rất rõ ràng, logic và chính xác từng bước một trong việc suy ra công thức C.21. Cách tiếp cận bằng vi phân và chuỗi quy tắc được trình bày rất sâu sắc và dễ hiểu.
-
-</details>
 
 <br>
 
@@ -606,12 +599,11 @@ Bài giải thích rất rõ ràng, logic và chính xác từng bước một t
 >
 > hay ∂/∂x ln |A|) chính là tr(A⁻¹ (∂A/∂x)). Đây chính là công thức C.22
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Bản ghi chú cung cấp một phân tích rất chi tiết và sâu sắc để chứng minh công thức C.22, thể hiện sự hiểu biết vững chắc về giá trị riêng, định thức và vi phân ma trận. Cách tiếp cận từng bước, từ đạo hàm của det(A) đến log(det(A)), rất rõ ràng và logic, tuy nhiên có một vài lỗi nhỏ trong việc khai triển ví dụ và việc gán [λ^(n-2)] cho tr(M) là không chính xác.
-
-</details>
 
 <br>
 
@@ -684,12 +676,11 @@ Bản ghi chú cung cấp một phân tích rất chi tiết và sâu sắc đ�
 >
 > Và ta có công thức ∂/∂Aij \[tr(AB)\] = Bji → chính là công thức C.23
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Phân tích của bạn rất kỹ lưỡng và chính xác, sử dụng phương pháp vi phân để dẫn xuất các công thức C.23 và C.24 một cách hoàn hảo. Các bước giải thích rõ ràng từ tính chất tuyến tính, tính chất cyclic của trace đến việc liên hệ đạo hàm ma trận với các phần tử của nó.
-
-</details>
 
 **🔗 See also:** [Least Squares Discriminant Function](./413_least_squares_for_classification.md#node-uez5xzu)
 
@@ -796,12 +787,11 @@ Phân tích của bạn rất kỹ lưỡng và chính xác, sử dụng phươn
 >
 > ⇨ đạo hàm của tr(ABAᵀ) wrt A là A(Bᵀ+B)
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **90/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 
 Bạn đã chứng minh các đạo hàm ma trận C.25, C.26 và C.27 một cách chính xác và chi tiết, thể hiện sự hiểu biết sâu sắc về vi phân ma trận và các tính chất của vết ma trận. Tuy nhiên, việc sử dụng ký hiệu cho tích vô hướng giữa các ma trận (ví dụ: "B . dA" hoặc "(dA)T . (BAT)") chưa hoàn toàn chuẩn và có thể gây nhầm lẫn; bạn nên làm rõ định nghĩa tích vô hướng được sử dụng.
-
-</details>
 
 **🔗 See also:** [Least Squares Discriminant Function](./413_least_squares_for_classification.md#node-uez5xzu)
 
@@ -856,12 +846,11 @@ Bạn đã chứng minh các đạo hàm ma trận C.25, C.26 và C.27 một cá
 >
 > Cuối cùng, mình cũng đã biết rank matrix chính là số eigenvalue khác 0. Vì sao? Vì một eigenvalue bằng 0 sẽ ứng với một eigenvector (khác 0) bị biến thành 0 bởi matrix A: Au = 0, cũng chính là một nullspace vector. Nên nếu có k eigenvalue = 0, thì ta sẽ có k vector khác 0, tạo thành k basis của nullspace thì rank = n - k cũng chính là số eigenvector khác 0 còn lại.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **92/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 
 Ghi chú đã thể hiện sự hiểu biết sâu sắc về các khái niệm, đặc biệt là khi giải thích nguồn gốc của phương trình đặc trưng và mối liên hệ giữa hạng của ma trận với trị riêng. Để hoàn thiện hơn, bạn có thể làm rõ hơn lập luận dẫn đến điều kiện det(A - λI) = 0 để tránh nhầm lẫn giữa trị riêng của A và trị riêng của (A - λI).
-
-</details>
 
 <br>
 
@@ -946,8 +935,9 @@ Ghi chú đã thể hiện sự hiểu biết sâu sắc về các khái niệm,
 >
 > Ngoài ra thì như mình còn nhớ trong MIT 1806 đã học với matrix đối xứng thì ta luôn có đủ n eigenvector độc lập, để có thể tách thành Q Λ Qᵀ, với Q là các orthogonal eigenvector, Λ là diagonal matrix các eigenvalue.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ⚠️ **85/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ⚠️ **85/100** · ✓ Move on
 
 Bạn đã nắm bắt rất tốt các ý chính từ tài liệu tham khảo và cung cấp một phân tích chi tiết, thể hiện sự hiểu biết sâu sắc về các ma trận đối xứng và tính chất của chúng. Tuy nhiên, có một lỗi nhỏ trong phần nhắc lại về số phức liên hợp cần được điều chỉnh.
 
@@ -975,8 +965,6 @@ Bạn đã nắm bắt rất tốt các ý chính từ tài liệu tham khảo v
 > [!TIP]
 > - Đề cập đến khóa học MIT 18.06 như một nguồn kiến thức trước đó về các tính chất của ma trận đối xứng.
 > - Nhắc lại Định lý Phổ cho ma trận đối xứng, cụ thể là việc có đủ n eigenvector độc lập và có thể phân tích thành QΛQ^T với Q là các eigenvector trực giao và Λ là ma trận đường chéo chứa các eigenvalue.
-
-</details>
 
 <br>
 
@@ -1069,12 +1057,11 @@ Bạn đã nắm bắt rất tốt các ý chính từ tài liệu tham khảo v
 >
 > kết quả này suy ra α ui + β uj cũng là eigenvector với cùng eigenvalue λ
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Bài giải thích chi tiết và chính xác từng bước chứng minh tính trực giao của eigenvector. Bạn có thể làm rõ hơn cách "chọn" các eigenvector trực giao trong trường hợp giá trị riêng trùng lặp để hoàn thiện hơn.
-
-</details>
 
 <br>
 
@@ -1103,12 +1090,11 @@ Bài giải thích chi tiết và chính xác từng bước chứng minh tính 
 >
 > Cuối cùng, vì UᵀU = UUᵀ = I ⇨ det (Uᵀ U) = det(I) = 1 ⇔ det(Uᵀ) det(U) = 1 ⇔ \[det(U)\]² = 1 (vì det(U) = det(Uᵀ)) ⇨ det(U) = +/- 1.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú này rất chính xác và sâu sắc, không chỉ nắm bắt được các ý chính từ văn bản mà còn mở rộng và làm rõ thêm các khái niệm quan trọng, như yêu cầu ma trận vuông cho định nghĩa "ma trận trực giao" và việc dẫn ra det(U) = ±1. Điều này cho thấy sự hiểu biết vững chắc về chủ đề.
-
-</details>
 
 <br>
 
@@ -1185,12 +1171,11 @@ Ghi chú này rất chính xác và sâu sắc, không chỉ nắm bắt đượ
 >
 > Vậy qua phép biến đổi U, giữ nguyên góc (x,y)
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Phần giải thích về phương trình C.38 rất sâu sắc, thể hiện sự hiểu biết vững chắc về bản chất của ma trận chéo hóa và phân tích phổ. Các chứng minh về bảo toàn độ dài và góc khi biến đổi qua ma trận trực giao cũng rất rõ ràng và chính xác, vượt xa những gì tài liệu gốc cung cấp.
-
-</details>
 
 <br>
 
@@ -1243,12 +1228,11 @@ Phần giải thích về phương trình C.38 rất sâu sắc, thể hiện s�
 >
 > Λ Λ⁻¹ = Λ⁻¹ Λ = I ⇔ λi αi = 1, i =1,2... ⇨ αi = 1 / λi
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **97/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **97/100** · ✓ Move on
 
 Phân tích của bạn rất chính xác và sâu sắc, đặc biệt là phần giải thích chi tiết cho công thức C.45 và C.46 bằng cách sử dụng các góc nhìn khác nhau về phép nhân ma trận. Để hoàn thiện hơn nữa, bạn có thể xem xét bổ sung giải thích cho các công thức về định thức (C.47) và vết (C.48).
-
-</details>
 
 <br>
 
@@ -1265,12 +1249,11 @@ Phân tích của bạn rất chính xác và sâu sắc, đặc biệt là ph�
 >
 > Ngược lại, nếu dạng toàn phương chỉ lớn hơn hoặc bằng không với mọi vector W (nghĩa là vẫn tồn tại vector W khác không làm cho dạng toàn phương bằng không), thì ma trận đó được gọi là ma trận **xác định bán dương (positive semi-definite)**. Trong trường hợp này, các **giá trị riêng có thể bằng không.**
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **92/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 
 Bài phân tích của bạn rất chính xác và sâu sắc, mô tả đúng cả định nghĩa dạng toàn phương và tính chất giá trị riêng của ma trận xác định dương và bán dương. Bạn cũng đã làm rõ sự khác biệt giữa hai loại ma trận này. Tuy nhiên, bài viết sẽ hoàn thiện hơn nếu bạn bổ sung lưu ý rằng ma trận xác định dương không có nghĩa là tất cả các phần tử của nó đều dương, và có thể thêm ký hiệu A > 0, A ≥ 0.
-
-</details>
 
 <br>
 
