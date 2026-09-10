@@ -22,7 +22,7 @@
 >
 >
 >
-> Giả sử số chiều dữ liệu gốc là D, và gọi D' là số "feature tuyến tính": yk = 𝐰kᵀ𝐱, k=1,...D' tức là sao? Tức là tương tự như khi ta chiếu (!) 𝐱 từ D chiều lên span {𝐰}, bằng cách tính y = 𝐰ᵀ𝐱, mang ý nghĩa là giảm chiều dữ liệu từ D còn thành 1 chiều, và đây là feature tuyến tính vì y là hàm tuyến tính đối với 𝐱 đơn giản vậy thôi (nhưng gợi ý ta rằng vài bữa ta sẽ có các feature phi tuyến?), thì ở đây, ta sẽ dùng D' vector: 𝐰1,...𝐰D', để chiếu data lên, tạo ra D' feature tuyến tính y1=𝐰1ᵀ𝐱,...,yD' = 𝐰D'ᵀ𝐱, gom lại thành vector D' chiều: 𝐲. Như vậy mang ý nghĩa, là, từ dữ liệu D chiều ban đầu, ta nén còn D' chiều.
+> Giả sử số chiều dữ liệu gốc là D, và gọi D' là số "feature tuyến tính": yk = 𝐰kᵀ𝐱, k=1,...D' tức là sao? Tức là tương tự như khi ta chiếu (!) 𝐱 từ D chiều lên span {𝐰}, bằng cách tính y = 𝐰ᵀ𝐱, mang ý nghĩa là giảm chiều dữ liệu từ D còn thành 1 chiều, và đây là feature tuyến tính vì y là hàm tuyến tính đối với 𝐱 đơn giản vậy thôi (nhưng gợi ý ta rằng vài bữa ta sẽ có các feature phi tuyến?), thì ở đây, ta sẽ dùng D' vector: 𝐰1,...𝐰D', để chiếu data lên, tạo ra D' feature tuyến tính y1=𝐰1ᵀ𝐱,...,yD' = 𝐰D'ᵀ𝐱, gom lại thành vector D' chiều: 𝐲. Như vậy mang ý nghĩa, là, từ dữ liệu D chiều ban đầu, ta nén còn D' chiều..
 >
 >
 >
@@ -34,11 +34,7 @@
 >
 >
 >
-> (!) Vì sao gọi là chiếu: Là vì 𝐱1 nằm trong R^D, thì sau khi nhân với 𝐖ᵀ, 𝐲1 nằm trong column space của 𝐖ᵀ, với việc ta chỉ có D' cột, và D' &lt; D, thì cơ bản là ta đã chỉ còn một subspace của R^D.
->
->
->
-> Chú ý, **nói là chiếu** nhưng **không phải là chiếu vuông góc**, tức vì chiếu vuông góc thì matrix chiếu lên C(𝐖) sẽ là khác: Là 𝐖(𝐖ᵀ𝐖)⁻¹𝐖ᵀ, và matrix chiếu lên C(𝐖ᵀ) sẽ là 𝐖ᵀ(𝐖𝐖ᵀ)⁻¹𝐖 Và trong trường hợp các cột của 𝐖ᵀ orthonormal.)
+> (!) Chú ý, **nói là chiếu nhưng nên hiểu là linear mapping từ R^D sang R^D'** nhưng **không phải là chiếu vuông góc (orthogonal projection) như trong trực giác hình học của bài toán least square.**
 >
 >
 >
@@ -110,7 +106,7 @@
 >
 >
 >
-> Bỏ 1/N đi, nó chỉ là scalar, ta có Σi (𝐱i-𝐦)(𝐱i-𝐦)ᵀ
+> Bỏ 1/N đi, ta sẽ được cái gọi là scatter matrix, ta có Σi (𝐱i-𝐦)(𝐱i-𝐦)ᵀ. và những chỗ mà mr Bishop nói within-class hay between-class covariance matrix, thực chất không phải là covariance matrix mà là scatter matrix 
 >
 >
 >
@@ -252,10 +248,285 @@
 >
 > Và ông Bishop nói Fukunaga 1990 giải bài toán này, rất dài, kết quả cho ra các cột của 𝐖 là các eigenvector của 𝐒W⁻¹𝐒B tương ứng với D' eigenvalue lớn nhất. (cái này tạm biết vậy)
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+<details>
+<summary>🌐 View in English</summary>
+
+> [!NOTE]
+> Let's see, the main idea here is that we generalize Fisher's discriminant to the problem with more classes
 >
-> Ghi chú rất xuất sắc, thể hiện tư duy phân tích sâu sắc, tự suy diễn mạch lạc về mặt thống kê và đặc biệt phát hiện chính xác lỗi in sai kinh điển trong sách của Bishop.
+>
+>
+> Suppose the original data dimension is D, and call D' the number of "linear features": yk = 𝐰kᵀ𝐱, k=1,...D' what does that mean? That means similarly to when we project (!) 𝐱 from D dimensions onto span {𝐰}, by calculating y = 𝐰ᵀ𝐱, carrying the meaning of reducing data dimension from D down to 1 dimension, and this is a linear feature because y is a linear function with respect to 𝐱 as simple as that (but hinting to us that in a few days we will have nonlinear features?), then here, we will use D' vectors: 𝐰1,...𝐰D', to project data onto, creating D' linear features y1=𝐰1ᵀ𝐱,...,yD' = 𝐰D'ᵀ𝐱, grouped into a D'-dimensional vector: 𝐲. Thus carrying the meaning, that, from the initial D-dimensional data, we compress down to D' dimensions..
+>
+>
+>
+> And expressed compactly by setting 𝐰1,.., 𝐰D' as the columns of 𝐖. Then 𝐲 = 𝐖ᵀ𝐱, this is easy to understand (because element yj will be the dot product of row j of 𝐖ᵀ, which is also column j of 𝐖, namely 𝐰j with 𝐱: yj = 𝐰jᵀ𝐱)
+>
+>
+>
+> ---
+>
+>
+>
+> (!) Note, **saying projection but it should be understood as linear mapping from R^D to R^D'** but **not an orthogonal projection (orthogonal projection) as in the geometric intuition of the least square problem.**
+>
+>
+>
+> ---
+>
+>
+>
+> Next, with the two classes the other day, then 𝐒1 = Σi∈𝒞1 (𝐱i - 𝐦1)(𝐱i - 𝐦1)ᵀ, 𝐒2 = Σi∈𝒞2 (𝐱i - 𝐦2)(𝐱i - 𝐦2)ᵀ
+>
+>
+>
+> then now the generalization of within-class covariance matrix for the K class case is:
+>
+>
+>
+> 𝐒w = Σk=1:K 𝐒k with 𝐒k = Σi∈𝒞k (𝐱i - 𝐦k)(𝐱i - 𝐦k)ᵀ and 𝐦k = (1/Nk) Σi∈𝒞k 𝐱i.
+>
+>
+>
+> By the way one might wonder why this is the formula of the (within class) covariance matrix? or, why there is such a covariance matrix formula.
+>
+>
+>
+> By definition, if we have random vector 𝐗, 𝐘 then Cov(𝐗,𝐘) = E\[(𝐗-E(𝐗))(𝐘-E(𝐘))ᵀ\],
+>
+>
+>
+> (𝐗-E(𝐗))(𝐘-E(𝐘))ᵀ is a random matrix with element ij (Xi - E(Xi)) × (Yj - E(Yj))
+>
+>
+>
+> so element ij of Cov(𝐗, 𝐘) = E\[(Xi - E(Xi)) × (Yj - E(Yj))\]
+>
+>
+>
+> Cov(𝐗, 𝐗), we write shorthand as Cov(𝐗) = E\[(𝐗-E(𝐗))(𝐗-E(𝐗))ᵀ\], then element ij is E\[(Xi - E(Xi))(Xj - E(Xj))\]
+>
+>
+>
+> Then, to calculate expectation, we have to know the distribution: the possible values, and probability
+>
+>
+>
+> So we argue that: 𝐱1, ...𝐱N are the possible values of discrete uniform 𝐗, i.e. P(𝐗 = 𝐱1) = ...= P(𝐗 = 𝐱N) = 1/N
+>
+>
+>
+> E\[𝐗\] will be equal to: 𝐱1 × P(𝐗=𝐱1) + ...+ 𝐱N × P(𝐗=𝐱N) (definition of expectation of discrete rv)
+>
+>
+>
+> = 𝐱1/N + ...+ 𝐱N/N = (Σi 𝐱i)/N, set as 𝐦 (sample mean)
+>
+>
+>
+> then Cov(𝐗) = E\[(𝐗-E(𝐗))(𝐗-E(𝐗))ᵀ\] = (𝐱1-E(𝐗))(𝐱1-E(𝐗))ᵀ × P(𝐗=𝐱1) + ...+ (𝐱N-E(𝐗))(𝐱N-E(𝐗))ᵀ × P(𝐗=𝐱N)
+>
+>
+>
+> = (1/N) \[(𝐱1-E(𝐗))(𝐱1-E(𝐗))ᵀ + ...+ (𝐱N-E(𝐗))(𝐱N-E(𝐗))ᵀ\]
+>
+>
+>
+> = (1/N) \[(𝐱1-𝐦)(𝐱1-𝐦)ᵀ + ...+ (𝐱N-𝐦)(𝐱N-𝐦)ᵀ\]
+>
+>
+>
+> = (1/N) Σi (𝐱i-𝐦)(𝐱i-𝐦)ᵀ
+>
+>
+>
+> Dropping 1/N, we will get what is called scatter matrix, we have Σi (𝐱i-𝐦)(𝐱i-𝐦)ᵀ. and the places where mr Bishop says within-class or between-class covariance matrix, is actually not covariance matrix but scatter matrix 
+>
+>
+>
+> Thus, this is roughly the covariance matrix formula when we treat 𝐗, whose distribution is originally not yet known how it is, in order to calculate E\[(𝐗-E(𝐗))(𝐗-E(𝐗))ᵀ\], we treat it as uniform discrete having possible values 𝐱1,...𝐱N, then to calculate with this distribution, called **emprical distribution**.
+>
+>
+>
+> ---
+>
+>
+>
+> Next, we let 𝐒T, be the total covariance matrix then by algebraic transformation we can split 𝐒T into 𝐒W + 𝐒B with 𝐒B according to formula 𝐒B = Σk Nk(𝐦k - 𝐦)(𝐦k - 𝐦)ᵀ (4.46) (this is just algebraic transformation, **lengthy but not difficult**, just tentatively know it like that)
+>
+>
+>
+> ---
+>
+>
+>
+> Thus, in the original space (where data is 𝐱1,...𝐱N, divided into classes 𝒞1,...𝒞K), the total covariance matrix is:
+>
+>
+>
+> 𝐒T = 𝐒W + 𝐒B with 𝐒W being the sum of the within-class covariance matrices Σk=1:K 𝐒k having formula 𝐒k = Σi∈𝒞k \[(𝐱i - 𝐦k)(𝐱i - 𝐦k)ᵀ\]
+>
+>
+>
+> Then similarly, in the projected space (where we have projected D-dimensional vectors 𝐱1,...𝐱N into D' dimensional vectors 𝐲1 = 𝐖ᵀ𝐱1, 𝐲2 = 𝐖ᵀ𝐱2,..., 𝐲N = 𝐖ᵀ𝐱N then
+>
+>
+>
+> 𝐬W (within-class covariance matrix in projected space), using lowercase letter 𝐬
+>
+>
+>
+> = Σk=1:K 𝐬k, with 𝐬k = Σi∈𝒞k (𝐲i-𝛍k)(𝐱i-𝛍k)ᵀ (just similar)
+>
+>
+>
+> = Σk=1:K \[Σi∈𝒞k (𝐲i-𝛍k)(𝐲i-𝛍k)ᵀ\]
+>
+>
+>
+> And also similarly, 𝐬B = Σk Nk(𝛍k - 𝛍)(𝛍k - 𝛍)ᵀ
+>
+>
+>
+> ---
+>
+>
+>
+> Then, in the 2 class case, I still remember Fisher criterion was set up according to the intention of achieving the following two things: Maximize the separation of the two classes after projection, by maximizing distance of the projection of the two centers of the two data clusters belonging to the two classes) and minimize the overlap by minimizing the dispersion level of the projected data of each class. And with that intention, we set up the criterion as \[between-class variance\] and \[within class variance\], and this is a number (scalar) depending on 𝐰, so that by maximizing this with respect to 𝐰 we will find the best 𝐰 for the above objective.
+>
+>
+>
+> Then the point I understand is, we want to design the criterion to be a scalar, for what, so that we have the problem of optimizing an objective function that is a vector scalar function, which will be easier instead of the objective function being a vector - vector or vector - matrix function
+>
+>
+>
+> Then here similarly, the objective is also like that, therefore we only then see prof saying we want to construct a scalar such that when it is large, between-class covariance is large and within class covariance is small.
+>
+>
+>
+> One could ask why not do like before, divide the two by each other: Ah well because in the 2 class case, the two between / with variance are just a number (variance), so can be divided by each other. Whereas here, the between-class / within-class dispersion level is represented by covariance MATRIX, so how can they be divided by each other.
+>
+>
+>
+> But there is a way: Use trace: J(𝐖) = tr(𝐬W⁻¹ 𝐬B}. Why use this?
+>
+>
+>
+> Because trace, as is known is the sum of diagonal elements, also the sum of eigenvalues.
+>
+>
+>
+> So tr(𝐬W⁻¹ 𝐬B} is the sum of eigenvalues of 𝐬W⁻¹ 𝐬B. If 𝐬W is small, then 𝐬W⁻¹ will become large again, making tr(𝐬W⁻¹ 𝐬B} large. And if 𝐬B is large, then tr(𝐬W⁻¹ 𝐬B} is also large. Therefore this is the objective where when it is large, we will squeeze 𝐬W small → reduce withclass-covariance and 𝐬B large → tooth between-class covariance.
+>
+>
+>
+> Naturally this is still an indirect function depending on 𝐖, substituting in we have the explicit formula:
+>
+>
+>
+> 𝐬W = Σk \[Σi∈𝒞k (𝐲i-𝛍k)(𝐲i-𝛍k)ᵀ\]
+>
+>
+>
+> = Σk \[Σi∈𝒞k (𝐖ᵀ𝐱i-𝐖ᵀ𝐦k)(𝐖ᵀ𝐱i-𝐖ᵀ𝐦k)ᵀ\] (because 𝐲i = 𝐖ᵀ𝐱i, 𝛍k is the projection of 𝐦k, = 𝐖ᵀ𝐦k)
+>
+>
+>
+> = Σk \[Σi∈𝒞k 𝐖ᵀ(𝐱i-𝐦k)(𝐖ᵀ(𝐱i-𝐦k))ᵀ\]
+>
+>
+>
+> = Σk \[Σi∈𝒞k 𝐖ᵀ(𝐱i-𝐦k)(𝐱i-𝐦k)ᵀ𝐖\]
+>
+>
+>
+> = Σk 𝐖ᵀ \[Σi∈𝒞k (𝐱i-𝐦k)(𝐱i-𝐦k)ᵀ\] 𝐖
+>
+>
+>
+> = 𝐖ᵀ (Σk \[Σi∈𝒞k (𝐱i-𝐦k)(𝐱i-𝐦k)ᵀ\]) 𝐖
+>
+>
+>
+> The thing in the middle is precisely 𝐒W
+>
+>
+>
+> = 𝐖ᵀ (𝐒W) 𝐖
+>
+>
+>
+> 𝐬B = Σk Nk(𝛍k - 𝛍)(𝛍k - 𝛍)ᵀ, similarly, transforming a bit will see that it is 𝐖ᵀ (𝐒B) 𝐖
+>
+>
+>
+> ⇒ J(𝐖) = tr(𝐬W⁻¹ 𝐬B}
+>
+>
+>
+> = tr(\[𝐖ᵀ (𝐒W) 𝐖\]⁻¹ 𝐖ᵀ (𝐒B) 𝐖)
+>
+>
+>
+> This is formula 4.51. It seems professor Bishop wrote it wrong here, because 𝐲 = 𝐖ᵀ𝐱 then after transforming the beginning must be 𝐖ᵀ
+>
+>
+>
+> ---
+>
+>
+>
+> Thus what we need to do is solve the problem of maximize over 𝐖 the function J(𝐖) = tr(\[𝐖ᵀ (𝐒W) 𝐖\]⁻¹ 𝐖ᵀ (𝐒B) 𝐖)
+>
+>
+>
+> And Mr. Bishop said Fukunaga 1990 solved this problem, very long, the result gives the columns of 𝐖 as the eigenvectors of 𝐒W⁻¹𝐒B corresponding to the D' largest eigenvalues. (just know this for now)
+
+---
+
+**🤖 AI Check (English)**
+
+Summary: Excellent notes, very firmly grasping the geometric, algebraic, and statistical nature of multiclass Fisher LDA. In particular, you yourself accurately detected the typographical notation error (erratum) in formula (4.51) of Bishop's book.
+
+Minor issues:
+1. "𝐬k = Σi∈𝒞k (𝐲i-𝛍k)(𝐱i-𝛍k)ᵀ (just similar)" — There is a small typo with the variable 𝐱i instead of 𝐲i in the second factor. Although right in the line below you rewrote it correctly as (𝐲i-𝛍k)(𝐲i-𝛍k)ᵀ, you should still correct this line to avoid confusion when rereading.
+2. "J(𝐖) = tr(𝐬W⁻¹ 𝐬B}" — The expression with the existence of the inverse 𝐬W⁻¹ (and 𝐒W⁻¹) implicitly assumes that the within-class scatter matrix is invertible. This requires the number of data samples to be sufficiently large compared to the number of dimensions (N - K ≥ D), otherwise it will encounter the singularity phenomenon (small sample size problem) that requires regularization techniques (regularization).
+
+Strengths:
+• Extremely accurate detection of Professor Bishop's typographical error (official erratum) in formula (4.51) when swapping the positions between 𝐖 and 𝐖ᵀ.
+• Very deep and intuitive reasoning about the origin of the covariance/scatter matrix through the empirical distribution (empirical distribution).
+• Clear distinction between linear projection (linear projection/mapping) and orthogonal projection (orthogonal projection) in least squares.
+
+Deeper notes:
+• Because 𝐒B is the sum of K rank-1 matrices with the constraint that the weighted sum equals 0 (because the sum of Nk(𝐦k - 𝐦) = 0), the rank of 𝐒B is at most K - 1. Therefore, the number of non-zero eigenvalues of 𝐒W⁻¹𝐒B is at most K - 1, leading to the maximum compressed dimension D' meaningful for classification being K - 1.
+• The case of more than 2 classes does not guarantee that projecting to 1 dimension is optimal, but rather requires projecting to D' dimensions (with 1 < D' ≤ K - 1).
+
+</details>
+
+<details>
+<summary>🤖 AI Check — 🟡 Minor issues — ✅ **96/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú xuất sắc, nắm rất vững bản chất hình học, đại số và thống kê của Fisher LDA đa lớp. Đặc biệt, bạn đã tự phát hiện chính xác lỗi in sai ký hiệu (erratum) trong công thức (4.51) của sách Bishop.
+
+#### 🟡 Minor issues
+> *"𝐬k = Σi∈𝒞k (𝐲i-𝛍k)(𝐱i-𝛍k)ᵀ (tương tự thôi)"*
+
+Có một lỗi gõ nhầm nhỏ biến 𝐱i thay vì 𝐲i ở thừa số thứ hai. Dù ngay dòng dưới bạn đã viết lại chính xác là (𝐲i-𝛍k)(𝐲i-𝛍k)ᵀ, bạn vẫn nên chỉnh lại dòng này để tránh nhầm lẫn khi đọc lại.
+
+> *"J(𝐖) = tr(𝐬W⁻¹ 𝐬B}"*
+
+Biểu thức tồn tại nghịch đảo 𝐬W⁻¹ (và 𝐒W⁻¹) ngầm định rằng ma trận scatter trong lớp khả nghịch. Điều này đòi hỏi số lượng mẫu dữ liệu phải đủ lớn so với số chiều (N - K ≥ D), nếu không sẽ gặp hiện tượng kỳ dị (small sample size problem) cần kỹ thuật chính quy hóa (regularization).
+
+#### ✓ Strengths
+- Phát hiện cực kỳ chuẩn xác lỗi sai in ấn (erratum chính thức) của giáo sư Bishop ở công thức (4.51) khi hoán đổi vị trí giữa 𝐖 và 𝐖ᵀ.
+- Lập luận rất sâu sắc và trực quan về nguồn gốc ma trận covariance/scatter thông qua phân phối thực nghiệm (empirical distribution).
+- Phân biệt rạch ròi giữa phép chiếu tuyến tính (linear projection/mapping) với phép chiếu vuông góc (orthogonal projection) trong bình phương tối thiểu.
+
+#### 💡 Deeper notes
+- Do 𝐒B là tổng của K ma trận rank 1 có ràng buộc tổng trọng số bằng 0 (vì tổng Nk(𝐦k - 𝐦) = 0), rank của 𝐒B tối đa chỉ là K - 1. Vì vậy, số lượng eigenvalue khác 0 của 𝐒W⁻¹𝐒B tối đa chỉ là K - 1, dẫn tới số chiều nén D' tối đa có ý nghĩa phân lớp là K - 1.
+- Trường hợp nhiều hơn 2 lớp không đảm bảo chiếu về 1 chiều là tối ưu mà cần chiếu về D' chiều (với 1 < D' ≤ K - 1).
+
+</details>
 
 <br>
 
@@ -350,6 +621,97 @@
 >
 >
 > (mai tiếp)
+
+<details>
+<summary>🌐 View in English</summary>
+
+> [!NOTE]
+> Then the last part roughly says 𝐒B, according to the formula earlier = Σk Nk(𝐦k - 𝐦)(𝐦k - 𝐦)ᵀ, is easy to see is the sum of rank 1 matrices Nk(𝐦k - 𝐦)(𝐦k - 𝐦)ᵀ
+>
+>
+>
+> Why rank 1? Ah it is because this is the outer product of two vectors: Reasoning like this will show it is rank 1: Suppose A = abᵀ, this can be considered as the product of two matrices a, having m rows, 1 column and bᵀ having 1 row, n columns. Then according to the second perspective of multiplying two matrices E = CD, column j of E is a linear combination of the columns of C with the coefficients being the elements of column j of D.
+>
+>
+>
+> Therefore, column j of A is a linear combination of the columns of "matrix a" with the coefficients being the the elements of column j of "matrix b". And matrix a has only 1 column just as column j of b also has only 1 element, so column j of A is vector a × scalar bj. As such, column 1 of A is scalar b1 × vector a, column 2 of A is scalar b2 × vector a,... From that, one sees immediately that the columns of A are all equal to [some number] × vector a, therefore they are all linearly dependent on vector a. Meaning, among the columns of A, there is only one independent vector (because they all only have the same direction). And as such, the dimension of C(A) = 1 is also rank = 1.
+>
+>
+>
+> As such, N1(𝐦1 - 𝐦)(𝐦1 - 𝐦)ᵀ will be like abᵀ, having columns that all coincide in direction with 𝐦1 - 𝐦, so it only has rank = 1.
+>
+>
+>
+> And summing them up, if 𝐦1 - 𝐦, 𝐦2 - 𝐦,...𝐦K - 𝐦 are all different directions (linearly independent) then Σk Nk(𝐦k - 𝐦)(𝐦k - 𝐦)ᵀ will have rank K.
+>
+>
+>
+> The problem is because 𝐦 = (Σk Nk𝐦k)/N (this is easy to see)
+>
+>
+>
+> so N𝐦 = (Σk Nk𝐦k) ⇒ (Σk 𝐦k) - N𝐦 = 0
+>
+>
+>
+> ⇔ Σk (Nk𝐦k - 𝐦) = 0
+>
+>
+>
+> ⇔ Σk=1:K-1 (Nk𝐦k - 𝐦) = -(𝐦K - 𝐦)
+>
+>
+>
+> and as such shows that (𝐦K - 𝐦) can be created by the remaining guys, so according to MIT 1806 studied, we say it is linearly dependent on those guys.
+>
+>
+>
+> As such, at most, we only have K-1 independent vectors (possibly even fewer, because sometimes the whole bunch of K vectors but only a few are independent)
+>
+>
+>
+> So what?
+>
+>
+>
+> Then the consequence is: Above it was just said solving the problem of finding 𝐖 we will see they are D' eigenvectors corresponding to the largest eigevalues of of 𝐒W⁻¹𝐒B.
+>
+>
+>
+> As such, calling u and λ the eigenvector and eigenvalue of 𝐒W⁻¹𝐒B we have:
+>
+>
+>
+> 𝐒W⁻¹𝐒B u = λ u
+>
+>
+>
+> so in D columns, it only has K-1 independent columns, and will have D-K+1 dependent columns, corresponding to D-K+1 non-zero vectors in the nullspace.
+>
+> \
+> And this gives us a conclusion that: There are K+1 independent vectors 𝐯1,...𝐯D-K+1 satisfying:
+>
+>
+>
+> 𝐒B 𝐯j = 0, = 0 is also = 0 × 𝐯j
+>
+>
+>
+> this is precisely saying, we have D-K+1 eigenvectors of 𝐒B corresponding to the same eigenvalue value = 0.
+>
+>
+>
+> And as such with these vectors 𝐯j, 𝐒W⁻¹𝐒B 𝐯j also equals 0, showing that 𝐒W⁻¹𝐒B also has D-K+1 independent eigenvectors corresponding to eigenvalue = 0.
+>
+>
+>
+> Therefore, 𝐒W⁻¹𝐒B will only have at most K-1 eigenvalues different from 0.
+>
+>
+>
+> (continue tomorrow)
+
+</details>
 
 <br>
 
