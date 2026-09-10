@@ -175,7 +175,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Điểm mạnh của bạn là khả năng phân tích toán học rất sâu sắc và chi tiết, đặc biệt là việc tự giải thích và chứng minh lại các công thức 2.158 và 2.159 một cách chính xác. Bạn cũng đã kết nối các khái niệm về xác suất có điều kiện, Bayes và các phân phối khác (Cauchy, Normal) một cách rất mạch lạc. Để nâng cao hơn nữa, hãy chú ý một chút đến cách diễn đạt về "precision" và "variance" trong phần đầu để tránh nhầm lẫn, và đảm bảo mọi thuật ngữ được sử dụng nhất quán.
+Điểm mạnh của bạn là khả năng phân tích toán học rất sâu sắc và chi tiết, đặc biệt là việc tự giải thích và chứng minh lại các công thức 2.158 và 2.159 một cách chính xác. Bạn cũng đã kết nối các khái niệm về xác suất có điều kiện, Bayes và các phân phối khác (Cauchy, Normal) một cách rất mạch lạc. Để nâng cao hơn nữa, hãy chú ý một chút đến cách diễn đạt về "precision" và "variance" trong phần đầu để tránh nhầm lẫn, và đảm bảo mọi thuật ngữ được sử dụng nhất quán.
 
 </details>
 
@@ -236,7 +236,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn rất chính xác và sâu sắc, nắm bắt tốt các khái niệm chính về phân phối t của Student, mối quan hệ với hỗn hợp Gaussian và tính bền vững trước các giá trị ngoại lệ. Để hoàn thiện hơn, bạn có thể diễn đạt rõ hơn rằng phân phối t chứa Gaussian như một trường hợp đặc biệt khi ν tiến tới vô cùng, thay vì "bản chất" là Normal.
+Ghi chú của bạn rất chính xác và sâu sắc, nắm bắt tốt các khái niệm chính về phân phối t của Student, mối quan hệ với hỗn hợp Gaussian và tính bền vững trước các giá trị ngoại lệ. Để hoàn thiện hơn, bạn có thể diễn đạt rõ hơn rằng phân phối t chứa Gaussian như một trường hợp đặc biệt khi ν tiến tới vô cùng, thay vì "bản chất" là Normal.
 
 </details>
 
@@ -258,7 +258,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Phân tích của bạn rất chính xác và sâu sắc, nắm bắt tốt bản chất về tính vững (robustness) của phân phối t-Student và mối liên hệ với phương pháp bình phương tối thiểu. Để cô đọng hơn, bạn có thể tóm tắt trực tiếp hơn ý chính về việc thay thế phân phối giả định từ Gaussian sang t-Student mang lại sự vững vàng.
+Phân tích của bạn rất chính xác và sâu sắc, nắm bắt tốt bản chất về tính vững (robustness) của phân phối t-Student và mối liên hệ với phương pháp bình phương tối thiểu. Để cô đọng hơn, bạn có thể tóm tắt trực tiếp hơn ý chính về việc thay thế phân phối giả định từ Gaussian sang t-Student mang lại sự vững vàng.
 
 </details>
 
@@ -278,7 +278,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ⚠️ **85/100** · ✓ Move on</summary>
 
-**Summary:** Học viên nắm bắt chính xác trọng tâm của đoạn văn về việc khái quát phân phối Student-T sang dạng đa biến và hiểu công thức 2.162 là kết quả của tích phân 2.161. Để sâu sắc hơn, hãy xem xét các yếu tố mới như khoảng cách Mahalanobis (Δ²) và các tính chất của phân phối đa biến này.
+Học viên nắm bắt chính xác trọng tâm của đoạn văn về việc khái quát phân phối Student-T sang dạng đa biến và hiểu công thức 2.162 là kết quả của tích phân 2.161. Để sâu sắc hơn, hãy xem xét các yếu tố mới như khoảng cách Mahalanobis (Δ²) và các tính chất của phân phối đa biến này.
 
 </details>
 
