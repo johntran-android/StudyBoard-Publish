@@ -24,12 +24,11 @@
 >
 > Thế thì vấn đề là, việc h như nhau ở mọi nơi khiến cho nó bị cứng nhắc. Vì khi xét trong **vùng có nhiều data sample, thì nên cho h nhỏ lại, và ngược lại trong vùng thưa data sample thì nên cho h lớn lên**. Vì nếu trong vùng nhiều data sample mà h lớn quá quá sẽ khiến dẫn đến over-smoothing effect, xóa xạch các cấu trúc có thể được nắm bắt từ data. Ngược lại, nơi data density thấp mà h nhỏ quá sẽ khiến noisy. Nói chung **chỉ cần hiểu là h như nhau ở mọi nơi thì không tối ưu.**
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú đã tóm tắt rất hiệu quả hạn chế chính của tham số 'h' cố định trong ước lượng mật độ kernel, giải thích rõ ràng hậu quả của nó trong các vùng mật độ dữ liệu cao và thấp. Việc bổ sung giải thích về tham số 'h' và các hàm kernel khác nhau đã giúp làm sâu sắc thêm sự hiểu biết về ngữ cảnh, rất đáng khen.
-
-</details>
 
 <br>
 
@@ -74,8 +73,9 @@ Ghi chú đã tóm tắt rất hiệu quả hạn chế chính của tham số '
 >
 > Vậy thì ở đây, gs nói, với K-nearest neighbor, khi ta fixed K và tính V, để từ đó tỉ số K/NV cao thấp tương đối so với nhau, thì vấn đề là, nó không có cái nào đóng vai normalizing constant cả,  do đó KNN density không phải là một valid pdf.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Bài viết thể hiện sự hiểu biết sâu sắc về phương pháp K-nearest neighbour, phân biệt rõ ràng với kernel method và mô tả chính xác ảnh hưởng của K đến độ mượt. Để hoàn thiện hơn, hãy giải thích trực tiếp lý do nó không phải "true density model" là vì tích phân trên toàn không gian phân kỳ.
 
@@ -102,8 +102,6 @@ Bài viết thể hiện sự hiểu biết sâu sắc về phương pháp K-nea
 
 > [!TIP]
 > - Bạn đã nhận diện chính xác phương pháp "fixed V" là kernel approach, thể hiện kiến thức liên quan vượt ra ngoài phần chính của đoạn văn bản được highlight.
-
-</details>
 
 **🔗 See also:** [Density Estimate Formula](./251_kernel_density_estimators.md#node-a23maxi)
 
@@ -230,12 +228,11 @@ Bài viết thể hiện sự hiểu biết sâu sắc về phương pháp K-nea
 >
 > = Kk / K → 2.256
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **93/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **93/100** · ✓ Move on
 
 Bạn đã nắm vững cách áp dụng kỹ thuật KNN cho bài toán phân loại và suy ra công thức cuối cùng một cách chính xác. Để note ngắn gọn và tập trung hơn, bạn có thể tóm lược phần giải thích sâu về xác suất có điều kiện và đảm bảo tính nhất quán trong ký hiệu.
-
-</details>
 
 <br>
 
@@ -270,12 +267,11 @@ Bạn đã nắm vững cách áp dụng kỹ thuật KNN cho bài toán phân l
 >
 > Và khi K = 1, ta gọi nó là nearest neighbor: xem thằng gần nhất thuộc class gì thì kết luận class đó.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **92/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 
 Ghi chú thể hiện sự hiểu biết sâu sắc về mối liên hệ giữa KNN, xác suất hậu nghiệm và rủi ro Bayes, đặc biệt là trong trường hợp lỗi phân loại đồng đều. Tuy nhiên, việc trình bày công thức rủi ro Bayes có thể được làm rõ hơn để tránh sự nhầm lẫn về ký hiệu.
-
-</details>
 
 **🔗 See also:** [Luật quyết định Bayes tối ưu](./15_decision_theory.md#node-ym5yp89)
 
@@ -306,12 +302,11 @@ Ghi chú thể hiện sự hiểu biết sâu sắc về mối liên hệ giữa
 >
 > Bên cạnh đó, chưa kể, ta đã thấy nó có nhiều vấn đề trong việc estimate distribution. Thành ra trong các chapter sau, ta sẽ bàn đến các cách tiếp cận khác, flexible hơn, với độ phức tạp có thể được kiểm soát một cách độc lập với kích thước training set.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Ghi chú này rất toàn diện và nắm bắt chính xác tất cả các điểm cốt lõi từ văn bản gốc, từ ví dụ minh họa về K đến các hạn chế của phương pháp. Để tăng thêm độ sâu, bạn có thể giải thích rõ hơn về bản chất 'không cần huấn luyện' của KNN liên quan đến việc nó là một phương pháp phi tham số.
-
-</details>
 
 <br>
 
