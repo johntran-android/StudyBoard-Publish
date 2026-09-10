@@ -170,10 +170,12 @@
 >
 > Đây chính là 3.33
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **99/100**
->
-> Bài giải thích của bạn cực kỳ chi tiết và chính xác, đặc biệt là các bước suy luận toán học để đi đến công thức (3.32) và (3.33) đều rất rõ ràng và dễ hiểu. Độ sâu phân tích này thể hiện sự nắm vững kiến thức đáng kinh ngạc, rất tốt!
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **99/100** · ✓ Move on</summary>
+
+**Summary:** Bài giải thích của bạn cực kỳ chi tiết và chính xác, đặc biệt là các bước suy luận toán học để đi đến công thức (3.32) và (3.33) đều rất rõ ràng và dễ hiểu. Độ sâu phân tích này thể hiện sự nắm vững kiến thức đáng kinh ngạc, rất tốt!
+
+</details>
 
 **🔗 See also:** [Phân phối Gaussian](./230_gaussian_distribution.md#node-arii2cl)
 
@@ -296,10 +298,12 @@
 >
 > Và như vậ ta chỉ cần chuẩn bị matrix **Φ**^(+) để rồi lần lượt nhân với 𝐭i để có 𝐰ML_i.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
->
-> Ghi chú của bạn cung cấp một cách suy luận cực kỳ kỹ lưỡng và chính xác về ước lượng hợp lý tối đa cho W, hoàn toàn khớp với các phương trình (3.34) và (3.35) đã cho. Bạn đã trình bày rất rõ ràng khái niệm "decoupling" và cách ma trận giả nghịch đảo được dùng chung, cho thấy sự hiểu biết sâu sắc. Để hoàn thiện tuyệt đối, bạn có thể cân nhắc trình bày chi tiết hơn bước đạo hàm cho tr(W^T Φ^T ΦW).
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú của bạn cung cấp một cách suy luận cực kỳ kỹ lưỡng và chính xác về ước lượng hợp lý tối đa cho W, hoàn toàn khớp với các phương trình (3.34) và (3.35) đã cho. Bạn đã trình bày rất rõ ràng khái niệm "decoupling" và cách ma trận giả nghịch đảo được dùng chung, cho thấy sự hiểu biết sâu sắc. Để hoàn thiện tuyệt đối, bạn có thể cân nhắc trình bày chi tiết hơn bước đạo hàm cho tr(W^T Φ^T ΦW).
+
+</details>
 
 <br>
 
@@ -312,10 +316,12 @@
 > [!NOTE]
 > Rồi đoạn cuối cùng thì đại khái ông nói rằng là hồi nãy giờ là mình giải cái đặt bài toán với việc giả định rằng các cái vector T nó tuân theo cái phân phối đa biến có cái ma trận hiệp phương sai có dạng là một cái ma trận identity nhân với một chia beta. Thì bây giờ ông nói rằng mình có thể mở rộng nó ra với mô hình đa biến có cái ma trận hiệp phương sai bất kỳ. Và kết quả sẽ cũng cho thấy rằng bài toán được trở thành ra là giống như việc giải nhiều bài toán dự đoán độc lập. Tức là nó tách ra thành những bài toán dự đoán một con số độc lập thay vì nó dính với nhau. Và cái lý do là bởi vì trong cái phần hai mình đã thấy rằng là cái nghiệm mà maximum likelihood vốn dĩ là nó có một cái tính chất là nó chỉ nó không có phụ thuộc vào cái covariance mà trận hiệp phương sai. Cho nên là dù ma trận hiệp phương sai nó là cái gì á thì kết quả nó cũng chỉ tương tự như ở trên. Có nghĩa là thay vì mình tức là thay vì mình dự đoán một cái T thì bây giờ mình dự đoán nhiều T nhưng mà về cơ bản là nó chỉ là giống như giải nhiều bài toán dự đoán một T cùng lúc thôi.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
->
-> Bạn đã tóm tắt rất chính xác các điểm chính và giải thích rõ ràng lý do đằng sau việc phân tách bài toán. Để tăng cường độ chính xác, bạn có thể cân nhắc đề cập trực tiếp đến các tham số cụ thể như 'W' được nhắc đến trong văn bản.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+
+**Summary:** Bạn đã tóm tắt rất chính xác các điểm chính và giải thích rõ ràng lý do đằng sau việc phân tách bài toán. Để tăng cường độ chính xác, bạn có thể cân nhắc đề cập trực tiếp đến các tham số cụ thể như 'W' được nhắc đến trong văn bản.
+
+</details>
 
 <br>
 
