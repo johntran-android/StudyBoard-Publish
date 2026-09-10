@@ -241,7 +241,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú cực kỳ chất lượng, thể hiện tư duy sâu sắc khi liên hệ hệ thống giữa thống kê cổ điển (Casella) và trường phái Bayes để tự chứng minh chi tiết công thức (3.59). Bạn có thể làm rõ thêm rằng việc tìm phân phối dự báo (predictive distribution) vượt trội hơn chỉ tính kỳ vọng E[y(w,x)] ở chỗ nó định lượng được cả độ bất định (variance) của dự báo.
+Ghi chú cực kỳ chất lượng, thể hiện tư duy sâu sắc khi liên hệ hệ thống giữa thống kê cổ điển (Casella) và trường phái Bayes để tự chứng minh chi tiết công thức (3.59). Bạn có thể làm rõ thêm rằng việc tìm phân phối dự báo (predictive distribution) vượt trội hơn chỉ tính kỳ vọng E[y(w,x)] ở chỗ nó định lượng được cả độ bất định (variance) của dự báo.
 
 </details>
 
@@ -544,7 +544,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn rất xuất sắc, có độ sâu toán học cao khi tự biến đổi công thức Sherman-Morrison để giải thích định lượng hiện tượng 'thắt nút' của phương sai tại điểm dữ liệu quan sát. Để hoàn thiện hơn nữa, bạn có thể giải thích thêm lý do tại sao đường mean màu đỏ gần như nằm ngang ở hình thứ nhất (gợi ý: liên quan đến việc ưu tiên của prior khi chỉ có 1 điểm dữ liệu).
+Ghi chú của bạn rất xuất sắc, có độ sâu toán học cao khi tự biến đổi công thức Sherman-Morrison để giải thích định lượng hiện tượng 'thắt nút' của phương sai tại điểm dữ liệu quan sát. Để hoàn thiện hơn nữa, bạn có thể giải thích thêm lý do tại sao đường mean màu đỏ gần như nằm ngang ở hình thứ nhất (gợi ý: liên quan đến việc ưu tiên của prior khi chỉ có 1 điểm dữ liệu).
 
 </details>
 
@@ -804,7 +804,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Excellent note with exceptionally clear intuition and rigorous mathematical derivation of the covariance between predictions. To make it even better, you could explicitly mention that the smoothness also depends on the choice of continuous basis functions, such as Gaussians.
+Excellent note with exceptionally clear intuition and rigorous mathematical derivation of the covariance between predictions. To make it even better, you could explicitly mention that the smoothness also depends on the choice of continuous basis functions, such as Gaussians.
 
 </details>
 
@@ -832,7 +832,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Giải thích của bạn rất xuất sắc và chi tiết, thể hiện sự hiểu biết sâu sắc về bản chất toán học lẫn trực quan vật lý của vấn đề. Điểm lưu ý duy nhất là công thức phương sai dự báo tại một điểm nên là $\phi(x)^T \mathbf{S}_N \phi(x)$ thay vì dùng hai điểm $x_1, x_2$ (vốn là công thức hiệp phương sai giữa hai điểm khác nhau).
+Giải thích của bạn rất xuất sắc và chi tiết, thể hiện sự hiểu biết sâu sắc về bản chất toán học lẫn trực quan vật lý của vấn đề. Điểm lưu ý duy nhất là công thức phương sai dự báo tại một điểm nên là $\phi(x)^T \mathbf{S}_N \phi(x)$ thay vì dùng hai điểm $x_1, x_2$ (vốn là công thức hiệp phương sai giữa hai điểm khác nhau).
 
 </details>
 
@@ -852,7 +852,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú vô cùng xuất sắc, không chỉ dịch đúng nội dung cốt lõi của đoạn text (tiên nghiệm Gaussian-gamma và phân phối dự báo Student-t) mà còn hệ thống hóa rất tốt kiến thức nền tảng liên quan. Tư duy liên kết mạch lạc này rất đáng khen ngợi, hãy tiếp tục duy trì nhé!
+Ghi chú vô cùng xuất sắc, không chỉ dịch đúng nội dung cốt lõi của đoạn text (tiên nghiệm Gaussian-gamma và phân phối dự báo Student-t) mà còn hệ thống hóa rất tốt kiến thức nền tảng liên quan. Tư duy liên kết mạch lạc này rất đáng khen ngợi, hãy tiếp tục duy trì nhé!
 
 </details>
 
