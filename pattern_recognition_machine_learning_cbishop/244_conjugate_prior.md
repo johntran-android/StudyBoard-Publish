@@ -86,10 +86,12 @@
 >
 > Tới đây, có thể thấy posteriori có dạng của priori với param là ∑i 𝐮(𝐱i) + ν**χ** (so với ν**χ** của priori) và N+ν (so với ν của priori).
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **97/100**
->
-> Ghi chú của bạn rất chính xác và có chiều sâu, đặc biệt là phần chứng minh chi tiết dạng của phân phối hậu nghiệm cho họ hàm mũ. Để hoàn thiện hơn, bạn có thể bổ sung thêm ý nghĩa của tham số "ν" như là số lượng quan sát giả định hiệu quả từ prior.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **97/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú của bạn rất chính xác và có chiều sâu, đặc biệt là phần chứng minh chi tiết dạng của phân phối hậu nghiệm cho họ hàm mũ. Để hoàn thiện hơn, bạn có thể bổ sung thêm ý nghĩa của tham số "ν" như là số lượng quan sát giả định hiệu quả từ prior.
+
+</details>
 
 <br>
 
