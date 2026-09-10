@@ -81,7 +81,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Bài viết cực kỳ chi tiết, chính xác và sâu sắc, thể hiện sự hiểu biết vững chắc về cả phương pháp Maximum Likelihood và Bayesian Inference. Việc kết nối kiến thức với sách Casella, giải thích cặn kẽ từng khái niệm và thậm chí phân tích chi tiết về ký hiệu cho thấy khả năng tổng hợp và tư duy phản biện xuất sắc.
+Bài viết cực kỳ chi tiết, chính xác và sâu sắc, thể hiện sự hiểu biết vững chắc về cả phương pháp Maximum Likelihood và Bayesian Inference. Việc kết nối kiến thức với sách Casella, giải thích cặn kẽ từng khái niệm và thậm chí phân tích chi tiết về ký hiệu cho thấy khả năng tổng hợp và tư duy phản biện xuất sắc.
 
 </details>
 
@@ -273,7 +273,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Bản ghi chú này rất xuất sắc, cung cấp một phân tích sâu sắc và chi tiết từng bước để suy ra phân phối hậu nghiệm. Bạn đã thành công trong việc trình bày rõ ràng các bước đại số phức tạp, dẫn đến các công thức khớp chính xác với sách giáo khoa.
+Bản ghi chú này rất xuất sắc, cung cấp một phân tích sâu sắc và chi tiết từng bước để suy ra phân phối hậu nghiệm. Bạn đã thành công trong việc trình bày rõ ràng các bước đại số phức tạp, dẫn đến các công thức khớp chính xác với sách giáo khoa.
 
 </details>
 
@@ -325,7 +325,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Phân tích của bạn rất chính xác và có chiều sâu, bao gồm cả những diễn giải quan trọng về sự hội tụ của phương pháp Bayesian về kết quả ML và sự khác biệt về quan điểm giữa Bayesian và Frequentist. Bạn đã nắm bắt rất tốt các điểm chính được nêu trong tài liệu.
+Phân tích của bạn rất chính xác và có chiều sâu, bao gồm cả những diễn giải quan trọng về sự hội tụ của phương pháp Bayesian về kết quả ML và sự khác biệt về quan điểm giữa Bayesian và Frequentist. Bạn đã nắm bắt rất tốt các điểm chính được nêu trong tài liệu.
 
 </details>
 
@@ -400,7 +400,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Đây là một ghi chú xuất sắc và rất sâu sắc, giải thích rõ ràng sự khác biệt giữa Bayesian và Frequentist, cũng như cơ chế cập nhật tuần tự một cách chi tiết. Việc nhấn mạnh vai trò của giả định i.i.d. là rất chính xác và quan trọng.
+Đây là một ghi chú xuất sắc và rất sâu sắc, giải thích rõ ràng sự khác biệt giữa Bayesian và Frequentist, cũng như cơ chế cập nhật tuần tự một cách chi tiết. Việc nhấn mạnh vai trò của giả định i.i.d. là rất chính xác và quan trọng.
 
 </details>
 
@@ -578,7 +578,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Bài viết của bạn rất xuất sắc, vừa chính xác từng bước trong các phép chứng minh toán học, vừa có chiều sâu trong việc giải thích các khái niệm như conjugate prior và lý do chọn precision. Độ chi tiết và khả năng kết nối với các công thức trong sách giáo trình là rất ấn tượng.
+Bài viết của bạn rất xuất sắc, vừa chính xác từng bước trong các phép chứng minh toán học, vừa có chiều sâu trong việc giải thích các khái niệm như conjugate prior và lý do chọn precision. Độ chi tiết và khả năng kết nối với các công thức trong sách giáo trình là rất ấn tượng.
 
 </details>
 
@@ -620,7 +620,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú giải thích rất đầy đủ và chính xác các điểm chính từ văn bản gốc, bao gồm cả cách giải thích các tham số tiên nghiệm như những quan sát hiệu quả và tính tổng quát của phương pháp này cho exponential family. Các công thức tính toán và kiến thức nền bổ sung cho thấy sự hiểu biết sâu sắc và toàn diện về chủ đề.
+Ghi chú giải thích rất đầy đủ và chính xác các điểm chính từ văn bản gốc, bao gồm cả cách giải thích các tham số tiên nghiệm như những quan sát hiệu quả và tính tổng quát của phương pháp này cho exponential family. Các công thức tính toán và kiến thức nền bổ sung cho thấy sự hiểu biết sâu sắc và toàn diện về chủ đề.
 
 </details>
 
@@ -840,7 +840,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Bài viết của bạn rất xuất sắc, đã đi sâu vào từng bước tính toán từ việc phân tích hàm likelihood đến việc xác định dạng của prior và posterior, làm nổi bật sự phụ thuộc giữa μ và λ trong phân phối Normal-Gamma một cách rõ ràng và chính xác. Một lưu ý nhỏ là hãy kiểm tra lại các biến khi chuyển đổi (ví dụ: c/b nên là c/β) để đảm bảo tính nhất quán tuyệt đối, nhưng điều này không ảnh hưởng đến độ chính xác tổng thể của bài giải.
+Bài viết của bạn rất xuất sắc, đã đi sâu vào từng bước tính toán từ việc phân tích hàm likelihood đến việc xác định dạng của prior và posterior, làm nổi bật sự phụ thuộc giữa μ và λ trong phân phối Normal-Gamma một cách rõ ràng và chính xác. Một lưu ý nhỏ là hãy kiểm tra lại các biến khi chuyển đổi (ví dụ: c/b nên là c/β) để đảm bảo tính nhất quán tuyệt đối, nhưng điều này không ảnh hưởng đến độ chính xác tổng thể của bài giải.
 
 </details>
 
@@ -864,7 +864,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Bài giải thích của bạn rất rõ ràng và chính xác, bao quát đầy đủ cả ba trường hợp của phân phối tiên nghiệm liên hợp cho phân phối Gaussian đa biến, và việc liên hệ với các trường hợp đơn biến thể hiện sự hiểu biết sâu sắc. Để bài làm thêm hoàn thiện, bạn có thể cân nhắc sử dụng ngôn ngữ học thuật hơn một chút.
+Bài giải thích của bạn rất rõ ràng và chính xác, bao quát đầy đủ cả ba trường hợp của phân phối tiên nghiệm liên hợp cho phân phối Gaussian đa biến, và việc liên hệ với các trường hợp đơn biến thể hiện sự hiểu biết sâu sắc. Để bài làm thêm hoàn thiện, bạn có thể cân nhắc sử dụng ngôn ngữ học thuật hơn một chút.
 
 </details>
 
