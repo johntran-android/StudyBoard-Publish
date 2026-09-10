@@ -317,8 +317,9 @@
 >
 > Có nghĩa là sao, có nghĩa là nó cho ta luôn một threshold, để coi như là có đầy đủ hàm discriminant khỏi cần phải làm thêm bước chiếu xuống 𝐰, giải bài toán point estimation giả định distribution là Gaussian, rồi mới từ đó tìm threshold nơi posterior f(𝒞1|y) = f(𝒞2|y).
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Ghi chú cực kỳ chi tiết, mạch lạc và thể hiện sự hiểu biết sâu sắc về mặt toán học cũng như trực giác đằng sau mối liên hệ giữa Least Squares và Fisher's LDA.
 
@@ -339,8 +340,6 @@ Ghi chú cực kỳ chi tiết, mạch lạc và thể hiện sự hiểu biết
 > [!TIP]
 > - Áp dụng kiến thức vi phân toàn phần (linear operator / Frechet derivative) từ MIT 18.S096 để giải thích đạo hàm ma trận.
 > - Chỉ ra được ưu điểm vượt trội của Least Squares so với Fisher gốc: tự động xác định ngưỡng phân lớp (bias w0) mà không cần bước ước lượng phân phối Gaussian trên không gian 1 chiều chiếu.
-
-</details>
 
 <br>
 
