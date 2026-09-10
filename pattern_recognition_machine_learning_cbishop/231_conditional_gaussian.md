@@ -118,11 +118,10 @@
 >
 > Nhắc lại, đây là cách làm mà mình thường thấy trong Casella, đó là khi xét tìm dạng của pdf, ta thường chỉ cần chỉ ra kernel của nó có dạng kernel của một phân phối nào đó, là đủ để có thể kết luận dạng của distribution. Sau đó, ta sẽ dùng cách bước khớp mẫu, để tìm ra giá trị của parameters. Và do đó thậm chí cũng khỏi cần quan tâm cái constant bên ngoài, vì kiểu gì thì chúng cũng đóng vai trò normalizing constant.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
-
-Bạn đã hiểu rất chính xác và sâu sắc phương pháp Bishop đề xuất, đặc biệt là vai trò của việc tập trung vào "kernel" của phân phối để xác định dạng. Các bước phân tích và mở rộng dạng bậc hai cũng hoàn toàn khớp với tài liệu.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Bạn đã hiểu rất chính xác và sâu sắc phương pháp Bishop đề xuất, đặc biệt là vai trò của việc tập trung vào "kernel" của phân phối để xác định dạng. Các bước phân tích và mở rộng dạng bậc hai cũng hoàn toàn khớp với tài liệu.
 
 <br>
 
@@ -269,11 +268,10 @@ Bạn đã hiểu rất chính xác và sâu sắc phương pháp Bishop đề x
 >
 > Để rồi ta có thể kết luận f(**xa**|**xb**) chính là pdf của Gaussian có mean là **μa|b** = **μa** - **Λaa⁻¹ Λab** (**xb** - **μb**) và covariance matrix là **Σa|b** = (**Λaa**)⁻¹
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
-
-Ghi chú của bạn cực kỳ chi tiết và chính xác, làm rõ hoàn toàn quá trình suy luận để đạt được các kết quả (2.73) và (2.75) mà sách chỉ trình bày vắn tắt. Việc bạn triển khai từng bước các phép tính ma trận và so sánh với dạng tổng quát của Gaussian là rất xuất sắc, cho thấy sự hiểu biết sâu sắc.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú của bạn cực kỳ chi tiết và chính xác, làm rõ hoàn toàn quá trình suy luận để đạt được các kết quả (2.73) và (2.75) mà sách chỉ trình bày vắn tắt. Việc bạn triển khai từng bước các phép tính ma trận và so sánh với dạng tổng quát của Gaussian là rất xuất sắc, cho thấy sự hiểu biết sâu sắc.
 
 **🔗 See also:** [Phân phối Gaussian có điều kiện](./233_bayess_theorem_for_gaussian_variables.md#node-2d1tmn5)
 
@@ -292,11 +290,10 @@ Ghi chú của bạn cực kỳ chi tiết và chính xác, làm rõ hoàn toàn
 >
 > Thế thì bằng cách sử dụng một công thức được gọi là **Schur complement**, chúng ta cũng có thể **chuyển sang dạng thể hiện bởi các ma trận con (partitioned matrices) của ma trận hiệp phương sai** (covariance matrix). Đây chính là bước áp dụng đẳng thức này để biến đổi hai công thức đã chứng minh sang một dạng thể hiện khác, sử dụng các ma trận khối con của ma trận hiệp phương sai thay vì các ma trận khối con của ma trận nghịch đảo. Đây chính là một bài toán biến đổi đại số.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
-
-Ghi chú của bạn đã tóm tắt chính xác mục đích và phương pháp được mô tả trong đoạn văn, đặc biệt là việc chuyển đổi từ ma trận độ chính xác (precision matrix) sang ma trận hiệp phương sai (covariance matrix) bằng cách sử dụng bổ đề Schur (Schur complement). Để sâu sắc hơn, bạn có thể đề cập rõ ràng hơn đến việc sử dụng đẳng thức (2.76) về nghịch đảo của ma trận khối, vốn là công cụ chính cho phép áp dụng bổ đề Schur trong ngữ cảnh này.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú của bạn đã tóm tắt chính xác mục đích và phương pháp được mô tả trong đoạn văn, đặc biệt là việc chuyển đổi từ ma trận độ chính xác (precision matrix) sang ma trận hiệp phương sai (covariance matrix) bằng cách sử dụng bổ đề Schur (Schur complement). Để sâu sắc hơn, bạn có thể đề cập rõ ràng hơn đến việc sử dụng đẳng thức (2.76) về nghịch đảo của ma trận khối, vốn là công cụ chính cho phép áp dụng bổ đề Schur trong ngữ cảnh này.
 
 <br>
 
@@ -337,11 +334,10 @@ Ghi chú của bạn đã tóm tắt chính xác mục đích và phương pháp
 >
 > Một lưu ý cuối, đó là dựa vào cả hai công thức đều thấy **μa|b là hàm tuyến tính theo xb, cũng như Σa|b hoàn toàn không phụ thuộc xa. Và ông nói đây là một ví dụ của cái gọi là LINEAR-GAUSSIAN model (có thể sẽ được học ở các chap sau)**
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
-
-Bài làm của bạn rất chính xác và sâu sắc. Bạn không chỉ chép đúng công thức mà còn nắm vững các nhận xét quan trọng về tính chất của mô hình và đưa ra so sánh đúng đắn về độ đơn giản của các dạng biểu diễn. Để bài làm hoàn hảo hơn, bạn nên đảm bảo các tham chiếu số công thức khớp với tài liệu gốc hoặc giải thích rõ ràng hơn về chúng.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Bài làm của bạn rất chính xác và sâu sắc. Bạn không chỉ chép đúng công thức mà còn nắm vững các nhận xét quan trọng về tính chất của mô hình và đưa ra so sánh đúng đắn về độ đơn giản của các dạng biểu diễn. Để bài làm hoàn hảo hơn, bạn nên đảm bảo các tham chiếu số công thức khớp với tài liệu gốc hoặc giải thích rõ ràng hơn về chúng.
 
 **🔗 See also:** [Phân phối Gaussian phân tách có điều kiện](./232_marginal_gaussian.md#node-qwpga8o) · [Mô hình Gaussian Tuyến tính](./233_bayess_theorem_for_gaussian_variables.md#node-x44e412)
 
