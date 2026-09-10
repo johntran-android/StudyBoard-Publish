@@ -238,12 +238,11 @@
 >
 > = N(t|(𝐦N)ᵀΦ(𝐱), 1/β + Φ(𝐱)ᵀ 𝐒N Φ(𝐱)) → chính là 3.59
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú cực kỳ chất lượng, thể hiện tư duy sâu sắc khi liên hệ hệ thống giữa thống kê cổ điển (Casella) và trường phái Bayes để tự chứng minh chi tiết công thức (3.59). Bạn có thể làm rõ thêm rằng việc tìm phân phối dự báo (predictive distribution) vượt trội hơn chỉ tính kỳ vọng E[y(w,x)] ở chỗ nó định lượng được cả độ bất định (variance) của dự báo.
-
-</details>
 
 **🔗 See also:** [Optimal Prediction with Gaussian Noise](./311_maximum_likelihood_and_least_squares.md#node-wsglxqn) · [Bayesian Linear Regression Posterior Update](./331_bayesian_linear_regression.md#node-fv65lte) · [Phân bố tiên nghiệm và hậu nghiệm](./233_bayess_theorem_for_gaussian_variables.md#node-zswmsts) · [Predictive Distribution with Hyperpriors](./35_evidence_approximation.md#node-0sy5yof)
 
@@ -541,12 +540,11 @@ Ghi chú cực kỳ chất lượng, thể hiện tư duy sâu sắc khi liên h
 >
 > Còn câu hỏi thứ hai: là vì sao trong hình một đường màu đỏ gần như đi ngang?
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú của bạn rất xuất sắc, có độ sâu toán học cao khi tự biến đổi công thức Sherman-Morrison để giải thích định lượng hiện tượng 'thắt nút' của phương sai tại điểm dữ liệu quan sát. Để hoàn thiện hơn nữa, bạn có thể giải thích thêm lý do tại sao đường mean màu đỏ gần như nằm ngang ở hình thứ nhất (gợi ý: liên quan đến việc ưu tiên của prior khi chỉ có 1 điểm dữ liệu).
-
-</details>
 
 <br>
 
@@ -801,12 +799,11 @@ Ghi chú của bạn rất xuất sắc, có độ sâu toán học cao khi tự
 >
 > Và do đó, với x1 ≈ Φ(x1)ᵀ 𝐒N Φ(x2) = Cov(Y1, Y2) sẽ luôn là số dương, khiến cho Y1, Y2 đều luôn có xu hướng lớn nhỏ cùng nhau và điều này dẫn tới đồ thị đường màu đỏ y(𝐰, x) = 𝐰ᵀΦ(x) SẼ UỐN LƯỢN, VÌ CÁI SỰ UỐN LƯỢN NÀY CHÍNH LÀ HỆ QỦA VIỆC VIỆC HAI ĐIỂM X GẦN NHAU SẼ CÓ XU HƯỚNG CÓ GIÁ TRỊ HÀM SỐ GIỐNG NHAU, NẾU KHÔNG, ĐỒ THỊ SẼ GIẬT CỤC NHƯ RĂNG CƯA VẬY.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Excellent note with exceptionally clear intuition and rigorous mathematical derivation of the covariance between predictions. To make it even better, you could explicitly mention that the smoothness also depends on the choice of continuous basis functions, such as Gaussians.
-
-</details>
 
 **🔗 See also:** [Ma trận Hiệp Phương Sai](./1212_probability_densities_expectations_covariances.md#node-jrsj465) · [Covariance and the Equivalent Kernel](./333_equivalent_kernel.md#node-fpm5jlu)
 
@@ -829,12 +826,11 @@ Excellent note with exceptionally clear intuition and rigorous mathematical deri
 >
 > Gs nói, để khắc phục, ta sẽ học qua Gaussian process, là một cách tiếp cận Bayesian khác.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Giải thích của bạn rất xuất sắc và chi tiết, thể hiện sự hiểu biết sâu sắc về bản chất toán học lẫn trực quan vật lý của vấn đề. Điểm lưu ý duy nhất là công thức phương sai dự báo tại một điểm nên là $\phi(x)^T \mathbf{S}_N \phi(x)$ thay vì dùng hai điểm $x_1, x_2$ (vốn là công thức hiệp phương sai giữa hai điểm khác nhau).
-
-</details>
 
 <br>
 
@@ -849,12 +845,11 @@ Giải thích của bạn rất xuất sắc và chi tiết, thể hiện sự h
 > \
 > Và trong cái chương 2 đó là mình đã học về cái trường hợp này khi mà giáo sư đã chuẩn bị một số cái nền tảng về xác suất cho những cái phần sau đây mình không cần phải làm lại. Cụ thể đó là khi mà mình xét cả W và beta thì phân phối tiên nghiệm của W beta sẽ là một cái phân phối gọi là Gaussian gamma và dựa trên cái phân phối tiên nghiệm đó mình tiến hành xây dựng phân phối predictive thì mình sẽ thấy nó không phải phân phối chuẩn nữa mà nó sẽ là phân phối student T.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Ghi chú vô cùng xuất sắc, không chỉ dịch đúng nội dung cốt lõi của đoạn text (tiên nghiệm Gaussian-gamma và phân phối dự báo Student-t) mà còn hệ thống hóa rất tốt kiến thức nền tảng liên quan. Tư duy liên kết mạch lạc này rất đáng khen ngợi, hãy tiếp tục duy trì nhé!
-
-</details>
 
 <br>
 
