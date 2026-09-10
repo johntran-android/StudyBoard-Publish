@@ -173,7 +173,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **99/100** · ✓ Move on</summary>
 
-**Summary:** Bài giải thích của bạn cực kỳ chi tiết và chính xác, đặc biệt là các bước suy luận toán học để đi đến công thức (3.32) và (3.33) đều rất rõ ràng và dễ hiểu. Độ sâu phân tích này thể hiện sự nắm vững kiến thức đáng kinh ngạc, rất tốt!
+Bài giải thích của bạn cực kỳ chi tiết và chính xác, đặc biệt là các bước suy luận toán học để đi đến công thức (3.32) và (3.33) đều rất rõ ràng và dễ hiểu. Độ sâu phân tích này thể hiện sự nắm vững kiến thức đáng kinh ngạc, rất tốt!
 
 </details>
 
@@ -301,7 +301,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn cung cấp một cách suy luận cực kỳ kỹ lưỡng và chính xác về ước lượng hợp lý tối đa cho W, hoàn toàn khớp với các phương trình (3.34) và (3.35) đã cho. Bạn đã trình bày rất rõ ràng khái niệm "decoupling" và cách ma trận giả nghịch đảo được dùng chung, cho thấy sự hiểu biết sâu sắc. Để hoàn thiện tuyệt đối, bạn có thể cân nhắc trình bày chi tiết hơn bước đạo hàm cho tr(W^T Φ^T ΦW).
+Ghi chú của bạn cung cấp một cách suy luận cực kỳ kỹ lưỡng và chính xác về ước lượng hợp lý tối đa cho W, hoàn toàn khớp với các phương trình (3.34) và (3.35) đã cho. Bạn đã trình bày rất rõ ràng khái niệm "decoupling" và cách ma trận giả nghịch đảo được dùng chung, cho thấy sự hiểu biết sâu sắc. Để hoàn thiện tuyệt đối, bạn có thể cân nhắc trình bày chi tiết hơn bước đạo hàm cho tr(W^T Φ^T ΦW).
 
 </details>
 
@@ -319,7 +319,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Bạn đã tóm tắt rất chính xác các điểm chính và giải thích rõ ràng lý do đằng sau việc phân tách bài toán. Để tăng cường độ chính xác, bạn có thể cân nhắc đề cập trực tiếp đến các tham số cụ thể như 'W' được nhắc đến trong văn bản.
+Bạn đã tóm tắt rất chính xác các điểm chính và giải thích rõ ràng lý do đằng sau việc phân tách bài toán. Để tăng cường độ chính xác, bạn có thể cân nhắc đề cập trực tiếp đến các tham số cụ thể như 'W' được nhắc đến trong văn bản.
 
 </details>
 
