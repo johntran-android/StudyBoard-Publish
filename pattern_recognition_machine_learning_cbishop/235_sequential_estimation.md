@@ -70,11 +70,10 @@
 >
 > Như vậy, nếu N tăng lên, thì mức đóng góp của chuỗi các data point sẽ nhỏ lại.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
-
-Phân tích rất chính xác và chi tiết từng bước, từ động cơ của ước lượng tuần tự đến việc diễn giải công thức cập nhật μ_ML^(N). Tuy nhiên, cách trình bày các bước đạo hàm hơi dài dòng một chút so với văn bản gốc và bạn có thể nhấn mạnh hơn thuật ngữ "tín hiệu lỗi" (error signal).
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Phân tích rất chính xác và chi tiết từng bước, từ động cơ của ước lượng tuần tự đến việc diễn giải công thức cập nhật μ_ML^(N). Tuy nhiên, cách trình bày các bước đạo hàm hơi dài dòng một chút so với văn bản gốc và bạn có thể nhấn mạnh hơn thuật ngữ "tín hiệu lỗi" (error signal).
 
 <br>
 
@@ -123,11 +122,10 @@ Phân tích rất chính xác và chi tiết từng bước, từ động cơ c�
 >
 > Nhưng vấn đề là observed data lại không có một cục cùng lúc, mà lại chỉ có thêm từng cái từng cái một (one at a time). Do đó cách tiếp cận Robbins-Monro sẽ giúp ta trong nhiệm vụ này (giải tìm root: f(θ) = 0).
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
-
-Ghi chú của bạn rất chính xác và có chiều sâu vượt trội, giải thích rõ ràng từng khái niệm và mối liên hệ giữa chúng. Bạn đã kết nối kiến thức một cách xuất sắc, làm nổi bật sự cần thiết của thuật toán Robbins-Monro trong học tuần tự.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú của bạn rất chính xác và có chiều sâu vượt trội, giải thích rõ ràng từng khái niệm và mối liên hệ giữa chúng. Bạn đã kết nối kiến thức một cách xuất sắc, làm nổi bật sự cần thiết của thuật toán Robbins-Monro trong học tuần tự.
 
 <br>
 
@@ -214,11 +212,10 @@ Ghi chú của bạn rất chính xác và có chiều sâu vượt trội, gi�
 >
 > Như vậy cùng với chuỗi {θ}, ta sẽ có bộ hệ số {a1, a2,....} và Robbins-Monroes quy định nó phải thỏa các tính chất 2.130/1/2, để đảm bảo một số tính chất hội tụ (chưa hiểu lắm)
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
-
-Ghi chú của bạn thể hiện sự hiểu biết sâu sắc, đặc biệt là phần giải thích chi tiết về phương sai có điều kiện và cách liên hệ với các định nghĩa cơ bản cùng định lý LOTUS. Cách bạn làm rõ ký hiệu lũy thừa trong công thức thuật toán cũng rất tốt. Để ghi chú hoàn thiện hơn, bạn có thể mô tả điều kiện của hàm f(θ) chính xác theo văn bản gốc (f(θ) > 0 khi θ > θ* và f(θ) < 0 khi θ < θ*) thay vì chỉ nói hàm f đồng biến.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú của bạn thể hiện sự hiểu biết sâu sắc, đặc biệt là phần giải thích chi tiết về phương sai có điều kiện và cách liên hệ với các định nghĩa cơ bản cùng định lý LOTUS. Cách bạn làm rõ ký hiệu lũy thừa trong công thức thuật toán cũng rất tốt. Để ghi chú hoàn thiện hơn, bạn có thể mô tả điều kiện của hàm f(θ) chính xác theo văn bản gốc (f(θ) > 0 khi θ > θ* và f(θ) < 0 khi θ < θ*) thay vì chỉ nói hàm f đồng biến.
 
 <br>
 
@@ -363,11 +360,10 @@ Ghi chú của bạn thể hiện sự hiểu biết sâu sắc, đặc biệt l
 >
 > Và hãy nhận ra rằng, dù đang trong bài toán MLE, vốn dĩ không coi θ như random variable, nhưng mr Bishop lại đang lí thuyết của Robbins-Monroes, trong đó coi θ và Z đều là random variable, nên nó gây vài confuse.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **99/100** · ✓ Move on
-
-Phần giải thích rất chi tiết, chính xác và sâu sắc, làm rõ cả quá trình từ bài toán MLE đến ý nghĩa của công thức 2.134 thông qua định luật số lớn. Bạn đã xuất sắc trong việc phân tích các sắc thái của ký hiệu kỳ vọng, giúp người đọc nắm vững ngữ cảnh. Tuy nhiên, để tối ưu trải nghiệm đọc, có thể xem xét cô đọng một số phần.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **99/100** · ✓ Move on
+>
+> Phần giải thích rất chi tiết, chính xác và sâu sắc, làm rõ cả quá trình từ bài toán MLE đến ý nghĩa của công thức 2.134 thông qua định luật số lớn. Bạn đã xuất sắc trong việc phân tích các sắc thái của ký hiệu kỳ vọng, giúp người đọc nắm vững ngữ cảnh. Tuy nhiên, để tối ưu trải nghiệm đọc, có thể xem xét cô đọng một số phần.
 
 <br>
 
@@ -486,11 +482,10 @@ Phần giải thích rất chi tiết, chính xác và sâu sắc, làm rõ cả
 >
 > μML^(N) = μML^(N-1) + (xN - μML^(N-1)) / (N-1).
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
-
-Điểm mạnh: Bài ghi chú này thể hiện sự nắm bắt xuất sắc về thủ tục Robbins-Monro và ứng dụng của nó vào ước lượng MLE tuần tự cho giá trị trung bình của phân phối Gaussian. Bạn đã trình bày chi tiết quá trình đạo hàm gradient và giải thích chính xác quy tắc cập nhật, cùng với quan sát sâu sắc về ký hiệu trong sách giáo khoa. Điểm yếu: Không có điểm yếu đáng kể nào, bài ghi chú rất kỹ lưỡng, chính xác và cung cấp cái nhìn sâu sắc vượt ngoài sách giáo khoa.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Điểm mạnh: Bài ghi chú này thể hiện sự nắm bắt xuất sắc về thủ tục Robbins-Monro và ứng dụng của nó vào ước lượng MLE tuần tự cho giá trị trung bình của phân phối Gaussian. Bạn đã trình bày chi tiết quá trình đạo hàm gradient và giải thích chính xác quy tắc cập nhật, cùng với quan sát sâu sắc về ký hiệu trong sách giáo khoa. Điểm yếu: Không có điểm yếu đáng kể nào, bài ghi chú rất kỹ lưỡng, chính xác và cung cấp cái nhìn sâu sắc vượt ngoài sách giáo khoa.
 
 <br>
 
