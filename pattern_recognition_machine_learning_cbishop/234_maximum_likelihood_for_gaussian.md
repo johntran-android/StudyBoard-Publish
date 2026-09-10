@@ -322,12 +322,11 @@
 >
 > ---
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Bài ghi chép cực kỳ chi tiết, chính xác và có chiều sâu, đặc biệt trong việc giải thích lý thuyết MLE, dẫn giải công thức log-likelihood và chứng minh tính đủ của các thống kê bằng định lý Factorization. Độ dài của ghi chú có thể quá chi tiết cho một lần ôn tập nhanh, tuy nhiên, điều này thể hiện sự hiểu biết sâu sắc và kỹ lưỡng.
-
-</details>
 
 <br>
 
@@ -432,12 +431,11 @@ Bài ghi chép cực kỳ chi tiết, chính xác và có chiều sâu, đặc b
 >
 > Kết luận **μ**\*, cũng là **μ**^\_mle chính là Σi=1:N{**xi**}/N, là **SAMPLE MEAN.**
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Bài giải cực kỳ chi tiết và chính xác, từng bước đạo hàm ma trận được giải thích rõ ràng và hoàn toàn khớp với các phương trình trong hình ảnh. Cách tiếp cận tối ưu hóa tuần tự cho nhiều biến cũng rất hợp lý và sâu sắc.
-
-</details>
 
 <br>
 
