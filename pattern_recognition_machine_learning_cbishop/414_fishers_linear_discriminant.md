@@ -194,26 +194,23 @@
 >
 > Và dĩ nhiên kết quả này cũng chính là cái giáo sư Bishop nói: "we then find 𝐰 ∝ 𝐦2 - 𝐦1.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
-
-Ghi chú thể hiện sự hiểu biết sâu sắc, diễn đạt mạch lạc bản chất bài toán giảm chiều và tự chứng minh bài tập 4.4 rất chặt chẽ bằng giải tích ma trận và điều kiện KKT.
-
-
-### Điểm mạnh (Strengths)
-* **Hiểu đúng bản chất:** Bạn đã nắm rất vững góc nhìn mô hình phân loại tuyến tính như một phép chiếu giảm số chiều từ không gian $D$ chiều xuống 1 chiều thông qua tích vô hướng $\mathbf{w}^\mathrm{T}\mathbf{x}$.
-* **Chứng minh bài bản và chính xác:** Bạn đã tự giải Exercise 4.4 bằng cách thiết lập hàm Lagrangian, tính đạo hàm ma trận thông qua vi phân cấp một $d\mathcal{L}$ rất chuẩn xác, dẫn đến bài toán vector riêng $\mathbf{S}\mathbf{w} = \lambda \mathbf{w}$ và suy ra $\mathbf{w} \propto (\mathbf{m}_2 - \mathbf{m}_1)$.
-* **Trực quan hình học tốt:** Bạn giải thích rất rõ ràng việc vector chiếu $\mathbf{w}$ song song với đường nối hai tâm dữ liệu ban đầu, bám sát hình minh họa 4.6 của giáo trình.
-
-### Điểm cần cải thiện (Areas for Improvement)
-* **Nhầm lẫn thuật ngữ cực trị:** Trong bài, mục tiêu là *maximize* (tìm cực đại), nhưng ở một số đoạn bạn ghi nhầm thành *local minimizer* ("tìm ra ứng cử viên cho local minimizer", "ứng cử viên của minimizer của bài toán tối ưu ràng buộc này"). Cần chuẩn hóa lại thành *maximizer*.
-* **Dấu của đạo hàm hàm mục tiêu tuyến tính vs toàn phương:** Bishop trong sách thường tối ưu trực tiếp hàm tuyến tính $\mathbf{w}^\mathrm{T}(\mathbf{m}_2 - \mathbf{m}_1)$ với ràng buộc $\mathbf{w}^\mathrm{T}\mathbf{w} = 1$ (sử dụng nhân tử Lagrange tuyến tính thì ra ngay kết quả trực tiếp không cần bình phương). Cách bạn bình phương hàm mục tiêu là hợp lệ nhưng làm tăng bậc bài toán lên dạng Rayleigh quotient.
-
-### Gợi ý phát triển (Suggestions)
-* Hãy tiếp tục đọc phần tiếp theo của Bishop để thấy vì sao việc chỉ tối đa hóa khoảng cách giữa hai tâm (như trong hình minh họa) vẫn thất bại khi các lớp có phương sai/độ phân tán lớn theo chiều chiếu, từ đó dẫn tới tiêu chuẩn Fisher thực sự (tỉ số giữa between-class scatter và within-class scatter).
-
 > [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú thể hiện sự hiểu biết sâu sắc, diễn đạt mạch lạc bản chất bài toán giảm chiều và tự chứng minh bài tập 4.4 rất chặt chẽ bằng giải tích ma trận và điều kiện KKT.
+> ### Điểm mạnh (Strengths)
+> * **Hiểu đúng bản chất:** Bạn đã nắm rất vững góc nhìn mô hình phân loại tuyến tính như một phép chiếu giảm số chiều từ không gian $D$ chiều xuống 1 chiều thông qua tích vô hướng $\mathbf{w}^\mathrm{T}\mathbf{x}$.
+> * **Chứng minh bài bản và chính xác:** Bạn đã tự giải Exercise 4.4 bằng cách thiết lập hàm Lagrangian, tính đạo hàm ma trận thông qua vi phân cấp một $d\mathcal{L}$ rất chuẩn xác, dẫn đến bài toán vector riêng $\mathbf{S}\mathbf{w} = \lambda \mathbf{w}$ và suy ra $\mathbf{w} \propto (\mathbf{m}_2 - \mathbf{m}_1)$.
+> * **Trực quan hình học tốt:** Bạn giải thích rất rõ ràng việc vector chiếu $\mathbf{w}$ song song với đường nối hai tâm dữ liệu ban đầu, bám sát hình minh họa 4.6 của giáo trình.
+>
+> ### Điểm cần cải thiện (Areas for Improvement)
+> * **Nhầm lẫn thuật ngữ cực trị:** Trong bài, mục tiêu là *maximize* (tìm cực đại), nhưng ở một số đoạn bạn ghi nhầm thành *local minimizer* ("tìm ra ứng cử viên cho local minimizer", "ứng cử viên của minimizer của bài toán tối ưu ràng buộc này"). Cần chuẩn hóa lại thành *maximizer*.
+> * **Dấu của đạo hàm hàm mục tiêu tuyến tính vs toàn phương:** Bishop trong sách thường tối ưu trực tiếp hàm tuyến tính $\mathbf{w}^\mathrm{T}(\mathbf{m}_2 - \mathbf{m}_1)$ với ràng buộc $\mathbf{w}^\mathrm{T}\mathbf{w} = 1$ (sử dụng nhân tử Lagrange tuyến tính thì ra ngay kết quả trực tiếp không cần bình phương). Cách bạn bình phương hàm mục tiêu là hợp lệ nhưng làm tăng bậc bài toán lên dạng Rayleigh quotient.
+>
+> ### Gợi ý phát triển (Suggestions)
+> * Hãy tiếp tục đọc phần tiếp theo của Bishop để thấy vì sao việc chỉ tối đa hóa khoảng cách giữa hai tâm (như trong hình minh họa) vẫn thất bại khi các lớp có phương sai/độ phân tán lớn theo chiều chiếu, từ đó dẫn tới tiêu chuẩn Fisher thực sự (tỉ số giữa between-class scatter và within-class scatter).
+>
+> **⭐ Bonus points**
 > - Sử dụng công cụ vi phân ma trận để tính gradient một cách hình thức và chặt chẽ.
 > - Nhận diện được ma trận rank-1 (m1 - m2)(m1 - m2)^T và quy về bài toán tìm eigenvector ứng với eigenvalue của ma trận này.
 > - Vận dụng kiến thức tối ưu hóa nâng cao (KKT, điều kiện bậc nhất stationary condition) để giải quyết bài tập trong giáo trình.
@@ -509,29 +506,26 @@ Ghi chú thể hiện sự hiểu biết sâu sắc, diễn đạt mạch lạc 
 >
 > Ngẫm nghĩ tí, ta sẽ thấy kết quả này rất dễ hiểu: Vì khi hai đám mây xanh đỏ trở thành tròn, thì chiếu theo phương nào mà độ phân tán chả bằng nhau, nên khi đó độ phân tán within class sẽ cố định, thành ra nhiệm vụ lại quay về việc maximize khoảng cách giữa hình chiếu của hai tâm thôi.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
-
-Ghi chú xuất sắc! Bạn đã tái hiện và giải thích chi tiết toàn bộ quá trình biến đổi toán học cũng như trực giác hình học đằng sau Fisher's Linear Discriminant.
-
-
-### Điểm mạnh
-- **Biến đổi toán học chặt chẽ:** Bạn đã tự dẫn giải từng bước từ công thức gốc đến dạng tường minh $J(\mathbf{w}) = \frac{\mathbf{w}^T \mathbf{S}_B \mathbf{w}}{\mathbf{w}^T \mathbf{S}_W \mathbf{w}}$, tính đạo hàm bằng quy tắc thương (quotient rule) cho hàm vô hướng ma trận rất chuẩn xác.
-- **Lập luận giải bài toán tối ưu:** Nhận định chính xác việc $\mathbf{S}_B\mathbf{w}$ luôn cùng phương với $(\mathbf{m}_2 - \mathbf{m}_1)$, từ đó rút gọn các hệ số vô hướng để suy ra $\mathbf{w} \propto \mathbf{S}_W^{-1}(\mathbf{m}_2 - \mathbf{m}_1)$.
-- **Trực giác hình học sâu sắc:** Phần phân tích trường hợp covariance đẳng hướng (isotropic) rất sáng rõ: khi dữ liệu dạng hình cầu đối xứng thì phương chiếu nào cũng có variance như nhau, do đó bài toán quay về việc tối đa hóa khoảng cách giữa hai tâm.
-
-### Điểm cần giải thích & hoàn thiện thêm
-1. **Khái niệm 'strongly non-diagonal covariance':**
-   - Ma trận hiệp phương sai có các phần tử ngoài đường chéo (off-diagonal) lớn thể hiện các biến có tương quan mạnh với nhau (đám mây dữ liệu bị nghiêng, dẹt chéo thay vì thẳng theo các trục tọa độ). Khi chiếu vuông góc đơn thuần lên đường nối hai tâm, do các đám mây dẹt và xiên nên hình chiếu của chúng bị chồng lấn rất nhiều.
-2. **Vì sao gọi là 'tỉ lệ giữa between-class variance và within-class variance'?**
-   - Tử số $(m_2 - m_1)^2$ phản ánh sự biến thiên/khoảng cách giữa các nhóm sau khi chiếu (between-class).
-   - Mẫu số $s_1^2 + s_2^2$ là tổng phương sai nội tại bên trong từng nhóm sau khi chiếu (within-class).
-   - Tỉ số $J(\mathbf{w})$ đo lường tương đối: khoảng cách giữa các lớp lớn gấp bao nhiêu lần độ tản mát nội bộ của mỗi lớp.
-3. **Giả định ma trận khả nghịch:**
-   - Để có $\mathbf{w} \propto \mathbf{S}_W^{-1}(\mathbf{m}_2 - \mathbf{m}_1)$, ta ngầm giả định $\mathbf{S}_W$ là khả nghịch (nonsingular), điều này yêu cầu số lượng mẫu $N > D$ (số chiều dữ liệu).
-
 > [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú xuất sắc! Bạn đã tái hiện và giải thích chi tiết toàn bộ quá trình biến đổi toán học cũng như trực giác hình học đằng sau Fisher's Linear Discriminant.
+> ### Điểm mạnh
+> - **Biến đổi toán học chặt chẽ:** Bạn đã tự dẫn giải từng bước từ công thức gốc đến dạng tường minh $J(\mathbf{w}) = \frac{\mathbf{w}^T \mathbf{S}_B \mathbf{w}}{\mathbf{w}^T \mathbf{S}_W \mathbf{w}}$, tính đạo hàm bằng quy tắc thương (quotient rule) cho hàm vô hướng ma trận rất chuẩn xác.
+> - **Lập luận giải bài toán tối ưu:** Nhận định chính xác việc $\mathbf{S}_B\mathbf{w}$ luôn cùng phương với $(\mathbf{m}_2 - \mathbf{m}_1)$, từ đó rút gọn các hệ số vô hướng để suy ra $\mathbf{w} \propto \mathbf{S}_W^{-1}(\mathbf{m}_2 - \mathbf{m}_1)$.
+> - **Trực giác hình học sâu sắc:** Phần phân tích trường hợp covariance đẳng hướng (isotropic) rất sáng rõ: khi dữ liệu dạng hình cầu đối xứng thì phương chiếu nào cũng có variance như nhau, do đó bài toán quay về việc tối đa hóa khoảng cách giữa hai tâm.
+>
+> ### Điểm cần giải thích & hoàn thiện thêm
+> 1. **Khái niệm 'strongly non-diagonal covariance':**
+>    - Ma trận hiệp phương sai có các phần tử ngoài đường chéo (off-diagonal) lớn thể hiện các biến có tương quan mạnh với nhau (đám mây dữ liệu bị nghiêng, dẹt chéo thay vì thẳng theo các trục tọa độ). Khi chiếu vuông góc đơn thuần lên đường nối hai tâm, do các đám mây dẹt và xiên nên hình chiếu của chúng bị chồng lấn rất nhiều.
+> 2. **Vì sao gọi là 'tỉ lệ giữa between-class variance và within-class variance'?**
+>    - Tử số $(m_2 - m_1)^2$ phản ánh sự biến thiên/khoảng cách giữa các nhóm sau khi chiếu (between-class).
+>    - Mẫu số $s_1^2 + s_2^2$ là tổng phương sai nội tại bên trong từng nhóm sau khi chiếu (within-class).
+>    - Tỉ số $J(\mathbf{w})$ đo lường tương đối: khoảng cách giữa các lớp lớn gấp bao nhiêu lần độ tản mát nội bộ của mỗi lớp.
+> 3. **Giả định ma trận khả nghịch:**
+>    - Để có $\mathbf{w} \propto \mathbf{S}_W^{-1}(\mathbf{m}_2 - \mathbf{m}_1)$, ta ngầm giả định $\mathbf{S}_W$ là khả nghịch (nonsingular), điều này yêu cầu số lượng mẫu $N > D$ (số chiều dữ liệu).
+>
+> **⭐ Bonus points**
 > - Tự tính đạo hàm dạng ma trận của hàm phân thức bậc hai (Rayleigh quotient) bằng quy tắc thương rất chính xác.
 > - Giải thích trực giác hình học xuất sắc cho trường hợp ma trận hiệp phương sai đẳng hướng (isotropic).
 
@@ -740,25 +734,22 @@ Ghi chú xuất sắc! Bạn đã tái hiện và giải thích chi tiết toàn
 >
 > từ đó chọn threshold là y khiến f(𝒞1|y) = f(𝒞2|y) ⇔ f(y|𝒞1)f(𝒞1) = f(y|𝒞2)f(𝒞2)
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
-
-Ghi chú của bạn thể hiện sự hiểu biết xuất sắc, sâu sắc và liên hệ toán học rất chặt chẽ giữa Bishop PRML và kiến thức Thống kê toán (Casella & Berger).
-
-
-### Ưu điểm (Strengths)
-- **Hiểu đúng bản chất của Fisher's Linear Discriminant**: Bạn đã nắm rất rõ rằng nghiệm $\mathbf{w}$ trong Fisher chỉ mang lại phương chiếu tối ưu giảm chiều về 1D, chứ bản thân nó chưa phải là một bộ phân loại hoàn chỉnh (cần thêm ngưỡng $y_0$).
-- **Chứng minh và giải thích chi tiết MLE**: Bạn đã giải thích cặn kẽ cách tìm tham số Gaussian 1 chiều thông qua Maximum Likelihood Estimation (MLE) tương ứng với Section 1.2.4 trong Bishop, từ viết hàm likelihood, lấy log-likelihood đến đạo hàm tìm $\mu_{ML}$ và $\sigma^2_{ML}$.
-- **Kết nối chính xác với Lý thuyết Quyết định (Section 1.5.1)**: Bạn đã hiểu đúng cơ chế thiết lập ngưỡng tối ưu dựa trên hậu nghiệm (posterior) và quy tắc Bayes để tối thiểu hóa xác suất phân loại sai: $p(\mathcal{C}_1|y) = p(\mathcal{C}_2|y) \Leftrightarrow p(y|\mathcal{C}_1)p(\mathcal{C}_1) = p(y|\mathcal{C}_2)p(\mathcal{C}_2)$.
-
-### Điểm cần lưu ý và hoàn thiện (Areas for Improvement)
-- **Lập luận về CLT**: Việc bạn chia cho $D$ để đưa về dạng sample mean $\bar{U} = \mathbf{w}^T\mathbf{x}/D$ nhằm áp dụng đúng phát biểu định lý CLT cổ điển (Lindeberg–Lévy) từ giáo trình Casella là một liên hệ trực quan tốt. Tuy nhiên, lưu ý rằng tổng các biến ngẫu nhiên $\sum_{i=1}^D w_i x_i$ hay trung bình mẫu của chúng chỉ khác nhau một hằng số tỉ lệ $D$ (nếu biến ngẫu nhiên tiệm cận chuẩn thì nhân với $D$ vẫn là phân phối chuẩn). Ngoài ra, CLT đòi hỏi các $w_i x_i$ độc lập hoặc phụ thuộc yếu (weakly dependent), trong khi các đặc trưng của $\mathbf{x}$ trong thực tế có thể tương quan mạnh với nhau, do đó CLT ở đây chỉ đóng vai trò là một sự biện minh mang tính trực giác (heuristic/heuristic justification) chứ không phải lúc nào cũng thỏa mãn chặt chẽ.
-
-### Gợi ý mở rộng (Suggestions)
-- Bạn có thể giải tiếp phương trình bậc hai $p(y|\mathcal{C}_1)p(\mathcal{C}_1) = p(y|\mathcal{C}_2)p(\mathcal{C}_2)$ để thấy dạng nghiệm đại số của ngưỡng $y_0$. Đặc biệt, hãy xét trường hợp hai class có phương sai xấp xỉ bằng nhau ($\sigma_1^2 = \sigma_2^2$) và priors bằng nhau ($p(\mathcal{C}_1) = p(\mathcal{C}_2)$), khi đó ngưỡng $y_0$ sẽ rơi vào chính giữa trung bình hai lớp: $y_0 = \frac{1}{2}(\mu_1 + \mu_2)$.
-
 > [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú của bạn thể hiện sự hiểu biết xuất sắc, sâu sắc và liên hệ toán học rất chặt chẽ giữa Bishop PRML và kiến thức Thống kê toán (Casella & Berger).
+> ### Ưu điểm (Strengths)
+> - **Hiểu đúng bản chất của Fisher's Linear Discriminant**: Bạn đã nắm rất rõ rằng nghiệm $\mathbf{w}$ trong Fisher chỉ mang lại phương chiếu tối ưu giảm chiều về 1D, chứ bản thân nó chưa phải là một bộ phân loại hoàn chỉnh (cần thêm ngưỡng $y_0$).
+> - **Chứng minh và giải thích chi tiết MLE**: Bạn đã giải thích cặn kẽ cách tìm tham số Gaussian 1 chiều thông qua Maximum Likelihood Estimation (MLE) tương ứng với Section 1.2.4 trong Bishop, từ viết hàm likelihood, lấy log-likelihood đến đạo hàm tìm $\mu_{ML}$ và $\sigma^2_{ML}$.
+> - **Kết nối chính xác với Lý thuyết Quyết định (Section 1.5.1)**: Bạn đã hiểu đúng cơ chế thiết lập ngưỡng tối ưu dựa trên hậu nghiệm (posterior) và quy tắc Bayes để tối thiểu hóa xác suất phân loại sai: $p(\mathcal{C}_1|y) = p(\mathcal{C}_2|y) \Leftrightarrow p(y|\mathcal{C}_1)p(\mathcal{C}_1) = p(y|\mathcal{C}_2)p(\mathcal{C}_2)$.
+>
+> ### Điểm cần lưu ý và hoàn thiện (Areas for Improvement)
+> - **Lập luận về CLT**: Việc bạn chia cho $D$ để đưa về dạng sample mean $\bar{U} = \mathbf{w}^T\mathbf{x}/D$ nhằm áp dụng đúng phát biểu định lý CLT cổ điển (Lindeberg–Lévy) từ giáo trình Casella là một liên hệ trực quan tốt. Tuy nhiên, lưu ý rằng tổng các biến ngẫu nhiên $\sum_{i=1}^D w_i x_i$ hay trung bình mẫu của chúng chỉ khác nhau một hằng số tỉ lệ $D$ (nếu biến ngẫu nhiên tiệm cận chuẩn thì nhân với $D$ vẫn là phân phối chuẩn). Ngoài ra, CLT đòi hỏi các $w_i x_i$ độc lập hoặc phụ thuộc yếu (weakly dependent), trong khi các đặc trưng của $\mathbf{x}$ trong thực tế có thể tương quan mạnh với nhau, do đó CLT ở đây chỉ đóng vai trò là một sự biện minh mang tính trực giác (heuristic/heuristic justification) chứ không phải lúc nào cũng thỏa mãn chặt chẽ.
+>
+> ### Gợi ý mở rộng (Suggestions)
+> - Bạn có thể giải tiếp phương trình bậc hai $p(y|\mathcal{C}_1)p(\mathcal{C}_1) = p(y|\mathcal{C}_2)p(\mathcal{C}_2)$ để thấy dạng nghiệm đại số của ngưỡng $y_0$. Đặc biệt, hãy xét trường hợp hai class có phương sai xấp xỉ bằng nhau ($\sigma_1^2 = \sigma_2^2$) và priors bằng nhau ($p(\mathcal{C}_1) = p(\mathcal{C}_2)$), khi đó ngưỡng $y_0$ sẽ rơi vào chính giữa trung bình hai lớp: $y_0 = \frac{1}{2}(\mu_1 + \mu_2)$.
+>
+> **⭐ Bonus points**
 > - Liên hệ chính xác dạng phát biểu cổ điển của Định lý Giới hạn Trung tâm (CLT) từ sách Thống kê suy luận của Casella & Berger.
 > - Tự diễn giải và biến đổi chi tiết hàm Log-Likelihood để chứng minh nghiệm MLE của phân phối chuẩn 1 chiều.
 > - Giải thích chuẩn xác cách chọn ngưỡng tối ưu dựa trên quy tắc Bayes và xác suất hậu nghiệm theo Section 1.5.1 của Bishop.
