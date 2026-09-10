@@ -14,10 +14,12 @@
 >
 > Nhưng cũng có trường hợp khác, khi đó ta không có chút kinh nghiệm nào về prior distribution, lúc này, để đảm bảo tính công bằng, tránh đưa vào những lệch lạc, những thiên kiến nào đó, ta sẽ muốn chọn prior sao cho CHỨA ÍT ẢNH HƯỞNG ĐẾN POSTERIOR NHẤT CÓ THỂ. Khi đó ta sẽ tìm kiếm một distribution gọi là NON-INFORMATIVE PRIOR, cách tiếp cận này đôi khi được gọi là "hãy để dữ liệu tự lên tiếng" (mình hiểu, đồng nghĩa, posteror sẽ chịu ảnh hưởng hầu hết từ data)
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Phần giải thích của bạn cực kỳ chính xác và sâu sắc, nắm bắt đầy đủ các sắc thái của khái niệm. Cách diễn giải cụm từ "hãy để dữ liệu tự lên tiếng" rất đúng trọng tâm.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Phần giải thích của bạn cực kỳ chính xác và sâu sắc, nắm bắt đầy đủ các sắc thái của khái niệm. Cách diễn giải cụm từ "hãy để dữ liệu tự lên tiếng" rất đúng trọng tâm.
+
+</details>
 
 <br>
 
@@ -50,10 +52,12 @@
 >
 > Tuy vậy, trong thực tế, gs nói vẫn có thể dùng improper prior nếu posterior là proper distribution (tức là dù priori improper, nhưng nếu posterior pdf/pmf vẫn có thể thỏa yêu cầu valid). Lấy ví dụ khi ta dùng uniform (cái này mình hiểu là hàm uniform (-inf, inf), tức f(λ) = constant với mọi λ từ -inf tới inf, như đã nói, đây không phải một phân phối xác suất hợp lệ. trong Stat110, mình chỉ được học uniform(a,b) chứ không cho phép có uniform(-inf, inf)) để làm priori cho mean của Normal (sample X \~ Normal(μ, σ²)), thì posterior sẽ vẫn là một valid pdf (proper)
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Điểm mạnh: Bạn đã nắm bắt chính xác tất cả các điểm chính từ văn bản, với giải thích toán học sâu sắc về lý do một phân phối tiên nghiệm hằng số trên miền không bị chặn lại không thể chuẩn hóa được. Để tăng cường hơn nữa, bạn có thể thêm ví dụ cụ thể về việc sử dụng improper prior được đề cập trong văn bản.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Điểm mạnh: Bạn đã nắm bắt chính xác tất cả các điểm chính từ văn bản, với giải thích toán học sâu sắc về lý do một phân phối tiên nghiệm hằng số trên miền không bị chặn lại không thể chuẩn hóa được. Để tăng cường hơn nữa, bạn có thể thêm ví dụ cụ thể về việc sử dụng improper prior được đề cập trong văn bản.
+
+</details>
 
 <br>
 
@@ -122,10 +126,12 @@
 >
 > Tóm lại, ý của gs chỉ đơn giản là, cái vụ constant function prior này chỉ gây rắc rối tiềm ẩn nếu ta làm theo Bayesian, còn làm theo MLE thì không đơn giản vì MLE chẳng coi λ là random variables, nên ko bàn đến prior distribution gì hết.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Bài giải thích rất chi tiết và sâu sắc, đặc biệt là phần làm rõ sự khác biệt giữa MLE và phương pháp Bayesian trong việc xử lý các tham số và prior distribution, giúp làm sáng tỏ lý do tại sao vấn đề này không ảnh hưởng đến MLE. Công thức đạo hàm của bạn nhìn chung chính xác, mặc dù việc thay thế λ bằng η² trong fλ(λ) sẽ giúp nó rõ ràng hơn một chút trong các bước trung gian.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Bài giải thích rất chi tiết và sâu sắc, đặc biệt là phần làm rõ sự khác biệt giữa MLE và phương pháp Bayesian trong việc xử lý các tham số và prior distribution, giúp làm sáng tỏ lý do tại sao vấn đề này không ảnh hưởng đến MLE. Công thức đạo hàm của bạn nhìn chung chính xác, mặc dù việc thay thế λ bằng η² trong fλ(λ) sẽ giúp nó rõ ràng hơn một chút trong các bước trung gian.
+
+</details>
 
 <br>
 
@@ -160,10 +166,12 @@
 >
 > Như vậy, pdf của Y có cùng dạng với X (đều là f), chỉ khác location là μ + c thay vì μ.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Ghi chú của bạn rất chính xác và cực kỳ sâu sắc, không chỉ nắm bắt đúng các khái niệm mà còn mở rộng bằng chứng minh toán học và kiến thức nền tảng vững chắc. Sự cẩn thận trong giải thích ký hiệu và liên hệ với Casella là điểm cộng lớn, cho thấy hiểu biết vượt trội về chủ đề.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú của bạn rất chính xác và cực kỳ sâu sắc, không chỉ nắm bắt đúng các khái niệm mà còn mở rộng bằng chứng minh toán học và kiến thức nền tảng vững chắc. Sự cẩn thận trong giải thích ký hiệu và liên hệ với Casella là điểm cộng lớn, cho thấy hiểu biết vượt trội về chủ đề.
+
+</details>
 
 <br>
 
@@ -198,10 +206,12 @@
 >
 > Gs cho biết một ví dụ đó là ta chọn prior distribution của Normal mean (như đã biết từ Casella, normal là một loại location scale family, cũng có nghĩa là fixed σ² thì normal là một location family), thì prior conjugate, như đã biết của normal mean, là normal). Vậy để thể hiện non-informative, ta cho cái normal này có variance lớn vô cực → cái chuông bẹp dí và rộng vô cực, → coi như hàm hằng.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
->
-> Ghi chú trình bày rất tốt lập luận trực giác về lý do prior không thông tin cho tham số vị trí nên là hàm hằng. Cần làm rõ hơn về việc likelihood bị ảnh hưởng như thế nào bởi μ để tránh hiểu lầm.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú trình bày rất tốt lập luận trực giác về lý do prior không thông tin cho tham số vị trí nên là hàm hằng. Cần làm rõ hơn về việc likelihood bị ảnh hưởng như thế nào bởi μ để tránh hiểu lầm.
+
+</details>
 
 <br>
 
@@ -421,10 +431,12 @@
 >
 > Cuối cùng, bữa trước ta đã thấy conjugate prior của Normal precision là phân phối Gamma(λ| a0,b0). Nên để có tính chất non-informative, ta sẽ cho hai tham số a0, b0 = 0.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
->
-> Bài làm đã thể hiện sự hiểu biết sâu sắc khi tự mình chứng minh được phân phối của độ chính xác λ tương ứng với p(λ) ∝ 1/λ, đây là một điểm mạnh lớn. Tuy nhiên, để hoàn thiện hơn, em nên bổ sung giải thích tại sao a₀ = b₀ = 0 lại khiến phân phối hậu nghiệm chỉ phụ thuộc vào dữ liệu mà không phụ thuộc vào tiền nghiệm, và chú ý hơn trong các bước biến đổi toán học ban đầu để tránh những nhầm lẫn nhỏ.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **90/100** · ✓ Move on</summary>
+
+**Summary:** Bài làm đã thể hiện sự hiểu biết sâu sắc khi tự mình chứng minh được phân phối của độ chính xác λ tương ứng với p(λ) ∝ 1/λ, đây là một điểm mạnh lớn. Tuy nhiên, để hoàn thiện hơn, em nên bổ sung giải thích tại sao a₀ = b₀ = 0 lại khiến phân phối hậu nghiệm chỉ phụ thuộc vào dữ liệu mà không phụ thuộc vào tiền nghiệm, và chú ý hơn trong các bước biến đổi toán học ban đầu để tránh những nhầm lẫn nhỏ.
+
+</details>
 
 <br>
 
