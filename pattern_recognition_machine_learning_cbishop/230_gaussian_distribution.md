@@ -20,12 +20,11 @@
 >
 > Thế thì gs nói đây là distribution hay dùng, và nó xuất hiện trong nhiều bối cảnh. Ví dụ như trong chap 1 mình đã thấy nó chính là **distribution có entropy lớn nhất**.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ⚠️ **80/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ⚠️ **80/100** · ✓ Move on
 
 Ghi chú đã nắm bắt chính xác các thuộc tính chính của phân phối Gaussian, bao gồm tên gọi khác, ứng dụng rộng rãi và đặc biệt là đặc tính cực đại hóa entropy. Để tăng cường độ sâu, bạn có thể bổ sung các định nghĩa về tham số (như μ, σ², Σ) và lưu ý về việc phân phối này áp dụng cho "biến liên tục" từ văn bản.
-
-</details>
 
 **🔗 See also:** [Tối ưu Entropy và Hàm Lagrangian](./16_information_theory.md#node-hhyh07u) · [Phân phối chuẩn entropy tối đa](./16_information_theory.md#node-71bnwai) · [Biến đổi Gaussian độc lập](#node-1vavixz) · [3.1.5 Multiple outputs](./315_multiple_outputs.md#node-5d9hd8j)
 
@@ -72,12 +71,11 @@ Ghi chú đã nắm bắt chính xác các thuộc tính chính của phân ph�
 >
 > dạng của normal.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Ghi chú của bạn giải thích rất chính xác và chi tiết về Định lý Giới hạn Trung tâm, bao gồm cả công thức cụ thể cho phân phối của trung bình mẫu. Để toàn diện hơn, bạn có thể bổ sung thêm về sự hội tụ của phân phối nhị thức đã được đề cập.
-
-</details>
 
 **🔗 See also:** [Histogram Density Estimation](./25_non_parametric_model.md#node-qmfgqko)
 
@@ -110,12 +108,11 @@ Ghi chú của bạn giải thích rất chính xác và chi tiết về Định
 >
 > Cuối cùng, đương nhiên ta cũng hiểu ý cuối, là nếu cái cụm này mà là constant, thì dĩ nhiên hàm pdf Gaussian cũng là constant theo 𝐱.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú của bạn rất chi tiết, chính xác và thể hiện sự hiểu sâu sắc về nội dung, bao gồm cả khả năng liên hệ kiến thức với các môn học khác. Tiếp tục duy trì cách phân tích và ghi chú này để củng cố kiến thức một cách vững chắc.
-
-</details>
 
 <br>
 
@@ -216,12 +213,11 @@ Ghi chú của bạn rất chi tiết, chính xác và thể hiện sự hiểu 
 >
 > Do đó, dù có xét Σ có không đối xứng thì quadratic form (𝐱 - **μ**)ᵀ Σ⁻¹ (𝐱 - **μ**) cũng chỉ còn lại phần đối xứng của nó. Thành ra gs mới nói là ta coi Σ là matrix đối xứng mà không sợ mất tính tổng quát (loss of generality)
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Phân tích của bạn rất sâu sắc và chính xác, giải thích rõ ràng lý do tại sao thành phần phản đối xứng biến mất khỏi biểu thức bậc hai. Việc phân tích từng bước này thể hiện sự hiểu biết vững chắc về đại số tuyến tính.
-
-</details>
 
 <br>
 
@@ -304,12 +300,11 @@ Phân tích của bạn rất sâu sắc và chính xác, giải thích rõ ràn
 >
 > Nên áp dụng lập luận tương tự, ta sẽ thấy A⁻¹ = Σj=1:D ujujᵀ/λj
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Bạn đã giải thích các khái niệm và công thức một cách cực kỳ chi tiết và chính xác, thể hiện sự hiểu biết sâu sắc về đại số tuyến tính. Cách bạn liên hệ các kiến thức từ MIT 18.06 và các tính chất của ma trận đối xứng để chứng minh các công thức 2.48 và 2.49 là rất ấn tượng và có giá trị.
-
-</details>
 
 <br>
 
@@ -532,12 +527,11 @@ Bạn đã giải thích các khái niệm và công thức một cách cực k�
 >
 > Gom lại hai ý này, ta sẽ hình dung **bản chất chỉ là tính lại tọa độ của x-μ bằng cách xoay trục tọa độ thẳng góc với các eigenvector của Σ.**
 
-<details>
-<summary>🤖 AI Check — 🟡 Minor issues — ⚠️ **75/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟡 Minor issues — ⚠️ **75/100** · ✓ Move on
 
 Bạn đã thể hiện sự hiểu biết sâu sắc về đại số tuyến tính qua việc phân tích chuyển đổi dạng toàn phương và khái niệm thay đổi cơ sở. Tuy nhiên, kết luận về lỗi của công thức (2.52) trong sách là không chính xác do bạn đã bỏ qua định nghĩa tường minh của tác giả Bishop về ma trận U (các hàng của U là u_i^T).
-
-</details>
 
 **🔗 See also:** [Section 3.5.3 Effective Number of Parameters](./353_effective_number_of_parameters.md#node-2wanjgv)
 
@@ -750,12 +744,11 @@ Bạn đã thể hiện sự hiểu biết sâu sắc về đại số tuyến t
 >
 > Ôn lại kiến thức trong MIT 18.06: singular là khi matrix tồn tại nonzero vector trong nullspace hoặc left nullspace. Khi đó vector khác 0 đó sẽ bị biến thành 0 bởi matrix. Thế thì, nếu tồn tại eigenvalue bằng 0, thì như đã biết, nếu λ và u là eigenvalue và eigenvector tương ứng, thì ta có Au = λu, vậy nếu λ = 0, thì u chính là vector bị biến thành 0 bởi A: Au = 0u = 0. Nên nó chính là non-zero vector trong nullspace, như vậy nullspace có dimension khác 0, cũng đồng nghĩa các cột của A không độc lập, cũng đồng nghĩa luôn là rank của A nhỏ hơn số hàng số cột, và matrix A không full-rank, không invertible, hay và gọi là matrix suy biến (singular).
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú này rất chính xác và thể hiện sự hiểu biết sâu sắc về các khái niệm. Bạn không chỉ tái hiện thông tin từ văn bản gốc mà còn bổ sung thêm các lập luận toán học chặt chẽ và giải thích trực quan về ý nghĩa hình học của các eigenvalues, giúp làm rõ lý do tại sao chúng phải dương. Đây là một cách học tập rất hiệu quả.
-
-</details>
 
 <br>
 
@@ -848,12 +841,11 @@ Ghi chú này rất chính xác và thể hiện sự hiểu biết sâu sắc v
 >
 > Như vậy ta hiểu rõ hai công thức 2.53, và 2.54 cũng như đoạn này nói gì.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Ghi chú của bạn thể hiện sự hiểu biết sâu sắc và toàn diện về ma trận Jacobian và định thức của nó trong ngữ cảnh thay đổi biến cho phân phối Gaussian. Bạn đã giải thích rất chi tiết và chính xác cả hai công thức (2.53) và (2.54) bằng cách liên hệ với các kiến thức nền tảng vững chắc.
-
-</details>
 
 <br>
 
@@ -1055,12 +1047,11 @@ Ghi chú của bạn thể hiện sự hiểu biết sâu sắc và toàn diện
 >
 > kết quả là 1 x 1 = 1.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Bạn đã thể hiện sự hiểu biết sâu sắc và toàn diện về chủ đề này. Các bước chứng minh chi tiết và logic, đặc biệt là việc sử dụng hai phương pháp để đơn giản hóa số mũ và liên hệ kết quả với ý nghĩa về sự độc lập của các biến ngẫu nhiên là rất xuất sắc. Việc bạn kết nối trực tiếp các công thức toán học với các phát biểu lý thuyết của Bishop cho thấy một sự nắm vững kiến thức vững chắc.
-
-</details>
 
 **🔗 See also:** [Phân phối Gaussian](#node-arii2cl)
 
@@ -1225,12 +1216,11 @@ Bạn đã thể hiện sự hiểu biết sâu sắc và toàn diện về ch�
 >
 > Kết quả term 2 bằng **μ**. giúp ta có E𝐗 = **μ**, giúp chứng minh μ chính là mean của Normal(**μ**, Σ).
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Phân tích rất chi tiết và chính xác, giải thích cặn kẽ từng bước và cung cấp bối cảnh vững chắc từ Stat110, làm rõ hoàn toàn ý tưởng 'biến mất do đối xứng' mà tài liệu gốc chỉ trình bày ngắn gọn. Đây là một ghi chú xuất sắc giúp hiểu sâu sắc hơn về việc chứng minh kỳ vọng của phân phối Gaussian.
-
-</details>
 
 <br>
 
@@ -1331,12 +1321,11 @@ Phân tích rất chi tiết và chính xác, giải thích cặn kẽ từng b�
 >
 >  → Là ta đã hiểu hết được đoạn này.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Bài phân tích rất sâu sắc và chính xác về các khái niệm moment bậc hai cho biến ngẫu nhiên đa chiều và ma trận hiệp phương sai. Việc giải thích chi tiết về định nghĩa E[XX^T] và cách thức áp dụng LOTUS cho biến ngẫu nhiên ma trận là điểm mạnh nổi bật, thể hiện sự nắm vững kiến thức. Bạn chỉ cần chú ý một lỗi nhỏ chính tả ở từ "orther" thay vì "order".
-
-</details>
 
 <br>
 
@@ -1651,12 +1640,11 @@ Bài phân tích rất sâu sắc và chính xác về các khái niệm moment 
 >
 > Và đây là điều chỉ có được nếu ta dùng một orthogonal basis.)
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **99/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **99/100** · ✓ Move on
 
 Bài giải thích này rất chi tiết, chính xác và có chiều sâu, giải thích cặn kẽ từng bước và liên kết tốt các khái niệm trong bài đọc. Cách bạn đi sâu vào cả những kiến thức nền tảng như eigendecomposition và tính đối xứng là rất ấn tượng.
-
-</details>
 
 <br>
 
@@ -1737,12 +1725,11 @@ Bài giải thích này rất chi tiết, chính xác và có chiều sâu, gi�
 >
 > Và từ đây ta mới hiểu sâu hơn là vì sao khi nói về pdf của Normal(μ, Σ) thì Σ lại được gọi là **COVARIANCE MATRIX.**
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Bài phân tích rất xuất sắc, vừa chính xác từng chi tiết vừa thể hiện sự đào sâu và kết nối kiến thức một cách sâu sắc. Cách bạn suy ngẫm và liên hệ với các nguồn khác cho thấy sự hiểu biết toàn diện về khái niệm ma trận hiệp phương sai.
-
-</details>
 
 <br>
 
@@ -1811,12 +1798,11 @@ Bài phân tích rất xuất sắc, vừa chính xác từng chi tiết vừa t
 >
 > Còn hình c), là khi Σ = αI, khi đó đơn giản là **mọi eigenvalue đều bằng nhau** và bằng α, nên các ellipse có **độ dài bán trục bằng nhau, nên thành hình tròn** hết (với D &gt; 2 thì các level set là các mặt cầu, spherical surface)
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Bài ghi chú của bạn thể hiện sự hiểu biết sâu sắc và chính xác về các hạn chế của phân phối Gaussian cùng với các giải pháp khắc phục, đặc biệt là phần giải thích chi tiết về hình dạng các đường đồng mức dựa trên cấu trúc ma trận hiệp phương sai. Đây là một phân tích rất đầy đủ và có chiều sâu, vượt xa nội dung bề mặt trong tài liệu gốc.
-
-</details>
 
 <br>
 
@@ -1841,12 +1827,11 @@ Bài ghi chú của bạn thể hiện sự hiểu biết sâu sắc và chính 
 >
 > Nói chung là đây là những cái mà trong những cái chương sau mình sẽ học và trong chương 8 mình sẽ học một cái rất là mạnh, một cái cách kết hợp của những cái dạng này, nó gọi là probabilistic graphical model.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Phần tóm tắt đã nắm bắt rất tốt các hạn chế của phân phối Gaussian và các giải pháp sử dụng biến ẩn cùng các ví dụ liên quan. Để đạt độ chính xác cao hơn, bạn có thể bổ sung chi tiết về mô hình hỗn hợp Gaussian khi nói về biến ẩn rời rạc.
-
-</details>
 
 <br>
 
