@@ -745,10 +745,12 @@
 >
 > là pmf của multinomial distribution
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Phần phân tích và dẫn xuất của bạn cho phân phối đa thức là vô cùng kỹ lưỡng và sâu sắc, vượt xa việc chỉ tóm tắt nội dung. Bạn đã thể hiện sự hiểu biết sâu sắc về các nguyên lý xác suất nền tảng. Có một lỗi nhỏ khi viết 'mL' thay vì 'mK' trong một dòng, nhưng đây là một điểm không đáng kể so với chất lượng tổng thể của bài làm.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Phần phân tích và dẫn xuất của bạn cho phân phối đa thức là vô cùng kỹ lưỡng và sâu sắc, vượt xa việc chỉ tóm tắt nội dung. Bạn đã thể hiện sự hiểu biết sâu sắc về các nguyên lý xác suất nền tảng. Có một lỗi nhỏ khi viết 'mL' thay vì 'mK' trong một dòng, nhưng đây là một điểm không đáng kể so với chất lượng tổng thể của bài làm.
+
+</details>
 
 <br>
 
@@ -821,10 +823,12 @@
 >
 > Và cũng qua đó ta có thể hiểu đại khái công thức có vụ -1 là vì đây là một dạng mở rộng của beta.
 
-> [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **85/100**
->
-> Bài phân tích cho thấy sự nắm vững xuất sắc về khái niệm prior liên hợp và mối liên hệ sâu sắc giữa phân phối Beta và Dirichlet. Cách giải thích về dạng của prior và nguồn gốc của hằng số chuẩn hóa rất rõ ràng và mạch lạc. Tuy nhiên, cần diễn đạt chính xác hơn về lý do tại sao Σk μk = 1 lại là một ràng buộc quan trọng cho các tham số μk mà phân phối prior phải tuân thủ, chứ không chỉ đơn thuần là điều kiện hợp lệ của PMF Multinomial. Một chút tinh tế hơn trong cách dùng từ sẽ nâng cao chất lượng bài phân tích.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ⚠️ **85/100** · ✓ Move on</summary>
+
+**Summary:** Bài phân tích cho thấy sự nắm vững xuất sắc về khái niệm prior liên hợp và mối liên hệ sâu sắc giữa phân phối Beta và Dirichlet. Cách giải thích về dạng của prior và nguồn gốc của hằng số chuẩn hóa rất rõ ràng và mạch lạc. Tuy nhiên, cần diễn đạt chính xác hơn về lý do tại sao Σk μk = 1 lại là một ràng buộc quan trọng cho các tham số μk mà phân phối prior phải tuân thủ, chứ không chỉ đơn thuần là điều kiện hợp lệ của PMF Multinomial. Một chút tinh tế hơn trong cách dùng từ sẽ nâng cao chất lượng bài phân tích.
+
+</details>
 
 <br>
 
@@ -879,10 +883,12 @@
 >
 > Với α=(0.1, 0.1, 0.1) thì nó có dạng 3 đỉnh cao vút lên ở các đỉnh (giống như beta(0.1, 0.1)
 
-> [!TIP]
-> **🤖 AI Feedback** — ❌ Score: **65/100**
->
-> Bài làm thể hiện sự hiểu biết tốt về cách dẫn xuất phân phối hậu nghiệm Dirichlet. Tuy nhiên, em đã bỏ sót giải thích quan trọng về ý nghĩa các tham số "αk" như số lượng quan sát hiệu quả và mô tả Hình 2.5 còn thiếu chi tiết về biểu đồ bên phải, ảnh hưởng đến chiều sâu phân tích.
+<details>
+<summary>🤖 AI Check — 🟡 Minor issues — ❌ **65/100** · ✓ Move on</summary>
+
+**Summary:** Bài làm thể hiện sự hiểu biết tốt về cách dẫn xuất phân phối hậu nghiệm Dirichlet. Tuy nhiên, em đã bỏ sót giải thích quan trọng về ý nghĩa các tham số "αk" như số lượng quan sát hiệu quả và mô tả Hình 2.5 còn thiếu chi tiết về biểu đồ bên phải, ảnh hưởng đến chiều sâu phân tích.
+
+</details>
 
 <br>
 
