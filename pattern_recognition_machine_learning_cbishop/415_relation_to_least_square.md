@@ -320,7 +320,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú cực kỳ chi tiết, mạch lạc và thể hiện sự hiểu biết sâu sắc về mặt toán học cũng như trực giác đằng sau mối liên hệ giữa Least Squares và Fisher's LDA.
+Ghi chú cực kỳ chi tiết, mạch lạc và thể hiện sự hiểu biết sâu sắc về mặt toán học cũng như trực giác đằng sau mối liên hệ giữa Least Squares và Fisher's LDA.
 
 
 ### Điểm mạnh
@@ -336,9 +336,9 @@
 ### Gợi ý mở rộng
 - Hãy thử chứng minh nốt tính chất $\mathbf{S}_B\mathbf{w} \parallel (\mathbf{m}_1 - \mathbf{m}_2)$ để thấy rõ tại sao ta có thể bỏ qua thành phần này và suy ra $\mathbf{w} \propto \mathbf{S}_W^{-1}(\mathbf{m}_1 - \mathbf{m}_2)$.
 
-#### ⭐ Bonus points
-- Áp dụng kiến thức vi phân toàn phần (linear operator / Frechet derivative) từ MIT 18.S096 để giải thích đạo hàm ma trận.
-- Chỉ ra được ưu điểm vượt trội của Least Squares so với Fisher gốc: tự động xác định ngưỡng phân lớp (bias w0) mà không cần bước ước lượng phân phối Gaussian trên không gian 1 chiều chiếu.
+> [!TIP]
+> - Áp dụng kiến thức vi phân toàn phần (linear operator / Frechet derivative) từ MIT 18.S096 để giải thích đạo hàm ma trận.
+> - Chỉ ra được ưu điểm vượt trội của Least Squares so với Fisher gốc: tự động xác định ngưỡng phân lớp (bias w0) mà không cần bước ước lượng phân phối Gaussian trên không gian 1 chiều chiếu.
 
 </details>
 
