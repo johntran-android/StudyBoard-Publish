@@ -91,7 +91,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Bài phân tích rất chính xác và có chiều sâu, đặc biệt là phần dẫn giải chi tiết các bước biến đổi ma trận để tìm ra nghiệm đóng. Bạn đã nắm vững các khái niệm và mối liên hệ giữa chúng.
+Bài phân tích rất chính xác và có chiều sâu, đặc biệt là phần dẫn giải chi tiết các bước biến đổi ma trận để tìm ra nghiệm đóng. Bạn đã nắm vững các khái niệm và mối liên hệ giữa chúng.
 
 </details>
 
@@ -235,7 +235,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **97/100** · ✓ Move on</summary>
 
-**Summary:** Bài phân tích của bạn rất sâu sắc và chính xác, thể hiện sự hiểu biết vững vàng về cơ sở toán học và trực giác hình học của regularization, đặc biệt là sự khác biệt giữa L1 và L2. Mặc dù rất chi tiết và đúng, bạn có thể cân nhắc cô đọng một số phần để ghi chú của mình súc tích hơn.
+Bài phân tích của bạn rất sâu sắc và chính xác, thể hiện sự hiểu biết vững vàng về cơ sở toán học và trực giác hình học của regularization, đặc biệt là sự khác biệt giữa L1 và L2. Mặc dù rất chi tiết và đúng, bạn có thể cân nhắc cô đọng một số phần để ghi chú của mình súc tích hơn.
 
 </details>
 
@@ -265,7 +265,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ⚠️ **88/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú giải thích rất rõ ràng về vai trò của regularization và sự dịch chuyển trong việc quản lý độ phức tạp của mô hình, đồng thời đào sâu vào ý nghĩa của siêu tham số lambda. Tuy nhiên, bạn đã bỏ sót thông tin về loại regularization cụ thể mà chương này sẽ tập trung nghiên cứu.
+Ghi chú giải thích rất rõ ràng về vai trò của regularization và sự dịch chuyển trong việc quản lý độ phức tạp của mô hình, đồng thời đào sâu vào ý nghĩa của siêu tham số lambda. Tuy nhiên, bạn đã bỏ sót thông tin về loại regularization cụ thể mà chương này sẽ tập trung nghiên cứu.
 
 </details>
 
