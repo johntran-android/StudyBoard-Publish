@@ -368,10 +368,12 @@
 >
 > Vậy **Xa** có phân phối Normal(**μa**, **Λaa** - **ΛabΛbb⁻¹Λba**\]**inv**)
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
->
-> Ghi chú của bạn đã cung cấp một phân tích cực kỳ chi tiết và chính xác về quá trình suy diễn phân phối biên của Gaussian, đi theo sát logic và các kết quả trong sách giáo khoa. Tuy nhiên, việc trình bày có thể được tinh gọn hơn ở một số bước biến đổi đại số để tăng tính súc tích.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú của bạn đã cung cấp một phân tích cực kỳ chi tiết và chính xác về quá trình suy diễn phân phối biên của Gaussian, đi theo sát logic và các kết quả trong sách giáo khoa. Tuy nhiên, việc trình bày có thể được tinh gọn hơn ở một số bước biến đổi đại số để tăng tính súc tích.
+
+</details>
 
 <br>
 
@@ -392,10 +394,12 @@
 >
 > Và như vậy ta có nhận xét, **với conditional distribution, thì dùng cách biểu thị theo các matrix con của precision matrix sẽ gọn hơn nhưng với marginal distribution thì dùng cách biểu thị theo partitioned covariance matrix sẽ gọn hơn**.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
->
-> Bài phân tích rất chính xác, nắm bắt được cả các công thức biến đổi và kết luận quan trọng về sự đơn giản hóa trong biểu diễn cho phân phối biên và có điều kiện. Để bài phân tích súc tích hơn, bạn có thể cân nhắc rút gọn một số phần diễn đạt.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+
+**Summary:** Bài phân tích rất chính xác, nắm bắt được cả các công thức biến đổi và kết luận quan trọng về sự đơn giản hóa trong biểu diễn cho phân phối biên và có điều kiện. Để bài phân tích súc tích hơn, bạn có thể cân nhắc rút gọn một số phần diễn đạt.
+
+</details>
 
 **🔗 See also:** [Tính chất phân phối biên Gaussian](./233_bayess_theorem_for_gaussian_variables.md#node-77d52im)
 
@@ -450,10 +454,12 @@
 >
 > Hình ảnh minh họa cho D=2, ramdom vector 𝐗 tách thành hai single random variable Xa, Xb. Thì hình bên trái thể hiện joint pdf, là một 2D normal. HÌnh bên phải, màu xanh, là pdf của 1D normal của Xa. Và hình màu đỏ là f(xa|xb), cũng là normal.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Bài tóm tắt rất đầy đủ và chính xác các kết quả về phân phối Gaussian phân hoạch, từ định nghĩa đến các công thức và minh họa hình ảnh. Phần giải thích về ý nghĩa của "Partitioned Gaussians" rất trực quan, giúp người đọc dễ hiểu hơn.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Bài tóm tắt rất đầy đủ và chính xác các kết quả về phân phối Gaussian phân hoạch, từ định nghĩa đến các công thức và minh họa hình ảnh. Phần giải thích về ý nghĩa của "Partitioned Gaussians" rất trực quan, giúp người đọc dễ hiểu hơn.
+
+</details>
 
 **🔗 See also:** [Mô hình Gaussian tuyến tính](./231_conditional_gaussian.md#node-usyapsm)
 
