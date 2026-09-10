@@ -279,7 +279,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú vô cùng chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về cả hai phương pháp tính tích phân (dùng công thức phân phối Gaussian tuyến tính và biến đổi trực tiếp qua hàm năng lượng). Các bước phân tích rõ ràng và việc làm tường minh các biến phụ thuộc ẩn rất xuất sắc.
+Ghi chú vô cùng chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về cả hai phương pháp tính tích phân (dùng công thức phân phối Gaussian tuyến tính và biến đổi trực tiếp qua hàm năng lượng). Các bước phân tích rõ ràng và việc làm tường minh các biến phụ thuộc ẩn rất xuất sắc.
 
 </details>
 
@@ -483,7 +483,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú rất chi tiết, tự biến đổi toán học xuất sắc và giải thích rõ ràng mối liên hệ giữa ma trận Hessian với các công thức posterior trước đó. Tuy nhiên, bạn lưu ý một lỗi gõ nhỏ ở bước cuối cùng khi bị thiếu hệ số 1/2 ở thành phần alpha trong công thức của E(m_N).
+Ghi chú rất chi tiết, tự biến đổi toán học xuất sắc và giải thích rõ ràng mối liên hệ giữa ma trận Hessian với các công thức posterior trước đó. Tuy nhiên, bạn lưu ý một lỗi gõ nhỏ ở bước cuối cùng khi bị thiếu hệ số 1/2 ở thành phần alpha trong công thức của E(m_N).
 
 </details>
 
@@ -623,7 +623,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn cực kỳ chi tiết, mạch lạc và chính xác tuyệt đối trong từng bước biến đổi toán học để chứng minh (3.85) và (3.86). Việc giải thích tường minh hằng số chuẩn hóa Gaussian và cách triệt tiêu các đại lượng logarit là một điểm cộng rất lớn giúp người đọc dễ dàng theo kịp.
+Ghi chú của bạn cực kỳ chi tiết, mạch lạc và chính xác tuyệt đối trong từng bước biến đổi toán học để chứng minh (3.85) và (3.86). Việc giải thích tường minh hằng số chuẩn hóa Gaussian và cách triệt tiêu các đại lượng logarit là một điểm cộng rất lớn giúp người đọc dễ dàng theo kịp.
 
 
 ### Điểm mạnh
@@ -640,9 +640,9 @@ u)^M/2] (|Ainv|^1/2)`
 ### Gợi ý phát triển thêm
 - Hãy tìm hiểu thêm về ý nghĩa của ma trận $\mathbf{A}$ trong ngữ cảnh này. Ma trận $\mathbf{A}$ chính là ma trận Hessian (đạo hàm bậc hai) của hàm năng lượng $E(\mathbf{w})$ tại điểm cực trị $\mathbf{m}_N$. Việc tính tích phân này thực chất là một bước trong phương pháp **Xấp xỉ Laplace (Laplace Approximation)** để xấp xỉ phân phối posterior dưới dạng phân phối chuẩn.
 
-#### ⭐ Bonus points
-- Áp dụng chính xác tính chất định thức của ma trận nghịch đảo để đơn giản hóa biểu thức chứa ma trận A.
-- Liên hệ thành công phương pháp tính tích phân bằng cách đưa về hàm mật độ xác suất Gaussian chuẩn hóa.
+> [!TIP]
+> - Áp dụng chính xác tính chất định thức của ma trận nghịch đảo để đơn giản hóa biểu thức chứa ma trận A.
+> - Liên hệ thành công phương pháp tính tích phân bằng cách đưa về hàm mật độ xác suất Gaussian chuẩn hóa.
 
 </details>
 
@@ -768,7 +768,7 @@ u)^M/2] (|Ainv|^1/2)`
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chép cực kỳ xuất sắc, giải thích rất sâu sắc và chính xác bản chất toán học của các thành phần trong công thức model evidence cùng sự liên hệ hoàn hảo với các đồ thị. Để hoàn thiện hơn, bạn có thể giải thích rõ hơn về mặt toán học tại sao định thức của ma trận precision A tăng lên khi số chiều M tăng.
+Ghi chép cực kỳ xuất sắc, giải thích rất sâu sắc và chính xác bản chất toán học của các thành phần trong công thức model evidence cùng sự liên hệ hoàn hảo với các đồ thị. Để hoàn thiện hơn, bạn có thể giải thích rõ hơn về mặt toán học tại sao định thức của ma trận precision A tăng lên khi số chiều M tăng.
 
 </details>
 
