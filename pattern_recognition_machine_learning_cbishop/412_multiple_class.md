@@ -30,10 +30,12 @@
 >
 > Tuy nhiên, cách làm này cũng gặp phải hạn chế tương tự vì tạo ra vùng không gian không thể phân định. Điển hình như vùng màu xanh ở hình minh họa bên phải: khi xét giữa C1 và C2 thì vùng này được gán về C2; khi xét giữa C2 và C3 thì lại thuộc về C3; nhưng khi xét giữa C1 và C3 thì lại thuộc về C1. Do xảy ra mâu thuẫn giữa các bộ phân loại cặp, chúng ta không thể xác định điểm dữ liệu cần được gán vào lớp nào. Tóm lại, cả hai phương pháp kết hợp các hàm phân biệt nhị phân nhằm giải quyết bài toán nhiều lớp đều bộc lộ những khiếm khuyết nghiêm trọng.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **96/100**
->
-> Ghi chú rất xuất sắc, giải thích chi tiết, chính xác bản chất và nguyên nhân tạo ra vùng nhập nhằng (ambiguous regions) ở cả hai phương pháp. Bạn có thể bổ sung rõ hơn thuật ngữ 'bầu chọn theo đa số' (majority vote) ở phương pháp one-versus-one để lập luận về sự bế tắc khi xảy ra mâu thuẫn phiếu bầu được chặt chẽ hơn.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **96/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú rất xuất sắc, giải thích chi tiết, chính xác bản chất và nguyên nhân tạo ra vùng nhập nhằng (ambiguous regions) ở cả hai phương pháp. Bạn có thể bổ sung rõ hơn thuật ngữ 'bầu chọn theo đa số' (majority vote) ở phương pháp one-versus-one để lập luận về sự bế tắc khi xảy ra mâu thuẫn phiếu bầu được chặt chẽ hơn.
+
+</details>
 
 <br>
 
@@ -155,10 +157,12 @@
 >
 > Còn vì sao gọi là singly connect, thì đại khái là khi không có chuyện giữa hai điểm 𝐱A, 𝐱B ∈ Rk lại có điểm nào đó trên đoạn thằng 𝐱A, 𝐱B không thuộc Rk. Và tính convex đã bao hàm tính chất này, vì ta vừa chứng minh luôn rằng, với mọi 𝐱^ giữa 𝐱A, 𝐱B thì nó đều thuộc Rk.
 
-> [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
->
-> Ghi chú rất xuất sắc, bạn đã diễn giải và biến đổi đại số chứng minh tính lồi của vùng quyết định một cách cực kỳ chi tiết, chặt chẽ. Điểm cần lưu ý nhỏ là trong sách dùng bất đẳng thức ngặt (>) cho bên trong miền, và khái niệm 'singly connected' (đơn liên) thường ngụ ý miền liên thông không có lỗ hổng, tính lồi tự động thỏa mãn điều này.
+<details>
+<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+
+**Summary:** Ghi chú rất xuất sắc, bạn đã diễn giải và biến đổi đại số chứng minh tính lồi của vùng quyết định một cách cực kỳ chi tiết, chặt chẽ. Điểm cần lưu ý nhỏ là trong sách dùng bất đẳng thức ngặt (>) cho bên trong miền, và khái niệm 'singly connected' (đơn liên) thường ngụ ý miền liên thông không có lỗ hổng, tính lồi tự động thỏa mãn điều này.
+
+</details>
 
 <br>
 
