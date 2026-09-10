@@ -41,7 +41,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Bài tóm tắt rất chính xác và đầy đủ các ý chính từ văn bản gốc, bao gồm cả việc giải thích các hình ảnh minh họa. Để bài viết mạch lạc hơn, bạn có thể cân nhắc tránh lặp lại một số cụm từ và tổng hợp ý một cách ngắn gọn hơn.
+Bài tóm tắt rất chính xác và đầy đủ các ý chính từ văn bản gốc, bao gồm cả việc giải thích các hình ảnh minh họa. Để bài viết mạch lạc hơn, bạn có thể cân nhắc tránh lặp lại một số cụm từ và tổng hợp ý một cách ngắn gọn hơn.
 
 </details>
 
@@ -77,7 +77,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Bạn đã nắm vững khái niệm về Hỗn hợp Gaussian (Mixture of Gaussians) và giải thích công thức (2.188) một cách chính xác, cùng với việc đọc đúng các hệ số từ hình minh họa. Phân tích sâu sắc về convex combination là một điểm cộng lớn, thể hiện sự hiểu biết vượt trội về lý thuyết.
+Bạn đã nắm vững khái niệm về Hỗn hợp Gaussian (Mixture of Gaussians) và giải thích công thức (2.188) một cách chính xác, cùng với việc đọc đúng các hệ số từ hình minh họa. Phân tích sâu sắc về convex combination là một điểm cộng lớn, thể hiện sự hiểu biết vượt trội về lý thuyết.
 
 </details>
 
@@ -129,7 +129,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
 
-**Summary:** Rất xuất sắc. Bạn đã giải thích chi tiết và chính xác mọi điểm trong văn bản, đặc biệt là việc làm rõ các bước tích phân và khái niệm "tổ hợp lồi" đã bổ sung thêm chiều sâu đáng kể cho phần giải thích.
+Rất xuất sắc. Bạn đã giải thích chi tiết và chính xác mọi điểm trong văn bản, đặc biệt là việc làm rõ các bước tích phân và khái niệm "tổ hợp lồi" đã bổ sung thêm chiều sâu đáng kể cho phần giải thích.
 
 </details>
 
@@ -211,7 +211,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn cực kỳ rõ ràng, chính xác và cung cấp một cách suy luận từng bước kỹ lưỡng cho cả hai phương trình (2.191) và (2.192), thể hiện sự hiểu biết sâu sắc về các khái niệm. Việc liên kết với các định lý xác suất cốt lõi (LOTP, Bayes) là một điểm mạnh đáng kể.
+Ghi chú của bạn cực kỳ rõ ràng, chính xác và cung cấp một cách suy luận từng bước kỹ lưỡng cho cả hai phương trình (2.191) và (2.192), thể hiện sự hiểu biết sâu sắc về các khái niệm. Việc liên kết với các định lý xác suất cốt lõi (LOTP, Bayes) là một điểm mạnh đáng kể.
 
 </details>
 
@@ -323,7 +323,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Bài viết rất chính xác và cực kỳ chi tiết, giải thích rõ ràng từng bước hình thành hàm log-likelihood và lý do vì sao không có nghiệm dạng đóng. Phần bình luận về ký hiệu của Bishop cũng rất sâu sắc, giúp làm rõ những điểm gây bối rối cho người đọc.
+Bài viết rất chính xác và cực kỳ chi tiết, giải thích rõ ràng từng bước hình thành hàm log-likelihood và lý do vì sao không có nghiệm dạng đóng. Phần bình luận về ký hiệu của Bishop cũng rất sâu sắc, giúp làm rõ những điểm gây bối rối cho người đọc.
 
 </details>
 
