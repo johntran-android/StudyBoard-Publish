@@ -22,12 +22,11 @@
 >
 > Thành ra, qua phần này, ta sẽ thảo luận qua Bayesian approach, và gs nói rằng, nó sẽ giúp tránh được vấn đề overfit, cũng như có thể dẫn đến một phương pháp tự quyết định mức complexity của model thông qua training data (mà ko cần dành riêng data cho validation).
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Bản ghi chú vô cùng xuất sắc khi giải thích rất sâu sắc, liên hệ chính xác các công thức toán học đã học để làm rõ nghĩa cho đoạn văn bản. Để hoàn hảo hơn, bạn có thể bổ sung ý nhỏ của tác giả về tầm quan trọng của việc lựa chọn số lượng và dạng thức của basis functions đối với hành vi của mô hình.
-
-</details>
 
 <br>
 
@@ -196,12 +195,11 @@ Bản ghi chú vô cùng xuất sắc khi giải thích rất sâu sắc, liên 
 >
 > vì bên trong exp của f(𝐭|𝐰) có dạng exp (quadratic function của 𝐰). thì nếu ta chọn prior f(𝐰) là normal(𝐦0, 𝐒0) thì pdf sẽ cũng có dạng exp (quadratic function của 𝐰). Để rồi khi nhân lại f(t|𝐰) f(𝐰) / f(𝐭) thì dùng tính chất hàm exp, cái tử cũng sẽ nhập lại, để rồi trở thành dạng exp \[quadratic function cuả 𝐰\], còn cái mẫu, như đã biết, sẽ chỉ là nó sẽ nhập vào các phần constant để trở thành normalizing constant của posterior, và như vậy, posterior cũng sẽ có cùng dạng với prior distribution.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú cực kỳ chi tiết, chính xác và có chiều sâu khi kết nối từ lý thuyết nền tảng đến các bước biến đổi toán học cụ thể của hàm likelihood. Điểm lưu ý nhỏ duy nhất là bạn viết nhầm ký hiệu vector kỳ vọng của prior thành w0 thay vì m0 như trong sách (phương trình 3.48).
-
-</details>
 
 **🔗 See also:** [Likelihood and Error Functions](./311_maximum_likelihood_and_least_squares.md#node-urnjdcs)
 
@@ -288,12 +286,11 @@ Ghi chú cực kỳ chi tiết, chính xác và có chiều sâu khi kết nối
 >
 > Nói chung là áp dụng công thức thôi
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Ghi chú cực kỳ chính xác và chi tiết khi liên kết thành công công thức tổng quát từ Chương 2 để chứng minh công thức Chương 3 một cách tường minh. Để hoàn hảo hơn, bạn có thể bổ sung thêm giải thích ngắn gọn về ý nghĩa vật lý của các tham số đóng vai trò là độ chính xác (precision) trong việc cập nhật phân phối.
-
-</details>
 
 **🔗 See also:** [Phân bố tiên nghiệm và hậu nghiệm](./233_bayess_theorem_for_gaussian_variables.md#node-zswmsts) · [3.3.2 Predictive distribution](./332_predictive_distribution.md#node-wdjepxb) · [Ex 3.7 Posterior Distribution in Linear Basis Models](./37_exercises.md#node-97teyoh)
 
@@ -321,12 +318,11 @@ Ghi chú cực kỳ chính xác và chi tiết khi liên kết thành công côn
 > \
 > Và một ý tiếp theo cũng không quá khó để hiểu đó là khi nói về chuyện N nếu bằng 0 thì phân phối hậu nghiệm nó cũng y như phân phối tiên nghiệm. Thì cái chuyện này cũng không khó để hiểu bởi vì phân phối hậu nghiệm về cơ bản chỉ là phân phối của W dựa trên những cái data, những giá trị quan sát được của dữ liệu. Vậy thì nếu mà chưa có giá trị quan sát nào thì phân phối hậu nghiệm nó cũng như là phân phối tiên nghiệm thôi. Và một điểm nữa mình cũng đã gặp ở trong những cái phần trước đó là cái chuyện mình có thể dùng cái cách diễn giải của Bayesians hoặc là của Bayes' rule đó để mà giải thích cho cái trường hợp mà dữ liệu nó không đến cùng một lúc ban đầu ngay có một cục có sẵn mà nó đến từng điểm một, nó đến một cách nối tiếp thì kết quả nó vẫn giống nhau. Nếu mà nó đến một cục có sẵn đó thì mình sẽ dùng Bayes' rule, mình xây dựng phân phối hậu nghiệm bằng phân phối tiên nghiệm nhân cho cái hàm likelihood của tham số dựa trên giá trị quan sát của cả cái cục đó. Còn nếu mà dữ liệu đến theo từng điểm thì ví dụ như mình có điểm thứ nhất thì mình sẽ tính phân phối hậu nghiệm bằng phân phối tiên nghiệm nhân cho cái likelihood của W dựa trên giá trị quan sát của X1. Sau đó mình lại dùng cái phân phối hậu nghiệm đó để làm phân phối tiên nghiệm tiếp tục nhân với hàm likelihood khi mà xuất hiện thêm X2 và thành ra một cái chuỗi như vậy thì kết quả nó sẽ vẫn ra là phân phối hậu nghiệm dựa trên toàn bộ dữ liệu. Còn cái đoạn cuối cùng thì chỉ là áp dụng lại một cái kiến thức đã học ở trong chương 2 đó là khi mình chọn cái phân phối tiên nghiệm là hàm phân phối chuẩn mean như vậy và ma trận hiệp phương sai như vậy cộng với hàm likelihood cũng là phân phối chuẩn thì mình sẽ ra được cái phân phối hậu nghiệm có mean và ma trận hiệp phương sai như công thức 3.53, 3.54.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Ghi chú của bạn rất xuất sắc, giải thích rất sâu sắc và trực quan từ trực giác hình chuông của phân phối chuẩn đến sự khác biệt giữa hai trường phái Bayes và tần suất. Điểm trừ duy nhất là lỗi gõ nhầm số thứ tự công thức ở cuối bài từ (3.53, 3.54) thành (5.3, 5.4).
-
-</details>
 
 **🔗 See also:** [Section 3.3.3 Equivalent Kernel](./333_equivalent_kernel.md#node-qgf9klh) · [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8) · [Hessian of Regularized Error Function](./351_evaluation_of_the_evidence_function.md#node-vpu7vqs) · [Iterative Estimation of Alpha](./352_maximizing_the_evidence_function.md#node-vstyyq2)
 
@@ -425,12 +421,11 @@ Ghi chú của bạn rất xuất sắc, giải thích rất sâu sắc và tr�
 >
 > Nếu so với việc tìm θ có π(θ|𝐱) lớn nhất, thì kết quả có thể sẽ khác. Tuy rằng trong trường hợp posterior là Normal thì hai kết quả sẽ giống nhau, vì mean của posterior cũng là nơi có π(θ|𝐱) lớn nhất.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú cực kỳ xuất sắc, thể hiện sự hiểu biết sâu sắc và chính xác về mối liên hệ giữa tối đa hóa hậu nghiệm (MAP) và việc giảm thiểu sai số có Regularization L2. Bạn chỉ cần lưu ý thêm hệ số 1/2 ở phần phạt L2 (tức là α/2 thay vì α) để công thức hoàn toàn đồng nhất với tài liệu học.
-
-</details>
 
 <br>
 
@@ -483,12 +478,11 @@ Ghi chú cực kỳ xuất sắc, thể hiện sự hiểu biết sâu sắc và
 >
 > Và còn một parameter nữa, đó là vì sẽ chọn prior distribution cho 𝐰, là N(0, 1/α). Trong trường hợp này, ta cũng cho rằng nó là 2. (Nói chung là để chỉ còn parameter là 𝐰 là chưa biết thôi).
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Ghi chú của bạn rất chính xác và thể hiện sự hiểu biết sâu sắc về quá trình sinh dữ liệu giả lập cũng như mô hình Bayesian Regression. Bạn chỉ cần lưu ý làm rõ mô hình sử dụng hai hàm cơ sở là phi_0(x) = 1 và phi_1(x) = x để tránh nhầm lẫn khi định nghĩa vector basis function.
-
-</details>
 
 <br>
 
@@ -633,12 +627,11 @@ Ghi chú của bạn rất chính xác và thể hiện sự hiểu biết sâu 
 >
 > Và nếu ta tăng data lên vô hạn, thì cái plot của posterior nó sẽ trở thành 1 cái delta function - tức là giống như cây kim nhọn hoắc ngay vị trí white cross (a0, a1).
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú của bạn cực kỳ xuất sắc, thể hiện sự hiểu biết sâu sắc khi tự giải thích được bản chất toán học đằng sau các hình ảnh trực quan của đồ thị likelihood và posterior. Để hoàn thiện hơn nữa, bạn có thể bổ sung thêm giải thích về ký hiệu toán học cụ thể của nhiễu precision ̢͂ beta để liên kết chặt chẽ hơn với văn bản gốc.
-
-</details>
 
 <br>
 
@@ -655,12 +648,11 @@ Ghi chú của bạn cực kỳ xuất sắc, thể hiện sự hiểu biết s�
 >
 > Và gs nói lại điều đã biết, khi tìm maximum của posterior distribution, thì nó sẽ tương đương với việc giải bài toán minimize error function có regularization term, để rồi khi priori là Gaussian (khi q trong 3.56 = 2) thì posterior cũng là Gaussian, và w khiến maximize posterior chính là mean của posterior. (nếu q khác 2, 3.56 không phải Gaussian, khi đó chưa chắc posterior đã là Gaussian, vì như likelihood là Gaussian, có conjugate prior là Gaussian)
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 
 Ghi chú rất chính xác và thể hiện sự hiểu biết sâu sắc về mối liên hệ giữa hàm prior khái quát hóa, tính liên hợp (conjugate) và các đặc trưng của phân phối posterior (mean và mode). Việc bạn tự suy luận hệ quả khi $q \neq 2$ dựa trên kiến thức về conjugate prior là một điểm cộng lớn.
-
-</details>
 
 <br>
 
