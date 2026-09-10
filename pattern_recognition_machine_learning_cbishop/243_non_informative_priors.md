@@ -17,7 +17,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Phần giải thích của bạn cực kỳ chính xác và sâu sắc, nắm bắt đầy đủ các sắc thái của khái niệm. Cách diễn giải cụm từ "hãy để dữ liệu tự lên tiếng" rất đúng trọng tâm.
+Phần giải thích của bạn cực kỳ chính xác và sâu sắc, nắm bắt đầy đủ các sắc thái của khái niệm. Cách diễn giải cụm từ "hãy để dữ liệu tự lên tiếng" rất đúng trọng tâm.
 
 </details>
 
@@ -55,7 +55,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Điểm mạnh: Bạn đã nắm bắt chính xác tất cả các điểm chính từ văn bản, với giải thích toán học sâu sắc về lý do một phân phối tiên nghiệm hằng số trên miền không bị chặn lại không thể chuẩn hóa được. Để tăng cường hơn nữa, bạn có thể thêm ví dụ cụ thể về việc sử dụng improper prior được đề cập trong văn bản.
+Điểm mạnh: Bạn đã nắm bắt chính xác tất cả các điểm chính từ văn bản, với giải thích toán học sâu sắc về lý do một phân phối tiên nghiệm hằng số trên miền không bị chặn lại không thể chuẩn hóa được. Để tăng cường hơn nữa, bạn có thể thêm ví dụ cụ thể về việc sử dụng improper prior được đề cập trong văn bản.
 
 </details>
 
@@ -129,7 +129,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Bài giải thích rất chi tiết và sâu sắc, đặc biệt là phần làm rõ sự khác biệt giữa MLE và phương pháp Bayesian trong việc xử lý các tham số và prior distribution, giúp làm sáng tỏ lý do tại sao vấn đề này không ảnh hưởng đến MLE. Công thức đạo hàm của bạn nhìn chung chính xác, mặc dù việc thay thế λ bằng η² trong fλ(λ) sẽ giúp nó rõ ràng hơn một chút trong các bước trung gian.
+Bài giải thích rất chi tiết và sâu sắc, đặc biệt là phần làm rõ sự khác biệt giữa MLE và phương pháp Bayesian trong việc xử lý các tham số và prior distribution, giúp làm sáng tỏ lý do tại sao vấn đề này không ảnh hưởng đến MLE. Công thức đạo hàm của bạn nhìn chung chính xác, mặc dù việc thay thế λ bằng η² trong fλ(λ) sẽ giúp nó rõ ràng hơn một chút trong các bước trung gian.
 
 </details>
 
@@ -169,7 +169,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn rất chính xác và cực kỳ sâu sắc, không chỉ nắm bắt đúng các khái niệm mà còn mở rộng bằng chứng minh toán học và kiến thức nền tảng vững chắc. Sự cẩn thận trong giải thích ký hiệu và liên hệ với Casella là điểm cộng lớn, cho thấy hiểu biết vượt trội về chủ đề.
+Ghi chú của bạn rất chính xác và cực kỳ sâu sắc, không chỉ nắm bắt đúng các khái niệm mà còn mở rộng bằng chứng minh toán học và kiến thức nền tảng vững chắc. Sự cẩn thận trong giải thích ký hiệu và liên hệ với Casella là điểm cộng lớn, cho thấy hiểu biết vượt trội về chủ đề.
 
 </details>
 
@@ -209,7 +209,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **95/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú trình bày rất tốt lập luận trực giác về lý do prior không thông tin cho tham số vị trí nên là hàm hằng. Cần làm rõ hơn về việc likelihood bị ảnh hưởng như thế nào bởi μ để tránh hiểu lầm.
+Ghi chú trình bày rất tốt lập luận trực giác về lý do prior không thông tin cho tham số vị trí nên là hàm hằng. Cần làm rõ hơn về việc likelihood bị ảnh hưởng như thế nào bởi μ để tránh hiểu lầm.
 
 </details>
 
@@ -434,7 +434,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **90/100** · ✓ Move on</summary>
 
-**Summary:** Bài làm đã thể hiện sự hiểu biết sâu sắc khi tự mình chứng minh được phân phối của độ chính xác λ tương ứng với p(λ) ∝ 1/λ, đây là một điểm mạnh lớn. Tuy nhiên, để hoàn thiện hơn, em nên bổ sung giải thích tại sao a₀ = b₀ = 0 lại khiến phân phối hậu nghiệm chỉ phụ thuộc vào dữ liệu mà không phụ thuộc vào tiền nghiệm, và chú ý hơn trong các bước biến đổi toán học ban đầu để tránh những nhầm lẫn nhỏ.
+Bài làm đã thể hiện sự hiểu biết sâu sắc khi tự mình chứng minh được phân phối của độ chính xác λ tương ứng với p(λ) ∝ 1/λ, đây là một điểm mạnh lớn. Tuy nhiên, để hoàn thiện hơn, em nên bổ sung giải thích tại sao a₀ = b₀ = 0 lại khiến phân phối hậu nghiệm chỉ phụ thuộc vào dữ liệu mà không phụ thuộc vào tiền nghiệm, và chú ý hơn trong các bước biến đổi toán học ban đầu để tránh những nhầm lẫn nhỏ.
 
 </details>
 
