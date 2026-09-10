@@ -89,7 +89,7 @@
 <details>
 <summary>🤖 AI Check — 🟢 Pass — ✅ **97/100** · ✓ Move on</summary>
 
-**Summary:** Ghi chú của bạn rất chính xác và có chiều sâu, đặc biệt là phần chứng minh chi tiết dạng của phân phối hậu nghiệm cho họ hàm mũ. Để hoàn thiện hơn, bạn có thể bổ sung thêm ý nghĩa của tham số "ν" như là số lượng quan sát giả định hiệu quả từ prior.
+Ghi chú của bạn rất chính xác và có chiều sâu, đặc biệt là phần chứng minh chi tiết dạng của phân phối hậu nghiệm cho họ hàm mũ. Để hoàn thiện hơn, bạn có thể bổ sung thêm ý nghĩa của tham số "ν" như là số lượng quan sát giả định hiệu quả từ prior.
 
 </details>
 
