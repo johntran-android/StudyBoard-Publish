@@ -1702,7 +1702,7 @@
 > có cùng độ bias (tức cũng là cùng mean E_θ(W))
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Giải thích rất rõ ràng và chính xác, kết nối khéo léo các khái niệm về MSE, độ lệch, và phương sai cho cả ước lượng không thiên vị và lớp ước lượng tổng quát hơn. Để hoàn thiện hơn nữa, việc đề cập rõ ràng thuật ngữ "Ước lượng không thiên vị có phương sai tối thiểu đồng nhất (UMVUE)" khi thảo luận về "ước lượng không thiên vị tốt nhất" sẽ bổ sung tính đầy đủ.
 
@@ -1726,7 +1726,7 @@
 > Mình phải hiểu thế này, đây là định nghĩa khái quát và nó bao gồm cả với unbiased estimator of θ: Khi xét τ(θ) = θ, thì ta có định nghĩa của uniform minimum variance unbiased estimator of θ: Là xét W\* sao cho E\_θ(W\*(X)) = θ với mọi θ. Và trong số những estimator W có E\_θ(W(X)) = θ thì W\* là có variance nhỏ nhất.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Bạn đã giải thích định nghĩa về ước lượng không chệch có phương sai tối thiểu đồng nhất (UMVUE) rất chính xác và đầy đủ. Việc làm rõ cả trường hợp tổng quát τ(θ) và trường hợp đặc biệt τ(θ) = θ cho thấy sự hiểu biết sâu sắc về khái niệm này.
 
@@ -1774,7 +1774,7 @@
 > nên với trường hợp này cả Xbar và S^2 đều là unbiased estimator của λ
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bạn đã giải thích rất chính xác và chi tiết các khái niệm, đồng thời kết nối lý thuyết với ví dụ trong hình ảnh một cách rõ ràng. Để bài viết cô đọng hơn, bạn có thể lược bỏ các câu hỏi hoặc ghi chú cá nhân như "Chỗ này là sao nhỉ" khi trình bày.
 
@@ -2232,7 +2232,7 @@
 > 2. Var\_θ\[∂/∂θ log f(**X**|θ)\] chính là E\_θ\[(∂/∂θ log f(**X**|θ)^2\]
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú của bạn cực kỳ chi tiết, chính xác và cung cấp cái nhìn sâu sắc hơn đáng kể so với tài liệu gốc, đặc biệt trong việc giải thích cặn kẽ từng bước. Để hoàn thiện, hãy lưu ý đến việc giải thích rõ hơn lý do W(X)=1 là một ước lượng hợp lệ khi áp dụng tính chất của đạo hàm.
 
@@ -2342,7 +2342,7 @@
 > n E\_θ\[(∂/∂θ log f(X|θ)^2\]. Chứng minh xong.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **92/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
 > Bài viết của bạn rất chi tiết và thể hiện sự hiểu biết sâu sắc về các bước chứng minh, đặc biệt là phần giải thích tại sao các kỳ vọng riêng lẻ có thể cộng lại thành n lần kỳ vọng. Tuy nhiên, bạn cần cẩn thận hơn với các ký hiệu đạo hàm ở một số chỗ và làm rõ hơn cơ sở của việc kỳ vọng bằng 0 (chẳng hạn như đề cập đến 7.3.8).
 
