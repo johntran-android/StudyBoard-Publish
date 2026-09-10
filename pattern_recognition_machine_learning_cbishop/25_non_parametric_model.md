@@ -114,11 +114,10 @@
 >
 > Gs nói, ngoài ra thì histogram pdf cũng bị phụ thuộc vào lựa chọn vị trí cạnh của mỗi bins, nhưng cái này ảnh hưởng nhỏ hơn so với bề rộng Δ
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
-
-Phân tích của bạn cực kỳ chính xác và sâu sắc, nắm bắt tốt các điểm cốt lõi về ảnh hưởng của bề rộng bin (Δ) đến ước lượng mật độ histogram, từ trường hợp quá spiky đến quá mượt, cũng như giá trị tối ưu và yếu tố vị trí cạnh bin. Để bài phân tích thêm hoàn hảo, bạn có thể cân nhắc việc trực tiếp đề cập đến thuật ngữ 'tính chất hai đỉnh' (bimodal property) khi mô tả sự thất bại của histogram trong việc nắm bắt hình dạng hàm PDF thật khi Δ quá lớn.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Phân tích của bạn cực kỳ chính xác và sâu sắc, nắm bắt tốt các điểm cốt lõi về ảnh hưởng của bề rộng bin (Δ) đến ước lượng mật độ histogram, từ trường hợp quá spiky đến quá mượt, cũng như giá trị tối ưu và yếu tố vị trí cạnh bin. Để bài phân tích thêm hoàn hảo, bạn có thể cân nhắc việc trực tiếp đề cập đến thuật ngữ 'tính chất hai đỉnh' (bimodal property) khi mô tả sự thất bại của histogram trong việc nắm bắt hình dạng hàm PDF thật khi Δ quá lớn.
 
 <br>
 
@@ -143,11 +142,10 @@ Phân tích của bạn cực kỳ chính xác và sâu sắc, nắm bắt tốt
 >
 > Và cuối cùng là một vấn đề đã gặp: lời nguyền của dimensinality: Đại ý là, giả sử ta có M bins, thì số lượng data point cần có để lấp đầy chúng (để mỗi bin đều có ít nhất 1 data point) sẽ là M^D, nên trong bài toán thực tế với data là vector có D lớn (high dimension) thì số data cần thiết là không tưởng, khiến cho đại khái là, cái histogram pdf sẽ giống như không đủ data để mà vẽ vậy (tưởng tượng muốn vẽ histogram pdf lúc nãy nhưng chỉ có 1, 2 data point, thì ko thể hình thành một hàm histogram pdf tốt được).
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **97/100** · ✓ Move on
-
-Ghi chú của bạn rất chính xác và có chiều sâu, đặc biệt trong việc giải thích "lời nguyền của chiều dữ liệu" một cách dễ hiểu. Để hoàn thiện hơn, bạn có thể cân nhắc sử dụng ngôn ngữ học thuật hơn một chút trong các phần giải thích ban đầu.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **97/100** · ✓ Move on
+>
+> Ghi chú của bạn rất chính xác và có chiều sâu, đặc biệt trong việc giải thích "lời nguyền của chiều dữ liệu" một cách dễ hiểu. Để hoàn thiện hơn, bạn có thể cân nhắc sử dụng ngôn ngữ học thuật hơn một chút trong các phần giải thích ban đầu.
 
 <br>
 
@@ -172,11 +170,10 @@ Ghi chú của bạn rất chính xác và có chiều sâu, đặc biệt trong
 >
 > Với hai bài học này, chúng ta sẽ xem xét hai mô hình nổi tiếng nhất của cách tiếp cận không tham số: kernel estimator và nearest neighbor.
 
----
-
-🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
-
-Bản tóm tắt rất chính xác và sâu sắc, nắm bắt đầy đủ các bài học quan trọng và so sánh với khớp hàm đa thức một cách chi tiết. Để hoàn thiện hơn, bạn có thể cân nhắc giữ nguyên cách diễn đạt ở phần mở đầu và bổ sung chi tiết về lợi ích của các kỹ thuật phi tham số cuối cùng.
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Bản tóm tắt rất chính xác và sâu sắc, nắm bắt đầy đủ các bài học quan trọng và so sánh với khớp hàm đa thức một cách chi tiết. Để hoàn thiện hơn, bạn có thể cân nhắc giữ nguyên cách diễn đạt ở phần mở đầu và bổ sung chi tiết về lợi ích của các kỹ thuật phi tham số cuối cùng.
 
 <br>
 
