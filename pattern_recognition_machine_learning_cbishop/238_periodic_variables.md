@@ -22,12 +22,11 @@
 >
 > Do đó ta cần một cách tiếp cận đặc biệt để xử lý khi deal với periodic variable
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **97/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **97/100** · ✓ Move on
 
 Tóm tắt rất chính xác và đầy đủ các ý chính, bao gồm cả ví dụ minh họa cụ thể về sự phụ thuộc vào gốc tham chiếu. Để tăng tính súc tích, bạn có thể cân nhắc cô đọng hơn một số phần giải thích trong dấu ngoặc đơn.
-
-</details>
 
 <br>
 
@@ -92,12 +91,11 @@ Tóm tắt rất chính xác và đầy đủ các ý chính, bao gồm cả ví
 >
 > Nói chung ko có gì khó hiểu cả, chỉ là, thay vì ta dùng thước đo là góc θ để ghi nhận, thể hiện giá trị của các data (đồng nghĩa ta dùng Polar coordinate), thì ta dùng 2D vector 𝐱 trên đường tròn unit, để ghi nhận cùng một quan sát. Từ đó, bằng cách này, ta không còn bị cái vụ phụ thuộc vào mốc làm chuẩn nữa.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **92/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 
 Bạn đã nắm vững lý do cần chuyển đổi sang vector 2D và cách thức suy ra công thức góc trung bình một cách rõ ràng và logic, giải quyết được vấn đề phụ thuộc hệ tọa độ. Tuy nhiên, hãy cẩn thận hơn một chút với thứ tự của các thành phần khi tính tan(θbar) trong các bước trung gian (phải là x_bar_2 / x_bar_1), dù kết quả cuối cùng của bạn vẫn đúng.
-
-</details>
 
 <br>
 
@@ -194,12 +192,11 @@ Bạn đã nắm vững lý do cần chuyển đổi sang vector 2D và cách th
 >
 > Thì đây là phương trình đường tròn tâm tại μ, bán kính √d
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Bài ghi rất chính xác và có chiều sâu, đặc biệt là phần chứng minh chi tiết công thức 2.173 và giải thích vì sao đồ thị contour là hình tròn. Bạn đã thể hiện sự hiểu biết vững chắc về các khái niệm.
-
-</details>
 
 <br>
 
@@ -404,12 +401,11 @@ Bài ghi rất chính xác và có chiều sâu, đặc biệt là phần chứn
 >
 > Và mình cứ hình dung là khi mà mình di chuyển trên cái đường đó đó thì mình sẽ ví dụ như điểm bắt đầu của mình nó nói là cái điểm mà có cái có cái độ cao cao nhất, tức là cái giá trị density cao nhất. Nó là cái điểm mà nằm bên phải và nói chung là ở cái gốc bên phải ở bên trên á. Nằm đâu khúc giữa mà nó gần với cái cái cái tâm nhất của mấy cái đường màu xanh á. Thì mình cứ hiểu đại khái nó là giống như là một cái là nó ứng với tâm của cái phân phối vậy. Rồi để coi rồi mình đi mình đi trên cái đường tròn màu đỏ đó thì cái density nó giảm dần. Nhưng mà khi mình đi qua phía bên kia thì density lại tăng lên dần và nó lại về lại vị trí cũ. Và dĩ nhiên là khi mà mình đã restrict cái hàm normal PDF ở trên cái đường màu đỏ thì lúc bấy giờ nó không còn có cái tính hợp lệ để trở thành một cái PDF nữa. Do đó mình phải có cái bước gọi là normalizing. Cái bước chuẩn hóa. Nhưng mà cái kiểu như là cái cái cách biến thiên của cái hàm mà gọi là circulating Gaussian này nó cũng có cái dạng của hình chuông nhưng mà nó lại có cái tính periodic. Nó hay là chỗ đó.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **99/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **99/100** · ✓ Move on
 
 Bài viết của bạn thể hiện sự hiểu biết sâu sắc và toàn diện về phân phối von Mises, từ quá trình biến đổi tọa độ với Jacobian đến lý do tồn tại của nó. Bạn đã làm rất tốt việc giải thích cả khía cạnh toán học và trực giác của chủ đề này.
-
-</details>
 
 <br>
 
@@ -490,12 +486,11 @@ Bài viết của bạn thể hiện sự hiểu biết sâu sắc và toàn di�
 >
 > Cần hiểu đường màu đỏ đi rất sát gốc tọa độ, nhưng thật ra nó hơi vòng xuống dưới, vì góc θ sẽ quét từ 0 → 2π, chỉ là ở phía đối diện với π/4, giá trị xác suất ≈ 0. Cho dễ hình dung, cứ tưởng tượng ta có sợ dây thun, và cây đinh là gốc tọa độ, thì thực tế là tròng sợi dây thun vào cây đinh, và giữ ngón tay ở đầu π/4.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú của bạn cực kỳ chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về phân phối Von Mises, từ động lực, quá trình dẫn xuất đến cách các tham số ảnh hưởng đến hình dạng phân phối trên cả hai loại biểu đồ. Bạn đã phân tích biểu đồ cực rất sắc sảo, giải thích rõ ràng mối quan hệ giữa giá trị hàm mật độ và khoảng cách từ tâm. Để ghi chú cô đọng hơn, bạn có thể cân nhắc rút gọn một số đoạn giải thích phụ, nhưng nhìn chung đây là một ghi chú học tập xuất sắc.
-
-</details>
 
 <br>
 
@@ -655,12 +650,11 @@ Ghi chú của bạn cực kỳ chi tiết, chính xác và thể hiện sự hi
 >
 >  (ở đây nếu chặt chẽ phải xét đạo hàm bậc 2 của hàm objective tại θ0^\_ml để cho thấy nó âm thì mới kết luận là maximizer được, nhưng dài quá thì thôi khỏi làm)
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Bài viết rất chính xác và chi tiết trong việc chứng minh công thức ước lượng hợp lý cực đại, thể hiện sự hiểu biết sâu sắc về lý thuyết. Để tinh gọn hơn, bạn có thể cân nhắc cô đọng phần giải thích lý thuyết ban đầu nếu trọng tâm là các bước tính toán.
-
-</details>
 
 <br>
 
@@ -725,12 +719,11 @@ Bài viết rất chính xác và chi tiết trong việc chứng minh công th�
 >
 > Cuối cùng gs Bishop nói sơ qua vài cách tiếp cận khác để xây dựng pdf của phân phối dành cho biến periodic.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ⚠️ **88/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ⚠️ **88/100** · ✓ Move on
 
 Bài giải thích của bạn rất rõ ràng và chính xác trong việc dẫn xuất công thức A(m), thể hiện sự nắm vững các bước toán học. Tuy nhiên, để hoàn thiện hơn, bạn nên bổ sung phần thảo luận về giới hạn của phân phối von Mises và cách khắc phục bằng cách sử dụng các hỗn hợp phân phối.
-
-</details>
 
 <br>
 
