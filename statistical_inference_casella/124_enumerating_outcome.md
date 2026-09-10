@@ -389,7 +389,7 @@
 > Rồi cái đoạn dưới đó thì đại khái ông giáo sư nói là cái chỉ số xác suất 1/9 1/9 rồi 2/9 gì đó. Thì đó là chỉ số xác suất tính thông qua tạm gọi là order sample space. Giống như cách mình tính ở trên. Thì qua đó mình mới thấy rằng cũng như mình đã nhận định ở vừa phía trên là trong cái bài toán này nếu như mà mình xét cái sample space mà unorder thì những cái outcome nó không có equally likely. Nếu mình vẫn xét là order sample space thì những outcome vẫn equally likely. Nhưng cái chính muốn nói là cái công thức dùng để mà mình tính cái số outcome của cái gọi là unorder sample space đó thì nó hữu ích trong cái việc là giúp mình kiểu như là liệt kê ra có bao nhiêu cái possible outcome. Ví dụ như trong bài toán này là mình có ba cái item và mình muốn bóc ra hai cái và mình không quan tâm thứ tự. Thì kiểu như là mình có thể dùng cái công thức để mình đếm có bao nhiêu là cái kết quả có thể xảy ra. Nhưng để mà tính xác suất là mình phải dùng mình phải dùng cái order sample space. Bởi vì khi mà mình dùng order sample space thì các cái outcome mới equally likely và từ đó mới giúp mình tính một cách chính xác. Ở phần trên mình tính như mình vừa mới tính ở trên là mình khi mà mình tính cái xác suất mà của cái outcome mà cả hai cái đều số một đó hay là xác suất của outcome là một cái là một, một cái là hai thì thật ra mình đều đang chuyển nó về cái bài toán mà order sample space.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **93/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **93/100** · ✓ Move on
 >
 > Ghi chú thể hiện sự hiểu biết sâu sắc về lấy mẫu có hoàn lại, phân biệt rõ ràng giữa không gian mẫu có thứ tự và không có thứ tự. Bạn đã phân tích chính xác tại sao quy luật giai thừa không còn đúng khi có sự lặp lại và tính toán xác suất để chứng minh các kết quả không thứ tự không đồng khả năng. Chỉ cần lưu ý sửa ký hiệu P(A|B) thành P(A hoặc B) hoặc P(A U B) khi đề cập đến xác suất của hai biến cố rời nhau.
 
@@ -439,7 +439,7 @@
 > Tóm lại, ý chính muốn nói **KHI TÍNH XÁC SUẤT THÌ LUÔN PHẢI TUÂN THEO NGUYÊN TẮC: DÙNG ORDER SAMPLE SPACE (PHÂN BIỆT THỨ TỰ)**.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Phân tích của bạn rất rõ ràng và chính xác, nắm bắt hoàn toàn điểm cốt lõi của bài viết gốc. Bạn đã trình bày xuất sắc về sai lầm phổ biến khi tính xác suất cho các biến cố không thứ tự và giải thích thuyết phục tại sao cần sử dụng không gian mẫu có thứ tự. Để nội dung thêm hoàn hảo, bạn có thể cân nhắc đề cập rõ ràng hơn về 'bóng không phân biệt' ngay từ phần giới thiệu vấn đề.
 
@@ -535,7 +535,7 @@
 > (cũng chính là trong sách ghi (n + n - 1 choose n) vì ở đây ta có r = n = 4.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bài phân tích thể hiện sự hiểu biết sâu sắc về bản chất bài toán, từ việc xác định loại lấy mẫu (có hoàn lại, không thứ tự) đến việc áp dụng công thức tổ hợp. Phần chứng minh công thức (n+r-1 chọn r) rất chi tiết và đúng đắn về mặt ý tưởng, tuy nhiên, có một lỗi nhỏ ở bước cuối cùng khi bạn viết (n+r-1)! / [(n-1)! r!] là (n-1 chọn r) thay vì (n+r-1 chọn r).
 
@@ -587,7 +587,7 @@
 > Dĩ nhiên đây là kết quả đúng, để so sánh với việc nếu ta tính bằng cách dùng unordered sample space, để rồi coi {2,4,4,9} sẽ chỉ là 1 trong 7!/4!3! các outcome khác và chúng đều có xác suất bằng nhau, và = 1/\[7!/4!3!\], thì kết quả sẽ là 1/(7 choose 4) = 1/35 → là kết quả sai, khác hoàn toàn kết quả đúng là 12/256.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú giải thích rất rõ ràng và chính xác sự khác biệt quan trọng giữa việc đếm số lượng các mẫu phân biệt và việc tính xác suất bằng cách sử dụng không gian mẫu có thứ tự, với các ví dụ minh họa và tính toán chi tiết hoàn toàn trùng khớp với tài liệu. Để cải thiện nhỏ, bạn có thể cân nhắc làm rõ hơn mối liên hệ giữa các công thức tổ hợp ở phần cuối với công thức tổng quát đã đề cập ban đầu.
 
@@ -615,7 +615,7 @@
 > Hình 1.2.2 là histogram, rõ ràng có sai sót. X là trung bình của 4 số bốc từ bộ 4 số {2, 4, 9, 12} chứ ko phải là {2, 4, 4, 9}. Và cái histogram này chính là pmf của X.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài phân tích của bạn rất chính xác và sâu sắc. Bạn đã hiểu rõ cách tính số lượng mẫu có thứ tự và công thức tổng quát của nó liên quan đến phân phối đa thức. Đặc biệt, việc bạn phát hiện ra sự không nhất quán giữa biểu đồ histogram và mô tả nguồn dữ liệu {2,4,4,9} là một điểm mạnh nổi bật, thể hiện khả năng phân tích và tư duy phản biện xuất sắc. Để tăng thêm độ chính xác, bạn có thể cân nhắc gọi biểu đồ này là 'biểu đồ phân phối xác suất' thay vì chỉ 'pmf' nếu các giá trị trung bình có thể không hoàn toàn rời rạc.
 
