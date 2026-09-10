@@ -38,12 +38,11 @@
 >
 > Đơn giản là vì λ vốn có ràng buộc ≥ 0, và để minimize E_D(𝐰) + λE_W(𝐰) với E_W(𝐰) ≥ 0 thì đây là hàm tuyến tính theo λ, E_D(𝐰) + λE_W(𝐰), có dạng a λ + b, và với λ ≥ 0, thì và a = E_W(𝐰) cũng > 0 thì hàm này cực tiểu khi λ = biên của \[0, ∞), tức λ = 0.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Bài ghi chú thể hiện sự hiểu biết sâu sắc về các khái niệm, giải thích chính xác nội dung văn bản và cung cấp những phân tích bổ sung tuyệt vời, đặc biệt là lý do tại sao λ=0 khi tối ưu hóa đồng thời. Đây là một bài phân tích rất chi tiết và chính xác.
-
-</details>
 
 **🔗 See also:** [Iterative Estimation of Alpha](./352_maximizing_the_evidence_function.md#node-vstyyq2)
 
@@ -250,12 +249,11 @@ Bài ghi chú thể hiện sự hiểu biết sâu sắc về các khái niệm,
 >
 > Như vậy, optimal point estimator cho T khi T \~ f(t|𝐱) chính là posterior mean: E\[T|𝐱\] → Đây chính giúp ta hoàn toàn hiểu 3.36.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Bài giải thích cực kỳ chi tiết và sâu sắc, vượt xa nội dung ảnh để cung cấp một nền tảng vững chắc về lý thuyết quyết định và ước lượng Bayes. Mặc dù rất toàn diện, có thể tóm tắt các phần ôn tập một cách ngắn gọn hơn nếu mục tiêu là chỉ tập trung vào giải thích công thức 3.36.
-
-</details>
 
 <br>
 
@@ -536,12 +534,11 @@ Bài giải thích cực kỳ chi tiết và sâu sắc, vượt xa nội dung �
 >
 > Tuy nhiên, vấn đề là, ta chỉ có thể làm vậy nếu như có **vô hạn data** và **vô hạn sức mạnh tính toán**, trong khi đó, data ta có chỉ là hữu hạn, sức mạnh tính toán cũng vậy. Nên thực tế sẽ rất khó để tìm ra chính xác hành vi của hàm số h(𝐱) = E\[T|𝐱\], cũng chính là nói: rất khó để mô phỏng chính xác hàm h(𝐱) = E\[T|𝐱\]. Dẫn tới là term 1 sẽ luôn &gt; 0.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Bài ghi chú này cực kỳ chính xác và chi tiết, thể hiện sự hiểu biết sâu sắc về các khái niệm phức tạp về squared loss trong lý thuyết quyết định, MLE và phân tách kỳ vọng mất mát. Phần giải thích các công thức và ý nghĩa của từng thành phần đều xuất sắc, đặc biệt là cách bạn làm rõ sự khác biệt và mối liên hệ giữa các trường hợp. Bạn cũng giải thích đúng tác động của dữ liệu hữu hạn lên việc tìm hàm hồi quy tối ưu. Đây là một phân tích mẫu mực.
-
-</details>
 
 **🔗 See also:** [Optimal Least Squares Predictor](./15_decision_theory.md#node-3ve6hfk) · [Expected Squared Loss Decomposition](#node-w19nneq) · [Bias-Variance Trade-Off Formulas](#node-qtn6vrp)
 
@@ -790,12 +787,11 @@ Bài ghi chú này cực kỳ chính xác và chi tiết, thể hiện sự hi�
 >
 > Và khi Var(y(𝐱, D) sẽ cho ta biết với các dataset khác nhau, thì giá trị dự đoán y(𝐱, D) sẽ biến động nhiều hay ít thế nào, từ đó cho ta thấy rằng SỰ NHẠY CẢM CỦA PREDICTION DỰA TRÊN DATA
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **100/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 
 Đây là một phân tích xuất sắc, vừa chính xác từng bước theo tài liệu gốc, vừa đào sâu kiến thức bằng cách liên hệ chặt chẽ với các khái niệm trong thống kê suy diễn. Khả năng giải thích và kết nối kiến thức của bạn là rất ấn tượng.
-
-</details>
 
 <br>
 
@@ -880,12 +876,11 @@ Bài ghi chú này cực kỳ chính xác và chi tiết, thể hiện sự hi�
 >
 > iii) ∫∫\[h(𝐱) - t\]² f(t,𝐱)d𝐱 dt , cái term này thì như note trước đã nói rồi, là phần error không thể reduce được (vì không dính gì đến y), nó đơn thuần phản ánh mức độ nhiễu.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Bạn đã thể hiện sự hiểu biết sâu sắc về phân tách bias-variance, từ việc phân tích biểu thức kì vọng tại một điểm x cụ thể đến việc tích phân để có được các đại lượng tổng thể. Việc sử dụng Luật Thống kê Vô thức (LOTUS) để giải thích các tích phân cũng rất chính xác và hiệu quả. Để tăng cường tính rõ ràng, bạn có thể bổ sung một ghi chú nhỏ về sự tương ứng giữa f(x) bạn dùng và p(x) trong tài liệu, cũng như giữa f(t,x) và p(x,t).
-
-</details>
 
 **🔗 See also:** [Expected Squared Loss Decomposition](#node-s3i1j2i) · [Bias-Variance Trade-Off Formulas](#node-qtn6vrp)
 
@@ -938,12 +933,11 @@ Bạn đã thể hiện sự hiểu biết sâu sắc về phân tách bias-vari
 >
 > Và một ý cũng quan trọng đó là với mô hình có variance cao, thì tuy chúng sẽ sensitive với data, tức là, khi D thay đổi thì y(𝐱, D) sẽ thay đổi rất lớn, dẫn tới mỗi đường màu đỏ rất khác nhau. Nhưng trung bình lại thì chúng lại khá sát với đường màu xanh. Điều này gợi ý cho ta rằng có thể phát triển một phương pháp nào đó mà cho phép dùng complex model sau đó lấy trung bình của chúng (đây chính là ensemble model mình đã biết sơ từ các lớp ML cơ bản)
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Bạn đã phân tích rất chi tiết và chính xác về mối quan hệ giữa bias, variance và tham số regularization, thể hiện sự hiểu biết sâu sắc về cơ chế hoạt động của mô hình. Để tăng cường độ chính xác, bạn có thể cụ thể hóa hơn các giá trị ln λ trong hình mà bạn đang mô tả cho mỗi trường hợp.
-
-</details>
 
 **🔗 See also:** [3.1.4 Regularized least squares](./314_regularized_least_squares.md#node-y97v4o1)
 
@@ -1168,12 +1162,11 @@ Bạn đã phân tích rất chi tiết và chính xác về mối quan hệ gi�
 >
 > Do đó, phần tiếp theo của chapter 3, gs sẽ nói qua Bayesian approach đối với bài toán linear model, và ta sẽ thấy cách tiếp cận Bayesian với vấn đề complexity của model sẽ tốt hơn nhiều.
 
-<details>
-<summary>🤖 AI Check — 🟢 Pass — ✅ **98/100** · ✓ Move on</summary>
+---
+
+🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 
 Ghi chú cực kỳ xuất sắc và đào sâu bản chất toán học khi giải thích cách chuyển từ tích phân liên tục sang tổng rời rạc qua phân phối thực nghiệm. Bạn chỉ cần chú ý đồng bộ các ký hiệu ngoặc đóng/mở trong công thức tính variance để ghi chú hoàn hảo hơn.
-
-</details>
 
 **🔗 See also:** [Expected Squared Loss Decomposition](#node-s3i1j2i) · [Expected Squared Loss Decomposition](#node-w19nneq)
 
