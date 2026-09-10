@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1789078564450,
+  "publishedAt": 1789084015705,
   "sections": [
     {
       "title": "📋 Overview",
@@ -351,6 +351,12 @@
       "imageCount": 4
     },
     {
+      "title": "4.1.7 The perceptron algorithm",
+      "path": "pattern_recognition_machine_learning_cbishop/417_the_perceptron_algorithm.md",
+      "noteCount": 1,
+      "imageCount": 1
+    },
+    {
       "title": "Appendix C. Matrices",
       "path": "pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md",
       "noteCount": 19,
@@ -363,6 +369,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 406,
-  "totalImages": 610
+  "totalNotes": 407,
+  "totalImages": 611
 }
