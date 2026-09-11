@@ -36,7 +36,7 @@
 > Trong một tình huống khác, f không phải quadratic, giống như trong hình 4.1 trong sách. Thì có thể thấy với cái bán kính như vậy, thì **đi theo hướng vector màu đỏ, mk xấp xỉ tốt f** (biểu hiện là contour của f cũng tương đối tương ứng contour của m). **Nhưng theo hướng vector màu xanh thì m sẽ có thể xấp xỉ rất kém vì theo hướng này f thay đổi nhanh, rất có thể khác xa hàm m**. Do đó **nếu như dùng trust region tròn, vì m ko tự tin nên buộc phải dùng bán kính nhỏ, dẫn tới hướng được chọn là hướng steepest descent → hội tụ tệ.**
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **88/100** · ✓ Move on
 >
 > Phân tích rất sâu sắc và chi tiết, đặc biệt trong việc liên hệ giữa các khái niệm và minh họa rõ ràng qua các hình vẽ. Cần làm rõ hơn sự khác biệt giữa mô hình xấp xỉ hoàn hảo cho hàm bậc hai và sự xấp xỉ kém theo hướng thay đổi nhanh cho hàm tổng quát, ngay cả khi dùng Hessian chính xác.
 
@@ -86,7 +86,7 @@
 > Một ý nữa là phần lớn các lí thuyết của chương này sẽ đều đúng nếu ta chỉ áp dụng sự chỉnh sửa nhỏ sao cho mỗi dii vẫn nằm trong một range định trước
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài làm rất xuất sắc. Sinh viên đã diễn giải rõ ràng cơ chế tạo vùng tin cậy elip bằng toán học và liên hệ chính xác với độ nhạy của hàm mục tiêu, thể hiện sự thấu hiểu sâu sắc. Tuy nhiên, có một lỗi đánh máy nhỏ ở cuối phần ghi chú (đihp[) cần được sửa chữa.
 
@@ -214,7 +214,7 @@
 > Sau đó giải bài toán tìm τ* (Quay lại sau)
 
 > [!TIP]
-> **🤖 AI Feedback** — ❌ Score: **65/100**
+> 🤖 **AI Check** — 🟡 Minor issues — ❌ **65/100** · ✓ Move on
 >
 > Phần lớn các bước đạo hàm cho p_k^s (phương trình 4.60) là chính xác và có chiều sâu đáng khen ngợi. Tuy nhiên, bài phân tích của bạn chưa hoàn chỉnh vì bạn đã bỏ qua hoàn toàn việc đạo hàm cho bước nhảy \tau_k (phương trình 4.61), đây là một phần cốt yếu của Thuật toán 4.4.
 
