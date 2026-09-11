@@ -318,25 +318,29 @@
 > Có nghĩa là sao, có nghĩa là nó cho ta luôn một threshold, để coi như là có đầy đủ hàm discriminant khỏi cần phải làm thêm bước chiếu xuống 𝐰, giải bài toán point estimation giả định distribution là Gaussian, rồi mới từ đó tìm threshold nơi posterior f(𝒞1|y) = f(𝒞2|y).
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú cực kỳ chi tiết, mạch lạc và thể hiện sự hiểu biết sâu sắc về mặt toán học cũng như trực giác đằng sau mối liên hệ giữa Least Squares và Fisher's LDA.
-> ### Điểm mạnh
-> - **Đạo hàm tường minh và chuẩn xác**: Các bước tính toán đạo hàm theo $w_0$ và $\mathbf{w}$ rất chi tiết, áp dụng đúng chain rule và giải thích cặn kẽ vì sao $\frac{d}{d\mathbf{w}}(\mathbf{w}^T\mathbf{x}) = \mathbf{x}$.
-> - **Biến đổi đại số khéo léo**: Thao tác biến đổi vế trái từ $\sum_i \mathbf{x}_i(\mathbf{x}_i - \mathbf{m})^T$ sang $\sum_i (\mathbf{x}_i - \mathbf{m})(\mathbf{x}_i - \mathbf{m})^T$ bằng cách trừ đi đại lượng triệt tiêu $\mathbf{m}\sum_i(\mathbf{x}_i - \mathbf{m})^T = 0$ là một kỹ thuật đại số tuyến tính rất đẹp và chính xác.
-> - **Liên hệ sâu sắc**: Nhận định đúng về lợi thế của Least Squares so với Fisher criterion thuần túy (tự động cho ra threshold $w_0$ mà không cần mô hình hóa phân phối 1D sau khi chiếu).
+> Ghi chú rất xuất sắc, chi tiết và chính xác từng bước biến đổi đại số từ hàm lỗi bình phương tối thiểu đến biểu thức trọng số của Fisher và ngưỡng phân lớp w0.
 >
-> ### Điểm cần lưu ý & cải thiện
-> - **Lỗi chính tả ký hiệu mẫu số**: Ở dòng phân tích vế phải, biểu thức thứ hai viết nhầm mẫu số thành $N_1$: `N (Σi∈𝒞2 𝐱i)/N1` (đúng ra phải chia cho $N_2$), dù dòng sau bạn vẫn rút ra đúng kết quả $N\mathbf{m}_2$.
-> - **Ký hiệu đạo hàm**: Ký hiệu `d/d0 (𝐰ᵀ𝐱i + w0 - ti)` ở bước chain rule bị gõ thiếu chữ $w$ (`d/dw0`).
-> - **Bước nối từ tổng phương sai sang $S_W$ và $S_B$**: Bạn đã bỏ qua chi tiết phân rã ma trận phương sai tổng thành $\mathbf{S}_W + \frac{N_1 N_2}{N}\mathbf{S}_B$. Dù hiểu bản chất, việc viết thêm 2-3 dòng khai triển này sẽ làm ghi chú hoàn chỉnh 100%.
+> **🟡 Minor issues**
 >
-> ### Gợi ý mở rộng
-> - Hãy thử chứng minh nốt tính chất $\mathbf{S}_B\mathbf{w} \parallel (\mathbf{m}_1 - \mathbf{m}_2)$ để thấy rõ tại sao ta có thể bỏ qua thành phần này và suy ra $\mathbf{w} \propto \mathbf{S}_W^{-1}(\mathbf{m}_1 - \mathbf{m}_2)$.
+> **1.** *"d/d(𝐰ᵀ𝐱i + w0 - ti) (𝐰ᵀ𝐱i + w0 - ti)² . d/d0 (𝐰ᵀ𝐱i + w0 - ti)"*
 >
-> **⭐ Bonus points**
-> - Áp dụng kiến thức vi phân toàn phần (linear operator / Frechet derivative) từ MIT 18.S096 để giải thích đạo hàm ma trận.
-> - Chỉ ra được ưu điểm vượt trội của Least Squares so với Fisher gốc: tự động xác định ngưỡng phân lớp (bias w0) mà không cần bước ước lượng phân phối Gaussian trên không gian 1 chiều chiếu.
+> Lỗi gõ phím nhỏ ở mẫu số của đạo hàm: viết nhầm thành 'd/d0' thay vì 'd/dw0'.
+>
+> **2.** *"d(𝐰ᵀi) = (𝐰+d𝐰)ᵀ𝐱 - 𝐰ᵀ𝐱 = (𝐰ᵀ𝐱 + d𝐰ᵀ𝐱 - 𝐰ᵀ𝐱"*
+>
+> Lỗi gõ phím nhỏ: 'd(𝐰ᵀi)' thiếu vector 𝐱 (đúng ra là d(𝐰ᵀ𝐱)), và mở ngoặc chưa đóng ở vế thứ hai.
+>
+>
+> **✓ Strengths**
+> - Khai triển đạo hàm theo w0 và chứng minh tổng các nhãn t_i triệt tiêu bằng 0 rất rõ ràng và mạch lạc.
+> - Biến đổi vế trái và vế phải khi đạo hàm theo w rất khéo léo, đặc biệt là bước chèn 𝐦 vào để tạo thành ma trận hiệp phương sai tổng (total scatter matrix).
+> - Hiểu sâu sắc ý nghĩa của việc least squares tự động xác định ngưỡng ngưỡng bias w0 mà không cần giả định phân phối Gaussian 1 chiều như Fisher gốc.
+>
+> **💡 Deeper notes**
+> - Biểu thức (4.38) trong sách Bishop ghi w ∝ S_w^(-1)(m_2 - m_1), do S_B w = (m_2 - m_1)(m_2 - m_1)^T w. Dù chiều tỷ lệ ngược dấu chỉ đảo chiều vector chiếu (có thể hấp thu vào hệ số tỷ lệ), việc giữ đúng chiều m_1 - m_2 tương ứng với quy tắc phân lớp y(x) > 0 cho C1.
+> - Bước chuyển từ [∑ (x_i - m)(x_i - m)^T] w sang S_w^(-1)(m_1 - m_2) ẩn chứa việc phân rã ma trận scatter tổng S_T thành S_W + (N1*N2/N) S_B, trong đó S_B w cùng phương với (m_1 - m_2), từ đó thu được nghiệm tỷ lệ.
 
 <br>
 
