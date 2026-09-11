@@ -89,7 +89,7 @@
 > Đối với các ràng buộc bất đẳng thức trong tập ℐ, tại điểm khả thi x, giá trị của chúng luôn không âm: ci(x) ≥ 0 ∀ i ∈ ℐ. **Nếu tại x, hàm ràng buộc bằng đúng 0**, ta gọi ràng buộc đó là r**àng buộc hoạt động (active constraint)**. Ví dụ trong ví dụ ta nói ở trên, vì C2(x) = 0 nên ràng buộc c2 đang hoạt động (active). Ngược lại, vì c4(x) &gt; 0 nên ràng buộc C4 &gt;= 0 không hoạt động (inactive).
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú rất xuất sắc, giải thích chính xác và trực quan định nghĩa về tập hoạt động (active set) kèm ví dụ minh họa rõ ràng và so sánh hệ thống ký hiệu với sách của Stephen Boyd. Bạn chỉ cần lưu ý chỉnh sửa một vài lỗi chính tả nhỏ để bài viết thêm phần hoàn thiện.
 
@@ -127,7 +127,7 @@
 > Một ý nữa được giáo sư đề cập là **khi đứng ở một điểm bất kỳ trên đường tròn này, ta cũng dễ dàng tìm thấy một hướng đi để vừa đảm bảo tính khả thi** (nghĩa là vẫn di chuyển trên đường tròn) **vừa làm giảm giá trị của hàm f**. Ví dụ, nếu đang đứng ở điểm chấm màu xanh có tọa độ (0, căn 2), bằng cách di chuyển xuống góc phần tư phía dưới bên phải để tọa độ x2 bắt đầu âm và tọa độ x1 cũng giảm xuống, tổng x1 + x2 rõ ràng sẽ giảm. Nhìn chung, giáo sư muốn sử dụng ví dụ này để mang lại một hình ảnh trực quan về tập khả thi và bài toán tối ưu có ràng buộc.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **92/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
 > Bản ghi chép rất chi tiết, chính xác và thể hiện sự hiểu bài sâu sắc về khái niệm tập khả thi cũng như cách xác định nghiệm tối ưu bằng trực quan. Tuy nhiên, bạn đã nhầm lẫn điểm ví dụ từ tọa độ $(\sqrt{2}, 0)^T$ trong sách thành $(0, \sqrt{2})$, dẫn đến lập luận hướng di chuyển giảm hàm mục tiêu chưa hoàn toàn chính xác.
 
@@ -163,7 +163,7 @@
 > ∇f(x\*) = λ\*∇g(x\*)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Ghi chú của bạn rất xuất sắc, không chỉ tóm tắt chính xác nội dung từ sách mà còn giải thích rất trực quan và chuẩn xác bản chất hình học của nhân tử Lagrange thông qua các đường mức (level curves) và gradient. Sự liên hệ với kiến thức từ khóa học MIT 18.02 giúp củng cố tư duy chủ động và đào sâu hiểu biết rất tốt.
 
@@ -337,7 +337,7 @@
 > Và tại x\*, thì ∇f(x) trùng phương (song song) với ∇c1(x), thể hiện bởi ∇f(x) = λ ∇c1(x)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài viết xuất sắc, tự chứng minh rất chi tiết bằng phép chiếu và kiểm tra tính bán xác định dương của ma trận P cực kỳ chặt chẽ. Bạn chỉ lưu ý một lỗi nhỏ ở ví dụ cuối: điểm tối ưu trên đường tròn đơn vị phải là (-1/√2, -1/√2) chứ không phải là (-1, -1).
 
@@ -535,7 +535,7 @@
 > Như vậy, mình đã được thấy cách lập luận để xây dựng KKT condition tương đối khác với trong sách Boyd.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài viết thể hiện sự hiểu biết trực quan rất sâu sắc và mạch lạc về cách thiết lập điều kiện KKT. Tuy nhiên, có một nhầm lẫn nhỏ ở Case II khi viết điều kiện $\nabla c_1(x)^T s \ge 0$ tương ứng với góc 'vuông hoặc tù' (thực tế phải là góc 'nhọn hoặc vuông').
 
@@ -632,7 +632,7 @@
 > Khi c1(x\*) = , thì λ\*(x) chỉ cần ≥ 0, và (1) trở thành điều kiện tìm nghiệm của case 2: ∇f(x\*) = λ\*1 ∇c1(x\*) với λ\*1 ≥ 0
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bạn có tư duy trực quan xuất sắc khi tự lập luận và tái hiện lại các điều kiện KKT qua hai trường hợp biên và trong của tập khả thi. Hãy lưu ý sửa một lỗi gõ nhỏ ở cuối đoạn ('c1(x*) = ') và nhớ bổ sung vai trò của điều kiện ràng buộc (Constraint Qualifications) khi bạn tìm hiểu sâu hơn ở phần Tangent cone nhé.
 
