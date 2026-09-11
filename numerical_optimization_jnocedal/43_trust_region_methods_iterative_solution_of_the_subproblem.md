@@ -257,7 +257,7 @@
 > Và bài toán ||-(B + λI)inv g|| = Δ, chỉ là giải một phương trình đơn biến tìm λ thôi.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bản dịch chính xác và việc trình bày chi tiết điều kiện KKT cho thấy sự hiểu biết sâu sắc về lý thuyết tối ưu hóa. Tuy nhiên, cần loại bỏ các lỗi chính tả nhỏ và các nhận xét không chính thức để nâng cao tính chuyên nghiệp của bài ghi chú.
 
@@ -369,7 +369,7 @@
 > = Σi \[qiTg / (λi + λ)\]^2 (norm qi = 1, do Q orthogonal matrix)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài giải thích cực kỳ rõ ràng và chính xác, thể hiện sự hiểu biết sâu sắc về đại số tuyến tính và các phép nhân ma trận. Đặc biệt ấn tượng với việc giải thích cặn kẽ các bước dẫn đến công thức 4.38 và 4.39.
 
@@ -431,7 +431,7 @@
 > Cụ thể là nếu q1Tg = 0, thì, **giả sử q2Tg hoặc q3Tg hoặc cả hai ≠ 0 thì hàm số hành xử như sau**: Nó sẽ **vọt lên và giảm xuống lại khi đi qua hai mốc -λ3, -λ2**, sau đó **khi đi qua -λ1 thì chẳng có gì xảy ra**, tức là nó vẫn sẽ giảm liên tục. Và điều này **dẫn đến khả năng là khi đi ngang -λ1 giá trị ||p(λ)|| đã &lt; hơn Δ**, rồi với mọi λ &gt; -λ1 (giúp B + λI ⪰ 0) thì p(λ) luôn &lt; Δ → ||p(λ)|| = Δ vô nghiệm.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Phân tích của bạn rất chính xác và sâu sắc. Bạn không chỉ hiểu rõ các thuộc tính được đề cập trong văn bản mà còn mở rộng phân tích sang các trường hợp đặc biệt (khi qiTg = 0), thể hiện sự hiểu biết toàn diện về bản chất của hàm ||p(λ)||. Điều này rất ấn tượng và cho thấy bạn đã nắm vững cách hàm số biến thiên và các điều kiện để giải phương trình ||p(λ)|| = Δ.
 
@@ -529,7 +529,7 @@
 > Nói tóm lại là, Newton method cho ta một cách để giải phương trình f(x) = 0 của một hàm phức tạp f theo lối iterative.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú đã tóm tắt chính xác toàn bộ quy trình được nêu trong hình ảnh, từ điều kiện ban đầu đến việc sử dụng phương pháp Newton. Phần giải thích chi tiết về cơ chế và cơ sở lý thuyết của phương pháp Newton đã bổ sung độ sâu xuất sắc, cho thấy sự hiểu biết rất vững chắc về chủ đề.
 
@@ -649,7 +649,7 @@
 > Vậy tóm lại, phần này chỉ là: **nếu ta dùng root finding Newton method để giải Φ1(λ) = 0 ⇔ ||p(λ)|| - Δ = 0. Thì có thể bị rắc rối khi trong chuỗi λ, có thằng sinh ra nằm sát bên phải -λ1, khiến cho bước tiếp theo bị trục trặc và cả quá trình cơ bản là không thành công. Thay vào đó ta sẽ khắc phục bằng cách giải bài toán khác 1/||p(λ) = 1/Δ ⇔ 1/||p(λ)|| - 1/Δ = 0 ⇔ Φ2(λ) = 0, nơi mà Newton method ổn định hơn.**
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú của bạn giải thích rất chi tiết và chính xác nội dung văn bản. Việc kết nối với kiến thức nền tảng và phân tích các xấp xỉ toán học là đặc biệt ấn tượng, thể hiện sự hiểu sâu sắc.
 
@@ -821,7 +821,7 @@
 > = - 1/\[||p(λ)||^3\] p(λ)T (B + λI)inv p(λ)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài làm thể hiện sự hiểu biết sâu sắc về toán học đằng sau thuật toán, đặc biệt là việc tự đạo hàm hàm φ2(λ) và rút ra được công thức cập nhật Newton chính xác, khớp hoàn toàn với phương trình (4.44) trong tài liệu. Đây là một minh chứng xuất sắc cho khả năng phân tích độc lập. Tuy nhiên, một số bước trình bày có thể được làm rõ và chuẩn hóa hơn về mặt ký hiệu và ngôn ngữ, ví dụ như cách dùng 'không care' hoặc diễn giải quá chi tiết một bước đạo hàm đơn giản.
 
@@ -955,7 +955,7 @@
 > Và một điểm nữa, nói rằng **phiên bản practical của thuật toán này đại ý là sẽ không cần phải không iterate cho đến khi đạt được sự hội tụ của λ với độ chính xác cao**, mà **chỉ cần hài lòng (content with) với kết quả đủ tốt của λ sau 2 hay 3 iterations thôi.**
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bài phân tích rất sâu sắc và chi tiết, đặc biệt là phần dẫn xuất công thức 4.44 hoàn toàn chính xác và thể hiện sự hiểu biết vững chắc. Tuy nhiên, cần lưu ý đến sự không nhất quán về dấu trong phương trình giải `p` và diễn giải chính xác hơn điều kiện `λ < -λ1` dẫn đến thất bại của phân tích Cholesky.
 
@@ -1175,7 +1175,7 @@
 > ⇨ giải ra τ
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài phân tích rất xuất sắc, thể hiện sự hiểu biết sâu sắc về 'hard case' và các khía cạnh toán học liên quan. Lập luận rõ ràng và chính xác. Một điểm nhỏ có thể cải thiện là phần giải thích về tính trực giao giữa các vector riêng, có thể trình bày gọn gàng và trực tiếp hơn.
 
@@ -1499,7 +1499,7 @@
 > \[x là minimizer của f\] ⇔ \[gradient = 0, Hessian ⪰ 0\]
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài làm xuất sắc, thể hiện sự hiểu biết sâu sắc và khả năng phân tích vững chắc các điều kiện tối ưu và tính chất của hàm bậc hai. Các bước chứng minh được trình bày rõ ràng, logic và chính xác. Một điểm nhỏ cần lưu ý là có sự không nhất quán trong việc sử dụng 'x' thay vì 'm' hoặc 'p' khi đề cập đến hàm số hoặc cực tiểu trong phần chứng minh ý (ii).
 
@@ -1541,7 +1541,7 @@
 > Vậy khi t → inf, tức là đi theo hướng vector d, thì hàm m sẽ → -inf. Không thể attain minimum
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Phân tích của bạn rất sâu sắc và chính xác, đặc biệt là phần chứng minh chi tiết việc hàm m(.) giảm vô hạn khi g không nằm trong C(B). Tuy nhiên, cần chú ý tính nhất quán trong ký hiệu, ví dụ như dấu của g2 khi định nghĩa vector d và trong các phép tính.
 
@@ -1671,7 +1671,7 @@
 > Nên nếu xét trong mọi p thỏa ||p|| ≤ Δ, thì m(p) ≥ m(p\*). Điều này giúp kết luận p\* chính là minimizer của bài toán (minimize m(p) s.t ||p|| ≤ Δ) → Chứng minh xong điều kiện đủ.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **96/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
 >
 > Bài làm rất xuất sắc, bạn đã tái hiện và giải thích chi tiết chứng minh điều kiện đủ của Định lý 4.1 một cách cực kỳ rõ ràng và chính xác. Việc phân tích hàm m(p) có hay không có hằng số f cho thấy sự hiểu biết sâu sắc. Một điểm nhỏ có thể cải thiện là diễn đạt điều kiện cần và đủ của bổ đề 4.7(i) một cách chính xác hơn về mối liên hệ giữa ma trận và vector g để hàm đạt cực tiểu.
 
@@ -1877,7 +1877,7 @@
 > Còn phần chứng minh λ ≥ 0 (quay lại sau)
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **80/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **80/100** · ✓ Move on
 >
 > Ghi chú của bạn đã cung cấp một phân tích rất chi tiết và chính xác cho các điều kiện (4.8a) và (4.8c) trong cả hai trường hợp, thể hiện sự hiểu biết sâu sắc về các khái niệm toán học và cách thức chứng minh. Để hoàn thiện bản chứng minh, bạn cần bổ sung phần lý luận chứng minh λ ≥ 0.
 
@@ -1907,7 +1907,7 @@
 > Và ta sẽ đo lường sự không chính xác này bằng cách so sánh nó với thuật toán dogleg và 2D subspace minimization đã biết. Cũng như đưa vào vài kĩ thuật nhằm đảm bảo những giả định của theorem 4.5, 4.6 được thỏa mãn (hai theorem này đại ý là nói rằng nếu các giả định được thỏa thì trust region method sẽ hội tụ toàn cục)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bài phân tích này thể hiện sự hiểu biết sâu sắc về ngữ cảnh và các thuật toán liên quan đến đoạn văn. Các điểm chính từ đoạn văn gốc được nắm bắt chính xác và được bổ trợ bởi thông tin nền đáng giá, thể hiện độ sâu đáng nể, mặc dù một số chi tiết nền không trực tiếp có trong hình ảnh đã cho.
 
@@ -1977,7 +1977,7 @@
 > Còn nếu với 4.20, thì vế phải của mk(0) - mk(pk) ≥ c1 ||gk|| min (Δk, ||gk|| / ||Bk||) đã thành 0, khi đó điều kiện dừng chỉ là mk(0) - mk(pk) ≥ 0 ⇔ - (1/2)pkTBkpk ≥ 0 thì thuật toán chỉ cần chọn pk = 0, tức là đứng yên là thỏa → nó không ép đi ra khỏi saddle point
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài phân tích rất sâu sắc và chính xác, không chỉ tóm tắt nội dung mà còn đi sâu vào chứng minh toán học chi tiết về cách điều kiện (4.52) giúp thoát khỏi điểm yên ngựa. Cách bạn giải thích vai trò của trị riêng âm và vector riêng rất ấn tượng. Cần lưu ý hơn về phong cách trình bày để đạt mức độ học thuật cao hơn.
 
