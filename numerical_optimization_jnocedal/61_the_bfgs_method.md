@@ -62,7 +62,7 @@
 > Nhưng một điểm quan trọng là, Bkinv sẽ là matrix được cập nhật lại sau mỗi iteration chứ không phải là được tính toán ở mỗi iteration
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài ghi rất chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về thuật toán BFGS, bao gồm cả mối liên hệ với các phương pháp tối ưu khác và lý do ra đời của quasi-Newton. Em đã nắm vững các khái niệm trọng tâm như mô hình bậc hai, vai trò của ma trận xấp xỉ Bk và cách nó được cập nhật sau mỗi vòng lặp.
 
@@ -132,7 +132,7 @@
 > (tạm hiểu đại khái là nếu dùng thêm điều kiện / yêu cầu này này thì nó sẽ chỉ đúng nếu hàm f cũng là bậc hai y chang mk, nên trong phần lớn trường hợp, Bk+1 sẽ không thể tồn tại để thỏa mãn cả hai yêu cầu này, bởi bản chất hàm f là hàm phi tuyến nào đó không phải giống y như mk+1).
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú của bạn rất chính xác và thể hiện sự hiểu biết vượt trội về tài liệu. Lý luận độc lập của bạn, đặc biệt là về lý do điều kiện gradient là hợp lý và tại sao không áp đặt điều kiện khớp giá trị, đã bổ sung thêm chiều sâu và cái nhìn phân tích đáng kể.
 
@@ -200,7 +200,7 @@
 >  f(αx + (1-α)y) ≤ αf(x) + (1-α)f(y)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài làm rất xuất sắc, thể hiện sự hiểu biết sâu sắc và toàn diện về các khái niệm. Phần giải thích tại sao ma trận Bk cần xác định dương và chứng minh điều kiện độ cong từ tính lồi chặt của hàm số là vô cùng chi tiết và chính xác. Đây là một phân tích mẫu mực.
 
@@ -256,7 +256,7 @@
 > Nên nếu (1) CÓ NGHIỆM XÁC ĐỊNH DƯƠNG (tức Bk+1 ≻ 0) THÌ ⇨ skTBk+1sk > 0 ∀sk, cũng chính là skTyk > 0 ∀sk → DO ĐÓ skTyk > 0 LÀ ĐIỀU KIỆN CẦN CỦA VIỆC S.E CÓ NGHIỆM XÁC ĐỊNH DƯƠNG
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Phân tích rất sâu sắc, chính xác, và đi thẳng vào cốt lõi vấn đề về điều kiện cần cho phương trình secant có nghiệm xác định dương. Lý giải logic chặt chẽ, từ lý thuyết đến chứng minh đều hoàn hảo.
 
@@ -355,7 +355,7 @@
 > ⇔ yk = Gk sk | thay sk = αkpk (6.12)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bạn đã nắm bắt rất chính xác và sâu sắc các khái niệm từ văn bản, đặc biệt là việc mở rộng giải thích về điều kiện secant, điều kiện độ cong, và minh chứng toán học chi tiết cho Gk là Hessian trung bình cũng như mối quan hệ yk = Gksk. Phân tích về tính bất biến theo tỷ lệ (scale-invariant) thông qua phân tích thứ nguyên cũng rất ấn tượng, cho thấy sự hiểu biết vượt trội.
 
@@ -489,7 +489,7 @@
 > Chính là (2.6)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bài phân tích của bạn rất sâu sắc và mạch lạc, thể hiện sự nắm vững các định lý cơ bản như MVT và FTC, cũng như cách mở rộng chúng cho hàm đa biến một cách hiệu quả. Tuy nhiên, phần chứng minh đạo hàm cấp hai g''(t) cho định lý 2.6 có thể được trình bày trực tiếp hơn bằng quy tắc chuỗi, tránh các bước xấp xỉ nhỏ để đảm bảo tính chặt chẽ hoàn toàn.
 
@@ -621,7 +621,7 @@
 > = (I - ρkykskT)Bk(I - ρkskykT) + ρkykykT với ρk = 1/(ykTsk)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Điểm mạnh của ghi chú là cung cấp một bản giải thích rất sâu sắc và chi tiết về cách dẫn ra công thức cập nhật DFP, vượt xa nội dung trình bày trong ảnh gốc và thể hiện sự hiểu biết chuyên sâu. Tuy nhiên, ghi chú có thể bổ sung thêm thông tin về tác giả (Davidon) và năm phát minh được đề cập trong hình ảnh gốc.
 
@@ -700,9 +700,38 @@
 > → B^k+1s^k-1 hơi khác s^k-1, mang ý nghĩa: B^k+1 MẤT ĐI CHÚT XÍU THÔNG TIN CURVATURE từ xk-1 → xk. Và TƯƠNG TỰ, B^k CŨNG MẤT ĐI CHÚT XÍU THÔNG TIN TỪ xk-2 → xk-1,... THÀNH RA HIỆU ỨNG LÀ k CÀNG LỚN, B^k+1 sẽ mất đi thông tin curvature ở các hướng x1→x2, x2→x3,...ở xa. Và hóa ra điều này lại hay.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bài giải thích rất sâu sắc, liên hệ hiệu quả phương trình secant với việc cập nhật và bảo toàn thông tin độ cong của hàm số trong thuật toán quasi-Newton. Tuy nhiên, một số chỗ về dạng chính xác của phương trình secant khi áp dụng cho ma trận B so với H cần được làm rõ hơn để tránh nhầm lẫn.
+> ### Phân tích chi tiết
+>
+> **1. Điểm mạnh:**
+>
+> *   **Hiểu rõ mục tiêu tổng thể:** Sinh viên nắm được mục đích của các phương pháp Quasi-Newton là xấp xỉ ma trận Hessian (hoặc nghịch đảo của nó) để tránh việc tính toán Hessian thật, từ đó tạo ra bước tìm kiếm tương tự như bước Newton để đạt được hội tụ nhanh.
+> *   **Đạo hàm phương trình cát tuyến:** Sinh viên đã thành công trong việc đạo hàm phương trình cát tuyến ($y_k \approx \nabla^2 f(x_{k+1}) s_k$), thể hiện sự hiểu biết về cách Hessian liên hệ với sự thay đổi của gradient và vị trí.
+> *   **Nắm bắt ý nghĩa cốt lõi của cập nhật Quasi-Newton:** Sinh viên đã kết luận chính xác rằng công thức cập nhật thực hiện hai việc chính: (i) cập nhật thêm thông tin độ cong mới nhất ('combines the most recently observed information') và (ii) bảo toàn thông tin độ cong đã có ('with the existing knowledge embedded in our current Hessian approximation'). Điều này trực tiếp giải thích đoạn văn được highlight.
+> *   **Hiểu lý do thực tiễn:** Sinh viên giải thích đúng lý do tại sao thuật toán cập nhật $H_{k+1}$ (nghịch đảo của Hessian xấp xỉ) thay vì $B_{k+1}$ là để tránh phải tính nghịch đảo trong mỗi bước, giúp việc tính toán bước tìm kiếm hiệu quả hơn.
+>
+> **2. Các điểm cần cải thiện:**
+>
+> *   **Lỗi cơ bản về phương trình cát tuyến:** Đây là lỗi nghiêm trọng nhất. Sinh viên đã lộn giữa vector $s_k$ và $y_k$ trong phương trình cát tuyến. Sinh viên nhiều lần viết "$B^{k+1}s^k = s^k$, cũng chính là $B^{k+1}s^k = y^k$". Điều này là sai lầm căn bản. Phương trình cát tuyến yêu cầu $B_{k+1}s_k = y_k$, trong đó $s_k = x_{k+1} - x_k$ và $y_k = \nabla f_{k+1} - \nabla f_k$. Hai vector này nói chung là khác nhau. Việc nhầm lẫn này làm sai lệch toàn bộ các suy luận toán học tiếp theo.
+> *   **Phép chiếu và công thức cập nhật không chính xác:** Việc sử dụng ma trận chiếu $P$ và $P^{\perp}$ để mô tả công thức cập nhật $B_{k+1}$ ("$B^* (tức B^{k+1}) = P^{\perp}B^kP^{\perp} + P$") là không đúng trong ngữ cảnh của công thức DFP hoặc các công thức Quasi-Newton tiêu chuẩn khác. Phân tích về cách bảo toàn thông tin cũ dựa trên các ma trận chiếu này cũng bị sai do tiền đề ban đầu về phương trình cát tuyến sai.
+> *   **Suy luận về tính bảo toàn thông tin cũ:** Mặc dù kết luận về việc bảo toàn thông tin độ cong cũ là đúng về mặt khái niệm đối với DFP (đặc biệt trong trường hợp hàm bậc hai và tìm kiếm đường thẳng chính xác), cách sinh viên chứng minh điều này là hoàn toàn sai, bởi nó dựa trên lỗi $s_k = y_k$.
+> *   **Lỗi ký hiệu nhỏ:** Trong phần đầu, có một chút nhầm lẫn khi viết "$\nabla m_{k+1} = \nabla f_k$". Thực ra phải là "$\nabla m_{k+1}(0) = \nabla f_{k+1}$" để tính gradient tại tâm xấp xỉ.
+>
+> **3. Gợi ý để nâng cao hiểu biết:**
+>
+> *   **Nắm vững phương trình cát tuyến:** Điều quan trọng nhất là phải hiểu và áp dụng chính xác phương trình cát tuyến: $B_{k+1}s_k = y_k$ (hoặc $H_{k+1}y_k = s_k$). Hãy chắc chắn rằng bạn luôn phân biệt rõ ràng giữa $s_k$ và $y_k$.
+> *   **Nghiên cứu nguồn gốc công thức cập nhật:** Thay vì tự suy luận dựa trên tiền đề không chính xác, hãy tìm hiểu kỹ cách các công thức cập nhật DFP và BFGS được đạo hàm một cách chặt chẽ, thường là thông qua việc giải bài toán tối ưu hóa sự thay đổi nhỏ nhất của ma trận $B$ (hoặc $H$) dưới ràng buộc phương trình cát tuyến và tính đối xứng. Điều này sẽ giúp bạn hiểu rõ cấu trúc toán học của các thuật toán này.
+> *   **Hiểu sâu hơn về tính chất kế thừa (hereditary property):** Tìm hiểu về "n-step quadratic termination" (chấm dứt sau n bước đối với hàm bậc hai) và cách mà tính chất này liên hệ với việc bảo toàn thông tin độ cong cũ trong các phương pháp Quasi-Newton khi sử dụng tìm kiếm đường thẳng chính xác.
+>
+> Việc hiểu đúng nền tảng toán học là cực kỳ quan trọng để áp dụng và phát triển các thuật toán này một cách chính xác.
+>
+> **⭐ Bonus points**
+> - Sinh viên đã đề cập đến điều kiện $s_k^T y_k > 0$ (curvature condition) là cần thiết để có vô số ma trận $B$ thỏa mãn phương trình cát tuyến.
+> - Sinh viên đã chỉ ra việc lựa chọn ma trận $B_{k+1}$ 'gần' với $B_k$ nhất theo một chuẩn có trọng số ($||.||_W$) để tối ưu hóa.
+> - Sinh viên đã đề cập rằng tính trực giao của các vector $s_k$ chỉ đúng trong điều kiện tìm kiếm đường thẳng chính xác và hàm mục tiêu là hàm bậc hai.
+> - Sinh viên đã có cái nhìn sâu sắc về việc các phương pháp Quasi-Newton 'quên' dần thông tin độ cong cũ có thể lại là một điều tốt trong các trường hợp phi bậc hai.
 
 <br>
 
@@ -720,7 +749,7 @@
 > Cách làm thì chỉ khác ở chỗ: Thay vì xây dựng công thức update Bk+1, và dùng công thức Sherman-Morrison-Woodburry để chuyển thành công thức update (Bk+1)inv, tức Hk+1, thì BFGS tiếp cận bằng cách trực tiếp xây dựng Hk+1 cũng từ điều kiện Hk+1 thỏa secant equation (mình nên hiểu là secant equation ĐỐI VỚI INVERSE: Hk+1yk = sk (vì Bksk = yk ⇔ Bkyk = sk) , và minimize weight norm của Hk+1-Hk, và Hk đối xứng. Kết quả là ta có công thức 6.17
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bạn đã nắm bắt rất tốt sự khác biệt cốt lõi giữa DFP và BFGS, cũng như các điều kiện chính (phương trình cát tuyến và chuẩn có trọng số) dẫn đến công thức BFGS. Để hoàn thiện hơn, bạn có thể bổ sung thêm điều kiện "xác định dương" cho Hk+1 và chi tiết hơn về cách "trọng số" được xác định trong chuẩn Frobenius.
 
@@ -740,7 +769,7 @@
 > Cũng có khi ta dùng I, hoặc α × I
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú của bạn đã tóm tắt chính xác các phương pháp lựa chọn H0 và thể hiện rõ rằng không có công thức cố định nào. Để nâng cao hơn, bạn có thể bổ sung thêm vị trí 'x0' khi tính Hessian và lý do lựa chọn bội số của ma trận đơn vị.
 
@@ -781,9 +810,15 @@
 > Có điều, BFGS (cập nhật Hk) ở trên KHÔNG WORK TỐT VỚI BÀI TOÁN CONSTRAINED PROBLEM. Nên thành ra ta sẽ lại quay lại cập nhật Bk, nhưng với việc giải hệ ta sẽ dùng một cái trick, dùng phân tách Cholesky, giúp ta vẫn giữ cost ở O(n^2), và sẽ dẫn đến một thuật toán BFGS xịn hơn, khắc phục được vấn đề trên.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **75/100**
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **75/100** · ✓ Move on
 >
 > Bạn đã nắm vững một số điểm cốt lõi về hiệu suất và tốc độ hội tụ của BFGS so với phương pháp Newton. Tuy nhiên, cần làm rõ hơn về cách thuật toán cập nhật các ma trận xấp xỉ và bối cảnh áp dụng.
+> # Phân tích chi tiết\n\n## Điểm mạnh\n*   **So sánh chi phí và tốc độ hội tụ:** Bạn đã hiểu đúng rằng BFGS (với các cài đặt hiệu quả) có chi phí mỗi lần lặp là O(n^2), thấp hơn đáng kể so với O(n^3) của phương pháp Newton. Bạn cũng nắm vững sự khác biệt về tốc độ hội tụ (siêu tuyến tính của BFGS so với bậc hai của Newton).\n*   **Nhận diện vấn đề O(n^3):** Bạn đã xác định chính xác rằng việc giải hệ tuyến tính hoặc tính toán ma trận nghịch đảo dẫn đến chi phí O(n^3).\n*   **Giải pháp Cholesky:** Bạn đã chỉ ra một cách chính xác rằng việc cập nhật các thừa số Cholesky của B_k là một kỹ thuật quan trọng để duy trì chi phí O(n^2) cho biến thể BFGS làm việc với B_k, khắc phục được vấn đề O(n^3) khi triển khai ngây thơ.\n*   **Kiến thức mở rộng:** Bạn đã thể hiện kiến thức tốt về phương trình secant, điều kiện minimize weight norm, và nhắc đến DFP, cũng như bối cảnh phương pháp Newton trong Tối ưu lồi. Đây là những thông tin chính xác và có liên quan.\n\n## Các điểm cần cải thiện hoặc làm rõ\n*   **Sự nhầm lẫn giữa cập nhật B_k và H_k:** Đoạn văn bản tham khảo tập trung vào việc *đạo hàm một phiên bản BFGS làm việc với xấp xỉ Hessian B_k thay vì H_k* và cung cấp công thức cập nhật cho B_k (6.19). Tuy nhiên, trong ghi chú của bạn, bạn đã có vẻ nhầm lẫn khi thảo luận về việc cập nhật H_k để tránh chi phí O(n^3), trong khi văn bản nói về việc phiên bản cập nhật B_k nếu triển khai ngây thơ sẽ tốn O(n^3). Cần làm rõ rằng tài liệu đang giới thiệu một biến thể B_k và sau đó giải quyết vấn đề hiệu quả của *biến thể B_k đó*.\n*   **Quy trình suy luận công thức:** Lời giải thích về việc sử dụng công thức trong phụ lục để cập nhật H_k+1 hoặc B_k+1 còn chưa rõ ràng và chưa hoàn toàn phù hợp với cách văn bản trình bày (áp dụng Sherman–Morrison–Woodbury để có B_k+1).\n*   **Thông tin không chính xác về bài toán ràng buộc:** Bạn đã tuyên bố rằng "BFGS (cập nhật Hk) ở trên KHÔNG WORK TỐT VỚI BÀI TOÁN CONSTRAINED PROBLEM". Tài liệu tham khảo chỉ đề cập đến việc triển khai ngây thơ của biến thể B_k là không hiệu quả cho *bài toán tối ưu không ràng buộc* ("unconstrained minimization"), và không hề nói về bài toán ràng buộc hoặc hiệu quả của việc cập nhật H_k với chúng. Đây là một điểm cần được chỉnh sửa.\n\n## Gợi ý để hiểu sâu hơn\n*   **Đọc kỹ hơn mục tiêu của mỗi biến thể:** Hãy chú ý đến việc tài liệu đang giới thiệu một biến thể BFGS làm việc với B_k (xấp xỉ Hessian) hay H_k (xấp xỉ nghịch đảo Hessian). Việc cập nhật H_k trực tiếp thường là cách để *tránh* giải hệ tuyến tính, trong khi việc cập nhật B_k trực tiếp *có thể* yêu cầu giải hệ nếu không sử dụng kỹ thuật đặc biệt (như Cholesky).\n*   **Vẽ sơ đồ quy trình:** Hãy thử vẽ sơ đồ dòng chảy của lý do và giải pháp được trình bày trong tài liệu: BFGS ban đầu (O(n^2)) -> Biến thể B_k được giới thiệu -> Vấn đề chi phí O(n^3) với biến thể B_k ngây thơ -> Giải pháp Cholesky để đưa biến thể B_k về O(n^2).\n*   **Xác minh thông tin mở rộng:** Mặc dù kiến thức mở rộng của bạn rất tốt, hãy luôn đảm bảo rằng bạn không nhầm lẫn các chi tiết cụ thể của tài liệu đang đọc với kiến thức tổng quát của mình, đặc biệt là khi đưa ra kết luận về các trường hợp ứng dụng (ví dụ, bài toán ràng buộc).\n
+>
+> **⭐ Bonus points**
+> - Đề cập phương pháp Newton trong bối cảnh Convex Optimization.
+> - Nắm được cơ sở lý thuyết của BFGS là phương trình secant và điều kiện minimize weight norm.
+> - Đề cập đến DFP như một phương pháp quasi-Newton tương tự.
 
 **🔗 See also:** [Tính trace cập nhật BFGS](./64_convergence_analysis.md#node-gt8mtjy)
 
@@ -843,7 +878,7 @@
 > Ban đầu ta đã giả sử z khác 0, nay lại dẫn tới z = 0 → mẫu thuẫn, cho nên w = 0 và zTsk = 0  không thể xảy ra → zTHk+1z = wTHkw + ρk(zTsk)^2 > 0 → Hk+1 xác định dương nếu như Hk xác định dương
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **99/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **99/100** · ✓ Move on
 >
 > Phân tích rất sâu sắc và chính xác, đặc biệt là phần chứng minh tính xác định dương của ma trận Hessian cập nhật (Hk+1). Bạn đã không chỉ tóm tắt mà còn tái hiện lại lập luận một cách logic, thể hiện sự hiểu biết vững chắc về lý thuyết.
 
@@ -861,7 +896,7 @@
 > Đoạn này đại khái nói là nhắc lại cái vụ scale invariant mà lúc đầu đã nói rồi. để quasi-Newton method có tính chất invariant (bất biến) đối với việc đổi biến (transformation of variable) ví dụ như khi scaling thì matrix W được thiết kế đặc biệt để giúp objective function ||B - Bk||_W hay ||H - Hk||_W có tính chất invariant dưới cùng phép biến đổi này. Và ta cũng đã biết, có nhiều cách chọn W khác nhau, mỗi cách sẽ dẫn đến một công thức cập nhật H, hay B khác nhau. Và tác giả cho biết tuy có nhiều nghiên cứu nhưng chưa thấy cái nào tốt hơn BFGS
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **92/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
 > Ghi chú tóm tắt rất chính xác các điểm cốt lõi về tính bất biến và vai trò của ma trận W, đồng thời nắm bắt được kết luận về hiệu quả của BFGS. Để hoàn thiện hơn, hãy tránh thêm các câu diễn giải chủ quan và tập trung hoàn toàn vào nội dung của văn bản gốc.
 
@@ -891,7 +926,7 @@
 > Cuối cùng, một tính chất thú vị là thuật toán DFP và BFGS thực ra là dual (đối ngẫu) của nhau.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài tóm tắt rất chính xác và sâu sắc, không chỉ nắm bắt được các ý chính mà còn giải thích được cả các cơ sở toán học ẩn đằng sau. Khả năng liên hệ đến các điều kiện và hệ quả (như secant equation, ρk lớn) cho thấy sự hiểu biết vững chắc về tài liệu.
 
@@ -911,7 +946,7 @@
 > Nói chung, thuật toán line search dùng hai điều kiện Wolfe thì mình đã biết, nó sẽ có dạng là ban đầu chọn giá trị α sao đó và giảm dần cho đến khi thỏa Wolfe conditions, thuật ngữ gọi là backtracking line-search. Và cái này thuộc về inexact line search, vs exact line search thì ta phải giải bài toán minimize g(α) = f(xk + αpk), vốn dĩ là sẽ cần tính toán nhiều hơn nhưng chưa chắc đã lợi ích. Cái này đã học bên thầy Boyd. Như gs Nocedal cũng nói ở đây, thực tế cũng cho thấy việcv dùng exact line search không có lợi ích kinh tế so với inexact line search.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài phân tích rất chính xác và sâu sắc, không chỉ tóm tắt các điểm chính mà còn mở rộng giải thích chi tiết về điều kiện Wolfe, Armijo, và sự khác biệt giữa line search chính xác và không chính xác. Việc đề cập đến các hằng số c1 và c2 cụ thể sẽ làm bài phân tích hoàn thiện hơn.
 
@@ -935,7 +970,7 @@
 > Cụ thể chi tiết thì quay lại sau.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **92/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
 > Ghi chú của bạn giải thích chính xác tác động của β và thể hiện sự hiểu biết sâu sắc về heuristic điều chỉnh H₀ bằng cách liên hệ nó với độ cong. Để hoàn thiện, hãy lưu ý rằng văn bản tập trung vào việc điều chỉnh giá trị H₀ ban đầu (thường là I) sau bước đầu tiên, thay vì gán trực tiếp thông tin độ cong ngay từ đầu.
 
@@ -967,7 +1002,7 @@
 > Tuy nhiên, qua đây, giáo sư lại phán một câu xanh rờn: Là KINH NGHIỆM TÍNH TOÁN THỰC TẾ ĐỀ XUẤT RẰNG CÁCH LÀM NÀY CHẢ CÓ LỢI ÍCH GÌ RÕ RÀNG CẢ, nên thôi cứ dùng BGFS nguyên gốc là đủ rồi.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **97/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **97/100** · ✓ Move on
 >
 > Bài phân tích của bạn rất sâu sắc và chính xác, cung cấp bối cảnh chi tiết về DFP và BFGS giúp làm rõ ý nghĩa của phương pháp. Bạn đã nắm bắt xuất sắc các điểm chính và kết luận từ đoạn văn gốc.
 
