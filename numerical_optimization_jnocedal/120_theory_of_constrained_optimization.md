@@ -62,7 +62,7 @@
 > Ngược lại, ý thứ hai mà tác giả muốn nhấn mạnh là việc thêm ràng buộc lại khiến bài toán trở nên phức tạp và khó khăn hơn. Ông đưa ra ví dụ về bài toán cực tiểu hóa hàm số x2 + 100 bình phương cộng 0.01 x1 bình phương với điều kiện ràng buộc là x2 - cos x1 phải không âm. Đặc điểm của bài toán này là nếu không có ràng buộc, nó chỉ có duy nhất một nghiệm tối ưu (minimizer). Nhưng khi bổ sung ràng buộc, bài toán lại sinh ra một loạt các nghiệm tối ưu cục bộ (local minimizer). Đây là minh chứng rõ nét cho thấy ràng buộc làm bài toán trở nên khó hơn, dù về mặt lý thuyết, việc không gian tìm kiếm được thu hẹp sẽ giúp dễ dàng tìm ra nghiệm tối ưu toàn cục hơn.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bản tóm tắt rất chính xác, mạch lạc và nắm bắt trọn vẹn cả hai khía cạnh tương phản của ràng buộc được đề cập trong bài viết. Để hoàn thiện hơn, bạn có thể bổ sung công thức nghiệm cụ thể của các điểm cực tiểu cục bộ để tăng tính trực quan cho ví dụ toán học.
 
@@ -112,7 +112,7 @@
 > Nhưng dĩ nhiên nếu trong phạm vi toàn hố, x\* là cái local solution duy nhất, thì dĩ nhiên nó cũng là strict, vì nếu tồn tại thằng x^ nằm sát bên có độ cao bằng x\*, thì x^ cũng là local solution, trong khi ta đang nói x\* là cái duy nhất cơ mà. Vậy suy ra không thể có x^ nào quanh đó ngang nó, mà đều phải cao hơn nó, vậy x\* là strict solution.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú xuất sắc, giải thích trực quan và rất chính xác bản chất toán học của các khái niệm bằng ví dụ thực tế sáng tạo. Bạn chỉ cần lưu ý viết đúng thuật ngữ tiếng Anh là 'isolated local solution' thay vì 'isolate'.
 
@@ -146,7 +146,7 @@
 > Và ôn nói, nói chung, **thường người ta sẽ define feasible set bằng một hệ các ràng buộc bởi các hàm trơn, (thay vì gom lại thành 1 hàm không trơn)**
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Bản ghi chú rất xuất sắc, phản ánh chính xác và đầy đủ các nội dung từ văn bản gốc, bao gồm cả ví dụ minh họa về miền chấp nhận được hình kim cương. Cách diễn đạt mạch lạc, chuẩn xác cả về mặt thuật ngữ toán học chuyên ngành lẫn ngữ nghĩa.
 
@@ -174,7 +174,7 @@
 > Cuối cùng, một lưu ý nhỏ khác là việc đặt các ràng buộc t ≥ x hay t ≥ x^2 trông có vẻ hơi khác so với cách thể hiện khái quát là có hàm c ≥ 0. Thực chất, chúng ta chỉ cần chuyển x sang vế trái là sẽ thu được dạng đó. Nói chung, sau khi sắp xếp lại, ta sẽ có được dạng của bài toán khái quát.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú rất chi tiết, dịch và giải thích chính xác các khái niệm toán học từ đoạn văn bản, bao gồm cả ví dụ minh họa và phần biến đổi ràng buộc. Điểm cần lưu ý duy nhất là cụm từ "sometimes" nên được dịch chính xác là "đôi khi" thay vì "thông thường" để phản ánh đúng tần suất áp dụng của phương pháp.
 
