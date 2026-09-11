@@ -1,6 +1,6 @@
 # 10.1 Point Estimation
 
-📊 **Progress:** `42` Notes | `48` Screenshots | `22` AI Reviews
+📊 **Progress:** `42` Notes | `48` Screenshots | `23` AI Reviews
 
 ---
 <a id="node-2ixm3r0"></a>
@@ -874,7 +874,7 @@
 >
 > Bài giải thích rất sâu sắc và chi tiết, làm rõ định nghĩa về ước lượng hiệu quả tiệm cận (asymptotically efficient) bằng cách liên hệ chặt chẽ với Cramér-Rao Lower Bound, bao gồm cả bối cảnh và công thức. Độ chính xác và chiều sâu của kiến thức được trình bày rất ấn tượng.
 
-**🔗 See also:** [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c) · [10.1.3 Calculations and Comparisons](#node-iwgmm5t) · [Phương sai tiệm cận và giới hạn](#node-62aug4x) · [Asymptotic Normality of MLE](./103_hypothesis_testing.md#node-l86tt7u) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq)
+**🔗 See also:** [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c) · [10.1.3 Calculations and Comparisons](#node-iwgmm5t) · [Phương sai tiệm cận và giới hạn](#node-62aug4x) · [Asymptotic Normality of MLE](./103_hypothesis_testing.md#node-l86tt7u) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq) · [Approximate Maximum Likelihood Intervals](./104_interval_estimation.md#node-tsuffya)
 
 <br>
 
@@ -940,7 +940,7 @@
 >
 > Ghi chú giải thích Theorem 10.1.12 rất chi tiết và chính xác, đặc biệt là phần chứng minh tính consistency bằng định lý Slutsky. Để hoàn thiện hơn, bạn có thể bổ sung giới hạn n → ∞ vào định nghĩa tính consistent.
 
-**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Định lý Slutsky](./55_convergence_concepts.md#node-uwbmbt7) · [Hội tụ xác suất và phân phối](./55_convergence_concepts.md#node-wqcasc6) · [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Chuẩn tiệm cận, nhất quán, hiệu quả](#node-v1s5jks) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s) · [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li) · [Asymptotic Normality of MLE](./103_hypothesis_testing.md#node-l86tt7u) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq) · [The Score Test Statistic](./103_hypothesis_testing.md#node-xudioev)
+**🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Định lý Slutsky](./55_convergence_concepts.md#node-uwbmbt7) · [Hội tụ xác suất và phân phối](./55_convergence_concepts.md#node-wqcasc6) · [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Chuẩn tiệm cận, nhất quán, hiệu quả](#node-v1s5jks) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s) · [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li) · [Asymptotic Normality of MLE](./103_hypothesis_testing.md#node-l86tt7u) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq) · [The Score Test Statistic](./103_hypothesis_testing.md#node-xudioev) · [Approximate Maximum Likelihood Intervals](./104_interval_estimation.md#node-tsuffya)
 
 <br>
 
@@ -1570,7 +1570,35 @@
 >
 > Phần tiếp theo chỉ là dùng công thức để thế vào In(θ), nhưng ý tưởng chính thì mình đã thông.
 
-**🔗 See also:** [Phương pháp Delta](./55_convergence_concepts.md#node-lo99k23) · [Tính nhất quán của MLE](#node-d19dn75) · [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy) · [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq)
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc và diễn giải trực quan logic liên kết giữa Delta Method, tính hiệu quả tiệm cận của MLE và CRLB để suy ra công thức xấp xỉ phương sai. Một số bước biến đổi đại số và định nghĩa tiệm cận còn mang tính trực giác và có lỗi ký hiệu nhỏ nhưng không làm sai lệch bản chất.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"√n(Wn - θ) → (d) n(0, ν(θ)) với ν(θ) = [g'(θ)]^2 / I1(θ)"*
+>
+> Lỗi ký hiệu tâm chuẩn hóa: Nếu $W_n$ là ước lượng cho $g(\theta)$ thì biểu thức chính xác phải là $\sqrt{n}(W_n - g(\theta))$, không phải $W_n - \theta$.
+>
+> **2.** *"n Var(g(Yn)) - n Var(g(θ)) ≈ [g'(θ)]^2 Avar(Yn)"*
+>
+> Biến đổi toán học chưa chuẩn: Khi $c = g(\theta)$ là một hằng số, $\text{Var}(X - c) = \text{Var}(X)$ trực tiếp theo tính chất của phương sai, chứ không phải phân tách thành $\text{Var}(X) - \text{Var}(c)$ (dù $\text{Var}(c) = 0$ đưa về cùng kết quả số học).
+>
+> **3.** *"vậy thì khi n lớn ta sẽ có Var(X) ≈ ε^2 chứ, hoàn toàn logic"*
+>
+> Hội tụ theo phân phối không mặc nhiên kéo theo hội tụ về moment (phương sai của phân phối tiệm cận không nhất thiết luôn bằng giới hạn phương sai thực tế của mẫu nếu thiếu điều kiện khả tích đều - uniform integrability). Tuy nhiên, dùng phương sai tiệm cận để xấp xỉ phương sai mẫu lớn là quy ước heuristics tiêu chuẩn.
+>
+>
+> **✓ Strengths**
+> - Xâu chuỗi rất tốt 3 mắt xích then chốt: Delta method, tính hiệu quả tiệm cận của MLE, và công thức cận dưới Cramér–Rao.
+> - Hiểu chính xác bản chất vì sao công thức phương sai xấp xỉ của MLE hàm $h(\hat{\theta})$ lại có dạng trùng khớp hoàn toàn với CRLB.
+>
+> **💡 Deeper notes**
+> - Điều kiện chính quy về miền giá trị (support): Đoạn trích nhấn mạnh miền xác định của hàm mật độ không được phụ thuộc vào tham số $\theta$ (như phân phối Uniform(0, $\theta$)), nếu không MLE sẽ không đạt được các tính chất tiệm cận này.
+> - Thông tin quan sát (Observed Information) vs Thông tin kỳ vọng (Expected Information): Sách lưu ý thêm kết quả của Efron & Hinkley (1978) cho thấy việc thay thế mẫu số bằng đạo hàm bậc 2 thực tế tại $\hat{\theta}$ (observed information $\hat{I}_n(\hat{\theta})$) mang lại xấp xỉ tốt hơn và dễ tính hơn việc lấy kỳ vọng giải tích.
+
+**🔗 See also:** [Phương pháp Delta](./55_convergence_concepts.md#node-lo99k23) · [Tính nhất quán của MLE](#node-d19dn75) · [Definition 10.1.11 Asymptotic Efficiency](#node-bgijdqy) · [Bất đẳng thức Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-1qs416c) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq) · [Approximate Maximum Likelihood Intervals](./104_interval_estimation.md#node-tsuffya)
 
 <br>
 
