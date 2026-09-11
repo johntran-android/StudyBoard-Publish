@@ -29,7 +29,7 @@
 > Cũng như là với các phương pháp khác thì ta sẽ thấy nó có thể khác chút đỉnh so với steepest descent nhưng **sẽ vẫn global convergence**.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **85/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **85/100** · ✓ Move on
 >
 > Điểm mạnh của ghi chú là việc tóm tắt chính xác các yêu cầu về global convergence (cần cả step length và search direction tốt) và trọng tâm của phần này (góc giữa p_k và -∇f_k) theo đúng nội dung trong hình ảnh. Ghi chú cũng thể hiện sự hiểu biết sâu sắc về chủ đề bằng cách đề cập đến các khía cạnh liên quan mặc dù không trực tiếp có trong hình ảnh.
 
@@ -54,7 +54,7 @@
 > Σk≥0 [cos(θ_k)]^2 (||∇fk||)^2 < ∞
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **99/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **99/100** · ✓ Move on
 >
 > Bài ghi rất chính xác và đầy đủ các điều kiện cũng như kết luận của định lý. Cách giải thích chi tiết, đặc biệt là về điều kiện Lipschitz và công thức lặp, rất hữu ích và làm tăng sự rõ ràng. Hãy tiếp tục duy trì mức độ chi tiết và chính xác này.
 
@@ -150,7 +150,7 @@
 > ⇨ fk+1 ≤ fk - c (cos θk)^2 (||∇fk||)^2
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Bài giải thích cực kỳ chi tiết và chính xác từng bước trong chứng minh, bao gồm cả các lý do và bước biến đổi trung gian không có trong hình ảnh gốc. Độ sâu của phân tích vượt trội, giúp người đọc hiểu rõ bản chất của từng bất đẳng thức.
 
@@ -196,7 +196,7 @@
 > ⇔ Σ_j=0:k (cos θj)^2 (||∇fj||)^2 ≤ inf. Chứng minh xong
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **80/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **80/100** · ✓ Move on
 >
 > Điểm mạnh của note là giải thích rất rõ ràng quá trình tổng chuỗi (telescoping sum) và việc sử dụng tính chất hàm f bị chặn dưới để chứng minh tổng hữu hạn bị chặn là chính xác. Tuy nhiên, để đạt được kết quả cuối cùng như trong ảnh (chuỗi vô hạn), note cần bổ sung bước lấy giới hạn khi k tiến tới vô cùng và sử dụng ký hiệu `< ∞` thay vì `≤ inf` để rõ ràng hơn.
 
@@ -216,7 +216,7 @@
 > Còn giả định về tính trơ - Lipschitz continuity của gradient thì nó cũng thường là thỏa trong thực tế
 
 > [!TIP]
-> **🤖 AI Feedback** — ❌ Score: **65/100**
+> 🤖 **AI Check** — 🟡 Minor issues — ❌ **65/100** · ✓ Move on
 >
 > Bạn đã hiểu đúng về việc các điều kiện Goldstein hoặc Wolfe mạnh mang lại kết quả tương tự và lý do hàm f bị chặn dưới là hợp lý. Tuy nhiên, bạn đã bỏ sót thông tin quan trọng về điều kiện Zoutendijk và có thể diễn đạt rõ hơn về giả định độ trơn của gradient.
 
@@ -248,7 +248,7 @@
 > Tuy nhiên nó ko chắc là local minimizer, vì có thể là saddle point
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài giải thích rất rõ ràng, bám sát các bước suy luận từ điều kiện Zoutendijk đến kết luận về sự hội tụ của chuẩn gradient. Việc giải thích vai trò của cos θk và bổ sung về điểm yên ngựa thể hiện sự hiểu sâu sắc, cho thấy bạn đã nắm vững kiến thức. Để bài viết hoàn hảo hơn, bạn có thể diễn đạt điều kiện Zoutendijk một cách tường minh hơn là "tổng chuỗi hội tụ về một giá trị hữu hạn" thay vì "≤ inf" ban đầu.
 
@@ -272,7 +272,7 @@
 > Nhưng **nếu thêm vào một điều kiện nữa của search direction, liên quan đến curvature condition thì ta có thể tăng cường kết quả để đảm bảo sự hội tự về local minimum**
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bản dịch rất chính xác và đầy đủ các ý chính từ văn bản gốc, bao gồm cả những sắc thái về việc sử dụng thuật ngữ. Việc bổ sung giải thích cho "stationary point" là một điểm cộng lớn, giúp làm rõ khái niệm.
 
@@ -472,7 +472,7 @@
 > Và như vậy ta có thể kết luận rằng **chỉ cần Bk positive definite và có tính chất là tồn tại M sao cho ||Bk|| ||Bkinv|| ≤ M thì ta sẽ có global convergnence.**
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bài làm thể hiện sự hiểu biết sâu sắc và khả năng trình bày chi tiết về chứng minh hội tụ toàn cục. Tuy nhiên, việc áp dụng ||Bk|| = λmax(Bk) và ||Bk^-1|| = 1/λmin(Bk) đòi hỏi giả định rằng ma trận Bk là đối xứng và dương xác định, điều này cần được nêu rõ trong quá trình chứng minh.
 
@@ -493,7 +493,7 @@
 > rồi Cái này để ý là nó nói là một số cái thuật toán Ví dụ như cái thuật toán liên hợp Green thì nó là ta có thể chứng minh rằng cái giới hạn 3.18 nhưng mà một cái phiên bản yếu hơn
 
 > [!TIP]
-> **🤖 AI Feedback** — ❌ Score: **0/100**
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **0/100** · ✗ Fix first
 >
 > Bạn đã ghi nhận tài liệu này, đó là một khởi đầu tốt! Để đạt điểm cao hơn, bạn hãy cố gắng tóm tắt những ý chính hoặc thông tin quan trọng từ đoạn văn. Lần tới, hãy thử ghi lại những gì bạn hiểu nhé!
 
