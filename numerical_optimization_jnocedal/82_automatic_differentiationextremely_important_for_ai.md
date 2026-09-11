@@ -702,7 +702,7 @@
 > cái gọi là Gradient Checkpointing
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **92/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
 > Bài làm xuất sắc trong việc nắm bắt nhược điểm chính của Reverse Mode và giải thích cơ chế checkpointing một cách chi tiết, kèm ví dụ minh họa rất rõ ràng. Tuy nhiên, việc đề cập tới "gs Nocedal" không có trong đoạn văn bản gốc được cung cấp, cần lưu ý chỉ trích dẫn thông tin trực tiếp từ nguồn đã cho.
 
@@ -883,7 +883,7 @@
 > của J cùng lúc (lúc nãy đã mô tả rồi)
 
 > [!TIP]
-> **🤖 AI Feedback** — ❌ Score: **55/100**
+> 🤖 **AI Check** — 🟡 Minor issues — ❌ **55/100** · ✓ Move on
 >
 > Bài làm thể hiện sự nắm vững về cách tính từng cột của ma trận Jacobian bằng forward mode. Tuy nhiên, có sự nhầm lẫn về ý nghĩa của Dpf(x) đối với hàm vector và mô tả kỹ thuật tô màu cho Jacobian thưa trong forward mode còn chưa chính xác.
 
