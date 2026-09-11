@@ -97,7 +97,7 @@
 > Do đó, ta sẽ phải thiết lập một cái gọi là **SUFFICIENT DECREASE** condition, hiểu nôm na là điều kiện này **quy định mức giảm phải đủ lớn**
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú đã tóm tắt chính xác định nghĩa và hai giai đoạn của thuật toán line search từ hình ảnh. Ngoài ra, ghi chú còn cung cấp thêm ngữ cảnh và độ sâu rất tốt về các điều kiện để chọn độ dài bước, giúp nâng cao đáng kể sự hiểu biết về chủ đề.
 
@@ -142,7 +142,7 @@
 > Thực tế thì người ta thường chọn c1 = 10^-4
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bản ghi chú rất chính xác và có chiều sâu, đặc biệt trong việc giải thích mối quan hệ giữa l(α) và Φ(α) khi α nhỏ. Các giải thích chi tiết giúp người đọc hiểu rõ hơn về điều kiện Armijo.
 
@@ -190,7 +190,7 @@
 > Sách cũng cho biết giá trị thường dùng của c2
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Giải thích rất chính xác và chi tiết, đặc biệt là phần diễn giải ý nghĩa của điều kiện độ cong trong việc xác định độ dốc và hành động tiếp theo trong thuật toán tối ưu. Nội dung phân tích khớp hoàn toàn với hình ảnh và cung cấp thêm chiều sâu đáng kể.
 
@@ -214,7 +214,7 @@
 > Và từ mũi tên xanh thứ hai thì độ dốc lại tăng (hàm quay đầu đi lên) nên nó cũng là vùng mà Curvature condition bắt đầu thỏa.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bài giải thích rất chi tiết và đúng đắn về điều kiện độ cong (curvature condition) và cách nó được minh họa trên đồ thị. Tuy nhiên, có một điểm chưa rõ ràng trong câu cuối cùng khi mô tả "độ dốc lại giảm" trong khi hàm "quay đầu đi lên", vì khi hàm quay đầu đi lên thì độ dốc đang tăng.
 
@@ -243,7 +243,7 @@
 > Và ý nghĩa của nó là, tại xk + αkpk, **độ dốc phải vừa bớt âm nhưng cũng ko được qúa dương**
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Nội dung tóm tắt rất chính xác và đầy đủ, truyền tải đúng ý nghĩa của các điều kiện Wolfe và Strong Wolfe từ văn bản gốc. Việc bổ sung tên riêng cho từng điều kiện (Armijo, Strong Curvature condition) cũng giúp tăng thêm độ sâu cho phần giải thích.
 
@@ -261,7 +261,7 @@
 > kết hợp Armijo và Curvature condition.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **85/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **85/100** · ✓ Move on
 >
 > Ghi chú này rất chính xác khi nêu bật sự kết hợp của điều kiện Armijo và Curvature tạo nên các điều kiện Wolfe, điều này hoàn toàn phù hợp với hình minh họa. Để tăng thêm chiều sâu, bạn có thể bổ sung giải thích ngắn gọn về ý nghĩa hoặc vai trò của từng điều kiện.
 
@@ -358,7 +358,7 @@
 > Cuối cùng gs cho biết cái Wolfe condition có tính chất scale-invariant. Nhân hàm với constant hay thực hiện một affine change ko làm thay đổi.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Tuyệt vời! Bạn đã nắm bắt rất chính xác và chi tiết nội dung của bổ đề cũng như các bước chứng minh. Khả năng giải thích sâu sắc về định lý giá trị trung bình và đạo hàm của Φ(α) thực sự ấn tượng, cho thấy sự hiểu biết rất vững chắc về kiến thức nền tảng.
 
@@ -380,7 +380,7 @@
 > QUAY LẠI SAU
 
 > [!TIP]
-> **🤖 AI Feedback** — ❌ Score: **55/100**
+> 🤖 **AI Check** — 🟡 Minor issues — ❌ **55/100** · ✓ Move on
 >
 > Em đã nhận diện đúng các điều kiện Goldstein và trình bày được hai bất đẳng thức cấu thành. Tuy nhiên, điều kiện đầu tiên không phải là điều kiện Armijo, và em có thể bổ sung thêm về ý nghĩa từng điều kiện cũng như ưu nhược điểm của chúng.
 
@@ -406,7 +406,7 @@
 > Sau đó thuật toán sẽ **giảm dần α (ban đầu gán bởi αbar) bởi một factor ρ**. Cho đến khi nó thỏa Armijo condition thì dừng việc tìm α
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Giải thích rất rõ ràng và nắm bắt được bản chất của cách tiếp cận backtracking giúp loại bỏ điều kiện độ cong riêng biệt, chỉ sử dụng điều kiện giảm đủ. Các bước của thuật toán backtracking cũng được mô tả chính xác và có thêm ví dụ thực tế về cách chọn αbar.
 
@@ -443,9 +443,34 @@
 > (Có lẽ vì với tối ưu lồi hầu như Newton method đóng vai trò quan trọng nên trong Convex Optimization, mình nhớ initial α (trong sách đó là t hay sao á) = 1
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú của học sinh thể hiện sự hiểu biết rất tốt về quy trình tìm kiếm đường lùi (backtracking line search), giải thích chính xác tất cả các khía cạnh chính và thể hiện độ sâu đáng nể.
+> ## Phân tích chi tiết
+>
+> ### Điểm mạnh
+> *   **Hiểu đúng về hệ số co rút (contraction factor ρ):** Học sinh đã mô tả chính xác ρ là một số nằm trong khoảng (0,1) dùng để thu nhỏ dần α. Điều này phù hợp với tài liệu tham khảo.
+> *   **ρ có thể thay đổi:** Học sinh đã nắm bắt chính xác rằng hệ số ρ có thể được phép thay đổi tại mỗi lần lặp của quá trình tìm kiếm đường, thể hiện sự chú ý đến chi tiết trong tài liệu.
+> *   **Các đảm bảo của Backtracking:** Học sinh đã liệt kê và giải thích đúng ba điều kiện mà phương pháp backtracking đảm bảo cho giá trị αk được chọn:
+>     1.  Là một giá trị cố định (lựa chọn ban đầu ᾱ) nếu nó thỏa mãn điều kiện giảm đủ ngay lập tức.
+>     2.  Đủ nhỏ để thỏa mãn điều kiện giảm đủ (ví dụ: điều kiện Armijo).
+>     3.  **Không quá nhỏ:** Phần giải thích về việc α* là giá trị thỏa mãn và α*/ρ là giá trị ngay trước đó bị từ chối là rất tốt. Điều này cho thấy học sinh đã hiểu sâu sắc logic đằng sau việc đảm bảo bước không quá ngắn, tối ưu hóa hiệu quả của quá trình tìm kiếm đường.
+> *   **Khả năng ứng dụng của Backtracking:** Học sinh đã nêu chính xác rằng backtracking phù hợp với phương pháp Newton nhưng ít phù hợp hơn với các phương pháp Quasi-Newton hoặc Conjugate Gradient, phản ánh đúng thông tin trong tài liệu.
+>
+> ### Các điểm cần cải thiện
+> *   Không có điểm yếu đáng kể nào cần cải thiện. Giải thích của học sinh về điều kiện "không quá nhỏ" hơi dài dòng một chút nhưng logic hoàn toàn chính xác.
+>
+> ### Gợi ý để đào sâu hiểu biết
+> *   Để hiểu sâu hơn, học sinh có thể nghiên cứu thêm về "safeguarded interpolation" được đề cập trong tài liệu, đó là một cách để chọn hệ số co rút ρ một cách linh hoạt hơn thay vì giữ cố định.
+>
+> ### Điểm thưởng
+> *   Kết nối với kiến thức từ EE364a về việc phương pháp Newton có thể chọn hệ số bước bằng 1 một cách nhất quán khi đã qua "Newton phase", cho thấy khả năng liên hệ kiến thức đa môn.
+> *   Liên hệ giá trị α = 1 ban đầu trong phương pháp Newton với vai trò quan trọng của nó trong tối ưu hóa lồi (Convex Optimization), thể hiện sự hiểu biết rộng về bối cảnh ứng dụng của các thuật toán.
+>
+>
+> **⭐ Bonus points**
+> - Liên hệ việc phương pháp Newton chọn hệ số bước bằng 1 trong 'Newton phase' với kiến thức từ EE364a.
+> - Kết nối giá trị α = 1 ban đầu cho phương pháp Newton với tầm quan trọng của nó trong tối ưu hóa lồi, thể hiện sự hiểu biết bối cảnh rộng.
 
 <br>
 
