@@ -81,7 +81,7 @@
 > Cuối cùng, gs nói để phân tích hội tụ của quasi Newton, sẽ khó hơn là các pp khác, vì trong pp này, matrix approx Hessian thay đổi liên tục trong quá trình thuật toán chạy. Nên ta khó mà nắm bắt được trị riêng của nó. Nên ta sẽ sử dụng hai công cụ quan trọng là trace và det, như đã biết từ 1806: là tổng và tích của trị riêng, ý nghĩa là nếu ko nắm bắt được cụ thể giá trị của trị riêng, nhưng nếu nắm bắt được cái tổng và tích thì ta cũng có thể chỉ ra giới hạn của trị riêng (nắm bắt ở đây ý nói, nắm bắt hành vi, khoảng giá trị của nó)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **96/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
 >
 > Ghi chú rất chính xác trong việc tái hiện các công thức và cung cấp cái nhìn sâu sắc về lý do tại sao các công cụ như trace và determinant lại hữu ích trong phân tích. Tuy nhiên, một vài điểm giải thích chi tiết hơn về các giả định không được trình bày trực tiếp trong đoạn văn bản gốc.
 
@@ -121,7 +121,7 @@
 > Nhưng cũng có cách khác cũng dễ: tr(AB) = tr(BA) ⇨ tr(ykykT) = tr(ykTyk) = ykTyk (trace của scalar = scalar) = ||yk||^2. và tr(BkskskTBk) = tr(BkTskskTBk) = tr(vvT) với v = BkTsk, = tr(vTv) = vTv = ||v||^2 = ||BkTsk||^2
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **93/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **93/100** · ✓ Move on
 >
 > Bạn đã trình bày một cách xuất sắc việc chứng minh công thức (6.44), với các bước rất chi tiết và sử dụng đúng các tính chất của trace. Đặc biệt, việc sử dụng tính chất tr(AB) = tr(BA) là một cách rất thanh lịch để đơn giản hóa các số hạng, giúp bài giải rõ ràng và chính xác hơn.
 
