@@ -17,7 +17,7 @@
 > Phân tách ma trận là một yếu tố quan trọng và rất hữu ích. Trong phần trước, chúng ta đã thảo luận về singular value decomposition (phân tách giá trị kỳ dị). Trong môn 1806, chúng ta đã học một số phép phân tách, tiêu biểu có phân tách vector riêng giá trị riêng hay Eigen decomposition. Phần này sẽ tìm hiểu thêm một số phép phân tách khác như Cholesky, LU hoặc QR. Đầu tiên, tác giả đề cập đến một ma trận đặc biệt gọi là ma trận hoán vị. Ma trận hoán vị này, trong MIT 1806, chúng ta cũng đã gặp. Về cơ bản, nó là một ma trận được tạo ra từ ma trận đơn vị. Ví dụ, khi muốn dùng ma trận hoán vị để thay đổi vị trí hai hàng của một ma trận, chúng ta sẽ hoán đổi hai hàng tương ứng trong ma trận đơn vị. Chẳng hạn, nếu muốn tạo một ma trận hoán vị để đổi hàng 1 và hàng 3 của ma trận A, khi nhân ma trận hoán vị này với ma trận A, ta sẽ thu được ma trận mới với hàng 1 và hàng 3 của A được hoán đổi. Kết quả là một ma trận mới có hàng 1 là hàng 3 của A và hàng 3 là hàng 1 của A. Vậy làm thế nào để tạo được ma trận hoán vị đó? Đơn giản là ta lấy ma trận đơn vị và hoán đổi hàng 1 với hàng 3 của nó. Như vậy, ta sẽ có ma trận giúp hoán đổi hàng 1 với hàng 3 của một ma trận khác khi nhân từ bên trái. Từ MIT 1806, chúng ta đã biết, trong bốn góc nhìn về phép nhân ma trận, góc nhìn thứ hai cho thấy khi nhân ma trận A với ma trận B, mỗi hàng của ma trận kết quả là tổ hợp tuyến tính của các hàng của ma trận B, với các hệ số lấy từ hàng tương ứng của ma trận A. Ví dụ, nếu C là ma trận kết quả thì hàng thứ ba của ma trận C là tổ hợp tuyến tính của các hàng của ma trận B, sử dụng các hệ số từ hàng số 3 của ma trận A. Với góc nhìn này, chúng ta dễ dàng hiểu tại sao ma trận hoán vị P có thể giúp hoán vị các hàng của ma trận A. Tương tự vậy, chúng ta cũng có thể hoán vị các cột của ma trận A bằng cách nhân với một ma trận hoán vị từ bên phải, hoàn toàn tương tự.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bạn đã giải thích rất xuất sắc về ma trận hoán vị, cách tạo và cơ chế hoạt động của chúng để hoán đổi hàng hoặc cột của ma trận. Việc liên hệ với kiến thức đã học (MIT 1806) để làm rõ lý do tại sao phép nhân ma trận hoán vị lại hoạt động là một điểm cộng lớn, thể hiện sự hiểu biết sâu sắc.
 
@@ -87,7 +87,7 @@
 > Còn vì sao U là matrix tam giác trên thì là do bản chất của quá trình khử ta muốn đưa A về dạng này
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài giải thích rất sâu sắc và chính xác, không chỉ mô tả mà còn giải thích chi tiết nguồn gốc của ma trận L là unit lower triangular, điều này vượt xa nội dung trong tài liệu cung cấp. Cách trình bày các bước giải hệ Ax=b cũng rất rõ ràng và mạch lạc. Để bài viết hoàn hảo hơn, bạn có thể thử cô đọng lại phần giải thích về ma trận nghịch đảo L một chút.
 
@@ -147,7 +147,7 @@
 > Cũng có thể thấy lí do phải dừng khi gặp Aij = 0, là vì bước tính Lki.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài giải thích rất chi tiết và dễ hiểu, đặc biệt là phần tìm phần tử pivot và các bước khử Gauss. Bạn đã nắm rất vững các bước và ý nghĩa của chúng, đồng thời giải thích rõ ràng lý do dừng thuật toán khi ma trận suy biến. Một điểm nhỏ có thể bổ sung là việc gán L_ii = 1 trong quá trình tạo ma trận L.
 
@@ -167,7 +167,7 @@
 > Tuy nhiên, nếu như mà mình xét cái trường hợp ma trận A là ma trận thưa đó, thay vì nó là ma trận đặt, chữ dance là chữ đặt. Thì nếu như mà mình xét ma trận A là ma trận thưa thì cái việc sử dụng column pivoting tức là thay vì row pivoting thì dùng column pivoting sẽ có thể giúp cải thiện cái hiệu suất của cái phép khử Gaus bằng cách là nó đảm bảo rằng cái ma trận L và ma trận U cũng là những ma trận sparse. Nói chung cái đoạn này mình có thể hiểu rằng là nếu như với cái ma trận A là một ma trận dense thì làm theo kiểu row pivoting hay là column pivoting thì được như nhau. Nhưng mà với ma trận A là ma trận thưa thì làm theo kiểu column sẽ có một chút cái sự cải thiện, nó sẽ có một chút ưu điểm.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bạn đã nắm bắt rất chính xác hai ý chính của đoạn văn: việc xoay cột không cải thiện tính ổn định nhưng lại tối ưu hiệu suất cho ma trận thưa bằng cách giữ L và U thưa. Để nâng cao hơn nữa, hãy lưu ý rằng việc sắp xếp lại cột và hàng trong thuật toán ban đầu là các biến thể song song, không hẳn là "thay vì" nhau.
 
@@ -432,7 +432,7 @@
 > Nói chung là tạm hiểu về thuật toán này như vậy
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bạn đã nắm vững các điều kiện và hình thức của phép phân tích Cholesky, bao gồm cả việc tiết kiệm chi phí và tính duy nhất của L. Việc tự mình suy ra các công thức cho từng phần tử của L cho thấy sự hiểu biết sâu sắc và khả năng phân tích tuyệt vời. Bạn cũng đã giải thích rất tốt về cách thuật toán A.2 tối ưu hóa việc tính toán bằng cách cập nhật ma trận A tại chỗ, đây là một điểm quan trọng. Để cải thiện thêm, hãy xem xét kỹ hơn các chỉ số trong bước cập nhật Ajk <- Ajk - LjiLki của vòng lặp trong cùng để đảm bảo khớp chính xác với định nghĩa của thuật toán.
 
@@ -467,7 +467,7 @@
 > Ngoài ra, như đã biết hồi học ở mấy chapter trước, thuật toán này còn công dụng là check tính xác định dương của matrix: Nếu matrix xác định dương thì thuật toán sẽ chạy từ đầu đến cuối, ko bị lỗi, để tính ra được hết các Lii đều dương, nhưng nếu matrix không xác định dương, thì thuật toán sẽ dừng → matrix có eigenvalue = 0, hoặc chạy xong nhưng có Lii âm
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài viết giải thích chính xác hai công dụng chính của phân tích Cholesky và bổ sung các chi tiết sâu sắc về độ phức tạp tính toán cũng như các trường hợp ma trận không xác định dương, cho thấy sự hiểu biết vững chắc. Để hoàn thiện hơn, bạn có thể nhấn mạnh rằng ma trận A cần phải đối xứng khi kiểm tra tính xác định dương.
 
@@ -661,9 +661,33 @@
 > Nếu nói về phân tách AP = QR, thì giải Ax = b ⇔ QR(PT)x = b thì như vậy sau khi giải bước 3 mới chỉ là Rz = b\~, cần làm thêm bước cuối: PTx = z ⇨ x = Pz
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
 >
-> Ghi chú cung cấp một phân tích rất sâu sắc về phân tích QR, đặc biệt là việc liên hệ với quá trình Gram-Schmidt để giải thích cấu trúc của R, và trình bày chính xác các bước giải hệ Ax=b. Tuy nhiên, nó chưa đề cập đến chi phí tính toán và khả năng duy trì tính thưa của ma trận, những khía cạnh thực tiễn quan trọng từ tài liệu gốc.
+> Ghi chép rất tốt, hiểu sâu bản chất hình học của Gram-Schmidt và mối liên hệ mật thiết với phép phân rã QR cũng như cách giải hệ phương trình tuyến tính. Có một số lỗi gõ nhầm ký hiệu (như viết a2 thay vì q2 trong tích vô hướng) nhưng không ảnh hưởng đến mô hình tư duy cốt lõi.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"p = Qx = QQTa3 = (q1Ta3)q1 + (a2Ta3)q2"*
+>
+> Lỗi gõ nhầm ký hiệu: Vì Q = [q1, q2] nên Q^T a3 = [q1^T a3; q2^T a3]. Phép chiếu phải là (q1^T a3)q1 + (q2^T a3)q2 chứ không phải (a2^T a3)q2. Lỗi này bị sao chép lặp lại ở các dòng tính r, q3 và hàng 2 cột 3 của R.
+>
+> **2.** *"Chiếu q3 lên span{q1, q2} được p"*
+>
+> Nhầm ký hiệu: Đang tìm q3 bằng cách chiếu vector cột a3 (chứ không phải q3) lên không gian span{q1, q2}.
+>
+> **3.** *"Gram - Smidth"*
+>
+> Tên chính xác của nhà toán học / thuật toán là Gram-Schmidt.
+>
+>
+> **✓ Strengths**
+> - Liên hệ và giải thích rất trực quan bản chất các phần tử của ma trận tam giác trên R thông qua hệ số chiếu và chuẩn của phần dư trong Gram-Schmidt.
+> - Tư duy đại số tuyến tính tốt khi dùng Normal Equation (Q^T Q = I) để tìm tọa độ hình chiếu trực giao.
+> - Nhận diện và suy luận chính xác bước hoán vị nghiệm x = Pz từ AP = QR (thậm chí chuẩn xác hơn công thức in nhầm x = P^T z trong tài liệu gốc).
+>
+> **💡 Deeper notes**
+> - Quá trình Gram-Schmidt trực tiếp tạo ra 'thin QR' (Q có kích thước m x n với các cột trực chuẩn). Trong khi đó, tài liệu gốc đang mô tả 'full QR' với Q là ma trận trực giao vuông m x m (các cột từ n+1 đến m là cơ sở trực chuẩn bổ sung cho không gian bù vuông góc / left nullspace, tương ứng với các hàng 0 ở dưới của R).
+> - Phép phân rã AP = QR (QR factorization with column pivoting) thường chọn ma trận hoán vị P bằng cách ưu tiên chọn cột có chuẩn phần dư lớn nhất ở mỗi bước nhằm tăng độ ổn định số học và phát hiện hạng (rank-revealing QR).
 
 **🔗 See also:** [Optimal x* Solution](./102_linear_least_square_problem.md#node-4qw5hsw)
 
