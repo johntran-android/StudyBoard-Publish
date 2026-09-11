@@ -1,6 +1,6 @@
 # 12.5  Second-Order Conditions
 
-📊 **Progress:** `13` Notes | `25` Screenshots | `13` AI Reviews
+📊 **Progress:** `14` Notes | `26` Screenshots | `14` AI Reviews
 
 ---
 <a id="node-8arnxqj"></a>
@@ -73,7 +73,7 @@
 > Như vậy, tóm lại, tập ℱ(x\*) nói ngắn gọn là: Nó không phải là tập chứa các feasible direction. Mà là chứa các direction mà khi ta coi các hàm constraint của 𝒜(x) là tuyến tính, thì direction d trong ℱ(x\*) sẽ khiến x\* + d vẫn feasible.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú xuất sắc, giải thích rất rõ ràng và chính xác bản chất của việc tuyến tính hóa ràng buộc bằng khai triển Taylor bậc nhất. Bạn chỉ cần lưu ý một vài lỗi chính tả nhỏ ở phần công thức (như ghi thiếu dấu * ở x-x* và viết nhầm chỉ số c1, c2) để ghi chú hoàn hảo hơn.
 
@@ -215,7 +215,7 @@
 > Và để check var cái đám candidate của phe 2, ta sẽ dùng đạo hàm cấp hai của Lagrangian. Vì nó sẽ cho ta biết, đi theo linearized feasible w khiến **linearized f** không tăng, nhưng **true f** thì giảm hay tăng. Và những hướng này (linearized feasible w khiến **linearized f** không tăng) người ta gọi là **undecided direction.**
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú cực kỳ chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về mặt bản chất hình học lẫn đại số của điều kiện KKT và lý do cần đến điều kiện bậc hai. Bạn chỉ cần rà soát lại vài lỗi chính tả nhỏ (như 'hn2h học', 'gỉai thích') để bài viết hoàn hảo hơn.
 
@@ -359,7 +359,7 @@
 > Dòng 3: Chính là xem các ca đụng tường thuộc diện inequality constraint nhưng không có lực ép, nên có thể đi men theo tường hoặc quay vô trong đều được.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú giải thích rất chính xác và trực quan về Critical Cone thông qua ví dụ cụ thể, đặc biệt là phần minh họa hình học và ý nghĩa vật lý của nhân tử Lagrange $\lambda^*$. Bài viết xuất sắc, không có điểm yếu nào đáng kể về mặt lý thuyết toán học tối ưu.
 
@@ -437,7 +437,7 @@
 > Và với kết quả (1) thì điều kiện stationary trở thành wT∇f(x\*) = 0
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú của bạn cực kỳ xuất sắc, giải thích trực quan và chính xác bản chất của định nghĩa hình nón tới hạn (critical cone). Các bước biến đổi từ điều kiện tối ưu KKT (stationary) sang hệ thức cuối cùng được trình bày rất rõ ràng, chi tiết và dễ hiểu.
 
@@ -543,7 +543,7 @@
 > Do đó tại x\* = (0,0), theo constraint c2 ta chỉ có thể đi men vách tường tại x\* (theo hướng lên hoặc xuống). Nhưng theo constraint c1, thì trong hai hướng này ta chỉ có thể đi lên trên. Thành ra critical cone chính là cái vector c trong hình
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **85/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **85/100** · ✓ Move on
 >
 > Ghi chú có trực giác vật lý rất tốt và tính toán toán học hoàn toàn chính xác về các tập hợp và nhân tử Lagrange. Tuy nhiên, bạn đã nhìn nhầm hướng mũi tên $-\nabla f$ trong sách (thực tế nó hướng sang trái là đúng) và vẽ nhầm vector $\nabla c_1(x^*)$ thành hướng nằm ngang thay vì thẳng đứng lên trên.
 
@@ -775,10 +775,10 @@
 > ⇔ wT \[Hessian của ℒ tại x\*\] w ≥ 0. Tới đây ta đã chứng minh xong.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **92/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
 > Bài viết thể hiện trực giác hình học xuất sắc, đặc biệt là cách giải thích dễ hiểu về việc điều chỉnh hướng đi ('bẻ lái') của chuỗi $z_k$. Tuy nhiên, có một chi tiết chưa chính xác khi khẳng định $c_i(z_k) = 0$, vì thực tế $c_i(z_k) = t_k 
-> abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ trong biểu thức Lagrangian.
+abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ trong biểu thức Lagrangian.
 
 <br>
 
@@ -868,7 +868,7 @@
 > Note sau mình sẽ tìm hiểu phần chứng minh
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú rất xuất sắc, thể hiện sự hiểu biết sâu sắc và trực giác tốt về điều kiện tối ưu (KKT, nón tới hạn và điều kiện đủ bậc hai). Bạn nên lưu ý thêm ký hiệu chính xác của các ràng buộc đẳng thức và bất đẳng thức khi viết biểu thức Lagrangian để hoàn thiện hơn.
 
@@ -948,7 +948,7 @@
 > ⇔ (w)T ∇²\_xx ℒ(x\*, λ\*) (w) ≥ σ ||w||^2 → Ta có 12.66
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài viết giải thích cực kỳ trực quan, chính xác từ bản chất hình học (lý do chuẩn hóa norm bằng 1 để tránh giá trị tiến về 0) cho đến các bước biến đổi đại số chi tiết. Điểm cộng lớn là cách liên hệ thực tế và giải thích phân rã vector rất dễ hiểu cho người tự học.
 
@@ -1044,7 +1044,7 @@
 > Và theo (2) thì ta kết luận d chính là ∈ ℱ(x\*)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài viết thể hiện tư duy trực giác hình học xuất sắc (hình ảnh tia laser) và trình bày chứng minh toán học rất chặt chẽ, chính xác. Tuy nhiên, có một lỗi gõ máy nhỏ ở phần giữa khi ghi nhầm thành 'd là ∉ ℱ(x*)', mặc dù các bước chứng minh chi tiết bên dưới của bạn vẫn đi đúng hướng và kết luận đúng là 'd ∈ ℱ(x*)'.
 
@@ -1618,7 +1618,7 @@
 > và theo như đầu ghi chú ta nói, cái này giúp kết luận x\* luôn nhỏ hơn mọi điểm trong lân cận của nó, nên nó là strict local minimizer.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Note giải thích cực kỳ chi tiết, chính xác và có tư duy trực quan rất tốt về mặt hình học cũng như giải tích (đặc biệt là phần phân biệt o-nhỏ và O-lớn). Bạn nên tiếp tục phát huy cách tiếp cận kết hợp trực giác trực quan này cho các định lý phức tạp khác.
 
@@ -1670,9 +1670,24 @@
 > Lý do: ma trận đơn vị có determinant bằng 1, có tất cả các eigenvalue đều bằng 1, đều dương, cho nên nó là ma trận xác định dương. Và vì vậy, bất cứ vector nào thì quadratic form của cái ma trận Hessian sẽ đều dương, là điều chắc chắn. Và do đó là cái điểm x\* này nó cũng thỏa điều kiện đủ bậc hai. Và như vậy mình kết luận nó là một cái strict local solution của bài toán tối ưu.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **92/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
 > Ghi chú rất tốt, bạn đã tự giải chi tiết các bước mà sách giáo trình lược bớt như tính đạo hàm và kiểm tra điều kiện KKT. Có một lỗi gõ nhỏ ở ký hiệu ma trận Hessian tổng quát nhưng nhìn chung bạn nắm bản chất rất vững.
+> ### Điểm mạnh
+> - **Tự bù đắp các bước bị lược bỏ:** Sách chỉ ghi "it is easy to show that the KKT conditions are satisfied", nhưng bạn đã chủ động viết ra đạo hàm bậc 1, kiểm tra điều kiện dừng (Stationarity) và bù (Complementary slackness) rất rõ ràng.
+> - **Hiểu sâu về đại số tuyến tính:** Bạn giải thích chuẩn xác tại sao ma trận đơn vị $I$ lại xác định dương thông qua giá trị riêng (eigenvalues) và dạng toàn phương (quadratic form).
+> - **Hiểu đúng định lý:** Kết luận chính xác điểm $(-1, -1)^T$ là nghiệm cực tiểu địa phương ngặt (strict local solution) dựa trên điều kiện đủ bậc hai (Second-order sufficient conditions).
+>
+> ### Điểm cần cải thiện
+> - **Lỗi ký hiệu nhỏ:** Trong biểu thức tổng quát của Hessian, bạn viết `∇_xx ℒ(x, λ) = [2λ1, 0; 0, 2λ2]`. Ở đây chỉ có một biến nhân tử $\lambda_1$, nên phần tử thứ hai phải là $2\lambda_1$ chứ không phải $2\lambda_2$.
+> - **Điều kiện KKT còn thiếu:** Bạn đã kiểm tra tính dừng và tính bù, nhưng chưa nhắc đến tính khả thi nguyên thủy ($c_1(x^*) \ge 0$) và tính khả thi đối ngẫu ($\lambda_1^* \ge 0$).
+>
+> ### Gợi ý phát triển
+> - Hãy ghi chú thêm chi tiết cuối của đoạn sách: vì sao bài toán này là **bài toán quy hoạch lồi** (convex programming)? Việc nhận diện tính lồi (hàm mục tiêu tuyến tính là lồi, ràng buộc lồi) sẽ giúp nâng kết luận từ nghiệm địa phương thành **nghiệm toàn cục (global solution)**.
+>
+> **⭐ Bonus points**
+> - Tự triển khai chi tiết việc tính toán gradient và kiểm tra các điều kiện KKT mà sách giáo trình đã giản lược.
+> - Giải thích bản chất tính xác định dương của ma trận đơn vị thông qua giá trị riêng (eigenvalues) và dạng toàn phương (quadratic form).
 
 <br>
 
@@ -1784,9 +1799,25 @@
 > Thế thì, điều kiện đủ bậc hai nói nếu với mọi vector trong critical cone, quadratic form của Hessian tại x\* đều dương thì x\* chính là strict local minimizer. Check thử ta thấy nó = 1.4 w2² luôn &gt; 0 (với w2 khác 0), tức là quadratic form wᵀ ∇\_xx ℒ(x\*, λ1\*) w luôn &gt; 0 với moi w khác vector 0, theo định lí điều kiện đủ bậc 2, x\* là strict local minimizer.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **94/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **94/100** · ✓ Move on
 >
 > Ghi chú xuất sắc, thể hiện sự thấu hiểu tường tận từ điều kiện cần (KKT) đến điều kiện đủ bậc hai (SOSC) và trực giác hình học của nón tới hạn (critical cone).
+> ### Điểm mạnh
+> - **Trực giác hình học chuẩn xác:** Bạn giải thích rất tốt vì sao bài toán không có global minimum ($f \to -\infty$ khi $x_1 \to +\infty$) và vì sao điểm $(1, 0)$ lại nằm trên biên khả thi.
+> - **Hiểu sâu bản chất các điều kiện:** Phân biệt rõ vai trò của KKT (điều kiện cần) và điều kiện bậc hai (điều kiện đủ); giải thích cặn kẽ tại sao chỉ lấy đạo hàm theo $x$ ($
+> abla_x \mathcal{L}, \nabla^2_{xx} \mathcal{L}$) chứ không phải lấy trên toàn bộ vector biến $(x, \lambda)$.
+> - **Nắm vững Critical Cone $\mathcal{C}(x^*, \lambda^*)$:** Nắm được lý do tại sao khi $\lambda_1^* = 0.3 > 0$ (nghiêm ngặt) thì hướng khả thi trong critical cone bắt buộc phải trực giao với $\nabla c_1(x^*)$ (đi men theo biên viền, $w^T \nabla c_1 = 0$).
+>
+> ### Điểm cần cải thiện & Tinh chỉnh
+> - **Ký hiệu ma trận Hessian:** Bạn viết `[-0.2 - 2λ1, 0; 0, 2 - 2λ1]ᵀ` — ký hiệu chuyển vị $(\cdot)^T$ ở đây là thừa vì ma trận Hessian vốn đã là ma trận đối xứng $2 \times 2$.
+> - **Điều kiện dấu của nhân tử Lagrange:** Nên ghi chú rõ quy ước dấu của Lagrangian $\mathcal{L}(x, \lambda) = f(x) - \lambda c(x)$ cho dạng $c(x) \ge 0$, đi kèm điều kiện $\lambda_1^* \ge 0$, để người đọc không bị nhầm lẫn với quy ước dùng dấu cộng $\mathcal{L} = f + \lambda c$ ở một số giáo trình khác.
+>
+> ### Gợi ý nâng cao
+> - Hãy để ý rằng ma trận $\nabla^2_{xx}\mathcal{L}(x^*, \lambda^*) = \begin{bmatrix} -0.4 & 0 \\ 0 & 1.4 \end{bmatrix}$ có một giá trị riêng âm ($-0.4$) và một giá trị riêng dương ($1.4$) — tức là bản thân nó là ma trận bất định (indefinite). Điều kỳ diệu của tối ưu có ràng buộc là dù Hessian của Lagrangian bị bất định trong toàn không gian $\mathbb{R}^2$, nó vẫn **dương xác định trên Critical Cone** (hướng $w_1 = 0$). Nhấn mạnh điểm này sẽ làm nổi bật sức mạnh thực sự của điều kiện đủ bậc hai!
+>
+> **⭐ Bonus points**
+> - Nhận diện chính xác cơ chế của Critical Cone khi nhân tử Lagrange $\lambda_1^* > 0$ buộc vector hướng phải trực giao hoàn toàn với gradient ràng buộc (đi men theo biên).
+> - Phân tích rõ ràng xu hướng tiệm cận của hàm số ra vô cực theo phương $x_1$ để chứng minh hàm không bị chặn dưới trên miền khả thi.
 
 <br>
 
@@ -1964,11 +1995,235 @@
 >
 >
 > Thế còn vì sao có vụ singular hay không singular?
+>
+>
+>
+> ---
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú cực kỳ xuất sắc, nắm bắt trọn vẹn bản chất toán học từ lý thuyết tối ưu đến đại số tuyến tính. Phần giải thích trực giác về critical cone và chứng minh đại số cho $Z = Q_2$ rất rõ ràng và chuẩn xác.
+> Ghi chú nắm rất chắc và diễn giải trực quan cách chuyển từ critical cone sang null space thông qua điều kiện strict complementarity, cũng như nguồn gốc của ma trận Z từ phân tích QR. Một vài chi tiết nhỏ về thuật ngữ và ký hiệu cần được chuẩn hóa lại.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"vuông góc với constraint ci(x) i ∈ 𝒜(x*)"*
+>
+> Diễn đạt chưa chính xác về mặt toán học. Hướng w vuông góc với gradient của ràng buộc (∇ci(x*)), không phải vuông góc với hàm ràng buộc ci(x).
+>
+> **2.** *"critical cone 𝒞(x*, λ*) chính là N(M)"*
+>
+> Lỗi typo ký hiệu ma trận M thay vì N(A(x*)) như đang phân tích trong ngữ cảnh.
+>
+> **3.** *"đã nói quá trình QR factor là ta dựng một bộ orthogonal-normal basis của C(A) mà"*
+>
+> Ở đây đang thực hiện QR cho ma trận chuyển vị A(x*)^T, do đó Q1 là cơ sở trực chuẩn của Range(A(x*)^T) (tức Row space của A(x*)), còn Q2 là cơ sở trực chuẩn của Nullspace của A(x*). Ghi C(A) dễ gây hiểu nhầm sang column space của A.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ bản chất tại sao strict complementarity giúp critical cone biến từ một nón đa diện phức tạp thành một không gian con tuyến tính (null space).
+> - Tự triển khai và chứng minh mạch lạc vì sao khối ma trận Q2 từ phép phân tích QR của A(x*)^T lại thỏa mãn A(x*)Q2 = 0 để làm ma trận Z.
+> - Kết nối chính xác điều kiện dạng toàn phương trên critical cone với tính bán xác định dương của projected Hessian Z^T ∇²_xx L Z.
+>
+> **💡 Deeper notes**
+> - Sách ghi 'slightly weaker but easier to verify' vì trong trường hợp tổng quát (khi vi phạm strict complementarity), critical cone là một nón hẹp hơn; việc xấp xỉ nó bằng một subspace chứa nó sẽ làm điều kiện đủ trở nên ngặt hơn và điều kiện cần yếu đi một chút.
+
+<br>
+
+<a id="node-cok7zlx"></a>
+
+###### Bản chất phân rã QR
+
+<p align="center"><kbd><img src="assets/rtak1pjye2.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Để hiểu vì sao đoạn trước nói
+>
+>
+>
+> Ôn lại QR factor, với một dạng mình đã học trong MIT 18.06 Gram-Smidth:
+>
+>
+>
+> Ý tưởng là: Cho ta matrix A, ví dụ kích thước 3 × 2 với các cột a1, a2. Và giả sử a1, a2 độc lập. Ta muốn đi tạo một bộ orthogonal basis q1, q2 của C(A).
+>
+>
+>
+> Cách làm: Bước 1: cho q1 = a1, q1 trùng hướng a1. Và chuẩn hóa chiều dài nó: q1 = a1/||a1||, sẽ có length = 1.
+>
+>
+>
+> Bước 2: Chiếu a2 lên q1,lấy phần dư đem chuẩn hóa có q2:
+>
+>
+>
+> Chiếu của a2 lên a1, ta được vector trong span{q1}: q1x̂, phần dư là a2 - q1x̂ sẽ vuông góc với a1:
+>
+>
+>
+> q1ᵀ(a2 - q1x̂) = 0 ⇔ q1ᵀa2 = q1ᵀq1x̂ ⇔ x̂ = q1ᵀa2/q1ᵀq1 = x̂ = q1ᵀa2
+>
+>
+>
+> Vậy phần dư là (a2 - q1q1ᵀa2) = (𝐈 - q1q1ᵀ)a2.
+>
+>
+>
+> Đem chuẩn hóa và gán cho q2: q2 = (𝐈 - q1q1ᵀ)a2 / ||(𝐈 - q1q1ᵀ)a2||
+>
+>
+>
+> Nếu có a3, tương tự, ta lại chiếu a3 lên span{q1,q2} và lấy phần dư đem chuẩn hóa gán cho q3.
+>
+>
+>
+> Thế thì như vậy, A = QR thực chất chỉ là phản ánh liên hệ giữa các a1, a2 và q1, q2 thông qua matrix hệ số là R.
+>
+>
+>
+> Tuy nhiên, đó là reduced QR factor.
+>
+>
+>
+> Trong phiên bản đầy đủ, ta có thể bổ sung thêm q3, bằng cách tạo vector nằm ngoài C(A), và chiếu nó lên C(A) (cũng là span{q1, q2}), và như vậy các cột của Q, sẽ đủ để span toàn bộ R³.
+>
+>
+>
+> Thế thì từ đó ta sẽ hiểu, xem xét Q = \[q1, q2 | q3\] = \[Q1 | Q2\] (tức Q1 có hai cột là q1 q2, Q2 có 1 cột là q3) ta sẽ thấy C(Q1) = C(A), còn C(Q2), chính là left nullspace của A, tức N(Aᵀ) (do đây là hai subspace orthogonal complement)
+>
+>
+>
+> Rồi, tới đây ta đã đủ để hiểu vì sao khi factor A(x\*)ᵀ = \[Q1 Q2\]\[R 0\] thì lại gán Q2 cho Z, là matrix mà column space là nullspace của A(x\*)
+>
+>
+>
+> Dễ hiểu là, theo như ta vừa nói, thì các cột của Q1 chính là orthogonal basis của C(A(x\*)ᵀ) và các cột cột Q2 là orthogonal basis của left nullspace N(A(x\*)ᵀᵀ), và chính là N(A(x\*)) (A(x\*)ᵀᵀ = A(x\*)). Như vậy các cột của Q2 là orthogonal basis của nullspace của A(x\*). Nên gán nó cho Z là đúng rồi.
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì còn vụ R non-singular thì sao mà singular thì sao.
+>
+>
+>
+> R là gì, như đã nói, trong A = QR thì R chỉ là matrix chứa hệ số giúp liên hệ basis của C(A) và basis của Q.
+>
+>
+>
+> Ví dụ quy trình lập luận ở trên cho thấy giá trị của R như sau:
+>
+>
+>
+> Gán q1 bởi a1 / ||a1||. Tức là với A = QR, thì a1 (tức cột 1 của A) = ||a1|| × q1 + 0 × q2, và như vậy cột 1 của R là \[||a1||, 0\]ᵀ
+>
+>
+>
+> Để có q2, như ở trên ta có q2 = (𝐈 - q1q1ᵀ)a2 / ||(𝐈 - q1q1ᵀ)a2||
+>
+>
+>
+> ⇔ ||(𝐈 - q1q1ᵀ)a2|| q2 = (𝐈 - q1q1ᵀ)a2
+>
+>
+>
+> ⇔ ||(𝐈 - q1q1ᵀ)a2|| q2 = a2- q1q1ᵀa2
+>
+>
+>
+> ⇔ q1q1ᵀa2 + ||(𝐈 - q1q1ᵀ)a2|| q2 = a2
+>
+>
+>
+> ⇔ a2 = q1q1ᵀa2 + ||(𝐈 - q1q1ᵀ)a2|| q2
+>
+>
+>
+> ⇔ a2 = q1(q1ᵀa2) + ||(𝐈 - q1q1ᵀ)a2|| q2
+>
+>
+>
+> để ý (q1ᵀa2), là scalar (tích vô hướng hai vector), ta di chuyển tùy ý
+>
+>
+>
+> ⇔ a2 = (q1ᵀa2) q1 + ||(𝐈 - q1q1ᵀ)a2|| q2
+>
+>
+>
+> Vậy cột thứ 2 của R là \[q1ᵀa2, ||(𝐈 - q1q1ᵀ)a2||\]ᵀ
+>
+>
+>
+> Vậy matrix R có 2 cột là: \[||a1||, 0\]ᵀ và \[q1ᵀa2, ||(𝐈 - q1q1ᵀ)a2||\]ᵀ thì nghĩ xem nó là gì:
+>
+>
+>
+> Với R11, thì ||a|| chính là chiều dài của q1 (sau khi gán q1 = a1) trước đi đem chuẩn hóa.
+>
+>
+>
+> R22 = ||(𝐈 - q1q1ᵀ)a2|| cũng chính là chiều dài của phần dư: a2 - hình chiếu của a2 lên span{q1}, = q1q1ᵀa2) trước khi đem chuẩn hóa, và gán cho q2.
+>
+>
+>
+> Theo quy luật đó R33 cũng sẽ là chiều dài của phần dư (a3 - hình chiếu của a3 lên span{q1,q2} trước khi đem chuẩn hóa, và gán cho q3
+>
+>
+>
+> Vậy thì ta sẽ thấy thế này: Nếu R22 bằng 0 thì có ý nghĩa gì?
+>
+>
+>
+> Vì R22 là chiều dài phần dư của a2 sau khi trừ đi hình chiếu của a2 lên span{q1}, nên R22 CHỈ CÓ THỂ BẰNG 0 NẾU NHƯ SAU KHI CHIẾU a2 lên span {q1} (cũng là span {a1} THÌ KHÔNG CÒN PHẦN DƯ NÀO. VÀ ĐIỀU NÀY CHỈ CÓ THỂ XẢY RA KHI: a2 ĐÃ NẰM SẴN TRONG span{q1}. Mà điều này đồng nghĩa: a2 có thể được thể hiện bởi một linear combination nào đó của a1 (hay q1), tức a2 PHỤ THUỘC TUYẾN TÍNH a1.
+>
+>
+>
+> Tương tự, nếu R33 bằng 0, thì chỉ có thể giải thích bằng cách sau khi chiếu a3 lên span{q1, q2} (chú ý, cũng là span {a1, a2} thì chẳng còn dư gì, đồng nghĩa a3 đã nằm sẵn trong subspace này, và như vậy a3 phụ thuộc tuyến tính a1, a2.
+>
+>
+>
+> Rồi, một điểm nữa trước khi ta kết bài: Matrix R dễ thấy là matrix tam giác trên, theo MIT 1806 đã học, thì với triangular matrix, eigenvalue chính là nằm trên đường chéo.
+>
+>
+>
+> À, như vậy, nếu R non-singular, thì det R khác 0 ⇔ tích các eigenvalue khác 0 ⇔ mọi eigenvalue đều khác 0 ⇔ mọi phần tử trên đường chéo đều khác 0 và như lập luận ở trên, điều này chứng tỏ: KHÔNG CÓ VECTOR CỘT aj NÀO NẰM SẴN TRONG SUBSPACE SPAN BỞI {a1,...aj-1} tức các cột trước đó, Và dĩ nhiên cho thấy CÁC CỘT CỦA A ĐỀU ĐỘC LẬP
+>
+>
+>
+> Và ngược lại, nếu R singular, thì cho thấy các cột của A phụ thuộc.
+>
+>
+>
+> ---
+>
+>
+>
+> À như vậy áp dụng cái này, quay lại bài toán của ta: A(x\*)ᵀ = Q1 R ta sẽ hiểu rằng:
+>
+>
+>
+> Khi R non-singular, chính là cho thấy các cột của A(x\*)ᵀ độc lập mà A(x\*) là matrix mà các hàng là các gradient ∇ci(x\*), nên các cột của A(x\*)ᵀ chính là các ∇ci(x\*). Vậy điều này có nghĩa là các ∇ci(x\*) độc lập tuyến tính và ngược lại, thì cho thấy chúng phụ thuộc tuyến tính.
+>
+>
+>
+> Như vậy ta hiểu vì sao trong sách nói. (....is singular indicating that the active **constraint gradients** are **linearly dependent**), ..."
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú xuất sắc, giải thích rất trực quan và chặt chẽ từ bản chất thuật toán Gram-Schmidt đến cấu trúc của ma trận tam giác R và các không gian con cơ bản. Bạn hoàn toàn nắm vững lý do tại sao Z = Q2 và ý nghĩa tính khả nghịch của R.
+>
+> **✓ Strengths**
+> - Dẫn xuất chuẩn xác biểu diễn đại số của Gram-Schmidt để chứng minh các phần tử trên đường chéo R_ii chính là độ dài phần dư trước khi chuẩn hóa.
+> - Liên hệ chính xác giữa bốn không gian con cơ bản: chỉ ra C(Q1) là không gian cột của A(x*)^T và C(Q2) là phần bù vuông góc, tức nullspace của A(x*), từ đó giải thích vì sao Z = Q2.
+> - Lập luận logic từ tính chất định thức/eigenvalue của ma trận tam giác R để suy ra mối quan hệ tương đương giữa tính khả nghịch của R và tính độc lập tuyến tính của các gradient ràng buộc.
+>
+> **💡 Deeper notes**
+> - Trong tính toán số thực tế (numerical linear algebra), phép phân tích QR thường dùng phản xạ Householder hoặc phép quay Givens thay vì Gram-Schmidt cổ điển để đảm bảo tính trực giao số học (loss of orthogonality).
+> - Khi R bị suy biến (rank-deficient), thuật toán phân tích QR có hoán vị cột (column pivoting: A^T P = Q R) giúp dồn các cột độc lập tuyến tính lên trước, tách R thành dạng khối tam giác trên khả nghịch và khối bằng 0, từ đó vẫn xác định được ma trận Z cho nullspace.
 
 <br>
 
