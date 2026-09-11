@@ -111,7 +111,7 @@
 > ⇔ ∇f(x\*) - Σi∈𝒜(x\*) λ\*i ∇ci(x\*) = 0, chính là 12.35
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú rất chính xác và có chiều sâu khi liên hệ tốt với kiến thức từ sách Convex Optimization của Boyd để phân biệt điều kiện cần/đủ. Bạn chỉ cần lưu ý một vài lỗi gõ ký hiệu nhỏ ở phần biến đổi cuối (như viết thiếu dấu tổng hoặc nhầm $c_i$ với $\lambda_i^* \nabla c_i$), dù lập luận logic vẫn hoàn hảo.
 
@@ -141,7 +141,7 @@
 > Và gs nói rằng việc thỏa cái strict complementary sẽ khiến define active set dễ hơn và thuật toán hội tụ nhanh hơn (vài bữa sẽ hiểu, giờ biết vậy thôi)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bạn đã hiểu rất chính xác và sâu sắc về điều kiện bù chặt (strict complementarity), đặc biệt là việc liên hệ logic rất tốt với tập ràng buộc hoạt động từ bài trước. Để ghi chép hoàn thiện hơn, bạn có thể bổ sung thêm ý phụ ở cuối trang: khi điều kiện LICQ thỏa mãn thì vector hệ số Lagrange tối ưu sẽ là duy nhất.
 
