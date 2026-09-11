@@ -167,7 +167,7 @@
 > Và đây, gs nói, cũng chính là normal equation.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Ghi chú của bạn cực kỳ chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về từng khái niệm. Việc bạn tự mình chứng minh gradient và Hessian, cũng như giải thích tính lồi và phương trình chuẩn từ các nguyên tắc cơ bản, là rất ấn tượng.
 
@@ -389,7 +389,7 @@
 > Một ý cuối cùng, ông nói khi ill-condition, thì Cholesky có thể fail luôn do lỗi làm tròn số khiến đường chéo âm.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **99/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **99/100** · ✓ Move on
 >
 > Phân tích của bạn cực kỳ sâu sắc và chính xác, đặc biệt với các chứng minh toán học chi tiết về điều kiện tồn tại của Cholesky factorization và mối quan hệ của số điều kiện. Tiếp tục duy trì mức độ đào sâu kiến thức và khả năng kết nối các khái niệm toán học này.
 
@@ -505,7 +505,7 @@
 > Bước 2: Giải ΠT x = z, và hệ này matrix hệ số chỉ là permutation matrix, ⇨ x = Π z, chỉ là việc sắp xếp (hoán vị) lại các phần tử của z (ko tốn gì) (đây là ý mà gs Nocedal nói "perform triangular substitution to solve Rz = Q1Ty, then PERMUTE the component of z  to obtain x\*)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **100/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Phần ghi chú này cung cấp một quá trình dẫn xuất từng bước cực kỳ rõ ràng và chi tiết cho phương pháp phân tích QR trong bài toán bình phương tối thiểu tuyến tính, giải thích kỹ lưỡng từng phép biến đổi và lý do của nó. Việc liên hệ với các bước triển khai thực tế cũng được trình bày rất tốt.
 
@@ -639,7 +639,7 @@
 > Và như đã biết cái vụ này từ MIT 1806, đó là, kết quả này cho thấy với JTJ, thì SVD cũng là eigendecomposition, nên eigenvector của JTJ chính là các cột của V, và eigenvalue của JTJ chính là các σi^2 (bình phương singular value của J)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bạn đã thể hiện sự hiểu biết rất sâu sắc và chính xác về Phân tích Giá trị Kỳ dị (SVD), mở rộng rõ ràng các khái niệm trong văn bản gốc. Việc liên hệ với kiến thức từ MIT 1806 giúp làm rõ bản chất công thức (10.19) một cách xuất sắc.
 
@@ -759,7 +759,7 @@
 > ⇨ V Sinv U1Ty = ∑i=1:n (uiTy/σi) vi → 10.21
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Phần giải thích rất rõ ràng, chính xác và có chiều sâu, đặc biệt là cách bạn đã phân tích từng bước để chuyển đổi bài toán và đi đến công thức cuối cùng. Việc giải thích chi tiết các tính chất của ma trận trực giao và cách mở rộng công thức tổng là một điểm mạnh lớn, giúp người đọc dễ dàng hiểu được các phương trình trong hình ảnh.
 
@@ -873,7 +873,7 @@
 > điều này có nghĩa là, tỉ lệ của scale factor nhỏ nhất của A (tức σmin(A), hay cũng là min_x ||Ax|| / ||x||) so với scale factor lớn nhất của A (tức σmax(A), hay cũng là max_x ||Ax|| / ||x||) rất chênh lệch. Để rồi giả sử ta xét một matrix A cụ thể có σmax = 1, thì σmin sẽ rất nhỏ (≈ 0). Khi đó, nếu lấy u là argmin ||Ax||/||x|| thì ||Au|| = σmin ||u|| sẽ gần như là = 0, đồng nghĩa vector u gần như thuộc nullspace của A → Và như vậy A tồn tại nullspace vector → đây chính là rank-deficient
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài viết giải thích xuất sắc và chính xác về độ nhạy của công thức, đặc biệt là khi các giá trị σi nhỏ. Phần trình bày chi tiết và diễn giải rõ ràng về khái niệm "gần như thiếu hạng" dựa trên các giá trị kỳ dị đã nâng cao đáng kể sự hiểu biết về vấn đề.
 
@@ -1046,7 +1046,7 @@
 > Lúc này rất dễ hiểu rằng, các hạng tử (uiTy/σi) vi ứng với σi rất nhỏ, sẽ rất sensitive với perturbation của y hay của J (ảnh hưởng tới U), kéo theo sự  sensitive của solution x\*. Thành ra người ta nói, nếu ta chấp nhận dùng nghiệm xấp xỉ (bằng cách bỏ đi các (uiTy/σi) ứng với σi nhỏ) thì ta sẽ có solution ít sensitive so với solution chính xác nhưng rất nhạy cảm như vừa nói.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Điểm mạnh: Bài viết rất chính xác và có chiều sâu, đặc biệt là phần dẫn giải chi tiết công thức x* cho trường hợp J thiếu hạng, giúp người đọc hiểu rõ bản chất. Điểm yếu: Bài viết rất tốt và không có điểm yếu rõ ràng nào cần cải thiện.
 
@@ -1092,7 +1092,7 @@
 > Tóm lại. Về cơ bản, việc giải normal equation với bài toán lớn thì dùng conjugate gradient sẽ nhanh hơn, nhưng với bài toán nhỏ, thì dùng 3 phương pháp nói trên sẽ nhanh hơn.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **88/100** · ✓ Move on
 >
 > Bạn đã nắm vững các ý chính về việc sử dụng phương pháp gradient liên hợp (CG) cho các bài toán lớn và đặc biệt là cách triển khai tối ưu khi không cần hình thành ma trận JTJ trực tiếp. Phần giải thích sâu về nền tảng của CG cũng rất ấn tượng. Tuy nhiên, phần kết luận về "3 phương pháp nói trên" cho bài toán nhỏ không được đề cập trong đoạn văn bản gốc.
 
