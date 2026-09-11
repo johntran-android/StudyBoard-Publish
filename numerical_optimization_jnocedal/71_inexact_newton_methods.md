@@ -27,7 +27,7 @@
 > Cách tiếp cận thì một số dùng trực tiếp các thuật toán cơ bản, một số thì chỉnh sửa sao cho giảm chi phí tính toán. Mà trong số đó non-linear conjugate method là một ví dụ (nhưng ta  bỏ qua method này trong 5.2 vì nhiều nhược điểm khiến ngày nay không ai xài nữa)
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **70/100**
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **70/100** · ✓ Move on
 >
 > Bạn đã tóm tắt tốt về nhu cầu đối với các thuật toán tối ưu quy mô lớn và cách tiếp cận đa dạng. Tuy nhiên, thông tin về việc phương pháp gradient liên hợp phi tuyến (nonlinear conjugate gradient method) không còn được sử dụng do nhiều nhược điểm chưa hoàn toàn chính xác theo nội dung văn bản gốc, vì đoạn văn chỉ ra ưu điểm của nó cho các bài toán lớn.
 
@@ -53,7 +53,7 @@
 > Do đó, ở đây gs Nocedal nói, nếu việc phân rã này không quá tốn kém và Hessian matrix có thể được hình thành một cách tường minh. Thì ta có thể xài phép phân rã spase (ví dụ = LLT chính là sparse factorization, vì nó tạo ra các matrix spare) để làm.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **96/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
 >
 > Bài giải thích rất chính xác về lý do cần phân rã ma trận Hessian và phương pháp giải hệ tuyến tính bằng factor-solve thay vì tính nghịch đảo. Độ sâu của phân tích, đặc biệt là việc giải thích các bước giải và độ phức tạp O(n^2), cho thấy sự hiểu biết sâu sắc về các phương pháp số.
 
@@ -73,9 +73,33 @@
 > Vậy thì nên hiểu thế này: chương 7 ta sẽ học một cách tìm Hessian, nhằm tính Newton step pkNtrong thuật toán line search Newton hay trust region Newton, tuy nhiên không phải là ta sẽ dùng phân rã sparse để giải tìm pkN mà sẽ dùng các tiếp cận iterative, để rồi ngoài cái vòng lặp lớn (outer iteration), tại mỗi step, khi tìm pkN, ta cũng sẽ chạy một cái vòng lặp. Và đây chính là in-exac Newton method
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bạn đã thể hiện sự hiểu biết xuất sắc về tài liệu tham khảo, tóm tắt chính xác các điểm chính và làm phong phú thêm bài ghi chú của mình bằng kiến thức bên ngoài có liên quan.
+> ### Phân tích chi tiết
+>
+> #### Điểm mạnh
+>
+> *   **Nắm vững ý chính:** Bạn đã nắm bắt rất chính xác lý do chính cho việc sử dụng các phương pháp Newton không chính xác (inexact Newton methods) là do chi phí tính toán Hessian lớn.
+> *   **Hiểu biết về phương pháp:** Bạn đã mô tả đúng các phương pháp này là việc tìm kiếm bước Newton một cách lặp (iteratively) và gọi chúng là inexact Newton methods.
+> *   **Thuộc tính thuật toán:** Bạn đã liệt kê chính xác các tính chất quan trọng của các thuật toán này, bao gồm khả năng hội tụ siêu tuyến tính và khả năng tìm hướng hiệu quả ngay cả khi Hessian là ma trận bất định (indefinite).
+> *   **Khái niệm “Hessian-free”:** Bạn giải thích rõ ràng khái niệm “Hessian-free” là không cần tính toán hay lưu trữ ma trận Hessian, đây là một điểm quan trọng được đề cập trong tài liệu.
+> *   **Kiến thức mở rộng xuất sắc:** Phần bổ sung về việc bản chất của bước Newton là giải hệ phương trình tuyến tính ∇²f p = - ∇f và việc sử dụng các phương pháp lặp để giải hệ này là một minh chứng cho sự hiểu biết sâu sắc và kết nối kiến thức vượt ra ngoài tài liệu tham khảo trực tiếp.
+>
+> #### Lĩnh vực cần cải thiện
+>
+> *   **Thiếu chi tiết về khuôn khổ:** Mặc dù bạn đã nắm bắt được các đặc tính của phương pháp, tài liệu tham khảo có đề cập cụ thể đến việc các kỹ thuật này được sử dụng trong cả hai khuôn khổ "line search and trust-region frameworks". Việc bổ sung chi tiết này sẽ giúp ghi chú của bạn đầy đủ hơn theo tài liệu gốc, mặc dù đây là một điểm rất nhỏ.
+>
+> #### Gợi ý để đào sâu hiểu biết
+>
+> *   **Mở rộng về ngữ cảnh:** Để làm rõ hơn, bạn có thể cân nhắc giải thích ngắn gọn *tại sao* việc tính toán và lưu trữ Hessian lại tốn kém trong thực tế (ví dụ: khi số chiều lớn hoặc Hessian là ma trận dày đặc), từ đó nhấn mạnh lợi ích của các phương pháp lặp và “Hessian-free”.
+> *   **Liên hệ thực tế:** Nếu có thể, hãy nghĩ về các ví dụ cụ thể trong các bài toán tối ưu mà bạn đã gặp phải hoặc nghe nói, nơi các phương pháp Newton không chính xác được áp dụng hiệu quả, điều này sẽ củng cố sự hiểu biết thực tế của bạn.
+>
+>
+> **⭐ Bonus points**
+> - Học về chủ đề này từ giáo sư Boyd trong khóa học Convex chứng tỏ khả năng kết nối kiến thức liên ngành.
+> - Nêu rõ phương trình của bước Newton là giải hệ ∇²f p = - ∇f, điều này thể hiện sự hiểu biết sâu sắc về cơ sở toán học.
+> - Giải thích rằng ý tưởng giải Newton step theo lối iteratively là sử dụng các phương pháp lặp để giải hệ phương trình tuyến tính, đây là một sự bổ sung kiến thức quan trọng.
 
 <br>
 
@@ -97,7 +121,7 @@
 > Còn 7.3 thì ta thảo luận một dạng xấp xỉ Hessian khác nhưng giữ được tính sparse của Hessian nếu nó sparse.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **85/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **85/100** · ✓ Move on
 >
 > Bạn đã nắm bắt rất tốt các điểm chính về xấp xỉ Hessian dày đặc, các biến thể bộ nhớ hạn chế và duy trì tính thưa thớt từ văn bản. Để tăng cường độ sâu theo văn bản gốc, bạn nên tập trung phân tích và chỉ rút ra thông tin có trong đoạn văn bản đã cho.
 
@@ -119,7 +143,7 @@
 > Phần tiếp theo đại khái là gs Nocedal sẽ đưa ra tính toán để chứng minh rằng dù là inexact Newton nhưng thuật toán sẽ đảm bảo vẫn hội tụ.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **97/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **97/100** · ✓ Move on
 >
 > Bản tóm tắt rất chính xác và bao quát đầy đủ các ý chính, đặc biệt là việc giải thích rõ ràng về "fill-in" và phương pháp "Hessian-free". Để hoàn thiện hơn, có thể điều chỉnh cách diễn đạt ở phần cuối về việc Nocedal "chứng minh" thành "phân tích" tính hội tụ để sát với ngữ cảnh gốc.
 
@@ -184,7 +208,7 @@
 > Thế thì vấn đề là trong chap 5 ta đã biết, CG method work với một assumption tiên quyết: matrix A xác định dương: tức là độ cong của hàm f luôn là cong lên ở mọi hướng. Nhưng áp dụng vào đây, dễ thấy Hessian đâu phải lúc nào cũng xác định dương, do đó, CẦN MỘT SỐ CHỈNH SỬA đối với CG: Và cụ thể sự chỉnh sửa chỉ đơn giản thôi: Ngay khi ngay khi CG (trong outer iteration k) tìm ra pk_i chỉ theo hướng mà độ cong âm (tức là hàm sẽ cong xuống theo hướng đó), ta sẽ dừng CG. Điều này tác giả nói sẽ giúp pk luôn là descent direction cũng như giữ được các tính chất hội tụ nhanh của Newton method.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Phân tích của bạn rất sâu sắc và chính xác, giải thích rõ ràng ý tưởng, lý do cần thiết cho phương pháp này và các điều chỉnh quan trọng của nó. Để hoàn thiện hơn, bạn có thể bổ sung tên gọi khác của phương pháp là "phương pháp Newton bị cắt cụt" (truncated Newton method) như được nhắc đến trong văn bản.
 
@@ -212,7 +236,7 @@
 > Tại đây ta đã có p4, ta tiếp tục qua phần 2 của một outer iteration: tính step size α4, để rồi nhảy từ x4 → x5 = x4 + α4p4. Và tíếp tục outer iteration tiếp theo.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú rất chính xác và có chiều sâu, giải thích rõ ràng cấu trúc lồng nhau của thuật toán và cung cấp nền tảng vững chắc về phương pháp Gradient Liên Hợp. Cần lưu ý một lỗi nhỏ trong công thức $\eta_k$ (thiếu dấu phẩy giữa 0.5 và căn bậc hai của gradient norm).
 
@@ -252,7 +276,7 @@
 > 4) Sau khi có pk, thực hiện cập nhật vị trí xk+1 = xk + αkpk (step size αk thỏa Wolfe, Goldstein hay Armijo condition)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **92/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
 > Bài phân tích rất sâu sắc và chính xác, đặc biệt là các giải thích về lý do thay đổi so với thuật toán CG chuẩn. Tuy nhiên, công thức định nghĩa εk có một lỗi nhỏ, thiếu căn bậc hai của ||∇fk||.
 
@@ -328,7 +352,7 @@
 > Do đó gs nói rằng ông khuyến nghị rằng nên dùng thuật toán sau đây: Trust-region Newton CG
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài ghi chép của bạn rất xuất sắc và sâu sắc, không chỉ tóm tắt chính xác mà còn giải thích chi tiết cơ chế toán học về vấn đề Hessian gần singular, thể hiện sự hiểu biết vững chắc. Để tối ưu hơn, bạn có thể cân nhắc cô đọng phần ôn tập kiến thức biến đổi tuyến tính để giữ trọng tâm vào vấn đề chính của thuật toán.
 
@@ -380,7 +404,7 @@
 > Thế thì nhờ cách này, ta sẽ ko cần phải LƯU TRỮ HESSIAN Bk, (để rồi cũng ko cần phải tính Bkd) mà chỉ cần tính hiệu của hai gradient tại xk và xk + hd, rồi chia h), khiến cho trong thuật toán CG sẽ tăng thêm một bước tính toán, nhưng không cần phải lưu trữ Hessian: Đây chính là "Hessian - free"
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Phần giải thích và đặc biệt là cách bạn suy luận công thức xấp xỉ phân biệt hữu hạn (finite differencing) rất sâu sắc và chính xác. Để hoàn thiện hơn, bạn có thể bổ sung thông tin về bậc chính xác của phép xấp xỉ này.
 
@@ -410,7 +434,7 @@
 > Để rồi sau đó, ta có thể có những cách tiếp cận cải thiện Cauchy point như: Thuật toán dog-leg,  2D subspace minimization. Và trong chap 4 đã nhắc đến cách thứ 3, chính là dùng CG mà ở đây đang nói tới. (Xem link để quay lại phần "Nói sơ về nội dung sắp tới" có nhắc đến chỗ này)
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **85/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **85/100** · ✓ Move on
 >
 > Bài viết đã nắm bắt chính xác ý chính của đoạn văn, đặc biệt là phần giới thiệu về việc tìm kiếm giải pháp xấp xỉ và cải thiện điểm Cauchy. Tuy nhiên, nó bỏ qua một số chi tiết cụ thể như tên tác giả (Steihaug) và số hiệu thuật toán (7.2 và 4.1) được đề cập trong văn bản gốc.
 
@@ -484,7 +508,7 @@
 > Một điểm nữa có lẽ nên nhớ lại thêm nữa: Như trên đã nói, bản chất của thuật toán CG, giúp giải Ax = b theo lối iteratively, thực chất cũng chỉ là coi nó như việc giải bài toán tối ưu (minimize) hàm F(x) = (1/2) xTAx - bTx với đặc điểm ∇F(x) = Ax - b, để rồi x* thỏa Ax - b cũng chính là x* thỏa điều kiện cần tối ưu bậc nhất ∇F(x) = 0.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **88/100** · ✓ Move on
 >
 > Bài phân tích của bạn thể hiện sự hiểu biết sâu sắc và toàn diện về thuật toán Steihaug-CG và vai trò của nó trong phương pháp Trust-Region. Bạn đã nắm vững các điểm cốt lõi về việc điều chỉnh CG để đối phó với ma trận Hessian không xác định dương và ràng buộc vùng tin cậy, đồng thời kết nối tốt với các phương pháp tối ưu khác. Tuy nhiên, cần chú ý đến độ chính xác tuyệt đối trong các chi tiết: giải thích ban đầu về r0 là r0 = -(-∇fk là không cần thiết và có thể gây nhầm lẫn; chỉ cần nói r0 = ∇fk như trong thuật toán. Dù kết quả cuối cùng là đúng, cách diễn đạt cần phải trực tiếp và rõ ràng hơn.
 
@@ -506,7 +530,7 @@
 > Một ý nữa ông nói khi gần x*, thì trust region bound trở nên inactive và method trở thành inexact Newton, là sao? → À thì là vì khi tiến gần đến x*, thì mk sẽ ngày càng xấp xỉ rất tốt fk, dẫn đến kết quả tốt dần lên khi trust region sẽ dần dần mở rộng ra rất lớn. Khi đó ràng buộc trở nên không còn tác dụng nữa. Và bài toán subproblem ko có ràng buộc thì chỉ là bài toán tìm Newton step theo lối iteratively, như đã biết, gọi là inexact Newton
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bài phân tích cho thấy sự nắm vững các cơ chế dừng và tầm quan trọng của εk trong việc tối ưu chi phí. Giải thích về việc trust-region bound trở nên không còn tác dụng khi gần nghiệm tối ưu x* là thuyết phục và cho thấy sự hiểu biết sâu sắc về động thái của thuật toán.
 
@@ -614,7 +638,7 @@
 > Như vậy, thuật toán luôn đảm bảo trả ra hướng tốt hơn hoặc ít nhất là bằng Cauchy point, đảm bảo hội tụ toàn cục theo một theorem đã học trong chap 5
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài làm xuất sắc. Bạn đã phân tích chi tiết và chính xác mối liên hệ giữa các điều kiện của thuật toán 7.2 với khái niệm điểm Cauchy, đồng thời giải thích sâu sắc nguyên lý đảm bảo hội tụ toàn cục. Sự hiểu biết về đạo hàm điểm Cauchy cũng rất ấn tượng, mặc dù việc tham chiếu chương có thể chính xác hơn.
 
@@ -941,7 +965,7 @@
 > 7.2: z1 cơ bản chính là pU → z1,z2,.. hội tụ về Newton step.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **88/100** · ✓ Move on
 >
 > Bài phân tích của bạn thể hiện sự hiểu biết sâu sắc về thuật toán Dogleg và so sánh rất chi tiết, chính xác với mô tả của Thuật toán 7.2. Tuy nhiên, phần giải thích về điểm Cauchy khi B_k 'xác định âm' còn thiếu chính xác; việc m_k giảm vô hạn trên hướng dốc nhất phụ thuộc vào tích ∇f_k^T B_k ∇f_k, không chỉ đơn thuần là B_k xác định âm.
 
