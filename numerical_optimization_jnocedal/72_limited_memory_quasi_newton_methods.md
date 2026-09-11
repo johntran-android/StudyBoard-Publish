@@ -833,7 +833,7 @@
 > quá xa không còn hữu ích nữa.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **78/100**
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **78/100** · ✓ Move on
 >
 > Phần giải thích về công thức compact (7.24) và ứng dụng của nó trong các phương pháp giới hạn bộ nhớ rất chi tiết và chính xác. Tuy nhiên, phần tổng quan về lịch sử và mối quan hệ giữa các thuật toán BFGS, DFP còn một số nhầm lẫn về trình tự phát triển và cơ chế chuyển đổi giữa Bk và Hk.
 
