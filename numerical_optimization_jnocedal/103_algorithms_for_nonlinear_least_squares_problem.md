@@ -33,7 +33,7 @@
 > Qua phần này, ta phải quay lại thực tế, là bài toán không đơn giản như 10.2, tuy nhiên, ở phần mở màn của chapter này, gs Nocedal đã nói rằng, bài toán least square mang vài đặc điểm thuận lợi hơn các bài toán khác, mà ta có thể khai thác. Cụ thể, là **gradient và Hessian cuả nó trong nhiều trường hợp là dễ tính** (ít tốn kém), thì đây chính là lúc ta nói về chuyện này. (có nghĩa cần hiểu bức tranh là, ở 10.2, ta chưa cần khai thác đặc điểm này, đơn giản là vì với bài toán linear least square, mọi chuyện được đơn giản hóa hơn nhiều, để rồi bây giờ mới nói về việc khai thác đặc điểm "**free Hessian**" của bài toán least-square.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú giải thích rất sâu sắc về sự khác biệt giữa các bài toán least-square tuyến tính và phi tuyến, đồng thời làm rõ tầm quan trọng của việc khai thác cấu trúc gradient và Hessian. Việc liên hệ với phần 10.2 giúp người đọc dễ dàng nắm bắt bối cảnh và lý do tại sao phương pháp này được giới thiệu.
 
@@ -122,7 +122,7 @@
 > Một ý cuối đó là, cái vụ term J(x)TJ(x) dominate term thứ hai thường xuất hiện trong các bài toán mà residual nhỏ, hoặc chúng là hàm gần tuyến tính, và đây là những yếu tố xuất hiện nhiều trong cái bài toán thực tế, giúp cho việc dùng Gauss Newton sẽ có tác dụng.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **97/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **97/100** · ✓ Move on
 >
 > Bài viết giải thích rất chi tiết và chính xác về lý do và cách thức phương pháp Gauss-Newton sửa đổi so với phương pháp Newton tiêu chuẩn, bao gồm cả hai đặc điểm chính đã được nêu bật trong văn bản. Độ sâu của phân tích rất tốt, tuy nhiên, phần mở đầu có thể ngắn gọn hơn một chút để đi thẳng vào vấn đề chính sớm hơn.
 
@@ -699,7 +699,7 @@
 > Và bổ đề này thật ra cũng chỉ là từ theorem 4.1 mà thôi, note kế tiếp ta sẽ chỉ ra rằng bổ đề 10.2 chỉ là áp dụng theorem 4.1.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Tuyệt vời. Bạn đã trình bày một cách chi tiết và chính xác mối liên hệ giữa điều kiện KKT và Lemma 10.2, với các bước suy luận toán học rõ ràng và dễ hiểu, thể hiện sự nắm vững kiến thức vững chắc.
 
@@ -819,7 +819,7 @@
 > ⇔ (JTJ + λI)p = -JTr → chính là 10.33
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài phân tích của bạn rất sâu sắc, đặc biệt là phần chứng minh chi tiết việc phương trình (10.33) là phương trình chuẩn (normal equation) của bài toán bình phương tối thiểu (10.35). Cách bạn diễn giải và dẫn ra công thức là rất chính xác, thể hiện sự hiểu biết vững chắc về lý thuyết, mặc dù có thể làm rõ hơn một chút các bước trung gian khi lấy đạo hàm của biểu thức ||Ax - b||^2 để đạt độ chặt chẽ tuyệt đối.
 
@@ -959,7 +959,7 @@
 > Trong sách, matrix X này chính là \[Q^\_λ\]T.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú rất xuất sắc, thể hiện sự hiểu biết sâu sắc và chính xác về mặt toán học lẫn thuật toán, đặc biệt là phần giải thích về Givens rotations và cơ chế safeguard. Điểm nhỏ cần lưu ý là thuật ngữ chính xác là phép xoay Givens (Givens rotations) chứ không phải Given.
 
@@ -1167,7 +1167,7 @@
 > → Q\_λ = \[Q_J, 0; 0, I\] Q^\_λ
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Ghi chú của bạn rất xuất sắc, giải thích rõ ràng tư duy toán học và lý do phương pháp kết hợp Householder và Givens giúp tối ưu hóa chi phí tính toán. Bạn chỉ cần lưu ý đính chính lỗi diễn đạt thành 'nhân vào bên trái' (thay vì bên phải) và viết đúng thuật ngữ phép biến đổi 'Givens'.
 
