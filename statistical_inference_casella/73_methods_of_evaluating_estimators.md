@@ -1,6 +1,6 @@
 # 7.3 Methods Of Evaluating Estimators
 
-📊 **Progress:** `63` Notes | `74` Screenshots | `5` AI Reviews
+📊 **Progress:** `63` Notes | `74` Screenshots | `7` AI Reviews
 
 ---
 <a id="node-l0tjfjp"></a>
@@ -1861,6 +1861,26 @@
 >
 > Thì Var\_θ(W(**X**)) ≥ \[d/dθ E\_θ\[W(**X**)\]^2\] / \[E\_θ\[(∂/∂θ log f(**X**|θ))^2\]\]
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú nắm rất tốt và đầy đủ các điều kiện cũng như công thức của Bất đẳng thức Cramér-Rao. Cần lưu ý cách đặt dấu ngoặc ở tử số để tránh nhầm lẫn thứ tự tính bình phương.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"[d/dθ E_θ[W(**X**)]^2]"*
+>
+> Cách viết dấu ngoặc đặt số mũ ^2 bên trong ngoặc vuông dễ bị hiểu nhầm thành d/dθ(E[W]^2) hoặc d/dθ(E[W^2]). Chuẩn theo định lý phải là bình phương của toàn bộ biểu thức đạo hàm: ((d/dθ) E_θ W(X))^2.
+>
+>
+> **✓ Strengths**
+> - Ghi chép đầy đủ cả hai điều kiện tiên quyết quan trọng: điều kiện hoán đổi đạo hàm tích phân và phương sai hữu hạn.
+> - Nắm chính xác dạng tổng quát áp dụng cho mọi ước lượng W(X) bất kỳ (chưa cần giả định không chệch).
+>
+> **💡 Deeper notes**
+> - Mẫu số chính là Thông tin Fisher của mẫu (Fisher Information) I_n(θ) = E_θ[((∂/∂θ) log f(X|θ))^2].
+> - Trong trường hợp W(X) là ước lượng không chệch cho θ (tức E_θ W(X) = θ), tử số sẽ là (d/dθ(θ))^2 = 1, đưa về dạng cận dưới Cramér-Rao quen thuộc 1/I_n(θ).
+
 **🔗 See also:** [Definition 10.1.11 Asymptotic Efficiency](./101_point_estimation.md#node-bgijdqy) · [Giới hạn dưới Cramer-Rao](#node-ihoar4m) · [10.1.3 Calculations and Comparisons](./101_point_estimation.md#node-iwgmm5t) · [Robustness of the Sample Mean](./102_robustness.md#node-3pctii6) · [Asymptotic Normality of MLE](./103_hypothesis_testing.md#node-l86tt7u)
 
 <br>
@@ -2236,6 +2256,8 @@
 >
 > Ghi chú của bạn cực kỳ chi tiết, chính xác và cung cấp cái nhìn sâu sắc hơn đáng kể so với tài liệu gốc, đặc biệt trong việc giải thích cặn kẽ từng bước. Để hoàn thiện, hãy lưu ý đến việc giải thích rõ hơn lý do W(X)=1 là một ước lượng hợp lệ khi áp dụng tính chất của đạo hàm.
 
+**🔗 See also:** [Approximate Maximum Likelihood Intervals](./104_interval_estimation.md#node-tsuffya)
+
 <br>
 
 <a id="node-6hjlvs1"></a>
@@ -2395,7 +2417,26 @@
 >
 > E_θ[(∂/∂θ log f(X|θ))^2] = - E_θ[∂^2/∂θ^2 log f(X|θ)]
 
-**🔗 See also:** [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Asymptotic Variance of M-Estimators](./102_robustness.md#node-wzfdc2h) · [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li) · [Kỳ vọng của Score Statistic](./103_hypothesis_testing.md#node-wzyceag) · [The Score Test Statistic](./103_hypothesis_testing.md#node-xudioev)
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú đã nắm chính xác công thức then chốt của Bổ đề 7.3.11 về tính toán Fisher Information qua đạo hàm bậc hai. Bạn chỉ cần làm rõ hơn bản chất của điều kiện hoán đổi đạo hàm dưới dấu tích phân thay vì viết tắt dạng (...).
+>
+> **🟡 Minor issues**
+>
+> **1.** *"thỏa (...) và với exponential family thì"*
+>
+> Cách diễn đạt dễ gây hiểu nhầm 'họ phân phối mũ' (exponential family) là một điều kiện đi kèm, trong khi thực tế họ phân phối mũ là một ví dụ điển hình đảm bảo thỏa mãn điều kiện hoán đổi thứ tự giữa lấy vi phân và tích phân được nêu trong bổ đề.
+>
+>
+> **✓ Strengths**
+> - Ghi lại chính xác đẳng thức quan trọng giữa kỳ vọng bình phương đạo hàm bậc nhất và kỳ vọng đạo hàm bậc hai của log-likelihood.
+> - Hiểu được vai trò bổ trợ tính toán của bổ đề này cho các phần ví dụ tiếp theo.
+>
+> **💡 Deeper notes**
+> - Điều kiện hoán đổi d/dθ E_θ[...] = ∫ ∂/∂θ [...] dx thực chất là điều kiện trơn (regularity condition) cho phép đạo hàm dưới dấu tích phân (hoặc dấu tổng trong trường hợp rời rạc), thường thất bại khi miền giá trị của X phụ thuộc vào tham số θ (ví dụ: phân phối đều Uniform(0, θ)).
+
+**🔗 See also:** [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Asymptotic Variance of M-Estimators](./102_robustness.md#node-wzfdc2h) · [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li) · [Kỳ vọng của Score Statistic](./103_hypothesis_testing.md#node-wzyceag) · [The Score Test Statistic](./103_hypothesis_testing.md#node-xudioev) · [Approximate Maximum Likelihood Intervals](./104_interval_estimation.md#node-tsuffya)
 
 <br>
 
