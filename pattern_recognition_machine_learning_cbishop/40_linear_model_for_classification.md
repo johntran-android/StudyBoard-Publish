@@ -184,7 +184,7 @@
 >
 > Note rất xuất sắc, giải thích cực kỳ cặn kẽ và chính xác bản chất toán học của Generalized Linear Model, đặc biệt là việc làm rõ lý do tại sao decision boundary vẫn là tuyến tính dù có sử dụng hàm kích hoạt phi tuyến. Bạn chỉ cần lưu ý tránh một vài lỗi gõ phím nhỏ (như 'classfication', 'TUYẾNTÍNH') để ghi chú thêm phần hoàn hảo.
 
-**🔗 See also:** [4.1.7 The perceptron algorithm](./417_the_perceptron_algorithm.md#node-i051b0o)
+**🔗 See also:** [Thuật toán Perceptron](./untitled.md#node-i051b0o)
 
 <br>
 
