@@ -44,7 +44,7 @@
 > Và như đã nói, cách nhìn này cho ta thấy việc giải hệ Ax = b chính là giải bài toán tối ưu hàm bậc hai F(x), là một convex optimzation problem.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Your analysis accurately captures the equivalence between solving Ax=b and minimizing φ(x), and correctly derives the gradient. Connecting this specific problem to the broader principle of root-finding and Newton's method demonstrates a profound understanding of the underlying mathematical concepts.
 
@@ -110,7 +110,7 @@
 > ⇔ α = -rkTpk/pkTApk. Đây chính là 5.7
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bạn đã nắm vững các định nghĩa cốt lõi và thực hiện xuất sắc việc chứng minh công thức alpha_k một cách chi tiết và chính xác. Để nâng cao hơn nữa, hãy xem xét lại cách thiết lập giả định và các bước chứng minh tính độc lập tuyến tính của các vector liên hợp để đảm bảo tính chặt chẽ.
 
@@ -246,7 +246,7 @@
 > x1 đi theo hướng / phương e2 đến x2 (x*)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài phân tích rất xuất sắc, bạn không chỉ giải thích đúng ý nghĩa của hình minh họa mà còn cung cấp chứng minh toán học chi tiết, làm rõ vì sao ma trận A chéo lại dẫn đến các đường đồng mức hình elip. Để hoàn thiện hơn, bạn có thể lưu ý rằng trong hình 2D, điểm dừng x* đạt được sau x0 → x1 và x1 → x* chứ không phải x1 → x2.
 
@@ -361,7 +361,7 @@
 > Nên coordinate search strategy sẽ apply Φ^ sẽ tương đương với conjugate direction algorithm. Do đó, theorem 5.1 nói rằng, nó sẽ converge trong n step.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài làm rất xuất sắc, thể hiện sự hiểu biết sâu sắc về đại số tuyến tính cơ bản và cách áp dụng vào giải thích thuật toán. Mặc dù phần giải thích về đổi cơ sở khá dài, nhưng nó hoàn toàn chính xác và củng cố vững chắc cho lập luận chính.
 
@@ -399,7 +399,7 @@
 > ..⇔ rk+1 - rk = Aαkpk = αkApk (5.10)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài làm giải thích rất chính xác tính chất của ma trận Hessian chéo và sự tối ưu hóa trên không gian con, thể hiện sự hiểu sâu sắc. Việc tự tay dẫn dắt công thức (5.10) cũng cho thấy bạn đã nắm vững kiến thức và không chỉ đọc mà còn hiểu rõ từng bước; bạn chỉ cần chú ý đặt ký hiệu công thức ở dạng hoàn chỉnh để khớp hoàn toàn với văn bản gốc.
 
@@ -585,7 +585,7 @@
 > **TÓM LẠI, NHỜ VẬY TA HIỂU SÂU HƠN, BẢN CHẤT CỦA THUẬT TOÁN CG: CHỈ LÀ GIẢI BÀI TOÁN TÌM HÌNH CHIẾU CỦA x* LÊN SUBSPACE x0 + span{p0,..pk}, CŨNG LÀ TÌM CÁCH ĐẾN GẦN x* NHẤT KHI DI CHUYỂN TRONG x0 + span{p0,..pk}, TỨC MINIMIZE DISTANCE NHƯNG LÀM TRONG TỌA ĐỘ BASIS a's, CŨNG CHÍNH LÀ DÙNG NORM-A ĐỂ ĐO DISTANCE**
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Điểm mạnh của bạn là sự hiểu biết sâu sắc về bản chất của thuật toán Conjugate Gradient, đặc biệt là vai trò của A-norm và phép chiếu trong không gian con. Bạn đã giải thích rất rõ ràng lý do tại sao phương pháp này lại hiệu quả, vượt xa việc chỉ tóm tắt định lý.
 
@@ -737,7 +737,7 @@
 > ⇨ Chứng minh xong rằng mọi xk trong chuỗi {xk} đều thỏa điều kiện này và như vậy xk sẽ là minimizer của φ over set {x0 + span{p0,..pk-1}}
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú của bạn giải thích rất chi tiết và chính xác định lý, đặc biệt làm rõ cách xử lý trường hợp i = k-1 trong bước quy nạp mà văn bản gốc chỉ ngụ ý, thể hiện sự hiểu biết sâu sắc. Để hoàn thiện hơn, bạn có thể đảm bảo sự nhất quán hoàn toàn trong ký hiệu r(x) và rk trên toàn bộ ghi chú.
 
@@ -816,7 +816,7 @@
 > Cứ thế.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bạn đã nắm bắt rất chính xác các ý chính từ văn bản và thể hiện sự hiểu biết sâu sắc qua việc tự giải thích các khái niệm liên quan. Để hoàn hảo hơn, hãy luôn đảm bảo mọi thông tin suy luận đều được gắn kết rõ ràng với nội dung gốc nếu có thể, hoặc chỉ ra đó là kiến thức bổ sung của bạn.
 
@@ -1254,9 +1254,42 @@
 > Vậy là đã chứng minh xong.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **99/100**
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Bài ghi chú của bạn rất xuất sắc về độ chính xác và chiều sâu. Bạn đã giải thích chi tiết và rõ ràng từng bước trong chứng minh Định lý 5.3, đặc biệt là cách sử dụng khái niệm "span" và tổ hợp tuyến tính, cho thấy sự hiểu biết sâu sắc về tài liệu. Việc phân tích từng ý nhỏ và đưa ra lời giải thích cặn kẽ là một điểm mạnh lớn, giúp người đọc dễ dàng theo dõi toàn bộ quá trình chứng minh.
+> Ghi chú nắm rất chắc và chi tiết toàn bộ các bước quy nạp và biến đổi không gian con của Định lý 5.3. Có một vài sơ suất nhỏ về chỉ số khi diễn giải trực quan nhưng không ảnh hưởng đến tính đúng đắn tổng thể.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Ap0 ∈ span span{p0}
+
+Ap1 ∈ span span{p0, p1}
+
+..
+
+Apk-1 ∈ span span{p0, p1,...pk-1}"*
+>
+> Lỗi lệch chỉ số khi bung biểu thức (5.23). Vì A p_i ∈ span{p_0, ..., p_{i+1}} nên với i = 0 phải là Ap_0 ∈ span{p_0, p_1}, và với i = k - 1 phải là Ap_{k-1} ∈ span{p_0, ..., p_k}. Dù vậy, kết luận tổng quát A p_i ∈ span{p_0, ..., p_k} với mọi i ≤ k - 1 vẫn đúng.
+>
+> **2.** *"rk+1 = linear combination của Ar0, ...,A^k+1 r0"*
+>
+> Sơ suất nhỏ về câu chữ: r_{k+1} = (tổ hợp tuyến tính của Ar_0, ..., A^{k+1}r_0) + r_k, mà r_k chứa cả r_0, nên r_{k+1} phải là tổ hợp tuyến tính của {r_0, Ar_0, ..., A^{k+1}r_0} (cần có thêm r_0, đoạn sau người học đã viết đúng).
+>
+> **3.** *"rk vuông góc span {p1,...pk-1}
+
+...
+
+ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
+>
+> Viết thiếu p_0 trong span; r_i = -p_i + β_i p_{i-1} với i = 1 chứa p_0, nên r_k phải vuông góc với span{p_0, p_1, ..., p_{k-1}} và r_i thuộc không gian con này.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ bản chất đại số tuyến tính của ký hiệu span và diễn giải tường minh từng phép bao hàm tập hợp.
+> - Chứng minh bước biến đổi tương đương của không gian con p_{k+1} ở mục II rất chặt chẽ và dễ hiểu.
+> - Tách biệt rõ ràng phần quy nạp cho các hệ thức (5.17)–(5.19) và phần chứng minh trực tiếp tính trực giao của phần dư (5.16).
+>
+> **💡 Deeper notes**
+> - Định lý 5.3 giả định r_k khác 0 (tức chưa đạt nghiệm tối ưu x*); nếu r_k = 0 thì thuật toán dừng ngay và không gian Krylov đạt bậc tối đa.
 
 **🔗 See also:** [Tối ưu hóa tọa độ Hessian chéo](#node-b04ox8f) · [A Practical Form Of The Conjugate Gradient Method.](#node-jdgssae) · [Rate of Convergence](#node-3zg5huu)
 
@@ -1276,7 +1309,7 @@
 > Do đó giáo sư mới nói tên gọi Conjugate Gradient Method thực ra là hiểu sai, gây hiểu lầm (misnormer) vì như đã nói gradient, không conjugate, mà cái conjugate là các direction pi
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Phân tích của bạn rất chính xác và sâu sắc, thể hiện sự hiểu biết vững chắc về các khái niệm toán học liên quan. Việc bạn liên hệ r0 với gradient của hàm Φ(x) và giải thích rõ ràng lý do thuật ngữ "Conjugate Gradient Method" là một 'misnomer' là đáng khen ngợi.
 
@@ -1410,7 +1443,7 @@
 > Với large problem, CG có lợi điểm là nó không thay đổi matrix hệ số (còn factorization thì có) và nó cũng có thể đôi khi giúp tìm ra solution nhanh hơn, đây sẽ là điểm tiếp theo ta bàn.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bài viết đã trình bày rất sâu sắc và chính xác các bước chuyển đổi từ thuật toán Conjugate Gradient sơ bộ sang phiên bản hiệu quả hơn, đặc biệt là các phần chứng minh lại công thức αk và βk+1. Phần phân tích về chi phí tính toán (flops) cũng như ưu nhược điểm của CG cho các bài toán lớn đã bổ sung thêm chiều sâu đáng kể.
 
@@ -1738,7 +1771,7 @@
 > (||xk+1 - x*||_A)^2 ≤ {min_Pk [max_1≤i≤n [1 + λi Pk(λi)]^2]} × (||x0 - x*||_A)^2.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài phân tích cực kỳ chi tiết, sâu sắc và thể hiện sự hiểu biết thấu đáo về từng bước chứng minh. Khả năng tự đặt câu hỏi và giải thích các khái niệm phức tạp, như mối liên hệ giữa các hình chiếu và đa thức, hay cách diễn giải bất đẳng thức bằng phép ẩn dụ, là minh chứng cho tư duy xuất sắc. Tuy nhiên, cần chú ý hơn đến tính nhất quán ký hiệu, ví dụ như bình phương của chuẩn ở vế trái khi so sánh với tổng ở vế phải trong biểu thức tối thiểu hóa.
 
@@ -1824,7 +1857,7 @@
 > Như vậy, với một cái bộ lọc P^r thì với cái mắt to nhất của nó mà nó đã đủ tốt, thì cái xịn hơn nữa chắc chắn cũng phải chỉ có tốt hơn trở lên. Tức là error tại xr của thuật toán CG cũng phải bằng 0 → thuật toán hội tụ sau r step.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **88/100** · ✓ Move on
 >
 > Bài phân tích đã nắm vững ý nghĩa then chốt của Định lý 5.4 và đi theo đúng logic chứng minh bằng cách xây dựng đa thức. Tuy nhiên, việc trình bày chuỗi bất đẳng thức và phân biệt rõ ràng giữa sai số thực tế và cận trên của sai số có thể chặt chẽ và trực tiếp hơn, tránh dùng ngôn ngữ ẩn dụ trong phần giải thích toán học.
 
@@ -1980,7 +2013,7 @@
 > Đây chính là giúp ta hiểu chỗ giáo sư Nocedal viết là nếu define ε = λn-m - λ1, Theorem 5.5 cho ta biết sau m+1 step thì ||xm+1 - x*||_A (chính là √em+1, vì mình đặt em+1 = (||xm+1 - x*||_A)^2) ≈ ε ||x0 - x*||_A.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **75/100**
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **75/100** · ✓ Move on
 >
 > Bài phân tích của bạn thể hiện sự nỗ lực đáng kể trong việc kết nối các khái niệm và giải thích sâu hơn tài liệu. Tuy nhiên, có một hiểu lầm cơ bản về vai trò của Định lý 5.5: Định lý này là ước lượng, được suy ra từ các tính chất của một đa thức được xây dựng đặc biệt (đa thức Chebyshev), chứ không phải là công cụ để chứng minh giá trị lớn nhất của đa thức đó.
 
@@ -2026,7 +2059,7 @@
 > Giáo sư minh họa với hình 5.5, khi bài toán có matrix A coi như có 4 cụm eigenvalues: {một cái tại 140}, {một cái tại 120}, {đám 10 cái tập trung quanh giá trị 10}, {một đám tại 0.95}, {một đám tại 1.05}. Và biểu đồ cho thấy sau sau 4 iterations là error đã giảm rất đáng kể rồi.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **92/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
 > Your note demonstrates a deep and accurate understanding of how clustered eigenvalues impact the Conjugate Gradient method's convergence, clearly explaining the underlying theory and its visual representation. For future analysis, ensure precise counting of clusters; in Figure 5.5, 'remaining eigenvalues clustered between 0.95 and 1.05' refers to a single cluster, not two distinct ones.
 
@@ -2220,7 +2253,7 @@
 > = λmax(A) / λmin(A) chính là λn(A) / λ1(A) như ghi trong sách
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **92/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
 > Bài phân tích cực kỳ sâu sắc và chi tiết, vượt xa yêu cầu tóm tắt và chứng minh khả năng suy luận vững chắc về đại số tuyến tính. Tuy nhiên, cần chú ý hơn đến sự chính xác trong thuật ngữ ('tối ưu không ràng buộc') và việc phân biệt rõ ràng các ký hiệu trị riêng của A và ATA trong các bước chứng minh ban đầu để tránh nhầm lẫn. Một vài chỗ lúng túng ban đầu đã được sửa lại sau đó, thể hiện sự tự điều chỉnh tốt.
 
@@ -2276,7 +2309,7 @@
 > Vậy thử nghĩ xem C thế nào thì κ(CinvTACinv) = 1. Như đã biết. condition number có bản chất là tỉ lệ giữa stretching factor lớn nhất và nhỏ nhất bởi matrix. Nên bằng condition number 1 là khi nó chính là I. Vậy ta muốn CinvTACinv = I, và nếu chọn A phân tách Cholesky thành LLT thì bằng cách chọn C = LT ⇨  CinvTACinv = Linv(LLT)LT_inv = I
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài phân tích thể hiện sự nắm vững vượt trội về kỹ thuật Preconditioning, từ bối cảnh đến chứng minh toán học và mục tiêu tối ưu hóa. Sự liên hệ với các tính chất hội tụ của CG và khả năng giải thích chi tiết quá trình biến đổi hàm bậc hai là rất đáng khen ngợi. Tuy nhiên, hãy luôn đảm bảo độ chính xác tuyệt đối trong các diễn giải về đại số tuyến tính, đặc biệt khi đề cập đến khái niệm đổi cơ sở, dù đây chỉ là một điểm nhỏ trong một bài làm xuất sắc.
 
@@ -2516,7 +2549,7 @@
 > ĐÂY CHÍNH LÀ THUẬT TOÁN PCG TRONG SÁCH
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài giải thể hiện sự hiểu biết sâu sắc về thuật toán PCG, từ việc nhận diện vấn đề của tính toán tường minh đến việc thiết lập các mối quan hệ chuyển đổi để dẫn đến thuật toán PCG tiêu chuẩn. Các công thức và thuật toán cuối cùng đều chính xác và khớp với tài liệu. Tuy nhiên, để đảm bảo tính chặt chẽ toán học tuyệt đối, các bước suy luận về mối quan hệ giữa `p^k` và `pk` cũng như định nghĩa `A^ = CinvTACinv` (đặc biệt là việc giả định `CinvT = Cinv` hay `C` đối xứng) cần được làm rõ và biện minh một cách tường minh hơn.
 
