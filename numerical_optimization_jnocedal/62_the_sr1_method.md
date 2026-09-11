@@ -89,7 +89,7 @@
 > và lại dùng cái công thức Sherman-Morrison, chỉ đơn giản là giúp chuyển cái công thức update Bk+1 sang công thức update (Bk+1)inverse, mà mục đích là để ta khỏi phải làm hai bước (i) update Bk+1 → (ii) tín (Bk+1)inv, thì ta sẽ có công thức rank 1 update cho matrix Hk+1
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Điểm mạnh của bạn là khả năng suy luận toán học rất chính xác và chi tiết trong việc chứng minh công thức cập nhật SR1 (6.24), cùng với giải thích rõ ràng về phương trình cát tuyến và sự khác biệt rank. Để cải thiện, hãy tập trung vào các khái niệm trực tiếp liên quan đến SR1 được trình bày trong tài liệu, tránh đưa vào các ý tưởng (như điều kiện B^k+1s^k = s^k hay ma trận chiếu) không thuộc về quá trình dẫn xuất này để đảm bảo tính mạch lạc.
 
@@ -131,7 +131,7 @@
 > Thế thì do đó người ta nói đây là cái nhược điểm lớn nhất của cái SR1, và là lí do lúc đầu người ta không xài. Tuy nhiên sau khi có thuật toán Trust Region ra đời thì cái này lại tỏ ra hữu ích trở lại. Và nó có một tính chất đặc biệt hữu ích là khả năng tao xấp xỉ Hessian indefinite (tức là sao, tức là khi Hessian indefinite, cái này có thể giúp xấp xỉ tốt)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **97/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **97/100** · ✓ Move on
 >
 > Bạn đã tóm tắt và phân tích rất chính xác các điểm chính của đoạn văn, bao gồm cả nhược điểm ban đầu và lợi thế sau này của công thức SR1. Việc bạn chủ động giải thích toán học về lý do B_k+1 có thể không xác định dương là một điểm cộng lớn, thể hiện sự hiểu biết sâu sắc.
 
@@ -175,7 +175,7 @@
 > 3) Vì cách xấp xỉ Hessian của nó không có cái tính chất "nếu Bk xác định dương thì Bk+1 luôn xác định dương" nên nó xấp xỉ tốt hơn Hessian so với BFGS. Mình hiểu ý này như vầy: KHÔNG PHẢI LÚC NÀO CỨ Bk XÁC ĐỊNH DƯƠNG THÌ Bk+1 NÊN LUÔN LUÔN  XÁC ĐỊNH DƯƠNG. Vì mình hiểu điều này chỉ đúng là cần thiết nếu như ta đi đến gần optimal, còn đôi khi trên đường đi, việc Bk xác định dương, mà ngay lập tức ép buộc Bk+i sau đó trở đi đều xác định dương sẽ khiến xấp xỉ kém cái Hessian thực tế.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú của bạn rất toàn diện và chính xác, thể hiện sự hiểu biết sâu sắc về những thách thức và lợi thế của SR1. Phần giải thích chi tiết của bạn về lý do SR1 có thể cung cấp các xấp xỉ Hessian tốt hơn, đặc biệt khi tính xác định dương không phải lúc nào cũng cần thiết, là đặc biệt sâu sắc.
 
@@ -274,7 +274,7 @@
 > Ngược lại, **NẾU TA CHỈ UPDATE BK KHI MK UY TÍN, THÌ KHI NÓ KHÔNG UY TÍN, BK VỐN DĨ TỆ LẠI VẪN ĐƯỢC GIỮ NGUYÊN** → điều này sẽ **KHIẾN THUẬT TOÁN MẮC KỆT TẠI ĐÂY HOÀI VÌ KHÔNG THÓAT ĐƯỢC VÒNG LUẨN QUẨN**: **Bk tệ → mk ko uy tín → không update Bk → Bk tệ → mk ko uy tín** Đây là cái gs Nocedal gọi là REPEATED REJECTION
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài phân tích thể hiện sự hiểu biết sâu sắc và chính xác về thuật toán SR1 Trust-Region, đặc biệt là ý nghĩa quan trọng của việc cập nhật ma trận xấp xỉ Hessian (Bk) độc lập với độ tin cậy của mô hình (tỷ lệ ared/pred). Tuy nhiên, có một chi tiết nhỏ cần điều chỉnh: bán kính tin cậy (Δk) chỉ được tăng gấp đôi khi độ dài bước `||sk||` lớn hơn `0.8 Δk`, không phải khi `||sk|| >= 0.8 Δk` như đã nêu, vì khi `||sk|| <= 0.8 Δk` thì bán kính được giữ nguyên.
 
