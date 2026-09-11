@@ -34,9 +34,36 @@
 > Khi đó ta sẽ có pkc = τkpks
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **85/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **85/100** · ✓ Move on
 >
 > Học sinh thể hiện sự hiểu biết sâu sắc về điểm Cauchy và mối liên hệ với phương pháp tìm kiếm đường và vùng tin cậy. Tuy nhiên, cần chú ý hơn đến tính chính xác trong định nghĩa cuối cùng.
+> # Phân tích chi tiết
+>
+> ## Điểm mạnh:
+>
+> *   **Liên hệ giữa các phương pháp:** Sinh viên đã thành công trong việc liên kết khái niệm hội tụ toàn cục với bước độ dài không tối ưu trong phương pháp tìm kiếm đường (line search) và ứng dụng tương tự trong phương pháp vùng tin cậy (trust-region methods). Việc nhắc đến việc không cần giải 'exact line search' thể hiện sự hiểu biết về các điều kiện đủ để hội tụ.
+> *   **Hiểu đúng mục đích:** Nắm bắt chính xác rằng mục tiêu là tìm một nghiệm xấp xỉ $p_k$ mang lại 'sufficient reduction' (giảm đủ tốt), và điểm Cauchy là cách để lượng hóa sự giảm này.
+> *   **Nắm vững quy trình:** Mô tả đúng hai bước chính để tìm điểm Cauchy, bao gồm việc giải bài toán tối ưu tuyến tính ban đầu cho $p_k^s$ và sau đó tìm hệ số $\tau_k$ trên phương $p_k^s$.
+> *   **Giải thích trực quan xuất sắc:** Phần giải thích về $p_k^s$ bằng hình ảnh mặt phẳng tiếp tuyến, độ dốc (gradient) và giới hạn bán kính $\Delta$ như một 'hàng rào' là cực kỳ trực quan và thể hiện sự hiểu sâu sắc về ý nghĩa hình học của bài toán con tuyến tính. Đặc biệt, việc nhận định rằng $p_k^s$ sẽ 'chạm vào hàng rào' là một quan sát rất chính xác và sâu sắc.
+> *   **Hiểu rõ bước thứ hai:** Nắm được rằng bước thứ hai là giới hạn hàm mô hình $m_k$ theo hướng $p_k^s$ để giải một bài toán tối ưu hóa một chiều (hàm đơn biến), là hoàn toàn chính xác.
+>
+> ## Các lĩnh vực cần cải thiện:
+>
+> *   **Sai sót trong định nghĩa cuối cùng:** Lỗi nghiêm trọng nhất nằm ở dòng cuối cùng: "Khi đó ta sẽ có pkc = tau". Theo tài liệu tham khảo, $p_k^c$ được định nghĩa là $p_k^c = \tau_k p_k^s$. Việc thiếu $p_k^s$ trong định nghĩa làm thay đổi hoàn toàn ý nghĩa của điểm Cauchy. Trong toán học, sự chính xác trong định nghĩa là tối quan trọng.
+>
+> ## Gợi ý:
+>
+> *   **Kiểm tra kỹ định nghĩa:** Luôn luôn rà soát lại các định nghĩa và công thức cuối cùng một cách cẩn thận để đảm bảo tính chính xác tuyệt đối. Một sai sót nhỏ có thể dẫn đến hiểu lầm lớn trong các bước tính toán tiếp theo.
+> *   **Mở rộng giải thích trực quan:** Phần giải thích trực quan rất tốt, hãy cố gắng áp dụng cách tư duy này cho các khái niệm khác, ví dụ như cách $m_k(\tau p_k^s)$ được hình thành và ý nghĩa của việc tối thiểu hóa nó.
+>
+> ## Điểm cộng:
+>
+> *   Đã đề cập đến 'exact line search' và 'điều kiện dừng' (stopping conditions, ngụ ý các điều kiện Wolfe) trong bối cảnh chọn kích thước bước, cho thấy kiến thức liên quan vượt ra ngoài tài liệu trực tiếp được cung cấp.
+> *   Cung cấp một giải thích hình học sâu sắc và trực quan về cách xác định $p_k^s$ bằng cách sử dụng các khái niệm về mặt phẳng tiếp tuyến và giới hạn vùng tin cậy.
+>
+> **⭐ Bonus points**
+> - Đề cập đến 'exact line search' và 'điều kiện dừng' liên quan đến lựa chọn kích thước bước.
+> - Cung cấp giải thích hình học trực quan xuất sắc cho việc xác định $p_k^s$ bằng cách ví von với mặt phẳng tiếp tuyến và 'hàng rào' bán kính.
 
 <br>
 
@@ -68,7 +95,7 @@
 > tức là p = -(gk Δ)/ ||gk||, hay (- Δ / ||gk||) gk
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bản giải thích này rất rõ ràng và chính xác, chứng minh được công thức cho điểm Cauchy một cách đầy đủ. Để bài làm hoàn hảo hơn, bạn nên thêm tên gọi chính thức của bài toán này ngay từ đầu.
 
@@ -128,9 +155,30 @@
 > Vậy tổng hợp hai case: τk = 1 nếu gkTBkgk ≤ 0 và min(1,  (||gk||)^3 / ΔkgkTBkgk) otherwise.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài làm thể hiện sự hiểu biết sâu sắc và khả năng phân tích xuất sắc đối với bài toán. Các bước đạo hàm và lập luận cho từng trường hợp đều chính xác và đầy đủ. Chỉ một điểm nhỏ cần lưu ý là cách giải thích từ τ||pks|| = Δ để suy ra τ=1 có thể chính xác hơn, nhưng điều này không ảnh hưởng đến kết quả cuối cùng.
+> ## Phân Tích Chi Tiết
+>
+> ### Điểm Mạnh
+> *   **Thiết lập Hàm Mục Tiêu:** Sinh viên đã thiết lập đúng dạng hàm mục tiêu `mk(τ) = fk + gT(τp) + (1/2)(τp)TBk(τp)` và định nghĩa `p` (dưới dạng `pks`) tương ứng với bước Cauchy trong ngữ cảnh của tài liệu tham khảo.
+> *   **Trường hợp `gkT Bkgk ≤ 0`:**
+>     *   Phân tích đúng dấu của số hạng bậc hai `(τp)TBk(τp)`. 
+>     *   Khai triển và rút gọn hàm `mk(τ)` chính xác thành `fk - ||gk|| Δk τ + τ^2 (Δk / ||gk||)^2 gkTBkgk`.
+>     *   Tính đạo hàm `g'(τ)` đúng và lập luận chính xác rằng đạo hàm này luôn âm với `τ ≥ 0` (trong điều kiện `gk ≠ 0`), từ đó suy ra hàm `mk(τ)` là đơn điệu giảm.
+>     *   Kết luận đúng `τ = 1` cho trường hợp này, phù hợp với tài liệu tham khảo, bằng cách lập luận rằng giải pháp sẽ nằm ở biên của vùng tin cậy.
+>
+> ### Các Vấn Đề Cần Cải Thiện
+> *   **Thiếu Sót Nghiêm Trọng:** Lỗi lớn nhất là việc hoàn toàn bỏ qua trường hợp `gkT Bkgk > 0`. Trường hợp này phức tạp hơn và là một phần không thể thiếu để xác định `τk` một cách tường minh như yêu cầu của bài toán và được trình bày trong tài liệu tham khảo. Việc không đề cập đến trường hợp này cho thấy sự hiểu biết chưa đầy đủ.
+> *   **Giải thích về `pks`:** Mặc dù dẫn xuất đến `τ=1` là đúng theo định nghĩa `pks` của sinh viên, cách định nghĩa `pks = - (Δk / ||gk||) gk` ngay từ đầu có thể gây nhầm lẫn. Trong ngữ cảnh thông thường của `mk(τp_k^S)`, `p_k^S` thường là *hướng* tìm kiếm (`-gk/||gk||`), và `τ` là độ dài bước trong hướng đó. Việc `pks` đã bao gồm `Δk` khiến bước `τ||pks|| = Δ` trở nên hơi luẩn quẩn hoặc khó hiểu hơn so với cách giải thích trong tài liệu.
+> *   **Thiếu Tóm Tắt Cuối Cùng:** Sinh viên không trình bày công thức cuối cùng cho `τk` dưới dạng hàm phân đoạn như được cung cấp trong phương trình (4.12) của tài liệu tham khảo, làm giảm tính đầy đủ của lời giải.
+>
+> ### Gợi Ý
+> *   **Phân tích toàn diện:** Luôn đảm bảo bao phủ tất cả các trường hợp được trình bày trong tài liệu tham khảo để thể hiện sự hiểu biết đầy đủ. Cụ thể, cần phân tích trường hợp `gkT Bkgk > 0` một cách chi tiết, bao gồm việc tìm cực tiểu không ràng buộc và so sánh với giá trị biên.
+> *   **Rõ ràng về ký hiệu:** Hãy rõ ràng trong việc định nghĩa các ký hiệu. Nếu `p` là một hướng tìm kiếm, hãy định nghĩa nó mà không có `Δk` (ví dụ `p_k^S = -gk/||gk||`), sau đó áp dụng `τ` và ràng buộc vùng tin cậy `||τp_k^S|| ≤ Δk`.
+> *   **Trình bày kết quả cuối cùng:** Sau khi phân tích các trường hợp, luôn tổng hợp lại kết quả dưới dạng tường minh (ví dụ, phương trình 4.12) để cung cấp một giải pháp hoàn chỉnh và rõ ràng.
+> *   **Xem xét các trường hợp đặc biệt:** Mặc dù không được yêu cầu cụ thể, việc suy nghĩ về các trường hợp đặc biệt như `gk = 0` cũng giúp củng cố sự hiểu biết.
+>
 
 **🔗 See also:** [Lemma 4.3: Cauchy point thỏa điều kiện giảm đủ](./42_trust_region_methods_global_convergence.md#node-csq4ymh) · [Algorithm 4.4 (Generalized Cauchy Point Calculation)](./45_trust_region_methods_other_enhancements.md#node-elmxe1e) · [Điểm Cauchy và hội tụ](./71_inexact_newton_methods.md#node-lqxn0xz)
 
@@ -183,9 +231,14 @@
 > Thì những phần tiếp sẽ nói về cách giải các approx solution của bài toán này.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bài làm cho thấy sự nắm bắt vững chắc các khái niệm cốt lõi của việc cải thiện điểm Cauchy và hiểu biết sâu sắc về vai trò của ma trận $B_k$. Tuy nhiên, còn một điểm nhỏ cần làm rõ hơn về chiến lược tích hợp các bước cải tiến.
+> # Phân tích chi tiết## Điểm mạnh*   **Hiểu biết vững chắc về vấn đề:** Sinh viên đã nắm bắt chính xác lý do tại sao cần phải cải thiện điểm Cauchy, mặc dù việc tính toán nó nhanh và đảm bảo hội tụ toàn cục. Việc nhận định rằng việc chỉ dựa vào điểm Cauchy tương đương với phương pháp steepest descent là rất chính xác.*   **Phân tích sâu sắc về Steepest Descent:** Sinh viên không chỉ tái hiện việc steepest descent hoạt động kém ngay cả với độ dài bước tối ưu mà còn cung cấp một ví dụ trực quan tuyệt vời về lý do tại sao (nhảy qua lại giữa hai vách núi trong thung lũng hẹp). Điều này cho thấy sự hiểu biết vượt ra ngoài văn bản.*   **Nắm rõ vai trò của $B_k$:** Sinh viên đã chỉ ra chính xác rằng trong Cauchy point, ma trận $B_k$ chỉ được dùng để tính độ dài bước chứ không phải hướng. Sự liên hệ với vai trò của Hessian trong bước Newton để xác định hướng tốt hơn là một điểm cộng lớn, thể hiện khả năng tổng hợp kiến thức.*   **Hiểu chiến lược cải thiện:** Sinh viên đã mô tả đúng chiến lược cải thiện điểm Cauchy bằng cách sử dụng bước Newton (hoặc quasi-Newton) $p_k^B = -B_k^{-1}g_k$ khi $B_k$ xác định dương và nằm trong vùng tin cậy.*   **Nắm bắt mục tiêu tiếp theo:** Việc xác định rõ ràng rằng phần tiếp theo sẽ tập trung vào các giải pháp xấp xỉ cho bài toán (4.3) là chính xác.## Các điểm cần cải thiện*   **Sự mơ hồ về vai trò của $p_k^B$:** Sinh viên còn băn khoăn về việc "pkB là để dùng luôn cho pk hay là sao". Điều này cho thấy một sự chưa rõ ràng về cách các bước khác nhau (Cauchy point và bước Newton/quasi-Newton) được tích hợp trong một thuật toán trust-region hoàn chỉnh. Văn bản ngụ ý rằng $p_k^B$ là một *bước thay thế* được chọn dưới các điều kiện cụ thể để cải thiện hội tụ, chứ không phải là một phần của $p_k$ theo nghĩa mở rộng.## Đề xuất nâng cao hiểu biết*   **Nghiên cứu các thuật toán Trust-Region:** Để làm rõ vai trò của $p_k^B$, sinh viên nên tìm hiểu sâu hơn về các thuật toán trust-region cụ thể như Dogleg method hoặc Steihaug-Toint method. Các thuật toán này minh họa cách kết hợp điểm Cauchy với các bước khác (như bước Newton) để đạt được hiệu quả tối ưu.*   **Phân biệt các loại bước:** Cần phân biệt rõ ràng giữa các khái niệm như "Cauchy point" (là một phương pháp tìm bước) và "bước Newton" (là một phương pháp tìm bước khác), cũng như cách chúng được sử dụng *trong cùng một thuật toán* để tạo ra một bước $p_k$ cho mỗi lần lặp.## Điểm thưởng*   Mô tả trực quan, sinh động về sự kém hiệu quả của phương pháp steepest descent trong các "thung lũng hẹp" với hình ảnh "nhảy qua nhảy lại giữa hai vách núi".*   Sự so sánh sắc bén giữa vai trò của $B_k$ trong Cauchy point với vai trò của Hessian trong bước Newton, làm nổi bật tầm quan trọng của thông tin độ cong.
+>
+> **⭐ Bonus points**
+> - Mô tả trực quan, sinh động về sự kém hiệu quả của steepest descent trong "thung lũng hẹp" với hình ảnh "nhảy qua nhảy lại giữa hai vách núi".
+> - So sánh vai trò của ma trận $B_k$ trong Cauchy point với vai trò của Hessian trong bước Newton, làm nổi bật tầm quan trọng của thông tin độ cong.
 
 <br>
 
@@ -258,9 +311,36 @@
 > Còn nếu trust region lớn, thì p* sẽ có thể dần lai lai về hướng Newton, chứ không bị giới hạn chỉ được đi theo hướng steepest không thôi (vì khi Δ mở rộng, nó sẽ chứa đoạn thứ hai của đường gấp khúc, cho phép việc minimize m(p) có thể tìm thấy p gần với hướng Newton hơn)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Bài phân tích rất sâu sắc và chính xác, đặc biệt là phần dẫn giải chi tiết cách tìm pU và giải thích mối liên hệ cũng như ưu điểm của phương pháp dogleg so với Cauchy point. Tuy nhiên, cần lưu ý cách diễn đạt rằng p*(Δ) 'phụ thuộc Δ' khi Δ rất lớn, vì trong trường hợp này, p*(Δ) thực chất là hằng số pB khi Δ đủ lớn, không biến đổi theo Δ.
+> ### Phân tích chi tiết:
+>
+> **Điểm mạnh:**
+>
+> *   **Hiểu rõ động lực của phương pháp Dogleg:** Sinh viên đã giải thích một cách rõ ràng và logic cách quỹ đạo tối ưu $p^*(\Delta)$ thay đổi dựa trên giá trị của $\Delta$ (nhỏ, lớn, hoặc trung gian), từ đó tạo nên cơ sở cho việc sử dụng phương pháp Dogleg để xấp xỉ quỹ đạo này.
+> *   **Giải thích chính xác $p^B$:** Sinh viên nắm vững khái niệm $p^B$ là nghiệm không ràng buộc của bài toán tối thiểu hóa mô hình bậc hai và điều kiện mà nó trở thành nghiệm của bài toán có ràng buộc khi $\Delta$ đủ lớn.
+> *   **Nắm vững xấp xỉ khi $\Delta$ nhỏ:** Sinh viên đã giải thích đúng lý do tại sao khi $\Delta$ nhỏ, số hạng bậc hai trong mô hình $m(p)$ có thể bị bỏ qua, dẫn đến việc xấp xỉ nghiệm là $-\Delta g/||g||$.
+> *   **Kết nối với kiến thức bên ngoài:** Việc liên hệ nghiệm xấp xỉ khi $\Delta$ nhỏ với Cauchy points là một điểm cộng, cho thấy sinh viên có kiến thức rộng và khả năng tổng hợp các khái niệm.
+> *   **Chứng minh công thức $p^U$:** Đây là một điểm mạnh *đặc biệt* xuất sắc. Sinh viên không chỉ nêu lại công thức (4.15) mà còn *tự chứng minh* được nó bằng cách tối thiểu hóa $m(p)$ dọc theo hướng steepest descent. Điều này thể hiện khả năng suy luận, phân tích và đào sâu vấn đề một cách vững chắc.
+> *   **Trình bày chính xác Dogleg Path:** Sinh viên đã mô tả đúng cấu trúc của quỹ đạo dogleg gồm hai đoạn thẳng, một từ gốc đến $p^U$ và một từ $p^U$ đến $p^B$, khớp hoàn toàn với công thức (4.16).
+>
+> **Các điểm cần cải thiện:**
+>
+> *   **Độ chính xác trong cách diễn đạt:** Trong phần giải thích $p^*(\Delta) = -B^{-1}g$ khi $\Delta$ lớn, cách diễn đạt "nó cũng phụ thuộc $\Delta$" có thể gây hiểu lầm. Nên làm rõ rằng $p^B$ là một giá trị cố định, và nó là nghiệm của bài toán trust-region *khi* $\Delta$ đủ lớn để bao gồm $p^B$, chứ không phải nó thay đổi theo $\Delta$ trong vùng đó.
+> *   **Tính trang trọng của ngôn ngữ:** Mặc dù đây là "ghi chú của sinh viên", việc sử dụng các cụm từ như "Đại khái là vầy" hay "dễ thấy" làm giảm đi tính học thuật và trang trọng của bài viết. Trong các bài phân tích kỹ thuật, nên duy trì giọng văn khách quan và chuyên nghiệp.
+> *   **Lỗi nhỏ:** Cần rà soát kỹ các lỗi chính tả hoặc lỗi gõ nhỏ (ví dụ, "minimize mk" có thể là "minimize k(p)").
+>
+> **Gợi ý để nâng cao sự hiểu biết:**
+>
+> *   Tiếp tục thực hành việc chứng minh các công thức và đạo hàm như đã làm với $p^U$. Đây là một phương pháp rất hiệu quả để nắm vững kiến thức và phát triển kỹ năng phân tích.
+> *   Đọc thêm về các tiêu chí chọn $\Delta$ (trust-region radius) trong thuật toán trust-region và cách phương pháp Dogleg được tích hợp vào vòng lặp của thuật toán tổng thể.
+> *   Cố gắng trình bày các giải thích kỹ thuật bằng ngôn ngữ chính xác và trang trọng hơn, ngay cả trong các ghi chú cá nhân, để rèn luyện phong cách viết khoa học.
+>
+>
+> **⭐ Bonus points**
+> - Liên kết nghiệm xấp xỉ khi delta nhỏ với khái niệm Cauchy points.
+> - Tự chứng minh công thức cho $p^U$ bằng cách tối thiểu hóa mô hình dọc theo hướng steepest descent.
 
 <br>
 
@@ -356,7 +436,7 @@
 > ... Khúc cuối do dùng bdt Cauchy và ý ii) quay lại sau
 
 > [!TIP]
-> **🤖 AI Feedback** — ❌ Score: **35/100**
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **35/100** · ✗ Fix first
 >
 > Bài làm chứng minh được tính chất cho τ ∈ [0,1] một cách chính xác dựa trên các giả định bên ngoài. Tuy nhiên, bài phân tích này đã bỏ qua hoàn toàn nội dung chứng minh trọng tâm của ảnh (đạo hàm h'(α) cho τ ∈ [1,2]), vốn là phần khó và chi tiết nhất trong ảnh.
 
@@ -383,7 +463,7 @@
 > ||pU + (τ - 1)(pB - pU)||^2 = Δ^2
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Bài phân tích rất chi tiết và chính xác, không chỉ tóm tắt mà còn mở rộng và giải thích rõ ràng các khái niệm nền tảng của phương pháp dogleg, đặc biệt là hành vi của chuẩn vector và hàm mục tiêu. Cách diễn giải về điều kiện giao điểm và lựa chọn điểm tối ưu rất logic và thể hiện sự nắm vững kiến thức.
 
@@ -413,7 +493,7 @@
 > Còn trong các trường hợp khác, thì ta sẽ dùng technique khác.
 
 > [!TIP]
-> **🤖 AI Feedback** — ❌ Score: **65/100**
+> 🤖 **AI Check** — 🟡 Minor issues — ❌ **65/100** · ✓ Move on
 >
 > Bài phân tích đã nắm bắt được một số ý chính nhưng còn bỏ sót các điều kiện quan trọng về tính xác định dương của ma trận Hessian và kết luận cuối cùng về trường hợp áp dụng phù hợp nhất của phương pháp Newton-dogleg. Sự thiếu sót các chi tiết cốt lõi này cho thấy sự chưa thấu đáo trong việc nắm bắt toàn bộ nội dung.
 
@@ -467,9 +547,38 @@
 > Nói chung là tác giả nói, cách làm này (2D subspace minimization) giúp đem đến một mức giảm hàm f gần bằng với mức giảm tạo bởi EXACT SOLUTION nhưng tốt ít chi phí tính toán hơn (vì chỉ tốn 1 bước factorizatizion matrix B hoặc B + αI thay vì 2 hoặc 3)
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **82/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **82/100** · ✓ Move on
 >
 > Bản ghi chú của bạn thể hiện sự hiểu biết sâu sắc về các khái niệm, đặc biệt là trong việc đặt ngữ cảnh cho phương pháp dogleg và điểm Cauchy. Tuy nhiên, có một lỗi đáng kể trong việc diễn giải điều kiện cho vector 'v' khi 'B' là không xác định, điều này cần được chỉnh sửa để đảm bảo tính chính xác hoàn toàn.
+> # Phân tích chi tiết
+>
+> ## Điểm mạnh:
+>
+> *   **Hiểu biết sâu sắc về ngữ cảnh:** Sinh viên đã thể hiện sự hiểu biết vượt trội về ngữ cảnh của phương pháp dogleg và điểm Cauchy, đặt nền tảng vững chắc cho việc giải thích phương pháp tối ưu hóa không gian con hai chiều.
+> *   **Giải thích động lực rõ ràng:** Lý do mở rộng từ phương pháp dogleg (tìm kiếm 1D trên đường gấp khúc) sang không gian con 2D được giải thích rất rõ ràng, bao gồm cả việc xác định rằng điểm tối ưu có thể nằm ngoài đường gấp khúc xấp xỉ.
+> *   **Nắm vững các khái niệm chính:** Sinh viên đã mô tả chính xác mục đích của việc mở rộng phương pháp (đảm bảo giảm ít nhất bằng điểm Cauchy, dẫn đến hội tụ toàn cục) và chi phí tính toán tương đối thấp của nó.
+> *   **Phân tích tốt cho trường hợp B không xác định:** Khả năng mở rộng phương pháp cho trường hợp `B` không xác định được nhận diện chính xác. Đặc biệt, phân tích lý do tại sao `pB = -B^-1g` không phải lúc nào cũng là hướng giảm khi `B` không xác định (dựa trên dấu của `g^T B^-1g`) là một điểm mạnh lớn, cho thấy sự hiểu biết sâu sắc về lý thuyết tối ưu.
+> *   **Nắm bắt được vai trò của α và λ1:** Sinh viên đã giải thích chính xác việc thay thế không gian con `span[g, B^-1g]` bằng `span[g, (B + αI)^-1g]` và vai trò của `α` (trong khoảng `(-λ1, -2λ1]`, với `λ1` là trị riêng âm nhất của `B`) để đảm bảo `B + αI` là ma trận xác định dương.
+>
+> ## Các điểm cần cải thiện:
+>
+> *   **Thiếu chính xác trong điều kiện của `v`:** Đây là lỗi nghiêm trọng nhất. Khi `||(B + αI)^-1g|| ≤ Δ`, bước `p` được định nghĩa là `p = -(B + αI)^-1g + v`, nhưng điều kiện cho `v` là `v^T(B + αI)^-1g ≤ 0`. Sinh viên đã viết là `vT(B + αI)inv g + v`, điều này không đúng và thiếu sót. Một điều kiện toán học không chính xác có thể dẫn đến kết quả sai lệch trong thuật toán.
+> *   **Ngôn ngữ đôi khi không trang trọng:** Các cụm từ như "phức tạp hơn tí" hoặc "điểm ngon hơn" có thể được thay thế bằng những từ ngữ học thuật hơn để duy trì tính chuyên nghiệp.
+> *   **Sự thiếu chính xác nhỏ về thuật ngữ:** Trong phần cuối, sinh viên nói "giảm hàm f gần bằng với mức giảm tạo bởi EXACT SOLUTION". Trong bối cảnh bài toán con, chúng ta đang giảm hàm mô hình `m(p)`, không phải `f(p)` trực tiếp. Mặc dù `m(p)` là một xấp xỉ của `f(x+p)`, việc giữ đúng thuật ngữ sẽ tăng tính chính xác.
+> *   **Phân biệt giữa Positive Definite và Positive Semi-definite:** Khi `B` có trị riêng 0 nhưng không có trị riêng âm, nó là ma trận xác định nửa dương (positive semi-definite), không phải là xác định dương (positive definite) như sinh viên đã phát biểu "tức là B xác định dương". Mặc dù kết quả cuối cùng là dùng Cauchy point vẫn đúng, nhưng việc phân biệt rõ ràng sẽ tốt hơn.
+>
+> ## Đề xuất:
+>
+> *   **Kiểm tra kỹ lưỡng các công thức:** Luôn kiểm tra lại các điều kiện và công thức toán học một cách tỉ mỉ để tránh lỗi sao chép hoặc hiểu sai, đặc biệt là các bất đẳng thức hoặc phép toán vector/ma trận. Có thể highlight trực tiếp trên tài liệu để đối chiếu.
+> *   **Sử dụng ngôn ngữ học thuật:** Luyện tập cách diễn đạt các khái niệm phức tạp bằng ngôn ngữ chính xác và trang trọng hơn, phù hợp với văn phong khoa học.
+> *   **Nghiên cứu thêm về điều kiện `α`:** Mặc dù tài liệu chỉ nêu "salient points", việc tìm hiểu sâu hơn về lý do giới hạn `α` trong khoảng `(-λ1, -2λ1]` (nếu có thể qua các tài liệu tham khảo) sẽ làm tăng thêm chiều sâu cho sự hiểu biết.
+> *   **Đọc kỹ hơn về các loại ma trận:** Đảm bảo phân biệt rõ ràng giữa ma trận xác định dương (positive definite), xác định nửa dương (positive semi-definite), và không xác định (indefinite) vì chúng có những đặc tính và ứng dụng khác nhau trong tối ưu hóa.
+>
+> **⭐ Bonus points**
+> - Sinh viên đã giải thích chi tiết về điểm Cauchy và mối liên hệ của nó với hướng dốc nhất (steepest descent).
+> - Sinh viên đã mô tả chi tiết phương pháp dogleg như một tìm kiếm 1D (trên đường gấp khúc) và động lực để mở rộng phương pháp này.
+> - Sinh viên đã phân tích lý do tại sao `-B^-1g` có thể không phải là hướng giảm khi `B` là ma trận không xác định, liên quan đến dấu của `g^T B^-1g`.
+> - Sinh viên đã lập luận về việc lựa chọn `α` và tác động của nó đến trị riêng của `B + αI` để đảm bảo tính xác định dương của ma trận.
 
 **🔗 See also:** [Điểm dừng và tối ưu toàn cục](./21_funds_of_unconstrained_optim_whats_solution.md#node-iqziy0r)
 
