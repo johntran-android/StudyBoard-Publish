@@ -634,9 +634,9 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [4.1.4 Fisher's linear discriminant](pattern_recognition_machine_learning_cbishop/414_fishers_linear_discriminant.md) | 3 | 9 |
 | [4.1.5 Relation to least square](pattern_recognition_machine_learning_cbishop/415_relation_to_least_square.md) | 2 | 3 |
 | [4.1.6 Fisher’s discriminant for multiple classes](pattern_recognition_machine_learning_cbishop/416_fishers_discriminant_for_multiple_classes.md) | 2 | 4 |
+| [4.1.7 Perceptron](pattern_recognition_machine_learning_cbishop/417_perceptron.md) | 3 | 5 |
 | [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) | 19 | 22 |
 | [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) | 5 | 7 |
-| [Untitled](pattern_recognition_machine_learning_cbishop/untitled.md) | 3 | 5 |
 
 </details>
 
