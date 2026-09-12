@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1789098736456,
+  "publishedAt": 1789233945359,
   "sections": [
     {
       "title": "📋 Overview",
@@ -171,6 +171,12 @@
       "imageCount": 17
     },
     {
+      "title": "12.2 Tangent Cone & Constraint Qualification",
+      "path": "numerical_optimization_jnocedal/122_tangent_cone_constraint_qualification.md",
+      "noteCount": 1,
+      "imageCount": 5
+    },
+    {
       "title": "12.3 First Order Optimality Condition",
       "path": "numerical_optimization_jnocedal/123_first_order_optimality_condition.md",
       "noteCount": 3,
@@ -201,6 +207,6 @@
       "imageCount": 11
     }
   ],
-  "totalNotes": 411,
-  "totalImages": 586
+  "totalNotes": 412,
+  "totalImages": 591
 }
