@@ -1,6 +1,6 @@
 # Untitled
 
-📊 **Progress:** `3` Notes | `4` Screenshots | `3` AI Reviews
+📊 **Progress:** `3` Notes | `5` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-tu0vhf3"></a>
@@ -71,6 +71,8 @@
 <a id="node-s2dmh5w"></a>
 
 ### The Perceptron Criterion
+
+<p align="center"><kbd><img src="assets/eyy0eo9ilwl.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/jw9xfwja2tl.png" width="80%"></kbd></p>
 
