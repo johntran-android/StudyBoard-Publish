@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1789172051054,
+  "publishedAt": 1789252488065,
   "sections": [
     {
       "title": "📋 Overview",
@@ -306,7 +306,7 @@
       "title": "3.7 Exercises",
       "path": "pattern_recognition_machine_learning_cbishop/37_exercises.md",
       "noteCount": 5,
-      "imageCount": 6
+      "imageCount": 7
     },
     {
       "title": "4.0 Linear model for Classification",
@@ -353,8 +353,14 @@
     {
       "title": "4.1.7 Perceptron",
       "path": "pattern_recognition_machine_learning_cbishop/417_perceptron.md",
-      "noteCount": 3,
-      "imageCount": 5
+      "noteCount": 6,
+      "imageCount": 11
+    },
+    {
+      "title": "4.2 Probabilistic Generative Model",
+      "path": "pattern_recognition_machine_learning_cbishop/42_probabilistic_generative_model.md",
+      "noteCount": 0,
+      "imageCount": 0
     },
     {
       "title": "Appendix C. Matrices",
@@ -369,6 +375,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 409,
-  "totalImages": 615
+  "totalNotes": 412,
+  "totalImages": 622
 }
