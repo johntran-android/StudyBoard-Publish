@@ -1,6 +1,6 @@
 # 4.1.7 Perceptron
 
-📊 **Progress:** `3` Notes | `5` Screenshots | `3` AI Reviews
+📊 **Progress:** `6` Notes | `11` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-tu0vhf3"></a>
@@ -192,11 +192,11 @@
 >
 >
 >
-> 𝐰(1) = 𝐰(0) - η ∇E1(𝐰) = 𝐰(0) + η Φ(𝐱1)t1
+> 𝐰(1) = 𝐰(0) - η ∇E1(𝐰) = 𝐰(0) - η (-Φ(𝐱1)t1) = 𝐰(0) + η Φ(𝐱1)t1
 >
 >
 >
-> (đạo hàm theo 𝐰 của 𝐰ᵀΦ(𝐱)t, ∇\[𝐰ᵀΦ(𝐱)t\] = Φ(𝐱)t, đạo hàm hàm dot product f(𝐱) = 𝐱ᵀ𝐚 đối với 𝐱, ∇f(𝐱) = 𝐚)
+> (E1(𝐰) = -𝐰ᵀΦ(𝐱)t ⇒ đạo hàm theo 𝐰 của E1(𝐰) = -Φ(𝐱)t, đạo hàm hàm dot product f(𝐱) = 𝐱ᵀ𝐚 đối với 𝐱, ∇f(𝐱) = 𝐚)
 >
 >
 >
@@ -236,7 +236,7 @@
 >
 >
 >
-> Nhưng với stochastic, thì hình ảnh là, ta luân phiên coi như chỉ nằm trên một miếng ván E1 hoặc E2,  và mỗi lần như vậy ta trượt xuống theo hướng -∇E1(𝐰) hoặc -∇E2(𝐰).
+> Nhưng với stochastic, thì hình ảnh là, ta luân phiên coi như chỉ nằm trên một miếng ván E1 hoặc E2, và mỗi lần như vậy ta trượt xuống theo hướng -∇E1(𝐰) hoặc -∇E2(𝐰).
 >
 >
 >
@@ -260,15 +260,15 @@
 >
 >
 >
-> Gọi  𝐰0 là điểm chiếu vuông góc của 𝐰 lên đường thẳng này. Ta có 𝐰0 thuộc đường thẳng nên nó thỏa: 𝐰0ᵀΦ(𝐱1)t1 = 0 (1)
+> Gọi 𝐰0 là điểm chiếu vuông góc của 𝐰 lên đường thẳng này. Ta có 𝐰0 thuộc đường thẳng nên nó thỏa: 𝐰0ᵀΦ(𝐱1)t1 = 0 (1)
 >
 >
 >
-> Và vector (𝐰 - 𝐰0) sẽ vuông góc đường thẳng này, nên nó sẽ song song với Φ(𝐱1)t1, ta có: 𝐰 - 𝐰0 = α Φ(𝐱1)t1 
+> Và vector (𝐰 - 𝐰0) sẽ vuông góc đường thẳng này, nên nó sẽ song song với Φ(𝐱1)t1, ta có: 𝐰 - 𝐰0 = α Φ(𝐱1)t1
 >
 >
 >
-> ⇔ 𝐰0 = 𝐰 - α Φ(𝐱1)t1 
+> ⇔ 𝐰0 = 𝐰 - α Φ(𝐱1)t1
 >
 >
 >
@@ -292,19 +292,19 @@
 >
 >
 >
-> (2) ⇔ ||𝐰 - 𝐰0|| = ||α Φ(𝐱1)t1|| = |α| ||Φ(𝐱1)|| |t1| 
+> (2) ⇔ ||𝐰 - 𝐰0|| = ||α Φ(𝐱1)t1|| = |α| ||Φ(𝐱1)|| |t1|
 >
 >
 >
-> ⇔ ||𝐰 - 𝐰0|| = |α| ||Φ(𝐱1)||  (t1 bằng +/-1 nên |t1| = 1)
+> ⇔ ||𝐰 - 𝐰0|| = |α| ||Φ(𝐱1)|| (t1 bằng +/-1 nên |t1| = 1)
 >
 >
 >
-> ⇔ ||𝐰 - 𝐰0|| = |𝐰ᵀΦ(𝐱1)t1 / ||Φ(𝐱1)||²| ||Φ(𝐱1)|| 
+> ⇔ ||𝐰 - 𝐰0|| = |𝐰ᵀΦ(𝐱1)t1 / ||Φ(𝐱1)||²| ||Φ(𝐱1)||
 >
 >
 >
-> ⇔ ||𝐰 - 𝐰0|| = \[|𝐰ᵀΦ(𝐱1)t1| / ||Φ(𝐱1)||²\] ||Φ(𝐱1)|| 
+> ⇔ ||𝐰 - 𝐰0|| = \[|𝐰ᵀΦ(𝐱1)t1| / ||Φ(𝐱1)||²\] ||Φ(𝐱1)||
 >
 >
 >
@@ -328,11 +328,11 @@
 >
 >
 >
-> → Khoảng cách từ 𝐰(1) đến boundary: 
+> → Khoảng cách từ 𝐰(1) đến boundary:
 >
 >
 >
-> |(ηΦ(𝐱1)t1)ᵀΦ(𝐱1)t1| / ||Φ(𝐱1)|| = |η| t1² ||Φ(𝐱1)||² / ||Φ(𝐱1)|| = |η| ||Φ(𝐱1)|| 
+> |(ηΦ(𝐱1)t1)ᵀΦ(𝐱1)t1| / ||Φ(𝐱1)|| = |η| t1² ||Φ(𝐱1)||² / ||Φ(𝐱1)|| = |η| ||Φ(𝐱1)||
 >
 >
 >
@@ -374,6 +374,224 @@
 > **💡 Deeper notes**
 > - Bản chất toán học trực tiếp nhất để giải thích vì sao η không quan trọng là tính bất biến tỷ lệ (scale invariance): quy tắc phân loại dựa vào dấu sign(wᵀΦ(x)) = sign((η w)ᵀΦ(x)) với mọi η > 0, nghĩa là mặt phân chia trong không gian đầu vào hoàn toàn không đổi khi scale w.
 > - Trong định lý hội tụ Perceptron (Novikoff's Theorem), chặn trên cho số bước cập nhật tối đa là (R/γ)², hoàn toàn không phụ thuộc vào η khi khởi tạo từ vector 0.
+
+<br>
+
+<a id="node-m8ujr8i"></a>
+
+##### Perceptron Learning Algorithm
+
+<p align="center"><kbd><img src="assets/35e3gvvgqbt.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4re42raqas7.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/i9ez9g2ff7.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/1qzpn4rot2g.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, đoạn này chính là xác nhận lại những gì mình đã đoán về thuật toán update 𝐰 của perceptron cũng như cho ta minh họa rất hay.
+>
+>
+>
+> Ở note trước, mình đã hiểu cơ chế của việc update 𝐰 sẽ là:
+>
+>
+>
+> Tuần tự thay đổi các training point 𝐱j (kiểu như mỗi lần ta lấy một training point bị classified sai, và xoay vòng (cái chữ "in turn" trong sách), và dùng η (như đã nói, cứ chọn bằng 1) nhân negative gradient của Error đóng góp bởi data point 𝐱j này để update 𝐰. Với Ej(𝐰) = -Φ(𝐱j)ᵀ𝐰tj, thì ∇Ej(𝐰) = -Φ(𝐱j)tj
+>
+>
+>
+> 𝐰(τ) = 𝐰(τ-1) - ∇Ej(𝐰) = 𝐰(τ-1) + Φ(𝐱j)tj
+>
+>
+>
+> Đương nhiên đây là **stochastic gradient descent**, khác với **batch gradient descent** hay **mini-batch gradient descent** khi ta dùng gradient của error function của chỉ bởi 1 data point, thay vì toàn bộ hoặc một gói các data point.
+>
+>
+>
+> Và việc nói lấy các 𝐱 từ đám bị phân loại sai và update 𝐰 thì cũng tương tự như lấy hết, nhưng với 𝐱 nào đang phân loại đúng thì bỏ qua (không update 𝐰).
+>
+>
+>
+> Nhưng ý chính là ở đây ta có một góc nhìn trực giác về cách mà perceptron algorithm nó update 𝐰:
+>
+>
+>
+> Để ý, với perceptron, cách mã hóa target là gán cho t một trong hai giá trị +1 hoặc -1 (class 𝒞1, 𝒞2). Như vậy, dẫn đến về cơ bản là với mỗi vòng cập nhận, 𝐰 được + thêm hoặc - bớt một vector Φ(𝐱j)
+>
+>
+>
+> Nếu tj = +1, 𝐰(τ) = 𝐰(τ-1) + Φ(𝐱j)
+>
+>
+>
+> Nếu tj = -1, 𝐰(τ) = 𝐰(τ-1) - Φ(𝐱j)
+>
+>
+>
+> Nên hình mình họa trong sách, ô đầu tiên, 𝐰 đang có giá trị ví dụ 𝐰(1). Đương nhiên, với giá trị này, thì dữ liệu đã đang được phân loại đúng hoặc sai sao đó, thể hiện bởi decision boundary 𝐰(1)ᵀΦ(𝐱) = 0 là đường màu đen
+>
+>
+>
+> Nhớ lại: perceptron discriminant function sẽ gán class 𝒞1 cho 𝐱 nếu y(𝐱) = 𝐰ᵀΦ(𝐱) &gt; 0 và class 𝒞2 nếu 𝐰ᵀΦ(𝐱) &lt; 0, nên hyperplane (như line màu đen) 𝐰ᵀΦ(𝐱) = 0 sẽ chia không gian thành hai decision region, trong đó những data point 𝐱 nằm trong nửa không gian (halfspace, hay halfplane) 𝐰ᵀΦ(𝐱) &gt; 0 sẽ bị phân loại là 𝒞1 và đám nằm trong halfplane 𝐰ᵀΦ(𝐱) &lt; 0 bị phân loại thành class 𝒞2.
+>
+>
+>
+> Và vì 𝐰ᵀΦ(𝐱) = 0 nên giả sử ta lấy 𝐚, 𝐛 nằm trên hyperplane này thì 𝐰ᵀΦ(𝐚) = 0 và 𝐰ᵀΦ(𝐛) = 0 ⇒ 𝐰ᵀ(Φ(𝐚)-Φ(𝐛)) = 0 nên 𝐰 sẽ vuông góc Φ(𝐚)-Φ(𝐛) với 𝐚,𝐛 bất kì. Từ đó dẫn đến ta dễ hiểu rằng 𝐰 sẽ ⊥ với cái hyperplane này (nên trên hình vector 𝐰 màu đen luôn vuông góc với decision boundary 𝐰ᵀΦ(𝐱) = 0 (mà 𝐰 cũng chính là được gọi là normal vector của hyperplane)
+>
+>
+>
+> Một cách để nhớ bên nào là halfplane 𝐰ᵀΦ(𝐱) &gt; 0, bên nào là halfplane 𝐰ᵀΦ(𝐱) &lt; 0 đó là ta cứ xét hàm f(𝐱) = 𝐰ᵀΦ(𝐱). dễ thấy gradient của hàm này đối với Φ(𝐱) chính là 𝐰: ∇f(𝐱) = 𝐰. Và gradient thì như đã biết luôn chỉ về hướng tăng hàm f nhanh nhất, nên trong bên halfplane đương nhiên cái bên mà 𝐰 chỉ về chính là bên có 𝐰ᵀΦ(𝐱) lớn: 𝐰ᵀΦ(𝐱) &gt; 0.
+>
+>
+>
+> Thế thì quay lại hình trên bên trái, tại 𝐰(1), với decision boundary như vậy, nó đang classify sai điểm màu đỏ được khoanh tròn màu xanh (và các điểm khác nữa). Và giả sử ở vòng update này, ta bốc trúng điểm này (gọi là 𝐱1 đi) để update, như trên đã nói, ta sẽ cộng hoặc trừ 𝐰(1) cho Φ(𝐱1). Và ở đây, vì là loại màu đỏ và đang nói nó đang bị phân loại sai nên đáng ra nó phải nằm "bên kia", là cái bên 𝐰ᵀΦ(𝐱) &gt; 0, nên suy ra với 𝐱1 này target t1 sẽ là +1. Do đó update 𝐰 ở vòng này: 𝐰(2) = 𝐰(1) + Φ(𝐱1)
+>
+>
+>
+> Kết qủa là sau iteration 1st, 𝐰 là vector màu đen bên hình trên bên phải, decision boundary cũng thay đổi theo hướng nhích về phía trên (kiểu như nó khiến cho điểm 𝐱1 dù vẫn đang bị classify sai nhưng bớt sai hơn như sau:
+>
+>
+>
+> E1(𝐰(2)) = -𝐰(2)ᵀΦ(𝐱1) × 1 = -𝐰(2)ᵀΦ(𝐱1)
+>
+>
+>
+> = -(𝐰(1) + Φ(𝐱1))ᵀΦ(𝐱1)
+>
+>
+>
+> = -𝐰(1)ᵀΦ(𝐱1) - Φ(𝐱1)ᵀΦ(𝐱1)
+>
+>
+>
+> = E1(𝐰(1)) - ||Φ(𝐱1)||² ≤ E1(𝐰(1)) (do bình phương norm ||Φ(𝐱1)||² ≥ 0)
+>
+>
+>
+> À như vậy với 𝐰(2), error (do đóng góp bởi datapoint 𝐱1) đã giảm (trừ khi Φ(𝐱1) = 0) (dù có thể error tổng chưa chắc đã giảm)
+>
+>
+>
+> Mà nhìn vào công thức error E1(𝐰) = -𝐰ᵀΦ(𝐱1)t1 = -||𝐰|| ||Φ(𝐱1)|| cos(θ) × 1 có thể thấy tại 𝐰(1), góc θ là góc tù chà bá lửa, cosine của nó sẽ ≈ -1, nên E1(𝐰) lớn còn 𝐰(2) thì θ đã thu hẹp (dù vẫn là góc tù) nên cosine nó đã bớt âm hơn E1(𝐰) sẽ nhỏ hơn.  
+>
+> ---
+>
+>
+>
+> Tiếp, vòng update thứ hai, tương tự, thuật toán sẽ bốc một điểm bị phân loại sai khác, điểm khoanh tròn màu xanh hình bên trái ở dưới (đặt là 𝐱2). Mọi chuyện tương tự, vì nó đáng lẽ phải nằm trong halfspace 𝐰ᵀΦ(𝐱) &gt; 0, nên t2 = 1, và 𝐰 được update:
+>
+>
+>
+> 𝐰(3) = 𝐰(2) + Φ(𝐱2) để thành ra vector đen của hình phải bên dưới.
+>
+>
+>
+> lúc này, nó đã đổi chiều, khiến mọi điểm màu đỏ (có target t = 1) đều đã nằm bên halfspace 𝐰ᵀΦ(𝐱) &gt; 0.
+>
+>
+>
+> Như vậy, qua minh họa này, mình hiểu cái trực giác, hay cái nguyên lý của cách update 𝐰 của perceptron gom gọn trong câu này: Đối với một điểm đang bị phân loại sai (ví dụ 𝐱1) thì feature vector Φ(𝐱1) đóng vai trò như người dẫn đường, chỉ hướng cho 𝐰 đang lạc lối mà quay về. Bằng cách đi theo hướng dẫn này (thông qua việc cộng với vector Φ(𝐱1), hướng mới của 𝐰 sẽ được điều chỉnh theo hướng gần với Φ(𝐱1) hơn)
+>
+>
+>
+> Hiện tượng tương tự cũng đúng nếu ta thử hình dung là thay vì chọn điểm phân loại sai màu đỏ, ta chọn điểm màu xanh (ví dụ điểm màu xanh nằm bên dưới decision boundary): Khi update 𝐰 do t3 lúc này là -1 nên thay vì cộng thì sẽ là trừ, và về cơ bản, -Φ(𝐱3) vẫn là chỉ về hướng hợp với 𝐰 góc tù, mà ta có thể một cách gần đúng cho là chỉ về hướng ngược lại)
+>
+>
+>
+> Do đó các feature vector của các điểm phân loại sai giống như chỉ dẫn cho 𝐰 xoay đúng dần đúng dần cho đến khi nó mọi điểm đều phân loại đúng (nếu dataset linearly separable)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú xuất sắc! Bạn đã nắm bắt hoàn hảo cả đại số lẫn trực quan hình học của thuật toán Perceptron.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"tại 𝐰(1), góc θ là góc tù chà bá lửa, cosine của nó sẽ ≈ -1, nên E1(𝐰) lớn còn 𝐰(2) thì θ đã thu hẹp (dù vẫn là góc tù) nên cosine nó đã bớt âm hơn E1(𝐰) sẽ nhỏ hơn"*
+>
+> Lập luận này đúng về mặt trực quan hướng xoay vector, nhưng chưa hoàn toàn chặt chẽ nếu chỉ xét cos(θ) vì độ dài vector norm ||w|| cũng thay đổi sau khi cộng vector. Tuy nhiên, phép chứng minh đại số ngay trước đó E1(w(2)) = E1(w(1)) - ||Φ(x1)||^2 đã đảm bảo chắc chắn E1 giảm.
+>
+>
+> **✓ Strengths**
+> - Diễn giải toán học rất chuẩn xác khi chứng minh hàm lỗi đóng góp bởi điểm misclassified luôn giảm đi một lượng đúng bằng ||Φ(x)||^2.
+> - Hiểu rất rõ vai trò hình học của vector trọng số w như một vector pháp tuyến chỉ vào nửa không gian dương (w^T Φ(x) > 0).
+> - Trực quan hóa sinh động và chính xác cách vector đặc trưng đóng vai trò như lực kéo xoay w dần về phía phân loại đúng.
+>
+> **💡 Deeper notes**
+> - Trong hình minh họa 4.7 của sách, đường biên đi qua gốc tọa độ vì không gian hiển thị là 2 chiều và giả định bias w0 = 0 hoặc đã được gộp vào vector mở rộng. Trong trường hợp tổng quát có bias w0 khác 0, mặt phẳng biên sẽ dịch chuyển khỏi gốc tọa độ một khoảng -w0/||w||.
+> - Việc giảm lỗi trên điểm xj vừa được cập nhật không đảm bảo tổng lỗi trên toàn bộ tập dữ liệu giảm ngay tại bước đó, nhưng Perceptron Convergence Theorem đảm bảo thuật toán sẽ dừng sau hữu hạn bước nếu dữ liệu khả phân tuyến tính (linearly separable).
+
+<br>
+
+<a id="node-xc10i4q"></a>
+
+###### Perceptron Convergence Theorem
+
+<p align="center"><kbd><img src="assets/fr1b5d91dip.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, đoạn này đại ý nói rằng, có một theorem mà người ta đã chứng minh rằng nếu dataset linearly separable (có thể phân tách tuyến tính hoàn toàn) thì chắc chắn thuật toán này sẽ converge (sẽ giải xong, phân loại đúng hết).
+>
+>
+>
+> Tuy nhiên, tác giả lưu ý là số bước để giải xong của thuật toán này có thể rất lớn, nên có khi bài toán linearly separable cũng chạy lâu y như là bài toán không linearly separable (với data set không linearly separable thuật toán sẽ mãi mãi không dừng)
+>
+>
+>
+> Bên cạnh đó, ngay cả bài toán linearly separable, thì cũng có thể có nhiều cách để phân tách, và thuật toán dừng ở cách nào thì hên xui, tùy vào cách ta gán giá trị ban đầu của 𝐰 (gọi là weight initialization).
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú nắm rất tốt và chính xác nội dung chính của định lý hội tụ Perceptron cùng các hạn chế thực tế được đề cập trong sách. Chỉ có một chi tiết nhỏ bị sót là nghiệm tìm được còn phụ thuộc vào thứ tự đưa dữ liệu vào huấn luyện.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"tùy vào cách ta gán giá trị ban đầu của 𝐰 (gọi là weight initialization)"*
+>
+> Đoạn văn gốc nêu rõ hai yếu tố quyết định nghiệm cụ thể nào được tìm thấy: khởi tạo tham số (initialization of parameters) VÀ thứ tự đưa các điểm dữ liệu vào duyệt (order of presentation of the data points). Bạn đã bỏ sót yếu tố thứ tự dữ liệu.
+>
+>
+> **✓ Strengths**
+> - Hiểu chính xác nội dung định lý hội tụ Perceptron: đảm bảo dừng và tìm ra nghiệm chính xác sau hữu hạn bước nếu dữ liệu phân tách tuyến tính.
+> - Nắm bắt sắc bén hệ quả thực tế: khó phân biệt bài toán không phân tách được (không bao giờ dừng) với bài toán phân tách được nhưng hội tụ rất chậm.
+>
+> **💡 Deeper notes**
+> - Trong lý thuyết hội tụ của Perceptron, số bước tối đa (upper bound) phụ thuộc nghịch đảo với bình phương của margin (khoảng cách nhỏ nhất từ điểm dữ liệu tới siêu phẳng phân cách). Do đó, nếu margin rất nhỏ, thuật toán có thể mất số bước lặp khổng lồ để hội tụ.
+
+<br>
+
+<a id="node-se43rik"></a>
+
+###### Limitations of the Perceptron
+
+<p align="center"><kbd><img src="assets/ylpvo5lb11.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn cuối đại ý là nói thêm vài nhược điểm của perceptron, như khó mở rộng cho phân loại nhiều class hơn 2, không có cái kiểu output mang tính chất của phân phối xác suất (cái này quan trọng vì nhờ đó ta có thể kiểu như có được cách diễn giải: dự đoán với mức độ chắc chắn bao nhiêu phần trăm, thay vì chỉ dự đoán khơi khơi)
+>
+>
+>
+> Và tệ nhất là nó dự trên một tổ hợp tuyến tính các hàm basis CỐ ĐỊNH. Mình hiểu ý này là, cái này khiến nó không đủ flexible, so với các mô hình phân loại cao cấp hơn sau này như neural network, nơi mà về cơ bản có thể hiểu là mô hình tự học ra basis function nào phù hợp nhất luôn.
+>
+>
+>
+> Cuối cùng ông có nhắc tới một cỗ máy áp dụng phương thức của perceptron cũng như có một thuật toán rất giống tên là ADALINE, về cơ bản là y hệt, chỉ khác chút các training.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác và sâu sắc nội dung đoạn văn, đặc biệt là việc liên hệ đúng bản chất của hàm basis cố định so với mạng neural sau này.
+>
+> **✓ Strengths**
+> - Nắm trọn vẹn các nhược điểm của perceptron: không có xác suất đầu ra, khó mở rộng cho bài toán nhiều lớp (K > 2), và giới hạn lớn nhất là dùng hàm cơ sở cố định.
+> - Hiểu rất đúng và có trực giác xuất sắc về việc hàm basis cố định làm giảm tính linh hoạt, mở đường cho neural network tự học đặc trưng/hàm basis.
+> - Tóm tắt chuẩn xác quan hệ giữa Perceptron và ADALINE (cùng dạng hàm, khác thuật toán huấn luyện).
+>
+> **💡 Deeper notes**
+> - Sự khác biệt cốt lõi trong huấn luyện giữa Perceptron và ADALINE (Widrow-Hoff / LMS rule) là ADALINE cập nhật trọng số dựa trên đầu ra tuyến tính liên tục (trước khi qua hàm ngưỡng/kích hoạt), trong khi Perceptron cập nhật dựa trên sai số của nhãn rời rạc sau hàm bước nhảy (step function).
 
 <br>
 
