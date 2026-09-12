@@ -20,7 +20,7 @@ Việc chinh phục những văn bản nền tảng này là một nỗ lực đ
 
 Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
 
-**`~12,320 notes` · `~17,793 screenshots` · `18 notebooks`**
+**`~12,320 notes` · `~17,794 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -565,7 +565,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 ### Pattern Recognition Machine Learning_C.Bishop
 <!-- key: pattern_recognition_machine_learning_cbishop -->
 <!-- group: Machine Learning Foundation -->
-`409 notes · 614 screenshots · 61 sections`
+`409 notes · 615 screenshots · 61 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
 > 
@@ -636,7 +636,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [4.1.6 Fisher’s discriminant for multiple classes](pattern_recognition_machine_learning_cbishop/416_fishers_discriminant_for_multiple_classes.md) | 2 | 4 |
 | [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) | 19 | 22 |
 | [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) | 5 | 7 |
-| [Untitled](pattern_recognition_machine_learning_cbishop/untitled.md) | 3 | 4 |
+| [Untitled](pattern_recognition_machine_learning_cbishop/untitled.md) | 3 | 5 |
 
 </details>
 
