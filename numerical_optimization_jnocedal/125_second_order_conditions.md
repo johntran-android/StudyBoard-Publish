@@ -2085,7 +2085,7 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> Trong phiên bản đầy đủ, ta có thể bổ sung thêm q3, bằng cách tạo vector nằm ngoài C(A), và chiếu nó lên C(A) (cũng là span{q1, q2}), và như vậy các cột của Q, sẽ đủ để span toàn bộ R³.
+> Trong phiên bản đầy đủ, ta có thể bổ sung thêm q3, bằng cách tạo vector nằm ngoài C(A), và chiếu nó lên C(A) (cũng là span{q1, q2}), rồi lấy phần dư đem normalize và như vậy các cột của Q, sẽ đủ để span toàn bộ R³.
 >
 >
 >
@@ -2093,7 +2093,7 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> Rồi, tới đây ta đã đủ để hiểu vì sao khi factor A(x\*)ᵀ = \[Q1 Q2\]\[R 0\] thì lại gán Q2 cho Z, là matrix mà column space là nullspace của A(x\*)
+> Rồi, tới đây ta đã đủ để hiểu vì sao khi factor A(x\*)ᵀ = \[Q1 Q2\]\[R; 0\] thì lại gán Q2 cho Z, là matrix mà column space là nullspace của A(x\*)
 >
 >
 >
