@@ -1,6 +1,6 @@
 # 3.7 Exercises
 
-📊 **Progress:** `5` Notes | `6` Screenshots | `5` AI Reviews
+📊 **Progress:** `5` Notes | `7` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-rasw876"></a>
@@ -1705,4 +1705,10 @@
 <br>
 
 <a id="node-3ldsqi5"></a>
+
+###### Log Determinant Derivative Identity
+
+<p align="center"><kbd><img src="assets/xgib8n2vut.png" width="80%"></kbd></p>
+
+<br>
 
