@@ -169,7 +169,7 @@
 >
 >
 >
-> Chỗ này ôn lại tí, WLLN nói rằng: nếu ta có X1,X2,....Xn có EXi = μ, VarXi = σ^2 
+> Chỗ này ôn lại tí, WLLN nói rằng: nếu ta có X1,X2,....Xn có EXi = μ, VarXi = σ² 
 > < inf thì:
 >
 >
