@@ -1732,7 +1732,7 @@
 >
 >
 >
-> Với X ~ normal(μ, σ^2) thì MX(t) = exp(μt + σ^2t^2/2).
+> Với X ~ normal(μ, σ²) thì MX(t) = exp(μt + σ²t^2/2).
 >
 >
 >
@@ -1740,11 +1740,11 @@
 >
 >
 >
-> Nếu ko nhớ công thức pdf của normal(μ, σ^2) thì nhớ pdf của Z ~ normal(0,1) 
+> Nếu ko nhớ công thức pdf của normal(μ, σ²) thì nhớ pdf của Z ~ normal(0,1) 
 >
 >
 >
-> fZ(x) = (1/√2π) e^-z^2/2 
+> fZ(x) = (1/√2π) e^-z²/2 
 >
 >
 >
