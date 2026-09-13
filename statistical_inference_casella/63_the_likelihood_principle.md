@@ -358,7 +358,7 @@
 >
 >
 > Một ví dụ minh họa là E là thử nghiệm trong đó ta quan sát giá trị của X1,
-> ... Xn iid ~ n(μ, σ^2) vói σ^2 đã biết. Vì sample mean Xbar là sufficient
+> ... Xn iid ~ n(μ, σ²) vói σ² đã biết. Vì sample mean Xbar là sufficient
 > statistic cho μ (những phần trước đã chứng minh điều này) nên ta dùng
 > xbar làm estimate cho μ.  Đồng thời để đo mức độ chính xác của ước
 > lượng này, thường người ta dùng standard deviation của Xbar: σ/√n. Do đó
@@ -1047,7 +1047,7 @@
 > dùng thông tin trong T(X) là đủ để suy luận θ, không cần dùng toàn bộ thông
 > tin trong sample X. Vì nó "đã đủ" (sufficient). Lấy ví dụ như nếu đang có **X**
 > là sample ~ normal distribution thì dùng T(**X**) = (Xbar, S^2) (là một
-> sufficient statistic là đủ để suy luận μ, σ^2, có thể vứt **X** đi mà không sợ
+> sufficient statistic là đủ để suy luận μ, σ², có thể vứt **X** đi mà không sợ
 > mất thông tin.
 >
 >
