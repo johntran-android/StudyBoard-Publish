@@ -1,11 +1,9 @@
 # Lec 1 Part 1 Intro And Motivation
 
-📊 **Progress:** `19` Notes | `17` Screenshots
+📊 **Progress:** `19` Notes | `17` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-rhit6ar"></a>
-
-## Lec 1 Part 1 Intro And Motivation
 
 <br>
 
@@ -78,7 +76,7 @@
 
 <a id="node-qho2d35"></a>
 
-- **Phương pháp tuyến tính hóa**
+###### Phương pháp tuyến tính hóa
 
 <p align="center"><kbd><img src="assets/muj9zz3ici.png" width="80%"></kbd></p>
 
@@ -163,13 +161,32 @@
 >
 > **df = f_x*dx + f_y*dy hay (∂/∂x)f*dx + (∂/∂y)f*dy**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, nắm bắt trọn vẹn bản chất hình học của tuyến tính hóa và nhìn trước được lý do toán học vì sao dạng vi phân df = f'(x)dx được ưu tiên cho giải tích nhiều biến.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"f'(x) = lim x->0 Δf/Δx"*
+>
+> Có một lỗi typo nhỏ ở biến lấy giới hạn: viết nhầm thành 'x -> 0' thay vì 'Δx -> 0' (dù ở đoạn sau của ghi chú bạn đã viết đúng lại là lim ∆x->0).
+>
+>
+> **✓ Strengths**
+> - Nắm rất vững ý nghĩa hình học của tuyến tính hóa (xấp xỉ địa phương bằng tiếp tuyến hoặc tiếp diện).
+> - Giải thích chính xác và trực quan lý do ưu tiên dạng vi phân df = f'(x)dx để dễ mở rộng sang vi phân toàn phần khi biến số x là vector.
+>
+> **💡 Deeper notes**
+> - Khi tổng quát hóa lên hàm vector nhiều chiều f: R^n -> R^m, vi phân df sẽ trở thành tích ma trận d f = J dx, trong đó J là ma trận Jacobian, khắc phục hoàn toàn sự vô nghĩa của phép chia cho vector 'df/dx'.
+
 **🔗 See also:** [Gradient và đạo hàm vector](#node-vfjqhrc)
 
 <br>
 
 <a id="node-o2smvk7"></a>
 
-- **Minh họa xấp xỉ tuyến tính**
+###### Minh họa xấp xỉ tuyến tính
 
 <p align="center"><kbd><img src="assets/bvwgkwoyxga.png" width="80%"></kbd></p>
 
@@ -228,7 +245,7 @@
 
 <a id="node-q87vimu"></a>
 
-- **Đạo hàm ma trận**
+###### Đạo hàm ma trận
 
 <p align="center"><kbd><img src="assets/jrfo26zm1d.png" width="80%"></kbd></p>
 
@@ -245,14 +262,14 @@
 >
 >
 >
-> Ví dụ để tính đạo hàm theo θ của một function tr[(Y-Xθ)(Y-Xθ)T]
+> Ví dụ để tính đạo hàm theo θ của một function tr[(Y-Xθ)(Y-Xθ)ᵀ]
 > thì làm thế nào.
 
 <br>
 
 <a id="node-7gddubz"></a>
 
-- **Đạo hàm theo biến scalar**
+###### Đạo hàm theo biến scalar
 
 <p align="center"><kbd><img src="assets/38wox1khq68.png" width="80%"></kbd></p>
 
@@ -278,13 +295,15 @@
 
 <a id="node-d1zu4jq"></a>
 
+###### Đạo hàm ma trận
+
 <p align="center"><kbd><img src="assets/g1fk4xyiil.png" width="80%"></kbd></p>
 
 <br>
 
 <a id="node-vfjqhrc"></a>
 
-- **Gradient và đạo hàm vector**
+###### Gradient và đạo hàm vector
 
 > [!NOTE]
 > rồi với hàng thứ 2: case đầu tiên khi input là vector và output là scalar: Khi đó
@@ -294,17 +313,17 @@
 >
 > Còn \\*derivative\\* thì sẽ là \\*ROW VECTOR\\*.
 >
-> Gs lấy ví dụ hàm \\*f = xTx\\* (tức f là phép dot product của hai vector x, cho ra
+> Gs lấy ví dụ hàm \\*f = xᵀx\\* (tức f là phép dot product của hai vector x, cho ra
 > \\*scalar\\* cái này biết rồi), thì:
 >
 > Gradient, như trên đã nói, sẽ là \\*2x\\*: là (column) vector.
 >
-> Nhưng \\*derivative sẽ là 2xT\\*, nguyên nhân có sự khác nhau này là bởi vì: khi
-> thể hiện derivative của f w.r.t x: df = 2xTdx (*) là bởi:
+> Nhưng \\*derivative sẽ là 2xᵀ\\*, nguyên nhân có sự khác nhau này là bởi vì: khi
+> thể hiện derivative của f w.r.t x: df = 2xᵀdx (*) là bởi:
 >
 > Vì \\*f là scalar\\* và \\*x là vector\\* (đang xét case input=scalar, output=vector),
 > nên: Cách thể hiện trên sẽ hợp lí vì mang ý nghĩa thay đổi x một chút xíu - dx, thì
-> đương nhiên dx cũng là (column) vector, khi đó thể hiện derivative là 2xT dx sẽ là
+> đương nhiên dx cũng là (column) vector, khi đó thể hiện derivative là 2xᵀ dx sẽ là
 > hợp lí hơn về shape, khi dot product của hai vector nó sẽ ra  scalar
 >
 > Chứ nếu biểu thị là df = 2x dx thì không "thỏa mãn" về mặt toán học.
@@ -328,7 +347,7 @@
 
 <a id="node-44395bi"></a>
 
-- **Hình dạng của đạo hàm**
+###### Hình dạng của đạo hàm
 
 > [!NOTE]
 > tiếp gs lưu ý, trong bảng trên, màu thể hiện dạng của derivative. Xanh
@@ -348,6 +367,8 @@
 
 <a id="node-tvof3ig"></a>
 
+###### Đạo hàm vector ma trận
+
 > [!NOTE]
 > Tiếp, khi input là vector (ví dụ n-D vector) và output cũng vậy (ví dụ m-D
 > vector) thì derivative sẽ là Jacobian matrix m,n
@@ -359,11 +380,15 @@
 
 <a id="node-4n3i2t7"></a>
 
+## Các dạng đạo hàm cấp một
+
 <p align="center"><kbd><img src="assets/bicgrxmq2e.png" width="80%"></kbd></p>
 
 <br>
 
 <a id="node-1jphj9k"></a>
+
+### Đạo hàm dạng vi phân
 
 > [!NOTE]
 > đại khái là đoạn này giáo sư nói về một số kết quả đạo hàm (mà ta sẽ học để biết cách
@@ -386,7 +411,7 @@
 >
 > =====
 >
-> Cái thứ hai là \\*d(xTx) = 2xTdx\\*
+> Cái thứ hai là \\*d(xᵀx) = 2xᵀdx\\*
 >
 > Thế thì again, ta sẽ \\*hiểu nó theo bản chất\\*: ta thay đổi x, một khoảng vô cùng nhỏ,
 > và vì ở \\*trường hợp này x là vector\\*, nên sự thay đổi vô cùng nhỏ của x, tức \\*dx
@@ -408,19 +433,23 @@
 
 <a id="node-1uhvmgc"></a>
 
+#### Gradient của hàm xᵀx
+
 <p align="center"><kbd><img src="assets/piulxzj9j6.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Ví dụ này sẽ như ta có function f take input là một **2D vector x**, và
-> tính ra scalar result thông qua phép **xTx**. Thế thì ta có thể kiểm
+> tính ra scalar result thông qua phép **xᵀx**. Thế thì ta có thể kiểm
 > chứng bằng **numerical gradient** rằng khi thay đổi **x một khoảng
 > nhỏ** (việc này giống như thay đổi x một chút xíu trong không gian)
 > để từ **x = [x1, x2]** thành **[x+dx1, x+dx2]**, hay, vector dx = [dx1,
-> dx2] thì khi đó **quả thật khiến f thay đổi xấp xỉ bằng 2xTdx**
+> dx2] thì khi đó **quả thật khiến f thay đổi xấp xỉ bằng 2xᵀdx**
 
 <br>
 
 <a id="node-hyi6sh4"></a>
+
+##### Vi phân hàm ma trận
 
 <p align="center"><kbd><img src="assets/zpu2j5nq2nm.png" width="80%"></kbd></p>
 
@@ -431,6 +460,8 @@
 <br>
 
 <a id="node-bwp8egz"></a>
+
+###### Vi phân hàm ma trận
 
 <p align="center"><kbd><img src="assets/a9z8t2g9z98.png" width="80%"></kbd></p>
 
@@ -443,6 +474,8 @@
 <br>
 
 <a id="node-g1wmi5b"></a>
+
+###### Quy tắc tích ma trận
 
 <p align="center"><kbd><img src="assets/mjt09b1afwp.png" width="80%"></kbd></p>
 
@@ -462,31 +495,33 @@
 >
 >
 > Tuy nhiên **nếu là dot product của hai vector**, thì vì **phép dot product
-> có tính chất giao hoán**: **xTy = yTx** đều ra scalar. 
+> có tính chất giao hoán**: **xᵀy = yTx** đều ra scalar. 
 >
 >
 >
-> Nên mới có trường hợp đặc biệt đó là **d(xTx) = (dxT)x + xT(dx) = 
-> (dx)Tx + xTdx** 
+> Nên mới có trường hợp đặc biệt đó là **d(xᵀx) = (dxᵀ)x + xᵀ(dx) = 
+> (dx)ᵀx + xᵀdx** 
 >
 >
 >
 > Tới đây, vì dx và x đều là vector (đương nhiên nói khơi khơi vector
 > thì hiểu là column vector) nên dot product của chúng là scalar, thành ra
-> **(dx)Tx cũng bằng xTdx
+> **(dx)ᵀx cũng bằng xᵀdx
 >
 >
 >
-> Nên (dx)Tx + xTdx = 2(xTdx) = 2xTdx**
+> Nên (dx)ᵀx + xᵀdx = 2(xᵀdx) = 2xᵀdx**
 
 <br>
 
 <a id="node-cb4j0rk"></a>
 
+###### Vi phân của xᵀx
+
 <p align="center"><kbd><img src="assets/la2i0yomaud.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đại khái là gs rằng dù ta có thể **diễn giải derivative của (xTx)** wrt x
+> đại khái là gs rằng dù ta có thể **diễn giải derivative của (xᵀx)** wrt x
 > theo lối "**LÀM THEO TỪNG PHẦN TỬ**":
 >
 >
@@ -501,12 +536,12 @@
 >
 >
 >
-> Và từ f = xTx có kết qủa là **tổng i các x_i^2** nên partial derivative
+> Và từ f = xᵀx có kết qủa là **tổng i các x_i^2** nên partial derivative
 > sẽ bằng **∂f/∂x_i = 2x_i**
 >
 >
 >
-> Từ đó suy ra derivative của f wrt x, tức ∇f = **2x**, hay **df = (2x)T dx.**
+> Từ đó suy ra derivative của f wrt x, tức ∇f = **2x**, hay **df = (2x)ᵀ dx.**
 >
 >
 >
@@ -519,52 +554,52 @@
 >
 >
 >
-> d(xTx) = theo công thức **coi đây là d(uv) với u = xT, v = x**, ta sẽ dùng
+> d(xᵀx) = theo công thức **coi đây là d(uv) với u = xᵀ, v = x**, ta sẽ dùng
 > **PRODUCT RULE**: d(uv) = du*v + udv 
 >
 >
 >
-> **d(xTx) = d(xT)x + (xT)dx**
+> **d(xᵀx) = d(xᵀ)x + (xᵀ)dx**
 >
 >
 >
-> mà d(xT) sẽ bằng (dx)T 
+> mà d(xᵀ) sẽ bằng (dx)ᵀ 
 >
 >
 >
-> Vì **d(xT)** mang ý nghĩa là **khoảng thay đổi nhỏ của vector xT**, mà 
-> **xT là row**, nên **d(xT) cũng là row** vector. Thế thì nó cũng chính là 
+> Vì **d(xᵀ)** mang ý nghĩa là **khoảng thay đổi nhỏ của vector xᵀ**, mà 
+> **xᵀ là row**, nên **d(xᵀ) cũng là row** vector. Thế thì nó cũng chính là 
 > **lấy vector dx** - là column vector chứa các khoảng thay đổi nhỏ của x, 
-> **đem transpose** -> (dx)T. Vậy nên d(xT) = (dx)T
+> **đem transpose** -> (dx)ᵀ. Vậy nên d(xᵀ) = (dx)ᵀ
 >
 >
 >
-> Do đó tiếp nối trên ta có = (dx)Tx + (xT)dx.
+> Do đó tiếp nối trên ta có = (dx)ᵀx + (xᵀ)dx.
 >
 >
 >
-> Tiếp, cả (dx)Tx và (xT)dx đều là dot product của vector dx và x
-> thành ra chúng là một. Nên ta có 2(xT)dx
+> Tiếp, cả (dx)ᵀx và (xᵀ)dx đều là dot product của vector dx và x
+> thành ra chúng là một. Nên ta có 2(xᵀ)dx
 >
 >
 >
-> Và ta có thể đưa scalar vào dấu transpose để thành **(2x)T dx**
+> Và ta có thể đưa scalar vào dấu transpose để thành **(2x)ᵀ dx**
 >
 > Đang ôn tập nên mình ghi luôn cách làm mà gs Crish sẽ nói ở
 > bài sau
 >
 >
 >
-> f(x+dx) - f(x) = (x+dx)T(x+dx) - xTx = (xT + dxT)(x + dx) - xTx 
+> f(x+dx) - f(x) = (x+dx)ᵀ(x+dx) - xᵀx = (xᵀ + dxᵀ)(x + dx) - xᵀx 
 >
 >
 >
-> = xTx + xTdx + dxTx + dxTdx - xTx
+> = xᵀx + xᵀdx + dxᵀx + dxᵀdx - xᵀx
 >
 >
 >
-> = **2xT**dx => df = 2xTdx thì những gì gắn với dx chính là rate
-> of change giữa f và x, Do đó 2xT chính là derivative của f với x
+> = **2xᵀ**dx => df = 2xᵀdx thì những gì gắn với dx chính là rate
+> of change giữa f và x, Do đó 2xᵀ chính là derivative của f với x
 > và gradient chính là transpose của cái đó
 >
 >
@@ -574,6 +609,8 @@
 <br>
 
 <a id="node-u0fdcwi"></a>
+
+###### Kích thước ma trận Jacobian
 
 <p align="center"><kbd><img src="assets/51tinqecpkl.png" width="80%"></kbd></p>
 
@@ -585,6 +622,8 @@
 <br>
 
 <a id="node-y7qapqv"></a>
+
+###### Hessian và dạng toàn phương
 
 <p align="center"><kbd><img src="assets/o6bep7sbdpd.png" width="80%"></kbd></p>
 
