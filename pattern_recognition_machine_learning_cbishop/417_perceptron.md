@@ -1,6 +1,6 @@
 # 4.1.7 Perceptron
 
-📊 **Progress:** `6` Notes | `11` Screenshots | `6` AI Reviews
+📊 **Progress:** `6` Notes | `10` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-tu0vhf3"></a>
@@ -381,11 +381,9 @@
 
 ##### Perceptron Learning Algorithm
 
-<p align="center"><kbd><img src="assets/35e3gvvgqbt.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/i9ez9g2ff7.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4re42raqas7.png" width="80%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/i9ez9g2ff7.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/1qzpn4rot2g.png" width="80%"></kbd></p>
 
@@ -406,7 +404,7 @@
 >
 >
 >
-> Đương nhiên đây là **stochastic gradient descent**, khác với **batch gradient descent** hay **mini-batch gradient descent** khi ta dùng gradient của error function của chỉ bởi 1 data point, thay vì toàn bộ hoặc một gói các data point.
+> Đây là **stochastic gradient descent**, khác với **batch gradient descent** hay **mini-batch gradient descent** khi ta dùng gradient của error function của chỉ bởi 1 data point, thay vì toàn bộ hoặc một gói các data point.
 >
 >
 >
@@ -442,7 +440,7 @@
 >
 >
 >
-> Một cách để nhớ bên nào là halfplane 𝐰ᵀΦ(𝐱) &gt; 0, bên nào là halfplane 𝐰ᵀΦ(𝐱) &lt; 0 đó là ta cứ xét hàm f(𝐱) = 𝐰ᵀΦ(𝐱). dễ thấy gradient của hàm này đối với Φ(𝐱) chính là 𝐰: ∇f(𝐱) = 𝐰. Và gradient thì như đã biết luôn chỉ về hướng tăng hàm f nhanh nhất, nên trong bên halfplane đương nhiên cái bên mà 𝐰 chỉ về chính là bên có 𝐰ᵀΦ(𝐱) lớn: 𝐰ᵀΦ(𝐱) &gt; 0.
+> Một cách để nhớ bên nào là halfplane 𝐰ᵀΦ(𝐱) &gt; 0, bên nào là halfplane 𝐰ᵀΦ(𝐱) &lt; 0 đó là ta cứ xét hàm f(𝐱) = 𝐰ᵀΦ(𝐱). dễ thấy gradient của hàm này đối với Φ(𝐱) chính là 𝐰: 𝐰. (Nhấn mạnh lưu ý đây là gradient của hàm 𝐰ᵀΦ(𝐱) đối với Φ(𝐱), không phải đối với 𝐱) Và gradient thì như đã biết luôn chỉ về hướng tăng hàm f nhanh nhất, nên trong bên halfplane đương nhiên cái bên mà 𝐰 chỉ về chính là bên có 𝐰ᵀΦ(𝐱) lớn: 𝐰ᵀΦ(𝐱) &gt; 0.
 >
 >
 >
@@ -474,7 +472,7 @@
 >
 >
 >
-> Mà nhìn vào công thức error E1(𝐰) = -𝐰ᵀΦ(𝐱1)t1 = -||𝐰|| ||Φ(𝐱1)|| cos(θ) × 1 có thể thấy tại 𝐰(1), góc θ là góc tù chà bá lửa, cosine của nó sẽ ≈ -1, nên E1(𝐰) lớn còn 𝐰(2) thì θ đã thu hẹp (dù vẫn là góc tù) nên cosine nó đã bớt âm hơn E1(𝐰) sẽ nhỏ hơn.  
+> Mà nhìn vào công thức error E1(𝐰) = -𝐰ᵀΦ(𝐱1)t1 = -||𝐰|| ||Φ(𝐱1)|| cos(θ) × 1 có thể thấy tại 𝐰(1), góc θ là góc tù chà bá lửa, cosine của nó âm, nên E1(𝐰) lớn còn 𝐰(2) thì θ đã thu hẹp (dù vẫn là góc tù) nên cosine nó đã bớt âm hơn E1(𝐰) sẽ nhỏ hơn.  
 >
 > ---
 >
