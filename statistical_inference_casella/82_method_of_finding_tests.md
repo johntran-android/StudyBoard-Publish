@@ -315,7 +315,7 @@
 >
 >
 >
-> = Πi (1/σ√2π) exp[-(xi-θ0)^2/2σ^2] / Πi (1/σ√2π) exp[-(xi-xbar)^2/2σ^2]
+> = Πi (1/σ√2π) exp[-(xi-θ0)^2/2σ²] / Πi (1/σ√2π) exp[-(xi-xbar)^2/2σ²]
 >
 >
 >
@@ -1024,7 +1024,7 @@
 >
 >
 >
-> Thế thì ví dụ này, cho X1,...Xn ~ n(μ, σ^2) và ta chỉ quan tâm đến việc suy
+> Thế thì ví dụ này, cho X1,...Xn ~ n(μ, σ²) và ta chỉ quan tâm đến việc suy
 > luận về μ thôi, nên σ đóng vai tham số gây nhiễu. Cụ thể hai giả thuyết là
 > H0: μ ≤ μ0, và H1: μ > μ0.
 >
@@ -1038,24 +1038,24 @@
 >
 >
 >
-> = sup_{μ ≤ μ0, σ^2 ≥ 0} L(μ, σ^2|**x**) / sup_{μ ∈ (-inf,inf), σ^2 ≥ 0} L(μ,
-> σ^2|**x**)
+> = sup_{μ ≤ μ0, σ² ≥ 0} L(μ, σ²|**x**) / sup_{μ ∈ (-inf,inf), σ² ≥ 0} L(μ,
+> σ²|**x**)
 >
 >
 >
-> Mẫu số, như đã biết, sẽ là likelihood function tại MLE (kí hiệu μ^ và (σ^2)^):
-> L(μ^, (σ^2)^|**x**)
+> Mẫu số, như đã biết, sẽ là likelihood function tại MLE (kí hiệu μ^ và (σ²)^):
+> L(μ^, (σ²)^|**x**)
 >
 >
 >
-> Còn tử số, sup_{μ ≤ μ0, σ^2 ≥ 0} L(μ, σ^2|x), ta sẽ xét hai trường hợp:
+> Còn tử số, sup_{μ ≤ μ0, σ² ≥ 0} L(μ, σ²|x), ta sẽ xét hai trường hợp:
 >
 >
 >
 > Trường hợp 1: μ^ ≤ μ0. Có nghĩa là sao? Có nghĩa là lúc này, cái đỉnh L(μ^,
-> (σ^2)^|**x**) nó nằm bên trong / xảy ra bên trong phạm vi (μ, σ^2) ∈ Θ0. Do
-> đó dĩ nhiên tử số, cũng phải là L(μ^, (σ^2)^|**x**) Vì tìm kiếm trong cả Θ tìm
-> thấy tại (μ^, (σ^2)^) khiến L lớn nhất, thì khi (μ^, (σ^2)^) nằm trong Θ0, thì
+> (σ²)^|**x**) nó nằm bên trong / xảy ra bên trong phạm vi (μ, σ²) ∈ Θ0. Do
+> đó dĩ nhiên tử số, cũng phải là L(μ^, (σ²)^|**x**) Vì tìm kiếm trong cả Θ tìm
+> thấy tại (μ^, (σ²)^) khiến L lớn nhất, thì khi (μ^, (σ²)^) nằm trong Θ0, thì
 > đó cũng phải là nơi khiến L cao nhất khi tìm kiếm trong Θ0
 >
 >
@@ -1064,27 +1064,27 @@
 >
 >
 >
-> Hàm likelihood L(μ, σ^2|**x**) như đã biết:
+> Hàm likelihood L(μ, σ²|**x**) như đã biết:
 >
 >
 >
-> = f(**x**|μ, σ^2) = Πi=1:n f(xi| μ, σ^2)
+> = f(**x**|μ, σ²) = Πi=1:n f(xi| μ, σ²)
 >
 >
 >
-> = Πi=1:n (1/σ√2π) exp[-(xi-μ)^2/2σ^2
+> = Πi=1:n (1/σ√2π) exp[-(xi-μ)^2/2σ²
 >
 >
 >
-> = (1/σ√2π)^n Πi=1:n exp[-(xi-μ)^2/2σ^2
+> = (1/σ√2π)^n Πi=1:n exp[-(xi-μ)^2/2σ²
 >
 >
 >
-> = (1/σ√2π)^n exp Σi=1:n[-(xi-μ)^2/2σ^2
+> = (1/σ√2π)^n exp Σi=1:n[-(xi-μ)^2/2σ²
 >
 >
 >
-> = (1/σ√2π)^n exp [-Σi=1:n[(xi-μ)^2]/2σ^2
+> = (1/σ√2π)^n exp [-Σi=1:n[(xi-μ)^2]/2σ²
 >
 >
 >
@@ -1093,19 +1093,19 @@
 >
 >
 >
-> ⇨ log (1/σ√2π)^n exp [-Σi=1:n[(xi-μ)^2]/2σ^2
+> ⇨ log (1/σ√2π)^n exp [-Σi=1:n[(xi-μ)^2]/2σ²
 >
 >
 >
-> = log (1/σ√2π)^n + log[ exp [-Σi=1:n[(xi-μ)^2]/2σ^2 ]
+> = log (1/σ√2π)^n + log[ exp [-Σi=1:n[(xi-μ)^2]/2σ² ]
 >
 >
 >
-> = n log (1/σ√2π) - Σi=1:n[(xi-μ)^2]/2σ^2
+> = n log (1/σ√2π) - Σi=1:n[(xi-μ)^2]/2σ²
 >
 >
 >
-> Và để rồi ta sẽ thấy, với σ^2 fixed, thì đây là quadratic function của μ.
+> Và để rồi ta sẽ thấy, với σ² fixed, thì đây là quadratic function của μ.
 >
 >
 >
@@ -1132,22 +1132,22 @@
 >
 >
 >
-> Sau đó khi maximize hàm này theo σ^2 để có (σ^2)^_0 (chưa chắc trùng
-> với (σ^2)^, cụ thể nó sẽ bằng (1/n) Σi (xi - μ0)^2.
+> Sau đó khi maximize hàm này theo σ² để có (σ²)^_0 (chưa chắc trùng
+> với (σ²)^, cụ thể nó sẽ bằng (1/n) Σi (xi - μ0)^2.
 >
 >
 >
-> Đó là lí do mà trong trường hợp này, tử số chính là L(μ0, (σ^2)^_0)|**x**)
+> Đó là lí do mà trong trường hợp này, tử số chính là L(μ0, (σ²)^_0)|**x**)
 >
 >
 >
-> ⇨ λ(x) = 1 hoặc L(μ0, (σ^2)^_0)|**x**) / L(μ0, (σ^2)|**x**) tùy theo μ^ ≤ hay > μ0.
+> ⇨ λ(x) = 1 hoặc L(μ0, (σ²)^_0)|**x**) / L(μ0, (σ²)|**x**) tùy theo μ^ ≤ hay > μ0.
 >
 >
 >
 > Vậy thì đại ý tác giả dùng ví dụ này để ta thấy, dù thứ muốn test là μ, và
-> σ^2 thì không biết. Nhưng cách làm của likelihood khiến cho ta không bị
-> vướng ở σ^2, vì đơn giản là ta sẽ dùng mle (σ^2)^ và (σ^2)^_0 thôi.
+> σ² thì không biết. Nhưng cách làm của likelihood khiến cho ta không bị
+> vướng ở σ², vì đơn giản là ta sẽ dùng mle (σ²)^ và (σ²)^_0 thôi.
 
 **🔗 See also:** [Kiểm định LRT cho trung bình](#node-ouhenhy)
 
@@ -1298,8 +1298,8 @@
 <p align="center"><kbd><img src="assets/mo04dtfl0g.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua ví dụ này, cho X1,...Xn iid n(θ, σ^2) và cho prior distribution là n(μ, τ^2)
-> trong đó σ^2, τ^2, μ đã biết.
+> Qua ví dụ này, cho X1,...Xn iid n(θ, σ²) và cho prior distribution là n(μ, τ²)
+> trong đó σ², τ², μ đã biết.
 >
 >
 >
@@ -1312,15 +1312,15 @@
 >
 >
 >
-> Mean = [τ^2/(τ^2+σ^2/n)] xbar + [(σ^2/n)/(τ^2+σ^2/n)] μ
+> Mean = [τ²/(τ²+σ²/n)] xbar + [(σ²/n)/(τ²+σ²/n)] μ
 >
 >
 >
-> = (nτ^2xbar + σ^2μ)/(nτ^2+σ^2)
+> = (nτ²xbar + σ²μ)/(nτ²+σ²)
 >
 >
 >
-> Variance = τ^2(σ^2/n)/(τ^2+σ^2/n)
+> Variance = τ²(σ²/n)/(τ²+σ²/n)
 >
 >
 >
@@ -1337,7 +1337,7 @@
 >
 >
 >
-> X ~ normal(μ, σ^2) có dạng cái chuông mà mean tại μ), thì P(X ≤ μ) = P(μ < X) 
+> X ~ normal(μ, σ²) có dạng cái chuông mà mean tại μ), thì P(X ≤ μ) = P(μ < X) 
 > = 1/2
 >
 >
@@ -1346,27 +1346,27 @@
 >
 >
 >
-> ⇔ (nτ^2xbar + σ^2μ)/(nτ^2+σ^2) ≤ θ0
+> ⇔ (nτ²xbar + σ²μ)/(nτ²+σ²) ≤ θ0
 >
 >
 >
-> ⇔ nτ^2xbar + σ^2μ ≤ θ0 (nτ^2+σ^2)
+> ⇔ nτ²xbar + σ²μ ≤ θ0 (nτ²+σ²)
 >
 >
 >
-> ⇔ nτ^2xbar ≤ θ0 (nτ^2+σ^2) - σ^2μ
+> ⇔ nτ²xbar ≤ θ0 (nτ²+σ²) - σ²μ
 >
 >
 >
-> ⇔ xbar ≤ θ0 (nτ^2+σ^2)/nτ^2 - σ^2μ/nτ^2
+> ⇔ xbar ≤ θ0 (nτ²+σ²)/nτ² - σ²μ/nτ²
 >
 >
 >
-> ⇔ xbar ≤ θ0nτ^2/nτ^2 + θ0σ^2/nτ^2 - σ^2μ/nτ^2
+> ⇔ xbar ≤ θ0nτ²/nτ² + θ0σ²/nτ² - σ²μ/nτ²
 >
 >
 >
-> ⇔ xbar ≤ θ0 + σ^2(θ0 - μ)/nτ^2
+> ⇔ xbar ≤ θ0 + σ²(θ0 - μ)/nτ²
 >
 >
 >
@@ -1528,7 +1528,7 @@
 <p align="center"><kbd><img src="assets/mv8z0txlax.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua ví dụ này, X1,...Xn iid ~ n(μ, σ^2). Xem xét test hai giả thuyết H0: μ = μ0 vs H1: μ khác μ0.
+> Qua ví dụ này, X1,...Xn iid ~ n(μ, σ²). Xem xét test hai giả thuyết H0: μ = μ0 vs H1: μ khác μ0.
 >
 >
 >
@@ -1576,11 +1576,11 @@
 >
 >
 >
-> ⇔ L(μ^0, (σ^2)^0|**x**) / L(μ^, (σ^2)^|**x**) ≤ c và μ0 < μ^
+> ⇔ L(μ^0, (σ²)^0|**x**) / L(μ^, (σ²)^|**x**) ≤ c và μ0 < μ^
 >
 >
 >
-> Tính L(μ^0, (σ^2)^0|**x**) và L(μ^, (σ^2)^|**x**)
+> Tính L(μ^0, (σ²)^0|**x**) và L(μ^, (σ²)^|**x**)
 >
 >
 >
@@ -1588,23 +1588,23 @@
 >
 >
 >
-> L(μ, σ^2|**x**) = f(**x**|μ, σ^2) = Πi f(xi|μ, σ^2)
+> L(μ, σ²|**x**) = f(**x**|μ, σ²) = Πi f(xi|μ, σ²)
 >
 >
 >
-> = Πi (1/√2πσ^2) exp[-(xi-μ)^2/2σ^2]
+> = Πi (1/√2πσ²) exp[-(xi-μ)^2/2σ²]
 >
 >
 >
-> = Πi (√2πσ^2)^-1 exp[-(xi-μ)^2/2σ^2]
+> = Πi (√2πσ²)^-1 exp[-(xi-μ)^2/2σ²]
 >
 >
 >
-> = (√2πσ^2)^(-n) Πi exp[-(xi-μ)^2/2σ^2]
+> = (√2πσ²)^(-n) Πi exp[-(xi-μ)^2/2σ²]
 >
 >
 >
-> = (√2πσ^2)^(-n) exp[-Σi[(xi-μ)^2/2σ^2]]
+> = (√2πσ²)^(-n) exp[-Σi[(xi-μ)^2/2σ²]]
 >
 >
 >
@@ -1612,19 +1612,19 @@
 >
 >
 >
-> μ^ = xbar, (σ^2)^ = (1/n) Σi (xi - xbar)^2
+> μ^ = xbar, (σ²)^ = (1/n) Σi (xi - xbar)^2
 >
 >
 >
-> μ^0 = μ0, (σ^2)^0 = (1/n) Σi (xi - μ0)^2
+> μ^0 = μ0, (σ²)^0 = (1/n) Σi (xi - μ0)^2
 >
 >
 >
-> ⇨ Likelihood function tại mle μ^, (σ^2)^:
+> ⇨ Likelihood function tại mle μ^, (σ²)^:
 >
 >
 >
-> (√2π(σ^2)^)^(-n) exp[-Σi[(xi-μ)^2/2(σ^2)^]]
+> (√2π(σ²)^)^(-n) exp[-Σi[(xi-μ)^2/2(σ²)^]]
 >
 >
 >
@@ -1632,11 +1632,11 @@
 >
 >
 >
-> -Σi[(xi-μ)^2/2(σ^2)^]
+> -Σi[(xi-μ)^2/2(σ²)^]
 >
 >
 >
-> = -[Σi (xi - μ)^2] / 2(σ^2)^
+> = -[Σi (xi - μ)^2] / 2(σ²)^
 >
 >
 >
@@ -1652,7 +1652,7 @@
 >
 >
 >
-> ⇨ L(μ^, (σ^2)^|**x**) = (√2π(σ^2)^)^(-n) exp(-n/2)
+> ⇨ L(μ^, (σ²)^|**x**) = (√2π(σ²)^)^(-n) exp(-n/2)
 >
 >
 >
@@ -1660,11 +1660,11 @@
 >
 >
 >
-> Likelihood tại μ^0, (σ^2)^0:
+> Likelihood tại μ^0, (σ²)^0:
 >
 >
 >
-> = (√2π(σ^2)^0)^(-n) exp[-Σi[(xi-μ^0)^2/2(σ^2)^0]]
+> = (√2π(σ²)^0)^(-n) exp[-Σi[(xi-μ^0)^2/2(σ²)^0]]
 >
 >
 >
@@ -1672,11 +1672,11 @@
 >
 >
 >
-> -Σi[(xi-μ^0)^2/2(σ^2)^0]
+> -Σi[(xi-μ^0)^2/2(σ²)^0]
 >
 >
 >
-> Thay μ^0 = μ0, (σ^2)^0 = (1/n) Σi (xi - μ0)^2
+> Thay μ^0 = μ0, (σ²)^0 = (1/n) Σi (xi - μ0)^2
 >
 >
 >
@@ -1696,7 +1696,7 @@
 >
 >
 >
-> ⇨ L(μ^0, (σ^2)^0|**x**) = (√2π(σ^2)^0)^(-n) exp(-n/2)
+> ⇨ L(μ^0, (σ²)^0|**x**) = (√2π(σ²)^0)^(-n) exp(-n/2)
 >
 >
 >
@@ -1704,7 +1704,7 @@
 >
 >
 >
-> Để bớt rối đặt a = (σ^2)^0, b= (σ^2)^
+> Để bớt rối đặt a = (σ²)^0, b= (σ²)^
 >
 >
 >
@@ -1732,7 +1732,7 @@
 >
 >
 >
-> = [(σ^2)^ / (σ^2)^0]^(n/2)
+> = [(σ²)^ / (σ²)^0]^(n/2)
 >
 >
 >
@@ -1752,15 +1752,15 @@
 >
 >
 >
-> ⇔ [(σ^2)^0 / (σ^2)^]^(n/2) ≤ c
+> ⇔ [(σ²)^0 / (σ²)^]^(n/2) ≤ c
 >
 >
 >
-> Thế công thức của (σ^2)^ = (1/n) Σi (xi - xbar)^2 (còn nhớ, nó là unbiased estimator của σ^2)
+> Thế công thức của (σ²)^ = (1/n) Σi (xi - xbar)^2 (còn nhớ, nó là unbiased estimator của σ²)
 >
 >
 >
-> và (σ^2)^0 = (1/n) Σi (xi - μ0)^2
+> và (σ²)^0 = (1/n) Σi (xi - μ0)^2
 >
 >
 >
