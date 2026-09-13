@@ -14,7 +14,7 @@
 <p align="center"><kbd><img src="assets/kmefret33e.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là gs cho biết, khi xây dựng estimator, ta đã luôn dựa trên một giả định về dạng của distribution. Ví dụ, cho random sample size n X1,...Xn có observed value x1,...xn, có population distribution f(x|θ), thì để bắt đầu đi xây dựng estimator của θ (theo MLE hay Bayes approach) thì đầu tiên ta phải giả định f có dạng phân phối gì cái đã. Ví dụ như normal(μ, σ^2), rồi từ đó mới đi derive (μ)ml và (σ^2)ml.
+> Đại khái là gs cho biết, khi xây dựng estimator, ta đã luôn dựa trên một giả định về dạng của distribution. Ví dụ, cho random sample size n X1,...Xn có observed value x1,...xn, có population distribution f(x|θ), thì để bắt đầu đi xây dựng estimator của θ (theo MLE hay Bayes approach) thì đầu tiên ta phải giả định f có dạng phân phối gì cái đã. Ví dụ như normal(μ, σ²), rồi từ đó mới đi derive (μ)ml và (σ²)ml.
 >
 >
 >
@@ -78,7 +78,7 @@
 >
 >
 >
-> Lấy ví dụ ta có X1,...Xn iid \~ normal(μ, σ^2), thì đại khái là, như ta còn nhớ, với Xbar, thì ta có công thức cho variance của nó: Var(Xbar) = populaton variance/n, và ở đây, với population variance là σ^2 thì Var(Xbar) = σ^2/n (chú ý, công thức này, đúng với cả các population khác)
+> Lấy ví dụ ta có X1,...Xn iid \~ normal(μ, σ²), thì đại khái là, như ta còn nhớ, với Xbar, thì ta có công thức cho variance của nó: Var(Xbar) = populaton variance/n, và ở đây, với population variance là σ² thì Var(Xbar) = σ²/n (chú ý, công thức này, đúng với cả các population khác)
 >
 >
 >
@@ -86,7 +86,7 @@
 >
 >
 >
-> Ở đây mình có thể tranh thủ ôn lại về CRLB để xem vì sao σ^2/n lại là CRLB?
+> Ở đây mình có thể tranh thủ ôn lại về CRLB để xem vì sao σ²/n lại là CRLB?
 >
 >
 >
@@ -114,35 +114,35 @@
 >
 >
 >
-> log f(X|θ) = log \[1/√(2πσ^2) exp {-(X-μ)^2/2σ^2}
+> log f(X|θ) = log \[1/√(2πσ²) exp {-(X-μ)^2/2σ²}
 >
 >
 >
-> = log \[1/√(2πσ^2)\] + log exp {-(X-μ)^2/2σ^2}
+> = log \[1/√(2πσ²)\] + log exp {-(X-μ)^2/2σ²}
 >
 >
 >
-> = log \[1/√(2πσ^2)\] - (X-μ)^2/2σ^2
+> = log \[1/√(2πσ²)\] - (X-μ)^2/2σ²
 >
 >
 >
-> ⇒ ∂/∂θ log f(X|θ) = ∂/∂μ \[log \[1/√(2πσ^2)\] - (X-μ)^2/2σ^2\]
+> ⇒ ∂/∂θ log f(X|θ) = ∂/∂μ \[log \[1/√(2πσ²)\] - (X-μ)^2/2σ²\]
 >
 >
 >
-> = ∂/∂μ \[-(X-μ)^2/2σ^2\]
+> = ∂/∂μ \[-(X-μ)^2/2σ²\]
 >
 >
 >
-> = (-1/2σ^2) ∂/∂μ \[(X-μ)^2\]
+> = (-1/2σ²) ∂/∂μ \[(X-μ)^2\]
 >
 >
 >
-> = 2(1/2σ^2) (X-μ)
+> = 2(1/2σ²) (X-μ)
 >
 >
 >
-> = (X-μ)/σ^2 
+> = (X-μ)/σ² 
 >
 >
 >
@@ -162,19 +162,19 @@
 >
 >
 >
-> = σ^2/σ^4
+> = σ²/σ^4
 >
 >
 >
-> = 1/σ^2
+> = 1/σ²
 >
 >
 >
-> Vậy CRLB ở đây = \[∂/∂θ Eθ\[W(**X**)\]^2 / nI1(θ) = 1/n(1/σ^2)
+> Vậy CRLB ở đây = \[∂/∂θ Eθ\[W(**X**)\]^2 / nI1(θ) = 1/n(1/σ²)
 >
 >
 >
-> = σ^2/n
+> = σ²/n
 >
 >
 >
@@ -212,15 +212,15 @@
 >
 >
 >
-> Đó là ta sẽ giả sử Xi sẽ tuân theo phân phối n(μ, σ^2) với xác suất 1-δ và f(x) (có mean θ, variance τ^2) với xác suất δ.
+> Đó là ta sẽ giả sử Xi sẽ tuân theo phân phối n(μ, σ²) với xác suất 1-δ và f(x) (có mean θ, variance τ²) với xác suất δ.
 >
 >
 >
-> Ta có thể mô tả thông qua một biến Y, Bern(δ): Xi \~ n(μ, σ^2) khi Y=0 (xác suất 1-δ) và Xi \~ f(x) khi Y=1 (xác suất δ)
+> Ta có thể mô tả thông qua một biến Y, Bern(δ): Xi \~ n(μ, σ²) khi Y=0 (xác suất 1-δ) và Xi \~ f(x) khi Y=1 (xác suất δ)
 >
 >
 >
-> Khi đó Var(Xbar) sẽ là theo công thức (1-δ)σ^2/n + δτ^2/n + δ(1-δ)(θ-μ)^2/n
+> Khi đó Var(Xbar) sẽ là theo công thức (1-δ)σ²/n + δτ²/n + δ(1-δ)(θ-μ)^2/n
 >
 >
 >
@@ -248,15 +248,15 @@
 >
 >
 >
-> Khi Y=0, thì Xi \~ n(μ, σ) → Var(Xi) = σ^2 và khi Y=1 thì Xi \~ f(x) có variance τ^2 → Var(Xi) = τ^2
+> Khi Y=0, thì Xi \~ n(μ, σ) → Var(Xi) = σ² và khi Y=1 thì Xi \~ f(x) có variance τ² → Var(Xi) = τ²
 >
 >
 >
-> ..= σ^2 × (1-δ) + τ^2 × δ
+> ..= σ² × (1-δ) + τ² × δ
 >
 >
 >
-> = (1-δ) σ^2 + δ τ^2
+> = (1-δ) σ² + δ τ²
 >
 >
 >
@@ -284,7 +284,7 @@
 >
 >
 >
-> = E\[Xi|Xi\~f(x), có mean θ\] × δ + E\[Xi|Xi\~n(μ, σ^2)\] × (1-δ)
+> = E\[Xi|Xi\~f(x), có mean θ\] × δ + E\[Xi|Xi\~n(μ, σ²)\] × (1-δ)
 >
 >
 >
@@ -328,31 +328,31 @@
 >
 >
 >
-> = δ(θ^2) + (1-δ) μ^2 - δ^2θ^2 - μ^2 (1-δ)^2 - 2θδμ(1-δ)
+> = δ(θ^2) + (1-δ) μ² - δ^2θ^2 - μ² (1-δ)^2 - 2θδμ(1-δ)
 >
 >
 >
-> = δ(θ^2) - δ^2θ^2 + μ^2\[1 - δ - (1-δ)^2\] - 2θδμ(1-δ)
+> = δ(θ^2) - δ^2θ^2 + μ²\[1 - δ - (1-δ)^2\] - 2θδμ(1-δ)
 >
 >
 >
-> = δ(θ^2)(1 - δ) + μ^2\[1 - δ - 1 - δ^2 + 2δ\] - 2θδμ(1-δ)
+> = δ(θ^2)(1 - δ) + μ²\[1 - δ - 1 - δ^2 + 2δ\] - 2θδμ(1-δ)
 >
 >
 >
-> = δ(θ^2)(1 - δ) + μ^2(δ - δ^2) - 2θδμ(1-δ)
+> = δ(θ^2)(1 - δ) + μ²(δ - δ^2) - 2θδμ(1-δ)
 >
 >
 >
-> = δ(θ^2)(1 - δ) + μ^2δ(1 - δ) - 2θδμ(1 - δ)
+> = δ(θ^2)(1 - δ) + μ²δ(1 - δ) - 2θδμ(1 - δ)
 >
 >
 >
-> = (1 - δ) \[δ(θ^2) + μ^2δ - 2θδμ\]
+> = (1 - δ) \[δ(θ^2) + μ²δ - 2θδμ\]
 >
 >
 >
-> = (1 - δ) δ (θ^2 + μ^2 - 2θμ)
+> = (1 - δ) δ (θ^2 + μ² - 2θμ)
 >
 >
 >
@@ -360,7 +360,7 @@
 >
 >
 >
-> Vậy kết luận Var(Xi) = (1-δ) σ^2 + δ τ^2 + (1 - δ) δ (θ - μ)^2 
+> Vậy kết luận Var(Xi) = (1-δ) σ² + δ τ² + (1 - δ) δ (θ - μ)^2 
 >
 >
 >
@@ -368,7 +368,7 @@
 >
 >
 >
-> ⇒ Var(Xbar) = (1-δ) σ^2/n + δ τ^2/n + (1 - δ) δ (θ - μ)^2/n
+> ⇒ Var(Xbar) = (1-δ) σ²/n + δ τ²/n + (1 - δ) δ (θ - μ)^2/n
 >
 >
 >
@@ -378,23 +378,23 @@
 >
 >
 >
->  Thế thì đại ý là, khi θ ≈ μ và τ^2 ≈ σ^2 thì Var(Xbar), với công thức trên sẽ là:
+>  Thế thì đại ý là, khi θ ≈ μ và τ² ≈ σ² thì Var(Xbar), với công thức trên sẽ là:
 >
 >
 >
-> ≈ (1-δ) σ^2/n + δ τ^2/n + 0  (do θ ≈ μ nên (1 - δ) δ (θ - μ)^2/n ≈ 0)
+> ≈ (1-δ) σ²/n + δ τ²/n + 0  (do θ ≈ μ nên (1 - δ) δ (θ - μ)^2/n ≈ 0)
 >
 >
 >
-> ≈ (1-δ) σ^2/n + δ σ^2/n  (do θ ≈ μ)
+> ≈ (1-δ) σ²/n + δ σ²/n  (do θ ≈ μ)
 >
 >
 >
-> = σ^2/n = Var(Xbar) ban đâù. Có nghĩa là, nếu như vì lí do nào đó, giả định mô hình (rằng Xi \~ n(μ, σ^2)) là sai, thì trong trường hợp mà phân phối xác suất thật sự của Xi khi đó có mean và variance không khác mấy so với giả định ban đầu (chỉ là nó không phải là normal thôi). Thì khi đó, variance của Xbar vẫn là σ^2/n, tức là nó vẫn là efficient estimator (do variance đạt mức nhỏ nhất - CRLB)
+> = σ²/n = Var(Xbar) ban đâù. Có nghĩa là, nếu như vì lí do nào đó, giả định mô hình (rằng Xi \~ n(μ, σ²)) là sai, thì trong trường hợp mà phân phối xác suất thật sự của Xi khi đó có mean và variance không khác mấy so với giả định ban đầu (chỉ là nó không phải là normal thôi). Thì khi đó, variance của Xbar vẫn là σ²/n, tức là nó vẫn là efficient estimator (do variance đạt mức nhỏ nhất - CRLB)
 >
 >
 >
-> Tuy nhiên, chỉ cần f(x) là Cauchy, thì τ^2 lập tức là ∞ (đây là tính chất của Cauchy). khi đó, dù xác suất rất nhỏ δ, và n rất lớn, cũng không thể ngăn δ τ^2/n biến thành con số rất lớn → Var(Xbar) trở nên rất lớn, không còn là một efficient estimator nữa.
+> Tuy nhiên, chỉ cần f(x) là Cauchy, thì τ² lập tức là ∞ (đây là tính chất của Cauchy). khi đó, dù xác suất rất nhỏ δ, và n rất lớn, cũng không thể ngăn δ τ²/n biến thành con số rất lớn → Var(Xbar) trở nên rất lớn, không còn là một efficient estimator nữa.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -614,7 +614,7 @@
 >
 >
 >
-> Thế thì, theo Central Limit Theorem, nếu ta có X1,...Xn , có mean μ, variance σ^2. Thì khi n → ∞ P(√n(Xbar - μ)/σ ≤ x), tức cdf √n(Xbar - μ)/σ tại x của sẽ converge về Φ(x), tức P(Z ≤ x) với Z là standard normal variable. (đây gọi là converge in distribution: √n(Xbar - μ)/σ → (d) n(0,1)
+> Thế thì, theo Central Limit Theorem, nếu ta có X1,...Xn , có mean μ, variance σ². Thì khi n → ∞ P(√n(Xbar - μ)/σ ≤ x), tức cdf √n(Xbar - μ)/σ tại x của sẽ converge về Φ(x), tức P(Z ≤ x) với Z là standard normal variable. (đây gọi là converge in distribution: √n(Xbar - μ)/σ → (d) n(0,1)
 >
 >
 >
@@ -744,7 +744,7 @@
 >
 >
 >
-> = (σ^2)/\[1/2f(μ)\]^2
+> = (σ²)/\[1/2f(μ)\]^2
 >
 >
 >
