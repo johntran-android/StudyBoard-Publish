@@ -140,8 +140,8 @@
 >
 >
 >
-> Bởi vì xét f(x - μ) = (1/σ√2π) e^-(x-μ)^2/2σ^2, thì nó sẽ có dạng là pdf của
-> Normal(μ, σ^2) ở trang 3.3.13, và công thức f(x) chính là Standard Normal. 
+> Bởi vì xét f(x - μ) = (1/σ√2π) e^-(x-μ)^2/2σ², thì nó sẽ có dạng là pdf của
+> Normal(μ, σ²) ở trang 3.3.13, và công thức f(x) chính là Standard Normal. 
 >
 >
 >
@@ -290,7 +290,7 @@
 >
 >
 >
-> Vài ví dụ là Normal (0, σ^2) hay Γ(α fixed, β)
+> Vài ví dụ là Normal (0, σ²) hay Γ(α fixed, β)
 
 <br>
 
@@ -476,7 +476,7 @@
 
 > [!NOTE]
 > Theorem: cho Z là rv có pdf là f(z) Giả sử EZ, VarZ tồn tại. Thì nếu X có pdf 
-> (1 / σ) f[(x - μ) / σ] thì EX = σ EZ + μ và  VarX= σ^2 Var(Z)
+> (1 / σ) f[(x - μ) / σ] thì EX = σ EZ + μ và  VarX= σ² Var(Z)
 >
 >
 >
@@ -491,7 +491,7 @@
 >
 >
 >
-> Var(X) = Var(σZ + μ) = σ^2 Var(Z). (Dùng tính chất của variance) 
+> Var(X) = Var(σZ + μ) = σ² Var(Z). (Dùng tính chất của variance) 
 >
 >
 >
@@ -518,7 +518,7 @@
 >
 >
 > CÁI NÀY CHÍNH LÀ ĐÚNG VỚI TRƯỜNG HỢP CỦA NORMAL
-> DISTRIBUTION KHI TA CÓ pdf của N(0, 1) là là (1/√2π) e^-z^2/2, nó có
+> DISTRIBUTION KHI TA CÓ pdf của N(0, 1) là là (1/√2π) e^-z²/2, nó có
 > mean EZ = 0, VarZ = 1
 >
 >
@@ -528,12 +528,12 @@
 >
 >
 >
-> EX sẽ bằng như theorem vừa rồi = σ EZ + μ = μ , VarX = σ^2VarZ = σ^2*1
-> = σ^2
+> EX sẽ bằng như theorem vừa rồi = σ EZ + μ = μ , VarX = σ²VarZ = σ²*1
+> = σ²
 >
 >
 >
-> CÓ NGHĨA LÀ, μ CHÍNH LÀ MEAN VÀ σ^2 CHÍNH LÀ VARIANCE  của X
+> CÓ NGHĨA LÀ, μ CHÍNH LÀ MEAN VÀ σ² CHÍNH LÀ VARIANCE  của X
 >
 >
 >
