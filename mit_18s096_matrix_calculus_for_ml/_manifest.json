@@ -1,6 +1,6 @@
 {
-  "title": "mit_18s096_matrix_calculus_for_ml",
-  "publishedAt": 1786562257094,
+  "title": "MIT 18S096 Matrix Calculus for ML",
+  "publishedAt": 1789258146206,
   "sections": [
     {
       "title": "Lec 1 Part 1 Intro And Motivation",
@@ -93,6 +93,12 @@
       "imageCount": 22
     },
     {
+      "title": "Lecture Note",
+      "path": "mit_18s096_matrix_calculus_for_ml/lecture_note.md",
+      "noteCount": 2,
+      "imageCount": 4
+    },
+    {
       "title": "Lec 8: Derivative Of Eigenproblems",
       "path": "mit_18s096_matrix_calculus_for_ml/lec_8_derivative_of_eigenproblems.md",
       "noteCount": 0,
@@ -103,12 +109,6 @@
       "path": "mit_18s096_matrix_calculus_for_ml/lec_8_p2_automatic_differentiation_on_computational_graph.md",
       "noteCount": 1,
       "imageCount": 0
-    },
-    {
-      "title": "Lecture Note",
-      "path": "mit_18s096_matrix_calculus_for_ml/lecture_note.md",
-      "noteCount": 2,
-      "imageCount": 4
     },
     {
       "title": "Problem Sets 1",
