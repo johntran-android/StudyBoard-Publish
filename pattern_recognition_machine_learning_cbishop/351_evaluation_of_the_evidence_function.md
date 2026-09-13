@@ -479,11 +479,30 @@
 > Và như vậy cái mN ta đặt ở trên: 𝐦N = 𝐀inv β**Φ**ᵀ𝐭 sẽ bằng (𝐒N⁻¹)⁻¹ β**Φ**ᵀ𝐭 = 𝐒N β**Φ**ᵀ𝐭 = β**S𝐍Φ**ᵀ𝐭, **CHÍNH LÀ MEAN CỦA POSTERIOR DISTRIBUTION 3.53**
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú rất chi tiết, tự biến đổi toán học xuất sắc và giải thích rõ ràng mối liên hệ giữa ma trận Hessian với các công thức posterior trước đó. Tuy nhiên, bạn lưu ý một lỗi gõ nhỏ ở bước cuối cùng khi bị thiếu hệ số 1/2 ở thành phần alpha trong công thức của E(m_N).
+> Ghi chú thực hiện phép biến đổi hoàn thành bình phương (complete the square) cho E(w) cực kỳ chi tiết, mạch lạc và chính xác từng bước đại số ma trận. Chỉ có hai điểm nhỏ về mặt quy ước ký hiệu ma trận hiệp phương sai và diễn đạt mục tiêu của tích phân Gaussian cần lưu ý thêm.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"posterior distribution của 𝐰 sẽ là Normal (𝐦N, 𝐒N⁻¹)"*
+>
+> Theo quy ước chuẩn của phân phối chuẩn nhiều chiều N(μ, Σ), đối số thứ hai là ma trận hiệp phương sai (covariance matrix). Ở đây hiệp phương sai của posterior là S_N, còn S_N^-1 là ma trận độ chính xác (precision matrix). Viết Normal(m_N, S_N^-1) dễ gây hiểu lầm rằng covariance bằng S_N^-1, dù các dòng sau bạn đã dùng S_N đúng cách.
+>
+> **2.** *"biến đổi cái cục trong exp(...) để cho ra kết quả có dạng là quadratic function của 𝐰, và từ đó kết luận đây là pdf của normal, rồi dùng khớp mẫu, ta sẽ xác định được mean và covariance (mà kết qủa sẽ ra cái vừa nói: 𝒩(𝐭|0, Σ)...)"*
+>
+> Mục tiêu của việc complete the square theo w trong tích phân ∫ exp{-E(w)} dw là tách thành phần phụ thuộc w dạng Gaussian chuẩn để tính ra tích phân Gauss theo w (cho ra (2π)^(M/2)|A|^(-1/2)). Phần còn lại không phụ thuộc w nằm ở exp{-E(m_N)}, và chính dạng toàn phương của t trong E(m_N) kết hợp với các hằng số chuẩn hóa mới cho ra pdf của t là N(t|0, Σ). Diễn đạt của bạn hơi gộp hai bước này lại.
+>
+>
+> **✓ Strengths**
+> - Khai triển đại số ma trận và kỹ thuật thêm bớt để tìm hằng số C = E(m_N) rất chính xác, tỉ mỉ và chặt chẽ.
+> - Hiểu rõ mối liên hệ giữa ma trận A với ma trận Hessian của hàm sai số E(w).
+> - Kết nối chính xác A và m_N với các công thức phân phối hậu nghiệm (posterior) đã học ở mục 3.3 (phương trình 3.53 và 3.54).
+>
+> **💡 Deeper notes**
+> - A = αI + βΦᵀΦ luôn là ma trận đối xứng xác định dương (symmetric positive definite) do α > 0 và βΦᵀΦ nửa xác định dương, đảm bảo A luôn khả nghịch và E(w) có cực tiểu toàn cục duy nhất tại w = m_N.
 
-**🔗 See also:** [Gaussian Prior and Posterior Parameters](./331_bayesian_linear_regression.md#node-nt82rck) · [Section 3.5.2 Maximizing the Evidence Function](./352_maximizing_the_evidence_function.md#node-nc5qxnz)
+**🔗 See also:** [Gaussian Prior and Posterior Parameters](./331_bayesian_linear_regression.md#node-nt82rck) · [Section 3.5.2 Maximizing the Evidence Function](./352_maximizing_the_evidence_function.md#node-nc5qxnz) · [Ex 3.21 Log Determinant Derivative Identity](./37_exercises.md#node-3ldsqi5)
 
 <br>
 
@@ -617,28 +636,25 @@
 > Đây là kết quả 3.86
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú của bạn cực kỳ chi tiết, mạch lạc và chính xác tuyệt đối trong từng bước biến đổi toán học để chứng minh (3.85) và (3.86). Việc giải thích tường minh hằng số chuẩn hóa Gaussian và cách triệt tiêu các đại lượng logarit là một điểm cộng rất lớn giúp người đọc dễ dàng theo kịp.
-> ### Điểm mạnh
-> - **Hiểu sâu bản chất toán học:** Bạn đã nhận diện rất tốt phần nhân (kernel) của phân phối Gaussian nhiều chiều và dùng phương pháp nhân/chia hằng số chuẩn hóa để giải tích phân một cách thông minh mà không cần tính toán trực tiếp phức tạp.
-> - **Biến đổi đại số chính xác:** Quá trình khai triển hàm logarit của tích các số hạng ở công thức (3.86) được thực hiện rất cẩn thận, từng bước rõ ràng và triệt tiêu chính xác các số hạng đối nhau như $\frac{M}{2}\ln(2\pi)$.
-> - **Liên kết kiến thức thực tế:** Áp dụng rất tốt tính chất định thức của ma trận nghịch đảo $|\mathbf{A}^{-1}| = |\mathbf{A}|^{-1}$ từ kiến thức hình học/đại số tuyến tính.
+> Ghi chú rất chi tiết, mạch lạc và dẫn xuất hoàn toàn chính xác cả hai công thức (3.85) và (3.86). Chỉ có một lỗi đánh máy nhỏ (thiếu dấu trừ) khi viết lại công thức tổng quát của hàm mật độ Gaussian.
 >
-> ### Điểm cần lưu ý và cải thiện
-> - **Ký hiệu tạm thời dễ gây nhầm lẫn:** Ở dòng gần giữa bài viết, bạn có ghi: 
->   `⇒ f(t|α,β) = exp {-E(mN)} [(2
-> u)^M/2] (|Ainv|^1/2)`
->   Thực chất đây mới chỉ là giá trị của tích phân $\int \exp\{-E(\mathbf{w})\} \mathrm{d}\mathbf{w}$ chứ chưa phải là marginal likelihood $f(\mathbf{t}|\alpha, \beta)$. Dù ngay dòng dưới bạn đã sửa lại và nhân thêm các hệ số chuẩn hóa của $t$ để ra $f(\mathbf{t}|\alpha,\beta)$ chính xác, nhưng việc viết nhầm ký hiệu ở bước trung gian có thể gây bối rối khi đọc lại sau này.
+> **🟡 Minor issues**
 >
-> ### Gợi ý phát triển thêm
-> - Hãy tìm hiểu thêm về ý nghĩa của ma trận $\mathbf{A}$ trong ngữ cảnh này. Ma trận $\mathbf{A}$ chính là ma trận Hessian (đạo hàm bậc hai) của hàm năng lượng $E(\mathbf{w})$ tại điểm cực trị $\mathbf{m}_N$. Việc tính tích phân này thực chất là một bước trong phương pháp **Xấp xỉ Laplace (Laplace Approximation)** để xấp xỉ phân phối posterior dưới dạng phân phối chuẩn.
+> **1.** *"exp[(𝐱 - μ)ᵀΣinv(𝐱 - μ)/2]"*
 >
-> **⭐ Bonus points**
-> - Áp dụng chính xác tính chất định thức của ma trận nghịch đảo để đơn giản hóa biểu thức chứa ma trận A.
-> - Liên hệ thành công phương pháp tính tích phân bằng cách đưa về hàm mật độ xác suất Gaussian chuẩn hóa.
+> Trong công thức tổng quát của phân phối chuẩn nhiều chiều, số mũ của hàm exp bị thiếu dấu trừ, đúng ra phải là exp[-(1/2)(𝐱 - μ)ᵀΣ⁻¹(𝐱 - μ)]. Tuy nhiên đây chỉ là lỗi gõ phím khi trích dẫn công thức phụ, không làm ảnh hưởng đến các bước tính toán bên dưới.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ cách biến đổi tích phân hàm mũ bằng việc quy về hằng số chuẩn hóa của phân phối Gaussian nhiều chiều.
+> - Khai triển logarit tỉ mỉ từng bước, triệt tiêu chính xác số hạng (M/2)ln(2π) để thu được biểu thức evidence (3.86).
+>
+> **💡 Deeper notes**
+> - Để tích phân Gaussian hội tụ và hằng số chuẩn hóa tồn tại, ma trận Hessian A cần là ma trận đối xứng xác định dương (positive definite).
 
-**🔗 See also:** [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj) · [Section 3.5.2 Maximizing the Evidence Function](./352_maximizing_the_evidence_function.md#node-nc5qxnz)
+**🔗 See also:** [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj) · [Section 3.5.2 Maximizing the Evidence Function](./352_maximizing_the_evidence_function.md#node-nc5qxnz) · [Ex 3.21 Log Determinant Derivative Identity](./37_exercises.md#node-3ldsqi5)
 
 <br>
 
