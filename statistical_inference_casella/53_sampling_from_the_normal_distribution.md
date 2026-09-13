@@ -41,7 +41,7 @@
 >
 >
 > Theorem 5.3.1: Đại khái nói là, ta có một random sample X1,X2...Xn từ
-> một population và lần này ta biết nó là normal (μ, σ^2). Vì với sample
+> một population và lần này ta biết nó là normal (μ, σ²). Vì với sample
 > mean Xbar, sample variance S^2 (mà công thức thì ta đã biết từ những
 > phần trước rồi)
 >
@@ -56,11 +56,11 @@
 >
 >
 > b) Cái sampling distribution của sample mean Xbar chính là **normal (μ,
-> σ^2/n)**, tức là cũng chính là cái population distribution.
+> σ²/n)**, tức là cũng chính là cái population distribution.
 >
 >
 >
-> c) (n-1)S^2/ σ^2 có sampling distribution là **chi-square với n-1 bậc tự do**
+> c) (n-1)S^2/ σ² có sampling distribution là **chi-square với n-1 bậc tự do**
 >
 >
 >
@@ -117,7 +117,7 @@
 >
 >
 >
-> Đại khái là ta sẽ chứng mgf của Xbar có dạng là mgf của normal (μ, σ^2/n)
+> Đại khái là ta sẽ chứng mgf của Xbar có dạng là mgf của normal (μ, σ²/n)
 >
 >
 >
@@ -228,8 +228,8 @@
 >
 >
 > Tới đây ta dùng cái đề bài cho là sample có population distribution là
-> normal(μ, σ^2), thì mgf của một normal(μ, σ^2) có thể nhớ hoặc tra bảng =
-> e^[μt + (1/2) σ^2t^2]
+> normal(μ, σ²), thì mgf của một normal(μ, σ²) có thể nhớ hoặc tra bảng =
+> e^[μt + (1/2) σ²t^2]
 >
 >
 >
@@ -237,7 +237,7 @@
 >
 >
 >
-> = [e^[μ(t/n) + (1/2) σ^2(t/n)^2]]^n  | thay vào, **nhớ là đang evaluate tại t/n**
+> = [e^[μ(t/n) + (1/2) σ²(t/n)^2]]^n  | thay vào, **nhớ là đang evaluate tại t/n**
 >
 >
 >
@@ -246,31 +246,31 @@
 >
 >
 >
-> = e^[n[μ(t/n) + (1/2) σ^2(t/n)^2]]
+> = e^[n[μ(t/n) + (1/2) σ²(t/n)^2]]
 >
 >
 >
-> = e^[nμ(t/n) + n(1/2) σ^2(t/n)^2]  | phân phối n vô thôi
+> = e^[nμ(t/n) + n(1/2) σ²(t/n)^2]  | phân phối n vô thôi
 >
 >
 >
-> = e^[μt + (1/2) σ^2(t^2/n)]  | cancel n bớt
+> = e^[μt + (1/2) σ²(t^2/n)]  | cancel n bớt
 >
 >
 >
-> = **e^[μt + (1/2) (σ^2/n)t^2]**  | đổi chỗ thôi
+> = **e^[μt + (1/2) (σ²/n)t^2]**  | đổi chỗ thôi
 >
 >
 >
-> Tới đây, nhớ lại ta vừa nói random variable ~ normal(μ, σ^2) sẽ có
+> Tới đây, nhớ lại ta vừa nói random variable ~ normal(μ, σ²) sẽ có
 >
 >
 >
-> mgf M(t) = e^[μt + (1/2) σ^2t^2]
+> mgf M(t) = e^[μt + (1/2) σ²t^2]
 >
 >
 >
-> nên normal(μ, σ^2/n) sẽ có mgf là M(t) = **e^[μt + (1/2) (σ^2/n)t^2]**
+> nên normal(μ, σ²/n) sẽ có mgf là M(t) = **e^[μt + (1/2) (σ²/n)t^2]**
 >
 >
 >
@@ -279,7 +279,7 @@
 >
 >
 > Từ đó có thể kết luận sampling distribution của **sample mean Xbar là
-> normal(μ, σ^2/n)**
+> normal(μ, σ²/n)**
 >
 >
 >
@@ -694,7 +694,7 @@
 
 > [!NOTE]
 > Phần này gs chứng minh vế cuối của theorem : nhắc lại: là nếu X1,...Xn là random sample
-> từ normal(μ, σ^2) thì
+> từ normal(μ, σ²) thì
 >
 >
 >
@@ -741,7 +741,7 @@
 > là independent normal(0,1), thì -X1 cũng là normal(0, 1), (vì tuy có thể trả lời bằng cách
 > derive pdf, nhưg có thể dùng location scale không? nó nói nếu Z ~ standard pdf f(x), thì
 > σZ + μ sẽ là family member có location μ và scale param σ. với normal thì location và
-> scale cũng là mean và standard deviation nên σZ + μ sẽ có mean μ, variance σ^2, ở đây
+> scale cũng là mean và standard deviation nên σZ + μ sẽ có mean μ, variance σ², ở đây
 > -X1 = (-1)*X1 + 0 ⇨ -X1 distribution cũng là thành viên với location = mean là 0, scale =
 > -1 ⇨ variance = (-1)^2 = 1
 >
@@ -900,7 +900,7 @@
 >
 >
 > Và vì sao chúng độc lập là vì vế a) của theorem 5.3.1 nói rằng với X1,..Xn là random sample
-> từ normal(μ, σ^2) thì Xbar và S^2 độc lập nhau.
+> từ normal(μ, σ²) thì Xbar và S^2 độc lập nhau.
 >
 >
 >
@@ -1507,13 +1507,13 @@
 >
 >
 >
-> Cụ thể hơn, trong hầu hết các case thực tế, thì ta KHÔNG BIẾT σ^2 (tức
+> Cụ thể hơn, trong hầu hết các case thực tế, thì ta KHÔNG BIẾT σ² (tức
 > population variance của population normal distribution.
 >
 >
 >
 > Thế thì để mà chuyển qua phân tích về TÍNH BIẾN ĐỘNG CỦA SAMPLE
-> MEAN Xbar, thì ta cần phải estimate variance σ^2.
+> MEAN Xbar, thì ta cần phải estimate variance σ².
 >
 >
 >
@@ -1524,7 +1524,7 @@
 >
 >
 >
-> Vậy thì giáo sư cho biết, nếu X1.....Xn là random sample từ n(μ, σ^2), thì
+> Vậy thì giáo sư cho biết, nếu X1.....Xn là random sample từ n(μ, σ²), thì
 > ta đã biết (Xbar - μ) / σ/√n sẽ ~ n(0,1). Tại sao?
 >
 >
@@ -1541,7 +1541,7 @@
 >
 >
 > Vậy thì trong phần trước mình đã biết rằng, sample mean Xbar, với random
-> sample từ normal(μ, σ^2) thì Xbar cũng là normal, nhưng là normal(μ, σ^2/n)
+> sample từ normal(μ, σ²) thì Xbar cũng là normal, nhưng là normal(μ, σ²/n)
 >
 >
 >
@@ -1560,7 +1560,7 @@
 >
 >
 >
-> nên mới nói Xbar là normal(μ, σ^2/n) thì (Xbar - μ) / (σ^2/n) sẽ là một normal(0,1)
+> nên mới nói Xbar là normal(μ, σ²/n) thì (Xbar - μ) / (σ²/n) sẽ là một normal(0,1)
 >
 >
 >
@@ -1568,13 +1568,13 @@
 >
 >
 >
-> Thế thì, đại khái là với việc biết (Xbar - μ) / (σ^2/n) sẽ là một normal(0,1) thì ta 
-> có thể đo Xbar, và nếu biết σ^2 (population variance) thì khi đó ta có thể làm cơ
+> Thế thì, đại khái là với việc biết (Xbar - μ) / (σ²/n) sẽ là một normal(0,1) thì ta 
+> có thể đo Xbar, và nếu biết σ² (population variance) thì khi đó ta có thể làm cơ
 > sở để SUY LUẬN RA μ (population mean).
 >
 >
 >
-> TUY NHIÊN, như đã nói, hầu hết ta đều không biết σ^2,
+> TUY NHIÊN, như đã nói, hầu hết ta đều không biết σ²,
 >
 >
 >
@@ -1618,7 +1618,7 @@
 >
 >
 >
-> = (Xbar - μ)/(σ/√n)  /  √(S^2/σ^2)
+> = (Xbar - μ)/(σ/√n)  /  √(S^2/σ²)
 >
 >
 >
@@ -1631,16 +1631,16 @@
 >
 >
 >
-> (n-1) Sn^2 / σ^2 là một Chi-square n - 1, kí hiệu /X/^2_n-1
+> (n-1) Sn^2 / σ² là một Chi-square n - 1, kí hiệu /X/^2_n-1
 >
 >
 >
-> Vậy thì Sn^2 / σ^2 dĩ nhiên là có bản chất cũng là (một Chi-square n-1) /
+> Vậy thì Sn^2 / σ² dĩ nhiên là có bản chất cũng là (một Chi-square n-1) /
 > (n-1)
 >
 >
 >
-> (này nhé nếu đặt Y = (n-1) Sn^2 / σ^2 thì ta có Y là Chi-square n-1, vậy giờ
+> (này nhé nếu đặt Y = (n-1) Sn^2 / σ² thì ta có Y là Chi-square n-1, vậy giờ
 > đem Y chia cho (n-1) thì ta nói là X = Y / (n-1) là một (Chi-square n-1) /
 > (n-1) thôi.
 >
@@ -1657,11 +1657,11 @@
 >
 >
 >
-> = √[X^2_n-1 / (n-1)], nó độc lập với tử.
+> = √[χ²_n-1 / (n-1)], nó độc lập với tử.
 >
 >
 >
-> Do đó, nếu gọi U là tử, là một n(0,1), và V = X^2_p, thì mẫu là một √(V / p)
+> Do đó, nếu gọi U là tử, là một n(0,1), và V = χ²_p, thì mẫu là một √(V / p)
 > thì việc tìm distribution của (Xbar - μ) / (S/√n) cũng chỉ là tìm distribution
 > của U/√(V/p). Và quan trọng là U, V độc lập.
 >
@@ -1685,7 +1685,7 @@
 <p align="center"><kbd><img src="assets/r22vor23fbe.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ta có định nghĩa: Cho random sample X1,...Xn từ n(μ, σ^2), thì 
+> Ta có định nghĩa: Cho random sample X1,...Xn từ n(μ, σ²), thì 
 >
 >
 >
@@ -1913,7 +1913,7 @@
 >
 >
 >
-> S^2X/S^2Y / σ^2X/σ^2Y
+> S^2X/S^2Y / σ²X/σ²Y
 >
 >
 >
@@ -1974,7 +1974,7 @@
 >
 >
 >
-> S^2X/S^2Y / σ^2X/σ^2Y
+> S^2X/S^2Y / σ²X/σ²Y
 >
 >
 >
@@ -2007,22 +2007,22 @@
 >
 >
 >
-> (n - 1) Sn^2 / σ^2 sẽ là một Chi-square n - 1
+> (n - 1) Sn^2 / σ² sẽ là một Chi-square n - 1
 >
 >
 >
-> Câu này có nghĩa là, nếu ta có random sample size n từ normal(μ, σ^2)  thì cái
-> random variable được tạo bằng cách lấy hàm g(z) = (n-1) z / σ^2 apply lên
+> Câu này có nghĩa là, nếu ta có random sample size n từ normal(μ, σ²)  thì cái
+> random variable được tạo bằng cách lấy hàm g(z) = (n-1) z / σ² apply lên
 > sample variance S^2, thì cái random variable đó sẽ có distribution đã biết, có tên
 > là Student t, và nói đã biết tức là ta biết pdf của nó.
 >
 >
 >
-> Nếu gọi J = (n - 1) Sn^2 / σ^2, thì Sn^2 / σ^2 =  J / (n - 1)
+> Nếu gọi J = (n - 1) Sn^2 / σ², thì Sn^2 / σ² =  J / (n - 1)
 >
 >
 >
-> Và đặt U = Sn^2 / σ^2, và ta quan tâm đến distribution của thằng rv K này, thì ta
+> Và đặt U = Sn^2 / σ², và ta quan tâm đến distribution của thằng rv K này, thì ta
 > có thể derive distribution của nó dựa vào transformation K = J / (n-1) và người ta
 > gọi K là một Chi-square (n-1) / n - 1 thì có nghĩa là vậy
 >
