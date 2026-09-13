@@ -5,11 +5,11 @@
 ---
 <a id="node-ncuxspc"></a>
 
-## Lec 3 Part 2 Finite-difference Approximations
-
 <br>
 
 <a id="node-hbljjpd"></a>
+
+## Kiểm tra đạo hàm thủ công
 
 <p align="center"><kbd><img src="assets/3dsz1o9zhf.png" width="80%"></kbd></p>
 
@@ -27,6 +27,8 @@
 <br>
 
 <a id="node-f0zorkd"></a>
+
+### Xấp xỉ sai phân
 
 <p align="center"><kbd><img src="assets/yvx5okypgar.png" width="80%"></kbd></p>
 
@@ -79,6 +81,8 @@
 
 <a id="node-0l434rs"></a>
 
+#### Xấp xỉ đạo hàm sai phân
+
 <p align="center"><kbd><img src="assets/2ct2uzqg5bf.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -107,6 +111,8 @@
 <br>
 
 <a id="node-ojv6n3n"></a>
+
+##### Sai phân hữu hạn
 
 <p align="center"><kbd><img src="assets/5gxsoofdqi5.png" width="80%"></kbd></p>
 
@@ -145,6 +151,8 @@
 
 <a id="node-ydfjodj"></a>
 
+###### Xấp xỉ sai phân hữu hạn
+
 <p align="center"><kbd><img src="assets/yabjlvhhlu9.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -154,6 +162,8 @@
 <br>
 
 <a id="node-zl9ut5w"></a>
+
+###### Đạo hàm ma trận f(A)=A²
 
 <p align="center"><kbd><img src="assets/saq1fg3ndo.png" width="80%"></kbd></p>
 
@@ -177,27 +187,27 @@
 >
 >
 >
-> Ôn nhanh: từ công thức (A x B)vecC = vec(BCAT)
+> Ôn nhanh: từ công thức (A x B)vecC = vec(BCAᵀ)
 >
 >
 >
-> vec(AdA) = vec(A.dA.IT) = (I x A)vec(dA)
+> vec(AdA) = vec(A.dA.Iᵀ) = (I x A)vec(dA)
 >
 >
 >
-> vec(dA.A) = vec(I.dA.ATT) = (AT x I)vec(dA)
+> vec(dA.A) = vec(I.dA.Aᵀᵀ) = (Aᵀ x I)vec(dA)
 >
 >
 >
-> => vec(df) = vec(AdA) + vec(dA.A) = (I x A)vec(dA) + (AT x I)vec(dA)
+> => vec(df) = vec(AdA) + vec(dA.A) = (I x A)vec(dA) + (Aᵀ x I)vec(dA)
 >
 >
 >
-> vec (df) = (I x A + AT x I)vec(dA)
+> vec (df) = (I x A + Aᵀ x I)vec(dA)
 >
 >
 >
-> => derivative of f = A^2 là Jacobian matrix: (I x A + AT x I)
+> => derivative of f = A^2 là Jacobian matrix: (I x A + Aᵀ x I)
 >
 >
 >
@@ -218,6 +228,8 @@
 
 <a id="node-l4ka15x"></a>
 
+###### Vi phân hàm ma trận
+
 <p align="center"><kbd><img src="assets/ypq9zp7ryu.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -237,6 +249,8 @@
 <br>
 
 <a id="node-qyxve0h"></a>
+
+###### Sai số tương đối gradient
 
 <p align="center"><kbd><img src="assets/g4tzcy38d6f.png" width="80%"></kbd></p>
 
@@ -265,6 +279,8 @@
 
 <a id="node-ony6l82"></a>
 
+###### Kiểm tra sai số đạo hàm
+
 <p align="center"><kbd><img src="assets/dxulagbw946.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -279,6 +295,8 @@
 <br>
 
 <a id="node-dhxaiv2"></a>
+
+###### Chuẩn Frobenius của ma trận
 
 <p align="center"><kbd><img src="assets/za4k0ajt9q.png" width="80%"></kbd></p>
 
@@ -298,6 +316,8 @@
 
 <a id="node-g3ii975"></a>
 
+###### Chuẩn Frobenius trong Julia
+
 <p align="center"><kbd><img src="assets/dh74jqx54m.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -308,15 +328,19 @@
 
 <a id="node-ruqz8hr"></a>
 
+###### Chuẩn Frobenius của ma trận
+
 <p align="center"><kbd><img src="assets/w369l5h2vqr.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > và Frobenius norm cũng có thể được tính bởi sqrt
-> của Trace của matrix ATA
+> của Trace của matrix AᵀA
 
 <br>
 
 <a id="node-0wgqs1u"></a>
+
+###### Chuẩn Frobenius trong Julia
 
 <p align="center"><kbd><img src="assets/378g59wxu17.png" width="80%"></kbd></p>
 
@@ -326,6 +350,8 @@
 <br>
 
 <a id="node-tn7gvjy"></a>
+
+###### Xấp xỉ sai phân
 
 <p align="center"><kbd><img src="assets/3hxs12sipjt.png" width="80%"></kbd></p>
 
@@ -368,11 +394,15 @@
 
 <a id="node-p7fwp0c"></a>
 
+###### Độ chính xác sai phân
+
 <p align="center"><kbd><img src="assets/k0xeodrn1u.png" width="80%"></kbd></p>
 
 <br>
 
 <a id="node-hcfn8zf"></a>
+
+###### Sai số sai phân tiến
 
 <p align="center"><kbd><img src="assets/k9qyqx8zmts.png" width="80%"></kbd></p>
 
@@ -380,11 +410,13 @@
 > kết quả cho thấy khi Δx (từ 1) nhỏ dần thì **relative error cũng
 > nhỏ theo**. Nhưng **sau đó nó lại tăng lên lại**. Chuyện gì đã xảy ra
 
-**🔗 See also:** [linked note](./lec_5_p2_forward_automatic_differentiation_via_dua_numbers.md#node-6a5hhyh)
+**🔗 See also:** [Phương pháp sai phân hữu hạn](./lec_5_p2_forward_automatic_differentiation_via_dua_numbers.md#node-6a5hhyh)
 
 <br>
 
 <a id="node-20o5jax"></a>
+
+###### Phân tích sai số tương đối
 
 <p align="center"><kbd><img src="assets/4we40k56y6b.png" width="80%"></kbd></p>
 
@@ -395,6 +427,8 @@
 <br>
 
 <a id="node-4kyp00o"></a>
+
+###### Sai số cắt cụt finite difference
 
 <p align="center"><kbd><img src="assets/6b02o41vwas.png" width="80%"></kbd></p>
 
@@ -498,6 +532,8 @@
 
 <a id="node-rfoieza"></a>
 
+###### Sai số làm tròn
+
 <p align="center"><kbd><img src="assets/0mk8e9lm554d.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -547,6 +583,8 @@
 
 <a id="node-sjpegnw"></a>
 
+###### Tính Gradient bằng Finite Difference
+
 <p align="center"><kbd><img src="assets/hnr5fiplhup.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -580,6 +618,8 @@
 
 <a id="node-icavym6"></a>
 
+###### Sai số dấu phẩy động
+
 <p align="center"><kbd><img src="assets/kq9bh4zb7kj.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -605,6 +645,8 @@
 <br>
 
 <a id="node-j8ghchk"></a>
+
+###### Machine Epsilon và Significant Digit
 
 <p align="center"><kbd><img src="assets/7q2jo2tmm0y.png" width="80%"></kbd></p>
 
@@ -711,11 +753,13 @@
 >
 >
 >
-> Để rồi từ x thì số "tiếp theo" (the **next floating-point number** là) x + x*eps = x*(1+eps)
+> Để rồi từ x thì số "tiếp theo" (the **nexᵀ floating-point number** là) x + x*eps = x*(1+eps)
 
 <br>
 
 <a id="node-2dypzpy"></a>
+
+###### Chọn bước sai phân Δx
 
 <p align="center"><kbd><img src="assets/yjnaugk1l7.png" width="80%"></kbd></p>
 
@@ -765,6 +809,8 @@
 <br>
 
 <a id="node-la6uw98"></a>
+
+###### Chọn bước sai phân hữu hạn
 
 <p align="center"><kbd><img src="assets/viwtqoou7yi.png" width="80%"></kbd></p>
 
