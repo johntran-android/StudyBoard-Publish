@@ -5,11 +5,11 @@
 ---
 <a id="node-nni0h5c"></a>
 
-## Lecture Note
-
 <br>
 
 <a id="node-lmj2qpv"></a>
+
+## Ma trận Hessian
 
 <p align="center"><kbd><img src="assets/vmbnkpuhki8.png" width="80%"></kbd></p>
 
@@ -18,7 +18,7 @@
 > [!NOTE]
 > Đầu tiên đại khái là, gs lấy ví dụ đơn giản của một scalar value multivariate
 > function f(x): R^n -> R. Thì ông nói đạo hàm cấp 1 của f, có thể được thể
-> hiện bởi gradient vector ∇f = (f')T trong đó ∇f là vector các partial derivative
+> hiện bởi gradient vector ∇f = (f')ᵀ trong đó ∇f là vector các partial derivative
 > [∂f/∂x1, ∂f/∂x2....]
 >
 >
@@ -46,7 +46,7 @@
 >
 >
 > Từ đó với trường hợp này ta có thể gọi đạo hàm là row vector, f' = ∇fT, hay
-> ∇f = (f')T. Nhưng phải hiểu bản chất f' là một linear operator act on dx. Chỉ có
+> ∇f = (f')ᵀ. Nhưng phải hiểu bản chất f' là một linear operator act on dx. Chỉ có
 > điều trong trường hợp này, linear operator đó chính là phép dot product giữa
 > gradient ∇f với dx mà thôi.
 >
@@ -113,6 +113,8 @@
 
 <a id="node-4zr2ljd"></a>
 
+### Ý nghĩa ma trận Hessian
+
 <p align="center"><kbd><img src="assets/mjv4xzlgmm.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -128,6 +130,8 @@
 <br>
 
 <a id="node-9e45wpa"></a>
+
+#### Đạo hàm cấp hai tổng quát
 
 <p align="center"><kbd><img src="assets/628386wh9f.png" width="80%"></kbd></p>
 
