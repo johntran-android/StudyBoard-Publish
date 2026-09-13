@@ -795,7 +795,7 @@
 >
 >
 >
-> Giả sử ta có Θ là không gian parameter, có q chiều. (Ví dụ, giả sử ta giải bài toán hypothesis mà θ là parameter của normal, thì Θ sẽ là R^2, vì θ lúc này là vector (μ, σ^2)) Sau đó, Θ0 lại chỉ có p &lt; q chiều (ví dụ, ta xét H0 là {(μ, σ^2) ∈ R^2: μ = 5}. Khi đó ν sẽ là q - p = 2 - 1 = 1.
+> Giả sử ta có Θ là không gian parameter, có q chiều. (Ví dụ, giả sử ta giải bài toán hypothesis mà θ là parameter của normal, thì Θ sẽ là R^2, vì θ lúc này là vector (μ, σ²)) Sau đó, Θ0 lại chỉ có p &lt; q chiều (ví dụ, ta xét H0 là {(μ, σ²) ∈ R^2: μ = 5}. Khi đó ν sẽ là q - p = 2 - 1 = 1.
 >
 >
 >
