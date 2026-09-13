@@ -5,7 +5,5 @@
 ---
 <a id="node-d7005n3"></a>
 
-## Lec 8: Derivative Of Eigenproblems
-
 <br>
 
