@@ -5,11 +5,11 @@
 ---
 <a id="node-hhveu7j"></a>
 
-## Lec 7 P1: Derivative Of Random Functions
-
 <br>
 
 <a id="node-afb95wr"></a>
+
+## Bản chất đạo hàm ma trận
 
 <p align="center"><kbd><img src="assets/n7hmpmthsag.png" width="80%"></kbd></p>
 
@@ -54,6 +54,8 @@
 
 <a id="node-hura3w9"></a>
 
+### Đạo hàm hàm ma trận
+
 <p align="center"><kbd><img src="assets/nclzy09zn4l.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -77,6 +79,8 @@
 <br>
 
 <a id="node-eol1jz7"></a>
+
+#### Khái niệm hàm ngẫu nhiên
 
 <p align="center"><kbd><img src="assets/4jzqwn79pwk.png" width="80%"></kbd></p>
 
@@ -121,6 +125,8 @@
 
 <a id="node-qvwhrag"></a>
 
+##### Lấy mẫu phân phối Bernoulli
+
 <p align="center"><kbd><img src="assets/lsti7foegvc.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -139,6 +145,8 @@
 <br>
 
 <a id="node-suig61d"></a>
+
+###### Phân phối Exponential
 
 <p align="center"><kbd><img src="assets/ru5jkzec6t.png" width="80%"></kbd></p>
 
@@ -163,6 +171,8 @@
 
 <a id="node-p0axq9j"></a>
 
+###### Đạo hàm hàm ngẫu nhiên
+
 <p align="center"><kbd><img src="assets/cnu1in6ymsj.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -179,6 +189,8 @@
 
 <a id="node-8e63jem"></a>
 
+###### Đạo hàm hàm ngẫu nhiên
+
 <p align="center"><kbd><img src="assets/pju2a0pzig.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -194,6 +206,8 @@
 <br>
 
 <a id="node-uqumg1n"></a>
+
+###### Ước lượng bền vững ngẫu nhiên
 
 <p align="center"><kbd><img src="assets/7ywl8wf93fs.png" width="80%"></kbd></p>
 
@@ -214,6 +228,8 @@
 <br>
 
 <a id="node-dcgiqfu"></a>
+
+###### Kỳ vọng hàm ngẫu nhiên
 
 <p align="center"><kbd><img src="assets/9npcemdnwmo.png" width="80%"></kbd></p>
 
@@ -238,6 +254,8 @@
 
 <a id="node-lv6y283"></a>
 
+###### Ước lượng qua lấy mẫu
+
 <p align="center"><kbd><img src="assets/qjob27lrw2.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -253,6 +271,8 @@
 <br>
 
 <a id="node-emmr40v"></a>
+
+###### Đạo hàm Loss trong VAE
 
 <p align="center"><kbd><img src="assets/c5jcm2xu52.png" width="80%"></kbd></p>
 
@@ -281,6 +301,8 @@
 
 <a id="node-sobismg"></a>
 
+###### Mô hình quá trình Poisson
+
 <p align="center"><kbd><img src="assets/l88sdl9ub7.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -302,6 +324,8 @@
 
 <a id="node-smzn1k1"></a>
 
+###### Đạo hàm hàm ngẫu nhiên
+
 <p align="center"><kbd><img src="assets/3wzsu3ogjg7.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -321,6 +345,8 @@
 <br>
 
 <a id="node-vrmp55o"></a>
+
+###### Vi phân của biến ngẫu nhiên
 
 <p align="center"><kbd><img src="assets/bc1n44rer2.png" width="80%"></kbd></p>
 
@@ -359,6 +385,8 @@
 <br>
 
 <a id="node-997qlo0"></a>
+
+###### Bản chất của dX(ε)
 
 <p align="center"><kbd><img src="assets/s0hjyif3eo.png" width="80%"></kbd></p>
 
@@ -407,6 +435,8 @@
 
 <a id="node-jm1orpz"></a>
 
+###### Hiệu hai biến ngẫu nhiên
+
 <p align="center"><kbd><img src="assets/xxswqzl23a.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -425,6 +455,8 @@
 
 <a id="node-muhul84"></a>
 
+###### Tính phổ quát của Uniform
+
 <p align="center"><kbd><img src="assets/17zrx4yiiaf.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -439,7 +471,7 @@
 >
 >
 >
-> Ngược lại. Nếu U ~ Unif(0,1) thì Finv(U) sẽ ~ F.
+> Ngược lại. Nếu U ~ Unif(0,1) thì F⁻¹(U) sẽ ~ F.
 >
 >
 >
@@ -473,20 +505,20 @@
 >
 >
 >
-> ⇨ F(x) ≤ t ⇔ Finv(F(x)) ≤ Finv(t) ⇔ x ≤ Finv(t)
+> ⇨ F(x) ≤ t ⇔ F⁻¹(F(x)) ≤ F⁻¹(t) ⇔ x ≤ F⁻¹(t)
 >
 >
 >
-> ⇨ {x ∈ range X: F(x) ≤ t} = {x ∈ range X: x ≤ Finv(t)}
+> ⇨ {x ∈ range X: F(x) ≤ t} = {x ∈ range X: x ≤ F⁻¹(t)}
 >
 >
 >
-> ⇨ P(F(X) ≤ t) = Σ {x ∈ range X: x ≤ Finv(t)} P(X = x)
+> ⇨ P(F(X) ≤ t) = Σ {x ∈ range X: x ≤ F⁻¹(t)} P(X = x)
 >
 >
 >
-> và đây chính là cdf của X evaluate tại Finv(t), tức P(X ≤ Finv(t)) và dĩ nhiên nó là
-> F(Finv(t)) (vì F là cdf của X)
+> và đây chính là cdf của X evaluate tại F⁻¹(t), tức P(X ≤ F⁻¹(t)) và dĩ nhiên nó là
+> F(F⁻¹(t)) (vì F là cdf của X)
 >
 >
 >
@@ -510,31 +542,31 @@
 >
 >
 >
-> Tương tự ta cũng xem cdf của Finv(U) với U~Unif(0,1)
+> Tương tự ta cũng xem cdf của F⁻¹(U) với U~Unif(0,1)
 >
 >
 >
-> Theo định nghĩa, cdf của Y = Finv(U), hay FY(y) mang ý nghĩa là P(Finv(U) ≤ y)
+> Theo định nghĩa, cdf của Y = F⁻¹(U), hay FY(y) mang ý nghĩa là P(F⁻¹(U) ≤ y)
 >
 >
 >
-> Xét event Finv(U) ≤ y , có bản chất trong sample space gốc là
+> Xét event F⁻¹(U) ≤ y , có bản chất trong sample space gốc là
 >
 >
 >
-> {s ∈ Ω: Finv(U)({s}) ≤ y} hoặc {u ∈ range U: Finv(u) ≤ y}
+> {s ∈ Ω: F⁻¹(U)({s}) ≤ y} hoặc {u ∈ range U: F⁻¹(u) ≤ y}
 >
 >
 >
-> = {u ∈ [0,1]: Finv(u) ≤ y}
+> = {u ∈ [0,1]: F⁻¹(u) ≤ y}
 >
 >
 >
-> Vì F monotonic non-decreasing nên: Finv(u) ≤ y ⇔ F(Finv(u)) ≤ F(y) ⇔ u ≤ F(y)
+> Vì F monotonic non-decreasing nên: F⁻¹(u) ≤ y ⇔ F(F⁻¹(u)) ≤ F(y) ⇔ u ≤ F(y)
 >
 >
 >
-> ⇨ Finv(U) ≤ y = {u ∈ [0,1]: Finv(u) ≤ y} = {u ∈ [0,1]: u ≤ F(y)}
+> ⇨ F⁻¹(U) ≤ y = {u ∈ [0,1]: F⁻¹(u) ≤ y} = {u ∈ [0,1]: u ≤ F(y)}
 >
 >
 >
@@ -542,7 +574,7 @@
 >
 >
 >
-> Vây P(Finv(U) ≤ y) = P(U ≤ F(y)) = FU(F(y))
+> Vây P(F⁻¹(U) ≤ y) = P(U ≤ F(y)) = FU(F(y))
 >
 >
 >
@@ -550,31 +582,31 @@
 >
 >
 >
-> Nên P(Finv(U) ≤ y) = P(U ≤ F(y)) = FU(F(y)) = F(y)
+> Nên P(F⁻¹(U) ≤ y) = P(U ≤ F(y)) = FU(F(y)) = F(y)
 >
 >
 >
-> Vậy P(Finv(U) ≤ y) = F(y).
+> Vậy P(F⁻¹(U) ≤ y) = F(y).
 >
 >
 >
-> Mà vế trái, như đã nói, nếu gọi Y = Finv(U), thì P(Finv(U) ≤ y) chính là cdf của Y,
+> Mà vế trái, như đã nói, nếu gọi Y = F⁻¹(U), thì P(F⁻¹(U) ≤ y) chính là cdf của Y,
 > và ta đang tìm cách xây dựng nó, để rồi ra kết quả là ..F(y) với F là cdf của X
 >
 >
 >
-> Vậy có nghĩa là cdf của Y (=Finv(U) có công thức chính là cdf của X. Từ đó kết
-> luận Finv(U) chính là rv ~ distribution có cdf là F, hay Finv(U) ~ F
+> Vậy có nghĩa là cdf của Y (=F⁻¹(U) có công thức chính là cdf của X. Từ đó kết
+> luận F⁻¹(U) chính là rv ~ distribution có cdf là F, hay F⁻¹(U) ~ F
 >
 > Vậy ta có thể áp dụng vào đây:
 >
 >
 >
-> X(p) ~ Exp(p), thì nếu lấy w ~ Unfi(0,1) thì Finv_X(p)(w) sẽ ~ Exp(p)
+> X(p) ~ Exp(p), thì nếu lấy w ~ Unfi(0,1) thì F⁻¹_X(p)(w) sẽ ~ Exp(p)
 >
 >
 >
-> Finv_X(p)(w) tức là inverse của cdf của X(p), mà cdf của nó, tức F_X(p)
+> F⁻¹_X(p)(w) tức là inverse của cdf của X(p), mà cdf của nó, tức F_X(p)
 > là cdf của Exp(p) có công thức là gì quên rồi nhưng ta có thể lập luận lại:
 >
 >
@@ -659,7 +691,7 @@
 >
 >
 >
-> Vậy Finv_X(w) = **- p log(1 - w)  
+> Vậy F⁻¹_X(w) = **- p log(1 - w)  
 >
 >
 >
@@ -677,12 +709,14 @@
 >
 >
 >
-> Sau đó pass nó vào Finv_X(w) = - log(1 - w) / p ta sẽ có một sample sampling
+> Sau đó pass nó vào F⁻¹_X(w) = - log(1 - w) / p ta sẽ có một sample sampling
 > từ distribution F (tức Exp(p))
 
 <br>
 
 <a id="node-opmydj8"></a>
+
+###### Lấy mẫu phân phối mũ
 
 <p align="center"><kbd><img src="assets/fgrdrs4knjv.png" width="80%"></kbd></p>
 
@@ -703,6 +737,8 @@
 <br>
 
 <a id="node-k33v1ua"></a>
+
+###### Tái tham số hóa
 
 <p align="center"><kbd><img src="assets/08xg94fyuubq.png" width="80%"></kbd></p>
 
