@@ -122,6 +122,7 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `210 notes · 221 screenshots · 19 sections`
 
 > This notebook contains study notes and problem sets for MIT 18.S096 (Matrix Calculus for Machine Learning), covering core topics such as multidimensional derivatives, automatic differentiation, optimization, and computational graphs.
+> 
 > Sổ tay ghi chép này tổng hợp bài học và bài tập từ khóa học MIT 18.S096 (Giải tích Ma trận cho Học máy), bao gồm các chủ đề cốt lõi như đạo hàm đa chiều, đạo hàm tự động, tối ưu hóa và đồ thị tính toán.
 
 <details open>
@@ -144,8 +145,8 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 | [Lec 6 P2: Calculus Of Variations & Gradient Of Functionals](mit_18s096_matrix_calculus_for_ml/lec_6_p2_calculus_of_variations_gradient_of_functionals.md) | 1 | 0 |
 | [Lec 7 P1: Derivative Of Random Functions](mit_18s096_matrix_calculus_for_ml/lec_7_p1_derivative_of_random_functions.md) | 18 | 19 |
 | [Lec 7 P2: Second Derivatives, Bilinear Form, Hessian](mit_18s096_matrix_calculus_for_ml/lec_7_p2_second_derivatives_bilinear_form_hessian.md) | 23 | 22 |
-| [Lec 8 P2: Automatic Differentiation On Computational Graph](mit_18s096_matrix_calculus_for_ml/lec_8_p2_automatic_differentiation_on_computational_graph.md) | 1 | 0 |
 | [Lecture Note](mit_18s096_matrix_calculus_for_ml/lecture_note.md) | 2 | 4 |
+| [Lec 8 P2: Automatic Differentiation On Computational Graph](mit_18s096_matrix_calculus_for_ml/lec_8_p2_automatic_differentiation_on_computational_graph.md) | 1 | 0 |
 | [Problem Sets 1](mit_18s096_matrix_calculus_for_ml/problem_sets_1.md) | 0 | 3 |
 | [Problem Sets 2](mit_18s096_matrix_calculus_for_ml/problem_sets_2.md) | 0 | 8 |
 
@@ -569,7 +570,6 @@ Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) 
 `412 notes · 622 screenshots · 61 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
-> 
 > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
