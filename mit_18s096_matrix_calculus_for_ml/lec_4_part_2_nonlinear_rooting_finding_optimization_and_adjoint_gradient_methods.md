@@ -1,11 +1,9 @@
 # Lec 4 Part 2: Nonlinear Rooting Finding, Optimization And Adjoint Gradient Methods
 
-📊 **Progress:** `15` Notes | `17` Screenshots
+📊 **Progress:** `15` Notes | `17` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-05u05cl"></a>
-
-## Lec 4 Part 2: Nonlinear Rooting Finding, Optimization And Adjoint Gradient Methods
 
 > [!NOTE]
 > LEC 4 PART 2: NONLINEAR ROOTING FINDING,
@@ -15,6 +13,8 @@
 <br>
 
 <a id="node-nb6vjt7"></a>
+
+## Phương pháp Newton
 
 <p align="center"><kbd><img src="assets/8u22f161u7g.png" width="80%"></kbd></p>
 
@@ -32,13 +32,15 @@
 >
 > Thì Newton method đại khái là vầy, ta **bắt đầu với một initial point**
 > (guess) x0 nào đó. Kế tiếp ta sẽ **tìm phương trình tiếp tuyến tại
-> x0 đó**, và **giải xem nó cắt trục x tại đâu**. Nó sẽ cho ta **next guess
+> x0 đó**, và **giải xem nó cắt trục x tại đâu**. Nó sẽ cho ta **nexᵀ guess
 > x1**. Làm tương tự như vậy vài lần, thì thực tế là **x0, x1, ...sẽ dần
 > hội tụ về solution của f(x) = 0.**
 
 <br>
 
 <a id="node-rr949h4"></a>
+
+### Phương pháp Newton-Raphson
 
 <p align="center"><kbd><img src="assets/ox2rszvqgwe.png" width="80%"></kbd></p>
 
@@ -82,6 +84,8 @@
 
 <a id="node-9qbc2tl"></a>
 
+#### Phương pháp Newton-Raphson
+
 <p align="center"><kbd><img src="assets/yfpy4kgtuxa.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/e4zz1s8z96.png" width="80%"></kbd></p>
@@ -106,6 +110,8 @@
 
 <a id="node-djhjwx5"></a>
 
+##### Phương pháp Newton
+
 <p align="center"><kbd><img src="assets/v8odkxf5wkh.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -122,23 +128,20 @@
 
 <a id="node-aibwzqt"></a>
 
+###### Phương pháp Newton đa chiều
+
 <p align="center"><kbd><img src="assets/rejb9304dmq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì đó là thứ ta đã học trong 18.01. Thì nó HOÀN TOÀN CÓ THỂ **ÁP
-> DỤNG VỚI MULTI-DIMENSIONAL CASE**.
+> Thế thì đó là thứ ta đã học trong 18.01. Thì nó HOÀN TOÀN CÓ THỂ **ÁP DỤNG VỚI MULTI-DIMENSIONAL CASE**.
 >
 >
 >
-> Tức là khi f(x) là R^n -> R^n function. Nếu là trong 18.01, ta xét R -> R function
-> thì ta đang **dùng Newton method** để **giải tìm solution** (chính xác hơn là
-> **approximated solution)** của **nonlinear function f(x) = 0**)
+> Tức là khi f(x) là R^n -&gt; R^n function. Nếu là trong 18.01, ta xét R -&gt; R function thì ta đang **dùng Newton method** để **giải tìm solution** (chính xác hơn là **approximated solution)** của **nonlinear function f(x) = 0**)
 >
 >
 >
-> Còn bây giờ f(x) = 0 với **x** ∈ **R^n, f(x)** ∈ **R^n** thì ta đang **GIẢI HỆ N NONLINEAR 
-> EQUATION**. (dĩ nhiên không thể represent bởi f(x) = Ax đâu nhé, vì đây chỉ đúng 
-> nếu ta có system of linear equations)
+> Còn bây giờ f(x) = 0 với **x** ∈ **R^n, f(x)** ∈ **R^n** thì ta đang **GIẢI HỆ N NONLINEAR EQUATION**. (dĩ nhiên không thể represent bởi f(x) = Ax đâu nhé, vì đây chỉ đúng nếu ta có system of linear equations)
 >
 >
 >
@@ -146,21 +149,19 @@
 >
 >
 >
-> 1) **Dùng linear approx.** để **tìm phương trình tiếp tuyến của hàm số tại initial
-> guess x(1)**.  Với việc ta đang trong R^n nên nó sẽ là một **hyperplane**.
+> 1. **Dùng linear approx.** để **tìm phương trình tiếp tuyến của hàm số tại initial guess x(1)**. Với việc ta đang trong R^n nên nó sẽ là một **hyperplane**.
 >
 >
 >
-> 2) Giải **tìm solution f = 0** để ra **x(2)**.
+> 2. Giải **tìm solution f = 0** để ra **x(2)**.
 >
 >
 >
-> 3) Lặp lại như vậy thì **x(i) sẽ converge về x*** là **solution của f(x) = 0**
+> 3. Lặp lại như vậy thì **x(i) sẽ converge về x**\* là **solution của f(x) = 0**
 >
 >
 >
-> Vậy thì: Tại thời điểm này ta đã có thể **tính derivative** của mọi function kể cả
-> **R^n -> R^n**.
+> Vậy thì: Tại thời điểm này ta đã có thể **tính derivative** của mọi function kể cả **R^n -&gt; R^n**.
 >
 >
 >
@@ -176,7 +177,7 @@
 >
 >
 >
-> Thì vế phải chính là **phương trình tiếp tuyến tại x1**: 
+> Thì vế phải chính là **phương trình tiếp tuyến tại x1**:
 >
 >
 >
@@ -184,7 +185,7 @@
 >
 >
 >
-> Ta sẽ **giải tìm solution của f(x1) + f'(x1)(x - x1)) = 0** để ra **next guess x2**.
+> Ta sẽ **giải tìm solution của f(x1) + f'(x1)(x - x1)) = 0** để ra **nexᵀ guess x2**.
 >
 >
 >
@@ -192,41 +193,31 @@
 >
 >
 >
-> Thế thì nhận xét rằng thế này. Giống như trong 1D case, **hàm gốc f(x) là
-> nonlinear** (để rồi ta mới thấy khó tìm solution của f(x) = 0 ngay từ đầu). 
+> Thế thì nhận xét rằng thế này. Giống như trong 1D case, **hàm gốc f(x) là nonlinear** (để rồi ta mới thấy khó tìm solution của f(x) = 0 ngay từ đầu).
 >
 >
 >
-> Nhưng **f(x) + f'(x)δx = 0 là linear equation** (vì sao, vì f(x) là scalar, và f'(x)δx là
-> scalar*δx, nói cách khác, nó có dạng b + ax, nên **giải ra δx rất dễ dàng**)
+> Nhưng **f(x) + f'(x)δx = 0 là linear equation** (vì sao, vì f(x) là scalar, và f'(x)δx là scalar\*δx, nói cách khác, nó có dạng b + ax, nên **giải ra δx rất dễ dàng**)
 >
 >
 >
-> Tương tự, trong R^n case, **f(x) gốc là non-linear function**. Nhưng **f(x) + f'
-> (x)[δx] là linear function**. Vì sao, vì f(x) là constant vector, **f'(x)[δx] là LINEAR
-> OPERATOR ACT ON δx**.
+> Tương tự, trong R^n case, **f(x) gốc là non-linear function**. Nhưng **f(x) + f' (x)\[δx\] là linear function**. Vì sao, vì f(x) là constant vector, **f'(x)\[δx\] là LINEAR OPERATOR ACT ON δx**.
 >
 >
 >
-> Và cụ thể hơn trong case này, nếu xét **vector** là **column vector** truyền
-> thống, thì như đã biết **f'(x)[dx] thực ra CHÍNH LÀ J dx** 
+> Và cụ thể hơn trong case này, nếu xét **vector** là **column vector** truyền thống, thì như đã biết **f'(x)\[dx\] thực ra CHÍNH LÀ J dx**
 >
 >
 >
-> (nhớ không, khi dx là vector mà muốn ra df = f'(x)[dx] cũng là vector thì linear 
-> operator chỉ có thể là phép nhân vector dx với MỘT MATRIX, MATRIX ĐÓ 
-> GỌI LÀ **JACOBIAN**, và như vậy f'(x) chính là J
+> (nhớ không, khi dx là vector mà muốn ra df = f'(x)\[dx\] cũng là vector thì linear operator chỉ có thể là phép nhân vector dx với MỘT MATRIX, MATRIX ĐÓ GỌI LÀ **JACOBIAN**, và như vậy f'(x) chính là J
 >
 >
 >
-> Và như vậy việc **giải tìm f(x) + f'(x) δx = 0**  sẽ **CHÍNH LÀ GIẢI MỘT HỆ
-> PHƯƠNG TRÌNH TUYẾN TÍNH: f(x) + J δx = 0, và có thể giải theo cách thức
-> analytically**
+> Và như vậy việc **giải tìm f(x) + f'(x) δx = 0** sẽ **CHÍNH LÀ GIẢI MỘT HỆ PHƯƠNG TRÌNH TUYẾN TÍNH: f(x) + J δx = 0, và có thể giải theo cách thức analytically**
 >
 >
 >
-> Và đây là nơi ta dùng kiến thức của **MIT 18.06**: **Chuyển f(x) qua**, và **nhân
-> hai vế cho J_inv (f'(x)^-1)**: ta sẽ có **δx = - J_inv f(x)**
+> Và đây là nơi ta dùng kiến thức của **MIT 18.06**: **Chuyển f(x) qua**, và **nhân hai vế cho J⁻¹ (f'(x)^-1)**: ta sẽ có **δx = - J⁻¹ f(x)**
 >
 >
 >
@@ -234,49 +225,29 @@
 >
 >
 >
-> Sau đó thì ta có **x2**, và lặp lại: **x := x + δx = x - J_inv f(x)**
+> Sau đó thì ta có **x2**, và lặp lại: **x := x + δx = x - J⁻¹ f(x)**
 >
-> Tới đây, sau khi ta đã finish chap 10 của Convex Optimization (text book của
-> EE364A)  thì có thể thấy cái đang nói ở đây chính xác là đang nói về Newton's
-> method giúp giải bài toán optimization. Mình sẽ liên hệ nó với cái này:
+> Tới đây, sau khi ta đã finish chap 10 của Convex Optimization (texᵀ book của EE364A) thì có thể thấy cái đang nói ở đây chính xác là đang nói về Newton's method giúp giải bài toán optimization. Mình sẽ liên hệ nó với cái này:
 >
 >
 >
-> Thế thì trong class này cũng như 1801, chỉ đang nói rằng mục tiêu của ta là đang
-> muốn giải một hệ phương trình phi tuyến thể hiện bởi f(x) = 0 (1) với f(x) là non-linear
-> function R^n -> R^n. Và Newton's method có thể giúp, với cách làm theo lối iterative
-> là từ initial guess x(1), ta tìm phương trình tiếp tuyến của f(x) tại x(1) và giải tìm x(2)
-> là giao điểm của tiếp tuyến đó với trục y = 0. Có x(2), ta lại lặp lại như vậy để tìm
-> x(3) Rồi x(4)....Để rồi chuỗi x(1), x(2)...x(k) sẽ converge về x* là solution của f(x) = 0
+> Thế thì trong class này cũng như 1801, chỉ đang nói rằng mục tiêu của ta là đang muốn giải một hệ phương trình phi tuyến thể hiện bởi f(x) = 0 (1) với f(x) là non-linear function R^n -&gt; R^n. Và Newton's method có thể giúp, với cách làm theo lối iterative là từ initial guess x(1), ta tìm phương trình tiếp tuyến của f(x) tại x(1) và giải tìm x(2) là giao điểm của tiếp tuyến đó với trục y = 0. Có x(2), ta lại lặp lại như vậy để tìm x(3) Rồi x(4)....Để rồi chuỗi x(1), x(2)...x(k) sẽ converge về x\* là solution của f(x) = 0
 >
 >
 >
-> Vậy thì trong EE364A, xét bài toán unconstrained convex optimization problem với
-> là minimize objective function f(x) (không phải là quadratic nhé, và cũng ko cần ghi
-> f0(x), vài f0 chỉ để khi phân biệt với fi(x) i = 1, 2...trong bài toán inequality constraint
-> problem, Nhưng ở đây mình ghi f0 để tí nữa dễ phân biệt với cái f(x) chung chung
-> vốn để chỉ cái equation f(x) = 0 mà trong lecture này nói ta đang muốn giải nhờ
-> newton's method). 
+> Vậy thì trong EE364A, xét bài toán unconstrained convex optimization problem với là minimize objective function f(x) (không phải là quadratic nhé, và cũng ko cần ghi f0(x), vài f0 chỉ để khi phân biệt với fi(x) i = 1, 2...trong bài toán inequality constraint problem, Nhưng ở đây mình ghi f0 để tí nữa dễ phân biệt với cái f(x) chung chung vốn để chỉ cái equation f(x) = 0 mà trong lecture này nói ta đang muốn giải nhờ newton's method).
 >
 >
 >
-> Thế thì, optimality condition nói rằng optimal point sẽ là solution của ∇f0(x)
-> = 0, là nơi mà gradient của f0(x) vanish (lập luận đơn giản là nếu nó không như vậy,
-> linear approximation tại x*: f0(x* + δx) ≈ f0(x*) + ∇f0(x*)Tδx  sẽ cho biết đi theo hướng
-> của hợp với ∇f0(x*) góc tù sẽ tiếp tục giảm hàm f0:
+> Thế thì, optimality condition nói rằng optimal point sẽ là solution của ∇f0(x) = 0, là nơi mà gradient của f0(x) vanish (lập luận đơn giản là nếu nó không như vậy, linear approximation tại x\*: f0(x\* + δx) ≈ f0(x\*) + ∇f0(x\*)ᵀδx sẽ cho biết đi theo hướng của hợp với ∇f0(x\*) góc tù sẽ tiếp tục giảm hàm f0:
 >
 >
 >
-> Chỉ cần đi theo hướng δx sao cho nó hợp với ∇f0(x*) một góc tù là ∇f0(x*)T δx  =
-> ||∇f0(x*)||*|| δx||*cos(θ)  sẽ < 0 ⇨ f0(x* + δx) < f0(x*)
+> Chỉ cần đi theo hướng δx sao cho nó hợp với ∇f0(x\*) một góc tù là ∇f0(x\*)ᵀ δx = ||∇f0(x\*)||*|| δx||cos(θ) sẽ &lt; 0 ⇨ f0(x + δx) &lt; f0(x*)
 >
 >
 >
-> Thế thì, giải bài toán optimization này chính là giải ∇f0(x*) = 0, và với việc f0(x) là
-> R^n -> R non-linear function, thì ∇f0(x) chính là R^n -> R^n function vì ∇f0(x) là
-> gradient vector [∂f0/∂x1, ∂f0/∂x2,...∂f0/∂xn] nên nó là function take input R^n vector x 
-> và output R^n vector ∇f0(x). Và ta muốn giải tìm solution của ∇f0(x) = 0 tương
-> ứng với việc ta muốn giải tìm solution của f(x) = 0 nói trên (1). 
+> Thế thì, giải bài toán optimization này chính là giải ∇f0(x\*) = 0, và với việc f0(x) là R^n -&gt; R non-linear function, thì ∇f0(x) chính là R^n -&gt; R^n function vì ∇f0(x) là gradient vector \[∂f0/∂x1, ∂f0/∂x2,...∂f0/∂xn\] nên nó là function take input R^n vector x và output R^n vector ∇f0(x). Và ta muốn giải tìm solution của ∇f0(x) = 0 tương ứng với việc ta muốn giải tìm solution của f(x) = 0 nói trên (1).
 >
 >
 >
@@ -284,51 +255,47 @@
 >
 >
 >
-> Thế thì, theo EE364a, Newton's method về cơ bản là như sau: Tại initial point x(1),
-> ta sẽ approx. hàm f0(x) bởi quadratic approx. của nó: 
+> Thế thì, theo EE364a, Newton's method về cơ bản là như sau: Tại initial point x(1), ta sẽ approx. hàm f0(x) bởi quadratic approx. của nó:
 >
 >
 >
-> f0(x1 + δx) ≈ f0(x1) + ∇f0(x1)Tδx + (1/2) δxT ∇^2f0(x) δx 
+> f0(x1 + δx) ≈ f0(x1) + ∇f0(x1)ᵀδx + (1/2) δxᵀ ∇^2f0(x) δx
 >
 >
 >
-> Để rồi ta xét hàm f0^(δx) = f0(x1) + ∇f0(x1)Tδx + (1/2) δxT ∇^2f0(x) δx, là một hàm 
-> quadratic theo δx. 
+> Để rồi ta xét hàm f0^(δx) = f0(x1) + ∇f0(x1)ᵀδx + (1/2) δxᵀ ∇^2f0(x) δx, là một hàm quadratic theo δx.
 >
 >
 >
-> Và ta sẽ tìm δx sao cho minimize f0^(δx). Với việc f0^ là quadratic thì việc tìm
-> minimum của nó có thể có analytic solution: Chính là dựa vào optimality condition:
+> Và ta sẽ tìm δx sao cho minimize f0^(δx). Với việc f0^ là quadratic thì việc tìm minimum của nó có thể có analytic solution: Chính là dựa vào optimality condition:
 >
 >
 >
-> ∇f0^(δx*) = 0
+> ∇f0^(δx\*) = 0
 >
 >
 >
-> Với f0^(δx) = f0(x1) + ∇f0(x1)Tδx + (1/2) δxT ∇^2f0(x1) δx 
+> Với f0^(δx) = f0(x1) + ∇f0(x1)ᵀδx + (1/2) δxᵀ ∇^2f0(x1) δx
 >
 >
 >
-> hay 1/2 δxT P δx + qTδx + r 
+> hay 1/2 δxᵀ P δx + qTδx + r
 >
 >
 >
-> đặt P = ∇^2f0(x1), q = ∇f0(x1) và r = f0(x1) 
+> đặt P = ∇^2f0(x1), q = ∇f0(x1) và r = f0(x1)
 >
 >
 >
-> Ở class này ta đã quá dễ dàng biết công thức gradient của quadratic function rồi,
-> nên khỏi nói: 
+> Ở class này ta đã quá dễ dàng biết công thức gradient của quadratic function rồi, nên khỏi nói:
 >
 >
 >
-> ∇f0^(δx) = PTδx + q = ∇^2f0(x)T δx + ∇f0(x) = **∇^2f0(x) δx + ∇f0(x)** (do Hessian symmetric)
+> ∇f0^(δx) = Pᵀδx + q = ∇^2f0(x)ᵀ δx + ∇f0(x) = **∇^2f0(x) δx + ∇f0(x)** (do Hessian symmetric)
 >
 >
 >
-> Vậy optimality condition là: ∇^2f0(x1) δx* + ∇f0(x1) = 0 ⇨ **δx* = - ∇^2f0(x1)_inv ∇f0(x1)
+> Vậy optimality condition là: ∇^2f0(x1) δx\* + ∇f0(x1) = 0 ⇨ \**δx* = - ∇^2f0(x1)⁻¹ ∇f0(x1)
 >
 >
 >
@@ -336,7 +303,7 @@
 >
 >
 >
-> Δx_nt = - ∇^2f0(x1)_inv ∇f0(x1)**
+> Δx_nt = - ∇^2f0(x1)⁻¹ ∇f0(x1)
 >
 >
 >
@@ -348,61 +315,11 @@
 >
 >
 >
-> Δx_nt = - ∇^2f0(x)_inv ∇f0(x) hiểu là Newton's step tại điểm đang "đứng" x(k)
+> Δx_nt = - ∇^2f0(x)⁻¹ ∇f0(x) hiểu là Newton's step tại điểm đang "đứng" x(k)
 >
 >
 >
-> Để rồi các x(1), x(2)... cũng sẽ dần dần converge về x* là solution của ∇f0(x) = 0
->
->
->
-> ====
->
->
->
-> Thế thì thật ra để liên hệ nó với cái vụ "tìm tiếp tuyến tại x(k) và giải tìm intersection
-> của nó với trục y = 0 để có next guess x(k+1)" thì ta phải dùng một điểm mà trong sách
-> Convex Optimization, gs Boyd có nói, đó là góc nhìn khác (interpretation) của Newton's
-> step:
->
->
->
-> Góc nhìn đó chính là, ta cũng sẽ bắt đầu với việc ta đang muốn giải ∇f0(x) = 0.
-> Nhưng vì ∇f0(x) non-linear nên khó giải, thay vào đó, ta sẽ coi nó / xấp xỉ nó như một
-> linear function, để tìm approx. solution. Nói rõ hơn, ta sẽ dùng linear approx. của ∇f0(x)
-> tại x (điểm đang đứng, ví dụ x1) đặt là ∇~f0: 
->
->
->
-> Linear approx. của ∇f0(x) (nhớ rằng nó cũng là một function, nó "có quyền" có linear 
-> approx tại điểm gần với x1: ∇f0(x1 + δx) ≈ ∇f0(x1) + ∇^2f0(x1)Tδx 
->
->
->
-> Và như đã nói, ta sẽ xét function ∇~f0(δx) =  ∇f0(x1) + ∇^2f0(x1)Tδx , là một linear function
-> theo δx. Và ta sẽ giải ∇~f0(δx*) = 0 thay vì ∇f0(x*) = 0
->
->
->
-> Thế thì giải ∇~f0(δx*) = 0 ⇔ ∇f0(x1) + ∇^2f0(x1)Tδx* ⇔ δx* = **∇^2f0(x1)_inv ∇f0(x1) có thể
-> thấy nó chính là Newton's step ở trên.**
->
->
->
-> Dĩ nhiên x1 + δx* = x1 + Δx_nt (hay có thêm step size t nữa thì) sẽ chỉ là approximated 
-> solution của x*, nên nó ko chính xác ngay, mà ta sẽ tiếp tục làm vậy để có x(2), x(3)....
-> để chúng sẽ dần converge về x*
->
->
->
-> NHƯNG Ý CHÍNH ĐÓ LÀ, ĐÂY LÀ CÁI MÀ LIÊN HỆ VỚI CÁI NÓI TRÊN, bởi vì việc ta
-> giải ∇~f0(δx) = 0 ⇔ ∇f0(x1) + ∇^2f0(x)T δx = 0 chính là giải tìm intersection của tiếp tuyến 
-> (tangent plane) của ∇f(x) tại x1.
->
->
->
-> (Nhớ rằng ∇f0(x) có vai trò của f(x) mà trong class này đang nói, là ta đang muốn giải f(x) 
-> = 0)
+> Để rồi các x(1), x(2)... cũng sẽ dần dần converge về x\* là solution của ∇f0(x) = 0
 >
 >
 >
@@ -410,8 +327,43 @@
 >
 >
 >
-> Và trong note kế trước, ta có kết quả δx = - J_inv f(x) (để có next guess x2 = x1 + δx
-> thì có thể thấy chính là công thức Newton's step ở trên:
+> Thế thì thật ra để liên hệ nó với cái vụ "tìm tiếp tuyến tại x(k) và giải tìm intersection của nó với trục y = 0 để có nexᵀ guess x(k+1)" thì ta phải dùng một điểm mà trong sách Convex Optimization, gs Boyd có nói, đó là góc nhìn khác (interpretation) của Newton's step:
+>
+>
+>
+> Góc nhìn đó chính là, ta cũng sẽ bắt đầu với việc ta đang muốn giải ∇f0(x) = 0. Nhưng vì ∇f0(x) non-linear nên khó giải, thay vào đó, ta sẽ coi nó / xấp xỉ nó như một linear function, để tìm approx. solution. Nói rõ hơn, ta sẽ dùng linear approx. của ∇f0(x) tại x (điểm đang đứng, ví dụ x1) đặt là ∇\~f0:
+>
+>
+>
+> Linear approx. của ∇f0(x) (nhớ rằng nó cũng là một function, nó "có quyền" có linear approx tại điểm gần với x1: ∇f0(x1 + δx) ≈ ∇f0(x1) + ∇^2f0(x1)ᵀδx
+>
+>
+>
+> Và như đã nói, ta sẽ xét function ∇\~f0(δx) = ∇f0(x1) + ∇^2f0(x1)ᵀδx , là một linear function theo δx. Và ta sẽ giải ∇\~f0(δx\*) = 0 thay vì ∇f0(x\*) = 0
+>
+>
+>
+> Thế thì giải ∇\~f0(δx\*) = 0 ⇔ ∇f0(x1) + ∇^2f0(x1)ᵀδx\* ⇔ δx\* = **∇^2f0(x1)⁻¹ ∇f0(x1) có thể thấy nó chính là Newton's step ở trên.**
+>
+>
+>
+> Dĩ nhiên x1 + δx\* = x1 + Δx_nt (hay có thêm step size t nữa thì) sẽ chỉ là approximated solution của x\*, nên nó ko chính xác ngay, mà ta sẽ tiếp tục làm vậy để có x(2), x(3).... để chúng sẽ dần converge về x\*
+>
+>
+>
+> NHƯNG Ý CHÍNH ĐÓ LÀ, ĐÂY LÀ CÁI MÀ LIÊN HỆ VỚI CÁI NÓI TRÊN, bởi vì việc ta giải ∇\~f0(δx) = 0 ⇔ ∇f0(x1) + ∇^2f0(x)ᵀ δx = 0 chính là giải tìm intersection của tiếp tuyến (tangent plane) của ∇f(x) tại x1.
+>
+>
+>
+> (Nhớ rằng ∇f0(x) có vai trò của f(x) mà trong class này đang nói, là ta đang muốn giải f(x) = 0)
+>
+>
+>
+> ====
+>
+>
+>
+> Và trong note kế trước, ta có kết quả δx = - J⁻¹ f(x) (để có nexᵀ guess x2 = x1 + δx thì có thể thấy chính là công thức Newton's step ở trên:
 >
 >
 >
@@ -419,15 +371,42 @@
 >
 >
 >
-> **δx = - J_inv f(x)** cũng tương ứng với **Δx_nt = - ∇^2f(x)_inv ∇f(x)** 
+> **δx = - J⁻¹ f(x)** cũng tương ứng với **Δx_nt = - ∇^2f(x)⁻¹ ∇f(x)**
 >
 >
 >
 > (vì Hessian của f0, tức ∇^2f0(x) CHÍNH LÀ JACOBIAN CỦA ∇f0(x))
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc khi liên hệ chính xác giữa phương pháp Newton giải hệ phương trình phi tuyến (MIT 18.06) và bài toán tối ưu lồi (EE364a Boyd). Có một vài lỗi gõ thiếu dấu trừ và cách dùng từ hình học 1D áp vào n chiều cần chuẩn hóa.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Thế thì giải ∇~f0(δx*) = 0 ⇔ ∇f0(x1) + ∇^2f0(x1)ᵀδx* ⇔ δx* = **∇^2f0(x1)⁻¹ ∇f0(x1) có thể thấy nó chính là Newton's step ở trên.**"*
+>
+> Lỗi gõ thiếu dấu trừ ở kết quả (phải là -∇^2f0(x1)⁻¹ ∇f0(x1)), dù ở các đoạn trước và sau bạn đều viết đúng dấu âm.
+>
+> **2.** *"Với việc ta đang trong R^n nên nó sẽ là một **hyperplane**... giải tìm x(2) là giao điểm của tiếp tuyến đó với trục y = 0"*
+>
+> Cách dùng từ hình học từ 1D ('tiếp tuyến', 'trục y = 0') chưa hoàn toàn chuẩn xác cho hàm f: R^n -> R^n. Với f: R^n -> R^n, xấp xỉ tuyến tính là một ánh xạ afin (affine mapping); việc giải f(x1) + J(x - x1) = 0 tương đương với việc tìm giao điểm của n siêu phẳng (mỗi phương trình f_i(x) = 0 là một siêu phẳng), cho ra duy nhất 1 điểm trong R^n chứ không phải giao điểm với 'trục y = 0'.
+>
+>
+> **✓ Strengths**
+> - Nắm rất vững bản chất của phương pháp Newton nhiều chiều: xấp xỉ tuyến tính hàm phi tuyến và giải hệ phương trình đại số tuyến tính tại mỗi bước lặp.
+> - Liên kết xuất sắc giữa bài toán tìm nghiệm f(x)=0 và bài toán tối ưu lồi: nhận diện chuẩn xác Hessian ∇^2f0(x) chính là Jacobian của gradient ∇f0(x).
+> - Trực giác đại số tuyến tính rất tốt khi nhận định đạo hàm hàm vector f: R^n -> R^n là một toán tử tuyến tính biểu diễn bằng ma trận Jacobian J.
+>
+> **💡 Deeper notes**
+> - Trong tính toán số thực tế (numerical linear algebra), người ta không bao giờ nghịch đảo ma trận J^-1 rồi nhân với f(x), mà sẽ giải hệ phương trình tuyến tính J * δx = -f(x) (dùng phép phân tích LU, Cholesky, v.v.) để tiết kiệm chi phí tính toán và tránh sai số số học.
+> - Điều kiện hội tụ bậc hai (quadratic convergence) đòi hỏi ma trận Jacobian tại nghiệm x* phải khả nghịch (nonsingular) và điểm khởi tạo x(1) phải đủ gần nghiệm (local convergence).
+
 <br>
 
 <a id="node-pjfdav4"></a>
+
+###### Phương pháp Newton với Jacobian
 
 <p align="center"><kbd><img src="assets/mp7vwlko5sq.png" width="80%"></kbd></p>
 
@@ -446,6 +425,8 @@
 <br>
 
 <a id="node-aynatw1"></a>
+
+###### Tối ưu hoá phi tuyến
 
 <p align="center"><kbd><img src="assets/obwch5lmem.png" width="80%"></kbd></p>
 
@@ -481,6 +462,8 @@
 <br>
 
 <a id="node-cjtc703"></a>
+
+###### Phương pháp Line Search
 
 <p align="center"><kbd><img src="assets/teiz3xow6i.png" width="80%"></kbd></p>
 
@@ -524,6 +507,8 @@
 <br>
 
 <a id="node-gv0ok8v"></a>
+
+###### Vấn đề tối ưu phi tuyến
 
 <p align="center"><kbd><img src="assets/b40xbnri5di.png" width="80%"></kbd></p>
 
@@ -570,6 +555,8 @@
 
 <a id="node-av0zq2n"></a>
 
+###### Lời khuyên tối ưu hóa
+
 <p align="center"><kbd><img src="assets/hehkwk13qyu.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -591,6 +578,8 @@
 <br>
 
 <a id="node-wrarv4f"></a>
+
+###### Tối ưu hóa kỹ thuật
 
 <p align="center"><kbd><img src="assets/df0egyiya04.png" width="80%"></kbd></p>
 
@@ -638,11 +627,15 @@
 
 <a id="node-t9wa86i"></a>
 
+###### Tối ưu hóa tô-pô
+
 <p align="center"><kbd><img src="assets/5jbl4ka18i7.png" width="80%"></kbd></p>
 
 <br>
 
 <a id="node-ne1rah0"></a>
+
+###### Phương pháp vi phân Adjoint
 
 <p align="center"><kbd><img src="assets/aan78f84r7q.png" width="80%"></kbd></p>
 
@@ -666,7 +659,7 @@
 >
 >
 >
-> Vậy thì nhắc lại, từ A(p)x = b ta giải ra x = A(p)inv b LÀ FUNCTION
+> Vậy thì nhắc lại, từ A(p)x = b ta giải ra x = A(p)⁻¹ b LÀ FUNCTION
 > PHỤ THUỘC A(p) 
 >
 >
@@ -683,7 +676,7 @@
 >
 >
 >
-> vì f là scalar, và x = Ainvb là column vector, nên ta đã biết f'(x) là
+> vì f là scalar, và x = A⁻¹b là column vector, nên ta đã biết f'(x) là
 > row vector
 >
 >
@@ -694,30 +687,32 @@
 >
 >
 > dx = x'(A)dA. Vậy x'(A) là gì ? thì nhờ class này ta biết cách tính
-> derivative của f(A) = Ainv: 
+> derivative của f(A) = A⁻¹: 
 >
 >
 >
-> dAinv = -Ainv.dA.Ainv 
+> dA⁻¹ = -A⁻¹.dA.A⁻¹ 
 >
 >
 >
-> nên dx = dAinvb = -Ainv.dA.Ainvb
+> nên dx = dA⁻¹b = -A⁻¹.dA.A⁻¹b
 >
 >
 >
-> ⇨ df = f'(x)dx = f'(x) [-Ainv.dA.Ainvb] = -f'(x).Ainv.dA.Ainvb
+> ⇨ df = f'(x)dx = f'(x) [-A⁻¹.dA.A⁻¹b] = -f'(x).A⁻¹.dA.A⁻¹b
 
-**🔗 See also:** [linked note](./lec_2_part_2_vectorization_of_matrix_function.md#node-ms9bk9i)
+**🔗 See also:** [Vi phân ma trận nghịch đảo](./lec_2_part_2_vectorization_of_matrix_function.md#node-ms9bk9i)
 
 <br>
 
 <a id="node-6myhtwy"></a>
 
+###### Phương pháp đạo hàm Adjoint
+
 <p align="center"><kbd><img src="assets/q6oa3xswbqe.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi khi đã có df = -f'(x).Ainv.dA.Ainvb = f'(x) Ainv dA x
+> Rồi khi đã có df = -f'(x).A⁻¹.dA.A⁻¹b = f'(x) A⁻¹ dA x
 >
 >
 >
@@ -726,13 +721,13 @@
 >
 >
 >
-> Có nghĩa là ta bắt đầu với việc tính f'(x) . Ainv
+> Có nghĩa là ta bắt đầu với việc tính f'(x) . A⁻¹
 >
 >
 >
-> Và có thể thấy f'(x) là row vector, Ainv là matrix, nên đây là nhân một row
+> Và có thể thấy f'(x) là row vector, A⁻¹ là matrix, nên đây là nhân một row
 > với một matrix, theo MIT 18.06 ta đã biết 1 trong 4 "góc nhìn" khi nhân
-> matrix thì đây có thể thấy là ta sẽ linear combination các rows của Ainv
+> matrix thì đây có thể thấy là ta sẽ linear combination các rows của A⁻¹
 > với coefficients là các components của f'(x). Và cho ra một row vector.
 >
 >
@@ -742,21 +737,21 @@
 >
 >
 >
-> Và nếu có thể không khó để hiểu việc nhân f'(x) . Ainv thực chất có thể
+> Và nếu có thể không khó để hiểu việc nhân f'(x) . A⁻¹ thực chất có thể
 > xem như ta đang giải một equation:
 >
 >
 >
-> ATv = f'(x)T
+> Aᵀv = f'(x)ᵀ
 >
 >
 >
-> (Vì ATv = f'(x)T ⇔ v = (AT)inv f'(x)T = (Ainv)T f'(x)T)
+> (Vì Aᵀv = f'(x)ᵀ ⇔ v = (Aᵀ)⁻¹ f'(x)ᵀ = (A⁻¹)ᵀ f'(x)ᵀ)
 >
 >
 >
 > Và cái này gọi là Transposed / Adjoint equation (equation thông thường
-> là Ax = b, thì ATx = bT là adjoint / transpose equation) nên cái tên Adjoint
+> là Ax = b, thì Aᵀx = bT là adjoint / transpose equation) nên cái tên Adjoint
 > method xuất phát từ đây
 >
 >
@@ -765,7 +760,7 @@
 >
 >
 >
-> vT = [(Ainv)T f'(x)T ]T = f'(x)TT (Ainv)TT = **f'(x) (Ainv)
+> vT = [(A⁻¹)ᵀ f'(x)ᵀ ]T = f'(x)ᵀᵀ (A⁻¹)ᵀᵀ = **f'(x) (A⁻¹)
 >
 >
 >
@@ -781,11 +776,11 @@
 >
 >
 >
-> Lúc đầu, ta nói rằng từ A x = b ta giải ra x = Ainv b để rồi từ đó tính f
+> Lúc đầu, ta nói rằng từ A x = b ta giải ra x = A⁻¹ b để rồi từ đó tính f
 >
 >
 >
-> Thì bây giờ cũng cùng matrix A đó, ta giải ra v bởi equation ATv = f'(x)T
+> Thì bây giờ cũng cùng matrix A đó, ta giải ra v bởi equation Aᵀv = f'(x)ᵀ
 > ====
 >
 >
@@ -817,7 +812,7 @@
 >
 >
 >
-> A(p)x = b ra x, và A(p)Tv = f'(x)T ra v GIÚP TA 1) TÍNH RA f VÀ 2) TÍNH
+> A(p)x = b ra x, và A(p)ᵀv = f'(x)ᵀ ra v GIÚP TA 1) TÍNH RA f VÀ 2) TÍNH
 > DERIVATIVE CỦA F VỚI PARAMETER BẤT KÌ ∂f/∂pk
 >
 >
@@ -829,6 +824,8 @@
 <br>
 
 <a id="node-ot93zlg"></a>
+
+###### Forward và Reverse Mode
 
 <p align="center"><kbd><img src="assets/dsvicfqpzxv.png" width="80%"></kbd></p>
 
