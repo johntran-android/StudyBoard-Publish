@@ -1140,7 +1140,7 @@
 >
 >
 >
-> Sau đó từ standard normal ta có thể suy ra công thức của normal N(μ, σ^2)
+> Sau đó từ standard normal ta có thể suy ra công thức của normal N(μ, σ²)
 >
 >
 >
@@ -1329,12 +1329,12 @@
 >
 > Vậy để có valid pdf của N(0,1) thì cái nó phải phải là (1/√2π) e^-x^2/2**
 >
-> Rồi, sau khi có pdf của N(0, 1) ta sẽ tìm pdf của N(μ, σ^2):
+> Rồi, sau khi có pdf của N(0, 1) ta sẽ tìm pdf của N(μ, σ²):
 >
 >
 >
-> Với Z ~ N(0, 1), ta sẽ tìm pdf của N(μ, σ^2), với việc nó có
-> mean là μ, và variance là σ^2 thì  
+> Với Z ~ N(0, 1), ta sẽ tìm pdf của N(μ, σ²), với việc nó có
+> mean là μ, và variance là σ² thì  
 >
 >
 >
@@ -1362,7 +1362,7 @@
 >
 >
 >
-> = (1/√2π) e^-z^2/2  | x = (x - μ)/σ) . (1/σ)
+> = (1/√2π) e^-z²/2  | x = (x - μ)/σ) . (1/σ)
 >
 >
 >
@@ -1370,7 +1370,7 @@
 >
 >
 >
-> **= (1/σ√2π) e^-[(x - μ)^2/2σ^2]  
+> **= (1/σ√2π) e^-[(x - μ)^2/2σ²]  
 >
 >
 >
@@ -1385,7 +1385,7 @@
 <p align="center"><kbd><img src="assets/009x9q4zcq4pw.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, trong sách lại nói về chiều ngược lại, là nếu ta có X ~ N(μ, σ^2) thì 
+> Rồi, trong sách lại nói về chiều ngược lại, là nếu ta có X ~ N(μ, σ²) thì 
 > Z = (X - μ)/σ  (đây cũng gọi là standardization) sẽ ~N(0, 1)
 >
 >
@@ -1431,7 +1431,7 @@
 >
 >
 >
-> = ∫-inf: (σz + u) (1/σ√2π) e^-[(x - μ)^2/2σ^2] dx
+> = ∫-inf: (σz + u) (1/σ√2π) e^-[(x - μ)^2/2σ²] dx
 >
 >
 >
@@ -1443,7 +1443,7 @@
 >
 >
 >
-> e^-[(x - μ)^2/2σ^2 = e^-[(x - μ)^2/σ^2]/2 = e^-t^2/2
+> e^-[(x - μ)^2/2σ² = e^-[(x - μ)^2/σ²]/2 = e^-t^2/2
 >
 >
 >
@@ -1468,12 +1468,12 @@
 >
 >
 >
-> hay fZ(z) = (1/√2π) e^-z^2/2.
+> hay fZ(z) = (1/√2π) e^-z²/2.
 >
 >
 >
-> Mà đây, cũng chính là pdf của N(μ, σ^2) với μ = 0, σ = 1 (vì thế hai param
-> này vào pdf của thì sẽ ra (1/√2π) e^-z^2/2.
+> Mà đây, cũng chính là pdf của N(μ, σ²) với μ = 0, σ = 1 (vì thế hai param
+> này vào pdf của thì sẽ ra (1/√2π) e^-z²/2.
 >
 >
 >
@@ -1494,32 +1494,32 @@
 >
 >
 >
-> Chứng minh EZ = 0: EZ = ∫-inf:inf zfZ(z)dz = ∫-inf:inf (1/√2π) ze^-z^2/2 dz 
+> Chứng minh EZ = 0: EZ = ∫-inf:inf zfZ(z)dz = ∫-inf:inf (1/√2π) ze^-z²/2 dz 
 >
 >
 >
-> = (1/√2π) ∫-inf:inf ze^-z^2/2 dz
+> = (1/√2π) ∫-inf:inf ze^-z²/2 dz
 >
 >
 >
-> = (1/√2π) ∫-inf:inf z e^-z^2/2 dz
+> = (1/√2π) ∫-inf:inf z e^-z²/2 dz
 >
 >
 >
 > Nhớ rằng, cái tích phân này thì tính được, có thể tìm nguyên hàm, còn
-> nếu ko có z, chỉ có e^-z^2/2 , thì mới ko tính được, phải dùng trick hồi nãy
+> nếu ko có z, chỉ có e^-z²/2 , thì mới ko tính được, phải dùng trick hồi nãy
 >
 >
 >
-> Đặt u = e^-z^2/2 ⇨ du/dz = d/d(-z^2/2) e^-z^2/2 . d/dz (-z^2/2)
+> Đặt u = e^-z²/2 ⇨ du/dz = d/d(-z²/2) e^-z²/2 . d/dz (-z²/2)
 >
 >
 >
-> = e^-z^2/2 . (-z) = - z e^-z^2/2 ⇨ du = - z e^-z^2/2 dz
+> = e^-z²/2 . (-z) = - z e^-z²/2 ⇨ du = - z e^-z²/2 dz
 >
 >
 >
-> z → -inf hay inf ⇨ - z^2/2 → -inf ⇨ u = e^-z^2/2 → 0
+> z → -inf hay inf ⇨ - z²/2 → -inf ⇨ u = e^-z²/2 → 0
 >
 >
 >
@@ -1531,11 +1531,11 @@
 >
 >
 >
-> EZ^2 =  ∫-inf:inf z^2fZ(z)dz = ∫-inf:inf (1/√2π) z^2 e^-z^2/2 dz
+> EZ^2 =  ∫-inf:inf z²fZ(z)dz = ∫-inf:inf (1/√2π) z² e^-z²/2 dz
 >
 >
 >
-> = (1/√2π) ∫-inf:inf z^2 e^-z^2/2 dz
+> = (1/√2π) ∫-inf:inf z² e^-z²/2 dz
 >
 >
 >
@@ -1543,7 +1543,7 @@
 >
 >
 >
-> dv = z e^-z^2/2 dz ⇨ v = - e^-z^2/2
+> dv = z e^-z²/2 dz ⇨ v = - e^-z²/2
 >
 >
 >
@@ -1551,11 +1551,11 @@
 >
 >
 >
-> ∫-inf:inf z^2 e^-z^2/2 dz = (∫-inf:inf udv) 
+> ∫-inf:inf z² e^-z²/2 dz = (∫-inf:inf udv) 
 >
 >
 >
-> = z(-e^-z^2/2) |-inf:inf + ∫-inf:inf (-e^-z^2/2) dz | đây chính là uv - ∫vdu
+> = z(-e^-z²/2) |-inf:inf + ∫-inf:inf (-e^-z²/2) dz | đây chính là uv - ∫vdu
 >
 >
 >
@@ -1564,19 +1564,19 @@
 >
 >
 >
-> **Tính z(-e^-z^2/2) |-inf:inf:**
+> **Tính z(-e^-z²/2) |-inf:inf:**
 >
 >
 >
-> z → -inf/+inf ⇨ -z^2/2 → -inf ⇨ e^-z^2/2 → 0 ⇨ z(-e^-z^2/2) → 0
+> z → -inf/+inf ⇨ -z²/2 → -inf ⇨ e^-z²/2 → 0 ⇨ z(-e^-z²/2) → 0
 >
 >
 >
-> ⇨ z(-e^-z^2/2) |-inf:inf = 0 - 0 = 0
+> ⇨ z(-e^-z²/2) |-inf:inf = 0 - 0 = 0
 >
 >
 >
-> **Tính ∫-inf:inf (- e^-z^2/2) dz:** 
+> **Tính ∫-inf:inf (- e^-z²/2) dz:** 
 >
 >
 >
@@ -1586,15 +1586,15 @@
 >
 >
 >
-> ⇨ ∫-inf:inf (-e^-z^2/2) dz = -√2π
+> ⇨ ∫-inf:inf (-e^-z²/2) dz = -√2π
 >
 >
 >
-> Vậy EZ^2 = (1/√2π) ∫-inf:inf z^2 e^-z^2/2 dz
+> Vậy EZ^2 = (1/√2π) ∫-inf:inf z² e^-z²/2 dz
 >
 >
 >
-> = (1/√2π) [z(-e^-z^2/2) |-inf:inf + ∫-inf:inf (-e^-z^2/2) dz]
+> = (1/√2π) [z(-e^-z²/2) |-inf:inf + ∫-inf:inf (-e^-z²/2) dz]
 >
 >
 >
@@ -1614,7 +1614,7 @@
 >
 >
 >
-> =  σ^2 Var(Z) = **σ^2**
+> =  σ² Var(Z) = **σ²**
 
 <br>
 
@@ -1629,24 +1629,24 @@
 <p align="center"><kbd><img src="assets/96s9lhrdmmu.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Phần này nói về cách tính cái tích phân ∫-inf:inf e^-z^2/2dz, mình đã làm rồi.
+> Phần này nói về cách tính cái tích phân ∫-inf:inf e^-z²/2dz, mình đã làm rồi.
 >
 >
 >
 > (ở đây giáo sư Casella làm ngược lại với giáo sư Blizstein, ông Bliz trong
 > stat110 thì giới thiệu pdf của N(0,1) trước. Nói rằng ta chỉ cần nhớ nó có
-> dạng c e^-z^2/2. Xong ta mới dùng tính valid của pdf để để tìm c, bằng cách
-> tính cái tích phân ∫-inf:inf e^-z^2/2dz. Từ đó suy ra công thức của N(μ, σ^2)...
+> dạng c e^-z²/2. Xong ta mới dùng tính valid của pdf để để tìm c, bằng cách
+> tính cái tích phân ∫-inf:inf e^-z²/2dz. Từ đó suy ra công thức của N(μ, σ²)...
 >
 >
 >
-> Ở đây thì giới thiệu pdf của N(μ, σ^2) trước, rồi mới đến N(0,1), và tính tích
+> Ở đây thì giới thiệu pdf của N(μ, σ²) trước, rồi mới đến N(0,1), và tính tích
 > phân trên đến chứng minh tính validity của pdf
 >
 >
 >
 > Nói chung với Normal distribution thì cái mấu chốt là nhớ cái trick để deal với
-> cái tích phân này ∫-inf:inf e^-z^2/2dz
+> cái tích phân này ∫-inf:inf e^-z²/2dz
 
 <br>
 
@@ -1657,11 +1657,11 @@
 <p align="center"><kbd><img src="assets/pcv287vfx2l.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ở đây nói cái tích phân ∫-inf:inf e^-z^2/2 dz 
+> Ở đây nói cái tích phân ∫-inf:inf e^-z²/2 dz 
 >
 >
 >
-> = 2 ∫0:inf e^-z^2/2 dz (vì tính đối xứng do e^-z^2/2 là hàm chẵn)
+> = 2 ∫0:inf e^-z²/2 dz (vì tính đối xứng do e^-z²/2 là hàm chẵn)
 >
 >
 >
@@ -1669,11 +1669,11 @@
 >
 >
 >
-> Nếu thay w = z^2/2 ⇨ w^1/2 = z/√2 ⇨ z = (√2) w^1/2
+> Nếu thay w = z²/2 ⇨ w^1/2 = z/√2 ⇨ z = (√2) w^1/2
 >
 >
 >
-> ⇨ e^-z^2/2 = e^-w
+> ⇨ e^-z²/2 = e^-w
 >
 >
 >
@@ -1689,7 +1689,7 @@
 >
 >
 >
-> ⇨ 2 ∫0:inf e^-z^2/2 dz = ∫0:inf e^-w (1/√2) dw w^(-1/2)
+> ⇨ 2 ∫0:inf e^-z²/2 dz = ∫0:inf e^-w (1/√2) dw w^(-1/2)
 >
 >
 >
@@ -1717,7 +1717,7 @@
 >
 >
 >
-> Vậy 2 ∫0:inf e^-z^2/2 dz = (2/√2) ∫0:inf e^-w w^(-1/2)  dw
+> Vậy 2 ∫0:inf e^-z²/2 dz = (2/√2) ∫0:inf e^-w w^(-1/2)  dw
 >
 >
 >
@@ -1725,7 +1725,7 @@
 >
 >
 >
-> Và cái tích phân ∫-inf:inf e^-z^2/2 dz  đã chứng minh là bằng √2π 
+> Và cái tích phân ∫-inf:inf e^-z²/2 dz  đã chứng minh là bằng √2π 
 >
 >
 >
@@ -1764,7 +1764,7 @@
 >
 >
 >
-> Ở đây ta có f(x) = (1/σ√2π) e^-[(x - μ)^2/2σ^2]
+> Ở đây ta có f(x) = (1/σ√2π) e^-[(x - μ)^2/2σ²]
 >
 >
 >
@@ -1772,43 +1772,43 @@
 >
 >
 >
-> d/dx (1/σ√2π) e^-[(x - μ)^2/2σ^2] 
+> d/dx (1/σ√2π) e^-[(x - μ)^2/2σ²] 
 >
 >
 >
-> = (1/σ√2π) d/dx e^-[(x - μ)^2/2σ^2]
+> = (1/σ√2π) d/dx e^-[(x - μ)^2/2σ²]
 >
 >
 >
-> = (1/σ√2π) d/d(-[(x - μ)^2/2σ^2]) e^-[(x - μ)^2/2σ^2] . d/dx (-[(x - μ)^2/2σ^2])
+> = (1/σ√2π) d/d(-[(x - μ)^2/2σ²]) e^-[(x - μ)^2/2σ²] . d/dx (-[(x - μ)^2/2σ²])
 >
 >
 >
-> = (1/σ√2π) e^-[(x - μ)^2/2σ^2] . d/dx (-[(x - μ)^2/2σ^2])
+> = (1/σ√2π) e^-[(x - μ)^2/2σ²] . d/dx (-[(x - μ)^2/2σ²])
 >
 >
 >
-> Xét d/dx (-[(x - μ)^2/2σ^2]) = - (1/2σ^2) d/dx (x - μ)^2
+> Xét d/dx (-[(x - μ)^2/2σ²]) = - (1/2σ²) d/dx (x - μ)^2
 >
 >
 >
-> = - (1/2σ^2) 2(x - μ) = - (x - μ)/σ^2
+> = - (1/2σ²) 2(x - μ) = - (x - μ)/σ²
 >
 >
 >
-> ⇨ .. = (1/σ√2π) e^-[(x - μ)^2/2σ^2] [-(x - μ)/σ^2]
+> ⇨ .. = (1/σ√2π) e^-[(x - μ)^2/2σ²] [-(x - μ)/σ²]
 >
 >
 >
-> = - (1/σ^2σ√2π) e^-[(x - μ)^2/2σ^2] [(x - μ)]
+> = - (1/σ²σ√2π) e^-[(x - μ)^2/2σ²] [(x - μ)]
 >
 >
 >
-> = - (1/σ^3√2π) e^-[(x - μ)^2/2σ^2] [(x - μ)]
+> = - (1/σ^3√2π) e^-[(x - μ)^2/2σ²] [(x - μ)]
 >
 >
 >
-> d/dx = 0 ⇔ e^-[(x - μ)^2/2σ^2] [(x - μ)] = 0
+> d/dx = 0 ⇔ e^-[(x - μ)^2/2σ²] [(x - μ)] = 0
 >
 >
 >
@@ -1816,7 +1816,7 @@
 >
 >
 >
-> Khi x → -inf/inf thì e^-[(x - μ)^2/2σ^2] → 0 nên tại +/-inf thì đạo
+> Khi x → -inf/inf thì e^-[(x - μ)^2/2σ²] → 0 nên tại +/-inf thì đạo
 > hàm f(x) cũng bằng 0
 >
 >
@@ -1825,11 +1825,11 @@
 >
 >
 >
-> f(μ) = (1/σ√2π) e^-[(μ - μ)^2/2σ^2] = (1/σ√2π) e^0 = 1/σ√2π
+> f(μ) = (1/σ√2π) e^-[(μ - μ)^2/2σ²] = (1/σ√2π) e^0 = 1/σ√2π
 >
 >
 >
-> x → +/- inf → -[(x - μ)^2/2σ^2] → -inf ⇨ e^-[(μ - μ)^2/2σ^2] → 0
+> x → +/- inf → -[(x - μ)^2/2σ²] → -inf ⇨ e^-[(μ - μ)^2/2σ²] → 0
 >
 >
 >
@@ -1853,15 +1853,15 @@
 >
 >
 >
-> d/dx f'(x) = d/dx {- (1/σ^3√2π) e^-[(x - μ)^2/2σ^2] [(x - μ)] }
+> d/dx f'(x) = d/dx {- (1/σ^3√2π) e^-[(x - μ)^2/2σ²] [(x - μ)] }
 >
 >
 >
-> = - (1/σ^3√2π)  d/dx {e^-[(x - μ)^2/2σ^2] [(x - μ)] }
+> = - (1/σ^3√2π)  d/dx {e^-[(x - μ)^2/2σ²] [(x - μ)] }
 >
 >
 >
-> Tính cái này, d/dx {e^-[(x - μ)^2/2σ^2] [(x - μ)]
+> Tính cái này, d/dx {e^-[(x - μ)^2/2σ²] [(x - μ)]
 >
 >
 >
@@ -1869,23 +1869,23 @@
 >
 >
 >
-> = d/dx {e^-[(x - μ)^2/2σ^2]} [(x - μ)] + {e^-[(x - μ)^2/2σ^2]} d/dx (x - μ)
+> = d/dx {e^-[(x - μ)^2/2σ²]} [(x - μ)] + {e^-[(x - μ)^2/2σ²]} d/dx (x - μ)
 >
 >
 >
-> = e^-[(x - μ)^2/2σ^2] [-2(x - μ)/2σ^2] (x - μ) + e^-[(x - μ)^2/2σ^2] 
+> = e^-[(x - μ)^2/2σ²] [-2(x - μ)/2σ²] (x - μ) + e^-[(x - μ)^2/2σ²] 
 >
 >
 >
-> = e^-[(x - μ)^2/2σ^2] [-(x - μ)^2/σ^2] + e^-[(x - μ)^2/2σ^2] 
+> = e^-[(x - μ)^2/2σ²] [-(x - μ)^2/σ²] + e^-[(x - μ)^2/2σ²] 
 >
 >
 >
-> = e^-[(x - μ)^2/2σ^2] { [-(x - μ)^2/σ^2] + 1}
+> = e^-[(x - μ)^2/2σ²] { [-(x - μ)^2/σ²] + 1}
 >
 >
 >
-> ⇨ d^2/dx^2 f(x) = - (1/σ^3√2π)  e^-[(x - μ)^2/2σ^2] { [-(x - μ)^2/σ^2] + 1}
+> ⇨ d^2/dx^2 f(x) = - (1/σ^3√2π)  e^-[(x - μ)^2/2σ²] { [-(x - μ)^2/σ²] + 1}
 >
 >
 >
@@ -1894,7 +1894,7 @@
 >
 >
 >
-> \- (1/σ^3√2π) e^-[(μ - μ)^2/2σ^2] { [-(μ - μ)^2/σ^2] + 1}
+> \- (1/σ^3√2π) e^-[(μ - μ)^2/2σ²] { [-(μ - μ)^2/σ²] + 1}
 >
 >
 >
@@ -1919,7 +1919,7 @@
 >
 >
 > Ví dụ như X ~ binomial(n, p) và n lớn, p không quá gần 0 hay 1 thì khi đó
-> X có thể được coi như một N(μ = np, σ^2 = npq)
+> X có thể được coi như một N(μ = np, σ² = npq)
 
 <br>
 
@@ -2324,14 +2324,14 @@
 
 > [!NOTE]
 > Ta qua một distribution mà stat110 chưa gặp, nhưng trong EE364A thì có nghe
-> nói rồi: Log normal. Đơn giản là nếu log X ~ N(μ, σ^2) thì X ~ log normal.
+> nói rồi: Log normal. Đơn giản là nếu log X ~ N(μ, σ²) thì X ~ log normal.
 > Gs cho rằng có thể derive pdf dùng transformation từ pdf của Normal, thử làm
 > xem:
 >
 >
 >
-> Ta có Y = logX sẽ là một N(μ, σ^2) theo định nghĩa của log normal ở trên.
-> và ta đã biết pdf của Y: fY(y) = (1/σ√2π) e^-[(y - μ)^2/2σ^2]
+> Ta có Y = logX sẽ là một N(μ, σ²) theo định nghĩa của log normal ở trên.
+> và ta đã biết pdf của Y: fY(y) = (1/σ√2π) e^-[(y - μ)^2/2σ²]
 >
 >
 >
@@ -2400,19 +2400,19 @@
 >
 >
 >
-> ⇔ (1/σ√2π) e^-[(y - μ)^2/2σ^2]  = fX(e^y) e^y 
+> ⇔ (1/σ√2π) e^-[(y - μ)^2/2σ²]  = fX(e^y) e^y 
 >
 >
 >
-> ⇔  (1/σ√2π) e^-[(y - μ)^2/2σ^2] / e^y = fX(e^y)
+> ⇔  (1/σ√2π) e^-[(y - μ)^2/2σ²] / e^y = fX(e^y)
 >
 >
 >
-> ⇔ fX(e^y) = (1/e^yσ√2π) e^-[(y - μ)^2/2σ^2] 
+> ⇔ fX(e^y) = (1/e^yσ√2π) e^-[(y - μ)^2/2σ²] 
 >
 >
 >
-> **⇔ fX(x) = (1/σ√2π) (1/x) e^-[(log(x) - μ)^2/2σ^2]**  | x = e^y
+> **⇔ fX(x) = (1/σ√2π) (1/x) e^-[(log(x) - μ)^2/2σ²]**  | x = e^y
 >
 >
 >
@@ -2430,11 +2430,11 @@
 >
 >
 >
-> Nhưng có cách làm nhanh hơn, vì ta biết log X ~ N(μ, σ^2)
+> Nhưng có cách làm nhanh hơn, vì ta biết log X ~ N(μ, σ²)
 >
 >
 >
-> ⇨ Y = log X thì mgf của Y là e^(μt+σ^2/2)
+> ⇨ Y = log X thì mgf của Y là e^(μt+σ²/2)
 >
 >
 >
@@ -2446,12 +2446,12 @@
 >
 >
 >
-> Áp dụng công thức mgf của Normal μ, σ là e^[μt + σ^2t^2/2] ta có thể suy
-> ra **Ee^Y = e^(μ + σ^2/2)
+> Áp dụng công thức mgf của Normal μ, σ là e^[μt + σ²t^2/2] ta có thể suy
+> ra **Ee^Y = e^(μ + σ²/2)
 >
 >
 >
-> Vậy EX =  e^(μ + σ^2/2)**
+> Vậy EX =  e^(μ + σ²/2)**
 >
 >
 >
@@ -2463,15 +2463,15 @@
 >
 >
 >
-> = e^(2μ+2^2σ^2/2)
+> = e^(2μ+2^2σ²/2)
 >
 >
 >
-> = e^2(μ+σ^2)
+> = e^2(μ+σ²)
 >
 >
 >
-> ⇨ EX^2 = e^2(μ+σ^2)
+> ⇨ EX^2 = e^2(μ+σ²)
 >
 >
 >
@@ -2479,11 +2479,11 @@
 >
 >
 >
-> = e^2(μ+σ^2) -  [e^(μ + σ^2/2)]^2
+> = e^2(μ+σ²) -  [e^(μ + σ²/2)]^2
 >
 >
 >
-> **= e^2(μ+σ^2) -  e^(2μ + σ^2)
+> **= e^2(μ+σ²) -  e^(2μ + σ²)
 >
 >
 >
