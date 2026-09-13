@@ -5,11 +5,11 @@
 ---
 <a id="node-x5hoi90"></a>
 
-## Lec 3 Part 1 Kronecker Products And Jacobians
-
 <br>
 
 <a id="node-3wn0rju"></a>
+
+## Đạo hàm chuẩn L2
 
 <p align="center"><kbd><img src="assets/z2iqibgl2ui.png" width="80%"></kbd></p>
 
@@ -20,6 +20,8 @@
 <br>
 
 <a id="node-f32ve9x"></a>
+
+### Đạo hàm chuẩn L2
 
 <p align="center"><kbd><img src="assets/be843kq4e3w.png" width="80%"></kbd></p>
 
@@ -62,6 +64,8 @@
 
 <a id="node-ht9znhy"></a>
 
+#### Gradient của chuẩn vector
+
 <p align="center"><kbd><img src="assets/r9d1wp8dyr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -69,19 +73,19 @@
 >
 >
 >
-> Và từ đó **r^2 = xTx**.
+> Và từ đó **r^2 = xᵀx**.
 >
 >
 >
-> Sau đó **lấy derivative hai vế** để có **2rdr = 2xT.dx (*)**
+> Sau đó **lấy derivative hai vế** để có **2rdr = 2xᵀ.dx (*)**
 >
 >
 >
-> Từ đó **dr = (xT/r)dx**
+> Từ đó **dr = (xᵀ/r)dx**
 >
 >
 >
-> Và **grad vector** sẽ là **(xT/r)T = x/r**
+> Và **grad vector** sẽ là **(xᵀ/r)ᵀ = x/r**
 >
 >
 >
@@ -89,43 +93,45 @@
 >
 >
 >
-> Đầu tiên là d(xTx). Ta có thể dùng d(fg) = fdg + gdf => d(xTx)
-> = xTdx + d(xT)x. 
+> Đầu tiên là d(xᵀx). Ta có thể dùng d(fg) = fdg + gdf => d(xᵀx)
+> = xᵀdx + d(xᵀ)x. 
 >
 >
 >
-> Hoặc có thể tính nhanh d(xT) theo cách làm ở 18096 này: 
+> Hoặc có thể tính nhanh d(xᵀ) theo cách làm ở 18096 này: 
 >
 >
 >
-> d(xT) = (x+dx)T - xT = xT + dxT - xT = dxT
+> d(xᵀ) = (x+dx)ᵀ - xᵀ = xᵀ + dxᵀ - xᵀ = dxᵀ
 >
 >
 >
-> nên xTdx + d(xT)x = xTdx + dxTx. 
+> nên xᵀdx + d(xᵀ)x = xᵀdx + dxᵀx. 
 >
 >
 >
-> Tới đây vì xTdx là scalar nên xTdx = (xTdx)T = dxTx 
+> Tới đây vì xᵀdx là scalar nên xᵀdx = (xᵀdx)ᵀ = dxᵀx 
 >
 >
 >
-> => xTdx + dxTx = 2xTdx. 
+> => xᵀdx + dxᵀx = 2xᵀdx. 
 >
 >
 >
-> Vậy 2rdr = 2xTdx => dr = xT/rdx => ∇f = (xT/r)T = x/r
+> Vậy 2rdr = 2xᵀdx => dr = xᵀ/rdx => ∇f = (xᵀ/r)ᵀ = x/r
 >
 >
 >
 >
 > Đây có thể thấy chính là cách làm của implicit differentiation
 > thay vì để nguyên r = ||x|| lấy đạo hàm thì khó, nhưng chuyển
-> thành r^2 = xTx thì dễ
+> thành r^2 = xᵀx thì dễ
 
 <br>
 
 <a id="node-9pbsyga"></a>
+
+##### Đạo hàm của Matrix(x)x
 
 <p align="center"><kbd><img src="assets/p1a8gmpv87k.png" width="80%"></kbd></p>
 
@@ -135,11 +141,13 @@
 > matrix từ input x. Gs cho rằng ta sẽ cần làm thêm một số việc khi
 > tính dMatrix(x)
 
-**🔗 See also:** [linked note](./problem_sets_1.md#node-tmaslt6)
+**🔗 See also:** [Ma trận Jacobian phép biến đổi](./problem_sets_1.md#node-tmaslt6)
 
 <br>
 
 <a id="node-to0b5u3"></a>
+
+###### Hàm Matrix-Matrix
 
 <p align="center"><kbd><img src="assets/5oi06np15o5.png" width="80%"></kbd></p>
 
@@ -151,11 +159,13 @@
 >
 >
 > Hoặc gs có nhắc đến **eigendecomposition**, là function take in matrix
-> và output ra nhiều matrix (**A = SΛSinv**)
+> và output ra nhiều matrix (**A = SΛS⁻¹**)
 
 <br>
 
 <a id="node-84zsi9n"></a>
+
+###### Vector hóa bằng hàm vec()
 
 <p align="center"><kbd><img src="assets/8dxezw9r9a7.png" width="80%"></kbd></p>
 
@@ -171,6 +181,8 @@
 <br>
 
 <a id="node-9p2tt1n"></a>
+
+###### Jacobian tượng trưng trong Julia
 
 <p align="center"><kbd><img src="assets/ys6qb844v4m.png" width="80%"></kbd></p>
 
@@ -209,6 +221,8 @@
 
 <a id="node-7iif6bt"></a>
 
+###### Ma trận Jacobian số trị
+
 <p align="center"><kbd><img src="assets/q600bftdw2.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/c8f6pdmutba.png" width="80%"></kbd></p>
@@ -240,6 +254,8 @@
 
 <a id="node-p6ydt66"></a>
 
+###### Phép biến đổi tuyến tính
+
 <p align="center"><kbd><img src="assets/fkkrba59ex.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -254,6 +270,8 @@
 
 <a id="node-atjioyb"></a>
 
+###### Tích Kronecker
+
 <p align="center"><kbd><img src="assets/jagesmyaw2.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -262,6 +280,8 @@
 <br>
 
 <a id="node-60rtte8"></a>
+
+###### Tích Kronecker ma trận
 
 <p align="center"><kbd><img src="assets/1if8emddos7.png" width="80%"></kbd></p>
 
@@ -272,6 +292,8 @@
 <br>
 
 <a id="node-6eqfxh9"></a>
+
+###### Jacobian của hàm X^2
 
 <p align="center"><kbd><img src="assets/1mlfu2odt0a.png" width="80%"></kbd></p>
 
@@ -323,11 +345,11 @@
 >
 >
 >
-> Thì ta sẽ dùng cái công thức **Kronecker** product gs Alan nói ở next slide: 
+> Thì ta sẽ dùng cái công thức **Kronecker** product gs Alan nói ở nexᵀ slide: 
 >
 >
 >
-> **(A** ⊗ **B).vec(C) = vec[BC(AT)]** với ⊗ là **Kronecker product**.
+> **(A** ⊗ **B).vec(C) = vec[BC(Aᵀ)]** với ⊗ là **Kronecker product**.
 >
 >
 >
@@ -348,36 +370,40 @@
 >
 >
 >
-> ii) vec(dX.X) = **vec(I.dX.X)** = **(XT** ⊗ **I) vec(dX)**
+> ii) vec(dX.X) = **vec(I.dX.X)** = **(Xᵀ** ⊗ **I) vec(dX)**
 >
 >
 >
-> => vec(XdX+dXX) = **(I** ⊗ **X) vec(dX) + (XT** ⊗ **I) vec(dX)** 
+> => vec(XdX+dXX) = **(I** ⊗ **X) vec(dX) + (Xᵀ** ⊗ **I) vec(dX)** 
 >
 >
 >
-> => **d vec(dX^2) = (I** ⊗ **X + XT** ⊗ **I) vec(dX)**
+> => **d vec(dX^2) = (I** ⊗ **X + Xᵀ** ⊗ **I) vec(dX)**
 >
 >
 >
-> Từ đó Jacobian của f(X) = X^2 là **(I** ⊗ **X + XT** ⊗ **I)**
+> Từ đó Jacobian của f(X) = X^2 là **(I** ⊗ **X + Xᵀ** ⊗ **I)**
 >
 > Jacobian của f(X) = X^2
-> là (I ⊗ X + XT ⊗ I)
+> là (I ⊗ X + Xᵀ ⊗ I)
 
 <br>
 
 <a id="node-vbfx079"></a>
 
+###### Đồng nhất thức Kronecker
+
 <p align="center"><kbd><img src="assets/8s5tpjkl40o.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > gs cho rằng nên đơn thuần là ghi nhớ công thức
-> này: **(A** ⊗ **B)vec(C) = vec(BCAT)**
+> này: **(A** ⊗ **B)vec(C) = vec(BCAᵀ)**
 
 <br>
 
 <a id="node-e43mehu"></a>
+
+###### Tính chất tích Kronecker
 
 <p align="center"><kbd><img src="assets/n6p3eoz0bq.png" width="80%"></kbd></p>
 
@@ -387,11 +413,11 @@
 >
 >
 >
-> (A ⊗ B)T = AT ⊗ BT
+> (A ⊗ B)ᵀ = Aᵀ ⊗ Bᵀ
 >
 >
 >
-> (A ⊗ B)inv = Ainv ⊗ Binv
+> (A ⊗ B)⁻¹ = A⁻¹ ⊗ B⁻¹
 >
 >
 >
@@ -405,6 +431,8 @@
 
 <a id="node-alm4ry4"></a>
 
+###### Toán tử tuyến tính dX^2
+
 <p align="center"><kbd><img src="assets/h0eyoaimnyi.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -413,11 +441,13 @@
 >
 >
 > và ông cho rằng **tôi thích thể hiện ở dạng linear operator** như gs Steve
-> bữa trước là **dX^2** là **linear operator [I** ⊗ **X + XT** ⊗ **I]** **act on dX**
+> bữa trước là **dX^2** là **linear operator [I** ⊗ **X + Xᵀ** ⊗ **I]** **act on dX**
 
 <br>
 
 <a id="node-dskn6wq"></a>
+
+###### Jacobian trong ký hiệu Kronecker
 
 <p align="center"><kbd><img src="assets/71jg8iu2aog.png" width="80%"></kbd></p>
 
@@ -427,16 +457,18 @@
 >
 >
 >
-> **d(X^2) = (I** ⊗ **X + XT** ⊗ **I) dX** 
+> **d(X^2) = (I** ⊗ **X + Xᵀ** ⊗ **I) dX** 
 >
 >
 >
 > mang ý nghĩa là **linear operator,** act on dX (và tự hiểu dX là
-> vector) trong đó (I ⊗ X + XT ⊗ I) đóng vai trò là linear operator
+> vector) trong đó (I ⊗ X + Xᵀ ⊗ I) đóng vai trò là linear operator
 
 <br>
 
 <a id="node-b3lzaff"></a>
+
+###### Đạo hàm ma trận $X^3$
 
 <p align="center"><kbd><img src="assets/t23qm6rbmh.png" width="80%"></kbd></p>
 
@@ -447,6 +479,8 @@
 
 <a id="node-ma7eisk"></a>
 
+###### Jacobian của ma trận X³
+
 <p align="center"><kbd><img src="assets/gtsnrnyg79r.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -456,6 +490,8 @@
 <br>
 
 <a id="node-85mmtur"></a>
+
+###### Jacobian của hàm ma trận X³
 
 <p align="center"><kbd><img src="assets/hjnex5egoi7.png" width="80%"></kbd></p>
 
@@ -517,15 +553,15 @@
 >
 >
 >
-> Tới đây ta dùng identity: (A ⊗ B) vec(C) = vec(BCAT)
+> Tới đây ta dùng identity: (A ⊗ B) vec(C) = vec(BCAᵀ)
 >
 >
 >
-> = [(X^2)T ⊗ I] vec(dx) + (XT ⊗ X) vec(dx) + (I ⊗ X^2) vec(dx)
+> = [(X^2)ᵀ ⊗ I] vec(dx) + (Xᵀ ⊗ X) vec(dx) + (I ⊗ X^2) vec(dx)
 >
 >
 >
-> = [(X^2)T ⊗ I + XT ⊗ X + I ⊗ X^2] vec(dx)
+> = [(X^2)ᵀ ⊗ I + Xᵀ ⊗ X + I ⊗ X^2] vec(dx)
 >
 >
 >
@@ -533,15 +569,17 @@
 >
 >
 >
-> vec(df) = [(X^2)T** ⊗ **I + XT** ⊗ **X + I** ⊗ **X^2] vec(dx)
+> vec(df) = [(X^2)ᵀ** ⊗ **I + Xᵀ** ⊗ **X + I** ⊗ **X^2] vec(dx)
 >
 >
 >
-> => J là [(X^2)T** ⊗ **I + XT** ⊗ **X + I** ⊗ **X^2]**
+> => J là [(X^2)ᵀ** ⊗ **I + Xᵀ** ⊗ **X + I** ⊗ **X^2]**
 
 <br>
 
 <a id="node-677vz2d"></a>
+
+###### Kiểm tra Jacobian trong Julia
 
 <p align="center"><kbd><img src="assets/zs4neicqwy.png" width="80%"></kbd></p>
 
@@ -551,6 +589,8 @@
 <br>
 
 <a id="node-x46leb4"></a>
+
+###### Vi phân ma trận X^3
 
 <p align="center"><kbd><img src="assets/yia5vfbqcx.png" width="80%"></kbd></p>
 
@@ -566,13 +606,15 @@
 >
 >
 > Còn cách thể hiện tiêu chuẩn là **vec(dX^3) = (linear operator)[vec(dX)]
-> trong đò linear operator là (X^2)T** ⊗ **I + XT** ⊗ **X + I** ⊗ **X^2**
+> trong đò linear operator là (X^2)ᵀ** ⊗ **I + Xᵀ** ⊗ **X + I** ⊗ **X^2**
 >
 > df của f = X^3
 
 <br>
 
 <a id="node-1zz1rcs"></a>
+
+###### df của LU Factorization
 
 <p align="center"><kbd><img src="assets/mihu2sowk8r.png" width="80%"></kbd></p>
 
@@ -606,6 +648,8 @@
 
 <a id="node-vrbj7ky"></a>
 
+###### Tích Kronecker trong vi phân
+
 <p align="center"><kbd><img src="assets/mg5nnvtq2y.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -625,11 +669,13 @@
 >
 >
 >
-> = **(I** ⊗ **L)[dU]** + **(UT** ⊗ **I)[dL]**
+> = **(I** ⊗ **L)[dU]** + **(Uᵀ** ⊗ **I)[dL]**
 
 <br>
 
 <a id="node-3pgpxjs"></a>
+
+###### Đạo hàm dL/dW trong Backpropagation
 
 <p align="center"><kbd><img src="assets/k4b19nk02w.png" width="80%"></kbd></p>
 
@@ -649,7 +695,7 @@
 >
 >
 > Thế thì ta đã có dL/dZ, tức là gradient vector của L đối với Z. Do đó như đã biết
-> derivative sẽ là gradient transpose để phép toán phù hợp về kích thức: dL = (dL/dZ)TdZ
+> derivative sẽ là gradient transpose để phép toán phù hợp về kích thức: dL = (dL/dZ)ᵀdZ
 >
 >
 >
@@ -676,73 +722,73 @@
 >
 >
 >
-> viết vế phải thành vec(I dW X) để dùng Identity: (A ⊗ B) vec(C) = vec(BCAT) (thật ra nó
-> có Identity khác là (A ⊗ I) vec(B) = vec(BAT) nhưng nhớ công thức trên cho tổng quát)
+> viết vế phải thành vec(I dW X) để dùng Identity: (A ⊗ B) vec(C) = vec(BCAᵀ) (thật ra nó
+> có Identity khác là (A ⊗ I) vec(B) = vec(BAᵀ) nhưng nhớ công thức trên cho tổng quát)
 >
 >
 >
-> Vậy ta có **vec(dZ)** = vec(dW X) = vec(I dW X) = **(XT** ⊗ **I) vec(dW)
+> Vậy ta có **vec(dZ)** = vec(dW X) = vec(I dW X) = **(Xᵀ** ⊗ **I) vec(dW)
 >
 >
 >
-> vec(dZ) = (XT** ⊗ **I) vec(dW)**
+> vec(dZ) = (Xᵀ** ⊗ **I) vec(dW)**
 >
 >
 >
-> Tới đây, quay lại ta đang có dL = (dL/dZ)T dZ thì bản chất dL/dZ và dZ đã đang là
+> Tới đây, quay lại ta đang có dL = (dL/dZ)ᵀ dZ thì bản chất dL/dZ và dZ đã đang là
 > vector nên có quyền ghi dL/dZ = vec(dL/dZ), dZ = vec(dZ) Từ đó:
 >
 >
 >
-> dL = vec(dL/dZ)T . vec(dZ) (*)
+> dL = vec(dL/dZ)ᵀ . vec(dZ) (*)
 >
 >
 >
-> Và nhờ vậy ta có thể thay vec(dZ) = (XT ⊗ I) vec(dW) vào:
+> Và nhờ vậy ta có thể thay vec(dZ) = (Xᵀ ⊗ I) vec(dW) vào:
 >
 >
 >
-> dL = **vec(dL/dZ)T (XT** ⊗ **I)** vec(dW)
+> dL = **vec(dL/dZ)ᵀ (Xᵀ** ⊗ **I)** vec(dW)
 >
 >
 >
-> Và tới đây vì **dL phải bằng vec(dL/dW)T vec(dW)** (y như dL = vec(dL/dZ)T vec(dZ)
+> Và tới đây vì **dL phải bằng vec(dL/dW)ᵀ vec(dW)** (y như dL = vec(dL/dZ)ᵀ vec(dZ)
 >
 >
 >
-> cho nên cái phần in đậm chính là **vec(dL/dW)T**:
+> cho nên cái phần in đậm chính là **vec(dL/dW)ᵀ**:
 >
 >
 >
-> **vec(dL/dW)T = vec(dL/dZ)T (XT** ⊗ **I)**
+> **vec(dL/dW)ᵀ = vec(dL/dZ)ᵀ (Xᵀ** ⊗ **I)**
 >
 >
 >
-> <=> vec(dL/dW) = [vec(dL/dZ)T (XT ⊗ I)]T
+> <=> vec(dL/dW) = [vec(dL/dZ)ᵀ (Xᵀ ⊗ I)]T
 >
 >
 >
-> <=> **vec(dL/dW) = (XT** ⊗ **I)T vec(dL/dZ)**
+> <=> **vec(dL/dW) = (Xᵀ** ⊗ **I)ᵀ vec(dL/dZ)**
 >
 >
 >
-> Dùng identity: (A ⊗ B)T = AT ⊗ BT <=> **vec(dL/dW) = (X** ⊗ **I) vec(dL/dZ)**
+> Dùng identity: (A ⊗ B)ᵀ = Aᵀ ⊗ Bᵀ <=> **vec(dL/dW) = (X** ⊗ **I) vec(dL/dZ)**
 >
 >
 >
-> Tới đây áp dụng (A ⊗ B) vec(C) = vec(BCAT)
+> Tới đây áp dụng (A ⊗ B) vec(C) = vec(BCAᵀ)
 >
 >
 >
-> => **(X** ⊗ **I) vec(dL/dZ)** = vec(I dL/dZ XT) = **vec(dL/dZ XT)
+> => **(X** ⊗ **I) vec(dL/dZ)** = vec(I dL/dZ Xᵀ) = **vec(dL/dZ Xᵀ)
 >
 >
 >
-> Vậy vec(dL/dW) = vec(dL/dZ XT)**
+> Vậy vec(dL/dW) = vec(dL/dZ Xᵀ)**
 >
 >
 >
-> Từ đó ta có **dL/dW = dL/dZ XT
+> Từ đó ta có **dL/dW = dL/dZ Xᵀ
 >
 >
 >
@@ -764,7 +810,7 @@
 >
 > và do đó, ví dụ nói df = (df/dw) . dw, thì với w là vector, thì dw cũng là
 > vector, khi đó df/dw, chính là gradient ∇f sẽ là vector, và df/dw . dw là dot
-> product của hai vector. Và ta sẽ ghi là (df/dw)Tdw
+> product của hai vector. Và ta sẽ ghi là (df/dw)ᵀdw
 >
 >
 >
@@ -775,6 +821,8 @@
 <br>
 
 <a id="node-1ajum9x"></a>
+
+###### Trị riêng đối xứng
 
 <p align="center"><kbd><img src="assets/yszycqk462.png" width="80%"></kbd></p>
 
