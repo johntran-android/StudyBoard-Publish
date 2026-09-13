@@ -5,8 +5,6 @@
 ---
 <a id="node-h44i1rr"></a>
 
-## Lec 5 P2: Forward Automatic Differentiation Via Dua Numbers
-
 > [!NOTE]
 > LEC 5 P2: FORWARD AUTOMATIC
 > DIFFERENTIATION VIA DUA NUMBERS
@@ -15,11 +13,15 @@
 
 <a id="node-za51kve"></a>
 
+## Vi phân tự động (Autodiff)
+
 <p align="center"><kbd><img src="assets/0x7fb1l2joh9.png" width="80%"></kbd></p>
 
 <br>
 
 <a id="node-8iycbio"></a>
+
+### Đạo hàm ký hiệu
 
 <p align="center"><kbd><img src="assets/vinz563miln.png" width="80%"></kbd></p>
 
@@ -30,6 +32,8 @@
 <br>
 
 <a id="node-6a5hhyh"></a>
+
+#### Phương pháp sai phân hữu hạn
 
 <p align="center"><kbd><img src="assets/p0k13z1eq6.png" width="80%"></kbd></p>
 
@@ -48,11 +52,13 @@
 > (Cái biểu đồ error giảm dần khi Δx nhỏ dần nhưng nhỏ quá thì nó
 > lại tăng vọt lên)
 
-**🔗 See also:** [linked note](./lec_3_part_2_finite_difference_approximations.md#node-hcfn8zf)
+**🔗 See also:** [Sai số sai phân tiến](./lec_3_part_2_finite_difference_approximations.md#node-hcfn8zf)
 
 <br>
 
 <a id="node-95is36z"></a>
+
+##### Thuật toán tính căn Babylonian
 
 <p align="center"><kbd><img src="assets/oi36nspwpx.png" width="80%"></kbd></p>
 
@@ -70,6 +76,8 @@
 
 <a id="node-fzybqnv"></a>
 
+###### Đạo hàm phương pháp Babylonian
+
 <p align="center"><kbd><img src="assets/wvgmdd364g.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -84,6 +92,8 @@
 
 <a id="node-5xsqb5n"></a>
 
+###### Kiểm tra hàm Babylonian
+
 <p align="center"><kbd><img src="assets/hpqytgcslmf.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -93,6 +103,8 @@
 <br>
 
 <a id="node-x9bv6wo"></a>
+
+###### Sự hội tụ thuật toán Babylon
 
 <p align="center"><kbd><img src="assets/fkvnhvxwpqj.png" width="80%"></kbd></p>
 
@@ -106,6 +118,8 @@
 <br>
 
 <a id="node-nodabc4"></a>
+
+###### Cấu trúc AutoDiff trong Julia
 
 <p align="center"><kbd><img src="assets/ifg9ybs7xpm.png" width="80%"></kbd></p>
 
@@ -149,6 +163,8 @@
 
 <a id="node-2905d0b"></a>
 
+###### Nạp chồng toán tử đạo hàm
+
 <p align="center"><kbd><img src="assets/0vaua71nabm9.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -188,6 +204,8 @@
 
 <a id="node-8ntia8s"></a>
 
+###### Phép cộng trong AutoDiff
+
 <p align="center"><kbd><img src="assets/ibpksdiek18.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -196,6 +214,8 @@
 <br>
 
 <a id="node-vynds7i"></a>
+
+###### Quy tắc chia trong AutoDiff
 
 <p align="center"><kbd><img src="assets/dmplt7nok29.png" width="80%"></kbd></p>
 
@@ -217,6 +237,8 @@
 
 <a id="node-2y8m9tt"></a>
 
+###### Convert và promote trong Julia
+
 <p align="center"><kbd><img src="assets/5mo9gotnxwb.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -233,6 +255,8 @@
 <br>
 
 <a id="node-f7sb90a"></a>
+
+###### Tự động vi phân hàm Babylonian
 
 <p align="center"><kbd><img src="assets/04dmjiyy5p78.png" width="80%"></kbd></p>
 
@@ -258,6 +282,8 @@
 
 <a id="node-h05vccf"></a>
 
+###### Đạo hàm thuật toán Babylonian
+
 <p align="center"><kbd><img src="assets/zxzyjegtb8.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -269,6 +295,8 @@
 <br>
 
 <a id="node-d7f05m2"></a>
+
+###### Thuật toán tính căn Babylonian
 
 <p align="center"><kbd><img src="assets/vlm2up7ylgd.png" width="80%"></kbd></p>
 
@@ -340,6 +368,8 @@
 
 <a id="node-1heia2k"></a>
 
+###### Cơ chế hoạt động AutoDiff
+
 <p align="center"><kbd><img src="assets/oaw742tgxgm.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -375,6 +405,8 @@
 
 <a id="node-kw6cnc1"></a>
 
+###### Đạo hàm phương pháp Babylonian
+
 <p align="center"><kbd><img src="assets/mj9ym5c4z8.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -385,6 +417,8 @@
 <br>
 
 <a id="node-p3jb9d5"></a>
+
+###### Overload toán tử trong AutoDiff
 
 <p align="center"><kbd><img src="assets/rq55gng741o.png" width="80%"></kbd></p>
 
@@ -438,6 +472,8 @@
 
 <a id="node-s7kvchg"></a>
 
+###### Số Dual trong AutoDiff
+
 <p align="center"><kbd><img src="assets/wcjqhzphsk.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -485,6 +521,8 @@
 
 <a id="node-evhcnoa"></a>
 
+###### Phép toán số kép
+
 <p align="center"><kbd><img src="assets/97qkrctkb5.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -496,6 +534,8 @@
 <br>
 
 <a id="node-dx1ck3l"></a>
+
+###### Biểu diễn số Dual
 
 <p align="center"><kbd><img src="assets/538gmkw6uzo.png" width="80%"></kbd></p>
 
