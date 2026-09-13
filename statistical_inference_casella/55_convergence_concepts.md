@@ -74,7 +74,7 @@
 
 > [!NOTE]
 > ta qua luật số lớn yếu: Cho X1,X2...là iid random variables với EXi = μ và 
-> VarXi = σ^2 < inf. Đặt Xbar_n = (1/n) Σi=1:n Xi thì:
+> VarXi = σ² < inf. Đặt Xbar_n = (1/n) Σi=1:n Xi thì:
 >
 >
 >
@@ -136,19 +136,19 @@
 >
 >
 > Mà variance của Xn_bar, tức variance của sample mean, theo theorem 
-> bữa trước (theo link cam) chính là σ^2/n 
+> bữa trước (theo link cam) chính là σ²/n 
 >
 >
 >
-> ⇨ Vế phải = σ^2/(nε^2)
+> ⇨ Vế phải = σ²/(nε^2)
 >
 >
 >
-> Vậy ta có P(|Xn_bar - μ| ≥ ε) = P[(Xn_bar - μ)^2 ≥ ε^2] ≤ σ^2/(nε^2)
+> Vậy ta có P(|Xn_bar - μ| ≥ ε) = P[(Xn_bar - μ)^2 ≥ ε^2] ≤ σ²/(nε^2)
 >
 >
 >
-> ⇔ - P(|Xn_bar - μ| ≥ ε) ≥ - σ^2/(nε^2)
+> ⇔ - P(|Xn_bar - μ| ≥ ε) ≥ - σ²/(nε^2)
 >
 >
 >
@@ -160,7 +160,7 @@
 >
 >
 >
-> .. ≥ 1 - σ^2/(nε^2)
+> .. ≥ 1 - σ²/(nε^2)
 >
 >
 >
@@ -168,11 +168,11 @@
 >
 >
 >
-> lim n → inf P(|Xbar - μ| < ε) ≥ lim n → inf 1 - σ^2/(nε^2)
+> lim n → inf P(|Xbar - μ| < ε) ≥ lim n → inf 1 - σ²/(nε^2)
 >
 >
 >
-> và khi n → inf thì 1 - σ^2/(nε^2) → 1
+> và khi n → inf thì 1 - σ²/(nε^2) → 1
 >
 >
 >
@@ -214,7 +214,7 @@
 
 > [!NOTE]
 > Ví dụ này xét tính consistency của S^2 (sample variance). cho chuỗi các  random
-> variable X1, X2,....iid với EXi = μ. VarXi = σ^2 < inf
+> variable X1, X2,....iid với EXi = μ. VarXi = σ² < inf
 >
 >
 >
@@ -231,7 +231,7 @@
 >
 >
 > Thế thì đại khái là, như định nghĩa ở trên, thì, để có tính consistency, thì Sn^2
-> phải converge in probability tới σ^2 (population variance)
+> phải converge in probability tới σ² (population variance)
 >
 >
 >
@@ -239,16 +239,16 @@
 >
 >
 >
-> Thế thì để vậy ta cần lim n → inf P(|Sn^2 - σ^2| ≥ ε) = 0 với mọi ε dương
+> Thế thì để vậy ta cần lim n → inf P(|Sn^2 - σ²| ≥ ε) = 0 với mọi ε dương
 >
 >
 >
-> Mà xét P(|Sn^2 - σ^2| ≥ ε) = P((Sn^2 - σ^2)^2 ≥ ε^2) | cái này chỉ là event tương
+> Mà xét P(|Sn^2 - σ²| ≥ ε) = P((Sn^2 - σ²)^2 ≥ ε^2) | cái này chỉ là event tương
 > đương
 >
 >
 >
-> ≤ E[(Sn^2 - σ^2)^2] / ε^2 |  (Chebyshev inequality)
+> ≤ E[(Sn^2 - σ²)^2] / ε^2 |  (Chebyshev inequality)
 >
 >
 >
@@ -256,11 +256,11 @@
 >
 >
 >
-> Như vậy để Sn^2 tiến tới σ^2 in probability (theo yêu cầu của tính consistency)
+> Như vậy để Sn^2 tiến tới σ² in probability (theo yêu cầu của tính consistency)
 >
 >
 >
-> thì P(|Sn^2 - σ^2| ≥ ε) phải → 0
+> thì P(|Sn^2 - σ²| ≥ ε) phải → 0
 >
 >
 >
@@ -293,11 +293,11 @@
 <p align="center"><kbd><img src="assets/3usynydltj6.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, áp dụng theorem vừa rồi, ta sẽ có NẾU Sn^2 là **CONSISTENT ESTIMATOR** của σ^2 (tức là, nó sẽ converge in probability tới σ^2) thì apply hàm g liên tục, ở đây là hàm g(u) = √u, thì chuỗi g(Sn^2), tức √Sn^2 (n = 1,2...) cũng sẽ converge in probability tới √σ^2 = σ. Do đó √Sn^2 **CŨNG LÀ CONSISTENT ESTIMATOR CỦA population standard deviation σ**
+> Rồi, áp dụng theorem vừa rồi, ta sẽ có NẾU Sn^2 là **CONSISTENT ESTIMATOR** của σ² (tức là, nó sẽ converge in probability tới σ²) thì apply hàm g liên tục, ở đây là hàm g(u) = √u, thì chuỗi g(Sn^2), tức √Sn^2 (n = 1,2...) cũng sẽ converge in probability tới √σ² = σ. Do đó √Sn^2 **CŨNG LÀ CONSISTENT ESTIMATOR CỦA population standard deviation σ**
 >
 >
 >
-> Nhưng giáo sư lưu ý, ta phát biểu trên là NẾU Sn^2 là consistent estimator của σ^2, NHƯNG THỰC TẾ THÌ Sn^2 LẠI LÀ BIASED ESTIMATOR CỦA σ^2 nhưng sự biased này biến mất asymtotically
+> Nhưng giáo sư lưu ý, ta phát biểu trên là NẾU Sn^2 là consistent estimator của σ², NHƯNG THỰC TẾ THÌ Sn^2 LẠI LÀ BIASED ESTIMATOR CỦA σ² nhưng sự biased này biến mất asymtotically
 
 <br>
 
@@ -586,7 +586,7 @@
 >
 >
 >
-> VỚi X1,X2,....là iid random variables với EXi = μ, Var Xi = σ^2 < inf (finite variance) và define Xnbar = (1/n) Σi Xi
+> VỚi X1,X2,....là iid random variables với EXi = μ, Var Xi = σ² < inf (finite variance) và define Xnbar = (1/n) Σi Xi
 >
 >
 >
@@ -820,7 +820,7 @@
 >
 >
 >
-> Rồi gọi E\[Xi\] là μ, Var Xi = σ^2 > 0, cả hai cái này đều finite vì đã nói mgf tồn tại. (ta nhớ EXi là first moment, EXi^2 là second moment).
+> Rồi gọi E\[Xi\] là μ, Var Xi = σ² > 0, cả hai cái này đều finite vì đã nói mgf tồn tại. (ta nhớ EXi là first moment, EXi^2 là second moment).
 >
 >
 >
@@ -1049,7 +1049,7 @@
 >
 >
 >
-> VarYi = Var (Xi - μ)σ = Var (Xi - μ) / σ^ = Var(Xi) / σ^2 = σ^2/σ^2 = 1
+> VarYi = Var (Xi - μ)σ = Var (Xi - μ) / σ^ = Var(Xi) / σ² = σ²/σ² = 1
 >
 >
 >
@@ -1089,7 +1089,7 @@
 >
 >
 >
-> Nội dung thì đại khái là cũng cho chuỗi rv X1,X2...iid, có population mean μ, finite variance σ^2. Và Xbar_n là sample mean size n. Gn(x) là cdf của √n(Xbar_n - μ) / σ thì theorem nói rằng n → inf thì Gn(x) → ∫-inf:x 1/√2π e^-y^2/2dy chính là cdf của standard normal (normal(0,1))
+> Nội dung thì đại khái là cũng cho chuỗi rv X1,X2...iid, có population mean μ, finite variance σ². Và Xbar_n là sample mean size n. Gn(x) là cdf của √n(Xbar_n - μ) / σ thì theorem nói rằng n → inf thì Gn(x) → ∫-inf:x 1/√2π e^-y^2/2dy chính là cdf của standard normal (normal(0,1))
 >
 >
 >
@@ -1254,7 +1254,7 @@
 >
 >
 >
-> (random variable ở đây đang chỉ nhiều loại rv có limit distribution là normal(0,1) trong đó có √n(Xbar_n - μ)/σ^2, chứ sample mean không phải là cái duy nhất (nhưng là statistic quan trọng nhất) vậy thì ý là nhiều khi ta muốn tìm limit distribution của g(Xbar_n) chứ không phải của Xbar, ví dụ 1/Xbar_n hoặc Xbar_n / (1 - Xbar_n), là odd sẽ nói ở dưới đây)
+> (random variable ở đây đang chỉ nhiều loại rv có limit distribution là normal(0,1) trong đó có √n(Xbar_n - μ)/σ², chứ sample mean không phải là cái duy nhất (nhưng là statistic quan trọng nhất) vậy thì ý là nhiều khi ta muốn tìm limit distribution của g(Xbar_n) chứ không phải của Xbar, ví dụ 1/Xbar_n hoặc Xbar_n / (1 - Xbar_n), là odd sẽ nói ở dưới đây)
 >
 >
 >
@@ -1759,7 +1759,7 @@
 >
 >
 >
-> Và **Var(p^)** thì là gì, nó chính là **Var(Xbar)**, tức **variance của sample mean** đó, có công thức là **σ^2/n** tức là **population variance chia n**
+> Và **Var(p^)** thì là gì, nó chính là **Var(Xbar)**, tức **variance của sample mean** đó, có công thức là **σ²/n** tức là **population variance chia n**
 >
 >
 >
@@ -1803,7 +1803,7 @@
 >
 >
 >
-> mang ý nghĩa là tổng của các possible value của p^/(1-p^), với weight là xác suất f(p^). Vì p^, là sample mean, có distribution (tại limit) là normal(p, σ^2/n), nên trong cái tổng (tích phân coi như tổng vô hạn phần tử) này, sẽ có lúc p^ = 1 khiến \[p^/(1-p^)\] = inf, nhưng f(p^) vẫn dương. vì phân phối normal tại p^ = 1 sẽ luôn dương dù rất nhỏ. Như vậy E\[p^/(1-p^)\] sẽ = inf. Và đại khái là sẽ khiến Var cũng vậy. Mình sẽ gặp lại cái này trong Chap 10. Xem link
+> mang ý nghĩa là tổng của các possible value của p^/(1-p^), với weight là xác suất f(p^). Vì p^, là sample mean, có distribution (tại limit) là normal(p, σ²/n), nên trong cái tổng (tích phân coi như tổng vô hạn phần tử) này, sẽ có lúc p^ = 1 khiến \[p^/(1-p^)\] = inf, nhưng f(p^) vẫn dương. vì phân phối normal tại p^ = 1 sẽ luôn dương dù rất nhỏ. Như vậy E\[p^/(1-p^)\] sẽ = inf. Và đại khái là sẽ khiến Var cũng vậy. Mình sẽ gặp lại cái này trong Chap 10. Xem link
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -2020,7 +2020,7 @@
 >
 >
 >
-> Cho Yn là một chuỗi các random variables thỏa √n(Yn - θ) → (d) n(0, σ^2)   (có nghĩa là n → inf thì cdf của √n(Yn - θ) → cdf của n(0, σ^2)).
+> Cho Yn là một chuỗi các random variables thỏa √n(Yn - θ) → (d) n(0, σ²)   (có nghĩa là n → inf thì cdf của √n(Yn - θ) → cdf của n(0, σ²)).
 >
 >
 >
@@ -2028,11 +2028,11 @@
 >
 >
 >
-> √n\[g(Yn) - g(θ)\] → (d) n(0, σ^2\[g'(θ)\]^2)
+> √n\[g(Yn) - g(θ)\] → (d) n(0, σ²\[g'(θ)\]^2)
 >
 >
 >
-> Ví dụ như ta có một random sample X1,...Xn có population mean μ, population variance σ^2
+> Ví dụ như ta có một random sample X1,...Xn có population mean μ, population variance σ²
 >
 >
 >
@@ -2072,7 +2072,7 @@
 >
 >
 >
-> Rồi, ta có đề bài cho chuỗi Yn thỏa √n(Yn - θ) → X với X \~ n(0, σ^2) (chuỗi Yn ở đây có thể là chuỗi sample mean của sample có mean θ, nên theo CLT thì √n(Yn - θ) → (d) n(0, σ^2)
+> Rồi, ta có đề bài cho chuỗi Yn thỏa √n(Yn - θ) → X với X \~ n(0, σ²) (chuỗi Yn ở đây có thể là chuỗi sample mean của sample có mean θ, nên theo CLT thì √n(Yn - θ) → (d) n(0, σ²)
 >
 >
 >
@@ -2100,7 +2100,7 @@
 >
 >
 >
-> √n(Yn - θ) → (d) X \~ n(0, σ^2)
+> √n(Yn - θ) → (d) X \~ n(0, σ²)
 >
 >
 >
@@ -2112,7 +2112,7 @@
 >
 >
 >
->  Do đó theo theorem này, g'(θ) √n (Yn - θ) sẽ → (d) g'(θ) X với X \~ n(0, σ^2) in distribution
+>  Do đó theo theorem này, g'(θ) √n (Yn - θ) sẽ → (d) g'(θ) X với X \~ n(0, σ²) in distribution
 >
 >
 >
@@ -2120,7 +2120,7 @@
 >
 >
 >
-> nhớ lại location scale, có một theorem nói rằng nếu ta có Z là standard member của family với location 0, scale 1, có pdf là f(z) thì X = σZ + μ sẽ là member có location μ, scale σ. Nên ở đây X là thành viên có location 0, scale σ, tại nó là n(0, σ^2) Nên nhất định nó có dạng = σZ
+> nhớ lại location scale, có một theorem nói rằng nếu ta có Z là standard member của family với location 0, scale 1, có pdf là f(z) thì X = σZ + μ sẽ là member có location μ, scale σ. Nên ở đây X là thành viên có location 0, scale σ, tại nó là n(0, σ²) Nên nhất định nó có dạng = σZ
 >
 >
 >
@@ -2128,7 +2128,7 @@
 >
 >
 >
-> Từ đó kết luận U \~ n(0, g'(θ)^2 × σ^2)
+> Từ đó kết luận U \~ n(0, g'(θ)^2 × σ²)
 
 **🔗 See also:** [10.1.3 Calculations and Comparisons](./101_point_estimation.md#node-iwgmm5t)
 
@@ -2145,7 +2145,7 @@
 >
 >
 >
-> Theo Central Limit Theorem ta có (cho X1,X2...là các rv có population mean là μ, population variance là σ^2) và Xbar_n là sample mean size n, viết Xbar cho gọn) thì ta có:
+> Theo Central Limit Theorem ta có (cho X1,X2...là các rv có population mean là μ, population variance là σ²) và Xbar_n là sample mean size n, viết Xbar cho gọn) thì ta có:
 >
 >
 >
@@ -2161,11 +2161,11 @@
 >
 >
 >
-> theo Slutsky theorem σ √n(Xbar - μ) / σ → σZ và σZ thì \~ (n, σ^2)
+> theo Slutsky theorem σ √n(Xbar - μ) / σ → σZ và σZ thì \~ (n, σ²)
 >
 >
 >
-> Vậy: **√n(Xbar - μ) → n(0, σ^2)** in distribution
+> Vậy: **√n(Xbar - μ) → n(0, σ²)** in distribution
 >
 >
 >
@@ -2181,7 +2181,7 @@
 >
 >
 >
-> √**n(g(Yn) - g(θ))** →(d) **n(0, σ^2 g'(θ)^2)**
+> √**n(g(Yn) - g(θ))** →(d) **n(0, σ² g'(θ)^2)**
 >
 >
 >
@@ -2189,7 +2189,7 @@
 >
 >
 >
-> √n(Xbar - μ) →(d) n(0, σ^2)
+> √n(Xbar - μ) →(d) n(0, σ²)
 >
 >
 >
@@ -2197,7 +2197,7 @@
 >
 >
 >
-> ⇨ √n(g(Xbar) - g(μ)) →(d) n(0, σ^2 g'(μ)^2)
+> ⇨ √n(g(Xbar) - g(μ)) →(d) n(0, σ² g'(μ)^2)
 >
 >
 >
@@ -2205,11 +2205,11 @@
 >
 >
 >
-> **√n(1/Xbar - 1/μ)** →(d) n(0, σ^2 (-1/μ^2)^2) = **n(0, σ^2 (1/μ^4))**
+> **√n(1/Xbar - 1/μ)** →(d) n(0, σ² (-1/μ²)^2) = **n(0, σ² (1/μ^4))**
 >
 >
 >
-> Với σ^2 là population variance, người ta ghi là Var\[X1\] cũng có thể hiểu được
+> Với σ² là population variance, người ta ghi là Var\[X1\] cũng có thể hiểu được
 >
 >
 >
@@ -2230,11 +2230,11 @@
 >
 >
 >
-> Hay gọi σ^2 là Var(X1), tức population variance cho gọn, ta có:
+> Hay gọi σ² là Var(X1), tức population variance cho gọn, ta có:
 >
 >
 >
-> √n(1/Xbar - 1/μ) →(d) n\[0, (1/μ)^4 σ^2\]
+> √n(1/Xbar - 1/μ) →(d) n\[0, (1/μ)^4 σ²\]
 >
 >
 >
@@ -2242,19 +2242,19 @@
 >
 >
 >
-> Nên ở đây √n(1/Xbar - 1/μ) → (d) Z \~ n\[0, (1/μ)^4 σ^2\]
+> Nên ở đây √n(1/Xbar - 1/μ) → (d) Z \~ n\[0, (1/μ)^4 σ²\]
 >
 >
 >
-> và 1/\[p(1/μ)^4 σ^2\] (dĩ nhiên) → (p) 1/\[(1/μ)^4 σ^2\]
+> và 1/\[p(1/μ)^4 σ²\] (dĩ nhiên) → (p) 1/\[(1/μ)^4 σ²\]
 >
 >
 >
-> Thì \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ^2\] → (d) Z / \[(1/μ)^4 σ^2\]
+> Thì \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\] → (d) Z / \[(1/μ)^4 σ²\]
 >
 >
 >
-> Và Z là rv \~ n\[0, (1/μ)^4 σ^2\] thì ta đã biết nó là thành viên trong family có location 0, scale (1/μ)^4 σ^2.
+> Và Z là rv \~ n\[0, (1/μ)^4 σ²\] thì ta đã biết nó là thành viên trong family có location 0, scale (1/μ)^4 σ².
 >
 >
 >
@@ -2262,7 +2262,7 @@
 >
 >
 >
-> Vậy Z / \[(1/μ)^4 σ^2\] sẽ chính là thành viên chuẩn, như trên, và với normal distribution thì location cũng là mean và scale cũng là standard deviation. Nên ta kết luận Z / \[(1/μ)^4 σ^2\] sẽ \~ n(0,1)
+> Vậy Z / \[(1/μ)^4 σ²\] sẽ chính là thành viên chuẩn, như trên, và với normal distribution thì location cũng là mean và scale cũng là standard deviation. Nên ta kết luận Z / \[(1/μ)^4 σ²\] sẽ \~ n(0,1)
 >
 >
 >
@@ -2270,7 +2270,7 @@
 >
 >
 >
-> \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ^2\] sẽ → (d) n(0,1)
+> \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\] sẽ → (d) n(0,1)
 >
 >
 >
@@ -2278,19 +2278,19 @@
 >
 >
 >
-> Tuy nhiên, ta ko biết μ, σ. Nên nói về cái này, \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ^2\], là vô nghĩa vì có tính được đâu.
+> Tuy nhiên, ta ko biết μ, σ. Nên nói về cái này, \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\], là vô nghĩa vì có tính được đâu.
 >
 >
 >
-> Thế thì: ĐẠI Ý LÀ, TA SẼ CÓ THỂ DÙNG SAMPLE MEAN Xbar THAY CHO POPULATION MEAN μ VÀ SAMPLE VARIANCE S^2, THAY CHO σ^2.
+> Thế thì: ĐẠI Ý LÀ, TA SẼ CÓ THỂ DÙNG SAMPLE MEAN Xbar THAY CHO POPULATION MEAN μ VÀ SAMPLE VARIANCE S^2, THAY CHO σ².
 >
 >
 >
-> \[(1/μ)^4 σ^2\] THAY BẰNG \[(1/Xbar)^4 S^2\]
+> \[(1/μ)^4 σ²\] THAY BẰNG \[(1/Xbar)^4 S^2\]
 >
 >
 >
-> Để rồi \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ^2\]
+> Để rồi \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\]
 >
 >
 >
@@ -2314,23 +2314,23 @@
 >
 >
 >
-> (nhân và chia cho \[(1/μ)^4 σ^2\])
+> (nhân và chia cho \[(1/μ)^4 σ²\])
 >
 >
 >
-> = \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ^2\] × \[(1/μ)^4 σ^2\] / \[(1/Xbar)^4 S^2\]
+> = \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\] × \[(1/μ)^4 σ²\] / \[(1/Xbar)^4 S^2\]
 >
 >
 >
-> Thì term 1, \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ^2\], như đã nói ở trên, sẽ converge in probability về n(0,1)
+> Thì term 1, \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\], như đã nói ở trên, sẽ converge in probability về n(0,1)
 >
 >
 >
-> Còn tern 2, \[(1/μ)^4 σ^2\] / \[(1/Xbar)^4 S^2\]:
+> Còn tern 2, \[(1/μ)^4 σ²\] / \[(1/Xbar)^4 S^2\]:
 >
 >
 >
-> Thì viết lại, = (Xbar/μ)^4 × σ^2/S^2
+> Thì viết lại, = (Xbar/μ)^4 × σ²/S^2
 >
 >
 >
@@ -2342,11 +2342,11 @@
 >
 >
 >
-> và S^2 →(p) σ^2
+> và S^2 →(p) σ²
 >
 >
 >
-> Do đó (Xbar/μ)^4 σ^2/S^2 **converge in probability về 1**, hay (Xbar/μ)^4 σ^2/S^2 → 1 in probability.
+> Do đó (Xbar/μ)^4 σ²/S^2 **converge in probability về 1**, hay (Xbar/μ)^4 σ²/S^2 → 1 in probability.
 >
 >
 >
@@ -2354,7 +2354,7 @@
 >
 >
 >
-> \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ^2\] × \[(1/μ)^4 σ^2\] / \[(1/Xbar)^4 S^2\]
+> \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\] × \[(1/μ)^4 σ²\] / \[(1/Xbar)^4 S^2\]
 >
 >
 >
@@ -2376,7 +2376,7 @@
 >
 >
 >
-> y như cái \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ^2\]
+> y như cái \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\]
 
 <br>
 
@@ -2413,7 +2413,7 @@
 >
 >
 >
-> √n(Yn - θ) → (d) n(0, σ^2)
+> √n(Yn - θ) → (d) n(0, σ²)
 >
 >
 >
@@ -2422,7 +2422,7 @@
 >
 >
 >
-> √n[g(Yn) - g(θ)] sẽ → (d) n(0, σ^2[g'(θ)]^2]
+> √n[g(Yn) - g(θ)] sẽ → (d) n(0, σ²[g'(θ)]^2]
 >
 >
 >
@@ -2481,7 +2481,7 @@
 >
 >
 >
-> n(Yn - θ)^2/σ^2 → Chi-square 1 (2)
+> n(Yn - θ)^2/σ² → Chi-square 1 (2)
 >
 >
 >
@@ -2502,7 +2502,7 @@
 >
 >
 >
-> (2) n(Yn - θ)^2/σ^2 → Chi-square 1
+> (2) n(Yn - θ)^2/σ² → Chi-square 1
 >
 >
 >
@@ -2515,7 +2515,7 @@
 >
 >
 >
-> (3) g''(θ) →(p) g''(θ) thì g''(θ) σ^2/2 →(p) g''(θ) σ^2/2 (4)
+> (3) g''(θ) →(p) g''(θ) thì g''(θ) σ²/2 →(p) g''(θ) σ²/2 (4)
 >
 >
 >
@@ -2527,11 +2527,11 @@
 >
 >
 >
-> n(Yn - θ)^2/σ^2 → Chi-square 1
+> n(Yn - θ)^2/σ² → Chi-square 1
 >
 >
 >
-> g''(θ) σ^2/2 →(p) g''(θ) σ^2/2 
+> g''(θ) σ²/2 →(p) g''(θ) σ²/2 
 >
 >
 >
@@ -2539,11 +2539,11 @@
 >
 >
 >
-> ⇨  g''(θ) σ^2/2 n(Yn - θ)^2/σ^2 → g''(θ) σ^2/2 Chi-square 1
+> ⇨  g''(θ) σ²/2 n(Yn - θ)^2/σ² → g''(θ) σ²/2 Chi-square 1
 >
 >
 >
-> ⇔ n g''(θ)(Yn - θ)^2 → g''(θ) σ^2/2 Chi-square 1
+> ⇔ n g''(θ)(Yn - θ)^2 → g''(θ) σ²/2 Chi-square 1
 >
 >
 >
@@ -2551,7 +2551,7 @@
 >
 >
 >
-> ⇨  n[g(Yn) - g(θ)] →(d) g''(θ) σ^2 Chi-square 1 hay σ^2 g''(θ) / 2 /X_1/^2
+> ⇨  n[g(Yn) - g(θ)] →(d) g''(θ) σ² Chi-square 1 hay σ² g''(θ) / 2 /X_1/^2
 
 <br>
 
