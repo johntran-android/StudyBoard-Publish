@@ -153,11 +153,31 @@
 > = Σi=1:M \[λi / (λi + α)\] → 3.91
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
 >
-> Bài viết rất chi tiết và giải thích cực kỳ rõ ràng các bước biến đổi tuyến tính cũng như giải tích đạo hàm mà sách giáo khoa bỏ qua. Tuy nhiên, có một lỗi gõ nhỏ ở bước trung gian khi ghi nhầm đạo hàm của $-\frac{\alpha}{2}\mathbf{m}_N^T\mathbf{m}_N$ thành $-\frac{\alpha}{2}\mathbf{m}_N^T\mathbf{m}_N$ thay vì $-\frac{1}{2}\mathbf{m}_N^T\mathbf{m}_N$, mặc dù dòng sau vẫn biến đổi đúng.
+> Ghi chú nắm rất chắc bản chất đại số tuyến tính và các bước biến đổi vi phân từ Bishop. Có một vài lỗi viết nhầm (typo) trong các bước trung gian và cần lưu ý thêm tính chất hàm ẩn của nghiệm.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"(βΦᵀΦ)𝐮i = λi 𝐮i, cộng hai vế cho 𝐮i ⇔ (βΦᵀΦ)𝐮i + α𝐮i= λi 𝐮i + α 𝐮i"*
+>
+> Lỗi diễn đạt nhầm: người học cộng hai vế cho α𝐮i chứ không phải cộng cho 𝐮i.
+>
+> **2.** *"⇔ d/dα [(M/2) ln(α) - α(𝐦N)ᵀ𝐦N - 1/2 ln |𝐀|] = 0 ⇔ M/2α - (α/2) (𝐦N)ᵀ𝐦N - 1/2 [Σi [1 / (λi + α)]] = 0 → 3.89"*
+>
+> Viết nhầm hệ số khi lấy đạo hàm: Term đúng trong log-evidence là -(1/2)α 𝐦_N^T 𝐦_N, khi lấy đạo hàm theo α phải ra -(1/2) 𝐦_N^T 𝐦_N chứ không còn α ở tử số. Tuy nhiên ở bước sau nhân 2α người học lại ra đúng -α 𝐦_N^T 𝐦_N, chứng tỏ đây là lỗi gõ nhầm (typo) khi chép công thức.
+>
+>
+> **✓ Strengths**
+> - Giải thích rất sáng sủa vì sao eigenvalues của matrix A lại là (α + λi) thông qua định nghĩa biến đổi tuyến tính.
+> - Hiểu chính xác mối liên hệ giữa định thức ma trận và tích các giá trị riêng để khai triển đạo hàm ln|A|.
+> - Tự biến đổi chi tiết biểu thức của γ từ (3.90) sang (3.91) rất mạch lạc.
+>
+> **💡 Deeper notes**
+> - Về mặt kỹ thuật, 𝐦_N = β 𝐀⁻¹ Φᵀ 𝐭 cũng phụ thuộc vào α. Sở dĩ ta có thể coi như 𝐦_N là hằng số khi đạo hàm E(𝐦_N) theo α là nhờ điều kiện dừng ∇_w E(w)|_{w=𝐦_N} = 0 (theo định lý bao hình / chain rule: dE/dα = ∂E/∂α + (∇_w E)ᵀ (d𝐦_N/dα) = ∂E/∂α + 0).
+> - Công thức (3.92) α = γ / (𝐦_Nᵀ 𝐦_N) không phải là nghiệm dạng đóng (closed-form solution) vì cả γ lẫn 𝐦_N đều phụ thuộc vào α; đây là dạng phương trình điểm bất động dùng cho thuật toán lặp (fixed-point iteration).
 
-**🔗 See also:** [Hessian of Regularized Error Function](./351_evaluation_of_the_evidence_function.md#node-vpu7vqs) · [Lecture 21: Eigenvalues And Eigenvectors *(Mit 18.06)*](../mit1806_gstrang/lecture_21_eigenvalues_and_eigenvectors.md#node-aiwkaf3) · [Log Marginal Likelihood Derivation](./351_evaluation_of_the_evidence_function.md#node-ddcs0pi) · [Marginal Likelihood Maximization for Beta](#node-l71837c) · [Evidence Re-estimation Limit](./353_effective_number_of_parameters.md#node-00gilsq)
+**🔗 See also:** [Hessian of Regularized Error Function](./351_evaluation_of_the_evidence_function.md#node-vpu7vqs) · [Lecture 21: Eigenvalues And Eigenvectors *(Mit 18.06)*](../mit1806_gstrang/lecture_21_eigenvalues_and_eigenvectors.md#node-aiwkaf3) · [Log Marginal Likelihood Derivation](./351_evaluation_of_the_evidence_function.md#node-ddcs0pi) · [Marginal Likelihood Maximization for Beta](#node-l71837c) · [Evidence Re-estimation Limit](./353_effective_number_of_parameters.md#node-00gilsq) · [Ex 3.21 Log Determinant Derivative Identity](./37_exercises.md#node-3ldsqi5)
 
 <br>
 
@@ -201,9 +221,29 @@
 > Trong khi đó, với cách làm maximize model evidence, thì chỉ cần làm trực tiếp trên training set. Vì trong cả hai trường hợp là mô hình quá phức tạp hay quá đơn giản thì model evidence đều sẽ cao, mà ta đã thấy minh họa trong bài trước khi đã thấy đồ thị của model evidence theo M (M ở đây cũng là hyperparameter quy định độ phức tạp của mô hình).  Tương tự, với α, β cũng vậy, đều sẽ chi phối độ phức tạp của mô hình. Và việc tìm chúng theo cách maximize model evidence sẽ ra kết quả là giá trị khiến mô hình ko quá phức tạp cũng ko quá đơn giản
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **82/100** · ✓ Move on
 >
-> Ghi chú rất tốt, tóm tắt chính xác quy trình lặp và cách tính tối ưu trị riêng của ma trận hệ số. Điểm cần làm rõ thêm là phương pháp Maximum Likelihood cần tập dữ liệu độc lập (validation set) để chọn siêu tham số tránh overfit, trong khi phương pháp Bayes có thể tối ưu hóa độ phức tạp trực tiếp trên training data thông qua marginal likelihood.
+> Ghi chú nắm rất tốt cơ chế lặp (iterative procedure), cách tối ưu tính toán trị riêng và bản chất vì sao Evidence Approximation không cần tập validation. Tuy nhiên, có một điểm nhầm lẫn ngược từ ('cao' thay vì 'thấp') khi giải thích về model evidence ở hai cực đoan.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Vì trong cả hai trường hợp là mô hình quá phức tạp hay quá đơn giản thì model evidence đều sẽ cao"*
+>
+> Đây là sự nhầm lẫn câu chữ (lapsus calami): model evidence thực tế đều sẽ THẤP (bị phạt/giảm) ở cả hai cực đoan (quá đơn giản thì underfit, quá phức tạp thì bị phạt bởi Occam factor do xác suất bị dàn mỏng). Do đồ thị của evidence có dạng đỉnh ở khoảng giữa nên việc tối đa hóa (maximize) nó mới chọn được mô hình cân bằng như câu sau bạn đã kết luận.
+>
+> **2.** *"trong công thức minimizer của bài tóan, α = γ / (𝐦N)ᵀ𝐦N"*
+>
+> Về mặt thuật ngữ, bài toán ở đây là cực đại hóa bằng chứng thực nghiệm (maximize marginal likelihood / model evidence), nên điểm dừng (stationary point) này tương ứng với nghiệm cực đại (maximizer), không phải minimizer.
+>
+>
+> **✓ Strengths**
+> - Hiểu chính xác bản chất nghiệm ẩn (implicit solution) của alpha và lý do vì sao phải dùng thuật toán lặp.
+> - Nắm được mẹo tối ưu tính toán: ma trận thiết kế cố định nên chỉ cần tính trị riêng của Phi^T Phi một lần rồi nhân beta.
+> - Hiểu sâu sắc sự khác biệt cốt lõi giữa MLE (bị overfit nếu tự học hyperparameter trên tập train, dẫn đến lambda=0) và Bayesian Evidence (tự động điều hòa mà không cần tập validation tách riêng).
+>
+> **💡 Deeper notes**
+> - Bishop dùng từ 'mode m_N' thay vì 'mean' vì nghiệm tổng quát của xấp xỉ evidence áp dụng cho posterior mode; trong mô hình tuyến tính Gaussian thì mode trùng với mean, nhưng với các mô hình phi tuyến hoặc phân loại sau này thì mode và mean có thể phân kỳ.
+> - Cơ chế lặp cập nhật alpha và beta thực chất có thể được nhìn nhận dưới góc độ của thuật toán EM (Expectation-Maximization), trong đó w là biến ẩn (latent variable).
 
 **🔗 See also:** [Gaussian Prior and Posterior Parameters](./331_bayesian_linear_regression.md#node-nt82rck) · [3.2.0 The Bias-Variance Decomposition](./320_the_bias_variance_decomposition.md#node-0nolzxg) · [Ước lượng Bayes và MAP](./125_curve_fitting_re_visited.md#node-8z48xwr)
 
