@@ -5,8 +5,6 @@
 ---
 <a id="node-w0yrdgk"></a>
 
-## Lec 2 Part 1: Derivatives In Higher Dimensions: Jacobians And Matrix Functions
-
 > [!NOTE]
 > LEC 2 PART 1: DERIVATIVES IN HIGHER DIMENSIONS:
 > JACOBIANS AND MATRIX FUNCTIONS
@@ -14,6 +12,8 @@
 <br>
 
 <a id="node-72hp6bf"></a>
+
+## Phép biến đổi Rn sang Rm
 
 <p align="center"><kbd><img src="assets/o9y7oxytib.png" width="80%"></kbd></p>
 
@@ -24,6 +24,8 @@
 <br>
 
 <a id="node-j65dpax"></a>
+
+### Phép biến đổi tuyến tính
 
 <p align="center"><kbd><img src="assets/9qf0w1a7qai.png" width="80%"></kbd></p>
 
@@ -45,11 +47,15 @@
 
 <a id="node-iijeshe"></a>
 
+#### Nhập môn Đại số tuyến tính
+
 <p align="center"><kbd><img src="assets/s8xgw4d6hrg.png" width="80%"></kbd></p>
 
 <br>
 
 <a id="node-i3uhir9"></a>
+
+##### Bản chất của đạo hàm
 
 <p align="center"><kbd><img src="assets/r8h2b85893f.png" width="80%"></kbd></p>
 
@@ -85,6 +91,8 @@
 
 <a id="node-iywqiej"></a>
 
+###### Gradient của hàm vô hướng
+
 <p align="center"><kbd><img src="assets/gg36nt5o07g.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -101,6 +109,8 @@
 <br>
 
 <a id="node-j7xuqjs"></a>
+
+###### Ma trận Jacobian
 
 <p align="center"><kbd><img src="assets/w6huiah3evo.png" width="80%"></kbd></p>
 
@@ -141,6 +151,8 @@
 <br>
 
 <a id="node-odn5h4c"></a>
+
+###### Đạo hàm vector theo thành phần
 
 <p align="center"><kbd><img src="assets/6716nhnxyhg.png" width="80%"></kbd></p>
 
@@ -223,6 +235,8 @@
 
 <a id="node-ptyzr1j"></a>
 
+###### Jacobian của hàm tuyến tính
+
 <p align="center"><kbd><img src="assets/ej8il4kgaf5.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -277,6 +291,8 @@
 
 <a id="node-1cux7j5"></a>
 
+###### Quy tắc cộng đạo hàm
+
 <p align="center"><kbd><img src="assets/qtqp383wlbd.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -321,6 +337,8 @@
 <br>
 
 <a id="node-glz76he"></a>
+
+###### Quy tắc nhân vi phân
 
 <p align="center"><kbd><img src="assets/vn9c3gzh2u.png" width="80%"></kbd></p>
 
@@ -393,6 +411,8 @@
 
 <a id="node-mjxd3vr"></a>
 
+###### Vi phân của f(x) = Ax
+
 <p align="center"><kbd><img src="assets/pl5t9eb43r.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -423,54 +443,58 @@
 
 <a id="node-nu3jmdm"></a>
 
+## Vi phân vector chuyển vị
+
 <p align="center"><kbd><img src="assets/0c7imy18kil7.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > chỗ này khá thú vị khi gs cho rằng nhiều người sẽ cứ
-> bối rối chỗ tại sao **d(xT) = (dx)T**
+> bối rối chỗ tại sao **d(xᵀ) = (dx)ᵀ**
 >
 >
 >
 > Thế thì theo thầy Alan đơn giản chỉ cần hiểu là ta có
-> **vector x đang là column**, ta mới **lật ngang lại (xT)**,
+> **vector x đang là column**, ta mới **lật ngang lại (xᵀ)**,
 > và **perturb mỗi component** của nó một  chút, thì ta
-> **sẽ có một vector d(xT)** **nằm ngang**
+> **sẽ có một vector d(xᵀ)** **nằm ngang**
 >
 >
 >
 > mà kết quả cũng chỉ là **ta perturb vector x trước**
-> thành **dx** rồi l**ật nó lại (dx)T**.
+> thành **dx** rồi l**ật nó lại (dx)ᵀ**.
 >
 >
 >
-> Nên **d(xT) = (dx)T**
+> Nên **d(xᵀ) = (dx)ᵀ**
 >
 >
 >
 > Còn thầy Steve thì ta có thể triển khai như đã biết ra,
-> coi hàm f(x) = xT
+> coi hàm f(x) = xᵀ
 >
 >
 >
-> thì df = **d(xT)** = (x+dx)T - xT = xT + (dx)T - xT =
-> **(dx)T**
+> thì df = **d(xᵀ)** = (x+dx)ᵀ - xᵀ = xᵀ + (dx)ᵀ - xᵀ =
+> **(dx)ᵀ**
 >
-> d(xT) = (dx)T
+> d(xᵀ) = (dx)ᵀ
 
 <br>
 
 <a id="node-i0jug98"></a>
 
+### Vi phân x^TAx bằng Product Rule
+
 <p align="center"><kbd><img src="assets/ax4xn1z2isg.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> và ta lại **revisit f(x) = xTAx** để tính df nhưng lần này ta **dùng product
-> rule** để xem nó có ra **df = xT(A+AT)dx** như làm bữa trước không
+> và ta lại **revisit f(x) = xᵀAx** để tính df nhưng lần này ta **dùng product
+> rule** để xem nó có ra **df = xᵀ(A+Aᵀ)dx** như làm bữa trước không
 >
 >
 >
 > Thế thì thầy nói để dùng product rule với case này có **3 component**
-> thì **chỉ việc làm từng cặp**. tức là coi **f(x) = xT(Ax)**
+> thì **chỉ việc làm từng cặp**. tức là coi **f(x) = xᵀ(Ax)**
 >
 >
 >
@@ -478,45 +502,47 @@
 >
 >
 >
-> => df = d(xT) (Ax) + xT d(Ax). Mà **d(xT) = (dx)T** như vừa nói xong.
+> => df = d(xᵀ) (Ax) + xᵀ d(Ax). Mà **d(xᵀ) = (dx)ᵀ** như vừa nói xong.
 >
 >
 >
-> => df = (dx)T Ax + xT d(Ax) Và **d(Ax) = Adx** như nãy mới làm
+> => df = (dx)ᵀ Ax + xᵀ d(Ax) Và **d(Ax) = Adx** như nãy mới làm
 >
 >
 >
-> => **df = (dx)TAx+xTAdx**
+> => **df = (dx)ᵀAx+xᵀAdx**
 >
 >
 >
-> Tới đây lại dùng cái trick hồi bữa đó là vì **dxTAx là scalar** (shape sẽ
+> Tới đây lại dùng cái trick hồi bữa đó là vì **dxᵀAx là scalar** (shape sẽ
 > là (1,n)(n,n)(n,1) = 1) thành ra có thể **tùy ý transpose nó**
 >
 >
 >
-> df = (dxTAx)T + xTAdx = xTATdxTT + xTAdx = xTATdx+xTAdx = ..
+> df = (dxᵀAx)ᵀ + xᵀAdx = xᵀAᵀdxᵀᵀ + xᵀAdx = xᵀAᵀdx+xᵀAdx = ..
 >
 >
 >
-> = **xT(AT+A)dx**
+> = **xᵀ(Aᵀ+A)dx**
 >
 >
 >
-> Nếu có khó hiểu thì chỉ là dùng công thức **(AB)T = BTAT**: 
+> Nếu có khó hiểu thì chỉ là dùng công thức **(AB)ᵀ = BᵀAᵀ**: 
 >
 >
 >
-> (dxTAx)T = {[dxTA]x}T = xT[dxTA]T = xT[ATdxTT] = xTATdxTT
+> (dxᵀAx)ᵀ = {[dxᵀA]x}T = xᵀ[dxᵀA]T = xᵀ[Aᵀdxᵀᵀ] = xᵀAᵀdxᵀᵀ
 >
-> tính df của f = xTAx nhưng lần
+> tính df của f = xᵀAx nhưng lần
 > này ta dùng product rule
 
-**🔗 See also:** [linked note](./lec_1_part_2_derivatives_as_linear_operator.md#node-7chmfet)
+**🔗 See also:** [Đạo hàm dạng toàn phương](./lec_1_part_2_derivatives_as_linear_operator.md#node-7chmfet)
 
 <br>
 
 <a id="node-9is3hl0"></a>
+
+#### Quy tắc chuỗi (Chain Rule)
 
 <p align="center"><kbd><img src="assets/2ts9blfghqk.png" width="80%"></kbd></p>
 
@@ -617,6 +643,8 @@
 
 <a id="node-z1cop2o"></a>
 
+##### Forward và Reverse Mode AD
+
 <p align="center"><kbd><img src="assets/7d1u5er240p.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -642,6 +670,8 @@
 
 <a id="node-iv9iwes"></a>
 
+###### Quy tắc chuỗi hàm vector
+
 <p align="center"><kbd><img src="assets/5j0k8drhbyh.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -658,6 +688,8 @@
 <br>
 
 <a id="node-9d9p6w8"></a>
+
+###### Forward và Reverse Mode AD
 
 <p align="center"><kbd><img src="assets/bpjfawjeqoa.png" width="80%"></kbd></p>
 
@@ -678,19 +710,21 @@
 >
 >
 >
-> - **ĐỂ TÍNH a' b' TRƯỚC** rồi nhân (a' b') c': Đây là **REVERSE**
+> \- **ĐỂ TÍNH a' b' TRƯỚC** rồi nhân (a' b') c': Đây là **REVERSE**
 > **MODE** là bởi khi tính toán f, ta phải tính c trước, rồi đến b, rồi đến a,
 > nên việc nhân a' b' rồi mới nhân kết quả với c' chính là reverse. Đây
 > cũng chính là **back-propagation**.
 >
 >
 >
-> -  **HOẶC TÍNH (b' c') trước** rồi mới nhân a' (b' c'): Đây là
+> \-  **HOẶC TÍNH (b' c') trước** rồi mới nhân a' (b' c'): Đây là
 > **FORWARD MODE**
 
 <br>
 
 <a id="node-qi4pxv3"></a>
+
+###### Chi phí nhân ma trận
 
 <p align="center"><kbd><img src="assets/kdwa9il3yh.png" width="80%"></kbd></p>
 
@@ -739,6 +773,8 @@
 
 <a id="node-fm0t5j4"></a>
 
+###### Độ phức tạp nhân ma trận
+
 <p align="center"><kbd><img src="assets/qgj0utbfp8.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -768,6 +804,8 @@
 <br>
 
 <a id="node-12k1t92"></a>
+
+###### Bản chất tính toán Backpropagation
 
 <p align="center"><kbd><img src="assets/pjqhg338mh.png" width="80%"></kbd></p>
 
