@@ -1003,7 +1003,7 @@
 >
 >
 >
-> Như đã biết mgf của normal (μ, σ^2) là M(t) = e^μt + σ^2t^2/2
+> Như đã biết mgf của normal (μ, σ²) là M(t) = e^μt + σ²t^2/2
 >
 >
 >
