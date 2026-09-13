@@ -1,6 +1,6 @@
 # 10.1 Point Estimation
 
-📊 **Progress:** `42` Notes | `48` Screenshots | `23` AI Reviews
+📊 **Progress:** `42` Notes | `48` Screenshots | `25` AI Reviews
 
 ---
 <a id="node-2ixm3r0"></a>
@@ -170,7 +170,7 @@
 >
 >
 > Còn nhớ, ta đã chứng minh, sample mean Xbar của random sample X1,...
-> Xn ~ normal(μ, σ^2) sẽ có distribution normal(μ, σ^2/n). Nên ở đây Xbar_n
+> Xn ~ normal(μ, σ²) sẽ có distribution normal(μ, σ²/n). Nên ở đây Xbar_n
 > sẽ là random variable ~ normal(θ, 1/n)
 >
 >
@@ -347,7 +347,7 @@
 >
 >
 > Nhưng theorem 5.2.6 ta đã học, nói rằng X1,...Xn ko nhất thiết là normal
-> mà chỉ cần có mean μ và variance hữu hạn σ^2.
+> mà chỉ cần có mean μ và variance hữu hạn σ².
 >
 >
 >
@@ -455,11 +455,11 @@
 >
 >
 >
-> Thế thì ta định nghĩa ra một khái niệm khác: giới hạn phương sai (limiting variance) được định nghĩa bởi: Nếu một (sequence of estimator) có phương sai tiệm cận lim n→∞ kn Var(Tn) = τ^2 < ∞, thì τ^2 được gọi là **limiting variance**.
+> Thế thì ta định nghĩa ra một khái niệm khác: giới hạn phương sai (limiting variance) được định nghĩa bởi: Nếu một (sequence of estimator) có phương sai tiệm cận lim n→∞ kn Var(Tn) = τ² < ∞, thì τ² được gọi là **limiting variance**.
 >
 >
 >
-> Lấy ví dụ, Xbar_n, là sample mean của iid normal(μ, σ^2) sample size n, như đã biết, nó sẽ một normal(μ, σ^2/n). Như vậy Var(Xbar_n) = σ^2/n ⇨ n Var(Xbar_n) = σ^2. Do đó, với Xbar_n thì lim n → ∞ n Var(Xbar_n) = σ^2, là con số hữu hạn (finite), < ∞. Do đó theo định nghĩa trên, σ^2 chính là limiting variance. (trong trường hợp này, chuỗi {kn} chính là {1,2,....n}.
+> Lấy ví dụ, Xbar_n, là sample mean của iid normal(μ, σ²) sample size n, như đã biết, nó sẽ một normal(μ, σ²/n). Như vậy Var(Xbar_n) = σ²/n ⇨ n Var(Xbar_n) = σ². Do đó, với Xbar_n thì lim n → ∞ n Var(Xbar_n) = σ², là con số hữu hạn (finite), < ∞. Do đó theo định nghĩa trên, σ² chính là limiting variance. (trong trường hợp này, chuỗi {kn} chính là {1,2,....n}.
 >
 >
 >
@@ -467,7 +467,7 @@
 >
 >
 >
-> Thế thì đại ý là, việc đánh giá asymptotic variance bằng cách lấy giới hạn của variance của Tn sẽ không vấn đề gì khi Tn là sample mean, vì lim n → inf Var(Tn) = lim n → inf σ^2/n = 0. Và với một số Tn khác cũng vậy.
+> Thế thì đại ý là, việc đánh giá asymptotic variance bằng cách lấy giới hạn của variance của Tn sẽ không vấn đề gì khi Tn là sample mean, vì lim n → inf Var(Tn) = lim n → inf σ²/n = 0. Và với một số Tn khác cũng vậy.
 >
 >
 >
@@ -479,7 +479,7 @@
 >
 >
 >
-> Với E\[(1/Xbar_n)^2\], theo LOTUS, = ∫(1/xbar_n)^2 f(xbar_n) d(xbar_n) với f là pdf của xbar_n. Ta đã biết, Xbar_n của sample \~ normal(μ, σ) sẽ có limiting distribution là normal(μ, σ^2/n), tức là Xbar_n sẽ hội tụ distribution về một rv thuộc phân phối normal(μ, σ^2). thế thì với phân phối này, trong tích phân ∫(1/xbar_n)^2 f(xbar_n) d(xbar_n) đang nói, tồn tại xác suất dương nào đó để xbar_n = 0, khiến tích phân này = inf (explode), vì sao, vì range của normal là từ -inf, inf, nên có nghĩa là tại xbar_n=0, vẫn tồn tại giá trị pdf không âm.
+> Với E\[(1/Xbar_n)^2\], theo LOTUS, = ∫(1/xbar_n)^2 f(xbar_n) d(xbar_n) với f là pdf của xbar_n. Ta đã biết, Xbar_n của sample \~ normal(μ, σ) sẽ có limiting distribution là normal(μ, σ²/n), tức là Xbar_n sẽ hội tụ distribution về một rv thuộc phân phối normal(μ, σ²). thế thì với phân phối này, trong tích phân ∫(1/xbar_n)^2 f(xbar_n) d(xbar_n) đang nói, tồn tại xác suất dương nào đó để xbar_n = 0, khiến tích phân này = inf (explode), vì sao, vì range của normal là từ -inf, inf, nên có nghĩa là tại xbar_n=0, vẫn tồn tại giá trị pdf không âm.
 >
 >
 >
@@ -567,7 +567,7 @@
 >
 >
 >
-> Var\[1/Xbar_n\] = (-1/μ^2)^2Var\_μ\[Xbar\] = **(1/μ^4) Var\_μ\[Xbar\]**
+> Var\[1/Xbar_n\] = (-1/μ²)^2Var\_μ\[Xbar\] = **(1/μ^4) Var\_μ\[Xbar\]**
 >
 >
 >
@@ -583,7 +583,7 @@
 >
 >
 >
-> đó là, cho chuỗi estimator (dựa trên sample size n) Tn: sao cho kn (Tn - τ(θ)) hội tụ phân phối về n(0, σ^2), khi đó σ^2 gọi là asymptotic variance của Tn. Có nghĩa là, thì **thay vì dùng Var(Tn) tại limit, ta dùng variance của cái phân phối normal là limit distribution của** kn (Tn - τ(θ)) **làm asymptotic variance**. Như vậy, với Tn = 1/Xbar, thay vì dùng Var(1/Xbar) tại limit (=inf), ta dùng (1/μ^4) Var\_μ\[Xbar\]
+> đó là, cho chuỗi estimator (dựa trên sample size n) Tn: sao cho kn (Tn - τ(θ)) hội tụ phân phối về n(0, σ²), khi đó σ² gọi là asymptotic variance của Tn. Có nghĩa là, thì **thay vì dùng Var(Tn) tại limit, ta dùng variance của cái phân phối normal là limit distribution của** kn (Tn - τ(θ)) **làm asymptotic variance**. Như vậy, với Tn = 1/Xbar, thay vì dùng Var(1/Xbar) tại limit (=inf), ta dùng (1/μ^4) Var\_μ\[Xbar\]
 >
 >
 >
@@ -625,7 +625,7 @@
 >
 >
 >
-> Khái niệm mixture model, trong sách này (Casella) cho đến giờ chưa được nghe. Nhưng, quachapter 2 của PRML của C.Bishop đã biết khái niệm mixture model, cũng đơn giản, đại khái như sau: f(x) = convex combination của các fi(x): ∑i αi fi(x). với fi(x) là các pdf của distribution. Ví dụ f(x|**μ**, **σ^2**) = αi fi(x|μi, σi^2) với fi là pdf của Normal(μi, σi^2), và αi ≥ 0 ∀i, và ∑i αi = 1, thì ta sẽ có một Gaussian (normal) mixture.
+> Khái niệm mixture model, trong sách này (Casella) cho đến giờ chưa được nghe. Nhưng, quachapter 2 của PRML của C.Bishop đã biết khái niệm mixture model, cũng đơn giản, đại khái như sau: f(x) = convex combination của các fi(x): ∑i αi fi(x). với fi(x) là các pdf của distribution. Ví dụ f(x|**μ**, **σ²**) = αi fi(x|μi, σi^2) với fi là pdf của Normal(μi, σi^2), và αi ≥ 0 ∀i, và ∑i αi = 1, thì ta sẽ có một Gaussian (normal) mixture.
 >
 >
 >
@@ -797,15 +797,15 @@
 >
 >
 >
-> Mà theo định nghĩa của khái niệm phương sai tiệm cận: nếu kn(Wn - τ(θ)) → (d) n(0, σ^2) thì  Wn có phương sai tiệm cận (Avar) là σ^2. Và điều này cũng đồng nghĩa khi n lớn Var\[kn(Wn - τ(θ))\] ≈ σ^2
+> Mà theo định nghĩa của khái niệm phương sai tiệm cận: nếu kn(Wn - τ(θ)) → (d) n(0, σ²) thì  Wn có phương sai tiệm cận (Avar) là σ². Và điều này cũng đồng nghĩa khi n lớn Var\[kn(Wn - τ(θ))\] ≈ σ²
 >
 >
 >
-> Chỗ này rất dễ sai: Nói Avar(Wn) = σ^2 không có nghĩa là Wn → n(0, σ^2) để rồi khi n lớn Var(Wn) ≈ σ^2. Đó là sai.
+> Chỗ này rất dễ sai: Nói Avar(Wn) = σ² không có nghĩa là Wn → n(0, σ²) để rồi khi n lớn Var(Wn) ≈ σ². Đó là sai.
 >
 >
 >
-> Mà định nghĩa rất rõ, Avar(Wn) = σ^2 thì tương đương kn(Wn - τ(θ)) → n(0, σ^2), để rồi khi n lớn Var(kn(Wn - τ(θ)) ≈ σ^2. Đây mới là đúng
+> Mà định nghĩa rất rõ, Avar(Wn) = σ² thì tương đương kn(Wn - τ(θ)) → n(0, σ²), để rồi khi n lớn Var(kn(Wn - τ(θ)) ≈ σ². Đây mới là đúng
 >
 >
 >
@@ -936,9 +936,28 @@
 > Và nhờ phân tích trên mình cũng sẽ thấy rằng, thật ra efficient chính là sẽ consistent. Là sao? Là vì theo định nghĩa của efficient: √n (τ(θ^) - τ(θ)) sẽ hội tụ phân phối về n(0, ν(θ)) với ν(θ) là Cramer Rao Lower Bound, thì dựa vào cái định nghĩa này, ta chứng minh như ở trên để cho thấy tính consistent. Vậy thì một sequence estimator thỏa định nghĩa này, sẽ là efficient và cũng tự nhiên là consistent, nên nói cách khác, efficient bao hàm consistent, thành ra nói vừa efficient vừa consistent là thừa (redundant), mà trong phần sau gs nói chính là này.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú giải thích Theorem 10.1.12 rất chi tiết và chính xác, đặc biệt là phần chứng minh tính consistency bằng định lý Slutsky. Để hoàn thiện hơn, bạn có thể bổ sung giới hạn n → ∞ vào định nghĩa tính consistent.
+> Ghi chú rất xuất sắc, hiểu sâu sắc định lý và tự chứng minh lại được tính nhất quán (consistency) từ tính chuẩn tiệm cận thông qua định lý Slutsky. Chỉ có vài điểm diễn đạt chưa hoàn toàn chuẩn xác về mặt giới hạn và hội tụ phân phối.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"P_θ(|Wn - θ| < ε) = 1 ∀ε"*
+>
+> Định nghĩa hội tụ theo xác suất / tính nhất quán thiếu dấu giới hạn: phải là lim_{n → ∞} P_θ(|W_n - θ| < ε) = 1 với mọi ε > 0, thay vì viết xác suất bằng 1 với mọi n.
+>
+> **2.** *"(√n (τ(θ^) - τ(θ)) sẽ trở thành một random variable có phân phối n(0, ν(θ))"*
+>
+> Về mặt khái niệm, hội tụ phân phối (convergence in distribution) có nghĩa là hàm phân phối tích lũy (CDF) của dãy hội tụ điểm về CDF của N(0, ν(θ)), chứ biến ngẫu nhiên không thực sự 'biến thành' biến chuẩn ở vô cùng.
+>
+>
+> **✓ Strengths**
+> - Vận dụng định lý Slutsky và tính chất tương đương giữa hội tụ phân phối về hằng số và hội tụ theo xác suất rất chuẩn xác và khúc chiết.
+> - Rút ra nhận xét sâu sắc và chính xác rằng định nghĩa hiệu quả tiệm cận (chuẩn tiệm cận với phương sai CRLB) đã bao hàm sẵn tính nhất quán.
+>
+> **💡 Deeper notes**
+> - Dù định lý trong sách ghi τ(θ) là 'continuous function', trên thực tế để tính toán CRLB cho τ(θ) (thông qua Delta method [τ'(θ)]² / I(θ)), hàm τ(θ) thường đòi hỏi phải khả vi và có đạo hàm liên tục khác 0.
+> - Thuật ngữ 'asymptotic variance' trong ngữ cảnh chuẩn tiệm cận là phương sai của phân phối giới hạn ν(θ), không nhất thiết bằng lim Var(√n τ(θ^)) nếu các đuôi phân phối không khả tích đồng đều.
 
 **🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Định lý Slutsky](./55_convergence_concepts.md#node-uwbmbt7) · [Hội tụ xác suất và phân phối](./55_convergence_concepts.md#node-wqcasc6) · [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Chuẩn tiệm cận, nhất quán, hiệu quả](#node-v1s5jks) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s) · [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li) · [Asymptotic Normality of MLE](./103_hypothesis_testing.md#node-l86tt7u) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq) · [The Score Test Statistic](./103_hypothesis_testing.md#node-xudioev) · [Approximate Maximum Likelihood Intervals](./104_interval_estimation.md#node-tsuffya)
 
@@ -1177,7 +1196,7 @@
 >
 >
 >
-> CLT nói rằng, với X1,...Xn, có EX = μ, Var(X) = σ^2. Thì √n(Xbar - μ)/σ → (d) n(0, 1)
+> CLT nói rằng, với X1,...Xn, có EX = μ, Var(X) = σ². Thì √n(Xbar - μ)/σ → (d) n(0, 1)
 >
 >
 >
@@ -1440,11 +1459,11 @@
 >
 >
 >
-> nếu √n(Yn - θ) → (d) n(0, σ^2) thì √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\]^2 σ^2))
+> nếu √n(Yn - θ) → (d) n(0, σ²) thì √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\]^2 σ²))
 >
 >
 >
-> Và cái trên cũng tương đương với việc nói Avar(Yn) = σ^2 thì Avar(g(Yn)) = \[g'(θ)\]^2 σ^2 = \[g'(θ)\]^2
+> Và cái trên cũng tương đương với việc nói Avar(Yn) = σ² thì Avar(g(Yn)) = \[g'(θ)\]^2 σ² = \[g'(θ)\]^2
 >
 > Avar(Yn)
 >
@@ -1458,7 +1477,7 @@
 >
 >
 >
-> vì sao, vì √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\]^2 σ^2)) = n(0, \[g'(θ)\]^2 Avar(Yn))) có bản chất ý nghĩa là: khi
+> vì sao, vì √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\]^2 σ²)) = n(0, \[g'(θ)\]^2 Avar(Yn))) có bản chất ý nghĩa là: khi
 >
 > n vô cùng thì random variable √n(g(Yn) - g(θ)) sẽ có distribution là n(0, \[g'(θ)\]^2 Avar(Yn))).
 >
@@ -1625,7 +1644,7 @@
 >
 >
 >
-> ii) Theo theorem của Delta method nói rằng nếu Avar(Yn) = σ^2 thì Avar(g(Yn)) = \[g'(θ)\]^2 σ^2 = \[g'(θ)\]^2 Avar(Yn). Và biểu thị toán học của của Avar(g(Yn)) = \[g'(θ)\]^2 Avar(Yn) đó là √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\]^2 Avar(Yn)), và cái này có nghĩa là nếu n lớn ta có Var\[√n(g(Yn) - g(θ))\] ≈ \[g'(θ)\]^2 Avar(Yn)) ⇔ Var\[g(Yn)\] ≈ \[g'(θ)\]^2 Avar(Yn)) / n.
+> ii) Theo theorem của Delta method nói rằng nếu Avar(Yn) = σ² thì Avar(g(Yn)) = \[g'(θ)\]^2 σ² = \[g'(θ)\]^2 Avar(Yn). Và biểu thị toán học của của Avar(g(Yn)) = \[g'(θ)\]^2 Avar(Yn) đó là √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\]^2 Avar(Yn)), và cái này có nghĩa là nếu n lớn ta có Var\[√n(g(Yn) - g(θ))\] ≈ \[g'(θ)\]^2 Avar(Yn)) ⇔ Var\[g(Yn)\] ≈ \[g'(θ)\]^2 Avar(Yn)) / n.
 >
 >
 >
@@ -1864,7 +1883,7 @@
 >
 >
 >
-> Rồi, theo Delta method, nếu Avar(Yn) = σ^2 thì Avar(g(Yn)) = \[g'(θ)\]^2 σ^2 = \[g'(θ)\]^2 Avar(Yn). Như vậy, giả sử ta có Yn là estimator hiệu quả tiệm cận ở trên thì Avar(g(Yn)) = \[g'(θ)\] (1/I1(θ)). Và cái này thì có nghĩa là √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\] (1/I1(θ))), nên nếu n lớn, ta có Var\[√n(g(Yn) - g(θ)\] ≈ \[g'(θ)\] (1/I1(θ)) ⇔ Var(g(Yn)) ≈ \[g'(θ)\] / nI1(θ)
+> Rồi, theo Delta method, nếu Avar(Yn) = σ² thì Avar(g(Yn)) = \[g'(θ)\]^2 σ² = \[g'(θ)\]^2 Avar(Yn). Như vậy, giả sử ta có Yn là estimator hiệu quả tiệm cận ở trên thì Avar(g(Yn)) = \[g'(θ)\] (1/I1(θ)). Và cái này thì có nghĩa là √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\] (1/I1(θ))), nên nếu n lớn, ta có Var\[√n(g(Yn) - g(θ)\] ≈ \[g'(θ)\] (1/I1(θ)) ⇔ Var(g(Yn)) ≈ \[g'(θ)\] / nI1(θ)
 >
 >
 >
@@ -2106,9 +2125,33 @@
 > iii) Khi đó 1/\[kết quả mẫu số\], chính là cũng sẽ cho ra Var^(θ^), mà trong ví dụ cụ thể này, đó là Var^(p^) ≈ p^(1-p^)/n
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
 >
-> Bài làm rất chi tiết và có chiều sâu, giải thích rõ ràng từng bước và mục đích của việc áp dụng công thức xấp xỉ phương sai, đồng thời so sánh kết quả với công thức đã biết. Tuy nhiên, trong quá trình tính đạo hàm bậc hai của hàm log likelihood, bạn đã mắc lỗi về dấu ở thành phần thứ hai (∂/∂p [n(1-p^) [-1/(1-p)]] phải là -n(1-p^)/(1-p)^2 chứ không phải dương), dù kết quả cuối cùng vẫn chính xác.
+> Bạn nắm rất vững bản chất thống kê của việc dùng đạo hàm bậc hai log-likelihood (Observed Fisher Information) để xấp xỉ phương sai cho MLE khi không có dạng đóng. Tuy nhiên, trong quá trình tính đạo hàm bậc hai có hai lỗi dấu triệt tiêu nhau tình cờ cho ra kết quả đúng.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"= np^ (1/p) + n(1-p^) [-/(1-p)]"*
+>
+> Lỗi gõ thiếu số 1 ở tử số: viết nhầm thành [-/(1-p)] thay vì [-1/(1-p)].
+>
+> **2.** *"= -np^/p^2 + n(1-p^)/(1-p)^2"*
+>
+> Đạo hàm của [-1/(1-p)] theo p theo quy tắc đạo hàm hàm hợp là -(1-p)^(-2) * (-1) * (-1) = -1/(1-p)^2, do đó số hạng thứ hai phải mang dấu âm chứ không phải dấu dương.
+>
+> **3.** *"Vậy -∂^2/∂θ^2 log L(θ|x) = -[-np^/p^2 + n(1-p^)/(1-p)^2] = np^/p^2 + n(1-p^)/(1-p)^2"*
+>
+> Có lỗi phá ngoặc dấu âm: -[-A + B] phải bằng A - B chứ không phải A + B. Nhờ lỗi dấu này triệt tiêu với lỗi tính đạo hàm ở trên nên kết quả cuối cùng tình cờ trùng khớp với tài liệu tham khảo.
+>
+>
+> **✓ Strengths**
+> - Hiểu sâu sắc ý nghĩa bản chất: khi không có công thức giải tích trực tiếp cho Var_θ(θ^), ta dùng đạo hàm bậc hai của log-likelihood (thông tin Fisher quan sát) để xấp xỉ.
+> - Phân biệt rất rõ ràng giữa biến p (tham số đang lấy vi phân) và p^ (hằng số thống kê được tính từ mẫu quan sát).
+> - Khai triển chi tiết, mạch lạc từ hàm hợp lý ban đầu của mẫu Bernoulli về dạng tổng rút gọn chứa n*p^.
+>
+> **💡 Deeper notes**
+> - Đại lượng -∂^2/∂p^2 log L(p|x) evaluated tại p^ được gọi là Thông tin Fisher quan sát (Observed Fisher Information, ký hiệu I_obs(p^)), và nghịch đảo của nó xấp xỉ phương sai tiệm cận của MLE.
+> - Công thức tổng quát Var^(h(θ^)) chính là sự kết hợp giữa phân phối tiệm cận chuẩn của MLE và phương pháp Delta (Delta method) bậc nhất.
 
 **🔗 See also:** [Tính nhất quán của MLE](#node-d19dn75) · [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m)
 
@@ -2209,16 +2252,34 @@
 >
 >
 >
-> Mà với Z \~ n(0, σ^2), tức là một thành viên của location scale family ứng với scale = σ, thì theo location scale family, Z/σ sẽ \~ n(0,1). Vậy n(0, p(1-p)) /√\[p(1-p)\] sẽ \~ n(0,1)
+> Mà với Z \~ n(0, σ²), tức là một thành viên của location scale family ứng với scale = σ, thì theo location scale family, Z/σ sẽ \~ n(0,1). Vậy n(0, p(1-p)) /√\[p(1-p)\] sẽ \~ n(0,1)
 >
 >
 >
 > Vậy √n(p^-p)/√\[p(1-p)\] → (d) n(0, 1).
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
 >
-> Phân tích của bạn rất sâu sắc và chính xác, đặc biệt là phần dẫn xuất Fisher Information để chứng minh phương sai. Bạn đã giải thích rất rõ ràng cách áp dụng Định lý Slutsky và chuẩn hóa phân phối để đạt được kết quả cuối cùng.
+> Ghi chú rất tốt, tự diễn giải và tính toán chi tiết thông tin Fisher của phân phối Bernoulli để tìm phương sai tiệm cận cũng như áp dụng định lý Slutsky rất chính xác.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Vậy √n(p^-p)/√[p(1-p)] → (d) n(0, 1)."*
+>
+> Lỗi gõ phím ở kết luận cuối cùng: mẫu số bị thiếu dấu mũ (phải là √[p^(1-p^)] thay vì √[p(1-p)]). Mục đích của định lý Slutsky là để thay thế tham số chưa biết p ở mẫu số bằng ước lượng nhất quán p^.
+>
+> **2.** *"√n(p^-p) × [1/√[p^(1-p^)]] → (d) n(0, p(1-p)) × 1/√[p(1-p)])"*
+>
+> Cách viết nhân trực tiếp ký hiệu phân phối n(0, p(1-p)) với hằng số có phần hơi phi hình thức về mặt ký hiệu giới hạn phân phối, dù phần giải thích bổ sung về location-scale family ngay sau đó đã làm rõ đúng bản chất biến ngẫu nhiên.
+>
+>
+> **✓ Strengths**
+> - Tự triển khai đạo hàm log-likelihood và tính kỳ vọng bình phương để ra Fisher Information I_1(p) = 1/[p(1-p)] một cách cực kỳ chi tiết và chính xác.
+> - Hiểu đúng vai trò và cách thiết lập định lý Slutsky khi kết hợp hội tụ phân phối với hội tụ theo xác suất.
+>
+> **💡 Deeper notes**
+> - Bước suy luận 1/√[p^(1-p^)] →(p) 1/√[p(1-p)] từ p^ →(p) p về mặt toán học dựa trên Định lý Ánh xạ Liên tục (Continuous Mapping Theorem), với điều kiện p ∈ (0, 1) để hàm số xác định và liên tục.
 
 <br>
 
@@ -2237,11 +2298,11 @@
 >
 >
 >
-> Đầu tiên là khái niệm phương sai tiệm cận (asymptotically variance), kí hiệu Avar, được định nghĩa là phương sai của phân phối chuẩn mà √n(Wn - θ) hội tụ (distribution) về. Tức là, nếu ta có √n(Wn - θ) → (d) n(0, σ^2), thì Avar(Wn) = σ^2.
+> Đầu tiên là khái niệm phương sai tiệm cận (asymptotically variance), kí hiệu Avar, được định nghĩa là phương sai của phân phối chuẩn mà √n(Wn - θ) hội tụ (distribution) về. Tức là, nếu ta có √n(Wn - θ) → (d) n(0, σ²), thì Avar(Wn) = σ².
 >
 >
 >
-> Rồi, tiếp theo, là Delta method theorem, nói rằng nếu √n(Wn - θ) → (d) n(0, σ^2), thì √n(g(Wn) - g(θ)) → (d) n(0, g'(θ)^2 σ^2). Điều này cũng đồng nghĩa nói đơn giản hơn là nếu Wn có phương sai tiệm cận là Avar(Wn) thì Avar\[g(Wn)\] = \[g'(θ)\]^2 Avar(Wn).
+> Rồi, tiếp theo, là Delta method theorem, nói rằng nếu √n(Wn - θ) → (d) n(0, σ²), thì √n(g(Wn) - g(θ)) → (d) n(0, g'(θ)^2 σ²). Điều này cũng đồng nghĩa nói đơn giản hơn là nếu Wn có phương sai tiệm cận là Avar(Wn) thì Avar\[g(Wn)\] = \[g'(θ)\]^2 Avar(Wn).
 >
 >
 >
@@ -2389,7 +2450,7 @@
 >
 >
 >
-> Thế thì mình biết với random sample X1, X2,... Xn có mean μ và variance σ^2 thì CLT (central limit theorem) cho ta biết rằng √n(Xbar - μ)/σ → (d) n(0, 1), cũng chính là √n(Xbar - μ) → n(0, σ^2).
+> Thế thì mình biết với random sample X1, X2,... Xn có mean μ và variance σ² thì CLT (central limit theorem) cho ta biết rằng √n(Xbar - μ)/σ → (d) n(0, 1), cũng chính là √n(Xbar - μ) → n(0, σ²).
 >
 >
 >
@@ -2495,6 +2556,31 @@
 >
 > Kết quả y chang cách 1 dùng Delta method.
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, hiểu sâu bản chất từ tiệm cận, Delta method đến việc thay thế Expected Information bằng Observed Information. Chỉ có một lỗi gõ nhỏ ở dấu ngoặc của công thức CRLB.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Var_θ(Wn) ≥ [d/dθ E_θ[Wn]^2/ In(θ)"*
+>
+> Lỗi gõ thiếu dấu ngoặc ở tử số: công thức đúng của Cramer-Rao Lower Bound là [d/dθ E_θ(Wn)]^2 / I_n(θ) (bình phương của đạo hàm kỳ vọng, không phải đạo hàm của bình phương kỳ vọng).
+>
+> **2.** *"n(0, σ^2)"*
+>
+> Ký hiệu phân phối chuẩn thường được viết hoa là N(0, σ^2) để tránh nhầm lẫn với cỡ mẫu n.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ và giải thích cặn kẽ tại sao lại chuyển từ Expected Fisher Information sang Observed Fisher Information khi ước lượng phương sai trong thực tế.
+> - Tự tái lập và so sánh hai cách tiếp cận (Delta method truyền thống và công thức thông tin quan sát của MLE) dẫn đến cùng một kết quả chính xác như sách giáo trình.
+>
+> **💡 Deeper notes**
+> - Trong một số tài liệu (như Casella & Berger), 'asymptotic variance' đôi khi được định nghĩa trực tiếp là σ^2/n hoặc v(n) thay vì chỉ là hằng số σ^2 của phân phối giới hạn; tuy nhiên cách bạn đặt Avar và chia cho n là hoàn toàn nhất quán về mặt tính toán xấp xỉ phương sai hữu hạn.
+
+**🔗 See also:** [Example 10.4.1 Odds Ratio CI](./104_interval_estimation.md#node-0r0xeb1)
+
 <br>
 
 <a id="node-0d20ljz"></a>
@@ -2520,6 +2606,25 @@
 
 > [!NOTE]
 > Quay lại sau, nhưng đại ý đoạn này là minh họa rằng khi h(θ^) ko monotone thì giá trị xấp xỉ của variance Var(h(θ^)) có thể bị thấp hơn giá trị thật.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+>
+> Ghi chú nắm đúng ý chính từ ví dụ: khi hàm biến đổi không đơn điệu (đạo hàm bậc nhất bị triệt tiêu tại cực trị như p = 1/2), xấp xỉ Delta method bậc nhất sẽ cho phương sai bằng 0, dẫn đến việc đánh giá thấp phương sai thực tế.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"khi h(θ^) ko monotone"*
+>
+> Tính đơn điệu là tính chất của hàm số h trên không gian tham số θ (ở đây là h(p) = p(1-p)), không phải của riêng h(θ^). Cụ thể hơn, vấn đề xảy ra tại các điểm dừng nơi h'(p) = 0 (tại p = 1/2), khiến đạo hàm bậc nhất bằng 0 nên xấp xỉ Delta method bậc 1 bị suy biến.
+>
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác thông điệp cốt lõi của ví dụ về việc ước lượng phương sai xấp xỉ có thể bị underestimate.
+> - Nhận diện đúng nguyên nhân gốc rễ được sách đề cập là do hàm h không đơn điệu.
+>
+> **💡 Deeper notes**
+> - Khi h'(p) = 0 tại p = 1/2, xấp xỉ tuyến tính (bậc nhất / Delta method) cho ra phương sai bằng 0, do đó để tìm phân phối tiệm cận và phương sai thực sự tại điểm này cần phải sử dụng xấp xỉ bậc hai (second-order Delta method).
 
 <br>
 
@@ -2566,7 +2671,7 @@
 >
 >
 >
-> Ta đã biết định nghĩa của phương sai tiệm cận: Đó là nếu √n(Wn - τ(θ)) → (d) n(0, σ^2) thì phương sai tiệm cận của Wn chính là σ^2: Avar(Wn) = σ^2.
+> Ta đã biết định nghĩa của phương sai tiệm cận: Đó là nếu √n(Wn - τ(θ)) → (d) n(0, σ²) thì phương sai tiệm cận của Wn chính là σ²: Avar(Wn) = σ².
 >
 >
 >
@@ -2740,7 +2845,7 @@
 >
 >
 >
-> Tiếp, CLT nói rằng với random sample X1,...Xn có EXi = μ và Var(Xi) = σ^2 &lt; inf thì √n(Xbar - μ)/σ → (d) n(0,1). Cũng chính là √n(Xbar - μ) → (d) n(0, σ^2).
+> Tiếp, CLT nói rằng với random sample X1,...Xn có EXi = μ và Var(Xi) = σ² &lt; inf thì √n(Xbar - μ)/σ → (d) n(0,1). Cũng chính là √n(Xbar - μ) → (d) n(0, σ²).
 >
 >
 >
@@ -3217,15 +3322,15 @@
 >
 >
 >
-> Mà Var(Xbar), theo công thức, ta có σ^2/n với σ^2 là phương sai của population, là Var(X1)
+> Mà Var(Xbar), theo công thức, ta có σ²/n với σ² là phương sai của population, là Var(X1)
 >
 >
 >
-> Do không có σ^2, ta có thể dùng S^2, sample variance = \[1/(n-1)\] Σi (Xi - Xbar)^2. Nên ở đây với observed value **x** = (2,4,9,12) ta có S^2(**x**) = (1/3) \[(2-6.75)^2 + (4-6.75)^2 + (9-6.75)^2 + (12-6.75)^2\] = 20.9167 ⇒ Var(Xbar) ≈ S^2/n = 20.9167/4 = **5.23**
+> Do không có σ², ta có thể dùng S^2, sample variance = \[1/(n-1)\] Σi (Xi - Xbar)^2. Nên ở đây với observed value **x** = (2,4,9,12) ta có S^2(**x**) = (1/3) \[(2-6.75)^2 + (4-6.75)^2 + (9-6.75)^2 + (12-6.75)^2\] = 20.9167 ⇒ Var(Xbar) ≈ S^2/n = 20.9167/4 = **5.23**
 >
 >
 >
-> Và cái **Var(Xbar) nhưng dùng S^2 để estimate cho σ^2** này ta kí hiệu là Var^(Xbar): **Var^(Xbar)** = 5.23
+> Và cái **Var(Xbar) nhưng dùng S^2 để estimate cho σ²** này ta kí hiệu là Var^(Xbar): **Var^(Xbar)** = 5.23
 >
 >
 >
@@ -3269,7 +3374,7 @@
 >
 >
 >
-> Thế thì, áp dụng công thức Variance của bootstrap sample mean Var\*(Xbar) = \[bootstrap population variance, chính là **15.6875**\] / \[resample size, = 4, (vì sampling 4 số từ {2,4,9,12}\] (đây chính là công thức σ^2/n, theorem chương 5, về mean và variance của Xbar thôi) = **15.6875** / 4 = **3.921875**.
+> Thế thì, áp dụng công thức Variance của bootstrap sample mean Var\*(Xbar) = \[bootstrap population variance, chính là **15.6875**\] / \[resample size, = 4, (vì sampling 4 số từ {2,4,9,12}\] (đây chính là công thức σ²/n, theorem chương 5, về mean và variance của Xbar thôi) = **15.6875** / 4 = **3.921875**.
 >
 >
 >
@@ -3393,11 +3498,11 @@
 >
 >
 >
-> Rồi, thế thì ta mới nhớ đến việc đã học một điểm kiến thức ở chap 5 (theorem 5.2.4 xem link), đã chứng minh rằng Var(Xbar) = σ^2/n, tức population variance / n. Nhưng dĩ nhiên là ta làm gì biết population variance để mà tính theo công thức này.
+> Rồi, thế thì ta mới nhớ đến việc đã học một điểm kiến thức ở chap 5 (theorem 5.2.4 xem link), đã chứng minh rằng Var(Xbar) = σ²/n, tức population variance / n. Nhưng dĩ nhiên là ta làm gì biết population variance để mà tính theo công thức này.
 >
 >
 >
-> Rồi, nếu có σ^2 thì ta sẽ có Var(Xbar) chính xác. Thì nay không có, ta có thể dùng sample variance S^2, thì ta sẽ có estimate cho Var(Xbar): Var^(Xbar) = S^2 / n. Với S^2 = (1/(n-1)) Σi (Xi - Xbar)^2.
+> Rồi, nếu có σ² thì ta sẽ có Var(Xbar) chính xác. Thì nay không có, ta có thể dùng sample variance S^2, thì ta sẽ có estimate cho Var(Xbar): Var^(Xbar) = S^2 / n. Với S^2 = (1/(n-1)) Σi (Xi - Xbar)^2.
 >
 >
 >
@@ -3425,11 +3530,11 @@
 >
 >
 >
->  Thế thì, vấn đề là, để ra con số 3.92, trong đó ta coi {2,4,9,12} là một empirical population, rồi xét sample mean của sample drawing từ population này, và từ đó dùng công thức chính xác Var(Xbar) = σ^2/n trong đó ta có σ^2 rồi (chỉ việc tính cái variance của cái empirical distribution này), thì mấu chốt là: TA ĐÃ CÓ CÔNG THỨC CỦA Var(Xbar) = σ^2 / n.
+>  Thế thì, vấn đề là, để ra con số 3.92, trong đó ta coi {2,4,9,12} là một empirical population, rồi xét sample mean của sample drawing từ population này, và từ đó dùng công thức chính xác Var(Xbar) = σ²/n trong đó ta có σ² rồi (chỉ việc tính cái variance của cái empirical distribution này), thì mấu chốt là: TA ĐÃ CÓ CÔNG THỨC CỦA Var(Xbar) = σ² / n.
 >
 >
 >
-> Chứ **nếu như, ta muốn estimate không phải là variance của sample mean, mà là variance của một estimator nào đó khác**, thì **LÀM GÌ CÓ CÔNG THỨC** tính như Var(Xbar) = σ^2 / n. Ví dụ, estimator là sample median, thì làm gì có công thức của Var(sample median) = một hàm gì gì đó của population variance / hay population mean, để mà tính.
+> Chứ **nếu như, ta muốn estimate không phải là variance của sample mean, mà là variance của một estimator nào đó khác**, thì **LÀM GÌ CÓ CÔNG THỨC** tính như Var(Xbar) = σ² / n. Ví dụ, estimator là sample median, thì làm gì có công thức của Var(sample median) = một hàm gì gì đó của population variance / hay population mean, để mà tính.
 >
 >
 >
@@ -3523,7 +3628,7 @@
 >
 >
 >
-> Var(Xbar) = Var(Xi) / n. Tức là, population variance σ^2 chia sample size (ở đây chính là n, = 4).
+> Var(Xbar) = Var(Xi) / n. Tức là, population variance σ² chia sample size (ở đây chính là n, = 4).
 >
 >
 >
@@ -3535,11 +3640,11 @@
 >
 >
 >
-> Câu trả lời là, ta có thể dùng (observed value của) sample variance để thay chỗ của population variance, từ đó, thay vì ta có công thức chính xác Var(Xbar) = σ^2 / n, ta có công thức ước lượng: Var(Xbar) ≈ s^2/n. Và với observed value của sample, thì ta có observed value của S^2: s^2 = \[1/(n-1)\] Σi=1:n (xi - xbar)^2. Thế giá trị vào ta tính ra con số **5.23**, là ước lượng của Xbar variance.
+> Câu trả lời là, ta có thể dùng (observed value của) sample variance để thay chỗ của population variance, từ đó, thay vì ta có công thức chính xác Var(Xbar) = σ² / n, ta có công thức ước lượng: Var(Xbar) ≈ s^2/n. Và với observed value của sample, thì ta có observed value của S^2: s^2 = \[1/(n-1)\] Σi=1:n (xi - xbar)^2. Thế giá trị vào ta tính ra con số **5.23**, là ước lượng của Xbar variance.
 >
 >
 >
-> Var(Xbar) = σ^2/n ≈ Var^(Xbar) = s^2/n = **5.23** (chú ý kí hiệu Var^, var có mũ, thể hiện đây là giá trị estimate cho Var(Xbar) chính xác)
+> Var(Xbar) = σ²/n ≈ Var^(Xbar) = s^2/n = **5.23** (chú ý kí hiệu Var^, var có mũ, thể hiện đây là giá trị estimate cho Var(Xbar) chính xác)
 >
 >
 >
@@ -3571,7 +3676,7 @@
 >
 >
 >
-> Khi đó ta thay sample variance s^2 vào thế chỗ của population variance σ^2 để có ước lượng cho Var(Xbar) = σ^2/n ≈ Var^(Xbar) = s^2/n = **5.23**
+> Khi đó ta thay sample variance s^2 vào thế chỗ của population variance σ² để có ước lượng cho Var(Xbar) = σ²/n ≈ Var^(Xbar) = s^2/n = **5.23**
 >
 >
 >
@@ -3583,7 +3688,7 @@
 >
 >
 >
-> σ^2 = E\[(X - EX)^2\] = (LOTUS) = Σ{x=2,4,9,12} (x - 6.75)^2 P(X = x)
+> σ² = E\[(X - EX)^2\] = (LOTUS) = Σ{x=2,4,9,12} (x - 6.75)^2 P(X = x)
 >
 >
 >
@@ -3948,7 +4053,7 @@
 >
 >
 >
-> Vậy ở đây muốn gắn, ta phải giả định population distribution là distribution có hai parameter là mean và variance. Ví dụ, giả định distribution gốc là n(μ, σ^2). thì khi đó, ta mới gắn xbar vào thay chỗ của μ, và s^2 vào thay chỗ của σ^2. Đó là lí do trong sách ta thấy gs giả định population distribution là normal là vậy.
+> Vậy ở đây muốn gắn, ta phải giả định population distribution là distribution có hai parameter là mean và variance. Ví dụ, giả định distribution gốc là n(μ, σ²). thì khi đó, ta mới gắn xbar vào thay chỗ của μ, và s^2 vào thay chỗ của σ². Đó là lí do trong sách ta thấy gs giả định population distribution là normal là vậy.
 >
 >
 >
@@ -4018,7 +4123,7 @@
 >
 >
 >
-> Một điểm nữa, gs lại nói rằng, cái population distribution thật sự là normal có variance σ^2 = 4. Thành ra, theo công thức chính xác của Var(S^2), ta có Var(S^2) = 2 × population variance σ^4/(n-1) = 2 × 4^2 / (9-1) = 4.
+> Một điểm nữa, gs lại nói rằng, cái population distribution thật sự là normal có variance σ² = 4. Thành ra, theo công thức chính xác của Var(S^2), ta có Var(S^2) = 2 × population variance σ^4/(n-1) = 2 × 4^2 / (9-1) = 4.
 >
 >
 >
