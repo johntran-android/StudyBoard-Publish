@@ -836,7 +836,7 @@
 <p align="center"><kbd><img src="assets/pjna5q751oh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tương tự, với X1,....Xn là random sample ~ n(μ, σ^2) với σ đã biết.
+> Tương tự, với X1,....Xn là random sample ~ n(μ, σ²) với σ đã biết.
 >
 >
 >
@@ -864,43 +864,43 @@
 >
 >
 >
-> với X ~n(μ, σ^2) ta biết fX(x) = (1/2πσ^2)^(-1/2) exp[-(x - μ)^2 / 2σ^2]
+> với X ~n(μ, σ²) ta biết fX(x) = (1/2πσ²)^(-1/2) exp[-(x - μ)^2 / 2σ²]
 >
 >
 >
-> ⇨ f**X**(**x**) = Πi=1:n (1/2πσ^2)^(-1/2) exp[-(xi - μ)^2 / 2σ^2]
+> ⇨ f**X**(**x**) = Πi=1:n (1/2πσ²)^(-1/2) exp[-(xi - μ)^2 / 2σ²]
 >
 >
 >
-> = [(1/2πσ^2)^(1/2)]^n {exp Σi[-(xi - μ)^2 / 2σ^2]}
+> = [(1/2πσ²)^(1/2)]^n {exp Σi[-(xi - μ)^2 / 2σ²]}
 >
 >
 >
-> = [(1/2πσ^2)^(n/2)] {exp Σi[-(xi - μ)^2 / 2σ^2]}
+> = [(1/2πσ²)^(n/2)] {exp Σi[-(xi - μ)^2 / 2σ²]}
 >
 >
 >
-> = [(1/2πσ^2)^(n/2)] {exp (1/2σ^2) [-Σi (xi - μ)^2]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi (xi - μ)^2]}
 >
 >
 >
-> = [(1/2πσ^2)^(n/2)] {exp (1/2σ^2) [-Σi (xi - xbar + xbar - μ)^2]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi (xi - xbar + xbar - μ)^2]}
 >
 >
 >
-> = [(1/2πσ^2)^(n/2)] {exp (1/2σ^2) [-Σi [(xi - xbar) + (xbar - μ)]^2]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi [(xi - xbar) + (xbar - μ)]^2]}
 >
 >
 >
-> = [(1/2πσ^2)^(n/2)] {exp (1/2σ^2) [-Σi [(xi - xbar)^2 + (xbar - μ)^2 + 2(xi - xbar)(xbar - μ)]]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi [(xi - xbar)^2 + (xbar - μ)^2 + 2(xi - xbar)(xbar - μ)]]}
 >
 >
 >
-> = [(1/2πσ^2)^(n/2)] {exp (1/2σ^2) [-[Σi(xi - xbar)^2 + Σi(xbar - μ)^2 + 2Σi(xi - xbar)(xbar - μ)]]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - xbar)^2 + Σi(xbar - μ)^2 + 2Σi(xi - xbar)(xbar - μ)]]}
 >
 >
 >
-> = [(1/2πσ^2)^(n/2)] {exp (1/2σ^2) [-[Σi(xi - xbar)^2 + n(xbar - μ)^2 + 2Σi(xi - xbar)(xbar - μ)]]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - xbar)^2 + n(xbar - μ)^2 + 2Σi(xi - xbar)(xbar - μ)]]}
 >
 >
 >
@@ -909,7 +909,7 @@
 >
 >
 >
-> ... = [(1/2πσ^2)^(n/2)] {exp (1/2σ^2) [-[Σi(xi - xbar)^2 + n(xbar - μ)^2]]}
+> ... = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - xbar)^2 + n(xbar - μ)^2]]}
 >
 >
 >
@@ -921,7 +921,7 @@
 >
 >
 >
-> chính là một n(μ, σ^2/n) random variable.
+> chính là một n(μ, σ²/n) random variable.
 >
 >
 >
@@ -929,12 +929,12 @@
 >
 >
 >
-> mgf của X~ n(μ, σ^2): MX(t) có bản chất ý nghĩa là E[e^Xt], tức apply hàm g(u) = e^tu
+> mgf của X~ n(μ, σ²): MX(t) có bản chất ý nghĩa là E[e^Xt], tức apply hàm g(u) = e^tu
 > lên X để có random variable mới e^tX, và lấy kì vọng.
 >
 >
 >
-> Và ta sẽ nhớ công thức của nó là MX(t) = e^(μt + σ^2t^2/2)
+> Và ta sẽ nhớ công thức của nó là MX(t) = e^(μt + σ²t^2/2)
 >
 >
 >
@@ -962,23 +962,23 @@
 >
 >
 >
-> = e^(μt/n + σ^2t^2/2n^2)*...*e^(μt/n + σ^2t^2/2n^2) 
+> = e^(μt/n + σ²t^2/2n^2)*...*e^(μt/n + σ²t^2/2n^2) 
 >
 >
 >
-> = e^(μt/n + σ^2t^2/2n^2)^n 
+> = e^(μt/n + σ²t^2/2n^2)^n 
 >
 >
 >
-> = e^(μt + σ^2t^2/2n)
+> = e^(μt + σ²t^2/2n)
 >
 >
 >
-> = e^(**μ**t + (**σ^2/n**) t^2/2)
+> = e^(**μ**t + (**σ²/n**) t^2/2)
 >
 >
 >
-> Và đây có dạng mgf của một normal(μ, σ^2/n) ⇨ Xbar của normal (μ, σ^2) ~ normal(μ, σ^2/n)
+> Và đây có dạng mgf của một normal(μ, σ²/n) ⇨ Xbar của normal (μ, σ²) ~ normal(μ, σ²/n)
 >
 >
 >
@@ -1343,7 +1343,7 @@
 >
 >
 >
-> f(**x**|μ) = (2πσ^2)^(-n/2) exp[-Σ(xi-xbar)^2/(2σ^2)] exp(-n(xbar-μ)^2/(2σ^2)
+> f(**x**|μ) = (2πσ²)^(-n/2) exp[-Σ(xi-xbar)^2/(2σ²)] exp(-n(xbar-μ)^2/(2σ²)
 >
 >
 >
@@ -1351,7 +1351,7 @@
 >
 >
 >
-> Còn cái phần sau, còn dính tới μ:  exp(-n(xbar-μ)^2/(2σ^2)
+> Còn cái phần sau, còn dính tới μ:  exp(-n(xbar-μ)^2/(2σ²)
 >
 >
 >
@@ -1620,8 +1620,8 @@
 <p align="center"><kbd><img src="assets/0jx0n8dlwgj6.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là xét lại random sample size n X1,X2...Xn ~ n(μ, σ^2) với cả hai
-> param đều chưa biết. ⇨ ta có vector param Θ = (μ, σ^2)
+> Đại khái là xét lại random sample size n X1,X2...Xn ~ n(μ, σ²) với cả hai
+> param đều chưa biết. ⇨ ta có vector param Θ = (μ, σ²)
 >
 >
 >
@@ -1629,11 +1629,11 @@
 >
 >
 >
-> f(**x**|Θ) = [(1/2πσ^2)^(n/2)] {exp (1/2σ^2) [-[Σi(xi - xbar)^2 + n(xbar - μ)^2]]}
+> f(**x**|Θ) = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - xbar)^2 + n(xbar - μ)^2]]}
 >
 >
 >
-> = [(2πσ^2)^(-n/2)] exp {(1/2σ^2) [-[Σi(xi - xbar)^2 + n(xbar - μ)^2]]}
+> = [(2πσ²)^(-n/2)] exp {(1/2σ²) [-[Σi(xi - xbar)^2 + n(xbar - μ)^2]]}
 >
 >
 >
@@ -1678,7 +1678,7 @@
 >
 >
 >
-> [(2πσ^2)^(-n/2)] exp {- [ (n-1)T2(**x**) + n(T1(**x**) - μ)^2 ] / 2σ^2 }
+> [(2πσ²)^(-n/2)] exp {- [ (n-1)T2(**x**) + n(T1(**x**) - μ)^2 ] / 2σ² }
 >
 >
 >
@@ -1704,7 +1704,7 @@
 > Thì ta đã show ra rằng f(**x**|Θ) = g(T(**x**)|Θ)h(**x**)
 >
 > **TỪ ĐÓ** Factorization theorem cho phép **KẾT LUẬN** (Xbar(**x**), S^2(**x**)) **CHÍNH LÀ
-> SUFFICIENT STATISTIC CỦA** sample **X** ~ normal(μ, σ^2)
+> SUFFICIENT STATISTIC CỦA** sample **X** ~ normal(μ, σ²)
 
 <br>
 
@@ -1948,7 +1948,7 @@
 
 > [!NOTE]
 > Ok, đoạn này đại khái nói là: Với ví dụ 6.2.4 nơi ta có sample **X,** tứcX1,
-> X2... Xn ~ n(μ, σ^2) với σ^2 biết.
+> X2... Xn ~ n(μ, σ²) với σ² biết.
 >
 >
 >
@@ -1988,13 +1988,13 @@
 >
 >
 > Trong bài toán này (trong ví dụ sau ta sẽ thấy) có thể đoán thì Xbar chính là
-> minimal sufficient statistic cho θ, tức μ, σ^2 với σ đã biết. Nên Xbar **có thể luôn
+> minimal sufficient statistic cho θ, tức μ, σ² với σ đã biết. Nên Xbar **có thể luôn
 > là function của các sufficient statistic khác**.
 >
 >
 >
 > Nhưng nếu σ chưa biết, thì một T(**X**) = Xbar dĩ nhiên KHÔNG PHẢI LÀ
-> SUFFICIENT STATISTIC CỦA Θ = (μ, σ^2).
+> SUFFICIENT STATISTIC CỦA Θ = (μ, σ²).
 
 <br>
 
@@ -2224,7 +2224,7 @@
 <p align="center"><kbd><img src="assets/apzni7lo44d.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> rồi, qua ví dụ này. Cho X1, ...Xn iid ~ n(μ, σ^2) và cả hai đều chưa biết.
+> rồi, qua ví dụ này. Cho X1, ...Xn iid ~ n(μ, σ²) và cả hai đều chưa biết.
 > Cho **x**,  **y** là hai sample point và (xbar, s^2_x) và (ybar, s^2_y) là
 > sample mean và  variance.
 >
@@ -2266,12 +2266,12 @@
 >
 >
 >
-> = (2πσ^2)^(-n/2) exp { - [n(xbar - μ)^2 + (n-1)sx^2] / (2σ^2) }
-> / (2πσ^2)^(-n/2) exp { - [n(xbar - μ)^2 + (n-1)sx^2] / (2σ^2) }
+> = (2πσ²)^(-n/2) exp { - [n(xbar - μ)^2 + (n-1)sx^2] / (2σ²) }
+> / (2πσ²)^(-n/2) exp { - [n(xbar - μ)^2 + (n-1)sx^2] / (2σ²) }
 >
 >
 >
-> = exp([-n(xbar^2 - ybar^2) + 2nμ(xbar - ybar) - (n - 1)(sx^2 - sy^2) / (2σ^2)])
+> = exp([-n(xbar^2 - ybar^2) + 2nμ(xbar - ybar) - (n - 1)(sx^2 - sy^2) / (2σ²)])
 >
 >
 >
@@ -3905,7 +3905,7 @@
 <p align="center"><kbd><img src="assets/3bi4ml45de5.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là 6.2.4 ta đã chứng minh Xbar (sample mean) của iid n(μ, σ^2)
+> Đại khái là 6.2.4 ta đã chứng minh Xbar (sample mean) của iid n(μ, σ²)
 > random sample là sufficient statistic, bằng cách dùng theorem (6.2.2) nói rằng
 > nếu f(**x**|θ) / f(T(**x**)|θ) không phụ thuộc θ, hoặc, là một constant nếu xem như
 > là một function of θ, với mọi **x**. Thì có thể kết luận Xbar là sufficient statistic.
@@ -3917,16 +3917,16 @@
 >
 >
 >
-> Đầu tiên là phân tích xem tại sao pdf của Xi ~ n(μ, σ^2) sẽ khớp với exponential
+> Đầu tiên là phân tích xem tại sao pdf của Xi ~ n(μ, σ²) sẽ khớp với exponential
 > family từ đó áp dụng cái theorem này.
 >
 >
 >
-> pdf của n(μ, σ^2)
+> pdf của n(μ, σ²)
 >
 >
 >
-> f(x|μ,σ^2) = [1/√(2πσ)] exp[-(x-μ)^2/(2σ^2)]
+> f(x|μ,σ²) = [1/√(2πσ)] exp[-(x-μ)^2/(2σ²)]
 >
 >
 >
@@ -3934,43 +3934,43 @@
 >
 >
 >
-> = [1/√(2πσ)] exp[-(x^2 - 2xμ + μ^2)/(2σ^2)]
+> = [1/√(2πσ)] exp[-(x^2 - 2xμ + μ²)/(2σ²)]
 >
 >
 >
-> = [1/√(2πσ)] exp[(-x^2 + 2xμ - μ^2)/(2σ^2)]
+> = [1/√(2πσ)] exp[(-x^2 + 2xμ - μ²)/(2σ²)]
 >
 >
 >
-> = [1/√(2πσ)] exp[-x^2/(2σ^2) + 2xμ/(2σ^2) - μ^2/(2σ^2)]
+> = [1/√(2πσ)] exp[-x^2/(2σ²) + 2xμ/(2σ²) - μ²/(2σ²)]
 >
 >
 >
-> = [1/√(2πσ)] exp[-x^2/(2σ^2)] exp[2xμ/(2σ^2)] exp[-μ^2/(2σ^2)]
+> = [1/√(2πσ)] exp[-x^2/(2σ²)] exp[2xμ/(2σ²)] exp[-μ²/(2σ²)]
 >
 >
 >
-> = [1/√(2πσ)] exp[-μ^2/(2σ^2)] exp[-x^2/(2σ^2) + 2xμ/(2σ^2)]
+> = [1/√(2πσ)] exp[-μ²/(2σ²)] exp[-x^2/(2σ²) + 2xμ/(2σ²)]
 >
 >
 >
-> = [1/√(2πσ)] exp[-μ^2/(2σ^2)] exp[ -1/(2σ^2) . x^2 + 2μ/(2σ^2) . x]
+> = [1/√(2πσ)] exp[-μ²/(2σ²)] exp[ -1/(2σ²) . x^2 + 2μ/(2σ²) . x]
 >
 >
 >
-> = [1/√(2πσ)] exp[-μ^2/(2σ^2)] exp[2μ/(2σ^2) . x -1/(2σ^2) . x^2]
+> = [1/√(2πσ)] exp[-μ²/(2σ²)] exp[2μ/(2σ²) . x -1/(2σ²) . x^2]
 >
 >
 >
-> Đặt h(x) = 1, **θ**=(μ, σ), c(**θ**) = exp[-μ^2/(2σ^2)]/√(2πσ)
+> Đặt h(x) = 1, **θ**=(μ, σ), c(**θ**) = exp[-μ²/(2σ²)]/√(2πσ)
 >
 >
 >
-> w1(**θ**) =2μ/(2σ^2), t1(x) = x
+> w1(**θ**) =2μ/(2σ²), t1(x) = x
 >
 >
 >
-> w2(**θ**) = -1/(2σ^2), t2(x) = x^2
+> w2(**θ**) = -1/(2σ²), t2(x) = x^2
 >
 >
 >
@@ -3983,24 +3983,24 @@
 >
 >
 >
-> f(**x**|θ, σ^2) = Πi=1:n [1/√(2πσ)] exp[-μ^2/(2σ^2)] exp[2μ/(2σ^2) . xi -1/(2σ^2) . xi^2]
+> f(**x**|θ, σ²) = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)] exp[2μ/(2σ²) . xi -1/(2σ²) . xi^2]
 >
 >
 >
-> = Πi=1:n [1/√(2πσ)] exp[-μ^2/(2σ^2)] Πi=1:n exp[2μ/(2σ^2) . xi -1/(2σ^2) . xi^2] (***)
+> = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)] Πi=1:n exp[2μ/(2σ²) . xi -1/(2σ²) . xi^2] (***)
 >
 >
 >
 >
-> Đặt C(**θ**) = Πi=1:n [1/√(2πσ)] exp[-μ^2/(2σ^2)]
+> Đặt C(**θ**) = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)]
 >
 >
 >
-> .. = C(**θ**) exp {Σi=1:n [2μ/(2σ^2) . xi -1/(2σ^2) . xi^2]}
+> .. = C(**θ**) exp {Σi=1:n [2μ/(2σ²) . xi -1/(2σ²) . xi^2]}
 >
 >
 >
-> = C(θ) exp { [2μ/(2σ^2)] Σi=1:n xi - [1/(2σ^2)] Σi=1:n xi^2 }
+> = C(θ) exp { [2μ/(2σ²)] Σi=1:n xi - [1/(2σ²)] Σi=1:n xi^2 }
 >
 >
 >
@@ -4033,8 +4033,8 @@
 >
 >
 >
-> Vấn đề là, trong sách, đang nói trường hợp ta biết σ^2/n, thì ta sẽ có thể cho thấy
-> family n(μ, σ^2/n) là complete family, và vì đây là distribution của Xbar, nên nó là
+> Vấn đề là, trong sách, đang nói trường hợp ta biết σ²/n, thì ta sẽ có thể cho thấy
+> family n(μ, σ²/n) là complete family, và vì đây là distribution của Xbar, nên nó là
 > complete statistic của μ. Chỗ này phải cẩn thận, nên cần ôn lại một chút.
 >
 >
@@ -4050,21 +4050,21 @@
 >
 >
 > Rồi, quay lại đoạn trên mà mình đang làm rõ. Thì theo sách, nói rằng ta có thể
-> chứng minh theo theorem 6.2.25 để chỉ ra n(μ, σ^2/n) là một complete family,
+> chứng minh theo theorem 6.2.25 để chỉ ra n(μ, σ²/n) là một complete family,
 > để rồi vì đây là distribution của Xbar, nên dĩ nhiên Xbar là complete statistic của
-> μ (vì μ, với σ^2/n đã biết thì nó chính là θ - ý là parameter)
+> μ (vì μ, với σ²/n đã biết thì nó chính là θ - ý là parameter)
 >
 >
 >
-> Như vậy, để dùng 6.2.25, thì mình sẽ phân tích cái pdf của n(μ, σ^2/n), để chỉ ra
+> Như vậy, để dùng 6.2.25, thì mình sẽ phân tích cái pdf của n(μ, σ²/n), để chỉ ra
 > nó ứng với exponential family với t, h, c, k là gì. Khi đó theorem này sẽ giúp kết 
 > luận được complete statistic là gì. Dĩ nhiên dự đoán nó sẽ là Xbar. Xong rồi ta
-> mới nói rằng: vì n(μ, σ^2/n) cũng chính là distribution của Xbar, nên n(μ, σ^2/n)
+> mới nói rằng: vì n(μ, σ²/n) cũng chính là distribution của Xbar, nên n(μ, σ²/n)
 > cũng là complete family. Mạch logic sẽ là như vậy.
 >
 >
 >
-> Cách 1: Dùng kết quả trên thay bởi việc biết σ^2 / n:
+> Cách 1: Dùng kết quả trên thay bởi việc biết σ² / n:
 >
 >
 >
@@ -4072,47 +4072,47 @@
 >
 >
 >
-> = Πi=1:n [1/√(2πσ)] exp[-μ^2/(2σ^2)] Πi=1:n exp[2μ/(2σ^2) . xi - 1/(2σ^2) . xi^2]
+> = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)] Πi=1:n exp[2μ/(2σ²) . xi - 1/(2σ²) . xi^2]
 >
 >
 >
-> Vì đã biết σ^2/n nên tách ra nốt, đưa lên trước đóng vai trò của h(x)
+> Vì đã biết σ²/n nên tách ra nốt, đưa lên trước đóng vai trò của h(x)
 >
 >
 >
-> = Πi=1:n [1/√(2πσ)] exp[-μ^2/(2σ^2)] Πi=1:n exp[2μ/(2σ^2) . xi] / exp [1/(2σ^2) . xi^2]
+> = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)] Πi=1:n exp[2μ/(2σ²) . xi] / exp [1/(2σ²) . xi^2]
 >
 >
 >
-> = Πi=1:n [1/√(2πσ)] exp[-μ^2/(2σ^2)] / exp [1/(2σ^2) . xi^2] Πi=1:n exp[2μ/(2σ^2) . xi] 
+> = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)] / exp [1/(2σ²) . xi^2] Πi=1:n exp[2μ/(2σ²) . xi] 
 >
 >
 >
-> Đặt C(**θ**) = Πi=1:n [1/√(2πσ)] exp[-μ^2/(2σ^2)]
+> Đặt C(**θ**) = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)]
 >
 >
 >
-> H(**x**) = 1 / {Πi=1:n exp [1/(2σ^2) . xi^2]}
+> H(**x**) = 1 / {Πi=1:n exp [1/(2σ²) . xi^2]}
 >
 >
 >
-> Xét cái phần còn lại: Πi=1:n exp[2μ/(2σ^2) . xi] 
+> Xét cái phần còn lại: Πi=1:n exp[2μ/(2σ²) . xi] 
 >
 >
 >
-> = Πi=1:n exp[ μ/(σ^2) . xi] 
+> = Πi=1:n exp[ μ/(σ²) . xi] 
 >
 >
 >
-> = exp[ Σi=1:n μ/(σ^2) . xi] 
+> = exp[ Σi=1:n μ/(σ²) . xi] 
 >
 >
 >
-> = exp[ μ/(σ^2) . Σ xi] 
+> = exp[ μ/(σ²) . Σ xi] 
 >
 >
 >
-> = exp(w1(**θ**)t1(**x**)) với w1(**θ**) = μ/σ^2 , T1(**x**) = Σ xi
+> = exp(w1(**θ**)t1(**x**)) với w1(**θ**) = μ/σ² , T1(**x**) = Σ xi
 >
 >
 >
@@ -4125,16 +4125,16 @@
 >
 >
 >
-> Cách 2: Dùng sự thật đã biết là Xbar ~ n(μ, σ^2/n), ta sẽ chứng minh nó là complete 
-> statistic của **θ** = (μ) (đã biết σ^2/n) 
+> Cách 2: Dùng sự thật đã biết là Xbar ~ n(μ, σ²/n), ta sẽ chứng minh nó là complete 
+> statistic của **θ** = (μ) (đã biết σ²/n) 
 >
 >
 >
-> f(x|μ,σ^2) = [1/√(2π(σ^2/n))] exp[-(x-μ)^2/(2(σ^2/n))]
+> f(x|μ,σ²) = [1/√(2π(σ²/n))] exp[-(x-μ)^2/(2(σ²/n))]
 >
 >
 >
-> Đặt t^2 = σ^2/n 
+> Đặt t^2 = σ²/n 
 >
 >
 >
@@ -4146,23 +4146,23 @@
 >
 >
 >
-> = [1/√(2πt^2)] exp[-(x^2 - 2xμ + μ^2)/(2t^2)]
+> = [1/√(2πt^2)] exp[-(x^2 - 2xμ + μ²)/(2t^2)]
 >
 >
 >
-> = [1/√(2πt^2)] exp[- x^2/(2t^2) + 2xμ/(2t^2) - μ^2/(2t^2)]
+> = [1/√(2πt^2)] exp[- x^2/(2t^2) + 2xμ/(2t^2) - μ²/(2t^2)]
 >
 >
 >
-> = [1/√(2πt^2)] exp[- x^2/(2t^2)] exp[2xμ/(2t^2)] / exp[μ^2/(2t^2)]
+> = [1/√(2πt^2)] exp[- x^2/(2t^2)] exp[2xμ/(2t^2)] / exp[μ²/(2t^2)]
 >
 >
 >
-> = [1/√(2πt^2)] [1/ exp[μ^2/(2t^2)]] exp[- x^2/(2t^2)] exp[2xμ/(2t^2)] 
+> = [1/√(2πt^2)] [1/ exp[μ²/(2t^2)]] exp[- x^2/(2t^2)] exp[2xμ/(2t^2)] 
 >
 >
 >
-> c(**θ**) chính là [1/√(2πt^2)] [1/ exp[μ^2/(2t^2)]]
+> c(**θ**) chính là [1/√(2πt^2)] [1/ exp[μ²/(2t^2)]]
 >
 >
 >
@@ -4198,7 +4198,7 @@
 >
 >
 >
-> Mà đang xét n(μ, σ^2/n) là pdf của Xbar, tức X ở đây là Xbar
+> Mà đang xét n(μ, σ²/n) là pdf của Xbar, tức X ở đây là Xbar
 >
 >
 >
