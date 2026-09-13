@@ -5,8 +5,6 @@
 ---
 <a id="node-bn5xv8e"></a>
 
-## Lec 5 P3 Differentiation On Computational Graphs
-
 > [!NOTE]
 > LEC 5 P3 DIFFERENTIATION ON
 > COMPUTATIONAL GRAPHS
