@@ -238,8 +238,8 @@
 <p align="center"><kbd><img src="assets/ppz6p8xwmqq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ này, X1,...Xn là iid n(θ, σ^2). Theo cách kí hiệu vừa rồi, ta có vector **θ**
-> , tức vector parameter sẽ là (θ1, θ2) = (θ, σ^2)
+> Ví dụ này, X1,...Xn là iid n(θ, σ²). Theo cách kí hiệu vừa rồi, ta có vector **θ**
+> , tức vector parameter sẽ là (θ1, θ2) = (θ, σ²)
 >
 >
 >
@@ -251,7 +251,7 @@
 >
 >
 >
-> μ1, tức 1st population moment EX, và như đã biết với n(μ, σ^2) thì EX = μ 
+> μ1, tức 1st population moment EX, và như đã biết với n(μ, σ²) thì EX = μ 
 > ⇨ ở đây EX = θ, tức μ1 = θ
 >
 >
@@ -264,11 +264,11 @@
 >
 >
 >
-> Vậy ở đây ta có σ^2 = EX^2 - (EX)^2 = EX^2 - θ^2 
+> Vậy ở đây ta có σ² = EX^2 - (EX)^2 = EX^2 - θ^2 
 >
 >
 >
-> ⇨ EX^2 = σ^2 + θ^2
+> ⇨ EX^2 = σ² + θ^2
 >
 >
 >
@@ -280,11 +280,11 @@
 >
 >
 >
-> m2 = μ'2 ⇔ Σi Xi^2)/n = σ^2 + θ^2
+> m2 = μ'2 ⇔ Σi Xi^2)/n = σ² + θ^2
 >
 >
 >
-> Từ đó ta sẽ có estimator cho θ và σ^2:
+> Từ đó ta sẽ có estimator cho θ và σ²:
 >
 >
 >
@@ -312,7 +312,7 @@
 >
 >
 >
-> Và đó chính là estimator cho θ và σ^2: 
+> Và đó chính là estimator cho θ và σ²: 
 >
 >
 >
@@ -456,7 +456,7 @@
 >
 >
 >
-> Vậy thì ví dụ này cho Y1,...Yk độc lập và ~ X^2_ri tức là chúng là các 
+> Vậy thì ví dụ này cho Y1,...Yk độc lập và ~ χ²_ri tức là chúng là các 
 > Chi-square  bậc tự do  lần lượt là r1, r2...
 >
 >
@@ -488,7 +488,7 @@
 >
 >
 >
-> Vì sao chia ν thì X^2_ν / ν lại có kì vọng loanh quanh số 1?
+> Vì sao chia ν thì χ²_ν / ν lại có kì vọng loanh quanh số 1?
 >
 >
 >
@@ -534,7 +534,7 @@
 >
 >
 >
-> EX, với X là Chi-square(v) (*mà ở trên mình kí hiệu là X^2_v) ta đã biết, kì vọng
+> EX, với X là Chi-square(v) (*mà ở trên mình kí hiệu là χ²_v) ta đã biết, kì vọng
 > của nó là v: EX = v
 >
 >
@@ -962,7 +962,7 @@
 >
 >
 >
-> Ôn lại pdf của n(μ, σ^2): fX(x|μ,σ) = (1/√2πσ) exp[-(1/2σ^2)(x-θ)^2]
+> Ôn lại pdf của n(μ, σ²): fX(x|μ,σ) = (1/√2πσ) exp[-(1/2σ²)(x-θ)^2]
 >
 >
 >
@@ -2324,7 +2324,7 @@
 
 > [!NOTE]
 > Rồi đại ý là, với theorem vừa rồi thì ta có thể nói rằng MLE của θ^2, tức
-> MLE của hàm square apply lên population mean của normal(θ, σ^2) chính
+> MLE của hàm square apply lên population mean của normal(θ, σ²) chính
 > là  [Xbar(**X**)]^2
 >
 >
@@ -2363,11 +2363,11 @@
 <p align="center"><kbd><img src="assets/5pkacrnb3u5.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, ví dụ này, ta có X1,..Xn là iid n(θ, σ^2) với cả θ và σ^2 chưa biết.
+> Rồi, ví dụ này, ta có X1,..Xn là iid n(θ, σ²) với cả θ và σ² chưa biết.
 >
 >
 >
-> Likelihood function L(θ, σ^2|x) theo định nghĩa = f(**x**|θ, σ^2) (dĩ nhiên L lúc này
+> Likelihood function L(θ, σ²|x) theo định nghĩa = f(**x**|θ, σ²) (dĩ nhiên L lúc này
 > là hàm nhị biến)
 >
 >
@@ -2376,16 +2376,16 @@
 >
 >
 >
-> .. = Πi=1:n f(xi|θ,σ^2) = ...
+> .. = Πi=1:n f(xi|θ,σ²) = ...
 >
 >
 >
-> = 1/(2πσ^2)^(n/2) exp[-(1/2) Σi=1:n (xi - θ)^2/σ^2]
+> = 1/(2πσ²)^(n/2) exp[-(1/2) Σi=1:n (xi - θ)^2/σ²]
 >
 >
 >
-> Tiếp, như đã biết, để tìm **Θmle** = sup_(θ, σ^2) {L(θ, σ^2)} thì ta sẽ giải bài toán
-> maximize over (θ, σ^2) f(**x**|θ, σ^2)
+> Tiếp, như đã biết, để tìm **Θmle** = sup_(θ, σ²) {L(θ, σ²)} thì ta sẽ giải bài toán
+> maximize over (θ, σ²) f(**x**|θ, σ²)
 >
 >
 >
@@ -2393,11 +2393,11 @@
 >
 >
 >
-> là bài toán: maximize over (θ, σ^2) {G(θ, σ^2) = log f(x|θ, σ^2))
+> là bài toán: maximize over (θ, σ²) {G(θ, σ²) = log f(x|θ, σ²))
 >
 >
 >
-> = - (n/2) log2π - (n/2) logσ^2 - (1/2) Σi=1:n (xi - θ)^2 / σ^2
+> = - (n/2) log2π - (n/2) logσ² - (1/2) Σi=1:n (xi - θ)^2 / σ²
 >
 >
 >
@@ -2405,47 +2405,47 @@
 >
 >
 >
-> d/dθ G(θ, σ^2) = d/dθ [- (n/2) log2π - (n/2) logσ^2 - (1/2) Σi=1:n (xi - θ)^2 / σ^2]
+> d/dθ G(θ, σ²) = d/dθ [- (n/2) log2π - (n/2) logσ² - (1/2) Σi=1:n (xi - θ)^2 / σ²]
 >
 >
 >
-> = - (1/2) d/dθ [ Σi=1:n (xi - θ)^2 / σ^2]
+> = - (1/2) d/dθ [ Σi=1:n (xi - θ)^2 / σ²]
 >
 >
 >
-> = - (1/2σ^2) d/dθ [ Σi=1:n (xi - θ)^2 ]
+> = - (1/2σ²) d/dθ [ Σi=1:n (xi - θ)^2 ]
 >
 >
 >
-> = - (1/2σ^2) Σi=1:n d/dθ(xi - θ)^2 
+> = - (1/2σ²) Σi=1:n d/dθ(xi - θ)^2 
 >
 >
 >
-> = - (1/2σ^2) Σi=1:n 2(xi - θ)(-1)
+> = - (1/2σ²) Σi=1:n 2(xi - θ)(-1)
 >
 >
 >
-> = (1/σ^2) Σi=1:n (xi - θ)
+> = (1/σ²) Σi=1:n (xi - θ)
 >
 >
 >
-> d/dσ^2 G(θ, σ^2) = d/dσ^2 [- (n/2) log2π - (n/2) logσ^2 - (1/2) Σi=1:n (xi - θ)^2 / σ^2]
+> d/dσ² G(θ, σ²) = d/dσ² [- (n/2) log2π - (n/2) logσ² - (1/2) Σi=1:n (xi - θ)^2 / σ²]
 >
 >
 >
-> = d/dσ^2 [-(n/2) logσ^2] - d/dσ^2 [(1/2) Σi=1:n (xi - θ)^2 / σ^2]
+> = d/dσ² [-(n/2) logσ²] - d/dσ² [(1/2) Σi=1:n (xi - θ)^2 / σ²]
 >
 >
 >
-> = (-n/2) 1/σ^2] - (1/2) Σi=1:n (xi - θ)^2 { d/dσ^2 [1 / σ^2] }
+> = (-n/2) 1/σ²] - (1/2) Σi=1:n (xi - θ)^2 { d/dσ² [1 / σ²] }
 >
 >
 >
-> = -n/2σ^2 - (1/2) Σi=1:n (xi - θ)^2 { d/dσ^2 [-1 / σ^4] }
+> = -n/2σ² - (1/2) Σi=1:n (xi - θ)^2 { d/dσ² [-1 / σ^4] }
 >
 >
 >
-> = -n/2σ^2 - (1/2σ^4) Σi=1:n (xi - θ)^2
+> = -n/2σ² - (1/2σ^4) Σi=1:n (xi - θ)^2
 >
 >
 >
@@ -2453,7 +2453,7 @@
 >
 >
 >
-> (1/σ^2) Σi=1:n (xi - θ) = 0
+> (1/σ²) Σi=1:n (xi - θ) = 0
 >
 >
 >
@@ -2465,19 +2465,19 @@
 >
 >
 >
-> và -n/2σ^2 - (1/2σ^4) Σi=1:n (xi - θ)^2 = 0
+> và -n/2σ² - (1/2σ^4) Σi=1:n (xi - θ)^2 = 0
 >
 >
 >
-> ⇔ σ^2 = n^-1 Σi (xi - xbar)^2 
+> ⇔ σ² = n^-1 Σi (xi - xbar)^2 
 >
 >
 >
-> Hay (σ^2)^ tức estimator của σ^2 = n^-1 Σi (xi - xbar)^2
+> Hay (σ²)^ tức estimator của σ² = n^-1 Σi (xi - xbar)^2
 >
 >
 >
-> Dĩ nhiên, chưa xong, chưa thể kết luận θ^, (σ^2)^ là mle của (θ, σ^2) vì còn pảhi check
+> Dĩ nhiên, chưa xong, chưa thể kết luận θ^, (σ²)^ là mle của (θ, σ²) vì còn pảhi check
 > Hessian nữa
 >
 >
@@ -2494,7 +2494,7 @@
 >
 >
 >
-> Đó là: Xét hàm likelihood: 1/(2πσ^2)^(n/2) exp[-(1/2) Σi=1:n (xi - θ)^2/σ^2]
+> Đó là: Xét hàm likelihood: 1/(2πσ²)^(n/2) exp[-(1/2) Σi=1:n (xi - θ)^2/σ²]
 >
 >
 >
@@ -2502,7 +2502,7 @@
 >
 >
 >
-> exp[-(1/2) Σi=1:n (xi - θ)^2/σ^2]
+> exp[-(1/2) Σi=1:n (xi - θ)^2/σ²]
 >
 >
 >
@@ -2522,15 +2522,15 @@
 >
 >
 >
-> Vậy nên 1/(2πσ^2)^(n/2) exp[-(1/2) Σi=1:n (xi - θ)^2/σ^2]
+> Vậy nên 1/(2πσ²)^(n/2) exp[-(1/2) Σi=1:n (xi - θ)^2/σ²]
 >
 >
 >
-> luôn ≤ 1/(2πσ^2)^(n/2) exp[-(1/2) Σi=1:n (xi - xbar)^2/σ^2]
+> luôn ≤ 1/(2πσ²)^(n/2) exp[-(1/2) Σi=1:n (xi - xbar)^2/σ²]
 >
 >
 >
-> Do đó việc chứng minh chỉ cần chứng minh hàm đạt max tại σ^2 = n^-1 Σi (xi - xbar)^2
+> Do đó việc chứng minh chỉ cần chứng minh hàm đạt max tại σ² = n^-1 Σi (xi - xbar)^2
 > thôi.
 >
 >
@@ -2540,11 +2540,11 @@
 >
 >
 >
-> Vậy (θ, σ^2)^_mle = (Xbar, n^-1 Σi (Xi - Xbar)^2)
+> Vậy (θ, σ²)^_mle = (Xbar, n^-1 Σi (Xi - Xbar)^2)
 >
 >
 >
-> CÁI NÀY CÓ MỘT KHÁI NIỆM MỚI PROFILE LIKELIHOOD của σ^2
+> CÁI NÀY CÓ MỘT KHÁI NIỆM MỚI PROFILE LIKELIHOOD của σ²
 
 <br>
 
@@ -2609,9 +2609,9 @@
 <p align="center"><kbd><img src="assets/9vyatv8vajd.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Với normal log likelihood tức function L(θ, σ^2|**x**) đóng vai H(θ1, θ2) thì
+> Với normal log likelihood tức function L(θ, σ²|**x**) đóng vai H(θ1, θ2) thì
 > đoạn này đại ý là ta có thể check 3 điều kiện trên để thấy đúng là θ^ = xbar
-> và (σ^2)^ = n^-1 Σi (xi - xbar)^2) thỏa điều kiện để kết luận nó là mle.
+> và (σ²)^ = n^-1 Σi (xi - xbar)^2) thỏa điều kiện để kết luận nó là mle.
 >
 >
 >
@@ -3011,8 +3011,8 @@
 <p align="center"><kbd><img src="assets/8jz9ev6s7xn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua ví dụ này, cho X ~ n(θ, σ^2) và cho rằng prior distribution của θ là n(μ,
-> τ^2)
+> Qua ví dụ này, cho X ~ n(θ, σ²) và cho rằng prior distribution của θ là n(μ,
+> τ²)
 >
 >
 >
@@ -3079,8 +3079,8 @@
 > cũng sẽ ra loại beta. Điều này rất tiện cho tính toán, nhưng chú ý là nó
 > không chứng tỏ việc chọn conjugate là tốt.
 >
-> Rồi, quay lại ví dụ này, ta có X ~ n(θ, σ^2),  và prior distribution cho θ
-> là n(μ, τ^2) thử tính Bayes estimator cho θ:
+> Rồi, quay lại ví dụ này, ta có X ~ n(θ, σ²),  và prior distribution cho θ
+> là n(μ, τ²) thử tính Bayes estimator cho θ:
 >
 >
 >
@@ -3089,19 +3089,19 @@
 >
 >
 >
-> Prior distribution là n(μ, τ^2): π(θ) = 1/√2πτ exp[-(θ-μ)^2/(2τ^2)]
+> Prior distribution là n(μ, τ²): π(θ) = 1/√2πτ exp[-(θ-μ)^2/(2τ²)]
 >
 >
 >
-> Joint pdf của sample, X ~ n(θ, σ^2): 
+> Joint pdf của sample, X ~ n(θ, σ²): 
 >
 >
 >
-> f(**x**|θ,σ^2) = Πi=1:n 1/√2πσ exp[-(x-θ)^2/(2σ^2)]
+> f(**x**|θ,σ²) = Πi=1:n 1/√2πσ exp[-(x-θ)^2/(2σ²)]
 >
 >
 >
-> = 1/√2πσ exp[-(x-θ)^2/(2σ^2)] (vì n = 1)
+> = 1/√2πσ exp[-(x-θ)^2/(2σ²)] (vì n = 1)
 >
 >
 >
@@ -3148,7 +3148,7 @@
 >
 >
 >
-> = 1/√2πσ exp[-(x-θ)^2/(2σ^2)] 1/√2πτ exp[-(θ-μ)^2/(2τ^2)]
+> = 1/√2πσ exp[-(x-θ)^2/(2σ²)] 1/√2πτ exp[-(θ-μ)^2/(2τ²)]
 >
 >
 >
@@ -3160,51 +3160,51 @@
 >
 >
 >
-> exp[-(x-θ)^2/(2σ^2)] exp[-(θ-μ)^2/(2τ^2)]
+> exp[-(x-θ)^2/(2σ²)] exp[-(θ-μ)^2/(2τ²)]
 >
 >
 >
-> = exp[-(x-θ)^2/(2σ^2) - (θ-μ)^2/(2τ^2)]
+> = exp[-(x-θ)^2/(2σ²) - (θ-μ)^2/(2τ²)]
 >
 >
 >
-> Xét phần trong ngoặc: [-(x-θ)^2/(2σ^2) - (θ-μ)^2/(2τ^2)]
+> Xét phần trong ngoặc: [-(x-θ)^2/(2σ²) - (θ-μ)^2/(2τ²)]
 >
 >
 >
-> = [-(x^2 - 2xθ + θ^2)/(2σ^2) - (θ^2-2θμ+μ^2)/(2τ^2)]
+> = [-(x^2 - 2xθ + θ^2)/(2σ²) - (θ^2-2θμ+μ²)/(2τ²)]
 >
 >
 >
-> = [-x^2/(2σ^2) + 2xθ/(2σ^2) - θ^2/(2σ^2) - θ^2/(2τ^2) + 2θμ/(2τ^2) - μ^2/(2τ^2)]
+> = [-x^2/(2σ²) + 2xθ/(2σ²) - θ^2/(2σ²) - θ^2/(2τ²) + 2θμ/(2τ²) - μ²/(2τ²)]
 >
 >
 >
-> = [- θ^2/(2σ^2) - θ^2/(2τ^2) + 2xθ/(2σ^2)  + 2θμ/(2τ^2) - x^2/(2σ^2) - μ^2/(2τ^2)]
+> = [- θ^2/(2σ²) - θ^2/(2τ²) + 2xθ/(2σ²)  + 2θμ/(2τ²) - x^2/(2σ²) - μ²/(2τ²)]
 >
 >
 >
-> = -θ^2 [1/(2σ^2) + 1/(2τ^2)] + 2θ [x/(2σ^2) + μ/(2τ^2)] - x^2/(2σ^2) - μ^2/(2τ^2)] (1)
+> = -θ^2 [1/(2σ²) + 1/(2τ²)] + 2θ [x/(2σ²) + μ/(2τ²)] - x^2/(2σ²) - μ²/(2τ²)] (1)
 >
 >
 >
-> Để cho dễ ta mượn lại pdf của n(μ, σ^2) để phân tích
+> Để cho dễ ta mượn lại pdf của n(μ, σ²) để phân tích
 >
 >
 >
-> 1/√2πσ exp[-(x-θ)^2/(2σ^2)] 
+> 1/√2πσ exp[-(x-θ)^2/(2σ²)] 
 >
 >
 >
-> = 1/√2πσ exp[- (x^2 - 2xμ + μ^2)/(2σ^2)]
+> = 1/√2πσ exp[- (x^2 - 2xμ + μ²)/(2σ²)]
 >
 >
 >
-> = 1/√2πσ exp[- x^2/(2σ^2) + 2xμ/(2σ^2) - μ^2/(2σ^2)]
+> = 1/√2πσ exp[- x^2/(2σ²) + 2xμ/(2σ²) - μ²/(2σ²)]
 >
 >
 >
-> = 1/√2πσ exp[- x^2/(2σ^2) + 2xμ/(2σ^2) - μ^2/(2σ^2)]
+> = 1/√2πσ exp[- x^2/(2σ²) + 2xμ/(2σ²) - μ²/(2σ²)]
 >
 >
 >
@@ -3225,47 +3225,47 @@
 >
 >
 >
-> 1/2Variance = 1/(2σ^2) + 1/(2τ^2) = (τ^2 + σ^2) / 2τ^2σ^2
+> 1/2Variance = 1/(2σ²) + 1/(2τ²) = (τ² + σ²) / 2τ²σ²
 >
 >
 >
-> ⇔ 1/Variance = (τ^2 + σ^2) / τ^2σ^2
+> ⇔ 1/Variance = (τ² + σ²) / τ²σ²
 >
 >
 >
-> ⇔ **Variance =  τ^2σ^2 / (τ^2 + σ^2)**
+> ⇔ **Variance =  τ²σ² / (τ² + σ²)**
 >
 >
 >
-> Mean/2Variance = [x/(2σ^2) + μ/(2τ^2)]
+> Mean/2Variance = [x/(2σ²) + μ/(2τ²)]
 >
 >
 >
-> ⇔ **Mean** = [x/(2σ^2) + μ/(2τ^2)] 2 Variance
+> ⇔ **Mean** = [x/(2σ²) + μ/(2τ²)] 2 Variance
 >
 >
 >
-> = [x/(2σ^2) + μ/(2τ^2)] 2 τ^2σ^2 / (τ^2 + σ^2)
+> = [x/(2σ²) + μ/(2τ²)] 2 τ²σ² / (τ² + σ²)
 >
 >
 >
-> = (x/σ^2 + μ/τ^2) τ^2σ^2 / (τ^2 + σ^2)
+> = (x/σ² + μ/τ²) τ²σ² / (τ² + σ²)
 >
 >
 >
-> = (τ^2σ^2 x / σ^2 + τ^2σ^2 μ / τ^2) / (τ^2 + σ^2)
+> = (τ²σ² x / σ² + τ²σ² μ / τ²) / (τ² + σ²)
 >
 >
 >
-> = (τ^2x + σ^2μ) / (τ^2 + σ^2)
+> = (τ²x + σ²μ) / (τ² + σ²)
 >
 >
 >
-> = τ^2x / (τ^2 + σ^2) + σ^2μ / (τ^2 + σ^2) 
+> = τ²x / (τ² + σ²) + σ²μ / (τ² + σ²) 
 >
 >
 >
-> **⇨ Mean** = **[τ^2 / (τ^2 + σ^2)]x + [σ^2 / (τ^2 + σ^2)]μ**
+> **⇨ Mean** = **[τ² / (τ² + σ²)]x + [σ² / (τ² + σ²)]μ**
 >
 >
 >
@@ -3279,7 +3279,7 @@
 >
 >
 >
-> ⇨ θ^_B(X) = [τ^2 / (τ^2 + σ^2)]X + [σ^2 / (τ^2 + σ^2)]μ
+> ⇨ θ^_B(X) = [τ² / (τ² + σ²)]X + [σ² / (τ² + σ²)]μ
 >
 >
 >
@@ -3287,7 +3287,7 @@
 >
 >
 >
-> θ^_B(x) = [τ^2 / (τ^2 + σ^2)]x + [σ^2 / (τ^2 + σ^2)]μ
+> θ^_B(x) = [τ² / (τ² + σ²)]x + [σ² / (τ² + σ²)]μ
 
 **🔗 See also:** [Ước lượng Bayes chuẩn](./73_methods_of_evaluating_estimators.md#node-vscj9eh) · [Luật quyết định kiểm định Bayesian](./82_method_of_finding_tests.md#node-zk8yeue) · [Phân phối hậu nghiệm Bayes Normal](./92_methods_of_finding_interval_estimators.md#node-s6b012i)
 
@@ -3310,7 +3310,7 @@
 >
 >
 >
-> NHÌN VÀO θ^_B(x) = [τ^2 / (τ^2 + σ^2)]x + [σ^2 / (τ^2 + σ^2)]μ
+> NHÌN VÀO θ^_B(x) = [τ² / (τ² + σ²)]x + [σ² / (τ² + σ²)]μ
 >
 >
 >
@@ -3319,18 +3319,18 @@
 >
 >
 >
-> Để rồi: Nếu τ^2, tức prior variance rất lớn, → inf, thể hiện niềm tin ban
+> Để rồi: Nếu τ², tức prior variance rất lớn, → inf, thể hiện niềm tin ban
 > đầu của ta về θ rất mơ hồ, ta không biết không chắc θ có giá trị ở đâu, vì
 > lúc này phân phối normal như cái chuông dẹp lép như con tép và bề
 > rộng kéo dài đến vô cùng, nhìn y như uniform distribution. Thì lúc đó,
-> nhìn vào công thức của θ^_B(x) sẽ thấy, [τ^2 / (τ^2 + σ^2)] → 1, và [σ^2
-> / (τ^2 + σ^2)] → 0. Cho thấy rằng, Bayes estimator sẽ đặt trọn vào / chỉ
+> nhìn vào công thức của θ^_B(x) sẽ thấy, [τ² / (τ² + σ²)] → 1, và [σ²
+> / (τ² + σ²)] → 0. Cho thấy rằng, Bayes estimator sẽ đặt trọn vào / chỉ
 > là gồm sample mean.
 >
 >
 >
 > Ngược lại, khi prior information là tốt, ước lượng tốt giá phân phối của θ,
-> ví dụ như khi ta có τ^2 < σ^2, thì công thức Bayes estimator sẽ cho thấy
+> ví dụ như khi ta có τ² < σ², thì công thức Bayes estimator sẽ cho thấy
 > trọng số của prior mean lớn hơn.
 >
 >
