@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `52` Notes | `61` Screenshots
+📊 **Progress:** `52` Notes | `61` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-7s1kn1j"></a>
@@ -92,7 +92,7 @@
 >
 >
 >
-> Thế thì ở ví dụ này, cho X1,...Xn là iid normal(μ, σ^2) và xem xét test giữa H0: μ
+> Thế thì ở ví dụ này, cho X1,...Xn là iid normal(μ, σ²) và xem xét test giữa H0: μ
 > = μ0 vs H1: μ ≠ μ0. Với một fixed α level thì gs nói cái test mà reasonable nhất,
 > mà quả thật nó chính là cái most power unbiased test chính là cái này: reject H0
 > nếu |Xbar - μ0| > z_α/2 (σ/√n).
@@ -144,19 +144,19 @@
 >
 >
 >
-> ⇔ sup_μ=μ0 P_μ,σ^2(reject H0) = α
+> ⇔ sup_μ=μ0 P_μ,σ²(reject H0) = α
 >
 >
 >
-> ⇔ P_μ0,σ^2(reject H0) = α
+> ⇔ P_μ0,σ²(reject H0) = α
 >
 >
 >
-> ⇔ P_μ0,σ^2(accept H1) = 1 - α
+> ⇔ P_μ0,σ²(accept H1) = 1 - α
 >
 >
 >
-> ⇔ P_σ^2(Xbar - z_α/2 σ/√n ≤ μ0 ≤ Xbar + z_α/2 σ/√n) = 1 - α
+> ⇔ P_σ²(Xbar - z_α/2 σ/√n ≤ μ0 ≤ Xbar + z_α/2 σ/√n) = 1 - α
 >
 >
 >
@@ -165,7 +165,7 @@
 >
 >
 >
-> P_σ^2(Xbar - z_α/2 σ/√n ≤ μ ≤ Xbar + z_α/2 σ/√n) = 1 - α ∀μ ∈ R
+> P_σ²(Xbar - z_α/2 σ/√n ≤ μ ≤ Xbar + z_α/2 σ/√n) = 1 - α ∀μ ∈ R
 >
 >
 >
@@ -706,7 +706,7 @@
 >
 >
 >
-> f'(λ) = -n/λ +Σxi/λ^2
+> f'(λ) = -n/λ +Σxi/λ²
 >
 >
 >
@@ -714,11 +714,11 @@
 >
 >
 >
-> ⇔ -n/λ +Σxi/λ^2 = 0
+> ⇔ -n/λ +Σxi/λ² = 0
 >
 >
 >
-> ⇔ Σxi/λ^2 = n/λ
+> ⇔ Σxi/λ² = n/λ
 >
 >
 >
@@ -726,11 +726,11 @@
 >
 >
 >
-> f''(λ) = n/λ^2 + Σxi [-1/(λ^2)^2] 2λ
+> f''(λ) = n/λ² + Σxi [-1/(λ²)^2] 2λ
 >
 >
 >
-> = n/λ^2 - 2Σxi /λ^3
+> = n/λ² - 2Σxi /λ^3
 >
 >
 >
@@ -1166,7 +1166,7 @@
 <p align="center"><kbd><img src="assets/s4vqxpf0m5i.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ này, xét một random sample X1..Xn ~ n(μ, σ^2). Đại khái là ta sẽ muốn
+> Ví dụ này, xét một random sample X1..Xn ~ n(μ, σ²). Đại khái là ta sẽ muốn
 > tạo một confidence set cho μ (có coefficient 1-α nào đó). Nhưng lần này, ta
 > muốn confidence set có dạng: upper confidence bound tức là, interval sẽ có
 > dạng one-side: (-inf, U(**X**)].
@@ -2189,8 +2189,8 @@
 >
 >
 >
-> Cuối cùng, ta cũng đã biết cái vụ nếu Xi ~ normal(μ, σ^2) thì Xbar sẽ có
-> distribution normal(μ, σ^2/n), và (Xbar - μ) / (S/√n) ~ tn-1, hoàn toàn chỉ
+> Cuối cùng, ta cũng đã biết cái vụ nếu Xi ~ normal(μ, σ²) thì Xbar sẽ có
+> distribution normal(μ, σ²/n), và (Xbar - μ) / (S/√n) ~ tn-1, hoàn toàn chỉ
 > phụ thuộc n không phụ thuộc μ hay σ nữa.
 >
 >
@@ -2224,7 +2224,7 @@
 >
 >
 >
-> Riêng 2T/λ thì nó cũng chính là chi-square 2n bậc tự do: X^2_2n
+> Riêng 2T/λ thì nó cũng chính là chi-square 2n bậc tự do: χ²_2n
 
 <br>
 
@@ -2248,19 +2248,19 @@
 >
 >
 > → Tức là gs đang nói đến pdf của Xbar, là một sufficient statistic của μ 
-> mà ta đã biết nó sẽ có phân phối normal(μ, σ^2/n)
+> mà ta đã biết nó sẽ có phân phối normal(μ, σ²/n)
 >
 >
 >
-> → pdf fXbar(xbar) = (1/√2π(σ^2/n)) exp[-(xbar-μ)^2/2(σ^2/n)]
+> → pdf fXbar(xbar) = (1/√2π(σ²/n)) exp[-(xbar-μ)^2/2(σ²/n)]
 >
 >
 >
-> = (1/√2π(σ^2/n)) exp[-(n/2)(xbar-μ)^2/σ^2]
+> = (1/√2π(σ²/n)) exp[-(n/2)(xbar-μ)^2/σ²]
 >
 >
 >
-> = (1/√2π(σ^2/n)) exp{-(n/2)[(xbar-μ)/σ]^2}
+> = (1/√2π(σ²/n)) exp{-(n/2)[(xbar-μ)/σ]^2}
 >
 >
 >
@@ -2268,10 +2268,10 @@
 >
 >
 >
-> và với Xi ~normal(μ, σ^2). nó là một thành viên của location scale family ứng
+> và với Xi ~normal(μ, σ²). nó là một thành viên của location scale family ứng
 > với location μ, scale σ → Xi - μ / σ là thành viên chuẩn (scale 1, location 0),
 > cũng  chính là standard normal (normal(0,1)) ⇨ Σi[(Xi - μ)/σ]/n chắc chắn là
-> rv có distribution không còn dính tới μ, σ^2
+> rv có distribution không còn dính tới μ, σ²
 >
 >
 >
@@ -2501,8 +2501,8 @@
 >
 >
 >
-> Tuy nhiên, vì ta biết nếu c = 2, thì 2T/λ chính là Chi-square X^2_2n, nên đại
-> khái là ta sẽ dùng c = 2, để từ đó có thể tra bảng của Chi-square X^2_2n
+> Tuy nhiên, vì ta biết nếu c = 2, thì 2T/λ chính là Chi-square χ²_2n, nên đại
+> khái là ta sẽ dùng c = 2, để từ đó có thể tra bảng của Chi-square χ²_2n
 > để chọn a, b. Ví dụ như để có con số (1-α) = .95 thì ta cần a = 9.59, b = 34.
 > 17
 >
@@ -2548,17 +2548,17 @@
 >
 >
 >
-> Thế thì ở đây, ta xem xét lại trường hợp của X1,....Xn ~ normal(μ, σ^2)
+> Thế thì ở đây, ta xem xét lại trường hợp của X1,....Xn ~ normal(μ, σ²)
 > và gs nói rằng thật ra ta đã dùng cái vụ pivot này một cách vô tình rồi.
 >
 >
 >
-> Cụ thể là, ta đã biết Xbar chính là một normal(μ, σ^2/n)
+> Cụ thể là, ta đã biết Xbar chính là một normal(μ, σ²/n)
 >
 >
 >
 > và (Xbar - μ) / (σ/√n) chính là một standard normal, normal(0,1) có distr
-> bution không còn phụ thuộc μ, σ^2.
+> bution không còn phụ thuộc μ, σ².
 >
 >
 >
@@ -2596,11 +2596,11 @@
 >
 >
 >
-> (Dĩ nhiên đây là xét case ta biết σ^2)
+> (Dĩ nhiên đây là xét case ta biết σ²)
 >
 >
 >
-> Nếu không biết σ^2.
+> Nếu không biết σ².
 >
 >
 >
@@ -2747,20 +2747,20 @@
 >
 >
 > Quay lại đây, sau khi đã dùng kiến thức này để tìm confidence interval cho μ.
-> Ta có thể tìm luôn cho σ^2:
+> Ta có thể tìm luôn cho σ²:
 >
 >
 >
-> Dựa trên việc đã biết (n-1)S^2/σ^2 ~ Chi-square bậc n-1 (theo link xem  lại
+> Dựa trên việc đã biết (n-1)S^2/σ² ~ Chi-square bậc n-1 (theo link xem  lại
 > theorem)
 >
 >
 >
-> Như vậy đây chính là cho ta một đại lượng trục (pivot) Q(**X**, σ^2)
+> Như vậy đây chính là cho ta một đại lượng trục (pivot) Q(**X**, σ²)
 >
 >
 >
-> = (n-1)S^2(**X**)/σ^2 (ôn lại: pivotal quantity là một function of statistic và
+> = (n-1)S^2(**X**)/σ² (ôn lại: pivotal quantity là một function of statistic và
 > parameter, (dĩ nhiên cũng là một random variable) có distribution không còn
 > phụ thuộc θ)
 >
@@ -2770,7 +2770,7 @@
 >
 >
 >
-> P_σ^2(a ≤ một Chi-square bậc n-1 ≤ b) ≥ (hay =) 1-α
+> P_σ²(a ≤ một Chi-square bậc n-1 ≤ b) ≥ (hay =) 1-α
 >
 >
 >
@@ -2780,15 +2780,15 @@
 >
 >
 >
-> Khi đó, C(**X**) = {σ^2: a ≤ (n-1)S^2/σ^2 ≤ b}
+> Khi đó, C(**X**) = {σ²: a ≤ (n-1)S^2/σ² ≤ b}
 >
 >
 >
-> = {σ^2: a σ^2 ≤ (n-1)S^2 ≤ b σ^2}
+> = {σ²: a σ² ≤ (n-1)S^2 ≤ b σ²}
 >
 >
 >
-> = {σ^2: (n-1)S^2 / b ≤ σ^2 ≤ (n-1)S^2 / a}
+> = {σ²: (n-1)S^2 / b ≤ σ² ≤ (n-1)S^2 / a}
 >
 >
 >
@@ -2796,7 +2796,7 @@
 >
 >
 >
-> sẽ chính là 1-α confidence interval của σ^2
+> sẽ chính là 1-α confidence interval của σ²
 >
 >
 >
@@ -2818,7 +2818,7 @@
 >
 >
 >
-> Cuối cùng, gs nói ta cũng có thể tìm ra cái confidence interval của μ và σ^2
+> Cuối cùng, gs nói ta cũng có thể tìm ra cái confidence interval của μ và σ²
 > cùng lúc (thay vì làm riêng từng cái như trên) dựa trên cái gọi là Bonferonni 
 > Inequality
 
@@ -4306,36 +4306,36 @@
 >
 >
 >
-> Tới đây gs Casella lại liên hệ Γ với Chi-Square nữa: X^2_p chính là Γ(p/2,2) Nên
-> Γ(y0+1, 2) chính là X^2_2(y0+1), là Chi-quare bậc tự do 2(y0 + 1).
+> Tới đây gs Casella lại liên hệ Γ với Chi-Square nữa: χ²_p chính là Γ(p/2,2) Nên
+> Γ(y0+1, 2) chính là χ²_2(y0+1), là Chi-quare bậc tự do 2(y0 + 1).
 >
 >
 >
 > Nên thành ra phương trình cần giải FY(y0|λ) = α/2 chính là P(X ≥ 2nλ) = α/2 cũng
-> là P(X^2_2(y0+1) ≥ 2nλ) (Vì X là rv ~ Γ(y0+1, 2), cũng là ~ X^2_2(y0+1))
+> là P(χ²_2(y0+1) ≥ 2nλ) (Vì X là rv ~ Γ(y0+1, 2), cũng là ~ χ²_2(y0+1))
 >
 >
 >
-> Và dùng cdf của X^2_2(y0+1), giúp ta giải ra λ:
+> Và dùng cdf của χ²_2(y0+1), giúp ta giải ra λ:
 >
 >
 >
-> P(X^2_2(y0+1) ≥ 2nλ) = α/2
+> P(χ²_2(y0+1) ≥ 2nλ) = α/2
 >
 >
 >
-> ⇔ 2nλ = X^2_2(y0+1),α/2
+> ⇔ 2nλ = χ²_2(y0+1),α/2
 >
 >
 >
-> ⇔ λ = X^2_2(y0+1),α/2 / 2n
+> ⇔ λ = χ²_2(y0+1),α/2 / 2n
 >
 >
 >
-> Cái chỗ này dễ lú, phải hiểu thế này, X^2_2(y0+1) chỉ là kí hiệu ám chỉ X trong
+> Cái chỗ này dễ lú, phải hiểu thế này, χ²_2(y0+1) chỉ là kí hiệu ám chỉ X trong
 > phương trình P(X ≥ 2nλ) = α/2 là một biến thuộc phân phối Chi-square có bậc tự
 > do 2(y0 + 1), y như khi nếu như X là Normal(0,1) thì ta sẽ viết phương trình là
-> P(Normal(0,1) ≥ 2nλ) = α/2 vậy, X^2_2(y0+1) nó chỉ là kí hiệu của Chi-square
+> P(Normal(0,1) ≥ 2nλ) = α/2 vậy, χ²_2(y0+1) nó chỉ là kí hiệu của Chi-square
 > distribution.
 >
 >
@@ -4348,16 +4348,16 @@
 >
 >
 > Thì tương tự như vậy, ở đây X là Chi-square bậc tự do 2(y0 + 1), kí hiệu
-> X^2_2(y0+1)  (thay cho Z) thì cái mốc giá trị mà 2nλ cần bằng để P(Z ≥ 2nλ) = α/2
-> chính là hay được kí hiệu là X^2_2(y0+1)_α/2, hay X^2_2(y0+1), α/2, chỉ vậy thôi.
+> χ²_2(y0+1)  (thay cho Z) thì cái mốc giá trị mà 2nλ cần bằng để P(Z ≥ 2nλ) = α/2
+> chính là hay được kí hiệu là χ²_2(y0+1)_α/2, hay χ²_2(y0+1), α/2, chỉ vậy thôi.
 >
 >
 >
-> Do đó 2n λ = X^2_2(y0+1), α/2
+> Do đó 2n λ = χ²_2(y0+1), α/2
 >
 >
 >
-> ⇨ λ = (1/2n) X^2_2(y0+1), α/2
+> ⇨ λ = (1/2n) χ²_2(y0+1), α/2
 >
 >
 >
@@ -4429,7 +4429,7 @@
 > UNKNOWN, không phải random quantity, thành ra, nếu quan sát
 > thấy y0, từ đó xác định được  hai random variable trong random
 > interval sẽ có phân phối cụ thể là Chi-square bậc mấy (2y0 và
-> 2(y0+1)  từ đó xác định được hai cái X^2_2y0, .95 và X^2_2(y0+1), .
+> 2(y0+1)  từ đó xác định được hai cái χ²_2y0, .95 và χ²_2(y0+1), .
 > 05 để có được [0.262, 1.184]
 >
 >
@@ -4441,21 +4441,21 @@
 >
 > CÁCH HIỂU ĐÚNG, NHƯ ĐÃ NÓI, **PHẢI CHÚ TRỌNG VÀO CÁI
 > RANDOM INTERVAL**. Tức là xác suất cái random interval [L(X), U(X)]
-> = [X^2_2Y,.95, X^2_2(Y+1),.05] CHỨA λ LÀ 90%.
+> = [χ²_2Y,.95, χ²_2(Y+1),.05] CHỨA λ LÀ 90%.
 >
 >
 >
 > Điều này có nghĩa là: **NẾU XÉT MỌI POSSIBLE VALUES CỦA HAI
-> RANDOM VARIABLE X^2_2Y,.95, X^2_2(Y+1),.05 KHI CHO Y NHẬN
+> RANDOM VARIABLE χ²_2Y,.95, χ²_2(Y+1),.05 KHI CHO Y NHẬN
 > MỌI POSSIBLE VALUE y CỦA NÓ. NHƯ VẬY, THÌ SẼ CÓ 90% CÁC
-> GIÁ TRỊ y CỦA Y (*) TẠO RA CÁC CẶP X^2_2y,.95, X^2_2(y+1) GIÚP
+> GIÁ TRỊ y CỦA Y (*) TẠO RA CÁC CẶP χ²_2y,.95, χ²_2(y+1) GIÚP
 > TẠO RA MỘT KHOẢNG SẼ CHỨA λ**.
 >
 >
 >
 > Nếu Y là biến liên tục, thì ta có thể hiểu ý (*) theo cách: tạo vô số lần
 > random sample Y từ phân phối của nó, thì sẽ có 90% lần được giá trị
-> y khiến tạo ra khoảng [X^2_2y,.95, X^2_2(y+1)] chứa λ.
+> y khiến tạo ra khoảng [χ²_2y,.95, χ²_2(y+1)] chứa λ.
 
 <br>
 
@@ -4655,7 +4655,7 @@
 >
 >
 > Thế thì ở đây gs cho cách làm đơn giản hơn: Dựa trên việc mình biết
-> quan hệ của Γ và Chi-square: Chi-square p bậc tự do, kí hiệu X^2_p chính
+> quan hệ của Γ và Chi-square: Chi-square p bậc tự do, kí hiệu χ²_p chính
 > là một Γ(p/2,2). Vậy thì ở đây ta có λ là một Γ(Σixi+a, [n+1/b]^-1)
 >
 >
@@ -4677,11 +4677,11 @@
 >
 >
 >
-> Mà như ta cũng biết Γ(p/2,2) chính là X^2_p
+> Mà như ta cũng biết Γ(p/2,2) chính là χ²_p
 >
 >
 >
-> ⇨ [2(nb+1)/b] λ CŨNG CHÍNH LÀ MỘT X^2_2(Σixi+a), TỨC CHI-SQUARE
+> ⇨ [2(nb+1)/b] λ CŨNG CHÍNH LÀ MỘT χ²_2(Σixi+a), TỨC CHI-SQUARE
 > BẬC TỰ DO 2(Σixi+a).
 >
 >
@@ -4711,7 +4711,7 @@
 >
 >
 >
-> = P(L(n,b) ≤ X^2_2(Σixi+a) ≤ U(u,n,b))
+> = P(L(n,b) ≤ χ²_2(Σixi+a) ≤ U(u,n,b))
 >
 >
 >
@@ -4723,11 +4723,11 @@
 >
 >
 >
-> P(L(n,b) ≤ X^2_2(Σixi+a) ≤ U(u,n,b)) = 1 - α 
+> P(L(n,b) ≤ χ²_2(Σixi+a) ≤ U(u,n,b)) = 1 - α 
 >
 >
 >
-> Và đây là xác suất của event liên quan đến rv distribution X^2_2(Σixi+a)
+> Và đây là xác suất của event liên quan đến rv distribution χ²_2(Σixi+a)
 >
 >
 >
@@ -4735,15 +4735,15 @@
 >
 >
 >
-> Chọn mốc L là mốc mà P(X^2_2(Σixi+a) < L) = α/2
+> Chọn mốc L là mốc mà P(χ²_2(Σixi+a) < L) = α/2
 >
 >
 >
-> cũng chính là P(X^2_2(Σixi+a) ≥ L) = 1-α/2
+> cũng chính là P(χ²_2(Σixi+a) ≥ L) = 1-α/2
 >
 >
 >
-> , mốc này chính là đươc kí hiệu là X^2_2(Σixi+a), 1-α/2
+> , mốc này chính là đươc kí hiệu là χ²_2(Σixi+a), 1-α/2
 >
 >
 >
@@ -4752,21 +4752,21 @@
 >
 >
 >
-> Chọn mốc U là mốc mà P(U < X^2_2(Σixi+a) = α/2, mốc này đựơc kí hiệu là
-> X^2_2(Σixi+a), α/2
+> Chọn mốc U là mốc mà P(U < χ²_2(Σixi+a) = α/2, mốc này đựơc kí hiệu là
+> χ²_2(Σixi+a), α/2
 >
 >
 >
-> Như vậy, P[L ≤ X^2_2(Σixi+a) ≤U]
+> Như vậy, P[L ≤ χ²_2(Σixi+a) ≤U]
 >
 >
 >
-> = 1 - P(X^2_2(Σixi+a) < L) - P(U <  X^2_2(Σixi+a)) = 1 - α/2 - α/2 = 1 - α NHƯ
+> = 1 - P(χ²_2(Σixi+a) < L) - P(U <  χ²_2(Σixi+a)) = 1 - α/2 - α/2 = 1 - α NHƯ
 > YÊU CẦU.
 >
 >
 >
-> Tuy nhiên đây chỉ là khoảng của X^2_2(Σixi+a), tức 2(Σixi+a)λ 
+> Tuy nhiên đây chỉ là khoảng của χ²_2(Σixi+a), tức 2(Σixi+a)λ 
 >
 >
 >
@@ -4774,19 +4774,19 @@
 >
 >
 >
-> L(l,n,b) = X^2_2(Σixi+a), 1-α/2 = l*(2[n+1/b]) = l * 2(nb+1)/b
+> L(l,n,b) = χ²_2(Σixi+a), 1-α/2 = l*(2[n+1/b]) = l * 2(nb+1)/b
 >
 >
 >
-> ⇔ l = **[b/2(nb+1)] X^2_2(Σixi+a), 1-α/2**
+> ⇔ l = **[b/2(nb+1)] χ²_2(Σixi+a), 1-α/2**
 >
 >
 >
-> U(u,n,b) = X^2_2(Σixi+a), α/2 = u*(2[n+1/b]) = u * 2(nb+1)/b
+> U(u,n,b) = χ²_2(Σixi+a), α/2 = u*(2[n+1/b]) = u * 2(nb+1)/b
 >
 >
 >
-> ⇔ u = **[b/2(nb+1)] X^2_2(Σixi+a), α/2**
+> ⇔ u = **[b/2(nb+1)] χ²_2(Σixi+a), α/2**
 >
 >
 >
@@ -4794,11 +4794,39 @@
 >
 >
 >
-> [b/2(nb+1)] X^2_2(Σixi+a), 1-α/2 →  [b/2(nb+1)] X^2_2(Σixi+a), α/2]
+> [b/2(nb+1)] χ²_2(Σixi+a), 1-α/2 →  [b/2(nb+1)] χ²_2(Σixi+a), α/2]
 >
 >
 >
 > Chính là 9.2.20
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc và chứng minh chi tiết từ việc tìm posterior, biến đổi scale family sang phân phối Chi-square, đến xác định đúng các phân vị quantile của khoảng tin cậy. Chỉ có một vài nhầm lẫn nhỏ về thuật ngữ và ký hiệu gõ nhầm không ảnh hưởng tới bản chất suy luận.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Còn f(x) là prior distribution của X tại x, chỉ là constant nào đó, ta ko care"*
+>
+> Thuật ngữ chưa chuẩn xác: f(x) là marginal distribution (phân phối biên/biên duyên) của dữ liệu mẫu X, không phải là 'prior distribution' của X.
+>
+> **2.** *"f(x|λ) ∝ exp(-nλ) λ^(Σixi) λ^(a-1) exp(-λ/b)"*
+>
+> Lỗi gõ nhầm vế trái (typo): vế trái phải là posterior pdf π(λ|x) chứ không phải likelihood f(x|λ).
+>
+> **3.** *"Tuy nhiên đây chỉ là khoảng của X^2_2(Σixi+a), tức 2(Σixi+a)λ"*
+>
+> Lỗi gõ nhầm biểu thức: biến ngẫu nhiên tương ứng là [2(nb+1)/b]λ chứ không phải 2(Σixi+a)λ (dù ngay dòng tính toán tiếp theo bạn vẫn áp dụng đúng biểu thức 2(nb+1)/b).
+>
+>
+> **✓ Strengths**
+> - Tự suy diễn lại kernel của posterior Gamma từ likelihood Poisson và prior Gamma một cách mạch lạc, chính xác.
+> - Hiểu sâu sắc và giải thích rõ bản chất scale family để chuyển hóa Gamma(Σx+a, [n+1/b]^-1) thành Chi-square bậc tự do 2(Σx+a).
+> - Xác định chính xác các điểm phân vị upper/lower quantile của phân phối Chi-square để tạo nên khoảng 1-alpha cân đối hai phía.
+>
+> **💡 Deeper notes**
+> - Sách gốc có giả định kèm theo: 'assuming that a is an integer' để bậc tự do 2(Σx_i + a) của phân phối Chi-square là một số nguyên dương chuẩn mực, vì bảng tra Chi-square truyền thống thường chỉ lập cho bậc tự do nguyên.
 
 **🔗 See also:** [Xác suất Credible & Tin cậy](#node-m77g4jo) · [Vùng HPD Poisson](./93_methods_of_evaluating_interval_estimators.md#node-yh9h8wy)
 
@@ -4977,7 +5005,7 @@
 >
 >
 >
-> A = [l = [b/2(nb+1)] X^2_2(Σixi+a), 1-α/2 ; u = [b/2(nb+1)] X^2_2(Σixi+a),
+> A = [l = [b/2(nb+1)] χ²_2(Σixi+a), 1-α/2 ; u = [b/2(nb+1)] χ²_2(Σixi+a),
 > α/2]
 >
 >
@@ -5017,6 +5045,26 @@
 > Và vì dùng ko đúng cách thì đừng nói nó gì giảm, ko còn giữ giá trị 1-α
 > mà thận chí nó còn có thể **TRỞ THÀNH 0 LUÔN**. Và điều này ko có gì
 > mâu thuẫn cả, vì đã nói, vì ta dùng sai cách mà.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+>
+> Bạn đã nắm rất tốt bản chất sự khác biệt triết học giữa Frequentist (Confidence Interval) và Bayesian (Credible Interval), cũng như hiểu đúng vì sao Credible Probability của tập Confidence lại thay đổi theo dữ liệu quan sát thay vì cố định ở mức 1-α.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Và sở dĩ nó giảm khi dùng ko đúng cách là bởi: khi dùng theo cách đó, coi λ là biến thì nó bị chi phối bởi prior belief → khiến giá trị của nó bị kéo gần về 0"*
+>
+> Giải thích trực giác này chưa chính xác về mặt Bayesian. Khi quan sát thấy tổng quan sát Σx_i tăng rất lớn (tiến ra vô cùng), dữ liệu thực tế (likelihood) sẽ áp đảo hoàn toàn niềm tin ban đầu (prior distribution), chứ prior không thể kéo giá trị về 0 được. Sự lệch và giảm dần của xác suất hậu nghiệm đối với khoảng tin cậy này xuất phát từ sự bất đối xứng trong việc chọn bậc tự do (2Σx và 2(Σx + 1)) khi đảo ngược kiểm định rời rạc bảo thủ của Poisson so với phân phối hậu nghiệm liên tục Gamma.
+>
+>
+> **✓ Strengths**
+> - Phân biệt rất rõ ràng hai góc nhìn: Frequentist coi tham số λ là cố định và khoảng ngẫu nhiên, còn Bayesian coi dữ liệu đã cố định và tham số λ là biến ngẫu nhiên tuân theo phân phối hậu nghiệm.
+> - Hiểu chính xác vì sao tập Credible luôn giữ xác suất 1-α với mọi x (do được thiết kế tích phân trực tiếp trên posterior để bằng 1-α), trong khi tập Confidence khi bị đánh giá dưới lăng kính Credible thì xác suất đó sẽ phụ thuộc vào dữ liệu quan sát x.
+> - Bắt trọn ý nghĩa cốt lõi của ví dụ: hai phương pháp được tối ưu hóa theo hai tiêu chí khác nhau nên không thể đòi hỏi tiêu chí này thỏa mãn tiêu chí kia.
+>
+> **💡 Deeper notes**
+> - Trong bài toán Poisson rời rạc, khoảng tin cậy frequentist (9.2.21) thực chất là khoảng bảo thủ (conservative) với cận trên dùng bậc tự do 2(Σx + 1) để đảm bảo độ bao phủ coverage ≥ 1-α cho mọi λ. Khi Σx → ∞, độ lệch tích lũy giữa các phân vị chi bình phương của khoảng này so với phân phối hậu nghiệm Gamma thực sự khiến credible probability tiến về 0 (như kết quả của Bài tập 9.30).
 
 **🔗 See also:** [Khoảng tin cậy Poisson Gamma](#node-ahces3c)
 
@@ -5063,7 +5111,7 @@
 >
 >
 >
-> Cho X1,...Xn là iid n(θ, σ^2) và θ là prior pdf n(μ, τ^2) với μ, σ, τ đều đã biết.
+> Cho X1,...Xn là iid n(θ, σ²) và θ là prior pdf n(μ, τ²) với μ, σ, τ đều đã biết.
 > Gs nhắc lại trong ví dụ 7.2.16 ta đã có kết quả: π(θ|xbar) ~ n(δB(xbar),
 > Var(θ|xbar) với δB(xbar) và Var(θ|xbar) có công thức như vậy.
 >
@@ -5098,15 +5146,15 @@
 >
 >
 >
-> = {Πi (1/√2πσ^2) exp[-(xi-θ)^2/2σ^2]} (1/√2πτ^2) exp[-(θ-μ)^2/2τ^2]
+> = {Πi (1/√2πσ²) exp[-(xi-θ)^2/2σ²]} (1/√2πτ²) exp[-(θ-μ)^2/2τ²]
 >
 >
 >
-> = (1/√2πσ^2)^n exp[-Σi(xi-θ)^2/2σ^2] (1/√2πτ^2) exp[-(θ-μ)^2/2τ^2]
+> = (1/√2πσ²)^n exp[-Σi(xi-θ)^2/2σ²] (1/√2πτ²) exp[-(θ-μ)^2/2τ²]
 >
 >
 >
-> = (1/√2πσ^2)^n (1/√2πτ^2) exp[-Σi(xi-θ)^2/2σ^2] exp[-(θ-μ)^2/2τ^2]
+> = (1/√2πσ²)^n (1/√2πτ²) exp[-Σi(xi-θ)^2/2σ²] exp[-(θ-μ)^2/2τ²]
 >
 >
 >
@@ -5376,15 +5424,15 @@
 >
 >
 >
-> Thay công thức của δB(Xbar) và Var(θ|Xbar) và Đặt γ = σ^2/(nτ^2)
+> Thay công thức của δB(Xbar) và Var(θ|Xbar) và Đặt γ = σ²/(nτ²)
 >
 >
 >
-> δB(Xbar) = (σ^2 / (σ^2 + nτ^2)) μ + (n τ^2 / (σ^2 + n τ^2)) Xbar
+> δB(Xbar) = (σ² / (σ² + nτ²)) μ + (n τ² / (σ² + n τ²)) Xbar
 >
 >
 >
-> = (σ^2/nτ^2 / (σ^2/nτ^2 + 1)) μ + (1 / (σ^2/n τ^2 + 1)) Xbar
+> = (σ²/nτ² / (σ²/nτ² + 1)) μ + (1 / (σ²/n τ² + 1)) Xbar
 >
 >
 >
@@ -5392,19 +5440,19 @@
 >
 >
 >
-> Var(θ|Xbar) = σ^2 τ^2 / (σ^2 + nτ^2)
+> Var(θ|Xbar) = σ² τ² / (σ² + nτ²)
 >
 >
 >
-> = σ^2/nτ^2 τ^2 / (σ^2/nτ^2 + 1)
+> = σ²/nτ² τ² / (σ²/nτ² + 1)
 >
 >
 >
-> = γ τ^2 / (γ + 1)
+> = γ τ² / (γ + 1)
 >
 >
 >
-> = (γ / (γ + 1)) τ^2
+> = (γ / (γ + 1)) τ²
 >
 >
 >
@@ -5412,7 +5460,7 @@
 >
 >
 >
-> và Xbar như đã biết là normal(θ, σ^2/n) ⇨ (Xbar - θ)/ (σ/√n) ~ normal(0,1)
+> và Xbar như đã biết là normal(θ, σ²/n) ⇨ (Xbar - θ)/ (σ/√n) ~ normal(0,1)
 >
 >
 >
@@ -5420,19 +5468,19 @@
 >
 >
 >
-> = P_θ((γ / (γ + 1)) μ + (1 / (γ + 1)) Xbar - z_α/2√[(γ / (γ + 1)) τ^2] ≤ θ;
+> = P_θ((γ / (γ + 1)) μ + (1 / (γ + 1)) Xbar - z_α/2√[(γ / (γ + 1)) τ²] ≤ θ;
 >
 >
 >
-> θ ≤ (γ / (γ + 1)) μ + (1 / (γ + 1)) Xbar + z_α/2 √[(γ / (γ + 1)) τ^2]) (A)
+> θ ≤ (γ / (γ + 1)) μ + (1 / (γ + 1)) Xbar + z_α/2 √[(γ / (γ + 1)) τ²]) (A)
 >
 >
 >
-> a) Xét (γ / (γ + 1)) μ + (1 / (γ + 1)) Xbar - z_α/2√[(γ / (γ + 1)) τ^2] ≤ θ
+> a) Xét (γ / (γ + 1)) μ + (1 / (γ + 1)) Xbar - z_α/2√[(γ / (γ + 1)) τ²] ≤ θ
 >
 >
 >
-> ⇔ (1 / (γ + 1)) Xbar - θ ≤ z_α/2√[(γ / (γ + 1)) τ^2] - (γ / (γ + 1)) μ
+> ⇔ (1 / (γ + 1)) Xbar - θ ≤ z_α/2√[(γ / (γ + 1)) τ²] - (γ / (γ + 1)) μ
 >
 >
 >
@@ -5460,7 +5508,7 @@
 >
 >
 >
-> Nhớ lại γ ta đặt là σ^2/nτ^2 ⇔ (σ/√n)^2 = γτ^2 ⇨ σ/√n = τ√γ
+> Nhớ lại γ ta đặt là σ²/nτ² ⇔ (σ/√n)^2 = γτ² ⇨ σ/√n = τ√γ
 >
 >
 >
@@ -5480,7 +5528,7 @@
 >
 >
 >
-> θ ≤ (γ / (γ + 1)) μ + (1 / (γ + 1)) Xbar + z_α/2 √[(γ / (γ + 1)) τ^2])
+> θ ≤ (γ / (γ + 1)) μ + (1 / (γ + 1)) Xbar + z_α/2 √[(γ / (γ + 1)) τ²])
 >
 >
 >
