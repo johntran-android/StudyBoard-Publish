@@ -184,7 +184,7 @@
 >
 >
 >
-> (Xbar ~ normal(μ, σ^2/n), là location scale family location μ, scale σ/√n
+> (Xbar ~ normal(μ, σ²/n), là location scale family location μ, scale σ/√n
 > ⇨ Z = (Xbar - μ) / (σ/√n) ~ standard member và → Z ~ normal(0,1)
 >
 >
