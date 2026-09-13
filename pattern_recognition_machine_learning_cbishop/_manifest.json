@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1789252488065,
+  "publishedAt": 1789324358907,
   "sections": [
     {
       "title": "📋 Overview",
@@ -305,7 +305,7 @@
     {
       "title": "3.7 Exercises",
       "path": "pattern_recognition_machine_learning_cbishop/37_exercises.md",
-      "noteCount": 5,
+      "noteCount": 6,
       "imageCount": 7
     },
     {
@@ -354,7 +354,7 @@
       "title": "4.1.7 Perceptron",
       "path": "pattern_recognition_machine_learning_cbishop/417_perceptron.md",
       "noteCount": 6,
-      "imageCount": 11
+      "imageCount": 10
     },
     {
       "title": "4.2 Probabilistic Generative Model",
@@ -375,6 +375,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 412,
-  "totalImages": 622
+  "totalNotes": 413,
+  "totalImages": 621
 }
