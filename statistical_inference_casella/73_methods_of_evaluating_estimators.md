@@ -204,7 +204,7 @@
 <p align="center"><kbd><img src="assets/yhaa1q92nw.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua ví dụ này, X1,...Xn là iid n(μ, σ^2). Ở đây nói statistic Xbar và S^2 
+> Qua ví dụ này, X1,...Xn là iid n(μ, σ²). Ở đây nói statistic Xbar và S^2 
 > tức sample mean và sample variance đều là unbiased estimators vì sao?
 >
 >
@@ -253,9 +253,9 @@
 >
 >
 > Quay lại đây, mình đã biết về statistic (again, mọi statistic đều là estimator)
-> Xbar và S^2. Thì vì trong theorem 5.2.6 ta đã biết EXbar = μ, và ES^2 = σ^2
+> Xbar và S^2. Thì vì trong theorem 5.2.6 ta đã biết EXbar = μ, và ES^2 = σ²
 > nên có nghĩa như vừa nói ở trên thì chúng là các unbiased estimator của
-> population mean μ và population variance σ^2.
+> population mean μ và population variance σ².
 >
 >
 >
@@ -265,7 +265,7 @@
 >
 >
 >
-> Do đó MSE_μ(Xbar) = Var(Xbar), và MSE_σ^2 (S^2) = Var(S^2)
+> Do đó MSE_μ(Xbar) = Var(Xbar), và MSE_σ² (S^2) = Var(S^2)
 >
 >
 >
@@ -273,7 +273,7 @@
 >
 >
 >
-> Var(Xbar) = σ^2/n và với distribution khác thì cũng vậy
+> Var(Xbar) = σ²/n và với distribution khác thì cũng vậy
 >
 >
 >
@@ -302,27 +302,27 @@
 >
 >
 >
-> (σ^2)^_mle (mà công thức mình đã hiểu, link tím), thì ở đây ý chính là người
-> ta thấy rằng cái này là biased  estimator, vì kì vọng của nó không bằng σ^2,
+> (σ²)^_mle (mà công thức mình đã hiểu, link tím), thì ở đây ý chính là người
+> ta thấy rằng cái này là biased  estimator, vì kì vọng của nó không bằng σ²,
 > nên cái phần đóng góp  vào MSE từ bias sẽ cao hơn so với S^2. Nhưng, tính
-> variance của nó tức Var[(σ^2)^_mle] thì lại nhỏ hơn, và tổng hợp lại, thì MSE
+> variance của nó tức Var[(σ²)^_mle] thì lại nhỏ hơn, và tổng hợp lại, thì MSE
 > của nó nhỏ hơn MSE của unbiased estimator.
 >
 >
 >
-> E[(σ^2)^_mle] = E[(n-1)S^2/n] = [(n-1)/n]E[S^2]. ((n-1)/n là constant)
+> E[(σ²)^_mle] = E[(n-1)S^2/n] = [(n-1)/n]E[S^2]. ((n-1)/n là constant)
 >
 >
 >
-> = (n-1)/n σ^2 (vì đã biết mean của S^2 là σ^2)
+> = (n-1)/n σ² (vì đã biết mean của S^2 là σ²)
 >
 >
 >
-> Như vậy MLE của σ^2 là biased estimator vì E[(σ^2)^_mle] không bằng σ^2
+> Như vậy MLE của σ² là biased estimator vì E[(σ²)^_mle] không bằng σ²
 >
 >
 >
-> Var((σ^2)^_mle) = Var[S^2(n-1)/n] = [(n-1)/n]^2Var(S^2)
+> Var((σ²)^_mle) = Var[S^2(n-1)/n] = [(n-1)/n]^2Var(S^2)
 >
 >
 >
@@ -342,15 +342,15 @@
 >
 >
 >
-> MSE_σ^2((σ^2)^_mse) = Var(S^2) + [Bias(S^2)]^2
+> MSE_σ²((σ²)^_mse) = Var(S^2) + [Bias(S^2)]^2
 >
 >
 >
-> = [2(n-1)/n^2] σ^4 + [(n-1)/n σ^2 - σ^2]^2
+> = [2(n-1)/n^2] σ^4 + [(n-1)/n σ² - σ²]^2
 >
 >
 >
-> = [2(n-1)/n^2] σ^4 + [(n-1-n)/n σ^2]^2
+> = [2(n-1)/n^2] σ^4 + [(n-1-n)/n σ²]^2
 >
 >
 >
@@ -374,7 +374,7 @@
 >
 >
 >
-> MSE của S^2: Tính theo định nghĩa: E[S^2 - σ^2]^2
+> MSE của S^2: Tính theo định nghĩa: E[S^2 - σ²]^2
 >
 >
 >
@@ -418,59 +418,59 @@
 >
 >
 >
-> Vậy ta thấy MSE của BIAS ESTIMATOR (mle [σ^2]^_mle) lại NHỎ HƠN MSE
+> Vậy ta thấy MSE của BIAS ESTIMATOR (mle [σ²]^_mle) lại NHỎ HƠN MSE
 > CỦA UNBISED ESTIMATOR S^2
 >
-> Thử làm lại cái [σ^2]^_mse (tức MSE của normal variance σ^2) 
+> Thử làm lại cái [σ²]^_mse (tức MSE của normal variance σ²) 
 > của normal xem được không:
 >
 >
 >
-> Giải bài toán maximize_μ, σ^2 L(σ^2|**x**) 
+> Giải bài toán maximize_μ, σ² L(σ²|**x**) 
 >
 >
 >
-> L(μ, σ^2|**x**)= Πi=1:n f(x|μ,σ^2)
+> L(μ, σ²|**x**)= Πi=1:n f(x|μ,σ²)
 >
 >
 >
-> = Πi=1:n 1/σ(√2π) exp[-(x-μ)^2/2σ^2]
+> = Πi=1:n 1/σ(√2π) exp[-(x-μ)^2/2σ²]
 >
 >
 >
-> = Πi=1:n [σ(√2π)]^-1 exp[-(x-μ)^2/2σ^2]
+> = Πi=1:n [σ(√2π)]^-1 exp[-(x-μ)^2/2σ²]
 >
 >
 >
-> = [σ(√2π)]^(-n) Πi=1:n exp[-(x-μ)^2/2σ^2]
+> = [σ(√2π)]^(-n) Πi=1:n exp[-(x-μ)^2/2σ²]
 >
 >
 >
-> Bài toán equivalent: maximize_μ, σ^2 log L(μ, σ^2|**x**) 
+> Bài toán equivalent: maximize_μ, σ² log L(μ, σ²|**x**) 
 >
 >
 >
-> log L = log [σ(√2π)]^(-n) Πi=1:n exp[-(x-μ)^2/2σ^2]
+> log L = log [σ(√2π)]^(-n) Πi=1:n exp[-(x-μ)^2/2σ²]
 >
 >
 >
-> = log [σ(√2π)]^(-n) + log Πi=1:n exp[-(x-μ)^2/2σ^2] 
+> = log [σ(√2π)]^(-n) + log Πi=1:n exp[-(x-μ)^2/2σ²] 
 >
 >
 >
-> = -n log [σ(√2π)] + Σi=1:n log exp[-(x-μ)^2/2σ^2] 
+> = -n log [σ(√2π)] + Σi=1:n log exp[-(x-μ)^2/2σ²] 
 >
 >
 >
-> = -n log [σ(√2π)] + Σi=1:n [-(x-μ)^2/2σ^2] 
+> = -n log [σ(√2π)] + Σi=1:n [-(x-μ)^2/2σ²] 
 >
 >
 >
-> = -n [log σ + log (√2π)] + (1/2σ^2) Σi=1:n [-(x-μ)^2] 
+> = -n [log σ + log (√2π)] + (1/2σ²) Σi=1:n [-(x-μ)^2] 
 >
 >
 >
-> = -n log σ -n log (√2π) + (1/2σ^2) Σi=1:n [-(x-μ)^2] 
+> = -n log σ -n log (√2π) + (1/2σ²) Σi=1:n [-(x-μ)^2] 
 >
 >
 >
@@ -478,7 +478,7 @@
 >
 >
 >
-> = - n log σ - (1/2σ^2) Σi=1:n [(xi-μ)^2] 
+> = - n log σ - (1/2σ²) Σi=1:n [(xi-μ)^2] 
 >
 >
 >
@@ -490,11 +490,11 @@
 >
 >
 >
-> ∇L(μ, σ^2)|μ=μ_mle, σ^2=σ^2_mle  = 0
+> ∇L(μ, σ²)|μ=μ_mle, σ²=σ²_mle  = 0
 >
 >
 >
-> ∂/∂μ L(μ, σ^2) = 0 (1)  &  ∂/∂σ^2 L(μ, σ^2) = 0  (2)
+> ∂/∂μ L(μ, σ²) = 0 (1)  &  ∂/∂σ² L(μ, σ²) = 0  (2)
 >
 >
 >
@@ -502,11 +502,11 @@
 >
 >
 >
-> ∂/∂μ {- n log σ - (1/2σ^2) Σi=1:n [(xi-μ)^2]} = 0
+> ∂/∂μ {- n log σ - (1/2σ²) Σi=1:n [(xi-μ)^2]} = 0
 >
 >
 >
-> ⇔ (1/2σ^2) Σi=1:n ∂/∂μ [(xi-μ)^2] = 0
+> ⇔ (1/2σ²) Σi=1:n ∂/∂μ [(xi-μ)^2] = 0
 >
 >
 >
@@ -542,51 +542,51 @@
 >
 >
 >
-> L = -n log σ - A/2σ^2 = -n log[(σ^2)^1/2] - A/2σ^2
+> L = -n log σ - A/2σ² = -n log[(σ²)^1/2] - A/2σ²
 >
 >
 >
-> ∂/∂σ^2 L = 0 
+> ∂/∂σ² L = 0 
 >
 >
 >
-> ⇔ ∂/∂σ^2 [-n log[(σ^2)^1/2] - A/(2σ^2)] = 0
+> ⇔ ∂/∂σ² [-n log[(σ²)^1/2] - A/(2σ²)] = 0
 >
 >
 >
-> ⇔ ∂/∂σ^2 [(-n/2) log(σ^2) - A/(2σ^2)] = 0
+> ⇔ ∂/∂σ² [(-n/2) log(σ²) - A/(2σ²)] = 0
 >
 >
 >
-> ⇔ ∂/∂σ^2 [(-n/2) log(σ^2)] - ∂/∂σ^2 [A/(2σ^2)] = 0
+> ⇔ ∂/∂σ² [(-n/2) log(σ²)] - ∂/∂σ² [A/(2σ²)] = 0
 >
 >
 >
-> ⇔ ∂/∂σ^2 [(-n/2) log(σ^2)] = ∂/∂σ^2 [A/(2σ^2)] 
+> ⇔ ∂/∂σ² [(-n/2) log(σ²)] = ∂/∂σ² [A/(2σ²)] 
 >
 >
 >
-> ⇔ (-n/2) ∂/∂σ^2 log(σ^2) = (A/2) ∂/∂σ^2 [1/σ^2]
+> ⇔ (-n/2) ∂/∂σ² log(σ²) = (A/2) ∂/∂σ² [1/σ²]
 >
 >
 >
-> ⇔ (-n/2) (1/σ^2) = (A/2) ∂/∂σ^2 [σ^2]^-1
+> ⇔ (-n/2) (1/σ²) = (A/2) ∂/∂σ² [σ²]^-1
 >
 >
 >
-> ⇔ (-n/2) (σ^2)^-1 = - (A/2) [σ^2]^-2 
+> ⇔ (-n/2) (σ²)^-1 = - (A/2) [σ²]^-2 
 >
 >
 >
-> ⇔ n = A [σ^2]^-1 
+> ⇔ n = A [σ²]^-1 
 >
 >
 >
-> ⇔ n = A [1/σ^2]
+> ⇔ n = A [1/σ²]
 >
 >
 >
-> ⇔σ^2 = A/n = Σi=1:n [(xi-μ)^2] / n 
+> ⇔σ² = A/n = Σi=1:n [(xi-μ)^2] / n 
 >
 >
 >
@@ -594,7 +594,7 @@
 >
 >
 >
-> Ta có [σ^2]^_mle = Σi=1:n [(xi-Xbar)^2] / n 
+> Ta có [σ²]^_mle = Σi=1:n [(xi-Xbar)^2] / n 
 >
 >
 >
@@ -622,11 +622,11 @@
 >
 >
 >
-> Vậy σ^2 = [(n-1)/n] S^2
+> Vậy σ² = [(n-1)/n] S^2
 >
 >
 >
-> Kết luận MLE của σ^2 là  [(n-1)/n] S^2
+> Kết luận MLE của σ² là  [(n-1)/n] S^2
 
 **🔗 See also:** [Hessian log likelihood chuẩn](./72_method_of_finding_estimators.md#node-19nyc96)
 
@@ -639,7 +639,7 @@
 <p align="center"><kbd><img src="assets/s0u6dt3cmw.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đại ý là dù ở trên ta vừa nói rằng mle estimator của σ^2 có MSE nhỏ hơn
+> đại ý là dù ở trên ta vừa nói rằng mle estimator của σ² có MSE nhỏ hơn
 > nhưng không có nghĩa là ta sẽ vội vàng bỏ cái unbiased estimator - S^2 đi
 > vì dù nó có MSE lớn hơn, nhưng nó unbiased
 >
@@ -814,7 +814,7 @@
 >
 >
 >
-> Mà variance của sample mean thì mình nhớ công thức là σ^2/n, tức population
+> Mà variance của sample mean thì mình nhớ công thức là σ²/n, tức population
 > variance / n.
 >
 >
@@ -1751,7 +1751,7 @@
 >
 >
 >
-> Dễ hiểu thôi, theo theorem 5.2.6 (xem link) thì EXbar = μ (population mean) và E(S^2) = σ^2 (tức population variance).
+> Dễ hiểu thôi, theo theorem 5.2.6 (xem link) thì EXbar = μ (population mean) và E(S^2) = σ² (tức population variance).
 >
 >
 >
@@ -2531,27 +2531,27 @@
 >
 >
 >
-> E\_λ \[(∂/∂λ log f(X|λ))^2\] = - E\_λ \[∂^2/∂λ^2 log f(X|λ)\]
+> E\_λ \[(∂/∂λ log f(X|λ))^2\] = - E\_λ \[∂^2/∂λ² log f(X|λ)\]
 >
 >
 >
-> ⇨ (1) = - nE\_λ \[∂^2/∂λ^2 log e^-λ λ^X / X!\]
+> ⇨ (1) = - nE\_λ \[∂^2/∂λ² log e^-λ λ^X / X!\]
 >
 >
 >
-> = - nE\_λ \[∂^2/∂λ^2 \[log e^-λ + log λ^X - log X!\]\]
+> = - nE\_λ \[∂^2/∂λ² \[log e^-λ + log λ^X - log X!\]\]
 >
 >
 >
-> = - nE\_λ \[∂^2/∂λ^2 \[log e^-λ\] + ∂^2/∂λ^2 \[log λ^X\] - ∂^2/∂λ^2 \[log X!\]
+> = - nE\_λ \[∂^2/∂λ² \[log e^-λ\] + ∂^2/∂λ² \[log λ^X\] - ∂^2/∂λ² \[log X!\]
 >
 >
 >
-> = - nE\_λ \[∂^2/∂λ^2 \[-λ\] + ∂^2/∂λ^2 \[X log λ\] - 0
+> = - nE\_λ \[∂^2/∂λ² \[-λ\] + ∂^2/∂λ² \[X log λ\] - 0
 >
 >
 >
-> = - nE\_λ \[0 + X ∂^2/∂λ^2 \[log λ\]
+> = - nE\_λ \[0 + X ∂^2/∂λ² \[log λ\]
 >
 >
 >
@@ -2559,19 +2559,19 @@
 >
 >
 >
-> = - nE\_λ \[X\[-1/λ^2\]\]
+> = - nE\_λ \[X\[-1/λ²\]\]
 >
 >
 >
-> = nE\_λ \[X/λ^2\]
+> = nE\_λ \[X/λ²\]
 >
 >
 >
-> = nE\_λ \[X\] / λ^2
+> = nE\_λ \[X\] / λ²
 >
 >
 >
-> = n (λ / λ^2)
+> = n (λ / λ²)
 >
 >
 >
@@ -2842,7 +2842,7 @@
 >
 >
 >
-> Cho X1,...Xn là iid n(μ, σ^2) và ta xem xét estimator của σ^2, với μ chưa biết
+> Cho X1,...Xn là iid n(μ, σ²) và ta xem xét estimator của σ², với μ chưa biết
 >
 >
 >
@@ -2879,11 +2879,11 @@
 >
 >
 >
-> tức ∂^2/∂(σ^2)^2 log f(X|θ)
+> tức ∂^2/∂(σ²)^2 log f(X|θ)
 >
 >
 >
-> = ∂^2/∂(σ^2)^2 log [1/√(2πσ^2) . exp[-(1/2)(x-μ)^2/σ^2]
+> = ∂^2/∂(σ²)^2 log [1/√(2πσ²) . exp[-(1/2)(x-μ)^2/σ²]
 >
 >
 >
@@ -2891,7 +2891,7 @@
 >
 >
 >
-> ⇨ - E[∂^2/∂(σ^2)^2 log f(X|θ)] = -E[1/2σ^4 - (x - μ)^2 / σ^6]
+> ⇨ - E[∂^2/∂(σ²)^2 log f(X|θ)] = -E[1/2σ^4 - (x - μ)^2 / σ^6]
 >
 >
 >
@@ -2932,7 +2932,7 @@
 >
 >
 >
-> CÓ NGHĨA LÀ VARIANCE CỦA S^2 (CANDIDATE ESTIMATOR CHO σ^2)
+> CÓ NGHĨA LÀ VARIANCE CỦA S^2 (CANDIDATE ESTIMATOR CHO σ²)
 > KHÔNG ĐẠT CRAMER RAO LOWER BOUND.
 >
 >
@@ -2994,22 +2994,22 @@
 
 <a id="node-6cu0ju6"></a>
 
-###### Ước lượng σ^2 tốt nhất
+###### Ước lượng σ² tốt nhất
 
 <p align="center"><kbd><img src="assets/b6w5w2soocv.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Thế thì quay lại ví dụ 7.3.14, xây dựng hàm likelihood như vầy (cái này dễ 
 > rồi, ko có gì phải nói) nên vế phải (của hệ quả trên) ∂/∂θ log L(θ|**x**), mà ở
-> đây θ là σ^2, sẽ là:
+> đây θ là σ², sẽ là:
 >
 >
 >
-> ∂/∂σ^2 log L(σ^2|**x**) =...giải bài toán tính đạo hàm
+> ∂/∂σ² log L(σ²|**x**) =...giải bài toán tính đạo hàm
 >
 >
 >
-> ... = (n / 2σ^4) [[Σi (xi - μ)^2 / n] - σ^2]
+> ... = (n / 2σ^4) [[Σi (xi - μ)^2 / n] - σ²]
 >
 >
 >
@@ -3021,15 +3021,15 @@
 >
 >
 >
-> vế phải = a(σ^2)[W(**X**) - σ^2] 
+> vế phải = a(σ²)[W(**X**) - σ²] 
 >
 >
 >
-> cho nó bằng vế trái: a(σ^2)[W(X) - σ^2] = (n / 2σ^4) [[Σi (xi - μ)^2 / n] - σ^2]
+> cho nó bằng vế trái: a(σ²)[W(X) - σ²] = (n / 2σ^4) [[Σi (xi - μ)^2 / n] - σ²]
 >
 >
 >
-> thì ta sẽ thấy: Cho a(σ^2) = (n / 2σ^4) thì W(**X**) = [Σi (xi - μ)^2 / n] thì hai vế
+> thì ta sẽ thấy: Cho a(σ²) = (n / 2σ^4) thì W(**X**) = [Σi (xi - μ)^2 / n] thì hai vế
 > bằng nhau.
 >
 >
@@ -3484,7 +3484,7 @@
 >
 >
 >
-> Var_θ[Xbar] thì theo theorem đã từng chứng minh ta nhớ nó = σ^2/n. Nên ở
+> Var_θ[Xbar] thì theo theorem đã từng chứng minh ta nhớ nó = σ²/n. Nên ở
 > đây nó bằng 1/2
 >
 >
@@ -5191,15 +5191,15 @@
 <p align="center"><kbd><img src="assets/7snpx7aet1x.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, qua ví dụ này, với random sample size n từ n(μ, σ^2) population. 
-> Và ta muốn estimator variance σ^2, dùng tiêu chí, loss function là squared
+> Tiếp, qua ví dụ này, với random sample size n từ n(μ, σ²) population. 
+> Và ta muốn estimator variance σ², dùng tiêu chí, loss function là squared
 > error loss. Và ta sẽ tìm trong / dùng trong các estimator có dạng là b S^2
 > (tức là một scaled version của sample variance) δ_b(**X**) = bS^2.
 >
 >
 >
 > Thế thì còn nhớ sample variance S^2 (còn gọi là unbiased sample variance)
-> thì ..vì unbiased nên E[S^2] = σ^2 và VarS^2 = 2 σ^4 / (n-1).
+> thì ..vì unbiased nên E[S^2] = σ² và VarS^2 = 2 σ^4 / (n-1).
 >
 >
 >
@@ -5208,11 +5208,11 @@
 >
 >
 >
-> R((μ, σ^2), δb) = MSE(δb) = Var(bS^2) + Bias(bS^2)
+> R((μ, σ²), δb) = MSE(δb) = Var(bS^2) + Bias(bS^2)
 >
 >
 >
-> = b^2Var(S^2) + [E(bS^2)-σ^2]^2
+> = b^2Var(S^2) + [E(bS^2)-σ²]^2
 >
 >
 >
@@ -5220,19 +5220,19 @@
 >
 >
 >
-> ..= b^2Var(S^2) + [E(bS^2) - σ^2]^2
+> ..= b^2Var(S^2) + [E(bS^2) - σ²]^2
 >
 >
 >
-> = b^2Var(S^2) + [bE(S^2) - σ^2]^2 
+> = b^2Var(S^2) + [bE(S^2) - σ²]^2 
 >
 >
 >
-> = b^2Var(S^2) + [bσ^2 - σ^2]^2 
+> = b^2Var(S^2) + [bσ² - σ²]^2 
 >
 >
 >
-> = b^2Var(S^2) + [(b-1)σ^2]^2 
+> = b^2Var(S^2) + [(b-1)σ²]^2 
 >
 >
 >
@@ -5257,19 +5257,19 @@
 <p align="center"><kbd><img src="assets/5gjyle4w4re.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> rồi, thế thì đại khái , cái kết quả vừa rồi R((μ, σ^2), δb(**X**)) = = [2b^2/(n-1) +
-> (b-1)^2]σ^4 cho thấy nó có dạng của c_b (σ^2)^2, tức là, một quadratic function của
+> rồi, thế thì đại khái , cái kết quả vừa rồi R((μ, σ²), δb(**X**)) = = [2b^2/(n-1) +
+> (b-1)^2]σ^4 cho thấy nó có dạng của c_b (σ²)^2, tức là, một quadratic function của
 > population variance.
 >
 >
 >
 > Và ta sẽ lập luận đơn giản thế này: giả sử xét một estimator khác cũng có dạng này
-> δ_b'(**X**) = b'S^2. Thì risk function của nó là c_b' (σ^2)^2.
+> δ_b'(**X**) = b'S^2. Thì risk function của nó là c_b' (σ²)^2.
 >
 >
 >
 > Để rồi khi so sánh hai estimator δ_b(**X**) và δ_b'(**X**) thì dễ hiểu là nếu c_b' ≤
-> c_b thì c_b' (σ^2)^2 ≤ c_b (σ^2)^2 VỚI MỌI σ. Và từ đó giúp kết luận δ_b'(**X**) tốt
+> c_b thì c_b' (σ²)^2 ≤ c_b (σ²)^2 VỚI MỌI σ. Và từ đó giúp kết luận δ_b'(**X**) tốt
 > hơn δ_b(**X**)
 >
 >
@@ -5332,8 +5332,8 @@
 >
 >
 > Và hình 7.3.2 cho thấy đồ thị hàm risk của S_tilde^2(**X**), S^2 (như đã biết, là
-> unbiased estimator của σ^2) và của MLE của σ^2. Nhận xét thấy nó thấp hơn hai
-> thằng này ở mọi giá trị của σ^2
+> unbiased estimator của σ²) và của MLE của σ². Nhận xét thấy nó thấp hơn hai
+> thằng này ở mọi giá trị của σ²
 
 <br>
 
@@ -5346,14 +5346,14 @@
 <p align="center"><kbd><img src="assets/5xu2t33bn5q.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua ví dụ này, ta tiếp tục xem xét việc estimate population variance σ^2, và
+> Qua ví dụ này, ta tiếp tục xem xét việc estimate population variance σ², và
 > cũng dùng estimator có dạng bS^2. Nói thêm, ta có thể khái quát hơn, với
 > việc chỉ dùng assumption là X1,...Xn là random sample từ population nào đó
 > có variance dương, finite.
 >
 >
 >
-> Thế thì ta sẽ dùng loss function này: L(σ^2, a) = a / σ^2 - 1 - log (a / σ^2)
+> Thế thì ta sẽ dùng loss function này: L(σ², a) = a / σ² - 1 - log (a / σ²)
 >
 >
 >
@@ -5362,7 +5362,7 @@
 >
 >
 >
-> Đó là vì ta sẽ dễ thấy nếu a (estimator) bằng đúng σ^2 thì loss sẽ bằng 0
+> Đó là vì ta sẽ dễ thấy nếu a (estimator) bằng đúng σ² thì loss sẽ bằng 0
 > (1 - 1 - log 1 = 0). Nhưng ưu điểm đáng chú ý là, khi a → 0 hay a → inf thì
 > loss đều sẽ tăng lên inf. Điều này mang ý nghĩa là loss function sẽ đều lớn
 > khi ta over estimate hay under estimate như nhau. Trong khi đó, nếu dùng
@@ -5373,27 +5373,27 @@
 >
 > Thế thì với estimator δb = bS^2 thì risk function là:
 >
-> R(σ^2, δb) = E[bS^2/ σ^2 - 1 - log bS^2/σ^2]
+> R(σ², δb) = E[bS^2/ σ² - 1 - log bS^2/σ²]
 >
 >
 >
-> = E[bS^2/σ^2] - 1 - E[log bS^2/σ^2]
+> = E[bS^2/σ²] - 1 - E[log bS^2/σ²]
 >
 >
 >
-> = (b/σ^2) E[S^2] - 1 - E[log b] - E(log [S^2/σ^2])
+> = (b/σ²) E[S^2] - 1 - E[log b] - E(log [S^2/σ²])
 >
 >
 >
-> = (b/σ^2) σ^2 - 1 - log b - E(log [S^2/σ^2])
+> = (b/σ²) σ² - 1 - log b - E(log [S^2/σ²])
 >
 >
 >
-> = b - 1 - log b - E(log [S^2/σ^2])
+> = b - 1 - log b - E(log [S^2/σ²])
 >
 >
 >
-> = b - log b - 1 - E(log [S^2/σ^2])
+> = b - log b - 1 - E(log [S^2/σ²])
 >
 >
 >
@@ -5438,19 +5438,19 @@
 >
 >
 >
-> Thế thì quay lại đây, risk function, với Stein loss của các estimator cho σ^2
-> có dạng bS^2: R(σ^2, δb) = b - log b - 1 + E(log [S^2/σ^2]). Và ta muốn tìm 
+> Thế thì quay lại đây, risk function, với Stein loss của các estimator cho σ²
+> có dạng bS^2: R(σ², δb) = b - log b - 1 + E(log [S^2/σ²]). Và ta muốn tìm 
 > cái nhỏ nhất với mọi θ.
 >
 >
 >
-> Thế thì lập luận là, cái hàm trên sẽ còn phụ thuộc θ (tức là σ^2) bởi cái term
+> Thế thì lập luận là, cái hàm trên sẽ còn phụ thuộc θ (tức là σ²) bởi cái term
 > cuối cùng. Nhưng để minimize nó over b, thì ta sẽ dễ thấy chỉ cần minimize
 > b - log b.
 >
 >
 >
-> Để rồi cái b sẽ khiến R(σ^2, δb) nhỏ nhất với mọi σ^2 chính là cái b khiến
+> Để rồi cái b sẽ khiến R(σ², δb) nhỏ nhất với mọi σ² chính là cái b khiến
 > b - log b nhỏ nhất.
 >
 >
@@ -5463,7 +5463,7 @@
 >
 >
 >
-> Như vậy b khiến R(σ^2, bS^2) nhỏ nhất với mọi σ^2 chính là b = 1. Nói
+> Như vậy b khiến R(σ², bS^2) nhỏ nhất với mọi σ² chính là b = 1. Nói
 > cách khác, S^2 chính là estimator có risk nhỏ nhất khi dùng Stein loss
 
 <br>
@@ -5862,10 +5862,10 @@
 >
 >
 >
-> Cho X1,....Xn là random sample  ~ n(θ, σ^2), π(θ) là n(μ, τ^2) tức là ta đang dùng
+> Cho X1,....Xn là random sample  ~ n(θ, σ²), π(θ) là n(μ, τ²) tức là ta đang dùng
 > Bayesian approach, cho rằng population mean θ là random variable tuân theo
-> prior distribution n(μ, τ^2). Các giá trị population variance σ^2, mean và variance
-> của prior distribution μ và τ^2 cũng đã biết.
+> prior distribution n(μ, τ²). Các giá trị population variance σ², mean và variance
+> của prior distribution μ và τ² cũng đã biết.
 >
 >
 >
@@ -5887,19 +5887,19 @@
 >
 >
 >
-> Thay pdf của Xi ~ normal(θ, σ^2)
+> Thay pdf của Xi ~ normal(θ, σ²)
 >
 >
 >
-> = Πi=1:n [1/(√2π)σ] exp[-(xi-θ)^2/2σ^2]
+> = Πi=1:n [1/(√2π)σ] exp[-(xi-θ)^2/2σ²]
 >
 >
 >
-> Prior pdf của θ ~normal(μ, τ^2):
+> Prior pdf của θ ~normal(μ, τ²):
 >
 >
 >
-> π(θ) = [1/(√2π)τ] exp[-(θ-μ)^2/2τ^2]
+> π(θ) = [1/(√2π)τ] exp[-(θ-μ)^2/2τ²]
 >
 >
 >
@@ -5911,15 +5911,15 @@
 >
 >
 >
-> = { Πi=1:n 1/(√2π)σ exp[-(xi-θ)^2/2σ^2] } {1/(√2π)τ exp[-(θ-μ)^2/2τ^2] }
+> = { Πi=1:n 1/(√2π)σ exp[-(xi-θ)^2/2σ²] } {1/(√2π)τ exp[-(θ-μ)^2/2τ²] }
 >
 >
 >
-> = [1/(√2π)σ]^n {exp [Σi=1:n -(xi-θ)^2/2σ^2]} {1/(√2π)τ exp[-(θ-μ)^2/2τ^2] }
+> = [1/(√2π)σ]^n {exp [Σi=1:n -(xi-θ)^2/2σ²]} {1/(√2π)τ exp[-(θ-μ)^2/2τ²] }
 >
 >
 >
-> = [1/(√2π)σ]^n [1/(√2π)τ] {exp [Σi=1:n -(xi-θ)^2/2σ^2]} { exp[-(θ-μ)^2/2τ^2] }
+> = [1/(√2π)σ]^n [1/(√2π)τ] {exp [Σi=1:n -(xi-θ)^2/2σ²]} { exp[-(θ-μ)^2/2τ²] }
 >
 >
 >
@@ -5927,27 +5927,27 @@
 >
 >
 >
-> exp [Σi=1:n -(xi-θ)^2/2σ^2]  exp[-(θ-μ)^2/2τ^2]
+> exp [Σi=1:n -(xi-θ)^2/2σ²]  exp[-(θ-μ)^2/2τ²]
 >
 >
 >
-> = exp [(1/2σ^2) Σi=1:n -(xi-θ)^2]  exp[-(θ-μ)^2/2τ^2]
+> = exp [(1/2σ²) Σi=1:n -(xi-θ)^2]  exp[-(θ-μ)^2/2τ²]
 >
 >
 >
-> = exp [(1/2σ^2) Σi=1:n -(xi^2-2xiθ+θ^2)]  exp[-(θ-μ)^2/2τ^2]
+> = exp [(1/2σ²) Σi=1:n -(xi^2-2xiθ+θ^2)]  exp[-(θ-μ)^2/2τ²]
 >
 >
 >
-> = exp [(1/2σ^2) Σi=1:n (-xi^2+2xiθ-θ^2)]  exp[-(θ-μ)^2/2τ^2]
+> = exp [(1/2σ²) Σi=1:n (-xi^2+2xiθ-θ^2)]  exp[-(θ-μ)^2/2τ²]
 >
 >
 >
-> = exp [(1/2σ^2) (-Σixi^2+2θnxbar-nθ^2)]  exp[-(θ-μ)^2/2τ^2]
+> = exp [(1/2σ²) (-Σixi^2+2θnxbar-nθ^2)]  exp[-(θ-μ)^2/2τ²]
 >
 >
 >
-> = exp [(1/2σ^2) (-Σixi^2+2θnxbar-nθ^2) -(θ-μ)^2/2τ^2]
+> = exp [(1/2σ²) (-Σixi^2+2θnxbar-nθ^2) -(θ-μ)^2/2τ²]
 >
 >
 >
@@ -5955,31 +5955,31 @@
 >
 >
 >
-> (1/2σ^2) (-Σixi^2+2θnxbar-nθ^2) -(θ-μ)^2/2τ^2
+> (1/2σ²) (-Σixi^2+2θnxbar-nθ^2) -(θ-μ)^2/2τ²
 >
 >
 >
-> = (1/2σ^2) (-Σixi^2+2θnxbar-nθ^2) -(θ^2-2θμ+μ^2)/2τ^2
+> = (1/2σ²) (-Σixi^2+2θnxbar-nθ^2) -(θ^2-2θμ+μ²)/2τ²
 >
 >
 >
-> = -Σixi^2/2σ^2+2nθxbar/2σ^2-nθ^2/2σ^2 -θ^2/2τ^2+2θμ/2τ^2-μ^2/2τ^2
+> = -Σixi^2/2σ²+2nθxbar/2σ²-nθ^2/2σ² -θ^2/2τ²+2θμ/2τ²-μ²/2τ²
 >
 >
 >
-> = -Σixi^2/2σ^2+nθxbar/σ^2-nθ^2/2σ^2 -θ^2/2τ^2+θμ/τ^2-μ^2/2τ^2
+> = -Σixi^2/2σ²+nθxbar/σ²-nθ^2/2σ² -θ^2/2τ²+θμ/τ²-μ²/2τ²
 >
 >
 >
-> = -nθ^2/2σ^2-θ^2/2τ^2+nθxbar/σ^2+θμ/τ^2-μ^2/2τ^2-Σixi^2/2σ^2
+> = -nθ^2/2σ²-θ^2/2τ²+nθxbar/σ²+θμ/τ²-μ²/2τ²-Σixi^2/2σ²
 >
 >
 >
-> = -(n/2σ^2+1/2τ^2)θ^2 + (nxbar/σ^2+μ/τ^2)θ -μ^2/2τ^2-Σixi^2/2σ^2
+> = -(n/2σ²+1/2τ²)θ^2 + (nxbar/σ²+μ/τ²)θ -μ²/2τ²-Σixi^2/2σ²
 >
 >
 >
-> Quay lại xét pdf cuả n(μ, σ^2) = [1/(√2π)σ] exp[-(x-μ)^2/2σ^2]
+> Quay lại xét pdf cuả n(μ, σ²) = [1/(√2π)σ] exp[-(x-μ)^2/2σ²]
 >
 >
 >
@@ -5987,19 +5987,19 @@
 >
 >
 >
-> -(x-μ)^2/2σ^2 = -(x^2-2xμ+μ^2)/2σ^2
+> -(x-μ)^2/2σ² = -(x^2-2xμ+μ²)/2σ²
 >
 >
 >
-> = (-x^2+2xμ-μ^2)/2σ^2
+> = (-x^2+2xμ-μ²)/2σ²
 >
 >
 >
-> = -x^2/2σ^2+2xμ/2σ^2-μ^2/2σ^2
+> = -x^2/2σ²+2xμ/2σ²-μ²/2σ²
 >
 >
 >
-> = -x^2/2σ^2+xμ/σ^2-μ^2/2σ^2
+> = -x^2/2σ²+xμ/σ²-μ²/2σ²
 >
 >
 >
@@ -6011,47 +6011,47 @@
 >
 >
 >
-> 1/2Variance = (n/2σ^2+1/2τ^2) (A)
+> 1/2Variance = (n/2σ²+1/2τ²) (A)
 >
 >
 >
-> Mean/Variance = (nxbar/σ^2+μ/τ^2) (B)
+> Mean/Variance = (nxbar/σ²+μ/τ²) (B)
 >
 >
 >
-> (A) ⇔ 1/2Variance = nτ^2/2σ^2τ^2+σ^2/2σ^2τ^2
+> (A) ⇔ 1/2Variance = nτ²/2σ²τ²+σ²/2σ²τ²
 >
 >
 >
-> ⇔ 1/2Variance = (nτ^2+σ^2)/2σ^2τ^2
+> ⇔ 1/2Variance = (nτ²+σ²)/2σ²τ²
 >
 >
 >
-> ⇔ 2Variance = 2σ^2τ^2/(nτ^2+σ^2)
+> ⇔ 2Variance = 2σ²τ²/(nτ²+σ²)
 >
 >
 >
-> ⇔ Variance = σ^2τ^2/(nτ^2+σ^2)
+> ⇔ Variance = σ²τ²/(nτ²+σ²)
 >
 >
 >
-> (B) ⇔ Mean = (nxbar/σ^2+μ/τ^2) Variance
+> (B) ⇔ Mean = (nxbar/σ²+μ/τ²) Variance
 >
 >
 >
-> ⇔ Mean = (nxbar/σ^2+μ/τ^2) [σ^2τ^2/(nτ^2+σ^2)]
+> ⇔ Mean = (nxbar/σ²+μ/τ²) [σ²τ²/(nτ²+σ²)]
 >
 >
 >
-> ⇔ Mean = (nxbarτ^2/τ^2σ^2+μσ^2/σ^2τ^2) [σ^2τ^2/(nτ^2+σ^2)]
+> ⇔ Mean = (nxbarτ²/τ²σ²+μσ²/σ²τ²) [σ²τ²/(nτ²+σ²)]
 >
 >
 >
-> ⇔ Mean = [(nxbarτ^2+μσ^2)/σ^2τ^2] [σ^2τ^2/(nτ^2+σ^2)]
+> ⇔ Mean = [(nxbarτ²+μσ²)/σ²τ²] [σ²τ²/(nτ²+σ²)]
 >
 >
 >
-> ⇔ Mean = (nxbarτ^2+μσ^2)/(nτ^2+σ^2)
+> ⇔ Mean = (nxbarτ²+μσ²)/(nτ²+σ²)
 >
 >
 >
@@ -6105,7 +6105,7 @@
 >
 >
 >
-> = (nxbarτ^2+μσ^2)/(nτ^2+σ^2)
+> = (nxbarτ²+μσ²)/(nτ²+σ²)
 >
 >
 >
@@ -6113,15 +6113,15 @@
 >
 >
 >
-> = nxbarτ^2/(nτ^2+σ^2) + μσ^2/(nτ^2+σ^2)
+> = nxbarτ²/(nτ²+σ²) + μσ²/(nτ²+σ²)
 >
 >
 >
-> = xbarτ^2/(τ^2+σ^2/n) + μ(σ^2/n)/(τ^2+σ^2/n)
+> = xbarτ²/(τ²+σ²/n) + μ(σ²/n)/(τ²+σ²/n)
 >
 >
 >
-> = [τ^2/(τ^2+σ^2/n)] xbar + [(σ^2/n)/(τ^2+σ^2/n)] μ
+> = [τ²/(τ²+σ²/n)] xbar + [(σ²/n)/(τ²+σ²/n)] μ
 >
 >
 >
@@ -6129,11 +6129,11 @@
 >
 >
 >
-> Variance, Var(θ|x) = σ^2τ^2/(nτ^2+σ^2)
+> Variance, Var(θ|x) = σ²τ²/(nτ²+σ²)
 >
 >
 >
-> = τ^2(σ^2/n)/(τ^2+σ^2/n)
+> = τ²(σ²/n)/(τ²+σ²/n)
 >
 >
 >
