@@ -555,9 +555,29 @@
 > Thì y như vậy, 𝐐ᵀ𝐳 sẽ chính là ta chiếu tọa độ của 𝐳 lên các eigenvector **q**1,**q**2,..để có tọa độ mới. Thì đây cũng chính là cùng ý nghĩa với xoay hệ trục để đổi tọa độ sang basis **q**'s (hay u's, là eigenvector của design matrix)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú vô cùng chi tiết và chính xác, tự chứng minh mạch lạc từ phân phối Gaussian đến phương trình ellipsoid và giải thích rất rõ ràng bản chất đại số tuyến tính của phép xoay trục tọa độ theo eigenvectors. Không có điểm gì cần cải thiện thêm.
+> Ghi chú rất xuất sắc, hiểu sâu sắc bản chất hình học của likelihood contour, phép tịnh tiến tâm về nghiệm ML và phép đổi cơ sở (xoay trục) bằng phân tích phổ. Chỉ có một vài sơ suất nhỏ về dấu khi hoàn thành bình phương và ký hiệu.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Khai triển vế trái ta có 𝐰ᵀAw - 𝐦ᵀAw + 𝐰ᵀAm - 𝐦ᵀAm = 𝐰ᵀAw - 2𝐦ᵀAw - 𝐦ᵀAm"*
+>
+> Lỗi dấu khi nhân: $(-𝐦)ᵀ𝐀(-𝐦) = +𝐦ᵀ𝐀𝐦$ chứ không phải $-𝐦ᵀ𝐀𝐦$. Tuy nhiên do đây là hằng số được gom chung vào hằng số $c_6$ nên không làm sai lệch bản chất hình học của elip.
+>
+> **2.** *"Ở đây cũng vậy, 𝐐ᵀ𝐳, về bản chất chính là [matrix 𝐐] [𝐳]_e's = [matrix 𝐐] [w-m]_e's"*
+>
+> Gõ nhầm ký hiệu ma trận: phải là $[	ext{matrix } old{Q}^T] [old{z}]_{old{e}	ext{'s}}$ thay vì $old{Q}$.
+>
+>
+> **✓ Strengths**
+> - Diễn giải cực kỳ trực quan và chuẩn xác mối liên hệ giữa ma trận hiệp biến/đối xứng, phép trực giao hóa và trục chính của hình elip.
+> - Tự phát hiện ra tâm của elip chính là nghiệm Maximum Likelihood $\mathbf{w}_{\text{ML}} = (\mathbf{\Phi}^T\mathbf{\Phi})^{-1}\mathbf{\Phi}^T\mathbf{t}$.
+> - Trình bày cặn kẽ và mạch lạc bản chất của phép đổi hệ cơ sở (change of basis) thông qua ma trận trực giao $\mathbf{Q}^T$.
+>
+> **💡 Deeper notes**
+> - Trong sách Bishop (công thức 3.87), ma trận Hessian thường được định nghĩa kèm hệ số phương sai nhiễu $\mathbf{A} = \beta \mathbf{\Phi}^T \mathbf{\Phi}$, do đó các trị riêng $\lambda_i$ trong sách đã bao gồm nhân tử $\beta$, đo lường trực tiếp độ cong (curvature) của likelihood.
+> - Bước tính $\mathbf{m} = (\mathbf{\Phi}^T\mathbf{\Phi})^{-1}\mathbf{\Phi}^T\mathbf{t}$ ngầm định rằng ma trận $\mathbf{\Phi}^T\mathbf{\Phi}$ khả nghịch (tức $\mathbf{\Phi}$ có full column rank, $N \ge M$); nếu không khả nghịch thì elip sẽ suy biến (vô hạn ở một số chiều).
 
 **🔗 See also:** [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj) · [Chuyển tọa độ eigenvector](./230_gaussian_distribution.md#node-c9cpfzj)
 
@@ -965,9 +985,33 @@
 > Và như vậy, ta có thể hiểu đại khái rằng, prior sẽ khiến cho mô hình phế đi các parameter ko cần thiết (là các parameter w ứng với hướng mà tác động ko mạnh tới likelihood (insensitive).
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Ghi chép của bạn rất xuất sắc khi giải thích trực quan hóa hình học qua phép ẩn dụ 'lực kéo' giữa Prior và Likelihood cực kỳ dễ hiểu và chính xác. Điểm cần lưu ý nhỏ duy nhất là các trị riêng $\lambda_i$ thực chất là của ma trận hệ số $\beta\Phi^T\Phi$ chứ không chỉ là $\Phi^T\Phi$, bạn nên lưu ý hệ số nhiễu $\beta$ này.
+> Ghi chú nắm rất xuất sắc bản chất hình học và trực giác vật lý đằng sau số lượng tham số hiệu dụng (well-determined parameters) của MacKay. Một vài chi tiết kỹ thuật nhỏ về mặt đại số tuyến tính cần chuẩn hóa để chuẩn xác hơn.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"eigenvalue của ΦᵀΦ"*
+>
+> Trong mô hình Bayesian linear regression của Bishop, ma trận Hessian của hàm log-likelihood là $\beta \mathbf{\Phi}^T\mathbf{\Phi}$ (bao gồm cả hệ số nghịch đảo phương sai nhiễu $\beta$). Các giá trị riêng $\lambda_i$ được tính cho $\beta \mathbf{\Phi}^T\mathbf{\Phi}$ chứ không đơn thuần chỉ là $\mathbf{\Phi}^T\mathbf{\Phi}$.
+>
+> **2.** *"Ở cái hướng eigenvector u1 của design matrix"*
+>
+> Design matrix $\mathbf{\Phi}$ là ma trận chữ nhật kích thước $N \times M$ nên không có eigenvector theo nghĩa thông thường. $\mathbf{u}_1$ là eigenvector của ma trận hiệp phương sai/Hessian $\beta \mathbf{\Phi}^T \mathbf{\Phi}$ (kích thước $M \times M$) trong không gian tham số.
+>
+> **3.** *"(vì khi = - thì coi như ko có)"*
+>
+> Lỗi gõ phím nhỏ (typo), có lẽ bạn định viết là '(vì khi = 0 thì coi như ko có)'.
+>
+>
+> **✓ Strengths**
+> - Trực giác về 'hai lực kéo' giữa Prior (hướng về 0, đẳng hướng) và Likelihood (hướng về w_ML, bất đẳng hướng phụ thuộc vào độ cong) được mô tả cực kỳ trực quan và hoàn toàn chính xác với mô hình của Bishop/MacKay.
+> - Hiểu đúng ý nghĩa của tỷ số $\lambda_i / (\lambda_i + \alpha)$ trong việc quyết định tham số nào được dữ liệu xác định chặt chẽ (well-determined) và tham số nào bị prior chi phối.
+> - Giải thích chính xác định nghĩa và ý nghĩa thực tế của $\gamma$ như là số lượng tham số hiệu dụng (effective number of parameters).
+>
+> **💡 Deeper notes**
+> - Các vector trực giao $\mathbf{u}_i$ là các trục quay trong không gian tham số (rotated parameter space). Do đó, $w_1, w_2$ trong hình thực chất là tọa độ của $\mathbf{w}$ chiếu lên các hệ trục eigenvector $\mathbf{u}_1, \mathbf{u}_2$, chứ không nhất thiết là các thành phần gốc ban đầu của $\mathbf{w}$ nếu ma trận Hessian chưa được chéo hóa.
+> - Ma trận $\beta \mathbf{\Phi}^T\mathbf{\Phi}$ cần giả định là positive definite (xác định dương) thì toàn bộ $\lambda_i > 0$, đảm bảo tỷ số luôn nằm ngặt trong đoạn $[0, 1)$.
 
 <br>
 
