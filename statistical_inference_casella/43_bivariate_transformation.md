@@ -1286,7 +1286,7 @@
 >
 >
 >
-> (Vì với pdf của normal(μ, σ^2): f(x) = 1/σ√2π e^-(x-μ)^2/2σ^2 
+> (Vì với pdf của normal(μ, σ²): f(x) = 1/σ√2π e^-(x-μ)^2/2σ² 
 >
 >
 >
@@ -1294,7 +1294,7 @@
 >
 >
 >
-> Chú ý normal(0, 2) tức là μ = 0, σ^2 = 2 ⇨ σ = √2
+> Chú ý normal(0, 2) tức là μ = 0, σ² = 2 ⇨ σ = √2
 >
 >
 >
@@ -1374,12 +1374,12 @@
 >
 >
 > Bên stat111 mình nhớ là gs Blitzstein có cách làm khác là chứng minh nếu Y là
-> n(μ, σ^2) thì -Y cũng vậy ngay lập tức chứng minh -Y cũng là n(0,1) thì ngay lập
+> n(μ, σ²) thì -Y cũng vậy ngay lập tức chứng minh -Y cũng là n(0,1) thì ngay lập
 > tức ta dùng 4.2.14 để kết luận X-Y cũng là n(0,2)
 >
 >
 >
-> Chứng minh: Đặt Y = g(X) = -X với X ~ N(μ, σ^2) ⇨ X = -Y = ginv(Y)
+> Chứng minh: Đặt Y = g(X) = -X với X ~ N(μ, σ²) ⇨ X = -Y = ginv(Y)
 >
 >
 >
