@@ -5,11 +5,11 @@
 ---
 <a id="node-pxwfnrw"></a>
 
-## Lec 1 Part 2 Derivatives As Linear Operator
-
 <br>
 
 <a id="node-wv0taqx"></a>
+
+## Tuyến tính hóa đạo hàm
 
 <p align="center"><kbd><img src="assets/kofh6pafby.png" width="80%"></kbd></p>
 
@@ -79,6 +79,8 @@
 
 <a id="node-ffk8r02"></a>
 
+### Ngộ nhận về chuỗi Taylor
+
 <p align="center"><kbd><img src="assets/qoyrei9nxuh.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -99,6 +101,8 @@
 <br>
 
 <a id="node-6sk27h4"></a>
+
+#### Định nghĩa vi phân và đạo hàm
 
 <p align="center"><kbd><img src="assets/ln7norjp2tc.png" width="80%"></kbd></p>
 
@@ -164,7 +168,7 @@
 >
 >
 >
-> - Cần phải hiểu rằng, trong phương trình **δf = f'(x)δx** thì **biến số là δx**, **f'(x) LÀ HÀM TUYẾN
+> \- Cần phải hiểu rằng, trong phương trình **δf = f'(x)δx** thì **biến số là δx**, **f'(x) LÀ HÀM TUYẾN
 > TÍNH ĐỐI VỚI BIẾN SỐ δx**
 >
 >
@@ -221,6 +225,8 @@
 
 <a id="node-1i6sn29"></a>
 
+##### Toán tử tuyến tính
+
 <p align="center"><kbd><img src="assets/pkmajdqepqa.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -231,13 +237,13 @@
 >
 >
 >
-> - **Addition**: **L (u+v) = L u + L v** nôm na là một function apply lên
+> \- **Addition**: **L (u+v) = L u + L v** nôm na là một function apply lên
 > tổng hai vector sẽ cho ra kết quả giống như tổng của hai kết quả khi
 > apply function lên mỗi vector.
 >
 >
 >
-> - **Homogeneity** - là tính chất **L alpha*u = alpha * L u**: nôm na là
+> \- **Homogeneity** - là tính chất **L alpha*u = alpha * L u**: nôm na là
 > khi  apply a function lên một vector nhân với scalar thì tương đương
 > apply function lên vector xong rồi mới scale với scalar.
 >
@@ -251,6 +257,8 @@
 <br>
 
 <a id="node-9bbnees"></a>
+
+###### Toán tử tuyến tính
 
 <p align="center"><kbd><img src="assets/5i7hhj4nh7p.png" width="80%"></kbd></p>
 
@@ -294,6 +302,8 @@
 <br>
 
 <a id="node-269qz71"></a>
+
+###### Toán tử tuyến tính
 
 <p align="center"><kbd><img src="assets/ktxe0mqh7x.png" width="80%"></kbd></p>
 
@@ -340,6 +350,8 @@
 
 <a id="node-zd6g4f1"></a>
 
+###### Bản chất của vi phân
+
 <p align="center"><kbd><img src="assets/tvextzm9wyb.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -357,6 +369,8 @@
 <br>
 
 <a id="node-3ozpthh"></a>
+
+###### Gradient của hàm vô hướng
 
 <p align="center"><kbd><img src="assets/51zth12k6xa.png" width="80%"></kbd></p>
 
@@ -397,11 +411,13 @@
 >
 >
 >
-> Và do đó **f'(x) CHÍNH LÀ (∇f)T**
+> Và do đó **f'(x) CHÍNH LÀ (∇f)ᵀ**
 
 <br>
 
 <a id="node-ehtjr0k"></a>
+
+###### Khái quát hóa ký hiệu ma trận
 
 <p align="center"><kbd><img src="assets/m372hbulqve.png" width="80%"></kbd></p>
 
@@ -413,10 +429,12 @@
 
 <a id="node-7chmfet"></a>
 
+###### Đạo hàm dạng toàn phương
+
 <p align="center"><kbd><img src="assets/tx1sl8uqj8b.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs lấy ví dụ scalar function f(x)  = **xTAx**, với A là **constant square**
+> Gs lấy ví dụ scalar function f(x)  = **xᵀAx**, với A là **constant square**
 > **matrix**.
 >
 >
@@ -443,59 +461,63 @@
 >
 >
 >
-> thì f(x+dx) sẽ là (x+dx)TA(x+dx), ta chỉ việc nhân vào (distribution rule):
+> thì f(x+dx) sẽ là (x+dx)ᵀA(x+dx), ta chỉ việc nhân vào (distribution rule):
 >
 >
 >
-> Đầu tiên nếu kĩ hơn thì (x+dx)T = xT + dxT (transpose của tổng hai vector
+> Đầu tiên nếu kĩ hơn thì (x+dx)ᵀ = xᵀ + dxᵀ (transpose của tổng hai vector
 > thì cũng bằng transpose từng cái rồi cộng lại)
 >
 >
 >
-> Và nhân vô ta sẽ có như trong slide, với **dxTAdx** là **dạng bậc hai của
+> Và nhân vô ta sẽ có như trong slide, với **dxᵀAdx** là **dạng bậc hai của
 > dx** rồi thì ta sẽ **bỏ đi** như theo quy ước rằng **dx vô cùng nhỏ thì mấy
 > cái second order term sẽ coi như bằng 0**.
 >
 >
 >
-> Và một cái nữa (gs ghi chú ở dưới mà ta cũng biết rồi, đó là vì **dxTAx**
+> Và một cái nữa (gs ghi chú ở dưới mà ta cũng biết rồi, đó là vì **dxᵀAx**
 > là một SCALAR mà với scalar a thì aT = a, thành ra kết quả ta được
-> dxTAx  = (dxTAx)T = xTATdx
+> dxᵀAx  = (dxᵀAx)ᵀ = xᵀAᵀdx
 >
 >
 >
-> Cuối cùng ta có df = xTATdx + xTAdx <=> **df =** **xT(AT + A)dx**
+> Cuối cùng ta có df = xᵀAᵀdx + xᵀAdx <=> **df =** **xᵀ(Aᵀ + A)dx**
 >
 >
 >
-> Và như đã nói cái **xT(AT+A) này chính là f'(x)**, và **nó là một row
+> Và như đã nói cái **xᵀ(Aᵀ+A) này chính là f'(x)**, và **nó là một row
 > vector**
 >
 >
 >
-> Thế thì vector gradient **∇f sẽ chính là f'(x)T** (lật nó nằm dọc lại  thành
-> column vector) = [xT(AT+A)]T = (AT+A)TxTT = (ATT+AT)x = **(A+AT)x
+> Thế thì vector gradient **∇f sẽ chính là f'(x)ᵀ** (lật nó nằm dọc lại  thành
+> column vector) = [xᵀ(Aᵀ+A)]T = (Aᵀ+A)ᵀxᵀᵀ = (Aᵀᵀ+Aᵀ)x = **(A+Aᵀ)x
 >
 >
 >
-> ∇f = (A+AT)x**
+> ∇f = (A+Aᵀ)x**
 
-**🔗 See also:** [linked note](./lec_2_part_1_derivatives_in_higher_dimensions_jacobians_and_matrix_functions.md#node-i0jug98)
+**🔗 See also:** [Vi phân x^TAx bằng Product Rule](./lec_2_part_1_derivatives_in_higher_dimensions_jacobians_and_matrix_functions.md#node-i0jug98)
 
 <br>
 
 <a id="node-ouvsmow"></a>
+
+###### Gradient của dạng toàn phương
 
 <p align="center"><kbd><img src="assets/nc8jaou3kj.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/s3xen2lovfc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gradient grad f = (A+AT)x
+> gradient grad f = (A+Aᵀ)x
 
 <br>
 
 <a id="node-9qxhlby"></a>
+
+###### Ma trận Jacobian
 
 <p align="center"><kbd><img src="assets/5ya992hqisv.png" width="80%"></kbd></p>
 
