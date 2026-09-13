@@ -1,6 +1,6 @@
 # 10.4 Interval Estimation
 
-📊 **Progress:** `3` Notes | `4` Screenshots | `3` AI Reviews
+📊 **Progress:** `4` Notes | `5` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-wt27aoy"></a>
@@ -268,11 +268,13 @@
 >
 >
 >
-> Trong sách này, mình hiểu chap 7,8,9 lần lượt giới thiệu 3 bài toán statistical inference: Cho random sample X1,...Xn iid \~ f(x|θ) và muốn suy luận ra giá trị của θ. Với point estimation, ta muốn xây dựng một hàm W(𝐗), để estimate cho giá trị θ, để rồi khi bỏ vào observed value của 𝐗 = 𝐱, ta sẽ có W(𝐱) là một point estimate value của θ.
+> Trong sách này, mình hiểu chap 7,8,9 lần lượt giới thiệu 3 bài toán statistical inference: Cho random sample X1,...Xn iid \~ f(x|θ) và muốn suy luận ra giá trị của θ. Với **point estimation**, ta muốn xây dựng một hàm W(𝐗), để estimate cho giá trị θ, để rồi khi bỏ vào observed value của 𝐗 = 𝐱, ta sẽ có W(𝐱) là một point estimate value của θ.
 >
 >
 >
-> Với hypothesis testing, ta muốn xây dựng một hypothesis test, có bản chất chỉ là một decision rule, nhận vào giá trị observed value của 𝐗 (=𝐱) thì decision rule này sẽ đưa ra infercen là θ nằm trong Θ0 hay Θ0c (tức không reject H0 hay reject H0)
+> Với **hypothesis testing**, ta muốn xây dựng một hypothesis test, có bản chất chỉ là một decision rule, nhận vào giá trị observed value của 𝐗 (=𝐱) thì decision rule này sẽ đưa ra infercence là θ nằm trong Θ0 hay Θ0c (tức không reject H0 hay reject H0)
+>
+>
 >
 >
 >
@@ -280,7 +282,11 @@
 >
 >
 >
-> Và khi θ là scalar, thì random set trở thành random interval, có dạng \[L(𝐗), U(𝐗)\].
+> Và khi θ là scalar, thì random set trở thành **random interval**, có dạng \[L(𝐗), U(𝐗)\].
+>
+>
+>
+> θ fixed unknonw
 >
 >
 >
@@ -363,6 +369,229 @@
 > **💡 Deeper notes**
 > - Trong tài liệu gốc, định lý Slutsky đóng vai trò mấu chốt để thay thế phương sai lý thuyết Var(h(theta^)|theta) bằng ước lượng nhất quán của nó là Var^(h(theta^)|theta) mà vẫn bảo toàn sự hội tụ về n(0, 1).
 > - Ký hiệu Var^(h(theta^)|theta) là một thống kê (statistic) tính từ dữ liệu mẫu X (thường bằng cách thay theta bằng theta^ trong biểu thức phương sai tiệm cận), đảm bảo hai đầu mút L(X) và U(X) không còn phụ thuộc vào tham số chưa biết theta.
+
+<br>
+
+<a id="node-0r0xeb1"></a>
+
+##### Example 10.4.1 Odds Ratio CI
+
+<p align="center"><kbd><img src="assets/ksosx16co1.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, cái ví dụ này là sao?
+>
+>
+>
+> Cực đơn giản thôi: Bài toán cho random sample iid X1,....Xn \~ Bern(p)
+>
+>
+>
+> Bằng cách thay p bởi p̂ (MLE của p) ta có được một MLE của odds ratio p/(1-p): p̂/(1-p̂)
+>
+>
+>
+> Và ta cũng có estimate của Var\[p̂/(1-p̂)\], kí hiệu Var^\[p̂/(1-p̂)\] ≈ p̂ /n(1-p̂)³
+>
+>
+>
+> (công thức này ở đâu ra? mình sẽ active recall làm lại ở dưới)
+>
+>
+>
+> Nên ta có thể dùng tính chất: nói rằng nếu Wn là MLE của θ và Sn là một consistent estimator của SD(Wn) thì (Wn - θ)/Sn → (d) Z \~ n(0,1) (cái này đã nói nhiều lần trong các ví dụ về Wald test) để tạo một confidence interval có P\_θ(confidence interval chứa được θ) ≈ 1-α như sau:
+>
+>
+>
+> Đầu tiên nếu ta có Z \~ n(0,1) thì, theo định nghĩa của z\_α thì:
+>
+>
+>
+> P(Z ≤ -z\_α/2) + P(Z ≥ z\_α/2) = α/2 + α/2 = α
+>
+>
+>
+> ⇒ P(-z\_α/2 ≤ Z ≤ z\_α/2) = 1-α
+>
+>
+>
+> Mà (Wn - θ)/Sn → (d) Z \~ n(0,1), nên khi n lớn P(-z\_α/2 ≤ (Wn - θ)/Sn ≤ z\_α/2) ≈ 1-α
+>
+>
+>
+> ⇔ P(-z\_α/2 ≤ (p̂/(1-p̂) - p/(1-p)) / √\[p̂ /n(1-p̂)³\] ≤ z\_α/2) ≈ 1-α
+>
+>
+>
+> ⇔ P(-z\_α/2 √\[p̂ /n(1-p̂)³\] ≤ p̂/(1-p̂) - p/(1-p) ≤ z\_α/2 √\[p̂ /n(1-p̂)³\]) ≈ 1-α
+>
+>
+>
+> ⇔ P(p̂/(1-p̂) - z\_α/2 √\[p̂ /n(1-p̂)³\] ≤ p/(1-p) ≤ p̂/(1-p̂) + z\_α/2 √\[p̂ /n(1-p̂)³\]) ≈ 1-α
+>
+>
+>
+> Và như vậy \[ L(𝐗) = p̂/(1-p̂) - z\_α/2 √\[p̂ /n(1-p̂)³\]; U(𝐗) = p̂/(1-p̂) + z\_α/2 √\[p̂ /n(1-p̂)³\] \] sẽ là một confidence interval có xác suất chứa true value của odds rations p/(1-p) là 1-α
+>
+>
+>
+> ---
+>
+>
+>
+> Thử làm lại vì sao Var^\[p̂/(1-p̂)\] ≈ p̂ /n(1-p̂)³
+>
+>
+>
+> Đại ý là dùng tính chất nói rằng nếu Wn là MLE của τ(θ) thì nó là một asymptotically efficient estimator của τ(θ), mà theo định nghĩa của khái niệm này, thì tức là phương sai tiệm cận của Wn là bằng Cramer Rao Lower Bound: ν(θ) = \[d/dθ τ(θ)\]² / I1(θ), với I1(θ) là information number của sample size 1, = E\_θ\[(∂/∂θ log L(θ|X))²\].
+>
+>
+>
+> Ở đây τ(p) = p/(1-p) ⇒ τ'(p) = \[(d/dp p)(1-p) - p\[d/dp (1-p)\] / (1-p)² = (1-p+p)/(1-p)² = 1/(1-p)²
+>
+>
+>
+> ⇒ \[τ'(p)\]² = 1/(1-p)⁴
+>
+>
+>
+> Vậy Avar(Wn) = 1/\[(1-p)⁴I1(p)\], trong đó Wn = p̂/(1-p̂) là MLE estimate của τ(p) = p/(1-p)
+>
+>
+>
+> Theo định nghĩa của phương sai tiệm cận, cái này cũng được thể hiện bởi:
+>
+>
+>
+> √n(Wn - τ(θ)) → (d) n(0, 1/(1-p)⁴I1(p))
+>
+>
+>
+> Nên khi n lớn, nVar(Wn) ≈ 1/(1-p)⁴I1(p) ⇔ Var(Wn) ≈ 1/(1-p)⁴In(p)
+>
+>
+>
+> Xét In(p): là information number của sample size n, = E\_θ\[(∂/∂θ log L(θ|𝐗))²\]
+>
+>
+>
+> Xét trước ∂/∂θ log f(𝐗|θ)
+>
+>
+>
+> = ∂/∂θ log Πi f(Xi|θ)
+>
+>
+>
+> = ∂/∂θ Σi log f(Xi|θ)
+>
+>
+>
+> = ∂/∂θ Σi log \[(θ^Xi)(1-θ)^(1-Xi)\]
+>
+>
+>
+> = ∂/∂θ Σi {log (θ^Xi) + log \[(1-θ)^(1-Xi)\]}
+>
+>
+>
+> = ∂/∂θ Σi {Xi log θ + (1-Xi) log (1-θ)}
+>
+>
+>
+> = ∂/∂θ { Σi Xi log θ + Σi (1-Xi) log (1-θ)}
+>
+>
+>
+> = (Σi Xi) ∂/∂θ log θ + \[Σi (1-Xi)\] ∂/∂θ log (1-θ)
+>
+>
+>
+> = (Σi Xi) / θ - (n-ΣiXi) / (1-θ)
+>
+>
+>
+> = n \[ X̄ / θ - (1-X̄) / (1-θ)\]
+>
+>
+>
+> = n \[ X̄ (1-θ) - θ(1-X̄)\] / \[θ(1-θ)\]
+>
+>
+>
+> = n \[ X̄ -X̄ θ - θ+θX̄ \] / \[θ(1-θ)\]
+>
+>
+>
+> = n(X̄ -θ) / \[θ(1-θ)\]
+>
+>
+>
+> ⇒ E\_θ\[(∂/∂θ log L(θ|𝐗))²\] = E\_θ\[(n(X̄ -θ) / \[θ(1-θ)\])²\]
+>
+>
+>
+> = E\_θ\[n²(X̄ -θ)² / \[θ(1-θ)\]²\]
+>
+>
+>
+> = n² E\_θ\[(X̄ -θ)²\] / \[θ(1-θ)\]²
+>
+>
+>
+> E\_θ\[(X̄ -θ)²\] chính là Var(X̄), theo công thức = Var(X)/n
+>
+>
+>
+> Thay θ = p, In(p) = n² Var(X) / n\[p(1-p)\]²
+>
+>
+>
+> Với X \~ Bern(p), EX = p, E(X²) = 0² × (1-p) + 1² × p = p ⇒ Var(X) = EX² - (EX)² = p - p² = p(1-p)
+>
+>
+>
+> ⇒ .. = In(p) = \[n² p(1-p)\] / n\[p(1-p)\]² = n / \[p(1-p)\]
+>
+>
+>
+> ⇒ Var(Wn) = 1 / \[(1-p)⁴In(p)\] = 1 / {(1-p)⁴ n / \[p(1-p)\]}
+>
+>
+>
+> = \[p(1-p)\] / {n(1-p)⁴}
+>
+>
+>
+> = p / \[n(1-p)³\]
+>
+>
+>
+> ---
+>
+>
+>
+> Rồi, như vậy Var(Wn) = Var\[p̂/(1-p̂)\] ≈ p / \[n(1-p)³\]
+>
+>
+>
+> Thay p bởi p̂ ta có công thức xấp xỉ Var^(Wn) ≈ p̂ / \[n(1-p̂)³\]
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú cực kỳ xuất sắc và chi tiết! Bạn không chỉ hiểu đúng cách xây dựng khoảng tin cậy tiệm cận (Wald-type CI) mà còn tự chứng minh lại chính xác công thức phương sai tiệm cận thông qua Fisher Information và Delta Method.
+>
+> **✓ Strengths**
+> - Hiểu bản chất việc áp dụng định lý giới hạn trung tâm kết hợp định lý Slutsky để dựng khoảng tin cậy Wald.
+> - Tự suy luận (active recall) và tính toán đạo hàm, Fisher Information của phân phối Bernoulli cực kỳ chuẩn xác và mạch lạc.
+> - Áp dụng chính xác phương pháp Delta (hoặc tính tiệm cận của MLE đạt CRLB) để tìm phương sai tiệm cận của hàm tham số tau(p).
+>
+> **💡 Deeper notes**
+> - Về mặt thuật ngữ, việc suy ra Var tiệm cận qua tau'(p)^2 / In(p) thực chất chính là Delta Method áp dụng cho phân phối tiệm cận của p_hat ~ N(p, p(1-p)/n).
+> - Khoảng tin cậy này là khoảng tin cậy tiệm cận (approximate / asymptotic CI), độ tin cậy xấp xỉ 1 - alpha khi n đủ lớn và p không quá gần 0 hoặc 1.
+
+**🔗 See also:** [Section 10.1 Point Estimation](./101_point_estimation.md#node-13p5sy2)
 
 <br>
 
