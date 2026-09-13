@@ -1,6 +1,6 @@
 # 3.7 Exercises
 
-📊 **Progress:** `5` Notes | `7` Screenshots | `5` AI Reviews
+📊 **Progress:** `6` Notes | `7` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-rasw876"></a>
@@ -1413,7 +1413,7 @@
 >
 > Bài viết rất xuất sắc và chi tiết trong việc giải thích bản chất thống kê cũng như biến đổi vi phân ma trận cực kỳ chuẩn xác để tìm ra W_ML. Tuy nhiên, bạn mới chỉ hoàn thành phần 1 mà chưa giải quyết yêu cầu thứ hai của đề bài là chứng minh công thức ước lượng MLE cho ma trận hiệp biến Γ.
 
-**🔗 See also:** [Maximum Likelihood and Gradient](./311_maximum_likelihood_and_least_squares.md#node-ogc31vz) · [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj) · [linked note *(MIT 18S096 Matrix Calculus for ML)*](../mit_18s096_matrix_calculus_for_ml/lec_4_part_1_gradient_and_inner_products_in_other_vector_spaces.md#node-pkow4ed)
+**🔗 See also:** [Maximum Likelihood and Gradient](./311_maximum_likelihood_and_least_squares.md#node-ogc31vz) · [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj) · [Gradient hàm ma trận *(MIT 18S096 Matrix Calculus for ML)*](../mit_18s096_matrix_calculus_for_ml/lec_4_part_1_gradient_and_inner_products_in_other_vector_spaces.md#node-pkow4ed)
 
 <br>
 
@@ -1696,9 +1696,32 @@
 > ---
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Bài làm rất chi tiết, giải thích rõ ràng cả về bối cảnh lý thuyết lẫn phương pháp hoàn thành bình phương (completing the square). Các bước biến đổi và khớp mẫu (pattern matching) được thực hiện chính xác để đi đến kết quả cuối cùng.
+> Ghi chú rất tốt, các bước biến đổi đại số ma trận hoàn toàn chính xác và đi đến đúng kết quả (3.50) và (3.51). Một số chi tiết nhỏ về ký hiệu (như nhầm chuẩn bậc hai với chuẩn, hoặc nói nhầm biến khi khớp mẫu) có thể tinh chỉnh để hoàn thiện hơn.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Và vì ||u|| = uᵀu nên ||𝐭 - Φw||² cũng là (𝐭 - Φw)ᵀ(𝐭 - Φw)"*
+>
+> Viết nhầm định nghĩa: chuẩn bình phương ||u||² mới bằng uᵀu, còn ||u|| = √(uᵀu).
+>
+> **2.** *"dạng [cái gì đó] nhân exp (hàm bậc hai của μ)"*
+>
+> Nhầm biến: số mũ phải là hàm bậc hai theo biến ngẫu nhiên (x hoặc 𝐰), không phải theo tham số μ.
+>
+> **3.** *"f(𝐰|𝐭,𝐗,β,α)"*
+>
+> Ký hiệu α tự nhiên xuất hiện trong điều kiện dù trước đó và sau đó bạn đang làm việc với ma trận hiệp phương sai tổng quát 𝐒₀ (thường trong sách Bishop, α là độ chính xác của prior đẳng hướng 𝐒₀ = α⁻¹𝐈).
+>
+>
+> **✓ Strengths**
+> - Biến đổi đại số ma trận để khai triển likelihood và prior rất rành mạch, chuẩn xác.
+> - Khớp hệ số (pattern matching) giữa dạng toàn phương của posterior và dạng chuẩn của phân phối Gauss đa biến rất chặt chẽ.
+> - Hiểu và áp dụng đúng tính chất đối xứng của ma trận hiệp phương sai (𝐒ᵀ = 𝐒).
+>
+> **💡 Deeper notes**
+> - Về mặt thuật ngữ, phương pháp bạn dùng là 'đồng nhất hệ số' (matching coefficients). Kỹ thuật 'completing the square' (hoàn thành bình phương) thực thụ trên số mũ sẽ biến đổi trực tiếp biểu thức 𝐰ᵀ𝐀𝐰 - 2𝐛ᵀ𝐰 thành (𝐰 - 𝐀⁻¹𝐛)ᵀ𝐀(𝐰 - 𝐀⁻¹𝐛) - 𝐛ᵀ𝐀⁻¹𝐛 để đưa thẳng về dạng chuẩn của Gauss mà không cần khai triển biểu thức mẫu trước. Cả hai cách đều cho cùng kết quả.
 
 **🔗 See also:** [Bayesian Linear Regression Posterior Update](./331_bayesian_linear_regression.md#node-fv65lte) · [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj)
 
@@ -1706,9 +1729,389 @@
 
 <a id="node-3ldsqi5"></a>
 
-###### Log Determinant Derivative Identity
+###### Ex 3.21 Log Determinant Derivative Identity
 
 <p align="center"><kbd><img src="assets/xgib8n2vut.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đề bài đặt ra là chứng minh công thức 3.117 và dùng nó để derive lại công thức 3.92
+>
+>
+>
+> Có nghĩa là 𝐀 là matrix phụ thuộc α: 𝐀(α), hay có thể coi là hàm số input là α, output là matrix 𝐀.
+>
+>
+>
+> Đương nhiên, do đó eigenvalue của 𝐀 cũng phụ thuộc α. Gọi λi, i=1,2..là các eigenvalue của 𝐀, có thể coi λi là hàm scalar → scalar λi(α). Và nếu gọi 𝐮i là các eigenvector của 𝐀 thì chúng sẽ là hàm scalar → vector 𝐮i(α)
+>
+>
+>
+> Tương tự như ở trên: |𝐀(α)| = Πi λi(α)
+>
+>
+>
+> ⇒ ln |𝐀(α)| = ln Πi λi(α) = Σi ln λi(α)
+>
+>
+>
+> ⇒ d/dα ln |𝐀(α)| = d/dα Σi ln λi(α) = Σi d/dα ln λi(α)
+>
+>
+>
+> = Σi \[d/dλi ln λi(α) . d/dα λi(α)\] (chain rule)
+>
+>
+>
+> = Σi \[(1/λi(α)) d/dα λi(α)\]
+>
+>
+>
+> Viết lại: d/dα ln |𝐀(α)| = Σi \[(1/λi(α)) d/dα λi(α)\]
+>
+>
+>
+> ---
+>
+>
+>
+> Giờ đi tìm d/dα λi(α):
+>
+>
+>
+> Vì 𝐮i(α) là eigenvector của 𝐀 tương ứng với eigenvalue λi(α), theo định nghĩa của eigenvector, eigenvalue (là vector mà khi nhân với matrix, nó chỉ bị scalar - tức không đổi hướng, mà chỉ bị kéo giãn, với hệ số kéo giãn chính là eigenvalue) ta có:
+>
+>
+>
+> 𝐀(α) 𝐮i(α) = λi(α) 𝐮i
+>
+>
+>
+> Đạo hàm theo α hai vế, dùng product rule: d/dx \[f(x)g(x)\] = \[d/dx f(x)\] g(x) + f(x) \[d/dx g(x)\]
+>
+>
+>
+> Vế trái: d/dα (𝐀(α) 𝐮i(α)) = (d/dα 𝐀(α)) 𝐮i(α) + 𝐀(α) (d/dα 𝐮i(α))
+>
+>
+>
+> Vế phải: d/dα (λi(α) 𝐮i(α)) = \[d/dα (λi(α)\] 𝐮i(α) + λi(α) (d/dα 𝐮i(α))
+>
+>
+>
+> Ta có (d/dα 𝐀(α)) 𝐮i(α) + 𝐀(α) (d/dα 𝐮i(α)) = d/dα ((λi(α)) 𝐮i(α) + λi(α) (d/dα 𝐮i(α))
+>
+>
+>
+> Tạm bỏ (α) cho gọn, tự hiệu 𝐀, 𝐮i, λi đều là hàm số của α
+>
+>
+>
+> Nhân hai vế cho 𝐮iᵀ:
+>
+>
+>
+> 𝐮iᵀ (d/dα 𝐀) 𝐮i + 𝐮iᵀ𝐀 (d/dα 𝐮i) = 𝐮iᵀ \[d/dα λi\] 𝐮i + 𝐮iᵀ λi (d/dα 𝐮i)
+>
+>
+>
+> Xét cục đầu tiên bên vế phải: 𝐮iᵀ \[d/dα λi\] 𝐮i, để ý vì như đã nói ở trên λi là hàm scalar-scalar của α, nên d/dα λi cũng là scalar, do đó ta di chuyển nó tự do, đưa lên trước, để thành \[d/dα λi\] 𝐮iᵀ𝐮i. Tương tự với cục thứ hai vế phải, cũng đưa scalar λi lên trước
+>
+>
+>
+> ⇔ 𝐮iᵀ (d/dα 𝐀) 𝐮i + 𝐮iᵀ𝐀 (d/dα 𝐮i) = \[d/dα λi\] 𝐮iᵀ𝐮i + λi 𝐮iᵀ (d/dα 𝐮i) (1)
+>
+>
+>
+> Xét 𝐮iᵀ𝐀 (d/dα 𝐮i). Để ý tiếp đây là scalar, vì sao: Vì 𝐮i là scalar → vector function, nên đạo hàm đối với α sẽ là vector. Nên 𝐮iᵀ𝐀 (d/dα 𝐮i) chính là có dạng vector 𝐱ᵀ𝐀𝐲, chính là một scalar. Do đó ta có thể transpose nó tùy ý (với scalar thì chuyển vị cũng là chính nó: aᵀ = a)
+>
+>
+>
+> Nên 𝐮iᵀ𝐀 (d/dα 𝐮i) = \[𝐮iᵀ𝐀 (d/dα 𝐮i)\]ᵀ
+>
+>
+>
+> = (d/dα 𝐮i)ᵀ 𝐀ᵀ 𝐮i
+>
+>
+>
+> Mà 𝐀 là matrix đối xứng nên 𝐀ᵀ = 𝐀
+>
+>
+>
+> ⇒ .. = (d/dα 𝐮i)ᵀ 𝐀 𝐮i
+>
+>
+>
+> Dùng 𝐀 𝐮i = λi 𝐮i
+>
+>
+>
+> ..= (d/dα 𝐮i)ᵀ λi 𝐮i
+>
+>
+>
+> Again λi là scalar, move nó lên trước, và
+>
+>
+>
+> = λi (d/dα 𝐮i)ᵀ 𝐮i
+>
+>
+>
+> và cũng lại thấy (d/dα 𝐮i)ᵀ 𝐮i là scalar, transpose nó tùy ý.
+>
+>
+>
+> = λi 𝐮iᵀ(d/dα 𝐮i)
+>
+>
+>
+> Tới đây ta thấy
+>
+>
+>
+> (1) ⇔ 𝐮iᵀ (d/dα 𝐀) 𝐮i + λi 𝐮iᵀ(d/dα 𝐮i)
+>
+>
+>
+> = \[d/dα λi\] 𝐮iᵀ𝐮i + λi 𝐮iᵀ (d/dα 𝐮i)
+>
+>
+>
+> ⇔ 𝐮iᵀ (d/dα 𝐀) 𝐮i = \[d/dα λi\] 𝐮iᵀ𝐮i
+>
+>
+>
+> Thật ra đối với eigenvector, cái ta quan tâm chỉ là hướng, nên có thể chọn unit norm vector: ||𝐮i|| = 1 (nó vẫn là hàm phụ thuộc α, α sẽ ảnh hưởng đến hướng của 𝐮i, chứ không phải chọn ||𝐮i|| = 1 thì đạo hàm d/dα 𝐮i = 0 nhé)
+>
+>
+>
+> Khi đó phương trình trên trở thành:
+>
+>
+>
+> 𝐮iᵀ (d/dα 𝐀) 𝐮i = \[d/dα λi\] ||𝐮i||²
+>
+>
+>
+> ⇔ 𝐮iᵀ (d/dα 𝐀) 𝐮i = d/dα λi
+>
+>
+>
+> Như vậy ta đã có d/dα λi, thay vào: d/dα ln |𝐀| = Σi \[(1/λi) d/dα λi\]
+>
+>
+>
+> = Σi \[(1/λi) 𝐮iᵀ (d/dα 𝐀) 𝐮i\]
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> Tới đây gần xong rồi, xét vế phải: Tr(𝐀⁻¹ d/dα 𝐀), chứng minh nó bằng cái trên là xong.
+>
+>
+>
+> Vì 𝐀 là matrix đối xứng giá trị thực, nên nhớ lại đã học trong MIT 18.06 (xem link) nói rằng với matrix này thì nó luôn tồn tại đủ bộ n eigenvector độc lập, khiến luôn tồn tại phép phân tách eigendecomposition 𝐀 = 𝐒 𝚲 𝐒⁻¹. Hơn nữa, thậm chí luôn có thể chọn ra một bộ n eigenvector orthogonal (trực giao, và nếu chuẩn hóa, tức cho norm = 1), thì khi đó 𝐒 trở thành orthogonal matrix 𝐐, để ta có phép phân tách 𝐀 = 𝐐 𝚲 𝐐ᵀ. (𝚲 là diagonal matrix chứa các eigenvalue λ1,λ2...
+>
+>
+>
+> Mà 𝐀 đối xứng thì 𝐀⁻¹ cũng đối xứng (chứng minh dễ: 𝐀𝐀⁻¹ = 𝐈 ⇔ (𝐀𝐀⁻¹)ᵀ = 𝐈ᵀ ⇔ (𝐀⁻¹)ᵀ𝐀ᵀ = 𝐈 ⇔ (𝐀⁻¹)ᵀ𝐀 = 𝐈 → Suy ra (𝐀⁻¹)ᵀ = 𝐀⁻¹, kết luận 𝐀⁻¹ đối xứng.
+>
+>
+>
+> Hơn nữa như đã biết, nếu λ là eigenvalue của 𝐀 thì 1/λ chính là eigenvalue của 𝐀⁻¹. Chứng minh cũng nhanh:
+>
+>
+>
+> λ là eigenvalue của 𝐀: 𝐀𝐮 = λ𝐮 ⇔ 𝐀⁻¹𝐀𝐮 = 𝐀⁻¹λ𝐮 ⇔ 𝐈𝐮 = λ𝐀⁻¹𝐮 ⇔ (1/λ)𝐮 = 𝐀⁻¹𝐮 → kết quả này cho thấy 1/λ chính là eigenvalue của 𝐀⁻¹. Nên 𝚲 là diagonal matrix chứa eigenvalue của 𝐀 thì 𝚲⁻¹ là diagonall matrix chứa các eigenvalue của 𝐀⁻¹. Hơn nữa cũng cho thấy nó có cùng eigenvector tương ứng 𝐮 của 𝐀 luôn.
+>
+>
+>
+> Vậy 𝐀 = 𝐐 𝚲 𝐐ᵀ thì 𝐀⁻¹ = 𝐐 𝚲⁻¹ 𝐐ᵀ
+>
+>
+>
+> Rồi, phân tích 𝚲⁻¹ 𝐐ᵀ
+>
+>
+>
+> Theo góc nhìn thứ hai khi nhân hai matrix đã học trong 1806: AB = C thì hàng j của C là linear combination các hàng của B bởi hệ số tổ hợp là hàng j của A. Nên ở đây hàng j của 𝚲⁻¹ 𝐐ᵀ chính là linear combination các hàng của 𝐐ᵀ (chính là các vector 𝐮i) với hệ số tổ hợp là hàng j của 𝚲⁻¹, mà hàng này chỉ toàn số 0, chỉ có phần tử thứ j là 1/λj. Nên ta có hàng j của 𝚲⁻¹ 𝐐ᵀ là 𝐮j/λj
+>
+>
+>
+> Tiếp, theo góc nhìn nhân hai matrix thứ tư, AB = C thì C là tổng các rank 1 matrix tạo bởi outer product của \[cột j của A\] và \[hàng j của C\].
+>
+>
+>
+> Vậy 𝐐 \[𝚲⁻¹ 𝐐ᵀ\] chính là tổng các rank 1 matrix tạo bởi \[cột j của 𝐐, tức 𝐮j\] và \[hàng j của 𝚲⁻¹ 𝐐ᵀ, mà theo ở trên, là 𝐮j/λj\]
+>
+>
+>
+> Vậy 𝐐 \[𝚲⁻¹ 𝐐ᵀ\] = Σj=1:n 𝐮j (𝐮j/λj)ᵀ
+>
+>
+>
+> = Σj=1:n (1/λj) 𝐮j 𝐮jᵀ
+>
+>
+>
+> Viết lại 𝐀⁻¹ = Σj=1:n (1/λj) 𝐮j 𝐮jᵀ
+>
+>
+>
+> Nên Tr(𝐀⁻¹ d/dα 𝐀) = Tr(Σj (1/λj) 𝐮j 𝐮jᵀ d/dα 𝐀)
+>
+>
+>
+> Dùng tính tuyến tính của Trace:
+>
+>
+>
+> ..= Σj \[(1/λj) Tr( 𝐮j 𝐮jᵀ d/dα 𝐀)\]
+>
+>
+>
+> Dùng tính cyclic của Trace: Tr(AB) = Tr(BA)
+>
+>
+>
+> = Σj \[(1/λj) Tr(𝐮jᵀ (d/dα 𝐀) 𝐮j)\]
+>
+>
+>
+> Mà lúc này ta lại thấy 𝐮jᵀ (d/dα 𝐀) 𝐮j chính là một scalar (ở trên đã nói), mà trace, theo định nghĩa là tổng các entries đường chéo của matrix, nên với scalar, trace bằng chính nó:
+>
+>
+>
+> = Σj \[(1/λj) 𝐮jᵀ (d/dα 𝐀) 𝐮j\] (4)
+>
+>
+>
+> Đây chính là vế trái ở trên. Chứng minh xong.
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, yêu cầu của bài này còn là ta dùng kết quả này để derive 3.92 từ 3.86
+>
+>
+>
+> Tóm tắt chút xíu, bối cảnh từ 3.86 tới 3.92 chỉ là giải bài toán tìm MLE của α. α là tham số của prior distribution của 𝐰 (ta giả định f(𝐰) là 𝒩(0, (1/α)𝐈).
+>
+>
+>
+> Kết qủa 3.86: ln f(𝐭|α, β) = (M/2) ln(α) + (N/2) ln (β) - E(𝐦N) - 1/2 ln |𝐀| - (N/2) ln(2π)
+>
+>
+>
+> Và α maximize cái này là 3.92: α = γ / (𝐦N)ᵀ𝐦N
+>
+>
+>
+> Thì vốn dĩ để giải ra α trên, ta dùng điều kiện cần tối ưu bậc nhất: Cho đạo hàm ln likelihood = 0 thôi:
+>
+>
+>
+> Đạo hàm của hàm ln likelihood thì những term ko dính tới α thì bằng 0, chỉ còn:
+>
+>
+>
+> d/dα (M/2) ln(α) - d/dα E(𝐦N) - 1/2 d/dα ln |𝐀| = 0 (5)
+>
+>
+>
+> Với d/dα ln |𝐀| thì áp dụng identity vừa chứng minh: d/dα ln |𝐀| = d/dα ln |𝐀| = Tr(𝐀⁻¹ d/dα 𝐀)
+>
+>
+>
+> Với 𝐀 = α𝐈 + β 𝚽ᵀ𝚽 thì d/dα 𝐀 = 𝐈 nên Tr(𝐀⁻¹ d/dα 𝐀) = Tr(𝐀⁻¹ 𝐈) = Tr(𝐀⁻¹) = tổng eigenvalue của 𝐀⁻¹ 
+>
+>
+>
+> Lưu ý, trong chứng minh thì mình gọi λi là trị riêng của 𝐀, thì d/dα ln |𝐀| sẽ là Σi = Σi 1/(λi)
+>
+>
+>
+> Còn áp dụng ở đây với 𝐀 = α𝐈 + β 𝚽ᵀ𝚽  thì d/dα ln |𝐀| = d/dα ln |α𝐈 + β 𝚽ᵀ𝚽| = tổng trị riêng của (α𝐈 + β 𝚽ᵀ𝚽)⁻¹
+>
+>
+>
+> = tổng của nghịch đảo trị riêng của α𝐈 + β 𝚽ᵀ𝚽 
+>
+>
+>
+> ---
+>
+>
+>
+> Trị riêng của α𝐈 + β 𝚽ᵀ𝚽:
+>
+>
+>
+> Trong sách đang dùng λi là eigenvalue của β 𝚽ᵀ𝚽, gọi 𝐮i là eigenvector tương ứng, ta có: β 𝚽ᵀ𝚽 𝐮i = λi 𝐮i
+>
+>
+>
+> ⇔ α𝐮i + β 𝚽ᵀ𝚽 𝐮i = α𝐮i + λi 𝐮i
+>
+>
+>
+> ⇔ (α𝐈 + β𝚽ᵀ𝚽) 𝐮i = (α + λi) 𝐮i, kết quả này cho thấy eigenvalue của α𝐈 + β𝚽ᵀ𝚽 là α + λi, và của (α𝐈 + β 𝚽ᵀ𝚽)⁻¹ là 1/(α + λi)
+>
+>
+>
+> Vậy kết quả là = Σi 1/(λi + α)
+>
+>
+>
+> (Mình hiểu mục đích chứng minh identity này là để cũng ra được kết quả Σi 1/(λi + α) (chính là dòng 3.88) nhưng ta có thể dùng trong các trường hợp khái quát hơn chứ không chỉ với dạng cụ thể 𝐀 = α𝐈 + β 𝚽ᵀ𝚽
+>
+>
+>
+> còn hai term kia thì lấy lại kết quả trong sách thôi (làm lại làm gì cho mệt) M/2α - (1/2)𝐦Nᵀ𝐦N:
+>
+>
+>
+> (5) ⇔ M/2α - (1/2)𝐦Nᵀ𝐦N - 1/2  Σi 1/(λi + α) = 0
+>
+>
+>
+> và tới đây thì theo các bước trong sách ta có 3.92 (tức là chỉ khác mỗi chỗ ta dùng công thức 3.117 để tính d/dα ln |𝐀| thôi)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú xuất sắc, tư duy mạch lạc và hiểu rất sâu bản chất toán học khi chứng minh công thức Jacobi cho ma trận đối xứng qua đạo hàm trị riêng và vết ma trận.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Nên ta có hàng j của 𝚲⁻¹ 𝐐ᵀ là 𝐮j/λj ... Vậy 𝐐 [𝚲⁻¹ 𝐐ᵀ] = Σj=1:n 𝐮j (𝐮j/λj)ᵀ"*
+>
+> Về mặt ký hiệu, hàng thứ j của 𝐐ᵀ vốn là vector dòng 𝐮jᵀ, nên hàng thứ j của 𝚲⁻¹ 𝐐ᵀ là (1/λj) 𝐮jᵀ. Cách viết 'hàng là 𝐮j/λj' rồi lại chuyển vị tiếp ở bước nhân tích ngoài '(𝐮j/λj)ᵀ' hơi cồng kềnh và dễ gây nhầm lẫn giữa vector cột và vector dòng.
+>
+> **2.** *"và tới đây thì theo các bước trong sách ta có 3.92 (tức là chỉ khác mỗi chỗ ta dùng công thức 3.117 để tính d/dα ln |𝐀| thôi)"*
+>
+> Ghi chú dừng lại ở bước đạo hàm tổng mà chưa viết thêm 1 dòng định nghĩa γ = Σi λi/(λi + α) = M - α Σi 1/(λi + α) để biến đổi tường minh ra α = γ / (𝐦Nᵀ𝐦N), dù về mặt hiểu biết bản chất bạn đã nắm trọn vẹn.
+>
+>
+> **✓ Strengths**
+> - Chứng minh đạo hàm của trị riêng dλi/dα qua đạo hàm hai vế của phương trình trị riêng và tận dụng tính đối xứng của A triệt tiêu thành phần (d𝐮i/dα) cực kỳ chuẩn xác và thanh thoát.
+> - Liên kết trực tiếp và chính xác giữa Tr(A⁻¹ dA/dα) với dạng khai triển phổ và tính chất cyclic của Trace.
+> - Hiểu rõ mối quan hệ giữa trị riêng của βΦᵀΦ và trị riêng của A = αI + βΦᵀΦ.
+>
+> **💡 Deeper notes**
+> - Để ln|A| xác định trên tập số thực, ta ngầm hiểu ma trận đối xứng A là xác định dương (positive definite, các λi > 0), điều này luôn thỏa mãn trong mô hình hồi quy tuyến tính Bayes với prior Gaussian.
+> - Công thức d/dα λi = 𝐮iᵀ (d/dα A) 𝐮i chính là một trường hợp đặc biệt của Định lý Feynman-Hellmann (hoặc lý thuyết nhiễu loạn bậc nhất) trong đại số tuyến tính và cơ học lượng tử.
+
+**🔗 See also:** [Section 3.5.2 Maximizing the Evidence Function](./352_maximizing_the_evidence_function.md#node-nc5qxnz) · [Hessian of Regularized Error Function](./351_evaluation_of_the_evidence_function.md#node-vpu7vqs) · [linked note *(Mit 18.06)*](../mit1806_gstrang/lecture_25_symmetric_matrices_and_positive_definiteness.md#node-p8lf3i0) · [Log Marginal Likelihood Derivation](./351_evaluation_of_the_evidence_function.md#node-ddcs0pi)
 
 <br>
 
