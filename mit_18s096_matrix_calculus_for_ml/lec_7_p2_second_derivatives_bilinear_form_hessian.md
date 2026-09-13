@@ -5,8 +5,6 @@
 ---
 <a id="node-5qneug3"></a>
 
-## Lec 7 P2: Second Derivatives, Bilinear Form, Hessian
-
 > [!NOTE]
 > LEC 7 P2: SECOND DERIVATIVES,
 > BILINEAR FORM, HESSIAN
@@ -14,6 +12,8 @@
 <br>
 
 <a id="node-f31r3rf"></a>
+
+## Toán tử đạo hàm
 
 <p align="center"><kbd><img src="assets/ilcvrqvoiq.png" width="80%"></kbd></p>
 
@@ -121,6 +121,8 @@
 
 <a id="node-2ztcfm6"></a>
 
+### Toán tử tuyến tính
+
 <p align="center"><kbd><img src="assets/4w6hs4a3s2x.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -147,6 +149,8 @@
 <br>
 
 <a id="node-cqn3182"></a>
+
+#### Second Derivatives and Hessians
 
 <p align="center"><kbd><img src="assets/cnmw9m185fg.png" width="80%"></kbd></p>
 
@@ -190,6 +194,8 @@
 
 <a id="node-kyios8s"></a>
 
+##### Toán tử đạo hàm
+
 <p align="center"><kbd><img src="assets/qzs8a6qp9dr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -218,6 +224,8 @@
 <br>
 
 <a id="node-3qr38gc"></a>
+
+###### Dạng song tuyến tính
 
 <p align="center"><kbd><img src="assets/ttsum2xh5ml.png" width="80%"></kbd></p>
 
@@ -266,6 +274,8 @@
 
 <a id="node-62l8jwi"></a>
 
+###### Song tuyến tính đối xứng
+
 <p align="center"><kbd><img src="assets/m7kr68mqgb.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -278,6 +288,8 @@
 <br>
 
 <a id="node-hxrakyn"></a>
+
+###### Bản chất đạo hàm cấp 2
 
 <p align="center"><kbd><img src="assets/8qeig9e9t3.png" width="80%"></kbd></p>
 
@@ -362,6 +374,8 @@
 
 <a id="node-5sdk9b6"></a>
 
+###### Tính đối xứng của f''(x)
+
 <p align="center"><kbd><img src="assets/2y0loej5gmf.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -371,6 +385,8 @@
 <br>
 
 <a id="node-zngmdy5"></a>
+
+###### Đạo hàm hàm vô hướng
 
 <p align="center"><kbd><img src="assets/09bfl7zv0sja.png" width="80%"></kbd></p>
 
@@ -390,7 +406,7 @@
 >
 >
 >
-> Và từ đó ta có thể **coi f'(x) như một ROW VECTOR (∇f)T**.
+> Và từ đó ta có thể **coi f'(x) như một ROW VECTOR (∇f)ᵀ**.
 >
 >
 >
@@ -400,6 +416,8 @@
 <br>
 
 <a id="node-faz6cpx"></a>
+
+###### Tính vô hướng của f''(x)
 
 <p align="center"><kbd><img src="assets/miefa827nq.png" width="80%"></kbd></p>
 
@@ -433,6 +451,8 @@
 <br>
 
 <a id="node-0mz30tn"></a>
+
+###### Định nghĩa ma trận Hessian
 
 <p align="center"><kbd><img src="assets/1eirgw7dl4w.png" width="80%"></kbd></p>
 
@@ -476,16 +496,16 @@
 >
 >
 >
-> **dx'THdx = dxTHdx'** 
+> **dx'THdx = dxᵀHdx'** 
 >
 >
 >
-> <=> (dxTHTdx')T = dxTHdx' (vì dx'THdx là scalar nên có thể transpose 
+> <=> (dxᵀHᵀdx')ᵀ = dxᵀHdx' (vì dx'THdx là scalar nên có thể transpose 
 > tùy ý)
 >
 >
 >
-> <=> **HT = H** => H là **symmetric matrix**
+> <=> **Hᵀ = H** => H là **symmetric matrix**
 >
 >
 >
@@ -494,6 +514,8 @@
 <br>
 
 <a id="node-q2s9ici"></a>
+
+###### Vi phân của vector gradient
 
 <p align="center"><kbd><img src="assets/992didf4onf.png" width="80%"></kbd></p>
 
@@ -532,7 +554,7 @@
 >
 >
 >
-> Do đó giống như **df = ∇fTdx** thì đây cũng vậy **d(∂f/∂x1) = ∇(∂f/∂x1)Tdx**
+> Do đó giống như **df = ∇fTdx** thì đây cũng vậy **d(∂f/∂x1) = ∇(∂f/∂x1)ᵀdx**
 >
 >
 >
@@ -541,6 +563,8 @@
 <br>
 
 <a id="node-fxid5sx"></a>
+
+###### Vi phân của Gradient
 
 <p align="center"><kbd><img src="assets/d1e2jpy1dtf.png" width="80%"></kbd></p>
 
@@ -553,7 +577,7 @@
 >
 >
 >
-> = **( ∇(∂f/∂x1)Tdx, ∇(∂f/∂x2)Tdx, ...∇(∂f/∂xn)Tdx )**
+> = **( ∇(∂f/∂x1)ᵀdx, ∇(∂f/∂x2)ᵀdx, ...∇(∂f/∂xn)ᵀdx )**
 >
 >
 >
@@ -562,18 +586,18 @@
 >
 >
 >
-> Nên ta đang có **vector** ( ∇(∂f/∂x1)Tdx, ∇(∂f/∂x2)Tdx, ...∇(∂f/∂xn)Tdx ), 
+> Nên ta đang có **vector** ( ∇(∂f/∂x1)ᵀdx, ∇(∂f/∂x2)ᵀdx, ...∇(∂f/∂xn)ᵀdx ), 
 > mà **mỗi phần tử** là **dot product của vector ∇(∂f/∂xi) với vector dx**.
 >
 >
 >
 > Thế thì bây giờ để làm động tác **đưa dx ra** thì phải hiểu **bản chất** là,
-> ta **chuyển vector** ( ∇(∂f/∂x1)Tdx, ∇(∂f/∂x2)Tdx, ...∇(∂f/∂xn)Tdx )..
+> ta **chuyển vector** ( ∇(∂f/∂x1)ᵀdx, ∇(∂f/∂x2)ᵀdx, ...∇(∂f/∂xn)ᵀdx )..
 >
 >
 >
 > ..thành một **matrix nhân vector dx**, mà **mỗi hàng của matrix** sẽ là vector 
-> **∇(∂f/∂xi) lật ngang lại (để thành một hàng)**: row i'th = **∇(∂f/∂xi)T.**
+> **∇(∂f/∂xi) lật ngang lại (để thành một hàng)**: row i'th = **∇(∂f/∂xi)ᵀ.**
 >
 >
 >
@@ -581,15 +605,15 @@
 >
 >
 >
-> **( ∇(∂f/∂x1)T, ∇(∂f/∂x2)T, ...∇(∂f/∂xn)T ) dx** 
+> **( ∇(∂f/∂x1)ᵀ, ∇(∂f/∂x2)ᵀ, ...∇(∂f/∂xn)ᵀ ) dx** 
 >
 >
 >
-> thì **( ∇(∂f/∂x1)T, ∇(∂f/∂x2)T, ...∇(∂f/∂xn)T )** là một **matrix** với hàng i'th là
+> thì **( ∇(∂f/∂x1)ᵀ, ∇(∂f/∂x2)ᵀ, ...∇(∂f/∂xn)ᵀ )** là một **matrix** với hàng i'th là
 >
 >
 >
-> ∇(∂f/∂xi)T,
+> ∇(∂f/∂xi)ᵀ,
 >
 >
 >
@@ -597,7 +621,7 @@
 >
 >
 >
-> **∇(∂f/∂x1)T** thì các component của nó sẽ là gì?
+> **∇(∂f/∂x1)ᵀ** thì các component của nó sẽ là gì?
 >
 >
 >
@@ -638,15 +662,17 @@
 
 <a id="node-1x5ia28"></a>
 
+###### Ma trận Hessian
+
 <p align="center"><kbd><img src="assets/ouj8dxf4yr.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Và vì ta đang triển khai **d(∇f)**, chính là **d(f'T)** nên cho ra
-> dạng **M dx** thì **M chính là HT**, vì như đã nói **df' = Hdx**
+> dạng **M dx** thì **M chính là Hᵀ**, vì như đã nói **df' = Hdx**
 >
 >
 >
-> Nhưng **dù sao thì HT = H** do symmetric.
+> Nhưng **dù sao thì Hᵀ = H** do symmetric.
 >
 >
 >
@@ -657,6 +683,8 @@
 
 <a id="node-ktrbbcq"></a>
 
+###### Hessian là Jacobian của Gradient
+
 <p align="center"><kbd><img src="assets/oizwbltxomb.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -665,12 +693,12 @@
 >
 >
 >
-> Cụ thể hơn, như có thể thấy, ta đã cho thấy **d(∇f) = HTdx**
+> Cụ thể hơn, như có thể thấy, ta đã cho thấy **d(∇f) = Hᵀdx**
 >
 >
 >
 > Thì khi ta **xem ∇f dưới vai trò của một function (vector->vector
-> function)**, thì **d(∇f) = HTdx** mô tả một **linear operator act on
+> function)**, thì **d(∇f) = Hᵀdx** mô tả một **linear operator act on
 > dx** để cho ra vi phân của function ∇f: d(∇f).
 >
 >
@@ -683,11 +711,13 @@
 >
 >
 >
-> Vậy ở đây **HT = H chính là Jacobian của "function" ∇f**
+> Vậy ở đây **Hᵀ = H chính là Jacobian của "function" ∇f**
 
 <br>
 
 <a id="node-p6dsnnd"></a>
+
+###### Đạo hàm cấp hai det(A)
 
 <p align="center"><kbd><img src="assets/w1rhjf3rzan.png" width="80%"></kbd></p>
 
@@ -718,17 +748,17 @@
 >
 >
 >
-> Nên ở đây, ta đã có **f'(A)[dA] = det A tr(Ainv dA)**, đây dĩ nhiên **chính là**
+> Nên ở đây, ta đã có **f'(A)[dA] = det A tr(A⁻¹ dA)**, đây dĩ nhiên **chính là**
 > **linear operator act on dA**, nên đây **chính là first derivative f'(A)**
 >
 >
 >
 > (ghi là **f'(A)[dA]** ý là linear operator này act on dA, thì nó chính là det A
-> tr(Ainv dA) đây)
+> tr(A⁻¹ dA) đây)
 >
 >
 >
-> Nên giờ ta sẽ tìm cách triển khai **d(f'(A)[dA])** = **d(det A tr(Ainv dA))**
+> Nên giờ ta sẽ tìm cách triển khai **d(f'(A)[dA])** = **d(det A tr(A⁻¹ dA))**
 > thành dạng bilinear form f''(A)[dA, dA']
 >
 >
@@ -743,16 +773,18 @@
 >
 >
 >
-> <=> d' ( det A tr(Ainv dA) ) = f'(A+dA')[dA] - f'(A)[dA]
+> <=> d' ( det A tr(A⁻¹ dA) ) = f'(A+dA')[dA] - f'(A)[dA]
 
 <br>
 
 <a id="node-f1iydb0"></a>
 
+###### Vi phân cấp hai định thức
+
 <p align="center"><kbd><img src="assets/q656hvml87.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, để tính **d' ( det A tr(Ainv dA) )**
+> Rồi, để tính **d' ( det A tr(A⁻¹ dA) )**
 >
 >
 >
@@ -768,11 +800,11 @@
 >
 >
 >
-> vậy d' ( det A tr(Ainv dA) )
+> vậy d' ( det A tr(A⁻¹ dA) )
 >
 >
 >
-> = **d'(det A)** tr(Ainv dA) + det A **d'(tr(Ainv dA))**
+> = **d'(det A)** tr(A⁻¹ dA) + det A **d'(tr(A⁻¹ dA))**
 >
 >
 >
@@ -785,7 +817,7 @@
 >
 >
 > Thì ta có **d f(A)** = **f(A + dA)** **- f(A)** = **f'(A)[dA]** là một **linear operator act 
-> on dA** mà ta đã có công thức = **det A tr(Ainv dA)** 
+> on dA** mà ta đã có công thức = **det A tr(A⁻¹ dA)** 
 >
 >
 >
@@ -793,20 +825,22 @@
 >
 >
 >
-> **d'(det A) =** **det A tr(Ainv dA')**
+> **d'(det A) =** **det A tr(A⁻¹ dA')**
 >
 >
 >
-> Vậy d'(det A) = det A tr(Ainv dA')
+> Vậy d'(det A) = det A tr(A⁻¹ dA')
 
 <br>
 
 <a id="node-kpsd53s"></a>
 
+###### Vi phân cấp hai det(A)
+
 <p align="center"><kbd><img src="assets/kz23dwmt8po.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Nên phần đầu (du v) sẽ là **det A tr(Ainv dA') tr(Ainv dA)**
+> Nên phần đầu (du v) sẽ là **det A tr(A⁻¹ dA') tr(A⁻¹ dA)**
 >
 >
 >
@@ -814,33 +848,33 @@
 >
 >
 >
-> det A **d' (tr(Ainv dA)**
+> det A **d' (tr(A⁻¹ dA)**
 >
 >
 >
-> Xét **d' (tr(Ainv dA):** Gs cho biết **trace** vốn là **linear operator**, nên ta có thể
+> Xét **d' (tr(A⁻¹ dA):** Gs cho biết **trace** vốn là **linear operator**, nên ta có thể
 > **đưa d vào trong**: (giống như d(Σx) = Σdx vậy
 >
 >
 >
-> d' (tr(Ainv dA) = **tr [d'( Ainv dA)]**
+> d' (tr(A⁻¹ dA) = **tr [d'( A⁻¹ dA)]**
 >
 >
 >
-> Và như đã nói **dA coi như fixed**, constant, thì **d'( Ainv dA) = d'( Ainv) dA**
+> Và như đã nói **dA coi như fixed**, constant, thì **d'( A⁻¹ dA) = d'( A⁻¹) dA**
 >
 >
 >
-> Và với Ainv thì **d(Ainv) = - Ainv dA Ainv** (kiến thức này again, cần những
-> bài 4,5 mới hiểu), nên **d'(Ainv) = - Ainv dA' Ainv**
+> Và với A⁻¹ thì **d(A⁻¹) = - A⁻¹ dA A⁻¹** (kiến thức này again, cần những
+> bài 4,5 mới hiểu), nên **d'(A⁻¹) = - A⁻¹ dA' A⁻¹**
 >
 >
 >
-> => **tr [d'( Ainv dA)] = - Ainv dA' Ainv dA**
+> => **tr [d'( A⁻¹ dA)] = - A⁻¹ dA' A⁻¹ dA**
 >
 >
 >
-> Vậy vế 2 (u dv) là: - det A tr(Ainv dA' Ainv dA)
+> Vậy vế 2 (u dv) là: - det A tr(A⁻¹ dA' A⁻¹ dA)
 >
 >
 >
@@ -848,7 +882,7 @@
 >
 >
 >
-> **det A tr(Ainv dA') tr(Ainv dA) - det A tr(Ainv dA' Ainv dA)**
+> **det A tr(A⁻¹ dA') tr(A⁻¹ dA) - det A tr(A⁻¹ dA' A⁻¹ dA)**
 >
 >
 >
@@ -859,16 +893,18 @@
 
 <a id="node-4secx04"></a>
 
+###### Đạo hàm cấp hai det(A)
+
 <p align="center"><kbd><img src="assets/npkao4yx9c.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và gs nói nó cũng **symmetric**: vì ta có thể **đổi chỗ tr(Ainv dA')** với
-> **tr(Ainv dA)** vì chúng chỉ là **number**
+> Và gs nói nó cũng **symmetric**: vì ta có thể **đổi chỗ tr(A⁻¹ dA')** với
+> **tr(A⁻¹ dA)** vì chúng chỉ là **number**
 >
 >
 >
 > Và nhờ tính chất của **trace** mà ta cũng có thể **đổi chỗ dA' và dA
-> trong tr(Ainv dA' Ainv dA)**
+> trong tr(A⁻¹ dA' A⁻¹ dA)**
 >
 >
 >
@@ -877,6 +913,8 @@
 <br>
 
 <a id="node-j3elu08"></a>
+
+###### Xấp xỉ bậc hai
 
 <p align="center"><kbd><img src="assets/dcj3pgs333w.png" width="80%"></kbd></p>
 
@@ -912,6 +950,8 @@
 
 <a id="node-01fmfg0"></a>
 
+###### Phương pháp SQP và Newton
+
 <p align="center"><kbd><img src="assets/pjik15a72sp.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -921,6 +961,8 @@
 <br>
 
 <a id="node-bn2e7xr"></a>
+
+###### Ước lượng ma trận Hessian
 
 <p align="center"><kbd><img src="assets/ishohfi89go.png" width="80%"></kbd></p>
 
