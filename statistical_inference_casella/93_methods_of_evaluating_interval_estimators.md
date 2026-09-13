@@ -62,7 +62,7 @@
 >
 >
 >
-> Xét ví dụ này, ta có X1,..Xn là iid n(μ, σ^2) với σ đã biết. Thì a, b thỏa P(a ≤ Z ≤
+> Xét ví dụ này, ta có X1,..Xn là iid n(μ, σ²) với σ đã biết. Thì a, b thỏa P(a ≤ Z ≤
 > b) = 1 - α sẽ cho ta một 1-α confidence interval {μ: xbar - b σ/√n} ≤ μ ≤ xbar
 > \- a σ/√n
 >
@@ -104,8 +104,8 @@
 >
 >
 >
-> Vậy thì ở đây: Ta biết với X1,...Xn là iid normal(μ, σ^2) thì Xbar là normal(μ,
-> σ^2/n) Và normal lại là thuộc location scale family với mean là location param,
+> Vậy thì ở đây: Ta biết với X1,...Xn là iid normal(μ, σ²) thì Xbar là normal(μ,
+> σ²/n) Và normal lại là thuộc location scale family với mean là location param,
 > standard deviation là scale param.
 >
 >
@@ -432,12 +432,12 @@
 <p align="center"><kbd><img src="assets/ewia8xat91.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là ta còn nhớ, với random sample normal(μ, σ^2), thì có hai statistic
+> Đại khái là ta còn nhớ, với random sample normal(μ, σ²), thì có hai statistic
 > có thể đóng vai pivot:
 >
 >
 >
-> Cái thứ nhất là dựa trên việc Xbar  ~ normal(μ, σ^2/n), thì theo location scale
+> Cái thứ nhất là dựa trên việc Xbar  ~ normal(μ, σ²/n), thì theo location scale
 > family, (Xbar - μ) / σ/√n sẽ là ~ normal(0,1) → distribution không còn phụ thuộc
 > μ, σ.
 >
@@ -520,7 +520,7 @@
 >
 > ----- Do đó, khi không biết σ ta sẽ dùng cái pivot thứ hai: (Xbar - μ) / S/√n,
 > với S^2 là sample variance (chính xác thì gọi là unbiased sample variance có
-> công thức Σi (Xi - xbar)^2 / (n-1), vì E(S^2) = σ^2)
+> công thức Σi (Xi - xbar)^2 / (n-1), vì E(S^2) = σ²)
 >
 >
 >
@@ -628,7 +628,7 @@
 >
 >
 >
-> Tuy nhiên ta biết (n-1) S^2 / σ^2 ~ Chi-square_n-1, không phụ thuộc μ, nên từ đó
+> Tuy nhiên ta biết (n-1) S^2 / σ² ~ Chi-square_n-1, không phụ thuộc μ, nên từ đó
 > pdf của S^2 cũng ko phụ thuộc μ:
 >
 >
@@ -639,12 +639,12 @@
 >
 >
 >
-> Nên nếu gọi f(c) là pdf của X^2_n-1 ~ Chi-square_n-1, thì dùng theorem trên ta
-> sẽ có  thì X^2_n-1 [σ^2/(n-1)] sẽ là thành viên có scale σ^2/(n-1), có pdf sẽ là:
+> Nên nếu gọi f(c) là pdf của χ²_n-1 ~ Chi-square_n-1, thì dùng theorem trên ta
+> sẽ có  thì χ²_n-1 [σ²/(n-1)] sẽ là thành viên có scale σ²/(n-1), có pdf sẽ là:
 >
 >
 >
-> fS^2(s^2) = f(s^2 / [σ^2/(n-1)]) / σ^2/(n-1)
+> fS^2(s^2) = f(s^2 / [σ²/(n-1)]) / σ²/(n-1)
 >
 >
 >
@@ -676,7 +676,7 @@
 >
 >
 >
-> Tới đây, nếu ra ngay E_σ(S) = σ thì sẽ là sai, ta chỉ biết E_σ[S^2] = σ^2, vì S^2  là
+> Tới đây, nếu ra ngay E_σ(S) = σ thì sẽ là sai, ta chỉ biết E_σ[S^2] = σ², vì S^2  là
 > unbiased sample variance. Đây là nội dung bài tập 7.5
 >
 >
@@ -1381,7 +1381,7 @@
 <p align="center"><kbd><img src="assets/h3e9v9go6zl.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ này cho X1,...Xn là iid n(μ, σ^2), với σ^2 đã biết. Interval C(xbar) = {μ: μ > xbar -
+> Ví dụ này cho X1,...Xn là iid n(μ, σ²), với σ² đã biết. Interval C(xbar) = {μ: μ > xbar -
 > z_α σ/√n} là một 1-α UMA lower confidence bound vì nó có thể được tạo ra bằng cách
 > invert một UMP test của bài toán testing H0: μ = μ0 vs H1: μ > μ0.
 >
@@ -2551,12 +2551,12 @@
 <p align="center"><kbd><img src="assets/kpnw6ov4j1.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua ví dụ này, đại khái là gs gọi X ~ n(μ, σ^2) và cho rằng σ^2 đã biết. Ông
+> Qua ví dụ này, đại khái là gs gọi X ~ n(μ, σ²) và cho rằng σ² đã biết. Ông
 > nói, đại ý là, ta có thể coi cái biến X này là một sample mean nào của một
-> random sample nào đó có population distribution là normal(μ, τ^2). Bởi lẽ ta
-> đã biết, nếu ta có X1,...Xn là random sample size n ~ normal(μ, τ^2) thì Xbar,
-> là sample mean sẽ có distribution là normal(μ, τ^2/n), tức là nếu gọi σ^2 là
-> variance của Xbar thì σ^2 = τ^2/n.
+> random sample nào đó có population distribution là normal(μ, τ²). Bởi lẽ ta
+> đã biết, nếu ta có X1,...Xn là random sample size n ~ normal(μ, τ²) thì Xbar,
+> là sample mean sẽ có distribution là normal(μ, τ²/n), tức là nếu gọi σ² là
+> variance của Xbar thì σ² = τ²/n.
 >
 >
 >
@@ -2582,7 +2582,7 @@
 >
 >
 > Vậy thì ở đây, có thể coi như ta đang có một random sample size n = 1, có
-> distribution normal(μ, σ^2) với σ đã biết. Và ta muốn tạo / tìm interval
+> distribution normal(μ, σ²) với σ đã biết. Và ta muốn tạo / tìm interval
 > estimator cho μ, và như vừa nói, chúng sẽ là random interval có dạng [L(X),
 > U(X)]. Nhưng ở đây, ta sẽ xét một subset của tập "mọi interval có dạng
 > [L(X),  U(X)]", đó là tập các interval mà L(X) = X - c*σ, U(X) = X + c*σ.
@@ -2682,7 +2682,7 @@
 >
 >
 >
-> Và vì X ~ normal(μ, σ^2), là một thành viên ứng với location μ, scale σ của 
+> Và vì X ~ normal(μ, σ²), là một thành viên ứng với location μ, scale σ của 
 > location scale family, nên theo Location Scale theorem (X - μ)/σ chính là thành
 > viên chuẩn, và do đó nó chính là normal(0,1)
 >
