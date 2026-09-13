@@ -290,7 +290,7 @@
 <p align="center"><kbd><img src="assets/2fkquudhknn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cho X1,...Xn random sample ~ n(θ, σ^2), với σ^2 đã biết. Xét một LRT testing 
+> Cho X1,...Xn random sample ~ n(θ, σ²), với σ² đã biết. Xét một LRT testing 
 > giữa H0: θ ≤ θ0 và H1: θ > θ0, với rule là: reject H0 khi (Xbar - θ0) / (σ/√n) > c.
 > Với c là số dương bất kì.
 >
@@ -313,11 +313,11 @@
 >
 >
 >
-> Likelihood function: L(θ|**x**) = f(**x**|θ) = f(x|(θ,σ^2))
+> Likelihood function: L(θ|**x**) = f(**x**|θ) = f(x|(θ,σ²))
 >
 >
 >
-> = Πi f(xi|(θ,σ^2)) = Πi (1/√2πσ^2) exp[-(xi-θ)^2/2σ^2] 
+> = Πi f(xi|(θ,σ²)) = Πi (1/√2πσ²) exp[-(xi-θ)^2/2σ²] 
 >
 >
 >
@@ -325,19 +325,19 @@
 >
 >
 >
-> = log [(1/√2πσ^2)^n exp Σi [-(xi-θ)^2/2σ^2]] 
+> = log [(1/√2πσ²)^n exp Σi [-(xi-θ)^2/2σ²]] 
 >
 >
 >
-> = log [(1/√2πσ^2)^n] + log exp Σi [-(xi-θ)^2/2σ^2]
+> = log [(1/√2πσ²)^n] + log exp Σi [-(xi-θ)^2/2σ²]
 >
 >
 >
-> = n log (1/√2πσ^2) + Σi [-(xi-θ)^2/2σ^2]
+> = n log (1/√2πσ²) + Σi [-(xi-θ)^2/2σ²]
 >
 >
 >
-> ⇔ maximize Σi [-(xi-θ)^2] / 2σ^2
+> ⇔ maximize Σi [-(xi-θ)^2] / 2σ²
 >
 >
 >
@@ -385,11 +385,11 @@
 >
 >
 >
-> = (1/√2πσ^2)^n exp Σi [-(xi-xbar)^2/2σ^2] 
+> = (1/√2πσ²)^n exp Σi [-(xi-xbar)^2/2σ²] 
 >
 >
 >
-> = (1/√2πσ^2)^n exp (1/2σ^2) Σi [-(xi-xbar)^2] 
+> = (1/√2πσ²)^n exp (1/2σ²) Σi [-(xi-xbar)^2] 
 >
 >
 >
@@ -411,59 +411,59 @@
 >
 >
 >
-> = (1/√2πσ^2)^n exp (1/2σ^2) Σi [-(xi-θ0)^2] / 1/√2πσ^2)^n exp (1/2σ^2) Σi [-(xi-xbar)^2] 
+> = (1/√2πσ²)^n exp (1/2σ²) Σi [-(xi-θ0)^2] / 1/√2πσ²)^n exp (1/2σ²) Σi [-(xi-xbar)^2] 
 >
 >
 >
-> = exp (1/2σ^2) Σi [-(xi-θ0)^2] / exp (1/2σ^2) Σi [-(xi-xbar)^2] 
+> = exp (1/2σ²) Σi [-(xi-θ0)^2] / exp (1/2σ²) Σi [-(xi-xbar)^2] 
 >
 >
 >
-> = exp (1/2σ^2) Σi [-(xi-θ0)^2] - (1/2σ^2) Σi [-(xi-xbar)^2] 
+> = exp (1/2σ²) Σi [-(xi-θ0)^2] - (1/2σ²) Σi [-(xi-xbar)^2] 
 >
 >
 >
-> = exp (1/2σ^2) Σi {[-(xi-θ0)^2] - [-(xi-xbar)^2]}
+> = exp (1/2σ²) Σi {[-(xi-θ0)^2] - [-(xi-xbar)^2]}
 >
 >
 >
-> = exp (1/2σ^2) Σi [-(xi-θ0)^2 +(xi-xbar)^2] 
+> = exp (1/2σ²) Σi [-(xi-θ0)^2 +(xi-xbar)^2] 
 >
 >
 >
-> = exp (1/2σ^2) Σi [-(xi-xbar-θ0+xbar)^2 +(xi-xbar)^2] 
+> = exp (1/2σ²) Σi [-(xi-xbar-θ0+xbar)^2 +(xi-xbar)^2] 
 >
 >
 >
-> = exp (1/2σ^2) Σi [-[(xi-xbar)+(xbar-θ0)]^2 +(xi-xbar)^2] 
+> = exp (1/2σ²) Σi [-[(xi-xbar)+(xbar-θ0)]^2 +(xi-xbar)^2] 
 >
 >
 >
-> = exp (1/2σ^2) Σi [-[(xi-xbar)^2+2(xi-xbar)(xbar-θ0)+(xbar-θ0)^2] +(xi-xbar)^2] 
+> = exp (1/2σ²) Σi [-[(xi-xbar)^2+2(xi-xbar)(xbar-θ0)+(xbar-θ0)^2] +(xi-xbar)^2] 
 >
 >
 >
-> = exp (1/2σ^2) Σi [-(xi-xbar)^2-2(xi-xbar)(xbar-θ0)-(xbar-θ0)^2+(xi-xbar)^2] 
+> = exp (1/2σ²) Σi [-(xi-xbar)^2-2(xi-xbar)(xbar-θ0)-(xbar-θ0)^2+(xi-xbar)^2] 
 >
 >
 >
-> = exp (1/2σ^2) Σi [-2(xi-xbar)(xbar-θ0)-(xbar-θ0)^2]
+> = exp (1/2σ²) Σi [-2(xi-xbar)(xbar-θ0)-(xbar-θ0)^2]
 >
 >
 >
-> = exp (1/2σ^2) [-2(xbar-θ0)Σi(xi-xbar)-Σi(xbar-θ0)^2] 
+> = exp (1/2σ²) [-2(xbar-θ0)Σi(xi-xbar)-Σi(xbar-θ0)^2] 
 >
 >
 >
-> = exp (1/2σ^2) [-2(xbar-θ0)(nxbar-nxbar)-n(xbar-θ0)^2] 
+> = exp (1/2σ²) [-2(xbar-θ0)(nxbar-nxbar)-n(xbar-θ0)^2] 
 >
 >
 >
-> = exp (1/2σ^2) [-n(xbar-θ0)^2]
+> = exp (1/2σ²) [-n(xbar-θ0)^2]
 >
 >
 >
-> = exp [-n(xbar-θ0)^2/2σ^2] 
+> = exp [-n(xbar-θ0)^2/2σ²] 
 >
 >
 >
@@ -475,7 +475,7 @@
 >
 >
 >
-> λ(**x**) = exp [-n(xbar-θ0)^2/2σ^2] khi khi θ0 < xbar
+> λ(**x**) = exp [-n(xbar-θ0)^2/2σ²] khi khi θ0 < xbar
 >
 >
 >
@@ -487,15 +487,15 @@
 >
 >
 >
-> Khi θ0 < xbar, reject H0 khi exp [-n(xbar-θ0)^2/2σ^2] ≤ c
+> Khi θ0 < xbar, reject H0 khi exp [-n(xbar-θ0)^2/2σ²] ≤ c
 >
 >
 >
-> ⇔ [-n(xbar-θ0)^2/2σ^2] ≤ log c
+> ⇔ [-n(xbar-θ0)^2/2σ²] ≤ log c
 >
 >
 >
-> ⇔ -(xbar-θ0)^2/(2σ^2/n) ≤ log c
+> ⇔ -(xbar-θ0)^2/(2σ²/n) ≤ log c
 >
 >
 >
@@ -919,7 +919,7 @@
 >
 >
 >
-> ⇔ ∫-inf:a (1/√2π) exp(-z^2/2) ≥ 0.9
+> ⇔ ∫-inf:a (1/√2π) exp(-z²/2) ≥ 0.9
 >
 >
 >
@@ -1798,8 +1798,8 @@
 >
 >
 >
-> Hay với Chi-square_p random variable X^2_p, thì x^2_p,1-α  là con số mà
-> P(X^2_p > 1-α) > 1-α
+> Hay với Chi-square_p random variable χ²_p, thì x^2_p,1-α  là con số mà
+> P(χ²_p > 1-α) > 1-α
 >
 >
 >
@@ -1947,7 +1947,7 @@
 >
 >
 > Tiếp theo. Đại khái là ta nhớ về định nghĩa của Student's t distribution. Nó được
-> định nghĩa là distribution của (Xbar - μ) / (S/√n) của một normal(μ, σ^2) random
+> định nghĩa là distribution của (Xbar - μ) / (S/√n) của một normal(μ, σ²) random
 > sample.Tức là, lấy random sample X1,...Xn ~ normal(μ, σ). Thì random variable
 > tạo bởi sample  mean Xbar và sample variance S theo công thức trên sẽ có distri
 > được đặt cho cái tên là Student's t.
@@ -1958,17 +1958,17 @@
 >
 >
 >
-> Cũng chính là nói Θ0: θ = (μ, σ^2) sao cho μ = μ0. Và Θ0c là {(μ, σ^2): μ khác μ0}
+> Cũng chính là nói Θ0: θ = (μ, σ²) sao cho μ = μ0. Và Θ0c là {(μ, σ²): μ khác μ0}
 >
 >
 >
-> Nên khi ta đang xét sup_θ∈Θ0 ..thì cũng là đang xét mọi (μ, σ^2): μ = μ0.
+> Nên khi ta đang xét sup_θ∈Θ0 ..thì cũng là đang xét mọi (μ, σ²): μ = μ0.
 >
 >
 >
 > Và khi đó ta đang có μ0 chính là true mean của population (Xbar - μ0) / (S/√n)
 > (chỗ này có thể hơi khó hiểu, nhưng chỉ cần hiểu đơn giản là, khi ta đang tìm
-> trong Θ0 = {(μ, σ^2) sao cho μ = μ0} thì (Xbar - μ0) / (S/√n) dĩ nhiên chính là
+> trong Θ0 = {(μ, σ²) sao cho μ = μ0} thì (Xbar - μ0) / (S/√n) dĩ nhiên chính là
 > (Xbar - μ) / (S/√n), và do đó, nó là một Student's t với n-1, kí hiệu t_n-1 statistic.
 >
 >
@@ -1985,7 +1985,7 @@
 >
 >
 >
-> Lúc này, sup không còn ý nghĩa gì nữa. Vì T_n-1 không phụ thuộc σ^2 mà nó
+> Lúc này, sup không còn ý nghĩa gì nữa. Vì T_n-1 không phụ thuộc σ² mà nó
 > chỉ phụ thuộc bậc tự do (xem link để thấy, lúc chap 5 mình cũng đã derive pdf
 > của nó rồi)
 >
@@ -3327,7 +3327,7 @@
 <p align="center"><kbd><img src="assets/u3m9jgzb22e.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua ví dụ này, X1,...Xn là random sample ~ n(θ, σ^2) với σ^2 đã biết.
+> Qua ví dụ này, X1,...Xn là random sample ~ n(θ, σ²) với σ² đã biết.
 >
 >
 >
@@ -3354,15 +3354,15 @@
 >
 >
 >
-> Ở đây Xbar, như đã biết, có distribution là normal(μ, σ^2/n), hay  normal(θ, σ^2/n)
+> Ở đây Xbar, như đã biết, có distribution là normal(μ, σ²/n), hay  normal(θ, σ²/n)
 >
 >
 >
-> ⇨ g(t|θ) = 1/√(2πσ^2/n) exp[-(t-θ)^2/(2σ^2/n)]
+> ⇨ g(t|θ) = 1/√(2πσ²/n) exp[-(t-θ)^2/(2σ²/n)]
 >
 >
 >
-> = √n/√(2πσ^2) exp[-n(t-θ)^2/2σ^2]
+> = √n/√(2πσ²) exp[-n(t-θ)^2/2σ²]
 >
 >
 >
@@ -3370,19 +3370,19 @@
 >
 >
 >
-> = √n/√(2πσ^2) exp[-n(t-θ1)^2/2σ^2] / √n/√(2πσ^2) exp[-n(t-θ0)^2/2σ^2]
+> = √n/√(2πσ²) exp[-n(t-θ1)^2/2σ²] / √n/√(2πσ²) exp[-n(t-θ0)^2/2σ²]
 >
 >
 >
-> = exp[-n(t-θ1)^2/2σ^2] / exp[-n(t-θ0)^2/2σ^2]
+> = exp[-n(t-θ1)^2/2σ²] / exp[-n(t-θ0)^2/2σ²]
 >
 >
 >
-> = exp[-n(t-θ1)^2/2σ^2 + n(t-θ0)^2/2σ^2]
+> = exp[-n(t-θ1)^2/2σ² + n(t-θ0)^2/2σ²]
 >
 >
 >
-> = exp[-n((t-θ1)^2 - (t-θ0)^2) / 2σ^2]
+> = exp[-n((t-θ1)^2 - (t-θ0)^2) / 2σ²]
 >
 >
 >
@@ -3390,47 +3390,47 @@
 >
 >
 >
-> ⇔ k < exp[-n[(t-θ1)^2 - (t-θ0)^2] / 2σ^2]
+> ⇔ k < exp[-n[(t-θ1)^2 - (t-θ0)^2] / 2σ²]
 >
 >
 >
-> ⇔ log k < -n((t-θ1)^2 - (t-θ0)^2) / 2σ^2
+> ⇔ log k < -n((t-θ1)^2 - (t-θ0)^2) / 2σ²
 >
 >
 >
-> ⇔ 2σ^2 log k < -n((t-θ1)^2 - (t-θ0)^2)
+> ⇔ 2σ² log k < -n((t-θ1)^2 - (t-θ0)^2)
 >
 >
 >
-> ⇔ 2σ^2 (log k) / n < -((t-θ1)^2 - (t-θ0)^2)
+> ⇔ 2σ² (log k) / n < -((t-θ1)^2 - (t-θ0)^2)
 >
 >
 >
-> ⇔ 2σ^2 (log k) / n < -(t^2+θ1^2-2θ1t -(t^2+θ0^2-2θ0t))
+> ⇔ 2σ² (log k) / n < -(t^2+θ1^2-2θ1t -(t^2+θ0^2-2θ0t))
 >
 >
 >
-> ⇔ 2σ^2 (log k) / n < -(t^2+θ1^2-2θ1t -t^2-θ0^2+2θ0t)
+> ⇔ 2σ² (log k) / n < -(t^2+θ1^2-2θ1t -t^2-θ0^2+2θ0t)
 >
 >
 >
-> ⇔ 2σ^2 (log k) / n < -t^2-θ1^2+2θ1t +t^2+θ0^2-2θ0t
+> ⇔ 2σ² (log k) / n < -t^2-θ1^2+2θ1t +t^2+θ0^2-2θ0t
 >
 >
 >
-> ⇔ 2σ^2 (log k) / n < -θ1^2+2θ1t+θ0^2-2θ0t
+> ⇔ 2σ² (log k) / n < -θ1^2+2θ1t+θ0^2-2θ0t
 >
 >
 >
-> ⇔ 2σ^2 (log k) / n < θ0^2-θ1^2 + 2θ1t - 2θ0t
+> ⇔ 2σ² (log k) / n < θ0^2-θ1^2 + 2θ1t - 2θ0t
 >
 >
 >
-> ⇔ 2σ^2 (log k) / n < θ0^2-θ1^2 + 2t(θ1 - θ0)
+> ⇔ 2σ² (log k) / n < θ0^2-θ1^2 + 2t(θ1 - θ0)
 >
 >
 >
-> ⇔ 2σ^2 (log k) / n  - θ0^2 + θ1^2 < 2t(θ1 - θ0)
+> ⇔ 2σ² (log k) / n  - θ0^2 + θ1^2 < 2t(θ1 - θ0)
 >
 >
 >
@@ -3438,11 +3438,11 @@
 >
 >
 >
-> .. ⇔ [2σ^2 (log k) / n  - θ0^2 + θ1^2] / 2(θ1 - θ0) > t
+> .. ⇔ [2σ² (log k) / n  - θ0^2 + θ1^2] / 2(θ1 - θ0) > t
 >
 >
 >
-> Hay xbar < [2σ^2 (log k) / n  - θ0^2 + θ1^2] / 2(θ1 - θ0) như sách viết.
+> Hay xbar < [2σ² (log k) / n  - θ0^2 + θ1^2] / 2(θ1 - θ0) như sách viết.
 >
 >
 >
@@ -3455,7 +3455,7 @@
 >
 >
 >
-> reject H0 khi xbar < [2σ^2 (log k) / n  - θ0^2 + θ1^2] / 2(θ1 - θ0), đặt là c(k) là
+> reject H0 khi xbar < [2σ² (log k) / n  - θ0^2 + θ1^2] / 2(θ1 - θ0), đặt là c(k) là
 > constant có giá trị khác nhay khi k thay đổi
 >
 >
@@ -3472,11 +3472,11 @@
 >
 >
 >
-> ⇨ [2σ^2 (log k) / n  - θ0^2 + θ1^2] chạy từ -inf → inf
+> ⇨ [2σ² (log k) / n  - θ0^2 + θ1^2] chạy từ -inf → inf
 >
 >
 >
-> ⇨ c = [2σ^2 (log k) / n  - θ0^2 + θ1^2] / 2(θ1 - θ0) chạy từ inf → -inf
+> ⇨ c = [2σ² (log k) / n  - θ0^2 + θ1^2] / 2(θ1 - θ0) chạy từ inf → -inf
 >
 >
 >
@@ -3505,7 +3505,7 @@
 >
 >
 >
-> hay P_θ0(T < c) = α với T ~ n(θ0, σ^2/n)
+> hay P_θ0(T < c) = α với T ~ n(θ0, σ²/n)
 >
 >
 >
@@ -3541,7 +3541,7 @@
 >
 >
 >
-> Rồi, mà T là một n(θ, σ^2/n), và và normal là một location scale family có location
+> Rồi, mà T là một n(θ, σ²/n), và và normal là một location scale family có location
 > chính là mean, và scale chính là standard deviation.
 >
 >
@@ -3954,7 +3954,7 @@
 >
 > Tiếp theo, T ở đây là Xbar thì là như đã biết, nó là sufficient statistic. Vậy
 > distribution của nó có tính monotone likelihood ratio không. Gs yêu cầu làm
-> bài tập, nhưng mình còn nhớ distribution của Xbar là normal(μ, σ^2/n), mà
+> bài tập, nhưng mình còn nhớ distribution của Xbar là normal(μ, σ²/n), mà
 > trong lúc nói về MLR, gs cũng nói các distribution phổ biến như normal,
 > poisson, expo đều có tính MLR. Biết vậy đủ rồi.
 >
@@ -4064,8 +4064,8 @@
 >
 >
 >
-> Với Xbar ~ normal(θ, σ^2/n) và ở đây đang làm việc với P_θ0(...) tức là ta
-> được dùng θ0 cho θ: Xbar ~ normal(θ0, σ^2/n) thì theo location scale family
+> Với Xbar ~ normal(θ, σ²/n) và ở đây đang làm việc với P_θ0(...) tức là ta
+> được dùng θ0 cho θ: Xbar ~ normal(θ0, σ²/n) thì theo location scale family
 > theorem, Z = (Xbar - θ0) / (σ/√n) sẽ có distribution là standard member của
 > family, tức location = 0, scale = 1. Và với normal thì ta biết location cũng là
 > mean và scale cũng là standard deviation. Do đó suy ra Z ~ normal(0, 1)
@@ -4184,7 +4184,7 @@
 
 > [!NOTE]
 > Ví dụ này thầy Ca sẽ minh họa nhận định là **không phải lúc nào cũng có
-> thể tồn tại UMP level α test**. Xét X1,...Xn là iid n(θ, σ^2) với σ^2 đã biết.
+> thể tồn tại UMP level α test**. Xét X1,...Xn là iid n(θ, σ²) với σ² đã biết.
 > Xem xét test giữa hai hypo: H0: θ = θ0 vs H1: θ ≠ θ0. Cho trước giá trị α,
 > thì ông nói **bất kì test nào thỏa P_θ0(reject H0) ≤ α thì đều là level α
 > test**.
@@ -4474,8 +4474,8 @@
 >
 >
 >
-> Xbar là sample mean của random sample X1,...Xn ~ n(θ, σ^2). Ta đã
-> chứng minh Xbar sẽ có distribution là n(θ, σ^2/n). Và theo normal là một
+> Xbar là sample mean của random sample X1,...Xn ~ n(θ, σ²). Ta đã
+> chứng minh Xbar sẽ có distribution là n(θ, σ²/n). Và theo normal là một
 > thành viên thuộc location scale distribution, với sự đặc biệt là mean θ
 > cũng là location và std σ cũng là scale. Rồi, theo một theorem ta biết (Xbar
 > \- location) / scale, tức (Xbar - θ) / (σ/√n) sẽ chính là một rv của standard
@@ -5764,7 +5764,7 @@
 >
 >
 >
-> Đầu tiên cho X1,...Xn là random sample từ n(μ, σ^2). Xét bài toán test giữa H0: μ = μ0 vs H1: μ ≠ μ0.
+> Đầu tiên cho X1,...Xn là random sample từ n(μ, σ²). Xét bài toán test giữa H0: μ = μ0 vs H1: μ ≠ μ0.
 > gs nói trong ví dụ 8.39 thì LRT sẽ reject H0 khi W(**X**) = |Xbar - μ0| / (S/√n) mang giá trị lớn. Đây là
 > nội dung của bài tập 8.38.
 >
@@ -5799,15 +5799,15 @@
 >
 >
 >
-> = sup_σ^2 L((μ0,σ^2)|**x**) / sup_μ,σ^2∈R∈Θ L((μ,σ^2)|**x**)
+> = sup_σ² L((μ0,σ²)|**x**) / sup_μ,σ²∈R∈Θ L((μ,σ²)|**x**)
 >
 >
 >
-> Rồi, thế thì nhớ lại L((μ,σ^2)|**x**) là gì? → Nó là likelihood function, có định nghĩa là L(θ|**x**) = f(**x**|θ)
+> Rồi, thế thì nhớ lại L((μ,σ²)|**x**) là gì? → Nó là likelihood function, có định nghĩa là L(θ|**x**) = f(**x**|θ)
 >
 >
 >
-> → L((μ,σ^2)|**x**) = f(**x**|(μ,σ^2))
+> → L((μ,σ²)|**x**) = f(**x**|(μ,σ²))
 >
 >
 >
@@ -5815,23 +5815,23 @@
 >
 >
 >
-> = Πi=1:n f(xi|(μ,σ^2))
+> = Πi=1:n f(xi|(μ,σ²))
 >
 >
 >
-> = Πi=1:n (1/σ√2π) exp{-(xi-μ)^2/2σ^2}
+> = Πi=1:n (1/σ√2π) exp{-(xi-μ)^2/2σ²}
 >
 >
 >
-> = (1/σ√2π)^n Πi=1:n exp{-(xi-μ)^2/2σ^2}
+> = (1/σ√2π)^n Πi=1:n exp{-(xi-μ)^2/2σ²}
 >
 >
 >
-> = 1/(2πσ^2)^(n/2) exp { Σi[-(xi-μ)^2/2σ^2] }
+> = 1/(2πσ²)^(n/2) exp { Σi[-(xi-μ)^2/2σ²] }
 >
 >
 >
-> = 1/(2πσ^2)^(n/2) exp { Σi[-(xi-μ)^2]/2σ^2 }
+> = 1/(2πσ²)^(n/2) exp { Σi[-(xi-μ)^2]/2σ² }
 >
 >
 >
@@ -5839,32 +5839,32 @@
 >
 >
 >
-> maximize (1/σ√2π)^n Πi=1:n exp{-(xi-μ)^2/2σ^2} over mọi (μ, σ^2) để tìm MLE, mà cái này thì đã làm
+> maximize (1/σ√2π)^n Πi=1:n exp{-(xi-μ)^2/2σ²} over mọi (μ, σ²) để tìm MLE, mà cái này thì đã làm
 > rồi, để có MLE là:
 >
 >
 >
-> (θ, σ^2)^_mle = (Xbar, n^-1 Σi (Xi - Xbar)^2)
+> (θ, σ²)^_mle = (Xbar, n^-1 Σi (Xi - Xbar)^2)
 >
 >
 >
-> L(θ^mle|**x**) = 1/(2πσ^2)^(n/2) exp { Σi[-(xi-μ)^2]/2σ^2 } | (μ, σ^2) = (θ, σ^2)^_mle
+> L(θ^mle|**x**) = 1/(2πσ²)^(n/2) exp { Σi[-(xi-μ)^2]/2σ² } | (μ, σ²) = (θ, σ²)^_mle
 >
 >
 >
-> = 1/(2πσ^2)^(n/2) exp { Σi[-(xi-xbar)^2]/2(n^-1)Σi(xi-xbar)^2 } | σ^2 = (σ^2)^
+> = 1/(2πσ²)^(n/2) exp { Σi[-(xi-xbar)^2]/2(n^-1)Σi(xi-xbar)^2 } | σ² = (σ²)^
 >
 >
 >
-> = 1/(2πσ^2)^(n/2) exp { nΣi[-(xi-xbar)^2]/2Σi(xi-xbar)^2 } | σ^2 = (σ^2)^ (lộn n lên)
+> = 1/(2πσ²)^(n/2) exp { nΣi[-(xi-xbar)^2]/2Σi(xi-xbar)^2 } | σ² = (σ²)^ (lộn n lên)
 >
 >
 >
-> = 1/(2πσ^2)^(n/2) exp { -nΣi(xi-xbar)^2/2Σi(xi-xbar)^2 } | σ^2 = (σ^2)^
+> = 1/(2πσ²)^(n/2) exp { -nΣi(xi-xbar)^2/2Σi(xi-xbar)^2 } | σ² = (σ²)^
 >
 >
 >
-> = 1/(2πσ^2)^(n/2) exp {-n/2} | σ^2 = (σ^2)^
+> = 1/(2πσ²)^(n/2) exp {-n/2} | σ² = (σ²)^
 >
 >
 >
@@ -5872,43 +5872,43 @@
 >
 >
 >
-> maximize (1/σ√2π)^n Πi=1:n exp{-(xi-μ0)^2/2σ^2} over mọi σ^2
+> maximize (1/σ√2π)^n Πi=1:n exp{-(xi-μ0)^2/2σ²} over mọi σ²
 >
 >
 >
-> ⇔ maximize (1/σ√2π)^n exp Σi{-(xi-μ0)^2/2σ^2} over mọi σ^2
+> ⇔ maximize (1/σ√2π)^n exp Σi{-(xi-μ0)^2/2σ²} over mọi σ²
 >
 >
 >
-> equivalent: maximize log {(1/σ√2π)^n Πi=1:n exp{-(xi-μ0)^2/2σ^2}} over mọi σ^2
+> equivalent: maximize log {(1/σ√2π)^n Πi=1:n exp{-(xi-μ0)^2/2σ²}} over mọi σ²
 >
 >
 >
-> Xét hàm log {(1/σ√2π)^n exp Σi{-(xi-μ0)^2/2σ^2}}
+> Xét hàm log {(1/σ√2π)^n exp Σi{-(xi-μ0)^2/2σ²}}
 >
 >
 >
-> = log [(1/√2πσ^2)^n] + log exp Σi{-(xi-μ0)^2/2σ^2}}
+> = log [(1/√2πσ²)^n] + log exp Σi{-(xi-μ0)^2/2σ²}}
 >
 >
 >
-> = n log (1/√2πσ^2) + Σi{-(xi-μ0)^2/2σ^2}
+> = n log (1/√2πσ²) + Σi{-(xi-μ0)^2/2σ²}
 >
 >
 >
-> = - n log (√2πσ^2) + Σi{-(xi-μ0)^2/2σ^2}
+> = - n log (√2πσ²) + Σi{-(xi-μ0)^2/2σ²}
 >
 >
 >
-> = - n log [(√2π) (σ^2)^1/2] + Σi{-(xi-μ0)^2/2σ^2}
+> = - n log [(√2π) (σ²)^1/2] + Σi{-(xi-μ0)^2/2σ²}
 >
 >
 >
-> = - n log (√2π) - n log (σ^2)^1/2 + Σi{-(xi-μ0)^2/2σ^2}
+> = - n log (√2π) - n log (σ²)^1/2 + Σi{-(xi-μ0)^2/2σ²}
 >
 >
 >
-> = - n log (√2π) - n/2 log (σ^2) + Σi{-(xi-μ0)^2/2σ^2}
+> = - n log (√2π) - n/2 log (σ²) + Σi{-(xi-μ0)^2/2σ²}
 >
 >
 >
@@ -5916,67 +5916,67 @@
 >
 >
 >
-> maximize {- n/2 log (σ^2) - Σi[(xi-μ0)^2]/2σ^2}
+> maximize {- n/2 log (σ²) - Σi[(xi-μ0)^2]/2σ²}
 >
 >
 >
-> gọi hàm objective là h(σ^2), tính h'(σ^2):
+> gọi hàm objective là h(σ²), tính h'(σ²):
 >
 >
 >
-> h'(σ^2) = d/dσ^2[- n/2 log (σ^2)] + d/dσ^2[- Σi[(xi-μ0)^2]/2σ^2]
+> h'(σ²) = d/dσ²[- n/2 log (σ²)] + d/dσ²[- Σi[(xi-μ0)^2]/2σ²]
 >
 >
 >
-> = - (n/2) d/dσ^2[log (σ^2)] - (1/2)Σi[(xi-μ0)^2] d/dσ^2[1/σ^2]
+> = - (n/2) d/dσ²[log (σ²)] - (1/2)Σi[(xi-μ0)^2] d/dσ²[1/σ²]
 >
 >
 >
-> = - (n/2) (1/σ^2) - (1/2)Σi[(xi-μ0)^2] [-1/σ^2]^2
+> = - (n/2) (1/σ²) - (1/2)Σi[(xi-μ0)^2] [-1/σ²]^2
 >
 >
 >
-> = - (n/2) (1/σ^2) + (1/2) Σi[(xi-μ0)^2] / (σ^2)^2
+> = - (n/2) (1/σ²) + (1/2) Σi[(xi-μ0)^2] / (σ²)^2
 >
 >
 >
-> Điều kiện cần tối ưu bậc nhất: h'(σ^2) = 0
+> Điều kiện cần tối ưu bậc nhất: h'(σ²) = 0
 >
 >
 >
-> ⇔ - (n/2) (1/σ^2) + (1/2) Σi[(xi-μ0)^2] / (σ^2)^2 = 0
+> ⇔ - (n/2) (1/σ²) + (1/2) Σi[(xi-μ0)^2] / (σ²)^2 = 0
 >
 >
 >
-> ⇔ (1/2) Σi[(xi-μ0)^2] / (σ^2)^2 = (n/2) (1/σ^2)
+> ⇔ (1/2) Σi[(xi-μ0)^2] / (σ²)^2 = (n/2) (1/σ²)
 >
 >
 >
-> ⇔ Σi[(xi-μ0)^2] / (σ^2)^2 = n (1/σ^2)
+> ⇔ Σi[(xi-μ0)^2] / (σ²)^2 = n (1/σ²)
 >
 >
 >
-> ⇔ Σi[(xi-μ0)^2] / (σ^2) = n
+> ⇔ Σi[(xi-μ0)^2] / (σ²) = n
 >
 >
 >
-> ⇔ Σi[(xi-μ0)^2] / n = σ^2
+> ⇔ Σi[(xi-μ0)^2] / n = σ²
 >
 >
 >
-> Vậy (σ^2)^ = Σi[(xi-μ0)^2] / n,
+> Vậy (σ²)^ = Σi[(xi-μ0)^2] / n,
 >
 >
 >
-> và restricted (μ, σ^2)^_mle, hay
+> và restricted (μ, σ²)^_mle, hay
 >
 >
 >
-> hay còn kí hiệu với thêm số 0 để chỉ "restricted": (μ, σ^2)^0_mle
+> hay còn kí hiệu với thêm số 0 để chỉ "restricted": (μ, σ²)^0_mle
 >
 >
 >
-> hay  (μ^0, (σ^2)^0) = (μ0, Σi[(Xi-μ0)^2] / n)
+> hay  (μ^0, (σ²)^0) = (μ0, Σi[(Xi-μ0)^2] / n)
 >
 >
 >
@@ -5984,31 +5984,31 @@
 >
 >
 >
-> (1/σ√2π)^n exp Σi{-(xi-μ0)^2/2σ^2} | σ^2 = (σ^2)^0
+> (1/σ√2π)^n exp Σi{-(xi-μ0)^2/2σ²} | σ² = (σ²)^0
 >
 >
 >
-> = 1/(2πσ^2)^(n/2) exp Σi{-(xi-μ0)^2/2σ^2} | σ^2 = (σ^2)^0
+> = 1/(2πσ²)^(n/2) exp Σi{-(xi-μ0)^2/2σ²} | σ² = (σ²)^0
 >
 >
 >
-> = (2πσ^2)^(-n/2) exp {Σi-(xi-μ0)^2/2σ^2} | σ^2 = (σ^2)^0
+> = (2πσ²)^(-n/2) exp {Σi-(xi-μ0)^2/2σ²} | σ² = (σ²)^0
 >
 >
 >
-> = (2πσ^2)^(-n/2) exp {Σi-(xi-μ0)^2/2[Σi[(xi-μ0)^2]/n]} | σ^2 = (σ^2)^0
+> = (2πσ²)^(-n/2) exp {Σi-(xi-μ0)^2/2[Σi[(xi-μ0)^2]/n]} | σ² = (σ²)^0
 >
 >
 >
-> = (2πσ^2)^(-n/2) exp {nΣi-(xi-μ0)^2/2[Σi(xi-μ0)^2]} | σ^2 = (σ^2)^0
+> = (2πσ²)^(-n/2) exp {nΣi-(xi-μ0)^2/2[Σi(xi-μ0)^2]} | σ² = (σ²)^0
 >
 >
 >
-> = (2πσ^2)^(-n/2) exp {-nΣi(xi-μ0)^2/2[Σi(xi-μ0)^2]} | σ^2 = (σ^2)^0
+> = (2πσ²)^(-n/2) exp {-nΣi(xi-μ0)^2/2[Σi(xi-μ0)^2]} | σ² = (σ²)^0
 >
 >
 >
-> = (2πσ^2)^(-n/2) exp {-n/2} | σ^2 = (σ^2)^0
+> = (2πσ²)^(-n/2) exp {-n/2} | σ² = (σ²)^0
 >
 >
 >
@@ -6016,15 +6016,15 @@
 >
 >
 >
-> λ(**x**) = [(2πσ^2)^(-n/2) exp {-n/2} | σ^2 = (σ^2)^0] / [1/(2πσ^2)^(n/2) exp {-n/2} | σ^2 = (σ^2)^]
+> λ(**x**) = [(2πσ²)^(-n/2) exp {-n/2} | σ² = (σ²)^0] / [1/(2πσ²)^(n/2) exp {-n/2} | σ² = (σ²)^]
 >
 >
 >
-> = [(2πσ^2)^(-n/2) | σ^2 = (σ^2)^0] / [(2πσ^2)^(-n/2) | σ^2 = (σ^2)^]
+> = [(2πσ²)^(-n/2) | σ² = (σ²)^0] / [(2πσ²)^(-n/2) | σ² = (σ²)^]
 >
 >
 >
-> = [(σ^2)^0 / (σ^2)^]^(-n/2)
+> = [(σ²)^0 / (σ²)^]^(-n/2)
 >
 >
 >
@@ -6191,7 +6191,7 @@
 >
 >
 >
-> tức là maximize over (μ, σ^2) ∈ {(μ, σ^2): μ = μ0} P_(μ, σ^2)(|Tn-1(**X**)| ≥ |Tn-1(**x**)|)
+> tức là maximize over (μ, σ²) ∈ {(μ, σ²): μ = μ0} P_(μ, σ²)(|Tn-1(**X**)| ≥ |Tn-1(**x**)|)
 >
 >
 >
@@ -6199,13 +6199,13 @@
 >
 >
 >
-> maximize over σ^2 ∈ R P_(μ0, σ^2)(|Tn-1(**X**)| ≥ |Tn-1(**x**)|)
+> maximize over σ² ∈ R P_(μ0, σ²)(|Tn-1(**X**)| ≥ |Tn-1(**x**)|)
 >
 >
 >
 > Đến đây lập luận như sau: cái hàm objective của bài toán này là xác suất của một event của random variable
-> sau đây: |Tn-1(**X**)|, vấn đề là, T-statistic có phân phối xác suất không phụ thuộc σ^2, hay μ. Do đó xác suất này
-> đối với σ^2 là hằng số.Nói cách khác, objective function của bài toán tối ưu này là constant function
+> sau đây: |Tn-1(**X**)|, vấn đề là, T-statistic có phân phối xác suất không phụ thuộc σ², hay μ. Do đó xác suất này
+> đối với σ² là hằng số.Nói cách khác, objective function của bài toán tối ưu này là constant function
 >
 >
 >
@@ -6213,7 +6213,7 @@
 >
 >
 >
-> ⇨ sup_σ^2 P_(μ0, σ^2)(|Tn-1(X)| ≥ |Tn-1(x)|) = P_(μ0, σ^2)(|Tn-1(**X**)| ≥ |Tn-1(**x**)|) 
+> ⇨ sup_σ² P_(μ0, σ²)(|Tn-1(X)| ≥ |Tn-1(x)|) = P_(μ0, σ²)(|Tn-1(**X**)| ≥ |Tn-1(**x**)|) 
 >
 >
 >
@@ -6221,7 +6221,7 @@
 >
 >
 >
-> p(**x**) = P_(μ0, σ^2)(|Tn-1(**X**)| ≥ |Tn-1(**x**)|) 
+> p(**x**) = P_(μ0, σ²)(|Tn-1(**X**)| ≥ |Tn-1(**x**)|) 
 >
 >
 >
@@ -6229,19 +6229,19 @@
 >
 >
 >
-> = P_(μ0, σ^2)(Tn-1(**X**) ≥ |Tn-1(x)| or Tn-1(X) ≤ -|Tn-1(**x**)|)
+> = P_(μ0, σ²)(Tn-1(**X**) ≥ |Tn-1(x)| or Tn-1(X) ≤ -|Tn-1(**x**)|)
 >
 >
 >
-> = 2P_(μ0, σ^2)(Tn-1(**X**) ≥ |Tn-1(**x**)|) (do tính đối xứng của phân phối student t)
+> = 2P_(μ0, σ²)(Tn-1(**X**) ≥ |Tn-1(**x**)|) (do tính đối xứng của phân phối student t)
 >
 >
 >
-> = 2P_(μ0, σ^2)(Tn-1(X) ≥ |(xbar-μ0) / (s/√n)|)
+> = 2P_(μ0, σ²)(Tn-1(X) ≥ |(xbar-μ0) / (s/√n)|)
 >
 >
 >
-> Hay p(**X**) = 2P_(μ0, σ^2)(Tn-1 ≥ |(Xbar-μ0) / (S/√n)|)
+> Hay p(**X**) = 2P_(μ0, σ²)(Tn-1 ≥ |(Xbar-μ0) / (S/√n)|)
 
 **🔗 See also:** [Quan hệ UIT-LRT hai phía](#node-27dn67w) · [Kiểm định t hai phía](./82_method_of_finding_tests.md#node-qo5rly2)
 
@@ -6263,7 +6263,7 @@
 >
 >
 >
-> L(μ^,(σ^2)^|x) = 1/(2πσ^2)^(n/2) exp {-n/2} | σ^2=(σ^2)^
+> L(μ^,(σ²)^|x) = 1/(2πσ²)^(n/2) exp {-n/2} | σ²=(σ²)^
 >
 >
 >
@@ -6271,43 +6271,43 @@
 >
 >
 >
-> L((μ, σ^2)^0|**x**) = sup_(μ≤μ0,σ) L(μ,σ^2|**x**)
+> L((μ, σ²)^0|**x**) = sup_(μ≤μ0,σ) L(μ,σ²|**x**)
 >
 >
 >
-> maximize (1/σ√2π)^n exp Σi{-(xi-μ)^2/2σ^2} over mọi σ^2 ∈ R, μ ≤ μ0
+> maximize (1/σ√2π)^n exp Σi{-(xi-μ)^2/2σ²} over mọi σ² ∈ R, μ ≤ μ0
 >
 >
 >
-> equivalent: maximize log {(1/σ√2π)^n Πi=1:n exp{-(xi-μ)^2/2σ^2}} over mọi σ^2, μ ≤ μ0
+> equivalent: maximize log {(1/σ√2π)^n Πi=1:n exp{-(xi-μ)^2/2σ²}} over mọi σ², μ ≤ μ0
 >
 >
 >
-> Xét hàm log {(1/σ√2π)^n exp Σi{-(xi-μ)^2/2σ^2}}
+> Xét hàm log {(1/σ√2π)^n exp Σi{-(xi-μ)^2/2σ²}}
 >
 >
 >
-> = log [(1/√2πσ^2)^n] + log exp Σi{-(xi-μ)^2/2σ^2}}
+> = log [(1/√2πσ²)^n] + log exp Σi{-(xi-μ)^2/2σ²}}
 >
 >
 >
-> = n log (1/√2πσ^2) + Σi{-(xi-μ)^2/2σ^2}
+> = n log (1/√2πσ²) + Σi{-(xi-μ)^2/2σ²}
 >
 >
 >
-> = - n log (√2πσ^2) + Σi{-(xi-μ)^2/2σ^2}
+> = - n log (√2πσ²) + Σi{-(xi-μ)^2/2σ²}
 >
 >
 >
-> = - n log [(√2π) (σ^2)^1/2] + Σi{-(xi-μ)^2/2σ^2}
+> = - n log [(√2π) (σ²)^1/2] + Σi{-(xi-μ)^2/2σ²}
 >
 >
 >
-> = - n log (√2π) - n log (σ^2)^1/2 + Σi{-(xi-μ)^2/2σ^2}
+> = - n log (√2π) - n log (σ²)^1/2 + Σi{-(xi-μ)^2/2σ²}
 >
 >
 >
-> = - n log (√2π) - n/2 log (σ^2) + Σi{-(xi-μ)^2/2σ^2}
+> = - n log (√2π) - n/2 log (σ²) + Σi{-(xi-μ)^2/2σ²}
 >
 >
 >
@@ -6315,51 +6315,51 @@
 >
 >
 >
-> maximize {- n/2 log (σ^2) - Σi[(xi-μ)^2]/2σ^2}
+> maximize {- n/2 log (σ²) - Σi[(xi-μ)^2]/2σ²}
 >
 >
 >
-> gọi hàm objective là h(μ, σ^2), tính ∂h/∂μ, và ∂h/∂σ^2
+> gọi hàm objective là h(μ, σ²), tính ∂h/∂μ, và ∂h/∂σ²
 >
 >
 >
-> ∂h/∂σ^2 = d/dσ^2[- n/2 log (σ^2)] + d/dσ^2[- Σi[(xi-μ)^2]/2σ^2]
+> ∂h/∂σ² = d/dσ²[- n/2 log (σ²)] + d/dσ²[- Σi[(xi-μ)^2]/2σ²]
 >
 >
 >
-> = - (n/2) d/dσ^2[log (σ^2)] - (1/2)Σi[(xi-μ)^2] d/dσ^2[1/σ^2]
+> = - (n/2) d/dσ²[log (σ²)] - (1/2)Σi[(xi-μ)^2] d/dσ²[1/σ²]
 >
 >
 >
-> = - (n/2) (1/σ^2) - (1/2)Σi[(xi-μ)^2] [-1/σ^2]^2
+> = - (n/2) (1/σ²) - (1/2)Σi[(xi-μ)^2] [-1/σ²]^2
 >
 >
 >
-> = - (n/2) (1/σ^2) + (1/2) Σi[(xi-μ)^2] / (σ^2)^2
+> = - (n/2) (1/σ²) + (1/2) Σi[(xi-μ)^2] / (σ²)^2
 >
 >
 >
-> Điều kiện cần tối ưu bậc nhất: ∂h/∂σ^2 = 0
+> Điều kiện cần tối ưu bậc nhất: ∂h/∂σ² = 0
 >
 >
 >
-> ⇔ - (n/2) (1/σ^2) + (1/2) Σi[(xi-μ)^2] / (σ^2)^2 = 0
+> ⇔ - (n/2) (1/σ²) + (1/2) Σi[(xi-μ)^2] / (σ²)^2 = 0
 >
 >
 >
-> ⇔ (1/2) Σi[(xi-μ)^2] / (σ^2)^2 = (n/2) (1/σ^2)
+> ⇔ (1/2) Σi[(xi-μ)^2] / (σ²)^2 = (n/2) (1/σ²)
 >
 >
 >
-> ⇔ Σi[(xi-μ)^2] / (σ^2)^2 = n (1/σ^2)
+> ⇔ Σi[(xi-μ)^2] / (σ²)^2 = n (1/σ²)
 >
 >
 >
-> ⇔ Σi[(xi-μ)^2] / (σ^2) = n
+> ⇔ Σi[(xi-μ)^2] / (σ²) = n
 >
 >
 >
-> ⇔ Σi[(xi-μ)^2] / n = σ^2
+> ⇔ Σi[(xi-μ)^2] / n = σ²
 >
 >
 >
@@ -6371,15 +6371,15 @@
 >
 >
 >
-> ⇔ ∂/∂μ [- n/2 log (σ^2)] + ∂/∂μ Σi{-(xi-μ)^2/2σ^2} = 0
+> ⇔ ∂/∂μ [- n/2 log (σ²)] + ∂/∂μ Σi{-(xi-μ)^2/2σ²} = 0
 >
 >
 >
-> ⇔ ∂/∂μ Σi{-(xi-μ)^2/2σ^2} = 0
+> ⇔ ∂/∂μ Σi{-(xi-μ)^2/2σ²} = 0
 >
 >
 >
-> ⇔ -(1/2σ^2) Σi [∂/∂μ (xi-μ)^2] = 0
+> ⇔ -(1/2σ²) Σi [∂/∂μ (xi-μ)^2] = 0
 >
 >
 >
@@ -6415,7 +6415,7 @@
 >
 >
 >
-> Và (σ^2)^ = Σi (Xi-Xbar)^2 / n hoặc Σi (Xi-μ0)^2 / n tương ứng.
+> Và (σ²)^ = Σi (Xi-Xbar)^2 / n hoặc Σi (Xi-μ0)^2 / n tương ứng.
 >
 >
 >
@@ -6423,27 +6423,27 @@
 >
 >
 >
-> L((μ^0, (σ^2)^0)|**x**) = (1/√2πσ^2)^n exp Σi{-(xi-μ)^2/2σ^2} | (μ, σ^2) = (μ^0, (σ^2)^0)
+> L((μ^0, (σ²)^0)|**x**) = (1/√2πσ²)^n exp Σi{-(xi-μ)^2/2σ²} | (μ, σ²) = (μ^0, (σ²)^0)
 >
 >
 >
-> = (1/√2πσ^2)^n exp Σi{-(xi-xbar)^2/2σ^2} | σ^2 = (σ^2)^0
+> = (1/√2πσ²)^n exp Σi{-(xi-xbar)^2/2σ²} | σ² = (σ²)^0
 >
 >
 >
-> = (1/√2πσ^2)^n exp - [ Σi (xi-xbar)^2 ] /2σ^2} | σ^2 = (σ^2)^0
+> = (1/√2πσ²)^n exp - [ Σi (xi-xbar)^2 ] /2σ²} | σ² = (σ²)^0
 >
 >
 >
-> = (1/√2πσ^2)^n exp - [ Σi (xi-xbar)^2 ] /2 [Σi (xi-xbar)^2 / n] } | σ^2 = (σ^2)^0
+> = (1/√2πσ²)^n exp - [ Σi (xi-xbar)^2 ] /2 [Σi (xi-xbar)^2 / n] } | σ² = (σ²)^0
 >
 >
 >
-> = (1/√2πσ^2)^n exp (-n/2) | σ^2 = (σ^2)^0
+> = (1/√2πσ²)^n exp (-n/2) | σ² = (σ²)^0
 >
 >
 >
-> = 1/(2πσ^2)^n/2 exp (-n/2) | σ^2 = (σ^2)^0
+> = 1/(2πσ²)^n/2 exp (-n/2) | σ² = (σ²)^0
 >
 >
 >
@@ -6451,23 +6451,23 @@
 >
 >
 >
-> λ(**x**) = [1/(2πσ^2)^(n/2) exp (-n/2) | σ^2 = (σ^2)^0] / [1/(2πσ^2)^(n/2) exp {-n/2} | σ^2=(σ^2)^]
+> λ(**x**) = [1/(2πσ²)^(n/2) exp (-n/2) | σ² = (σ²)^0] / [1/(2πσ²)^(n/2) exp {-n/2} | σ²=(σ²)^]
 >
 >
 >
-> = [(1/2π(σ^2)^0)^(n/2) exp (-n/2)] / [1/(2π(σ^2)^)^(n/2) exp {-n/2}]
+> = [(1/2π(σ²)^0)^(n/2) exp (-n/2)] / [1/(2π(σ²)^)^(n/2) exp {-n/2}]
 >
 >
 >
-> = [(2π(σ^2)^0)^(-n/2) exp (-n/2)] / [(2π(σ^2)^)^(-n/2) exp {-n/2}]
+> = [(2π(σ²)^0)^(-n/2) exp (-n/2)] / [(2π(σ²)^)^(-n/2) exp {-n/2}]
 >
 >
 >
-> = [((σ^2)^0)^(-n/2) ] / [((σ^2)^)^(-n/2)]
+> = [((σ²)^0)^(-n/2) ] / [((σ²)^)^(-n/2)]
 >
 >
 >
-> = [(σ^2)^0 / (σ^2)^)]^(-n/2)
+> = [(σ²)^0 / (σ²)^)]^(-n/2)
 >
 >
 >
@@ -6496,7 +6496,7 @@
 >
 >
 > khi xbar < μ0: λ(**X**) luôn = 1, event λ(**X**) ≤ c không thỏa nếu c < 1, tức là ta sẽ không bao  giờ
-> reject H0 = không bao giờ accept H1 (vì khi đó mle nằm trong Θ0 = {(μ,σ^2): μ < μ0}
+> reject H0 = không bao giờ accept H1 (vì khi đó mle nằm trong Θ0 = {(μ,σ²): μ < μ0}
 >
 >
 >
@@ -6578,7 +6578,7 @@
 >
 >
 >
-> = sup_{(μ, σ^2):μ≤μ0} P_(μ, σ^2)((Xbar-μ0) / (S/√n) ≥ W(**x**))
+> = sup_{(μ, σ²):μ≤μ0} P_(μ, σ²)((Xbar-μ0) / (S/√n) ≥ W(**x**))
 >
 >
 >
@@ -6602,12 +6602,12 @@
 >
 >
 >
-> Nên p(**x**) = sup_{(μ, σ^2):μ≤μ0} P_(μ, σ^2)(Tn-1(**X**) ≥ W(**x**) + (μ0-μ) / (S/√n))
+> Nên p(**x**) = sup_{(μ, σ²):μ≤μ0} P_(μ, σ²)(Tn-1(**X**) ≥ W(**x**) + (μ0-μ) / (S/√n))
 >
 >
 >
 > Và objective function ở đây là xác suất của một event liên quan đến T-statistic, mà phân phối của nó
-> không phụ thuộc μ, σ^2, mà chỉ phụ thuộc n, nên trong bài toán tối ưu theo hai biến này, nó là
+> không phụ thuộc μ, σ², mà chỉ phụ thuộc n, nên trong bài toán tối ưu theo hai biến này, nó là
 > constant nên ta bỏ đi subscript của P.
 >
 >
@@ -6616,7 +6616,7 @@
 >
 >
 >
-> ⇨ p(**x**) = sup_{(μ, σ^2):μ≤μ0} P(Tn-1(**X**) ≥ W(**x**) + (μ0-μ) / (s/√n))
+> ⇨ p(**x**) = sup_{(μ, σ²):μ≤μ0} P(Tn-1(**X**) ≥ W(**x**) + (μ0-μ) / (s/√n))
 >
 >
 >
@@ -6633,7 +6633,7 @@
 >
 >
 >
-> Vậy p(**x**) = sup_{(μ, σ^2):μ≤μ0} P(Tn-1(**X**) ≥ W(**x**) + (μ0-μ) / (s/√n)) = P(Tn-1(**X**) ≥
+> Vậy p(**x**) = sup_{(μ, σ²):μ≤μ0} P(Tn-1(**X**) ≥ W(**x**) + (μ0-μ) / (s/√n)) = P(Tn-1(**X**) ≥
 > W(**x**))
 >
 >
@@ -7432,7 +7432,7 @@
 <p align="center"><kbd><img src="assets/6githtales9.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> xét ví dụ này, cho X1,...Xn là random sample ~ n(μ, σ^2) với σ^2 đã biết. Gs nói ví dụ 8.
+> xét ví dụ này, cho X1,...Xn là random sample ~ n(μ, σ²) với σ² đã biết. Gs nói ví dụ 8.
 > 3.15 mình đã cùng nhau xây dựng cái UMP test của bài toán testing giữa H0: θ ≥ θ0 vs
 > H1: θ < θ0.
 >
@@ -7480,7 +7480,7 @@
 >
 >
 >
-> Ta đã biết Xbar của random sample X1,...Xn ~ normal(θ, σ^2) thì Xbar ~ n(θ, σ^2/n)
+> Ta đã biết Xbar của random sample X1,...Xn ~ normal(θ, σ²) thì Xbar ~ n(θ, σ²/n)
 >
 >
 >
