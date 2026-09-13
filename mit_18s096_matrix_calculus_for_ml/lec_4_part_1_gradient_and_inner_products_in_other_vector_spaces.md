@@ -5,8 +5,6 @@
 ---
 <a id="node-unaaupy"></a>
 
-## Lec 4 Part 1: Gradient And Inner Products In Other Vector Spaces
-
 > [!NOTE]
 > LEC 4 PART 1: GRADIENT AND INNER PRODUCTS
 > IN OTHER VECTOR SPACES
@@ -14,6 +12,8 @@
 <br>
 
 <a id="node-38zoslh"></a>
+
+## Đạo hàm Inner Product, Norm
 
 > [!NOTE]
 > TỪ ĐẦU ĐẾN PHÚT 11:32 LÀ TIẾP NỐI BÀI
@@ -26,6 +26,8 @@
 <br>
 
 <a id="node-hdtvsoh"></a>
+
+### Khái quát hóa Gradient
 
 <p align="center"><kbd><img src="assets/texzertw6of.png" width="80%"></kbd></p>
 
@@ -59,11 +61,13 @@
 >
 >
 > Như vậy khi ta đã triển khai ra df = f'(x) dx thì **f'(x) chính là một row
-> vector**, và **∇f(x) là f'(x)T**
+> vector**, và **∇f(x) là f'(x)ᵀ**
 
 <br>
 
 <a id="node-udh0dwf"></a>
+
+#### Tích vô hướng tổng quát
 
 <p align="center"><kbd><img src="assets/ncejd2efu3h.png" width="80%"></kbd></p>
 
@@ -103,6 +107,8 @@
 
 <a id="node-eotq5hf"></a>
 
+##### 3 quy tắc inner product
+
 <p align="center"><kbd><img src="assets/hq8gsgyv5nn.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -130,6 +136,8 @@
 <br>
 
 <a id="node-og6wnw9"></a>
+
+###### Gradient trong Không gian Hilbert
 
 <p align="center"><kbd><img src="assets/32v5zxchc4k.png" width="80%"></kbd></p>
 
@@ -175,6 +183,8 @@
 
 <a id="node-09jk020"></a>
 
+###### Tích vô hướng có trọng số
+
 <p align="center"><kbd><img src="assets/esz34o70f5n.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -207,7 +217,7 @@
 >
 >
 >
-> = **xTdiag([w1, ...wn])x**  không khó để hiểu
+> = **xᵀdiag([w1, ...wn])x**  không khó để hiểu
 >
 >
 >
@@ -215,12 +225,12 @@
 >
 >
 >
-> **x .W y = xTWy**
+> **x .W y = xᵀWy**
 >
 >
 >
 > Thì dĩ nhiên để **thỏa rule 1**, **W phải symmetric**. Và để **thỏa rule 3** 
-> thì **xTWx phải ≥ 0** và chỉ bằng 0 khi z = 0 Và MIT 18.06 đã dạy ta 
+> thì **xᵀWx phải ≥ 0** và chỉ bằng 0 khi z = 0 Và MIT 18.06 đã dạy ta 
 > rằng đây là một **Positive Definite matrix.**
 >
 >
@@ -231,6 +241,8 @@
 <br>
 
 <a id="node-n3czrxm"></a>
+
+###### Đẳng cấu ma trận và vector
 
 <p align="center"><kbd><img src="assets/1xe4c2pcoe2.png" width="80%"></kbd></p>
 
@@ -252,6 +264,8 @@
 <br>
 
 <a id="node-ngreyrc"></a>
+
+###### Tích vô hướng Frobenius
 
 <p align="center"><kbd><img src="assets/8lc9egphsso.png" width="80%"></kbd></p>
 
@@ -279,11 +293,11 @@
 >
 >
 >
-> hoặc dùng vec: **vec(A)Tvec(B)**
+> hoặc dùng vec: **vec(A)ᵀvec(B)**
 >
 >
 >
-> hoặc **linear algebra** cho ta cách thể hiện rất hay: **tr(ATB)**
+> hoặc **linear algebra** cho ta cách thể hiện rất hay: **tr(AᵀB)**
 >
 >
 >
@@ -291,12 +305,14 @@
 >
 >
 >
-> Và trên **đường chéo của ATB** chính là **dot product của cột i của A**
+> Và trên **đường chéo của AᵀB** chính là **dot product của cột i của A**
 > và **cột i của B**. Nên cộng lại hết chính là Σij Aij*Bij
 
 <br>
 
 <a id="node-iqo2hcr"></a>
+
+###### Chuẩn Frobenius
 
 <p align="center"><kbd><img src="assets/dt8adex1xn9.png" width="80%"></kbd></p>
 
@@ -314,11 +330,13 @@
 >
 >
 >
-> Và với A . A = tr(ATA). Ta có **||A|| = √tr(ATA)**
+> Và với A . A = tr(AᵀA). Ta có **||A|| = √tr(AᵀA)**
 
 <br>
 
 <a id="node-n8mepgu"></a>
+
+###### Đạo hàm chuẩn Frobenius
 
 <p align="center"><kbd><img src="assets/cpajm1hay35.png" width="80%"></kbd></p>
 
@@ -346,16 +364,18 @@
 >
 >
 >
-> Do đó: **df = 1/2√tr(ATA) d(tr(ATA))**
+> Do đó: **df = 1/2√tr(AᵀA) d(tr(AᵀA))**
 
 <br>
 
 <a id="node-miwha1p"></a>
 
+###### Vi phân chuẩn Frobenius
+
 <p align="center"><kbd><img src="assets/8v7au5tq3pc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, xét **d(tr(ATA))**. 
+> Rồi, xét **d(tr(AᵀA))**. 
 >
 >
 >
@@ -377,37 +397,39 @@
 >
 >
 >
-> Do đó d(tr(ATA)) = **tr(d(ATA))
+> Do đó d(tr(AᵀA)) = **tr(d(AᵀA))
 >
 >
 >
-> ⇨** df = 1/2√tr(ATA) tr(d(ATA)) 
-> Thay √tr(ATA) = ||A|| cho gọn
+> ⇨** df = 1/2√tr(AᵀA) tr(d(AᵀA)) 
+> Thay √tr(AᵀA) = ||A|| cho gọn
 >
 >
 >
-> = **1/2||A|| tr(d(ATA))**
+> = **1/2||A|| tr(d(AᵀA))**
 
 <br>
 
 <a id="node-rk5gthv"></a>
 
+###### Vi phân chuẩn Frobenius
+
 <p align="center"><kbd><img src="assets/lvaepr8tua.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi tới đây ta dùng lại kết quả mà ko khó để làm lại dATA = (dA)TA + ATdA
+> Rồi tới đây ta dùng lại kết quả mà ko khó để làm lại dAᵀA = (dA)ᵀA + AᵀdA
 >
 >
 >
-> ⇨ df = 1/2||A|| tr(d(ATA)) 
+> ⇨ df = 1/2||A|| tr(d(AᵀA)) 
 >
 >
 >
-> = 1/2||A|| tr((dA)TA + ATdA)
+> = 1/2||A|| tr((dA)ᵀA + AᵀdA)
 >
 >
 >
-> = 1/2||A|| [tr((dA)TA) + tr(ATdA)]   |  dùng linearity
+> = 1/2||A|| [tr((dA)ᵀA) + tr(AᵀdA)]   |  dùng linearity
 >
 >
 >
@@ -416,24 +438,26 @@
 >
 >
 >
-> Do đó 1/2||A|| [tr((dA)TA) + tr(ATdA)] 
+> Do đó 1/2||A|| [tr((dA)ᵀA) + tr(AᵀdA)] 
 >
 >
 >
-> = 1/2||A|| 2[tr(ATdA)] 
+> = 1/2||A|| 2[tr(AᵀdA)] 
 >
 >
 >
-> = 1/**||A|| [tr(ATdA)]**
+> = 1/**||A|| [tr(AᵀdA)]**
 
 <br>
 
 <a id="node-u6y2jub"></a>
 
+###### Gradient của chuẩn Frobenius
+
 <p align="center"><kbd><img src="assets/5m2h7n00l6v.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì = 1/||A|| [tr(ATdA)] mà tr(ATdA) theo định nghĩa của inner
+> Thế thì = 1/||A|| [tr(AᵀdA)] mà tr(AᵀdA) theo định nghĩa của inner
 > product chính là A . dA
 >
 >
@@ -461,6 +485,8 @@
 
 <a id="node-e3y87ef"></a>
 
+###### Gradient của ma trận
+
 <p align="center"><kbd><img src="assets/znzaqiaq7bk.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -471,15 +497,17 @@
 
 <a id="node-n789s4s"></a>
 
+###### Kích thước vector trong x^TAy
+
 <p align="center"><kbd><img src="assets/7xiq6sy9rz.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Phần tiếp theo ta sẽ làm một cái phức tạp hơn là **f(A) = det A**. Để thấy
-> kết quả nó là **∇f(A) = det A (Ainv)T**.
+> kết quả nó là **∇f(A) = det A (A⁻¹)ᵀ**.
 >
 >
 >
-> Nhưng trước tiên ta làm một ví dụ đơn giản hơn là f(A) = **xTAy**.
+> Nhưng trước tiên ta làm một ví dụ đơn giản hơn là f(A) = **xᵀAy**.
 >
 >
 >
@@ -502,10 +530,12 @@
 
 <a id="node-um3ygrp"></a>
 
+###### Gradient của hàm ma trận
+
 <p align="center"><kbd><img src="assets/0713rwp60s35.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, dễ thấy df = **xT(dA)y** (xT(A+dA)y - xTAy)
+> Thế thì, dễ thấy df = **xᵀ(dA)y** (xᵀ(A+dA)y - xᵀAy)
 >
 >
 >
@@ -515,7 +545,7 @@
 >
 >
 >
-> Thế thì làm sao để cho thấy xT(dA)y = ∇f . dA
+> Thế thì làm sao để cho thấy xᵀ(dA)y = ∇f . dA
 >
 >
 >
@@ -528,7 +558,7 @@
 >
 >
 >
-> **df = xTdAy = tr(xTdAy)**
+> **df = xᵀdAy = tr(xᵀdAy)**
 >
 >
 >
@@ -536,11 +566,11 @@
 >
 >
 >
-> nên **tr(xTdAy)** =**tr[(xTdA)y]** = **tr[y(xTdA)]**  | coi A = xTdA, B = y
+> nên **tr(xᵀdAy)** =**tr[(xᵀdA)y]** = **tr[y(xᵀdA)]**  | coi A = xᵀdA, B = y
 >
 >
 >
-> = tr[(yxT)(dA)] = **tr(dAyxT)**   |  coi A - yxT, B = dA
+> = tr[(yxᵀ)(dA)] = **tr(dAyxᵀ)**   |  coi A - yxᵀ, B = dA
 >
 >
 >
@@ -548,20 +578,22 @@
 >
 >
 >
-> Nên ở đây ta sẽ có thể có **df = tr[(yxT)dA]**
+> Nên ở đây ta sẽ có thể có **df = tr[(yxᵀ)dA]**
 
 <br>
 
 <a id="node-pkow4ed"></a>
 
+###### Gradient hàm ma trận
+
 <p align="center"><kbd><img src="assets/pn8wx7tsejd.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và tới đây phần trước ta đã biết **A.B = tr(ATB)**
+> Và tới đây phần trước ta đã biết **A.B = tr(AᵀB)**
 >
 >
 >
-> Nên ở đây **tr[(yxT) . dA]** CHÍNH LÀ **tr[(xyT)T . dA]**
+> Nên ở đây **tr[(yxᵀ) . dA]** CHÍNH LÀ **tr[(xyT)ᵀ . dA]**
 >
 >
 >
@@ -580,6 +612,8 @@
 > VÀ dA. VẤN ĐỀ LÀ TA CẦN CHUYỂN / TRIỂN KHAI SAO
 > CHO NÓ RA DẠNG INNER  PRODUCT ĐỂ CÓ THỂ THẤY
 > ∇f LÀ GÌ**
+
+**🔗 See also:** [Ex 3.6  MLE Hồi quy Đa biến *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/37_exercises.md#node-cq8t94f)
 
 <br>
 
