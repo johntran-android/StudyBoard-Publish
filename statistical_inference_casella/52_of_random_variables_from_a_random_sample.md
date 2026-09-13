@@ -590,7 +590,7 @@
 
 > [!NOTE]
 > Ta qua theorem 5.2.6, cho X1, ...Xn là một random sample size n từ một
-> population có mean μ và variance σ^2 < inf
+> population có mean μ và variance σ² < inf
 >
 >
 >
@@ -614,7 +614,7 @@
 >
 >
 > Thế thì ở đây, ta biết / gọi population distribution (cũng là marginal distribution)
-> của mỗi r.v Xi có mean μ và variance σ^2
+> của mỗi r.v Xi có mean μ và variance σ²
 >
 >
 >
@@ -650,7 +650,7 @@
 >
 >
 >
-> b) Var(X_bar) = σ^2 / n
+> b) Var(X_bar) = σ² / n
 >
 >
 >
@@ -683,15 +683,15 @@
 >
 >
 >
-> Và Var(X1) chính là population variance σ^2
+> Và Var(X1) chính là population variance σ²
 >
 >
 >
-> ⇨ ..= (1/n)^2 n σ^2 = **σ^2 / n**
+> ⇨ ..= (1/n)^2 n σ² = **σ² / n**
 >
 >
 >
-> c) ES^2 = σ^2
+> c) ES^2 = σ²
 >
 >
 >
@@ -820,16 +820,16 @@
 >
 >
 >
-> Áp dụng vào đây E(X1^2) = Var(X1) - (EX1)^2. Mà Var(X1) là population variance σ^2,
+> Áp dụng vào đây E(X1^2) = Var(X1) - (EX1)^2. Mà Var(X1) là population variance σ²,
 > EX1 = population mean μ 
 >
 >
 >
-> ⇨ EX1^2 = σ^2 + μ^2 
+> ⇨ EX1^2 = σ² + μ² 
 >
 >
 >
-> ⇨ n E(X1^2) = **n (σ^2 + μ^2 )**
+> ⇨ n E(X1^2) = **n (σ² + μ² )**
 >
 >
 >
@@ -837,7 +837,7 @@
 >
 >
 >
-> DÙng kết quả a), b)  ⇨ E(X_bar^2) = σ^2 / n + μ^2
+> DÙng kết quả a), b)  ⇨ E(X_bar^2) = σ² / n + μ²
 >
 >
 >
@@ -845,23 +845,23 @@
 >
 >
 >
-> = [1/(n-1)]  { n (σ^2 + μ^2 ) -  n (σ^2 / n + μ^2) }
+> = [1/(n-1)]  { n (σ² + μ² ) -  n (σ² / n + μ²) }
 >
 >
 >
-> = [1/(n-1)]  ( n σ^2 + n μ^2  -  n σ^2 / n - n μ^2 )
+> = [1/(n-1)]  ( n σ² + n μ²  -  n σ² / n - n μ² )
 >
 >
 >
-> = [1/(n-1)]  ( n σ^2 -  σ^2 )
+> = [1/(n-1)]  ( n σ² -  σ² )
 >
 >
 >
-> = [1/(n-1)]  (n -1)  σ^2 
+> = [1/(n-1)]  (n -1)  σ² 
 >
 >
 >
-> = **σ^2  Chứng minh xong**
+> = **σ²  Chứng minh xong**
 
 **🔗 See also:** [Luật số lớn yếu WLLN](./55_convergence_concepts.md#node-j5m3pa1) · [Tính không chệch Xbar S^2](./73_methods_of_evaluating_estimators.md#node-dgdrvpi) · [Ước lượng không chệch Poisson](./73_methods_of_evaluating_estimators.md#node-0ecqsqo) · [Tính nhất quán của Xbar](./101_point_estimation.md#node-47kutgs) · [Point Estimation: Variance Estimation](./101_point_estimation.md#node-3dm7cfv)
 
@@ -879,7 +879,7 @@
 >
 >
 >
-> Đại khái là, như theorem vừa rồi ta thấy E X_bar = μ, và ES^2 = σ^2
+> Đại khái là, như theorem vừa rồi ta thấy E X_bar = μ, và ES^2 = σ²
 >
 >
 >
@@ -921,21 +921,21 @@
 >
 >
 > Còn trước mắt, nếu ta dùng công thức "chia cho n thay vì chia n-1" thì
-> ES^2 sẽ = [(n-1)/n] σ^2 Không khó để chứng minh vì hồi nãy ta đã tới
+> ES^2 sẽ = [(n-1)/n] σ² Không khó để chứng minh vì hồi nãy ta đã tới
 > đây:
 >
 >
 >
-> ES^ = [1/(n-1)]  (n -1)  σ^2 , với  [1/(n-1)]  là do công thức S^2 = 
+> ES^ = [1/(n-1)]  (n -1)  σ² , với  [1/(n-1)]  là do công thức S^2 = 
 > [1/(n-1)] [ Σi (Xi - X_bar)^2 ]
 >
 >
 >
-> Còn nếu thay bằng "chia n" thì ta có: ES^ = [1/n]  (n -1)  σ^2
+> Còn nếu thay bằng "chia n" thì ta có: ES^ = [1/n]  (n -1)  σ²
 >
 >
 >
-> = [(n-1)/n] σ^2, tức là nó sẽ ko bằng đúng population variance ⇨ BIASED
+> = [(n-1)/n] σ², tức là nó sẽ ko bằng đúng population variance ⇨ BIASED
 >
 >
 >
@@ -1242,11 +1242,11 @@
 >
 >
 > Đại khái là cho **X1,...Xn là random sample từ population distribution là normal
-> (μ, σ^2)**. Thử tìm distribution của sample mean
+> (μ, σ²)**. Thử tìm distribution của sample mean
 >
 >
 >
-> Ta đã biết từ những chương trước, mgf của normal là **M(t) = e^(μt + σ^2t^2/2)**
+> Ta đã biết từ những chương trước, mgf của normal là **M(t) = e^(μt + σ²t^2/2)**
 >
 >
 >
@@ -1255,28 +1255,28 @@
 >
 >
 >
-> = [e^ (μ(t/n) + σ^2(t/n)^2/2) ]^n
+> = [e^ (μ(t/n) + σ²(t/n)^2/2) ]^n
 >
 >
 >
-> = e^[n(μ(t/n) + σ^2(t/n)^2/2)]   | vì (a^n)^m = a^(mn)
+> = e^[n(μ(t/n) + σ²(t/n)^2/2)]   | vì (a^n)^m = a^(mn)
 >
 >
 >
-> = e^[nμ(t/n) + nσ^2(t/n)^2/2)]   phân phối n vô
+> = e^[nμ(t/n) + nσ²(t/n)^2/2)]   phân phối n vô
 >
 >
 >
-> = e^[μt + (nσ^2/n^2)t^2/2)]
+> = e^[μt + (nσ²/n^2)t^2/2)]
 >
 >
 >
-> **= e^[μt + (σ^2/n)t^2/2]**
+> **= e^[μt + (σ²/n)t^2/2]**
 >
 >
 >
 > Kết quả này cho thấy **Xbar có mgf là mgf của normal rv có parameter
-> là μ và σ^2/n**. Hay Xbar  ~ n(μ, σ^2/n)
+> là μ và σ²/n**. Hay Xbar  ~ n(μ, σ²/n)
 >
 >
 >
@@ -2015,7 +2015,7 @@
 >
 >
 > ⇨ g(z), là hàm g, có công thức nào đó, evaluate tại z, tức là bỏ z vào: ví dụ,
-> hàm g(z) = z^2. Thì muốn có giá trị của g, ta sẽ lấy z, đang có giá trị bao
+> hàm g(z) = z². Thì muốn có giá trị của g, ta sẽ lấy z, đang có giá trị bao
 > nhiêu đó, và apply hàm g lên, tức là bình phương lên. Khi đó ta sẽ có g(z).
 >
 >
@@ -2026,7 +2026,7 @@
 >
 >
 > nên nếu công thức hàm g (ý là ví dụ như khi ta có dạng cụ thể của g là  g(z) =
-> z^2) thì g((z - μ)/σ)/σ = [(z - μ)/σ]^2 / σ. Ta thấy trong đó [(z - μ)/σ]^2 chính là
+> z²) thì g((z - μ)/σ)/σ = [(z - μ)/σ]^2 / σ. Ta thấy trong đó [(z - μ)/σ]^2 chính là
 > apply hàm g lên (z - μ)/σ, sau đó chia σ.
 >
 >
@@ -2157,7 +2157,7 @@
 >
 >
 >
-> Var(Xbar) = σ^2 / n, tức là variance của sample mean, lại là population 
+> Var(Xbar) = σ² / n, tức là variance của sample mean, lại là population 
 > variance / n
 >
 >
@@ -2167,20 +2167,20 @@
 >
 >
 > Thứ nhất, chú ý rằng CÁI THEOREM 5.2.6 CHỈ ÁP DỤNG VỚI POPULATION
-> CÓ VARIANCE FINITE (HỮU HẠN) thể hiện bởi σ^2 < infinity. VÀ, NẾU ÁP
-> DỤNG, THÌ CÔNG THỨC LÀ: Var(Xbar) = σ^2 / n tức POPULATION VARIANCE
+> CÓ VARIANCE FINITE (HỮU HẠN) thể hiện bởi σ² < infinity. VÀ, NẾU ÁP
+> DỤNG, THÌ CÔNG THỨC LÀ: Var(Xbar) = σ² / n tức POPULATION VARIANCE
 > CHIA n
 >
 >
 >
 > Vậy điểm cần chú ý thứ nhất: GIẢ SỬ CAUCHY CÓ VARIANCE HỮU HẠN,
 > THÌ ĐỂ ÁP DỤNG VÀO, TA PHẢI HỎI VARIANCE CỦA NÓ LÀ GÌ. Tức là
-> Xbar = σ^2 / n. thì population variance σ^2 là gì?
+> Xbar = σ² / n. thì population variance σ² là gì?
 >
 >
 >
 > SỞ DĨ CHỖ NÀY GÂY LÚ, LÀ BỞI TA RẤT DỄ MẮC SAI LẦM KHI CỨ THẤY
-> NÓI CAUCHY(μ, σ) LÀ MẶC ĐỊNH NGHĨ À POPULATION VARIANCE LÀ σ^2.
+> NÓI CAUCHY(μ, σ) LÀ MẶC ĐỊNH NGHĨ À POPULATION VARIANCE LÀ σ².
 >
 >
 >
@@ -2190,7 +2190,7 @@
 >
 > Cách hiểu sai này là do ta bị ám bởi normal(μ, σ). Mà cái này là MỘT TRƯỜNG
 > HỢP ĐẶC BIỆT, nơi mà LOCATION PARAMETER μ CŨNG LÀ MEAN, VÀ SCALE
-> PARAMETER σ CŨNG LÀ STANDARD DEVIATION. Để rồi σ^2 là variance thật.
+> PARAMETER σ CŨNG LÀ STANDARD DEVIATION. Để rồi σ² là variance thật.
 >
 >
 >
@@ -2202,7 +2202,7 @@
 >
 >
 > Cho nên trong case của Cauchy(μ, σ) nếu ta cứ nhắm mắt lôi σ ra, rồi bảo là
-> variance của distribution là σ^2 sai ngay. Sự thật variance của Cauchy là infinity
+> variance của distribution là σ² sai ngay. Sự thật variance của Cauchy là infinity
 > và σ, như đã nói, chỉ là scale parameter
 >
 >
@@ -2228,7 +2228,7 @@
 > NHIỀU MẪU (n càng lớn) thì cũng vô ích vì không giúp giảm được "độ biến động"
 > (dispersion) của sample mean (vì variance vẫn mãi là inf, thể hiện bởi scale param
 > là σ) trong khi đó với các distribution khác ví dụ như normal, thì càng nhiều mẫu,
-> sẽ càng giảm variance của Xbar (vì áp dụng được theorem VarXbar  = σ^2 / n
+> sẽ càng giảm variance của Xbar (vì áp dụng được theorem VarXbar  = σ² / n
 
 <br>
 
