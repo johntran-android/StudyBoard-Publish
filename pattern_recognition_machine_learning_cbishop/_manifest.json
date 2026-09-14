@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1789324358907,
+  "publishedAt": 1789426180711,
   "sections": [
     {
       "title": "📋 Overview",
@@ -359,8 +359,14 @@
     {
       "title": "4.2 Probabilistic Generative Model",
       "path": "pattern_recognition_machine_learning_cbishop/42_probabilistic_generative_model.md",
-      "noteCount": 0,
-      "imageCount": 0
+      "noteCount": 2,
+      "imageCount": 4
+    },
+    {
+      "title": "4.2.1 Continuous inputs",
+      "path": "pattern_recognition_machine_learning_cbishop/421_continuous_inputs.md",
+      "noteCount": 1,
+      "imageCount": 4
     },
     {
       "title": "Appendix C. Matrices",
@@ -375,6 +381,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 413,
-  "totalImages": 621
+  "totalNotes": 416,
+  "totalImages": 629
 }
