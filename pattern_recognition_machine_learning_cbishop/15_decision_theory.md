@@ -1,6 +1,6 @@
 # 1.5 Decision Theory
 
-📊 **Progress:** `29` Notes | `41` Screenshots
+📊 **Progress:** `29` Notes | `41` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-0es6zw7"></a>
@@ -1845,6 +1845,25 @@
 > không phải ảnh chụp ở ngoài đời thật, ví dụ mấy mô hình tảo ảnh hiện nay
 > như diffusion model)
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú nắm rất tốt bản chất của mô hình sinh (generative model) từ việc mô hình hóa phân phối đồng thời, áp dụng định lý Bayes đến khả năng sinh dữ liệu mẫu. Điểm cần lưu ý duy nhất là việc đồng nhất toàn bộ cách tiếp cận này với Naive Bayes.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Mình có thể nhận ra đây chính là Naive Bayes"*
+>
+> Naive Bayes chỉ là một trường hợp đặc biệt cụ thể của mô hình sinh (với giả định độc lập có điều kiện giữa các đặc trưng: $p(\mathbf{x}|C_k) = \prod p(x_i|C_k)$). Khung lý thuyết mà GS. Bishop mô tả ở đây là cách tiếp cận tổng quát của toàn bộ họ mô hình sinh (Generative Models/Generative Classifiers), bao gồm cả LDA, QDA, Gaussian Mixture Models,... chứ không chỉ riêng Naive Bayes.
+>
+>
+> **✓ Strengths**
+> - Hiểu chính xác quy trình suy diễn (inference) và ra quyết định (decision) thông qua định lý Bayes và luật xác suất toàn phần (LOTP).
+> - Nắm bắt chuẩn xác trực giác vì sao gọi là mô hình sinh: mô hình hóa cả phân phối của input giúp ta có thể lấy mẫu (sampling) để tạo dữ liệu nhân tạo (synthetic data).
+>
+> **💡 Deeper notes**
+> - Để sinh dữ liệu tổng hợp $(\mathbf{x}, t)$ từ mô hình sinh, quy trình lấy mẫu cụ thể là: đầu tiên lấy mẫu nhãn lớp $C_k \sim p(C_k)$, sau đó lấy mẫu vector đặc trưng $\mathbf{x} \sim p(\mathbf{x}|C_k)$.
+
 <br>
 
 <a id="node-o0cwsv1"></a>
@@ -1866,6 +1885,18 @@
 >
 > Cái này như bữa giờ đang làm, gọi là discriminative models
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác và súc tích bản chất của mô hình phân biệt (discriminative models): mô hình hóa trực tiếp xác suất hậu nghiệm mà không cần thông qua phân phối tiên nghiệm và khả năng (likelihood), sau đó áp dụng lý thuyết quyết định.
+>
+> **✓ Strengths**
+> - Hiểu đúng quy trình hai giai đoạn: giải bài toán suy diễn tìm xác suất hậu nghiệm trước, sau đó dùng nó để ra quyết định.
+> - Phân biệt chuẩn xác sự khác biệt giữa discriminative model (học trực tiếp posterior) và generative model (học thông qua likelihood và prior).
+>
+> **💡 Deeper notes**
+> - Thuật ngữ 'inference' trong giáo trình (PRML) dùng để chỉ giai đoạn tính toán xác suất hậu nghiệm cho mẫu mới sau khi đã học xong mô hình; việc học trực tiếp hàm tham số cho xác suất hậu nghiệm được gọi là mô hình hóa trực tiếp (modeling directly).
+
 <br>
 
 <a id="node-odscyh7"></a>
@@ -1878,6 +1909,18 @@
 > Và cuốn cùng là discriminant function như nãy nói. Cái này nó ko cần học
 > phân phối xác suất gì hết, nó chỉ là tìm ra cái mapping function giữa t và x.
 > t = f(x). Xác suất ko có vai trò gì hết
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú đã tóm tắt rất chính xác và súc tích bản chất của hàm phân biệt (discriminant function) theo đúng tài liệu tham khảo.
+>
+> **✓ Strengths**
+> - Hiểu chính xác bản chất hàm phân biệt là ánh xạ trực tiếp từ đầu vào x sang nhãn lớp t mà không cần mô hình hóa hay tính toán xác suất.
+> - Bám sát đúng ý cốt lõi 'probabilities play no role' trong tài liệu tham khảo.
+>
+> **💡 Deeper notes**
+> - Dù phương pháp này trực tiếp và không dùng xác suất, nhưng nhược điểm của nó là không cung cấp độ tin cậy (uncertainty/posterior probabilities) cho dự đoán và khó kết hợp chi phí rủi ro (loss matrix) linh hoạt như các phương pháp sinh (generative) hay phân biệt dựa trên xác suất (probabilistic discriminative).
 
 <br>
 
