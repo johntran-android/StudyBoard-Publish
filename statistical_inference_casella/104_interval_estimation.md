@@ -1,6 +1,6 @@
 # 10.4 Interval Estimation
 
-📊 **Progress:** `4` Notes | `5` Screenshots | `4` AI Reviews
+📊 **Progress:** `5` Notes | `6` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-wt27aoy"></a>
@@ -592,6 +592,284 @@
 > - Khoảng tin cậy này là khoảng tin cậy tiệm cận (approximate / asymptotic CI), độ tin cậy xấp xỉ 1 - alpha khi n đủ lớn và p không quá gần 0 hoặc 1.
 
 **🔗 See also:** [Section 10.1 Point Estimation](./101_point_estimation.md#node-13p5sy2)
+
+<br>
+
+<a id="node-k8b5j5h"></a>
+
+###### Score Statistic Confidence Intervals
+
+<p align="center"><kbd><img src="assets/nm97oekcd8a.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Qua cái này, tác giả nói ta có thể dựng trên score statistic để xây dựng interval tốt hơn (nếu áp dụng được):
+>
+>
+>
+> Dựa vào việc Q(𝐗|θ) = ∂/∂θ log L(θ|𝐗) / √-E\_θ(∂²/∂θ² log L(θ|𝐗)) → (d) n(0,1).
+>
+>
+>
+> Giải thích chỗ này:
+>
+>
+>
+> ∂/∂θ log L(θ|𝐗) gọi là score statistic, được nhắc đến lần đầu tiên trong phần ta nói về score test. Thế thì đại ý là, cái statistic này nó có đặc điểm là kì vọng của nó bằng 0 (đã được chứng minh trong 7.3.2, tí mình sẽ chứng minh lại). Bên cạnh đó, variance của nó, chính là In(θ) (information number của sample size n). Và hơn nữa, bản thân nó có thể chỉ ra là một sample mean. Từ đó, ta có thể dùng CLT: (X̄ - E\[X\])/SD(X) → (d) n(0,1) để xây dựng score test hoặc score interval.
+>
+>
+>
+> Nó là sample mean: ∂/∂θ log L(θ|𝐗) = ∂/∂θ log f(𝐗|θ) (theo định nghĩa likelihood)
+>
+>
+>
+> = ∂/∂θ log Πi f(Xi|θ) (tính iid)
+>
+>
+>
+> = ∂/∂θ Σi log f(Xi|θ) = Σi ∂/∂θ log f(Xi|θ)
+>
+>
+>
+> = Σi ∂/∂θ log f(Xi|θ)
+>
+>
+>
+> Tới đây có thể thấy nó là tổng của các random variable Yi = ∂/∂θ log f(Xi|θ), i = 1,2,...n. Nhân thêm và chia bớt n, ta sẽ có ∂/∂θ log L(θ|𝐗) là nȲ
+>
+>
+>
+> ---
+>
+>
+>
+> Kì vọng của Y = ∂/∂θ log L(θ|X) sẽ bằng 0:
+>
+>
+>
+> ∂/∂θ log L(θ|X) = (1/L(θ|X)) ∂/∂θ L(θ|X) = ∂/∂θ L(θ|X) / L(θ|X) (chain rule của đạo hàm)
+>
+>
+>
+> Nhìn thế này: Y chỉ là một random variable có dạng là một hàm g(x) áp lên random variable X, với g(x) = ∂/∂θ L(θ|x) / L(θ|x). Nên áp dụng LOTUS (xem link tới bài giảng LOTUS trong Stat110) ta có thể tính kì vọng của Y: E\[Y\] = ∫g(x)f(x)dx, và vì X \~ f(x|θ), nên E\[Y\] sẽ phụ thuộc θ, E\_θ\[Y\]:
+>
+>
+>
+> ⇒ E\[Y\] = E\_θ\[∂/∂θ log L(θ|X)\] = E\_θ\[(1/L(θ|X)) ∂/∂θ L(θ|X)\]
+>
+>
+>
+> =∫\[(1/L(θ|x)) ∂/∂θ L(θ|x)\] f(x|θ) dx
+>
+>
+>
+> Dùng định nghĩa hàm likelihood: Likelihood chỉ là hàm số đo độ hợp lý của θ khi quan sát thấy giá trị cụ thể của data, và có thể là một quan sát (X=x) hoặc n quan sát (𝐗=𝐱). Nên ở đây L(θ|x) là độ hợp lí của θ khi quan sát thấy X = x, và được định nghĩa bởi pdf/pmf của data tại giá trị quan sát, f(x|θ).
+>
+>
+>
+> =∫\[(1/f(x|θ)) ∂/∂θ L(θ|x)\] f(x|θ) dx
+>
+>
+>
+> =∫ ∂/∂θ L(θ|x) dx (triệt tiêu f(x|θ))
+>
+>
+>
+> =∫ ∂/∂θ f(x|θ) dx (lại dùng định nghĩa likelihood)
+>
+>
+>
+> =∂/∂θ \[∫ f(x|θ) dx\] (đổi chỗ đạo hàm và tích phân, điều này không luôn đúng nhưng ở đây ta assume là đủ điều kiện)
+>
+>
+>
+> =∂/∂θ \[1\]
+>
+>
+>
+> = 0 (đạo hàm của constant không phụ thuộc θ).
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, xét Var(Y), trong Stat110 (Xem link), theo công thức thứ hai Var(Y) = E(Y²) - (EY)² = E(Y²) (do mean đã = 0)
+>
+>
+>
+> = E\_θ\[(∂/∂θ log L(θ|X))²\]
+>
+>
+>
+> và cái này, theo định nghĩa, chính là information number (xem link), theo một bổ đề (Lemma 7.3.11) ta có:
+>
+>
+>
+> E\_θ\[(∂/∂θ log L(θ|X))²\] = - E\_θ\[∂²/∂θ² log L(θ|X)\]
+>
+>
+>
+> Vậy Var(Y) = - E\_θ\[∂²/∂θ² log L(θ|X)\]
+>
+>
+>
+> Bên cạnh đó, cũng có thể chứng minh nI1(θ) = In(θ) ), gọi là information number of sample size n, tức là:
+>
+>
+>
+> n E\_θ\[(∂/∂θ log L(θ|X))²\] = E\_θ\[(∂/∂θ log L(θ|𝐗))²\]
+>
+>
+>
+> và again theo bổ đề 7.3.11, = - E\_θ\[∂²/∂θ² log L(θ|𝐗)\])
+>
+>
+>
+> Từ tất cả những điều này, tổng hợp lại ta sẽ áp dụng CLT như sau:
+>
+>
+>
+> CLT nói rằng nếu random sample X1,...Xn có EX = μ, Var(X) = σ² &lt; ∞, thì:
+>
+>
+>
+> √n(X̄ - μ)/σ → (d) n(0,1)
+>
+>
+>
+> Nên ở đây ta có Y1,...Yn iid, có EY = 0, Var(Y) = I1(θ) nên:
+>
+>
+>
+> √n(Ȳ - 0)/√I1(θ) → (d) n(0,1)
+>
+>
+>
+> Thay ∂/∂θ log L(θ|𝐗) = nȲ ⇔ Ȳ = (1/n) ∂/∂θ log L(θ|𝐗)
+>
+>
+>
+> √n((1/n) ∂/∂θ log L(θ|𝐗) - 0)/√I1(θ) → (d) n(0,1)
+>
+>
+>
+> ⇔ ∂/∂θ log L(θ|𝐗) / √n√I1(θ) → (d) n(0,1)
+>
+>
+>
+> ⇔ ∂/∂θ log L(θ|𝐗) / √In(θ) → (d) n(0,1)
+>
+>
+>
+> Thay In(θ) = - E\_θ\[∂²/∂θ² log L(θ|𝐗)\]
+>
+>
+>
+> ⇔ ∂/∂θ log L(θ|𝐗) / √-E\_θ\[∂²/∂θ² log L(θ|𝐗)\] → (d) n(0,1)
+>
+>
+>
+> ---
+>
+>
+>
+> Như vậy, ta hiểu được vì sao, dựa vào đâu Q(𝐗|θ) → (d) n(0,1). Có thể nhắc lại một nhận định đã từng nói: rằng cái này, là dựa vào thuần túy CLT, khác với các Wald statistic, sẽ cần dựa vào một MLE (để rồi dựa vào tính hiệu quả tiệm cận của nó)
+>
+>
+>
+> ---
+>
+>
+>
+> Như vậy áp dụng cái này, thì để có confidence interval có xác suất chứa được θ xấp xỉ 1-α ta sẽ xài threshold z:
+>
+>
+>
+> Lập luận quen thuộc:
+>
+>
+>
+> Ta có (theo định nghĩa của z\_α/2): P(-z\_α/2 ≤ Z ≤ z\_α/2) = 1-α
+>
+>
+>
+> ⇒ P(-z\_α/2 ≤ Q(𝐗|θ) ≤ z\_α/2) ≈ 1-α (a)
+>
+>
+>
+> ⇒ {θ: -z\_α/2 ≤ Q(𝐱|θ) ≤ z\_α/2} chính là confidence set có xác suất chứa θ xấp xỉ 1-α (b)
+>
+>
+>
+> Giải thích thêm chỗ này, từ (a) dẫn tới (b) là sao?
+>
+>
+>
+> Cần hiểu trong bài toán confidence interval hoặc interval estimation, cái ta cần tìm là một random set C(𝐗), sao cho xác suất nó (random quantity) chứa được θ (fixed & unknown) đạt mức nào đó, ví dụ 1-α: P(C(𝐗) chứa θ) hay P(θ ∈ C(𝐗)) = 1-α. Cần nhấn mạnh θ không phải biến ngẫu nhiên, và yếu tố ngẫu nhiên là random set C(𝐗), vì nếu coi θ là biến ngẫu nhiên, ta sẽ bước sang Bayesian approach, khi đó không gọi là confidence set mà gọi là credible set. Tiếp, thế thì khi C(𝐗) có dạng một interval, ta gọi nó là confidence interval, có dạng tạo bởi hai random variable L(𝐗), U(𝐗): \[L(𝐗), U(𝐗)\].
+>
+>
+>
+> Thấy thì ở đây ta có P(-z\_α/2 ≤ Q(𝐗|θ) ≤ z\_α/2) = 1-α
+>
+>
+>
+> Đặt A(θ) = {𝐱: -z\_α/2 ≤ Q(𝐱|θ) ≤ z\_α/2} và
+>
+>
+>
+> Đặt C(𝐱) = {θ: -z\_α/2 ≤ Q(𝐱|θ) ≤ z\_α/2}
+>
+>
+>
+> Thì 𝐱 ∈ A(θ) khi và chỉ khi θ ∈ C(𝐱)
+>
+>
+>
+> Mà -z\_α/2 ≤ Q(𝐗|θ) ≤ z\_α/2 có bản chất là {𝐱: -z\_α/2 ≤ Q(𝐗|θ) ≤ z\_α/2}
+>
+>
+>
+> nên P(-z\_α/2 ≤ Q(𝐗|θ) ≤ z\_α/2) = P({𝐱: -z\_α/2 ≤ Q(𝐗|θ) ≤ z\_α/2})
+>
+>
+>
+> và P({𝐱: -z\_α/2 ≤ Q(𝐗|θ) ≤ z\_α/2}) = P({𝐱: 𝐱 ∈ A(θ)}) = P(𝐗 ∈ A(θ))
+>
+>
+>
+> Và vì 𝐱 ∈ A(θ) ⇔ θ ∈ C(𝐱)
+>
+>
+>
+> Nên P(𝐗 ∈ A(θ)) = P(θ ∈ C(𝐗))
+>
+>
+>
+> Vậy P(𝐗 ∈ A(θ)) = 1-α nên P(θ ∈ C(𝐗)) = 1-α, nên C(𝐱) = {θ: -z\_α/2 ≤ Q(𝐱|θ) ≤ z\_α/2} là tập có xác suất chứa θ bằng 1-α
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú xuất sắc, giải thích rất sâu sắc và chính xác về mặt toán học từ việc phân rã score statistic thành tổng iid để áp dụng CLT đến kỹ thuật đảo test statistic để suy ra confidence set.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Và hơn nữa, bản thân nó có thể chỉ ra là một sample mean... Tới đây có thể thấy nó là tổng của các random variable Yi = ∂/∂θ log f(Xi|θ), i = 1,2,...n. Nhân thêm và chia bớt n, ta sẽ có ∂/∂θ log L(θ|𝐗) là nȲ"*
+>
+> Về mặt thuật ngữ, ∂/∂θ log L(θ|𝐗) là tổng (nȲ) chứ không phải trực tiếp là sample mean (Ȳ). Dù sau đó bạn đã viết chính xác là nȲ, câu mở đầu nói 'bản thân nó là một sample mean' có thể hơi thiếu chặt chẽ một chút.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ và chứng minh chi tiết việc kỳ vọng của score function bằng 0 dựa trên việc hoán đổi đạo hàm và tích phân.
+> - Chứng minh chặt chẽ phân phối tiệm chuẩn của Q(X|θ) thuần túy thông qua CLT cho tổng các biến ngẫu nhiên iid.
+> - Giải thích xuất sắc bản chất của confidence set qua việc đảo test acceptance region (inverting the test statistic) và phân biệt rành rọt giữa Frequentist confidence set và Bayesian credible set.
+>
+> **💡 Deeper notes**
+> - Việc hoán đổi đạo hàm và tích phân (hoặc tổng) đòi hỏi các điều kiện chính quy (regularity conditions), cụ thể là miền giá trị của X (support) không được phụ thuộc vào tham số θ (ví dụ: không áp dụng được trực tiếp cho Uniform(0, θ)).
+> - Tập hợp C(x) = {θ: |Q(x|θ)| ≤ z_{α/2}} là một confidence set; để nó trở thành một 'interval' liên tục [L(x), U(x)], hàm Q(x|θ) thường cần đơn điệu theo θ trên không gian tham số.
+
+**🔗 See also:** [Kỳ vọng của Score Statistic](./103_hypothesis_testing.md#node-wzyceag) · [Lec 14: Location, Scale, Lotus *(STAT110_Havard)*](../stat110_havard/lec_14_location_scale_lotus.md#node-2oglyyh) · [linked note *(STAT110_Havard)*](../stat110_havard/lec_12_discrete_vs_continuous_the_uniform.md#node-cmnrs7p) · [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4) · [Mối quan hệ C(x) và A(θ)](./92_methods_of_finding_interval_estimators.md#node-cebe6p1)
 
 <br>
 
