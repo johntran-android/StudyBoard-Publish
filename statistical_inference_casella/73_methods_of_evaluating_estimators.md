@@ -2395,7 +2395,7 @@
 >
 > Với mọi hàm khả vi τ(θ), thì ta đã có chặn dưới về variance của bất kì estimator W thỏa 7.3.4 và E\_θ(W) = τ(θ). Và cái bound chỉ phụ thuộc τ(θ) và f(x|θ). Mọi candidate estimator thỏa E\_θ(W) = τ(θ) (tức là unbiased estimator của τ(θ)) và có variance đạt mức này đều sẽ là BEST UNBIASED ESTIMATOR
 
-**🔗 See also:** [Bất đẳng thức Cramer-Rao](#node-1qs416c) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Asymptotic Efficiency of Estimator p̂](./101_point_estimation.md#node-ct81g3i) · [Robustness of the Sample Mean](./102_robustness.md#node-3pctii6)
+**🔗 See also:** [Bất đẳng thức Cramer-Rao](#node-1qs416c) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Asymptotic Efficiency of Estimator p̂](./101_point_estimation.md#node-ct81g3i) · [Robustness of the Sample Mean](./102_robustness.md#node-3pctii6) · [Score Statistic Confidence Intervals](./104_interval_estimation.md#node-k8b5j5h)
 
 <br>
 
@@ -2436,7 +2436,7 @@
 > **💡 Deeper notes**
 > - Điều kiện hoán đổi d/dθ E_θ[...] = ∫ ∂/∂θ [...] dx thực chất là điều kiện trơn (regularity condition) cho phép đạo hàm dưới dấu tích phân (hoặc dấu tổng trong trường hợp rời rạc), thường thất bại khi miền giá trị của X phụ thuộc vào tham số θ (ví dụ: phân phối đều Uniform(0, θ)).
 
-**🔗 See also:** [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Asymptotic Variance of M-Estimators](./102_robustness.md#node-wzfdc2h) · [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li) · [Kỳ vọng của Score Statistic](./103_hypothesis_testing.md#node-wzyceag) · [The Score Test Statistic](./103_hypothesis_testing.md#node-xudioev) · [Approximate Maximum Likelihood Intervals](./104_interval_estimation.md#node-tsuffya)
+**🔗 See also:** [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Asymptotic Variance of M-Estimators](./102_robustness.md#node-wzfdc2h) · [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li) · [Kỳ vọng của Score Statistic](./103_hypothesis_testing.md#node-wzyceag) · [The Score Test Statistic](./103_hypothesis_testing.md#node-xudioev) · [Approximate Maximum Likelihood Intervals](./104_interval_estimation.md#node-tsuffya) · [Score Statistic Confidence Intervals](./104_interval_estimation.md#node-k8b5j5h)
 
 <br>
 
