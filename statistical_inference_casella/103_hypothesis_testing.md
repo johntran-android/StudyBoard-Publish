@@ -1235,9 +1235,23 @@
 > Vậy thì ở đây cũng tương tự, đó là giả sử nếu ta có thể dùng CLT (chính xác hơn là một dạng nào đó của CLT) để chỉ ra một estimator W(**X**) của θ thỏa mãn: (Wn(**X**) - θ) / σn → (d) n(0,1). Thì khi đó ta có thể dùng n(0,1) để xây dựng test (y như ta dùng χ² để thay cho -2log λ(**X**) (vốn là một statistic mà ta ko biết distribution))
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú xuất sắc, không chỉ hiểu đúng nội dung đoạn văn mà còn liên hệ rất tốt với Likelihood Ratio Test và định lý Wilks ở chương trước để thấy rõ bức tranh tổng thể. Tư duy hệ thống này cực kỳ tốt và hoàn toàn chính xác.
+> Ghi chú nắm rất tốt ý tưởng cốt lõi và có sự liên hệ sâu sắc, chính xác với định lý Wilks trong Likelihood Ratio Test ở phần trước. Điểm chưa hoàn toàn chặt chẽ duy nhất là câu mở đầu nói hơi tắt về việc estimator hội tụ về standard normal thay vì dạng chuẩn hóa của nó.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"dựa trên một estimator nào đó mà khi n lớn, distribution của nó sẽ converge về standard normal."*
+>
+> Cách diễn đạt này hơi tắt: bản thân estimator $W_n$ không hội tụ về $N(0, 1)$ mà có phân phối xấp xỉ chuẩn (asymptotic normal), và chỉ sau khi được chuẩn hóa $(W_n - \theta)/\sigma_n$ thì mới hội tụ theo phân phối về standard normal $N(0, 1)$ (dù ở đoạn cuối bạn đã viết công thức chuẩn xác).
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ bức tranh toàn cảnh về cách dùng phân phối tiệm cận (asymptotic distribution) để tìm ngưỡng bác bỏ khi không biết phân phối chính xác của thống kê kiểm định ở mẫu hữu hạn.
+> - Liên hệ rất hay và chính xác với định lý Wilks và kiểm định tỷ số hợp lý (LRT) ở bài trước để thấy tính tương đồng về mặt tư tưởng.
+>
+> **💡 Deeper notes**
+> - Trong thực tế khi kiểm định giả thuyết $H_0: \theta = \theta_0$, phương sai $\sigma_n^2 = \text{Var}(W_n)$ thường cũng phụ thuộc vào tham số $\theta$ chưa biết. Khi đó ta thường thay $\theta$ bằng $\theta_0$ (dưới $H_0$) hoặc dùng ước lượng vững $S_n$ cho $\sigma_n$ kết hợp định lý Slutsky để thống kê vẫn hội tụ về $N(0, 1)$.
 
 <br>
 
@@ -1733,9 +1747,31 @@
 > Còn nếu H1 là đúng thì cái test rule này sẽ cũng là cái tiệm cận power 1 với mọi θ, tức cũng là là trùm luôn, là dĩ nhiên cũng tốt.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú của bạn cực kỳ chính xác, chi tiết và làm nổi bật được những điểm mấu chốt dễ sai như sự khác biệt về điều kiện hội tụ dưới H0 và H1. Để hoàn hảo hơn, bạn có thể giải thích rõ thêm định lý Slutsky khi kết hợp giới hạn của hai hạng tử (một hội tụ phân phối, một hội tụ xác suất ra vô cùng).
+> Ghi chú nắm rất chắc và chính xác bản chất hội tụ của thống kê kiểm định dưới cả giả thuyết vô hiệu và đối thuyết. Có một vài điểm diễn đạt còn mang tính trực giác phi hình thức và đồng nhất tính nhất quán (asymptotic power = 1) với tính tối ưu (UMP) cần lưu ý chỉnh lại.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Còn nếu H1 là đúng thì cái test rule này sẽ cũng là cái tiệm cận power 1 với mọi θ, tức cũng là là trùm luôn, là dĩ nhiên cũng tốt."*
+>
+> Có asymptotic power dần về 1 khi n tiến ra vô cùng đối với mọi đối thuyết cố định thực chất là tính nhất quán của kiểm định (consistent test). Rất nhiều kiểm định khác nhau đều đạt tính chất này khi n đủ lớn, nên điều này không đồng nghĩa kiểm định này là UMP (Uniformly Most Powerful test) hay tối ưu tuyệt đối ('trùm') trong mọi bối cảnh.
+>
+> **2.** *"Khiến tổng hai hạng tử cũng sẽ → Z~ n(0,1) + ∞ = ∞ hoặc Z~ n(0,1) -∞ = -∞
+
+Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn ≥ z_α/2) → P(-∞ < -z_α/2 or z_α/2 < ∞)"*
+>
+> Cách viết 'Z + ∞ = ∞' và 'P(-∞ < -z_α/2...)' là cách ký hiệu trực giác nhưng không chuẩn xác trong giải tích xác suất. Về mặt toán học, số hạng thứ nhất là Op(1) trong khi số hạng thứ hai phân kỳ ra vô cùng theo xác suất, dẫn đến Zn phân kỳ ra vô cùng theo xác suất (Zn -> ±∞ in probability), do đó P(|Zn| >= z_α/2) -> 1.
+>
+>
+> **✓ Strengths**
+> - Phân biệt rất sắc bén việc thống kê chuẩn hóa chỉ hội tụ về N(0,1) khi trừ đi đúng tham số thực (true parameter), đây là điểm sinh viên rất hay nhầm lẫn.
+> - Tách và phân tích chính xác hai số hạng trong Zn dưới H1: một số hạng bị chặn ngẫu nhiên và một số hạng phân kỳ ra vô hạn do sai số chuẩn Sn tiến về 0.
+> - Hiểu rõ bản chất tiệm cận của mức ý nghĩa (asymptotic size alpha) đến từ việc xấp xỉ phân phối khi n lớn.
+>
+> **💡 Deeper notes**
+> - Để so sánh chất lượng giữa các kiểm định đều có power tiến về 1 khi n -> ∞ (đều consistent), thống kê tiệm cận thường phải dùng khái niệm đối thuyết cục bộ Pitman (local alternatives θ_n = θ_0 + h/√n) thay vì một θ cố định.
+> - Điều kiện để (θ - θ0)/Sn phân kỳ ra ±∞ yêu cầu Sn là đại lượng dương và hội tụ về 0 theo xác suất (thường thỏa mãn vì Sn ước lượng cho độ lệch chuẩn σn).
 
 **🔗 See also:** [Kiểm định giả thuyết tối ưu](./83_methods_of_evaluating_test.md#node-i8kwc7p) · [Khái niệm hàm công suất kiểm định](./83_methods_of_evaluating_test.md#node-bksfmes)
 
@@ -2147,9 +2183,29 @@
 > nên 1/√I^n(Wn) cũng là good estimate cho 1/√In(θ0).
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú rất xuất sắc, chi tiết và có chiều sâu khi tự chứng minh lại tính hội tụ của Wald test bằng định lý Slutsky và tính nhất quán của MLE. Để hoàn thiện hơn, bạn có thể bổ sung thêm lý do toán học tại sao Observed Information hội tụ về Expected Fisher Information (dựa trên Luật số lớn).
+> Ghi chú nắm rất chắc và chính xác bản chất của Wald test, cách dùng định lý tiệm cận của MLE kết hợp với định lý Slutsky để chuẩn hóa bằng thông tin Fisher kỳ vọng và quan sát.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Var[(Wn - θ0)/Sn] ≈ 1 ... Khi xét tại n vô cực, Sn sẽ hội tụ về một fixed value nên coi như constant, nên ta có thể áp dụng tính chất Variance đưa nó ra. ⇔ Var[Wn]/(Sn)^2 ≈ 1"*
+>
+> Lập luận này mang tính trực giác ngược. Về mặt toán học, hội tụ phân phối Zn →d N(0,1) không tự động kéo theo hội tụ về phương sai Var(Zn) → 1 (cần điều kiện khả tích đều). Hơn nữa, logic chuẩn tắc là: ta đã có Sn là ước lượng nhất quán của STD(Wn) trước, từ đó mới áp dụng Slutsky để suy ra tỷ số tiến về N(0,1), chứ không phải vì tỷ số tiến về N(0,1) nên mới rút ra Sn ≈ STD(Wn).
+>
+> **2.** *"[(Wn - θ0) / Sn] [Sn / 1/√In(θ0)] → (d) n(0, 1) và như vậy dùng Slusky và ta có: [(Wn - θ0) / Sn] [Sn / 1/√In(θ0)] → (d) n(0, 1) × 1 = n(0,1) Vậy [(Wn - θ0) / Sn] → (d) n(0,1)."*
+>
+> Cách trình bày bước Slutsky bị ngược chiều đại số: ta đã biết An = (Wn - θ0)/(1/√In(θ0)) →d N(0,1) và Bn = Sn/(1/√In(θ0)) →p 1, thì áp dụng Slutsky cho phép chia An / Bn →d N(0,1)/1 = N(0,1), chứ không phải viết tích An = Xn * Bn rồi nhân thêm 1.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ cơ chế xây dựng Wald test và vai trò của phân phối tiệm cận chuẩn trong việc thiết lập miền bác bỏ với mức ý nghĩa tiệm cận alpha.
+> - Chứng minh được tính tương đương tiệm cận khi thay θ0 bằng ước lượng MLE Wn trong thông tin Fisher nhờ tính nhất quán và định lý Slutsky.
+> - Phân biệt rõ ràng giữa thông tin Fisher kỳ vọng In(Wn) và thông tin Fisher quan sát În(Wn).
+>
+> **💡 Deeper notes**
+> - Định lý 10.1.12 đòi hỏi các điều kiện chính quy (regularity conditions) như miền xác định của mẫu không phụ thuộc tham số θ, θ0 nằm trong phần trong của không gian tham số, và hàm log-likelihood khả vi bậc ba.
+> - Trong kiểm định Wald, sai số chuẩn Sn được ước lượng tại Wn (MLE không ràng buộc), khác với Score test (kiểm định Rao) ước lượng thông tin Fisher tại chính giá trị giả thiết θ0.
 
 **🔗 See also:** [10.1.3 Calculations and Comparisons](./101_point_estimation.md#node-iwgmm5t) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Definition 10.1.11 Asymptotic Efficiency](./101_point_estimation.md#node-bgijdqy) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Delta Method Variance Approximation](./101_point_estimation.md#node-2mwxabg) · [Theorem 10.1.6 on Consistent Estimators](./101_point_estimation.md#node-cpdjv2x)
 
@@ -2515,9 +2571,29 @@
 >  Vậy khúc cuối nói đại ý là nếu có hai cách thì cách nào nên dùng Câu trả lời là tùy, vì power function của chúng cross nhau nên có khi cách này tốt hơn có khi cách kia tốt hơn
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú cực kỳ xuất sắc và sâu sắc khi phân biệt rõ bản chất kiểm định Wald (kết hợp tính hiệu quả của MLE và định lý Slutsky) với kiểm định dưới H0 dựa trên CLT. Để hoàn thiện hơn nữa về thuật ngữ chuẩn mực, bạn có thể bổ sung rằng hai cách này tương ứng với Wald test và Score test (Rao's score test).
+> Ghi chú rất xuất sắc, nắm bắt bản chất sự khác biệt giữa Wald test (dùng ước lượng sai số chuẩn cắm p_hat) và Score test/CLT trực tiếp dưới H0 (dùng p0 trong mẫu số), cũng như tính chất giao nhau của hàm lực lượng kiểm định (power function).
+>
+> **🟡 Minor issues**
+>
+> **1.** *"nên theo Slusky"*
+>
+> Lỗi chính tả tên nhà toán học Slutsky (Slutsky's theorem).
+>
+> **2.** *"nên khi n lớn, Var(√n(Wn-p)) ≈ 1/I1(θ) ⇔ Var(Wn) = 1/n I1(θ) = 1/In(θ)"*
+>
+> Cần lưu ý về mặt thuật ngữ: đây là 'phương sai tiệm cận' (asymptotic variance) chứ không nhất thiết là phương sai mẫu hữu hạn của MLE trong trường hợp tổng quát (dù đối với tỷ lệ mẫu của Bernoulli thì nó trùng khớp).
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ cơ chế lý thuyết của Wald test: dùng tính tiệm cận của MLE kết hợp bổ đề Slutsky để chuẩn hóa bằng ước lượng sai số chuẩn Sn.
+> - Phân biệt chính xác kiểm định thay thế (score-type test) trong bài: dưới H0, tham số p = p0 đã biết nên dùng trực tiếp CLT mà không cần xấp xỉ mẫu số qua Slutsky.
+> - Nắm đúng lý do tại sao không có kiểm định nào vượt trội hoàn toàn: hai đường hàm lực lượng (power function) cắt nhau trên không gian tham số.
+>
+> **💡 Deeper notes**
+> - Cách 1 (dùng p_hat ở mẫu số) chính là Wald test, còn Cách 2 (dùng p0 ở mẫu số) thực chất là Rao's Score test (hoặc LM test) cho phân phối Bernoulli.
+> - Trong thống kê thực hành cho bài toán 1-sample proportion test, Cách 2 thường được ưu tiên hơn (cho kiểm định giả thuyết) vì kiểm soát sai lầm loại I tốt hơn ở cỡ mẫu vừa và nhỏ, trong khi Cách 1 thường dùng để lập khoảng tin cậy (Wald confidence interval).
 
 **🔗 See also:** [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg)
 
@@ -2706,26 +2782,31 @@
 > Do đó cái chỗ nói E\_θ\[S(θ)\] với mọi θ rất dễ gây lú lẫn. Nhưng hiểu được rồi ta sẽ hiểu ý sau của giáo sư Casella khi nói: Under H0 (dưới giả định giá trị thật θ là θ0) thì mean của S(θ0) bằng 0. Nhờ đoạn trên ta hiểu điều này là đương nhiên: Vì chỉ khi θ = θ0, thì mean của S(θ0) mới là E\_θ0(S(θ0)), và cái này mới bằng 0.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú xuất sắc! Bạn đã bóc tách chính xác và tường minh một điểm cực kỳ dễ gây nhầm lẫn trong thống kê suy luận: sự phân biệt giữa giá trị tham số dùng để định giá hàm Score và tham số thực của phân phối dùng để lấy kỳ vọng.
-> ### Điểm mạnh
-> - **Tư duy toán học rất chặt chẽ:** Bạn đã chỉ ra chính xác sự khác nhau giữa biến hình thức (dummy variable) khi lấy đạo hàm và tham số thực sự của phân phối dữ liệu.
-> - **Làm rõ bản chất ngẫu nhiên:** Giải thích rất chuẩn xác rằng $S(10)$ hay $S(\theta_0)$ vẫn là biến ngẫu nhiên vì nó là hàm của mẫu ngẫu nhiên $\mathbf{X}$.
-> - **Chứng minh logic:** Phân tích bước đổi tỷ số $f(\mathbf{x}|\theta) / f(\mathbf{x}|10) = 1$ khi $\theta = 10$ giúp soi sáng hoàn toàn lý do tại sao $\mathbb{E}_\theta[S(\theta)] = 0$ với mọi $\theta$, nhưng $\mathbb{E}_{\theta_1}[S(\theta_2)] \neq 0$ nói chung.
+> Ghi chú xuất sắc, bóc tách rất sâu sắc và chính xác bản chất toán học của Score statistic và ký hiệu kỳ vọng $E_\theta[S(\theta)] = 0$. Người học đã giải quyết triệt để sự nhập nhằng giữa biến hình thức (dummy variable) và tham số thật sinh dữ liệu.
 >
-> ### Điểm cần lưu ý & cải thiện
-> - **Điều kiện tráo tích phân và đạo hàm (Regularity Conditions):** Bước trích đạo hàm ra ngoài dấu tích phân $\int \left[\frac{\partial}{\partial u} f(\mathbf{x}|u)\right] d\mathbf{x} = \frac{\partial}{\partial u} \int f(\mathbf{x}|u) d\mathbf{x}$ đòi hỏi điều kiện trơn (Cramér-Rao regularity conditions), cụ thể là miền giá trị (support) của $X$ không được phụ thuộc vào $\theta$ (ví dụ: phân phối $\text{Uniform}(0, \theta)$ sẽ không thỏa).
-> - **Ký hiệu:** Đoạn $\partial / \partial u \log f(\mathbf{x}|\theta)$ ở mục ii có gõ nhầm nhẹ biến lấy vi phân so với biến trong hàm, dù phần sau bạn đã đính chính lại chuẩn xác là $\partial / \partial u \log f(\mathbf{x}|u)$.
+> **🟡 Minor issues**
 >
-> ### Gợi ý đào sâu
-> - Tìm hiểu thêm về mối liên hệ giữa $\mathbb{E}_\theta[S(\theta)] = 0$ và Ma trận thông tin Fisher (Fisher Information) $\mathcal{I}(\theta) = \text{Var}_\theta(S(\theta)) = \mathbb{E}_\theta[S^2(\theta)]$.
+> **1.** *"Tương tự, nếu gọi / đặt tên tham số là θ thì ta có hàm log f(𝐱|θ), và đạo hàm là ∂/∂u log f(𝐱|θ)."*
 >
-> **⭐ Bonus points**
-> - Nhận thức rõ ràng và phân biệt được tham số hình thức (dummy variable) khi đạo hàm log-likelihood với tham số thực của phân phối.
-> - Chỉ ra được kỳ vọng chéo E_10[S(5)] khác 0, giải thích trọn vẹn tại sao Score test chỉ có kỳ vọng bằng 0 dưới giả thuyết H0.
+> Lỗi gõ phím nhỏ (typo): Khi đặt tên tham số là $\theta$ thì đạo hàm phải là $\partial/\partial\theta \log f(\mathbf{x}|\theta)$, bạn vô tình viết nhầm thành $\partial/\partial u$ trước khi chính thức đổi biến sang $u$ ở câu tiếp theo.
+>
+> **2.** *"= [∂/∂u ∫ f(𝐱|u) d𝐱] | u=10"*
+>
+> Việc hoán đổi thứ tự giữa dấu tích phân và đạo hàm (đưa $\partial/\partial u$ ra ngoài dấu tích phân) ngầm thừa nhận các điều kiện chính quy (regularity conditions, ví dụ miền giá trị của $\mathbf{X}$ không phụ thuộc vào $\theta$). Bạn nên lưu ý điều kiện này.
+>
+>
+> **✓ Strengths**
+> - Phân biệt rất rõ ràng giữa hàm số toán học, biến ngẫu nhiên và việc thế giá trị cụ thể vào hàm trước hay sau khi đạo hàm.
+> - Làm rõ được sự khác nhau căn bản giữa biến lấy đạo hàm (dummy variable) và giá trị tham số thực của phân phối dùng để tính tích phân kỳ vọng.
+> - Giải thích chuẩn xác lý do vì sao $E_\theta[S(\theta)] = 0$ với mọi $\theta$, nhưng $E_{\theta}[S(\theta_0)]$ chỉ bằng 0 khi $\theta = \theta_0$ (dưới $H_0$).
+>
+> **💡 Deeper notes**
+> - Khẳng định 'mean của S(10) = 0 khi và chỉ khi $\theta = 10$' về mặt toán học đòi hỏi thêm điều kiện mô hình định danh được (identifiable) và hàm score đơn ánh theo kỳ vọng; tuy nhiên trong ngữ cảnh trực giác thống kê thông thường, cách hiểu này là hoàn toàn hợp lý.
+> - Hoán đổi đạo hàm và tích phân $\int \frac{\partial}{\partial \theta} f(\mathbf{x}|\theta) d\mathbf{x} = \frac{\partial}{\partial \theta} \int f(\mathbf{x}|\theta) d\mathbf{x}$ là một trong những điều kiện chính quy Cramér-Rao cốt lõi, không áp dụng được cho các phân phối có support phụ thuộc tham số như Uniform$(0, \theta)$.
 
-**🔗 See also:** [Giá trị kỳ vọng và LOTUS](./22_expected_value.md#node-p3585vu) · [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4)
+**🔗 See also:** [Giá trị kỳ vọng và LOTUS](./22_expected_value.md#node-p3585vu) · [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4) · [Score Statistic Confidence Intervals](./104_interval_estimation.md#node-k8b5j5h)
 
 <br>
 
@@ -3029,24 +3110,34 @@
 > Còn khúc cuối nói về Lagrangian multipler test, quay lại sau.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **93/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú xuất sắc, bạn đã tự giải mã và chứng minh chi tiết định lý hội tụ theo luật số lớn/CLT vốn bị sách giáo trình giản lược.
-> ### Điểm mạnh
-> - **Tư duy toán học rất chặt chẽ**: Bạn không chấp nhận mù quáng kết luận 'Z_S hội tụ về Normal(0,1)' từ định lý 10.1.12 mà chủ động phân rã score statistic $S(\theta_0)$ thành tổng các biến ngẫu nhiên độc lập $Y_i = \frac{\partial}{\partial \theta} \log f(X_i|\theta_0)$.
-> - **Triển khai chuẩn xác CLT**: Việc chỉ ra $E_{\theta_0}(Y_i) = 0$ và $\text{Var}_{\theta_0}(Y_i) = I_1(\theta_0)$, từ đó áp dụng CLT cổ điển để suy ra $Z_S = \frac{S(\theta_0)}{\sqrt{I_n(\theta_0)}} \xrightarrow{d} \mathcal{N}(0,1)$ là hoàn toàn chính xác và sáng sủa.
-> - **Hiểu rõ bản chất kiểm định tiệm cận**: Phần diễn giải mức ý nghĩa tiệm cận (asymptotic level) $\alpha$ với giá trị tới hạn $z_{\alpha/2}$ được lập luận đúng định nghĩa xác suất lỗi loại I.
+> Ghi chú xuất sắc, giải thích rất cặn kẽ và chính xác bản chất hội tụ theo định lý giới hạn trung tâm (CLT) của thống kê kiểm định điểm số (score test). Mọi phép biến đổi vi tích phân và kỳ vọng đều chuẩn xác, chỉ có một vài lỗi nhỏ về dấu đóng ngoặc và giả định hoán đổi tích phân - đạo hàm.
 >
-> ### Điểm cần cải thiện & Lưu ý
-> - **Điều kiện chính quy (Regularity Conditions)**: Khi bạn hoán đổi vị trí giữa phép lấy đạo hàm $\frac{\partial}{\partial \theta}$ và tích phân $\int f(x|\theta)dx$, hãy ghi chú thêm là bước này yêu cầu các điều kiện chính quy của họ phân phối (miền giá trị của $X$ không phụ thuộc vào $\theta$).
-> - **Giả định i.i.d**: Khi viết $I_n(\theta_0) = n I_1(\theta_0)$ và áp dụng CLT, cần nêu rõ giả định mẫu ngẫu nhiên độc lập cùng phân phối (i.i.d).
+> **🟡 Minor issues**
 >
-> ### Gợi ý nâng cao
-> - Hãy kết nối trực giác hình học: Hàm Score là độ dốc (slope) của hàm log-likelihood. Tại sao ta chỉ cần đánh giá độ dốc này tại $\theta_0$? Điều này tạo nên lợi thế vượt trội gì về mặt tính toán của Score Test so với Wald Test hay Likelihood Ratio Test?
+> **1.** *"= (∂/∂θ ∫f(xi|θ) dxi) |θ=θ0"*
 >
-> **⭐ Bonus points**
-> - Tự chứng minh trọn vẹn sự hội tụ phân phối chuẩn của Score test thông qua định lý giới hạn trung tâm (CLT) mà sách đã lược bỏ.
-> - Chứng minh chặt chẽ tính chất $E[Y_i] = 0$ và $\text{Var}(Y_i) = I_1(\theta_0)$ bằng định nghĩa tích phân và LOTUS.
+> Phép hoán đổi giữa dấu tích phân và đạo hàm (Leibniz integral rule) ngầm định các điều kiện chính quy (regularity conditions) của họ phân phối, cụ thể là miền xác định không phụ thuộc vào θ và hàm mật độ đủ trơn.
+>
+> **2.** *"⇔ I1(θ) = ∫ [[∂/∂θ f(xi|θ)]² / f(xi|θ) dxi"*
+>
+> Lỗi gõ thiếu dấu ngoặc đóng ']' trong biểu thức giải tích.
+>
+> **3.** *"⇔ (S0/√n√I1(θ0) → (d) n(0,1)"*
+>
+> Lỗi typo thiếu dấu ngoặc đóng ')' ở vế trái.
+>
+>
+> **✓ Strengths**
+> - Chứng minh rất rõ ràng việc Z_S có mean = 0 và variance = 1 chính xác dưới giả thuyết H0.
+> - Tự triển khai thành công bước trung gian quy S(θ0) về tổng các biến độc lập ngẫu nhiên cùng phân phối (i.i.d) để áp dụng định lý giới hạn trung tâm (CLT).
+> - Kết nối chính xác quan hệ In(θ) = n * I1(θ) đối với mẫu i.i.d để hoàn tất chứng minh Z_S hội tụ về phân phối chuẩn tắc N(0,1).
+> - Trình bày mạch lạc logic xác định miền bác bỏ hai phía và định nghĩa mức ý nghĩa tiệm cận alpha (asymptotic level).
+>
+> **💡 Deeper notes**
+> - Lưu ý rằng thông tin Fisher In(θ) = n * I1(θ) chỉ áp dụng trực tiếp khi mẫu X1, ..., Xn là độc lập và cùng phân phối (i.i.d).
+> - Khi H0 là giả thuyết phức hợp (composite hypothesis), θ0 sẽ được thay bằng ước lượng hợp lý cực đại có điều kiện (restricted MLE), khi đó việc phân tích tiệm cận sẽ cần thêm các khai triển Taylor bậc cao.
 
 **🔗 See also:** [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr)
 
@@ -3214,26 +3305,28 @@
 > và kết quả này giống y như 10.3.4 nơi mà đã nói cái cách thứ hai đó chính là Score test
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú xuất sắc, thể hiện sự hiểu biết sâu sắc về bản chất lý thuyết Score test và các bước biến đổi đại số hoàn toàn chính xác.
-> ### Điểm mạnh
-> - **Hiểu sâu về mặt khái niệm:** Bạn giải thích rất sáng tạo và chính xác về vai trò của biến/tham số trong hàm Score $S(\theta)$ thông qua góc nhìn hàm lập trình, giúp tránh nhầm lẫn giữa tham số thực $\theta$ và biến hình thức $\omega$.
-> - **Chứng minh nền tảng toán học:** Việc tự chứng minh $E_\theta[S(\theta)] = 0$ bằng quy tắc hoán đổi tích phân và đạo hàm là một điểm cộng lớn, chứng minh bạn nắm chắc điều kiện chính quy (regularity conditions).
-> - **Khai triển đại số chi tiết:** Các bước đạo hàm hàm log-likelihood của phân phối Bernoulli và biến đổi để đưa về dạng $S(p) = \frac{\hat{p}_n - p}{p(1-p)/n}$ rất cẩn thận, tường minh và chính xác.
-> - **Tính toán kiểm định hoàn chỉnh:** Rút gọn đại số tỷ số $Z_S = \frac{S(p_0)}{\sqrt{I_n(p_0)}}$ thành công thức kinh điển của kiểm định tỉ lệ rất mượt mà.
+> Ghi chú rất xuất sắc, hiểu bản chất thống kê kiểm định Score (Rao score test) và tự biến đổi đạo hàm log-likelihood cùng thống kê $Z_S$ hoàn toàn chính xác.
 >
-> ### Điểm cần lưu ý / Cải thiện
-> - Trong đoạn rút gọn cuối: `Z_S = {(p̂n - p0) / [p0(1-p0)/n]} / √n/[p0(1-p0)]`, chú ý đặt đúng ngoặc căn thức cho mẫu số: $\sqrt{I_n(p_0)} = \sqrt{\frac{n}{p_0(1-p_0)}}$ để tránh hiểu nhầm khi đọc nhanh.
-> - Khi hoán đổi dấu đạo hàm và tích phân $\int \frac{\partial}{\partial \theta} f = \frac{\partial}{\partial \theta} \int f$, trên lý thuyết cần nhắc thêm giả định mô hình thỏa mãn các điều kiện chính quy (regularity conditions - hỗ trợ của $X$ không phụ thuộc vào $\theta$).
+> **🟡 Minor issues**
 >
-> ### Gợi ý mở rộng
-> - Thử tính phương sai $Var_\theta(S(\theta))$ để tự nghiệm lại định lý quan trọng: $Var_\theta(S(\theta)) = I_n(\theta)$, từ đó hiểu rõ vì sao việc chia cho $\sqrt{I_n(p_0)}$ lại chuẩn hóa $Z_S$ về phương sai bằng $1$.
+> **1.** *"Kế tới, nếu đặt Z_S = S(θ0)/√In(θ0) ta chứng minh được là dưới giả định Z_S → (d) n(0,1) nên từ đó ta dùng Z_S để tạo test nói trên."*
 >
-> **⭐ Bonus points**
-> - Tự chứng minh tính chất kỳ vọng của hàm Score triệt tiêu: E_θ[S(θ)] = 0 bằng cách hoán đổi đạo hàm và tích phân.
-> - Giải thích trực quan và chính xác về mặt toán học vai trò của tham số như một đối số hàm lập trình (dummy variable).
-> - Nêu rõ quy tắc bác bỏ giả thuyết H0 và tính hội tụ tiệm cận phân phối chuẩn Z_S → N(0,1).
+> Câu viết bị nhầm từ ngữ: cần viết rõ là 'dưới giả thuyết $H_0$' (under $H_0$) thay vì 'dưới giả định', vì phân phối tiệm chuẩn chuẩn tắc chỉ đúng khi tham số thực sự bằng $\theta_0$.
+>
+> **2.** *"Vậy Z_S = {(p̂n - p0) / [p0(1-p0)/n]} / √n/[p0(1-p0)]"*
+>
+> Cách viết dấu căn '√n/[p0(1-p0)]' dễ gây hiểu lầm là $\frac{\sqrt{n}}{p_0(1-p_0)}$ thay vì $\sqrt{\frac{n}{p_0(1-p_0)}}$, dù bước rút gọn tiếp theo bạn đã ra kết quả đúng.
+>
+>
+> **✓ Strengths**
+> - Trực giác rất tốt về bản chất của hàm score $S(\omega)$ như một hàm hai biến được evaluate trên mẫu ngẫu nhiên $\mathbf{X}$.
+> - Chứng minh chặt chẽ tính chất kì vọng của score bằng 0 tại giá trị tham số đúng $\mathbb{E}_\theta[S(\theta)] = 0$.
+> - Từng bước biến đổi đạo hàm log-likelihood của mô hình Bernoulli rất chi tiết, mạch lạc và chuẩn xác.
+>
+> **💡 Deeper notes**
+> - Việc hoán đổi thứ tự đạo hàm và tích phân $\int \frac{\partial}{\partial \theta} f d\mathbf{x} = \frac{\partial}{\partial \theta} \int f d\mathbf{x}$ đòi hỏi các điều kiện chính quy (regularity conditions), cụ thể là miền giá trị (support) của $X$ không được phụ thuộc vào tham số $\theta$.
 
 **🔗 See also:** [Large-Sample Binomial Tests](#node-8xsav7v)
 
