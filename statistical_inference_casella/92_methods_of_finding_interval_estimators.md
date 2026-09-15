@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `52` Notes | `61` Screenshots | `2` AI Reviews
+📊 **Progress:** `52` Notes | `61` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-7s1kn1j"></a>
@@ -295,6 +295,34 @@
 > 2) Còn **MUỐN KẾT LUẬN μ = μ0**, thì **PHẢI QUAN SÁT THẤY Xbar NẰM TRONG
 > ĐOẠN NÀY A(μ0)**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+>
+> Ghi chú nắm rất chuẩn bản chất hình học của mối quan hệ đối ngẫu giữa miền chấp nhận của kiểm định và khoảng tin cậy (phép nghịch đảo kiểm định). Tuy nhiên, cách diễn đạt mang tính tuyệt đối hóa ('phải nằm trong', 'kết luận mu = mu0') cần được chuẩn hóa theo đúng ngôn ngữ suy diễn thống kê tần suất.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"MUỐN KẾT LUẬN μ = μ0, thì PHẢI QUAN SÁT THẤY Xbar NẰM TRONG ĐOẠN NÀY A(μ0)"*
+>
+> Trong kiểm định giả thuyết thống kê, việc mẫu quan sát rơi vào miền chấp nhận A(μ0) đồng nghĩa với việc 'chưa đủ bằng chứng để bác bỏ H0' (fail to reject), chứ không đồng nghĩa với việc chứng minh hay kết luận chắc chắn rằng μ = μ0.
+>
+> **2.** *"GIÚP KẾT LUẬN μ PHẢI NẰM TRONG ĐOẠN NÀY C(xbar*)"*
+>
+> Trong trường phái tần suất (frequentist), μ là một hằng số cố định chưa biết. Khoảng C(xbar*) là một khoảng ngẫu nhiên; sau khi quan sát dữ liệu, ta chỉ nói khoảng này bao phủ μ với độ tin cậy 1 - α, không dùng từ tuyệt đối 'phải nằm trong'.
+>
+> **3.** *"cái test rule của UMPtest"*
+>
+> Với bài toán kiểm định hai phía cho giá trị trung bình phân phối chuẩn, không tồn tại kiểm định mạnh nhất đều (UMP test), mà đây là kiểm định không chệch mạnh nhất đều (UMPU test) hoặc kiểm định tỷ số khả dĩ (LRT).
+>
+>
+> **✓ Strengths**
+> - Đọc và hiểu rất chính xác cơ chế đối ngẫu hình học: gióng ngang từ xbar* ra khoảng tin cậy C(xbar*) của μ, và gióng dọc từ μ0 ra miền chấp nhận A(μ0) của xbar.
+> - Nhận diện đúng rằng khoảng tin cậy thu được chính là tập hợp tất cả các giá trị μ0 mà kiểm định tương ứng không bác bỏ.
+>
+> **💡 Deeper notes**
+> - Duality theorem: C(x) = {θ0: x ∈ A(θ0)}, nghĩa là kiểm định mức α tương đương hoàn toàn với việc xây dựng khoảng tin cậy 1 - α thông qua phép nghịch đảo (test inversion).
+> - Hai đường thẳng song song trong hình thể hiện phương sai σ^2 đã biết. Nếu σ chưa biết và phải ước lượng bằng s, các đường biên này sẽ phụ thuộc vào phân phối Student-t thay vì phân phối chuẩn Z.
+
 <br>
 
 <a id="node-cebe6p1"></a>
@@ -311,6 +339,8 @@
 >
 > Màu đỏ: lấy θ0. gom hết các ông **x** ∈ **X** mà C(**x**) chứa θ0, đặt là
 > A(θ0)
+
+**🔗 See also:** [Score Statistic Confidence Intervals](./104_interval_estimation.md#node-k8b5j5h)
 
 <br>
 
