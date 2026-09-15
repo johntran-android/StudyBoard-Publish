@@ -1288,6 +1288,8 @@
 >
 > Thế thì, đại ý là, **DELTA METHOD** sẽ giúp trong việc này
 
+**🔗 See also:** [Logistic Sigmoid and Logit Function *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/42_probabilistic_generative_model.md#node-0mccuff)
+
 <br>
 
 <a id="node-kd4hd37"></a>
