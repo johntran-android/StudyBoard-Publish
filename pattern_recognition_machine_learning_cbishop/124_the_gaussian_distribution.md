@@ -819,7 +819,7 @@
 >
 > Σ = AAᵀ, lí do có thể phân tách Σ, hay nói cách khác, có thể tìm được A thỏa điều này là vì Σ là matrix xác định dương (positive definite)
 
-**🔗 See also:** [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8) · [Log Marginal Likelihood Derivation](./351_evaluation_of_the_evidence_function.md#node-ddcs0pi) · [Section 3.5.3 Effective Number of Parameters](./353_effective_number_of_parameters.md#node-2wanjgv) · [Ex 3.6  MLE Hồi quy Đa biến](./37_exercises.md#node-cq8t94f) · [Ex 3.7 Posterior Distribution in Linear Basis Models](./37_exercises.md#node-97teyoh) · [Section 4.2.1 Continuous Inputs](./421_continuous_inputs.md#node-gsbsdud)
+**🔗 See also:** [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8) · [Log Marginal Likelihood Derivation](./351_evaluation_of_the_evidence_function.md#node-ddcs0pi) · [Section 3.5.3 Effective Number of Parameters](./353_effective_number_of_parameters.md#node-2wanjgv) · [Ex 3.6  MLE Hồi quy Đa biến](./37_exercises.md#node-cq8t94f) · [Ex 3.7 Posterior Distribution in Linear Basis Models](./37_exercises.md#node-97teyoh) · [Section 4.2.1 Continuous Inputs](./421_continuous_inputs.md#node-gsbsdud) · [MLE for Class Mean Vectors](./422_maximum_likelihood_solution.md#node-71dks0j)
 
 <br>
 
