@@ -17,7 +17,7 @@ Mình thì vẫn làm việc như một app developer, với thu nhập từ cá
 
 Nói thêm tí về StudyBoard, hiện nay và sắp tới đây sẽ chính là chiến trường của mình để áp những kiến thức AI mình vào. Nói ngắn gọn, hiện giờ mình đang build StudyBoard xoay quanh chính cái nhu cầu học của mình (thuật ngữ phát triển sản phẩm kiểu này gọi là "eat my owm dogfood"), nó lại giúp mình học tốt hơn và kiến thức AI mình học sẽ quay lại giúp nâng cấp cái lõi của nó.
 
-**`~12,333 notes` · `~17,821 screenshots` · `18 notebooks`**
+**`~12,335 notes` · `~17,824 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -563,7 +563,7 @@ Nói thêm tí về StudyBoard, hiện nay và sắp tới đây sẽ chính là
 ### Pattern Recognition Machine Learning_C.Bishop
 <!-- key: pattern_recognition_machine_learning_cbishop -->
 <!-- group: Machine Learning Foundation -->
-`419 notes · 635 screenshots · 64 sections`
+`421 notes · 638 screenshots · 64 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
 > 
@@ -635,7 +635,7 @@ Nói thêm tí về StudyBoard, hiện nay và sắp tới đây sẽ chính là
 | [4.1.7 Perceptron](pattern_recognition_machine_learning_cbishop/417_perceptron.md) | 6 | 10 |
 | [4.2 Probabilistic Generative Model](pattern_recognition_machine_learning_cbishop/42_probabilistic_generative_model.md) | 2 | 4 |
 | [4.2.1 Continuous inputs](pattern_recognition_machine_learning_cbishop/421_continuous_inputs.md) | 3 | 7 |
-| [4.2.2 Maximum likelihood solution](pattern_recognition_machine_learning_cbishop/422_maximum_likelihood_solution.md) | 1 | 2 |
+| [4.2.2 Maximum likelihood solution](pattern_recognition_machine_learning_cbishop/422_maximum_likelihood_solution.md) | 3 | 5 |
 | [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) | 19 | 23 |
 | [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) | 5 | 7 |
 
