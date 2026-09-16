@@ -1,6 +1,6 @@
 # 1.5 Decision Theory
 
-📊 **Progress:** `29` Notes | `41` Screenshots | `3` AI Reviews
+📊 **Progress:** `29` Notes | `41` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-0es6zw7"></a>
@@ -358,6 +358,8 @@
 >
 > ∫R2 f(C1,𝐱)d𝐱 + ∫R1 f(C2,𝐱)d𝐱
 
+**🔗 See also:** [Generalized Linear Model for K Classes](./421_continuous_inputs.md#node-q8w0jnb)
+
 <br>
 
 <a id="node-6papqg6"></a>
@@ -521,6 +523,28 @@
 >
 > nên decision rule tối ưu cũng là: Assign class C1 nếu f(C2|𝐱) (tức posterior pdf
 > tại C2) < f(C1|𝐱)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú xuất sắc, người học đã chuyển hóa trực giác định tính trong sách thành một bài toán tối ưu hóa tập hợp (decision regions) chặt chẽ và rút ra kết luận hoàn toàn chính xác.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"f(t)|t=C1, tức prior distribution của T, evaluate tại t = C1"*
+>
+> Nhãn lớp C_k là biến ngẫu nhiên rời rạc, do đó tích phân trên toàn miền của x cho ra xác suất tiên nghiệm P(C_1) chứ không hẳn là hàm mật độ xác suất (pdf) evaluate tại C_1. Dù vậy, cách hiểu bản chất đại lượng không bị ảnh hưởng.
+>
+>
+> **✓ Strengths**
+> - Diễn giải toán học rất sáng tạo và chính xác khi biến việc chọn decision rule thành bài toán tối ưu phân hoạch miền R1, R2.
+> - Chứng minh chặt chẽ việc rút gọn hàm mục tiêu về tích phân trên miền R1 và chọn điều kiện dấu âm để cực tiểu hóa.
+> - Hiểu đúng bản chất tại sao quy tắc cực đại hậu nghiệm (MAP) lại trực tiếp làm giảm thiểu sai số phân lớp.
+>
+> **💡 Deeper notes**
+> - Trường hợp hòa (tie): Tại các điểm biên mà f(C1, x) = f(C2, x), giá trị của hàm dưới dấu tích phân bằng 0 nên việc gán x vào R1 hay R2 đều cho xác suất sai lầm như nhau. Với biến liên tục x, tập hợp các điểm này có độ đo Lebesgue bằng 0 (measure zero) nên không ảnh hưởng đến giá trị tích phân sai số.
+
+**🔗 See also:** [Generalized Linear Model for K Classes](./421_continuous_inputs.md#node-q8w0jnb)
 
 <br>
 
