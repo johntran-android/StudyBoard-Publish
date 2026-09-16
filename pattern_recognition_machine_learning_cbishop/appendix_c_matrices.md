@@ -1,6 +1,6 @@
 # Appendix C. Matrices
 
-📊 **Progress:** `19` Notes | `22` Screenshots | `17` AI Reviews
+📊 **Progress:** `19` Notes | `23` Screenshots | `17` AI Reviews
 
 ---
 <a id="node-zscgdad"></a>
@@ -12,6 +12,8 @@
 ## Tính chất của ma trận
 
 <p align="center"><kbd><img src="assets/tazxmzc91t.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/qvks99j4aoh.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi phần này thì đại khái là mình sẽ ôn lại một số cái tính chất của ma trận. Thì đại khái là giáo sư nói rằng mình không có nói chi tiết, không phải là một cái giáo trình về toán ma trận. Cho nên nó ông sẽ giả sử rằng người đọc đã có những cái kiến thức nền tảng về đại số tuyến tính. Một số kết quả thì ông sẽ chứng minh, nhưng một số trường hợp mà phức tạp thì ông sẽ không chứng minh. Và luôn luôn mình sẽ giả định rằng là nghịch đảo của ma trận tồn tại, cũng như là cái kích thước ma trận được thiết kế một cách phù hợp.
