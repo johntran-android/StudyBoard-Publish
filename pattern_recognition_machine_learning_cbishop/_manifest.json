@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1789426180711,
+  "publishedAt": 1789528351410,
   "sections": [
     {
       "title": "📋 Overview",
@@ -365,14 +365,20 @@
     {
       "title": "4.2.1 Continuous inputs",
       "path": "pattern_recognition_machine_learning_cbishop/421_continuous_inputs.md",
+      "noteCount": 3,
+      "imageCount": 7
+    },
+    {
+      "title": "4.2.2 Maximum likelihood solution",
+      "path": "pattern_recognition_machine_learning_cbishop/422_maximum_likelihood_solution.md",
       "noteCount": 1,
-      "imageCount": 4
+      "imageCount": 2
     },
     {
       "title": "Appendix C. Matrices",
       "path": "pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md",
       "noteCount": 19,
-      "imageCount": 22
+      "imageCount": 23
     },
     {
       "title": "Appendix D. Calculus of Variation",
@@ -381,6 +387,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 416,
-  "totalImages": 629
+  "totalNotes": 419,
+  "totalImages": 635
 }
