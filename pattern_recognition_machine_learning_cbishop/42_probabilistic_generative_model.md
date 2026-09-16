@@ -220,7 +220,7 @@
 > - Thuật ngữ chuẩn trong sách cho hàm nghịch đảo a = ln[σ/(1-σ)] là 'logit function', đại diện cho logit hay 'log odds'.
 > - Trong biểu diễn softmax exp(a_k) / ∑ exp(a_j), việc cộng/trừ một hằng số c vào tất cả a_k không làm thay đổi giá trị xác suất đầu ra (tính bất biến tịnh tiến - translation invariance), đây là kỹ thuật quan trọng giúp tránh tràn số (numerical stability) trong thực tế tính toán.
 
-**🔗 See also:** [Ước lượng Odds và Delta Method *(Statistical Inference - Casella)*](../statistical_inference_casella/55_convergence_concepts.md#node-q6etf0o)
+**🔗 See also:** [Ước lượng Odds và Delta Method *(Statistical Inference - Casella)*](../statistical_inference_casella/55_convergence_concepts.md#node-q6etf0o) · [Generalized Linear Model for K Classes](./421_continuous_inputs.md#node-q8w0jnb)
 
 <br>
 
