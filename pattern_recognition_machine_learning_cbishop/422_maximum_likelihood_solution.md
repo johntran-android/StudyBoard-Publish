@@ -1,6 +1,6 @@
 # 4.2.2 Maximum likelihood solution
 
-📊 **Progress:** `1` Notes | `2` Screenshots | `1` AI Reviews
+📊 **Progress:** `3` Notes | `5` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-cw9ndyg"></a>
@@ -345,6 +345,643 @@
 >
 > **💡 Deeper notes**
 > - Sở dĩ bài toán tối ưu có thể tách riêng biệt việc tìm π mà không phụ thuộc vào 𝛍1, 𝛍2, 𝚺 là do không gian tham số phân tách (decoupled parameter spaces) và hàm log-likelihood tách thành tổng các hàm mục tiêu độc lập giữa tham số prior và class-conditional.
+
+<br>
+
+<a id="node-71dks0j"></a>
+
+### MLE for Class Mean Vectors
+
+<p align="center"><kbd><img src="assets/bxo9bog0qb.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, sau khi đã giải ra MLE của π, tức πML, ta giải tiếp các variable khác: 𝛍1 và 𝛍2. Trước tiên là 𝛍1. Tương tự, giải bài toán tối ưu theo 𝛍1 thì coi các biến khác là fixed (1) (với π thì giờ có thể lắp πML vào)
+>
+>
+>
+> Viết lại hàm
+>
+>
+>
+> ln L(𝛍1, 𝛍2, 𝚺, π|𝐗, 𝐭)
+>
+>
+>
+> = Σn=1:N { tn ln \[π 𝒩(𝐱n|𝛍1, 𝚺)\] + (1-tn) ln { \[(1-π) 𝒩(𝐱n|𝛍2, 𝚺)\] }
+>
+>
+>
+> Vì ý (1), ta biến đổi thêm tí để tách các term không dính tới 𝛍1 ra để chuyển thành bài toán tương đương bằng cách bỏ các term này (hoặc cũng có thể hiểu cách khác là đạo hàm của chúng đối với 𝛍1 bằng 0)
+>
+>
+>
+> .. = Σn=1:N { tn ln (π) + tn ln \[𝒩(𝐱n|𝛍1, 𝚺)\] + (1-tn) ln (1-π) + (1-tn) ln \[𝒩(𝐱n|𝛍2, 𝚺)\] }
+>
+>
+>
+> Bỏ các constant đối với 𝛍1, ta còn Σn=1:N { tn ln \[𝒩(𝐱n|𝛍1, 𝚺)\] }
+>
+>
+>
+> thay công thức của 𝒩(𝐱n|𝛍1, 𝚺)\] vào:
+>
+>
+>
+> Σn=1:N { tn ln \[1/(2π)^(D/2) × 1/√|𝚺| × exp\[(-1/2)(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1)\] }
+>
+>
+>
+> = Σn=1:N { tn ln \[1/(2π)^(D/2)\] + tn ln (1/√|𝚺|) + tn ln exp\[(-1/2)(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1)\] }
+>
+>
+>
+> và tiếp tục bỏ các constant gồm normalizing constant và term dính tới det của 𝚺, còn lại:
+>
+>
+>
+> Σn=1:N { tn ln exp\[(-1/2)(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1)\] }
+>
+>
+>
+> = Σn=1:N { tn (-1/2)(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1)\] }
+>
+>
+>
+> = (-1/2) Σn=1:N { tn(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1)\] }
+>
+>
+>
+> Như vậy bài toán chỉ còn là maximize over 𝛍 hàm số (-1/2) Σn=1:N { tn(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1)\] }
+>
+>
+>
+> Nhân phân phối vào: tn(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1) = tn(𝐱nᵀ 𝚺⁻¹-𝛍1ᵀ 𝚺⁻¹) (𝐱n-𝛍1)
+>
+>
+>
+> = tn(𝐱nᵀ 𝚺⁻¹𝐱n-𝛍1ᵀ 𝚺⁻¹𝐱n-𝐱nᵀ 𝚺⁻¹𝛍1+𝛍1ᵀ 𝚺⁻¹𝛍1)
+>
+>
+>
+> Do (𝛍1ᵀ 𝚺⁻¹𝐱n)ᵀ = 𝐱nᵀ(𝛍1ᵀ 𝚺⁻¹)ᵀ = 𝐱nᵀ(𝚺⁻¹)ᵀ(𝛍1ᵀ)ᵀ = 𝐱nᵀ(𝚺⁻¹)𝛍1 = 𝐱nᵀ 𝚺⁻¹𝛍1)
+>
+>
+>
+> = tn (𝐱nᵀ 𝚺⁻¹𝐱n - 2𝐱nᵀ 𝚺⁻¹𝛍1 + 𝛍1ᵀ𝚺⁻¹𝛍1)
+>
+>
+>
+> = tn𝐱nᵀ 𝚺⁻¹𝐱n - 2tn 𝐱nᵀ 𝚺⁻¹𝛍1 + tn 𝛍1ᵀ𝚺⁻¹𝛍1
+>
+>
+>
+> = (1/2) 𝛍1ᵀ (2tn𝚺⁻¹) 𝛍1 - 2tn 𝐱nᵀ 𝚺⁻¹𝛍1 + tn𝐱nᵀ 𝚺⁻¹𝐱n
+>
+>
+>
+> = (1/2) 𝛍1ᵀ (2tn𝚺⁻¹) 𝛍1 + \[-2tn(𝚺⁻¹)ᵀ𝐱n\]ᵀ 𝛍1 + tn𝐱nᵀ 𝚺⁻¹𝐱n
+>
+>
+>
+> ⟹ (-1/2) Σn=1:N \[(1/2) 𝛍1ᵀ (2tn𝚺⁻¹) 𝛍1 + \[-2tn(𝚺⁻¹)ᵀ𝐱n\]ᵀ 𝛍1 + tn𝐱nᵀ 𝚺⁻¹𝐱n\]
+>
+>
+>
+> Đây là hàm bậc hai của 𝛍1. Với hàm f(𝐱) = (1/2)𝐱ᵀ𝐏𝐱 + 𝐪ᵀ𝐱 + r, thì ∇f(𝐱) = 𝐏ᵀ𝐱 + 𝐪
+>
+>
+>
+> ---
+>
+>
+>
+> Active recall chút đã học trong MIT 18s096 cách tìm gradient của hàm f(𝐱) = (1/2)𝐱ᵀ𝐏𝐱 + 𝐪ᵀ𝐱 + r (giả định 𝐏 đối xứng)
+>
+>
+>
+> Ta sẽ đưa df về dạng một linear operator của d𝐱, ở đây sẽ là một dot product của gradient vector và d𝐱:
+>
+>
+>
+> df = (1/2)(𝐱+d𝐱)ᵀ𝐏(𝐱+d𝐱) + 𝐪ᵀ(𝐱+d𝐱) + r - (1/2)𝐱ᵀ𝐏𝐱 - 𝐪ᵀ𝐱 - r
+>
+>
+>
+> = (1/2)(𝐱ᵀ𝐏𝐱 + 2𝐱ᵀ𝐏d𝐱 + d𝐱ᵀ𝐏d𝐱) + 𝐪ᵀ𝐱 + 𝐪ᵀd𝐱 + r - (1/2)𝐱ᵀ𝐏𝐱 - 𝐪ᵀ𝐱 - r
+>
+>
+>
+> = (1/2)(𝐱ᵀ𝐏𝐱 + 2𝐱ᵀ𝐏d𝐱 + d𝐱ᵀ𝐏d𝐱) + 𝐪ᵀd𝐱 - (1/2)𝐱ᵀ𝐏𝐱
+>
+>
+>
+> = (1/2)𝐱ᵀ𝐏𝐱 + 𝐱ᵀ𝐏d𝐱 + (1/2)d𝐱ᵀ𝐏d𝐱 + 𝐪ᵀd𝐱 - (1/2)𝐱ᵀ𝐏𝐱
+>
+>
+>
+> = 𝐱ᵀ𝐏d𝐱 + 𝐪ᵀd𝐱
+>
+>
+>
+> = (𝐱ᵀ𝐏 + 𝐪ᵀ)d𝐱
+>
+>
+>
+> = (𝐏ᵀ𝐱 + 𝐪)ᵀd𝐱 ⇒ ∇f(𝐱) = 𝐏ᵀ𝐱 + 𝐪)
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> Đạo hàm đối với 𝛍1 là: (-1/2) Σn=1:N\[(2tn𝚺⁻¹)ᵀ𝛍1 -2tn(𝚺⁻¹)ᵀ𝐱n\]
+>
+>
+>
+> = (-1/2) Σn=1:N {2tn𝚺⁻¹𝛍1 - 2tn𝚺⁻¹𝐱n}
+>
+>
+>
+> ((2tn𝚺⁻¹)ᵀ = (𝚺⁻¹)ᵀ(2tn)ᵀ = (𝚺⁻¹)(2tn) = (2tn)(𝚺⁻¹) (do tn là scalar, tranpose bằng chính nó, còn 𝚺⁻¹ là nghịch đảo của covariance matrix 𝚺, đương nhiên là matrix đối xứng)
+>
+>
+>
+> Cho đạo hàm bằng 0 (điều kiện cần tối ưu bậc nhất):
+>
+>
+>
+> (-1/2) Σn=1:N {2tn𝚺⁻¹𝛍1 - 2tn𝚺⁻¹𝐱n} = 0
+>
+>
+>
+> ⇔ Σn=1:N (tn𝚺⁻¹𝛍1) = Σn=1:N (tn𝚺⁻¹𝐱n)
+>
+>
+>
+> Vế trái, đem 𝚺⁻¹𝛍1 ra ngoài tổng. Vế phải chuyển tn vào giữa, vì scalar được phép di chuyển thứ tự tự do, rồi đem 𝚺⁻¹ ra ngoài tổng.
+>
+>
+>
+> ⇔ 𝚺⁻¹𝛍1 (Σn=1:N tn) = Σn=1:N (𝚺⁻¹ tn 𝐱n)
+>
+>
+>
+> ⇔ 𝚺⁻¹𝛍1 (Σn=1:N tn) = 𝚺⁻¹ Σn=1:N (tn 𝐱n)
+>
+>
+>
+> (Σn=1:N tn) là N1, vì sao? vì các data point thuộc 𝒞1 sẽ có target = 1, của 𝒞2 sẽ có target t = 0, nên tổng này chính là số các số 1, là số các data point thuộc 𝒞1.
+>
+>
+>
+> ⇔ 𝛍1 N1 = Σn=1:N (tn 𝐱n)
+>
+>
+>
+> ⇔ 𝛍1 = (1/N1) Σn=1:N (tn 𝐱n) → 4.75
+>
+>
+>
+> Vậy Maximum Likelihood estimator của 𝛍1 là (1/N1) Σn=1:N (tn 𝐱n)
+>
+>
+>
+> Σn=1:N (tn 𝐱n)? Ngẫm sẽ thấy, chính là tổng các 𝐱 của các data point thuộc class 𝒞1, vậy chia cho N1, chính là ta có sample mean các input 𝐱 của các data point thuộc class 𝒞1.
+>
+>
+>
+> ---
+>
+>
+>
+> Việc giải tìm MLE của 𝛍2 hoàn toàn tương tự, sẽ ra (1/N2) Σn=1:N (1-tn) 𝐱n và với Σn=1:N (1-tn) 𝐱n, again, cũng có ý nghiã là sample mean của các input 𝐱 của data point thuộc class 𝒞2.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, tự lực biến đổi chi tiết từ hàm log-likelihood đến nghiệm đóng MLE của kỳ vọng mà không chỉ chép lại sách. Phần vi phân ma trận được giải thích rõ ràng.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"= (1/2)(𝐱ᵀ𝐏𝐱 + 2𝐱ᵀ𝐏d𝐱 + d𝐱ᵀ𝐏d𝐱) ... (𝐏ᵀ𝐱 + 𝐪)ᵀd𝐱 ⇒ ∇f(𝐱) = 𝐏ᵀ𝐱 + 𝐪)"*
+>
+> Khi khai triển (𝐱+d𝐱)ᵀ𝐏(𝐱+d𝐱) thành 𝐱ᵀ𝐏𝐱 + 2𝐱ᵀ𝐏d𝐱, bạn đã ngầm thừa nhận 𝐏 đối xứng (để 𝐱ᵀ𝐏d𝐱 = d𝐱ᵀ𝐏𝐱). Trong trường hợp tổng quát nếu 𝐏 không đối xứng thì gradient là 1/2(𝐏 + 𝐏ᵀ)𝐱 + 𝐪. Tuy nhiên trong bài toán này 𝐏 = 2tn𝚺⁻¹ là ma trận đối xứng nên kết quả cuối cùng hoàn toàn chuẩn xác.
+>
+>
+> **✓ Strengths**
+> - Biến đổi đại số ma trận tỉ mỉ từ khai triển Gauss, cô lập thành phần chứa μ1 cho đến dạng toàn phương.
+> - Tự chứng minh đạo hàm hàm bậc hai nhiều biến bằng vi phân ma trận (differential form) rất chặt chẽ.
+> - Hiểu rõ bản chất ý nghĩa thống kê của tổng biến chỉ thị Σ tn = N1 và sample mean của từng lớp.
+>
+> **💡 Deeper notes**
+> - Việc nhân cả hai vế với 𝚺 để triệt tiêu 𝚺⁻¹ ngầm dựa trên giả định ma trận hiệp phương sai 𝚺 là khả nghịch (dương xác định).
+
+**🔗 See also:** [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj)
+
+<br>
+
+<a id="node-ruxkjon"></a>
+
+#### MLE for Shared Covariance Matrix
+
+<p align="center"><kbd><img src="assets/x21d80n3v7s.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ca461jjgnk.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, cuối cùng làm với 𝚺:
+>
+>
+>
+> Bắt đầu từ chỗ này của note trước:
+>
+>
+>
+> ln likelihood = Σn=1:N { tn ln (π) + tn ln \[𝒩(𝐱n|𝛍1, 𝚺)\] + (1-tn) ln (1-π) + (1-tn) ln \[𝒩(𝐱n|𝛍2, 𝚺)\] }
+>
+>
+>
+> Bỏ các term không dính tới 𝚺
+>
+>
+>
+> Σn=1:N { tn ln \[𝒩(𝐱n|𝛍1, 𝚺)\] + (1-tn) ln \[𝒩(𝐱n|𝛍2, 𝚺)\] }
+>
+>
+>
+> Thay công thức pdf vô:
+>
+>
+>
+> 1/(2π)^(D/2) × 1/√|𝚺| × exp\[(-1/2)(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1)
+>
+>
+>
+> Σn=1:N { tn ln \[1/(2π)^(D/2) × 1/√|𝚺| × exp\[(-1/2)(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1)\] +
+>
+>
+>
+> (1-tn) ln \[1/(2π)^(D/2) × 1/√|𝚺| × exp\[(-1/2)(𝐱n-𝛍2)ᵀ 𝚺⁻¹ (𝐱n-𝛍2)\] }
+>
+>
+>
+> = Σn=1:N { tn ln \[1/(2π)^(D/2)\] + tn ln \[1/√|𝚺|\] + tn ln exp\[(-1/2)(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1)\] +
+>
+>
+>
+> (1-tn) ln \[1/(2π)^(D/2)\] + (1-tn) ln (1/√|𝚺|) + (1-tn) ln exp\[(-1/2)(𝐱n-𝛍2)ᵀ 𝚺⁻¹ (𝐱n-𝛍2)\] }
+>
+>
+>
+> (dùng tính chất hàm lg: ln(AB) = ln(A) + ln(B))
+>
+>
+>
+> Bỏ các term không dính 𝚺
+>
+>
+>
+> = Σn=1:N { tn ln \[1/√|𝚺|\] + tn ln exp\[(-1/2)(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1)\] + (1-tn) ln (1/√|𝚺|) + (1-tn) ln exp\[(-1/2)(𝐱n-𝛍2)ᵀ 𝚺⁻¹ (𝐱n-𝛍2)\] }
+>
+>
+>
+> = Σn=1:N { tn ln \[1/√|𝚺|\] + tn(-1/2)(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1) + (1-tn) ln (1/√|𝚺|) + (1-tn) (-1/2)(𝐱n-𝛍2)ᵀ 𝚺⁻¹ (𝐱n-𝛍2) }
+>
+>
+>
+> = Σn=1:N { tn ln \[|𝚺|^(-1/2)\] + (1-tn) ln (|𝚺|^(-1/2)) + tn(-1/2)(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1) + (1-tn) (-1/2)(𝐱n-𝛍2)ᵀ 𝚺⁻¹ (𝐱n-𝛍2) }
+>
+>
+>
+> = Σn=1:N { tn (-1/2) ln |𝚺| + (1-tn) (-1/2) ln |𝚺| + tn(-1/2)(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1) + (1-tn) (-1/2)(𝐱n-𝛍2)ᵀ 𝚺⁻¹ (𝐱n-𝛍2) }
+>
+>
+>
+> = Σn=1:N { (-1/2) ln |𝚺| + tn(-1/2)(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1) + (1-tn) (-1/2)(𝐱n-𝛍2)ᵀ 𝚺⁻¹ (𝐱n-𝛍2) }
+>
+>
+>
+> Áp dụng 𝐱ᵀ𝐀𝐱 = Trace(𝐱ᵀ𝐀𝐱) = tr(𝐀𝐱𝐱ᵀ) | tr(AB) = tr(BA)
+>
+>
+>
+> = Σn=1:N { (-1/2) ln |𝚺| + tn(-1/2) Tr\[(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1)\] + (1-tn)(-1/2) Tr\[(𝐱n-𝛍2)ᵀ 𝚺⁻¹ (𝐱n-𝛍2)\] }
+>
+>
+>
+> Tr\[(𝐱n-𝛍1)ᵀ 𝚺⁻¹ (𝐱n-𝛍1)\] = Tr\[𝚺⁻¹(𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ\] (tính xoay vòng của Trace)
+>
+>
+>
+> Tr\[(𝐱n-𝛍2)ᵀ 𝚺⁻¹ (𝐱n-𝛍2)\] = Tr\[𝚺⁻¹ (𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\]
+>
+>
+>
+> ... = Σn=1:N { (-1/2) ln |𝚺| + tn(-1/2) Tr\[𝚺⁻¹(𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ\] + (1-tn)(-1/2) Tr\[𝚺⁻¹ (𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\] }
+>
+>
+>
+> = Σn=1:N { (-1/2) ln |𝚺| + (-1/2) Tr\[𝚺⁻¹tn(𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ\] + (-1/2) Tr\[𝚺⁻¹(1-tn)(𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\] } (dùng tính linearity của Trace)
+>
+>
+>
+> = Σn=1:N { (-1/2) ln |𝚺| + (-1/2) Tr\[𝚺⁻¹tn(𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ + 𝚺⁻¹(1-tn)(𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\] }
+>
+>
+>
+> = (-1/2) { \[Σn=1:N ln |𝚺|\] + Σn=1:N Tr{𝚺⁻¹ \[tn(𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ + (1-tn)(𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\]} }
+>
+>
+>
+> = (-1/2) { N ln |𝚺| + Σn=1:N Tr{𝚺⁻¹ \[tn(𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ + (1-tn)(𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\]} }
+>
+>
+>
+> = (-1/2) N ln |𝚺| - (1/2) Tr{ 𝚺⁻¹ Σn=1:N { \[tn(𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ + (1-tn)(𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\] } }
+>
+>
+>
+> = (-N/2) ln |𝚺| - (1/2) Tr{ 𝚺⁻¹ Σn=1:N { \[tn(𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ + (1-tn)(𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\] } } (2)
+>
+>
+>
+> ---
+>
+>
+>
+> Xét Σn=1:N { \[tn(𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ + (1-tn)(𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\]
+>
+>
+>
+> = Σn=1:N \[tn(𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ + Σn=1:N \[(1-tn)(𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\]
+>
+>
+>
+> = Σn∈𝒞1 \[1 × (𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ + Σn∈𝒞2 \[0 × (𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ + Σn∈𝒞1 \[(1-1)(𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\] + Σn∈𝒞2 \[(1-0)(𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\]
+>
+>
+>
+> = Σn∈𝒞1 \[(𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ + Σn∈𝒞2 \[(𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\]
+>
+>
+>
+> Đặt 𝐒1 = (1/N1) Σn∈𝒞1 \[(𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ
+>
+>
+>
+> 𝐒2 = (1/N2) Σn∈𝒞2 \[(𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\]
+>
+>
+>
+> .. = N1 𝐒1 + N2 𝐒2
+>
+>
+>
+> Viết lại Σn=1:N { \[tn(𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ + (1-tn)(𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\] = N1 𝐒1 + N2 𝐒2
+>
+>
+>
+> ---
+>
+>
+>
+> (2) = (-N/2) ln |𝚺| - (1/2) Tr{ 𝚺⁻¹ (N1 𝐒1 + N2 𝐒2) } }
+>
+>
+>
+> Đặt 𝐒 = (N1 𝐒1 + N2 𝐒2)/N ⇒ (N1 𝐒1 + N2 𝐒2) = N 𝐒
+>
+>
+>
+> .. = (-N/2) ln |𝚺| - (1/2) Tr(𝚺⁻¹ N 𝐒)
+>
+>
+>
+> = (-N/2) ln |𝚺| - (N/2) Tr(𝚺⁻¹ 𝐒) → Chính là 4.77
+>
+>
+>
+> Đạo hàm của (-N/2) ln |𝚺| - (N/2) Tr(𝚺⁻¹ 𝐒) đối với 𝚺
+>
+>
+>
+> ---
+>
+>
+>
+> f(𝐀) = Tr(𝐀𝐁) 
+>
+>
+>
+> df = f(𝐀 + d𝐀) - f(𝐀) =
+>
+>
+>
+> = Tr\[(𝐀+ d𝐀)𝐁\] - Tr(𝐀𝐁) = Tr(𝐀𝐁 + d𝐀𝐁) - Tr(𝐀𝐁)
+>
+>
+>
+> = Tr(𝐀𝐁) + Tr(d𝐀 𝐁) - Tr(𝐀𝐁)
+>
+>
+>
+> =  Tr(d𝐀 𝐁)
+>
+>
+>
+> 𝐱 . 𝐲 = Σi 𝐱i × 𝐲i = 𝐱ᵀ𝐲
+>
+>
+>
+> Ta có định nghĩa của inner product của hai matrix 𝐗, 𝐘: 𝐗 . 𝐘 = Σi,j (𝐗ij × 𝐘ij)
+>
+>
+>
+> mà cái này cơ bản là = Σ{các cột i=1,2,..} (cột i của 𝐗) dot product (cột i của 𝐘)
+>
+>
+>
+> mà Tr(d𝐀 𝐁) = Tr(𝐁 d𝐀) 
+>
+>
+>
+> = Σ{các hàng i=1,2...của 𝐁} \[hàng i của 𝐁\] \[cột i của d𝐀\] 
+>
+>
+>
+> = Σ{các cột i của 𝐁ᵀ} \[cột i của 𝐁ᵀ\] \[cột i của 𝐀\] 
+>
+>
+>
+> = 𝐁ᵀ . d𝐀 
+>
+>
+>
+> Do đó Tr(d𝐀 𝐁) = 𝐁ᵀ . d𝐀, là một linear operator của d𝐀 nên 
+>
+>
+>
+> ⇒ ∇f(𝐀) = 𝐁ᵀ
+>
+>
+>
+> ---
+>
+>
+>
+> f(𝐀) = Tr(𝐀⁻¹ 𝐁) ⇒ df = Tr(d𝐀⁻¹ 𝐁)
+>
+>
+>
+> d(𝐀⁻¹) ?
+>
+>
+>
+> f(𝐀) = 𝐀⁻¹
+>
+>
+>
+> 𝐀 𝐀⁻¹ = 𝐈
+>
+>
+>
+> ⇔ d𝐀 𝐀⁻¹ + 𝐀 d(𝐀⁻¹) = 0 
+>
+>
+>
+> ⇔ - d𝐀 𝐀⁻¹ = 𝐀 d(𝐀⁻¹) 
+>
+>
+>
+> ⇔ - 𝐀⁻¹ d𝐀 𝐀⁻¹ = d(𝐀⁻¹) 
+>
+>
+>
+> ⇒ d(𝐀⁻¹) = - 𝐀⁻¹ d𝐀 𝐀⁻¹
+>
+>
+>
+> ⇒ df = Tr(d𝐀⁻¹ 𝐁) = Tr(-𝐀⁻¹ d𝐀 𝐀⁻¹ 𝐁)
+>
+>
+>
+> = - Tr(𝐀⁻¹ d𝐀 𝐀⁻¹ 𝐁)
+>
+>
+>
+> = - Tr(𝐀⁻¹ 𝐁 𝐀⁻¹ d𝐀)
+>
+>
+>
+> = - Tr(d𝐀 𝐀⁻¹ 𝐁 𝐀⁻¹)
+>
+>
+>
+> = - \[𝐀⁻¹ 𝐁 𝐀⁻¹\]ᵀ . d𝐀
+>
+>
+>
+> ⇒ Vậy f(𝐀) = Tr(𝐀⁻¹ 𝐁) thì ∇f(𝐀) = - \[𝐀⁻¹ 𝐁 𝐀⁻¹\]ᵀ
+>
+>
+>
+> nên f(𝚺) = Tr(𝚺⁻¹ 𝐒) thì ∇f(𝚺) = - \[𝚺⁻¹ 𝐒 𝚺⁻¹\]ᵀ = -𝚺⁻¹ 𝐒 𝚺⁻¹
+>
+>
+>
+> d/d𝚺 (ln |𝚺|) = (𝚺⁻¹)ᵀ
+>
+>
+>
+> Nên đạo hàm của (-N/2) ln |𝚺| - (N/2) Tr(𝚺⁻¹ 𝐒) đối với 𝚺 :  
+>
+>
+>
+>  (-N/2) (𝚺⁻¹)ᵀ - (N/2) (-𝚺⁻¹ 𝐒 𝚺⁻¹)
+>
+>
+>
+> =  (-N/2) (𝚺⁻¹)ᵀ + (N/2) 𝚺⁻¹ 𝐒 𝚺⁻¹
+>
+>
+>
+> Cho đạo hàm bằng 0:
+>
+>
+>
+> (-N/2) (𝚺⁻¹)ᵀ + (N/2) 𝚺⁻¹ 𝐒 𝚺⁻¹ = 0
+>
+>
+>
+> ⇔ (N/2) 𝚺⁻¹ 𝐒 𝚺⁻¹ = (N/2) (𝚺⁻¹)ᵀ
+>
+>
+>
+> ⇔ 𝚺⁻¹ 𝐒 𝚺⁻¹ = (𝚺⁻¹)ᵀ
+>
+>
+>
+> ⇔ 𝚺⁻¹ 𝐒 𝚺⁻¹ = 𝚺⁻¹ 
+>
+>
+>
+> ⇔ 𝚺⁻¹ 𝐒  = 𝐈
+>
+>
+>
+> ⇔ 𝚺 = 𝐒
+>
+>
+>
+> ---
+>
+>
+>
+> Kết quả này cho thấy 𝚺\_ML là weighted average của 𝐒1, và 𝐒2. Với 
+>
+>
+>
+> 𝐒1 = (1/N1) Σn∈𝒞1 \[(𝐱n-𝛍1)(𝐱n-𝛍1)ᵀ
+>
+>
+>
+> 𝐒2 = (1/N2) Σn∈𝒞2 \[(𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ\]
+>
+>
+>
+> Khúc cuối gs nói ta cũng sẽ có kết quả này tương tự khi xét bài toán K &gt; 2 class
+>
+>
+>
+> Và ML estimator không có tính robust.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **96/100** · ✓ Move on
+>
+> Ghi chú xuất sắc! Bạn đã tự mình chứng minh chi tiết từ việc biến đổi hàm log-likelihood về dạng Trace (4.77) cho đến việc đạo hàm ma trận vi phân để tìm ra nghiệm Σ = S mà sách giáo khoa bỏ qua.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"(1-tn)D(𝐱n-𝛍2)(𝐱n-𝛍2)ᵀ"*
+>
+> Lỗi gõ phím thừa ký tự 'D' trong biểu thức, dù các dòng biến đổi sau đó bạn vẫn tính toán chính xác.
+>
+> **2.** *"⇔ 𝚺⁻¹ 𝐒 𝚺⁻¹ = (𝚺⁻¹)ᵀ ⇔ 𝚺⁻¹ 𝐒 𝚺⁻¹ = 𝚺⁻¹"*
+>
+> Bước chuyển từ (𝚺⁻¹)ᵀ sang 𝚺⁻¹ dựa trên giả thiết ma trận hiệp phương sai 𝚺 đối xứng (𝚺 = 𝚺ᵀ). Nên ghi chú rõ điều này để chặt chẽ về mặt toán học.
+>
+>
+> **✓ Strengths**
+> - Tự triển khai đầy đủ và chính xác đạo hàm ma trận bằng phương pháp vi phân (differential) d(A⁻¹) = -A⁻¹ dA A⁻¹ thay vì chỉ chấp nhận kết quả sẵn có từ giáo trình.
+> - Sử dụng thành thạo và chuẩn xác các tính chất của Trace (cyclic property, tính tuyến tính) để rút gọn biểu thức bình phương khoảng cách về công thức 4.77.
+>
+> **💡 Deeper notes**
+> - Khi đạo hàm theo một ma trận đối xứng, nếu xét theo quy tắc đạo hàm có ràng buộc đối xứng (symmetric matrix derivative), các phần tử ngoài đường chéo sẽ có thêm hệ số 2. Tuy nhiên khi giải phương trình đạo hàm bằng 0 với S là ma trận đối xứng, nghiệm cực trị vẫn cho ra chính xác 𝚺 = S.
+
+**🔗 See also:** [Vi phân hàm log(det(A)) *(MIT 18S096 Matrix Calculus for ML)*](../mit_18s096_matrix_calculus_for_ml/lec_5_p1_derivative_of_matrix_determinant_and_invers.md#node-l0pnip6) · [Đạo hàm det(x𝐈-A) *(MIT 18S096 Matrix Calculus for ML)*](../mit_18s096_matrix_calculus_for_ml/lec_5_p1_derivative_of_matrix_determinant_and_invers.md#node-k3i9hxw)
 
 <br>
 
