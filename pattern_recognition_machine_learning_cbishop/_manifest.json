@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1789572079186,
+  "publishedAt": 1789602236995,
   "sections": [
     {
       "title": "📋 Overview",
@@ -371,8 +371,8 @@
     {
       "title": "4.2.2 Maximum likelihood solution",
       "path": "pattern_recognition_machine_learning_cbishop/422_maximum_likelihood_solution.md",
-      "noteCount": 1,
-      "imageCount": 2
+      "noteCount": 3,
+      "imageCount": 5
     },
     {
       "title": "Appendix C. Matrices",
@@ -387,6 +387,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 419,
-  "totalImages": 635
+  "totalNotes": 421,
+  "totalImages": 638
 }
