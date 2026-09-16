@@ -1,24 +1,21 @@
-Welcome to my personal learning journey into the foundational mathematical and algorithmic pillars of Machine Learning and Artificial Intelligence! This repository serves as my dedicated space to document and solidify my understanding of these crucial concepts.
+3 năm trước mình quyết định tự học AI với vài khóa của Andrew Ng trên Coursera, rồi nhờ đọc blog của Huyền Chip mà mon men qua cs231n, cs224n,tự làm hết assignent. Nhưng sau đó, một ngày, đụng vào một câu hỏi lý thuyết khi đang làm cs224n assignment (bài về Transformer) khiến chả hiểu nó đang nói cái gì thì mình nhận ra rằng không thể build AI xịn nếu không hiểu tận gốc toán. (dù thực tế là vẫn có thể làm hết assignment)
 
-You'll find detailed notes from my exploration of *Linear Algebra* based on Gilbert Strang's MIT 18.06 course, which laid a robust foundation for my studies. Currently, I am deeply immersed in two indispensable resources: "Numerical Optimization" by J. Nocedal and "Pattern Recognition and Machine Learning" by C. Bishop, carefully dissecting their profound insights.
+Nên mình quyết định học lại các lớp nền tảng MIT 18.01, 18.02, 18.06 của giáo sư Strang (là lớp linear algebra mà bạn Huỳền Chip recommend, cũng tự nó đã rất nổi tiếng), lớp xác suất thì mình tìm hiểu thì thấy Stat110 (Havard) tuy khó nhưng đáng, sau đó thì tính học luôn Stat111 mà không có nên thôi quyết định ôm cuốn Casella học luôn tới giờ. Song song đó thì cày tối ưu với Boyd, rồi tới Nocedal (Optimization) và Bishop (PRML). Nói chung là khi biết AI,ML thật ra có cái lõi là tối ưu, thống kê thì mình quyết định học ba cuốn kinh thánh của ngành này là Casella, Nocedal, Bishop
 
-This collection comprises structured notes, meticulously organized chapter by chapter, enriched with supporting screenshots directly from the textbooks. Each note represents a distillation of key concepts, theorems, and algorithms, often refined with AI feedback to ensure clarity and accuracy. This systematic approach not only solidifies my own understanding but also aims to provide a valuable, accessible resource for fellow learners tackling these complex subjects.
 
-Tackling these fundamental texts is a challenging yet incredibly rewarding endeavor. My primary goal is to move beyond passive reading, striving to truly internalize the mathematical underpinnings and practical implications of optimization, pattern recognition, and linear algebra. I firmly believe a strong grasp of these fundamentals is paramount for building robust and innovative AI systems, and I'm excited to openly share my progress and insights with you all.
+Trước đây thì dùng app simplemind để quản lý ghi chú, và mình đã học theo phương pháp Feynman ngay từ đầu: xem video, hay đọc sách, dừng lại chụp màn hình, bỏ vào note, viết lại theo cách hiểu của mình, ném qua chat gpt để nó kiểm tra, ok thì học tiếp, chỗ nào chưa hiểu có thể mark "Quay lại sau".
 
-Notes exported from [StudyBoard](https://studyboard.app/landing.html) — my personal learning workspace.
+Mình xài simplemind là bởi nó có cái kiểu của mindmap, canvas, nhìn mọi thứ bày ra như trên cái bảng lớn, các note nối nhau các kiểu chứ không thích kiểu tuyến tính như evernote (mình biết đến obsidian sau này nhưng cũng không thích lắm)
 
----
+Từ đầu năm nay mình làm việc với AI agent và vài anh em để cùng nhau build StudyBoard, hoàn toàn xoay quanh việc học course, đọc tài liệu theo Feynman loop nói trên để tiện hơn: Khắc phục vài tính năng mà simplemind không có, tích hợp gọi AI model để check, gõ kí tự toán dễ hơn, và nhiều cái hay ho khác như các feature hỗ trợ cho vụ "learning in public" mà cái github repo này là một sản phẩm của nó. 
 
-Chào mừng đến với hành trình học tập cá nhân của tôi về các trụ cột toán học và thuật toán nền tảng của Học máy và Trí tuệ nhân tạo! Kho lưu trữ này là không gian chuyên biệt của tôi để ghi lại và củng cố sự hiểu biết về những khái niệm quan trọng này.
+Nên đây không phải là mình viết sách, sửa sai cho sách, hay gì, nó là kho ghi chú mình tích tụ 3 năm qua qua khi mình học AI, và nay nhờ StudyBoard mình đưa chúng lên đây.
 
-Tại đây, bạn sẽ tìm thấy các ghi chú chi tiết từ hành trình khám phá *Đại số Tuyến tính* của tôi dựa trên khóa học MIT 18.06 của Gilbert Strang, một nền tảng vững chắc cho việc học của tôi. Hiện tại, tôi đang đắm mình sâu sắc vào hai tài liệu không thể thiếu: "Numerical Optimization" của J. Nocedal và "Pattern Recognition and Machine Learning" của C. Bishop, cẩn thận phân tích những hiểu biết sâu sắc từ chúng.
+Lộ trình sắp tới là tiến lên các tầng trên (1806, Stat110, Casella, Bishop..là tầng nền) với cs229, AI engineering Huyền Chip.
 
-Bộ sưu tập này bao gồm các ghi chú được cấu trúc, được tổ chức tỉ mỉ theo từng chương, được bổ sung bằng các ảnh chụp màn hình hỗ trợ trực tiếp từ sách giáo khoa. Mỗi ghi chú là sự chắt lọc các khái niệm, định lý và thuật toán quan trọng, thường được tinh chỉnh bằng phản hồi từ AI để đảm bảo sự rõ ràng và chính xác. Cách tiếp cận có hệ thống này không chỉ củng cố sự hiểu biết của riêng tôi mà còn nhằm mục đích cung cấp một nguồn tài liệu giá trị, dễ tiếp cận cho những người học khác đang vật lộn với các chủ đề phức tạp này.
+Mình thì vẫn làm việc như một app developer, với thu nhập từ các ứng dụng của mình, nhưng việc học AI theo lộ trình này mình chấp nhận đi từ lõi vì mình tin rằng chúng sẽ có giá trị lâu dài.
 
-Việc chinh phục những văn bản nền tảng này là một nỗ lực đầy thử thách nhưng cực kỳ bổ ích. Mục tiêu chính của tôi là vượt ra ngoài việc đọc thụ động, cố gắng thực sự tiếp thu các cơ sở toán học và ý nghĩa thực tiễn của tối ưu hóa, nhận dạng mẫu và đại số tuyến tính. Tôi tin chắc rằng việc nắm vững những kiến thức cơ bản này là tối quan trọng để xây dựng các hệ thống AI mạnh mẽ và sáng tạo, và tôi rất vui được công khai chia sẻ tiến trình và những hiểu biết của mình với tất cả các bạn.
-
-Ghi chú được xuất từ [StudyBoard](https://studyboard.app/landing.html) — không gian học tập cá nhân của tôi.
+Nói thêm tí về StudyBoard, hiện nay và sắp tới đây sẽ chính là chiến trường của mình để áp những kiến thức AI mình vào. Nói ngắn gọn, hiện giờ mình đang build StudyBoard xoay quanh chính cái nhu cầu học của mình (thuật ngữ phát triển sản phẩm kiểu này gọi là "eat my owm dogfood"), nó lại giúp mình học tốt hơn và kiến thức AI mình học sẽ quay lại giúp nâng cấp cái lõi của nó.
 
 **`~12,333 notes` · `~17,821 screenshots` · `18 notebooks`**
 
