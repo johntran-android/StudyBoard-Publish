@@ -1,21 +1,48 @@
-3 năm trước mình quyết định tự học AI với vài khóa của Andrew Ng trên Coursera, rồi nhờ đọc blog của Huyền Chip mà mon men qua cs231n, cs224n,tự làm hết assignent. Nhưng sau đó, một ngày, đụng vào một câu hỏi lý thuyết khi đang làm cs224n assignment (bài về Transformer) khiến chả hiểu nó đang nói cái gì thì mình nhận ra rằng không thể build AI xịn nếu không hiểu tận gốc toán. (dù thực tế là vẫn có thể làm hết assignment)
+# Tóm tắt về repo này
 
-Nên mình quyết định học lại các lớp nền tảng MIT 18.01, 18.02, 18.06 của giáo sư Strang (là lớp linear algebra mà bạn Huỳền Chip recommend, cũng tự nó đã rất nổi tiếng), lớp xác suất thì mình tìm hiểu thì thấy Stat110 (Havard) tuy khó nhưng đáng, sau đó thì tính học luôn Stat111 mà không có nên thôi quyết định ôm cuốn Casella học luôn tới giờ. Song song đó thì cày tối ưu với Boyd, rồi tới Nocedal (Optimization) và Bishop (PRML). Nói chung là khi biết AI,ML thật ra có cái lõi là tối ưu, thống kê thì mình quyết định học ba cuốn kinh thánh của ngành này là Casella, Nocedal, Bishop
+Khoảng 3 năm trước mình bắt đầu học AI với các khóa của Andrew Ng trên Coursera như Machine Learning, Deep Learning và NLP Specialization. Sau đó, nhờ đọc blog của Huyền Chip, mình tiếp tục với CS231N và CS224N của Stanford và tự làm các assignment.
 
+Trong quá trình đó mình nhận ra một điều: **làm được assignment không đồng nghĩa với việc thật sự hiểu những gì đang diễn ra bên dưới**. Có những lúc gặp một câu hỏi lý thuyết mà ngay cả câu hỏi đang hỏi gì mình cũng chưa hiểu rõ.
 
-Trước đây thì dùng app simplemind để quản lý ghi chú, và mình đã học theo phương pháp Feynman ngay từ đầu: xem video, hay đọc sách, dừng lại chụp màn hình, bỏ vào note, viết lại theo cách hiểu của mình, ném qua chat gpt để nó kiểm tra, ok thì học tiếp, chỗ nào chưa hiểu có thể mark "Quay lại sau".
+Từ đó mình quyết định quay lại học nền tảng bài bản hơn.
 
-Mình xài simplemind là bởi nó có cái kiểu của mindmap, canvas, nhìn mọi thứ bày ra như trên cái bảng lớn, các note nối nhau các kiểu chứ không thích kiểu tuyến tính như evernote (mình biết đến obsidian sau này nhưng cũng không thích lắm)
+Về calculus, mình học MIT 18.01, 18.02 và 18.S096. Linear algebra là MIT 18.06 của giáo sư Gilbert Strang. Probability là Harvard Stat110 của giáo sư Joe Blitzstein. Sau đó mình tiếp tục với Statistical Inference của Casella & Berger, Convex Optimization của Boyd, Numerical Optimization của Nocedal & Wright, và hiện tại là Pattern Recognition and Machine Learning của Christopher Bishop.
 
-Từ đầu năm nay mình làm việc với AI agent và vài anh em để cùng nhau build StudyBoard, hoàn toàn xoay quanh việc học course, đọc tài liệu theo Feynman loop nói trên để tiện hơn: Khắc phục vài tính năng mà simplemind không có, tích hợp gọi AI model để check, gõ kí tự toán dễ hơn, và nhiều cái hay ho khác như các feature hỗ trợ cho vụ "learning in public" mà cái github repo này là một sản phẩm của nó. 
+Ý tưởng chung của lộ trình này là đi từ các lớp nền về **calculus, linear algebra, probability, statistics và optimization**, rồi mới dần tiến lên các tầng machine learning phía trên.
 
-Nên đây không phải là mình viết sách, sửa sai cho sách, hay gì, nó là kho ghi chú mình tích tụ 3 năm qua qua khi mình học AI, và nay nhờ StudyBoard mình đưa chúng lên đây.
+## Cách mình học
 
-Lộ trình sắp tới là tiến lên các tầng trên (1806, Stat110, Casella, Bishop..là tầng nền) với cs229, AI engineering Huyền Chip.
+Từ đầu mình chủ yếu học theo một Feynman loop khá đơn giản:
 
-Mình thì vẫn làm việc như một app developer, với thu nhập từ các ứng dụng của mình, nhưng việc học AI theo lộ trình này mình chấp nhận đi từ lõi vì mình tin rằng chúng sẽ có giá trị lâu dài.
+**Đọc/xem → dừng lại → tự giải thích theo cách hiểu của mình → kiểm tra lại → sửa nếu cần → học tiếp.**
 
-Nói thêm tí về StudyBoard, hiện nay và sắp tới đây sẽ chính là chiến trường của mình để áp những kiến thức AI mình vào. Nói ngắn gọn, hiện giờ mình đang build StudyBoard xoay quanh chính cái nhu cầu học của mình (thuật ngữ phát triển sản phẩm kiểu này gọi là "eat my owm dogfood"), nó lại giúp mình học tốt hơn và kiến thức AI mình học sẽ quay lại giúp nâng cấp cái lõi của nó.
+Trước đây mình dùng SimpleMind để quản lý các ghi chú vì thích cách mind map/canvas cho phép nhìn kiến thức như một bảng lớn với các ý liên kết với nhau, thay vì một chuỗi note tuyến tính.
+
+Các note trong repo này vì vậy không phải sách, giáo trình hay tài liệu được viết với mục tiêu thay thế nguồn gốc. Chúng đơn giản là những ghi chú mình tích lũy trong quá trình học, bao gồm cách mình diễn giải lại kiến thức theo cách hiểu của mình tại thời điểm đó.
+
+## StudyBoard
+
+Bên cạnh việc học AI, background của mình vốn là app development. Mình đã tự build, ship và duy trì sản phẩm thực tế trong nhiều năm; một trong những app mình từng phát triển là [**English Sentence Master**](https://play.google.com/store/apps/details?id=com.hungdaovuong.sentencemaster.en), hiện đã vượt mốc **1 triệu lượt tải trên Google Play**.
+
+Kinh nghiệm làm sản phẩm đó cũng là một phần nền để mình bắt đầu build [**StudyBoard**](https://studyboard.app/) từ đầu năm nay, xoay quanh chính workflow học ở trên.
+
+Mục tiêu ban đầu khá thực dụng: làm cho Feynman loop thuận tiện hơn — quản lý note trên canvas, viết toán dễ hơn, dùng AI để kiểm tra cách hiểu, đánh dấu những chỗ cần quay lại, và hỗ trợ việc **learning in public**.
+
+Repo GitHub này cũng là một sản phẩm của workflow đó: StudyBoard có thể đưa các notebook và ghi chú mình đang học lên GitHub để lưu trữ và chia sẻ.
+
+StudyBoard hiện tại được phát triển theo kiểu **dogfooding**: mình dùng chính nó để học mỗi ngày. Những bất tiện gặp phải trong quá trình học trở thành vấn đề cần giải quyết trong sản phẩm; ngược lại, những kiến thức AI/ML mình học được cũng dần được áp dụng trở lại để cải thiện StudyBoard.
+
+Nói cách khác, ngoài Feynman loop trong việc học còn có thêm một vòng lặp khác:
+
+**học → dùng StudyBoard → gặp vấn đề → cải thiện StudyBoard → áp kiến thức mới vào sản phẩm → quay lại học tốt hơn.**
+
+## Tiếp theo
+
+Các môn như MIT 18.06, Stat110, Casella, Nocedal và Bishop đối với mình chủ yếu vẫn là tầng nền.
+
+Hướng tiếp theo là tiếp tục đi lên các lớp ML ở tầng cao hơn như CS229 và các chủ đề về AI/ML engineering, trong khi vẫn phát triển StudyBoard song song và dần đưa những kiến thức đã học vào một sản phẩm thực tế.
+
+Repository này vì vậy chủ yếu là một **learning log** — dấu vết của quá trình đi từ nền tảng toán, probability, statistics và optimization lên machine learning, đồng thời là một phần của quá trình build StudyBoard.
 
 **`~12,335 notes` · `~17,824 screenshots` · `18 notebooks`**
 
@@ -27,10 +54,10 @@ Nói thêm tí về StudyBoard, hiện nay và sắp tới đây sẽ chính là
 |:---|:---|
 | [📂 **Calculus**](#group-calculus) | [MIT 18.01 — Single Variable Calculus](#nb-a0_mit1801)<br>[MIT 18.02](#nb-mit_1802)<br>[MIT 18S096 Matrix Calculus for ML](#nb-mit_18s096_matrix_calculus_for_ml) |
 | [📂 **Linear Algebra**](#group-linear-algebra) | [EE263A — Linear Dynamical Systems](#nb-ee263a)<br>[MIT 18.06 Book](#nb-mit_1806_book)<br>[MIT 18.06](#nb-mit1806_gstrang) |
-| [📂 **Machine Learning & Deep Learning**](#group-machine-learning-deep-learning) | [CS224N_Stanford](#nb-cs224n_stanford)<br>[CS231N_Stanford](#nb-cs231n_stanford)<br>[DL Spec Coursera](#nb-dl_spec_coursera)<br>[NLP Spec Coursera](#nb-nlp_spec_coursera) |
+| [📂 **Probability & Statistics**](#group-probability-statistics) | [STAT110_Havard](#nb-stat110_havard)<br>[Statistical Inference - Casella](#nb-statistical_inference_casella) |
 | [📂 **Optimization**](#group-optimization) | [EE364a, Convex Optim_S.Boyd](#nb-ee364a_convex_optim_sboyd)<br>[Numerical Optimization_J.Nocedal](#nb-numerical_optimization_jnocedal) |
 | [📂 **Machine Learning Foundation**](#group-machine-learning-foundation) | [Pattern Recognition Machine Learning_C.Bishop](#nb-pattern_recognition_machine_learning_cbishop) |
-| [📂 **Probability & Statistics**](#group-probability-statistics) | [STAT110_Havard](#nb-stat110_havard)<br>[Statistical Inference - Casella](#nb-statistical_inference_casella) |
+| [📂 **Machine Learning & Deep Learning**](#group-machine-learning-deep-learning) | [CS224N_Stanford](#nb-cs224n_stanford)<br>[CS231N_Stanford](#nb-cs231n_stanford)<br>[DL Spec Coursera](#nb-dl_spec_coursera)<br>[NLP Spec Coursera](#nb-nlp_spec_coursera) |
 | [📂 **Other**](#group-other) | [LLM — Large Language Models](#nb-a1_llm)<br>[Deep Learning Specialization_Cousera_Andrew Ng](#nb-deep_learning_specialization_cousera_andrew_ng)<br>[Foundation of LLM](#nb-foundation_of_llm) |
 
 <!-- studyboard-toc:end -->
@@ -47,6 +74,7 @@ Nói thêm tí về StudyBoard, hiện nay và sắp tới đây sẽ chính là
 `317 notes · 331 screenshots · 12 sections`
 
 > A comprehensive set of study notes for MIT 18.01 Single Variable Calculus, covering core topics from limits and derivatives to practical applications such as optimization, curve sketching, and approximation methods.
+> 
 > Tập hợp chi tiết các ghi chép học tập cho khóa học Giải tích một biến MIT 18.01, bao gồm các chủ đề cốt lõi từ giới hạn, đạo hàm cho đến các ứng dụng thực tế như tối ưu hóa, khảo sát hàm số và các phương pháp xấp xỉ.
 
 <details open>
@@ -78,6 +106,7 @@ Nói thêm tí về StudyBoard, hiện nay và sắp tới đây sẽ chính là
 `549 notes · 615 screenshots · 22 sections`
 
 > This notebook contains study notes for MIT 18.02 (Multivariable Calculus), covering core topics such as vector algebra, matrices, partial derivatives, Lagrange multipliers, and double integrals.
+> 
 > Vở ghi chép này tổng hợp các kiến thức môn Giải tích đa biến (MIT 18.02), bao gồm các chủ đề cốt lõi như đại số vector, ma trận, đạo hàm riêng, phương pháp nhân tử Lagrange và tích phân kép.
 
 <details open>
@@ -119,6 +148,7 @@ Nói thêm tí về StudyBoard, hiện nay và sắp tới đây sẽ chính là
 `210 notes · 221 screenshots · 19 sections`
 
 > This notebook contains study notes and problem sets for MIT 18.S096 (Matrix Calculus for Machine Learning), covering core topics such as multidimensional derivatives, automatic differentiation, optimization, and computational graphs.
+> 
 > Sổ tay ghi chép này tổng hợp bài học và bài tập từ khóa học MIT 18.S096 (Giải tích Ma trận cho Học máy), bao gồm các chủ đề cốt lõi như đạo hàm đa chiều, đạo hàm tự động, tối ưu hóa và đồ thị tính toán.
 
 <details open>
@@ -190,6 +220,7 @@ Nói thêm tí về StudyBoard, hiện nay và sắp tới đây sẽ chính là
 `106 notes · 139 screenshots · 13 sections`
 
 > A comprehensive compilation of study notes and solved problems for MIT 18.06 Linear Algebra, focusing on the four fundamental subspaces, matrix diagonalisation, singular value decomposition (SVD), and linear transformations.
+> 
 > Tài liệu tổng hợp ghi chép lý thuyết và bài tập giải chi tiết môn Đại số Tuyến tính MIT 18.06, tập trung vào bốn không gian con cơ bản, chéo hóa ma trận, phân tích kỳ dị (SVD) và biến đổi tuyến tính.
 
 <details open>
@@ -222,6 +253,7 @@ Nói thêm tí về StudyBoard, hiện nay và sắp tới đây sẽ chính là
 `1,181 notes · 1,269 screenshots · 36 sections`
 
 > This notebook covers fundamental linear algebra concepts, from solving systems of equations and matrix operations to eigenvalues, SVD, and linear transformations, often emphasizing their geometric interpretations.
+> 
 > Sổ tay này bao gồm các khái niệm cơ bản về đại số tuyến tính, từ giải hệ phương trình và các phép toán ma trận đến trị riêng, phân tích SVD và biến đổi tuyến tính, thường nhấn mạnh các diễn giải hình học của chúng.
 
 <details open>
@@ -270,191 +302,126 @@ Nói thêm tí về StudyBoard, hiện nay và sắp tới đây sẽ chính là
 
 <sub>[↑ Back to navigation](#top-nav)</sub>
 
-<a id="group-machine-learning-deep-learning"></a>
-### 📂 Machine Learning & Deep Learning
+<a id="group-probability-statistics"></a>
+### 📂 Probability & Statistics
 
-<a id="nb-cs224n_stanford"></a>
-### CS224N_Stanford
-<!-- key: cs224n_stanford -->
-<!-- group: Machine Learning & Deep Learning -->
-`791 notes · 1,108 screenshots · 27 sections`
+<a id="nb-stat110_havard"></a>
+### STAT110_Havard
+<!-- key: stat110_havard -->
+<!-- group: Probability & Statistics -->
+`881 notes · 1,109 screenshots · 32 sections`
 
-> A comprehensive study notebook for Stanford's CS224N (Natural Language Processing with Deep Learning) course, covering fundamental to advanced NLP concepts from word embeddings (Word2Vec, GloVe) to neural architectures like RNNs, Transformers, and RLHF.
-> Sổ tay học tập toàn diện cho khóa học CS224N của Stanford (Xử lý Ngôn ngữ Tự nhiên với Học sâu), bao gồm các kiến thức từ cơ bản đến nâng cao từ biểu diễn từ (Word2Vec, GloVe) cho đến các kiến trúc mạng nơ-ron như RNN, Transformer và RLHF.
+> This notebook explores foundational and advanced topics in probability and statistical inference, covering random variables, their distributions (discrete and continuous), expectation, variance, moment generating functions, and key theorems such as the Law of Large Numbers and Central Limit Theorem.
+> 
+> Sổ tay này khám phá các chủ đề cơ bản và nâng cao trong lý thuyết xác suất và suy luận thống kê, bao gồm các biến ngẫu nhiên, các phân phối của chúng (rời rạc và liên tục), kỳ vọng, phương sai, hàm sinh moment, và các định lý quan trọng như Luật Số lớn và Định lý Giới hạn Trung tâm.
 
 <details open>
-<summary>📖 27 sections</summary>
+<summary>📖 32 sections</summary>
 
 | Section | Notes | Screenshots |
 |---|---:|---:|
-| [📋 Overview](cs224n_stanford/_overview.md) | 1 | 1 |
-| [Assignment 1](cs224n_stanford/assignment_1.md) | 18 | 29 |
-| [Assignment 2 - Word2vec](cs224n_stanford/assignment_2_word2vec.md) | 22 | 56 |
-| [Assignment 3 -](cs224n_stanford/assignment_3_dependency_parsing.md) | 31 | 47 |
-| [Assignment 4 - NMT](cs224n_stanford/assignment_4_nmt.md) | 18 | 45 |
-| [Assignment 5: Self-attention, Transformers And Pretraining](cs224n_stanford/assignment_5_self_attention_transformers_and_pretraining.md) | 9 | 9 |
-| [Lec 9 Reading](cs224n_stanford/lec_9_reading.md) | 1 | 1 |
-| [Lecture 10: Prompting & RLHF](cs224n_stanford/lecture_10_prompting_rlhf.md) | 51 | 63 |
-| [Lecture 11: Question & Answering](cs224n_stanford/lecture_11_question_answering.md) | 46 | 55 |
-| [Lecture 12: Natural Language Generation](cs224n_stanford/lecture_12_natural_language_generation.md) | 59 | 68 |
-| [Lecture 13: Coreference Resolution](cs224n_stanford/lecture_13_coreference_resolution.md) | 50 | 52 |
-| [Lecture 14: Insights Between NLP And Linguistic](cs224n_stanford/lecture_14_insights_between_nlp_and_linguistic.md) | 32 | 38 |
-| [Lecture 15: Add Knowledge To Language Model](cs224n_stanford/lecture_15_add_knowledge_to_language_model.md) | 23 | 27 |
-| [Lecture 2: Neural Classifiers](cs224n_stanford/lecture_2_neural_classifiers.md) | 58 | 74 |
-| [Lecture 3: Backprop And Neural Networks](cs224n_stanford/lecture_3_backprop_and_neural_networks.md) | 29 | 54 |
-| [Lecture 4: Syntactic Structure](cs224n_stanford/lecture_4_syntactic_structure_and_dependency_parsing.md) | 41 | 53 |
-| [Lecture 5: Recurrent Neural Network](cs224n_stanford/lecture_5_recurrent_neural_network.md) | 15 | 21 |
-| [Lecture 6: Simple And Lstm Rnns](cs224n_stanford/lecture_6_simple_and_lstm_rnns.md) | 39 | 58 |
-| [Lecture 7: Translation, Seq2seq, Attention](cs224n_stanford/lecture_7_translation_seq2seq_attention.md) | 42 | 48 |
-| [Lecture 8: Translation, Seq2seq, Attention](cs224n_stanford/lecture_8_translation_seq2seq_attention.md) | 8 | 17 |
-| [Lecture 9: Pretraining](cs224n_stanford/lecture_9_pretraining.md) | 42 | 51 |
-| [Lecture 9: Self-attention And Transformers](cs224n_stanford/lecture_9_self_attention_and_transformers.md) | 41 | 45 |
-| [Lecture Note - 03](cs224n_stanford/lecture_note_03_backpropagation.md) | 7 | 24 |
-| [Lecture Note 04 -](cs224n_stanford/lecture_note_04_dependency_parsers.md) | 13 | 17 |
-| [Lecture Notes 05 Language](cs224n_stanford/lecture_notes_05_language_model_rnn_lstm_gru.md) | 38 | 77 |
-| [Reading](cs224n_stanford/reading.md) | 0 | 1 |
-| [Week 1: Intro & Word Vectors](cs224n_stanford/week_1_intro_word_vectors.md) | 57 | 77 |
+| [📋 Overview](stat110_havard/_overview.md) | 0 | 1 |
+| [Cheatsheet (nhờ Ai)](stat110_havard/cheatsheet_nh_ai.md) | 5 | 98 |
+| [Lec 10: Expected Value](stat110_havard/lec_10_expected_value.md) | 34 | 41 |
+| [Lec 11: Poisson Distribution](stat110_havard/lec_11_poisson_distribution.md) | 31 | 39 |
+| [Lec 12: Discrete Vs](stat110_havard/lec_12_discrete_vs_continuous_the_uniform.md) | 42 | 49 |
+| [Lec 13: Normal Distribution](stat110_havard/lec_13_normal_distribution.md) | 33 | 42 |
+| [Lec 14: Location, Scale, Lotus](stat110_havard/lec_14_location_scale_lotus.md) | 41 | 47 |
+| [Lec 15: Midterm Review](stat110_havard/lec_15_midterm_review.md) | 29 | 32 |
+| [Lec 16: Exponential](stat110_havard/lec_16_exponential_distribution.md) | 19 | 25 |
+| [Lec 17: Moment](stat110_havard/lec_17_moment_generating_functions.md) | 49 | 60 |
+| [Lec 18: MGF Continued](stat110_havard/lec_18_mgf_continued.md) | 42 | 49 |
+| [Lec 19: Joint, Conditional And](stat110_havard/lec_19_joint_conditional_and_marginal_distribution.md) | 38 | 41 |
+| [Lec 1: Probability & Counting](stat110_havard/lec_1_probability_counting.md) | 17 | 17 |
+| [Lec 20: Multinomial And Cauchy](stat110_havard/lec_20_multinomial_and_cauchy.md) | 31 | 44 |
+| [Lec 21: Covariance & Correlation](stat110_havard/lec_21_covariance_correlation.md) | 31 | 38 |
+| [Lec 22: Transformations & Convolution](stat110_havard/lec_22_transformations_convolution.md) | 22 | 28 |
+| [Lec 23: Beta Distribution](stat110_havard/lec_23_beta_distribution.md) | 10 | 13 |
+| [Lec 24: Gamma Distribution & Poisson](stat110_havard/lec_24_gamma_distribution_poisson.md) | 24 | 24 |
+| [Lec 25: Order Statistic &](stat110_havard/lec_25_order_statistic_conditional_expectation.md) | 27 | 31 |
+| [Lec 26 Conditional](stat110_havard/lec_26_conditional_expectation.md) | 30 | 33 |
+| [Lec 27: Conditional](stat110_havard/lec_27_conditional_expectation_given_an_rv.md) | 26 | 36 |
+| [Lec 28: Inequalities](stat110_havard/lec_28_inequalities.md) | 19 | 21 |
+| [Lec 29: Law Of Large Numbers &](stat110_havard/lec_29_law_of_large_numbers_law_of_central_limit.md) | 35 | 36 |
+| [Lec 2: Story Proofs,](stat110_havard/lec_2_story_proofs_axioms_of_probability.md) | 23 | 23 |
+| [Lec 30: Chi-square, Student-t,](stat110_havard/lec_30_chi_square_student_t_multi_variate_gaussian.md) | 21 | 22 |
+| [Lec 3: Birthday Problem,](stat110_havard/lec_3_birthday_problem_properties_of_probability.md) | 21 | 23 |
+| [Lec 4: Conditional Probability](stat110_havard/lec_4_conditional_probability.md) | 26 | 26 |
+| [Lec 5: Conditional Probability,](stat110_havard/lec_5_conditional_probability_law_of_total_probability.md) | 31 | 35 |
+| [Lec 6: Monty Hall, Simpson's](stat110_havard/lec_6_monty_hall_simpsons_paradox.md) | 23 | 23 |
+| [Lec 7: Gambler's Ruin &](stat110_havard/lec_7_gamblers_ruin_random_variables.md) | 29 | 35 |
+| [Lec 8: Random Variables &](stat110_havard/lec_8_random_variables_their_distributions.md) | 32 | 36 |
+| [Lec 9: Expectation, Indicator](stat110_havard/lec_9_expectation_indicator_random_variables_linearity.md) | 40 | 41 |
 
 </details>
 
 <sub>[↑ Back to navigation](#top-nav)</sub>
 
-<a id="nb-cs231n_stanford"></a>
-### CS231N_Stanford
-<!-- key: cs231n_stanford -->
-<!-- group: Machine Learning & Deep Learning -->
-`1,603 notes · 2,702 screenshots · 46 sections`
+<a id="nb-statistical_inference_casella"></a>
+### Statistical Inference - Casella
+<!-- key: statistical_inference_casella -->
+<!-- group: Probability & Statistics -->
+`869 notes · 1,131 screenshots · 50 sections`
 
-> This notebook contains comprehensive study notes, lecture summaries, and programming assignments from Stanford's CS231n course on Convolutional Neural Networks for Visual Recognition.
-> Cuốn sổ tay này tổng hợp các ghi chép học tập, tóm tắt bài giảng và bài tập thực hành từ khóa học CS231n của Đại học Stanford về Mạng nơ-ron tích chập cho Nhận dạng Thị giác.
+> This notebook contains detailed study notes and proofs based on Casella and Berger's *Statistical Inference*, covering key topics in probability theory, estimation methods, hypothesis testing, and asymptotic properties.
+> 
+> Sổ tay học tập này tổng hợp các ghi chép và chứng minh chi tiết dựa trên giáo trình *Statistical Inference* của Casella và Berger, bao gồm các chủ đề cốt lõi về lý thuyết xác suất, phương pháp ước lượng, kiểm định giả thuyết và tính chất tiệm cận.
 
 <details open>
-<summary>📖 46 sections</summary>
+<summary>📖 50 sections</summary>
 
 | Section | Notes | Screenshots |
 |---|---:|---:|
-| [📋 Overview](cs231n_stanford/_overview.md) | 1 | 1 |
-| [Assignment 1 - 2 Layer Nn](cs231n_stanford/assignment_1_2_layer_nn.md) | 28 | 38 |
-| [Assignment 1 - KNN](cs231n_stanford/assignment_1_knn.md) | 31 | 45 |
-| [Assignment 2 - Batch Normalization](cs231n_stanford/assignment_2_batch_normalization.md) | 18 | 35 |
-| [Assignment 2 -](cs231n_stanford/assignment_2_convolutional_network.md) | 27 | 64 |
-| [Assignment 2 - Dropout](cs231n_stanford/assignment_2_dropout.md) | 6 | 14 |
-| [Assignment 2 - Fully Connected Nn](cs231n_stanford/assignment_2_fully_connected_nn.md) | 25 | 61 |
-| [Assignment 2](cs231n_stanford/assignment_2_pytorch.md) | 22 | 32 |
-| [Assignment 3 - Lstm Captioning](cs231n_stanford/assignment_3_lstm_captioning.md) | 9 | 34 |
-| [Assignment 3 - RNN Captioning](cs231n_stanford/assignment_3_rnn_captioning.md) | 12 | 49 |
-| [Assignment 4 - Transformer Image Captioning](cs231n_stanford/assignment_4_transformer_image_captioning.md) | 20 | 36 |
-| [Eecs498-007 Lecture 17: 3d Vision](cs231n_stanford/eecs498_007_lecture_17_3d_vision.md) | 49 | 59 |
-| [Eecs498-007](cs231n_stanford/eecs498_007_lecture_18_video.md) | 55 | 66 |
-| [EECS 498-007/598-005 (2022) - ASSIGNMENT 4 (Part 1):](cs231n_stanford/eecs_498_007598_005_2022_assignment_4_part_1_one_state_object_detector.md) | 49 | 118 |
-| [EECS 498-007/598-005 (2022) - ASSIGNMENT 4 (Part 2):](cs231n_stanford/eecs_498_007598_005_2022_assignment_4_part_2_two_stage_detector.md) | 33 | 123 |
-| [Eecs 498-007_598-005 (2020) Assignment 4 (part 1):](cs231n_stanford/eecs_498_007_598_005_2020_assignment_4_part_1_single_stage_detector_yolo.md) | 43 | 158 |
-| [Eecs 498-007_598-005 (2020) Assignment 4 (part 2):](cs231n_stanford/eecs_498_007_598_005_2020_assignment_4_part_2_two_stage_detector_faster_rcnn.md) | 14 | 90 |
-| [Eecs 498-007_598-005 (2020) Assignment 6:](cs231n_stanford/eecs_498_007_598_005_2020_assignment_6_network_visualization.md) | 8 | 33 |
-| [Eecs 498-007_598-005 (2020) Assignment 6:](cs231n_stanford/eecs_498_007_598_005_2020_assignment_6_style_transfer.md) | 10 | 39 |
-| [Eecs 498-007_598-005 (2022) Assignment 6:](cs231n_stanford/eecs_498_007_598_005_2022_assignment_6_generative_adversarial_network.md) | 20 | 59 |
-| [Eecs 498-007_598-005 (2022) Assignment 6:](cs231n_stanford/eecs_498_007_598_005_2022_assignment_6_variational_auto_encoder.md) | 18 | 43 |
-| [Guess Lecture - Adversarial Machine Learning](cs231n_stanford/guess_lecture_adversarial_machine_learning.md) | 9 | 12 |
-| [Lecture 10/16 - Recurrent Neural Network](cs231n_stanford/lecture_1016_recurrent_neural_network.md) | 67 | 86 |
-| [Lecture 11/16 - Detection And](cs231n_stanford/lecture_1116_detection_and_segmentation.md) | 108 | 144 |
-| [Lecture 1/16 - Introduction To CNN](cs231n_stanford/lecture_116_introduction_to_cnn.md) | 11 | 31 |
-| [Lecture 12/16 - Visualization And](cs231n_stanford/lecture_1216_visualization_and_understanding.md) | 60 | 84 |
-| [Lecture 13/16 - Generative Models](cs231n_stanford/lecture_1316_generative_models.md) | 72 | 86 |
-| [Lecture 14/16 - Deep Reinforcement](cs231n_stanford/lecture_1416_deep_reinforcement_learning.md) | 24 | 29 |
-| [Lecture 14/16 - Generative Models Ii](cs231n_stanford/lecture_1416_generative_models_ii.md) | 45 | 53 |
-| [Lecture 2/16 - Image Classification](cs231n_stanford/lecture_216_image_classification.md) | 41 | 58 |
-| [Lecture 3/16 - Loss Functions And Optimization](cs231n_stanford/lecture_316_loss_functions_and_optimization.md) | 117 | 154 |
-| [Lecture 4/16 - Introduction To Neural Networks](cs231n_stanford/lecture_416_introduction_to_neural_networks.md) | 23 | 55 |
-| [Lecture 5/16 - Convolutional Neural Networks](cs231n_stanford/lecture_516_convolutional_neural_networks.md) | 52 | 63 |
-| [Lecture 6/16 - Training Neural Network I](cs231n_stanford/lecture_616_training_neural_network_i.md) | 65 | 105 |
-| [Lecture 7/16 - Training Neural Network Ii](cs231n_stanford/lecture_716_training_neural_network_ii.md) | 70 | 90 |
-| [Lecture 8/16 - Deep Learning Software](cs231n_stanford/lecture_816_deep_learning_software.md) | 89 | 107 |
-| [Lecture 9/16 - CNN Architecture](cs231n_stanford/lecture_916_cnn_architecture.md) | 55 | 72 |
-| [LECTURE NOTE: Image Classification:](cs231n_stanford/lecture_note_image_classification_data_driven_approach_k_nearest_neighbor_trainvaltest_splits.md) | 1 | 0 |
-| [Lecture Note](cs231n_stanford/lecture_note_introduction_to_rnn.md) | 13 | 19 |
-| [Lecture Note Nn P1](cs231n_stanford/lecture_note_nn_p1.md) | 1 | 14 |
-| [Lecture X: Transformer](cs231n_stanford/lecture_x_transformer.md) | 41 | 47 |
-| [Note #4 Backpropagation](cs231n_stanford/note_4_backpropagation.md) | 9 | 13 |
-| [Note - Convolutional Net](cs231n_stanford/note_convolutional_net.md) | 22 | 31 |
-| [Note - Neural](cs231n_stanford/note_neural_network_part_2.md) | 44 | 59 |
-| [Note - Neural Network Part 3](cs231n_stanford/note_neural_network_part_3.md) | 49 | 61 |
-| [Paper: Batch normalization](cs231n_stanford/paper_batch_normalization.md) | 17 | 32 |
-
-</details>
-
-<sub>[↑ Back to navigation](#top-nav)</sub>
-
-<a id="nb-dl_spec_coursera"></a>
-### DL Spec Coursera
-<!-- key: dl_spec_coursera -->
-<!-- group: Machine Learning & Deep Learning -->
-`1,083 notes · 1,827 screenshots · 19 sections`
-
-> A comprehensive compilation of notes, quizzes, and programming assignments from the Coursera Deep Learning Specialization. It covers topics ranging from foundational neural networks to advanced computer vision, NLP architectures, and model optimization using TensorFlow.
-> Tổng hợp toàn diện các ghi chép, bài trắc nghiệm và bài tập lập trình từ Chuyên ngành Deep Learning trên Coursera. Nội dung bao gồm từ các khái niệm mạng nơ-ron cơ bản đến các kiến trúc nâng cao về thị giác máy tính, NLP và tối ưu hóa mô hình bằng TensorFlow.
-
-<details open>
-<summary>📖 19 sections</summary>
-
-| Section | Notes | Screenshots |
-|---|---:|---:|
-| [📋 Overview](dl_spec_coursera/_overview.md) | 0 | 1 |
-| [C1w1_introduction To N.n](dl_spec_coursera/c1w1_introduction_to_nn.md) | 7 | 24 |
-| [C1w2_n.n Basic](dl_spec_coursera/c1w2_nn_basic.md) | 64 | 163 |
-| [C1w3_shalow Neural Networks](dl_spec_coursera/c1w3_shalow_neural_networks.md) | 23 | 91 |
-| [C1w4_deep Neural Network](dl_spec_coursera/c1w4_deep_neural_network.md) | 21 | 95 |
-| [C2w1_practical Aspects Of Deep Learning](dl_spec_coursera/c2w1_practical_aspects_of_deep_learning.md) | 51 | 121 |
-| [C2w2_optimization Algorithms](dl_spec_coursera/c2w2_optimization_algorithms.md) | 50 | 96 |
-| [C2w3_hyperparamter Tuning, Batch Normalization & Programming Frameworks](dl_spec_coursera/c2w3_hyperparamter_tuning_batch_normalization_programming_frameworks.md) | 58 | 85 |
-| [C3w1_machine Learning Strategy 1](dl_spec_coursera/c3w1_machine_learning_strategy_1.md) | 42 | 47 |
-| [C3w2_machine Learning Strategy 2](dl_spec_coursera/c3w2_machine_learning_strategy_2.md) | 43 | 40 |
-| [C4w1_foundations Of Convolutional Neural Network](dl_spec_coursera/c4w1_foundations_of_convolutional_neural_network.md) | 80 | 117 |
-| [C4w2_deep Convolutional Models: Case Studies](dl_spec_coursera/c4w2_deep_convolutional_models_case_studies.md) | 88 | 118 |
-| [C4w3_object Detection](dl_spec_coursera/c4w3_object_detection.md) | 59 | 138 |
-| [C4w4_face Recognition & Neural Style Transfer](dl_spec_coursera/c4w4_face_recognition_neural_style_transfer.md) | 73 | 105 |
-| [C5w1_recurrent Neural Networks](dl_spec_coursera/c5w1_recurrent_neural_networks.md) | 99 | 165 |
-| [C5w2_natural Language Processing & Word Embeddings](dl_spec_coursera/c5w2_natural_language_processing_word_embeddings.md) | 59 | 103 |
-| [C5w3_sequence Models & Attention Mechanism](dl_spec_coursera/c5w3_sequence_models_attention_mechanism.md) | 72 | 116 |
-| [C5w4_transformer Network](dl_spec_coursera/c5w4_transformer_network.md) | 193 | 202 |
-| [Untitled](dl_spec_coursera/untitled.md) | 1 | 0 |
-
-</details>
-
-<sub>[↑ Back to navigation](#top-nav)</sub>
-
-<a id="nb-nlp_spec_coursera"></a>
-### NLP Spec Coursera
-<!-- key: nlp_spec_coursera -->
-<!-- group: Machine Learning & Deep Learning -->
-`1,808 notes · 2,287 screenshots · 19 sections`
-
-> A comprehensive collection of study notes, practical exercises, and implementations from the Coursera NLP Specialization, covering foundational NLP techniques, sequence models, and modern Transformer architectures.
-> Cuốn sổ tay tổng hợp các ghi chép học tập, bài tập thực hành và mã nguồn từ khóa học Chuyên sâu về NLP trên Coursera, bao gồm các kỹ thuật NLP nền tảng, mô hình chuỗi và kiến trúc Transformer hiện đại.
-
-<details open>
-<summary>📖 19 sections</summary>
-
-| Section | Notes | Screenshots |
-|---|---:|---:|
-| [📋 Overview](nlp_spec_coursera/_overview.md) | 0 | 1 |
-| [C1w1_logistic Regression](nlp_spec_coursera/c1w1_logistic_regression.md) | 64 | 113 |
-| [C1w2 - Naive Bayes](nlp_spec_coursera/c1w2_naive_bayes.md) | 83 | 112 |
-| [C1w3 - Vector Space Models](nlp_spec_coursera/c1w3_vector_space_models.md) | 146 | 122 |
-| [C1w4 - Machine Translation & Document Search](nlp_spec_coursera/c1w4_machine_translation_document_search.md) | 108 | 115 |
-| [C2_natural Language Processing With Probabilistic Models](nlp_spec_coursera/c2_natural_language_processing_with_probabilistic_models.md) | 0 | 1 |
-| [C2w1_autocorrect](nlp_spec_coursera/c2w1_autocorrect.md) | 110 | 123 |
-| [C2w2_part Of Speech Tagging And Hidden Markov Models](nlp_spec_coursera/c2w2_part_of_speech_tagging_and_hidden_markov_models.md) | 169 | 171 |
-| [C2w3_autocomplete And Language Models](nlp_spec_coursera/c2w3_autocomplete_and_language_models.md) | 152 | 143 |
-| [C3w1_neural Networks For Sentiment Analysis](nlp_spec_coursera/c3w1_neural_networks_for_sentiment_analysis.md) | 94 | 141 |
-| [C3w2_recurrent Neural Networks For Language Modeling](nlp_spec_coursera/c3w2_recurrent_neural_networks_for_language_modeling.md) | 85 | 138 |
-| [C3W3_LSTMs AND NAMED ENTITY REGCONITION:](nlp_spec_coursera/c3w3_lstms_and_named_entity_regconition.md) | 69 | 108 |
-| [C3w4 - Siamese Network](nlp_spec_coursera/c3w4_siamese_network.md) | 82 | 122 |
-| [C3w4_word Embeddings With Neural Networks](nlp_spec_coursera/c3w4_word_embeddings_with_neural_networks.md) | 173 | 211 |
-| [C4_natural Language Processing With Attention Models](nlp_spec_coursera/c4_natural_language_processing_with_attention_models.md) | 0 | 1 |
-| [C4w1_neural Machine Translation](nlp_spec_coursera/c4w1_neural_machine_translation.md) | 167 | 220 |
-| [C4w2_text Summarization](nlp_spec_coursera/c4w2_text_summarization.md) | 86 | 145 |
-| [C4w3 - Question Answering](nlp_spec_coursera/c4w3_question_answering.md) | 130 | 187 |
-| [C4w4_chatbot](nlp_spec_coursera/c4w4_chatbot.md) | 90 | 113 |
+| [📋 Overview](statistical_inference_casella/_overview.md) | 0 | 1 |
+| [1.1 Set Theory](statistical_inference_casella/11_set_theory.md) | 6 | 9 |
+| [1.2.1 Axiomatic Foundation](statistical_inference_casella/121_axiomatic_foundation.md) | 9 | 10 |
+| [1.2.2 Calculus Of Probability](statistical_inference_casella/122_calculus_of_probability.md) | 5 | 9 |
+| [1.2.3 Counting](statistical_inference_casella/123_counting.md) | 6 | 8 |
+| [1.2.4 Enumerating Outcome](statistical_inference_casella/124_enumerating_outcome.md) | 10 | 14 |
+| [1.3 Conditional Probability & Independence](statistical_inference_casella/13_conditional_probability_independence.md) | 12 | 16 |
+| [1.4 Random Variables](statistical_inference_casella/14_random_variables.md) | 4 | 5 |
+| [1.5 Distribution Function](statistical_inference_casella/15_distribution_function.md) | 9 | 11 |
+| [1.6 PDF & Pmf](statistical_inference_casella/16_pdf_pmf.md) | 4 | 5 |
+| [2.1 Distribution](statistical_inference_casella/21_distribution.md) | 15 | 21 |
+| [2.2 Expected Value](statistical_inference_casella/22_expected_value.md) | 7 | 10 |
+| [2.3 MGF](statistical_inference_casella/23_mgf.md) | 15 | 25 |
+| [2.4 Differentiating under integral](statistical_inference_casella/24_differentiating_under_integral.md) | 11 | 19 |
+| [2.5 Ex](statistical_inference_casella/25_ex.md) | 1 | 2 |
+| [3.1&2 Discrete distribution](statistical_inference_casella/312_discrete_distribution.md) | 20 | 32 |
+| [3.3 Continuous distribution](statistical_inference_casella/33_continuous_distribution.md) | 24 | 38 |
+| [3.4 Exponential families](statistical_inference_casella/34_exponential_families.md) | 10 | 15 |
+| [3.5 Location And Scale Families](statistical_inference_casella/35_location_and_scale_families.md) | 12 | 17 |
+| [3.6 Inequalities](statistical_inference_casella/36_inequalities.md) | 9 | 12 |
+| [4.1 Joint & Marginal Distribution](statistical_inference_casella/41_joint_marginal_distribution.md) | 13 | 19 |
+| [4.2 Conditional Distributions & Independent](statistical_inference_casella/42_conditional_distributions_independent.md) | 18 | 27 |
+| [4.3 Bivariate Transformation](statistical_inference_casella/43_bivariate_transformation.md) | 14 | 24 |
+| [4.4 Hierarchical Model & Mixture Distribution](statistical_inference_casella/44_hierarchical_model_mixture_distribution.md) | 11 | 19 |
+| [4.5 Covariance & Correlation](statistical_inference_casella/45_covariance_correlation.md) | 18 | 25 |
+| [4.6 Multi-variate Distribution](statistical_inference_casella/46_multi_variate_distribution.md) | 22 | 28 |
+| [4.7 Inequalities](statistical_inference_casella/47_inequalities.md) | 1 | 0 |
+| [5.1 Basic Concepts Of Random Samples](statistical_inference_casella/51_basic_concepts_of_random_samples.md) | 13 | 16 |
+| [5.2 Σ Of Random Variables From A Random Sample](statistical_inference_casella/52_of_random_variables_from_a_random_sample.md) | 18 | 26 |
+| [5.3 Sampling From The Normal Distribution](statistical_inference_casella/53_sampling_from_the_normal_distribution.md) | 21 | 29 |
+| [5.4 Order Statistic](statistical_inference_casella/54_order_statistic.md) | 12 | 16 |
+| [5.5 Convergence Concepts](statistical_inference_casella/55_convergence_concepts.md) | 42 | 52 |
+| [5.6 Generating Random Sample](statistical_inference_casella/56_generating_random_sample.md) | 31 | 43 |
+| [6.1 Introduction](statistical_inference_casella/61_introduction.md) | 3 | 4 |
+| [6.2 The Sufficient Principle](statistical_inference_casella/62_the_sufficient_principle.md) | 46 | 59 |
+| [6.3 The Likelihood Principle](statistical_inference_casella/63_the_likelihood_principle.md) | 19 | 23 |
+| [6.4 The Equivariance Principle](statistical_inference_casella/64_the_equivariance_principle.md) | 11 | 14 |
+| [7.1 Introduction](statistical_inference_casella/71_introduction.md) | 3 | 3 |
+| [7.2 Method Of Finding Estimators](statistical_inference_casella/72_method_of_finding_estimators.md) | 42 | 52 |
+| [7.3 Methods Of Evaluating Estimators](statistical_inference_casella/73_methods_of_evaluating_estimators.md) | 63 | 74 |
+| [8.1 Introduction](statistical_inference_casella/81_introduction.md) | 5 | 5 |
+| [8.2 Method Of Finding Tests](statistical_inference_casella/82_method_of_finding_tests.md) | 21 | 26 |
+| [8.3 Methods Of Evaluating Test](statistical_inference_casella/83_methods_of_evaluating_test.md) | 53 | 64 |
+| [9.1 Introduction](statistical_inference_casella/91_introduction.md) | 9 | 9 |
+| [9.2 Methods Of Finding Interval Estimators](statistical_inference_casella/92_methods_of_finding_interval_estimators.md) | 52 | 61 |
+| [9.3 Methods Of Evaluating Interval Estimators](statistical_inference_casella/93_methods_of_evaluating_interval_estimators.md) | 34 | 35 |
+| [10.1 Point Estimation](statistical_inference_casella/101_point_estimation.md) | 42 | 48 |
+| [10.2 Robustness](statistical_inference_casella/102_robustness.md) | 16 | 20 |
+| [10.3 Hypothesis Testing](statistical_inference_casella/103_hypothesis_testing.md) | 22 | 25 |
+| [10.4 Interval Estimation](statistical_inference_casella/104_interval_estimation.md) | 5 | 6 |
 
 </details>
 
@@ -470,6 +437,7 @@ Nói thêm tí về StudyBoard, hiện nay và sắp tới đây sẽ chính là
 `875 notes · 1,347 screenshots · 21 sections`
 
 > A comprehensive collection of study notes and lecture summaries for Stephen Boyd's Convex Optimization course (EE364a), covering fundamental concepts such as convex sets and functions, duality theory, KKT conditions, and optimization algorithms.
+> 
 > Bộ sưu tập chi tiết các ghi chép học tập và tóm tắt bài giảng cho khóa học Tối ưu hóa Lồi (EE364a) của Stephen Boyd, bao gồm các khái niệm nền tảng như tập hợp và hàm lồi, lý thuyết đối ngẫu, điều kiện KKT và các thuật toán tối ưu hóa.
 
 <details open>
@@ -510,6 +478,7 @@ Nói thêm tí về StudyBoard, hiện nay và sắp tới đây sẽ chính là
 `412 notes · 591 screenshots · 34 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
+> 
 > Sổ tay này đi sâu vào các thuật toán tối ưu hóa số cốt lõi như tìm kiếm đường thẳng, vùng tin cậy, quasi-Newton và gradient liên hợp, cùng các khái niệm thiết yếu như đạo hàm tự động, phân tích hội tụ và kỹ thuật đại số tuyến tính số.
 
 <details open>
@@ -643,124 +612,195 @@ Nói thêm tí về StudyBoard, hiện nay và sắp tới đây sẽ chính là
 
 <sub>[↑ Back to navigation](#top-nav)</sub>
 
-<a id="group-probability-statistics"></a>
-### 📂 Probability & Statistics
+<a id="group-machine-learning-deep-learning"></a>
+### 📂 Machine Learning & Deep Learning
 
-<a id="nb-stat110_havard"></a>
-### STAT110_Havard
-<!-- key: stat110_havard -->
-<!-- group: Probability & Statistics -->
-`881 notes · 1,109 screenshots · 32 sections`
+<a id="nb-cs224n_stanford"></a>
+### CS224N_Stanford
+<!-- key: cs224n_stanford -->
+<!-- group: Machine Learning & Deep Learning -->
+`791 notes · 1,108 screenshots · 27 sections`
 
-> This notebook explores foundational and advanced topics in probability and statistical inference, covering random variables, their distributions (discrete and continuous), expectation, variance, moment generating functions, and key theorems such as the Law of Large Numbers and Central Limit Theorem.
-> Sổ tay này khám phá các chủ đề cơ bản và nâng cao trong lý thuyết xác suất và suy luận thống kê, bao gồm các biến ngẫu nhiên, các phân phối của chúng (rời rạc và liên tục), kỳ vọng, phương sai, hàm sinh moment, và các định lý quan trọng như Luật Số lớn và Định lý Giới hạn Trung tâm.
+> A comprehensive study notebook for Stanford's CS224N (Natural Language Processing with Deep Learning) course, covering fundamental to advanced NLP concepts from word embeddings (Word2Vec, GloVe) to neural architectures like RNNs, Transformers, and RLHF.
+> 
+> Sổ tay học tập toàn diện cho khóa học CS224N của Stanford (Xử lý Ngôn ngữ Tự nhiên với Học sâu), bao gồm các kiến thức từ cơ bản đến nâng cao từ biểu diễn từ (Word2Vec, GloVe) cho đến các kiến trúc mạng nơ-ron như RNN, Transformer và RLHF.
 
 <details open>
-<summary>📖 32 sections</summary>
+<summary>📖 27 sections</summary>
 
 | Section | Notes | Screenshots |
 |---|---:|---:|
-| [📋 Overview](stat110_havard/_overview.md) | 0 | 1 |
-| [Cheatsheet (nhờ Ai)](stat110_havard/cheatsheet_nh_ai.md) | 5 | 98 |
-| [Lec 10: Expected Value](stat110_havard/lec_10_expected_value.md) | 34 | 41 |
-| [Lec 11: Poisson Distribution](stat110_havard/lec_11_poisson_distribution.md) | 31 | 39 |
-| [Lec 12: Discrete Vs](stat110_havard/lec_12_discrete_vs_continuous_the_uniform.md) | 42 | 49 |
-| [Lec 13: Normal Distribution](stat110_havard/lec_13_normal_distribution.md) | 33 | 42 |
-| [Lec 14: Location, Scale, Lotus](stat110_havard/lec_14_location_scale_lotus.md) | 41 | 47 |
-| [Lec 15: Midterm Review](stat110_havard/lec_15_midterm_review.md) | 29 | 32 |
-| [Lec 16: Exponential](stat110_havard/lec_16_exponential_distribution.md) | 19 | 25 |
-| [Lec 17: Moment](stat110_havard/lec_17_moment_generating_functions.md) | 49 | 60 |
-| [Lec 18: MGF Continued](stat110_havard/lec_18_mgf_continued.md) | 42 | 49 |
-| [Lec 19: Joint, Conditional And](stat110_havard/lec_19_joint_conditional_and_marginal_distribution.md) | 38 | 41 |
-| [Lec 1: Probability & Counting](stat110_havard/lec_1_probability_counting.md) | 17 | 17 |
-| [Lec 20: Multinomial And Cauchy](stat110_havard/lec_20_multinomial_and_cauchy.md) | 31 | 44 |
-| [Lec 21: Covariance & Correlation](stat110_havard/lec_21_covariance_correlation.md) | 31 | 38 |
-| [Lec 22: Transformations & Convolution](stat110_havard/lec_22_transformations_convolution.md) | 22 | 28 |
-| [Lec 23: Beta Distribution](stat110_havard/lec_23_beta_distribution.md) | 10 | 13 |
-| [Lec 24: Gamma Distribution & Poisson](stat110_havard/lec_24_gamma_distribution_poisson.md) | 24 | 24 |
-| [Lec 25: Order Statistic &](stat110_havard/lec_25_order_statistic_conditional_expectation.md) | 27 | 31 |
-| [Lec 26 Conditional](stat110_havard/lec_26_conditional_expectation.md) | 30 | 33 |
-| [Lec 27: Conditional](stat110_havard/lec_27_conditional_expectation_given_an_rv.md) | 26 | 36 |
-| [Lec 28: Inequalities](stat110_havard/lec_28_inequalities.md) | 19 | 21 |
-| [Lec 29: Law Of Large Numbers &](stat110_havard/lec_29_law_of_large_numbers_law_of_central_limit.md) | 35 | 36 |
-| [Lec 2: Story Proofs,](stat110_havard/lec_2_story_proofs_axioms_of_probability.md) | 23 | 23 |
-| [Lec 30: Chi-square, Student-t,](stat110_havard/lec_30_chi_square_student_t_multi_variate_gaussian.md) | 21 | 22 |
-| [Lec 3: Birthday Problem,](stat110_havard/lec_3_birthday_problem_properties_of_probability.md) | 21 | 23 |
-| [Lec 4: Conditional Probability](stat110_havard/lec_4_conditional_probability.md) | 26 | 26 |
-| [Lec 5: Conditional Probability,](stat110_havard/lec_5_conditional_probability_law_of_total_probability.md) | 31 | 35 |
-| [Lec 6: Monty Hall, Simpson's](stat110_havard/lec_6_monty_hall_simpsons_paradox.md) | 23 | 23 |
-| [Lec 7: Gambler's Ruin &](stat110_havard/lec_7_gamblers_ruin_random_variables.md) | 29 | 35 |
-| [Lec 8: Random Variables &](stat110_havard/lec_8_random_variables_their_distributions.md) | 32 | 36 |
-| [Lec 9: Expectation, Indicator](stat110_havard/lec_9_expectation_indicator_random_variables_linearity.md) | 40 | 41 |
+| [📋 Overview](cs224n_stanford/_overview.md) | 1 | 1 |
+| [Assignment 1](cs224n_stanford/assignment_1.md) | 18 | 29 |
+| [Assignment 2 - Word2vec](cs224n_stanford/assignment_2_word2vec.md) | 22 | 56 |
+| [Assignment 3 -](cs224n_stanford/assignment_3_dependency_parsing.md) | 31 | 47 |
+| [Assignment 4 - NMT](cs224n_stanford/assignment_4_nmt.md) | 18 | 45 |
+| [Assignment 5: Self-attention, Transformers And Pretraining](cs224n_stanford/assignment_5_self_attention_transformers_and_pretraining.md) | 9 | 9 |
+| [Lec 9 Reading](cs224n_stanford/lec_9_reading.md) | 1 | 1 |
+| [Lecture 10: Prompting & RLHF](cs224n_stanford/lecture_10_prompting_rlhf.md) | 51 | 63 |
+| [Lecture 11: Question & Answering](cs224n_stanford/lecture_11_question_answering.md) | 46 | 55 |
+| [Lecture 12: Natural Language Generation](cs224n_stanford/lecture_12_natural_language_generation.md) | 59 | 68 |
+| [Lecture 13: Coreference Resolution](cs224n_stanford/lecture_13_coreference_resolution.md) | 50 | 52 |
+| [Lecture 14: Insights Between NLP And Linguistic](cs224n_stanford/lecture_14_insights_between_nlp_and_linguistic.md) | 32 | 38 |
+| [Lecture 15: Add Knowledge To Language Model](cs224n_stanford/lecture_15_add_knowledge_to_language_model.md) | 23 | 27 |
+| [Lecture 2: Neural Classifiers](cs224n_stanford/lecture_2_neural_classifiers.md) | 58 | 74 |
+| [Lecture 3: Backprop And Neural Networks](cs224n_stanford/lecture_3_backprop_and_neural_networks.md) | 29 | 54 |
+| [Lecture 4: Syntactic Structure](cs224n_stanford/lecture_4_syntactic_structure_and_dependency_parsing.md) | 41 | 53 |
+| [Lecture 5: Recurrent Neural Network](cs224n_stanford/lecture_5_recurrent_neural_network.md) | 15 | 21 |
+| [Lecture 6: Simple And Lstm Rnns](cs224n_stanford/lecture_6_simple_and_lstm_rnns.md) | 39 | 58 |
+| [Lecture 7: Translation, Seq2seq, Attention](cs224n_stanford/lecture_7_translation_seq2seq_attention.md) | 42 | 48 |
+| [Lecture 8: Translation, Seq2seq, Attention](cs224n_stanford/lecture_8_translation_seq2seq_attention.md) | 8 | 17 |
+| [Lecture 9: Pretraining](cs224n_stanford/lecture_9_pretraining.md) | 42 | 51 |
+| [Lecture 9: Self-attention And Transformers](cs224n_stanford/lecture_9_self_attention_and_transformers.md) | 41 | 45 |
+| [Lecture Note - 03](cs224n_stanford/lecture_note_03_backpropagation.md) | 7 | 24 |
+| [Lecture Note 04 -](cs224n_stanford/lecture_note_04_dependency_parsers.md) | 13 | 17 |
+| [Lecture Notes 05 Language](cs224n_stanford/lecture_notes_05_language_model_rnn_lstm_gru.md) | 38 | 77 |
+| [Reading](cs224n_stanford/reading.md) | 0 | 1 |
+| [Week 1: Intro & Word Vectors](cs224n_stanford/week_1_intro_word_vectors.md) | 57 | 77 |
 
 </details>
 
 <sub>[↑ Back to navigation](#top-nav)</sub>
 
-<a id="nb-statistical_inference_casella"></a>
-### Statistical Inference - Casella
-<!-- key: statistical_inference_casella -->
-<!-- group: Probability & Statistics -->
-`869 notes · 1,131 screenshots · 50 sections`
+<a id="nb-cs231n_stanford"></a>
+### CS231N_Stanford
+<!-- key: cs231n_stanford -->
+<!-- group: Machine Learning & Deep Learning -->
+`1,603 notes · 2,702 screenshots · 46 sections`
 
-> This notebook contains detailed study notes and proofs based on Casella and Berger's *Statistical Inference*, covering key topics in probability theory, estimation methods, hypothesis testing, and asymptotic properties.
-> Sổ tay học tập này tổng hợp các ghi chép và chứng minh chi tiết dựa trên giáo trình *Statistical Inference* của Casella và Berger, bao gồm các chủ đề cốt lõi về lý thuyết xác suất, phương pháp ước lượng, kiểm định giả thuyết và tính chất tiệm cận.
+> This notebook contains comprehensive study notes, lecture summaries, and programming assignments from Stanford's CS231n course on Convolutional Neural Networks for Visual Recognition.
+> 
+> Cuốn sổ tay này tổng hợp các ghi chép học tập, tóm tắt bài giảng và bài tập thực hành từ khóa học CS231n của Đại học Stanford về Mạng nơ-ron tích chập cho Nhận dạng Thị giác.
 
 <details open>
-<summary>📖 50 sections</summary>
+<summary>📖 46 sections</summary>
 
 | Section | Notes | Screenshots |
 |---|---:|---:|
-| [📋 Overview](statistical_inference_casella/_overview.md) | 0 | 1 |
-| [1.1 Set Theory](statistical_inference_casella/11_set_theory.md) | 6 | 9 |
-| [1.2.1 Axiomatic Foundation](statistical_inference_casella/121_axiomatic_foundation.md) | 9 | 10 |
-| [1.2.2 Calculus Of Probability](statistical_inference_casella/122_calculus_of_probability.md) | 5 | 9 |
-| [1.2.3 Counting](statistical_inference_casella/123_counting.md) | 6 | 8 |
-| [1.2.4 Enumerating Outcome](statistical_inference_casella/124_enumerating_outcome.md) | 10 | 14 |
-| [1.3 Conditional Probability & Independence](statistical_inference_casella/13_conditional_probability_independence.md) | 12 | 16 |
-| [1.4 Random Variables](statistical_inference_casella/14_random_variables.md) | 4 | 5 |
-| [1.5 Distribution Function](statistical_inference_casella/15_distribution_function.md) | 9 | 11 |
-| [1.6 PDF & Pmf](statistical_inference_casella/16_pdf_pmf.md) | 4 | 5 |
-| [2.1 Distribution](statistical_inference_casella/21_distribution.md) | 15 | 21 |
-| [2.2 Expected Value](statistical_inference_casella/22_expected_value.md) | 7 | 10 |
-| [2.3 MGF](statistical_inference_casella/23_mgf.md) | 15 | 25 |
-| [2.4 Differentiating under integral](statistical_inference_casella/24_differentiating_under_integral.md) | 11 | 19 |
-| [2.5 Ex](statistical_inference_casella/25_ex.md) | 1 | 2 |
-| [3.1&2 Discrete distribution](statistical_inference_casella/312_discrete_distribution.md) | 20 | 32 |
-| [3.3 Continuous distribution](statistical_inference_casella/33_continuous_distribution.md) | 24 | 38 |
-| [3.4 Exponential families](statistical_inference_casella/34_exponential_families.md) | 10 | 15 |
-| [3.5 Location And Scale Families](statistical_inference_casella/35_location_and_scale_families.md) | 12 | 17 |
-| [3.6 Inequalities](statistical_inference_casella/36_inequalities.md) | 9 | 12 |
-| [4.1 Joint & Marginal Distribution](statistical_inference_casella/41_joint_marginal_distribution.md) | 13 | 19 |
-| [4.2 Conditional Distributions & Independent](statistical_inference_casella/42_conditional_distributions_independent.md) | 18 | 27 |
-| [4.3 Bivariate Transformation](statistical_inference_casella/43_bivariate_transformation.md) | 14 | 24 |
-| [4.4 Hierarchical Model & Mixture Distribution](statistical_inference_casella/44_hierarchical_model_mixture_distribution.md) | 11 | 19 |
-| [4.5 Covariance & Correlation](statistical_inference_casella/45_covariance_correlation.md) | 18 | 25 |
-| [4.6 Multi-variate Distribution](statistical_inference_casella/46_multi_variate_distribution.md) | 22 | 28 |
-| [4.7 Inequalities](statistical_inference_casella/47_inequalities.md) | 1 | 0 |
-| [5.1 Basic Concepts Of Random Samples](statistical_inference_casella/51_basic_concepts_of_random_samples.md) | 13 | 16 |
-| [5.2 Σ Of Random Variables From A Random Sample](statistical_inference_casella/52_of_random_variables_from_a_random_sample.md) | 18 | 26 |
-| [5.3 Sampling From The Normal Distribution](statistical_inference_casella/53_sampling_from_the_normal_distribution.md) | 21 | 29 |
-| [5.4 Order Statistic](statistical_inference_casella/54_order_statistic.md) | 12 | 16 |
-| [5.5 Convergence Concepts](statistical_inference_casella/55_convergence_concepts.md) | 42 | 52 |
-| [5.6 Generating Random Sample](statistical_inference_casella/56_generating_random_sample.md) | 31 | 43 |
-| [6.1 Introduction](statistical_inference_casella/61_introduction.md) | 3 | 4 |
-| [6.2 The Sufficient Principle](statistical_inference_casella/62_the_sufficient_principle.md) | 46 | 59 |
-| [6.3 The Likelihood Principle](statistical_inference_casella/63_the_likelihood_principle.md) | 19 | 23 |
-| [6.4 The Equivariance Principle](statistical_inference_casella/64_the_equivariance_principle.md) | 11 | 14 |
-| [7.1 Introduction](statistical_inference_casella/71_introduction.md) | 3 | 3 |
-| [7.2 Method Of Finding Estimators](statistical_inference_casella/72_method_of_finding_estimators.md) | 42 | 52 |
-| [7.3 Methods Of Evaluating Estimators](statistical_inference_casella/73_methods_of_evaluating_estimators.md) | 63 | 74 |
-| [8.1 Introduction](statistical_inference_casella/81_introduction.md) | 5 | 5 |
-| [8.2 Method Of Finding Tests](statistical_inference_casella/82_method_of_finding_tests.md) | 21 | 26 |
-| [8.3 Methods Of Evaluating Test](statistical_inference_casella/83_methods_of_evaluating_test.md) | 53 | 64 |
-| [9.1 Introduction](statistical_inference_casella/91_introduction.md) | 9 | 9 |
-| [9.2 Methods Of Finding Interval Estimators](statistical_inference_casella/92_methods_of_finding_interval_estimators.md) | 52 | 61 |
-| [9.3 Methods Of Evaluating Interval Estimators](statistical_inference_casella/93_methods_of_evaluating_interval_estimators.md) | 34 | 35 |
-| [10.1 Point Estimation](statistical_inference_casella/101_point_estimation.md) | 42 | 48 |
-| [10.2 Robustness](statistical_inference_casella/102_robustness.md) | 16 | 20 |
-| [10.3 Hypothesis Testing](statistical_inference_casella/103_hypothesis_testing.md) | 22 | 25 |
-| [10.4 Interval Estimation](statistical_inference_casella/104_interval_estimation.md) | 5 | 6 |
+| [📋 Overview](cs231n_stanford/_overview.md) | 1 | 1 |
+| [Assignment 1 - 2 Layer Nn](cs231n_stanford/assignment_1_2_layer_nn.md) | 28 | 38 |
+| [Assignment 1 - KNN](cs231n_stanford/assignment_1_knn.md) | 31 | 45 |
+| [Assignment 2 - Batch Normalization](cs231n_stanford/assignment_2_batch_normalization.md) | 18 | 35 |
+| [Assignment 2 -](cs231n_stanford/assignment_2_convolutional_network.md) | 27 | 64 |
+| [Assignment 2 - Dropout](cs231n_stanford/assignment_2_dropout.md) | 6 | 14 |
+| [Assignment 2 - Fully Connected Nn](cs231n_stanford/assignment_2_fully_connected_nn.md) | 25 | 61 |
+| [Assignment 2](cs231n_stanford/assignment_2_pytorch.md) | 22 | 32 |
+| [Assignment 3 - Lstm Captioning](cs231n_stanford/assignment_3_lstm_captioning.md) | 9 | 34 |
+| [Assignment 3 - RNN Captioning](cs231n_stanford/assignment_3_rnn_captioning.md) | 12 | 49 |
+| [Assignment 4 - Transformer Image Captioning](cs231n_stanford/assignment_4_transformer_image_captioning.md) | 20 | 36 |
+| [Eecs498-007 Lecture 17: 3d Vision](cs231n_stanford/eecs498_007_lecture_17_3d_vision.md) | 49 | 59 |
+| [Eecs498-007](cs231n_stanford/eecs498_007_lecture_18_video.md) | 55 | 66 |
+| [EECS 498-007/598-005 (2022) - ASSIGNMENT 4 (Part 1):](cs231n_stanford/eecs_498_007598_005_2022_assignment_4_part_1_one_state_object_detector.md) | 49 | 118 |
+| [EECS 498-007/598-005 (2022) - ASSIGNMENT 4 (Part 2):](cs231n_stanford/eecs_498_007598_005_2022_assignment_4_part_2_two_stage_detector.md) | 33 | 123 |
+| [Eecs 498-007_598-005 (2020) Assignment 4 (part 1):](cs231n_stanford/eecs_498_007_598_005_2020_assignment_4_part_1_single_stage_detector_yolo.md) | 43 | 158 |
+| [Eecs 498-007_598-005 (2020) Assignment 4 (part 2):](cs231n_stanford/eecs_498_007_598_005_2020_assignment_4_part_2_two_stage_detector_faster_rcnn.md) | 14 | 90 |
+| [Eecs 498-007_598-005 (2020) Assignment 6:](cs231n_stanford/eecs_498_007_598_005_2020_assignment_6_network_visualization.md) | 8 | 33 |
+| [Eecs 498-007_598-005 (2020) Assignment 6:](cs231n_stanford/eecs_498_007_598_005_2020_assignment_6_style_transfer.md) | 10 | 39 |
+| [Eecs 498-007_598-005 (2022) Assignment 6:](cs231n_stanford/eecs_498_007_598_005_2022_assignment_6_generative_adversarial_network.md) | 20 | 59 |
+| [Eecs 498-007_598-005 (2022) Assignment 6:](cs231n_stanford/eecs_498_007_598_005_2022_assignment_6_variational_auto_encoder.md) | 18 | 43 |
+| [Guess Lecture - Adversarial Machine Learning](cs231n_stanford/guess_lecture_adversarial_machine_learning.md) | 9 | 12 |
+| [Lecture 10/16 - Recurrent Neural Network](cs231n_stanford/lecture_1016_recurrent_neural_network.md) | 67 | 86 |
+| [Lecture 11/16 - Detection And](cs231n_stanford/lecture_1116_detection_and_segmentation.md) | 108 | 144 |
+| [Lecture 1/16 - Introduction To CNN](cs231n_stanford/lecture_116_introduction_to_cnn.md) | 11 | 31 |
+| [Lecture 12/16 - Visualization And](cs231n_stanford/lecture_1216_visualization_and_understanding.md) | 60 | 84 |
+| [Lecture 13/16 - Generative Models](cs231n_stanford/lecture_1316_generative_models.md) | 72 | 86 |
+| [Lecture 14/16 - Deep Reinforcement](cs231n_stanford/lecture_1416_deep_reinforcement_learning.md) | 24 | 29 |
+| [Lecture 14/16 - Generative Models Ii](cs231n_stanford/lecture_1416_generative_models_ii.md) | 45 | 53 |
+| [Lecture 2/16 - Image Classification](cs231n_stanford/lecture_216_image_classification.md) | 41 | 58 |
+| [Lecture 3/16 - Loss Functions And Optimization](cs231n_stanford/lecture_316_loss_functions_and_optimization.md) | 117 | 154 |
+| [Lecture 4/16 - Introduction To Neural Networks](cs231n_stanford/lecture_416_introduction_to_neural_networks.md) | 23 | 55 |
+| [Lecture 5/16 - Convolutional Neural Networks](cs231n_stanford/lecture_516_convolutional_neural_networks.md) | 52 | 63 |
+| [Lecture 6/16 - Training Neural Network I](cs231n_stanford/lecture_616_training_neural_network_i.md) | 65 | 105 |
+| [Lecture 7/16 - Training Neural Network Ii](cs231n_stanford/lecture_716_training_neural_network_ii.md) | 70 | 90 |
+| [Lecture 8/16 - Deep Learning Software](cs231n_stanford/lecture_816_deep_learning_software.md) | 89 | 107 |
+| [Lecture 9/16 - CNN Architecture](cs231n_stanford/lecture_916_cnn_architecture.md) | 55 | 72 |
+| [LECTURE NOTE: Image Classification:](cs231n_stanford/lecture_note_image_classification_data_driven_approach_k_nearest_neighbor_trainvaltest_splits.md) | 1 | 0 |
+| [Lecture Note](cs231n_stanford/lecture_note_introduction_to_rnn.md) | 13 | 19 |
+| [Lecture Note Nn P1](cs231n_stanford/lecture_note_nn_p1.md) | 1 | 14 |
+| [Lecture X: Transformer](cs231n_stanford/lecture_x_transformer.md) | 41 | 47 |
+| [Note #4 Backpropagation](cs231n_stanford/note_4_backpropagation.md) | 9 | 13 |
+| [Note - Convolutional Net](cs231n_stanford/note_convolutional_net.md) | 22 | 31 |
+| [Note - Neural](cs231n_stanford/note_neural_network_part_2.md) | 44 | 59 |
+| [Note - Neural Network Part 3](cs231n_stanford/note_neural_network_part_3.md) | 49 | 61 |
+| [Paper: Batch normalization](cs231n_stanford/paper_batch_normalization.md) | 17 | 32 |
+
+</details>
+
+<sub>[↑ Back to navigation](#top-nav)</sub>
+
+<a id="nb-dl_spec_coursera"></a>
+### DL Spec Coursera
+<!-- key: dl_spec_coursera -->
+<!-- group: Machine Learning & Deep Learning -->
+`1,083 notes · 1,827 screenshots · 19 sections`
+
+> A comprehensive compilation of notes, quizzes, and programming assignments from the Coursera Deep Learning Specialization. It covers topics ranging from foundational neural networks to advanced computer vision, NLP architectures, and model optimization using TensorFlow.
+> 
+> Tổng hợp toàn diện các ghi chép, bài trắc nghiệm và bài tập lập trình từ Chuyên ngành Deep Learning trên Coursera. Nội dung bao gồm từ các khái niệm mạng nơ-ron cơ bản đến các kiến trúc nâng cao về thị giác máy tính, NLP và tối ưu hóa mô hình bằng TensorFlow.
+
+<details open>
+<summary>📖 19 sections</summary>
+
+| Section | Notes | Screenshots |
+|---|---:|---:|
+| [📋 Overview](dl_spec_coursera/_overview.md) | 0 | 1 |
+| [C1w1_introduction To N.n](dl_spec_coursera/c1w1_introduction_to_nn.md) | 7 | 24 |
+| [C1w2_n.n Basic](dl_spec_coursera/c1w2_nn_basic.md) | 64 | 163 |
+| [C1w3_shalow Neural Networks](dl_spec_coursera/c1w3_shalow_neural_networks.md) | 23 | 91 |
+| [C1w4_deep Neural Network](dl_spec_coursera/c1w4_deep_neural_network.md) | 21 | 95 |
+| [C2w1_practical Aspects Of Deep Learning](dl_spec_coursera/c2w1_practical_aspects_of_deep_learning.md) | 51 | 121 |
+| [C2w2_optimization Algorithms](dl_spec_coursera/c2w2_optimization_algorithms.md) | 50 | 96 |
+| [C2w3_hyperparamter Tuning, Batch Normalization & Programming Frameworks](dl_spec_coursera/c2w3_hyperparamter_tuning_batch_normalization_programming_frameworks.md) | 58 | 85 |
+| [C3w1_machine Learning Strategy 1](dl_spec_coursera/c3w1_machine_learning_strategy_1.md) | 42 | 47 |
+| [C3w2_machine Learning Strategy 2](dl_spec_coursera/c3w2_machine_learning_strategy_2.md) | 43 | 40 |
+| [C4w1_foundations Of Convolutional Neural Network](dl_spec_coursera/c4w1_foundations_of_convolutional_neural_network.md) | 80 | 117 |
+| [C4w2_deep Convolutional Models: Case Studies](dl_spec_coursera/c4w2_deep_convolutional_models_case_studies.md) | 88 | 118 |
+| [C4w3_object Detection](dl_spec_coursera/c4w3_object_detection.md) | 59 | 138 |
+| [C4w4_face Recognition & Neural Style Transfer](dl_spec_coursera/c4w4_face_recognition_neural_style_transfer.md) | 73 | 105 |
+| [C5w1_recurrent Neural Networks](dl_spec_coursera/c5w1_recurrent_neural_networks.md) | 99 | 165 |
+| [C5w2_natural Language Processing & Word Embeddings](dl_spec_coursera/c5w2_natural_language_processing_word_embeddings.md) | 59 | 103 |
+| [C5w3_sequence Models & Attention Mechanism](dl_spec_coursera/c5w3_sequence_models_attention_mechanism.md) | 72 | 116 |
+| [C5w4_transformer Network](dl_spec_coursera/c5w4_transformer_network.md) | 193 | 202 |
+| [Untitled](dl_spec_coursera/untitled.md) | 1 | 0 |
+
+</details>
+
+<sub>[↑ Back to navigation](#top-nav)</sub>
+
+<a id="nb-nlp_spec_coursera"></a>
+### NLP Spec Coursera
+<!-- key: nlp_spec_coursera -->
+<!-- group: Machine Learning & Deep Learning -->
+`1,808 notes · 2,287 screenshots · 19 sections`
+
+> A comprehensive collection of study notes, practical exercises, and implementations from the Coursera NLP Specialization, covering foundational NLP techniques, sequence models, and modern Transformer architectures.
+> 
+> Cuốn sổ tay tổng hợp các ghi chép học tập, bài tập thực hành và mã nguồn từ khóa học Chuyên sâu về NLP trên Coursera, bao gồm các kỹ thuật NLP nền tảng, mô hình chuỗi và kiến trúc Transformer hiện đại.
+
+<details open>
+<summary>📖 19 sections</summary>
+
+| Section | Notes | Screenshots |
+|---|---:|---:|
+| [📋 Overview](nlp_spec_coursera/_overview.md) | 0 | 1 |
+| [C1w1_logistic Regression](nlp_spec_coursera/c1w1_logistic_regression.md) | 64 | 113 |
+| [C1w2 - Naive Bayes](nlp_spec_coursera/c1w2_naive_bayes.md) | 83 | 112 |
+| [C1w3 - Vector Space Models](nlp_spec_coursera/c1w3_vector_space_models.md) | 146 | 122 |
+| [C1w4 - Machine Translation & Document Search](nlp_spec_coursera/c1w4_machine_translation_document_search.md) | 108 | 115 |
+| [C2_natural Language Processing With Probabilistic Models](nlp_spec_coursera/c2_natural_language_processing_with_probabilistic_models.md) | 0 | 1 |
+| [C2w1_autocorrect](nlp_spec_coursera/c2w1_autocorrect.md) | 110 | 123 |
+| [C2w2_part Of Speech Tagging And Hidden Markov Models](nlp_spec_coursera/c2w2_part_of_speech_tagging_and_hidden_markov_models.md) | 169 | 171 |
+| [C2w3_autocomplete And Language Models](nlp_spec_coursera/c2w3_autocomplete_and_language_models.md) | 152 | 143 |
+| [C3w1_neural Networks For Sentiment Analysis](nlp_spec_coursera/c3w1_neural_networks_for_sentiment_analysis.md) | 94 | 141 |
+| [C3w2_recurrent Neural Networks For Language Modeling](nlp_spec_coursera/c3w2_recurrent_neural_networks_for_language_modeling.md) | 85 | 138 |
+| [C3W3_LSTMs AND NAMED ENTITY REGCONITION:](nlp_spec_coursera/c3w3_lstms_and_named_entity_regconition.md) | 69 | 108 |
+| [C3w4 - Siamese Network](nlp_spec_coursera/c3w4_siamese_network.md) | 82 | 122 |
+| [C3w4_word Embeddings With Neural Networks](nlp_spec_coursera/c3w4_word_embeddings_with_neural_networks.md) | 173 | 211 |
+| [C4_natural Language Processing With Attention Models](nlp_spec_coursera/c4_natural_language_processing_with_attention_models.md) | 0 | 1 |
+| [C4w1_neural Machine Translation](nlp_spec_coursera/c4w1_neural_machine_translation.md) | 167 | 220 |
+| [C4w2_text Summarization](nlp_spec_coursera/c4w2_text_summarization.md) | 86 | 145 |
+| [C4w3 - Question Answering](nlp_spec_coursera/c4w3_question_answering.md) | 130 | 187 |
+| [C4w4_chatbot](nlp_spec_coursera/c4w4_chatbot.md) | 90 | 113 |
 
 </details>
 
