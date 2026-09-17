@@ -22,7 +22,7 @@ Các note trong repo này vì vậy không phải sách, giáo trình hay tài l
 
 ## StudyBoard
 
-Bên cạnh việc học AI, background của mình vốn là app development. Mình đã tự build, ship và duy trì sản phẩm thực tế trong nhiều năm; một trong những app mình từng phát triển là [**Sentence Master**](https://play.google.com/store/apps/details?id=com.hungdaovuong.sentencemaster.en), hiện đã vượt mốc **1 triệu lượt tải trên Google Play**.
+Bên cạnh việc học AI, background của mình vốn là kĩ sư xây dựng chuyển hướng app development vì thích làm sản phẩm công nghệ. Mình đã tự build, ship và duy trì các sản phẩm thực tế trong nhiều năm; một trong những app mình từng phát triển là [**Sentence Master**](https://play.google.com/store/apps/details?id=com.hungdaovuong.sentencemaster.en).
 
 Kinh nghiệm làm sản phẩm đó cũng là một phần nền để mình bắt đầu build [**StudyBoard**](https://studyboard.app/landing.html) từ đầu năm nay, xoay quanh chính workflow học ở trên.
 
