@@ -147,6 +147,8 @@
 >
 > Hiểu vậy thì ta sẽ hình dung cái gọi là tuyến tính từng phần: giống mình làm một cái dãy núi bằng ván gỗ vậy. Thì tại một điểm nằm đó, trên dãy núi, ta đều đang đứng trên một mặt nghiêng, nhưng tại các điểm khác nhau thì hướng dốc nhất + độ dốc sẽ khác nhau. Và nhờ hình ảnh này, tí nữa ta sẽ hiểu thuật toán stochastic gradient descent nó làm gì.
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=PEL_sI4YGSg)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
