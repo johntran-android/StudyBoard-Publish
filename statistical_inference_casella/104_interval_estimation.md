@@ -1,6 +1,6 @@
 # 10.4 Interval Estimation
 
-📊 **Progress:** `5` Notes | `6` Screenshots | `5` AI Reviews
+📊 **Progress:** `8` Notes | `9` Screenshots | `8` AI Reviews
 
 ---
 <a id="node-wt27aoy"></a>
@@ -870,6 +870,337 @@
 > - Tập hợp C(x) = {θ: |Q(x|θ)| ≤ z_{α/2}} là một confidence set; để nó trở thành một 'interval' liên tục [L(x), U(x)], hàm Q(x|θ) thường cần đơn điệu theo θ trên không gian tham số.
 
 **🔗 See also:** [Kỳ vọng của Score Statistic](./103_hypothesis_testing.md#node-wzyceag) · [Lec 14: Location, Scale, Lotus *(STAT110_Havard)*](../stat110_havard/lec_14_location_scale_lotus.md#node-2oglyyh) · [linked note *(STAT110_Havard)*](../stat110_havard/lec_12_discrete_vs_continuous_the_uniform.md#node-cmnrs7p) · [Giới hạn dưới Cramer-Rao](./73_methods_of_evaluating_estimators.md#node-ihoar4m) · [Bổ đề Tính toán Hàm mũ](./73_methods_of_evaluating_estimators.md#node-sttybm4) · [Mối quan hệ C(x) và A(θ)](./92_methods_of_finding_interval_estimators.md#node-cebe6p1)
+
+<br>
+
+<a id="node-ggsgt5l"></a>
+
+###### Asymptotic Optimality of Confidence Intervals
+
+<p align="center"><kbd><img src="assets/7fsm59kr82d.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Chưa hiểu lắm, quay lại sau.
+
+> [!TIP]
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **0/100** · ✗ Fix first
+>
+> Ghi chú chưa có nội dung ghi nhận hay phân tích kiến thức nào từ tài liệu. Bạn hãy quay lại đọc hiểu phần kỳ vọng, phương sai của hàm điểm và tính tối ưu tiệm cận của khoảng tin cậy Wilks rồi tóm tắt lại nhé.
+>
+> **🔴 Critical issues**
+>
+> **1.** *"Chưa hiểu lắm, quay lại sau."*
+>
+> Ghi chú chưa chứa bất kỳ nội dung, suy luận hay tóm tắt kiến thức nào để thể hiện việc tiếp thu bài học.
+>
+>
+> **💡 Deeper notes**
+> - Đoạn tài liệu chỉ ra rằng thống kê $Q(\mathbf{X}|\theta)$ dựa trên hàm điểm (score function) chuẩn hóa có kỳ vọng bằng 0 và phương sai bằng 1 (khớp với hai moment đầu của phân phối chuẩn tắc $N(0, 1)$).
+> - Định lý của Wilks (1938) chứng minh rằng các khoảng tin cậy xây dựng từ phương pháp này đạt tính tối ưu tiệm cận (ngắn nhất tiệm cận trong một lớp khoảng tin cậy nhất định).
+
+<br>
+
+<a id="node-xi6jvh6"></a>
+
+###### Example 10.4.2 Binomial Score Interval
+
+<p align="center"><kbd><img src="assets/nfjlp2uguw8.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Y = Σi Xi, Xi \~ Bern(p)
+>
+>
+>
+> Ở phần trước mình đã hiểu rằng Q(𝐗|θ) = ∂/∂θ log L(θ|𝐗) / √-E\_θ(∂²/∂θ² log L(θ|𝐗)) → (d) n(0,1)
+>
+>
+>
+> Áp dụng vào đây. Với Xi \~ Bern(p)
+>
+>
+>
+> ⇒ L(θ|𝐗) = f(𝐗|θ) = Πi f(Xi|θ) ⇒ ∂/∂θ log L(θ|𝐗) = ∂/∂θ log Πi f(Xi|θ)
+>
+>
+>
+> = ∂/∂p Σi log f(Xi|p)
+>
+>
+>
+> thay pmf của Bern(p) vô: P(X=1) = p, P(X=0) = 1-p ⇒ P(X=x) = (p^x)(1-p)^(1-x)
+>
+>
+>
+> = ∂/∂p Σi log \[(p^Xi)(1-p)^(1-Xi)\]
+>
+>
+>
+> = ∂/∂p \[Σi log(p^Xi) + Σi log(1-p)^(1-Xi)\]
+>
+>
+>
+> = ∂/∂p \[Σi Xi log(p) + Σi (1-Xi)log(1-p)\]
+>
+>
+>
+> = ∂/∂p {log(p)(Σi Xi) + \[log(1-p)\] Σi (1-Xi)}
+>
+>
+>
+> = \[∂/∂p log(p)\] × (Σi Xi) + \[∂/∂p log(1-p)\] × Σi (1-Xi)}
+>
+>
+>
+> (∂/∂p log(1-p) = ∂/∂(1-p) log(1-p) . ∂/∂p (1-p) = -1/(1-p) (-1) = 1/(1-p)
+>
+>
+>
+> = (Σi Xi)/p - Σi (1-Xi)/(1-p)
+>
+>
+>
+> = (Σi Xi)/p - (n-Σi Xi)/(1-p)
+>
+>
+>
+> = Y/p - (n-Y)/(1-p)
+>
+>
+>
+> = \[Y(1-p) - p(n-Y)\]/p(1-p)
+>
+>
+>
+> = (Y-Yp - pn+pY)/p(1-p)
+>
+>
+>
+> = (Y-pn)/p(1-p)
+>
+>
+>
+> Viết lại ∂/∂θ log L(θ|𝐗) = (Y-pn)/p(1-p)
+>
+>
+>
+> ---
+>
+>
+>
+> Còn mẫu số:  √-E\_θ(∂²/∂θ² log L(θ|𝐗)):
+>
+>
+>
+> ∂/∂p log L(θ|𝐗) = Y/p - (n-Y)/(1-p)
+>
+>
+>
+> ⇒ ∂²/∂p² log L(θ|𝐗) = ∂/∂p (Y/p) - ∂/∂p\[(n-Y)/(1-p)\]
+>
+>
+>
+> = Y ∂/∂p (1/p) - (n-Y) ∂/∂p\[1/(1-p)\]
+>
+>
+>
+> = Y (-1/p²) - (n-Y) \[-1/(1-p)² × (-1)\]
+>
+>
+>
+> = -Y/p² - (n-Y)/(1-p)²
+>
+>
+>
+> ⇒ E_p\[∂²/∂p² log L(θ|𝐗)\] = E_p\[-Y/p² - (n-Y)/(1-p)²\]
+>
+>
+>
+> = E_p\[-Y/p²\] - E_p\[(n-Y)/(1-p)²\] (linearity)
+>
+>
+>
+> = -E_p\[Y\]/p² - E_p\[n-Y\]/(1-p)² (linearity: E\[cX\] = cE\[X\])
+>
+>
+>
+> (E_p\[Y\] = E_p\[Σi Xi\] = Σi E_p\[Xi\] = Σi p = np
+>
+>
+>
+> = -np/p² - (n-np)/(1-p)²
+>
+>
+>
+> = -n/p - n(1-p)/(1-p)²
+>
+>
+>
+> = -n/p - n/(1-p)
+>
+>
+>
+> = \[-n(1-p) - np\]/p(1-p)
+>
+>
+>
+> = \[-n+ np - np\]/p(1-p)
+>
+>
+>
+> = -n/p(1-p)
+>
+>
+>
+> ⇒ -E_p\[∂²/∂p² log L(θ|𝐗)\] = n/p(1-p)
+>
+>
+>
+> ⇒ √-E_p\[∂²/∂p² log L(θ|𝐗)\] = √\[n/p(1-p)\]
+>
+>
+>
+> Vậy Q(𝐗|p) = \[(Y-pn)/p(1-p)\] / √\[n/p(1-p)\]
+>
+>
+>
+> Y = Σi Xi = np̂, p̂ = (Σi Xi) / n
+>
+>
+>
+> ..= \[(np̂ -pn) / p(1-p)\] / √\[n/p(1-p)\]
+>
+>
+>
+> = \[n(p̂ -p)\] / \[p(1-p)\] × \[√p(1-p) / √n\]
+>
+>
+>
+> = \[n(p̂ -p)\] / \[√p(1-p)\] × \[1 / √n\]
+>
+>
+>
+> = \[n(p̂ -p)\] / √\[np(1-p)\]
+>
+>
+>
+> = √n(p̂ -p) / √\[p(1-p)\]
+>
+>
+>
+>
+>
+> ---
+>
+>
+>
+> Dựa vào việc ta đã nhờ CLT chứng minh Q(𝐗|p) → (d) Z \~ n(0,1)
+>
+>
+>
+> P(Z ≤ -z\_α/2 ∪ z\_α/2 ≤ Z) = α
+>
+>
+>
+> ⇒ P(|Z| ≤ z\_α/2) = 1 - α
+>
+>
+>
+> ⇒  P(|√n(p̂ -p) / √\[p(1-p)\] | ≤ z\_α/2) ≈ 1 - α đây chính là 10.4.4 (mình chỉ là để √n trên tử thay vì lộn nó dưới mẫu.
+>
+>
+>
+> Và đến đây ta chỉ việc giải tìm p thỏa: |√n(p̂ -p) / √\[p(1-p)\]| ≤ z\_α/2
+>
+>
+>
+> bằng cách bình phương hai vế ta có:  {√n(p̂ -p) / √\[p(1-p)\]}² ≤ (z\_α/2)²
+>
+>
+>
+> ⇔ n(p̂ -p)² / \[p(1-p)\] ≤ (z\_α/2)²
+>
+>
+>
+> ⇔ n(p̂ -p)² ≤ (z\_α/2)² p(1-p)
+>
+>
+>
+> ⇔ np̂ ² - 2np̂p + np² ≤ (z\_α/2)² p - (z\_α/2)²p²
+>
+>
+>
+> ⇔ np̂ ² - 2np̂p - (z\_α/2)² p + np² + (z\_α/2)²p² ≤ 0
+>
+>
+>
+> ⇔ \[n + (z\_α/2)²\]p² - \[2np̂ + (z\_α/2)²\]p + np̂ ² ≤ 0
+>
+>
+>
+> và ta sẽ giải ra được khoảng (interval) chứa p
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc và chi tiết; bạn đã tự mình triển khai toàn bộ các bước đạo hàm hàm score, tính Fisher information và thiết lập chính xác phương trình bậc hai theo p để đảo ngược thống kê kiểm định.
+>
+> **✓ Strengths**
+> - Đạo hàm log-likelihood và tính kỳ vọng của đạo hàm bậc hai để ra Fisher information rất chuẩn xác, mạch lạc từng bước.
+> - Biến đổi đại số đưa về dạng thống kê kiểm định chuẩn hoá Q(X|p) hoàn toàn chính xác.
+> - Thiết lập bất phương trình bậc hai theo p đúng chuẩn để chuẩn bị giải ra khoảng tin cậy Wilson score.
+>
+> **💡 Deeper notes**
+> - Ký hiệu phân phối chuẩn nên dùng N(0, 1) hoặc chữ in hoa thay vì n(0, 1) để tránh nhầm lẫn với cỡ mẫu n.
+> - Hệ số của p² là n + (z_α/2)² luôn dương, do đó tập nghiệm của bất phương trình bậc hai dạng A*p² + B*p + C ≤ 0 sẽ là đoạn nằm giữa hai nghiệm thực [p_lower, p_upper], bảo đảm khoảng tin cậy luôn đóng và bị chặn.
+
+<br>
+
+<a id="node-9xoyatw"></a>
+
+###### Inverting the Score Statistic
+
+<p align="center"><kbd><img src="assets/xrnr79zbp8l.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Nói thêm vế ý này, vì sao lại gọi là cái interval trên là kết quả của việc inverting the score statistic.
+>
+>
+>
+> Trong ví dụ 10.3.6, ta có bài toán hypothesis testing: H0: p = p0 vs H1: p ≠ p0. Và ta dùng score statistic test:
+>
+>
+>
+> reject H0 nếu |{(p̂n - p0) / √\[p0(1-p0)/n\]| ≥ z\_α/2
+>
+>
+>
+> Đây sẽ là một level α test.
+>
+>
+>
+> Và đi inver cái test này ta sẽ có cái confidence interval hồi nãy.
+>
+>
+>
+> Invert là sao?
+
+> [!TIP]
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **0/100** · ✗ Fix first
+>
+> Ghi chú chưa có nội dung giải thích mà chỉ mới đưa ra câu hỏi hoặc ghi chú lại yêu cầu cần làm rõ.
+>
+> **🔴 Critical issues**
+>
+> **1.** *"Nói thêm vế ý này, vì sao lại gọi là cái interval trên là kết quả của việc inverting the score statistic."*
+>
+> Ghi chú chưa thực sự phân tích hay giải thích nội dung kiến thức, chỉ mới dừng lại ở việc đặt câu hỏi/nêu dự định tìm hiểu mà chưa có nội dung thực tế (vi phạm Progress Check).
+>
+>
+> **💡 Deeper notes**
+> - Việc đảo ngược một thống kê kiểm định (inverting a test statistic) để tìm khoảng tin cậy 100(1-alpha)% nghĩa là tập hợp tất cả các giá trị tham số p0 sao cho giả thuyết H0: p = p0 không bị bác bỏ ở mức ý nghĩa alpha.
+> - Đối với kiểm định Score (Score test/Rao score test) cho tỉ lệ Bernoulli, thống kê kiểm định z = (p_hat - p0) / sqrt(p0(1-p0)/n) sử dụng phương sai dưới giả thuyết H0 (tức phụ thuộc vào p0 thay vì p_hat). Khi đặt điều kiện |z| <= z_{alpha/2} và bình phương hai vế, ta thu được một bất phương trình bậc hai theo biến p0. Nghiệm của bất phương trình bậc hai này chính là Wilson score interval.
+
+**🔗 See also:** [Binomial Score Test](./103_hypothesis_testing.md#node-3qjyz3i)
 
 <br>
 
