@@ -129,6 +129,8 @@
 
 <a id="node-29tu1ye"></a>
 
+###### Ý nghĩa ước lượng khoảng
+
 <p align="center"><kbd><img src="assets/13trkyqb1n7.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -280,6 +282,8 @@
 <br>
 
 <a id="node-bmbbuwh"></a>
+
+###### Ước lượng khoảng Uniform
 
 <p align="center"><kbd><img src="assets/9opgno7c0t4.png" width="80%"></kbd></p>
 
