@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `52` Notes | `61` Screenshots | `11` AI Reviews
+📊 **Progress:** `52` Notes | `61` Screenshots | `12` AI Reviews
 
 ---
 <a id="node-7s1kn1j"></a>
@@ -272,6 +272,26 @@
 > Còn nếu ta làm ngược lại, **dựa quan sát thấy** **X** = **x***, để có xbar*, thì
 > cái rule này sẽ **giúp xác lập** C(**x***) (hay C(xbar*) cũng được)sẽ là
 > **khoảng phù hợp mà ta cho rằng nhất định μ phải nằm trong đó**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc và diễn giải rất chuẩn xác bản chất đối ngẫu (duality) giữa acceptance region và confidence interval. Chỉ có một điểm diễn đạt chưa chặt chẽ về mặt xác suất khi cho rằng tham số 'nhất định phải nằm trong đó'.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"khoảng phù hợp mà ta cho rằng nhất định μ phải nằm trong đó"*
+>
+> Cách dùng từ 'nhất định μ phải nằm trong đó' dễ gây ngộ nhận là khoảng tin cậy đảm bảo chắc chắn 100% chứa μ. Về mặt bản chất thống kê tần suất, khoảng tin cậy được xây dựng với độ tin cậy 1 - α, nghĩa là vẫn có xác suất α tham số thực rơi ra ngoài khoảng.
+>
+>
+> **✓ Strengths**
+> - Hiểu chính xác không gian của hai tập hợp: acceptance region thuộc sample space, còn confidence set thuộc parameter space.
+> - Nắm chuẩn xác mối liên hệ tương đương x ∈ A(μ0) ⇔ μ0 ∈ C(x).
+> - Diễn đạt rất trực quan và đúng bản chất hai góc nhìn: kiểm định cố định tham số để tìm mẫu phù hợp, ước lượng khoảng cố định mẫu để tìm các giá trị tham số hợp lý.
+>
+> **💡 Deeper notes**
+> - Khái niệm 'accept H0' trong thống kê hiện đại thường được phát biểu thận trọng hơn là 'fail to reject H0' (chưa đủ bằng chứng để bác bỏ), vì việc mẫu rơi vào A(μ0) chỉ phản ánh dữ liệu nhất quán với μ0 chứ không chứng minh μ = μ0 là sự thật tuyệt đối.
 
 <br>
 
