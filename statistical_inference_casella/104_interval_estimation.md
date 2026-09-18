@@ -230,9 +230,7 @@
 >
 > Và như vậy, dựa trên điều này, ta sẽ có thể xây dựng một approximate confidence interval (nói tiếp ở note sau, ta sẽ ôn lại confidence interval là gì)
 
-<p align="center"><a href="https://www.youtube.com/watch?v=beyWo5KCi6c" target="_blank"><img src="https://img.youtube.com/vi/beyWo5KCi6c/hqdefault.jpg" alt="Approximate Maximum Likelihood Intervals — Statistical Inference - Casella" width="60%"></a></p>
-
-📹 **[Approximate Maximum Likelihood Intervals — Statistical Inference - Casella](https://www.youtube.com/watch?v=beyWo5KCi6c)**
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=beyWo5KCi6c)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -1143,9 +1141,7 @@
 >
 > và ta sẽ giải ra được khoảng (interval) chứa p
 
-<p align="center"><a href="https://www.youtube.com/watch?v=t5L8jQeG_nU" target="_blank"><img src="https://img.youtube.com/vi/t5L8jQeG_nU/hqdefault.jpg" alt="Example 10.4.2 Binomial Score Interval — Statistical Inference - Casella" width="60%"></a></p>
-
-📹 **[Example 10.4.2 Binomial Score Interval — Statistical Inference - Casella](https://www.youtube.com/watch?v=t5L8jQeG_nU)**
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=t5L8jQeG_nU)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
