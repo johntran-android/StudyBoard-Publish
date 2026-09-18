@@ -40,7 +40,7 @@
 >
 >
 >
-> Vậy thì nay, quay lại xét việc 𝐱 là feature liên tục. Thì như hồi học Casella đã biết, Normal distribution vẫn chỉ là thành viên của một họ phân phối lớn hơn, gọi là exponential family (bao gồm cả exponential, posson, beta, normal,....)
+> Vậy thì nay, quay lại xét việc 𝐱 là feature liên tục. Thì như hồi học Casella đã biết, Normal distribution vẫn chỉ là thành viên của một họ phân phối lớn hơn, gọi là exponential family (bao gồm cả exponential, poison, beta, normal,....)
 >
 >
 >
@@ -76,38 +76,73 @@
 >
 >
 >
-> Mục đích là gì: Mục đích là để đưa thêm vào một giả định nữa: là nó cũng là scale family
+> Mục đích là gì: Mục đích là để đưa thêm vào một giả định nữa: f(𝐱| 𝛌k, s) đều có chung scale parameter.
 >
 >
 >
-> mọi f(𝐱| 𝛌k, s) đều có chung scale, và ta sẽ học thêm scale param bên cạnh param của exponential family.
+> ---
 >
 >
 >
-> Nói Nên mình hiểu, giả định exponential thì khác quát hơn, nhưng bồi thêm giả định scale family nữa để có thêm scale parameter (vì exponential family không có scale parameter)
+> Thay vào 4.58: a = ln \[f(𝐱|𝒞1)f(𝒞1)/f(𝐱|𝒞2)f(𝒞2)\]
+>
+>
+>
+> = ln {\[(1/s) h(𝐱/s) g(𝛌1) exp{𝛌1ᵀ𝐱/s} f(𝒞1)\] / \[(1/s) h(𝐱/s) g(𝛌2) exp{𝛌2ᵀ𝐱/s} f(𝒞2)\]}
+>
+>
+>
+> = ln {\[g(𝛌1) exp{𝛌1ᵀ𝐱/s} f(𝒞1)\] / \[g(𝛌2) exp{𝛌2ᵀ𝐱/s} f(𝒞2)\]}
+>
+>
+>
+> = ln g(𝛌1) + ln exp{𝛌1ᵀ𝐱/s} + ln f(𝒞1) - ln g(𝛌2) - ln exp{𝛌2ᵀ𝐱/s} - ln f(𝒞2)
+>
+>
+>
+> = 𝛌1ᵀ𝐱/s - 𝛌2ᵀ𝐱/s + ln g(𝛌1) - ln g(𝛌2) + ln f(𝒞1) - ln f(𝒞2)
+>
+>
+>
+> = (1/s)(𝛌1 - 𝛌2)ᵀ𝐱 + ln g(𝛌1) - ln g(𝛌2) + ln f(𝒞1) - ln f(𝒞2)
+>
+>
+>
+> Kết quả cho thấy đây cũng là hàm linear đối với 𝐱
+>
+>
+>
+> ---
+>
+>
+>
+> Tương tự với K-class (K &gt; 2)
+>
+>
+>
+> ..
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=Ovmp-M7j5II)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **80/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú kết nối bối cảnh rất tốt từ bài toán generative sang tổng quát hóa bằng exponential family. Cần làm rõ thêm mục đích toán học cốt lõi của việc các class chia sẻ chung scale parameter s (để triệt tiêu số hạng phi tuyến chứa x, giữ cho a(x) tuyến tính) và đính chính việc hàm h, g không phải là tham số cần ước lượng.
+> Ghi chú rất tốt, thể hiện tư duy kết nối mạch lạc từ bài toán Generative Classifier đến họ Exponential Family và tự tay biến đổi đại số chính xác ra hàm tuyến tính a(x).
 >
 > **🟡 Minor issues**
 >
-> **1.** *"vì bây giờ tham số sẽ gồm có 𝛌k, và dạng của hàm h và g nữa thay vì chỉ có 𝛍k, 𝚺k"*
+> **1.** *"Vậy thì nay, quay lại xét việc 𝐱 là feature liên tục. Thì như hồi học Casella đã biết, Normal distribution vẫn chỉ là thành viên của một họ phân phối lớn hơn, gọi là exponential family"*
 >
-> Trong mô hình parametric thuộc exponential family, dạng hàm h(x) và g(λ) là các hàm xác định cố định gắn liền với phân phối được chọn (như Poisson, Bernoulli, Normal...), chúng không phải là tham số cần ước lượng từ dữ liệu. Tham số cần ước lượng ở đây chỉ là vector λ_k (và scale s).
->
-> **2.** *"Mục đích là gì: Mục đích là để đưa thêm vào một giả định nữa: là nó cũng là scale family mọi f(𝐱| 𝛌k, s) đều có chung scale, và ta sẽ học thêm scale param bên cạnh param của exponential family."*
->
-> Mục đích quan trọng nhất của việc giả định các class dùng chung scale parameter s là để thành phần ngoài số mũ (1/s)h(x/s) giống hệt nhau ở mọi class, từ đó triệt tiêu hoàn toàn khi lập tỉ lệ posterior log-odds. Nhờ việc triệt tiêu này cùng điều kiện u(x) = x, a(x) mới giữ được dạng hàm tuyến tính theo x.
+> Họ Exponential Family bao quát cả biến liên tục (Gaussian, Gamma, Beta...) lẫn biến rời rạc (Bernoulli, Poisson, Multinomial...). Bishop mở đầu mục này nhằm mục đích thống nhất cả 2 trường hợp biến liên tục (Gaussian) và biến rời rạc (discrete inputs) đã học ở các phần trước về cùng một khuôn khổ tổng quát, chứ không chỉ riêng cho biến liên tục.
 >
 >
 > **✓ Strengths**
-> - Khả năng active recall và hệ thống hóa kiến thức xuyên suốt từ mô hình liên tục (Gaussian), rời rạc (Naive Bayes) đến tổng quát hóa bằng Exponential family rất mạch lạc.
-> - Nắm bắt chính xác việc giới hạn không gian giả thuyết u(x) = x và việc dùng chung tham số tỷ lệ s giữa các lớp.
+> - Khả năng hệ thống hóa kiến thức và active recall logic từ mô hình sinh (generative), bài toán ước lượng tham số (MLE) đến việc tính xác suất hậu nghiệm rất rõ ràng.
+> - Tự thực hiện đầy đủ và chuẩn xác các bước biến đổi log-odds từ công thức (4.84) để chứng minh a(x) có dạng tuyến tính đối với x.
+> - Nhận diện đúng vai trò của các giả định: chọn u(x) = x để tuyến tính hóa và giả định chung scale parameter s giữa các lớp để triệt tiêu số hạng phi tuyến h(x/s).
 >
 > **💡 Deeper notes**
-> - Nếu các class không chia sẻ chung tham số s (tức mỗi class có s_k riêng), số hạng ln h(x/s_1) - ln h(x/s_2) sẽ không biến mất, khiến hàm a(x) trở thành phi tuyến đối với x và mô hình không còn là Generalized Linear Model dạng logistic/softmax đơn thuần nữa.
+> - Trong công thức (4.85) của Bishop, hệ số (1/s) không xuất hiện trước (λ1 - λ2)ᵀx. Biến đổi của bạn giữ lại (1/s) là hoàn toàn khớp với định nghĩa (4.84), trong khi sách Bishop ngầm hấp thu 1/s vào tham số λ hoặc giả định s = 1 mà không nói rõ.
 
 **🔗 See also:** [2.4 The Exponential Family](./24_the_exponential_family.md#node-1hlelhn) · [Scale Invariance and Prior Distributions](./243_non_informative_priors.md#node-6t8ihcb)
 
