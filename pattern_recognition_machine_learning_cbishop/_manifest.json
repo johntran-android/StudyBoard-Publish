@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1789602236995,
+  "publishedAt": 1789696052710,
   "sections": [
     {
       "title": "📋 Overview",
@@ -371,8 +371,20 @@
     {
       "title": "4.2.2 Maximum likelihood solution",
       "path": "pattern_recognition_machine_learning_cbishop/422_maximum_likelihood_solution.md",
-      "noteCount": 3,
-      "imageCount": 5
+      "noteCount": 4,
+      "imageCount": 6
+    },
+    {
+      "title": "4.2.4 Discrete features",
+      "path": "pattern_recognition_machine_learning_cbishop/424_discrete_features.md",
+      "noteCount": 1,
+      "imageCount": 1
+    },
+    {
+      "title": "4.2.4 Exponential family",
+      "path": "pattern_recognition_machine_learning_cbishop/424_exponential_family.md",
+      "noteCount": 1,
+      "imageCount": 2
     },
     {
       "title": "Appendix C. Matrices",
@@ -387,6 +399,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 421,
-  "totalImages": 638
+  "totalNotes": 424,
+  "totalImages": 642
 }
