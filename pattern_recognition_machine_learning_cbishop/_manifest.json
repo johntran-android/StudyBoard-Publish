@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1789696052710,
+  "publishedAt": 1789767709359,
   "sections": [
     {
       "title": "📋 Overview",
@@ -387,6 +387,18 @@
       "imageCount": 2
     },
     {
+      "title": "4.3. Probabilistic Discriminative Models",
+      "path": "pattern_recognition_machine_learning_cbishop/43_probabilistic_discriminative_models.md",
+      "noteCount": 1,
+      "imageCount": 2
+    },
+    {
+      "title": "4.3.1 Fixed basis functions",
+      "path": "pattern_recognition_machine_learning_cbishop/431_fixed_basis_functions.md",
+      "noteCount": 1,
+      "imageCount": 3
+    },
+    {
       "title": "Appendix C. Matrices",
       "path": "pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md",
       "noteCount": 19,
@@ -399,6 +411,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 424,
-  "totalImages": 642
+  "totalNotes": 426,
+  "totalImages": 647
 }
