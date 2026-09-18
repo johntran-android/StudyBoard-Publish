@@ -1,6 +1,6 @@
 # 2.4.3 Non-informative priors
 
-📊 **Progress:** `7` Notes | `8` Screenshots | `6` AI Reviews
+📊 **Progress:** `7` Notes | `8` Screenshots | `7` AI Reviews
 
 ---
 <a id="node-9c40xz5"></a>
@@ -333,6 +333,33 @@
 >
 >
 > Như vậy, đại ý là, yêu cầu để prior distribution π(σ) có tính scale invariance tương đương với việc yêu cầu chọn prior distribution của ln(σ) phải là constant funciton (giống như prior của location param π(μ)) hồi nãy.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú rất tốt, tự triển khai đầy đủ các bước biến đổi tích phân và phép đổi biến sang $\ln(\sigma)$ để chứng minh prior đều (uniform/constant). Chỉ có một lỗi dấu nhỏ ở phần biến đổi phụ cho location family và cách diễn đạt trực giác ban đầu cần chuẩn xác hơn.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Vế phải: đổi biến ε = μ + c ⇨ dε = dμ, cận tích phân thành từ A tới B → ∫A-c:B-c π(μ) dμ = ∫A:B π(ε + c) dε"*
+>
+> Khi đặt ε = μ + c thì μ = ε - c, do đó hàm dưới dấu tích phân phải là π(ε - c) chứ không phải π(ε + c). Dù ở bước sau bạn viết lại thành π(μ - c) và kết luận hàm hằng không bị sai (do c là hằng số bất kỳ), đây vẫn là một lỗi nhầm dấu khi đổi biến.
+>
+> **2.** *"Thay đổi σ khiến scale không đổi"*
+>
+> Cách diễn đạt này chưa thật sự chuẩn xác. Scale invariance ở đây có nghĩa là khi dữ liệu x bị co giãn theo một tỉ lệ c (x̂ = cx) dẫn tới tham số co giãn tương ứng (σ̂ = cσ), thì độ đo xác suất tiên nghiệm (prior mass) gán cho các khoảng tỉ lệ tương ứng không bị thay đổi.
+>
+>
+> **✓ Strengths**
+> - Tự chứng minh chi tiết việc đổi biến trong tích phân của scale family thay vì chỉ chép lại công thức trong sách.
+> - Rất sáng tạo khi giải phương trình hàm π(σ) = (1/c)π(σ/c) bằng cách chọn c = σ để trực tiếp suy ra π(σ) = (1/σ)π(1) ∝ 1/σ.
+> - Thực hiện chính xác phép đổi biến Jacobian sang ω = ln(σ) để chứng minh density của ln(σ) là hàm hằng.
+>
+> **💡 Deeper notes**
+> - Cả hai prior π(μ) ∝ 1 và π(σ) ∝ 1/σ đều là các improper prior (tích phân trên toàn miền xác định bị phân kỳ), nhưng chúng vẫn hữu dụng nếu posterior sinh ra là proper distribution.
+> - Phép chọn c = σ chỉ thực hiện được khi giả định σ > 0 (và c > 0), phù hợp với định nghĩa của scale parameter.
+
+**🔗 See also:** [Section 4.2.4 Exponential Family](./424_exponential_family.md#node-75dk469)
 
 <br>
 
