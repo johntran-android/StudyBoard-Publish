@@ -47,63 +47,31 @@
 <p align="center"><kbd><img src="assets/0o3u5mj02gpn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Chiến lược đầu tiên: Đảo ngược một test statistic. Mở đầu gs nói có một sự
-> **TƯƠNG ỨNG RẤT MẠNH GIỮA MỘT HYPOTHESIS TESTING** và **INTERVAL
-> ESTIMATION**. Thậm chí ta có thể nói rằng, nói chung, **MỌI CONFIDENCE SET**
-> đều tương ứng với một **TEST** và ngược lại.
+> Chiến lược đầu tiên: Đảo ngược một test statistic. Mở đầu gs nói có một sự **TƯƠNG ỨNG RẤT MẠNH GIỮA MỘT HYPOTHESIS TESTING** và **INTERVAL ESTIMATION**. Thậm chí ta có thể nói rằng, nói chung, **MỌI CONFIDENCE SET**đều tương ứng với một **TEST** và ngược lại.
 >
 >
 >
-> Có lẽ nên ôn một tí những định nghĩa hôm qua đã học: Đầu tiên, bài toán
-> interval estimation là gì? Bắt đầu với việc nhớ lại trong point estimation, ta sẽ
-> thực hiện một inference bằng cách đưa ra một point estimate cho giá trị của θ.
-> Với bài toán hypothesis testing thì một inference là một kết luận / nhận định là θ
-> nằm ở Θ0 hay Θ0c. Vậy thì với interval estimation, một inference là việc ta đưa
-> ra nhận định rằng θ NẰM TRONG một tập C(**x**). Do đó, so với point
-> estimation thì inference của bài toán interval estimation hi sinh sự chính xác,
-> nhưng bù lại, có được một cái mà point estimation không có: khả năng đánh giá
-> mức độ tự tin về inference. Vì so với P_θ(W(**X**) = θ) = 0, thì P_θ(C(**X**)
-> chứa θ) sẽ dương.
+> Có lẽ nên ôn một tí những định nghĩa hôm qua đã học: Đầu tiên, bài toán interval estimation là gì? Bắt đầu với việc nhớ lại trong point estimation, ta sẽ thực hiện một inference bằng cách đưa ra một point estimate cho giá trị của θ. Với bài toán hypothesis testing thì một inference là một kết luận / nhận định là θ nằm ở Θ0 hay Θ0c. Vậy thì với interval estimation, một inference là việc ta đưa ra nhận định rằng θ NẰM TRONG một tập C(**x**). Do đó, so với point estimation thì inference của bài toán interval estimation hi sinh sự chính xác, nhưng bù lại, có được một cái mà point estimation không có: khả năng đánh giá mức độ tự tin về inference. Vì so với P\_θ(W(**X**) = θ) = 0, thì P\_θ(C(**X**) chứa θ) sẽ dương.
 >
 >
 >
-> Thế thì thật ra ở dạng khái quát thì phải gọi là bài toán set estimation mới đúng.
-> nhưng phần lớn thời gian ta sẽ deal với θ ∈ R, nên C(**X**) khi đó trở thành một
-> interval [L(**X**), U(**X**)], gọi là random interval, dẫn đến cái tên interval
-> estimation.
+> Thế thì thật ra ở dạng khái quát thì phải gọi là bài toán set estimation mới đúng. nhưng phần lớn thời gian ta sẽ deal với θ ∈ R, nên C(**X**) khi đó trở thành một interval \[L(**X**), U(**X**)\], gọi là random interval, dẫn đến cái tên interval estimation.
 >
 >
 >
-> Như vậy, định nghĩa chính thức của một interval estimatior chính là một random
-> interval [L(**X**), U(**X**)], mà một khi quan sát được giá trị của **X** = **x**, ta
-> sẽ xác lập được một inference: θ ∈ [L(**x**), U(**x**)] (y như khi trong bài toán
-> point estimation, khi quan sát được **X** = **x**, thì ta sẽ xác lập một inference
-> θ^ = W(**x**), với W là point estimator, hoặc trong bài toán hypothesis testing thì
-> khi thấy **X** = **x**, sẽ xác lập inference là **X** ∈ R / reject H0 hay không).
+> Như vậy, định nghĩa chính thức của một interval estimatior chính là một random interval \[L(**X**), U(**X**)\], mà một khi quan sát được giá trị của **X** = **x**, ta sẽ xác lập được một inference: θ ∈ \[L(**x**), U(**x**)\] (y như khi trong bài toán point estimation, khi quan sát được **X** = **x**, thì ta sẽ xác lập một inference θ^ = W(**x**), với W là point estimator, hoặc trong bài toán hypothesis testing thì khi thấy **X** = **x**, sẽ xác lập inference là **X** ∈ R / reject H0 hay không).
 >
 >
 >
-> Qua đó cũng thấy sự giống nhau của interval estimation và hypothesis testing:
-> Trong hypothesis testing, cái rejection region đã được xác lập sẵn, {**x** ∈ R:
-> T(**X**) khiến reject H0} để rồi khi quan sát **X** = **x** lập tức inference được
-> thiết lập: reject H0 (θ ∈ Θ0) nếu **x** ∈ R hay accept H0 Còn với interval
-> estimation, khi quan sát **X** = **x**, thì C(**x**) mới được hình thành, và
-> inference được thiết lập: θ ∈ C(**x**)
+> Qua đó cũng thấy sự giống nhau của interval estimation và hypothesis testing: Trong hypothesis testing, cái rejection region đã được xác lập sẵn, {**x** ∈ R: T(**X**) khiến reject H0} để rồi khi quan sát **X** = **x** lập tức inference được thiết lập: reject H0 (θ ∈ Θ0) nếu **x** ∈ R hay accept H0 Còn với interval estimation, khi quan sát **X** = **x**, thì C(**x**) mới được hình thành, và inference được thiết lập: θ ∈ C(**x**)
 >
 >
 >
-> Tiếp, xét cái xác suất P_θ(L(**X**) ≤ θ ≤ U(**X)**), thì cái này được gọi là
-> **COVERAGE PROBABILITY**, nó là hàm theo θ, giúp đánh giá mức tự tin của
-> một interval estimation, tương tự như power của một test (nhớ lại β(θ) =
-> P_θ(**X** ∈ R), giúp đánh giá xác suất làm đúng việc accept H1 khi θ ∈ Θ0c của
-> test)
+> Tiếp, xét cái xác suất P\_θ(L(**X**) ≤ θ ≤ U(**X)**), thì cái này được gọi là **COVERAGE PROBABILITY**, nó là hàm theo θ, giúp đánh giá mức tự tin của một interval estimation, tương tự như power của một test (nhớ lại β(θ) = P\_θ(**X** ∈ R), giúp đánh giá xác suất làm đúng việc accept H1 khi θ ∈ Θ0c của test)
 >
 >
 >
-> Và nếu lấy minimum: inf_θ∈Θ P_θ(L(**X**) ≤ θ ≤ U(**X**)) thì ta sẽ có một hàm
-> không phụ thuộc θ nữa, gọi là **CONFIDENCE COEFFICIENT** Để rồi nếu ta
-> có giá trị của cái này, ví dụ 1 - α thì ta gọi nó (cái interval estimator) là một **1
-> \- α confidence set**.
+> Và nếu lấy minimum: inf\_θ∈Θ P\_θ(L(**X**) ≤ θ ≤ U(**X**)) thì ta sẽ có một hàm không phụ thuộc θ nữa, gọi là **CONFIDENCE COEFFICIENT** Để rồi nếu ta có giá trị của cái này, ví dụ 1 - α thì ta gọi nó (cái interval estimator) là một 1 - α confidence set.
 >
 >
 >
@@ -111,10 +79,7 @@
 >
 >
 >
-> Thế thì ở ví dụ này, cho X1,...Xn là iid normal(μ, σ²) và xem xét test giữa H0: μ
-> = μ0 vs H1: μ ≠ μ0. Với một fixed α level thì gs nói cái test mà reasonable nhất,
-> mà quả thật nó chính là cái most power unbiased test chính là cái này: reject H0
-> nếu |Xbar - μ0| > z_α/2 (σ/√n).
+> Thế thì ở ví dụ này, cho X1,...Xn là iid normal(μ, σ²) và xem xét test giữa H0: μ = μ0 vs H1: μ ≠ μ0. Với một fixed α level thì gs nói cái test mà reasonable nhất, mà quả thật nó chính là cái most power unbiased test chính là cái này: reject H0 nếu |Xbar - μ0| &gt; z\_α/2 (σ/√n).
 >
 >
 >
@@ -126,76 +91,67 @@
 >
 >
 >
-> Theo định nghĩa, là test mà β của nó lớn hơn mọi β của các test khác tại θ bất kì
-> thuộc Θ0c
+> Theo định nghĩa, là test mà β của nó lớn hơn mọi β của các test khác tại θ bất kì thuộc Θ0c
 >
 >
 >
-> Còn unbiased, theo định nghĩa là test mà β(θ') ≥ β(θ'') với mọi θ' ∈ Θ0c và θ'' ∈
-> Θ0
+> Còn unbiased, theo định nghĩa là test mà β(θ') ≥ β(θ'') với mọi θ' ∈ Θ0c và θ'' ∈ Θ0
 >
 >
 >
-> Nên xét ta sẽ đi tìm trong mọi unbiased test, cái nào là UMP thì ta sẽ có most
-> powerful unbiased test.
+> Nên xét ta sẽ đi tìm trong mọi unbiased test, cái nào là UMP thì ta sẽ có most powerful unbiased test.
 >
 >
 >
-> Tiếp, có thể dễ hiểu rằng với cái test có rule reject H0 khi |Xbar - μ0| > z_α/2
-> σ/√n thì nó sẽ accept H0 khi |Xbar - μ0| ≤ z_α/2 (σ/√n)
+> Tiếp, có thể dễ hiểu rằng với cái test có rule reject H0 khi |Xbar - μ0| &gt; z\_α/2 σ/√n thì nó sẽ accept H0 khi |Xbar - μ0| ≤ z\_α/2 (σ/√n)
 >
 >
 >
-> ⇔ -z_α/2 σ/√n ≤ Xbar - μ0 ≤ z_α/2 σ/√n
+> ⇔ -z\_α/2 σ/√n ≤ Xbar - μ0 ≤ z\_α/2 σ/√n
 >
 >
 >
-> ⇔ μ0 ≤ Xbar + z_α/2 σ/√n & Xbar - z_α/2 σ/√n ≤ μ0
+> ⇔ μ0 ≤ Xbar + z\_α/2 σ/√n & Xbar - z\_α/2 σ/√n ≤ μ0
 >
 >
 >
-> ⇔ Xbar - z_α/2 σ/√n ≤ μ0 ≤ Xbar + z_α/2 σ/√n
+> ⇔ Xbar - z\_α/2 σ/√n ≤ μ0 ≤ Xbar + z\_α/2 σ/√n
 >
 >
 >
-> Tiếp, đây là size α test, còn nhớ, theo định nghĩa: tức là sup_θ∈Θ0 (**X** ∈ R) =
-> α
+> Tiếp, đây là size α test, còn nhớ, theo định nghĩa: tức là sup\_θ∈Θ0 (**X** ∈ R) = α
 >
 >
 >
-> ⇔ sup_μ=μ0 P_μ,σ²(reject H0) = α
+> ⇔ sup\_μ=μ0 P\_μ,σ²(reject H0) = α
 >
 >
 >
-> ⇔ P_μ0,σ²(reject H0) = α
+> ⇔ P\_μ0,σ²(reject H0) = α
 >
 >
 >
-> ⇔ P_μ0,σ²(accept H1) = 1 - α
+> ⇔ P\_μ0,σ²(accept H1) = 1 - α
 >
 >
 >
-> ⇔ P_σ²(Xbar - z_α/2 σ/√n ≤ μ0 ≤ Xbar + z_α/2 σ/√n) = 1 - α
+> ⇔ P\_σ²(Xbar - z\_α/2 σ/√n ≤ μ0 ≤ Xbar + z\_α/2 σ/√n) = 1 - α
 >
 >
 >
-> Tiếp, vì cái này đúng với mọi μ0: Dễ hiểu, vì lập trên không ràng buộc gì với μ0
-> cả. Nên ta có:
+> Tiếp, vì cái này đúng với mọi μ0: Dễ hiểu, vì lập luận trên không ràng buộc gì với μ0 cả. Nên ta có:
 >
 >
 >
-> P_σ²(Xbar - z_α/2 σ/√n ≤ μ ≤ Xbar + z_α/2 σ/√n) = 1 - α ∀μ ∈ R
+> P\_σ²(Xbar - z\_α/2 σ/√n ≤ μ ≤ Xbar + z\_α/2 σ/√n) = 1 - α ∀μ ∈ R
 >
 >
 >
-> Tới đây ta có gì? Chính là một interval estimator [L(**X**), U(**X**)] với L(**X**) = Xbar -
-> z_α/2 σ/√n và U(X) = Xbar + z_α/2 σ/√n. Và coverage probability là 1 - α, và
-> cũng là confidence coefficient vì inf_μ (1 - α) = 1 - α
+> Tới đây ta có gì? Chính là một interval estimator \[L(**X**), U(**X**)\] với L(**X**) = Xbar - z\_α/2 σ/√n và U(**X**) = Xbar + z\_α/2 σ/√n. Và coverage probability là 1 - α, và cũng là confidence coefficient vì inf\_μ (1 - α) = 1 - α
 >
 >
 >
-> Vậy ta đã có một **1 - α confidence interval** (hay 1 - α interval estimator) được xây
-> dựng đơn giản chỉ bằng cách đảo ngược một hypothesis test
+> Vậy ta đã có một **1 - α confidence interval** (hay 1 - α interval estimator) được xây dựng đơn giản chỉ bằng cách đảo ngược một hypothesis test
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
@@ -2222,7 +2178,7 @@
 > nhánh đi xây dựng một confidence set dùng pivotal quantity được gọi là
 > **PIVOTAL INFERENCE**
 
-**🔗 See also:** [linked note](./91_introduction.md#node-bmbbuwh)
+**🔗 See also:** [Ước lượng khoảng Uniform](./91_introduction.md#node-bmbbuwh)
 
 <br>
 
