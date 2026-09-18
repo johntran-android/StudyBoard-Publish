@@ -140,6 +140,8 @@
 >
 > Và tuy sách không nói, nhưng ta phải hiểu là, vẫn phải đi point estimate giá trị các tham số của joint distribution này. Có thể tiếp tục theo phương pháp MLE
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=jbPysqwE8nc)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
