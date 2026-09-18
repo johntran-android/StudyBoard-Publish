@@ -1,6 +1,6 @@
 # 4.2.2 Maximum likelihood solution
 
-📊 **Progress:** `3` Notes | `5` Screenshots | `3` AI Reviews
+📊 **Progress:** `4` Notes | `6` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-cw9ndyg"></a>
@@ -982,6 +982,77 @@
 > - Khi đạo hàm theo một ma trận đối xứng, nếu xét theo quy tắc đạo hàm có ràng buộc đối xứng (symmetric matrix derivative), các phần tử ngoài đường chéo sẽ có thêm hệ số 2. Tuy nhiên khi giải phương trình đạo hàm bằng 0 với S là ma trận đối xứng, nghiệm cực trị vẫn cho ra chính xác 𝚺 = S.
 
 **🔗 See also:** [Vi phân hàm log(det(A)) *(MIT 18S096 Matrix Calculus for ML)*](../mit_18s096_matrix_calculus_for_ml/lec_5_p1_derivative_of_matrix_determinant_and_invers.md#node-l0pnip6) · [Đạo hàm det(x𝐈-A) *(MIT 18S096 Matrix Calculus for ML)*](../mit_18s096_matrix_calculus_for_ml/lec_5_p1_derivative_of_matrix_determinant_and_invers.md#node-k3i9hxw)
+
+<br>
+
+<a id="node-3kjbcbk"></a>
+
+##### Vì sao giáo sư Bishop gọi S1, S2 là covariance matrix
+
+<p align="center"><kbd><img src="assets/q7852nkba3.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Covariance giữa hai random variable X, Y: Cov(X, Y) = E\[(X-EX)(Y-EY)\]
+>
+>
+>
+> Covariance matrix của random vector 𝐗 và 𝐘:
+>
+>
+>
+> Cov(𝐗, 𝐘) = E\[(𝐗-E𝐗)(𝐘-E𝐘)ᵀ\]
+>
+>
+>
+> ⇒ Cov(𝐗, 𝐗) = Cov(𝐗) = E\[(𝐗-E𝐗)(𝐗-E𝐗)ᵀ\]
+>
+>
+>
+> Nếu để tính cái này, dĩ nhiên phải biết distribution của 𝐗.
+>
+>
+>
+> Nhưng nếu ta có observed value 𝐱1,...𝐱n, ta coi 𝐗 là random vector có các possible value 𝐱1,...𝐱n với xác suất bằng nhau (uniform discrete) ta có thể tính E(𝐗), Cov(𝐗, 𝐗), dùng LOTUS:
+>
+>
+>
+> E𝐗 = Σi 𝐱i P(𝐗=𝐱i) = Σi 𝐱i (1/n) = (1/n) Σi 𝐱i , đặt là 𝛍
+>
+>
+>
+> E\[(𝐗-E𝐗)(𝐗-E𝐗)ᵀ\] = Σi (𝐱i-E𝐗)(𝐱i-E𝐗)ᵀ P(𝐗=𝐱i)
+>
+>
+>
+> = (1/n) Σi (𝐱i-E𝐗)(𝐱i-E𝐗)ᵀ
+>
+>
+>
+> = (1/n) Σi (𝐱i-𝛍)(𝐱i-𝛍)ᵀ
+>
+>
+>
+> Như vậy 𝚺\_ML giải ra là weight average của các sample covariance matrix với weight là tỉ lệ của từng class trong dataset.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú giải thích rất trực quan nguồn gốc công thức ma trận hiệp phương sai mẫu thông qua phân phối thực nghiệm (empirical distribution) và LOTUS. Có một lỗi gõ nhỏ ở chỉ số lấy tổng.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"(1/n) Σi 𝐱 , đặt là 𝛍"*
+>
+> Lỗi gõ thiếu chỉ số dưới: đúng ra phải là (1/n) Σi 𝐱i thay vì Σi 𝐱.
+>
+>
+> **✓ Strengths**
+> - Vận dụng rất tốt góc nhìn phân phối xác suất rời rạc đều (empirical distribution) và luật LOTUS để suy ra công thức covariance mẫu một cách tự nhiên.
+> - Định nghĩa chuẩn xác dạng ma trận covariance của vector ngẫu nhiên với tích ngoài (outer product).
+>
+> **💡 Deeper notes**
+> - Cách tiếp cận qua phân phối thực nghiệm này cho ra ước lượng hợp lý cực đại (MLE) với mẫu số là n (như trong các công thức 4.79 và 4.80 của Bishop), vốn là ước lượng chệch (biased), khác với ước lượng không chệch dùng mẫu số (n-1).
+> - Ghi chú mới tập trung giải thích cấu trúc của từng ma trận hiệp phương sai lớp S1, S2; ma trận dùng chung S trong hình là trung bình có trọng số (weighted average) giữa S1 và S2 theo tỉ lệ phần tử N1/N và N2/N.
 
 <br>
 
