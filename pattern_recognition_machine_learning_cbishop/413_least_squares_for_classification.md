@@ -550,6 +550,8 @@
 >
 > Đây chính là ý "sum of squares function penalize - trừng phạt dự đoán 'too correct' - chính là khi model 1 đoán y1(𝐱) = 10 , là 'too correct'.
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=D1LgZ77Hxgs)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
 >
@@ -676,6 +678,8 @@
 >
 >
 > Những phần sau ta sẽ nói về các mô hình xác suất tốt hơn (Hàm tuyến tính y(w,x) cũng không tự động là xác suất vì nó không bị ép nằm trong \[0,1\] hoặc tổng bằng 1 không thể fit với ý nghĩa xác suất.
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=TSv9sh-O1Os)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
