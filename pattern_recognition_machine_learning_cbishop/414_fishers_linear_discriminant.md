@@ -194,6 +194,8 @@
 >
 > Và dĩ nhiên kết quả này cũng chính là cái giáo sư Bishop nói: "we then find 𝐰 ∝ 𝐦2 - 𝐦1.
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=9rn2c18KCbI)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
@@ -506,6 +508,8 @@
 >
 > Ngẫm nghĩ tí, ta sẽ thấy kết quả này rất dễ hiểu: Vì khi hai đám mây xanh đỏ trở thành tròn, thì chiếu theo phương nào mà độ phân tán chả bằng nhau, nên khi đó độ phân tán within class sẽ cố định, thành ra nhiệm vụ lại quay về việc maximize khoảng cách giữa hình chiếu của hai tâm thôi.
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=XWXHBKtAWK0)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
@@ -733,6 +737,8 @@
 >
 >
 > từ đó chọn threshold là y khiến f(𝒞1|y) = f(𝒞2|y) ⇔ f(y|𝒞1)f(𝒞1) = f(y|𝒞2)f(𝒞2)
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=fuo5lM8PyCk)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
