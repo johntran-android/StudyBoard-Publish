@@ -1695,6 +1695,8 @@
 >
 > ---
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=1oPb9ILEL3I)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
