@@ -559,6 +559,8 @@
 >
 > Việc giải tìm MLE của 𝛍2 hoàn toàn tương tự, sẽ ra (1/N2) Σn=1:N (1-tn) 𝐱n và với Σn=1:N (1-tn) 𝐱n, again, cũng có ý nghiã là sample mean của các input 𝐱 của data point thuộc class 𝒞2.
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=ZI3dek5QaCc)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
@@ -958,6 +960,8 @@
 >
 > Và ML estimator không có tính robust.
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=STiYw1o_W1E)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **96/100** · ✓ Move on
 >
@@ -1033,6 +1037,8 @@
 >
 >
 > Như vậy 𝚺\_ML giải ra là weight average của các sample covariance matrix với weight là tỉ lệ của từng class trong dataset.
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=E55dfUAdwjE)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
