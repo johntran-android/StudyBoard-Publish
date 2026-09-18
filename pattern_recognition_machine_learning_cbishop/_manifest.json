@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1789767709359,
+  "publishedAt": 1789775080056,
   "sections": [
     {
       "title": "📋 Overview",
@@ -395,8 +395,14 @@
     {
       "title": "4.3.1 Fixed basis functions",
       "path": "pattern_recognition_machine_learning_cbishop/431_fixed_basis_functions.md",
+      "noteCount": 2,
+      "imageCount": 4
+    },
+    {
+      "title": "4.3.2 Logistic regression",
+      "path": "pattern_recognition_machine_learning_cbishop/432_logistic_regression.md",
       "noteCount": 1,
-      "imageCount": 3
+      "imageCount": 1
     },
     {
       "title": "Appendix C. Matrices",
@@ -411,6 +417,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 426,
-  "totalImages": 647
+  "totalNotes": 428,
+  "totalImages": 649
 }
