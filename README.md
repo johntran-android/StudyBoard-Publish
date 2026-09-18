@@ -44,7 +44,7 @@ Hướng tiếp theo là tiếp tục đi lên các lớp ML ở tầng cao hơn
 
 Repository này vì vậy chủ yếu là một **learning log** — dấu vết của quá trình đi từ nền tảng toán, probability, statistics và optimization lên machine learning, đồng thời là một phần của quá trình build StudyBoard.
 
-**`~12,343 notes` · `~17,836 screenshots` · `18 notebooks`**
+**`~12,345 notes` · `~17,838 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -590,13 +590,14 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 ### Pattern Recognition Machine Learning_C.Bishop
 <!-- key: pattern_recognition_machine_learning_cbishop -->
 <!-- group: Machine Learning Foundation -->
-`426 notes · 647 screenshots · 68 sections`
+`428 notes · 649 screenshots · 69 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
+> 
 > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
-<summary>📖 68 sections</summary>
+<summary>📖 69 sections</summary>
 
 | Section | Notes | Screenshots |
 |---|---:|---:|
@@ -665,7 +666,8 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 | [4.2.4 Discrete features](pattern_recognition_machine_learning_cbishop/424_discrete_features.md) | 1 | 1 |
 | [4.2.4 Exponential family](pattern_recognition_machine_learning_cbishop/424_exponential_family.md) | 1 | 2 |
 | [4.3. Probabilistic Discriminative Models](pattern_recognition_machine_learning_cbishop/43_probabilistic_discriminative_models.md) | 1 | 2 |
-| [4.3.1 Fixed basis functions](pattern_recognition_machine_learning_cbishop/431_fixed_basis_functions.md) | 1 | 3 |
+| [4.3.1 Fixed basis functions](pattern_recognition_machine_learning_cbishop/431_fixed_basis_functions.md) | 2 | 4 |
+| [4.3.2 Logistic regression](pattern_recognition_machine_learning_cbishop/432_logistic_regression.md) | 1 | 1 |
 | [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) | 19 | 23 |
 | [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) | 5 | 7 |
 
@@ -734,7 +736,6 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 `872 notes · 1,134 screenshots · 50 sections`
 
 > This notebook contains detailed study notes and proofs based on Casella and Berger's *Statistical Inference*, covering key topics in probability theory, estimation methods, hypothesis testing, and asymptotic properties.
-> 
 > Sổ tay học tập này tổng hợp các ghi chép và chứng minh chi tiết dựa trên giáo trình *Statistical Inference* của Casella và Berger, bao gồm các chủ đề cốt lõi về lý thuyết xác suất, phương pháp ước lượng, kiểm định giả thuyết và tính chất tiệm cận.
 
 <details open>
