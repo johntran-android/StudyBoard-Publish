@@ -1,6 +1,6 @@
 # 2.4 The Exponential Family
 
-📊 **Progress:** `6` Notes | `9` Screenshots | `5` AI Reviews
+📊 **Progress:** `6` Notes | `9` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-1hlelhn"></a>
@@ -42,7 +42,20 @@
 >
 > dĩ nhiên Σi wi(**θ**)ti(x) cũng tương đương với **η**ᵀ𝐮(𝐱) ở đây
 
-**🔗 See also:** [2.4.1 Maximum likelihood & sufficient statistic](./241_maximum_likelihood_sufficient_statistic.md#node-niekuox)
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất tốt định nghĩa tổng quát của Exponential Family từ sách của Bishop, đồng thời có sự đối chiếu và liên hệ chuẩn xác với dạng tham số hóa quen thuộc trong giáo trình Thống kê (Casella & Berger).
+>
+> **✓ Strengths**
+> - Liên hệ rất tốt giữa dạng chuẩn tắc (natural/canonical form) trong Bishop với dạng mở rộng tham số θ trong sách Thống kê của Casella & Berger.
+> - Hiểu chính xác vai trò của từng thành phần: vector tham số tự nhiên η, hàm u(x) và hệ số chuẩn hóa g(η).
+>
+> **💡 Deeper notes**
+> - u(x) sau này khi đi sâu hơn chính là thống kê đủ (sufficient statistic) cho tham số η.
+> - g(η) thường được gọi là 'hệ số chuẩn hóa' (normalizing coefficient/factor) hơn là 'hằng số' (constant), vì nó là hàm phụ thuộc vào η (nó chỉ là hằng số đối với biến ngẫu nhiên x). Trong nhiều tài liệu, người ta thường viết dưới dạng hàm log-partition A(η) = -ln g(η).
+
+**🔗 See also:** [2.4.1 Maximum likelihood & sufficient statistic](./241_maximum_likelihood_sufficient_statistic.md#node-niekuox) · [Section 4.2.4 Exponential Family](./424_exponential_family.md#node-75dk469)
 
 <br>
 
