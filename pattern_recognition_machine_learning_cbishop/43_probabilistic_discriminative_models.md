@@ -90,7 +90,7 @@
 > - Về số lượng tham số: Với phân phối Gaussian chung hiệp phương sai trong không gian D chiều, mô hình sinh cần ước lượng ma trận hiệp phương sai chung O(D²) và các kỳ vọng O(D), trong khi mô hình phân biệt (hồi quy logistic) chỉ cần đúng D + 1 tham số w.
 > - Trong sách, Bishop nhấn mạnh việc sinh dữ liệu bằng cách lấy mẫu từ phân phối biên p(x) = ∑ p(x|Cₖ)p(Cₖ), tức lấy mẫu nhãn Cₖ từ tiên nghiệm trước rồi mới sinh mẫu x tương ứng.
 
-<br>
+**🔗 See also:** [4.3.2 Logistic Regression](./432_logistic_regression.md#node-oyj7m7j)
 
-<a id="node-q3b3dah"></a>
+<br>
 
