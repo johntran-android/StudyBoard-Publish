@@ -1,6 +1,6 @@
 # 3.5 Location And Scale Families
 
-📊 **Progress:** `12` Notes | `17` Screenshots
+📊 **Progress:** `12` Notes | `17` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-zqu9nqh"></a>
@@ -225,6 +225,18 @@
 >
 >
 > CASE THỨ HAI CHƯA HIỂU
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc và diễn giải trực quan, chính xác bản chất của họ tham số vị trí (location family) thông qua mô hình sai số đo lường. Việc thành thật ghi nhận phần chưa hiểu giúp quá trình tự học hiệu quả hơn.
+>
+> **✓ Strengths**
+> - Nắm đúng mối liên hệ toán học và biểu diễn $X = Z + \mu$ cùng sự chuyển đổi hàm mật độ xác suất tương ứng $f_X(x) = f_Z(x - \mu)$.
+> - Diễn giải trực quan và hoàn toàn chính xác bản chất thực tế của mô hình sai số đo lường đối với hằng số vật lý $\mu$.
+>
+> **💡 Deeper notes**
+> - Giải thích thêm về trường hợp thứ hai (chưa hiểu): Ở ví dụ 2, biến ngẫu nhiên $Z$ là thời gian phản xạ ban đầu của tài xế (đã biết phân phối qua thử nghiệm trước). Khi uống 3 cốc bia, ta giả định thời gian phản xạ của mọi người đều thay đổi thêm một lượng cố định $\mu$. Do đó thời gian phản xạ sau khi can thiệp cũng tuân theo mô hình cộng dịch chuyển $X = Z + \mu$.
 
 <br>
 
