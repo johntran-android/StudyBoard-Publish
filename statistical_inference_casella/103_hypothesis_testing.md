@@ -2451,9 +2451,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >  ⇒ 1/In(p̂n) = \[p̂n(1-p̂n)\]/n chứng minh xong Sn = √{\[p̂n(1-p̂n)\]/n} chính là 1/√In(p)
 
-<p align="center"><a href="https://www.youtube.com/watch?v=UmyowzIGpGE" target="_blank"><img src="https://img.youtube.com/vi/UmyowzIGpGE/hqdefault.jpg" alt="Large-Sample Binomial Tests — Statistical Inference - Casella" width="60%"></a></p>
-
-📹 **[Large-Sample Binomial Tests — Statistical Inference - Casella](https://www.youtube.com/watch?v=UmyowzIGpGE)**
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=UmyowzIGpGE)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
@@ -2822,9 +2820,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 > Do đó cái chỗ nói E\_θ\[S(θ)\] với mọi θ rất dễ gây lú lẫn. Nhưng hiểu được rồi ta sẽ hiểu ý sau của giáo sư Casella khi nói: Under H0 (dưới giả định giá trị thật θ là θ0) thì mean của S(θ0) bằng 0. Nhờ đoạn trên ta hiểu điều này là đương nhiên: Vì chỉ khi θ = θ0, thì mean của S(θ0) mới là E\_θ0(S(θ0)), và cái này mới bằng 0.
 
-<p align="center"><a href="https://www.youtube.com/watch?v=RBcsZYaHM-Q" target="_blank"><img src="https://img.youtube.com/vi/RBcsZYaHM-Q/hqdefault.jpg" alt="Kỳ vọng của Score Statistic — Statistical Inference - Casella" width="60%"></a></p>
-
-📹 **[Kỳ vọng của Score Statistic — Statistical Inference - Casella](https://www.youtube.com/watch?v=RBcsZYaHM-Q)**
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=RBcsZYaHM-Q)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
@@ -3697,9 +3693,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 > ---
 
-<p align="center"><a href="https://www.youtube.com/watch?v=Z_OW_2fvLbE" target="_blank"><img src="https://img.youtube.com/vi/Z_OW_2fvLbE/hqdefault.jpg" alt="Robust Tests with M-Estimators — Statistical Inference - Casella" width="60%"></a></p>
-
-📹 **[Robust Tests with M-Estimators — Statistical Inference - Casella](https://www.youtube.com/watch?v=Z_OW_2fvLbE)**
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=Z_OW_2fvLbE)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
