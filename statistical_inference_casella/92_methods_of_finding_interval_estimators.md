@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `52` Notes | `61` Screenshots | `3` AI Reviews
+📊 **Progress:** `52` Notes | `61` Screenshots | `11` AI Reviews
 
 ---
 <a id="node-7s1kn1j"></a>
@@ -18,6 +18,25 @@
 > giáo sư nói rằng tuy trông có vẻ là 4 phương pháp khác nhau nhưng thực ra
 > cách triển khai đều giống: dựa trên chiến lược ĐẢO NGƯỢC MỘT TEST
 > STATISTIC. Chỉ có cái cuối, Bayesian intervals thì hơi khác
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú nắm rất tốt ý chính của đoạn giới thiệu: các phương pháp tìm khoảng ước lượng trong phần này về bản chất đều quy về việc đảo ngược kiểm định thống kê (inverting a test statistic), ngoại trừ phương pháp Bayes.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Chỉ có cái cuối, Bayesian intervals thì hơi khác"*
+>
+> Cách diễn đạt 'hơi khác' làm giảm nhẹ sự khác biệt bản chất: khoảng Bayesian sử dụng phân phối hậu nghiệm (posterior distribution) để xây dựng credible interval, đây là một hướng tiếp cận và triết lý hoàn toàn khác biệt chứ không phải chỉ là biến thể 'hơi khác' của việc đảo ngược kiểm định.
+>
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác thông điệp cốt lõi của tác giả: bề ngoài có nhiều phương pháp nhưng về mặt thao tác đều dựa trên việc đảo ngược thống kê kiểm định.
+> - Nhận diện được ngoại lệ quan trọng là phương pháp Bayesian.
+>
+> **💡 Deeper notes**
+> - Ba tiểu mục đầu tiên (Inverting a Test Statistic, Pivotal Quantities, Pivoting CDFs) thực chất có mối liên hệ mật thiết và đều thuộc trường phái Frequentist thông qua việc đảo ngược miền bác bỏ/kiểm định; trong khi Bayesian Interval tiếp cận theo trường phái Bayes với tham số được coi là biến ngẫu nhiên.
 
 <br>
 
@@ -177,6 +196,34 @@
 >
 > Vậy ta đã có một **1 - α confidence interval** (hay 1 - α interval estimator) được xây
 > dựng đơn giản chỉ bằng cách đảo ngược một hypothesis test
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc bản chất mối liên hệ giữa kiểm định giả thuyết và ước lượng khoảng, cùng các khái niệm nền tảng. Có một lỗi nhầm ký hiệu nhỏ khi viết 'accept H1' thay vì 'accept H0' nhưng bước suy luận sau đó vẫn chính xác.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"⇔ P_μ0,σ²(accept H1) = 1 - α"*
+>
+> Đây là lỗi viết nhầm (typo) giữa H0 và H1. Khi P(reject H0) = α thì biến cố đối phải là P(accept H0) = 1 - α, và công thức xác suất ở dòng tiếp theo chính là miền chấp nhận H0.
+>
+> **2.** *"sup_θ∈Θ0 (**X** ∈ R) = α"*
+>
+> Thiếu ký hiệu xác suất P: biểu thức chuẩn phải là sup_θ∈Θ0 P_θ(X ∈ R) = α.
+>
+> **3.** *"P_σ²(Xbar - z_α/2 σ/√n ≤ μ0 ≤ Xbar + z_α/2 σ/√n) = 1 - α"*
+>
+> Chỉ số dưới của xác suất bị thiếu tham số μ0 (viết đúng là P_{μ0, σ²} hoặc P( · | μ = μ0)).
+>
+>
+> **✓ Strengths**
+> - So sánh rất trực quan và chuẩn xác giữa ước lượng điểm, kiểm định giả thuyết và ước lượng khoảng.
+> - Hiểu rõ sự tương đồng giữa coverage probability / confidence coefficient với power function / test size.
+> - Nắm chuẩn bản chất phương pháp đảo ngược miền chấp nhận (inverting the acceptance region) của kiểm định để tạo ra khoảng tin cậy.
+>
+> **💡 Deeper notes**
+> - Cần phân biệt rạch ròi giữa khoảng ngẫu nhiên [L(X), U(X)] và khoảng thực nghiệm [L(x), U(x)]: trước khi lấy mẫu, khoảng này ngẫu nhiên và có xác suất bao phủ 1 - α; sau khi đã quan sát x, tham số μ nằm trong hoặc ngoài khoảng đó (xác suất theo trường phái frequentist chỉ là 0 hoặc 1).
 
 **🔗 See also:** [Đặc điểm kiểm định giả thuyết](./83_methods_of_evaluating_test.md#node-21ae20z)
 
@@ -603,6 +650,18 @@
 > rất có lợi**. Mà xây dựng test thì ta đã biết các cách để làm như hồi chap
 > trước rồi.
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm rất chuẩn xác ý nghĩa cốt lõi của đoạn văn: việc nghịch đảo miền chấp nhận của kiểm định mức alpha để tạo tập tin cậy có tính ứng dụng cao vì xây dựng kiểm định thường dễ hơn nhiều.
+>
+> **✓ Strengths**
+> - Tóm tắt đúng và đủ luận điểm chính của tác giả về tính bất đối xứng trong ứng dụng thực tế giữa hai chiều của định lý.
+> - Hiểu rõ mối liên hệ giữa kiểm định giả thuyết (chương trước) và việc suy luận ra khoảng/tập tin cậy.
+>
+> **💡 Deeper notes**
+> - Dù về mặt lý thuyết chỉ cần 'invert' miền chấp nhận $A(\theta_0)$ để thu được $C(x) = \{\theta_0: x \in A(\theta_0)\}$, trong thực tế đôi khi việc giải bất phương trình theo $\theta_0$ để ra dạng tường minh (closed-form) có thể phức tạp về mặt đại số, nhưng hoàn toàn khả thi bằng phương pháp giải số (numerical methods).
+
 <br>
 
 <a id="node-y9cjzgq"></a>
@@ -649,6 +708,26 @@
 > cái interval mà ta nên tạo ra) thì khi đó bài toán trở về là đi theo cách tiếp cận
 > đã  biết để tạo ra một reasonable test trước, rồi invert để có reasonable
 > confidence set
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất tốt và chính xác toàn bộ các ý cốt lõi từ sách về việc đảo kiểm định (test inversion) để tìm tập tin cậy. Chỉ có một lỗi đánh máy nhỏ khi viết nhầm ký hiệu giả thuyết thay thế.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"hay 1-side test (H0: θ > θ0)"*
+>
+> Lỗi gõ nhầm ký hiệu: đây là giả thuyết đối (alternative hypothesis), nên phải là H1: θ > θ0 chứ không phải H0.
+>
+>
+> **✓ Strengths**
+> - Nắm vững mối quan hệ giữa dạng của miền chấp nhận A(θ0) (do giả thuyết đối quyết định) và hình dạng của tập tin cậy C(x).
+> - Hiểu rõ tại sao dùng thuật ngữ 'confidence set' thay vì 'interval', cùng tính chất bảo toàn (như tính không chệch - unbiasedness, và thống kê đủ - sufficient statistics).
+> - Nắm đúng trực giác thực tế của phương pháp: giải cứu khi trực giác không đoán trước được khoảng tin cậy phù hợp bằng cách quy về bài toán dựng kiểm định quen thuộc.
+>
+> **💡 Deeper notes**
+> - Tính chất của kiểm định khi chuyển dịch sang tập tin cậy đôi khi cần được điều chỉnh đôi chút về mặt định nghĩa hình thức (như sách có mở ngoặc 'sometimes suitably modified') trước khi áp dụng cho tập tin cậy.
 
 **🔗 See also:** [UMA từ kiểm định UMP](./93_methods_of_evaluating_interval_estimators.md#node-6ofz752)
 
@@ -906,6 +985,33 @@
 >
 > C(**X**) = {λ: (ΣXi/λ)^n e^(-ΣXi/λ) > k*} chính là một 1-α confidence set.
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, tự giải chi tiết toàn bộ các bước từ tìm MLE, đạo hàm bậc hai, lập thống kê LRT cho đến việc áp dụng định lý nghịch đảo để tìm khoảng tin cậy.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"A(λ0) = {x: (Σxi/λ0)^n e^(-Σxi/λ0) > k*}"*
+>
+> Trong giáo trình thường dùng dấu lớn hơn hoặc bằng $(\ge k^*)$ cho miền chấp nhận (acceptance region). Tuy nhiên, vì phân phối Exponential là liên tục nên xác suất tại điểm biên bằng 0, sự khác biệt giữa '>' và '≥' không làm thay đổi xác suất phủ.
+>
+> **2.** *"= (1/λ) e^-xi/λ  (do tính iid)
+
+ 
+
+= Πi=1:n (1/λ) e^-xi/λ"*
+>
+> Có một dòng viết lặp/nháp trước dấu tích $\prod$: dòng đầu ghi hàm mật độ đơn lẻ $f(x_i|\lambda)$ trước khi nhân tích i.i.d.
+>
+>
+> **✓ Strengths**
+> - Tự tính toán đạo hàm cấp 1 và cấp 2 để chứng minh chặt chẽ nghiệm cực đại MLE của phân phối Exponential.
+> - Hiểu rất rõ bản chất của việc nghịch đảo miền chấp nhận A(lambda_0) qua theorem 9.2.2 để chuyển từ không gian mẫu sang không gian tham số.
+>
+> **💡 Deeper notes**
+> - Hàm số $g(t) = t^n e^{-t}$ với $t = \sum x_i / \lambda$ là hàm unimodal (đơn đỉnh), do đó tập nghiệm thỏa mãn $g(t) \ge k^*$ thực sự là một khoảng liên tục $(a, b)$, đảm bảo $C(\mathbf{x})$ là một confidence interval chứ không bị rời rạc.
+
 **🔗 See also:** [Khoảng tin cậy tối ưu](./93_methods_of_evaluating_interval_estimators.md#node-uj1aylo)
 
 <br>
@@ -933,6 +1039,18 @@
 > Còn hình thứ hai, ta vẽ cái đồ thị của λ vs (Σxi/λ)^n exp(-Σxi/λ). Thì vì C(**x**)
 > là tập chứa λ thỏa cái rule này, nên đoạn λ mà ở đó đồ thị cao hơn k* quả
 > thật chính là C(**x**) (khác với case trên)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú thể hiện sự hiểu biết rất sâu sắc và chính xác về mặt bản chất: phân biệt rõ không gian mẫu đa chiều của x (được rút gọn qua thống kê đủ Σxi) và không gian tham số một chiều của λ.
+>
+> **✓ Strengths**
+> - Phát hiện rất chính xác rằng A(λ₀) thực chất là tập con trong không gian mẫu của x (thường là đa chiều ℝⁿ), do đó đoạn trên trục hoành chỉ là ảnh của A(λ₀) qua thống kê đủ Σxi chứ không phải bản thân A(λ₀).
+> - Hiểu đúng rằng C(x) là tập con của không gian tham số một chiều của λ, do đó đoạn biểu diễn trên trục λ chính là khoảng tin cậy C(x).
+>
+> **💡 Deeper notes**
+> - Về mặt thuật ngữ hình học, vì x là vector quan sát x = (x₁, ..., xₙ) ∈ ℝⁿ, tập A(λ₀) là một miền trong không gian n chiều (chẳng hạn một dải giữa hai siêu phẳng Σxᵢ = c₁ và Σxᵢ = c₂), nên gọi là 'vùng/miền' (region/subset) sẽ chuẩn hơn từ 'đoạn/range'.
 
 <br>
 
@@ -1168,6 +1286,19 @@
 > dùng dummies variable θ, C(**x**) = {θ ∈ Θ: A(θ) chứa **x**} thì C(**X**) = {θ:
 > L(θ|**X**) ≥ k'(θ,**x**)} chính là 1-α confidence set.
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc và chính xác! Bạn đã phát hiện đúng lỗi in ấn kinh điển trong sách Casella & Berger và giải thích cặn kẽ từng bước từ kiểm định LRT đến việc nghịch đảo acceptance region để tạo confidence region.
+>
+> **✓ Strengths**
+> - Phát hiện chính xác lỗi in sai dấu (typo) trong sách giáo khoa tại bước định nghĩa miền chấp nhận (accept H0).
+> - Giải thích rõ ràng tại sao tỉ số likelihood ratio phải lớn hơn hoặc bằng ngưỡng thì mới chấp nhận H0.
+> - Trình bày mạch lạc quá trình gộp số hạng mẫu số L(theta_hat|x) vào ngưỡng k'(x, theta) và nghịch đảo họ miền chấp nhận A(theta0) thành tập tin cậy C(x).
+>
+> **💡 Deeper notes**
+> - Lỗi in ấn này có trong danh sách đính chính chính thức (official errata) của sách Casella & Berger (trang 422, dòng 4 sửa từ <= thành >=).
+
 <br>
 
 <a id="node-r96nyc1"></a>
@@ -1186,6 +1317,18 @@
 >
 > Và hơn nữa, theo lí thuyết thì invert cái test nào cũng sẽ ra một confidence
 > set, mà ví dụ vừa rồi ta invert một LRT.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác và nắm trọn vẹn hai thông điệp cốt lõi từ sách: ngưỡng k' độc lập với θ dẫn đến vùng khả tích hợp lý cao nhất, và tính tổng quát của phương pháp nghịch đảo kiểm định (test inversion).
+>
+> **✓ Strengths**
+> - Hiểu chính xác ý nghĩa khi hàm k' không phụ thuộc vào θ: ngưỡng cắt chỉ phụ thuộc vào dữ liệu mẫu x, giúp tập tin cậy có ý nghĩa trực quan là tập các giá trị θ có hàm hợp lý (likelihood) cao nhất.
+> - Nắm rõ tính tổng quát của phương pháp đảo kiểm định (có thể áp dụng cho mọi loại kiểm định, không chỉ riêng LRT).
+>
+> **💡 Deeper notes**
+> - Khi k' chỉ phụ thuộc vào x mà không phụ thuộc vào θ, tập tin cậy thu được tương ứng với vùng HPD (Highest Posterior Density) trong trường hợp tiên nghiệm đều (flat prior) theo góc nhìn Bayes (như tác giả có nhắc tới ở hệ quả 9.3.10).
 
 <br>
 
