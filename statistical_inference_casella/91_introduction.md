@@ -9,6 +9,8 @@
 
 <a id="node-s53gfpp"></a>
 
+## Ước lượng khoảng
+
 <p align="center"><kbd><img src="assets/8j1krayc92g.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -41,6 +43,8 @@
 
 <a id="node-022z82u"></a>
 
+### Định nghĩa ước lượng khoảng
+
 <p align="center"><kbd><img src="assets/gh0yj4sypi.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -67,6 +71,8 @@
 
 <a id="node-dfd3ikv"></a>
 
+#### Quy ước ước lượng khoảng
+
 <p align="center"><kbd><img src="assets/s9kl4pau6k.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -92,6 +98,8 @@
 <br>
 
 <a id="node-7p0tk9f"></a>
+
+##### Ý nghĩa ước lượng khoảng
 
 <p align="center"><kbd><img src="assets/r5g1r6a4vlr.png" width="80%"></kbd></p>
 
@@ -202,6 +210,8 @@
 
 <a id="node-hs10f26"></a>
 
+###### Coverage Probability và Confidence Coefficient
+
 <p align="center"><kbd><img src="assets/hfuse2oyvhr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -238,6 +248,8 @@
 <br>
 
 <a id="node-ts452ay"></a>
+
+###### Khoảng và tập tin cậy
 
 <p align="center"><kbd><img src="assets/ogvobnnr5i.png" width="80%"></kbd></p>
 
@@ -436,6 +448,8 @@
 <br>
 
 <a id="node-001wrsz"></a>
+
+###### Hệ số tin cậy ước lượng
 
 <p align="center"><kbd><img src="assets/ot73u4bdmt.png" width="80%"></kbd></p>
 
