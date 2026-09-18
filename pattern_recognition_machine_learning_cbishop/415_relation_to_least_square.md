@@ -317,6 +317,8 @@
 >
 > Có nghĩa là sao, có nghĩa là nó cho ta luôn một threshold, để coi như là có đầy đủ hàm discriminant khỏi cần phải làm thêm bước chiếu xuống 𝐰, giải bài toán point estimation giả định distribution là Gaussian, rồi mới từ đó tìm threshold nơi posterior f(𝒞1|y) = f(𝒞2|y).
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=AxZbMJ3AD1E)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
