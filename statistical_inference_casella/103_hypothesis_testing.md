@@ -634,9 +634,28 @@
 > Vậy thì gs lưu ý rằng, cái định nghĩa **asymptotic size α test** chỉ có nghĩa là: khi n → ∞ thì P(reject H0) → α với mỗi θ ∈ Θ, nhưng có thể chưa chắc (hay đôi khi thì không thỏa) n → ∞ thì sup\_θ∈Θ0 P(reject H0) = α (cái này hơi khó hiểu), nhưng đại ý gs nói là thực tế thì ta có thể coi như khi n → ∞ thì ta sẽ có size α test.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
 >
-> Bài viết giải thích rất trực quan, logic và nắm bắt xuất sắc bản chất việc chuyển từ phân phối chính xác sang phân phối tiệm cận chi-bình phương. Điểm cần lưu ý là định nghĩa chính xác của 'size' (kích thước) của kiểm định là supremum của xác suất sai lầm loại I trên tập giả thuyết không, chứ không chỉ đơn thuần là bằng $\alpha$.
+> Ghi chú nắm rất tốt bản chất của kiểm định tỉ số hợp lý tiệm cận (Asymptotic LRT), lý do cần xấp xỉ phân phối khi mẫu lớn và mốc phân vị cắt bỏ. Chỉ có một chút hiểu nhầm nhỏ ở câu cuối về việc hội tụ điểm (pointwise) so với hội tụ đều (uniform/supremum) của kiểm định kích thước tiệm cận.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"nhưng đại ý gs nói là thực tế thì ta có thể coi như khi n → ∞ thì ta sẽ có size α test."*
+>
+> Câu trong sách 'This is usually the case for asymptotic size α tests' bổ nghĩa cho câu trước đó (tức là: thông thường các kiểm định kích thước tiệm cận chỉ đảm bảo hội tụ điểm lim P_θ = α với từng θ ∈ Θ₀, chứ không bảo đảm hội tụ của sup). Tác giả không có ý nói rằng thực tế ta có thể coi như sup hội tụ về α.
+>
+> **2.** *"với mỗi θ ∈ Θ"*
+>
+> Viết nhầm không gian tham số: phải là mỗi θ ∈ Θ₀ (thuộc không gian giả thuyết H₀), vì đây là xác suất mắc sai lầm loại I.
+>
+>
+> **✓ Strengths**
+> - Giải thích rất trực quan và mạch lạc chuỗi biến đổi từ λ(X) ≤ c sang -2 log λ(X) ≥ c* và sự tương đương của miền bác bỏ.
+> - Hiểu đúng lý do cốt lõi phải dùng định lý tiệm cận: do phân phối chính xác của thống kê kiểm định dưới mẫu hữu hạn thường không khả thi để giải tích trực tiếp.
+> - Nhận diện chính xác mốc tới hạn χ²_{ν, α} thay vì chỉ giới hạn ở 1 bậc tự do.
+>
+> **💡 Deeper notes**
+> - Sự khác biệt giữa lim_{n→∞} P_θ(reject) = α và lim_{n→∞} sup_θ P_θ(reject) = α chính là sự khác biệt giữa hội tụ từng điểm (pointwise) và hội tụ đều (uniform). Định lý Wilks thông thường chỉ bảo đảm hội tụ từng điểm cho mỗi θ cố định trong phần trong của Θ₀.
 
 <br>
 
@@ -2433,9 +2452,27 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >  ⇒ 1/In(p̂n) = \[p̂n(1-p̂n)\]/n chứng minh xong Sn = √{\[p̂n(1-p̂n)\]/n} chính là 1/√In(p)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú rất chi tiết, lập luận chặt chẽ và tự tay tính toán chính xác thông tin Fisher In(p) để liên hệ với công thức lý thuyết. Cần chú ý cách diễn đạt ở một số đoạn nhỏ (như hội tụ phân phối không đồng nghĩa hội tụ phương sai) dù sau đó bạn đã tự đính chính bằng phương sai thực tế.
+> Ghi chú rất tốt, thể hiện sự hiểu bài sâu sắc và tự diễn giải, tính toán chi tiết Fisher Information chuẩn xác để khớp với công thức sách giáo khoa.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Hơn nữa, như sách nói, bài tập 5.32 đã chứng minh √{\[p ̂n(1-p ̂n)\]/n} →ᵖ √{\[p (1-p )\]/n}"*
+>
+> Cả hai đại lượng đều tiến về 0 khi n → ∞, nên phát biểu chuẩn xác của sách là tỉ số σn / Sn hội tụ theo xác suất về 1 (tức Sn/σn →ᵖ 1), hoặc viết dưới dạng phương sai không chứa mẫu n: p̂n(1 - p̂n) →ᵖ p(1 - p).
+>
+> **2.** *"nên sup_{p≤p0} P_p((p ̂n - p0)/ √{\[p ̂n(1-p ̂n)\]/n} ≥ z_α) → sup_{p≤p0} P(Z ≥ z_α) = P(Z ≥ z_α) = α"*
+>
+> Ký hiệu có phần giản lược: biến ngẫu nhiên giới hạn Z ~ N(0, 1) chỉ đạt được tại điểm biên p = p0. Với các điểm p < p0 thì đại lượng (p̂n - p0)/Sn sẽ phân kỳ về -∞ (xác suất reject tiến về 0). Do đó supremum theo p ≤ p0 đạt tại p = p0 và có giới hạn bằng α.
+>
+>
+> **✓ Strengths**
+> - Tự lực biến đổi đạo hàm và kỳ vọng để tính toán Fisher Information In(p) của phân phối Bernoulli rất chính xác và chi tiết.
+> - Nắm vững bản chất liên hệ giữa độ lệch chuẩn mẫu, standard error và nghịch đảo căn bậc hai của thông tin Fisher trong kiểm định Wald.
+>
+> **💡 Deeper notes**
+> - Trong kiểm định tỷ lệ Bernoulli (large-sample binomial test), ngoài Wald test dùng Sn = √[p̂n(1 - p̂n)/n], người ta còn thường dùng Score test (hoặc Rao test) thay Sn bằng σ0 = √[p0(1 - p0)/n] dưới giả thuyết H0; sách có nhắc đến 'alternative estimate of σn' ở câu cuối chính là hướng đi này.
 
 **🔗 See also:** [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Binomial Score Test](#node-3qjyz3i)
 
@@ -3328,7 +3365,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 > **💡 Deeper notes**
 > - Việc hoán đổi thứ tự đạo hàm và tích phân $\int \frac{\partial}{\partial \theta} f d\mathbf{x} = \frac{\partial}{\partial \theta} \int f d\mathbf{x}$ đòi hỏi các điều kiện chính quy (regularity conditions), cụ thể là miền giá trị (support) của $X$ không được phụ thuộc vào tham số $\theta$.
 
-**🔗 See also:** [Large-Sample Binomial Tests](#node-8xsav7v)
+**🔗 See also:** [Large-Sample Binomial Tests](#node-8xsav7v) · [Inverting the Score Statistic](./104_interval_estimation.md#node-9xoyatw)
 
 <br>
 
