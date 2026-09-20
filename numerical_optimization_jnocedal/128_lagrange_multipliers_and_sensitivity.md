@@ -1,9 +1,12 @@
 # 12.8 Lagrange Multipliers and Sensitivity
 
-📊 **Progress:** `2` Notes | `3` Screenshots | `2` AI Reviews
+📊 **Progress:** `3` Notes | `3` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-tmcayiv"></a>
+
+> [!NOTE]
+> Trong bài này ta sẽ nói về ý nghĩa của Lagrange Multiplier
 
 <br>
 
@@ -53,7 +56,7 @@
 >
 >
 >
-> Ta mới perturb, nôm na là thay đổi một khoảng rất nhỏ ràng buộc ci(x) ≥ 0. Để đang là ci(x) ≥ 0, trở thành ci(x) ≥ -ε||∇ci(x\*)|| (⇔ c̃(x) = ci(x) + ε||∇ci(x\*)|| ≥ 0).
+> Ta mới perturb, nôm na là thay đổi một khoảng rất nhỏ ràng buộc ci(x) ≥ 0. Để đang là ci(x) ≥ 0, trở thành ci(x) ≥ -ε||∇ci(x\*)|| (⇔ c̃i(x) = ci(x) + ε||∇ci(x\*)|| ≥ 0).
 >
 >
 >
@@ -73,18 +76,18 @@
 >
 >
 >
-> ⇔ ci(x\*(ε) - ε||∇ci(x\*(ε))|| = 0
+> ⇔ ci(x\*(ε) + ε||∇ci(x\*)|| = 0
 >
 > \
-> ⇔ ci(x\*(ε) = ε||∇ci(x\*(ε))||
+> ⇔ ci(x\*(ε) = -ε||∇ci(x\*)||
 >
 >
 >
-> Như vậy ci(x\*) = 0, và ci(x\*(ε)) + ε||∇ci(x\*(ε))|| = 0
+> Như vậy ci(x\*) = 0, và ci(x\*(ε)) + ε||∇ci(x\*)|| = 0 ⇔ ci(x\*(ε)) = - ε||∇ci(x\*)|| 
 >
 >
 >
-> ⇒ ci(x\*(ε)) - ci(x\*) = -ε||∇ci(x\*(ε))||
+> ⇒ ci(x\*(ε)) - ci(x\*) = -ε||∇ci(x\*)||
 >
 >
 >
@@ -100,7 +103,7 @@
 >
 >
 >
-> \-ε||∇ci(x\*(ε))|| ≈ ∇ci(x\*)ᵀ(x\*(ε)-x\*)
+> \-ε||∇ci(x\*)|| ≈ ∇ci(x\*)ᵀ(x\*(ε)-x\*)
 >
 >
 >
@@ -136,29 +139,33 @@
 >
 >
 >
-> Vậy từ 
+> Vậy từ
 >
 >
 >
-> \-ε||∇ci(x\*(ε))|| ≈ ∇ci(x\*)ᵀ(x\*(ε)-x\*) 
+> \-ε||∇ci(x\*)|| ≈ ∇ci(x\*)ᵀ(x\*(ε)-x\*)
 >
 >
 >
-> ⇔ -ε||∇ci(x\*(ε))|| λ\*i ≈ λ\*i ∇ci(x\*)ᵀ(x\*(ε)-x\*)  
+> ⇔ -ε||∇ci(x\*)|| λ\*i ≈ λ\*i ∇ci(x\*)ᵀ(x\*(ε)-x\*)
 >
 >
 >
 >
 >
-> và 0 ≈ ∇cj(x\*)ᵀ(x\*(ε)-x\*) với  j ∈ 𝒜(x\*), j ≠ i
+> và 0 ≈ ∇cj(x\*)ᵀ(x\*(ε)-x\*) với j ∈ 𝒜(x\*), j ≠ i
 >
 >
 >
-> ⇔ 0 ≈ λ\*j ∇cj(x\*)ᵀ(x\*(ε)-x\*) với  j ∈ 𝒜(x\*), j ≠ i
+> ⇔ 0 ≈ λ\*j ∇cj(x\*)ᵀ(x\*(ε)-x\*) với j ∈ 𝒜(x\*), j ≠ i
 >
 >
 >
-> ⇒ -ε||∇ci(x\*(ε))|| λ\*i ≈ Σj∈𝒜(x\*) λ\*j ∇ci(x\*)ᵀ(x\*(ε)-x\*) (2)
+> Cộng vế theo vế
+>
+>
+>
+> ⇒ -ε||∇ci(x\*)|| λ\*i ≈ Σj∈𝒜(x\*) λ\*j ∇cj(x\*)ᵀ(x\*(ε)-x\*) (2)
 >
 >
 >
@@ -182,7 +189,39 @@
 >
 >
 >
-> ∇f(x\*) - Σi λ\*i ∇ci(x\*) = 0 với i∈𝒥∪ℰ (3)
+> ∇\_x ℒ(x\*, λ\*) = 0
+>
+>
+>
+> ⇔ ∇f(x\*) - Σi λ\*i ∇ci(x\*) = 0 với i∈𝒥∪ℰ (3)
+>
+>
+>
+> c1(x) = 0 ℰ = {1}
+>
+>
+>
+> c2(x) ≥ 0, c3(x) ≥ 0, c4(x) ≥ 0, ℐ = {2,3,4}
+>
+>
+>
+> c2(x\*) = 0, c3(x\*) = 0, c4(x\*) &gt; 0
+>
+>
+>
+> 𝒜(x\*) = {1, 2, 3}
+>
+>
+>
+> λ\*1 c1(x\*) + λ\*2 c2(x\*) + λ\*3 c3(x\*) + λ\*4 c4(x\*) = 0
+>
+>
+>
+> λ\*1 c1(x\*) + λ\*2 c2(x\*) + λ\*3 c3(x\*) = 0
+>
+>
+>
+> ---
 >
 >
 >
@@ -198,7 +237,7 @@
 >
 >
 >
-> ⇔ ∇f(x\*) = Σi∈𝒜(x\*) \[λ\*i ∇ci(x\*)\] 
+> ⇔ ∇f(x\*) = Σi∈𝒜(x\*) \[λ\*i ∇ci(x\*)\]
 >
 >
 >
@@ -214,23 +253,27 @@
 >
 >
 >
+> (u + v)ᵀz = uᵀz + vᵀz)
+>
+>
+>
 > ≈ Σi∈𝒜(x\*) λ\*i ∇ci(x\*)ᵀ(x\*(ε)-x\*)
 >
 >
 >
-> Và theo (2) -ε||∇ci(x\*(ε))|| λ\*i ≈ Σj∈𝒜(x\*) λ\*j ∇ci(x\*)ᵀ(x\*(ε)-x\*)
+> Và theo (2) -ε||∇ci(x\*)|| λ\*i ≈ Σj∈𝒜(x\*) λ\*j ∇ci(x\*)ᵀ(x\*(ε)-x\*)
 >
 >
 >
-> thì đây chính là -ε||∇ci(x\*(ε))|| λ\*i
+> thì đây chính là -ε||∇ci(x\*)|| λ\*i
 >
 >
 >
-> Vậy ta có: f(x\*(ε)) - f(x\*) ≈ -ε||∇ci(x\*(ε))|| λ\*i
+> Vậy ta có: f(x\*(ε)) - f(x\*) ≈ -ε||∇ci(x\*)|| λ\*i
 >
 >
 >
-> ⇔ \[f(x\*(ε)) - f(x\*)\] / ε ≈ -||∇ci(x\*(ε))|| λ\*i
+> ⇔ \[f(x\*(ε)) - f(x\*)\] / ε ≈ -||∇ci(x\*)|| λ\*i
 >
 >
 >
@@ -238,46 +281,41 @@
 >
 >
 >
-> Vậy ta có d/dε f(x\*(ε)) = -||∇ci(x\*(ε))|| λ\*i
+> Vậy ta có d/dε f(x\*(ε)) = -||∇ci(x\*)|| λ\*i 
 >
 >
 >
-> Kết quả này cho thấy rằng: Giá trị của optimal objective với tư cách là hàm theo ε sẽ có độ dốc là -||∇ci(x\*(ε))|| λ\*i. Và có nghĩa là nếu λ\*i lớn, thì -||∇ci(x\*(ε))|| λ\*i lớn, sẽ khiến ε thay đổi nhỏ cũng dẫn đến optimal objective thay đổi lớn mang ý nghĩa: giá trị optimal objective rất nhạy cảm với sự thay đổi của constraint ci.
+> Kết quả này cho thấy rằng: Giá trị của optimal objective với tư cách là hàm theo ε sẽ có độ dốc là -||∇ci(x\*)|| λ\*i. Và có nghĩa là nếu λ\*i lớn, thì -||∇ci(x\*)|| λ\*i lớn, sẽ khiến ε thay đổi nhỏ cũng dẫn đến optimal objective thay đổi lớn mang ý nghĩa: giá trị optimal objective rất nhạy cảm với sự thay đổi của constraint ci.
 >
 >
 >
 > Và kết quả này cũng phản ánh case trước: kh λ\*i = 0, thì hàm optimal objective hoàn toàn không bị ảnh hưởng gì bởi sự thay đổi của ci.
 
+📹 [Xem video trên YouTube](https://youtu.be/6g2qIzX9yO0)
+
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú rất tốt, thể hiện trực giác hình học xuất sắc ('dời hàng rào') và tự triển khai lại toàn bộ chuỗi suy luận từ điều kiện KKT đến đạo hàm độ nhạy. Có một vài lỗi gõ nhầm ký hiệu/chỉ số và nhầm dấu ở biến đổi nháp trung gian nhưng không ảnh hưởng đến luồng tư duy cốt lõi.
+> Ghi chú rất xuất sắc, hiểu đúng bản chất hình học của việc dời biên ràng buộc và tự triển khai chi tiết từng bước đại số từ điều kiện KKT đến vi phân độ nhạy.
 >
 > **🟡 Minor issues**
 >
-> **1.** *"ci(x*(ε) - ε||∇ci(x*(ε))|| = 0 
- ⇔ ci(x*(ε) = ε||∇ci(x*(ε))|| 
- Như vậy ci(x*) = 0, và ci(x*(ε)) + ε||∇ci(x*(ε))|| = 0"*
+> **1.** *"Bên cạnh đó, điều kiện complementary của KKT yêu cầu Σi∈𝒥∪ℰ [λ*i ci(x*)] = 0"*
 >
-> Có sự nhầm lẫn dấu ở các dòng biến đổi trung gian (từ dấu '-' thành '=', rồi sau đó lại đổi lại thành '+') trước khi ra đúng kết quả ci(x*(ε)) - ci(x*) = -ε||...||.
+> Về mặt định nghĩa chuẩn, điều kiện bù (complementary slackness) chỉ áp dụng cho các ràng buộc bất đẳng thức i ∈ 𝒥 (từng thành phần λ*i ci(x*) = 0 với λ*i ≥ 0). Các ràng buộc đẳng thức i ∈ ℰ luôn thỏa ci(x*) = 0 do tính chấp nhận được (feasibility) và mặc nhiên luôn thuộc active set A(x*).
 >
-> **2.** *"||∇ci(x*(ε))||"*
+> **2.** *"Và có nghĩa là nếu λ*i lớn, thì -||∇ci(x*)|| λ*i lớn"*
 >
-> Trong đề bài chuẩn, đại lượng nhiễu cố định là ||∇ci(x*)|| (tính tại x*), ghi chép bị nhầm biến thành x*(ε) xuyên suốt bài chứng minh.
->
-> **3.** *"Σj∈𝒜(x*) λ*j ∇ci(x*)ᵀ(x*(ε)-x*) (2)"*
->
-> Gõ nhầm chỉ số ràng buộc trong tổng: phải là ∇cj(x*), không phải ∇ci(x*).
+> Nên dùng từ 'độ lớn' hoặc 'trị tuyệt đối lớn' để chặt chẽ hơn, vì bản thân giá trị đạo hàm này mang dấu âm (khi λ*i > 0 thì -||∇ci(x*)|| λ*i là một số âm rất sâu, tức hàm mục tiêu giảm rất mạnh khi nới lỏng ε > 0).
 >
 >
 > **✓ Strengths**
-> - Trực giác hình học rất rõ ràng khi giải thích ý nghĩa nhiễu ràng buộc như việc dời/nới lỏng hàng rào.
-> - Tự triển khai đầy đủ chuỗi logic từ khai triển Taylor bậc 1 của ràng buộc, của hàm mục tiêu cho tới áp dụng KKT stationarity và complementarity.
-> - Hiểu đúng bản chất của Lagrange multiplier λ* dưới góc nhìn phân tích độ nhạy (sensitivity analysis).
+> - Giải thích trực quan hình học rất chuẩn xác về ý nghĩa dời hàng rào (nới lỏng khi ε > 0 và siết chặt khi ε < 0).
+> - Tự triển khai đầy đủ các bước xấp xỉ tuyến tính và biến đổi đại số mà sách chỉ viết vắn tắt.
+> - Kết nối chính xác các điều kiện KKT (stationarity và complementary slackness) để rút ra công thức đạo hàm cuối cùng.
 >
 > **💡 Deeper notes**
-> - Về mặt giải tích chặt chẽ, đạo hàm df(x*(ε))/dε được tính chính xác tại ε = 0 (tức giới hạn một phía hoặc hai phía tại lân cận của x*).
-> - Giả định tập active set không đổi và bộ nhân Lagrange biến thiên trơn đòi hỏi các điều kiện chặt chẽ hơn như LICQ, strict complementarity và điều kiện đủ bậc hai (SOSC).
+> - Để nghiệm x*(ε) tồn tại, khả vi trơn theo ε và giữ nguyên active set khi ε đủ nhỏ, bài toán cần thỏa mãn thêm điều kiện bù ngặt (strict complementarity: λ*i > 0 với mọi i active) cùng điều kiện đủ cấp hai (second-order sufficiency conditions - SOSC).
 
 <br>
 
