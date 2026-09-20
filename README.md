@@ -44,7 +44,7 @@ Hướng tiếp theo là tiếp tục đi lên các lớp ML ở tầng cao hơn
 
 Repository này vì vậy chủ yếu là một **learning log** — dấu vết của quá trình đi từ nền tảng toán, probability, statistics và optimization lên machine learning, đồng thời là một phần của quá trình build StudyBoard.
 
-**`~12,354 notes` · `~17,852 screenshots` · `18 notebooks`**
+**`~12,355 notes` · `~17,852 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -534,7 +534,7 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 ### Numerical Optimization_J.Nocedal
 <!-- key: numerical_optimization_jnocedal -->
 <!-- group: Optimization -->
-`421 notes · 605 screenshots · 36 sections`
+`422 notes · 605 screenshots · 36 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
 > 
@@ -577,7 +577,7 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 | [12.3 First Order Optimality Condition](numerical_optimization_jnocedal/123_first_order_optimality_condition.md) | 3 | 5 |
 | [12.5  Second-Order Conditions](numerical_optimization_jnocedal/125_second_order_conditions.md) | 14 | 26 |
 | [12.6 Other constraint qualification](numerical_optimization_jnocedal/126_other_constraint_qualification.md) | 2 | 2 |
-| [12.8 Lagrange Multipliers and Sensitivity](numerical_optimization_jnocedal/128_lagrange_multipliers_and_sensitivity.md) | 2 | 3 |
+| [12.8 Lagrange Multipliers and Sensitivity](numerical_optimization_jnocedal/128_lagrange_multipliers_and_sensitivity.md) | 3 | 3 |
 | [Appendix A](numerical_optimization_jnocedal/appendix_a.md) | 1 | 1 |
 | [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_jnocedal/a1_error_analysis_floating_point_arithmetic.md) | 8 | 10 |
 | [A.1 Matrix Factorizations: Cholesky, LU, QR](numerical_optimization_jnocedal/a1_matrix_factorizations_cholesky_lu_qr.md) | 9 | 11 |
