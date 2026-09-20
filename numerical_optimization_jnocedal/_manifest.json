@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1789863065361,
+  "publishedAt": 1789919034039,
   "sections": [
     {
       "title": "📋 Overview",
@@ -197,7 +197,7 @@
     {
       "title": "12.8 Lagrange Multipliers and Sensitivity",
       "path": "numerical_optimization_jnocedal/128_lagrange_multipliers_and_sensitivity.md",
-      "noteCount": 2,
+      "noteCount": 3,
       "imageCount": 3
     },
     {
@@ -219,6 +219,6 @@
       "imageCount": 11
     }
   ],
-  "totalNotes": 421,
+  "totalNotes": 422,
   "totalImages": 605
 }
