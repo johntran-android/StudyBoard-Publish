@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1789233945359,
+  "publishedAt": 1789863065361,
   "sections": [
     {
       "title": "📋 Overview",
@@ -173,8 +173,8 @@
     {
       "title": "12.2 Tangent Cone & Constraint Qualification",
       "path": "numerical_optimization_jnocedal/122_tangent_cone_constraint_qualification.md",
-      "noteCount": 1,
-      "imageCount": 5
+      "noteCount": 6,
+      "imageCount": 14
     },
     {
       "title": "12.3 First Order Optimality Condition",
@@ -187,6 +187,18 @@
       "path": "numerical_optimization_jnocedal/125_second_order_conditions.md",
       "noteCount": 14,
       "imageCount": 26
+    },
+    {
+      "title": "12.6 Other constraint qualification",
+      "path": "numerical_optimization_jnocedal/126_other_constraint_qualification.md",
+      "noteCount": 2,
+      "imageCount": 2
+    },
+    {
+      "title": "12.8 Lagrange Multipliers and Sensitivity",
+      "path": "numerical_optimization_jnocedal/128_lagrange_multipliers_and_sensitivity.md",
+      "noteCount": 2,
+      "imageCount": 3
     },
     {
       "title": "Appendix A",
@@ -207,6 +219,6 @@
       "imageCount": 11
     }
   ],
-  "totalNotes": 412,
-  "totalImages": 591
+  "totalNotes": 421,
+  "totalImages": 605
 }
