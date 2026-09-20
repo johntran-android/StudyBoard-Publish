@@ -44,7 +44,7 @@ Hướng tiếp theo là tiếp tục đi lên các lớp ML ở tầng cao hơn
 
 Repository này vì vậy chủ yếu là một **learning log** — dấu vết của quá trình đi từ nền tảng toán, probability, statistics và optimization lên machine learning, đồng thời là một phần của quá trình build StudyBoard.
 
-**`~12,345 notes` · `~17,838 screenshots` · `18 notebooks`**
+**`~12,354 notes` · `~17,852 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -534,13 +534,14 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 ### Numerical Optimization_J.Nocedal
 <!-- key: numerical_optimization_jnocedal -->
 <!-- group: Optimization -->
-`412 notes · 591 screenshots · 34 sections`
+`421 notes · 605 screenshots · 36 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
+> 
 > Sổ tay này đi sâu vào các thuật toán tối ưu hóa số cốt lõi như tìm kiếm đường thẳng, vùng tin cậy, quasi-Newton và gradient liên hợp, cùng các khái niệm thiết yếu như đạo hàm tự động, phân tích hội tụ và kỹ thuật đại số tuyến tính số.
 
 <details open>
-<summary>📖 34 sections</summary>
+<summary>📖 36 sections</summary>
 
 | Section | Notes | Screenshots |
 |---|---:|---:|
@@ -572,9 +573,11 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 | [10.4 Orthogonal Distance Regression (bỏ qua)](numerical_optimization_jnocedal/104_orthogonal_distance_regression_b_qua.md) | 1 | 1 |
 | [12.0 Theory of Constrained Optimization](numerical_optimization_jnocedal/120_theory_of_constrained_optimization.md) | 5 | 8 |
 | [12.1 Examples](numerical_optimization_jnocedal/121_examples.md) | 9 | 17 |
-| [12.2 Tangent Cone & Constraint Qualification](numerical_optimization_jnocedal/122_tangent_cone_constraint_qualification.md) | 1 | 5 |
+| [12.2 Tangent Cone & Constraint Qualification](numerical_optimization_jnocedal/122_tangent_cone_constraint_qualification.md) | 6 | 14 |
 | [12.3 First Order Optimality Condition](numerical_optimization_jnocedal/123_first_order_optimality_condition.md) | 3 | 5 |
 | [12.5  Second-Order Conditions](numerical_optimization_jnocedal/125_second_order_conditions.md) | 14 | 26 |
+| [12.6 Other constraint qualification](numerical_optimization_jnocedal/126_other_constraint_qualification.md) | 2 | 2 |
+| [12.8 Lagrange Multipliers and Sensitivity](numerical_optimization_jnocedal/128_lagrange_multipliers_and_sensitivity.md) | 2 | 3 |
 | [Appendix A](numerical_optimization_jnocedal/appendix_a.md) | 1 | 1 |
 | [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_jnocedal/a1_error_analysis_floating_point_arithmetic.md) | 8 | 10 |
 | [A.1 Matrix Factorizations: Cholesky, LU, QR](numerical_optimization_jnocedal/a1_matrix_factorizations_cholesky_lu_qr.md) | 9 | 11 |
@@ -593,7 +596,6 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 `428 notes · 649 screenshots · 69 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
-> 
 > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
