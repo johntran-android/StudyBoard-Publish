@@ -1,6 +1,6 @@
 # 9.3 Methods Of Evaluating Interval Estimators
 
-📊 **Progress:** `34` Notes | `35` Screenshots | `1` AI Reviews
+📊 **Progress:** `34` Notes | `35` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-osahc74"></a>
@@ -77,7 +77,7 @@
 >
 >
 > Xét ví dụ này, ta có X1,..Xn là iid n(μ, σ²) với σ đã biết. Thì a, b thỏa P(a ≤ Z ≤
-> b) = 1 - α sẽ cho ta một 1-α confidence interval {μ: xbar - b σ/√n} ≤ μ ≤ xbar
+> b) = 1 - α sẽ cho ta một 1-α confidence interval {μ: x̄ - b σ/√n} ≤ μ ≤ x̄
 > \- a σ/√n
 >
 >
@@ -534,7 +534,7 @@
 >
 > ----- Do đó, khi không biết σ ta sẽ dùng cái pivot thứ hai: (Xbar - μ) / S/√n,
 > với S^2 là sample variance (chính xác thì gọi là unbiased sample variance có
-> công thức Σi (Xi - xbar)^2 / (n-1), vì E(S^2) = σ²)
+> công thức Σi (Xi - x̄)^2 / (n-1), vì E(S^2) = σ²)
 >
 >
 >
@@ -596,7 +596,7 @@
 >
 >
 >
-> [xbar - tn-1,α/2 s/√n ≤ μ ≤ xbar + tn-1,α/2 s/√n]
+> [x̄ - tn-1,α/2 s/√n ≤ μ ≤ x̄ + tn-1,α/2 s/√n]
 >
 > Tiếp tục, theo như theorem vừa mới học thì cái interval này chính là optimal trong
 > số những khoảng có coefficient 1-α, đồng nghĩa nó là ngắn nhất. Vì sao?
@@ -1395,7 +1395,7 @@
 <p align="center"><kbd><img src="assets/h3e9v9go6zl.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ này cho X1,...Xn là iid n(μ, σ²), với σ² đã biết. Interval C(xbar) = {μ: μ > xbar -
+> Ví dụ này cho X1,...Xn là iid n(μ, σ²), với σ² đã biết. Interval C(x̄) = {μ: μ > x̄ -
 > z_α σ/√n} là một 1-α UMA lower confidence bound vì nó có thể được tạo ra bằng cách
 > invert một UMP test của bài toán testing H0: μ = μ0 vs H1: μ > μ0.
 >
@@ -1673,21 +1673,21 @@
 >
 > Quay lại ví dụ này, trong chap 8 (xem link) ta đã làm ví dụ để thấy test UMP
 > level α test (của bài toán testing H0: θ = θ0 vs H1: θ < θ0) sẽ là cái mà có
-> rule là reject H0 nếu xbar < c  với c = -z_α(σ/√n) + θ0
+> rule là reject H0 nếu x̄ < c  với c = -z_α(σ/√n) + θ0
 >
 >
 >
 > thì đại khái là nếu xét bài toán testing H0: θ = θ0 vs H1: θ > θ0 thì bằng cách
 > lập luận tương tự ví dụ đó, ta có thể kết luận cái rule
-> sẽ là reject H0 nếu c < xbar, với c = z_α σ/√n + θ0
+> sẽ là reject H0 nếu c < x̄, với c = z_α σ/√n + θ0
 >
 >
 >
-> Điều này có nghĩa là A*(μ0) = {**x**: xbar > z_α(σ/√n) + μ0}_complement
+> Điều này có nghĩa là A*(μ0) = {**x**: x̄ > z_α(σ/√n) + μ0}_complement
 >
 >
 >
-> = {**x**: xbar ≤ z_α(σ/√n) + μ0}
+> = {**x**: x̄ ≤ z_α(σ/√n) + μ0}
 >
 >
 >
@@ -1704,15 +1704,15 @@
 >
 >
 >
-> = {μ: xbar ≤ z_α (σ/√n) + μ}
+> = {μ: x̄ ≤ z_α (σ/√n) + μ}
 >
 >
 >
-> = {μ: xbar - z_α (σ/√n) ≤ μ}
+> = {μ: x̄ - z_α (σ/√n) ≤ μ}
 >
 >
 >
-> = {μ: μ ≥ xbar - z_α (σ/√n)}
+> = {μ: μ ≥ x̄ - z_α (σ/√n)}
 >
 >
 >
@@ -1720,7 +1720,7 @@
 >
 >
 >
-> Còn đoạn sau đại ý là C(xbar) này ko phải UMA vì nó được tạo ra bằng
+> Còn đoạn sau đại ý là C(x̄) này ko phải UMA vì nó được tạo ra bằng
 > cách invert một cái 2-sided acceptance region của bài toán testing H0: μ = μ0
 > vs H1: μ khác μ0, mà bài toán toán này KHÔNG TỒN TẠI UMP.
 
@@ -1947,6 +1947,29 @@
 >
 > = {μ: Xbar - σ z_α/2 ≤ μ ≤ Xbar + σ z_α/2} chính là unbiased 1-α confidence
 > set của μ
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **82/100** · ✓ Move on
+>
+> Ghi chú đã nắm rất tốt bản chất của phương pháp nghịch đảo kiểm định không chệch (inverting an unbiased test) để xây dựng khoảng tin cậy. Tuy nhiên, bạn đã vô tình làm rơi mẫu số $\sqrt{n}$ khi viết miền chấp nhận $A(\theta_0)$ và khoảng tin cậy kết quả.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"A(θ0) = {x: -σ z_α/2 + θ0 ≤ xbar ≤ σ z_α/2 + θ0}"*
+>
+> Bạn đã bỏ sót mẫu số $\sqrt{n}$ trong biểu thức miền chấp nhận $A(\theta_0)$ và các bước suy ra $C(X)$ phía dưới (mặc dù ở dòng reject rule trước đó bạn đã viết đúng $\sigma z_{\alpha/2} / \sqrt{n}$). Công thức đúng cần có $\frac{\sigma}{\sqrt{n}}$.
+>
+> **2.** *"chính là unbiased level α acceptance region"*
+>
+> Cách diễn đạt hơi thiếu chuẩn xác về mặt thuật ngữ: $A(\theta_0)$ là miền chấp nhận của kiểm định mức ý nghĩa $\alpha$ (xác suất chấp nhận dưới $H_0$ là $\ge 1 - \alpha$), nói 'level $\alpha$ acceptance region' dễ gây nhầm lẫn giữa mức ý nghĩa $\alpha$ và độ tin cậy $1 - \alpha$.
+>
+>
+> **✓ Strengths**
+> - Hiểu đúng và làm rõ được cơ chế nghịch đảo (inversion) từ miền chấp nhận sang khoảng tin cậy thay vì chỉ ghi nhớ kết quả.
+> - Xác định đúng rằng kiểm định hai phía trong Example 8.3.20 là kiểm định không chệch, dẫn đến khoảng tin cậy tương ứng cũng là unbiased.
+>
+> **💡 Deeper notes**
+> - Tính không chệch của khoảng tin cậy (unbiased confidence set) ở đây có nghĩa là xác suất phủ giá trị tham số sai $\theta' \neq \theta$ luôn nhỏ hơn hoặc bằng độ tin cậy $1 - \alpha$ (tương đương với việc xác suất bác bỏ dưới $H_1$ luôn $\ge \alpha$ của kiểm định không chệch).
 
 **🔗 See also:** [Không tồn tại UMP test](./83_methods_of_evaluating_test.md#node-66jeahy)
 
