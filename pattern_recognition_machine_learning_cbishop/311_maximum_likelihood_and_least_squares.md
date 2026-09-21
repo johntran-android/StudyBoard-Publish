@@ -768,11 +768,20 @@
 > Điều này giải thích câu cuối, khi gs nói nếu **Φ** vuông và invertible, thì thì **Φ**^(+) = **Φ**inv
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **99/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
-> Bạn đã nắm vững kiến thức một cách xuất sắc, từ việc thiết lập bài toán MLE, tính toán gradient tỉ mỉ đến việc dẫn ra phương trình chuẩn (normal equation) một cách chính xác. Đặc biệt, việc liên hệ sâu sắc với các khái niệm từ MIT 18.06 như phép chiếu, phương trình chuẩn và nghịch đảo giả Moore-Penrose đã chứng tỏ bạn có một nền tảng lý thuyết rất vững chắc và khả năng tổng hợp kiến thức tuyệt vời.
+> Ghi chú cực kỳ xuất sắc, nắm rất vững bản chất giải tích ma trận và hình học đại số tuyến tính (hệ phương trình chuẩn tắc, hình chiếu trực giao, Moore-Penrose pseudo-inverse).
+>
+> **✓ Strengths**
+> - Tự triển khai đạo hàm ma trận / vector từng bước rất chuẩn xác theo quy tắc chuỗi và quy ước vector hàng.
+> - Kết nối xuất sắc biểu thức tổng ngoài (outer product) với tích ma trận ΦᵀΦ và vector 𝐭ᵀΦ.
+> - Hiểu sâu sắc ý nghĩa hình học của Normal Equation dưới góc nhìn đại số tuyến tính (chiếu vector mục tiêu t lên không gian cột C(Φ)).
+> - Phân biệt và mở rộng chuẩn xác về Moore-Penrose pseudo-inverse ở cả hai trường hợp nghiệm xấp xỉ tốt nhất (left inverse) và nghiệm có chuẩn nhỏ nhất (right inverse).
+>
+> **💡 Deeper notes**
+> - Để ma trận ΦᵀΦ khả nghịch (invertible), điều kiện ngầm định là ma trận thiết kế Φ phải có full column rank (nghĩa là số mẫu N ≥ số tham số M và các hàm cơ sở độc lập tuyến tính trên tập dữ liệu). Trong trường hợp M > N hoặc dữ liệu suy biến, cần dùng SVD để tính pseudo-inverse tổng quát.
 
-**🔗 See also:** [Ex 3.2 Orthogonal Projection and Least Squares](./37_exercises.md#node-2dv7p1f) · [Ex 3.6  MLE Hồi quy Đa biến](./37_exercises.md#node-cq8t94f)
+**🔗 See also:** [Ex 3.2 Orthogonal Projection and Least Squares](./37_exercises.md#node-2dv7p1f) · [Ex 3.6  MLE Hồi quy Đa biến](./37_exercises.md#node-cq8t94f) · [Gradient of Logistic Error Function](./432_logistic_regression.md#node-to86xxj)
 
 <br>
 
