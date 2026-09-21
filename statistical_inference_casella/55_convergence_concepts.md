@@ -74,11 +74,11 @@
 
 > [!NOTE]
 > ta qua luật số lớn yếu: Cho X1,X2...là iid random variables với EXi = μ và 
-> VarXi = σ² < inf. Đặt Xbar_n = (1/n) Σi=1:n Xi thì:
+> VarXi = σ² < inf. Đặt X̄_n = (1/n) Σi=1:n Xi thì:
 >
 >
 >
-> bằng lời: Xbar_n hội tự in probability về μ, 
+> bằng lời: X̄_n hội tự in probability về μ, 
 >
 >
 >
@@ -86,7 +86,7 @@
 >
 >
 >
-> lim n → inf P(|Xbar_n - μ| > ε) = 0
+> lim n → inf P(|X̄_n - μ| > ε) = 0
 >
 >
 >
@@ -94,7 +94,7 @@
 >
 >
 >
-> lim n → inf P(|Xbar - μ| < ε) = 1 với ε bất kì
+> lim n → inf P(|X̄ - μ| < ε) = 1 với ε bất kì
 >
 >
 >
@@ -152,7 +152,7 @@
 >
 >
 >
-> Tiếp xét P(|Xbar - μ| < ε) = 1 - P(|Xbar_n - μ| > ε)
+> Tiếp xét P(|X̄ - μ| < ε) = 1 - P(|X̄_n - μ| > ε)
 >
 >
 >
@@ -168,7 +168,7 @@
 >
 >
 >
-> lim n → inf P(|Xbar - μ| < ε) ≥ lim n → inf 1 - σ²/(nε^2)
+> lim n → inf P(|X̄ - μ| < ε) ≥ lim n → inf 1 - σ²/(nε^2)
 >
 >
 >
@@ -176,7 +176,7 @@
 >
 >
 >
-> vậy lim n → inf P(|Xbar - μ| < ε) = 1
+> vậy lim n → inf P(|X̄ - μ| < ε) = 1
 >
 >
 >
@@ -848,11 +848,11 @@
 >
 >
 >
-> Định nghiã sample mean của random sample size n: Xbar_n = ∑i=1:n Xi
+> Định nghiã sample mean của random sample size n: X̄_n = ∑i=1:n Xi
 >
 >
 >
-> Dùng Gn(x) kí hiệu cho cdf của √n (Xbar_n - μ) / σ.
+> Dùng Gn(x) kí hiệu cho cdf của √n (X̄_n - μ) / σ.
 >
 >
 >
@@ -866,7 +866,7 @@
 >
 > **√n (Xnbar - μ) / σ hội tụ phân phối về standard normal random variable**
 
-**🔗 See also:** [Phương pháp Delta 1/Xbar](#node-1zfrnml) · [Stronger Central Limit Theorem](#node-yngnkwh) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq) · [Large-Sample Binomial Tests](./103_hypothesis_testing.md#node-8xsav7v) · [Kiểm định hai phía](./103_hypothesis_testing.md#node-c96epf4)
+**🔗 See also:** [Phương pháp Delta 1/X̄](#node-1zfrnml) · [Stronger Central Limit Theorem](#node-yngnkwh) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq) · [Large-Sample Binomial Tests](./103_hypothesis_testing.md#node-8xsav7v) · [Kiểm định hai phía](./103_hypothesis_testing.md#node-c96epf4)
 
 <br>
 
@@ -998,15 +998,15 @@
 >
 >
 >
-> = √n (Xbar_n - μ) / σ
+> = √n (X̄_n - μ) / σ
 >
 >
 >
-> ⇔ **(Σi Yi) / √n = √n (Xbar_n - μ) / σ**
+> ⇔ **(Σi Yi) / √n = √n (X̄_n - μ) / σ**
 >
 >
 >
-> Xét mgf của √n (Xbar_n - μ) / σ, kí hiệu là M\_\[√n(Xbar_n-μ)/σ\](t)
+> Xét mgf của √n (X̄_n - μ) / σ, kí hiệu là M\_\[√n(X̄_n-μ)/σ\](t)
 >
 >
 >
@@ -1113,7 +1113,7 @@
 >
 >
 >
-> Nội dung thì đại khái là cũng cho chuỗi rv X1,X2...iid, có population mean μ, finite variance σ². Và Xbar_n là sample mean size n. Gn(x) là cdf của √n(Xbar_n - μ) / σ thì theorem nói rằng n → inf thì Gn(x) → ∫-inf:x 1/√2π e^-y^2/2dy chính là cdf của standard normal (normal(0,1))
+> Nội dung thì đại khái là cũng cho chuỗi rv X1,X2...iid, có population mean μ, finite variance σ². Và X̄_n là sample mean size n. Gn(x) là cdf của √n(X̄_n - μ) / σ thì theorem nói rằng n → inf thì Gn(x) → ∫-inf:x 1/√2π e^-y^2/2dy chính là cdf của standard normal (normal(0,1))
 >
 >
 >
@@ -1146,7 +1146,7 @@
 >
 >
 >
-> Nhưng ý chính là, **giả sử ta muốn tính xác suất liên quan đến sample mean**, ví dụ P(Xbar ≤ 11) thì **nếu tính chính xác thì sẽ rất khó, do sẽ phải deal với các giai thừa** (do pmf của negative binomial) kể cả khi có máy tính.
+> Nhưng ý chính là, **giả sử ta muốn tính xác suất liên quan đến sample mean**, ví dụ P(X̄ ≤ 11) thì **nếu tính chính xác thì sẽ rất khó, do sẽ phải deal với các giai thừa** (do pmf của negative binomial) kể cả khi có máy tính.
 >
 >
 >
@@ -1204,7 +1204,7 @@
 >
 >
 >
-> P(Xbar ≤ 11) = P(Σi=1:30 Xi ≤ 11) = P(Σi Xi ≤ 330)
+> P(X̄ ≤ 11) = P(Σi=1:30 Xi ≤ 11) = P(Σi Xi ≤ 330)
 >
 >
 >
@@ -1270,7 +1270,7 @@
 <p align="center"><kbd><img src="assets/f6l9bp32e3k.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, phần trước, là ta quan tâm đến điều kiện **khi nào thì một random variable đã chuẩn hóa sẽ có limit normal distribution** (ý là, kiểu như ta được học rằng √n(Xbar_n- μ) / σ sẽ → normal(0,1)
+> Đại khái là, phần trước, là ta quan tâm đến điều kiện **khi nào thì một random variable đã chuẩn hóa sẽ có limit normal distribution** (ý là, kiểu như ta được học rằng √n(X̄_n- μ) / σ sẽ → normal(0,1)
 >
 >
 >
@@ -1278,7 +1278,7 @@
 >
 >
 >
-> (random variable ở đây đang chỉ nhiều loại rv có limit distribution là normal(0,1) trong đó có √n(Xbar_n - μ)/σ², chứ sample mean không phải là cái duy nhất (nhưng là statistic quan trọng nhất) vậy thì ý là nhiều khi ta muốn tìm limit distribution của g(Xbar_n) chứ không phải của Xbar, ví dụ 1/Xbar_n hoặc Xbar_n / (1 - Xbar_n), là odd sẽ nói ở dưới đây)
+> (random variable ở đây đang chỉ nhiều loại rv có limit distribution là normal(0,1) trong đó có √n(X̄_n - μ)/σ², chứ sample mean không phải là cái duy nhất (nhưng là statistic quan trọng nhất) vậy thì ý là nhiều khi ta muốn tìm limit distribution của g(X̄_n) chứ không phải của X̄, ví dụ 1/X̄_n hoặc X̄_n / (1 - X̄_n), là odd sẽ nói ở dưới đây)
 >
 >
 >
@@ -1294,7 +1294,7 @@
 >
 >
 >
-> Đại khái là cũng giống như khi ta thường dùng Xbar_n = (ΣiXi)/n (sample mean) để estimate cho population mean p.
+> Đại khái là cũng giống như khi ta thường dùng X̄_n = (ΣiXi)/n (sample mean) để estimate cho population mean p.
 >
 >
 >
@@ -1508,7 +1508,7 @@
 >
 >
 >
-> (Trong chap 7 ta sẽ học bài toán point estimation, để hiểu khái niệm estimator của θ, được định nghĩa là một hàm số của sample W(**X**). Nên ở đây g(**T**) có thể là một estimator cho parameter nào đó.
+> (Trong chap 7 ta sẽ học bài toán point estimation, để hiểu khái niệm estimator của θ, được định nghĩa là một hàm số của sample W(𝐗). Nên ở đây g(**T**) có thể là một estimator cho parameter nào đó.
 >
 >
 >
@@ -1721,19 +1721,19 @@
 >
 >
 >
-> Thế thì với **p, ta dùng sample mean Xbar = Σi Xi**, hay kí hiệu khác **p^** để estimate cho nó. Thì với **odd, ta dùng p^/(1-p^) để estimate cho nó.**
+> Thế thì với **p, ta dùng sample mean X̄ = Σi Xi**, hay kí hiệu khác **p^** để estimate cho nó. Thì với **odd, ta dùng p^/(1-p^) để estimate cho nó.**
 >
 >
 >
-> Sau khi học chap 7 quay lại đây mình thấy hiểu hơn những chỗ này, p^,hay Xbar, là các statistic, là estimator của parameter. Với Tbar, hay, cũng có thể viết là Xbar(**X**) hay p^(**X**) để nhấn mạnh nó là hàm số của sample **X**, và ta dùng làm estimator cho p, và như đã biết, nó là một sufficient statistic của p (vì khi kích thước mẫu tăng lên n → inf, thì Xbar, (hay Xbar_n để thể hiện sample mean từ mẫy size n) sẽ hội tụ phân phối và cả xác suất về p)
+> Sau khi học chap 7 quay lại đây mình thấy hiểu hơn những chỗ này, p^,hay X̄, là các statistic, là estimator của parameter. Với Tbar, hay, cũng có thể viết là X̄(𝐗) hay p^(𝐗) để nhấn mạnh nó là hàm số của sample 𝐗, và ta dùng làm estimator cho p, và như đã biết, nó là một sufficient statistic của p (vì khi kích thước mẫu tăng lên n → inf, thì X̄, (hay X̄_n để thể hiện sample mean từ mẫy size n) sẽ hội tụ phân phối và cả xác suất về p)
 >
 >
 >
-> Vậy thì ta sẽ muốn tìm sampling distribution, hay ít nhất là các properties của estimator của odd: W(**X**) = p^/(1-p^), cụ thể là Variance của cái estimator của odd này.
+> Vậy thì ta sẽ muốn tìm sampling distribution, hay ít nhất là các properties của estimator của odd: W(𝐗) = p^/(1-p^), cụ thể là Variance của cái estimator của odd này.
 >
 >
 >
-> Nên hiểu, p^ hay p^/(1-p^) đều đóng tư cách là hàm của sample **X**. Nên ta có thể ghi là p^(**X**) (y như Xbar(**X**), với p^(**X**) = (ΣiXi/n), và \[p^/(1-p^)\](**X**), với ý nghĩa \[p^/(1-p^)\] là hàm của **X**, = (ΣiXi/n)/(1-(ΣiXi/n)).
+> Nên hiểu, p^ hay p^/(1-p^) đều đóng tư cách là hàm của sample 𝐗. Nên ta có thể ghi là p^(𝐗) (y như X̄(𝐗), với p^(𝐗) = (ΣiXi/n), và \[p^/(1-p^)\](𝐗), với ý nghĩa \[p^/(1-p^)\] là hàm của 𝐗, = (ΣiXi/n)/(1-(ΣiXi/n)).
 >
 >
 >
@@ -1741,7 +1741,7 @@
 >
 >
 >
-> ..sẽ giúp ta tính được estimated variance của là p^/(1 - p^) vốn dĩ là một hàm phức tạp của **X**, = ((ΣiXi/n)/(1-(ΣiXi/n)), nhưng ta sẽ coi nó là hàm của p^, để áp dụng cái trên, cho p^ đóng vai T, và giúp ta estimate variance của g(**T**). Tức là ta hiểu đại khái là ở đây **T** chính là vector có 1 component là p^, và vector **θ** = p.
+> ..sẽ giúp ta tính được estimated variance của là p^/(1 - p^) vốn dĩ là một hàm phức tạp của 𝐗, = ((ΣiXi/n)/(1-(ΣiXi/n)), nhưng ta sẽ coi nó là hàm của p^, để áp dụng cái trên, cho p^ đóng vai T, và giúp ta estimate variance của g(**T**). Tức là ta hiểu đại khái là ở đây **T** chính là vector có 1 component là p^, và vector **θ** = p.
 >
 >
 >
@@ -1785,7 +1785,7 @@
 >
 >
 >
-> Và **Var(p^)** thì là gì, nó chính là **Var(Xbar)**, tức **variance của sample mean** đó, có công thức là **σ²/n** tức là **population variance chia n**
+> Và **Var(p^)** thì là gì, nó chính là **Var(X̄)**, tức **variance của sample mean** đó, có công thức là **σ²/n** tức là **population variance chia n**
 >
 >
 >
@@ -1809,7 +1809,7 @@
 >
 >
 >
-> Nói thêm chút, mình nên hiểu thế này: Nãy giờ, là muốn tính, hay đang nói về việc ta quan tâm đến Variance của một statistic: W(**X**) được tính bởi công thức sau đây W(**X**) = ((ΣiXi/n)/(1-(ΣiXi/n)). (Hay thể hiện nó theo p^ (=Xbar) = p^/(1-p^), thì ta cần tính variance của p^/(1-p^) để mà đánh giá nó, xem nó có tốt hay không.
+> Nói thêm chút, mình nên hiểu thế này: Nãy giờ, là muốn tính, hay đang nói về việc ta quan tâm đến Variance của một statistic: W(𝐗) được tính bởi công thức sau đây W(𝐗) = ((ΣiXi/n)/(1-(ΣiXi/n)). (Hay thể hiện nó theo p^ (=X̄) = p^/(1-p^), thì ta cần tính variance của p^/(1-p^) để mà đánh giá nó, xem nó có tốt hay không.
 >
 >
 >
@@ -1851,7 +1851,7 @@
 >
 >
 >
-> Chú ý nhé, ta muốn estimate g(μ), chứ ko phải estimate μ. Muốn estimate μ, thì ta dùng sample mean Xbar rồi.
+> Chú ý nhé, ta muốn estimate g(μ), chứ ko phải estimate μ. Muốn estimate μ, thì ta dùng sample mean X̄ rồi.
 >
 >
 >
@@ -2062,11 +2062,11 @@
 >
 >
 >
-> Và ta lấy sample mean Xbar_n = (Σi Xi)/n, thì theo CLI, √n (Xnbar - μ) / σ sẽ → (d) n(0,1).
+> Và ta lấy sample mean X̄_n = (Σi Xi)/n, thì theo CLI, √n (Xnbar - μ) / σ sẽ → (d) n(0,1).
 >
 >
 >
-> Thì bối cảnh ở đây chính là, có thể áp dụng cho chuỗi Xbar_n đó. Vì chuỗi Xnbar cũng thỏa mãn yêu cầu.
+> Thì bối cảnh ở đây chính là, có thể áp dụng cho chuỗi X̄_n đó. Vì chuỗi Xnbar cũng thỏa mãn yêu cầu.
 >
 >
 >
@@ -2162,7 +2162,7 @@
 
 <a id="node-1zfrnml"></a>
 
-###### Phương pháp Delta 1/Xbar
+###### Phương pháp Delta 1/X̄
 
 <p align="center"><kbd><img src="assets/p8rtkb1w0gr.png" width="80%"></kbd></p>
 
@@ -2171,11 +2171,11 @@
 >
 >
 >
-> Theo Central Limit Theorem ta có (cho X1,X2...là các rv có population mean là μ, population variance là σ²) và Xbar_n là sample mean size n, viết Xbar cho gọn) thì ta có:
+> Theo Central Limit Theorem ta có (cho X1,X2...là các rv có population mean là μ, population variance là σ²) và X̄_n là sample mean size n, viết X̄ cho gọn) thì ta có:
 >
 >
 >
-> **√n(Xbar - μ) / σ → n(0,1)** in distribution
+> **√n(X̄ - μ) / σ → n(0,1)** in distribution
 >
 >
 >
@@ -2183,15 +2183,15 @@
 >
 >
 >
-> √n(Xbar - μ) / σ → Z \~ n(0,1) và σ → σ,
+> √n(X̄ - μ) / σ → Z \~ n(0,1) và σ → σ,
 >
 >
 >
-> theo Slutsky theorem σ √n(Xbar - μ) / σ → σZ và σZ thì \~ (n, σ²)
+> theo Slutsky theorem σ √n(X̄ - μ) / σ → σZ và σZ thì \~ (n, σ²)
 >
 >
 >
-> Vậy: **√n(Xbar - μ) → n(0, σ²)** in distribution
+> Vậy: **√n(X̄ - μ) → n(0, σ²)** in distribution
 >
 >
 >
@@ -2215,7 +2215,7 @@
 >
 >
 >
-> √n(Xbar - μ) →(d) n(0, σ²)
+> √n(X̄ - μ) →(d) n(0, σ²)
 >
 >
 >
@@ -2223,7 +2223,7 @@
 >
 >
 >
-> ⇨ √n(g(Xbar) - g(μ)) →(d) n(0, σ² g'(μ)^2)
+> ⇨ √n(g(X̄) - g(μ)) →(d) n(0, σ² g'(μ)^2)
 >
 >
 >
@@ -2231,7 +2231,7 @@
 >
 >
 >
-> **√n(1/Xbar - 1/μ)** →(d) n(0, σ² (-1/μ²)^2) = **n(0, σ² (1/μ^4))**
+> **√n(1/X̄ - 1/μ)** →(d) n(0, σ² (-1/μ²)^2) = **n(0, σ² (1/μ^4))**
 >
 >
 >
@@ -2239,7 +2239,7 @@
 >
 >
 >
-> Vậy ta có **√n(1/Xbar - 1/μ) → n(0, (1/μ^4) Var X1)** là vậy
+> Vậy ta có **√n(1/X̄ - 1/μ) → n(0, (1/μ^4) Var X1)** là vậy
 
 **🔗 See also:** [CLT - Định lý giới hạn trung tâm](#node-32vkewg)
 
@@ -2252,7 +2252,7 @@
 <p align="center"><kbd><img src="assets/5tusqz5k2u.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ok, vừa rồi mình đã hiểu được là √n(1/Xbar - 1/μ) →(d) n\[0, (1/μ)^4 Var(X1)\]
+> Ok, vừa rồi mình đã hiểu được là √n(1/X̄ - 1/μ) →(d) n\[0, (1/μ)^4 Var(X1)\]
 >
 >
 >
@@ -2260,7 +2260,7 @@
 >
 >
 >
-> √n(1/Xbar - 1/μ) →(d) n\[0, (1/μ)^4 σ²\]
+> √n(1/X̄ - 1/μ) →(d) n\[0, (1/μ)^4 σ²\]
 >
 >
 >
@@ -2268,7 +2268,7 @@
 >
 >
 >
-> Nên ở đây √n(1/Xbar - 1/μ) → (d) Z \~ n\[0, (1/μ)^4 σ²\]
+> Nên ở đây √n(1/X̄ - 1/μ) → (d) Z \~ n\[0, (1/μ)^4 σ²\]
 >
 >
 >
@@ -2276,7 +2276,7 @@
 >
 >
 >
-> Thì \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\] → (d) Z / \[(1/μ)^4 σ²\]
+> Thì \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\] → (d) Z / \[(1/μ)^4 σ²\]
 >
 >
 >
@@ -2296,7 +2296,7 @@
 >
 >
 >
-> \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\] sẽ → (d) n(0,1)
+> \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\] sẽ → (d) n(0,1)
 >
 >
 >
@@ -2304,23 +2304,23 @@
 >
 >
 >
-> Tuy nhiên, ta ko biết μ, σ. Nên nói về cái này, \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\], là vô nghĩa vì có tính được đâu.
+> Tuy nhiên, ta ko biết μ, σ. Nên nói về cái này, \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\], là vô nghĩa vì có tính được đâu.
 >
 >
 >
-> Thế thì: ĐẠI Ý LÀ, TA SẼ CÓ THỂ DÙNG SAMPLE MEAN Xbar THAY CHO POPULATION MEAN μ VÀ SAMPLE VARIANCE S^2, THAY CHO σ².
+> Thế thì: ĐẠI Ý LÀ, TA SẼ CÓ THỂ DÙNG SAMPLE MEAN X̄ THAY CHO POPULATION MEAN μ VÀ SAMPLE VARIANCE S^2, THAY CHO σ².
 >
 >
 >
-> \[(1/μ)^4 σ²\] THAY BẰNG \[(1/Xbar)^4 S^2\]
+> \[(1/μ)^4 σ²\] THAY BẰNG \[(1/X̄)^4 S^2\]
 >
 >
 >
-> Để rồi \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\]
+> Để rồi \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\]
 >
 >
 >
-> THAY BẰNG \[√n(1/Xbar - 1/μ)\] / \[(1/Xbar)^4 S^2\]
+> THAY BẰNG \[√n(1/X̄ - 1/μ)\] / \[(1/X̄)^4 S^2\]
 >
 >
 >
@@ -2336,7 +2336,7 @@
 >
 >
 >
-> \[√n(1/Xbar - 1/μ)\] / \[(1/Xbar)^4 S^2\]
+> \[√n(1/X̄ - 1/μ)\] / \[(1/X̄)^4 S^2\]
 >
 >
 >
@@ -2344,19 +2344,19 @@
 >
 >
 >
-> = \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\] × \[(1/μ)^4 σ²\] / \[(1/Xbar)^4 S^2\]
+> = \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\] × \[(1/μ)^4 σ²\] / \[(1/X̄)^4 S^2\]
 >
 >
 >
-> Thì term 1, \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\], như đã nói ở trên, sẽ converge in probability về n(0,1)
+> Thì term 1, \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\], như đã nói ở trên, sẽ converge in probability về n(0,1)
 >
 >
 >
-> Còn tern 2, \[(1/μ)^4 σ²\] / \[(1/Xbar)^4 S^2\]:
+> Còn tern 2, \[(1/μ)^4 σ²\] / \[(1/X̄)^4 S^2\]:
 >
 >
 >
-> Thì viết lại, = (Xbar/μ)^4 × σ²/S^2
+> Thì viết lại, = (X̄/μ)^4 × σ²/S^2
 >
 >
 >
@@ -2364,7 +2364,7 @@
 >
 >
 >
-> Xbar →(p) μ
+> X̄ →(p) μ
 >
 >
 >
@@ -2372,7 +2372,7 @@
 >
 >
 >
-> Do đó (Xbar/μ)^4 σ²/S^2 **converge in probability về 1**, hay (Xbar/μ)^4 σ²/S^2 → 1 in probability.
+> Do đó (X̄/μ)^4 σ²/S^2 **converge in probability về 1**, hay (X̄/μ)^4 σ²/S^2 → 1 in probability.
 >
 >
 >
@@ -2380,7 +2380,7 @@
 >
 >
 >
-> \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\] × \[(1/μ)^4 σ²\] / \[(1/Xbar)^4 S^2\]
+> \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\] × \[(1/μ)^4 σ²\] / \[(1/X̄)^4 S^2\]
 >
 >
 >
@@ -2396,13 +2396,13 @@
 >
 >
 >
-> **Nhờ vào tính unbiased estimator của Xbar và S^2** (mà công thức là chia cho n-1) thì cái 
+> **Nhờ vào tính unbiased estimator của X̄ và S^2** (mà công thức là chia cho n-1) thì cái 
 >
-> \[√n(1/Xbar - 1/μ)\] / \[(1/Xbar)^4 S^2\] vẫn → n(0,1)
+> \[√n(1/X̄ - 1/μ)\] / \[(1/X̄)^4 S^2\] vẫn → n(0,1)
 >
 >
 >
-> y như cái \[√n(1/Xbar - 1/μ)\] / \[(1/μ)^4 σ²\]
+> y như cái \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\]
 
 <br>
 
@@ -2687,7 +2687,7 @@
 <p align="center"><kbd><img src="assets/kuxpzbl0ew.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, xét random variable vector **X** = (X1,...Xp) có population mean
+> Đại khái là, xét random variable vector 𝐗 = (X1,...Xp) có population mean
 > và covariance: **μ** = (μ1, ...μp), Cov(Xi, Xj) = σij
 >
 >
@@ -2698,7 +2698,7 @@
 >
 >
 >
-> **X**k = (X1k, X2k,...Xpk)
+> 𝐗k = (X1k, X2k,...Xpk)
 >
 >
 >
@@ -2707,7 +2707,7 @@
 >
 >
 >
-> Rồi, họ mới đặt Xbar_i = (Σk=1:n Xik) / n Có nghĩa là, sample mean của 
+> Rồi, họ mới đặt X̄_i = (Σk=1:n Xik) / n Có nghĩa là, sample mean của 
 > Xi1, Xi2,...,Xin. Tức là random variable phần tử thứ i của các random variable
 > vector **X1**,....**Xn**
 >
@@ -2721,11 +2721,11 @@
 >
 >
 >
-> Áp dụng vào đây với **x** = (x̄1, x̄2,...x̄p)
+> Áp dụng vào đây với 𝐱 = (x̄1, x̄2,...x̄p)
 >
 >
 >
-> ⇨ g(**x**) ≈ g(**μ**) + ∇g(**μ**)T(**x** - **μ**)
+> ⇨ g(𝐱) ≈ g(**μ**) + ∇g(**μ**)T(𝐱 - **μ**)
 
 <br>
 
