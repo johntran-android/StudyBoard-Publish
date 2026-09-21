@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `52` Notes | `61` Screenshots | `12` AI Reviews
+📊 **Progress:** `52` Notes | `61` Screenshots | `13` AI Reviews
 
 ---
 <a id="node-7s1kn1j"></a>
@@ -67,7 +67,7 @@
 >
 >
 >
-> Tiếp, xét cái xác suất P\_θ(L(**X**) ≤ θ ≤ U(**X)**), thì cái này được gọi là **COVERAGE PROBABILITY**, nó là hàm theo θ, giúp đánh giá mức tự tin của một interval estimation, tương tự như power của một test (nhớ lại β(θ) = P\_θ(**X** ∈ R), giúp đánh giá xác suất làm đúng việc accept H1 khi θ ∈ Θ0c của test)
+> Tiếp, xét cái xác suất P\_θ(L(**X**) ≤ θ ≤ U(**X**)), thì cái này được gọi là **COVERAGE PROBABILITY**, nó là hàm theo θ, giúp đánh giá mức tự tin của một interval estimation, tương tự như power của một test (nhớ lại β(θ) = P\_θ(**X** ∈ R), giúp đánh giá xác suất làm đúng việc accept H1 khi θ ∈ Θ0c của test)
 >
 >
 >
@@ -79,7 +79,7 @@
 >
 >
 >
-> Thế thì ở ví dụ này, cho X1,...Xn là iid normal(μ, σ²) và xem xét test giữa H0: μ = μ0 vs H1: μ ≠ μ0. Với một fixed α level thì gs nói cái test mà reasonable nhất, mà quả thật nó chính là cái most power unbiased test chính là cái này: reject H0 nếu |Xbar - μ0| &gt; z\_α/2 (σ/√n).
+> Thế thì ở ví dụ này, cho X1,...Xn là iid normal(μ, σ²) và xem xét test giữa H0: μ = μ0 vs H1: μ ≠ μ0 Với một fixed α level thì gs nói cái test mà reasonable nhất, mà quả thật nó chính là cái **most power unbiased test** chính là cái này: reject H0 nếu |Xbar - μ0| &gt; z\_α/2 (σ/√n).
 >
 >
 >
@@ -119,7 +119,11 @@
 >
 >
 >
-> Tiếp, đây là size α test, còn nhớ, theo định nghĩa: tức là sup\_θ∈Θ0 (**X** ∈ R) = α
+> Tiếp, đây là size α test, còn nhớ, theo định nghĩa: tức là sup\_θ∈Θ0 P(**X** ∈ R) = α
+>
+>
+>
+> P\_θ(**X** ∈ R), R = {𝐱 ∈ 𝒳: reject H0 cũng là |Xbar(𝐱) - μ0| ≤ z\_α/2 (σ/√n)}
 >
 >
 >
@@ -131,11 +135,11 @@
 >
 >
 >
-> ⇔ P\_μ0,σ²(accept H1) = 1 - α
+> ⇔ P\_μ0,σ²(accept H0) = 1 - α
 >
 >
 >
-> ⇔ P\_σ²(Xbar - z\_α/2 σ/√n ≤ μ0 ≤ Xbar + z\_α/2 σ/√n) = 1 - α
+> ⇔ P\_μ0,σ²(Xbar - z\_α/2 σ/√n ≤ μ0 ≤ Xbar + z\_α/2 σ/√n) = 1 - α
 >
 >
 >
@@ -143,43 +147,43 @@
 >
 >
 >
-> P\_σ²(Xbar - z\_α/2 σ/√n ≤ μ ≤ Xbar + z\_α/2 σ/√n) = 1 - α ∀μ ∈ R
+> P\_μ,σ²(Xbar - z\_α/2 σ/√n ≤ μ ≤ Xbar + z\_α/2 σ/√n) = 1 - α ∀μ ∈ R
 >
 >
 >
-> Tới đây ta có gì? Chính là một interval estimator \[L(**X**), U(**X**)\] với L(**X**) = Xbar - z\_α/2 σ/√n và U(**X**) = Xbar + z\_α/2 σ/√n. Và coverage probability là 1 - α, và cũng là confidence coefficient vì inf\_μ (1 - α) = 1 - α
+> Tới đây ta có gì? Chính là một interval estimator \[L(**X**), U(**X**)\] với L(**X**) = Xbar - z\_α/2 σ/√n và U(**X**) = Xbar + z\_α/2 σ/√n. Và coverage probability là 1 - α, và cũng là confidence coefficient vì inf\_μ P(1 - α) = 1 - α
 >
 >
 >
 > Vậy ta đã có một **1 - α confidence interval** (hay 1 - α interval estimator) được xây dựng đơn giản chỉ bằng cách đảo ngược một hypothesis test
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=nC7WkJULeTs)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú nắm rất chắc bản chất mối liên hệ giữa kiểm định giả thuyết và ước lượng khoảng, cùng các khái niệm nền tảng. Có một lỗi nhầm ký hiệu nhỏ khi viết 'accept H1' thay vì 'accept H0' nhưng bước suy luận sau đó vẫn chính xác.
+> Ghi chú rất xuất sắc, hiểu sâu sắc bản chất mối liên hệ giữa hypothesis testing và confidence interval qua việc đảo ngược acceptance region. Chỉ có vài lỗi ký hiệu nhỏ không làm ảnh hưởng đến bản chất.
 >
 > **🟡 Minor issues**
 >
-> **1.** *"⇔ P_μ0,σ²(accept H1) = 1 - α"*
+> **1.** *"P_μ0,σ²(Xbar - z_α/2 σ/√n ≤ μ ≤ Xbar + z_α/2 σ/√n) = 1 - α ∀μ ∈ R"*
 >
-> Đây là lỗi viết nhầm (typo) giữa H0 và H1. Khi P(reject H0) = α thì biến cố đối phải là P(accept H0) = 1 - α, và công thức xác suất ở dòng tiếp theo chính là miền chấp nhận H0.
+> Lỗi ký hiệu nhỏ ở chỉ số dưới (subscript): khi đã thay giá trị cụ thể μ0 thành tham số tổng quát μ trong biểu thức, chỉ số dưới của xác suất phải đổi thành P_μ,σ² thay vì vẫn giữ P_μ0,σ² như sách giáo khoa ghi P_μ(...).
 >
-> **2.** *"sup_θ∈Θ0 (**X** ∈ R) = α"*
+> **2.** *"sup_θ∈Θ0 (X ∈ R) = α"*
 >
-> Thiếu ký hiệu xác suất P: biểu thức chuẩn phải là sup_θ∈Θ0 P_θ(X ∈ R) = α.
->
-> **3.** *"P_σ²(Xbar - z_α/2 σ/√n ≤ μ0 ≤ Xbar + z_α/2 σ/√n) = 1 - α"*
->
-> Chỉ số dưới của xác suất bị thiếu tham số μ0 (viết đúng là P_{μ0, σ²} hoặc P( · | μ = μ0)).
+> Viết thiếu ký hiệu xác suất P_θ, biểu thức chính xác là sup_{θ ∈ Θ0} P_θ(X ∈ R) = α.
 >
 >
 > **✓ Strengths**
-> - So sánh rất trực quan và chuẩn xác giữa ước lượng điểm, kiểm định giả thuyết và ước lượng khoảng.
-> - Hiểu rõ sự tương đồng giữa coverage probability / confidence coefficient với power function / test size.
-> - Nắm chuẩn bản chất phương pháp đảo ngược miền chấp nhận (inverting the acceptance region) của kiểm định để tạo ra khoảng tin cậy.
+> - Hệ thống hóa rất mạch lạc các khái niệm nền tảng từ point estimation, hypothesis testing đến interval estimation.
+> - Nắm vững và diễn giải chính xác vai trò của coverage probability và confidence coefficient.
+> - Tự đào sâu và nhắc lại chuẩn xác định nghĩa của UMP test và unbiased test trước khi bước vào chi tiết bài toán.
+> - Các bước biến đổi đại số từ acceptance region sang khoảng tin cậy của μ0 được trình bày rất rõ ràng, chuẩn xác.
 >
 > **💡 Deeper notes**
-> - Cần phân biệt rạch ròi giữa khoảng ngẫu nhiên [L(X), U(X)] và khoảng thực nghiệm [L(x), U(x)]: trước khi lấy mẫu, khoảng này ngẫu nhiên và có xác suất bao phủ 1 - α; sau khi đã quan sát x, tham số μ nằm trong hoặc ngoài khoảng đó (xác suất theo trường phái frequentist chỉ là 0 hoặc 1).
+> - Nhận xét P_θ(W(X) = θ) = 0 chủ yếu đúng với các phân phối liên tục; với các phân phối rời rạc thì xác suất ước lượng điểm trùng chính xác giá trị tham số vẫn có thể dương.
+> - Trong ví dụ này, giả định phương sai σ² đã biết trước đóng vai trò then chốt để test statistic tuân theo phân phối chuẩn tắc Z thay vì phân phối Student's t.
 
 **🔗 See also:** [Đặc điểm kiểm định giả thuyết](./83_methods_of_evaluating_test.md#node-21ae20z)
 
@@ -194,22 +198,23 @@
 <p align="center"><kbd><img src="assets/stb9e0mquc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Hiểu đại khái là gs nói về mối liên hệ giữa acceptance region trong
-> hypothesis test và confidence interval trong interval estimation,
+> Hiểu đại khái là gs nói về mối liên hệ giữa acceptance region trong hypothesis test và confidence interval trong interval estimation,
 >
 >
 >
-> Với bài toán test giữa H0: θ ∈ Θ0 vs H1: θ ∈ Θ0c, như đã biết, rejection
-> region R = {**x**: reject H0} mà trong ví dụ vừa rồi là  {**x:** |Xbar - μ0| >
-> z_α/2 σ/√n}
+> Với bài toán test giữa H0: θ ∈ Θ0 vs H1: θ ∈ Θ0c, như đã biết, rejection region R = {**x**: reject H0} mà trong ví dụ vừa rồi là R = {**x:** |x̄ - μ0| &gt; z\_α/2 σ/√n}
 >
 >
 >
-> → Acceptance region: {**x**: |Xbar - μ0| ≤ z_α/2 σ/√n}
+> ⇒ Acceptance region = {𝐱: |x̄  - μ0| ≤ z\_α/2 σ/√n
 >
 >
 >
-> = {**x**: -z_α/2 σ/√n ≤ xbar - μ0 ≤ z_α/2 σ/√n}
+> = {**x**: |x̄ - μ0| ≤ z\_α/2 σ/√n}
+>
+>
+>
+> = {**x**: -z\_α/2 σ/√n ≤ xbar - μ0 ≤ z\_α/2 σ/√n}
 >
 >
 >
@@ -217,7 +222,7 @@
 >
 >
 >
-> Thì dĩ nhiên đây là subset trong sample space, cái này ko có gì phải nói.
+> Thì dĩ nhiên đây là subset trong sample space 𝓧.
 >
 >
 >
@@ -225,7 +230,7 @@
 >
 >
 >
-> C(**x**) = {μ: xbar - z_α/2 σ/√n ≤ μ ≤ xbar + z_α/2 σ/√n}
+> C(**x**) = {μ: xbar - z\_α/2 σ/√n ≤ μ ≤ xbar + z\_α/2 σ/√n}
 >
 >
 >
@@ -237,19 +242,15 @@
 >
 >
 >
-> Để rồi đại khái là sau khi đã thiết lập một cái test nào đó ví dụ cái test tốt nhất
-> rồi, nó sẽ cho phép ta:
+> Để rồi đại khái là sau khi đã thiết lập một cái test nào đó ví dụ cái test tốt nhất rồi, nó sẽ cho phép ta:
 >
 >
 >
-> Trong bài toán testing: ta giữ cố định parameter θ và đặt vấn đề là " **x nào
-> thì sẽ phù hợp / consistent với θ đó" (thấy x bằng bao nhiêu thì ta sẽ accept
-> θ đó, ám chỉ acceptance region)**
+> Trong bài toán testing: ta giữ cố định parameter θ và đặt vấn đề là "𝐱 bằng bao nhiêu thì sẽ phù hợp với θ đó" (thấy 𝐱 bằng bao nhiêu thì ta sẽ accept θ đó, ám chỉ acceptance region)
 >
 >
 >
-> Còn trong bài toán interval estimation: ta giữ cố định **x**, và đặt câu hỏi là
-> θ nào phù hợp nhất với với (giá trị quan sát thấy) của **x** đó
+> Còn trong bài toán interval estimation: ta giữ cố định **x**, và đặt câu hỏi là θ nào phù hợp nhất với (giá trị quan sát thấy) của **x** đó
 >
 >
 >
@@ -257,21 +258,15 @@
 >
 >
 >
-> Sử dụng cái most reasonable test (most power unbiased test rule) giúp thiết
-> lập ra rejection / acceptance region
+> Sử dụng cái most reasonable test (most power unbiased test rule) giúp thiết lập ra rejection / acceptance region
 >
 >
 >
-> Thì kiểu như nếu ta c**á cược rằng μ = μ0**, thì sẽ thiết lập đoạn A(μ0) là
-> vùng mà **nếu sau này ta quan sát** được **X** = **x** **nằm trong này thì sẽ
-> giúp kết luận mình đúng: accept μ = μ0** (accept H0 trong bài toán
-> hypothesis test)
+> Thì kiểu như nếu ta **cá cược rằng μ = μ0**, thì sẽ thiết lập đoạn A(μ0) là vùng mà **nếu sau này ta quan sát** được **X** = **x** **nằm trong này thì sẽ giúp kết luận mình đúng: accept μ = μ0** (accept H0 trong bài toán hypothesis test)
 >
 >
 >
-> Còn nếu ta làm ngược lại, **dựa quan sát thấy** **X** = **x***, để có xbar*, thì
-> cái rule này sẽ **giúp xác lập** C(**x***) (hay C(xbar*) cũng được)sẽ là
-> **khoảng phù hợp mà ta cho rằng nhất định μ phải nằm trong đó**
+> Còn nếu ta làm ngược lại, **dựa quan sát thấy** **X** = **x**\*, để có xbar\*, thì cái rule này sẽ **giúp xác lập** C(**x**\*) (hay C(xbar\*) cũng được)sẽ là **khoảng phù hợp mà ta cho rằng nhất định μ phải nằm trong đó**
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
@@ -306,45 +301,34 @@
 >
 >
 >
-> Luồng màu xanh dương: 
+> Luồng màu xanh dương:
 >
 >
 >
-> 1) **QUAN SÁT THẤY** **X = x*** (và→ Xbar = xbar*) thì cái test rule của UMPtest
-> sẽ **GIÚP KẾT LUẬN μ PHẢI NẰM TRONG ĐOẠN NÀY C(xbar*)**
+> i) Quan sát thấy 𝐗 = 𝐱\* (và→ Xbar = xbar\*) thì cái test rule của umpu test sẽ giúp kết luận C(xbar) có thể bao phủ μ với độ tin cậy 1-α
 >
 >
 >
-> 2) Còn **MUỐN KẾT LUẬN μ = μ0**, thì **PHẢI QUAN SÁT THẤY Xbar NẰM TRONG
-> ĐOẠN NÀY A(μ0)**
+> ii) Còn muốn kết luận μ = μ0, thì phải quan sát thấy xbar nằm trong đoạn này A(μ0)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú nắm rất chuẩn bản chất hình học của mối quan hệ đối ngẫu giữa miền chấp nhận của kiểm định và khoảng tin cậy (phép nghịch đảo kiểm định). Tuy nhiên, cách diễn đạt mang tính tuyệt đối hóa ('phải nằm trong', 'kết luận mu = mu0') cần được chuẩn hóa theo đúng ngôn ngữ suy diễn thống kê tần suất.
+> Ghi chú nắm rất chuẩn bản chất tính đối ngẫu (duality) giữa miền chấp nhận của kiểm định giả thuyết (lát cắt dọc) và khoảng tin cậy (lát cắt ngang).
 >
 > **🟡 Minor issues**
 >
-> **1.** *"MUỐN KẾT LUẬN μ = μ0, thì PHẢI QUAN SÁT THẤY Xbar NẰM TRONG ĐOẠN NÀY A(μ0)"*
+> **1.** *"Còn muốn kết luận μ = μ0, thì phải quan sát thấy xbar nằm trong đoạn này A(μ0)"*
 >
-> Trong kiểm định giả thuyết thống kê, việc mẫu quan sát rơi vào miền chấp nhận A(μ0) đồng nghĩa với việc 'chưa đủ bằng chứng để bác bỏ H0' (fail to reject), chứ không đồng nghĩa với việc chứng minh hay kết luận chắc chắn rằng μ = μ0.
->
-> **2.** *"GIÚP KẾT LUẬN μ PHẢI NẰM TRONG ĐOẠN NÀY C(xbar*)"*
->
-> Trong trường phái tần suất (frequentist), μ là một hằng số cố định chưa biết. Khoảng C(xbar*) là một khoảng ngẫu nhiên; sau khi quan sát dữ liệu, ta chỉ nói khoảng này bao phủ μ với độ tin cậy 1 - α, không dùng từ tuyệt đối 'phải nằm trong'.
->
-> **3.** *"cái test rule của UMPtest"*
->
-> Với bài toán kiểm định hai phía cho giá trị trung bình phân phối chuẩn, không tồn tại kiểm định mạnh nhất đều (UMP test), mà đây là kiểm định không chệch mạnh nhất đều (UMPU test) hoặc kiểm định tỷ số khả dĩ (LRT).
+> Về mặt thuật ngữ thống kê chính xác, khi xbar rơi vào miền chấp nhận A(μ0), ta kết luận là 'chưa có đủ bằng chứng để bác bỏ H0: μ = μ0' (fail to reject H0), chứ không khẳng định tuyệt đối hay chứng minh được μ = μ0.
 >
 >
 > **✓ Strengths**
-> - Đọc và hiểu rất chính xác cơ chế đối ngẫu hình học: gióng ngang từ xbar* ra khoảng tin cậy C(xbar*) của μ, và gióng dọc từ μ0 ra miền chấp nhận A(μ0) của xbar.
-> - Nhận diện đúng rằng khoảng tin cậy thu được chính là tập hợp tất cả các giá trị μ0 mà kiểm định tương ứng không bác bỏ.
+> - Hiểu chính xác cơ chế đảo kiểm định (inverting a test): cố định xbar quan sát được để suy ra khoảng tin cậy C(xbar) cho μ theo trục ngang.
+> - Hiểu đúng vai trò của lát cắt dọc A(μ0) là miền chấp nhận tương ứng với một giả thuyết cụ thể μ0.
 >
 > **💡 Deeper notes**
-> - Duality theorem: C(x) = {θ0: x ∈ A(θ0)}, nghĩa là kiểm định mức α tương đương hoàn toàn với việc xây dựng khoảng tin cậy 1 - α thông qua phép nghịch đảo (test inversion).
-> - Hai đường thẳng song song trong hình thể hiện phương sai σ^2 đã biết. Nếu σ chưa biết và phải ước lượng bằng s, các đường biên này sẽ phụ thuộc vào phân phối Student-t thay vì phân phối chuẩn Z.
+> - Khoảng tin cậy tương ứng thu được từ việc đảo họ kiểm định UMPU (Uniformly Most Powerful Unbiased) hai phía này chính là khoảng tin cậy UMAU (Uniformly Most Accurate Unbiased) mức 1 - α.
 
 <br>
 
@@ -355,13 +339,23 @@
 <p align="center"><kbd><img src="assets/amz16d0vxro.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Màu xanh: lấy **x** cụ thể nào đó. gom hết các ông θ0 ∈ θ có A(θ0)
-> chứa **x**, tạo thành C(**x**)
+> Màu xanh: lấy **x** cụ thể nào đó. gom hết các ông θ0 ∈ θ có A(θ0) chứa **x**, tạo thành C(**x**)
 >
 >
 >
-> Màu đỏ: lấy θ0. gom hết các ông **x** ∈ **X** mà C(**x**) chứa θ0, đặt là
-> A(θ0)
+> Màu đỏ: lấy θ0 gom hết các ông **x** ∈ **X** mà C(**x**) chứa θ0, đặt là A(θ0)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú giải thích rất chính xác và trực quan mối quan hệ đối ngẫu (test inversion) giữa miền chấp nhận $A(\theta_0)$ và khoảng tin cậy $C(x)$ thông qua hai lát cắt ngang và dọc trên đồ thị.
+>
+> **✓ Strengths**
+> - Hiểu chính xác bản chất đối ngẫu hai chiều: $C(x) = \{\theta_0: x \in A(\theta_0)\}$ (lát cắt ngang) và $A(\theta_0) = \{x: \theta_0 \in C(x)\}$ (lát cắt dọc).
+> - Đối chiếu màu sắc trực quan tương ứng chuẩn xác với các lát cắt hình học trên đồ thị.
+>
+> **💡 Deeper notes**
+> - Trên hình viết tay có chỗ ghi nhầm ký hiệu thuộc $\in$ ngược chiều (như $A(\theta_0) \in x$ hoặc $C(x) \in \theta_0$), chuẩn ký hiệu tập hợp nên là $x \in A(\theta_0)$ (hoặc $A(\theta_0) \ni x$) và $\theta_0 \in C(x)$.
 
 **🔗 See also:** [Score Statistic Confidence Intervals](./104_interval_estimation.md#node-k8b5j5h)
 
