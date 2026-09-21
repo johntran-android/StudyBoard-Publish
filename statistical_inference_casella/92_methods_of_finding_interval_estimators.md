@@ -157,7 +157,9 @@
 >
 > Vậy ta đã có một **1 - α confidence interval** (hay 1 - α interval estimator) được xây dựng đơn giản chỉ bằng cách đảo ngược một hypothesis test
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=nC7WkJULeTs)
+📹 Video 1: [Đảo ngược test statistic — Statistical Inference - Casella](https://www.youtube.com/watch?v=nC7WkJULeTs)
+
+📹 Video 2: [Làm sao nghịch đảo normal test để tìm khoảng tin cậy 1-alpha?](https://www.youtube.com/watch?v=OcJDysX87L0)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
@@ -214,7 +216,7 @@
 >
 >
 >
-> = {**x**: -z\_α/2 σ/√n ≤ xbar - μ0 ≤ z\_α/2 σ/√n}
+> = {**x**: -z\_α/2 σ/√n ≤ x̄ - μ0 ≤ z\_α/2 σ/√n}
 >
 >
 >
@@ -230,7 +232,7 @@
 >
 >
 >
-> C(**x**) = {μ: xbar - z\_α/2 σ/√n ≤ μ ≤ xbar + z\_α/2 σ/√n}
+> C(**x**) = {μ: x̄ - z\_α/2 σ/√n ≤ μ ≤ x̄ + z\_α/2 σ/√n}
 >
 >
 >
@@ -266,7 +268,7 @@
 >
 >
 >
-> Còn nếu ta làm ngược lại, **dựa quan sát thấy** **X** = **x**\*, để có xbar\*, thì cái rule này sẽ **giúp xác lập** C(**x**\*) (hay C(xbar\*) cũng được)sẽ là **khoảng phù hợp mà ta cho rằng nhất định μ phải nằm trong đó**
+> Còn nếu ta làm ngược lại, **dựa quan sát thấy** **X** = **x**\*, để có x̄\*, thì cái rule này sẽ **giúp xác lập** C(**x**\*) (hay C(x̄\*) cũng được)sẽ là **khoảng phù hợp mà ta cho rằng nhất định μ phải nằm trong đó**
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
@@ -305,11 +307,11 @@
 >
 >
 >
-> i) Quan sát thấy 𝐗 = 𝐱\* (và→ Xbar = xbar\*) thì cái test rule của umpu test sẽ giúp kết luận C(xbar) có thể bao phủ μ với độ tin cậy 1-α
+> i) Quan sát thấy 𝐗 = 𝐱\* (và→ Xbar = x̄\*) thì cái test rule của umpu test sẽ giúp kết luận C(x̄) có thể bao phủ μ với độ tin cậy 1-α
 >
 >
 >
-> ii) Còn muốn kết luận μ = μ0, thì phải quan sát thấy xbar nằm trong đoạn này A(μ0)
+> ii) Còn muốn kết luận μ = μ0, thì phải quan sát thấy x̄ nằm trong đoạn này A(μ0)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
@@ -1336,18 +1338,18 @@
 >
 > Thử xét cái test của bài toán này, giả sử mình có một cái test có rule: reject H0
 > nếu T(**X**) ≤ c (ví dụ Xbar ≤ μ0 - margin chẳng hạn, để về trực giác rất dễ
-> thấy: ta đang test giữa H0: μ = 100 vs H1: μ < 100 thì nếu quan sát thấy xbar
+> thấy: ta đang test giữa H0: μ = 100 vs H1: μ < 100 thì nếu quan sát thấy x̄
 > tức giá trị trung bình chỉ là 10, thì ta sẽ reject H0 mà cho rằng H1 mới đúng tức
 > μ thật sự nhỏ hơn 100 nhiều)
 >
 >
 >
-> Thì khi đó, cái rejection region sẽ là: R = {**x**: xbar ≤ μ0 - margin} và
+> Thì khi đó, cái rejection region sẽ là: R = {**x**: x̄ ≤ μ0 - margin} và
 > acceptance  region là
 >
 >
 >
-> Rc = {**x**: xbar > μ0 - margin}.
+> Rc = {**x**: x̄ > μ0 - margin}.
 >
 >
 >
@@ -1385,7 +1387,7 @@
 >
 >
 > Nếu A(μ0) chứa **x**, tức **x** thuộc acceptance region của bài toán test H0:
-> μ = μ0  vs H1: μ < μ0, như vậy xbar > μ0 - margin.
+> μ = μ0  vs H1: μ < μ0, như vậy x̄ > μ0 - margin.
 >
 >
 >
@@ -1393,11 +1395,11 @@
 >
 >
 >
-> = {μ: xbar > μ - margin}
+> = {μ: x̄ > μ - margin}
 >
 >
 >
-> = {μ: μ < xbar + margin}
+> = {μ: μ < x̄ + margin}
 >
 >
 >
@@ -1422,7 +1424,7 @@
 >
 >
 >
-> Do đó Rc, hay A(μ0) sẽ là {**x**: (xbar - μ0) / (s/√n) ≥ -tn-1,α}
+> Do đó Rc, hay A(μ0) sẽ là {**x**: (x̄ - μ0) / (s/√n) ≥ -tn-1,α}
 >
 >
 >
@@ -1434,27 +1436,27 @@
 >
 >
 >
-> Mà **x** ∈ A(μ0) ⇔ (xbar - μ0) / (s/√n) ≥ -tn-1,α
+> Mà **x** ∈ A(μ0) ⇔ (x̄ - μ0) / (s/√n) ≥ -tn-1,α
 >
 >
 >
-> hay **x** ∈ A(μ) ⇔ (xbar - μ) / (s/√n) ≥ -tn-1,α
+> hay **x** ∈ A(μ) ⇔ (x̄ - μ) / (s/√n) ≥ -tn-1,α
 >
 >
 >
-> = {μ: (xbar - μ) / (s/√n) ≥ -tn-1,α}
+> = {μ: (x̄ - μ) / (s/√n) ≥ -tn-1,α}
 >
 >
 >
-> = {μ: (xbar - μ)  ≥ -(tn-1,α)(s/√n)}
+> = {μ: (x̄ - μ)  ≥ -(tn-1,α)(s/√n)}
 >
 >
 >
-> = {μ: (xbar + (tn-1,α)(s/√n)  ≥ μ}
+> = {μ: (x̄ + (tn-1,α)(s/√n)  ≥ μ}
 >
 >
 >
-> = {μ: μ ≤ (xbar + (tn-1,α)(s/√n)}
+> = {μ: μ ≤ (x̄ + (tn-1,α)(s/√n)}
 >
 >
 >
@@ -2385,7 +2387,7 @@
 >
 > Lấy ví dụ như trong công thức pdf của T ~ expo(λ), ta sẽ thấy nó có dính
 > đến t/λ, và hóa ra T/λ là pivot thật (đương nhiên dẫn tới αT/λ cũng vậy) Hoặc
-> như trong pdf của normal. ta thấy có (xbar - μ)/σ để rồi quả thật Xbar - μ / σ
+> như trong pdf của normal. ta thấy có (x̄ - μ)/σ để rồi quả thật Xbar - μ / σ
 > cũng là pivot. Làm rõ chỗ này chút xíu:
 >
 >
@@ -2395,19 +2397,19 @@
 >
 >
 >
-> → pdf fXbar(xbar) = (1/√2π(σ²/n)) exp[-(xbar-μ)^2/2(σ²/n)]
+> → pdf fXbar(x̄) = (1/√2π(σ²/n)) exp[-(x̄-μ)^2/2(σ²/n)]
 >
 >
 >
-> = (1/√2π(σ²/n)) exp[-(n/2)(xbar-μ)^2/σ²]
+> = (1/√2π(σ²/n)) exp[-(n/2)(x̄-μ)^2/σ²]
 >
 >
 >
-> = (1/√2π(σ²/n)) exp{-(n/2)[(xbar-μ)/σ]^2}
+> = (1/√2π(σ²/n)) exp{-(n/2)[(x̄-μ)/σ]^2}
 >
 >
 >
-> ta sẽ thấy trong đó xuất hiện (xbar - μ) / σ và quả thật nó chính là pivol
+> ta sẽ thấy trong đó xuất hiện (x̄ - μ) / σ và quả thật nó chính là pivol
 >
 >
 >
@@ -2718,7 +2720,7 @@
 >
 >
 >
-> Khi đó, A(μ0) = {x: a ≤ (xbar - μ) / (σ/√n) ≤ b } sẽ là level α acceptance
+> Khi đó, A(μ0) = {x: a ≤ (x̄ - μ) / (σ/√n) ≤ b } sẽ là level α acceptance
 > region của bài toán testing H0: μ = μ0
 >
 >
@@ -2731,7 +2733,7 @@
 >
 >
 >
-> = {μ: xbar - aσ/√n ≤ μ ≤ Xbar - bσ/√n}
+> = {μ: x̄ - aσ/√n ≤ μ ≤ Xbar - bσ/√n}
 >
 >
 >
@@ -2808,7 +2810,7 @@
 >
 >
 >
-> ⇨ confidence interval: {μ: xbar - z_α/2 σ/√n ≤ μ ≤ xbar + z_α/2 σ/√n}
+> ⇨ confidence interval: {μ: x̄ - z_α/2 σ/√n ≤ μ ≤ x̄ + z_α/2 σ/√n}
 >
 >
 >
@@ -2820,7 +2822,7 @@
 >
 >
 >
-> ⇨ confidence interval: {μ: xbar - tn-1_α/2 s/√n ≤ μ ≤ xbar + tn-1_α/2 s/√n}
+> ⇨ confidence interval: {μ: x̄ - tn-1_α/2 s/√n ≤ μ ≤ x̄ + tn-1_α/2 s/√n}
 
 **🔗 See also:** [Tính chất Trung bình & Phương sai mẫu](./53_sampling_from_the_normal_distribution.md#node-aytwme7)
 
@@ -5255,8 +5257,8 @@
 >
 >
 > Cho X1,...Xn là iid n(θ, σ²) và θ là prior pdf n(μ, τ²) với μ, σ, τ đều đã biết.
-> Gs nhắc lại trong ví dụ 7.2.16 ta đã có kết quả: π(θ|xbar) ~ n(δB(xbar),
-> Var(θ|xbar) với δB(xbar) và Var(θ|xbar) có công thức như vậy.
+> Gs nhắc lại trong ví dụ 7.2.16 ta đã có kết quả: π(θ|x̄) ~ n(δB(x̄),
+> Var(θ|x̄) với δB(x̄) và Var(θ|x̄) có công thức như vậy.
 >
 >
 >
@@ -5268,7 +5270,7 @@
 > mean của posterior distribution của θ, tức π(θ|**x**), và còn nhớ, estimator là
 > function của random sample, và với Bayes estimator ta kí hiệu với chữ B:
 > δB(**X**) (vs MLE: δ_mle(**X**)) mà function của **X** hay của Xbar thì cơ
-> bản là như nhau, nên trong sách ở đây ghi là δB(xbar)
+> bản là như nhau, nên trong sách ở đây ghi là δB(x̄)
 >
 >
 >
@@ -5315,24 +5317,24 @@
 >
 >
 >
-> (hay ghi như trong sách normal(δB(xbar), Var(θ|xbar) cũng được (vì
-> một function của xbar thì cũng là function của **x** thôi)
+> (hay ghi như trong sách normal(δB(x̄), Var(θ|x̄) cũng được (vì
+> một function của x̄ thì cũng là function của **x** thôi)
 >
 >
 >
-> Và như θ theo posterior distribution ~ normal(δB(xbar), Var(θ|xbar))
+> Và như θ theo posterior distribution ~ normal(δB(x̄), Var(θ|x̄))
 >
 >
 >
 > Từ đó theo location scale theorem, thì vì normal là một location scale family
 > các pdf, với location chính là mean, scale chính là standard deviation và θ 
-> thuộc thành viên ứng với location δB(xbar), scale là √Var(θ|xbar). Nên 
-> [θ - δB(xbar)] / √Var(θ|xbar) thì chính là thành viên chuẩn của family, location
+> thuộc thành viên ứng với location δB(x̄), scale là √Var(θ|x̄). Nên 
+> [θ - δB(x̄)] / √Var(θ|x̄) thì chính là thành viên chuẩn của family, location
 > 0 scale 1, tức là, và do đó, với việc đang xét normal. thì:
 >
 >
 >
-> [θ - δB(xbar)] / √Var(θ|xbar) ~ normal(0,1)
+> [θ - δB(x̄)] / √Var(θ|x̄) ~ normal(0,1)
 
 **🔗 See also:** [Ước lượng Bayes phân phối chuẩn](./72_method_of_finding_estimators.md#node-5ldrh78)
 
@@ -5366,15 +5368,15 @@
 >
 >
 >
-> ⇔ θL - δB(xbar) ≤ θ(s) - δB(xbar) ≤ θU - δB(xbar)
+> ⇔ θL - δB(x̄) ≤ θ(s) - δB(x̄) ≤ θU - δB(x̄)
 >
 >
 >
-> ⇔ [θL - δB(xbar)] / √Var(θ|xbar) ≤ [θ(s) - δB(xbar)] / √Var(θ|xbar) ≤ [θU - δB(xbar)] / √Var(θ|xbar)
+> ⇔ [θL - δB(x̄)] / √Var(θ|x̄) ≤ [θ(s) - δB(x̄)] / √Var(θ|x̄) ≤ [θU - δB(x̄)] / √Var(θ|x̄)
 >
 >
 >
-> ⇔ [θL - δB(xbar)] / √Var(θ|xbar) ≤ Z(s) ~ normal(0,1) ≤ [θU - δB(xbar)] / √Var(θ|xbar)
+> ⇔ [θL - δB(x̄)] / √Var(θ|x̄) ≤ Z(s) ~ normal(0,1) ≤ [θU - δB(x̄)] / √Var(θ|x̄)
 >
 >
 >
@@ -5382,15 +5384,15 @@
 >
 >
 >
-> = P({s ∈ Ω: [θL - δB(xbar)] / √Var(θ|xbar) ≤ Z(s) ~ normal(0,1) ≤ [θU - δB(xbar)] / √Var(θ|xbar)})
+> = P({s ∈ Ω: [θL - δB(x̄)] / √Var(θ|x̄) ≤ Z(s) ~ normal(0,1) ≤ [θU - δB(x̄)] / √Var(θ|x̄)})
 >
 >
 >
-> = P([θL - δB(xbar)] / √Var(θ|xbar) ≤ Z ≤ [θU - δB(xbar)] / √Var(θ|xbar))
+> = P([θL - δB(x̄)] / √Var(θ|x̄) ≤ Z ≤ [θU - δB(x̄)] / √Var(θ|x̄))
 >
 >
 >
-> = FZ([θU - δB(xbar)] / √Var(θ|xbar)) - FZ([θL - δB(xbar)] / √Var(θ|xbar))
+> = FZ([θU - δB(x̄)] / √Var(θ|x̄)) - FZ([θL - δB(x̄)] / √Var(θ|x̄))
 >
 >
 >
@@ -5398,35 +5400,35 @@
 >
 >
 >
-> = FZ([θU - δB(xbar)] / √Var(θ|xbar)) - FZ([θL - δB(xbar)] / √Var(θ|xbar)) = 1-α
+> = FZ([θU - δB(x̄)] / √Var(θ|x̄)) - FZ([θL - δB(x̄)] / √Var(θ|x̄)) = 1-α
 >
 >
 >
-> Chọn [θU - δB(xbar)] / √Var(θ|xbar) sao cho P(Z ≥ [θL - δB(xbar)] / √Var(θ|xbar)) = α/2
+> Chọn [θU - δB(x̄)] / √Var(θ|x̄) sao cho P(Z ≥ [θL - δB(x̄)] / √Var(θ|x̄)) = α/2
 >
 >
 >
-> ⇨ [θU - δB(xbar)] / √Var(θ|xbar) = z_α/2
+> ⇨ [θU - δB(x̄)] / √Var(θ|x̄) = z_α/2
 >
 >
 >
-> ⇨ θU = δB(xbar) + z_α/2 Var(θ|xbar)
+> ⇨ θU = δB(x̄) + z_α/2 Var(θ|x̄)
 >
 >
 >
-> Chọn [θL - δB(xbar)] / √Var(θ|xbar) sao cho P(Z ≤ [θL - δB(xbar)] / √Var(θ|xbar)) = α/2
+> Chọn [θL - δB(x̄)] / √Var(θ|x̄) sao cho P(Z ≤ [θL - δB(x̄)] / √Var(θ|x̄)) = α/2
 >
 >
 >
-> ⇔ 1 - P(Z > [θL - δB(xbar)] / √Var(θ|xbar)) = α/2
+> ⇔ 1 - P(Z > [θL - δB(x̄)] / √Var(θ|x̄)) = α/2
 >
 >
 >
-> ⇔ 1 - α/2 = P(Z > [θL - δB(xbar)] / √Var(θ|xbar))
+> ⇔ 1 - α/2 = P(Z > [θL - δB(x̄)] / √Var(θ|x̄))
 >
 >
 >
-> Và như vậy [θL - δB(xbar)] / √Var(θ|xbar) = z_1-α/2
+> Và như vậy [θL - δB(x̄)] / √Var(θ|x̄) = z_1-α/2
 >
 >
 >
@@ -5459,19 +5461,19 @@
 >
 >
 >
-> ⇨ [θL - δB(xbar)] / √Var(θ|xbar) = -z_α/2
+> ⇨ [θL - δB(x̄)] / √Var(θ|x̄) = -z_α/2
 >
 >
 >
-> ⇨ θL =  δB(xbar) - z_α/2√Var(θ|xbar)
+> ⇨ θL =  δB(x̄) - z_α/2√Var(θ|x̄)
 >
 >
 >
-> khi đó P([θL - δB(xbar)] / √Var(θ|xbar) ≤ Z ≤ [θU - δB(xbar)] / √Var(θ|xbar)) = 1 - α/2 - α/2 = 1-α
+> khi đó P([θL - δB(x̄)] / √Var(θ|x̄) ≤ Z ≤ [θU - δB(x̄)] / √Var(θ|x̄)) = 1 - α/2 - α/2 = 1-α
 >
 >
 >
-> Vậy 1-α credible interval A cần tìm chính là [δB(xbar) - z_α/2√Var(θ|xbar), δB(xbar) + z_α/2 √Var(θ|xbar)]
+> Vậy 1-α credible interval A cần tìm chính là [δB(x̄) - z_α/2√Var(θ|x̄), δB(x̄) + z_α/2 √Var(θ|x̄)]
 
 <br>
 
@@ -5486,7 +5488,7 @@
 >
 >
 >
-> [δB(xbar) - z_α/2√Var(θ|xbar), δB(xbar) + z_α/2 √Var(θ|xbar)]
+> [δB(x̄) - z_α/2√Var(θ|x̄), δB(x̄) + z_α/2 √Var(θ|x̄)]
 >
 >
 >
@@ -5507,10 +5509,10 @@
 >
 >
 >
-> Thế thì note trước ta đã có [δB(xbar) - z_α/2√Var(θ|xbar), δB(xbar) + z_α/2
-> √Var(θ|xbar)] là một 1-α credible set, mang ý nghĩa là khi coi θ như con chim
+> Thế thì note trước ta đã có [δB(x̄) - z_α/2√Var(θ|x̄), δB(x̄) + z_α/2
+> √Var(θ|x̄)] là một 1-α credible set, mang ý nghĩa là khi coi θ như con chim
 > bay lượn (random variable), thì dù **X** có observed bằng bao nhiêu (để có
-> **x**, và xbar) thì xác suất nó đậu vào khoảng này luôn là 1-α.
+> **x**, và x̄) thì xác suất nó đậu vào khoảng này luôn là 1-α.
 >
 >
 >
@@ -5523,7 +5525,7 @@
 >
 >
 >
-> (chú ý, lúc này xbar phải ghi là Xbar)
+> (chú ý, lúc này x̄ phải ghi là Xbar)
 >
 >
 >
@@ -5781,7 +5783,7 @@
 >
 >
 >
-> Rồi, ta sẽ xét một 1-α confidence interval cho θ: {θ: |θ - xbar| ≤ z_α/2 σ/√n}
+> Rồi, ta sẽ xét một 1-α confidence interval cho θ: {θ: |θ - x̄| ≤ z_α/2 σ/√n}
 >
 >
 >
@@ -5821,40 +5823,40 @@
 >
 >
 >
-> Giờ ta sẽ xét credible interval: {θ: |θ - xbar| ≤ z_α/2 σ/√n} và xem thử credible probability, dĩ nhiên lúc này ta sẽ coi θ như random
-> variable có posterior distribution là normal(δB(xbar), Var(θ|xbar)):
+> Giờ ta sẽ xét credible interval: {θ: |θ - x̄| ≤ z_α/2 σ/√n} và xem thử credible probability, dĩ nhiên lúc này ta sẽ coi θ như random
+> variable có posterior distribution là normal(δB(x̄), Var(θ|x̄)):
 >
 >
 >
-> P_xbar(|θ - xbar| ≤ z_α/2 σ/√n)
+> P_x̄(|θ - x̄| ≤ z_α/2 σ/√n)
 >
 >
 >
-> = P_xbar(-z_α/2 σ/√n ≤ xbar - θ ≤ z_α/2 σ/√n)
+> = P_x̄(-z_α/2 σ/√n ≤ x̄ - θ ≤ z_α/2 σ/√n)
 >
 >
 >
-> = P_xbar(xbar - z_α/2 σ/√n ≤ θ ≤ xbar + z_α/2 σ/√n)
+> = P_x̄(x̄ - z_α/2 σ/√n ≤ θ ≤ x̄ + z_α/2 σ/√n)
 >
 >
 >
-> Với θ ~ normal(δB(xbar), Var(θ|xbar))
+> Với θ ~ normal(δB(x̄), Var(θ|x̄))
 >
 >
 >
-> ⇨ [θ - δB(xbar)] / √Var(θ|xbar) ~ normal(0,10
+> ⇨ [θ - δB(x̄)] / √Var(θ|x̄) ~ normal(0,10
 >
 >
 >
-> P_xbar(xbar - z_α/2 σ/√n ≤ θ ≤ xbar + z_α/2 σ/√n)
+> P_x̄(x̄ - z_α/2 σ/√n ≤ θ ≤ x̄ + z_α/2 σ/√n)
 >
 >
 >
-> = P_xbar([xbar - z_α/2 σ/√n] - δB(xbar)] / √Var(θ|xbar) ≤ θ - δB(xbar)] / √Var(θ|xbar) ≤ [xbar + z_α/2 σ/√n] - δB(xbar)] / √Var(θ|xbar))
+> = P_x̄([x̄ - z_α/2 σ/√n] - δB(x̄)] / √Var(θ|x̄) ≤ θ - δB(x̄)] / √Var(θ|x̄) ≤ [x̄ + z_α/2 σ/√n] - δB(x̄)] / √Var(θ|x̄))
 >
 >
 >
-> = P_xbar([xbar - z_α/2 σ/√n] - δB(xbar)] / Var(θ|xbar) ≤ Z ≤ [xbar + z_α/2 σ/√n] - δB(xbar)] / Var(θ|xbar))
+> = P_x̄([x̄ - z_α/2 σ/√n] - δB(x̄)] / Var(θ|x̄) ≤ Z ≤ [x̄ + z_α/2 σ/√n] - δB(x̄)] / Var(θ|x̄))
 >
 >
 >
