@@ -29,10 +29,10 @@
 > chap 8 Giống chap 7 ở chỗ thay vì đưa ra statement là một giá trị nào đó
 > của θ (điều này cũng giống đưa ra statement là θ nằm trong một tập
 > singleton), thì ta sẽ đưa ra statement là θ nằm trong một tập C nào đó. Và C
-> lại là tập phụ thuộc **x**: C(**x**). Dễ thấy cũng khiến phương pháp này
+> lại là tập phụ thuộc 𝐱: C(𝐱). Dễ thấy cũng khiến phương pháp này
 > giống với chap 8, vì statement cũng là nói θ nằm trong tập Có điều mình có
-> thể nhận thấy, cái tập C(**x**) khác với Θ0 hay Θ0c, vốn dĩ đã được define
-> từ trước, còn C(**x**) là tập mà ta phải tìm.
+> thể nhận thấy, cái tập C(𝐱) khác với Θ0 hay Θ0c, vốn dĩ đã được define
+> từ trước, còn C(𝐱) là tập mà ta phải tìm.
 >
 >
 >
@@ -50,21 +50,21 @@
 > [!NOTE]
 > Ta sẽ bắt đầu với định nghĩa của INTERVAL ESTIMATION mà tác giả nói cũng
 > mơ hồ y như định nghĩa của point estimation Còn nhớ, theo định nghĩa, point
-> estimation là ANY FUNCTION OF RANDOM SAMPLE W(**X**). Định nghĩa
+> estimation là ANY FUNCTION OF RANDOM SAMPLE W(𝐗). Định nghĩa
 > này  rất mơ hồ, và nó không giúp ích gì cho việc đi tìm một point estimator tốt
 > cả. Vậy thì ở đây cũng tương tự, interval estimation của một real value θ, được
-> định nghĩa chỉ là một **CẶP FUNCTION CỦA RANDOM SAMPLE**: [L(**X**),
-> U(**X**)] sao cho L(**x**) ≤ U(**x**) với mọi **x** ∈ range **X**.
+> định nghĩa chỉ là một **CẶP FUNCTION CỦA RANDOM SAMPLE**: [L(𝐗),
+> U(𝐗)] sao cho L(𝐱) ≤ U(𝐱) với mọi 𝐱 ∈ range 𝐗.
 >
 >
 >
-> Và khi đó, với một observed value **X** = **x**, thì một INTERVAL ESTIMATE
-> sẽ  được xác lập: [L(**x**), U(**x**)]. (có nghĩa là, đó chính là lúc ta đưa ra một
-> inference:  θ ∈ C(**x**) = [L(**x**), U(**x**)])
+> Và khi đó, với một observed value 𝐗 = 𝐱, thì một INTERVAL ESTIMATE
+> sẽ  được xác lập: [L(𝐱), U(𝐱)]. (có nghĩa là, đó chính là lúc ta đưa ra một
+> inference:  θ ∈ C(𝐱) = [L(𝐱), U(𝐱)])
 >
 >
 >
-> Và [L(**X**), U(**X**)] (được gọi là một random interval - interval tạo bởi hai
+> Và [L(𝐗), U(𝐗)] (được gọi là một random interval - interval tạo bởi hai
 > random variable) sẽ chính là một INTERVAL ESTIMATOR
 
 <br>
@@ -77,19 +77,19 @@
 
 > [!NOTE]
 > Đại khái là ta sẽ theo quy ước (convention) lâu nay, là dùng chữ hoa
-> [L(**X**), U(**X**)] để chỉ một interval estimator (giống như W(**X**) hay δ(**X**) là point 
-> estimator) và [L(**x**), U(**x**)] là interval estimate, tức là giá trị cụ thể của cái 
-> interval khi quan sát thấy **X** = **x**.
+> [L(𝐗), U(𝐗)] để chỉ một interval estimator (giống như W(𝐗) hay δ(𝐗) là point 
+> estimator) và [L(𝐱), U(𝐱)] là interval estimate, tức là giá trị cụ thể của cái 
+> interval khi quan sát thấy 𝐗 = 𝐱.
 >
 >
 >
 > Ngoài ra một điểm cũng dễ hiểu, là dù phần lớn thời gian ta sẽ deal với
 > infinite interval, nhưng có khi ta cũng muốn one-sided interval estimate khi
-> L(**x**) = -inf hoặc U(**x**) = +inf
+> L(𝐱) = -inf hoặc U(𝐱) = +inf
 >
 >
 >
-> Khi đó inference statement sẽ là "θ ≤ U(**x**)" hoặc "θ ≥ L(**x**)"
+> Khi đó inference statement sẽ là "θ ≤ U(𝐱)" hoặc "θ ≥ L(𝐱)"
 >
 >
 >
@@ -104,12 +104,12 @@
 <p align="center"><kbd><img src="assets/r5g1r6a4vlr.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Một ví dụ interval estimator là [Xbar-1, Xbar+1], tức L(**X**) = Xbar-1,
-> U(**X**) = Xbar+1
+> Một ví dụ interval estimator là [X̄-1, X̄+1], tức L(𝐗) = X̄-1,
+> U(𝐗) = X̄+1
 >
 >
 >
-> Tác giả mới nói thế này: Với point estimator, ta dùng Xbar để estimate
+> Tác giả mới nói thế này: Với point estimator, ta dùng X̄ để estimate
 > cho μ. Mà bây giờ, ta lại estimate μ bởi một khoảng. Mà một khoảng
 > thì dĩ nhiên là không thể hiện sự chính xác bằng một điểm. Vậy thì có
 > LỢI LỘC GÌ KHI LÀM VẬY?
@@ -121,8 +121,8 @@
 >
 >
 >
-> Việc này dễ hiểu, nếu đưa ra dự đoán μ bằng đúng Xbar = 10 chẳng hạn,
-> thì mình sẽ không thể tự tin bằng việcv đưa ra dự đoán Xbar nằm đâu đó 
+> Việc này dễ hiểu, nếu đưa ra dự đoán μ bằng đúng X̄ = 10 chẳng hạn,
+> thì mình sẽ không thể tự tin bằng việcv đưa ra dự đoán X̄ nằm đâu đó 
 > từ 9 đến 11.
 
 <br>
@@ -134,33 +134,33 @@
 <p align="center"><kbd><img src="assets/13trkyqb1n7.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đây là một ý rất quan trọng: Khi ta estimate μ bởi Xbar, thì xác suất mà
-> Xbar bằng đúng μ chỉ là 0. Vì sao, vì ta đã biết với biến liên tục, thì xác
-> suất nó bằng một giá trị cụ thể = 0, chú ý rv ở đây là Xbar nhé, ko phải
+> Đây là một ý rất quan trọng: Khi ta estimate μ bởi X̄, thì xác suất mà
+> X̄ bằng đúng μ chỉ là 0. Vì sao, vì ta đã biết với biến liên tục, thì xác
+> suất nó bằng một giá trị cụ thể = 0, chú ý rv ở đây là X̄ nhé, ko phải
 > là μ, vì nếu không nói cụ thể thì ta hiểu mình vẫn đang xét bối cảnh là
 > theo trường phái cổ điển - frequentist, trong đó coi θ (hay μ) là fixed but
 > unknown
 >
 >
 >
-> Còn với nhận định "μ ∈ [Xbar-1, Xbar+1]" thì xác suất nhận định này
+> Còn với nhận định "μ ∈ [X̄-1, X̄+1]" thì xác suất nhận định này
 > đúng sẽ là con số dương.
 >
 >
 >
-> Vì sao dương? P(Xbar-1 ≤ μ ≤ Xbar+1)
+> Vì sao dương? P(X̄-1 ≤ μ ≤ X̄+1)
 >
 >
 >
-> = P(Xbar-1 ≤ μ, μ ≤ Xbar+1)
+> = P(X̄-1 ≤ μ, μ ≤ X̄+1)
 >
 >
 >
-> = P(μ-1≤ Xbar ≤ μ+1)
+> = P(μ-1≤ X̄ ≤ μ+1)
 >
 >
 >
-> = ∫μ-1:μ+1 f(x̄)dx̄ với f(x̄) là pdf của Xbar luôn không âm theo
+> = ∫μ-1:μ+1 f(x̄)dx̄ với f(x̄) là pdf của X̄ luôn không âm theo
 > axiom 1, và tích phân này là diện tích dưới đường cong f(x̄) từ μ-1
 > tới μ+1, nên sẽ là giá trị dương.
 >
@@ -170,19 +170,19 @@
 >
 >
 >
-> P(Xbar-1 ≤ μ ≤ Xbar+1) = P(Xbar-1 ≤ μ, μ ≤ Xbar+1)
+> P(X̄-1 ≤ μ ≤ X̄+1) = P(X̄-1 ≤ μ, μ ≤ X̄+1)
 >
 >
 >
-> = P(Xbar-μ  ≤ 1, -1 ≤ Xbar-μ )
+> = P(X̄-μ  ≤ 1, -1 ≤ X̄-μ )
 >
 >
 >
-> = P(-1 ≤ Xbar-μ ≤ 1)
+> = P(-1 ≤ X̄-μ ≤ 1)
 >
 >
 >
-> = P(-1 / (σ/√n) ≤ (Xbar-μ) / (σ/√n) ≤ 1 / (σ/√n))
+> = P(-1 / (σ/√n) ≤ (X̄-μ) / (σ/√n) ≤ 1 / (σ/√n))
 >
 >
 >
@@ -194,8 +194,8 @@
 >
 >
 >
-> (Xbar ~ normal(μ, σ²/n), là location scale family location μ, scale σ/√n
-> ⇨ Z = (Xbar - μ) / (σ/√n) ~ standard member và → Z ~ normal(0,1)
+> (X̄ ~ normal(μ, σ²/n), là location scale family location μ, scale σ/√n
+> ⇨ Z = (X̄ - μ) / (σ/√n) ~ standard member và → Z ~ normal(0,1)
 >
 >
 >
@@ -229,21 +229,21 @@
 >
 > Đầu tiên, là cái gọi là **COVERAGE PROBABILITY**, tạm dịch là xác suất
 > BAO PHỦ, được định nghĩa là một hàm theo θ mang giá trị là xác suất mà cái
-> interval estimator [L(**X**), U(**X**)]có thể chứa θ ở trỏng: P_θ(L(**X**) ≤ θ ≤
-> U(**X**)). Tức là, mình hiểu là, nó kiểu như là một thuộc tính của một interval
+> interval estimator [L(𝐗), U(𝐗)]có thể chứa θ ở trỏng: P_θ(L(𝐗) ≤ θ ≤
+> U(𝐗)). Tức là, mình hiểu là, nó kiểu như là một thuộc tính của một interval
 > estimator, giống như power function, là một thuộc tính, của một test, từ đó
 > giúp so sánh các interval estimator với nhau xem thằng nào hơn giống như
 > power giúp so sánh các test vậy
 >
 >
 >
-> nên mình đoán là có thể ghi là hàm converate probability: c_θ([L(**X**),
-> U(**X**)] = P_θ(L(**X**) ≤ θ ≤ U(**X**)) hoặc P(L(**X**) ≤ θ ≤ U(**X**)|θ)
+> nên mình đoán là có thể ghi là hàm converate probability: c_θ([L(𝐗),
+> U(𝐗)] = P_θ(L(𝐗) ≤ θ ≤ U(𝐗)) hoặc P(L(𝐗) ≤ θ ≤ U(𝐗)|θ)
 >
 >
 >
 > Định nghĩa thứ hai là **CONFIDENCE COEFFICIENT**, được định nghiã là
-> inf_θ P_θ[L(**X**) ≤ θ ≤ U(**X**)], tức  là mức coverage probability thấp nhất
+> inf_θ P_θ[L(𝐗) ≤ θ ≤ U(𝐗)], tức  là mức coverage probability thấp nhất
 > khi xét mọi θ ∈ Θ. Dĩ nhiên với cái infimum thì cái này ko còn phụ thuộc θ
 > nữa.
 
@@ -257,12 +257,12 @@
 
 > [!NOTE]
 > Vài điểm gs lưu ý ta, cái đầu tiên thì mình đã nhận ra, khi nói đến xác suất
-> θ ∈ [L(**X**), U(**X**)] thì biến ngẫu nhiên ở đâu là L(**X**) và U(**X**) chứ
+> θ ∈ [L(𝐗), U(𝐗)] thì biến ngẫu nhiên ở đâu là L(𝐗) và U(𝐗) chứ
 > ko phải θ.
 >
 >
 >
-> nên đây phải hiểu là xác xuất của joint event P(L(**X**) ≤ θ, U(**X**) ≥ θ)
+> nên đây phải hiểu là xác xuất của joint event P(L(𝐗) ≤ θ, U(𝐗) ≥ θ)
 >
 >
 >
@@ -299,7 +299,7 @@
 >
 >
 > Theo định nghĩa vừa mới học, confidence probability của một interval estimator
-> [L(**X**), U(**X**)] là hàm theo θ, define bởi P_θ(θ ∈ [L(**X**), U(**X**)])
+> [L(𝐗), U(𝐗)] là hàm theo θ, define bởi P_θ(θ ∈ [L(𝐗), U(𝐗)])
 >
 >
 >
