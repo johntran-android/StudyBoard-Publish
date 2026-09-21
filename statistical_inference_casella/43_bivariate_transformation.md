@@ -1,6 +1,6 @@
 # 4.3 Bivariate Transformation
 
-📊 **Progress:** `14` Notes | `24` Screenshots
+📊 **Progress:** `14` Notes | `24` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-mnzjqow"></a>
@@ -993,7 +993,7 @@
 <p align="center"><kbd><img src="assets/bckegcokw7.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua ví dụ này, **X ~ beta(α, β)**. **Y ~ beta (α + β, γ)** và **độc lập**
+> Qua ví dụ này, **X \~ beta(α, β)**. **Y \~ beta (α + β, γ)** và **độc lập**
 >
 >
 >
@@ -1001,8 +1001,7 @@
 >
 >
 >
-> với **0 < x < 1**. Again, giờ ta đã hiểu hơn define x ∈ (0, 1) chính là nói về
-> **support set**, nơi mà **f(x) sẽ luôn dương** (ngoài khoảng này thì pdf = 0)
+> với **0 &lt; x &lt; 1**. Again, giờ ta đã hiểu hơn define x ∈ (0, 1) chính là nói về **support set**, nơi mà **f(x) sẽ luôn dương** (ngoài khoảng này thì pdf = 0)
 >
 >
 >
@@ -1010,12 +1009,11 @@
 >
 >
 >
-> Thế thì vì fX(x) chỉ dương khi x ∈ (0,1), fY(y) chỉ dương khi y ∈ (0,1) nên
-> đương nhiên fX(x)fY(y) = fX,Y(x, y) chỉ dương khi 0 < x,y < 1
+> Thế thì vì fX(x) chỉ dương khi x ∈ (0,1), fY(y) chỉ dương khi y ∈ (0,1) nên đương nhiên fX(x)fY(y) = fX,Y(x, y) chỉ dương khi 0 &lt; x,y &lt; 1
 >
 >
 >
-> Tức 𝒜 = x, y ∈  {(x,y): 0<x<1, 0<y<1} (đó là hình vuông trong R^2)
+> Tức 𝒜 = x, y ∈ {(x,y): 0&lt;x&lt;1, 0&lt;y&lt;1} (đó là hình vuông trong R^2)
 >
 >
 >
@@ -1027,7 +1025,7 @@
 >
 >
 >
-> và **mapping giữa 𝒜 và ℬ  có one-to-one ko**?
+> và **mapping giữa 𝒜 và ℬ có one-to-one ko**?
 >
 >
 >
@@ -1043,31 +1041,27 @@
 >
 >
 >
-> Chỗ này nhắc lại, nên chú ý rằng, nói x ∈ (0,1) là đang nói support set của X nơi
-> mà fX(x) > 0, tương tự y ∈ (0,1) cũng vậy.
+> Chỗ này nhắc lại, nên chú ý rằng, nói x ∈ (0,1) là đang nói support set của X nơi mà fX(x) &gt; 0, tương tự y ∈ (0,1) cũng vậy.
 >
 >
 >
-> Còn đang lập luận để cho ra ví dụ như v ∈ (0,1)  u ∈ (0,v) **là đang xác định
-> tập ℬ, ảnh của 𝒜** = {g1(x,y), g2(x,y) với (x,y) ∈ 𝒜}
+> Còn đang lập luận để cho ra ví dụ như v ∈ (0,1) u ∈ (0,v) **là đang xác định tập ℬ, ảnh của 𝒜** = {g1(x,y), g2(x,y) với (x,y) ∈ 𝒜}
 >
 >
 >
-> (ℬ, là ảnh của 𝒜 và ta đã chứng minh trên đó joint pdf của U,V duơng,
-> tuy nhiên nó chỉ là tập con của support set U,V chứ chưa chắc là toàn bộ support
-> set)
+> (ℬ, là ảnh của 𝒜 và ta đã chứng minh trên đó joint pdf của U,V duơng, tuy nhiên nó chỉ là tập con của support set U,V chứ chưa chắc là toàn bộ support set)
 >
 >
 >
-> Vậy tập **ℬ là {(u,v)** ∈ **R^2: 0 < v < 1, 0 < u < v}**
+> Vậy tập **ℬ** là {(u,v) ∈ R^2: 0 &lt; v &lt; 1, 0 &lt; u &lt; v}
 >
 >
 >
-> Thế thì từ u = **g1**(x,y) = **xy**, v = **g2**(x,y) = **x**
+> Thế thì từ u = g1(x,y) = xy, v = g2(x,y) = x
 >
 >
 >
-> ⇨ x = **h1**(u, v) = **v**; u = vy ⇨ y = **h2**(u,v) = **u/v**
+> ⇨ x = h1(u, v) = v; u = vy ⇨ y = h2(u,v) = u/v
 >
 >
 >
@@ -1075,13 +1069,11 @@
 >
 >
 >
-> Nếu xét mapping bởi hàm g1(x,y) = xy, g2(x,y) =  x với (x,y) từ **toàn R^2 tới
-> ℬ** thì nó **KHONG PHẢI LÀ mapping 1-1** (tức là mapping giữa R^2 và
-> ℬ KHÔNG  PHẢI 1-1) vì điểm bất kì (0,y) nào cũng được map với (0,0)
+> Nếu xét mapping bởi hàm g1(x,y) = xy, g2(x,y) = x với (x,y) từ **toàn R^2 tới ℬ** thì nó **KHONG PHẢI LÀ mapping 1-1** (tức là mapping giữa R^2 và ℬ KHÔNG PHẢI 1-1) vì điểm bất kì (0,y) nào cũng được map với (0,0)
 >
 >
 >
-> nhưng vì **chỉ xét trong phạm vi tập A_curl**y là {0<x<1;0<y<1}
+> nhưng vì chỉ xét trong phạm vi tập 𝒜 là {0&lt;x&lt;1;0&lt;y&lt;1}
 >
 >
 >
@@ -1098,6 +1090,34 @@
 >
 >
 > = fX,Y(h1(u,v),h2(u,v)) |∂(x,y)/∂(u,v)|
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc bản chất của phương pháp đổi biến, đặc biệt là việc xác định tập ảnh ℬ và điều kiện hàm 1-1 trên tập xác định. Có một lỗi đánh máy nhỏ ở số mũ của hàm mật độ Beta và một cách hiểu chưa thật chuẩn xác về tập giá trị (support).
+>
+> **🟡 Minor issues**
+>
+> **1.** *"f(x) = Γ(α + β)/Γ(α) Γ(β) x^(α-1)(1-x)^β"*
+>
+> Lỗi gõ thiếu số mũ: công thức đúng của phân phối Beta là (1 - x)^(β - 1), thiếu '- 1'.
+>
+> **2.** *"(ℬ, là ảnh của 𝒜 và ta đã chứng minh trên đó joint pdf của U,V duơng, tuy nhiên nó chỉ là tập con của support set U,V chứ chưa chắc là toàn bộ support set)"*
+>
+> Thực chất ℬ chính là support set (giá trị mà tại đó pdf > 0) của (U, V). Vì ngoài 𝒜 thì f_{X,Y} = 0, nên ngoài ℬ thì f_{U,V} cũng bằng 0; ℬ không phải chỉ là tập con thực sự của support set.
+>
+> **3.** *"từ toàn R^2 tới ℬ thì nó KHONG PHẢI LÀ mapping 1-1... vì điểm bất kì (0,y) nào cũng được map với (0,0)"*
+>
+> Phát biểu chính xác là biến đổi từ R^2 vào R^2 (vì điểm (0,0) không thuộc ℬ, nên không thể nói là biến đổi từ R^2 tới ℬ).
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ lý do tại sao phép biến đổi chỉ cần thỏa mãn tính chất 1-1 trên tập support 𝒜 chứ không cần thiết phải 1-1 trên toàn bộ R^2.
+> - Lập luận tìm miền giá trị ℬ từ hệ phương trình ràng buộc rất mạch lạc và chính xác.
+> - Nắm đúng định thức Jacobian và công thức biến đổi biến ngẫu nhiên liên tục nhiều chiều.
+>
+> **💡 Deeper notes**
+> - Khi thay Jacobian vào công thức mật độ f_{U,V}, cần lưu ý lấy trị tuyệt đối |J| = |-1/v| = 1/v (vì v > 0 trên ℬ).
 
 <br>
 
