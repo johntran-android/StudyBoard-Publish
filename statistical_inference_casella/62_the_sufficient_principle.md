@@ -1,6 +1,6 @@
 # 6.2 The Sufficient Principle
 
-📊 **Progress:** `46` Notes | `59` Screenshots
+📊 **Progress:** `46` Notes | `59` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-yxj3s29"></a>
@@ -991,6 +991,29 @@
 >
 >
 > ⇨ sample mean là sufficient statistic của μ đv normal
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú rất tốt, tự khai triển chi tiết hằng đẳng thức triệt tiêu số hạng chéo và chủ động chứng minh phân phối của sample mean bằng hàm sinh mômen (MGF) thay vì chỉ thừa nhận.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"fX(x) = (1/2πσ²)^(-1/2) exp[-(x - μ)^2 / 2σ²]"*
+>
+> Nhầm lẫn dấu số mũ ở hằng số chuẩn hóa: phải là (2πσ²)^(-1/2) hoặc (1/(2πσ²))^(1/2), viết (1/2πσ²)^(-1/2) sẽ thành căn bậc hai của 2πσ² ở trên tử số.
+>
+> **2.** *"Do đó q(T(x)|μ) = như trong sách. Và tỉ số này rút gọn lại ko còn μ nữa."*
+>
+> Bỏ qua bước đặt tỉ số f(x|μ)/q(T(x)|μ) và triệt tiêu cụm exp(-n(x̄ - μ)²/(2σ²)) một cách tường minh, dù kết luận và hướng lập luận hoàn toàn chính xác.
+>
+>
+> **✓ Strengths**
+> - Tự khai triển chi tiết từng bước biến đổi đại số của tổng bình phương và chứng minh rõ ràng số hạng chéo triệt tiêu về 0.
+> - Chủ động dùng MGF để chứng minh phân phối của Xbar thay vì chỉ chép lại tính chất có sẵn trong sách.
+>
+> **💡 Deeper notes**
+> - Định lý 6.2.2 (tiêu chuẩn tỉ số p/q) yêu cầu tập giá trị mà q(T(x)|θ) > 0 phải bao hàm các điểm x mà f(x|θ) > 0; với phân phối chuẩn trên toàn trục số thực thì điều kiện này hiển nhiên thỏa mãn.
 
 **🔗 See also:** [Thống kê đủ và hoàn chỉnh Xbar](#node-st8akyc)
 
