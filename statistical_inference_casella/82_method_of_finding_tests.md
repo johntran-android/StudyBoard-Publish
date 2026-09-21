@@ -37,8 +37,8 @@
 > trong sách này, sau method of moment, và Bayes estimator. Thế thì, đầu tiên
 > ta phải nói về cái gọi là likelihood function.Còn nhớ, nó là hàm của θ, được
 > định nghĩa bởi / có giá trị tính bởi joint pdf của random sample tại observed
-> value **x** của **X**: L(θ|**x**) = f(**x**|θ)= nhờ iid = Πi=1:n f(xi|θ). Và ý
-> nghĩa của nó là: với giá trị quan sát thấy **X** = **x**. Thì L(θ|**x**) sẽ cho
+> value 𝐱 của 𝐗: L(θ|𝐱) = f(𝐱|θ)= nhờ iid = Πi=1:n f(xi|θ). Và ý
+> nghĩa của nó là: với giá trị quan sát thấy 𝐗 = 𝐱. Thì L(θ|𝐱) sẽ cho
 > biết độ hợp lí của giá trị θ (input)
 >
 >
@@ -47,17 +47,17 @@
 >
 >
 >
-> maximize over θ {L(θ|**X**)}, ta sẽ được một function không còn phụ thuộc θ
-> nữa, mà chỉ còn phụ thuộc **X**: Tức là,
+> maximize over θ {L(θ|𝐗)}, ta sẽ được một function không còn phụ thuộc θ
+> nữa, mà chỉ còn phụ thuộc 𝐗: Tức là,
 >
 >
 >
-> mle(**X**) = argmax_θ L(θ|**X**), đó chính là định nghĩa của mle.
+> mle(𝐗) = argmax_θ L(θ|𝐗), đó chính là định nghĩa của mle.
 >
 >
 >
 > Chú ý, estimator, theo định nghĩa chính thức, là any function of random
-> sample, thì mle(**X**) define ở trên cũng thỏa định nghĩa này.
+> sample, thì mle(𝐗) define ở trên cũng thỏa định nghĩa này.
 
 <br>
 
@@ -77,26 +77,26 @@
 >
 >
 >
-> λ(**x**) = sup_Θ0 L(θ, **x**) / sup_Θ L(θ, **x**)
+> λ(𝐱) = sup_Θ0 L(θ, 𝐱) / sup_Θ L(θ, 𝐱)
 >
 >
 >
 > Dừng lại xíu. Nhờ học qua EE364A Convex Optimization mà mình đã biết
 > suplemum: Tử số và mẫu số cơ bản là ta giải hai bài toán tối ưu. Tử số,  là
 > tìm trong subset Θ0 của parameter space Θ, để maximize likelihood
-> L(θ|**x**) và mẫu số thì tìm trong parameter space Θ để maximize
-> likelihood L(θ|**x**)
+> L(θ|𝐱) và mẫu số thì tìm trong parameter space Θ để maximize
+> likelihood L(θ|𝐱)
 >
 >
 >
-> Chú ý, dù phức tạp, thì sup_Θ0 L(θ, **x**) / sup_Θ L(θ, **x**) vẫn chỉ là một
-> function của **x**, chỉ phụ thuộc **x**, đúng định nghĩa của statistic, là
-> function của random sample **X**. (tức là, cái trên là nói về function, còn
+> Chú ý, dù phức tạp, thì sup_Θ0 L(θ, 𝐱) / sup_Θ L(θ, 𝐱) vẫn chỉ là một
+> function của 𝐱, chỉ phụ thuộc 𝐱, đúng định nghĩa của statistic, là
+> function của random sample 𝐗. (tức là, cái trên là nói về function, còn
 > muốn ghi kiểu này cũng  được:
 >
 >
 >
-> λ(**X**) = sup_Θ0 L(θ, **X**) / sup_Θ L(θ, **X**)
+> λ(𝐗) = sup_Θ0 L(θ, 𝐗) / sup_Θ L(θ, 𝐗)
 >
 >
 >
@@ -105,17 +105,17 @@
 >
 >
 > là **BẤT KÌ PHƯƠNG THỨC TEST NÀO MÀ CÓ REJECTION REGION
-> CÓ  DẠNG** {**x**: λ(**x**) < c} với c là số dương nào đó trong [0,1].
+> CÓ  DẠNG** {𝐱: λ(𝐱) < c} với c là số dương nào đó trong [0,1].
 >
 >
 >
 > Nhắc lại chút, ở phần giới thiệu mình đã biết định nghĩa của một test
 > (hypothesis) testing procedure: Đơn giản nó chỉ là một cái rule, một "
-> binary" function, nhận input là giá trị của random sample **x** và spit out
+> binary" function, nhận input là giá trị của random sample 𝐱 và spit out
 > một trong 2 gía trị H0 hoặc H1. Thì  ở đây ta thấy theo định nghĩa này, thì
 > LRT là cái function mà cách thức hoạt động sẽ dựa vào việc **SO SÁNH
 > LIKELIHOOD RATIO TEST STATISTIC VỚI MỘT NGƯỠNG c NÀO ĐÓ
-> TRONG [0,1]**, để rồi nếu λ(**x**) ≤ c → reject H0 và ngược lại.
+> TRONG [0,1]**, để rồi nếu λ(𝐱) ≤ c → reject H0 và ngược lại.
 
 **🔗 See also:** [Quan hệ T(x) và λ(x)](./83_methods_of_evaluating_test.md#node-oaiy187)
 
@@ -149,7 +149,7 @@
 >
 > Rồi, nhớ lại, H0 là gì, H0 là một trong hai giả thuyết, và nó nói rằng /
 > nhận định  rằng: "θ NẰM TRONG KHÔNG GIAN CON Θ0". Vậy thì dựa
-> trên việc thấy **x**, ta tìm trong Θ0 xem độ hợp lí cao nhất được bao
+> trên việc thấy 𝐱, ta tìm trong Θ0 xem độ hợp lí cao nhất được bao
 > nhiêu (chính là tử số).
 >
 >
@@ -181,7 +181,7 @@
 >
 >
 > Rồi, đoạn sau thì dễ hiểu thôi. Vì vừa nói ở trên, cái mẫu số, khi ta tìm
-> θ trong toàn parameter space để maximize L(θ|**x**) thì đó chính là mle,
+> θ trong toàn parameter space để maximize L(θ|𝐱) thì đó chính là mle,
 > tức là mẫu số chính là giá trị của hàm likelihood tại mle θ^. 
 >
 >
@@ -192,7 +192,7 @@
 >
 >
 >
-> Khi đó ta sẽ thấy λ(**x**), LRT có liên quan đến MLE là vậy
+> Khi đó ta sẽ thấy λ(𝐱), LRT có liên quan đến MLE là vậy
 
 <br>
 
@@ -223,7 +223,7 @@
 >
 >
 >
-> Thế thì, mục tiêu của ta là tìm cách dựa vào observed value **x**, để bác bỏ
+> Thế thì, mục tiêu của ta là tìm cách dựa vào observed value 𝐱, để bác bỏ
 > (reject) H0 hoặc (không thể reject H0 (cái này thằng Gemini nó góp ý mình).
 >
 >
@@ -234,7 +234,7 @@
 >
 > Vậy để làm điều này, ta sẽ xây dựng một quy trình kiểm tra giả thuyết
 > (hypothesis testing procedure), mà theo định nghĩa, nó chỉ giống như một
-> binary function, nhận đầu vào là **x**, và đầu ra là một trong hai giá trị để đại
+> binary function, nhận đầu vào là 𝐱, và đầu ra là một trong hai giá trị để đại
 > diện cho H0 hoặc H1.
 >
 >
@@ -244,7 +244,7 @@
 >
 >
 >
-> Ý tưởng của nó là: Giả sử ta quan sát được giá trị của sample **X** = **x**.
+> Ý tưởng của nó là: Giả sử ta quan sát được giá trị của sample 𝐗 = 𝐱.
 > Thì, likelihood function tại mle sẽ cho ta độ hợp lí lớn nhất có thể khi tìm kiếm
 > trong toàn bộ param space. Thế thì, nếu như độ hợp lí lớn nhất có thể khi tìm
 > kiếm trong subspace Θ0 mà chỉ bằng một phần rất nhỏ của độ hợp lí lớn
@@ -257,15 +257,15 @@
 >
 >
 >
-> λ(**x**) ≤ c → reject H0
+> λ(𝐱) ≤ c → reject H0
 >
 >
 >
-> với λ(**x**) = sup_Θ0 L(θ, **x**) / sup_Θ L(θ, **x**), gọi là **likehood ratio test statistic**
+> với λ(𝐱) = sup_Θ0 L(θ, 𝐱) / sup_Θ L(θ, 𝐱), gọi là **likehood ratio test statistic**
 >
 >
 >
-> = L(θ^_0 | **x**) / L(θ^ | x) với θ^ và θ^_0 là mle thật và mle khi coi parameter
+> = L(θ^_0 | 𝐱) / L(θ^ | x) với θ^ và θ^_0 là mle thật và mle khi coi parameter
 > space là Θ0.
 >
 >
@@ -278,15 +278,15 @@
 >
 >
 >
-> như tử số trong công thức λ(**x**) sẽ là sup_{θ0} L(θ|**x**), dĩ nhiên nó =
-> L(θ0|**x**) vì search trong không gian Θ0 là một singleton, tập chỉ có mỗi θ0.
+> như tử số trong công thức λ(𝐱) sẽ là sup_{θ0} L(θ|𝐱), dĩ nhiên nó =
+> L(θ0|𝐱) vì search trong không gian Θ0 là một singleton, tập chỉ có mỗi θ0.
 >
 >
 >
 > Còn mẫu số, là LIKELIHOOD TẠI MLE (chú ý, không phải MLE, mà là
 > likelihood function evaluate tại MLE) như đã nói, thế thì với normal(θ,1) trong
-> ví dụ 7.2.5 ta đã biết θ^_mle(**X**) chính là Xbar ⇨ mẫu số là L(θ^_mle|**x**)
-> = L(Xbar|**x**)
+> ví dụ 7.2.5 ta đã biết θ^_mle(𝐗) chính là X̄ ⇨ mẫu số là L(θ^_mle|𝐱)
+> = L(X̄|𝐱)
 
 **🔗 See also:** [Kiểm định tỉ số khả dĩ cỡ α](./83_methods_of_evaluating_test.md#node-8t9g9rt)
 
@@ -303,11 +303,11 @@
 >
 >
 >
-> λ(**x**) = L(θ0|**x**) / L(Xbar|**x**)
+> λ(𝐱) = L(θ0|𝐱) / L(X̄|𝐱)
 >
 >
 >
-> = f(**x**|θ0) / f(**x**|x̄)
+> = f(𝐱|θ0) / f(𝐱|x̄)
 >
 >
 >
@@ -387,42 +387,42 @@
 >
 >
 >
-> Vậy λ(**x**) = exp [-n(x̄-θ0)^2/2]
+> Vậy λ(𝐱) = exp [-n(x̄-θ0)^2/2]
 >
 >
 >
 > Đến đây, bài trước cũng đã biết về việc, đại khái là khi có hypothesis test rồi,
 > tức là cái rule để xác định xem với observed value thì reject hay không reject
-> H0. Thì từ đó kiểu như range của **X** sẽ được chia làm hai subset:
+> H0. Thì từ đó kiểu như range của 𝐗 sẽ được chia làm hai subset:
 >
 >
 >
-> {**x** ∈ **X**: dựa vào **x** thì test sẽ reject H0}, đây gọi là **rejection region**
+> {𝐱 ∈ 𝐗: dựa vào 𝐱 thì test sẽ reject H0}, đây gọi là **rejection region**
 >
 >
 >
-> và {**x** ∈ **X**: dựa vào x thì test sẽ không thể reject H0}.
+> và {𝐱 ∈ 𝐗: dựa vào x thì test sẽ không thể reject H0}.
 >
 >
 >
 > Vậy ở đây, với likelihood ratio test, ta đã nói là sẽ reject H0 khi ratio nhỏ, so
-> với ngưỡng c nào đó. Vậy nên rejection region là: {**x**: λ(x) ≤ c}
+> với ngưỡng c nào đó. Vậy nên rejection region là: {𝐱: λ(x) ≤ c}
 >
 >
 >
-> = {**x**: exp [-n(x̄-θ0)^2/2] ≤ c}
+> = {𝐱: exp [-n(x̄-θ0)^2/2] ≤ c}
 >
 >
 >
-> = {**x**: [-n(x̄-θ0)^2/2] ≤ log(c)}
+> = {𝐱: [-n(x̄-θ0)^2/2] ≤ log(c)}
 >
 >
 >
-> = {**x**: (x̄-θ0)^2 ≥ -2log(c)/n}
+> = {𝐱: (x̄-θ0)^2 ≥ -2log(c)/n}
 >
 >
 >
-> = {**x**: |x̄-θ0| ≥ √[-2log(c)/n]}
+> = {𝐱: |x̄-θ0| ≥ √[-2log(c)/n]}
 >
 >
 >
@@ -447,7 +447,7 @@
 >
 > Và khoảng cách giữa x̄ và θ0 phải lớn hơn con số rất lớn này thì ta mới
 > bác bỏ H0 và rõ ràng điều này rất khó xảy ra Vậy có nghĩa là sao, có nghĩa là
-> ta rất nhân ái, dễ  dãi với với H0, và tập **x** khiến H0 bị bác sẽ rất nhỏ, vì rất
+> ta rất nhân ái, dễ  dãi với với H0, và tập 𝐱 khiến H0 bị bác sẽ rất nhỏ, vì rất
 > ít x khiến x̄ cách θ0 một khoảng xa vô cùng lớn như vậy.
 >
 >
@@ -501,12 +501,12 @@
 >
 >
 > Thế thì quay lại đây, thử xây dựng likelihood: Như đã quen rồi, likelihood
-> là hàm của θ, được định nghĩa là L(θ|**x**) = f(**x**|θ) mang ý nghĩa độ hợp lí
-> của θ (input) khi observed giá trị của sample **X** = **x**. Và nhờ iid nên:
+> là hàm của θ, được định nghĩa là L(θ|𝐱) = f(𝐱|θ) mang ý nghĩa độ hợp lí
+> của θ (input) khi observed giá trị của sample 𝐗 = 𝐱. Và nhờ iid nên:
 >
 >
 >
-> L(θ|**x**) = f(**x**|θ) = Πi f(xi|θ) = Πi e^[-(xi-θ)]
+> L(θ|𝐱) = f(𝐱|θ) = Πi f(xi|θ) = Πi e^[-(xi-θ)]
 >
 >
 >
@@ -530,7 +530,7 @@
 >
 >
 >
-> Do đó sách ghi là L(θ|**x**) = e^(-Σixi+nθ) khi x(1) ≥ θ và = 0 khi x(1) < θ 
+> Do đó sách ghi là L(θ|𝐱) = e^(-Σixi+nθ) khi x(1) ≥ θ và = 0 khi x(1) < θ 
 > là vậy.
 
 **🔗 See also:** [Ảnh hưởng Θ0 trong kiểm định](./83_methods_of_evaluating_test.md#node-csqvj7r)
@@ -548,7 +548,7 @@
 >
 >
 >
-> Thế thì, likelihood ratio λ(**x**) = L(θ^0|**x**) / L(θ^|**x**)
+> Thế thì, likelihood ratio λ(𝐱) = L(θ^0|𝐱) / L(θ^|𝐱)
 >
 >
 >
@@ -571,7 +571,7 @@
 >
 >
 > Vậy khi θ → x(1) thì hàm tăng liên tục, và sau khi θ vượt qua x(1) thì nó drop
-> thành 0. Nên sup_θ L(θ|**x**) = L(x(1)|θ)
+> thành 0. Nên sup_θ L(θ|𝐱) = L(x(1)|θ)
 >
 >
 >
@@ -589,7 +589,7 @@
 >
 >
 > Khi đó khi θ tăng dần từ -inf đến θ0 thì hàm likelihood tăng liên tục, nên đạt
-> max tại θ0. ⇨ L(θ^0|**x**) = L(θ0|**x**)
+> max tại θ0. ⇨ L(θ^0|𝐱) = L(θ0|𝐱)
 >
 >
 >
@@ -599,19 +599,19 @@
 >
 > Lúc này khi θ tăng từ -inf đến x11 thì hàm likelihood tăng liên tục và đạt max
 > tại x(1), như tăng tiếp khi vượt qua x(1) thì nó drop thành 0. Vậy ở case này
-> L(θ^0|x) = L(x(1)|**x**).
+> L(θ^0|x) = L(x(1)|𝐱).
 >
 >
 >
-> Do đó, λ(**x**) (likelihood ratio test statistic) sẽ là:
+> Do đó, λ(𝐱) (likelihood ratio test statistic) sẽ là:
 >
 >
 >
-> L(θ0|**x**) / L(x(1)|**x**) khi x(1) > θ0
+> L(θ0|𝐱) / L(x(1)|𝐱) khi x(1) > θ0
 >
 >
 >
-> L(x(1)|**x**) / L(x(1)|**x**) = 1 khi x(1) ≤ θ0
+> L(x(1)|𝐱) / L(x(1)|𝐱) = 1 khi x(1) ≤ θ0
 
 <br>
 
@@ -622,8 +622,8 @@
 <p align="center"><kbd><img src="assets/ayadqwtnq5.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> hình ảnh cho thấy λ(**x**). như vừa thấy, khi x(1) ≤ θ0, λ(**x**) = 1, và khi θ0 < x(1)
-> λ(**x**) = L(θ0|**x**) / L(x(1)|**x**).
+> hình ảnh cho thấy λ(𝐱). như vừa thấy, khi x(1) ≤ θ0, λ(𝐱) = 1, và khi θ0 < x(1)
+> λ(𝐱) = L(θ0|𝐱) / L(x(1)|𝐱).
 >
 >
 >
@@ -631,11 +631,11 @@
 >
 >
 >
-> L(θ0|**x**) = e^[-Σixi + nθ0]
+> L(θ0|𝐱) = e^[-Σixi + nθ0]
 >
 >
 >
-> L(x(1)|**x**) = e^[-Σixi + nx(1)]
+> L(x(1)|𝐱) = e^[-Σixi + nx(1)]
 >
 >
 >
@@ -680,7 +680,7 @@
 >
 >
 >
-> ⇨ reject region: {**x**: θ0 - log(c)/n ≤ x(1)}
+> ⇨ reject region: {𝐱: θ0 - log(c)/n ≤ x(1)}
 >
 >
 >
@@ -706,17 +706,17 @@
 >
 > Tiếp theo, đại khái là gs nhắc đến sufficient statistic. Mình nhớ rằng,
 > sufficient statistic là một statistic mà một khi đã biết giá trị của nó, ta có
-> thể vứt đi random sample **X**, bởi vì tính chất của sufficient là giá trị của
-> nó đã đủ hết mọi thông tin dùng để suy luận ra θ có trong **X** rồi, hay nói
-> cách khác, suy diễn của ta về θ dựa trên **X** cũng phải y như suy diễn
-> cuả ta về θ dựa trên sufficient statistic T(**X**)
+> thể vứt đi random sample 𝐗, bởi vì tính chất của sufficient là giá trị của
+> nó đã đủ hết mọi thông tin dùng để suy luận ra θ có trong 𝐗 rồi, hay nói
+> cách khác, suy diễn của ta về θ dựa trên 𝐗 cũng phải y như suy diễn
+> cuả ta về θ dựa trên sufficient statistic T(𝐗)
 >
 >
 >
 > Do đó, ở đây mới nói, nếu đã vậy thì ta sẽ nghĩ đến việc thiết kế một
-> likelihood ratio test statistic dựa trên T(**x**) thay vì **x**, và vì thông tin
-> chứa trong T(**x**) đã đủ, thì bài test dùng T(**x**) cũng phải tốt như bài
-> test dùng **x**. Và theorem tiếp sau đây sẽ khẳng định điều này
+> likelihood ratio test statistic dựa trên T(𝐱) thay vì 𝐱, và vì thông tin
+> chứa trong T(𝐱) đã đủ, thì bài test dùng T(𝐱) cũng phải tốt như bài
+> test dùng 𝐱. Và theorem tiếp sau đây sẽ khẳng định điều này
 
 <br>
 
@@ -730,18 +730,18 @@
 
 > [!NOTE]
 > Theorem 8.2.4 phát biểu lại cái nhận định vừa rồi: Đại khái là nếu ta có
-> T(**X**) là sufficient statistic cho θ và λ*(t) và λ(**x**) là likelihood ratio test
-> statistic dựa  trên T và dựa trên **X**. Thì λ*(T(**x**)) = λ(**x**) với mọi **x**
+> T(𝐗) là sufficient statistic cho θ và λ*(t) và λ(𝐱) là likelihood ratio test
+> statistic dựa  trên T và dựa trên 𝐗. Thì λ*(T(𝐱)) = λ(𝐱) với mọi 𝐱
 > trong sample space.
 >
 >
 >
 > Dừng lại để ôn lại chút xíu về LRT statistic: Theo định nghĩa, hypothesis
 > testing chỉ là một quy tắc (rule) giúp ta đưa ra quyết định giữa H0 và H1 dựa
-> trên gía trị quan sát được của random sample **X**.Và cái rule đầu tiên
-> được học trong 4 rule là likelihood ratio test: λ(**x**) ≤ c thì reject H0 và
-> ngược lại thì không thể reject H0. Trong đó λ(**X**) = sup_Θ0 L(θ|**X**) /
-> sup_Θ L(θ|**X**) được gọi là likelihood ratio test statistic, được tính bằng tỉ
+> trên gía trị quan sát được của random sample 𝐗.Và cái rule đầu tiên
+> được học trong 4 rule là likelihood ratio test: λ(𝐱) ≤ c thì reject H0 và
+> ngược lại thì không thể reject H0. Trong đó λ(𝐗) = sup_Θ0 L(θ|𝐗) /
+> sup_Θ L(θ|𝐗) được gọi là likelihood ratio test statistic, được tính bằng tỉ
 > số giữa các giá trị của likelihood function evaluate tại mle nhưng ở mẫu, là
 > MLE thật, khi ta tối đa hóa likelihood với θ được tìm kiếm trong toàn bộ
 > parameter space Θ. Còn ở tử số, thì không gian tìm kiếm chỉ là subset Θ0
@@ -750,30 +750,30 @@
 >
 >
 > Nhớ lại khái niệm statistic, định nghĩa của statistic chỉ là một random
-> variable có được khi apply một function nào đó lên random sample **X**,
+> variable có được khi apply một function nào đó lên random sample 𝐗,
 > vậy thì ở đây, function đó là function g(**u**) = sup_Θ0 L(θ|**u**) / sup_Θ
-> L(θ|**u**) thôi, nên λ(**X**) là statistic
+> L(θ|**u**) thôi, nên λ(𝐗) là statistic
 >
 >
 >
-> Vậy thì quay lại đây LRT statistic dựa trên **X** là sao mà dựa trên T(**X**)
+> Vậy thì quay lại đây LRT statistic dựa trên 𝐗 là sao mà dựa trên T(𝐗)
 > là sao?
 >
 >
 >
-> Đơn giản thôi, dựa trên **X** thì LRT statistic sẽ tính bởi tỉ số của likelihood
-> function dựa trên **X**, còn dựa trên T thì likelihood function dựa trên T:
+> Đơn giản thôi, dựa trên 𝐗 thì LRT statistic sẽ tính bởi tỉ số của likelihood
+> function dựa trên 𝐗, còn dựa trên T thì likelihood function dựa trên T:
 >
 >
 >
-> Vậy thì phải ôn lại định nghĩa của likelihood function L(θ|**x**), theo định
-> nghĩa, nó là function của θ, tính bởi L(θ|**x**) = f(**x**|θ), f(**x**|θ) là joint pdf
+> Vậy thì phải ôn lại định nghĩa của likelihood function L(θ|𝐱), theo định
+> nghĩa, nó là function của θ, tính bởi L(θ|𝐱) = f(𝐱|θ), f(𝐱|θ) là joint pdf
 > của random sample, mang ý nghĩa là, nhận vào giá trị input θ thì độ hợp lí
-> của θ đó là bao nhiêu khi mà thực tế quan sát được là **X**=**x**.
+> của θ đó là bao nhiêu khi mà thực tế quan sát được là 𝐗=𝐱.
 >
 >
 >
-> Đây là likelihood function define dựa trên random sample **X**.
+> Đây là likelihood function define dựa trên random sample 𝐗.
 >
 >
 >
@@ -788,15 +788,15 @@
 >
 > Với fT(t|θ) là pdf của statistic T, mang ý nghĩa là độ hợp lí của θ khi quan sát
 > thấy giá trị của statistic T = t là bao nhiêu. Dĩ nhiên giá trị quan sát được t
-> của T cũng là gián tiếp bởi quan sát thấy **x** của **X** mà thôi. Nên ta ghi:
+> của T cũng là gián tiếp bởi quan sát thấy 𝐱 của 𝐗 mà thôi. Nên ta ghi:
 >
 >
 >
-> L(θ|T(**x**)) = g(T(**x**)|θ)
+> L(θ|T(𝐱)) = g(T(𝐱)|θ)
 >
 >
 >
-> ⇨ λ*(T(**x**)) = sup_Θ0 L(θ|T(**x**)) / sup_Θ L(θ|T(**x**))
+> ⇨ λ*(T(𝐱)) = sup_Θ0 L(θ|T(𝐱)) / sup_Θ L(θ|T(𝐱))
 >
 >
 >
@@ -805,41 +805,41 @@
 >
 >
 > Nhờ một theorem đã học ở chapter 7: Factorization theorem (còn gọi là
-> Neyman-Fisher), nói rằng điều kiện cần và đủ để T(**X**) là một sufficient
-> statistic là tồn tại hàm g(T|θ) và h(**x**) sao cho pdf của random sample
-> f(x|θ) có thể được factor thành f(**x**|θ) = g(T(**x**)|θ)h(**x**), tức là tích của
-> một hàm còn phụ thuộc θ và  phụ thuộc **x** nhưng chỉ thông qua T(**x**) và
-> một hàm h(**x**) không phụ thuộc θ.
+> Neyman-Fisher), nói rằng điều kiện cần và đủ để T(𝐗) là một sufficient
+> statistic là tồn tại hàm g(T|θ) và h(𝐱) sao cho pdf của random sample
+> f(x|θ) có thể được factor thành f(𝐱|θ) = g(T(𝐱)|θ)h(𝐱), tức là tích của
+> một hàm còn phụ thuộc θ và  phụ thuộc 𝐱 nhưng chỉ thông qua T(𝐱) và
+> một hàm h(𝐱) không phụ thuộc θ.
 >
 >
 >
-> Do đó, vì ở đây ta có T(**X**) là sufficient statistic, nên tồn tại g và h như
+> Do đó, vì ở đây ta có T(𝐗) là sufficient statistic, nên tồn tại g và h như
 > vậy:
 >
 >
 >
-> λ(**x**) = sup_Θ0 L(θ|**x**) / sup_Θ L(θ|**x**)
+> λ(𝐱) = sup_Θ0 L(θ|𝐱) / sup_Θ L(θ|𝐱)
 >
 >
 >
-> = sup_Θ0 f(**x**|θ) / sup_Θ f(**x**|θ)
+> = sup_Θ0 f(𝐱|θ) / sup_Θ f(𝐱|θ)
 >
 >
 >
-> = sup_Θ0 g(T(**x**)|θ)h(**x**) / sup_Θ g(T(**x**)|θ)h(**x**)
+> = sup_Θ0 g(T(𝐱)|θ)h(𝐱) / sup_Θ g(T(𝐱)|θ)h(𝐱)
 >
 >
 >
-> = sup_Θ0 g(T(**x**)|θ) / sup_Θ g(T(**x**)|θ)
+> = sup_Θ0 g(T(𝐱)|θ) / sup_Θ g(T(𝐱)|θ)
 >
 >
 >
-> (vì h(**x**) không phụ thuộc θ nên đưa nó ra khỏi supremum)
+> (vì h(𝐱) không phụ thuộc θ nên đưa nó ra khỏi supremum)
 >
 >
 >
 > = đến đây mình sẽ cần làm rõ một điểm trong Factorization theorem: trong
-> theorem đó, họ không hề nói g(T(**x**)|θ) là pdf/pmf của T(**X**). Do đó kết quả
+> theorem đó, họ không hề nói g(T(𝐱)|θ) là pdf/pmf của T(𝐗). Do đó kết quả
 > đang đi đến ở trên hoàn toàn không có lí do gì để tự mặc định là
 >
 >
@@ -853,11 +853,11 @@
 >
 >
 >
-> Xét pdf/pmf của T(**X**), giả sử ta xét T(X) discrete rv
+> Xét pdf/pmf của T(𝐗), giả sử ta xét T(X) discrete rv
 >
 >
 >
-> fT(t|θ) = P_θ(T(**X**) = t)
+> fT(t|θ) = P_θ(T(𝐗) = t)
 >
 >
 >
@@ -866,7 +866,7 @@
 >
 >
 >
-> P_θ(T(**X**) = t) = P({o ∈ Ω: T(**X**)(o) = t})
+> P_θ(T(𝐗) = t) = P({o ∈ Ω: T(𝐗)(o) = t})
 >
 >
 >
@@ -875,60 +875,60 @@
 >
 >
 >
-> = P({o ∈ Ω: T(**X**(o)) = t})   
+> = P({o ∈ Ω: T(𝐗(o)) = t})   
 >
 >
 >
-> (hàm hợp: Bản chất của T(**X**)(o) chỉ là apply hàm T lên X để có hàm T(**X**),
-> rồi apply lên o thì cũng bằng apply hàm **X** lên o trước rồi apply T lên **X**(o))
+> (hàm hợp: Bản chất của T(𝐗)(o) chỉ là apply hàm T lên X để có hàm T(𝐗),
+> rồi apply lên o thì cũng bằng apply hàm 𝐗 lên o trước rồi apply T lên 𝐗(o))
 >
 >
 >
-> = P({o ∈ Ω, **X**(o) = **x**, T(**x**) = t}) 
+> = P({o ∈ Ω, 𝐗(o) = 𝐱, T(𝐱) = t}) 
 >
 >
 >
-> = Σ_{o ∈ Ω, **X**(o) = **x**, T(**x**) = t} P({o})  
+> = Σ_{o ∈ Ω, 𝐗(o) = 𝐱, T(𝐱) = t} P({o})  
 >
 >
 >
-> = Σ{**x**:T(**x**) = t} Σ_{o ∈ Ω: **X**(o) = **x**} P({o}) 
+> = Σ{𝐱:T(𝐱) = t} Σ_{o ∈ Ω: 𝐗(o) = 𝐱} P({o}) 
 >
 >
 >
-> Và Σ_{o ∈ Ω: X(o) = x} P({o}) chính là P_θ(**X** = **x**)
+> Và Σ_{o ∈ Ω: X(o) = x} P({o}) chính là P_θ(𝐗 = 𝐱)
 >
 >
 >
-> = Σ{**x**:T(**x**) = t} P_θ(**X** = **x**)
+> = Σ{𝐱:T(𝐱) = t} P_θ(𝐗 = 𝐱)
 >
 >
 >
-> Vậy P_θ(T(**X**) = t) = Σ{**x**:T(**x**) = t} P_θ(**X** = **x**)
+> Vậy P_θ(T(𝐗) = t) = Σ{𝐱:T(𝐱) = t} P_θ(𝐗 = 𝐱)
 >
 >
 >
-> hay fT(t|θ) = Σ{**x**:T(**x**) = t} f(**x**|θ)
+> hay fT(t|θ) = Σ{𝐱:T(𝐱) = t} f(𝐱|θ)
 >
 >
 >
-> Rồi, áp dụng Factorization theorem thay f(x|θ) = g(T(**x**)|θ)h(**x**)
+> Rồi, áp dụng Factorization theorem thay f(x|θ) = g(T(𝐱)|θ)h(𝐱)
 >
 >
 >
-> fT(t|θ) = Σ{**x**:T(**x**) = t} g(T(**x**)|θ)h(**x**)
+> fT(t|θ) = Σ{𝐱:T(𝐱) = t} g(T(𝐱)|θ)h(𝐱)
 >
 >
 >
-> = Σ{**x**:T(**x**) = t} g(t|θ)h(**x**) | vì T(**x**) = t mà
+> = Σ{𝐱:T(𝐱) = t} g(t|θ)h(𝐱) | vì T(𝐱) = t mà
 >
 >
 >
-> = g(t|θ) Σ{**x**:T(**x**) = t} h(**x**)
+> = g(t|θ) Σ{𝐱:T(𝐱) = t} h(𝐱)
 >
 >
 >
-> Vậy fT(t|θ) = g(t|θ) Σ{**x**:T(**x**) = t} h(**x**) 
+> Vậy fT(t|θ) = g(t|θ) Σ{𝐱:T(𝐱) = t} h(𝐱) 
 >
 >
 >
@@ -940,27 +940,27 @@
 >
 >
 >
-> Đến đây, xét λ*(T(**x**)) = sup_Θ0 g(T(**x**)|θ) / sup_Θ g(T(**x**)|θ)
+> Đến đây, xét λ*(T(𝐱)) = sup_Θ0 g(T(𝐱)|θ) / sup_Θ g(T(𝐱)|θ)
 >
 >
 >
-> = sup_Θ0 [fT(T(**x**)|θ) / c(T(**x**))] / sup_Θ [fT(T(**x**)|θ) / c(T(**x**))]
+> = sup_Θ0 [fT(T(𝐱)|θ) / c(T(𝐱))] / sup_Θ [fT(T(𝐱)|θ) / c(T(𝐱))]
 >
 >
 >
-> Vì c(T(**x**)) không phụ thuộc θ ta đưa ra ngoài sup, để rồi cancel out tử mẫu
+> Vì c(T(𝐱)) không phụ thuộc θ ta đưa ra ngoài sup, để rồi cancel out tử mẫu
 >
 >
 >
-> = sup_Θ0 fT(T(**x**)|θ) / sup_Θ fT(T(**x**)|θ))
+> = sup_Θ0 fT(T(𝐱)|θ) / sup_Θ fT(T(𝐱)|θ))
 >
 >
 >
-> Tới đây, cái ta có chính là = sup_Θ0 L(θ|T(**x**)) / sup_Θ L(θ|T(**x**))
+> Tới đây, cái ta có chính là = sup_Θ0 L(θ|T(𝐱)) / sup_Θ L(θ|T(𝐱))
 >
 >
 >
-> chính là λ*(T(**x**)).
+> chính là λ*(T(𝐱)).
 >
 >
 >
@@ -979,21 +979,21 @@
 > [!NOTE]
 > Rồi, thế thì đại khái tác giả nói là, khi nãy, làm ví dụ 8.2.2, thì kiểu như là
 > mình có thể thấy qúa trình bắt đầu với một nùi rất lằng nhằng, và cuối cùng
-> ta thu gọn λ(**x**) rất gọn = exp [-n(x̄-θ0)^2/2]
+> ta thu gọn λ(𝐱) rất gọn = exp [-n(x̄-θ0)^2/2]
 >
 >
 >
-> Thì thật ra, đây chính là điều mà theorem vừa rồi đã nói: Vì Xbar thật ra
-> chính là một sufficient statistic T(**X**), nên LRT statistic, cuối cùng cũng chỉ
-> còn phụ thuộc **X** thông qua T(**X**) mà thôi. Nên kiểu như nhờ theorem
+> Thì thật ra, đây chính là điều mà theorem vừa rồi đã nói: Vì X̄ thật ra
+> chính là một sufficient statistic T(𝐗), nên LRT statistic, cuối cùng cũng chỉ
+> còn phụ thuộc 𝐗 thông qua T(𝐗) mà thôi. Nên kiểu như nhờ theorem
 > này mà ta "không ngạc nhiên rằng cái kết quả trên ra như vậy vì nó bắt
 > buộc phải như vậy, chỉ còn phụ thuộc X thông qua một sufficient static nào
 > đó
 >
 >
 >
-> Và ví dụ 8.2.5 đại ý nói là nếu ta dùng likelihood function dựa trên Xbar (tức
-> L(θ|Xbar)) thay vì L(θ|X)), và Xbar là sufficient statistic, thì kết quả của
+> Và ví dụ 8.2.5 đại ý nói là nếu ta dùng likelihood function dựa trên X̄ (tức
+> L(θ|X̄)) thay vì L(θ|X)), và X̄ là sufficient statistic, thì kết quả của
 > likelihood ratio test phải cũng ra y như ví dụ 8.2.2, và quá trình sẽ dễ hơn,
 > gọn hơn
 >
@@ -1034,17 +1034,17 @@
 >
 >
 >
-> λ(**x**) = sup_Θ0 L(θ|**x**) / sup_Θ L(θ|**x**)
+> λ(𝐱) = sup_Θ0 L(θ|𝐱) / sup_Θ L(θ|𝐱)
 >
 >
 >
-> = sup_{μ ≤ μ0, σ² ≥ 0} L(μ, σ²|**x**) / sup_{μ ∈ (-inf,inf), σ² ≥ 0} L(μ,
-> σ²|**x**)
+> = sup_{μ ≤ μ0, σ² ≥ 0} L(μ, σ²|𝐱) / sup_{μ ∈ (-inf,inf), σ² ≥ 0} L(μ,
+> σ²|𝐱)
 >
 >
 >
 > Mẫu số, như đã biết, sẽ là likelihood function tại MLE (kí hiệu μ^ và (σ²)^):
-> L(μ^, (σ²)^|**x**)
+> L(μ^, (σ²)^|𝐱)
 >
 >
 >
@@ -1053,8 +1053,8 @@
 >
 >
 > Trường hợp 1: μ^ ≤ μ0. Có nghĩa là sao? Có nghĩa là lúc này, cái đỉnh L(μ^,
-> (σ²)^|**x**) nó nằm bên trong / xảy ra bên trong phạm vi (μ, σ²) ∈ Θ0. Do
-> đó dĩ nhiên tử số, cũng phải là L(μ^, (σ²)^|**x**) Vì tìm kiếm trong cả Θ tìm
+> (σ²)^|𝐱) nó nằm bên trong / xảy ra bên trong phạm vi (μ, σ²) ∈ Θ0. Do
+> đó dĩ nhiên tử số, cũng phải là L(μ^, (σ²)^|𝐱) Vì tìm kiếm trong cả Θ tìm
 > thấy tại (μ^, (σ²)^) khiến L lớn nhất, thì khi (μ^, (σ²)^) nằm trong Θ0, thì
 > đó cũng phải là nơi khiến L cao nhất khi tìm kiếm trong Θ0
 >
@@ -1064,11 +1064,11 @@
 >
 >
 >
-> Hàm likelihood L(μ, σ²|**x**) như đã biết:
+> Hàm likelihood L(μ, σ²|𝐱) như đã biết:
 >
 >
 >
-> = f(**x**|μ, σ²) = Πi=1:n f(xi| μ, σ²)
+> = f(𝐱|μ, σ²) = Πi=1:n f(xi| μ, σ²)
 >
 >
 >
@@ -1137,11 +1137,11 @@
 >
 >
 >
-> Đó là lí do mà trong trường hợp này, tử số chính là L(μ0, (σ²)^_0)|**x**)
+> Đó là lí do mà trong trường hợp này, tử số chính là L(μ0, (σ²)^_0)|𝐱)
 >
 >
 >
-> ⇨ λ(x) = 1 hoặc L(μ0, (σ²)^_0)|**x**) / L(μ0, (σ²)|**x**) tùy theo μ^ ≤ hay > μ0.
+> ⇨ λ(x) = 1 hoặc L(μ0, (σ²)^_0)|𝐱) / L(μ0, (σ²)|𝐱) tùy theo μ^ ≤ hay > μ0.
 >
 >
 >
@@ -1169,20 +1169,20 @@
 > tưởng khác biệt cốt lỗi của cái này là ta sẽ xem parameter θ như random
 > variable. Và distribution của nó là π(θ), gọi là prior distribution. Cụ thể loại
 > distribution là gì thì thường được chọn bởi quan điểm / niềm tim của
-> experimenter. Sau khi quan sát được giá trị của random sample **X** = **x**,
+> experimenter. Sau khi quan sát được giá trị của random sample 𝐗 = 𝐱,
 > thì ta sẽ cập nhật lại distribution của θ bằng cách sử dụng Bayes theorem:
-> f(x|y)f(y) = f(y|x)f(x) để có π(θ|**x**), gọi là posterior distribution. Và mọi suy
+> f(x|y)f(y) = f(y|x)f(x) để có π(θ|𝐱), gọi là posterior distribution. Và mọi suy
 > luận của ta về θ sẽ đều dùng cái này.
 >
 >
 >
-> Với việc ta có π(θ|**x**), dĩ nhiên nó là pdf/pmf của θ.
+> Với việc ta có π(θ|𝐱), dĩ nhiên nó là pdf/pmf của θ.
 >
 >
 >
 > Đến đây hãy nhớ lại nhiệm vụ của bài toán hypothesis testing, vốn dĩ là ta sẽ
 > muốn xây dựng một cái rule (một "binary decision function) giúp nhận vào
-> một giá trị của random sample **x**, và trả ra một trong hai giá trị đại diện
+> một giá trị của random sample 𝐱, và trả ra một trong hai giá trị đại diện
 > cho H0: θ ∈ Θ0 hoặc H1: θ ∈ Θ0_c.
 >
 >
@@ -1198,7 +1198,7 @@
 >
 >
 >
-> P(θ ∈ Θ0|**x**) = P(H0 is true|**x**)
+> P(θ ∈ Θ0|𝐱) = P(H0 is true|𝐱)
 >
 >
 >
@@ -1206,7 +1206,7 @@
 >
 >
 >
-> P(θ ∈ Θ0c|**x**) = P(H1 is true|**x**)
+> P(θ ∈ Θ0c|𝐱) = P(H1 is true|𝐱)
 
 <br>
 
@@ -1223,14 +1223,14 @@
 >
 >
 > Vì chỉ khi coi θ như random variable, để rồi dùng Bayes theorem xây dựng
-> posterior π(θ|**x**) thì P(H0 xảy ra = θ ∈ Θ0|**x**) và P(H1 xảy ra = θ ∈
-> Θ0c|**x**) MỚI PHỤ THUỘC **x**, và từ đó, mới có tỏ ra có ích.
+> posterior π(θ|𝐱) thì P(H0 xảy ra = θ ∈ Θ0|𝐱) và P(H1 xảy ra = θ ∈
+> Θ0c|𝐱) MỚI PHỤ THUỘC 𝐱, và từ đó, mới có tỏ ra có ích.
 >
 >
 >
 > Nói cách khác, vì cách tiếp cận cổ điển (classical statistic) coi θ như fixed
-> nhưng unknown khiến cho P(θ ∈ Θ0|**x**) = 1, và P(θ ∈ Θ0c|**x)** = 0 với
-> mọi x nếu θ thật sự ∈ Θ0, và P(θ ∈ Θ0|**x**) = 0, và P(θ ∈ Θ0c|**x**) = 1
+> nhưng unknown khiến cho P(θ ∈ Θ0|𝐱) = 1, và P(θ ∈ Θ0c|𝐱) = 0 với
+> mọi x nếu θ thật sự ∈ Θ0, và P(θ ∈ Θ0|𝐱) = 0, và P(θ ∈ Θ0c|𝐱) = 1
 > với mọi x nếu θ thật sự ∈ Θ0c. Mà với việc **không biết thì θ thì cái lập
 > luận trên chả ích lợi gì vì đằng nào nào có thêm giá trị của x hay không thì
 > ta cũng chả rút ra được suy luận gì**. Do đó, classical statistic không dùng
@@ -1253,39 +1253,39 @@
 > [!NOTE]
 > Thế thì đại khái là tác giả nói đến một cách mà ta có thể dùng Bayesian
 > approach cho việc xây dựng hypothesis test đó là: accept H0 khi P(H0 is
-> true|**X**) lớn hơn P(H1 is true|**X**), đương nhiên cái này đồng nghĩa
-> accept H0 khi P(H0 is true|**X**) > 1/2.
+> true|𝐗) lớn hơn P(H1 is true|𝐗), đương nhiên cái này đồng nghĩa
+> accept H0 khi P(H0 is true|𝐗) > 1/2.
 >
 >
 >
 > Dừng lại để ôn lại một chút: Như vừa nói lại ở note trước, mục tiêu của
-> hypothesis testing là xây dựng một cái rule, như một function nhận vào **x**
+> hypothesis testing là xây dựng một cái rule, như một function nhận vào 𝐱
 > và spit out một trong hai H0, H1. Thì hiểu nôm na, bên trong cái ruột của
-> function này ta sẽ tính toán gì đó với **x**, và như vậy, sẽ có một statistic
+> function này ta sẽ tính toán gì đó với 𝐱, và như vậy, sẽ có một statistic
 > (vì statistic là random variable có được khi apply một function lên random
 > sample), và nó được gọi là test statistic.
 >
 >
 >
 > Còn nhớ trong cách thứ nhất để xây dựng hypothesis test: likelihood ratio
-> test, thì cái rule để reject H0 là λ(**x**) ≤ c, và rejection region là {x: λ(**x**) ≤ c}
-> trong đó λ(**x**) = sup_Θ0 L(θ|**x**) / sup_Θ L(θ|**x**), chính là test statistic.
+> test, thì cái rule để reject H0 là λ(𝐱) ≤ c, và rejection region là {x: λ(𝐱) ≤ c}
+> trong đó λ(𝐱) = sup_Θ0 L(θ|𝐱) / sup_Θ L(θ|𝐱), chính là test statistic.
 >
 >
 >
-> Thế thì quay lại đây, test statistic là gì? Chính là P(H0 is true|**X**), hay
-> P(θ ∈ Θ0|**X**), vì đây, chính là random variable có được khi áp function 
-> g(**u**) = P(θ ∈ Θ0|**u**) lên **X** mà thôi.
+> Thế thì quay lại đây, test statistic là gì? Chính là P(H0 is true|𝐗), hay
+> P(θ ∈ Θ0|𝐗), vì đây, chính là random variable có được khi áp function 
+> g(**u**) = P(θ ∈ Θ0|**u**) lên 𝐗 mà thôi.
 >
 >
 >
-> Rồi, như vậy cũng dễ hiểu rejection region sẽ là {**x**: P(θ ∈ Θ0_c|**x**) ≥ 1/2}
+> Rồi, như vậy cũng dễ hiểu rejection region sẽ là {𝐱: P(θ ∈ Θ0_c|𝐱) ≥ 1/2}
 >
 >
 >
 > Một điểm nữa, tác gỉa nói, có khi ta cũng có thể chọn một ngưỡng reject
 > cao hơn, thậm chí lên tới 0.99, để tránh khả năng reject sai, khi đó rejection
-> region là {**x**: P(θ ∈ Θ0_c) ≥ 0.99}
+> region là {𝐱: P(θ ∈ Θ0_c) ≥ 0.99}
 
 <br>
 
@@ -1324,12 +1324,12 @@
 >
 >
 >
-> Thế thì nếu mình dùng rule là accept H0 khi P(θ ∈ Θ0|**x**) ≥ P(θ ∈ Θ0c|**x**)
-> thì đồng nghĩa 1/2 ≤ P(θ ∈ Θ0|**x**)
+> Thế thì nếu mình dùng rule là accept H0 khi P(θ ∈ Θ0|𝐱) ≥ P(θ ∈ Θ0c|𝐱)
+> thì đồng nghĩa 1/2 ≤ P(θ ∈ Θ0|𝐱)
 >
 >
 >
-> ⇔ 1/2 ≤ P(θ ≤ θ0|**x**)
+> ⇔ 1/2 ≤ P(θ ≤ θ0|𝐱)
 >
 >
 >
@@ -1342,7 +1342,7 @@
 >
 >
 >
-> Nên để 1/2 ≤ P(θ ≤ θ0|**x**) ⇨ mean của distribution ≤ θ0
+> Nên để 1/2 ≤ P(θ ≤ θ0|𝐱) ⇨ mean của distribution ≤ θ0
 >
 >
 >
@@ -1370,7 +1370,7 @@
 >
 >
 >
-> Và như vậy mình hiểu, **test statistic ở đây chính là Xbar**
+> Và như vậy mình hiểu, **test statistic ở đây chính là X̄**
 >
 >
 >
@@ -1402,14 +1402,14 @@
 > Thế thì, mục tiêu của bài toán này, là có thể dựa vào data quan sát được
 > (observed value của random sample) để mà đưa ra kết luận bác bỏ H0
 > hoặc accept H0. Do đó, nhiệm vụ là xây dựng một rule, một decision
-> function, nhận vào một giá trị **x** của **X**, và đưa ra một trong hai giá
+> function, nhận vào một giá trị 𝐱 của 𝐗, và đưa ra một trong hai giá
 > trị đại diện cho H0 hoặc H1. Cái rule này chính là định nghĩa của
 > hypothesis testing procedure.
 >
 >
 >
-> Trong cái ruột của function này. Dĩ nhiên sẽ tính toán gì đó với **x**, mà
-> như đã biết, khi apply một function lên random sample **X**, ta sẽ có
+> Trong cái ruột của function này. Dĩ nhiên sẽ tính toán gì đó với 𝐱, mà
+> như đã biết, khi apply một function lên random sample 𝐗, ta sẽ có
 > một statistic, nên sẽ xuất hiện một statistic trong quá trình, chính là
 > hypothesis testing statistic
 >
@@ -1418,31 +1418,31 @@
 > Dĩ nhiên, sau khi có testing statistic, thì cuối cùng ta vẫn phải đưa ra
 > quyết định H1, hoặc H0 dựa trên giá trị của statistic này. Và từ đó, nó sẽ
 > tạo nên một cái gọi là rejection region, là tập **x khiến giá trị của**
-> T(**x**) giúp rule quyết định H0.
+> T(𝐱) giúp rule quyết định H0.
 >
 >
 >
 > Trong phần trước, ta đã học về likelihood ratio testing, thì khi đó test
-> statistic chính là λ(**X**), = sup_Θ0 L(θ|**X**) / sup_Θ0_c L(θ|**X**), và
-> cái rule sẽ là: reject H0 nếu λ(**X**) quá nhỏ và ngược lại. Như thế nào
-> là quá nhỏ sẽ thể hiện bởi λ(**X**) ≤ c và ta sẽ bàn về việc chọn c sau
+> statistic chính là λ(𝐗), = sup_Θ0 L(θ|𝐗) / sup_Θ0_c L(θ|𝐗), và
+> cái rule sẽ là: reject H0 nếu λ(𝐗) quá nhỏ và ngược lại. Như thế nào
+> là quá nhỏ sẽ thể hiện bởi λ(𝐗) ≤ c và ta sẽ bàn về việc chọn c sau
 > này.
 >
 >
 >
-> Có nghĩa là tính T(**X**) thì còn phải xây dựng cái rule để kết luận từ
-> T(**X**) nữa, mà trong LRT thì chính là quyết định c là bao nhiêu.
+> Có nghĩa là tính T(𝐗) thì còn phải xây dựng cái rule để kết luận từ
+> T(𝐗) nữa, mà trong LRT thì chính là quyết định c là bao nhiêu.
 >
 >
 >
-> Nên trong LRT, reject region là {**x**: λ(**x**) ≤ c} (c là số trong [0,1])
-> cũng có thể thể hiện region region = {**x**: λ(x) ∈ R = (-inf, c]}
+> Nên trong LRT, reject region là {𝐱: λ(𝐱) ≤ c} (c là số trong [0,1])
+> cũng có thể thể hiện region region = {𝐱: λ(x) ∈ R = (-inf, c]}
 >
 >
 >
 > Nói lại chút xíu về ý nghĩa của LRT, đó là, nó dựa trên việc đánh giá H0
 > thông qua khả năng Θ0 chứa những giá trị θ khiến việc quan sát được
-> dữ liệu thực tế **x** là cỡ nào. Cụ thể là với **X** = **x**, độ hợp lí
+> dữ liệu thực tế 𝐱 là cỡ nào. Cụ thể là với 𝐗 = 𝐱, độ hợp lí
 > (likelihood) của θ tốt nhất (θ^_mle)  **sẽ có được bằng likelihood
 > function tại θ^_mle, so với cái này, thì khi tìm kiếm  trên Θ0 thì độ hợp lí
 > lớn nhất được tới đâu.** Nếu nó chỉ bằng một phần nhỏ  chứng tỏ H0
@@ -1452,21 +1452,21 @@
 >
 > Rồi qua Bayes test. Thì ta lại theo cách tiếp cận của Bayesian, trong đó
 > ta xem θ như random variable với prior distribution π(θ), để rồi sau khi
-> có observed value  **X** = **x**, ta sẽ cập nhật lại distribution bằng
-> Bayes rule, để có posterior distribution π(θ|**x**). Thế thì nhờ việc có
+> có observed value  𝐗 = 𝐱, ta sẽ cập nhật lại distribution bằng
+> Bayes rule, để có posterior distribution π(θ|𝐱). Thế thì nhờ việc có
 > distribution của θ, mà ta có thể tính toán xác suất  của event θ ∈ Θ0 và
 > xác suất của event θ ∈ Θ0c, và xây dựng rule quyết định H0 hoặc H1
-> dựa trên cái này. Để rồi giả sử ta dùng rule: reject H0 khi P(θ ∈ Θ0|**x**)
-> ≤ 1/2 thì test statistic chính là P(θ ∈ Θ0|**X**) và rejection region là {**x**:
-> P(θ ∈ Θ0|**x**) ≤ 1/2} cũng là {**x**: P(θ ∈ Θ0|**x**) ∈ [0, 1/2]}
+> dựa trên cái này. Để rồi giả sử ta dùng rule: reject H0 khi P(θ ∈ Θ0|𝐱)
+> ≤ 1/2 thì test statistic chính là P(θ ∈ Θ0|𝐗) và rejection region là {𝐱:
+> P(θ ∈ Θ0|𝐱) ≤ 1/2} cũng là {𝐱: P(θ ∈ Θ0|𝐱) ∈ [0, 1/2]}
 >
 >
 >
 > Quay lại đây, bối cảnh là giả sử ta có null hypothesis là intersection của
 > nhiều null hypothesis đơn giản hơn: Θ0 = ∩ Θ0_γ. Và với mỗi Θ0_γ, ta
 > có một hypothesis test giữa H0_γ: θ ∈ Θ0_γ vs H1_γ: θ ∈ Θ0c_γ, với
-> rule để reject H0_γ: Tγ(**x**) ∈ Rγ đồng nghĩa rejection region {**x**:
-> Tγ(**x**) ∈ Rγ}
+> rule để reject H0_γ: Tγ(𝐱) ∈ Rγ đồng nghĩa rejection region {𝐱:
+> Tγ(𝐱) ∈ Rγ}
 >
 >
 >
@@ -1475,17 +1475,17 @@
 >
 >
 >
-> Thế thì, với các test γ, đã có rule là: reject H0_γ nếu Tγ(**x**) ∈ Rγ.
+> Thế thì, với các test γ, đã có rule là: reject H0_γ nếu Tγ(𝐱) ∈ Rγ.
 >
 >
 >
-> Do đó, nếu Tγ(**x**) ∈ R γ với một γ nào đó, thì H0_γ đó bị reject. Đồng
+> Do đó, nếu Tγ(𝐱) ∈ R γ với một γ nào đó, thì H0_γ đó bị reject. Đồng
 > nghĩa, với kết luận ta không tin θ ∈ Θγ với mọi γ, như vậy θ không ∈ ∩{γ
 > ∈ Γ} Θγ ⇨ reject H0
 >
 >
 >
-> Do đó, rule của bài toán gốc là: Tγ(**x**) ∈ R γ với một γ bất kì → reject H0.
+> Do đó, rule của bài toán gốc là: Tγ(𝐱) ∈ R γ với một γ bất kì → reject H0.
 >
 >
 >
@@ -1493,31 +1493,31 @@
 >
 >
 >
-> = {x: Tγ(**x**) ∈ U{γ ∈ Γ} R γ}
+> = {x: Tγ(𝐱) ∈ U{γ ∈ Γ} R γ}
 >
 >
 >
-> Thế thì giả sử các rule Tγ(x) ∈ Rγ đều có dạng Tγ(**x**) > c
+> Thế thì giả sử các rule Tγ(x) ∈ Rγ đều có dạng Tγ(𝐱) > c
 >
 >
 >
-> Thì khi đó rule của bài toán gốc là reject H0 khi Tγ(**x**) > c với một γ nào đó
+> Thì khi đó rule của bài toán gốc là reject H0 khi Tγ(𝐱) > c với một γ nào đó
 >
 >
 >
-> ⇨ rejection region là {**x**: tồn tại γ ∈ Γ: Tγ(**x**) > c}
+> ⇨ rejection region là {𝐱: tồn tại γ ∈ Γ: Tγ(𝐱) > c}
 >
 >
 >
-> thì điều này đồng nghĩa {**x**: thằng lớn nhất trong các Tγ(**x**) (γ∈Γ) > c}
+> thì điều này đồng nghĩa {𝐱: thằng lớn nhất trong các Tγ(𝐱) (γ∈Γ) > c}
 >
 >
 >
-> = {**x**: sup_γ∈Γ Tγ(**x**) > c}
+> = {𝐱: sup_γ∈Γ Tγ(𝐱) > c}
 >
 >
 >
-> Do đó, trong bài toán này, test statistic là sup_γ∈Γ Tγ(**X**)
+> Do đó, trong bài toán này, test statistic là sup_γ∈Γ Tγ(𝐗)
 
 <br>
 
@@ -1540,7 +1540,7 @@
 >
 >
 >
-> reject H0L và chọn H1L khi (Xbar - μ0) / (S/√n) ≥ tL
+> reject H0L và chọn H1L khi (X̄ - μ0) / (S/√n) ≥ tL
 >
 >
 >
@@ -1548,11 +1548,11 @@
 >
 >
 >
-> Ta biết trong LRT thì test procedure là: reject H0 khi λ(**x**) ≤ c, và statistic là:
+> Ta biết trong LRT thì test procedure là: reject H0 khi λ(𝐱) ≤ c, và statistic là:
 >
 >
 >
-> λ(**x**) = L(θ^_0|**x**) / L(θ^|**x**) = sup_Θ0 L(θ|**x**) / sup_Θ L(θ|**x**)
+> λ(𝐱) = L(θ^_0|𝐱) / L(θ^|𝐱) = sup_Θ0 L(θ|𝐱) / sup_Θ L(θ|𝐱)
 >
 >
 >
@@ -1560,7 +1560,7 @@
 >
 >
 >
-> λ(**x**) = 1 khi μ^ ≤ μ0 và = L(μ^0|**x**) / L(μ^|**x**) khi μ0 < μ^
+> λ(𝐱) = 1 khi μ^ ≤ μ0 và = L(μ^0|𝐱) / L(μ^|𝐱) khi μ0 < μ^
 >
 >
 >
@@ -1568,19 +1568,19 @@
 >
 >
 >
-> Vậy thì: với λ(**x**) như vậy thì điều kiện reject H0L sẽ là:
+> Vậy thì: với λ(𝐱) như vậy thì điều kiện reject H0L sẽ là:
 >
 >
 >
-> λ(x) = L(θ^0|**x**) / L(θ^|**x**) ≤ c và μ0 < μ^
+> λ(x) = L(θ^0|𝐱) / L(θ^|𝐱) ≤ c và μ0 < μ^
 >
 >
 >
-> ⇔ L(μ^0, (σ²)^0|**x**) / L(μ^, (σ²)^|**x**) ≤ c và μ0 < μ^
+> ⇔ L(μ^0, (σ²)^0|𝐱) / L(μ^, (σ²)^|𝐱) ≤ c và μ0 < μ^
 >
 >
 >
-> Tính L(μ^0, (σ²)^0|**x**) và L(μ^, (σ²)^|**x**)
+> Tính L(μ^0, (σ²)^0|𝐱) và L(μ^, (σ²)^|𝐱)
 >
 >
 >
@@ -1588,7 +1588,7 @@
 >
 >
 >
-> L(μ, σ²|**x**) = f(**x**|μ, σ²) = Πi f(xi|μ, σ²)
+> L(μ, σ²|𝐱) = f(𝐱|μ, σ²) = Πi f(xi|μ, σ²)
 >
 >
 >
@@ -1652,7 +1652,7 @@
 >
 >
 >
-> ⇨ L(μ^, (σ²)^|**x**) = (√2π(σ²)^)^(-n) exp(-n/2)
+> ⇨ L(μ^, (σ²)^|𝐱) = (√2π(σ²)^)^(-n) exp(-n/2)
 >
 >
 >
@@ -1696,7 +1696,7 @@
 >
 >
 >
-> ⇨ L(μ^0, (σ²)^0|**x**) = (√2π(σ²)^0)^(-n) exp(-n/2)
+> ⇨ L(μ^0, (σ²)^0|𝐱) = (√2π(σ²)^0)^(-n) exp(-n/2)
 >
 >
 >
@@ -1740,7 +1740,7 @@
 >
 >
 >
-> Nên nhớ, cái ta đang có chính là LRT statistic λ(**x**) của bài toán hypo testing H0L: μ ≤ μ0 vs H1L: μ > μ0
+> Nên nhớ, cái ta đang có chính là LRT statistic λ(𝐱) của bài toán hypo testing H0L: μ ≤ μ0 vs H1L: μ > μ0
 >
 >
 >
@@ -1748,7 +1748,7 @@
 >
 >
 >
-> Reject H0L khi λ(**x**) ≤ c
+> Reject H0L khi λ(𝐱) ≤ c
 >
 >
 >
@@ -1884,7 +1884,7 @@
 >
 >
 >
-> Và cũng có nghĩa là, LST statistic hóa ra chính là Student's t statistic T(**X**) = (Xbar - μ0) / (S/√n)
+> Và cũng có nghĩa là, LST statistic hóa ra chính là Student's t statistic T(𝐗) = (X̄ - μ0) / (S/√n)
 >
 >
 >
@@ -1906,7 +1906,7 @@
 >
 >
 >
-> reject H0U khi (Xbar - μ0) / (S/√n) ≤ tU.
+> reject H0U khi (X̄ - μ0) / (S/√n) ≤ tU.
 >
 >
 >
@@ -1924,7 +1924,7 @@
 >
 >
 >
-> ⇔  (Xbar - μ0) / (S/√n) ≥ tL hoặc (Xbar - μ0) / (S/√n) ≤ tU
+> ⇔  (X̄ - μ0) / (S/√n) ≥ tL hoặc (X̄ - μ0) / (S/√n) ≤ tU
 >
 >
 >
@@ -1936,15 +1936,15 @@
 >
 >
 >
-> (Xbar - μ0) / (S/√n) ≤ -tL hoặc (Xbar - μ0) / (S/√n) ≥ tL
+> (X̄ - μ0) / (S/√n) ≤ -tL hoặc (X̄ - μ0) / (S/√n) ≥ tL
 >
 >
 >
-> ⇔ |Xbar - μ0| / (S/√n) ≥ tL
+> ⇔ |X̄ - μ0| / (S/√n) ≥ tL
 >
 >
 >
-> CÓ NGHĨA LÀ, test statistic của bài toán gốc chính là |Xbar - μ0| / (S/√n)
+> CÓ NGHĨA LÀ, test statistic của bài toán gốc chính là |X̄ - μ0| / (S/√n)
 >
 >
 >
@@ -1952,7 +1952,7 @@
 > CỦA BÀI TOÁN GỐC. Có nghĩa là ta sẽ không dùng intersection - unions (tức
 > là xây dựng cái test dựa trên kĩ thuật union-intersection, gọi là UIT), mà 
 > xây dựng LRT trực tiếp thì ta sẽ ra LRT statistic, và sẽ thấy nó chính là cái 
-> trên |Xbar - μ0| / (S/√n))
+> trên |X̄ - μ0| / (S/√n))
 >
 >
 >
@@ -2021,7 +2021,7 @@
 >
 >
 >
-> Và rejection region là union của các rejection region "con": U{γ∈Γ}{**x**: T_γ(**x**)
+> Và rejection region là union của các rejection region "con": U{γ∈Γ}{𝐱: T_γ(𝐱)
 > ∈ Rγ}
 >
 >
@@ -2037,16 +2037,16 @@
 >
 >
 >
-> Như vậy rejection region của bài toán sẽ là {x: T_γ(**x**) ∈ Rγ ∀ γ}
+> Như vậy rejection region của bài toán sẽ là {x: T_γ(𝐱) ∈ Rγ ∀ γ}
 >
 >
 >
-> = ∩{γ∈Γ}{**x**: T_γ(**x**) > c}
+> = ∩{γ∈Γ}{𝐱: T_γ(𝐱) > c}
 >
 >
 >
-> Và khi các rejection region của các bài toán con có dạng {**x**: T_γ(**x**) > c} thì
-> ⇨ rejection của bài toán gốc sẽ là {**x**: inf_γ ∈ Γ {T_γ(**x**)} > c}
+> Và khi các rejection region của các bài toán con có dạng {𝐱: T_γ(𝐱) > c} thì
+> ⇨ rejection của bài toán gốc sẽ là {𝐱: inf_γ ∈ Γ {T_γ(𝐱)} > c}
 
 <br>
 
