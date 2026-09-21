@@ -884,32 +884,32 @@
 >
 >
 >
-> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi (xi - xbar + xbar - μ)^2]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi (xi - x̄ + x̄ - μ)^2]}
 >
 >
 >
-> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi [(xi - xbar) + (xbar - μ)]^2]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi [(xi - x̄) + (x̄ - μ)]^2]}
 >
 >
 >
-> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi [(xi - xbar)^2 + (xbar - μ)^2 + 2(xi - xbar)(xbar - μ)]]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi [(xi - x̄)^2 + (x̄ - μ)^2 + 2(xi - x̄)(x̄ - μ)]]}
 >
 >
 >
-> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - xbar)^2 + Σi(xbar - μ)^2 + 2Σi(xi - xbar)(xbar - μ)]]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - x̄)^2 + Σi(x̄ - μ)^2 + 2Σi(xi - x̄)(x̄ - μ)]]}
 >
 >
 >
-> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - xbar)^2 + n(xbar - μ)^2 + 2Σi(xi - xbar)(xbar - μ)]]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - x̄)^2 + n(x̄ - μ)^2 + 2Σi(xi - x̄)(x̄ - μ)]]}
 >
 >
 >
-> Xét riêng cái này Σi(xi - xbar)(xbar - μ) = (xbar - μ) Σi(xi - xbar) = (xbar - μ) (nxbar - nxbar) 
+> Xét riêng cái này Σi(xi - x̄)(x̄ - μ) = (x̄ - μ) Σi(xi - x̄) = (x̄ - μ) (nx̄ - nx̄) 
 > = 0
 >
 >
 >
-> ... = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - xbar)^2 + n(xbar - μ)^2]]}
+> ... = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - x̄)^2 + n(x̄ - μ)^2]]}
 >
 >
 >
@@ -1366,7 +1366,7 @@
 >
 >
 >
-> f(**x**|μ) = (2πσ²)^(-n/2) exp[-Σ(xi-xbar)^2/(2σ²)] exp(-n(xbar-μ)^2/(2σ²)
+> f(**x**|μ) = (2πσ²)^(-n/2) exp[-Σ(xi-x̄)^2/(2σ²)] exp(-n(x̄-μ)^2/(2σ²)
 >
 >
 >
@@ -1374,12 +1374,12 @@
 >
 >
 >
-> Còn cái phần sau, còn dính tới μ:  exp(-n(xbar-μ)^2/(2σ²)
+> Còn cái phần sau, còn dính tới μ:  exp(-n(x̄-μ)^2/(2σ²)
 >
 >
 >
-> thì ta thấy rằng nó chính là hàm g(xbar|μ), tức là nó sẽ phụ thuộc sample value **x**
-> thông qua T(**x**) = xbar. Do đó, theo theorem này, T(**X**) = Xbar chính là sufficient
+> thì ta thấy rằng nó chính là hàm g(x̄|μ), tức là nó sẽ phụ thuộc sample value **x**
+> thông qua T(**x**) = x̄. Do đó, theo theorem này, T(**X**) = Xbar chính là sufficient
 > statistic cho μ
 
 <br>
@@ -1652,11 +1652,11 @@
 >
 >
 >
-> f(**x**|Θ) = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - xbar)^2 + n(xbar - μ)^2]]}
+> f(**x**|Θ) = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - x̄)^2 + n(x̄ - μ)^2]]}
 >
 >
 >
-> = [(2πσ²)^(-n/2)] exp {(1/2σ²) [-[Σi(xi - xbar)^2 + n(xbar - μ)^2]]}
+> = [(2πσ²)^(-n/2)] exp {(1/2σ²) [-[Σi(xi - x̄)^2 + n(x̄ - μ)^2]]}
 >
 >
 >
@@ -1671,25 +1671,25 @@
 >
 >
 >
->  Ta chỉ cần quan tâm [-[Σi(xi - xbar)^2 + n(xbar - μ)^2]]}, vì sao, vì mình cần
+>  Ta chỉ cần quan tâm [-[Σi(xi - x̄)^2 + n(x̄ - μ)^2]]}, vì sao, vì mình cần
 > xem thử là đâu là cái hàm còn dính tới Θ, và **x**, nhưng chỉ dính đến **x THÔNG
 > QUA FUNCITON NÀO ĐÓ**
 >
 >
 >
-> Vậy thì, [-[Σi(xi - xbar)^2 + n(xbar - μ)^2]]}
+> Vậy thì, [-[Σi(xi - x̄)^2 + n(x̄ - μ)^2]]}
 >
 >
 >
-> Nếu đặt T1(**x**) = xbar
+> Nếu đặt T1(**x**) = x̄
 >
 >
 >
-> và đặt T2(**x**) = Σi(xi - xbar)^2 / (n-1)
+> và đặt T2(**x**) = Σi(xi - x̄)^2 / (n-1)
 >
 >
 >
-> ⇨  -[ Σi(xi - xbar)^2 + n(xbar - μ)^2 ]
+> ⇨  -[ Σi(xi - x̄)^2 + n(x̄ - μ)^2 ]
 >
 >
 >
@@ -1983,7 +1983,7 @@
 > Nhớ lại thế này, nếu muốn chứng minh lại, sử dụng factorization theorem ta sẽ
 > viết joint pdf của sample **X** f(**x**|θ)ra, và cho thấy nó là một cái tích function của
 > một function ko dính tới **x** mà trong case này đơn giản là 1. Và g(T(**x**)|μ)
-> là function dính tới μ và **x** nhưng thông qua T(**x**), tức Xbar(**x**) = xbar.
+> là function dính tới μ và **x** nhưng thông qua T(**x**), tức Xbar(**x**) = x̄.
 > Để từ đó theo factorization theorem ta kết luận T(**X**) = Xbar(X) chính là một
 > sufficient statistic.
 >
@@ -2248,7 +2248,7 @@
 
 > [!NOTE]
 > rồi, qua ví dụ này. Cho X1, ...Xn iid ~ n(μ, σ²) và cả hai đều chưa biết.
-> Cho **x**,  **y** là hai sample point và (xbar, s^2_x) và (ybar, s^2_y) là
+> Cho **x**,  **y** là hai sample point và (x̄, s^2_x) và (ybar, s^2_y) là
 > sample mean và  variance.
 >
 >
@@ -2273,7 +2273,7 @@
 >
 >
 >
-> Rồi từ đó ta sẽ có sample mean xbar và ybar cũng như sample variance
+> Rồi từ đó ta sẽ có sample mean x̄ và ybar cũng như sample variance
 >
 >
 >
@@ -2289,12 +2289,12 @@
 >
 >
 >
-> = (2πσ²)^(-n/2) exp { - [n(xbar - μ)^2 + (n-1)sx^2] / (2σ²) }
-> / (2πσ²)^(-n/2) exp { - [n(xbar - μ)^2 + (n-1)sx^2] / (2σ²) }
+> = (2πσ²)^(-n/2) exp { - [n(x̄ - μ)^2 + (n-1)sx^2] / (2σ²) }
+> / (2πσ²)^(-n/2) exp { - [n(x̄ - μ)^2 + (n-1)sx^2] / (2σ²) }
 >
 >
 >
-> = exp([-n(xbar^2 - ybar^2) + 2nμ(xbar - ybar) - (n - 1)(sx^2 - sy^2) / (2σ²)])
+> = exp([-n(x̄^2 - ybar^2) + 2nμ(x̄ - ybar) - (n - 1)(sx^2 - sy^2) / (2σ²)])
 >
 >
 >
@@ -2303,7 +2303,7 @@
 >
 >
 > Và lập luận sẽ là. Để mà cái này không phụ thuộc σ và μ (tức là constant
-> as a function of μ và σ ) thì chỉ xảy ra khi xbar = ybar, và sx^2 = sy^2
+> as a function of μ và σ ) thì chỉ xảy ra khi x̄ = ybar, và sx^2 = sy^2
 > (vì khi đó kết quả trở thành 1 là constant). Như vậy theo theorem này, thì
 > T(**X**)= (Xbar, S^2) chính là minimal sufficient statistic
 
