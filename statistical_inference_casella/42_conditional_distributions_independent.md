@@ -1,6 +1,6 @@
 # 4.2 Conditional Distributions & Independent
 
-📊 **Progress:** `18` Notes | `27` Screenshots
+📊 **Progress:** `18` Notes | `27` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-6ysk9w8"></a>
@@ -353,8 +353,7 @@
 <p align="center"><kbd><img src="assets/o60ez557ys.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là ta trong một ví dụ trước đây ta có joint pdf: f(x, y) = e^-y, 0 < x < y <
-> inf
+> Đại khái là ta trong một ví dụ trước đây ta có joint pdf: f(x, y) = e^-y, 0 &lt; x &lt; y &lt; inf
 >
 >
 >
@@ -362,8 +361,7 @@
 >
 >
 >
-> Trước tiên ta tính fX(x), như đã biết bằng cách "marginalize" mọi possible value
-> của y:
+> Trước tiên ta tính fX(x), như đã biết bằng cách "marginalize" mọi possible value của y:
 >
 >
 >
@@ -371,18 +369,15 @@
 >
 >
 >
-> mà f(x,y) bằng e^-y khi x < y inf, còn khi x < 0 hoặc 0 < x nhưng 0 < y < x thì f(x,
-> y) = 0 (định nghĩa của f(x,y) như vậy thì có nghĩa là khi thỏa điều kiện 0 < x < y
-> thì f(x,y) = e^-y còn nếu không thỏa thì f(x,y) = 0, tập xác định vẫn là R^2 (x ∈
-> (-inf,inf), y ∈ (-inf:inf))
+> mà f(x,y) bằng e^-y khi x &lt; y inf, còn khi x &lt; 0 hoặc 0 &lt; x nhưng 0 &lt; y &lt; x thì f(x, y) = 0 (định nghĩa của f(x,y) như vậy thì có nghĩa là khi thỏa điều kiện 0 &lt; x &lt; y thì f(x,y) = e^-y còn nếu không thỏa thì f(x,y) = 0, tập xác định vẫn là R^2 (x ∈ (-inf,inf), y ∈ (-inf:inf))
 >
 >
 >
-> Do đó tích phân trên = ∫x:inf e^-ydy = [nguyên hàm của e^-y]|x:inf
+> Do đó tích phân trên = ∫x:inf e^-ydy = \[nguyên hàm của e^-y\]|x:inf
 >
 >
 >
-> = -e^-y|x:inf. y → inf ⇨ -y → -inf ⇨ -e^-y → 0  ; y → x → -e^-y → -e^-x
+> = -e^-y|x:inf. y → inf ⇨ -y → -inf ⇨ -e^-y → 0 ; y → x → -e^-y → -e^-x
 >
 >
 >
@@ -390,16 +385,15 @@
 >
 >
 >
-> Và như vậy fX(x) = e^-x cho thấy X đơn lẻ là một Expo(1), ta nhớ pdf của
-> Expo(λ) fX(x)  = λ e^-λx hay Expo(β) = (1/β) e^-x/β
+> Và như vậy fX(x) = e^-x cho thấy X đơn lẻ là một Expo(1), ta nhớ pdf của Expo(λ) fX(x) = λ e^-λx hay Expo(β) = (1/β) e^-x/β
 >
 >
 >
-> ⇨ fY|X(y|x) = fX,Y(x,y) / fX(x) = e^-y / e^-x = e^[-y+x] = e^(x-y)
+> ⇨ fY|X(y|x) = fX,Y(x,y) / fX(x) = e^-y / e^-x = e^\[-y+x\] = e^(x-y)
 >
 >
 >
-> Dĩ nhiên phải ghi rõ là **fY|X(y|x) = e^(x-y)** khi x < y
+> Dĩ nhiên phải ghi rõ là **fY|X(y|x) = e^(x-y)** khi x &lt; y
 >
 >
 >
@@ -411,12 +405,7 @@
 >
 >
 >
-> Từ kết quả fY|X(y|x) = e^-(y-x) ta mới nhận xét rằng given giá trị x của X ta sẽ 
-> biết Y là một Expo và gía trị x của X cho biết location (location parameters)
-> là sao? Bởi vì bài trước về location family đã học, f(x - μ) sẽ định nghĩa ra một
-> gia đình các distribution có cùng dạng, chỉ khác nhau location. Nên với các x
-> khác nhau e^-(y-x) tức f(y-x) với f(u) = e^-u là pdf của expo(1), sẽ làm nên một
-> location family các expo distribution có cùng scale nhưng khác location
+> Từ kết quả fY|X(y|x) = e^-(y-x) ta mới nhận xét rằng given giá trị x của X ta sẽ biết Y là một Expo và gía trị x của X cho biết location (location parameters) là sao? Bởi vì bài trước về location family đã học, f(x - μ) sẽ định nghĩa ra một gia đình các distribution có cùng dạng, chỉ khác nhau location. Nên với các x khác nhau e^-(y-x) tức f(y-x) với f(u) = e^-u là pdf của expo(1), sẽ làm nên một location family các expo distribution có cùng scale nhưng khác location
 >
 >
 >
@@ -444,30 +433,31 @@
 >
 >
 >
-> ∫x:inf y e^-(y-x)dy ( = ∫udv) = (uv - ∫vdu) = y[-e^-(y-x)] |x:inf - ∫x:inf-e^-(y-x)dy
+> ∫x:inf y e^-(y-x)dy ( = ∫udv) = (uv - ∫vdu) = y\[-e^-(y-x)\] |x:inf - ∫x:inf-e^-(y-x)dy
 >
 >
 >
-> = y[-e^-(y-x)] |x:inf - [e^-(y-x) |x:inf]
+> = y\[-e^-(y-x)\] |x:inf - \[e^-(y-x) |x:inf\]
 >
 >
 >
-> y → inf ⇨ e^-(y-x) → e^-inf = 0 ⇨ y[-e^-(y-x)] → 0
+> y → inf ⇨ e^-(y-x) → e^-inf = 0 ⇨ y\[-e^-(y-x)\] → 0
 >
 >
 >
-> y → x ⇨ e^-(y-x) → e^0 = 1 ⇨ y[-e^-(y-x)] → -x
+> y → x ⇨ e^-(y-x) → e^0 = 1 ⇨ y\[-e^-(y-x)\] → -x
 >
 >
 >
-> term 1 = **x**, term 2 = [0 - 1] = -**1**
+> term 1 = x, term 2 = \[0 - 1\] = -**1**
 >
 >
 >
 > Kết quả là là **x + 1**
 >
-> Tiếp theo là một cái mà stat110 mình chưa thấy, nhưng cũng ko quá khó
-> hiểu: conditional variance Var(Y|x)
+>
+>
+> Tiếp theo là một cái mà stat110 mình chưa thấy, nhưng cũng ko quá khó hiểu: conditional variance Var(Y|x)
 >
 >
 >
@@ -479,13 +469,11 @@
 >
 >
 >
-> vậy thì với variance condition on x, đơn giản là ta chỉ việc tính theo công
-> thức của variance chỉ có điều dùng conditional expectaton của Y given value 
-> của X = x:
+> vậy thì với variance condition on x, đơn giản là ta chỉ việc tính theo công thức của variance chỉ có điều dùng conditional expectaton của Y given value của X = x:
 >
 >
 >
-> Var(Y|X=x) = E(Y^2|x) - [E(Y|x)]^2
+> Var(Y|X=x) = E(Y^2|x) - \[E(Y|x)\]^2
 >
 >
 >
@@ -493,12 +481,11 @@
 >
 >
 >
-> = ∫-inf:inf y^2 e^-(y-x)dy, để tính tích phân này lại dùng integration by part 
+> = ∫-inf:inf y^2 e^-(y-x)dy, để tính tích phân này lại dùng integration by part
 >
 >
 >
-> = ∫x:inf y^2 e^-(y-x)dy | nhắc lại ko thừa, vì condition pdf fY|X(y|x) = 0 khi y < x
-> nên thu hẹp cận của tích phân lại
+> = ∫x:inf y^2 e^-(y-x)dy | nhắc lại ko thừa, vì condition pdf fY|X(y|x) = 0 khi y &lt; x nên thu hẹp cận của tích phân lại
 >
 >
 >
@@ -506,11 +493,11 @@
 >
 >
 >
-> ⇨ ta có .. = y^2[-e^-(y-x)]|x:inf - ∫x:inf -e^-(y-x) 2ydy
+> ⇨ ta có .. = y^2\[-e^-(y-x)\]|x:inf - ∫x:inf -e^-(y-x) 2ydy
 >
 >
 >
-> = y^2[-e^-(y-x)]|x:inf +2 ∫x:inf y e^-(y-x) dy
+> = y^2\[-e^-(y-x)\]|x:inf +2 ∫x:inf y e^-(y-x) dy
 >
 >
 >
@@ -518,11 +505,11 @@
 >
 >
 >
-> Còn term 1: y → inf ⇨ e^-(y-x) → e^-inf = 0 ⇨ y^2[-e^-(y-x)] → 0
+> Còn term 1: y → inf ⇨ e^-(y-x) → e^-inf = 0 ⇨ y^2\[-e^-(y-x)\] → 0
 >
 >
 >
-> y → x ⇨ y^2[-e^-(y-x)] → x^2[-e^0] = -x^2
+> y → x ⇨ y^2\[-e^-(y-x)\] → x^2\[-e^0\] = -x^2
 >
 >
 >
@@ -534,11 +521,11 @@
 >
 >
 >
-> Còn cái [E(Y|x)]^2 = (1 + x)^2 = 1 + x^2 + 2x
+> Còn cái \[E(Y|x)\]^2 = (1 + x)^2 = 1 + x^2 + 2x
 >
 >
 >
-> Vậy Var(Y) = x^2 + 2 + 2x - [1 + x^2 + 2x]
+> Vậy Var(Y) = x^2 + 2 + 2x - \[1 + x^2 + 2x\]
 >
 >
 >
@@ -546,19 +533,15 @@
 >
 >
 >
-> = **1
+> = 1
 >
 >
 >
-> KẾT QUẢ NÀY CHO THẤY VARIANCE CỦA Y|X=x là như nhau với mọi
-> giá trị của X.**
+> Kết quả này cho thấy variance của Y|X=x là như nhau với mọi giá trị của X
 >
 >
 >
-> Và gs cho biết marginal distribution của Y là Γ(2,1) tức variance của nó bằng 
-> 2 thì điểm nhấn mạnh ở đây là bằng việc biết giá trị của X, dù là bao nhiêu
-> cũng được, đều khiến variability của Y tức mức biến động của Y thể hiện qua
-> EY|x chỉ còn bằng 1, tức giảm một nửa
+> Và gs cho biết marginal distribution của Y là Γ(2,1) tức variance của nó bằng 2 thì điểm nhấn mạnh ở đây là bằng việc biết giá trị của X, dù là bao nhiêu cũng được, đều khiến variability của Y tức mức biến động của Y thể hiện qua EY|x chỉ còn bằng 1, tức giảm một nửa
 >
 >
 >
@@ -578,16 +561,15 @@
 >
 >
 >
-> Như đã nói joint pdf sẽ = 0 khi x < 0, và chỉ có giá trị ko âm khi x < y, nên limit
-> của tích phân này sẽ là 0:y:
+> Như đã nói joint pdf sẽ = 0 khi x &lt; 0, và chỉ có giá trị ko âm khi x &lt; y, nên limit của tích phân này sẽ là 0:y:
 >
 >
 >
-> ∫0:y e^(-y) dx = e^(-y) ∫0:y dx 
+> ∫0:y e^(-y) dx = e^(-y) ∫0:y dx
 >
 >
 >
-> = e^(-y) [x|0:y] = e^-y (y - 0) = **y e^-y**  
+> = e^(-y) \[x|0:y\] = e^-y (y - 0) = **y e^-y**
 >
 >
 >
@@ -595,23 +577,55 @@
 >
 >
 >
-> Γ(α, β) có pdf f(y | α, β) = [1/Γ(α)β^α] y^(α-1) e^-y/β  
+> Γ(α, β) có pdf f(y | α, β) = \[1/Γ(α)β^α\] y^(α-1) e^-y/β
 >
 >
 >
-> Γ(2, 1) có pdf =  [1/Γ(2)1^2] y^(2-1) e^-y/1 = y^2 e^-y / Γ(2)
+> Γ(2, 1) có pdf = \[1/Γ(2)1^2\] y^(2-1) e^-y/1 = y^2 e^-y / Γ(2)
 >
 >
 >
->  = y^2 e^-y / [1Γ(1)] = **y^2 e^-y**
+> = y^2 e^-y / \[1Γ(1)\] = **y^2 e^-y**
 >
 >
 >
-> (áp dụng tính chất  Γ(a+1) = a Γ(a), và Γ(n) = (n-1)! ⇨ Γ(1) = 0! = 1
+> (áp dụng tính chất Γ(a+1) = a Γ(a), và Γ(n) = (n-1)! ⇨ Γ(1) = 0! = 1
 >
 >
 >
-> Vậy có thể thấy đúng là Y ~ gamma (2, 1)
+> Vậy có thể thấy đúng là Y \~ gamma (2, 1)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, tự thực hiện đầy đủ các bước tích phân từng phần để tìm kỳ vọng và phương sai có điều kiện, đồng thời tự kiểm chứng phân phối Gamma. Cần chú ý một vài lỗi gõ nhầm số mũ và ký hiệu ở phần cuối.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Γ(2, 1) có pdf =  [1/Γ(2)1^2] y^(2-1) e^-y/1 = y^2 e^-y / Γ(2)"*
+>
+> Lỗi nhầm số mũ: $y^{2-1} = y^1 = y$, không phải $y^2$. Dù phía trên bạn đã tính tích phân ra đúng $f_Y(y) = y e^{-y}$, phép thế công thức Gamma ở dòng này lại nhầm thành $y^2 e^{-y}$.
+>
+> **2.** *"mức biến động của Y thể hiện qua EY|x chỉ còn bằng 1"*
+>
+> Nhầm ký hiệu: Mức biến động (variability/variance) được đo bằng $\text{Var}(Y|X=x) = 1$, không phải $E(Y|X=x)$ (kỳ vọng có điều kiện là $x + 1$).
+>
+> **3.** *"Eg(Y)|x = ∫-inf:inf g(y)fY|X(y|x)dx"*
+>
+> Sai biến lấy tích phân: Tích phân theo phân phối của $Y$ nên vi phân phải là $dy$, không phải $dx$.
+>
+> **4.** *"Đặt du = y ⇨ du = dy"*
+>
+> Lỗi gõ nhầm: Bước đặt biến tích phân từng phần là đặt $u = y$ chứ không phải $du = y$.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ cách xác định miền giá trị của joint pdf để thu hẹp cận tích phân phù hợp khi tính marginal pdf và conditional pdf.
+> - Tự thực hiện chuẩn xác từng bước tích phân từng phần cho cả $E(Y|X=x)$ và $E(Y^2|X=x)$ để suy ra conditional variance bằng 1.
+> - Chủ động tính toán kiểm chứng marginal distribution $f_Y(y)$ ra dạng Gamma(2, 1) thay vì chỉ chấp nhận kết quả sẵn có.
+>
+> **💡 Deeper notes**
+> - Việc $\text{Var}(Y|X=x) = 1$ không phụ thuộc vào $x$ là tính chất đặc biệt của mô hình dịch chuyển vị trí (location family) trong ví dụ này, trong khi tổng quát phương sai có điều kiện hoàn toàn có thể là một hàm phụ thuộc vào giá trị của $x$.
 
 <br>
 
