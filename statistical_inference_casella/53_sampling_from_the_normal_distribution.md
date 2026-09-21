@@ -1,6 +1,6 @@
 # 5.3 Sampling From The Normal Distribution
 
-📊 **Progress:** `21` Notes | `29` Screenshots
+📊 **Progress:** `21` Notes | `29` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-lmu32b0"></a>
@@ -34,7 +34,7 @@
 
 > [!NOTE]
 > Rồi, cái này đại khái là, họ nói ta đã biết cách tính mean, và variance (kí
-> hiệu Xbar và S^2) nói chung. Bây giờ, với việc thêm vào gỉa định là ta biết
+> hiệu X̄ và S^2) nói chung. Bây giờ, với việc thêm vào gỉa định là ta biết
 > population distribution thuộc loại normal distribution. Thì ta có thể derive
 > (cho thấy) hoàn  chỉnh distribution của sample mean và sample variance.
 >
@@ -42,7 +42,7 @@
 >
 > Theorem 5.3.1: Đại khái nói là, ta có một random sample X1,X2...Xn từ
 > một population và lần này ta biết nó là normal (μ, σ²). Vì với sample
-> mean Xbar, sample variance S^2 (mà công thức thì ta đã biết từ những
+> mean X̄, sample variance S^2 (mà công thức thì ta đã biết từ những
 > phần trước rồi)
 >
 >
@@ -51,11 +51,11 @@
 >
 >
 >
-> a) Hai cái random variable này, tức Xbar và S^2, **độc lập nhau.**
+> a) Hai cái random variable này, tức X̄ và S^2, **độc lập nhau.**
 >
 >
 >
-> b) Cái sampling distribution của sample mean Xbar chính là **normal (μ,
+> b) Cái sampling distribution của sample mean X̄ chính là **normal (μ,
 > σ²/n)**, tức là cũng chính là cái population distribution.
 >
 >
@@ -76,11 +76,11 @@
 >
 >
 >
-> 2) Ôn lại chút về việc tại sao Sample mean Xbar và sample variance S^2
+> 2) Ôn lại chút về việc tại sao Sample mean X̄ và sample variance S^2
 > lại là random variable (Để rồi ở đây nói chúng độc lập): Thì đó là vì ta đã
 > biết, định nghĩa của chúng, nói ngắn gọn, là, chúng là kết quả của việc ta
 > dùng một function nào đó, để tính toán với các random variable X1,..Xn
-> trong random sample. Cụ thể với Xbar thì nó là Xbar = g1(X1,..Xn) với g1
+> trong random sample. Cụ thể với X̄ thì nó là X̄ = g1(X1,..Xn) với g1
 > có công thức là g1(x1,..xn) = (x1 + x2 + ...xn)/n. Mà ta đã biết khi apply
 > một function lên một (hoặc một đám) random variable thì ta cũng có một
 > random variable mới.
@@ -117,7 +117,7 @@
 >
 >
 >
-> Đại khái là ta sẽ chứng mgf của Xbar có dạng là mgf của normal (μ, σ²/n)
+> Đại khái là ta sẽ chứng mgf của X̄ có dạng là mgf của normal (μ, σ²/n)
 >
 >
 >
@@ -127,15 +127,15 @@
 >
 >
 >
-> ⇨ mgf của Xbar, kí hiệu M_Xbar (t), có bản chất là E[e^tXbar]
+> ⇨ mgf của X̄, kí hiệu M_X̄ (t), có bản chất là E[e^tX̄]
 >
 >
 >
-> Với Xbar  = (Σi Xi)/n, ta có:
+> Với X̄  = (Σi Xi)/n, ta có:
 >
 >
 >
-> E[e^tXbar] = E[e^t((Σi Xi)/n)]
+> E[e^tX̄] = E[e^t((Σi Xi)/n)]
 >
 >
 >
@@ -223,7 +223,7 @@
 >
 >
 > Vậy cái tích trên có thể thay bằng [MX1(t/n)]^n, hay gọi MX() là mgf của
-> population distribution, ta có M_Xbar (t) = [MX(t/n)]^n
+> population distribution, ta có M_X̄ (t) = [MX(t/n)]^n
 >
 >
 >
@@ -233,7 +233,7 @@
 >
 >
 >
-> ⇨ M_Xbar (t) = [MX(t/n)]^n
+> ⇨ M_X̄ (t) = [MX(t/n)]^n
 >
 >
 >
@@ -278,7 +278,7 @@
 >
 >
 >
-> Từ đó có thể kết luận sampling distribution của **sample mean Xbar là
+> Từ đó có thể kết luận sampling distribution của **sample mean X̄ là
 > normal(μ, σ²/n)**
 >
 >
@@ -290,7 +290,7 @@
 
 <a id="node-z2xp2q0"></a>
 
-##### Xbar và S^2 độc lập
+##### X̄ và S^2 độc lập
 
 <p align="center"><kbd><img src="assets/pkzk4o7u59g.png" width="80%"></kbd></p>
 
@@ -299,7 +299,7 @@
 <p align="center"><kbd><img src="assets/0g1eesvavq9d.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Để chứng minh ý b): Xbar và S^2 độc lập, nhìn khá khoai. Nhưng chiến lược
+> Để chứng minh ý b): X̄ và S^2 độc lập, nhìn khá khoai. Nhưng chiến lược
 > hay ý tưởng là dùng cái theorem (..) đã học ở những chương trước nói rằng:
 > nếu như X, Y là hai random variable độc lập thì g(X), h(Y) cũng độc lập nhau.
 > (tức là apply function g và h lên X và Y để có hai random variable mới, thì chúng
@@ -307,8 +307,8 @@
 >
 >
 >
-> Và cụ thể thì ta sẽ cho thấy rằng Y1 = Xbar, sẽ độc lập với Y2,...Yn Và S^2 chỉ
-> là function theo Y2,...Yn ⇨ cũng độc lập với Y1, tức Xbar.
+> Và cụ thể thì ta sẽ cho thấy rằng Y1 = X̄, sẽ độc lập với Y2,...Yn Và S^2 chỉ
+> là function theo Y2,...Yn ⇨ cũng độc lập với Y1, tức X̄.
 >
 >
 >
@@ -316,7 +316,7 @@
 >
 >
 >
-> (Y1 = X1 - Xbar)
+> (Y1 = X1 - X̄)
 >
 >
 >
@@ -324,40 +324,40 @@
 >
 >
 >
-> Σi (Xi - Xbar) = 0 (cái này dễ thấy)
+> Σi (Xi - X̄) = 0 (cái này dễ thấy)
 >
 >
 >
-> (X1 - Xbar) + Σi=2:n (Xi - Xbar) = 0
+> (X1 - X̄) + Σi=2:n (Xi - X̄) = 0
 >
 >
 >
-> ⇔ (X1 - Xbar) = - Σi=2:n (Xi - Xbar)
+> ⇔ (X1 - X̄) = - Σi=2:n (Xi - X̄)
 >
 >
 >
-> ⇨ (X1 - Xbar)^2 = [Σi=2:n (Xi - Xbar)]^2
+> ⇨ (X1 - X̄)^2 = [Σi=2:n (Xi - X̄)]^2
 >
 >
 >
-> S^2 = [1/(n-1)] Σi (Xi - Xbar)^2
+> S^2 = [1/(n-1)] Σi (Xi - X̄)^2
 >
 >
 >
-> = [1/(n-1)] [(X1 - Xbar)^2 + Σi=2:n (Xi - Xbar)^2]
+> = [1/(n-1)] [(X1 - X̄)^2 + Σi=2:n (Xi - X̄)^2]
 >
 >
 >
-> = [1/(n-1)] [[Σi=2:n (Xi - Xbar)]^2 + Σi=2:n (Xi - Xbar)^2]
+> = [1/(n-1)] [[Σi=2:n (Xi - X̄)]^2 + Σi=2:n (Xi - X̄)^2]
 >
 >
 >
-> ⇨ S^2 chỉ là hàm phụ thuộc X2-Xbar,....Xn-Xbar
+> ⇨ S^2 chỉ là hàm phụ thuộc X2-X̄,....Xn-X̄
 >
 >
 >
-> Và sau đó ta sẽ chứng minh các rv này independent với Xbar thì như vậy
-> S^2 là hàm của các biến mà chúng độc lập với Xbar, thì như Y = g(Z) mà Z
+> Và sau đó ta sẽ chứng minh các rv này independent với X̄ thì như vậy
+> S^2 là hàm của các biến mà chúng độc lập với X̄, thì như Y = g(Z) mà Z
 > độc lập với X thì Y độc lập với X
 >
 >
@@ -366,7 +366,7 @@
 >
 >
 >
-> Sau đó đặt Y1 = Xbar, Y2 = X2 - Xbar,....Yn = Xn - Xbar
+> Sau đó đặt Y1 = X̄, Y2 = X2 - X̄,....Yn = Xn - X̄
 >
 >
 >
@@ -421,7 +421,7 @@
 >
 >
 >
-> Y1 = Xbar, Y2 = X2 - Xbar
+> Y1 = X̄, Y2 = X2 - X̄
 >
 >
 >
@@ -518,7 +518,7 @@
 >
 >
 >
-> f**Y**(y1, y2,..yn) = f**X**(x1,x2...xn) | J | = [1/√(2π)]^n e^[(1/2)Σi=1:n -xi^2] n
+> f𝐘(y1, y2,..yn) = f𝐗(x1,x2...xn) | J | = [1/√(2π)]^n e^[(1/2)Σi=1:n -xi^2] n
 >
 >
 >
@@ -630,7 +630,7 @@
 >
 >
 >
-> ⇨ Xbar (=Y1)  cũng độc lập với S^2 (là function của Y2,...Yn)
+> ⇨ X̄ (=Y1)  cũng độc lập với S^2 (là function của Y2,...Yn)
 
 <br>
 
@@ -728,7 +728,7 @@
 >
 >
 >
-> Thì S2^2 = 1/(2-1) [(X1 - Xbar)^2 + (X2 - Xbar)^2] triển khai ra sẽ = (1/2)(X2 - X1)^2
+> Thì S2^2 = 1/(2-1) [(X1 - X̄)^2 + (X2 - X̄)^2] triển khai ra sẽ = (1/2)(X2 - X1)^2
 >
 >
 >
@@ -900,7 +900,7 @@
 >
 >
 > Và vì sao chúng độc lập là vì vế a) của theorem 5.3.1 nói rằng với X1,..Xn là random sample
-> từ normal(μ, σ²) thì Xbar và S^2 độc lập nhau.
+> từ normal(μ, σ²) thì X̄ và S^2 độc lập nhau.
 >
 >
 >
@@ -1376,8 +1376,8 @@
 > [!NOTE]
 > Rồi, đại khái là phần b, giáo sư cho là cũng có thể làm tương tự, là ta sẽ
 > tìm joint pdf của random variable vector (U1,..Uk) và (V1,.. Vm) chú ý
-> (joint pdf của hai random variable vector nhé) tức gọi **U** = (U1,...Uk), 
-> **V** = (V1,...Vm). thì joint pdf của chúng: f**U**,**V**(**u**,**v**)  (viết bold hết để thể hiện
+> (joint pdf của hai random variable vector nhé) tức gọi 𝐔 = (U1,...Uk), 
+> **V** = (V1,...Vm). thì joint pdf của chúng: f𝐔,**V**(**u**,**v**)  (viết bold hết để thể hiện
 > là vector).
 >
 >
@@ -1391,6 +1391,19 @@
 > (có nghĩa là hàm f**X1,X2,...Xn**(**x1**,...**xn**) là function nhận vào bộ vector **x1,..xn**
 > có thể tách thành tích các function gi mà mỗi cái apply riêng lên vector **xi )**
 > thì khi đó các rv Vector **X1,...Xn** là độc lập
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt và giải thích rất chính xác ý tưởng chứng minh trong bài đọc, đặc biệt là việc làm rõ bản chất hàm mật độ đồng thời phân tích thành nhân tử (factorization) để suy ra tính độc lập giữa các vector ngẫu nhiên.
+>
+> **✓ Strengths**
+> - Hiểu đúng và phân biệt rõ ràng giữa biến ngẫu nhiên vô hướng và vector ngẫu nhiên khi xét joint pdf.
+> - Giải thích chuẩn xác định lý phân tích nhân tử (factorization theorem) cho vector ngẫu nhiên nhiều chiều.
+>
+> **💡 Deeper notes**
+> - Đoạn trích còn có ý kết luận quan trọng cho phân phối chuẩn: tính độc lập giữa hai vector U và V tương đương với việc mọi cặp thành phần Ui và Vr độc lập với nhau (hay hiệp phương sai bằng 0).
+> - Định lý phân tích nhân tử thường kèm điều kiện miền xác định (support) phải là tích Descartes của các miền xác định thành phần (với phân phối chuẩn đa biến thì điều này luôn thỏa do support là toàn không gian thực).
 
 **🔗 See also:** [Khái quát tính độc lập biến ngẫu nhiên](./46_multi_variate_distribution.md#node-hvcrd7p)
 
@@ -1442,7 +1455,7 @@
 
 <a id="node-jkt5q0l"></a>
 
-###### Chứng minh độc lập S^2 Xbar
+###### Chứng minh độc lập S^2 X̄
 
 <p align="center"><kbd><img src="assets/hjy1nwe3o2.png" width="80%"></kbd></p>
 
@@ -1452,7 +1465,7 @@
 >
 >
 > Nhưng đại ý là ta có thể dùng bổ đề vừa rồi để chứng minh S^2 độc lập với
-> Xbar theo cách khác nếu như sampling là normal sampling (X1,..Xn là sample
+> X̄ theo cách khác nếu như sampling là normal sampling (X1,..Xn là sample
 > size n từ population ~ normal distrbution)
 >
 >
@@ -1463,23 +1476,23 @@
 >
 >
 >
-> Vậy ở đây Xbar là Σi (1/n)Xi , là một tổ hợp.
+> Vậy ở đây X̄ là Σi (1/n)Xi , là một tổ hợp.
 >
 >
 >
-> Xi  - Xbar cũng vậy, cũng là các tổ hợp tuyến tính của X1,...Xn
+> Xi  - X̄ cũng vậy, cũng là các tổ hợp tuyến tính của X1,...Xn
 >
 >
 >
-> Giáo sư mới chứng minh các Xi  - Xbar đều có covariance = 0 vói Xbar:
+> Giáo sư mới chứng minh các Xi  - X̄ đều có covariance = 0 vói X̄:
 >
 >
 >
-> Cov(X1 - Xbar, Xbar) = 0,...Cov(Xn - Xbar, Xbar) = 0
+> Cov(X1 - X̄, X̄) = 0,...Cov(Xn - X̄, X̄) = 0
 >
 >
 >
-> Từ đó theo bổ đề ta suy ra X1-Xbar độc lập Xbar, X2-Xbar độc lập Xbar, ...
+> Từ đó theo bổ đề ta suy ra X1-X̄ độc lập X̄, X2-X̄ độc lập X̄, ...
 >
 >
 >
@@ -1488,8 +1501,8 @@
 >
 >
 >
-> Nên ở đâu S^2 = là function của (X1 - Xbar, X2 - Xbar,...)
-> nên nó cũng độc lập Xbar
+> Nên ở đâu S^2 = là function của (X1 - X̄, X2 - X̄,...)
+> nên nó cũng độc lập X̄
 
 <br>
 
@@ -1513,7 +1526,7 @@
 >
 >
 > Thế thì để mà chuyển qua phân tích về TÍNH BIẾN ĐỘNG CỦA SAMPLE
-> MEAN Xbar, thì ta cần phải estimate variance σ².
+> MEAN X̄, thì ta cần phải estimate variance σ².
 >
 >
 >
@@ -1525,7 +1538,7 @@
 >
 >
 > Vậy thì giáo sư cho biết, nếu X1.....Xn là random sample từ n(μ, σ²), thì
-> ta đã biết (Xbar - μ) / σ/√n sẽ ~ n(0,1). Tại sao?
+> ta đã biết (X̄ - μ) / σ/√n sẽ ~ n(0,1). Tại sao?
 >
 >
 >
@@ -1540,8 +1553,8 @@
 >
 >
 >
-> Vậy thì trong phần trước mình đã biết rằng, sample mean Xbar, với random
-> sample từ normal(μ, σ²) thì Xbar cũng là normal, nhưng là normal(μ, σ²/n)
+> Vậy thì trong phần trước mình đã biết rằng, sample mean X̄, với random
+> sample từ normal(μ, σ²) thì X̄ cũng là normal, nhưng là normal(μ, σ²/n)
 >
 >
 >
@@ -1560,7 +1573,7 @@
 >
 >
 >
-> nên mới nói Xbar là normal(μ, σ²/n) thì (Xbar - μ) / (σ²/n) sẽ là một normal(0,1)
+> nên mới nói X̄ là normal(μ, σ²/n) thì (X̄ - μ) / (σ²/n) sẽ là một normal(0,1)
 >
 >
 >
@@ -1568,8 +1581,8 @@
 >
 >
 >
-> Thế thì, đại khái là với việc biết (Xbar - μ) / (σ²/n) sẽ là một normal(0,1) thì ta 
-> có thể đo Xbar, và nếu biết σ² (population variance) thì khi đó ta có thể làm cơ
+> Thế thì, đại khái là với việc biết (X̄ - μ) / (σ²/n) sẽ là một normal(0,1) thì ta 
+> có thể đo X̄, và nếu biết σ² (population variance) thì khi đó ta có thể làm cơ
 > sở để SUY LUẬN RA μ (population mean).
 >
 >
@@ -1579,7 +1592,7 @@
 >
 >
 > THÀNH RA, NGHIÊN CỨU CỦA ÔNG STUDENT, sẽ là quan sát distribution của
-> (Xbar - μ) / S/√n (dùng sampling standard deviation thay cho σ). Nhằm làm cơ 
+> (X̄ - μ) / S/√n (dùng sampling standard deviation thay cho σ). Nhằm làm cơ 
 > sở cho việc **suy luận ra μ Mà ko cần biết variance σ**
 
 **🔗 See also:** [Kiểm định LRT cho trung bình](./82_method_of_finding_tests.md#node-ouhenhy)
@@ -1593,7 +1606,7 @@
 <p align="center"><kbd><img src="assets/vcmhn3i47.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì đại ý là distribution của cái này (Xbar - μ) / S/√n thật ra là ko khó để
+> Thế thì đại ý là distribution của cái này (X̄ - μ) / S/√n thật ra là ko khó để
 > derive:
 >
 >
@@ -1602,23 +1615,23 @@
 >
 >
 >
-> (Xbar - μ) / (S/√n)
+> (X̄ - μ) / (S/√n)
 >
 >
 >
-> = (Xbar - μ)/(σ/√n)  /  (S/√n)/(σ/√n) (chia tử và mẫu cho (σ/√n))
+> = (X̄ - μ)/(σ/√n)  /  (S/√n)/(σ/√n) (chia tử và mẫu cho (σ/√n))
 >
 >
 >
-> = (Xbar - μ)/(σ/√n)  /  (S/√n)(√n/σ)
+> = (X̄ - μ)/(σ/√n)  /  (S/√n)(√n/σ)
 >
 >
 >
-> = (Xbar - μ)/(σ/√n)  /  (S/σ)
+> = (X̄ - μ)/(σ/√n)  /  (S/σ)
 >
 >
 >
-> = (Xbar - μ)/(σ/√n)  /  √(S^2/σ²)
+> = (X̄ - μ)/(σ/√n)  /  √(S^2/σ²)
 >
 >
 >
@@ -1662,7 +1675,7 @@
 >
 >
 > Do đó, nếu gọi U là tử, là một n(0,1), và V = χ²_p, thì mẫu là một √(V / p)
-> thì việc tìm distribution của (Xbar - μ) / (S/√n) cũng chỉ là tìm distribution
+> thì việc tìm distribution của (X̄ - μ) / (S/√n) cũng chỉ là tìm distribution
 > của U/√(V/p). Và quan trọng là U, V độc lập.
 >
 >
@@ -1689,7 +1702,7 @@
 >
 >
 >
-> cái quantity (cái random variable có được từ) (Xbar - μ) / S/√n sẽ là 
+> cái quantity (cái random variable có được từ) (X̄ - μ) / S/√n sẽ là 
 > một STUDENT's t  distribution, với n - 1 degree of freedom.
 >
 >
