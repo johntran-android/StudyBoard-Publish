@@ -2721,7 +2721,7 @@
 >
 >
 >
-> Áp dụng vào đây với **x** = (xbar1, xbar2,...xbarp)
+> Áp dụng vào đây với **x** = (x̄1, x̄2,...x̄p)
 >
 >
 >
