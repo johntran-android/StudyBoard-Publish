@@ -1,6 +1,6 @@
 # 5.2 Σ Of Random Variables From A Random Sample
 
-📊 **Progress:** `18` Notes | `26` Screenshots
+📊 **Progress:** `18` Notes | `26` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-ii9obi5"></a>
@@ -959,7 +959,7 @@
 >
 >
 >
-> Ta cần chứng minh **fXbar(x) = nfX1+X2+...Xn(nx)**
+> Ta cần chứng minh **fX̄(x) = nfX1+X2+...Xn(nx)**
 >
 >
 >
@@ -1009,7 +1009,7 @@
 >
 >
 >
-> Vậy tới đây ta có F_Xbar(x) = F_Y(nx) = F_X1+X2+...Xn (nx) (1)
+> Vậy tới đây ta có F_X̄(x) = F_Y(nx) = F_X1+X2+...Xn (nx) (1)
 >
 >
 >
@@ -1194,6 +1194,25 @@
 >
 >
 > **chính là MY(t/n)**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú giải thích rất trực quan, chính xác và sâu sắc về bản chất của sampling distribution cũng như phép biến đổi MGF của trung bình mẫu thông qua tổng mẫu.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"nó là một hàm số phụ thuộc các random variance X1,...Xn."*
+>
+> Lỗi nhầm thuật ngữ/gõ nhầm (typo) giữa 'random variables' (biến ngẫu nhiên) và 'random variance' (phương sai ngẫu nhiên), dù ngay câu tiếp theo bạn đã dùng lại đúng từ 'random variable'.
+>
+>
+> **✓ Strengths**
+> - Giải thích rất sáng tỏ khái niệm sampling distribution xuất phát từ việc áp dụng một hàm lên các biến ngẫu nhiên trong mẫu ngẫu nhiên.
+> - Lập luận chặt chẽ và trực quan về bản chất MGF là một hàm theo t và cách chuyển đổi M_Xbar(t) = M_Y(t/n).
+>
+> **💡 Deeper notes**
+> - Về mặt lý thuyết xác suất chặt chẽ, kỳ vọng E[e^(tX)] không phải lúc nào cũng tồn tại với mọi t; hàm MGF chỉ được xem là tồn tại nếu kỳ vọng này hữu hạn trên một khoảng mở quanh t = 0.
 
 <br>
 
@@ -2040,7 +2059,7 @@
 > TRỌNG, VÌ NÓ CHỈ LÀ DUMMIES NAME, nói về một hàm số, thì công thức
 > của nó, tức là nó làm gì với input đưa vô mới quan trọng. Nên kể cả ta nói là
 > fXbar(z) = [(z - μ)/σ]^2 / σ vẫn đúng chả sao cả, vì nó vẫn thể hiện là: à với z
-> bằng này, thì bỏ vô hàm pdf của Xbar nó sẽ cho ra kết quả bằng [(z - μ)/σ]^2 /
+> bằng này, thì bỏ vô hàm pdf của X̄ nó sẽ cho ra kết quả bằng [(z - μ)/σ]^2 /
 > σ).
 >
 >
@@ -2068,7 +2087,7 @@
 >
 >
 >
-> Lúc này, ta ko cần phải tìm pdf của Xbar mà chỉ cần áp dụng kết quả trên:
+> Lúc này, ta ko cần phải tìm pdf của X̄ mà chỉ cần áp dụng kết quả trên:
 >
 >
 >
@@ -2229,6 +2248,30 @@
 > (dispersion) của sample mean (vì variance vẫn mãi là inf, thể hiện bởi scale param
 > là σ) trong khi đó với các distribution khác ví dụ như normal, thì càng nhiều mẫu,
 > sẽ càng giảm variance của Xbar (vì áp dụng được theorem VarXbar  = σ² / n
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú thể hiện sự hiểu biết sâu sắc và chính xác về bản chất của họ phân phối vị trí - tỉ lệ (location-scale family) áp dụng cho biến trung bình mẫu, cũng như sự tương phản giữa phân phối Cauchy và các phân phối có phương sai hữu hạn. Tồn tại một điểm chưa chuẩn xác về mặt thuật ngữ khi gọi phương sai của Cauchy là 'vô hạn' thay vì 'không tồn tại'.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Sự thật variance của Cauchy là infinity và σ, như đã nói, chỉ là scale parameter"*
+>
+> Về mặt toán học chuẩn xác, kỳ vọng và phương sai của phân phối Cauchy không tồn tại (undefined / does not exist) do tích phân phân kỳ ở cả hai phía (không hội tụ tuyệt đối), chứ không phải bằng vô cùng (+∞).
+>
+> **2.** *"Tức là Xbar = σ² / n. thì population variance σ² là gì?"*
+>
+> Lỗi viết nhầm (typo) ký hiệu: ý người học muốn viết là 'Var(Xbar) = σ² / n' chứ không phải 'Xbar = σ² / n'.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ và diễn giải rành mạch cách chuyển đổi hàm mật độ xác suất (pdf) của trung bình mẫu thông qua phép biến đổi tuyến tính trong họ vị trí - tỉ lệ.
+> - Nắm vững bản chất rằng tham số σ trong Cauchy(μ, σ) là tham số tỉ lệ (scale parameter) đo độ phân tán chứ không phải độ lệch chuẩn (standard deviation).
+> - Phân tích xuất sắc sự tương phản: trung bình mẫu của Cauchy giữ nguyên độ phân tán σ dù cỡ mẫu n tăng bao nhiêu chăng nữa, trái ngược với định lý phương sai thu hẹp σ²/n khi phương sai hữu hạn.
+>
+> **💡 Deeper notes**
+> - Sự không tồn tại của kỳ vọng và phương sai ở phân phối Cauchy xuất phát từ đuôi rất nặng (heavy tails, tỉ lệ nghịch với x²), dẫn đến định luật số lớn (LLN) và định lý giới hạn trung tâm (CLT) hoàn toàn không áp dụng được.
 
 <br>
 
