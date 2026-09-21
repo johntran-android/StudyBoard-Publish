@@ -18,7 +18,7 @@
 >
 >
 >
-> Thế thì vì lí do đó, nên mới nói là khi ta đi evaluate chất lượng của một estimator, thì dĩ nhiên sự đánh giá này cũng đang dựa trên giả định trên. Mà giả định thì có thể sai. Cho nên ý chính muốn nói là, giả sử ta tìm ra W1(**X**) là một estimator rất tốt cho θ, và nó là cái tốt nhất, nên nó ngon hơn W2(**X**) Nhưng hóa ra giả định là sai, mà sự thật là, nếu dựa trên giả định đúng, thì W2(X) mới là cái tốt hơn.
+> Thế thì vì lí do đó, nên mới nói là khi ta đi evaluate chất lượng của một estimator, thì dĩ nhiên sự đánh giá này cũng đang dựa trên giả định trên. Mà giả định thì có thể sai. Cho nên ý chính muốn nói là, giả sử ta tìm ra W1(𝐗) là một estimator rất tốt cho θ, và nó là cái tốt nhất, nên nó ngon hơn W2(𝐗) Nhưng hóa ra giả định là sai, mà sự thật là, nếu dựa trên giả định đúng, thì W2(X) mới là cái tốt hơn.
 >
 >
 >
@@ -30,7 +30,7 @@
 >
 >
 >
-> Vậy hình dung thế này, W1(**X**), như đã nói, là cái tốt nhất dựa trên các tiêu chí tối ưu, và cái W2(**X**) chỉ xếp sau. Tuy nhiên, nếu giả định là sai, thì estimate của W1(**X**) là thảm họa, tụt dốc không phanh, trong khi đó, nếu giả định là sai, thì W2(**X**) vẫn là một estimator không đến nỗi nào. Khi đó, người ta sẽ cân nhắc việc dùng W2(**X**) thay vì W1(**X**), và như vậy, ta hi sinh chút tính chất optimality nhưng đổi lại được tính chất "chống chọi với giả định sai". Và tính chất này, người ta gọi là Robustness.
+> Vậy hình dung thế này, W1(𝐗), như đã nói, là cái tốt nhất dựa trên các tiêu chí tối ưu, và cái W2(𝐗) chỉ xếp sau. Tuy nhiên, nếu giả định là sai, thì estimate của W1(𝐗) là thảm họa, tụt dốc không phanh, trong khi đó, nếu giả định là sai, thì W2(𝐗) vẫn là một estimator không đến nỗi nào. Khi đó, người ta sẽ cân nhắc việc dùng W2(𝐗) thay vì W1(𝐗), và như vậy, ta hi sinh chút tính chất optimality nhưng đổi lại được tính chất "chống chọi với giả định sai". Và tính chất này, người ta gọi là Robustness.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -74,11 +74,11 @@
 <p align="center"><kbd><img src="assets/8286i3qtyc3.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Câu hỏi đặt ra là, sample mean Xbar (như đã biết, là một trong những estimator quan trọng nhất) có roburst không. Thì gs nói rằng để trả lời, ta phải có thước đo độ robusrt mới được.
+> Câu hỏi đặt ra là, sample mean X̄ (như đã biết, là một trong những estimator quan trọng nhất) có roburst không. Thì gs nói rằng để trả lời, ta phải có thước đo độ robusrt mới được.
 >
 >
 >
-> Lấy ví dụ ta có X1,...Xn iid \~ normal(μ, σ²), thì đại khái là, như ta còn nhớ, với Xbar, thì ta có công thức cho variance của nó: Var(Xbar) = populaton variance/n, và ở đây, với population variance là σ² thì Var(Xbar) = σ²/n (chú ý, công thức này, đúng với cả các population khác)
+> Lấy ví dụ ta có X1,...Xn iid \~ normal(μ, σ²), thì đại khái là, như ta còn nhớ, với X̄, thì ta có công thức cho variance của nó: Var(X̄) = populaton variance/n, và ở đây, với population variance là σ² thì Var(X̄) = σ²/n (chú ý, công thức này, đúng với cả các population khác)
 >
 >
 >
@@ -90,11 +90,11 @@
 >
 >
 >
-> CRLB theorem nói rằng, với W(**X**), là estimator thỏa điều kiện (xem trong link của theorem) thì ta có:
+> CRLB theorem nói rằng, với W(𝐗), là estimator thỏa điều kiện (xem trong link của theorem) thì ta có:
 >
 >
 >
-> Var(W(**X**)) ≥ \[∂/∂θ Eθ\[W(**X**)\]^2 / nI1(θ)
+> Var(W(𝐗)) ≥ \[∂/∂θ Eθ\[W(𝐗)\]^2 / nI1(θ)
 >
 >
 >
@@ -102,11 +102,11 @@
 >
 >
 >
-> Áp dụng vào đây, W(**X**) là Xbar
+> Áp dụng vào đây, W(𝐗) là X̄
 >
 >
 >
-> Eθ\[W(**X**)\] = Eμ\[W(**X**)\] = μ ⇒ d/dμ Eμ\[W(**X**)\] = 1
+> Eθ\[W(𝐗)\] = Eμ\[W(𝐗)\] = μ ⇒ d/dμ Eμ\[W(𝐗)\] = 1
 >
 >
 >
@@ -170,7 +170,7 @@
 >
 >
 >
-> Vậy CRLB ở đây = \[∂/∂θ Eθ\[W(**X**)\]^2 / nI1(θ) = 1/n(1/σ²)
+> Vậy CRLB ở đây = \[∂/∂θ Eθ\[W(𝐗)\]^2 / nI1(θ) = 1/n(1/σ²)
 >
 >
 >
@@ -178,7 +178,7 @@
 >
 >
 >
-> Như vậy đúng là Var(Xbar) đạt Cramer Rao Lower Bound.
+> Như vậy đúng là Var(X̄) đạt Cramer Rao Lower Bound.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -204,7 +204,7 @@
 >
 >
 >
-> Đoạn này đại khái là xét qua đặc tính thứ hai: Rằng liệu là Xbar có thỏa tính chất là khi giả định ban đầu sai, thì sự ảnh hưởng sẽ chỉ nhỏ thôi. Thì để làm vậy, đầu tiên ta sẽ định nghĩa cụ thể hơn cái đặc tính trên là như thế nào cái đã.
+> Đoạn này đại khái là xét qua đặc tính thứ hai: Rằng liệu là X̄ có thỏa tính chất là khi giả định ban đầu sai, thì sự ảnh hưởng sẽ chỉ nhỏ thôi. Thì để làm vậy, đầu tiên ta sẽ định nghĩa cụ thể hơn cái đặc tính trên là như thế nào cái đã.
 >
 >
 >
@@ -220,7 +220,7 @@
 >
 >
 >
-> Khi đó Var(Xbar) sẽ là theo công thức (1-δ)σ²/n + δτ²/n + δ(1-δ)(θ-μ)^2/n
+> Khi đó Var(X̄) sẽ là theo công thức (1-δ)σ²/n + δτ²/n + δ(1-δ)(θ-μ)^2/n
 >
 >
 >
@@ -364,11 +364,11 @@
 >
 >
 >
-> Và Var(Xbar) luôn = Var(Xi) / n
+> Và Var(X̄) luôn = Var(Xi) / n
 >
 >
 >
-> ⇒ Var(Xbar) = (1-δ) σ²/n + δ τ²/n + (1 - δ) δ (θ - μ)^2/n
+> ⇒ Var(X̄) = (1-δ) σ²/n + δ τ²/n + (1 - δ) δ (θ - μ)^2/n
 >
 >
 >
@@ -378,7 +378,7 @@
 >
 >
 >
->  Thế thì đại ý là, khi θ ≈ μ và τ² ≈ σ² thì Var(Xbar), với công thức trên sẽ là:
+>  Thế thì đại ý là, khi θ ≈ μ và τ² ≈ σ² thì Var(X̄), với công thức trên sẽ là:
 >
 >
 >
@@ -390,11 +390,11 @@
 >
 >
 >
-> = σ²/n = Var(Xbar) ban đâù. Có nghĩa là, nếu như vì lí do nào đó, giả định mô hình (rằng Xi \~ n(μ, σ²)) là sai, thì trong trường hợp mà phân phối xác suất thật sự của Xi khi đó có mean và variance không khác mấy so với giả định ban đầu (chỉ là nó không phải là normal thôi). Thì khi đó, variance của Xbar vẫn là σ²/n, tức là nó vẫn là efficient estimator (do variance đạt mức nhỏ nhất - CRLB)
+> = σ²/n = Var(X̄) ban đâù. Có nghĩa là, nếu như vì lí do nào đó, giả định mô hình (rằng Xi \~ n(μ, σ²)) là sai, thì trong trường hợp mà phân phối xác suất thật sự của Xi khi đó có mean và variance không khác mấy so với giả định ban đầu (chỉ là nó không phải là normal thôi). Thì khi đó, variance của X̄ vẫn là σ²/n, tức là nó vẫn là efficient estimator (do variance đạt mức nhỏ nhất - CRLB)
 >
 >
 >
-> Tuy nhiên, chỉ cần f(x) là Cauchy, thì τ² lập tức là ∞ (đây là tính chất của Cauchy). khi đó, dù xác suất rất nhỏ δ, và n rất lớn, cũng không thể ngăn δ τ²/n biến thành con số rất lớn → Var(Xbar) trở nên rất lớn, không còn là một efficient estimator nữa.
+> Tuy nhiên, chỉ cần f(x) là Cauchy, thì τ² lập tức là ∞ (đây là tính chất của Cauchy). khi đó, dù xác suất rất nhỏ δ, và n rất lớn, cũng không thể ngăn δ τ²/n biến thành con số rất lớn → Var(X̄) trở nên rất lớn, không còn là một efficient estimator nữa.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -444,7 +444,7 @@
 >
 >
 >
-> {(1-b)n} là ta tính giá trị của (1-b)n, và làm tròn về giá trị nguyên gần nhất. Ví dụ 7.2 thì {7.2} = 7, và X{7} là cái 7'th order statistic, tức là ta sẽ là cái statistic có được bằng cách áp hàm sau đây vào sample **X**: X{7} = lấy ra thằng nhỏ thứ 7 của đám X1,...Xn, hay xếp giá trị của X1,....Xn từ nhỏ đến lớn, rồi đưa cho tao thằng thứ 7 (nói như vậy có thể thấy nó là một hàm số).
+> {(1-b)n} là ta tính giá trị của (1-b)n, và làm tròn về giá trị nguyên gần nhất. Ví dụ 7.2 thì {7.2} = 7, và X{7} là cái 7'th order statistic, tức là ta sẽ là cái statistic có được bằng cách áp hàm sau đây vào sample 𝐗: X{7} = lấy ra thằng nhỏ thứ 7 của đám X1,...Xn, hay xếp giá trị của X1,....Xn từ nhỏ đến lớn, rồi đưa cho tao thằng thứ 7 (nói như vậy có thể thấy nó là một hàm số).
 >
 >
 >
@@ -478,7 +478,7 @@
 >
 >
 >
-> Vậy với sample mean, chỉ cần 1 sample nào đó lớn vô cùng thì Xbar sẽ lớn vô cùng, nên tỉ lệ lớn nhất mà nó chịu được chỉ là 0. Vì ví dụ X1,...X10. thì dù chỉ một thằng X10 bị kéo ra ∞ thì cũng đủ để Xbar tạch (lớn lên vô cùng), nên tỉ lệ mà nó chịu được chỉ là 0%
+> Vậy với sample mean, chỉ cần 1 sample nào đó lớn vô cùng thì X̄ sẽ lớn vô cùng, nên tỉ lệ lớn nhất mà nó chịu được chỉ là 0. Vì ví dụ X1,...X10. thì dù chỉ một thằng X10 bị kéo ra ∞ thì cũng đủ để X̄ tạch (lớn lên vô cùng), nên tỉ lệ mà nó chịu được chỉ là 0%
 >
 >
 >
@@ -614,7 +614,7 @@
 >
 >
 >
-> Thế thì, theo Central Limit Theorem, nếu ta có X1,...Xn , có mean μ, variance σ². Thì khi n → ∞ P(√n(Xbar - μ)/σ ≤ x), tức cdf √n(Xbar - μ)/σ tại x của sẽ converge về Φ(x), tức P(Z ≤ x) với Z là standard normal variable. (đây gọi là converge in distribution: √n(Xbar - μ)/σ → (d) n(0,1)
+> Thế thì, theo Central Limit Theorem, nếu ta có X1,...Xn , có mean μ, variance σ². Thì khi n → ∞ P(√n(X̄ - μ)/σ ≤ x), tức cdf √n(X̄ - μ)/σ tại x của sẽ converge về Φ(x), tức P(Z ≤ x) với Z là standard normal variable. (đây gọi là converge in distribution: √n(X̄ - μ)/σ → (d) n(0,1)
 >
 >
 >
@@ -740,7 +740,7 @@
 >
 >
 >
-> Nên ARE(Mn,Xbar_n) = Avar(Xbar_n)/Avar(Mn)
+> Nên ARE(Mn,X̄_n) = Avar(X̄_n)/Avar(Mn)
 >
 >
 >
@@ -748,7 +748,7 @@
 >
 >
 >
-> Chú ý,  ARE(Mn,Xbar_n) = Avar(Xbar_n)/Avar(Mn) càng lớn chứng tỏ Avar của sample median càng vượt trội Avar(sample mean) và cho thấy sample median tốt hơn.
+> Chú ý,  ARE(Mn,X̄_n) = Avar(X̄_n)/Avar(Mn) càng lớn chứng tỏ Avar của sample median càng vượt trội Avar(sample mean) và cho thấy sample median tốt hơn.
 >
 >
 >
@@ -782,11 +782,11 @@
 >
 >
 >
-> Ví dụ, nổi tiếng nhất, chính là MLE, như đã biết, chính là ta đi giải bài toán tối ưu: maximize (over θ) L(θ|**x**) = f(**x**|θ) = Πi f(xi|θ), để có được ML estimator θ^(**X**) của θ, để rồi với observed value **X** = **x**, θ^(**x**) sẽ là giá trị của θ có độ hợp lí cao nhất giải thích cho việc quan sát được data mang gía trị này.
+> Ví dụ, nổi tiếng nhất, chính là MLE, như đã biết, chính là ta đi giải bài toán tối ưu: maximize (over θ) L(θ|𝐱) = f(𝐱|θ) = Πi f(xi|θ), để có được ML estimator θ^(𝐗) của θ, để rồi với observed value 𝐗 = 𝐱, θ^(𝐱) sẽ là giá trị của θ có độ hợp lí cao nhất giải thích cho việc quan sát được data mang gía trị này.
 >
 >
 >
-> Bên cạnh đó, sample mean Xbar, hay diễn ta rằng nó cũng là một estimator, là hàm của sample, ta viết Xbar(**X**). Thì thật ra nó cũng là kết quả của bài toán tối ưu sau: minimize (over W) Σi (W - Xi)^2. Cái này dễ thấy, dùng ngôn ngữ tối ưu, đây là bài toán tối ưu hàm quadratic function của W, là bài toán lồi. Dùng đìều kiện tối ưu bậc một ta có d/dW \[Σi (W - Xi)^2\] = 0 ⇔ Σi \[d/dW (W - Xi)^2\] = 0 ⇔ Σi \[2(W - Xi)\] = 0 ⇔ nW - ΣiXi = 0 ⇔ W = (ΣiXi)/n chính là sample mean Xbar(**X**)
+> Bên cạnh đó, sample mean X̄, hay diễn ta rằng nó cũng là một estimator, là hàm của sample, ta viết X̄(𝐗). Thì thật ra nó cũng là kết quả của bài toán tối ưu sau: minimize (over W) Σi (W - Xi)^2. Cái này dễ thấy, dùng ngôn ngữ tối ưu, đây là bài toán tối ưu hàm quadratic function của W, là bài toán lồi. Dùng đìều kiện tối ưu bậc một ta có d/dW \[Σi (W - Xi)^2\] = 0 ⇔ Σi \[d/dW (W - Xi)^2\] = 0 ⇔ Σi \[2(W - Xi)\] = 0 ⇔ nW - ΣiXi = 0 ⇔ W = (ΣiXi)/n chính là sample mean X̄(𝐗)
 >
 >
 >
@@ -858,19 +858,19 @@
 >
 >
 >
-> Phải nói chút xíu chỗ này: Nên nhớ, sample mean, sample median đều là estimator, là function của sample W(**X**), với W là hàm số nào đó. Và như đã nói ở note trước, chúng thực chất là kết quả của việc giải bài toán tối ưu với tiêu chí khác nhau. Nên cụ thể là với sample mean, W(**X**) = (Σi Xi)/n, cũng được, mà ghi là argmin_W {Σi (W - Xi)^2} cũng được luôn.
+> Phải nói chút xíu chỗ này: Nên nhớ, sample mean, sample median đều là estimator, là function của sample W(𝐗), với W là hàm số nào đó. Và như đã nói ở note trước, chúng thực chất là kết quả của việc giải bài toán tối ưu với tiêu chí khác nhau. Nên cụ thể là với sample mean, W(𝐗) = (Σi Xi)/n, cũng được, mà ghi là argmin_W {Σi (W - Xi)^2} cũng được luôn.
 >
 >
 >
-> Tương tự, với sample median thì cái hàm đó là W(**X**) = argmin_W {Σi |W - Xi|}.
+> Tương tự, với sample median thì cái hàm đó là W(𝐗) = argmin_W {Σi |W - Xi|}.
 >
 >
 >
-> Tương tự, Huber loss, nó là W(**X**) = argmin_W {Σi ρ(W - Xi)}
+> Tương tự, Huber loss, nó là W(𝐗) = argmin_W {Σi ρ(W - Xi)}
 >
 >
 >
-> Rồi, dù là sample mean / median hay Huber estimator, vì đều chỉ là các hàm của **X**, nên khi có observed value của **X**, = **x**, ta có observed value của 3 cái estimator này, lần lượt là:
+> Rồi, dù là sample mean / median hay Huber estimator, vì đều chỉ là các hàm của 𝐗, nên khi có observed value của 𝐗, = 𝐱, ta có observed value của 3 cái estimator này, lần lượt là:
 >
 >
 >
@@ -912,7 +912,7 @@
 >
 >
 >
-> (trong sách ghi mininize Σi ρ(xi - θ), theo mình là dễ gây nhầm lẫn khi dùng θ làm biến tối ưu, nên ghi là mininize Σi ρ(xi - a) hay mininize Σi ρ(xi - W), giải ra sẽ có được một hàm theo **x**. Còn không thì ta phải hiểu θ ở đây là biến tối ưu, mà solution của bài toán tối ưu này là sẽ là estimator cho θ)
+> (trong sách ghi mininize Σi ρ(xi - θ), theo mình là dễ gây nhầm lẫn khi dùng θ làm biến tối ưu, nên ghi là mininize Σi ρ(xi - a) hay mininize Σi ρ(xi - W), giải ra sẽ có được một hàm theo 𝐱. Còn không thì ta phải hiểu θ ở đây là biến tối ưu, mà solution của bài toán tối ưu này là sẽ là estimator cho θ)
 >
 >
 >
@@ -932,7 +932,7 @@
 >
 >
 >
-> cũng là maximize ln Πi f(xi|θ), nhờ tính iid, nên đây chính là maximize ln L(θ|**x**), và do đó solution của nó chính là MLE.
+> cũng là maximize ln Πi f(xi|θ), nhờ tính iid, nên đây chính là maximize ln L(θ|𝐱), và do đó solution của nó chính là MLE.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -950,7 +950,7 @@
 <p align="center"><kbd><img src="assets/dh5vg0eoajn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, qua đây, đầu tiên cần nhận định là đoạn này ông Casella muốn làm gì: Chính là muốn tìm phương sai tiệm cận của cái M-estimator (là cái estimator có công thức: W(**x**) = argmin_W Σi ρ(xi - W)) mà ta đã nói ở trên, và làm vậy để làm gì, thì câu trả để mà đánh giá tính tối ưu của nó thôi (ví dụ như khi tính ARE, giúp so sánh hai estimator, thì ta cần có phương sai tiệm cận Avar)
+> Rồi, qua đây, đầu tiên cần nhận định là đoạn này ông Casella muốn làm gì: Chính là muốn tìm phương sai tiệm cận của cái M-estimator (là cái estimator có công thức: W(𝐱) = argmin_W Σi ρ(xi - W)) mà ta đã nói ở trên, và làm vậy để làm gì, thì câu trả để mà đánh giá tính tối ưu của nó thôi (ví dụ như khi tính ARE, giúp so sánh hai estimator, thì ta cần có phương sai tiệm cận Avar)
 >
 >
 >
@@ -966,7 +966,7 @@
 >
 >
 >
-> Đơn giản thôi, W, hay W(**x**), = argmin_W Σi ρ(xi - W)) thì cũng có nghĩa là W là nghiệm của bài toán minimize ρ(xi - W). Đây là bài toán tối ưu không ràng buộc (unconstraint optimization problem), và áp dụng điều cần kiện tối ưu bậc nhất sẽ cho ta ứng cử viên có solution (mà nếu hàm số là hàm convex thì có thể kết luận luôn nghiệm):
+> Đơn giản thôi, W, hay W(𝐱), = argmin_W Σi ρ(xi - W)) thì cũng có nghĩa là W là nghiệm của bài toán minimize ρ(xi - W). Đây là bài toán tối ưu không ràng buộc (unconstraint optimization problem), và áp dụng điều cần kiện tối ưu bậc nhất sẽ cho ta ứng cử viên có solution (mà nếu hàm số là hàm convex thì có thể kết luận luôn nghiệm):
 >
 >
 >
@@ -986,7 +986,7 @@
 >
 >
 >
-> (trong sách dùng θ (Σi ψ(xi - θ) = 0) mình dùng W, cái nào cũng được, vì đây chỉ là tên biến tối ưu, muốn dùng a, b, c, gì cũng được, tuy nhiên mình sẽ dùng θ cho giống trong sách trong phần chứng minh, nhưng cần nhấn mạnh là xài W, a, á ớ gì cũng được vì chỉ là tên biến, cuối cùng vẫn là một hàm số của sample **X**, tức là một estimator.)
+> (trong sách dùng θ (Σi ψ(xi - θ) = 0) mình dùng W, cái nào cũng được, vì đây chỉ là tên biến tối ưu, muốn dùng a, b, c, gì cũng được, tuy nhiên mình sẽ dùng θ cho giống trong sách trong phần chứng minh, nhưng cần nhấn mạnh là xài W, a, á ớ gì cũng được vì chỉ là tên biến, cuối cùng vẫn là một hàm số của sample 𝐗, tức là một estimator.)
 >
 >
 >
@@ -998,7 +998,7 @@
 >
 >
 >
-> Đầu tiên, theo cách thức tương tự như khi chứng minh theorem 10.1.12, trong đó ta chứng minh phương sai tiệm cận của MLE đạt mức nhỏ nhất (Cramer Rao Lower Bound), từ đó kết luận MLE thỏa định nghĩa của cái gọi là estimator hiệu quả tiệm cận (asymptotically efficient). Thì đầu tiên trong bước chứng minh đó, ta xấp xỉ bậc 1 hàm \[∂/∂θ log likelihood l(θ|**X**)\] (tức đạo hàm của log likelihood): Với θ ≈ θ0, định lý Taylor cho phép ta coi hành vi của hàm l'(θ) ≈ l'(θ0) + l''(θ0)(θ - θ0). Và với lập luận rằng θ^ là một consistent estimator của θ0, nên khi n tăng lên vô cùng, θ^ sẽ tiến sát tới θ0, cho phép ta áp dụng cái xấp xỉ trên với θ^: l'(θ^) ≈ l'(θ0) + l''(θ0)(θ^ - θ0). Và vì θ^ là MLE, là nghiệm của bài toán minimize log likelihood l(θ|**X**), nên đương nhiên nó thỏa điều kiện cần bậc nhất: l'(θ^) = 0, giúp ta có l'(θ0) + l''(θ0)(θ^ - θ0), và từ đó chuyển vế đổi dấu, nhân thêm √n hai vế, ta sẽ có √n(θ^ - θ) xuất hiện ở bên trái. Và thực hiện cái bước tiếp theo áp dụng CLT và WLLN ta sẽ có phương sai tiệm cận của θ^.
+> Đầu tiên, theo cách thức tương tự như khi chứng minh theorem 10.1.12, trong đó ta chứng minh phương sai tiệm cận của MLE đạt mức nhỏ nhất (Cramer Rao Lower Bound), từ đó kết luận MLE thỏa định nghĩa của cái gọi là estimator hiệu quả tiệm cận (asymptotically efficient). Thì đầu tiên trong bước chứng minh đó, ta xấp xỉ bậc 1 hàm \[∂/∂θ log likelihood l(θ|𝐗)\] (tức đạo hàm của log likelihood): Với θ ≈ θ0, định lý Taylor cho phép ta coi hành vi của hàm l'(θ) ≈ l'(θ0) + l''(θ0)(θ - θ0). Và với lập luận rằng θ^ là một consistent estimator của θ0, nên khi n tăng lên vô cùng, θ^ sẽ tiến sát tới θ0, cho phép ta áp dụng cái xấp xỉ trên với θ^: l'(θ^) ≈ l'(θ0) + l''(θ0)(θ^ - θ0). Và vì θ^ là MLE, là nghiệm của bài toán minimize log likelihood l(θ|𝐗), nên đương nhiên nó thỏa điều kiện cần bậc nhất: l'(θ^) = 0, giúp ta có l'(θ0) + l''(θ0)(θ^ - θ0), và từ đó chuyển vế đổi dấu, nhân thêm √n hai vế, ta sẽ có √n(θ^ - θ) xuất hiện ở bên trái. Và thực hiện cái bước tiếp theo áp dụng CLT và WLLN ta sẽ có phương sai tiệm cận của θ^.
 >
 >
 >
@@ -1082,11 +1082,11 @@
 >
 >
 >
-> √n (θ^M(**x**) - θ0) ≈ - (1/√n) Σi ψ(xi - θ0) / \[(1/n) Σi ψ'(xi - θ0)\] để thể hiện vế trái, vẫn chỉ là hàm số theo **x**, do θ^M về bản chất vẫn là hàm số theo **x**.
+> √n (θ^M(𝐱) - θ0) ≈ - (1/√n) Σi ψ(xi - θ0) / \[(1/n) Σi ψ'(xi - θ0)\] để thể hiện vế trái, vẫn chỉ là hàm số theo 𝐱, do θ^M về bản chất vẫn là hàm số theo 𝐱.
 >
 >
 >
-> Và khi thay **x** bởi sample **X**, ta sẽ có vế trái với tư cách là một statistic, √n (θ^M(**X**) - θ0) và vế phải cũng là hai cái statistic chia nhau: 
+> Và khi thay 𝐱 bởi sample 𝐗, ta sẽ có vế trái với tư cách là một statistic, √n (θ^M(𝐗) - θ0) và vế phải cũng là hai cái statistic chia nhau: 
 >
 >
 >
@@ -1128,7 +1128,7 @@
 >
 >
 >
-> √n (θ^M(**x**) - θ0) ≈ - (1/√n) Σi ψ(xi - θ0) / \[(1/n) Σi ψ'(xi - θ0)\]
+> √n (θ^M(𝐱) - θ0) ≈ - (1/√n) Σi ψ(xi - θ0) / \[(1/n) Σi ψ'(xi - θ0)\]
 >
 >
 >
@@ -1136,7 +1136,7 @@
 >
 >
 >
-> √n (θ^M(**X**) - θ0) ≈ - (1/√n) Σi ψ(Xi - θ0) / \[(1/n) Σi ψ'(Xi - θ0)\]
+> √n (θ^M(𝐗) - θ0) ≈ - (1/√n) Σi ψ(Xi - θ0) / \[(1/n) Σi ψ'(Xi - θ0)\]
 >
 >
 >
@@ -1263,7 +1263,7 @@
 >
 >
 >
-> Nên theo WLLN, Xbar sẽ hội tụ xác suất về true mean, ta có:
+> Nên theo WLLN, X̄ sẽ hội tụ xác suất về true mean, ta có:
 >
 >
 >
