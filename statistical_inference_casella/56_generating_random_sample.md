@@ -1259,11 +1259,11 @@
 >
 >
 >
-> Rồi, giờ xét Xbar = (X1+..Xn)/n = Y/n
+> Rồi, giờ xét X̄ = (X1+..Xn)/n = Y/n
 >
 >
 >
-> Thì MXbar(t) = MY/n(t) = E[e^t(Y/n)]. Vì sao, vì khi đã hiểu bản chất của hàm
+> Thì MX̄(t) = MY/n(t) = E[e^t(Y/n)]. Vì sao, vì khi đã hiểu bản chất của hàm
 > mgf, thì ta cứ theo đó mà làm thôi: mgf của random variable (Y/n) là: apply hàm
 > g(u) = e^tu lên nó để có e^t(Y/n), rồi lấy kì vọng E[e^t(Y/n)]
 >
@@ -1274,7 +1274,7 @@
 >
 >
 >
-> Vậy ⇨ MXbar(t) = MY(t/n)
+> Vậy ⇨ MX̄(t) = MY(t/n)
 >
 >
 >
@@ -1282,7 +1282,7 @@
 >
 >
 >
-> Kết luận: MXbar(t) = [MX(t/n)]^n
+> Kết luận: MX̄(t) = [MX(t/n)]^n
 >
 >
 >
@@ -1299,12 +1299,12 @@
 >
 >
 >
-> Còn Xbar? MXbar(t) = [MX(t/n)]^n = MY(t/n) = e^[λn(e^(t/n)-1)] chưa thể giúp
-> kết luận về distribution của Xbar.
+> Còn X̄? MX̄(t) = [MX(t/n)]^n = MY(t/n) = e^[λn(e^(t/n)-1)] chưa thể giúp
+> kết luận về distribution của X̄.
 >
 >
 >
-> Tuy nhiên ta biết Xbar = Y/n. 
+> Tuy nhiên ta biết X̄ = Y/n. 
 >
 >
 >
@@ -1312,15 +1312,15 @@
 >
 >
 >
-> Nó nói rằng: √n(Xbar - μ)/σ  → (d) Z~ n(0,1) với μ là population mean, tức EXi
+> Nó nói rằng: √n(X̄ - μ)/σ  → (d) Z~ n(0,1) với μ là population mean, tức EXi
 > mà với Xi ~ Pois(λ), nó chính là λ, và σ là standard deviation, với Poisson nó
 > chính là √λ (vì với Poisson, variance là λ) 
 >
 >
 >
-> Do đó ta có: √n(Xbar - λ)/√λ → (d) Z ~ n(0,1)
+> Do đó ta có: √n(X̄ - λ)/√λ → (d) Z ~ n(0,1)
 >
-> Ta đang có √n(Xbar - λ)/√λ → (d) Z ~ n(0,1)
+> Ta đang có √n(X̄ - λ)/√λ → (d) Z ~ n(0,1)
 >
 >
 >
@@ -1337,20 +1337,20 @@
 >
 >
 >
-> ⇨ Áp dụng Slusky theorem, ta có √n(Xbar - λ)/√λ [√λ/√n] → (d) Z*0 = 0, Z ~n(0,1)
+> ⇨ Áp dụng Slusky theorem, ta có √n(X̄ - λ)/√λ [√λ/√n] → (d) Z*0 = 0, Z ~n(0,1)
 >
 >
 >
-> ⇔ (Xbar - λ) → (d) 0
+> ⇔ (X̄ - λ) → (d) 0
 >
 >
 >
-> thì kết quả này cũng là Xbar - λ → (p) 0 ⇔ Xbar →(p) λ. Đây chính là Law of Large
-> Number nói rằng Xbar → population mean. 
+> thì kết quả này cũng là X̄ - λ → (p) 0 ⇔ X̄ →(p) λ. Đây chính là Law of Large
+> Number nói rằng X̄ → population mean. 
 >
 >
 >
-> Nhưng trong bối cảnh này ta cần tìm distribution của Xbar nên cái trên không 
+> Nhưng trong bối cảnh này ta cần tìm distribution của X̄ nên cái trên không 
 > gíúp ích gì
 >
 >
@@ -1359,15 +1359,15 @@
 >
 >
 >
-> √n(Xbar - λ)/√λ xấp xỉ một rv ~ n(0,1), kí hiệu:
+> √n(X̄ - λ)/√λ xấp xỉ một rv ~ n(0,1), kí hiệu:
 >
 >
 >
-> √n(Xbar - λ)/√λ ≈ Z, Z ~ n(0, 1)
+> √n(X̄ - λ)/√λ ≈ Z, Z ~ n(0, 1)
 >
 >
 >
-> Tới đây ta có thể lập luận tiếp theo 2 cách để cho thấy Xbar xấp xỉ một normal
+> Tới đây ta có thể lập luận tiếp theo 2 cách để cho thấy X̄ xấp xỉ một normal
 > (λ, √λ/√n) như sau:
 >
 >
@@ -1376,24 +1376,24 @@
 >
 >
 >
-> Đầu tiên cần nhấn mạnh kí hiệu ≈ ở đây: √n(Xbar - λ)/√λ ≈ Z, mang ý nghĩa 
-> là √n(Xbar - λ)/√λ có distribution gần giống một Z ~ n(0,1)
+> Đầu tiên cần nhấn mạnh kí hiệu ≈ ở đây: √n(X̄ - λ)/√λ ≈ Z, mang ý nghĩa 
+> là √n(X̄ - λ)/√λ có distribution gần giống một Z ~ n(0,1)
 >
 >
 >
-> Vậy thì, dùng location scale, ta có quyền nói scale [√n(Xbar - λ)/√λ] bởi √λ/√n
+> Vậy thì, dùng location scale, ta có quyền nói scale [√n(X̄ - λ)/√λ] bởi √λ/√n
 > và shift nó bởi λ, thì distribution của nó sẽ xấp xỉ một member của family với
 > location là λ và scale là √λ/√n mà đối với normal, thì đó cũng là mean và std.
 >
 >
 >
-> Do đó ta có thể nói  [√n(Xbar - λ)/√λ]√λ/√n + λ , tức Xbar ≈ n(λ, √λ/√n) 
+> Do đó ta có thể nói  [√n(X̄ - λ)/√λ]√λ/√n + λ , tức X̄ ≈ n(λ, √λ/√n) 
 >
 >
 >
-> Nhắc lại, lập luận bằng lời ở đây là, cái thằng √n(Xbar - λ)/√λ có distribution
+> Nhắc lại, lập luận bằng lời ở đây là, cái thằng √n(X̄ - λ)/√λ có distribution
 > xấp xỉ n(0,1), là thành viên chuẩn của location scale family. Nên khi scale 
-> và shift nó (√n(Xbar - λ)/√λ) với √λ/√n và λ thì nó sẽ XẤP XỈ MỘT THẰNG
+> và shift nó (√n(X̄ - λ)/√λ) với √λ/√n và λ thì nó sẽ XẤP XỈ MỘT THẰNG
 > STANDARD NORMAL ĐƯỢC SCALE VÀ SHIFT VỚI √λ/√n và λ. Mà khi một
 > thằng standard normal mà được scale và shift như vậy thì nó sẽ là một rv có
 > distribution thuộc thành viên trong gia đình có location λ và scale √λ/√n. Và
@@ -1409,11 +1409,11 @@
 >
 >
 >
-> Nên ở đây nói √n(Xbar - λ)/√λ → (d) Z ~ n(0,1) (CLT) thì chính là:
+> Nên ở đây nói √n(X̄ - λ)/√λ → (d) Z ~ n(0,1) (CLT) thì chính là:
 >
 >
 >
-> P(√n(Xbar - λ)/√λ ≤ t) → (p) P(Z ≤ t) với mọi t
+> P(√n(X̄ - λ)/√λ ≤ t) → (p) P(Z ≤ t) với mọi t
 >
 >
 >
@@ -1421,23 +1421,23 @@
 >
 >
 >
-> lim n → inf (P(√n(Xbar - λ)/√λ ≤ t) = Φ(t) 
+> lim n → inf (P(√n(X̄ - λ)/√λ ≤ t) = Φ(t) 
 >
 >
 >
-> Xét P(Xbar ≤ x) = P(Xbar - λ ≤ x - λ) 
+> Xét P(X̄ ≤ x) = P(X̄ - λ ≤ x - λ) 
 >
 >
 >
-> = P(√n(Xbar - λ)/√λ ≤ √n(x - λ)/√λ) 
+> = P(√n(X̄ - λ)/√λ ≤ √n(x - λ)/√λ) 
 >
 >
 >
-> = P((Xbar - λ)/√(λ/n)) ≤ (x - λ)/√(λ/n)) 
+> = P((X̄ - λ)/√(λ/n)) ≤ (x - λ)/√(λ/n)) 
 >
 >
 >
-> Và theo CLT, (Xbar - λ)/√(λ/n) →(d) n(0,1) , tức là nó sẽ hành xử gần giống một
+> Và theo CLT, (X̄ - λ)/√(λ/n) →(d) n(0,1) , tức là nó sẽ hành xử gần giống một
 > n(0,1) rv
 >
 >
@@ -1447,7 +1447,7 @@
 >
 >
 >
-> ⇨ P(Xbar ≤ x) ≈ P(Z ≤ (x - λ)/√(λ/n))
+> ⇨ P(X̄ ≤ x) ≈ P(Z ≤ (x - λ)/√(λ/n))
 >
 >
 >
@@ -1467,8 +1467,8 @@
 >
 >
 >
-> Vậy P(Xbar ≤ x) ≈ P(W ≤ x) ⇨ Xbar ≈ W, với ý nghĩa của dấu ≈ ở đây như đã
-> nói trên, là distribution của Xbar sẽ xấp xỉ distribution của W, hay Xbar hành xử
+> Vậy P(X̄ ≤ x) ≈ P(W ≤ x) ⇨ X̄ ≈ W, với ý nghĩa của dấu ≈ ở đây như đã
+> nói trên, là distribution của X̄ sẽ xấp xỉ distribution của W, hay X̄ hành xử
 > gần giống W, là một n(λ, √(λ/n))
 
 **🔗 See also:** [Phân phối trung bình mẫu](./52_of_random_variables_from_a_random_sample.md#node-c034x4w) · [Phân phối thống kê hàm mũ](./52_of_random_variables_from_a_random_sample.md#node-h84h2nr)
