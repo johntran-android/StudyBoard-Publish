@@ -647,7 +647,7 @@
 <p align="center"><kbd><img src="assets/5c5e6ntoar.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, qua chương 5 ta sẽ học rằng nếu X1, X2...Xn là một sample (một set các random sample, mà mỗi cái cũng là random variable vì có thể mang các giá trị khác nhau) được sampling từ Poisson(λ) thì mean của nó (X_bar, gọi là sample mean, dĩ nhiên cũng là một rv) sẽ CÓ THỂ APPROX BỞI N(λ, λ/n) và cái này sẽ được biện minh bởi CENTRAL LIMIT THEOREM, và đó normal(λ, λ/n) là một curved normal family
+> Đại khái là, qua chương 5 ta sẽ học rằng nếu X1, X2...Xn là một sample (một set các random sample, mà mỗi cái cũng là random variable vì có thể mang các giá trị khác nhau) được sampling từ Poisson(λ) thì mean của nó (X̄, gọi là sample mean, dĩ nhiên cũng là một rv) sẽ CÓ THỂ APPROX BỞI N(λ, λ/n) và cái này sẽ được biện minh bởi CENTRAL LIMIT THEOREM, và đó normal(λ, λ/n) là một curved normal family
 >
 >
 >
