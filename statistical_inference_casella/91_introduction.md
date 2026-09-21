@@ -160,8 +160,8 @@
 >
 >
 >
-> = ∫μ-1:μ+1 f(xbar)dxbar với f(xbar) là pdf của Xbar luôn không âm theo
-> axiom 1, và tích phân này là diện tích dưới đường cong f(xbar) từ μ-1
+> = ∫μ-1:μ+1 f(x̄)dx̄ với f(x̄) là pdf của Xbar luôn không âm theo
+> axiom 1, và tích phân này là diện tích dưới đường cong f(x̄) từ μ-1
 > tới μ+1, nên sẽ là giá trị dương.
 >
 >
