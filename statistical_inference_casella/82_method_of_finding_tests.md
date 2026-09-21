@@ -307,15 +307,15 @@
 >
 >
 >
-> = f(**x**|θ0) / f(**x**|xbar)
+> = f(**x**|θ0) / f(**x**|x̄)
 >
 >
 >
-> = Πi f(xi|θ0) / Πi f(xi|xbar)  (do iid, joint pdf = tích marginal pdf)
+> = Πi f(xi|θ0) / Πi f(xi|x̄)  (do iid, joint pdf = tích marginal pdf)
 >
 >
 >
-> = Πi (1/σ√2π) exp[-(xi-θ0)^2/2σ²] / Πi (1/σ√2π) exp[-(xi-xbar)^2/2σ²]
+> = Πi (1/σ√2π) exp[-(xi-θ0)^2/2σ²] / Πi (1/σ√2π) exp[-(xi-x̄)^2/2σ²]
 >
 >
 >
@@ -323,71 +323,71 @@
 >
 >
 >
-> ..= Πi (1/√2π) exp[-(xi-θ0)^2/2] / Πi (1/√2π) exp[-(xi-xbar)^2/2]
+> ..= Πi (1/√2π) exp[-(xi-θ0)^2/2] / Πi (1/√2π) exp[-(xi-x̄)^2/2]
 >
 >
 >
-> = (1/√2π)^n Πi  exp[-(xi-θ0)^2/2] / (1/√2π)^n Πi exp[-(xi-xbar)^2/2]
+> = (1/√2π)^n Πi  exp[-(xi-θ0)^2/2] / (1/√2π)^n Πi exp[-(xi-x̄)^2/2]
 >
 >
 >
-> = Πi exp[-(xi-θ0)^2/2] / Πi exp[-(xi-xbar)^2/2]
+> = Πi exp[-(xi-θ0)^2/2] / Πi exp[-(xi-x̄)^2/2]
 >
 >
 >
-> = exp [-Σi(xi-θ0)^2/2] / exp [-Σi(xi-xbar)^2/2]
+> = exp [-Σi(xi-θ0)^2/2] / exp [-Σi(xi-x̄)^2/2]
 >
 >
 >
-> = exp [-Σi(xi-θ0)^2/2 + Σi(xi-xbar)^2/2]
+> = exp [-Σi(xi-θ0)^2/2 + Σi(xi-x̄)^2/2]
 >
 >
 >
-> = exp [-Σi(xi-θ0)^2 + Σi(xi-xbar)^2]/2
+> = exp [-Σi(xi-θ0)^2 + Σi(xi-x̄)^2]/2
 >
 >
 >
-> = exp [-Σi(xi-θ0+xbar-xbar)^2 + Σi(xi-xbar)^2]/2
+> = exp [-Σi(xi-θ0+x̄-x̄)^2 + Σi(xi-x̄)^2]/2
 >
 >
 >
-> = exp [-Σi(xi-xbar+xbar-θ0)^2 + Σi(xi-xbar)^2]/2
+> = exp [-Σi(xi-x̄+x̄-θ0)^2 + Σi(xi-x̄)^2]/2
 >
 >
 >
-> = exp [-Σi[(xi-xbar)^2+2(xi-xbar)(xbar-θ0)+(xbar-θ0)^2] + Σi(xi-xbar)^2]/2
+> = exp [-Σi[(xi-x̄)^2+2(xi-x̄)(x̄-θ0)+(x̄-θ0)^2] + Σi(xi-x̄)^2]/2
 >
 >
 >
-> = exp [-Σi(xi-xbar)^2-Σi2(xi-xbar)(xbar-θ0)-Σi(xbar-θ0)^2] + Σi(xi-xbar)^2]/2
+> = exp [-Σi(xi-x̄)^2-Σi2(xi-x̄)(x̄-θ0)-Σi(x̄-θ0)^2] + Σi(xi-x̄)^2]/2
 >
 >
 >
-> = exp [-Σi2(xi-xbar)(xbar-θ0)-Σi(xbar-θ0)^2]/2
+> = exp [-Σi2(xi-x̄)(x̄-θ0)-Σi(x̄-θ0)^2]/2
 >
 >
 >
-> = exp [-2(xbar-θ0)Σi(xi-xbar)-Σi(xbar-θ0)^2]/2
+> = exp [-2(x̄-θ0)Σi(xi-x̄)-Σi(x̄-θ0)^2]/2
 >
 >
 >
-> = exp [-2(xbar-θ0)(nxbar-nxbar)-Σi(xbar-θ0)^2]/2
+> = exp [-2(x̄-θ0)(nx̄-nx̄)-Σi(x̄-θ0)^2]/2
 >
 >
 >
-> = exp [-2(xbar-θ0)(0)-Σi(xbar-θ0)^2]/2
+> = exp [-2(x̄-θ0)(0)-Σi(x̄-θ0)^2]/2
 >
 >
 >
-> = exp [-Σi(xbar-θ0)^2]/2
+> = exp [-Σi(x̄-θ0)^2]/2
 >
 >
 >
-> = exp [-n(xbar-θ0)^2]/2
+> = exp [-n(x̄-θ0)^2]/2
 >
 >
 >
-> Vậy λ(**x**) = exp [-n(xbar-θ0)^2/2]
+> Vậy λ(**x**) = exp [-n(x̄-θ0)^2/2]
 >
 >
 >
@@ -410,19 +410,19 @@
 >
 >
 >
-> = {**x**: exp [-n(xbar-θ0)^2/2] ≤ c}
+> = {**x**: exp [-n(x̄-θ0)^2/2] ≤ c}
 >
 >
 >
-> = {**x**: [-n(xbar-θ0)^2/2] ≤ log(c)}
+> = {**x**: [-n(x̄-θ0)^2/2] ≤ log(c)}
 >
 >
 >
-> = {**x**: (xbar-θ0)^2 ≥ -2log(c)/n}
+> = {**x**: (x̄-θ0)^2 ≥ -2log(c)/n}
 >
 >
 >
-> = {**x**: |xbar-θ0| ≥ √[-2log(c)/n]}
+> = {**x**: |x̄-θ0| ≥ √[-2log(c)/n]}
 >
 >
 >
@@ -445,18 +445,18 @@
 >
 >
 >
-> Và khoảng cách giữa xbar và θ0 phải lớn hơn con số rất lớn này thì ta mới
+> Và khoảng cách giữa x̄ và θ0 phải lớn hơn con số rất lớn này thì ta mới
 > bác bỏ H0 và rõ ràng điều này rất khó xảy ra Vậy có nghĩa là sao, có nghĩa là
 > ta rất nhân ái, dễ  dãi với với H0, và tập **x** khiến H0 bị bác sẽ rất nhỏ, vì rất
-> ít x khiến xbar cách θ0 một khoảng xa vô cùng lớn như vậy.
+> ít x khiến x̄ cách θ0 một khoảng xa vô cùng lớn như vậy.
 >
 >
 >
 > Ngược lại, khi c ≈ 1, thì log c ≈ 0 → √[-2log(c)/n] ≈ 0, là con số rất nhỏ, lúc
-> này điều kiện để bác bỏ H0 chỉ là khoảng cách giữa xbar và θ0 lớn hơn một
-> con số rất nhỏ, hay, xbar chỉ cần lệch hỏi θ0 chút xíu là ta sẽ reject H0. Ý
+> này điều kiện để bác bỏ H0 chỉ là khoảng cách giữa x̄ và θ0 lớn hơn một
+> con số rất nhỏ, hay, x̄ chỉ cần lệch hỏi θ0 chút xíu là ta sẽ reject H0. Ý
 > nghĩa là ta rất khắt khe với H0, hở một chút là đuổi nó đi ngay (reject nó). Và
-> rất dễ, rất nhiều x khiến xbar lệch khỏi θ0 tí xíu, nên vùng rejection mở rộng
+> rất dễ, rất nhiều x khiến x̄ lệch khỏi θ0 tí xíu, nên vùng rejection mở rộng
 > rất lớn.
 
 **🔗 See also:** [Thống kê đủ và LRT](#node-8hiqyvn)
@@ -979,7 +979,7 @@
 > [!NOTE]
 > Rồi, thế thì đại khái tác giả nói là, khi nãy, làm ví dụ 8.2.2, thì kiểu như là
 > mình có thể thấy qúa trình bắt đầu với một nùi rất lằng nhằng, và cuối cùng
-> ta thu gọn λ(**x**) rất gọn = exp [-n(xbar-θ0)^2/2]
+> ta thu gọn λ(**x**) rất gọn = exp [-n(x̄-θ0)^2/2]
 >
 >
 >
@@ -1312,11 +1312,11 @@
 >
 >
 >
-> Mean = [τ²/(τ²+σ²/n)] xbar + [(σ²/n)/(τ²+σ²/n)] μ
+> Mean = [τ²/(τ²+σ²/n)] x̄ + [(σ²/n)/(τ²+σ²/n)] μ
 >
 >
 >
-> = (nτ²xbar + σ²μ)/(nτ²+σ²)
+> = (nτ²x̄ + σ²μ)/(nτ²+σ²)
 >
 >
 >
@@ -1346,27 +1346,27 @@
 >
 >
 >
-> ⇔ (nτ²xbar + σ²μ)/(nτ²+σ²) ≤ θ0
+> ⇔ (nτ²x̄ + σ²μ)/(nτ²+σ²) ≤ θ0
 >
 >
 >
-> ⇔ nτ²xbar + σ²μ ≤ θ0 (nτ²+σ²)
+> ⇔ nτ²x̄ + σ²μ ≤ θ0 (nτ²+σ²)
 >
 >
 >
-> ⇔ nτ²xbar ≤ θ0 (nτ²+σ²) - σ²μ
+> ⇔ nτ²x̄ ≤ θ0 (nτ²+σ²) - σ²μ
 >
 >
 >
-> ⇔ xbar ≤ θ0 (nτ²+σ²)/nτ² - σ²μ/nτ²
+> ⇔ x̄ ≤ θ0 (nτ²+σ²)/nτ² - σ²μ/nτ²
 >
 >
 >
-> ⇔ xbar ≤ θ0nτ²/nτ² + θ0σ²/nτ² - σ²μ/nτ²
+> ⇔ x̄ ≤ θ0nτ²/nτ² + θ0σ²/nτ² - σ²μ/nτ²
 >
 >
 >
-> ⇔ xbar ≤ θ0 + σ²(θ0 - μ)/nτ²
+> ⇔ x̄ ≤ θ0 + σ²(θ0 - μ)/nτ²
 >
 >
 >
@@ -1374,7 +1374,7 @@
 >
 >
 >
-> Nếu μ = θ0 thì cái rule trở thành: accept H0 khi xbar ≤ θ0 và ngược lại.
+> Nếu μ = θ0 thì cái rule trở thành: accept H0 khi x̄ ≤ θ0 và ngược lại.
 
 **🔗 See also:** [Ước lượng Bayes phân phối chuẩn](./72_method_of_finding_estimators.md#node-5ldrh78) · [Ước lượng Bayes chuẩn](./73_methods_of_evaluating_estimators.md#node-vscj9eh)
 
@@ -1612,7 +1612,7 @@
 >
 >
 >
-> μ^ = xbar, (σ²)^ = (1/n) Σi (xi - xbar)^2
+> μ^ = x̄, (σ²)^ = (1/n) Σi (xi - x̄)^2
 >
 >
 >
@@ -1640,7 +1640,7 @@
 >
 >
 >
-> = -[Σi (xi - xbar)^2] / 2[(1/n) Σi (xi - xbar)^2]
+> = -[Σi (xi - x̄)^2] / 2[(1/n) Σi (xi - x̄)^2]
 >
 >
 >
@@ -1756,7 +1756,7 @@
 >
 >
 >
-> Thế công thức của (σ²)^ = (1/n) Σi (xi - xbar)^2 (còn nhớ, nó là unbiased estimator của σ²)
+> Thế công thức của (σ²)^ = (1/n) Σi (xi - x̄)^2 (còn nhớ, nó là unbiased estimator của σ²)
 >
 >
 >
@@ -1764,11 +1764,11 @@
 >
 >
 >
-> Ta có ⇔ { [(1/n) Σi (xi - xbar)^2] / [(1/n) Σi (xi - μ0)^2] }^(n/2) ≤ c
+> Ta có ⇔ { [(1/n) Σi (xi - x̄)^2] / [(1/n) Σi (xi - μ0)^2] }^(n/2) ≤ c
 >
 >
 >
-> ⇔ { [Σi (xi - xbar)^2] / [Σi (xi - μ0)^2] }^(n/2) ≤ c (1)
+> ⇔ { [Σi (xi - x̄)^2] / [Σi (xi - μ0)^2] }^(n/2) ≤ c (1)
 >
 >
 >
@@ -1776,59 +1776,59 @@
 >
 >
 >
-> = Σi (xi - xbar + xbar - μ0)^2
+> = Σi (xi - x̄ + x̄ - μ0)^2
 >
 >
 >
-> = Σi [(xi - xbar)^2 + (xbar - μ0)^2 + 2(xi - xbar)(xbar - μ0)]
+> = Σi [(xi - x̄)^2 + (x̄ - μ0)^2 + 2(xi - x̄)(x̄ - μ0)]
 >
 >
 >
-> = Σi [(xi - xbar)^2 + (xbar - μ0)^2] + Σi [2(xi - xbar)(xbar - μ0)]
+> = Σi [(xi - x̄)^2 + (x̄ - μ0)^2] + Σi [2(xi - x̄)(x̄ - μ0)]
 >
 >
 >
-> = Σi [(xi - xbar)^2 + (xbar - μ0)^2] + 2(xbar - μ0)Σi[(xi - xbar)]
+> = Σi [(xi - x̄)^2 + (x̄ - μ0)^2] + 2(x̄ - μ0)Σi[(xi - x̄)]
 >
 >
 >
-> = Σi [(xi - xbar)^2 + (xbar - μ0)^2] + 2(xbar - μ0)(nxbar - nxbar)
+> = Σi [(xi - x̄)^2 + (x̄ - μ0)^2] + 2(x̄ - μ0)(nx̄ - nx̄)
 >
 >
 >
-> = Σi [(xi - xbar)^2 + (xbar - μ0)^2]
+> = Σi [(xi - x̄)^2 + (x̄ - μ0)^2]
 >
 >
 >
-> ⇨ (1) ⇔ { [Σi (xi - xbar)^2] / Σi [(xi - xbar)^2 + (xbar - μ0)^2] }^(n/2) ≤ c
+> ⇨ (1) ⇔ { [Σi (xi - x̄)^2] / Σi [(xi - x̄)^2 + (x̄ - μ0)^2] }^(n/2) ≤ c
 >
 >
 >
-> ⇔ { [Σi (xi - xbar)^2] / Σi [(xi - xbar)^2 + (xbar - μ0)^2] }^(n/2) ≤ c
+> ⇔ { [Σi (xi - x̄)^2] / Σi [(xi - x̄)^2 + (x̄ - μ0)^2] }^(n/2) ≤ c
 >
 >
 >
-> ⇔ {Σi(xi - xbar)^2 / [Σi(xi - xbar)^2 + Σi (xbar - μ0)^2] }^(n/2) ≤ c
+> ⇔ {Σi(xi - x̄)^2 / [Σi(xi - x̄)^2 + Σi (x̄ - μ0)^2] }^(n/2) ≤ c
 >
 >
 >
-> ⇔ {1 / [1 + Σi(xbar - μ0)^2 / Σi(xi - xbar)^2] }^(n/2) ≤ c
+> ⇔ {1 / [1 + Σi(x̄ - μ0)^2 / Σi(xi - x̄)^2] }^(n/2) ≤ c
 >
 >
 >
-> (Thay Σi(xbar - μ0)^2 = n(xbar - μ0)^2)
+> (Thay Σi(x̄ - μ0)^2 = n(x̄ - μ0)^2)
 >
 >
 >
-> ⇔ {1 / [1 + n(xbar - μ0)^2 / Σi(xi - xbar)^2] }^(n/2) ≤ c
+> ⇔ {1 / [1 + n(x̄ - μ0)^2 / Σi(xi - x̄)^2] }^(n/2) ≤ c
 >
 >
 >
-> Xét cụm n(xbar - μ0)^2 / Σi(xi - xbar)^2
+> Xét cụm n(x̄ - μ0)^2 / Σi(xi - x̄)^2
 >
 >
 >
-> = n(xbar - μ0)^2 / (Σi(xi - xbar)^2 (n-1) / (n-1))
+> = n(x̄ - μ0)^2 / (Σi(xi - x̄)^2 (n-1) / (n-1))
 >
 >
 >
@@ -1836,19 +1836,19 @@
 >
 >
 >
-> ⇔ (xbar - μ0)^2 / S^2 (n-1)
+> ⇔ (x̄ - μ0)^2 / S^2 (n-1)
 >
 >
 >
-> ⇔ [(xbar - μ0)^2 / S^2] / (n-1)
+> ⇔ [(x̄ - μ0)^2 / S^2] / (n-1)
 >
 >
 >
-> ⇔ [(xbar - μ0) / (S/√n)]^2 / (n-1)]
+> ⇔ [(x̄ - μ0) / (S/√n)]^2 / (n-1)]
 >
 >
 >
-> Và tới đây nhận thấy (xbar - μ0) / (S/√n), chính là một Student's t statistic (Xem link)
+> Và tới đây nhận thấy (x̄ - μ0) / (S/√n), chính là một Student's t statistic (Xem link)
 >
 >
 >
