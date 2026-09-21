@@ -479,7 +479,7 @@
 >
 >
 >
-> Với E\[(1/Xbar_n)^2\], theo LOTUS, = ∫(1/xbar_n)^2 f(xbar_n) d(xbar_n) với f là pdf của xbar_n. Ta đã biết, Xbar_n của sample \~ normal(μ, σ) sẽ có limiting distribution là normal(μ, σ²/n), tức là Xbar_n sẽ hội tụ distribution về một rv thuộc phân phối normal(μ, σ²). thế thì với phân phối này, trong tích phân ∫(1/xbar_n)^2 f(xbar_n) d(xbar_n) đang nói, tồn tại xác suất dương nào đó để xbar_n = 0, khiến tích phân này = inf (explode), vì sao, vì range của normal là từ -inf, inf, nên có nghĩa là tại xbar_n=0, vẫn tồn tại giá trị pdf không âm.
+> Với E\[(1/Xbar_n)^2\], theo LOTUS, = ∫(1/x̄_n)^2 f(x̄_n) d(x̄_n) với f là pdf của x̄_n. Ta đã biết, Xbar_n của sample \~ normal(μ, σ) sẽ có limiting distribution là normal(μ, σ²/n), tức là Xbar_n sẽ hội tụ distribution về một rv thuộc phân phối normal(μ, σ²). thế thì với phân phối này, trong tích phân ∫(1/x̄_n)^2 f(x̄_n) d(x̄_n) đang nói, tồn tại xác suất dương nào đó để x̄_n = 0, khiến tích phân này = inf (explode), vì sao, vì range của normal là từ -inf, inf, nên có nghĩa là tại x̄_n=0, vẫn tồn tại giá trị pdf không âm.
 >
 >
 >
@@ -3162,7 +3162,7 @@
 <p align="center"><kbd><img src="assets/rozddooqopg.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, thế thì khi đã coi như 256 possible values có được bằng cách xét 256 possible outcomes của thử nghiệm (sampling with replacement 4 số từ tập {2,4,9,12}) là một random sample (dĩ nhiên size 256). Và ta kí hiệu với resample thứ i là xbar\*\_i.
+> Rồi, thế thì khi đã coi như 256 possible values có được bằng cách xét 256 possible outcomes của thử nghiệm (sampling with replacement 4 số từ tập {2,4,9,12}) là một random sample (dĩ nhiên size 256). Và ta kí hiệu với resample thứ i là x̄\*\_i.
 >
 >
 >
@@ -3174,7 +3174,7 @@
 >
 >
 >
-> Ta có random sample size n = 256: Xbar\*\_1, Xbar\*\_2,....,Xbar\*\_n, có observed value xbar\*\_1,...xbar\*\_n.
+> Ta có random sample size n = 256: Xbar\*\_1, Xbar\*\_2,....,Xbar\*\_n, có observed value x̄\*\_1,...x̄\*\_n.
 >
 >
 >
@@ -3358,7 +3358,7 @@
 >
 >
 >
-> Variance của empirical population: VarX = E\[(X-EX)^2\] = Σ\_{mọi possible value của X} P(X=x)(x - xbar)^2
+> Variance của empirical population: VarX = E\[(X-EX)^2\] = Σ\_{mọi possible value của X} P(X=x)(x - x̄)^2
 >
 >
 >
@@ -3430,11 +3430,11 @@
 >
 >
 >
-> Sau tính xbar\*i = g(si). Rồi tính (xbar\*)bar, và thế vào công thức trên ta sẽ ra kết quả là:
+> Sau tính x̄\*i = g(si). Rồi tính (x̄\*)bar, và thế vào công thức trên ta sẽ ra kết quả là:
 >
 >
 >
-> (xbar\*)bar = **6.75**
+> (x̄\*)bar = **6.75**
 >
 >
 >
@@ -3620,7 +3620,7 @@
 >
 >
 >
-> Dĩ nhiên, Xbar, là một hàm của sample: Xbar(**X**) = Σi=1:n Xi. Nó cũng là một statistic, một random variable. Và xbar = (2 + 4 + 9 + 12)/4 = 6.75 chính là một observed value của nó.
+> Dĩ nhiên, Xbar, là một hàm của sample: Xbar(**X**) = Σi=1:n Xi. Nó cũng là một statistic, một random variable. Và x̄ = (2 + 4 + 9 + 12)/4 = 6.75 chính là một observed value của nó.
 >
 >
 >
@@ -3640,7 +3640,7 @@
 >
 >
 >
-> Câu trả lời là, ta có thể dùng (observed value của) sample variance để thay chỗ của population variance, từ đó, thay vì ta có công thức chính xác Var(Xbar) = σ² / n, ta có công thức ước lượng: Var(Xbar) ≈ s^2/n. Và với observed value của sample, thì ta có observed value của S^2: s^2 = \[1/(n-1)\] Σi=1:n (xi - xbar)^2. Thế giá trị vào ta tính ra con số **5.23**, là ước lượng của Xbar variance.
+> Câu trả lời là, ta có thể dùng (observed value của) sample variance để thay chỗ của population variance, từ đó, thay vì ta có công thức chính xác Var(Xbar) = σ² / n, ta có công thức ước lượng: Var(Xbar) ≈ s^2/n. Và với observed value của sample, thì ta có observed value của S^2: s^2 = \[1/(n-1)\] Σi=1:n (xi - x̄)^2. Thế giá trị vào ta tính ra con số **5.23**, là ước lượng của Xbar variance.
 >
 >
 >
@@ -3660,7 +3660,7 @@
 >
 >
 >
-> Rồi, thế thì với cơ sở là ta cho rằng population gốc là discrete có 4 possible value equally likely và một observed value của sample size 4: x1, x2, x3, x4) = (2, 4, 9, 12). Thì observed value của sample mean cũng là xbar = (2 + 4 + 9 + 12)/4 = 6.75
+> Rồi, thế thì với cơ sở là ta cho rằng population gốc là discrete có 4 possible value equally likely và một observed value của sample size 4: x1, x2, x3, x4) = (2, 4, 9, 12). Thì observed value của sample mean cũng là x̄ = (2 + 4 + 9 + 12)/4 = 6.75
 >
 >
 >
@@ -3724,15 +3724,15 @@
 >
 >
 >
-> Thế thì, bootstrap cho ta một cách tính khác: Ý tưởng chính là vầy: Với 4 số {2, 4, 9, 12}. Sampling with replacement 4 số. Số possible outcome (có phân biệt thứ tự) dễ thấy có thể tính theo step rule: Chọn số thứ 1 có 4 khả năng, chọn số thứ 2 có 4 khả năng,.. → 4 × 4 × 4 × 4 = 4^4. Gọi ordered sample space là {s1,....sN}, N = 4^4. Và si đều có xác suất bằng nhau. Gọi xbar\*(s) là hàm phụt ra con số trung bình. Thì xbar\*1 = xbar\*(s1), xbar\*2 = xbar\*(2), ...,xbar\*256 = xbar\*(s256) sẽ chính là 256 possible value của random variable Xbar\*, có distribution uniform discrete.
+> Thế thì, bootstrap cho ta một cách tính khác: Ý tưởng chính là vầy: Với 4 số {2, 4, 9, 12}. Sampling with replacement 4 số. Số possible outcome (có phân biệt thứ tự) dễ thấy có thể tính theo step rule: Chọn số thứ 1 có 4 khả năng, chọn số thứ 2 có 4 khả năng,.. → 4 × 4 × 4 × 4 = 4^4. Gọi ordered sample space là {s1,....sN}, N = 4^4. Và si đều có xác suất bằng nhau. Gọi x̄\*(s) là hàm phụt ra con số trung bình. Thì x̄\*1 = x̄\*(s1), x̄\*2 = x̄\*(2), ...,x̄\*256 = x̄\*(s256) sẽ chính là 256 possible value của random variable Xbar\*, có distribution uniform discrete.
 >
 >
 >
-> Và vì distribution của Xbar là discrete uniform nên ta có thể được phép coi **x** = xbar\*1,....xbar\*N là một observed value của random sample sampling từ distribution của Xbar\*. Điều này giống như, X có 3 possible value 1,2,3 có xác suất bằng nhau, nên **x** = (x1 = 1, x2 = 2, x3 = 3) có thể valid là một random sample bởi trong đó mỗi giá trị khả dĩ đều xuất hiện một lần. Mặt khác, nếu X có 3 possible value 1,2,3 với xác suất là P(X=1) = P(X=2) = 0.5, và P(X=3) = 0 thì bộ 3 giá trị cụ thể (1,2,3) không thể được xem là obsrevation của một random sample được, vì lí do là nó không phản ánh đúng phân phối thực khi xuất hiện con số 3 trong khi phân phối thực P(X = 3) = 0.
+> Và vì distribution của Xbar là discrete uniform nên ta có thể được phép coi **x** = x̄\*1,....x̄\*N là một observed value của random sample sampling từ distribution của Xbar\*. Điều này giống như, X có 3 possible value 1,2,3 có xác suất bằng nhau, nên **x** = (x1 = 1, x2 = 2, x3 = 3) có thể valid là một random sample bởi trong đó mỗi giá trị khả dĩ đều xuất hiện một lần. Mặt khác, nếu X có 3 possible value 1,2,3 với xác suất là P(X=1) = P(X=2) = 0.5, và P(X=3) = 0 thì bộ 3 giá trị cụ thể (1,2,3) không thể được xem là obsrevation của một random sample được, vì lí do là nó không phản ánh đúng phân phối thực khi xuất hiện con số 3 trong khi phân phối thực P(X = 3) = 0.
 >
 >
 >
-> Và vì coi như ta có một observed value của random sample **X**: **x** = (xbar\*1, ....xbar\*N). Nên ta có thể dùng công thức sample variance S^2: = 1/(256 - 1) Σi=1:N \[xbar\*i - (xbar\*)bar\]^2. Và ta sẽ lấy giá trị này để estimate cho variance của sample mean Var(Xbar), kí hiệu là Var(Xbar)\*
+> Và vì coi như ta có một observed value của random sample **X**: **x** = (x̄\*1, ....x̄\*N). Nên ta có thể dùng công thức sample variance S^2: = 1/(256 - 1) Σi=1:N \[x̄\*i - (x̄\*)bar\]^2. Và ta sẽ lấy giá trị này để estimate cho variance của sample mean Var(Xbar), kí hiệu là Var(Xbar)\*
 >
 >
 >
@@ -3788,7 +3788,7 @@
 >
 >
 >
-> Cũng làm y như với xbar:
+> Cũng làm y như với x̄:
 >
 >
 >
@@ -3800,19 +3800,19 @@
 >
 >
 >
-> Gọi hàm xbar\*(s) = lấy trung bình mấy số của một outcome s. Thì ta sẽ có {xbar\*(s1),...xbar\*(sN)} là n^n possible value của một uniform discrete random variable Xbar\*. 
+> Gọi hàm x̄\*(s) = lấy trung bình mấy số của một outcome s. Thì ta sẽ có {x̄\*(s1),...x̄\*(sN)} là n^n possible value của một uniform discrete random variable Xbar\*. 
 >
 >
 >
-> Và do xác suất các possible value đều bằng nhau, nên ta có thể coi bộ số {xbar\*1 = xbar\*(s1),..., xbar\*N = xbar\*(sN)} là một observed value của một random sample sampling từ empirical distribution của Xbar\* này.
+> Và do xác suất các possible value đều bằng nhau, nên ta có thể coi bộ số {x̄\*1 = x̄\*(s1),..., x̄\*N = x̄\*(sN)} là một observed value của một random sample sampling từ empirical distribution của Xbar\* này.
 >
 >
 >
-> Có nghĩa là coi như ta có một Xbar \~ empirical distribution uniform discrete có n^n possible value equally likely. Và random sample có observed value là xbar\*1, ...xbar\*N. 
+> Có nghĩa là coi như ta có một Xbar \~ empirical distribution uniform discrete có n^n possible value equally likely. Và random sample có observed value là x̄\*1, ...x̄\*N. 
 >
 >
 >
-> Nên sample variance = \[1/(n^n - 1)\] Σi=1:n^n \[xbar\*j - (xbar\*)bar\]^2
+> Nên sample variance = \[1/(n^n - 1)\] Σi=1:n^n \[x̄\*j - (x̄\*)bar\]^2
 >
 >
 >
@@ -3836,11 +3836,11 @@
 >
 >
 >
-> (đây là chỗ cực dễ lú: Nhờ học qua Stat110 mình để hiểu bản chất nên mới không lú chỗ này: ở đây ta treat \[p^(1-p^)\]\*() như tên hàm, y như xbar\*(.) ở trên vậy. 
+> (đây là chỗ cực dễ lú: Nhờ học qua Stat110 mình để hiểu bản chất nên mới không lú chỗ này: ở đây ta treat \[p^(1-p^)\]\*() như tên hàm, y như x̄\*(.) ở trên vậy. 
 >
 >
 >
-> xbar\*(s): nhận vào s, là một dãy số, phụt ra số trung bình
+> x̄\*(s): nhận vào s, là một dãy số, phụt ra số trung bình
 >
 >
 >
@@ -4033,7 +4033,7 @@
 >
 >
 >
-> Thế thì với observed value của sample như vậy, thì observed value của sample mean xbar là 2.71, và observed value của sample variance s^2 là 4.82.
+> Thế thì với observed value của sample như vậy, thì observed value của sample mean x̄ là 2.71, và observed value của sample variance s^2 là 4.82.
 >
 >
 >
@@ -4041,7 +4041,7 @@
 >
 >
 >
-> Như vậy ở đây, mình có observed value của sample mean, và sample variance. Câu hỏi là, nếu như θ^ gắn vào thay cho θ trong f(x|θ). thì ở đây ta gắn xbar và s^ vào đâu?
+> Như vậy ở đây, mình có observed value của sample mean, và sample variance. Câu hỏi là, nếu như θ^ gắn vào thay cho θ trong f(x|θ). thì ở đây ta gắn x̄ và s^ vào đâu?
 >
 >
 >
@@ -4053,7 +4053,7 @@
 >
 >
 >
-> Vậy ở đây muốn gắn, ta phải giả định population distribution là distribution có hai parameter là mean và variance. Ví dụ, giả định distribution gốc là n(μ, σ²). thì khi đó, ta mới gắn xbar vào thay chỗ của μ, và s^2 vào thay chỗ của σ². Đó là lí do trong sách ta thấy gs giả định population distribution là normal là vậy.
+> Vậy ở đây muốn gắn, ta phải giả định population distribution là distribution có hai parameter là mean và variance. Ví dụ, giả định distribution gốc là n(μ, σ²). thì khi đó, ta mới gắn x̄ vào thay chỗ của μ, và s^2 vào thay chỗ của σ². Đó là lí do trong sách ta thấy gs giả định population distribution là normal là vậy.
 >
 >
 >
@@ -4065,7 +4065,7 @@
 >
 >
 >
-> Vậy thì làm như sau: như đã nói, ta sẽ có B sample sampling từ plug in distribution này, tức B bộ số {x\*1,..x\*n}. Ứng với mỗi bộ, ví dụ sample j ta sẽ tính ra xbar(sample j), và s^2(sample j).
+> Vậy thì làm như sau: như đã nói, ta sẽ có B sample sampling từ plug in distribution này, tức B bộ số {x\*1,..x\*n}. Ứng với mỗi bộ, ví dụ sample j ta sẽ tính ra x̄(sample j), và s^2(sample j).
 >
 >
 >
