@@ -1,6 +1,6 @@
 # 5.2 Σ Of Random Variables From A Random Sample
 
-📊 **Progress:** `18` Notes | `26` Screenshots | `2` AI Reviews
+📊 **Progress:** `18` Notes | `26` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-ii9obi5"></a>
@@ -145,11 +145,11 @@
 >
 >
 >
-> Sample mean X_bar = (Σ Xi) / n
+> Sample mean X̄ = (Σ Xi) / n
 >
 >
 >
-> Sample variance S^2 = 1/(n-1) Σ (Xi - X_bar)^2
+> Sample variance S^2 = 1/(n-1) Σ (Xi - X̄)^2
 >
 >
 >
@@ -167,7 +167,7 @@
 >
 >
 >
-> Nên đáng ra phải ghi X_bar là X_bar(X1,X2,...Xn) để thể hiện rằng, nó
+> Nên đáng ra phải ghi X̄ là X̄(X1,X2,...Xn) để thể hiện rằng, nó
 > ko đứng một mình, mà nó phụ thuộc vào X1, X2,...Xn 
 >
 >
@@ -179,7 +179,7 @@
 > Và một ý nữa là, cũng như theo quy ước ta ghi chữ thường cho giá trị
 > possible value của random variable, thì nay cũng vậy. x_bar, s^2, s
 > sẽ chỉ possible value (hay giá trị cụ thể, hay giá trị quan sát được, cũng
-> như nhau) của X_bar, S^2, S
+> như nhau) của X̄, S^2, S
 
 **🔗 See also:** [Point Estimation: Variance Estimation](./101_point_estimation.md#node-3dm7cfv)
 
@@ -618,7 +618,7 @@
 >
 >
 >
-> Theorem này nói rằng a) EX_bar = μ
+> Theorem này nói rằng a) EX̄ = μ
 >
 >
 >
@@ -627,7 +627,7 @@
 >
 >
 >
-> Vậy EX_bar = E[(1/n) ΣXi] = E[Σi Xi/n], gọi g(Xi) = Xi/n ta sẽ có cái cần tính
+> Vậy EX̄ = E[(1/n) ΣXi] = E[Σi Xi/n], gọi g(Xi) = Xi/n ta sẽ có cái cần tính
 > chính là E[Σi g(Xi)], theo bổ đề, = n Eg(X1) (thay g(X1) = X1/n vào lại)
 >
 >
@@ -641,7 +641,7 @@
 >
 >
 >
-> ⇨ ...EX_bar = μ . Ý nghĩa của nó là mean / expected value / expectation của
+> ⇨ ...EX̄ = μ . Ý nghĩa của nó là mean / expected value / expectation của
 > SAMPLE MEAN bằng POPULATION MEAN
 >
 >
@@ -650,11 +650,11 @@
 >
 >
 >
-> b) Var(X_bar) = σ² / n
+> b) Var(X̄) = σ² / n
 >
 >
 >
-> Vế trái Var(X_bar) = Var[(1/n) Σi Xi)] , dùng tính chất Var(cX) = c^2 Var(X) đưa
+> Vế trái Var(X̄) = Var[(1/n) Σi Xi)] , dùng tính chất Var(cX) = c^2 Var(X) đưa
 > 1/n ra
 >
 >
@@ -699,7 +699,7 @@
 >
 >
 >
-> **S^2 = [1/(n-1)] Σi (Xi - X_bar)^2**
+> **S^2 = [1/(n-1)] Σi (Xi - X̄)^2**
 >
 >
 >
@@ -721,7 +721,7 @@
 >
 >
 >
-> Ví dụ, đáng lẽ phải ghi là S^2(X1,X2...Xn) hay X_bar(X1,X2...Xn) để thể hiện
+> Ví dụ, đáng lẽ phải ghi là S^2(X1,X2...Xn) hay X̄(X1,X2...Xn) để thể hiện
 > điều đó. Nhưng by convention, người ta sẽ tự hiểu chuyện này.
 >
 >
@@ -730,7 +730,7 @@
 >
 >
 >
-> Và function đó là function nào: Đó là g(x1, x2,..xn) = [1/(n-1)] Σi (xi - x_bar)^2Để rồi khi apply nó (g) lên các random variable X1, X2...Xn thì ta có:g(X1, X2,..Xn) = [1/(n-1)] Σi (Xi - X_bar)^2, và = S^2
+> Và function đó là function nào: Đó là g(x1, x2,..xn) = [1/(n-1)] Σi (xi - x_bar)^2Để rồi khi apply nó (g) lên các random variable X1, X2...Xn thì ta có:g(X1, X2,..Xn) = [1/(n-1)] Σi (Xi - X̄)^2, và = S^2
 >
 >
 >
@@ -755,7 +755,7 @@
 >
 >
 >
-> Từ đó ta có:S^2 = [1/(n-1)] [ Σi Xi^2 - n X_bar^2 ]  (dĩ nhiên khi Xi đóng vai xi thì X_bar đóng vai x_bar)
+> Từ đó ta có:S^2 = [1/(n-1)] [ Σi Xi^2 - n X̄^2 ]  (dĩ nhiên khi Xi đóng vai xi thì X̄ đóng vai x_bar)
 >
 >
 >
@@ -763,7 +763,7 @@
 >
 >
 >
-> Như vậy ta có ES^2 = E { [1/(n-1)] [ Σi Xi^2 - n X_bar^2 ] }
+> Như vậy ta có ES^2 = E { [1/(n-1)] [ Σi Xi^2 - n X̄^2 ] }
 >
 >
 >
@@ -771,15 +771,15 @@
 >
 >
 >
-> → .. = [1/(n-1)] E [ Σi Xi^2 - n X_bar^2 ] 
+> → .. = [1/(n-1)] E [ Σi Xi^2 - n X̄^2 ] 
 >
 >
 >
-> = [1/(n-1)]  { E [Σi Xi^2] -  E [ n X_bar^2 ] }
+> = [1/(n-1)]  { E [Σi Xi^2] -  E [ n X̄^2 ] }
 >
 >
 >
-> = [1/(n-1)]  { Σi E(Xi^2) -  n E[X_bar^2] }
+> = [1/(n-1)]  { Σi E(Xi^2) -  n E[X̄^2] }
 >
 >
 >
@@ -802,7 +802,7 @@
 >
 >
 >
-> Vậy tới đây ta có **[1/(n-1)]  { n E(X1^2) -  n E[X_bar^2] }**
+> Vậy tới đây ta có **[1/(n-1)]  { n E(X1^2) -  n E[X̄^2] }**
 >
 >
 >
@@ -833,15 +833,15 @@
 >
 >
 >
-> Tương tự ta cũng E(X_bar^2) = Var(X_bar) + (EX_bar)^2
+> Tương tự ta cũng E(X̄^2) = Var(X̄) + (EX̄)^2
 >
 >
 >
-> DÙng kết quả a), b)  ⇨ E(X_bar^2) = σ² / n + μ²
+> DÙng kết quả a), b)  ⇨ E(X̄^2) = σ² / n + μ²
 >
 >
 >
-> ⇨ [1/(n-1)]  { n E(X1^2) -  n E[X_bar^2] }
+> ⇨ [1/(n-1)]  { n E(X1^2) -  n E[X̄^2] }
 >
 >
 >
@@ -863,7 +863,7 @@
 >
 > = **σ²  Chứng minh xong**
 
-**🔗 See also:** [Luật số lớn yếu WLLN](./55_convergence_concepts.md#node-j5m3pa1) · [Tính không chệch Xbar S^2](./73_methods_of_evaluating_estimators.md#node-dgdrvpi) · [Ước lượng không chệch Poisson](./73_methods_of_evaluating_estimators.md#node-0ecqsqo) · [Tính nhất quán của Xbar](./101_point_estimation.md#node-47kutgs) · [Point Estimation: Variance Estimation](./101_point_estimation.md#node-3dm7cfv)
+**🔗 See also:** [Luật số lớn yếu WLLN](./55_convergence_concepts.md#node-j5m3pa1) · [Tính không chệch X̄ S^2](./73_methods_of_evaluating_estimators.md#node-dgdrvpi) · [Ước lượng không chệch Poisson](./73_methods_of_evaluating_estimators.md#node-0ecqsqo) · [Tính nhất quán của X̄](./101_point_estimation.md#node-47kutgs) · [Point Estimation: Variance Estimation](./101_point_estimation.md#node-3dm7cfv)
 
 <br>
 
@@ -879,7 +879,7 @@
 >
 >
 >
-> Đại khái là, như theorem vừa rồi ta thấy E X_bar = μ, và ES^2 = σ²
+> Đại khái là, như theorem vừa rồi ta thấy E X̄ = μ, và ES^2 = σ²
 >
 >
 >
@@ -888,7 +888,7 @@
 >
 >
 >
-> Thế thì, đại ý là, vì tính chất này, mà sample mean X_bar được gọi là
+> Thế thì, đại ý là, vì tính chất này, mà sample mean X̄ được gọi là
 > unbiased estimator của population mean (bias tiếng việt là định kiến,
 > hiểu nôm na unbiased là "không bị định kiến", ý là định kiến sẽ khiến ta
 > mắc sai sót, thì cái này ko bị  định kiến nên nó đúng, ý là vậy)
@@ -904,7 +904,7 @@
 >
 >
 >
-> S^2  = [1/(n-1)] [ Σi (Xi - X_bar)^2 ] 
+> S^2  = [1/(n-1)] [ Σi (Xi - X̄)^2 ] 
 >
 >
 >
@@ -912,7 +912,7 @@
 >
 >
 >
-> Giống như với sample mean, X_bar = (1/n) Xi thì ta thấy bình thường.
+> Giống như với sample mean, X̄ = (1/n) Xi thì ta thấy bình thường.
 >
 >
 >
@@ -927,7 +927,7 @@
 >
 >
 > ES^ = [1/(n-1)]  (n -1)  σ² , với  [1/(n-1)]  là do công thức S^2 = 
-> [1/(n-1)] [ Σi (Xi - X_bar)^2 ]
+> [1/(n-1)] [ Σi (Xi - X̄)^2 ]
 >
 >
 >
@@ -955,7 +955,7 @@
 >
 >
 >
-> Cho X1, X2...Xn là iid có pdf fX(x), X_bar kí hiệu sample mean.
+> Cho X1, X2...Xn là iid có pdf fX(x), X̄ kí hiệu sample mean.
 >
 >
 >
@@ -973,25 +973,25 @@
 >
 >
 >
-> Thế thì, xét cdf của X_bar. Theo định nghĩa, cdf của X_bar, kí hiệu
-> F_X_bar(x_bar) có ý nghĩa là P(X_bar ≤ x_bar)
+> Thế thì, xét cdf của X̄. Theo định nghĩa, cdf của X̄, kí hiệu
+> F_X̄(x_bar) có ý nghĩa là P(X̄ ≤ x_bar)
 >
 >
 >
-> (x_bar chỉ là kí hiệu cho biến của hàm F_X_bar(.), ta có thể ghi là x cũng
+> (x_bar chỉ là kí hiệu cho biến của hàm F_X̄(.), ta có thể ghi là x cũng
 > được:
 >
 >
 >
-> F_Xbar(x) = P(X_bar ≤ x), ko sao cả)
+> F_X̄(x) = P(X̄ ≤ x), ko sao cả)
 >
 >
 >
-> Xét event X_bar ≤ x:
+> Xét event X̄ ≤ x:
 >
 >
 >
-> X_bar ≤ x ⇔ (1/n) Σi Xi ≤ x  | Do X_bar = (1/n) Σi Xi
+> X̄ ≤ x ⇔ (1/n) Σi Xi ≤ x  | Do X̄ = (1/n) Σi Xi
 >
 >
 >
@@ -999,7 +999,7 @@
 >
 >
 >
-> Vậy P(X_bar ≤ x) = P(Σi Xi ≤ n x) | vì các event là tương đương / như nhau
+> Vậy P(X̄ ≤ x) = P(Σi Xi ≤ n x) | vì các event là tương đương / như nhau
 >
 >
 >
@@ -1013,7 +1013,7 @@
 >
 >
 >
-> Tiếp theo, lấy đạo hàm theo x, ta sẽ có f_Xbar(x):
+> Tiếp theo, lấy đạo hàm theo x, ta sẽ có f_X̄(x):
 >
 >
 >
@@ -1050,11 +1050,11 @@
 >
 >
 >
-> d/dx F_Xbar(x) = d/dx F_X1+X2+...Xn (nx) = d/dx FY(nx)
+> d/dx F_X̄(x) = d/dx F_X1+X2+...Xn (nx) = d/dx FY(nx)
 >
 >
 >
-> Vế trái như trên nói, chính là fXbar(x),
+> Vế trái như trên nói, chính là fX̄(x),
 >
 >
 >
@@ -1074,18 +1074,18 @@
 >
 >
 >
-> = **n f_X1+X2+...Xn(nx) Chứng minh xong fXbar(x) = nfX1+X2+...Xn(nx)**
+> = **n f_X1+X2+...Xn(nx) Chứng minh xong fX̄(x) = nfX1+X2+...Xn(nx)**
 
 <br>
 
 <a id="node-lm7jg65"></a>
 
-###### Phân phối lấy mẫu Xbar
+###### Phân phối lấy mẫu X̄
 
 <p align="center"><kbd><img src="assets/n01k99av0xc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> thế thì ta sẽ thảo luận về SAMPLING DISTRIBUTION của Xbar
+> thế thì ta sẽ thảo luận về SAMPLING DISTRIBUTION của X̄
 >
 >
 >
@@ -1093,8 +1093,8 @@
 >
 >
 >
-> ở những phần trước, đại khái có nói rằng, ta đã biết Xbar, có bản chất là
-> Xbar(X1,X2,....Xn), tức là, nó là một hàm số phụ thuộc các random variance
+> ở những phần trước, đại khái có nói rằng, ta đã biết X̄, có bản chất là
+> X̄(X1,X2,....Xn), tức là, nó là một hàm số phụ thuộc các random variance
 > X1,...Xn. Hay cũng chính là nói, ta apply một function f(x1,x2... xn) lên bộ các
 > random variable X1,X2....Xn để có f(X1,X2,..Xn) Với công thức cụ thể của f là
 > f(x1,...xn) = (x1 + x2 + ....xn) / n
@@ -1107,11 +1107,11 @@
 >
 >
 >
-> Tuy nhiên, hiểu nôm na là vì Xbar là kết quả của việc apply một function lên
+> Tuy nhiên, hiểu nôm na là vì X̄ là kết quả của việc apply một function lên
 > một đám các random variable, để rồi nó phụ thuộc các random variable này.
 > Và các random variable X1,X2...Xn là các random variable của một
-> RANDOM SAMPLE size n. Nên distribution của Xbar được gọi là SAMPLING
-> DISTRIBUTION. Nhằm nhấn mạnh / nhắc nhớ rằng Xbar được sinh ra từ
+> RANDOM SAMPLE size n. Nên distribution của X̄ được gọi là SAMPLING
+> DISTRIBUTION. Nhằm nhấn mạnh / nhắc nhớ rằng X̄ được sinh ra từ
 > việc ta apply hàm f lên các random variable X1,...Xn
 >
 >
@@ -1121,15 +1121,15 @@
 >
 >
 >
-> Thế thì vừa rồi ta đã chứng minh rằng fXbar(x) = nfX1+X2+...Xn(nx)
+> Thế thì vừa rồi ta đã chứng minh rằng fX̄(x) = nfX1+X2+...Xn(nx)
 >
 >
 >
-> nên ở đây, gọi Y là X1 + X2 + ...Xn thì ta có **fXbar(x) = nfY(nx)**
+> nên ở đây, gọi Y là X1 + X2 + ...Xn thì ta có **fX̄(x) = nfY(nx)**
 >
 >
 >
-> nên hay gọi f(y) là pdf của Y thì **fXbar(x) = nf(nx)
+> nên hay gọi f(y) là pdf của Y thì **fX̄(x) = nf(nx)
 >
 >
 >
@@ -1165,9 +1165,9 @@
 >
 > Như vậy với mỗi một giá trị cụ thể của t thì ta có một giá trị cụ thể của E[e^tX]
 > Nên E[e^tX] DĨ NHIÊN LÀ HÀM THEO t, và vì nó gắn với random variable X,
-> nên người ta kí hiệu là MX(t). Như vậy, quay lại đây. mgf của X_bar,
-> tương tự kí hiệu là M_Xbar(t) có bản chất là E[e^tXbar] Mà Xbar, again lại
-> là function của một đám X1,...Xn: Xbar = (Σi Xi)/n = Y/nE[e^tXbar] = E[e^t[(X1 + X2 + ...Xn)/n]]hay E[e^t[(Y)/n]]
+> nên người ta kí hiệu là MX(t). Như vậy, quay lại đây. mgf của X̄,
+> tương tự kí hiệu là M_X̄(t) có bản chất là E[e^tX̄] Mà X̄, again lại
+> là function của một đám X1,...Xn: X̄ = (Σi Xi)/n = Y/nE[e^tX̄] = E[e^t[(X1 + X2 + ...Xn)/n]]hay E[e^t[(Y)/n]]
 >
 >
 >
@@ -1188,7 +1188,7 @@
 >
 >
 > Do đó E[e^[(t/n)Y] chính là gì? ⇨ Chính là mgf của Y, evaluate tại t/n (coi α =
-> 1/n) Do đó M_Xbar(t) = E[e^tXbar]  = E[e^[(t/n)Y] = mgf của Y, evaluate tại
+> 1/n) Do đó M_X̄(t) = E[e^tX̄]  = E[e^[(t/n)Y] = mgf của Y, evaluate tại
 > t/n,
 >
 >
@@ -1238,7 +1238,7 @@
 >
 >
 >
-> Vậy thì như vừa nãy ta đã có kết quả là với Y = Σi Xi thì **MXbar(t) = MY(t/n)**
+> Vậy thì như vừa nãy ta đã có kết quả là với Y = Σi Xi thì **MX̄(t) = MY(t/n)**
 >
 >
 >
@@ -1248,14 +1248,14 @@
 >
 >
 >
-> Từ đó ta có MX_bar(t) =  [MX(t/n)]^n
+> Từ đó ta có MX̄(t) =  [MX(t/n)]^n
 >
 >
 >
 > thế thì đại khái là tác gỉa nói rằng công thức trên sẽ chỉ giúp ích (cho ta tìm
-> distribution của X_bar (sample mean) NẾU NHƯ KHI XÂY DỰNG TỪ 
+> distribution của X̄ (sample mean) NẾU NHƯ KHI XÂY DỰNG TỪ 
 > [MX(t/n)]^n TA CÓ MỘT KẾT QUẢ LÀ MỘT MGF QUEN THUỘC, thì khi 
-> đó mới giúp ta kết luận distribution của Xbar là cái gì đó, và ông nói thường
+> đó mới giúp ta kết luận distribution của X̄ là cái gì đó, và ông nói thường
 > thì ít khi có được điều này, Nhưng ví dụ sau sẽ là một case
 >
 >
@@ -1270,7 +1270,7 @@
 >
 >
 >
-> **Áp dụng công thức trên MX_bar(t) =  [MX(t/n)]^n**
+> **Áp dụng công thức trên MX̄(t) =  [MX(t/n)]^n**
 >
 >
 >
@@ -1294,8 +1294,8 @@
 >
 >
 >
-> Kết quả này cho thấy **Xbar có mgf là mgf của normal rv có parameter
-> là μ và σ²/n**. Hay Xbar  ~ n(μ, σ²/n)
+> Kết quả này cho thấy **X̄ có mgf là mgf của normal rv có parameter
+> là μ và σ²/n**. Hay X̄  ~ n(μ, σ²/n)
 >
 >
 >
@@ -1339,12 +1339,12 @@
 > Thế thì đại ý là khi đó ta có thể dùng các TRANSFORMATION technique
 > đã nói ở chapter 4 khi ta tìm joint distribution của U,V với U = g1(X, Y),
 > V = g2(X, Y) và đã biết distribution của X,Y. Hoặc khái quát hơn khi ta muốn
-> tìm joint distribution của **U** = (U1, U2,....Un) với U1 = g1(**X**) = g1(X1,...Xn)
+> tìm joint distribution của 𝐔 = (U1, U2,....Un) với U1 = g1(𝐗) = g1(X1,...Xn)
 > ..., Un = gn(X1, X2,...Xn)
 >
 >
 >
-> để tìm pdf của Y = X1 + X2 + ...Xn và sau đó là Xbar.
+> để tìm pdf của Y = X1 + X2 + ...Xn và sau đó là X̄.
 >
 >
 >
@@ -1435,26 +1435,26 @@
 >
 >
 > Khi ta có n random variable. U1,U2,.....Un tạo thành random variable vector
-> **U** với Ui = gi(X1,X2,...Xn) i = 1,2...n Và ta biết joint pdf của X1,...Xn. Khi đó
+> 𝐔 với Ui = gi(X1,X2,...Xn) i = 1,2...n Và ta biết joint pdf của X1,...Xn. Khi đó
 > nếu cũng thỏa yêu cầu 1-1 ta sẽ có thể xây dựng joitn pdf của U1,..Un:
 >
 >
 >
 >
-> f**U**(u1,u2,....un) = f**X**(x1, x2,...xn) | ∂(x1,x2...xn) / ∂(u1,u2,...un) |
+> f𝐔(u1,u2,....un) = f𝐗(x1, x2,...xn) | ∂(x1,x2...xn) / ∂(u1,u2,...un) |
 >
 >
 >
-> f**U**(u1,u2,....un) chính là cách viết của fU1,U2,...Un(u1,u2,....un) tức joint pdf
-> của U1,...Un. Nhưng cũng là pdf của random variable VECTOR **U** = (U1,..Un)
+> f𝐔(u1,u2,....un) chính là cách viết của fU1,U2,...Un(u1,u2,....un) tức joint pdf
+> của U1,...Un. Nhưng cũng là pdf của random variable VECTOR 𝐔 = (U1,..Un)
 >
 >
 >
-> f**X**(x1, x2,...xn), tương tự là cách viết của joint pdf của X1,...Xn 
+> f𝐗(x1, x2,...xn), tương tự là cách viết của joint pdf của X1,...Xn 
 >
 >
 >
-> tức là fX1,X2,...Xn(x1,x..xn) chẳng qua gom chúng lại thàng vector **X**
+> tức là fX1,X2,...Xn(x1,x..xn) chẳng qua gom chúng lại thàng vector 𝐗
 >
 >
 >
@@ -1656,6 +1656,34 @@
 > TRỌNG. QUA CÁC SÁCH CỦA C.BISHOP, YOSHUA BENGIO, GẶP RẤT 
 > NHIỀU
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, bạn đã tự chứng minh trọn vẹn và chi tiết định lý tích chập (Convolution Formula) qua phép biến đổi 2 biến (bivariate transformation) và tính đúng Jacobian.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Và hàng 1 của | ∂(x1,x2...xn) / ∂(u1,u2,...un) | , sẽ là [∂x1/∂u1, ∂x1/∂u2,..... = [∂h1(u1,..un)/∂u1, ∂h2(u1,...un) / ∂u2...]"*
+>
+> Lỗi viết nhầm chỉ số: Hàng 1 của ma trận Jacobian là các đạo hàm riêng của biến x1 = h1 theo từng biến u_j, tức là phải là [∂h1/∂u1, ∂h1/∂u2, ..., ∂h1/∂un], bạn ghi nhầm phần tử thứ hai thành ∂h2/∂u2.
+>
+> **2.** *"∂y/∂l = ∂h2(z,l)/∂z = ∂(z - l)/∂l = -1"*
+>
+> Lỗi gõ nhầm mẫu số ở bước trung gian: viết thành ∂h2(z,l)/∂z thay vì ∂h2(z,l)/∂l, mặc dù bước tính toán phía sau ∂(z - l)/∂l = -1 là hoàn toàn chính xác.
+>
+> **3.** *"vì định nghĩa của ℬ ko yêu cầu là (z,l) trong ℬ thì nhất định phải map với (x,y) thuộc 𝒜"*
+>
+> Khái niệm tập ảnh: Vì ℬ được định nghĩa là ảnh của 𝒜 qua phép biến đổi g (tức ℬ = g(𝒜)), nên theo định nghĩa mọi (z, l) ∈ ℬ bắt buộc phải có tạo ảnh (x, y) nằm trong 𝒜. Do phép ánh xạ tuyến tính này là song ánh trên toàn bộ R^2, nghịch ảnh duy nhất của (z, l) ∈ ℬ hiển nhiên nằm trong 𝒜.
+>
+>
+> **✓ Strengths**
+> - Nắm rất vững lý do cần chuyển sang phương pháp Transformation khi mgf không tồn tại hoặc có dạng không nhận diện được.
+> - Tự triển khai đầy đủ kỹ thuật đặt biến phụ (auxiliary variable) L = X để đưa về bài toán bivariate transformation một cách chính xác.
+> - Tính toán chính xác ma trận Jacobian, định thức Jacobian và thực hiện phép marginalize (tích phân theo biến phụ l) để ra đúng công thức tích chập.
+>
+> **💡 Deeper notes**
+> - Trong thực hành với các phân phối cụ thể có giá trị trên miền bị chặn (ví dụ X, Y > 0), cận lấy tích phân khi marginalize sẽ phụ thuộc vào tập giá trị của l sao cho cả l ∈ support(X) và z - l ∈ support(Y).
+
 <br>
 
 <a id="node-5ol3wjb"></a>
@@ -1802,7 +1830,7 @@
 
 > [!NOTE]
 > Đại ý là, nhớ rằng phần này chủ yếu đang nói về việc tìm sampling
-> distribution của sample mean Xbar. Và những phần trước là nói về các
+> distribution của sample mean X̄. Và những phần trước là nói về các
 > công cụ, cách tiếp cận để giúp ta làm việc đó. Thì ở đây, gs nói về hai
 > case đặc biệt giúp việc này dễ hơn bình thường. Đó là khi sampling từ
 > population có dạng là location scale family, hoặc từ exponential families.
@@ -1931,7 +1959,7 @@
 >
 > Vậy thì ở đây, đại ý là, nếu như ta có random sample X1,...Xn có population
 > distribution là một location scale family có pdf là (1/σ) f((x-μ)/σ) thì cái sample
-> mean của nó X_bar sẽ có quan hệ dễ hiểu với sample mean Z_bar của random
+> mean của nó X̄ sẽ có quan hệ dễ hiểu với sample mean Z̄ của random
 > sample Z1,...Zn từ population có pdf là f(z)
 >
 >
@@ -1999,7 +2027,7 @@
 >
 >
 >
-> ⇔ X_bar = σ Z_bar + μ
+> ⇔ X̄ = σ Z̄ + μ
 >
 >
 >
@@ -2012,7 +2040,7 @@
 >
 > Vậy thì điều quan trọng là, với cái quan hệ này, thì áp dụng cái theorem trên
 > cho phép ta nhận định rằng: À nếu như mà ông Zbar này mà có pdf là g(z) thì
-> ta sẽ SUY RA NGAY pdf của ông X_bar, là g((z - μ)/σ)/σ. Tại sao?
+> ta sẽ SUY RA NGAY pdf của ông X̄, là g((z - μ)/σ)/σ. Tại sao?
 >
 >
 >
@@ -2023,7 +2051,7 @@
 >
 >
 >
-> Vậy thì ở đây nếu biết pdf của Zbar = g(z), thì theo trên ta suy ra pdf của Xbar
+> Vậy thì ở đây nếu biết pdf của Zbar = g(z), thì theo trên ta suy ra pdf của X̄
 > là g((z - μ)/σ)/σ
 >
 >
@@ -2050,15 +2078,15 @@
 >
 >
 >
-> Khi đó ta sẽ có pdf của Xbar có công thức là công thức của g((z - μ)/σ)/σ, hay
-> fXbar (x) =  [(x - μ)/σ]^2 / σ
+> Khi đó ta sẽ có pdf của X̄ có công thức là công thức của g((z - μ)/σ)/σ, hay
+> fX̄ (x) =  [(x - μ)/σ]^2 / σ
 >
 >
 >
 > (cái kí tự x hay z trong [(x - μ)/σ]^2 / σ hay [(z - μ)/σ]^2 / σ KHÔNG QUAN
 > TRỌNG, VÌ NÓ CHỈ LÀ DUMMIES NAME, nói về một hàm số, thì công thức
 > của nó, tức là nó làm gì với input đưa vô mới quan trọng. Nên kể cả ta nói là
-> fXbar(z) = [(z - μ)/σ]^2 / σ vẫn đúng chả sao cả, vì nó vẫn thể hiện là: à với z
+> fX̄(z) = [(z - μ)/σ]^2 / σ vẫn đúng chả sao cả, vì nó vẫn thể hiện là: à với z
 > bằng này, thì bỏ vô hàm pdf của X̄ nó sẽ cho ra kết quả bằng [(z - μ)/σ]^2 /
 > σ).
 >
@@ -2091,22 +2119,22 @@
 >
 >
 >
-> rằng nếu f(z) là pdf của Zbar thì pdf của Xbar sẽ là f((x - μ)/σ)/σ
+> rằng nếu f(z) là pdf của Zbar thì pdf của X̄ sẽ là f((x - μ)/σ)/σ
 >
 >
 >
 > Mà Zbar như đã chứng minh trong 5.2.10 để cho thấy nó là Cauchy(0,1). nên
-> giờ Xbar có pdf quan hệ với pdf của Zbar như vậy.Cho thấy Xbar là một
+> giờ X̄ có pdf quan hệ với pdf của Zbar như vậy.Cho thấy X̄ là một
 > thành viên trong gia đình các distribution thuộc loại location-scale families.
-> Nói cách khác, Xbar cũng có chung dạng distribution với Zbar, chỉ khác là
+> Nói cách khác, X̄ cũng có chung dạng distribution với Zbar, chỉ khác là
 > shift parameter của nó là μ, và scale parameter của nó là σ
 >
 >
 >
 > Mà vì Zbar ~ Cauchy(0, 1), mà trong Cauchy family thì hai tham số của nó là
 > location và scale. Tức distribution của Zbar có location là 0 và scale là 1 Để
-> rồi giờ đây ta đã kết luận Xbar NẰM CHUNG GIA ĐÌNH VỚI Zbar, nhưng
-> khác location là μ và scale là σ. Từ đó ta suy ra distribution của Xbar là
+> rồi giờ đây ta đã kết luận X̄ NẰM CHUNG GIA ĐÌNH VỚI Zbar, nhưng
+> khác location là μ và scale là σ. Từ đó ta suy ra distribution của X̄ là
 > Cauchy(μ, σ)
 >
 >
@@ -2127,7 +2155,7 @@
 >
 >
 >
-> X1,...Xn ~Cauchy(μ, σ) thì suy ra Xbar cũng ~ Cauchy(μ, σ) .
+> X1,...Xn ~Cauchy(μ, σ) thì suy ra X̄ cũng ~ Cauchy(μ, σ) .
 >
 >
 >
@@ -2149,8 +2177,8 @@
 >
 >
 >
-> Thì ở đây cũng vậy, đáng lẽ ta phải xây dựng pdf của Xbar (từ pdf của X1,..
-> Xn) rồi bằng cách nào đó chỉ ra rõ ràng rằng pdf cảu Xbar có dạng của
+> Thì ở đây cũng vậy, đáng lẽ ta phải xây dựng pdf của X̄ (từ pdf của X1,..
+> Xn) rồi bằng cách nào đó chỉ ra rõ ràng rằng pdf cảu X̄ có dạng của
 > Cauchy(μ, σ) thì khi đó MỚI ĐƯỢC PHÉP KẾT LUẬN XBAR LÀ CAUCHY(μ,
 > σ)
 >
@@ -2166,7 +2194,7 @@
 >
 >
 > Rồi, cuối cùng, giáo sư đề nghị ta nhận xét thấy rằng. À, distribution của
-> sample mean Xbar CŨNG CÓ SCALE PARAM là σ GIỐNG NHƯ SCALE
+> sample mean X̄ CŨNG CÓ SCALE PARAM là σ GIỐNG NHƯ SCALE
 > PARAM CỦA X1,...Xn (thằng location param cũng vậy, nhưng đang chú ý
 > nói tới scale param)
 >
@@ -2176,7 +2204,7 @@
 >
 >
 >
-> Var(Xbar) = σ² / n, tức là variance của sample mean, lại là population 
+> Var(X̄) = σ² / n, tức là variance của sample mean, lại là population 
 > variance / n
 >
 >
@@ -2187,14 +2215,14 @@
 >
 > Thứ nhất, chú ý rằng CÁI THEOREM 5.2.6 CHỈ ÁP DỤNG VỚI POPULATION
 > CÓ VARIANCE FINITE (HỮU HẠN) thể hiện bởi σ² < infinity. VÀ, NẾU ÁP
-> DỤNG, THÌ CÔNG THỨC LÀ: Var(Xbar) = σ² / n tức POPULATION VARIANCE
+> DỤNG, THÌ CÔNG THỨC LÀ: Var(X̄) = σ² / n tức POPULATION VARIANCE
 > CHIA n
 >
 >
 >
 > Vậy điểm cần chú ý thứ nhất: GIẢ SỬ CAUCHY CÓ VARIANCE HỮU HẠN,
 > THÌ ĐỂ ÁP DỤNG VÀO, TA PHẢI HỎI VARIANCE CỦA NÓ LÀ GÌ. Tức là
-> Xbar = σ² / n. thì population variance σ² là gì?
+> X̄ = σ² / n. thì population variance σ² là gì?
 >
 >
 >
@@ -2247,7 +2275,7 @@
 > NHIỀU MẪU (n càng lớn) thì cũng vô ích vì không giúp giảm được "độ biến động"
 > (dispersion) của sample mean (vì variance vẫn mãi là inf, thể hiện bởi scale param
 > là σ) trong khi đó với các distribution khác ví dụ như normal, thì càng nhiều mẫu,
-> sẽ càng giảm variance của Xbar (vì áp dụng được theorem VarXbar  = σ² / n
+> sẽ càng giảm variance của X̄ (vì áp dụng được theorem VarX̄  = σ² / n
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
@@ -2366,7 +2394,7 @@
 >
 >
 >
-> S^2 =  [Σi (Xi - Xbar)^2 ] / (n - 1)
+> S^2 =  [Σi (Xi - X̄)^2 ] / (n - 1)
 >
 >
 >
