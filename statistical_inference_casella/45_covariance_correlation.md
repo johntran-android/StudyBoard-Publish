@@ -1,6 +1,6 @@
 # 4.5 Covariance & Correlation
 
-📊 **Progress:** `18` Notes | `25` Screenshots
+📊 **Progress:** `18` Notes | `25` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-0rdjr6h"></a>
@@ -101,7 +101,7 @@
 <p align="center"><kbd><img src="assets/0jj16gy8tmb9.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> rồi, ví dụ này, f(x, y) = 1, x ∈ (0,1), x < y < x + 1
+> rồi, ví dụ này, f(x, y) = 1, x ∈ (0,1), x &lt; y &lt; x + 1
 >
 >
 >
@@ -121,7 +121,7 @@
 >
 >
 >
-> ⇨ X ~ uniform(0,1)/ Vì uniform (a,b) có pdf = 1/(b-a) khi x ∈ (a,b)
+> ⇨ X \~ uniform(0,1)/ Vì uniform (a,b) có pdf = 1/(b-a) khi x ∈ (a,b)
 >
 >
 >
@@ -137,15 +137,15 @@
 >
 >
 >
-> \- If y < 0 or y-1 > 1 ⇔ y < 0 or y > 2 ⇨ A = ∅
+> \- If y &lt; 0 or y-1 &gt; 1 ⇔ y &lt; 0 or y &gt; 2 ⇨ A = ∅
 >
 >
 >
-> \- If 0 < y < 1 ⇨ A = (0, y) ∩ (y-1, 1) = (max(0, y-1), min(1,y))
+> \- If 0 &lt; y &lt; 1 ⇨ A = (0, y) ∩ (y-1, 1) = (max(0, y-1), min(1,y))
 >
 >
 >
-> fY(y) = ∫A fX,Y(x,y) dx 
+> fY(y) = ∫A fX,Y(x,y) dx
 >
 >
 >
@@ -157,23 +157,23 @@
 >
 >
 >
-> Khi 0 < y < 1 ⇨ min(1,y) = y, max(0, y-1) = 0 ⇨ fY(y) = y - 0 = **y**
+> Khi 0 &lt; y &lt; 1 ⇨ min(1,y) = y, max(0, y-1) = 0 ⇨ fY(y) = y - 0 = y
 >
 >
 >
-> Khi 1 ≤  y < 2 ⇨ min(1,y) = 1, max(0, y-1) = y-1 ⇨ fY(y) = 1 - (y-1) = **2-y**
+> Khi 1 ≤ y &lt; 2 ⇨ min(1,y) = 1, max(0, y-1) = y-1 ⇨ fY(y) = 1 - (y-1) = **2-y**
 >
 >
 >
-> Còn khi y < 0 hoặc y > 2 thì như đã nói A rỗng ⇨ tích phân = 0 ⇨ fY = 0
+> Còn khi y &lt; 0 hoặc y &gt; 2 thì như đã nói A rỗng ⇨ tích phân = 0 ⇨ fY = 0
 >
 >
 >
-> **Vậy fY(y) = y khi y** ∈ **(0,1) hoặc bằng 2-y khi y** ∈ **[1,2)
+> **Vậy fY(y) = y khi y** ∈ **(0,1) hoặc bằng 2-y khi y** ∈ \*\*\[1,2)
 >
 >
 >
-> Tiếp, ta sẽ tính mean, variance của X, Y:**
+> Tiếp, ta sẽ tính mean, variance của X, Y:\*\*
 >
 >
 >
@@ -185,11 +185,11 @@
 >
 >
 >
-> =  ∫0:1x^2dx - 1/4 =  x^3/3|0:1 - 1/4 = 1/3 - 1/4 = 1/12
+> = ∫0:1x^2dx - 1/4 = x^3/3|0:1 - 1/4 = 1/3 - 1/4 = 1/12
 >
 >
 >
-> Với Y: μY = EY =  ∫0:1 yfY(y)dy + ∫1:2 yfY(y)dy
+> Với Y: μY = EY = ∫0:1 yfY(y)dy + ∫1:2 yfY(y)dy
 >
 >
 >
@@ -221,12 +221,11 @@
 >
 >
 >
-> σY^2 = Var(Y) =EX^2 - (EX)^2 =  ∫0:1 y^2fY(y)dy + ∫1:2 y^2fY(y)dy - 1
+> σY^2 = Var(Y) =EX^2 - (EX)^2 = ∫0:1 y^2fY(y)dy + ∫1:2 y^2fY(y)dy - 1
 >
 >
 >
-> ...
-> = 1/6
+> ... = 1/6
 >
 >
 >
@@ -254,11 +253,11 @@
 >
 >
 >
-> = ∫0:1 x [(x+1)^2/2 - x^2/2] dx
+> = ∫0:1 x \[(x+1)^2/2 - x^2/2\] dx
 >
 >
 >
-> = ∫0:1 x [x^2+2x + 1 - x^2]/2 dx
+> = ∫0:1 x \[x^2+2x + 1 - x^2\]/2 dx
 >
 >
 >
@@ -270,11 +269,11 @@
 >
 >
 >
-> = (1/2) (2x^3/3 + x^2/2)|0:1 
+> = (1/2) (2x^3/3 + x^2/2)|0:1
 >
 >
 >
-> = (1/2) (2*1^3/3 + 1^2/2)
+> = (1/2) (2\*1^3/3 + 1^2/2)
 >
 >
 >
@@ -291,6 +290,29 @@
 >
 >
 > Thế vào công thức covariance EXY - μXμY = 1/12 và Cor(X,Y) = 1/√2
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, tự diễn giải và chứng minh chi tiết từng bước mà sách giáo khoa bỏ qua (như tìm hàm mật độ biên của Y và tính kỳ vọng tích). Chỉ có vài lỗi gõ nhầm ký hiệu nhỏ không làm ảnh hưởng đến bản chất.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"σY^2 = Var(Y) =EX^2 - (EX)^2"*
+>
+> Lỗi gõ nhầm biến ngẫu nhiên: khi tính phương sai của Y thì công thức phải là EY^2 - (EY)^2 chứ không phải EX^2 - (EX)^2 (dù phần tích phân phía sau bạn đã áp dụng đúng biến y).
+>
+> **2.** *"EXY = ∫0:1 ∫x:x+1 xyfX,Y(x,y)dxdy | 2D lotus = ∫0:1 ∫x:x+1 xy dx dy = ∫0:1 ∫x:x+1 xy dy dx"*
+>
+> Thứ tự vi phân ở hai biểu thức đầu ghi nhầm là 'dxdy' và 'dx dy' trong khi cận trong là theo y (từ x đến x+1), sau đó bạn đã tự sửa lại thành 'dy dx' ở dòng tiếp theo.
+>
+>
+> **✓ Strengths**
+> - Tự suy luận và giải thích chuẩn xác cách tìm miền chặn của X theo Y để xác định hàm mật độ biên từng đoạn của Y.
+> - Tự tay thực hiện toàn bộ các tích phân kiểm chứng lại các giá trị kỳ vọng, phương sai và E(XY) thay vì chỉ chép lại kết quả có sẵn trong sách.
+>
+> **💡 Deeper notes**
+> - Biến ngẫu nhiên Y là tổng của hai biến độc lập X ~ Uniform(0,1) và Z ~ Uniform(0,1) (khi biểu diễn y = x + z), do đó phân phối của Y có dạng tam giác (Triangular distribution) đối xứng quanh 1, giải thích trực quan tại sao fY(y) có dạng hai nhánh đối xứng và EY = 1.
 
 <br>
 
@@ -655,8 +677,7 @@
 <p align="center"><kbd><img src="assets/joodbwxamwl.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, ví dụ này, đại khái là cho X ~ uniform(0,1). Z ~ uniform(0, 1/10) X, Z
-> độc lập, Y = X + Z. và ta quan tâm random variable vector (X, Y)
+> Rồi, ví dụ này, đại khái là cho X \~ uniform(0,1). Z \~ uniform(0, 1/10) X, Z độc lập, Y = X + Z. và ta quan tâm random variable vector (X, Y)
 >
 >
 >
@@ -668,8 +689,7 @@
 >
 >
 >
-> Coi như đây là ta có X~Unif(0,1), Y~Unif(0,1/1); cần tìm joint pdf của U,
-> V: với U = g1(X, Y) = X; V = g2(X, Y) = X + Y
+> Coi như đây là ta có X\~Unif(0,1), Y\~Unif(0,1/1); cần tìm joint pdf của U, V: với U = g1(X, Y) = X; V = g2(X, Y) = X + Y
 >
 >
 >
@@ -677,13 +697,11 @@
 >
 >
 >
-> Nếu A là tiền ảnh của B: A = {(x,y) ∈ R^2: (g1(x,y), g2(x,y)) ∈ B} thì P((X,
-> Y) ∈ A) = P((U,V) ∈ B)
+> Nếu A là tiền ảnh của B: A = {(x,y) ∈ R^2: (g1(x,y), g2(x,y)) ∈ B} thì P((X, Y) ∈ A) = P((U,V) ∈ B)
 >
 >
 >
-> Tiếp, ta sẽ xác định support set của X,Y 𝒜: Với distribution đã biết
-> của X, Y, thì 𝒜 = {(x,y) ∈ R^2: 0 ≤ x ≤ 1; 0 ≤ y ≤ 1/10}
+> Tiếp, ta sẽ xác định support set của X,Y 𝒜: Với distribution đã biết của X, Y, thì 𝒜 = {(x,y) ∈ R^2: 0 ≤ x ≤ 1; 0 ≤ y ≤ 1/10}
 >
 >
 >
@@ -719,15 +737,15 @@
 >
 >
 >
-> ∂(x,y)/∂(u,v) = [∂x/∂u ∂x/∂v ; ∂y/∂u ∂y/∂v]
+> ∂(x,y)/∂(u,v) = \[∂x/∂u ∂x/∂v ; ∂y/∂u ∂y/∂v\]
 >
 >
 >
-> = [1 0; 0 1] ⇨ det = 1
+> = \[1 0; 0 1\] ⇨ det = 1
 >
 >
 >
-> fX,Y(x,y) = fX(x)fY(y) = 1/(1-0) * 1/(1/10 - 0) = 1 * 10 = 10
+> fX,Y(x,y) = fX(x)fY(y) = 1/(1-0) \* 1/(1/10 - 0) = 1 \* 10 = 10
 >
 >
 >
@@ -735,29 +753,25 @@
 >
 >
 >
-> Thay U vởi X , V bởi Y. (bởi mình đang dùng các kí hiệu U = g1(X,Y) V
-> = g2(X,Y) cho giống với những gì làm ở 4.3)
+> Thay U vởi X , V bởi Y. (bởi mình đang dùng các kí hiệu U = g1(X,Y) V = g2(X,Y) cho giống với những gì làm ở 4.3)
 >
 >
 >
-> ⇨ **fX,Y(x,y) = 10 ; 0 < x < 1, 0 < y < 1/10 + x** 
+> ⇨ **fX,Y(x,y) = 10 ; 0 &lt; x &lt; 1, 0 &lt; y &lt; 1/10 + x**
 >
 >
 >
 > **ĐÂY LÀ KẾT QUẢ TRONG SÁCH**
 >
-> Vậy thì ở đây đại khái nói là ta có thể lập luận kiểu khác để cho ra joint pdf
-> của X,Y như trên:
+> Vậy thì ở đây đại khái nói là ta có thể lập luận kiểu khác để cho ra joint pdf của X,Y như trên:
 >
 >
 >
-> Hướng làm là ta sẽ lập luận để có conditional của Y given X=x, tức fY|X(y|x)
-> và sau đó áp dụng fX,Y(x,y) = fY|X(y|x)fX(x) để xây dựng joint pdf của X,Y
+> Hướng làm là ta sẽ lập luận để có conditional của Y given X=x, tức fY|X(y|x) và sau đó áp dụng fX,Y(x,y) = fY|X(y|x)fX(x) để xây dựng joint pdf của X,Y
 >
 >
 >
-> Thế thì Y = Z + X nên tìm distribution của Y given X chính là tìm distribution
-> của (X+Z) given X
+> Thế thì Y = Z + X nên tìm distribution của Y given X chính là tìm distribution của (X+Z) given X
 >
 >
 >
@@ -765,17 +779,15 @@
 >
 >
 >
-> Y = Z + x, nên conditional distribution của Y given X = x  là distribution của (Z
-> + x) | x
+> Y = Z + x, nên conditional distribution của Y given X = x là distribution của (Z + x) | x
 >
 >
 >
-> cũng sẽ là [condition distribution của Z] + x: Z|x + x
+> cũng sẽ là \[condition distribution của Z\] + x: Z|x + x
 >
 >
 >
-> Vì X, và Z độc lập, nên dù với giá trị cụ thể x nào của X thì conditional pdf
-> của Z given X=x, vẫn chỉ là marginal pdf của Z, thể hiển toán học bởi
+> Vì X, và Z độc lập, nên dù với giá trị cụ thể x nào của X thì conditional pdf của Z given X=x, vẫn chỉ là marginal pdf của Z, thể hiển toán học bởi
 >
 >
 >
@@ -787,8 +799,7 @@
 >
 >
 >
-> Vậy [conditional distribution của Y given X = x] bằng [marginal distribution
-> của Z] + x
+> Vậy \[conditional distribution của Y given X = x\] bằng \[marginal distribution của Z\] + x
 >
 >
 >
@@ -800,16 +811,15 @@
 >
 >
 >
-> Z là rv ~ f(z) ⇔ X = σZ + μ có pdf ~ fX(x) = f[(x - μ)/σ] / σ
+> Z là rv \~ f(z) ⇔ X = σZ + μ có pdf \~ fX(x) = f\[(x - μ)/σ\] / σ
 >
 >
 >
-> Nói bằng lời là nếu Z có pdf f(z) thì X = σZ + μ sẽ có pdf fX(x) = [f(x - μ)/σ]/σ
+> Nói bằng lời là nếu Z có pdf f(z) thì X = σZ + μ sẽ có pdf fX(x) = \[f(x - μ)/σ\]/σ
 >
 >
 >
-> Ngược lại nếu X = σZ + μ và nó có pdf fX(x) = [f(x - μ)/σ]/σ thì Z sẽ có pdf là
-> f(z)
+> Ngược lại nếu X = σZ + μ và nó có pdf fX(x) = \[f(x - μ)/σ\]/σ thì Z sẽ có pdf là f(z)
 >
 >
 >
@@ -817,8 +827,7 @@
 >
 >
 >
-> Vậy ở đây ta có Z có pdf là fZ(z) = 10, 0 < z < 1/19, thì với Y|x = Z + x, (với x
-> fixed,  đóng vai  trò như hằng số μ)
+> Vậy ở đây ta có Z có pdf là fZ(z) = 10, 0 &lt; z &lt; 1/19, thì với Y|x = Z + x, (với x fixed, đóng vai trò như hằng số μ)
 >
 >
 >
@@ -826,12 +835,11 @@
 >
 >
 >
-> = 10, với 0 < y - x < 1/10 ⇔ 0 < y - x < 1/10 ⇔ x < y < x + 1/10
+> = 10, với 0 &lt; y - x &lt; 1/10 ⇔ 0 &lt; y - x &lt; 1/10 ⇔ x &lt; y &lt; x + 1/10
 >
 >
 >
-> Vậy fY|x(y|x) = 10 với x < y < x + 1/10 đủ để ta kết luận Y|x ~ Uniform(x, x +
-> 1/10)
+> Vậy fY|x(y|x) = 10 với x &lt; y &lt; x + 1/10 đủ để ta kết luận Y|x \~ Uniform(x, x + 1/10)
 >
 >
 >
@@ -839,16 +847,15 @@
 >
 >
 >
-> với fX(x) là marginal pdf của X ~ uniform(0,1), = 1, 0 < x < 1
+> với fX(x) là marginal pdf của X \~ uniform(0,1), = 1, 0 &lt; x &lt; 1
 >
 >
 >
-> ⇨ **fX,Y(x,y) = 10*1, 0 < x < 1; x < y < x + 1/10**
+> ⇨ **fX,Y(x,y) = 10\*1, 0 &lt; x &lt; 1; x &lt; y &lt; x + 1/10**
 >
 >
 >
-> **KẾT QỦA NÀY Y CHANG CÁI TA CÓ KHI DERIVE BẰNG CÁCH LÀM CỦA
-> CHAP 3 Ở TRÊN**
+> **KẾT QỦA NÀY Y CHANG CÁI TA CÓ KHI DERIVE BẰNG CÁCH LÀM CỦA CHAP 3 Ở TRÊN**
 >
 > Viết gọn lại dùng toán thôi sẽ là:
 >
@@ -866,13 +873,11 @@
 >
 >
 >
-> Vì biết X=x nên fZ+**X**|X(y|x) = fZ+**x**|X(y|x) (THAY ..+**X**|.. BỞI +**x**|..)
+> Vì biết X=x nên fZ+X|X(y|x) = fZ+x|X(y|x) (THAY ..+X|.. BỞI +x|..)
 >
 >
 >
-> QUAN TRỌNG Ta sẽ không thay fZ+X|**X**(..)  thành fZ+x|**x**(..) vì CHỨC
-> NĂNG NÓ KHÁC, vốn dĩ trong kí hiệu fZ+x|X là đang ám chỉ conditional pdf
-> dựa  trên X của Z + x
+> QUAN TRỌNG Ta sẽ không thay fZ+X|X(..) thành fZ+x|x(..) vì CHỨC NĂNG NÓ KHÁC, vốn dĩ trong kí hiệu fZ+x|X là đang ám chỉ conditional pdf dựa trên X của Z + x
 >
 >
 >
@@ -880,17 +885,15 @@
 >
 >
 >
-> Vì Z độc lập X ⇨ Z + constant μ cũng độc lập X nên ta sẽ bỏ các kí hiệu "
-> condition on X" (|X và (..|x)
+> Vì Z độc lập X ⇨ Z + constant μ cũng độc lập X nên ta sẽ bỏ các kí hiệu " condition on X" (|X và (..|x)
 >
 >
 >
-> ⇨ fZ+μ**|X**(y**|x**) = fZ+μ(y)
+> ⇨ fZ+μ|X(y|x) = fZ+μ(y)
 >
 >
 >
-> Vai trò của x trong kí hiệu fZ+x|X(...) cũng như μ, là constant, nên Z +
-> constant x cũng độc lập X nên ta cũng làm tương tự
+> Vai trò của x trong kí hiệu fZ+x|X(...) cũng như μ, là constant, nên Z + constant x cũng độc lập X nên ta cũng làm tương tự
 >
 >
 >
@@ -902,7 +905,7 @@
 >
 >
 >
-> Dùng theorem Z ~ fZ(z) ⇔ X = σZ + μ ~ fX(x) = (1/σ) fZ[(x - μ) / σ]
+> Dùng theorem Z \~ fZ(z) ⇔ X = σZ + μ \~ fX(x) = (1/σ) fZ\[(x - μ) / σ\]
 >
 >
 >
@@ -911,6 +914,33 @@
 >
 >
 > Tới đây thay công thức fZ vào, ...phần còn lại thì như trên
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **82/100** · ✓ Move on
+>
+> Ghi chú thể hiện sự hiểu bài rất tốt về bản chất phân phối có điều kiện, nhưng gặp lỗi sai nghiêm trọng khi xác định cận của V ở phần transformation (nhầm chặn dưới của V thành 0 thay vì u, và tính sai ma trận Jacobian dù ra đáp số định thức đúng một cách may mắn).
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Y ∈ (0, 1/10) ⇨ V = X + Y ∈ (0, 1/10 + u) ⇨ ℬ = {0 ≤ u ≤ 1, 0 ≤ v ≤ 1/10 + u}"*
+>
+> Xác định cận của V bị sai cận dưới: vì Y ∈ (0, 1/10) và U = X = u, nên V = X + Y = u + Y phải thuộc khoảng (u, u + 1/10). Ghi nhận cận từ 0 là sai miền giá trị (chưa chặn dưới v > u).
+>
+> **2.** *"∂(x,y)/∂(u,v) = [∂x/∂u ∂x/∂v ; ∂y/∂u ∂y/∂v] = [1 0; 0 1] ⇨ det = 1"*
+>
+> Nghịch đảo là x = u, y = v - u. Do đó ma trận Jacobi ∂(x,y)/∂(u,v) = [1, 0; -1, 1], chứ không phải ma trận đơn vị [1 0; 0 1]. Dù định thức vẫn bằng 1 nhưng đạo hàm riêng ∂y/∂u = -1 bị tính sai thành 0.
+>
+> **3.** *"fZ(z) = 10, 0 < z < 1/19"*
+>
+> Lỗi gõ phím nhầm số 19 thay vì 1/10.
+>
+>
+> **✓ Strengths**
+> - Lập luận rất sắc bén và chính xác về cách tìm hàm mật độ có điều kiện f_{Y|X}(y|x) thông qua tính độc lập và phép tịnh tiến vị trí (location parameter).
+> - Hiểu rất rõ và diễn giải rành mạch ký hiệu xác suất điều kiện f_{Z+X|X}(y|x) = f_{Z+x}(y).
+>
+> **💡 Deeper notes**
+> - Khi đổi biến nhiều chiều với phép biến đổi tuyến tính hình bình hành (như u = x, v = x + y), cần luôn kiểm tra kỹ miền giá trị ℬ để tránh bỏ sót chặn dưới phụ thuộc vào biến u.
 
 <br>
 
