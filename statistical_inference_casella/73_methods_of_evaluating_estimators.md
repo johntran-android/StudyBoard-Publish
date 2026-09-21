@@ -1,6 +1,6 @@
 # 7.3 Methods Of Evaluating Estimators
 
-📊 **Progress:** `63` Notes | `74` Screenshots | `7` AI Reviews
+📊 **Progress:** `63` Notes | `74` Screenshots | `8` AI Reviews
 
 ---
 <a id="node-l0tjfjp"></a>
@@ -627,6 +627,38 @@
 >
 >
 > Kết luận MLE của σ² là  [(n-1)/n] S^2
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc bản chất của trade-off giữa bias và variance qua ví dụ MLE của phương sai chuẩn, tính toán chi tiết và tự suy dẫn lại đầy đủ cả MLE.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"MSE_σ²((σ²)^_mse) = Var(S^2) + [Bias(S^2)]^2"*
+>
+> Nhầm ký hiệu ở dòng công thức tổng quát: viết 'Var(S^2) + [Bias(S^2)]^2' và nhãn '(σ²)^_mse' thay vì MSE của (σ²)^_mle, dù các bước thế số ngay bên dưới đã dùng đúng phương sai và bias của (σ²)^_mle.
+>
+> **2.** *"MSE của S^2: Tính theo định nghĩa: E[S^2 - σ²]^2 = Var(S^2) + Bias(S^2)"*
+>
+> Công thức phân rã MSE phải là Var + [Bias]^2 chứ không phải Var + Bias (dù với S^2 thì Bias = 0 nên kết quả không đổi).
+>
+> **3.** *"Thử làm lại cái [σ²]^_mse (tức MSE của normal variance σ²) của normal xem được không"*
+>
+> Lẫn lộn viết tắt giữa MSE và MLE ở câu mở đầu phần đạo hàm (sau đó giải tìm MLE của tham số).
+>
+> **4.** *"1/3 < n Và cái này luôn đúng vì kích thước của random sample ≥ 1."*
+>
+> Để mẫu số ở Var(S^2) = 2σ^4/(n-1) có nghĩa thì mẫu số n phải thỏa mãn n > 1 (tức n ≥ 2), không chỉ là n ≥ 1.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ nguyên lý đánh đổi: chấp nhận một lượng bias nhỏ để đổi lấy sự sụt giảm lớn hơn về phương sai, giúp tổng MSE nhỏ hơn.
+> - Tự thực hiện đầy đủ và chính xác quá trình đạo hàm tìm ước lượng hợp lý cực đại (MLE) cho cả μ và σ² của phân phối chuẩn.
+> - Chứng minh chặt chẽ bất đẳng thức so sánh MSE giữa ước lượng MLE và mẫu phương sai hiệu chỉnh S^2.
+>
+> **💡 Deeper notes**
+> - Công thức Var(S^2) = 2σ^4/(n-1) phụ thuộc chặt chẽ vào giả định phân phối chuẩn (sử dụng tính chất phân phối Chi-bình phương (n-1)S^2/σ^2 ~ χ^2(n-1)); đối với các phân phối không chuẩn, công thức phương sai của S^2 sẽ phụ thuộc thêm vào hệ số nhọn (kurtosis) của tổng thể.
 
 **🔗 See also:** [Hessian log likelihood chuẩn](./72_method_of_finding_estimators.md#node-19nyc96)
 
