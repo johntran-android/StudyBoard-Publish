@@ -5205,13 +5205,13 @@
 >
 >
 >
-> Theo biểu đồ này có thể thấy kh n nhỏ, thì mse (risk function) của xbar lớn
+> Theo biểu đồ này có thể thấy kh n nhỏ, thì mse (risk function) của x̄ lớn
 > hơn của p^_B trong phần lớn các trường hợp (giá trị của p), nên dùng p^_B
 > là tốt hơn
 >
 >
 >
-> Ngược lại khi n lớn thì mse (risk function) của xbar là nhỏ hơn của p^_B trong
+> Ngược lại khi n lớn thì mse (risk function) của x̄ là nhỏ hơn của p^_B trong
 > phần lớn trường hợp.
 
 <br>
@@ -5902,7 +5902,7 @@
 >
 >
 > Tác giả nói từ ví dụ 7.2.16 và bài tập 7.22 ta đã tìm thấy posterior distribution của
-> θ given Xbar = xbar sẽ là normal distribution với mean và variance như  vậy. Ta
+> θ given Xbar = x̄ sẽ là normal distribution với mean và variance như  vậy. Ta
 > sẽ thử làm lại xem tại sao:
 >
 >
@@ -5975,11 +5975,11 @@
 >
 >
 >
-> = exp [(1/2σ²) (-Σixi^2+2θnxbar-nθ^2)]  exp[-(θ-μ)^2/2τ²]
+> = exp [(1/2σ²) (-Σixi^2+2θnx̄-nθ^2)]  exp[-(θ-μ)^2/2τ²]
 >
 >
 >
-> = exp [(1/2σ²) (-Σixi^2+2θnxbar-nθ^2) -(θ-μ)^2/2τ²]
+> = exp [(1/2σ²) (-Σixi^2+2θnx̄-nθ^2) -(θ-μ)^2/2τ²]
 >
 >
 >
@@ -5987,27 +5987,27 @@
 >
 >
 >
-> (1/2σ²) (-Σixi^2+2θnxbar-nθ^2) -(θ-μ)^2/2τ²
+> (1/2σ²) (-Σixi^2+2θnx̄-nθ^2) -(θ-μ)^2/2τ²
 >
 >
 >
-> = (1/2σ²) (-Σixi^2+2θnxbar-nθ^2) -(θ^2-2θμ+μ²)/2τ²
+> = (1/2σ²) (-Σixi^2+2θnx̄-nθ^2) -(θ^2-2θμ+μ²)/2τ²
 >
 >
 >
-> = -Σixi^2/2σ²+2nθxbar/2σ²-nθ^2/2σ² -θ^2/2τ²+2θμ/2τ²-μ²/2τ²
+> = -Σixi^2/2σ²+2nθx̄/2σ²-nθ^2/2σ² -θ^2/2τ²+2θμ/2τ²-μ²/2τ²
 >
 >
 >
-> = -Σixi^2/2σ²+nθxbar/σ²-nθ^2/2σ² -θ^2/2τ²+θμ/τ²-μ²/2τ²
+> = -Σixi^2/2σ²+nθx̄/σ²-nθ^2/2σ² -θ^2/2τ²+θμ/τ²-μ²/2τ²
 >
 >
 >
-> = -nθ^2/2σ²-θ^2/2τ²+nθxbar/σ²+θμ/τ²-μ²/2τ²-Σixi^2/2σ²
+> = -nθ^2/2σ²-θ^2/2τ²+nθx̄/σ²+θμ/τ²-μ²/2τ²-Σixi^2/2σ²
 >
 >
 >
-> = -(n/2σ²+1/2τ²)θ^2 + (nxbar/σ²+μ/τ²)θ -μ²/2τ²-Σixi^2/2σ²
+> = -(n/2σ²+1/2τ²)θ^2 + (nx̄/σ²+μ/τ²)θ -μ²/2τ²-Σixi^2/2σ²
 >
 >
 >
@@ -6047,7 +6047,7 @@
 >
 >
 >
-> Mean/Variance = (nxbar/σ²+μ/τ²) (B)
+> Mean/Variance = (nx̄/σ²+μ/τ²) (B)
 >
 >
 >
@@ -6067,23 +6067,23 @@
 >
 >
 >
-> (B) ⇔ Mean = (nxbar/σ²+μ/τ²) Variance
+> (B) ⇔ Mean = (nx̄/σ²+μ/τ²) Variance
 >
 >
 >
-> ⇔ Mean = (nxbar/σ²+μ/τ²) [σ²τ²/(nτ²+σ²)]
+> ⇔ Mean = (nx̄/σ²+μ/τ²) [σ²τ²/(nτ²+σ²)]
 >
 >
 >
-> ⇔ Mean = (nxbarτ²/τ²σ²+μσ²/σ²τ²) [σ²τ²/(nτ²+σ²)]
+> ⇔ Mean = (nx̄τ²/τ²σ²+μσ²/σ²τ²) [σ²τ²/(nτ²+σ²)]
 >
 >
 >
-> ⇔ Mean = [(nxbarτ²+μσ²)/σ²τ²] [σ²τ²/(nτ²+σ²)]
+> ⇔ Mean = [(nx̄τ²+μσ²)/σ²τ²] [σ²τ²/(nτ²+σ²)]
 >
 >
 >
-> ⇔ Mean = (nxbarτ²+μσ²)/(nτ²+σ²)
+> ⇔ Mean = (nx̄τ²+μσ²)/(nτ²+σ²)
 >
 >
 >
@@ -6133,11 +6133,11 @@
 >
 >
 >
-> Viết lại: Mean, tức E(θ|**x**) (hay E(θ|xbar) cũng được)
+> Viết lại: Mean, tức E(θ|**x**) (hay E(θ|x̄) cũng được)
 >
 >
 >
-> = (nxbarτ²+μσ²)/(nτ²+σ²)
+> = (nx̄τ²+μσ²)/(nτ²+σ²)
 >
 >
 >
@@ -6145,19 +6145,19 @@
 >
 >
 >
-> = nxbarτ²/(nτ²+σ²) + μσ²/(nτ²+σ²)
+> = nx̄τ²/(nτ²+σ²) + μσ²/(nτ²+σ²)
 >
 >
 >
-> = xbarτ²/(τ²+σ²/n) + μ(σ²/n)/(τ²+σ²/n)
+> = x̄τ²/(τ²+σ²/n) + μ(σ²/n)/(τ²+σ²/n)
 >
 >
 >
-> = [τ²/(τ²+σ²/n)] xbar + [(σ²/n)/(τ²+σ²/n)] μ
+> = [τ²/(τ²+σ²/n)] x̄ + [(σ²/n)/(τ²+σ²/n)] μ
 >
 >
 >
-> Đây là công thức trong sách E(θ|xbar)
+> Đây là công thức trong sách E(θ|x̄)
 >
 >
 >
@@ -6169,7 +6169,7 @@
 >
 >
 >
-> Đây là công thức trong sách Var(θ|xbar)
+> Đây là công thức trong sách Var(θ|x̄)
 >
 >
 >
@@ -6179,7 +6179,7 @@
 >
 > Thế thì như đã nói ở note trước, khi dùng squared error loss, thì cái Bayes rule
 > given prior π (tên dài dòng để chỉ estimator có Bayes risk nhỏ nhất) chính là
-> Bayes estimator: δ^π(**x**) = E(θ|xbar), tức mean của posterior distribution
+> Bayes estimator: δ^π(**x**) = E(θ|x̄), tức mean của posterior distribution
 > π(θ|**x**)
 >
 >
