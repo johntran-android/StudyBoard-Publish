@@ -1,6 +1,6 @@
 # 3.3 Continuous distribution
 
-📊 **Progress:** `24` Notes | `38` Screenshots
+📊 **Progress:** `24` Notes | `38` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-odu1bg9"></a>
@@ -493,8 +493,7 @@
 >
 >
 >
-> Theo định nghĩa EX = "weighted sum" tổng (Σ) có gán trọng số các possible
-> values  của X với weight  chính là xác suất tương ứng X
+> Theo định nghĩa EX = "weighted sum" tổng (Σ) có gán trọng số các possible values của X với weight chính là xác suất tương ứng X
 >
 >
 >
@@ -502,7 +501,7 @@
 >
 >
 >
-> Σ{x=x1,x2...} **xP(X=x)** = x1P(X=x1) + x2P(X=x2) + ...
+> Σ{x=x1,x2...} xP(X=x) = x1P(X=x1) + x2P(X=x2) + ...
 >
 >
 >
@@ -510,51 +509,78 @@
 >
 >
 >
-> ∫-inf:inf **x** fX(x) dx
+> ∫-inf:inf x fX(x) dx
 >
 >
 >
-> = **∫-inf:inf x [x^(α-1) e^-(x/β) / [ Γ(α) β^(α) ] dx**
+> = **∫-inf:inf x \[x^(α-1) e^-(x/β) / \[ Γ(α) β^(α) \] dx**
 >
 >
 >
-> = ∫-inf:inf  [x^α e^-(x/β) / [ Γ(α) β^(α) ] dx       | x x^(α-1) = x
+> = ∫-inf:inf \[x^α e^-(x/β) / \[ Γ(α) β^(α) \] dx | x x^(α-1) = x
 >
 >
 >
-> = 1/ [ Γ(α) β^(α) ] **∫-inf:inf  x^α e^-(x/β) dx**
+> = 1/ \[ Γ(α) β^(α) \] **∫-inf:inf x^α e^-(x/β) dx**
 >
 >
 >
-> Gamma(α, β), pdf fX(x) = x^(**α-1**) e^-(x/β) / [ **Γ(α)** **β^(α)** ]
+> Gamma(α, β), pdf fX(x) = x^(**α-1**) e^-(x/β) / \[ **Γ(α)** **β^(α)** \]
 >
 >
 >
-> Γ(α+1, β),  fX(x) = x^(α) e^-(x/β) / [ Γ(α+1) β^(α+1) ]
+> Γ(α+1, β), fX(x) = x^(α) e^-(x/β) / \[ Γ(α+1) β^(α+1) \]
 >
 >
 >
-> = [ Γ(α+1) β^(α+1) ] / [ Γ(α) β^(α) ] ∫-inf:inf  x^α e^-(x/β) / [ Γ(α+1) β^(α+1) ] dx
+> = \[ Γ(α+1) β^(α+1) \] / \[ Γ(α) β^(α) \] ∫-inf:inf x^α e^-(x/β) / \[ Γ(α+1) β^(α+1) \] dx
 >
 >
 >
-> Xét ∫-inf:inf  x^α e^-(x/β) / [ Γ(α+1) β^(α+1) ] dx = 1 do tính valid của pdf
+> Xét ∫-inf:inf x^α e^-(x/β) / \[ Γ(α+1) β^(α+1) \] dx = 1 do tính valid của pdf
 >
 >
 >
-> = [ Γ(α+1) β^α β ] / [ Γ(α) β^(α) ] 
+> = \[ Γ(α+1) β^α β \] / \[ Γ(α) β^(α) \]
 >
 >
 >
-> = [ α Γ(α) β^α β ] / [ Γ(α) β^(α) ] 
+> = \[ α Γ(α) β^α β \] / \[ Γ(α) β^(α) \]
 >
 >
 >
-> EX = **αβ**  
+> EX = **αβ**
 >
 >
 >
 > Recursion: Γ(α+1) = α Γ(α)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc ý tưởng cốt lõi: nhận diện kernel và nhân chia hằng số chuẩn hóa để tích phân bằng 1 mà không cần tích phân từng phần. Có một vài điểm chưa chặt chẽ nhỏ về cận tích phân (Gamma chỉ xác định trên [0, +∞)) và một lỗi gõ công thức phụ.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"= 1/ [ Γ(α) β^(α) ] ∫-inf:inf  x^α e^-(x/β) dx"*
+>
+> Cận tích phân của hàm mật độ phân phối Gamma là từ 0 đến +∞ (thay vì -∞ đến +∞), do biến ngẫu nhiên Gamma chỉ nhận giá trị dương (x > 0).
+>
+> **2.** *"x x^(α-1) = x"*
+>
+> Lỗi gõ (typo): đúng ra phải là x · x^(α-1) = x^α, dù trong biểu thức tích phân bạn vẫn áp dụng đúng số mũ α.
+>
+> **3.** *"Γ(α+1, β),  fX(x) = ..."*
+>
+> Ký hiệu phân phối là Gamma(α+1, β), việc dùng chữ cái Hy Lạp Γ(α+1, β) dễ gây nhầm lẫn với hàm Gamma thay vì phân phối Gamma.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất đúng bản chất của kỹ thuật nhận diện kernel của một pdf khác để tính tích phân bằng 1.
+> - Biến đổi đại số rõ ràng và áp dụng chính xác tính chất đệ quy của hàm Gamma: Γ(α+1) = αΓ(α).
+>
+> **💡 Deeper notes**
+> - Khi viết fX(x) = x^(α-1) e^(-x/β) / [Γ(α)β^α], cần lưu ý điều kiện x > 0 (và các tham số α > 0, β > 0) để tích phân hội tụ và pdf hợp lệ.
 
 <br>
 
@@ -1376,6 +1402,35 @@
 >
 > Đây chính là công thức pdf của N(μ, σ)**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú xuất sắc, hiểu sâu bản chất hình học của tích phân Gauss qua tọa độ cực và dẫn xuất trọn vẹn pdf của phân phối chuẩn qua phép đổi biến.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Nó rất tractable analytically (tạm dịch là dễ uốn nắn dù chưa hiểu lắm)"*
+>
+> Thuật ngữ 'analytically tractable' trong toán học và thống kê nghĩa là 'dễ giải tích' / 'có thể tính toán dưới dạng giải tích cụ thể (closed-form)' thay vì phải dùng xấp xỉ số, chứ không mang nghĩa 'dễ uốn nắn'.
+>
+> **2.** *"⇨ fX(x) = fZ(ginv(x)) |d/dz ginv(x)|"*
+>
+> Ký hiệu đạo hàm bị nhầm biến: phải là đạo hàm theo biến x (|d/dx ginv(x)|) thay vì d/dz (dù dòng ngay sau đó đã viết lại đúng là d/dx).
+>
+> **3.** *"du = -(1/2)rdr = -rdr"*
+>
+> Có một lỗi viết nhầm nhỏ: đạo hàm của -r^2/2 là -(1/2)*2r dr = -r dr, bạn viết thừa phần -(1/2)rdr dù kết quả rút gọn -rdr là chính xác.
+>
+>
+> **✓ Strengths**
+> - Tự thực hiện đầy đủ và chi tiết chứng minh tích phân Gauss bằng phương pháp tọa độ cực thay vì chỉ chép lại công thức.
+> - Trình bày trực giác hình học rất rõ ràng về việc xuất hiện nhân tử Jacobian r (dA = r dr dθ) trong hệ tọa độ cực.
+> - Sử dụng chính xác định lý đổi biến một chiều (transformation theorem) để chuyển từ N(0, 1) sang N(μ, σ²).
+>
+> **💡 Deeper notes**
+> - Cách lập luận tổng quát hơn cho nhân tử r mà ghi chú nhắc đến chính là định thức ma trận Jacobian (det(J) = r) khi chuyển đổi hệ tọa độ nhiều chiều.
+> - Khi phát biểu CLT, cần lưu ý biến ngẫu nhiên được chuẩn hóa tiến về phân phối chuẩn thường là tổng (hoặc trung bình mẫu) của các biến ngẫu nhiên độc lập cùng phân phối có phương sai hữu hạn, chứ không phải bản thân từng phân phối đơn lẻ tự tiến về Normal.
+
 <br>
 
 <a id="node-uuez1ye"></a>
@@ -1478,6 +1533,30 @@
 >
 >
 > Từ đó có thể kết luận Z ~ N(0, 1)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, tự diễn giải chi tiết từng bước biến đổi từ định nghĩa không gian mẫu, đổi biến tích phân đến việc suy ra hàm mật độ (pdf) của Z. Có một vài điểm nhỏ về mặt thuật ngữ và điều kiện biến số cần chỉnh lại cho chuẩn xác hơn.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Dĩ nhiên là ta sẽ tìm pdf của Z: Tức P(Z < z)"*
+>
+> P(Z ≤ z) hay P(Z < z) là hàm phân phối tích lũy (CDF - Cumulative Distribution Function), không phải hàm mật độ xác suất (PDF - Probability Density Function). Dù ở phần sau bạn đã phân biệt lại đúng FZ và fZ, cách gọi ban đầu này dễ gây nhầm lẫn thuật ngữ.
+>
+> **2.** *"vì σ là số ko âm"*
+>
+> Độ lệch chuẩn σ trong phân phối chuẩn phải là số dương hẳn (σ > 0) để phép chia xác định và khi nhân/chia hai vế thì bất đẳng thức mới giữ nguyên chiều.
+>
+>
+> **✓ Strengths**
+> - Tự triển khai tường minh bản chất của biến ngẫu nhiên trên không gian mẫu {s ∈ S: Z(s) < z}.
+> - Các bước đổi biến giải tích phân (tính vi phân, đổi cận, thay thế) được thực hiện rất cẩn thận và chính xác.
+> - Liên hệ tốt giữa hàm CDF vừa tích phân được với PDF chuẩn của N(0, 1).
+>
+> **💡 Deeper notes**
+> - Đối với biến ngẫu nhiên liên tục, P(Z < z) = P(Z ≤ z) vì xác suất tại một điểm đơn lẻ P(Z = z) = 0.
 
 <br>
 
