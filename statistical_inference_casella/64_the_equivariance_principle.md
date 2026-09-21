@@ -19,21 +19,21 @@
 >
 >
 >
-> Chỉ định một function T(**x**), và **các nguyên lý** sẽ cho biết hay quy định
-> rằng sẽ kết luận gì khi có hai điểm dữ liệu (sample value) **x**, **y** mà
-> T(**x**) = T(**y**): Đó là, với **Sufficient Principle** thì nó nói T(**X**) sẽ là
-> **sufficient statistic**, để rồi thông tin giúp suy luận ra θ chứa trong T(**X**) là
-> **ĐỦ**, không cần xài **X** nữa.
+> Chỉ định một function T(𝐱), và **các nguyên lý** sẽ cho biết hay quy định
+> rằng sẽ kết luận gì khi có hai điểm dữ liệu (sample value) 𝐱, 𝐲 mà
+> T(𝐱) = T(𝐲): Đó là, với **Sufficient Principle** thì nó nói T(𝐗) sẽ là
+> **sufficient statistic**, để rồi thông tin giúp suy luận ra θ chứa trong T(𝐗) là
+> **ĐỦ**, không cần xài 𝐗 nữa.
 >
 >
 >
 > Còn nếu **Likelihood Principle** được dùng, thì,.. Dừng lại đây ôn lại tí về cái
-> này, nó nói rằng: Nếu như ta có hai thử nghiệm E1 = (**X1**, θ, f1(**x**)) và
-> E2 = (**X2**, θ, f2(**x**)) và điểm dữ liệu tương ứng **x**, **y** mà likelihood
-> của chúng tỉ lệ nhau, tức tồn tại quan hệ L(θ|**x**) = C(**x**,**y**) L(θ|**y**)
+> này, nó nói rằng: Nếu như ta có hai thử nghiệm E1 = (**X1**, θ, f1(𝐱)) và
+> E2 = (**X2**, θ, f2(𝐱)) và điểm dữ liệu tương ứng 𝐱, 𝐲 mà likelihood
+> của chúng tỉ lệ nhau, tức tồn tại quan hệ L(θ|𝐱) = C(𝐱,𝐲) L(θ|𝐲)
 > với C là constant as a function of θ, thì khi đó kết luận về θ dựa trên thử
 > nghiệm E1, và gía trị quan sát được **x CŨNG Y NHƯ** kết luận về θ  dựa
-> trên thử nghiệm E2, và giá trị quan sát **y**, tức Ev(E1, **x**) = Ev(E2, **y**)
+> trên thử nghiệm E2, và giá trị quan sát 𝐲, tức Ev(E1, 𝐱) = Ev(E2, 𝐲)
 >
 >
 >
@@ -50,7 +50,7 @@
 >
 >
 > Còn ở đây, **Equivariance Principle** nói rằng: Nếu thấy T(x) = T(y) thì suy
-> luận về θ từ **x** phải **CÓ QUAN HỆ NÀO ĐÓ** với suy luận về θ từ **y**
+> luận về θ từ 𝐱 phải **CÓ QUAN HỆ NÀO ĐÓ** với suy luận về θ từ 𝐲
 
 <br>
 
@@ -120,7 +120,7 @@
 <p align="center"><kbd><img src="assets/lqplrt3se0s.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Nguyên lý Equivariance: Nếu **Y** = g(**X**) là một phép thay đổi thang / thước đo
+> Nguyên lý Equivariance: Nếu 𝐘 = g(𝐗) là một phép thay đổi thang / thước đo
 > sao cho mô hình cho **Y có cùng cấu trúc toán học với mô hình cho X
 > thì khi đó quy trình suy luận sẽ có cả tính measurement equivariant
 > và formally equivariant**
@@ -145,7 +145,7 @@
 >
 >
 >
-> Bình thường ta hay thấy nói về vector **X** = (X1,...Xn) là random variable
+> Bình thường ta hay thấy nói về vector 𝐗 = (X1,...Xn) là random variable
 > vector, với X1,...Xn là các random variable trong một random sample size n
 >
 >
@@ -344,11 +344,11 @@
 >
 >
 >
-> W(**x**) estimate θ ⇨ gbar(W(**x**)) estimate gbar(θ) (= θ')
+> W(𝐱) estimate θ ⇨ gbar(W(𝐱)) estimate gbar(θ) (= θ')
 >
 >
 >
-> W(**x**) estimate θ ⇨ W(g(x)) estimate gbar(θ) (= θ')
+> W(𝐱) estimate θ ⇨ W(g(x)) estimate gbar(θ) (= θ')
 
 <br>
 
@@ -517,11 +517,11 @@
 >
 >
 >
-> Theo định nghĩa, họ F (family các distribution) = {f(x|θ): θ ∈ Θ} của **X,** và
+> Theo định nghĩa, họ F (family các distribution) = {f(x|θ): θ ∈ Θ} của 𝐗 và
 > gọi  G là group of transformation của sample space X_curl: Thì F được gọi là "
 > bất biến dưới group G_curl"nếu như với mọi θ ∈ Θ và g ∈ G_curl thì tồn tại
-> θ' ∈ Θ sao cho **Y** = g(**X**) có distribution f(**y**|θ') nếu **X** có distribution
-> f(**x**|θ)
+> θ' ∈ Θ sao cho 𝐘 = g(𝐗) có distribution f(𝐲|θ') nếu 𝐗 có distribution
+> f(𝐱|θ)
 >
 >
 >
