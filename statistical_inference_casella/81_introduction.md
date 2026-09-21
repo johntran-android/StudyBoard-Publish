@@ -99,7 +99,7 @@
 >
 >
 > Có thể thấy định nghĩa này rất chung chung. (nhớ lại, định nghĩa của
-> estimator : Any function of sample W(**X**), cũng rất mơ hồ và chung
+> estimator : Any function of sample W(𝐗), cũng rất mơ hồ và chung
 > chung).
 >
 >
@@ -181,18 +181,18 @@
 >
 >
 >
-> Có nghĩa là, mình hình dung nó đơn giản là một hàm số, nhận đầu vào là **x**, tức
+> Có nghĩa là, mình hình dung nó đơn giản là một hàm số, nhận đầu vào là 𝐱, tức
 > giá trị quan sát được của sample, và đầu ra là một trong hai giá trị H0 hay H1.
 >
 >
 >
 > Để rồi, như vậy dễ thấy, nếu dùng cái hàm này (rule này) thì khi áp dụng vào
-> các possible value của **X**, sẽ chia range **X** thành hai subset: tập những giá trị **x**
+> các possible value của 𝐗, sẽ chia range 𝐗 thành hai subset: tập những giá trị 𝐱
 > khiến kết luận H1 (cũng là reject H0), tập này gọi là CRITICAL REGION.
 >
 >
 >
-> Vùng còn lại, là những giá trị **x** giúp kết luận H0, gọi là ACCEPTANCE REGION
+> Vùng còn lại, là những giá trị 𝐱 giúp kết luận H0, gọi là ACCEPTANCE REGION
 
 <br>
 
@@ -229,7 +229,7 @@
 >
 >
 >
-> Lấy ví dụ một test có thể chỉ định là H1 (reject H0) nếu Xbar > 3. Khi đó Xbar
+> Lấy ví dụ một test có thể chỉ định là H1 (reject H0) nếu X̄ > 3. Khi đó X̄
 > chính là test statistic.
 >
 >
