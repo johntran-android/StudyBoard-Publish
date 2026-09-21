@@ -26,11 +26,11 @@
 >
 >
 >
-> Đầu tiên, bài toán hypothesis testing cũng là bài toán inference (model parameter), giống như bài toán point estimator. Với point estimation, trong đó, cho sample X1,...Xn \~ f(x|θ) (và ta giả định f(x|θ) là một dạng, một loại nào đó, và đây gọi là cách tiếp cận parameteric model) và mục tiêu là đi tìm một estimator - theo định nghĩa, là một hàm của sample W(**X**), để với observed value **x** của **X**, W(**x**) sẽ cho ta một point estimate của θ.
+> Đầu tiên, bài toán hypothesis testing cũng là bài toán inference (model parameter), giống như bài toán point estimator. Với point estimation, trong đó, cho sample X1,...Xn \~ f(x|θ) (và ta giả định f(x|θ) là một dạng, một loại nào đó, và đây gọi là cách tiếp cận parameteric model) và mục tiêu là đi tìm một estimator - theo định nghĩa, là một hàm của sample W(𝐗), để với observed value 𝐱 của 𝐗, W(𝐱) sẽ cho ta một point estimate của θ.
 >
 >
 >
-> Còn với hypothesis testing, nhiệm vụ cũng là đưa ra một hàm số của sample, nhưng thay vì tính ra point estimate của θ, hàm này sẽ đưa ra quyết định giữa một trong hai giả thuyết: θ nằm trong Θ0 (gọi là H0) hay θ nằm trong Θ0c (gọi là H1). Và để làm vậy, ta sẽ xây dựng một hypothesis testing, có bản chất là một hàm quyết định: nhận vào một possible value của sample, tính ra một hàm của sample (gọi là test statistic δ(**X**)), và từ giá trị của nó, ta sẽ đưa ra output: kết luận θ thuộc Θ0 hay θ thuộc Θ0c (ví dụ như so δ(**x**) với một ngưỡng nào đó)
+> Còn với hypothesis testing, nhiệm vụ cũng là đưa ra một hàm số của sample, nhưng thay vì tính ra point estimate của θ, hàm này sẽ đưa ra quyết định giữa một trong hai giả thuyết: θ nằm trong Θ0 (gọi là H0) hay θ nằm trong Θ0c (gọi là H1). Và để làm vậy, ta sẽ xây dựng một hypothesis testing, có bản chất là một hàm quyết định: nhận vào một possible value của sample, tính ra một hàm của sample (gọi là test statistic δ(𝐗)), và từ giá trị của nó, ta sẽ đưa ra output: kết luận θ thuộc Θ0 hay θ thuộc Θ0c (ví dụ như so δ(𝐱) với một ngưỡng nào đó)
 >
 >
 >
@@ -38,11 +38,11 @@
 >
 >
 >
-> R = {**x** ∈ **𝒳**: δ(**x**) = reject H0}
+> R = {𝐱 ∈ **𝒳**: δ(𝐱) = reject H0}
 >
 >
 >
-> Và từ đó, cũng như ta có các cách tiếp cận để có point estimator W(**X**) tối ưu, thì ở đây ta cũng sẽ đánh giá để tìm ra hypothesis testing tối ưu.
+> Và từ đó, cũng như ta có các cách tiếp cận để có point estimator W(𝐗) tối ưu, thì ở đây ta cũng sẽ đánh giá để tìm ra hypothesis testing tối ưu.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
@@ -62,33 +62,33 @@
 >
 >
 >
-> Dừng lại chút ôn lại cái này: Như note trước mình vừa recall lại, rằng trong bài toán hypothesis testing, nhiệm vụ là đi tìm, xây dựng một test statistic để dựa vào giá trị của nó để đưa ra kết luận về θ thuộc Θ0 (H0) hay Θ0c (H1). Vậy thì một cách đó là dùng test statistic sau: likelihood ratio test (LRT) kí hiệu λ(**x**), có công thức là:
+> Dừng lại chút ôn lại cái này: Như note trước mình vừa recall lại, rằng trong bài toán hypothesis testing, nhiệm vụ là đi tìm, xây dựng một test statistic để dựa vào giá trị của nó để đưa ra kết luận về θ thuộc Θ0 (H0) hay Θ0c (H1). Vậy thì một cách đó là dùng test statistic sau: likelihood ratio test (LRT) kí hiệu λ(𝐱), có công thức là:
 >
 >
 >
-> λ(**x**) = sup\_{θ∈Θ0}  {L(**x**|θ)} / sup\_{θ∈Θ} {L(**x**|θ)}, có ý nghĩa là:
+> λ(𝐱) = sup\_{θ∈Θ0}  {L(𝐱|θ)} / sup\_{θ∈Θ} {L(𝐱|θ)}, có ý nghĩa là:
 >
 >
 >
-> với observed data **X** = **x**, thì tỉ số giữa độ hợp lí lớn nhất của θ tìm được trong tập Θ0 so với độ hợp lí lớn nhất của θ tìm được trong toàn không gian parameter space Θ là bao nhiêu.
+> với observed data 𝐗 = 𝐱, thì tỉ số giữa độ hợp lí lớn nhất của θ tìm được trong tập Θ0 so với độ hợp lí lớn nhất của θ tìm được trong toàn không gian parameter space Θ là bao nhiêu.
 >
 >
 >
-> Và với LRT thì decision rule là: So với một threshold c nào đó, để nếu λ(**x**) ≤ c thì kết luận reject H0, và ngược lại. Và điều này mang ý nghĩa là "nếu tìm trong Θ0 mà kết quả chỉ có độ hợp lí quá nhỏ so với kết quả khi tìm trong toàn parameter space Θ, thì ta kết luận θ không nằm trong Θ0".
+> Và với LRT thì decision rule là: So với một threshold c nào đó, để nếu λ(𝐱) ≤ c thì kết luận reject H0, và ngược lại. Và điều này mang ý nghĩa là "nếu tìm trong Θ0 mà kết quả chỉ có độ hợp lí quá nhỏ so với kết quả khi tìm trong toàn parameter space Θ, thì ta kết luận θ không nằm trong Θ0".
 >
 > Đương nhiên để hoàn thành một hypothesis test, ta vẫn phải chọn giá trị của c, nhưng cách thức là như vậy.
 >
 >
 >
-> Như vậy, với LRT, rejection region là: R = {**x** ∈ 𝒳: λ(**x**) ≤ c}.
+> Như vậy, với LRT, rejection region là: R = {𝐱 ∈ 𝒳: λ(𝐱) ≤ c}.
 >
 >
 >
-> Dễ thấy cái mẫu số chính là là giá trị của likelihood tại MLE θ^, vì theo định nghĩa của MLE, θ^ chính là argmax\_Θ L(θ|**x**).
+> Dễ thấy cái mẫu số chính là là giá trị của likelihood tại MLE θ^, vì theo định nghĩa của MLE, θ^ chính là argmax\_Θ L(θ|𝐱).
 >
 >
 >
-> Và theo gs Casella, dù cho việc tính hai cái đỉnh của hàm likelihood khi xét θ trong Θ0 hay Θ có thể không tính được theo lối analytic (ví dụ như dùng giải tích để có closed form formula để tính) thì ta vẫn có thể tính theo lối numerically (ám chỉ các thuật toán tối ưu). Do đó dù không có công thức tính tử số và mẫu số ta vẫn có thể tính giá trị của λ(**x**) dựa trên thuật toán.
+> Và theo gs Casella, dù cho việc tính hai cái đỉnh của hàm likelihood khi xét θ trong Θ0 hay Θ có thể không tính được theo lối analytic (ví dụ như dùng giải tích để có closed form formula để tính) thì ta vẫn có thể tính theo lối numerically (ám chỉ các thuật toán tối ưu). Do đó dù không có công thức tính tử số và mẫu số ta vẫn có thể tính giá trị của λ(𝐱) dựa trên thuật toán.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -131,11 +131,11 @@
 >
 >
 >
-> Như vậy, với LRT, event Type I error xảy ra khi λ(**X**) ≤ c khi θ ∈ Θ0, và xác suất mắc Type I error là: P(λ(**X**) ≤ c) khi θ ∈ Θ0. Tương tự event Type II error xảy ra khi λ(**x**) &gt; c khi θ thuộc Θ0c.
+> Như vậy, với LRT, event Type I error xảy ra khi λ(𝐗) ≤ c khi θ ∈ Θ0, và xác suất mắc Type I error là: P(λ(𝐗) ≤ c) khi θ ∈ Θ0. Tương tự event Type II error xảy ra khi λ(𝐱) &gt; c khi θ thuộc Θ0c.
 >
 >
 >
-> Và từ đó ta có định nghĩa của level α test: Đó là phép thử mà xác suất mắc Type error I không vượt quá α: sup\_θ∈Θ0 P(λ(**X**) ≤ c) ≤ α.
+> Và từ đó ta có định nghĩa của level α test: Đó là phép thử mà xác suất mắc Type error I không vượt quá α: sup\_θ∈Θ0 P(λ(𝐗) ≤ c) ≤ α.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -155,7 +155,7 @@
 >
 >
 >
-> Under H0 (tức là nếu θ = θ0), thì -2log λ(**X**) → (d) χ²\_1
+> Under H0 (tức là nếu θ = θ0), thì -2log λ(𝐗) → (d) χ²\_1
 >
 >
 >
@@ -163,19 +163,19 @@
 >
 >
 >
-> Đầu tiên, khai triển Taylor quanh θ^ đối với hàm log likelihood l(θ|**x**) = log L(θ|**x**):
+> Đầu tiên, khai triển Taylor quanh θ^ đối với hàm log likelihood l(θ|𝐱) = log L(θ|𝐱):
 >
 >
 >
-> l(θ|**x**) = l(θ^|**x**) + l'(θ^|**x**)(θ-θ^) + (1/2)l''(θ^|**x**)(θ-θ^)^2 + ....
+> l(θ|𝐱) = l(θ^|𝐱) + l'(θ^|𝐱)(θ-θ^) + (1/2)l''(θ^|𝐱)(θ-θ^)^2 + ....
 >
 >
 >
-> = l(θ^|**x**) + 0 × (θ-θ^) + (1/2)l''(θ^|**x**)(θ-θ^)^2 + ....
+> = l(θ^|𝐱) + 0 × (θ-θ^) + (1/2)l''(θ^|𝐱)(θ-θ^)^2 + ....
 >
 >
 >
-> = l(θ^|**x**) + (1/2)l''(θ^|**x**)(θ-θ^)^2 + ....
+> = l(θ^|𝐱) + (1/2)l''(θ^|𝐱)(θ-θ^)^2 + ....
 >
 >
 >
@@ -183,59 +183,59 @@
 >
 >
 >
-> l(θ0|**x**) = l(θ^|**x**) + (1/2)l''(θ^|**x**)(θ0-θ^)^2 + ....
+> l(θ0|𝐱) = l(θ^|𝐱) + (1/2)l''(θ^|𝐱)(θ0-θ^)^2 + ....
 >
 >
 >
-> ⇒ l(θ0|**x**) ≈ l(θ^|**x**) + (1/2)l''(θ^|**x**)(θ0-θ^)^2
+> ⇒ l(θ0|𝐱) ≈ l(θ^|𝐱) + (1/2)l''(θ^|𝐱)(θ0-θ^)^2
 >
 >
 >
-> Tiếp, xét cái -2 log λ(**x**). Như đã ôn lại, λ(**x**) = sup\_Θ0 L(θ|**x**) / sup\_Θ L(θ|**x**),
+> Tiếp, xét cái -2 log λ(𝐱). Như đã ôn lại, λ(𝐱) = sup\_Θ0 L(θ|𝐱) / sup\_Θ L(θ|𝐱),
 >
 >
 >
-> và θ^ là MLE của θ nên mẫu số chính là L(θ^|**x**) nên ta có:
+> và θ^ là MLE của θ nên mẫu số chính là L(θ^|𝐱) nên ta có:
 >
 >
 >
-> và gọi θ^0 là restricted MLE, tức là argmax\_Θ0 L(θ|**x**), và vì ở đây Θ0 = {θ0}, nên θ^0 = θ0
+> và gọi θ^0 là restricted MLE, tức là argmax\_Θ0 L(θ|𝐱), và vì ở đây Θ0 = {θ0}, nên θ^0 = θ0
 >
 >
 >
-> ⇒ -2 log λ(**x**) = -2 log \[L(θ0|**x**) / L(θ^|**x**)
+> ⇒ -2 log λ(𝐱) = -2 log \[L(θ0|𝐱) / L(θ^|𝐱)
 >
 >
 >
-> = -2 (log L(θ0|**x**) - log L(θ^|**x**))
+> = -2 (log L(θ0|𝐱) - log L(θ^|𝐱))
 >
 >
 >
-> = -2 (l(θ0|**x**) - l(θ^|**x**))
+> = -2 (l(θ0|𝐱) - l(θ^|𝐱))
 >
 >
 >
-> Thay l(θ0|**x**) ≈ l(θ^|**x**) + (1/2)l''(θ^|**x**)(θ0-θ^)^2 vào:
+> Thay l(θ0|𝐱) ≈ l(θ^|𝐱) + (1/2)l''(θ^|𝐱)(θ0-θ^)^2 vào:
 >
 >
 >
-> ..= -2 (l(θ^|**x**) + (1/2)l''(θ^|**x**)(θ0-θ^)^2 - l(θ^|**x**))
+> ..= -2 (l(θ^|𝐱) + (1/2)l''(θ^|𝐱)(θ0-θ^)^2 - l(θ^|𝐱))
 >
 >
 >
-> = - l''(θ^|**x**)(θ0-θ^)^2
+> = - l''(θ^|𝐱)(θ0-θ^)^2
 >
 >
 >
-> Vậy ta có -2 log λ(**x**) ≈ - l''(θ^|**x**)(θ0-θ^)^2 = (θ0-θ^)^2 \[-l''(θ^|**x**)\]
+> Vậy ta có -2 log λ(𝐱) ≈ - l''(θ^|𝐱)(θ0-θ^)^2 = (θ0-θ^)^2 \[-l''(θ^|𝐱)\]
 >
 >
 >
-> (chỗ này trong sách ghi là chia cho l''(θ^|**x**) mình cho là bị in lỗi thiếu ^(-1), tức mẫu số đúng phải là l''(θ^|**x**)\]^(-1))
+> (chỗ này trong sách ghi là chia cho l''(θ^|𝐱) mình cho là bị in lỗi thiếu ^(-1), tức mẫu số đúng phải là l''(θ^|𝐱)\]^(-1))
 >
 >
 >
-> Vậy -2 log λ(**X**) ≈ (θ0-θ^)^2 \[- l''(θ^|**X**)\]
+> Vậy -2 log λ(𝐗) ≈ (θ0-θ^)^2 \[- l''(θ^|𝐗)\]
 >
 >
 >
@@ -243,19 +243,19 @@
 >
 >
 >
-> Xét - l''(θ^|**X**):
+> Xét - l''(θ^|𝐗):
 >
 >
 >
-> \- l''(θ^|**X**) = \[-∂^2/∂θ^2 log L(θ|**X**)\] | θ=θ^
+> \- l''(θ^|𝐗) = \[-∂^2/∂θ^2 log L(θ|𝐗)\] | θ=θ^
 >
 >
 >
-> Xét -∂^2/∂θ^2 log L(θ|**X**)
+> Xét -∂^2/∂θ^2 log L(θ|𝐗)
 >
 >
 >
-> = -∂^2/∂θ^2 log f(**X**|θ)
+> = -∂^2/∂θ^2 log f(𝐗|θ)
 >
 >
 >
@@ -283,7 +283,7 @@
 >
 >
 >
-> (= -\[∂^2/∂θ^2 log L(θ|**X**)\]/n = -l''(θ^|**X**)/n)
+> (= -\[∂^2/∂θ^2 log L(θ|𝐗)\]/n = -l''(θ^|𝐗)/n)
 >
 >
 >
@@ -303,7 +303,7 @@
 >
 >
 >
-> Vậy -l''(θ|**X**)/n → (p) I1(θ)
+> Vậy -l''(θ|𝐗)/n → (p) I1(θ)
 >
 >
 >
@@ -311,11 +311,11 @@
 >
 >
 >
-> nên -l''(θ^|**X**)/n = -l''(θ|**X**)/n | θ=θ^ → (p) I1(θ)
+> nên -l''(θ^|𝐗)/n = -l''(θ|𝐗)/n | θ=θ^ → (p) I1(θ)
 >
 >
 >
-> viết lại -l''(θ^|**X**)/n → (p) I1(θ)
+> viết lại -l''(θ^|𝐗)/n → (p) I1(θ)
 >
 >
 >
@@ -351,9 +351,9 @@
 >
 >
 >
->  Vậy -2 log λ(**X**) ≈ (θ0-θ^)^2 \[- l''(θ^|**X**)\]
+>  Vậy -2 log λ(𝐗) ≈ (θ0-θ^)^2 \[- l''(θ^|𝐗)\]
 >
-> = n(θ0-θ^)^2 \[- l''(θ^|**X**) / n\]
+> = n(θ0-θ^)^2 \[- l''(θ^|𝐗) / n\]
 >
 >
 >
@@ -361,7 +361,7 @@
 >
 >
 >
-> ii) -l''(θ^|**X**) / n → (p) I1(θ)
+> ii) -l''(θ^|𝐗) / n → (p) I1(θ)
 >
 >
 >
@@ -369,15 +369,15 @@
 >
 >
 >
-> ⇒ (θ0-θ^)^2 \[- l''(θ^|**X**)\] → (d) I1(θ) × χ²\_1 / I1(θ)
+> ⇒ (θ0-θ^)^2 \[- l''(θ^|𝐗)\] → (d) I1(θ) × χ²\_1 / I1(θ)
 >
 >
 >
-> ⇔ (θ0-θ^)^2 \[- l''(θ^|**X**)\] → (d) χ²\_1
+> ⇔ (θ0-θ^)^2 \[- l''(θ^|𝐗)\] → (d) χ²\_1
 >
 >
 >
-> ⇔ -2 log λ(**X**)  → (d) χ²\_1
+> ⇔ -2 log λ(𝐗)  → (d) χ²\_1
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -395,7 +395,7 @@
 <p align="center"><kbd><img src="assets/4l3usqy1ydq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Áp dụng theorem 10.3.1, -2 log λ(**x**) sẽ hội tụ về một χ²\_1.
+> Áp dụng theorem 10.3.1, -2 log λ(𝐱) sẽ hội tụ về một χ²\_1.
 >
 >
 >
@@ -407,19 +407,19 @@
 >
 >
 >
-> ⇔ P(λ(**X**) ≤ c) ≤ α khi θ ∈ Θ0
+> ⇔ P(λ(𝐗) ≤ c) ≤ α khi θ ∈ Θ0
 >
 >
 >
-> ⇔ P(log λ(**X**) ≤ log c) ≤ α khi θ ∈ Θ0
+> ⇔ P(log λ(𝐗) ≤ log c) ≤ α khi θ ∈ Θ0
 >
 >
 >
-> ⇔ P(-2log λ(**X**) ≥ - 2log c) ≤ α khi θ ∈ Θ0
+> ⇔ P(-2log λ(𝐗) ≥ - 2log c) ≤ α khi θ ∈ Θ0
 >
 >
 >
-> Và với việc khi n rất lớn thì -log λ(**X**) trở thành χ²\_1
+> Và với việc khi n rất lớn thì -log λ(𝐗) trở thành χ²\_1
 >
 >
 >
@@ -431,7 +431,7 @@
 >
 >
 >
-> Như vậy level alpha sẽ test rule là reject H0 khi observed value **x** thỏa: -2log λ(**x**) ≥ χ²\_1,α
+> Như vậy level alpha sẽ test rule là reject H0 khi observed value 𝐱 thỏa: -2log λ(𝐱) ≥ χ²\_1,α
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -451,15 +451,15 @@
 >
 >
 >
-> Như ta vừa đã hiểu, rằng test rule là reject H0 khi observed value **x** thỏa: -2log λ(**x**) ≥ χ²\_1,α, có nghĩa là, chỉ việc tính -2 log λ(**x**) và so nó với giá trị χ²\_1,α (ví dụ với α = 0.05 thì tra bảng xem con số χ²\_1,0.05 là bao nhiêu. Còn -2 log λ(**x**) thì trong bài toán đang xét ta đã có công thức.
+> Như ta vừa đã hiểu, rằng test rule là reject H0 khi observed value 𝐱 thỏa: -2log λ(𝐱) ≥ χ²\_1,α, có nghĩa là, chỉ việc tính -2 log λ(𝐱) và so nó với giá trị χ²\_1,α (ví dụ với α = 0.05 thì tra bảng xem con số χ²\_1,0.05 là bao nhiêu. Còn -2 log λ(𝐱) thì trong bài toán đang xét ta đã có công thức.
 >
 >
 >
-> Như vậy, ở đây gs cho sampling 10.000 bộ sample size 25 từ f(x|λ0=5), và tính -2 log λ(**x**) từ 10.000 sample này, vẽ vẽ được histogram trong hình.
+> Như vậy, ở đây gs cho sampling 10.000 bộ sample size 25 từ f(x|λ0=5), và tính -2 log λ(𝐱) từ 10.000 sample này, vẽ vẽ được histogram trong hình.
 >
 >
 >
-> Ta hiểu histogram được vẽ như sau: trục ngang chia thành những ô nhỏ bề rộng Δ. Với mỗi sample **x** (tổng cộng có 10.000 sample), là một bộ 25 con số (x1,...xn), ta sẽ tính -2 log λ(**x**) và xem giá trị của nó rơi vào ô nào thì cho chiều cao cột của ô đó trong histogram tăng lên một đơn vị, và sau cùng thì ta chia cho 10000Δ. Vậy chiều cao của các cột so với nhau của histogram tại một ô sẽ là tỉ lệ số lượng sample **x** có -2 log λ(**x**) rơi vào ô đó.
+> Ta hiểu histogram được vẽ như sau: trục ngang chia thành những ô nhỏ bề rộng Δ. Với mỗi sample 𝐱 (tổng cộng có 10.000 sample), là một bộ 25 con số (x1,...xn), ta sẽ tính -2 log λ(𝐱) và xem giá trị của nó rơi vào ô nào thì cho chiều cao cột của ô đó trong histogram tăng lên một đơn vị, và sau cùng thì ta chia cho 10000Δ. Vậy chiều cao của các cột so với nhau của histogram tại một ô sẽ là tỉ lệ số lượng sample 𝐱 có -2 log λ(𝐱) rơi vào ô đó.
 >
 >
 >
@@ -471,7 +471,7 @@
 >
 >
 >
-> lim N → ∞ \[số điểm giá trị (của random variable Y = -2 log λ(**X**) rơi vào vùng có bề rộng Δ quanh mốc a\] / NΔ
+> lim N → ∞ \[số điểm giá trị (của random variable Y = -2 log λ(𝐗) rơi vào vùng có bề rộng Δ quanh mốc a\] / NΔ
 >
 >
 >
@@ -487,7 +487,7 @@
 >
 >
 >
-> Do đó ta có thể hiểu rằng histogram này là phiên bản chưa tiến hóa của pdf -log λ(**X**), khi số lượng sample là 10.000. Nếu cho con số 10.000 tăng lên vô hạn và cho bề rộng ô nhỏ lại về 0 thì histogram sẽ ngày càng mượt, trở thành đường cong pdf.
+> Do đó ta có thể hiểu rằng histogram này là phiên bản chưa tiến hóa của pdf -log λ(𝐗), khi số lượng sample là 10.000. Nếu cho con số 10.000 tăng lên vô hạn và cho bề rộng ô nhỏ lại về 0 thì histogram sẽ ngày càng mượt, trở thành đường cong pdf.
 >
 >
 >
@@ -507,7 +507,7 @@
 >
 >
 >
-> Soi chiếu nó trên cái histogram, thì đây sẽ là cái mốc trên trục ngang mà tại đó: diện tích của caí histogram (tổng diện tích bằng 1) sẽ bị chia làm 2 phần với phần bên trái chiếm 80%. Vì sao? Vì như đã nói cách vẽ cái histogram này: chiều cao mỗi ô là là tỉ lệ của số sample trong 10.000 sample có giá trị -2log λ(**x**) rơi vào ô đó, chia cho 10.000. Vậy nếu giả sử ta có cái mốc a nào đó, thì tổng chiều cao các cột bên trái nó sẽ chính là tỉ lệ của số sample trong 10.000 sample có giá trị -2log λ(x) nhỏ hơn mốc a đó. Và để a đạt 80%. ta sẽ kéo nó về bên phải cho đến khi thỏa. Và dễ thấy là nó sẽ nằm trúng ngay cái order statistic X\_{8000} vì đây là nó sẽ hơn hoặc bằng 8000 thằng trong 10000 (lớn hơn 7999 thằng và kể cả nó là 8000).
+> Soi chiếu nó trên cái histogram, thì đây sẽ là cái mốc trên trục ngang mà tại đó: diện tích của caí histogram (tổng diện tích bằng 1) sẽ bị chia làm 2 phần với phần bên trái chiếm 80%. Vì sao? Vì như đã nói cách vẽ cái histogram này: chiều cao mỗi ô là là tỉ lệ của số sample trong 10.000 sample có giá trị -2log λ(𝐱) rơi vào ô đó, chia cho 10.000. Vậy nếu giả sử ta có cái mốc a nào đó, thì tổng chiều cao các cột bên trái nó sẽ chính là tỉ lệ của số sample trong 10.000 sample có giá trị -2log λ(x) nhỏ hơn mốc a đó. Và để a đạt 80%. ta sẽ kéo nó về bên phải cho đến khi thỏa. Và dễ thấy là nó sẽ nằm trúng ngay cái order statistic X\_{8000} vì đây là nó sẽ hơn hoặc bằng 8000 thằng trong 10000 (lớn hơn 7999 thằng và kể cả nó là 8000).
 >
 >
 >
@@ -523,7 +523,7 @@
 >
 >
 >
-> Điều này minh họa cho ý mà theorem vừa rồi đã tuyên bố, khi n tăng lên vô cùng thì -2 log λ(**X**) sẽ hội tụ phân phối về χ²\_1.
+> Điều này minh họa cho ý mà theorem vừa rồi đã tuyên bố, khi n tăng lên vô cùng thì -2 log λ(𝐗) sẽ hội tụ phân phối về χ²\_1.
 >
 >
 >
@@ -531,7 +531,7 @@
 >
 >
 >
-> Có nghĩa là, từ nay về sau, cứ việc lôi χ²\_1 ra mà tính, tức là, cứ dùng bảng tra các mốc phân vị của χ²\_1 để dùng, hay nói cách khác, cứ coi -2 log λ(**X**) như biến χ²\_1.
+> Có nghĩa là, từ nay về sau, cứ việc lôi χ²\_1 ra mà tính, tức là, cứ dùng bảng tra các mốc phân vị của χ²\_1 để dùng, hay nói cách khác, cứ coi -2 log λ(𝐗) như biến χ²\_1.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -551,47 +551,47 @@
 <p align="center"><kbd><img src="assets/bo0yzy52oq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, từ cái theorem vừa rồi, khi đại ý nói rằng khi n lớn lên vô cùng thì - 2 log λ(**X**) sẽ trở thành một χ²\_1, do đó, theorem này mới đem áp dụng điều này vào bài toán hypothesis testing, cụ thể là như sau:
+> Thế thì, từ cái theorem vừa rồi, khi đại ý nói rằng khi n lớn lên vô cùng thì - 2 log λ(𝐗) sẽ trở thành một χ²\_1, do đó, theorem này mới đem áp dụng điều này vào bài toán hypothesis testing, cụ thể là như sau:
 >
 >
 >
-> Như bối cảnh bữa giờ là, ta quan tâm đến bài toán hypothesis testing: H0: θ ∈ Θ0 vs H1: θ ∉ Θ0, và một loại test khá hữu ích là Likelihood Ratio Test (LRT), với test rule là λ(**x**) ≤ c. Và λ(**x**) ≤ c ⇔ -2 log λ(**x**) ≥ -2 log(c)
+> Như bối cảnh bữa giờ là, ta quan tâm đến bài toán hypothesis testing: H0: θ ∈ Θ0 vs H1: θ ∉ Θ0, và một loại test khá hữu ích là Likelihood Ratio Test (LRT), với test rule là λ(𝐱) ≤ c. Và λ(𝐱) ≤ c ⇔ -2 log λ(𝐱) ≥ -2 log(c)
 >
 >
 >
-> Và để có một level α test, thì c phải là mốc nào đó khiến khi θ ∈ Θ0 thì P(reject H0) = P(**X** ∈ Rejection region) = P(-2 log λ(**X**) ≥ -2 log(c)) ≤ α.
+> Và để có một level α test, thì c phải là mốc nào đó khiến khi θ ∈ Θ0 thì P(reject H0) = P(𝐗 ∈ Rejection region) = P(-2 log λ(𝐗) ≥ -2 log(c)) ≤ α.
 >
 >
 >
-> Đặt c\* = -2 log(c), bài toán trở thành: tìm c\* để P(-2 log λ(**X**) ≥ c\*) ≤ α.
+> Đặt c\* = -2 log(c), bài toán trở thành: tìm c\* để P(-2 log λ(𝐗) ≥ c\*) ≤ α.
 >
 >
 >
-> Khi đó tính c từ c\*, thì ta sẽ có một level α LRT test: Reject H0 khi λ(**X**) ≤ c,
+> Khi đó tính c từ c\*, thì ta sẽ có một level α LRT test: Reject H0 khi λ(𝐗) ≤ c,
 >
 >
 >
-> hay cứ để theo c\* cũng được: Reject H0 khi -2 log λ(**x**) ≥ c\*
+> hay cứ để theo c\* cũng được: Reject H0 khi -2 log λ(𝐱) ≥ c\*
 >
 >
 >
-> Vấn đề là để tìm c\* thỏa P(-2 log λ(**X**) ≥ c\*) ≤ α rất khó.
+> Vấn đề là để tìm c\* thỏa P(-2 log λ(𝐗) ≥ c\*) ≤ α rất khó.
 >
 >
 >
-> Vì, khi xét sự thật rằng đây là xác suất liên của một event liên quan đến statistic -2 log λ(**X**), và ta không biết distribution của nó. Ví dụ như nếu biết nó là Z \~ normal(0, 1) chẳng hạn, thì bài toán trở thành tìm c\* để P(Z ≥ c\*) ≤ α, ta chỉ việc tìm mốc phần diện tích pdf bên phải bằng α là xong, và ta có thể tra bảng để có mốc này, và nó chính là cái được kí hiệu bởi Z\_α.
+> Vì, khi xét sự thật rằng đây là xác suất liên của một event liên quan đến statistic -2 log λ(𝐗), và ta không biết distribution của nó. Ví dụ như nếu biết nó là Z \~ normal(0, 1) chẳng hạn, thì bài toán trở thành tìm c\* để P(Z ≥ c\*) ≤ α, ta chỉ việc tìm mốc phần diện tích pdf bên phải bằng α là xong, và ta có thể tra bảng để có mốc này, và nó chính là cái được kí hiệu bởi Z\_α.
 >
 >
 >
-> Nhưng sự thật thì ta không biết distribution của Y = -2 log λ(**X**) là gì.
+> Nhưng sự thật thì ta không biết distribution của Y = -2 log λ(𝐗) là gì.
 >
 >
 >
-> Tuy nhiên, một theorem đã chứng minh rằng Y = -2 log λ(**X**) là một random variable hội tụ phân phối về χ²\_1.
+> Tuy nhiên, một theorem đã chứng minh rằng Y = -2 log λ(𝐗) là một random variable hội tụ phân phối về χ²\_1.
 >
 >
 >
-> Từ đó ta có thể xấp xỉ việc tìm c\* thỏa P(-2 log λ(**X**) ≥ c\*) ≤ α bằng bài toán:
+> Từ đó ta có thể xấp xỉ việc tìm c\* thỏa P(-2 log λ(𝐗) ≥ c\*) ≤ α bằng bài toán:
 >
 >
 >
@@ -607,7 +607,7 @@
 >
 >
 >
-> Từ đó, ta có level α LRT test rule là: Reject H0 khi -2 log λ(**X**) ≥ χ²\_ν,α
+> Từ đó, ta có level α LRT test rule là: Reject H0 khi -2 log λ(𝐗) ≥ χ²\_ν,α
 >
 >
 >
@@ -682,11 +682,11 @@
 >
 >
 >
-> Trong bài toán hypothesis testing, dựa trên một observed value của sample **X** = **x**, f(x|θ) ta muốn đưa ra inference: θ thuộc Θ0 hay Θ0c, chính là một trong hai hypothesis: H0: θ ∈ Θ vs H1 ∈ Θ0c. Và để làm điều này, chính là ta sẽ xây dựng một phép thử (hypothesis test), về bản chất, là một decision function, nhận vào giá trị của sample **X**, và đưa ra kết luận là H0 hoặc H1. Và "trong cái ruột của function này", ta sẽ tính ra một hàm số nào đó, rồi có thể là so sánh giá trị của nó với một ngưỡng (threshold) nào đó để kết luận. Thì cái hàm số của sample đó, chính là một statistic, gọi là test statistic.
+> Trong bài toán hypothesis testing, dựa trên một observed value của sample 𝐗 = 𝐱, f(x|θ) ta muốn đưa ra inference: θ thuộc Θ0 hay Θ0c, chính là một trong hai hypothesis: H0: θ ∈ Θ vs H1 ∈ Θ0c. Và để làm điều này, chính là ta sẽ xây dựng một phép thử (hypothesis test), về bản chất, là một decision function, nhận vào giá trị của sample 𝐗, và đưa ra kết luận là H0 hoặc H1. Và "trong cái ruột của function này", ta sẽ tính ra một hàm số nào đó, rồi có thể là so sánh giá trị của nó với một ngưỡng (threshold) nào đó để kết luận. Thì cái hàm số của sample đó, chính là một statistic, gọi là test statistic.
 >
 >
 >
-> Và với một test, nó sẽ chia không gian 𝒳 thành hai miền: những **x** khiến test kết luận reject H0 và đám còn lại, từ đó ta có khái niệm rejection region: R = {**x** ∈ 𝒳: test statistic (**x**) khiến reject H0}
+> Và với một test, nó sẽ chia không gian 𝒳 thành hai miền: những 𝐱 khiến test kết luận reject H0 và đám còn lại, từ đó ta có khái niệm rejection region: R = {𝐱 ∈ 𝒳: test statistic (𝐱) khiến reject H0}
 >
 >
 >
@@ -694,11 +694,11 @@
 >
 >
 >
-> Reject H0 khi λ(**x**) ≤ c, với c là threshold nào đó nằm trong khoảng từ 0 tới 1.
+> Reject H0 khi λ(𝐱) ≤ c, với c là threshold nào đó nằm trong khoảng từ 0 tới 1.
 >
 >
 >
-> với λ(**x**) = sup\_Θ0 L(θ|**x**) / sup\_Θ L(θ|**x**) = L(θ^0|**x**) / L(θ^|**x**) (θ^ chính là MLE, còn θ^0 là restricted MLE, tạm hiểu là thằng MLE nửa mùa, khi chỉ tìm kiếm trong phạm vi giới hạn là Θ0)
+> với λ(𝐱) = sup\_Θ0 L(θ|𝐱) / sup\_Θ L(θ|𝐱) = L(θ^0|𝐱) / L(θ^|𝐱) (θ^ chính là MLE, còn θ^0 là restricted MLE, tạm hiểu là thằng MLE nửa mùa, khi chỉ tìm kiếm trong phạm vi giới hạn là Θ0)
 >
 >
 >
@@ -710,11 +710,11 @@
 >
 >
 >
-> P(observed value của **X** khiến khi đưa vào test, nó reject H0) = P(λ(**X**) ≤ c). Và cái này chỉ dựa trên điều kiện là θ ∈ Θ0 (vì nếu θ ∈ Θ0c) thì event "Test reject H0" không phải là event "Type I error".
+> P(observed value của 𝐗 khiến khi đưa vào test, nó reject H0) = P(λ(𝐗) ≤ c). Và cái này chỉ dựa trên điều kiện là θ ∈ Θ0 (vì nếu θ ∈ Θ0c) thì event "Test reject H0" không phải là event "Type I error".
 >
 >
 >
-> Một điểm hết sức chú ý, cái event trên, hay tính không chắc chắn của nó, là đến từ tính không chắc của giá trị **X**. Nói đơn giản, đây là một event, mà tính không chắc chắn (để từ đó ta mới nói chuyện xác suất của event) là gắn với một hàm số của random variable (vector) **X**. Chứ đây là cách tiếp cận của trường phái Frequentist, nơi ta coi θ của population distribution là cố định, nhưng chưa biết (fixed & unknown). Do đó, sẽ là sai nếu ta nghĩ xác suất mắc Type I error theo kiểu P(θ ∈ Θ0 và test reject H0) theo cách hiểu đây là joint event: θ ∈ Θ0 và Test reject H0. Thay vào đó, cách hiểu đúng đó là, ta có một random variable λ(**X**) là hàm số của random sample **X**, và sự kiện mà λ(**X**) ≤ c chính là một Type I error nếu như θ thực sự thuộc Θ0. Cũng chính vì vậy, xác suất của event này, vì phụ thuộc vào distribution của **X**, nên cũng phụ thuộc θ. Thành ra người ta ghi là: P\_θ(λ(**X**) ≤ c)
+> Một điểm hết sức chú ý, cái event trên, hay tính không chắc chắn của nó, là đến từ tính không chắc của giá trị 𝐗. Nói đơn giản, đây là một event, mà tính không chắc chắn (để từ đó ta mới nói chuyện xác suất của event) là gắn với một hàm số của random variable (vector) 𝐗. Chứ đây là cách tiếp cận của trường phái Frequentist, nơi ta coi θ của population distribution là cố định, nhưng chưa biết (fixed & unknown). Do đó, sẽ là sai nếu ta nghĩ xác suất mắc Type I error theo kiểu P(θ ∈ Θ0 và test reject H0) theo cách hiểu đây là joint event: θ ∈ Θ0 và Test reject H0. Thay vào đó, cách hiểu đúng đó là, ta có một random variable λ(𝐗) là hàm số của random sample 𝐗, và sự kiện mà λ(𝐗) ≤ c chính là một Type I error nếu như θ thực sự thuộc Θ0. Cũng chính vì vậy, xác suất của event này, vì phụ thuộc vào distribution của 𝐗, nên cũng phụ thuộc θ. Thành ra người ta ghi là: P\_θ(λ(𝐗) ≤ c)
 >
 >
 >
@@ -726,15 +726,15 @@
 >
 >
 >
-> sup\_θ∈Θ0 P\_θ(λ(**X**) ≤ c) ≤ α
+> sup\_θ∈Θ0 P\_θ(λ(𝐗) ≤ c) ≤ α
 >
 >
 >
-> Vấn đề đặt ra là, nếu ta biết distribution của λ(**X**) (nó cũng là một random variable thôi, vì nó là hàm số của random variable **X**) thì khi đó chọn c để thỏa cái này rất dễ dàng. Ví dụ như, nếu ta có Z \~ normal(0,1), và muốn tìm cái mốc c để P(Z ≤ c) ≤ α (mà cũng chính là ta muốn tìm c để P(Z ≤ c) = α) thì chỉ việc tra bảng cdf của n(0,1), sẽ tìm ra c khiến F(c) = α, cũng là c khiến diện tích pdf bên trái mốc này = α, đây là cái mà người ta gọi là Z\_α
+> Vấn đề đặt ra là, nếu ta biết distribution của λ(𝐗) (nó cũng là một random variable thôi, vì nó là hàm số của random variable 𝐗) thì khi đó chọn c để thỏa cái này rất dễ dàng. Ví dụ như, nếu ta có Z \~ normal(0,1), và muốn tìm cái mốc c để P(Z ≤ c) ≤ α (mà cũng chính là ta muốn tìm c để P(Z ≤ c) = α) thì chỉ việc tra bảng cdf của n(0,1), sẽ tìm ra c khiến F(c) = α, cũng là c khiến diện tích pdf bên trái mốc này = α, đây là cái mà người ta gọi là Z\_α
 >
 >
 >
-> Nhưng λ(**X**) là một hàm số phức tạp, nên rất khó để biết distribution của nó.
+> Nhưng λ(𝐗) là một hàm số phức tạp, nên rất khó để biết distribution của nó.
 >
 >
 >
@@ -742,23 +742,23 @@
 >
 >
 >
-> Định lí, ý chính cốt lõi của nó nói rằng: Nếu ta có sự thật là θ = θ0, và vài điều kiện cần thiết, thì phân phối limit của cái statistic -2 log λ(**X**) chính là phân phối χ²\_1, thể hiện theo toán là -2 log λ(**X**) → (d) χ²\_1
+> Định lí, ý chính cốt lõi của nó nói rằng: Nếu ta có sự thật là θ = θ0, và vài điều kiện cần thiết, thì phân phối limit của cái statistic -2 log λ(𝐗) chính là phân phối χ²\_1, thể hiện theo toán là -2 log λ(𝐗) → (d) χ²\_1
 >
 >
 >
-> Dựa vào định lí này, ta mới có một hướng đi trong việc áp dùng LRT cho bài toán testing mà Θ0 = {θ0}, Θ0c = {θ: θ ≠ θ0}. Cụ thể là, ta sẽ biến đổi chút xíu λ(**X**) ≤ c như sau:
+> Dựa vào định lí này, ta mới có một hướng đi trong việc áp dùng LRT cho bài toán testing mà Θ0 = {θ0}, Θ0c = {θ: θ ≠ θ0}. Cụ thể là, ta sẽ biến đổi chút xíu λ(𝐗) ≤ c như sau:
 >
 >
 >
-> λ(**X**) ≤ c ⇔ log λ(**X**) ≤ log (c) (vì hàm log monotone increasing)
+> λ(𝐗) ≤ c ⇔ log λ(𝐗) ≤ log (c) (vì hàm log monotone increasing)
 >
 >
 >
-> ⇔ -2 log λ(**X**) ≥ -2 log (c)
+> ⇔ -2 log λ(𝐗) ≥ -2 log (c)
 >
 >
 >
-> ⇒ P\_θ(λ(**X**) ≤ c) = P\_θ(-2 log λ(**X**) ≥ -2 log (c))
+> ⇒ P\_θ(λ(𝐗) ≤ c) = P\_θ(-2 log λ(𝐗) ≥ -2 log (c))
 >
 >
 >
@@ -766,7 +766,7 @@
 >
 >
 >
-> sup\_θ∈Θ0 P\_θ(λ(**X**) ≤ c) ≤ α
+> sup\_θ∈Θ0 P\_θ(λ(𝐗) ≤ c) ≤ α
 >
 >
 >
@@ -774,19 +774,19 @@
 >
 >
 >
-> sup\_θ∈Θ0 P\_θ(-2 log λ(**X**) ≥ -2 log (c)) ≤ α
+> sup\_θ∈Θ0 P\_θ(-2 log λ(𝐗) ≥ -2 log (c)) ≤ α
 >
 >
 >
-> ⇔ tìm c để sup\_θ=θ0 P\_θ(-2 log λ(**X**) ≥ -2 log (c)) ≤ α
+> ⇔ tìm c để sup\_θ=θ0 P\_θ(-2 log λ(𝐗) ≥ -2 log (c)) ≤ α
 >
 >
 >
-> ⇔ tìm c để P\_θ0(-2 log λ(**X**) ≥ -2 log (c)) ≤ α
+> ⇔ tìm c để P\_θ0(-2 log λ(𝐗) ≥ -2 log (c)) ≤ α
 >
 >
 >
-> Và nếu dựa trên giả định θ = θ0 thì định lí ở trên nói rằng khi n lớn vô cùng thì -2 log λ(**X**) là một χ²\_1 random variable. Nên khi n rất lớn, ta có thể coi như bài toán trở thành:
+> Và nếu dựa trên giả định θ = θ0 thì định lí ở trên nói rằng khi n lớn vô cùng thì -2 log λ(𝐗) là một χ²\_1 random variable. Nên khi n rất lớn, ta có thể coi như bài toán trở thành:
 >
 >
 >
@@ -850,19 +850,19 @@
 >
 >
 >
-> L(θ|**x**) = Πi=1:n f(xi|θ) = (p1^y1)(p2^y2)(p3^y3)(p4^y4)(p5^y5) với yj là số x1,...xn = j
+> L(θ|𝐱) = Πi=1:n f(xi|θ) = (p1^y1)(p2^y2)(p3^y3)(p4^y4)(p5^y5) với yj là số x1,...xn = j
 >
 >
 >
-> Ta nhớ lại, định nghĩa của hàm likelihood là: Là hàm của tham số θ, kí hiệu L(θ|**x**) (nói vậy có nghĩa là, hàm nhận input là θ, còn **x** chỉ coi như hằng số), mà giá trị của nó tính bởi f(**x**|θ), mang ý nghĩa là độ hợp lí của θ dựa trên giá trị quan sát của data là **x**. Nên L(θ|**x**) = f(**x**|θ).
+> Ta nhớ lại, định nghĩa của hàm likelihood là: Là hàm của tham số θ, kí hiệu L(θ|𝐱) (nói vậy có nghĩa là, hàm nhận input là θ, còn 𝐱 chỉ coi như hằng số), mà giá trị của nó tính bởi f(𝐱|θ), mang ý nghĩa là độ hợp lí của θ dựa trên giá trị quan sát của data là 𝐱. Nên L(θ|𝐱) = f(𝐱|θ).
 >
 >
 >
-> Mà f(**x**|θ), dĩ nhiên là joint pmf của X1,...Xn, đồng thời do tính iid, joint pmf = tích các marginal pmf:
+> Mà f(𝐱|θ), dĩ nhiên là joint pmf của X1,...Xn, đồng thời do tính iid, joint pmf = tích các marginal pmf:
 >
 >
 >
-> f(**x**|θ) = Πi f(xi|θ)
+> f(𝐱|θ) = Πi f(xi|θ)
 >
 >
 >
@@ -914,11 +914,11 @@
 >
 >
 >
-> Vậy cái rule cho một tiệm cận level alpha LRT test là: Đi tìm cái mốc χ²\_3, giải bài toán -2 log (c) = χ²\_3 từ đó là ta đã có cái threhold c. Để rồi nhiệm vụ chỉ là nhận **x**, tính ra λ(**x**), và so với c để ra quyết định reject H0 nếu λ(**x**) ≤ c và ngược lại là xong.
+> Vậy cái rule cho một tiệm cận level alpha LRT test là: Đi tìm cái mốc χ²\_3, giải bài toán -2 log (c) = χ²\_3 từ đó là ta đã có cái threhold c. Để rồi nhiệm vụ chỉ là nhận 𝐱, tính ra λ(𝐱), và so với c để ra quyết định reject H0 nếu λ(𝐱) ≤ c và ngược lại là xong.
 >
 >
 >
-> Vậy còn một bước phải làm, là đi tìm công thức của λ(**x**) trong bài toán cụ thể này (công thức L(θ^0|**x**) / L(θ^|**x**) chỉ là khái quát thôi, đâu biết hình thù nó ra sao mà tính)
+> Vậy còn một bước phải làm, là đi tìm công thức của λ(𝐱) trong bài toán cụ thể này (công thức L(θ^0|𝐱) / L(θ^|𝐱) chỉ là khái quát thôi, đâu biết hình thù nó ra sao mà tính)
 >
 >
 >
@@ -926,7 +926,7 @@
 >
 >
 >
-> maximize\_Θ L(θ|**x**)
+> maximize\_Θ L(θ|𝐱)
 >
 >
 >
@@ -974,19 +974,19 @@
 >
 >
 >
-> ⇔ d/d**p** \[**y**Tlog(**p**) - **λ**T**p** + ω (**p**T**1** - 1)\] = 0
+> ⇔ d/d**p** \[𝐲Tlog(**p**) - **λ**T**p** + ω (**p**T**1** - 1)\] = 0
 >
 >
 >
-> ⇔ d/d**p** \[**y**Tlog(**p**)\] - d/d**p** \[**λ**T**p**\] + d/d**p** \[ω (**p**T**1** - 1)\] = 0
+> ⇔ d/d**p** \[𝐲Tlog(**p**)\] - d/d**p** \[**λ**T**p**\] + d/d**p** \[ω (**p**T**1** - 1)\] = 0
 >
 >
 >
-> i) d/d**p** \[**y**Tlog(**p**)\]: d\[**y**Tlog(**p**)\] = **y**Tlog(**p**+d**p**) - **y**Tlog(**p**)
+> i) d/d**p** \[𝐲Tlog(**p**)\]: d\[𝐲Tlog(**p**)\] = 𝐲Tlog(**p**+d**p**) - 𝐲Tlog(**p**)
 >
 >
 >
-> = **y**T\[log(**p**+d**p**) - log(**p**)\]
+> = 𝐲T\[log(**p**+d**p**) - log(**p**)\]
 >
 >
 >
@@ -1010,7 +1010,7 @@
 >
 >
 >
-> Vậy d\[**y**Tlog(**p**)\] = \[y1/p1, y2/p2...,ỵ5/p5\]T d**p** ⇒ ∇\[**y**Tlog(**p**)\] = \[y1/p1, y2/p2...,y5/p5\]
+> Vậy d\[𝐲Tlog(**p**)\] = \[y1/p1, y2/p2...,ỵ5/p5\]T d**p** ⇒ ∇\[𝐲Tlog(**p**)\] = \[y1/p1, y2/p2...,y5/p5\]
 >
 >
 >
@@ -1086,7 +1086,7 @@
 >
 >
 >
-> Thế **p**^ vào L(p|**x**) ta có mẫu số là:
+> Thế **p**^ vào L(p|𝐱) ta có mẫu số là:
 >
 >
 >
@@ -1197,7 +1197,7 @@
 >
 >
 >
-> Thế vào L(p|**x**), ta có:
+> Thế vào L(p|𝐱), ta có:
 >
 >
 >
@@ -1209,7 +1209,7 @@
 >
 >
 >
-> Và từ đó ta có công thức λ(**x**)
+> Và từ đó ta có công thức λ(𝐱)
 >
 >
 >
@@ -1247,11 +1247,11 @@
 >
 >
 >
-> Có thể liên hệ cái này với phần trước để thấy ý định của nó. Trong phần trước, khi ta nói về likelihood ratio test, ta đã đi đến một ý đó là, một level α LRT sẽ có rule là: Reject H0 khi sup Θ0 P(λ(**X**) ≤ c) ≤ α. Từ đó, ta mới đặt câu hỏi là, làm sao có distribution của statistic λ(**X**) để mà chọn ra mốc c. Thì một trường hợp khi áp dụng cho một hypothesis testing trong đó Θ0 = {θ0} thì nó trở thành P\_θ0(λ(**X**) ≤ c) ≤ α ⇔ P\_θ0(-2log λ(**X**) ≥ -2log c) ≤ α. Lúc này, định lí Wilks cho ta biết rằng -2log λ(**X**) khi n lớn, sẽ có limit distribution là χ²\_1. Và như vậy, khi n đủ lớn, ta có thể dùng phân phối của χ², là một phân phối đã biết để tính ra threshold giúp ta có một asymptotically level α LR test.
+> Có thể liên hệ cái này với phần trước để thấy ý định của nó. Trong phần trước, khi ta nói về likelihood ratio test, ta đã đi đến một ý đó là, một level α LRT sẽ có rule là: Reject H0 khi sup Θ0 P(λ(𝐗) ≤ c) ≤ α. Từ đó, ta mới đặt câu hỏi là, làm sao có distribution của statistic λ(𝐗) để mà chọn ra mốc c. Thì một trường hợp khi áp dụng cho một hypothesis testing trong đó Θ0 = {θ0} thì nó trở thành P\_θ0(λ(𝐗) ≤ c) ≤ α ⇔ P\_θ0(-2log λ(𝐗) ≥ -2log c) ≤ α. Lúc này, định lí Wilks cho ta biết rằng -2log λ(𝐗) khi n lớn, sẽ có limit distribution là χ²\_1. Và như vậy, khi n đủ lớn, ta có thể dùng phân phối của χ², là một phân phối đã biết để tính ra threshold giúp ta có một asymptotically level α LR test.
 >
 >
 >
-> Vậy thì ở đây cũng tương tự, đó là giả sử nếu ta có thể dùng CLT (chính xác hơn là một dạng nào đó của CLT) để chỉ ra một estimator W(**X**) của θ thỏa mãn: (Wn(**X**) - θ) / σn → (d) n(0,1). Thì khi đó ta có thể dùng n(0,1) để xây dựng test (y như ta dùng χ² để thay cho -2log λ(**X**) (vốn là một statistic mà ta ko biết distribution))
+> Vậy thì ở đây cũng tương tự, đó là giả sử nếu ta có thể dùng CLT (chính xác hơn là một dạng nào đó của CLT) để chỉ ra một estimator W(𝐗) của θ thỏa mãn: (Wn(𝐗) - θ) / σn → (d) n(0,1). Thì khi đó ta có thể dùng n(0,1) để xây dựng test (y như ta dùng χ² để thay cho -2log λ(𝐗) (vốn là một statistic mà ta ko biết distribution))
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
@@ -1537,7 +1537,7 @@
 >
 >
 >
-> từ đó dùng cái test này như sau: Với observed value **X** = **x**, ta tính Wn, σn(θ0), và so cụm (Wn - θ0) / σn(θ0) với c để ra quyết định.
+> từ đó dùng cái test này như sau: Với observed value 𝐗 = 𝐱, ta tính Wn, σn(θ0), và so cụm (Wn - θ0) / σn(θ0) với c để ra quyết định.
 >
 >
 >
@@ -1647,7 +1647,7 @@
 >
 >
 >
-> (phải nhấn mạnh lần nữa: ko phải (Wn - θ0)/Sn mặc định converge về n(0,1) mà chỉ đúng nếu distribution của **X** có tham số thực sự là θ0)
+> (phải nhấn mạnh lần nữa: ko phải (Wn - θ0)/Sn mặc định converge về n(0,1) mà chỉ đúng nếu distribution của 𝐗 có tham số thực sự là θ0)
 >
 >
 >
@@ -1679,7 +1679,7 @@
 >
 >
 >
-> Còn đoạn sau, để hiểu cần active recall về cái gọi là power function được định nghĩa là:  β(θ) = P(reject H0) = P\_θ(**X** ∈ R) (Xem link)
+> Còn đoạn sau, để hiểu cần active recall về cái gọi là power function được định nghĩa là:  β(θ) = P(reject H0) = P\_θ(𝐗 ∈ R) (Xem link)
 >
 >
 >
@@ -1695,7 +1695,7 @@
 >
 >
 >
-> Và dĩ nhiên ta sẽ thấy power lớn nhất là = 1 (vì nó là P\_θ(**X** ∈ R))
+> Và dĩ nhiên ta sẽ thấy power lớn nhất là = 1 (vì nó là P\_θ(𝐗 ∈ R))
 >
 >
 >
@@ -1975,7 +1975,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> Theo định nghĩa, standard error của Wn, chỉ đơn giản là "estimator của STD(Wn), hay estimator của √Var(Wn)". Và ta đã gặp cái này rồi, ví dụ, ta xét sample mean, Xbar, với variance của nó ta có thể chứng minh được là σ²/n = population variance/n. Thì đương nhiên STD(Xbar) = σ/√n. Và vì ta không có population variance σ², ta dùng sample variance s^2 để thay vào, thì ta sẽ có estimate của STD(Xbar), chính là standard error. Nên mới có công thức nói standard error của Xbar là s/√n là vậy.
+> Theo định nghĩa, standard error của Wn, chỉ đơn giản là "estimator của STD(Wn), hay estimator của √Var(Wn)". Và ta đã gặp cái này rồi, ví dụ, ta xét sample mean, X̄, với variance của nó ta có thể chứng minh được là σ²/n = population variance/n. Thì đương nhiên STD(X̄) = σ/√n. Và vì ta không có population variance σ², ta dùng sample variance s^2 để thay vào, thì ta sẽ có estimate của STD(X̄), chính là standard error. Nên mới có công thức nói standard error của X̄ là s/√n là vậy.
 >
 >
 >
@@ -1987,11 +1987,11 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> Công thức chính xác STD(Xbar) = √(σ²/n)
+> Công thức chính xác STD(X̄) = √(σ²/n)
 >
 >
 >
-> Công thức estimate STD(Xbar) = √(s²/n) (thay sample variance cho p. variance), thì đây là standard error.
+> Công thức estimate STD(X̄) = √(s²/n) (thay sample variance cho p. variance), thì đây là standard error.
 >
 >
 >
@@ -2183,7 +2183,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> Sn = 1/√I^n(Wn) với I^n(Wn) = - \[∂²/∂θ² log L(θ|**X**)\] | θ=Wn
+> Sn = 1/√I^n(Wn) với I^n(Wn) = - \[∂²/∂θ² log L(θ|𝐗)\] | θ=Wn
 >
 >
 >
@@ -2245,7 +2245,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> Và vì nó là sample mean, nên theo CLT nói rằng với random sample Xi có mean μ, variance σ² thì: √n(Xbar - μ)/σ → n(0,1) (xem link)
+> Và vì nó là sample mean, nên theo CLT nói rằng với random sample Xi có mean μ, variance σ² thì: √n(X̄ - μ)/σ → n(0,1) (xem link)
 >
 >
 >
@@ -2285,7 +2285,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> Nhưng ở trường hợp này khi p̂n là sample mean, ta biết công thức của variance sample mean Xbar: Var(Xbar) = population varinace / n = σ²/n, do đó đây thật ra \[p(1-p)\]/n cũng chính (công thức chính xác của) Var(p̂n).
+> Nhưng ở trường hợp này khi p̂n là sample mean, ta biết công thức của variance sample mean X̄: Var(X̄) = population varinace / n = σ²/n, do đó đây thật ra \[p(1-p)\]/n cũng chính (công thức chính xác của) Var(p̂n).
 >
 >
 >
@@ -2333,15 +2333,15 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> Công thức của In(θ) là -E\_θ\[∂²/∂θ² log L(θ|**X**)\]
+> Công thức của In(θ) là -E\_θ\[∂²/∂θ² log L(θ|𝐗)\]
 >
 >
 >
-> Ở đây In(p) là -E_p\[∂²/∂p² log L(p|**X**)\]
+> Ở đây In(p) là -E_p\[∂²/∂p² log L(p|𝐗)\]
 >
 >
 >
-> L(p|**X**) = f(**X**|p) = Πi f(Xi|p) (tính iid và định nghĩa của Likelihood)
+> L(p|𝐗) = f(𝐗|p) = Πi f(Xi|p) (tính iid và định nghĩa của Likelihood)
 >
 >
 >
@@ -2349,7 +2349,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> ⇒ log L(p|**X**) = log Πi (p^Xi)(1-p)^(1-Xi)
+> ⇒ log L(p|𝐗) = log Πi (p^Xi)(1-p)^(1-Xi)
 >
 >
 >
@@ -2373,7 +2373,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> ⇒ ∂²/∂p² log L(p|**X**) = ∂/∂p \[∂/∂p L(p|**X**)\]
+> ⇒ ∂²/∂p² log L(p|𝐗) = ∂/∂p \[∂/∂p L(p|𝐗)\]
 >
 >
 >
@@ -2397,7 +2397,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> ⇒ E_p\[∂²/∂p² log L(p|**X**)\] = E_p{(-1/p²) ΣiXi - \[1/(1-p)²\] (n-ΣiXi)}
+> ⇒ E_p\[∂²/∂p² log L(p|𝐗)\] = E_p{(-1/p²) ΣiXi - \[1/(1-p)²\] (n-ΣiXi)}
 >
 >
 >
@@ -2445,7 +2445,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> Vậy In(p) = -E_p\[∂²/∂p² log L(p|**X**)\] = n/\[p(1-p)\]
+> Vậy In(p) = -E_p\[∂²/∂p² log L(p|𝐗)\] = n/\[p(1-p)\]
 >
 >
 >
@@ -2571,7 +2571,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> Với sample X1,...Xn có EX = μ, Var(X) = σ² &lt; ∞ thì ta sẽ có: √n(Xbar - μ)/ σ → (d) n(0,1) 
+> Với sample X1,...Xn có EX = μ, Var(X) = σ² &lt; ∞ thì ta sẽ có: √n(X̄ - μ)/ σ → (d) n(0,1) 
 >
 >
 >
@@ -2595,11 +2595,11 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> Cách 1: Test statistic là |(p̂n - p0) / √{\[p̂n(1-p̂n)\]/n}|, tức là bỏ observed value **X** = **x**, tính ra giá trị của cái cục này rồi so với z\_α/2, nếu lớn hơn thì reject H0
+> Cách 1: Test statistic là |(p̂n - p0) / √{\[p̂n(1-p̂n)\]/n}|, tức là bỏ observed value 𝐗 = 𝐱, tính ra giá trị của cái cục này rồi so với z\_α/2, nếu lớn hơn thì reject H0
 >
 >
 >
-> Cách 2: Test statistic là |√n(p̂n - p0)/√p0(1-p0)|, đồng nghĩa khỏe hơn, không cần phải tính √{\[p̂n(1-p̂n)\]/n} rườm ra. Và cũng là tính giá trị của nó với **X** = **x** rồi so với z\_α/2
+> Cách 2: Test statistic là |√n(p̂n - p0)/√p0(1-p0)|, đồng nghĩa khỏe hơn, không cần phải tính √{\[p̂n(1-p̂n)\]/n} rườm ra. Và cũng là tính giá trị của nó với 𝐗 = 𝐱 rồi so với z\_α/2
 >
 >
 >
@@ -2708,7 +2708,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> i) g(𝐱, θ) theo định nghĩa ở trên ta vừa nói là hàm này: g(𝐱, θ) = ∂/∂θ log f(𝐱|θ), là một hàm theo θ có được khi đạo hàm hàm log f đối với θ. Nên g(**x**, 10) là giá trị của hàm số g(𝐱, θ) này tại θ = 10, tức g(𝐱, θ)|θ=10, và nó cũng là \[∂/∂θ log f(𝐱|θ)\]|θ=10. Sẽ là hoàn toàn sai nếu ghi là ∂/∂θ log f(𝐱|10), vì lúc này nó lại là đạo hàm của hàm số log f(𝐱|10) theo θ, và cái này bằng 0 vì hàm log f(𝐱|10) không còn phụ thuộc θ nữa.
+> i) g(𝐱, θ) theo định nghĩa ở trên ta vừa nói là hàm này: g(𝐱, θ) = ∂/∂θ log f(𝐱|θ), là một hàm theo θ có được khi đạo hàm hàm log f đối với θ. Nên g(𝐱, 10) là giá trị của hàm số g(𝐱, θ) này tại θ = 10, tức g(𝐱, θ)|θ=10, và nó cũng là \[∂/∂θ log f(𝐱|θ)\]|θ=10. Sẽ là hoàn toàn sai nếu ghi là ∂/∂θ log f(𝐱|10), vì lúc này nó lại là đạo hàm của hàm số log f(𝐱|10) theo θ, và cái này bằng 0 vì hàm log f(𝐱|10) không còn phụ thuộc θ nữa.
 >
 >
 >
