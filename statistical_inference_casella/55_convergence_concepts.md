@@ -1,6 +1,6 @@
 # 5.5 Convergence Concepts
 
-📊 **Progress:** `42` Notes | `52` Screenshots | `2` AI Reviews
+📊 **Progress:** `42` Notes | `52` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-tqtc86o"></a>
@@ -182,6 +182,30 @@
 >
 > Đơn giản là vì xác suất thì chỉ trong  range 0,1, mà cái P này ≥ 1 cái tiến tới 1
 > thì P chắc chắn cũng phải → 1, chứ ko thể tiến tới số nào nhỏ hơn 1 được,
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú rất tốt, nắm vững bản chất chứng minh Luật số lớn yếu (WLLN) qua bất đẳng thức Chebyshev và giải thích trực giác rất rõ ràng. Cần chú ý một chút về dấu bất đẳng thức khi lấy biến cố bù.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Tiếp xét P(|Xbar - μ| < ε) = 1 - P(|Xbar_n - μ| > ε)"*
+>
+> Biến cố bù chính xác của {|X̄_n - μ| < ε} phải là {|X̄_n - μ| ≥ ε}. Bạn đã biến đổi đúng với dấu ≥ ở các dòng trước nên đây có thể chỉ là viết nhầm dấu, nhưng về mặt xác suất tập hợp cần viết chặt chẽ.
+>
+> **2.** *"lim n → inf P(|Xbar - μ| < ε)"*
+>
+> Thiếu chỉ số n ở ký hiệu Xbar trong giới hạn (nên viết rõ Xbar_n để thể hiện dãy biến ngẫu nhiên phụ thuộc vào cỡ mẫu n).
+>
+>
+> **✓ Strengths**
+> - Áp dụng chính xác bất đẳng thức Chebyshev dạng tổng quát cho hàm bình phương khoảng cách.
+> - Lập luận chặt chẽ về phương sai của trung bình mẫu Var(X̄_n) = σ²/n từ tính chất i.i.d.
+> - Trực giác kẹp xác suất rất tốt khi giải thích vì sao P ≤ 1 kết hợp với chặn dưới tiến tới 1 sẽ kéo theo giới hạn bằng 1.
+>
+> **💡 Deeper notes**
+> - Định lý trong giáo trình (Casella-Berger) yêu cầu Var(X_i) = σ² < ∞ để chứng minh nhanh gọn bằng Chebyshev. Tuy nhiên, theo Luật số lớn yếu tổng quát hơn (Khinchin's WLLN), định lý vẫn đúng khi chỉ cần E|X_i| < ∞ mà không đòi hỏi phương sai hữu hạn (khi đó phải chứng minh qua hàm đặc trưng - characteristic function).
 
 **🔗 See also:** [Bất đẳng thức Markov và chứng minh](./36_inequalities.md#node-u9zgfoi) · [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg) · [Chứng minh Hiệu quả Ước lượng MLE](./101_point_estimation.md#node-ucl78tu) · [Model Evidence and Marginal Likelihood *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/34_bayesian_model_comparison.md#node-dmy6nc7) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s)
 
