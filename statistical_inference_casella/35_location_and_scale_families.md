@@ -186,41 +186,27 @@
 <p align="center"><kbd><img src="assets/iukec2q0xhd.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ở đây có một điểm kiến thức rất quan trọng mà mình sẽ được hưởng lợi về
-> sau. Đó là ta có **hệ quả của một định lí** mà lát nữa sẽ gặp, và hệ quả đó là
+> Ở đây có một điểm kiến thức rất quan trọng mà mình sẽ được hưởng lợi về sau. Đó là ta có **hệ quả của một định lí** mà lát nữa sẽ gặp, và hệ quả đó là
 >
 >
 >
-> nếu **Z có pdf là f(z)** thì nếu X có **pdf của X là f(x - μ) thì X sẽ có thể thể hiện
-> bởi Z: X = Z + μ**
+> nếu **Z có pdf là f(z)** thì nếu X có **pdf của X là f(x - μ) thì X sẽ có thể thể hiện bởi Z: X = Z + μ**
 >
 >
 >
-> Để rồi điểm kiến thức quan trọng là VIỆC XEM XÉT CÁCH THỂ HIỆN TRÊN
-> SẼ CHO THẤY KHI NÀO MỘT LOCATION FAMILY CÓ THỂ LÀ LỰA CHỌN
-> PHÙ HỢP CHO MÔ HÌNH XÁC SUẤT CỦA MỘT BIẾN NGẪU NHIÊN X NÀO
-> ĐÓ
+> Để rồi điểm kiến thức quan trọng là VIỆC XEM XÉT CÁCH THỂ HIỆN TRÊN SẼ CHO THẤY KHI NÀO MỘT LOCATION FAMILY CÓ THỂ LÀ LỰA CHỌN PHÙ HỢP CHO MÔ HÌNH XÁC SUẤT CỦA MỘT BIẾN NGẪU NHIÊN X NÀO ĐÓ
 >
 >
 >
-> Lấy ví dụ trong đó ta muốn thiết lập một experiment để **đo lường một hằng số
-> μ nào đó**. Nhưng **sự đo có sai số** t**hể hiện** bởi **random variable Z**. Dẫn tới
-> **giá trị quan sát thấy** của yếu tố cần đo sẽ **bị ảnh hưởng bởi sai số**, nên **với
-> các giá trị sai số khác nhau (Z)** thì **giá trị quan sát thấy của yếu tố cần đo
-> cũng khác nhau luôn**, tức là **nó cũng là random variable**, đặt là **X**. Và quan hệ
-> giữa X, Z, μ thể hiện bởi: **X = Z + μ** 
+> Lấy ví dụ trong đó ta muốn thiết lập một experiment để **đo lường một hằng số μ nào đó**. Nhưng **sự đo có sai số** t**hể hiện** bởi **random variable Z**. Dẫn tới **giá trị quan sát thấy** của yếu tố cần đo sẽ **bị ảnh hưởng bởi sai số**, nên **với các giá trị sai số khác nhau (Z)** thì **giá trị quan sát thấy của yếu tố cần đo cũng khác nhau luôn**, tức là **nó cũng là random variable**, đặt là X. Và quan hệ giữa X, Z, μ thể hiện bởi: X = Z + μ
 >
 >
 >
-> Để rồi nếu sai số dương, tức rv Z mang giá trị > 0 thì giá trị đo được (tức là gía 
-> trị của X) sẽ là lớn hơn μ, ngược lại nếu sai số âm thì giá trị đo được sẽ nhỏ 
-> hơn μ.
+> Để rồi nếu sai số dương, tức rv Z mang giá trị &gt; 0 thì giá trị đo được (tức là gía trị của X) sẽ là lớn hơn μ, ngược lại nếu sai số âm thì giá trị đo được sẽ nhỏ hơn μ.
 >
 >
 >
-> Đây chính là **hoàn cảnh phù hợp để áp dụng location family**. Với theorem trên
-> nói rằng khi **X = Z + μ** thì nếu ta đ**ã biết pdf của Z là fZ(z)**. ta sẽ suy 
-> ra **pdf của X là fX(x) = fZ(x - μ)**
+> Đây chính là **hoàn cảnh phù hợp để áp dụng location family**. Với theorem trên nói rằng khi **X = Z + μ** thì nếu ta đ**ã biết pdf của Z là fZ(z)**. ta sẽ suy ra **pdf của X là fX(x) = fZ(x - μ)**
 >
 >
 >
