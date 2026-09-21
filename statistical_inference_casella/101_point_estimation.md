@@ -67,18 +67,18 @@
 >
 >
 >
-> ví dụ, lấy Xbar đi (nó là point estimator cho population mean như đã biết)
+> ví dụ, lấy X̄ đi (nó là point estimator cho population mean như đã biết)
 >
 >
 >
-> thì ta có Xbar1(X1) = X1, Xbar2(X1,X2) = (X1+X2)/2, Xbar_n(X1,..Xn)
+> thì ta có X̄1(X1) = X1, X̄2(X1,X2) = (X1+X2)/2, X̄_n(X1,..Xn)
 > = (Σi=1:n Xi) / n
 >
 >
 >
-> Mình ghi Xbar1(X1) là hoàn toàn hợp lệ, vì gs Casella trong mấy chương
-> trước đã nói, Xbar, hay S^2 thật ra chỉ là ghi cho gọn, ghi rõ phải là Xbar(**X**)
-> hay S^2(**X**) để thể hiện nó là function của sample **X**
+> Mình ghi X̄1(X1) là hoàn toàn hợp lệ, vì gs Casella trong mấy chương
+> trước đã nói, X̄, hay S^2 thật ra chỉ là ghi cho gọn, ghi rõ phải là X̄(𝐗)
+> hay S^2(𝐗) để thể hiện nó là function của sample 𝐗
 
 <br>
 
@@ -102,7 +102,7 @@
 >
 >
 > À, đơn giản là vì Wn ở đây là estimator của θ, theo định nghĩa, là một function 
-> của sample **X** = (X1,...Xn), cũng còn gọi là một statistic. Và vì vậy, nó là một
+> của sample 𝐗 = (X1,...Xn), cũng còn gọi là một statistic. Và vì vậy, nó là một
 > random variable, có distribution sẽ phụ thuộc θ luôn. Nên xác suất của |Wn - θ|
 > < ε dĩ nhiên là xác suất của một event liên quan đến rv Wn có distribution
 > phụ thuộc θ nên đương nhiên nó phải phụ thuộc θ. Đó mới là lí do có chữ θ 
@@ -159,18 +159,18 @@
 
 <a id="node-yx0vqu9"></a>
 
-###### Tính nhất quán của Xbar
+###### Tính nhất quán của X̄
 
 <p align="center"><kbd><img src="assets/3cll4olsoft.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Qua ví dụ này, cho X1,X2,...iid ~ n(θ, 1) và xét chuỗi các sample mean của 
-> random sample size n: Xbar_n = (Σi Xi) / n.
+> random sample size n: X̄_n = (Σi Xi) / n.
 >
 >
 >
-> Còn nhớ, ta đã chứng minh, sample mean Xbar của random sample X1,...
-> Xn ~ normal(μ, σ²) sẽ có distribution normal(μ, σ²/n). Nên ở đây Xbar_n
+> Còn nhớ, ta đã chứng minh, sample mean X̄ của random sample X1,...
+> Xn ~ normal(μ, σ²) sẽ có distribution normal(μ, σ²/n). Nên ở đây X̄_n
 > sẽ là random variable ~ normal(θ, 1/n)
 >
 >
@@ -182,24 +182,24 @@
 >
 >
 >
-> Vậy ở đây ta xét xác suất P_θ(|Xbar_n - θ| < ε).
+> Vậy ở đây ta xét xác suất P_θ(|X̄_n - θ| < ε).
 >
 >
 >
-> ⇨ P_θ(|Xbar_n - θ| < ε) = P_θ(-ε < Xbar_n - θ < ε)
+> ⇨ P_θ(|X̄_n - θ| < ε) = P_θ(-ε < X̄_n - θ < ε)
 >
 >
 >
-> = P_θ(-ε√n < Xbar_n - θ/(1/√n) < ε√n)
+> = P_θ(-ε√n < X̄_n - θ/(1/√n) < ε√n)
 >
 >
 >
-> Ở trên ta đã nói Xbar_n ~ normal(θ, 1/n) thì theo location scale theorem, 
-> (Xbar_n - θ)/(1/√n) sẽ là rv ~ normal(0, 1)
+> Ở trên ta đã nói X̄_n ~ normal(θ, 1/n) thì theo location scale theorem, 
+> (X̄_n - θ)/(1/√n) sẽ là rv ~ normal(0, 1)
 >
 >
 >
-> ⇨ P_θ(-ε√n < Z < ε√n), với Z = Xbar_n - θ/(1/√n), là normal(0,1)
+> ⇨ P_θ(-ε√n < Z < ε√n), với Z = X̄_n - θ/(1/√n), là normal(0,1)
 >
 >
 >
@@ -207,7 +207,7 @@
 >
 >
 >
-> Vậy theo định nghĩa Xbar là consistent estimator của θ
+> Vậy theo định nghĩa X̄ là consistent estimator của θ
 
 <br>
 
@@ -320,7 +320,7 @@
 
 <a id="node-47kutgs"></a>
 
-###### Tính nhất quán của Xbar
+###### Tính nhất quán của X̄
 
 <p align="center"><kbd><img src="assets/zrgxsperwp.png" width="80%"></kbd></p>
 
@@ -329,19 +329,19 @@
 >
 >
 >
-> Vì Xbar_n ~ normal(θ, 1/n) ⇨ dĩ nhiên E_θ[Xbar_n] = θ → Bias(Xbar_n) = 0
+> Vì X̄_n ~ normal(θ, 1/n) ⇨ dĩ nhiên E_θ[X̄_n] = θ → Bias(X̄_n) = 0
 >
 >
 >
-> Và Var(Xbar_n) = 1/n ⇨ khi n → inf dĩ nhiên Var(Xbar_n) → 0
+> Và Var(X̄_n) = 1/n ⇨ khi n → inf dĩ nhiên Var(X̄_n) → 0
 >
 >
 >
-> Vậy theo theorem vừa rồi Xbar_n là consistent.
+> Vậy theo theorem vừa rồi X̄_n là consistent.
 >
 >
 >
-> HƠn nữa trong ví dụ đó, là cho X1,...Xn ~ normal(θ, 1) thì ta biết Xbar_n
+> HƠn nữa trong ví dụ đó, là cho X1,...Xn ~ normal(θ, 1) thì ta biết X̄_n
 >  ~ normal(θ, 1/n)
 >
 >
@@ -351,15 +351,15 @@
 >
 >
 >
-> Thì khi đó E[Xbar] cũng là μ và Var(Xbar) cũng bằng σ^/n.
+> Thì khi đó E[X̄] cũng là μ và Var(X̄) cũng bằng σ^/n.
 >
 >
 >
-> Và theo đó, Xbar cũng là consistent estimator của μ 
+> Và theo đó, X̄ cũng là consistent estimator của μ 
 >
 >
 >
-> Như vậy, mọi Xbar_n của một sample iid có population với variance hữu
+> Như vậy, mọi X̄_n của một sample iid có population với variance hữu
 > hạn sẽ đều là consistent estimator của μ
 
 **🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg)
@@ -386,7 +386,7 @@
 <p align="center"><kbd><img src="assets/jjkpmvkmzz.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, cuối cùng, gs nói về một theorem nói rằng, bất kì một ML estimator θ^ml(**X**) của một parameter θ nào cũng là consistent sequence of estimator của θ, và ông nói đây là lần đầu tiên ta gặp một trường hợp trong đó một cách tiếp cận cụ thể lại đảm bảo ta sẽ có được một estimator có được một tiêu chí tối ưu nào đó. (ông nói vậy là vì, cho đến nay, các phương pháp mà ta học để đi xây dựng một estimator chưa đảm bảo là nó sẽ là cái tốt nhất theo các tiêu chí nào đó, thì ở đây, với tiêu chí consistent, thì MLE approach lại đảm bảo là ta sẽ có được một consistent estimator)
+> Rồi, cuối cùng, gs nói về một theorem nói rằng, bất kì một ML estimator θ^ml(𝐗) của một parameter θ nào cũng là consistent sequence of estimator của θ, và ông nói đây là lần đầu tiên ta gặp một trường hợp trong đó một cách tiếp cận cụ thể lại đảm bảo ta sẽ có được một estimator có được một tiêu chí tối ưu nào đó. (ông nói vậy là vì, cho đến nay, các phương pháp mà ta học để đi xây dựng một estimator chưa đảm bảo là nó sẽ là cái tốt nhất theo các tiêu chí nào đó, thì ở đây, với tiêu chí consistent, thì MLE approach lại đảm bảo là ta sẽ có được một consistent estimator)
 >
 >
 >
@@ -459,7 +459,7 @@
 >
 >
 >
-> Lấy ví dụ, Xbar_n, là sample mean của iid normal(μ, σ²) sample size n, như đã biết, nó sẽ một normal(μ, σ²/n). Như vậy Var(Xbar_n) = σ²/n ⇨ n Var(Xbar_n) = σ². Do đó, với Xbar_n thì lim n → ∞ n Var(Xbar_n) = σ², là con số hữu hạn (finite), < ∞. Do đó theo định nghĩa trên, σ² chính là limiting variance. (trong trường hợp này, chuỗi {kn} chính là {1,2,....n}.
+> Lấy ví dụ, X̄_n, là sample mean của iid normal(μ, σ²) sample size n, như đã biết, nó sẽ một normal(μ, σ²/n). Như vậy Var(X̄_n) = σ²/n ⇨ n Var(X̄_n) = σ². Do đó, với X̄_n thì lim n → ∞ n Var(X̄_n) = σ², là con số hữu hạn (finite), < ∞. Do đó theo định nghĩa trên, σ² chính là limiting variance. (trong trường hợp này, chuỗi {kn} chính là {1,2,....n}.
 >
 >
 >
@@ -471,19 +471,19 @@
 >
 >
 >
-> Nhưng nếu ta quan tâm đến asymtotic variance của Tn = 1/Xbar_n, thì ta sẽ gặp vấn để vì Var(Tn) sẽ = inf, vì sao nhỉ?
+> Nhưng nếu ta quan tâm đến asymtotic variance của Tn = 1/X̄_n, thì ta sẽ gặp vấn để vì Var(Tn) sẽ = inf, vì sao nhỉ?
 >
 >
 >
-> Chỉ cần hiểu đại khái, theo định nghĩa Var(Tn) = E\[Tn^2\] - (ETn)^2 = E\[(1/Xbar_n)^2\] - \[E(1/Xbar_n)\]^2
+> Chỉ cần hiểu đại khái, theo định nghĩa Var(Tn) = E\[Tn^2\] - (ETn)^2 = E\[(1/X̄_n)^2\] - \[E(1/X̄_n)\]^2
 >
 >
 >
-> Với E\[(1/Xbar_n)^2\], theo LOTUS, = ∫(1/x̄_n)^2 f(x̄_n) d(x̄_n) với f là pdf của x̄_n. Ta đã biết, Xbar_n của sample \~ normal(μ, σ) sẽ có limiting distribution là normal(μ, σ²/n), tức là Xbar_n sẽ hội tụ distribution về một rv thuộc phân phối normal(μ, σ²). thế thì với phân phối này, trong tích phân ∫(1/x̄_n)^2 f(x̄_n) d(x̄_n) đang nói, tồn tại xác suất dương nào đó để x̄_n = 0, khiến tích phân này = inf (explode), vì sao, vì range của normal là từ -inf, inf, nên có nghĩa là tại x̄_n=0, vẫn tồn tại giá trị pdf không âm.
+> Với E\[(1/X̄_n)^2\], theo LOTUS, = ∫(1/x̄_n)^2 f(x̄_n) d(x̄_n) với f là pdf của x̄_n. Ta đã biết, X̄_n của sample \~ normal(μ, σ) sẽ có limiting distribution là normal(μ, σ²/n), tức là X̄_n sẽ hội tụ distribution về một rv thuộc phân phối normal(μ, σ²). thế thì với phân phối này, trong tích phân ∫(1/x̄_n)^2 f(x̄_n) d(x̄_n) đang nói, tồn tại xác suất dương nào đó để x̄_n = 0, khiến tích phân này = inf (explode), vì sao, vì range của normal là từ -inf, inf, nên có nghĩa là tại x̄_n=0, vẫn tồn tại giá trị pdf không âm.
 >
 >
 >
-> Không cần xét cái term thứ hai, lập luận trên cũng đủ để nói Var(1/Xbar_n) = ∞.
+> Không cần xét cái term thứ hai, lập luận trên cũng đủ để nói Var(1/X̄_n) = ∞.
 >
 >
 >
@@ -491,7 +491,7 @@
 >
 >
 >
-> Vấn đề là, trong ví dụ 5.5.23, mình đã học về Delta method giúp ta có công thức tính xấp xỉ mean và variance của 1/Xbar_n, có thể ôn lại chút xíu như sau:
+> Vấn đề là, trong ví dụ 5.5.23, mình đã học về Delta method giúp ta có công thức tính xấp xỉ mean và variance của 1/X̄_n, có thể ôn lại chút xíu như sau:
 >
 >
 >
@@ -555,7 +555,7 @@
 >
 >
 >
-> Áp dụng với T = Xbar_n là có mean E(Xbar_n) = μ và variance Var(Xbar_n) và g(Xbar_n) = 1/Xbar_n:
+> Áp dụng với T = X̄_n là có mean E(X̄_n) = μ và variance Var(X̄_n) và g(X̄_n) = 1/X̄_n:
 >
 >
 >
@@ -563,15 +563,15 @@
 >
 >
 >
-> E\[1/Xbar_n\] = 1/E\[Xbar_n\] = 1/μ 
+> E\[1/X̄_n\] = 1/E\[X̄_n\] = 1/μ 
 >
 >
 >
-> Var\[1/Xbar_n\] = (-1/μ²)^2Var\_μ\[Xbar\] = **(1/μ^4) Var\_μ\[Xbar\]**
+> Var\[1/X̄_n\] = (-1/μ²)^2Var\_μ\[X̄\] = **(1/μ^4) Var\_μ\[X̄\]**
 >
 >
 >
-> Và như vậy, ý chính muốn nói, với Tn = 1/Xbar_n, thì khi ta t**ính chính xác variance của nó, được ∞**. Nhưng tính xấp xỉ, thì lại là **(1/μ^4) Var\_μ\[Xbar\]**
+> Và như vậy, ý chính muốn nói, với Tn = 1/X̄_n, thì khi ta t**ính chính xác variance của nó, được ∞**. Nhưng tính xấp xỉ, thì lại là **(1/μ^4) Var\_μ\[X̄\]**
 >
 >
 >
@@ -583,7 +583,7 @@
 >
 >
 >
-> đó là, cho chuỗi estimator (dựa trên sample size n) Tn: sao cho kn (Tn - τ(θ)) hội tụ phân phối về n(0, σ²), khi đó σ² gọi là asymptotic variance của Tn. Có nghĩa là, thì **thay vì dùng Var(Tn) tại limit, ta dùng variance của cái phân phối normal là limit distribution của** kn (Tn - τ(θ)) **làm asymptotic variance**. Như vậy, với Tn = 1/Xbar, thay vì dùng Var(1/Xbar) tại limit (=inf), ta dùng (1/μ^4) Var\_μ\[Xbar\]
+> đó là, cho chuỗi estimator (dựa trên sample size n) Tn: sao cho kn (Tn - τ(θ)) hội tụ phân phối về n(0, σ²), khi đó σ² gọi là asymptotic variance của Tn. Có nghĩa là, thì **thay vì dùng Var(Tn) tại limit, ta dùng variance của cái phân phối normal là limit distribution của** kn (Tn - τ(θ)) **làm asymptotic variance**. Như vậy, với Tn = 1/X̄, thay vì dùng Var(1/X̄) tại limit (=inf), ta dùng (1/μ^4) Var\_μ\[X̄\]
 >
 >
 >
@@ -754,11 +754,11 @@
 >
 >
 >
-> Để hiểu cái này, ta sẽ cần liên hệ lại (nhớ lại) kiến thức về Cramer-Rao Lower Bound là cái gì), đã học ở chap 7, trong phần đánh giá chất lượng của các point estimator. Nói ngắn gọn, khi cần phải đánh giá các estimator (evaluating estimator quality), thì một tiêu chí quan trọng là MSE, được định nghĩa là một hàm của estimator: MSE(W(**X**)) = E\_θ\[(W(**X**) - θ)^2\], và ta muốn cái này càng nhỏ càng tốt. Sau đó, bằng cách biến đổi chút, ta sẽ cho thấy nó = Var\_θ \[W(**X**)\] + \[Bias(W(**X**)\]^2 với Bias(W(**X**)) = E\_θ\[W(**X**)\] - θ. Để rồi, câu chuyện tiếp theo là, giả sử ta **xét một đám các estimator có cùng bias** (đồng nghĩa có cùng kì vọng E\_θ\[W(**X**)\]), thì thằng nào có Var\_θ\[W(**X**)\] nhỏ nhất sẽ là tốt nhất.
+> Để hiểu cái này, ta sẽ cần liên hệ lại (nhớ lại) kiến thức về Cramer-Rao Lower Bound là cái gì), đã học ở chap 7, trong phần đánh giá chất lượng của các point estimator. Nói ngắn gọn, khi cần phải đánh giá các estimator (evaluating estimator quality), thì một tiêu chí quan trọng là MSE, được định nghĩa là một hàm của estimator: MSE(W(𝐗)) = E\_θ\[(W(𝐗) - θ)^2\], và ta muốn cái này càng nhỏ càng tốt. Sau đó, bằng cách biến đổi chút, ta sẽ cho thấy nó = Var\_θ \[W(𝐗)\] + \[Bias(W(𝐗)\]^2 với Bias(W(𝐗)) = E\_θ\[W(𝐗)\] - θ. Để rồi, câu chuyện tiếp theo là, giả sử ta **xét một đám các estimator có cùng bias** (đồng nghĩa có cùng kì vọng E\_θ\[W(𝐗)\]), thì thằng nào có Var\_θ\[W(𝐗)\] nhỏ nhất sẽ là tốt nhất.
 >
 >
 >
-> Thế thì, việc tính variance có thể phức tạp, và quan trọng hơn, trong nhiều trường hợp, ta cũng không thể biết được rằng, một estimator có variance nào đó có phải là nhỏ nhất hay không. Từ đó, mới nói đến một công cụ cho vấn đề này: **Cramer Rao Lower Bound**. Đây chỉ đơn giản là một theorem, nói rằng, giả sử ta có bối cảnh thỏa mãn yêu cầu đề ra nào đó (xem cụ thể trong theorem) thì khi đó, ta có thể **xác định được cái lower bound của** Var\_θ(W(**X**)), từ đó, **nếu ta có một estimator có variance bằng với chặn dưới này, thì có thể kết luận nó chính là cái tốt nhất** (cái tốt nhất trong đám các estimator có chung bias, và nếu đang xét đám các unbiased estiamtor thì ta gọi nó là uniformly minimum variance unbiased estimator)
+> Thế thì, việc tính variance có thể phức tạp, và quan trọng hơn, trong nhiều trường hợp, ta cũng không thể biết được rằng, một estimator có variance nào đó có phải là nhỏ nhất hay không. Từ đó, mới nói đến một công cụ cho vấn đề này: **Cramer Rao Lower Bound**. Đây chỉ đơn giản là một theorem, nói rằng, giả sử ta có bối cảnh thỏa mãn yêu cầu đề ra nào đó (xem cụ thể trong theorem) thì khi đó, ta có thể **xác định được cái lower bound của** Var\_θ(W(𝐗)), từ đó, **nếu ta có một estimator có variance bằng với chặn dưới này, thì có thể kết luận nó chính là cái tốt nhất** (cái tốt nhất trong đám các estimator có chung bias, và nếu đang xét đám các unbiased estiamtor thì ta gọi nó là uniformly minimum variance unbiased estimator)
 >
 >
 >
@@ -770,22 +770,22 @@
 >
 >
 >
-> Var\_θ(W(**X**)) ≥ \[d/dθ E\_θ\[W(**X**)\]\]^2 / E\_θ\[(∂/∂θ log f(**X**|θ))^2\]
+> Var\_θ(W(𝐗)) ≥ \[d/dθ E\_θ\[W(𝐗)\]\]^2 / E\_θ\[(∂/∂θ log f(𝐗|θ))^2\]
 >
 >
 >
-> = \[d/dθ E\_θ\[W(**X**)\]\]^2 / In(θ)
+> = \[d/dθ E\_θ\[W(𝐗)\]\]^2 / In(θ)
 >
 >
 >
-> với In(θ) = E\_θ\[(∂/∂θ log f(**X**|θ))^2\], do iid = n E\_θ\[(∂/∂θ log f(Xi|θ))^2\] = n I1(θ)
+> với In(θ) = E\_θ\[(∂/∂θ log f(𝐗|θ))^2\], do iid = n E\_θ\[(∂/∂θ log f(Xi|θ))^2\] = n I1(θ)
 >
 > \
-> Vậy Var\_θ(W(**X**)) ≥ \[d/dθ E\_θ(W(**X**))\]^2 / n I1(θ)
+> Vậy Var\_θ(W(𝐗)) ≥ \[d/dθ E\_θ(W(𝐗))\]^2 / n I1(θ)
 >
 >
 >
-> Và CRLB của Var\_θ(W(**X**)) là \[d/dθ E\_θ(W(**X**))\]^2 / n I1(θ)
+> Và CRLB của Var\_θ(W(𝐗)) là \[d/dθ E\_θ(W(𝐗))\]^2 / n I1(θ)
 >
 >
 >
@@ -974,7 +974,7 @@
 >
 >
 >
-> Đầu tiên, ta kí hiệu l(θ|**x**) là hàm log likelihood, thì đạo hàm của nó là l'(θ|**x**).
+> Đầu tiên, ta kí hiệu l(θ|𝐱) là hàm log likelihood, thì đạo hàm của nó là l'(θ|𝐱).
 >
 >
 >
@@ -982,7 +982,7 @@
 >
 >
 >
-> l'(θ|**x**) ≈ l'(θ0|**x**) + l''(θ0|**x**)(θ - θ0)
+> l'(θ|𝐱) ≈ l'(θ0|𝐱) + l''(θ0|𝐱)(θ - θ0)
 >
 >
 >
@@ -994,35 +994,35 @@
 >
 >
 >
-> l'(θ^|**x**) ≈ l'(θ0|**x**) + l''(θ0|**x**)(θ^ - θ0) 
+> l'(θ^|𝐱) ≈ l'(θ0|𝐱) + l''(θ0|𝐱)(θ^ - θ0) 
 >
 >
 >
-> Vế trái lúc này, có thể hiểu, chính là d/dθ \[log L(θ|**x**)\]|θ=θ^, mà vì định nghĩa của MLE, là solution của bài toán maximize\_θ L(θ|**x**) ( nên theo điều kiện cần bậc nhất, d/dθ \[L(θ|**x**)\]|θ=θ^ phải bằng 0, cũng là d/dθ \[log L(θ|**x**)\]|θ=θ^ → l'(θ|**x**)|θ=θ^ = 0. Vậy vế trái = 0, ta có:
+> Vế trái lúc này, có thể hiểu, chính là d/dθ \[log L(θ|𝐱)\]|θ=θ^, mà vì định nghĩa của MLE, là solution của bài toán maximize\_θ L(θ|𝐱) ( nên theo điều kiện cần bậc nhất, d/dθ \[L(θ|𝐱)\]|θ=θ^ phải bằng 0, cũng là d/dθ \[log L(θ|𝐱)\]|θ=θ^ → l'(θ|𝐱)|θ=θ^ = 0. Vậy vế trái = 0, ta có:
 >
 >
 >
-> 0 ≈ l'(θ0|**x**) + l''(θ0|**x**)(θ^ - θ0) 
+> 0 ≈ l'(θ0|𝐱) + l''(θ0|𝐱)(θ^ - θ0) 
 >
 >
 >
-> ⇔ l''(θ0|**x**)(θ^ - θ0)  ≈ -l'(θ0|**x**)
+> ⇔ l''(θ0|𝐱)(θ^ - θ0)  ≈ -l'(θ0|𝐱)
 >
 >
 >
-> ⇔ (θ^ - θ0)  ≈ -l'(θ0|**x**)/l''(θ0|**x**)
+> ⇔ (θ^ - θ0)  ≈ -l'(θ0|𝐱)/l''(θ0|𝐱)
 >
 >
 >
-> ⇔ √n(θ^ - θ0)  ≈ √n\[-l'(θ0|**x**)/l''(θ0|**x**)\] (nhân hai vế cho √n)
+> ⇔ √n(θ^ - θ0)  ≈ √n\[-l'(θ0|𝐱)/l''(θ0|𝐱)\] (nhân hai vế cho √n)
 >
 >
 >
-> ⇔ √n(θ^ - θ0)  ≈ √n\[-(1/√n)l'(θ0|**x**)\] / \[(1/√n)l''(θ0|**x**)\] (nhân tử và mẫu cho 1/√n)
+> ⇔ √n(θ^ - θ0)  ≈ √n\[-(1/√n)l'(θ0|𝐱)\] / \[(1/√n)l''(θ0|𝐱)\] (nhân tử và mẫu cho 1/√n)
 >
 >
 >
-> ⇔ √n(θ^ - θ0)  ≈ \[-(1/√n)l'(θ0|**x**)\] / \[(1/n)l''(θ0|**x**)\] 
+> ⇔ √n(θ^ - θ0)  ≈ \[-(1/√n)l'(θ0|𝐱)\] / \[(1/n)l''(θ0|𝐱)\] 
 >
 >
 >
@@ -1054,7 +1054,7 @@
 >
 >
 >
-> Rồi, thế thì, một điểm lưu ý, Information number chỉ là một khái niệm tổng quát, nó có thể là information number của sample size 1, kí hiệu I1(θ) = E\_θ\[(∂/∂θ log f(X1|θ))^2\] hoặc information number của một sample size n, In(θ) = E\_θ\[(∂/∂θ log f(**X**|θ))^2\].
+> Rồi, thế thì, một điểm lưu ý, Information number chỉ là một khái niệm tổng quát, nó có thể là information number của sample size 1, kí hiệu I1(θ) = E\_θ\[(∂/∂θ log f(X1|θ))^2\] hoặc information number của một sample size n, In(θ) = E\_θ\[(∂/∂θ log f(𝐗|θ))^2\].
 >
 >
 >
@@ -1168,23 +1168,23 @@
 >
 >
 >
-> = (1/n) ∂/∂θ log \[f(**X**|θ)\] | θ=θ0\]
+> = (1/n) ∂/∂θ log \[f(𝐗|θ)\] | θ=θ0\]
 >
 >
 >
-> dùng định nghĩa hàm likelihood lần nữa, chuyển lại f(**X**|θ) = L(θ|**X**)
+> dùng định nghĩa hàm likelihood lần nữa, chuyển lại f(𝐗|θ) = L(θ|𝐗)
 >
 >
 >
-> = (1/n) ∂/∂θ log \[L(θ|**X**)\] | θ=θ0\]
+> = (1/n) ∂/∂θ log \[L(θ|𝐗)\] | θ=θ0\]
 >
 >
 >
-> và cái này chính là (1/n) l'(θ|**X**)
+> và cái này chính là (1/n) l'(θ|𝐗)
 >
 >
 >
-> Như vậy sample mean Ybar = (1/n) l'(θ|**X**)
+> Như vậy sample mean Ybar = (1/n) l'(θ|𝐗)
 >
 >
 >
@@ -1196,7 +1196,7 @@
 >
 >
 >
-> CLT nói rằng, với X1,...Xn, có EX = μ, Var(X) = σ². Thì √n(Xbar - μ)/σ → (d) n(0, 1)
+> CLT nói rằng, với X1,...Xn, có EX = μ, Var(X) = σ². Thì √n(X̄ - μ)/σ → (d) n(0, 1)
 >
 >
 >
@@ -1204,11 +1204,11 @@
 >
 >
 >
-> ⇔ √n((1/n) l'(θ|**X**) - 0) / √I1(θ0) → (d) n(0,1)
+> ⇔ √n((1/n) l'(θ|𝐗) - 0) / √I1(θ0) → (d) n(0,1)
 >
 >
 >
-> ⇔ (1/√n) l'(θ|**X**) / √I1(θ0) → (d) n(0,1)
+> ⇔ (1/√n) l'(θ|𝐗) / √I1(θ0) → (d) n(0,1)
 >
 >
 >
@@ -1220,7 +1220,7 @@
 >
 >
 >
-> \[(1/√n) l'(θ|**X**) / √I1(θ0)\] × √I1(θ0) → (d) √I1(θ0) n(0,1)
+> \[(1/√n) l'(θ|𝐗) / √I1(θ0)\] × √I1(θ0) → (d) √I1(θ0) n(0,1)
 >
 >
 >
@@ -1228,7 +1228,7 @@
 >
 >
 >
-> Do đó ta có: \[(1/√n) l'(θ|**X**) / √I1(θ0)\] × √I1(θ0) → (d) n(0, I1(θ0)) đây chính là 10.1.6.
+> Do đó ta có: \[(1/√n) l'(θ|𝐗) / √I1(θ0)\] × √I1(θ0) → (d) n(0, I1(θ0)) đây chính là 10.1.6.
 >
 >
 >
@@ -1236,15 +1236,15 @@
 >
 >
 >
->  Tiếp, xét l''(θ|**X**) = ∂/∂θ \[∂/∂θ l'(θ|**X**)\]
+>  Tiếp, xét l''(θ|𝐗) = ∂/∂θ \[∂/∂θ l'(θ|𝐗)\]
 >
 >
 >
-> = ∂/∂θ \[∂/∂θ l'(θ|**X**)\]
+> = ∂/∂θ \[∂/∂θ l'(θ|𝐗)\]
 >
 >
 >
-> = ∂/∂θ \[∂/∂θ log f(**X**|θ)\]
+> = ∂/∂θ \[∂/∂θ log f(𝐗|θ)\]
 >
 >
 >
@@ -1268,11 +1268,11 @@
 >
 >
 >
-> Vậy: l''(θ|**X**) = Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
+> Vậy: l''(θ|𝐗) = Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
 >
 >
 >
-> ⇔ (1/n) l''(θ|**X**) = (1/n) Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
+> ⇔ (1/n) l''(θ|𝐗) = (1/n) Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
 >
 >
 >
@@ -1284,7 +1284,7 @@
 >
 >
 >
-> Cũng là (1/n) l''(θ|**X**) → (p)E\[∂^2/∂θ^2 log f(Xi|θ)\]
+> Cũng là (1/n) l''(θ|𝐗) → (p)E\[∂^2/∂θ^2 log f(Xi|θ)\]
 >
 >
 >
@@ -1292,15 +1292,15 @@
 >
 >
 >
-> (1/n) l''(θ|**X**) → (p)E\_θ\[∂^2/∂θ^2 log f(Xi|θ)\]
+> (1/n) l''(θ|𝐗) → (p)E\_θ\[∂^2/∂θ^2 log f(Xi|θ)\]
 >
 >
 >
-> Và do đó (1/n) l''(θ|**X**)|θ=θ0 → (p) E\_θ\[∂^2/∂θ^2 log f(Xi|θ)\]|θ=θ0
+> Và do đó (1/n) l''(θ|𝐗)|θ=θ0 → (p) E\_θ\[∂^2/∂θ^2 log f(Xi|θ)\]|θ=θ0
 >
 >
 >
-> hay (1/n) l''(θ0|**X**)→ (p) E\_θ0\[∂^2/∂θ^2 log f(Xi|θ)\]
+> hay (1/n) l''(θ0|𝐗)→ (p) E\_θ0\[∂^2/∂θ^2 log f(Xi|θ)\]
 >
 >
 >
@@ -1312,11 +1312,11 @@
 >
 >
 >
-> Do đó: (1/n) l''(θ0|**X**)→ (p) -E\_θ0\[(∂/∂θ log f(Xi|θ))^2\], và đây chính là -I1(θ0)
+> Do đó: (1/n) l''(θ0|𝐗)→ (p) -E\_θ0\[(∂/∂θ log f(Xi|θ))^2\], và đây chính là -I1(θ0)
 >
 >
 >
-> Vậy (1/n) l''(θ0|**X**)→ (p) - I1(θ0)
+> Vậy (1/n) l''(θ0|𝐗)→ (p) - I1(θ0)
 >
 >
 >
@@ -1328,11 +1328,11 @@
 >
 >
 >
-> \[(1/√n) l'(θ|**X**) / √I1(θ0)\] × √I1(θ0) → (d) n(0, I1(θ0))
+> \[(1/√n) l'(θ|𝐗) / √I1(θ0)\] × √I1(θ0) → (d) n(0, I1(θ0))
 >
 >
 >
-> (1/n) l''(θ0|**X**)→ (p) - I1(θ0)
+> (1/n) l''(θ0|𝐗)→ (p) - I1(θ0)
 >
 >
 >
@@ -1340,11 +1340,11 @@
 >
 >
 >
-> \[(1/√n) l'(θ|**X**) / √I1(θ0)\] × √I1(θ0) / (1/n) l''(θ0|**X**) → (d) n(0, I1(θ0)) / \[-I1(θ0)\]
+> \[(1/√n) l'(θ|𝐗) / √I1(θ0)\] × √I1(θ0) / (1/n) l''(θ0|𝐗) → (d) n(0, I1(θ0)) / \[-I1(θ0)\]
 >
 >
 >
-> ⇔ (√n) l'(θ|**X**) /  l''(θ0|**X**) → (d) n(0, I1(θ0)) / \[-I1(θ0)\], 
+> ⇔ (√n) l'(θ|𝐗) /  l''(θ0|𝐗) → (d) n(0, I1(θ0)) / \[-I1(θ0)\], 
 >
 >
 >
@@ -1352,11 +1352,11 @@
 >
 >
 >
-> Vậy (√n) l'(θ|**X**) /  l''(θ0|**X**) → (d) n(0, 1/\[I1(θ0)\])
+> Vậy (√n) l'(θ|𝐗) /  l''(θ0|𝐗) → (d) n(0, 1/\[I1(θ0)\])
 >
 >
 >
-> Quay lại kết qủa ở trên: √n(θ^ - θ0) ≈ \[-(1/√n)l'(θ0|**x**)\] / \[(1/n)l''(θ0|**x**)\] = - (√n) l'(θ|**X**) /  l''(θ0|**X**)
+> Quay lại kết qủa ở trên: √n(θ^ - θ0) ≈ \[-(1/√n)l'(θ0|𝐱)\] / \[(1/n)l''(θ0|𝐱)\] = - (√n) l'(θ|𝐗) /  l''(θ0|𝐗)
 >
 >
 >
@@ -1720,39 +1720,39 @@
 >
 >
 >
-> Như đã biết, trong phần CRLB, thhì E\_θ{\[∂/∂θ log f(**X**|θ)\]^2}, được kí hiệu là In(θ), information number của n observation (xem link).
+> Như đã biết, trong phần CRLB, thhì E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2}, được kí hiệu là In(θ), information number của n observation (xem link).
 >
 >
 >
-> thì theo Lemma 7.3.11 nói rằng nếu f(x|θ) thỏa d/dθ E\_θ\[∂/∂θ log f(**X**|θ)\]
+> thì theo Lemma 7.3.11 nói rằng nếu f(x|θ) thỏa d/dθ E\_θ\[∂/∂θ log f(𝐗|θ)\]
 >
 >
 >
-> = ∫ ∂/∂θ\[(∂/∂θ log f(x|θ)d(x|θ)\] dx thì E\_θ{\[∂/∂θ log f(**X**|θ)\]^2} = - E\_θ\[∂^2/∂θ^2 log f(**X**|θ)\]
+> = ∫ ∂/∂θ\[(∂/∂θ log f(x|θ)d(x|θ)\] dx thì E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2} = - E\_θ\[∂^2/∂θ^2 log f(𝐗|θ)\]
 >
 >
 >
->  Nên In(θ) ở đây = E\_θ{\[∂/∂θ log f(**X**|θ)\]^2}
+>  Nên In(θ) ở đây = E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2}
 >
 >
 >
-> = - E\_θ\[∂^2/∂θ^2 log f(**X**|θ)\]
+> = - E\_θ\[∂^2/∂θ^2 log f(𝐗|θ)\]
 >
 >
 >
-> = - E\_θ\[∂^2/∂θ^2 log L(θ|**X**)\] (do L(θ|**X**) = f(**X**|θ))
+> = - E\_θ\[∂^2/∂θ^2 log L(θ|𝐗)\] (do L(θ|𝐗) = f(𝐗|θ))
 >
 >
 >
-> Tới đây, một lần nữa người ta **bỏ kì vọng** chuyển sang dùng -∂^2/∂θ^2 log L(θ^|**X**) và gọi nó là **observed information number**, là cái mà ông nói thật ra ngon hơn (superior) so với expected information number (In(θ))
+> Tới đây, một lần nữa người ta **bỏ kì vọng** chuyển sang dùng -∂^2/∂θ^2 log L(θ^|𝐗) và gọi nó là **observed information number**, là cái mà ông nói thật ra ngon hơn (superior) so với expected information number (In(θ))
 >
 >
 >
-> = - E\_θ\[∂^2/∂θ^2 log L(θ|**X**)\] (do L(θ|**X**) = f(**X**|θ))
+> = - E\_θ\[∂^2/∂θ^2 log L(θ|𝐗)\] (do L(θ|𝐗) = f(𝐗|θ))
 >
 >
 >
-> ≈ -∂^2/∂θ^2 log L(θ^|**X**)
+> ≈ -∂^2/∂θ^2 log L(θ^|𝐗)
 >
 >
 >
@@ -1772,7 +1772,7 @@
 >
 >
 >
-> Var(h(θ^)) ≈ \[h'(θ) / -∂^2/∂θ^2 log L(θ|**X**)\] | θ=θ^. Và đây là cách ta estimate variance của một hàm của một mle.
+> Var(h(θ^)) ≈ \[h'(θ) / -∂^2/∂θ^2 log L(θ|𝐗)\] | θ=θ^. Và đây là cách ta estimate variance của một hàm của một mle.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -1790,11 +1790,11 @@
 <p align="center"><kbd><img src="assets/p70gp9yp7qr.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Còn một ý, nói -(1/n) ∂^2/∂θ^2 log L(θ|**X**)|θ=θ^ là consistent estimator của I(θ), Là sao ta?
+> Còn một ý, nói -(1/n) ∂^2/∂θ^2 log L(θ|𝐗)|θ=θ^ là consistent estimator của I(θ), Là sao ta?
 >
 >
 >
-> Vì ∂^2/∂θ^2 log L(θ|**X**) = ∂^2/∂θ^2 log f(**X**|θ)
+> Vì ∂^2/∂θ^2 log L(θ|𝐗) = ∂^2/∂θ^2 log f(𝐗|θ)
 >
 >
 >
@@ -1838,11 +1838,11 @@
 >
 >
 >
->  Var(h(θ^)) ≈ \[h'(θ^)^2 / -∂^2/∂θ^2 log L(θθ^|**X**)\] có đặc địểm:
+>  Var(h(θ^)) ≈ \[h'(θ^)^2 / -∂^2/∂θ^2 log L(θθ^|𝐗)\] có đặc địểm:
 >
 >
 >
-> mẫu số -∂^2/∂θ^2 log L(θθ^|**X**)  = -n Ybar là consistent estimator của n Ii(θ), tức là In(θ)
+> mẫu số -∂^2/∂θ^2 log L(θθ^|𝐗)  = -n Ybar là consistent estimator của n Ii(θ), tức là In(θ)
 >
 >
 >
@@ -1907,11 +1907,11 @@
 >
 >
 >
-> Và sau đó, khi xét In(θ) có công thức là E\_θ{\[∂/∂θ log f(**X**|θ)\]^2}, thì dùng một Lemma, ta thấy nó bằng - E\_θ\[∂^2/∂θ^2 log f(**X**|θ)\] = - E\_θ\[∂^2/∂θ^2 log L(θ|**X**)\].
+> Và sau đó, khi xét In(θ) có công thức là E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2}, thì dùng một Lemma, ta thấy nó bằng - E\_θ\[∂^2/∂θ^2 log f(𝐗|θ)\] = - E\_θ\[∂^2/∂θ^2 log L(θ|𝐗)\].
 >
 >
 >
-> Thế thì, E\_θ{\[∂/∂θ log f(**X**|θ)\]^2} là expected information number, còn -∂^2/∂θ^2 log L(θ|**X**) là observed information number và ta sẽ dùng observed information number.
+> Thế thì, E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2} là expected information number, còn -∂^2/∂θ^2 log L(θ|𝐗) là observed information number và ta sẽ dùng observed information number.
 >
 >
 >
@@ -1919,7 +1919,7 @@
 >
 >
 >
-> Var\_θ(h(θ^)) ≈ Var\_θ^(h(θ^)), hay Var^\_θ(h(θ^)) = \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 log L(θ|**X**)\]|θ=θ^, chính là cách mà ta sẽ estimate công thức xấp xỉ cho Var(h(θ^))
+> Var\_θ(h(θ^)) ≈ Var\_θ^(h(θ^)), hay Var^\_θ(h(θ^)) = \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 log L(θ|𝐗)\]|θ=θ^, chính là cách mà ta sẽ estimate công thức xấp xỉ cho Var(h(θ^))
 >
 >
 >
@@ -1939,7 +1939,7 @@
 >
 >
 >
-> (Cái này chỉ đơn giản là với sample mean, ta đã chứng minh Var(Xbar) = Var(X) / n, nên ở đây Var(Xbar), tức Var(p^) = Var(Xi) / n. Variance của Bern(p) có thể chứng minh nhanh: = EX^2 - (EX)^2 = 1^2 × p + 0^2 × (1-p) - p^2 = p(1-p). Nên Var(p^) = p(1-p)/n)
+> (Cái này chỉ đơn giản là với sample mean, ta đã chứng minh Var(X̄) = Var(X) / n, nên ở đây Var(X̄), tức Var(p^) = Var(Xi) / n. Variance của Bern(p) có thể chứng minh nhanh: = EX^2 - (EX)^2 = 1^2 × p + 0^2 × (1-p) - p^2 = p(1-p). Nên Var(p^) = p(1-p)/n)
 >
 >
 >
@@ -1958,7 +1958,7 @@
 <p align="center"><kbd><img src="assets/i4lgaqfthyn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, bây giờ ta áp dụng công thức Var^(h(θ^)) ≈ \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 log L(θ|**x**)\]|θ=θ^
+> Rồi, bây giờ ta áp dụng công thức Var^(h(θ^)) ≈ \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 log L(θ|𝐱)\]|θ=θ^
 >
 >
 >
@@ -1970,7 +1970,7 @@
 >
 >
 >
-> Mẫu số: \[-∂^2/∂θ^2 log L(θ|**x**)\]|θ=θ^
+> Mẫu số: \[-∂^2/∂θ^2 log L(θ|𝐱)\]|θ=θ^
 >
 >
 >
@@ -1978,7 +1978,7 @@
 >
 >
 >
-> log L(θ|**x**) = log f(**x**|θ) = log Πi f(xi|θ) = Σi \[log(p^xi (1-p)^(1-xi))\]
+> log L(θ|𝐱) = log f(𝐱|θ) = log Πi f(xi|θ) = Σi \[log(p^xi (1-p)^(1-xi))\]
 >
 >
 >
@@ -2050,7 +2050,7 @@
 >
 >
 >
-> Vậy -∂^2/∂θ^2 log L(θ|**x**) = -\[-np^/p^2 + n(1-p^)/(1-p)^2\]
+> Vậy -∂^2/∂θ^2 log L(θ|𝐱) = -\[-np^/p^2 + n(1-p^)/(1-p)^2\]
 >
 >
 >
@@ -2066,7 +2066,7 @@
 >
 >
 >
-> \[-∂^2/∂p^2 log L(p|**x**)\]|p=p^
+> \[-∂^2/∂p^2 log L(p|𝐱)\]|p=p^
 >
 >
 >
@@ -2086,7 +2086,7 @@
 >
 >
 >
-> Và như vậy Var^(h(p^)) ≈ \[h'(p)\]^2|p=p^ / \[-∂^2/∂p^2 log L(p|**x**)\]|p=p^
+> Và như vậy Var^(h(p^)) ≈ \[h'(p)\]^2|p=p^ / \[-∂^2/∂p^2 log L(p|𝐱)\]|p=p^
 >
 >
 >
@@ -2106,7 +2106,7 @@
 >
 >
 >
-> Sau đó, bằng cách tiếp cận dựa trên lí thuyết nói rằng Var^(h(θ^)) ≈ \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 log L(θ|**x**)\]|θ=θ^, ta cũng tính ra được cùng kết quả Var^(p^) ≈ p^(1-p^)/n.
+> Sau đó, bằng cách tiếp cận dựa trên lí thuyết nói rằng Var^(h(θ^)) ≈ \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 log L(θ|𝐱)\]|θ=θ^, ta cũng tính ra được cùng kết quả Var^(p^) ≈ p^(1-p^)/n.
 >
 >
 >
@@ -2118,7 +2118,7 @@
 >
 >
 >
-> ii) Tính -∂^2/∂θ^2 log L(θ|**x**)\]|θ=θ^, tức là derive công thức đạo hàm bậc hai của log likelihood L(θ|**x**), sẽ ra một hàm theo θ, lấy dấu âm, và thế θ^ vào.
+> ii) Tính -∂^2/∂θ^2 log L(θ|𝐱)\]|θ=θ^, tức là derive công thức đạo hàm bậc hai của log likelihood L(θ|𝐱), sẽ ra một hàm theo θ, lấy dấu âm, và thế θ^ vào.
 >
 >
 >
@@ -2382,19 +2382,19 @@
 >
 >
 >
-> ii) Động tác thứ hai, là nói về cái In(θ), vốn có công thức cần phải tính kì vọng: E\_θ{\[∂/∂θ log f(**X**|θ)\]^2}, nên nó gọi là expected information number.
+> ii) Động tác thứ hai, là nói về cái In(θ), vốn có công thức cần phải tính kì vọng: E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2}, nên nó gọi là expected information number.
 >
 >
 >
-> Phân tích cái này: Đầu tiên hãy hiểu rằng f(**X**|θ) là random variable có được bởi việc áp joint pdf của **X**: f(**x**|θ) lên random variable vector **X**, và sau đó là áp hàm log, rồi lấy đạo hàm theo θ, rồi bình phương, nên cuối cùng ta vẫn là có một random variable. Hay nói cách khác, ta có thể coi như đây là random variable có được bằng cách áp hàm g(**x**) = {d/dθ \[log f(**x**|θ)\]}^2, lên **X**. Và vì là random variable, nên ta có quyền lấy kì vọng. Và thêm nữa vì đây là random variabel có được từ việc áp dụng hàm g lên **X**, mà ông **X** có distribution phụ thuộc θ: **X** \~ f(**x**|θ) nên dĩ nhiên g(**X**) cũng vậy, và do đó expected value của nó phải là hàm phụ thuộc θ, nên nó mới có cái chữ θ ở dưới chân: E\_θ{\[∂/∂θ log f(**X**|θ)\]^2}. Nói chung hiểu bản chất của hắn ta sẽ dễ hiểu mấy khúc sau.
+> Phân tích cái này: Đầu tiên hãy hiểu rằng f(𝐗|θ) là random variable có được bởi việc áp joint pdf của 𝐗: f(𝐱|θ) lên random variable vector 𝐗, và sau đó là áp hàm log, rồi lấy đạo hàm theo θ, rồi bình phương, nên cuối cùng ta vẫn là có một random variable. Hay nói cách khác, ta có thể coi như đây là random variable có được bằng cách áp hàm g(𝐱) = {d/dθ \[log f(𝐱|θ)\]}^2, lên 𝐗. Và vì là random variable, nên ta có quyền lấy kì vọng. Và thêm nữa vì đây là random variabel có được từ việc áp dụng hàm g lên 𝐗, mà ông 𝐗 có distribution phụ thuộc θ: 𝐗 \~ f(𝐱|θ) nên dĩ nhiên g(𝐗) cũng vậy, và do đó expected value của nó phải là hàm phụ thuộc θ, nên nó mới có cái chữ θ ở dưới chân: E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2}. Nói chung hiểu bản chất của hắn ta sẽ dễ hiểu mấy khúc sau.
 >
 >
 >
-> Rồi, Theo Lemma 7.3.11 nói rằng nếu f(x|θ) thỏa d/dθ E\_θ\[∂/∂θ log f(**X**|θ)\] = ∫ ∂/∂θ\[(∂/∂θ log f(x|θ)d(x|θ)\] dx thì:
+> Rồi, Theo Lemma 7.3.11 nói rằng nếu f(x|θ) thỏa d/dθ E\_θ\[∂/∂θ log f(𝐗|θ)\] = ∫ ∂/∂θ\[(∂/∂θ log f(x|θ)d(x|θ)\] dx thì:
 >
 >
 >
-> E\_θ{\[∂/∂θ log f(**X**|θ)\]^2} = - E\_θ\[∂^2/∂θ^2 log f(**X**|θ)\]
+> E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2} = - E\_θ\[∂^2/∂θ^2 log f(𝐗|θ)\]
 >
 >
 >
@@ -2402,15 +2402,15 @@
 >
 >
 >
-> Tức là thay - E\_θ\[∂^2/∂θ^2 log f(**X**|θ)\]
+> Tức là thay - E\_θ\[∂^2/∂θ^2 log f(𝐗|θ)\]
 >
 >
 >
-> bằng: - ∂^2/∂θ^2 log f(**x**|θ) 
+> bằng: - ∂^2/∂θ^2 log f(𝐱|θ) 
 >
 >
 >
-> (chú ý, ở trên, là **X**, vì đây là random variable, và ta tính kì vọng của cái ∂^2/∂θ^2 log f(**X**|θ), cũng là random variable. Còn ở dưới, là ta thế observed value vào, bỏ kì vọng)
+> (chú ý, ở trên, là 𝐗, vì đây là random variable, và ta tính kì vọng của cái ∂^2/∂θ^2 log f(𝐗|θ), cũng là random variable. Còn ở dưới, là ta thế observed value vào, bỏ kì vọng)
 >
 >
 >
@@ -2422,15 +2422,15 @@
 >
 >
 >
-> ≈ \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 log f(**x**|θ)\]|θ=θ^
+> ≈ \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 log f(𝐱|θ)\]|θ=θ^
 >
 >
 >
-> Và dĩ nhiên f(**x**|θ) = L(θ|**x**)
+> Và dĩ nhiên f(𝐱|θ) = L(θ|𝐱)
 >
 >
 >
-> ≈ \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 logL(θ|**x**)\]|θ=θ^
+> ≈ \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 logL(θ|𝐱)\]|θ=θ^
 >
 >
 >
@@ -2450,7 +2450,7 @@
 >
 >
 >
-> Thế thì mình biết với random sample X1, X2,... Xn có mean μ và variance σ² thì CLT (central limit theorem) cho ta biết rằng √n(Xbar - μ)/σ → (d) n(0, 1), cũng chính là √n(Xbar - μ) → n(0, σ²).
+> Thế thì mình biết với random sample X1, X2,... Xn có mean μ và variance σ² thì CLT (central limit theorem) cho ta biết rằng √n(X̄ - μ)/σ → (d) n(0, 1), cũng chính là √n(X̄ - μ) → n(0, σ²).
 >
 >
 >
@@ -2510,7 +2510,7 @@
 >
 >
 >
-> Đó là Var(g(p^)) ≈ \[g'(p)\]^2|p=p^ / \[-∂^2/∂θ^2 log L(p|**x**)\]|p=p^
+> Đó là Var(g(p^)) ≈ \[g'(p)\]^2|p=p^ / \[-∂^2/∂θ^2 log L(p|𝐱)\]|p=p^
 >
 >
 >
@@ -2522,7 +2522,7 @@
 >
 >
 >
-> Mẫu số: -∂^2/∂θ^2 log L(p|**x**) note trước mình đã tính = np^/p^2 + n(1-p^)/(1-p)^2
+> Mẫu số: -∂^2/∂θ^2 log L(p|𝐱) note trước mình đã tính = np^/p^2 + n(1-p^)/(1-p)^2
 >
 >
 >
@@ -2725,7 +2725,7 @@
 >
 >
 >
-> Nên ta có thể ghi là τ^(**Y**), mà thậm chí cũng có thể ghi là τ^(**X**), vì anyway, **Y** vẫn là hàm theo **X**: **Y** = \[I(X1 = 0, ...I(Xn = 0)\]
+> Nên ta có thể ghi là τ^(𝐘), mà thậm chí cũng có thể ghi là τ^(𝐗), vì anyway, 𝐘 vẫn là hàm theo 𝐗: 𝐘 = \[I(X1 = 0, ...I(Xn = 0)\]
 >
 >
 >
@@ -2733,7 +2733,7 @@
 >
 >
 >
-> Và ta cũng đã biết E\[Xbar\] = EX, Var(Xbar) = Var(X)/n
+> Và ta cũng đã biết E\[X̄\] = EX, Var(X̄) = Var(X)/n
 >
 >
 >
@@ -2741,7 +2741,7 @@
 >
 >
 >
->  Nói thêm một ý, τ^, tức τ^(**Y**), là sample mean của sample Y1,...Yn như đã nói ở trên, nên theo CLT: √n(τ^ - E(Yi)) → (d) n(0, Var(Yi))
+>  Nói thêm một ý, τ^, tức τ^(𝐘), là sample mean của sample Y1,...Yn như đã nói ở trên, nên theo CLT: √n(τ^ - E(Yi)) → (d) n(0, Var(Yi))
 >
 >
 >
@@ -2769,15 +2769,15 @@
 >
 >
 >
-> ML estimator, λ^(**x**) = argmax L(λ|**x**) = argmax f(**x**|λ)
+> ML estimator, λ^(𝐱) = argmax L(λ|𝐱) = argmax f(𝐱|λ)
 >
 >
 >
-> tức là ta cần giải bài toán tối ưu: maximize\_λ L(λ|**x**)
+> tức là ta cần giải bài toán tối ưu: maximize\_λ L(λ|𝐱)
 >
 >
 >
-> f(**x**|λ) = L(λ|**x**) = Πi f(xi|λ) = Πi \[e^-λ λ^xi / xi!\]
+> f(𝐱|λ) = L(λ|𝐱) = Πi f(xi|λ) = Πi \[e^-λ λ^xi / xi!\]
 >
 >
 >
@@ -2789,7 +2789,7 @@
 >
 >
 >
-> ⇨ log L(λ|**x**) = log {(e^-λ)^n λ^(Σi xi) / (Πi xi!)}
+> ⇨ log L(λ|𝐱) = log {(e^-λ)^n λ^(Σi xi) / (Πi xi!)}
 >
 >
 >
@@ -2845,7 +2845,7 @@
 >
 >
 >
-> Tiếp, CLT nói rằng với random sample X1,...Xn có EXi = μ và Var(Xi) = σ² &lt; inf thì √n(Xbar - μ)/σ → (d) n(0,1). Cũng chính là √n(Xbar - μ) → (d) n(0, σ²).
+> Tiếp, CLT nói rằng với random sample X1,...Xn có EXi = μ và Var(Xi) = σ² &lt; inf thì √n(X̄ - μ)/σ → (d) n(0,1). Cũng chính là √n(X̄ - μ) → (d) n(0, σ²).
 >
 >
 >
@@ -2893,7 +2893,7 @@
 >
 >
 >
-> Tới đây nên nhớ λ^, có thể viết là λ^(**X**), cũng chỉ là một statistic, là một random variable, có được bởi áp một hàm số lên random sample **X**.
+> Tới đây nên nhớ λ^, có thể viết là λ^(𝐗), cũng chỉ là một statistic, là một random variable, có được bởi áp một hàm số lên random sample 𝐗.
 >
 >
 >
@@ -2901,19 +2901,19 @@
 >
 >
 >
-> g(λ^(**X**)) ≈ g(λ) + g'(λ)(λ^(**X**) - λ)
+> g(λ^(𝐗)) ≈ g(λ) + g'(λ)(λ^(𝐗) - λ)
 >
 >
 >
-> Và vế trái là một random variable, vế phải cũng vậy (do đều là hàm áp lên **X**) và do đó mới có chuyện xét kì vọng của g(λ^(**X**)), cũng như là vì ta đang có hai hàm số xấp xỉ nhau, nên lấy trung bình cũng sẽ giữ dấu xỉ, và kết quả vẫn là hàm phụ thuộc λ do gốc rễ Xi \~ Pois(λ)
+> Và vế trái là một random variable, vế phải cũng vậy (do đều là hàm áp lên 𝐗) và do đó mới có chuyện xét kì vọng của g(λ^(𝐗)), cũng như là vì ta đang có hai hàm số xấp xỉ nhau, nên lấy trung bình cũng sẽ giữ dấu xỉ, và kết quả vẫn là hàm phụ thuộc λ do gốc rễ Xi \~ Pois(λ)
 >
 >
 >
-> E\_λ\[g(λ^(**X**))\] ≈ E\_λ\[g(λ) + g'(λ)(λ^(**X**) - λ)\].
+> E\_λ\[g(λ^(𝐗))\] ≈ E\_λ\[g(λ) + g'(λ)(λ^(𝐗) - λ)\].
 >
 >
 >
-> Hiểu bản chất rồi thì bỏ **X** đi cho gọn
+> Hiểu bản chất rồi thì bỏ 𝐗 đi cho gọn
 >
 >
 >
@@ -3174,23 +3174,23 @@
 >
 >
 >
-> Ta có random sample size n = 256: Xbar\*\_1, Xbar\*\_2,....,Xbar\*\_n, có observed value x̄\*\_1,...x̄\*\_n.
+> Ta có random sample size n = 256: X̄\*\_1, X̄\*\_2,....,X̄\*\_n, có observed value x̄\*\_1,...x̄\*\_n.
 >
 >
 >
-> Và với random sample X1,...Xn, mình đã quen thuộc với việc, ta có thể tính **sample variance**: S^2 = \[1/(n-1)\] Σi {(Xi - Xbar)^2})
+> Và với random sample X1,...Xn, mình đã quen thuộc với việc, ta có thể tính **sample variance**: S^2 = \[1/(n-1)\] Σi {(Xi - X̄)^2})
 >
 >
 >
-> Thì ở đây cũng vậy, với random sample Xbar\*\_1, Xbar\*\_2,...Xbar\*\_256, ta có thể tính sample variance
+> Thì ở đây cũng vậy, với random sample X̄\*\_1, X̄\*\_2,...X̄\*\_256, ta có thể tính sample variance
 >
 >
 >
-> = \[1/(256 - 1)\] Σi=1:256 {(Xbar\*\_i - (Xbar\*)bar)^2}
+> = \[1/(256 - 1)\] Σi=1:256 {(X̄\*\_i - (X̄\*)bar)^2}
 >
 >
 >
-> Làm rõ: (Xi - Xbar)^2 với Xbar = Σi Xi, thì sẽ ứng với Xbar\*\_i - (Xbar\*)bar với (Xbar\*)bar = Σi Xbar\*\_i
+> Làm rõ: (Xi - X̄)^2 với X̄ = Σi Xi, thì sẽ ứng với X̄\*\_i - (X̄\*)bar với (X̄\*)bar = Σi X̄\*\_i
 >
 >
 >
@@ -3198,7 +3198,7 @@
 >
 >
 >
-> Như vậy ta hiểu cái công thức Var\*(Xbar) = \[1/(n^n - 1)\] Σi=1:n^n {(Xbar\*\_i - (Xbar\*)bar)^2} có bản chất là:
+> Như vậy ta hiểu cái công thức Var\*(X̄) = \[1/(n^n - 1)\] Σi=1:n^n {(X̄\*\_i - (X̄\*)bar)^2} có bản chất là:
 >
 >
 >
@@ -3210,7 +3210,7 @@
 >
 >
 >
-> Bài toán lớn đặt ra là: Ta có một sample size n, và muốn estimate Variance của sample mean Xbar: Var(Xbar), mà trong các phần trước của chương này, ta đã có một số cách tiếp cận.
+> Bài toán lớn đặt ra là: Ta có một sample size n, và muốn estimate Variance của sample mean X̄: Var(X̄), mà trong các phần trước của chương này, ta đã có một số cách tiếp cận.
 >
 >
 >
@@ -3230,7 +3230,7 @@
 >
 >
 >
-> Như vậy, nếu gọi s_1,...s_n^n là các possible outcome trong original sample space này, thì tập g(s_1), ...g(s_n^n) với hàm g là hàm tính trung bình của n con số của mỗi outcome, ta sẽ có thể coi nó là một random sample size N = n^n - là một random sample Xbar\*1, Xbar\*2,....Xbar\*\_N
+> Như vậy, nếu gọi s_1,...s_n^n là các possible outcome trong original sample space này, thì tập g(s_1), ...g(s_n^n) với hàm g là hàm tính trung bình của n con số của mỗi outcome, ta sẽ có thể coi nó là một random sample size N = n^n - là một random sample X̄\*1, X̄\*2,....X̄\*\_N
 >
 >
 >
@@ -3242,7 +3242,7 @@
 >
 >
 >
-> Và ta kí hiệu random sample này là Xbar\*\_1, Xbar\*\_2,....Xbar\*\_N. Từ đó có thể dùng công thức để tính sample variance. Mà sample variance là một estimator cho variance của population, mà với population này, lại là population / sample space của các sample mean (Xbar\*\_1, Xbar\*\_2,....). Như vậy, ta sẽ có thể dùng nó để có estimate cho variance của sample mean, thông qua phương pháp bootstrap: Var\*(Xbar)
+> Và ta kí hiệu random sample này là X̄\*\_1, X̄\*\_2,....X̄\*\_N. Từ đó có thể dùng công thức để tính sample variance. Mà sample variance là một estimator cho variance của population, mà với population này, lại là population / sample space của các sample mean (X̄\*\_1, X̄\*\_2,....). Như vậy, ta sẽ có thể dùng nó để có estimate cho variance của sample mean, thông qua phương pháp bootstrap: Var\*(X̄)
 >
 >
 >
@@ -3306,7 +3306,7 @@
 >
 >
 >
-> Câu chuyện là, ta có 4 con số {2,4,9,12}. Và muốn tính variance của sample mean Var(Xbar).
+> Câu chuyện là, ta có 4 con số {2,4,9,12}. Và muốn tính variance của sample mean Var(X̄).
 >
 >
 >
@@ -3314,23 +3314,23 @@
 >
 >
 >
-> i) Góc nhìn 1: Có thể hiểu 4 con số này là một observed value của một random sample X1, X2, X3, X4, được sampling từ population distribution. Và như vậy Xbar = Σi Xi có observed value là = (2 + 4 + 9 + 12) / 4 = 27/4 = **6.75**
+> i) Góc nhìn 1: Có thể hiểu 4 con số này là một observed value của một random sample X1, X2, X3, X4, được sampling từ population distribution. Và như vậy X̄ = Σi Xi có observed value là = (2 + 4 + 9 + 12) / 4 = 27/4 = **6.75**
 >
 >
 >
-> Và ta muốn ước lượng variance của Xbar: Var(Xbar)
+> Và ta muốn ước lượng variance của X̄: Var(X̄)
 >
 >
 >
-> Mà Var(Xbar), theo công thức, ta có σ²/n với σ² là phương sai của population, là Var(X1)
+> Mà Var(X̄), theo công thức, ta có σ²/n với σ² là phương sai của population, là Var(X1)
 >
 >
 >
-> Do không có σ², ta có thể dùng S^2, sample variance = \[1/(n-1)\] Σi (Xi - Xbar)^2. Nên ở đây với observed value **x** = (2,4,9,12) ta có S^2(**x**) = (1/3) \[(2-6.75)^2 + (4-6.75)^2 + (9-6.75)^2 + (12-6.75)^2\] = 20.9167 ⇒ Var(Xbar) ≈ S^2/n = 20.9167/4 = **5.23**
+> Do không có σ², ta có thể dùng S^2, sample variance = \[1/(n-1)\] Σi (Xi - X̄)^2. Nên ở đây với observed value 𝐱 = (2,4,9,12) ta có S^2(𝐱) = (1/3) \[(2-6.75)^2 + (4-6.75)^2 + (9-6.75)^2 + (12-6.75)^2\] = 20.9167 ⇒ Var(X̄) ≈ S^2/n = 20.9167/4 = **5.23**
 >
 >
 >
-> Và cái **Var(Xbar) nhưng dùng S^2 để estimate cho σ²** này ta kí hiệu là Var^(Xbar): **Var^(Xbar)** = 5.23
+> Và cái **Var(X̄) nhưng dùng S^2 để estimate cho σ²** này ta kí hiệu là Var^(X̄): **Var^(X̄)** = 5.23
 >
 >
 >
@@ -3370,11 +3370,11 @@
 >
 >
 >
-> **BOOTSTRAP SẼ CHO PHÉP TA DÙNG VARIANCE CỦA SAMPLE MEAN NÀY** (**VARIANCE CỦA RESAMPLE MEAN**, **HAY CÒN GỌI LÀ** **BOOTSTRAP SAMPLE MEAN** **Var\*(Xbar)** để mà **ESTIMATE CHO VARIANCE CỦA CÁI SAMPLE MEAN** của population gốc Var(Xbar) (mà trong đó {2,4,9,12} chỉ là một sample).
+> **BOOTSTRAP SẼ CHO PHÉP TA DÙNG VARIANCE CỦA SAMPLE MEAN NÀY** (**VARIANCE CỦA RESAMPLE MEAN**, **HAY CÒN GỌI LÀ** **BOOTSTRAP SAMPLE MEAN** **Var\*(X̄)** để mà **ESTIMATE CHO VARIANCE CỦA CÁI SAMPLE MEAN** của population gốc Var(X̄) (mà trong đó {2,4,9,12} chỉ là một sample).
 >
 >
 >
-> Thế thì, áp dụng công thức Variance của bootstrap sample mean Var\*(Xbar) = \[bootstrap population variance, chính là **15.6875**\] / \[resample size, = 4, (vì sampling 4 số từ {2,4,9,12}\] (đây chính là công thức σ²/n, theorem chương 5, về mean và variance của Xbar thôi) = **15.6875** / 4 = **3.921875**.
+> Thế thì, áp dụng công thức Variance của bootstrap sample mean Var\*(X̄) = \[bootstrap population variance, chính là **15.6875**\] / \[resample size, = 4, (vì sampling 4 số từ {2,4,9,12}\] (đây chính là công thức σ²/n, theorem chương 5, về mean và variance của X̄ thôi) = **15.6875** / 4 = **3.921875**.
 >
 >
 >
@@ -3402,11 +3402,11 @@
 >
 >
 >
-> Thế thì, tiếp theo, nếu ta tiến hành sampling từ cái population này, ví dụ tạo một random sample size N: X1,...XN. Và thay vì dùng kí hiệu X, ta dùng Xbar\*, vì g(s) mang ý nghĩa là trung bình 4 số, trung bình của resample, resample mean. Như vậy ta có random sample size N: Xbar\*1, ....Xbar\*N, iid, có chung distribution, và dễ thấy đây là discrete uniform, có 256 possible value, pmf bằng nhau và bằng 1/256.
+> Thế thì, tiếp theo, nếu ta tiến hành sampling từ cái population này, ví dụ tạo một random sample size N: X1,...XN. Và thay vì dùng kí hiệu X, ta dùng X̄\*, vì g(s) mang ý nghĩa là trung bình 4 số, trung bình của resample, resample mean. Như vậy ta có random sample size N: X̄\*1, ....X̄\*N, iid, có chung distribution, và dễ thấy đây là discrete uniform, có 256 possible value, pmf bằng nhau và bằng 1/256.
 >
 >
 >
-> Và vì population này có distribution discrete uniform, nên khi ta dùng bộ observed value: {Xbar\*1 = g(s1), Xbar\*2 = g(s2), ..., Xbar\*N = g(sN)}, thì nó có thể phản ánh distribution của order sample space.
+> Và vì population này có distribution discrete uniform, nên khi ta dùng bộ observed value: {X̄\*1 = g(s1), X̄\*2 = g(s2), ..., X̄\*N = g(sN)}, thì nó có thể phản ánh distribution của order sample space.
 >
 >
 >
@@ -3418,11 +3418,11 @@
 >
 >
 >
-> Trước tiên tính mean của sample này: (1/N) (Xbar\*1 + Xbar\*2 + ..Xbar\*N), và ta kí hiệu là (Xbar\*)bar (là cái x\* có 2 gạch trên đầu trong sách)
+> Trước tiên tính mean của sample này: (1/N) (X̄\*1 + X̄\*2 + ..X̄\*N), và ta kí hiệu là (X̄\*)bar (là cái x\* có 2 gạch trên đầu trong sách)
 >
 >
 >
-> 1/(N-1) Σi=1:N \[Xbar\*i - (Xbar\*)bar\]^2
+> 1/(N-1) Σi=1:N \[X̄\*i - (X̄\*)bar\]^2
 >
 >
 >
@@ -3438,7 +3438,7 @@
 >
 >
 >
-> Var\*(Xbar) = **3.94**
+> Var\*(X̄) = **3.94**
 >
 >
 >
@@ -3446,7 +3446,7 @@
 >
 >
 >
-> Bootstrap sample mean (Xbar\*)bar (**6.75)**
+> Bootstrap sample mean (X̄\*)bar (**6.75)**
 >
 >
 >
@@ -3462,7 +3462,7 @@
 >
 >
 >
-> Bootstrap variance của sample mean Var\*(Xbar) = **3.94**
+> Bootstrap variance của sample mean Var\*(X̄) = **3.94**
 >
 >
 >
@@ -3470,7 +3470,7 @@
 >
 >
 >
-> Variance của bootstrap sample mean Var\*(Xbar) **3.921875**.
+> Variance của bootstrap sample mean Var\*(X̄) **3.921875**.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -3494,15 +3494,15 @@
 >
 >
 >
->  Giả sử ta có một observed value của một random sample draw từ một population P nào đó, mang giá trị {2,4,9,12}. Dĩ nhiên, nếu gọi Xbar là sample mean của sample size 4, thì (2+4+9+12)/4 chính là một observed value của cái statistic Xbar này. Thế thì mong muốn cuối cùng là, ta muốn estimate Var(Xbar).
+>  Giả sử ta có một observed value của một random sample draw từ một population P nào đó, mang giá trị {2,4,9,12}. Dĩ nhiên, nếu gọi X̄ là sample mean của sample size 4, thì (2+4+9+12)/4 chính là một observed value của cái statistic X̄ này. Thế thì mong muốn cuối cùng là, ta muốn estimate Var(X̄).
 >
 >
 >
-> Rồi, thế thì ta mới nhớ đến việc đã học một điểm kiến thức ở chap 5 (theorem 5.2.4 xem link), đã chứng minh rằng Var(Xbar) = σ²/n, tức population variance / n. Nhưng dĩ nhiên là ta làm gì biết population variance để mà tính theo công thức này.
+> Rồi, thế thì ta mới nhớ đến việc đã học một điểm kiến thức ở chap 5 (theorem 5.2.4 xem link), đã chứng minh rằng Var(X̄) = σ²/n, tức population variance / n. Nhưng dĩ nhiên là ta làm gì biết population variance để mà tính theo công thức này.
 >
 >
 >
-> Rồi, nếu có σ² thì ta sẽ có Var(Xbar) chính xác. Thì nay không có, ta có thể dùng sample variance S^2, thì ta sẽ có estimate cho Var(Xbar): Var^(Xbar) = S^2 / n. Với S^2 = (1/(n-1)) Σi (Xi - Xbar)^2.
+> Rồi, nếu có σ² thì ta sẽ có Var(X̄) chính xác. Thì nay không có, ta có thể dùng sample variance S^2, thì ta sẽ có estimate cho Var(X̄): Var^(X̄) = S^2 / n. Với S^2 = (1/(n-1)) Σi (Xi - X̄)^2.
 >
 >
 >
@@ -3510,15 +3510,15 @@
 >
 >
 >
-> Thế thì, khi đó, câu chuyện là: Người ta sampling từ cái empirical population này, gọi là resample, có size 4. Ví dụ gọi là X'1, X'2, X'3, X'4. Và tính sample mean: (Σi X'i)/4, kí hiệu là Xbar\*. Và ta mới xét cái Variance của cái "sample mean từ empirical distribution này": Var(Xbar\*). Thì bởi vì với cái empirical population này, ta biết variance của nó, nên có thể tính chính xác Var(Xbar\*) = \[variance của empirical population\] / n = Var(X'1) / 4.
+> Thế thì, khi đó, câu chuyện là: Người ta sampling từ cái empirical population này, gọi là resample, có size 4. Ví dụ gọi là X'1, X'2, X'3, X'4. Và tính sample mean: (Σi X'i)/4, kí hiệu là X̄\*. Và ta mới xét cái Variance của cái "sample mean từ empirical distribution này": Var(X̄\*). Thì bởi vì với cái empirical population này, ta biết variance của nó, nên có thể tính chính xác Var(X̄\*) = \[variance của empirical population\] / n = Var(X'1) / 4.
 >
 >
 >
-> Và câu chuyện là, người ta sẽ lấy cái Var(X\*bar) = Var(X'1) / 4 ĐỂ MÀ ESTIMATE CHO Var(Xbar) (**1**) ở trên. Nói cách khác: Người ta dùng phương sai của sample mean (trong đó sample được sampling từ empirical population {2,4,9,12}) để mà estiamte cho phương sai của sample mean (trong đó, {2,4,9,12} là một observed value của cái sample sampling từ distribution gốc P nào đó)
+> Và câu chuyện là, người ta sẽ lấy cái Var(X\*bar) = Var(X'1) / 4 ĐỂ MÀ ESTIMATE CHO Var(X̄) (**1**) ở trên. Nói cách khác: Người ta dùng phương sai của sample mean (trong đó sample được sampling từ empirical population {2,4,9,12}) để mà estiamte cho phương sai của sample mean (trong đó, {2,4,9,12} là một observed value của cái sample sampling từ distribution gốc P nào đó)
 >
 >
 >
->  Và như vậy, đến đây ta có 2 cách để estimate Var(Xbar) (phương sai của sample mean của sample sampling từ population P):
+>  Và như vậy, đến đây ta có 2 cách để estimate Var(X̄) (phương sai của sample mean của sample sampling từ population P):
 >
 >
 >
@@ -3526,19 +3526,19 @@
 >
 >
 >
-> ii) Dùng Var(Xbar\*) = **3.921875**.
+> ii) Dùng Var(X̄\*) = **3.921875**.
 >
 >
 >
->  Thế thì, vấn đề là, để ra con số 3.92, trong đó ta coi {2,4,9,12} là một empirical population, rồi xét sample mean của sample drawing từ population này, và từ đó dùng công thức chính xác Var(Xbar) = σ²/n trong đó ta có σ² rồi (chỉ việc tính cái variance của cái empirical distribution này), thì mấu chốt là: TA ĐÃ CÓ CÔNG THỨC CỦA Var(Xbar) = σ² / n.
+>  Thế thì, vấn đề là, để ra con số 3.92, trong đó ta coi {2,4,9,12} là một empirical population, rồi xét sample mean của sample drawing từ population này, và từ đó dùng công thức chính xác Var(X̄) = σ²/n trong đó ta có σ² rồi (chỉ việc tính cái variance của cái empirical distribution này), thì mấu chốt là: TA ĐÃ CÓ CÔNG THỨC CỦA Var(X̄) = σ² / n.
 >
 >
 >
-> Chứ **nếu như, ta muốn estimate không phải là variance của sample mean, mà là variance của một estimator nào đó khác**, thì **LÀM GÌ CÓ CÔNG THỨC** tính như Var(Xbar) = σ² / n. Ví dụ, estimator là sample median, thì làm gì có công thức của Var(sample median) = một hàm gì gì đó của population variance / hay population mean, để mà tính.
+> Chứ **nếu như, ta muốn estimate không phải là variance của sample mean, mà là variance của một estimator nào đó khác**, thì **LÀM GÌ CÓ CÔNG THỨC** tính như Var(X̄) = σ² / n. Ví dụ, estimator là sample median, thì làm gì có công thức của Var(sample median) = một hàm gì gì đó của population variance / hay population mean, để mà tính.
 >
 >
 >
-> Từ đó, ta mới thấy vai trò của bootstrap: Đó là, bằng cách xét một population khác: chứa mọi possible outcome khi sampling with replacement 4 số từ cái empirical distribution (gọi là order sample space), và theo cách tính đã biết, ta có thể tính ra con số **3.94** rất gần với 3.92187 (và con số này, bản chất chính là sample variance của random sample (Xbar\*1 = g(s1), Xbar\*2 = g(s2), ...Xbar\*N = g(sN)) với g(s) là hàm tính trung bình của cái kết quả sampling with replacement 4 số từ {2,4,9,12})
+> Từ đó, ta mới thấy vai trò của bootstrap: Đó là, bằng cách xét một population khác: chứa mọi possible outcome khi sampling with replacement 4 số từ cái empirical distribution (gọi là order sample space), và theo cách tính đã biết, ta có thể tính ra con số **3.94** rất gần với 3.92187 (và con số này, bản chất chính là sample variance của random sample (X̄\*1 = g(s1), X̄\*2 = g(s2), ...X̄\*N = g(sN)) với g(s) là hàm tính trung bình của cái kết quả sampling with replacement 4 số từ {2,4,9,12})
 >
 >
 >
@@ -3546,7 +3546,7 @@
 >
 >
 >
->  (Ở đây mình biết thêm rằng variance của sample mean, khi lấy căn bậc hai, chính là **standard deviation của sample mean**, và cái này gọi là **STANDARD ERROR**: √Var(Xbar). Mà trong trường hợp này gs nói là ta dùng bootstrap để tính nhưng thật ra đây là cái ta không cần (vì vốn dĩ chỉ cần dùng hai công thức i) và ii)) ở trên là đủ rồi. Nhưng mục đích, như đã nói, là để giới thiệu khả năng của Bootstrap.
+>  (Ở đây mình biết thêm rằng variance của sample mean, khi lấy căn bậc hai, chính là **standard deviation của sample mean**, và cái này gọi là **STANDARD ERROR**: √Var(X̄). Mà trong trường hợp này gs nói là ta dùng bootstrap để tính nhưng thật ra đây là cái ta không cần (vì vốn dĩ chỉ cần dùng hai công thức i) và ii)) ở trên là đủ rồi. Nhưng mục đích, như đã nói, là để giới thiệu khả năng của Bootstrap.
 >
 >
 >
@@ -3554,11 +3554,11 @@
 >
 >
 >
-> Đầu tiên, nhớ lại rằng, Xbar, sample mean cũng chỉ là một cái function áp lên các random variable của sample. Với Xbar thì thật ra ta có thể viết là Xbar(**X**) = Xbar(X1,...Xn) = (X1+...Xn)/n.
+> Đầu tiên, nhớ lại rằng, X̄, sample mean cũng chỉ là một cái function áp lên các random variable của sample. Với X̄ thì thật ra ta có thể viết là X̄(𝐗) = X̄(X1,...Xn) = (X1+...Xn)/n.
 >
 >
 >
-> Vậy thì một estimator θ^ nào đó thì bản chất cũng chỉ là cái hàm nào đó θ^(**X**).
+> Vậy thì một estimator θ^ nào đó thì bản chất cũng chỉ là cái hàm nào đó θ^(𝐗).
 >
 >
 >
@@ -3614,25 +3614,25 @@
 >
 >
 >
->  Bài toán đặt ra là: Ta có một bộ 4 con số: {2,4,9,12}. Có thể coi như là một observed value của một random sample size n = 4, sampling từ một distribution P gốc nào đó có. Nói cách khác, ta có một random sample **X** = (X1,X2,X3,X4) với observed value là x1 = 2, x2 = 4, x3 = 9, x4 = 12.
+>  Bài toán đặt ra là: Ta có một bộ 4 con số: {2,4,9,12}. Có thể coi như là một observed value của một random sample size n = 4, sampling từ một distribution P gốc nào đó có. Nói cách khác, ta có một random sample 𝐗 = (X1,X2,X3,X4) với observed value là x1 = 2, x2 = 4, x3 = 9, x4 = 12.
 >
-> Và bài toán đặt ra là estimate Var(Xbar).
->
->
->
-> Dĩ nhiên, Xbar, là một hàm của sample: Xbar(**X**) = Σi=1:n Xi. Nó cũng là một statistic, một random variable. Và x̄ = (2 + 4 + 9 + 12)/4 = 6.75 chính là một observed value của nó.
+> Và bài toán đặt ra là estimate Var(X̄).
 >
 >
 >
-> Thế thì, với Xbar, đây là một statistic đặc biệt quan trọng, nên nó có công thức để tính ra phương sai chính xác rồi:
+> Dĩ nhiên, X̄, là một hàm của sample: X̄(𝐗) = Σi=1:n Xi. Nó cũng là một statistic, một random variable. Và x̄ = (2 + 4 + 9 + 12)/4 = 6.75 chính là một observed value của nó.
 >
 >
 >
-> Var(Xbar) = Var(Xi) / n. Tức là, population variance σ² chia sample size (ở đây chính là n, = 4).
+> Thế thì, với X̄, đây là một statistic đặc biệt quan trọng, nên nó có công thức để tính ra phương sai chính xác rồi:
 >
 >
 >
-> Dĩ nhiên, nếu ta đã biết distribution của X1,X2,X3,X4, ví dụ như biết chúng là \~ n(0, 10) thì ta cũng có ngay variance của Xbar = 10/4 = 2.5
+> Var(X̄) = Var(Xi) / n. Tức là, population variance σ² chia sample size (ở đây chính là n, = 4).
+>
+>
+>
+> Dĩ nhiên, nếu ta đã biết distribution của X1,X2,X3,X4, ví dụ như biết chúng là \~ n(0, 10) thì ta cũng có ngay variance của X̄ = 10/4 = 2.5
 >
 >
 >
@@ -3640,15 +3640,15 @@
 >
 >
 >
-> Câu trả lời là, ta có thể dùng (observed value của) sample variance để thay chỗ của population variance, từ đó, thay vì ta có công thức chính xác Var(Xbar) = σ² / n, ta có công thức ước lượng: Var(Xbar) ≈ s^2/n. Và với observed value của sample, thì ta có observed value của S^2: s^2 = \[1/(n-1)\] Σi=1:n (xi - x̄)^2. Thế giá trị vào ta tính ra con số **5.23**, là ước lượng của Xbar variance.
+> Câu trả lời là, ta có thể dùng (observed value của) sample variance để thay chỗ của population variance, từ đó, thay vì ta có công thức chính xác Var(X̄) = σ² / n, ta có công thức ước lượng: Var(X̄) ≈ s^2/n. Và với observed value của sample, thì ta có observed value của S^2: s^2 = \[1/(n-1)\] Σi=1:n (xi - x̄)^2. Thế giá trị vào ta tính ra con số **5.23**, là ước lượng của X̄ variance.
 >
 >
 >
-> Var(Xbar) = σ²/n ≈ Var^(Xbar) = s^2/n = **5.23** (chú ý kí hiệu Var^, var có mũ, thể hiện đây là giá trị estimate cho Var(Xbar) chính xác)
+> Var(X̄) = σ²/n ≈ Var^(X̄) = s^2/n = **5.23** (chú ý kí hiệu Var^, var có mũ, thể hiện đây là giá trị estimate cho Var(X̄) chính xác)
 >
 >
 >
-> Đó là cách thứ nhất: Dùng sample mean thế chỗ cho population mean trong công thức chính xác của Var(Xbar).
+> Đó là cách thứ nhất: Dùng sample mean thế chỗ cho population mean trong công thức chính xác của Var(X̄).
 >
 >
 >
@@ -3668,7 +3668,7 @@
 >
 >
 >
-> Để tính variance của Xbar., thì tới đây sẽ khác với lúc nãy:
+> Để tính variance của X̄., thì tới đây sẽ khác với lúc nãy:
 >
 >
 >
@@ -3676,7 +3676,7 @@
 >
 >
 >
-> Khi đó ta thay sample variance s^2 vào thế chỗ của population variance σ² để có ước lượng cho Var(Xbar) = σ²/n ≈ Var^(Xbar) = s^2/n = **5.23**
+> Khi đó ta thay sample variance s^2 vào thế chỗ của population variance σ² để có ước lượng cho Var(X̄) = σ²/n ≈ Var^(X̄) = s^2/n = **5.23**
 >
 >
 >
@@ -3700,23 +3700,23 @@
 >
 >
 >
-> Và với việc có population variance (dù là population variance pha ke - vì ta đã giả định nó là discrete uniform), ta sẽ tính Var(Xbar) theo công thức "chính xác" = 15.6875/n = 15.6875/4 = 3.921875
+> Và với việc có population variance (dù là population variance pha ke - vì ta đã giả định nó là discrete uniform), ta sẽ tính Var(X̄) theo công thức "chính xác" = 15.6875/n = 15.6875/4 = 3.921875
 >
 >
 >
-> (dù nói là công thức "chính xác" nhưng dĩ nhiên đây cũng chỉ là estimate cho giá trị thật variance của Xbar, vì ta đã giáng cấp population gốc thành discrete uniform)
+> (dù nói là công thức "chính xác" nhưng dĩ nhiên đây cũng chỉ là estimate cho giá trị thật variance của X̄, vì ta đã giáng cấp population gốc thành discrete uniform)
 >
 >
 >
-> Như vậy, ta có cách estimate thứ hai của Var(Xbar): Cũng kí hiệu Var^
+> Như vậy, ta có cách estimate thứ hai của Var(X̄): Cũng kí hiệu Var^
 >
 >
 >
-> Var^(Xbar) = **3.92**
+> Var^(X̄) = **3.92**
 >
 >
 >
-> (Var^(Xbar) của cách 1 là **5.23)**
+> (Var^(X̄) của cách 1 là **5.23)**
 >
 >
 >
@@ -3724,19 +3724,19 @@
 >
 >
 >
-> Thế thì, bootstrap cho ta một cách tính khác: Ý tưởng chính là vầy: Với 4 số {2, 4, 9, 12}. Sampling with replacement 4 số. Số possible outcome (có phân biệt thứ tự) dễ thấy có thể tính theo step rule: Chọn số thứ 1 có 4 khả năng, chọn số thứ 2 có 4 khả năng,.. → 4 × 4 × 4 × 4 = 4^4. Gọi ordered sample space là {s1,....sN}, N = 4^4. Và si đều có xác suất bằng nhau. Gọi x̄\*(s) là hàm phụt ra con số trung bình. Thì x̄\*1 = x̄\*(s1), x̄\*2 = x̄\*(2), ...,x̄\*256 = x̄\*(s256) sẽ chính là 256 possible value của random variable Xbar\*, có distribution uniform discrete.
+> Thế thì, bootstrap cho ta một cách tính khác: Ý tưởng chính là vầy: Với 4 số {2, 4, 9, 12}. Sampling with replacement 4 số. Số possible outcome (có phân biệt thứ tự) dễ thấy có thể tính theo step rule: Chọn số thứ 1 có 4 khả năng, chọn số thứ 2 có 4 khả năng,.. → 4 × 4 × 4 × 4 = 4^4. Gọi ordered sample space là {s1,....sN}, N = 4^4. Và si đều có xác suất bằng nhau. Gọi x̄\*(s) là hàm phụt ra con số trung bình. Thì x̄\*1 = x̄\*(s1), x̄\*2 = x̄\*(2), ...,x̄\*256 = x̄\*(s256) sẽ chính là 256 possible value của random variable X̄\*, có distribution uniform discrete.
 >
 >
 >
-> Và vì distribution của Xbar là discrete uniform nên ta có thể được phép coi **x** = x̄\*1,....x̄\*N là một observed value của random sample sampling từ distribution của Xbar\*. Điều này giống như, X có 3 possible value 1,2,3 có xác suất bằng nhau, nên **x** = (x1 = 1, x2 = 2, x3 = 3) có thể valid là một random sample bởi trong đó mỗi giá trị khả dĩ đều xuất hiện một lần. Mặt khác, nếu X có 3 possible value 1,2,3 với xác suất là P(X=1) = P(X=2) = 0.5, và P(X=3) = 0 thì bộ 3 giá trị cụ thể (1,2,3) không thể được xem là obsrevation của một random sample được, vì lí do là nó không phản ánh đúng phân phối thực khi xuất hiện con số 3 trong khi phân phối thực P(X = 3) = 0.
+> Và vì distribution của X̄ là discrete uniform nên ta có thể được phép coi 𝐱 = x̄\*1,....x̄\*N là một observed value của random sample sampling từ distribution của X̄\*. Điều này giống như, X có 3 possible value 1,2,3 có xác suất bằng nhau, nên 𝐱 = (x1 = 1, x2 = 2, x3 = 3) có thể valid là một random sample bởi trong đó mỗi giá trị khả dĩ đều xuất hiện một lần. Mặt khác, nếu X có 3 possible value 1,2,3 với xác suất là P(X=1) = P(X=2) = 0.5, và P(X=3) = 0 thì bộ 3 giá trị cụ thể (1,2,3) không thể được xem là obsrevation của một random sample được, vì lí do là nó không phản ánh đúng phân phối thực khi xuất hiện con số 3 trong khi phân phối thực P(X = 3) = 0.
 >
 >
 >
-> Và vì coi như ta có một observed value của random sample **X**: **x** = (x̄\*1, ....x̄\*N). Nên ta có thể dùng công thức sample variance S^2: = 1/(256 - 1) Σi=1:N \[x̄\*i - (x̄\*)bar\]^2. Và ta sẽ lấy giá trị này để estimate cho variance của sample mean Var(Xbar), kí hiệu là Var(Xbar)\*
+> Và vì coi như ta có một observed value của random sample 𝐗: 𝐱 = (x̄\*1, ....x̄\*N). Nên ta có thể dùng công thức sample variance S^2: = 1/(256 - 1) Σi=1:N \[x̄\*i - (x̄\*)bar\]^2. Và ta sẽ lấy giá trị này để estimate cho variance của sample mean Var(X̄), kí hiệu là Var(X̄)\*
 >
 >
 >
-> Và theo công thức này, kết quả ra được là: Var(Xbar)\* = **3.94**
+> Và theo công thức này, kết quả ra được là: Var(X̄)\* = **3.94**
 >
 >
 >
@@ -3748,11 +3748,11 @@
 >
 >
 >
-> Sở dĩ ta có thể theo approach #2 là vì ta đang tính variance của Xbar (estimator của true mean), và cái statistic này thì có công thức chính xác: \[population variance\] / n.
+> Sở dĩ ta có thể theo approach #2 là vì ta đang tính variance của X̄ (estimator của true mean), và cái statistic này thì có công thức chính xác: \[population variance\] / n.
 >
 >
 >
-> Nhưng nếu ta muốn estimate variance của một statistic khác, W(**X**), là estimator của population parameter khác (ví dụ như population odd ratio, median) ...thì nhưng cái này chúng không có công thức tính từ population paramter như cách mà Var(Xbar) = population variance / n có. Khi đó, ta không thể có approach 2 được, và dễ thấy, cũng không có approach 1 luôn (vì bản chất approach 1 vẫn chỉ là dùng sample mean variance thay cho population variance để thành công thức ước lượng)
+> Nhưng nếu ta muốn estimate variance của một statistic khác, W(𝐗), là estimator của population parameter khác (ví dụ như population odd ratio, median) ...thì nhưng cái này chúng không có công thức tính từ population paramter như cách mà Var(X̄) = population variance / n có. Khi đó, ta không thể có approach 2 được, và dễ thấy, cũng không có approach 1 luôn (vì bản chất approach 1 vẫn chỉ là dùng sample mean variance thay cho population variance để thành công thức ước lượng)
 >
 >
 >
@@ -3764,7 +3764,7 @@
 >
 >
 >
-> Và với chừng đó recall, ta quay lại screenshot này, ví dụ như ở đây, ta cần estimate variance của statistic sau đây: W(**X**) = p^(1-p^) với p^ là cũng là Xbar (vì p^ ở đây là MLE estimator của Binomial(n, p), mà ta đã chứng minh, chính là Xbar). Nên estimator W(**X**) này, có thể nhìn nhận, là một hàm của Xbar, dĩ nhiên, Xbar, hay hàm của Xbar thì cũng đều là statistic hết.
+> Và với chừng đó recall, ta quay lại screenshot này, ví dụ như ở đây, ta cần estimate variance của statistic sau đây: W(𝐗) = p^(1-p^) với p^ là cũng là X̄ (vì p^ ở đây là MLE estimator của Binomial(n, p), mà ta đã chứng minh, chính là X̄). Nên estimator W(𝐗) này, có thể nhìn nhận, là một hàm của X̄, dĩ nhiên, X̄, hay hàm của X̄ thì cũng đều là statistic hết.
 >
 >
 >
@@ -3800,15 +3800,15 @@
 >
 >
 >
-> Gọi hàm x̄\*(s) = lấy trung bình mấy số của một outcome s. Thì ta sẽ có {x̄\*(s1),...x̄\*(sN)} là n^n possible value của một uniform discrete random variable Xbar\*. 
+> Gọi hàm x̄\*(s) = lấy trung bình mấy số của một outcome s. Thì ta sẽ có {x̄\*(s1),...x̄\*(sN)} là n^n possible value của một uniform discrete random variable X̄\*. 
 >
 >
 >
-> Và do xác suất các possible value đều bằng nhau, nên ta có thể coi bộ số {x̄\*1 = x̄\*(s1),..., x̄\*N = x̄\*(sN)} là một observed value của một random sample sampling từ empirical distribution của Xbar\* này.
+> Và do xác suất các possible value đều bằng nhau, nên ta có thể coi bộ số {x̄\*1 = x̄\*(s1),..., x̄\*N = x̄\*(sN)} là một observed value của một random sample sampling từ empirical distribution của X̄\* này.
 >
 >
 >
-> Có nghĩa là coi như ta có một Xbar \~ empirical distribution uniform discrete có n^n possible value equally likely. Và random sample có observed value là x̄\*1, ...x̄\*N. 
+> Có nghĩa là coi như ta có một X̄ \~ empirical distribution uniform discrete có n^n possible value equally likely. Và random sample có observed value là x̄\*1, ...x̄\*N. 
 >
 >
 >
@@ -3896,7 +3896,7 @@
 >
 >
 >
-> có một sample size n (tức observed value của random sample size n): **x** = x1,...xn. 
+> có một sample size n (tức observed value của random sample size n): 𝐱 = x1,...xn. 
 >
 >
 >
@@ -3981,7 +3981,7 @@
 >
 >
 >
-> Giả sử ta có một sample **X** = X1,...Xn \~ f(x|θ)
+> Giả sử ta có một sample 𝐗 = X1,...Xn \~ f(x|θ)
 >
 >
 >
@@ -3993,7 +3993,7 @@
 >
 >
 >
-> Với obsered value của sample **X**: **x** = (x1,..xn). Ta thực hiện sampling with replacement n number, làm vậy B lần, để có s1,..sB. Và tính ra θ^\*1 = θ^(s1), ...θ^\*B = θ^(sB). và dùng nó như một random sample size B của một θ^ \~ discrete uniform. Và dùng công thức sample variance để tính, Var\*(θ^) = (1/B-1) Σj=1:B \[θ^\*j - (θ^\*)bar\]^2.
+> Với obsered value của sample 𝐗: 𝐱 = (x1,..xn). Ta thực hiện sampling with replacement n number, làm vậy B lần, để có s1,..sB. Và tính ra θ^\*1 = θ^(s1), ...θ^\*B = θ^(sB). và dùng nó như một random sample size B của một θ^ \~ discrete uniform. Và dùng công thức sample variance để tính, Var\*(θ^) = (1/B-1) Σj=1:B \[θ^\*j - (θ^\*)bar\]^2.
 >
 >
 >
@@ -4095,7 +4095,7 @@
 >
 >
 >
-> Thế thì, với việc ta muốn estimate variance của estimator là S^2. Thì tương tự như khi ta đang deal với các estimator đặc biệt, là sample mean Xbar, để rồi Var(Xbar) có công thức chính xác là \[population variance\] / n, từ đó cho phép ta thay population variance bởi sample variance, để được công thức ướng lượng của Var(Xbar).
+> Thế thì, với việc ta muốn estimate variance của estimator là S^2. Thì tương tự như khi ta đang deal với các estimator đặc biệt, là sample mean X̄, để rồi Var(X̄) có công thức chính xác là \[population variance\] / n, từ đó cho phép ta thay population variance bởi sample variance, để được công thức ướng lượng của Var(X̄).
 >
 >
 >
@@ -4154,7 +4154,7 @@
 >
 > Ghi chú cực kỳ chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về bản chất của parametric bootstrap, đặc biệt là việc phân biệt tính ngẫu nhiên của mô phỏng bootstrap so với công thức lý thuyết định tính. Không có điểm gì cần cải thiện thêm vì bài viết đã giải thích xuất sắc mọi khía cạnh của ví dụ.
 
-**🔗 See also:** [Tính không chệch Xbar S^2](./73_methods_of_evaluating_estimators.md#node-dgdrvpi)
+**🔗 See also:** [Tính không chệch X̄ S^2](./73_methods_of_evaluating_estimators.md#node-dgdrvpi)
 
 <br>
 
