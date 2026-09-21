@@ -960,7 +960,9 @@
 >
 > Và ML estimator không có tính robust.
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=STiYw1o_W1E)
+📹 Video 1: [MLE for Shared Covariance Matrix — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=STiYw1o_W1E)
+
+📹 Video 2: [MLE for Shared Covariance Matrix — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=2Dy41xan6xg)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **96/100** · ✓ Move on
