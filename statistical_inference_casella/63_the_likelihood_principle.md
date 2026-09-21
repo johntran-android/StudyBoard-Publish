@@ -360,9 +360,9 @@
 > Một ví dụ minh họa là E là thử nghiệm trong đó ta quan sát giá trị của X1,
 > ... Xn iid ~ n(μ, σ²) vói σ² đã biết. Vì sample mean Xbar là sufficient
 > statistic cho μ (những phần trước đã chứng minh điều này) nên ta dùng
-> xbar làm estimate cho μ.  Đồng thời để đo mức độ chính xác của ước
+> x̄ làm estimate cho μ.  Đồng thời để đo mức độ chính xác của ước
 > lượng này, thường người ta dùng standard deviation của Xbar: σ/√n. Do đó
-> ta define Ev(E,**x**) = (xbar, σ/√n).
+> ta define Ev(E,**x**) = (x̄, σ/√n).
 >
 >
 >
@@ -370,7 +370,7 @@
 >
 >
 >
-> Nhưng điểm đáng chú ý là xbar sẽ phụ thuộc giá trị quan sát thấy, còn σ/n
+> Nhưng điểm đáng chú ý là x̄ sẽ phụ thuộc giá trị quan sát thấy, còn σ/n
 > phụ thuộc cách thử nghiệm (E, ví dụ có thể thấy nó phụ thuộc kích thước
 > sample n)
 
