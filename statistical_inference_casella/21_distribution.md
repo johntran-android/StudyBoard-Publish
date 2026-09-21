@@ -1,6 +1,6 @@
 # 2.1 Distribution
 
-📊 **Progress:** `15` Notes | `21` Screenshots
+📊 **Progress:** `15` Notes | `21` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-0qrdxlz"></a>
@@ -14,36 +14,19 @@
 <p align="center"><kbd><img src="assets/l0hvyik43jj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là thế này: giả sử ta có một **random variable X**, thì như đã
-> biết từ Stat110, khi **apply một function g lên X**, ta sẽ có một
-> **random variable** mới. Nói cách khác, gọi **Y = g(X)**, thì **Y là một
-> rv**
+> Đại khái là thế này: giả sử ta có một **random variable X**, thì như đã biết từ Stat110, khi **apply một function g lên X**, ta sẽ có một **random variable** mới. Nói cách khác, gọi **Y = g(X)**, thì **Y là một rv**
 >
 >
 >
-> Thế thì đại ý là, dễ thấy rằng ta có thể **mô tả hành vi của Y** **dựa
-> trên X**. Cụ thể là, ví dụ ta muốn **tính xác suất của event liên quan
-> đến Y**, cụ thể là **event Y** ∈ **A, tức P(Y** ∈ **A)**.
+> Thế thì đại ý là, dễ thấy rằng ta có thể **mô tả hành vi của Y** **dựa trên X**. Cụ thể là, ví dụ ta muốn **tính xác suất của event liên quan đến Y**, cụ thể là **event Y** ∈ **A, tức P(Y** ∈ **A)**.
 >
 >
 >
-> Dừng lại một chút để nói về event **Y** ∈ **A**. Như đã biết từ Stat110,
-> random variable, bản chất nó **LÀ MỘT FUNCTION**. Và function này
-> nhận input là một **POSSIBLE OUTCOME** trong **SAMPLE
-> SPACE**, và output ra một **numerical** value, một con số. Hay nói
-> nôm na là, function này gán label cho một possible outcome. Nên, **ví
-> dụ** như nói r**v X có các discrete possible values là x1=1, x2=2,
-> x3=3** thì tức là trong **(original) sample space có các possible
-> outcomes** được map với x1, x2, x3, ví dụ **X(s1) = x1. X(s2) = x1,
-> X(s3) = x2** (dĩ nhiên cũng có thể có nhiều possible outcomes được
-> map với x1, ở đây là s1, s2)
+> Dừng lại một chút để nói về event Y ∈ A. Như đã biết từ Stat110, random variable, bản chất nó **LÀ MỘT FUNCTION**. Và function này nhận input là một **POSSIBLE OUTCOME** trong **SAMPLE SPACE**, và output ra một **numerical** value, một con số. Hay nói nôm na là, function này gán label cho một possible outcome. Nên, **ví dụ** như nói r**v X có các discrete possible values là x1=1, x2=2, x3=3** thì tức là trong **(original) sample space có các possible outcomes** được map với x1, x2, x3, ví dụ **X(s1) = x1. X(s2) = x1, X(s3) = x2** (dĩ nhiên cũng có thể có nhiều possible outcomes được map với x1, ở đây là s1, s2)
 >
 >
 >
-> Thế thì, nói **X = x1**, tức là đang nói về possible outcome s1, s2, để
-> rồi nếu s1 hoặc s2 xuất hiện thì chính là event X=1 xảy ra và random
-> variable mang giá trị bằng 1 sau khi thực hiện experiment. Diễn đạt
-> chuẩn theo toán học:
+> Thế thì, nói **X = x1**, tức là đang nói về possible outcome s1, s2, để rồi nếu s1 hoặc s2 xuất hiện thì chính là event X=1 xảy ra và random variable mang giá trị bằng 1 sau khi thực hiện experiment. Diễn đạt chuẩn theo toán học:
 >
 >
 >
@@ -51,10 +34,7 @@
 >
 >
 >
-> Vế phải **P là probability function** gắn với **original** **sample**
-> **space**. Còn **P_X là induced probability function** gắn với **"new"
-> sample space là space các possible values của X**. Cho nên có thể
-> ghi:
+> Vế phải **P là probability function** gắn với **original** **samplespace**. Còn **P_X là induced probability function** gắn với **"new" sample space là space các possible values của X**. Cho nên có thể ghi:
 >
 >
 >
@@ -62,30 +42,21 @@
 >
 >
 >
-> Rồi, tiếp theo ta ôn lại khái niệm **event**, thì event chẳng qua là một
-> **SUBSET** các possible outcome của SAMPLE SPACE. Ví dụ như
-> **X = x1** là một event trong sample space của X (mình gọi là ΩX) nó
-> sẽ chứa chứa possible value x1, và cũng có thể được định nghĩa bởi
-> các p.o trong original sample space;
+> Rồi, tiếp theo ta ôn lại khái niệm **event**, thì event chẳng qua là một **SUBSET** các possible outcome của SAMPLE SPACE. Ví dụ như **X = x1** là một event trong sample space của X (mình gọi là ΩX) nó sẽ chứa chứa possible value x1, và cũng có thể được định nghĩa bởi các p.o trong original sample space;
 >
 >
 >
 > X=x1 = {s ∈ Ω: X(s) = x1}
 >
-> Thế thì bây giờ quay lại Y. Cụ thể là event **(Y** ∈ **A)** thì như đã
-> nói, nó mang ý nghĩa là **subset A** của sample space **ΩY**.
+> Thế thì bây giờ quay lại Y. Cụ thể là event **(Y** ∈ **A)** thì như đã nói, nó mang ý nghĩa là **subset A** của sample space **ΩY**.
 >
 >
 >
-> Thế thì đại khái là **X = g(Y)** tạo ra một **mapping** giữa sample
-> space của X: ΩX và sample space của Y: ΩY.
+> Thế thì đại khái là **X = g(Y)** tạo ra một **mapping** giữa sample space của X: ΩX và sample space của Y: ΩY.
 >
 >
 >
-> Lưu ý là không có original sample space của Y, cả ΩX và ΩY đều là
-> new sample space xuất hiện do random variable X và Y. Trong đó X
-> map original sample space S với sample space ΩX và Y map sample
-> space ΩX với ΩY. Lấy ví dụ như y1 = g(x1), y2 = g(x2) = g(x3)
+> Lưu ý là không có original sample space của Y, cả ΩX và ΩY đều là new sample space xuất hiện do random variable X và Y. Trong đó X map original sample space S với sample space ΩX và Y map sample space ΩX với ΩY. Lấy ví dụ như y1 = g(x1), y2 = g(x2) = g(x3)
 >
 >
 >
@@ -93,10 +64,7 @@
 >
 >
 >
-> Ta nói qua P(Y ∈ A), dễ thấy nó sẽ chính là P(g(X) ∈ A), và do đó gs
-> Casella nói rằng ta có thể mô ta hành vi của Y dựa vào X, cụ thể ở
-> đây ta có thể dựa vào F_X(z) (ý nói distribution của X) và bản thân
-> hàm g
+> Ta nói qua P(Y ∈ A), dễ thấy nó sẽ chính là P(g(X) ∈ A), và do đó gs Casella nói rằng ta có thể mô ta hành vi của Y dựa vào X, cụ thể ở đây ta có thể dựa vào F_X(z) (ý nói distribution của X) và bản thân hàm g
 >
 >
 >
@@ -104,14 +72,11 @@
 >
 >
 >
-> Thế thì sau đó gs Casella nói về việc, từ g(x): ΩX -> ΩY, ta có thể
-> define một mapping ngược lại g_inv ΩY -> ΩX
+> Thế thì sau đó gs Casella nói về việc, từ g(x): ΩX -&gt; ΩY, ta có thể define một mapping ngược lại g_inv ΩY -&gt; ΩX
 >
 >
 >
-> Từ đó ta mới có cái gọi là INVERSE CỦA A, g_inv(A), thì g_inv(A) sẽ
-> là mọi possible values của X trong ΩX mà thông qua g sẽ được map
-> với các possible outcome trong subset A của ΩA:
+> Từ đó ta mới có cái gọi là INVERSE CỦA A, g_inv(A), thì g_inv(A) sẽ là mọi possible values của X trong ΩX mà thông qua g sẽ được map với các possible outcome trong subset A của ΩA:
 >
 >
 >
@@ -119,19 +84,15 @@
 >
 >
 >
-> với việc lấy ví dụ cụ thể như trên thì g_inv(A) = {x ∈ ΩX: g(x) ∈ {y1,
-> y2}} = {x1, x2, x3}
+> với việc lấy ví dụ cụ thể như trên thì g_inv(A) = {x ∈ ΩX: g(x) ∈ {y1, y2}} = {x1, x2, x3}
 >
 >
 >
-> Thế thì tiếp theo, giả sử ta gọi set B ⊂ ΩY chỉ chứa y1 thôi: {y1}. Ta
-> gọi đó là POINT-SET.
+> Thế thì tiếp theo, giả sử ta gọi set B ⊂ ΩY chỉ chứa y1 thôi: {y1}. Ta gọi đó là POINT-SET.
 >
 >
 >
-> Lúc bấy giờ, g_inv(B) có quyền ghi là g_inv({y1}) hoặc g_inv(y1) thôi,
-> và đương nhiên nó sẽ là subset của ΩX chỉ chứa possible value sao
-> cho g(x) = y1: g_inv(y1) = {x1}.
+> Lúc bấy giờ, g_inv(B) có quyền ghi là g_inv({y1}) hoặc g_inv(y1) thôi, và đương nhiên nó sẽ là subset của ΩX chỉ chứa possible value sao cho g(x) = y1: g_inv(y1) = {x1}.
 >
 >
 >
@@ -139,8 +100,35 @@
 >
 >
 >
-> Thế thì với g_inv(y1) = {x1} thì nó cũng là point set, có thể ghi
-> g_inv(y1) = x1
+> Thế thì với g_inv(y1) = {x1} thì nó cũng là point set, có thể ghi g_inv(y1) = x1
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+>
+> Ghi chú thể hiện sự hiểu biết sâu sắc và trực quan về biến ngẫu nhiên, xác suất cảm sinh (induced probability) và ánh xạ ngược (preimage). Có một vài lỗi nhầm lẫn nhỏ về ký hiệu (gõ nhầm X = g(Y)) và việc đồng nhất hàm g với biến ngẫu nhiên Y.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Thế thì đại khái là X = g(Y) tạo ra một mapping giữa sample space của X: ΩX và sample space của Y: ΩY."*
+>
+> Đây là lỗi gõ nhầm (typo), đúng ra phải là Y = g(X) hoặc y = g(x), vì các câu trước và sau đều viết đúng chiều từ X sang Y.
+>
+> **2.** *"Trong đó X map original sample space S với sample space ΩX và Y map sample space ΩX với ΩY."*
+>
+> Về mặt định nghĩa chặt chẽ, biến ngẫu nhiên Y vẫn là một hàm đi từ không gian mẫu gốc S vào không gian giá trị (Y: S -> ΩY, với Y(s) = g(X(s))). Hàm ánh xạ từ ΩX sang ΩY là hàm số thực g (g: ΩX -> ΩY), không nên gọi bản thân biến ngẫu nhiên Y là hàm đi từ ΩX.
+>
+> **3.** *"Thế thì với g_inv(y1) = {x1} thì nó cũng là point set, có thể ghi g_inv(y1) = x1"*
+>
+> Ánh xạ ngược g^(-1) ở đây bản chất là nghịch ảnh (preimage) biến tập hợp thành tập hợp (takes sets into sets). Khi viết g^(-1)(y1) = x1, bạn đang chuyển từ một tập hợp {x1} thành một phần tử x1; chỉ nên viết như vậy khi g là hàm song ánh/khả nghịch từng điểm (point-to-point inverse).
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ bản chất biến ngẫu nhiên là một hàm ánh xạ từ không gian mẫu ban đầu sang các giá trị số.
+> - Phân biệt chuẩn xác giữa hàm xác suất gốc P trên S và hàm xác suất cảm sinh P_X trên không gian giá trị của X.
+> - Minh họa khái niệm nghịch ảnh (inverse mapping of sets) rất trực quan và bám sát tinh thần của sách Casella & Berger.
+>
+> **💡 Deeper notes**
+> - Trong lý thuyết đo, để hàm g(X) thực sự là một biến ngẫu nhiên hợp lệ thì hàm g phải là hàm đo được (measurable function, ví dụ hàm Borel), đảm bảo rằng với mọi tập con đo được A, g^(-1)(A) cũng là một biến cố đo được trong không gian của X.
 
 <br>
 
