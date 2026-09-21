@@ -1,6 +1,6 @@
 # 7.3 Methods Of Evaluating Estimators
 
-📊 **Progress:** `63` Notes | `74` Screenshots | `8` AI Reviews
+📊 **Progress:** `63` Notes | `74` Screenshots | `9` AI Reviews
 
 ---
 <a id="node-l0tjfjp"></a>
@@ -199,12 +199,12 @@
 
 <a id="node-dgdrvpi"></a>
 
-###### Tính không chệch Xbar S^2
+###### Tính không chệch X̄ S^2
 
 <p align="center"><kbd><img src="assets/yhaa1q92nw.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua ví dụ này, X1,...Xn là iid n(μ, σ²). Ở đây nói statistic Xbar và S^2 
+> Qua ví dụ này, X1,...Xn là iid n(μ, σ²). Ở đây nói statistic X̄ và S^2 
 > tức sample mean và sample variance đều là unbiased estimators vì sao?
 >
 >
@@ -253,19 +253,19 @@
 >
 >
 > Quay lại đây, mình đã biết về statistic (again, mọi statistic đều là estimator)
-> Xbar và S^2. Thì vì trong theorem 5.2.6 ta đã biết EXbar = μ, và ES^2 = σ²
+> X̄ và S^2. Thì vì trong theorem 5.2.6 ta đã biết EX̄ = μ, và ES^2 = σ²
 > nên có nghĩa như vừa nói ở trên thì chúng là các unbiased estimator của
 > population mean μ và population variance σ².
 >
 >
 >
 > Một điểm cần nhấn mạnh ở đây là theorem 5.2.6 áp dụng không chỉ cho 
-> normal distribution mà cho tất cả. Nên dù là normal hay không thì Xbar
+> normal distribution mà cho tất cả. Nên dù là normal hay không thì X̄
 > và S^2 vẫn là unbiased estimator.
 >
 >
 >
-> Do đó MSE_μ(Xbar) = Var(Xbar), và MSE_σ² (S^2) = Var(S^2)
+> Do đó MSE_μ(X̄) = Var(X̄), và MSE_σ² (S^2) = Var(S^2)
 >
 >
 >
@@ -273,7 +273,7 @@
 >
 >
 >
-> Var(Xbar) = σ²/n và với distribution khác thì cũng vậy
+> Var(X̄) = σ²/n và với distribution khác thì cũng vậy
 >
 >
 >
@@ -426,11 +426,11 @@
 >
 >
 >
-> Giải bài toán maximize_μ, σ² L(σ²|**x**) 
+> Giải bài toán maximize_μ, σ² L(σ²|𝐱) 
 >
 >
 >
-> L(μ, σ²|**x**)= Πi=1:n f(x|μ,σ²)
+> L(μ, σ²|𝐱)= Πi=1:n f(x|μ,σ²)
 >
 >
 >
@@ -446,7 +446,7 @@
 >
 >
 >
-> Bài toán equivalent: maximize_μ, σ² log L(μ, σ²|**x**) 
+> Bài toán equivalent: maximize_μ, σ² log L(μ, σ²|𝐱) 
 >
 >
 >
@@ -530,11 +530,11 @@
 >
 >
 >
-> ⇔ μ = Xbar
+> ⇔ μ = X̄
 >
 >
 >
-> ⇨ μ^_mle = Xbar
+> ⇨ μ^_mle = X̄
 >
 >
 >
@@ -590,11 +590,11 @@
 >
 >
 >
-> Thay μ = μ^_mle = Xbar
+> Thay μ = μ^_mle = X̄
 >
 >
 >
-> Ta có [σ²]^_mle = Σi=1:n [(xi-Xbar)^2] / n 
+> Ta có [σ²]^_mle = Σi=1:n [(xi-X̄)^2] / n 
 >
 >
 >
@@ -606,15 +606,15 @@
 >
 >
 >
-> Vì S^2 có công thức là: S^2 = Σi=1:n [(xi-Xbar)^2 / (n-1)
+> Vì S^2 có công thức là: S^2 = Σi=1:n [(xi-X̄)^2 / (n-1)
 >
 >
 >
-> ⇔ S^2/n = Σi=1:n [(xi-Xbar)^2 / n(n-1)
+> ⇔ S^2/n = Σi=1:n [(xi-X̄)^2 / n(n-1)
 >
 >
 >
-> ⇔ S^2(n-1)/n = Σi=1:n [(xi-Xbar)^2 / n
+> ⇔ S^2(n-1)/n = Σi=1:n [(xi-X̄)^2 / n
 >
 >
 >
@@ -732,15 +732,15 @@
 >
 >
 > Lẽ dĩ nhiên để derive công thức của cái này thì ta sẽ dựa theo định nghĩa 
-> của mle: p^_mle = argmax_p L(p|**x**)
+> của mle: p^_mle = argmax_p L(p|𝐱)
 >
 >
 >
-> Likelihood: L(p|**x**) = Πi=1:n f(xi|p) = Πi=1:n p^xi(1-p)^(1-xi)
+> Likelihood: L(p|𝐱) = Πi=1:n f(xi|p) = Πi=1:n p^xi(1-p)^(1-xi)
 >
 >
 >
-> Dùng bài toán tương đương (equivalent): maximize log L(p|**x**) 
+> Dùng bài toán tương đương (equivalent): maximize log L(p|𝐱) 
 >
 >
 >
@@ -760,7 +760,7 @@
 >
 >
 >
-> = log(p) nXbar + log(1-p) n (1-Xbar)
+> = log(p) nX̄ + log(1-p) n (1-X̄)
 >
 >
 >
@@ -768,61 +768,61 @@
 >
 >
 >
-> d/dp log L(p|**x**) = 0
+> d/dp log L(p|𝐱) = 0
 >
 >
 >
-> ⇔ d/dp [log(p) nXbar + log(1-p) n (1-Xbar)] = 0
+> ⇔ d/dp [log(p) nX̄ + log(1-p) n (1-X̄)] = 0
 >
 >
 >
-> ⇔ d/dp [log(p) nXbar] + d/dp [log(1-p) n (1-Xbar)] = 0
+> ⇔ d/dp [log(p) nX̄] + d/dp [log(1-p) n (1-X̄)] = 0
 >
 >
 >
-> ⇔ nXbar d/dp log(p) + n (1-Xbar) d/dp log(1-p) = 0
+> ⇔ nX̄ d/dp log(p) + n (1-X̄) d/dp log(1-p) = 0
 >
 >
 >
-> ⇔ nXbar (1/p) + n (1-Xbar) [-1/(1-p)] = 0
+> ⇔ nX̄ (1/p) + n (1-X̄) [-1/(1-p)] = 0
 >
 >
 >
-> ⇔ nXbar/p + n (Xbar-1)/(1-p) = 0
+> ⇔ nX̄/p + n (X̄-1)/(1-p) = 0
 >
 >
 >
-> ⇔ nXbar/p = n(1-Xbar)/(1-p)
+> ⇔ nX̄/p = n(1-X̄)/(1-p)
 >
 >
 >
-> ⇔ nXbar(1-p) = np(1-Xbar) 
+> ⇔ nX̄(1-p) = np(1-X̄) 
 >
 >
 >
-> ⇔ nXbar - npXbar = np - npXbar
+> ⇔ nX̄ - npX̄ = np - npX̄
 >
 >
 >
-> ⇔ nXbar = np
+> ⇔ nX̄ = np
 >
 >
 >
-> ⇔ Xbar = p
+> ⇔ X̄ = p
 >
 >
 >
-> Vậy p^_mle, tức MLE của Bern(p) là Xbar.
+> Vậy p^_mle, tức MLE của Bern(p) là X̄.
 >
 >
 >
-> E[Xbar] = E[(ΣiXi)/n] = (Σi EXi)/n = (Σi p)/n = np/n = p (mà ta cũng biết không
-> chỉ riêng gì Bern(p), với mọi distribution thì E(Xbar) luôn bằng population
-> mean) Nên Xbar, là một unbiased estimator của μ.
+> E[X̄] = E[(ΣiXi)/n] = (Σi EXi)/n = (Σi p)/n = np/n = p (mà ta cũng biết không
+> chỉ riêng gì Bern(p), với mọi distribution thì E(X̄) luôn bằng population
+> mean) Nên X̄, là một unbiased estimator của μ.
 >
 >
 >
-> Vậy ở đây p^_mle, = Xbar, sẽ là unbias estimator của p, tức Bias_p(p^_mse) = 0 
+> Vậy ở đây p^_mle, = X̄, sẽ là unbias estimator của p, tức Bias_p(p^_mse) = 0 
 >
 >
 >
@@ -842,7 +842,7 @@
 >
 >
 >
-> = Var_p[Xbar]
+> = Var_p[X̄]
 >
 >
 >
@@ -877,6 +877,30 @@
 >
 > Vậy Var_p[Xbar] = p(1-p) / n, y như sách
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú rất tốt, bạn đã tự suy luận chi tiết toàn bộ các bước từ tìm MLE, chứng minh tính không chệch đến tính phương sai của Bernoulli thay vì chỉ chấp nhận công thức có sẵn. Chỉ có vài lỗi gõ nhầm ký hiệu nhỏ giữa MLE và MSE cần lưu ý.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Theo định nghĩa MLE của estimator W của θ là hàm theo θ, define bởi MSE_θ(W) = E[W - θ]^2 ⇨ MLE_p(p^) = E_p(p^ - p)^2"*
+>
+> Nhầm lẫn ký hiệu khi viết từ: câu này đang nêu định nghĩa của MSE (Mean Squared Error), nhưng bạn lại viết nhầm thành 'định nghĩa MLE' và ký hiệu 'MLE_p(p^)'.
+>
+> **2.** *"E_p[p^_mse - p]^2 = Var_p[p^_mse] + [Bias_p(p^_mse)]^2"*
+>
+> Nhầm ký hiệu chỉ số dưới: đối tượng đang xét là ước lượng hợp lý cực đại p̂_mle chứ không phải p̂_mse.
+>
+>
+> **✓ Strengths**
+> - Tự thực hiện đầy đủ và chính xác đạo hàm hàm log-likelihood để tìm MLE của phân phối Bernoulli.
+> - Chứng minh được tính không chệch của trung bình mẫu X̄ đối với kỳ vọng p.
+> - Tự triển khai lại công thức tính phương sai của biến ngẫu nhiên Bernoulli từ định nghĩa kỳ vọng rất mạch lạc.
+>
+> **💡 Deeper notes**
+> - Khi giải phương trình đạo hàm bằng 0 (FOC), về mặt lý thuyết chặt chẽ nên kiểm tra đạo hàm bậc hai (SOC) âm để khẳng định nghiệm là cực đại toàn cục trên (0, 1), cũng như lưu ý biên p = 0 hoặc p = 1 khi toàn bộ xi = 0 hoặc xi = 1.
+
 <br>
 
 <a id="node-91iu9k3"></a>
@@ -902,11 +926,11 @@
 >
 >
 >
-> Thế thì đại khái là khi chưa quan sát được giá trị của random sample **X**, thì bằng kinh nghiệm, experimenter sẽ cho rằng θ tuân theo một distribution nào đó. gọi là prior distribution π(θ)
+> Thế thì đại khái là khi chưa quan sát được giá trị của random sample 𝐗, thì bằng kinh nghiệm, experimenter sẽ cho rằng θ tuân theo một distribution nào đó. gọi là prior distribution π(θ)
 >
 >
 >
-> Sau khi quan sát được giá trị của random sample **X** = **x**, ta sẽ update distribution của θ dựa trên thông tin này: gọi là posterior distribution, tức là nó sẽ là conditional pdf: π(θ|**x**)
+> Sau khi quan sát được giá trị của random sample 𝐗 = 𝐱, ta sẽ update distribution của θ dựa trên thông tin này: gọi là posterior distribution, tức là nó sẽ là conditional pdf: π(θ|𝐱)
 >
 >
 >
@@ -914,19 +938,19 @@
 >
 >
 >
-> π(θ|**x**)= f(**x**, θ) / π(θ) = f(**x**|θ)π(θ) / f(**x**)
+> π(θ|𝐱)= f(𝐱, θ) / π(θ) = f(𝐱|θ)π(θ) / f(𝐱)
 >
 >
 >
-> Với f(**x**) có được bằng cách marginalizing joint pdf f(**x**, θ) over mọi possible value của θ : f(**x**) = ∫f(**x**, θ)dθ
+> Với f(𝐱) có được bằng cách marginalizing joint pdf f(𝐱, θ) over mọi possible value của θ : f(𝐱) = ∫f(𝐱, θ)dθ
 >
 >
 >
-> ⇨ π(θ|**x**) = f(**x**|θ)π(θ) / ∫f(**x**, θ)dθ
+> ⇨ π(θ|𝐱) = f(𝐱|θ)π(θ) / ∫f(𝐱, θ)dθ
 >
 >
 >
-> ⇔ π(θ|**x**) = f(**x**|θ)π(θ) / ∫f(**x**|θ)π(θ)dθ
+> ⇔ π(θ|𝐱) = f(𝐱|θ)π(θ) / ∫f(𝐱|θ)π(θ)dθ
 >
 >
 >
@@ -938,15 +962,15 @@
 >
 >
 >
-> E\[θ\] với θ được xem như random variable \~ π(θ|**x**)
+> E\[θ\] với θ được xem như random variable \~ π(θ|𝐱)
 >
 >
 >
-> Dĩ nhiên, kí hiệu đúng sẽ là E\[θ|**x**\], vì nó sẽ vẫn là hàm phụ thuộc **x**:
+> Dĩ nhiên, kí hiệu đúng sẽ là E\[θ|𝐱\], vì nó sẽ vẫn là hàm phụ thuộc 𝐱:
 >
 >
 >
-> E\[θ|**x**\] = ∫-inf:inf θπ(θ|**x**)dθ
+> E\[θ|𝐱\] = ∫-inf:inf θπ(θ|𝐱)dθ
 >
 >
 >
@@ -1148,7 +1172,7 @@
 >
 >
 >
-> (những dòng này, thật ra nếu không nắm chắc các định nghĩa thì sẽ rất dễ lú, cụ thể là khi nói T(x) là một function, thì focus vào T, vào bản chất function, thì x ở đây chỉ là trang trí, là dummy variable, ta dùng T(u), T(v), gì cũng được. Và khi áp function này vào random sample X, mà ở đây size 1, nên viết thường thay vì **X** = (X1,..Xn), thì ta sẽ có một statistic T(X), cũng là một estimator (cho θ, mà ở đây, ví dụ mình đang quan tâm p) vì định nghĩa của chúng về cơ bản là như nhau. Và với cái statistic / estimator / random variable T(X) này thì một giá trị cụ thể của nó, có được khi nhấn giá trị observed value vào, T(x) sẽ chính là một "point estimate" value của θ, thì x lúc này đóng vai quan trọng, là observed value của X chứ ko phải thằng ất ơ nào)
+> (những dòng này, thật ra nếu không nắm chắc các định nghĩa thì sẽ rất dễ lú, cụ thể là khi nói T(x) là một function, thì focus vào T, vào bản chất function, thì x ở đây chỉ là trang trí, là dummy variable, ta dùng T(u), T(v), gì cũng được. Và khi áp function này vào random sample X, mà ở đây size 1, nên viết thường thay vì 𝐗 = (X1,..Xn), thì ta sẽ có một statistic T(X), cũng là một estimator (cho θ, mà ở đây, ví dụ mình đang quan tâm p) vì định nghĩa của chúng về cơ bản là như nhau. Và với cái statistic / estimator / random variable T(X) này thì một giá trị cụ thể của nó, có được khi nhấn giá trị observed value vào, T(x) sẽ chính là một "point estimate" value của θ, thì x lúc này đóng vai quan trọng, là observed value của X chứ ko phải thằng ất ơ nào)
 >
 >
 >
@@ -1291,7 +1315,7 @@
 >
 >
 >
-> Rồi, tiếp thầy nói để estimator W(X1,...Xn) thỏa W(g_a(**x**)) = gbar_a(W(x))
+> Rồi, tiếp thầy nói để estimator W(X1,...Xn) thỏa W(g_a(𝐱)) = gbar_a(W(x))
 > thì .... Dừng lại tí, vì đã bỏ 1 bữa, ta có thể đã quên, hoặc ko còn nhớ chính
 > xác cái này là sao. Mình sẽ ôn lại lần nữa.
 >
@@ -1359,7 +1383,7 @@
 >
 >
 >
-> Khái quát lên W(**x**) estimate θ ⇨ gbar(W(**x**)) estimate gbar(θ)
+> Khái quát lên W(𝐱) estimate θ ⇨ gbar(W(𝐱)) estimate gbar(θ)
 >
 >
 >
@@ -1400,7 +1424,7 @@
 >
 >
 >
-> khái quát: W(**x**) estimate θ ⇨ W(g(**x**)) estimate gbar(θ)
+> khái quát: W(𝐱) estimate θ ⇨ W(g(𝐱)) estimate gbar(θ)
 >
 >
 >
@@ -1412,15 +1436,15 @@
 >
 >
 >
-> W(**x**) estimate θ ⇨ gbar(W(**x**)) estimate gbar(θ)
+> W(𝐱) estimate θ ⇨ gbar(W(𝐱)) estimate gbar(θ)
 >
 >
 >
-> W(**x**) estimate θ ⇨ W(g(**x**)) estimate gbar(θ)
+> W(𝐱) estimate θ ⇨ W(g(𝐱)) estimate gbar(θ)
 >
 >
 >
-> Kết luận W(g(**x**)) = gbar(W(**x**))
+> Kết luận W(g(𝐱)) = gbar(W(𝐱))
 >
 >
 >
@@ -1445,8 +1469,8 @@
 >
 >
 >
-> Thì nếu như W(**X**) mà thỏa W(x1,..xn) + a = W(x1 + a, ...xn + a) thì nó sẽ thỏa
-> W(g_a(**x**)) = gbar_a(W(**x**)) và từ đó nó được gọi là equivariant estimator with
+> Thì nếu như W(𝐗) mà thỏa W(x1,..xn) + a = W(x1 + a, ...xn + a) thì nó sẽ thỏa
+> W(g_a(𝐱)) = gbar_a(W(𝐱)) và từ đó nó được gọi là equivariant estimator with
 > respect to G.
 >
 >
@@ -1604,7 +1628,7 @@
 >
 >
 >
-> = ∫-inf:inf....∫-inf:inf [W(x1 - θ,...,xn - θ)]^2 fX1,..Xn(x1,..xn) d**x**
+> = ∫-inf:inf....∫-inf:inf [W(x1 - θ,...,xn - θ)]^2 fX1,..Xn(x1,..xn) d𝐱
 >
 >
 >
@@ -1634,7 +1658,7 @@
 >
 >
 > Có nghĩa là: trong các estimator thỏa tính chất là equivariant estimator
-> w.r.t group of transformation G = {g_a(x): -inf < a < inf}. g_a(**x**) = (**x** + a)
+> w.r.t group of transformation G = {g_a(x): -inf < a < inf}. g_a(𝐱) = (𝐱 + a)
 > thì bằng cách chọn a = θ, thì MSE của chúng không phụ thuộc θ.Và
 > từ đó ta có thể tìm ra cái có MSE nhỏ nhất.
 >
@@ -1775,19 +1799,19 @@
 >
 >
 >
-> Đầu tiên, X1,...Xn là iid Pois(λ) và Xbar và S^2 là sample mean và sample variance.
+> Đầu tiên, X1,...Xn là iid Pois(λ) và X̄ và S^2 là sample mean và sample variance.
 >
 >
 >
-> Thì ta biết với X \~ Pois(λ) thì EX = λ và Var(X) = λ. Nên theo theorem 5.2.6 thì E\_λ(Xbar) = λ, và E\_λ(S^2) = λ. Chỗ này là sao nhỉ:
+> Thì ta biết với X \~ Pois(λ) thì EX = λ và Var(X) = λ. Nên theo theorem 5.2.6 thì E\_λ(X̄) = λ, và E\_λ(S^2) = λ. Chỗ này là sao nhỉ:
 >
 >
 >
-> Dễ hiểu thôi, theo theorem 5.2.6 (xem link) thì EXbar = μ (population mean) và E(S^2) = σ² (tức population variance).
+> Dễ hiểu thôi, theo theorem 5.2.6 (xem link) thì EX̄ = μ (population mean) và E(S^2) = σ² (tức population variance).
 >
 >
 >
-> Nên ở đây mean và variance đều là λ thì E\_λ(Xbar) = λ và E\_λ(S^2) = λ
+> Nên ở đây mean và variance đều là λ thì E\_λ(X̄) = λ và E\_λ(S^2) = λ
 >
 >
 >
@@ -1795,15 +1819,15 @@
 >
 >
 >
-> biased\_θ(W(**X**)) = E\_θ(W(**X**)) - θ,
+> biased\_θ(W(𝐗)) = E\_θ(W(𝐗)) - θ,
 >
 >
 >
-> và khi biased\_θ(W(**X**)) = 0 tức E\_θ(W(**X**)) = θ thì W gọi là unbiased estimator
+> và khi biased\_θ(W(𝐗)) = 0 tức E\_θ(W(𝐗)) = θ thì W gọi là unbiased estimator
 >
 >
 >
-> nên với trường hợp này cả Xbar và S^2 đều là unbiased estimator của λ
+> nên với trường hợp này cả X̄ và S^2 đều là unbiased estimator của λ
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -1821,7 +1845,7 @@
 <p align="center"><kbd><img src="assets/jj7irlu8v3h.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là như vậy với việc Xbar và S^2 đều là unbiased estimator của λ 
+> Đại ý là như vậy với việc X̄ và S^2 đều là unbiased estimator của λ 
 > để xem cái nào tốt hơn, ta sẽ so sánh variance.
 >
 >
@@ -1831,23 +1855,23 @@
 >
 >
 >
-> Và rồi, ngay cả khi ta chứng minh được Xbar có variance thấp hơn S^2
-> thì ta sẽ thấy rằng bằng cách combine Xbar và S^2 với bộ hệ số tổng 
+> Và rồi, ngay cả khi ta chứng minh được X̄ có variance thấp hơn S^2
+> thì ta sẽ thấy rằng bằng cách combine X̄ và S^2 với bộ hệ số tổng 
 > bằng 1, thì ta cũng có vô số estimator khác cũng có bias = 0:
 >
 >
 >
-> W_a (Xbar, S^2) = aXbar + (1-a)S^2
+> W_a (X̄, S^2) = aX̄ + (1-a)S^2
 >
 >
 >
-> (nhớ rằng, Xbar, S^2 thực chất là Xbar(**X**), S^2(**X**), và W_a trên là ta 
+> (nhớ rằng, X̄, S^2 thực chất là X̄(𝐗), S^2(𝐗), và W_a trên là ta 
 > apply function lên hai estimator / statistic thì cũng ra một estimator/statistic
 > mới)
 >
 >
 >
-> Và E_λ(W_a) = E[aXbar + (1-a)S^2] = aEXbar + (1-a) ES^2 = aλ + (1-a)λ
+> Và E_λ(W_a) = E[aX̄ + (1-a)S^2] = aEX̄ + (1-a) ES^2 = aλ + (1-a)λ
 >
 >
 >
@@ -1879,19 +1903,19 @@
 <p align="center"><kbd><img src="assets/8o8pvitfgzi.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cramer-Rao inequality, cho X1,...Xn là random sample với pdf f(**x**|θ), và W(**X**) = W(X1,...Xn) là ANY estimator THỎA:
+> Cramer-Rao inequality, cho X1,...Xn là random sample với pdf f(𝐱|θ), và W(𝐗) = W(X1,...Xn) là ANY estimator THỎA:
 >
 >
 >
-> d/dθ E\_θ W(**X**) = ∫\_range of **X** ∂/∂θ \[W(**x**)f(**x**|θ)\]d**x**
+> d/dθ E\_θ W(𝐗) = ∫\_range of 𝐗 ∂/∂θ \[W(𝐱)f(𝐱|θ)\]d𝐱
 >
 >
 >
-> và Var\_θ(W(**X**)) < infinity
+> và Var\_θ(W(𝐗)) < infinity
 >
 >
 >
-> Thì Var\_θ(W(**X**)) ≥ \[d/dθ E\_θ\[W(**X**)\]^2\] / \[E\_θ\[(∂/∂θ log f(**X**|θ))^2\]\]
+> Thì Var\_θ(W(𝐗)) ≥ \[d/dθ E\_θ\[W(𝐗)\]^2\] / \[E\_θ\[(∂/∂θ log f(𝐗|θ))^2\]\]
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
@@ -2069,15 +2093,15 @@
 >
 >
 >
-> Giờ ta sẽ chọn X là W(**X**), và Y là ∂/∂θ log f(**X**|θ). Dừng lại chút: Là vì inequality trên là nói về / áp dụng cho hai random variable X, Y bất kì. Và W(**X**), như đã biết, cũng là một random variable, có được bằng cách apply function W(.) lên random variable vector **X**.
+> Giờ ta sẽ chọn X là W(𝐗), và Y là ∂/∂θ log f(𝐗|θ). Dừng lại chút: Là vì inequality trên là nói về / áp dụng cho hai random variable X, Y bất kì. Và W(𝐗), như đã biết, cũng là một random variable, có được bằng cách apply function W(.) lên random variable vector 𝐗.
 >
 >
 >
-> Còn ∂/∂θ log f(**X**|θ)? Đầu tiên nên hiểu nó là ∂/∂θ \[log f(**x**|θ)\], là đạo hàm log f(**x**|θ) theo θ, nó sẽ vẫn là một hàm g(**x**|θ) nào đó. Xong ta áp hàm này lên random variable vector **X**, dĩ nhiên được ∂/∂θ log f(**X**|θ) sẽ vẫn là một random variable
+> Còn ∂/∂θ log f(𝐗|θ)? Đầu tiên nên hiểu nó là ∂/∂θ \[log f(𝐱|θ)\], là đạo hàm log f(𝐱|θ) theo θ, nó sẽ vẫn là một hàm g(𝐱|θ) nào đó. Xong ta áp hàm này lên random variable vector 𝐗, dĩ nhiên được ∂/∂θ log f(𝐗|θ) sẽ vẫn là một random variable
 >
 >
 >
-> Vậy ta có: Var\[W(**X**)\] ≥ \[Cov(W(**X**),∂/∂θ log f(**X**|θ))\]^2 / Var\_θ\[∂/∂θ log f(**X**|θ)\]
+> Vậy ta có: Var\[W(𝐗)\] ≥ \[Cov(W(𝐗),∂/∂θ log f(𝐗|θ))\]^2 / Var\_θ\[∂/∂θ log f(𝐗|θ)\]
 >
 >
 >
@@ -2085,7 +2109,7 @@
 >
 >
 >
-> Var\_θ\[W(**X**)\] ≥ {d/dθ E\_θ\[W(**X**)\]}^2 / E\_θ\[(∂/∂θ log f(**X**|θ)^2\]
+> Var\_θ\[W(𝐗)\] ≥ {d/dθ E\_θ\[W(𝐗)\]}^2 / E\_θ\[(∂/∂θ log f(𝐗|θ)^2\]
 >
 >
 >
@@ -2093,11 +2117,11 @@
 >
 >
 >
-> i) Cov {W(**X**) , ∂/∂θ log f(**X**|θ)} có phải là d/dθ E\_θ W(**X**)
+> i) Cov {W(𝐗) , ∂/∂θ log f(𝐗|θ)} có phải là d/dθ E\_θ W(𝐗)
 >
 >
 >
-> ii) Var\_θ\[∂/∂θ log f(**X**|θ)\] có phải là E\_θ\[(∂/∂θ log f(**X**|θ)^2\]
+> ii) Var\_θ\[∂/∂θ log f(𝐗|θ)\] có phải là E\_θ\[(∂/∂θ log f(𝐗|θ)^2\]
 >
 >
 >
@@ -2105,59 +2129,59 @@
 >
 >
 >
-> Ta sẽ xét cái d/dθ E\_θ W(**X**):
+> Ta sẽ xét cái d/dθ E\_θ W(𝐗):
 >
 >
 >
-> Thế thì theo cái tính chất ta có estimator W(**X**) thỏa:
+> Thế thì theo cái tính chất ta có estimator W(𝐗) thỏa:
 >
 >
 >
-> d/dθ E\_θ W(**X**) = ∫\_range of **X** ∂/∂θ \[W(**x**)f(**x**|θ)\]d**x**
+> d/dθ E\_θ W(𝐗) = ∫\_range of 𝐗 ∂/∂θ \[W(𝐱)f(𝐱|θ)\]d𝐱
 >
 >
 >
-> W(**x**), đối với đạo hàm theo θ, là constant, đưa ra ngoài đạo hàm: ∂/∂θ \[W(**x**)f(**x**|θ)\] = W(**x**) ∂/∂θ \[f(**x**|θ)\]
+> W(𝐱), đối với đạo hàm theo θ, là constant, đưa ra ngoài đạo hàm: ∂/∂θ \[W(𝐱)f(𝐱|θ)\] = W(𝐱) ∂/∂θ \[f(𝐱|θ)\]
 >
 >
 >
-> .. = ∫\_range of **X** W(**x**) ∂/∂θ\[f(**x**|θ)\] d**x**
+> .. = ∫\_range of 𝐗 W(𝐱) ∂/∂θ\[f(𝐱|θ)\] d𝐱
 >
 >
 >
-> nhân và chia đi cho f(**x**|θ
+> nhân và chia đi cho f(𝐱|θ
 >
 >
 >
-> ..= ∫\_range of **X** \[W(**x**) ∂/∂θ\[f(**x**|θ)\] /f(**x**|θ)\] f(**x**|θ) d**x**
+> ..= ∫\_range of 𝐗 \[W(𝐱) ∂/∂θ\[f(𝐱|θ)\] /f(𝐱|θ)\] f(𝐱|θ) d𝐱
 >
 >
 >
-> Ta thấy cái này thì cái ta có sẽ có dạng ∫\_range of **X** h\_θ(**x**) f(**x**|θ)d**x** , với h\_θ(**x**) = W(**x**) ∂/∂θ\[f(**x**|θ)\] / f(**x**|θ)
+> Ta thấy cái này thì cái ta có sẽ có dạng ∫\_range of 𝐗 h\_θ(𝐱) f(𝐱|θ)d𝐱 , với h\_θ(𝐱) = W(𝐱) ∂/∂θ\[f(𝐱|θ)\] / f(𝐱|θ)
 >
 >
 >
-> Do đó cái ta có chính là E\_θ\[h\_θ(**X**)\]
+> Do đó cái ta có chính là E\_θ\[h\_θ(𝐗)\]
 >
 >
 >
-> vậy d/dθ E\_θ W(**X**) = E\_θ \[W(**X**) ∂/∂θ\[f(**X**|θ)\] / f(**X**|θ)\]
+> vậy d/dθ E\_θ W(𝐗) = E\_θ \[W(𝐗) ∂/∂θ\[f(𝐗|θ)\] / f(𝐗|θ)\]
 >
 >
 >
-> Rồi, xét cái W(**X**) ∂/∂θ \[f(**X**|θ)\] / f(**X**|θ) cũng không khó để thấy nó chính là W(**X**) ∂/∂θ log f(**X**|θ), vì dùng chain rule, ∂/∂θ log f(**X**|θ) = ∂/∂\[f(**X**|θ)\] log f(**X**|θ) . ∂/∂θ f(**X**|θ) = \[1/f(**X**|θ)\] ∂/∂θ\[f(**X**|θ) = ∂/∂θ\[f(**X**|θ)\] / f(**X**|θ)
+> Rồi, xét cái W(𝐗) ∂/∂θ \[f(𝐗|θ)\] / f(𝐗|θ) cũng không khó để thấy nó chính là W(𝐗) ∂/∂θ log f(𝐗|θ), vì dùng chain rule, ∂/∂θ log f(𝐗|θ) = ∂/∂\[f(𝐗|θ)\] log f(𝐗|θ) . ∂/∂θ f(𝐗|θ) = \[1/f(𝐗|θ)\] ∂/∂θ\[f(𝐗|θ) = ∂/∂θ\[f(𝐗|θ)\] / f(𝐗|θ)
 >
 >
 >
-> Vậy, d/dθ E\_θ W(**X**) = E\_θ \[W(**X**) \[∂/∂θ log f(**X**|θ)\]\],
+> Vậy, d/dθ E\_θ W(𝐗) = E\_θ \[W(𝐗) \[∂/∂θ log f(𝐗|θ)\]\],
 >
 >
 >
-> nhưng cái ta cần là Cov(W(**X**), \[∂/∂θ log f(**X**|θ)\]), mà công thức của cái này sẽ cần thêm
+> nhưng cái ta cần là Cov(W(𝐗), \[∂/∂θ log f(𝐗|θ)\]), mà công thức của cái này sẽ cần thêm
 >
 >
 >
-> E\[W(**X**)\] E\[∂/∂θ log f(**X**|θ)\]\].
+> E\[W(𝐗)\] E\[∂/∂θ log f(𝐗|θ)\]\].
 >
 >
 >
@@ -2177,51 +2201,51 @@
 >
 >
 >
-> Vậy ta cần thêm E\[W(**X**)\] E\[∂/∂θ log f(**X**|θ)\]\] để từ đó có:
+> Vậy ta cần thêm E\[W(𝐗)\] E\[∂/∂θ log f(𝐗|θ)\]\] để từ đó có:
 >
 >
 >
-> E\_θ \[W(**X**) \[∂/∂θ log f(**X**|θ)\]\] - E\[W(**X**)\] E\[∂/∂θ log f(**X**|θ)\]\] = Cov(W(**X**), \[∂/∂θ log f(**X**|θ)\])
+> E\_θ \[W(𝐗) \[∂/∂θ log f(𝐗|θ)\]\] - E\[W(𝐗)\] E\[∂/∂θ log f(𝐗|θ)\]\] = Cov(W(𝐗), \[∂/∂θ log f(𝐗|θ)\])
 >
 >
 >
-> Tuy nhiên ta sẽ chứng minh cái term thứ 2 cần thêm này bằng 0, để suy ra E\_θ \[W(**X**) \[∂/∂θ log f(**X**|θ)\]\] chính là Cov(W(**X**), \[∂/∂θ log f(**X**|θ)\])
+> Tuy nhiên ta sẽ chứng minh cái term thứ 2 cần thêm này bằng 0, để suy ra E\_θ \[W(𝐗) \[∂/∂θ log f(𝐗|θ)\]\] chính là Cov(W(𝐗), \[∂/∂θ log f(𝐗|θ)\])
 >
 >
 >
-> Chứng minh E\[W(**X**)\] E\[∂/∂θ log f(**X**|θ)\]\] bằng 0: Bằng cách dùng kết qủa đang có: d/dθ E\_θ W(**X**) = E\_θ \[W(**X**) \[∂/∂θ log f(**X**|θ)\]\],
+> Chứng minh E\[W(𝐗)\] E\[∂/∂θ log f(𝐗|θ)\]\] bằng 0: Bằng cách dùng kết qủa đang có: d/dθ E\_θ W(𝐗) = E\_θ \[W(𝐗) \[∂/∂θ log f(𝐗|θ)\]\],
 >
 >
 >
-> Và áp dụng nó với W(**X**) = 1, vì kết quả này luôn đúng với mọi W thỏa 7.3.4, và W(**X**) = 1 là một cái thỏa (mà ta sẽ nói ở sau), nên phải đúng với W(**X**) = 1:
+> Và áp dụng nó với W(𝐗) = 1, vì kết quả này luôn đúng với mọi W thỏa 7.3.4, và W(𝐗) = 1 là một cái thỏa (mà ta sẽ nói ở sau), nên phải đúng với W(𝐗) = 1:
 >
 >
 >
-> d/dθ E\_θ \[1\] = E\_θ \[\[∂/∂θ log f(**X**|θ)\]\],
+> d/dθ E\_θ \[1\] = E\_θ \[\[∂/∂θ log f(𝐗|θ)\]\],
 >
 >
 >
-> ⇔ 0 = E\_θ \[∂/∂θ log f(**X**|θ)\]
+> ⇔ 0 = E\_θ \[∂/∂θ log f(𝐗|θ)\]
 >
 >
 >
-> Vậy E\[W(**X**)\] E\[∂/∂θ log f(**X**|θ)\]\] cũng = 0
+> Vậy E\[W(𝐗)\] E\[∂/∂θ log f(𝐗|θ)\]\] cũng = 0
 >
 >
 >
-> Và như vậy d/dθ E\_θ W(**X**) = E\_θ \[W(**X**) \[∂/∂θ log f(**X**|θ)\]\]
+> Và như vậy d/dθ E\_θ W(𝐗) = E\_θ \[W(𝐗) \[∂/∂θ log f(𝐗|θ)\]\]
 >
 >
 >
-> = E\_θ \[W(**X**) \[∂/∂θ log f(**X**|θ)\]\] - E\[W(**X**)\] E\[∂/∂θ log f(**X**|θ)\]\]
+> = E\_θ \[W(𝐗) \[∂/∂θ log f(𝐗|θ)\]\] - E\[W(𝐗)\] E\[∂/∂θ log f(𝐗|θ)\]\]
 >
 >
 >
-> = Cov(W(**X**), \[∂/∂θ log f(**X**|θ)\])
+> = Cov(W(𝐗), \[∂/∂θ log f(𝐗|θ)\])
 >
 >
 >
-> Vậy chứng minh xong ý thứ 1): Cov {W(**X**) , ∂/∂θ log f(**X**|θ)} đúng là d/dθ E\_θ W(**X**)
+> Vậy chứng minh xong ý thứ 1): Cov {W(𝐗) , ∂/∂θ log f(𝐗|θ)} đúng là d/dθ E\_θ W(𝐗)
 >
 >
 >
@@ -2229,7 +2253,7 @@
 >
 >
 >
-> Tiếp, cái (ii): E\_θ\[(∂/∂θ log f(**X**|θ)^2\] có phải là Var\_θ\[∂/∂θ log f(**X**|θ)\] :
+> Tiếp, cái (ii): E\_θ\[(∂/∂θ log f(𝐗|θ)^2\] có phải là Var\_θ\[∂/∂θ log f(𝐗|θ)\] :
 >
 >
 >
@@ -2237,15 +2261,15 @@
 >
 >
 >
-> Var\_θ\[∂/∂θ log f(**X**|θ)\] = E\[(∂/∂θ log f(**X**|θ)\]^2 - (E\[(∂/∂θ log f(**X**|θ)^2\])^2 (dùng công thức Var(X) = E(X^2) - (EX)^2)
+> Var\_θ\[∂/∂θ log f(𝐗|θ)\] = E\[(∂/∂θ log f(𝐗|θ)\]^2 - (E\[(∂/∂θ log f(𝐗|θ)^2\])^2 (dùng công thức Var(X) = E(X^2) - (EX)^2)
 >
 >
 >
-> = E\[(∂/∂θ log f(**X**|θ)\]^2 - (0)^2 (ở trên đã chứng minh E\_θ \[∂/∂θ log f(**X**|θ)\] = 0)
+> = E\[(∂/∂θ log f(𝐗|θ)\]^2 - (0)^2 (ở trên đã chứng minh E\_θ \[∂/∂θ log f(𝐗|θ)\] = 0)
 >
 >
 >
-> = E\[(∂/∂θ log f(**X**|θ)\]^2
+> = E\[(∂/∂θ log f(𝐗|θ)\]^2
 >
 >
 >
@@ -2265,11 +2289,11 @@
 >
 >
 >
-> b) Áp dụng nó với W(**X**) (trong vai X) và \[∂/∂θ log f(**X**|θ)\] (trong vai Y)
+> b) Áp dụng nó với W(𝐗) (trong vai X) và \[∂/∂θ log f(𝐗|θ)\] (trong vai Y)
 >
 >
 >
-> Để có Var\[W(**X**)\] ≥ \[Cov(W(**X**), ∂/∂θ log f(**X**|θ))\]^2 / Var\_θ\[∂/∂θ log f(**X**|θ)\]
+> Để có Var\[W(𝐗)\] ≥ \[Cov(W(𝐗), ∂/∂θ log f(𝐗|θ))\]^2 / Var\_θ\[∂/∂θ log f(𝐗|θ)\]
 >
 >
 >
@@ -2277,11 +2301,11 @@
 >
 >
 >
-> Cov {W(**X**), ∂/∂θ log f(**X**|θ)} chính là d/dθ E\_θ\[W(**X**)\]
+> Cov {W(𝐗), ∂/∂θ log f(𝐗|θ)} chính là d/dθ E\_θ\[W(𝐗)\]
 >
 >
 >
-> 2. Var\_θ\[∂/∂θ log f(**X**|θ)\] chính là E\_θ\[(∂/∂θ log f(**X**|θ)^2\]
+> 2. Var\_θ\[∂/∂θ log f(𝐗|θ)\] chính là E\_θ\[(∂/∂θ log f(𝐗|θ)^2\]
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -2305,7 +2329,7 @@
 >
 >
 >
-> Dễ hiểu thôi: Bổ đề này nói rằng nếu ta có iid X1,...Xn và W(**X**) thỏa các điều kiện của Theorem Cramer Rao thì ta sẽ có kết quả 7.3.10
+> Dễ hiểu thôi: Bổ đề này nói rằng nếu ta có iid X1,...Xn và W(𝐗) thỏa các điều kiện của Theorem Cramer Rao thì ta sẽ có kết quả 7.3.10
 >
 >
 >
@@ -2313,11 +2337,11 @@
 >
 >
 >
-> Var\_θ\[W(**X**)\] ≥ {d/dθ E\_θ\[W(**X**)\]}^2 / E\_θ\[(∂/∂θ log f(**X**|θ)^2\]
+> Var\_θ\[W(𝐗)\] ≥ {d/dθ E\_θ\[W(𝐗)\]}^2 / E\_θ\[(∂/∂θ log f(𝐗|θ)^2\]
 >
 >
 >
-> Và xét cái mẫu số ở vế phải E\_θ\[(∂/∂θ log f(**X**|θ))^2\]:
+> Và xét cái mẫu số ở vế phải E\_θ\[(∂/∂θ log f(𝐗|θ))^2\]:
 >
 >
 >
@@ -2413,7 +2437,7 @@
 >
 >
 >
-> Một cái nữa là, nói về cái đại lượng E\_θ\[(∂/∂θ log f(**X**|θ))^2\] được gọi là **information number** hoặc **Fisher information**. Và nó phản ánh **giá trị chặn dưới của variance của best unbiased estimator of θ**. Ta sẽ có chặn của variance càng nhỏ nếu như thông tin càng lớn.
+> Một cái nữa là, nói về cái đại lượng E\_θ\[(∂/∂θ log f(𝐗|θ))^2\] được gọi là **information number** hoặc **Fisher information**. Và nó phản ánh **giá trị chặn dưới của variance của best unbiased estimator of θ**. Ta sẽ có chặn của variance càng nhỏ nếu như thông tin càng lớn.
 >
 >
 >
@@ -2487,15 +2511,15 @@
 >
 >
 >
-> Nói lại một chút bối cảnh của ví dụ này, ta có sample X \~ Pois(λ) và có hai unbiased estimator của λ là Xbar(**X**) và S^2(**X**) (đều có E\_λ\[Xbar(**X**)\] = λ và E\_λ\[S^2(**X**)\] = λ
+> Nói lại một chút bối cảnh của ví dụ này, ta có sample X \~ Pois(λ) và có hai unbiased estimator của λ là X̄(𝐗) và S^2(𝐗) (đều có E\_λ\[X̄(𝐗)\] = λ và E\_λ\[S^2(𝐗)\] = λ
 >
 >
 >
-> Vậy thì việc tính variance của S^2 rất cồng kềnh, dù tính vẫn được, và so sánh variance của Xbar thì sẽ cho phép ta chốt được cái nào là best unbiased estimator của λ.
+> Vậy thì việc tính variance của S^2 rất cồng kềnh, dù tính vẫn được, và so sánh variance của X̄ thì sẽ cho phép ta chốt được cái nào là best unbiased estimator của λ.
 >
 >
 >
-> Nhưng nay với Cramer-Rao inequality, ta có công cụ tổng quát và tốt hơn: Đại ý là nói ngắn gọn. nó cho ta tính ra một cái chặn dưới của variance của các unbiased estimator W của τ(θ) (tức là E\_θ\[W(**X**)\] = τ(θ))
+> Nhưng nay với Cramer-Rao inequality, ta có công cụ tổng quát và tốt hơn: Đại ý là nói ngắn gọn. nó cho ta tính ra một cái chặn dưới của variance của các unbiased estimator W của τ(θ) (tức là E\_θ\[W(𝐗)\] = τ(θ))
 >
 >
 >
@@ -2507,15 +2531,15 @@
 >
 >
 >
-> Var\_θ (W(**X**)) ≥ \[d/dθ E\_θ\[W(**X**)\] \]^2 / E\_θ \[(∂/∂θ log f(**X**|θ))^2\]
+> Var\_θ (W(𝐗)) ≥ \[d/dθ E\_θ\[W(𝐗)\] \]^2 / E\_θ \[(∂/∂θ log f(𝐗|θ))^2\]
 >
 >
 >
-> Tử số: Xét d/dθ E\_θ\[W(**X**)\]
+> Tử số: Xét d/dθ E\_θ\[W(𝐗)\]
 >
 >
 >
-> thì ở đây phải hiểu cái này là: ta có E\_θ\[W(**X**)\] sẽ là một function theo θ, gọi là h(θ), rồi ta sẽ lấy đaọ hàm theo θ, tất nhiên vẫn ra một hàm theo θ. Vậy ở đây nếu xét W(**X**), là unbiased estimator của τ(θ), thì đương nhiên E\_θ\[W(**X**)\] = τ(θ).
+> thì ở đây phải hiểu cái này là: ta có E\_θ\[W(𝐗)\] sẽ là một function theo θ, gọi là h(θ), rồi ta sẽ lấy đaọ hàm theo θ, tất nhiên vẫn ra một hàm theo θ. Vậy ở đây nếu xét W(𝐗), là unbiased estimator của τ(θ), thì đương nhiên E\_θ\[W(𝐗)\] = τ(θ).
 >
 >
 >
@@ -2527,7 +2551,7 @@
 >
 >
 >
-> Mẫu số: Ta cần tính E\_θ \[(∂/∂θ log f(**X**|θ))^2\]
+> Mẫu số: Ta cần tính E\_θ \[(∂/∂θ log f(𝐗|θ))^2\]
 >
 >
 >
@@ -2615,7 +2639,7 @@
 >
 >
 >
-> Và vì Var\_λ Xbar = λ / n nên ta kết luận ngay Xbar là best unbiased estimator mà khỏi phải tính Var\_λ của S^2 làm gì.
+> Và vì Var\_λ X̄ = λ / n nên ta kết luận ngay X̄ là best unbiased estimator mà khỏi phải tính Var\_λ của S^2 làm gì.
 
 <br>
 
@@ -2637,20 +2661,20 @@
 >
 >
 >
-> Ôn lại Cramer Rao inequality, nó nói rằng với W(**X**) là estimator
+> Ôn lại Cramer Rao inequality, nó nói rằng với W(𝐗) là estimator
 > bất kì sao cho
 >
 >
 >
-> d/dθ E_θ(W(**X**)) = ∫/X /∂/∂θ [W(**x**)f(**x**|θ)] d**x** và
+> d/dθ E_θ(W(𝐗)) = ∫/X /∂/∂θ [W(𝐱)f(𝐱|θ)] d𝐱 và
 >
 >
 >
-> Var_θ[W(**X**)] < infinity thì:
+> Var_θ[W(𝐗)] < infinity thì:
 >
 >
 >
-> Var_θ[W(**X**)] ≥ [d/dθ E_θ[W(**X**)]]^2 / E_θ[(∂/∂θ log f(**X**|θ)^2]
+> Var_θ[W(𝐗)] ≥ [d/dθ E_θ[W(𝐗)]]^2 / E_θ[(∂/∂θ log f(𝐗|θ)^2]
 >
 >
 >
@@ -2658,22 +2682,22 @@
 >
 >
 >
-> Var_θ[W(X)] ≥ [d/dθ E_θ[W(**X**)]]^2 / nE_θ[(∂/∂θ log f(X|θ)^2]
+> Var_θ[W(X)] ≥ [d/dθ E_θ[W(𝐗)]]^2 / nE_θ[(∂/∂θ log f(X|θ)^2]
 >
 >
 >
-> Vậy thì ở đây, thử xem cái tử số: [d/dθ E_θ[W(**X**)]]^2
+> Vậy thì ở đây, thử xem cái tử số: [d/dθ E_θ[W(𝐗)]]^2
 >
 >
 >
-> Nói lại không thừa, bản chất của cái này, đó là ta tính E_θ[W(**X**)], sẽ
+> Nói lại không thừa, bản chất của cái này, đó là ta tính E_θ[W(𝐗)], sẽ
 > là một function theo θ, rồi mới lấy đạo hàm theo θ, đem bình phương,
 > , dĩ nhiên cũng ra hàm theo θ.
 >
 >
 >
-> Thế thì ở đây, ta sẽ giả sử W(**X**) là unbiased estimator của θ. Nên 
-> E_θ[W(**X**)] = θ, d/dθ [E_θ[W(**X**)]]  = d/dθ θ = 1
+> Thế thì ở đây, ta sẽ giả sử W(𝐗) là unbiased estimator của θ. Nên 
+> E_θ[W(𝐗)] = θ, d/dθ [E_θ[W(𝐗)]]  = d/dθ θ = 1
 >
 >
 >
@@ -2722,11 +2746,11 @@
 >
 >
 > Rồi, thế thì nếu theo Cramer - Rao inequality ta sẽ có cái lower bound
-> cho variance bất kì estimator W(**X**) nào:
+> cho variance bất kì estimator W(𝐗) nào:
 >
 >
 >
-> Var_θ[W(**X**)] ≥ 1 / (n/θ^2) = θ^2 / n
+> Var_θ[W(𝐗)] ≥ 1 / (n/θ^2) = θ^2 / n
 >
 >
 >
@@ -2879,7 +2903,7 @@
 >
 >
 > Thế thì tác giả nói rằng, với normal thì nó thỏa assumption của Cramer
-> Rao Theorem (tức là d/dθ E_θ(W(**X**)) = ∫/X/ ∂/∂θ [W(**x**)f(**x**|θ)] d**x**), 
+> Rao Theorem (tức là d/dθ E_θ(W(𝐗)) = ∫/X/ ∂/∂θ [W(𝐱)f(𝐱|θ)] d𝐱), 
 >
 >
 >
@@ -2887,7 +2911,7 @@
 >
 >
 >
-> Var_θ[W(**X**)] ≥ [d/dθ E_θ[W(**X**)]]^2 / E_θ[(∂/∂θ log f(**X**|θ)^2]
+> Var_θ[W(𝐗)] ≥ [d/dθ E_θ[W(𝐗)]]^2 / E_θ[(∂/∂θ log f(𝐗|θ)^2]
 >
 >
 >
@@ -2895,7 +2919,7 @@
 >
 >
 >
-> Var_θ[W(**X**)] ≥ [d/dθ E_θ[W(**X**)]]^2 / nE_θ[(∂/∂θ log f(X|θ)^2]
+> Var_θ[W(𝐗)] ≥ [d/dθ E_θ[W(𝐗)]]^2 / nE_θ[(∂/∂θ log f(X|θ)^2]
 >
 >
 >
@@ -2944,11 +2968,11 @@
 >
 >
 > Còn tử số thì dĩ nhiên là 1, vì ta sẽ xét lower bound của các unbiased
-> estimator W(**X**): E_θ(W(**X**)) = θ nên [d/dθ E_θ[W(**X**)]]^2 = 1^2 = 1
+> estimator W(𝐗): E_θ(W(𝐗)) = θ nên [d/dθ E_θ[W(𝐗)]]^2 = 1^2 = 1
 >
 >
 >
-> Vậy nên với các unbiased estimator W(**X**) thì variance của chúng sẽ 
+> Vậy nên với các unbiased estimator W(𝐗) thì variance của chúng sẽ 
 > có lower bound: là 1 / (n/2σ^4) = 2σ^4/n 
 >
 >
@@ -3004,15 +3028,15 @@
 >
 >
 > Vậy thì theorem này nói là: xét X1,..Xn iid ~f(x|θ) với fx(x|θ) thỏa giả định của
-> Cramer Rao theorem, L(θ|**x**) là likelihood function như đã biết, được định nghĩa
-> là hàm theo θ tính bởi joint pdf evaluate tại observed value **x**: f(**x**|θ), và với iid 
-> ta dĩ nhiên là có Πi=1:n f(xi|θ). thế thì gọi W(**X**) là estimator bất kì của τ(θ). thì
-> theorem này nói rằng W(**X**) SẼ ĐẠT VARIANCE CỦA CRAMER RAO LOWER
+> Cramer Rao theorem, L(θ|𝐱) là likelihood function như đã biết, được định nghĩa
+> là hàm theo θ tính bởi joint pdf evaluate tại observed value 𝐱: f(𝐱|θ), và với iid 
+> ta dĩ nhiên là có Πi=1:n f(xi|θ). thế thì gọi W(𝐗) là estimator bất kì của τ(θ). thì
+> theorem này nói rằng W(𝐗) SẼ ĐẠT VARIANCE CỦA CRAMER RAO LOWER
 > BOUND KHI VÀ CHỈ KHI:
 >
 >
 >
-> a(θ)[W(**X**) - τ(θ)] = ∂/∂θ log L(θ|**x**) for some function a(θ)
+> a(θ)[W(𝐗) - τ(θ)] = ∂/∂θ log L(θ|𝐱) for some function a(θ)
 >
 >
 >
@@ -3032,12 +3056,12 @@
 
 > [!NOTE]
 > Thế thì quay lại ví dụ 7.3.14, xây dựng hàm likelihood như vầy (cái này dễ 
-> rồi, ko có gì phải nói) nên vế phải (của hệ quả trên) ∂/∂θ log L(θ|**x**), mà ở
+> rồi, ko có gì phải nói) nên vế phải (của hệ quả trên) ∂/∂θ log L(θ|𝐱), mà ở
 > đây θ là σ², sẽ là:
 >
 >
 >
-> ∂/∂σ² log L(σ²|**x**) =...giải bài toán tính đạo hàm
+> ∂/∂σ² log L(σ²|𝐱) =...giải bài toán tính đạo hàm
 >
 >
 >
@@ -3049,11 +3073,11 @@
 >
 >
 >
-> a(θ)[W(**X**) - τ(θ)] bằng vế trái.
+> a(θ)[W(𝐗) - τ(θ)] bằng vế trái.
 >
 >
 >
-> vế phải = a(σ²)[W(**X**) - σ²] 
+> vế phải = a(σ²)[W(𝐗) - σ²] 
 >
 >
 >
@@ -3061,12 +3085,12 @@
 >
 >
 >
-> thì ta sẽ thấy: Cho a(σ²) = (n / 2σ^4) thì W(**X**) = [Σi (xi - μ)^2 / n] thì hai vế
+> thì ta sẽ thấy: Cho a(σ²) = (n / 2σ^4) thì W(𝐗) = [Σi (xi - μ)^2 / n] thì hai vế
 > bằng nhau.
 >
 >
 >
-> Kết luận là với a =  (n / 2σ^4), W(**X**) = [Σi (xi - μ)^2 / n] sẽ là best unbiased
+> Kết luận là với a =  (n / 2σ^4), W(𝐗) = [Σi (xi - μ)^2 / n] sẽ là best unbiased
 > estimator (vì nó đạt variance của Cramer Rao Lower Bound)
 >
 >
@@ -3301,17 +3325,17 @@
 >
 > Cho W là unbiased estimator bất kì của τ(θ), Khoan, dừng lại một giây. Nhớ
 > lại, điều này có nghĩa là: Bias của W, là hàm theo θ, define bởi
-> Bias_θ[W(**X**)] = E_θ[W(**X**) - τ(θ)] sẽ = 0, và dĩ nhiên cái này ⇔
-> E_θ[W(**X**)] = E[τ(θ)] = τ(θ)
+> Bias_θ[W(𝐗)] = E_θ[W(𝐗) - τ(θ)] sẽ = 0, và dĩ nhiên cái này ⇔
+> E_θ[W(𝐗)] = E[τ(θ)] = τ(θ)
 >
 >
 >
 > Tiếp, T là một SUFFICIENT STATISTIC CỦA θ. Dừng lại giây nữa: Nhớ lại,
-> định nghĩa của estimator for θ: Là any function of random sample W(**X**), và
+> định nghĩa của estimator for θ: Là any function of random sample W(𝐗), và
 > định nghĩa này cho thấy mọi statistic đều là estimator, vì định nghĩa của
 > statitistic cũng là  function of random sample. Tính chất của sufficient statitstic,
 > thì mình còn nhớ, đại ý là, nếu T là sufficient statistic, thì mọi suy luận về θ từ
-> T là đủ, đồng nghĩa, có thể vứt bỏ **X** đi, và chỉ cần T là đủ thông tin giúp suy
+> T là đủ, đồng nghĩa, có thể vứt bỏ 𝐗 đi, và chỉ cần T là đủ thông tin giúp suy
 > luận θ.
 >
 >
@@ -3337,7 +3361,7 @@
 >
 > Vậy, quay lại đây, nói lại lần nữa Φ(T) chỉ là một random variable có được,
 > bằng cách áp một function lên T. Mà T là statistic, tức là function nào đó của
-> random sample **X**, nên Φ(T) cũng vậy, cũng là statistic như vì hàm Φ này
+> random sample 𝐗, nên Φ(T) cũng vậy, cũng là statistic như vì hàm Φ này
 > đặc biệt, chứ không chỉ là ví dụ như 2T, nên ta phải nói kĩ hơn tí:
 >
 >
@@ -3373,12 +3397,12 @@
 >
 >
 >
-> MSE_θ[W(**X**)] = Var_θ[W(**X**)] + [Bias_θ[W(**X**)]]^2
+> MSE_θ[W(𝐗)] = Var_θ[W(𝐗)] + [Bias_θ[W(𝐗)]]^2
 >
 >
 >
-> ⇨ với W(X) là unbiased estimator của τ(θ) thì MSE_θ[W(**X**)] =
-> Var_θ[W(**X**)]
+> ⇨ với W(X) là unbiased estimator của τ(θ) thì MSE_θ[W(𝐗)] =
+> Var_θ[W(𝐗)]
 >
 >
 >
@@ -3504,24 +3528,24 @@
 <p align="center"><kbd><img src="assets/76b6b7dbhcr.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ này minh họa: Cho X1, X2 là iid n(θ,1). Và xét statistic Xbar (sample
-> mean): Xbar(**X**) = (1/2)(X1 + X2).
+> Ví dụ này minh họa: Cho X1, X2 là iid n(θ,1). Và xét statistic X̄ (sample
+> mean): X̄(𝐗) = (1/2)(X1 + X2).
 >
 >
 >
-> E_θ[Xbar(**X**)] = E_θ[(1/2)(X1 + X2)] = (1/2)(EX1 + EX2) = (1/2)(θ + θ) = θ 
+> E_θ[X̄(𝐗)] = E_θ[(1/2)(X1 + X2)] = (1/2)(EX1 + EX2) = (1/2)(θ + θ) = θ 
 > (cái này làm nhiều rồi, và nó đúng bất kể population distribution có phải là
 > normal hay không, nói cách khác, sample mean LUÔN là unbiased estimator
 > của population mean θ)
 >
 >
 >
-> Var_θ[Xbar] thì theo theorem đã từng chứng minh ta nhớ nó = σ²/n. Nên ở
+> Var_θ[X̄] thì theo theorem đã từng chứng minh ta nhớ nó = σ²/n. Nên ở
 > đây nó bằng 1/2
 >
 >
 >
-> Còn tự tính thì VarXbar = Var[(X1 + X2)/2] = (1/4) Var[X1 + X2]
+> Còn tự tính thì VarX̄ = Var[(X1 + X2)/2] = (1/4) Var[X1 + X2]
 >
 >
 >
@@ -3539,13 +3563,13 @@
 >
 >
 >
-> Và đặt ra statistic Φ(X1) = E_θ[Xbar|X1] 
+> Và đặt ra statistic Φ(X1) = E_θ[X̄|X1] 
 >
 >
 >
 > thì như đã biết E_θ[Φ(X1)] = θ nên Φ(X1) vẫn là unbiased estimator của θ 
-> và theo theorem vừa rồi thì Var_θ[Φ(X1)] ≤ Var_θ[Xbar] nên về cơ bản nó
-> tốt hơn Xbar.
+> và theo theorem vừa rồi thì Var_θ[Φ(X1)] ≤ Var_θ[X̄] nên về cơ bản nó
+> tốt hơn X̄.
 >
 >
 >
@@ -3553,23 +3577,23 @@
 >
 >
 >
-> Vì ta sẽ thấy nó không phải là FUNCTION CỦA CHỈ RANDOM SAMPLE **X**:
+> Vì ta sẽ thấy nó không phải là FUNCTION CỦA CHỈ RANDOM SAMPLE 𝐗:
 >
 >
 >
-> Thật vậy Φ(X1) = E_θ[Xbar|X1]
+> Thật vậy Φ(X1) = E_θ[X̄|X1]
 >
 >
 >
-> Dừng lại chút để nhắc lại, E_θ[Xbar|X1] là sao?
+> Dừng lại chút để nhắc lại, E_θ[X̄|X1] là sao?
 >
 >
 >
-> nó là một function của cả θ, X. Và nó tính kì vọng của Xbar:
+> nó là một function của cả θ, X. Và nó tính kì vọng của X̄:
 >
 >
 >
-> = Σ{mọi possible value k của Xbar} k fXbar(k|X1)
+> = Σ{mọi possible value k của X̄} k fX̄(k|X1)
 >
 >
 >
@@ -3577,7 +3601,7 @@
 >
 >
 >
-> Nhưng điểm lưu ý quan trọng, CÓ THỂ fXbar(k|X1) là MỘT FUNCTION 
+> Nhưng điểm lưu ý quan trọng, CÓ THỂ fX̄(k|X1) là MỘT FUNCTION 
 > CÒN PHỤ THUỘC θ, thì kết quả phụ thuộc cả X1 và θ 
 >
 >
@@ -3587,14 +3611,14 @@
 >
 >
 >
-> vậy thì mới nói Φ(X1) (= E_θ[Xbar|X1]) là nhìn qua có vẻ chỉ một function 
+> vậy thì mới nói Φ(X1) (= E_θ[X̄|X1]) là nhìn qua có vẻ chỉ một function 
 > của X1, nhưng phải hiểu là nó có thể là function của cả X1 và θ.
 >
-> Triển khai ở ví dụ cụ thể này để thấy quả thật Φ(X1) là hàm của cả **X** và θ:
+> Triển khai ở ví dụ cụ thể này để thấy quả thật Φ(X1) là hàm của cả 𝐗 và θ:
 >
 >
 >
-> E_θ[Xbar|X1] = E_θ[(X1+X2)/2|X1] = (1/2)(E_θ[X1|X1] + E_θ[X2|X1])
+> E_θ[X̄|X1] = E_θ[(X1+X2)/2|X1] = (1/2)(E_θ[X1|X1] + E_θ[X2|X1])
 >
 >
 >
@@ -4105,11 +4129,11 @@
 >
 >
 >
-> MSE_θ(W(**X**)) = Var_θ(W(**X**)) + {Bias_θ[W(**X**)]}^2
+> MSE_θ(W(𝐗)) = Var_θ(W(𝐗)) + {Bias_θ[W(𝐗)]}^2
 >
 >
 >
-> Vậy thì xem xét các estimator có E_θ[W(**X**)] = τ(θ), tức là bias term = 0, 
+> Vậy thì xem xét các estimator có E_θ[W(𝐗)] = τ(θ), tức là bias term = 0, 
 > unbiased, cái nào có variance theo θ nhỏ nhất với mọi θ  thì sẽ là the best
 >
 >
@@ -4335,7 +4359,7 @@
 >
 >
 >
-> Thế thì phải hiểu là U là U(**X**), là estimator của θ. Nhưng nó có E_θ[U(**X**)] = 0
+> Thế thì phải hiểu là U là U(𝐗), là estimator của θ. Nhưng nó có E_θ[U(𝐗)] = 0
 > nên ta nói nó là unbiased estimator của τ(θ) = 0. Vì nếu xét hàm biased của nó
 > với tư cách là estimator của τ(θ) = 0 thì giá trị bias là 0.
 >
@@ -4345,7 +4369,7 @@
 >
 >
 >
-> vì E_θ[U(X)] = ∫∫...∫range**X** U(**x**)f**X**(**x**)d**x**
+> vì E_θ[U(X)] = ∫∫...∫range𝐗 U(𝐱)f𝐗(𝐱)d𝐱
 >
 >
 >
@@ -4417,8 +4441,8 @@
 >
 >
 >
-> Nhớ lại: Xem xét E_θ[U(**X**)] = 0 thì vốn dĩ đã dính đến / phụ thuộc vào pdf
-> của **X** rồi.
+> Nhớ lại: Xem xét E_θ[U(𝐗)] = 0 thì vốn dĩ đã dính đến / phụ thuộc vào pdf
+> của 𝐗 rồi.
 >
 >
 >
@@ -4488,13 +4512,13 @@
 >
 >
 >
-> Xét U một unbiased estimator của 0. Tức là E_θ[U(**X**)] = 0 (nên nhớ,
+> Xét U một unbiased estimator của 0. Tức là E_θ[U(𝐗)] = 0 (nên nhớ,
 > estimator luôn là function của random sample, nên ghi tắt là U, chứ ghi
-> đầy đủ phải là W(**X**), U(**X**))
+> đầy đủ phải là W(𝐗), U(𝐗))
 >
 >
 >
-> ⇔ ∫{range **X**} U(**x**)f**X**(**x**|θ)d**x** = 0Nên nhìn vào đây ta hiểu rằng việc có tồn tại unbiased estimator hay
+> ⇔ ∫{range 𝐗} U(𝐱)f𝐗(𝐱|θ)d𝐱 = 0Nên nhìn vào đây ta hiểu rằng việc có tồn tại unbiased estimator hay
 > không sẽ phụ thuộc vào bản thân hàm pdf, giúp ta hiểu khi tác giả nói qua
 > case đặc biệt là một số pdf family không có unbiased estimator của 0.
 >
@@ -4503,7 +4527,7 @@
 > Và cuối cùng là xét đến một trường hợp đặc biệt: **LÀ KHI HỌ PDF/PMF
 > LÀ MỘT HỌ COMPLETE**: Khi đó nó sẽ có tính chất là: estimator của 0
 > duy nhất chỉ là 0 (zero function): Cụ thể định nghĩa nói rằng với f(x|θ) là
-> họ pdf của T(**X**) sẽ được gọi là complete nếu E_θ[g(T)]  = 0 vói mọi θ
+> họ pdf của T(𝐗) sẽ được gọi là complete nếu E_θ[g(T)]  = 0 vói mọi θ
 > sẽ chỉ xảy ra khi g(T) = 0 (hay P_θ(g(T) = 0) = 1)
 >
 >
@@ -4520,7 +4544,7 @@
 >
 >
 >
-> ..thì nó sẽ **uncorrelated với mọi** U(**X**), là **unbiased estimator của 0 bất kì**.
+> ..thì nó sẽ **uncorrelated với mọi** U(𝐗), là **unbiased estimator của 0 bất kì**.
 >
 >
 >
@@ -4607,12 +4631,12 @@
 >
 >
 >
-> Ta cần chứng minh Cov(Φ(T), U(**X**)) = 0 
+> Ta cần chứng minh Cov(Φ(T), U(𝐗)) = 0 
 >
 >
 >
-> Cách thể hiện U(**X**) ko có gì là khó hiẻu, thậm chí có thể ghi Φ(T(**X**)) vì
-> các estimator về bản chất đều là hàm của random sample **X**
+> Cách thể hiện U(𝐗) ko có gì là khó hiẻu, thậm chí có thể ghi Φ(T(𝐗)) vì
+> các estimator về bản chất đều là hàm của random sample 𝐗
 >
 >
 >
@@ -4632,40 +4656,40 @@
 >
 >
 >
-> ⇨ Cov(Φ(T), U(**X**)) = E[Φ(T)U(**X**)] - EΦ(T)EU(**X**)
+> ⇨ Cov(Φ(T), U(𝐗)) = E[Φ(T)U(𝐗)] - EΦ(T)EU(𝐗)
 >
 >
 >
-> = E[Φ(T)U(**X**)] - EΦ(T)*0 (do U(**X**) là unbiased estimator của 0: E[U(**X**)] = 0)
+> = E[Φ(T)U(𝐗)] - EΦ(T)*0 (do U(𝐗) là unbiased estimator của 0: E[U(𝐗)] = 0)
 >
 >
 >
-> = E[Φ(T)U(**X**)]
+> = E[Φ(T)U(𝐗)]
 >
 >
 >
-> Viết lại Cov(Φ(T), U(**X**)) = E[Φ(T)U(**X**)]
+> Viết lại Cov(Φ(T), U(𝐗)) = E[Φ(T)U(𝐗)]
 >
 >
 >
-> E[Φ(T)U(**X**)], áp dụng Adam's Law: EX = E[E(X|Y)]
+> E[Φ(T)U(𝐗)], áp dụng Adam's Law: EX = E[E(X|Y)]
 >
 >
 >
-> ⇨ E[Φ(T)U(**X**)] = E[ E[Φ(T)U(**X**)|T] ]
+> ⇨ E[Φ(T)U(𝐗)] = E[ E[Φ(T)U(𝐗)|T] ]
 >
 >
 >
-> Xét E[Φ(T)U(**X**)|T], vì với T cho trước thì Φ(T) là constant, ta đưa ra khỏi
+> Xét E[Φ(T)U(𝐗)|T], vì với T cho trước thì Φ(T) là constant, ta đưa ra khỏi
 > kì vọng theo tính linearity
 >
 >
 >
-> ... = E[ Φ(T) E[U(**X**)|T] ] 
+> ... = E[ Φ(T) E[U(𝐗)|T] ] 
 >
 >
 >
-> Và E[U(**X**)|T], hay E[U|T] thì lại là một random variable tạo bởi T: g(T) 
+> Và E[U(𝐗)|T], hay E[U|T] thì lại là một random variable tạo bởi T: g(T) 
 >
 >
 >
@@ -4694,7 +4718,7 @@
 >
 >
 >
-> Viết lại ta đã chứng minh xong Cov(Φ(T), U(**X**)) = 0
+> Viết lại ta đã chứng minh xong Cov(Φ(T), U(𝐗)) = 0
 >
 >
 >
@@ -4718,9 +4742,9 @@
 >
 >
 >
-> Như vậy, nếu mình có estimator h(**X**) có kì vọng là τ(θ), tức là unbiased
-> estimator của τ(θ) thì bằng cách tạo estimator mới Φ(T) = E[h(**X**)|T], thì
-> ta đã biết, sẽ tạo  estimator tốt hơn h(**X**), cũng có kì vọng τ(θ). Và
+> Như vậy, nếu mình có estimator h(𝐗) có kì vọng là τ(θ), tức là unbiased
+> estimator của τ(θ) thì bằng cách tạo estimator mới Φ(T) = E[h(𝐗)|T], thì
+> ta đã biết, sẽ tạo  estimator tốt hơn h(𝐗), cũng có kì vọng τ(θ). Và
 > theorem này nói rằng, vì có dạng a function của complete sufficient statistic
 > T, nên nó chính là the best unbiased estimator của kì vọng của nó, → của
 > τ(θ)
@@ -4728,7 +4752,7 @@
 >
 >
 > Vậy nói ngắn gọn là. Có T là complete + sufficient statistic, thì chỉ cần kiếm
-> h(**X**) là unbiased estimator của τ(θ) thì ta sẽ có ngay the best: E[h(**X**)|T]
+> h(𝐗) là unbiased estimator của τ(θ) thì ta sẽ có ngay the best: E[h(𝐗)|T]
 
 <br>
 
@@ -4812,12 +4836,12 @@
 >
 >
 >
-> Đó là dùng h(**X**) có dạng thế này: h(**X**) = 1 khi X1 = 1 và h(**X**) = 0 nếu
+> Đó là dùng h(𝐗) có dạng thế này: h(𝐗) = 1 khi X1 = 1 và h(𝐗) = 0 nếu
 > ngược lại.
 >
 >
 >
-> Thế thì với estimator này: E_θ[h(**X**)] có bằng τ(θ) không?
+> Thế thì với estimator này: E_θ[h(𝐗)] có bằng τ(θ) không?
 >
 >
 >
@@ -4825,7 +4849,7 @@
 >
 >
 >
-> E_θ[h(**X**)] = Σ{mọi possible value **x** của **X**} h(**x**) f**X**(**x**)
+> E_θ[h(𝐗)] = Σ{mọi possible value 𝐱 của 𝐗} h(𝐱) f𝐗(𝐱)
 >
 >
 >
@@ -4867,11 +4891,11 @@
 >
 >
 >
-> Và như vậy h(**X**) ở trên chính là unbiased estimator của τ(θ) = k θ^x1(1-θ)^(k-1)
+> Và như vậy h(𝐗) ở trên chính là unbiased estimator của τ(θ) = k θ^x1(1-θ)^(k-1)
 >
 >
 >
-> Và như vậy, E[h(**X**) | Σi Xi], là một estimator có dạng là function của Σi Xi,
+> Và như vậy, E[h(𝐗) | Σi Xi], là một estimator có dạng là function của Σi Xi,
 > Φ(Σi Xi) CHÍNH LÀ THE BEST UNBIASED ESTIMATOR CỦA τ(θ)
 >
 >
@@ -4881,7 +4905,7 @@
 >
 >
 >
-> E_θ[E[h(**X**) | Σi Xi]] = E[h(**X**)] = τ(θ)
+> E_θ[E[h(𝐗) | Σi Xi]] = E[h(𝐗)] = τ(θ)
 
 **🔗 See also:** [Thống kê đủ nhị thức](./62_the_sufficient_principle.md#node-ubmvdfc)
 
@@ -4898,7 +4922,7 @@
 >
 >
 >
-> thì Φ(T) = E[h(**X**)|T], như vừa nói sẽ là the best unbiased estimator của τ(θ)
+> thì Φ(T) = E[h(𝐗)|T], như vừa nói sẽ là the best unbiased estimator của τ(θ)
 >
 >
 >
@@ -4908,7 +4932,7 @@
 >
 >
 >
-> Vậy thì cần xem cái này thôi: E[h(**X**)|T=t]
+> Vậy thì cần xem cái này thôi: E[h(𝐗)|T=t]
 >
 >
 >
@@ -4975,7 +4999,7 @@
 >
 >
 >
-> Mình hiểu: theo link quay lại định nghĩa của sufficient statistic thì nếu T(**X**)
+> Mình hiểu: theo link quay lại định nghĩa của sufficient statistic thì nếu T(𝐗)
 > là sufficient statistic, thì việc quan sát được giá trị của nó (T = t) sẽ khiến
 > conditional distribution của sample **X KHÔNG CÒN PHỤ THUỘC θ NỮA.**
 > Thì đây, rõ ràng cái mà ta vừa tính chính là P(X1=1|T=t), chính là conditional
@@ -4995,8 +5019,8 @@
 
 > [!NOTE]
 > Đại ý là, bữa giờ tiêu chí ta đánh giá một estimator là dựa trên MSE. (nhớ
-> lại, định nghĩa MSE của một estimator là: MSE_θ[W(**X**)] = E_θ[W(**X**) - θ]^2
-> = Var_θ[W(**X**)] + Bias_θ[W(**X**)]^2
+> lại, định nghĩa MSE của một estimator là: MSE_θ[W(𝐗)] = E_θ[W(𝐗) - θ]^2
+> = Var_θ[W(𝐗)] + Bias_θ[W(𝐗)]^2
 >
 >
 >
@@ -5006,7 +5030,7 @@
 >
 >
 >
-> Thế thì, khi quan sát được giá trị **X** = **x** của random sample trong đó **X** ~ f(**x**|θ)
+> Thế thì, khi quan sát được giá trị 𝐗 = 𝐱 của random sample trong đó 𝐗 ~ f(𝐱|θ)
 > và θ ∈ Θ, thì một decision (quyết định) sẽ được đưa ra. Và không gian / tập
 > các quyết định có thể cho phép xảy ra sẽ gọi là **ACTION SPACE A.**
 >
@@ -5074,16 +5098,16 @@
 >
 >
 >
-> R(θ, δ) = E_θ[L(θ, δ(**X**))]
+> R(θ, δ) = E_θ[L(θ, δ(𝐗))]
 >
 >
 >
 > Dừng lại chút phân tích cái này cũng như ôn lại tí xíu: estimator, như đã biết
-> có định nghĩa là 'any function of random sample W(**X**)', bản chất của nó, là
-> một random variable, có được bởi áp hàm W, hay δ lên random sample **X**
-> Rồi, khi ném θ và δ(**X**) vào L(.), ta có gì? Ta sẽ có một function phụ thuộc
-> **X**, và θ, mà nếu coi như θ fix thì ta có một random variable, ví dụ như
-> squared error loss L(θ, δ(**X**)) = [δ(**X**) - θ]^2
+> có định nghĩa là 'any function of random sample W(𝐗)', bản chất của nó, là
+> một random variable, có được bởi áp hàm W, hay δ lên random sample 𝐗
+> Rồi, khi ném θ và δ(𝐗) vào L(.), ta có gì? Ta sẽ có một function phụ thuộc
+> 𝐗, và θ, mà nếu coi như θ fix thì ta có một random variable, ví dụ như
+> squared error loss L(θ, δ(𝐗)) = [δ(𝐗) - θ]^2
 >
 >
 >
@@ -5112,7 +5136,7 @@
 
 > [!NOTE]
 > Ôn lại lần nữa để khỏi rối: Ta đã học về một tiêu chí đánh giá estimator,
-> là MSE, định nghĩa bởi: MSE_θ(δ(**X**)) = E_θ[(δ(**X**) - θ)^2]
+> là MSE, định nghĩa bởi: MSE_θ(δ(𝐗)) = E_θ[(δ(𝐗) - θ)^2]
 >
 >
 >
@@ -5125,11 +5149,11 @@
 >
 >
 >
-> R(θ, δ(**X**)) = E_θ[L(θ, δ(**X**)]  để rồi khi L(θ, δ(**X**)) = [δ(**X**) - θ]^2 thì:
+> R(θ, δ(𝐗)) = E_θ[L(θ, δ(𝐗)]  để rồi khi L(θ, δ(𝐗)) = [δ(𝐗) - θ]^2 thì:
 >
 >
 >
-> R(θ, δ(**X**)) = E_θ[(δ(**X**) - θ)^2]
+> R(θ, δ(𝐗)) = E_θ[(δ(𝐗) - θ)^2]
 >
 >
 >
@@ -5138,7 +5162,7 @@
 >
 >
 >
-> R(θ, δ(**X**)) = MSE_θ(δ(**X**)), và do đó = Var_θ(δ(**X**)) + [Bias_θ δ(**X**)]^2
+> R(θ, δ(𝐗)) = MSE_θ(δ(𝐗)), và do đó = Var_θ(δ(𝐗)) + [Bias_θ δ(𝐗)]^2
 
 <br>
 
@@ -5194,7 +5218,7 @@
 
 > [!NOTE]
 > Qua ví dụ này, cho X1,...Xn là random sample từ Bern(p) distribution. Và xem
-> xét hai estimator (của p): p^_B (chính là Bayes estimator) và Xbar (chính là
+> xét hai estimator (của p): p^_B (chính là Bayes estimator) và X̄ (chính là
 > maximum likelihood estimator)
 >
 >
@@ -5226,7 +5250,7 @@
 > Tiếp, qua ví dụ này, với random sample size n từ n(μ, σ²) population. 
 > Và ta muốn estimator variance σ², dùng tiêu chí, loss function là squared
 > error loss. Và ta sẽ tìm trong / dùng trong các estimator có dạng là b S^2
-> (tức là một scaled version của sample variance) δ_b(**X**) = bS^2.
+> (tức là một scaled version của sample variance) δ_b(𝐗) = bS^2.
 >
 >
 >
@@ -5235,7 +5259,7 @@
 >
 >
 >
-> Từ đó ta tính risk của δb(**X**), và như đã nói, khi dùng squared error loss thì
+> Từ đó ta tính risk của δb(𝐗), và như đã nói, khi dùng squared error loss thì
 > chính là risk function chính là mse
 >
 >
@@ -5248,7 +5272,7 @@
 >
 >
 >
-> Nhớ định nghĩa của Bias_θ(W(**X**)): = E_θ[W(**X**)] - θ
+> Nhớ định nghĩa của Bias_θ(W(𝐗)): = E_θ[W(𝐗)] - θ
 >
 >
 >
@@ -5289,20 +5313,20 @@
 <p align="center"><kbd><img src="assets/5gjyle4w4re.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> rồi, thế thì đại khái , cái kết quả vừa rồi R((μ, σ²), δb(**X**)) = = [2b^2/(n-1) +
+> rồi, thế thì đại khái , cái kết quả vừa rồi R((μ, σ²), δb(𝐗)) = = [2b^2/(n-1) +
 > (b-1)^2]σ^4 cho thấy nó có dạng của c_b (σ²)^2, tức là, một quadratic function của
 > population variance.
 >
 >
 >
 > Và ta sẽ lập luận đơn giản thế này: giả sử xét một estimator khác cũng có dạng này
-> δ_b'(**X**) = b'S^2. Thì risk function của nó là c_b' (σ²)^2.
+> δ_b'(𝐗) = b'S^2. Thì risk function của nó là c_b' (σ²)^2.
 >
 >
 >
-> Để rồi khi so sánh hai estimator δ_b(**X**) và δ_b'(**X**) thì dễ hiểu là nếu c_b' ≤
-> c_b thì c_b' (σ²)^2 ≤ c_b (σ²)^2 VỚI MỌI σ. Và từ đó giúp kết luận δ_b'(**X**) tốt
-> hơn δ_b(**X**)
+> Để rồi khi so sánh hai estimator δ_b(𝐗) và δ_b'(𝐗) thì dễ hiểu là nếu c_b' ≤
+> c_b thì c_b' (σ²)^2 ≤ c_b (σ²)^2 VỚI MỌI σ. Và từ đó giúp kết luận δ_b'(𝐗) tốt
+> hơn δ_b(𝐗)
 >
 >
 >
@@ -5358,12 +5382,12 @@
 >
 >
 >
-> Vậy S_tilde^2(**X**) = [(n-1)/(n+1)] S^2 CHÍNH LÀ CÁI CÓ RISK NHỎ NHẤT
+> Vậy S_tilde^2(𝐗) = [(n-1)/(n+1)] S^2 CHÍNH LÀ CÁI CÓ RISK NHỎ NHẤT
 > TRONG SỐ NHỮNG ESTIMATOR CÓ DẠNG bS^2.
 >
 >
 >
-> Và hình 7.3.2 cho thấy đồ thị hàm risk của S_tilde^2(**X**), S^2 (như đã biết, là
+> Và hình 7.3.2 cho thấy đồ thị hàm risk của S_tilde^2(𝐗), S^2 (như đã biết, là
 > unbiased estimator của σ²) và của MLE của σ². Nhận xét thấy nó thấp hơn hai
 > thằng này ở mọi giá trị của σ²
 
@@ -5445,7 +5469,7 @@
 >
 >
 >
-> Từ đó, có thêm khái niệm: risk function, của estimator δ(**X**), risk function 
+> Từ đó, có thêm khái niệm: risk function, của estimator δ(𝐗), risk function 
 > được định nghĩa là:
 >
 >
@@ -5526,20 +5550,20 @@
 >
 > Thế thì, với cách tiếp cận Bayesian, vì đã nói θ là đại lượng mang tính ngẫu
 > nhiên nên nó sẽ có distribution. Và khi chưa biết được thông tin gì, chưa có
-> giá trị quan sát được của random sample **X**, thì người ta (experimenter) sẽ
+> giá trị quan sát được của random sample 𝐗, thì người ta (experimenter) sẽ
 > dựa vào kinh nghiệm để chọn một distribution của θ, gọi là prior distribution, kí
 > hiệu π(θ)
 >
 >
 >
-> Sau khi có được thêm thông tin, quan sát được giá trị của sample **X**, ta sẽ
-> cập nhật lại distribution của θ, để có posterior distribution: f(θ|**x**)
+> Sau khi có được thêm thông tin, quan sát được giá trị của sample 𝐗, ta sẽ
+> cập nhật lại distribution của θ, để có posterior distribution: f(θ|𝐱)
 >
 >
 >
-> Và khi đó, người ta sẽ dùng mean của distribution, tức E[θ] với θ ~ f(θ|**X**),
-> để làm point estimator cho θ. Và đó chính là Bayes estimator: p^B(**X**) =
-> E[θ] = ∫θf(θ|**X**)dθ.
+> Và khi đó, người ta sẽ dùng mean của distribution, tức E[θ] với θ ~ f(θ|𝐗),
+> để làm point estimator cho θ. Và đó chính là Bayes estimator: p^B(𝐗) =
+> E[θ] = ∫θf(θ|𝐗)dθ.
 >
 >
 >
@@ -5605,7 +5629,7 @@
 >
 >
 >
-> Cho random sample **X** ~ f(**x**|θ) và θ ~ π(θ): ta có:
+> Cho random sample 𝐗 ~ f(𝐱|θ) và θ ~ π(θ): ta có:
 >
 >
 >
@@ -5613,64 +5637,64 @@
 >
 >
 >
-> R(θ, δ), hay R(θ, δ(**X**)) (vì nhắc lại, δ, estimator, là function của random
-> sample) có định nghĩa là function theo θ, define bởi E_θ [L(θ, δ(**X**))].
+> R(θ, δ), hay R(θ, δ(𝐗)) (vì nhắc lại, δ, estimator, là function của random
+> sample) có định nghĩa là function theo θ, define bởi E_θ [L(θ, δ(𝐗))].
 >
 >
 >
 > Và cái này là gì? Bản chất chính là ta lấy kì vọng của một random variable L(θ,
-> δ(**X**)), là rv có được khi apply hàm g(u) = L(θ, δ(u)) lên random sample **X.**
+> δ(𝐗)), là rv có được khi apply hàm g(u) = L(θ, δ(u)) lên random sample **X.**
 >
 >
 >
-> Nên dùng lotus ta có R(θ, δ(**X**)) = ∫{range **X**} L(θ, δ(**x**)) f**X**(x|θ)d**x**
+> Nên dùng lotus ta có R(θ, δ(𝐗)) = ∫{range 𝐗} L(θ, δ(𝐱)) f𝐗(x|θ)d𝐱
 >
 >
 >
-> ⇨ ∫Θ R(θ, δ) π(θ) dθ = ∫Θ ∫{range **X**} L(θ, δ(**x**)) f**X**(**x**|θ)d**x** π(θ)
+> ⇨ ∫Θ R(θ, δ) π(θ) dθ = ∫Θ ∫{range 𝐗} L(θ, δ(𝐱)) f𝐗(𝐱|θ)d𝐱 π(θ)
 > dθ
 >
 >
 >
-> Tới đây, đưa π(θ) vô trong tích phân theo **x**:
+> Tới đây, đưa π(θ) vô trong tích phân theo 𝐱:
 >
 >
 >
-> ∫Θ ∫{range **X**} L(θ, δ(**x**)) f**X**(**x**|θ)π(θ) d**x** dθ
+> ∫Θ ∫{range 𝐗} L(θ, δ(𝐱)) f𝐗(𝐱|θ)π(θ) d𝐱 dθ
 >
 >
 >
-> Xét fX(**x**|θ)π(θ), hay f(**x**|θ)π(θ)
+> Xét fX(𝐱|θ)π(θ), hay f(𝐱|θ)π(θ)
 >
 >
 >
-> Theo Bayes theorem ta có f(**x**|θ)π(θ) = π(θ|**x**)m(**x**)
+> Theo Bayes theorem ta có f(𝐱|θ)π(θ) = π(θ|𝐱)m(𝐱)
 >
 >
 >
-> trong đó π(θ|**x**) và m(**x**) như đã biết chính là posterior distribution của θ
-> và marginal distribution của random sample **X**
+> trong đó π(θ|𝐱) và m(𝐱) như đã biết chính là posterior distribution của θ
+> và marginal distribution của random sample 𝐗
 >
 >
 >
-> Tích phân trở thành:∫Θ ∫{range **X**} L(θ, δ(**x**)) π(θ|**x**) m(**x**) d**x** dθ
+> Tích phân trở thành:∫Θ ∫{range 𝐗} L(θ, δ(𝐱)) π(θ|𝐱) m(𝐱) d𝐱 dθ
 >
 >
 >
-> = ∫{range **X**} ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ m(**x**) d**x**
+> = ∫{range 𝐗} ∫Θ L(θ, δ(𝐱)) π(θ|𝐱) dθ m(𝐱) d𝐱
 >
 >
 >
-> Và cái ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ đựợc gọi là **POSTERIOR EXPECTED
-> LOSS** vì tích phân theo θ nên không còn phụ thuộc θ nữa, chỉ phụ thuộc **x**
+> Và cái ∫Θ L(θ, δ(𝐱)) π(θ|𝐱) dθ đựợc gọi là **POSTERIOR EXPECTED
+> LOSS** vì tích phân theo θ nên không còn phụ thuộc θ nữa, chỉ phụ thuộc 𝐱
 >
 >
 >
-> Dẫn đến tích phân tổng chỉ là có dạng ∫{range **X**} g(δ(**x**)m(**x**)d**x**
+> Dẫn đến tích phân tổng chỉ là có dạng ∫{range 𝐗} g(δ(𝐱)m(𝐱)d𝐱
 >
 >
 >
-> Do đó với mỗi giá trị observed value **x** của **X**, **bằng cách chọn δ sao cho
+> Do đó với mỗi giá trị observed value 𝐱 của 𝐗, **bằng cách chọn δ sao cho
 > minimize cái này, thì ta sẽ có estimator minimize Bayes risk**
 
 <br>
@@ -5683,7 +5707,7 @@
 
 > [!NOTE]
 > thế thì đến đây tác giả nói ta đã có một công thức để xây dựng Bayes rule (ý
-> là estimator có Bayes risk nhỏ nhất): Với giá trị quan sát được **X** = **x**,
+> là estimator có Bayes risk nhỏ nhất): Với giá trị quan sát được 𝐗 = 𝐱,
 > ta sẽ chỉ việc tìm δ giúp minimize posterior expected loss.
 >
 >
@@ -5696,13 +5720,13 @@
 >
 >
 >
-> = ∫{range **X**} ∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ m(**x**) d**x**
+> = ∫{range 𝐗} ∫Θ L(θ, δ(𝐱)) π(θ|𝐱) dθ m(𝐱) d𝐱
 >
 >
 >
-> với∫Θ L(θ, δ(**x**)) π(θ|**x**) dθ, là posterior expected loss, thì nó chỉ là
-> hàm  g(δ(**x**))(ý là ko phụ thuộc θ nữa)Thì đại ý là vì m(**x**), là marginal distribution của **X**, nên luôn không âm
-> nên việc tìm δ để minimize cái này chỉ còn là tìm δ để minimize g(δ(**x**))
+> với∫Θ L(θ, δ(𝐱)) π(θ|𝐱) dθ, là posterior expected loss, thì nó chỉ là
+> hàm  g(δ(𝐱))(ý là ko phụ thuộc θ nữa)Thì đại ý là vì m(𝐱), là marginal distribution của 𝐗, nên luôn không âm
+> nên việc tìm δ để minimize cái này chỉ còn là tìm δ để minimize g(δ(𝐱))
 > mà thôi.
 >
 >
@@ -5713,8 +5737,8 @@
 >
 >
 >
-> Φ(T), bằng cách ném vào = E[.|T] một unbiased estimator W(**X**) của
-> param τ(θ) thì ta sẽ có Φ(T) = E(W(**X**)|T) và theo Rao-Blackwell, ta sẽ kết
+> Φ(T), bằng cách ném vào = E[.|T] một unbiased estimator W(𝐗) của
+> param τ(θ) thì ta sẽ có Φ(T) = E(W(𝐗)|T) và theo Rao-Blackwell, ta sẽ kết
 > luận nó là the best unbiased estimator.
 >
 >
@@ -5750,8 +5774,8 @@
 >
 >
 > Thế thì risk function là gì? Nó được định nghĩa là hàm theo θ bởi: E_θ[L(θ,
-> W(**X**)] mang ý nghĩa là, tính trung bình loss của estimator W trên mọi possible 
-> value của random sample **X** sẽ là gì. Và dựa trên đó, nếu estimator W2 có risk 
+> W(𝐗)] mang ý nghĩa là, tính trung bình loss của estimator W trên mọi possible 
+> value của random sample 𝐗 sẽ là gì. Và dựa trên đó, nếu estimator W2 có risk 
 > function nhỏ hơn risk function của W1 với mọi θ thì ta có thể coi estimator W2 
 > tốt hơn.
 >
@@ -5761,7 +5785,7 @@
 > theory, nó định nghĩa bởi difference giữa action và target. Mà nếu áp dụng vào
 > bài toán point estimation thì action space ở đây chính là Θ - không gian các
 > giá trị khả dĩ của parameter θ. Và loss function trong bài toán point estimation
-> sẽ phản ánh sự sai khác giữa estimate W(**x**) và θ.Nhưng có nhiều cách
+> sẽ phản ánh sự sai khác giữa estimate W(𝐱) và θ.Nhưng có nhiều cách
 > define loss function, thông dụng là squared error loss và absolute error loss.
 >
 >
@@ -5778,13 +5802,13 @@
 >
 > Vậy thì từ đó mới nói đến việc áp dụng cách tiếp cận Bayesian, mà ta còn
 > nhớ, trong đó, người ta xem θ như biến ngẫu nhiên, với prior distribution π(θ).
-> Để rồi, đối diện với risk function R(θ, δ(**x**) (chuyển qua dùng δ thay cho W
+> Để rồi, đối diện với risk function R(θ, δ(𝐱) (chuyển qua dùng δ thay cho W
 > cho giống trong sách), lúc bấy giờ coi như random variable (g(θ), θ là random
 > variable) thì ta sẽ lấy kì vọng / average của nó:
 >
 >
 >
-> E[R(θ, δ(**x**)], dùng lotus, = ∫R(θ, δ(**x**))π(θ)dθ, và nó sẽ ra một number
+> E[R(θ, δ(𝐱)], dùng lotus, = ∫R(θ, δ(𝐱))π(θ)dθ, và nó sẽ ra một number
 >
 >
 >
@@ -5796,39 +5820,39 @@
 >
 >
 >
-> Thế thì thay R(θ, δ(**x**)), (viết gọn R(θ, δ) vì biết **x**, thì biết δ(**x**) rồi) vào:
+> Thế thì thay R(θ, δ(𝐱)), (viết gọn R(θ, δ) vì biết 𝐱, thì biết δ(𝐱) rồi) vào:
 >
 >
 >
-> Bayes risk = ∫E_θ[L(θ, δ(**X**)]π(θ)dθ
+> Bayes risk = ∫E_θ[L(θ, δ(𝐗)]π(θ)dθ
 >
 >
 >
-> =  ∫/Θ / { ∫/X/ L(θ,δ(**x**) f(**x**|θ)d**x** } π(θ)dθ
+> =  ∫/Θ / { ∫/X/ L(θ,δ(𝐱) f(𝐱|θ)d𝐱 } π(θ)dθ
 >
 >
 >
-> =  ∫Θ { ∫/X/ L(θ,δ(**x**) f(**x**|θ) π(θ) d**x** } dθ
+> =  ∫Θ { ∫/X/ L(θ,δ(𝐱) f(𝐱|θ) π(θ) d𝐱 } dθ
 >
 >
 >
-> =  ∫Θ { ∫/X /L(θ,δ(**x**) π(θ|**x**) m(**x**) d**x** } dθ
+> =  ∫Θ { ∫/X /L(θ,δ(𝐱) π(θ|𝐱) m(𝐱) d𝐱 } dθ
 >
 >
 >
-> = ∫/X/ { ∫Θ L(θ,δ(**x**) π(θ|**x**) m(**x**) dθ } d**x**
+> = ∫/X/ { ∫Θ L(θ,δ(𝐱) π(θ|𝐱) m(𝐱) dθ } d𝐱
 >
 >
 >
-> = ∫X { ∫Θ L(θ,δ(**x**) π(θ|**x**) dθ } m(**x**) d**x**
+> = ∫X { ∫Θ L(θ,δ(𝐱) π(θ|𝐱) dθ } m(𝐱) d𝐱
 >
 >
 >
-> Và **∫**ΘL(θ,δ(**x**) π(θ|**x**)dθ chính là cái gọi là posterior expected loss
+> Và **∫**ΘL(θ,δ(𝐱) π(θ|𝐱)dθ chính là cái gọi là posterior expected loss
 >
 >
 >
-> Nó không phụ thuộc θ, và với một giá trị cụ thể **x**, thì nó có một giá trị cụ
+> Nó không phụ thuộc θ, và với một giá trị cụ thể 𝐱, thì nó có một giá trị cụ
 > thể, thành ra bài toán chỉ là, tìm δ để minimize cái này.
 >
 >
@@ -5837,25 +5861,25 @@
 >
 >
 >
-> ∫Θ [θ - δ(**x**)]^2 π(θ|**x**) dθ 
+> ∫Θ [θ - δ(𝐱)]^2 π(θ|𝐱) dθ 
 >
 >
 >
-> Dễ thấy nó chính là E[(θ - δ(**x**))^2|**X**=**x**]
+> Dễ thấy nó chính là E[(θ - δ(𝐱))^2|𝐗=𝐱]
 >
 >
 >
 > và trong chương 2 mình đã biết, a khiến minimize E[(X - a)^2] chính là EX,
-> nên ở đây δ(**x**) khiến minimize cái này chính là E[θ|**x**], và nó bằng ∫θ f(θ|**x**)dθ
+> nên ở đây δ(𝐱) khiến minimize cái này chính là E[θ|𝐱], và nó bằng ∫θ f(θ|𝐱)dθ
 >
 >
 >
-> Kí hiệu là θ^π(**x**) = E[θ|**x**]
+> Kí hiệu là θ^π(𝐱) = E[θ|𝐱]
 >
 >
 >
 > Và như vậy khi dùng squared error loss, estimator có Bayes risk nhỏ nhất,
-> chính là δ(**X**) = E[θ|**x**] = ∫θ f(θ|**X**)dθ. Đây chính là **BAYES ESTIMATOR**
+> chính là δ(𝐗) = E[θ|𝐱] = ∫θ f(θ|𝐗)dθ. Đây chính là **BAYES ESTIMATOR**
 >
 >
 >
@@ -5868,17 +5892,17 @@
 >
 >
 >
-> ∫Θ |θ - δ(**x**)| π(θ|**x**) dθ
+> ∫Θ |θ - δ(𝐱)| π(θ|𝐱) dθ
 >
 >
 >
-> Để rồi giải bài tập 2.18 ta sẽ thấy minimize cái này ta sẽ có δ(**x**) = median của 
-> π(θ|**x)** 
+> Để rồi giải bài tập 2.18 ta sẽ thấy minimize cái này ta sẽ có δ(𝐱) = median của 
+> π(θ|𝐱) 
 >
 >
 >
 > Từ đó phải hiểu Bayes estimator khi dùng loss khác, sẽ chưa chắc là mean
-> của θ ~ π(θ|**x**)
+> của θ ~ π(θ|𝐱)
 
 <br>
 
@@ -5902,12 +5926,12 @@
 >
 >
 > Tác giả nói từ ví dụ 7.2.16 và bài tập 7.22 ta đã tìm thấy posterior distribution của
-> θ given Xbar = x̄ sẽ là normal distribution với mean và variance như  vậy. Ta
+> θ given X̄ = x̄ sẽ là normal distribution với mean và variance như  vậy. Ta
 > sẽ thử làm lại xem tại sao:
 >
 >
 >
-> posterior distribution của θ: π(θ|**x**) = f(**x**|θ)π(θ)/f(**x**)
+> posterior distribution của θ: π(θ|𝐱) = f(𝐱|θ)π(θ)/f(𝐱)
 >
 >
 >
@@ -5915,7 +5939,7 @@
 >
 >
 >
-> f(**x**|θ) = Πi=1:n f(xi|θ)
+> f(𝐱|θ) = Πi=1:n f(xi|θ)
 >
 >
 >
@@ -5939,7 +5963,7 @@
 >
 >
 >
-> π(θ|**x**) tỉ lệ thuận f(**x**|θ)π(θ)
+> π(θ|𝐱) tỉ lệ thuận f(𝐱|θ)π(θ)
 >
 >
 >
@@ -6133,7 +6157,7 @@
 >
 >
 >
-> Viết lại: Mean, tức E(θ|**x**) (hay E(θ|x̄) cũng được)
+> Viết lại: Mean, tức E(θ|𝐱) (hay E(θ|x̄) cũng được)
 >
 >
 >
@@ -6179,8 +6203,8 @@
 >
 > Thế thì như đã nói ở note trước, khi dùng squared error loss, thì cái Bayes rule
 > given prior π (tên dài dòng để chỉ estimator có Bayes risk nhỏ nhất) chính là
-> Bayes estimator: δ^π(**x**) = E(θ|x̄), tức mean của posterior distribution
-> π(θ|**x**)
+> Bayes estimator: δ^π(𝐱) = E(θ|x̄), tức mean của posterior distribution
+> π(θ|𝐱)
 >
 >
 >
