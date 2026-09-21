@@ -33,19 +33,19 @@
 >
 >
 > Ý này dễ hiểu thôi. Nhớ lại coverage probability, của một interval estimator
-> hay confidence set, là hàm theo θ, defined bởi P_θ(θ ∈ C(**X**)).
+> hay confidence set, là hàm theo θ, defined bởi P_θ(θ ∈ C(𝐗)).
 >
 >
 >
 > Nhưng mình cũng biết, một số confidence set nếu được construct dựa trên
-> pivot quantity, Q(**X**, θ) thì nó lại có distribution không phụ thuộc θ. Khi đó,
+> pivot quantity, Q(𝐗, θ) thì nó lại có distribution không phụ thuộc θ. Khi đó,
 > coverage probability của confidence set này sẽ là constant theo θ. Đó là các
 > case đặc biệt gs nói tới ở đây.
 >
 >
 >
 > Và ta cũng còn nhớ, định nghĩa của confidence coefficient = inf_θ P_θ(θ ∈
-> C(**X**)). và nó sẽ ko còn phụ thuộc θ nữa
+> C(𝐗)). và nó sẽ ko còn phụ thuộc θ nữa
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -87,24 +87,24 @@
 >
 >
 > Ôn lại: Là vì bữa trước đã học cách xây dựng một confidence set từ một pivot.
-> Pivot là một random variable có dạng Q(**X**, θ) nhưng distribution lại ko phụ
+> Pivot là một random variable có dạng Q(𝐗, θ) nhưng distribution lại ko phụ
 > thuộc θ.
 >
 >
 >
-> Nên nếu ta thể tìm ra một khoảng a, b sao cho P(a ≤ Q(**X**, θ) ≤ b) = 1-α thì
+> Nên nếu ta thể tìm ra một khoảng a, b sao cho P(a ≤ Q(𝐗, θ) ≤ b) = 1-α thì
 > điều này sẽ đúng với mọi θ ∈ Θ. Dẫn đến khi xét bài toán testing H0: θ = θ0 thì
-> {**x**: a ≤ Q(**x**, θ) ≤ b} chính là một level α acceptance region.
+> {𝐱: a ≤ Q(𝐱, θ) ≤ b} chính là một level α acceptance region.
 >
 >
 >
-> Vì sup_θ∈Θ0={θ0} P_θ(**X** ∈ R) = P_θ0(**X** ∈ R) = 1 - P_θ0(**X** ∈ Rc)  = 1 - P(a
-> ≤ Q(**X**, θ) ≤ b) = 1 - (1 - α) = α. ⇨ test có acceptance region này chính là một
+> Vì sup_θ∈Θ0={θ0} P_θ(𝐗 ∈ R) = P_θ0(𝐗 ∈ R) = 1 - P_θ0(𝐗 ∈ Rc)  = 1 - P(a
+> ≤ Q(𝐗, θ) ≤ b) = 1 - (1 - α) = α. ⇨ test có acceptance region này chính là một
 > level α test.
 >
 >
 >
-> Và they Tautology theorem, C(**X**) = {θ: a ≤ Q(**X**, θ) ≤ b} chính là 1-α
+> Và they Tautology theorem, C(𝐗) = {θ: a ≤ Q(𝐗, θ) ≤ b} chính là 1-α
 > confidence  set.
 >
 >
@@ -113,19 +113,19 @@
 >
 >
 >
-> Và ta có thể chuyển nó về dạng [θL(**X**, a or b), θU(**X,** b or a)] tùy theo là
+> Và ta có thể chuyển nó về dạng [θL(𝐗, a or b), θU(𝐗 b or a)] tùy theo là
 > hàm Q monotone increasing hay decreasing.
 >
 >
 >
-> Vậy thì ở đây: Ta biết với X1,...Xn là iid normal(μ, σ²) thì Xbar là normal(μ,
+> Vậy thì ở đây: Ta biết với X1,...Xn là iid normal(μ, σ²) thì X̄ là normal(μ,
 > σ²/n) Và normal lại là thuộc location scale family với mean là location param,
 > standard deviation là scale param.
 >
 >
 >
-> Nên theo location scale family thì (Xbar - μ) / (σ/√n) chính là standard member
-> ứng với location = 0, scale = 1 → Z = (Xbar - μ) / (σ/√n) chính là normal(0,1). Và
+> Nên theo location scale family thì (X̄ - μ) / (σ/√n) chính là standard member
+> ứng với location = 0, scale = 1 → Z = (X̄ - μ) / (σ/√n) chính là normal(0,1). Và
 > distribution của nó không còn phụ thuộc μ nữa. Ta sẽ dùng nó làm pivot.
 >
 >
@@ -134,28 +134,28 @@
 >
 >
 >
-> thì {x: a ≤ Z(**X**, μ) ≤ b} chính là level α acceptance region của bài toán testing
+> thì {x: a ≤ Z(𝐗, μ) ≤ b} chính là level α acceptance region của bài toán testing
 > H0: μ = μ0
 >
 >
 >
-> Theo Tautology, {μ: a ≤ Z(**X**, μ) ≤ b} chính là 1-α confidence interval của μ
+> Theo Tautology, {μ: a ≤ Z(𝐗, μ) ≤ b} chính là 1-α confidence interval của μ
 >
 >
 >
-> Và  a ≤ Z(X, μ) ≤ b ⇔ a ≤ (Xbar - μ) / (σ/√n) ≤ b
+> Và  a ≤ Z(X, μ) ≤ b ⇔ a ≤ (X̄ - μ) / (σ/√n) ≤ b
 >
 >
 >
-> ⇔ a (σ/√n) ≤ Xbar - μ ≤ b (σ/√n)
+> ⇔ a (σ/√n) ≤ X̄ - μ ≤ b (σ/√n)
 >
 >
 >
-> ⇔ Xbar - b (σ/√n) ≤ μ ≤ Xbar - a (σ/√n)
+> ⇔ X̄ - b (σ/√n) ≤ μ ≤ X̄ - a (σ/√n)
 >
 >
 >
-> ⇨ tập trên có thể thể hiện bởi [μL(X, b), μU(X,a)] = {μ: Xbar - b (σ/√n) ≤ μ ≤ Xbar -
+> ⇨ tập trên có thể thể hiện bởi [μL(X, b), μU(X,a)] = {μ: X̄ - b (σ/√n) ≤ μ ≤ X̄ -
 > a (σ/√n)}
 >
 >
@@ -165,7 +165,7 @@
 >
 >
 > Và phù hợp với nhận định là b sẽ nằm ở chặn dưới, a nằm ở chặn trên do hàm
-> Z = (Xbar - μ) / (σ/√n) là hàm monotone decreasing theo μ
+> Z = (X̄ - μ) / (σ/√n) là hàm monotone decreasing theo μ
 
 <br>
 
@@ -384,37 +384,37 @@
 >
 >
 > Dựa trên việc một LRT sẽ là cái test có rule reject hay accept H0 dựa trên
-> λ(**X**) là likelihood ratio test statistic nhỏ hơn hay lớn hơn một threshold c
+> λ(𝐗) là likelihood ratio test statistic nhỏ hơn hay lớn hơn một threshold c
 > là con số nào đó từ 0 đến 1.
 >
 >
 >
 > Do đó, nếu ta có một cái LRT cho bài toán testing H0: θ = θ0, thì ta có thể
 > chọn c  sao cho sup_θ∈Θ0={θ0) P_θ(reject H0) = P_θ0(reject H0) =
-> P_θ0(λ(**X**) ≤ c) ≤ α
+> P_θ0(λ(𝐗) ≤ c) ≤ α
 >
 >
 >
-> Rồi, với cái c đó dĩ nhiên cái tập {**x**: λ(**x**) ≤ c} sẽ là level α rejection
-> region, cũng như {**x**: λ(**x**) > c} là level α acceptance region A(θ0) của
+> Rồi, với cái c đó dĩ nhiên cái tập {𝐱: λ(𝐱) ≤ c} sẽ là level α rejection
+> region, cũng như {𝐱: λ(𝐱) > c} là level α acceptance region A(θ0) của
 > bài toán testing H0: θ = θ0.
 >
 >
 >
-> Từ đó, theo Tautology theorem, ta sẽ có C(**X**) = {θ: λ(**X**) > c} = {θ:
-> L(θ|**x**) / L(θ^_mle|**x**) > c}  sẽ là 1-α confidence  interval cho θ
+> Từ đó, theo Tautology theorem, ta sẽ có C(𝐗) = {θ: λ(𝐗) > c} = {θ:
+> L(θ|𝐱) / L(θ^_mle|𝐱) > c}  sẽ là 1-α confidence  interval cho θ
 >
 >
 >
-> Và từ đó, ta mới xét hàm số g(θ) = L(θ|**x**) / L(θ^_mle|**x**), và xét nó là
+> Và từ đó, ta mới xét hàm số g(θ) = L(θ|𝐱) / L(θ^_mle|𝐱), và xét nó là
 > hàm theo θ, thì nó sẽ là có dạng một đỉnh núi. Để rồi nếu có thể chuyển {θ:
-> L(θ|**x**) / L(θ^_mle|**x**) > c} thành [θL(**x**), θU(**x**)] với g(θL) = g(θU)
+> L(θ|𝐱) / L(θ^_mle|𝐱) > c} thành [θL(𝐱), θU(𝐱)] với g(θL) = g(θU)
 >
 >
 >
 > Vậy thì quay lại đây, ĐẠI Ý GS NÓI RẰNG, với việc ta vừa chứng minh
 > Theorem 9.3.2 ta sẽ QUAY LẠI KẾT LUẬN RẰNG, CÁI INTERVAL
-> [θL(**X**) ≤ θ ≤ θU(**X**)] CÓ ĐƯỢC BẰNG CÁCH LÀM NÀY CHÍNH LÀ
+> [θL(𝐗) ≤ θ ≤ θU(𝐗)] CÓ ĐƯỢC BẰNG CÁCH LÀM NÀY CHÍNH LÀ
 > TỐI ƯU.
 >
 >
@@ -451,19 +451,19 @@
 >
 >
 >
-> Cái thứ nhất là dựa trên việc Xbar  ~ normal(μ, σ²/n), thì theo location scale
-> family, (Xbar - μ) / σ/√n sẽ là ~ normal(0,1) → distribution không còn phụ thuộc
+> Cái thứ nhất là dựa trên việc X̄  ~ normal(μ, σ²/n), thì theo location scale
+> family, (X̄ - μ) / σ/√n sẽ là ~ normal(0,1) → distribution không còn phụ thuộc
 > μ, σ.
 >
 >
 >
-> Cái thứ hai là ta biết (Xbar - μ)/ S/√n ~ tn-1, tức Student 's t distribution bậc tự
+> Cái thứ hai là ta biết (X̄ - μ)/ S/√n ~ tn-1, tức Student 's t distribution bậc tự
 > do n-1, cũng có distribution không phụ thuộc μ, σ gì nữa.
 >
 >
 >
 > Tuy vậy, ta sẽ **CHỈ** xây dựng interval estimator cho μ **dựa trên cái thứ nhất
-> (Xbar - μ) / σ/√n NẾU  BIẾT σ**.
+> (X̄ - μ) / σ/√n NẾU  BIẾT σ**.
 >
 >
 >
@@ -474,31 +474,31 @@
 >
 >
 > Còn nhớ, cách thức để xây dựng một confidence set có coefficient 1-α mong
-> muốn, từ pivot Q(X, θ), đó là, ta sẽ tìm a, b sao cho P_θ0(a ≤ Q(**X**, θ0) ≤ b)
+> muốn, từ pivot Q(X, θ), đó là, ta sẽ tìm a, b sao cho P_θ0(a ≤ Q(𝐗, θ0) ≤ b)
 > = 1 - α, thì khi đó ta sẽ có thể nói rằng, đối với bài toán testing H0: θ = θ0, thì
-> nếu xét A(θ0)  = {**x**: a ≤ Q(**x**, θ0) ≤ b} thì sup_θ∈Θ0={θ0}
+> nếu xét A(θ0)  = {𝐱: a ≤ Q(𝐱, θ0) ≤ b} thì sup_θ∈Θ0={θ0}
 >
 >
 >
-> P_θ(**X** ∈A(θ0)_c) = P_θ0(**X** ∈ A(θ0)_c) = 1 - P_θ0(**X** ∈ A(θ0)) = 1 - (1 - α) = α, 
+> P_θ(𝐗 ∈A(θ0)_c) = P_θ0(𝐗 ∈ A(θ0)_c) = 1 - P_θ0(𝐗 ∈ A(θ0)) = 1 - (1 - α) = α, 
 > giúp  kết luận A(θ0) chính là một level α acceptance region của bài toán 
 > testing H0: θ=θ0.
 >
 >
 >
-> Từ đó, theo Tautology, nếu xây dựng hàm C(**x**) nhận vào x và trả ra tập {θ:
-> a ≤ Q(**x**, θ) ≤ b} thì C(**X**) = {θ: a ≤ Q(**X**, θ) ≤ b} chính là 1-α confidence
+> Từ đó, theo Tautology, nếu xây dựng hàm C(𝐱) nhận vào x và trả ra tập {θ:
+> a ≤ Q(𝐱, θ) ≤ b} thì C(𝐗) = {θ: a ≤ Q(𝐗, θ) ≤ b} chính là 1-α confidence
 > set/interval của θ.
 >
 >
 >
-> Thế thì với việc ta có pivot Z = (Xbar - μ) / σ/√n thì làm như trên, ta sẽ xây
-> dựng tập A(μ0) = {x: a ≤ (Xbar - μ) / σ/√n ≤ b} sao cho P_μ0(**X** ∈ A(μ0)) =
+> Thế thì với việc ta có pivot Z = (X̄ - μ) / σ/√n thì làm như trên, ta sẽ xây
+> dựng tập A(μ0) = {x: a ≤ (X̄ - μ) / σ/√n ≤ b} sao cho P_μ0(𝐗 ∈ A(μ0)) =
 > 1-α
 >
 >
 >
-> ⇔ P(a ≤ (Xbar - μ0) / σ/√n ≤ b) = 1 - α
+> ⇔ P(a ≤ (X̄ - μ0) / σ/√n ≤ b) = 1 - α
 >
 >
 >
@@ -510,15 +510,15 @@
 >
 >
 >
-> Tuy nhiên khi đó C(**X**) = {μ: a ≤ (Xbar - μ) / σ/√n ≤ b}
+> Tuy nhiên khi đó C(𝐗) = {μ: a ≤ (X̄ - μ) / σ/√n ≤ b}
 >
 >
 >
-> = {μ: aσ/√n ≤ Xbar - μ ≤ bσ/√n}
+> = {μ: aσ/√n ≤ X̄ - μ ≤ bσ/√n}
 >
 >
 >
-> = {μ: Xbar - bσ/√n ≤ μ ≤ Xbar - aσ/√n}
+> = {μ: X̄ - bσ/√n ≤ μ ≤ X̄ - aσ/√n}
 >
 >
 >
@@ -532,18 +532,18 @@
 >
 >
 >
-> ----- Do đó, khi không biết σ ta sẽ dùng cái pivot thứ hai: (Xbar - μ) / S/√n,
+> ----- Do đó, khi không biết σ ta sẽ dùng cái pivot thứ hai: (X̄ - μ) / S/√n,
 > với S^2 là sample variance (chính xác thì gọi là unbiased sample variance có
 > công thức Σi (Xi - x̄)^2 / (n-1), vì E(S^2) = σ²)
 >
 >
 >
-> Cách làm hoàn toàn tương tự, ta sẽ tìm a, b để A(μ0) = {**x**: a ≤ Xbar - μ) /
+> Cách làm hoàn toàn tương tự, ta sẽ tìm a, b để A(μ0) = {𝐱: a ≤ X̄ - μ) /
 > S/√n ≤ b} là một level α acceptance region của bài toán testing H0: μ = μ0
 >
 >
 >
-> Cũng là P_μ0(a ≤ (Xbar - μ) / S/√n ≤ b} = 1-α
+> Cũng là P_μ0(a ≤ (X̄ - μ) / S/√n ≤ b} = 1-α
 >
 >
 >
@@ -563,24 +563,24 @@
 >
 >
 >
-> Khi đó, theo Tautology, C(**X**) = {μ: a ≤ (Xbar - μ) / S/√n ≤ b} sẽ là 1-α confidence 
+> Khi đó, theo Tautology, C(𝐗) = {μ: a ≤ (X̄ - μ) / S/√n ≤ b} sẽ là 1-α confidence 
 > set của μ
 >
 >
 >
-> = {μ: a ≤ (Xbar - μ) / S/√n, (Xbar - μ) / S/√n ≤ b}
+> = {μ: a ≤ (X̄ - μ) / S/√n, (X̄ - μ) / S/√n ≤ b}
 >
 >
 >
-> = {μ: a S/√n ≤ (Xbar - μ), (Xbar - μ) ≤ b S/√n}
+> = {μ: a S/√n ≤ (X̄ - μ), (X̄ - μ) ≤ b S/√n}
 >
 >
 >
-> = {μ: μ ≤ Xbar - a S/√n, Xbar - b S/√n ≤ μ}
+> = {μ: μ ≤ X̄ - a S/√n, X̄ - b S/√n ≤ μ}
 >
 >
 >
-> = {μ: Xbar - b S/√n ≤ μ ≤ Xbar - a S/√n} chính là 1-α confidence interval cho μ
+> = {μ: X̄ - b S/√n ≤ μ ≤ X̄ - a S/√n} chính là 1-α confidence interval cho μ
 >
 >
 >
@@ -588,7 +588,7 @@
 >
 >
 >
-> ⇨ [Xbar - tn-1,α/2 S/√n ≤ μ ≤ Xbar + tn-1,α/2 S/√n]
+> ⇨ [X̄ - tn-1,α/2 S/√n ≤ μ ≤ X̄ + tn-1,α/2 S/√n]
 >
 >
 >
@@ -621,7 +621,7 @@
 >
 >
 > Nên theo Theorem 9.3.2, đây là đoạn ngắn nhất thỏa P(a ≤ Tn-1 ≤ b) = 1-α → từ
-> đó cũng giúp kết luận [Xbar - tn-1,α/2 S/√n ≤ μ ≤ Xbar + tn-1,α/2 S/√n] là đoạn tối
+> đó cũng giúp kết luận [X̄ - tn-1,α/2 S/√n ≤ μ ≤ X̄ + tn-1,α/2 S/√n] là đoạn tối
 > ưu.
 >
 >
@@ -634,7 +634,7 @@
 >
 >
 >
-> xét interval length = Xbar - a S/√n - (Xbar - b S/√n) = (b - a) S/√n
+> xét interval length = X̄ - a S/√n - (X̄ - b S/√n) = (b - a) S/√n
 >
 >
 >
@@ -1049,22 +1049,22 @@
 >
 >
 >
-> Đại khái là như ta biết nếu C(**X**) là một 1-α confidence set của θ, được hình
+> Đại khái là như ta biết nếu C(𝐗) là một 1-α confidence set của θ, được hình
 > thành bằng cách invert một level α acceptance region A(θ0) của bài toán
 > testing H0: θ = θ0. Thì theo định nghĩa, coverage probability của nó chính  là
-> P_θ(θ ∈ C(**X**)). Thì đây cũng được gọi là PROBABILITY OF TRUE
+> P_θ(θ ∈ C(𝐗)). Thì đây cũng được gọi là PROBABILITY OF TRUE
 > COVERAGE.
 >
 >
 >
 > tức là, nó mang ý nghĩa là, nếu θ LÀ GIÁ TRỊ THẬT của param, thì xác suất
 > cái confidence set này chứa θ là bao nhiêu. (Chú ý, nó ko phải là 1-α nhé, vì
-> 1-α là confidence  coefficient, là inf_θ P_θ(θ ∈ C(**X**))
+> 1-α là confidence  coefficient, là inf_θ P_θ(θ ∈ C(𝐗))
 >
 >
 >
 > Và mình cũng hiểu đây là hàm theo θ vì 2 lí do: θ là input, và thứ hai là đây là
-> xác suất của C(**X**), một random interval dựa trên random sample **X**, nên
+> xác suất của C(𝐗), một random interval dựa trên random sample 𝐗, nên
 > có thể xác suất này phụ  thuộc θ (trừ khi ta có một interval được xây dựng
 > dựa trên pivot)
 >
@@ -1072,12 +1072,12 @@
 >
 > Còn bây giờ, ta được học định nghĩa của **PROBABILITY OF FALSE
 > COVERAGE**, mang ý nghĩa như sau: với một θ' KHÔNG PHẢI LÀ GIÁ TRỊ
-> THẬT của param, và θ MỚI LÀ GIÁ TRỊ THẬT của param, thì xác xuất C(**X**)
+> THẬT của param, và θ MỚI LÀ GIÁ TRỊ THẬT của param, thì xác xuất C(𝐗)
 > chứa θ' là bao nhiêu.
 >
 >
 >
-> Do đó có thể dự đoán công thức của cái này sẽ là P_θ(θ' ∈ C(**X**))
+> Do đó có thể dự đoán công thức của cái này sẽ là P_θ(θ' ∈ C(𝐗))
 >
 >
 >
@@ -1085,15 +1085,15 @@
 >
 >
 >
-> Nếu C(**X**) có dạng [L(**X**), U(**X**)] thì chỉ xét θ' khác θ
+> Nếu C(𝐗) có dạng [L(𝐗), U(𝐗)] thì chỉ xét θ' khác θ
 >
 >
 >
-> Nếu C(**X**) có dạng (-inf, U(**X**)] thì chỉ xét θ' > θ
+> Nếu C(𝐗) có dạng (-inf, U(𝐗)] thì chỉ xét θ' > θ
 >
 >
 >
-> Nếu C(**X**) có dạng [L(**X**), inf) thì chỉ xét θ' < θ
+> Nếu C(𝐗) có dạng [L(𝐗), inf) thì chỉ xét θ' < θ
 >
 >
 >
@@ -1103,27 +1103,27 @@
 >
 > Hiểu đại khái thì, bản chất của việc đặt ra cái này, xác suất cover giá trị sai là
 > nhằm tính toán, định lượng MỨC ĐỘ DỞ / YẾU KÉM của confidence set
-> C(**X**) bằng cách đó xác suất nó chứa giá trị sai θ'
+> C(𝐗) bằng cách đó xác suất nó chứa giá trị sai θ'
 >
 >
 >
-> Vậy thì nếu C(**X**) = [L(**X**), inf), thì có nghĩa là gì → ta nhớ, có nghĩa là về
-> bản chất, cái interval estimator này đang ĐOÁN θ NẰM TRONG ĐÂY: L(**X**)
-> < θ < inf Mà như vậy thì việc đánh giá độ dở của C(**X**) CHỈ CÓ NGHĨA nếu
-> ta xét mấy  thằng θ' < θ. Vì mọi θ' > θ đương nhiên C(**X**) cũng chứa hết rồi,
+> Vậy thì nếu C(𝐗) = [L(𝐗), inf), thì có nghĩa là gì → ta nhớ, có nghĩa là về
+> bản chất, cái interval estimator này đang ĐOÁN θ NẰM TRONG ĐÂY: L(𝐗)
+> < θ < inf Mà như vậy thì việc đánh giá độ dở của C(𝐗) CHỈ CÓ NGHĨA nếu
+> ta xét mấy  thằng θ' < θ. Vì mọi θ' > θ đương nhiên C(𝐗) cũng chứa hết rồi,
 > nên đánh giá xác suất nó chứa mấy thằng đó là vô nghĩa. Và bằng cách đánh
 > giá bởi các θ'  < θ, thì ta mới làm động tác cố gắng **GIẢM ĐỘ YẾU KÉM**
-> của C(**X**) BẰNG CÁCH **NÂNG** L(**X**) **CÀNG SÁT VỚI θ CÀNG TỐT**,
-> KHI ĐÓ, SẼ **ĐÁ HẾT MẤY THẰNG θ'** < θ **RA KHỎI** C(**X**) CẢ.
+> của C(𝐗) BẰNG CÁCH **NÂNG** L(𝐗) **CÀNG SÁT VỚI θ CÀNG TỐT**,
+> KHI ĐÓ, SẼ **ĐÁ HẾT MẤY THẰNG θ'** < θ **RA KHỎI** C(𝐗) CẢ.
 >
 >
 >
-> Tương tự như vậy, nếu C(X) = (-inf, U(**X**)] thì sẽ chỉ có ý nghĩa nếu ta xét
+> Tương tự như vậy, nếu C(X) = (-inf, U(𝐗)] thì sẽ chỉ có ý nghĩa nếu ta xét
 > các θ' > θ.
 >
 >
 >
-> Còn với C(X) có dạng [L(**X**), U(**X**)] thì dĩ nhiên ta sẽ xét hết θ' khác θ.
+> Còn với C(X) có dạng [L(𝐗), U(𝐗)] thì dĩ nhiên ta sẽ xét hết θ' khác θ.
 
 <br>
 
@@ -1145,13 +1145,13 @@
 >
 >
 >
-> Thì C(X) là UMA 1-α confidence set của θ thì với C'(**X**) là 1-α confidence
+> Thì C(X) là UMA 1-α confidence set của θ thì với C'(𝐗) là 1-α confidence
 > set  bất kì của θ. Thì với mọi θ' thì:
 >
 >
 >
 > P_θ(θ' ∈ C(X)) ≤ P_θ(θ' ∈ C'(X)) ∀ θ' khác θ / hay < θ hay > θ tùy vào
-> C(**X**) và C'(**X**) có dạng nào trong 3 dạng vừa nói.
+> C(𝐗) và C'(𝐗) có dạng nào trong 3 dạng vừa nói.
 >
 >
 >
@@ -1185,8 +1185,8 @@
 >
 > Thế thì, ta được học một khái niệm mới - probability of false coverage: Được
 > định nghĩa là function của θ' và θ  mang ý nghĩa xác suất confidence set chứa
-> θ': P_θ(θ' ∈ C(**X**)) với θ' khác θ hoặc < θ hoặc > θ tùy vào việc C(**X**) có
-> dạng [L(**X**), U(**X**)] hay [L(**X**), inf) hoặc (inf, U(**X**)], và nó sẽ thể hiện
+> θ': P_θ(θ' ∈ C(𝐗)) với θ' khác θ hoặc < θ hoặc > θ tùy vào việc C(𝐗) có
+> dạng [L(𝐗), U(𝐗)] hay [L(𝐗), inf) hoặc (inf, U(𝐗)], và nó sẽ thể hiện
 > độ yếu kém của một confidence set.
 >
 >
@@ -1210,14 +1210,14 @@
 > cao nhất.
 >
 > Theorem nói rằng: Với mỗi θ0 ∈ Θ, gọi A*(θ0) là UMP level α acceptance region
-> của bài toán testing H0: θ = θ0 vs H1: θ > θ0. Thì khi đó nếu gọi C*(**x**) là 1-α
+> của bài toán testing H0: θ = θ0 vs H1: θ > θ0. Thì khi đó nếu gọi C*(𝐱) là 1-α
 > confidence set tạo bởi cách inver cái test trên thì nó chính là UMA 1-α
 > confidence set, thể hiện bởi:
 >
 >
 >
-> P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) với mọi θ' < θ, với mọi 1-α confidence
-> set bất kì C(**X**) khác.
+> P_θ(θ' ∈ C*(𝐗)) ≤ P_θ(θ' ∈ C(𝐗)) với mọi θ' < θ, với mọi 1-α confidence
+> set bất kì C(𝐗) khác.
 
 <br>
 
@@ -1232,16 +1232,16 @@
 >
 >
 >
-> Đầu tiên, dĩ nhiên để chứng minh rằng cái C*(**X**) là UMA 1-α confidence set
-> có dạng [L(**X**), inf) thì xác suất of false coverage của nó là nhỏ nhất:
+> Đầu tiên, dĩ nhiên để chứng minh rằng cái C*(𝐗) là UMA 1-α confidence set
+> có dạng [L(𝐗), inf) thì xác suất of false coverage của nó là nhỏ nhất:
 >
 >
 >
-> P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) ∀θ' < θ.
+> P_θ(θ' ∈ C*(𝐗)) ≤ P_θ(θ' ∈ C(𝐗)) ∀θ' < θ.
 >
 >
 >
-> với C(**X**) là 1-α confidence set  bất kì.
+> với C(𝐗) là 1-α confidence set  bất kì.
 >
 >
 >
@@ -1268,20 +1268,20 @@
 >
 >
 >
-> Nên power function của UMP test = β(θ) = P_θ(**X** ∈ A*(θ0)_c)
+> Nên power function của UMP test = β(θ) = P_θ(𝐗 ∈ A*(θ0)_c)
 >
 >
 >
-> Và power function của test khác: P_θ(**X** ∈ Rejection region của test đó)
+> Và power function của test khác: P_θ(𝐗 ∈ Rejection region của test đó)
 >
 >
 >
 > Gọi A(θ0) là level α acceptance region được tạo bởi invert cái 1-α confidence
-> set C(**X**) bất kì, thì power function của cái test này sẽ là:
+> set C(𝐗) bất kì, thì power function của cái test này sẽ là:
 >
 >
 >
-> P_θ(**X** ∈ A(θ0)_c)
+> P_θ(𝐗 ∈ A(θ0)_c)
 >
 >
 >
@@ -1289,15 +1289,15 @@
 >
 >
 >
-> P_θ(**X** ∈ A*(θ0)_c) ≥ P_θ(**X** ∈ A(θ0)_c) ∀θ ∈ Θ0c (cũng là ∀ θ > θ0)
+> P_θ(𝐗 ∈ A*(θ0)_c) ≥ P_θ(𝐗 ∈ A(θ0)_c) ∀θ ∈ Θ0c (cũng là ∀ θ > θ0)
 >
 >
 >
-> ⇔ 1 - P_θ(**X** ∈ A*(θ0)) ≥ 1- P_θ(**X** ∈ A(θ0)) ∀θ > θ0
+> ⇔ 1 - P_θ(𝐗 ∈ A*(θ0)) ≥ 1- P_θ(𝐗 ∈ A(θ0)) ∀θ > θ0
 >
 >
 >
-> ⇔ P_θ(**X** ∈ A*(θ0)) ≤ P_θ(**X** ∈ A(θ0)) ∀θ > θ0
+> ⇔ P_θ(𝐗 ∈ A*(θ0)) ≤ P_θ(𝐗 ∈ A(θ0)) ∀θ > θ0
 >
 >
 >
@@ -1310,7 +1310,7 @@
 >
 >
 > Nó nói rằng, nếu ta có A(θ0) là level α acceptance region của bài toán testing
-> H0: θ = θ0, thì bằng cách đặt C(**x**) = {θ: **x** ∈ A(θ)} thì C(**X**) chính là 1-α confidence
+> H0: θ = θ0, thì bằng cách đặt C(𝐱) = {θ: 𝐱 ∈ A(θ)} thì C(𝐗) chính là 1-α confidence
 > set của θ.
 >
 >
@@ -1320,23 +1320,23 @@
 >
 >
 >
-> ⇔ P_θ0(reject H0) = P_θ0(**X** ∈ A(θ0)_c) ≤ α 
+> ⇔ P_θ0(reject H0) = P_θ0(𝐗 ∈ A(θ0)_c) ≤ α 
 >
 >
 >
-> ⇔ 1 - P_θ0(**X** ∈ A(θ0)) ≤ α 
+> ⇔ 1 - P_θ0(𝐗 ∈ A(θ0)) ≤ α 
 >
 >
 >
-> ⇔ 1 - α ≤ P_θ0(**X** ∈ A(θ0)) 
+> ⇔ 1 - α ≤ P_θ0(𝐗 ∈ A(θ0)) 
 >
 >
 >
-> ⇔ 1 - α ≤ P_θ0(**X** ∈ A(θ0)) 
+> ⇔ 1 - α ≤ P_θ0(𝐗 ∈ A(θ0)) 
 >
 >
 >
-> Mà vì cách define C(**x**) = {θ0 ∈ Θ: **x** ∈A(θ0)} nên **x** ∈ A(θ0) ⇔ θ0 ∈ C(**x**)
+> Mà vì cách define C(𝐱) = {θ0 ∈ Θ: 𝐱 ∈A(θ0)} nên 𝐱 ∈ A(θ0) ⇔ θ0 ∈ C(𝐱)
 >
 >
 >
@@ -1344,15 +1344,15 @@
 >
 >
 >
-> ⇨ P_θ0(**X** ∈ A(θ0)) = P_θ0(θ0 ∈ C(**X**))
+> ⇨ P_θ0(𝐗 ∈ A(θ0)) = P_θ0(θ0 ∈ C(𝐗))
 >
 >
 >
-> ⇨ 1 - α ≤ P_θ0(θ0 ∈ C(**X**))
+> ⇨ 1 - α ≤ P_θ0(θ0 ∈ C(𝐗))
 >
 >
 >
-> Và như vậy C(**X**) là một confidence set mà với mọi θ0 ∈ Θ thì coverage
+> Và như vậy C(𝐗) là một confidence set mà với mọi θ0 ∈ Θ thì coverage
 > probability đều lớn hơn 1 - α, đồng nghĩa 1 - α ≤ inf_θ0∈Θ P_θ0(θ0 ∈ C(X)) 
 > ⇨ 1 - α < confidence coefficient ⇨ đây là 1-α confidence set.
 >
@@ -1362,19 +1362,19 @@
 >
 >
 >
-> Như vậy thì quay lại đây, ta đang có P_θ(**X** ∈ A*(θ0)) ≤ P_θ(**X** ∈ A(θ0)) ∀θ > θ0
+> Như vậy thì quay lại đây, ta đang có P_θ(𝐗 ∈ A*(θ0)) ≤ P_θ(𝐗 ∈ A(θ0)) ∀θ > θ0
 >
 >
 >
-> Ta có: P_θ(**X** ∈ A*(θ0)) = P_θ(θ0 ∈ C*(**X**)) 
+> Ta có: P_θ(𝐗 ∈ A*(θ0)) = P_θ(θ0 ∈ C*(𝐗)) 
 >
 >
 >
-> P_θ(**X** ∈ A(θ0)) = P_θ(θ0 ∈ C(**X**))
+> P_θ(𝐗 ∈ A(θ0)) = P_θ(θ0 ∈ C(𝐗))
 >
 >
 >
-> Vậy P_θ(θ0 ∈ C*(**X**)) ≤ P_θ(θ0 ∈ C(**X**)) ∀θ > θ0 cũng là với mọi θ0 < θ 
+> Vậy P_θ(θ0 ∈ C*(𝐗)) ≤ P_θ(θ0 ∈ C(𝐗)) ∀θ > θ0 cũng là với mọi θ0 < θ 
 >
 >
 >
@@ -1382,7 +1382,7 @@
 >
 >
 >
-> P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) ∀θ' < θ.
+> P_θ(θ' ∈ C*(𝐗)) ≤ P_θ(θ' ∈ C(𝐗)) ∀θ' < θ.
 
 **🔗 See also:** [H1 và Dạng Tập Tin Cậy](./92_methods_of_finding_interval_estimators.md#node-y9cjzgq)
 
@@ -1402,13 +1402,13 @@
 >
 >
 > Recall kiến thức chút xíu: Bữa giờ mình đã biết thêm định nghĩa của probability of false
-> coverage, của một confidence set C(**X**), là một hàm theo θ và θ', define bởi P_θ(θ' ∈
-> C(**X**))
+> coverage, của một confidence set C(𝐗), là một hàm theo θ và θ', define bởi P_θ(θ' ∈
+> C(𝐗))
 >
 >
 >
-> θ' sẽ lần lượt là i) θ' ≠ θ, ii) θ' < θ, iii) θ' > θ ứng với C(**X**) có dạng i) [L(**X**), U(**X**)]
-> ii) [L(**X**), inf), iii) (-inf, U(**X**)]
+> θ' sẽ lần lượt là i) θ' ≠ θ, ii) θ' < θ, iii) θ' > θ ứng với C(𝐗) có dạng i) [L(𝐗), U(𝐗)]
+> ii) [L(𝐗), inf), iii) (-inf, U(𝐗)]
 >
 >
 >
@@ -1418,8 +1418,8 @@
 >
 >
 >
-> Tức là nếu C*(**X**) và C(**X**) lần lượt là UMA 1-α confidence set và 1-α confidence
-> set bất kì, thì P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) với mọi θ và θ'.
+> Tức là nếu C*(𝐗) và C(𝐗) lần lượt là UMA 1-α confidence set và 1-α confidence
+> set bất kì, thì P_θ(θ' ∈ C*(𝐗)) ≤ P_θ(θ' ∈ C(𝐗)) với mọi θ và θ'.
 >
 >
 >
@@ -1430,10 +1430,10 @@
 >
 >
 > Còn nhớ, ta đã hiểu, một cái test của bài toán Hypothesis testing H0: θ ∈ Θ0 vs H1: θ ∈
-> Θ0c, có bản chất chỉ là một cái rule: Dùng một statistic, gọi là test statistic T(**X**) nào
+> Θ0c, có bản chất chỉ là một cái rule: Dùng một statistic, gọi là test statistic T(𝐗) nào
 > đó và check với một cái rule nào đó để quyết định rằng sẽ accept hay reject H0. Và với
 > cái rule đó, khi xét mọi possible value x của X, ta sẽ chia range X thành hai tập: reject
-> region: R = {**x** ∈ range **X**: T(**x**) khiến kết luận reject H0} và R_c là acceptance
+> region: R = {𝐱 ∈ range 𝐗: T(𝐱) khiến kết luận reject H0} và R_c là acceptance
 > region.
 >
 >
@@ -1449,11 +1449,11 @@
 >
 >
 >
-> với mọi θ∈Θ0 P_θ(**X** ∈ R) ≤ α,
+> với mọi θ∈Θ0 P_θ(𝐗 ∈ R) ≤ α,
 >
 >
 >
-> hay sup_θ∈Θ0 P_θ(**X** ∈ R) ≤ α.
+> hay sup_θ∈Θ0 P_θ(𝐗 ∈ R) ≤ α.
 >
 >
 >
@@ -1462,7 +1462,7 @@
 >
 >
 > Sau đó, ta biết về power function, được định nghĩa là một function θ, define bởi xác suất
-> test reject H0: β(θ) = P_θ(**X** ∈ R).
+> test reject H0: β(θ) = P_θ(𝐗 ∈ R).
 >
 >
 >
@@ -1503,13 +1503,13 @@
 >
 >
 >
-> Khi invert A*(θ0), và A(θ0) để có 1-α confidence set C*(**X**) và C(**X**) thì C*(**X**) sẽ
+> Khi invert A*(θ0), và A(θ0) để có 1-α confidence set C*(𝐗) và C(𝐗) thì C*(𝐗) sẽ
 > luôn có probability of false coverage nhỏ hơn hoặc bằng probability of false coverage
-> của C(**X**) với mọi θ' < θ và với mọi θ:
+> của C(𝐗) với mọi θ' < θ và với mọi θ:
 >
 >
 >
-> P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) ∀ θ' < θ
+> P_θ(θ' ∈ C*(𝐗)) ≤ P_θ(θ' ∈ C(𝐗)) ∀ θ' < θ
 >
 >
 >
@@ -1519,26 +1519,26 @@
 >
 >
 >
-> P_θ(**X** ∈ A*(θ0)_c) ≥ P_θ(**X** ∈ A(θ0)_c) ∀ θ ∈ Θ0c = {θ: θ0 < θ}
+> P_θ(𝐗 ∈ A*(θ0)_c) ≥ P_θ(𝐗 ∈ A(θ0)_c) ∀ θ ∈ Θ0c = {θ: θ0 < θ}
 >
 >
 >
-> ⇔ 1 - P_θ(**X** ∈ A*(θ0)) ≥ 1 - P_θ(**X** ∈ A(θ0)) ∀θ ∈ Θ0c = {θ: θ0 < θ}
+> ⇔ 1 - P_θ(𝐗 ∈ A*(θ0)) ≥ 1 - P_θ(𝐗 ∈ A(θ0)) ∀θ ∈ Θ0c = {θ: θ0 < θ}
 >
 >
 >
-> ⇔ P_θ(**X** ∈ A*(θ0)) ≤  P_θ(**X** ∈ A(θ0)) ∀θ ∈ Θ0c = {θ: θ0 < θ} (I)
+> ⇔ P_θ(𝐗 ∈ A*(θ0)) ≤  P_θ(𝐗 ∈ A(θ0)) ∀θ ∈ Θ0c = {θ: θ0 < θ} (I)
 >
 >
 >
-> Rồi, đến đây, ở trên ta nói C*(**X**) là 1-α confidence set của θ tạo bởi invert level α
+> Rồi, đến đây, ở trên ta nói C*(𝐗) là 1-α confidence set của θ tạo bởi invert level α
 > acceptance region A*(θ0) của bài toán testing H0: θ = θ0 vs H1: θ0 < θ.
 >
 >
 >
 > Ôn lại một chút lập luận của cái này: Đó là nếu ta có A(θ0) là level α acceptance region
-> của bài toán testing H0: θ = θ0, thì bằng cách xây dựng hàm tập c(**x**) nhận vào x, trả
-> ra tập c(**x**) = {θ: **x** ∈ A(θ0)}, thì khi đó, C(**X**) chính là một 1-α confidence set của
+> của bài toán testing H0: θ = θ0, thì bằng cách xây dựng hàm tập c(𝐱) nhận vào x, trả
+> ra tập c(𝐱) = {θ: 𝐱 ∈ A(θ0)}, thì khi đó, C(𝐗) chính là một 1-α confidence set của
 > θ. Lí do:
 >
 >
@@ -1552,64 +1552,64 @@
 >
 >
 >
-> ⇔ sup_θ∈Θ0={θ0} P_θ(**X** ∈ A(θ0)_c) ≤ α
+> ⇔ sup_θ∈Θ0={θ0} P_θ(𝐗 ∈ A(θ0)_c) ≤ α
 >
 >
 >
-> ⇔ P_θ0(**X** ∈ A(θ0)_c) ≤ α
+> ⇔ P_θ0(𝐗 ∈ A(θ0)_c) ≤ α
 >
 >
 >
-> ⇔ 1 - P_θ0(**X** ∈ A(θ0)) ≤ α
+> ⇔ 1 - P_θ0(𝐗 ∈ A(θ0)) ≤ α
 >
 >
 >
-> ⇔ 1 - α ≤ P_θ0(**X** ∈ A(θ0)) (1)
+> ⇔ 1 - α ≤ P_θ0(𝐗 ∈ A(θ0)) (1)
 >
 >
 >
-> Đến đây, như đã nói, nếu xây dựng hàm c(**x**) = {θ: **x** ∈ A(θ)}
+> Đến đây, như đã nói, nếu xây dựng hàm c(𝐱) = {θ: 𝐱 ∈ A(θ)}
 >
 >
 >
-> thì logic sẽ là nếu **x** ∈ A(θ) chỉ khi θ ∈ c(**x**)
+> thì logic sẽ là nếu 𝐱 ∈ A(θ) chỉ khi θ ∈ c(𝐱)
 >
 >
 >
-> cũng là **x** ∈ A(θ0) khi và chỉ khi θ0 ∈ c(**x**)
+> cũng là 𝐱 ∈ A(θ0) khi và chỉ khi θ0 ∈ c(𝐱)
 >
 >
 >
-> Do đó, nếu xét  P_θ0(**X** ∈ A(θ0))
+> Do đó, nếu xét  P_θ0(𝐗 ∈ A(θ0))
 >
 >
 >
-> bán chất của nó là P_θ0({**x**: **x** ∈ A(θ0)})
+> bán chất của nó là P_θ0({𝐱: 𝐱 ∈ A(θ0)})
 >
 >
 >
-> và vì **x** ∈ A(θ0) ⇔ θ0 ∈ C(**x**) như vừa nói nên: {**x**: x ∈ A(θ0)} = {**x**: θ0 ∈
-> c(**x**)}
+> và vì 𝐱 ∈ A(θ0) ⇔ θ0 ∈ C(𝐱) như vừa nói nên: {𝐱: x ∈ A(θ0)} = {𝐱: θ0 ∈
+> c(𝐱)}
 >
 >
 >
-> ⇨ P_θ0({**x**: **x** ∈ A(θ0)}) = P_θ0({**x**: θ0 ∈ c(**x**)})
+> ⇨ P_θ0({𝐱: 𝐱 ∈ A(θ0)}) = P_θ0({𝐱: θ0 ∈ c(𝐱)})
 >
 >
 >
-> và vế phải chính là P_θ0(C(**X**) chứa θ0) hay P_θ0(θ0 ∈ C(**X**))
+> và vế phải chính là P_θ0(C(𝐗) chứa θ0) hay P_θ0(θ0 ∈ C(𝐗))
 >
 >
 >
-> Như vậy (1) ⇔ 1 - α ≤ P_θ0(θ0 ∈ C(**X**)) và vì điều này đúng với mọi θ0 bất kì (tức là
-> với θ0 bất kì, nếu ta tạo C(**X**) bằng cách làm vừa rồi xuất phát từ một level α
+> Như vậy (1) ⇔ 1 - α ≤ P_θ0(θ0 ∈ C(𝐗)) và vì điều này đúng với mọi θ0 bất kì (tức là
+> với θ0 bất kì, nếu ta tạo C(𝐗) bằng cách làm vừa rồi xuất phát từ một level α
 > acceptance region A(θ0) thì đều dẫn đến kết quả này bất kể θ0 là bao nhiêu). Do đó cái
 > ta có chính là:
 >
 >
 >
-> ∀θ ∈ Θ 1 - α ≤ P_θ(θ ∈ C(**X**)) ⇨ 1 - α ≤ inf_θ∈Θ P_θ(θ ∈ C(**X**)) giúp theo định
-> nghĩa kết luận C(**X**) chính là một 1 - α confidence set của θ
+> ∀θ ∈ Θ 1 - α ≤ P_θ(θ ∈ C(𝐗)) ⇨ 1 - α ≤ inf_θ∈Θ P_θ(θ ∈ C(𝐗)) giúp theo định
+> nghĩa kết luận C(𝐗) chính là một 1 - α confidence set của θ
 >
 >
 >
@@ -1622,28 +1622,28 @@
 >
 >
 >
-> ⇔ P_θ(**X** ∈ A*(θ0)) ≤  P_θ(**X** ∈ A(θ0)) ∀θ ∈ Θ0c = {θ: θ0 < θ} (I)
+> ⇔ P_θ(𝐗 ∈ A*(θ0)) ≤  P_θ(𝐗 ∈ A(θ0)) ∀θ ∈ Θ0c = {θ: θ0 < θ} (I)
 >
 >
 >
-> thì lập luận y như trên, P_θ(**X** ∈ A*(θ0)) = P_θ({**x**: **x** ∈A*(θ0)}) = P_θ({**x**:
-> θ0 ∈ C*(**x**)})
+> thì lập luận y như trên, P_θ(𝐗 ∈ A*(θ0)) = P_θ({𝐱: 𝐱 ∈A*(θ0)}) = P_θ({𝐱:
+> θ0 ∈ C*(𝐱)})
 >
 >
 >
-> và cái này chính là P_θ(θ0 ∈ C*(**X**))
+> và cái này chính là P_θ(θ0 ∈ C*(𝐗))
 >
 >
 >
-> Tương tự, P_θ(**X** ∈ A(θ0)) = P_θ(θ0 ∈ C(**X**))
+> Tương tự, P_θ(𝐗 ∈ A(θ0)) = P_θ(θ0 ∈ C(𝐗))
 >
 >
 >
-> Vậy ta có: P_θ(θ0 ∈ C*(**X**)) ≤ P_θ(θ0 ∈ C(**X**)) ∀θ ∈ Θ0c = {θ: θ0 < θ}
+> Vậy ta có: P_θ(θ0 ∈ C*(𝐗)) ≤ P_θ(θ0 ∈ C(𝐗)) ∀θ ∈ Θ0c = {θ: θ0 < θ}
 >
 >
 >
-> hay P_θ(θ0 ∈ C*(**X**)) ≤ P_θ(θ0 ∈ C(**X**)) ∀θ: θ0 < θ
+> hay P_θ(θ0 ∈ C*(𝐗)) ≤ P_θ(θ0 ∈ C(𝐗)) ∀θ: θ0 < θ
 >
 >
 >
@@ -1660,16 +1660,16 @@
 >
 >
 >
-> P_θ(θ' ∈ C*(**X**)) ≤ P_θ(θ' ∈ C(**X**)) ∀θ: θ' < θ
+> P_θ(θ' ∈ C*(𝐗)) ≤ P_θ(θ' ∈ C(𝐗)) ∀θ: θ' < θ
 >
 >
 >
-> và đây chính là [xác suất false coverage tại θ' của C*(**X**)] ≤ [xác suất of false
-> coverage tại θ'của C(**X**)]
+> và đây chính là [xác suất false coverage tại θ' của C*(𝐗)] ≤ [xác suất of false
+> coverage tại θ'của C(𝐗)]
 >
 >
 >
-> với mọi θ' < θ. ⇨ C*(**X**) chính là UMA 1-α confidence set
+> với mọi θ' < θ. ⇨ C*(𝐗) chính là UMA 1-α confidence set
 >
 > Quay lại ví dụ này, trong chap 8 (xem link) ta đã làm ví dụ để thấy test UMP
 > level α test (của bài toán testing H0: θ = θ0 vs H1: θ < θ0) sẽ là cái mà có
@@ -1683,11 +1683,11 @@
 >
 >
 >
-> Điều này có nghĩa là A*(μ0) = {**x**: x̄ > z_α(σ/√n) + μ0}_complement
+> Điều này có nghĩa là A*(μ0) = {𝐱: x̄ > z_α(σ/√n) + μ0}_complement
 >
 >
 >
-> = {**x**: x̄ ≤ z_α(σ/√n) + μ0}
+> = {𝐱: x̄ ≤ z_α(σ/√n) + μ0}
 >
 >
 >
@@ -1700,7 +1700,7 @@
 >
 >
 >
-> Tạo C*(**x**) = {μ: **x** ∈ A(μ)}
+> Tạo C*(𝐱) = {μ: 𝐱 ∈ A(μ)}
 >
 >
 >
@@ -1800,13 +1800,13 @@
 >
 >
 > Còn với confidence set, theo định nghĩa 1-α confidence set là set có
-> confidence coefficient = 1-α, tức là inf_θ P_θ(θ ∈ C(**X**)) = 1-α, ví dụ 1-α =
+> confidence coefficient = 1-α, tức là inf_θ P_θ(θ ∈ C(𝐗)) = 1-α, ví dụ 1-α =
 > 90% thì mang ý nghĩa là cái confidence set này có xác suất bắt được θ
 > (đúng) luôn lớn hơn 90%.
 >
 >
 >
-> 1 - α ≤ P_θ(θ ∈ C(**X**))
+> 1 - α ≤ P_θ(θ ∈ C(𝐗))
 >
 >
 >
@@ -1816,7 +1816,7 @@
 >
 >
 >
-> P_θ(θ' ∈ C(**X**)) ≤ 1 - α ≤ P_θ(θ ∈ C(**X**)) với mọi θ' ≠ θ
+> P_θ(θ' ∈ C(𝐗)) ≤ 1 - α ≤ P_θ(θ ∈ C(𝐗)) với mọi θ' ≠ θ
 >
 >
 >
@@ -1826,13 +1826,13 @@
 >
 > Thế thì, tác giả cho biết, nếu ta invert một unbiased test thì ta sẽ có một
 > unbiased confidence set. Cụ thể, nếu A(θ0) là unbiased level α acceptance
-> region của bài toán testing H0: θ = θ0 vs H1: θ ≠ θ0 thì C(**x**) được tạo
+> region của bài toán testing H0: θ = θ0 vs H1: θ ≠ θ0 thì C(𝐱) được tạo
 > bằng cách invert cái test trên sẽ là một 1-α unbiased confidence set của θ.
 > Thử chứng minh luôn (đây là nội dung của bài tập 9.46)
 >
 >
 >
-> Cần chứng minh: P_θ(θ' ∈ C(**X**)) ≤ 1 - α với mọi θ' ≠ θ
+> Cần chứng minh: P_θ(θ' ∈ C(𝐗)) ≤ 1 - α với mọi θ' ≠ θ
 >
 >
 >
@@ -1861,39 +1861,39 @@
 >
 >
 >
-> ⇔ α ≤ P_θ(**X** ∈ A(θ0)_c) ∀θ ≠ θ0
+> ⇔ α ≤ P_θ(𝐗 ∈ A(θ0)_c) ∀θ ≠ θ0
 >
 >
 >
-> ⇔ α ≤ 1 - P_θ(**X** ∈ A(θ0)) ∀θ ≠ θ0
+> ⇔ α ≤ 1 - P_θ(𝐗 ∈ A(θ0)) ∀θ ≠ θ0
 >
 >
 >
-> ⇔ P_θ(**X** ∈ A(θ0)) ≤ 1 - α ∀θ ≠ θ0
+> ⇔ P_θ(𝐗 ∈ A(θ0)) ≤ 1 - α ∀θ ≠ θ0
 >
 >
 >
-> Giờ ta sẽ xét C(**X**) được tạo bằng cách invert test này.
+> Giờ ta sẽ xét C(𝐗) được tạo bằng cách invert test này.
 >
 >
 >
-> C(**x**) = {θ0: **x** ∈ A(θ0)} ⇨ **x** ∈ A(θ0) ⇔ θ0 ∈ C(**x**)
+> C(𝐱) = {θ0: 𝐱 ∈ A(θ0)} ⇨ 𝐱 ∈ A(θ0) ⇔ θ0 ∈ C(𝐱)
 >
 >
 >
-> P_θ(**X** ∈ A(θ0)) = P_θ({**x**: **x** ∈ A(θ0)}) = P_θ({**x**: θ0 ∈ C(**x**)})
+> P_θ(𝐗 ∈ A(θ0)) = P_θ({𝐱: 𝐱 ∈ A(θ0)}) = P_θ({𝐱: θ0 ∈ C(𝐱)})
 >
 >
 >
-> = P_θ(C(**X**) chứa θ0)
+> = P_θ(C(𝐗) chứa θ0)
 >
 >
 >
-> Vậy từ P_θ(**X** ∈ A(θ0)) ≤ 1 - α ∀θ ≠ θ0
+> Vậy từ P_θ(𝐗 ∈ A(θ0)) ≤ 1 - α ∀θ ≠ θ0
 >
 >
 >
-> ⇨ ta có P_θ(θ0 ∈ C(**X**)) ≤ 1-α ∀θ ≠ θ0
+> ⇨ ta có P_θ(θ0 ∈ C(𝐗)) ≤ 1-α ∀θ ≠ θ0
 >
 >
 >
@@ -1902,8 +1902,8 @@
 >
 >
 >
-> Do đó ∀ θ0 khác θ P_θ(θ0 ∈ C(**X**)) ≤ 1 - α ⇨ theo định nghĩa, giúp kết
-> luận C(**X**) là unbiased 1-α confidence set.
+> Do đó ∀ θ0 khác θ P_θ(θ0 ∈ C(𝐗)) ≤ 1 - α ⇨ theo định nghĩa, giúp kết
+> luận C(𝐗) là unbiased 1-α confidence set.
 
 <br>
 
@@ -1919,7 +1919,7 @@
 >
 >
 >
-> reject H0 nếu Xbar > σ z_α/2 / √n + θ0 hoặc Xbar < -σ z_α/2 / √n + θ0
+> reject H0 nếu X̄ > σ z_α/2 / √n + θ0 hoặc X̄ < -σ z_α/2 / √n + θ0
 >
 >
 >
@@ -1928,16 +1928,16 @@
 >
 >
 >
-> Theo cái rule của test trên thì A(θ0) = {**x**: -σ z_α/2 + θ0 ≤ xbar ≤ σ z_α/2 + θ0} 
+> Theo cái rule của test trên thì A(θ0) = {𝐱: -σ z_α/2 + θ0 ≤ xbar ≤ σ z_α/2 + θ0} 
 > chính là unbiased level α acceptance region
 >
 >
 >
-> C(**X**) = {θ0: **X** ∈ A(θ0)} = {θ0: -σ z_α/2 + θ0 ≤ Xbar ≤ σ z_α/2 + θ0}
+> C(𝐗) = {θ0: 𝐗 ∈ A(θ0)} = {θ0: -σ z_α/2 + θ0 ≤ X̄ ≤ σ z_α/2 + θ0}
 >
 >
 >
-> = {θ0: Xbar - σ z_α/2 ≤ θ0 ≤ Xbar + σ z_α/2}
+> = {θ0: X̄ - σ z_α/2 ≤ θ0 ≤ X̄ + σ z_α/2}
 >
 >
 >
@@ -1945,7 +1945,7 @@
 >
 >
 >
-> = {μ: Xbar - σ z_α/2 ≤ μ ≤ Xbar + σ z_α/2} chính là unbiased 1-α confidence
+> = {μ: X̄ - σ z_α/2 ≤ μ ≤ X̄ + σ z_α/2} chính là unbiased 1-α confidence
 > set của μ
 
 > [!TIP]
@@ -1999,7 +1999,7 @@
 >
 >
 >
-> E_θ*[Length[C(**X**)]] = ∫_θ≠θ' P_θ*(θ ∈ C(**X**)) dθ
+> E_θ*[Length[C(𝐗)]] = ∫_θ≠θ' P_θ*(θ ∈ C(𝐗)) dθ
 >
 >
 >
@@ -2191,7 +2191,7 @@
 > Thế thì qua phần này, như đã biết, với Bayesian approach, người ta sẽ
 > coi θ như random variable có priori và posteriori là π(θ) và π(θ|x) khi đó
 > nếu ta có một tập A thì ta có thể xét xác suất θ ∈ A dựa theo phân phối
-> posterior: P(θ ∈ A|**x**) = ∫_A π(θ|**x**)dθ.
+> posterior: P(θ ∈ A|𝐱) = ∫_A π(θ|𝐱)dθ.
 >
 >
 >
@@ -2203,41 +2203,41 @@
 >
 >
 > Nên nhấn mạnh lần nữa để hiểu rằng, khi nói về việc ta muốn tìm một
-> 1-α confidence set C(**X**), thì ta đang nó theo classical approach,
-> C(**X**) là random invertal, θ là fixed unknown. Và ta muốn tìm hàm tập
-> C(**x**)  sao cho khi áp lên random sample **X,** để có C(**X**) thì
-> P_θ(C(**X**) chứa θ) là 1-α.
+> 1-α confidence set C(𝐗), thì ta đang nó theo classical approach,
+> C(𝐗) là random invertal, θ là fixed unknown. Và ta muốn tìm hàm tập
+> C(𝐱)  sao cho khi áp lên random sample 𝐗 để có C(𝐗) thì
+> P_θ(C(𝐗) chứa θ) là 1-α.
 >
 >
 >
-> Thế thì mục đích cuối cùng vẫn là ta muốn: với observed value **X** =
+> Thế thì mục đích cuối cùng vẫn là ta muốn: với observed value 𝐗 =
 > **x thì ta có một set / interval C(x) mà xác suất chứa θ là 1-α, hơn nữa
 > ta cũng muốn size của nó nhỏ nhất có thể.**
 >
 >
 >
 > Vậy thì, nói dài dòng để nhấn mạnh rằng tuy rằng khi đã nói về
-> Bayesian trong đó ta coi θ như rv, và với observed value **X** = **x** thì
-> ta có distribution của **X**: π(θ|**x**) và nếu có thể tìm được C(**x**)
-> sao cho P(θ ∈ C(**x**)) = 1-α  thì tuy là về bản chất ta đang làm rất khác
+> Bayesian trong đó ta coi θ như rv, và với observed value 𝐗 = 𝐱 thì
+> ta có distribution của 𝐗: π(θ|𝐱) và nếu có thể tìm được C(𝐱)
+> sao cho P(θ ∈ C(𝐱)) = 1-α  thì tuy là về bản chất ta đang làm rất khác
 > nhau. Nhưng về hình thức thì giống: **VẪN LÀ ĐỐI DIỆN VỚI GIÁ TRỊ
-> QUAN SÁT ĐƯỢC** **X** = **x NÀO ĐÓ THÌ TA CÓ TẬP / INTERVAL
+> QUAN SÁT ĐƯỢC** 𝐗 = **x NÀO ĐÓ THÌ TA CÓ TẬP / INTERVAL
 > C(x) MÀ XÁC SUẤT CHỨA θ LÀ 1 - α**
 >
 >
 >
 > Do đó có thể hiểu rằng, mục tiêu vẫn là tìm 1-α confidence set
-> C(**X**), nhưng mượn cách tiếp cận Bayesian.
+> C(𝐗), nhưng mượn cách tiếp cận Bayesian.
 >
 >
 >
-> Nhưng gỉa sử đã tìm ra C(**x**) khiến P(θ ∈ C(**x**)|**x**) = 1-α thì
-> không tự động  giúp kết luận C(**X**) một 1-α confidence set, đơn giản
-> là vì **KHÔNG CÓ LÍ DO GÌ ĐỂ SUY RA** C(**X**) **LÀ MỘT RANDOM
-> SET MÀ** P_θ(C(**X**) chứa θ) luôn = 1-α  với mọi θ.  Nói cách khác,
-> tất cả những gì ta có chỉ là, biết rằng với giá trị quan sát **X** = **x**, thì
-> xác suất θ nằm trong C(**x**) là 1-α, chấm hết, còn đem cái hàm tập
-> C(**x**) này đi áp vào random sample **X** để có C(**X**) thì không có lí
+> Nhưng gỉa sử đã tìm ra C(𝐱) khiến P(θ ∈ C(𝐱)|𝐱) = 1-α thì
+> không tự động  giúp kết luận C(𝐗) một 1-α confidence set, đơn giản
+> là vì **KHÔNG CÓ LÍ DO GÌ ĐỂ SUY RA** C(𝐗) **LÀ MỘT RANDOM
+> SET MÀ** P_θ(C(𝐗) chứa θ) luôn = 1-α  với mọi θ.  Nói cách khác,
+> tất cả những gì ta có chỉ là, biết rằng với giá trị quan sát 𝐗 = 𝐱, thì
+> xác suất θ nằm trong C(𝐱) là 1-α, chấm hết, còn đem cái hàm tập
+> C(𝐱) này đi áp vào random sample 𝐗 để có C(𝐗) thì không có lí
 > do gì để kết luận nó sẽ tạo ra một 1-α confidence set.
 
 <br>
@@ -2257,7 +2257,7 @@
 >
 >
 > Vậy áp dụng vào trường hợp này, nếu ta có θ ~ π(θ|x) là một unimodal pdf,
-> thì nếu cái khoảng θ: {θ: π(θ|**x**) ≥ k} khiến xác suất P(θ ∈ khoảng đó) =
+> thì nếu cái khoảng θ: {θ: π(θ|𝐱) ≥ k} khiến xác suất P(θ ∈ khoảng đó) =
 > 1-α thì khoảng này cũng là interval có length nhỏ nhất thỏa điều này.
 >
 >
@@ -2271,14 +2271,14 @@
 >
 >
 >
-> Còn nhớ, theo định nghĩa: likelihood là function của θ, define bởi L(θ|**x**)
-> = f(**x**|θ) mang ý nghĩa là độ hợp lí của θ khi giá trị quan sát được **X** =
-> **x**.
+> Còn nhớ, theo định nghĩa: likelihood là function của θ, define bởi L(θ|𝐱)
+> = f(𝐱|θ) mang ý nghĩa là độ hợp lí của θ khi giá trị quan sát được 𝐗 =
+> 𝐱.
 >
 >
 >
-> Áp dụng Bayes rule f(**x**|θ) π(θ) = π(θ|**x**) f(**x**) ⇨ f(**x**|θ) = π(θ|**x**)
-> f(**x**) / π(θ). Nên L(θ|**x**) = π(θ|**x**) f(**x**) / π(θ)
+> Áp dụng Bayes rule f(𝐱|θ) π(θ) = π(θ|𝐱) f(𝐱) ⇨ f(𝐱|θ) = π(θ|𝐱)
+> f(𝐱) / π(θ). Nên L(θ|𝐱) = π(θ|𝐱) f(𝐱) / π(θ)
 >
 >
 >
@@ -2288,16 +2288,16 @@
 >
 >
 >
-> ⇔ L(θ|**x**) π(θ) / f(**x**) ≥ k
+> ⇔ L(θ|𝐱) π(θ) / f(𝐱) ≥ k
 >
 >
 >
-> ⇔ L(θ|**x**) ≥ k f(**x**) / π(θ) = k' nào đó
+> ⇔ L(θ|𝐱) ≥ k f(𝐱) / π(θ) = k' nào đó
 >
 >
 >
-> Có nghĩa đại khái là HPD region {θ: π(**x**|θ) ≥ k} thì cũng tương đương
-> với {θ: L(θ|**x**) ≥ k' nào đó} (đây gọi là likelihood region - ý nghĩa là cái
+> Có nghĩa đại khái là HPD region {θ: π(𝐱|θ) ≥ k} thì cũng tương đương
+> với {θ: L(θ|𝐱) ≥ k' nào đó} (đây gọi là likelihood region - ý nghĩa là cái
 > region / vùng mà hàm likelihood lớn hơn mức nào đó), nên mới nói hai
 > region này similar in form  là vậy
 
@@ -2316,11 +2316,11 @@
 >
 >
 > Thì cứ theo định nghĩa mà làm thôi, cái ta cần tìm để xây dựng được HPD
-> là xem posterior distribution π(λ|**x**) là gì, để rồi tìm k sao cho:
+> là xem posterior distribution π(λ|𝐱) là gì, để rồi tìm k sao cho:
 >
 >
 >
-> P(λ ∈ {λ: π(λ|**x**) ≥ k}) = 1-α (1)
+> P(λ ∈ {λ: π(λ|𝐱) ≥ k}) = 1-α (1)
 >
 >
 >
@@ -2329,7 +2329,7 @@
 >
 >
 >
-> **P(λL ≤ λ ≤ λU) = 1-α** và **PDF TẠI ĐÓ BẰNG NHAU**: π(λL|**x**) = π(λU|**x**)
+> **P(λL ≤ λ ≤ λU) = 1-α** và **PDF TẠI ĐÓ BẰNG NHAU**: π(λL|𝐱) = π(λU|𝐱)
 >
 >
 >
@@ -2340,7 +2340,7 @@
 >
 > Còn cái **1-α equal-tailed Bayes credible set** mà nói đến ở đây là gì, thì
 > nó chính là cái interval mà ta đã làm ở ví dụ đó, cũng là đi tìm hai cái mốc
-> khiến xác suất λ nằm trong đó = 1-α. Nhưng ko cần π(λL|**x**) = π(λU|**x**), ta
+> khiến xác suất λ nằm trong đó = 1-α. Nhưng ko cần π(λL|𝐱) = π(λU|𝐱), ta
 > chỉ cần dùng cách **CẮT ĐẦU, CẮT ĐUÔ**I: CHỌN λU sao cho diện tích
 > khúc đuôi ở sau (P(λ > λU) = α/2 và λL sao cho diện tích khúc đuôi ở đâu
 > cũng = α/2 P(λ < λL) = α/2.
@@ -2414,22 +2414,22 @@
 >
 >
 > Tuy nhiên, việc chọn C nào để suy luận sẽ phụ thuộc, còn dựa trên giá trị quan
-> sát thấy **X** = **x**. Nên có thể hiểu là ta sẽ có một **DECISION FUNCTION**
-> δ(**x**) nhận vào giá trị possible value **x** của **X** và **trả ra tập C dùng để
+> sát thấy 𝐗 = 𝐱. Nên có thể hiểu là ta sẽ có một **DECISION FUNCTION**
+> δ(𝐱) nhận vào giá trị possible value 𝐱 của 𝐗 và **trả ra tập C dùng để
 > làm thành một suy luận "θ** ∈ **C"**.
 >
 >
 >
-> Do đó, ta có thể kí hiệu C(**x**) như bữa giờ hay dùng.
+> Do đó, ta có thể kí hiệu C(𝐱) như bữa giờ hay dùng.
 >
 >
 >
-> (ôn lại chút xíu, bữa giờ khi nói đến C(**x**), hay C(**X**) mình đã luôn nghĩ
+> (ôn lại chút xíu, bữa giờ khi nói đến C(𝐱), hay C(𝐗) mình đã luôn nghĩ
 > rằng nó là một hàm tập, nhận vào giá trị quan sát được x, trả ra một tập dùng
-> để tuyên bố rằng sẽ chứa θ. C(**X**) là một random set. Hay nếu C(**x**) có
-> dạng [L(**x**), U(**x**)] thì C(**X**) là random interval tạo bởi hai rvs L(**X**) và
-> U(**X**). Thì ở đây, chẳng qua mình sẽ chuyển góc nhìn tí xíu, để thấy C(**X**) là
-> một function nhận vào giá trị **x** và trả ra một subset C trong Θ
+> để tuyên bố rằng sẽ chứa θ. C(𝐗) là một random set. Hay nếu C(𝐱) có
+> dạng [L(𝐱), U(𝐱)] thì C(𝐗) là random interval tạo bởi hai rvs L(𝐗) và
+> U(𝐗). Thì ở đây, chẳng qua mình sẽ chuyển góc nhìn tí xíu, để thấy C(𝐗) là
+> một function nhận vào giá trị 𝐱 và trả ra một subset C trong Θ
 
 <br>
 
@@ -2444,13 +2444,13 @@
 > Nhớ lại một chút, trong bài toán point estimation, ta nhớ loss function sẽ
 > phản ánh mức độ nghiêm trọng khi estimation không chính xác so với
 > giá trị thực tế. Và ta sẽ quyết định mức độ nghiêm trọng theo nhiều
-> cách. Có thể là bình phương của sai số (δ(**X**) - θ)^2 hoặc trị tuyệt đối
-> |δ(**X**) - θ|
+> cách. Có thể là bình phương của sai số (δ(𝐗) - θ)^2 hoặc trị tuyệt đối
+> |δ(𝐗) - θ|
 >
 >
 >
 > (Từ đó nếu lấy kì vọng thì ta có khái niệm MSE của một point estimator
-> MSE(δ(**X**) = E_θ[δ(**X**) - θ]^2)
+> MSE(δ(𝐗) = E_θ[δ(𝐗) - θ]^2)
 >
 >
 >
@@ -2470,8 +2470,8 @@
 >
 >
 > Vậy thì I_C(θ) cũng chỉ là function gắn với event A = θ ∈ C mà thôi. Chỉ
-> có điều cần lưu ý rằng C là tập random set phụ thuộc **X**, với giá trị cụ
-> thể **X** = **x** thì mới có giá trị cụ thể của tập C
+> có điều cần lưu ý rằng C là tập random set phụ thuộc 𝐗, với giá trị cụ
+> thể 𝐗 = 𝐱 thì mới có giá trị cụ thể của tập C
 >
 >
 >
@@ -2496,7 +2496,7 @@
 >
 > Ở đây gặp lại khái niệm risk function, còn nhớ, theo định nghĩa, nó chỉ là
 > lấy trung bình của loss function, tức là hàm risk function của một estimator
-> là hàm define bởi: risk function R(θ, δ(**X**)) = E_θ(L(δ(**X**), θ)).
+> là hàm define bởi: risk function R(θ, δ(𝐗)) = E_θ(L(δ(𝐗), θ)).
 >
 >
 >
@@ -2504,7 +2504,7 @@
 >
 >
 >
-> R(θ, C(**X**)) = E_θ[L(θ, C(**X**))]
+> R(θ, C(𝐗)) = E_θ[L(θ, C(𝐗))]
 >
 >
 >
@@ -2516,15 +2516,15 @@
 >
 >
 >
-> Xét E_θ[Length(C)], hiểu cái này thế nào: Ta hiểu C(**X**) là random interval
-> thì Length(C(**X**)) có thể coi như áp cái hàm Length(C(**x**)) lên **X** vậy, để thấy
-> Length(C(**X**)) cũng chỉ là một random variable để mà tính kì vọng.
+> Xét E_θ[Length(C)], hiểu cái này thế nào: Ta hiểu C(𝐗) là random interval
+> thì Length(C(𝐗)) có thể coi như áp cái hàm Length(C(𝐱)) lên 𝐗 vậy, để thấy
+> Length(C(𝐗)) cũng chỉ là một random variable để mà tính kì vọng.
 >
 >
 >
 > Còn E[IC(θ)], thì hiểu thế này, theo định nghĩa IC(θ) = 1 hoặc 0 tùy theo θ 
-> có nằm trong C(**X**) không. cho thấy IC(θ) là một Bernoulli random variable.
-> Chỉ có điều cần hiểu yếu tố random đến từ C(**X**) chứ ko phải đến từ θ.
+> có nằm trong C(𝐗) không. cho thấy IC(θ) là một Bernoulli random variable.
+> Chỉ có điều cần hiểu yếu tố random đến từ C(𝐗) chứ ko phải đến từ θ.
 >
 >
 >
@@ -2536,20 +2536,20 @@
 >
 >
 >
-> Mà IC(θ) = 1 ⇔ θ ∈ C(**X**)
+> Mà IC(θ) = 1 ⇔ θ ∈ C(𝐗)
 >
 >
 >
-> .. = P_θ(θ ∈ C(**X**))
+> .. = P_θ(θ ∈ C(𝐗))
 >
 >
 >
-> Chú ý, nhắc lại đây là xác suất của một event của đại lượng ngẫu nhiên là C(**X**)
-> và **X** thì có phân phối phụ thuộc θ nên xác suất này mới phụ thuộc θ.
+> Chú ý, nhắc lại đây là xác suất của một event của đại lượng ngẫu nhiên là C(𝐗)
+> và 𝐗 thì có phân phối phụ thuộc θ nên xác suất này mới phụ thuộc θ.
 >
 >
 >
-> Vậy R(θ, C(**X**)) = b E_θ[Length(C(**X**))] - P_θ(θ ∈ C(**X**))
+> Vậy R(θ, C(𝐗)) = b E_θ[Length(C(𝐗))] - P_θ(θ ∈ C(𝐗))
 
 **🔗 See also:** [Hàm rủi ro ước lượng](./73_methods_of_evaluating_estimators.md#node-qschovu)
 
@@ -2570,8 +2570,8 @@
 >
 >
 > Lấy ví dụ extreme một chút để thấy ví dụ như khi b = 0, khi đó phần size trong
-> risk function = 0, khiến việc tối ưu risk sẽ đẩy P_θ(θ ∈ C(**X**)) lên rất lớn (để
-> âm của nó xuống rất nhỏ) và điều này sẽ tạo C(**X**) khiến mức bao phủ rất
+> risk function = 0, khiến việc tối ưu risk sẽ đẩy P_θ(θ ∈ C(𝐗)) lên rất lớn (để
+> âm của nó xuống rất nhỏ) và điều này sẽ tạo C(𝐗) khiến mức bao phủ rất
 > rộng (để xác suất bao phủ → 1).
 >
 >
@@ -2591,9 +2591,9 @@
 > Qua ví dụ này, đại khái là gs gọi X ~ n(μ, σ²) và cho rằng σ² đã biết. Ông
 > nói, đại ý là, ta có thể coi cái biến X này là một sample mean nào của một
 > random sample nào đó có population distribution là normal(μ, τ²). Bởi lẽ ta
-> đã biết, nếu ta có X1,...Xn là random sample size n ~ normal(μ, τ²) thì Xbar,
+> đã biết, nếu ta có X1,...Xn là random sample size n ~ normal(μ, τ²) thì X̄,
 > là sample mean sẽ có distribution là normal(μ, τ²/n), tức là nếu gọi σ² là
-> variance của Xbar thì σ² = τ²/n.
+> variance của X̄ thì σ² = τ²/n.
 >
 >
 >
@@ -2611,10 +2611,10 @@
 >
 >
 >
-> Như đã biết quá rành, với random sample **X** ~ f(**x**|θ), việc thiết lập một
+> Như đã biết quá rành, với random sample 𝐗 ~ f(𝐱|θ), việc thiết lập một
 > interval estimator (hay  còn gọi là confidence interval) cho một parameter θ
-> là một random interval có dạng  [L(**X**), U(**X**)] dùng để thực hiện một
-> suy luận: θ ∈ C(**X**).
+> là một random interval có dạng  [L(𝐗), U(𝐗)] dùng để thực hiện một
+> suy luận: θ ∈ C(𝐗).
 >
 >
 >
@@ -2632,21 +2632,21 @@
 >
 >
 > Ôn lại chút xíu, như đã biết qua việc áp dụng lối tiếp cận này để đánh giá
-> Point Estimator δ(**X**) của θ, điểm qua những ý chính, thì ta sẽ xây dựng,
+> Point Estimator δ(𝐗) của θ, điểm qua những ý chính, thì ta sẽ xây dựng,
 > chọn loss function, là một function của "cái inference", ý là ám chỉ point
 > estimator hoặc interval estimator" và θ, mà việc chọn lựa này có thể nhằm
-> những mục đích khác nhau. Ví dụ với point estimator, δ(**X**) ta có thể dùng
-> squared error loss:  L(δ(**X**), θ) = [δ(**X**) - θ]^2 hoặc absolute error loss:
-> L(δ(**X**), θ)) = |δ(**X**) - θ|. Còn ở interval estimator C(**X**), thì vì trong bối
+> những mục đích khác nhau. Ví dụ với point estimator, δ(𝐗) ta có thể dùng
+> squared error loss:  L(δ(𝐗), θ) = [δ(𝐗) - θ]^2 hoặc absolute error loss:
+> L(δ(𝐗), θ)) = |δ(𝐗) - θ|. Còn ở interval estimator C(𝐗), thì vì trong bối
 > cảnh bài toán này, ta quan tâm không chỉ một mà là hai yếu tố: size của
 > interval, Length(C) tức là length, và việc nó có chứa θ hay ko, biểu diễn
-> bởi Indicator function I_C(θ), mang giá trị 1/0 tùy vào θ ∈ C(**X**) có xảy ra
+> bởi Indicator function I_C(θ), mang giá trị 1/0 tùy vào θ ∈ C(𝐗) có xảy ra
 > hay không.Và đây là hai objective có trade off
 > nhau, nên ta sẽ kết hợp chúng trong loss function như sau
 >
 >
 >
-> L(C(**X**), θ) = b * Length(C(**X**) - I_C(θ),
+> L(C(𝐗), θ) = b * Length(C(𝐗) - I_C(θ),
 >
 >
 >
@@ -2660,23 +2660,23 @@
 >
 >
 >
-> Với point estimator R(δ(**X**), θ) = E_θ[L(δ(**X**), θ)]
+> Với point estimator R(δ(𝐗), θ) = E_θ[L(δ(𝐗), θ)]
 >
 >
 >
-> Với interval estimator R(C(**X**), θ) = E_θ[L(C(**X**),θ)]
+> Với interval estimator R(C(𝐗), θ) = E_θ[L(C(𝐗),θ)]
 >
 >
 >
-> = E_θ[b * Length(C(**X**) - I_C(θ)]
+> = E_θ[b * Length(C(𝐗) - I_C(θ)]
 >
 >
 >
-> = E_θ[b * Length(C(**X**)] - E[I_C(θ)]
+> = E_θ[b * Length(C(𝐗)] - E[I_C(θ)]
 >
 >
 >
-> = b*E_θ[Length(C(**X**)] - P_θ(θ ∈ C(**X**))
+> = b*E_θ[Length(C(𝐗)] - P_θ(θ ∈ C(𝐗))
 >
 >
 >
@@ -2688,11 +2688,11 @@
 >
 >
 >
-> Quay lại bài toán này: R(C(**X**), μ)
+> Quay lại bài toán này: R(C(𝐗), μ)
 >
 >
 >
-> = b E_μ[Length(C(**X**))] - P_μ(μ ∈ C(**X**))
+> = b E_μ[Length(C(𝐗))] - P_μ(μ ∈ C(𝐗))
 >
 >
 >
