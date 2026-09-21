@@ -1,6 +1,6 @@
 # 9.3 Methods Of Evaluating Interval Estimators
 
-📊 **Progress:** `34` Notes | `35` Screenshots
+📊 **Progress:** `34` Notes | `35` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-osahc74"></a>
@@ -46,6 +46,20 @@
 >
 > Và ta cũng còn nhớ, định nghĩa của confidence coefficient = inf_θ P_θ(θ ∈
 > C(**X**)). và nó sẽ ko còn phụ thuộc θ nữa
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất tốt và chuẩn xác nội dung mở đầu của mục 9.3. Bạn liên hệ kiến thức cũ về pivotal quantity rất chuẩn để giải thích cho ngoại lệ khi coverage probability là hằng số.
+>
+> **✓ Strengths**
+> - Nắm chắc sự đánh đổi giữa hai đại lượng đối nghịch trong bài toán ước lượng khoảng: kích thước (size) và xác suất bao phủ (coverage probability).
+> - Hiểu đúng bản chất coverage probability thường là một hàm theo tham số θ và cách dùng infimum (confidence coefficient) để tóm lược hàm này thành một giá trị đại diện.
+> - Liên hệ rất xuất sắc kiến thức về pivotal quantity để giải thích cho cụm từ 'except in special cases' trong giáo trình.
+>
+> **💡 Deeper notes**
+> - Ngoài confidence coefficient (infimum), sách có nhắc đến phương pháp khác để tóm lược như tính xác suất bao phủ trung bình (average coverage probability).
+> - Về đại lượng kích thước (size), do khoảng ước lượng C(X) có biên là các biến ngẫu nhiên nên trong thực tế đánh giá, người ta thường xét độ dài kỳ vọng E_θ[Length(C(X))] hoặc thể tích đối với nhiều chiều.
 
 <br>
 
