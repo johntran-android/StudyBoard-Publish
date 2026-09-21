@@ -1031,7 +1031,7 @@
 > vì đây chỉ là điều kiện cần) là θ = Σi xi / n. Và đó chính là gì ? ⇨ Hàm Xbar:
 > Xbar(x1,..xn) = (Σi xi)/n Và ứng cử viên cho ML Estimator θ^(**X**) trong trường
 > hợp này chính là Xbar(**X**), để rồi nếu nó thật sự là ML Estimator thì θ^(**x**) =
-> Xbar(**x**) = xbar chính là ML Estimate.
+> Xbar(**x**) = x̄ chính là ML Estimate.
 >
 >
 >
@@ -1041,7 +1041,7 @@
 >
 >
 >
-> d^2/dθ L(θ|**x**)|θ=xbar:
+> d^2/dθ L(θ|**x**)|θ=x̄:
 >
 >
 >
@@ -1058,24 +1058,24 @@
 >
 >
 >
-> thay θ = xbar (vì mình đang evaluate tại xbar):
+> thay θ = x̄ (vì mình đang evaluate tại x̄):
 >
 >
 >
-> = (1/2π)^(n/2) d/dθ exp [-(1/2) Σi (xi-xbar)^2] . [Σi [(xi-xbar)]
+> = (1/2π)^(n/2) d/dθ exp [-(1/2) Σi (xi-x̄)^2] . [Σi [(xi-x̄)]
 >
 >
 >
 > HOLY..LÀM VẬY LÀ SAI BÉT ĐẤY: VÌ CÁI TA PHẢI LÀM LÀ, DERIVE RA HÀM
-> d^2/dθ L(θ|x)  rồi mới lắp θ=xbar vào, chứ không phải là lắp vào mới derive.
+> d^2/dθ L(θ|x)  rồi mới lắp θ=x̄ vào, chứ không phải là lắp vào mới derive.
 >
 >
 >
-> \~thay θ = xbar (vì mình đang evaluate tại xbar):
+> \~thay θ = x̄ (vì mình đang evaluate tại x̄):
 >
 >
 >
-> = (1/2π)^(n/2) d/dθ exp [-(1/2) Σi (xi-xbar)^2] . [Σi [(xi-xbar)]
+> = (1/2π)^(n/2) d/dθ exp [-(1/2) Σi (xi-x̄)^2] . [Σi [(xi-x̄)]
 >
 >
 >
@@ -1113,7 +1113,7 @@
 >
 >
 >
-> Thế θ = xbar vào thì vế này bằng 0
+> Thế θ = x̄ vào thì vế này bằng 0
 >
 >
 >
@@ -1133,11 +1133,11 @@
 >
 >
 >
-> thế vào θ = xbar vào thì đây là tích của một số không âm và một số âm → số âm
+> thế vào θ = x̄ vào thì đây là tích của một số không âm và một số âm → số âm
 >
 >
 >
-> Vậy có thể xác nhận là kết quả là một số âm ⇨ θ = xbar là maximum.
+> Vậy có thể xác nhận là kết quả là một số âm ⇨ θ = x̄ là maximum.
 >
 >
 >
@@ -1154,11 +1154,11 @@
 >
 >
 >
-> Vậy θ = xbar là GLOBAL maximum.
+> Vậy θ = x̄ là GLOBAL maximum.
 >
 >
 >
-> Khúc cuối giáo sư nói là về cái mẹo là vì đã xác nhận xbar là unique interior
+> Khúc cuối giáo sư nói là về cái mẹo là vì đã xác nhận x̄ là unique interior
 > extremum nên suy ra không cần phải check biên vì cái kia là unique rồi.
 >
 >
@@ -1185,7 +1185,7 @@
 > đi lên cái núi thứ 2) → ko đúng, vì đã nói chỉ có 1 điểm mà độ dốc = 0 thôi mà.
 > Nên suy ra khỏi phải check tại biên làm gì.
 >
-> Sẵn đây, nói luôn việc d/dθ L(θ|**x**)|θ=xbar < 0 sẽ giúp kết luận maximum là vì sao?
+> Sẵn đây, nói luôn việc d/dθ L(θ|**x**)|θ=x̄ < 0 sẽ giúp kết luận maximum là vì sao?
 >
 >
 >
@@ -1365,18 +1365,18 @@
 >
 >
 > Vậy thì đại khái là trong cái theorem 5.2.4, mình đã chứng minh cái bất đẳng
-> thức này: Σi (xi - a)^2 ≥ Σi (xi - xbar)^2. Và dấu bằng chỉ xảy ra khi a = xbar.
+> thức này: Σi (xi - a)^2 ≥ Σi (xi - x̄)^2. Và dấu bằng chỉ xảy ra khi a = x̄.
 > Việc chứng minh cái bất đẳng thức này không có gì khó, chỉ là biến đổi đại số
 > để cho thấy
 >
 >
 >
-> Σi (xi - a)^2 = Σi (xi - xbar)^2 + [một term không âm mà chỉ bằng không khi
-> xbar = a]
+> Σi (xi - a)^2 = Σi (xi - x̄)^2 + [một term không âm mà chỉ bằng không khi
+> x̄ = a]
 >
 >
 >
-> Từ đó suy ra Σi (xi - a)^2 ≥ Σi (xi - xbar)^2 và chỉ bằng nhau khi xbar = a
+> Từ đó suy ra Σi (xi - a)^2 ≥ Σi (xi - x̄)^2 và chỉ bằng nhau khi x̄ = a
 >
 >
 >
@@ -1384,7 +1384,7 @@
 >
 >
 >
-> e^-(1/2) Σ(xi - θ)^2 ≤ e^-(1/2) Σ(xi - xbar)^2
+> e^-(1/2) Σ(xi - θ)^2 ≤ e^-(1/2) Σ(xi - x̄)^2
 >
 >
 >
@@ -1392,8 +1392,8 @@
 >
 >
 >
-> Có nghĩa là ta chứng minh được rằng L(θ|**x**) ≤ L(xbar|**x**) và chỉ bằng
-> nếu θ = xbar
+> Có nghĩa là ta chứng minh được rằng L(θ|**x**) ≤ L(x̄|**x**) và chỉ bằng
+> nếu θ = x̄
 >
 >
 >
@@ -1712,7 +1712,7 @@
 >
 >
 >
-> Vậy thì nếu xbar âm, ở đây tác giả cho rằng ta có thể dễ dàng check để thấy
+> Vậy thì nếu x̄ âm, ở đây tác giả cho rằng ta có thể dễ dàng check để thấy
 > likelihood function decreasing theo θ với θ ≥ 0. Từ đó suy ra nó maximum tại θ^
 > = 0.
 >
@@ -1750,10 +1750,10 @@
 >
 >
 > Tuy nhiên, đó là khi ta không có ràng buộc nào cho θ, cho phép parameter
-> range kéo dài từ -inf tới inf. Nên khi đó dù giá trị của ML Estimate (tức xbar) có
+> range kéo dài từ -inf tới inf. Nên khi đó dù giá trị của ML Estimate (tức x̄) có
 > âm hay dương gì thì nó vẫn hợp lệ. Ý là, ta đi tìm ML estimator cho θ, thì dĩ
 > nhiên giá trị cụ thể ML estimate sẽ là giá trị ước lượng của θ, Mà range nó cho
-> phép thoải mái, thì ta có thể kết luận Xbar là ML estimator vì dù xbar (giá trị cụ
+> phép thoải mái, thì ta có thể kết luận Xbar là ML estimator vì dù x̄ (giá trị cụ
 > thể của Xbar) có là bao nhiêu thì nó vẫn không vi phạm.
 >
 >
@@ -1802,24 +1802,24 @@
 >
 >
 >
-> ⇔ Σixi = nθ ⇔ ⇔ Σixi / n = θ ⇔ θ = xbar
+> ⇔ Σixi = nθ ⇔ ⇔ Σixi / n = θ ⇔ θ = x̄
 >
 >
 >
-> g''(θ) = (-1/2) n < 0 → xbar là maximizer duy nhất vì chỉ có một stationary point.
+> g''(θ) = (-1/2) n < 0 → x̄ là maximizer duy nhất vì chỉ có một stationary point.
 >
 >
 >
-> nên khi đi từ -inf → xbar hàm monotone increasing, từ xbar → inf hàm
+> nên khi đi từ -inf → x̄ hàm monotone increasing, từ x̄ → inf hàm
 > monotone decreasing
 >
 >
 >
-> Nên nếu 0 ≤ xbar thì khi đi từ 0 → inf hàm đạt max tại xbar,
+> Nên nếu 0 ≤ x̄ thì khi đi từ 0 → inf hàm đạt max tại x̄,
 >
 >
 >
-> ngược lại nếu xbar < 0 thì khi đi từ 0 → inf thì hàm đã max tại 0
+> ngược lại nếu x̄ < 0 thì khi đi từ 0 → inf thì hàm đã max tại 0
 >
 >
 >
@@ -2457,11 +2457,11 @@
 >
 >
 >
-> ⇔ θ = (Σxi) / n = xbar
+> ⇔ θ = (Σxi) / n = x̄
 >
 >
 >
-> Hay θ^ tức estimator của θ = xbar 
+> Hay θ^ tức estimator của θ = x̄ 
 >
 >
 >
@@ -2469,11 +2469,11 @@
 >
 >
 >
-> ⇔ σ² = n^-1 Σi (xi - xbar)^2 
+> ⇔ σ² = n^-1 Σi (xi - x̄)^2 
 >
 >
 >
-> Hay (σ²)^ tức estimator của σ² = n^-1 Σi (xi - xbar)^2
+> Hay (σ²)^ tức estimator của σ² = n^-1 Σi (xi - x̄)^2
 >
 >
 >
@@ -2482,7 +2482,7 @@
 >
 >
 >
-> Rồi, tới đây, chú ý là ta có **Θ^** = (xbar,  n^-1 Σi (xi - xbar)^2) là điểm mà gradient = 0.
+> Rồi, tới đây, chú ý là ta có **Θ^** = (x̄,  n^-1 Σi (xi - x̄)^2) là điểm mà gradient = 0.
 >
 >
 >
@@ -2506,7 +2506,7 @@
 >
 >
 >
-> Cụ thể hơn xét cái Σi=1:n (xi - θ)^2, ta thấy nó sẽ luôn ≤ Σi=1:n (xi - xbar)^2 
+> Cụ thể hơn xét cái Σi=1:n (xi - θ)^2, ta thấy nó sẽ luôn ≤ Σi=1:n (xi - x̄)^2 
 >
 >
 >
@@ -2518,7 +2518,7 @@
 >
 >
 >
-> ⇨ g'(θ) = 0 ⇔ θ = (Σi xi) / n = xbar.
+> ⇨ g'(θ) = 0 ⇔ θ = (Σi xi) / n = x̄.
 >
 >
 >
@@ -2526,11 +2526,11 @@
 >
 >
 >
-> luôn ≤ 1/(2πσ²)^(n/2) exp[-(1/2) Σi=1:n (xi - xbar)^2/σ²]
+> luôn ≤ 1/(2πσ²)^(n/2) exp[-(1/2) Σi=1:n (xi - x̄)^2/σ²]
 >
 >
 >
-> Do đó việc chứng minh chỉ cần chứng minh hàm đạt max tại σ² = n^-1 Σi (xi - xbar)^2
+> Do đó việc chứng minh chỉ cần chứng minh hàm đạt max tại σ² = n^-1 Σi (xi - x̄)^2
 > thôi.
 >
 >
@@ -2610,8 +2610,8 @@
 
 > [!NOTE]
 > Với normal log likelihood tức function L(θ, σ²|**x**) đóng vai H(θ1, θ2) thì
-> đoạn này đại ý là ta có thể check 3 điều kiện trên để thấy đúng là θ^ = xbar
-> và (σ²)^ = n^-1 Σi (xi - xbar)^2) thỏa điều kiện để kết luận nó là mle.
+> đoạn này đại ý là ta có thể check 3 điều kiện trên để thấy đúng là θ^ = x̄
+> và (σ²)^ = n^-1 Σi (xi - x̄)^2) thỏa điều kiện để kết luận nó là mle.
 >
 >
 >
@@ -3302,7 +3302,7 @@
 > [!NOTE]
 > Và có thể thấy Bayes estimator của θ cũng là linear combination của
 > prior mean (μ) và sample mean (x, nhớ rằng ta đang xét random sample
-> size n = 1 nên xbar chính là x)
+> size n = 1 nên x̄ chính là x)
 >
 >
 >
