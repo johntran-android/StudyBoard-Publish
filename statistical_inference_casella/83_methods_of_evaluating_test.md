@@ -369,7 +369,7 @@
 >
 >
 >
-> ⇔ θ = Σixi / n = xbar
+> ⇔ θ = Σixi / n = x̄
 >
 >
 >
@@ -377,19 +377,19 @@
 >
 >
 >
-> ⇨ xbar minimizer của g ⇨ MLE của θ là Xbar, 
+> ⇨ x̄ minimizer của g ⇨ MLE của θ là Xbar, 
 >
 >
 >
-> và L(xbar|**x**) = 
+> và L(x̄|**x**) = 
 >
 >
 >
-> = (1/√2πσ²)^n exp Σi [-(xi-xbar)^2/2σ²] 
+> = (1/√2πσ²)^n exp Σi [-(xi-x̄)^2/2σ²] 
 >
 >
 >
-> = (1/√2πσ²)^n exp (1/2σ²) Σi [-(xi-xbar)^2] 
+> = (1/√2πσ²)^n exp (1/2σ²) Σi [-(xi-x̄)^2] 
 >
 >
 >
@@ -397,73 +397,73 @@
 >
 >
 >
-> Nếu xbar ≤ θ0 thì tử số chính là L(xbar|**x**)
+> Nếu x̄ ≤ θ0 thì tử số chính là L(x̄|**x**)
 >
 >
 >
-> nếu θ0 < xbar thì tử số chính là L(θ0|**x**), lí do là vì hàm L(θ|**x**) chỉ có một
-> optimal là θ^mle = xbar, nên nếu θ0 < xbar thì khi đồng nghĩa trong (-inf, θ0)
+> nếu θ0 < x̄ thì tử số chính là L(θ0|**x**), lí do là vì hàm L(θ|**x**) chỉ có một
+> optimal là θ^mle = x̄, nên nếu θ0 < x̄ thì khi đồng nghĩa trong (-inf, θ0)
 > hàm monotone increasing → đạt max tại θ0.
 >
 >
 >
-> Khi đó λ(**x**) = L(θ0|**x**) / L(xbar|**x**) 
+> Khi đó λ(**x**) = L(θ0|**x**) / L(x̄|**x**) 
 >
 >
 >
-> = (1/√2πσ²)^n exp (1/2σ²) Σi [-(xi-θ0)^2] / 1/√2πσ²)^n exp (1/2σ²) Σi [-(xi-xbar)^2] 
+> = (1/√2πσ²)^n exp (1/2σ²) Σi [-(xi-θ0)^2] / 1/√2πσ²)^n exp (1/2σ²) Σi [-(xi-x̄)^2] 
 >
 >
 >
-> = exp (1/2σ²) Σi [-(xi-θ0)^2] / exp (1/2σ²) Σi [-(xi-xbar)^2] 
+> = exp (1/2σ²) Σi [-(xi-θ0)^2] / exp (1/2σ²) Σi [-(xi-x̄)^2] 
 >
 >
 >
-> = exp (1/2σ²) Σi [-(xi-θ0)^2] - (1/2σ²) Σi [-(xi-xbar)^2] 
+> = exp (1/2σ²) Σi [-(xi-θ0)^2] - (1/2σ²) Σi [-(xi-x̄)^2] 
 >
 >
 >
-> = exp (1/2σ²) Σi {[-(xi-θ0)^2] - [-(xi-xbar)^2]}
+> = exp (1/2σ²) Σi {[-(xi-θ0)^2] - [-(xi-x̄)^2]}
 >
 >
 >
-> = exp (1/2σ²) Σi [-(xi-θ0)^2 +(xi-xbar)^2] 
+> = exp (1/2σ²) Σi [-(xi-θ0)^2 +(xi-x̄)^2] 
 >
 >
 >
-> = exp (1/2σ²) Σi [-(xi-xbar-θ0+xbar)^2 +(xi-xbar)^2] 
+> = exp (1/2σ²) Σi [-(xi-x̄-θ0+x̄)^2 +(xi-x̄)^2] 
 >
 >
 >
-> = exp (1/2σ²) Σi [-[(xi-xbar)+(xbar-θ0)]^2 +(xi-xbar)^2] 
+> = exp (1/2σ²) Σi [-[(xi-x̄)+(x̄-θ0)]^2 +(xi-x̄)^2] 
 >
 >
 >
-> = exp (1/2σ²) Σi [-[(xi-xbar)^2+2(xi-xbar)(xbar-θ0)+(xbar-θ0)^2] +(xi-xbar)^2] 
+> = exp (1/2σ²) Σi [-[(xi-x̄)^2+2(xi-x̄)(x̄-θ0)+(x̄-θ0)^2] +(xi-x̄)^2] 
 >
 >
 >
-> = exp (1/2σ²) Σi [-(xi-xbar)^2-2(xi-xbar)(xbar-θ0)-(xbar-θ0)^2+(xi-xbar)^2] 
+> = exp (1/2σ²) Σi [-(xi-x̄)^2-2(xi-x̄)(x̄-θ0)-(x̄-θ0)^2+(xi-x̄)^2] 
 >
 >
 >
-> = exp (1/2σ²) Σi [-2(xi-xbar)(xbar-θ0)-(xbar-θ0)^2]
+> = exp (1/2σ²) Σi [-2(xi-x̄)(x̄-θ0)-(x̄-θ0)^2]
 >
 >
 >
-> = exp (1/2σ²) [-2(xbar-θ0)Σi(xi-xbar)-Σi(xbar-θ0)^2] 
+> = exp (1/2σ²) [-2(x̄-θ0)Σi(xi-x̄)-Σi(x̄-θ0)^2] 
 >
 >
 >
-> = exp (1/2σ²) [-2(xbar-θ0)(nxbar-nxbar)-n(xbar-θ0)^2] 
+> = exp (1/2σ²) [-2(x̄-θ0)(nx̄-nx̄)-n(x̄-θ0)^2] 
 >
 >
 >
-> = exp (1/2σ²) [-n(xbar-θ0)^2]
+> = exp (1/2σ²) [-n(x̄-θ0)^2]
 >
 >
 >
-> = exp [-n(xbar-θ0)^2/2σ²] 
+> = exp [-n(x̄-θ0)^2/2σ²] 
 >
 >
 >
@@ -471,11 +471,11 @@
 >
 >
 >
-> λ(**x**) = 1 khi xbar ≤ θ0
+> λ(**x**) = 1 khi x̄ ≤ θ0
 >
 >
 >
-> λ(**x**) = exp [-n(xbar-θ0)^2/2σ²] khi khi θ0 < xbar
+> λ(**x**) = exp [-n(x̄-θ0)^2/2σ²] khi khi θ0 < x̄
 >
 >
 >
@@ -483,35 +483,35 @@
 >
 >
 >
-> Khi xbar ≤ θ0, luôn accept H0 do λ(x) = 1 > c ∀c ∈ [0,1]
+> Khi x̄ ≤ θ0, luôn accept H0 do λ(x) = 1 > c ∀c ∈ [0,1]
 >
 >
 >
-> Khi θ0 < xbar, reject H0 khi exp [-n(xbar-θ0)^2/2σ²] ≤ c
+> Khi θ0 < x̄, reject H0 khi exp [-n(x̄-θ0)^2/2σ²] ≤ c
 >
 >
 >
-> ⇔ [-n(xbar-θ0)^2/2σ²] ≤ log c
+> ⇔ [-n(x̄-θ0)^2/2σ²] ≤ log c
 >
 >
 >
-> ⇔ -(xbar-θ0)^2/(2σ²/n) ≤ log c
+> ⇔ -(x̄-θ0)^2/(2σ²/n) ≤ log c
 >
 >
 >
-> ⇔ -(xbar-θ0)^2/2(σ/√n)^2 ≤ log c
+> ⇔ -(x̄-θ0)^2/2(σ/√n)^2 ≤ log c
 >
 >
 >
-> ⇔ (xbar-θ0)^2/(σ/√n)^2 > -2log c
+> ⇔ (x̄-θ0)^2/(σ/√n)^2 > -2log c
 >
 >
 >
-> ⇔ [(xbar-θ0)/(σ/√n)]^2 > -2log c (a)
+> ⇔ [(x̄-θ0)/(σ/√n)]^2 > -2log c (a)
 >
 >
 >
-> vì đang xét θ0 < xbar ⇨ (xbar-θ0)/(σ/√n) dương 
+> vì đang xét θ0 < x̄ ⇨ (x̄-θ0)/(σ/√n) dương 
 >
 >
 >
@@ -523,11 +523,11 @@
 >
 >
 >
-> ⇔ (xbar-θ0)/(σ/√n) > -√2log(c)
+> ⇔ (x̄-θ0)/(σ/√n) > -√2log(c)
 >
 >
 >
-> Đây chính là (xbar-θ0)/(σ/√n) > c'
+> Đây chính là (x̄-θ0)/(σ/√n) > c'
 >
 >
 >
@@ -555,7 +555,7 @@
 >
 >
 > Theo định nghĩa, β(θ) = P_θ(**X** ∈ R), và Rejection region của test rule vừa
-> tự derive lại là R = {**x**: H0 bị reject} = {**x**: (xbar-θ0)/(σ/√n) > c} (chuyển
+> tự derive lại là R = {**x**: H0 bị reject} = {**x**: (x̄-θ0)/(σ/√n) > c} (chuyển
 > thành c cho giống sách, nhưng hiểu nó là c' trong phần derive của mình)
 >
 >
@@ -1338,7 +1338,7 @@
 >
 >
 > Ví dụ như trong ví dụ 8.2.2, Θ0 chỉ là singleton {θ0} và ta đã thấy rejection region là:
-> R = {**x**: |xbar-θ0| ≥ √[-2log(c)/n]}
+> R = {**x**: |x̄-θ0| ≥ √[-2log(c)/n]}
 >
 >
 >
@@ -3442,7 +3442,7 @@
 >
 >
 >
-> Hay xbar < [2σ² (log k) / n  - θ0^2 + θ1^2] / 2(θ1 - θ0) như sách viết.
+> Hay x̄ < [2σ² (log k) / n  - θ0^2 + θ1^2] / 2(θ1 - θ0) như sách viết.
 >
 >
 >
@@ -3455,7 +3455,7 @@
 >
 >
 >
-> reject H0 khi xbar < [2σ² (log k) / n  - θ0^2 + θ1^2] / 2(θ1 - θ0), đặt là c(k) là
+> reject H0 khi x̄ < [2σ² (log k) / n  - θ0^2 + θ1^2] / 2(θ1 - θ0), đặt là c(k) là
 > constant có giá trị khác nhay khi k thay đổi
 >
 >
@@ -3592,7 +3592,7 @@
 >
 >
 >
-> Và có nghĩa là, cái test UMP level α test sẽ là cái mà có rule là reject H0 nếu xbar
+> Và có nghĩa là, cái test UMP level α test sẽ là cái mà có rule là reject H0 nếu x̄
 > < c  với c = -z_α(σ/√n) + θ0
 
 **🔗 See also:** [Biến đổi PDF Location-Scale](./35_location_and_scale_families.md#node-cs2rm3i) · [Kiểm định UMP với thống kê đủ](#node-qawk1aq) · [UMA từ Test UMP](./93_methods_of_evaluating_interval_estimators.md#node-xumc7wb)
@@ -5852,15 +5852,15 @@
 >
 >
 >
-> = 1/(2πσ²)^(n/2) exp { Σi[-(xi-xbar)^2]/2(n^-1)Σi(xi-xbar)^2 } | σ² = (σ²)^
+> = 1/(2πσ²)^(n/2) exp { Σi[-(xi-x̄)^2]/2(n^-1)Σi(xi-x̄)^2 } | σ² = (σ²)^
 >
 >
 >
-> = 1/(2πσ²)^(n/2) exp { nΣi[-(xi-xbar)^2]/2Σi(xi-xbar)^2 } | σ² = (σ²)^ (lộn n lên)
+> = 1/(2πσ²)^(n/2) exp { nΣi[-(xi-x̄)^2]/2Σi(xi-x̄)^2 } | σ² = (σ²)^ (lộn n lên)
 >
 >
 >
-> = 1/(2πσ²)^(n/2) exp { -nΣi(xi-xbar)^2/2Σi(xi-xbar)^2 } | σ² = (σ²)^
+> = 1/(2πσ²)^(n/2) exp { -nΣi(xi-x̄)^2/2Σi(xi-x̄)^2 } | σ² = (σ²)^
 >
 >
 >
@@ -6028,43 +6028,43 @@
 >
 >
 >
-> = [ (Σi[(xi-μ0)^2] / n) / (n^-1 Σi(xi-xbar)^2) ]^(-n/2)
+> = [ (Σi[(xi-μ0)^2] / n) / (n^-1 Σi(xi-x̄)^2) ]^(-n/2)
 >
 >
 >
-> = { Σi (xi-μ0)^2 / Σi(xi-xbar)^2 }^(-n/2)
+> = { Σi (xi-μ0)^2 / Σi(xi-x̄)^2 }^(-n/2)
 >
 >
 >
-> = { Σi (xi-xbar+xbar-μ0)^2 / Σi(xi-xbar)^2 }^(-n/2)
+> = { Σi (xi-x̄+x̄-μ0)^2 / Σi(xi-x̄)^2 }^(-n/2)
 >
 >
 >
-> = { Σi [(xi-xbar)^2 + 2(xi-xbar)(xbar-μ0) + (xbar-μ0)^2] / Σi(xi-xbar)^2 }^(-n/2)
+> = { Σi [(xi-x̄)^2 + 2(xi-x̄)(x̄-μ0) + (x̄-μ0)^2] / Σi(xi-x̄)^2 }^(-n/2)
 >
 >
 >
-> = { [Σi (xi-xbar)^2 + 2Σi(xi-xbar)(xbar-μ0) + Σi(xbar-μ0)^2] / Σi(xi-xbar)^2 }^(-n/2)
+> = { [Σi (xi-x̄)^2 + 2Σi(xi-x̄)(x̄-μ0) + Σi(x̄-μ0)^2] / Σi(xi-x̄)^2 }^(-n/2)
 >
 >
 >
-> = { [Σi(xi-xbar)^2 + 2(Σixi-nxbar)(xbar-μ0) + Σi(xbar-μ0)^2] / Σi(xi-xbar)^2 }^(-n/2)
+> = { [Σi(xi-x̄)^2 + 2(Σixi-nx̄)(x̄-μ0) + Σi(x̄-μ0)^2] / Σi(xi-x̄)^2 }^(-n/2)
 >
 >
 >
-> = { [Σi(xi-xbar)^2 + 2(nxbar-nxbar)(xbar-μ0) + Σi(xbar-μ0)^2] / Σi(xi-xbar)^2 }^(-n/2)
+> = { [Σi(xi-x̄)^2 + 2(nx̄-nx̄)(x̄-μ0) + Σi(x̄-μ0)^2] / Σi(xi-x̄)^2 }^(-n/2)
 >
 >
 >
-> = { [Σi(xi-xbar)^2 + Σi(xbar-μ0)^2] / Σi(xi-xbar)^2 }^(-n/2)
+> = { [Σi(xi-x̄)^2 + Σi(x̄-μ0)^2] / Σi(xi-x̄)^2 }^(-n/2)
 >
 >
 >
-> = { 1 + Σi(xbar-μ0)^2 / Σi(xi-xbar)^2 }^(-n/2)
+> = { 1 + Σi(x̄-μ0)^2 / Σi(xi-x̄)^2 }^(-n/2)
 >
 >
 >
-> = { 1 + n(xbar-μ0)^2 / Σi(xi-xbar)^2 }^(-n/2)
+> = { 1 + n(x̄-μ0)^2 / Σi(xi-x̄)^2 }^(-n/2)
 >
 >
 >
@@ -6072,23 +6072,23 @@
 >
 >
 >
-> .. = {1 + n(xbar-μ0)^2 / (n-1)s^2 }^(-n/2)
+> .. = {1 + n(x̄-μ0)^2 / (n-1)s^2 }^(-n/2)
 >
 >
 >
-> = {1 + n(xbar-μ0)^2 / (n-1)s^2 }^(-n/2)
+> = {1 + n(x̄-μ0)^2 / (n-1)s^2 }^(-n/2)
 >
 >
 >
-> = {1 + (xbar-μ0)^2 / [s^2(n-1)/n] }^(-n/2)
+> = {1 + (x̄-μ0)^2 / [s^2(n-1)/n] }^(-n/2)
 >
 >
 >
-> = {1 + [1/(n-1)] [(xbar-μ0)^2 / (s^2/n)] }^(-n/2)
+> = {1 + [1/(n-1)] [(x̄-μ0)^2 / (s^2/n)] }^(-n/2)
 >
 >
 >
-> = {1 + [1/(n-1)] [(xbar-μ0) / (s/√n)]^2 }^(-n/2)
+> = {1 + [1/(n-1)] [(x̄-μ0) / (s/√n)]^2 }^(-n/2)
 >
 >
 >
@@ -6237,7 +6237,7 @@
 >
 >
 >
-> = 2P_(μ0, σ²)(Tn-1(X) ≥ |(xbar-μ0) / (s/√n)|)
+> = 2P_(μ0, σ²)(Tn-1(X) ≥ |(x̄-μ0) / (s/√n)|)
 >
 >
 >
@@ -6395,23 +6395,23 @@
 >
 >
 >
-> ⇔ xbar = μ
+> ⇔ x̄ = μ
 >
 >
 >
-> Với constraint μ ≤ μ0: Và dựa vào thực tế hàm đạt cục đại duy nhất tại xbar, nên:
+> Với constraint μ ≤ μ0: Và dựa vào thực tế hàm đạt cục đại duy nhất tại x̄, nên:
 >
 >
 >
-> Nếu xbar < μ0 thì khi đi từ -inf → μ0, hàm sẽ đạt max tại xbar
+> Nếu x̄ < μ0 thì khi đi từ -inf → μ0, hàm sẽ đạt max tại x̄
 >
 >
 >
-> Nếu μ0 < xbar thì khi đi từ -inf → μ0, hàm sẽ đạt max tại μ0.
+> Nếu μ0 < x̄ thì khi đi từ -inf → μ0, hàm sẽ đạt max tại μ0.
 >
 >
 >
-> Vậy μ^ = xbar hoặc μ0 tùy thuộc xbar < μ0 hay μ0 < xbar
+> Vậy μ^ = x̄ hoặc μ0 tùy thuộc x̄ < μ0 hay μ0 < x̄
 >
 >
 >
@@ -6427,15 +6427,15 @@
 >
 >
 >
-> = (1/√2πσ²)^n exp Σi{-(xi-xbar)^2/2σ²} | σ² = (σ²)^0
+> = (1/√2πσ²)^n exp Σi{-(xi-x̄)^2/2σ²} | σ² = (σ²)^0
 >
 >
 >
-> = (1/√2πσ²)^n exp - [ Σi (xi-xbar)^2 ] /2σ²} | σ² = (σ²)^0
+> = (1/√2πσ²)^n exp - [ Σi (xi-x̄)^2 ] /2σ²} | σ² = (σ²)^0
 >
 >
 >
-> = (1/√2πσ²)^n exp - [ Σi (xi-xbar)^2 ] /2 [Σi (xi-xbar)^2 / n] } | σ² = (σ²)^0
+> = (1/√2πσ²)^n exp - [ Σi (xi-x̄)^2 ] /2 [Σi (xi-x̄)^2 / n] } | σ² = (σ²)^0
 >
 >
 >
@@ -6471,19 +6471,19 @@
 >
 >
 >
-> Nếu xbar < μ0
+> Nếu x̄ < μ0
 >
 >
 >
-> λ(**x**) = [[Σi (xi-xbar)^2 / n] / n^-1 Σi(xi-xbar)^2]^(-n/2) = 1
+> λ(**x**) = [[Σi (xi-x̄)^2 / n] / n^-1 Σi(xi-x̄)^2]^(-n/2) = 1
 >
 >
 >
-> Nếu μ0 < xbar
+> Nếu μ0 < x̄
 >
 >
 >
-> λ(**x**) = [Σi(xi-μ0)^2 / Σi(xi-xbar)^2]^(-n/2)
+> λ(**x**) = [Σi(xi-μ0)^2 / Σi(xi-x̄)^2]^(-n/2)
 >
 >
 >
@@ -6495,28 +6495,28 @@
 >
 >
 >
-> khi xbar < μ0: λ(**X**) luôn = 1, event λ(**X**) ≤ c không thỏa nếu c < 1, tức là ta sẽ không bao  giờ
+> khi x̄ < μ0: λ(**X**) luôn = 1, event λ(**X**) ≤ c không thỏa nếu c < 1, tức là ta sẽ không bao  giờ
 > reject H0 = không bao giờ accept H1 (vì khi đó mle nằm trong Θ0 = {(μ,σ²): μ < μ0}
 >
 >
 >
-> khi μ0 < xbar: reject H0 khi  λ(**X**) ≤ c
+> khi μ0 < x̄: reject H0 khi  λ(**X**) ≤ c
 >
 >
 >
-> ⇔ [Σi(xi-μ0)^2 / Σi(xi-xbar)^2]^(-n/2) ≤ c
+> ⇔ [Σi(xi-μ0)^2 / Σi(xi-x̄)^2]^(-n/2) ≤ c
 >
 >
 >
-> ⇔ 1/[Σi(xi-μ0)^2 / Σi(xi-xbar)^2]^(n/2) ≤ c
+> ⇔ 1/[Σi(xi-μ0)^2 / Σi(xi-x̄)^2]^(n/2) ≤ c
 >
 >
 >
-> ⇔ 1/c ≤ [Σi(xi-μ0)^2 / Σi(xi-xbar)^2]^(n/2)
+> ⇔ 1/c ≤ [Σi(xi-μ0)^2 / Σi(xi-x̄)^2]^(n/2)
 >
 >
 >
-> ⇔ (1/c)^(2/n) ≤ [Σi(xi-μ0)^2 / Σi(xi-xbar)^2]
+> ⇔ (1/c)^(2/n) ≤ [Σi(xi-μ0)^2 / Σi(xi-x̄)^2]
 >
 >
 >
@@ -6536,27 +6536,27 @@
 >
 >
 >
-> ⇔ (n-1)/c^(2/n) ≤ [n (xbar-μ0) / (S/√n)]^2
+> ⇔ (n-1)/c^(2/n) ≤ [n (x̄-μ0) / (S/√n)]^2
 >
 >
 >
-> ⇔ (n-1)/n^2c^(2/n) ≤ [(xbar-μ0) / (S/√n)]^2
+> ⇔ (n-1)/n^2c^(2/n) ≤ [(x̄-μ0) / (S/√n)]^2
 >
 >
 >
-> Vì đang xét μ0 < xbar →  (xbar-μ0) / (S/√n) > 0
+> Vì đang xét μ0 < x̄ →  (x̄-μ0) / (S/√n) > 0
 >
 >
 >
-> ..⇔ √[(n-1)/n^2c^(2/n)] ≤ (xbar-μ0) / (S/√n)
+> ..⇔ √[(n-1)/n^2c^(2/n)] ≤ (x̄-μ0) / (S/√n)
 >
 >
 >
-> Đặt vế trái là c', ta có LRT test rule khi μ0 < xbar:
+> Đặt vế trái là c', ta có LRT test rule khi μ0 < x̄:
 >
 >
 >
-> reject H0 khi (xbar-μ0) / (S/√n) > c'
+> reject H0 khi (x̄-μ0) / (S/√n) > c'
 >
 >
 >
@@ -6638,7 +6638,7 @@
 >
 >
 >
-> Viết lại: p(**x**) = P(Tn-1(X) ≥ W(**x**)) = P(Tn-1(**X**) ≥ (xbar-μ0) / (s/√n))
+> Viết lại: p(**x**) = P(Tn-1(X) ≥ W(**x**)) = P(Tn-1(**X**) ≥ (x̄-μ0) / (s/√n))
 >
 >
 >
