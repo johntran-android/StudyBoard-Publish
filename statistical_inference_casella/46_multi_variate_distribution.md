@@ -1,6 +1,6 @@
 # 4.6 Multi-variate Distribution
 
-📊 **Progress:** `22` Notes | `28` Screenshots
+📊 **Progress:** `22` Notes | `28` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-1ndxf47"></a>
@@ -20,7 +20,7 @@
 >
 >
 >
-> **X** = (X1, X2, X3, X4)
+> 𝐗 = (X1, X2, X3, X4)
 
 <br>
 
@@ -31,26 +31,19 @@
 <p align="center"><kbd><img src="assets/8ojya0tt9wq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Khái quát hơn, ta có multivariate random vector **X** = (X1, ...Xn).
+> Khái quát hơn, ta có multivariate random vector 𝐗 = (X1, ...Xn).
 >
 >
 >
-> với **x** = (x1,...xn) là một sample, tức là một observed value của **X**, (giống như
-> possible value x của X vậy)
+> với 𝐱 = (x1,...xn) là một sample, tức là một observed value của 𝐗, (giống như possible value x của X vậy)
 >
 >
 >
-> Tiếp gs nói **X** có sample space là ⊂ của R^n, là sao nhỉ? → Thì đúng rồi, **X** = (X1,
-> X2...Xn), bản chất của nó là n function, mapping từ original sample space Ω → R, tức là
-> với possible outcome s khác nhau, **x** = **X**(s) sẽ mang các giá trị khác nhau (X1(s),
-> X2(s), ...Xn(s)) khác nhau làm thành tập các R^n vector dĩ nhiên là subset của R^n.
+> Tiếp gs nói 𝐗 có sample space là ⊂ của R^n, là sao nhỉ? → Thì đúng rồi, 𝐗 = (X1, X2...Xn), bản chất của nó là n function, mapping từ original sample space Ω → R, tức là với possible outcome s khác nhau, 𝐱 = 𝐗(s) sẽ mang các giá trị khác nhau (X1(s), X2(s), ...Xn(s)) khác nhau làm thành tập các R^n vector dĩ nhiên là subset của R^n.
 >
 >
 >
-> Nếu X1, X2,..Xn chỉ có các giá trị rời rạc, thì tức là với các s trong Ω, thông qua **X**, chỉ
-> được map với các giá trị rời rạc trong R^n. Do đó tập các possible value **x** của **X, sẽ
-> chỉ chứa các vector R^n xi rời rạc, tuy số lượng có thể infinite, nhưng vẫn có tính
-> countable.**
+> Nếu X1, X2,..Xn chỉ có các giá trị rời rạc, thì tức là với các s trong Ω, thông qua 𝐗, chỉ được map với các giá trị rời rạc trong R^n. Do đó tập các possible value 𝐱 của 𝐗, sẽ chỉ chứa các vector R^n xi rời rạc, tuy số lượng có thể infinite, nhưng vẫn có tính countable.
 >
 >
 >
@@ -58,11 +51,11 @@
 >
 >
 >
-> f(**x**) = f(x1,x2...xn) = P(X1=x1,...Xn=xn) = P(**X**=**x)**
+> f(𝐱) = f(x1,x2...xn) = P(X1=x1,...Xn=xn) = P(𝐗=𝐱)
 >
 >
 >
-> nên từ đó ta có P(**X** ∈ A) = Σ**x** ∈A f(**x**). Là sao?
+> nên từ đó ta có P(𝐗 ∈ A) = Σ𝐱 ∈A f(𝐱). Là sao?
 >
 >
 >
@@ -70,13 +63,11 @@
 >
 >
 >
-> Như đã biết, bản chất cuả nó là function mapping possible outcome s trong original
-> sample space Ω và R, trong trường hợp này, sẽ chỉ là nhưng discrete value trong R.
+> Như đã biết, bản chất cuả nó là function mapping possible outcome s trong original sample space Ω và R, trong trường hợp này, sẽ chỉ là nhưng discrete value trong R.
 >
 >
 >
-> Do đó, tập những possible value của X, sẽ là tập các giá trị rời rạc x1,x2... {X(s) ∈ R: s ∈
-> Ω)
+> Do đó, tập những possible value của X, sẽ là tập các giá trị rời rạc x1,x2... {X(s) ∈ R: s ∈ Ω)
 >
 >
 >
@@ -84,8 +75,7 @@
 >
 >
 >
-> Vậy từ đó giả sử ta có A là tập ⊂ R, thì P(X ∈ A) sẽ được tính như thế nào? X ∈ A thực ra
-> là đang mô tả tập sau đây: {s ∈ Ω: X(s) ∈ A}
+> Vậy từ đó giả sử ta có A là tập ⊂ R, thì P(X ∈ A) sẽ được tính như thế nào? X ∈ A thực ra là đang mô tả tập sau đây: {s ∈ Ω: X(s) ∈ A}
 >
 >
 >
@@ -101,13 +91,11 @@
 >
 >
 >
-> Có nghĩa là, cái này có bản chất là một tổng, các P({s}) với s nằm trong tập {s ∈ Ω: X(s) ∈
-> A}
+> Có nghĩa là, cái này có bản chất là một tổng, các P({s}) với s nằm trong tập {s ∈ Ω: X(s) ∈ A}
 >
 >
 >
-> Thế thì do đó, cơ bản là xem cái tập này có các possible outcome nào. Mà tập này có thể
-> viết thế này không thay đổi bản chất:
+> Thế thì do đó, cơ bản là xem cái tập này có các possible outcome nào. Mà tập này có thể viết thế này không thay đổi bản chất:
 >
 >
 >
@@ -131,8 +119,7 @@
 >
 >
 >
-> Đến đây thì ta có Σ {s ∈ Ω: X(s) = x} P({s}) = P({s ∈ Ω: X(s) = x}), theo định nghĩa của
-> induced probability function PX: Nói rằng PX(X=x) = P({s ∈ Ω: X(s) = x})
+> Đến đây thì ta có Σ {s ∈ Ω: X(s) = x} P({s}) = P({s ∈ Ω: X(s) = x}), theo định nghĩa của induced probability function PX: Nói rằng PX(X=x) = P({s ∈ Ω: X(s) = x})
 >
 >
 >
@@ -144,23 +131,23 @@
 >
 >
 >
-> Thế thì tương tự, ta cũng có thể lập luận P(**X** ∈A) = Σ{**x** ∈A} f(**x**)
+> Thế thì tương tự, ta cũng có thể lập luận P(𝐗 ∈A) = Σ{𝐱 ∈A} f(𝐱)
 >
 >
 >
-> P(**X** ∈ A) = P({s ∈ Ω: **X**(s) ∈ A}) = Σ{s ∈ Ω: **X**(s) ∈ A} P({s})
+> P(𝐗 ∈ A) = P({s ∈ Ω: 𝐗(s) ∈ A}) = Σ{s ∈ Ω: 𝐗(s) ∈ A} P({s})
 >
 >
 >
-> = Σ{s ∈ Ω: **X**(s) = **x**, **x** ∈A} P({s})
+> = Σ{s ∈ Ω: 𝐗(s) = 𝐱, 𝐱 ∈A} P({s})
 >
 >
 >
-> = Σ{**x** ∈A} Σ{s ∈ Ω: **X**(s) = **x**} P({s})
+> = Σ{𝐱 ∈A} Σ{s ∈ Ω: 𝐗(s) = 𝐱} P({s})
 >
 >
 >
-> = Σ{x ∈ A} P(**X**=**x**)
+> = Σ{𝐱 ∈ A} P(𝐗=𝐱)
 >
 > Nếu X là continuous rv:
 >
@@ -174,13 +161,11 @@
 >
 >
 >
-> với FX(x) là cdf của X, mà bản thân hàm này lại được định nghĩa ( bởi/mang giá trị của)
-> P(X ≤ x)
+> với FX(x) là cdf của X, mà bản thân hàm này lại được định nghĩa ( bởi/mang giá trị của) P(X ≤ x)
 >
 >
 >
-> Thế thì, với việc hàm pdf được định nghĩa như vậy, ta sẽ áp dụng FTC1, vốn dĩ nói rằng
-> nếu có hàm f và F được định nghĩa bởi quan hệ sau:
+> Thế thì, với việc hàm pdf được định nghĩa như vậy, ta sẽ áp dụng FTC1, vốn dĩ nói rằng nếu có hàm f và F được định nghĩa bởi quan hệ sau:
 >
 >
 >
@@ -200,8 +185,7 @@
 >
 >
 >
-> Và từ đó ta được phép áp dụng FTC2, nói rằng nếu F là nguyên hàm của f thì ∫a:bf(x)dx =
-> F(b) - F(a)
+> Và từ đó ta được phép áp dụng FTC2, nói rằng nếu F là nguyên hàm của f thì ∫a:bf(x)dx = F(b) - F(a)
 >
 >
 >
@@ -209,56 +193,79 @@
 >
 >
 >
-> (-inf, a] ∪ (a, b] = (-inf, b]
+> (-inf, a\] ∪ (a, b\] = (-inf, b\]
 >
 >
 >
-> ⇨ {s ∈ Ω: X(s) ∈ (-inf, b]} = {s ∈ Ω: X(s) ∈ [ (-inf, a] ∪ (a, b] ]}
+> ⇨ {s ∈ Ω: X(s) ∈ (-inf, b\]} = {s ∈ Ω: X(s) ∈ \[ (-inf, a\] ∪ (a, b\] \]}
 >
 >
 >
-> = {s ∈ Ω: X(s) ∈ (-inf, a] OR X(s) ∈ (a, b] }
+> = {s ∈ Ω: X(s) ∈ (-inf, a\] OR X(s) ∈ (a, b\] }
 >
 >
 >
-> = {s ∈ Ω: X(s) ∈ (-inf, a]} ∪ {s ∈ Ω: X(s) ∈ (a, b] }
+> = {s ∈ Ω: X(s) ∈ (-inf, a\]} ∪ {s ∈ Ω: X(s) ∈ (a, b\] }
 >
 >
 >
-> ⇨ P({s ∈ Ω: X(s) ∈ (-inf, b]}) = P[{s ∈ Ω: X(s) ∈ (-inf, a]} ∪ {s ∈ Ω: X(s) ∈ (a, b] }]
+> ⇨ P({s ∈ Ω: X(s) ∈ (-inf, b\]}) = P\[{s ∈ Ω: X(s) ∈ (-inf, a\]} ∪ {s ∈ Ω: X(s) ∈ (a, b\] }\]
 >
 >
 >
-> ⇔ P({s ∈ Ω: X(s) ∈ (-inf, b]}) = P({s ∈ Ω: X(s) ∈ (-inf, a]}) + P({s ∈ Ω: X(s) ∈ (a, b]})  | axiom
-> 3
+> ⇔ P({s ∈ Ω: X(s) ∈ (-inf, b\]}) = P({s ∈ Ω: X(s) ∈ (-inf, a\]}) + P({s ∈ Ω: X(s) ∈ (a, b\]}) | axiom 3
 >
 >
 >
-> P(X ∈ (-inf, b]) = P(X ∈ (-inf, a]) + P(X ∈ (a, b])
+> P(X ∈ (-inf, b\]) = P(X ∈ (-inf, a\]) + P(X ∈ (a, b\])
 >
 >
 >
-> ⇔ P(X ≤ b) = P(X ≤ a) + P(X ∈ (a, b])
+> ⇔ P(X ≤ b) = P(X ≤ a) + P(X ∈ (a, b\])
 >
 >
 >
-> ⇨ P(X ∈ (a, b]) = P(X ≤ b) - P(X ≤ a)
+> ⇨ P(X ∈ (a, b\]) = P(X ≤ b) - P(X ≤ a)
 >
 >
 >
-> P(X ∈ (a, b]) = FX(b) - FX(a)
+> P(X ∈ (a, b\]) = FX(b) - FX(a)
 >
 >
 >
-> ⇨ P(X ∈ (a, b]) = ∫a:b fX(x)dx
+> ⇨ P(X ∈ (a, b\]) = ∫a:b fX(x)dx
 >
 >
 >
-> ⇨ P(X ∈ A) = ∫A fX(x)dxVà,với **X** mang giá trị liên tục ta cũng sẽ có kết quả tương tự:
+> ⇨ P(X ∈ A) = ∫A fX(x)dxVà,với 𝐗 mang giá trị liên tục ta cũng sẽ có kết quả tương tự:
 >
 >
 >
-> P(**X** ∈ A) = ∫...∫A f**X**(**x**)d**x** = ∫...∫A f(x1,x2...xn)dx1dx2...dxn
+> P(𝐗 ∈ A) = ∫...∫A f𝐗(𝐱)d𝐱 = ∫...∫A f(x1,x2...xn)dx1dx2...dxn
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, giải thích cặn kẽ bản chất từ không gian mẫu $\Omega$ và trường hợp 1 chiều (univariate) trước khi tổng quát hóa lên vector ngẫu nhiên.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Σ {s ∈ Ω: X(s) ∈ A} P({s})"*
+>
+> Cách viết phân rã biến cố thành tổng các xác suất điểm đơn lẻ $P(\{s\})$ chỉ chặt chẽ khi không gian mẫu gốc $\Omega$ là rời rạc (đếm được). Nếu $\Omega$ liên tục nhưng $X$ rời rạc (ví dụ: biến Bernoulli sinh từ phép đo liên tục), ta chỉ có thể phân hoạch trực tiếp theo $P(X \in A) = \sum_{x \in A} P(X = x)$ chứ không thể tách về từng $P(\{s\})$ vì các điểm đơn lẻ có xác suất bằng 0.
+>
+> **2.** *"= Σ{x ∈ A} P(𝐗=𝐱)"*
+>
+> Lỗi gõ ký hiệu nhỏ: chỉ số dưới dấu tổng viết nhầm thành scalar $x \in A$ thay vì vector $\mathbf{x} \in A$.
+>
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất random vector là một hàm đo được ánh xạ từ không gian mẫu gốc $\Omega$ vào $\mathbb{R}^n$.
+> - Diễn giải logic, dùng tiên đề xác suất (Axiom 3) và Định lý cơ bản của giải tích (FTC) để giải thích sự liên hệ giữa CDF và PDF trước khi mở rộng cho tích phân bội.
+>
+> **💡 Deeper notes**
+> - Từ đoạn chứng minh xác suất trên khoảng nửa mở $(a, b]$ mở rộng ra tập con tổng quát $A \subset \mathbb{R}^n$, về mặt giải tích đo lường là nhờ tính chất các khoảng tạo thành hệ sinh của $\sigma$-đại số Borel (Borel $\sigma$-algebra).
+> - FTC yêu cầu hàm mật độ xác suất $f(x)$ liên tục (hoặc liên tục hầu khắp nơi theo tích phân Lebesgue) thì đạo hàm của CDF mới bằng PDF.
 
 <br>
 
@@ -270,18 +277,18 @@
 
 > [!NOTE]
 > tiếp theo là nói về việc nếu ta apply scalar function g(.) lên random variable
-> vector **X**, thì ta sẽ có UNIVARIATE random variable g(**X**), điều này dễ
-> hiểu, bởi lẽ với các possible vector value **x**, thì g(**x**)sẽ là các possible
-> scalar value khác nhau. Nên g(**X**) sẽ cũng là random variable
+> vector 𝐗, thì ta sẽ có UNIVARIATE random variable g(𝐗), điều này dễ
+> hiểu, bởi lẽ với các possible vector value 𝐱, thì g(𝐱)sẽ là các possible
+> scalar value khác nhau. Nên g(𝐗) sẽ cũng là random variable
 >
 >
 >
-> Và ta có công thức tính Eg(**X**) = ∫-inf:inf...∫-inf:inf g(**x**)f(**x**)d**x** với
+> Và ta có công thức tính Eg(𝐗) = ∫-inf:inf...∫-inf:inf g(𝐱)f(𝐱)d𝐱 với
 > continuous case
 >
 >
 >
-> và Σ{**x**∈R^n} g(**x**)f(**x**) với discrete case.
+> và Σ{𝐱∈R^n} g(𝐱)f(𝐱) với discrete case.
 >
 >
 >
@@ -323,7 +330,7 @@
 <p align="center"><kbd><img src="assets/5j5l6g9eex6.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua ví dụ này, họ cho một joint pdf của **X** = (X1, X2, X3, X4)
+> Qua ví dụ này, họ cho một joint pdf của 𝐗 = (X1, X2, X3, X4)
 > f(x1,x2,x3,x4) = {(3/4)(x1^2 + x2^2 + x3^2 + x4^2) khi xi ∈ (0,1)
 > và 0 khi otherwise.
 >
@@ -335,7 +342,7 @@
 >
 >
 > Tất nhiên khi tích phân trên toàn R^4 thì cũng sẽ thu lại chỉ còn
-> tích phân trên support set (0 < xi < 1) vì ngooài set này f(**x**) = 0
+> tích phân trên support set (0 < xi < 1) vì ngooài set này f(𝐱) = 0
 > rồi.Thử xem taị sao ra 1:
 >
 >
@@ -344,7 +351,7 @@
 >
 >
 >
-> = Σi=1:4 3/4∫∫∫∫xi^2d**x** (tách thành tổng 4 cái tích phân)
+> = Σi=1:4 3/4∫∫∫∫xi^2d𝐱 (tách thành tổng 4 cái tích phân)
 >
 >
 >
@@ -377,15 +384,15 @@
 >
 >
 >
-> Đây là event **X** ∈ A, với A = {**x** ∈R^4: x1 < 1/2, x2 < 3/4, x4 > 1/2}
+> Đây là event 𝐗 ∈ A, với A = {𝐱 ∈R^4: x1 < 1/2, x2 < 3/4, x4 > 1/2}
 >
 >
 >
-> Thế thì: P(**X** ∈ A), như đã lúc nãy đã nói, sẽ = ∫∫∫∫A f(**x**)d**x**:
+> Thế thì: P(𝐗 ∈ A), như đã lúc nãy đã nói, sẽ = ∫∫∫∫A f(𝐱)d𝐱:
 >
 >
 >
-> = ∫-inf:1/2∫-inf:3/4∫-inf:inf∫1/2:inf f(**x**)dx1dx2dx3dx4 
+> = ∫-inf:1/2∫-inf:3/4∫-inf:inf∫1/2:inf f(𝐱)dx1dx2dx3dx4 
 >
 >
 >
@@ -433,7 +440,7 @@
 >
 >
 >
-> Để rồi tổng lại ta có P(**X** ∈ A) = 151/1024
+> Để rồi tổng lại ta có P(𝐗 ∈ A) = 151/1024
 
 <br>
 
@@ -444,7 +451,7 @@
 <p align="center"><kbd><img src="assets/4ile8f7hdja.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, ta có thể marginalizing f(**x**) over mọi possible value của X3, X4 để có 
+> Rồi, ta có thể marginalizing f(𝐱) over mọi possible value của X3, X4 để có 
 > joint pdf của X1,X2:
 >
 >
@@ -540,12 +547,12 @@
 > định nghĩa của Multinomial distribution. Như đã biết trong Stat110, story
 > của cái này là: ta có n iid trials, nhưng mỗi trials sẽ có m possible outcome
 > với xác suất tương ứng là p_i (gọi là CELL PROBABILITY_. Nên đương
-> nhiên Σp_i = 1. Ta sẽ có random variable **X** = (X1,...Xn) với Xi là số lần
+> nhiên Σp_i = 1. Ta sẽ có random variable 𝐗 = (X1,...Xn) với Xi là số lần
 > ra outcome thứ i trong m trials. Do đó dĩ nhiên là X1 + X2 + ....Xn = m
 >
 >
 >
-> Và joint pmf của X1,..Xn sẽ là f(**x**) = **m! Πi=1:n p_i^xi / xi!**
+> Và joint pmf của X1,..Xn sẽ là f(𝐱) = **m! Πi=1:n p_i^xi / xi!**
 >
 >
 >
@@ -572,8 +579,8 @@
 >
 >
 >
-> Khi đó, **X** = (X1,X2...X6)  với X1 là số lần ra 1 nút trong 10 lần tung, X2 là
-> số lần ra 2 nút trong 10 lần tung,... thì **X** sẽ ~multinomial (10, [p1,p2..])
+> Khi đó, 𝐗 = (X1,X2...X6)  với X1 là số lần ra 1 nút trong 10 lần tung, X2 là
+> số lần ra 2 nút trong 10 lần tung,... thì 𝐗 sẽ ~multinomial (10, [p1,p2..])
 >
 >
 >
@@ -583,11 +590,11 @@
 >
 >
 >
-> P(**X** ∈ A) ở đây chính là P(**X** = (0,0,1,2,3,4))
+> P(𝐗 ∈ A) ở đây chính là P(𝐗 = (0,0,1,2,3,4))
 >
 >
 >
-> = f**X**(0,0,1,2,3,4) 
+> = f𝐗(0,0,1,2,3,4) 
 >
 >
 >
@@ -643,7 +650,7 @@
 
 > [!NOTE]
 > Thế thì gặp lại một kiến thức đã học trong Stat110: Đó là, nếu như đang
-> trong multinomial **X** ~ multinomial(m, **p**) (**p** là vector cell probability
+> trong multinomial 𝐗 ~ multinomial(m, **p**) (**p** là vector cell probability
 > = (p1,p2... pn) với p_i là xác suất trial cho ra kết quả thuộc loại thứ i).
 >
 >
@@ -1102,8 +1109,7 @@
 <p align="center"><kbd><img src="assets/lnia15lqw48.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cái này y như (khái quát) của 4.3.6 là nếu mapping từ 𝒜 → ℬ ko
-> 1-1. 
+> Cái này y như (khái quát) của 4.3.6 là nếu mapping từ 𝒜 → ℬ ko 1-1.
 >
 >
 >
@@ -1111,13 +1117,11 @@
 >
 >
 >
-> 1) Có partition của 𝒜: P((X,Y) ∈ A0) = 0
+> 1. Có partition của 𝒜: P((X,Y) ∈ A0) = 0
 >
 >
 >
-> 2) Trên các A1, A2, thì qua g1, g2 đều map tới ℬ, và là mapping 1-1
-> (mà mapping 1-1 ở đây còn thêm ý là ta có thể tìm được hàm inverse
-> để từ u,v tìm được x,y trên Ai nữa)
+> 2. Trên các A1, A2, thì qua g1, g2 đều map tới ℬ, và là mapping 1-1 (mà mapping 1-1 ở đây còn thêm ý là ta có thể tìm được hàm inverse để từ u,v tìm được x,y trên Ai nữa)
 >
 >
 >
@@ -1125,7 +1129,7 @@
 >
 >
 >
-> f**U**(**u**) = Σ f**X**(h1i(**u**), ...hni(**u**)) |Ji| (*)
+> f𝐔(**u**) = Σ f𝐗(h1i(**u**), ...hni(**u**)) |Ji| (\*)
 >
 >
 >
@@ -1133,21 +1137,19 @@
 >
 >
 >
-> U = g1(X,Y) V = g2(X,Y) mà mapping x,y → u,v không 1-1.Khi đó nếu có thể
-> chỉ ra có partition A0,A1,...Ak của 𝒜 Sao cho:
+> U = g1(X,Y) V = g2(X,Y) mà mapping x,y → u,v không 1-1.Khi đó nếu có thể chỉ ra có partition A0,A1,...Ak của 𝒜 Sao cho:
 >
 >
 >
-> 1) P((X,Y) ∈ A0) = 0
+> 1. P((X,Y) ∈ A0) = 0
 >
 >
 >
-> 2) trên Ai thì với x,y ∈ Ai thì g1(x,y), g2(x,y) đều ∈ ℬ
+> 2. trên Ai thì với x,y ∈ Ai thì g1(x,y), g2(x,y) đều ∈ ℬ
 >
 >
 >
-> và với u,v = g1(x,y), g2(x,y) ∈ ℬ với x,y ∈ Ai ta có thể tìm x = h1i(u,v)
-> và y = h2i(u,v)
+> và với u,v = g1(x,y), g2(x,y) ∈ ℬ với x,y ∈ Ai ta có thể tìm x = h1i(u,v) và y = h2i(u,v)
 >
 >
 >
@@ -1159,12 +1161,34 @@
 >
 >
 >
-> thì ở đây nếu mình coi (U,V) là **U** và (X,Y) là **X** thì nó chính là công thức trê**n
-> (*) thôi**
+> thì ở đây nếu mình coi (U,V) là 𝐔 và (X,Y) là 𝐗 thì nó chính là công thức trên (\*) thôi
 >
 >
 >
-> f**U**(**u**) = Σi f**X**(h1i(**u**),h2i(**u**)) | Ji |
+> f𝐔(**u**) = Σi f𝐗(h1i(**u**),h2i(**u**)) | Ji |
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú nắm rất tốt bản chất của định lý đổi biến tổng quát cho vector ngẫu nhiên thông qua việc liên hệ trực quan với trường hợp 2 biến đã học.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"1) Có partition của 𝒜: P((X,Y) ∈ A0) = 0"*
+>
+> Ở phần đầu đang nói về trường hợp tổng quát vector ngẫu nhiên n chiều nhưng bạn ghi nhầm ký hiệu (X,Y) thay vì vector X = (X1, ..., Xn).
+>
+> **2.** *"fU(u) = Σi f𝐗(h1i(u),h2i(u)) | Ji |"*
+>
+> Ở dòng cuối cùng khi kết luận cho vector X tổng quát, bạn chỉ ghi 2 thành phần (h1i, h2i) thay vì đầy đủ n thành phần (h1i, ..., hni) như bạn đã viết đúng ở công thức (*) phía trên.
+>
+>
+> **✓ Strengths**
+> - Hiểu chính xác cách phân hoạch không gian mẫu khi phép biến đổi không phải là 1-1 toàn phần.
+> - Liên hệ mạch lạc, chuẩn xác giữa công thức mở rộng n chiều và công thức 2 biến của mục 4.3.6.
+>
+> **💡 Deeper notes**
+> - Định lý còn yêu cầu thêm điều kiện kỹ thuật là định thức Jacobian Ji không được triệt tiêu hoàn toàn trên miền B (do not vanish identically on B) và các đạo hàm riêng phải liên tục.
 
 <br>
 
