@@ -24,7 +24,7 @@
 >
 >
 >
-> (Sample mean, Xbar, mà ta còn nhớ, tác giả nói có thể ghi nó là Xbar(X1,...
+> (Sample mean, X̄, mà ta còn nhớ, tác giả nói có thể ghi nó là X̄(X1,...
 > Xn) để thể hiện bản chất nó là FUNCTION của các random variables trong
 > sample)
 >
@@ -243,7 +243,7 @@
 >
 >
 >
-> Rồi, m1 tức 1st sample moment là (Σi Xi)/n = Xbar
+> Rồi, m1 tức 1st sample moment là (Σi Xi)/n = X̄
 >
 >
 >
@@ -276,7 +276,7 @@
 >
 >
 >
-> m1 = μ'1 ⇔ Xbar = θ 
+> m1 = μ'1 ⇔ X̄ = θ 
 >
 >
 >
@@ -292,7 +292,7 @@
 >
 >
 >
-> θ~ = Xbar
+> θ~ = X̄
 >
 >
 >
@@ -316,7 +316,7 @@
 >
 >
 >
-> θ~ = Xbar  
+> θ~ = X̄  
 >
 >
 >
@@ -379,7 +379,7 @@
 >
 >
 >
-> 1st sample moment: (1/n) ΣXi, chính là Xbar
+> 1st sample moment: (1/n) ΣXi, chính là X̄
 >
 >
 >
@@ -391,7 +391,7 @@
 >
 >
 >
-> m1 = Xbar = np
+> m1 = X̄ = np
 >
 >
 >
@@ -399,11 +399,11 @@
 >
 >
 >
-> Và giải ra ta có k~, tức estimator cho k, = Xbar^2 / (Xbar - (1/n) Σ (Xi - Xbar)^2
+> Và giải ra ta có k~, tức estimator cho k, = X̄^2 / (X̄ - (1/n) Σ (Xi - X̄)^2
 >
 >
 >
-> Và p~ (estimator cho p) = Xbar / k~
+> Và p~ (estimator cho p) = X̄ / k~
 >
 >
 >
@@ -624,7 +624,7 @@
 >
 >
 >
-> Và cụ thể thì t statistic = (Xbar - μ) / (S/√n)
+> Và cụ thể thì t statistic = (X̄ - μ) / (S/√n)
 >
 >
 >
@@ -788,23 +788,23 @@
 >
 >
 > Thế rồi ôn lại khái niệm likelihood function, nó được định nghĩa là hàm số theo
-> **θ** (vector parameter) mà giá trị tính bởi f(**x**|**θ**), tức joint pdf/pmf của random
+> **θ** (vector parameter) mà giá trị tính bởi f(𝐱|**θ**), tức joint pdf/pmf của random
 > variable X1,...Xn của random sample.
 >
 >
 >
-> Chỗ này có thể khó hiểu với vài người: Chỉ cần nhớ, à, cái hàm likelihood L(**θ**|**x**)
+> Chỗ này có thể khó hiểu với vài người: Chỉ cần nhớ, à, cái hàm likelihood L(**θ**|𝐱)
 > nó được định nghĩa là, hay, nó được tính bằng cách: Bỏ input là một **θ** vào 
-> thì ta sẽ tính joint pdf f(**x**|**θ**) với **x** là giá trị quan sát được của sample và trả kết
+> thì ta sẽ tính joint pdf f(𝐱|**θ**) với 𝐱 là giá trị quan sát được của sample và trả kết
 > quả ra. Nên trong định nghĩa như vậy, thì đây là hàm của **θ**, với θ khác thì bỏ
-> vào, tính f(**x**|**θ**) (vẫn là **x** đó, tức giá trị quan sát được của sample là cố định)
-> sẽ ra giá trị khác. Và ý nghiã của hàm L(**θ**|**x**) mang ý nghĩa là mức độ HỢP LÝ
-> của việc population parameter mang giá trị **θ**, với quan sát **X** = **x**.
+> vào, tính f(𝐱|**θ**) (vẫn là 𝐱 đó, tức giá trị quan sát được của sample là cố định)
+> sẽ ra giá trị khác. Và ý nghiã của hàm L(**θ**|𝐱) mang ý nghĩa là mức độ HỢP LÝ
+> của việc population parameter mang giá trị **θ**, với quan sát 𝐗 = 𝐱.
 >
 >
 >
 > Quay lại đây, gs viết ở dạng expand:
-> L(**θ**|**x**), tức L(θ1, ...θk|x1,...xn) = Πi=1:n f(xi|θ1...θk) (không khó hiểu, vì joint pmf
+> L(**θ**|𝐱), tức L(θ1, ...θk|x1,...xn) = Πi=1:n f(xi|θ1...θk) (không khó hiểu, vì joint pmf
 > pdf = tích marginal pmf / pdf do tính chất iid)
 
 <br>
@@ -818,22 +818,22 @@
 > [!NOTE]
 > Rồi, đây! Định nghĩa chính thức của Maximum Likelihood Estimator mà
 > mình chỉ học lóm trước đây trong bối cảnh của các lớp về tối ưu hay deep
-> learning. Định nghĩa của nó là vầy: Đã nói likelihood L(**θ**|**x**) là function
-> là hàm số theo **θ** khác nhau, cùng với giá trị fixed **x** (giá trị quan sát
-> thấy của **X**) thì ta sẽ tính  ra độ hợp lý khác nhau. Vậy thì ta sẽ đi tìm cái
+> learning. Định nghĩa của nó là vầy: Đã nói likelihood L(**θ**|𝐱) là function
+> là hàm số theo **θ** khác nhau, cùng với giá trị fixed 𝐱 (giá trị quan sát
+> thấy của 𝐗) thì ta sẽ tính  ra độ hợp lý khác nhau. Vậy thì ta sẽ đi tìm cái
 > θ mà maximize cái độ hợp lý đó: Tức đặt ra bài toán maximize over θ
-> {L(**θ**|**x**)}.
+> {L(**θ**|𝐱)}.
 >
 >
 >
 > Giải cái này, hay, về cơ bản, ta đã định nghĩa ra thêm một hàm số nữa:
-> Hàm số này đưa vào input là **x**, và bên trong nó sẽ giải bài toán
-> optimization này  để trả ra **θ**. Nên ta kí hiệu hàm số này là θ^(**x**).
+> Hàm số này đưa vào input là 𝐱, và bên trong nó sẽ giải bài toán
+> optimization này  để trả ra **θ**. Nên ta kí hiệu hàm số này là θ^(𝐱).
 >
 >
 >
 > Và quan trọng là: Có thể thấy, đây là MỘT HÀM SỐ ÁP LÊN MỘT BỘ
-> RANDOM SAMPLE: W(X1,...,Xn), cụ thể là θ^(**X**)
+> RANDOM SAMPLE: W(X1,...,Xn), cụ thể là θ^(𝐗)
 >
 >
 >
@@ -861,7 +861,7 @@
 >
 > Ý sau nói là, về cơ bản, là MLE là một lựa chọn hợp lí cho một estimator,
 > MLEstimate là giá trị hợp lí nhất của parameter θ giúp tạo ra giá trị quan sát
-> **X** = **x**.
+> 𝐗 = 𝐱.
 >
 >
 >
@@ -941,22 +941,22 @@
 <p align="center"><kbd><img src="assets/tr9on7bvvzb.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, xét ví dụ này, X1,...Xn là iid n(θ,1) và L(θ|**x**) là likelihood function. Mình
-> nghĩ: Bình thường, ở trạng thái khái quát, thì L(**θ**|**x**) vì **θ** làvector  các
+> Rồi, xét ví dụ này, X1,...Xn là iid n(θ,1) và L(θ|𝐱) là likelihood function. Mình
+> nghĩ: Bình thường, ở trạng thái khái quát, thì L(**θ**|𝐱) vì **θ** làvector  các
 > parameter. Còn ở đây thì chỉ có θ (trong n(θ,1) tức population mean là  chưa biết
 > thôi, variance = 1 biết rồi, nên **θ** (ý nói vector param, chỉ là θ  thôi, đáng lẽ giáo
 > sư cứ dùng μ).
 >
 >
 >
-> Rồi, như đã biết Likelihood function L(**θ**|**x**) được định nghĩa là giá trị của joint
-> pmf/pdf của random variable vector **X** evaluate tại giá trị quan sát được  **X** =
-> **x** f**X**(**x**|**θ**), và vì tính iid của Xi, nên nó trở thành Πi f(xi|θ) với fXi(xi|θ)
+> Rồi, như đã biết Likelihood function L(**θ**|𝐱) được định nghĩa là giá trị của joint
+> pmf/pdf của random variable vector 𝐗 evaluate tại giá trị quan sát được  𝐗 =
+> 𝐱 f𝐗(𝐱|**θ**), và vì tính iid của Xi, nên nó trở thành Πi f(xi|θ) với fXi(xi|θ)
 > bây giờ đều là marginal pdf của n(θ,1). Chỗ này nếu ko hiểu chắc sẽ thấy  bối rối:
 > Theo quy định (ý là theo định nghĩa của likelihood function) thì ta phải tính
-> f**X**(**x**|**θ**). Nhưng vì định nghĩa của random sample quy định tính chất iid,
+> f𝐗(𝐱|**θ**). Nhưng vì định nghĩa của random sample quy định tính chất iid,
 > tức các X1,...Xn mutually independent và identically distribution, tức là chúng có
-> chung marginal distribution. Thành ra nhờ tính independent, joint pdf f**X**(**x**|θ)
+> chung marginal distribution. Thành ra nhờ tính independent, joint pdf f𝐗(𝐱|θ)
 > sẽ bằng tích của các marginal pdf: Πi fXi(xi|θ). Sau đó, vì tính identically
 > distributed, nên ta mới đều dùng pdf của n(1,θ) cho fXi(xi|θ):
 >
@@ -970,7 +970,7 @@
 >
 >
 >
-> L(θ|**x**) = Πi=1:n fXi(xi|θ) = Πi=1:n (1/√2π) exp[-(1/2)(xi-θ)^2]
+> L(θ|𝐱) = Πi=1:n fXi(xi|θ) = Πi=1:n (1/√2π) exp[-(1/2)(xi-θ)^2]
 >
 >
 >
@@ -986,7 +986,7 @@
 >
 >
 >
-> Tính d/dθ L(θ|**x**):
+> Tính d/dθ L(θ|𝐱):
 >
 >
 >
@@ -1028,24 +1028,24 @@
 >
 >
 > Vậy ta có candidate solution của việc giải bài toán tối ưu này (chưa giải xong nhé,
-> vì đây chỉ là điều kiện cần) là θ = Σi xi / n. Và đó chính là gì ? ⇨ Hàm Xbar:
-> Xbar(x1,..xn) = (Σi xi)/n Và ứng cử viên cho ML Estimator θ^(**X**) trong trường
-> hợp này chính là Xbar(**X**), để rồi nếu nó thật sự là ML Estimator thì θ^(**x**) =
-> Xbar(**x**) = x̄ chính là ML Estimate.
+> vì đây chỉ là điều kiện cần) là θ = Σi xi / n. Và đó chính là gì ? ⇨ Hàm X̄:
+> X̄(x1,..xn) = (Σi xi)/n Và ứng cử viên cho ML Estimator θ^(𝐗) trong trường
+> hợp này chính là X̄(𝐗), để rồi nếu nó thật sự là ML Estimator thì θ^(𝐱) =
+> X̄(𝐱) = x̄ chính là ML Estimate.
 >
 >
 >
 > Tiếp, tác giả cho rằng ta có thể check thêm đạo hàm cấp hai (Mình hiểu, ông dùng
-> second  derivative check đây mà) để xác nhận là tại giá trị candidate **x**bar thì
+> second  derivative check đây mà) để xác nhận là tại giá trị candidate 𝐱bar thì
 > đạo hàm cấp hai âm:
 >
 >
 >
-> d^2/dθ L(θ|**x**)|θ=x̄:
+> d^2/dθ L(θ|𝐱)|θ=x̄:
 >
 >
 >
-> Derive d^2/dθ L(θ|x) trước, nó sẽ bằng đạo hàm cấp 1 của d/dθ L(θ|**x**) mà ta có
+> Derive d^2/dθ L(θ|x) trước, nó sẽ bằng đạo hàm cấp 1 của d/dθ L(θ|𝐱) mà ta có
 > ở trên:
 >
 >
@@ -1185,32 +1185,32 @@
 > đi lên cái núi thứ 2) → ko đúng, vì đã nói chỉ có 1 điểm mà độ dốc = 0 thôi mà.
 > Nên suy ra khỏi phải check tại biên làm gì.
 >
-> Sẵn đây, nói luôn việc d/dθ L(θ|**x**)|θ=x̄ < 0 sẽ giúp kết luận maximum là vì sao?
+> Sẵn đây, nói luôn việc d/dθ L(θ|𝐱)|θ=x̄ < 0 sẽ giúp kết luận maximum là vì sao?
 >
 >
 >
-> Xét trong bối cảnh hàm đa biến f(**x**) thì điều này sẽ tương ứng với việc Hessian
+> Xét trong bối cảnh hàm đa biến f(𝐱) thì điều này sẽ tương ứng với việc Hessian
 > xác định âm (negative definite)
 >
 >
 >
-> Xét hàm g(t) = f(**x*** + t**d**) với **d** là hướng bất kì. Thì:
+> Xét hàm g(t) = f(𝐱* + t**d**) với **d** là hướng bất kì. Thì:
 >
 >
 >
-> d/dt g(t) = d/dt f(**x*** + t**d**) = d/d(**x*** + t**d**) f(**x*** + t**d**) . d/dt (**x*** + t**d**)
+> d/dt g(t) = d/dt f(𝐱* + t**d**) = d/d(𝐱* + t**d**) f(𝐱* + t**d**) . d/dt (𝐱* + t**d**)
 >
 >
 >
-> = ∇f(**x*** + t**d**) . **d** = ∇f(**x*** + t**d**)Td
+> = ∇f(𝐱* + t**d**) . **d** = ∇f(𝐱* + t**d**)Td
 >
 >
 >
-> Vậy directional derivative theo hướng **d** của f tại **x*** sẽ chính là d/dt g(t)|t=0
+> Vậy directional derivative theo hướng **d** của f tại 𝐱* sẽ chính là d/dt g(t)|t=0
 >
 >
 >
-> = ∇f(**x*** + 0***d**)Td = ∇f(**x***)T**d**.
+> = ∇f(𝐱* + 0***d**)Td = ∇f(𝐱*)T**d**.
 >
 >
 >
@@ -1241,7 +1241,7 @@
 >
 >
 >
-> f(**x** + **d**) = f(**x**) + ∇f(**x**)T(**d**) + (1/2)**d**T∇^2f(**x** + α**d**)**d** với α là số ∈ [0,1] 
+> f(𝐱 + **d**) = f(𝐱) + ∇f(𝐱)T(**d**) + (1/2)**d**T∇^2f(𝐱 + α**d**)**d** với α là số ∈ [0,1] 
 >
 >
 >
@@ -1251,7 +1251,7 @@
 >
 >
 >
-> f(**x*** + **d**) = f(**x***) + ∇f(**x***)T**d** + (1/2)**d**T∇^2f(**x*** + α**d**)**d** với α là số ∈ [0,1] 
+> f(𝐱* + **d**) = f(𝐱*) + ∇f(𝐱*)T**d** + (1/2)**d**T∇^2f(𝐱* + α**d**)**d** với α là số ∈ [0,1] 
 >
 >
 >
@@ -1261,7 +1261,7 @@
 >
 >
 >
-> f(**x*** + **d**) = f(**x***) + (1/2)**d**T∇^2f(**x*** + α**d**)**d**, for some α số ∈ [0,1] 
+> f(𝐱* + **d**) = f(𝐱*) + (1/2)**d**T∇^2f(𝐱* + α**d**)**d**, for some α số ∈ [0,1] 
 >
 >
 >
@@ -1272,15 +1272,15 @@
 >
 >
 >
-> f(**x*** + t**d**) = f(**x***) + (1/2)(t**d**)T∇^2f(**x*** + αt**d**)(t**d**)
+> f(𝐱* + t**d**) = f(𝐱*) + (1/2)(t**d**)T∇^2f(𝐱* + αt**d**)(t**d**)
 >
 >
 >
-> = f(**x***) + (1/2)(t^2) **d**T∇^2f(**x*** + αt**d**)**d** for some α in (0,1)
+> = f(𝐱*) + (1/2)(t^2) **d**T∇^2f(𝐱* + αt**d**)**d** for some α in (0,1)
 >
 >
 >
-> = f(**x***) + (1/2)(t^2) **d**T∇^2f(**x*** + α**d**)**d** for some α in (0,t)
+> = f(𝐱*) + (1/2)(t^2) **d**T∇^2f(𝐱* + α**d**)**d** for some α in (0,t)
 >
 >
 >
@@ -1288,16 +1288,16 @@
 >
 >
 >
-> Khi đi từ **x*** → ra khỏi **x*** bằng cách tăng dần t
+> Khi đi từ 𝐱* → ra khỏi 𝐱* bằng cách tăng dần t
 >
 >
 >
-> thì vì hàm f là hàm liên tục, nên Hessian cũng sẽ liên tục, mà Hessian tại **x*** là
+> thì vì hàm f là hàm liên tục, nên Hessian cũng sẽ liên tục, mà Hessian tại 𝐱* là
 > xác định âm (có λmax âm) thì sẽ phải tồn tại một vùng nào đó mà khi t trong phạm
-> vi này, thì Hessian tại **x*** + α**d** vẫn xác định âm, bởi lẽ hàm liên tục nên λmax cũng
+> vi này, thì Hessian tại 𝐱* + α**d** vẫn xác định âm, bởi lẽ hàm liên tục nên λmax cũng
 > liên tục, mà λmax âm thì không thể nào nó ngay lập tức biến thành dương được.
 > Vậy phải trong khoảng đó, Hessian vẫn xác định âm khiến cho cái quadratic term
-> **d**T∇^2f(**x*** + α**d**)**d** âm → f(**x*** + t**d**) nhỏ hơn f(**x***). Cho thấy **x*** là local maximum.
+> **d**T∇^2f(𝐱* + α**d**)**d** âm → f(𝐱* + t**d**) nhỏ hơn f(𝐱*). Cho thấy 𝐱* là local maximum.
 
 <br>
 
@@ -1309,7 +1309,7 @@
 
 > [!NOTE]
 > Ôn lại một tí: Hôm qua ta đã học về MLE. Định nghĩa chính thức của nó đó
-> là: Cái Estimator mà khiến cho likelihood function L(θ|**x**) lớn nhất thì là ML
+> là: Cái Estimator mà khiến cho likelihood function L(θ|𝐱) lớn nhất thì là ML
 > Estimator Ôn lại tiếp, estimator là gì, nó có định nghĩa chính thức, là một
 > function của các random variable của một random sample W(X1,....Xn). Định
 > nghĩa này rất mơ hồ, rất rộng, mà theo đó, bất kì statistic nào cũng là
@@ -1327,15 +1327,15 @@
 >
 > Còn cách thứ hai là dùng likelihood. Lại nói về likelihood, nó là function được
 > định nghĩa bằng cách nhận một giá trị **θ**, ta sẽ tính joint pdf/pmf của
-> random variable vector **X** evaluate tại observed value **x:**  f(**x**|θ) và trả
-> ra gía trị này.  L(**θ**|**x**) = f(**x**|**θ**) = Πi f(xi|θ) Thì đây mang ý nghĩa là
-> độ hợp lí của **θ** khi quan  sát thấy giá trị **x**. Thế thì với các **θ** khác
-> nhau, L(**θ**|**x**) sẽ khác nhau.
+> random variable vector 𝐗 evaluate tại observed value **x:**  f(𝐱|θ) và trả
+> ra gía trị này.  L(**θ**|𝐱) = f(𝐱|**θ**) = Πi f(xi|θ) Thì đây mang ý nghĩa là
+> độ hợp lí của **θ** khi quan  sát thấy giá trị 𝐱. Thế thì với các **θ** khác
+> nhau, L(**θ**|𝐱) sẽ khác nhau.
 >
 >
 >
-> Và cái khiến maximize L(θ|**x**), tức là cái có được bằng cách gỉai bài toán
-> maximize  over θ L(θ|**x**) sẽ chính là ML estimator.
+> Và cái khiến maximize L(θ|𝐱), tức là cái có được bằng cách gỉai bài toán
+> maximize  over θ L(θ|𝐱) sẽ chính là ML estimator.
 >
 >
 >
@@ -1344,7 +1344,7 @@
 >
 >
 >
-> g(**x**) = maximize **θ** {L(θ|**x**)}
+> g(𝐱) = maximize **θ** {L(θ|𝐱)}
 >
 >
 >
@@ -1353,7 +1353,7 @@
 >
 >
 >
-> θ^(**X**) với θ^(**x**) = maximize θ {L(θ|**x**)} là maximum likelihood
+> θ^(𝐗) với θ^(𝐱) = maximize θ {L(θ|𝐱)} là maximum likelihood
 > estimator
 >
 >
@@ -1392,12 +1392,12 @@
 >
 >
 >
-> Có nghĩa là ta chứng minh được rằng L(θ|**x**) ≤ L(x̄|**x**) và chỉ bằng
+> Có nghĩa là ta chứng minh được rằng L(θ|𝐱) ≤ L(x̄|𝐱) và chỉ bằng
 > nếu θ = x̄
 >
 >
 >
-> Vậy Θ^(**X**)  = Xbar(**X**) chính là MLE
+> Vậy Θ^(𝐗)  = X̄(𝐗) chính là MLE
 
 **🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-jhe69j5)
 
@@ -1418,7 +1418,7 @@
 >
 >
 > Ở đây giáo sư nói rằng đặc biệt khi differentiation được dùng thì sẽ dễ dàng hơn
-> nếu ta dùng natural logarithm thay log L(θ|**x**). Gọi là **LOG LIKELIHOOD**  thay
+> nếu ta dùng natural logarithm thay log L(θ|𝐱). Gọi là **LOG LIKELIHOOD**  thay
 > vì dùng trực tiếp log.
 >
 >
@@ -1439,7 +1439,7 @@
 >
 >
 >
-> L(p|**x**) = f(**x**|p) = Πi f(xi|p)
+> L(p|𝐱) = f(𝐱|p) = Πi f(xi|p)
 >
 >
 >
@@ -1482,7 +1482,7 @@
 >
 >
 >
-> Rồi, ráp vào: L(p|**x**) = f(**x**|p) = Πi f(xi|p) = Πi p^xi (1-p)^(1-xi)
+> Rồi, ráp vào: L(p|𝐱) = f(𝐱|p) = Πi f(xi|p) = Πi p^xi (1-p)^(1-xi)
 >
 >
 >
@@ -1506,17 +1506,17 @@
 >
 >
 >
-> ⇨ L(p|**x**) = p^y (1-p)^(n-y)
+> ⇨ L(p|𝐱) = p^y (1-p)^(n-y)
 >
 >
 >
 > Thế thì, cái function này dù rằng ko quá khó để lấy đạo hàm nhưng sẽ dễ  hơn
 > nhiều  nếu chuyển sang bài toán tương đương (tức là maximize over p {log
-> L(p|**x**)} thay  vì maximize over p L(p|**x**)
+> L(p|𝐱)} thay  vì maximize over p L(p|𝐱)
 >
 >
 >
-> log L(p|**x**) = log [p^y (1-p)^(n-y)] = log p^y + log (1-p)^(n-y)
+> log L(p|𝐱) = log [p^y (1-p)^(n-y)] = log p^y + log (1-p)^(n-y)
 >
 >
 >
@@ -1529,7 +1529,7 @@
 >
 >
 >
-> d/dp [log L(p|**x**)] = d/dp [y log (p) + (n-y) log(1-p)]
+> d/dp [log L(p|𝐱)] = d/dp [y log (p) + (n-y) log(1-p)]
 >
 >
 >
@@ -1677,7 +1677,7 @@
 >
 >
 >
-> Vậy p^(**X**) = ΣXi/n hay, Xbar, hay Xbar(**X**) chính là MLE estimator
+> Vậy p^(𝐗) = ΣXi/n hay, X̄, hay X̄(𝐗) chính là MLE estimator
 
 <br>
 
@@ -1703,11 +1703,11 @@
 >
 >
 >
-> Thế thì nếu như không có ràng buộc gì với θ, ta đã biết Xbar sẽ là MLE.
+> Thế thì nếu như không có ràng buộc gì với θ, ta đã biết X̄ sẽ là MLE.
 >
 >
 >
-> Nhưng với ràng buộc θ phải không âm thì Xbar có thể nằm ngoài range của
+> Nhưng với ràng buộc θ phải không âm thì X̄ có thể nằm ngoài range của
 > parameter (tức là range của parameter là [0,inf))
 >
 >
@@ -1718,7 +1718,7 @@
 >
 >
 >
-> Nên MLE cho θ sẽ là Xbar nếu Xbar ≥ 0 và = 0 nếu Xbar < 0
+> Nên MLE cho θ sẽ là X̄ nếu X̄ ≥ 0 và = 0 nếu X̄ < 0
 >
 >
 >
@@ -1733,19 +1733,19 @@
 > Ôn lại không thừa, ML Estimator là cái gì? ⇨ À nó là cái function của random
 > sample: W(X1....Xn) (Vì đây là định nghĩa tổng quát của Estimator). Nhưng
 > function nào mới được? À thì ta sẽ bàn về likelihood function, được định nghĩa
-> là hàm theo θ, được tính bởi: Nhận vào θ, và dựa trên giá trị quan sát  của **X**
-> là **x**, ta tính joint pdf/pmf tại **x**: f(**x**|θ). Tức L(θ|**x**) = f(**x**|θ), với ý
-> nghĩa là độ hợp lí của θ khi quan sát được giá trị của **X** = **x**. Thế thì, ta
-> mới giải bài toán tìm θ sao cho maximize L(θ|**x**), hay đặt hàm g(**x**) =
-> argmax_θ L(θ|**x**). Và đây là chính là cái hàm W(**x**) trả lời cho câu hỏi trên.
-> Hay, kí hiệu trong sách là θ^(**X**)là ML estimator, và θ^(**x**) là ML
+> là hàm theo θ, được tính bởi: Nhận vào θ, và dựa trên giá trị quan sát  của 𝐗
+> là 𝐱, ta tính joint pdf/pmf tại 𝐱: f(𝐱|θ). Tức L(θ|𝐱) = f(𝐱|θ), với ý
+> nghĩa là độ hợp lí của θ khi quan sát được giá trị của 𝐗 = 𝐱. Thế thì, ta
+> mới giải bài toán tìm θ sao cho maximize L(θ|𝐱), hay đặt hàm g(𝐱) =
+> argmax_θ L(θ|𝐱). Và đây là chính là cái hàm W(𝐱) trả lời cho câu hỏi trên.
+> Hay, kí hiệu trong sách là θ^(𝐗)là ML estimator, và θ^(𝐱) là ML
 > estimate.
 >
 >
 >
 > Thế thì, để tìm MLE cho θ của n(θ,1) thì những ví dụ trước ta đã làm, dùng giải
-> tích để đi tìm stationary point, nơi d/dθ L(θ|**x**) = 0, và sau đó thì check
-> boundary và đạo hàm cấp 2 để thấy Xbar(**X**), chính là MLE.
+> tích để đi tìm stationary point, nơi d/dθ L(θ|𝐱) = 0, và sau đó thì check
+> boundary và đạo hàm cấp 2 để thấy X̄(𝐗), chính là MLE.
 >
 >
 >
@@ -1753,8 +1753,8 @@
 > range kéo dài từ -inf tới inf. Nên khi đó dù giá trị của ML Estimate (tức x̄) có
 > âm hay dương gì thì nó vẫn hợp lệ. Ý là, ta đi tìm ML estimator cho θ, thì dĩ
 > nhiên giá trị cụ thể ML estimate sẽ là giá trị ước lượng của θ, Mà range nó cho
-> phép thoải mái, thì ta có thể kết luận Xbar là ML estimator vì dù x̄ (giá trị cụ
-> thể của Xbar) có là bao nhiêu thì nó vẫn không vi phạm.
+> phép thoải mái, thì ta có thể kết luận X̄ là ML estimator vì dù x̄ (giá trị cụ
+> thể của X̄) có là bao nhiêu thì nó vẫn không vi phạm.
 >
 >
 >
@@ -1762,11 +1762,11 @@
 >
 >
 >
-> Thế thì, lúc này với ràng buộc này, thì ML Estimator có còn là Xbar(**X**) nữa
+> Thế thì, lúc này với ràng buộc này, thì ML Estimator có còn là X̄(𝐗) nữa
 > ko (*chỗ này nếu ai khó hiểu thì nên nhớ, trong sách này, giáo sư Casella đã
-> nói, Xbar thực ra là cách viết tắt của function Xbar(**X**), vì nó là một statistic
-> có được khi apply function g(**X**) = ΣXi / n, tương tự S^2 (sample variance)
-> đáng phải ghi ra là S^2(**X**))
+> nói, X̄ thực ra là cách viết tắt của function X̄(𝐗), vì nó là một statistic
+> có được khi apply function g(𝐗) = ΣXi / n, tương tự S^2 (sample variance)
+> đáng phải ghi ra là S^2(𝐗))
 >
 >
 >
@@ -1774,13 +1774,13 @@
 >
 >
 >
-> maximize over θ {L(θ|**x**)}. Nhưng khác ở chỗ, bây giờ là bài toán tối ưu có
+> maximize over θ {L(θ|𝐱)}. Nhưng khác ở chỗ, bây giờ là bài toán tối ưu có
 > ràng buộc cụ thể là ràng buộc bất đẳng thức: Inequality constraint optimization
 > problem
 >
 >
 >
-> maximize over θ {L(θ|**x**)} subject to θ ≥ 0
+> maximize over θ {L(θ|𝐱)} subject to θ ≥ 0
 >
 >
 >
@@ -1823,7 +1823,7 @@
 >
 >
 >
-> Vậy MLE là θ^mle = Xbar khi 0 ≤ Xbar và θ^mle là 0 nếu ngược lại
+> Vậy MLE là θ^mle = X̄ khi 0 ≤ X̄ và θ^mle là 0 nếu ngược lại
 
 <br>
 
@@ -1843,7 +1843,7 @@
 >
 >
 >
-> Likelihood L(k|**x**, p) (tức là, hàm theo k, tính dựa trên giá trị đã biết **x**
+> Likelihood L(k|𝐱, p) (tức là, hàm theo k, tính dựa trên giá trị đã biết 𝐱
 > và p) như đã biết likelihood là hàm được định nghĩa là gía trị của nó tính
 > bằng giá trị của joint pdf / pmf
 >
@@ -1855,7 +1855,7 @@
 >
 >
 >
-> ⇨ L(k|**x**, p) = Πi=1:n (k choose xi) p^xi(1-p)^(k-xi)
+> ⇨ L(k|𝐱, p) = Πi=1:n (k choose xi) p^xi(1-p)^(k-xi)
 >
 >
 >
@@ -1877,7 +1877,7 @@
 >
 >
 >
-> maximize over k {L(k|**x**, p)}
+> maximize over k {L(k|𝐱, p)}
 >
 >
 >
@@ -1889,11 +1889,11 @@
 >
 >
 >
-> Từ k-1 nhảy lên k thì hàm số phải không giảm: L(k-1|**x**,p) ≤ L(k|**x**,p). 
+> Từ k-1 nhảy lên k thì hàm số phải không giảm: L(k-1|𝐱,p) ≤ L(k|𝐱,p). 
 >
 >
 >
-> Còn từ k nhảy lên k+1 thì hàm phải không tăng: L(k|**x**,p) ≥ L(k+1|**x**,p)
+> Còn từ k nhảy lên k+1 thì hàm phải không tăng: L(k|𝐱,p) ≥ L(k+1|𝐱,p)
 >
 >
 >
@@ -2093,7 +2093,7 @@
 >
 >
 >
-> Và giả sử tìm được θmle khiến maximize L(θ|**x**) thì cũng sẽ chỉ tương ứng duy
+> Và giả sử tìm được θmle khiến maximize L(θ|𝐱) thì cũng sẽ chỉ tương ứng duy
 > nhất với một η thôi.
 >
 >
@@ -2102,25 +2102,25 @@
 >
 >
 >
-> Theo định nghĩa thôi, nhớ lại, likelihood của θ, kí hiệu L(θ|**x**) được định nghĩa 
-> bởi f(**x**|θ). 
+> Theo định nghĩa thôi, nhớ lại, likelihood của θ, kí hiệu L(θ|𝐱) được định nghĩa 
+> bởi f(𝐱|θ). 
 >
 >
 >
-> Thì likelihood của η = τ(θ), sẽ kí hiệu là L*(η|**x**) sẽ được định nghĩa bởi: 
+> Thì likelihood của η = τ(θ), sẽ kí hiệu là L*(η|𝐱) sẽ được định nghĩa bởi: 
 >
 >
 >
-> Giá trị của joint pdf/pmf tính toán tại observed values **x** và **tại θ sao cho** 
+> Giá trị của joint pdf/pmf tính toán tại observed values 𝐱 và **tại θ sao cho** 
 > τ(θ) = η ⇔ θ = τinv(η).
 >
 >
 >
-> ⇨ L*(η|**x)** = f(**x**|τinv(η)) 
+> ⇨ L*(η|𝐱) = f(𝐱|τinv(η)) 
 >
 >
 >
-> = L(τinv(η)|**x**)
+> = L(τinv(η)|𝐱)
 >
 >
 >
@@ -2133,7 +2133,7 @@
 >
 >
 >
-> Maximize over η L*(η|**x**) = maximize over η f(**x**|τinv(η)) 
+> Maximize over η L*(η|𝐱) = maximize over η f(𝐱|τinv(η)) 
 >
 >
 >
@@ -2141,7 +2141,7 @@
 >
 >
 >
-> Nên sup_η L*(η|x) = sup_η f(**x**|τinv(η)) = sup_θ f(**x**|θ) = sup_θ L(θ|**x**) 
+> Nên sup_η L*(η|x) = sup_η f(𝐱|τinv(η)) = sup_θ f(𝐱|θ) = sup_θ L(θ|𝐱) 
 >
 >
 >
@@ -2183,7 +2183,7 @@
 >
 >
 >
-> L*(τ(θ)|**x**), tức L*(η|**x**) chính là f(**x**|τinv(η))
+> L*(τ(θ)|𝐱), tức L*(η|𝐱) chính là f(𝐱|τinv(η))
 >
 >
 >
@@ -2191,19 +2191,19 @@
 >
 >
 >
-> ⇨ sup_η L*(η|**x**) = sup_η f(**x**|τinv(η)) 
+> ⇨ sup_η L*(η|𝐱) = sup_η f(𝐱|τinv(η)) 
 >
 >
 >
-> = sup_θ f(**x**|θ) 
+> = sup_θ f(𝐱|θ) 
 >
 >
 >
-> = sup_θ L(θ|**x**) = L(θ_mle|**x**)
+> = sup_θ L(θ|𝐱) = L(θ_mle|𝐱)
 >
 >
 >
-> Do đó. η khiến L*(η|**x**) đạt max khi θ = θ_mle, ⇨ η = τ(θ_mle) chính là η_mle
+> Do đó. η khiến L*(η|𝐱) đạt max khi θ = θ_mle, ⇨ η = τ(θ_mle) chính là η_mle
 > giúp kết luận MLE của τ(θ) chính là τ(θ_mle)
 >
 >
@@ -2227,11 +2227,11 @@
 >
 >
 >
-> L*(η|x) = sup_{θ: τ(θ) = η} L(θ|**x**)
+> L*(η|x) = sup_{θ: τ(θ) = η} L(θ|𝐱)
 >
 >
 >
-> mang ý nghĩa là tìm trong các θ khiến τ(θ) = η xem cái nào khiến L(θ|**x**) lớn 
+> mang ý nghĩa là tìm trong các θ khiến τ(θ) = η xem cái nào khiến L(θ|𝐱) lớn 
 > nhất, L(θ|x) với θ đó chính là L*(η|x)
 >
 >
@@ -2325,7 +2325,7 @@
 > [!NOTE]
 > Rồi đại ý là, với theorem vừa rồi thì ta có thể nói rằng MLE của θ^2, tức
 > MLE của hàm square apply lên population mean của normal(θ, σ²) chính
-> là  [Xbar(**X**)]^2
+> là  [X̄(𝐗)]^2
 >
 >
 >
@@ -2367,7 +2367,7 @@
 >
 >
 >
-> Likelihood function L(θ, σ²|x) theo định nghĩa = f(**x**|θ, σ²) (dĩ nhiên L lúc này
+> Likelihood function L(θ, σ²|x) theo định nghĩa = f(𝐱|θ, σ²) (dĩ nhiên L lúc này
 > là hàm nhị biến)
 >
 >
@@ -2385,7 +2385,7 @@
 >
 >
 > Tiếp, như đã biết, để tìm **Θmle** = sup_(θ, σ²) {L(θ, σ²)} thì ta sẽ giải bài toán
-> maximize over (θ, σ²) f(**x**|θ, σ²)
+> maximize over (θ, σ²) f(𝐱|θ, σ²)
 >
 >
 >
@@ -2540,7 +2540,7 @@
 >
 >
 >
-> Vậy (θ, σ²)^_mle = (Xbar, n^-1 Σi (Xi - Xbar)^2)
+> Vậy (θ, σ²)^_mle = (X̄, n^-1 Σi (Xi - X̄)^2)
 >
 >
 >
@@ -2609,7 +2609,7 @@
 <p align="center"><kbd><img src="assets/9vyatv8vajd.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Với normal log likelihood tức function L(θ, σ²|**x**) đóng vai H(θ1, θ2) thì
+> Với normal log likelihood tức function L(θ, σ²|𝐱) đóng vai H(θ1, θ2) thì
 > đoạn này đại ý là ta có thể check 3 điều kiện trên để thấy đúng là θ^ = x̄
 > và (σ²)^ = n^-1 Σi (xi - x̄)^2) thỏa điều kiện để kết luận nó là mle.
 >
@@ -2634,10 +2634,10 @@
 >
 >
 >
-> Đại khái là, như đã biết để tìm MLE, ta sẽ tối ưu hàm L(θ|**x**). Thế thì, câu hỏi
+> Đại khái là, như đã biết để tìm MLE, ta sẽ tối ưu hàm L(θ|𝐱). Thế thì, câu hỏi
 > là nếu như observed value có biến động nhỏ do sai số, ví dụ như lần quan sát
-> đầu tiên cho ra **X** = **x**, rồi giải bài toàn tối ưu ta có **θ**_mle1. Sau đó vì lí
-> do gì đó lần quan sát thứ hai ta có **X** = **x** + **ε**. giải bài toán tối ưu ta có
+> đầu tiên cho ra 𝐗 = 𝐱, rồi giải bài toàn tối ưu ta có **θ**_mle1. Sau đó vì lí
+> do gì đó lần quan sát thứ hai ta có 𝐗 = 𝐱 + **ε**. giải bài toán tối ưu ta có
 > **θ**_mle2 Câu hỏi là, hai mle có gần nhau hay ko, nếu **ε** chỉ nhỏ thôi.
 >
 >
@@ -2709,21 +2709,21 @@
 
 > [!NOTE]
 > Rồi, thế thì ta sẽ kí hiệu π(θ) là prior distribution của θ. (nó giống như f(θ) thôi) 
-> và kí hiệu f(**x**|θ) là sampling distribution (population distribution của random
-> sample **X** thôi). Và m(**x**) là marginal distribution của **X**:
+> và kí hiệu f(𝐱|θ) là sampling distribution (population distribution của random
+> sample 𝐗 thôi). Và m(𝐱) là marginal distribution của 𝐗:
 >
 >
 >
-> m(**x**) = ∫f(**x**|θ)π(θ)dθ 
+> m(𝐱) = ∫f(𝐱|θ)π(θ)dθ 
 >
 >
 >
 >
-> Khi đó posterior distribution, tức π(θ|**x**) sẽ là:
+> Khi đó posterior distribution, tức π(θ|𝐱) sẽ là:
 >
 >
 >
-> π(θ|**x**) = f(**x**|θ)π(θ)/m(**x**)
+> π(θ|𝐱) = f(𝐱|θ)π(θ)/m(𝐱)
 >
 >
 >
@@ -3026,49 +3026,49 @@
 >
 >
 > Thế thì, quay lại classical approach, mà điển hình là maximum likelihood
-> estimator, trong đó idea là: Ta định nghĩa ra hàm likelihood L(θ|**x**) tính
-> bằng joint pdf/pmf của random sample **X** tại observed value **x**:
-> L(**θ**|x) =f(**x**|θ), mà ví dụ như giá trị hàm likelihood tại θ^, tức L(θ^|**x**) mang ý  
+> estimator, trong đó idea là: Ta định nghĩa ra hàm likelihood L(θ|𝐱) tính
+> bằng joint pdf/pmf của random sample 𝐗 tại observed value 𝐱:
+> L(**θ**|x) =f(𝐱|θ), mà ví dụ như giá trị hàm likelihood tại θ^, tức L(θ^|𝐱) mang ý  
 > nghĩa là độ hợp lý của θ^ (khi dùng để estimate cho θ) khi quan sát được 
-> giá trị **x**
+> giá trị 𝐱
 >
 >
 >
-> Để rồi, bằng cách giải bài toán tối ưu, maximize over θ L(θ|**x**), ta sẽ có
+> Để rồi, bằng cách giải bài toán tối ưu, maximize over θ L(θ|𝐱), ta sẽ có
 > MLE, dĩ nhiên thỏa định nghĩa của Estimator: Là một function của random
 > sample X1,...Xn, kí hiệu là: 
 >
 >
 >
-> θ_mle(**X**) = argmax_θ {L(θ|**x**)}
+> θ_mle(𝐗) = argmax_θ {L(θ|𝐱)}
 >
 >
 >
 > Và với cái estimator này, (là một function) thì với 1 điểm giá trị của sample
-> (**x**) thì ta sẽ có một estimate (chính là point estimate) cho θ,
+> (𝐱) thì ta sẽ có một estimate (chính là point estimate) cho θ,
 >
 >
 >
 > Quay lại Bayesian approach, như đã nói ta coi θ như random variable, có
 > distribution. Để rồi, nếu chưa quan sát giá trị của sample, ta sẽ chọn một
 > distribution tiên khởi (prior distribution) cho θ. Kí hiệu là π(θ). Và với việc
-> có gía trị quan sát **X** = **x** ta sẽ update distribution của θ, mà thông qua hình
-> thức là xây dựng f(θ|**x**) nhờ Bayes rule:
+> có gía trị quan sát 𝐗 = 𝐱 ta sẽ update distribution của θ, mà thông qua hình
+> thức là xây dựng f(θ|𝐱) nhờ Bayes rule:
 >
 >
 >
-> π(θ|**x**) = f(**x**|θ)π(θ)/m(**x**) 
+> π(θ|𝐱) = f(𝐱|θ)π(θ)/m(𝐱) 
 >
 >
 >
 > Và kết quả này, là một distribution của **θ** dựa trên quan sát giá trị của sample
 > Để rồi, lẽ tự nhiên ta sẽ lấy mean của distribution tức Expectation, làm
-> point estimate cho θ: Và đó chính là Bayes estimator, dĩ nhiên, f(θ|**x**) là 
-> phân phối dựa trên **x**, lấy kì vọng ta sẽ có hàm theo **x**
+> point estimate cho θ: Và đó chính là Bayes estimator, dĩ nhiên, f(θ|𝐱) là 
+> phân phối dựa trên 𝐱, lấy kì vọng ta sẽ có hàm theo 𝐱
 >
 >
 >
-> θ^_B(**X**) = E[θ|**x**] với θ ~ π(θ|**x**)
+> θ^_B(𝐗) = E[θ|𝐱] với θ ~ π(θ|𝐱)
 >
 >
 >
@@ -3097,7 +3097,7 @@
 >
 >
 >
-> f(**x**|θ,σ²) = Πi=1:n 1/√2πσ exp[-(x-θ)^2/(2σ²)]
+> f(𝐱|θ,σ²) = Πi=1:n 1/√2πσ exp[-(x-θ)^2/(2σ²)]
 >
 >
 >
@@ -3105,15 +3105,15 @@
 >
 >
 >
-> Joint pdf của **x** và θ:
+> Joint pdf của 𝐱 và θ:
 >
 >
 >
-> f(**x**, θ) = f(**x**|θ)π(θ) 
+> f(𝐱, θ) = f(𝐱|θ)π(θ) 
 >
 >
 >
-> f(**x**) = ∫f(**x**, θ)dθ, tức marginalizing over mọi possible value của θ 
+> f(𝐱) = ∫f(𝐱, θ)dθ, tức marginalizing over mọi possible value của θ 
 >
 >
 >
@@ -3121,30 +3121,30 @@
 >
 >
 >
-> π(θ|**x**) = f(**x**|θ) π(θ) / f(**x**) 
+> π(θ|𝐱) = f(𝐱|θ) π(θ) / f(𝐱) 
 >
 >
 >
-> Thế thì đến đây, nên nhớ mục đích là đi tìm dạng của π(θ|**x**) để xem
+> Thế thì đến đây, nên nhớ mục đích là đi tìm dạng của π(θ|𝐱) để xem
 > nó thuộc distribution family nào. Ta sẽ dùng kernel trick:
 >
 >
 >
-> Đầu tiên để ý, f(**x**), dù đúng là ∫f(**x**, θ)dθ, nhưng nó chỉ là constant.
-> Vì **x** là một giá trị quan sát thấy, đã biết. Và dĩ nhiên là nó là constant
+> Đầu tiên để ý, f(𝐱), dù đúng là ∫f(𝐱, θ)dθ, nhưng nó chỉ là constant.
+> Vì 𝐱 là một giá trị quan sát thấy, đã biết. Và dĩ nhiên là nó là constant
 > không âm.
 >
 >
 >
-> Nên π(θ|**x**) = [constant không âm] f(**x**|θ) π(θ)
+> Nên π(θ|𝐱) = [constant không âm] f(𝐱|θ) π(θ)
 >
 >
 >
-> ⇨ π(θ|**x**) sẽ **TỈ LỆ THUẬN** với f(**x**|θ) π(θ)
+> ⇨ π(θ|𝐱) sẽ **TỈ LỆ THUẬN** với f(𝐱|θ) π(θ)
 >
 >
 >
-> Rồi, xét f(**x**|θ) π(θ)
+> Rồi, xét f(𝐱|θ) π(θ)
 >
 >
 >
@@ -3471,8 +3471,8 @@
 >
 >
 > Thế thì để nói về likelihood estimator, đầu tiên ta định nghĩa ra hàm
-> likelihood. L(θ|**x**) được định nghĩa là / được tính bằng cách tính joint /
-> pmf của random samle **X** tại giá trị quan sát được **x**: f(**x**|θ). Và giá
+> likelihood. L(θ|𝐱) được định nghĩa là / được tính bằng cách tính joint /
+> pmf của random samle 𝐗 tại giá trị quan sát được 𝐱: f(𝐱|θ). Và giá
 > trị của nó, ví dụ θ^, thì L(θ^|x) (mà độ lớn như đã nói tính bởi f(x|θ^)) sẽ
 > mang ý nghĩa là, mức độ hợp lí của  θ^ khi ta dùng nó estimate cho θ (vốn
 > dĩ là giá trị fixed nhưng chưa biết).
@@ -3480,8 +3480,8 @@
 >
 >
 > Thế thì, ta mới đặt ra một hàm số, mà bên trong nó, nó sẽ giải một bài toán
-> tối ưu: maximize_θ L(θ|**x**), hay nói cách khác, đặt ra hàm θmle(**x**) =
-> argmax_θ L(θ|**x**) Thì cái function của random sample này: θmle(**X**)
+> tối ưu: maximize_θ L(θ|𝐱), hay nói cách khác, đặt ra hàm θmle(𝐱) =
+> argmax_θ L(θ|𝐱) Thì cái function của random sample này: θmle(𝐗)
 > chính là định nghĩa của MLE
 >
 >
@@ -3627,11 +3627,11 @@
 >
 >
 > Thường thì khi bàn / học ở case tổng quát, ta nói về random sample size n,
-> tức vector **X** = (X1,...Xn) là vector các random variable X1,...Xn iid. Tức là chúng
+> tức vector 𝐗 = (X1,...Xn) là vector các random variable X1,...Xn iid. Tức là chúng
 > mutually independent và identically distributed, tức có cùng population distribution
-> ~f(xi|θ) (có chung θ). Thì từ đó ta mới bàn đến joint của đám đó: f**X**(**x**|θ)
+> ~f(xi|θ) (có chung θ). Thì từ đó ta mới bàn đến joint của đám đó: f𝐗(𝐱|θ)
 > và nhờ iid, nó sẽ = Πi=1:n fXi(xi|θ) = Πi=1:n f(x|θ). Và sau đó là ta nói về likelihood
-> function L(θ|**x**) có định nghĩa là f**X**(**x**|θ) = Πi=1:n f(xi|θ)
+> function L(θ|𝐱) có định nghĩa là f𝐗(𝐱|θ) = Πi=1:n f(xi|θ)
 >
 >
 >
@@ -3918,23 +3918,23 @@
 >
 >
 >
-> **Y** = (Y1,...Yn) là incomplete data 
+> 𝐘 = (Y1,...Yn) là incomplete data 
 >
 >
 >
-> và **X** = (X1, ...Xm) là augmented data. 
+> và 𝐗 = (X1, ...Xm) là augmented data. 
 >
 >
 >
-> Thì (**Y**, **X**) là  complete data.
+> Thì (𝐘, 𝐗) là  complete data.
 >
 >
 >
-> Thì density g(.|θ) of Y và f(.|θ) of (**Y**,**X**) sẽ có quan hệ:
+> Thì density g(.|θ) of Y và f(.|θ) of (𝐘,𝐗) sẽ có quan hệ:
 >
 >
 >
-> g(**y**|θ) = ∫f(**y**,**x**|θ)d**x**
+> g(𝐲|θ) = ∫f(𝐲,𝐱|θ)d𝐱
 >
 >
 >
@@ -3942,7 +3942,7 @@
 >
 >
 >
-> L(θ|**y**) = g(**y**|θ) là incomplete-data likelihood
+> L(θ|𝐲) = g(𝐲|θ) là incomplete-data likelihood
 >
 >
 >
@@ -3950,12 +3950,12 @@
 >
 >
 >
-> L(θ|**y**,**x**) = f(**x**,**y**|θ) là complete data likelihood.
+> L(θ|𝐲,𝐱) = f(𝐱,𝐲|θ) là complete data likelihood.
 >
 >
 >
-> Khi đó nếu khó tính toán với L(θ|**y**), thì có khi sẽ dễ hơn để tính toán với 
-> L(θ|**y**,**x**)
+> Khi đó nếu khó tính toán với L(θ|𝐲), thì có khi sẽ dễ hơn để tính toán với 
+> L(θ|𝐲,𝐱)
 
 <br>
 
@@ -4034,10 +4034,10 @@
 >
 >
 >
-> Hoặc một cách khái quát hóa, giả sử ta chỉ có giá trị quan sát của **Y**
-> = (Y1,. .Yn),  tức (y1,...yn) và không có giá trị quan sát của **X** = (x1,.
-> ..xm) thì ta không thể có  complete likelihood L(θ|**x**,**y**), vì nó cần
-> f(**x**, **y**|θ), tức f(x1,..xm,y1,..yn|θ)
+> Hoặc một cách khái quát hóa, giả sử ta chỉ có giá trị quan sát của 𝐘
+> = (Y1,. .Yn),  tức (y1,...yn) và không có giá trị quan sát của 𝐗 = (x1,.
+> ..xm) thì ta không thể có  complete likelihood L(θ|𝐱,𝐲), vì nó cần
+> f(𝐱, 𝐲|θ), tức f(x1,..xm,y1,..yn|θ)
 >
 >
 >
@@ -4045,17 +4045,17 @@
 >
 >
 >
-> Nhờ quan hệ f(**y**|θ) = ∫f(**x**,**y**|θ)d**x**, đây là quan hệ có xuất
+> Nhờ quan hệ f(𝐲|θ) = ∫f(𝐱,𝐲|θ)d𝐱, đây là quan hệ có xuất
 > phát từ LOPT, định  luật xác  suất toàn phần.
 >
 >
 >
-> Ta sẽ xây dựng incomplete likelihood = L(θ|**y**)  = ∫f(**x**,**y**|θ)d**x**
+> Ta sẽ xây dựng incomplete likelihood = L(θ|𝐲)  = ∫f(𝐱,𝐲|θ)d𝐱
 >
 >
 >
-> Thế thì ta có: L(θ|**x**,**y**) = f(**x**,**y**|θ), L(θ|**y**) = f(**y**|θ), hay
-> sách dùng g: g(**y**|θ)
+> Thế thì ta có: L(θ|𝐱,𝐲) = f(𝐱,𝐲|θ), L(θ|𝐲) = f(𝐲|θ), hay
+> sách dùng g: g(𝐲|θ)
 >
 >
 >
@@ -4063,11 +4063,11 @@
 >
 >
 >
-> k(**x**|θ, y) (tức là conditional pdf của x)
+> k(𝐱|θ, y) (tức là conditional pdf của x)
 >
 >
 >
-> = f(**y**, **x**|θ) / g(**y**|θ), cái này thì dựa trên định nghĩa của
+> = f(𝐲, 𝐱|θ) / g(𝐲|θ), cái này thì dựa trên định nghĩa của
 > conditional probability
 >
 >
@@ -4076,19 +4076,19 @@
 >
 >
 >
-> log k(**x**|θ, **y**) = log [f(**y**, **x**|θ) / g(**y**|θ)]
+> log k(𝐱|θ, 𝐲) = log [f(𝐲, 𝐱|θ) / g(𝐲|θ)]
 >
 >
 >
-> ⇔ log k(**x**|θ, **y**) = log f(**y**, **x**|θ) - log g(**y**|θ)
+> ⇔ log k(𝐱|θ, 𝐲) = log f(𝐲, 𝐱|θ) - log g(𝐲|θ)
 >
 >
 >
-> ⇔ log g(**y**|θ) = log f(**y**, **x**|θ) - log k(**x**|θ, **y**)
+> ⇔ log g(𝐲|θ) = log f(𝐲, 𝐱|θ) - log k(𝐱|θ, 𝐲)
 >
 >
 >
-> ⇔ log L(θ|**y**) = log L(θ|**x**, **y**) - log k(**x**|θ, **y**) (1)
+> ⇔ log L(θ|𝐲) = log L(θ|𝐱, 𝐲) - log k(𝐱|θ, 𝐲) (1)
 >
 >
 >
@@ -4096,7 +4096,7 @@
 >
 >
 >
-> Có điều, ta không có giá trị **x** ở vế phải, nên **TA SẼ DÙNG GIÁ TRỊ
+> Có điều, ta không có giá trị 𝐱 ở vế phải, nên **TA SẼ DÙNG GIÁ TRỊ
 > TRUNG  BÌNH CỦA X.
 >
 >
@@ -4128,42 +4128,42 @@
 >
 >
 >
-> Nên vế trái ta sẽ vẫn có E[log L(θ|**y**) | y, θ') = E log L(θ|**y**) Còn
+> Nên vế trái ta sẽ vẫn có E[log L(θ|𝐲) | y, θ') = E log L(θ|𝐲) Còn
 > vế phải, cứ hiểu  tương tự, là hiện tại ta có một random variable tạo ra
-> bởi áp cái function sau đây  lên **X**: log L(θ|**y**,**x**) - log k(**x**|θ,
-> **y**)h(**X**) = log L(θ|**y**, **X**) - log k(**X**|θ,**y**)
+> bởi áp cái function sau đây  lên 𝐗: log L(θ|𝐲,𝐱) - log k(𝐱|θ,
+> 𝐲)h(𝐗) = log L(θ|𝐲, 𝐗) - log k(𝐗|θ,𝐲)
 >
 >
 >
-> và để tính E h(**X**), theo lotus ta có E h(**X**) = ∫ [log L(θ|**y**, **x**) -
-> log k(**X**|θ,y)] f**X**(**x**) dx
+> và để tính E h(𝐗), theo lotus ta có E h(𝐗) = ∫ [log L(θ|𝐲, 𝐱) -
+> log k(𝐗|θ,y)] f𝐗(𝐱) dx
 >
 >
 >
-> = ∫log L(θ|y, **x**) f**X**(**x**)d**x** - ∫log k(**X**|θ,y)] f**X**(**x**) d**x**
+> = ∫log L(θ|y, 𝐱) f𝐗(𝐱)d𝐱 - ∫log k(𝐗|θ,y)] f𝐗(𝐱) d𝐱
 >
 >
 >
-> Nếu như ta có hàm f**X**(**x**) chỉ phụ thuộc **x thì lắp vô, tính ra** E
-> h(**X**) ta sẽ có  constant
+> Nếu như ta có hàm f𝐗(𝐱) chỉ phụ thuộc **x thì lắp vô, tính ra** E
+> h(𝐗) ta sẽ có  constant
 >
 >
 >
-> Nhưng vì hàm pdf của X sẽ phụ thuộc y và θ, nó chính là k(**x**|**y**,
+> Nhưng vì hàm pdf của X sẽ phụ thuộc y và θ, nó chính là k(𝐱|𝐲,
 > θ) ở trên nên  lắp vào tính ra ta sẽ được giá trị trung bình của hàm
 > (hay của cái random variable  h(X)) theo x nhưng vẫn phụ  thuộc y và
 > θ.   **nên mới thể hiện với kí hiệu là:**
 >
 >
 >
-> E[h(**X**|θ, **y**)] = **∫** log L(θ|**y**, **x**) k(**x**|θ, **y**) d**x - ∫**log
-> k(**x**|θ,**y**)] k(**x**|θ, **y**) dxhayE[log L(θ|**y**, **X**)|θ, **y**] = ∫ log L(θ|**y**, **x**) k(**x**|θ,
-> **y**)d**x - ∫**log k(**x**|θ, **y**)] k(**x**|θ, **y**) d**x**
+> E[h(𝐗|θ, 𝐲)] = **∫** log L(θ|𝐲, 𝐱) k(𝐱|θ, 𝐲) d**x - ∫**log
+> k(𝐱|θ,𝐲)] k(𝐱|θ, 𝐲) dxhayE[log L(θ|𝐲, 𝐗)|θ, 𝐲] = ∫ log L(θ|𝐲, 𝐱) k(𝐱|θ,
+> 𝐲)d**x - ∫**log k(𝐱|θ, 𝐲)] k(𝐱|θ, 𝐲) d𝐱
 >
 >
 >
-> thì có thể thấy term 1 là hàm theo θ, nhưng để tính là cần k(**x**|θ,
-> **y**), lại là hàm  dựa vào θ.
+> thì có thể thấy term 1 là hàm theo θ, nhưng để tính là cần k(𝐱|θ,
+> 𝐲), lại là hàm  dựa vào θ.
 >
 >
 >
@@ -4176,9 +4176,9 @@
 >
 >
 >
-> Ví dụ như ban đầy ta đoán θ^(0). Dùng nó để tính k(**x**|θ^(0), **y**) và
-> từ đó ta có  E[log L(θ|**y**, **X**)|θ^(0), **y**] = ∫ log L(θ|**y**, **x**)
-> k(**x**|θ^(0), **y**) **dx**
+> Ví dụ như ban đầy ta đoán θ^(0). Dùng nó để tính k(𝐱|θ^(0), 𝐲) và
+> từ đó ta có  E[log L(θ|𝐲, 𝐗)|θ^(0), 𝐲] = ∫ log L(θ|𝐲, 𝐱)
+> k(𝐱|θ^(0), 𝐲) **dx**
 >
 >
 >
@@ -4186,7 +4186,7 @@
 >
 >
 >
-> maximize over θ E[log L(θ|**y**, **X**)|θ^(0), **y**].
+> maximize over θ E[log L(θ|𝐲, 𝐗)|θ^(0), 𝐲].
 >
 >
 >
@@ -4198,23 +4198,23 @@
 >
 >
 >
-> θ^(r+1) = argmax_θ E[log L(θ|**y**, **X**)|θ^(r), **y**]
+> θ^(r+1) = argmax_θ E[log L(θ|𝐲, 𝐗)|θ^(r), 𝐲]
 >
 >
 >
 > Hỏi ngu: Vì sao lại maximize: Thì là vì ta đang muốn maximize vế trái,
 > nên cũng ta sẽ maximize  vế phải. Và vế phải thì chỉ có term 1 là hàm
-> theo θ thôi (ý là có dạng Q(θ|θ'), còn term 2 thì  với θ' thì ∫log k(**x**|θ',
-> **y**)] k(**x**|θ', y) dx ra  fixed value rồi. nên ta chỉ cần maximize over θ
+> theo θ thôi (ý là có dạng Q(θ|θ'), còn term 2 thì  với θ' thì ∫log k(𝐱|θ',
+> 𝐲)] k(𝐱|θ', y) dx ra  fixed value rồi. nên ta chỉ cần maximize over θ
 > term 1.
 >
 >
 >
-> Và bước 1, tính  E[log L(θ|**y**, **X**)|θ', **y**] gọi là E-Step
+> Và bước 1, tính  E[log L(θ|𝐲, 𝐗)|θ', 𝐲] gọi là E-Step
 >
 >
 >
-> Và bước 2, tính θ^(r+1) = argmax_θ E[log L(θ|**y**, **X**)|θ^(r), **y**]
+> Và bước 2, tính θ^(r+1) = argmax_θ E[log L(θ|𝐲, 𝐗)|θ^(r), 𝐲]
 > gọi là M-Step.
 >
 >
@@ -4243,13 +4243,13 @@
 >
 >
 >
-> Thì ở đây nếu gọi (**x**,**y**) = ((x1,y1),...(xn,yn)) kí hiệu cho complete data và 
-> (**x**_(-1), **y**) = ((-1,y1),...(xn,yn)) kí hiệu cho in-complete data. Thì likelihood
-> ở trên có thể ghi gọn là L(β, τ1,..τn|(**x**,**y**)), và đây là complete-data likelihood.
+> Thì ở đây nếu gọi (𝐱,𝐲) = ((x1,y1),...(xn,yn)) kí hiệu cho complete data và 
+> (𝐱_(-1), 𝐲) = ((-1,y1),...(xn,yn)) kí hiệu cho in-complete data. Thì likelihood
+> ở trên có thể ghi gọn là L(β, τ1,..τn|(𝐱,𝐲)), và đây là complete-data likelihood.
 >
 >
 >
-> Và L(β, τ1,..τn|(**x**_(-1),**y**)) là incomplete-data likelihood.
+> Và L(β, τ1,..τn|(𝐱_(-1),𝐲)) là incomplete-data likelihood.
 >
 >
 >
@@ -4257,31 +4257,31 @@
 >
 >
 >
-> Nếu gọi (**x**,**y**) là complete-data. (**y**) là in-complete data.
+> Nếu gọi (𝐱,𝐲) là complete-data. (𝐲) là in-complete data.
 >
 >
 >
-> Complete-data likelihood L(θ|**x**,**y**) = f(**x**,**y**|θ)
+> Complete-data likelihood L(θ|𝐱,𝐲) = f(𝐱,𝐲|θ)
 >
 >
 >
-> Incomplete-data likelihood L(θ|**y**) = g(**y**|θ)
+> Incomplete-data likelihood L(θ|𝐲) = g(𝐲|θ)
 >
 >
 >
-> Và f(**x**,**y**|θ) = k(**x**|θ,**y**)g(**y**|θ) ⇨ k(**x**|θ,**y**) =  f(**x**,**y**|θ) / g(**y**|θ)
+> Và f(𝐱,𝐲|θ) = k(𝐱|θ,𝐲)g(𝐲|θ) ⇨ k(𝐱|θ,𝐲) =  f(𝐱,𝐲|θ) / g(𝐲|θ)
 >
 >
 >
-> Lấy log hai vế: log k(**x**|θ,**y**) =  log f(**x**,**y**|θ) - log g(**y**|θ)
+> Lấy log hai vế: log k(𝐱|θ,𝐲) =  log f(𝐱,𝐲|θ) - log g(𝐲|θ)
 >
 >
 >
-> ⇔ log g(**y**|θ) = log f(**x**,**y**|θ) - log k(**x**|θ,**y**)
+> ⇔ log g(𝐲|θ) = log f(𝐱,𝐲|θ) - log k(𝐱|θ,𝐲)
 >
 >
 >
-> Cũng là log L(θ|**y**) = log L(θ|**x**,**y**) - log k(**x**|θ,**y**)
+> Cũng là log L(θ|𝐲) = log L(θ|𝐱,𝐲) - log k(𝐱|θ,𝐲)
 >
 >
 >
@@ -4291,19 +4291,19 @@
 >
 >
 >
-> Nên ta sẽ maximize vế phải. Nhưng vế phải thì ta chưa biết / chưa có **x**
+> Nên ta sẽ maximize vế phải. Nhưng vế phải thì ta chưa biết / chưa có 𝐱
 > Do đó dùng cách: lấy expectation theo x hai vế, thì vế trái do không dính 
 > tới x nên nó vẫn vậy. Vế phải sẽ là:
 >
 >
 >
-> E[log L(θ|**X**,**y**) | θ,**y**] - E[log k(**X**|θ,**y**) | θ,**y**]Và cái term đầu tiên sẽ = ∫log L(θ|**x**,**y**) k(**x**|θ,**y**) d**x**
+> E[log L(θ|𝐗,𝐲) | θ,𝐲] - E[log k(𝐗|θ,𝐲) | θ,𝐲]Và cái term đầu tiên sẽ = ∫log L(θ|𝐱,𝐲) k(𝐱|θ,𝐲) d𝐱
 >
 >
 >
-> Nếu thấy lạ thì nhìn xem, nó chỉ giống ta đang có g(**X**) = log L(θ|**X**,**y**)
-> và để tính Eg(**X**), theo lotus: ∫g(**x**)f**X**(**x**)d**x**. Chỉ là ở đây pdf của X là pdf
-> conditional on **y**, **θ**: k(**x**|**y**,θ) 
+> Nếu thấy lạ thì nhìn xem, nó chỉ giống ta đang có g(𝐗) = log L(θ|𝐗,𝐲)
+> và để tính Eg(𝐗), theo lotus: ∫g(𝐱)f𝐗(𝐱)d𝐱. Chỉ là ở đây pdf của X là pdf
+> conditional on 𝐲, **θ**: k(𝐱|𝐲,θ) 
 >
 >
 >
@@ -4311,8 +4311,8 @@
 >
 >
 >
-> Vấn đề là cái này nó có dạng Q(θ|θ), tức là ta cần biết θ để tính k(**x**|θ,**y**),
-> rồi lắp x vào L(θ|**x**,**y**) để có hàm theo θ để mà optimize.
+> Vấn đề là cái này nó có dạng Q(θ|θ), tức là ta cần biết θ để tính k(𝐱|θ,𝐲),
+> rồi lắp x vào L(θ|𝐱,𝐲) để có hàm theo θ để mà optimize.
 >
 >
 >
@@ -4327,13 +4327,13 @@
 >
 >
 >
-> E[log L(θ|**X**,**y**) | θ,**y**] 
+> E[log L(θ|𝐗,𝐲) | θ,𝐲] 
 >
 >
 >
 > thì **X,y** trong công thức tổng quát ý nói là đáng lý ta có complete data tức giá trị
-> observed value của (**X**,**Y**) = (**x**,**y**). Nhưng ở đây bị thiếu **x**, nên phải lấy kì vọng
-> theo **X**
+> observed value của (𝐗,𝐘) = (𝐱,𝐲). Nhưng ở đây bị thiếu 𝐱, nên phải lấy kì vọng
+> theo 𝐗
 >
 >
 >
@@ -4342,12 +4342,12 @@
 >
 >
 >
-> Còn lấy kì vọng đối với X1, thì cái cụm "|θ,**y**" sẽ là gì: Thì **y** là incomplete data,
-> tức (**x**_(-1),**y**), cũng là ((,y1),(x2,y2),...(xn,yn)). 
+> Còn lấy kì vọng đối với X1, thì cái cụm "|θ,𝐲" sẽ là gì: Thì 𝐲 là incomplete data,
+> tức (𝐱_(-1),𝐲), cũng là ((,y1),(x2,y2),...(xn,yn)). 
 >
 >
 >
-> → Ta thấy = E [log L(β,τ1,..τn | (X1,y1),..(xn,yn) | τ^(r), (**x**_(-1),**y**)]
+> → Ta thấy = E [log L(β,τ1,..τn | (X1,y1),..(xn,yn) | τ^(r), (𝐱_(-1),𝐲)]
 >
 >
 >
@@ -4356,7 +4356,7 @@
 >
 >
 >
-> Là vầy, cái k(**x**|θ,**y**) trong công thức tổng quát nên nhớ, nó là joint pdf của **X**
+> Là vầy, cái k(𝐱|θ,𝐲) trong công thức tổng quát nên nhớ, nó là joint pdf của 𝐗
 > conditioned on θ, y
 >
 >
@@ -4369,11 +4369,11 @@
 >
 >
 >
-> hay viết gọn cái ((,y1), (x2,y2)..,(xn,yn)) là (**x**_(-1),**y**):
+> hay viết gọn cái ((,y1), (x2,y2)..,(xn,yn)) là (𝐱_(-1),𝐲):
 >
 >
 >
-> f(x1| β,τ1,..τn, (**x**_(-1),**y**))
+> f(x1| β,τ1,..τn, (𝐱_(-1),𝐲))
 >
 >
 >
@@ -4382,7 +4382,7 @@
 >
 >
 >
-> → f(x1| β,τ1,..τn, (**x**_(-1),**y**)) =  f(x1| β,τ1,..τn)
+> → f(x1| β,τ1,..τn, (𝐱_(-1),𝐲)) =  f(x1| β,τ1,..τn)
 >
 >
 >
