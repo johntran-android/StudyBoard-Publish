@@ -111,11 +111,35 @@
 > ⇔ ∇f(x\*) - Σi∈𝒜(x\*) λ\*i ∇ci(x\*) = 0, chính là 12.35
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
 >
-> Ghi chú rất chính xác và có chiều sâu khi liên hệ tốt với kiến thức từ sách Convex Optimization của Boyd để phân biệt điều kiện cần/đủ. Bạn chỉ cần lưu ý một vài lỗi gõ ký hiệu nhỏ ở phần biến đổi cuối (như viết thiếu dấu tổng hoặc nhầm $c_i$ với $\lambda_i^* \nabla c_i$), dù lập luận logic vẫn hoàn hảo.
+> Ghi chú nắm rất chắc ý nghĩa của 4 nhóm điều kiện KKT và mối liên hệ với sách của Boyd cũng như việc rút gọn điều kiện qua Active Set. Tuy nhiên, bạn đã bỏ quên giả thiết quan trọng là điều kiện chuẩn tắc ràng buộc (LICQ) và có vài lỗi viết tắt/thiếu ký hiệu trong biến đổi đại số.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Thế thì, còn nhớ, trong Convex Optim Boyd, với bài toán lồi, KKT condition là điều kiện đủ, thỏa nó là kết luận luôn global minimizer. Còn ở đây, nó chỉ là điều kiện cần."*
+>
+> Định lý 12.1 khẳng định KKT là điều kiện cần nhưng phải đi kèm giả thiết điều kiện chuẩn tắc ràng buộc (ở đây là LICQ - Linear Independence Constraint Qualification) thỏa mãn tại x*. Nếu LICQ (hoặc một Constraint Qualification khác) không thỏa, nghiệm cực tiểu địa phương chưa chắc đã tồn tại bộ nhân Lagrange thỏa mãn KKT.
+>
+> **2.** *"∇_x L(x*, λ*) = 0 tương đương ∇f(x*) - Σi∈ℐ∪ℰ ci(x*)"*
+>
+> Viết thiếu nhân tử λ*i và gradient ∇ci(x*). Biểu thức chính xác của gradient theo x phải là ∇f(x*) - Σ λ*i ∇ci(x*).
+>
+> **3.** *"- 𝒜(x*)_c λ*i ∇ci(x*) = 0"*
+>
+> Thiếu ký hiệu tổng (Σ) trước tập chỉ số 𝒜(x*)_c.
+>
+>
+> **✓ Strengths**
+> - Liên hệ rất tốt giữa quy ước dấu của Nocedal (ràng buộc dạng c_i(x) >= 0 với dấu trừ trong Lagrangian) và quy ước dấu kinh điển của Boyd (f_i(x) <= 0 với dấu cộng).
+> - Phân loại và hiểu rõ bản chất 4 thành phần KKT: tính dừng (stationarity), bù trừ (complementary slackness), và tính khả thi (primal/dual feasibility).
+> - Giải thích và chứng minh lại công thức (12.35) dựa trên active set và inactive set một cách mạch lạc, trực quan.
+>
+> **💡 Deeper notes**
+> - Trong công thức (12.34e), Nocedal viết λ*i ci(x*) = 0 cho cả i ∈ ℰ ∪ ℐ. Mặc dù với i ∈ ℰ thì ci(x*) = 0 hiển nhiên dẫn đến tích bằng 0 (nên viết cho i ∈ ℐ như bạn vẫn chuẩn xác về mặt thực hành), nhưng việc gộp chung giúp định nghĩa tổng quát hơn.
+> - Trong tối ưu lồi (Boyd), KKT là điều kiện đủ, nhưng để KKT trở thành điều kiện cần và đủ thì bài toán lồi cũng cần thỏa mãn một điều kiện chuẩn tắc ràng buộc nhẹ hơn (Slater's condition).
 
-**🔗 See also:** [linked note *(EE364a, Convex Optim_S.Boyd)*](../ee364a_convex_optim_sboyd/lec_7.md#node-7gcnhz7) · [Definition 12.1: The Active Set](./121_examples.md#node-ukukd7b)
+**🔗 See also:** [linked note *(EE364a, Convex Optim_S.Boyd)*](../ee364a_convex_optim_sboyd/lec_7.md#node-7gcnhz7) · [Definition 12.1: The Active Set](./121_examples.md#node-ukukd7b) · [Definition 12.8 Active Constraints](./128_lagrange_multipliers_and_sensitivity.md#node-yzk9dz0)
 
 <br>
 
