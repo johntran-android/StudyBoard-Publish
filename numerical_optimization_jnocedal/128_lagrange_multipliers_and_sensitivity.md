@@ -1,6 +1,6 @@
 # 12.8 Lagrange Multipliers and Sensitivity
 
-📊 **Progress:** `3` Notes | `3` Screenshots | `2` AI Reviews
+📊 **Progress:** `4` Notes | `5` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-tmcayiv"></a>
@@ -50,6 +50,8 @@
 ### Constraint Perturbation and Lagrange Multipliers
 
 <p align="center"><kbd><img src="assets/3h1g5wlbji6.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2a9dajdq1z2.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi, xét case thứ hai, cho rằng tại x\*, ci(x\*) đang active, tức ci(x\*) = 0 (cũng là i ∈ 𝒜(x\*)).
@@ -316,6 +318,97 @@
 >
 > **💡 Deeper notes**
 > - Để nghiệm x*(ε) tồn tại, khả vi trơn theo ε và giữ nguyên active set khi ε đủ nhỏ, bài toán cần thỏa mãn thêm điều kiện bù ngặt (strict complementarity: λ*i > 0 với mọi i active) cùng điều kiện đủ cấp hai (second-order sufficiency conditions - SOSC).
+
+<br>
+
+<a id="node-yzk9dz0"></a>
+
+#### Definition 12.8 Active Constraints
+
+<p align="center"><kbd><img src="assets/kv0vjwevo1.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là, thảo luận trên được đúc lại bởi định nghĩa sau: Một constraint ci(x) được goi là strong active hay binding nếu ci(x\*) = 0 và λ\*i dương và gọi là weakly active nếu cũng active nhưng λ\*i = 0.
+>
+>
+>
+> Nhưng quan trọng là mấy ý cuối:
+>
+>
+>
+> i) Nếu ta thay constraint c(x) ≥ 0 bằng c̃(x) = 10c(x) ≥ 0, thì thật ra bài toán vẫn equivalent vì c(x) ≥ 0 ⇔ 10c(x) ≥ 0 nên x\* vẫn vậy.
+>
+>
+>
+> Điều kiện stationary bài toán cũ: ∇f(x\*) = λ\* ∇c(x\*)
+>
+>
+>
+> Điều kiện stationary bài toán mới: ∇f(x\*) = λ̃ \* ∇c̃(x\*) = λ̃ \* 10∇c(x\*) (do c̃(x) = 10c(x) ⇒ ∇c̃(x) = 10 ∇c(x))
+>
+>
+>
+> Như vậy λ\* ∇c(x\*) = λ̃ \* 10∇c(x\*) ⇒ λ̃ \* = (1/10) λ\*. Như vậy ở bài toán mới, Lagrange multiplier đã bị teo nhỏ lại 10 lần.
+>
+>
+>
+>
+>
+> ii) Nếu ta thay f(x) bằng objective khác: f̃(x) = 10 f(x), thì vì nhân objective với hằng số dương thì ta vẫn có bài toán equivalent nên x\* vẫn sẽ là solution của bài toán mới.
+>
+>
+>
+> d/dε f̃(x\*) = d/dε 10f(x\*) = 10 × d/dε f(x\*)
+>
+>
+>
+> ⇔ λ̃ \* ||∇c(x\*)|| = 10 λ\* ||∇c(x\*)|| (1)
+>
+>
+>
+> Như vậy vì hàm objective lớn hơn 10 lần hàm cũ, nên ta kì vọng độ nhạy của nó đối với sự thay đổi của constraint cũng phải lớn lên gấp 10 lần. Và quả thật ta sẽ thấy điều này đúng:
+>
+>
+>
+> Stationary bài toán cũ: ∇f(x\*) = λ\*i ∇ci(x\*) ⇔ ∇f(x\*)/λ\*i = ∇ci(x\*)
+>
+>
+>
+> Stationary bài toán mới: ∇f̃(x\*) = λ̃ \*i ∇ci(x\*) ⇔ 10∇f(x\*) = λ̃ \*i ∇ci(x\*) 
+>
+>
+>
+> ⇔ 10 λ\*i ∇ci(x\*) = λ̃ \*i ∇ci(x\*)  
+>
+>
+>
+> ⇔ 10 λ\*i  = λ̃ \*i ⇒ Thỏa (1)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú rất tốt, bạn đã tự suy diễn và chứng minh rõ ràng cơ chế thay đổi của nhân tử Lagrange khi scale hàm mục tiêu hoặc ràng buộc.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Một constraint ci(x) được goi là strong active hay binding nếu ci(x*) = 0 và λ*i dương và gọi là weakly active nếu cũng active nhưng λ*i = 0."*
+>
+> Định nghĩa gốc phân biệt lượng từ khi nhân tử Lagrange không duy nhất: strongly active yêu cầu tồn tại ít nhất một nhân tử λ*i > 0 ('for some Lagrange multiplier'), trong khi weakly active yêu cầu λ*i = 0 với mọi nhân tử λ* ('for all λ*'). Việc bỏ qua lượng từ này chỉ đúng hoàn toàn khi nghiệm thỏa mãn LICQ (nhân tử duy nhất).
+>
+> **2.** *"Điều kiện stationary bài toán cũ: ∇f(x*) = λ* ∇c(x*)"*
+>
+> Bạn đang đơn giản hóa công thức stationary về trường hợp chỉ có 1 ràng buộc active. Trong trường hợp tổng quát, điều kiện stationary là tổ hợp tuyến tính ∇f(x*) = ∑ λ*i ∇ci(x*).
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ và tự giải thích được lý do nhân tử Lagrange bị chia 10 khi scale ràng buộc lên 10 lần thông qua điều kiện stationary.
+> - Kết nối chính xác mối liên hệ giữa việc phóng to hàm mục tiêu với độ nhạy (sensitivity) theo vi phân d/dε.
+>
+> **💡 Deeper notes**
+> - Tích λ*i ||∇ci(x*)|| là một đại lượng bất biến dưới phép biến đổi tỷ lệ (scaling) của ràng buộc ci, phản ánh đúng bản chất hình học của gradient ràng buộc tác động lên hàm mục tiêu.
+> - Sự khác biệt giữa 'tồn tại một λ*i > 0' và 'với mọi λ*i = 0' trong định nghĩa ràng buộc tích cực mạnh/yếu trở nên quan trọng khi phân tích tính ổn định và tính duy nhất của nghiệm KKT khi điều kiện ràng buộc chính quy (như LICQ) bị vi phạm.
+
+**🔗 See also:** [First-Order Optimality Conditions](./123_first_order_optimality_condition.md#node-hvhhcds)
 
 <br>
 
