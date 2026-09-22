@@ -1269,6 +1269,8 @@
 > **💡 Deeper notes**
 > - Lỗi in ấn này có trong danh sách đính chính chính thức (official errata) của sách Casella & Berger (trang 422, dòng 4 sửa từ <= thành >=).
 
+**🔗 See also:** [Likelihood Ratio Confidence Interval](./104_interval_estimation.md#node-025zirs)
+
 <br>
 
 <a id="node-r96nyc1"></a>
