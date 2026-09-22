@@ -2000,6 +2000,8 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 > ---
 
+📹 [Xem video trên YouTube](https://youtu.be/oS8uhtEOI9w)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
