@@ -81,6 +81,8 @@
 > rằng điều này là cần thiết, vì khi đề cập vào thì nó sẽ làm hạn chế / giảm số 
 > lượng những estimator khả thi
 
+**🔗 See also:** [Cross-Entropy Error Function Gradient *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/432_logistic_regression.md#node-gvw6cdv)
+
 <br>
 
 <a id="node-x5zhf0j"></a>
