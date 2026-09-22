@@ -1,6 +1,6 @@
 # 10.4 Interval Estimation
 
-📊 **Progress:** `8` Notes | `9` Screenshots | `8` AI Reviews
+📊 **Progress:** `9` Notes | `10` Screenshots | `9` AI Reviews
 
 ---
 <a id="node-wt27aoy"></a>
@@ -1174,37 +1174,423 @@
 >
 >
 >
-> reject H0 nếu |{(p̂n - p0) / √\[p0(1-p0)/n\]| ≥ z\_α/2
+> reject H0 nếu |(p̂n - p0) / √\[p0(1-p0)/n\]| ≥ z\_α/2
 >
 >
 >
-> Đây sẽ là một level α test.
+> Đây sẽ là một **test có size xấp xỉ α**. Vì sao?
 >
 >
 >
-> Và đi inver cái test này ta sẽ có cái confidence interval hồi nãy.
+> (Nói nhanh: vì |(p̂n - p0) / √\[p0(1-p0)/n\]| → (d) Z \~ n(0,1). Mà P(|Z| &gt; z\_α/2) = α nên P_p0(|(p̂n - p0) / √\[p0(1-p0)/n\]| &gt; z\_α/2) ≈ α
 >
 >
 >
-> Invert là sao?
+> Cũng là sup\_Θ0={p0} P_p0(𝐗 ∈ R) ≈ α
+>
+>
+>
+> Vậy nên theo định nghĩa, đây là test có size xấp xỉ α
+>
+>
+>
+> ---
+>
+>
+>
+> Và đi nghịch đảo cái test này ta sẽ có cái confidence interval hồi nãy.
+>
+>
+>
+> Là sao?
+>
+>
+>
+> Active recall lại lí thuyết:
+>
+>
+>
+> Giả sử ta có bài toán kiểm định H0: θ=θ0 vs H1: θ∉θ0 và ta đã có cái test có level α, tức sup\_Θ0 P\_θ(𝐗 ∈ R) ≤ α.
+>
+>
+>
+> ⇔ sup\_{θ0} P\_θ(𝐗 ∈ R) ≤ α
+>
+>
+>
+> ⇔ P\_θ0(𝐗 ∈ R) ≤ α
+>
+>
+>
+> ⇔ 1 - P\_θ0(𝐗 ∈ Rc) ≤ α
+>
+>
+>
+> ⇔ P\_θ0(𝐗 ∈ Rc) ≥ 1 - α
+>
+>
+>
+> Đặt Rc = A(θ0) = {𝐱: accept H0}
+>
+>
+>
+> Và đặt C(𝐱) = {θ0: 𝐱 ∈ A(θ0)}
+>
+>
+>
+> thì dĩ nhiên là nếu 𝐱 ∈ A(θ0) thì θ0 ∈ C(𝐱)
+>
+>
+>
+> và nếu θ0 ∈ C(𝐱) thì 𝐱 ∈ A(θ0)
+>
+>
+>
+> Vậy nên 𝐱 ∈ A(θ0) ⇔ θ0 ∈ C(𝐱)
+>
+>
+>
+> Lại xét P\_θ0(𝐗 ∈ A(θ0)), có bản chất là P\_θ0({s ∈ Ω, 𝐗(s) = 𝐱: 𝐱 ∈ A(θ0)})
+>
+>
+>
+> Mà 𝐱 ∈ A(θ0) ⇔ θ0 ∈ C(𝐱)
+>
+>
+>
+> ⇒ {s ∈ Ω, 𝐗(s) = 𝐱: 𝐱 ∈ A(θ0)} = {s ∈ Ω, 𝐗(s) = 𝐱: θ0 ∈ C(𝐱)}
+>
+>
+>
+> ⇒ P({s ∈ Ω, 𝐗(s) = 𝐱: 𝐱 ∈ A(θ0)}) = P({s ∈ Ω, 𝐗(s) = 𝐱: θ0 ∈ C(𝐱)})
+>
+>
+>
+> ⇔ P\_θ0(𝐗 ∈ A(θ0)) = P\_θ0(θ0 ∈ C(𝐗)) và do đó, P\_θ0(θ0 ∈ C(𝐗)) ≥ 1 - α
+>
+>
+>
+> Vì θ0 có thể mang giá trị bất kì, nên C(𝐗) cũng là tập thỏa: inf\_Θ P\_θ(θ ∈ C(𝐗)) ≥ 1 - α suy ra C(𝐗) chính là confidence set có confidence coefficient = 1-α, gọi là 1-α confidence set.
+>
+>
+>
+> ---
+>
+>
+>
+> Với score statistic ta có cái level α test cho bài toán H0: p=p0 vs H1: p≠p0
+>
+>
+>
+> là reject H0 nếu |(p̂n - p0) / √\[p0(1-p0)/n\]| ≥ z\_α/2 
+>
+>
+>
+> cũng là R = {𝐱 ∈ 𝓧: |(p̂n - p0) / √\[p0(1-p0)/n\]| ≥ z\_α/2}
+>
+>
+>
+> nên acceptance region Rc = {𝐱 ∈ 𝓧: |(p̂n - p0) / √\[p0(1-p0)/n\]| &lt; z\_α/2}
+>
+>
+>
+> Ta đặt tập này là A(p0).
+>
+>
+>
+> Xét cái bất đẳng thức:
+>
+>
+>
+> |(p̂n - p0) / √\[p0(1-p0)/n\]| &lt; z\_α/2
+>
+>
+>
+> ⇔ (p̂n - p0)² / \[p0(1-p0)/n\] &lt; (z\_α/2)²
+>
+>
+>
+> ⇔ n(p̂n - p0)² &lt; (z\_α/2)² p0 (1-p0)
+>
+>
+>
+> ⇔ n(p̂n² + p0² - 2p̂np0) &lt; (z\_α/2)² p0 (1-p0)
+>
+>
+>
+> ⇔ np̂n² + np0² - n2p̂np0) &lt; (z\_α/2)² (p0-p0²)
+>
+>
+>
+> ⇔ np̂n² + np0² - n2p̂np0) &lt; (z\_α/2)² p0 - (z\_α/2)² p0²
+>
+>
+>
+> ⇔ np0² + (z\_α/2)² p0² - n2p̂np0) - (z\_α/2)² p0 &lt; -np̂n²
+>
+>
+>
+> ⇔ \[n + (z\_α/2)²\] p0² + \[-2np̂n - (z\_α/2)²\] p0 + np̂n² &lt; 0
+>
+>
+>
+> Tới đây, xét phương trình Ax² + Bx + C = 0, tính Δ = B² - 4AC. Nếu Δ &gt; 0, hai nghiệm là (-B ∓ √Δ)/2A
+>
+>
+>
+> Giải ra ta sẽ có: L(𝐱) ≤ p0 ≤ U(𝐱)
+>
+>
+>
+> Vậy |(p̂n - p0) / √\[p0(1-p0)/n\]| &lt; z\_α/2 ⇔ L(𝐱) ≤ p0 ≤ U(𝐱)
+>
+>
+>
+> Nếu A(p0) = {𝐱: |(p̂n - p0) / √\[p0(1-p0)/n\]| ≤ z\_α/2}
+>
+>
+>
+> và C(𝐱) = {p0: L(𝐱) ≤ p0 ≤ U(𝐱)}
+>
+>
+>
+> ta có 𝐱 ∈ A(p0) ⇔ p0 ∈ C(𝐱)
+>
+>
+>
+> Và reject H0 nếu |(p̂n - p0) / √\[p0(1-p0)/n\]| ≥ z\_α/2  là level α test nên:
+>
+>
+>
+> sup\_Θ0 P_p(𝐗 ∈ R) ≤ α
+>
+>
+>
+> ⇔ sup\_{p0} P_p(𝐗 ∈ R) ≤ α
+>
+>
+>
+> ⇔ P_p0(𝐗 ∈ R) ≤ α
+>
+>
+>
+> ⇔ 1- P_p0(𝐗 ∈ A(p0)) ≤ α
+>
+>
+>
+> ⇔ P_p0(𝐗 ∈ A(p0)) ≥ 1 - α
+>
+>
+>
+> Mà 𝐗 ∈ A(p0) có bản chất là {s ∈ Ω: 𝐗(s) ∈ A(p0)}
+>
+>
+>
+> = {s ∈ Ω, 𝐗(s) = 𝐱: |(p̂n - p0) / √\[p0(1-p0)/n\]| ≤ z\_α/2}
+>
+>
+>
+> Mà |(p̂n - p0) / √\[p0(1-p0)/n\]| ≤ z\_α/2 ⇔ L(𝐱) ≤ p0 ≤ U(𝐱)
+>
+>
+>
+> nên {s ∈ Ω, 𝐗(s) = 𝐱: |(p̂n - p0) / √\[p0(1-p0)/n\]| ≤ z\_α/2}
+>
+>
+>
+> = {s ∈ Ω, 𝐗(s) = 𝐱: L(𝐱) ≤ p0 ≤ U(𝐱)}
+>
+>
+>
+> ⇒ P_p0({s ∈ Ω, 𝐗(s) = 𝐱: |(p̂n - p0) / √\[p0(1-p0)/n\]| ≤ z\_α/2})
+>
+>
+>
+> = P_p0({s ∈ Ω, 𝐗(s) = 𝐱: L(𝐱) ≤ p0 ≤ U(𝐱)})
+>
+>
+>
+> ⇔ P_p0(𝐗 ∈ A(p0)) = P_p0(L(𝐗) ≤ p0 ≤ U(𝐗))
+>
+>
+>
+> Và P_p0(𝐗 ∈ A(p0)) ≥ 1 - α
+>
+>
+>
+> nên P_p0(L(𝐗) ≤ p0 ≤ U(𝐗)) ≥ 1 - α
+>
+>
+>
+> Do đó \[L(𝐗),U(𝐗)\] là approx 1 - α confidence interval
 
 > [!TIP]
-> 🤖 **AI Check** — 🔴 Critical issues — ❌ **0/100** · ✗ Fix first
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú chưa có nội dung giải thích mà chỉ mới đưa ra câu hỏi hoặc ghi chú lại yêu cầu cần làm rõ.
+> Ghi chú xuất sắc! Bạn đã tái hiện và chứng minh rất chi tiết, mạch lạc toàn bộ cơ chế đảo ngược kiểm định (test inversion) từ kiểm định Score để thu được khoảng tin cậy (Wilson score interval).
 >
-> **🔴 Critical issues**
+> **🟡 Minor issues**
 >
-> **1.** *"Nói thêm vế ý này, vì sao lại gọi là cái interval trên là kết quả của việc inverting the score statistic."*
+> **1.** *"nên acceptance region Rc = {𝐱 ∈ 𝓧: |(p̂n - p0) / √[p0(1-p0)/n]| < z_α/2} ... Nếu A(p0) = {𝐱: |(p̂n - p0) / √[p0(1-p0)/n]| ≤ z_α/2}"*
 >
-> Ghi chú chưa thực sự phân tích hay giải thích nội dung kiến thức, chỉ mới dừng lại ở việc đặt câu hỏi/nêu dự định tìm hiểu mà chưa có nội dung thực tế (vi phạm Progress Check).
+> Có sự hoán đổi nhỏ giữa dấu '<' và '≤' trong định nghĩa miền chấp nhận A(p0), tuy nhiên với các biến ngẫu nhiên liên tục hoặc phân phối xấp xỉ liên tục (Normal) thì xác suất tại biên bằng 0 nên không làm ảnh hưởng bản chất toán học.
 >
+>
+> **✓ Strengths**
+> - Biến đổi đại số chính xác phương trình bậc hai theo p0 từ bất đẳng thức của Score test statistic.
+> - Chứng minh chặt chẽ mối liên hệ đối ngẫu x ∈ A(p0) ⇔ p0 ∈ C(x) cùng xác suất phủ (coverage probability) theo đúng định nghĩa chuẩn của Test Inversion.
+> - Hiểu sâu sắc việc áp dụng supremum trên tập không gian giả thuyết đơn Θ0 = {p0}.
 >
 > **💡 Deeper notes**
-> - Việc đảo ngược một thống kê kiểm định (inverting a test statistic) để tìm khoảng tin cậy 100(1-alpha)% nghĩa là tập hợp tất cả các giá trị tham số p0 sao cho giả thuyết H0: p = p0 không bị bác bỏ ở mức ý nghĩa alpha.
-> - Đối với kiểm định Score (Score test/Rao score test) cho tỉ lệ Bernoulli, thống kê kiểm định z = (p_hat - p0) / sqrt(p0(1-p0)/n) sử dụng phương sai dưới giả thuyết H0 (tức phụ thuộc vào p0 thay vì p_hat). Khi đặt điều kiện |z| <= z_{alpha/2} và bình phương hai vế, ta thu được một bất phương trình bậc hai theo biến p0. Nghiệm của bất phương trình bậc hai này chính là Wilson score interval.
+> - Khoảng tin cậy thu được từ việc đảo ngược Score statistic ở đây chính là Wilson Score Interval, thường có độ phủ thực tế tốt hơn nhiều so với Wald Interval (khoảng tin cậy thông thường dùng p̂ ± z*SE) khi cỡ mẫu nhỏ hoặc p gần 0 và 1.
 
-**🔗 See also:** [Binomial Score Test](./103_hypothesis_testing.md#node-3qjyz3i)
+**🔗 See also:** [Binomial Score Test](./103_hypothesis_testing.md#node-3qjyz3i) · [Coverage Probability và Confidence Coefficient](./91_introduction.md#node-hs10f26)
+
+<br>
+
+<a id="node-025zirs"></a>
+
+###### Likelihood Ratio Confidence Interval
+
+<p align="center"><kbd><img src="assets/m1mn5e2lpap.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Vì sao {θ: -2 log \[L(θ|𝐱)/L(θ̂ |𝐱)\] ≤ χ²1,α} là approximate 1-α confidence interval?
+>
+>
+>
+> Vì ta có -2 log λ(𝐗) là statistic có tính chất: -2 log λ(𝐗) → (d) χ²1 (theo theorem 10.3.1, xem link)
+>
+>
+>
+> Tiếp, vì định nghĩa của χ²1,α:
+>
+>
+>
+> P(χ²1 ≥ χ²1,α) = α
+>
+>
+>
+> ⇔ P(χ²1 ≤ χ²1,α) = 1-α
+>
+>
+>
+> ⇒ P(-2 log λ(𝐗) ≤ χ²1,α) ≈ 1-α
+>
+>
+>
+> Mà -2 log λ(𝐗) ≤ χ²1,α có bản chất là {s ∈ Ω, 𝐗(s) = 𝐱: -2 log \[L(θ|𝐱)/L(θ̂ |𝐱)\] ≤ χ²1,α}
+>
+>
+>
+> Mà -2 log \[L(θ|𝐱)/L(θ̂ |𝐱)\] ≤ χ²1,α (1)
+>
+>
+>
+> ⇔ L(𝐱) ≤ θ ≤ U(𝐱) (2) với L(𝐱) và U(𝐱) là hai hàm nào đó ta derive được để (2) ⇔ (1)
+>
+>
+>
+> Và nếu đặt A(θ) = {𝐱: -2 log \[L(θ|𝐱)/L(θ̂ |𝐱)\] ≤ χ²1,α}
+>
+>
+>
+> và C(𝐱) = {θ: L(𝐱) ≤ θ ≤ U(𝐱)}
+>
+>
+>
+> thì dĩ nhiên 𝐱 ∈ A(θ) ⇔ θ ∈ C(𝐱)
+>
+>
+>
+> Nên {s ∈ Ω, 𝐗(s) = 𝐱: -2 log \[L(θ|𝐱)/L(θ̂ |𝐱)\] ≤ χ²1,α}
+>
+>
+>
+> = {s ∈ Ω, 𝐗(s) = 𝐱: L(𝐱) ≤ θ ≤ U(𝐱)}
+>
+>
+>
+> ⇒ P\_θ({s ∈ Ω, 𝐗(s) = 𝐱: -2 log \[L(θ|𝐱)/L(θ̂ |𝐱)\] ≤ χ²1,α})
+>
+>
+>
+> = P\_θ({s ∈ Ω, 𝐗(s) = 𝐱: L(𝐱) ≤ θ ≤ U(𝐱)})
+>
+>
+>
+> ⇒ P\_θ(-2 log \[L(θ|𝐗)/L(θ̂ |𝐗)\] ≤ χ²1,α) = P\_θ(L(𝐗) ≤ θ ≤ U(𝐗))
+>
+>
+>
+> Mà P(-2 log λ(𝐗) ≤ χ²1,α) ≈ 1-α
+>
+>
+>
+> ⇒ P\_θ(L(𝐗) ≤ θ ≤ U(𝐗)) ≈ 1-α
+>
+>
+>
+> Vậy nên {θ: L(𝐱) ≤ θ ≤ U(𝐱)} cũng là {θ: -2 log \[L(θ|𝐱)/L(θ̂ |𝐱)\] ≤ χ²1,α} chính là approximate 1-α confidence interval.
+>
+>
+>
+> ---
+>
+>
+>
+> Ý cuối nói 10.4.5 chỉ là highest likelihood region là sao?
+>
+>
+>
+> \-2 log \[L(θ|𝐱)/L(θ̂ |𝐱)\] ≤ χ²1,α
+>
+>
+>
+> ⇔  log \[L(θ|𝐱)/L(θ̂ |𝐱)\] ≥ -(1/2)χ²1,α
+>
+>
+>
+> ⇔  L(θ|𝐱)/L(θ̂ |𝐱) ≥ exp\[-(1/2)χ²1,α\]
+>
+>
+>
+> ⇔  L(θ|𝐱) ≥ L(θ̂ |𝐱) exp\[-(1/2)χ²1,α\]
+>
+>
+>
+> Vậy {θ: -2 log \[L(θ|𝐱)/L(θ̂ |𝐱)\] ≤ χ²1,α} = {θ: L(θ|𝐱) ≥ L(θ̂ |𝐱) exp\[-(1/2)χ²1,α\]}
+>
+>
+>
+> Và exp\[-(1/2)χ²1,α\] là số nhỏ hơn 1, vì sao? vì -(1/2)χ²1,α &lt; 0, mà đồ thị hàm eˣ có dạng gì: khi x từ -inf → 0 → inf, eˣ sẽ từ 0 → e^0 = 1 → inf. Vậy nên với -(1/2)χ²1,α &lt; 0 thì exp\[-(1/2)χ²1,α\] luôn nằm trong \[0,1\], khiến cho L(θ̂ |𝐱) exp\[-(1/2)χ²1,α\]} là giá trị mang ý nghĩa là một tỉ lệ nào đó của L(θ̂ |𝐱), ví dụ 0.8 L(θ̂ |𝐱)
+>
+>
+>
+> Từ đó,  {θ: L(θ|𝐱) ≥ L(θ̂ |𝐱) exp\[-(1/2)χ²1,α\]} mang ý nghĩa là: lấy tất cả các θ sao cho likelihood - độ hợp lí của θ luôn ở mức cao hơn mốc nào đó trở lên L(θ̂ |𝐱), ví dụ từ 0.8  L(θ̂ |𝐱) trở lên. Mà L(θ̂ |𝐱) là cái gì, chính là likelihood cao nhất (do θ̂ là MLE), nên cái khoảng này chính là tập hợp, vùng chứa các θ có likelihood cao nhất.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, lập luận chặt chẽ về mặt toán học thông qua nguyên lý đảo kiểm định (test inversion) và giải thích rõ bản chất không gian biến cố s ∈ Ω. Chỉ có một điểm lưu ý nhỏ là tập nghiệm có thể không luôn là một khoảng liên tục duy nhất nếu likelihood đa đỉnh.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"-2 log [L(θ|𝐱)/L(θ̂ |𝐱)] ≤ χ²1,α (1) ⇔ L(𝐱) ≤ θ ≤ U(𝐱) (2)"*
+>
+> Phép tương đương này giả định ngầm rằng hàm likelihood đơn đỉnh (unimodal) theo θ. Nếu hàm likelihood có nhiều đỉnh cục bộ (multimodal), tập nghiệm có thể là hợp của nhiều khoảng rời nhau (confidence set) thay vì một đoạn đơn [L(x), U(x)].
+>
+>
+> **✓ Strengths**
+> - Vận dụng chính xác định lý Wilks về phân phối tiệm cận của thống kê tỉ số hợp lý LRT.
+> - Hiểu rất sâu và mô tả chính xác bản chất không gian mẫu (s ∈ Ω) cùng nguyên lý đảo miền chấp nhận A(θ) thành tập tin cậy C(x).
+> - Trình bày logic mạch lạc từ định nghĩa phân vị chi-bình phương đến mức độ tin cậy xấp xỉ 1 - α.
+>
+> **💡 Deeper notes**
+> - Định lý tiệm cận chi-bình phương (Wilks' theorem) đòi hỏi các điều kiện chính quy (regularity conditions), chẳng hạn giá trị tham số thực θ_0 nằm trong phần trong (interior) của không gian tham số và tồn tại đạo hàm cấp cao của log-likelihood.
+> - Bậc tự do ở đây là 1 tương ứng với trường hợp θ là tham số vô hướng 1 chiều; nếu θ là vector p chiều thì bậc tự do sẽ là p và vùng tin cậy là miền nhiều chiều.
+
+**🔗 See also:** [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li) · [LRT và Tập tin cậy](./92_methods_of_finding_interval_estimators.md#node-dscz8lz)
 
 <br>
 
