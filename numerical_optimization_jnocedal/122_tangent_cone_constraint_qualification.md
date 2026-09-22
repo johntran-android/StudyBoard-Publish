@@ -352,8 +352,6 @@
 >
 > Đây là case minh họa cho việc sẽ cần phải có các constraint qualification.
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=r2nkVla63AI)
-
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
