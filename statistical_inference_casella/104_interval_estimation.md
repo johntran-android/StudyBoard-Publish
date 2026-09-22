@@ -1210,7 +1210,7 @@
 >
 >
 >
-> Giả sử ta có bài toán kiểm định H0: θ=θ0 vs H1: θ∉θ0 và ta đã có cái test có level α, tức sup\_Θ0 P\_θ(𝐗 ∈ R) ≤ α.
+> Giả sử ta có bài toán kiểm định H0: θ=θ0 (Θ0 = {θ0}) vs H1: θ≠θ0 và ta đã có cái test có level α, tức sup\_Θ0 P\_θ(𝐗 ∈ R) ≤ α.
 >
 >
 >
@@ -1423,6 +1423,8 @@
 >
 >
 > Do đó \[L(𝐗),U(𝐗)\] là approx 1 - α confidence interval
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=UO_2KJVR6fY)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
