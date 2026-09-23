@@ -1,6 +1,6 @@
 # 4.3.2 Logistic regression
 
-📊 **Progress:** `4` Notes | `4` Screenshots | `4` AI Reviews
+📊 **Progress:** `5` Notes | `6` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-lvf9wc3"></a>
@@ -511,6 +511,180 @@
 > - Việc gradient của logistic regression có cùng dạng (yi - ti)Φi với hồi quy tuyến tính (sum-of-squares) không phải ngẫu nhiên, mà bắt nguồn từ tính chất tổng quát của mô hình tuyến tính tổng quát (GLM) khi sử dụng hàm liên kết chính tắc (canonical link function).
 
 **🔗 See also:** [Maximum Likelihood and Gradient](./311_maximum_likelihood_and_least_squares.md#node-ogc31vz)
+
+<br>
+
+<a id="node-kdbn2hb"></a>
+
+###### Maximum Likelihood on Linearly Separable Data
+
+<p align="center"><kbd><img src="assets/fcdn5jlbgp.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/gumysf3dgn6.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái đoạn này nói vầy nè:
+>
+>
+>
+> Đại ý là tác giả nói rằng cách tìm 𝐰 theo MLE có thể gây overfit rất nghiêm trọng, khi dataset có tính linearly separable.
+>
+>
+>
+> Cụ thể hiện tượng sẽ xảy ra như vầy: Khi dataset linearly separable, thuật toán tối ưu, khi cố gắng maximize likelihood sẽ làm hai động tác:
+>
+>
+>
+> i) Tìm ra một bộ 𝐰 sao cho hyperplane 𝐰ᵀΦ = 0 phân tách hoàn toàn hai class (cũng là sao cho σ(𝐰ᵀΦi) &gt; 0.5 với mọi 𝐱i mang nhãn ti=1 và σ(𝐰ᵀΦj) &lt; 0.5 với mọi 𝐱j mang nhãn tj=0), và..
+>
+>
+>
+> ii) Đẩy norm của 𝐰 lên vô hạn. Mình sẽ chứng minh điều này, cũng là làm bài tập 4.14:
+>
+>
+>
+> Mượn lại hàm negative log likelihood (cũng là cross entropy error function)
+>
+>
+>
+> E(𝐰) = - ln likelihod = - Σi=1:N {ti ln yi + (1-ti) ln (1-yi)} 
+>
+>
+>
+> với yi = f(𝒞1|Φ(𝐱i)), hay P(Ti=1|Φ(𝐱i)) = σ(𝐰ᵀΦ(𝐱i)) (hay σ(𝐰ᵀΦi) cũng được)
+>
+>
+>
+> Và ∇E(𝐰) = Σi=1:N (yi - ti)Φi
+>
+>
+>
+> Hôm qua chưa giải ra 𝐰\_ML, dùng điều kiện cần bậc nhất: ∇E(𝐰) = 0, nhưng phương trình này không thể giải được, nói cách khác là ta không có closed form solution mà phải giải bằng thuật toán tối ưu.
+>
+>
+>
+> Ta sẽ biện luận như sau:
+>
+>
+>
+> Để thuật toán tìm được điểm 𝐰 maximize hàm log likelihood:
+>
+>
+>
+> hàm ln likelihood = Σi=1:N {ti ln yi + (1-ti) ln (1-yi)} 
+>
+>
+>
+> = Σi,ti=1 (ln yi) + Σi,ti=0 \[ln (1-yi)\]
+>
+>
+>
+> Vì yi = f(𝒞1|Φi(𝐱i)) = P(Ti=1|Φi(𝐱i)) luôn mang giá trị từ 0 đến 1, nên ln yi mang giá trị từ -∞ tới 0. Và ln(1-yi) mang giá trị từ -∞ tới 0. Do đó, để ln likelihood đặt max, một cách là cố gắng khiến Σi,ti=1 (ln yi) = 0 và Σi,ti=0 \[ln (1-yi)\] = 0. Đồng nghĩa với mọi 𝐱i có ti = 1, thì yi = σ(𝐰ᵀΦi) phải bằng 1 và với mọi 𝐱j có tj = 0 thì 1-yi = 1-σ(𝐰ᵀΦi) phải bằng 1, tức σ(𝐰ᵀΦi) phải bằng 0.
+>
+>
+>
+> Thế thì trong quá trình thuật toán tối ưu nó cố đặt được điều này, thì hiện tượng sẽ là như sau: Đầu tiên nó sẽ tìm ra một 𝐰 nào đó, khiến với mọi ti = 1 thì 𝐰ᵀΦi đều &gt; 0, và với mọi ti = 0 thì 𝐰ᵀΦi đều &lt; 0, tức là, nó tìm ra một 𝐰 giúp tạo ra hyperplane 𝐰ᵀΦ = 0 phân tách được hoàn toàn hai đám dữ liệu. Điều này là chắc chắn có thể xảy ra vì đã nói dataset linearly separable.
+>
+>
+>
+> Sau đó, thuật toán sẽ chỉ việc tăng độ lớn của 𝐰 lên vô hạn (hướng vector vẫn giữ nguyên, tức hyperplane decision boundary vẫn giữ nguyên, chỉ có norm là tăng), khi đó:
+>
+>
+>
+> Với các data point có ti = 1, 𝐰ᵀΦi đang dương sẵn, sẽ scale lên ∞, khiến σ(𝐰ᵀΦi) → 1 
+>
+>
+>
+> Với các data point có ti = 0 thì 𝐰ᵀΦi đang âm, sẽ bị scale về -∞ ⇒ σ(𝐰ᵀΦi) sẽ → 0.
+>
+>
+>
+> (σ(𝐰ᵀΦi) → 1 hay 0 thì do hình dáng hàm sigmoid, hoặc giải thích bởi σ(a) = 1/(1 + exp(-a)), khi a → ∞ thì exp(-a) → 0 ⇒ 1/(1 + exp(-a)) → 1)
+>
+>
+>
+> ---
+>
+>
+>
+> Như vậy, về mặt lí thuyết như ta vừa phân tích, khi data linearly separable thì thuật toán chỉ cần chọn một 𝐰 để phân tách được hai data class hoàn toàn, sau đó scale độ lớn của 𝐰 lên vô cực là gradient sẽ về 0. (Lập luận này cũng là đã chứng minh xong bài tập 4.14, vì đại khái là ta đã chỉ ra rằng, theo lí thuyết, theo cách làm đó, thuật toán sẽ maximize hàm likelihood, hay minimize hàm - ln likelihood, cũng là khiến ∇E(𝐰) = 0, nên cho dù ta chưa đề cập đến thuật toán cụ thể nào, nhưng đó là con đường mà chúng sẽ làm để giải bài toán này)
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì, như vậy, 𝐰ML sẽ có norm rất lớn (theo lí thuyết thì sẽ lớn vô cùng nhưng ta hiểu thuật toán sẽ dừng chứ không chạy vô hạn, để 𝐰ML có hướng nào đó trong rất nhiều hướng giúp phân tách dataset, và có norm rất lớn)
+>
+>
+>
+> Từ đó khi vẽ đồ thị hàm f(𝒞1|𝐱) theo 𝐱 ta sẽ thấy hiện tượng sau:
+>
+>
+>
+> f(𝒞1|𝐱) = σ(𝐰MLᵀΦ(𝐱))
+>
+>
+>
+> để đơn giản hóa, giả sử 𝐰 chỉ là (w0, w1) với w0 = 0, và dùng basis function identity: 𝐰MLᵀΦ(𝐱) = w1x1 và w1 mang giá trị rất lớn, ví dụ 1 tỷ.
+>
+>
+>
+> Khi đó, hình dung x1 chạy từ -inf → +inf, thì khi x từ -inf → 0, w1x1 đều là số âm rất lớn, nên σ(w1x1) hầu như đều luôn ≈ 0.
+>
+>
+>
+> Khoảnh khắc x1 đi ngang qua mốc 0. w1x1 sẽ thay đổi từ một số âm rất lớn sang 1 số dương rất lớn khiến σ(w1x1) sẽ thay đổi cực nhanh từ 0 lên 1
+>
+>
+>
+> Và trong khoảng từ 0 → ∞ thì w1x1 luôn là con số dương rất lớn → σ(w1x1) luôn ≈ 1
+>
+>
+>
+> Kết quả là, nếu vẽ đồ thị hàm f(𝒞1|𝐱) = σ(w1x1) theo x1, ta sẽ thấy nó có dạng bậc thang: đi ngang từ -inf tới 0, tại 0 nhảy lên 1, và đi ngang từ 1 tới ∞. Đây chính là cái gs nói về vụ độ dốc hàm sigmoid vô cùng lớn (infinitely steep) và Heaviside step function.
+>
+>
+>
+> Một ý nữa cũng dễ hiểu là, khi dataset linearly separable, thì có vô số 𝐰 có thể tạo các hyperplane phân tách hoàn toàn hai class, và vấn đề là theo cách mô tả trên về cách thuật toán tìm ra 𝐰 maximize likelihood, thì nó chẳng quan tâm hướng nào của 𝐰 là tối ưu, mà nó chỉ cần dừng ở một 𝐰 thỏa việc phân tách được toàn bộ hai class data point sau đó scale 𝐰 lên vô cùng.
+>
+>
+>
+> Do đó, gs Bishop nói rằng, việc thuật toán tìm ra hướng nào của 𝐰 sẽ hên xui, tùy vào bước khởi tạo tham số.
+>
+>
+>
+> Cuối cùng, ông nói sơ ta có thể giải quyết vấn đề này thông qua việc thay vì đi tìm MLE của 𝐰, ta sẽ tìm MAP tức là maximum posterior. Còn nhớ, đây chính là cách làm theo trường phái Bayes (thật ra là cách làm Bayes nửa mùa: trong đó ta coi 𝐰 như random variable, chọn priori và đi xây dựng posteriori của nó, tức f(𝐰|data), sau đó lấy 𝐰 có posterior lớn nhất) và cái này cũng tương đương với việc add thêm regularization term vào cross entropy error function.
+
+📹 Video 1: [Maximum Likelihood on Linearly Separable Data — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=LNW4K9FY_As)
+
+📹 Video 2: [Tại sao MLE gây overfit nặng khi dataset linearly separable?](https://www.youtube.com/watch?v=XzhGTA5AeNU)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc và chính xác bản chất hiện tượng overfitting của Logistic Regression khi dữ liệu phân tách tuyến tính, giải thích trực quan và đầy đủ cả bài tập 4.14.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Khoảnh khắc x1 đi ngang qua mốc 0. w1x1 sẽ thay đổi từ một số âm rất lớn sang 1 số dương rất lớn khiến σ(w1x1) sẽ thay đổi cực nhanh từ 0 lên 1"*
+>
+> Cách diễn đạt hơi lỏng một chút về mặt giải tích: hàm $w_1 x_1$ biến thiên liên tục qua 0 chứ không 'nhảy' từ số âm rất lớn sang số dương rất lớn; chính xác là vì $w_1$ cực lớn nên chỉ cần một khoảng lân cận $\epsilon$ cực nhỏ quanh $x_1 = 0$ thì giá trị $w_1 x_1$ đã quét từ âm vô cùng đến dương vô cùng, khiến sigmoid dốc đứng như hàm Heaviside.
+>
+> **2.** *"sau đó scale độ lớn của 𝐰 lên vô cực là gradient sẽ về 0"*
+>
+> Về mặt giải tích chặt chẽ, điểm cực trị không đạt được tại bất kỳ $\mathbf{w}$ hữu hạn nào (nghiệm MLE không tồn tại trong $\mathbb{R}^D$). Gradient chỉ tiến dần về 0 khi $\|\mathbf{w}\| \to \infty$, nghĩa là hàm likelihood chỉ đạt supremum chứ không có maximum thực sự trong không gian tham số chuẩn.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất đúng vì sao hàm log-likelihood đạt giá trị lớn nhất bằng 0 khi toàn bộ các điểm phân loại đúng tuyệt đối với xác suất 1.
+> - Lập luận trọn vẹn yêu cầu của bài tập 4.14 thông qua việc tách thành hai bước: tìm siêu phẳng phân tách và kéo norm của w ra vô cực.
+> - Hình vẽ và giải thích trực quan chính xác về sự suy biến của hàm Sigmoid thành hàm bước Heaviside.
+> - Nắm rõ hệ quả về tính không duy nhất của nghiệm (phụ thuộc vào thuật toán và khởi tạo) cùng giải pháp khắc phục bằng MAP/regularization.
+>
+> **💡 Deeper notes**
+> - Trong thực tế khi huấn luyện bằng Gradient Descent hoặc Newton-Raphson (IRLS) trên dữ liệu linearly separable mà không có regularization, thuật toán sẽ không bao giờ hội tụ (norm của w tiếp tục tăng qua các epoch cho đến khi tràn số float hoặc chạm ngưỡng dừng sớm/early stopping).
 
 <br>
 
