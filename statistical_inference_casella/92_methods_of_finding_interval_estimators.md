@@ -157,7 +157,9 @@
 >
 > Vậy ta đã có một **1 - α confidence interval** (hay 1 - α interval estimator) được xây dựng đơn giản chỉ bằng cách đảo ngược một hypothesis test
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=nC7WkJULeTs)
+📹 Video 1: [Đảo ngược test statistic — Statistical Inference - Casella](https://www.youtube.com/watch?v=nC7WkJULeTs)
+
+📹 Video 2: [Cách đảo ngược acceptance region thành khoảng tin cậy cho μ?](https://www.youtube.com/watch?v=OcJDysX87L0)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
