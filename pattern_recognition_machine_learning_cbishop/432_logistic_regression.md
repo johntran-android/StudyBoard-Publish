@@ -1,6 +1,6 @@
 # 4.3.2 Logistic regression
 
-📊 **Progress:** `5` Notes | `7` Screenshots | `5` AI Reviews
+📊 **Progress:** `5` Notes | `10` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-lvf9wc3"></a>
@@ -354,7 +354,7 @@
 > **💡 Deeper notes**
 > - Về tên gọi 'Cross-entropy': Dưới góc nhìn lý thuyết thông tin, hàm mục tiêu này tương đương với khoảng cách Kullback-Leibler (KL divergence) hoặc cross-entropy giữa phân phối thực tế của nhãn $p(t_n) \in \{0, 1\}$ và phân phối dự đoán của mô hình $q(t_n) = y_n^{t_n}(1-y_n)^{1-t_n}$. Việc tối thiểu hóa cross-entropy chính là đưa phân phối dự đoán tiệm cận phân phối dữ liệu thực tế.
 
-**🔗 See also:** [Section 4.3 Probabilistic Discriminative Models](./43_probabilistic_discriminative_models.md#node-nop86oc) · [Định nghĩa điểm ước lượng *(Statistical Inference - Casella)*](../statistical_inference_casella/71_introduction.md#node-c0xbdri)
+**🔗 See also:** [Section 4.3 Probabilistic Discriminative Models](./43_probabilistic_discriminative_models.md#node-nop86oc) · [Định nghĩa điểm ước lượng *(Statistical Inference - Casella)*](../statistical_inference_casella/71_introduction.md#node-c0xbdri) · [Hessian for Logistic Regression](./433_iterative_reweighted_least_squares.md#node-7nipjyu)
 
 <br>
 
@@ -523,6 +523,12 @@
 <p align="center"><kbd><img src="assets/fcdn5jlbgp.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/gumysf3dgn6.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/mia0fg9t6e.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/mia0fg9t6e.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/mia0fg9t6e.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái đoạn này nói vầy nè:
