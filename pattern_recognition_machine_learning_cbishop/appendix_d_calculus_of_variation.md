@@ -1,6 +1,6 @@
 # Appendix D. Calculus of Variation
 
-📊 **Progress:** `5` Notes | `7` Screenshots
+📊 **Progress:** `5` Notes | `7` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-64oo273"></a>
@@ -167,6 +167,25 @@
 >
 >
 > Đây chính là D.2 (phải viết O(||ε||²) mới đúng, thay vì O(ε²) vì ε giờ đang là vector)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, bạn đã tự chứng minh lại công thức xấp xỉ bậc nhất và số hạng dư O(ε²) dựa trên định lý giá trị trung bình (Taylor cấp 1) và tính chất Lipschitz gradient cho cả trường hợp 1 biến lẫn đa biến.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Khi lấy limit ε → 0, thì term O(ε²) sẽ → 0 rất nhanh, để cho ta: y(x + ε) = y(x) + y'(x) ε ⇨ y'(x) = lim ε → 0 [y(x + ε) - y(x)] / ε"*
+>
+> Về mặt lập luận chặt chẽ, ta cần chuyển vế và chia cho ε trước: [y(x + ε) - y(x)] / ε = y'(x) + O(ε), sau đó mới lấy giới hạn ε → 0 để số hạng O(ε) triệt tiêu, thay vì bỏ term O(ε²) rồi viết dấu bằng trực tiếp y(x + ε) = y(x) + y'(x)ε.
+>
+>
+> **✓ Strengths**
+> - Vận dụng rất chính xác định lý giá trị trung bình (dạng Lagrange) kết hợp điều kiện Lipschitz continuous gradient để làm rõ bản chất của số hạng O(ε²).
+> - Mở rộng chuẩn xác sang giải tích đa biến với bất đẳng thức Cauchy-Schwarz và chỉ ra điểm lỏng lẻo trong ký hiệu O(ε²) của sách (chuẩn xác hơn phải là O(||ε||²)).
+>
+> **💡 Deeper notes**
+> - Nếu hàm số thuộc lớp C² (khả vi liên tục đến cấp 2), ta có thể dùng trực tiếp công thức khai triển Taylor bậc hai y(x + ε) = y(x) + y'(x)ε + (1/2)y''(ξ)ε² để suy ra ngay phần dư là O(ε²) mà không cần gọi riêng giả thiết Lipschitz.
 
 <br>
 
