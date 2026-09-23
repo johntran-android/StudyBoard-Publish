@@ -44,7 +44,7 @@ Hướng tiếp theo là tiếp tục đi lên các lớp ML ở tầng cao hơn
 
 Repository này vì vậy chủ yếu là một **learning log** — dấu vết của quá trình đi từ nền tảng toán, probability, statistics và optimization lên machine learning, đồng thời là một phần của quá trình build StudyBoard.
 
-**`~12,362 notes` · `~17,862 screenshots` · `18 notebooks`**
+**`~12,366 notes` · `~17,869 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -595,7 +595,6 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 `433 notes · 656 screenshots · 70 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
-> 
 > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
@@ -736,9 +735,10 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 ### Statistical Inference - Casella
 <!-- key: statistical_inference_casella -->
 <!-- group: Probability & Statistics -->
-`873 notes · 1,135 screenshots · 50 sections`
+`877 notes · 1,142 screenshots · 50 sections`
 
 > This notebook contains detailed study notes and proofs based on Casella and Berger's *Statistical Inference*, covering key topics in probability theory, estimation methods, hypothesis testing, and asymptotic properties.
+> 
 > Sổ tay học tập này tổng hợp các ghi chép và chứng minh chi tiết dựa trên giáo trình *Statistical Inference* của Casella và Berger, bao gồm các chủ đề cốt lõi về lý thuyết xác suất, phương pháp ước lượng, kiểm định giả thuyết và tính chất tiệm cận.
 
 <details open>
@@ -794,8 +794,8 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 | [9.3 Methods Of Evaluating Interval Estimators](statistical_inference_casella/93_methods_of_evaluating_interval_estimators.md) | 34 | 35 |
 | [10.1 Point Estimation](statistical_inference_casella/101_point_estimation.md) | 42 | 48 |
 | [10.2 Robustness](statistical_inference_casella/102_robustness.md) | 16 | 20 |
-| [10.3 Hypothesis Testing](statistical_inference_casella/103_hypothesis_testing.md) | 22 | 25 |
-| [10.4 Interval Estimation](statistical_inference_casella/104_interval_estimation.md) | 9 | 10 |
+| [10.3 Hypothesis Testing](statistical_inference_casella/103_hypothesis_testing.md) | 22 | 26 |
+| [10.4 Interval Estimation](statistical_inference_casella/104_interval_estimation.md) | 13 | 16 |
 
 </details>
 
