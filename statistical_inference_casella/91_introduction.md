@@ -247,7 +247,7 @@
 > khi xét mọi θ ∈ Θ. Dĩ nhiên với cái infimum thì cái này ko còn phụ thuộc θ
 > nữa.
 
-**🔗 See also:** [Inverting the Score Statistic](./104_interval_estimation.md#node-9xoyatw)
+**🔗 See also:** [Inverting the Score Statistic](./104_interval_estimation.md#node-9xoyatw) · [Khoảng tin cậy mẫu lớn](./104_interval_estimation.md#node-9u86a8k)
 
 <br>
 
