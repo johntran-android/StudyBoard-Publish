@@ -1,6 +1,6 @@
 # 4.3.2 Logistic regression
 
-📊 **Progress:** `5` Notes | `6` Screenshots | `5` AI Reviews
+📊 **Progress:** `5` Notes | `7` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-lvf9wc3"></a>
@@ -518,6 +518,8 @@
 
 ###### Maximum Likelihood on Linearly Separable Data
 
+<p align="center"><kbd><img src="assets/mia0fg9t6e.png" width="80%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/fcdn5jlbgp.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/gumysf3dgn6.png" width="80%"></kbd></p>
@@ -659,7 +661,7 @@
 
 📹 Video 1: [Maximum Likelihood on Linearly Separable Data — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=LNW4K9FY_As)
 
-📹 Video 2: [Tại sao MLE gây overfit nặng khi dataset linearly separable?](https://www.youtube.com/watch?v=XzhGTA5AeNU)
+📹 Video 2: [Learning with me: Maximum Likelihood on Linearly Separable Data](https://www.youtube.com/watch?v=XzhGTA5AeNU)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
