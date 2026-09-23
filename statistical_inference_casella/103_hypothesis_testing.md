@@ -1,6 +1,6 @@
 # 10.3 Hypothesis Testing
 
-📊 **Progress:** `22` Notes | `25` Screenshots | `21` AI Reviews
+📊 **Progress:** `22` Notes | `26` Screenshots | `21` AI Reviews
 
 ---
 <a id="node-zhfsuqo"></a>
@@ -1929,6 +1929,8 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 ###### The Wald Test Statistic
 
 <p align="center"><kbd><img src="assets/351uvpxtvj2.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/vk479i3rg5.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đoạn này là sao?
