@@ -1,6 +1,6 @@
 # 4.3.3 Iterative reweighted least squares
 
-📊 **Progress:** `3` Notes | `4` Screenshots | `3` AI Reviews
+📊 **Progress:** `3` Notes | `5` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-89ydraa"></a>
@@ -180,6 +180,8 @@
 <a id="node-m7p2qhb"></a>
 
 ### Newton-Raphson for Linear Regression
+
+<p align="center"><kbd><img src="assets/75geiaa4xmb.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/djri8kw7c5a.png" width="80%"></kbd></p>
 
@@ -433,29 +435,214 @@
 >
 >
 >
-> Nhưng thử vectorize hàm E(𝐰):
+> Nhưng thử vectorize hàm E(𝐰) (negative log likelihood, hay cross entropy):
 >
 >
 >
->  ln L(𝐰|𝐭) = - Σi=1:N {ti ln yi + (1-ti) ln (1-yi)}
+>  - ln L(𝐰|𝐭) = - Σi=1:N {ti ln yi + (1-ti) ln (1-yi)}
+>
+>
+>
+> = - Σi=1:N ti ln yi - Σi=1:N (1-ti) ln (1-yi)
+>
+>
+>
+> = - Σi=1:N ti ln yi - Σi=1:N (1-ti) ln (1-yi)
+>
+>
+>
+> = - 𝐭ᵀln(𝐲) - (𝟏-𝐭)ᵀln(𝟏-𝐲)
+>
+>
+>
+> Với 𝐲 = (y1,...yN)ᵀ, với yi = σ(𝐰ᵀΦ(𝐱i))
+>
+>
+>
+> ---
+>
+>
+>
+> Vectorize hàm ∇E(𝐰):
+>
+>
+>
+> ∇E(𝐰) = Σi=1:N (yi - ti)Φi
+>
+>
+>
+> = 𝚽ᵀ(𝐲-𝐭) với 𝚽 là matrix có các hàng là Φ(𝐱1)ᵀ,...Φ(𝐱N)ᵀ
+>
+>
+>
+> = 𝚽ᵀ(𝐲(𝐰)-𝐭)
+>
+>
+>
+> ---
+>
+>
+>
+> Tìm Hessian 𝐇:
+>
+>
+>
+> d∇E(𝐰) = ∇E(𝐰 + d𝐰) - ∇E(𝐰)
+>
+>
+>
+> = 𝚽ᵀ(𝐲(𝐰+d𝐰) - 𝐭) - 𝚽ᵀ(𝐲(𝐰) - 𝐭)
+>
+>
+>
+> = 𝚽ᵀ𝐲(𝐰+d𝐰) - 𝚽ᵀ𝐭 - 𝚽ᵀ𝐲(𝐰) + 𝚽ᵀ𝐭
+>
+>
+>
+> = 𝚽ᵀ𝐲(𝐰+d𝐰) - 𝚽ᵀ𝐲(𝐰)
+>
+>
+>
+> = 𝚽ᵀ\[𝐲(𝐰+d𝐰) - 𝐲(𝐰)\]
+>
+>
+>
+> = 𝚽ᵀ\[𝐲(𝐰+d𝐰) - 𝐲(𝐰)\]
+>
+>
+>
+> = 𝚽ᵀd𝐲
+>
+>
+>
+> Xét d𝐲
+>
+>
+>
+> = \[dy1,...dyN\]ᵀ (1)
+>
+>
+>
+> Với yi(𝐰) = σ(𝐰ᵀΦi) = σ(ai(𝐰)) với ai(𝐰) = 𝐰ᵀΦi
+>
+>
+>
+> y1(𝐰) = σ(a1(𝐰)), hay y1 = σ(a1)
+>
+>
+>
+> y1 = σ(a1) ⇒ dy1/da1 = σ'(a1)
+>
+>
+>
+> ⇔ dy1 = σ'(a1)da1 = σ(a1)\[1 - σ(a1)\]da1
+>
+>
+>
+> Nên \[dy1,...dyN\]ᵀ = \[σ(a1)(1 - σ(a1))da1 ,...σ(aN)(1 - σ(aN))daN\]ᵀ
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, vì ai = 𝐰ᵀΦi ⇒ d/d𝐰 ai = Φi ⇒ dai = Φiᵀd𝐰
+>
+>
+>
+> .. = \[σ(a1)(1 - σ(a1))Φ1ᵀd𝐰 ,...σ(aN)(1 - σ(aN))ΦNᵀd𝐰\]ᵀ
+>
+>
+>
+> = diag(σ(a1)(1 - σ(a1)),.....σ(aN)(1 - σ(aN))) \[Φ1ᵀd𝐰,...,ΦNᵀd𝐰\]ᵀ
+>
+>
+>
+> = diag(σ(a1)(1 - σ(a1)),.....σ(aN)(1 - σ(aN))) 𝚽d𝐰
+>
+>
+>
+> Đặt 𝐑 = diag(σ(a1)(1 - σ(a1)),.....σ(aN)(1 - σ(aN)))
+>
+>
+>
+> ... = 𝐑𝚽d𝐰
+>
+>
+>
+> Vậy d𝐲 = 𝐑𝚽d𝐰
+>
+>
+>
+> Nên d∇E(𝐰) = 𝚽ᵀd𝐲 = 𝚽ᵀ𝐑𝚽d𝐰 Jacobian 
+>
+>
+>
+> Suy ra Jacobian cuả hàm vector ∇E(𝐰), cũng là Hessian của E(𝐰) chính là 𝚽ᵀ𝐑𝚽:
+>
+>
+>
+> 𝐇(𝐰) = 𝚽ᵀ𝐑𝚽, chú ý, nó là hàm (vector → matrix, phụ thuộc 𝐰, vì 𝐑 là matrix chéo mà phần tử ii là σ(ai)(1 - σ(ai) = σ(𝐰ᵀΦi)(1 - σ(𝐰ᵀΦi)), nên 𝐑 là matrix phụ thuộc 𝐰 ⇒ Hessian là matrix phụ thuộc 𝐰. Điều này khác với Hessian của Sum Square Error, là 𝚽ᵀ𝚽, là constant matrix.
+>
+>
+>
+> ---
+>
+>
+>
+> Rồi, vì yi = σ(𝐰ᵀΦi) luôn trong \[0,1\], và 1 - σ(𝐰ᵀΦi) cũng vậy, nên σ(𝐰ᵀΦi)(1 - σ(𝐰ᵀΦi)) luôn không âm. Và với triangular matrix thì entries đường chéo chính là eigenvalues nên mọi eigenvalues không âm thì matrix bán xác định dương.
+>
+>
+>
+> Nhưng thực tế, σ(𝐰ᵀΦi) chỉ output ra 1 hoặc 0 nếu 𝐰ᵀΦi là ∞ hoặc -∞, nên thực tế σ(𝐰ᵀΦi) luôn chỉ trong (0,1). Do đó σ(𝐰ᵀΦi)(1 - σ(𝐰ᵀΦi)) luôn dương ⇒ mọi eigenvalues đều dương nên 𝐑 xác định dương
+>
+>
+>
+> (trong sách gs lập luận dùng quadratic form:
+>
+>
+>
+> 𝐮ᵀ𝐇𝐮 = 𝐮ᵀ𝚽ᵀ𝐑𝚽𝐮 = (𝚽𝐮)ᵀ𝐑𝚽𝐮. Đặt 𝐯 = 𝚽𝐮 thì ta có:
+>
+>
+>
+> .. = 𝐯ᵀ𝐑𝐯 = Σi 𝐑ii vi² = Σi 𝐑ii vi² và vì 𝐑ii luôn dương với mọi i, nên cái tổng này dương.
+>
+>
+>
+> Thế thì nếu như với 𝐮 khác 𝟎 bất kì, 𝐯 = 𝚽𝐮 cũng khác 𝟎 thì theo trên, quadratic form 𝐮ᵀ𝐇𝐮 sẽ đều dương, và theo MIT 1806 đã học, đây giúp kết luận đây là positive definite matrix.
+>
+>
+>
+> Dĩ nhiên để 𝐯 = 𝚽𝐮 cũng khác 𝟎 với mọi 𝐮 thì 𝚽 phải full column rank (nullspace chỉ có {𝟎})
+>
+>
+>
+> (có mấy cách: mọi pivot đều dương, hay mọi eigevalue đều dương, hay mọi leading principle, tức det của các matrix mở rộng dần từ trên xuống dưới, và cuối cùng là check quadratic form)
+>
+>
+>
+> Vậy, Hessian 𝐇 xác định dương tại mọi 𝐰 thì suy ra hàm số error E(𝐰) là hàm strictly convex, nên theo một định lý bên tối ưu lồi cho ta biết, hàm số sẽ có nghiệm toàn cục duy nhất.
+>
+>
+>
+> Trong Convex Optimization, giáo sư Boyd cho mình một cách chứng minh trực giác rất dễ nhớ: Đại khái ý tưởng là giả sử ngoài 𝐱\* là một local minimizer, thì còn 𝐳 là một local mimizer khác thì ta tập luận trực giác như sau: nếu đi từ 𝐱\* đến 𝐳, thì đầu tiên ta sẽ phải "đi lên" (vì 𝐱\* là local minimizer), nhưng sau đó, để đến 𝐳 thì ta sẽ phải "đi xuống" (do 𝐳 cũng là local minimizer) thành ra tại cái lúc đi xuống, hàm số phải có độ cong âm (negative curvature), và điều này mâu thuẫn với việc Hessian xác định dương tại mọi điểm (vì điều này cho biết độ cong phải luôn dương tại mọi điểm)
 
 > [!TIP]
-> 🤖 **AI Check** — 🔴 Critical issues — ❌ **20/100** · ✗ Fix first
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú chưa hoàn thành nội dung dự định — bạn mới chỉ nêu ý định 'thử vectorize hàm E(w)' nhưng để trống hoàn toàn và chưa thực hiện bước biến đổi nào.
+> Ghi chú xuất sắc, tự dẫn xuất Hessian qua vi phân ma trận thay vì chỉ chép lại công thức. Đã chỉ ra được điều kiện ma trận thiết kế full column rank để Hessian thực sự xác định dương.
 >
-> **🔴 Critical issues**
->
-> **1.** *"Nhưng thử vectorize hàm E(𝐰):"*
->
-> Ghi chú đặt ra mục tiêu vectorize hàm lỗi E(w) nhưng bị bỏ dở hoàn toàn, chưa có bất kỳ phép biến đổi, công thức hay lập luận nào được đưa ra.
->
+> **✓ Strengths**
+> - Dẫn xuất Hessian chặt chẽ bằng phương pháp vi phân (differential form) d∇E(w) = ΦᵀRΦ dw rất gọn gàng và mạch lạc.
+> - Bắt đúng điều kiện quan trọng: Φ phải có full column rank thì uᵀHu mới dương với mọi u ≠ 0 (nếu không H chỉ bán xác định dương).
+> - Hiểu bản chất và sửa đúng lỗi in ấn kinh điển trong sách của Bishop (sách in nhầm là 'concave' thay vì 'convex' đối với hàm lỗi E(w)).
 >
 > **💡 Deeper notes**
-> - Dạng ma trận/vector của gradient từ hàm lỗi cross-entropy thường được viết gọn thành ∇E(w) = Φ^T (y - t), với Φ là ma trận thiết kế kích thước N x M, y và t là các vector kích thước N x 1.
-> - Hàm lỗi E(w) ở dạng vector hóa đầy đủ thường được biểu diễn qua tích vô hướng hoặc tổng log-sum: E(w) = - [t^T ln(y) + (1 - t)^T ln(1 - y)].
+> - Nếu dữ liệu tách biệt tuyến tính (linearly separable), ||w|| sẽ tiến tới vô cùng, dẫn tới y_n tiến tới 0 hoặc 1 khiến R_nn → 0 và Hessian suy biến (singular). Khi đó cực tiểu không đạt được tại w hữu hạn trừ khi có điều chuẩn (regularization).
 
-**🔗 See also:** [Cross-Entropy Error Function Gradient](./432_logistic_regression.md#node-gvw6cdv)
+**🔗 See also:** [Cross-Entropy Error Function Gradient](./432_logistic_regression.md#node-gvw6cdv) · [linked note *(Mit 18.06)*](../mit1806_gstrang/lecture_27_positive_definite_matrices_and_minima.md#node-au3l6fa) · [Gradient of Logistic Error Function](./432_logistic_regression.md#node-to86xxj)
 
 <br>
 
