@@ -1,6 +1,6 @@
 # 5.5 Convergence Concepts
 
-📊 **Progress:** `42` Notes | `52` Screenshots | `3` AI Reviews
+📊 **Progress:** `42` Notes | `52` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-tqtc86o"></a>
@@ -866,7 +866,30 @@
 >
 > **√n (Xnbar - μ) / σ hội tụ phân phối về standard normal random variable**
 
-**🔗 See also:** [Phương pháp Delta 1/X̄](#node-1zfrnml) · [Stronger Central Limit Theorem](#node-yngnkwh) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq) · [Large-Sample Binomial Tests](./103_hypothesis_testing.md#node-8xsav7v) · [Kiểm định hai phía](./103_hypothesis_testing.md#node-c96epf4)
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **80/100** · ✓ Move on
+>
+> Ghi chú đã nắm được nội dung cốt lõi của định lý giới hạn trung tâm (CLT) và kết luận về sự hội tụ phân phối về chuẩn tắc. Tuy nhiên, có hai lỗi gõ nhầm quan trọng trong công thức: thiếu hệ số 1/n ở định nghĩa trung bình mẫu và viết nhầm biến giới hạn x tiến tới vô cùng thay vì n tiến tới vô cùng.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"X̄_n = ∑i=1:n Xi"*
+>
+> Định nghĩa trung bình mẫu (sample mean) bị thiếu hệ số 1/n; công thức chính xác phải là X̄_n = (1/n) ∑_{i=1}^n X_i.
+>
+> **2.** *"lim x→∞ Gn(x) = ∫-inf:x (1/√2π) e^-y^2/2 dy"*
+>
+> Nhầm biến lấy giới hạn thành x → ∞ thay vì cỡ mẫu n → ∞ (phải là lim_{n → ∞} G_n(x)). Vế phải có cận trên là x, nên giới hạn tiệm cận phải xét theo cỡ mẫu n.
+>
+>
+> **✓ Strengths**
+> - Nắm chuẩn xác kết luận cốt lõi rằng biến chuẩn hóa hội tụ theo phân phối về phân phối chuẩn tắc chuẩn N(0, 1).
+> - Ghi nhận đầy đủ các giả thiết quan trọng ban đầu: chuỗi i.i.d., sự tồn tại của mgf quanh lân cận 0, và điều kiện kỳ vọng/phương sai hữu hạn.
+>
+> **💡 Deeper notes**
+> - Phiên bản CLT trong giáo trình này yêu cầu mgf tồn tại trong lân cận của 0 nhằm phục vụ chứng minh thông qua mgf; trên thực tế, định lý giới hạn trung tâm dạng Lindeberg–Lévy tổng quát chỉ cần điều kiện kỳ vọng và phương sai hữu hạn (0 < σ² < ∞) mà không bắt buộc mgf phải tồn tại.
+
+**🔗 See also:** [Phương pháp Delta 1/X̄](#node-1zfrnml) · [Stronger Central Limit Theorem](#node-yngnkwh) · [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s) · [The Wald Test Statistic](./103_hypothesis_testing.md#node-2zkyopq) · [Large-Sample Binomial Tests](./103_hypothesis_testing.md#node-8xsav7v) · [Kiểm định hai phía](./103_hypothesis_testing.md#node-c96epf4) · [Example 10.4.5 Approximate Poisson Interval](./104_interval_estimation.md#node-entp6bp)
 
 <br>
 
@@ -1259,7 +1282,7 @@
 >
 > Gs cũng không chứng minh theorem này
 
-**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s)
+**🔗 See also:** [Theorem 10.1.12 (Asymptotic efficiency of MLEs)](./101_point_estimation.md#node-n1mqtrr) · [Taylor Expansion for M-Estimators](./102_robustness.md#node-qm1tb5s) · [Example 10.4.5 Approximate Poisson Interval](./104_interval_estimation.md#node-entp6bp)
 
 <br>
 
