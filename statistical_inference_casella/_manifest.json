@@ -1,6 +1,6 @@
 {
   "title": "Statistical Inference - Casella",
-  "publishedAt": 1790101824117,
+  "publishedAt": 1790185055652,
   "sections": [
     {
       "title": "📋 Overview",
@@ -294,15 +294,15 @@
       "title": "10.3 Hypothesis Testing",
       "path": "statistical_inference_casella/103_hypothesis_testing.md",
       "noteCount": 22,
-      "imageCount": 25
+      "imageCount": 26
     },
     {
       "title": "10.4 Interval Estimation",
       "path": "statistical_inference_casella/104_interval_estimation.md",
-      "noteCount": 9,
-      "imageCount": 10
+      "noteCount": 13,
+      "imageCount": 16
     }
   ],
-  "totalNotes": 873,
-  "totalImages": 1135
+  "totalNotes": 877,
+  "totalImages": 1142
 }
