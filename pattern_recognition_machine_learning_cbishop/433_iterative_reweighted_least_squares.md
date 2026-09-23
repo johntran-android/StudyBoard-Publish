@@ -1,6 +1,6 @@
 # 4.3.3 Iterative reweighted least squares
 
-📊 **Progress:** `2` Notes | `2` Screenshots | `2` AI Reviews
+📊 **Progress:** `3` Notes | `4` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-89ydraa"></a>
@@ -182,6 +182,8 @@
 ### Newton-Raphson for Linear Regression
 
 <p align="center"><kbd><img src="assets/djri8kw7c5a.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/75geiaa4xmb.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Thử áp dụng với linear regression model:
@@ -417,4 +419,43 @@
 <br>
 
 <a id="node-7nipjyu"></a>
+
+#### Hessian for Logistic Regression
+
+<p align="center"><kbd><img src="assets/usgty2sfue.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Áp dụng N-R cho logistic regression
+>
+>
+>
+> Bữa trước đã có gradient ∇E(𝐰) = Σi=1:N (yi - ti)Φi
+>
+>
+>
+> Nhưng thử vectorize hàm E(𝐰):
+>
+>
+>
+>  ln L(𝐰|𝐭) = - Σi=1:N {ti ln yi + (1-ti) ln (1-yi)}
+
+> [!TIP]
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **20/100** · ✗ Fix first
+>
+> Ghi chú chưa hoàn thành nội dung dự định — bạn mới chỉ nêu ý định 'thử vectorize hàm E(w)' nhưng để trống hoàn toàn và chưa thực hiện bước biến đổi nào.
+>
+> **🔴 Critical issues**
+>
+> **1.** *"Nhưng thử vectorize hàm E(𝐰):"*
+>
+> Ghi chú đặt ra mục tiêu vectorize hàm lỗi E(w) nhưng bị bỏ dở hoàn toàn, chưa có bất kỳ phép biến đổi, công thức hay lập luận nào được đưa ra.
+>
+>
+> **💡 Deeper notes**
+> - Dạng ma trận/vector của gradient từ hàm lỗi cross-entropy thường được viết gọn thành ∇E(w) = Φ^T (y - t), với Φ là ma trận thiết kế kích thước N x M, y và t là các vector kích thước N x 1.
+> - Hàm lỗi E(w) ở dạng vector hóa đầy đủ thường được biểu diễn qua tích vô hướng hoặc tổng log-sum: E(w) = - [t^T ln(y) + (1 - t)^T ln(1 - y)].
+
+**🔗 See also:** [Cross-Entropy Error Function Gradient](./432_logistic_regression.md#node-gvw6cdv)
+
+<br>
 
