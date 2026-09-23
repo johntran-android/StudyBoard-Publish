@@ -1,6 +1,6 @@
 # 10.4 Interval Estimation
 
-📊 **Progress:** `9` Notes | `10` Screenshots | `9` AI Reviews
+📊 **Progress:** `13` Notes | `16` Screenshots | `13` AI Reviews
 
 ---
 <a id="node-wt27aoy"></a>
@@ -1593,6 +1593,407 @@
 > - Bậc tự do ở đây là 1 tương ứng với trường hợp θ là tham số vô hướng 1 chiều; nếu θ là vector p chiều thì bậc tự do sẽ là p và vùng tin cậy là miền nhiều chiều.
 
 **🔗 See also:** [Asymptotic Distribution of the LRT](./103_hypothesis_testing.md#node-d1so0li) · [LRT và Tập tin cậy](./92_methods_of_finding_interval_estimators.md#node-dscz8lz)
+
+<br>
+
+<a id="node-9u86a8k"></a>
+
+###### Khoảng tin cậy mẫu lớn
+
+<p align="center"><kbd><img src="assets/s3wk6liit9r.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này là sao?
+>
+>
+>
+> Nếu ta có statistic W và V sao cho (W - θ)/V → (d) n(0,1) thì ta có thể xây dựng approximate confidence interval cho θ:
+>
+>
+>
+> W - z\_α/2 V ≤ θ ≤ W + z\_α/2 V.
+>
+>
+>
+> Là sao nhỉ?
+>
+>
+>
+> Nếu (W - θ)/V → (d) n(0,1). Thì vì P(Z ≥ z\_α/2) = α/2 và P(Z ≤ -z\_α/2) = α/2 ⇒ P(-z\_α/2 ≤ Z ≤ z\_α/2) = P(|Z| ≤ z\_α/2) = 1-α.
+>
+>
+>
+> Và vì vậy nên P\_θ(|(W - θ)/V| ≤ z\_α/2) ≈ 1-α
+>
+>
+>
+> ⇔ P\_θ({s ∈ Ω: |(W(s)-θ)/V(s)| ≤ z\_α/2}) ≈ 1-α
+>
+>
+>
+> ⇔ P\_θ({s ∈ Ω: -z\_α/2 ≤ (W(s)-θ)/V(s) ≤ z\_α/2}) ≈ 1-α
+>
+>
+>
+> ⇔ P\_θ({s ∈ Ω: -V(s) z\_α/2 ≤ W(s)-θ ≤ V(s) z\_α/2}) ≈ 1-α
+>
+>
+>
+> ⇔ P\_θ({s ∈ Ω: θ ≤ W(s)+V(s) z\_α/2 ; W(s)-V(s) z\_α/2 ≤ θ}) ≈ 1-α
+>
+>
+>
+> ⇔ P\_θ({s ∈ Ω: W(s)-V(s) z\_α/2 ≤ θ ≤ W(s)+V(s) z\_α/2 }) ≈ 1-α
+>
+>
+>
+> ⇔ P\_θ(W-V z\_α/2 ≤ θ ≤ W + V z\_α/2) ≈ 1-α
+>
+>
+>
+> và như vậy \[W-V z\_α/2, W+V z\_α/2\] là một confidence interval có coverage probability ≈ 1-α, ta gọi nó là approximate 1-α confidence interval.
+>
+>
+>
+> Và cũng để ý, vì P(Z ≥ z\_α/2) = α/2 không phụ thuộc θ (do Z là normal(0,1) không còn phụ thuộc θ), nên kết quả P\_θ(W-V z\_α/2 ≤ θ ≤ W + V z\_α/2) ≈ 1-α thật ra không phụ thuộc θ, điều này đồng nghĩa:
+>
+>
+>
+> inf\_θ P\_θ(W-V z\_α/2 ≤ θ ≤ W + V z\_α/2) ≈ 1-α
+>
+>
+>
+> Do đo đây cũng là confidence coefficient xấp xỉ 1- α
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú giải thích rất chi tiết và chuẩn xác các bước biến đổi đại số để từ pivot tiệm cận suy ra khoảng tin cậy xấp xỉ. Bạn chỉ cần lưu ý điều kiện $V > 0$ khi nhân chéo bất đẳng thức.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"⇔ P_θ({s ∈ Ω: -V(s) z_α/2 ≤ W(s)-θ ≤ V(s) z_α/2}) ≈ 1-α"*
+>
+> Khi nhân cả hai vế với $V(s)$ mà không đổi chiều bất đẳng thức, bạn đang ngầm giả định $V(s) > 0$. Trong thống kê, $V$ thường là ước lượng sai số chuẩn (standard error) nên luôn dương, tuy nhiên nên ghi rõ điều kiện $V > 0$ để lập luận chặt chẽ.
+>
+>
+> **✓ Strengths**
+> - Diễn giải tường minh cách chuyển đổi từ phân phối tiệm cận sang xác suất bao phủ thông qua biến cố trên không gian mẫu.
+> - Liên hệ chính xác giữa xác suất bao phủ không phụ thuộc vào θ với khái niệm hệ số tin cậy (confidence coefficient / infimum xác suất).
+>
+> **💡 Deeper notes**
+> - Về mặt lý thuyết tiệm cận chặt chẽ, việc lấy $\inf_\theta$ xấp xỉ $1-\alpha$ đòi hỏi tính hội tụ đều (uniform convergence) theo $\theta$, thay vì chỉ hội tụ theo từng điểm (pointwise convergence).
+
+**🔗 See also:** [Coverage Probability và Confidence Coefficient](./91_introduction.md#node-hs10f26)
+
+<br>
+
+<a id="node-jyt3fl4"></a>
+
+###### Example 10.4.4 Approximate Interval
+
+<p align="center"><kbd><img src="assets/duz0xbr179d.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/96sjia7ovgl.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Một ví dụ cho cái cách làm này là dùng CLT, nói rằng khi ta có X1,....Xn iid. Với EX = μ, VarX = σ² thì: √n(X̄ - μ)/σ → (d) n(0,1). Và bên cạnh đó, nếu ta có S →ᵖ σ ⇔ σ/S →ᵖ 1 thì áp dụng Slutsky theorem: Xn → (d) X, Yn →ᵖ Y thì XnYn →(d) XY ta có:
+>
+>
+>
+> \[√n(X̄ - μ)/σ\] \[σ/S\]→ (d) n(0,1) × 1 = n(0,1)
+>
+>
+>
+> ⇔ √n(X̄ - μ)/S → (d) n(0,1).
+>
+>
+>
+> Lập luận tương tự như note trước: 
+>
+>
+>
+> Ta có P(|Z| ≤ z\_α/2) = 1-α
+>
+>
+>
+> ⇒ P(|√n(X̄ - μ)/S| ≤ z\_α/2) ≈ 1-α
+>
+>
+>
+> P(-z\_α/2 ≤ √n(X̄ - μ)/S ≤ z\_α/2) ≈ 1-α
+>
+>
+>
+> ⇔ P(-z\_α/2 S/√n ≤ X̄ - μ ≤ z\_α/2 S/√n) ≈ 1-α
+>
+>
+>
+> ⇔ P(μ ≤ X̄ + z\_α/2 S/√n ; X̄ - z\_α/2 S/√n ≤ μ) ≈ 1-α
+>
+>
+>
+> ⇔ P(X̄ - z\_α/2 S/√n ≤ μ ≤ X̄ + z\_α/2 S/√n) ≈ 1-α
+>
+>
+>
+> ⇒ \[x̄ - z\_α/2 s/√n ≤ μ ≤ x̄ + z\_α/2 s/√n\] là approximate 1-α confidence interval
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc khi tự chứng minh chi tiết bước áp dụng định lý Slutsky và các biến đổi đại số để ra khoảng tin cậy xấp xỉ mà sách chỉ nêu vắn tắt.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"n(0,1) × 1 = n(0,1)"*
+>
+> Cách viết phân phối nhân trực tiếp với số vô hướng mang tính ký hiệu tắt cá nhân; về mặt chặt chẽ, định lý Slutsky phát biểu rằng tích hai biến ngẫu nhiên hội tụ theo phân phối về $1 \cdot Z = Z$ với $Z \sim N(0,1)$.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ cơ chế áp dụng định lý Slutsky thông qua việc phân tích tỷ số thành dạng $[	ext{CLT}] \times [\sigma / S]$.
+> - Biến đổi đại số từng bước từ bất đẳng thức xác suất sang khoảng tin cậy cho $\mu$ rất chuẩn xác và phân biệt rõ biến ngẫu nhiên với giá trị quan sát $(\bar{x}, s)$.
+>
+> **💡 Deeper notes**
+> - Việc suy ra $\sigma/S \xrightarrow{P} 1$ từ $S^2 \xrightarrow{P} \sigma^2$ dựa trên định lý ánh xạ liên tục (Continuous Mapping Theorem) với hàm liên tục $g(t) = \sigma/\sqrt{t}$ khi $\sigma > 0$.
+
+<br>
+
+<a id="node-ou7niep"></a>
+
+###### Slutsky's Theorem and Confidence Intervals
+
+<p align="center"><kbd><img src="assets/hs7x4yk7q4u.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là người ta, thử nghiệm thì thấy với n chỉ cần 15 mà các approximate interval này đã cho ra coverage probability khá tốt (gần đạt mức mong muốn)
+>
+>
+>
+> Tác giả cũng lưu ý, vì xác suất bao phủ này, đều là có được dựa trên đại lượng pivot, ý nói, xác suất này không còn phụ thuộc θ nữa, nên đương nhiên ta cũng có xác suất bao phủ nhỏ nhất xấp xỉ 1-α, đồng nghĩa đây cũng chính là confidence coefficient.
+>
+>
+>
+> Và giải thích cho nguyên nhân overage probability khá tốt chứ vẫn ko đạt là vì ta đã dùng ngưỡng z\_α/2, của Z, nhưng cái cục này chỉ theo phân phối Z khi n lớn thôi, với n = 15 thì chưa đủ lớn.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất tốt nội dung chính từ giáo trình, nắm bắt chính xác ý nghĩa của đại lượng pivotal và kết quả mô phỏng cho cỡ mẫu nhỏ.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"nhưng cái cục này chỉ theo phân phối Z khi n lớn thôi, với n = 15 thì chưa đủ lớn"*
+>
+> Giải thích này đúng về mặt tiệm cận nhưng chưa làm nổi bật nguyên nhân cụ thể mà tác giả đề cập: việc dùng ngưỡng z_{α/2} được xem là 'lạc quan' vì bỏ qua độ biến thiên ngẫu nhiên của độ lệch chuẩn mẫu S (variability in S). Nếu bù trừ cho biến thiên này (chẳng hạn dùng phân phối Student-t với bậc tự do phù hợp khi dữ liệu chuẩn), độ bao phủ sẽ đạt đúng mức danh định.
+>
+>
+> **✓ Strengths**
+> - Hiểu chính xác bản chất của đại lượng pivotal: xác suất bao phủ không phụ thuộc vào tham số nên xác suất bao phủ hằng số này chính là hệ số tin cậy (confidence coefficient).
+> - Nắm bắt đúng kết quả thực nghiệm là cỡ mẫu n = 15 cho độ bao phủ tiệm cận khá tốt nhưng vẫn chưa đạt mức danh định (nominal level).
+>
+> **💡 Deeper notes**
+> - Khái niệm hệ số tin cậy (confidence coefficient) vốn được định nghĩa là infimum (cận dưới lớn nhất) của xác suất bao phủ trên toàn bộ không gian tham số; do đại lượng là pivotal nên xác suất bao phủ là hằng số với mọi θ, khiến cận dưới này bằng chính xác suất bao phủ đó.
+> - Bảng mô phỏng cũng minh họa tính vững (robustness) của xấp xỉ này: dù phân phối thực tế có đuôi dày hơn chuẩn (như t_5 hay Double Exponential), độ bao phủ vẫn duy trì rất sát nhau quanh mức 86-88% (cho nominal 90%) và 92-93% (cho nominal 95%).
+
+<br>
+
+<a id="node-entp6bp"></a>
+
+###### Example 10.4.5 Approximate Poisson Interval
+
+<p align="center"><kbd><img src="assets/9su54e6idhf.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/w6y5qni3eva.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này rất hay, đại khái là như sau:
+>
+>
+>
+> Đại ý là cách làm (xây dựng approximate confidence interval) dựa trên quantity (W-θ)/V → (d) n(0,1) tuy vẫn là một cách thức khá ổn (ví dụ như trong phần trước, tác giả đã chỉ ra với n = 15 mà ta đã có interval với confidence coefficient khá tốt).
+>
+>
+>
+> Tuy nhiên, vì cách làm này về cơ bản là không cần dựa trên, không cần biết sampling distribution, tức là, ta không cần giả định, hay không cần biết population gốc là gì cả, do đó nếu như trong trường hợp mà ta biết, hoặc đặt ra giả định về population gốc, thì ta có thể dùng thông tin này để có cách để tạo confidence interval tốt hơn.
+>
+>
+>
+> Lấy ví dụ xét trường hợp X1,...Xn là \~ Poisson(λ).
+>
+>
+>
+> Thì cách xây dựng interval thứ nhất là dùng cái khung hồi này: Đó là ta đã có true mean là λ. Với variance σ², ta dùng sample variance S², là consistent estimator của σ. Cũng là dùng sample standard deviation S để estimate cho σ, hay STD(X)
+>
+>
+>
+> Từ đó, dựa trên CLT: √n(X̄ - λ)/ STD(X) → (d) n(0,1)
+>
+>
+>
+> và S →ᵖ STD(X), nên theo Slutsky ta có √n(X̄ - λ)/ S → (d) n(0,1), và từ đó ta có approximate 1-α confidence interval: \[x̄ - z\_α/2 s/√n; x̄ + z\_α/2 s/√n\]
+>
+>
+>
+> √n(X̄ - λ)/ STD(X) → (d) n(0,1) (CLT)
+>
+>
+>
+> S →ᵖ STD(X) ⇔ STD(X)/S →ᵖ 1 (do S² là consistent estiamtor của Var(X))
+>
+>
+>
+> Áp dụng Slutsky:
+>
+>
+>
+> \[√n(X̄ - λ)/ STD(X)\] × \[STD(X)/S\] → (d) n(0,1) × 1
+>
+>
+>
+> ⇔ √n(X̄ - λ)/S → (d) Z \~ n(0,1)
+>
+>
+>
+> P(Z ≥ z\_α/2) = α/2 và P(Z ≤ -z\_α/2) = α/2
+>
+>
+>
+> ⇔ P(-z\_α/2 ≤ Z ≤ z\_α/2) = 1 - α
+>
+>
+>
+> P(-z\_α/2 ≤ √n(X̄ - λ)/S ≤ z\_α/2) ≈ 1-α
+>
+>
+>
+> ⇔ P(-z\_α/2 S/√n≤ X̄ - λ ≤ z\_α/2 S/√n ) ≈ 1-α
+>
+>
+>
+> ⇔ P(λ ≤ X̄ + z\_α/2 S/√n; X̄ - z\_α/2 S/√n ≤ λ) ≈ 1-α
+>
+>
+>
+> ⇔ P(X̄ - z\_α/2 S/√n ≤ λ ≤ X̄ + z\_α/2 S/√n) ≈ 1-α
+>
+>
+>
+> \[x̄ - z\_α/2 s/√n, x̄ + z\_α/2 s/√n\] là approximate 1-α confidence interval
+>
+>
+>
+> Và rõ ràng là cách làm này ta chả cần dùng để sự thật rằng ta biết X1,...Xn là Poisson, là vì khi áp CLT ta không cần biết population distribution là gì hết.
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì cách làm thứ hai, ta sẽ dùng sự thật rằng X1,...Xn \~ Pois(λ).
+>
+>
+>
+> Thì đại ý là vầy, vẫn dùng cái mà CLT cho: √n(X̄ - λ)/ STD(X) → (d) n(0,1)
+>
+>
+>
+> Nhưng, với X \~ Pois(λ) thì EX = Var(X) = λ (xem link tới hai note của Stat110, tính mean và variance). Và như vậy thì sao? Thì có nghĩa là nếu ta có X̄, mà ta biết là MLE của true mean λ, thì ở đây, nó cũng là MLE của true variance Var(X). Thành ra, ta có thể thay vì dùng sample variance để estimator cho Var(X), thì ta dùng một estimator tốt hơn cho Var(X): X̄ (đồng nghĩa √X̄ sẽ là estimate tốt hơn cho STD(X) hơn là S)
+>
+>
+>
+> Khi đó cái interval estimation là: \[x̄ - (z\_α/2 √x̄ /√n); x̄ + (z\_α/2 √x̄ /√n)\], và cái này sẽ tốt hơn cái trên, do trong trường hợp này √X̄ estimate STD(X) tốt hơn S.
+>
+>
+>
+> ---
+>
+>
+>
+> Rồi, tiếp, cuối cùng là vì trong trường hợp này, ta biết Var(X) = λ luôn, nên có thể khỏi cần thay Var(X) bằng cái estimator nào hết, cứ phang λ vào, tức là khỏi cần mượn Slutsky (nhờ Slutsky mới có thể thay σ trong √n(X̄ - μ)/σ → (d) n(0,1) bởi một thằng S, là estimator của σ):
+>
+>
+>
+> √n(X̄ - λ)/√λ → (d) n(0, 1).
+>
+>
+>
+> Để rồi từ lại theo logic P(-z\_α/2 ≤ Z ≤ z\_α/2) = 1-α
+>
+>
+>
+> ⇒ P(-z\_α/2 ≤ √n(X̄ - λ)/√λ ≤ z\_α/2) = 1-α
+>
+>
+>
+> Thì tới đây, ta sẽ phải vất vả hơn tí thì mới rút ra được hai đầu của interval:
+>
+>
+>
+> \-z\_α/2 ≤ √n(X̄ - λ)/√λ ≤ z\_α/2
+>
+>
+>
+> ⇔ n(X̄ - λ)²/λ ≤ (z\_α/2)²
+>
+>
+>
+> ⇔ n(X̄ - λ)² ≤ (z\_α/2)² λ
+>
+>
+>
+> ⇔ nX̄ ²- 2nX̄ λ + nλ² ≤ (z\_α/2)² λ
+>
+>
+>
+> ⇔ nλ² - (z\_α/2)² λ - 2nX̄ λ + nX̄ ² ≤ 0
+>
+>
+>
+> ⇔ nλ² + \[- (z\_α/2)² - 2nX̄ \]λ + nX̄ ² ≤ 0
+>
+>
+>
+> Ta sẽ giải cái này ra để có kết quả: L(𝐗) ≤ λ ≤ U(𝐗).
+>
+>
+>
+> Và cái này sẽ là cái confidence interval tốt nhất trong 3 cái, đơn giản là vì ta không estimate Var(X) (cũng là STD(X)) gì cả.
+>
+>
+>
+> Đây cũng là ý của đoạn cuối: khi tác giả nói nói chung, nguyên tắc cứ là ràng xài càng ít estimate càng tốt và càng nhiều parameter càng tốt, ví dụ thay vì estimate STD(X) bởi S hay √X̄, ta xài luôn STD(X) = √λ, thì sẽ tốt nhất. Đơn giản là vì estimate thì sao tốt bằng giá trị chính xác được, hay estiamtor vốn là random variable (là hàm của sample) nên nó sẽ có yếu tố biến động / không chắc, còn dùng giá trị chính xác của param thì sẽ không mang theo yếu tố không chắc nào.
+>
+>
+>
+> Và nó chính là cái có được khi đảo ngược Score test
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=qi2c2LvaefU)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, hiểu sâu bản chất ba phương pháp xây dựng khoảng tin cậy xấp xỉ cho tham số Poisson và chỉ ra được mối liên hệ giữa CLT, Slutsky, Wald test và Score test.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Và cái này sẽ là cái confidence interval tốt nhất trong 3 cái, đơn giản là vì ta không estimate Var(X) (cũng là STD(X)) gì cả."*
+>
+> Giải thích này mang tính trực giác của người học (không ước lượng mẫu cho mẫu số thì ít sai số hơn). Về mặt lý thuyết thống kê, tính tối ưu theo Wilks (1938) đến từ các tính chất bậc cao (higher-order asymptotic properties) và tính bất biến của Score/Likelihood ratio test so với Wald test, chứ không thuần túy chỉ do việc 'không cần ước lượng phương sai'.
+>
+>
+> **✓ Strengths**
+> - Phân biệt rành mạch 3 cấp độ thông tin: phân phối tự do (CLT + S), Wald test (dùng MLE của lambda để cắm vào phương sai), và Score test (giữ nguyên lambda trong phương sai dưới H0).
+> - Trình bày chi tiết và chính xác cách dùng bổ đề Slutsky kết hợp với tính nhất quán (consistency) của S để suy ra phân phối chuẩn tắc.
+> - Biến đổi đại số chính xác bất đẳng thức bậc hai của Score test để dẫn tới khoảng tin cậy dạng đóng L(X) <= lambda <= U(X).
+>
+> **💡 Deeper notes**
+> - Bất phương trình bậc hai n*lambda^2 - (2n*X_bar + z^2)*lambda + n*X_bar^2 <= 0 có biệt thức Delta = 4n*z^2*X_bar + z^4 >= 0, dẫn tới hai nghiệm tường minh rất đẹp: X_bar + z^2/(2n) +- (z/sqrt(n)) * sqrt(X_bar + z^2/(4n)). Tâm của khoảng tin cậy này hơi lệch sang phải so với X_bar một lượng z^2/(2n) (tương tự như hiệu chỉnh Wilson score interval cho tỷ lệ nhị thức p).
+> - Ở bước dùng CLT √n(X̄ - λ)/√λ → n(0,1), về mặt bản chất đây là thống kê Score (hoặc Rao score statistic), đánh giá độ dốc hàm log-likelihood tại giá trị null lambda.
+
+**🔗 See also:** [linked note *(STAT110_Havard)*](../stat110_havard/lec_11_poisson_distribution.md#node-wed0u02) · [Second Moment of Poisson Distribution *(STAT110_Havard)*](../stat110_havard/lec_14_location_scale_lotus.md#node-bjcdm0n) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Định lý Slutsky](./55_convergence_concepts.md#node-uwbmbt7)
 
 <br>
 
