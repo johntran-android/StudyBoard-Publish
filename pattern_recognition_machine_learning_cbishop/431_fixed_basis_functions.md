@@ -1,6 +1,6 @@
 # 4.3.1 Fixed basis functions
 
-📊 **Progress:** `2` Notes | `4` Screenshots | `2` AI Reviews
+📊 **Progress:** `2` Notes | `5` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-pcqn2bl"></a>
@@ -62,6 +62,8 @@
 ### Limitations of Fixed Basis Functions
 
 <p align="center"><kbd><img src="assets/fvnswayfc25.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/u1dijumuvl.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đoạn này đại ý là nói về việc, có khi class conditinal density bị chồng lấn. Là sao?
