@@ -1,6 +1,6 @@
 # 4.3.2 Logistic regression
 
-📊 **Progress:** `5` Notes | `10` Screenshots | `5` AI Reviews
+📊 **Progress:** `5` Notes | `7` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-lvf9wc3"></a>
@@ -510,7 +510,7 @@
 > **💡 Deeper notes**
 > - Việc gradient của logistic regression có cùng dạng (yi - ti)Φi với hồi quy tuyến tính (sum-of-squares) không phải ngẫu nhiên, mà bắt nguồn từ tính chất tổng quát của mô hình tuyến tính tổng quát (GLM) khi sử dụng hàm liên kết chính tắc (canonical link function).
 
-**🔗 See also:** [Maximum Likelihood and Gradient](./311_maximum_likelihood_and_least_squares.md#node-ogc31vz)
+**🔗 See also:** [Maximum Likelihood and Gradient](./311_maximum_likelihood_and_least_squares.md#node-ogc31vz) · [Hessian for Logistic Regression](./433_iterative_reweighted_least_squares.md#node-7nipjyu)
 
 <br>
 
@@ -523,12 +523,6 @@
 <p align="center"><kbd><img src="assets/fcdn5jlbgp.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/gumysf3dgn6.png" width="80%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/mia0fg9t6e.png" width="80%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/mia0fg9t6e.png" width="80%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/mia0fg9t6e.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại khái đoạn này nói vầy nè:
