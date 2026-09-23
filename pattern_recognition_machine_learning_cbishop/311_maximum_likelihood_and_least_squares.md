@@ -438,7 +438,7 @@
 > - Làm rõ giả định về sự phân bố của nhiễu (noise) `εi` dẫn đến phân bố của biến mục tiêu `Ti`.
 > - Nhấn mạnh tính chất 'đơn điệu' của hàm log là lý do để chuyển từ tối đa hóa likelihood sang log-likelihood.
 
-**🔗 See also:** [Bias Parameter and Basis Function](./310_linear_regression_and_basis_functions.md#node-6p1u6u8) · [Maximum Likelihood Noise Precision β_ML](#node-vz4hsaf) · [Section 3.3.1 Parameter Distribution](./331_bayesian_linear_regression.md#node-59lqws3) · [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8) · [Ex 3.5 Lagrange Multipliers in Regularization](./37_exercises.md#node-tu3cct2)
+**🔗 See also:** [Bias Parameter and Basis Function](./310_linear_regression_and_basis_functions.md#node-6p1u6u8) · [Maximum Likelihood Noise Precision β_ML](#node-vz4hsaf) · [Section 3.3.1 Parameter Distribution](./331_bayesian_linear_regression.md#node-59lqws3) · [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8) · [Ex 3.5 Lagrange Multipliers in Regularization](./37_exercises.md#node-tu3cct2) · [Newton-Raphson for Linear Regression](./433_iterative_reweighted_least_squares.md#node-m7p2qhb)
 
 <br>
 
