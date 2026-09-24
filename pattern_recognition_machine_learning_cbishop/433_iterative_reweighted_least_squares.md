@@ -1,6 +1,6 @@
 # 4.3.3 Iterative reweighted least squares
 
-📊 **Progress:** `3` Notes | `5` Screenshots | `3` AI Reviews
+📊 **Progress:** `4` Notes | `6` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-89ydraa"></a>
@@ -647,4 +647,143 @@
 **🔗 See also:** [Cross-Entropy Error Function Gradient](./432_logistic_regression.md#node-gvw6cdv) · [linked note *(Mit 18.06)*](../mit1806_gstrang/lecture_27_positive_definite_matrices_and_minima.md#node-au3l6fa) · [Gradient of Logistic Error Function](./432_logistic_regression.md#node-to86xxj)
 
 <br>
+
+<a id="node-4xxpqnw"></a>
+
+##### Newton-Raphson for Logistic Regression
+
+<p align="center"><kbd><img src="assets/ti4syxjf2ri.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tiếp, tới đây ta đã có Hessian và gradient của hàm cross entropy (cũng là negative log likelihood) của mô hình logistic regression:
+>
+>
+>
+> ∇E(𝐰) = 𝚽ᵀ(𝐲-𝐭); 𝐇(𝐰) = 𝚽ᵀ𝐑𝚽
+>
+>
+>
+> Ráp vô bước update của Newton Raphson:
+>
+>
+>
+> 𝐰(new) = 𝐰(old) - 𝐇(𝐰(old))⁻¹∇E(𝐰)
+>
+>
+>
+> = 𝐰(old) - (𝚽ᵀ𝐑𝚽)⁻¹𝚽ᵀ(𝐲-𝐭)
+>
+>
+>
+> = (𝚽ᵀ𝐑𝚽)⁻¹(𝚽ᵀ𝐑𝚽)𝐰(old) - (𝚽ᵀ𝐑𝚽)⁻¹𝚽ᵀ(𝐲-𝐭)
+>
+>
+>
+> = (𝚽ᵀ𝐑𝚽)⁻¹\[𝚽ᵀ𝐑𝚽𝐰(old) - 𝚽ᵀ(𝐲-𝐭)\]
+>
+>
+>
+> = (𝚽ᵀ𝐑𝚽)⁻¹\[𝚽ᵀ𝐑𝚽𝐰(old) - 𝚽ᵀ𝐑𝐑⁻¹(𝐲-𝐭)\]
+>
+>
+>
+> = (𝚽ᵀ𝐑𝚽)⁻¹\[𝚽ᵀ𝐑(𝚽𝐰(old) - 𝐑⁻¹(𝐲-𝐭))\]
+>
+>
+>
+> = (𝚽ᵀ𝐑𝚽)⁻¹𝚽ᵀ𝐑𝐳 với 𝐳 = 𝚽𝐰(old) - 𝐑⁻¹(𝐲-𝐭)
+>
+>
+>
+> Dừng lại đây chút, vì sao tác giả lại nói cái này (𝐰(new) = (𝚽ᵀ𝐑𝚽)⁻¹𝚽ᵀ𝐑𝐳) có dạng của một "bộ các **normal equations** của một **weighted least-squares problem**" nhỉ?
+>
+>
+>
+> Giải thích cũng nhanh:
+>
+>
+>
+> Ta biết error function của least square problem: Sum of square error: (1/2) Σi (ti - 𝐰ᵀΦi)², cũng là (1/2)||𝐭 - 𝚽𝐰||², hay (1/2)(𝐭 - 𝚽𝐰)ᵀ(𝐭 - 𝚽𝐰). Lấy đạo hàm ta được 𝚽ᵀ𝚽𝐰 - 𝚽ᵀ𝐭. Từ đó cho đạo hàm bằng 0 ta có normal equation: 𝚽ᵀ𝚽𝐰 = 𝚽ᵀ𝐭, và nếu 𝚽ᵀ𝚽 invertible, ta có nghiệm least square: 𝐰 = (𝚽ᵀ𝚽)⁻¹𝚽ᵀ𝐭
+>
+>
+>
+> Thế thì đại khái là, trong bài toán least square này, người ta còn gọi là ordinary least square, trong đó, về cơ bản là ta xem các error là có vai trò ưu tiên như nhau.
+>
+>
+>
+> Để rồi nếu ta gắn trọng số cho mỗi error i (ei = ti - 𝐰ᵀΦi), gọi là αi. Khi đó error function sẽ là (1/2) Σi αi (ti - 𝐰ᵀΦi)². Thể hiện theo vectorize sẽ là:
+>
+>
+>
+> (1/2)(𝐭 - 𝚽𝐰)ᵀdiag(α1, α2,...)(𝐭 - 𝚽𝐰)
+>
+>
+>
+> = (1/2)(𝐭 - 𝚽𝐰)ᵀ𝐑(𝐭 - 𝚽𝐰)
+>
+>
+>
+> = (1/2)(𝐭ᵀ𝐑𝐭 - 𝐰ᵀ𝚽ᵀ𝐑𝐭 - 𝐭ᵀ𝐑𝚽𝐰 + 𝐰ᵀ𝚽ᵀ𝐑𝚽𝐰)
+>
+>
+>
+> (Do 𝐑 là diagonal matrix nên đối xứng ⇒ hai hạng tử ở giữa bằng nhau)
+>
+>
+>
+> = (1/2)(𝐭ᵀ𝐑𝐭 - 2𝐭ᵀ𝐑𝚽𝐰 + 𝐰ᵀ𝚽ᵀ𝐑𝚽𝐰)
+>
+>
+>
+> = (1/2)𝐰ᵀ𝚽ᵀ𝐑𝚽𝐰) - 𝐭ᵀ𝐑𝚽𝐰 + (1/2)𝐭ᵀ𝐑𝐭
+>
+>
+>
+> = (1/2)𝐰ᵀ𝚽ᵀ𝐑𝚽𝐰) - (𝚽ᵀ𝐑ᵀ𝐭)ᵀ𝐰 + (1/2)𝐭ᵀ𝐑𝐭
+>
+>
+>
+> = (1/2)(𝐰ᵀ𝚽ᵀ𝐑𝚽𝐰) - (𝚽ᵀ𝐑𝐭)ᵀ𝐰 + (1/2)𝐭ᵀ𝐑𝐭
+>
+>
+>
+> Gradient sẽ là: (𝚽ᵀ𝐑𝚽)ᵀ𝐰 - 𝚽ᵀ𝐑𝐭 = (𝚽ᵀ𝐑𝚽)𝐰 - 𝚽ᵀ𝐑𝐭
+>
+>
+>
+> Normal equation: (𝚽ᵀ𝐑𝚽)𝐰 - 𝚽ᵀ𝐑𝐭 = 0
+>
+>
+>
+> ⇔ (𝚽ᵀ𝐑𝚽)𝐰 = 𝚽ᵀ𝐑𝐭
+>
+>
+>
+> ⇔ 𝐰 = (𝚽ᵀ𝐑𝚽)⁻¹𝚽ᵀ𝐑𝐭
+>
+>
+>
+> À như vậy là ta thấy đúng là 4.99 có dạng của công thức nghiệm của một bài toán **weighted least square**.
+>
+>
+>
+> (tác giả nói **set** of normal equation thì ý là system of normal equation đơn giản là normal equation, vốn dĩ là một hệ phương trình, chỉ vậy thôi, vì 𝐰 là vector, nên thực chất (𝚽ᵀ𝚽𝐰 = 𝚽ᵀ𝐭 hay (𝚽ᵀ𝐑𝚽)𝐰 = 𝚽ᵀ𝐑𝐭) đều là hệ phương trình tuyến tính)
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=OefUwDAl93Q)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú xuất sắc! Bạn đã biến đổi chi tiết từng bước đại số tuyến tính của phép cập nhật Newton-Raphson và giải thích chuẩn xác bản chất của bài toán Weighted Least Squares.
+>
+> **✓ Strengths**
+> - Khai triển đại số chi tiết và mạch lạc từ công thức cập nhật Newton-Raphson sang dạng ma trận trọng số với vector z.
+> - Chứng minh tường minh bài toán Weighted Least Squares (WLS) từ hàm mất mát bình phương trọng số đến hệ phương trình chuẩn (normal equations) để đối chiếu trực tiếp với công thức cập nhật của Logistic Regression.
+>
+> **💡 Deeper notes**
+> - Điểm khác biệt cốt lõi giữa WLS thông thường và thuật toán này (IRLS - Iteratively Reweighted Least Squares) là trong WLS ma trận trọng số R là hằng số cố định, còn ở Logistic Regression R và z phụ thuộc vào w(old) nên phải giải lặp lại nhiều lần cho đến khi hội tụ.
+
+<br>
+
+<a id="node-dsfqha8"></a>
 
