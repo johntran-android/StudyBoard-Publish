@@ -44,7 +44,7 @@ Hướng tiếp theo là tiếp tục đi lên các lớp ML ở tầng cao hơn
 
 Repository này vì vậy chủ yếu là một **learning log** — dấu vết của quá trình đi từ nền tảng toán, probability, statistics và optimization lên machine learning, đồng thời là một phần của quá trình build StudyBoard.
 
-**`~12,368 notes` · `~17,874 screenshots` · `18 notebooks`**
+**`~12,369 notes` · `~17,875 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -592,7 +592,7 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 ### Pattern Recognition Machine Learning_C.Bishop
 <!-- key: pattern_recognition_machine_learning_cbishop -->
 <!-- group: Machine Learning Foundation -->
-`435 notes · 661 screenshots · 70 sections`
+`436 notes · 662 screenshots · 70 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
 > 
@@ -670,7 +670,7 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 | [4.3. Probabilistic Discriminative Models](pattern_recognition_machine_learning_cbishop/43_probabilistic_discriminative_models.md) | 1 | 2 |
 | [4.3.1 Fixed basis functions](pattern_recognition_machine_learning_cbishop/431_fixed_basis_functions.md) | 2 | 5 |
 | [4.3.2 Logistic regression](pattern_recognition_machine_learning_cbishop/432_logistic_regression.md) | 5 | 7 |
-| [4.3.3 Iterative reweighted least squares](pattern_recognition_machine_learning_cbishop/433_iterative_reweighted_least_squares.md) | 3 | 5 |
+| [4.3.3 Iterative reweighted least squares](pattern_recognition_machine_learning_cbishop/433_iterative_reweighted_least_squares.md) | 4 | 6 |
 | [Appendix C. Matrices](pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md) | 19 | 23 |
 | [Appendix D. Calculus of Variation](pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md) | 5 | 7 |
 
