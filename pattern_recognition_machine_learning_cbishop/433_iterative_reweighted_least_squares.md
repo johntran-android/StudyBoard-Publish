@@ -181,8 +181,6 @@
 
 ### Newton-Raphson for Linear Regression
 
-<p align="center"><kbd><img src="assets/75geiaa4xmb.png" width="80%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/djri8kw7c5a.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/75geiaa4xmb.png" width="80%"></kbd></p>
@@ -425,6 +423,8 @@
 #### Hessian for Logistic Regression
 
 <p align="center"><kbd><img src="assets/usgty2sfue.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/kjod1nynyv.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Áp dụng N-R cho logistic regression
