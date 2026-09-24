@@ -661,7 +661,7 @@
 
 📹 Video 1: [Maximum Likelihood on Linearly Separable Data — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=LNW4K9FY_As)
 
-📹 Video 2: [Learning with me: Maximum Likelihood on Linearly Separable Data](https://www.youtube.com/watch?v=XzhGTA5AeNU)
+📹 Video 2: [Tại sao MLE làm norm của W tiến ra vô cực?](https://www.youtube.com/watch?v=XzhGTA5AeNU)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
