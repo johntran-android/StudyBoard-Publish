@@ -257,11 +257,30 @@
 > Hoặc nếu ta trong bài toán thứ nhất, ta không giả định Ti \~ n(y(𝐰,𝐱i), 1/β), thì việc giải tìm ML estimator của w sẽ không phải là tìm w khiến mininize sum square error. Và giả sử ta tìm ra w^ML, thì nó chưa chắc là mean của f(t|𝐱).Để rồi nếu trong bài toán thứ hai ta vẫn dùng tiêu chí squarer error loss, để có solution tối ưu là mean của f(t|𝐱), thì lúc này, ta sẽ phải tính tiếp mean của f(t|𝐱), thay vì có thể tiện lợi dùng y(𝐱,𝐰)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
 >
-> Ghi chú đã giải thích rất chính xác mô hình và nguyên lý dự đoán tối ưu với hàm mất mát bình phương như trong hình ảnh. Chiều sâu phân tích, đặc biệt là phần chứng minh và phân biệt các bài toán, đã làm tăng đáng kể sự rõ ràng và toàn diện của nội dung.
+> Ghi chú thể hiện tư duy rất sâu sắc khi phân định rạch ròi giữa 2 bài toán: ước lượng tham số (MLE) và dự đoán tối ưu (decision theory). Có một chút lẫn lộn ký hiệu nhỏ khi dùng y(w, x) vừa làm biến tối ưu vừa làm kỳ vọng của phân phối.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"minimize over y(w,x) {E([T - y(𝐰, 𝐱)]²)}, với T ~ n(y(𝐰, 𝐱), 1/β)"*
+>
+> Xung đột ký hiệu: bạn đang dùng y(w, x) đồng thời cho cả hai vai trò: biến hành động cần tìm để cực tiểu hóa (prediction/action a(x)) và tham số kỳ vọng đã biết của phân phối T. Đúng ra phải là: tìm hàm dự đoán a(x) để minimize E[(T - a(x))² | x], dẫn đến nghiệm tối ưu a*(x) = E[T|x] = y(w, x).
+>
+> **2.** *"Và solution cũng sẽ là posterior mean: E[T], T ~ n(y(𝐰, 𝐱), 1/β), và có thể ghi là E[T|𝐰,𝐱,β]"*
+>
+> Về thuật ngữ, E[T|x, w, β] ở đây là conditional mean (kỳ vọng có điều kiện của target t), không phải 'posterior mean'. Phân phối p(t|x, w, β) là phân phối có điều kiện (conditional/likelihood), chỉ trở thành posterior predictive khi w được coi là biến ngẫu nhiên và lấy tích hợp qua posterior của w.
+>
+>
+> **✓ Strengths**
+> - Phân biệt rất sắc bén và chính xác giữa hai bài toán: tìm estimator cho tham số w (bài toán 1) và đưa ra dự đoán tối ưu cho t khi đã có x và phân phối (bài toán 2).
+> - Kết nối tốt lý thuyết quyết định (decision theory) từ Casella về việc squared loss luôn dẫn đến nghiệm tối ưu là kỳ vọng có điều kiện.
+>
+> **💡 Deeper notes**
+> - Trong Bishop mục 1.5.5, kết quả này được chứng minh trực tiếp bằng giải tích biến phân (hoặc hằng đẳng thức thêm bớt E[t|x]): E[(t - y(x))²] = E[(t - E[t|x])²] + E[(E[t|x] - y(x))²], phần sau triệt tiêu khi và chỉ khi y(x) = E[t|x] mà không cần viện dẫn gián tiếp qua Bayes risk.
+> - Khi sang mục 3.3 (Bayesian linear regression), dự đoán tối ưu dưới squared loss vẫn là mean của predictive distribution, nhưng lúc đó predictive distribution p(t|x, D) sẽ tính bằng cách integrate out w qua posterior p(w|D).
 
-**🔗 See also:** [Predicting Values and Linear Models](./310_linear_regression_and_basis_functions.md#node-btnn2z0) · [3.3.2 Predictive distribution](./332_predictive_distribution.md#node-wdjepxb)
+**🔗 See also:** [Predicting Values and Linear Models](./310_linear_regression_and_basis_functions.md#node-btnn2z0) · [3.3.2 Predictive distribution](./332_predictive_distribution.md#node-wdjepxb) · [Iterative Reweighted Least Squares](./433_iterative_reweighted_least_squares.md#node-2ut4slh)
 
 <br>
 
