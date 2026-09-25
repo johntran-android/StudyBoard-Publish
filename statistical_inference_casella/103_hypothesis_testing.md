@@ -2478,7 +2478,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 > **💡 Deeper notes**
 > - Trong kiểm định tỷ lệ Bernoulli (large-sample binomial test), ngoài Wald test dùng Sn = √[p̂n(1 - p̂n)/n], người ta còn thường dùng Score test (hoặc Rao test) thay Sn bằng σ0 = √[p0(1 - p0)/n] dưới giả thuyết H0; sách có nhắc đến 'alternative estimate of σn' ở câu cuối chính là hướng đi này.
 
-**🔗 See also:** [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Binomial Score Test](#node-3qjyz3i)
+**🔗 See also:** [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Binomial Score Test](#node-3qjyz3i) · [Khoảng Score nhị thức](./104_interval_estimation.md#node-67eu3ou)
 
 <br>
 
