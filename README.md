@@ -62,6 +62,34 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 
 <!-- studyboard-toc:end -->
 
+<!-- studyboard-videos:start -->
+### 🎬 Video Library
+
+**`4 videos · 1 topic`**
+
+| Group | Videos |
+|:---|:---|
+| [📂 **Optimization**](#videos-optimization) | [Hệ số Lagrange λ* đo độ nhạy khi nới lỏng ràng buộc thế nào?](https://youtu.be/6g2qIzX9yO0)<br>[Lagrange Multipliers and Sensitivity — Numerical Optimization_J.Nocedal](https://www.youtube.com/watch?v=wy_PaBOEbnY)<br>[Second-Order Conditions and Projected Hessians — Numerical Optimization_J.Nocedal](https://youtu.be/oS8uhtEOI9w)<br>[Tính lõm hàm đối ngẫu — Numerical Optimization_J.Nocedal](https://www.youtube.com/watch?v=UGddFxbogXU) |
+
+<a id="videos-optimization"></a>
+#### 📂 Optimization
+
+<details open>
+<summary>🎬 4 videos</summary>
+
+| Video | Ngày đăng |
+|---|---|
+| [Tính lõm hàm đối ngẫu — Numerical Optimization_J.Nocedal](https://www.youtube.com/watch?v=UGddFxbogXU) | 25/09/2026 |
+| [Second-Order Conditions and Projected Hessians — Numerical Optimization_J.Nocedal](https://youtu.be/oS8uhtEOI9w) | 20/09/2026 |
+| [Hệ số Lagrange λ* đo độ nhạy khi nới lỏng ràng buộc thế nào?](https://youtu.be/6g2qIzX9yO0) | 20/09/2026 |
+| [Lagrange Multipliers and Sensitivity — Numerical Optimization_J.Nocedal](https://www.youtube.com/watch?v=wy_PaBOEbnY) | 19/09/2026 |
+
+</details>
+
+<sub>[↑ Back to navigation](#top-nav)</sub>
+
+<!-- studyboard-videos:end -->
+
 ## 📚 Syllabus / Mục lục
 
 <a id="group-calculus"></a>
@@ -534,6 +562,7 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 ### Numerical Optimization_J.Nocedal
 <!-- key: numerical_optimization_jnocedal -->
 <!-- group: Optimization -->
+<!-- videos: [{"url":"https://youtu.be/6g2qIzX9yO0","title":"Hệ số Lagrange λ* đo độ nhạy khi nới lỏng ràng buộc thế nào?","videoId":"6g2qIzX9yO0","uploadedAt":1789916409346},{"url":"https://www.youtube.com/watch?v=wy_PaBOEbnY","title":"Lagrange Multipliers and Sensitivity — Numerical Optimization_J.Nocedal","videoId":"wy_PaBOEbnY","uploadedAt":1789858516690},{"url":"https://youtu.be/oS8uhtEOI9w","title":"Second-Order Conditions and Projected Hessians — Numerical Optimization_J.Nocedal","videoId":"oS8uhtEOI9w","uploadedAt":1789916587155},{"url":"https://www.youtube.com/watch?v=UGddFxbogXU","title":"Tính lõm hàm đối ngẫu — Numerical Optimization_J.Nocedal","videoId":"UGddFxbogXU","uploadedAt":1790306878388}] -->
 `425 notes · 615 screenshots · 37 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
