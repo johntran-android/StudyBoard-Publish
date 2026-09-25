@@ -44,7 +44,7 @@ Hướng tiếp theo là tiếp tục đi lên các lớp ML ở tầng cao hơn
 
 Repository này vì vậy chủ yếu là một **learning log** — dấu vết của quá trình đi từ nền tảng toán, probability, statistics và optimization lên machine learning, đồng thời là một phần của quá trình build StudyBoard..
 
-**`~12,372 notes` · `~17,884 screenshots` · `19 notebooks`**
+**`~12,373 notes` · `~17,887 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -58,7 +58,7 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 | [📂 **Optimization**](#group-optimization) | [EE364a, Convex Optim_S.Boyd](#nb-ee364a_convex_optim_sboyd)<br>[Numerical Optimization_J.Nocedal](#nb-numerical_optimization_jnocedal) |
 | [📂 **Machine Learning Foundation**](#group-machine-learning-foundation) | [Pattern Recognition Machine Learning_C.Bishop](#nb-pattern_recognition_machine_learning_cbishop) |
 | [📂 **Probability & Statistics**](#group-probability-statistics) | [STAT110_Havard](#nb-stat110_havard)<br>[Statistical Inference - Casella](#nb-statistical_inference_casella) |
-| [📂 **Other**](#group-other) | [LLM — Large Language Models](#nb-a1_llm)<br>[Deep Learning Specialization_Cousera_Andrew Ng](#nb-deep_learning_specialization_cousera_andrew_ng)<br>[Foundation of LLM](#nb-foundation_of_llm)<br>[🎬 Video Library](#nb-https:) |
+| [📂 **Other**](#group-other) | [LLM — Large Language Models](#nb-a1_llm)<br>[Deep Learning Specialization_Cousera_Andrew Ng](#nb-deep_learning_specialization_cousera_andrew_ng)<br>[Foundation of LLM](#nb-foundation_of_llm) |
 
 🎬 [Xem Video Library ↓](#video-library)
 
@@ -600,7 +600,6 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 `437 notes · 663 screenshots · 70 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
-> 
 > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
@@ -741,9 +740,11 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 ### Statistical Inference - Casella
 <!-- key: statistical_inference_casella -->
 <!-- group: Probability & Statistics -->
-`877 notes · 1,142 screenshots · 50 sections`
+<!-- videos: [{"url":"https://www.youtube.com/watch?v=UmyowzIGpGE","title":"Large-Sample Binomial Tests","videoId":"UmyowzIGpGE","uploadedAt":1788452614121},{"url":"https://www.youtube.com/watch?v=UO_2KJVR6fY","title":"Tại sao nghịch đảo Score Test ra khoảng tin cậy cho p?","videoId":"UO_2KJVR6fY","uploadedAt":1790101523675},{"url":"https://www.youtube.com/watch?v=qi2c2LvaefU","title":"Vì sao dùng √λ tốt hơn S cho khoảng tin cậy Poisson?","videoId":"qi2c2LvaefU","uploadedAt":1790183894478},{"url":"https://www.youtube.com/watch?v=Z_OW_2fvLbE","title":"Làm sao xây dựng Generalized Wald Test từ M-estimator?","videoId":"Z_OW_2fvLbE","uploadedAt":1788902153576},{"url":"https://www.youtube.com/watch?v=nC7WkJULeTs","title":"Thế nào là point estimation, confidence interval và hypothesis testing","videoId":"nC7WkJULeTs","uploadedAt":1790004244242},{"url":"https://www.youtube.com/watch?v=OcJDysX87L0","title":"Cách đảo ngược acceptance region thành khoảng tin cậy cho μ?","videoId":"OcJDysX87L0","uploadedAt":1790009733415},{"url":"https://www.youtube.com/watch?v=beyWo5KCi6c","title":"Tại sao [h(θ̂) - h(θ)] / √Var^(h(θ̂)) hội tụ về N(0,1)?","videoId":"beyWo5KCi6c","uploadedAt":1789149772425},{"url":"https://www.youtube.com/watch?v=RBcsZYaHM-Q","title":"Vì Sao Kỳ Vọng Của Score Statistic E_θ[S(θ)] Bằng 0?","videoId":"RBcsZYaHM-Q","uploadedAt":1788566520328},{"url":"https://www.youtube.com/watch?v=t5L8jQeG_nU","title":"Cách lập phương trình bậc hai tìm khoảng tin cậy Binomial Score?","videoId":"t5L8jQeG_nU","uploadedAt":1789746141654}] -->
+`878 notes · 1,145 screenshots · 50 sections`
 
 > This notebook contains detailed study notes and proofs based on Casella and Berger's *Statistical Inference*, covering key topics in probability theory, estimation methods, hypothesis testing, and asymptotic properties.
+> 
 > Sổ tay học tập này tổng hợp các ghi chép và chứng minh chi tiết dựa trên giáo trình *Statistical Inference* của Casella và Berger, bao gồm các chủ đề cốt lõi về lý thuyết xác suất, phương pháp ước lượng, kiểm định giả thuyết và tính chất tiệm cận.
 
 <details open>
@@ -800,7 +801,7 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 | [10.1 Point Estimation](statistical_inference_casella/101_point_estimation.md) | 42 | 48 |
 | [10.2 Robustness](statistical_inference_casella/102_robustness.md) | 16 | 20 |
 | [10.3 Hypothesis Testing](statistical_inference_casella/103_hypothesis_testing.md) | 22 | 26 |
-| [10.4 Interval Estimation](statistical_inference_casella/104_interval_estimation.md) | 13 | 16 |
+| [10.4 Interval Estimation](statistical_inference_casella/104_interval_estimation.md) | 14 | 19 |
 
 </details>
 
@@ -873,18 +874,11 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 
 <sub>[↑ Back to navigation](#top-nav)</sub>
 
-<a id="nb-https:"></a>
-### 🎬 Video Library
-<!-- key: https: -->
-`0 notes · 0 screenshots · 0 sections`
-
-<sub>[↑ Back to navigation](#top-nav)</sub>
-
 <!-- studyboard-videos:start -->
 <a id="video-library"></a>
 ### 🎬 Video Library
 
-**`27 videos · 2 topics`**
+**`36 videos · 3 topics`**
 
 <a id="videos-optimization"></a>
 #### 📂 Optimization
@@ -932,6 +926,26 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 | [Tại sao vectơ chiếu w phải song song với đường nối hai tâm?](https://www.youtube.com/watch?v=9rn2c18KCbI) | 05/09/2026 |
 | [Vì sao Least Squares phân loại kém do giả định Gaussian?](https://www.youtube.com/watch?v=TSv9sh-O1Os) | 05/09/2026 |
 | [Dự đoán "Quá đúng" lại bị SSE phạt nặng, hạn chế của mô hình phân loại tuyến tính theo least square](https://www.youtube.com/watch?v=D1LgZ77Hxgs) | 04/09/2026 |
+
+</details>
+
+<a id="videos-probability-statistics"></a>
+#### 📂 Probability & Statistics
+
+<details open>
+<summary>🎬 9 videos</summary>
+
+| Video | Ngày đăng |
+|---|---|
+| [Vì sao dùng √λ tốt hơn S cho khoảng tin cậy Poisson?](https://www.youtube.com/watch?v=qi2c2LvaefU) | 23/09/2026 |
+| [Tại sao nghịch đảo Score Test ra khoảng tin cậy cho p?](https://www.youtube.com/watch?v=UO_2KJVR6fY) | 22/09/2026 |
+| [Cách đảo ngược acceptance region thành khoảng tin cậy cho μ?](https://www.youtube.com/watch?v=OcJDysX87L0) | 21/09/2026 |
+| [Thế nào là point estimation, confidence interval và hypothesis testing](https://www.youtube.com/watch?v=nC7WkJULeTs) | 21/09/2026 |
+| [Cách lập phương trình bậc hai tìm khoảng tin cậy Binomial Score?](https://www.youtube.com/watch?v=t5L8jQeG_nU) | 18/09/2026 |
+| [Tại sao \[h(θ̂) - h(θ)\] / √Var^(h(θ̂)) hội tụ về N(0,1)?](https://www.youtube.com/watch?v=beyWo5KCi6c) | 11/09/2026 |
+| [Làm sao xây dựng Generalized Wald Test từ M-estimator?](https://www.youtube.com/watch?v=Z_OW_2fvLbE) | 08/09/2026 |
+| [Vì Sao Kỳ Vọng Của Score Statistic E\_θ\[S(θ)\] Bằng 0?](https://www.youtube.com/watch?v=RBcsZYaHM-Q) | 05/09/2026 |
+| [Large-Sample Binomial Tests](https://www.youtube.com/watch?v=UmyowzIGpGE) | 03/09/2026 |
 
 </details>
 
