@@ -1,6 +1,6 @@
 # 4.3.3 Iterative reweighted least squares
 
-📊 **Progress:** `5` Notes | `7` Screenshots | `5` AI Reviews
+📊 **Progress:** `6` Notes | `9` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-89ydraa"></a>
@@ -893,6 +893,310 @@
 > - Trong Bishop, ma trận trọng số R có các phần tử trên đường chéo là R_nn = y_n(1 - y_n) = var[t_n] (chính là phương sai của biến mục tiêu t_n, chứ không phải nghịch đảo phương sai). Sở dĩ R đóng vai trò ma trận trọng số (precision) trong bài toán WLS của z là vì biến mục tiêu hiệu chỉnh z_n có var[z_n] ≈ 1 / var[t_n] = 1 / R_nn. Do đó, precision của z_n chính là 1 / var[z_n] = R_nn.
 
 **🔗 See also:** [Optimal Prediction with Gaussian Noise](./311_maximum_likelihood_and_least_squares.md#node-wsglxqn) · [Hessian for Logistic Regression](#node-7nipjyu)
+
+<br>
+
+<a id="node-1255gjk"></a>
+
+###### Iterative Reweighted Least Squares (IRLS)
+
+<p align="center"><kbd><img src="assets/lmmi5lpjzl7.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/jm5myk1e1wq.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Ok đại khái là vầy:
+>
+>
+>
+> Hiểu một cách ngắn gọn là: Ta có thể coi bài toán logistic regression như một bài toán regression theo cách sau:
+>
+>
+>
+> Xét ai, = 𝐰ᵀΦi, là hàm theo 𝐰, nên viết ai(𝐰).
+>
+>
+>
+> Sau đó, ta biết yi (là cái mang ý nghĩa P(Ti=1|𝐱i)) = σ(𝐰ᵀΦi), như vậy, yi = σ(ai).
+>
+>
+>
+> Vì σ là hàm monotone increasing, nên yi = σ(ai) ⇔ ai = σ⁻¹(yi), với σ⁻¹(.) là hàm nghịch đảo của σ, cái này dễ thấy.
+>
+>
+>
+> Và đại ý là ý tưởng để mà chuyển bài toán tìm 𝐰 để giảm cross entropy loss bằng cách khiến cho mọi yi = σ(𝐰ᵀΦi) đều bằng với ti thành bài toán least square như sau:
+>
+>
+>
+> Giả sử với giá trị 𝐰 hiện tại, gọi là 𝐰(old) đi, ta thì ai(𝐰) đang ở giá trị ai(𝐰(old)).
+>
+>
+>
+> Thì ý tưởng là: Thay vì đi tìm 𝐰 để có ai(𝐰) sao cho yi = ti, ví dụ với data point này ti = 1, thì tìm 𝐰 để có ai(𝐰) sao cho yi = 1 thì cũng chính là tìm 𝐰 để σ⁻¹(yi) = σ⁻¹(1), cũng là tìm 𝐰 để ai = σ⁻¹(1).
+>
+>
+>
+> Vấn đề là, σ⁻¹(1) = +∞, nên không thể giải được.
+>
+>
+>
+> Ta mới làm cách này: thay vì dùng σ, và tìm 𝐰 để có ai(𝐰) = σ⁻¹(yi) = σ⁻¹(1). Ta sẽ dùng hàm linear approx của σ(ai) tại ai(𝐰(old)), gọi là σ̂(ai), chính là đường màu xanh lá cây.
+>
+>
+>
+> Khi đó, ta sẽ tìm 𝐰 để ai(𝐰) khiến σ̂(ai) = 1, và muốn được vậy ai(𝐰) phải bằng một giá trị mà ta đặt là zi.
+>
+>
+>
+> Như vậy, để σ̂(ai) = 1, thì ai phải bằng một target zi, thì ý nghĩa quan trọng là: ta đã chuyển bài toán về việc (tìm 𝐰 để) map yi tới target mang giá trị rời rạc {0,1} thành map ai với target liên tục zi.
+>
+>
+>
+> Và khi đó, bài toán sẽ trở thành bài toán least square: Minimize (1/2)Σi (ai(𝐰) - zi)², gắn thêm trọng số 𝐑ii nữa, để có weighted least square: Minimize (1/2)Σi 𝐑ii (ai(𝐰) - zi)²
+>
+>
+>
+> Vấn đề là, vì trong bước lập luận trên, ta đã linear approx hàm sigmoid, nên đương nhiên là nó sẽ không hoàn toàn chính xác. Do đó, sau khi giải tìm được 𝐰(new) khiến minimize cái objective trên, ta sẽ lặp lại việc này nhiều lần nữa. Đây chính là lí do ta gọi nó là **iterative reweighted least squared**.
+>
+>
+>
+> ---
+>
+>
+>
+> Khi đã hiểu ý tưởng thì xem thử zi là gì:
+>
+>
+>
+> Như đã nói, zi là cái đích của ai cần nhảy để σ̂(ai) = 1 (thay cho cái đích của a khiến tại đó σ(a) = 1, vốn dĩ sẽ phải là +∞), tóm lại zi là nghiệm của σ̂(ai) = 1. Giải cái này, đầu tiên cần có σ̂(ai):
+>
+>
+>
+> Như đã nói, là tuyến tính hóa của σ(ai) tại ai(𝐰(old)), ta có, xấp xỉ tuyến tính hàm σ:
+>
+>
+>
+> (Taylor theorem nói rằng) nếu ai ≈ ai(𝐰(old)), ta sẽ có thể coi hàm σ hành xử như hàm tuyến tính:
+>
+>
+>
+> f(x), x0: f(x) ≈ f(x0) + f'(x0)(x-x0)
+>
+>
+>
+> σ(ai) ≈ σ(ai(𝐰(old))) + σ'(ai(𝐰(old))) (ai - ai(𝐰(old))), vế phải chính là hàm σ̂(ai)
+>
+>
+>
+> Thay đạo hàm của σ: σ'(a) = σ(a)(1-σ(a))
+>
+>
+>
+> ⇒ σ̂(ai) = σ(ai(𝐰(old))) + σ(ai(𝐰(old)))(1-σ(ai(𝐰(old)))) (ai - ai(𝐰(old)))
+>
+>
+>
+> cho bằng 1 để giải tìm zi:
+>
+>
+>
+> σ(ai(𝐰(old))) + σ(ai(𝐰(old)))(1-σ(ai(𝐰(old)))) (ai - ai(𝐰(old))) = 1
+>
+>
+>
+> ⇔ Để cho bớt rối mắt, đặt ai(𝐰(old)) là c:
+>
+>
+>
+> σ(c) + σ(c)(1-σ(c)) (ai - c) = 1
+>
+>
+>
+> ⇔ σ(c)(1-σ(c)) (ai - c) = 1 - σ(c)
+>
+>
+>
+> ⇔ (ai - c) = \[1 - σ(c)\]/σ(c)(1-σ(c))
+>
+>
+>
+> ⇔ ai = c + \[1 - σ(c)\]/σ(c)(1-σ(c))
+>
+>
+>
+> Tới đây σ(c), tức σ(ai(𝐰(old))) dĩ nhiên chính là yi, nên ta có:
+>
+>
+>
+> ⇔ ai = c + (1 - yi)/yi(1-yi)
+>
+>
+>
+> Và c, là ai(𝐰(old)), mà ai(𝐰) = 𝐰ᵀΦi, nên đương nhiên c = ai(𝐰(old)) = 𝐰(old)ᵀΦi
+>
+>
+>
+> Vậy ta có ai, tức là zi cần tìm: = 𝐰(old)ᵀΦi + (1 - yi)/yi(1-yi)
+>
+>
+>
+> Đây chính là cái đích mà ai cần nhảy từ ai(𝐰(old)) tới đó, để khiến yi, đang bằng σ̂ (ai(𝐰(old))) (cũng chính là σ(ai(𝐰(old))) do hàm σ̂ là approx tại ai(𝐰(old)) nên tại đó σ và σ̂ như nhau) nhảy tới ti = 1.
+>
+>
+>
+> Và đây chỉ là ta đang giả sử ti=1, nên thay 1 bằng ti, ta có công thức như trong sách:
+>
+>
+>
+> zi, hay ai(𝐰(new)) ≈ 𝐰(old)ᵀΦi + (ti - yi)/yi(1-yi)
+>
+>
+>
+> = 𝐰(old)ᵀΦi - (yi - ti)/yi(1-yi)
+>
+>
+>
+> hay dùng biến chạy là n cho giống hơn nữa.
+>
+>
+>
+> zn ≈ 𝐰(old)ᵀΦn - (yn - tn)/yn(1-yn)
+>
+>
+>
+> ---
+>
+>
+>
+> Như vậy, nói thêm tí về ý tưởng, kiểu như là từ bài toán gốc: tìm 𝐰 để đám y1,...yN khớp được chính xác với t1,...tN. bài toán này vốn dĩ có cái mấu chốt là yi là hàm phi tuyến của 𝐰 do nó thông qua hàm sigmoid, nên rất khó
+>
+>
+>
+> Ta đã thay đổi tí xíu thông qua động tác thay hàm sigmoid bằng hàm xấp xỉ tuyến tính, từ đó, chuyển bài toán thành tìm 𝐰 để đám ŷ1=σ̂(a1),...,ŷN=σ̂(aN) khớp với t1,...tN và cái này cũng chính là để a2,...aN khớp với z1,..zn. Như vậy bài toán trở thành bài toán least square, và như đã nói, vì đã có yếu tố xấp xỉ, nên ta cần phải lặp lại nhiều lần.
+>
+>
+>
+> (đặt ŷi = σ̂(ai) để tương ứng với yi = σ(ai))
+>
+>
+>
+> Như vậy, trong bài toán weight least square này thử xem có giống với điều mình đã nhận ra từ note trước: weight gắn với error ith chính là 1/variance của Zi?
+>
+>
+>
+> Ta đã có công thức zi: zi = 𝐰(old)ᵀΦi - (yi - ti)/yi(1-yi)
+>
+>
+>
+> Đương nhiên, có thể thấy zi, nếu đứng trên khía cạnh là random variable, thì nó chính là random variable có được bởi hàm số 𝐰(old)ᵀΦi - (yi - ti)/yi(1-yi) áp lên random variable Ti, viết theo chuẩn xác suất thống kê:
+>
+>
+>
+> Zi = 𝐰(old)ᵀΦi - (yi - Ti)/\[yi(1-yi)\]
+>
+>
+>
+> Và các yếu tố khác như 𝐰(old)ᵀΦi hay yi đều chỉ là constant (xét trên quan điểm cái gì đang là random variable)
+>
+>
+>
+> Nên Var(Zi) = Var(𝐰(old)ᵀΦi - (yi - Ti)/\[yi(1-yi)\])
+>
+>
+>
+> = Var(-(yi - Ti)/\[yi(1-yi)\]) | dùng tính chất của variance Var(X + c) = Var(X)
+>
+>
+>
+> = \[Var(yi - Ti)\] / \[yi(1-yi)\]² | Var(cX) = c²Var(X)
+>
+>
+>
+> = Var(Ti) / \[yi(1-yi)\]² (tương tự, Var(X + c) = Var(X))
+>
+>
+>
+> Tới đây, Ti|𝐱i, ta biết nó \~ Bern(yi), và với phân phối Bernouilly thì công thức mean và variance rất dễ nhớ, derive lại:
+>
+>
+>
+> X \~ Bern(p), EX = 0 × P(X=0) + 1 × P(X=1) = P(X=1) = p
+>
+>
+>
+> Var(X) = E\[(X-EX)²\], theo LOTUS, = (0 - p)² P(X=0) + (1-p)²P(X=1)
+>
+>
+>
+> = p²(1-p) + (1-p)²p = p² - p³ + (1-2p + p²)p = p² - p³ + p - 2p² + p³
+>
+>
+>
+> = p - p² = p(1-p)
+>
+>
+>
+> Vậy Var(Ti) = yi(1-yi)
+>
+>
+>
+> ⇒ Var(Zi) = yi(1-yi)/\[yi(1-yi)\]² = 1/\[yi(1-yi)\]
+>
+>
+>
+> = 1/\[σ(ai)(1-σ(ai))\]
+>
+>
+>
+> Nên 1/Var(Zi) = σ(ai)(1-σ(ai))
+>
+>
+>
+> Tới đây ta thấy đúng là weight của error i chính là 1/Var(Zi), chính là các phần tử đường chéo của 𝐑
+>
+>
+>
+> ---
+>
+>
+>
+> Cuối cùng, thử xem 𝐳 = (z1,...zi)ᵀ có phải là công thức 𝐳 = 𝚽𝐰(old) - 𝐑⁻¹(𝐲-𝐭) không:
+>
+>
+>
+> zi = 𝐰(old)ᵀΦi - (yi - ti)/yi(1-yi)
+>
+>
+>
+> Gom 𝐰(old)ᵀΦi, i=1,2,...N thành vector, thì nó chính là 𝚽𝐰
+>
+>
+>
+> Gom (yi - ti)/yi(1-yi), i=1,2,...N thành vector thì nó là gì, nó chính là 𝐑⁻¹(𝐲-𝐭) (Vì bữa trước đã biết 𝐑ii là diagonal matrix các entries đường chéo là σ(ai)(1-σ(ai)), thì 𝐑⁻¹ là diagonal matrix các entries đường chéo là 1/\[σ(ai)(1-σ(ai))\]
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=qAxY0gbf8rM)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú xuất sắc, tự dẫn xuất được xấp xỉ tuyến tính và làm rõ bản chất của target hiệu dụng z_i cùng trọng số 1/Var(Z_i) trong IRLS. Điểm cần lưu ý duy nhất là z_i là mục tiêu hiệu dụng (target), còn a_i(w^(new)) trong thực tế chỉ tiệm cận z_i qua bài toán bình phương tối thiểu có trọng số do w được dùng chung cho toàn bộ tập dữ liệu.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"zi, hay ai(𝐰(new)) ≈ 𝐰(old)ᵀΦi + (ti - yi)/yi(1-yi)"*
+>
+> Về mặt bản chất, z_i là 'effective target' (giá trị mục tiêu hiệu dụng) mà điểm dữ liệu thứ i muốn đạt tới trong không gian biến a. Do vector tham số w được tối ưu đồng thời trên toàn bộ N điểm dữ liệu bằng Weighted Least Squares, giá trị a_i(w^(new)) = w^(new)ᵀΦi thực tế sau bước cập nhật sẽ không nhất thiết bằng chính xác z_i mà chỉ là nghiệm tối ưu xấp xỉ (khớp) tốt nhất trên toàn tập.
+>
+>
+> **✓ Strengths**
+> - Minh họa hình học và diễn giải trực giác rất sáng tạo, chính xác về việc tuyến tính hóa hàm sigmoid quanh điểm hoạt động hiện tại.
+> - Tự biến đổi đại số từ khai triển Taylor của hàm sigmoid để tìm ra biểu thức z_n khớp hoàn toàn với công thức (4.103) trong sách giáo trình Bishop.
+> - Chứng minh chặt chẽ phương sai Var(Z_i) = 1/[y_i(1 - y_i)] bằng các tính chất phương sai và phân phối Bernoulli, giải thích trọn vẹn lý do trọng số R_ii trong WLS tỷ lệ nghịch với phương sai của target.
+>
+> **💡 Deeper notes**
+> - Trong sách (4.103), Bishop khai triển Taylor trực tiếp cho hàm nghịch đảo a_n(y_n) = σ⁻¹(y_n) quanh y_n rồi tính tại t_n. Cách làm của bạn (khai triển hàm thuận y = σ(a) rồi giải ngược tìm a) là tương đương bậc 1 theo đạo hàm hàm ngược da/dy = 1/(dy/da).
+> - IRLS thực chất là thuật toán Newton-Raphson áp dụng cho hàm cross-entropy loss: bước cập nhật w^(new) = (Φᵀ R Φ)⁻¹ Φᵀ R z hoàn toàn đồng nhất với công thức bước nhảy Newton w^(new) = w^(old) - H⁻¹ ∇E(w).
 
 <br>
 
