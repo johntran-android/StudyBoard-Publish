@@ -1,6 +1,6 @@
 # 4.3.3 Iterative reweighted least squares
 
-📊 **Progress:** `4` Notes | `6` Screenshots | `4` AI Reviews
+📊 **Progress:** `5` Notes | `7` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-89ydraa"></a>
@@ -644,7 +644,7 @@
 > **💡 Deeper notes**
 > - Nếu dữ liệu tách biệt tuyến tính (linearly separable), ||w|| sẽ tiến tới vô cùng, dẫn tới y_n tiến tới 0 hoặc 1 khiến R_nn → 0 và Hessian suy biến (singular). Khi đó cực tiểu không đạt được tại w hữu hạn trừ khi có điều chuẩn (regularization).
 
-**🔗 See also:** [Cross-Entropy Error Function Gradient](./432_logistic_regression.md#node-gvw6cdv) · [linked note *(Mit 18.06)*](../mit1806_gstrang/lecture_27_positive_definite_matrices_and_minima.md#node-au3l6fa) · [Gradient of Logistic Error Function](./432_logistic_regression.md#node-to86xxj)
+**🔗 See also:** [Cross-Entropy Error Function Gradient](./432_logistic_regression.md#node-gvw6cdv) · [linked note *(Mit 18.06)*](../mit1806_gstrang/lecture_27_positive_definite_matrices_and_minima.md#node-au3l6fa) · [Gradient of Logistic Error Function](./432_logistic_regression.md#node-to86xxj) · [Iterative Reweighted Least Squares](#node-2ut4slh)
 
 <br>
 
@@ -785,5 +785,114 @@
 
 <br>
 
-<a id="node-dsfqha8"></a>
+<a id="node-2ut4slh"></a>
+
+###### Iterative Reweighted Least Squares
+
+<p align="center"><kbd><img src="assets/2twqakpcjov.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, như vậy mình đã hiểu vì sao công thức 4.99 𝐰(new) = (𝚽ᵀ𝐑𝚽)⁻¹𝚽ᵀ𝐑𝐳 với 𝐳 = 𝚽𝐰(old) - 𝐑⁻¹(𝐲-𝐭) có dạng của normal equation bài toán weighted least square.
+>
+>
+>
+> Và liên hệ kiến thức bên chapter 12 Casella, mình hiểu rằng bài toán weighted least square có bản chất chỉ là bài toán linear regression trong đó ta giả định nhiễu là normal mean 0 và variance khác nhau.
+>
+>
+>
+> Trong chap 3 của Bishop, còn nhớ thiết lập ban đầu là: Ta giả định Ti|𝐱i \~ 𝒩(y(𝐰,𝐱i), 1/β), và cũng chính là giả định error εi = Ti - y(𝐰,𝐱i) là \~ 𝒩(0, 1/β) (chính là mọi error, đều có chung variance) kết quả cho thấy việc đi tìm MLE của 𝐰 hóa ra chính là bài toán least square.
+>
+>
+>
+> Vậy thì nếu ta giả định error εi khác nhau ở variance (hay precision): εi = Ti - y(𝐰, 𝐱i)\~ 𝒩(0, 1/βi) (vài cái này cũng chính là giả định Ti|𝐱i \~ 𝒩(y(𝐰, 𝐱i), 1/βi) thì bài toán đi tìm MLE của 𝐰 sẽ dẫn tới bài toán weighted least square, như sau:
+>
+>
+>
+> likelihood: L(𝐰, β1, β2..|t1,t2,...𝐱1,𝐱2,...) = f(t1,t2,...|𝐰, β1, β2,...𝐱1,𝐱2,...).
+>
+>
+>
+> theo tính độc lập của các data point:
+>
+>
+>
+> = f(t1|𝐰, β1, 𝐱1)f(t2|𝐰, β2, 𝐱2)....
+>
+>
+>
+> = Πi f(ti|𝐰, βi, 𝐱i) = Πi 𝒩(ti|y(𝐰,𝐱i), 1/βi)
+>
+>
+>
+> (lắp công thức 𝒩(x|μ, σ²) = (1/√2πσ²) exp{-(x-μ)²/2σ²})
+>
+>
+>
+> = Πi \[1/√2π(1/βi)\] exp\[-(ti-y(𝐰, 𝐱i))²/2(1/βi)\]
+>
+>
+>
+> = Πi \[2π(1/βi)\]^(-1/2) exp\[-(βi/2)(ti-y(𝐰, 𝐱i))²\]
+>
+>
+>
+> ln likelihood:
+>
+>
+>
+> ln \[Πi \[2π(1/βi)\]^(-1/2) exp\[-(βi/2)(ti-y(𝐰, 𝐱i))²\]\]
+>
+>
+>
+> = ln \[Πi \[2π(1/βi)\]^(-1/2) exp\[-(βi/2)(ti-y(𝐰, 𝐱i))²\]\]
+>
+>
+>
+> = ln \[Πi \[2π(1/βi)\]^(-1/2) Πi exp\[-(βi/2)(ti-y(𝐰, 𝐱i))²\]
+>
+>
+>
+> = ln {Πi \[2π(1/βi)\]^(-1/2)\]} + ln Πi exp\[-(βi/2)(ti-y(𝐰, 𝐱i))²\]
+>
+>
+>
+> = Σi ln {\[2π(1/βi)\]^(-1/2)\]} + Σi ln exp\[-(βi/2)(ti-y(𝐰, 𝐱i))²\]
+>
+>
+>
+> = (-1/2) Σi \[ln (2π) - ln βi\] - (1/2) Σi \[βi (ti-y(𝐰, 𝐱i))²\]
+>
+>
+>
+> Maximize (over 𝐰) ln likelihood
+>
+>
+>
+> = C - (1/2) Σi \[βi (ti-y(𝐰, 𝐱i))²\]
+>
+>
+>
+> maximize\_𝐰 {-(1/2) Σi \[βi (ti-y(𝐰, 𝐱i))²}
+>
+>
+>
+> Tới đây ta thấy đúng là bài toán đi tìm maximum likelihood estimator của 𝐰 với việc ta giả định noise εi \~ 𝒩(0, 1/βi) (tức variance khác nhau) chính là dẫn tới bài toán weighted least square với weight của error thứ i (ti - yi) chính là precision βi, cũng là 1/σ²i, tức nghịch đảo của variance của Ti (Ti|𝐱i \~ 𝒩(y(𝐰,𝐱), 1/βi))
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=uW9swHIgaPw)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, bạn đã tự thiết lập và chứng minh chi tiết từ bài toán MLE với nhiễu Gaussian phương sai khác nhau để dẫn ra bài toán bình phương tối thiểu có trọng số (WLS).
+>
+> **✓ Strengths**
+> - Tiến hành dẫn xuất toán học chi tiết, rõ ràng và chính xác từ hàm likelihood đến log-likelihood để chứng minh MLE tương đương WLS.
+> - Liên hệ và khái quát tốt kiến thức giữa bài toán hồi quy tuyến tính chuẩn (homoscedasticity) và hồi quy có trọng số (heteroscedasticity).
+>
+> **💡 Deeper notes**
+> - Trong Bishop, ma trận trọng số R có các phần tử trên đường chéo là R_nn = y_n(1 - y_n) = var[t_n] (chính là phương sai của biến mục tiêu t_n, chứ không phải nghịch đảo phương sai). Sở dĩ R đóng vai trò ma trận trọng số (precision) trong bài toán WLS của z là vì biến mục tiêu hiệu chỉnh z_n có var[z_n] ≈ 1 / var[t_n] = 1 / R_nn. Do đó, precision của z_n chính là 1 / var[z_n] = R_nn.
+
+**🔗 See also:** [Optimal Prediction with Gaussian Noise](./311_maximum_likelihood_and_least_squares.md#node-wsglxqn) · [Hessian for Logistic Regression](#node-7nipjyu)
+
+<br>
 
