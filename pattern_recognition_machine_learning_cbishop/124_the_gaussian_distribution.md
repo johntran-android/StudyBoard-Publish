@@ -1,6 +1,6 @@
 # 1.2.4 The Gaussian distribution
 
-📊 **Progress:** `10` Notes | `14` Screenshots
+📊 **Progress:** `10` Notes | `14` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-6omzny8"></a>
@@ -819,7 +819,31 @@
 >
 > Σ = AAᵀ, lí do có thể phân tách Σ, hay nói cách khác, có thể tìm được A thỏa điều này là vì Σ là matrix xác định dương (positive definite)
 
-**🔗 See also:** [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8) · [Log Marginal Likelihood Derivation](./351_evaluation_of_the_evidence_function.md#node-ddcs0pi) · [Section 3.5.3 Effective Number of Parameters](./353_effective_number_of_parameters.md#node-2wanjgv) · [Ex 3.6  MLE Hồi quy Đa biến](./37_exercises.md#node-cq8t94f) · [Ex 3.7 Posterior Distribution in Linear Basis Models](./37_exercises.md#node-97teyoh) · [Section 4.2.1 Continuous Inputs](./421_continuous_inputs.md#node-gsbsdud) · [MLE for Class Mean Vectors](./422_maximum_likelihood_solution.md#node-71dks0j)
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú xuất sắc, tự xây dựng và chứng minh trọn vẹn hàm mật độ xác suất (pdf) của phân phối chuẩn nhiều chiều từ chuẩn tắc độc lập thông qua phép đổi biến và định thức Jacobian. Chỉ có một vài điểm thiếu chặt chẽ nhỏ về mặt định nghĩa phân phối chuẩn nhiều chiều và lỗi gõ thuật ngữ ma trận.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Điều này đồng nghĩa với việc Xi có phải là normal distribution nữa không."*
+>
+> Về mặt lý thuyết xác suất, việc mọi biến thành phần Xi có phân phối chuẩn (marginal normality) KHÔNG đồng nghĩa với việc vector X có phân phối chuẩn nhiều chiều (joint/multivariate normality). Định nghĩa chuẩn nhiều chiều đòi hỏi mọi tổ hợp tuyến tính cᵀX đều phải là phân phối chuẩn 1 chiều (theo định lý Cramér-Wold). Dù vậy, vì X = AZ + μ nên cᵀX = (cᵀA)Z + cᵀμ hiển nhiên là chuẩn 1 chiều với mọi c, và bạn cũng đã tìm trực tiếp joint pdf bằng Jacobian nên kết luận cuối cùng vẫn đúng.
+>
+> **2.** *"L và U đều là lower triangular matrix"*
+>
+> Lỗi viết nhầm (typo): L là lower triangular (tam giác dưới), còn U là upper triangular (tam giác trên). Tính chất định thức bằng tích các phần tử đường chéo vẫn đúng cho cả hai.
+>
+>
+> **✓ Strengths**
+> - Tự triển khai trọn vẹn và chính xác toàn bộ quá trình biến đổi hàm mật độ qua ma trận Jacobian mà không chỉ chép lại công thức.
+> - Chứng minh đại số ma trận cho dạng toàn phương zᵀz = (x - μ)ᵀΣ⁻¹(x - μ) rất rõ ràng và chuẩn xác.
+> - Liên hệ tốt giữa điều kiện phân rã Σ = AAᵀ với tính xác định dương của ma trận hiệp phương sai (Cholesky/Eigendecomposition).
+>
+> **💡 Deeper notes**
+> - Khi Σ là ma trận hiệp phương sai thực, đối xứng và xác định dương (positive definite), ta luôn tồn tại duy nhất ma trận tam giác dưới A với đường chéo dương sao cho Σ = AAᵀ (đây chính là phân rã Cholesky). Nếu Σ chỉ là nửa xác định dương (positive semi-definite / suy biến), det(Σ) = 0 và phân phối chuẩn nhiều chiều không có dạng hàm mật độ thông thường trên R^D (phân phối suy biến).
+
+**🔗 See also:** [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8) · [Log Marginal Likelihood Derivation](./351_evaluation_of_the_evidence_function.md#node-ddcs0pi) · [Section 3.5.3 Effective Number of Parameters](./353_effective_number_of_parameters.md#node-2wanjgv) · [Ex 3.6  MLE Hồi quy Đa biến](./37_exercises.md#node-cq8t94f) · [Ex 3.7 Posterior Distribution in Linear Basis Models](./37_exercises.md#node-97teyoh) · [Section 4.2.1 Continuous Inputs](./421_continuous_inputs.md#node-gsbsdud) · [MLE for Class Mean Vectors](./422_maximum_likelihood_solution.md#node-71dks0j) · [Multiclass Logistic Regression](./434_multiclass_logistic_regression.md#node-fbzfqyw)
 
 <br>
 
