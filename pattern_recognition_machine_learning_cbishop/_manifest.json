@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1790283868630,
+  "publishedAt": 1790294886927,
   "sections": [
     {
       "title": "📋 Overview",
@@ -407,8 +407,8 @@
     {
       "title": "4.3.3 Iterative reweighted least squares",
       "path": "pattern_recognition_machine_learning_cbishop/433_iterative_reweighted_least_squares.md",
-      "noteCount": 4,
-      "imageCount": 6
+      "noteCount": 5,
+      "imageCount": 7
     },
     {
       "title": "Appendix C. Matrices",
@@ -423,6 +423,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 436,
-  "totalImages": 662
+  "totalNotes": 437,
+  "totalImages": 663
 }
