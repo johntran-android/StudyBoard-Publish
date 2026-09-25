@@ -65,11 +65,12 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 <!-- studyboard-videos:start -->
 ### 🎬 Video Library
 
-**`4 videos · 1 topic`**
+**`31 videos · 2 topics`**
 
 | Group | Videos |
 |:---|:---|
 | [📂 **Optimization**](#videos-optimization) | [Hệ số Lagrange λ* đo độ nhạy khi nới lỏng ràng buộc thế nào?](https://youtu.be/6g2qIzX9yO0)<br>[Lagrange Multipliers and Sensitivity — Numerical Optimization_J.Nocedal](https://www.youtube.com/watch?v=wy_PaBOEbnY)<br>[Second-Order Conditions and Projected Hessians — Numerical Optimization_J.Nocedal](https://youtu.be/oS8uhtEOI9w)<br>[Tính lõm hàm đối ngẫu — Numerical Optimization_J.Nocedal](https://www.youtube.com/watch?v=UGddFxbogXU) |
+| [📂 **Machine Learning Foundation**](#videos-machine-learning-foundation) | [Iterative Reweighted Least Squares — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=uW9swHIgaPw)<br>[Vì sao giáo sư Bishop gọi S1, S2 là covariance matrix — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=E55dfUAdwjE)<br>[Newton-Raphson for Logistic Regression — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=OefUwDAl93Q)<br>[Derivative of Logistic Sigmoid Function — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=W4pQ_271eXE)<br>[Fisher's Linear Discriminant Projection — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=fuo5lM8PyCk)<br>[MLE for Class Mean Vectors — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=ZI3dek5QaCc)<br>[Section 4.2.4 Exponential Family — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=Ovmp-M7j5II)<br>[Hessian for Logistic Regression — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=FZ8WIyEcWwk)<br>[Bình phương tối thiểu phân lớp — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=AxZbMJ3AD1E)<br>[Ex 3.7 Posterior Distribution in Linear Basis Models — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=1oPb9ILEL3I)<br>[Limitations of Least Squares Classification — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=TSv9sh-O1Os)<br>[Cross-Entropy Error Function Gradient — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=IJMvYy5NB-k)<br>[Dự đoán "Quá đúng" lại bị SSE phạt nặng, hạn chế của mô hình phân loại tuyến tính theo least square ](https://www.youtube.com/watch?v=D1LgZ77Hxgs)<br>[Maximum Likelihood on Linearly Separable Data — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=LNW4K9FY_As)<br>[Tại sao MLE làm norm của W tiến ra vô cực?](https://www.youtube.com/watch?v=XzhGTA5AeNU)<br>[4.3.1 Fixed Basis Functions — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=5kKAasvIeGI)<br>[Fisher's Linear Discriminant — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=9rn2c18KCbI)<br>[Newton-Raphson for Linear Regression — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=kI2yukn25aQ)<br>[Vì sao Newton-Raphson giải Linear Regression chỉ trong đúng 1 bước?](https://www.youtube.com/watch?v=KQozp2d2dy8)<br>[Section 4.3 Probabilistic Discriminative Models — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=OMWS53GIrUI)<br>[4.3.2 Logistic Regression — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=YN8gyl1HEAA)<br>[Iterative Reweighted Least Squares — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=yOm1k_DQ3K0)<br>[MLE for Shared Covariance Matrix — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=STiYw1o_W1E)<br>[Vì sao ma trận hiệp phương sai chung Σ bằng S?](https://www.youtube.com/watch?v=2Dy41xan6xg)<br>[The Perceptron Criterion — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=PEL_sI4YGSg)<br>[The Fisher Criterion — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=XWXHBKtAWK0)<br>[Section 4.2.3 Discrete Features — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=jbPysqwE8nc) |
 
 <a id="videos-optimization"></a>
 #### 📂 Optimization
@@ -83,6 +84,44 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 | [Second-Order Conditions and Projected Hessians — Numerical Optimization_J.Nocedal](https://youtu.be/oS8uhtEOI9w) | 20/09/2026 |
 | [Hệ số Lagrange λ* đo độ nhạy khi nới lỏng ràng buộc thế nào?](https://youtu.be/6g2qIzX9yO0) | 20/09/2026 |
 | [Lagrange Multipliers and Sensitivity — Numerical Optimization_J.Nocedal](https://www.youtube.com/watch?v=wy_PaBOEbnY) | 19/09/2026 |
+
+</details>
+
+<a id="videos-machine-learning-foundation"></a>
+#### 📂 Machine Learning Foundation
+
+<details open>
+<summary>🎬 27 videos</summary>
+
+| Video | Ngày đăng |
+|---|---|
+| [Iterative Reweighted Least Squares — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=uW9swHIgaPw) | 24/09/2026 |
+| [Newton-Raphson for Logistic Regression — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=OefUwDAl93Q) | 24/09/2026 |
+| [Hessian for Logistic Regression — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=FZ8WIyEcWwk) | 24/09/2026 |
+| [Vì sao Newton-Raphson giải Linear Regression chỉ trong đúng 1 bước?](https://www.youtube.com/watch?v=KQozp2d2dy8) | 23/09/2026 |
+| [Newton-Raphson for Linear Regression — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=kI2yukn25aQ) | 23/09/2026 |
+| [Iterative Reweighted Least Squares — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=yOm1k_DQ3K0) | 23/09/2026 |
+| [Tại sao MLE làm norm của W tiến ra vô cực?](https://www.youtube.com/watch?v=XzhGTA5AeNU) | 22/09/2026 |
+| [Maximum Likelihood on Linearly Separable Data — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=LNW4K9FY_As) | 22/09/2026 |
+| [Cross-Entropy Error Function Gradient — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=IJMvYy5NB-k) | 21/09/2026 |
+| [Derivative of Logistic Sigmoid Function — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=W4pQ_271eXE) | 21/09/2026 |
+| [4.3.2 Logistic Regression — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=YN8gyl1HEAA) | 18/09/2026 |
+| [4.3.1 Fixed Basis Functions — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=5kKAasvIeGI) | 18/09/2026 |
+| [Section 4.3 Probabilistic Discriminative Models — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=OMWS53GIrUI) | 18/09/2026 |
+| [Section 4.2.4 Exponential Family — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=Ovmp-M7j5II) | 17/09/2026 |
+| [Vì sao giáo sư Bishop gọi S1, S2 là covariance matrix — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=E55dfUAdwjE) | 17/09/2026 |
+| [Section 4.2.3 Discrete Features — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=jbPysqwE8nc) | 17/09/2026 |
+| [Vì sao ma trận hiệp phương sai chung Σ bằng S?](https://www.youtube.com/watch?v=2Dy41xan6xg) | 17/09/2026 |
+| [MLE for Shared Covariance Matrix — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=STiYw1o_W1E) | 16/09/2026 |
+| [MLE for Class Mean Vectors — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=ZI3dek5QaCc) | 16/09/2026 |
+| [The Perceptron Criterion — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=PEL_sI4YGSg) | 11/09/2026 |
+| [Bình phương tối thiểu phân lớp — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=AxZbMJ3AD1E) | 09/09/2026 |
+| [Fisher's Linear Discriminant Projection — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=fuo5lM8PyCk) | 08/09/2026 |
+| [The Fisher Criterion — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=XWXHBKtAWK0) | 08/09/2026 |
+| [Fisher's Linear Discriminant — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=9rn2c18KCbI) | 05/09/2026 |
+| [Limitations of Least Squares Classification — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=TSv9sh-O1Os) | 05/09/2026 |
+| [Dự đoán "Quá đúng" lại bị SSE phạt nặng, hạn chế của mô hình phân loại tuyến tính theo least square](https://www.youtube.com/watch?v=D1LgZ77Hxgs) | 04/09/2026 |
+| [Ex 3.7 Posterior Distribution in Linear Basis Models — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=1oPb9ILEL3I) | — |
 
 </details>
 
@@ -566,7 +605,6 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 `425 notes · 615 screenshots · 37 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
-> 
 > Sổ tay này đi sâu vào các thuật toán tối ưu hóa số cốt lõi như tìm kiếm đường thẳng, vùng tin cậy, quasi-Newton và gradient liên hợp, cùng các khái niệm thiết yếu như đạo hàm tự động, phân tích hội tụ và kỹ thuật đại số tuyến tính số.
 
 <details open>
@@ -623,9 +661,11 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 ### Pattern Recognition Machine Learning_C.Bishop
 <!-- key: pattern_recognition_machine_learning_cbishop -->
 <!-- group: Machine Learning Foundation -->
+<!-- videos: [{"url":"https://www.youtube.com/watch?v=uW9swHIgaPw","title":"Iterative Reweighted Least Squares — Pattern Recognition Machine Learning_C.Bishop","videoId":"uW9swHIgaPw","uploadedAt":1790291738339},{"url":"https://www.youtube.com/watch?v=E55dfUAdwjE","title":"Vì sao giáo sư Bishop gọi S1, S2 là covariance matrix — Pattern Recognition Machine Learning_C.Bishop","videoId":"E55dfUAdwjE","uploadedAt":1789680661454},{"url":"https://www.youtube.com/watch?v=OefUwDAl93Q","title":"Newton-Raphson for Logistic Regression — Pattern Recognition Machine Learning_C.Bishop","videoId":"OefUwDAl93Q","uploadedAt":1790282941701},{"url":"https://www.youtube.com/watch?v=W4pQ_271eXE","title":"Derivative of Logistic Sigmoid Function — Pattern Recognition Machine Learning_C.Bishop","videoId":"W4pQ_271eXE","uploadedAt":1790022243689},{"url":"https://www.youtube.com/watch?v=fuo5lM8PyCk","title":"Fisher's Linear Discriminant Projection — Pattern Recognition Machine Learning_C.Bishop","videoId":"fuo5lM8PyCk","uploadedAt":1788910581229},{"url":"https://www.youtube.com/watch?v=ZI3dek5QaCc","title":"MLE for Class Mean Vectors — Pattern Recognition Machine Learning_C.Bishop","videoId":"ZI3dek5QaCc","uploadedAt":1789592527015},{"url":"https://www.youtube.com/watch?v=Ovmp-M7j5II","title":"Section 4.2.4 Exponential Family — Pattern Recognition Machine Learning_C.Bishop","videoId":"Ovmp-M7j5II","uploadedAt":1789683381098},{"url":"https://www.youtube.com/watch?v=FZ8WIyEcWwk","title":"Hessian for Logistic Regression — Pattern Recognition Machine Learning_C.Bishop","videoId":"FZ8WIyEcWwk","uploadedAt":1790220529722},{"url":"https://www.youtube.com/watch?v=AxZbMJ3AD1E","title":"Bình phương tối thiểu phân lớp — Pattern Recognition Machine Learning_C.Bishop","videoId":"AxZbMJ3AD1E","uploadedAt":1788988069347},{"url":"https://www.youtube.com/watch?v=1oPb9ILEL3I","title":"Ex 3.7 Posterior Distribution in Linear Basis Models — Pattern Recognition Machine Learning_C.Bishop"},{"url":"https://www.youtube.com/watch?v=TSv9sh-O1Os","title":"Limitations of Least Squares Classification — Pattern Recognition Machine Learning_C.Bishop","videoId":"TSv9sh-O1Os","uploadedAt":1788623614956},{"url":"https://www.youtube.com/watch?v=IJMvYy5NB-k","title":"Cross-Entropy Error Function Gradient — Pattern Recognition Machine Learning_C.Bishop","videoId":"IJMvYy5NB-k","uploadedAt":1790031455474},{"url":"https://www.youtube.com/watch?v=D1LgZ77Hxgs","title":"Dự đoán \"Quá đúng\" lại bị SSE phạt nặng, hạn chế của mô hình phân loại tuyến tính theo least square ","videoId":"D1LgZ77Hxgs","uploadedAt":1788488738804},{"url":"https://www.youtube.com/watch?v=LNW4K9FY_As","title":"Maximum Likelihood on Linearly Separable Data — Pattern Recognition Machine Learning_C.Bishop","videoId":"LNW4K9FY_As","uploadedAt":1790112160343},{"url":"https://www.youtube.com/watch?v=XzhGTA5AeNU","title":"Tại sao MLE làm norm của W tiến ra vô cực?","videoId":"XzhGTA5AeNU","uploadedAt":1790117348534},{"url":"https://www.youtube.com/watch?v=5kKAasvIeGI","title":"4.3.1 Fixed Basis Functions — Pattern Recognition Machine Learning_C.Bishop","videoId":"5kKAasvIeGI","uploadedAt":1789771898531},{"url":"https://www.youtube.com/watch?v=9rn2c18KCbI","title":"Fisher's Linear Discriminant — Pattern Recognition Machine Learning_C.Bishop","videoId":"9rn2c18KCbI","uploadedAt":1788632547156},{"url":"https://www.youtube.com/watch?v=kI2yukn25aQ","title":"Newton-Raphson for Linear Regression — Pattern Recognition Machine Learning_C.Bishop","videoId":"kI2yukn25aQ","uploadedAt":1790195064225},{"url":"https://www.youtube.com/watch?v=KQozp2d2dy8","title":"Vì sao Newton-Raphson giải Linear Regression chỉ trong đúng 1 bước?","videoId":"KQozp2d2dy8","uploadedAt":1790197183525},{"url":"https://www.youtube.com/watch?v=OMWS53GIrUI","title":"Section 4.3 Probabilistic Discriminative Models — Pattern Recognition Machine Learning_C.Bishop","videoId":"OMWS53GIrUI","uploadedAt":1789766773670},{"url":"https://www.youtube.com/watch?v=YN8gyl1HEAA","title":"4.3.2 Logistic Regression — Pattern Recognition Machine Learning_C.Bishop","videoId":"YN8gyl1HEAA","uploadedAt":1789775417418},{"url":"https://www.youtube.com/watch?v=yOm1k_DQ3K0","title":"Iterative Reweighted Least Squares — Pattern Recognition Machine Learning_C.Bishop","videoId":"yOm1k_DQ3K0","uploadedAt":1790121880818},{"url":"https://www.youtube.com/watch?v=STiYw1o_W1E","title":"MLE for Shared Covariance Matrix — Pattern Recognition Machine Learning_C.Bishop","videoId":"STiYw1o_W1E","uploadedAt":1789597319502},{"url":"https://www.youtube.com/watch?v=2Dy41xan6xg","title":"Vì sao ma trận hiệp phương sai chung Σ bằng S?","videoId":"2Dy41xan6xg","uploadedAt":1789610153199},{"url":"https://www.youtube.com/watch?v=PEL_sI4YGSg","title":"The Perceptron Criterion — Pattern Recognition Machine Learning_C.Bishop","videoId":"PEL_sI4YGSg","uploadedAt":1789160475415},{"url":"https://www.youtube.com/watch?v=XWXHBKtAWK0","title":"The Fisher Criterion — Pattern Recognition Machine Learning_C.Bishop","videoId":"XWXHBKtAWK0","uploadedAt":1788839850967},{"url":"https://www.youtube.com/watch?v=jbPysqwE8nc","title":"Section 4.2.3 Discrete Features — Pattern Recognition Machine Learning_C.Bishop","videoId":"jbPysqwE8nc","uploadedAt":1789678706927}] -->
 `437 notes · 663 screenshots · 70 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
+> 
 > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
