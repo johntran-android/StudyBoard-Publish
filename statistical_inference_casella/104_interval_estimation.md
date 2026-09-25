@@ -1,6 +1,6 @@
 # 10.4 Interval Estimation
 
-📊 **Progress:** `13` Notes | `16` Screenshots | `13` AI Reviews
+📊 **Progress:** `14` Notes | `19` Screenshots | `14` AI Reviews
 
 ---
 <a id="node-wt27aoy"></a>
@@ -1994,6 +1994,312 @@
 > - Ở bước dùng CLT √n(X̄ - λ)/√λ → n(0,1), về mặt bản chất đây là thống kê Score (hoặc Rao score statistic), đánh giá độ dốc hàm log-likelihood tại giá trị null lambda.
 
 **🔗 See also:** [linked note *(STAT110_Havard)*](../stat110_havard/lec_11_poisson_distribution.md#node-wed0u02) · [Second Moment of Poisson Distribution *(STAT110_Havard)*](../stat110_havard/lec_14_location_scale_lotus.md#node-bjcdm0n) · [CLT - Định lý giới hạn trung tâm](./55_convergence_concepts.md#node-32vkewg) · [Định lý Slutsky](./55_convergence_concepts.md#node-uwbmbt7)
+
+<br>
+
+<a id="node-67eu3ou"></a>
+
+###### Khoảng Score nhị thức
+
+<p align="center"><kbd><img src="assets/vnv9bdkavu.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2yu493fi8o1.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/yrm5l1a6oim.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Ví dụ này đại ý là:
+>
+>
+>
+> Nhờ những phần trước cho đến giờ mình đã biết rằng:
+>
+>
+>
+> (p̂ - p)/√\[p̂(1-p̂)/n\] và (p̂ - p)/√\[p(1-p)/n\] đều → (d) n(0,1)
+>
+>
+>
+> Trong đó có thể nhớ lại (p̂ - p)/√\[p(1-p)/n\] chính là dựa trên CLT: √n(X̄ - E\[X\])/STD(X) → (d) n(0,1), áp dụng cho case này khi sample Xi \~ Bern(p), thì E\[X\] = p, Var(X) = p(1-p).
+>
+>
+>
+> Còn cái đầu tiên chỉ đơn giản là ta thay dùng p̂ để estimate cho p ở mẫu số, và hành động thay standard deviation σ = STD(X) bởi một consistent estimator cuả nó, để nhờ tính consistent, ta có thể dựa trên Slutsky + CLT: \[√n(X̄ - p)/ σ\] × \[σ/S\] → (d) n(0,1) × 1 = n(0,1), và từ đó xây dựng test thì đây gọi là Wald test.
+>
+>
+>
+> Còn cái trên khi dùng chính xác STD(X) thì ta có score test.
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì từ Wald test và score test ta invert chúng để có confidence interval, hoặc là dựa vào việc chúng hội tụ về Z, thì ta dựng nên approximate confidence interval đều như nhau.
+>
+>
+>
+> Thử làm lại, cũng là active recall cho nhớ:
+>
+>
+>
+> Dùng Wald test của bài toán testing H0: p=p0, H1: p≠p0
+>
+>
+>
+> (p̂ - p)/√\[p̂(1-p̂)/n\] → (d) Z \~ n(0,1)
+>
+>
+>
+> Với bài toán two side test, ta sẽ có rule là: reject H0 khi test statistic cách xa một mốc nào đó quá lớn: Reject H0 khi |test statistic| ≥ some threshold
+>
+>
+>
+> Chọn cái threshold này dựa vào Z:
+>
+>
+>
+> Ta theo định nghĩa: P(Z ≥ z\_α) = α và do tính đối xứng của normal (0,1) quanh 0, P(Z ≤ -z\_α) = α. Nên ta có P(|Z| ≥ z\_α/2) = P(Z ≤ -z\_α/2 ∪ Z ≥ z\_α/2) = α/2 + α/2 = α.
+>
+>
+>
+> Và do (p̂ - p)/√\[p̂(1-p̂)/n\] → (d) Z \~ n(0,1) nên ta có:
+>
+>
+>
+> P(|(p̂ - p)/√\[p̂(1-p̂)/n\]| ≥ z\_α/2) ≈ α
+>
+>
+>
+> Và điều này đương nhiên đúng với mọi p, vì nó dựa trên CLT, và Slutsky không care p là gì. Nên ta cũng có:
+>
+>
+>
+> P(|(p̂ - p0)/√\[p̂(1-p̂)/n\]| ≥ z\_α/2) ≈ α
+>
+>
+>
+> Và đương nhiên cũng tương đương sup\_Θ0 P_p0(|(p̂ - p0)/√\[p̂(1-p̂)/n\]| ≥ z\_α/2) ≈ α
+>
+>
+>
+> và như vậy cái ta đang có chính sup\_{p ∈ Θ0} P_p(𝐗 ∈ Rejection region R) ≈ α, như vậy kết luận đây là một phép thử của bài toán kiểm định này có size xấp xỉ α.
+>
+>
+>
+> Giờ ta invert cái phép thử nà, y cũng là mình tìm cách ví von để hiểu cái quan hệ cốt lõi của cái cách đảo ngược test ra inverval:
+>
+>
+>
+> Reject H0: p=p0 khi |(p̂ - p0)/√\[p̂(1-p̂)/n\]| ≥ z\_α/2
+>
+>
+>
+> Nhắc lại lý thuyết chung tí xíu: Ta có phép thử của bài toán kiểm định H0: θ ∈ Θ0 vs H1: θ ∈ Θ0c, define bởi rejection region R, giả sử là một level α test, và acceptance region Rc, ta đặt tập này là A(θ0), đương nhiên nó là tập chứa các 𝐱 sao cho H0: θ = θ0 "được accept". Thế thì ta mới định nghĩa tập C(𝐱) là tập mà: {θ: 𝐱 ∈ A(θ)}, và vì cách định nghĩa của tập C(𝐱) nên đương nhiên nếu θ ∈ C(𝐱) thì 𝐱 phải ∈ A(θ). Và ngược lại, nếu 𝐱 ∈ A(θ) thì đương nhiên θ phải ∈ C(𝐱). Cái này mình có thể hình dung ví von thế này:
+>
+>
+>
+> A(θ0) là tập chứa 𝐱 khiến H0: θ ∈ Θ0 được accept (không bị reject). Ta có thể ví nó như đây là tập các anh chàng thích cô gái θ0.
+>
+>
+>
+> Sau đó ta lại đặt ra tập C(𝐱), là tập {θ: 𝐱 ∈ A(θ)}, thì đây có thể ví như là tập các cô mà anh chàng 𝐱 này thích.
+>
+>
+>
+> Như vậy, nếu cô gái θ thuộc tập C(𝐱) của anh chàng 𝐱, thì dĩ nhiên anh chàng 𝐱 phải thuộc tập hợp các anh chàng theo đuổi cô θ: 𝐱 ∈ A(θ)
+>
+>
+>
+> Và ngược lại, nếu anh chàng 𝐱 nằm trong nhóm các anh thích cô θ: 𝐱 ∈ A(θ) thì cô θ dĩ nhiên phải nằm trong nhóm các cô mà anh 𝐱 thích: θ ∈ C(𝐱).
+>
+>
+>
+> Như vậy với ví von này cái tautology θ ∈ C(𝐱) ⇔ 𝐱 ∈ A(θ) trở nên rất dễ hiểu, và nó làm cơ sở cho phép đảo nghịch test để có interval:
+>
+>
+>
+> Quay lại với test rule Reject H0: p=p0 khi |(p̂ - p0)/√\[p̂(1-p̂)/n\]| ≥ z\_α/2
+>
+>
+>
+> Thì như vậy A(p0), tập các anh chàng 𝐱 thích cô p0 là {𝐱: |(p̂ - p0)/√\[p̂(1-p̂)/n\]| ≤ z\_α/2}
+>
+>
+>
+> thì ta có thể ví vọn là cái điều kiện |(p̂ - p0)/√\[p̂(1-p̂)/n\]| ≤ z\_α/2 giống như mô tả cái lí do mà anh 𝐱 thích cô p0 vậy, nó sẽ cho thấy gu bạn gái của anh 𝐱.
+>
+>
+>
+> Để rồi ta biến đổi |(p̂ - p0)/√\[p̂(1-p̂)/n\]| ≤ z\_α/2 thành L(𝐱) ≤ p0 ≤ U(𝐱), thì lúc này {p: L(𝐱) ≤ p ≤ U(𝐱)} chính là tập các cô p hợp gu anh 𝐱
+>
+>
+>
+> Và vì vậy tập C(𝐱) = {p: L(𝐱) ≤ p ≤ U(𝐱)} sẽ là tập các cô p mà anh 𝐱 thích.
+>
+>
+>
+> Do đó, again ta lại có ví von: nếu cô p thỏa L(𝐱) ≤ p ≤ U(𝐱), thì cô p hợp gu anh 𝐱, nên sẽ thuộc tập các cô mà ảnh thích C(𝐱), và vì vậy, anh 𝐱 đương nhiên cũng nằm trong nhóm các anh thấy cô p hợp gu: {𝐱: |(p̂ - p0)/√\[p̂(1-p̂)/n\]| ≤ z\_α/2}, nên anh ấy đương nhiên nằm trong nhóm theo đuổi cô p: A(p)
+>
+>
+>
+> Ngược lại, nếu anh 𝐱 nằm trong nhóm theo đuổi cô p: 𝐱 ∈ A(p), thì dĩ nhiên anh 𝐱 phải thấy cô p hợp gu: 𝐱 thỏa |(p̂ - p0)/√\[p̂(1-p̂)/n\]| ≤ z\_α/2, và vì vậy, cô p phải là cô có nét vừa mắt với anh 𝐱: p thỏa L(𝐱) ≤ p ≤ U(𝐱), từ đó cô ấy phải thuộc nhóm trong mộng của anh 𝐱: p ∈ C(𝐱).
+>
+>
+>
+> À như vậy, đến đây:
+>
+>
+>
+> ta đã có tập, C(𝐱) = {p: L(𝐱) ≤ p ≤ U(𝐱)}, và thêm vài lập luận để kết luận nó là confidence interval level xấp xỉ 1-α:
+>
+>
+>
+> Ta có sup\_{p0} P_p(𝐗 ∈ R) = P_p0(𝐗 ∈ R) ≈ α ⇒ P_p0(𝐗 ∈ A(p0)) ≈ 1-α.
+>
+>
+>
+> P_p0(𝐗 ∈ A(p0)), mang ý nghĩa: Xác suất của event "có một anh chàng nào đó thích cô p0",
+>
+>
+>
+> theo lí thuyết xác suất, bản chất của nó là P({s ∈ Ω, 𝐱 = 𝐗(s): 𝐱 ∈ A(p0)}), ý nghĩa: "xác suất của tập hợp tất cả các anh trong vũ trụ thích cô p0"
+>
+>
+>
+> và vì 𝐱 ∈ A(p0) ⇔ p0 ∈ C(𝐱), ý nghĩa như đã nói: anh 𝐱 thích cô p0 thì cô p0 phải thuộc tập mà anh ấy thích.
+>
+>
+>
+> nên P({s ∈ Ω, 𝐱 = 𝐗(s): 𝐱 ∈ A(p0)}) = P({s ∈ Ω, 𝐱 = 𝐗(s): p0 ∈ C(𝐱)}),
+>
+>
+>
+> và như vậy P_p0(𝐗 ∈ A(p0)) = P_p0(p0 ∈ C(𝐗)) và ≈ 1 - α
+>
+>
+>
+> Vậy C(𝐗) = \[L(𝐗), U(𝐗)\] là một random interval có coverage probability là 1 - α, gọi là approximate 1-α confidence interval.
+>
+>
+>
+> ---
+>
+>
+>
+> Quay lại bổ sung phần biến đổi: |(p̂ - p0)/√\[p̂(1-p̂)/n\]| ≤ z\_α/2 thành L(𝐱) ≤ p0 ≤ U(𝐱)
+>
+>
+>
+> |(p̂ - p0)/√\[p̂(1-p̂)/n\]| ≤ z\_α/2 ⇔ -z\_α/2 ≤ (p̂ - p0)/√\[p̂(1-p̂)/n\] ≤ z\_α/2
+>
+>
+>
+> ⇔ -z\_α/2 × √\[p̂(1-p̂)/n\] ≤ (p̂ - p0) ≤ z\_α/2 × √\[p̂(1-p̂)/n\]
+>
+>
+>
+> ⇔ p0 ≤ p̂ + z\_α/2 × √\[p̂(1-p̂)/n\] ; p̂ - z\_α/2 × √\[p̂(1-p̂)/n\] ≤ p0
+>
+>
+>
+> ⇔ p̂ - z\_α/2 × √\[p̂(1-p̂)/n\] ≤ p0 ≤ p̂ + z\_α/2 × √\[p̂(1-p̂)/n\] ⇒ L(𝐱) = p̂ - z\_α/2 × √\[p̂(1-p̂)/n\], U(𝐱) = p̂ + z\_α/2 × √\[p̂(1-p̂)/n\]
+>
+>
+>
+> ---
+>
+>
+>
+> Cuối cùng, thử không invert test mà xây dựng bằng lập luận, thì nhanh hơn nhiều.
+>
+>
+>
+> Ta có (p̂ - p)/√\[p̂(1-p̂)/n\] → (d) n(0,1)
+>
+>
+>
+> Mà P(-z\_α/2 ≤ Z ≤ z\_α/2) = 1-α
+>
+>
+>
+> ⇒ P_p(-z\_α/2 ≤ (p̂ - p)/√\[p̂(1-p̂)/n\] ≤ z\_α/2) ≈ 1-α
+>
+>
+>
+> ⇔ P_p(p̂ - z\_α/2 × √\[p̂(1-p̂)/n\] ≤ p ≤ p̂ + z\_α/2 × √\[p̂(1-p̂)/n\]\]) ≈ 1-α
+>
+>
+>
+> Vậy \[L(𝐗),U(𝐗)\] với L(𝐗) = p̂ - z\_α/2 × √\[p̂(1-p̂)/n\], U(𝐗) = p̂ + z\_α/2 × √\[p̂(1-p̂)/n\] là approximate 1-α confidence interval.
+>
+>
+>
+> ---
+>
+>
+>
+> Nhắc lại, ở trên nói dài vậy là để active recall cách thức cũng như bản chất cốt lõi của phương pháp invert một test để cho ra interval.
+>
+>
+>
+> Giờ ta nói về cái score test, thì chỉ việc giải cái này:
+>
+>
+>
+> \-z\_α/2 ≤ (p̂ - p)/√\[p(1-p)/n\] ≤ z\_α/2
+>
+>
+>
+> để tìm ra L(𝐗) ≤ p ≤ U(𝐗)
+>
+>
+>
+> thì vì lần này ở mẫu cũng có p, nên ta sẽ phải bình phương hai vế, và thu gọn, để đưa về dạng
+>
+>
+>
+> Ap² + Bp + C ≤ 0
+>
+>
+>
+> Và nhờ A là dương, nên đây là cái parabol ngửa lên, và xét biệt thức thì phương trình có nghiệm, tức parabol có cắt trục hoành tại 2 điểm, ta gỉai ra hai nghiệm này thì chính là có L(𝐗), U(𝐗) là công thức dài thòng 10.4.7 mà ông Casella nói tuy nó nhìn gớm ghiếc nhưng nó tốt hơn cái ở trên (dựa trên Wald test), vì sao thì mình biết rồi, vì ta ko estimate STD(X) mà dùng thẳng STD(X) trong mẫu số của cái statistic converge phân phối về n(0,1) theo CLT, điều này giúp giảm sai số so với dùng estimate của STD(X)
+>
+>
+>
+> ---
+>
+>
+>
+> Khúc cuối đại ý là có thể còn cải thiện thêm nữa sử dụng continuity correction gì đó, chưa hiểu lắm.
+>
+>
+>
+> Nói chung cái note này chủ yếu là active recall lại vụ nghịch đảo một test để ra interval. Và phát minh ra cái phép ví von giúp dễ hiểu cái tautology: 𝐱 ∈ A(θ) ⇔ θ ∈ C(𝐱).
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, nắm vững bản chất toán học từ CLT, định lý Slutsky cho đến cơ chế nghịch đảo miền chấp nhận (test inversion) để tạo khoảng tin cậy. Phép ẩn dụ để ghi nhớ điều kiện tương đương x ∈ A(θ) ⇔ θ ∈ C(x) rất trực quan và chính xác.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Ta có sup_{p0} P_p(𝐗 ∈ R) = P_p0(𝐗 ∈ R)"*
+>
+> Ký hiệu bị nhầm nhẹ giữa P_p và P_{p0} khi lấy supremum trên tập đơn điểm Θ0 = {p0}, dù không ảnh hưởng đến bản chất lập luận.
+>
+>
+> **✓ Strengths**
+> - Giải thích rất chuẩn xác nguồn gốc của thống kê Wald thông qua việc kết hợp CLT và định lý Slutsky khi thay thế độ lệch chuẩn bằng ước lượng vững.
+> - Trình bày mạch lạc bản chất của phương pháp đảo ngược kiểm định (test inversion) và chứng minh chặt chẽ tính tương đương x ∈ A(θ) ⇔ θ ∈ C(x).
+> - Hiểu rõ tại sao score test dẫn đến phương trình bậc 2 với p và tại sao khoảng tin cậy tạo bởi score test thường tốt hơn khoảng Wald (do không phải chịu sai số ước lượng mẫu ở mẫu số).
+>
+> **💡 Deeper notes**
+> - Continuity correction (hiệu chỉnh tính liên tục ± 1/(2n)) xuất phát từ việc xấp xỉ biến ngẫu nhiên rời rạc (Binomial) bằng biến ngẫu nhiên liên tục (Normal), giúp diện tích tích phân xấp xỉ khớp hơn với tổng xác suất rời rạc tại các điểm biên.
+> - Ở các trường hợp biên đặc biệt như ∑xi = 0 hoặc ∑xi = n, khoảng Wald sẽ bị suy biến (độ rộng bằng 0 do p̂(1-p̂) = 0), trong khi score interval vẫn cho ra khoảng tin cậy hợp lệ.
+
+**🔗 See also:** [Large-Sample Binomial Tests](./103_hypothesis_testing.md#node-8xsav7v)
 
 <br>
 
