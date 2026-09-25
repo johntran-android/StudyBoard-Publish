@@ -536,10 +536,11 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 ### Numerical Optimization_J.Nocedal
 <!-- key: numerical_optimization_jnocedal -->
 <!-- group: Optimization -->
-<!-- videos: [{"url":"https://youtu.be/6g2qIzX9yO0","title":"Vì sao df/dε = -λ*||∇ci|| khi thay đổi ràng buộc ci(x)?","videoId":"6g2qIzX9yO0","uploadedAt":1789916409346}] -->
+<!-- videos: [{"url":"https://youtu.be/6g2qIzX9yO0","title":"Vì sao df/dε = -λ*||∇ci|| khi thay đổi ràng buộc ci(x)?","videoId":"6g2qIzX9yO0","uploadedAt":1789916409346},{"url":"https://www.youtube.com/watch?v=wy_PaBOEbnY","title":"Tại sao nhân tử Lagrange λ* = 0 khi ràng buộc không active?","videoId":"wy_PaBOEbnY","uploadedAt":1789858516690},{"url":"https://youtu.be/oS8uhtEOI9w","title":"Vì sao Projected Hessian Zᵀ∇²LZ giúp kiểm tra cực tiểu dễ hơn?","videoId":"oS8uhtEOI9w","uploadedAt":1789916587155},{"url":"https://www.youtube.com/watch?v=UGddFxbogXU","title":"Tại sao hàm dual objective q(λ) luôn concave và domain 𝒟 lồi?","videoId":"UGddFxbogXU","uploadedAt":1790306878388}] -->
 `425 notes · 615 screenshots · 37 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
+> 
 > Sổ tay này đi sâu vào các thuật toán tối ưu hóa số cốt lõi như tìm kiếm đường thẳng, vùng tin cậy, quasi-Newton và gradient liên hợp, cùng các khái niệm thiết yếu như đạo hàm tự động, phân tích hội tụ và kỹ thuật đại số tuyến tính số.
 
 <details open>
@@ -744,7 +745,6 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 `878 notes · 1,145 screenshots · 50 sections`
 
 > This notebook contains detailed study notes and proofs based on Casella and Berger's *Statistical Inference*, covering key topics in probability theory, estimation methods, hypothesis testing, and asymptotic properties.
-> 
 > Sổ tay học tập này tổng hợp các ghi chép và chứng minh chi tiết dựa trên giáo trình *Statistical Inference* của Casella và Berger, bao gồm các chủ đề cốt lõi về lý thuyết xác suất, phương pháp ước lượng, kiểm định giả thuyết và tính chất tiệm cận.
 
 <details open>
@@ -878,17 +878,20 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 <a id="video-library"></a>
 ### 🎬 Video Library
 
-**`36 videos · 3 topics`**
+**`39 videos · 3 topics`**
 
 <a id="videos-optimization"></a>
 #### 📂 Optimization
 
 <details open>
-<summary>🎬 1 video</summary>
+<summary>🎬 4 videos</summary>
 
 | Video | Ngày đăng |
 |---|---|
+| [Tại sao hàm dual objective q(λ) luôn concave và domain 𝒟 lồi?](https://www.youtube.com/watch?v=UGddFxbogXU) | 25/09/2026 |
+| [Vì sao Projected Hessian Zᵀ∇²LZ giúp kiểm tra cực tiểu dễ hơn?](https://youtu.be/oS8uhtEOI9w) | 20/09/2026 |
 | [Vì sao df/dε = -λ\*\|\|∇ci\|\| khi thay đổi ràng buộc ci(x)?](https://youtu.be/6g2qIzX9yO0) | 20/09/2026 |
+| [Tại sao nhân tử Lagrange λ\* = 0 khi ràng buộc không active?](https://www.youtube.com/watch?v=wy_PaBOEbnY) | 19/09/2026 |
 
 </details>
 
