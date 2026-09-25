@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1790045742945,
+  "publishedAt": 1790307097844,
   "sections": [
     {
       "title": "📋 Overview",
@@ -18,7 +18,7 @@
       "title": "2.2 Funds of Unconstrained Optim - Overview of Algorithms",
       "path": "numerical_optimization_jnocedal/22_funds_of_unconstrained_optim_overview_of_algorithms.md",
       "noteCount": 24,
-      "imageCount": 35
+      "imageCount": 36
     },
     {
       "title": "3.1 Line Search Method: Step Length",
@@ -48,7 +48,7 @@
       "title": "3.5 Line Search Method: Step-Length Selection Algorithms",
       "path": "numerical_optimization_jnocedal/35_line_search_method_step_length_selection_algorithms.md",
       "noteCount": 12,
-      "imageCount": 15
+      "imageCount": 17
     },
     {
       "title": "4.0 Trust-Region Methods: Outline of the Trust-Region Approach",
@@ -84,7 +84,7 @@
       "title": "4.5 Trust-Region Methods: Other Enhancements",
       "path": "numerical_optimization_jnocedal/45_trust_region_methods_other_enhancements.md",
       "noteCount": 5,
-      "imageCount": 7
+      "imageCount": 8
     },
     {
       "title": "5.1 Linear Conjugate Gradient",
@@ -197,8 +197,14 @@
     {
       "title": "12.8 Lagrange Multipliers and Sensitivity",
       "path": "numerical_optimization_jnocedal/128_lagrange_multipliers_and_sensitivity.md",
-      "noteCount": 4,
+      "noteCount": 3,
       "imageCount": 5
+    },
+    {
+      "title": "12.9 Duality",
+      "path": "numerical_optimization_jnocedal/129_duality.md",
+      "noteCount": 3,
+      "imageCount": 4
     },
     {
       "title": "Appendix A",
@@ -219,6 +225,6 @@
       "imageCount": 11
     }
   ],
-  "totalNotes": 423,
-  "totalImages": 607
+  "totalNotes": 425,
+  "totalImages": 615
 }
