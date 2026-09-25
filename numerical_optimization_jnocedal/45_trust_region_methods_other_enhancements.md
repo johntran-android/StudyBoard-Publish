@@ -1,6 +1,6 @@
 # 4.5 Trust-Region Methods: Other Enhancements
 
-📊 **Progress:** `5` Notes | `7` Screenshots | `3` AI Reviews
+📊 **Progress:** `5` Notes | `8` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-dpbrs26"></a>
@@ -15,6 +15,8 @@
 ## 4.5 Trust-Region Method: Other Enhancements - Scaling
 
 <p align="center"><kbd><img src="assets/5xk4ijstogw.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6y2mzuzhvil.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/0eg8e9eyz1g.png" width="80%"></kbd></p>
 
