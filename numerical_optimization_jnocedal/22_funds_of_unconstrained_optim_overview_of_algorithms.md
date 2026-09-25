@@ -1,6 +1,6 @@
 # 2.2 Funds of Unconstrained Optim - Overview of Algorithms
 
-📊 **Progress:** `24` Notes | `35` Screenshots | `20` AI Reviews
+📊 **Progress:** `24` Notes | `36` Screenshots | `20` AI Reviews
 
 ---
 <a id="node-ch96e0i"></a>
@@ -321,6 +321,8 @@
 ###### Hướng Newton qua xấp xỉ Taylor
 
 <p align="center"><kbd><img src="assets/oja5n3mw5cr.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5mdlslm75s4.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi, ta gặp lại người bạn cũ **Newton direction**, tác giả nói một search direction quan trọng có thể là quan trọng nhất chính là Newton direction. Đựơc derive bằng cách dùng xấp xỉ Taylor bậc hai của f(x_k + p).
