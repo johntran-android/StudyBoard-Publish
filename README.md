@@ -44,7 +44,7 @@ Hướng tiếp theo là tiếp tục đi lên các lớp ML ở tầng cao hơn
 
 Repository này vì vậy chủ yếu là một **learning log** — dấu vết của quá trình đi từ nền tảng toán, probability, statistics và optimization lên machine learning, đồng thời là một phần của quá trình build StudyBoard.
 
-**`~12,370 notes` · `~17,876 screenshots` · `18 notebooks`**
+**`~12,372 notes` · `~17,884 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -534,30 +534,31 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 ### Numerical Optimization_J.Nocedal
 <!-- key: numerical_optimization_jnocedal -->
 <!-- group: Optimization -->
-`423 notes · 607 screenshots · 36 sections`
+`425 notes · 615 screenshots · 37 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
+> 
 > Sổ tay này đi sâu vào các thuật toán tối ưu hóa số cốt lõi như tìm kiếm đường thẳng, vùng tin cậy, quasi-Newton và gradient liên hợp, cùng các khái niệm thiết yếu như đạo hàm tự động, phân tích hội tụ và kỹ thuật đại số tuyến tính số.
 
 <details open>
-<summary>📖 36 sections</summary>
+<summary>📖 37 sections</summary>
 
 | Section | Notes | Screenshots |
 |---|---:|---:|
 | [📋 Overview](numerical_optimization_jnocedal/_overview.md) | 1 | 1 |
 | [2.1 Funds of Unconstrained Optim - What's Solution](numerical_optimization_jnocedal/21_funds_of_unconstrained_optim_whats_solution.md) | 15 | 21 |
-| [2.2 Funds of Unconstrained Optim - Overview of Algorithms](numerical_optimization_jnocedal/22_funds_of_unconstrained_optim_overview_of_algorithms.md) | 24 | 35 |
+| [2.2 Funds of Unconstrained Optim - Overview of Algorithms](numerical_optimization_jnocedal/22_funds_of_unconstrained_optim_overview_of_algorithms.md) | 24 | 36 |
 | [3.1 Line Search Method: Step Length](numerical_optimization_jnocedal/31_line_search_method_step_length.md) | 13 | 20 |
 | [3.2 Line Search Method: Convergence of Line Search Methods](numerical_optimization_jnocedal/32_line_search_method_convergence_of_line_search_methods.md) | 10 | 13 |
 | [3.3 Line Search Method: Rate of Convergence](numerical_optimization_jnocedal/33_line_search_method_rate_of_convergence.md) | 19 | 23 |
 | [3.4 Line Search Method: Newton’s Method with Hessian Modification](numerical_optimization_jnocedal/34_line_search_method_newtons_method_with_hessian_modification.md) | 24 | 29 |
-| [3.5 Line Search Method: Step-Length Selection Algorithms](numerical_optimization_jnocedal/35_line_search_method_step_length_selection_algorithms.md) | 12 | 15 |
+| [3.5 Line Search Method: Step-Length Selection Algorithms](numerical_optimization_jnocedal/35_line_search_method_step_length_selection_algorithms.md) | 12 | 17 |
 | [4.0 Trust-Region Methods: Outline of the Trust-Region Approach](numerical_optimization_jnocedal/40_trust_region_methods_outline_of_the_trust_region_approach.md) | 12 | 11 |
 | [4.1 Trust-Region Methods: Algorithms Based on the Cauchy Point](numerical_optimization_jnocedal/41_trust_region_methods_algorithms_based_on_the_cauchy_point.md) | 11 | 17 |
 | [4.2 Trust-Region Methods: Global Convergence](numerical_optimization_jnocedal/42_trust_region_methods_global_convergence.md) | 13 | 16 |
 | [4.3 Trust-Region Methods: Iterative Solution of the Subproblem](numerical_optimization_jnocedal/43_trust_region_methods_iterative_solution_of_the_subproblem.md) | 16 | 26 |
 | [4.4 Trust-Region Methods: Local Convergence of Trust-Region Newton Method](numerical_optimization_jnocedal/44_trust_region_methods_local_convergence_of_trust_region_newton_method.md) | 1 | 0 |
-| [4.5 Trust-Region Methods: Other Enhancements](numerical_optimization_jnocedal/45_trust_region_methods_other_enhancements.md) | 5 | 7 |
+| [4.5 Trust-Region Methods: Other Enhancements](numerical_optimization_jnocedal/45_trust_region_methods_other_enhancements.md) | 5 | 8 |
 | [5.1 Linear Conjugate Gradient](numerical_optimization_jnocedal/51_linear_conjugate_gradient.md) | 23 | 52 |
 | [6.1 The BFGS Method](numerical_optimization_jnocedal/61_the_bfgs_method.md) | 20 | 27 |
 | [6.2 The SR1 Method](numerical_optimization_jnocedal/62_the_sr1_method.md) | 6 | 15 |
@@ -576,7 +577,8 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 | [12.3 First Order Optimality Condition](numerical_optimization_jnocedal/123_first_order_optimality_condition.md) | 3 | 5 |
 | [12.5  Second-Order Conditions](numerical_optimization_jnocedal/125_second_order_conditions.md) | 14 | 26 |
 | [12.6 Other constraint qualification](numerical_optimization_jnocedal/126_other_constraint_qualification.md) | 2 | 2 |
-| [12.8 Lagrange Multipliers and Sensitivity](numerical_optimization_jnocedal/128_lagrange_multipliers_and_sensitivity.md) | 4 | 5 |
+| [12.8 Lagrange Multipliers and Sensitivity](numerical_optimization_jnocedal/128_lagrange_multipliers_and_sensitivity.md) | 3 | 5 |
+| [12.9 Duality](numerical_optimization_jnocedal/129_duality.md) | 3 | 4 |
 | [Appendix A](numerical_optimization_jnocedal/appendix_a.md) | 1 | 1 |
 | [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_jnocedal/a1_error_analysis_floating_point_arithmetic.md) | 8 | 10 |
 | [A.1 Matrix Factorizations: Cholesky, LU, QR](numerical_optimization_jnocedal/a1_matrix_factorizations_cholesky_lu_qr.md) | 9 | 11 |
@@ -595,7 +597,6 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 `437 notes · 663 screenshots · 70 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
-> 
 > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
