@@ -1,6 +1,6 @@
 # 3.5 Line Search Method: Step-Length Selection Algorithms
 
-📊 **Progress:** `12` Notes | `15` Screenshots | `10` AI Reviews
+📊 **Progress:** `12` Notes | `17` Screenshots | `10` AI Reviews
 
 ---
 <a id="node-7nocbf5"></a>
@@ -302,7 +302,11 @@
 
 ###### Initial Step Length
 
+<p align="center"><kbd><img src="assets/1136ianc1vsq.png" width="80%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/tr1nf3lrp9.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/g3jgcpuh0o7.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Qua phần này, ta bàn về cách chọn giá trị khởi đầu của step length: α0
