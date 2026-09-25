@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1790309202209,
+  "publishedAt": 1790380619224,
   "sections": [
     {
       "title": "📋 Overview",
@@ -407,8 +407,14 @@
     {
       "title": "4.3.3 Iterative reweighted least squares",
       "path": "pattern_recognition_machine_learning_cbishop/433_iterative_reweighted_least_squares.md",
-      "noteCount": 5,
-      "imageCount": 7
+      "noteCount": 6,
+      "imageCount": 9
+    },
+    {
+      "title": "4.3.4 Multiclass logistic regression",
+      "path": "pattern_recognition_machine_learning_cbishop/434_multiclass_logistic_regression.md",
+      "noteCount": 2,
+      "imageCount": 2
     },
     {
       "title": "Appendix C. Matrices",
@@ -423,6 +429,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 437,
-  "totalImages": 663
+  "totalNotes": 440,
+  "totalImages": 667
 }
