@@ -1,6 +1,6 @@
 # 12.9 Duality
 
-📊 **Progress:** `3` Notes | `4` Screenshots | `3` AI Reviews
+📊 **Progress:** `5` Notes | `7` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-j9in33p"></a>
@@ -265,6 +265,287 @@
 > - Bản chất hàm dual q(λ) là infimum của một họ các hàm affine theo λ; vì infimum từng điểm (pointwise infimum) của một họ các hàm concave/affine luôn là một hàm concave, nên q(λ) luôn concave ngay cả khi bài toán gốc không lồi.
 
 **🔗 See also:** [Convex function *(EE364a, Convex Optim_S.Boyd)*](../ee364a_convex_optim_sboyd/lec_3.md#node-zktzuo5) · [linked note *(EE364a, Convex Optim_S.Boyd)*](../ee364a_convex_optim_sboyd/lec_2.md#node-65mxxf3)
+
+<br>
+
+<a id="node-pm4rolj"></a>
+
+#### Theorem 12.11 Weak Duality
+
+<p align="center"><kbd><img src="assets/vli512mx80e.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Định lý Weak Duality, đã học trong sách Boyd:
+>
+>
+>
+> Đại ý là với mọi x̄ feasible và λ̃ ≥ 0, ta sẽ có q(λ̃) ≤ f(x̄).
+>
+>
+>
+> Chứng minh cũng đơn giản:
+>
+>
+>
+> ℒ(x, λ) = f(x) - λᵀc(x)
+>
+>
+>
+> Theo định nghĩa, q(λ) = inf_x ℒ(x, λ) nên đương nhiên q(λ) ≤ ℒ(x̄, λ) ∀x̄
+>
+>
+>
+> ⇔ q(λ) ≤ f(x̄) - λᵀc(x̄), và cái này cũng đúng với mọi λ, nên:
+>
+>
+>
+> q(λ̃) ≤ f(x̄) - λ̃ ᵀc(x̄)
+>
+>
+>
+> Tiếp, vì λ̃ ≥ 0 và x̄ feasible nên c(x̄) ≥ 0 ⇒ - λ̃ ᵀc(x̄) ≤ 0
+>
+>
+>
+> ⇒ f(x̄) - λ̃ ᵀc(x̄) ≤ f(x̄).
+>
+>
+>
+> Vậy q(λ̃ ) ≤ f(x̄)
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=GtOATZjDGQs)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chép rất tốt, diễn giải các bước chứng minh định lý Đối ngẫu yếu (Weak Duality) một cách tường minh và chính xác.
+>
+> **✓ Strengths**
+> - Hiểu bản chất và diễn giải chi tiết chuỗi bất đẳng thức từ định nghĩa hàm đối ngẫu (infimum của Lagrangian) đến việc áp dụng tính khả thi và điều kiện dấu của biến đối ngẫu.
+>
+> **💡 Deeper notes**
+> - Ký hiệu trong sách gốc là lambda gạch ngang (\bar{\lambda}) thay vì lambda ngã (\tilde{\lambda}), và bước thay công thức Lagrangian nên dùng dấu suy ra hoặc dấu bằng thay vì dấu tương đương (\Leftrightarrow).
+
+<br>
+
+<a id="node-5koe9af"></a>
+
+##### KKT Conditions and Dual Problem
+
+<p align="center"><kbd><img src="assets/2rat312ylhq.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/jivbznzqctf.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Vài điểm mấu chốt của chứng minh:
+>
+>
+>
+> i) vì f(x), -ci(x) i=1,2...m đều là convex nên với mọi θ ∈ \[0,1\]
+>
+>
+>
+> f(θx+(1-θ)y) ≤ θf(x) + (1-θ)f(y)
+>
+>
+>
+> \-ci(θx+(1-θ)y) ≤ -θci(x) - (1-θ)ci(y) ∀i=1,2...m
+>
+>
+>
+> Với λ̃ ≥ 0 (λ̃ i ≥ 0 ∀i) thì ta có
+>
+>
+>
+> ⇔ -λ̃ i ci(θx+(1-θ)y) ≤ -θλ̃ ici(x) - (1-θ)λ̃ ici(y) ∀i=1,2...m
+>
+>
+>
+> ⇒ -Σi λ̃ i ci(θx+(1-θ)y) ≤ Σi \[-θλ̃ ici(x) - (1-θ)λ̃ ici(y)\] (cộng vế theo vế)
+>
+>
+>
+> ⇒ -Σi λ̃ i ci(θx+(1-θ)y) ≤ -θ Σi λ̃ ici(x) - (1-θ) Σi λ̃ ici(y)
+>
+>
+>
+> ⇒ f(θx+(1-θ)y) -Σi λ̃ i ci(θx+(1-θ)y) ≤ θf(x) + (1-θ)f(y) -θ Σi λ̃ ici(x) - (1-θ) Σi λ̃ ici(y)
+>
+>
+>
+> ⇔ f(θx+(1-θ)y) -Σi λ̃ i ci(θx+(1-θ)y) ≤ θf(x) -θ Σi λ̃ ici(x) + (1-θ)f(y) - (1-θ) Σi λ̃ ici(y)
+>
+>
+>
+> ⇔ f(θx+(1-θ)y) -Σi λ̃ i ci(θx+(1-θ)y) ≤ θ\[f(x) - Σi λ̃ ici(x)\] + (1-θ)\[f(y) - Σi λ̃ ici(y)\]
+>
+>
+>
+> ℒ(θx+(1-θ)y), λ̃) ≤ θ ℒ(x, λ̃) + (1-θ)ℒ(y, λ̃)
+>
+>
+>
+> Vậy ℒ(x, λ̃) convex
+>
+>
+>
+> ---
+>
+>
+>
+> Dùng định lý Taylor:
+>
+>
+>
+> f(x0 + p) = f(x0) + ∇f(x0)ᵀp + (1/2)pᵀ∇²f(x0 + αp)p for some α ∈ (0,1)
+>
+>
+>
+> Nếu f convex thì Hessian luôn xác định bán dương khiến hạng tử thứ 3 luôn không âm dẫn đến f(x0 + p) ≥ f(x0) + ∇f(x0)ᵀp
+>
+>
+>
+> Áp dụng cái này có ℒ ta có:
+>
+>
+>
+> ℒ(x, λ̃) ≥ ℒ(x̄, λ̃) + ∇\_xℒ(x̄, λ̃ )ᵀ(x-x̄)
+>
+>
+>
+> ---
+>
+>
+>
+> Tuy nhiên lập luận trên cần giả định hàm f khả vi kép, nên ta có thể làm kiểu khác:
+>
+>
+>
+> Dựa vào định nghĩa hàm lồi: θf(x) + (1-θ)f(y) ≥ f(θx+(1-θ)y)
+>
+>
+>
+> ⇔ θf(x) + f(y) - θf(y) ≥ f(θx+(1-θ)y)
+>
+>
+>
+> ⇔ θf(x) - θf(y) + f(y) ≥ f(θx-θy+y)
+>
+>
+>
+> ⇔ θ\[f(x) - f(y)\] ≥ f(θ(x-y)+y) - f(y)
+>
+>
+>
+> ⇔ f(x) - f(y) ≥ \[f(θ(x-y)+y) - f(y)\]/θ
+>
+>
+>
+> Lấy lim θ → 0 hai vế ta có:
+>
+>
+>
+> Vế phải lim θ→0 \[f(θ(x-y)+y) - f(y)\]/θ chính là gì?
+>
+>
+>
+> \[f(y + θp) - f(y)\]/θ
+>
+>
+>
+> Nó chính là định nghĩa của directional hàm f theo hướng d = x-y, và như vậy cũng chính là ∇f(y)ᵀ(x-y)
+>
+>
+>
+> Do đó f(x) - f(y) ≥ ∇f(y)ᵀ(x-y)
+>
+>
+>
+> Áp dụng cho convex function ℒ(x, λ̃ ):
+>
+>
+>
+> ℒ(x, λ̃ ) ≥ ℒ(x̄, λ̃ ) + ∇\_x ℒ(x̄, λ̃ )ᵀ(x - x̄ )
+>
+>
+>
+>
+>
+> ---
+>
+>
+>
+> Và vì x̄ là điểm thỏa KKT nên theo stationary condition, ta có: ∇\_xℒ(x̄, λ̃ ) = 0, suy ra:
+>
+>
+>
+> ℒ(x, λ̃ ) ≥ ℒ(x̄, λ̃ ) ∀x
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, theo định nghĩa hàm q: q(λ̃ ) = inf_x ℒ(x, λ̃ )
+>
+>
+>
+> Mà ở trên ta có ℒ(x, λ̃) ≥ ℒ(x̄, λ̃) ∀x nên ℒ(x̄, λ̃ ) chính là inf_x ℒ(x, λ̃ )
+>
+>
+>
+> Vậy q(λ̃ ) = ℒ(x̄, λ̃ )
+>
+>
+>
+> ⇔ q(λ̃ ) = f(x̄) - λ̃ ᵀc(x̄ )
+>
+>
+>
+> Và đề bài cho λ̃ (và x̄ ) thỏa KKT nên theo complementary condition của KKT, ta có: λ̃ ᵀc(x̄ ) = 0
+>
+>
+>
+> Vậy q(λ̃ ) = f(x̄)
+>
+>
+>
+> ---
+>
+>
+>
+> Cuối cùng, vì theorem 12.11 vừa rồi thì với mọi λ ≥ 0 thì q(λ) ≤ f(x̄ )
+>
+>
+>
+> ⇒ q(λ) ≤ q(λ̃ ) với mọi λ ≥ 0
+>
+>
+>
+> Tới đây giúp kết luận λ̃ chính là solution của bài toán maximize\_λ q(λ) s.t λ ≥ 0
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú xuất sắc! Bạn đã tự chứng minh chi tiết các bước cốt lõi của định lý 12.12 một cách rất chặt chẽ, đặc biệt là việc tự dẫn xuất điều kiện bậc nhất của hàm lồi mà không cần giả định khả vi bậc hai.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Lấy lim θ → 0 hai vế ta có: Vế phải lim θ→0 [f(θ(x-y)+y) - f(y)]/θ chính là gì?"*
+>
+> Về mặt giải tích, giới hạn này cần xác định là giới hạn một phía từ bên phải (θ → 0⁺) vì bất đẳng thức chỉ giữ nguyên chiều khi θ > 0 (với θ ∈ (0, 1]).
+>
+>
+> **✓ Strengths**
+> - Chứng minh chi tiết và chặt chẽ tính lồi của hàm Lagrange từ định nghĩa tổ hợp lồi có trọng số không âm.
+> - Rất nhạy bén khi nhận ra định lý Taylor đòi hỏi tính khả vi cấp 2 và đã thay thế bằng dẫn xuất chặt chẽ qua đạo hàm theo hướng (directional derivative).
+> - Kết nối mạch lạc từ điều kiện KKT (stationarity, complementary slackness) tới tính đối ngẫu yếu để chứng minh nghiệm tối ưu của bài toán đối ngẫu.
+>
+> **💡 Deeper notes**
+> - Để đạo hàm theo hướng dọc theo d = x - y bằng chính xác ∇f(y)ᵀ(x - y), hàm f cần khả vi Fréchet/Gâteaux tại y. Giả thiết của định lý đã đảm bảo tính khả vi tại x̄ nên lập luận hoàn toàn hợp lệ.
+
+**🔗 See also:** [Theorem 2.1 Taylor's theorem, Taylor theorem](./21_funds_of_unconstrained_optim_whats_solution.md#node-zekxi9u) · [Convex function *(EE364a, Convex Optim_S.Boyd)*](../ee364a_convex_optim_sboyd/lec_3.md#node-zktzuo5)
 
 <br>
 
