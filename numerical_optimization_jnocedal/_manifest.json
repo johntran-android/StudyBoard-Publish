@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1790354835915,
+  "publishedAt": 1790399371963,
   "sections": [
     {
       "title": "📋 Overview",
@@ -203,8 +203,8 @@
     {
       "title": "12.9 Duality",
       "path": "numerical_optimization_jnocedal/129_duality.md",
-      "noteCount": 3,
-      "imageCount": 4
+      "noteCount": 5,
+      "imageCount": 7
     },
     {
       "title": "Appendix A",
@@ -225,6 +225,6 @@
       "imageCount": 11
     }
   ],
-  "totalNotes": 425,
-  "totalImages": 615
+  "totalNotes": 427,
+  "totalImages": 618
 }
