@@ -44,7 +44,7 @@ Hướng tiếp theo là tiếp tục đi lên các lớp ML ở tầng cao hơn
 
 Repository này vì vậy chủ yếu là một **learning log** — dấu vết của quá trình đi từ nền tảng toán, probability, statistics và optimization lên machine learning, đồng thời là một phần của quá trình build StudyBoard..
 
-**`~12,376 notes` · `~17,891 screenshots` · `18 notebooks`**
+**`~12,378 notes` · `~17,894 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
@@ -536,10 +536,11 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 ### Numerical Optimization_J.Nocedal
 <!-- key: numerical_optimization_jnocedal -->
 <!-- group: Optimization -->
-<!-- videos: [{"url":"https://youtu.be/6g2qIzX9yO0","title":"Vì sao df/dε = -λ*||∇ci|| khi thay đổi ràng buộc ci(x)?","videoId":"6g2qIzX9yO0","uploadedAt":1789916409346},{"url":"https://www.youtube.com/watch?v=wy_PaBOEbnY","title":"Tại sao nhân tử Lagrange λ* = 0 khi ràng buộc không active?","videoId":"wy_PaBOEbnY","uploadedAt":1789858516690},{"url":"https://youtu.be/oS8uhtEOI9w","title":"Vì sao Projected Hessian Zᵀ∇²LZ giúp kiểm tra cực tiểu dễ hơn?","videoId":"oS8uhtEOI9w","uploadedAt":1789916587155},{"url":"https://www.youtube.com/watch?v=UGddFxbogXU","title":"Tại sao hàm dual objective q(λ) luôn concave và domain 𝒟 lồi?","videoId":"UGddFxbogXU","uploadedAt":1790306878388}] -->
-`425 notes · 615 screenshots · 37 sections`
+<!-- videos: [{"url":"https://youtu.be/6g2qIzX9yO0","title":"Vì sao df/dε = -λ*||∇ci|| khi thay đổi ràng buộc ci(x)?","videoId":"6g2qIzX9yO0","uploadedAt":1789916409346},{"url":"https://www.youtube.com/watch?v=wy_PaBOEbnY","title":"Tại sao nhân tử Lagrange λ* = 0 khi ràng buộc không active?","videoId":"wy_PaBOEbnY","uploadedAt":1789858516690},{"url":"https://youtu.be/oS8uhtEOI9w","title":"Vì sao Projected Hessian Zᵀ∇²LZ giúp kiểm tra cực tiểu dễ hơn?","videoId":"oS8uhtEOI9w","uploadedAt":1789916587155},{"url":"https://www.youtube.com/watch?v=GtOATZjDGQs","title":"Theorem 12.11 Weak Duality","videoId":"GtOATZjDGQs","uploadedAt":1790393266298},{"url":"https://www.youtube.com/watch?v=UGddFxbogXU","title":"Tại sao hàm dual objective q(λ) luôn concave và domain 𝒟 lồi?","videoId":"UGddFxbogXU","uploadedAt":1790306878388}] -->
+`427 notes · 618 screenshots · 37 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
+> 
 > Sổ tay này đi sâu vào các thuật toán tối ưu hóa số cốt lõi như tìm kiếm đường thẳng, vùng tin cậy, quasi-Newton và gradient liên hợp, cùng các khái niệm thiết yếu như đạo hàm tự động, phân tích hội tụ và kỹ thuật đại số tuyến tính số.
 
 <details open>
@@ -580,7 +581,7 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 | [12.5  Second-Order Conditions](numerical_optimization_jnocedal/125_second_order_conditions.md) | 14 | 26 |
 | [12.6 Other constraint qualification](numerical_optimization_jnocedal/126_other_constraint_qualification.md) | 2 | 2 |
 | [12.8 Lagrange Multipliers and Sensitivity](numerical_optimization_jnocedal/128_lagrange_multipliers_and_sensitivity.md) | 3 | 5 |
-| [12.9 Duality](numerical_optimization_jnocedal/129_duality.md) | 3 | 4 |
+| [12.9 Duality](numerical_optimization_jnocedal/129_duality.md) | 5 | 7 |
 | [Appendix A](numerical_optimization_jnocedal/appendix_a.md) | 1 | 1 |
 | [A.1 Error Analysis & Floating-Point Arithmetic](numerical_optimization_jnocedal/a1_error_analysis_floating_point_arithmetic.md) | 8 | 10 |
 | [A.1 Matrix Factorizations: Cholesky, LU, QR](numerical_optimization_jnocedal/a1_matrix_factorizations_cholesky_lu_qr.md) | 9 | 11 |
@@ -600,7 +601,6 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 `440 notes · 667 screenshots · 71 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
-> 
 > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
@@ -879,16 +879,17 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 <a id="video-library"></a>
 ### 🎬 Video Library
 
-**`41 videos · 3 topics`**
+**`42 videos · 3 topics`**
 
 <a id="videos-optimization"></a>
 #### 📂 Optimization
 
 <details open>
-<summary>🎬 4 videos</summary>
+<summary>🎬 5 videos</summary>
 
 | Video | Ngày đăng |
 |---|---|
+| [Theorem 12.11 Weak Duality](https://www.youtube.com/watch?v=GtOATZjDGQs) | 26/09/2026 |
 | [Tại sao hàm dual objective q(λ) luôn concave và domain 𝒟 lồi?](https://www.youtube.com/watch?v=UGddFxbogXU) | 25/09/2026 |
 | [Vì sao Projected Hessian Zᵀ∇²LZ giúp kiểm tra cực tiểu dễ hơn?](https://youtu.be/oS8uhtEOI9w) | 20/09/2026 |
 | [Vì sao df/dε = -λ\*\|\|∇ci\|\| khi thay đổi ràng buộc ci(x)?](https://youtu.be/6g2qIzX9yO0) | 20/09/2026 |
