@@ -536,7 +536,7 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 ### Numerical Optimization_J.Nocedal
 <!-- key: numerical_optimization_jnocedal -->
 <!-- group: Optimization -->
-<!-- videos: [{"url":"https://youtu.be/6g2qIzX9yO0","title":"Vì sao df/dε = -λ*||∇ci|| khi thay đổi ràng buộc ci(x)?","videoId":"6g2qIzX9yO0","uploadedAt":1789916409346},{"url":"https://www.youtube.com/watch?v=wy_PaBOEbnY","title":"Tại sao nhân tử Lagrange λ* = 0 khi ràng buộc không active?","videoId":"wy_PaBOEbnY","uploadedAt":1789858516690},{"url":"https://youtu.be/oS8uhtEOI9w","title":"Vì sao Projected Hessian Zᵀ∇²LZ giúp kiểm tra cực tiểu dễ hơn?","videoId":"oS8uhtEOI9w","uploadedAt":1789916587155},{"url":"https://www.youtube.com/watch?v=GtOATZjDGQs","title":"Theorem 12.11 Weak Duality","videoId":"GtOATZjDGQs","uploadedAt":1790393266298},{"url":"https://www.youtube.com/watch?v=UGddFxbogXU","title":"Tại sao hàm dual objective q(λ) luôn concave và domain 𝒟 lồi?","videoId":"UGddFxbogXU","uploadedAt":1790306878388}] -->
+<!-- videos: [{"url":"https://www.youtube.com/watch?v=qSrfcPuiA4k","title":"Tại sao nghiệm KKT λ̃ làm cực đại hóa hàm đối ngẫu q(λ)?","videoId":"qSrfcPuiA4k","uploadedAt":1790430332543},{"url":"https://youtu.be/6g2qIzX9yO0","title":"Vì sao df/dε = -λ*||∇ci|| khi thay đổi ràng buộc ci(x)?","videoId":"6g2qIzX9yO0","uploadedAt":1789916409346},{"url":"https://www.youtube.com/watch?v=wy_PaBOEbnY","title":"Tại sao nhân tử Lagrange λ* = 0 khi ràng buộc không active?","videoId":"wy_PaBOEbnY","uploadedAt":1789858516690},{"url":"https://youtu.be/oS8uhtEOI9w","title":"Vì sao Projected Hessian Zᵀ∇²LZ giúp kiểm tra cực tiểu dễ hơn?","videoId":"oS8uhtEOI9w","uploadedAt":1789916587155},{"url":"https://www.youtube.com/watch?v=GtOATZjDGQs","title":"Theorem 12.11 Weak Duality","videoId":"GtOATZjDGQs","uploadedAt":1790393266298},{"url":"https://www.youtube.com/watch?v=UGddFxbogXU","title":"Tại sao hàm dual objective q(λ) luôn concave và domain 𝒟 lồi?","videoId":"UGddFxbogXU","uploadedAt":1790306878388}] -->
 `427 notes · 618 screenshots · 37 sections`
 
 > This notebook delves into core numerical optimization algorithms like line search, trust-region, quasi-Newton, and conjugate gradient methods, alongside essential concepts such as automatic differentiation, convergence analysis, and numerical linear algebra techniques.
@@ -879,16 +879,17 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 <a id="video-library"></a>
 ### 🎬 Video Library
 
-**`42 videos · 3 topics`**
+**`43 videos · 3 topics`**
 
 <a id="videos-optimization"></a>
 #### 📂 Optimization
 
 <details open>
-<summary>🎬 5 videos</summary>
+<summary>🎬 6 videos</summary>
 
 | Video | Ngày đăng |
 |---|---|
+| [Tại sao nghiệm KKT λ̃ làm cực đại hóa hàm đối ngẫu q(λ)?](https://www.youtube.com/watch?v=qSrfcPuiA4k) | 26/09/2026 |
 | [Theorem 12.11 Weak Duality](https://www.youtube.com/watch?v=GtOATZjDGQs) | 26/09/2026 |
 | [Tại sao hàm dual objective q(λ) luôn concave và domain 𝒟 lồi?](https://www.youtube.com/watch?v=UGddFxbogXU) | 25/09/2026 |
 | [Vì sao Projected Hessian Zᵀ∇²LZ giúp kiểm tra cực tiểu dễ hơn?](https://youtu.be/oS8uhtEOI9w) | 20/09/2026 |
