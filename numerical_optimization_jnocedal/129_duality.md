@@ -525,6 +525,8 @@
 >
 > Tới đây giúp kết luận λ̃ chính là solution của bài toán maximize\_λ q(λ) s.t λ ≥ 0
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=qSrfcPuiA4k)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
