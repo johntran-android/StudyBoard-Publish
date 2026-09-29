@@ -1,6 +1,6 @@
 # 12.9 Duality
 
-📊 **Progress:** `5` Notes | `7` Screenshots | `5` AI Reviews
+📊 **Progress:** `6` Notes | `9` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-j9in33p"></a>
@@ -74,6 +74,8 @@
 > **💡 Deeper notes**
 > - Lưu ý lỗi in ấn (typo) trong ảnh gốc ở công thức (12.82) và (12.84): sách viết nhầm $q: \mathbb{R}^n \to \mathbb{R}$ và $\max_{\lambda \in \mathbb{R}^n}$, trong khi đúng bản chất phải là $\lambda \in \mathbb{R}^m$ như bạn đã nhận định.
 > - Khi $-c_i$ lồi và $\lambda \ge 0$, hàm $-\lambda_i c_i(x)$ là hàm lồi, dẫn đến Lagrangian $\mathcal{L}(\cdot, \lambda)$ lồi theo $x$, giúp mọi điểm cực tiểu địa phương đều là cực tiểu toàn cục.
+
+**🔗 See also:** [KKT Conditions and Dual Problem](#node-5koe9af) · [Dual Solutions and Strict Convexity](#node-3r5tueo)
 
 <br>
 
@@ -332,9 +334,9 @@
 
 ##### KKT Conditions and Dual Problem
 
-<p align="center"><kbd><img src="assets/2rat312ylhq.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/x0hymphrcca.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/jivbznzqctf.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/noitq2rfx8o.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Vài điểm mấu chốt của chứng minh:
@@ -353,39 +355,39 @@
 >
 >
 >
-> Với λ̃ ≥ 0 (λ̃ i ≥ 0 ∀i) thì ta có
+> Với λ̂ ≥ 0 (λ̂ i ≥ 0 ∀i) thì ta có
 >
 >
 >
-> ⇔ -λ̃ i ci(θx+(1-θ)y) ≤ -θλ̃ ici(x) - (1-θ)λ̃ ici(y) ∀i=1,2...m
+> ⇔ -λ̂ i ci(θx+(1-θ)y) ≤ -θλ̂ ici(x) - (1-θ)λ̂ ici(y) ∀i=1,2...m
 >
 >
 >
-> ⇒ -Σi λ̃ i ci(θx+(1-θ)y) ≤ Σi \[-θλ̃ ici(x) - (1-θ)λ̃ ici(y)\] (cộng vế theo vế)
+> ⇒ -Σi λ̂ i ci(θx+(1-θ)y) ≤ Σi \[-θλ̂ ici(x) - (1-θ)λ̂ ici(y)\] (cộng vế theo vế)
 >
 >
 >
-> ⇒ -Σi λ̃ i ci(θx+(1-θ)y) ≤ -θ Σi λ̃ ici(x) - (1-θ) Σi λ̃ ici(y)
+> ⇒ -Σi λ̂ i ci(θx+(1-θ)y) ≤ -θ Σi λ̂ ici(x) - (1-θ) Σi λ̂ ici(y)
 >
 >
 >
-> ⇒ f(θx+(1-θ)y) -Σi λ̃ i ci(θx+(1-θ)y) ≤ θf(x) + (1-θ)f(y) -θ Σi λ̃ ici(x) - (1-θ) Σi λ̃ ici(y)
+> ⇒ f(θx+(1-θ)y) -Σi λ̂ i ci(θx+(1-θ)y) ≤ θf(x) + (1-θ)f(y) -θ Σi λ̂ ici(x) - (1-θ) Σi λ̂ ici(y)
 >
 >
 >
-> ⇔ f(θx+(1-θ)y) -Σi λ̃ i ci(θx+(1-θ)y) ≤ θf(x) -θ Σi λ̃ ici(x) + (1-θ)f(y) - (1-θ) Σi λ̃ ici(y)
+> ⇔ f(θx+(1-θ)y) -Σi λ̂ i ci(θx+(1-θ)y) ≤ θf(x) -θ Σi λ̂ ici(x) + (1-θ)f(y) - (1-θ) Σi λ̂ ici(y)
 >
 >
 >
-> ⇔ f(θx+(1-θ)y) -Σi λ̃ i ci(θx+(1-θ)y) ≤ θ\[f(x) - Σi λ̃ ici(x)\] + (1-θ)\[f(y) - Σi λ̃ ici(y)\]
+> ⇔ f(θx+(1-θ)y) -Σi λ̂ i ci(θx+(1-θ)y) ≤ θ\[f(x) - Σi λ̂ ici(x)\] + (1-θ)\[f(y) - Σi λ̂ ici(y)\]
 >
 >
 >
-> ℒ(θx+(1-θ)y), λ̃) ≤ θ ℒ(x, λ̃) + (1-θ)ℒ(y, λ̃)
+> ℒ(θx+(1-θ)y), λ̂) ≤ θ ℒ(x, λ̂) + (1-θ)ℒ(y, λ̂)
 >
 >
 >
-> Vậy ℒ(x, λ̃) convex
+> Vậy ℒ(x, λ̂) convex
 >
 >
 >
@@ -409,7 +411,7 @@
 >
 >
 >
-> ℒ(x, λ̃) ≥ ℒ(x̄, λ̃) + ∇\_xℒ(x̄, λ̃ )ᵀ(x-x̄)
+> ℒ(x, λ̂) ≥ ℒ(x̄, λ̂) + ∇\_xℒ(x̄, λ̂ )ᵀ(x-x̄)
 >
 >
 >
@@ -461,25 +463,13 @@
 >
 >
 >
-> Áp dụng cho convex function ℒ(x, λ̃ ):
+> Áp dụng cho convex function ℒ(x, λ̂ ):
 >
 >
 >
-> ℒ(x, λ̃ ) ≥ ℒ(x̄, λ̃ ) + ∇\_x ℒ(x̄, λ̃ )ᵀ(x - x̄ )
+> ℒ(x, λ̂ ) ≥ ℒ(x̄, λ̂ ) + ∇\_x ℒ(x̄, λ̂ )ᵀ(x - x̄ )
 >
 >
->
->
->
-> ---
->
->
->
-> Và vì x̄ là điểm thỏa KKT nên theo stationary condition, ta có: ∇\_xℒ(x̄, λ̃ ) = 0, suy ra:
->
->
->
-> ℒ(x, λ̃ ) ≥ ℒ(x̄, λ̃ ) ∀x
 >
 >
 >
@@ -487,27 +477,39 @@
 >
 >
 >
-> Tiếp, theo định nghĩa hàm q: q(λ̃ ) = inf_x ℒ(x, λ̃ )
+> Và vì x̄ là điểm thỏa KKT nên theo stationary condition, ta có: ∇\_xℒ(x̄, λ̂ ) = 0, suy ra:
 >
 >
 >
-> Mà ở trên ta có ℒ(x, λ̃) ≥ ℒ(x̄, λ̃) ∀x nên ℒ(x̄, λ̃ ) chính là inf_x ℒ(x, λ̃ )
+> ℒ(x, λ̂ ) ≥ ℒ(x̄, λ̂ ) ∀x
 >
 >
 >
-> Vậy q(λ̃ ) = ℒ(x̄, λ̃ )
+> ---
 >
 >
 >
-> ⇔ q(λ̃ ) = f(x̄) - λ̃ ᵀc(x̄ )
+> Tiếp, theo định nghĩa hàm q: q(λ̂ ) = inf_x ℒ(x, λ̂ )
 >
 >
 >
-> Và đề bài cho λ̃ (và x̄ ) thỏa KKT nên theo complementary condition của KKT, ta có: λ̃ ᵀc(x̄ ) = 0
+> Mà ở trên ta có ℒ(x, λ̂) ≥ ℒ(x̄, λ̂) ∀x nên ℒ(x̄, λ̂ ) chính là inf_x ℒ(x, λ̂ )
 >
 >
 >
-> Vậy q(λ̃ ) = f(x̄)
+> Vậy q(λ̂ ) = ℒ(x̄, λ̂ )
+>
+>
+>
+> ⇔ q(λ̂ ) = f(x̄) - λ̂ ᵀc(x̄ )
+>
+>
+>
+> Và đề bài cho λ̂ (và x̄ ) thỏa KKT nên theo complementary condition của KKT, ta có: λ̂ ᵀc(x̄ ) = 0
+>
+>
+>
+> Vậy q(λ̂ ) = f(x̄)
 >
 >
 >
@@ -519,11 +521,11 @@
 >
 >
 >
-> ⇒ q(λ) ≤ q(λ̃ ) với mọi λ ≥ 0
+> ⇒ q(λ) ≤ q(λ̂ ) với mọi λ ≥ 0
 >
 >
 >
-> Tới đây giúp kết luận λ̃ chính là solution của bài toán maximize\_λ q(λ) s.t λ ≥ 0
+> Tới đây giúp kết luận λ̂ chính là solution của bài toán maximize\_λ q(λ) s.t λ ≥ 0
 
 📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=qSrfcPuiA4k)
 
@@ -547,7 +549,234 @@
 > **💡 Deeper notes**
 > - Để đạo hàm theo hướng dọc theo d = x - y bằng chính xác ∇f(y)ᵀ(x - y), hàm f cần khả vi Fréchet/Gâteaux tại y. Giả thiết của định lý đã đảm bảo tính khả vi tại x̄ nên lập luận hoàn toàn hợp lệ.
 
-**🔗 See also:** [Theorem 2.1 Taylor's theorem, Taylor theorem](./21_funds_of_unconstrained_optim_whats_solution.md#node-zekxi9u) · [Convex function *(EE364a, Convex Optim_S.Boyd)*](../ee364a_convex_optim_sboyd/lec_3.md#node-zktzuo5)
+**🔗 See also:** [Theorem 2.1 Taylor's theorem, Taylor theorem](./21_funds_of_unconstrained_optim_whats_solution.md#node-zekxi9u) · [Convex function *(EE364a, Convex Optim_S.Boyd)*](../ee364a_convex_optim_sboyd/lec_3.md#node-zktzuo5) · [Convex Programming with Inequality Constraints](#node-nr19nrj)
+
+<br>
+
+<a id="node-3r5tueo"></a>
+
+###### Dual Solutions and Strict Convexity
+
+<p align="center"><kbd><img src="assets/56drcf0eyap.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/t28o16qho5c.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là, nếu thỏa điều kiện nhất định, thì solution của bài toán dual có thể được dùng để giải bài toán primal. Điều kiện cụ thể là, hàm Lagrangian có tính lồi ngặt (strict convexity), xảy ra khi một trong các hàm f, hay -ci lồi ngặt (đương nhiên các hàm còn lại lồi)
+>
+>
+>
+> Theorem 12.13
+>
+>
+>
+> Cho x̄ là solution của 12.81, tức là bài toán minimize f(x) s.t ci(x) ≥ 0. Cho LICQ - chính là linearly independent constraint qualification - các ∇ci(x) đều độc lập tuyến tính.
+>
+>
+>
+> λ̂ solve 12.84 tức là bài toán maximize\_λ q(λ), nên q(λ) ≤ q(λ̂ ) ∀λ.
+>
+>
+>
+> Và x̂ = argmin_x ℒ(x, λ̂ ), cũng là ℒ(x̂, λ̂ ) ≤ ℒ(x, λ̂ ) ∀x
+>
+>
+>
+> Và ta giả sử ℒ(., λ̂ ) lồi ngặt.
+>
+>
+>
+> Khi đó, theorem này nói rằng x̂ phải bằng x̄, tức là: Cái thằng x̂ giúp minimize hàm ℒ(., λ̂ ) với λ̂ là nghiệm của bài toán dual lại cũng chính là nghiệm của bài toán primal.
+>
+>
+>
+> Ta có x̄ là primal solution (chính là x\* trong sách Boyd). ƛ là Lagrange multipler.
+>
+>
+>
+> Rồi λ̂ là dual solution, x̂ là minimizer của ℒ(., λ̂ )
+>
+>
+>
+> Đầu tiên chứng minh ℒ(x̄, ƛ) = q(ƛ) = q(λ̂ ) = ℒ(x̂, λ̂ )
+>
+>
+>
+> x̂ là minimizer của ℒ(., λ̂ ) ⇒ ℒ(x̂, λ̂ ) = inf_x ℒ(x, λ̂ )
+>
+>
+>
+> mà theo định nghĩa q(λ) = inf_x ℒ(x, λ) nên q(λ̂ ) = inf_x ℒ(x, λ̂ ) vậy nên q(λ̂ ) = ℒ(x̂, λ̂ ) → dấu bằng thứ 3.
+>
+>
+>
+> Theo theorem 12.12, nói rằng Lagrange multipler ƛ tương ứng với primal solution x̄ thì cũng chính là solution của dual problem và vì λ̂ cũng là dual solution, nên ta có q(ƛ) = q(λ̂ ) = sup\_λ q(λ) → dấu bằng thứ 2
+>
+>
+>
+> Còn dấu bằng thứ 1? x̄ là primal solution, nên ∇ℒ(x̄, ƛ) = 0. Mà vì do f, -ci đều là convex, với ít nhất một hàm trong đó strictly convex, nên ℒ(x, λ) = f(x) - λᵀc(x) cũng convex, việc gradient của ℒ vanish tại x̄ cho thấy x̄ cũng là minimizer của ℒ: ℒ(x̄, ƛ) = inf_x ℒ(x, ƛ). 
+>
+>
+>
+> Do đó, ℒ(x̄, ƛ) = q(ƛ) và ta có dấu bằng thứ 1.
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, giả định x̂ khác x̄, và dùng tính strict convexity của ℒ(., λ̂ ) ta có:
+>
+>
+>
+> f(x) ≈ f(x0) + ∇f(x0)ᵀ(x-x0) + (1/2)(x-x0)ᵀ∇²f(x0)(x-x0)
+>
+>
+>
+> ℒ(x̄ , λ̂ ) - ℒ(x̂, λ̂ ) &gt; ∇\_x ℒ(x̂, λ̂ )ᵀ(x̄ - x̂ )
+>
+>
+>
+> Mà x̂ là là minimizer của ℒ(x, λ̂ ), nên ∇\_x ℒ(x̂, λ̂ ) = 0
+>
+>
+>
+> ⇒ ℒ(x̄ , λ̂ ) - ℒ(x̂, λ̂ ) &gt; 0 ⇔ ℒ(x̄ , λ̂ ) &gt; ℒ(x̂, λ̂ )
+>
+>
+>
+> Dùng chuỗi dấu bằng ở trên ta có ℒ(x̄, ƛ) = ℒ(x̂, λ̂ )
+>
+>
+>
+> Nên ℒ(x̄ , λ̂ ) &gt; ℒ(x̂, λ̂ ) ⇔ ℒ(x̄ , λ̂ ) &gt; ℒ(x̄, ƛ)
+>
+>
+>
+> f(x̄ ) - λ̂ ᵀc(x̄ ) &gt; f(x̄ ) - ƛᵀc(x̄ )
+>
+>
+>
+> ⇔ -λ̂ ᵀc(x̄ ) &gt; -ƛᵀc(x̄ )
+>
+>
+>
+> Và ƛ và x̄ lại thỏa complementary nên ƛᵀc(x̄ ) = 0
+>
+>
+>
+> Vậy -λ̂ ᵀc(x̄ ) &gt; 0, tới đây vì x̄ là primal solution nên c(x̄ ) ≥ 0, còn λ̂  là solution của dual problem (maximize q(λ) s.t λ ≥ 0)  nên nó phải ≥ 0. nên -λ̂ ᵀc(x̄ ) không thể &gt; 0 được. Do đó giả định x̄ khác x̂ dẫn đến mâu thuẫn, vậy x̂ cũng phải là solution của primal problem.
+>
+>
+>
+> Còn f(x̄) = ℒ(x̂, λ̂ )?
+>
+>
+>
+> À thì là vì theo chuỗi dấu bằng thì ℒ(x̂, λ̂ ) = ℒ(x̄, ƛ ) = f(x̄ ) - ƛᵀc(x̄ ). Mà theo complementary condition thì ƛᵀc(x̄ ) = 0, vậy ℒ(x̂, λ̂ ) = ℒ(x̄, ƛ ) = f(x̄ ) + ƛᵀc(x̄ ) = f(x̄ )
+>
+>
+>
+>
+>
+> ---
+>
+>
+>
+> Active recall chút xíu kiến thức đã học trong Convex Optimimization S.Boyd, lập luận như sau:
+>
+>
+>
+> Ta có:
+>
+>
+>
+> λ\*, ν\* là solution của dual problem: q(λ, ν) ≤ q(λ\*, ν\*) ∀λ, ν
+>
+>
+>
+> q(λ, ν) = (def) inf_x ℒ(x, λ, ν) ⇒ q(λ, ν) ≤ ℒ(x, λ, ν) ∀x,λ,ν
+>
+>
+>
+> ⇒ q(λ, ν) ≤ q(λ\*, ν\*) ≤ ℒ(x, λ\*, ν\*) = f(x) + Σi λ\*i ci(x) + Σi ν\*i hi(x) ∀x
+>
+>
+>
+> và vì vậy
+>
+>
+>
+> ⇒ q(λ, ν) ≤ q(λ\*, ν\*) ≤ ℒ(x\*, λ\*, ν\*) = f(x\*) + Σi λ\*i ci(x\*) + Σi ν\*i hi(x\*)
+>
+>
+>
+> Với x\* thì hi(x\*) = 0 và ci(x\*) ≤ 0 nên cũng với λ\*i ≥ 0 ta suy ra Σi λ\*i ci(x) + Σi ν\*i hi(x) ≤ 0.
+>
+>
+>
+> Vậy f(x\*) + Σi λ\*i ci(x) + Σi ν\*i hi(x) = f(x\*) + số không dương ≤ f(x\*)
+>
+>
+>
+> Suy ra:
+>
+>
+>
+> q(λ, ν) ≤ q(λ\*, ν\*) = d\* (dual optimal) ≤ ℒ(x\*, λ\*, ν\*) = f(x\*) + Σi λ\*i ci(x\*) + Σi ν\*i hi(x\*) ≤ f(x\*) = p\* (primal optimal)
+>
+>
+>
+> Và tới đây, với điều kiện CQ, ví dụ như Slater CQ, thì ta có strong duality: d\* = p\* dẫn đến hai dấu ≤ thứ 2 và 3 ở trên trở thành dấu =:
+>
+>
+>
+> q(λ, ν) ≤ q(λ\*, ν\*) = d\* (dual optimal) = ℒ(x\*, λ\*, ν\*) = f(x\*) + Σi λ\*i ci(x\*) + Σi ν\*i hi(x\*) = f(x\*) = p\* (primal optimal)
+>
+>
+>
+> Và ý nghĩa của mỗi cái là:
+>
+>
+>
+> Dấu bằng thứ nhất q(λ\*, ν\*) = ℒ(x\*, λ\*, ν\*): Cho thấy x\* chính là minimizer của ℒ(x, λ\*, ν\*). Đây chính là điều mà theorem 12.13 này đang nói: Có nghĩa là, bằng cách giải tìm dual solution λ\*, ν\*, lắp vào ℒ, và đi giảm tìm x minimize ℒ, ta sẽ có được primal solution (solution của bài toán gốc)
+>
+>
+>
+> Dấu bằng thứ hai f(x\*) + Σi λ\*i ci(x\*) + Σi ν\*i hi(x\*) = f(x\*) cho thấy: λ\*, Lagrange multipler chính là dual solution, cái này chính là theorem 12.12 nói rằng Lagrange multipler gắn với primal solution sẽ chính là cái solve bài toán dual: Tức là, nếu x\* là primal solution, để rồi λ\*, ν\* là Lagrange multipler tương ứng: để cùng nhau chúng thỏa stationary condition ∇ℒ(x\*, λ\*, ν\*) = 0, và complementary Σi λ\*i ci(x\*) = 0 thì λ\*, ν\* cũng chính là nghiệm của dual problem: maximize λ,ν q(λ, ν)
+>
+>
+>
+> ---
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=PzLtTlIO-kE)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú thể hiện sự hiểu bài rất sâu sắc, liên hệ chính xác với kiến thức từ sách Boyd và diễn giải chi tiết, mạch lạc từng bước chứng minh của Định lý 12.13.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Cho LICQ - chính là linearly independent constraint qualification - các ∇ci(x) đều độc lập tuyến tính."*
+>
+> Định nghĩa LICQ chỉ yêu cầu gradient của các ràng buộc tích cực (active constraints, tức ci(x̄) = 0) tại điểm nghiệm x̄ là độc lập tuyến tính, chứ không phải toàn bộ tất cả ràng buộc.
+>
+> **2.** *"xảy ra khi một trong các hàm f, hay -ci lồi ngặt (đương nhiên các hàm còn lại lồi)"*
+>
+> Nếu dựa vào ràng buộc để hàm Lagrangian lồi ngặt, cần thêm điều kiện nhân tử Lagrange tương ứng phải dương nghiêm ngặt (λ̂_i > 0), nếu λ̂_i = 0 thì thành phần đó triệt tiêu và không đóng góp tính lồi ngặt vào Lagrangian.
+>
+>
+> **✓ Strengths**
+> - Nắm rất vững ý nghĩa cầu nối giữa nghiệm bài toán dual và nghiệm bài toán primal thông qua hàm Lagrangian.
+> - Liên hệ rất tốt chuỗi bất đẳng thức duality từ sách của Boyd để làm sáng tỏ các dấu bằng trong giáo trình Nocedal & Wright.
+> - Tự diễn giải lại chứng minh phản chứng của Định lý 12.13 một cách logic, dễ hiểu và chính xác từng bước.
+>
+> **💡 Deeper notes**
+> - Định lý 12.13 còn mang ý nghĩa tính duy nhất của nghiệm primal: nếu ℒ(·, λ̂) lồi ngặt thì điểm cực tiểu x̂ là duy nhất, do đó x̄ = x̂ chính là nghiệm duy nhất của bài toán primal ban đầu.
+
+**🔗 See also:** [Convex Programming with Inequality Constraints](#node-nr19nrj) · [Dual Solutions and Strict Convexity](#node-3r5tueo)
 
 <br>
 
