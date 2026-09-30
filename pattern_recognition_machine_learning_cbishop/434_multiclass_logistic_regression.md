@@ -1,6 +1,6 @@
 # 4.3.4 Multiclass logistic regression
 
-📊 **Progress:** `3` Notes | `3` Screenshots | `3` AI Reviews
+📊 **Progress:** `5` Notes | `8` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-o27ixba"></a>
@@ -308,6 +308,8 @@
 > - Ký hiệu phần tử ma trận đơn vị Ikj trong toán học và học máy thường được gọi là ký hiệu Kronecker delta (ký hiệu là δkj), mang ý nghĩa bằng 1 khi k = j và bằng 0 khi k ≠ j.
 > - Do các yk có tổng bằng 1 (ràng buộc simplex), ma trận Jacobian ∂y/∂a thực chất bị suy biến (rank tối đa là K - 1), phản ánh tính chất redundant/over-parameterized của hàm softmax nếu không cố định một w làm mốc.
 
+**🔗 See also:** [Gradient of Softmax Error Function](#node-8j52rv4) · [Hessian for Multiclass Logistic Regression](#node-y3mt2hk)
+
 <br>
 
 <a id="node-ndts6t4"></a>
@@ -469,6 +471,488 @@
 >
 > **💡 Deeper notes**
 > - Hàm phân phối này thực chất là phân phối Categorical (hay Multinoulli / Generalized Bernoulli). Dạng tích lũy thừa Π y_k^{t_k} tương tự như Bernoulli (y^t (1-y)^{1-t}) nhưng mở rộng cho K classes với ràng buộc vector t có đúng một phần tử bằng 1 và tổng y_k bằng 1.
+
+<br>
+
+<a id="node-8j52rv4"></a>
+
+##### Gradient of Softmax Error Function
+
+<p align="center"><kbd><img src="assets/olvlvbam02r.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/qnpzgecz8uc.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/nhaxssivsw.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đến đây ta đã có E(𝐰) = - Σn=1:N Σk=1:K \[tnk ln(ynk)\]
+>
+>
+>
+> Đương nhiên ta hiểu nó là E(𝐰1, 𝐰2,...𝐰K), hay gom 𝐰1, 𝐰2,...𝐰K lại thành 𝐖 ta có E(𝐖)
+>
+>
+>
+> Khi đã có error (loss) function, hoặc đã có log likelihood, việc tiếp theo là dùng điều kiện cần bậc nhất maximum likelihood estimator của 𝐖
+>
+>
+>
+> Thì giải bài toán tìm MLE của 𝐰1, 𝐰2,...𝐰K ta có thể giải lần lượt từng cái (ý là, tìm MLE của 𝐰1, thì coi E(𝐖) là hàm của 𝐰1, với 𝐰2,....fix. Sau đó dùng điều kiện cần bậc nhất: Cho đạo hàm của E đối với 𝐰1 bằng 0 để giải ra 𝐰1_ML.(Trên lí thuyết là vậy, nhưng thực tế với bài toán này, không thể giải theo cách này, mà phải dùng thuật toán iterative để tìm 𝐰 giúp gradient = 0)
+>
+>
+>
+> Do đó ta chuẩn bị các đạo hàm của E theo 𝐰j, j = 1,2...K
+>
+>
+>
+> E(𝐰1, 𝐰2,...𝐰K) = - Σn=1:N Σk=1:K \[tnk ln(ynk)\]
+>
+>
+>
+> ⇒ ∂/∂𝐰j E(𝐖) = ∂/∂𝐰j  \[- Σn=1:N Σk=1:K \[tnk ln(ynk)\]\]
+>
+>
+>
+> = - Σn=1:N ∂/∂𝐰j  \[Σk=1:K \[tnk ln(ynk)\]\]
+>
+>
+>
+> = - Σn=1:N Σk=1:K ∂/∂𝐰j  \[tnk ln(ynk)\] (1)
+>
+>
+>
+> ---
+>
+>
+>
+> Xét Σk=1:K ∂/∂𝐰j  \[tnk ln(ynk)\]
+>
+>
+>
+> Bỏ index n cho gọn, tí ta sẽ thêm lại (tức là thay vì xét vector 𝐭n, 𝐲n của data point n'th, thì xét vector 𝐭, 𝐲 nói chung:
+>
+>
+>
+> Σk=1:K ∂/∂𝐰j  \[tk ln(yk)\]
+>
+>
+>
+> = Σk=1:K tk \[∂/∂𝐰j  ln(yk)\]
+>
+>
+>
+> 𝐰j → aj(𝐰j) = 𝐰jᵀΦ
+>
+>
+>
+> yk = exp(ak)/ Σi exp(ai)| aj → yk
+>
+>
+>
+> yk → ln(yk)
+>
+>
+>
+> = Σk=1:K tk \[(d/dyk ln(yk)) . (∂/∂aj yk) . (∂/∂𝐰j  aj)\] (chain rule)
+>
+>
+>
+> Dùng kết quả ∂/∂aj yk = yk (𝐈kj - yj)
+>
+>
+>
+> Và aj = 𝐰jᵀΦ = Σi 𝐰ji × Φi ⇒ ∂/∂𝐰j  aj = \[∂/∂𝐰j1 aj, ∂/∂𝐰j2 aj,....\]ᵀ= Φ
+>
+>
+>
+> cũng như d/dx ln(x) = 1/x ⇒ d/dyk ln(yk)
+>
+>
+>
+> = Σk=1:K tk \[(1/yk) . (yk (𝐈kj - yj)) . (Φ)\]
+>
+>
+>
+> = Σk=1:K tk (1/yk) yk (𝐈kj - yj) Φ
+>
+>
+>
+> = \[Σk=1:K tk (𝐈kj - yj)\] Φ
+>
+>
+>
+> = \[Σk=1:K (tk 𝐈kj - tk yj)\] Φ
+>
+>
+>
+> = \[Σk=1:K (tk 𝐈kj) - yj Σk=1:K (tk)\] Φ
+>
+>
+>
+> = \[Σk=1:K (tk 𝐈kj) - yj Σk=1:K (tk)\] Φ
+>
+>
+>
+>
+>
+> Xét Σk=1:K tk 𝐈kj = t1 𝐈1j + t2 𝐈2j + ... tj 𝐈jj + = t1 × 0 + t2 × 0 + ...tj × 1 = tj
+>
+>
+>
+> còn Σk=1:K (tk) = 1 (do 𝐭 là one-hot vector)
+>
+>
+>
+> nên:
+>
+>
+>
+> .. = (tj - yj) Φ
+>
+>
+>
+> Vậy Σk=1:K ∂/∂𝐰j  \[tk ln(yk)\] = (tj - yj) Φ
+>
+>
+>
+> ⇒ Σk=1:K ∂/∂𝐰j  \[tnk ln(ynk)\] = (tnj - ynj) Φn (thêm lại index n, để chuyển từ vector 𝐭, 𝐲, Φ nói chung thành vector 𝐭n, 𝐲n, Φn của datapoint thứ n)
+>
+>
+>
+> ---
+>
+>
+>
+> Thế vào lại (1):
+>
+>
+>
+> ∂/∂𝐰j  E(𝐖) = - Σn=1:N Σk=1:K ∂/∂𝐰j  \[tnk ln(ynk)\]
+>
+>
+>
+> = - Σn=1:N (tnj - ynj) Φn
+>
+>
+>
+> = Σn=1:N (ynj - tnj) Φn → 4.109
+>
+>
+>
+> ---
+>
+>
+>
+> Như vậy có thể thấy nó có cái dạng giống như kết quả khi ta làm với SSE: linear combination các vector feature Φn với trọng số là sai số giữa ynj và tnj
+>
+>
+>
+> Do đó, ta có thể dùng sequential algorithm, tức là tính lại (cập nhật) gradient ∂/∂𝐰j  E(𝐖) khi có thêm data và dùng nó để update 𝐰j.
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=SNbte9J7NL8)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú xuất sắc, trình bày chi tiết và hoàn toàn chính xác từng bước biến đổi đạo hàm của hàm lỗi cross-entropy theo vector trọng số w_j đúng theo yêu cầu của bài tập 4.18.
+>
+> **✓ Strengths**
+> - Thực hiện đầy đủ, mạch lạc từng bước của quy tắc chuỗi (chain rule) để tính đạo hàm riêng qua biến trung gian a_j.
+> - Khai thác chính xác tính chất của hàm softmax và tính chất one-hot vector (tổng t_k = 1 và tổng t_k * I_kj = t_j) để rút gọn biểu thức.
+> - Liên hệ sâu sắc kết quả tìm được với dạng tổng quát 'lỗi nhân với feature vector' và ứng dụng trong thuật toán học tuần tự (sequential/SGD).
+>
+> **💡 Deeper notes**
+> - Ký hiệu I_kj trong Bishop đóng vai trò là delta Kronecker (thường ký hiệu là δ_kj), bằng 1 khi k = j và bằng 0 khi k ≠ j.
+> - Trong bài toán phân loại nhiều lớp, hàm log-likelihood là hàm lồi (convex/concave) theo W nên không có cực trị địa phương (local minima), tuy nhiên nghiệm tối ưu không có dạng đóng (closed-form) nên cần dùng các thuật toán lặp như Newton-Raphson (IRLS) hoặc Gradient Descent.
+
+**🔗 See also:** [Activation Derivative for Maximum Likelihood](#node-bhochq3)
+
+<br>
+
+<a id="node-y3mt2hk"></a>
+
+###### Hessian for Multiclass Logistic Regression
+
+<p align="center"><kbd><img src="assets/8ikv508va1.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bs990u0v9ue.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Khúc này đại khái là nói về việc dùng thuật toán Newton Raphson để update tham số.
+>
+>
+>
+> Ở đây mình có thể hiểu theo kiểu gom hết các vector 𝐰j thành vector dài 𝐖 (thay vì matrix 𝐖) (để E(𝐖) vẫn là hàm vector → scalar, giúp đạo hàm cấp 1 vẫn là gradient vector và cấp 2 là Hessian matrix)
+>
+>
+>
+> Nhớ lại, thuật toán N-R ta sẽ update tham số của mô hình theo lối iterative 𝐖 bằng Newton step:
+>
+>
+>
+> 𝐖(new) = 𝐖(old) - ∇²E(𝐖(old))⁻¹ ∇E(𝐖(old))
+>
+>
+>
+> (ôn nhanh, idea là tại vị trí 𝐖(old), ta sẽ minimize hàm xấp xỉ bậc hai của E(𝐖): là
+>
+>
+>
+> f(𝐱) ≈ f(𝐱0) + ∇f(𝐱0)ᵀ(𝐱-𝐱0) + (1/2)(𝐱-𝐱0)ᵀ∇²f(𝐱0)(𝐱-𝐱0)
+>
+>
+>
+> g(𝐖) = E(𝐖(old)) + ∇E(𝐖(old))ᵀ(𝐖-𝐖(old)) + (1/2)(𝐖-𝐖(old))ᵀ ∇²E(𝐖(old)) (𝐖-𝐖(old))
+>
+>
+>
+> Đổi biến thành g(𝐃) = E(𝐖(old)) + ∇E(𝐖(old))ᵀ(𝐃) + (1/2)𝐃ᵀ ∇²E(𝐖(old)) 𝐃
+>
+>
+>
+> Và để minimize hàm g(𝐃), là một quadratic function của 𝐖, dùng điều kiện cần bậc nhất:
+>
+>
+>
+> ∇g(𝐃) = 0 ⇔ ∇²E(𝐖(old)) 𝐃 + ∇E(𝐖(old) = 0 ⇔ ∇²E(𝐖(old) 𝐃 = -∇E(𝐖(old)
+>
+>
+>
+> ⇔ 𝐃 = -∇²E(𝐖(old)⁻¹ ∇E(𝐖(old) đây chính là Newton step.
+>
+>
+>
+> Từ đó 𝐖 = 𝐖(old) + D = 𝐖(old) - ∇²E(𝐖(old))⁻¹ ∇E(𝐖(old))
+>
+>
+>
+> ---
+>
+>
+>
+> Nên ta cần chuẩn bị công thức của Hessian cũng như chứng minh nó là matrix xác định bán dương.
+>
+>
+>
+> Đây là bài toán (4.20) khá khó (2 sao).
+>
+>
+>
+> Đầu tiên thử giải thích xem vì sao tác giả nói Hessian lại comprise cáck block M x M..:
+>
+>
+>
+> ---
+>
+>
+>
+> Hiểu thế này: xét K=2,M=3 cho dễ hình dung, thì vector 𝐖 = là vector dài 2M là hai vector 𝐰1, và 𝐰2 nối đuôi nhau:
+>
+>
+>
+> = \[w11, w12, w13, w21, w22, w23\]ᵀ
+>
+>
+>
+> Đương nhiên gradient sẽ là vector các partial derivative:
+>
+>
+>
+> \[∂E/∂w11, ∂E/∂w12, ∂E/∂w13, ∂E/∂w21, ∂E/∂w22, ∂E/∂w23\]ᵀ
+>
+>
+>
+> (chính là ∇𝐰1 E(𝐖) nối đuôi ∇𝐰2 E(𝐖)
+>
+>
+>
+> Và Hessian, (cũng Jacobian của ∇E(𝐖) đối với vector 𝐖) là matrix mà:
+>
+>
+>
+> hàng 1 sẽ là vector các đạo hàm riêng của ∂E/∂w11 đối với w11, w12, w13, w21, w22, w23
+>
+>
+>
+> hàng 2 sẽ là vector các đạo hàm riêng của ∂E/∂w12 đối với w11, w12, w13, w21, w22, w23
+>
+>
+>
+> hàng 3 sẽ là vector các đạo hàm riêng của ∂E/∂w13 đối với w11, w12, w13, w21, w22, w23
+>
+>
+>
+> hàng 4 sẽ là vector các đạo hàm riêng của ∂E/∂w21 đối với w11, w12, w13, w21, w22, w23
+>
+>
+>
+> hàng 5 sẽ là vector các đạo hàm riêng của ∂E/∂w22 đối với w11, w12, w13, w21, w22, w23
+>
+>
+>
+> hàng 6 sẽ là vector các đạo hàm riêng của ∂E/∂w23 đối với w11, w12, w13, w21, w22, w23
+>
+>
+>
+>
+>
+> Ta sẽ nhìn thấy pattern sau: H sẽ là matrix 6 × 6 (tí nữa khái quát là MK × MK), có thể nhìn như matrix gồm 4 = K × K block matrix 3 × 3
+>
+>
+>
+> Tại vị trí 1,1 chính là matrix đạo hàm của hàm số ∂/∂𝐰1 E(𝐖) đối với 𝐰1
+>
+>
+>
+> Tại vị trí 2,2 chính là matrix đạo hàm của hàm số ∂/∂𝐰2 E(𝐖) đối với 𝐰2
+>
+>
+>
+> Tại vị trí 1,2 chính là matrix đạo hàm của hàm số ∂/∂𝐰1 E(𝐖) đối với 𝐰2
+>
+>
+>
+> Tại vị trí 2,1 chính là matrix đạo hàm của hàm số ∂/∂𝐰2 E(𝐖) đối với 𝐰1
+>
+>
+>
+> Khái quát lên, với K class, M chiều thì Hessian của E(𝐖) sẽ là block matrix MK × MK gồm K × K block matrix kích thước M × M
+>
+>
+>
+> và block j,k mà matrix đạo hàm của ∂/∂𝐰j E(𝐖) đối với vector 𝐰k: kí hiệu ∂/∂𝐰k \[∂/∂𝐰j E(𝐖)\]
+>
+>
+>
+> hay ∇\_𝐰k ∇\_𝐰j E(𝐖)
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> Ta thử tính ∇\_𝐰k ∇\_𝐰j E(𝐖):
+>
+>
+>
+> Đã có ∇\_𝐰j E(𝐖) = Σn=1:N (ynj - tnj) Φn
+>
+>
+>
+> lấy đạo hàm đối với 𝐰k:
+>
+>
+>
+> ∂/∂𝐰k \[∂/∂𝐰j E(𝐖)\]
+>
+>
+>
+> = ∂/∂𝐰k \[Σn=1:N (ynj - tnj) Φn\]
+>
+>
+>
+> = Σn=1:N \[∂/∂𝐰k (ynj - tnj) Φn\]
+>
+>
+>
+> Xét \[∂/∂𝐰k (ynj - tnj) Φn\]
+>
+>
+>
+> Bỏ index n: ∂/∂𝐰k (yj - tj) Φ
+>
+>
+>
+> = ∂/∂𝐰k (yj Φ) - ∂/∂𝐰k (tj Φ)
+>
+>
+>
+> = ∂/∂𝐰k (yj Φ)
+>
+>
+>
+> = Φ . ∂/∂𝐰k (yj)
+>
+>
+>
+> = Φ . \[∂/∂ak (yj) . ∂/∂𝐰k ak\] (chain rule)
+>
+>
+>
+> ∂/∂𝐰k ak = Φ và dùng kết quả bữa trước (xem link) ∂/∂aj yk = yk (𝐈kj - yj) ⇒ ∂/∂ak (yj) = yj(𝐈jk - yk)
+>
+>
+>
+> ...= Φ . yj(𝐈jk - yk) . Φ
+>
+>
+>
+> Và do hàm số ∂/∂𝐰j E(𝐖) đối với 𝐰k là **vector → vector function** nên ∂/∂𝐰k \[∂/∂𝐰j E(𝐖)\] là **Jacobian** **matrix**:
+>
+>
+>
+> Nên Φ . yj(𝐈jk - yk) . Φ = Φ × yj(𝐈jk - yk) × Φᵀ
+>
+>
+>
+> = yj(𝐈jk - yk) ΦΦᵀ
+>
+>
+>
+> Vậy ∂/∂𝐰k \[∂/∂𝐰j E(𝐖)\] = Σn=1:N ynj(𝐈jk - ynk) ΦnΦnᵀ
+>
+>
+>
+> = Σn=1:N (ynj 𝐈jk - ynj ynk) ΦnΦnᵀ
+>
+>
+>
+> Vì 𝐈jk chỉ = 1 khi j = k, nên khi j = k thì ynj = ynk và ynj 𝐈jk = ynk 𝐈jk
+>
+>
+>
+> còn khi j khác k thì ynj 𝐈jk = ynk 𝐈jk = 0
+>
+>
+>
+> nên công thức trên sẽ là
+>
+>
+>
+> = Σn=1:N ynk (𝐈kj - ynj) ΦnΦnᵀ chính là 4.110
+>
+>
+>
+> ---
+>
+>
+>
+> Câu khó là chứng minh matrix Hessian này xác định bán dương. (làm sau)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Note trình bày rất tốt cấu trúc ma trận khối của Hessian và tự dẫn xuất thành công công thức (4.110) một cách mạch lạc.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Φ . yj(𝐈jk - yk) . Φ = Φ × yj(𝐈jk - yk) × Φᵀ = yj(𝐈jk - yk) ΦΦᵀ"*
+>
+> Ký hiệu phép nhân giữa các vector ở bước trung gian hơi tự do trước khi chuyển thành tích ngoài (outer product). Về mặt giải tích ma trận chuẩn tắc: ∂(yj Φ)/∂wk = Φ (∂yj/∂wk)ᵀ = Φ (yj(Ijk - yk) Φ)ᵀ = yj(Ijk - yk) Φ Φᵀ.
+>
+>
+> **✓ Strengths**
+> - Minh họa trực quan và chính xác cấu trúc ma trận khối MK x MK gồm K x K khối kích thước M x M thông qua ví dụ K=2, M=3.
+> - Tự triển khai quy tắc chuỗi và sử dụng khéo léo tính đối xứng y_nj I_jk = y_nk I_kj để thu được dạng công thức như sách giáo khoa.
+> - Ôn tập súc tích và đúng bản chất của bước lặp Newton-Raphson thông qua xấp xỉ Taylor bậc hai.
+>
+> **💡 Deeper notes**
+> - Trong ảnh chụp sách PRML ở công thức (4.110) có dấu trừ ở vế phải — đây là lỗi in ấn nổi tiếng trong ấn bản đầu của Bishop (đã có trong Errata chính thức). Dẫn xuất dấu dương của bạn là chính xác vì Hessian của hàm lỗi âm log-likelihood phải là ma trận xác định bán dương.
+
+**🔗 See also:** [Activation Derivative for Maximum Likelihood](#node-bhochq3) · [Iterative Reweighted Least Squares](./433_iterative_reweighted_least_squares.md#node-q3zyd3g)
 
 <br>
 
