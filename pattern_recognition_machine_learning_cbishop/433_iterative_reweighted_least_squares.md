@@ -175,6 +175,8 @@
 > **💡 Deeper notes**
 > - Khi giải bước Newton d = -[∇²f(x0)]⁻¹ ∇f(x0), nghiệm này đảm bảo là điểm cực tiểu cục bộ duy nhất của hàm xấp xỉ g(d) với điều kiện ma trận Hessian ∇²f(x0) là xác định dương (positive definite). May mắn là với hàm cross-entropy trong logistic regression, Hessian luôn bán xác định dương/xác định dương (nếu ma trận dữ liệu full rank).
 
+**🔗 See also:** [Hessian for Multiclass Logistic Regression](./434_multiclass_logistic_regression.md#node-y3mt2hk)
+
 <br>
 
 <a id="node-m7p2qhb"></a>
