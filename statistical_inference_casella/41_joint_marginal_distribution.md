@@ -1,6 +1,6 @@
 # 4.1 Joint & Marginal Distribution
 
-📊 **Progress:** `13` Notes | `19` Screenshots
+📊 **Progress:** `13` Notes | `19` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-7lw1fvu"></a>
@@ -299,6 +299,26 @@
 >
 >
 > Từ đó cho phép định nghĩa joint pmf bất kì
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất tốt, thể hiện sự hiểu sâu bản chất khi tự chứng minh E(X, Y) = (EX, EY) thông qua phân rã thành phần và marginalization, đồng thời nắm vững 2D LOTUS và tính tuyến tính.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Từ đó cho phép định nghĩa joint pmf bất kì"*
+>
+> Để một hàm hai biến là một joint pmf hợp lệ, cần đồng thời hai điều kiện: không âm (f(x,y) >= 0) và tổng trên toàn không gian bằng 1. Diễn đạt ở đây hơi vắn tắt và dễ gây hiểu nhầm rằng chỉ cần tổng bằng 1 là đủ điều kiện.
+>
+>
+> **✓ Strengths**
+> - Tự diễn giải và chứng minh mạch lạc tính chất kỳ vọng của vector ngẫu nhiên E(X, Y) = (EX, EY) bằng cách nhân vô hướng và marginalize joint pmf về marginal pmf.
+> - Nắm chắc bản chất của 2D LOTUS khi tính kỳ vọng của hàm g(X, Y) mà không cần tìm phân phối của g(X, Y).
+>
+> **💡 Deeper notes**
+> - Về mặt thuật ngữ, (X, Y) thường được gọi chuẩn xác là 'random vector' (vector ngẫu nhiên) hoặc 'bivariate random vector' thay vì 'bivariate random variable'.
+> - Đối với các biến rời rạc vô hạn đếm được, kỳ vọng chỉ tồn tại khi chuỗi hội tụ tuyệt đối (sum |g(x,y)| f(x,y) < vô cùng).
 
 <br>
 
