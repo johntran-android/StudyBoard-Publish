@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1790633050729,
+  "publishedAt": 1790726926199,
   "sections": [
     {
       "title": "📋 Overview",
@@ -413,8 +413,8 @@
     {
       "title": "4.3.4 Multiclass logistic regression",
       "path": "pattern_recognition_machine_learning_cbishop/434_multiclass_logistic_regression.md",
-      "noteCount": 3,
-      "imageCount": 3
+      "noteCount": 5,
+      "imageCount": 8
     },
     {
       "title": "Appendix C. Matrices",
@@ -429,6 +429,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 441,
-  "totalImages": 668
+  "totalNotes": 443,
+  "totalImages": 673
 }
