@@ -1,6 +1,6 @@
 # 10.4 Interval Estimation
 
-📊 **Progress:** `14` Notes | `19` Screenshots | `14` AI Reviews
+📊 **Progress:** `15` Notes | `23` Screenshots | `14` AI Reviews
 
 ---
 <a id="node-wt27aoy"></a>
@@ -2300,6 +2300,23 @@
 > - Ở các trường hợp biên đặc biệt như ∑xi = 0 hoặc ∑xi = n, khoảng Wald sẽ bị suy biến (độ rộng bằng 0 do p̂(1-p̂) = 0), trong khi score interval vẫn cho ra khoảng tin cậy hợp lệ.
 
 **🔗 See also:** [Large-Sample Binomial Tests](./103_hypothesis_testing.md#node-8xsav7v)
+
+<br>
+
+<a id="node-kjfkeh5"></a>
+
+###### Comparison of Binomial Intervals
+
+<p align="center"><kbd><img src="assets/uwzgv052fpn.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/umoc7pq031.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/63ziauy0qpi.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/sj0l11wkje.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Quay lại sau, đại ý là so sánh 3 loại interval Score / Wald / LRT cho thấy Score là tốt nhất.
 
 <br>
 
