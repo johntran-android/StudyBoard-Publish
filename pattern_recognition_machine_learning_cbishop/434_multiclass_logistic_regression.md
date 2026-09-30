@@ -874,6 +874,14 @@
 >
 >
 >
+> yj Φ = \[yj Φ1, yj Φ2, ....yj ΦM\]ᵀ
+>
+>
+>
+> = \[∂/∂𝐰k (yj)\] Φ + yj \[∂/∂𝐰k Φ\] (product rule: (uv)' = u' v + u v')
+>
+>
+>
 > = Φ . ∂/∂𝐰k (yj)
 >
 >
@@ -931,6 +939,8 @@
 >
 >
 > Câu khó là chứng minh matrix Hessian này xác định bán dương. (làm sau)
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=Sz2QRKW9wLA)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
