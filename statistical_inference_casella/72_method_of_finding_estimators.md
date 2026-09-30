@@ -1,6 +1,6 @@
 # 7.2 Method Of Finding Estimators
 
-📊 **Progress:** `42` Notes | `52` Screenshots
+📊 **Progress:** `42` Notes | `52` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-po2ayci"></a>
@@ -1678,6 +1678,30 @@
 >
 >
 > Vậy p^(𝐗) = ΣXi/n hay, X̄, hay X̄(𝐗) chính là MLE estimator
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú rất chi tiết, tự suy luận lại hàm mật độ Bernoulli và đạo hàm tìm nghiệm cực trị một cách mạch lạc. Có hai lỗi nhỏ dạng gõ nhầm (typo) ở phần diễn đạt và điều kiện nhưng không ảnh hưởng đến bản chất bài toán.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Xét case 0 < y < 1 thì ta sẽ có:"*
+>
+> Lỗi gõ nhầm: phải là 0 < y < n thay vì 0 < y < 1, vì ngay sau đó bạn lập luận y - n < 0 để chỉ ra đạo hàm cấp 2 âm.
+>
+> **2.** *"dùng natural logarithm thay log L(θ|𝐱). Gọi là LOG LIKELIHOOD thay vì dùng trực tiếp log."*
+>
+> Cách diễn đạt bị nhầm từ ngữ: Ý đúng theo tài liệu là lấy log tự nhiên của L(θ|x) (tạo thành log-likelihood) thay vì tối ưu trực tiếp hàm likelihood L(θ|x).
+>
+>
+> **✓ Strengths**
+> - Tự thiết lập hàm xác suất Bernoulli p^x(1-p)^(1-x) thông qua lập luận lũy thừa bật/tắt rất trực quan và bản chất.
+> - Thực hiện đầy đủ các bước lấy log-likelihood, giải FOC (đạo hàm cấp 1) và kiểm tra SOC (đạo hàm cấp 2) để khẳng định cực đại.
+> - Khảo sát cẩn thận các trường hợp biên y = 0 và y = n khi đạo hàm không có nghiệm trong khoảng (0, 1).
+>
+> **💡 Deeper notes**
+> - Trong không gian tham số của Bernoulli p ∈ [0, 1] hoặc (0, 1), việc xét đạo hàm cấp 2 âm trên toàn miền (0, 1) chứng minh hàm log-likelihood là hàm lõm nghiêm ngặt (strictly concave), do đó điểm dừng tìm được là điểm cực đại toàn cục (global maximum).
 
 <br>
 
