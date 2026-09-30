@@ -1,6 +1,6 @@
 {
   "title": "Statistical Inference - Casella",
-  "publishedAt": 1790353901518,
+  "publishedAt": 1790785898989,
   "sections": [
     {
       "title": "📋 Overview",
@@ -299,10 +299,16 @@
     {
       "title": "10.4 Interval Estimation",
       "path": "statistical_inference_casella/104_interval_estimation.md",
-      "noteCount": 14,
-      "imageCount": 19
+      "noteCount": 15,
+      "imageCount": 23
+    },
+    {
+      "title": "11.1 & 2 Introduction, One-way ANOVA",
+      "path": "statistical_inference_casella/111_2_introduction_one_way_anova.md",
+      "noteCount": 8,
+      "imageCount": 9
     }
   ],
-  "totalNotes": 878,
-  "totalImages": 1145
+  "totalNotes": 887,
+  "totalImages": 1158
 }
