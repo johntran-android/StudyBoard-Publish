@@ -858,6 +858,10 @@
 >
 >
 >
+> ---
+>
+>
+>
 > Xét \[∂/∂𝐰k (ynj - tnj) Φn\]
 >
 >
@@ -870,6 +874,10 @@
 >
 >
 >
+> (yj = exp(aj) / Σi exp(ai) = exp(𝐰jᵀΦ) / Σi exp(𝐰iᵀΦ))
+>
+>
+>
 > = ∂/∂𝐰k (yj Φ)
 >
 >
@@ -878,15 +886,79 @@
 >
 >
 >
-> = \[∂/∂𝐰k (yj)\] Φ + yj \[∂/∂𝐰k Φ\] (product rule: (uv)' = u' v + u v')
+> ---
 >
 >
 >
-> = Φ . ∂/∂𝐰k (yj)
+> Tới đây áp dụng công thức tính đạo hàm của hàm vector-vector f(𝐱) = a(𝐱) × 𝐯(𝐱) (có dạng scalar × vector):
 >
 >
 >
-> = Φ . \[∂/∂ak (yj) . ∂/∂𝐰k ak\] (chain rule)
+> d/d𝐱 f(𝐱) = 𝐯(𝐱) \[d/d𝐱 a(𝐱)\]ᵀ + a(𝐱) \[d/d𝐱 v(𝐱)\]
+>
+>
+>
+> Chứng minh nhanh:
+>
+>
+>
+> Như cách làm holistic trong MIT 18s096, ta sẽ đưa df = linear operator on d𝐱
+>
+>
+>
+> Dùng product rule của vi phân d(uv) = du v + u dv:
+>
+>
+>
+> df = da v + a dv
+>
+>
+>
+> df(𝐱) = linear operator act d𝐱
+>
+>
+>
+> a(𝐱) là vector - scalar function nên da(𝐱) = \[d/d𝐱 a(𝐱)\]ᵀd𝐱 = ∇a(𝐱)ᵀd𝐱
+>
+>
+>
+> 𝐯(𝐱) là vector - vector function nên d𝐯(𝐱) = 𝐉 d𝐱 hay 𝐉\_v d𝐱 với 𝐉\_v = d/d𝐱 v(𝐱)
+>
+>
+>
+> nên df(𝐱) = \[d/d𝐱 a(𝐱)\]ᵀd𝐱 v(𝐱) + a(𝐱) 𝐉\_v d𝐱
+>
+>
+>
+> = v(𝐱) \[d/d𝐱 a(𝐱)\]ᵀd𝐱 + a(𝐱) 𝐉\_v d𝐱 (do \[d/d𝐱 a(𝐱)\]ᵀd𝐱 là scalar)
+>
+>
+>
+> = \[v(𝐱) \[d/d𝐱 a(𝐱)\]ᵀ + a(𝐱) 𝐉\_v\] d𝐱
+>
+>
+>
+> Và đây là linear operator act on d𝐱, nên Jacobian 𝐉 của f(𝐱) đối với 𝐱 chính là:
+>
+>
+>
+> 𝐉 = v(𝐱) \[d/d𝐱 a(𝐱)\]ᵀ + a(𝐱) 𝐉\_v
+>
+>
+>
+> ---
+>
+>
+>
+> = Φ \[∂/∂𝐰k (yj)\]ᵀ + yj \[∂/∂𝐰k Φ\]
+>
+>
+>
+> = Φ \[∂/∂𝐰k (yj)\]ᵀ
+>
+>
+>
+> = Φ \[∂/∂ak (yj) . ∂/∂𝐰k ak\]ᵀ (chain rule)
 >
 >
 >
@@ -894,15 +966,39 @@
 >
 >
 >
-> ...= Φ . yj(𝐈jk - yk) . Φ
+> ---
 >
 >
 >
-> Và do hàm số ∂/∂𝐰j E(𝐖) đối với 𝐰k là **vector → vector function** nên ∂/∂𝐰k \[∂/∂𝐰j E(𝐖)\] là **Jacobian** **matrix**:
+> ak = 𝐰kᵀΦ ⇒ ∇ak = Φ
 >
 >
 >
-> Nên Φ . yj(𝐈jk - yk) . Φ = Φ × yj(𝐈jk - yk) × Φᵀ
+> f(𝐱) = 𝐱ᵀ𝐚 = Σi xi × ai
+>
+>
+>
+> ∇f(𝐱) = \[∂f/∂x1, ∂f/∂x2,....∂f/∂xn\] = \[a1, a2,...\] = 𝐚.
+>
+>
+>
+> df = f(𝐱 + d𝐱) - f(𝐱) = (𝐱+d𝐱)ᵀ𝐚 - 𝐱ᵀ𝐚 = 𝐱ᵀ𝐚 + d𝐱ᵀ𝐚 - 𝐱ᵀ𝐚 = d𝐱ᵀ𝐚 = 𝐚ᵀd𝐱 ⇒ ∇f(𝐱) = 𝐚
+>
+>
+>
+> ---
+>
+>
+>
+> ...= Φ \[yj(𝐈jk - yk) Φ\]ᵀ
+>
+>
+>
+> = Φ Φᵀ \[yj(𝐈jk - yk)\]ᵀ
+>
+>
+>
+> = Φ Φᵀ \[yj(𝐈jk - yk)\]
 >
 >
 >
@@ -930,7 +1026,9 @@
 >
 >
 >
-> = Σn=1:N ynk (𝐈kj - ynj) ΦnΦnᵀ chính là 4.110
+> = Σn=1:N ynk (𝐈kj - ynj) ΦnΦnᵀ chính là 4.110 (trong sách hình như thừa dấu trừ)
+>
+>
 >
 >
 >
@@ -940,29 +1038,26 @@
 >
 > Câu khó là chứng minh matrix Hessian này xác định bán dương. (làm sau)
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=Sz2QRKW9wLA)
+📹 Video 1: [Hessian for Multiclass Logistic Regression — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=Sz2QRKW9wLA)
+
+📹 Video 2: [Vì Sao Ma Trận Hessian Của Multiclass Logistic Regression Gồm Các Block M×M (p2) ?](https://www.youtube.com/watch?v=kGoVAIslUsQ)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Note trình bày rất tốt cấu trúc ma trận khối của Hessian và tự dẫn xuất thành công công thức (4.110) một cách mạch lạc.
->
-> **🟡 Minor issues**
->
-> **1.** *"Φ . yj(𝐈jk - yk) . Φ = Φ × yj(𝐈jk - yk) × Φᵀ = yj(𝐈jk - yk) ΦΦᵀ"*
->
-> Ký hiệu phép nhân giữa các vector ở bước trung gian hơi tự do trước khi chuyển thành tích ngoài (outer product). Về mặt giải tích ma trận chuẩn tắc: ∂(yj Φ)/∂wk = Φ (∂yj/∂wk)ᵀ = Φ (yj(Ijk - yk) Φ)ᵀ = yj(Ijk - yk) Φ Φᵀ.
->
+> Ghi chú xuất sắc! Bạn đã giải thích rất trực quan cấu trúc block của ma trận Hessian kích thước MK × MK và tự biến đổi đạo hàm từng bước cực kỳ chặt chẽ, thậm chí còn phát hiện chính xác lỗi in thừa dấu trừ trong sách gốc (đã được Bishop đính chính trong errata).
 >
 > **✓ Strengths**
-> - Minh họa trực quan và chính xác cấu trúc ma trận khối MK x MK gồm K x K khối kích thước M x M thông qua ví dụ K=2, M=3.
-> - Tự triển khai quy tắc chuỗi và sử dụng khéo léo tính đối xứng y_nj I_jk = y_nk I_kj để thu được dạng công thức như sách giáo khoa.
-> - Ôn tập súc tích và đúng bản chất của bước lặp Newton-Raphson thông qua xấp xỉ Taylor bậc hai.
+> - Biến đổi đạo hàm ma trận thông qua vi phân d(uv) rất chuẩn xác, thanh lịch và mang tính tổng quát cao.
+> - Giải thích trực quan cấu trúc block MK × MK thông qua ví dụ cụ thể K=2, M=3 giúp dễ dàng hình dung Jacobian của gradient vector.
+> - Cực kỳ nhạy bén khi phát hiện dấu trừ ở vế phải công thức (4.110) trong sách là lỗi in sai (đã được tác giả Bishop xác nhận trong errata chính thức của cuốn PRML).
 >
 > **💡 Deeper notes**
-> - Trong ảnh chụp sách PRML ở công thức (4.110) có dấu trừ ở vế phải — đây là lỗi in ấn nổi tiếng trong ấn bản đầu của Bishop (đã có trong Errata chính thức). Dẫn xuất dấu dương của bạn là chính xác vì Hessian của hàm lỗi âm log-likelihood phải là ma trận xác định bán dương.
+> - Về tính xác định: Sách trong phần text ghi 'positive definite' nhưng bài tập 4.20 lại yêu cầu chứng minh 'positive semidefinite' (bán dương). Điều này là do softmax có tính overparameterization (nếu cộng cùng một vector hằng số vào tất cả các wk thì xác suất y không đổi), dẫn đến Hessian có trị riêng bằng 0 (không khả nghịch trừ khi cố định một lớp làm chuẩn hoặc thêm L2 regularization).
 
 **🔗 See also:** [Activation Derivative for Maximum Likelihood](#node-bhochq3) · [Iterative Reweighted Least Squares](./433_iterative_reweighted_least_squares.md#node-q3zyd3g)
+
+🔗 **Video liên quan:** [Từ Likelihood suy ra Multiclass Cross-Entropy Loss như thế nào?](https://youtu.be/S4kORpAgTsQ) · [Đọc ghi chú: "Multiclass Cross-Entropy Error Function"](#node-ndts6t4)
 
 <br>
 
