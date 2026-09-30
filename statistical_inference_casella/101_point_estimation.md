@@ -3879,9 +3879,36 @@
 > = \[1/(n^n-1)\] Σi=1: n^n (\[p^(1-p^)\]\*j - \[p^(1-p^)\]\*bar)^2
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
 >
-> Ghi chú cực kỳ chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về phương pháp Bootstrap cũng như cách giải thích ký hiệu toán học trong sách. Bạn chỉ cần lưu ý thêm rằng trong thực tế khi n lớn, người ta thường dùng mô phỏng Monte Carlo (chọn B mẫu ngẫu nhiên) thay vì tính toàn bộ $n^n$ trường hợp vì giới hạn tính toán.
+> Ghi chú thể hiện sự hiểu biết rất sâu sắc và trực quan về bản chất của Bootstrap cũng như nguồn gốc công thức Var* trong ảnh. Có một vài chỗ nhầm thuật ngữ/công thức nhỏ nhưng không ảnh hưởng đến mô hình tư duy cốt lõi.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"X̄(𝐗) = Σi=1:n Xi"*
+>
+> Lỗi gõ thiếu chia cho n: công thức đúng của sample mean là X̄ = (1/n) Σ Xi.
+>
+> **2.** *"Đó là cách thứ nhất: Dùng sample mean thế chỗ cho population mean trong công thức chính xác của Var(X̄)."*
+>
+> Nói nhầm thuật ngữ: ở Cách 1 bạn đang dùng sample variance (s^2) thế chỗ cho population variance (σ^2), chứ không phải mean.
+>
+> **3.** *"x̄*1 = x̄*(s1), x̄*2 = x̄*(2), ...,x̄*256 = x̄*(s256) sẽ chính là 256 possible value của random variable X̄*, có distribution uniform discrete."*
+>
+> Không chính xác về mặt phân phối: 256 cấu hình mẫu s_i là đồng khả dĩ (xác suất 1/256), nhưng giá trị của thống kê X̄*(s_i) không có phân phối rời rạc đều vì nhiều cấu hình mẫu khác nhau có thể cho ra cùng một giá trị trung bình (phân phối của X̄* thực chất có xu hướng hội tụ về chuẩn theo CLT).
+>
+> **4.** *"Nhưng thực tế thì không có hàm g(p) nào cả."*
+>
+> Với riêng thống kê p_hat(1 - p_hat) của Binomial, hàm chính xác g(p) thực ra tồn tại vì ta có thể tính chính xác qua các moment bậc 1 đến bậc 4 của phân phối nhị thức, chỉ là biểu thức đại số rất cồng kềnh. Tuy nhiên, nhận xét này hoàn toàn đúng với các thống kê phức tạp nói chung (như median, trimmed mean).
+>
+>
+> **✓ Strengths**
+> - Giải mã xuất sắc ý nghĩa của ký hiệu [p^(1-p^)]* như một hàm tính toán trên từng bootstrap sample.
+> - Liên hệ và giải thích được sự tương đồng toán học giữa phân phối thực nghiệm (empirical distribution) và toàn bộ n^n mẫu bootstrap có hoàn lại.
+> - Nhận diện chính xác tại sao công thức trong sách lại chia cho (n^n - 1) thay vì n^n (áp dụng công thức sample variance trên n^n giá trị bootstrap).
+>
+> **💡 Deeper notes**
+> - Công thức trong sách liệt kê toàn bộ n^n khả năng được gọi là 'Ideal/Exact Bootstrap'. Trên thực tế khi n lớn, n^n bùng nổ tổ hợp nên người ta thường xấp xỉ tổng này bằng Monte Carlo simulation (rút ngẫu nhiên B mẫu, ví dụ B = 1000, và chia cho B - 1).
 
 <br>
 
