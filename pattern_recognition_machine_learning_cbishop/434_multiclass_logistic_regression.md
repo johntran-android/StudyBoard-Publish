@@ -665,7 +665,7 @@
 > - Ký hiệu I_kj trong Bishop đóng vai trò là delta Kronecker (thường ký hiệu là δ_kj), bằng 1 khi k = j và bằng 0 khi k ≠ j.
 > - Trong bài toán phân loại nhiều lớp, hàm log-likelihood là hàm lồi (convex/concave) theo W nên không có cực trị địa phương (local minima), tuy nhiên nghiệm tối ưu không có dạng đóng (closed-form) nên cần dùng các thuật toán lặp như Newton-Raphson (IRLS) hoặc Gradient Descent.
 
-**🔗 See also:** [Activation Derivative for Maximum Likelihood](#node-bhochq3)
+**🔗 See also:** [Activation Derivative for Maximum Likelihood](#node-bhochq3) · [Section 4.3.6 Canonical Link Functions](./436_canonical_link_function.md#node-tn8x82z)
 
 <br>
 
