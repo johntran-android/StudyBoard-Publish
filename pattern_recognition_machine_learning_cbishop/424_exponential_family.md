@@ -144,7 +144,7 @@
 > **💡 Deeper notes**
 > - Trong công thức (4.85) của Bishop, hệ số (1/s) không xuất hiện trước (λ1 - λ2)ᵀx. Biến đổi của bạn giữ lại (1/s) là hoàn toàn khớp với định nghĩa (4.84), trong khi sách Bishop ngầm hấp thu 1/s vào tham số λ hoặc giả định s = 1 mà không nói rõ.
 
-**🔗 See also:** [2.4 The Exponential Family](./24_the_exponential_family.md#node-1hlelhn) · [Scale Invariance and Prior Distributions](./243_non_informative_priors.md#node-6t8ihcb)
+**🔗 See also:** [2.4 The Exponential Family](./24_the_exponential_family.md#node-1hlelhn) · [Scale Invariance and Prior Distributions](./243_non_informative_priors.md#node-6t8ihcb) · [Conditional Mean in Exponential Family](./436_canonical_link_function.md#node-tp0pbj6)
 
 <br>
 
