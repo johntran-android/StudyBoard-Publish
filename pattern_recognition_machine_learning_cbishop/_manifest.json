@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1790811292274,
+  "publishedAt": 1790893886630,
   "sections": [
     {
       "title": "📋 Overview",
@@ -413,14 +413,20 @@
     {
       "title": "4.3.5 Probit Regression",
       "path": "pattern_recognition_machine_learning_cbishop/435_probit_regression.md",
-      "noteCount": 3,
-      "imageCount": 5
+      "noteCount": 4,
+      "imageCount": 7
     },
     {
       "title": "4.3.4 Multiclass logistic regression",
       "path": "pattern_recognition_machine_learning_cbishop/434_multiclass_logistic_regression.md",
       "noteCount": 5,
       "imageCount": 8
+    },
+    {
+      "title": "4.3.6 Canonical link function",
+      "path": "pattern_recognition_machine_learning_cbishop/436_canonical_link_function.md",
+      "noteCount": 1,
+      "imageCount": 2
     },
     {
       "title": "Appendix C. Matrices",
@@ -435,6 +441,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 446,
-  "totalImages": 678
+  "totalNotes": 448,
+  "totalImages": 682
 }
