@@ -1,6 +1,6 @@
 # 12.9 Duality
 
-📊 **Progress:** `6` Notes | `9` Screenshots | `6` AI Reviews
+📊 **Progress:** `7` Notes | `11` Screenshots | `7` AI Reviews
 
 ---
 <a id="node-j9in33p"></a>
@@ -266,7 +266,7 @@
 > - Khi đưa nhân tử ra ngoài infimum như inf[α*h(x)] = α*inf[h(x)], điều kiện cần là α ≥ 0 (ở đây α ∈ [0, 1] nên luôn thỏa mãn).
 > - Bản chất hàm dual q(λ) là infimum của một họ các hàm affine theo λ; vì infimum từng điểm (pointwise infimum) của một họ các hàm concave/affine luôn là một hàm concave, nên q(λ) luôn concave ngay cả khi bài toán gốc không lồi.
 
-**🔗 See also:** [Convex function *(EE364a, Convex Optim_S.Boyd)*](../ee364a_convex_optim_sboyd/lec_3.md#node-zktzuo5) · [linked note *(EE364a, Convex Optim_S.Boyd)*](../ee364a_convex_optim_sboyd/lec_2.md#node-65mxxf3)
+**🔗 See also:** [Convex function *(EE364a, Convex Optim_S.Boyd)*](../ee364a_convex_optim_sboyd/lec_3.md#node-zktzuo5) · [linked note *(EE364a, Convex Optim_S.Boyd)*](../ee364a_convex_optim_sboyd/lec_2.md#node-65mxxf3) · [Đối ngẫu Wolfe](#node-awruifo)
 
 <br>
 
@@ -777,6 +777,123 @@
 > - Định lý 12.13 còn mang ý nghĩa tính duy nhất của nghiệm primal: nếu ℒ(·, λ̂) lồi ngặt thì điểm cực tiểu x̂ là duy nhất, do đó x̄ = x̂ chính là nghiệm duy nhất của bài toán primal ban đầu.
 
 **🔗 See also:** [Convex Programming with Inequality Constraints](#node-nr19nrj) · [Dual Solutions and Strict Convexity](#node-3r5tueo)
+
+<br>
+
+<a id="node-awruifo"></a>
+
+###### Đối ngẫu Wolfe
+
+<p align="center"><kbd><img src="assets/y8vev8kndvn.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/yyqv7bwha1e.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Nhắc lại chút xíu, bài toán dual bữa trước là maximize\_λ q(λ) s.t λ ≥ 0, mà dual solution λ̃ có thể giúp giải tìm primal solution x̄ thông qua theorem vừa rồi - là nếu thỏa vài điều kiện thì bằng cách minimize_x ℒ(x, λ̃ ) thì solution của bài toán này cũng chính là primal solution)
+>
+>
+>
+> q(λ) = inf_x ℒ(x, λ)
+>
+>
+>
+> Vậy thì đây, là một bài toán dual khác, (mà giải nó cũng có thể giúp giải bài toán primal): maximize x, λ ℒ(x, λ) s.t ∇\_x ℒ(x, λ) = 0, λ ≥ 0.
+>
+>
+>
+> Theorem 12.14 đại ý nói rằng nếu vài điều kiện (như f và -ci lồi) và có LICQ, thì nghiệm của bài toán primal (x̄, ƛ) cũng là nghiệm của bài toán Wolfe dual ta cùng phân tích phần chứng minh:
+>
+>
+>
+> ---
+>
+>
+>
+> Bắt đầu từ ℒ(x̄, ƛ) với (x̄, ƛ) solve bài toán gốc nên ta có vài thứ sau liệt kê ra để dành xài:
+>
+>
+>
+> minimize f(x) s.t c(x) ≥ 0
+>
+>
+>
+> x̄ dĩ nhiên phải thỏa constraint: c(x̄ ) ≥ 0 (a)
+>
+>
+>
+> (x̄, ƛ) thỏa complementary condition của KKT: ƛᵀc(x̄ ) = 0 (b)
+>
+>
+>
+> (x̄, ƛ) cũng thỏa stationary condition của KKT: ∇\_x ℒ(x̄, ƛ) = 0 (c)
+>
+>
+>
+> ƛ dĩ nhiên ≥ 0 (vì đây là ràng buộc λ khi thiết lập Lagrangian) (d)
+>
+>
+>
+> ℒ(x̄, ƛ) = f(x̄ ) - ƛᵀc(x̄) và do (b) nên = f(x̄ ) - 0 = f(x̄) → hàng thứ nhất của chứng minh
+>
+>
+>
+> Tiếp, với cặp (x, λ) bất kì thỏa 12.88b, tức ∇\_x ℒ(x, λ) = 0 và λ ≥ 0 thì như vậy với việc λ ≥ 0, và do (a) nên đương nhiên λᵀc(x̄ ) ≥ 0 nên f(x̄) phải ≥ f(x̄) - λᵀc(x̄ )
+>
+>
+>
+> Vậy f(x̄) phải ≥ f(x̄) - λᵀc(x̄ ) = ℒ(x̄, λ) → hàng thứ 2,3 của chứng minh
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp , ℒ(x̄, λ) = 1 × f(x̄ ) + Σi λi (-ci(x̄ )) do là tổ hợp tuyến tính với các hệ số không âm của các hàm lồi (f(x), -ci(x)) , xét với tư cách hàm theo x, nó cũng là hàm lồi.
+>
+>
+>
+> Dùng điều kiện lồi bậc nhất: f(x) ≥ f(x0) + ∇f(x0)ᵀ(x-x0) 
+>
+>
+>
+> (cái này dễ nhớ: Nhớ theo kiểu trực giác dùng điều kiện non-negative curvature: Hessian không âm, nên term bậc hai không âm hoặc dùng hình ảnh hàm số cong lên nên tiếp tuyến luôn nằm dưới đồ thị hàm số). Vậy áp dụng cho ℒ:
+>
+>
+>
+> ℒ(x̄, λ) ≥ ℒ(x, λ) + ∇ℒ(x, λ)ᵀ(x̄ - x)
+>
+>
+>
+> Và vì ∇\_x ℒ(x, λ) = 0 nên ta có ℒ(x̄, λ) ≥ ℒ(x, λ) → hàng 4,5
+>
+>
+>
+> Cuối cùng ráp lại hết ta có ℒ(x̄, ƛ) ≥ ℒ(x, λ)
+>
+>
+>
+> Và x̄, ƛ thỏa ∇\_x ℒ(x̄, ƛ) = 0 do (c) và ƛ ≥ 0 do (d)
+>
+>
+>
+> cho thấy đúng là x̄, ƛ sẽ maximize ℒ(x, λ) s.t ∇\_x ℒ(x, λ) = 0 và λ ≥ 0
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=HB2-G1ppSjQ)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú xuất sắc! Bạn đã giải thích chi tiết, chính xác và trực quan từng bước biến đổi trong chứng minh của Định lý 12.14 về Wolfe dual.
+>
+> **✓ Strengths**
+> - Hiểu rất rõ và bóc tách mạch lạc các điều kiện KKT (feasibility, complementary slackness, stationarity, dual feasibility) làm cơ sở cho chứng minh.
+> - Giải thích chính xác nguồn gốc tính lồi của hàm Lagrange theo x (tổ hợp tuyến tính với hệ số không âm của các hàm lồi) và cách áp dụng bất đẳng thức đặc trưng bậc nhất của hàm lồi.
+>
+> **💡 Deeper notes**
+> - Trong định lý, giả thiết LICQ chủ yếu dùng để đảm bảo sự tồn tại của nhân tử Lagrange (KKT multiplier) lambda_bar tại nghiệm x_bar; khi đã có KKT thì phần suy dẫn Wolfe dual diễn ra hoàn toàn đại số như bạn đã chỉ ra.
+
+**🔗 See also:** [Tính lõm hàm đối ngẫu](#node-qaxpu6x) · [First-Order Optimality Conditions](./123_first_order_optimality_condition.md#node-hvhhcds)
 
 <br>
 
