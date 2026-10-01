@@ -404,39 +404,70 @@
 >
 >
 >
-> Vậy khi xảy ra, ta dùng 1-σ(a)
+> Khi event gán nhãn sai xảy ra, ta dùng P(T=1|a) = 1-σ(a)
 >
 >
 >
-> Còn khi không xảy ra, ta dùng σ(a)
+> Còn khi event gán nhãn sai không xảy ra, ta dùng P(T=1|a) = σ(a)
 >
 >
 >
-> Khi đó, cơ bản là ta biến Y \~ Bern(ε), với hai possible value \[1-σ(a)\] và σ(a) với xác suất (pmf) là ε và 1-ε. Để rồi ta dùng E\[Y\] = \[1-σ(a)\] × ε + σ(a) × (1-ε)
+> Nói cách khác ta dùng mô hình sau:
+>
+>
+>
+> P(T=1|"gán nhãn sai", a) = 1-σ(a)
+>
+>
+>
+> P(T=1|"không gán nhãn sai", a) = σ(a)
+>
+>
+>
+> Từ đó:
+>
+>
+>
+> P(T=1|a) = P(T=1|"gán nhãn sai", a)P("gán nhãn sai") + P(T=1|"không gán nhãn sai", a)P("không gán nhãn sai") (LOTP)
+>
+>
+>
+> X,Y P(X=x) = Σy P(X=x, Y=y) = Σy P(X=x|Y=y)P(Y=y)
+>
+>
+>
+> = \[1-σ(a)\] ε + σ(a) (1 - ε)
+>
+>
+>
+> = ε - ε σ(a) + σ(a) (1 - ε)
+>
+>
+>
+> = ε - ε σ(a) + σ(a) - εσ(a)
+>
+>
+>
+> = ε  + \[1 - 2ε\]σ(a)
 >
 >
 >
 > Và ta sẽ chọn ε hoặc coi như siêu tham số.
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=V6oCEsXYSxA)
+
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
-> Ghi chú nắm rất tốt bản chất mô hình gán nhãn sai và cách thức kết hợp tham số nhiễu ε. Có một chút nhầm lẫn nhỏ về quy ước thuật ngữ phân phối Bernoulli nhưng không làm sai lệch bản chất toán học.
->
-> **🟡 Minor issues**
->
-> **1.** *"ta biến Y ~ Bern(ε), với hai possible value [1-σ(a)] và σ(a) với xác suất (pmf) là ε và 1-ε"*
->
-> Theo quy ước xác suất, phân phối Bernoulli chỉ nhận giá trị trong tập {0, 1}. Về mặt bản chất, đây là công thức xác suất toàn phần (law of total probability) theo biến cố có bị lật nhãn hay không, hoặc biến ngẫu nhiên nhận giá trị phân biệt đó là một phép biến đổi tuyến tính của biến Bernoulli.
->
+> Ghi chú rất xuất sắc, giải thích trực quan và khai triển chi tiết công thức (4.117) bằng định lý xác suất toàn phần (LOTP).
 >
 > **✓ Strengths**
-> - Hiểu chính xác vai trò của tham số ε như một xác suất lật nhãn để làm mượt dự đoán của mô hình.
-> - Tự diễn giải công thức (4.117) thông qua kỳ vọng xác suất toàn phần rất trực quan và chính xác về mặt đại số.
-> - Nắm đúng cách xử lý tham số ε (cố định trước hoặc xem như siêu tham số học từ dữ liệu).
+> - Diễn giải trực quan biến cố ẩn (gán nhãn sai hay đúng) và áp dụng chính xác công thức xác suất toàn phần (LOTP) để suy ra dạng của phân phối mục tiêu.
+> - Khai triển đại số từng bước rõ ràng, chính xác tuyệt đối so với công thức (4.117) trong tài liệu.
+> - Nêu đúng bản chất và vai trò của tham số nhiễu nhãn ε (có thể cố định trước hoặc coi là hyperparameter).
 >
 > **💡 Deeper notes**
-> - Ký hiệu p(t|x) trong phương trình (4.117) của Bishop ngầm định là xác suất nhãn dương p(t=1|x); với nhãn t tổng quát, công thức đầy đủ sẽ có dạng Bernoulli p(t|x) = y^t (1-y)^(1-t) với y = ε + (1-2ε)σ(x).
+> - Trong tài liệu gốc, Bishop viết tắt p(t|x) và σ(x) (coi σ là hàm kích hoạt theo đầu vào x, với p(t=1|x) = σ(x) khi không có nhiễu); ghi chú của bạn làm rõ tường minh P(T=1|a) giúp dễ hiểu và chặt chẽ hơn.
 
 <br>
 
