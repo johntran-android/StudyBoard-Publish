@@ -354,7 +354,7 @@
 > **💡 Deeper notes**
 > - Về tên gọi 'Cross-entropy': Dưới góc nhìn lý thuyết thông tin, hàm mục tiêu này tương đương với khoảng cách Kullback-Leibler (KL divergence) hoặc cross-entropy giữa phân phối thực tế của nhãn $p(t_n) \in \{0, 1\}$ và phân phối dự đoán của mô hình $q(t_n) = y_n^{t_n}(1-y_n)^{1-t_n}$. Việc tối thiểu hóa cross-entropy chính là đưa phân phối dự đoán tiệm cận phân phối dữ liệu thực tế.
 
-**🔗 See also:** [Section 4.3 Probabilistic Discriminative Models](./43_probabilistic_discriminative_models.md#node-nop86oc) · [Định nghĩa điểm ước lượng *(Statistical Inference - Casella)*](../statistical_inference_casella/71_introduction.md#node-c0xbdri) · [Hessian for Logistic Regression](./433_iterative_reweighted_least_squares.md#node-7nipjyu)
+**🔗 See also:** [Section 4.3 Probabilistic Discriminative Models](./43_probabilistic_discriminative_models.md#node-nop86oc) · [Định nghĩa điểm ước lượng *(Statistical Inference - Casella)*](../statistical_inference_casella/71_introduction.md#node-c0xbdri) · [Hessian for Logistic Regression](./433_iterative_reweighted_least_squares.md#node-7nipjyu) · [Probit vs Logistic Regression Outliers](./435_probit_regression.md#node-yeynirm)
 
 <br>
 
@@ -510,7 +510,7 @@
 > **💡 Deeper notes**
 > - Việc gradient của logistic regression có cùng dạng (yi - ti)Φi với hồi quy tuyến tính (sum-of-squares) không phải ngẫu nhiên, mà bắt nguồn từ tính chất tổng quát của mô hình tuyến tính tổng quát (GLM) khi sử dụng hàm liên kết chính tắc (canonical link function).
 
-**🔗 See also:** [Maximum Likelihood and Gradient](./311_maximum_likelihood_and_least_squares.md#node-ogc31vz) · [Hessian for Logistic Regression](./433_iterative_reweighted_least_squares.md#node-7nipjyu)
+**🔗 See also:** [Maximum Likelihood and Gradient](./311_maximum_likelihood_and_least_squares.md#node-ogc31vz) · [Hessian for Logistic Regression](./433_iterative_reweighted_least_squares.md#node-7nipjyu) · [Section 4.3.6 Canonical Link Functions](./436_canonical_link_function.md#node-tn8x82z)
 
 <br>
 
