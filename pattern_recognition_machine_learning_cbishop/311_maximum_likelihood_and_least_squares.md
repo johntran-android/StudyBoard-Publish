@@ -800,7 +800,7 @@
 > **💡 Deeper notes**
 > - Để ma trận ΦᵀΦ khả nghịch (invertible), điều kiện ngầm định là ma trận thiết kế Φ phải có full column rank (nghĩa là số mẫu N ≥ số tham số M và các hàm cơ sở độc lập tuyến tính trên tập dữ liệu). Trong trường hợp M > N hoặc dữ liệu suy biến, cần dùng SVD để tính pseudo-inverse tổng quát.
 
-**🔗 See also:** [Ex 3.2 Orthogonal Projection and Least Squares](./37_exercises.md#node-2dv7p1f) · [Ex 3.6  MLE Hồi quy Đa biến](./37_exercises.md#node-cq8t94f) · [Gradient of Logistic Error Function](./432_logistic_regression.md#node-to86xxj)
+**🔗 See also:** [Ex 3.2 Orthogonal Projection and Least Squares](./37_exercises.md#node-2dv7p1f) · [Ex 3.6  MLE Hồi quy Đa biến](./37_exercises.md#node-cq8t94f) · [Gradient of Logistic Error Function](./432_logistic_regression.md#node-to86xxj) · [Section 4.3.6 Canonical Link Functions](./436_canonical_link_function.md#node-tn8x82z)
 
 <br>
 
