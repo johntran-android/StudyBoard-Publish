@@ -8,11 +8,11 @@
 <p align="center"><kbd><img src="assets/7swge4ekywk.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua phần này, ta sẽ bàn về việc estimate parameter **η** của exponential family thông qua phương pháp MLE. Cũng đã quen với MLE, chỉ nhắc lại nha, MLE vốn dĩ là một trong các phương pháp để giải bài toán point estimation - là một trong những bài toán suy luận thống kê: Cho random sample 𝐗 = (X1,...Xn), có giá trị quan sát được là 𝐱 = (x1,x2,...xn), là các random varialle independent & identically distributed - iid \~ f(𝐱|θ) (θ là parameter của population distribution). Nhiệm vụ của bài toán point estimation là tìm một hàm W(𝐗), để với giá trị quan sát được của 𝐗: 𝐗 = 𝐱, thì W(𝐱) sẽ là estimate tốt cho θ. Phải nói thêm, với cách tiếp cận MLE, thì nó thuộc trường phái Classic hay Frequentist, vì ta chỉ xem θ như giá trị cố định nhưng chưa biết, chứ không xem nó như biến ngẫu nhiên.
+> Qua phần này, ta sẽ bàn về việc estimate parameter **η** của exponential family thông qua phương pháp MLE. Cũng đã quen với MLE, chỉ nhắc lại nhanh, MLE vốn dĩ là một trong các phương pháp để giải bài toán point estimation - là một trong những bài toán suy luận thống kê: Cho random sample 𝐗 = (X1,...Xn), có giá trị quan sát được là 𝐱 = (x1,x2,...xn), là các random varialle independent & identically distributed - iid \~ f(𝐱|θ) (θ là parameter của population distribution). Nhiệm vụ của bài toán point estimation là tìm một hàm W(𝐗), để với giá trị quan sát được của 𝐗: 𝐗 = 𝐱, thì W(𝐱) sẽ là estimate tốt cho θ. Phải nói thêm, với cách tiếp cận MLE, thì nó thuộc trường phái Classic hay Frequentist, vì ta chỉ xem θ như giá trị cố định nhưng chưa biết, chứ không xem nó như biến ngẫu nhiên.
 >
 >
 >
-> Vậy thì theo sách Casella, estimator, có thể là bất kì function nào của sample, và với một định nghĩa mơ hồ như vậy, ta cần có những phương pháp tiếp cận để dẫn đến một estimator tốt, và tiêu biểu là MoM (method of moment). MLE (maximum likelihood estimator) và Bayes estimator. Thế thì, với MLE, nói ngắn gọn, cái hàm W(𝐗) mà ta dùng sẽ là hàm số sau: W(𝐱) = argmax (over θ) L(θ|𝐱), với L(θ|𝐱) là likelihood function, là hàm số theo θ, được define (có giá trị bởi) f(𝐱|θ), tức giá trị của likelihood L(θ|𝐱) tại θ được tính bằng giá trị của joint pdf của sample tại observed value 𝐱. 
+> Vậy thì theo sách Casella, estimator, có thể là bất kì function nào của sample, và với một định nghĩa mơ hồ như vậy, ta cần có những phương pháp tiếp cận để dẫn đến một estimator tốt, và tiêu biểu là MoM (method of moment). MLE (maximum likelihood estimator) và Bayes estimator. Thế thì, với MLE, nói ngắn gọn, cái hàm W(𝐗) mà ta dùng sẽ là hàm số sau: W(𝐱) = argmax (over θ) L(θ|𝐱), với L(θ|𝐱) là likelihood function, là hàm số theo θ, được define (có giá trị bởi) f(𝐱|θ), tức giá trị của likelihood L(θ|𝐱) tại θ được tính bằng giá trị của joint pdf của sample tại observed value 𝐱.
 >
 >
 >
@@ -24,9 +24,7 @@
 >
 >
 >
-> Quay lại đây, express theo cái khung của bài toán point estimation trên thì ta sẽ nói thế này: cho 𝐗1, ...𝐗N là iid \~ f(𝐱|**η**), và muốn tìm ML estimator cho **η**. Thì theo định nghĩa, likelihood function là hàm theo **η**, được define bởi giá trị của joint pdf của sample tại observed value. do đó, likelihood tại **η**, kí hiêu7 tính bằng f(𝐱1, 𝐱2,....𝐱N|**η**). Hay gom các random vector 𝐗1, ...𝐗N, lại thành random matrix 𝐗, có observed value là 𝐱, hay mình ghi là \[**matrix x**\] cho dễ phân biệt.
->
->
+> Quay lại đây, express theo cái khung của bài toán point estimation trên thì ta sẽ nói thế này: cho 𝐗1, ...𝐗N là iid \~ f(𝐱|**η**), và muốn tìm ML estimator cho **η**. Thì theo định nghĩa, likelihood function là hàm theo **η**, được define bởi giá trị của joint pdf của sample tại observed value. do đó, likelihood tại **η**, kí hiệu tính bằng f(𝐱1, 𝐱2,....𝐱N|**η**). Hay gom các random vector 𝐗1, ...𝐗N, lại thành random matrix 𝐗, có observed value là 𝐱, hay mình ghi là \[**matrix x**\] cho dễ phân biệt.
 >
 > Khi đó, likelihood sẽ kí hiệu là L(**η**|\[**matrix** 𝐱\]) = f(\[**matrix x**\]|**η**) = f(𝐱1,𝐱2,..,𝐱N|**η**) = f(𝐱1|**η**)f(𝐱2|**η**)...f(𝐱N|**η**) = Πi=1:N f(𝐱i|**η**).
 >
@@ -52,7 +50,7 @@
 >
 >
 >
-> ∫f(𝐱|**η**) d𝐱 = 1, để rồi, đạo hàm hai vế thế **η**, ta sẽ có một kết quả đó là - ∇ln g(**η**) = E\[u(𝐱)\] đặng tí nữa dùng. Thử xem các bước như thế nào mà ra kết quả này:
+> ∫f(𝐱|**η**) d𝐱 = 1, để rồi, đạo hàm hai vế theo **η**, ta sẽ có một kết quả đó là - ∇ln g(**η**) = E\[u(𝐱)\] đặng tí nữa dùng. Thử xem các bước như thế nào mà ra kết quả này:
 >
 >
 >
@@ -76,7 +74,7 @@
 >
 >
 >
-> ⇔ d/d**η** \[g(**η**)\] × ∫h(𝐱)exp{**η**ᵀ𝐮(𝐱)} d𝐱\] + g(**η**) d/d**η**\[∫h(𝐱)exp{**η**ᵀ𝐮(𝐱)} d𝐱\] = 0
+> ⇔ d/d**η** \[g(**η**)\] × ∫h(𝐱)exp{**η**ᵀ𝐮(𝐱)} d𝐱 + g(**η**) d/d**η**\[∫h(𝐱)exp{**η**ᵀ𝐮(𝐱)} d𝐱\] = 0
 >
 >
 >
@@ -84,7 +82,7 @@
 >
 >
 >
-> Xét cái d/d**η**\[∫h(𝐱)exp{**η**ᵀ𝐮(𝐱)} d𝐱\] trong term thứ 2: Đây là ta đang đạo hàm theo η của một cái tích phân theo 𝐱, được phép đưa đạo hàm vào trong, vì biên của tích phân không phụ thuộc **η**, cái này giống như ta đạo hàm theo **η** của một cái tổng các hàm số thôi.
+> Xét cái d/d**η**\[∫h(𝐱)exp{**η**ᵀ𝐮(𝐱)} d𝐱\] trong term thứ 2: Đây là ta đang đạo hàm theo **η** của một cái tích phân theo 𝐱, được phép đưa đạo hàm vào trong, vì biên của tích phân không phụ thuộc **η**, cái này giống như ta đạo hàm theo **η** của một cái tổng các hàm số thôi.
 >
 >
 >
@@ -159,9 +157,28 @@
 > (nhiệm vụ của ta vẫn là giải bài toán tối ưu: maximize ln L(**η**|𝐱))
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Phân tích cực kỳ chi tiết và sâu sắc, giải thích rõ ràng từng bước trong quá trình suy luận và các quy tắc toán học áp dụng, vượt xa nội dung được trình bày trong hình ảnh gốc. Độ chính xác cao và kiến thức nền được củng cố vững chắc.
+> Ghi chú rất xuất sắc, trình bày chi tiết và tường minh từng bước biến đổi giải tích từ đẳng thức tích phân chuẩn hóa đến công thức kỳ vọng (2.226).
+>
+> **🟡 Minor issues**
+>
+> **1.** *"f(𝐱|θ) = f(x1,...xn|θ) = f(x1|θ) × f(x1|θ) × .. f(xn|θ) = Πi=1:n f(xi|θ)"*
+>
+> Lỗi gõ phím nhỏ: thừa lặp lại phần tử `f(x1|θ)` thay vì `f(x2|θ)`.
+>
+> **2.** *"Vậy ta có kết quả để dành tí nữa xài: - 1/g(η) ∇g(η) = E[𝐮(𝐗)] → 2.226"*
+>
+> Công thức (2.226) trong sách chốt lại ở dạng rút gọn logarit là -∇ ln g(η) = E[u(x)], dù trước đó bạn đã biến đổi đúng chain rule.
+>
+>
+> **✓ Strengths**
+> - Diễn giải và liên hệ bài bản nền tảng thống kê suy luận (point estimation, Frequentist MLE) rất chuẩn xác.
+> - Tự triển khai chi tiết từng bước đạo hàm giải tích (quy tắc tích, chuỗi đạo hàm ma trận/vector) mà sách giáo khoa viết lướt.
+> - Nhận diện chính xác việc dùng định lý LOTUS để chuyển tích phân thành kỳ vọng E[u(x)].
+>
+> **💡 Deeper notes**
+> - Việc hoán đổi dấu tích phân và đạo hàm (Leibniz integral rule) đối với tích phân suy rộng đòi hỏi điều kiện chính quy (regularity conditions). Với họ phân phối mũ, tính chất giải tích này được đảm bảo khi η nằm trong phần trong (interior) của không gian tham số tự nhiên.
 
 **🔗 See also:** [2.4 The Exponential Family](./24_the_exponential_family.md#node-1hlelhn) · [Conditional Mean in Exponential Family](./436_canonical_link_function.md#node-tp0pbj6)
 
