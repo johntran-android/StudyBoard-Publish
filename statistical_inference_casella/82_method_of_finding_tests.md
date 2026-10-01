@@ -1,6 +1,6 @@
 # 8.2 Method Of Finding Tests
 
-📊 **Progress:** `21` Notes | `26` Screenshots
+📊 **Progress:** `21` Notes | `26` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-ddu990f"></a>
@@ -1990,6 +1990,29 @@
 > Như vậy mới nói là Union Intersection Test xây dựng bởi 2 cái one-sided t test
 > thì chính là / equivalent với cái LRT của bài toán 2-sided test
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc và diễn giải trực quan, chính xác bản chất của Union-Intersection Test khi kết hợp hai kiểm định một phía để tạo thành two-sided t-test tương đương với LRT.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Để rồi giả sử tL = -tU"*
+>
+> Cần thêm điều kiện t_L = -t_U ≥ 0 để phép gộp hai bất đẳng thức thành giá trị tuyệt đối |X̄ - μ0| / (S/√n) ≥ t_L có nghĩa hoàn chỉnh.
+>
+> **2.** *"bài toán one-size test"*
+>
+> Lỗi gõ phím nhỏ (typo), chính xác là 'one-sided test'.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ nguyên lý của Union-Intersection Test (bác bỏ H0 khi bất kỳ H0 thành phần nào bị bác bỏ).
+> - Kết nối chính xác giữa việc hợp nhất hai one-sided t-test thành two-sided t-test và sự tương đương của nó với LRT trực tiếp.
+>
+> **💡 Deeper notes**
+> - Trong thực tế với kiểm định hai phía đối xứng ở mức ý nghĩa α, người ta thường chọn t_L = -t_U = t_{n-1, α/2} để xác suất sai lầm loại I được chia đều cho hai đuôi.
+
 **🔗 See also:** [Kiểm định hợp-giao cỡ α](./83_methods_of_evaluating_test.md#node-aruspge) · [linked note](./83_methods_of_evaluating_test.md#node-yn1ggv1)
 
 <br>
@@ -2047,6 +2070,29 @@
 >
 > Và khi các rejection region của các bài toán con có dạng {𝐱: T_γ(𝐱) > c} thì
 > ⇨ rejection của bài toán gốc sẽ là {𝐱: inf_γ ∈ Γ {T_γ(𝐱)} > c}
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc và chính xác bản chất logic đối nghịch giữa phương pháp Union-Intersection và Intersection-Union. Lập luận bác bỏ giả thuyết gốc dựa trên các bài toán kiểm định con hoàn toàn chuẩn xác.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Θ0 = U{γ∈Γ}"*
+>
+> Lỗi gõ thiếu ký hiệu tập con Θ_γ (đúng ra là ⋃_{γ∈Γ} Θ_γ).
+>
+> **2.** *"= ∩{γ∈Γ}{𝐱: T_γ(𝐱) > c}"*
+>
+> Dòng này bị viết tắt/nhảy cóc trước khi nêu giả định rằng các miền bác bỏ thành phần có dạng {𝐱: T_γ(𝐱) ≥ c}, và dùng dấu '>' thay vì '≥' như trong giáo trình (dù về mặt bản chất kiểm định liên tục thì không làm thay đổi tư duy).
+>
+>
+> **✓ Strengths**
+> - Giải thích trực quan và chính xác logic mệnh đề: phủ định của hội là tuyển và ngược lại để xác định miền bác bỏ.
+> - Hiểu đúng việc chuyển từ giao của các tập {T_γ(𝐱) ≥ c} sang thống kê infimum: inf T_γ(𝐱) ≥ c.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý thêm điều kiện hằng số ngưỡng c độc lập với γ (c independent of γ) thì mới gom gọn về dạng inf_{γ∈Γ} T_γ(X) ≥ c được.
 
 <br>
 
