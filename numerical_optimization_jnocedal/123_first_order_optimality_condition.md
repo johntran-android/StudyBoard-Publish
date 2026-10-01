@@ -139,7 +139,7 @@
 > - Trong công thức (12.34e), Nocedal viết λ*i ci(x*) = 0 cho cả i ∈ ℰ ∪ ℐ. Mặc dù với i ∈ ℰ thì ci(x*) = 0 hiển nhiên dẫn đến tích bằng 0 (nên viết cho i ∈ ℐ như bạn vẫn chuẩn xác về mặt thực hành), nhưng việc gộp chung giúp định nghĩa tổng quát hơn.
 > - Trong tối ưu lồi (Boyd), KKT là điều kiện đủ, nhưng để KKT trở thành điều kiện cần và đủ thì bài toán lồi cũng cần thỏa mãn một điều kiện chuẩn tắc ràng buộc nhẹ hơn (Slater's condition).
 
-**🔗 See also:** [linked note *(EE364a, Convex Optim_S.Boyd)*](../ee364a_convex_optim_sboyd/lec_7.md#node-7gcnhz7) · [Definition 12.1: The Active Set](./121_examples.md#node-ukukd7b) · [Definition 12.8 Active Constraints](./128_lagrange_multipliers_and_sensitivity.md#node-yzk9dz0)
+**🔗 See also:** [linked note *(EE364a, Convex Optim_S.Boyd)*](../ee364a_convex_optim_sboyd/lec_7.md#node-7gcnhz7) · [Definition 12.1: The Active Set](./121_examples.md#node-ukukd7b) · [Definition 12.8 Active Constraints](./128_lagrange_multipliers_and_sensitivity.md#node-yzk9dz0) · [Đối ngẫu Wolfe](./129_duality.md#node-awruifo)
 
 <br>
 
