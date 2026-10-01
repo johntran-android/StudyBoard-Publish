@@ -47,7 +47,7 @@
 
 <p align="center"><kbd><img src="assets/eggki7qvnjc.png" width="80%"></kbd></p>
 
-**🔗 See also:** [2.4.1 Maximum likelihood & sufficient statistic](./241_maximum_likelihood_sufficient_statistic.md#node-niekuox)
+**🔗 See also:** [2.4.1 Maximum likelihood & sufficient statistic](./241_maximum_likelihood_sufficient_statistic.md#node-niekuox) · [Section 4.2.4 Exponential Family](./424_exponential_family.md#node-75dk469)
 
 <br>
 
