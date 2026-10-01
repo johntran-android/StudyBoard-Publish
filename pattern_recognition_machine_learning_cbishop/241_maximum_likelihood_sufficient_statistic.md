@@ -163,7 +163,7 @@
 >
 > Phân tích cực kỳ chi tiết và sâu sắc, giải thích rõ ràng từng bước trong quá trình suy luận và các quy tắc toán học áp dụng, vượt xa nội dung được trình bày trong hình ảnh gốc. Độ chính xác cao và kiến thức nền được củng cố vững chắc.
 
-**🔗 See also:** [2.4 The Exponential Family](./24_the_exponential_family.md#node-1hlelhn)
+**🔗 See also:** [2.4 The Exponential Family](./24_the_exponential_family.md#node-1hlelhn) · [Conditional Mean in Exponential Family](./436_canonical_link_function.md#node-tp0pbj6)
 
 <br>
 
