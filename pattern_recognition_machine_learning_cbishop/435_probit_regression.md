@@ -1,6 +1,6 @@
 # 4.3.5 Probit Regression
 
-📊 **Progress:** `3` Notes | `5` Screenshots | `3` AI Reviews
+📊 **Progress:** `4` Notes | `7` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-de69sdj"></a>
@@ -259,31 +259,184 @@
 
 <p align="center"><kbd><img src="assets/lyscslup7qe.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/3t9qmm6vo65.png" width="80%"></kbd></p>
+
 > [!NOTE]
-> Đoạn cuối này đại ý là về cơ bản probit regression perform tương tự logistic, nó chỉ phát huy tác dụng khi ta qua Bayes approach ở phần sau.
+> Đoạn cuối này đại ý là về cơ bản probit regression perform tương tự logistic, ta sẽ bàn về một tác dụng khác của nó khi ta qua Bayes approach ở phần sau.
 >
 >
 >
-> Một cái nữa, là nó nhạy cảm với outlier hơn logistic, nên với dataset có nhãn bị gán sai thì mô hình probit regression sẽ rất tệ
+> Một cái nữa, là nó nhạy cảm với outlier hơn logistic, nên với dataset có nhãn bị gán sai thì mô hình probit regression sẽ rất tệ.
+>
+>
+>
+> Có thể hiểu đại khái là như sau:
+>
+>
+>
+> Đại ý là, ta xét một datapoint bị gán nhãn sai, t=1 trong khi đó nó vốn dĩ là t=0
+>
+>
+>
+> Thế thì, cái (binary) cross entropy bữa trước đã hiểu là E(𝐰) = -Σn {tn ln(yn) + (1-tn)ln(1-yn)}
+>
+>
+>
+> Nên error đóng góp bởi datapoint này sẽ là: - \[t ln(y) + (1-t)ln(1-y)\] = -ln(y) = -ln(σ(a)) 
+>
+>
+>
+> a = 𝐰ᵀ𝐱
+>
+>
+>
+> Giả sử trước khi data point này xuất hiện mô hình đã train với bộ data ban đầu không có mislabeled data, và kết quả rất tốt (tìm được 𝐰 gíup phân chia hai lớp). Và rồi data point bị gán nhãn sai xuất hiện. Ta sẽ xem thử ảnh hưởng của nó.
+>
+>
+>
+> Vấn đề là, vì đây vốn dĩ là data point thuộc class t=0, nên a = 𝐰ᵀΦ sẽ âm. Và khi nó càng rõ là một data point rõ ràng là thuộc class 𝒞2 (t=0), thì giá trị a này sẽ càng âm: a ≪ 0 và σ(a) sẽ ≈ 0 và error sẽ = -ln(0) là con số rất lớn.
+>
+>
+>
+> Cái này cho thấy rằng, logistic regression sẽ rất sensitive với datapoint bị gán nhãn sai (vì một case như vậy đóng góp rất lớn vào error, khiến thuật toán khi muốn giảm error sẽ phải thay đổi 𝐰 để giảm bớt error tăng vọt này, và như vậy, chính là bị nhạy cảm với mislabeled data)
+>
+>
+>
+> Và probit regression cũng có hành vi tương tự: Hiểu thế này: hàm sigmoid σ có dạng chữ s dẫn tới ta hiểu hành vi (khi a ≪ 0 thì σ(a) ≈ 0). Thì với probit regression, như đã biết, activation function là 𝚽(.), tuy ta ko biết (chưa thấy) chính xác đồ thị của nó, chỉ biết nó cũng có dạng chữ s tương tự sigmoid, nhưng mình biết ý nghĩa của nó: 𝚽(a) là CDF của biến 𝒩(0,1) tại a, và chính là diện tích phần bên dưới đồ thị hàm pdf của 𝒩(0,1). Từ đó có thể hình dung sự biến thiên của 𝚽 như sau:
+>
+>
+>
+> Khi a đi từ -∞ tới 0:
+>
+>
+>
+> Trong khoảng đường mà a còn "ở xa" (tức ≪ 0) thì có thể không khó để hình dung, diện tích của cái đuôi hình chuông 𝒩(0,1) là cực kì nhỏ (≈ 0)
+>
+>
+>
+> Khi a đã vượt qua giai đoạn này, bắt đầu đi vào phần cái chuông, thì diện tích bắt đầu tăng nhanh (không khó để thấy vì sao tăng nhanh: vì phần diện tích đang lem dần tới đỉnh chuông) cho đến khi a chạm mốc 0 thì diện tích đạt 1/2 diện tích cái chuông, ta biết, tổng diện tích phải là 1 (vì tính valid của pdf), nên tại a=0, 𝚽(0) = 1/2.
+>
+>
+>
+> Khi a đi từ 0 tới +∞:
+>
+>
+>
+> Trong gian đoạn đầu khi a chưa lớn hơn 0 quá nhiều, ta vẫn còn trong phạm vi cái "mình" chuông, phần diện tích đang nói tiếp tục tăng lên nhưng tốc độ giảm bớt, cho đến khi nó ra khỏi phạm vi này, có thể hình dung diện tích đã đạt gần ≈1
+>
+>
+>
+> Và trong giai đoạn sau, khi 0 ≪ a, thì hầu như diện tích tăng thêm rất chậm
+>
+>
+>
+> Với phân tích đó, có thế thấy hình dạng hàm 𝚽(a) cũng hao hao hàm sigmoid.
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì, lại xét tiếp hàm 𝚽, và hành vi của nó khi a ≪ 0, và tiếp tục cho a nhỏ dần, để cho tiện, ta đặt a = -x, và cho x đi tới +∞.
+>
+>
+>
+> Như đã nói, 𝚽(a) là diện tích của cái đuôi siêu mỏng của đồ thị hàm pdf 𝒩(0,1), bằng cách phân tích xấp xỉ, ta có thể tạm hiểu là khi a ngày càng "rất âm" thì diện tích của phần này xấp xỉ hàm số exp(-x²). Hàm exp(u), còn nhớ, sẽ kéo về 0 khi u → -∞, nên khi nói nó xấp xỉ hàm exp(-x²) thì có nghĩa là khi x càng dương để a càng âm thì diện tích phần này teo lại rất nhanh.
+>
+>
+>
+> Vậy, khi cho x → +∞ cũng là cho a → -inf thì 𝚽(a) → 0 rất nhanh và cũng là y → 0 rất nhanh ⇒ - ln y tăng vọt lên rất nhanh khiến error bởi data point gán nhãn sai này sẽ rất lớn: ≈ -ln (exp (-x²)) ≈ x²: tăng theo bình phương x
+>
+>
+>
+> Hành vi này cũng xảy ra với hàm sigmoid nhưng ở mức độ đỡ hơn như sau:
+>
+>
+>
+> σ(a) = 1/\[1+exp(-a)\], khi x → inf để a → -inf thì thì exp(-a) = exp(x) rất lớn nên 1/\[1+exp(-a)\] ≈ 1/exp(-a) = exp(a) = exp(-x)
+>
+>
+>
+> Như vậy khi x→ ∞ thì σ(a) xấp xỉ exp(-x), và dĩ nhiên nó cũng teo nhỏ về 0. Nhưng so với hành vi của 𝚽 ≈ exp(-x²) thì nó nhỏ về 0 CHẬM HƠN: ≈ -ln (exp (-x)) ≈ x: tăng tuyến tính theo x
+>
+>
+>
+> Và như vậy ý nghĩa của phân tích mang tính trực giác này là: Sự khác nhau này của hành vi của hàm 𝚽 và σ sẽ khiến cho: Với một datapoint gán nhãn sai, error của nó đều rất lớn (khiến cả hai đều bị sensitive với outlier) nhưng với probit thì error lớn hơn, nên probit regression bị sensitive hơn logistic.
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=YrNpRZMgk-4)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú nắm rất tốt ý chính về sự tương đồng giữa probit và logistic regression cũng như độ nhạy của probit đối với outliers do đuôi phân phối suy giảm nhanh hơn.
+> Ghi chú xuất sắc, giải thích rất cặn kẽ và trực quan lý do tại sao hàm probit nhạy cảm với outlier hơn logistic regression thông qua hàm mất mát log-likelihood.
 >
 > **🟡 Minor issues**
 >
-> **1.** *"nó chỉ phát huy tác dụng khi ta qua Bayes approach ở phần sau"*
+> **1.** *"t ln(y) + (1-t)ln(1-y) = -ln(y)"*
 >
-> Cách diễn đạt hơi quá mức so với văn bản gốc. Sách dùng cụm 'find another use' (tìm thấy một ứng dụng/công dụng khác trong xử lý Bayes cho logistic regression), chứ không có nghĩa là probit 'chỉ' có tác dụng khi làm Bayes; bản thân mô hình probit vẫn hoạt động tốt và cho kết quả tương tự logistic khi dùng Maximum Likelihood.
+> Lỗi nhỏ về dấu: vế trái thiếu dấu trừ đằng trước toàn bộ biểu thức (-(t ln y + (1-t)ln(1-y))), dù ở dòng trên bạn đã viết đúng công thức tổng quát và kết quả rút gọn -ln(y) là chính xác.
 >
 >
 > **✓ Strengths**
-> - Nắm chuẩn xác việc probit regression nhạy cảm với dữ liệu nhiễu/outlier (như gán nhãn sai) hơn so với logistic regression.
-> - Tóm lược đúng ý thực nghiệm: kết quả huấn luyện thường tương đương giữa hai mô hình khi dữ liệu chuẩn.
+> - Biến đổi và liên hệ trực tiếp giữa tốc độ suy giảm ở đuôi (tail decay) và mức phạt lỗi (-ln y), chỉ ra rõ sai số tăng tuyến tính (x) ở logistic so với bậc hai (x^2) ở probit.
+> - Hình vẽ và lập luận hình học về tích phân diện tích dưới đường cong pdf N(0,1) để hình dung dạng hàm CDF Phi(a) rất trực quan và chuẩn xác.
 >
 > **💡 Deeper notes**
-> - Bản chất toán học giải thích cho sự khác biệt về độ nhạy outlier nằm ở tốc độ suy giảm ở đuôi (tail decay): logistic sigmoid giảm chậm theo bậc hàm exp(-x), trong khi hàm probit giảm rất nhanh theo hàm Gauss exp(-x^2), khiến điểm ngoại lai tác động mạnh hơn lên hàm mất mát/gradient.
+> - Về mặt giải tích tiệm cận chặt chẽ (Mill's ratio), đuôi phân phối chuẩn tắc thỏa mãn Phi(-x) ~ exp(-x^2 / 2) / (x * sqrt(2*pi)) khi x -> +infty. Sách giáo trình và ghi chú lược bớt hệ số 1/2 và 1/x để tập trung vào bậc suy giảm chủ đạo exp(-O(x^2)).
+
+**🔗 See also:** [Cross-Entropy Error Function Gradient](./432_logistic_regression.md#node-gvw6cdv)
+
+<br>
+
+<a id="node-dths7pd"></a>
+
+##### Xác suất gán nhãn sai
+
+<p align="center"><kbd><img src="assets/hcdldcapqld.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Cuối cùng là cách người ta đưa (integrate) vụ gán nhãn sai này vào mô hình xác suất: Nói đơn giản là bằng cách đưa một tham số ε mang ý nghĩa là xác suất xảy ra việc gán nhãn sai.
+>
+>
+>
+> Ta có xác suất gán nhãn sai là ε
+>
+>
+>
+> Vậy khi xảy ra, ta dùng 1-σ(a)
+>
+>
+>
+> Còn khi không xảy ra, ta dùng σ(a)
+>
+>
+>
+> Khi đó, cơ bản là ta biến Y \~ Bern(ε), với hai possible value \[1-σ(a)\] và σ(a) với xác suất (pmf) là ε và 1-ε. Để rồi ta dùng E\[Y\] = \[1-σ(a)\] × ε + σ(a) × (1-ε)
+>
+>
+>
+> Và ta sẽ chọn ε hoặc coi như siêu tham số.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú nắm rất tốt bản chất mô hình gán nhãn sai và cách thức kết hợp tham số nhiễu ε. Có một chút nhầm lẫn nhỏ về quy ước thuật ngữ phân phối Bernoulli nhưng không làm sai lệch bản chất toán học.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"ta biến Y ~ Bern(ε), với hai possible value [1-σ(a)] và σ(a) với xác suất (pmf) là ε và 1-ε"*
+>
+> Theo quy ước xác suất, phân phối Bernoulli chỉ nhận giá trị trong tập {0, 1}. Về mặt bản chất, đây là công thức xác suất toàn phần (law of total probability) theo biến cố có bị lật nhãn hay không, hoặc biến ngẫu nhiên nhận giá trị phân biệt đó là một phép biến đổi tuyến tính của biến Bernoulli.
+>
+>
+> **✓ Strengths**
+> - Hiểu chính xác vai trò của tham số ε như một xác suất lật nhãn để làm mượt dự đoán của mô hình.
+> - Tự diễn giải công thức (4.117) thông qua kỳ vọng xác suất toàn phần rất trực quan và chính xác về mặt đại số.
+> - Nắm đúng cách xử lý tham số ε (cố định trước hoặc xem như siêu tham số học từ dữ liệu).
+>
+> **💡 Deeper notes**
+> - Ký hiệu p(t|x) trong phương trình (4.117) của Bishop ngầm định là xác suất nhãn dương p(t=1|x); với nhãn t tổng quát, công thức đầy đủ sẽ có dạng Bernoulli p(t|x) = y^t (1-y)^(1-t) với y = ε + (1-2ε)σ(x).
 
 <br>
 
