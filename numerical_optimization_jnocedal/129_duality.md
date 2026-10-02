@@ -1,6 +1,6 @@
 # 12.9 Duality
 
-📊 **Progress:** `7` Notes | `11` Screenshots | `7` AI Reviews
+📊 **Progress:** `8` Notes | `12` Screenshots | `8` AI Reviews
 
 ---
 <a id="node-j9in33p"></a>
@@ -894,6 +894,44 @@
 > - Trong định lý, giả thiết LICQ chủ yếu dùng để đảm bảo sự tồn tại của nhân tử Lagrange (KKT multiplier) lambda_bar tại nghiệm x_bar; khi đã có KKT thì phần suy dẫn Wolfe dual diễn ra hoàn toàn đại số như bạn đã chỉ ra.
 
 **🔗 See also:** [Tính lõm hàm đối ngẫu](#node-qaxpu6x) · [First-Order Optimality Conditions](./123_first_order_optimality_condition.md#node-hvhhcds)
+
+<br>
+
+<a id="node-8y68v2o"></a>
+
+###### Example 12.11 Linear Programming Dual
+
+<p align="center"><kbd><img src="assets/75lrgdbbx59.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Bài toán được đặt ra là cực tiểu hóa hàm mục tiêu dưới dạng tích vô hướng c^T x, thỏa mãn điều kiện ràng buộc Ax - b &gt;= 0. Trong bài toán tổng quát, các ràng buộc thường được biểu diễn dưới dạng c_i(x) &gt;= 0 với i = 1, 2, ..., m. Khi gom toàn bộ các thành phần c_i thành một hàm vector, ta thu được điều kiện ràng buộc c(x) &gt;= 0, trong đó hàm vector này chính là Ax - b. Do Ax - b là một vector, mỗi thành phần c_i(x) tương ứng với tích vô hướng giữa hàng thứ i của ma trận A với x trừ đi phần tử b_i tương ứng của vector b. Cụ thể, ràng buộc thứ nhất c_1(x) &gt;= 0 tương đương với tích vô hướng của hàng thứ nhất của A với x trừ đi b_1 &gt;= 0; ràng buộc thứ hai c_2(x) &gt;= 0 tương đương với tích vô hướng của hàng thứ hai của A với x trừ đi b_2 &gt;= 0. Cách biểu diễn này làm rõ mối liên hệ giữa bài toán cụ thể và dạng tổng quát c(x) &gt;= 0 thường gặp. Tiếp theo, ta xét bản chất của hàm mục tiêu đối ngẫu (dual objective function). 
+>
+>
+>
+> Theo định nghĩa, hàm mục tiêu đối ngẫu là infimum theo x của hàm Lagrangian, do đó cần xác định hàm Lagrangian trước. Trong trường hợp này, hàm Lagrangian được xác định bởi L(x, λ) = f(x) - λ^T(Ax - b) = c^T x - λ^T(Ax - b). Bằng cách cực tiểu hóa (lấy infimum) hàm Lagrangian này theo biến x, ta thu được hàm mục tiêu đối ngẫu phụ thuộc vào biến λ. Khi khai triển và nhóm các số hạng chứa biến x, ta nhận thấy đây là một hàm tuyến tính đối với x. 
+>
+>
+>
+> Tương tự như trong trường hợp đơn giản một biến ax + b đại diện cho một đường thẳng: khi hệ số a dương, đường thẳng dốc lên; khi a âm, đường thẳng dốc xuống. Dù dốc lên hay dốc xuống, khi tìm giá trị x để hàm số đạt cực tiểu, hàm số đều tiến về trừ vô cùng (-∞). Nói cách khác, đối với một hàm tuyến tính, nếu hệ số a khác 0 thì infimum của hàm theo x sẽ bằng -∞. Đối với hàm tuyến tính đa biến, tính chất này vẫn giữ nguyên, tương tự như việc lấy infimum của một mặt phẳng nghiêng trong không gian. Từ đây, ta liên hệ đến khái niệm tập xác định của hàm đối ngẫu, tức là tập hợp các giá trị λ sao cho hàm q(λ) lớn hơn -∞. Để bài toán đối ngẫu có ý nghĩa, hàm đối ngẫu bắt buộc phải xác định, tức là phải khác -∞. Do đó, điều kiện tiên quyết là λ phải thỏa mãn A^T λ = c để đảm bảo q(λ) xác định trước. Khi đó, hàm Lagrangian chỉ còn lại b^T λ, và infimum của nó theo x cũng chính bằng b^T λ. Như vậy, hàm đối ngẫu hoàn toàn xác định và nhận giá trị q(λ) = b^T λ. 
+>
+>
+>
+> Trong bài toán đối ngẫu, điều kiện A^T λ = c đóng vai trò là một ràng buộc. Theo tài liệu về tối ưu lồi của Stephen Boyd, điều kiện này được gọi là ràng buộc ngầm (implicit constraint). Trước khi xem xét các ràng buộc tường minh (explicit constraints) như λ &gt;= 0, bài toán bắt buộc phải thỏa mãn ràng buộc ngầm nhằm đảm bảo λ nằm trong tập xác định của hàm q, tức là miền giá trị khiến cho q(λ) &gt; -∞. Công thức 12.90 là một minh chứng cụ thể cho việc thiết lập ràng buộc ngầm này.
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=j85JoFMH0F0)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, giải thích trực quan và chính xác về bản chất của hàm mục tiêu đối ngẫu cũng như nguồn gốc của ràng buộc ngầm theo quan điểm tối ưu lồi.
+>
+> **✓ Strengths**
+> - Giải thích cặn kẽ cách biểu diễn ràng buộc dạng vector Ax - b >= 0 từ các thành phần ràng buộc vô hướng c_i(x) >= 0.
+> - Sử dụng trực giác hình học chính xác (đường thẳng/mặt phẳng nghiêng) để giải thích vì sao infimum của hàm tuyến tính bằng -vô cùng khi gradient khác 0.
+> - Liên hệ chuẩn xác với khái niệm 'ràng buộc ngầm' (implicit constraint) từ miền xác định của hàm đối ngẫu theo tài liệu của Boyd.
+>
+> **💡 Deeper notes**
+> - Điều kiện λ >= 0 xuất phát trực tiếp từ việc nhân tử Lagrange cho ràng buộc bất đẳng thức dạng Ax - b >= 0 phải không âm để hàm Lagrangian luôn là chặn dưới của bài toán gốc.
 
 <br>
 
