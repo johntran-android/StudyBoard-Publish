@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1790897934411,
+  "publishedAt": 1790963873549,
   "sections": [
     {
       "title": "📋 Overview",
@@ -425,8 +425,8 @@
     {
       "title": "4.3.6 Canonical link function",
       "path": "pattern_recognition_machine_learning_cbishop/436_canonical_link_function.md",
-      "noteCount": 1,
-      "imageCount": 2
+      "noteCount": 4,
+      "imageCount": 4
     },
     {
       "title": "Appendix C. Matrices",
@@ -441,6 +441,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 448,
-  "totalImages": 682
+  "totalNotes": 451,
+  "totalImages": 684
 }
