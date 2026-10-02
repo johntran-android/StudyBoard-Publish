@@ -332,6 +332,24 @@
 >
 >
 >
+> η = ψ(y)
+>
+>
+>
+> y = f(a)
+>
+>
+>
+> a = 𝐰ᵀΦ
+>
+>
+>
+> d/d𝐰 η = (d/dy η)(d/da y)(d/d𝐰 a)
+>
+> ---
+>
+>
+>
 > Như vậy y là hàm của số của η và ngược lại, và vì y là hàm của 𝐰 (thông qua một activation function lên a, và a là hàm tuyến tính của 𝐰): y = f(𝐰ᵀΦ)
 >
 >
@@ -376,6 +394,10 @@
 >
 >
 >
+> d/d𝐰 \[ln g(ηn)\] = d/dηn ln g . d/d𝐰 ηn
+>
+>
+>
 > = Σn=1:N {(d/dηn \[ln g(ηn)\]) . (d/d𝐰 ηn) + (tn/s) d/d𝐰 ηn}
 >
 >
@@ -416,7 +438,7 @@
 >
 >
 >
-> ... = Σn=1:N (1/s) {tn-yn)} ψ'(y) f'(an) Φ → 4.122
+> ... = Σn=1:N (1/s) {tn-yn)} ψ'(yn) f'(an) Φn → 4.122
 >
 >
 >
@@ -428,32 +450,114 @@
 >
 >
 >
-> Khi đó f(ψ(y)) = ψ⁻¹(ψ(y)) = y.
+> f⁻¹(y) = ψ(y)
 >
 >
 >
-> Và y = f(a) ⇒ a = f⁻¹(y)
+> nên f(ψ(y)) = f(f⁻¹(y)) = y
 >
 >
 >
-> ⇒ f(ψ(y)) = f(a)
+> ⇒ d/dy \[f(ψ(y))\] = 1
 >
 >
 >
-> ψ(y) = a
+> ⇔ \[d/dψ f(ψ)\] . d/dy ψ(y) = 1
+>
+>
+>
+> ⇔ f'(ψ) ψ'(y) = 1
+>
+>
+>
+> Bên cạnh đó
+>
+>
+>
+> Và y = f(a) ⇒ a = f⁻¹(y) = ψ(y)
+>
+>
+>
+> ⇒ f'(ψ) = f'(a)
+>
+>
+>
+> Vậy ta có  f'(a) ψ'(y) = 1
+>
+>
+>
+> ---
+>
+>
+>
+> Thay vào 4.122:
+>
+>
+>
+> ∇ ln likelihood
+>
+>
+>
+> = Σn=1:N (1/s) {tn-yn)} ψ'(y) f'(an) Φ
+>
+>
+>
+> = Σn=1:N (1/s) {tn-yn)} × 1 × Φn 
+>
+>
+>
+> = (1/s) Σn=1:N (tn-yn) Φn 
+>
+>
+>
+> Nên với việc ta đặt error function E(𝐰) = - ln likelihood
+>
+>
+>
+> ta có ∇E(𝐰) = -(1/s) Σn=1:N (tn-yn) Φn 
+>
+>
+>
+> = (1/s) Σn=1:N (yn-tn) Φn 
+>
+>
+>
+> (trong sách ghi là ∇ ln E(𝐰), là có lẽ là lỗi nhỏ, vì đã đặt E(𝐰) là ln likelihood rồi)
+>
+>
+>
+> Như vậy đã chỉ ra rằng, đúng là với giả định Tn|𝐱n \~ exponential family f(tn|ηn, s) với n = 1,2... N và dùng activation function là hàm số có tính chất đặc biệt nói trên thì gradient quả thật có dạng tổng của các feature Φn với hệ số là sai số tn-yn
+>
+>
+>
+>
+>
+> ---
+>
+>
+>
+> Như vậy, có thể thấy với Gaussian (linear regression Gaussian noise, s chính là 1/β)
+>
+>
+>
+> với logistic model, s = 1
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=K9QxrW2g1z4)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
-> Ghi chú giải thích rất chính xác và mạch lạc về bản chất chuỗi liên kết biến (chain rule) từ w sang η, làm rõ lý do tại sao mục tiêu tối ưu lại hướng trực tiếp vào trọng số w thay vì η.
+> Ghi chú xuất sắc! Bạn đã giải thích và tự thực hiện từng bước đạo hàm theo quy tắc chuỗi (chain rule), làm rõ bản chất việc tối ưu theo w thay vì η, và chứng minh trọn vẹn dạng rút gọn của gradient khi dùng canonical link function.
 >
 > **✓ Strengths**
-> - Nắm rất vững mối quan hệ giữa kỳ vọng E[t|η] và đạo hàm của hàm chuẩn hóa -s d/dη ln g(η).
-> - Hiểu rõ chuỗi phụ thuộc w -> a -> y -> η, tạo tiền đề chuẩn xác cho quy tắc dây chuyền (chain rule) trong công thức (4.122).
-> - Nhận thức đúng bản chất hằng số trong log-likelihood đối với η (vẫn phụ thuộc vào s).
+> - Giải thích rất rõ động cơ mô hình hóa: tại sao trong Machine Learning ta tham số hóa η theo w (thông qua link/activation function) để phục vụ bài toán dự đoán (prediction) thay vì chỉ ước lượng điểm η.
+> - Tự triển khai tường minh từng bước chain rule từ L(η, s) qua y, a tới w mà không chỉ chép lại công thức trong sách.
+> - Chứng minh chặt chẽ điều kiện f'(a)ψ'(y) = 1 từ quan hệ hàm ngược f⁻¹(y) = ψ(y) (canonical link function).
+> - Nhận diện chính xác dạng hàm lỗi E(w) = -ln p(t|w, s) để dẫn ra gradient có dạng chuẩn 'sai số × feature vector'.
 >
 > **💡 Deeper notes**
-> - Trong GLM, việc tối ưu trực tiếp theo w thay vì tìm riêng lẻ từng η_n cho từng mẫu dữ liệu là mấu chốt để mô hình có khả năng tổng quát hóa (generalization) đối với các điểm dữ liệu mới x chưa từng thấy.
+> - Trong sách PRML công thức (4.124) có một lỗi in ấn nhỏ (typo) ghi là '∇ ln E(w)', bạn đã nhận biết đúng bản chất cần tính là '∇ E(w)' với E(w) là negative log-likelihood.
+> - Hàm liên kết thỏa mãn f⁻¹(y) = ψ(y) (tức a = η) được gọi là canonical link function (hàm liên kết chính tắc) trong lý thuyết GLM (Generalized Linear Models).
 
 <br>
 
