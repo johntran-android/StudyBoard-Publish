@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1790828586073,
+  "publishedAt": 1790912367620,
   "sections": [
     {
       "title": "📋 Overview",
@@ -203,8 +203,14 @@
     {
       "title": "12.9 Duality",
       "path": "numerical_optimization_jnocedal/129_duality.md",
-      "noteCount": 7,
-      "imageCount": 11
+      "noteCount": 8,
+      "imageCount": 12
+    },
+    {
+      "title": "16.0 Quadratic Programming",
+      "path": "numerical_optimization_jnocedal/160_quadratic_programming.md",
+      "noteCount": 1,
+      "imageCount": 2
     },
     {
       "title": "Appendix A",
@@ -225,6 +231,6 @@
       "imageCount": 11
     }
   ],
-  "totalNotes": 429,
-  "totalImages": 622
+  "totalNotes": 431,
+  "totalImages": 625
 }
