@@ -70,7 +70,7 @@
 >
 >
 >
-> Dùng product rule:
+> Dùng product rule: d/dx \[f(x)g(x)\] = \[d/dx f(x)\] g(x) + f(x) \[d/dx g(x)\]
 >
 >
 >
@@ -103,6 +103,8 @@
 >
 >
 > Dùng đạo hàm hàm sơ cấp: d/dx e^x = e^x, d/dx xᵀa = a
+>
+>
 >
 >
 >
@@ -142,6 +144,28 @@
 >
 >
 >
+> X, f(x),  P(X=x) {x1,...xn}
+>
+>
+>
+> weighted average: EX = P(X=x1) x1 + ...+ P(X=xn) xn   | ∫xf(x)dx
+>
+>
+>
+> Y = g(X)
+>
+>
+>
+> LOTUS: EY = P(X=x1) g(x1) + ...+ P(X=xn) g(xn) = Σi g(xi)P(X=xi) | ∫g(x)f(x)dx = E\[g(X)\]
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
 > Vậy -\[1/g(**η**)\] ∇g(**η**) = E\[𝐮(𝐗)\]
 >
 >
@@ -150,11 +174,13 @@
 >
 >
 >
-> Vậy ta có kết quả để dành tí nữa xài: - 1/g(**η**) ∇g(**η**) = E\[𝐮(𝐗)\] → 2.226
+> Vậy ta có kết quả để dành tí nữa xài: - d/d**η** ln g(**η**) = E\[𝐮(𝐗)\] → 2.226
 >
 >
 >
 > (nhiệm vụ của ta vẫn là giải bài toán tối ưu: maximize ln L(**η**|𝐱))
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=87DFX_8wgPE)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
