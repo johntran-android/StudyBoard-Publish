@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1790912367620,
+  "publishedAt": 1791149827487,
   "sections": [
     {
       "title": "📋 Overview",
@@ -209,8 +209,8 @@
     {
       "title": "16.0 Quadratic Programming",
       "path": "numerical_optimization_jnocedal/160_quadratic_programming.md",
-      "noteCount": 1,
-      "imageCount": 2
+      "noteCount": 3,
+      "imageCount": 6
     },
     {
       "title": "Appendix A",
@@ -231,6 +231,6 @@
       "imageCount": 11
     }
   ],
-  "totalNotes": 431,
-  "totalImages": 625
+  "totalNotes": 433,
+  "totalImages": 629
 }
