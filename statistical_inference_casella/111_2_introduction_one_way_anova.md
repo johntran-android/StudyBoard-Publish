@@ -1,6 +1,6 @@
 # 11.1 & 2  introduction, One-way Anova
 
-📊 **Progress:** `16` Notes | `20` Screenshots | `13` AI Reviews
+📊 **Progress:** `17` Notes | `22` Screenshots | `14` AI Reviews
 
 ---
 <a id="node-c5qtmoe"></a>
@@ -289,7 +289,7 @@
 > - Về mặt kỹ thuật, ước lượng điểm (point estimation) chỉ cần giả định tối thiểu là E[ε_ij] = 0 và phương sai hữu hạn, không nhất thiết phải cần phân phối chuẩn.
 > - Đoạn cuối giáo trình có mở rộng: khi không có giả định phân phối chuẩn hoàn hảo, Định lý Giới hạn Trung tâm (CLT) vẫn cho phép suy diễn xấp xỉ nếu cỡ mẫu đủ lớn và phân phối không quá lệch.
 
-**🔗 See also:** [Oneway Analysis of Variance](#node-bbj2x4f)
+**🔗 See also:** [Oneway Analysis of Variance](#node-bbj2x4f) · [Oneway ANOVA Assumptions](#node-tp60spi)
 
 <br>
 
@@ -719,4 +719,111 @@
 <br>
 
 <a id="node-tp60spi"></a>
+
+###### Oneway ANOVA Assumptions
+
+<p align="center"><kbd><img src="assets/pu7q6x1x3pm.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fl1uac00bq.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Khúc này chỉ nhắc lại trong ANOVA, ta giả định:
+>
+>
+>
+> Yij = θi + εij, trong đó εij độc lập, \~ n(0, σ²).
+>
+>
+>
+> Ôn nhanh theo location scale theorem:
+>
+>
+>
+> ---
+>
+>
+>
+> Nếu Z theo phân phối là thành viên của chuẩn của một location scale family, tức có location 0, scale 1 thì σZ + μ sẽ là thành viên có location μ, scale σ
+>
+>
+>
+> Và ngược lại nếu X là thành viên có location và scale là μ, σ thì Z = (X-μ)/σ sẽ là thành viên chuẩn (có location 0 scale 1)
+>
+>
+>
+> ---
+>
+>
+>
+> Mà normal thuộc loại location scale family có location = mean, scale = std, nên với εij \~ n(0, σ²) (tức có location 0, scale σ) thì θi + εij sẽ là thành viên có location θi, scale vẫn là σ. Nên Yij \~ n(θi, σ²) là vậy.
+>
+>
+>
+> Và vì εij với i=1,2...l, j=1,..n, độc lập nên Yij cũng độc lập nhau.
+>
+>
+>
+> Các kết quả sau đều dùng bổ đề 4.6.10 nói nếu ta có Xi \~ n(μi, σi²) và a1,a2,...an và b1,b2,...bn fixed constant thì Z = Σi (aiXi + bi) \~ n(Σi (aiμi + bi), Σi ai²σi²)
+>
+>
+>
+> ---
+>
+>
+>
+> Ȳi. = (1/ni) \[Σj=1:ni Yij\], sẽ là biến \~ n(θi, σ²/ni)
+>
+>
+>
+> Tiếp, xét tổng Σj Yij/ni, Yij/ni là các normal n(θi/ni, σ²/ni²) thì cũng sẽ là normal:
+>
+>
+>
+> nên Σj Yij/ni \~ n(ni × (θi/ni), ni σ²/ni²) = n(θi, σ²/ni)
+>
+>
+>
+> Với Ȳi là Σj Yij/ni, là n(θi, σ²/ni), thì (Σi=1:k aiȲi) cũng lại là normal có..:
+>
+>
+>
+> mean = Σi=1:k ai θi
+>
+>
+>
+> variance = Σi=1:k ai² σ²/ni = σ² Σi=1:k ai²/ni
+>
+>
+>
+> Và cuối cùng, theo location scale theorem mà ta đã nhắc lại ở trên: (ý sau: X là thành viên có location và scale là μ, σ thì Z = (X-μ)/σ sẽ là thành viên chuẩn (có location 0 scale 1))
+>
+>
+>
+> Thì \[(Σi=1:k aiȲi) - mean\]/√variance sẽ là n(0,1)
+>
+>
+>
+> ---
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=LLi-ShGm1AI)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất tốt, giải thích chi tiết và chặt chẽ nguồn gốc các phân phối từ giả định ANOVA thông qua họ vị trí - tỉ lệ (location-scale family) và tính chất tổ hợp tuyến tính của các biến ngẫu nhiên chuẩn độc lập.
+>
+> **✓ Strengths**
+> - Hiểu rõ bản chất ANOVA với các giả định biến ngẫu nhiên chuẩn độc lập có cùng phương sai.
+> - Tự suy luận chi tiết phân phối của trung bình mẫu nhóm và tổ hợp tuyến tính thay vì chỉ chép lại công thức.
+> - Vận dụng chính xác định lý họ vị trí - tỉ lệ (location-scale family) để chuẩn hóa về phân phối chuẩn chuẩn tắc n(0,1).
+>
+> **💡 Deeper notes**
+> - Khi chia cho hằng số a trong họ vị trí - tỉ lệ (scale σ/a), cần ngầm hiểu a > 0 vì tham số tỉ lệ (scale) luôn mang giá trị dương; với cỡ mẫu n_i thì điều này luôn thỏa mãn.
+> - Việc tính tổng phương sai Var(Σ Y_ij/n_i) = Σ Var(Y_ij/n_i) đòi hỏi tính độc lập giữa các quan sát Y_ij trong cùng một nhóm và giữa các nhóm, một giả định cốt lõi của one-way ANOVA.
+
+**🔗 See also:** [Chứng minh tổng biến chuẩn](./46_multi_variate_distribution.md#node-uaywczk) · [Oneway ANOVA Assumptions](#node-2zo08q5)
+
+<br>
+
+<a id="node-680r0w1"></a>
 
