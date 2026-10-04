@@ -1,6 +1,6 @@
 # 3.5 Location And Scale Families
 
-📊 **Progress:** `12` Notes | `17` Screenshots | `1` AI Reviews
+📊 **Progress:** `12` Notes | `17` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-zqu9nqh"></a>
@@ -21,6 +21,18 @@
 >
 > Khi xây dựng ta **sẽ xây dựng một pdf chuẩn**, thì **các member khác
 > sẽ chỉ là transform từ pdf chuẩn**. Đại ý là vậy
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác và súc tích ý tưởng cốt lõi của phần mở đầu về họ phân phối vị trí - tỷ lệ (Location and Scale Families).
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác 3 loại họ phân phối chính: location, scale, và location-scale.
+> - Hiểu đúng bản chất phương pháp xây dựng: bắt đầu từ một hàm mật độ chuẩn (standard pdf) và tạo ra các thành viên khác bằng phép biến đổi.
+>
+> **💡 Deeper notes**
+> - Các phép biến đổi cụ thể tương ứng với biến ngẫu nhiên là phép biến đổi tuyến tính: tịnh tiến $X + \mu$ (vị trí), nhân vô hướng $\sigma X$ (tỷ lệ), hoặc kết hợp cả hai $\sigma X + \mu$, dẫn đến hàm pdf tổng quát có dạng $\frac{1}{\sigma} f\left(\frac{x-\mu}{\sigma}\right)$.
 
 <br>
 
@@ -70,6 +82,33 @@
 >
 > kết quả là ∫-inf:inf (1/ σ) f[(x - μ) / σ] = 1
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+>
+> Ghi chú nắm đúng bản chất định lý và ý tưởng chứng minh bằng phép đổi biến số, tuy nhiên còn bỏ sót điều kiện quan trọng của tham số tỉ lệ σ.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"với mọi μ, σ bất kì"*
+>
+> Định lý bắt buộc điều kiện σ > 0. Nếu σ = 0 thì biểu thức không xác định (mẫu số bằng 0), còn nếu σ < 0 thì 1/σ < 0 khiến hàm mật độ bị âm và thứ tự cận tích phân bị đảo chiều.
+>
+> **2.** *"và vì σ ko âm ⇨ (1/ σ) f[(x - μ) / σ] cũng không âm"*
+>
+> Cần điều kiện ngặt σ > 0 (dương) thay vì 'không âm', vì mẫu số không được phép bằng 0.
+>
+> **3.** *"Và tích phân trở thành σ ∫-inf:inf f(y)dy"*
+>
+> Cách viết hơi tắt: bạn đang tính riêng phần tích phân ∫ f((x-μ)/σ)dx = σ rồi mới nhân lại với 1/σ ở ngoài, nên viết rõ (1/σ) * σ = 1 để tránh nhầm lẫn rằng tích phân ban đầu bị mất hệ số 1/σ.
+>
+>
+> **✓ Strengths**
+> - Nắm vững 2 điều kiện tiên quyết để một hàm là pdf: tính không âm và tích phân toàn miền bằng 1.
+> - Thực hiện chính xác phép đổi biến y = (x - μ)/σ để tính tích phân.
+>
+> **💡 Deeper notes**
+> - Khi đổi biến y = (x - μ)/σ trong tích phân, điều kiện σ > 0 đảm bảo rằng khi x → -∞ thì y → -∞ và x → +∞ thì y → +∞ (cận tích phân giữ nguyên chiều).
+
 <br>
 
 <a id="node-xnzmjhc"></a>
@@ -116,6 +155,29 @@
 >
 > thể hiện bằng P(-1 ≤ X ≤ 2|0) = P(1 ≤ X ≤ 4|μ) với X bên trái ~ f(x) và X bên
 > phải ~ f(x - μ)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+>
+> Ghi chú nắm rất tốt bản chất của location family là phép tịnh tiến đồ thị mà không đổi hình dạng xác suất. Cần lưu ý chỉnh lại cách hiểu từ 'above x = 0' và tổng quát hóa khoảng xác suất thay vì cố định giá trị μ = 2.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"những điểm trên đồ thị mà ở bên phải trục x = 0 trong đồ thị cũ f(x) sẽ trở thành những ở bên phải trục x = μ điểm trên đồ thị mới f(x - μ)"*
+>
+> Hiểu sai nghĩa của cụm 'above x = 0'. 'Above x = 0' trong tài liệu có nghĩa là 'nằm ngay phía trên vị trí hoành độ x = 0' (tức điểm (0, f(0))), chứ không phải 'ở bên phải trục x = 0'.
+>
+> **2.** *"P(-1 ≤ X ≤ 2|0) = P(1 ≤ X ≤ 4|μ)"*
+>
+> Khoảng [1, 4] chỉ đúng cho trường hợp cụ thể μ = 2 trong Figure 3.5.1 ([2 - 1, 2 + 2]). Khi viết tổng quát với điều kiện μ, cận tích phân phải là P(μ - 1 ≤ X ≤ μ + 2 | μ).
+>
+>
+> **✓ Strengths**
+> - Hiểu chính xác bản chất định nghĩa: cho phép sinh ra một họ phân phối mới từ một hàm mật độ chuẩn f(x) thông qua tham số định vị μ.
+> - Nắm vững ý nghĩa trực quan: tham số μ tịnh tiến toàn bộ phân phối mà không làm thay đổi hình dạng hình học cũng như độ lớn diện tích dưới đường cong.
+>
+> **💡 Deeper notes**
+> - Ký hiệu P(...|μ) là cách viết điều kiện theo tham số (parameter conditioning) để chỉ rõ ta đang tính xác suất theo phân phối có tham số μ cụ thể trong họ.
 
 <br>
 
@@ -311,6 +373,29 @@
 > để **stretch** / **contract** (σ > 1 / < 1) đồ thị của distribution, sau đó thì
 > **shift nó để dời location** hay nói như trong sách là để nhưng điểm trên
 > đồ thị vốn nằm bên phải trục x = 0 nay sẽ thành nằm bên phải trục x = μ
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+>
+> Ghi chú nắm đúng bản chất của họ phân phối vị trí - tỉ lệ (location-scale family) và trực giác hình học về co/dãn và tịnh tiến. Có một vài điểm chưa hoàn toàn chuẩn xác về thuật ngữ và dịch thuật ngữ cảnh cuốn sách.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"μ gọi là shift parameter"*
+>
+> Dù mang ý nghĩa trực giác là dịch chuyển (shift), thuật ngữ chuẩn xác trong thống kê và trong định nghĩa là 'location parameter' (tham số vị trí).
+>
+> **2.** *"nhưng điểm trên đồ thị vốn nằm bên phải trục x = 0 nay sẽ thành nằm bên phải trục x = μ"*
+>
+> Câu gốc trong sách là 'the point that was above 0 is now above μ' (điểm nằm ngay phía trên x = 0 nay sẽ nằm phía trên x = μ, tức là điểm neo tại x = 0 dời sang μ), không phải là 'nằm bên phải'.
+>
+>
+> **✓ Strengths**
+> - Hiểu chính xác công thức dạng tổng quát của họ phân phối (1/σ)f((x-μ)/σ).
+> - Nắm đúng trực giác hình học: tham số σ làm co dãn (stretch khi σ > 1, contract khi σ < 1) và μ làm tịnh tiến đồ thị.
+>
+> **💡 Deeper notes**
+> - Nên ghi rõ điều kiện tham số: σ > 0 và -∞ < μ < ∞ để đảm bảo tính hợp lệ của hàm mật độ xác suất (pdf).
 
 **🔗 See also:** [Hàm lực β(θ) phân phối chuẩn](./83_methods_of_evaluating_test.md#node-55xkcix)
 
