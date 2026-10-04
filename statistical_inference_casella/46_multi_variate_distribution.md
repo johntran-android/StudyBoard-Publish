@@ -1,6 +1,6 @@
 # 4.6 Multi-variate Distribution
 
-📊 **Progress:** `22` Notes | `28` Screenshots | `2` AI Reviews
+📊 **Progress:** `22` Notes | `28` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-1ndxf47"></a>
@@ -1052,7 +1052,30 @@
 >
 > tới đây thì nó có dạng mgf của n(Σiμiai + Σbi,Σiai^2σi^2)
 
-**🔗 See also:** [Điều kiện độc lập tổ hợp Normal](./53_sampling_from_the_normal_distribution.md#node-91dxhtz)
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú rất tốt, bạn đã tự triển khai chi tiết từng bước biến đổi đại số của hàm sinh mô-men (mgf) mà sách giáo khoa viết tắt. Tuy nhiên, cần lưu ý bổ sung điều kiện các biến ngẫu nhiên phải độc lập với nhau (mutually independent).
+>
+> **🟡 Minor issues**
+>
+> **1.** *"tổng của các linear function của các normal (μi, σi^2) rv sẽ cũng là normal rv"*
+>
+> Định lý và phép nhân tách mgf $M_Z(t) = e^{t\sum b_i} \prod M_{X_i}(a_i t)$ chỉ đúng khi các biến ngẫu nhiên $X_i$ độc lập với nhau (mutually independent). Nếu thiếu điều kiện độc lập, tổng của các biến chuẩn chưa chắc là phân phối chuẩn.
+>
+> **2.** *"= e^[ (Σiμiai + Σbi) t + + Σiσi^2ai^2t^2/2 ]"*
+>
+> Có lỗi đánh máy thừa dấu cộng (`+ +`).
+>
+>
+> **✓ Strengths**
+> - Khai triển và nhóm các số hạng bậc nhất theo t và bậc hai theo t^2 rất rõ ràng và chuẩn xác.
+> - Hiểu đúng tính duy nhất của mgf để kết luận phân phối chuẩn dựa trên dạng hàm sinh mô-men thu được.
+>
+> **💡 Deeper notes**
+> - Cơ sở lý thuyết để kết luận $Z$ có phân phối chuẩn ở bước cuối cùng dựa trên 'Tính duy nhất của hàm sinh mô-men' (Uniqueness Theorem of MGF) — nếu mgf của $Z$ trùng với mgf của phân phối chuẩn trong một lân cận của 0 thì $Z$ tuân theo phân phối chuẩn đó.
+
+**🔗 See also:** [Điều kiện độc lập tổ hợp Normal](./53_sampling_from_the_normal_distribution.md#node-91dxhtz) · [Oneway ANOVA Assumptions](./111_2_introduction_one_way_anova.md#node-tp60spi)
 
 <br>
 
