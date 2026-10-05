@@ -231,9 +231,29 @@
 > Hệ quả là, nếu dùng lasso, ta có một mô hình với các tham số thưa thớt (sparse)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **97/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
 >
-> Bài phân tích của bạn rất sâu sắc và chính xác, thể hiện sự hiểu biết vững vàng về cơ sở toán học và trực giác hình học của regularization, đặc biệt là sự khác biệt giữa L1 và L2. Mặc dù rất chi tiết và đúng, bạn có thể cân nhắc cô đọng một số phần để ghi chú của mình súc tích hơn.
+> Ghi chú nắm rất tốt bản chất hình học của Lasso và mối liên hệ giữa bài toán không ràng buộc với bài toán tối ưu ràng buộc qua nhân tử Lagrange. Cần lưu ý thêm về tính bất khả vi (non-differentiable) tại các đỉnh của chuẩn L1 khi lập luận gradient bằng 0.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"∇E_D(𝐰) + λ ∇E_W(𝐰) = 0 ⇔ ∇E_D(𝐰) = - λ ∇E_W(𝐰) ⇨ 𝐰* phải là điểm mà tại đó gradient của hàm E_D(𝐰) cùng phương và ngược hướng với gradient hàm E_W(𝐰)"*
+>
+> Với L1 regularizer tại các đỉnh (nơi w*1 = 0), hàm chuẩn L1 không khả vi nên gradient cổ điển ∇E_W(w) không tồn tại. Về mặt toán học chặt chẽ, ta phải dùng dưới vi phân (subgradient/subdifferential) thay vì gradient.
+>
+> **2.** *"thay vì minimize likelihood, ta minimize ln likelihood"*
+>
+> Trong thống kê/học máy, Likelihood thường được cực đại hóa (maximize), do đó ta maximize log-likelihood hoặc minimize negative log-likelihood (NLL).
+>
+>
+> **✓ Strengths**
+> - Hiểu sâu sắc mối tương đương giữa bài toán chính quy hóa không ràng buộc và bài toán tối ưu ràng buộc thông qua đối ngẫu Lagrange.
+> - Giải thích trực quan và chính xác lý do hình học tại sao contour dạng kim cương (diamond) của L1 dễ tiếp xúc tại đỉnh trên trục tọa độ, tạo ra nghiệm thưa (sparse solution).
+> - Kết nối tốt kiến thức đa biến (gradient vuông góc với level set) với trực giác tối ưu hóa.
+>
+> **💡 Deeper notes**
+> - Tại đỉnh của hình vuông/kim cương (chuẩn L1), pháp tuyến không phải là một vector duy nhất mà là một nón pháp tuyến (normal cone). Do nón pháp tuyến tại đỉnh trải rộng trên một góc phần tư, contour của hàm lỗi có xác suất rất cao tiếp xúc với nón này tại đúng đỉnh, giải thích vì sao nghiệm bị kéo về đúng 0.
+> - Hình tròn màu cam biểu diễn miền ràng buộc L2 là hình lồi trơn (smooth strictly convex), trong khi hình quả trám L1 có các đỉnh nhọn không trơn (corners/kinks) nằm trên các trục tọa độ.
 
 **🔗 See also:** [Ex 3.5 Lagrange Multipliers in Regularization](./37_exercises.md#node-tu3cct2)
 
