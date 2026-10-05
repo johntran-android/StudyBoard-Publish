@@ -120,7 +120,7 @@
 <p align="center"><kbd><img src="assets/tdg7s4h8mgr.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, giả sử ta có được f(z), và đem normalzing nó (chia nó cho Z = ∫f(z)dz) để có p(z) là một valid pdf (ví dụ f(𝐰|𝐭), là phân phối hậu nghiệm tìm được, và ta không biết dạng của nó là gì) thì mục tiêu là tìm cách xấp xỉ p(z) bởi một normal distribution, hoặc nói dễ hiểu, là tìm một normal distribution 𝒩(z|μ, σ²) (μ, σ² nào đó) giống với p(z) nhất, để thay vì dùng p(z) ta dùng cái này.
+> Đại khái là, giả sử ta có được f(z), và đem normalzing nó (chia nó cho Z = ∫f(z)dz) để có p(z) là một valid pdf (ví dụ f(𝐰|𝐭), là phân phối hậu nghiệm tìm được, và ta không biết dạng của nó là gì) thì mục tiêu là tìm cách xấp xỉ p(z) bởi một normal distribution, hoặc nói dễ hiểu, là tìm một normal distribution 𝒩(z|μ, σ²) (μ, σ² nào đó) có thể nói gần đúng là giống với p(z) nhất, để thay vì dùng p(z) ta dùng cái này.
 >
 >
 >
@@ -210,34 +210,24 @@
 >
 >
 >
-> Đương nhiên precision hay 1/σ² phải dương, thành ra A phải &gt; 0 ⇔ g''(z0) &lt; 0. Mà ta còn nhớ kiến thức giải tích 1 - khi có được cực trị (stationary point), dùng secondary test: tính đạo hàm cấp 2, nếu ra &lt; 0 thì kết luận là điểm cực đại, &gt; 0 thì là điểm cực tiểu) cho nên điều này đồng nghĩa z0 phải là local maximizer của g (= ln f(z))
+> Đương nhiên precision hay 1/σ² phải dương, thành ra A phải &gt; 0 ⇔ g''(z0) &lt; 0. Mà ta còn nhớ kiến thức giải tích 1 - khi có được stationary point, dùng secondary test: tính đạo hàm cấp 2, nếu ra &lt; 0 thì kết luận là điểm cực đại, &gt; 0 thì là điểm cực tiểu) cho nên điều này đồng nghĩa z0 phải là local maximizer của g (= ln f(z))
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=0uDZAp4dJl4)
+📹 Video 1: [Laplace Approximation Framework — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=0uDZAp4dJl4)
+
+📹 Video 2: [Tại sao xấp xỉ Laplace dùng ln f(z) thay vì f(z)?](https://www.youtube.com/watch?v=ksVOIrLv9qY)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **96/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú rất xuất sắc, giải thích trực quan và chặt chẽ từng bước suy diễn của phương pháp xấp xỉ Laplace từ khai triển Taylor của ln f(z) đến chuẩn hóa phân phối Gauss.
->
-> **🟡 Minor issues**
->
-> **1.** *"khi có được cực trị (stationary point), dùng secondary test"*
->
-> Về mặt thuật ngữ giải tích, 'stationary point' là 'điểm dừng' (nơi đạo hàm bằng 0), chưa thể khẳng định ngay là 'cực trị' cho đến khi kiểm tra bằng đạo hàm bậc hai.
->
-> **2.** *"tìm một normal distribution 𝒩(z|μ, σ²) (μ, σ² nào đó) giống với p(z) nhất"*
->
-> Xấp xỉ Laplace là xấp xỉ cục bộ (local approximation) tại đỉnh thông qua độ cong bậc hai, không bảo đảm tối ưu hóa một khoảng cách toàn cục (như KL divergence trong Variational Inference) để 'giống p(z) nhất' theo nghĩa toàn cục.
->
+> Ghi chú xuất sắc, hiểu rất sâu và giải thích cực kỳ trực quan về bản chất của phép xấp xỉ Laplace và lý do khai triển trên ln f(z).
 >
 > **✓ Strengths**
-> - Nắm rất vững trực giác cốt lõi: lý giải chính xác vì sao phải khai triển Taylor trên ln f(z) thay vì f(z) trực tiếp.
-> - Tự triển khai đầy đủ các bước đại số từ khai triển Taylor bậc hai, khử số hạng bậc một tại điểm dừng, đến việc lũy thừa để ra nhân Gaussian.
-> - Khớp mẫu chính xác giữa hệ số A và độ chính xác (precision) 1/σ² để suy ra hằng số chuẩn hóa √(A/2π).
+> - Giải thích rất chính xác và trực quan lý do tại sao phải khai triển Taylor trên ln f(z) thay vì f(z) (để khi lấy exp sẽ tạo ra dạng Gaussian kernel).
+> - Các bước biến đổi đại số từ khai triển Taylor bậc 2 đến việc khớp dạng phân phối chuẩn và tìm hằng số chuẩn hóa đều rất rõ ràng và chuẩn xác.
+> - Nắm chắc điều kiện cần và đủ của cực trị địa phương (stationary point và đạo hàm bậc 2 âm) để đảm bảo precision A > 0.
 >
 > **💡 Deeper notes**
-> - Trong bài toán Bayes, hàm f chưa chuẩn hóa thường là tích giữa likelihood và prior p(D|w)p(w), còn phân phối hậu nghiệm đầy đủ đã chuẩn hóa là p(w|D).
-> - Nếu phân phối p(z) có nhiều đỉnh (multimodal) hoặc bị lệch (skewed) mạnh như minh họa trong Hình 4.14, xấp xỉ Laplace chỉ bắt được một đỉnh cục bộ và có thể đánh giá sai đáng kể khối lượng xác suất ở phần đuôi.
+> - Cần lưu ý rằng xấp xỉ Laplace là một xấp xỉ cục bộ (local approximation) tại mode dựa trên độ cong ở đỉnh, nên nó không tối ưu hóa độ khớp toàn cục (như cách Variational Inference cực tiểu hóa KL divergence) và có thể xấp xỉ kém nếu phân phối gốc bị lệch (skewed) hoặc đa đỉnh (multimodal).
 
 <br>
 
