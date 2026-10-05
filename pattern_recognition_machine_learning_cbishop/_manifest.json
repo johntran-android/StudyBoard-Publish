@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1790986959394,
+  "publishedAt": 1791220984165,
   "sections": [
     {
       "title": "📋 Overview",
@@ -431,8 +431,8 @@
     {
       "title": "4.4 Laplace Approximation",
       "path": "pattern_recognition_machine_learning_cbishop/44_laplace_approximation.md",
-      "noteCount": 2,
-      "imageCount": 3
+      "noteCount": 5,
+      "imageCount": 7
     },
     {
       "title": "Appendix C. Matrices",
@@ -447,6 +447,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 453,
-  "totalImages": 687
+  "totalNotes": 456,
+  "totalImages": 691
 }
