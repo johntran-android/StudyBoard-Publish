@@ -1,6 +1,6 @@
 # 4.4 Laplace Approximation
 
-📊 **Progress:** `2` Notes | `3` Screenshots | `2` AI Reviews
+📊 **Progress:** `5` Notes | `7` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-a3mgg0s"></a>
@@ -117,6 +117,8 @@
 
 <p align="center"><kbd><img src="assets/da21lh9t2j8.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/tdg7s4h8mgr.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là, giả sử ta có được f(z), và đem normalzing nó (chia nó cho Z = ∫f(z)dz) để có p(z) là một valid pdf (ví dụ f(𝐰|𝐭), là phân phối hậu nghiệm tìm được, và ta không biết dạng của nó là gì) thì mục tiêu là tìm cách xấp xỉ p(z) bởi một normal distribution, hoặc nói dễ hiểu, là tìm một normal distribution 𝒩(z|μ, σ²) (μ, σ² nào đó) giống với p(z) nhất, để thay vì dùng p(z) ta dùng cái này.
 >
@@ -126,11 +128,17 @@
 >
 >
 >
+> Ý tưởng là, ta sẽ đặt cái chuông tại vị trí ứng với đỉnh của f(z) (cũng là của p(z) và ln f(z)). Còn bề rộng chuông: Ta sẽ dùng xấp xỉ bậc hai của ln f(z) để có được đường cong của chuông. Vì sao lại ln f mà ko phải f, vì nếu làm với f ta sẽ có đường cong hàm bậc hai, sẽ là một parabol chứ ko phải là đường cong hàm pdf normal. Còn làm với ln f ta sẽ có đường con của hàm e^(hàm bậc 2), khi đó sẽ có dạng giống kernel của normal. Trong video khi nói vẽ minh họa mình đã vẽ sai khi gây hiểu lầm là ta xấp xỉ độ cong bậc hai của phân phối gốc f(z) - đồng nghĩa ta đang xấp xỉ bậc hai hàm f(z) thay vì ln f(z): Thì xin đính chính rằng ta dùng xấp xỉ bậc hai của ln f(z).
+>
+>
+>
 > Tìm cái đỉnh của f(z): Dùng điều kiện cần bậc nhất tìm stationary point: f'(z) = 0. Gọi nó là z0.
 >
 >
 >
 > Tiếp, ta khai triển Taylor bậc hai quanh z0 hàm ln f(z) (đặt là g(z), g'(z) = f'(z)/f(z)):
+>
+>
 >
 >
 >
@@ -150,7 +158,7 @@
 >
 >
 >
-> g(z) ≈ g(z0) + (-A/2)(z-z0)² 
+> g(z) ≈ g(z0) + (-A/2)(z-z0)²
 >
 >
 >
@@ -162,7 +170,7 @@
 >
 >
 >
-> ⇔ ln f(z) ≈ ln f(z0) + ln exp\[(-A/2)(z-z0)²\]  | ln e^x = x
+> ⇔ ln f(z) ≈ ln f(z0) + ln exp\[(-A/2)(z-z0)²\] | ln e^x = x
 >
 >
 >
@@ -207,25 +215,230 @@
 📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=0uDZAp4dJl4)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **96/100** · ✓ Move on
 >
-> Ghi chú rất xuất sắc, tự diễn giải và biến đổi chi tiết từng bước toán học từ khai triển Taylor của hàm log cho đến khớp dạng phân phối chuẩn để tìm kỳ vọng và phương sai.
+> Ghi chú rất xuất sắc, giải thích trực quan và chặt chẽ từng bước suy diễn của phương pháp xấp xỉ Laplace từ khai triển Taylor của ln f(z) đến chuẩn hóa phân phối Gauss.
 >
 > **🟡 Minor issues**
 >
-> **1.** *"ví dụ f(𝐰|𝐭), là phân phối hậu nghiệm tìm được, và ta không biết dạng của nó là gì"*
+> **1.** *"khi có được cực trị (stationary point), dùng secondary test"*
 >
-> Cách ký hiệu f(𝐰|𝐭) hơi lỏng lẻo; thông thường trong suy diễn Bayes, phân phối hậu nghiệm p(𝐰|𝐭) ∝ p(𝐭|𝐰)p(𝐰) thì f(𝐰) = p(𝐭|𝐰)p(𝐰) chính là hàm unnormalized (chưa chuẩn hóa) mà mẫu số Z = p(𝐭) là tích phân khó tính.
+> Về mặt thuật ngữ giải tích, 'stationary point' là 'điểm dừng' (nơi đạo hàm bằng 0), chưa thể khẳng định ngay là 'cực trị' cho đến khi kiểm tra bằng đạo hàm bậc hai.
+>
+> **2.** *"tìm một normal distribution 𝒩(z|μ, σ²) (μ, σ² nào đó) giống với p(z) nhất"*
+>
+> Xấp xỉ Laplace là xấp xỉ cục bộ (local approximation) tại đỉnh thông qua độ cong bậc hai, không bảo đảm tối ưu hóa một khoảng cách toàn cục (như KL divergence trong Variational Inference) để 'giống p(z) nhất' theo nghĩa toàn cục.
 >
 >
 > **✓ Strengths**
-> - Tự biến đổi chi tiết bước trung gian đạo hàm log g'(z0) = f'(z0)/f(z0) = 0 để giải thích tại sao triệt tiêu số hạng bậc một.
-> - Khớp mẫu (pattern matching) trực tiếp với dạng phân phối chuẩn để rút ra quan hệ phương sai và precision σ² = 1/A một cách trực quan, mạch lạc.
-> - Hiểu chính xác điều kiện A > 0 tương ứng với kiểm định đạo hàm cấp hai (second derivative test) để z0 là điểm cực đại địa phương.
+> - Nắm rất vững trực giác cốt lõi: lý giải chính xác vì sao phải khai triển Taylor trên ln f(z) thay vì f(z) trực tiếp.
+> - Tự triển khai đầy đủ các bước đại số từ khai triển Taylor bậc hai, khử số hạng bậc một tại điểm dừng, đến việc lũy thừa để ra nhân Gaussian.
+> - Khớp mẫu chính xác giữa hệ số A và độ chính xác (precision) 1/σ² để suy ra hằng số chuẩn hóa √(A/2π).
 >
 > **💡 Deeper notes**
-> - Tại điểm dừng f'(z0) = 0, đạo hàm cấp hai của log là g''(z0) = f''(z0)/f(z0); do f(z0) > 0 nên điều kiện cực đại của g(z) cũng đồng nhất với cực đại của f(z).
-> - Xấp xỉ Laplace có tính chất cục bộ (local approximation) tập trung quanh đỉnh mode z0, do đó có thể xấp xỉ kém nếu phân phối thực tế có nhiều đỉnh (multimodal), bị lệch (skewed), hoặc có đuôi dày (heavy-tailed).
+> - Trong bài toán Bayes, hàm f chưa chuẩn hóa thường là tích giữa likelihood và prior p(D|w)p(w), còn phân phối hậu nghiệm đầy đủ đã chuẩn hóa là p(w|D).
+> - Nếu phân phối p(z) có nhiều đỉnh (multimodal) hoặc bị lệch (skewed) mạnh như minh họa trong Hình 4.14, xấp xỉ Laplace chỉ bắt được một đỉnh cục bộ và có thể đánh giá sai đáng kể khối lượng xác suất ở phần đuôi.
+
+<br>
+
+<a id="node-x9ndslg"></a>
+
+#### Multivariate Laplace Approximation
+
+<p align="center"><kbd><img src="assets/u0gdmcrtus.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Rồi, qua đây, chỉ là làm tương tự cho case M-chiều (hồi nãy là 1 chiều, nơi f(z), p(z) là hàm đơn biến)
+>
+>
+>
+> Cũng hoàn toàn tương tự. Ta đặt tâm chuông Gaussian tại 𝐳0 là local maximum của f(𝐳), là 𝐳0 thỏa ∇f(𝐳0) = 𝟎.
+>
+>
+>
+> Xấp xỉ bậc hai hàm g(𝐳) = ln f(𝐳) tại 𝐳0:
+>
+>
+>
+> ∇g(𝐳) (=d/d𝐳 g(𝐳)) = d/d𝐳 ln f(𝐳) = (d/df ln f) . (d/d𝐳 f(𝐳)) = (1/f) ∇f(𝐳)
+>
+>
+>
+> ---
+>
+> Ôn lại công thức xấp xỉ bậc hai:
+>
+>
+>
+> f(z) = f(z0) + f'(z0)(z-z0) + (1/2)(z-z0)²f''(z0)
+>
+>
+>
+> f(𝐳) = f(𝐳0) + ∇f(𝐳0)ᵀ(𝐳-𝐳0) + (1/2)(𝐳-𝐳0)ᵀ∇²f(𝐳0)(𝐳-𝐳0)
+>
+>
+>
+> ---
+>
+>
+>
+> g(𝐳) ≈ g(𝐳0) + ∇g(𝐳0)ᵀ(𝐳-𝐳0) + (1/2)(𝐳-𝐳0)ᵀ∇²g(𝐳0)(𝐳-𝐳0)
+>
+>
+>
+> ⇔ ln f(𝐳) ≈ ln f(𝐳0) + (1/2)(𝐳-𝐳0)ᵀ∇²g(𝐳0)(𝐳-𝐳0)
+>
+>
+>
+> ⇔ ln f(𝐳) ≈ ln f(𝐳0) + ln exp\[(1/2)(𝐳-𝐳0)ᵀ∇²g(𝐳0)(𝐳-𝐳0)\]
+>
+>
+>
+> ⇔ ln f(𝐳) ≈ ln {f(𝐳0) exp\[(1/2)(𝐳-𝐳0)ᵀ∇²g(𝐳0)(𝐳-𝐳0)\]}
+>
+>
+>
+> f(𝐳) ≈ f(𝐳0) exp\[(1/2)(𝐳-𝐳0)ᵀ∇²g(𝐳0)(𝐳-𝐳0)\]
+>
+>
+>
+> f(𝐳) ≈ f(𝐳0) exp\[(-1/2)(𝐳-𝐳0)ᵀ(-∇²g(𝐳0))(𝐳-𝐳0)\]
+>
+>
+>
+> Đặt 𝐀 = -∇²g(𝐳0), hay -∇²ln f(𝐳0), (chú ý đương nhiên phải hiểu đây là hàm số Hessian của ln f(𝐳), evaluate tại 𝐳0: ∇² ln(f(𝐳))|𝐳=𝐳0
+>
+>
+>
+> ⇒ f(𝐳) ≈ f(𝐳0) exp\[(-1/2)(𝐳-𝐳0)ᵀ(𝐀⁻¹)⁻¹(𝐳-𝐳0)\], có dạng kernel của hàm Gaussian 𝒩(𝐳0, 𝐀⁻¹)
+>
+>
+>
+> (chú ý tại vì thei công thức pdf Normal đa biến là thì trong exp là (..)𝚺⁻¹(..), nên phải chuyển 𝐀 = (𝐀⁻¹)⁻¹ để từ đó suy ra covariance matrix của Normal này là 𝐀⁻¹)
+>
+>
+>
+> Từ đó ta có Gaussian pdf xấp xỉ Laplace của p(𝐳):
+>
+>
+>
+> q(𝐳) = \[1/(2π)^(M/2)\] \[1/√|𝐀⁻¹|\] exp\[(-1/2)(𝐳-𝐳0)ᵀ(𝐀⁻¹)⁻¹(𝐳-𝐳0)\]
+>
+>
+>
+> = \[1/(2π)^(M/2)\] \[|𝐀⁻¹|^(-1/2)\] exp\[(-1/2)(𝐳-𝐳0)ᵀ(𝐀⁻¹)⁻¹(𝐳-𝐳0)\]
+>
+>
+>
+> Dùng identity |𝐀| = 1/ |𝐀⁻¹|
+>
+>
+>
+> = \[1/(2π)^(M/2)\] \[1/|𝐀|^(-1/2)\] exp\[(-1/2)(𝐳-𝐳0)ᵀ(𝐀⁻¹)⁻¹(𝐳-𝐳0)\]
+>
+>
+>
+> = \[1/(2π)^(M/2)\] \[|𝐀|^(1/2)\] exp\[(-1/2)(𝐳-𝐳0)ᵀ(𝐀⁻¹)⁻¹(𝐳-𝐳0)\]
+>
+>
+>
+> = \[|𝐀|^(1/2) / (2π)^((M/2))\] exp\[(-1/2)(𝐳-𝐳0)ᵀ(𝐀⁻¹)⁻¹(𝐳-𝐳0)\]
+>
+>
+>
+> Tương tự, pdf của normal chỉ hợp lệ khi covariance matrix (và precision matrix) đều xác định dương: 𝐀 xác định dương ⇔ - ∇²g(𝐳0) xác định dương = ∇²g(𝐳0) xác định âm, đồng nghĩa 𝐳0 là local maximizer của f(𝐳)
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=7rFrudmIrBk)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, tự triển khai đầy đủ các bước khai triển Taylor bậc hai nhiều chiều và biến đổi hệ số chuẩn hóa của phân phối Gaussian một cách chính xác.
+>
+> **✓ Strengths**
+> - Tự suy diễn chi tiết chuỗi biến đổi từ khai triển Taylor của ln f(z) đến dạng hàm mũ kernel Gaussian thay vì chỉ chép lại công thức trong sách.
+> - Biến đổi định thức ma trận hiệp biến và ma trận độ chính xác (precision matrix) rất tường minh và chuẩn xác.
+> - Nắm vững điều kiện để phân phối Gaussian xác định (A xác định dương tương ứng với cực đại địa phương).
+>
+> **💡 Deeper notes**
+> - Số hạng đạo hàm bậc nhất triệt tiêu vì theo quy tắc chuỗi ∇ ln f(z₀) = ∇f(z₀)/f(z₀) = 0 khi ∇f(z₀) = 0.
+
+**🔗 See also:** [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj)
+
+<br>
+
+<a id="node-4n7dhij"></a>
+
+##### Applying the Laplace Approximation
+
+<p align="center"><kbd><img src="assets/xbh2euisnz.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đại ý là nói về vì sao Laplace approximation tốt;
+>
+>
+>
+> Trước hết, có vài chú ý rằng thực tế phân phối mà ta gặp (ám chỉ f(z), p(z) = f(z)/Z) sẽ là multi-modal, tức là có nhiều đỉnh, khi đó, cái chuông Gaussian sẽ tùy vào các đỉnh 𝐳0 khác nhau.
+>
+>
+>
+> Gs cũng nhắc ta để ý rằng trong quá trình xấp xỉ Laplace hoàn toàn không cần phải tính Z: Mình nghĩ, quả thật, vì khi ta làm, thì sau bước xấp xỉ bậc hai hàm ln f(z), bằng cách khớp mẫu là mình đã biết tham số mean và covariance matrix rồi, việc còn lại để có pdf Gaussian hoàn chỉnh chỉ là áp theo công thức pdf đa biến mà thôi (ý là, chả cần phải biết Z để normalize f(z) thành p(z) làm gì cả)
+>
+>
+>
+> Cuối cùng, là nói về cơ sở nào bảo kê cho việc ta xấp xỉ posterior distribution bởi Gaussian:
+>
+>
+>
+> Đó chính là CLT Central Limit Theorem. Trong Casella đã học rằng, CLT nói rằng, cho X1,...Xn có EX = μ, VarX = σ² thì √n(X̄ -μ)/σ converge in distribution về 𝒩(0,1)
+>
+>
+>
+> Thì ở đây tác giả nói rằng, dựa vào CLT, posterior sẽ ngày càng trở nên giống normal khi n càng lớn (nên sự xấp xỉ bởi normal sẽ ngày càng chính xác) (đây có thể dựa trên một định lý nào đó, mà nó cũng dựa trên CLT)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và nắm bắt trọn vẹn các ý chính của đoạn văn, từ việc xử lý đa cực trị, lý do không cần tính hằng số chuẩn hóa Z, đến trực giác đằng sau định lý giới hạn trung tâm (CLT).
+>
+> **✓ Strengths**
+> - Hiểu chính xác rằng mỗi cực trị địa phương (mode) trong phân phối multimodal sẽ cho ra một xấp xỉ Gaussian cục bộ riêng biệt.
+> - Lý giải rất chuẩn xác và trực quan lý do tại sao không cần biết hằng số chuẩn hóa Z: sau khi khai triển bậc hai cho ln f(z), mean và covariance matrix được suy ra trực tiếp từ đạo hàm bậc hai, phần chuẩn hóa của Gaussian được tính tự động theo công thức pdf.
+> - Liên hệ và ghi nhớ chính xác phát biểu của Central Limit Theorem (CLT) và suy đoán đúng về sự tồn tại của định lý bảo kê cho tính chuẩn tiệm cận của posterior.
+>
+> **💡 Deeper notes**
+> - Về 'định lý nào đó dựa trên CLT' mà bạn dự đoán: Trong thống kê Bayes, định lý chính thức khẳng định phân phối hậu nghiệm (posterior) hội tụ về phân phối chuẩn khi kích thước mẫu n tiến tới vô cùng chính là Định lý Bernstein–von Mises (đôi khi được gọi là Bayesian Central Limit Theorem).
+
+<br>
+
+<a id="node-4ieoq0j"></a>
+
+###### Limitations of Laplace Approximation
+
+<p align="center"><kbd><img src="assets/bx6yy8s95g.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Hạn chế lớn nhất của Laplace approx. là nó dựa trên thuần túy xấp xỉ hàm số tại 1 điểm, nên nó sẽ làm mất những thông tin global quan trọng.
+>
+>
+>
+> HIểu đại ý là, giống như khi nếu f là multi modal, thì việc xấp xỉ nó bởi 1 cái chuông normal tại một đỉnh nào đó, đã bỏ qua hết các thông tin về hình dạng toàn cục của f (cái này khó nói bằng lời nhưng rất dễ nhìn thấy, ta thay cái f đa đỉnh bởi 1 hàm đơn đỉnh thì sao mà đúng được chứ)
+>
+>
+>
+> Hạn chế nhỏ hơn của nó, là nó chỉ áp dụng cho các biến số số thực (ý là có thể mang giá trị -inf tới inf) (do nó xấp xỉ f bởi normal, là một phân phối liên tục), vậy lỡ ta có hàm f là hàm mà miền xác định của nó là không âm thì sao, thì khi đó xấp xỉ bởi normal sẽ không hợp lí. Thì một cách làm là làm với phân phối của ln τ (τ bị ràng buộc ko âm, nhưng ln τ thì có thể -inf to inf)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc và diễn giải trực quan, chính xác hai hạn chế cốt lõi của xấp xỉ Laplace từ tài liệu.
+>
+> **✓ Strengths**
+> - Hiểu rất đúng và lấy ví dụ trực quan tốt về việc xấp xỉ đơn đỉnh (Gaussian) tại một điểm cục bộ sẽ bỏ qua tính chất toàn cục (như đa đỉnh - multimodal).
+> - Nắm chuẩn giải pháp biến đổi biến số (ví dụ dùng hàm ln) khi miền giá trị bị chặn ở phía không âm để đưa về toàn bộ trục số thực.
+>
+> **💡 Deeper notes**
+> - Về mặt thuật ngữ, 'real variables' trong bối cảnh phân phối Gauss nghĩa là biến thực liên tục có giá đỡ (support) trên toàn bộ trục thực $(-\infty, +\infty)$, nhằm phân biệt với biến rời rạc (discrete) và biến liên tục có miền giá trị bị chặn (như $0 \leqslant \tau < \infty$).
 
 <br>
 
