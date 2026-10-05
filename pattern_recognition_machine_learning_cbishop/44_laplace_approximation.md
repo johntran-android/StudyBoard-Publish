@@ -212,9 +212,7 @@
 >
 > Đương nhiên precision hay 1/σ² phải dương, thành ra A phải &gt; 0 ⇔ g''(z0) &lt; 0. Mà ta còn nhớ kiến thức giải tích 1 - khi có được stationary point, dùng secondary test: tính đạo hàm cấp 2, nếu ra &lt; 0 thì kết luận là điểm cực đại, &gt; 0 thì là điểm cực tiểu) cho nên điều này đồng nghĩa z0 phải là local maximizer của g (= ln f(z))
 
-📹 Video 1: [Laplace Approximation Framework — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=0uDZAp4dJl4)
-
-📹 Video 2: [Tại sao xấp xỉ Laplace dùng ln f(z) thay vì f(z)?](https://www.youtube.com/watch?v=ksVOIrLv9qY)
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=0uDZAp4dJl4)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -353,7 +351,7 @@
 > **💡 Deeper notes**
 > - Số hạng đạo hàm bậc nhất triệt tiêu vì theo quy tắc chuỗi ∇ ln f(z₀) = ∇f(z₀)/f(z₀) = 0 khi ∇f(z₀) = 0.
 
-**🔗 See also:** [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj)
+**🔗 See also:** [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj) · [Section 4.4.1 Model Comparison and BIC](./441_model_comparison_and_bic.md#node-lln8f53)
 
 <br>
 
