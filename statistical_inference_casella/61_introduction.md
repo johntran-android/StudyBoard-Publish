@@ -33,7 +33,7 @@
 > Và công cụ đó là ta dùng các **function**, để tính toán từ các observation
 > này, tức là **apply function g(x1,...xn) nào đó lên random sample** X1,...Xn
 > Nó cho ta cũng là random variable, nhưng ta gọi là statistic. Điển hình
-> như sample mean X̄, sample variance S^2, X(1) (cái nhỏ nhất) hoặc
+> như sample mean X̄, sample variance S², X(1) (cái nhỏ nhất) hoặc
 > X(n) cái lớn nhất. Và mình hiểu đây là các rv có được khi apply các hàm
 > g khác nhau lên X1,..Xn. 
 >
