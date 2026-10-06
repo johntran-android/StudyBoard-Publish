@@ -558,7 +558,7 @@
 >
 >
 >
-> Còn từ ví dụ 5.5.3  ta cũng đã có kết luận là sample variance S^2 →(p)  Var(U)
+> Còn từ ví dụ 5.5.3  ta cũng đã có kết luận là sample variance S² →(p)  Var(U)
 > (xem link cam)
 >
 >
@@ -1488,7 +1488,7 @@
 
 <a id="node-ezxhixg"></a>
 
-###### Mô phỏng Poisson ước lượng S^2
+###### Mô phỏng Poisson ước lượng S²
 
 <p align="center"><kbd><img src="assets/8w394o9sjz5.png" width="80%"></kbd></p>
 
@@ -2487,7 +2487,7 @@
 
 <a id="node-m2r8vrl"></a>
 
-###### Độ lệch của S^2
+###### Độ lệch của S²
 
 <p align="center"><kbd><img src="assets/mendkwwr7bb.png" width="80%"></kbd></p>
 
