@@ -1,6 +1,6 @@
 {
   "title": "Statistical Inference - Casella",
-  "publishedAt": 1791134007392,
+  "publishedAt": 1791306926531,
   "sections": [
     {
       "title": "📋 Overview",
@@ -305,10 +305,10 @@
     {
       "title": "11.1 & 2  introduction, One-way Anova",
       "path": "statistical_inference_casella/111_2_introduction_one_way_anova.md",
-      "noteCount": 17,
-      "imageCount": 22
+      "noteCount": 18,
+      "imageCount": 23
     }
   ],
-  "totalNotes": 896,
-  "totalImages": 1171
+  "totalNotes": 897,
+  "totalImages": 1172
 }
