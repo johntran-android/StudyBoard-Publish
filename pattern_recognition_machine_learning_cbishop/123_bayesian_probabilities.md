@@ -1,6 +1,6 @@
 # 1.2.3 Bayesian probabilities
 
-📊 **Progress:** `11` Notes | `14` Screenshots
+📊 **Progress:** `11` Notes | `14` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-g0j8l3h"></a>
@@ -58,6 +58,20 @@
 > Và thông qua Bayes rule, ta sẽ làm điều vừa nói (cập nhật lại niềm tin) bằng
 > cách tính xác suất của event dựa trên sự kiện quan sát được. Từ đó, có thể
 > dựa vào đó để đưa ra những quyết định tối ưu
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác và sâu sắc tinh thần của đoạn văn, đồng thời liên hệ chuẩn xác kiến thức từ giáo trình kinh điển (Casella & Berger) về sự khác biệt giữa hai trường phái.
+>
+> **✓ Strengths**
+> - Phân biệt rõ ràng bản chất của Frequentist (tần suất qua nhiều lần lặp) và Bayesian (định lượng sự không chắc chắn / niềm tin).
+> - Nắm bắt chính xác ví dụ trong sách về các sự kiện không thể lặp lại (như biến đổi khí hậu / băng tan ở hai cực).
+> - Mô tả chuẩn xác chu trình Bayesian: có niềm tin ban đầu (prior), thu nhận dữ liệu quan sát mới (evidence), và cập nhật niềm tin (posterior) để ra quyết định tối ưu.
+> - Liên hệ rất tốt với góc nhìn thống kê nâng cao (tham số θ là cố định trong Frequentist vs biến ngẫu nhiên trong Bayesian).
+>
+> **💡 Deeper notes**
+> - Bishop dùng thuật ngữ 'quantification of uncertainty' (định lượng sự không chắc chắn) như một định nghĩa tổng quát; niềm tin (degree of belief) hay mức độ khả tín là cách diễn giải phổ biến của Bayesian chủ quan (subjective Bayesian).
 
 <br>
 
