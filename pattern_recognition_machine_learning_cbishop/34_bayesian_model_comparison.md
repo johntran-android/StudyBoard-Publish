@@ -35,7 +35,14 @@
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú cực kỳ chi tiết, nắm bắt chính xác các ý cốt lõi như tránh over-fitting bằng cách marginalizing và lợi ích của việc không cần tập validation. Bạn chỉ cần lưu ý thêm ý về khả năng tự động xác định đồng thời nhiều tham số phức tạp (complexity parameters) trong quá trình huấn luyện.
+> Ghi chú tóm tắt rất tốt và chính xác nội dung giới thiệu về so sánh mô hình theo quan điểm Bayesian so với cách tiếp cận truyền thống (cross-validation).
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất việc triệt tiêu over-fitting trong Bayesian đến từ thao tác marginalize (tích phân/tổng) qua không gian tham số thay vì ước lượng điểm (point estimate).
+> - Nắm rõ các ưu điểm thực tế của Bayesian model comparison: tận dụng toàn bộ tập dữ liệu huấn luyện, không cần validation set và tránh chi phí tính toán lặp lại nhiều lần của cross-validation.
+>
+> **💡 Deeper notes**
+> - Trong bối cảnh 'Model Comparison', việc marginalizing qua tham số mô hình (weights) chủ yếu dùng để tính 'Model Evidence' hay 'Marginal Likelihood' $p(D|M_i)$, từ đó so sánh xác suất hậu nghiệm của từng mô hình $p(M_i|D)$, phân biệt với việc marginalize để ra phân phối dự đoán $p(t|x, D)$ cho dữ liệu mới.
 
 <br>
 
@@ -50,15 +57,15 @@
 >
 >
 >
-> Có lẽ nên dừng lại tí nói về vì sao lại gọi là model comparision (so sánh model) hay selection (chọn model), và vì sao lại thường đi kèm với việc nói về overfit: Đầu tiên, nó thường đi kèm với overfit và cả underfit là vì đương nhiên là ta không muốn một mô hình bị overfit hay underfit. Nhưng trước hết, model, mô hình là cái quái gì cái đã. Mình hiểu, mô hình là một mô hình mô phỏng thực tế, là cái ta dựng lên, và tìm cách làm sao cho nó giống với thực tế nhất. Về mặt từ ngữ, thì ý nghĩa của từ mô hình là vậy. Ví dụ, ta mô hình hóa / dựng mô hình một toà nhà, thì dĩ nhiên ta tìm cách dựng nên một mô hình giống với tòa nhà nhất có thể. Thế thì ở đây, cái ta muốn, là dựng nên một mô hình mô phỏng sát nhất với cái quy luật chi phối dữ liệu ở ngoài đời thực mà dữ liệu ta quan sát thấy được sinh ra từ đó.
+> Có lẽ nên dừng lại tí nói về vì sao lại gọi là model comparision (so sánh model) hay selection (chọn model), và vì sao lại thường đi kèm với việc nói về overfit: Đầu tiên, nó thường đi kèm với overfit và cả underfit là vì đương nhiên là ta không muốn một mô hình bị overfit hay underfit. Nhưng trước hết, model, mô hình là cái gì cái đã. Mình hiểu, mô hình là một mô hình mô phỏng thực tế, là cái ta dựng lên, và tìm cách làm sao cho nó giống với thực tế nhất. Về mặt từ ngữ, thì ý nghĩa của từ mô hình là vậy. Ví dụ, ta mô hình hóa / dựng mô hình một toà nhà, thì dĩ nhiên ta tìm cách dựng nên một mô hình giống với tòa nhà nhất có thể. Thế thì ở đây, cái ta muốn, là dựng nên một mô hình mô phỏng sát nhất với cái quy luật chi phối dữ liệu ở ngoài đời thực mà dữ liệu ta quan sát thấy được sinh ra từ đó.
 >
 >
 >
-> Ví dụ, ta quan sát được một chuỗi số X1,.....Xn. Và ta muốn dựng mô hình cái quy luật sinh ra bộ giá trị này, thì cái quy luật này, chính là phân phối xác suất (population distribution), và nó chỉ là một cái hàm số, quy định rằng với giá trị nào đó, thì xác suất sinh ra data có giá trị đó nên cao hay thấp. Vậy ta dựng mô hình bằng cách nào. Có hai cách, một là mô hình có tham số (parametric model), trong đó ta dùng một hàm số, có quy luật bị chi phối bởi tham số: f(x|θ) và ta sẽ đi tìm cái tham số cũng như dạng của hàm f này và hai là, mô hình phi tham số (non-parametric model). 
+> Ví dụ, ta quan sát được một chuỗi số X1,.....Xn. Và ta muốn dựng mô hình cái quy luật sinh ra bộ giá trị này, thì cái quy luật này, chính là phân phối xác suất (population distribution), và nó chỉ là một cái hàm số, quy định rằng với giá trị nào đó, thì xác suất sinh ra data có giá trị đó nên cao hay thấp. Vậy ta dựng mô hình bằng cách nào. Có hai cách, một là mô hình có tham số (parametric model), trong đó ta dùng một hàm số, có quy luật bị chi phối bởi tham số: f(x|θ) và ta sẽ đi tìm cái tham số cũng như dạng của hàm f này và hai là, mô hình phi tham số (non-parametric model).
 >
 >
 >
-> Vậy thì, bài toán đi tìm cái hàm f chi phối quy luật của data thật sự là rất phức tạp, vì ta không biết phải làm gì, hay dạng của f thật sự là gì cả. Do đó, ta mới tiếp cận theo lối: chấp nhận rủi ro, thông qua việc đặt ra vài giả định, nhằm đơn giản bớt bài toán. Ví dụ, ta giả định phân phối f là một phân phối có dạng nào đó, ví dụ normal(μ, σ²), và từ đó dùng các cách tiếp cận như MLE, Bayes, ta đi tìm cách estimator ra μ, σ². Đây chính là bài toán inference - point estimation cho population parameter. Như vậy, đã giả định thì có thể sai, có thể phân phối gốc hoàn toàn không phải là normal, thì cái estimator của ta tìm ra dù có tốt mấy cũng thành sai. Từ đó mới đẻ ra các tiêu chí như Roburstness mà mình đang học ở Chapter 10 - Casella, đó là: dưới sự thật rằng giả định ban đầu bị sai thì estimator còn tốt không?
+> Vậy thì, bài toán đi tìm cái hàm f chi phối quy luật của data thật sự là rất phức tạp, vì ta không biết phải làm gì, hay dạng của f thật sự là gì cả. Do đó, ta mới tiếp cận theo lối: chấp nhận rủi ro, thông qua việc đặt ra vài giả định, nhằm đơn giản bớt bài toán. Ví dụ, ta giả định phân phối f là một phân phối có dạng nào đó, ví dụ normal(μ, σ²), và từ đó dùng các cách tiếp cận như MLE, Bayes, ta đi tìm cách estimator ra μ, σ². Đây chính là bài toán inference - point estimation cho population parameter. Như vậy, đã giả định thì có thể sai, có thể phân phối gốc hoàn toàn không phải là normal, thì cái estimator của ta tìm ra dù có tốt mấy cũng thành sai. Từ đó mới đẻ ra các tiêu chí như robustness mà mình đang học ở Chapter 10 - Casella, đó là: dưới sự thật rằng giả định ban đầu bị sai thì estimator còn tốt không?
 >
 >
 >
@@ -70,11 +77,43 @@
 >
 >
 >
-> Tới đây ta đã hiểu model là cái gì - nó chỉ là mô hình ta muốn xây dựng để mô phỏng thực tế. Với bài toán population paramter inference, thì mô hình là cái hàm f(𝐱|θ) mà ta muốn tìm dạng của nó và giá trị parameter θ. Với bài toán regression, mô hình là cái hàm y(𝐰,𝐱) mà ta muốn tìm 𝐰, cũng như dạng của nó và giá trị w của nó. Và trong cả hai, thường thì ta đặt ra giả định về dạng của nó (giả định f là normal, hay y là hàm tuyến tính của w) để giúp đơn giản hóa bớt, chỉ còn phải đi tìm tham số của nó (μ, σ², hay 𝐰) thôi.
+> Tới đây ta có thể hiểu model là cái gì - nó chỉ là mô hình ta muốn xây dựng để mô phỏng thực tế:
 >
 >
 >
-> Vậy sao phải so sánh model với nhau. À thì là vì, ví dụ như trong bài toán regression, nếu data ít, và ta giả định dùng mô hình (hàm y(𝐰,𝐱) có độ phức tạp cao (ví dụ dùng nhiều hàm basis - cũng là nhiều tham số) thì kết quả prediction sẽ tệ (không generalize tốt) 
+> Với bài toán population parameter inference, thì mô hình là cái distribution f(x|θ) của X1,X2,...Xn mà ta muốn tìm dạng của nó và giá trị parameter θ.
+>
+>
+>
+> Với machine learning, mô hình có thể là **joint distribution** của (T1,𝐗1), (T2,𝐗2),...(Tn,𝐗n): f(t1,..tn,𝐱1,..𝐱n|𝐰) hoặc **conditional distribution** T1,T2,..Tn dựa trên input 𝐱1,..𝐱n: f(t1,t2,...tn|𝐰,𝐱1,..𝐱n) như trong bài toán regression
+>
+>
+>
+> Và trong cả hai, thường thì ta đặt ra giả định về dạng của nó để giúp đơn giản hóa bớt, chỉ còn phải đi ước lượng tham số của nó.
+>
+>
+>
+> Ví dụ giả định f(x|θ) là 𝒩(x|μ,σ²) ⇒ f(𝐱|θ) = Πi 𝒩(xi|μ, σ²) đi estimate μ, σ²
+>
+>
+>
+> giả định Ti|𝐱i \~ 𝒩(𝐰ᵀΦ(𝐱i), 1/β) ∀i=1,...N (1)
+>
+>
+>
+> ⇒ f(t1,t2,...tn|𝐰,β,𝐱1,𝐱2,..𝐱n) = Πi 𝒩(ti | 𝐰ᵀΦ(𝐱i), 1/β)
+>
+>
+>
+> và ta đi estimate 𝐰, β
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy sao phải so sánh model với nhau. À thì là vì, ví dụ như trong bài toán regression, nếu data ít, và ta giả định dùng mô hình (1) nhưng có độ phức tạp cao ví dụ dùng 𝐰 có số chiều lớn bằng cách dùng nhiều hàm basis phức tạp thì có thể dẫn tới overfit, kết quả prediction có thể sẽ tệ (không generalize tốt)
 >
 >
 >
@@ -102,24 +141,35 @@
 >
 >
 >
-> Trước khi nói tiếp, gs Bishop nhấn mạnh một ý cực quan trọng: Model ở đây phải hiểu, là **cái phân phối xác suất chi phối giá trị của data mà ta đang dùng để mô phỏng quan hệ thật / phân phối thật của chúng**. Ví dụ như trong bài toán polynomial curve fitting ta làm bữa giờ, thì đó là distribution của 𝐭|𝐗. (𝐗 là matrix observed data 𝐱1,...𝐱N, tức coi 𝐗 fixed, đã biết). Hay với model dạng khác, thì nó là joint distribution của 𝐗, và 𝐭 (coi 𝐗 như random variable luôn).
->
->
->
 > Cái này y như cách tiếp cận Bayesian cho bài toán point estimator của tham số mô hình 𝐰 vậy. Đó là, ta coi nó như random variable. Rồi chọn priori f(𝐰), và dùng Bayes rule để có posterior distribution f(𝐰|𝒟) ∝ f(𝒟|𝐰) f(𝐰). Có nghĩa là, nguyên lý chung của Bayesian, là cái gì mà ta ko chắc chắn thì cứ coi nó là biến ngẫu nhiên, rồi đi xây dựng posterior distribution cho nó, từ đó, dựa vào decision theory để mà ra quyết định.
 >
 >
 >
-> Và như vậy , thì ta sẽ **coi như ta có một random variable ℳ** (có các possible value là ℳ,...ℳL). Rồi cũng chọn prior distribution của nó f(ℳ), và dùng Bayes rule để xây dựng posterior distribution:
+> Và như vậy , thì ta sẽ **coi như ta có một random variable ℳ** (có các possible value là ℳ1,...ℳL). Rồi cũng chọn prior distribution của nó f(ℳ), và dùng Bayes rule để xây dựng posterior distribution:
 >
 >
 >
 > f(ℳ|𝒟) = f(𝒟|**ℳ**) f(ℳ) / f(𝒟)
+>
+>
+>
+> π(θ|𝐱) = f(𝐱|θ)f(θ)/f(𝐱)
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=tycNSi6cf2E)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chép rất sâu sắc khi liên hệ được nền tảng thống kê cổ điển với bài toán so sánh mô hình theo quan điểm Bayesian một cách chính xác. Tuy nhiên, phần dẫn nhập có thể cô đọng hơn để người đọc nhanh chóng nắm bắt cơ chế cốt lõi của công thức Bayes áp dụng cho tập hợp mô hình.
+> Ghi chú thể hiện tư duy hệ thống rất tốt, hiểu sâu bản chất 'mô hình' trong thống kê/ML là một phân phối xác suất và nắm vững triết lý Bayesian khi coi chính mô hình/chỉ số mô hình là một biến ngẫu nhiên để áp dụng quy tắc Bayes.
+>
+> **✓ Strengths**
+> - Giải thích rất chính xác định nghĩa kỹ thuật của 'mô hình' trong Machine Learning (là phân phối hợp joint hoặc phân phối điều kiện conditional trên tập dữ liệu quan sát).
+> - Kết nối mạch lạc lý do cần so sánh mô hình với bài toán overfit/underfit và điều chỉnh độ phức tạp (complexity).
+> - Nắm trọn vẹn triết lý cốt lõi của Bayesian: bất kỳ đại lượng nào chưa chắc chắn (từ tham số w cho đến chính mô hình M) đều được gán prior distribution và cập nhật qua định lý Bayes.
+>
+> **💡 Deeper notes**
+> - Trong công thức Bayes cho mô hình, thành phần p(D|M_i) được gọi là model evidence (hoặc marginal likelihood). Đây không phải là hàm likelihood thông thường mà là tích phân triệt tiêu tham số bên trong mô hình: p(D|M_i) = ∫ p(D|w, M_i) p(w|M_i) dw.
+> - Ở mẫu số f(D), theo luật xác suất tổng (sum rule), nó là tổng rời rạc qua tất cả L mô hình: p(D) = ∑_{j=1}^L p(D|M_j) p(M_j).
 
 **🔗 See also:** [Model Evidence and Complexity](#node-l55vqkg)
 
@@ -187,9 +237,17 @@
 > Và cuối cùng, tỉ lệ của hai model evidence f(𝒟|**ℳ**i)/f(𝒟|**ℳ**j) gọi là Bayes factor.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
 >
-> Ghi chú của bạn rất xuất sắc, thể hiện sự hiểu sâu sắc khi tự liên hệ phép tương tự giữa cấp độ tham số và cấp độ mô hình để giải thích marginal likelihood. Để hoàn thiện hơn, bạn có thể viết rõ công thức toán học thể hiện việc tích phân loại bỏ (marginalize out) tham số w.
+> Ghi chú rất tốt, bạn đã hiểu sâu sắc bản chất của model evidence thông qua việc so sánh tương đồng trực quan với suy diễn tham số ở cấp độ mô hình.
+>
+> **✓ Strengths**
+> - Sử dụng phép tương đương (analogy) giữa posterior của tham số theta và posterior của model M rất chính xác và sáng tỏ.
+> - Nắm vững bản chất của marginal likelihood: xem model M như một 'tham số' cấp cao hơn và tích hợp/loại bỏ (marginalize out) các tham số bên trong bằng tích phân kỳ vọng theo prior.
+> - Hiểu đúng vai trò của prior trên không gian mô hình và định nghĩa Bayes factor.
+>
+> **💡 Deeper notes**
+> - Khi nói 'lấy trung bình mọi giá trị khả dĩ của parameter', về mặt toán học chính xác là lấy tích phân kỳ vọng có trọng số theo phân phối tiên nghiệm của tham số: p(D|M) = ∫ p(D|w, M) p(w|M) dw.
 
 **🔗 See also:** [Marginal Likelihood Approximation](#node-3bm8r68) · [Bayesian Model Comparison](#node-7rkr8xy)
 
@@ -277,9 +335,24 @@
 > (!) Chú ý, ko phải binomial đâu nhé, đừng có bị nhầm.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú rất xuất sắc khi giải thích công thức dưới hai góc nhìn (marginalization và LOTUS) vô cùng trực quan và hiểu đúng bản chất bimodal. Để hoàn thiện hơn, bạn nên bổ sung giải thích tại sao điều kiện x biến mất ở f(ℳ_i|ᆒ) (do sự độc lập giữa mô hình và dữ liệu kiểm thử mới).
+> Ghi chú rất xuất sắc, giải thích cặn kẽ bản chất của công thức (3.67) qua cả hai góc nhìn: luật xác suất toàn phần (marginalization) và kỳ vọng (LOTUS / mixture distribution).
+>
+> **🟡 Minor issues**
+>
+> **1.** *"joint distribution của T|𝐱 và ℳ là f(t, ℳ|𝐱, 𝒟). Marginalizing joint pdf của T|𝐱 và ℳ, ta sẽ có pdf của T|𝐱"*
+>
+> Khi khai triển f(t, ℳ|𝐱, 𝒟) = f(t|𝐱, ℳ, 𝒟)f(ℳ|𝐱, 𝒟), bạn đã ngầm dùng giả thiết f(ℳ|𝐱, 𝒟) = f(ℳ|𝒟). Về mặt kỹ thuật, posterior của mô hình ℳ chỉ phụ thuộc vào tập dữ liệu huấn luyện 𝒟, hoàn toàn độc lập với điểm truy vấn mới 𝐱.
+>
+>
+> **✓ Strengths**
+> - Liên hệ rất chuẩn xác công thức Bayesian Model Averaging với luật xác suất toàn phần và marginalization của biến ngẫu nhiên rời rạc.
+> - Góc nhìn đưa predictive distribution về dạng kỳ vọng E[g(ℳ)] qua định lý LOTUS rất trực quan, làm sáng tỏ bản chất của mixture distribution.
+> - Hiểu chính xác ví dụ phân phối đa đỉnh (bimodal) và phân biệt rõ ràng giữa bimodal với binomial.
+>
+> **💡 Deeper notes**
+> - Trong thực tế, việc lấy tổng qua toàn bộ không gian mô hình (L mô hình) thường bất khả thi nếu không gian mô hình quá lớn hoặc liên tục, khi đó người ta thường dùng xấp xỉ (như MAP model selection, BIC) hoặc lấy mẫu MCMC.
 
 <br>
 
@@ -425,9 +498,28 @@
 > Ý này ko có gì đặc biệt.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
 >
-> Ghi chú cực kỳ xuất sắc, giải thích rất sâu sắc dưới cả góc độ kỳ vọng (LOTUS) và luật số lớn (LLN). Bạn chỉ cần lưu ý sửa một lỗi gõ nhỏ ở tích phân phần marginalizing khi viết thiếu điều kiện w trong f(D|M_i).
+> Ghi chú thể hiện sự hiểu bài rất tốt, giải thích rõ ràng công thức 3.68 dưới nhiều góc nhìn (kỳ vọng/LOTUS, Monte Carlo, và luật xác suất toàn phần). Có một lỗi đánh máy nhỏ và một điểm khác biệt nhỏ về góc nhìn lấy mẫu (sampling perspective) cần lưu ý.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"ta sẽ thấy f(𝒟|ℳ) chính là kết quả khi ta tính trung bình f(𝒟|ℳ) trên mọi giá trị khả dĩ của tham số 𝐰."*
+>
+> Lỗi gõ nhầm ký hiệu: vế sau phải là tính trung bình của f(𝒟|w, ℳ) qua mọi giá trị w (như bạn đã viết đúng ở các đoạn sau), chứ không phải f(𝒟|ℳ).
+>
+> **2.** *"sampling w từ f(w|ℳi), lắp w vào hàm f(𝒟|ℳi, w), tính ra ví dụ f1,... và ta lấy trung bình Fbar = (Σi Fi)/n."*
+>
+> Cách bạn diễn giải ở đây là ước lượng Monte Carlo cho kỳ vọng của likelihood. Trong khi đó, ý nguyên văn của Bishop ('sampling perspective') đề cập đến quy trình sinh dữ liệu (generative process): bốc ngẫu nhiên w ~ p(w|ℳ), sau đó sinh tập dữ liệu 𝒟 ~ p(𝒟|w, ℳ). Xác suất để quy trình này sinh ra đúng tập 𝒟 chính là p(𝒟|ℳ).
+>
+>
+> **✓ Strengths**
+> - Vận dụng chính xác định lý LOTUS để giải thích tích phân như một kỳ vọng của likelihood dưới prior distribution.
+> - Liên hệ rất tốt quy tắc sum/product rule với marginalization và định lý xác suất toàn phần (LOTP).
+> - Hiểu bản chất marginal likelihood đóng vai trò là hằng số chuẩn hóa (normalizing constant) trong mẫu số của định lý Bayes.
+>
+> **💡 Deeper notes**
+> - Dù việc dùng Monte Carlo sample w rồi tính trung bình likelihood là trực giác tính toán hợp lý cho tích phân, việc hiểu theo nghĩa generative model (sample w trước, rồi dùng w đó sinh data) sẽ giúp bạn dễ nắm bắt bản chất của các mô hình sinh (Generative Models) sau này hơn.
 
 **🔗 See also:** [Luật số lớn yếu WLLN *(Statistical Inference - Casella)*](../statistical_inference_casella/55_convergence_concepts.md#node-j5m3pa1) · [Luật số lớn mạnh *(Statistical Inference - Casella)*](../statistical_inference_casella/55_convergence_concepts.md#node-0yeml4r)
 
@@ -565,9 +657,25 @@
 > ⇔ ln f(𝒟) = ln \[f(𝒟|wMAP)\] + ln \[Δw_posterior / Δw_prior\]
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
-> Giải thích của bạn cực kỳ xuất sắc, trực quan và chính xác khi phân tích mối liên hệ giữa posterior và likelihood để làm rõ bản chất tích phân. Tư duy suy luận tự do nhưng logic này giúp hiểu sâu sắc công thức (3.70) thay vì chỉ đọc thuộc lòng.
+> Ghi chú giải thích rất chi tiết, mạch lạc và trực quan bản chất hình học của phép xấp xỉ tích phân model evidence. Có một lỗi ký hiệu nhỏ không đáng kể.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"f(w|𝒟, ℳi) = f(𝒟|ℳi,w) f(w|ℳi) / f(𝒟i|ℳi)"*
+>
+> Lỗi gõ phím nhỏ ở mẫu số: biến cố dữ liệu là 𝒟 chứ không mang chỉ số i (𝒟i), trong khi ℳ mới mang chỉ số mô hình i.
+>
+>
+> **✓ Strengths**
+> - Diễn giải trực quan xuất sắc: hiểu đúng bản chất phép xấp xỉ tích phân là diện tích hình chữ nhật (chiều cao tại cực đại nhân bề rộng dải nhọn).
+> - Lập luận chặt chẽ khi chứng minh rằng dưới prior phẳng, hàm likelihood f(𝒟|w) cũng có đỉnh nhọn cùng bề rộng Δw_posterior quanh w_MAP như posterior.
+> - Từng bước biến đổi toán học rõ ràng và khớp hoàn toàn với hai công thức (3.70) và (3.71) trong tài liệu gốc.
+>
+> **💡 Deeper notes**
+> - Khi prior p(w) là phẳng (flat prior), điểm cực đại hậu nghiệm w_MAP thực chất trùng với điểm cực đại hợp lý w_ML (Maximum Likelihood).
+> - Phép xấp xỉ này ngầm giả định rằng khoảng hỗ trợ Δw_prior bao trùm hoàn toàn vùng nhọn Δw_posterior và p(w) không đổi đáng kể trên toàn bộ vùng có khối lượng xác suất của likelihood.
 
 <br>
 
@@ -719,11 +827,30 @@
 > Và nếu xét thêm số tham số nhiều hơn, thì tuy điểm cộng cũng sẽ tăng do model phức tạp hơn thì fit data tốt hơn nhưng những điểm trừ thì tăng tuyến tính với số tham số. Nên chưa chắc là cứ tăng số tham số là model luôn tốt hơn đâu.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chép rất xuất sắc, trình bày mạch lạc và chính xác bản chất toán học lẫn trực quan của việc phạt độ phức tạp mô hình qua các phương trình 3.71 và 3.72. Việc bạn chủ động bổ sung ký hiệu điều kiện theo mô hình Mi giúp lập luận trở nên vô cùng chặt chẽ.
+> Ghi chú thể hiện sự hiểu bài rất sâu sắc và trực quan về bản chất của Occam's razor và Bayesian model comparison; bạn đã diễn giải chính xác vai trò của từng thành phần trong xấp xỉ model evidence.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"ln f(𝒟) = ln [f(𝒟|wMAP)] + ln [Δw_posterior / Δw_prior]"*
+>
+> Đây là công thức xấp xỉ (biểu diễn bằng dấu ≃ trong sách) dựa trên giả định phân phối đều hình hộp chữ nhật của prior và posterior, không phải dấu bằng tuyệt đối (=).
+>
+> **2.** *"ln f(𝒟|wMAP)_ℳ1 lớn hơn f(𝒟|wMAP)_ℳ2"*
+>
+> Có một sơ suất nhỏ về ký hiệu: bạn thiếu hàm ln ở vế sau khi so sánh ln f(𝒟|wMAP, ℳ1) với ln f(𝒟|wMAP, ℳ2).
+>
+>
+> **✓ Strengths**
+> - Hiểu rất chính xác bản chất marginal likelihood / model evidence như một hàm likelihood trên không gian các mô hình khi đã tích phân triệt tiêu tham số w.
+> - Nắm rõ cơ chế phạt của số hạng thứ hai (complexity penalty / Occam factor) khi tỉ lệ Δw_posterior / Δw_prior < 1 dẫn đến giá trị âm.
+> - Hiểu đúng sự đánh đổi (trade-off) giữa độ khớp dữ liệu (term 1) và độ phức tạp tỉ lệ tuyến tính với số lượng tham số M (term 2).
+>
+> **💡 Deeper notes**
+> - Xấp xỉ (3.71) và (3.72) dựa trên giả định rất đơn giản hóa (prior phân phối đều trên bề rộng Δw_prior, posterior khu trú trong bề rộng Δw_posterior, và các chiều tham số độc lập nhau). Ở phần sau của giáo trình, xấp xỉ Laplace dựa trên phân phối Gaussian quanh mode MAP sẽ cung cấp công thức tổng quát và chặt chẽ hơn (thông qua định thức của ma trận Hessian).
 
-**🔗 See also:** [Model Evidence and Bayes Factor](#node-5ef8t75)
+**🔗 See also:** [Model Evidence and Bayes Factor](#node-5ef8t75) · [Model Evidence and Occam Factor](./441_model_comparison_and_bic.md#node-vwb8lk4)
 
 <br>
 
@@ -789,11 +916,26 @@
 > Chỉ có anh thứ hai ℳ2, trình độ khá, nên khả năng anh ta vẽ cái này là cao nhất.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú của bạn vô cùng chính xác, sắc sảo và ví dụ ẩn dụ về ba họa sĩ rất sáng tạo, trực quan để giải thích hiện tượng tự động phạt các mô hình quá phức tạp (Bayesian Occam's razor). Một lưu ý nhỏ là trục hoành biểu diễn không gian của cả tập dữ liệu (datasets) chứ không chỉ là từng điểm dữ liệu đơn lẻ (data points), nhưng điều này không làm ảnh hưởng đến lập luận xuất sắc của bạn.
+> Ghi chú nắm rất chắc và diễn giải rất trực quan bản chất của Bayesian model comparison và nguyên lý Occam's razor qua Hình 3.13. Bạn hiểu đúng việc mỗi điểm trên trục hoành là một tập dữ liệu hoàn chỉnh và cơ chế sinh dữ liệu theo quan điểm Bayes.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Mà mô hình phức tạp quá thì phổ data nó có thể sinh ra lại quá rộng, khiến xác suất tại một điểm cũng nhỏ."*
+>
+> Nên nhấn mạnh rõ điều kiện cốt lõi trong sách: các phân phối p(D|Mi) bắt buộc phải được chuẩn hóa (tổng tích phân diện tích dưới đường cong luôn bằng 1). Chính ràng buộc diện tích bằng 1 này mới buộc phân phối càng trải rộng theo chiều ngang thì chiều cao (mật độ xác suất) tại từng điểm cụ thể càng phải thấp xuống.
+>
+>
+> **✓ Strengths**
+> - Phân biệt chính xác trục hoành là không gian chứa toàn bộ các tập dữ liệu khả dĩ (dataset) chứ không phải từng điểm dữ liệu đơn lẻ (x, t).
+> - Mô tả đúng và trực quan quy trình sinh dữ liệu của Bayesian: lấy mẫu tham số w từ prior trước rồi mới lấy mẫu D từ likelihood.
+> - Ẩn dụ về ba họa sĩ rất sáng tạo, thể hiện sự thấu hiểu trực giác đằng sau việc phạt mô hình quá phức tạp (Occam's razor tự nhiên trong Bayesian).
+>
+> **💡 Deeper notes**
+> - Cần lưu ý thêm rằng giả định các đường cong dạng hộp phẳng (như trong hình vẽ minh họa 3.13) chỉ là sơ đồ khái niệm trực quan; trong thực tế, phân phối biên p(D|M) thường có dạng phức tạp với các đỉnh tập trung ở các vùng dữ liệu mà mô hình có prior mass lớn.
 
-**🔗 See also:** [Bayesian Model Comparison](#node-mg5ehv8)
+**🔗 See also:** [Bayesian Model Comparison](#node-mg5ehv8) · [Model Evidence and Occam Factor](./441_model_comparison_and_bic.md#node-vwb8lk4)
 
 <br>
 
@@ -863,9 +1005,23 @@
 > Nhưng nếu tính trung bình trên mọi dataset thì model evidence của model thật sự chi phối data (ℳ1) sẽ luôn lớn hơn. Do đó, mới nói Bayes factor tính trên trung bình mọi data sẽ luôn ưu tiên cái model đúng.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú rất xuất sắc, giải thích chính xác và đào sâu bản chất toán học khi dùng LOTUS để chứng minh kỳ vọng của log Bayes factor chính là phân kỳ KL. Để hoàn thiện hơn, bạn nên lưu ý ghi rõ 'log Bayes factor' thay vì chỉ 'Bayes factor' ở các bước biến đổi cuối để tránh nhầm lẫn thuật ngữ.
+> Ghi chú nắm rất chắc và diễn giải rất chuẩn xác bản chất của công thức (3.73) qua phân phối Kullback-Leibler (KL divergence) và định lý LOTUS. Bạn hiểu đúng việc lấy kỳ vọng theo phân phối dữ liệu thật để chứng minh mô hình đúng sẽ được ưu tiên hơn trên trung bình.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Nhưng nếu tính trung bình trên mọi dataset thì model evidence của model thật sự chi phối data (ℳ1) sẽ luôn lớn hơn."*
+>
+> Nói thật chặt chẽ thì giá trị kỳ vọng của log-evidence (hoặc kỳ vọng của log Bayes factor) sẽ lớn hơn, chứ không phải trung bình trực tiếp của bản thân model evidence (không có ln). Dù vậy các biến đổi toán học bên trên của bạn đều ghi rõ ln nên không ảnh hưởng đến bản chất.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ và diễn giải rành mạch giả định cốt lõi: phân phối thật nằm trong tập các mô hình xem xét và ta coi M1 là phân phối thật.
+> - Nhận diện chính xác tích phân kỳ vọng dạng E[ln(p1/p2)] chính là KL divergence và áp dụng đúng tính chất không âm của KL divergence.
+>
+> **💡 Deeper notes**
+> - Trong sách, Bishop viết 'expected Bayes factor' nhưng công thức (3.73) thực chất là 'expected log Bayes factor'. Ghi chú của bạn đã nhận diện và xử lý trực tiếp trên ln, điều này hoàn toàn chuẩn xác về mặt toán học.
 
 **🔗 See also:** [Model Evidence and Bayes Factor](#node-5ef8t75) · [KL-divergence và tính chất](./16_information_theory.md#node-hh2wohi)
 
