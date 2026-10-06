@@ -1046,14 +1046,14 @@
 > Đó là như ta kết luận từ 6.1 (theo link) rằng: Nếu T(X) là sufficient statisti thì
 > dùng thông tin trong T(X) là đủ để suy luận θ, không cần dùng toàn bộ thông
 > tin trong sample X. Vì nó "đã đủ" (sufficient). Lấy ví dụ như nếu đang có 𝐗
-> là sample ~ normal distribution thì dùng T(𝐗) = (X̄, S^2) (là một
+> là sample ~ normal distribution thì dùng T(𝐗) = (X̄, S²) (là một
 > sufficient statistic là đủ để suy luận μ, σ², có thể vứt 𝐗 đi mà không sợ
 > mất thông tin.
 >
 >
 >
 > Tuy nhiên CHỖ NÀY NGUY HIỂM LÀ, NẾU NHƯ **X THỰC RA LẠI KHÔNG
-> PHẢI ~ NORMAL**, THÌ T(𝐗) = (X̄, S^2) **KHÔNG CÒN LÀ
+> PHẢI ~ NORMAL**, THÌ T(𝐗) = (X̄, S²) **KHÔNG CÒN LÀ
 > SUFFICIENT STATISTIC NỮA**. Khi đó nếu bỏ X đi, chỉ xài T(X) sẽ bị mất
 > thông tin quan trọng giúp suy luận ra θ (chưa chắc θ là μ và σ của normal) Do đó ở đây gs nói "một hạn chế của sufficient principle, tức là cái nguyên
 > tắc nói rằng nếu mà tao đã có một thống kê đủ thì tao đếch cần dùng cả bộ
