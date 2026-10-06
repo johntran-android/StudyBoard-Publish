@@ -1,6 +1,6 @@
 # 4.4.1 Model comparison and BIC
 
-📊 **Progress:** `1` Notes | `1` Screenshots | `1` AI Reviews
+📊 **Progress:** `2` Notes | `3` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-h2udsbr"></a>
@@ -172,4 +172,229 @@
 <br>
 
 <a id="node-vwb8lk4"></a>
+
+### Model Evidence and Occam Factor
+
+<p align="center"><kbd><img src="assets/1gyxw1wvkfw.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/i2v9b5fsawe.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Với phần active recall vừa rồi, tiếp theo phần này, ta có có data set 𝒟, và tập các model ℳi, các tham số tương ứng là 𝛉i.
+>
+>
+>
+> Define likelihood function f(𝒟|𝛉i,ℳi)
+>
+>
+>
+> ---
+>
+>
+>
+> Mình nghĩ có thể ghi là L(𝛉i|𝒟,ℳi) để chỉ: độ hợp lý của giá trị tham số 𝛉i khi dùng mô hình ℳi trong việc giải thích giá trị của dữ liệu quan sát được 𝒟
+>
+>
+>
+> hoặc L(𝛉i, ℳi|𝒟) để chỉ: độ hợp lý của việc dùng mô hình ℳi, và giá trị tham số là 𝛉i để giải thích cho việc quan sát thấy dữ liệu có giá trị là 𝒟
+>
+>
+>
+> Ở đây, tác giả đang dùng cách hiểu đầu tiên, là xét độ hợp lí của giá trị 𝛉i, giải thích cho dữ liệu, khi đang dùng mô hình ℳi
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> Và vì tương tự vì định nghĩa L(θ|𝐱) = f(𝐱|θ) nên ta hiểu rằng khi dùng f(𝐱|θ) với tư cách là hàm theo 𝐱 thì nó là probability của 𝐗 tại 𝐱, còn khi dùng với tư cách là hàm theo θ thì nó là likelihood của θ giải thích cho giá trị quan sát của 𝐗 = 𝐱. Nên ở đây, khi nói likelihood function f(𝒟|𝛉i,ℳi) thì phải hiểu đang coi như là hàm của 𝛉i,ℳi.
+>
+>
+>
+> ---
+>
+>
+>
+> Nếu cho rằng 𝛉i có prior distribution f(𝛉i|ℳi) thì
+>
+>
+>
+> f(𝒟|ℳi) = ∫f(𝒟|ℳi,𝛉)f(𝛉|ℳi)d𝛉
+>
+>
+>
+> hay bỏ đi việc dựa trên ℳi cho gọn, ta có f(𝒟) = ∫f(𝒟|𝛉)f(𝛉)d𝛉
+>
+>
+>
+> (như note trước nói, cái này chỉ y như: f(x) = ∫f(x,y)dy = ∫f(x|y)f(y)dy, thì f(𝒟) = ∫f(𝒟, 𝛉)d𝛉 = ∫f(𝒟|𝛉)f(𝛉)d𝛉
+>
+>
+>
+> Và đặt f(𝒟|𝛉)f(𝛉) là g(𝛉)
+>
+>
+>
+> (Do từ đầu đến giờ mình theo convention chuẩn sách thống kê cho quen, nên dùng f thay vì p, thành ra chỗ này ông Bishop đặt p(𝒟|𝛉)p(𝛉) là f(𝛉) thì mình dùng chữ g(𝛉))
+>
+>
+>
+> thì f(𝒟) = ∫g(𝛉)d𝛉, chính là một normalizing constant Z của g(𝛉)
+>
+>
+>
+> Nên áp dụng công thức xấp xỉ hồi nãy:
+>
+>
+>
+> Z = ∫f(𝐳)d𝐳 ≈ f(𝐳0) (2π)^(M/2) / √|𝐀|
+>
+>
+>
+> trong đó 𝐳0 là local mazimum của f(𝐳), 𝐀 là precision matrix, là matrix Hessian của hàm ln f(𝐳) tại 𝐳0: -∇² ln f(𝐳0)
+>
+>
+>
+> nên:
+>
+>
+>
+> ∫g(𝛉)d𝛉 ≈ g(𝛉0) (2π)^(M/2) / √|𝐀|
+>
+>
+>
+> trong đó 𝛉0 là local maximum của g(𝛉), 𝐀 là -∇² ln g(𝛉0)
+>
+>
+>
+> Và vì g(𝛉) = f(𝒟|𝛉)f(𝛉) ∝ f(𝛉|𝒟) (do theo Bayes f(𝛉|𝒟) = f(𝒟|𝛉)f(𝛉)/f(𝒟) ∝ f(𝒟|𝛉)f(𝛉))
+>
+>
+>
+> nên tại 𝛉0, g(𝛉) đạt maximum, thì cũng f(𝛉|𝒟) cũng vậy. Mà f(𝛉|𝒟) chính là posterior distribution của 𝛉.
+>
+>
+>
+> Nên 𝛉0 chính là 𝛉\_MAP (Maximum A Posterior)
+>
+>
+>
+> Còn 𝐀 là -∇² ln g(𝛉0) = -∇² ln f(𝒟|𝛉0)f(𝛉0)
+>
+>
+>
+> Và lại dùng Bayes rule: f(𝛉0|𝒟) = f(𝒟|𝛉0)f(𝛉0)/f(𝒟) ⇒ f(𝒟|𝛉0)f(𝛉0) = f(𝛉0|𝒟)f(𝒟)
+>
+>
+>
+> = -∇² ln f(𝛉0|𝒟)f(𝒟)
+>
+>
+>
+> = -∇² (ln f(𝛉0|𝒟) + ln f(𝒟))
+>
+>
+>
+> = -∇²(ln f(𝛉0|𝒟))
+>
+>
+>
+> = -∇²(ln f(𝛉\_MAP|𝒟))
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy f(𝒟) ≈ g(𝛉\_MAP) (2π)^(M/2) / √|𝐀|
+>
+>
+>
+> ⇔ f(𝒟) ≈ f(𝒟|𝛉\_MAP) f(𝛉\_MAP) (2π)^(M/2) / √|𝐀|
+>
+>
+>
+> ⇔ ln f(𝒟) ≈ ln \[f(𝒟|𝛉\_MAP) f(𝛉\_MAP) (2π)^(M/2) / √|𝐀|\]
+>
+>
+>
+> ⇔ ln f(𝒟) ≈ ln f(𝒟|𝛉\_MAP) +ln f(𝛉\_MAP) + ln \[(2π)^(M/2)\] - ln √|𝐀|
+>
+>
+>
+> ⇔ ln f(𝒟) ≈ ln f(𝒟|𝛉\_MAP) + ln f(𝛉\_MAP) + (M/2) ln(2π) - (1/2) ln |𝐀| → 4.137
+>
+>
+>
+> Với 𝐀 = -∇²(ln f(𝛉\_MAP|𝒟)) (→ 4.138)
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, đã học ở chapter 3
+>
+>
+>
+> ln f(𝒟|𝛉\_MAP) là log likelihood của most probable 𝛉 (𝛉\_MAP chính là 𝛉 mà posterior f(𝛉|𝒟) lớn nhất)
+>
+>
+>
+> và 3 cục sau là Occam factor: ln f(𝛉\_MAP) + (M/2) ln(2π) - (1/2) ln |𝐀|, sẽ phạt mô hình khi nó phức tạp.
+>
+>
+>
+> Là sao?
+>
+>
+>
+> Để hiểu, trước hết nên nhớ, đây là "đối với một mô hình ℳi cụ thể:
+>
+>
+>
+> tức là với ℳ1: ln f(𝒟|ℳ1) ≈ ln f(𝒟|𝛉1_MAP,ℳ1) + ln f(𝛉1_MAP|ℳ1) + (M1/2) ln(2π) - (1/2) ln |𝐀1|
+>
+>
+>
+> tức là với ℳ2: ln f(𝒟|ℳ2) ≈ ln f(𝒟|𝛉2_MAP,ℳ2) + ln f(𝛉2_MAP|ℳ2) + (M2/2) ln(2π) - (1/2) ln |𝐀2|
+>
+>
+>
+> ..
+>
+>
+>
+> Vậy thì, để so sách các ℳi, vế trái thông qua model evidence, hoặc cũng là likelihood trong không gian model, ta có thể dùng ℳ có ln f(𝒟|ℳ) cao nhất.
+>
+>
+>
+> Mà trong công thức này, nếu ln f(𝒟|𝛉i_MAP,ℳi) càng lớn, thì dĩ nhiên model evidence càng lớn. do đó, mô hình nào mà tham số có xác suất hậu nghiệm lớn nhất 𝛉 của nó có likelihood càng cao, thì mô hình đó sẽ càng có model evidence cao, nói cách khác term này kéo model evidence cao lên
+>
+>
+>
+> Còn 3 term sau, nó đóng vai trò phạt mức phức tạp của model
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú xuất sắc! Bạn đã tự triển khai chi tiết từng bước áp dụng xấp xỉ Laplace để suy ra công thức Model Evidence (4.137) và chứng minh ma trận Hessian A (4.138) rất chuẩn xác.
+>
+> **✓ Strengths**
+> - Chứng minh chặt chẽ tại sao theta_0 chính là theta_MAP thông qua tính chất tỉ lệ g(theta) tỉ lệ thuận với posterior distribution f(theta|D).
+> - Khử thành công số hạng hằng số ln f(D) khi lấy đạo hàm cấp 2 để chứng minh biểu thức của ma trận Hessian A.
+> - Khai triển logarit đầy đủ, rõ ràng và liên hệ chính xác với khái niệm Occam factor trong việc so sánh mô hình.
+>
+> **💡 Deeper notes**
+> - Với biến liên tục theta, f(theta|D) là hàm mật độ xác suất (probability density function) chứ không phải xác suất rời rạc, do đó theta_MAP là điểm cực đại của mật độ hậu nghiệm (mode of posterior density).
+> - Xấp xỉ Laplace giả định hàm posterior có dạng đơn mốt (unimodal) và ma trận Hessian A là xác định dương (positive definite) tại cực đại; nếu posterior có nhiều mốt (multimodal), Laplace quanh một điểm MAP duy nhất có thể đánh giá thấp evidence.
+
+**🔗 See also:** [Model Evidence and Complexity](./34_bayesian_model_comparison.md#node-l55vqkg) · [Marginal Likelihood Approximation](./34_bayesian_model_comparison.md#node-3bm8r68)
+
+<br>
 
