@@ -1,6 +1,6 @@
 # 5.3 Sampling From The Normal Distribution
 
-📊 **Progress:** `21` Notes | `29` Screenshots | `1` AI Reviews
+📊 **Progress:** `21` Notes | `29` Screenshots | `7` AI Reviews
 
 ---
 <a id="node-lmu32b0"></a>
@@ -33,17 +33,11 @@
 <p align="center"><kbd><img src="assets/s7hlqf53e8.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, cái này đại khái là, họ nói ta đã biết cách tính mean, và variance (kí
-> hiệu X̄ và S^2) nói chung. Bây giờ, với việc thêm vào gỉa định là ta biết
-> population distribution thuộc loại normal distribution. Thì ta có thể derive
-> (cho thấy) hoàn  chỉnh distribution của sample mean và sample variance.
+> Rồi, cái này đại khái là, họ nói ta đã biết cách tính mean, và variance của X̄ và S² nói chung. Bây giờ, với việc thêm vào gỉa định là ta biết population distribution thuộc loại normal distribution. Thì ta có thể derive (cho thấy) hoàn chỉnh **distribution của sample mean và sample variance**.
 >
 >
 >
-> Theorem 5.3.1: Đại khái nói là, ta có một random sample X1,X2...Xn từ
-> một population và lần này ta biết nó là normal (μ, σ²). Vì với sample
-> mean X̄, sample variance S^2 (mà công thức thì ta đã biết từ những
-> phần trước rồi)
+> Theorem 5.3.1: Đại khái nói là, ta có một random sample X1,X2...Xn từ một population và lần này ta biết nó là normal (μ, σ²). Vì với sample mean X̄, sample variance S² (mà công thức thì ta đã biết từ những phần trước rồi)
 >
 >
 >
@@ -51,16 +45,15 @@
 >
 >
 >
-> a) Hai cái random variable này, tức X̄ và S^2, **độc lập nhau.**
+> a) Hai cái random variable này, tức X̄ và S², **độc lập nhau.**
 >
 >
 >
-> b) Cái sampling distribution của sample mean X̄ chính là **normal (μ,
-> σ²/n)**, tức là cũng chính là cái population distribution.
+> b) Cái sampling distribution của sample mean X̄  là **normal (μ, σ²/n)**
 >
 >
 >
-> c) (n-1)S^2/ σ² có sampling distribution là **chi-square với n-1 bậc tự do**
+> c) (n-1)S²/ σ² có sampling distribution là **chi-square với n-1 bậc tự do**
 >
 >
 >
@@ -68,41 +61,39 @@
 >
 >
 >
-> 1) Tại sao tác giả lại nói đền "additional assumption of normality" (tạm
-> hiểu là  có thêm giả định là normality): Mình nghĩ có thể hiểu rằng, thực
-> tế, ta thường không biết cái population mà mình thực hiện lấy mẫu
-> (sampling) có distribution là lọai gì. Nên ở đây, ta giả định nó là normal
-> distribution.
+> i) Tại sao tác giả lại nói đền "additional assumption of normality" (tạm hiểu là có thêm giả định là normality): Mình nghĩ có thể hiểu rằng, thực tế, ta thường không biết cái population mà mình thực hiện lấy mẫu (sampling) có distribution là lọai gì. Nên ở đây, ta giả định nó là normal distribution.
 >
 >
 >
-> 2) Ôn lại chút về việc tại sao Sample mean X̄ và sample variance S^2
-> lại là random variable (Để rồi ở đây nói chúng độc lập): Thì đó là vì ta đã
-> biết, định nghĩa của chúng, nói ngắn gọn, là, chúng là kết quả của việc ta
-> dùng một function nào đó, để tính toán với các random variable X1,..Xn
-> trong random sample. Cụ thể với X̄ thì nó là X̄ = g1(X1,..Xn) với g1
-> có công thức là g1(x1,..xn) = (x1 + x2 + ...xn)/n. Mà ta đã biết khi apply
-> một function lên một (hoặc một đám) random variable thì ta cũng có một
-> random variable mới.
+> ii) Ôn lại chút về việc tại sao Sample mean X̄ và sample variance S² lại là random variable (Để rồi ở đây nói chúng độc lập): Thì đó là vì ta đã biết, định nghĩa của chúng, nói ngắn gọn, là, chúng là kết quả của việc ta dùng một function nào đó, để tính toán với các random variable X1,..Xn trong random sample. Cụ thể với X̄ thì nó là X̄ = g1(X1,..Xn) với g1 có công thức là g1(x1,..xn) = (x1 + x2 + ...xn)/n. Mà ta đã biết khi apply một function lên một (hoặc một đám) random variable thì ta cũng có một random variable mới.
 >
 >
 >
-> Thêm nữa, vì X1,...Xn là các random variable của một random sample.
-> nên người ta gọi các random variable có được khi apply các function lên
-> bộ random variable này là statistic.
+> Thêm nữa, vì X1,...Xn là các random variable của một random sample. nên người ta gọi các random variable có được khi apply các function lên bộ random variable này là statistic.
 >
 >
 >
-> Và again, các statistic là random variable, nên nó cũng có distribution. Và
-> người ta dùng cái tên SAMPLING DISTRIBUTION, để phân biệt với
-> distribution của các random variable X1,...Xn vốn là distribution có sẵn
-> (population distribution)
+> Và again, các statistic là random variable, nên nó cũng có distribution. Và người ta dùng cái tên SAMPLING DISTRIBUTION, để phân biệt với distribution của các random variable X1,...Xn vốn là distribution có sẵn (population distribution)
 >
 >
 >
 > Vậy thì thử xem ta có thể chứng minh theorem này ra sao.
 
-**🔗 See also:** [Chứng minh S^2 Chi-square](#node-nh8m52t) · [Suy diễn phân phối t](#node-iwzyu9l) · [Khoảng tin cậy từ đại lượng pivot](./92_methods_of_finding_interval_estimators.md#node-g9mg0da)
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=8oEGxDhqdME)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất tốt và chính xác nội dung định lý 5.3.1 cùng các tính chất phân phối mẫu. Phần liên hệ và giải thích trực giác về statistic cũng như sampling distribution rất rõ ràng, chuẩn xác.
+>
+> **✓ Strengths**
+> - Nắm trọn vẹn và chính xác ba kết luận then chốt của Định lý 5.3.1 về phân phối mẫu của X̄ và S² dưới giả định chuẩn.
+> - Giải thích bản chất thống kê lượng (statistic) là hàm của các biến ngẫu nhiên trong mẫu và làm rõ khái niệm sampling distribution rất chuẩn xác.
+>
+> **💡 Deeper notes**
+> - Cụm từ 'in general' ở phần đầu bài học có ý nghĩa quan trọng: các kết quả trước đó về kỳ vọng và phương sai (E[X̄]=μ, Var(X̄)=σ²/n, E[S²]=σ²) đúng với mọi phân phối có kỳ vọng và phương sai hữu hạn, không cần giả định chuẩn. Giả định chuẩn ('normality') chỉ cần thiết khi muốn suy ra trọn vẹn dạng phân phối (exact distributions) và tính độc lập giữa X̄ và S².
+
+**🔗 See also:** [Chứng minh S² Chi-square](#node-nh8m52t) · [Suy diễn phân phối t](#node-iwzyu9l) · [Khoảng tin cậy từ đại lượng pivot](./92_methods_of_finding_interval_estimators.md#node-g9mg0da) · [Pooled Estimator and Student t Distribution](./111_2_introduction_one_way_anova.md#node-680r0w1)
 
 <br>
 
@@ -121,92 +112,139 @@
 >
 >
 >
-> Thế thì, ôn lại về mgf (moment generating function), mgf của X, kí hiệu
-> M_X(t) có bản chất công thức là E[e^tX], tức là, tạo một random variable
-> mới Y = e^tX và lấy kì vọng (expected value) của nó.
+> Thế thì, ôn lại về mgf (moment generating function), mgf của X, kí hiệu M_X(t) có bản chất công thức là E\[e^tX\], tức là, tạo một random variable mới Y = e^tX và lấy kì vọng (expected value) của nó.
 >
 >
 >
-> ⇨ mgf của X̄, kí hiệu M_X̄ (t), có bản chất là E[e^tX̄]
+> ---
 >
 >
 >
-> Với X̄  = (Σi Xi)/n, ta có:
+> MX(t) = E\[e^tX\] = E\[g(X)\] với g(x) = e^tx
 >
 >
 >
-> E[e^tX̄] = E[e^t((Σi Xi)/n)]
+> MX(t)|t=1 = E\[e^X\]
 >
 >
 >
-> Viết rõ một chút, E[e^ [t(Σi Xi)/n] ]  | e mũ [t(Σi Xi)/n]
+> MX(t)|t=2 = E\[e^2X\]
 >
 >
 >
-> = E[e^ [(t/n)(Σi Xi)] ]
+> MX(t)|t=100 = E\[e^100X\]
 >
 >
 >
-> = E[e^ [(t/n)(X1 + X2 + ..Xn)] ]  | ghi rõ Σ ra thôi
+> ---
 >
 >
 >
-> = E[e^ [(t/n)X1 + (t/n)X2 + ..(t/n)Xn] ]   | phân phối t/n vô thôi
+> ⇨ mgf của X̄, kí hiệu M_X̄ (t), có bản chất là E\[e^tX̄ \]
 >
 >
 >
-> = E [ e^(t/n)X1 * e^(t/n)X2 * ....* e^(t/n)Xn  ]    |  dùng tính chất hàm mũ
-> e^(a+b) = e^a * e^b
+> Với X̄ = (Σi Xi)/n, ta có:
 >
 >
 >
-> Tới đây, đại khái ta có thể lập luận lại hoặc cho nhanh thì dùng một
-> theorem đã chứng minh: nếu X1, X2...mutually independent thì E(X1X2..
-> Xn) = EX1 * EX2 ...EXn
+> E\[e^tX̄ \] = E\[e^(t(Σi Xi)/n)\] (e mũ \[t(Σi Xi)/n\])
 >
 >
 >
-> và ở đây, vì X1, X2....Xn là các random variables của một random sample,
-> theo định nghĩa chúng sẽ mutually independent.
+> = E\[e^\[(t/n)(Σi Xi)\] \]
 >
 >
 >
-> Mà khi X1,X2...Xn independent thì g(X1), g(X2)...g(Xn) tức là các random
-> variable có  được bằng cách apply hàm g lên các random variable này,
-> cũng sẽ mutually independent.
+> = E\[e^\[(t/n)(X1 + X2 + ..Xn)\] \] | ghi rõ Σ ra
 >
 >
 >
-> Do đó E [ e^(t/n)X1 * e^(t/n)X2 * ....* e^(t/n)Xn  ]
+> = E\[e^\[(t/n)X1 + (t/n)X2 + ..(t/n)Xn\] \] | phân phối t/n vô
 >
 >
 >
-> =  E[e^(t/n)X1] * E[e^(t/n)X2] * ....* E[e^(t/n)Xn]
+> Dùng tính chất hàm mũ e^(a+b) = e^a × e^b
 >
 >
 >
-> Rồi, tới đây xem xét E[e^(t/n)X1] là cái gì?
+> ..= E \[e^(t/n)X1 × e^(t/n)X2 × ....× e^(t/n)Xn \]
 >
 >
 >
-> Như lúc nãy đã nhắc lại định nghĩa mgf MX(t) = E[e^tX]. Vậy thì MX(t/n) =
-> E[e^(t/n)X]
+> Tới đây, đại khái ta có thể lập luận lại hoặc cho nhanh thì dùng một theorem đã chứng minh: nếu X1, X2...mutually independent thì E(X1X2.. Xn) = EX1 × EX2 ...× EXn
 >
 >
 >
-> (có nghĩa là, bản chất của hàm mgf của X evaluate tại t, là ta apply hàm
-> g(x) = e^tx lên random variable X, để có một random variable mới: Y =
-> e^tX. Rồi đem lấy kì vọng: E[Y] thì đó chính là MX(t). Vậy thì, nếu ta muốn
-> evaluate tại t/n. thì dĩ nhiên là ta apply hàm khác g(x) = e^[(t/n)x] lên
-> random variable X, để có Y = g(X) = e^[(t/n)X], ròi lấy kì vọng.
+> ---
 >
 >
 >
-> Như vậy, quay lại đây E[e^(t/n)X1], chính là MX1(t/n).
+> (Chứng minh lại cũng dễ: Gọi f(x), f(y), f(x,y) là marginal pdf và joint pdf:
 >
 >
 >
-> tương tự E[e^(t/n)X2] = MX2(t/n)
+> E\[XY\] = E\[Z = g(X,Y)\] với g(x,y) = xy; theo 2D LOTUS, = ∫∫g(x,y)f(x,y)dxdy = ∫∫xyf(x,y)dxdy = ∫∫xyf(x)f(y)dxdy = ∫yf(y)(∫xf(x)dx)dy = ∫yf(y)(EX)dy = E\[X\] ∫yf(y)dy = E\[X\]E\[Y\])
+>
+>
+>
+> Ôn nhanh LOTUS:
+>
+>
+>
+> X \~ fX(x), Y = g(X).
+>
+>
+>
+> Theo định nghĩa, EX = weighted average các possible value với weight là xác suất tương ứng
+>
+>
+>
+> Nên với biến rời rạc X có possible values x1,x2,x3: EX = P(X=x1) x1 + P(X=x2)x2 + P(X=x3)x3, với biến liên tục: EX = ∫xf(x)dx
+>
+>
+>
+> Nhưng LOTUS cho phép tính EY mà không cần tìm pdf/pmf của Y: EY = ∫g(x)f(x)dx
+>
+>
+>
+> ---
+>
+>
+>
+> và ở đây, vì X1, X2....Xn là các random variables của một random sample, theo định nghĩa chúng sẽ mutually independent.
+>
+>
+>
+> Mà khi X1,X2...Xn independent thì g(X1), g(X2)...g(Xn) tức là các random variable có được bằng cách apply hàm g lên các random variable này, cũng sẽ mutually independent.
+>
+>
+>
+> Do đó E \[e^(t/n)X1 × e^(t/n)X2 × ....× e^(t/n)Xn\]
+>
+>
+>
+> = E\[e^(t/n)X1\] × E\[e^(t/n)X2\] × ....× E\[e^(t/n)Xn\]
+>
+>
+>
+> Rồi, tới đây xem xét E\[e^(t/n)X1\] là cái gì?
+>
+>
+>
+> Như lúc nãy đã nhắc lại định nghĩa mgf MX(t) = E\[e^tX\]. Vậy thì MX(t/n) = E\[e^(t/n)X\]
+>
+>
+>
+> (có nghĩa là, bản chất của hàm mgf của X evaluate tại t, là ta apply hàm g(x) = e^tx lên random variable X, để có một random variable mới: Y = e^tX. Rồi đem lấy kì vọng: E\[Y\] thì đó chính là MX(t). Vậy thì, nếu ta muốn evaluate tại t/n. thì dĩ nhiên là ta apply hàm khác g(x) = e^\[(t/n)x\] lên random variable X, để có Y = g(X) = e^\[(t/n)X\], ròi lấy kì vọng.
+>
+>
+>
+> Như vậy, quay lại đây E\[e^(t/n)X1\], chính là MX1(t/n).
+>
+>
+>
+> tương tự E\[e^(t/n)X2\] = MX2(t/n)
 >
 >
 >
@@ -214,63 +252,63 @@
 >
 >
 >
-> Rồi, tới đây, ta lại dùng định nghĩa của random sample, ôn nhanh, đó là các
-> random variable X1,.Xn sẽ là các giá trị quan sát được của một biến số nào
-> đó. Và chúng độc lập lẫn nhau (mutually independent) như đã nói, nhưng
-> ngoài ra, chúng cũng có CHUNG MỘT MARGINAL DISTRIBUTION. Do đó
-> pdf, hay pmf, hay cdf, hay mgf của chúng là giống nhau.
+> Rồi, tới đây, ta lại dùng định nghĩa của random sample, ôn nhanh, đó là các random variable X1,...Xn sẽ là các giá trị quan sát được của một biến số nào đó. Và chúng độc lập lẫn nhau (mutually independent) như đã nói, nhưng ngoài ra, chúng cũng có CHUNG MỘT MARGINAL DISTRIBUTION. Do đó pdf, hay pmf, hay cdf, hay mgf của chúng là giống nhau.
 >
 >
 >
-> Vậy cái tích trên có thể thay bằng [MX1(t/n)]^n, hay gọi MX() là mgf của
-> population distribution, ta có M_X̄ (t) = [MX(t/n)]^n
+> Vậy cái tích trên có thể thay bằng \[MX1(t/n)\]ⁿ, hay gọi MX(t) là mgf của population distribution, ta có M_X̄ (t) = \[MX(t/n)\]ⁿ
 >
 >
 >
-> Tới đây ta dùng cái đề bài cho là sample có population distribution là
-> normal(μ, σ²), thì mgf của một normal(μ, σ²) có thể nhớ hoặc tra bảng =
-> e^[μt + (1/2) σ²t^2]
+> Tới đây ta dùng cái đề bài cho là sample có population distribution là normal(μ, σ²), thì mgf của một normal(μ, σ²) có thể nhớ hoặc tra bảng = e^\[μt + (1/2) σ²t²\]
 >
 >
 >
-> ⇨ M_X̄ (t) = [MX(t/n)]^n
+>  Thay vào, **nhớ là đang evaluate tại t/n**
 >
 >
 >
-> = [e^[μ(t/n) + (1/2) σ²(t/n)^2]]^n  | thay vào, **nhớ là đang evaluate tại t/n**
+> ⇨ M_X̄ (t) = \[MX(t/n)\]ⁿ
 >
 >
 >
-> Ở đây, nhìn một nùi vậy chứ chỉ là (e^u)^n, ta dùng tính chất hàm mũ:
-> (a^n)^m = a^(n*m)
+> = {e^\[μ(t/n) + (1/2) σ²(t/n)²\]}ⁿ
 >
 >
 >
-> = e^[n[μ(t/n) + (1/2) σ²(t/n)^2]]
+> Ở đây, nhìn một nùi vậy chứ chỉ là (e^u)ⁿ, ta dùng tính chất hàm mũ: (aⁿ)ᵐ = aᵐⁿ
 >
 >
 >
-> = e^[nμ(t/n) + n(1/2) σ²(t/n)^2]  | phân phối n vô thôi
+> = e^\[n\[μ(t/n) + (1/2) σ²(t/n)²\]\]
 >
 >
 >
-> = e^[μt + (1/2) σ²(t^2/n)]  | cancel n bớt
+> = e^\[nμ(t/n) + n(1/2) σ²(t/n)²\] | phân phối n vô thôi
 >
 >
 >
-> = **e^[μt + (1/2) (σ²/n)t^2]**  | đổi chỗ thôi
+> = e^\[μt + (1/2) σ²(t²/n)\] | cancel n bớt
 >
 >
 >
-> Tới đây, nhớ lại ta vừa nói random variable ~ normal(μ, σ²) sẽ có
+> = e^\[μt + (1/2) (σ²/n)t²\] | đổi chỗ thôi
 >
 >
 >
-> mgf M(t) = e^[μt + (1/2) σ²t^2]
+> Tới đây, nhớ lại ta vừa nói random variable \~ normal(μ, σ²) sẽ có
 >
 >
 >
-> nên normal(μ, σ²/n) sẽ có mgf là M(t) = **e^[μt + (1/2) (σ²/n)t^2]**
+> mgf M(t) = e^\[μt + (1/2) σ²t²\]
+>
+>
+>
+> nên normal(μ, σ²/n) sẽ có mgf là M(t) = e^\[μt + (1/2) (σ²/n)t²\]
+>
+>
+>
+> Cả pdf, cdf,pmf,mgf đều có thể dùng để xác định phân phối
 >
 >
 >
@@ -278,19 +316,30 @@
 >
 >
 >
-> Từ đó có thể kết luận sampling distribution của **sample mean X̄ là
-> normal(μ, σ²/n)**
+> Từ đó có thể kết luận **sampling distribution của** **sample mean X̄ là normal(μ, σ²/n)**
 >
 >
 >
-> (vì như đã biết, mgf, cũng như cdf, pdf pmf, đều có thể giúp xác định loại
-> của một distribution)
+> (vì như đã biết, mgf, cũng như cdf, pdf pmf, đều có thể giúp xác định loại của một distribution)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú xuất sắc khi tự chứng minh lại đầy đủ và chính xác phân phối của trung bình mẫu X̄ thông qua hàm sinh mô-men (mgf). Lập luận chặt chẽ, các bước biến đổi đại số rõ ràng và bản chất xác suất được nắm rất vững.
+>
+> **✓ Strengths**
+> - Tự triển khai hoàn chỉnh từng bước suy dẫn hàm mgf của X̄ từ định nghĩa mẫu ngẫu nhiên i.i.d mà không bỏ sót bước biến đổi nào.
+> - Hiểu rõ bản chất hàm sinh mô-men, nguyên lý hàm của biến ngẫu nhiên độc lập và tính duy nhất của mgf để nhận diện phân phối chuẩn.
+>
+> **💡 Deeper notes**
+> - Định lý xác định duy nhất phân phối qua mgf yêu cầu mgf phải tồn tại trong một khoảng mở chứa điểm 0; đối với phân phối chuẩn, mgf hội tụ trên toàn bộ R nên điều kiện này luôn được đảm bảo.
+> - Về mặt thuật ngữ chặt chẽ trong thống kê toán, X1, ..., Xn là các biến ngẫu nhiên (chưa thực hiện phép đo), còn các giá trị thực nhận x1, ..., xn sau khi lấy mẫu mới là các giá trị quan sát (realized values).
 
 <br>
 
 <a id="node-z2xp2q0"></a>
 
-##### X̄ và S^2 độc lập
+##### X̄ và S² độc lập
 
 <p align="center"><kbd><img src="assets/pkzk4o7u59g.png" width="80%"></kbd></p>
 
@@ -299,7 +348,7 @@
 <p align="center"><kbd><img src="assets/0g1eesvavq9d.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Để chứng minh ý b): X̄ và S^2 độc lập, nhìn khá khoai. Nhưng chiến lược
+> Để chứng minh ý b): X̄ và S² độc lập, nhìn khá khoai. Nhưng chiến lược
 > hay ý tưởng là dùng cái theorem (..) đã học ở những chương trước nói rằng:
 > nếu như X, Y là hai random variable độc lập thì g(X), h(Y) cũng độc lập nhau.
 > (tức là apply function g và h lên X và Y để có hai random variable mới, thì chúng
@@ -307,12 +356,12 @@
 >
 >
 >
-> Và cụ thể thì ta sẽ cho thấy rằng Y1 = X̄, sẽ độc lập với Y2,...Yn Và S^2 chỉ
+> Và cụ thể thì ta sẽ cho thấy rằng Y1 = X̄, sẽ độc lập với Y2,...Yn Và S² chỉ
 > là function theo Y2,...Yn ⇨ cũng độc lập với Y1, tức X̄.
 >
 >
 >
-> Đầu tiên họ sẽ chứng minh cho thấy S^2 chỉ là function của Y1,...Yn 
+> Đầu tiên họ sẽ chứng minh cho thấy S² chỉ là function của Y1,...Yn 
 >
 >
 >
@@ -340,7 +389,7 @@
 >
 >
 >
-> S^2 = [1/(n-1)] Σi (Xi - X̄)^2
+> S² = [1/(n-1)] Σi (Xi - X̄)^2
 >
 >
 >
@@ -352,12 +401,12 @@
 >
 >
 >
-> ⇨ S^2 chỉ là hàm phụ thuộc X2-X̄,....Xn-X̄
+> ⇨ S² chỉ là hàm phụ thuộc X2-X̄,....Xn-X̄
 >
 >
 >
 > Và sau đó ta sẽ chứng minh các rv này independent với X̄ thì như vậy
-> S^2 là hàm của các biến mà chúng độc lập với X̄, thì như Y = g(Z) mà Z
+> S² là hàm của các biến mà chúng độc lập với X̄, thì như Y = g(Z) mà Z
 > độc lập với X thì Y độc lập với X
 >
 >
@@ -562,7 +611,7 @@
 >
 >
 >
-> a) (y1 - S)^2 = y1^2 - 2y1S + S^2
+> a) (y1 - S)^2 = y1^2 - 2y1S + S²
 >
 >
 >
@@ -586,15 +635,15 @@
 >
 >
 >
-> = y1^2 - 2y1S + S^2 + Σi=2:n yi^2 + (n-1) y1^2 + 2y1S
+> = y1^2 - 2y1S + S² + Σi=2:n yi^2 + (n-1) y1^2 + 2y1S
 >
 >
 >
-> = y1^2 + (n-1) y1^2 + S^2 + Σi=2:n yi^2 
+> = y1^2 + (n-1) y1^2 + S² + Σi=2:n yi^2 
 >
 >
 >
-> = n y1^2 + S^2 + Σi=2:n yi^2 
+> = n y1^2 + S² + Σi=2:n yi^2 
 >
 >
 >
@@ -626,11 +675,42 @@
 >
 >
 >
-> ⇨ Y1 cũng độc lập với S^2 (là function của Y2,...Yn)
+> ⇨ Y1 cũng độc lập với S² (là function của Y2,...Yn)
 >
 >
 >
-> ⇨ X̄ (=Y1)  cũng độc lập với S^2 (là function của Y2,...Yn)
+> ⇨ X̄ (=Y1)  cũng độc lập với S² (là function của Y2,...Yn)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc khi tự mình tính toán chi tiết định thức Jacobian (vận dụng kiến thức MIT 18.06) và khai triển đại số ở số mũ mà sách giáo khoa bỏ qua. Có một vài sơ suất nhỏ về ký hiệu và thiếu hệ số -1/2 khi chép lại số mũ ở bước cuối nhưng không ảnh hưởng tới bản chất suy luận độc lập.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"= (n/[√(2π)]^n)    e^(-1/2)[n y1^2]    e^[(Σi=2:n yi)^2 + Σi=2:n yi^2 ]"*
+>
+> Khi tách tích hai hàm mũ, bạn bị sót hệ số -1/2 ở số mũ của thừa số thứ hai. Đúng ra phải là e^(-1/2)[(Σ yi)^2 + Σ yi^2]. Dù vậy, hàm này vẫn chỉ phụ thuộc vào (y2,...,yn) nên tính chất phân rã độc lập vẫn giữ nguyên.
+>
+> **2.** *"Để chứng minh ý b): X̄ và S^2 độc lập"*
+>
+> Trong giáo trình, việc chứng minh X̄ và S^2 độc lập là ý (a) (To prove part (a)...), còn ý (b) đã được chứng minh từ ví dụ trước.
+>
+> **3.** *"Đầu tiên họ sẽ chứng minh cho thấy S^2 chỉ là function của Y1,...Yn 
+
+(Y1 = X1 - X̄)"*
+>
+> Đoạn nháp này hơi nhầm lẫn ký hiệu ban đầu khi gán Y1 = X1 - X̄, tuy nhiên ngay sau đó bạn đã chỉnh lại chuẩn xác biến đổi theo (X2 - X̄, ..., Xn - X̄) và đặt Y1 = X̄.
+>
+>
+> **✓ Strengths**
+> - Tự lực giải quyết trọn vẹn bước tính định thức Jacobian của phép đổi biến ngược bằng cách biến đổi hàng và khai triển Laplace theo hàng 1, giải thích rõ ràng tại sao lại xuất hiện hệ số n.
+> - Nắm rất vững chiến lược cốt lõi: phân rã joint pdf của (Y1, ..., Yn) thành tích g(y1)h(y2,...,yn) để suy ra Y1 độc lập với nhóm (Y2,...,Yn), từ đó kéo theo tính độc lập với S^2.
+> - Khai triển đại số chi tiết và chính xác cho tổng bình phương ở số mũ.
+>
+> **💡 Deeper notes**
+> - Sách ghi 'Jacobian equal to 1/n' vì họ đang xét Jacobian của phép biến đổi thuận (từ x sang y), còn khi thay vào công thức đổi biến joint pdf ta cần Jacobian của phép biến đổi ngược (từ y sang x) nên định thức bằng n (hoặc lấy nghịch đảo 1/(1/n) = n). Ghi chú của bạn tính trực tiếp ma trận ngược này là hoàn toàn chuẩn xác.
+> - Chứng minh này ngầm dựa trên giả thiết mẫu ngẫu nhiên từ phân phối chuẩn N(0, 1) (không mất tính tổng quát nhờ tính chất họ vị trí - tỉ lệ scale-location family).
 
 <br>
 
@@ -643,13 +723,11 @@
 <p align="center"><kbd><img src="assets/90bhful9adn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đại khái là ta sẽ lạc đề tí, bàn qua Chi-square một chút trước khi quay lại vì
-> distribution này có tầm quan trọng trong việc triển khai ra pdf của sample
-> variance S^2.
+> đại khái là ta sẽ lạc đề tí, bàn qua Chi-square một chút trước khi quay lại vì distribution này có tầm quan trọng trong việc triển khai ra pdf của sample variance S².
 >
 >
 >
-> Phần trước mình đã biết qua Chi-square p bậc tự do pdf
+> Phần trước mình đã biết qua Chi-square p bậc tự do
 >
 >
 >
@@ -657,12 +735,11 @@
 >
 >
 >
-> Nếu Z là normal (0, 1) thì Z^2 sẽ là Chi-square 1 bậc tự do, kí hiệu /**X/^2_1**
+> Nếu Z là normal (0, 1) thì Z² sẽ là Chi-square 1 bậc tự do, kí hiệu χ²\_1
 >
 >
 >
-> Và nếu ta có X1, X2,....Xn là các Chi-square rv với các bậc tự do tương ứng
-> Xi ~ /X/^2_i, thì tổng của chúng cũng là Chi-square và bậc tự do thì cộng lại
+> Và nếu ta có X1, X2,....Xn là các Chi-square rv độc lập với các bậc tự do tương ứng Xi \~ χ²\_i, thì **tổng của chúng cũng là Chi-square và bậc tự do thì cộng lại**
 >
 >
 >
@@ -670,35 +747,49 @@
 >
 >
 >
-> Phần a thì dựa trên ví dụ trong chương 2, nơi mình đã tìm pdf của Y = g(X) =
-> X^2. Từ đó áp dụng sự thật là X là normal(0,1) thì bỏ pdf của nó vô ta sẽ có
-> pdf của Y là chi-square 1
+> Phần a thì dựa trên ví dụ trong chương 2, nơi mình đã tìm pdf của Y = g(X) = X². Từ đó áp dụng sự thật là X là normal(0,1) thì bỏ pdf của nó vô ta sẽ có pdf của Y là pdf của χ²\_1
 >
 >
 >
-> Còn phần b thì dựa trên ví dụ trong chương 4 đã làm để thấy tổng của các Γ
-> cũng là Γ, với tham số cộng lại. Ở đây gs nói vì Chi-square là một loại Γ cụ
-> thể là Γ(p/2, 2) nên dĩ nhiên nó cũng đúng
+> Còn phần b thì dựa trên ví dụ trong chương 4 đã làm để thấy tổng của các Γ cũng là Γ, với tham số cộng lại. Ở đây gs nói vì Chi-square là một loại Γ cụ thể là Γ(p/2, 2) nên dĩ nhiên nó cũng đúng
 
-**🔗 See also:** [Đạo hàm PDF của Y=X^2](./21_distribution.md#node-6yi0r3h) · [Tổng biến ngẫu nhiên Gamma](./46_multi_variate_distribution.md#node-08ciur5) · [Đạo hàm phân phối t-Student](#node-5eltn4g) · [Ước lượng Satterthwaite](./72_method_of_finding_estimators.md#node-fosb15b)
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất tốt động lực dẫn nhập phân phối Chi-bình phương và bản chất của bổ đề cùng hướng chứng minh. Điểm thiếu sót duy nhất là bạn quên ghi rõ điều kiện các biến ngẫu nhiên phải độc lập ở mệnh đề (b).
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Và nếu ta có X1, X2,....Xn là các Chi-square rv với các bậc tự do tương ứng Xi ~ χ²_i, thì tổng của chúng cũng là Chi-square và bậc tự do thì cộng lại"*
+>
+> Ghi chú đã bỏ sót giả thiết quan trọng là các biến ngẫu nhiên X1, ..., Xn phải độc lập với nhau (independent). Nếu không độc lập, tổng của chúng không nhất thiết tuân theo phân phối Chi-bình phương. Ngoài ra, ký hiệu bậc tự do viết là χ²_i thay vì χ²_{p_i} (với p_i là số bậc tự do của từng biến).
+>
+>
+> **✓ Strengths**
+> - Nắm rất rõ lý do xuất hiện của đoạn này là bước đệm phục vụ cho việc suy diễn phân phối của phương sai mẫu S^2.
+> - Hiểu chính xác cơ sở chứng minh của cả hai phần: phần (a) dựa trên phép biến đổi biến ngẫu nhiên và phần (b) dựa trên tính chất cộng của các biến ngẫu nhiên Gamma độc lập.
+>
+> **💡 Deeper notes**
+> - Tính chất cộng của phân phối Gamma chỉ áp dụng khi các biến ngẫu nhiên độc lập và có CÙNG tham số tỉ lệ/scale (ở đây với Chi-bình phương, mọi biến đều có tham số beta = 2 cố định, chỉ khác nhau tham số hình dạng alpha = p_i / 2).
+
+**🔗 See also:** [Đạo hàm PDF của Y=X^2](./21_distribution.md#node-6yi0r3h) · [Tổng biến ngẫu nhiên Gamma](./46_multi_variate_distribution.md#node-08ciur5) · [Đạo hàm phân phối t-Student](#node-5eltn4g) · [Ước lượng Satterthwaite](./72_method_of_finding_estimators.md#node-fosb15b) · [Pooled Estimator and Student t Distribution](./111_2_introduction_one_way_anova.md#node-680r0w1)
 
 <br>
 
 <a id="node-nh8m52t"></a>
 
-###### Chứng minh S^2 Chi-square
+###### Chứng minh S² Chi-square
 
 <p align="center"><kbd><img src="assets/d32ijmy0cdd.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/ozwzrjiuv89.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Phần này gs chứng minh vế cuối của theorem : nhắc lại: là nếu X1,...Xn là random sample
-> từ normal(μ, σ²) thì
+> Phần này gs chứng minh vế cuối của theorem : nhắc lại: là nếu X1,...Xn là random sample từ normal(μ, σ²) thì
 >
 >
 >
-> c): (n-1)S^2/σ sẽ là Chi-square n-1
+> c): (n-1)S²/σ sẽ là Chi-square n-1
 >
 >
 >
@@ -706,29 +797,27 @@
 >
 >
 >
-> Có nghĩa là **cần chứng minh (n-1)S^2 sẽ là Chi-square n-1**
+> Có nghĩa là cần chứng minh (n-1)S² sẽ là Chi-square n-1
 >
 >
 >
-> 0) Đầu tiên phải ta sẽ chấp nhận công thức sample variance của mẫu size n sẽ quan hệ
-> với sample variance của mẫu size n-1 bởi:
+> Đầu tiên phải ta sẽ chấp nhận công thức sample variance của mẫu size n sẽ quan hệ với sample variance của mẫu size n-1 bởi:
 >
 >
 >
-> (n - 1)Sn^2 = (n - 2)Sn-1^2 + (n-1)/n (Xn - Xn-1_bar)^2
+> (n - 1)S²\_n = (n - 2)S²\_n-1 + (n-1)/n (Xn - X̄\_n-1)²
 >
 >
 >
-> Xn-1_bar là sample mean của mẫu size n-1, (X1,...Xn-1)
+> X̄\_n-1 là sample mean của mẫu size n-1, (X1,...Xn-1)
 >
 >
 >
-> 1) Chứng minh nó đúng với n=2, tức chứng minh (2-1)S2^2/σ (sample variance của bộ 
-> có 2 cái X1, X2) là một Chi-square 1
+> Chứng minh nó đúng với n=2, tức chứng minh (2-1)S²\_2/σ (sample variance của bộ có 2 cái X1, X2) là một Chi-square 1
 >
 >
 >
-> Thì S2^2 = 1/(2-1) [(X1 - X̄)^2 + (X2 - X̄)^2] triển khai ra sẽ = (1/2)(X2 - X1)^2
+> Thì S²\_2 = 1/(2-1) \[(X1 - X̄)² + (X2 - X̄)²\] triển khai ra sẽ = (1/2)(X2 - X1)²
 >
 >
 >
@@ -736,14 +825,7 @@
 >
 >
 >
-> Vì theorem trước đây đã có nói (theo link), tổng của hai rv independent normal sẽ cũng
-> là một normal, với param mean = tổng mean và variance = tổng variance. Ở đây X1, X2
-> là independent normal(0,1), thì -X1 cũng là normal(0, 1), (vì tuy có thể trả lời bằng cách
-> derive pdf, nhưg có thể dùng location scale không? nó nói nếu Z ~ standard pdf f(x), thì
-> σZ + μ sẽ là family member có location μ và scale param σ. với normal thì location và
-> scale cũng là mean và standard deviation nên σZ + μ sẽ có mean μ, variance σ², ở đây
-> -X1 = (-1)*X1 + 0 ⇨ -X1 distribution cũng là thành viên với location = mean là 0, scale =
-> -1 ⇨ variance = (-1)^2 = 1
+> Vì theorem trước đây đã có nói (theo link), tổng của hai rv independent normal sẽ cũng là một normal, với param mean = tổng mean và variance = tổng variance. Ở đây X1, X2 là independent normal(0,1), thì -X1 cũng là normal(0, 1), (vì tuy có thể trả lời bằng cách derive pdf, nhưg có thể dùng location scale không? nó nói nếu Z \~ standard pdf f(x), thì σZ + μ sẽ là family member có location μ và scale param σ. với normal thì location và scale cũng là mean và standard deviation nên σZ + μ sẽ có mean μ, variance σ², ở đây -X1 = (-1)\*X1 + 0 ⇨ -X1 distribution cũng là thành viên với location = mean là 0, scale = -1 ⇨ variance = (-1)² = 1
 >
 >
 >
@@ -751,19 +833,15 @@
 >
 >
 >
-> Tiếp, xét (X2 - X1)/2 thì cũng lại dùng location scale theorem: Nói rằng nếu X ~ thành
-> viên có location μ, scale σ thì Z = (X - μ)/ σ sẽ là thành viên chuẩn (location 0, scale 1)
-> Nên ở đây (X2 - X1) là thành viên location 0, scale √2 ⇨ [(X2 - X1) - 0]/√2 chính là sẽ ra
-> thành viên chuẩn (location 0, scale 1) mà xét trong bối cảnh normal thì sẽ là mean 0, std
-> 1 ⇨ normal(0,1)
+> Tiếp, xét (X2 - X1)/2 thì cũng lại dùng location scale theorem: Nói rằng nếu X \~ thành viên có location μ, scale σ thì Z = (X - μ)/ σ sẽ là thành viên chuẩn (location 0, scale 1) Nên ở đây (X2 - X1) là thành viên location 0, scale √2 ⇨ \[(X2 - X1) - 0\]/√2 chính là sẽ ra thành viên chuẩn (location 0, scale 1) mà xét trong bối cảnh normal thì sẽ là mean 0, std 1 ⇨ normal(0,1)
 >
 >
 >
-> Vậy (X2 - X1)/√2 là normal(0,1)  ⇨ [(X2 - X1)/√2]^2 = (X2 - X2)/2 là Chi-square 1
+> Vậy (X2 - X1)/√2 là normal(0,1) ⇨ \[(X2 - X1)/√2\]² = (X2 - X2)/2 là Chi-square 1
 >
 >
 >
-> Hay, **(2-1) S2^2**  (hay (n-1)Sn^2 với n = 2) **là Chi-square 1**
+> Hay, (2-1) S²\_2 (hay (n-1)S²\_n với n = 2) là Chi-square 1
 >
 >
 >
@@ -771,94 +849,83 @@
 >
 >
 >
-> Thế thì, theo quy nạp, ta sẽ giả sử điều đang cần chứng minh đúng ở mẫu size k thì nếu
-> ta chứng minh nó cũng đúng ở mẫu size k+1 thì sẽ có thể theo nguyên lí quy nạp
-> (induction) mà kết luận nó đúng với mọi size
+> Thế thì, theo quy nạp, ta sẽ giả sử điều đang cần chứng minh đúng ở mẫu size k thì nếu ta chứng minh nó cũng đúng ở mẫu size k+1 thì sẽ có thể theo nguyên lí quy nạp (induction) mà kết luận nó đúng với mọi size
 >
 >
 >
-> Vậy thì ta giả sử nó đúng với mẫu size k, tức là (k-1)Sk^2/σ  (sample mean của mẫu size k (tức
-> gồm X1,...Xk) là một Chi-square (k-1)
+> Vậy thì ta giả sử nó đúng với mẫu size k, tức là (k-1)S²\_k/σ (sample mean của mẫu size k (tức gồm X1,...Xk) là một Chi-square (k-1)
 >
 >
 >
-> Theo công thức (n - 1)Sn^2 = (n - 2)Sn-1^2 + (n - 1)/n (Xn - Xn-1_bar)^2
+> Theo công thức (n - 1)S²\_n = (n - 2)S²\_n-1 + (n - 1)/n (Xn - X̄\_n-1)²
 >
 >
 >
-> ta có (k + 1 - 1)Sk+1^2 = (k + 1 - 2)Sk+1-1^2 + (k+1-1)/k+1 (Xk+1 - Xk+1-1_bar)^2
+> ta có (k + 1 - 1)S²\_k+1 = (k + 1 - 2)S²\_k+1-1 + (k+1-1)/k+1 (X_k+1 - X_k+1-1_bar)²
 >
 >
 >
-> ⇔ kSk+1^2 = (k-1)Sk^2 + (k/k+1) (Xk+1 - Xk_bar)^2
+> ⇔ kS²\_k+1 = (k-1)S²\_k + (k/k+1) (X_k+1 - X̄\_k)²
 >
 >
 >
-> Với việc đã giả thiết **(k-1)Sk^2 là Chi-square (k-1)** thì ta **cần chứng minh Sk+1^2 là
-> Chi-square k**
+> Với việc đã giả thiết (k-1)S²\_k là Chi-square (k-1) thì ta cần chứng minh S²\_k+1 là Chi-square k
 >
 >
 >
-> Xét term thứ 2: (k/k+1) (Xk+1 - Xk_bar)^2
+> Xét term thứ 2: (k/k+1) (X_k+1 - X̄\_k)²
 >
 >
 >
-> Đại khái là vầy: Xk+1 - Xk_bar = Xk+1 - (X1 + X2 + ...Xk) / k. Và cái này là tổng của các
-> normal (Xk+1, -X1/k, -X2/k,.. đều là normal, chỉ khác param) Và có thể làm kĩ để xem nó
-> là normal param bao nhiêu hoặc chỉ dùng linearity tính variance của nó.
+> Đại khái là vầy: X_k+1 - X̄\_k = X_k+1 - (X1 + X2 + ...Xk) / k. Và cái này là tổng của các normal (X_k+1, -X1/k, -X2/k,.. đều là normal, chỉ khác param) Và có thể làm kĩ để xem nó là normal param bao nhiêu hoặc chỉ dùng linearity tính variance của nó.
 >
 >
 >
-> Làm kĩ: Xk+1 thì là normal(0,1) rồi, -X1/k = (-1/k) X1 + 0, với X1 là standard member thì
-> (-1/k) X1 + 0 là member với location 0, scale -1/k, và với việc X1 là normal thì ⇨ ta có
-> (-1/k) X1 ~ normal(0, 1/k^2). Tương tự với (-1/k) X2,....(-1/k) Xk
+> Làm kĩ: X_k+1 thì là normal(0,1) rồi, -X1/k = (-1/k) X1 + 0, với X1 là standard member thì (-1/k) X1 + 0 là member với location 0, scale -1/k, và với việc X1 là normal thì ⇨ ta có (-1/k) X1 \~ normal(0, 1/k²). Tương tự với (-1/k) X2,....(-1/k) Xk
 >
 >
 >
-> ⇨ Xk+1 - (X1 + X2 + ...Xk) / k ~ normal(0 + ..0, 1 + Σi=1:k 1/k^2) = normal(0, 1 + k/k^2)
+> ⇨ X_k+1 - (X1 + X2 + ...Xk) / k \~ normal(0 + ..0, 1 + Σi=1:k 1/k²) = normal(0, 1 + k/k²)
 >
 >
 >
-> tức là variance của nó: = 1 + k/k^2 = 1 + 1/k = **(k+1)/k**
+> tức là variance của nó: = 1 + k/k² = 1 + 1/k = **(k+1)/k**
 >
 >
 >
-> Còn không có thể tính Var(Xk+1 - Xk_bar) = Var(Xk+1 - (X1 + X2 + ...Xk) / k)
+> Còn không có thể tính Var(X_k+1 - X̄\_k) = Var(X_k+1 - (X1 + X2 + ...Xk) / k)
 >
 >
 >
-> = Var(Xk+1) + Var(-X1/k) + Var(-X2/k) + ...+ Var(-Xk/k) | Ta có điều này là vì các
+> = Var(X_k+1) + Var(-X1/k) + Var(-X2/k) + ...+ Var(-Xk/k) | Ta có điều này là vì các
 >
 >
 >
-> Xk+1, -X1/k, -X2/k,... mutually independent ⇨ covariance bằng 0 = 1 + (1/k^2)
-> Var(X1) + (1/k^2) Var(X2) + ...(1/k^2) Var(Xk) | dùng tính chất của variance:
+> X_k+1, -X1/k, -X2/k,... mutually independent ⇨ covariance bằng 0 = 1 + (1/k²) Var(X1) + (1/k²) Var(X2) + ...(1/k²) Var(Xk) | dùng tính chất của variance:
 >
 >
 >
-> Var(cX) = c^2 Var(X)
+> Var(cX) = c² Var(X)
 >
 >
 >
-> = 1 + (1/k^2) + ...(1/k^2) = 1 + k/k^2 = 1 + 1/k
+> = 1 + (1/k²) + ...(1/k²) = 1 + k/k² = 1 + 1/k
 >
 >
 >
-> Tiếp, vậy Xk+1 - Xk_bar là normal (0, (k+1)/k), nên lại theo location scale theorem:
+> Tiếp, vậy X_k+1 - X̄\_k là normal (0, (k+1)/k), nên lại theo location scale theorem:
 >
 >
 >
-> (chú ý nói Xk+1 - Xk_bar là normal (0, (k+1)/k) thì tức là nó là member có location 0
-> scale √(k+1)/k nhé)
+> (chú ý nói X_k+1 - X̄\_k là normal (0, (k+1)/k) thì tức là nó là member có location 0 scale √(k+1)/k nhé)
 >
 >
 >
-> [(Xk+1 - Xk_bar) - 0] / √[(k+1)/k] sẽ là standard member có location 0, scale 1, tức
-> normal(0,1)
+> \[(X_k+1 - X̄\_k) - 0\] / √\[(k+1)/k\] sẽ là standard member có location 0, scale 1, tức normal(0,1)
 >
 >
 >
-> ⇨ **√**(k/k+1)(Xk+1 - Xk_bar) ~ normal (0,1)
+> ⇨ √(k/k+1)(X_k+1 - X̄\_k) \~ normal (0,1)
 >
 >
 >
@@ -866,7 +933,7 @@
 >
 >
 >
-> [√(k/k+1)(Xk+1 - Xk_bar)]^2 = **(k/k+1)(Xk+1 - Xk_bar)^2 ~ Chi-square 1**
+> \[√(k/k+1)(X_k+1 - X̄\_k)\]² = **(k/k+1)**(X_k+1 **-** X̄\_k)**² **\~ Chi-square 1**
 >
 >
 >
@@ -874,39 +941,73 @@
 >
 >
 >
-> Vậy quay lại đây kSk+1^2 = (k-1)Sk^2 + (k/k+1) (Xk+1 - Xk_bar)^2
+> Vậy quay lại đây kS²\_k+1 = (k-1)S²\_k + (k/k+1) (X_k+1 - X̄\_k)²
 >
 >
 >
-> Ta đã có **Sk^2** theo giả thiết là Chi-square k
+> Ta đã có S²\_k theo giả thiết là Chi-square k
 >
 >
 >
-> Nay ta đã chứng minh (k/k+1) (Xk+1 - Xk_bar)^2 là Chi-square 1
+> Nay ta đã chứng minh (k/k+1) (X_k+1 - X̄\_k)² là Chi-square 1
 >
 >
 >
-> Vậy dùng cái theorem vữa nãy, nói là tổng của các chi-square sẽ là chi-square với bậc tự
-> do cộng lại. Suy ra (k-1)Sk^2 + (k/k+1) (Xk+1 - Xk_bar)^2 là một Chi-square có k + 1 bậc tự
-> do. Chứng minh xong kSk+1^2 là Chi-square k + 1
+> Vậy dùng cái theorem vữa nãy, nói là tổng của các chi-square sẽ là chi-square với bậc tự do cộng lại. Suy ra (k-1)S²\_k + (k/k+1) (X_k+1 - X̄\_k)² là một Chi-square có k + 1 bậc tự do. Chứng minh xong kS²\_k+1 là Chi-square k + 1
 >
 >
 >
 >
-> Một điểm quan trọng có thể bỏ xót. Phải nói rõ là các Chi-square độc lập thì mới áp dụng
-> theorem tổng Chi-square cũng là Chi-square nhé. Nên ở đây trong sách giáo sư Casella có
-> chỉ ra Sk^2 độc lập với Xk+1 - Xk_bar
+>
+> Một điểm quan trọng có thể bỏ xót. Phải nói rõ là các Chi-square độc lập thì mới áp dụng theorem tổng Chi-square cũng là Chi-square nhé. Nên ở đây trong sách giáo sư Casella có chỉ ra S²\_k độc lập với X_k+1 - X̄\_k
 >
 >
 >
-> Và vì sao chúng độc lập là vì vế a) của theorem 5.3.1 nói rằng với X1,..Xn là random sample
-> từ normal(μ, σ²) thì X̄ và S^2 độc lập nhau.
+> Và vì sao chúng độc lập là vì vế a) của theorem 5.3.1 nói rằng với X1,..Xn là random sample từ normal(μ, σ²) thì X̄ và S² độc lập nhau.
 >
 >
 >
-> Vậy với random sample size k từ normal(0, 1) thì sample mean Xk_bar và sample variance Sk^2
-> cũng độc lập nhau. Mà như vậy thì Xk+1 - Xk_bar cũng độc lập với Sk^2 vì Sk^2 chả liên quan
-> gì đến Xk+1 (vì nó chỉ liên quan X1,...Xk)
+> Vậy với random sample size k từ normal(0, 1) thì sample mean X̄\_k và sample variance S²\_k cũng độc lập nhau. Mà như vậy thì X_k+1 - X̄\_k cũng độc lập với S²\_k vì S²\_k chả liên quan gì đến X_k+1 (vì nó chỉ liên quan X1,...Xk)
+
+> [!TIP]
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **68/100** · ✗ Fix first
+>
+> Ghi chép thể hiện sự nắm bắt rất tốt về các bước biến đổi và lập luận tính độc lập, tuy nhiên ở bước chốt của phép quy nạp bạn đã nhầm lẫn bậc tự do khiến kết luận bị sai lệch thành Chi-square k+1 thay vì k.
+>
+> **🔴 Critical issues**
+>
+> **1.** *"Ta đã có Sk^2 theo giả thiết là Chi-square k ... Suy ra (k-1)Sk^2 + (k/k+1) (Xk+1 - Xk_bar)^2 là một Chi-square có k + 1 bậc tự do. Chứng minh xong kSk+1^2 là Chi-square k + 1"*
+>
+> Theo giả thiết quy nạp, (k-1)S_k^2 có phân phối Chi-square với k - 1 bậc tự do (chứ không phải k). Do đó khi cộng với số hạng thứ hai có phân phối Chi-square 1 bậc tự do, tổng k*S_{k+1}^2 có phân phối Chi-square với (k - 1) + 1 = k bậc tự do. Việc ghi nhận thành k + 1 bậc tự do mâu thuẫn trực tiếp với định lý cần chứng minh là (n-1)S_n^2 ~ Chi-square(n-1).
+>
+>
+> **🟡 Minor issues**
+>
+> **1.** *"(n-1)S^2/σ sẽ là Chi-square n-1"*
+>
+> Mẫu số chuẩn hóa phải là phương sai σ² chứ không phải độ lệch chuẩn σ: (n-1)S²/σ² ~ Chi-square(n-1).
+>
+> **2.** *"tức là (k-1)Sk^2/σ  (sample mean của mẫu size k (tức gồm X1,...Xk) là một Chi-square (k-1)"*
+>
+> Gõ nhầm thuật ngữ 'sample mean' thay vì 'sample variance' khi đang nói về S_k².
+>
+> **3.** *"[(X2 - X1)/√2]^2 = (X2 - X2)/2"*
+>
+> Lỗi gõ nhầm (typo) ở tử số, đúng ra phải là (X2 - X1)²/2.
+>
+> **4.** *"scale = -1"*
+>
+> Theo quy ước định nghĩa họ location-scale, tham số scale luôn là một số dương (σ > 0); phép nhân với -1 cho scale là |-1| = 1.
+>
+>
+> **✓ Strengths**
+> - Trình bày và dẫn dắt rất tường minh, chi tiết bước cơ sở n = 2 bằng tính chất tổng/hiệu của hai biến chuẩn độc lập.
+> - Tự tính toán chuẩn xác kỳ vọng và phương sai của biến ngẫu nhiên X_{k+1} - X̄_k thông qua tính chất tuyến tính của phương sai.
+> - Nắm rất vững và giải thích đúng điều kiện cần thiết về tính độc lập giữa S_k² và X̄_k (theo Theorem 5.3.1a) để áp dụng định lý cộng các biến Chi-square.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý phân biệt rạch ròi giữa kích thước mẫu (k, k+1) và bậc tự do của phân phối Chi-square (k-1, k) để tránh nhầm lẫn ở bước cộng bậc tự do.
+> - Việc giả sử normal(0, 1) không làm mất tính tổng quát vì với mẫu chuẩn bất kỳ N(μ, σ²), ta luôn chuẩn hóa được Z_i = (X_i - μ)/σ và khi đó (n-1)S²/σ² chính là tổng bình phương sai lệch của các biến Z_i chuẩn hóa.
 
 **🔗 See also:** [MGF của tổng phân phối chuẩn](./42_conditional_distributions_independent.md#node-tk1wnj7) · [Tính chất Trung bình & Phương sai mẫu](#node-aytwme7)
 
@@ -957,6 +1058,35 @@
 >
 > b) random vector (U1,...Uk) và (V1,...Vm) độc lập khi và chỉ khi Ui độc lập
 > với Vr với mọi cặp i, j
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+>
+> Ghi chú đã nắm đúng tinh thần và nội dung chính của Bổ đề 5.3.3 về mối liên hệ giữa tính độc lập và hiệp phương sai của các tổ hợp tuyến tính từ biến chuẩn. Tuy nhiên, bạn đã bỏ quên giả thiết độc lập ban đầu của các $X_j$ và có hai lỗi gõ phím nhỏ ở công thức hiệp phương sai và chỉ số cặp.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"cho X1,...Xn là các rv ~ normal(μj, σj^2) j = 1,...n"*
+>
+> Bổ đề yêu cầu các biến ngẫu nhiên $X_1, \dots, X_n$ phải độc lập với nhau (independent). Thiếu điều kiện này thì công thức tính Covariance và tính chất tương đương độc lập sẽ không còn áp dụng trực tiếp như vậy.
+>
+> **2.** *"Cov(Ui, Vr) = Σj aijbrj j^2"*
+>
+> Lỗi gõ phím: công thức đúng là $\sum_j a_{ij} b_{rj} \sigma_j^2$ (phương sai $\sigma_j^2$), không phải $j^2$.
+>
+> **3.** *"với mọi cặp i, j"*
+>
+> Lỗi nhầm chỉ số: $U_i$ đi với chỉ số $i$ ($1 \le i \le k$) và $V_r$ đi với chỉ số $r$ ($1 \le r \le m$), nên phải là 'với mọi cặp $i, r$' thay vì 'cặp $i, j$'.
+>
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác mục đích của đoạn trích: dùng bổ đề về tổ hợp tuyến tính để chứng minh tính độc lập của $\bar{X}$ và $S^2$ thay vì phân tích hàm mật độ đồng thời (joint pdf).
+> - Hiểu đúng bản chất của $U_i$ và $V_r$ là các tổ hợp tuyến tính của các biến ngẫu nhiên ban đầu.
+> - Nắm chuẩn hai mệnh đề then chốt: độc lập tương đương với hiệp phương sai bằng 0 cho từng cặp, và hai vector độc lập khi mọi cặp thành phần độc lập.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý điều kiện kích thước $k + m \le n$ trong bổ đề để đảm bảo tính hợp lệ khi chuyển đổi cơ sở/biến ngẫu nhiên.
+> - Tính chất 'độc lập $\iff \text{Cov} = 0$' chỉ đúng đặc biệt đối với phân phối chuẩn (jointly normal), trong trường hợp tổng quát không phân phối chuẩn thì Cov bằng 0 chỉ có nghĩa là không tương quan chứ chưa chắc độc lập.
 
 <br>
 
@@ -1455,7 +1585,7 @@
 
 <a id="node-jkt5q0l"></a>
 
-###### Chứng minh độc lập S^2 X̄
+###### Chứng minh độc lập S² X̄
 
 <p align="center"><kbd><img src="assets/hjy1nwe3o2.png" width="80%"></kbd></p>
 
@@ -1464,7 +1594,7 @@
 >
 >
 >
-> Nhưng đại ý là ta có thể dùng bổ đề vừa rồi để chứng minh S^2 độc lập với
+> Nhưng đại ý là ta có thể dùng bổ đề vừa rồi để chứng minh S² độc lập với
 > X̄ theo cách khác nếu như sampling là normal sampling (X1,..Xn là sample
 > size n từ population ~ normal distrbution)
 >
@@ -1501,7 +1631,7 @@
 >
 >
 >
-> Nên ở đâu S^2 = là function của (X1 - X̄, X2 - X̄,...)
+> Nên ở đâu S² = là function của (X1 - X̄, X2 - X̄,...)
 > nên nó cũng độc lập X̄
 
 <br>
@@ -1631,7 +1761,7 @@
 >
 >
 >
-> = (X̄ - μ)/(σ/√n)  /  √(S^2/σ²)
+> = (X̄ - μ)/(σ/√n)  /  √(S²/σ²)
 >
 >
 >
@@ -1914,7 +2044,7 @@
 >
 >
 >
-> Thì thông tin về ratios này chứa đựng trong S^2X / S^2Y (tỉ lệ của hai
+> Thì thông tin về ratios này chứa đựng trong S²X / S²Y (tỉ lệ của hai
 > sample variance)
 >
 >
@@ -1926,7 +2056,7 @@
 >
 >
 >
-> S^2X/S^2Y / σ²X/σ²Y
+> S²X/S²Y / σ²X/σ²Y
 >
 >
 >
@@ -1987,7 +2117,7 @@
 >
 >
 >
-> S^2X/S^2Y / σ²X/σ²Y
+> S²X/S²Y / σ²X/σ²Y
 >
 >
 >
@@ -2026,7 +2156,7 @@
 >
 > Câu này có nghĩa là, nếu ta có random sample size n từ normal(μ, σ²)  thì cái
 > random variable được tạo bằng cách lấy hàm g(z) = (n-1) z / σ² apply lên
-> sample variance S^2, thì cái random variable đó sẽ có distribution đã biết, có tên
+> sample variance S², thì cái random variable đó sẽ có distribution đã biết, có tên
 > là Student t, và nói đã biết tức là ta biết pdf của nó.
 >
 >
