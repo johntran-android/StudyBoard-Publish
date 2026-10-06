@@ -237,7 +237,7 @@
 <p align="center"><kbd><img src="assets/ptyobcgfbq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ này xét tính consistency của S^2 (sample variance). cho chuỗi các  random
+> Ví dụ này xét tính consistency của S² (sample variance). cho chuỗi các  random
 > variable X1, X2,....iid với EXi = μ. VarXi = σ² < inf
 >
 >
@@ -2331,11 +2331,11 @@
 >
 >
 >
-> Thế thì: ĐẠI Ý LÀ, TA SẼ CÓ THỂ DÙNG SAMPLE MEAN X̄ THAY CHO POPULATION MEAN μ VÀ SAMPLE VARIANCE S^2, THAY CHO σ².
+> Thế thì: ĐẠI Ý LÀ, TA SẼ CÓ THỂ DÙNG SAMPLE MEAN X̄ THAY CHO POPULATION MEAN μ VÀ SAMPLE VARIANCE S², THAY CHO σ².
 >
 >
 >
-> \[(1/μ)^4 σ²\] THAY BẰNG \[(1/X̄)^4 S^2\]
+> \[(1/μ)^4 σ²\] THAY BẰNG \[(1/X̄)^4 S²\]
 >
 >
 >
@@ -2343,7 +2343,7 @@
 >
 >
 >
-> THAY BẰNG \[√n(1/X̄ - 1/μ)\] / \[(1/X̄)^4 S^2\]
+> THAY BẰNG \[√n(1/X̄ - 1/μ)\] / \[(1/X̄)^4 S²\]
 >
 >
 >
@@ -2359,7 +2359,7 @@
 >
 >
 >
-> \[√n(1/X̄ - 1/μ)\] / \[(1/X̄)^4 S^2\]
+> \[√n(1/X̄ - 1/μ)\] / \[(1/X̄)^4 S²\]
 >
 >
 >
@@ -2367,7 +2367,7 @@
 >
 >
 >
-> = \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\] × \[(1/μ)^4 σ²\] / \[(1/X̄)^4 S^2\]
+> = \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\] × \[(1/μ)^4 σ²\] / \[(1/X̄)^4 S²\]
 >
 >
 >
@@ -2375,11 +2375,11 @@
 >
 >
 >
-> Còn tern 2, \[(1/μ)^4 σ²\] / \[(1/X̄)^4 S^2\]:
+> Còn tern 2, \[(1/μ)^4 σ²\] / \[(1/X̄)^4 S²\]:
 >
 >
 >
-> Thì viết lại, = (X̄/μ)^4 × σ²/S^2
+> Thì viết lại, = (X̄/μ)^4 × σ²/S²
 >
 >
 >
@@ -2391,11 +2391,11 @@
 >
 >
 >
-> và S^2 →(p) σ²
+> và S² →(p) σ²
 >
 >
 >
-> Do đó (X̄/μ)^4 σ²/S^2 **converge in probability về 1**, hay (X̄/μ)^4 σ²/S^2 → 1 in probability.
+> Do đó (X̄/μ)^4 σ²/S² **converge in probability về 1**, hay (X̄/μ)^4 σ²/S² → 1 in probability.
 >
 >
 >
@@ -2403,7 +2403,7 @@
 >
 >
 >
-> \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\] × \[(1/μ)^4 σ²\] / \[(1/X̄)^4 S^2\]
+> \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\] × \[(1/μ)^4 σ²\] / \[(1/X̄)^4 S²\]
 >
 >
 >
@@ -2419,9 +2419,9 @@
 >
 >
 >
-> **Nhờ vào tính unbiased estimator của X̄ và S^2** (mà công thức là chia cho n-1) thì cái 
+> **Nhờ vào tính unbiased estimator của X̄ và S²** (mà công thức là chia cho n-1) thì cái 
 >
-> \[√n(1/X̄ - 1/μ)\] / \[(1/X̄)^4 S^2\] vẫn → n(0,1)
+> \[√n(1/X̄ - 1/μ)\] / \[(1/X̄)^4 S²\] vẫn → n(0,1)
 >
 >
 >
