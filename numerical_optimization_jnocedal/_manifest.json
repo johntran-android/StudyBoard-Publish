@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1791149827487,
+  "publishedAt": 1791259064895,
   "sections": [
     {
       "title": "📋 Overview",
@@ -213,6 +213,12 @@
       "imageCount": 6
     },
     {
+      "title": "16.1 Equality-constrained Quadratic Programs",
+      "path": "numerical_optimization_jnocedal/161_equality_constrained_quadratic_programs.md",
+      "noteCount": 2,
+      "imageCount": 2
+    },
+    {
       "title": "Appendix A",
       "path": "numerical_optimization_jnocedal/appendix_a.md",
       "noteCount": 1,
@@ -231,6 +237,6 @@
       "imageCount": 11
     }
   ],
-  "totalNotes": 433,
-  "totalImages": 629
+  "totalNotes": 435,
+  "totalImages": 631
 }
