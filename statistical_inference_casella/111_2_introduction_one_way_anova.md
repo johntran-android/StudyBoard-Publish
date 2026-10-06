@@ -1,6 +1,6 @@
 # 11.1 & 2  introduction, One-way Anova
 
-📊 **Progress:** `17` Notes | `22` Screenshots | `14` AI Reviews
+📊 **Progress:** `18` Notes | `23` Screenshots | `15` AI Reviews
 
 ---
 <a id="node-c5qtmoe"></a>
@@ -826,4 +826,31 @@
 <br>
 
 <a id="node-680r0w1"></a>
+
+###### Pooled Estimator and Student t Distribution
+
+<p align="center"><kbd><img src="assets/rpj0ypt4yh.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> \[(Σi=1:k aiȲi) - mean\]/√variance sẽ là n(0,1)
+>
+>
+>
+> Với: mean = Σi=1:k ai θi, variance = Σi=1:k ai² σ²/ni = σ² Σi=1:k ai²/ni
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú đã hiểu đúng và tính chính xác kỳ vọng cùng phương sai của tổ hợp tuyến tính các trung bình mẫu để suy ra phân phối chuẩn tắc N(0,1).
+>
+> **✓ Strengths**
+> - Xác định chính xác kỳ vọng của tổ hợp tuyến tính là mean = Σ a_i θ_i.
+> - Tính đúng phương sai của biến ngẫu nhiên tổng là variance = σ² Σ (a_i² / n_i) dựa trên tính độc lập của các nhóm mẫu.
+>
+> **💡 Deeper notes**
+> - Ghi chú đang dừng lại ở phân phối chuẩn khi biết σ; để ra thống kê phân phối Student's t ở công thức (11.2.6), ta thay σ² bằng ước lượng gộp S_p² và chia biến chuẩn tắc Z cho căn bậc hai của [(N-k)S_p² / σ²] / (N-k).
+
+**🔗 See also:** [Tính chất Trung bình & Phương sai mẫu](./53_sampling_from_the_normal_distribution.md#node-aytwme7) · [Bổ đề Chi-square](./53_sampling_from_the_normal_distribution.md#node-udtt0nq)
+
+<br>
 
