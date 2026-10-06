@@ -1789,8 +1789,8 @@
 > Thế thì, lúc này với ràng buộc này, thì ML Estimator có còn là X̄(𝐗) nữa
 > ko (*chỗ này nếu ai khó hiểu thì nên nhớ, trong sách này, giáo sư Casella đã
 > nói, X̄ thực ra là cách viết tắt của function X̄(𝐗), vì nó là một statistic
-> có được khi apply function g(𝐗) = ΣXi / n, tương tự S^2 (sample variance)
-> đáng phải ghi ra là S^2(𝐗))
+> có được khi apply function g(𝐗) = ΣXi / n, tương tự S² (sample variance)
+> đáng phải ghi ra là S²(𝐗))
 >
 >
 >
