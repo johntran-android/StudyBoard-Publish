@@ -1,6 +1,6 @@
 # 8.3 Methods Of Evaluating Test
 
-📊 **Progress:** `53` Notes | `64` Screenshots
+📊 **Progress:** `53` Notes | `64` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-nxql2js"></a>
@@ -2318,43 +2318,31 @@
 <p align="center"><kbd><img src="assets/ronb8nvg2mh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Theorem cực quan trọng 
+> Theorem cực quan trọng
 >
 >
 >
-> Đại khái nói là xem xét test giữa hai giả thuyết H0: θ = θ0 vs  H1:
-> θ = θ1. Dùng một test có rejection region R như vầy. Hiểu đại ý cái test này sẽ
-> reject H0 nếu likelihood của θ1 lớn hơn likelihood của θ0 nhân với factor nào
-> đó.
+> Đại khái nói là xem xét test giữa hai giả thuyết H0: θ = θ0 vs H1: θ = θ1. Dùng một test có rejection region R như vầy. Hiểu đại ý cái test này sẽ reject H0 nếu likelihood của θ1 lớn hơn likelihood của θ0 nhân với factor nào đó.
 >
 >
 >
-> và cho α = P_θ0(𝐗 ∈ R). Dừng lại chỗ này tí xíu, ta còn nhớ, hàm β(θ) được
-> định nghĩa là hàm theo θ, define bởi xác suất reject H0: β(θ) = P_θ(𝐗 ∈ R)
-> Để rồi theo định nghĩa của size α test, là test mà sup_θ∈Θ0 P_θ(𝐗 ∈ R) = α
-> Vậy ở đây, với việc Θ0 chỉ có {θ0}, thì sup_θ∈Θ0 P_θ(X ∈ R) cũng chính là
-> sup_θ∈{θ0} P_θ(𝐗 ∈ R) = P_θ0(𝐗 ∈ R).
+> và cho α = P\_θ0(𝐗 ∈ R). Dừng lại chỗ này tí xíu, ta còn nhớ, hàm β(θ) được định nghĩa là hàm theo θ, define bởi xác suất reject H0: β(θ) = P\_θ(𝐗 ∈ R) Để rồi theo định nghĩa của size α test, là test mà sup\_θ∈Θ0 P\_θ(𝐗 ∈ R) = α Vậy ở đây, với việc Θ0 chỉ có {θ0}, thì sup\_θ∈Θ0 P\_θ(X ∈ R) cũng chính là sup\_θ∈{θ0} P\_θ(𝐗 ∈ R) = P\_θ0(𝐗 ∈ R).
 >
 >
 >
-> Nên cho α = P_θ0(𝐗 ∈ R), thì chính là nói test này là một size α test
+> Nên cho α = P\_θ0(𝐗 ∈ R), thì chính là nói test này là một size α test
 >
 >
 >
-> Vậy thì theorem này nói rằng: Điều kiện đủ để một test thỏa 8.3.1 và 8.3.2 sẽ
-> đều là UMP level α test.
+> Vậy thì theorem này nói rằng: Điều kiện đủ để một test thỏa 8.3.1 và 8.3.2 sẽ đều là UMP level α test.
 >
 >
 >
-> Hiểu cái này thế nào? Đầu tiên như đã hiểu ở trên, thỏa 8.3.2 thì đây đương
-> nhiên là một size α test. Thế còn thỏa 8.3.1, mình đã thấy rằng đây chính là nói
-> về test dùng likelihood để ra quyết định. Thì thực ra có thể viết lại chút xíu để
-> thấy cái test này có rule như sau:
+> Hiểu cái này thế nào? Đầu tiên như đã hiểu ở trên, thỏa 8.3.2 thì đây đương nhiên là một size α test. Thế còn thỏa 8.3.1, mình đã thấy rằng đây chính là nói về test dùng likelihood để ra quyết định. Thì thực ra có thể viết lại chút xíu để thấy cái test này có rule như sau:
 >
 >
 >
-> reject H0 nếu f(𝐱|θ1)/f(𝐱|θ0) > k, mà đây cũng chính là
-> L(θ1|𝐱)/L(θ0|𝐱) > k ⇔ L(θ0|𝐱)/L(θ1|𝐱) < 1/k
+> reject H0 nếu f(𝐱|θ1)/f(𝐱|θ0) &gt; k, mà đây cũng chính là L(θ1|𝐱)/L(θ0|𝐱) &gt; k ⇔ L(θ0|𝐱)/L(θ1|𝐱) &lt; 1/k
 >
 >
 >
@@ -2362,22 +2350,15 @@
 >
 >
 >
-> reject H0 nếu λ(𝐱) = L(θ^0|𝐱)/L(θ^|𝐱) = sup_θ∈Θ0 L(θ|𝐱) / sup_θ∈Θ1
-> L(θ|𝐱) ≤ c
+> reject H0 nếu λ(𝐱) = L(θ^0|𝐱)/L(θ^|𝐱) = sup\_θ∈Θ0 L(θ|𝐱) / sup\_θ∈Θ L(θ|𝐱) ≤ c
 >
 >
 >
-> Thế thì ở đây không hoàn toàn chính xác là likelihood ratio, nhưng rất gần
-> giống ở ý tưởng. Với LRT, việc reject H0 nếu λ(𝐱) < c có ý nghĩa là khi quan
-> sát thấy data 𝐗 = 𝐱, thì mức độ hợp lí lớn nhất có được khi tìm kiếm θ từ
-> Θ0 chỉ bằng phần nhỏ độ hợp lí lớn nhất khi tìm kiếm θ từ toàn bộ Θ, chứng tỏ
-> Θ0 không đủ tin cậy, nên ta reject H0: θ ∈ Θ0.
+> Thế thì ở đây không hoàn toàn chính xác là likelihood ratio, nhưng rất gần giống ở ý tưởng. Với LRT, việc reject H0 nếu λ(𝐱) &lt; c có ý nghĩa là khi quan sát thấy data 𝐗 = 𝐱, thì mức độ hợp lí lớn nhất có được khi tìm kiếm θ từ Θ0 chỉ bằng phần nhỏ độ hợp lí lớn nhất khi tìm kiếm θ từ toàn bộ Θ, chứng tỏ Θ0 không đủ tin cậy, nên ta reject H0: θ ∈ Θ0.
 >
 >
 >
-> Còn ở đây, ta reject H0 khi độ hợp lí của θ0 (cũng là sup_θ∈Θ0 L(θ|𝐱)) chỉ
-> bằng một phần nhỏ của độ hợp lí của θ1 (cũng là sup_θ∈Θ0c L(θ|𝐱)). Nói
-> cách khác khi độ hợp lí của θ0 nhỏ hơn độ hợp lí của θ1 thì reject H0, thế thôi.
+> Còn ở đây, ta reject H0 khi độ hợp lí của θ0 (cũng là sup\_θ∈Θ0 L(θ|𝐱)) chỉ bằng một phần nhỏ của độ hợp lí của θ1 (cũng là sup\_θ∈Θ0c L(θ|𝐱)). Nói cách khác khi độ hợp lí của θ0 nhỏ hơn độ hợp lí của θ1 thì reject H0, thế thôi.
 >
 >
 >
@@ -2385,8 +2366,7 @@
 >
 >
 >
-> Cụ thể là trong trường hợp này, Θ = {θ0, θ1}. Nên sup_θ∈Θ L(θ|𝐱) sẽ chỉ là
-> L(θ0|𝐱) hoặc L(θ1|𝐱). ⇨ nếu dùng LRT, thì cái rule sẽ là:
+> Cụ thể là trong trường hợp này, Θ = {θ0, θ1}. Nên sup\_θ∈Θ L(θ|𝐱) sẽ chỉ là L(θ0|𝐱) hoặc L(θ1|𝐱). ⇨ nếu dùng LRT, thì cái rule sẽ là:
 >
 >
 >
@@ -2394,43 +2374,31 @@
 >
 >
 >
-> Mà khi θ = θ0 thì λ(𝐱) = 1, không thể ≤ c với c < 1.
+> Mà khi L(θ|𝐱) = L(θ0|𝐱) thì λ(𝐱) = 1, không thể ≤ c với c &lt; 1.
 >
 >
 >
-> Nên điều kiện reject H0 chính là L(θ0|𝐱) / L(θ1|𝐱) ≤ c thì nếu coi c = 1/k
-> thì đây ta sẽ thấy điều kiện 8.3.1 chính là likelihood ratio thôi.
+> Nên điều kiện reject H0 chính là L(θ0|𝐱) / L(θ1|𝐱) ≤ c thì nếu coi c = 1/k thì đây ta sẽ thấy điều kiện 8.3.1 chính là likelihood ratio thôi.
 >
 >
 >
-> Còn điều kiện cần, nó nói là nếu test thỏa 8.3.1 và 8.3.2 với k > 0 thì mọi UMP
-> level α test sẽ đều là size α test.
+> Còn điều kiện cần, nó nói là nếu test thỏa 8.3.1 và 8.3.2 với k &gt; 0 thì mọi UMP level α test sẽ đều là size α test.
 >
 >
 >
-> Để hiểu cái này cần nhớ level α test là gì và size α test là gì. Nói ngắn gọn,
-> level α test là cái test mà khi sup_θ∈Θ0 β(θ) ≤ α, còn size α test là test mà
-> sup_θ∈Θ0 β(θ) = α. Và ý nghĩa của nó phản ánh trong chữ level (đẳng cấp) và
-> kích thước (size). Lấy α = 0.1 đi. Thì level 0.1 test, là test có đẳng cấp 0.1 mà
-> đẳng cấp, thì ám chỉ một tầng lớp. Tức là có nhiều, và đám test này đều có xác
-> suất Type I Error sup_θ∈Θ0c β(θ) dưới 0.1. Và nói vậy thì giá trị này của chúng
-> (sup_θ∈Θ0 β(θ)) có thể = 0.05, 0.01,...Thì nếu bằng 0.05, thì nó là một Size 0.
-> 05 test. Nếu nó bằng 0.01 thì nó là một Size 0.01 test.
+> Để hiểu cái này cần nhớ level α test là gì và size α test là gì. Nói ngắn gọn, level α test là cái test mà khi sup\_θ∈Θ0 β(θ) ≤ α, còn size α test là test mà sup\_θ∈Θ0 β(θ) = α. Và ý nghĩa của nó phản ánh trong chữ level (đẳng cấp) và kích thước (size). Lấy α = 0.1 đi. Thì level 0.1 test, là test có đẳng cấp 0.1 mà đẳng cấp, thì ám chỉ một tầng lớp. Tức là có nhiều, và đám test này đều có xác suất Type I Error sup\_θ∈Θ0 β(θ) dưới 0.1. Và nói vậy thì giá trị này của chúng (sup\_θ∈Θ0 β(θ)) có thể = 0.05, 0.01,...Thì nếu bằng 0.05, thì nó là một Size 0. 05 test. Nếu nó bằng 0.01 thì nó là một Size 0.01 test.
 >
 >
 >
-> Vậy cái thằng Size 0.1 test có thể thế thấy cũng là một Level 0.1 test, và nó là
-> thằng TỆ nhất khi xét khía cạnh xác suất mắc lỗi loại 1 (vì xác suất cao nhất)
-> ĐỂ Ý Ý NÀY TÍ NỮA QUAY LẠI.
+> Vậy cái thằng Size 0.1 test có thể thấy cũng là một Level 0.1 test, và nó là thằng TỆ nhất khi xét khía cạnh xác suất mắc lỗi loại 1 (vì xác suất cao nhất) ĐỂ Ý Ý NÀY, TÍ NỮA QUAY LẠI.
 >
 >
 >
-> Nhìn lại 8.3.1, nó là cái rule (giúp quyết định reject/accept H0), dĩ nhiên bản
-> thân một cái test cơ bản chỉ là cái rule mà thôi. Còn 8.3.2 nói về cái trần: Nếu
-> một cái test thỏa 8.3.1, có nghĩa nó là size α test, có xác suất mắc Type I Error
-> (trong trường hợp H0 cần được accept) cao nhất bằng đúng α. Và như vừa nói
-> ở trên **NÓ LÀ CÁI TỆ NHẤT TRONG ĐÁM LEVEL α TEST** nếu xét khả năng
-> mắc lỗi loại I.
+> Nhìn lại 8.3.1, nó là cái rule (giúp quyết định reject/accept H0), dĩ nhiên bản thân một cái test cơ bản chỉ là cái rule mà thôi.
+>
+>
+>
+> Còn 8.3.2 nói về cái trần: Nếu một cái test thỏa 8.3.1, có nghĩa nó là size α test, có xác suất mắc Type I Error (trong trường hợp H0 cần được accept) cao nhất bằng đúng α. Và như vừa nói ở trên **NÓ LÀ CÁI TỆ NHẤT TRONG ĐÁM LEVEL α TEST** nếu xét khả năng mắc lỗi loại I.
 >
 >
 >
@@ -2438,49 +2406,55 @@
 >
 >
 >
-> Ý thứ nhất nó nói: Nếu tồn tại một test thỏa 8.3.1, tức là có cái rule như vậy, và
-> thỏa 8.3.2 tức là là một size α test. thì khi đó MỌI UMP LEVEL α TEST ĐỀU LÀ
-> SIZE α TEST: Có nghĩa là sao?
+> Ý thứ nhất nó nói: Nếu tồn tại một test thỏa 8.3.1, tức là có cái rule như vậy, và thỏa 8.3.2 tức là là một size α test. thì khi đó MỌI UMP LEVEL α TEST ĐỀU LÀ SIZE α TEST: Có nghĩa là sao?
 >
 >
 >
-> CHÍNH LÀ NÓI RẰNG: NẾU SO SÁNH ĐÁM LEVEL α TEST THEO TIÊU
-> CHUẨN XÁC SUẤT MẮC TYPE II ERROR. THÌ **CÁI THẰNG TỐT NHẤT LẠI
-> CHÍNH LÀ CÁI THẰNG TỆ NHẤT Ở TRÊN, THẰNG SIZE α TEST**. HAY
-> CHƯA!
+> Chính là nói rằng: NẾU SO SÁNH ĐÁM LEVEL α TEST THEO TIÊU CHUẨN XÁC SUẤT MẮC TYPE II ERROR. THÌ **CÁI THẰNG TỐT NHẤT LẠI CHÍNH LÀ CÁI THẰNG TỆ NHẤT Ở TRÊN, THẰNG SIZE α TEST**. HAY CHƯA!
 >
 >
 >
-> Vì sao theorem phải nói về cái vụ existed. Là vì trong phần định nghĩa size /
-> level α test, tác giả có nói, không phải lúc nào cũng tồn tại size α test.
+> Vì sao theorem phải nói về cái vụ tồn tại (existed). Là vì trong phần định nghĩa size / level α test, tác giả có nói, không phải lúc nào cũng tồn tại size α test.
 >
 >
 >
-> Thế còn ý sau, nói là, mọi UMP level α test đều có cùng cái rule 8.3.1. THÌ
-> CHÍNH LÀ KHẲNG ĐỊNH RẰNG: **CÁI THẰNG SIZE α TEST TỆ NHẤT Ở
-> KHÍA CẠNH  TYPE 1, TỐT NHẤT Ở KHÍA CẠNH TYPE II, LÀ ĐỘC NHẤT.**
+> Thế còn ý sau, nói là, mọi UMP level α test đều có cùng cái rule 8.3.1. THÌ CHÍNH LÀ KHẲNG ĐỊNH RẰNG: **CÁI THẰNG SIZE α TEST TỆ NHẤT Ở KHÍA CẠNH TYPE 1, TỐT NHẤT Ở KHÍA CẠNH TYPE II, LÀ ĐỘC NHẤT.**
 >
 >
 >
-> Hiểu nôm na cái theorem này thế này: Ta có một biên độ mạo hiểm cho sai sót
-> loại I. Lấy ví dụ H0 vs H1 là khi người ta chào mời một đồng tiền cổ, H0: tiền
-> giả, đừng mua. H1: tiền thật nên mua, không mua. Thì mình sẽ cho một biên
-> độ rủi ro ra quyết định sai loại 1: Đồng xu là giả, đáng ra phải không mua mà lại
-> đi mua (reject H0), cao nhất là 0.3. Thì cái test (phương pháp test xu) có khả
-> năng mắc sai lầm mua nhầm cao nhất chính là cái Size 0.3 test, là cái tệ nhất
-> theo tiêu chí này trong đám level 0.3 test. Mấy cái test khác, chắc cú hơn, thận
-> trọng hơn, ví dụ như có xác suất mua đồ giả cao nhất chỉ là 0.1 chẳng hạn.
+> Hiểu nôm na cái theorem này thế này: Ta có một biên độ mạo hiểm cho sai sót loại I. Lấy ví dụ H0 vs H1 là khi người ta chào mời một đồng tiền cổ, H0: tiền giả, đừng mua. H1: tiền thật nên mua, không mua. Thì mình sẽ cho một biên độ rủi ro ra quyết định sai loại 1: Đồng xu là giả, đáng ra phải không mua mà lại đi mua (reject H0), cao nhất là 0.3. Thì cái test (phương pháp test xu) có khả năng mắc sai lầm mua nhầm cao nhất chính là cái Size 0.3 test, là cái tệ nhất theo tiêu chí này trong đám level 0.3 test. Mấy cái test khác, chắc cú hơn, thận trọng hơn, ví dụ như có xác suất mua đồ giả cao nhất chỉ là 0.1 chẳng hạn.
 >
 >
 >
-> Tuy nhiên, theorem này nói rằng, trong đám này, thì cái thằng Size 0.3 test lại
-> chính là  thằng tốt nhất khi xét cái lỗi Type II: Đồ thật mà lại bỏ qua.
+> Tuy nhiên, theorem này nói rằng, trong đám này, thì cái thằng Size 0.3 test lại chính là thằng tốt nhất khi xét cái lỗi Type II: Đồ thật mà lại bỏ qua.
 >
 >
 >
-> Do đó, để tìm thằng tốt nhất toàn cục: Thì ta phải **mạo hiểm hết mức có thể
-> trong biên độ rủi ro (loại I) cho phép**, để c**hấp nhận là thằng test dễ mua
-> phải đồ giả nhất nhưng cũng là thằng ít bị miss đồ thật nhất.**
+> Do đó, để tìm thằng tốt nhất toàn cục: Thì ta phải **mạo hiểm hết mức có thể trong biên độ rủi ro (loại I) cho phép**, để c**hấp nhận là thằng test dễ mua phải đồ giả nhất nhưng cũng là thằng ít bị miss đồ thật nhất.**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú thể hiện sự hiểu biết trực giác rất xuất sắc về Bổ đề Neyman–Pearson, đặc biệt là mối liên hệ với Likelihood Ratio Test và triết lý đánh đổi giữa sai lầm loại I và loại II.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"CÁI THẰNG SIZE α TEST TỆ NHẤT Ở KHÍA CẠNH TYPE 1, TỐT NHẤT Ở KHÍA CẠNH TYPE II, LÀ ĐỘC NHẤT."*
+>
+> Tính duy nhất ở đây chỉ mang tính 'hầu chắc chắn' (almost everywhere). Bổ đề nêu rõ: 'except perhaps on a set A satisfying P_θ0(X ∈ A) = P_θ1(X ∈ A) = 0', tức là trên tập có xác suất bằng 0 dưới cả hai giả thuyết, miền bác bỏ có thể khác nhau mà vẫn là UMP test.
+>
+> **2.** *"reject H0 nếu f(𝐱|θ1)/f(𝐱|θ0) > k, mà đây cũng chính là L(θ1|𝐱)/L(θ0|𝐱) > k"*
+>
+> Công thức gốc viết dạng nhân f(x|θ1) > k f(x|θ0) để tránh trường hợp chia cho 0 khi mẫu số bằng 0. Ngoài ra, việc bỏ qua trường hợp dấu bằng f(x|θ1) = k f(x|θ0) (điểm biên) là một lược giản; với biến ngẫu nhiên rời rạc, điểm biên này quyết định việc có tìm được size α chính xác mà không cần randomized test hay không.
+>
+>
+> **✓ Strengths**
+> - Liên hệ và chứng minh rất chuẩn xác rằng quy tắc kiểm định tỉ số likelihood trong bổ đề Neyman–Pearson tương đương với LRT khi không gian tham số chỉ gồm hai điểm {θ0, θ1}.
+> - Nắm rất vững bản chất vì sao mọi UMP level α test lại phải là size α test: sử dụng hết 'ngân sách' sai lầm loại I cho phép (đạt mức α) để tối đa hóa power (giảm thiểu sai lầm loại II).
+>
+> **💡 Deeper notes**
+> - Điều kiện k > 0 trong tính tất yếu (Necessity): Nếu k = 0, kiểm định sẽ luôn reject H0 ngoại trừ khi f(x|θ1) = 0, khi đó α có thể bằng 1 hoặc bài toán trở nên tầm thường.
+> - Đối với các phân phối rời rạc, do hàm phân phối tích lũy nhảy bậc, thường không tồn tại test phi ngẫu nhiên (non-randomized test) thỏa mãn chính xác P_θ0(X ∈ R) = α, đó là lý do định lý cần tiền đề 'If there exists a test...'.
 
 <br>
 
@@ -2495,27 +2469,15 @@
 >
 >
 >
-> Đầu tiên, gs lưu ý ta thấy rằng bất kì cái test nào thỏa 8. 3.2 thì chính là
-> **size α test**, cái này thì trong note trước mình đã tự thấy rồi, nói ngắn gọn
-> là vì trong theorem này chỉ đang nói về hypothesis H0: θ = θ0, tức Θ0 chỉ là
-> set có 1 elements: {θ0}. Mà theo định nghĩa của size α test, nó là test mà
-> sup_θ∈Θ0 β(θ) = α, thì ở đây dĩ nhiên sup_θ∈Θ0 β(θ) chính là β(θ0), hay
-> P_θ0(𝐗 ∈ R) (vì đây là định nghĩa của hàm power function β).
+> Đầu tiên, gs lưu ý ta thấy rằng bất kì cái test nào thỏa 8. 3.2 thì chính là **size α test**, cái này thì trong note trước mình đã tự thấy rồi, nói ngắn gọn là vì trong theorem này chỉ đang nói về hypothesis H0: θ = θ0, tức Θ0 chỉ là set có 1 elements: {θ0}. Mà theo định nghĩa của size α test, nó là test mà sup\_θ∈Θ0 β(θ) = α, thì ở đây dĩ nhiên sup\_θ∈Θ0 β(θ) chính là β(θ0), hay P\_θ0(𝐗 ∈ R) (vì đây là định nghĩa của hàm power function β).
 >
 >
 >
-> Tiếp theo, tác giả đề nghị ta đặt một indicator function gọi là test function:
-> mang giá trị bằng 1 khi 𝐱 ∈ R và 0 khi 𝐱 ∈ Rc. Nói nó là indicator
-> function the rejection region hoàn toàn dễ hiểu. Nhớ lại khái niệm indicator
-> function, mình đã gặp hồi học Stat110: Indicator function of even A, kí hiệu
-> I_A, thì khi A xảy ra nó bằng 1, ngược lại nó bằng 0. Thì ở đây event A có
-> thể xem như là event 𝐱 ∈ R.
+> Tiếp theo, tác giả đề nghị ta đặt một indicator function gọi là test function: mang giá trị bằng 1 khi 𝐱 ∈ R và 0 khi 𝐱 ∈ Rc. Nói nó là indicator function the rejection region hoàn toàn dễ hiểu. Nhớ lại khái niệm indicator function, mình đã gặp hồi học Stat110: Indicator function of even A, kí hiệu I_A, thì khi A xảy ra nó bằng 1, ngược lại nó bằng 0. Thì ở đây event A có thể xem như là event 𝐱 ∈ R.
 >
 >
 >
-> Tiếp, đặt Φ(𝐱) là test function của cái test thỏa 8.3.1 và 8.3.2. Và Φ'(x) là
-> test function của bất kì level α test nào. Và cho β(θ), β'(θ) là power function
-> tương ứng với test Φ và test Φ'.
+> Tiếp, đặt Φ(𝐱) là test function của cái test thỏa 8.3.1 và 8.3.2. Và Φ'(x) là test function của bất kì level α test nào. Và cho β(θ), β'(θ) là power function tương ứng với test Φ và test Φ'.
 >
 >
 >
@@ -2523,12 +2485,11 @@
 >
 >
 >
-> [Φ(𝐱) - Φ'(𝐱)][f(𝐱|θ1] - kf(𝐱|θ0)] ≥ 0 với mọi 𝐱. Vì sao nhỉ?
+> \[Φ(𝐱) - Φ'(𝐱)\]\[f(𝐱|θ1\] - kf(𝐱|θ0)\] ≥ 0 với mọi 𝐱. Vì sao nhỉ?
 >
 >
 >
-> Là vì đã nói Φ và Φ' đều là cái test thỏa 8.3.1, tức là nó đều có rule là: reject
-> H0 nếu f(𝐱|θ1) > kf(𝐱|θ0) và accept H0 nếu f(𝐱|θ1) < kf(𝐱|θ0)
+> Là vì đã nói Φ và Φ' đều là cái test thỏa 8.3.1, tức là nó đều có rule là: reject H0 nếu f(𝐱|θ1) &gt; kf(𝐱|θ0) và accept H0 nếu f(𝐱|θ1) &lt; kf(𝐱|θ0)
 >
 >
 >
@@ -2536,33 +2497,27 @@
 >
 >
 >
-> i) f(𝐱|θ1] > kf(𝐱|θ0) → test Φ sẽ reject H0, 𝐱∈R → hàm indicator
-> Φ(𝐱) = I_(𝐱∈R) = 1
+> i) f(𝐱|θ1\] &gt; kf(𝐱|θ0) → test Φ sẽ reject H0, 𝐱∈R → hàm indicator Φ(𝐱) = I\_(𝐱∈R) = 1
 >
 >
 >
-> Lúc này Φ(𝐱) - Φ'(𝐱) = 1 - Φ'(𝐱) ≥ 0 vì Φ'(𝐱) cũng chỉ bằng 1 hoặc
-> 0. Và f(𝐱|θ1] > kf(𝐱|θ0) ⇨ f(𝐱|θ1] - kf(𝐱|θ0) ≥ 0 ⇨ [Φ(𝐱) - Φ'
-> (𝐱)][f(𝐱|θ1] - kf(𝐱|θ0)] ≥ 0
+> Lúc này Φ(𝐱) - Φ'(𝐱) = 1 - Φ'(𝐱) ≥ 0 vì Φ'(𝐱) cũng chỉ bằng 1 hoặc 0. Và f(𝐱|θ1\] &gt; kf(𝐱|θ0) ⇨ f(𝐱|θ1\] - kf(𝐱|θ0) ≥ 0 ⇨ \[Φ(𝐱) - Φ' (𝐱)\]\[f(𝐱|θ1\] - kf(𝐱|θ0)\] ≥ 0
 >
 >
 >
-> ii) f(𝐱|θ1] < kf(𝐱|θ0) → test Φ sẽ accept H0, 𝐱 ∈ Rc → hàm indicator
-> Φ(𝐱) = I_(𝐱∈Rc) = 0.
+> ii) f(𝐱|θ1\] &lt; kf(𝐱|θ0) → test Φ sẽ accept H0, 𝐱 ∈ Rc → hàm indicator Φ(𝐱) = I\_(𝐱∈Rc) = 0.
 >
 >
 >
-> Lúc này Φ(𝐱) - Φ'(𝐱) = 0 - Φ'(𝐱) ≤ 0. Và f(𝐱|θ1] < kf(𝐱|θ0) →
-> f(x|θ1] - kf(x|θ0) < 0
+> Lúc này Φ(𝐱) - Φ'(𝐱) = 0 - Φ'(𝐱) ≤ 0. Và f(𝐱|θ1\] &lt; kf(𝐱|θ0) → f(x|θ1\] - kf(x|θ0) &lt; 0
 >
 >
 >
-> ⇨ [Φ(𝐱) - Φ'(𝐱)][f(𝐱|θ1] - kf(𝐱|θ0)] ≥ 0
+> ⇨ \[Φ(𝐱) - Φ'(𝐱)\]\[f(𝐱|θ1\] - kf(𝐱|θ0)\] ≥ 0
 >
 >
 >
-> Tóm lại trong cả hai trường hợp thì [Φ(𝐱) - Φ'(𝐱)][f(𝐱|θ1] -
-> kf(𝐱|θ0)] luôn ≥ 0
+> Tóm lại trong cả hai trường hợp thì \[Φ(𝐱) - Φ'(𝐱)\]\[f(𝐱|θ1\] - kf(𝐱|θ0)\] luôn ≥ 0
 >
 >
 >
@@ -2570,7 +2525,7 @@
 >
 >
 >
-> ∫ [Φ(𝐱) - Φ'(𝐱)][f(𝐱|θ1] - kf(𝐱|θ0)] d𝐱 ≥ 0
+> ∫ \[Φ(𝐱) - Φ'(𝐱)\]\[f(𝐱|θ1\] - kf(𝐱|θ0)\] d𝐱 ≥ 0
 >
 >
 >
@@ -2578,18 +2533,15 @@
 >
 >
 >
-> ⇔ ∫ [Φ(𝐱)f(𝐱|θ1] - Φ'(𝐱)f(𝐱|θ1] - Φ(𝐱)kf(𝐱|θ0) + Φ'
-> (𝐱)kf(𝐱|θ0)]dx ≥ 0
+> ⇔ ∫ \[Φ(𝐱)f(𝐱|θ1\] - Φ'(𝐱)f(𝐱|θ1\] - Φ(𝐱)kf(𝐱|θ0) + Φ' (𝐱)kf(𝐱|θ0)\]dx ≥ 0
 >
 >
 >
-> ⇔ ∫Φ(𝐱)f(𝐱|θ1d𝐱 - ∫Φ'(𝐱)f(𝐱|θ1d𝐱 - ∫Φ(𝐱)kf(𝐱|θ0)d𝐱
-> + ∫Φ' (𝐱)kf(𝐱|θ0)d𝐱 ≥ 0
+> ⇔ ∫Φ(𝐱)f(𝐱|θ1d𝐱 - ∫Φ'(𝐱)f(𝐱|θ1d𝐱 - ∫Φ(𝐱)kf(𝐱|θ0)d𝐱 - ∫Φ' (𝐱)kf(𝐱|θ0)d𝐱 ≥ 0
 >
 >
 >
-> ⇔ ∫Φ(𝐱)f(𝐱|θ1d𝐱 - ∫Φ'(𝐱)f(𝐱|θ1d𝐱 - k[ ∫Φ(𝐱)f(𝐱|θ0)d𝐱
-> \- ∫Φ' (𝐱)f(𝐱|θ0)d𝐱] ≥ 0
+> ⇔ ∫Φ(𝐱)f(𝐱|θ1d𝐱 - ∫Φ'(𝐱)f(𝐱|θ1d𝐱 - k\[ ∫Φ(𝐱)f(𝐱|θ0)d𝐱 - ∫Φ' (𝐱)f(𝐱|θ0)d𝐱\] ≥ 0
 >
 >
 >
@@ -2605,30 +2557,27 @@
 >
 >
 >
-> ∫_R Φ(𝐱)f(𝐱|θ0)**dx** + ∫_Rc Φ(𝐱)f(𝐱|θ0)**dx**
+> ∫\_R Φ(𝐱)f(𝐱|θ0)**dx** + ∫\_Rc Φ(𝐱)f(𝐱|θ0)**dx**
 >
 >
 >
-> = ∫_R 1 * f(𝐱|θ0)d𝐱 + ∫_Rc 0* f(𝐱|θ0)**dx** | khi 𝐱 ∈ R → Φ(𝐱) =
-> 1, khi 𝐱 ∈ Rc → Φ(𝐱) = 0
+> = ∫\_R 1 \* f(𝐱|θ0)d𝐱 + ∫\_Rc 0\* f(𝐱|θ0)**dx** | khi 𝐱 ∈ R → Φ(𝐱) = 1, khi 𝐱 ∈ Rc → Φ(𝐱) = 0
 >
 >
 >
-> = ∫_R f(𝐱|θ0)d𝐱
+> = ∫\_R f(𝐱|θ0)d𝐱
 >
 >
 >
-> Và đây dĩ nhiên chính là P_θ0(𝐗 ∈ R), hay β(θ0)
+> Và đây dĩ nhiên chính là P\_θ0(𝐗 ∈ R), hay β(θ0)
 >
 >
 >
-> Mà β(θ) được định nghĩa là P_θ(𝐗 ∈ R), để ý nghĩa là θ ∈ Θ0 thì đây
-> chính là xác suất mắc Type I error.
+> Mà β(θ) được định nghĩa là P\_θ(𝐗 ∈ R), để ý nghĩa là θ ∈ Θ0 thì đây chính là xác suất mắc Type I error.
 >
 >
 >
-> Và ở đây, Θ0 = {θ0} ⇨ P_θ0(𝐗 ∈ R), = β(θ0) CHÍNH LÀ **XÁC SUẤT
-> MẮC LỖI LOẠI I.** 
+> Và ở đây, Θ0 = {θ0} ⇨ P\_θ0(𝐗 ∈ R), = β(θ0) CHÍNH LÀ **XÁC SUẤT MẮC LỖI LOẠI I.**
 >
 >
 >
@@ -2640,28 +2589,23 @@
 >
 >
 >
-> = ∫_R 1 * f(𝐱|θ1)**dx** + ∫_Rc 0 * f(𝐱|θ1)**dx**
+> = ∫\_R 1 \* f(𝐱|θ1)**dx** + ∫\_Rc 0 \* f(𝐱|θ1)**dx**
 >
 >
 >
-> = ∫_R f(𝐱|θ1)**dx**
+> = ∫\_R f(𝐱|θ1)**dx**
 >
 >
 >
-> = P_θ1(𝐗 ∈ R) = β(θ1)
+> = P\_θ1(𝐗 ∈ R) = β(θ1)
 >
 >
 >
-> Thế thì lại nó lại ý nghĩa của P_θ(𝐗 ∈ R), hay β(θ) chính là 1 - Xác suất
-> mắc type II error khi θ ∈ Θ0c. Hay nói cách khác, nó chính là **xác suất đưa
-> ra quyết định đúng: chọn H1 khi thật sự nên chọn H1**. Và trong bối cảnh
-> này được gọi là power, mà ta gọi nó là năng lực bắt đúng bệnh.
+> Thế thì lại nó lại ý nghĩa của P\_θ(𝐗 ∈ R), hay β(θ) chính là 1 - Xác suất mắc type II error khi θ ∈ Θ0c. Hay nói cách khác, nó chính là **xác suất đưa ra quyết định đúng: chọn H1 khi thật sự nên chọn H1**. Và trong bối cảnh này được gọi là power, mà ta gọi nó là năng lực bắt đúng bệnh.
 >
 >
 >
-> Vậy thì vì Θ0c trong trường hợp này là {θ1}, nên khi θ = θ1, thì chính là θ ∈
-> Θ0c đã xảy ra, nên như trên vừa nói, P_θ1(X ∈ R), hay β(θ1) chính là
-> power.
+> Vậy thì vì Θ0c trong trường hợp này là {θ1}, nên khi θ = θ1, thì chính là θ ∈ Θ0c đã xảy ra, nên như trên vừa nói, P\_θ1(X ∈ R), hay β(θ1) chính là power.
 >
 >
 >
@@ -2673,16 +2617,15 @@
 >
 >
 >
-> ∫Φ(𝐱)f(𝐱|θ1d𝐱 - ∫Φ'(𝐱)f(𝐱|θ1d𝐱 - k[ ∫Φ(𝐱)f(𝐱|θ0)d𝐱 -
-> ∫Φ' (𝐱)f(𝐱|θ0)d𝐱] ≥ 0
+> ∫Φ(𝐱)f(𝐱|θ1d𝐱 - ∫Φ'(𝐱)f(𝐱|θ1d𝐱 - k\[ ∫Φ(𝐱)f(𝐱|θ0)d𝐱 - ∫Φ' (𝐱)f(𝐱|θ0)d𝐱\] ≥ 0
 >
 >
 >
-> ⇔ β(θ1) - β'(θ1) - k[β(θ0) - β'(θ0)] ≥ 0
+> ⇔ β(θ1) - β'(θ1) - k\[β(θ0) - β'(θ0)\] ≥ 0
 >
 >
 >
-> ⇔ β(θ1) - β'(θ1) ≥ k[β(θ0) - β'(θ0)]
+> ⇔ β(θ1) - β'(θ1) ≥ k\[β(θ0) - β'(θ0)\]
 >
 >
 >
@@ -2690,22 +2633,19 @@
 >
 >
 >
-> Vì đã nói ở trên, ta đang xét test Φ là một size α test, nên β(θ0), như đã nói,
-> chính là sup_θ∈Θ0 β(θ), và theo định nghĩa của size α test, cái này bằng α.
+> Vì đã nói ở trên, ta đang xét test Φ là một size α test, nên β(θ0), như đã nói, chính là sup\_θ∈Θ0 β(θ), và theo định nghĩa của size α test, cái này bằng α.
 >
 >
 >
-> Còn Φ' là một test bất kì thuộc loại level α test, mà theo định nghĩa,
-> sup_θ∈Θ0 β'(θ) ≤ α. Nên ở đây sup_θ∈Θ0 β'(θ) = β'(θ0) ≤ α.
+> Còn Φ' là một test bất kì thuộc loại level α test, mà theo định nghĩa, sup\_θ∈Θ0 β'(θ) ≤ α. Nên ở đây sup\_θ∈Θ0 β'(θ) = β'(θ0) ≤ α.
 >
 >
 >
-> Như vậy [β(θ0) - β'(θ0)] ≥ 0, cộng với k dương, ta có hạng tử k[β(θ0) - β'
-> (θ0)] là một số không âm.
+> Như vậy \[β(θ0) - β'(θ0)\] ≥ 0, cộng với k dương, ta có hạng tử k\[β(θ0) - β' (θ0)\] là một số không âm.
 >
 >
 >
-> Như vậy ta có β(θ1) - β'(θ1) ≥ k[β(θ0) - β'(θ0)] ≥ 0
+> Như vậy ta có β(θ1) - β'(θ1) ≥ k\[β(θ0) - β'(θ0)\] ≥ 0
 >
 >
 >
@@ -2717,19 +2657,15 @@
 >
 >
 >
-> Kết luận này cho thấy test Φ, một size α test, mà lại thỏa β(θ1) ≥ β'(θ1) với
-> mọi β' là power của level α test bất kì.
+> Kết luận này cho thấy test Φ, một size α test, mà lại thỏa β(θ1) ≥ β'(θ1) với mọi β' là power của level α test bất kì.
 >
 >
 >
-> mà β(θ1) ≥ β'(θ1) thì cũng chính là β(θ) ≥ β'(θ) ∀ θ ∈ Θ0c (trong trường hợp
-> này = {θ1})
+> mà β(θ1) ≥ β'(θ1) thì cũng chính là β(θ) ≥ β'(θ) ∀ θ ∈ Θ0c (trong trường hợp này = {θ1})
 >
 >
 >
-> Vậy chiếu theo định nghĩa 8.3.11 về uniform most powerful UMP class C
-> test, thì cho  ta kết luận: Φ chính là UMP level α test (vì class C ở đây là mọi
-> level α test).
+> Vậy chiếu theo định nghĩa 8.3.11 về uniform most powerful UMP class C test, thì cho ta kết luận: Φ chính là UMP level α test (vì class C ở đây là mọi level α test).
 >
 >
 >
@@ -2737,10 +2673,27 @@
 >
 >
 >
-> Nói nôm na dân dã: Trong đám level α test, xét theo xác suất mắc lỗi loại 1,
-> thì thằng Φ, một size α test, là thằng tệ nhất. Nhưng xét theo xác suất mắc
-> lỗi loại 2, thì nó lại là thằng ít tệ nhất, nói cách khác, nó là thằng có năng lực
-> cao nhất trong việc chọn đúng H1 khi θ ∈ Θ0c.
+> Nói nôm na dân dã: Trong đám level α test, xét theo xác suất mắc lỗi loại 1, thì thằng Φ, một size α test, là thằng tệ nhất. Nhưng xét theo xác suất mắc lỗi loại 2, thì nó lại là thằng ít tệ nhất, nói cách khác, nó là thằng có năng lực cao nhất trong việc chọn đúng H1 khi θ ∈ Θ0c.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú rất tốt, thể hiện sự hiểu sâu sắc về bản chất của chứng minh bổ đề Neyman-Pearson và trực giác toán thống kê phía sau. Có một hạt sạn nhỏ do viết nhầm rằng cả Φ và Φ' đều thỏa (8.3.1), dù ngay sau đó bạn đã lập luận trường hợp hoàn toàn chính xác.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Là vì đã nói Φ và Φ' đều là cái test thỏa 8.3.1, tức là nó đều có rule là: reject H0 nếu f(𝐱|θ1) > kf(𝐱|θ0)..."*
+>
+> Đây là một lỗi diễn đạt/nhầm lẫn nhỏ: chỉ có test Φ là thỏa điều kiện (8.3.1) của Neyman-Pearson, còn Φ' là một test level α bất kỳ (chứ Φ' không nhất thiết tuân theo quy tắc tỷ số likelihood ratio này). Dù vậy, ngay ở các dòng phân tích trường hợp i) và ii) bên dưới, bạn đã lập luận đúng (chỉ dùng tính chất 0 ≤ Φ' ≤ 1).
+>
+>
+> **✓ Strengths**
+> - Khai triển tích phân và giải thích cặn kẽ mối liên hệ giữa tích phân test function với xác suất lỗi loại I và Power rất mạch lạc, chuẩn xác.
+> - Trực giác ở đoạn kết bài ('tệ nhất về lỗi loại 1 vì chạm trần α, nhưng ít tệ nhất về lỗi loại 2 / power cao nhất') thể hiện tư duy bản chất rất sắc bén.
+>
+> **💡 Deeper notes**
+> - Trường hợp biên f(𝐱|θ1) = k f(𝐱|θ0): khi dấu bằng xảy ra, hiệu f(𝐱|θ1) - k f(𝐱|θ0) = 0 nên tích [Φ(𝐱) - Φ'(𝐱)][...] hiển nhiên bằng 0, do đó bất đẳng thức luôn đúng trên toàn bộ không gian mẫu.
+> - Trong bối cảnh tổng quát của kiểm định ngẫu nhiên hóa (randomized test), test function Φ'(𝐱) có thể nhận giá trị thực bất kỳ trong đoạn [0, 1] thay vì chỉ {0, 1}; khi đó 1 - Φ'(𝐱) ≥ 0 và 0 - Φ'(𝐱) ≤ 0 vẫn hoàn toàn giữ nguyên.
 
 <br>
 
@@ -2751,20 +2704,11 @@
 <p align="center"><kbd><img src="assets/wo2c3o10xf.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Chứng minh ý b) điều kiện cần: Đại ý của ý này là, thằng UMP level α test
-> phải là độc nhất. Có nghĩa nếu có cái test nào khác cũng tự xưng là UMP
-> level test, thì nó cũng phải y chang cái Φ. Ví dụ giả sử ta gọi Φ' là cái test
-> cũng là một UMP level test. Thì ta sẽ chứng minh rejection region của nó
-> cũng y hệt của Φ, điều này đồng nghĩa indicator function Φ(𝐱) = Φ'(𝐱)
-> với mọi 𝐱, có thể cho phép chúng khác nhau trên những giá trị x không
-> thuộc support 𝐗, tức là những giá trị không thể xảy ra của random sample
-> 𝐗
+> Chứng minh ý b) điều kiện cần: Đại ý của ý này là, thằng UMP level α test phải là độc nhất. Có nghĩa nếu có cái test nào khác cũng tự xưng là UMP level test, thì nó cũng phải y chang cái Φ. Ví dụ giả sử ta gọi Φ' là cái test cũng là một UMP level test. Thì ta sẽ chứng minh rejection region của nó cũng y hệt của Φ, điều này đồng nghĩa indicator function Φ(𝐱) = Φ'(𝐱) với mọi 𝐱, có thể cho phép chúng khác nhau trên những giá trị x không thuộc support 𝐗, tức là những giá trị không thể xảy ra của random sample 𝐗
 >
 >
 >
-> Thế thì chứng minh như sau: Vì ta đang giả sử Φ' cũng là một UMP level α
-> test, nên theo định nghĩa của UMP level α test, β'(θ) ≥ β''(θ) ∀ θ ∈ Θ0c với β''
-> là β function của một test bất kì trong level α test class.
+> Thế thì chứng minh như sau: Vì ta đang giả sử Φ' cũng là một UMP level α test, nên theo định nghĩa của UMP level α test, β'(θ) ≥ β''(θ) ∀ θ ∈ Θ0c với β'' là β function của một test bất kì trong level α test class.
 >
 >
 >
@@ -2776,8 +2720,7 @@
 >
 >
 >
-> Mà ta cũng có Φ đang là UMP level α test, nên β(θ1) ≥ β''(θ1) bao gồm cả β'
-> (θ1): β(θ1) ≥ β'(θ1)
+> Mà ta cũng có Φ đang là UMP level α test, nên β(θ1) ≥ β''(θ1) bao gồm cả β' (θ1): β(θ1) ≥ β'(θ1)
 >
 >
 >
@@ -2789,20 +2732,19 @@
 >
 >
 >
-> β(θ1) - β'(θ1) - k[β(θ0) - β'(θ0)] ≥ 0 với β' là power của level α test bất kì thì ở
-> đây khi β' đặt cho UMP level α test Φ' thì bất đẳng thức này vẫn đúng.
+> β(θ1) - β'(θ1) - k\[β(θ0) - β'(θ0)\] ≥ 0 với β' là power của level α test bất kì thì ở đây khi β' đặt cho UMP level α test Φ' thì bất đẳng thức này vẫn đúng.
 >
 >
 >
-> Với việc  β(θ1) = β'(θ1) bất đẳng thức này trở thành:
+> Với việc β(θ1) = β'(θ1) bất đẳng thức này trở thành:
 >
 >
 >
-> \- k[β(θ0) - β'(θ0)] ≥ 0
+> k\[β(θ0) - β'(θ0)\] ≥ 0
 >
 >
 >
-> ⇔ [β(θ0) - β'(θ0)] ≤ 0
+> ⇔ \[β(θ0) - β'(θ0)\] ≤ 0
 >
 >
 >
@@ -2810,7 +2752,7 @@
 >
 >
 >
-> Và β(θ0) như đã nói nãy giờ, nó là sup_θ∈Θ0={θ0} β(θ) = α, nên ta có:
+> Và β(θ0) như đã nói nãy giờ, nó là sup\_θ∈Θ0={θ0} β(θ) = α, nên ta có:
 >
 >
 >
@@ -2826,7 +2768,7 @@
 >
 >
 >
-> ⇨ sup_θ∈Θ0 β'(θ) (= sup_θ∈{θ0} β'(θ) = β'(θ0)) ≤ α
+> ⇨ sup\_θ∈Θ0 β'(θ) (= sup\_θ∈{θ0} β'(θ) = β'(θ0)) ≤ α
 >
 >
 >
@@ -2846,31 +2788,31 @@
 >
 >
 >
-> cũng như là cái inequality β(θ1) - β'(θ1) - k[β(θ0) - β'(θ0)] ≥ 0
+> cũng như là cái inequality β(θ1) - β'(θ1) - k\[β(θ0) - β'(θ0)\] ≥ 0
 >
 >
 >
-> trở thành 0 = 0 tức là vế trái, β(θ1) - β'(θ1) - k[β(θ0) - β'(θ0)], = 0
+> trở thành 0 = 0 tức là vế trái, β(θ1) - β'(θ1) - k\[β(θ0) - β'(θ0)\], = 0
 >
 >
 >
-> mà vế trái ta nhớ có xuất thân là ∫ [Φ(x) - Φ'(x)][f(x|θ1] - kf(x|θ0)] dx
+> mà vế trái ta nhớ có xuất thân là ∫ \[Φ(x) - Φ'(x)\]\[f(x|θ1\] - kf(x|θ0)\] dx
 >
 >
 >
-> Nên ∫ [Φ(𝐱) - Φ'(𝐱)][f(𝐱|θ1] - kf(𝐱|θ0)] dx = 0
+> Nên ∫ \[Φ(𝐱) - Φ'(𝐱)\]\[f(𝐱|θ1\] - kf(𝐱|θ0)\] dx = 0
 >
 >
 >
-> Mà [Φ(𝐱) - Φ'(𝐱)][f(𝐱|θ1] - kf(𝐱|θ0)]  ≥ 0
+> Mà \[Φ(𝐱) - Φ'(𝐱)\]\[f(𝐱|θ1\] - kf(𝐱|θ0)\] ≥ 0
 >
 >
 >
-> nên cái tích phân bằng 0 suy ra [Φ(𝐱) - Φ'(𝐱)][f(𝐱|θ1] - kf(𝐱|θ0)] = 0
+> nên cái tích phân bằng 0 suy ra \[Φ(𝐱) - Φ'(𝐱)\]\[f(𝐱|θ1\] - kf(𝐱|θ0)\] = 0
 >
 >
 >
-> ⇔ Φ(𝐱) = Φ'(𝐱) hoặc f(𝐱|θ1] = kf(𝐱|θ0)
+> ⇔ Φ(𝐱) = Φ'(𝐱) hoặc f(𝐱|θ1\] = kf(𝐱|θ0)
 >
 >
 >
@@ -2878,16 +2820,31 @@
 >
 >
 >
-> hoặc có thể khác nhau tại những 𝐱 thỏa 𝐱 ∈ {𝐱: f(𝐱|θ1) =
-> kf(𝐱|θ0)}
+> hoặc có thể khác nhau tại những 𝐱 thỏa 𝐱 ∈ {𝐱: f(𝐱|θ1) = kf(𝐱|θ0)}
 >
 >
 >
-> Mà cái tập này thực chất là gì: nó là tập các điểm 𝐱 mà tại đó pdf f(𝐱|θ1)
-> = kf(𝐱|θ0), và trong trường hợp đang chứng minh với hàm liên tục thì tập
-> này có xác suất = 0 (là tập A nói đến trong sách). Do đó, kết luận là Φ(x) = Φ'
-> (x) tại mọi x trừ x thuộc tập A là tập có xác suất bằng 0. Thì theo lí thuyết toán
-> học, điều này coi như hai hàm Φ và Φ' là một
+> Mà cái tập này thực chất là gì: nó là tập các điểm 𝐱 mà tại đó pdf f(𝐱|θ1) = kf(𝐱|θ0), và trong trường hợp đang chứng minh với hàm liên tục thì tập này có xác suất = 0 (là tập A nói đến trong sách). Do đó, kết luận là Φ(x) = Φ' (x) tại mọi x trừ x thuộc tập A là tập có xác suất bằng 0. Thì theo lí thuyết toán học, điều này coi như hai hàm Φ và Φ' là một
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú thể hiện sự hiểu biết rất sâu sắc và mạch lạc về bước chứng minh tính duy nhất (uniqueness) của kiểm định UMP trong Bổ đề Neyman-Pearson. Lập luận từ bất đẳng thức đến tích phân bằng 0 được diễn giải trực quan và chính xác.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"hoặc có thể khác nhau tại những 𝐱 thỏa 𝐱 ∈ {𝐱: f(𝐱|θ1) = kf(𝐱|θ0)} Mà cái tập này thực chất là gì: nó là tập các điểm 𝐱 mà tại đó pdf f(𝐱|θ1) = kf(𝐱|θ0), và trong trường hợp đang chứng minh với hàm liên tục thì tập này có xác suất = 0 (là tập A nói đến trong sách)."*
+>
+> Đồng nhất tập A với tập biên {x: f(x|θ1) = k f(x|θ0)} là chưa hoàn toàn chính xác về mặt định nghĩa. Trong bổ đề Neyman-Pearson, điều kiện (8.3.1) vốn dĩ cho phép kiểm định nhận giá trị tùy ý trên biên {f(x|θ1) = k f(x|θ0)}. Tập A ở đây là tập độ đo 0 (xác suất bằng 0) mà tại đó Φ'(x) có thể vi phạm hẳn quy tắc phân định bên ngoài biên (tức là tính chất 'hầu chắc chắn' trong giải tích thực).
+>
+>
+> **✓ Strengths**
+> - Giải thích rất rõ ràng lý do β(θ1) = β'(θ1) xuất phát từ định nghĩa UMP của cả hai kiểm định.
+> - Biến đổi và kẹp giá trị để suy ra β'(θ0) = α (kiểm định kích thước size α) rất chính xác và logic.
+> - Hiểu đúng bản chất tích phân của một hàm không âm bằng 0 thì hàm dưới dấu tích phân phải triệt tiêu hầu khắp nơi.
+>
+> **💡 Deeper notes**
+> - Trong lý thuyết độ đo, việc tích phân ∫ g(x) dx = 0 với g(x) ≥ 0 chỉ suy ra g(x) = 0 hầu khắp nơi (almost everywhere) đối với độ đo Lebesgue/xác suất, do đó sách đưa thêm tập A thỏa ∫_A f(x|θi) dx = 0 để bảo toàn tính chặt chẽ.
 
 <br>
 
@@ -6068,7 +6025,7 @@
 >
 >
 >
-> Dùng S^2 = (1/n-1) Σi(Xi-X̄)^2 ⇨ (n-1)S^2 = Σi(Xi-X̄)^2
+> Dùng S² = (1/n-1) Σi(Xi-X̄)^2 ⇨ (n-1)S² = Σi(Xi-X̄)^2
 >
 >
 >
@@ -6520,7 +6477,7 @@
 >
 >
 >
-> ⇔ (1/c)^(2/n) ≤ [Σi(xi-μ0)^2 / [(n-1)S^2/n]]
+> ⇔ (1/c)^(2/n) ≤ [Σi(xi-μ0)^2 / [(n-1)S²/n]]
 >
 >
 >
