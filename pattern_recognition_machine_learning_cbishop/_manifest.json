@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1791236534619,
+  "publishedAt": 1791325097217,
   "sections": [
     {
       "title": "📋 Overview",
@@ -437,8 +437,8 @@
     {
       "title": "4.4.1 Model comparison and BIC",
       "path": "pattern_recognition_machine_learning_cbishop/441_model_comparison_and_bic.md",
-      "noteCount": 1,
-      "imageCount": 1
+      "noteCount": 2,
+      "imageCount": 3
     },
     {
       "title": "Appendix C. Matrices",
@@ -453,6 +453,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 457,
-  "totalImages": 692
+  "totalNotes": 458,
+  "totalImages": 694
 }
