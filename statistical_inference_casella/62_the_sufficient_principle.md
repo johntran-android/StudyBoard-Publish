@@ -1737,14 +1737,14 @@
 >
 >
 >
-> với T(𝐱) = (T1(𝐱), T2(𝐱)) = (X̄(𝐱)**,** S^2(𝐱))
+> với T(𝐱) = (T1(𝐱), T2(𝐱)) = (X̄(𝐱)**,** S²(𝐱))
 >
 >
 >
 > Nhớ lại, giáo sư Casella đã từng nói, bản chất X̄, ta phải hiểu nó là **function**
 > (apply lên các random variable X1,..Xn để ta có một statistic) nên **hoàn toàn
 > có thể ghi** là X̄(𝐱) để chỉ cái function này sẽ tính trung bình cộng
-> của các phần tử xi của 𝐱. tương tự như vậy với sample variance S^2
+> của các phần tử xi của 𝐱. tương tự như vậy với sample variance S²
 >
 >
 >
@@ -1754,7 +1754,7 @@
 >
 > Thì ta đã show ra rằng f(𝐱|Θ) = g(T(𝐱)|Θ)h(𝐱)
 >
-> **TỪ ĐÓ** Factorization theorem cho phép **KẾT LUẬN** (X̄(𝐱), S^2(𝐱)) **CHÍNH LÀ
+> **TỪ ĐÓ** Factorization theorem cho phép **KẾT LUẬN** (X̄(𝐱), S²(𝐱)) **CHÍNH LÀ
 > SUFFICIENT STATISTIC CỦA** sample 𝐗 ~ normal(μ, σ²)
 
 <br>
@@ -2017,7 +2017,7 @@
 >
 >
 >
-> Tuy nhiên ta còn nhớ, trong biến đổi đó, nếu mình lôi thêm S^2 vào, tức là thể
+> Tuy nhiên ta còn nhớ, trong biến đổi đó, nếu mình lôi thêm S² vào, tức là thể
 > hiện cái joint pdf theo dạng g(T(𝐱) | μ)
 >
 >
@@ -2026,14 +2026,14 @@
 >
 >
 >
-> = g(X̄(𝐱),S^2(𝐱) | μ) thì ta cũng có thể kết luận random variable
-> VECTOR T(𝐗) = (X̄, S^2) cũng là sufficient statistic.
+> = g(X̄(𝐱),S²(𝐱) | μ) thì ta cũng có thể kết luận random variable
+> VECTOR T(𝐗) = (X̄, S²) cũng là sufficient statistic.
 >
 >
 >
 > Thế thì qua đây, đối chiếu với cái định nghĩa của minimal sufficient statistic ta
 > thấy quả thật T(𝐗) = X̄(𝐗) (mà ta viết tắt là X̄) chính là một function
-> / kết quả của một function app lên T'(𝐗) = (X̄, S^2). Và đó là function:
+> / kết quả của một function app lên T'(𝐗) = (X̄, S²). Và đó là function:
 > r((a,b)) = a.
 >
 >
@@ -2333,7 +2333,7 @@
 > Và lập luận sẽ là. Để mà cái này không phụ thuộc σ và μ (tức là constant
 > as a function of μ và σ ) thì chỉ xảy ra khi x̄ = ybar, và sx^2 = sy^2
 > (vì khi đó kết quả trở thành 1 là constant). Như vậy theo theorem này, thì
-> T(𝐗)= (X̄, S^2) chính là minimal sufficient statistic
+> T(𝐗)= (X̄, S²) chính là minimal sufficient statistic
 
 <br>
 
@@ -4266,8 +4266,8 @@
 >
 >
 >
-> Rồi, cuối cùng, là dùng ví dụ 6.2.18 đã cho thấy S^2 sample variance là ancillary
-> statistic. Nên theo Basu Theorem, X̄ (complete statistic) và S^2 (ancillary)
+> Rồi, cuối cùng, là dùng ví dụ 6.2.18 đã cho thấy S² sample variance là ancillary
+> statistic. Nên theo Basu Theorem, X̄ (complete statistic) và S² (ancillary)
 > độc lập
 
 **🔗 See also:** [Trung bình mẫu thống kê đủ cho μ](#node-nqvdq30)
