@@ -199,12 +199,12 @@
 
 <a id="node-dgdrvpi"></a>
 
-###### Tính không chệch X̄ S^2
+###### Tính không chệch X̄ S²
 
 <p align="center"><kbd><img src="assets/yhaa1q92nw.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua ví dụ này, X1,...Xn là iid n(μ, σ²). Ở đây nói statistic X̄ và S^2 
+> Qua ví dụ này, X1,...Xn là iid n(μ, σ²). Ở đây nói statistic X̄ và S² 
 > tức sample mean và sample variance đều là unbiased estimators vì sao?
 >
 >
@@ -253,7 +253,7 @@
 >
 >
 > Quay lại đây, mình đã biết về statistic (again, mọi statistic đều là estimator)
-> X̄ và S^2. Thì vì trong theorem 5.2.6 ta đã biết EX̄ = μ, và ES^2 = σ²
+> X̄ và S². Thì vì trong theorem 5.2.6 ta đã biết EX̄ = μ, và ES² = σ²
 > nên có nghĩa như vừa nói ở trên thì chúng là các unbiased estimator của
 > population mean μ và population variance σ².
 >
@@ -261,11 +261,11 @@
 >
 > Một điểm cần nhấn mạnh ở đây là theorem 5.2.6 áp dụng không chỉ cho 
 > normal distribution mà cho tất cả. Nên dù là normal hay không thì X̄
-> và S^2 vẫn là unbiased estimator.
+> và S² vẫn là unbiased estimator.
 >
 >
 >
-> Do đó MSE_μ(X̄) = Var(X̄), và MSE_σ² (S^2) = Var(S^2)
+> Do đó MSE_μ(X̄) = Var(X̄), và MSE_σ² (S²) = Var(S²)
 >
 >
 >
@@ -277,7 +277,7 @@
 >
 >
 >
-> VarS^2 = 2σ^4/(n-1) chỉ với normal, với distribution khác thì sẽ khác.
+> VarS² = 2σ^4/(n-1) chỉ với normal, với distribution khác thì sẽ khác.
 
 **🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg) · [Example 10.1.22 Parametric Bootstrap](./101_point_estimation.md#node-s9n2ly7) · [Bayesian and Maximum Likelihood Variance *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/353_effective_number_of_parameters.md#node-tdezntx)
 
@@ -297,24 +297,24 @@
 >
 >
 >
-> Cũng lấy ví dụ trên, đại ý là tuy ta vừa thấy S^2, tức sample variance là
+> Cũng lấy ví dụ trên, đại ý là tuy ta vừa thấy S², tức sample variance là
 > unbiased estimator, nhưng so với một estimator khác của variance:
 >
 >
 >
 > (σ²)^_mle (mà công thức mình đã hiểu, link tím), thì ở đây ý chính là người
 > ta thấy rằng cái này là biased  estimator, vì kì vọng của nó không bằng σ²,
-> nên cái phần đóng góp  vào MSE từ bias sẽ cao hơn so với S^2. Nhưng, tính
+> nên cái phần đóng góp  vào MSE từ bias sẽ cao hơn so với S². Nhưng, tính
 > variance của nó tức Var[(σ²)^_mle] thì lại nhỏ hơn, và tổng hợp lại, thì MSE
 > của nó nhỏ hơn MSE của unbiased estimator.
 >
 >
 >
-> E[(σ²)^_mle] = E[(n-1)S^2/n] = [(n-1)/n]E[S^2]. ((n-1)/n là constant)
+> E[(σ²)^_mle] = E[(n-1)S²/n] = [(n-1)/n]E[S²]. ((n-1)/n là constant)
 >
 >
 >
-> = (n-1)/n σ² (vì đã biết mean của S^2 là σ²)
+> = (n-1)/n σ² (vì đã biết mean của S² là σ²)
 >
 >
 >
@@ -322,15 +322,15 @@
 >
 >
 >
-> Var((σ²)^_mle) = Var[S^2(n-1)/n] = [(n-1)/n]^2Var(S^2)
+> Var((σ²)^_mle) = Var[S²(n-1)/n] = [(n-1)/n]^2Var(S²)
 >
 >
 >
-> = [(n-1)/n]^2 Var(S^2)
+> = [(n-1)/n]^2 Var(S²)
 >
 >
 >
-> *Var(S^2) = 2σ4/(n-1) Cái này thuộc bài tập trong chương 5
+> *Var(S²) = 2σ4/(n-1) Cái này thuộc bài tập trong chương 5
 >
 >
 >
@@ -342,7 +342,7 @@
 >
 >
 >
-> MSE_σ²((σ²)^_mse) = Var(S^2) + [Bias(S^2)]^2
+> MSE_σ²((σ²)^_mse) = Var(S²) + [Bias(S²)]^2
 >
 >
 >
@@ -374,15 +374,15 @@
 >
 >
 >
-> MSE của S^2: Tính theo định nghĩa: E[S^2 - σ²]^2
+> MSE của S²: Tính theo định nghĩa: E[S² - σ²]^2
 >
 >
 >
-> = Var(S^2) + Bias(S^2)
+> = Var(S²) + Bias(S²)
 >
 >
 >
-> = Var(S^2)
+> = Var(S²)
 >
 >
 >
@@ -419,7 +419,7 @@
 >
 >
 > Vậy ta thấy MSE của BIAS ESTIMATOR (mle [σ²]^_mle) lại NHỎ HƠN MSE
-> CỦA UNBISED ESTIMATOR S^2
+> CỦA UNBISED ESTIMATOR S²
 >
 > Thử làm lại cái [σ²]^_mse (tức MSE của normal variance σ²) 
 > của normal xem được không:
@@ -602,31 +602,31 @@
 >
 >
 >
-> Xét vế phải: Nhớ rằng đây không phải S^2.
+> Xét vế phải: Nhớ rằng đây không phải S².
 >
 >
 >
-> Vì S^2 có công thức là: S^2 = Σi=1:n [(xi-X̄)^2 / (n-1)
+> Vì S² có công thức là: S² = Σi=1:n [(xi-X̄)^2 / (n-1)
 >
 >
 >
-> ⇔ S^2/n = Σi=1:n [(xi-X̄)^2 / n(n-1)
+> ⇔ S²/n = Σi=1:n [(xi-X̄)^2 / n(n-1)
 >
 >
 >
-> ⇔ S^2(n-1)/n = Σi=1:n [(xi-X̄)^2 / n
+> ⇔ S²(n-1)/n = Σi=1:n [(xi-X̄)^2 / n
 >
 >
 >
-> Tức là vế phải chính là [(n-1)/n] S^2
+> Tức là vế phải chính là [(n-1)/n] S²
 >
 >
 >
-> Vậy σ² = [(n-1)/n] S^2
+> Vậy σ² = [(n-1)/n] S²
 >
 >
 >
-> Kết luận MLE của σ² là  [(n-1)/n] S^2
+> Kết luận MLE của σ² là  [(n-1)/n] S²
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
@@ -672,7 +672,7 @@
 
 > [!NOTE]
 > đại ý là dù ở trên ta vừa nói rằng mle estimator của σ² có MSE nhỏ hơn
-> nhưng không có nghĩa là ta sẽ vội vàng bỏ cái unbiased estimator - S^2 đi
+> nhưng không có nghĩa là ta sẽ vội vàng bỏ cái unbiased estimator - S² đi
 > vì dù nó có MSE lớn hơn, nhưng nó unbiased
 >
 >
@@ -1799,19 +1799,19 @@
 >
 >
 >
-> Đầu tiên, X1,...Xn là iid Pois(λ) và X̄ và S^2 là sample mean và sample variance.
+> Đầu tiên, X1,...Xn là iid Pois(λ) và X̄ và S² là sample mean và sample variance.
 >
 >
 >
-> Thì ta biết với X \~ Pois(λ) thì EX = λ và Var(X) = λ. Nên theo theorem 5.2.6 thì E\_λ(X̄) = λ, và E\_λ(S^2) = λ. Chỗ này là sao nhỉ:
+> Thì ta biết với X \~ Pois(λ) thì EX = λ và Var(X) = λ. Nên theo theorem 5.2.6 thì E\_λ(X̄) = λ, và E\_λ(S²) = λ. Chỗ này là sao nhỉ:
 >
 >
 >
-> Dễ hiểu thôi, theo theorem 5.2.6 (xem link) thì EX̄ = μ (population mean) và E(S^2) = σ² (tức population variance).
+> Dễ hiểu thôi, theo theorem 5.2.6 (xem link) thì EX̄ = μ (population mean) và E(S²) = σ² (tức population variance).
 >
 >
 >
-> Nên ở đây mean và variance đều là λ thì E\_λ(X̄) = λ và E\_λ(S^2) = λ
+> Nên ở đây mean và variance đều là λ thì E\_λ(X̄) = λ và E\_λ(S²) = λ
 >
 >
 >
@@ -1827,7 +1827,7 @@
 >
 >
 >
-> nên với trường hợp này cả X̄ và S^2 đều là unbiased estimator của λ
+> nên với trường hợp này cả X̄ và S² đều là unbiased estimator của λ
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -1845,33 +1845,33 @@
 <p align="center"><kbd><img src="assets/jj7irlu8v3h.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là như vậy với việc X̄ và S^2 đều là unbiased estimator của λ 
+> Đại ý là như vậy với việc X̄ và S² đều là unbiased estimator của λ 
 > để xem cái nào tốt hơn, ta sẽ so sánh variance.
 >
 >
 >
-> Nhưng tại đây ta sẽ thấy việc tìm variance của S^2 là khá dài dòng và
+> Nhưng tại đây ta sẽ thấy việc tìm variance của S² là khá dài dòng và
 > rắc rối.
 >
 >
 >
-> Và rồi, ngay cả khi ta chứng minh được X̄ có variance thấp hơn S^2
-> thì ta sẽ thấy rằng bằng cách combine X̄ và S^2 với bộ hệ số tổng 
+> Và rồi, ngay cả khi ta chứng minh được X̄ có variance thấp hơn S²
+> thì ta sẽ thấy rằng bằng cách combine X̄ và S² với bộ hệ số tổng 
 > bằng 1, thì ta cũng có vô số estimator khác cũng có bias = 0:
 >
 >
 >
-> W_a (X̄, S^2) = aX̄ + (1-a)S^2
+> W_a (X̄, S²) = aX̄ + (1-a)S²
 >
 >
 >
-> (nhớ rằng, X̄, S^2 thực chất là X̄(𝐗), S^2(𝐗), và W_a trên là ta 
+> (nhớ rằng, X̄, S² thực chất là X̄(𝐗), S²(𝐗), và W_a trên là ta 
 > apply function lên hai estimator / statistic thì cũng ra một estimator/statistic
 > mới)
 >
 >
 >
-> Và E_λ(W_a) = E[aX̄ + (1-a)S^2] = aEX̄ + (1-a) ES^2 = aλ + (1-a)λ
+> Và E_λ(W_a) = E[aX̄ + (1-a)S²] = aEX̄ + (1-a) ES² = aλ + (1-a)λ
 >
 >
 >
@@ -2511,11 +2511,11 @@
 >
 >
 >
-> Nói lại một chút bối cảnh của ví dụ này, ta có sample X \~ Pois(λ) và có hai unbiased estimator của λ là X̄(𝐗) và S^2(𝐗) (đều có E\_λ\[X̄(𝐗)\] = λ và E\_λ\[S^2(𝐗)\] = λ
+> Nói lại một chút bối cảnh của ví dụ này, ta có sample X \~ Pois(λ) và có hai unbiased estimator của λ là X̄(𝐗) và S²(𝐗) (đều có E\_λ\[X̄(𝐗)\] = λ và E\_λ\[S²(𝐗)\] = λ
 >
 >
 >
-> Vậy thì việc tính variance của S^2 rất cồng kềnh, dù tính vẫn được, và so sánh variance của X̄ thì sẽ cho phép ta chốt được cái nào là best unbiased estimator của λ.
+> Vậy thì việc tính variance của S² rất cồng kềnh, dù tính vẫn được, và so sánh variance của X̄ thì sẽ cho phép ta chốt được cái nào là best unbiased estimator của λ.
 >
 >
 >
@@ -2639,7 +2639,7 @@
 >
 >
 >
-> Và vì Var\_λ X̄ = λ / n nên ta kết luận ngay X̄ là best unbiased estimator mà khỏi phải tính Var\_λ của S^2 làm gì.
+> Và vì Var\_λ X̄ = λ / n nên ta kết luận ngay X̄ là best unbiased estimator mà khỏi phải tính Var\_λ của S² làm gì.
 
 <br>
 
@@ -2983,12 +2983,12 @@
 >
 >
 >
-> thế thì ta mới tính variance của sample variance là S^2, ra được 2σ^4/(n-1) 
+> thế thì ta mới tính variance của sample variance là S², ra được 2σ^4/(n-1) 
 > và kết quả này rõ ràng là > 2σ^4/n 
 >
 >
 >
-> CÓ NGHĨA LÀ VARIANCE CỦA S^2 (CANDIDATE ESTIMATOR CHO σ²)
+> CÓ NGHĨA LÀ VARIANCE CỦA S² (CANDIDATE ESTIMATOR CHO σ²)
 > KHÔNG ĐẠT CRAMER RAO LOWER BOUND.
 >
 >
@@ -2998,12 +2998,12 @@
 >
 >
 > 1) Cái lower bound này, với case này (normal) thì UNATTAINABLE. Như 
-> vậy có thể cái S^2 là đủ tốt / tốt nhất có thể rồi.
+> vậy có thể cái S² là đủ tốt / tốt nhất có thể rồi.
 >
 >
 >
 > 2) Cái lower bound này, attainable, như vậy ta phải đi tìm cái best estimator
-> có variance đạt mức này, chứ cái S^2 này không phải.
+> có variance đạt mức này, chứ cái S² này không phải.
 
 <br>
 
@@ -3120,7 +3120,7 @@
 >
 >
 >
-> hoặc ví dụ như trường hợp S^2 hồi nãy, nó là một allowable estimator (đại
+> hoặc ví dụ như trường hợp S² hồi nãy, nó là một allowable estimator (đại
 > ý tác giả là ta có thể có được estimator này), nhưng vì nó không attain
 > Cramer Rao Lower Bound nên ta cũng ko biết là liệu nó có phải là best 
 > estimator không 
@@ -5249,13 +5249,13 @@
 > [!NOTE]
 > Tiếp, qua ví dụ này, với random sample size n từ n(μ, σ²) population. 
 > Và ta muốn estimator variance σ², dùng tiêu chí, loss function là squared
-> error loss. Và ta sẽ tìm trong / dùng trong các estimator có dạng là b S^2
-> (tức là một scaled version của sample variance) δ_b(𝐗) = bS^2.
+> error loss. Và ta sẽ tìm trong / dùng trong các estimator có dạng là b S²
+> (tức là một scaled version của sample variance) δ_b(𝐗) = bS².
 >
 >
 >
-> Thế thì còn nhớ sample variance S^2 (còn gọi là unbiased sample variance)
-> thì ..vì unbiased nên E[S^2] = σ² và VarS^2 = 2 σ^4 / (n-1).
+> Thế thì còn nhớ sample variance S² (còn gọi là unbiased sample variance)
+> thì ..vì unbiased nên E[S²] = σ² và VarS² = 2 σ^4 / (n-1).
 >
 >
 >
@@ -5264,11 +5264,11 @@
 >
 >
 >
-> R((μ, σ²), δb) = MSE(δb) = Var(bS^2) + Bias(bS^2)
+> R((μ, σ²), δb) = MSE(δb) = Var(bS²) + Bias(bS²)
 >
 >
 >
-> = b^2Var(S^2) + [E(bS^2)-σ²]^2
+> = b^2Var(S²) + [E(bS²)-σ²]^2
 >
 >
 >
@@ -5276,23 +5276,23 @@
 >
 >
 >
-> ..= b^2Var(S^2) + [E(bS^2) - σ²]^2
+> ..= b^2Var(S²) + [E(bS²) - σ²]^2
 >
 >
 >
-> = b^2Var(S^2) + [bE(S^2) - σ²]^2 
+> = b^2Var(S²) + [bE(S²) - σ²]^2 
 >
 >
 >
-> = b^2Var(S^2) + [bσ² - σ²]^2 
+> = b^2Var(S²) + [bσ² - σ²]^2 
 >
 >
 >
-> = b^2Var(S^2) + [(b-1)σ²]^2 
+> = b^2Var(S²) + [(b-1)σ²]^2 
 >
 >
 >
-> = b^2Var(S^2) + (b-1)^2σ^4 
+> = b^2Var(S²) + (b-1)^2σ^4 
 >
 >
 >
@@ -5320,7 +5320,7 @@
 >
 >
 > Và ta sẽ lập luận đơn giản thế này: giả sử xét một estimator khác cũng có dạng này
-> δ_b'(𝐗) = b'S^2. Thì risk function của nó là c_b' (σ²)^2.
+> δ_b'(𝐗) = b'S². Thì risk function của nó là c_b' (σ²)^2.
 >
 >
 >
@@ -5331,7 +5331,7 @@
 >
 >
 > Và như vậy bài toán ta đang làm là tìm estimator tốt nhất trong các estimator có
-> dạng bS^2 và với squared error loss sẽ trở thành bài toán tìm b sao cho c_b là nhỏ
+> dạng bS² và với squared error loss sẽ trở thành bài toán tìm b sao cho c_b là nhỏ
 > nhất trong mọi b là số không âm.
 >
 >
@@ -5382,12 +5382,12 @@
 >
 >
 >
-> Vậy S_tilde^2(𝐗) = [(n-1)/(n+1)] S^2 CHÍNH LÀ CÁI CÓ RISK NHỎ NHẤT
-> TRONG SỐ NHỮNG ESTIMATOR CÓ DẠNG bS^2.
+> Vậy S_tilde^2(𝐗) = [(n-1)/(n+1)] S² CHÍNH LÀ CÁI CÓ RISK NHỎ NHẤT
+> TRONG SỐ NHỮNG ESTIMATOR CÓ DẠNG bS².
 >
 >
 >
-> Và hình 7.3.2 cho thấy đồ thị hàm risk của S_tilde^2(𝐗), S^2 (như đã biết, là
+> Và hình 7.3.2 cho thấy đồ thị hàm risk của S_tilde^2(𝐗), S² (như đã biết, là
 > unbiased estimator của σ²) và của MLE của σ². Nhận xét thấy nó thấp hơn hai
 > thằng này ở mọi giá trị của σ²
 
@@ -5403,7 +5403,7 @@
 
 > [!NOTE]
 > Qua ví dụ này, ta tiếp tục xem xét việc estimate population variance σ², và
-> cũng dùng estimator có dạng bS^2. Nói thêm, ta có thể khái quát hơn, với
+> cũng dùng estimator có dạng bS². Nói thêm, ta có thể khái quát hơn, với
 > việc chỉ dùng assumption là X1,...Xn là random sample từ population nào đó
 > có variance dương, finite.
 >
@@ -5427,29 +5427,29 @@
 >
 >
 >
-> Thế thì với estimator δb = bS^2 thì risk function là:
+> Thế thì với estimator δb = bS² thì risk function là:
 >
-> R(σ², δb) = E[bS^2/ σ² - 1 - log bS^2/σ²]
->
->
->
-> = E[bS^2/σ²] - 1 - E[log bS^2/σ²]
+> R(σ², δb) = E[bS²/ σ² - 1 - log bS²/σ²]
 >
 >
 >
-> = (b/σ²) E[S^2] - 1 - E[log b] - E(log [S^2/σ²])
+> = E[bS²/σ²] - 1 - E[log bS²/σ²]
 >
 >
 >
-> = (b/σ²) σ² - 1 - log b - E(log [S^2/σ²])
+> = (b/σ²) E[S²] - 1 - E[log b] - E(log [S²/σ²])
 >
 >
 >
-> = b - 1 - log b - E(log [S^2/σ²])
+> = (b/σ²) σ² - 1 - log b - E(log [S²/σ²])
 >
 >
 >
-> = b - log b - 1 - E(log [S^2/σ²])
+> = b - 1 - log b - E(log [S²/σ²])
+>
+>
+>
+> = b - log b - 1 - E(log [S²/σ²])
 >
 >
 >
@@ -5495,7 +5495,7 @@
 >
 >
 > Thế thì quay lại đây, risk function, với Stein loss của các estimator cho σ²
-> có dạng bS^2: R(σ², δb) = b - log b - 1 + E(log [S^2/σ²]). Và ta muốn tìm 
+> có dạng bS²: R(σ², δb) = b - log b - 1 + E(log [S²/σ²]). Và ta muốn tìm 
 > cái nhỏ nhất với mọi θ.
 >
 >
@@ -5519,8 +5519,8 @@
 >
 >
 >
-> Như vậy b khiến R(σ², bS^2) nhỏ nhất với mọi σ² chính là b = 1. Nói
-> cách khác, S^2 chính là estimator có risk nhỏ nhất khi dùng Stein loss
+> Như vậy b khiến R(σ², bS²) nhỏ nhất với mọi σ² chính là b = 1. Nói
+> cách khác, S² chính là estimator có risk nhỏ nhất khi dùng Stein loss
 
 <br>
 
