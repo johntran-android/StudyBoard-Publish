@@ -1832,15 +1832,15 @@
 >
 >
 >
-> (nhân thêm chia bớt mẫu cho n-1, để xuất hiện sample variance S^2)
+> (nhân thêm chia bớt mẫu cho n-1, để xuất hiện sample variance S²)
 >
 >
 >
-> ⇔ (x̄ - μ0)^2 / S^2 (n-1)
+> ⇔ (x̄ - μ0)^2 / S² (n-1)
 >
 >
 >
-> ⇔ [(x̄ - μ0)^2 / S^2] / (n-1)
+> ⇔ [(x̄ - μ0)^2 / S²] / (n-1)
 >
 >
 >
