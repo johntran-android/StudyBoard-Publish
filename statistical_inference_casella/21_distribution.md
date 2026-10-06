@@ -1,6 +1,6 @@
 # 2.1 Distribution
 
-📊 **Progress:** `15` Notes | `21` Screenshots | `1` AI Reviews
+📊 **Progress:** `15` Notes | `21` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-0qrdxlz"></a>
@@ -1074,6 +1074,30 @@
 >
 > LÀM SAU
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú rất tốt, bạn đã tự chứng minh lại Định lý 2.1.8 bằng phương pháp hàm phân phối tích lũy (CDF) cho cả hai trường hợp đơn điệu tăng và giảm một cách chính xác.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"P({x ∈ A0: g(x) < y)} = P(∅) = 0"*
+>
+> Tập hợp A0 (exceptional set) không nhất thiết là tập rỗng ∅. Nó có thể chứa các điểm (chẳng hạn như các mút khoảng), nhưng có xác suất P(X ∈ A0) = 0 theo giả thiết của định lý.
+>
+> **2.** *"fY(y) = Σ fX(gi_inv(y)) d/dy |gi_inv(y)| y ∈ 𝒴"*
+>
+> Cách đặt dấu trị tuyệt đối ở tóm tắt ban đầu bị nhầm vị trí (phải là trị tuyệt đối của đạo hàm |d/dy gi^(-1)(y)|, chứ không phải đạo hàm của trị tuyệt đối). Tuy nhiên ở cuối bài chứng minh bạn đã sửa lại đúng.
+>
+>
+> **✓ Strengths**
+> - Tự triển khai thành công phép chứng minh định lý biến đổi đa nhánh thông qua CDF thay vì chỉ chép lại công thức.
+> - Xử lý chuẩn xác sự đảo chiều bất đẳng thức và dấu âm sinh ra từ đạo hàm của hàm nghịch biến để đưa về dấu giá trị tuyệt đối.
+>
+> **💡 Deeper notes**
+> - Đối với trường hợp y ∉ 𝒴 (mà bạn để 'LÀM SAU'): Do 𝒴 là ảnh chung của mọi Ai, nên nếu y ∉ 𝒴 thì sự kiện {Y = y} không thể xảy ra từ bất kỳ Ai nào (ngoại trừ tập A0 có độ đo 0), do đó FY(y) là hằng số lân cận hoặc P(Y ∈ dy) = 0, dẫn tới fY(y) = 0.
+> - Giả thiết mỗi Ai là một khoảng liên tục (hoặc hợp hữu hạn các khoảng) để Ai ∩ (-inf, xi) có dạng (Ai_lower, xi) là một chi tiết kỹ thuật nền giúp áp dụng Định lý cơ bản của Giải tích (FTC) một cách chặt chẽ.
+
 <br>
 
 <a id="node-f14tr9i"></a>
@@ -1083,11 +1107,23 @@
 <p align="center"><kbd><img src="assets/3fc22t50ro3.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ứng dụng vô đây giúp ta tìm được pdf của Y = X^2 với X ~n (0,1)
+> Ứng dụng vô đây giúp ta tìm được pdf của Y = X^2 với X \~n (0,1)
 >
 >
 >
-> và như đã biết từ stat110, nó chính là chi squaRed
+> và như đã biết từ stat110, nó chính là χ²\_1
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt chính xác mục đích của ví dụ và liên hệ đúng với phân phối Chi bình phương (với 1 bậc tự do) từ kiến thức đã học.
+>
+> **✓ Strengths**
+> - Nắm đúng bản chất: việc phân chia khoảng đơn điệu cho phép biến đổi và tìm hàm mật độ xác suất (pdf) của biến $Y = X^2$.
+> - Nhận diện chính xác kết quả phân phối thu được là phân phối Chi bình phương (với 1 bậc tự do).
+>
+> **💡 Deeper notes**
+> - Cần lưu ý thêm về số bậc tự do: $Y = X^2$ với $X \sim \mathcal{N}(0, 1)$ là phân phối Chi bình phương với đúng 1 bậc tự do ($\\chi^2_1$), dạng tổng quát $\\chi^2_k$ sẽ là tổng bình phương của $k$ biến chuẩn tắc độc lập.
 
 <br>
 
