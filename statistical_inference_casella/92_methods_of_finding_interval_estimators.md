@@ -2898,7 +2898,7 @@
 >
 >
 >
-> Dựa trên việc đã biết (n-1)S^2/σ² ~ Chi-square bậc n-1 (theo link xem  lại
+> Dựa trên việc đã biết (n-1)S²/σ² ~ Chi-square bậc n-1 (theo link xem  lại
 > theorem)
 >
 >
@@ -2907,7 +2907,7 @@
 >
 >
 >
-> = (n-1)S^2(𝐗)/σ² (ôn lại: pivotal quantity là một function of statistic và
+> = (n-1)S²(𝐗)/σ² (ôn lại: pivotal quantity là một function of statistic và
 > parameter, (dĩ nhiên cũng là một random variable) có distribution không còn
 > phụ thuộc θ)
 >
@@ -2927,19 +2927,19 @@
 >
 >
 >
-> Khi đó, C(𝐗) = {σ²: a ≤ (n-1)S^2/σ² ≤ b}
+> Khi đó, C(𝐗) = {σ²: a ≤ (n-1)S²/σ² ≤ b}
 >
 >
 >
-> = {σ²: a σ² ≤ (n-1)S^2 ≤ b σ²}
+> = {σ²: a σ² ≤ (n-1)S² ≤ b σ²}
 >
 >
 >
-> = {σ²: (n-1)S^2 / b ≤ σ² ≤ (n-1)S^2 / a}
+> = {σ²: (n-1)S² / b ≤ σ² ≤ (n-1)S² / a}
 >
 >
 >
-> = {σ: √[(n-1)S^2 / b] ≤ σ ≤ √[(n-1)S^2 / a]}
+> = {σ: √[(n-1)S² / b] ≤ σ ≤ √[(n-1)S² / a]}
 >
 >
 >
