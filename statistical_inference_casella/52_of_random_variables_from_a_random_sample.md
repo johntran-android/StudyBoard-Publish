@@ -149,11 +149,11 @@
 >
 >
 >
-> Sample variance S^2 = 1/(n-1) Σ (Xi - X̄)^2
+> Sample variance S² = 1/(n-1) Σ (Xi - X̄)^2
 >
 >
 >
-> Sample standard deviation S = √S^2
+> Sample standard deviation S = √S²
 >
 >
 >
@@ -179,7 +179,7 @@
 > Và một ý nữa là, cũng như theo quy ước ta ghi chữ thường cho giá trị
 > possible value của random variable, thì nay cũng vậy. x_bar, s^2, s
 > sẽ chỉ possible value (hay giá trị cụ thể, hay giá trị quan sát được, cũng
-> như nhau) của X̄, S^2, S
+> như nhau) của X̄, S², S
 
 **🔗 See also:** [Point Estimation: Variance Estimation](./101_point_estimation.md#node-3dm7cfv)
 
@@ -691,19 +691,19 @@
 >
 >
 >
-> c) ES^2 = σ²
+> c) ES² = σ²
 >
 >
 >
-> S^2 như đã biết, là SAMPLE VARIANCE, có công thức là :
+> S² như đã biết, là SAMPLE VARIANCE, có công thức là :
 >
 >
 >
-> **S^2 = [1/(n-1)] Σi (Xi - X̄)^2**
+> **S² = [1/(n-1)] Σi (Xi - X̄)^2**
 >
 >
 >
-> Thế thì mình phải hiểu thế này: S^2, chỉ là kí hiệu của SAMPLE VARIANCE,
+> Thế thì mình phải hiểu thế này: S², chỉ là kí hiệu của SAMPLE VARIANCE,
 > và nó như những bài trước đã biết, là một STATISTIC, có bản chất là việc ta
 > apply một function lên các random variable X1,...XnVà vì giống như khi apply function g lên random variable X, g(X), thì với các
 > possible value khác nhau của X, thì g(X) sẽ có các possible value khác nhau.
@@ -711,7 +711,7 @@
 >
 >
 >
-> **Nên S^2 cũng là một random variable.
+> **Nên S² cũng là một random variable.
 >
 >
 >
@@ -721,16 +721,16 @@
 >
 >
 >
-> Ví dụ, đáng lẽ phải ghi là S^2(X1,X2...Xn) hay X̄(X1,X2...Xn) để thể hiện
+> Ví dụ, đáng lẽ phải ghi là S²(X1,X2...Xn) hay X̄(X1,X2...Xn) để thể hiện
 > điều đó. Nhưng by convention, người ta sẽ tự hiểu chuyện này.
 >
 >
 >
-> Cho nên  điều muốn nói ở đây, LÀ S^2 LÀ MỘT FUNCTION CỦA CÁC RVS X1,..Xn
+> Cho nên  điều muốn nói ở đây, LÀ S² LÀ MỘT FUNCTION CỦA CÁC RVS X1,..Xn
 >
 >
 >
-> Và function đó là function nào: Đó là g(x1, x2,..xn) = [1/(n-1)] Σi (xi - x_bar)^2Để rồi khi apply nó (g) lên các random variable X1, X2...Xn thì ta có:g(X1, X2,..Xn) = [1/(n-1)] Σi (Xi - X̄)^2, và = S^2
+> Và function đó là function nào: Đó là g(x1, x2,..xn) = [1/(n-1)] Σi (xi - x_bar)^2Để rồi khi apply nó (g) lên các random variable X1, X2...Xn thì ta có:g(X1, X2,..Xn) = [1/(n-1)] Σi (Xi - X̄)^2, và = S²
 >
 >
 >
@@ -755,7 +755,7 @@
 >
 >
 >
-> Từ đó ta có:S^2 = [1/(n-1)] [ Σi Xi^2 - n X̄^2 ]  (dĩ nhiên khi Xi đóng vai xi thì X̄ đóng vai x_bar)
+> Từ đó ta có:S² = [1/(n-1)] [ Σi Xi^2 - n X̄^2 ]  (dĩ nhiên khi Xi đóng vai xi thì X̄ đóng vai x_bar)
 >
 >
 >
@@ -763,7 +763,7 @@
 >
 >
 >
-> Như vậy ta có ES^2 = E { [1/(n-1)] [ Σi Xi^2 - n X̄^2 ] }
+> Như vậy ta có ES² = E { [1/(n-1)] [ Σi Xi^2 - n X̄^2 ] }
 >
 >
 >
@@ -863,7 +863,7 @@
 >
 > = **σ²  Chứng minh xong**
 
-**🔗 See also:** [Luật số lớn yếu WLLN](./55_convergence_concepts.md#node-j5m3pa1) · [Tính không chệch X̄ S^2](./73_methods_of_evaluating_estimators.md#node-dgdrvpi) · [Ước lượng không chệch Poisson](./73_methods_of_evaluating_estimators.md#node-0ecqsqo) · [Tính nhất quán của X̄](./101_point_estimation.md#node-47kutgs) · [Point Estimation: Variance Estimation](./101_point_estimation.md#node-3dm7cfv)
+**🔗 See also:** [Luật số lớn yếu WLLN](./55_convergence_concepts.md#node-j5m3pa1) · [Tính không chệch X̄ S²](./73_methods_of_evaluating_estimators.md#node-dgdrvpi) · [Ước lượng không chệch Poisson](./73_methods_of_evaluating_estimators.md#node-0ecqsqo) · [Tính nhất quán của X̄](./101_point_estimation.md#node-47kutgs) · [Point Estimation: Variance Estimation](./101_point_estimation.md#node-3dm7cfv)
 
 <br>
 
@@ -879,7 +879,7 @@
 >
 >
 >
-> Đại khái là, như theorem vừa rồi ta thấy E X̄ = μ, và ES^2 = σ²
+> Đại khái là, như theorem vừa rồi ta thấy E X̄ = μ, và ES² = σ²
 >
 >
 >
@@ -904,7 +904,7 @@
 >
 >
 >
-> S^2  = [1/(n-1)] [ Σi (Xi - X̄)^2 ] 
+> S²  = [1/(n-1)] [ Σi (Xi - X̄)^2 ] 
 >
 >
 >
@@ -921,12 +921,12 @@
 >
 >
 > Còn trước mắt, nếu ta dùng công thức "chia cho n thay vì chia n-1" thì
-> ES^2 sẽ = [(n-1)/n] σ² Không khó để chứng minh vì hồi nãy ta đã tới
+> ES² sẽ = [(n-1)/n] σ² Không khó để chứng minh vì hồi nãy ta đã tới
 > đây:
 >
 >
 >
-> ES^ = [1/(n-1)]  (n -1)  σ² , với  [1/(n-1)]  là do công thức S^2 = 
+> ES^ = [1/(n-1)]  (n -1)  σ² , với  [1/(n-1)]  là do công thức S² = 
 > [1/(n-1)] [ Σi (Xi - X̄)^2 ]
 >
 >
@@ -2390,11 +2390,11 @@
 >
 >
 >
-> Để rồi khi áp nó lên bộ X1,X2...Xn ta có S^2 (kí hiệu của sample variance):
+> Để rồi khi áp nó lên bộ X1,X2...Xn ta có S² (kí hiệu của sample variance):
 >
 >
 >
-> S^2 =  [Σi (Xi - X̄)^2 ] / (n - 1)
+> S² =  [Σi (Xi - X̄)^2 ] / (n - 1)
 >
 >
 >
