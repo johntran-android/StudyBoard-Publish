@@ -533,8 +533,8 @@
 >
 >
 > ----- Do đó, khi không biết σ ta sẽ dùng cái pivot thứ hai: (X̄ - μ) / S/√n,
-> với S^2 là sample variance (chính xác thì gọi là unbiased sample variance có
-> công thức Σi (Xi - x̄)^2 / (n-1), vì E(S^2) = σ²)
+> với S² là sample variance (chính xác thì gọi là unbiased sample variance có
+> công thức Σi (Xi - x̄)^2 / (n-1), vì E(S²) = σ²)
 >
 >
 >
@@ -642,8 +642,8 @@
 >
 >
 >
-> Tuy nhiên ta biết (n-1) S^2 / σ² ~ Chi-square_n-1, không phụ thuộc μ, nên từ đó
-> pdf của S^2 cũng ko phụ thuộc μ:
+> Tuy nhiên ta biết (n-1) S² / σ² ~ Chi-square_n-1, không phụ thuộc μ, nên từ đó
+> pdf của S² cũng ko phụ thuộc μ:
 >
 >
 >
@@ -658,17 +658,17 @@
 >
 >
 >
-> fS^2(s^2) = f(s^2 / [σ²/(n-1)]) / σ²/(n-1)
+> fS²(s^2) = f(s^2 / [σ²/(n-1)]) / σ²/(n-1)
 >
 >
 >
-> Qua đó, cho thấy pdf của S^2 sẽ phụ thuộc σ, không phụ thuộc μ.
+> Qua đó, cho thấy pdf của S² sẽ phụ thuộc σ, không phụ thuộc μ.
 >
 >
 >
 > Nên không có lí do gì distribution của S lại phụ thuộc μ. Tất nhiên để chứng minh
-> chặt chẽ ta lại dùng transformation theorem: S = √S^2 để xây dựng pdf của S,
-> nhưng vì pdf của S^2 không dính đến μ, chỉ dính đến σ nên chắc chắn pdf của S
+> chặt chẽ ta lại dùng transformation theorem: S = √S² để xây dựng pdf của S,
+> nhưng vì pdf của S² không dính đến μ, chỉ dính đến σ nên chắc chắn pdf của S
 > cũng vậy.
 >
 >
@@ -690,7 +690,7 @@
 >
 >
 >
-> Tới đây, nếu ra ngay E_σ(S) = σ thì sẽ là sai, ta chỉ biết E_σ[S^2] = σ², vì S^2  là
+> Tới đây, nếu ra ngay E_σ(S) = σ thì sẽ là sai, ta chỉ biết E_σ[S²] = σ², vì S²  là
 > unbiased sample variance. Đây là nội dung bài tập 7.5
 >
 >
