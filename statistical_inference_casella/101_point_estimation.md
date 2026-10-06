@@ -77,8 +77,8 @@
 >
 >
 > Mình ghi X̄1(X1) là hoàn toàn hợp lệ, vì gs Casella trong mấy chương
-> trước đã nói, X̄, hay S^2 thật ra chỉ là ghi cho gọn, ghi rõ phải là X̄(𝐗)
-> hay S^2(𝐗) để thể hiện nó là function của sample 𝐗
+> trước đã nói, X̄, hay S² thật ra chỉ là ghi cho gọn, ghi rõ phải là X̄(𝐗)
+> hay S²(𝐗) để thể hiện nó là function của sample 𝐗
 
 <br>
 
@@ -3178,7 +3178,7 @@
 >
 >
 >
-> Và với random sample X1,...Xn, mình đã quen thuộc với việc, ta có thể tính **sample variance**: S^2 = \[1/(n-1)\] Σi {(Xi - X̄)^2})
+> Và với random sample X1,...Xn, mình đã quen thuộc với việc, ta có thể tính **sample variance**: S² = \[1/(n-1)\] Σi {(Xi - X̄)^2})
 >
 >
 >
@@ -3326,11 +3326,11 @@
 >
 >
 >
-> Do không có σ², ta có thể dùng S^2, sample variance = \[1/(n-1)\] Σi (Xi - X̄)^2. Nên ở đây với observed value 𝐱 = (2,4,9,12) ta có S^2(𝐱) = (1/3) \[(2-6.75)^2 + (4-6.75)^2 + (9-6.75)^2 + (12-6.75)^2\] = 20.9167 ⇒ Var(X̄) ≈ S^2/n = 20.9167/4 = **5.23**
+> Do không có σ², ta có thể dùng S², sample variance = \[1/(n-1)\] Σi (Xi - X̄)^2. Nên ở đây với observed value 𝐱 = (2,4,9,12) ta có S²(𝐱) = (1/3) \[(2-6.75)^2 + (4-6.75)^2 + (9-6.75)^2 + (12-6.75)^2\] = 20.9167 ⇒ Var(X̄) ≈ S²/n = 20.9167/4 = **5.23**
 >
 >
 >
-> Và cái **Var(X̄) nhưng dùng S^2 để estimate cho σ²** này ta kí hiệu là Var^(X̄): **Var^(X̄)** = 5.23
+> Và cái **Var(X̄) nhưng dùng S² để estimate cho σ²** này ta kí hiệu là Var^(X̄): **Var^(X̄)** = 5.23
 >
 >
 >
@@ -3502,7 +3502,7 @@
 >
 >
 >
-> Rồi, nếu có σ² thì ta sẽ có Var(X̄) chính xác. Thì nay không có, ta có thể dùng sample variance S^2, thì ta sẽ có estimate cho Var(X̄): Var^(X̄) = S^2 / n. Với S^2 = (1/(n-1)) Σi (Xi - X̄)^2.
+> Rồi, nếu có σ² thì ta sẽ có Var(X̄) chính xác. Thì nay không có, ta có thể dùng sample variance S², thì ta sẽ có estimate cho Var(X̄): Var^(X̄) = S² / n. Với S² = (1/(n-1)) Σi (Xi - X̄)^2.
 >
 >
 >
@@ -3522,7 +3522,7 @@
 >
 >
 >
-> i) Dùng S^2/n =S^2/4, và ta tính ra là **5.23**
+> i) Dùng S²/n =S²/4, và ta tính ra là **5.23**
 >
 >
 >
@@ -3640,7 +3640,7 @@
 >
 >
 >
-> Câu trả lời là, ta có thể dùng (observed value của) sample variance để thay chỗ của population variance, từ đó, thay vì ta có công thức chính xác Var(X̄) = σ² / n, ta có công thức ước lượng: Var(X̄) ≈ s^2/n. Và với observed value của sample, thì ta có observed value của S^2: s^2 = \[1/(n-1)\] Σi=1:n (xi - x̄)^2. Thế giá trị vào ta tính ra con số **5.23**, là ước lượng của X̄ variance.
+> Câu trả lời là, ta có thể dùng (observed value của) sample variance để thay chỗ của population variance, từ đó, thay vì ta có công thức chính xác Var(X̄) = σ² / n, ta có công thức ước lượng: Var(X̄) ≈ s^2/n. Và với observed value của sample, thì ta có observed value của S²: s^2 = \[1/(n-1)\] Σi=1:n (xi - x̄)^2. Thế giá trị vào ta tính ra con số **5.23**, là ước lượng của X̄ variance.
 >
 >
 >
@@ -3732,7 +3732,7 @@
 >
 >
 >
-> Và vì coi như ta có một observed value của random sample 𝐗: 𝐱 = (x̄\*1, ....x̄\*N). Nên ta có thể dùng công thức sample variance S^2: = 1/(256 - 1) Σi=1:N \[x̄\*i - (x̄\*)bar\]^2. Và ta sẽ lấy giá trị này để estimate cho variance của sample mean Var(X̄), kí hiệu là Var(X̄)\*
+> Và vì coi như ta có một observed value của random sample 𝐗: 𝐱 = (x̄\*1, ....x̄\*N). Nên ta có thể dùng công thức sample variance S²: = 1/(256 - 1) Σi=1:N \[x̄\*i - (x̄\*)bar\]^2. Và ta sẽ lấy giá trị này để estimate cho variance của sample mean Var(X̄), kí hiệu là Var(X̄)\*
 >
 >
 >
@@ -3935,7 +3935,7 @@
 >
 >
 >
-> và vì s1,...sN equally likely nên ta coi θ^\*1,...θ^\*N là N possible value của θ^ có distribution là uniform discrete. Và từ đó có thể coi {θ^\*1,..θ^\*N} là một sample từ distribution này. Và nhờ vậy ta có thể dùng công thức sample variance S^2 để tính sample variance của cái estimator θ^ có distribution uniform discrete nói trên. Và đây là cái ta gọi là bootstrap variance:
+> và vì s1,...sN equally likely nên ta coi θ^\*1,...θ^\*N là N possible value của θ^ có distribution là uniform discrete. Và từ đó có thể coi {θ^\*1,..θ^\*N} là một sample từ distribution này. Và nhờ vậy ta có thể dùng công thức sample variance S² để tính sample variance của cái estimator θ^ có distribution uniform discrete nói trên. Và đây là cái ta gọi là bootstrap variance:
 >
 >
 >
@@ -4088,7 +4088,7 @@
 >
 >
 >
-> Để rồi sampling ra B sample (size n) từ plug in distribution này), và dùng nó để tính Var\*(estimator nào đó), ở đây là Var\*(S^2).
+> Để rồi sampling ra B sample (size n) từ plug in distribution này), và dùng nó để tính Var\*(estimator nào đó), ở đây là Var\*(S²).
 >
 >
 >
@@ -4100,15 +4100,15 @@
 >
 >
 >
-> Và coi như đây là một sample của S^2 \~ uniform discrete có B possible value equally likely, s^2\*\_1, ...s^2\*\_B, ta mới tính sample variance:
+> Và coi như đây là một sample của S² \~ uniform discrete có B possible value equally likely, s^2\*\_1, ...s^2\*\_B, ta mới tính sample variance:
 >
 >
 >
-> (1/B-1) Σj=1:B \[s^2\*j - (s^2\*)bar\], đây chính là parameter bootstrap variance của S^2: Var\*\_B(S^2).
+> (1/B-1) Σj=1:B \[s^2\*j - (s^2\*)bar\], đây chính là parameter bootstrap variance của S²: Var\*\_B(S²).
 >
 >
 >
-> Gs cho biết, khi làm thật theo quy trình này, ông thu được Var\*\_B(S^2) = 4.33. 
+> Gs cho biết, khi làm thật theo quy trình này, ông thu được Var\*\_B(S²) = 4.33. 
 >
 >
 >
@@ -4122,19 +4122,19 @@
 >
 >
 >
-> Thế thì, với việc ta muốn estimate variance của estimator là S^2. Thì tương tự như khi ta đang deal với các estimator đặc biệt, là sample mean X̄, để rồi Var(X̄) có công thức chính xác là \[population variance\] / n, từ đó cho phép ta thay population variance bởi sample variance, để được công thức ướng lượng của Var(X̄).
+> Thế thì, với việc ta muốn estimate variance của estimator là S². Thì tương tự như khi ta đang deal với các estimator đặc biệt, là sample mean X̄, để rồi Var(X̄) có công thức chính xác là \[population variance\] / n, từ đó cho phép ta thay population variance bởi sample variance, để được công thức ướng lượng của Var(X̄).
 >
 >
 >
-> Thì nay cũng vậy, vì ta đang deal với estimator là sample variance S^2. Mà cái này, nếu như đang trong giả định rằng population distribution là normal, thì ta sẽ có công thức (xem crosslink) Var(S^2) = 2 × (population variance)^2/(n-1).
+> Thì nay cũng vậy, vì ta đang deal với estimator là sample variance S². Mà cái này, nếu như đang trong giả định rằng population distribution là normal, thì ta sẽ có công thức (xem crosslink) Var(S²) = 2 × (population variance)^2/(n-1).
 >
 >
 >
-> Từ đó, bằng cách nhét sample variance vào thay cho population variance, thay vì công thức chính xác của Var(S^2), ta có công thức estimate của Var(S^2):
+> Từ đó, bằng cách nhét sample variance vào thay cho population variance, thay vì công thức chính xác của Var(S²), ta có công thức estimate của Var(S²):
 >
 >
 >
-> Var(S^2) = 2 × (population variance)^2/(n-1) ≈ Var^(S^2) = 2 × (sample variance)^2/(n-1)
+> Var(S²) = 2 × (population variance)^2/(n-1) ≈ Var^(S²) = 2 × (sample variance)^2/(n-1)
 >
 >
 >
@@ -4146,11 +4146,11 @@
 >
 >
 >
-> (Chỗ này lại chú ý rằng, khác với con số 4.33 ở trên, nơi mà ta đã nói nó chỉ là giá trị cụ thể khi gs làm, nếu ta tính, thì vì kết quả sampling từ plug in distribution có thể sẽ ra B sample khác với gs,nên chưa chắc sẽ ra con số 4.33 này. Tuy nhiên, ở đây, con số 5.81 thì khác, nó dựa trên cái sample mà ta có ban đầu: -1.81, 0.63,....5.09, nên gs làm hay ta làm (ý nói tính ước lượng của Var(S^2) dựa trên giả định population gốc là normal) đều phải ra con số 5.81. Nhưng, dù sao đi nữa ý chính là so sánh kết quả này với 4.33 thu được từ bootstrap)
+> (Chỗ này lại chú ý rằng, khác với con số 4.33 ở trên, nơi mà ta đã nói nó chỉ là giá trị cụ thể khi gs làm, nếu ta tính, thì vì kết quả sampling từ plug in distribution có thể sẽ ra B sample khác với gs,nên chưa chắc sẽ ra con số 4.33 này. Tuy nhiên, ở đây, con số 5.81 thì khác, nó dựa trên cái sample mà ta có ban đầu: -1.81, 0.63,....5.09, nên gs làm hay ta làm (ý nói tính ước lượng của Var(S²) dựa trên giả định population gốc là normal) đều phải ra con số 5.81. Nhưng, dù sao đi nữa ý chính là so sánh kết quả này với 4.33 thu được từ bootstrap)
 >
 >
 >
-> Một điểm nữa, gs lại nói rằng, cái population distribution thật sự là normal có variance σ² = 4. Thành ra, theo công thức chính xác của Var(S^2), ta có Var(S^2) = 2 × population variance σ^4/(n-1) = 2 × 4^2 / (9-1) = 4.
+> Một điểm nữa, gs lại nói rằng, cái population distribution thật sự là normal có variance σ² = 4. Thành ra, theo công thức chính xác của Var(S²), ta có Var(S²) = 2 × population variance σ^4/(n-1) = 2 × 4^2 / (9-1) = 4.
 >
 >
 >
@@ -4162,26 +4162,26 @@
 >
 >
 >
-> trong ví dụ này: variance thật của S^2 là 4: Var(S^2) = 4
+> trong ví dụ này: variance thật của S² là 4: Var(S²) = 4
 >
 >
 >
-> Variance của S^2 được estimate dựa trên giả định population distribution là normal (cái giả định cho phép ta có công thức chính xác của Var(S^2) là hàm theo population variance, để rồi từ đó ta có công thức ước lượng cho Var(S^2) bằng cách gắn sample variance vào thế chỗ của population variance) là 5.81: Var^(S^2) =  5.81
+> Variance của S² được estimate dựa trên giả định population distribution là normal (cái giả định cho phép ta có công thức chính xác của Var(S²) là hàm theo population variance, để rồi từ đó ta có công thức ước lượng cho Var(S²) bằng cách gắn sample variance vào thế chỗ của population variance) là 5.81: Var^(S²) =  5.81
 >
 >
 >
-> Variance của S^2 được estimate dựa theo parametric bootstrap: 4.33.
+> Variance của S² được estimate dựa theo parametric bootstrap: 4.33.
 >
 >
 >
-> Như vậy 4.33 gần với 4 hơn là 5.81, giúp kết luận trong ví dụ này parameter bootstrap estimate tốt Var(S^2) hơn là công thức Var^(S^2)
+> Như vậy 4.33 gần với 4 hơn là 5.81, giúp kết luận trong ví dụ này parameter bootstrap estimate tốt Var(S²) hơn là công thức Var^(S²)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
 > Ghi chú cực kỳ chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về bản chất của parametric bootstrap, đặc biệt là việc phân biệt tính ngẫu nhiên của mô phỏng bootstrap so với công thức lý thuyết định tính. Không có điểm gì cần cải thiện thêm vì bài viết đã giải thích xuất sắc mọi khía cạnh của ví dụ.
 
-**🔗 See also:** [Tính không chệch X̄ S^2](./73_methods_of_evaluating_estimators.md#node-dgdrvpi)
+**🔗 See also:** [Tính không chệch X̄ S²](./73_methods_of_evaluating_estimators.md#node-dgdrvpi)
 
 <br>
 
