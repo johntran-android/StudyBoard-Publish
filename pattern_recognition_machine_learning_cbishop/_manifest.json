@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1791392657808,
+  "publishedAt": 1791416615224,
   "sections": [
     {
       "title": "📋 Overview",
@@ -441,6 +441,12 @@
       "imageCount": 3
     },
     {
+      "title": "4.5 Bayesian Logistic Regression",
+      "path": "pattern_recognition_machine_learning_cbishop/45_bayesian_logistic_regression.md",
+      "noteCount": 2,
+      "imageCount": 3
+    },
+    {
       "title": "Appendix C. Matrices",
       "path": "pattern_recognition_machine_learning_cbishop/appendix_c_matrices.md",
       "noteCount": 19,
@@ -453,6 +459,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 458,
-  "totalImages": 694
+  "totalNotes": 460,
+  "totalImages": 697
 }
