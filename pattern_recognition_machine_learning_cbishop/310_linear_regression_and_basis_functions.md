@@ -1,6 +1,6 @@
 # 3.1.0 Linear Regression and Basis Functions
 
-📊 **Progress:** `7` Notes | `9` Screenshots | `6` AI Reviews
+📊 **Progress:** `7` Notes | `9` Screenshots | `7` AI Reviews
 
 ---
 <a id="node-djmqx0o"></a>
@@ -22,10 +22,27 @@
 >
 > Nói ngắn gọn thì hiểu đơn giản, là, cái hàm dùng để dự đoán t, là hàm của cả param θ và input x. Thì ta sẽ luôn dùng các hàm tuyến tính đối với θ, có nghĩa là, coi x như constant, thì f(θ, x) = g(θ) là hàm tuyến tính, nhưng với input x thì hàm là phi tuyến. Ví dụ như f(x) = θ1 x1 + θ2 x2², là hàm tuyến tính theo θ = θ1, θ2 nhưng nhưng phi tuyến theo x = (x1, x2)
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=N2py3U9LNrY)
+
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Bạn đã tóm tắt rất chính xác về trọng tâm thay đổi sang học có giám sát và định nghĩa của hồi quy. Điểm mạnh lớn nhất là cách bạn giải thích và minh họa bằng ví dụ về việc hàm có thể tuyến tính theo tham số nhưng phi tuyến theo biến đầu vào, thể hiện sự hiểu biết sâu sắc. Chỉ cần lưu ý thêm rằng các 'basis function' thường là các hàm phi tuyến của biến đầu vào, và chúng ta kết hợp tuyến tính các hàm cơ sở này.
+> Ghi chú nắm rất chắc và chính xác bản chất của mô hình hồi quy tuyến tính (tuyến tính theo tham số, phi tuyến theo biến đầu vào). Có một điểm diễn đạt hơi lỏng lẻo về mặt câu chữ khi nói về tổ hợp tuyến tính cần chỉnh lại cho chuẩn xác.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"bằng cách kết hợp tuyến tính các inputs, sử dụng các basis function"*
+>
+> Cách diễn đạt này dễ gây hiểu nhầm; bản chất mô hình là lấy tổ hợp tuyến tính của các 'hàm cơ sở' (basis functions) phi tuyến của biến đầu vào, chứ không phải tổ hợp tuyến tính trực tiếp của các input variables.
+>
+>
+> **✓ Strengths**
+> - Phân biệt rất rõ ràng và chuẩn xác giữa tính tuyến tính theo tham số (parameters) và tính phi tuyến theo biến đầu vào (inputs).
+> - Ví dụ minh họa cụ thể f(x) = θ1 x1 + θ2 x2² thể hiện sự thấu hiểu trực quan và đúng đắn về khái niệm.
+> - Tóm lược đầy đủ các ý chính của đoạn giới thiệu từ mục tiêu của regression đến vai trò của basis functions.
+>
+> **💡 Deeper notes**
+> - Các hàm cơ sở (basis functions) phi tuyến này được chọn cố định (fixed) từ trước, giúp bài toán tối ưu vẫn giữ được các tính chất giải tích đơn giản (analytical properties) của nghiệm dạng đóng (closed-form solution).
 
 <br>
 
@@ -40,15 +57,15 @@
 >
 >
 >
-> Vậy thì đại khái là, ông nói, nếu làm đơn giản, ta có thể xây dựng hàm dự đoán y(𝐱) để dự đoán t một cách trực tiếp.
+> Vậy thì đại khái là, ông nói, nếu làm đơn giản, ta có thể xây dựng hàm dự đoán y(𝐱) để dự đoán t **một cách trực tiếp**.
 >
 >
 >
-> Tuy nhiên, với góc nhìn xác suất, ta sẽ muốn xây dựng một cái gọi là predictive distribution (khái niệm đã gặp ở chap 1) f(t|𝐱), vì nó sẽ giúp thể hiện tính uncetainty. Và từ đó, ta sẽ đưa ra dự đoán t, theo cách thức giúp giảm thiểu giá trị trung bình của loss mà ta chọn. Phổ biến hay dùng là squared loss, khi đó, cái cách để đưa ra dự đoán t giúp giảm trung bình squared error loss chính là dùng mean của cái predictive distribution này (chính là cái mà gs nói - conditional expectation of t, E\[t|𝐱\], chính là mean của phân phối f(t|𝐱))
+> Tuy nhiên, với góc nhìn xác suất, ta sẽ muốn xây dựng một cái gọi là predictive distribution (khái niệm đã gặp ở chap 1) f(t|𝐱), vì nó sẽ giúp thể hiện tính uncertainty. Và từ đó, ta sẽ **đưa ra dự đoán t, theo cách thức giúp giảm thiểu giá trị trung bình của loss** mà ta chọn. Phổ biến hay dùng là **squared loss**, khi đó, cái cách để đưa ra dự đoán t giúp giảm trung bình squared error loss chính là **dùng mean của cái predictive distribution này** (chính là cái mà gs nói - conditional expectation of t, E\[t|𝐱\], chính là mean của phân phối f(t|𝐱))
 >
 >
 >
-> Cuối cùng, ông nói tuy linear model có nhiều hạn chế đáng kể trong bài toán pattern recognition, ví dụ như khi input space là không gian cao chiều (D lớn), tuy nhiên, mô hình này có những đặc điểm tốt về mặt phân tích (analytical properties) và do đó, nó đóng vai trò nền tảng cho nhiều mô hình phức tạp sau này.
+> Cuối cùng, ông nói tuy linear model **có nhiều hạn chế** đáng kể trong bài toán pattern recognition, ví dụ như khi input space là không gian cao chiều (D lớn), tuy nhiên, mô hình này có những đặc điểm tốt về mặt phân tích (analytical properties) và do đó, nó **đóng vai trò nền tảng** cho nhiều mô hình phức tạp sau này.
 >
 >
 >
@@ -56,15 +73,19 @@
 >
 >
 >
-> Dù mình đoán gs Bishop cũng sẽ nhắc lại, nói lại về cái ý vừa nói ở trên - cái gì mà thay vì xây dựng hàm y(x) dự đoán t, ta xây dựng predictive distribution, và từ đó đưa ra dự đoán, theo cái cách thức nào đó giúp giảm kì vọng (trung bình) loss. Để rồi nếu làm theo cách phổ biến - dùng loss là squared loss thì ta sẽ lấy conditional expectation để dùng dự đoán cho t. Có thể nhớ lại cái này chút xíu:
+> Dù mình đoán gs Bishop cũng sẽ nhắc lại, nói lại về cái ý vừa nói ở trên - cái gì mà thay vì xây dựng hàm y(𝐱) dự đoán t, ta **xây dựng predictive distribution**, và từ đó **đưa ra dự đoán**, theo cái cách thức nào đó **giúp giảm kì vọng (trung bình) loss**. Để rồi nếu làm theo cách phổ biến - dùng loss là squared loss thì ta sẽ lấy conditional expectation để dùng dự đoán cho t. Có thể nhớ lại cái này chút xíu:
 >
 >
 >
-> Đầu tiên, cái ý mà gs nói xây dựng hàm y(x) dự đoán thẳng ra t, thì đại ý là, ta xây dựng một function dựa trên tham số nào đó, để rồi với x đưa vào, lấy ra t luôn. Nhưng làm như vậy, không phản ánh được tính chất không chắc chắn. Ví dụ, làm sao để ta thể hiện ý "với x này, tôi đoán t sẽ bằng như này, nhưng không chắc lắm, nhưng tôi tin t sẽ bằng như kia hơn, tức tôi chắc chắn hơn". Do đó, để thể hiện cái ý rằng, sự dự đoán của ta có yếu tố không chắc, thì ta sẽ dùng một probability distribution, gọi là predictive distribution f(t|𝐱).
+> Đầu tiên, cái ý mà gs nói xây dựng hàm y(𝐱) dự đoán trực tiếp ra t, thì đại ý là, ta xây dựng một function dựa trên tham số nào đó, để rồi với x đưa vào, lấy ra t luôn. Nhưng làm như vậy, **không phản ánh được tính chất không chắc chắn**. Ví dụ, làm sao để ta thể hiện ý "với 𝐱 này, tôi đoán t sẽ bằng như này, nhưng không chắc lắm, nhưng tôi tin t sẽ bằng như kia hơn, tức tôi chắc chắn hơn".
 >
 >
 >
-> Thế thì f(t|𝐱), tất nhiên, đã học xác suất từ Casella hay Stat110, nó là conditional probability distribution, hay nếu nói theo kiểu prior/posterior, thì nó chính là posterior distribution của T.
+> Do đó, **để thể hiện ý "sự dự đoán của ta có yếu tố không chắc"**, thì ta sẽ dùng một **probability distribution**, gọi là predictive distribution f(t|𝐱).
+>
+>
+>
+> ---
 >
 >
 >
@@ -72,27 +93,35 @@
 >
 >
 >
-> Đầu tiên sẽ có ích khi ôn lại bài toán point estimation của Casella: Cho random sample 𝐗 = (X1,....Xn) iid \~ f(x|θ). Nhiệm vụ là muốn xây dựng một hàm của sample W(𝐗), sao cho tại observed value của 𝐗, ta có W(𝐱) estimate tốt cho θ. Sau đó, vì định nghĩa của point estimator quá mơ hồ (bất cứ hàm của sample nào cũng có thể là một point estiamator cho θ (nhưng có là estimator tốt hay không thì chưa biết) nên ta mới có vài phương pháp tiếp cận chính: Method of Moment, Maximum Likelihood, Bayes estimator.
+> Đầu tiên sẽ có ích khi **ôn lại bài toán point estimation của Casella**: Cho random sample 𝐗 = (X1,....Xn) iid \~ f(x|θ). Nhiệm vụ là muốn xây dựng một hàm của sample W(𝐗), sao cho tại observed value của 𝐗, ta có W(𝐱) **estimate tốt** cho giá trị của θ. Sau đó, vì định nghĩa của point estimator quá mơ hồ (bất cứ hàm của sample nào cũng có thể là một point estiamator cho θ (nhưng có là estimator tốt hay không thì chưa biết) nên ta mới có vài phương pháp tiếp cận chính: Method of Moment, Maximum Likelihood, Bayes estimator.
 >
 >
 >
-> Thế thì tạm gác lại hai cái đầu, mình nói luôn sang Bayes estimator. Đã đụng tới chữ Bayes, dĩ nhiên là ta dùng quan điểm (perspective) của trường phái Bayesian - coi θ không phải là fixed nhưng unknown như trường phải classic (hay Frequentist), mà ta coi nó là random variable (vector). Để rồi, khi chưa có data gì, ta chọn cho nó distribution nào đó, dựa vào niềm tin ban đầu (prior knowledge), ví dụ như kinh nghiệm hay sao đó, gọi là prior distribution của θ, f(θ), hay trong sách Casella dùng π(θ). Sau đó, dựa vào Bayes theorem, ta sẽ xây dựng posterior distribution của θ, chính là f(θ|𝐱), hay π(θ|𝐱) = f(x|θ)π(θ)/f(𝐱).
+>  Frequentist vs Bayesian
 >
 >
 >
-> Và lúc này, với một distribution, thì nhiệm vụ vẫn là, cần đưa ra một point estimator, là một hàm của sample W(𝐗). Vậy thì point estimator là cái gì đây?
+> Thế thì tạm gác lại hai cái đầu, mình nói luôn sang Bayes estimator. Đã đụng tới chữ Bayes, dĩ nhiên là ta dùng quan điểm (perspective) của trường phái Bayesian - coi θ không phải là fixed nhưng unknown như trường phải classic (hay Frequentist), mà ta **coi nó là random variable** (vector). Để rồi, khi chưa có data gì, ta chọn cho nó distribution nào đó, dựa vào niềm tin ban đầu (prior knowledge), ví dụ như kinh nghiệm hay sao đó, gọi là prior distribution của θ, f(θ), hay trong sách Casella dùng π(θ). Sau đó, dựa vào Bayes theorem, ta sẽ xây dựng posterior distribution của θ, chính là f(θ|𝐱), hay π(θ|𝐱) = f(x|θ)π(θ)/f(𝐱).
 >
 >
 >
-> Câu trả lời, là, ta sẽ cần viện tới decision theory, trong đó ta sẽ tính có các khái niệm như loss function, risk function. Vì thứ mà ta có là một distribution, vốn phản ánh tính không chắc chắn, nên cần dựa vào lí thuyết này để đưa ra quyết định tối ưu.
+> Và lúc này, với một distribution, thì nhiệm vụ vẫn là, **cần đưa ra một point estimator**, là một hàm của sample W(𝐗). Vậy thì point estimator là cái gì đây?
 >
 >
 >
-> Vậy thì, loss function, là hàm của một estimator, được định nghĩa phản ánh độ sai lệch, của estimator và giá trị param. Cái này nó giống định nghĩa của MSE, MSE cũng là một hàm của estimator, được định nghĩa bằng trung bình của W(𝐗) - θ:
+> Câu trả lời, là, ta sẽ **cần viện tới decision theory**, trong đó ta sẽ tính có các khái niệm như **loss function, risk function**. Vì thứ mà ta có là một distribution, vốn phản ánh tính không chắc chắn, nên cần dựa vào lí thuyết này để đưa ra quyết định tối ưu.
 >
 >
 >
-> Bias(W(𝐗) = E\_θ\[(W - θ)²\], để rồi triển khai ra, ta sẽ có:
+> Vậy thì, loss function, là hàm của một estimator, được định nghĩa phản ánh độ sai lệch, của estimator và giá trị param. Cái này nó giống định nghĩa của MSE, MSE cũng là một hàm của estimator, được định nghĩa bằng trung bình (tức kì vọng) của W(𝐗) - θ:
+>
+>
+>
+> Squared loss = E\[W(𝐱) - θ\]
+>
+>
+>
+> MSE(W(𝐗)) = E\_θ\[(W - θ)²\], triển khai ra, ta sẽ có:
 >
 >
 >
@@ -112,6 +141,10 @@
 >
 >
 >
+> Var(X) = E\[(X-EX)²\] = EX² - (EX)²
+>
+>
+>
 > ..= Var(W) + (EW)² - 2θE\[W\] + θ²
 >
 >
@@ -124,11 +157,15 @@
 >
 >
 >
->  Quay lại với hàm loss, L(W, θ), như đã nói, có thể có nhiều loại, một loại cụ thể là ta có thể có square error loss: L(W(𝐗), θ) = (W(𝐗) - θ)²
+> Quay lại với hàm loss, L(W, θ), như đã nói, có thể có nhiều loại loss, một loại cụ thể là ta có thể có square error loss:
 >
 >
 >
-> lấy trung bình: E\_θ\[L(W, θ)\], đây chính là risk function. (có nghĩa là với loss là squared error loss thì MSE chính là risk function thôi)
+> L(W(𝐗), θ) = (W(𝐗) - θ)²
+>
+>
+>
+> lấy trung bình: E\_θ\[L(W, θ)\], đây chính là **risk function**. (có nghĩa là với loss là squared error loss thì MSE chính là risk function thôi)
 >
 >
 >
@@ -136,11 +173,45 @@
 >
 >
 >
-> Và với risk function, hay loss function, nó không phân biệt classic hay Bayessian, vì việc ta lấy kì vọng, là đang kì vọng của random variable L(W(𝐗), θ). Và điềy này mang ý nghĩa bằng lời là, ta đã biết loss của W(𝐗) khi estimate cho θ, thì bây giờ ta tính trung bình trên mọi giá trị của 𝐗:
+> Và với risk function, hay loss function, nó không phân biệt Classic hay Bayessian, vì việc ta lấy kì vọng, là đang kì vọng của random variable L(W(𝐗), θ). Và điều này mang ý nghĩa bằng lời là, ta đã biết loss của W(𝐗) khi estimate cho θ, thì bây giờ ta tính trung bình trên mọi giá trị của 𝐗:
 >
 >
 >
 > R(θ, W(𝐗)) = E\[L(W(𝐗), θ)\] = ∫L(W(𝐱), θ)f(𝐱|θ)d𝐱
+>
+>
+>
+> ---
+>
+>
+>
+> Vì sao?
+>
+>
+>
+> L(W(𝐗), θ) = là hàm số của (W(𝐗) - θ)²
+>
+>
+>
+> X \~ f(x), EX = ∫xf(x)dx , Σi xi P(X=xi)
+>
+>
+>
+> LOTUS: Y = g(X), EY = ∫g(x)f(x)dx
+>
+>
+>
+> Tương tự như vậy L có thể thấy là biến ngẫu nhiên có được bởi hàm L(W(𝐱), θ) áp lên 𝐗: L(W(𝐗), θ) ví dụ (W(𝐗) - θ)²
+>
+>
+>
+> Nên theo LOTUS: E\[L\] = ∫L(W(𝐱), θ) f(𝐱|θ) d𝐱 = u(θ)
+>
+>
+>
+>
+>
+> ---
 >
 >
 >
@@ -188,6 +259,10 @@
 >
 >
 >
+> f(𝐱|θ) π(θ) = f(θ|𝐱)f(𝐱)
+>
+>
+>
 > = ∫ \[∫L(W(𝐗), θ) f(θ|𝐱) dθ\] f(𝐱) d𝐱
 >
 >
@@ -196,15 +271,19 @@
 >
 >
 >
-> để rồi ta sẽ nhìn nhận bayes risk như việc ta tính trung bình posterior expected loss over mọi possible value của 𝐗.
+> để rồi ta sẽ nhìn nhận Bayes risk như việc ta tính trung bình posterior expected loss over mọi possible value của 𝐗.
 >
 >
 >
-> Và quay lại mục tiêu đưa ra point estimator từ posterior distribution, thì mục tiêu sẽ là giảm thiểu Bayes risk: minimize\_θ ∫ \[∫L(W(𝐱), θ) f(θ|𝐱) dθ\] f(𝐱) d𝐱
+> Và quay lại mục tiêu đưa ra point estimate từ posterior distribution, thì mục tiêu sẽ là giảm thiểu Bayes risk: 
 >
 >
 >
-> Và điều này (với vài lập luận) sẽ tương đương minimize ∫L(W(𝐱), θ) f(θ|𝐱) dθ, tức minimize posterior expect loss.
+> minimize over W(𝐱) ∫ \[∫L(W(𝐱), θ) f(θ|𝐱) dθ\] f(𝐱) d𝐱
+>
+>
+>
+> Và điều này (với vài lập luận) sẽ tương đương minimize ∫L(W(𝐱), θ) f(θ|𝐱) dθ, tức minimize posterior expected loss.
 >
 >
 >
@@ -214,11 +293,13 @@
 >
 > Giả sử dùng squared error loss: ∫L(W(𝐱), θ) f(θ|𝐱) dθ = ∫\[W(𝐱) - θ\]² f(θ|𝐱) dθ,
 >
+>
+>
 > dễ thấy, đây chính là E\[(W(𝐱) - θ)²\] với θ \~ f(θ|𝐱).
 >
 >
 >
-> Và bài toán lúc này tương đương: tìm a để E\[(X - a)²\] nhỏ nhất. Ta có E\[(X - a)²\] = E\[X² - 2aEX + a²\] = E\[X²\] - E\[2aEX\] + E\[a²\] = E\[X²\] - 2a(EX) + a². Để cái này nhỏ nhất, thì -2a EX + a² nhỏ nhất. Đây là hàm bậc hai của a. Đạo hàm: 2a - 2EX. Cho đạo hàm bằng 0, ta có a = EX, chính là minimizer.
+> Và bài toán lúc này tương đương: tìm a để E\[(a-X)²\] nhỏ nhất. Ta có E\[(X - a)²\] = E\[X² - 2aX + a²\] = E\[X²\] - E\[2aX\] + E\[a²\] = E\[X²\] - 2a(EX) + a². Để cái này nhỏ nhất, thì -2a EX + a² nhỏ nhất. Đây là hàm bậc hai của a. Đạo hàm: 2a - 2EX. Cho đạo hàm bằng 0, ta có a = EX, chính là minimizer.
 >
 >
 >
@@ -230,16 +311,28 @@
 >
 >
 >
-> Với bài toán prediction, ta không quan tâm θ, mà ta quan tâm đến việc dự đoán T, nên đại ý là ta sẽ xây dựng predictive distribution f(t|θ,𝐱)
+> Với bài toán prediction, ta không quan tâm θ, mà ta quan tâm đến việc dự đoán T, nên đại ý là ta sẽ xây dựng predictive distribution f(t|𝐱)
 >
 >
 >
 > Và để ra quyết định tối ưu, hoàn toàn tương tự, ta cũng giải bài toán minimize expected loss, và kết quả nếu loss là squared error, sẽ là E\[t|𝐱\]
 
+📹 Video 1: [Predicting Values and Linear Models — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=_xIqFZNeKYE)
+
+📹 Video 2: [Tại sao dự đoán tối ưu với Squared Loss lại là Et|x?](https://www.youtube.com/watch?v=jg-WZOiNjuk)
+
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Điểm mạnh: Bạn đã tóm tắt nội dung văn bản một cách cực kỳ chính xác và đi sâu vào giải thích các khái niệm phức tạp như kỳ vọng có điều kiện và hàm lỗi bình phương bằng cách liên hệ chặt chẽ với lý thuyết thống kê Bayesian. Điều này thể hiện sự hiểu biết sâu rộng, mặc dù một chi tiết nhỏ về ký hiệu f(t|θ,x) ở cuối có thể được làm rõ thêm.
+> Ghi chú rất xuất sắc, không chỉ tóm tắt chính xác nội dung đoạn văn của Bishop mà còn liên hệ và chứng minh lại rất chặt chẽ từ góc nhìn Decision Theory của Casella & Berger.
+>
+> **✓ Strengths**
+> - Tóm tắt đúng và đủ toàn bộ các ý chính trong đoạn trích: từ point prediction y(x), predictive distribution p(t|x), squared loss dẫn đến conditional expectation E[t|x], cho đến ưu/nhược điểm của linear model.
+> - Tự triển khai đầy đủ và chính xác các bước toán học chứng minh posterior mean E[θ|X] tối thiểu hóa Bayes risk dưới squared error loss.
+> - Khả năng kết nối kiến thức rất tốt giữa bài toán suy luận tham số (inference) trong thống kê cổ điển/Bayes với bài toán dự đoán (prediction) trong Machine Learning.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý rằng trong Bishop (Mục 1.5.5), kết quả nghiệm tối ưu cho squared loss là conditional expectation E[t|x] là kết quả thuần túy của lý thuyết quyết định xác suất (Decision Theory) trên phân phối đồng thời p(x, t), không bắt buộc phải xuất phát từ góc nhìn Bayesian về tham số. Phân phối p(t|x) có thể thu được bằng Maximum Likelihood (Frequentist) hoặc bằng cách tích phân triệt tiêu tham số (Bayesian predictive distribution) thì nghiệm tối ưu dưới hàm squared loss vẫn luôn là mean của phân phối này.
 
 **🔗 See also:** [Optimal Prediction with Gaussian Noise](./311_maximum_likelihood_and_least_squares.md#node-wsglxqn)
 
@@ -275,9 +368,17 @@
 > Nói chung, điểm mấu chốt là, thay vì dùng 𝐱 = x1,...xD như input, và linear combination chúng lại, thì ta chế biến các x1,...xD thành một bộ input khác Φ1(x1,..xD), Φ2(x1,...xD),...là các hàm phi tuyến đối với 𝐱, khi đó tuy vẫn tổ hợp tuyến tính chúng lại với w0,w1,...: w0 + w1Φ1(𝐱) + w2Φ2(𝐱) + ...nhưng lúc này, đối với 𝐱, ta có hàm phi tuyếm, nhưng đối với 𝐰 vẫn là hàm tuyến tính. Và mô hình này sẽ mạnh hơn.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
-> Bạn đã nắm vững các khái niệm trọng tâm rất tốt, đặc biệt là sự phân biệt chính xác giữa hàm tuyến tính và hàm affine, điều này thể hiện sự hiểu biết sâu sắc. Cách bạn tóm tắt lại điểm mấu chốt của Basis Function Models cũng rất rõ ràng và đầy đủ.
+> Ghi chú nắm rất chắc và sâu sắc nội dung của bài học, thậm chí nhận xét chuẩn xác về mặt toán học giữa hàm tuyến tính (linear) và hàm affine.
+>
+> **✓ Strengths**
+> - Phân biệt chính xác giữa tổ hợp tuyến tính thuần túy và ánh xạ affine khi có sự xuất hiện của hệ số tự do w0 (bias/intercept).
+> - Hiểu rõ bản chất cốt lõi của mô hình: phi tuyến tính đối với biến đầu vào x nhưng vẫn bảo toàn tính tuyến tính đối với tham số trọng số w.
+> - Nắm chuẩn cấu trúc tổng quát của mô hình hàm cơ sở (basis function) cùng số lượng tham số M.
+>
+> **💡 Deeper notes**
+> - Để biểu diễn gọn hơn về mặt đại số tuyến tính, người ta thường quy ước thêm hàm cơ sở ảo phi_0(x) = 1, khi đó công thức trở thành tích vô hướng w^T * phi(x) chạy từ j = 0 đến M - 1.
 
 <br>
 
@@ -303,9 +404,24 @@
 > Ông nói đại ý rằng trong nhiều bài toán pattern reconition thực tế, thì ta thường có bước feature engineering hay pre-processing (như đã biết, đại khái là ta tiền xử lí data, hoặc chế cháo tạo các feature mới từ các feature gốc) thì khi đó, chúng có thể được thể hiện thông qua các basis function này. (nói đơn giản, là ta có thể hiểu hàm Φ sẽ đại diện cho các bước preprocessing hay feature engineering này trong thực tế)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú rất chính xác và chi tiết, đặc biệt là phần giải thích về vai trò của φ₀(x) và sự khác biệt giữa "bias" trong mô hình và "bias" trong thống kê. Cách bạn liên hệ hàm cơ sở với feature engineering thực tế cũng rất rõ ràng.
+> Ghi chú rất tốt, thể hiện sự hiểu bài sâu sắc và tự diễn giải chi tiết cách gộp bias parameter vào tích vô hướng cũng như phân biệt chuẩn xác với bias trong thống kê.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"bias của estimator W(𝐗) là hàm số của W(𝐗), định nghĩa bởi: Bias(W(𝐗)) = E_θ[W(𝐗)] - θ"*
+>
+> Về mặt toán học chính xác, Bias của một ước lượng là hàm số của tham số θ (ký hiệu Bias_θ(W) = E_θ[W] - θ) chứ không phải là hàm số của biến ngẫu nhiên W(𝐗), vì kỳ vọng E_θ đã triệt tiêu biến ngẫu nhiên 𝐗.
+>
+>
+> **✓ Strengths**
+> - Diễn giải tường minh và trực quan bước biến đổi đặt basis function giả định phi_0(x) = 1 để gộp w_0 vào biểu diễn tích vô hướng dạng vector w^T phi(x).
+> - Phân biệt chính xác khái niệm 'bias' (hệ số chặn/offset) trong mô hình tuyến tính với khái niệm chệch (statistical bias) trong bài toán ước lượng điểm.
+> - Nắm bắt đúng bản chất thực tế của basis functions như một cơ chế trích xuất đặc trưng (feature engineering/pre-processing).
+>
+> **💡 Deeper notes**
+> - Dù mô hình y(x, w) = w^T phi(x) có thể phi tuyến đối với biến đầu vào x thông qua các basis functions phi(x), nó vẫn được gọi là 'Linear Basis Function Model' vì nó hoàn toàn tuyến tính đối với vector trọng số w.
 
 **🔗 See also:** [Likelihood and Error Functions](./311_maximum_likelihood_and_least_squares.md#node-urnjdcs) · [Section 3.3.3 Equivalent Kernel](./333_equivalent_kernel.md#node-qgf9klh)
 
@@ -333,9 +449,23 @@
 > Ông lưu ý, đại khái là cái này đừng coi nó hay đòi hỏi nó phải là một valid pdf, hay cũng đừng cho rằng nó có ý nghĩa xác suất gì, cái này có thể hiểu cũng giống như với Gaussian kernel, ta chỉ muốn hàm kernel có cái hành vi như đường cong cái chuông của phân phối Normal pdf mà thôi, chứ chả có hàm ý xác suất gì cả. Nên ở đây cũng vậy, ta sẽ ko đòi hỏi Φj(x) phải có các tính chất valid của một hàm pdf (như intergrate = 1). Hơn nữa, kiểu gì thì ta cũng sẽ nhân với hệ số wj.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
 >
-> Ghi chú của bạn rất chính xác và sâu sắc. Đặc biệt, cách bạn giải thích sự khác biệt giữa hàm cơ sở toàn cục và cục bộ bằng ví dụ minh họa và phép so sánh với Gaussian kernel thể hiện sự hiểu biết sâu rộng. Một chút rõ ràng hơn về vai trò của 's' trong 'spatial scale' sẽ làm cho ghi chú trở nên hoàn hảo.
+> Ghi chú nắm rất chắc và diễn giải trực quan điểm khác biệt giữa basis toàn cục (đa thức) và cục bộ (Gaussian), cũng như lý do bỏ qua hệ số chuẩn hóa. Chỉ có một điểm hiểu hơi lệch nhẹ về cụm từ 'simplify the analysis'.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"đặc điểm này mang lại các lợi ích khi giải thích (kết quả) mô hình"*
+>
+> Trong ngữ cảnh 'greatly simplify the analysis of this class of models', tác giả muốn nói đến việc phân tích mặt toán học và tìm nghiệm (như nghiệm đóng/closed-form solution, tính lồi, xử lý Bayesian/MLE dễ dàng hơn) chứ không chỉ đơn thuần là tính giải thích được (interpretability) của kết quả.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất đúng và đưa ra ví dụ trực quan về tính chất 'toàn cục' (global) của hàm đa thức và tính chất 'cục bộ' (local) của hàm Gaussian.
+> - Nắm chuẩn xác lý do vì sao Gaussian basis không cần hệ số chuẩn hóa của một hàm mật độ xác suất (pdf) hợp lệ vì đã có trọng số w_j hấp thụ.
+>
+> **💡 Deeper notes**
+> - Về 'spatial scale s' mà bạn thắc mắc: s đóng vai trò giống độ lệch chuẩn sigma trong phân phối chuẩn. Nó chi phối 'độ rộng' (bán kính ảnh hưởng) của hình chuông; s càng lớn thì hàm trải rộng và bao phủ một vùng không gian lớn hơn, s càng nhỏ thì hàm càng nhọn và phạm vi tác động càng cục bộ.
 
 **🔗 See also:** [Khớp đường cong hàm đa thức](./11_example_polynomial_curve_fitting.md#node-79h9mtc)
 
@@ -367,7 +497,15 @@
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Bạn đã ghi chú rất chính xác các định nghĩa và mối quan hệ giữa hàm sigmoid và tanh. Phần ví dụ minh họa chi tiết về tổ hợp tuyến tính cho thấy sự hiểu biết sâu sắc và khả năng áp dụng kiến thức của bạn.
+> Ghi chú rất chính xác và thể hiện sự hiểu bài sâu sắc; bạn không chỉ nắm vững công thức mà còn nhận diện rất tinh tế phần hằng số dịch chuyển (affine vs. linear combination) và bản chất mô hình tuyến tính với tham số.
+>
+> **✓ Strengths**
+> - Nắm chuẩn xác định nghĩa của sigmoidal basis function và mối quan hệ đại số giữa logistic sigmoid và tanh.
+> - Rất nhạy bén khi chỉ ra phần dư hằng số (α/2 + β/2) biến biểu thức thành một biến đổi affine thay vì strictly linear nếu không tính hệ số bias/chặn.
+> - Kết nối trực giác xuất sắc về vai trò của basis function: tạo tính phi tuyến đối với input nhưng vẫn giữ nguyên tính tuyến tính đối với tham số (weights).
+>
+> **💡 Deeper notes**
+> - Về mặt toán học, lý do sách Bishop coi 'tổ hợp tuyến tính của sigmoid tương đương tổ hợp tuyến tính của tanh' là vì trong mô hình hồi quy tuyến tính luôn có sẵn hàm cơ sở hằng số bias $\phi_0(x) = 1$ (ứng với hệ số $w_0$). Do đó, các hằng số sinh ra từ phép đổi biến $(\alpha/2 + \beta/2)$ sẽ được gộp tự nhiên vào trọng số bias $w_0$.
 
 <br>
 
@@ -385,6 +523,26 @@
 >
 >
 > Cuối cùng, gs cho rằng, phần lớn các thảo luận trong chap này không care / phụ thuộc basis fuction cụ thể là gì. Nói cách, Φ là gì cũng được, kể cả là hàm identity Φ(𝐱) = 𝐱 Và để đơn giản, ta sẽ chỉ tập trung vào bài toán mà t là scalar, tức là target variable chỉ là scalar variable chứ ko phải vector.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **80/100** · ✓ Move on
+>
+> Bạn đã nắm rất tốt ý chính của đoạn văn về tính tổng quát của mô hình tuyến tính và giả định biến mục tiêu scalar. Tuy nhiên, bạn đã nhầm lẫn đặc điểm của Wavelets sang Fourier basis ở đoạn đầu.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Đoạn đầu nói sơ về một loại basis function gọi là Fourier basis, có thể tìm hiểu nó sau, chỉ cần biết đại ý là nó sẽ phù hợp với input có cấu trúc dạng chuỗi ví dụ như các điểm thời gian nối tiếp nhau hoặc các pixel trên bức ảnh."*
+>
+> Bạn đã nhầm lẫn giữa Fourier basis và Wavelets. Trong văn bản gốc, Fourier basis có phạm vi không gian vô hạn (infinite spatial extent). Phần nói về đặc tính khu trú cả trong không gian lẫn tần số và đặc biệt thích hợp với dữ liệu dạng lưới đều đặn (regular lattice như chuỗi thời gian, pixel ảnh) là tác giả đang mô tả Wavelets.
+>
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác thông điệp cốt lõi: phần lớn phân tích trong chương không phụ thuộc vào dạng cụ thể của hàm cơ sở phi(x), bao gồm cả trường hợp hàm đồng nhất phi(x) = x.
+> - Hiểu đúng quy ước đơn giản hóa ký hiệu khi chỉ xét một biến mục tiêu scalar t trước khi mở rộng ở mục 3.1.5.
+>
+> **💡 Deeper notes**
+> - Fourier basis biểu diễn tín hiệu trên toàn bộ miền không gian (infinite spatial extent); do đó khi cần khu trú cục bộ ở cả miền không gian và miền tần số, người ta mới dùng Wavelets.
+> - Wavelets thường được thiết kế trực giao lẫn nhau (mutually orthogonal) để tối ưu hóa và đơn giản hóa việc tính toán khi áp dụng trên lưới rời rạc.
 
 <br>
 
