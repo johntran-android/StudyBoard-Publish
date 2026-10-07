@@ -182,7 +182,7 @@
 <p align="center"><kbd><img src="assets/k9q5rh88uuj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì f(ℳ) là cách để ta đưa vào PRERENCE / PRIOR BELIEF về mô hình- ý là, cũng là việc ví dụ như ta ưu ái những mô hình này hơn mô hình kia (thông qua việc đưa nó vào danh sách, và thông qua việc gán giá trị xác suất lớn nhỏ cho nó).
+> Thế thì f(ℳ) là cách để ta đưa vào PREFERENCE / PRIOR BELIEF về mô hình- ý là, cũng là việc ví dụ như ta ưu ái những mô hình này hơn mô hình kia (thông qua việc đưa nó vào danh sách, và thông qua việc gán giá trị xác suất lớn nhỏ cho nó).
 >
 >
 >
@@ -234,7 +234,7 @@
 >
 >
 >
-> Và cuối cùng, tỉ lệ của hai model evidence f(𝒟|**ℳ**i)/f(𝒟|**ℳ**j) gọi là Bayes factor.
+> Và cuối cùng, tỉ lệ của hai model evidence f(𝒟|**ℳ**i)/f(𝒟|**ℳ**j) gọi là **Bayes factor**.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
