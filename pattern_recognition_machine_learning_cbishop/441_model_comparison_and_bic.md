@@ -590,7 +590,7 @@
 >
 >
 >
-> Còn vì sao cần full rank: để
+> Còn vì sao cần full rank: Là để det khác 0 (det matrix là tích eigenvalue, không full rank thì sẽ có eigenvalue = 0, khiến det = 0), mà khi đó ln 0 → - inf khiến công thức xấp xỉ này (ln model evidence ≈ ...) sẽ không còn ý nghĩa.
 >
 >
 >
