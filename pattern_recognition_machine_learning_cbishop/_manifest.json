@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1791416615224,
+  "publishedAt": 1791501298363,
   "sections": [
     {
       "title": "📋 Overview",
@@ -443,8 +443,14 @@
     {
       "title": "4.5 Bayesian Logistic Regression",
       "path": "pattern_recognition_machine_learning_cbishop/45_bayesian_logistic_regression.md",
-      "noteCount": 2,
-      "imageCount": 3
+      "noteCount": 3,
+      "imageCount": 4
+    },
+    {
+      "title": "4.5.2 Predictive distribution",
+      "path": "pattern_recognition_machine_learning_cbishop/452_predictive_distribution.md",
+      "noteCount": 0,
+      "imageCount": 0
     },
     {
       "title": "Appendix C. Matrices",
@@ -457,8 +463,14 @@
       "path": "pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md",
       "noteCount": 5,
       "imageCount": 7
+    },
+    {
+      "title": "Untitled",
+      "path": "pattern_recognition_machine_learning_cbishop/untitled.md",
+      "noteCount": 0,
+      "imageCount": 0
     }
   ],
-  "totalNotes": 460,
-  "totalImages": 697
+  "totalNotes": 461,
+  "totalImages": 698
 }
