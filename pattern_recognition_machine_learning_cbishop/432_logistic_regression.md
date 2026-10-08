@@ -173,6 +173,8 @@
 > **💡 Deeper notes**
 > - Từ biểu thức đạo hàm (1), bạn cũng có thể biến đổi trực tiếp thành σ(1 - σ) bằng cách tách tử số: exp(-a)/[1+exp(-a)]² = {1/[1+exp(-a)]} * {[1 + exp(-a) - 1]/[1+exp(-a)]} = σ(a)[1 - σ(a)] mà không cần tính riêng vế phải.
 
+**🔗 See also:** [Gaussian Approximation to Posterior Distribution](./45_bayesian_logistic_regression.md#node-tf9n2kb)
+
 <br>
 
 <a id="node-gvw6cdv"></a>
@@ -510,7 +512,7 @@
 > **💡 Deeper notes**
 > - Việc gradient của logistic regression có cùng dạng (yi - ti)Φi với hồi quy tuyến tính (sum-of-squares) không phải ngẫu nhiên, mà bắt nguồn từ tính chất tổng quát của mô hình tuyến tính tổng quát (GLM) khi sử dụng hàm liên kết chính tắc (canonical link function).
 
-**🔗 See also:** [Maximum Likelihood and Gradient](./311_maximum_likelihood_and_least_squares.md#node-ogc31vz) · [Hessian for Logistic Regression](./433_iterative_reweighted_least_squares.md#node-7nipjyu) · [Section 4.3.6 Canonical Link Functions](./436_canonical_link_function.md#node-tn8x82z)
+**🔗 See also:** [Maximum Likelihood and Gradient](./311_maximum_likelihood_and_least_squares.md#node-ogc31vz) · [Hessian for Logistic Regression](./433_iterative_reweighted_least_squares.md#node-7nipjyu) · [Section 4.3.6 Canonical Link Functions](./436_canonical_link_function.md#node-tn8x82z) · [Gaussian Approximation to Posterior Distribution](./45_bayesian_logistic_regression.md#node-tf9n2kb)
 
 <br>
 
