@@ -1,4 +1,4 @@
-# 2.4 Differentiating under integral
+# 2.4 Differentiating Under Integral
 
 📊 **Progress:** `11` Notes | `19` Screenshots
 
@@ -301,7 +301,7 @@
 > Đại khái, Lipschitz condituous là một..condition, rằng hàm số không có sự thay
 > đổi độ dốc quá đột ngột, và nó thể hiện điều này bằng một cái bound của đạo
 > hàm cấp 2: khi di chuyển từ x đến y thì đạo hàm cấp hai không được thay đổi
-> quá nhanh: ||∇^2f(x) - ∇^2f(y)||2 ≤ L||x - y||2 với L là constant nào đó.
+> quá nhanh: ||∇²f(x) - ∇²f(y)||2 ≤ L||x - y||2 với L là constant nào đó.
 >
 >
 >
@@ -487,11 +487,11 @@
 >
 >
 >
-> với z(x) = 1/v(x) = v(x)^-1 ⇨ z'(x) = d/dv z . d/dx v = -v^-2v' = -v'/v^2
+> với z(x) = 1/v(x) = v(x)^-1 ⇨ z'(x) = d/dv z . d/dx v = -v^-2v' = -v'/v²
 >
 >
 >
-> ⇨ (u/v)' = u'/v + u (-v'/v^2) = **(u'v - uv')/v^2**
+> ⇨ (u/v)' = u'/v + u (-v'/v²) = **(u'v - uv')/v²**
 >
 >
 >
