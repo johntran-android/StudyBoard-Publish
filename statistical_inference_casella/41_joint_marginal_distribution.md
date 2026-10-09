@@ -224,16 +224,16 @@
 >
 >
 >
-> E(X, Y) = Σ {(x,y) ∈ R^2} (x, y) fX,Y(x, y)
+> E(X, Y) = Σ {(x,y) ∈ R²} (x, y) fX,Y(x, y)
 >
 >
 >
-> = Σ{(x, y) ∈ R^2} (fX,Y(x, y) x, fX,Y(x, y) y) | ta nhân scalar fX,Y(x, y) cho
+> = Σ{(x, y) ∈ R²} (fX,Y(x, y) x, fX,Y(x, y) y) | ta nhân scalar fX,Y(x, y) cho
 > từng  component của (x, y)
 >
 >
 >
-> = (Σ{(x, y) ∈ R^2} fX,Y(x, y) x, Σ{(x, y) ∈ R^2} fX,Y(x, y) y)
+> = (Σ{(x, y) ∈ R²} fX,Y(x, y) x, Σ{(x, y) ∈ R²} fX,Y(x, y) y)
 >
 >
 >
@@ -242,7 +242,7 @@
 >
 >
 >
-> Xét phần tử thứ nhất: Σ{(x, y) ∈ R^2} fX,Y(x, y) x
+> Xét phần tử thứ nhất: Σ{(x, y) ∈ R²} fX,Y(x, y) x
 >
 >
 >
@@ -281,7 +281,7 @@
 >
 >
 >
-> Eg(X,Y) = Σ {(x, y) ∈ R^2} g(x,y) fX,Y(x,y)
+> Eg(X,Y) = Σ {(x, y) ∈ R²} g(x,y) fX,Y(x,y)
 >
 >
 >
@@ -294,7 +294,7 @@
 >
 >
 > Cuối cùng là, tương tự, tính pmf của fX là Σ mọi possible value của x phải
-> bằng 1, thì Σ mọi possible value của (x,y) tức R^2 của joint pmf cũng bằng 1
+> bằng 1, thì Σ mọi possible value của (x,y) tức R² của joint pmf cũng bằng 1
 >
 >
 >
