@@ -660,7 +660,7 @@
 >
 >
 >
-> Var(X) = E[X - EX]^2
+> Var(X) = E[X - EX]²
 >
 >
 >
@@ -668,19 +668,19 @@
 >
 >
 >
-> Var(X) = E[X - EX|Y + EX|Y - EX]^2
+> Var(X) = E[X - EX|Y + EX|Y - EX]²
 >
 >
 >
-> = E[(X - EX|Y) + (EX|Y - EX)]^2
+> = E[(X - EX|Y) + (EX|Y - EX)]²
 >
 >
 >
-> = E{ (X - EX|Y)^2 + (EX|Y - EX)^2 + 2(X - EX|Y)(EX|Y - EX) } | khai triển (a + b)^2
+> = E{ (X - EX|Y)² + (EX|Y - EX)² + 2(X - EX|Y)(EX|Y - EX) } | khai triển (a + b)²
 >
 >
 >
-> = E(X - EX|Y)^2 + E(EX|Y - EX)^2 + 2E(X - EX|Y)(EX|Y - EX) | linearity
+> = E(X - EX|Y)² + E(EX|Y - EX)² + 2E(X - EX|Y)(EX|Y - EX) | linearity
 >
 >
 >
@@ -726,7 +726,7 @@
 >
 >
 >
-> Và Var(X) = E(X - EX|Y)^2 + E(EX|Y - EX)^2
+> Và Var(X) = E(X - EX|Y)² + E(EX|Y - EX)²
 >
 >
 >
@@ -734,38 +734,38 @@
 >
 >
 >
-> E[(X - EX|Y)^2] , cũng áp dụng EX = E[EX|Y]
+> E[(X - EX|Y)²] , cũng áp dụng EX = E[EX|Y]
 >
 >
 >
-> = E{E[(X - EX|Y)^2|Y]}
+> = E{E[(X - EX|Y)²|Y]}
 >
 >
 >
-> Thì E[(X - EX|Y)^2|Y] chính là Var(X|Y)
+> Thì E[(X - EX|Y)²|Y] chính là Var(X|Y)
 >
 >
 >
-> Vậy E[(X - EX|Y)^2] = E{E[(X - EX|Y)^2|Y]} = **E[Var(X|Y)]** 
+> Vậy E[(X - EX|Y)²] = E{E[(X - EX|Y)²|Y]} = **E[Var(X|Y)]** 
 >
 >
 >
 > Đây là công thức đã được nói sơ qua ở Stat110, lecture 27. Nói chung là không có gì
-> phức tạp, chỉ là ta mở rộng từ định nghĩa của variance Var(X) = EX^ - (EX)^2
-> sang Var(X|Y) = EX^2|Y - (^2EX|Y)
+> phức tạp, chỉ là ta mở rộng từ định nghĩa của variance Var(X) = EX^ - (EX)²
+> sang Var(X|Y) = EX²|Y - (²EX|Y)
 >
 >
 >
-> Hoặc Var(X) = E[X - EX]^2 sang Var(X|Y) = E[X - EX|Y]^2|Y
+> Hoặc Var(X) = E[X - EX]² sang Var(X|Y) = E[X - EX|Y]²|Y
 >
 >
 >
-> Xét term thứ hai: E(EX|Y - EX)^2
+> Xét term thứ hai: E(EX|Y - EX)²
 >
 >
 >
 > Như đã nói nhiều lần EX|Y là một random variable, thì mean của nó là gì, là E[EX|Y]
-> mà theo Adam's Law chính là EX Vậy E(EX|Y - EX)^2 chính là E(EX|Y - E[EX|Y])^2
+> mà theo Adam's Law chính là EX Vậy E(EX|Y - EX)² chính là E(EX|Y - E[EX|Y])²
 >
 >
 >
@@ -773,7 +773,7 @@
 >
 >
 >
-> Vậy Var(X) = E(X - EX|Y)^2 + E(EX|Y - EX)^2
+> Vậy Var(X) = E(X - EX|Y)² + E(EX|Y - EX)²
 >
 > **⇔ Var(X) = E[Var(X|Y)] - Var(EX|Y)**
 
@@ -809,15 +809,15 @@
 >
 >
 >
-> = n^2Var(P) | Var(cX) = c^2 Var(X)
+> = n²Var(P) | Var(cX) = c² Var(X)
 >
 >
 >
-> Với P ~ β(α, β) ⇨ Var(P) = αβ/[(α+β)^2(α+β+1)]
+> Với P ~ β(α, β) ⇨ Var(P) = αβ/[(α+β)²(α+β+1)]
 >
 >
 >
-> ⇨ n^2Var(P) = n^2 αβ/[(α+β)^2(α+β+1)]
+> ⇨ n²Var(P) = n² αβ/[(α+β)²(α+β+1)]
 >
 >
 >
