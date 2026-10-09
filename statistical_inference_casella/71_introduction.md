@@ -120,7 +120,7 @@
 > **💡 Deeper notes**
 > - Đoạn văn gốc còn lưu ý thêm một chi tiết: định nghĩa không ràng buộc miền giá trị (range) của statistic phải trùng với miền giá trị của tham số (dù về mặt nguyên tắc ta mong muốn chúng trùng nhau, nhưng thực tế có trường hợp không trùng).
 
-**🔗 See also:** [Cross-Entropy Error Function Gradient *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/432_logistic_regression.md#node-gvw6cdv)
+**🔗 See also:** [Cross-Entropy Error Function Gradient *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/432_logistic_regression.md#node-gvw6cdv) · [Model Evidence and Occam Factor *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/441_model_comparison_and_bic.md#node-vwb8lk4)
 
 <br>
 
