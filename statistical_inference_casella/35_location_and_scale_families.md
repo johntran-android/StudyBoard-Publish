@@ -197,12 +197,12 @@
 >
 >
 >
-> **f(x) = (1/σ√2π) e^-x^2/2σ^**2 sẽ là standard pdf CỦA MỘT LOCATION 
+> **f(x) = (1/σ√2π) e^-x²/2σ^**2 sẽ là standard pdf CỦA MỘT LOCATION 
 > FAMILY. 
 >
 >
 >
-> Bởi vì xét f(x - μ) = (1/σ√2π) e^-(x-μ)^2/2σ², thì nó sẽ có dạng là pdf của
+> Bởi vì xét f(x - μ) = (1/σ√2π) e^-(x-μ)²/2σ², thì nó sẽ có dạng là pdf của
 > Normal(μ, σ²) ở trang 3.3.13, và công thức f(x) chính là Standard Normal. 
 >
 >
@@ -450,7 +450,7 @@
 >
 >
 >
-> Ở đây X = g(Z) = σZ + μ, Tức hàm x = g(u) = σu + μ ⇔ u = ginv(x)
+> Ở đây X = g(Z) = σZ + μ, Tức hàm x = g(u) = σu + μ ⇔ u = g⁻¹(x)
 >
 >
 >
@@ -466,7 +466,7 @@
 >
 >
 >
-> Còn  |dz/dx| = |d ginv(x) / dx| vì g là hàm monotone increasing nên  =
+> Còn  |dz/dx| = |d g⁻¹(x) / dx| vì g là hàm monotone increasing nên  =
 > d/dx (x - μ) / σ  = 1/σ
 >
 >
@@ -487,11 +487,11 @@
 >
 >
 >
-> Áp dụng theorem: Z = g(X) = (X - μ) / σ  ⇔ X = ginv(Z) = Z σ + μ
+> Áp dụng theorem: Z = g(X) = (X - μ) / σ  ⇔ X = g⁻¹(Z) = Z σ + μ
 >
 >
 >
-> ⇨ ginv(u) = σ u + μ
+> ⇨ g⁻¹(u) = σ u + μ
 >
 >
 >
@@ -499,11 +499,11 @@
 >
 >
 >
-> = fX(x) | d ginv(z) / dz |
+> = fX(x) | d g⁻¹(z) / dz |
 >
 >
 >
-> = f[(x - μ)/σ] / σ . ( d ginv(z) / dz ) do ginv monoton increasing
+> = f[(x - μ)/σ] / σ . ( d g⁻¹(z) / dz ) do g⁻¹ monoton increasing
 >
 >
 >
