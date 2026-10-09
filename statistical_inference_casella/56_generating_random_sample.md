@@ -358,15 +358,15 @@
 >
 >
 > Chưa hết, theorem cũng cho biết, nếu ta có random variable U ~ uniform(0,1)
-> thì  F_inv(U) sẽ là rv ~ F(.), tức là, bằng cách lấy inverse của cdf function F(.)
+> thì  F⁻¹(U) sẽ là rv ~ F(.), tức là, bằng cách lấy inverse của cdf function F(.)
 > nào đó và apply lên U, thì ta sẽ có một random variable của distribution với
 > cdf là F đó.
 >
 >
 >
 > Trong phần đó cũng bàn về việc nếu hàm F không phải là hàm strictly increasing
-> thì ta hàm Finv sẽ không well-defined, khi có thể có nhiều x mà cho ra cùng 
-> F(x), khi đó bằng cách define hàm Finv khác chút xíu: Finv = inf x {x: F(x) ≥ y}
+> thì ta hàm F⁻¹ sẽ không well-defined, khi có thể có nhiều x mà cho ra cùng 
+> F(x), khi đó bằng cách define hàm F⁻¹ khác chút xíu: F⁻¹ = inf x {x: F(x) ≥ y}
 > thì ta sẽ giải quyết được vấn đề.
 >
 >
@@ -395,8 +395,8 @@
 >
 >
 >
-> (Ví dụ giống như ta có: f(s) = s^2/2 và f thì lại là g(k(.)) với công thức là g(t) = t/2, và 
-> k(v) = v^2 ⇨ g(k(.))(s) = g(k(s)) = g(s^2) = s^2/2. Đây là cái gọi là composition 
+> (Ví dụ giống như ta có: f(s) = s²/2 và f thì lại là g(k(.)) với công thức là g(t) = t/2, và 
+> k(v) = v² ⇨ g(k(.))(s) = g(k(s)) = g(s²) = s²/2. Đây là cái gọi là composition 
 > function)
 >
 >
@@ -405,16 +405,16 @@
 >
 >
 >
-> Tiếp tục, lại xét F(X(s)) ≤ u, khi F strictly increasing (khiến FXinv well defined) hoặc 
-> khi F không strictly increasing và ta define FXinv = inf {x: F(x) ≥ y} (*) thì ta sẽ có:
+> Tiếp tục, lại xét F(X(s)) ≤ u, khi F strictly increasing (khiến FX⁻¹ well defined) hoặc 
+> khi F không strictly increasing và ta define FX⁻¹ = inf {x: F(x) ≥ y} (*) thì ta sẽ có:
 >
 >
 >
-> F(X(s)) ≤ u ⇔ Finv(F(X(s)) ≤ u) ≤ Finv(u) ⇔ X(s) ≤ Finv(u)
+> F(X(s)) ≤ u ⇔ F⁻¹(F(X(s)) ≤ u) ≤ F⁻¹(u) ⇔ X(s) ≤ F⁻¹(u)
 >
 >
 >
-> ⇨ (1) = {s ∈ Ω: X(s)≤ Finv(u)} 
+> ⇨ (1) = {s ∈ Ω: X(s)≤ F⁻¹(u)} 
 >
 >
 >
@@ -430,12 +430,12 @@
 >
 >
 >
-> = P({s ∈ Ω: X(s)≤ FXinv(u)})
+> = P({s ∈ Ω: X(s)≤ FX⁻¹(u)})
 >
 >
 >
-> và tới đây cái ta có chính là P(X ≤ Finv(u)), và theo định nghĩa cdf, nó chính là
-> FX(FXinv(u)), và dĩ nhiên kết quả là: u
+> và tới đây cái ta có chính là P(X ≤ F⁻¹(u)), và theo định nghĩa cdf, nó chính là
+> FX(FX⁻¹(u)), và dĩ nhiên kết quả là: u
 >
 >
 >
@@ -448,27 +448,27 @@
 >
 >
 >
-> Chứng minh nếu U ~uniform(0,1), Finv(U) ~ F(.)
+> Chứng minh nếu U ~uniform(0,1), F⁻¹(U) ~ F(.)
 >
 >
 >
-> Xét X = Finv(U). CDF của X, theo định nghĩa, là P(X ≤ x)
+> Xét X = F⁻¹(U). CDF của X, theo định nghĩa, là P(X ≤ x)
 >
 >
 >
-> mà X ≤ x  bản chất là {s ∈ Ω: X(s) ≤ x} = {s ∈ Ω: [Finv(U)](s) ≤ x}
+> mà X ≤ x  bản chất là {s ∈ Ω: X(s) ≤ x} = {s ∈ Ω: [F⁻¹(U)](s) ≤ x}
 >
 >
 >
-> = {s ∈ Ω: Finv(U(s)) ≤ x}
+> = {s ∈ Ω: F⁻¹(U(s)) ≤ x}
 >
 >
 >
-> = {s ∈ Ω: (U(s)) ≤ F(x)} | do Finv(U(s)) ≤ x ⇔ U(s) ≤ F(x) với (*) 
+> = {s ∈ Ω: (U(s)) ≤ F(x)} | do F⁻¹(U(s)) ≤ x ⇔ U(s) ≤ F(x) với (*) 
 >
 >
 >
-> ⇨ P(X ≤ x) = P({s ∈ Ω: Finv(U(s)) ≤ x}) = P({s ∈ Ω: (U(s)) ≤ F(x)} )
+> ⇨ P(X ≤ x) = P({s ∈ Ω: F⁻¹(U(s)) ≤ x}) = P({s ∈ Ω: (U(s)) ≤ F(x)} )
 >
 >
 >
@@ -498,9 +498,9 @@
 <p align="center"><kbd><img src="assets/zg2goj3ry1f.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, ví dụ này, áp dụng theorem 2.1.10, với cdf FY, thì FY_inv(U) với U ~
+> Rồi, ví dụ này, áp dụng theorem 2.1.10, với cdf FY, thì FY⁻¹(U) với U ~
 > uniform(0,1) sẽ là một random variable ~ FY Thì dĩ nhiên ở đây nếu FY là
-> cdf của expo(λ) thì FY_inv(U) chính là một random variable ~ expo(λ)
+> cdf của expo(λ) thì FY⁻¹(U) chính là một random variable ~ expo(λ)
 >
 >
 >
@@ -520,7 +520,7 @@
 >
 >
 >
-> Vậy FY_inv(U) = -λ log[1 - U]
+> Vậy FY⁻¹(U) = -λ log[1 - U]
 
 <br>
 
@@ -554,7 +554,7 @@
 >
 > (Dễ mà, EX = ∫-inf:inf xfX(x)dx vói fX(x) là pdf của uniform(0,1). Ta nhớ với
 > uniform(a,b) thì pdf của nó: fX(x) = c = 1/(b-a) ⇨ với uniform(0,1), fX(x) = 1 ⇨
-> EX = ∫-inf:inf x dx = ∫0:1 dx = x^2/2|0:1 = (1/2) x|0:1 = 1/2)
+> EX = ∫-inf:inf x dx = ∫0:1 dx = x²/2|0:1 = (1/2) x|0:1 = 1/2)
 >
 >
 >
@@ -563,36 +563,36 @@
 >
 >
 >
-> Mà Var(U) bằng mấy ? TÍnh lại không khó:  Var(U) = EU^2 - (EU)^2
+> Mà Var(U) bằng mấy ? TÍnh lại không khó:  Var(U) = EU² - (EU)²
 >
 >
 >
-> (xuất phát từ công thức thứ nhất VarU = E[U - EU]^2 = E[U^2 - 2UEU +
-> (EU)^2]
+> (xuất phát từ công thức thứ nhất VarU = E[U - EU]² = E[U² - 2UEU +
+> (EU)²]
 >
 >
 >
-> = EU^2 - 2E(UEU) + E[(EU)^2]
+> = EU² - 2E(UEU) + E[(EU)²]
 >
 >
 >
-> = EU^2 - 2(EU)^2 + (EU)^2 = EU^2 - (EU)^2
+> = EU² - 2(EU)² + (EU)² = EU² - (EU)²
 >
 >
 >
-> EU^2 = (theo lotus, EgX = ∫-inf:inf g(x)fX(x)dx)
+> EU² = (theo lotus, EgX = ∫-inf:inf g(x)fX(x)dx)
 >
 >
 >
-> = ∫0:1 u^2 fU(u)dt = ∫0:1 u^2 dt = [nguyên hàm của u^2/2]|0:1
+> = ∫0:1 u² fU(u)dt = ∫0:1 u² dt = [nguyên hàm của u²/2]|0:1
 >
 >
 >
-> = u^3/3|0:1 = 1/3
+> = u³/3|0:1 = 1/3
 >
 >
 >
-> ⇨ VarU = 1/3 - (1/2)^2 = 1/3 - 1/4 = (4 - 3) / 12 = 1/12 =0.0833
+> ⇨ VarU = 1/3 - (1/2)² = 1/3 - 1/4 = (4 - 3) / 12 = 1/12 =0.0833
 >
 >
 >
@@ -615,7 +615,7 @@
 <p align="center"><kbd><img src="assets/zkda0twj8ee.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và tương tự, với các inverse cdf FY_inv, của  các cdf FY khác (như của
+> Và tương tự, với các inverse cdf FY⁻¹, của  các cdf FY khác (như của
 > Chisquare, γ, β) thì ta cũng có thể dùng cách này để generating random
 > sample v với các distribution đó
 >
@@ -642,7 +642,7 @@
 
 > [!NOTE]
 > đại khái hiểu thế này: trong ví dụ vừa rồi, ta có cdf của expo(λ) FY, để 
-> mà tìm ra Finv, từ đó chỉ việc bỏ Ui vào là ta có Yi từ expo(λ) mong muốn.
+> mà tìm ra F⁻¹, từ đó chỉ việc bỏ Ui vào là ta có Yi từ expo(λ) mong muốn.
 >
 >
 >
@@ -658,7 +658,7 @@
 >
 > Nhưng điều này không xảy ra với mọi pdf khác. Có nghĩa là, có khi ta có pdf
 > của một distribution nào đó mà giải cái tích phân trên không được. Như
-> vậy ko tìm được cdf F ở dạng closed form và từ đó ko có Finv
+> vậy ko tìm được cdf F ở dạng closed form và từ đó ko có F⁻¹
 >
 >
 >
@@ -675,20 +675,20 @@
 >
 >
 > Vậy thì giả sử đã đã có u, là giá trị của một random variable U ~uniform(0,1)
-> và ta sẽ như trên, bỏ vào Finv để có y, và y sẽ là random variable ~ F:
+> và ta sẽ như trên, bỏ vào F⁻¹ để có y, và y sẽ là random variable ~ F:
 >
 >
 >
-> Finv(u) = y
+> F⁻¹(u) = y
 >
 >
 >
-> Thì thật ra, ko phải lúc nào ta cũng có Finv(.) ở dạng closed form mà bỏ u
+> Thì thật ra, ko phải lúc nào ta cũng có F⁻¹(.) ở dạng closed form mà bỏ u
 > vào để tính ra
 >
 >
 >
-> Khi đó Finv(u) = y sẽ tương đương với giải: u = F(y) = P(Y ≤ y) = ∫-inf:y fY(t)dt
+> Khi đó F⁻¹(u) = y sẽ tương đương với giải: u = F(y) = P(Y ≤ y) = ∫-inf:y fY(t)dt
 >
 >
 >
@@ -732,8 +732,8 @@
 >
 >
 > Thế thì, điều kiện để có thể dùng transformation theorem, là: mapping giữa 𝒜 và ảnh của nó,
-> phải là mapping 1-1. Trong đó 𝒜 là support set của fX,Y, tức là tập này: {(x, y) ∈ R^2: fX,Y(x, y)
-> ≥ 0} và ảnh của nó, là  tập này: {(u,v) ∈ R^2: (u,v) = (g1(x,y), g2(x,y)) for some (x,y) in 𝒜}
+> phải là mapping 1-1. Trong đó 𝒜 là support set của fX,Y, tức là tập này: {(x, y) ∈ R²: fX,Y(x, y)
+> ≥ 0} và ảnh của nó, là  tập này: {(u,v) ∈ R²: (u,v) = (g1(x,y), g2(x,y)) for some (x,y) in 𝒜}
 >
 >
 >
@@ -782,15 +782,15 @@
 >
 >
 >
-> ⇔ X1^2 + X2^2 = -2 logU2 [cos^2(2πU1) + sin^2(2πU2)] = -2logU2
+> ⇔ X1² + X2² = -2 logU2 [cos²(2πU1) + sin²(2πU2)] = -2logU2
 >
 >
 >
-> ⇨ log(U2) = -(X1^2 + X2^2)/2
+> ⇨ log(U2) = -(X1² + X2²)/2
 >
 >
 >
-> ⇔ U2 = e^[-(X1^2 + X2^2)/2]. Đây chính là U2 = h2(X1,X2)
+> ⇔ U2 = e^[-(X1² + X2²)/2]. Đây chính là U2 = h2(X1,X2)
 >
 >
 >
@@ -818,7 +818,7 @@
 >
 >
 >
-> U1,U2 = arctan(X1/X2) / 2π, e^[-(X1^2 + X2^2)/2]
+> U1,U2 = arctan(X1/X2) / 2π, e^[-(X1² + X2²)/2]
 >
 >
 >
@@ -830,15 +830,15 @@
 >
 >
 >
-> = (1/2π) 1/[1+(x2/x1)^2] . (-x2/x1^2)
+> = (1/2π) 1/[1+(x2/x1)²] . (-x2/x1²)
 >
 >
 >
-> = (1/2π) 1/[(x2^2 + x1^2)/x1^2] . (-x2/x1^2)
+> = (1/2π) 1/[(x2² + x1²)/x1²] . (-x2/x1²)
 >
 >
 >
-> **= (1/2π) -x2/(x2^2 + x1^2)**
+> **= (1/2π) -x2/(x2² + x1²)**
 >
 >
 >
@@ -846,51 +846,51 @@
 >
 >
 >
-> = (1/2π) 1/[1+(x2/x1)^2] . (1/x1)
+> = (1/2π) 1/[1+(x2/x1)²] . (1/x1)
 >
 >
 >
-> = (1/2π) 1/[(x2^2 + x1^2)/x1^2] (1/x1)
+> = (1/2π) 1/[(x2² + x1²)/x1²] (1/x1)
 >
 >
 >
-> **= (1/2π) x1/(x2^2 + x1^2)**
+> **= (1/2π) x1/(x2² + x1²)**
 >
 >
 >
-> ∂u2/∂x1: ∂/∂x1 e^[-(x1^2 + x2^2)/2]
+> ∂u2/∂x1: ∂/∂x1 e^[-(x1² + x2²)/2]
 >
 >
 >
-> = ∂/∂[-(x1^2 + x2^2)/2] e^[-(x1^2 + x2^2)/2] . ∂/(x1^2 + x2^2) [-(x1^2 + x2^2)/2] . ∂/∂x1 (x1^2 + x2^2)
+> = ∂/∂[-(x1² + x2²)/2] e^[-(x1² + x2²)/2] . ∂/(x1² + x2²) [-(x1² + x2²)/2] . ∂/∂x1 (x1² + x2²)
 >
 >
 >
-> = e^[-(x1^2 + x2^2)/2]  . -1/2 . 2x1
+> = e^[-(x1² + x2²)/2]  . -1/2 . 2x1
 >
 >
 >
-> = -x1 e^[-(x1^2 + x2^2)/2] = **-x1u2**  
+> = -x1 e^[-(x1² + x2²)/2] = **-x1u2**  
 >
 >
 >
-> ∂u2/∂x2: ∂/∂x2 e^[-(x1^2 + x2^2)/2]
+> ∂u2/∂x2: ∂/∂x2 e^[-(x1² + x2²)/2]
 >
 >
 >
-> = -x2 e^[-(x1^2 + x2^2)/2] = **-x2u2**
+> = -x2 e^[-(x1² + x2²)/2] = **-x2u2**
 >
 >
 >
-> ⇨ |det J| = |∂u1/∂x1 . ∂u2/∂x2 - ∂u1/∂x2 . ∂u2/∂x1|= (1/2π) [-x2/(x2^2 + x1^2)] (-x2u2) - (1/2π) x1/(x2^2 + x1^2) . (-x1u2)
+> ⇨ |det J| = |∂u1/∂x1 . ∂u2/∂x2 - ∂u1/∂x2 . ∂u2/∂x1|= (1/2π) [-x2/(x2² + x1²)] (-x2u2) - (1/2π) x1/(x2² + x1²) . (-x1u2)
 >
 >
 >
-> = (1/2π) [x2^2/(x2^2 + x1^2)] (u2) + (1/2π) x1^2/(x2^2 + x1^2) (u2)
+> = (1/2π) [x2²/(x2² + x1²)] (u2) + (1/2π) x1²/(x2² + x1²) (u2)
 >
 >
 >
-> = (1/2π) (x1^2+x2^2) / (x2^2 + x1^2)] (u2) 
+> = (1/2π) (x1²+x2²) / (x2² + x1²)] (u2) 
 >
 >
 >
@@ -902,15 +902,15 @@
 >
 >
 >
-> fX1,X2(x1,x2) = fU1,U2(u1,u2) |det J| = 1 (1/2π) u2 = (1/2π) u2 = (1/2π) e^[-(x1^2 + x2^2)/2]
+> fX1,X2(x1,x2) = fU1,U2(u1,u2) |det J| = 1 (1/2π) u2 = (1/2π) u2 = (1/2π) e^[-(x1² + x2²)/2]
 >
 >
 >
-> ⇨ fX1,X2(x1,x2) = (1/2π) e^[-(x1^2 + x2^2)/2]
+> ⇨ fX1,X2(x1,x2) = (1/2π) e^[-(x1² + x2²)/2]
 >
 >
 >
-> = (1/2π) e^(-x1^2) e^(-x2^2)/2   | do e^(a+b) = e^a . e^b
+> = (1/2π) e^(-x1²) e^(-x2²)/2   | do e^(a+b) = e^a . e^b
 >
 >
 >
@@ -924,7 +924,7 @@
 >
 >
 >
-> Dĩ nhiên ta sẽ có thể kết luận luôn là X1, X2 ~ normal(0,1) vì (1/√2π) e^(-x1^2) chính là pdf của n(0,1)
+> Dĩ nhiên ta sẽ có thể kết luận luôn là X1, X2 ~ normal(0,1) vì (1/√2π) e^(-x1²) chính là pdf của n(0,1)
 
 <br>
 
@@ -968,7 +968,7 @@
 >
 >
 >
-> Nếu U ~ uniform(0,1) thì FY_inv(U)  ~ FY
+> Nếu U ~ uniform(0,1) thì FY⁻¹(U)  ~ FY
 >
 >
 >
@@ -978,7 +978,7 @@
 >
 > Và cụ thể hơn là nó dựa vào vế trên. Để rồi bằng cách generate các
 > uniform(0,1) rv nhờ các pseudo-random algorithm, ta có thể bỏ nó vào
-> F_inv của một cdf  F mong muốn, thì ta sẽ có được random variable từ
+> F⁻¹ của một cdf  F mong muốn, thì ta sẽ có được random variable từ
 > distribution ~ cdf F đó
 >
 >
@@ -996,20 +996,20 @@
 >
 >
 > Vậy thì giả sử đã đã có u, là giá trị của một random variable U ~uniform(0,
-> 1) và ta sẽ như trên, bỏ vào Finv để có y, và y sẽ là random variable ~ F:
+> 1) và ta sẽ như trên, bỏ vào F⁻¹ để có y, và y sẽ là random variable ~ F:
 >
 >
 >
-> Finv(u) = y
+> F⁻¹(u) = y
 >
 >
 >
-> Thì thật ra, ko phải lúc nào ta cũng có Finv(.) ở dạng closed form mà bỏ u
+> Thì thật ra, ko phải lúc nào ta cũng có F⁻¹(.) ở dạng closed form mà bỏ u
 > vào để tính ra
 >
 >
 >
-> Khi đó Finv(u) = y sẽ tương đương với giải: u = F(y) = P(Y ≤ y) = ∫-inf:y
+> Khi đó F⁻¹(u) = y sẽ tương đương với giải: u = F(y) = P(Y ≤ y) = ∫-inf:y
 > fY(t)dt
 >
 >
@@ -1034,7 +1034,7 @@
 >
 >
 > Thế thì, như trên đã nhắc lại, để generate các rv ~FY, ta sẽ bỏ u là giá trị
-> cụ thể của random variable uniform(0,1) vào FYinv(.) thì ta sẽ có một giá
+> cụ thể của random variable uniform(0,1) vào FY⁻¹(.) thì ta sẽ có một giá
 > trị cụ thể của một rv Y ~ FY. Tuy nhiên như đã nói, bản chất là ta cũng
 > đang giải phương trình: u = FY(y) = P(Y ≤ y)
 >
@@ -2050,7 +2050,7 @@
 >
 >
 >
-> ⇨ P(X=k) = P({s ∈ Ω: s = "FFFS"}) = (1-p)^3p
+> ⇨ P(X=k) = P({s ∈ Ω: s = "FFFS"}) = (1-p)³p
 >
 >
 >
