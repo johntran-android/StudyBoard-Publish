@@ -38,7 +38,7 @@
 >
 >
 >
-> Mà cái quan trọng nhất chính là central moment bậc 2: E(X - EX)^2, cái này
+> Mà cái quan trọng nhất chính là central moment bậc 2: E(X - EX)², cái này
 > như đã biết chính là Var(X)
 
 <br>
@@ -55,7 +55,7 @@
 > stat110 lập luận là ta có thể dùng E(X - EX). Tuy nhiên cái này sẽ bằng 0
 > vì các giá trị đối nghịch dấu nhau sẽ cancel nhau. Nên ta có thể dùng 
 > trị tuyệt đối, tuy nhiên cách làm này khiến hàm không khả vi,do đó người
-> dùng bình phương: Var(X) = E[(X - EX)^2] và để đưa nó về cùng unit
+> dùng bình phương: Var(X) = E[(X - EX)²] và để đưa nó về cùng unit
 > với X, ta sẽ dùng standard deviation SD(X) = √Var(X)
 >
 >
@@ -63,7 +63,7 @@
 > Ở đây gs Casella nhắc lại về ý nghĩa của variance giúp đo độ phân tán.
 > để rồi Var(X) càng lớn thì có nghĩa là X biến động nhiều (possible value của
 > nó khác nhau nhiều). Nếu Var(X) = 0, tức là nó không biến động gì cả,
-> và công thức cũng cho thấyd điều này E[(X - EX)^2] = 0 ⇔ X = EX, ⇨ giá
+> và công thức cũng cho thấyd điều này E[(X - EX)²] = 0 ⇔ X = EX, ⇨ giá
 > trị của X là cố định
 
 **🔗 See also:** [Giá trị kỳ vọng phân phối mũ](./22_expected_value.md#node-1098w9n)
@@ -88,19 +88,19 @@
 >
 >
 >
-> Từ đó ta có thể tính VarX = E(X - λ)^2 theo LOTUS:
+> Từ đó ta có thể tính VarX = E(X - λ)² theo LOTUS:
 >
 >
 >
-> = ∫0:inf (t - λ)^2 (1/λ) e^(-t/λ) dt
+> = ∫0:inf (t - λ)² (1/λ) e^(-t/λ) dt
 >
 >
 >
-> = (1/λ) ∫0:inf (t^2  - 2tλ + λ²) e^(-t/λ) dt
+> = (1/λ) ∫0:inf (t²  - 2tλ + λ²) e^(-t/λ) dt
 >
 >
 >
-> = (1/λ) [ **∫0:inf t^2 e^(-t/λ) dt** + **∫0:inf (-2tλ) e^(-t/λ) dt** + **∫0:inf λ² e^(-t/λ) dt**]
+> = (1/λ) [ **∫0:inf t² e^(-t/λ) dt** + **∫0:inf (-2tλ) e^(-t/λ) dt** + **∫0:inf λ² e^(-t/λ) dt**]
 >
 >
 >
@@ -132,11 +132,11 @@
 >
 >
 >
-> ⇨ .. = λ² (-λ) (-1) = λ² λ = **λ^3.** 
+> ⇨ .. = λ² (-λ) (-1) = λ² λ = **λ³.** 
 >
 >
 >
-> Term 3 = λ^3
+> Term 3 = λ³
 >
 >
 >
@@ -198,11 +198,11 @@
 >
 >
 >
-> Tính cái thứ **1**: ∫0:inf t^2 e^(-t/λ) dt
+> Tính cái thứ **1**: ∫0:inf t² e^(-t/λ) dt
 >
 >
 >
-> Đặt u(t) = t^2 = u'(t) = 2t
+> Đặt u(t) = t² = u'(t) = 2t
 >
 >
 >
@@ -210,27 +210,27 @@
 >
 >
 >
-> ⇨ ∫0:inf t^2 e^(-t/λ) dt (= ∫0:inf v'(t) u(t) dt) = u(t)v(t)|0:inf - ∫0:inf v(t)u'(t)dt
+> ⇨ ∫0:inf t² e^(-t/λ) dt (= ∫0:inf v'(t) u(t) dt) = u(t)v(t)|0:inf - ∫0:inf v(t)u'(t)dt
 >
 >
 >
-> = t^2 (-λ e^-t/λ) |0:inf - ∫0:inf (-λ e^-t/λ) 2t dt
+> = t² (-λ e^-t/λ) |0:inf - ∫0:inf (-λ e^-t/λ) 2t dt
 >
 >
 >
-> = t^2 (-λ e^-t/λ) |0:inf  + 2λ ∫0:inf (e^-t/λ) t dt
+> = t² (-λ e^-t/λ) |0:inf  + 2λ ∫0:inf (e^-t/λ) t dt
 >
 >
 >
-> = t^2 (-λ e^-t/λ) |0:inf  + **2λ λ²** | Dùng kết quả ∫0:inf t e^(-t/λ) dt = **λ²**
+> = t² (-λ e^-t/λ) |0:inf  + **2λ λ²** | Dùng kết quả ∫0:inf t e^(-t/λ) dt = **λ²**
 >
 >
 >
-> Khi t → inf ⇨ t^2 (-λ e^-t/λ) → 0
+> Khi t → inf ⇨ t² (-λ e^-t/λ) → 0
 >
 >
 >
-> Khi t → 0 ⇨ t^2 (-λ e^-t/λ) ⇨ 0
+> Khi t → 0 ⇨ t² (-λ e^-t/λ) ⇨ 0
 >
 >
 >
@@ -242,7 +242,7 @@
 >
 >
 >
-> = (1/λ)[ 2λ λ²  - 2λ λ² + λ^3] = (1/ λ) (λ^3) = **λ²**
+> = (1/λ)[ 2λ λ²  - 2λ λ² + λ³] = (1/ λ) (λ³) = **λ²**
 
 <br>
 
@@ -256,7 +256,7 @@
 
 > [!NOTE]
 > Tiếp là tính chất của variance, stat110 đã biết. Var(c + X) =
-> Var(X) và Var(cX) = c^2 Var(X)
+> Var(X) và Var(cX) = c² Var(X)
 >
 >
 >
@@ -264,20 +264,20 @@
 >
 >
 >
-> Var(c + X) theo công thức = E[(c + X) - E(c+X)]^2 
+> Var(c + X) theo công thức = E[(c + X) - E(c+X)]² 
 >
 >
 >
-> = E[c + X - Ec - EX]^2 = E[X - EX]^2 = Var(X) | Ec = c do c
+> = E[c + X - Ec - EX]² = E[X - EX]² = Var(X) | Ec = c do c
 > là constant
 >
 >
 >
-> Var(cX) = E[cX - E(cX)]^2 = E[cX - cEX]^2 = E[c^2[X - EX]^2] 
+> Var(cX) = E[cX - E(cX)]² = E[cX - cEX]² = E[c²[X - EX]²] 
 >
 >
 >
-> = c^2E[X - EX]^2 = c^2 Var(X)
+> = c²E[X - EX]² = c² Var(X)
 >
 >
 >
@@ -289,19 +289,19 @@
 >
 >
 >
-> VarX = E[X - EX]^2 = E[X^2 -2XEX + (EX)^2]
+> VarX = E[X - EX]² = E[X² -2XEX + (EX)²]
 >
 >
 >
-> = E[X^2] -E[2XEX] + E[(EX)^2] | do linearity
+> = E[X²] -E[2XEX] + E[(EX)²] | do linearity
 >
 >
 >
-> = EX^2 - 2EXEX + (EX)^2
+> = EX² - 2EXEX + (EX)²
 >
 >
 >
-> = **EX^2 - (EX)^2**
+> = **EX² - (EX)²**
 
 <br>
 
@@ -348,8 +348,8 @@
 >
 >
 >
-> Để tính VarY ta chỉ việc tính 2nd moment: EY^2 để ráp vào công thức
-> VarY = EY^2 - (EY)^2 với EY đã biết bằng np
+> Để tính VarY ta chỉ việc tính 2nd moment: EY² để ráp vào công thức
+> VarY = EY² - (EY)² với EY đã biết bằng np
 >
 >
 >
@@ -385,27 +385,27 @@
 >
 >
 >
-> = n (n-1) [(p + q)^(n-2)] . p^2 + n(p + q)^(n-1) . p
+> = n (n-1) [(p + q)^(n-2)] . p² + n(p + q)^(n-1) . p
 >
 >
 >
-> = n (n-1) [(1)^(n-2)] . p^2 + n(1)^(n-1) . p
+> = n (n-1) [(1)^(n-2)] . p² + n(1)^(n-1) . p
 >
 >
 >
-> = n (n-1) p^2 + np
+> = n (n-1) p² + np
 >
 >
 >
-> ⇨ VarY = n (n-1) p^2 + np - (np)^2 
+> ⇨ VarY = n (n-1) p² + np - (np)² 
 >
 >
 >
-> = nnp^2 - np^2 + np - (np)^2  = n^2p^2 - np^2 + np - n^2p^2 
+> = nnp² - np² + np - (np)²  = n²p² - np² + np - n²p² 
 >
 >
 >
-> = - np^2 + np = np(1-p) = **npq**
+> = - np² + np = np(1-p) = **npq**
 >
 > Cách dễ nhất là dùng tính chất độc lập của các Bern(p) indicator r.v
 >
@@ -452,7 +452,7 @@
 >
 >
 >
-> Tiếp ta đã biết Var(X) = E[(X-EX)^2], và nó cũng chính là
+> Tiếp ta đã biết Var(X) = E[(X-EX)²], và nó cũng chính là
 >
 >
 >
@@ -526,11 +526,11 @@
 >
 >
 >
-> =Xét variance của Ij ~ Bern(p), tính EIj^2 = 1^2p + 0^2.q = p
+> =Xét variance của Ij ~ Bern(p), tính EIj² = 1²p + 0².q = p
 >
 >
 >
-> ⇨ Var(Ij) = EIj^2 - (EIj)^2 = p - p^2 = p (1-p) = **pq
+> ⇨ Var(Ij) = EIj² - (EIj)² = p - p² = p (1-p) = **pq
 >
 >
 >
@@ -557,11 +557,11 @@
 >
 >
 >
-> Để tính Var(X) ta cần tính EX^2:
+> Để tính Var(X) ta cần tính EX²:
 >
 >
 >
-> Dùng LOTUS = Σk k^2 (n choose k) p^kq^(n-k)
+> Dùng LOTUS = Σk k² (n choose k) p^kq^(n-k)
 >
 >
 >
@@ -588,7 +588,7 @@
 >
 >
 >
-> Quay lại đây Σk k^2 (n choose k) p^kq^(n-k) = Σk k n(n-1 choose k-1) p^kq^(n-k)
+> Quay lại đây Σk k² (n choose k) p^kq^(n-k) = Σk k n(n-1 choose k-1) p^kq^(n-k)
 >
 >
 >
@@ -636,7 +636,7 @@
 >
 >
 >
-> ⇨ VarX = n(n-1)p^2 + np - (np)^2 = npq**
+> ⇨ VarX = n(n-1)p² + np - (np)² = npq**
 
 <br>
 
@@ -715,7 +715,7 @@
 >
 >
 >
-> Đạo hàm lần nữa: d^2/dt^2 MX(x) = d/dt E[Xe^tX]
+> Đạo hàm lần nữa: d²/dt² MX(x) = d/dt E[Xe^tX]
 >
 >
 >
@@ -731,11 +731,11 @@
 >
 >
 >
-> = ∫-inf:inf x^2 (e^tx) fX(x) dx = E[X^2e^tX]
+> = ∫-inf:inf x² (e^tx) fX(x) dx = E[X²e^tX]
 >
 >
 >
-> ⇨ d^2/dt^2 MX(x)|t=0 = d/dt E[Xe^tX] | t = 0 = E[X^2 e^0] = EX^2
+> ⇨ d²/dt² MX(x)|t=0 = d/dt E[Xe^tX] | t = 0 = E[X² e^0] = EX²
 >
 >
 >
