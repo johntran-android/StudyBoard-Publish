@@ -40,7 +40,7 @@
 >
 >
 >
-> Nếu W là estimator của parameter θ, thì MSE của nó được định nghĩa là một hàm số theo θ, định nghĩa bởi: E\_θ(W - θ)^2
+> Nếu W là estimator của parameter θ, thì MSE của nó được định nghĩa là một hàm số theo θ, định nghĩa bởi: E\_θ(W - θ)²
 >
 >
 >
@@ -52,7 +52,7 @@
 >
 >
 >
-> Thế thì, vì W, estimator, mà như vừa nhắc (đáng lẽ phải ghi là W(X1,..Xn) để thể hiện nó là function của các random variable trong random sample) là random variable. Nên dĩ nhiên (W - θ)^2 (θ là constant) cũng vậy, cũng là random variable ⇨ được quyền nói đến mean / expectation. Và MSE của W được định nghĩa là giá trị này.
+> Thế thì, vì W, estimator, mà như vừa nhắc (đáng lẽ phải ghi là W(X1,..Xn) để thể hiện nó là function của các random variable trong random sample) là random variable. Nên dĩ nhiên (W - θ)² (θ là constant) cũng vậy, cũng là random variable ⇨ được quyền nói đến mean / expectation. Và MSE của W được định nghĩa là giá trị này.
 >
 >
 >
@@ -64,7 +64,7 @@
 >
 >
 >
-> Giả sử w1,...wk là các possible value của W thì E\_θ(W - θ)^2 sẽ là:
+> Giả sử w1,...wk là các possible value của W thì E\_θ(W - θ)² sẽ là:
 >
 >
 >
@@ -72,7 +72,7 @@
 >
 >
 >
-> = Σ{mọi possible value, hay estimate wi) (wi - θ)^2 fW(wi)
+> = Σ{mọi possible value, hay estimate wi) (wi - θ)² fW(wi)
 >
 >
 >
@@ -106,15 +106,15 @@
 >
 >
 >
-> E_θ(W - θ)^2
+> E_θ(W - θ)²
 >
 >
 >
-> Nhớ công thức thứ hai của variance: VarX = EX^2 - (EX)^2
+> Nhớ công thức thứ hai của variance: VarX = EX² - (EX)²
 >
 >
 >
-> ⇨ Var_θ(W - θ) = E_θ(W - θ)^2 - [E_θ(W - θ)]^2
+> ⇨ Var_θ(W - θ) = E_θ(W - θ)² - [E_θ(W - θ)]²
 >
 >
 >
@@ -130,15 +130,15 @@
 >
 >
 >
-> ⇔ Var_θ(W) = E_θ(W - θ)^2 - [E_θ(W) - θ]^2 
+> ⇔ Var_θ(W) = E_θ(W - θ)² - [E_θ(W) - θ]² 
 >
 >
 >
-> ⇔ Var_θ(W) = MSE(W) - [E_θ(W) - θ]^2 
+> ⇔ Var_θ(W) = MSE(W) - [E_θ(W) - θ]² 
 >
 >
 >
-> ⇔ **MSE(W) = Var_θ(W) + [E_θ(W) - θ]^2** 
+> ⇔ **MSE(W) = Var_θ(W) + [E_θ(W) - θ]²** 
 >
 >
 >
@@ -146,7 +146,7 @@
 >
 >
 >
-> ⇔ MSE(W) = Var_θ(W) + [BIAS_θ(W)]^2
+> ⇔ MSE(W) = Var_θ(W) + [BIAS_θ(W)]²
 
 **🔗 See also:** [Kiểm định, ước lượng và MSE](./83_methods_of_evaluating_test.md#node-2p2a5ur)
 
@@ -212,33 +212,33 @@
 > Ôn lại một chút: Mình đang trong phần nói về những cách đánh giá chất
 > lượng của estimator. Và phương pháp đầu tiên là MSE. Được định nghĩa
 > là: MSE của estimator W (là estimator của θ) là một function theo θ và 
-> function này được defined như sau: MSE_θ(W) = E_θ(W - θ)^2
+> function này được defined như sau: MSE_θ(W) = E_θ(W - θ)²
 >
 >
 >
 > Như đã lập luận hôm qua, nay nói lại không thừa: W, tức estimator, theo
 > định nghĩa của estimator, nó là một function của random sample. Và theo
 > định nghĩa này thì nó cơ bản là một statistic. Hay nói cách khác, statistic
-> nào cũng là một estimator thôi. Nên nó là một random variable.Và (W - θ)^2
+> nào cũng là một estimator thôi. Nên nó là một random variable.Và (W - θ)²
 > lại một lần nữa, là function áp lên random variable. Nên cũng là random 
 > variable. Nên ta có quyền nói về kì vọng.
 >
 >
 >
-> Thế thì, dùng một identity đã biết của Variance: VarX = EX^2 - (EX)^2 ta sẽ
+> Thế thì, dùng một identity đã biết của Variance: VarX = EX² - (EX)² ta sẽ
 > có:
 >
 >
 >
-> Var_θ(W - θ) = E_θ(W - θ)^2 - [E_θ(W - θ)]^2
+> Var_θ(W - θ) = E_θ(W - θ)² - [E_θ(W - θ)]²
 >
 >
 >
-> ⇔ Var_θ(W) = E_θ(W - θ)^2 - [E_θ(W - θ)]^2
+> ⇔ Var_θ(W) = E_θ(W - θ)² - [E_θ(W - θ)]²
 >
 >
 >
-> ⇔ E_θ(W - θ)^2 = Var_θ(W) + [E_θ(W - θ)]^2
+> ⇔ E_θ(W - θ)² = Var_θ(W) + [E_θ(W - θ)]²
 >
 >
 >
@@ -277,7 +277,7 @@
 >
 >
 >
-> VarS² = 2σ^4/(n-1) chỉ với normal, với distribution khác thì sẽ khác.
+> VarS² = 2σ⁴/(n-1) chỉ với normal, với distribution khác thì sẽ khác.
 
 **🔗 See also:** [Tính chất trung bình phương sai mẫu](./52_of_random_variables_from_a_random_sample.md#node-411jdqg) · [Example 10.1.22 Parametric Bootstrap](./101_point_estimation.md#node-s9n2ly7) · [Bayesian and Maximum Likelihood Variance *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/353_effective_number_of_parameters.md#node-tdezntx)
 
@@ -322,11 +322,11 @@
 >
 >
 >
-> Var((σ²)^_mle) = Var[S²(n-1)/n] = [(n-1)/n]^2Var(S²)
+> Var((σ²)^_mle) = Var[S²(n-1)/n] = [(n-1)/n]²Var(S²)
 >
 >
 >
-> = [(n-1)/n]^2 Var(S²)
+> = [(n-1)/n]² Var(S²)
 >
 >
 >
@@ -334,7 +334,7 @@
 >
 >
 >
-> .. = [(n-1)/n]^2 . 2σ4/(n-1) = [(n-1)/n]^2 . 2σ4 = [2(n-1)/n^2] σ^4
+> .. = [(n-1)/n]² . 2σ4/(n-1) = [(n-1)/n]² . 2σ4 = [2(n-1)/n²] σ⁴
 >
 >
 >
@@ -342,39 +342,39 @@
 >
 >
 >
-> MSE_σ²((σ²)^_mse) = Var(S²) + [Bias(S²)]^2
+> MSE_σ²((σ²)^_mse) = Var(S²) + [Bias(S²)]²
 >
 >
 >
-> = [2(n-1)/n^2] σ^4 + [(n-1)/n σ² - σ²]^2
+> = [2(n-1)/n²] σ⁴ + [(n-1)/n σ² - σ²]²
 >
 >
 >
-> = [2(n-1)/n^2] σ^4 + [(n-1-n)/n σ²]^2
+> = [2(n-1)/n²] σ⁴ + [(n-1-n)/n σ²]²
 >
 >
 >
-> = [2(n-1)/n^2] σ^4 + [σ^4/n^2]
+> = [2(n-1)/n²] σ⁴ + [σ⁴/n²]
 >
 >
 >
-> = [2(n-1)σ^4 + σ^4]/n^2
+> = [2(n-1)σ⁴ + σ⁴]/n²
 >
 >
 >
-> = [2nσ^4 - 2σ^4 + σ^4]/n^2
+> = [2nσ⁴ - 2σ⁴ + σ⁴]/n²
 >
 >
 >
-> = [2nσ^4 - σ^4]/n^2
+> = [2nσ⁴ - σ⁴]/n²
 >
 >
 >
-> = [2n - 1]σ^4/n^2
+> = [2n - 1]σ⁴/n²
 >
 >
 >
-> MSE của S²: Tính theo định nghĩa: E[S² - σ²]^2
+> MSE của S²: Tính theo định nghĩa: E[S² - σ²]²
 >
 >
 >
@@ -390,7 +390,7 @@
 >
 >
 >
-> So [2n-1]σ^4/n^2 với 2σ4/(n-1)
+> So [2n-1]σ⁴/n² với 2σ4/(n-1)
 >
 >
 >
@@ -398,15 +398,15 @@
 >
 >
 >
->  [2n-1]/n^2 < 2/(n-1)
+>  [2n-1]/n² < 2/(n-1)
 >
 >
 >
-> ⇔ (2n-1)(n-1) < 2n^2
+> ⇔ (2n-1)(n-1) < 2n²
 >
 >
 >
-> ⇔ 2n^2-n-2n+1 < 2n^2
+> ⇔ 2n²-n-2n+1 < 2n²
 >
 >
 >
@@ -434,15 +434,15 @@
 >
 >
 >
-> = Πi=1:n 1/σ(√2π) exp[-(x-μ)^2/2σ²]
+> = Πi=1:n 1/σ(√2π) exp[-(x-μ)²/2σ²]
 >
 >
 >
-> = Πi=1:n [σ(√2π)]^-1 exp[-(x-μ)^2/2σ²]
+> = Πi=1:n [σ(√2π)]^-1 exp[-(x-μ)²/2σ²]
 >
 >
 >
-> = [σ(√2π)]^(-n) Πi=1:n exp[-(x-μ)^2/2σ²]
+> = [σ(√2π)]^(-n) Πi=1:n exp[-(x-μ)²/2σ²]
 >
 >
 >
@@ -450,27 +450,27 @@
 >
 >
 >
-> log L = log [σ(√2π)]^(-n) Πi=1:n exp[-(x-μ)^2/2σ²]
+> log L = log [σ(√2π)]^(-n) Πi=1:n exp[-(x-μ)²/2σ²]
 >
 >
 >
-> = log [σ(√2π)]^(-n) + log Πi=1:n exp[-(x-μ)^2/2σ²] 
+> = log [σ(√2π)]^(-n) + log Πi=1:n exp[-(x-μ)²/2σ²] 
 >
 >
 >
-> = -n log [σ(√2π)] + Σi=1:n log exp[-(x-μ)^2/2σ²] 
+> = -n log [σ(√2π)] + Σi=1:n log exp[-(x-μ)²/2σ²] 
 >
 >
 >
-> = -n log [σ(√2π)] + Σi=1:n [-(x-μ)^2/2σ²] 
+> = -n log [σ(√2π)] + Σi=1:n [-(x-μ)²/2σ²] 
 >
 >
 >
-> = -n [log σ + log (√2π)] + (1/2σ²) Σi=1:n [-(x-μ)^2] 
+> = -n [log σ + log (√2π)] + (1/2σ²) Σi=1:n [-(x-μ)²] 
 >
 >
 >
-> = -n log σ -n log (√2π) + (1/2σ²) Σi=1:n [-(x-μ)^2] 
+> = -n log σ -n log (√2π) + (1/2σ²) Σi=1:n [-(x-μ)²] 
 >
 >
 >
@@ -478,7 +478,7 @@
 >
 >
 >
-> = - n log σ - (1/2σ²) Σi=1:n [(xi-μ)^2] 
+> = - n log σ - (1/2σ²) Σi=1:n [(xi-μ)²] 
 >
 >
 >
@@ -502,11 +502,11 @@
 >
 >
 >
-> ∂/∂μ {- n log σ - (1/2σ²) Σi=1:n [(xi-μ)^2]} = 0
+> ∂/∂μ {- n log σ - (1/2σ²) Σi=1:n [(xi-μ)²]} = 0
 >
 >
 >
-> ⇔ (1/2σ²) Σi=1:n ∂/∂μ [(xi-μ)^2] = 0
+> ⇔ (1/2σ²) Σi=1:n ∂/∂μ [(xi-μ)²] = 0
 >
 >
 >
@@ -538,7 +538,7 @@
 >
 >
 >
-> Giải 2: Để cho gọn đặt A = Σi=1:n [(xi-μ)^2]
+> Giải 2: Để cho gọn đặt A = Σi=1:n [(xi-μ)²]
 >
 >
 >
@@ -586,7 +586,7 @@
 >
 >
 >
-> ⇔σ² = A/n = Σi=1:n [(xi-μ)^2] / n 
+> ⇔σ² = A/n = Σi=1:n [(xi-μ)²] / n 
 >
 >
 >
@@ -594,7 +594,7 @@
 >
 >
 >
-> Ta có [σ²]^_mle = Σi=1:n [(xi-X̄)^2] / n 
+> Ta có [σ²]^_mle = Σi=1:n [(xi-X̄)²] / n 
 >
 >
 >
@@ -606,15 +606,15 @@
 >
 >
 >
-> Vì S² có công thức là: S² = Σi=1:n [(xi-X̄)^2 / (n-1)
+> Vì S² có công thức là: S² = Σi=1:n [(xi-X̄)² / (n-1)
 >
 >
 >
-> ⇔ S²/n = Σi=1:n [(xi-X̄)^2 / n(n-1)
+> ⇔ S²/n = Σi=1:n [(xi-X̄)² / n(n-1)
 >
 >
 >
-> ⇔ S²(n-1)/n = Σi=1:n [(xi-X̄)^2 / n
+> ⇔ S²(n-1)/n = Σi=1:n [(xi-X̄)² / n
 >
 >
 >
@@ -693,7 +693,7 @@
 > Nhưng với scale param thì khác. Vì scale param nó có tính chất ≥ 0
 > Nên ví dụ như giá trị đúng là 5, thì một underestimate = 1 đáng lẽ phải có
 > mức nghiêm trọng không kém một overestimate 1000. Nhưng MSE thì kiểu
-> như lại cho rằng nó ít nghiêm trọng hơn vì error^2 chỉ có 4^2 so với 995^2.
+> như lại cho rằng nó ít nghiêm trọng hơn vì error² chỉ có 4² so với 995².
 >
 >
 >
@@ -719,11 +719,11 @@
 >
 >
 > Theo định nghĩa MLE của estimator W của θ là hàm theo θ, define bởi
-> MSE_θ(W) = E[W - θ]^2
+> MSE_θ(W) = E[W - θ]²
 >
 >
 >
-> ⇨ MLE_p(p^) = E_p(p^ - p)^2 
+> ⇨ MLE_p(p^) = E_p(p^ - p)² 
 >
 >
 >
@@ -830,7 +830,7 @@
 >
 >
 >
-> E_p[p^_mse - p]^2 = Var_p[p^_mse] + [Bias_p(p^_mse)]^2
+> E_p[p^_mse - p]² = Var_p[p^_mse] + [Bias_p(p^_mse)]²
 >
 >
 >
@@ -855,23 +855,23 @@
 >
 >
 >
-> VarX = E(X - EX)^2 = Σ{possible value x} (x - EX)^2P(X=x)
+> VarX = E(X - EX)² = Σ{possible value x} (x - EX)²P(X=x)
 >
 >
 >
-> = (1-p)^2p + (0-p)^2(1-p)
+> = (1-p)²p + (0-p)²(1-p)
 >
 >
 >
-> = (1-2p + p^2)p + p^2 - p^3
+> = (1-2p + p²)p + p² - p³
 >
 >
 >
-> = p - 2p^2 + p^3 + p^2 - p^3
+> = p - 2p² + p³ + p² - p³
 >
 >
 >
-> = p - p^2 = p(1-p)
+> = p - p² = p(1-p)
 >
 >
 >
@@ -986,15 +986,15 @@
 >
 >
 >
-> Theo định nghĩa thôi, ghi lại nhiều lần cho nhớ, MSE được định nghĩa là hàm theo θ, define bởi kì vọng của (θ^ - θ)^2:
+> Theo định nghĩa thôi, ghi lại nhiều lần cho nhớ, MSE được định nghĩa là hàm theo θ, define bởi kì vọng của (θ^ - θ)²:
 >
 >
 >
-> ⇨ MSE_p(p^\_B) = E_p\[p^\_B - p\]^2
+> ⇨ MSE_p(p^\_B) = E_p\[p^\_B - p\]²
 >
 >
 >
-> dùng công thức khai triển = Var\[p^\_B\] + \[Bias_p(p^\_B)\]^2
+> dùng công thức khai triển = Var\[p^\_B\] + \[Bias_p(p^\_B)\]²
 >
 >
 >
@@ -1002,23 +1002,23 @@
 >
 >
 >
-> ... = Var\[(Y + α) / (α + β + n)\] + \[E\[p^\_B\] - p\]^2
+> ... = Var\[(Y + α) / (α + β + n)\] + \[E\[p^\_B\] - p\]²
 >
 >
 >
-> = \[1/(α + β + n)^2\] Var(Y + α) + \[E\[(Y + α) / (α + β + n)\] - p\]^2
+> = \[1/(α + β + n)²\] Var(Y + α) + \[E\[(Y + α) / (α + β + n)\] - p\]²
 >
 >
 >
-> = \[1/(α + β + n)^2\] Var(Y) + \[E\[(Y + α)\] / (α + β + n) - p\]^2
+> = \[1/(α + β + n)²\] Var(Y) + \[E\[(Y + α)\] / (α + β + n) - p\]²
 >
 >
 >
-> = \[1/(α + β + n)^2\] Var(Y) + \[(EY + Eα) / (α + β + n) - p\]^2
+> = \[1/(α + β + n)²\] Var(Y) + \[(EY + Eα) / (α + β + n) - p\]²
 >
 >
 >
-> Trên đây chỉ là các identity: Var(c + X) = Var(X), Var(cX) = c^2VarX
+> Trên đây chỉ là các identity: Var(c + X) = Var(X), Var(cX) = c²VarX
 >
 >
 >
@@ -1026,7 +1026,7 @@
 >
 >
 >
-> = np(1-p)/(α + β + n)^2 + \[np + α) / (α + β + n) - p\]^2
+> = np(1-p)/(α + β + n)² + \[np + α) / (α + β + n) - p\]²
 >
 >
 >
@@ -1060,23 +1060,23 @@
 >
 >
 >
-> d/dp E_p[p^B-p] = d/dp {np(1-p)/(α + β + n)^2  + [np + α) / (α + β + n) - p]^2}
+> d/dp E_p[p^B-p] = d/dp {np(1-p)/(α + β + n)²  + [np + α) / (α + β + n) - p]²}
 >
 >
 >
-> = d/dp [np(1-p)/(α + β + n)^2] + d/dp {[(np + α) / (α + β + n) - p]^2}
+> = d/dp [np(1-p)/(α + β + n)²] + d/dp {[(np + α) / (α + β + n) - p]²}
 >
 >
 >
-> = d/dp [np(1-p)/(α + β + n)^2] + d/dp {[(np + α) / (α + β + n) - p]^2}
+> = d/dp [np(1-p)/(α + β + n)²] + d/dp {[(np + α) / (α + β + n) - p]²}
 >
 >
 >
-> = d/dp [np -np^2] / (α + β + n)^2 + [(np + α) / (α + β + n) - p] { d/dp [(np + α) / (α + β + n) - p] }
+> = d/dp [np -np²] / (α + β + n)² + [(np + α) / (α + β + n) - p] { d/dp [(np + α) / (α + β + n) - p] }
 >
 >
 >
-> = (n - n2p) / (α + β + n)^2 
+> = (n - n2p) / (α + β + n)² 
 >
 >
 >
@@ -1084,23 +1084,23 @@
 >
 >
 >
-> = (n - n2p) / (α + β + n)^2 + [(np + α) / (α + β + n) - p] { n / (α + β + n) - 1}
+> = (n - n2p) / (α + β + n)² + [(np + α) / (α + β + n) - p] { n / (α + β + n) - 1}
 >
 >
 >
-> = (n - n2p) / (α + β + n)^2 + [(np + α) / (α + β + n) - p (α + β + n)/ (α + β + n)] { n / (α + β + n) - (α + β + n)/(α + β + n)}
+> = (n - n2p) / (α + β + n)² + [(np + α) / (α + β + n) - p (α + β + n)/ (α + β + n)] { n / (α + β + n) - (α + β + n)/(α + β + n)}
 >
 >
 >
-> = (n - n2p) / (α + β + n)^2 + [(np + α) - p (α + β + n) ] / (α + β + n) [n  - (α + β + n)] / (α + β + n)
+> = (n - n2p) / (α + β + n)² + [(np + α) - p (α + β + n) ] / (α + β + n) [n  - (α + β + n)] / (α + β + n)
 >
 >
 >
-> = (n - 2np) / (α + β + n)^2 + [np + α - p α - p β - pn] / (α + β + n) [n  - α - β - n] / (α + β + n)
+> = (n - 2np) / (α + β + n)² + [np + α - p α - p β - pn] / (α + β + n) [n  - α - β - n] / (α + β + n)
 >
 >
 >
-> = (n - 2np) / (α + β + n)^2 + [np + α - p α - p β - pn] [n - α - β - n] / (α + β + n)^2
+> = (n - 2np) / (α + β + n)² + [np + α - p α - p β - pn] [n - α - β - n] / (α + β + n)²
 >
 >
 >
@@ -1108,7 +1108,7 @@
 >
 >
 >
-> Giải sẽ ra kết quả trên thôi, khi đó thể vô ta sẽ có E_p[p^_B - p]^2 là constant
+> Giải sẽ ra kết quả trên thôi, khi đó thể vô ta sẽ có E_p[p^_B - p]² là constant
 
 <br>
 
@@ -1599,7 +1599,7 @@
 >
 >
 >
-> = E_θ[W(X) - θ]^2 
+> = E_θ[W(X) - θ]² 
 >
 >
 >
@@ -1612,7 +1612,7 @@
 >
 >
 >
-> ..= E_θ[W(X1 + a,...,xn + a) - a - θ]^2
+> ..= E_θ[W(X1 + a,...,xn + a) - a - θ]²
 >
 >
 >
@@ -1620,23 +1620,23 @@
 >
 >
 >
-> ..= E_θ[W(X1 - θ,...,Xn - θ) + θ - θ]^2
+> ..= E_θ[W(X1 - θ,...,Xn - θ) + θ - θ]²
 >
 >
 >
-> = E_θ[W(X1 - θ,...,Xn - θ)]^2
+> = E_θ[W(X1 - θ,...,Xn - θ)]²
 >
 >
 >
-> = ∫-inf:inf....∫-inf:inf [W(x1 - θ,...,xn - θ)]^2 fX1,..Xn(x1,..xn) d𝐱
+> = ∫-inf:inf....∫-inf:inf [W(x1 - θ,...,xn - θ)]² fX1,..Xn(x1,..xn) d𝐱
 >
 >
 >
-> = ∫-inf:inf....∫-inf:inf [W(x1 - θ,...,xn - θ)]^2 Πi=1:n fXi(xi) dxi
+> = ∫-inf:inf....∫-inf:inf [W(x1 - θ,...,xn - θ)]² Πi=1:n fXi(xi) dxi
 >
 >
 >
-> = ∫-inf:inf....∫-inf:inf [W(x1 - θ,...,xn - θ)]^2 Πi=1:n f(xi - θ) dxi
+> = ∫-inf:inf....∫-inf:inf [W(x1 - θ,...,xn - θ)]² Πi=1:n f(xi - θ) dxi
 >
 >
 >
@@ -1644,7 +1644,7 @@
 >
 >
 >
-> = ∫-inf:inf....∫-inf:inf [W(u1,...,un)]^2 Πi=1:n f(ui) dui
+> = ∫-inf:inf....∫-inf:inf [W(u1,...,un)]² Πi=1:n f(ui) dui
 >
 >
 >
@@ -1668,7 +1668,7 @@
 >
 >
 >
-> minimize E_θ[(W(X1,...Xn) - θ)]^2 subject to  W(x1,..xn) + a = W(x1 + a,...
+> minimize E_θ[(W(X1,...Xn) - θ)]² subject to  W(x1,..xn) + a = W(x1 + a,...
 > xn + a)
 
 <br>
@@ -1722,7 +1722,7 @@
 > [!NOTE]
 > Rồi, thế thì nếu như ta tìm kiếm trong các unbiased estimator. mà như đã biết,
 > điều này có nghĩa là với unbiased estimator W thì: E_θ(W) = θ, và MSE
-> của nó chỉ còn là bằng variance của nó: MSE_θ(W) = Var(W) + [Bias_θ(W)]^2 
+> của nó chỉ còn là bằng variance của nó: MSE_θ(W) = Var(W) + [Bias_θ(W)]² 
 >
 >
 >
@@ -1750,7 +1750,7 @@
 >
 >
 >
-> E_θ(W1 - θ)^2 - E_θ(W2 - θ)^2 = Var_θ(W1) - Var_θ(W2)
+> E_θ(W1 - θ)² - E_θ(W2 - θ)² = Var_θ(W1) - Var_θ(W2)
 >
 >
 >
@@ -1915,7 +1915,7 @@
 >
 >
 >
-> Thì Var\_θ(W(𝐗)) ≥ \[d/dθ E\_θ\[W(𝐗)\]^2\] / \[E\_θ\[(∂/∂θ log f(𝐗|θ))^2\]\]
+> Thì Var\_θ(W(𝐗)) ≥ \[d/dθ E\_θ\[W(𝐗)\]²\] / \[E\_θ\[(∂/∂θ log f(𝐗|θ))²\]\]
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
@@ -1952,11 +1952,11 @@
 >
 >
 >
-> \[Cov(X,Y)\]^2 ≤ Var(X)Var(Y)
+> \[Cov(X,Y)\]² ≤ Var(X)Var(Y)
 >
 >
 >
-> Cái này đã học trong Stat111 với giáo sư Joe Blizstein, nhưng lúc đó mình học dạng của nó là |E(XY)| ≤ √\[E(X^2)E(Y^2)\]
+> Cái này đã học trong Stat111 với giáo sư Joe Blizstein, nhưng lúc đó mình học dạng của nó là |E(XY)| ≤ √\[E(X²)E(Y²)\]
 >
 >
 >
@@ -1972,19 +1972,19 @@
 >
 >
 >
-> E\[U^2\] = E\[(X - EX)^2\] = E\[X^2 - 2XEX + (EX)^2\]
+> E\[U²\] = E\[(X - EX)²\] = E\[X² - 2XEX + (EX)²\]
 >
 >
 >
-> = EX^2 - 2E\[XEX\] + E\[(EX)^2\]
+> = EX² - 2E\[XEX\] + E\[(EX)²\]
 >
 >
 >
-> = EX^2 - 2EXEX + (EX)^2
+> = EX² - 2EXEX + (EX)²
 >
 >
 >
-> = EX^2 - (EX)^2
+> = EX² - (EX)²
 >
 >
 >
@@ -1992,11 +1992,11 @@
 >
 >
 >
-> (thật ra không cần dài dòng vậy, U = X - EX, thì E(U^2) = E\[(X - EX)^2\], theo định nghĩa cái này chính là Var(X) rồi)
+> (thật ra không cần dài dòng vậy, U = X - EX, thì E(U²) = E\[(X - EX)²\], theo định nghĩa cái này chính là Var(X) rồi)
 >
 >
 >
-> Tương tự V = Y - EY, ⇨ E\[V^2\] = VarY
+> Tương tự V = Y - EY, ⇨ E\[V²\] = VarY
 >
 >
 >
@@ -2004,27 +2004,27 @@
 >
 >
 >
-> Vậy cái cần chứng minh chính là: \[E(UV)\]^2 ≤ E\[U^2\]E\[V^2\]
+> Vậy cái cần chứng minh chính là: \[E(UV)\]² ≤ E\[U²\]E\[V²\]
 >
 >
 >
-> Tiếp, xét biểu thức (tU + V)^2, đương nhiên ≥ 0
+> Tiếp, xét biểu thức (tU + V)², đương nhiên ≥ 0
 >
 >
 >
-> nên E\[(tU + V)^2\] cũng ≥ 0
+> nên E\[(tU + V)²\] cũng ≥ 0
 >
 >
 >
-> ⇔ E\[t^2U^2 + V^2 + 2tUV\] ≥ 0
+> ⇔ E\[t²U² + V² + 2tUV\] ≥ 0
 >
 >
 >
-> ⇔ E\[t^2U^2\] + E\[V^2\] + E\[2tUV\] ≥ 0
+> ⇔ E\[t²U²\] + E\[V²\] + E\[2tUV\] ≥ 0
 >
 >
 >
-> ⇔ t^2 E\[U^2\] + E\[V^2\] + 2t E\[UV\] ≥ 0
+> ⇔ t² E\[U²\] + E\[V²\] + 2t E\[UV\] ≥ 0
 >
 >
 >
@@ -2032,23 +2032,23 @@
 >
 >
 >
-> ⇔ biệt thức (B^2 - 4AC) ≤ 0
+> ⇔ biệt thức (B² - 4AC) ≤ 0
 >
 >
 >
-> ⇔ (2E\[UV\])^2 - 4E\[U^2\]E\[V^2\] ≤ 0
+> ⇔ (2E\[UV\])² - 4E\[U²\]E\[V²\] ≤ 0
 >
 >
 >
-> ⇔ 4E\[UV\]^2 ≤ 4E\[U^2\]E\[V^2\]
+> ⇔ 4E\[UV\]² ≤ 4E\[U²\]E\[V²\]
 >
 >
 >
-> ⇔ E\[UV\]^2 ≤ E\[U^2\]E\[V^2\]
+> ⇔ E\[UV\]² ≤ E\[U²\]E\[V²\]
 >
 >
 >
-> ⇔ \[Cov(X,Y)\]^2 ≤ VarX VarY
+> ⇔ \[Cov(X,Y)\]² ≤ VarX VarY
 >
 >
 >
@@ -2056,15 +2056,15 @@
 >
 >
 >
-> Nên cái mấu chốt là bắt đầu từ (tU + V)^2 ≥ 0 với U = X - EX, V = Y - EY.
+> Nên cái mấu chốt là bắt đầu từ (tU + V)² ≥ 0 với U = X - EX, V = Y - EY.
 >
 >
 >
-> Nói thêm, để dấu bằng xảy ra thì cần B^2 = 4AC
+> Nói thêm, để dấu bằng xảy ra thì cần B² = 4AC
 >
 >
 >
-> ⇔ E\[UV\]^2 = E\[U^2\]E\[V^2\]
+> ⇔ E\[UV\]² = E\[U²\]E\[V²\]
 
 <br>
 
@@ -2085,11 +2085,11 @@
 >
 >
 >
-> \[Cov(X,Y)\]^2 ≤ VarX VarY
+> \[Cov(X,Y)\]² ≤ VarX VarY
 >
 >
 >
-> ⇔ VarX ≥ \[Cov(X,Y)\]^2 / VarY
+> ⇔ VarX ≥ \[Cov(X,Y)\]² / VarY
 >
 >
 >
@@ -2101,7 +2101,7 @@
 >
 >
 >
-> Vậy ta có: Var\[W(𝐗)\] ≥ \[Cov(W(𝐗),∂/∂θ log f(𝐗|θ))\]^2 / Var\_θ\[∂/∂θ log f(𝐗|θ)\]
+> Vậy ta có: Var\[W(𝐗)\] ≥ \[Cov(W(𝐗),∂/∂θ log f(𝐗|θ))\]² / Var\_θ\[∂/∂θ log f(𝐗|θ)\]
 >
 >
 >
@@ -2109,7 +2109,7 @@
 >
 >
 >
-> Var\_θ\[W(𝐗)\] ≥ {d/dθ E\_θ\[W(𝐗)\]}^2 / E\_θ\[(∂/∂θ log f(𝐗|θ)^2\]
+> Var\_θ\[W(𝐗)\] ≥ {d/dθ E\_θ\[W(𝐗)\]}² / E\_θ\[(∂/∂θ log f(𝐗|θ)²\]
 >
 >
 >
@@ -2121,7 +2121,7 @@
 >
 >
 >
-> ii) Var\_θ\[∂/∂θ log f(𝐗|θ)\] có phải là E\_θ\[(∂/∂θ log f(𝐗|θ)^2\]
+> ii) Var\_θ\[∂/∂θ log f(𝐗|θ)\] có phải là E\_θ\[(∂/∂θ log f(𝐗|θ)²\]
 >
 >
 >
@@ -2253,7 +2253,7 @@
 >
 >
 >
-> Tiếp, cái (ii): E\_θ\[(∂/∂θ log f(𝐗|θ)^2\] có phải là Var\_θ\[∂/∂θ log f(𝐗|θ)\] :
+> Tiếp, cái (ii): E\_θ\[(∂/∂θ log f(𝐗|θ)²\] có phải là Var\_θ\[∂/∂θ log f(𝐗|θ)\] :
 >
 >
 >
@@ -2261,15 +2261,15 @@
 >
 >
 >
-> Var\_θ\[∂/∂θ log f(𝐗|θ)\] = E\[(∂/∂θ log f(𝐗|θ)\]^2 - (E\[(∂/∂θ log f(𝐗|θ)^2\])^2 (dùng công thức Var(X) = E(X^2) - (EX)^2)
+> Var\_θ\[∂/∂θ log f(𝐗|θ)\] = E\[(∂/∂θ log f(𝐗|θ)\]² - (E\[(∂/∂θ log f(𝐗|θ)²\])² (dùng công thức Var(X) = E(X²) - (EX)²)
 >
 >
 >
-> = E\[(∂/∂θ log f(𝐗|θ)\]^2 - (0)^2 (ở trên đã chứng minh E\_θ \[∂/∂θ log f(𝐗|θ)\] = 0)
+> = E\[(∂/∂θ log f(𝐗|θ)\]² - (0)² (ở trên đã chứng minh E\_θ \[∂/∂θ log f(𝐗|θ)\] = 0)
 >
 >
 >
-> = E\[(∂/∂θ log f(𝐗|θ)\]^2
+> = E\[(∂/∂θ log f(𝐗|θ)\]²
 >
 >
 >
@@ -2281,11 +2281,11 @@
 >
 >
 >
-> a) Bắt đầu với Cauchy-Schwarz inequality \[Cov(X,Y)\]^2 ≤ VarX VarY
+> a) Bắt đầu với Cauchy-Schwarz inequality \[Cov(X,Y)\]² ≤ VarX VarY
 >
 >
 >
-> ⇔ VarX ≥ \[Cov(X,Y)\]^2 / VarY
+> ⇔ VarX ≥ \[Cov(X,Y)\]² / VarY
 >
 >
 >
@@ -2293,7 +2293,7 @@
 >
 >
 >
-> Để có Var\[W(𝐗)\] ≥ \[Cov(W(𝐗), ∂/∂θ log f(𝐗|θ))\]^2 / Var\_θ\[∂/∂θ log f(𝐗|θ)\]
+> Để có Var\[W(𝐗)\] ≥ \[Cov(W(𝐗), ∂/∂θ log f(𝐗|θ))\]² / Var\_θ\[∂/∂θ log f(𝐗|θ)\]
 >
 >
 >
@@ -2305,7 +2305,7 @@
 >
 >
 >
-> 2. Var\_θ\[∂/∂θ log f(𝐗|θ)\] chính là E\_θ\[(∂/∂θ log f(𝐗|θ)^2\]
+> 2. Var\_θ\[∂/∂θ log f(𝐗|θ)\] chính là E\_θ\[(∂/∂θ log f(𝐗|θ)²\]
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -2337,43 +2337,43 @@
 >
 >
 >
-> Var\_θ\[W(𝐗)\] ≥ {d/dθ E\_θ\[W(𝐗)\]}^2 / E\_θ\[(∂/∂θ log f(𝐗|θ)^2\]
+> Var\_θ\[W(𝐗)\] ≥ {d/dθ E\_θ\[W(𝐗)\]}² / E\_θ\[(∂/∂θ log f(𝐗|θ)²\]
 >
 >
 >
-> Và xét cái mẫu số ở vế phải E\_θ\[(∂/∂θ log f(𝐗|θ))^2\]:
+> Và xét cái mẫu số ở vế phải E\_θ\[(∂/∂θ log f(𝐗|θ))²\]:
 >
 >
 >
-> = E\_θ{\[ ∂/∂θ log fX1,..Xn(X1,...Xn|θ) \]^2}
+> = E\_θ{\[ ∂/∂θ log fX1,..Xn(X1,...Xn|θ) \]²}
 >
 >
 >
-> = E\_θ{\[ ∂/∂θ log Πi fXi(Xi|θ) \]^2} (do iid, tách joint pdf thành tích marginal pdf)
+> = E\_θ{\[ ∂/∂θ log Πi fXi(Xi|θ) \]²} (do iid, tách joint pdf thành tích marginal pdf)
 >
 >
 >
-> = E\_θ{\[ ∂/∂θ Σi log fXi(Xi|θ) \]^2} (log A log B = log (A+B))
+> = E\_θ{\[ ∂/∂θ Σi log fXi(Xi|θ) \]²} (log A log B = log (A+B))
 >
 >
 >
-> = E\_θ{\[ Σi ∂/∂θ log fXi(Xi|θ)\]^2} (đưa đạo hàm vào trong tổng)
+> = E\_θ{\[ Σi ∂/∂θ log fXi(Xi|θ)\]²} (đưa đạo hàm vào trong tổng)
 >
 >
 >
-> = E\_θ{Σi ∂/∂θ log fXi(Xi|θ)^2 + Σi≠j (∂/∂θ log fXi(Xi|θ)) (∂/∂θ log fXj(Xj|θ)) } (khai triển cái bình phương
+> = E\_θ{Σi ∂/∂θ log fXi(Xi|θ)² + Σi≠j (∂/∂θ log fXi(Xi|θ)) (∂/∂θ log fXj(Xj|θ)) } (khai triển cái bình phương
 >
 >
 >
-> = E\_θ{Σi ∂/∂θ log fXi(Xi|θ)^2} + E\_θ { Σi≠j \[∂/∂θ log fXi(Xi|θ)\] \[∂/∂θ log fXj(Xj|θ) } (tách kì vọng ra dùng linearity)
+> = E\_θ{Σi ∂/∂θ log fXi(Xi|θ)²} + E\_θ { Σi≠j \[∂/∂θ log fXi(Xi|θ)\] \[∂/∂θ log fXj(Xj|θ) } (tách kì vọng ra dùng linearity)
 >
 >
 >
-> = Σi { E\_θ\[∂/∂θ log fXi(Xi|θ)^2\] } + Σi≠j { E\_θ\[∂/∂θ log fXi(Xi|θ) log fXj(Xj|θ) } (đưa kì vọng vô tổng dùng linearity)
+> = Σi { E\_θ\[∂/∂θ log fXi(Xi|θ)²\] } + Σi≠j { E\_θ\[∂/∂θ log fXi(Xi|θ) log fXj(Xj|θ) } (đưa kì vọng vô tổng dùng linearity)
 >
 >
 >
-> = Σi E\_θ\[(∂/∂θ log fXi(Xi|θ)^2\] + Σi≠j E\_θ\[∂/∂θ log fXi(Xi|θ)\] E\_θ\[ log fXj(Xj|θ) \]
+> = Σi E\_θ\[(∂/∂θ log fXi(Xi|θ)²\] + Σi≠j E\_θ\[∂/∂θ log fXi(Xi|θ)\] E\_θ\[ log fXj(Xj|θ) \]
 >
 >
 >
@@ -2381,7 +2381,7 @@
 >
 >
 >
-> = Σi E\_θ\[(∂/∂θ log fXi(Xi|θ)^2\] + Σi≠j E\_θ\[∂/∂θ log f(Xi|θ)\] E\_θ\[ log f(Xj|θ) \]
+> = Σi E\_θ\[(∂/∂θ log fXi(Xi|θ)²\] + Σi≠j E\_θ\[∂/∂θ log f(Xi|θ)\] E\_θ\[ log f(Xj|θ) \]
 >
 >
 >
@@ -2389,23 +2389,23 @@
 >
 >
 >
-> Vậy chỉ còn Σi E\_θ\[(∂/∂θ log fXi(Xi|θ)^2\]
+> Vậy chỉ còn Σi E\_θ\[(∂/∂θ log fXi(Xi|θ)²\]
 >
 >
 >
-> = Σi E\_θ\[(∂/∂θ log f(Xi|θ)^2\]
+> = Σi E\_θ\[(∂/∂θ log f(Xi|θ)²\]
 >
 >
 >
-> Và E\_θ\[(∂/∂θ log f(Xi|θ)^2\], với i bằng bao nhiêu thì cũng ra constant, và nó đều giống nhau, vì đều là đang tính:
+> Và E\_θ\[(∂/∂θ log f(Xi|θ)²\], với i bằng bao nhiêu thì cũng ra constant, và nó đều giống nhau, vì đều là đang tính:
 >
 >
 >
-> Eg(Xi) với g(Xi) = (∂/∂θ log f(Xi|θ)^2, thì theo lotus nó sẽ
+> Eg(Xi) với g(Xi) = (∂/∂θ log f(Xi|θ)², thì theo lotus nó sẽ
 >
 >
 >
-> = ∫-inf:inf (∂/∂θ log f(xi|θ)^2 f(xi|θ) dxi
+> = ∫-inf:inf (∂/∂θ log f(xi|θ)² f(xi|θ) dxi
 >
 >
 >
@@ -2417,7 +2417,7 @@
 >
 >
 >
-> n E\_θ\[(∂/∂θ log f(X|θ)^2\]. Chứng minh xong.
+> n E\_θ\[(∂/∂θ log f(X|θ)²\]. Chứng minh xong.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
@@ -2437,7 +2437,7 @@
 >
 >
 >
-> Một cái nữa là, nói về cái đại lượng E\_θ\[(∂/∂θ log f(𝐗|θ))^2\] được gọi là **information number** hoặc **Fisher information**. Và nó phản ánh **giá trị chặn dưới của variance của best unbiased estimator of θ**. Ta sẽ có chặn của variance càng nhỏ nếu như thông tin càng lớn.
+> Một cái nữa là, nói về cái đại lượng E\_θ\[(∂/∂θ log f(𝐗|θ))²\] được gọi là **information number** hoặc **Fisher information**. Và nó phản ánh **giá trị chặn dưới của variance của best unbiased estimator of θ**. Ta sẽ có chặn của variance càng nhỏ nếu như thông tin càng lớn.
 >
 >
 >
@@ -2471,7 +2471,7 @@
 >
 >
 >
-> E_θ[(∂/∂θ log f(X|θ))^2] = - E_θ[∂^2/∂θ^2 log f(X|θ)]
+> E_θ[(∂/∂θ log f(X|θ))²] = - E_θ[∂²/∂θ² log f(X|θ)]
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
@@ -2531,7 +2531,7 @@
 >
 >
 >
-> Var\_θ (W(𝐗)) ≥ \[d/dθ E\_θ\[W(𝐗)\] \]^2 / E\_θ \[(∂/∂θ log f(𝐗|θ))^2\]
+> Var\_θ (W(𝐗)) ≥ \[d/dθ E\_θ\[W(𝐗)\] \]² / E\_θ \[(∂/∂θ log f(𝐗|θ))²\]
 >
 >
 >
@@ -2547,11 +2547,11 @@
 >
 >
 >
-> Vậy ở tử số là 1^2 = 1.
+> Vậy ở tử số là 1² = 1.
 >
 >
 >
-> Mẫu số: Ta cần tính E\_θ \[(∂/∂θ log f(𝐗|θ))^2\]
+> Mẫu số: Ta cần tính E\_θ \[(∂/∂θ log f(𝐗|θ))²\]
 >
 >
 >
@@ -2559,15 +2559,15 @@
 >
 >
 >
-> = E\_λ \[(∂/∂λ log Πi=1:n f(Xi|λ))^2\]
+> = E\_λ \[(∂/∂λ log Πi=1:n f(Xi|λ))²\]
 >
 >
 >
-> = E\_λ \[(∂/∂λ Σi=1:n log f(Xi|λ))^2\]
+> = E\_λ \[(∂/∂λ Σi=1:n log f(Xi|λ))²\]
 >
 >
 >
-> = nE\_λ \[(∂/∂λ log f(X|λ))^2\] (1) | do iid nên f(Xi|λ) đều như nhau với mọi i
+> = nE\_λ \[(∂/∂λ log f(X|λ))²\] (1) | do iid nên f(Xi|λ) đều như nhau với mọi i
 >
 >
 >
@@ -2579,7 +2579,7 @@
 >
 >
 >
-> ⇨ E\_θ \[(∂/∂θ log f(X|θ))^2\] = - E\_θ\[∂^2/∂θ^2 log f(X|θ)\]
+> ⇨ E\_θ \[(∂/∂θ log f(X|θ))²\] = - E\_θ\[∂²/∂θ² log f(X|θ)\]
 >
 >
 >
@@ -2587,27 +2587,27 @@
 >
 >
 >
-> E\_λ \[(∂/∂λ log f(X|λ))^2\] = - E\_λ \[∂^2/∂λ² log f(X|λ)\]
+> E\_λ \[(∂/∂λ log f(X|λ))²\] = - E\_λ \[∂²/∂λ² log f(X|λ)\]
 >
 >
 >
-> ⇨ (1) = - nE\_λ \[∂^2/∂λ² log e^-λ λ^X / X!\]
+> ⇨ (1) = - nE\_λ \[∂²/∂λ² log e^-λ λ^X / X!\]
 >
 >
 >
-> = - nE\_λ \[∂^2/∂λ² \[log e^-λ + log λ^X - log X!\]\]
+> = - nE\_λ \[∂²/∂λ² \[log e^-λ + log λ^X - log X!\]\]
 >
 >
 >
-> = - nE\_λ \[∂^2/∂λ² \[log e^-λ\] + ∂^2/∂λ² \[log λ^X\] - ∂^2/∂λ² \[log X!\]
+> = - nE\_λ \[∂²/∂λ² \[log e^-λ\] + ∂²/∂λ² \[log λ^X\] - ∂²/∂λ² \[log X!\]
 >
 >
 >
-> = - nE\_λ \[∂^2/∂λ² \[-λ\] + ∂^2/∂λ² \[X log λ\] - 0
+> = - nE\_λ \[∂²/∂λ² \[-λ\] + ∂²/∂λ² \[X log λ\] - 0
 >
 >
 >
-> = - nE\_λ \[0 + X ∂^2/∂λ² \[log λ\]
+> = - nE\_λ \[0 + X ∂²/∂λ² \[log λ\]
 >
 >
 >
@@ -2674,7 +2674,7 @@
 >
 >
 >
-> Var_θ[W(𝐗)] ≥ [d/dθ E_θ[W(𝐗)]]^2 / E_θ[(∂/∂θ log f(𝐗|θ)^2]
+> Var_θ[W(𝐗)] ≥ [d/dθ E_θ[W(𝐗)]]² / E_θ[(∂/∂θ log f(𝐗|θ)²]
 >
 >
 >
@@ -2682,11 +2682,11 @@
 >
 >
 >
-> Var_θ[W(X)] ≥ [d/dθ E_θ[W(𝐗)]]^2 / nE_θ[(∂/∂θ log f(X|θ)^2]
+> Var_θ[W(X)] ≥ [d/dθ E_θ[W(𝐗)]]² / nE_θ[(∂/∂θ log f(X|θ)²]
 >
 >
 >
-> Vậy thì ở đây, thử xem cái tử số: [d/dθ E_θ[W(𝐗)]]^2
+> Vậy thì ở đây, thử xem cái tử số: [d/dθ E_θ[W(𝐗)]]²
 >
 >
 >
@@ -2701,7 +2701,7 @@
 >
 >
 >
-> Còn mẫu số: nE_θ[(∂/∂θ log f(X|θ)^2]
+> Còn mẫu số: nE_θ[(∂/∂θ log f(X|θ)²]
 >
 >
 >
@@ -2717,11 +2717,11 @@
 >
 >
 >
-> = 1/(1/θ) . (-1/θ^2)  
+> = 1/(1/θ) . (-1/θ²)  
 >
 >
 >
-> = θ . (-1/θ^2)  
+> = θ . (-1/θ²)  
 >
 >
 >
@@ -2733,15 +2733,15 @@
 >
 >
 >
-> ⇨ nE_θ[(∂/∂θ log f(X|θ)^2]
+> ⇨ nE_θ[(∂/∂θ log f(X|θ)²]
 >
 >
 >
-> = nE_θ[[-/θ]^2]
+> = nE_θ[[-/θ]²]
 >
 >
 >
-> = n/θ^2
+> = n/θ²
 >
 >
 >
@@ -2750,7 +2750,7 @@
 >
 >
 >
-> Var_θ[W(𝐗)] ≥ 1 / (n/θ^2) = θ^2 / n
+> Var_θ[W(𝐗)] ≥ 1 / (n/θ²) = θ² / n
 >
 >
 >
@@ -2763,7 +2763,7 @@
 >
 >
 > Rồi, Đại ý là tiếp theo, ta chỉ cần tìm ra cái Unbiased estimator
-> có variance bằng θ^2 / n thì có thể kết luận nó là best unbiased 
+> có variance bằng θ² / n thì có thể kết luận nó là best unbiased 
 > estimator.
 >
 >
@@ -2802,7 +2802,7 @@
 >
 >
 >
-> Rồi, tiếp tác giả tính VarY, thì ra θ^2 / [n(n+2)] 
+> Rồi, tiếp tác giả tính VarY, thì ra θ² / [n(n+2)] 
 >
 >
 >
@@ -2811,7 +2811,7 @@
 >
 >
 >
-> θ^2 / [n(n+2)] < θ^2 / n
+> θ² / [n(n+2)] < θ² / n
 >
 > NHƯ VẬY LÀ. TRONG CASE NÀY, CRAMER RAO INEQUALTY
 > KHÔNG ÁP DỤNG ĐƯỢC
@@ -2911,7 +2911,7 @@
 >
 >
 >
-> Var_θ[W(𝐗)] ≥ [d/dθ E_θ[W(𝐗)]]^2 / E_θ[(∂/∂θ log f(𝐗|θ)^2]
+> Var_θ[W(𝐗)] ≥ [d/dθ E_θ[W(𝐗)]]² / E_θ[(∂/∂θ log f(𝐗|θ)²]
 >
 >
 >
@@ -2919,7 +2919,7 @@
 >
 >
 >
-> Var_θ[W(𝐗)] ≥ [d/dθ E_θ[W(𝐗)]]^2 / nE_θ[(∂/∂θ log f(X|θ)^2]
+> Var_θ[W(𝐗)] ≥ [d/dθ E_θ[W(𝐗)]]² / nE_θ[(∂/∂θ log f(X|θ)²]
 >
 >
 >
@@ -2927,35 +2927,35 @@
 >
 >
 >
-> E_θ [[∂/∂θ log f(X|θ)]^2] = - E_θ[∂^2/∂θ^2 log f(X|θ)] để tính cái mẫu dễ hơn.
+> E_θ [[∂/∂θ log f(X|θ)]²] = - E_θ[∂²/∂θ² log f(X|θ)] để tính cái mẫu dễ hơn.
 >
 >
 >
-> Áp dụng vào đây đầu tiên ta tính ∂^2/∂θ^2 log f(X|θ), 
+> Áp dụng vào đây đầu tiên ta tính ∂²/∂θ² log f(X|θ), 
 >
 >
 >
-> tức ∂^2/∂(σ²)^2 log f(X|θ)
+> tức ∂²/∂(σ²)² log f(X|θ)
 >
 >
 >
-> = ∂^2/∂(σ²)^2 log [1/√(2πσ²) . exp[-(1/2)(x-μ)^2/σ²]
+> = ∂²/∂(σ²)² log [1/√(2πσ²) . exp[-(1/2)(x-μ)²/σ²]
 >
 >
 >
-> = khai triển tính tóan sẽ ra 1/2σ^4 - (x - μ)^2 / σ^6
+> = khai triển tính tóan sẽ ra 1/2σ⁴ - (x - μ)² / σ^6
 >
 >
 >
-> ⇨ - E[∂^2/∂(σ²)^2 log f(X|θ)] = -E[1/2σ^4 - (x - μ)^2 / σ^6]
+> ⇨ - E[∂²/∂(σ²)² log f(X|θ)] = -E[1/2σ⁴ - (x - μ)² / σ^6]
 >
 >
 >
-> = 1/2σ^4
+> = 1/2σ⁴
 >
 >
 >
-> Như vậy dùng bổ đề 7.3.11, ta có E_θ [[∂/∂θ log f(X|θ)]^2] = 1/2σ^4
+> Như vậy dùng bổ đề 7.3.11, ta có E_θ [[∂/∂θ log f(X|θ)]²] = 1/2σ⁴
 >
 >
 >
@@ -2963,28 +2963,28 @@
 >
 >
 >
-> n(1/2σ^4) = n/2σ^4
+> n(1/2σ⁴) = n/2σ⁴
 >
 >
 >
 > Còn tử số thì dĩ nhiên là 1, vì ta sẽ xét lower bound của các unbiased
-> estimator W(𝐗): E_θ(W(𝐗)) = θ nên [d/dθ E_θ[W(𝐗)]]^2 = 1^2 = 1
+> estimator W(𝐗): E_θ(W(𝐗)) = θ nên [d/dθ E_θ[W(𝐗)]]² = 1² = 1
 >
 >
 >
 > Vậy nên với các unbiased estimator W(𝐗) thì variance của chúng sẽ 
-> có lower bound: là 1 / (n/2σ^4) = 2σ^4/n 
+> có lower bound: là 1 / (n/2σ⁴) = 2σ⁴/n 
 >
 >
 >
 > (Nhớ nhé, Cramer Rao nói về lower bound của estimator bất kì, nhưng khi
 > mình áp dụng cho các unbiased estimator của θ thì cái tử số sẽ là 
-> [d/dθ E_θ[W(X)]]^2 = [d/dθ [θ]]^2 = 1^2 = 1)
+> [d/dθ E_θ[W(X)]]² = [d/dθ [θ]]² = 1² = 1)
 >
 >
 >
-> thế thì ta mới tính variance của sample variance là S², ra được 2σ^4/(n-1) 
-> và kết quả này rõ ràng là > 2σ^4/n 
+> thế thì ta mới tính variance của sample variance là S², ra được 2σ⁴/(n-1) 
+> và kết quả này rõ ràng là > 2σ⁴/n 
 >
 >
 >
@@ -3065,7 +3065,7 @@
 >
 >
 >
-> ... = (n / 2σ^4) [[Σi (xi - μ)^2 / n] - σ²]
+> ... = (n / 2σ⁴) [[Σi (xi - μ)² / n] - σ²]
 >
 >
 >
@@ -3081,21 +3081,21 @@
 >
 >
 >
-> cho nó bằng vế trái: a(σ²)[W(X) - σ²] = (n / 2σ^4) [[Σi (xi - μ)^2 / n] - σ²]
+> cho nó bằng vế trái: a(σ²)[W(X) - σ²] = (n / 2σ⁴) [[Σi (xi - μ)² / n] - σ²]
 >
 >
 >
-> thì ta sẽ thấy: Cho a(σ²) = (n / 2σ^4) thì W(𝐗) = [Σi (xi - μ)^2 / n] thì hai vế
+> thì ta sẽ thấy: Cho a(σ²) = (n / 2σ⁴) thì W(𝐗) = [Σi (xi - μ)² / n] thì hai vế
 > bằng nhau.
 >
 >
 >
-> Kết luận là với a =  (n / 2σ^4), W(𝐗) = [Σi (xi - μ)^2 / n] sẽ là best unbiased
+> Kết luận là với a =  (n / 2σ⁴), W(𝐗) = [Σi (xi - μ)² / n] sẽ là best unbiased
 > estimator (vì nó đạt variance của Cramer Rao Lower Bound)
 >
 >
 >
-> Và một ý quan trọng là, cái này, W(X) = [Σi (xi - μ)^2 / n] CÓ DÍNH ĐẾN
+> Và một ý quan trọng là, cái này, W(X) = [Σi (xi - μ)² / n] CÓ DÍNH ĐẾN
 > μ, nên chỉ tính được nếu đã biết μ. Còn nếu μ ko biết, thì Cramer Rao
 > Bound UNATTAINABLE.
 
@@ -3397,7 +3397,7 @@
 >
 >
 >
-> MSE_θ[W(𝐗)] = Var_θ[W(𝐗)] + [Bias_θ[W(𝐗)]]^2
+> MSE_θ[W(𝐗)] = Var_θ[W(𝐗)] + [Bias_θ[W(𝐗)]]²
 >
 >
 >
@@ -3750,11 +3750,11 @@
 >
 >
 >
-> [Cov(X,Y)]^2 ≤ Var(X)Var(Y) (1), và thử chứng minh lại không thừa:
+> [Cov(X,Y)]² ≤ Var(X)Var(Y) (1), và thử chứng minh lại không thừa:
 >
 >
 >
-> ⇔ (E[(X-EX)(Y-EY)])^2 ≤ E[(X-EX)^2]E[(Y-EY)^2]
+> ⇔ (E[(X-EX)(Y-EY)])² ≤ E[(X-EX)²]E[(Y-EY)²]
 >
 >
 >
@@ -3762,27 +3762,27 @@
 >
 >
 >
-> Vậy cái cần chứng minh chính là: [E(UV)]^2 ≤ E[U^2]E[V^2] (2)
+> Vậy cái cần chứng minh chính là: [E(UV)]² ≤ E[U²]E[V²] (2)
 >
 >
 >
-> **Tiếp, xét biểu thức (tU + V)^2, đương nhiên cái này luôn ≥ 0
+> **Tiếp, xét biểu thức (tU + V)², đương nhiên cái này luôn ≥ 0
 >
 >
 >
-> nên E[(tU + V)^2] cũng ≥ 0 (*)**
+> nên E[(tU + V)²] cũng ≥ 0 (*)**
 >
 >
 >
-> ⇔ E[t^2U^2 + V^2 + 2tUV] ≥ 0
+> ⇔ E[t²U² + V² + 2tUV] ≥ 0
 >
 >
 >
-> ⇔ E[t^2U^2] + E[V^2] + E[2tUV] ≥ 0
+> ⇔ E[t²U²] + E[V²] + E[2tUV] ≥ 0
 >
 >
 >
-> ⇔ t^2 E[U^2] + E[V^2] + 2t E[UV] ≥ 0
+> ⇔ t² E[U²] + E[V²] + 2t E[UV] ≥ 0
 >
 >
 >
@@ -3790,7 +3790,7 @@
 >
 >
 >
-> f(t) = t^2 E[U^2] + E[V^2] + 2t E[UV] = 0 
+> f(t) = t² E[U²] + E[V²] + 2t E[UV] = 0 
 >
 >
 >
@@ -3798,20 +3798,20 @@
 >
 >
 >
-> B^2 - 4AC ≤ 0 
+> B² - 4AC ≤ 0 
 >
 >
 >
-> ⇔ [2E(UV)]^2 - 4E[U^2]E[V^2] ≤ 0
+> ⇔ [2E(UV)]² - 4E[U²]E[V²] ≤ 0
 >
 >
 >
-> ⇔ [E(UV)]^2 ≤ E[U^2]E[V^2] là điều cần (2) chứng minh.
+> ⇔ [E(UV)]² ≤ E[U²]E[V²] là điều cần (2) chứng minh.
 >
 >
 >
 > Và ta cũng thấy, để dấu bằng ở (1) cũng là ở (*) xảy ra thì dấu 
-> bằng ở đây phải xảy ra tức là B^2 - 4AC = 0 và nghiệm kép đó là:
+> bằng ở đây phải xảy ra tức là B² - 4AC = 0 và nghiệm kép đó là:
 >
 >
 >
@@ -3819,11 +3819,11 @@
 >
 >
 >
-> = -2E[UV] / (2E[U^2]) = 
+> = -2E[UV] / (2E[U²]) = 
 >
 >
 >
-> = -E[UV] / E[U^2], 
+> = -E[UV] / E[U²], 
 >
 >
 >
@@ -3831,15 +3831,15 @@
 >
 >
 >
-> ⇨ t* = -E[(X-EX)(Y-EY)] / E[(X-EX)^2] 
+> ⇨ t* = -E[(X-EX)(Y-EY)] / E[(X-EX)²] 
 >
 >
 >
-> Và với t* này thì dấu bằng ở (*) xảy ra. Ta có: E[(t*U + V)^2] = 0
+> Và với t* này thì dấu bằng ở (*) xảy ra. Ta có: E[(t*U + V)²] = 0
 >
 >
 >
-> ⇔ (t*U + V)^2 = 0 
+> ⇔ (t*U + V)² = 0 
 >
 >
 >
@@ -3863,7 +3863,7 @@
 >
 >
 >
-> Với a = t* = -E[(X-EX)(Y-EY)] / E[(X-EX)^2], là constant 
+> Với a = t* = -E[(X-EX)(Y-EY)] / E[(X-EX)²], là constant 
 >
 >
 >
@@ -3903,7 +3903,7 @@
 >
 >
 >
-> Dùng identity Var(cX) = c^2VarX
+> Dùng identity Var(cX) = c²VarX
 >
 >
 >
@@ -3931,7 +3931,7 @@
 >
 >
 >
-> [Cov(W,W')]^2 ≤ VarWVarW'
+> [Cov(W,W')]² ≤ VarWVarW'
 >
 >
 >
@@ -3979,7 +3979,7 @@
 >
 >
 >
-> a = t* = -E[(X-EX)(Y-EY)] / E[(X-EX)^2], 
+> a = t* = -E[(X-EX)(Y-EY)] / E[(X-EX)²], 
 >
 >
 >
@@ -4024,7 +4024,7 @@
 >
 >
 >
-> = a(θ) E_θ[(W-EW)^2]
+> = a(θ) E_θ[(W-EW)²]
 >
 >
 >
@@ -4040,11 +4040,11 @@
 >
 >
 >
-> Và [Cov_θ(W, W')]^2 = VarWVarW'
+> Và [Cov_θ(W, W')]² = VarWVarW'
 >
 >
 >
-> ⇨ Cov_θ(W, W') = √VarWVarW' = √(VarW)^2 = VarW
+> ⇨ Cov_θ(W, W') = √VarWVarW' = √(VarW)² = VarW
 >
 >
 >
@@ -4120,7 +4120,7 @@
 >
 >
 >
-> = Var_θ(W) + a^2Var_θ(U) + 2aCov(W, U)
+> = Var_θ(W) + a²Var_θ(U) + 2aCov(W, U)
 >
 >
 >
@@ -4129,7 +4129,7 @@
 >
 >
 >
-> MSE_θ(W(𝐗)) = Var_θ(W(𝐗)) + {Bias_θ[W(𝐗)]}^2
+> MSE_θ(W(𝐗)) = Var_θ(W(𝐗)) + {Bias_θ[W(𝐗)]}²
 >
 >
 >
@@ -4142,7 +4142,7 @@
 >
 >
 >
-> Var_θ(Φa) = Var_θ(W) + a^2Var_θ(U) + 2aCov(W, U)
+> Var_θ(Φa) = Var_θ(W) + a²Var_θ(U) + 2aCov(W, U)
 >
 >
 >
@@ -4151,12 +4151,12 @@
 >
 >
 >
-> Còn nếu Cov(W,U) âm khiến a^2Var_θ(U) + 2aCov(W, U) có thể < 0, thì
+> Còn nếu Cov(W,U) âm khiến a²Var_θ(U) + 2aCov(W, U) có thể < 0, thì
 > ta có thể chọn U để khiến U tốt hơn cả W:
 >
 >
 >
-> a^2Var_θ(U) + 2aCov(W, U) < 0
+> a²Var_θ(U) + 2aCov(W, U) < 0
 >
 >
 >
@@ -5019,8 +5019,8 @@
 
 > [!NOTE]
 > Đại ý là, bữa giờ tiêu chí ta đánh giá một estimator là dựa trên MSE. (nhớ
-> lại, định nghĩa MSE của một estimator là: MSE_θ[W(𝐗)] = E_θ[W(𝐗) - θ]^2
-> = Var_θ[W(𝐗)] + Bias_θ[W(𝐗)]^2
+> lại, định nghĩa MSE của một estimator là: MSE_θ[W(𝐗)] = E_θ[W(𝐗) - θ]²
+> = Var_θ[W(𝐗)] + Bias_θ[W(𝐗)]²
 >
 >
 >
@@ -5057,7 +5057,7 @@
 >
 >
 >
-> SQUARED ERROR LOSS L(θ, a) = (a - θ)^2  và 
+> SQUARED ERROR LOSS L(θ, a) = (a - θ)²  và 
 >
 >
 >
@@ -5107,7 +5107,7 @@
 > một random variable, có được bởi áp hàm W, hay δ lên random sample 𝐗
 > Rồi, khi ném θ và δ(𝐗) vào L(.), ta có gì? Ta sẽ có một function phụ thuộc
 > 𝐗, và θ, mà nếu coi như θ fix thì ta có một random variable, ví dụ như
-> squared error loss L(θ, δ(𝐗)) = [δ(𝐗) - θ]^2
+> squared error loss L(θ, δ(𝐗)) = [δ(𝐗) - θ]²
 >
 >
 >
@@ -5136,7 +5136,7 @@
 
 > [!NOTE]
 > Ôn lại lần nữa để khỏi rối: Ta đã học về một tiêu chí đánh giá estimator,
-> là MSE, định nghĩa bởi: MSE_θ(δ(𝐗)) = E_θ[(δ(𝐗) - θ)^2]
+> là MSE, định nghĩa bởi: MSE_θ(δ(𝐗)) = E_θ[(δ(𝐗) - θ)²]
 >
 >
 >
@@ -5149,11 +5149,11 @@
 >
 >
 >
-> R(θ, δ(𝐗)) = E_θ[L(θ, δ(𝐗)]  để rồi khi L(θ, δ(𝐗)) = [δ(𝐗) - θ]^2 thì:
+> R(θ, δ(𝐗)) = E_θ[L(θ, δ(𝐗)]  để rồi khi L(θ, δ(𝐗)) = [δ(𝐗) - θ]² thì:
 >
 >
 >
-> R(θ, δ(𝐗)) = E_θ[(δ(𝐗) - θ)^2]
+> R(θ, δ(𝐗)) = E_θ[(δ(𝐗) - θ)²]
 >
 >
 >
@@ -5162,7 +5162,7 @@
 >
 >
 >
-> R(θ, δ(𝐗)) = MSE_θ(δ(𝐗)), và do đó = Var_θ(δ(𝐗)) + [Bias_θ δ(𝐗)]^2
+> R(θ, δ(𝐗)) = MSE_θ(δ(𝐗)), và do đó = Var_θ(δ(𝐗)) + [Bias_θ δ(𝐗)]²
 
 <br>
 
@@ -5255,7 +5255,7 @@
 >
 >
 > Thế thì còn nhớ sample variance S² (còn gọi là unbiased sample variance)
-> thì ..vì unbiased nên E[S²] = σ² và VarS² = 2 σ^4 / (n-1).
+> thì ..vì unbiased nên E[S²] = σ² và VarS² = 2 σ⁴ / (n-1).
 >
 >
 >
@@ -5268,7 +5268,7 @@
 >
 >
 >
-> = b^2Var(S²) + [E(bS²)-σ²]^2
+> = b²Var(S²) + [E(bS²)-σ²]²
 >
 >
 >
@@ -5276,31 +5276,31 @@
 >
 >
 >
-> ..= b^2Var(S²) + [E(bS²) - σ²]^2
+> ..= b²Var(S²) + [E(bS²) - σ²]²
 >
 >
 >
-> = b^2Var(S²) + [bE(S²) - σ²]^2 
+> = b²Var(S²) + [bE(S²) - σ²]² 
 >
 >
 >
-> = b^2Var(S²) + [bσ² - σ²]^2 
+> = b²Var(S²) + [bσ² - σ²]² 
 >
 >
 >
-> = b^2Var(S²) + [(b-1)σ²]^2 
+> = b²Var(S²) + [(b-1)σ²]² 
 >
 >
 >
-> = b^2Var(S²) + (b-1)^2σ^4 
+> = b²Var(S²) + (b-1)²σ⁴ 
 >
 >
 >
-> = b^2 2σ^4/(n-1) + (b-1)^2σ^4 
+> = b² 2σ⁴/(n-1) + (b-1)²σ⁴ 
 >
 >
 >
-> = [b^2 2/(n-1) + (b-1)^2]σ^4
+> = [b² 2/(n-1) + (b-1)²]σ⁴
 
 <br>
 
@@ -5313,19 +5313,19 @@
 <p align="center"><kbd><img src="assets/5gjyle4w4re.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> rồi, thế thì đại khái , cái kết quả vừa rồi R((μ, σ²), δb(𝐗)) = = [2b^2/(n-1) +
-> (b-1)^2]σ^4 cho thấy nó có dạng của c_b (σ²)^2, tức là, một quadratic function của
+> rồi, thế thì đại khái , cái kết quả vừa rồi R((μ, σ²), δb(𝐗)) = = [2b²/(n-1) +
+> (b-1)²]σ⁴ cho thấy nó có dạng của c_b (σ²)², tức là, một quadratic function của
 > population variance.
 >
 >
 >
 > Và ta sẽ lập luận đơn giản thế này: giả sử xét một estimator khác cũng có dạng này
-> δ_b'(𝐗) = b'S². Thì risk function của nó là c_b' (σ²)^2.
+> δ_b'(𝐗) = b'S². Thì risk function của nó là c_b' (σ²)².
 >
 >
 >
 > Để rồi khi so sánh hai estimator δ_b(𝐗) và δ_b'(𝐗) thì dễ hiểu là nếu c_b' ≤
-> c_b thì c_b' (σ²)^2 ≤ c_b (σ²)^2 VỚI MỌI σ. Và từ đó giúp kết luận δ_b'(𝐗) tốt
+> c_b thì c_b' (σ²)² ≤ c_b (σ²)² VỚI MỌI σ. Và từ đó giúp kết luận δ_b'(𝐗) tốt
 > hơn δ_b(𝐗)
 >
 >
@@ -5336,7 +5336,7 @@
 >
 >
 >
-> Tức là ta cần giải bài toán tối ưu đơn giản: minimize f(b) = [2b^2/(n-1) + (b-1)^2] s.t
+> Tức là ta cần giải bài toán tối ưu đơn giản: minimize f(b) = [2b²/(n-1) + (b-1)²] s.t
 > b ≥ 0
 >
 >
@@ -5382,12 +5382,12 @@
 >
 >
 >
-> Vậy S_tilde^2(𝐗) = [(n-1)/(n+1)] S² CHÍNH LÀ CÁI CÓ RISK NHỎ NHẤT
+> Vậy S_tilde²(𝐗) = [(n-1)/(n+1)] S² CHÍNH LÀ CÁI CÓ RISK NHỎ NHẤT
 > TRONG SỐ NHỮNG ESTIMATOR CÓ DẠNG bS².
 >
 >
 >
-> Và hình 7.3.2 cho thấy đồ thị hàm risk của S_tilde^2(𝐗), S² (như đã biết, là
+> Và hình 7.3.2 cho thấy đồ thị hàm risk của S_tilde²(𝐗), S² (như đã biết, là
 > unbiased estimator của σ²) và của MLE của σ². Nhận xét thấy nó thấp hơn hai
 > thằng này ở mọi giá trị của σ²
 
@@ -5478,7 +5478,7 @@
 >
 >
 >
-> Để rồi khi dùng squared error loss, thì ta có R(θ, δ) = E_θ[(δ(X) - θ)^2]
+> Để rồi khi dùng squared error loss, thì ta có R(θ, δ) = E_θ[(δ(X) - θ)²]
 > thì đây chính là mean square error MSE.
 >
 >
@@ -5861,15 +5861,15 @@
 >
 >
 >
-> ∫Θ [θ - δ(𝐱)]^2 π(θ|𝐱) dθ 
+> ∫Θ [θ - δ(𝐱)]² π(θ|𝐱) dθ 
 >
 >
 >
-> Dễ thấy nó chính là E[(θ - δ(𝐱))^2|𝐗=𝐱]
+> Dễ thấy nó chính là E[(θ - δ(𝐱))²|𝐗=𝐱]
 >
 >
 >
-> và trong chương 2 mình đã biết, a khiến minimize E[(X - a)^2] chính là EX,
+> và trong chương 2 mình đã biết, a khiến minimize E[(X - a)²] chính là EX,
 > nên ở đây δ(𝐱) khiến minimize cái này chính là E[θ|𝐱], và nó bằng ∫θ f(θ|𝐱)dθ
 >
 >
@@ -5947,7 +5947,7 @@
 >
 >
 >
-> = Πi=1:n [1/(√2π)σ] exp[-(xi-θ)^2/2σ²]
+> = Πi=1:n [1/(√2π)σ] exp[-(xi-θ)²/2σ²]
 >
 >
 >
@@ -5955,7 +5955,7 @@
 >
 >
 >
-> π(θ) = [1/(√2π)τ] exp[-(θ-μ)^2/2τ²]
+> π(θ) = [1/(√2π)τ] exp[-(θ-μ)²/2τ²]
 >
 >
 >
@@ -5967,15 +5967,15 @@
 >
 >
 >
-> = { Πi=1:n 1/(√2π)σ exp[-(xi-θ)^2/2σ²] } {1/(√2π)τ exp[-(θ-μ)^2/2τ²] }
+> = { Πi=1:n 1/(√2π)σ exp[-(xi-θ)²/2σ²] } {1/(√2π)τ exp[-(θ-μ)²/2τ²] }
 >
 >
 >
-> = [1/(√2π)σ]^n {exp [Σi=1:n -(xi-θ)^2/2σ²]} {1/(√2π)τ exp[-(θ-μ)^2/2τ²] }
+> = [1/(√2π)σ]^n {exp [Σi=1:n -(xi-θ)²/2σ²]} {1/(√2π)τ exp[-(θ-μ)²/2τ²] }
 >
 >
 >
-> = [1/(√2π)σ]^n [1/(√2π)τ] {exp [Σi=1:n -(xi-θ)^2/2σ²]} { exp[-(θ-μ)^2/2τ²] }
+> = [1/(√2π)σ]^n [1/(√2π)τ] {exp [Σi=1:n -(xi-θ)²/2σ²]} { exp[-(θ-μ)²/2τ²] }
 >
 >
 >
@@ -5983,27 +5983,27 @@
 >
 >
 >
-> exp [Σi=1:n -(xi-θ)^2/2σ²]  exp[-(θ-μ)^2/2τ²]
+> exp [Σi=1:n -(xi-θ)²/2σ²]  exp[-(θ-μ)²/2τ²]
 >
 >
 >
-> = exp [(1/2σ²) Σi=1:n -(xi-θ)^2]  exp[-(θ-μ)^2/2τ²]
+> = exp [(1/2σ²) Σi=1:n -(xi-θ)²]  exp[-(θ-μ)²/2τ²]
 >
 >
 >
-> = exp [(1/2σ²) Σi=1:n -(xi^2-2xiθ+θ^2)]  exp[-(θ-μ)^2/2τ²]
+> = exp [(1/2σ²) Σi=1:n -(xi²-2xiθ+θ²)]  exp[-(θ-μ)²/2τ²]
 >
 >
 >
-> = exp [(1/2σ²) Σi=1:n (-xi^2+2xiθ-θ^2)]  exp[-(θ-μ)^2/2τ²]
+> = exp [(1/2σ²) Σi=1:n (-xi²+2xiθ-θ²)]  exp[-(θ-μ)²/2τ²]
 >
 >
 >
-> = exp [(1/2σ²) (-Σixi^2+2θnx̄-nθ^2)]  exp[-(θ-μ)^2/2τ²]
+> = exp [(1/2σ²) (-Σixi²+2θnx̄-nθ²)]  exp[-(θ-μ)²/2τ²]
 >
 >
 >
-> = exp [(1/2σ²) (-Σixi^2+2θnx̄-nθ^2) -(θ-μ)^2/2τ²]
+> = exp [(1/2σ²) (-Σixi²+2θnx̄-nθ²) -(θ-μ)²/2τ²]
 >
 >
 >
@@ -6011,31 +6011,31 @@
 >
 >
 >
-> (1/2σ²) (-Σixi^2+2θnx̄-nθ^2) -(θ-μ)^2/2τ²
+> (1/2σ²) (-Σixi²+2θnx̄-nθ²) -(θ-μ)²/2τ²
 >
 >
 >
-> = (1/2σ²) (-Σixi^2+2θnx̄-nθ^2) -(θ^2-2θμ+μ²)/2τ²
+> = (1/2σ²) (-Σixi²+2θnx̄-nθ²) -(θ²-2θμ+μ²)/2τ²
 >
 >
 >
-> = -Σixi^2/2σ²+2nθx̄/2σ²-nθ^2/2σ² -θ^2/2τ²+2θμ/2τ²-μ²/2τ²
+> = -Σixi²/2σ²+2nθx̄/2σ²-nθ²/2σ² -θ²/2τ²+2θμ/2τ²-μ²/2τ²
 >
 >
 >
-> = -Σixi^2/2σ²+nθx̄/σ²-nθ^2/2σ² -θ^2/2τ²+θμ/τ²-μ²/2τ²
+> = -Σixi²/2σ²+nθx̄/σ²-nθ²/2σ² -θ²/2τ²+θμ/τ²-μ²/2τ²
 >
 >
 >
-> = -nθ^2/2σ²-θ^2/2τ²+nθx̄/σ²+θμ/τ²-μ²/2τ²-Σixi^2/2σ²
+> = -nθ²/2σ²-θ²/2τ²+nθx̄/σ²+θμ/τ²-μ²/2τ²-Σixi²/2σ²
 >
 >
 >
-> = -(n/2σ²+1/2τ²)θ^2 + (nx̄/σ²+μ/τ²)θ -μ²/2τ²-Σixi^2/2σ²
+> = -(n/2σ²+1/2τ²)θ² + (nx̄/σ²+μ/τ²)θ -μ²/2τ²-Σixi²/2σ²
 >
 >
 >
-> Quay lại xét pdf cuả n(μ, σ²) = [1/(√2π)σ] exp[-(x-μ)^2/2σ²]
+> Quay lại xét pdf cuả n(μ, σ²) = [1/(√2π)σ] exp[-(x-μ)²/2σ²]
 >
 >
 >
@@ -6043,23 +6043,23 @@
 >
 >
 >
-> -(x-μ)^2/2σ² = -(x^2-2xμ+μ²)/2σ²
+> -(x-μ)²/2σ² = -(x²-2xμ+μ²)/2σ²
 >
 >
 >
-> = (-x^2+2xμ-μ²)/2σ²
+> = (-x²+2xμ-μ²)/2σ²
 >
 >
 >
-> = -x^2/2σ²+2xμ/2σ²-μ²/2σ²
+> = -x²/2σ²+2xμ/2σ²-μ²/2σ²
 >
 >
 >
-> = -x^2/2σ²+xμ/σ²-μ²/2σ²
+> = -x²/2σ²+xμ/σ²-μ²/2σ²
 >
 >
 >
-> ⇨ nó có dạng -x^2 / 2Variance + x Mean/Variance - Mean^2 / 2Variance
+> ⇨ nó có dạng -x² / 2Variance + x Mean/Variance - Mean² / 2Variance
 >
 >
 >
@@ -6115,39 +6115,39 @@
 >
 >
 >
-> = C1 exp [-θ^2/2Variance + Meanθ/Variance - C2]
+> = C1 exp [-θ²/2Variance + Meanθ/Variance - C2]
 >
 >
 >
-> = C1 exp [-θ^2/2Variance + Meanθ/Variance] / exp [C2]
+> = C1 exp [-θ²/2Variance + Meanθ/Variance] / exp [C2]
 >
 >
 >
-> = C exp [-θ^2/2Variance + 2Meanθ/2Variance]
+> = C exp [-θ²/2Variance + 2Meanθ/2Variance]
 >
 >
 >
-> = C exp [(-θ^2 + 2Meanθ)/2Variance]
+> = C exp [(-θ² + 2Meanθ)/2Variance]
 >
 >
 >
-> = C exp [-(θ^2 - 2Meanθ + Mean^2 - Mean^2)/2Variance]
+> = C exp [-(θ² - 2Meanθ + Mean² - Mean²)/2Variance]
 >
 >
 >
-> = C exp [-(θ^2 - 2Meanθ + Mean^2)/2Variance - Mean^2)/2Variance]
+> = C exp [-(θ² - 2Meanθ + Mean²)/2Variance - Mean²)/2Variance]
 >
 >
 >
-> = C exp [-(θ - Mean)^2/2Variance + (Mean^2)/2Variance]
+> = C exp [-(θ - Mean)²/2Variance + (Mean²)/2Variance]
 >
 >
 >
-> = C exp [-(θ - Mean)^2/2Variance] * exp [(Mean^2)/2Variance]
+> = C exp [-(θ - Mean)²/2Variance] * exp [(Mean²)/2Variance]
 >
 >
 >
-> = C exp [-(θ - Mean)^2/2Variance]    | nhập / exp [(Mean^2)/2Variance]  vào C
+> = C exp [-(θ - Mean)²/2Variance]    | nhập / exp [(Mean²)/2Variance]  vào C
 > luôn
 >
 >
