@@ -534,7 +534,7 @@
 >
 > ----- Do đó, khi không biết σ ta sẽ dùng cái pivot thứ hai: (X̄ - μ) / S/√n,
 > với S² là sample variance (chính xác thì gọi là unbiased sample variance có
-> công thức Σi (Xi - x̄)^2 / (n-1), vì E(S²) = σ²)
+> công thức Σi (Xi - x̄)² / (n-1), vì E(S²) = σ²)
 >
 >
 >
@@ -658,7 +658,7 @@
 >
 >
 >
-> fS²(s^2) = f(s^2 / [σ²/(n-1)]) / σ²/(n-1)
+> fS²(s²) = f(s² / [σ²/(n-1)]) / σ²/(n-1)
 >
 >
 >
@@ -812,7 +812,7 @@
 >
 >
 >
-> ⇨ b = FYinv[FY(a) + 1 - α], coi như b = b(a), là hàm theo a.
+> ⇨ b = FY⁻¹[FY(a) + 1 - α], coi như b = b(a), là hàm theo a.
 >
 >
 >
@@ -849,27 +849,27 @@
 >
 >
 >
-> ⇔ x { (-1/a^2) - d/da [b(a)^-1] } = 0
+> ⇔ x { (-1/a²) - d/da [b(a)^-1] } = 0
 >
 >
 >
-> ⇔ (-1/a^2) - d/db(a) [b(a)^-1] . d/da b(a) = 0
+> ⇔ (-1/a²) - d/db(a) [b(a)^-1] . d/da b(a) = 0
 >
 >
 >
-> ⇔ (-1/a^2) - [-b(a)^-2] . b'(a) = 0
+> ⇔ (-1/a²) - [-b(a)^-2] . b'(a) = 0
 >
 >
 >
-> ⇔ (-1/a^2) + b(a)^-2 . b'(a) = 0
+> ⇔ (-1/a²) + b(a)^-2 . b'(a) = 0
 >
 >
 >
-> Thay b(a) = FYinv[FY(a) + 1 - α]
+> Thay b(a) = FY⁻¹[FY(a) + 1 - α]
 >
 >
 >
-> b'(a) = d/da FYinv[FY(a) + 1 - α]
+> b'(a) = d/da FY⁻¹[FY(a) + 1 - α]
 >
 >
 >
@@ -877,7 +877,7 @@
 >
 >
 >
-> Xét hàm f và inverse của nó: finv. Ta có finv(f(x)) = x
+> Xét hàm f và inverse của nó: f⁻¹. Ta có f⁻¹(f(x)) = x
 >
 >
 >
@@ -885,31 +885,31 @@
 >
 >
 >
-> d/dx finv(f(x)) = d/dx x
+> d/dx f⁻¹(f(x)) = d/dx x
 >
 >
 >
-> ⇔ d/df(x) finv(f(x)) . d/dx f(x) = 1 | chain rule
+> ⇔ d/df(x) f⁻¹(f(x)) . d/dx f(x) = 1 | chain rule
 >
 >
 >
-> ⇔ d/df(x) finv(f(x)) = 1 / [d/dx f(x)]
+> ⇔ d/df(x) f⁻¹(f(x)) = 1 / [d/dx f(x)]
 >
 >
 >
-> ⇔ d/df(x) finv(f(x)) = 1 / [d/dx f(finv(f(x))]  | vì x = finv(f(x))
+> ⇔ d/df(x) f⁻¹(f(x)) = 1 / [d/dx f(f⁻¹(f(x))]  | vì x = f⁻¹(f(x))
 >
 >
 >
-> Đặt y = f(x), x = finv(y)
+> Đặt y = f(x), x = f⁻¹(y)
 >
 >
 >
-> ⇔ **d/dy finv(y) = 1 / [d/dx f(x)] = 1 / [d/dx f(x)|x=finv(y)] = f'(x)|x=finv(y)**
+> ⇔ **d/dy f⁻¹(y) = 1 / [d/dx f(x)] = 1 / [d/dx f(x)|x=f⁻¹(y)] = f'(x)|x=f⁻¹(y)**
 >
 >
 >
-> Vậy thì ở đây mình đang cần tính b'(a) = d/da Finv[F(a) + 1 - α]
+> Vậy thì ở đây mình đang cần tính b'(a) = d/da F⁻¹[F(a) + 1 - α]
 >
 >
 >
@@ -917,11 +917,11 @@
 >
 >
 >
-> b'(a) = d/da  Finv(z(a))
+> b'(a) = d/da  F⁻¹(z(a))
 >
 >
 >
-> = d/dz Finv(z) . d/da z(a)
+> = d/dz F⁻¹(z) . d/da z(a)
 >
 >
 >
@@ -929,21 +929,21 @@
 >
 >
 >
-> Xét d/dz Finv(z): Áp dụng cái công thức trên: 
+> Xét d/dz F⁻¹(z): Áp dụng cái công thức trên: 
 >
 >
 >
-> = 1 / d/dx F(x)|x = Finv(z)
+> = 1 / d/dx F(x)|x = F⁻¹(z)
 >
-> = 1/ F'(Finv(z))
->
->
->
-> = 1/ f(Finv(z))
+> = 1/ F'(F⁻¹(z))
 >
 >
 >
-> = 1/ f(Finv(FY(a) + 1 - α)) 
+> = 1/ f(F⁻¹(z))
+>
+>
+>
+> = 1/ f(F⁻¹(FY(a) + 1 - α)) 
 >
 >
 >
@@ -955,11 +955,11 @@
 >
 >
 >
-> Quay lại thế vào điều kiện cần bậc nhất: ⇔ (-1/a^2) + b(a)^-2 . b'(a) = 0
+> Quay lại thế vào điều kiện cần bậc nhất: ⇔ (-1/a²) + b(a)^-2 . b'(a) = 0
 >
 >
 >
-> ⇔ (-1/a^2) + b(a)^-2 . [f(a) / f(b)] = 0
+> ⇔ (-1/a²) + b(a)^-2 . [f(a) / f(b)] = 0
 >
 >
 >
@@ -967,19 +967,19 @@
 >
 >
 >
-> ⇔ (-1/a^2) + b^-2 . [f(a) / f(b)] = 0
+> ⇔ (-1/a²) + b^-2 . [f(a) / f(b)] = 0
 >
 >
 >
-> ⇔ -1/a^2 + f(a) / b^2 f(b) = 0
+> ⇔ -1/a² + f(a) / b² f(b) = 0
 >
 >
 >
-> ⇔ f(a) / b^2 f(b) = 1/a^2
+> ⇔ f(a) / b² f(b) = 1/a²
 >
 >
 >
-> ⇔ a^2 f(a) = b^2 f(b)
+> ⇔ a² f(a) = b² f(b)
 >
 >
 >
@@ -995,7 +995,7 @@
 <p align="center"><kbd><img src="assets/skawuo6o7n.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là cuối cùng gs lưu ý rằng, cái equation f(b)b^2 = f(a)a^2 chỉ giúp ta
+> Đại khái là cuối cùng gs lưu ý rằng, cái equation f(b)b² = f(a)a² chỉ giúp ta
 > tìm ra shortest pivotal interval thay vì the shortest overall interval.
 >
 >
@@ -2105,23 +2105,23 @@
 >
 >
 >
-> vì L(x), U(x) đồng biến theo x nên L(x) ≤ θ ⇨ x ≤ Linv(θ), θ ≤ U(x) ⇨ Uinv(θ) ≤ x
+> vì L(x), U(x) đồng biến theo x nên L(x) ≤ θ ⇨ x ≤ L⁻¹(θ), θ ≤ U(x) ⇨ U⁻¹(θ) ≤ x
 >
 >
 >
-> Vậy ta có Uinv(θ) ≤ x ≤ Linv(θ) ⇨ với θ fix, thì x chạy từ Uinv(θ) tới Linv(θ).
+> Vậy ta có U⁻¹(θ) ≤ x ≤ L⁻¹(θ) ⇨ với θ fix, thì x chạy từ U⁻¹(θ) tới L⁻¹(θ).
 >
 >
 >
-> → ta có ∫_Θ ∫_Uinv(θ):Linv(θ) f(x|θ*)dx dθ
+> → ta có ∫_Θ ∫_U⁻¹(θ):L⁻¹(θ) f(x|θ*)dx dθ
 >
 >
 >
-> =  ∫_Θ P_θ*(Uinv(θ) ≤ X ≤Linv(θ) f(x|θ*)) dθ
+> =  ∫_Θ P_θ*(U⁻¹(θ) ≤ X ≤L⁻¹(θ) f(x|θ*)) dθ
 >
 >
 >
-> Tới đây, thì ta lại dùng lập luận: Uinv(θ) ≤ X ≤Linv(θ) ⇔ L(X) ≤ θ ≤ U(X), hay θ ∈ C(X)
+> Tới đây, thì ta lại dùng lập luận: U⁻¹(θ) ≤ X ≤L⁻¹(θ) ⇔ L(X) ≤ θ ≤ U(X), hay θ ∈ C(X)
 >
 >
 >
@@ -2444,13 +2444,13 @@
 > Nhớ lại một chút, trong bài toán point estimation, ta nhớ loss function sẽ
 > phản ánh mức độ nghiêm trọng khi estimation không chính xác so với
 > giá trị thực tế. Và ta sẽ quyết định mức độ nghiêm trọng theo nhiều
-> cách. Có thể là bình phương của sai số (δ(𝐗) - θ)^2 hoặc trị tuyệt đối
+> cách. Có thể là bình phương của sai số (δ(𝐗) - θ)² hoặc trị tuyệt đối
 > |δ(𝐗) - θ|
 >
 >
 >
 > (Từ đó nếu lấy kì vọng thì ta có khái niệm MSE của một point estimator
-> MSE(δ(𝐗) = E_θ[δ(𝐗) - θ]^2)
+> MSE(δ(𝐗) = E_θ[δ(𝐗) - θ]²)
 >
 >
 >
@@ -2636,7 +2636,7 @@
 > chọn loss function, là một function của "cái inference", ý là ám chỉ point
 > estimator hoặc interval estimator" và θ, mà việc chọn lựa này có thể nhằm
 > những mục đích khác nhau. Ví dụ với point estimator, δ(𝐗) ta có thể dùng
-> squared error loss:  L(δ(𝐗), θ) = [δ(𝐗) - θ]^2 hoặc absolute error loss:
+> squared error loss:  L(δ(𝐗), θ) = [δ(𝐗) - θ]² hoặc absolute error loss:
 > L(δ(𝐗), θ)) = |δ(𝐗) - θ|. Còn ở interval estimator C(𝐗), thì vì trong bối
 > cảnh bài toán này, ta quan tâm không chỉ một mà là hai yếu tố: size của
 > interval, Length(C) tức là length, và việc nó có chứa θ hay ko, biểu diễn
@@ -2784,23 +2784,23 @@
 >
 >
 >
-> ⇔ bσ - (1/√2π) exp(-c^2/2) = 0
+> ⇔ bσ - (1/√2π) exp(-c²/2) = 0
 >
 >
 >
-> ⇔ bσ = (1/√2π) exp(-c^2/2)
+> ⇔ bσ = (1/√2π) exp(-c²/2)
 >
 >
 >
-> ⇔ bσ√2π =  exp(-c^2/2)
+> ⇔ bσ√2π =  exp(-c²/2)
 >
 >
 >
-> ⇔ log[bσ√2π] = -c^2/2
+> ⇔ log[bσ√2π] = -c²/2
 >
 >
 >
-> ⇔ -2log[bσ√2π] = c^2
+> ⇔ -2log[bσ√2π] = c²
 >
 >
 >
@@ -2837,23 +2837,23 @@
 >
 >
 >
-> d/dc f'(c) = d/dc [bσ - (1/√2π) exp(-c^2/2)]
+> d/dc f'(c) = d/dc [bσ - (1/√2π) exp(-c²/2)]
 >
 >
 >
-> = -(1/√2π) d/dc exp(-c^2/2)
+> = -(1/√2π) d/dc exp(-c²/2)
 >
 >
 >
-> = -(1/√2π) exp(-c^2/2) d/dc [-c^2/2]
+> = -(1/√2π) exp(-c²/2) d/dc [-c²/2]
 >
 >
 >
-> = -(1/√2π) exp(-c^2/2) (-c)
+> = -(1/√2π) exp(-c²/2) (-c)
 >
 >
 >
-> = (c/√2π) exp(-c^2/2)
+> = (c/√2π) exp(-c²/2)
 >
 >
 >
