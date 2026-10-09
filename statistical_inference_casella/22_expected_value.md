@@ -443,7 +443,7 @@
 >
 >
 >
-> pdf của nó là fX(x) = (1/π) 1/(1 + x^2),  x ∈ (-inf: inf)
+> pdf của nó là fX(x) = (1/π) 1/(1 + x²),  x ∈ (-inf: inf)
 >
 >
 >
@@ -493,7 +493,7 @@
 >
 >
 > Vì sao vậy, đó là vì giả sử ta cho một con số b, và tính khoảng cách từ nó
-> đến X bằng (X - b)^2 (ta sẽ bình phương vì không muốn ảnh hưởng vấn
+> đến X bằng (X - b)² (ta sẽ bình phương vì không muốn ảnh hưởng vấn
 > đề về dấu, ta có thể dùng trị tuyệt đối nhưng có quyền dùng bình phương)
 > Vậy thì, nếu b CÀNG GẦN X, THÌ RÕ RÀNG DISTANCE NÀY SẼ CÀNG 
 > NHỎ và khi đó b sẽ càng predict tốt cho x 
@@ -505,8 +505,8 @@
 >
 >
 >
-> Do đó bài toán sẽ là: minimize E[(X - b)^2] / Chú ý E[(X - b)^2] sẽ chỉ phụ thuộc
-> b, chứ nếu minimize (X - b)^2 thì nó có phụ thuộc X nữa. (tạm hiểu vậy)
+> Do đó bài toán sẽ là: minimize E[(X - b)²] / Chú ý E[(X - b)²] sẽ chỉ phụ thuộc
+> b, chứ nếu minimize (X - b)² thì nó có phụ thuộc X nữa. (tạm hiểu vậy)
 >
 >
 >
@@ -518,15 +518,15 @@
 >
 >
 >
-> Vậy ta đối diện hàm f(b) = E[(X - b)^2] = Σx (x - b)^2fX(x) | fX là pmf
+> Vậy ta đối diện hàm f(b) = E[(X - b)²] = Σx (x - b)²fX(x) | fX là pmf
 >
 >
 >
-> d/db f(b) = d/db [Σx (x - b)^2fX(x)] = Σx d/db (x - b)^2fX(x)
+> d/db f(b) = d/db [Σx (x - b)²fX(x)] = Σx d/db (x - b)²fX(x)
 >
 >
 >
-> = Σx fX(x) d/db (x - b)^2 = Σx fX(x) d/d(x - b) (x - b)^2 . d/db (x - b)
+> = Σx fX(x) d/db (x - b)² = Σx fX(x) d/d(x - b) (x - b)² . d/db (x - b)
 >
 >
 >
@@ -562,11 +562,11 @@
 >
 >
 >
-> f(b) = E[(X - b)^2] = ∫-inf:inf (x - b)^2fX(x)dx | fX là pdf
+> f(b) = E[(X - b)²] = ∫-inf:inf (x - b)²fX(x)dx | fX là pdf
 >
 >
 >
-> d/db f(b) = d/db ∫-inf:inf (x - b)^2fX(x)dx
+> d/db f(b) = d/db ∫-inf:inf (x - b)²fX(x)dx
 >
 >
 >
@@ -575,11 +575,11 @@
 >
 >
 >
-> = ∫-inf:inf [d/db (x - b)^2fX(x)] dx
+> = ∫-inf:inf [d/db (x - b)²fX(x)] dx
 >
 >
 >
-> = ∫-inf:inf [fX(x) d/db (x - b)^2] dx
+> = ∫-inf:inf [fX(x) d/db (x - b)²] dx
 >
 >
 >
