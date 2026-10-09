@@ -115,23 +115,23 @@
 >
 >
 >
-> ⇔ (Xn_bar - μ)^2 ≥ ε^2
+> ⇔ (Xn_bar - μ)² ≥ ε²
 >
 >
 >
-> Áp dụng Chebyshev's inequality với g(Xn_bar) = (Xn_bar - μ)^2,
+> Áp dụng Chebyshev's inequality với g(Xn_bar) = (Xn_bar - μ)²,
 >
 >
 >
-> thì với mọi số dương ε^2 ta có:
+> thì với mọi số dương ε² ta có:
 >
 >
 >
-> P((Xn_bar - μ)^2 ≥ ε^2) ≤ [E(Xn_bar - μ)^2 ] / ε^2
+> P((Xn_bar - μ)² ≥ ε²) ≤ [E(Xn_bar - μ)² ] / ε²
 >
 >
 >
-> Mà vế phải là gì chính là Var(Xn_bar) / ε^2
+> Mà vế phải là gì chính là Var(Xn_bar) / ε²
 >
 >
 >
@@ -140,15 +140,15 @@
 >
 >
 >
-> ⇨ Vế phải = σ²/(nε^2)
+> ⇨ Vế phải = σ²/(nε²)
 >
 >
 >
-> Vậy ta có P(|Xn_bar - μ| ≥ ε) = P[(Xn_bar - μ)^2 ≥ ε^2] ≤ σ²/(nε^2)
+> Vậy ta có P(|Xn_bar - μ| ≥ ε) = P[(Xn_bar - μ)² ≥ ε²] ≤ σ²/(nε²)
 >
 >
 >
-> ⇔ - P(|Xn_bar - μ| ≥ ε) ≥ - σ²/(nε^2)
+> ⇔ - P(|Xn_bar - μ| ≥ ε) ≥ - σ²/(nε²)
 >
 >
 >
@@ -160,7 +160,7 @@
 >
 >
 >
-> .. ≥ 1 - σ²/(nε^2)
+> .. ≥ 1 - σ²/(nε²)
 >
 >
 >
@@ -168,11 +168,11 @@
 >
 >
 >
-> lim n → inf P(|X̄ - μ| < ε) ≥ lim n → inf 1 - σ²/(nε^2)
+> lim n → inf P(|X̄ - μ| < ε) ≥ lim n → inf 1 - σ²/(nε²)
 >
 >
 >
-> và khi n → inf thì 1 - σ²/(nε^2) → 1
+> và khi n → inf thì 1 - σ²/(nε²) → 1
 >
 >
 >
@@ -242,19 +242,19 @@
 >
 >
 >
-> Đặt Sn^2 (sample variance của random sample size n)
+> Đặt Sn² (sample variance của random sample size n)
 >
 >
 >
-> = [1/(n-1)] Σ (Xi - Xn_bar)^2
+> = [1/(n-1)] Σ (Xi - Xn_bar)²
 >
 >
 >
-> Câu hỏi là Sn^2, có consistency không
+> Câu hỏi là Sn², có consistency không
 >
 >
 >
-> Thế thì đại khái là, như định nghĩa ở trên, thì, để có tính consistency, thì Sn^2
+> Thế thì đại khái là, như định nghĩa ở trên, thì, để có tính consistency, thì Sn²
 > phải converge in probability tới σ² (population variance)
 >
 >
@@ -263,32 +263,32 @@
 >
 >
 >
-> Thế thì để vậy ta cần lim n → inf P(|Sn^2 - σ²| ≥ ε) = 0 với mọi ε dương
+> Thế thì để vậy ta cần lim n → inf P(|Sn² - σ²| ≥ ε) = 0 với mọi ε dương
 >
 >
 >
-> Mà xét P(|Sn^2 - σ²| ≥ ε) = P((Sn^2 - σ²)^2 ≥ ε^2) | cái này chỉ là event tương
+> Mà xét P(|Sn² - σ²| ≥ ε) = P((Sn² - σ²)² ≥ ε²) | cái này chỉ là event tương
 > đương
 >
 >
 >
-> ≤ E[(Sn^2 - σ²)^2] / ε^2 |  (Chebyshev inequality)
+> ≤ E[(Sn² - σ²)²] / ε² |  (Chebyshev inequality)
 >
 >
 >
-> = Var(Sn^2) / ε^2
+> = Var(Sn²) / ε²
 >
 >
 >
-> Như vậy để Sn^2 tiến tới σ² in probability (theo yêu cầu của tính consistency)
+> Như vậy để Sn² tiến tới σ² in probability (theo yêu cầu của tính consistency)
 >
 >
 >
-> thì P(|Sn^2 - σ²| ≥ ε) phải → 0
+> thì P(|Sn² - σ²| ≥ ε) phải → 0
 >
 >
 >
-> và như vậy Var(Sn^2) phải → 0
+> và như vậy Var(Sn²) phải → 0
 
 **🔗 See also:** [Tạo biến ngẫu nhiên mũ](./56_generating_random_sample.md#node-bxd38ye)
 
@@ -317,11 +317,11 @@
 <p align="center"><kbd><img src="assets/3usynydltj6.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, áp dụng theorem vừa rồi, ta sẽ có NẾU Sn^2 là **CONSISTENT ESTIMATOR** của σ² (tức là, nó sẽ converge in probability tới σ²) thì apply hàm g liên tục, ở đây là hàm g(u) = √u, thì chuỗi g(Sn^2), tức √Sn^2 (n = 1,2...) cũng sẽ converge in probability tới √σ² = σ. Do đó √Sn^2 **CŨNG LÀ CONSISTENT ESTIMATOR CỦA population standard deviation σ**
+> Rồi, áp dụng theorem vừa rồi, ta sẽ có NẾU Sn² là **CONSISTENT ESTIMATOR** của σ² (tức là, nó sẽ converge in probability tới σ²) thì apply hàm g liên tục, ở đây là hàm g(u) = √u, thì chuỗi g(Sn²), tức √Sn² (n = 1,2...) cũng sẽ converge in probability tới √σ² = σ. Do đó √Sn² **CŨNG LÀ CONSISTENT ESTIMATOR CỦA population standard deviation σ**
 >
 >
 >
-> Nhưng giáo sư lưu ý, ta phát biểu trên là NẾU Sn^2 là consistent estimator của σ², NHƯNG THỰC TẾ THÌ Sn^2 LẠI LÀ BIASED ESTIMATOR CỦA σ² nhưng sự biased này biến mất asymtotically
+> Nhưng giáo sư lưu ý, ta phát biểu trên là NẾU Sn² là consistent estimator của σ², NHƯNG THỰC TẾ THÌ Sn² LẠI LÀ BIASED ESTIMATOR CỦA σ² nhưng sự biased này biến mất asymtotically
 
 <br>
 
@@ -389,11 +389,11 @@
 >
 >
 >
-> thế thì với mọi s trong S{1} thì, dãy số X1(s), X2(s),...sẽ hội tụ về s Vì sao, vì nó là: s + s^1, s + s^2, .....với 0 ≤ s < 1 thì s^1, s^2,..→ 0 ⇨ s + s^1, s + s^2,...→ s, và s chính là X(s)
+> thế thì với mọi s trong S{1} thì, dãy số X1(s), X2(s),...sẽ hội tụ về s Vì sao, vì nó là: s + s^1, s + s², .....với 0 ≤ s < 1 thì s^1, s²,..→ 0 ⇨ s + s^1, s + s²,...→ s, và s chính là X(s)
 >
 >
 >
-> Duy chỉ có s = 1, thì dãy số X1(s), X2(s) ...không hội tụ về 1. Mà thay vào đó, nó là dãy số: 1 + 1^1, 1 + 1^2, ...tức là 2, 2, ....
+> Duy chỉ có s = 1, thì dãy số X1(s), X2(s) ...không hội tụ về 1. Mà thay vào đó, nó là dãy số: 1 + 1^1, 1 + 1², ...tức là 2, 2, ....
 >
 >
 >
@@ -844,7 +844,7 @@
 >
 >
 >
-> Rồi gọi E\[Xi\] là μ, Var Xi = σ² > 0, cả hai cái này đều finite vì đã nói mgf tồn tại. (ta nhớ EXi là first moment, EXi^2 là second moment).
+> Rồi gọi E\[Xi\] là μ, Var Xi = σ² > 0, cả hai cái này đều finite vì đã nói mgf tồn tại. (ta nhớ EXi là first moment, EXi² là second moment).
 >
 >
 >
@@ -856,7 +856,7 @@
 >
 >
 >
-> Khi đó với mọi x: thì lim x→∞ Gn(x) = ∫-inf:x (1/√2π) e^-y^2/2 dy
+> Khi đó với mọi x: thì lim x→∞ Gn(x) = ∫-inf:x (1/√2π) e^-y²/2 dy
 >
 >
 >
@@ -925,7 +925,7 @@
 <p align="center"><kbd><img src="assets/a6mzbf1ze0d.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Để chứng minh thì ta sẽ **chứng minh mgf của √n(Xn_bar - μ) / σ converge về e^t^2/2 - là mgf của standard normal**.
+> Để chứng minh thì ta sẽ **chứng minh mgf của √n(Xn_bar - μ) / σ converge về e^t²/2 - là mgf của standard normal**.
 >
 >
 >
@@ -1080,7 +1080,7 @@
 <p align="center"><kbd><img src="assets/bqqerq3321d.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, theo định nghĩa, đại khái là mình đã từng học đó là, theo **định nghĩa của mgf** khi ta Taylor expansion nó ra, thì hệ số gắn với term bậc 1, cũng là đạo hàm bậc 1 của mgf chính là first moment, tức EX, hệ số gắn với term bậc 2, cũng là đạo hàm bậc 2 của mgf chính là second moment, tức EX^2, ....
+> Rồi, theo định nghĩa, đại khái là mình đã từng học đó là, theo **định nghĩa của mgf** khi ta Taylor expansion nó ra, thì hệ số gắn với term bậc 1, cũng là đạo hàm bậc 1 của mgf chính là first moment, tức EX, hệ số gắn với term bậc 2, cũng là đạo hàm bậc 2 của mgf chính là second moment, tức EX², ....
 >
 >
 >
@@ -1100,11 +1100,11 @@
 >
 >
 >
-> ⇨ EYi^2 - (EYi)^2 = 1 ⇨ EYi^2 = 1 - 0 = 1, đây chính là moment bậc 2
+> ⇨ EYi² - (EYi)² = 1 ⇨ EYi² = 1 - 0 = 1, đây chính là moment bậc 2
 >
 >
 >
-> Vậy MY(t/√n) = 1 + (t/√n)^2/2! + RY(t/√n) với RY là các term còn lại của Taylor expansion (là sao, là vì ta đã biết 3 cái moment đầu tiên nên thay vào ta có 3 hạng tử đầu tiên như vầy, còn các hạng tử khác, gom vô thành hàm RY)
+> Vậy MY(t/√n) = 1 + (t/√n)²/2! + RY(t/√n) với RY là các term còn lại của Taylor expansion (là sao, là vì ta đã biết 3 cái moment đầu tiên nên thay vào ta có 3 hạng tử đầu tiên như vầy, còn các hạng tử khác, gom vô thành hàm RY)
 
 <br>
 
@@ -1136,7 +1136,7 @@
 >
 >
 >
-> Nội dung thì đại khái là cũng cho chuỗi rv X1,X2...iid, có population mean μ, finite variance σ². Và X̄_n là sample mean size n. Gn(x) là cdf của √n(X̄_n - μ) / σ thì theorem nói rằng n → inf thì Gn(x) → ∫-inf:x 1/√2π e^-y^2/2dy chính là cdf của standard normal (normal(0,1))
+> Nội dung thì đại khái là cũng cho chuỗi rv X1,X2...iid, có population mean μ, finite variance σ². Và X̄_n là sample mean size n. Gn(x) là cdf của √n(X̄_n - μ) / σ thì theorem nói rằng n → inf thì Gn(x) → ∫-inf:x 1/√2π e^-y²/2dy chính là cdf của standard normal (normal(0,1))
 >
 >
 >
@@ -1161,7 +1161,7 @@
 >
 >
 >
-> Cái này ta đã học mean và variance của nó là r(1 - p) / p và r(1 - p)/p^2
+> Cái này ta đã học mean và variance của nó là r(1 - p) / p và r(1 - p)/p²
 >
 >
 >
@@ -1370,11 +1370,11 @@
 >
 >
 >
-> Tương tự, từ x = x0 tới x = x0 + p cũng sẽ tồn tại điểm x = x0 + tp với t ∈ (0,1) sao cho f(p) = f(x) + f'(x)p + (1/2)f''(x + tp)p^2
+> Tương tự, từ x = x0 tới x = x0 + p cũng sẽ tồn tại điểm x = x0 + tp với t ∈ (0,1) sao cho f(p) = f(x) + f'(x)p + (1/2)f''(x + tp)p²
 >
 >
 >
-> Và tương tự, từ x = x0 tới x = x0 + p cũng sẽ tồn tại điểm x = x0 + tp với t ∈(0,1) nào đó sao cho f(p) + f'(x)p + (1/2)f''(x)p^2 + (1/6)f^(3)(x+tp)p^3
+> Và tương tự, từ x = x0 tới x = x0 + p cũng sẽ tồn tại điểm x = x0 + tp với t ∈(0,1) nào đó sao cho f(p) + f'(x)p + (1/2)f''(x)p² + (1/6)f^(3)(x+tp)p³
 >
 >
 >
@@ -1384,7 +1384,7 @@
 >
 >
 >
-> g(x) = g(a) + g'(a)(x-a) + (1/2)g''(a)(x-a)^2 + ...+ (1/r!)g^(r)(a)(x-a)^r + \[1/(r+1)!\]g^(r+1)(c)(x-a)^(r+1)
+> g(x) = g(a) + g'(a)(x-a) + (1/2)g''(a)(x-a)² + ...+ (1/r!)g^(r)(a)(x-a)^r + \[1/(r+1)!\]g^(r+1)(c)(x-a)^(r+1)
 >
 >
 >
@@ -1652,11 +1652,11 @@
 >
 >
 >
-> Var\_**θ** g(**T**), theo công variance đã biết Var\[X\] = E\[X - EX\]^2
+> Var\_**θ** g(**T**), theo công variance đã biết Var\[X\] = E\[X - EX\]²
 >
 >
 >
-> ⇨ Var\_θ\[g(**T**)\] = E\_θ\[g(**T**) - E\_θ(g(**T**))\]^2
+> ⇨ Var\_θ\[g(**T**)\] = E\_θ\[g(**T**) - E\_θ(g(**T**))\]²
 >
 >
 >
@@ -1664,7 +1664,7 @@
 >
 >
 >
-> .. ≈ E\[g(**T**) - g(**θ**)\]^2 (ta dùng approx. value tính ở trên, bởi vậy nên ở đây ta phải dùng kí hiệu approx)
+> .. ≈ E\[g(**T**) - g(**θ**)\]² (ta dùng approx. value tính ở trên, bởi vậy nên ở đây ta phải dùng kí hiệu approx)
 >
 >
 >
@@ -1672,11 +1672,11 @@
 >
 >
 >
-> ≈ E\[g(**θ**) + Σi=1:k g'i(**θ**)(Ti - θi) - g(**θ**)\]^2
+> ≈ E\[g(**θ**) + Σi=1:k g'i(**θ**)(Ti - θi) - g(**θ**)\]²
 >
 >
 >
-> ≈ E\[Σi=1:k g'i(**θ**)(Ti - θi)\]^2
+> ≈ E\[Σi=1:k g'i(**θ**)(Ti - θi)\]²
 >
 >
 >
@@ -1684,11 +1684,11 @@
 >
 >
 >
-> = Σi=1:k E\[g'i(**θ**)(Ti - θi)\]^2 + 2Σi>j E\[g'i(**θ**)(Ti - θi)g'j(**θ**)(Tj - θj)\]
+> = Σi=1:k E\[g'i(**θ**)(Ti - θi)\]² + 2Σi>j E\[g'i(**θ**)(Ti - θi)g'j(**θ**)(Tj - θj)\]
 >
 >
 >
-> = Σi=1:k g'i(**θ**)^2 E\[(Ti - θi)\]^2 + 2Σi>j g'i(**θ**)g'j(**θ**) E\[(Ti - θi)(Tj - θj)\]
+> = Σi=1:k g'i(**θ**)² E\[(Ti - θi)\]² + 2Σi>j g'i(**θ**)g'j(**θ**) E\[(Ti - θi)(Tj - θj)\]
 >
 >
 >
@@ -1696,7 +1696,7 @@
 >
 >
 >
-> = Σi=1:k g'i(**θ**)^2 E\[(Ti - ETi)\]^2 + 2Σi>j g'i(**θ**)g'j(**θ**) E\[(Ti - ETi)(Tj - ETj)\]
+> = Σi=1:k g'i(**θ**)² E\[(Ti - ETi)\]² + 2Σi>j g'i(**θ**)g'j(**θ**) E\[(Ti - ETi)(Tj - ETj)\]
 >
 >
 >
@@ -1704,11 +1704,11 @@
 >
 >
 >
-> Thì E\[(Ti - ETi)\]^2 chính là Var(Ti) và E\[(Ti - ETi)(Tj - ETj)\] chính là Cov(Ti, Tj)
+> Thì E\[(Ti - ETi)\]² chính là Var(Ti) và E\[(Ti - ETi)(Tj - ETj)\] chính là Cov(Ti, Tj)
 >
 >
 >
-> = Σi=1:k g'i(**θ**)^2 VarTi + 2Σi>j g'i(**θ**)g'j(**θ**) Cov(Ti, Tj)
+> = Σi=1:k g'i(**θ**)² VarTi + 2Σi>j g'i(**θ**)g'j(**θ**) Cov(Ti, Tj)
 >
 >
 >
@@ -1716,7 +1716,7 @@
 >
 >
 >
-> Var\_θ\[g(**T**)\] ≈ Σi=1:k g'i(**θ**)^2 VarTi + 2Σi>j g'i(**θ**)g'j(**θ**) Cov(Ti, Tj)
+> Var\_θ\[g(**T**)\] ≈ Σi=1:k g'i(**θ**)² VarTi + 2Σi>j g'i(**θ**)g'j(**θ**) Cov(Ti, Tj)
 >
 >
 >
@@ -1760,7 +1760,7 @@
 >
 >
 >
-> Áp dụng kết quả: Var\_θ\[g(**T**)\] ≈ Σi=1:k g'i(**θ**)^2 VarTi + 2Σi>j g'i(**θ**)g'j(**θ**) Cov(Ti, Tj)..
+> Áp dụng kết quả: Var\_θ\[g(**T**)\] ≈ Σi=1:k g'i(**θ**)² VarTi + 2Σi>j g'i(**θ**)g'j(**θ**) Cov(Ti, Tj)..
 >
 >
 >
@@ -1772,7 +1772,7 @@
 >
 >
 >
-> term 1: Σi=1:k g'i(**θ**)^2 VarTi, ở đây chỉ có k = 1, nên ta có g'(**θ**)^2 Var(T)
+> term 1: Σi=1:k g'i(**θ**)² VarTi, ở đây chỉ có k = 1, nên ta có g'(**θ**)² Var(T)
 >
 >
 >
@@ -1788,7 +1788,7 @@
 >
 >
 >
-> Nên term 1 là g'(p)^2 Var(p^)
+> Nên term 1 là g'(p)² Var(p^)
 >
 >
 >
@@ -1800,11 +1800,11 @@
 >
 >
 >
-> Vậy Var\[(p^/1 - p^)\] ≈ g'(p)^2 Var(p^)
+> Vậy Var\[(p^/1 - p^)\] ≈ g'(p)² Var(p^)
 >
 >
 >
-> g(u) = u/1-u ⇨ g'(u) = 1/(1-u)^2 (chỉ là dùng quotient rule, ko khó)
+> g(u) = u/1-u ⇨ g'(u) = 1/(1-u)² (chỉ là dùng quotient rule, ko khó)
 >
 >
 >
@@ -1816,19 +1816,19 @@
 >
 >
 >
-> Var(X) = EX^2 - (EX)^2 = EX^2 - p^2 = \[1^2(PX=1) + 0^2P(X=0)\] - p^2
+> Var(X) = EX² - (EX)² = EX² - p² = \[1²(PX=1) + 0²P(X=0)\] - p²
 >
 >
 >
-> = p - p^2 = **p(1-p)**
+> = p - p² = **p(1-p)**
 >
 >
 >
-> ⇨ Ta có kết quả Var\[(p^/1 - p^)\] ≈ \[1/(1-p)^2\]^2 p(1-p)/n ≈ p/\[n(1-p)^3\]
+> ⇨ Ta có kết quả Var\[(p^/1 - p^)\] ≈ \[1/(1-p)²\]² p(1-p)/n ≈ p/\[n(1-p)³\]
 >
 >
 >
-> ⇨ Var\[(p^/1 - p^)\] ≈ p/\[n(1-p)^3\]
+> ⇨ Var\[(p^/1 - p^)\] ≈ p/\[n(1-p)³\]
 >
 >
 >
@@ -1930,35 +1930,35 @@
 >
 >
 >
-> = E\[g(X) - Eg(X)\]^2
+> = E\[g(X) - Eg(X)\]²
 >
 >
 >
-> ≈ E\[g(X) - g(μ)\]^2 (thay Eg(X) ≈ Eg(μ) = g(μ))
+> ≈ E\[g(X) - g(μ)\]² (thay Eg(X) ≈ Eg(μ) = g(μ))
 >
 >
 >
-> ≈ E\[g(μ) + g'(μ)(X - μ) - Eg(μ)\]^2 (thay g(X) ≈ g(μ) + g'(μ)(X - μ)
+> ≈ E\[g(μ) + g'(μ)(X - μ) - Eg(μ)\]² (thay g(X) ≈ g(μ) + g'(μ)(X - μ)
 >
 >
 >
-> = E\[g(μ) + g'(μ)(X - μ) - g(μ)\]^2
+> = E\[g(μ) + g'(μ)(X - μ) - g(μ)\]²
 >
 >
 >
-> = E\[g'(μ)(X - μ)\]^2
+> = E\[g'(μ)(X - μ)\]²
 >
 >
 >
-> = E\[g'(μ)^2(X - μ)^2\]
+> = E\[g'(μ)²(X - μ)²\]
 >
 >
 >
-> = g'(μ)^2 E\[(X - μ)\]^2
+> = g'(μ)² E\[(X - μ)\]²
 >
 >
 >
-> = g'(μ)^2 Var\_μ(X)
+> = g'(μ)² Var\_μ(X)
 >
 >
 >
@@ -1974,7 +1974,7 @@
 >
 >
 >
-> Và Var\_μ(1/X) ≈ (1 / μ)^4 Var\_μ(X)
+> Và Var\_μ(1/X) ≈ (1 / μ)⁴ Var\_μ(X)
 >
 >
 >
@@ -2026,7 +2026,7 @@
 >
 >
 >
-> Var\[p^/(1-p^)\] ≈ g'(p)^2 Var p^ = p/\[n(1-p)^3\]
+> Var\[p^/(1-p^)\] ≈ g'(p)² Var p^ = p/\[n(1-p)³\]
 >
 >
 >
@@ -2046,11 +2046,11 @@
 >
 >
 >
-> Để từ đó ta có Eg(X) ≈ g(μ) và Var g(X) ≈ g'(μ)^2 Var(X)
+> Để từ đó ta có Eg(X) ≈ g(μ) và Var g(X) ≈ g'(μ)² Var(X)
 >
 >
 >
-> Và cái chính muốn nói là, cũng giống như ở ví dụ trước, ta có được cái khung, rằng Var \[p^/(1-p^)\] ≈ p/\[n(1-p)^3\], đặng từ đó mà có thể làm tiếp (lắp p^ vào thay cho p), thì ở đây cũng vậy, kết quả từ Taylor expansion cho ta rằng, nếu ta quyết định dùng g(X) để estimate cho g(μ) thì ta có thì đi tính Var\[g(X)\] dựa theo cái khung là g'(μ)^2 Var(X).
+> Và cái chính muốn nói là, cũng giống như ở ví dụ trước, ta có được cái khung, rằng Var \[p^/(1-p^)\] ≈ p/\[n(1-p)³\], đặng từ đó mà có thể làm tiếp (lắp p^ vào thay cho p), thì ở đây cũng vậy, kết quả từ Taylor expansion cho ta rằng, nếu ta quyết định dùng g(X) để estimate cho g(μ) thì ta có thì đi tính Var\[g(X)\] dựa theo cái khung là g'(μ)² Var(X).
 
 <br>
 
@@ -2077,7 +2077,7 @@
 >
 >
 >
-> √n\[g(Yn) - g(θ)\] → (d) n(0, σ²\[g'(θ)\]^2)
+> √n\[g(Yn) - g(θ)\] → (d) n(0, σ²\[g'(θ)\]²)
 >
 >
 >
@@ -2177,7 +2177,7 @@
 >
 >
 >
-> Từ đó kết luận U \~ n(0, g'(θ)^2 × σ²)
+> Từ đó kết luận U \~ n(0, g'(θ)² × σ²)
 
 **🔗 See also:** [10.1.3 Calculations and Comparisons](./101_point_estimation.md#node-iwgmm5t)
 
@@ -2226,11 +2226,11 @@
 >
 >
 >
-> Nếu **√n(Yn - θ) →**(d) **N(0, θ^2)** thì
+> Nếu **√n(Yn - θ) →**(d) **N(0, θ²)** thì
 >
 >
 >
-> √**n(g(Yn) - g(θ))** →(d) **n(0, σ² g'(θ)^2)**
+> √**n(g(Yn) - g(θ))** →(d) **n(0, σ² g'(θ)²)**
 >
 >
 >
@@ -2242,11 +2242,11 @@
 >
 >
 >
-> Và ta có hàm g(t) = 1/t, g'(t) = -1/t^2
+> Và ta có hàm g(t) = 1/t, g'(t) = -1/t²
 >
 >
 >
-> ⇨ √n(g(X̄) - g(μ)) →(d) n(0, σ² g'(μ)^2)
+> ⇨ √n(g(X̄) - g(μ)) →(d) n(0, σ² g'(μ)²)
 >
 >
 >
@@ -2254,7 +2254,7 @@
 >
 >
 >
-> **√n(1/X̄ - 1/μ)** →(d) n(0, σ² (-1/μ²)^2) = **n(0, σ² (1/μ^4))**
+> **√n(1/X̄ - 1/μ)** →(d) n(0, σ² (-1/μ²)²) = **n(0, σ² (1/μ⁴))**
 >
 >
 >
@@ -2262,7 +2262,7 @@
 >
 >
 >
-> Vậy ta có **√n(1/X̄ - 1/μ) → n(0, (1/μ^4) Var X1)** là vậy
+> Vậy ta có **√n(1/X̄ - 1/μ) → n(0, (1/μ⁴) Var X1)** là vậy
 
 **🔗 See also:** [CLT - Định lý giới hạn trung tâm](#node-32vkewg)
 
@@ -2275,7 +2275,7 @@
 <p align="center"><kbd><img src="assets/5tusqz5k2u.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ok, vừa rồi mình đã hiểu được là √n(1/X̄ - 1/μ) →(d) n\[0, (1/μ)^4 Var(X1)\]
+> Ok, vừa rồi mình đã hiểu được là √n(1/X̄ - 1/μ) →(d) n\[0, (1/μ)⁴ Var(X1)\]
 >
 >
 >
@@ -2283,7 +2283,7 @@
 >
 >
 >
-> √n(1/X̄ - 1/μ) →(d) n\[0, (1/μ)^4 σ²\]
+> √n(1/X̄ - 1/μ) →(d) n\[0, (1/μ)⁴ σ²\]
 >
 >
 >
@@ -2291,19 +2291,19 @@
 >
 >
 >
-> Nên ở đây √n(1/X̄ - 1/μ) → (d) Z \~ n\[0, (1/μ)^4 σ²\]
+> Nên ở đây √n(1/X̄ - 1/μ) → (d) Z \~ n\[0, (1/μ)⁴ σ²\]
 >
 >
 >
-> và 1/\[p(1/μ)^4 σ²\] (dĩ nhiên) → (p) 1/\[(1/μ)^4 σ²\]
+> và 1/\[p(1/μ)⁴ σ²\] (dĩ nhiên) → (p) 1/\[(1/μ)⁴ σ²\]
 >
 >
 >
-> Thì \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\] → (d) Z / \[(1/μ)^4 σ²\]
+> Thì \[√n(1/X̄ - 1/μ)\] / \[(1/μ)⁴ σ²\] → (d) Z / \[(1/μ)⁴ σ²\]
 >
 >
 >
-> Và Z là rv \~ n\[0, (1/μ)^4 σ²\] thì ta đã biết nó là thành viên trong family có location 0, scale (1/μ)^4 σ².
+> Và Z là rv \~ n\[0, (1/μ)⁴ σ²\] thì ta đã biết nó là thành viên trong family có location 0, scale (1/μ)⁴ σ².
 >
 >
 >
@@ -2311,7 +2311,7 @@
 >
 >
 >
-> Vậy Z / \[(1/μ)^4 σ²\] sẽ chính là thành viên chuẩn, như trên, và với normal distribution thì location cũng là mean và scale cũng là standard deviation. Nên ta kết luận Z / \[(1/μ)^4 σ²\] sẽ \~ n(0,1)
+> Vậy Z / \[(1/μ)⁴ σ²\] sẽ chính là thành viên chuẩn, như trên, và với normal distribution thì location cũng là mean và scale cũng là standard deviation. Nên ta kết luận Z / \[(1/μ)⁴ σ²\] sẽ \~ n(0,1)
 >
 >
 >
@@ -2319,7 +2319,7 @@
 >
 >
 >
-> \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\] sẽ → (d) n(0,1)
+> \[√n(1/X̄ - 1/μ)\] / \[(1/μ)⁴ σ²\] sẽ → (d) n(0,1)
 >
 >
 >
@@ -2327,7 +2327,7 @@
 >
 >
 >
-> Tuy nhiên, ta ko biết μ, σ. Nên nói về cái này, \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\], là vô nghĩa vì có tính được đâu.
+> Tuy nhiên, ta ko biết μ, σ. Nên nói về cái này, \[√n(1/X̄ - 1/μ)\] / \[(1/μ)⁴ σ²\], là vô nghĩa vì có tính được đâu.
 >
 >
 >
@@ -2335,15 +2335,15 @@
 >
 >
 >
-> \[(1/μ)^4 σ²\] THAY BẰNG \[(1/X̄)^4 S²\]
+> \[(1/μ)⁴ σ²\] THAY BẰNG \[(1/X̄)⁴ S²\]
 >
 >
 >
-> Để rồi \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\]
+> Để rồi \[√n(1/X̄ - 1/μ)\] / \[(1/μ)⁴ σ²\]
 >
 >
 >
-> THAY BẰNG \[√n(1/X̄ - 1/μ)\] / \[(1/X̄)^4 S²\]
+> THAY BẰNG \[√n(1/X̄ - 1/μ)\] / \[(1/X̄)⁴ S²\]
 >
 >
 >
@@ -2359,27 +2359,27 @@
 >
 >
 >
-> \[√n(1/X̄ - 1/μ)\] / \[(1/X̄)^4 S²\]
+> \[√n(1/X̄ - 1/μ)\] / \[(1/X̄)⁴ S²\]
 >
 >
 >
-> (nhân và chia cho \[(1/μ)^4 σ²\])
+> (nhân và chia cho \[(1/μ)⁴ σ²\])
 >
 >
 >
-> = \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\] × \[(1/μ)^4 σ²\] / \[(1/X̄)^4 S²\]
+> = \[√n(1/X̄ - 1/μ)\] / \[(1/μ)⁴ σ²\] × \[(1/μ)⁴ σ²\] / \[(1/X̄)⁴ S²\]
 >
 >
 >
-> Thì term 1, \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\], như đã nói ở trên, sẽ converge in probability về n(0,1)
+> Thì term 1, \[√n(1/X̄ - 1/μ)\] / \[(1/μ)⁴ σ²\], như đã nói ở trên, sẽ converge in probability về n(0,1)
 >
 >
 >
-> Còn tern 2, \[(1/μ)^4 σ²\] / \[(1/X̄)^4 S²\]:
+> Còn tern 2, \[(1/μ)⁴ σ²\] / \[(1/X̄)⁴ S²\]:
 >
 >
 >
-> Thì viết lại, = (X̄/μ)^4 × σ²/S²
+> Thì viết lại, = (X̄/μ)⁴ × σ²/S²
 >
 >
 >
@@ -2395,7 +2395,7 @@
 >
 >
 >
-> Do đó (X̄/μ)^4 σ²/S² **converge in probability về 1**, hay (X̄/μ)^4 σ²/S² → 1 in probability.
+> Do đó (X̄/μ)⁴ σ²/S² **converge in probability về 1**, hay (X̄/μ)⁴ σ²/S² → 1 in probability.
 >
 >
 >
@@ -2403,7 +2403,7 @@
 >
 >
 >
-> \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\] × \[(1/μ)^4 σ²\] / \[(1/X̄)^4 S²\]
+> \[√n(1/X̄ - 1/μ)\] / \[(1/μ)⁴ σ²\] × \[(1/μ)⁴ σ²\] / \[(1/X̄)⁴ S²\]
 >
 >
 >
@@ -2421,11 +2421,11 @@
 >
 > **Nhờ vào tính unbiased estimator của X̄ và S²** (mà công thức là chia cho n-1) thì cái 
 >
-> \[√n(1/X̄ - 1/μ)\] / \[(1/X̄)^4 S²\] vẫn → n(0,1)
+> \[√n(1/X̄ - 1/μ)\] / \[(1/X̄)⁴ S²\] vẫn → n(0,1)
 >
 >
 >
-> y như cái \[√n(1/X̄ - 1/μ)\] / \[(1/μ)^4 σ²\]
+> y như cái \[√n(1/X̄ - 1/μ)\] / \[(1/μ)⁴ σ²\]
 
 <br>
 
@@ -2471,7 +2471,7 @@
 >
 >
 >
-> √n[g(Yn) - g(θ)] sẽ → (d) n(0, σ²[g'(θ)]^2]
+> √n[g(Yn) - g(θ)] sẽ → (d) n(0, σ²[g'(θ)]²]
 >
 >
 >
@@ -2484,7 +2484,7 @@
 >
 >
 >
-> g(Yn) = g(θ) + g'(θ)(Yn - θ) + g''(θ)(Yn - θ)^2/2 + Remainder
+> g(Yn) = g(θ) + g'(θ)(Yn - θ) + g''(θ)(Yn - θ)²/2 + Remainder
 >
 >
 >
@@ -2492,7 +2492,7 @@
 >
 >
 >
-> g(Yn) = g(θ) + g''(θ)(Yn - θ)^2/2 + Remainder
+> g(Yn) = g(θ) + g''(θ)(Yn - θ)²/2 + Remainder
 >
 >
 >
@@ -2500,11 +2500,11 @@
 >
 >
 >
-> g(Yn) ≈ g(θ) + g''(θ)(Yn - θ)^2/2
+> g(Yn) ≈ g(θ) + g''(θ)(Yn - θ)²/2
 >
 >
 >
-> ⇔ g''(θ)(Yn - θ)^2/2 ≈ g(Yn) - g(θ) (1)
+> ⇔ g''(θ)(Yn - θ)²/2 ≈ g(Yn) - g(θ) (1)
 >
 >
 >
@@ -2525,17 +2525,17 @@
 >
 >
 >
-> Và như vậy, lẽ dĩ nhiên [√n(Yn - θ)/σ]^2 sẽ trở nên giống X^2 với
+> Và như vậy, lẽ dĩ nhiên [√n(Yn - θ)/σ]² sẽ trở nên giống X² với
 > X ~ n(0,1). Hay:
 >
 >
 >
-> n(Yn - θ)^2/σ² → Chi-square 1 (2)
+> n(Yn - θ)²/σ² → Chi-square 1 (2)
 >
 >
 >
 > Mà bình phương của một rv thuộc n(0,1) sẽ chính là một rv thuộc
-> Chi-square_1 /X/^2
+> Chi-square_1 /X/²
 >
 >
 >
@@ -2547,11 +2547,11 @@
 >
 >
 >
-> (1) ta có g''(θ)(Yn - θ)^2/2 ≈ g(Yn) - g(θ)
+> (1) ta có g''(θ)(Yn - θ)²/2 ≈ g(Yn) - g(θ)
 >
 >
 >
-> (2) n(Yn - θ)^2/σ² → Chi-square 1
+> (2) n(Yn - θ)²/σ² → Chi-square 1
 >
 >
 >
@@ -2560,7 +2560,7 @@
 >
 >
 >
-> (1) ta nhân hai vế cho n: (1) ⇔ g''(θ) n (Yn - θ)^2/2 ≈ n[g(Yn) - g(θ)]
+> (1) ta nhân hai vế cho n: (1) ⇔ g''(θ) n (Yn - θ)²/2 ≈ n[g(Yn) - g(θ)]
 >
 >
 >
@@ -2576,7 +2576,7 @@
 >
 >
 >
-> n(Yn - θ)^2/σ² → Chi-square 1
+> n(Yn - θ)²/σ² → Chi-square 1
 >
 >
 >
@@ -2588,11 +2588,11 @@
 >
 >
 >
-> ⇨  g''(θ) σ²/2 n(Yn - θ)^2/σ² → g''(θ) σ²/2 Chi-square 1
+> ⇨  g''(θ) σ²/2 n(Yn - θ)²/σ² → g''(θ) σ²/2 Chi-square 1
 >
 >
 >
-> ⇔ n g''(θ)(Yn - θ)^2 → g''(θ) σ²/2 Chi-square 1
+> ⇔ n g''(θ)(Yn - θ)² → g''(θ) σ²/2 Chi-square 1
 >
 >
 >
@@ -2600,7 +2600,7 @@
 >
 >
 >
-> ⇨  n[g(Yn) - g(θ)] →(d) g''(θ) σ² Chi-square 1 hay σ² g''(θ) / 2 /X_1/^2
+> ⇨  n[g(Yn) - g(θ)] →(d) g''(θ) σ² Chi-square 1 hay σ² g''(θ) / 2 /X_1/²
 
 <br>
 
@@ -2635,7 +2635,7 @@
 >
 >
 >
-> và ∂/∂μY g(μX, μY) = - μX/μY^2
+> và ∂/∂μY g(μX, μY) = - μX/μY²
 >
 >
 >
@@ -2661,7 +2661,7 @@
 >
 >
 >
-> Còn Var g(**T**) = Σi=1:k [g'i(**θ**)]^2 Var Ti + 2 Σi>j g'i(θ) g'j(θ)Cov(Ti, Tj)
+> Còn Var g(**T**) = Σi=1:k [g'i(**θ**)]² Var Ti + 2 Σi>j g'i(θ) g'j(θ)Cov(Ti, Tj)
 >
 >
 >
@@ -2678,15 +2678,15 @@
 >
 >
 >
-> = (1/μY)^2 Var X + (- μX/μY^2)^2 VarY + 2 (1/μY) Var X (- μX/μY^2) Cov(X, Y)
+> = (1/μY)² Var X + (- μX/μY²)² VarY + 2 (1/μY) Var X (- μX/μY²) Cov(X, Y)
 >
 >
 >
-> = (1/μY^2) Var X + (- μX^2/μY^4) VarY + 2 (1/μY) Var X (- μX/μY^2) Cov(X, Y)
+> = (1/μY²) Var X + (- μX²/μY⁴) VarY + 2 (1/μY) Var X (- μX/μY²) Cov(X, Y)
 >
 >
 >
-> = (μX/μY)^2 [VarX/μX^2 + VarY/μY^2 - 2Cov(X,Y)/μXμY]
+> = (μX/μY)² [VarX/μX² + VarY/μY² - 2Cov(X,Y)/μXμY]
 >
 >
 >
