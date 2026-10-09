@@ -1,6 +1,6 @@
 # 2.1 Distribution
 
-📊 **Progress:** `15` Notes | `21` Screenshots | `3` AI Reviews
+📊 **Progress:** `15` Notes | `21` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-0qrdxlz"></a>
@@ -72,19 +72,19 @@
 >
 >
 >
-> Thế thì sau đó gs Casella nói về việc, từ g(x): ΩX -&gt; ΩY, ta có thể define một mapping ngược lại g_inv ΩY -&gt; ΩX
+> Thế thì sau đó gs Casella nói về việc, từ g(x): ΩX -&gt; ΩY, ta có thể define một mapping ngược lại g⁻¹ ΩY -&gt; ΩX
 >
 >
 >
-> Từ đó ta mới có cái gọi là INVERSE CỦA A, g_inv(A), thì g_inv(A) sẽ là mọi possible values của X trong ΩX mà thông qua g sẽ được map với các possible outcome trong subset A của ΩA:
+> Từ đó ta mới có cái gọi là INVERSE CỦA A, g⁻¹(A), thì g⁻¹(A) sẽ là mọi possible values của X trong ΩX mà thông qua g sẽ được map với các possible outcome trong subset A của ΩA:
 >
 >
 >
-> g_inv(A) = {x ∈ ΩX: g(x) ∈ A}
+> g⁻¹(A) = {x ∈ ΩX: g(x) ∈ A}
 >
 >
 >
-> với việc lấy ví dụ cụ thể như trên thì g_inv(A) = {x ∈ ΩX: g(x) ∈ {y1, y2}} = {x1, x2, x3}
+> với việc lấy ví dụ cụ thể như trên thì g⁻¹(A) = {x ∈ ΩX: g(x) ∈ {y1, y2}} = {x1, x2, x3}
 >
 >
 >
@@ -92,15 +92,15 @@
 >
 >
 >
-> Lúc bấy giờ, g_inv(B) có quyền ghi là g_inv({y1}) hoặc g_inv(y1) thôi, và đương nhiên nó sẽ là subset của ΩX chỉ chứa possible value sao cho g(x) = y1: g_inv(y1) = {x1}.
+> Lúc bấy giờ, g⁻¹(B) có quyền ghi là g⁻¹({y1}) hoặc g⁻¹(y1) thôi, và đương nhiên nó sẽ là subset của ΩX chỉ chứa possible value sao cho g(x) = y1: g⁻¹(y1) = {x1}.
 >
 >
 >
-> Tương tự g_inv(y2) = {x2, x3}
+> Tương tự g⁻¹(y2) = {x2, x3}
 >
 >
 >
-> Thế thì với g_inv(y1) = {x1} thì nó cũng là point set, có thể ghi g_inv(y1) = x1
+> Thế thì với g⁻¹(y1) = {x1} thì nó cũng là point set, có thể ghi g⁻¹(y1) = x1
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
@@ -151,15 +151,15 @@
 >
 >
 >
-> = {x ∈ ΩX: x ∈ g_inv(A)} 
+> = {x ∈ ΩX: x ∈ g⁻¹(A)} 
 >
 >
 >
-> Cái này đồng nghĩa x ∈ ΩX ∩ g_inv(A) = g_inv(A) vì nó là tập con của ΩX
+> Cái này đồng nghĩa x ∈ ΩX ∩ g⁻¹(A) = g⁻¹(A) vì nó là tập con của ΩX
 >
 >
 >
-> = (X ∈ g_inv(A))
+> = (X ∈ g⁻¹(A))
 >
 >
 >
@@ -171,23 +171,23 @@
 >
 >
 >
-> = P({x ∈ ΩX: x ∈ g_inv(A)}) 
+> = P({x ∈ ΩX: x ∈ g⁻¹(A)}) 
 >
 >
 >
-> = **P(X** ∈ **g_inv(A))**
+> = **P(X** ∈ **g⁻¹(A))**
 >
 >
 >
-> Và đến lượt P(X ∈ g_inv(A)) thì ta có thể dùng axiom 3 và pdf của X:
+> Và đến lượt P(X ∈ g⁻¹(A)) thì ta có thể dùng axiom 3 và pdf của X:
 >
 >
 >
-> = ∑x ∈ g_inv(A) P(X = x) 
+> = ∑x ∈ g⁻¹(A) P(X = x) 
 >
 >
 >
-> = **∑x** ∈ **g_inv(A) fX(x)**
+> = **∑x** ∈ **g⁻¹(A) fX(x)**
 
 <br>
 
@@ -248,11 +248,11 @@
 >
 >
 >
-> = pqqpp = p^3q^2
+> = pqqpp = p³q²
 >
 >
 >
-> Vậy đó là P({s}) với s = SFFSS, = p^3q^2
+> Vậy đó là P({s}) với s = SFFSS, = p³q²
 >
 >
 >
@@ -266,7 +266,7 @@
 >
 > Thế thì có thể thấy các possible outcome trong set này sẽ đều có dạng 
 > là chuỗi kết quả có 3 success và 2 fail. Nên xác suất của chúng có thể tính
-> tương tự như trên và đều sẽ là p^3q^2. Hay nói cách khác, các possible
+> tương tự như trên và đều sẽ là p³q². Hay nói cách khác, các possible
 > outcome trong event này đều equally likely
 >
 >
@@ -436,7 +436,7 @@
 
 <a id="node-zdtg5p1"></a>
 
-###### CDF của sin^2(X) phức tạp
+###### CDF của sin²(X) phức tạp
 
 <p align="center"><kbd><img src="assets/3hj49jpwh8d.png" width="80%"></kbd></p>
 
@@ -451,7 +451,7 @@
 >
 >
 >
-> Thế thì xét Y = g(X) = sin^2(X).
+> Thế thì xét Y = g(X) = sin²(X).
 >
 >
 >
@@ -459,7 +459,7 @@
 >
 >
 >
-> (Y ∈ A) = (g(X) ∈ A) = ({x ∈ ΩX: g(x) ∈ A}) = (X ∈ ginv(A)) = {s ∈ Ω: X(s) ∈ ginv(A)}
+> (Y ∈ A) = (g(X) ∈ A) = ({x ∈ ΩX: g(x) ∈ A}) = (X ∈ g⁻¹(A)) = {s ∈ Ω: X(s) ∈ g⁻¹(A)}
 >
 >
 >
@@ -467,15 +467,15 @@
 >
 >
 >
-> (Y ≤ y) = (g(X) = sin^2(X) ≤ y) = ({x ∈ ΩX: sin^2(x) ≤ y}) ⇔ (X ∈ ginv(A))
+> (Y ≤ y) = (g(X) = sin²(X) ≤ y) = ({x ∈ ΩX: sin²(x) ≤ y}) ⇔ (X ∈ g⁻¹(A))
 >
 >
 >
-> với ginv(A) là {x ∈ ΩX: sin^2(x) ≤ y} ⇔ {x ∈ ΩX: x ≤ x1 | x ≥ x4 | x2 ≤ x ≤ π}
+> với g⁻¹(A) là {x ∈ ΩX: sin²(x) ≤ y} ⇔ {x ∈ ΩX: x ≤ x1 | x ≥ x4 | x2 ≤ x ≤ π}
 >
 >
 >
-> Theo đồ thị 2.1.1 thì tập ginv(A) = {x ∈ ΩX: g(x) ≤ y} chính
+> Theo đồ thị 2.1.1 thì tập g⁻¹(A) = {x ∈ ΩX: g(x) ≤ y} chính
 > là {x ∈ ΩX: x ≤ x1 | x ≥ x4 | x2 ≤ x ≤ π}
 >
 >
@@ -509,7 +509,7 @@
 >
 >
 > Tuy nhiên nếu ta gặp g có tính chất đơn điệu (monotone) tức là nó
-> là hàm đồng biến hoặc nghịch biến thì việc xác định ginv(Y < y) sẽ dễ:
+> là hàm đồng biến hoặc nghịch biến thì việc xác định g⁻¹(Y < y) sẽ dễ:
 >
 >
 >
@@ -517,7 +517,7 @@
 >
 >
 >
-> vì g monotone nên g(x) ≤ y ⇔ x ≤ ginv(y) nếu nó là monotone increasing
+> vì g monotone nên g(x) ≤ y ⇔ x ≤ g⁻¹(y) nếu nó là monotone increasing
 >
 >
 >
@@ -525,33 +525,33 @@
 >
 >
 >
-> nhờ vậy khi nó là increasing: (1) = {x ∈ ΩX: x ≤ ginv(y)}, nó chính là (X ≤ ginv(y))
+> nhờ vậy khi nó là increasing: (1) = {x ∈ ΩX: x ≤ g⁻¹(y)}, nó chính là (X ≤ g⁻¹(y))
 >
 >
 >
-> Từ đó FY(y) P(Y ≤ y) = P(X ≤ ginv(y)) = **FX(ginv(y)**
+> Từ đó FY(y) P(Y ≤ y) = P(X ≤ g⁻¹(y)) = **FX(g⁻¹(y)**
 >
 >
 >
-> còn khi nó dereasing thì (1) = {x ∈ ΩX: x ≥ ginv(y)} và đây chính là (X ≥ ginv(y))
+> còn khi nó dereasing thì (1) = {x ∈ ΩX: x ≥ g⁻¹(y)} và đây chính là (X ≥ g⁻¹(y))
 >
 >
 >
-> Từ đó FY(y) P(Y ≤ y) = P(X ≥ ginv(y)) = 1 - P(X ≤ ginv(y)) = **1 - FX(ginv(y)**
+> Từ đó FY(y) P(Y ≤ y) = P(X ≥ g⁻¹(y)) = 1 - P(X ≤ g⁻¹(y)) = **1 - FX(g⁻¹(y)**
 >
 >
 >
 > ====
-> Ở trên khi mình viết P(X ≤ ginv(y)) = FX(ginv(y) thì có thể hiểu là ta đang dùng
+> Ở trên khi mình viết P(X ≤ g⁻¹(y)) = FX(g⁻¹(y) thì có thể hiểu là ta đang dùng
 > định nghĩa của CDF FX(x) = P(X ≤ x)
 >
 >
 >
-> Hoặc cùng có thể hiểu P(X ≤ ginv(y)) = P(X ∈ (-inf, ginv(y)) để rồi dùng pdf:
+> Hoặc cùng có thể hiểu P(X ≤ g⁻¹(y)) = P(X ∈ (-inf, g⁻¹(y)) để rồi dùng pdf:
 >
 >
 >
-> = ∫-inf: ginv(y) fX(x)dx
+> = ∫-inf: g⁻¹(y) fX(x)dx
 
 <br>
 
@@ -614,7 +614,7 @@
 <p align="center"><kbd><img src="assets/znmc5ok4r7.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Xuất phát từ FY(y) = FX(ginv(y)) ta mới áp dụng tiếp tính chất  là fY(y) = d/dy
+> Xuất phát từ FY(y) = FX(g⁻¹(y)) ta mới áp dụng tiếp tính chất  là fY(y) = d/dy
 > FY(y) để có :
 >
 >
@@ -623,15 +623,15 @@
 >
 >
 >
-> fY(y) = d/dy FY(y) = d/dy FX(ginv(y))
+> fY(y) = d/dy FY(y) = d/dy FX(g⁻¹(y))
 >
 >
 >
-> = d/d ginv(y) FX(ginv(y)) . d/dy ginv(y)
+> = d/d g⁻¹(y) FX(g⁻¹(y)) . d/dy g⁻¹(y)
 >
 >
 >
-> = d/dx FX(x) . d/dy ginv(y)
+> = d/dx FX(x) . d/dy g⁻¹(y)
 >
 >
 >
@@ -639,11 +639,11 @@
 >
 >
 >
-> = fX(ginv(y) dx/dy
+> = fX(g⁻¹(y) dx/dy
 >
 >
 >
-> ⇨ fY(y) = fX(ginv(y) dx/dy = fX(ginv(y)) d/dy ginv(y)
+> ⇨ fY(y) = fX(g⁻¹(y) dx/dy = fX(g⁻¹(y)) d/dy g⁻¹(y)
 >
 >
 >
@@ -651,19 +651,19 @@
 >
 >
 >
-> fY(y) = d/dy FY(y) = d/dy [1 - FX(ginv(y))]
+> fY(y) = d/dy FY(y) = d/dy [1 - FX(g⁻¹(y))]
 >
 >
 >
-> = - d/dy FX(ginv(y))
+> = - d/dy FX(g⁻¹(y))
 >
 >
 >
-> = - d/d ginv(y) FX(ginv(y)) . d/dy ginv(y)
+> = - d/d g⁻¹(y) FX(g⁻¹(y)) . d/dy g⁻¹(y)
 >
 >
 >
-> = - d/dx FX(x) . d/dy ginv(y)
+> = - d/dx FX(x) . d/dy g⁻¹(y)
 >
 >
 >
@@ -671,15 +671,15 @@
 >
 >
 >
-> = - fX(ginv(y) dx/dy
+> = - fX(g⁻¹(y) dx/dy
 >
 >
 >
-> ⇨ fY(y) = - fX(ginv(y) d/dy ginv(y)
+> ⇨ fY(y) = - fX(g⁻¹(y) d/dy g⁻¹(y)
 >
 >
 >
-> Vậy **f(Y) = fX(ginv(y)) |d/dy ginv(y)|**
+> Vậy **f(Y) = fX(g⁻¹(y)) |d/dy g⁻¹(y)|**
 >
 >
 >
@@ -716,7 +716,7 @@
 >
 >
 >
-> fY(y) = fX(ginv(y)) |d/dy ginv(y)|
+> fY(y) = fX(g⁻¹(y)) |d/dy g⁻¹(y)|
 >
 >
 >
@@ -734,56 +734,130 @@
 >
 >  đây là pdf của inverted gamma (stat110 chưa thấy)
 
+> [!TIP]
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **55/100** · ✗ Fix first
+>
+> Bạn đã nắm được hướng áp dụng công thức đổi biến, tuy nhiên bước tính toán cuối cùng đã bỏ quên số hạng đạo hàm Jacobian khiến hàm mật độ tìm được bị sai.
+>
+> **🔴 Critical issues**
+>
+> **1.** *"= (1/y)^(n-1) e^[-(1/y)/β] / (n - 1)! β^n"*
+>
+> Bạn đã bỏ quên việc nhân với số hạng Jacobian |d/dy (1/y)| = 1/y². Do thiếu 1/y², biểu thức thu được không phải là pdf đúng (số mũ chuẩn của 1/y phải là n + 1 chứ không phải n - 1).
+>
+>
+> **🟡 Minor issues**
+>
+> **1.** *"đây là pdf của inverted gamma (stat110 chưa thấy)"*
+>
+> Chưa ghi rõ miền xác định (support) của biến ngẫu nhiên mới Y, cụ thể là y ∈ (0, ∞).
+>
+>
+> **✓ Strengths**
+> - Nhớ đúng công thức biến đổi biến ngẫu nhiên liên tục một chiều.
+> - Tìm đúng hàm nghịch đảo x = g⁻¹(y) = 1/y.
+>
+> **💡 Deeper notes**
+> - Số hạng Jacobian 1/y² rất quan trọng vì nó bù trừ cho sự co giãn của trục số khi đổi biến, đảm bảo tích phân toàn miền của pdf mới vẫn bằng 1.
+
 <br>
 
 <a id="node-6yi0r3h"></a>
 
-###### Đạo hàm PDF của Y=X^2
+###### PDF của Y=X²
 
 <p align="center"><kbd><img src="assets/2mtuj27hhdp.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua ví dụ này Y = g(X) = X^2.
+> Qua ví dụ này Y = g(X) = X²
 >
 >
 >
-> Ôn lại lập luận gốc là, xét event Y ∈ A ⇔ g(X) ∈ A, nó bản chất là
+> Ôn lại lập luận gốc là, xét event Y = g(X) ∈ A
 >
 >
 >
-> {x ∈ ΩX: g(x) ∈ A} đây cũng là event X ∈ ginv(A)
+> Nếu viết đơn giản thì: g(X) ∈ A ⇔ X ∈ g⁻¹(A) ⇒ P(Y ∈ A) = P(X ∈ g⁻¹(A))
 >
 >
 >
-> Do đó từ X ta có thể xác định distribution của Y = g(X)
+> Nhưng có thể lập luận từ bản chất để hiểu rõ hơn:
 >
 >
 >
-> P(Y ∈ A) = P(g(X) ∈ A) = P({x ∈ ΩX: g(x) ∈ A}) 
+> g(X) ∈ A = {s ∈ S: g(X(s)) ∈ A}, 
 >
 >
 >
-> Nếu hàm g monotone ⇨ g(x) ∈ A ⇔ x ∈ ginv(A)
+> mà g(X(s)) ∈ A ⇔ X(s) ∈ g⁻¹(A) 
 >
 >
 >
-> = P({x ∈ ΩX: x ∈ ginv(A)})
+> nên tập này cũng bằng {s ∈ S: X(s) ∈ g⁻¹(A)} và đây cũng là event X ∈ g⁻¹(A).
 >
 >
 >
->  = P(X ∈ ginv(A))
+> Do đó ta có tập {s ∈ S: g(X(s)) ∈ A} = {s ∈ S: X(s) ∈ g⁻¹(A)}, nên P({s ∈ S: g(X(s)) ∈ A}) = P({s ∈ S: X(s) ∈ g⁻¹(A)})
 >
 >
 >
-> ⇨ P(Y ≤ y) = P(g(X) ≤ y) = P({x ∈ ΩX: g(x) = x^2 ≤ y})
+> ⇔ P(Y ∈ A) = P(X ∈ g⁻¹(A))
 >
 >
 >
-> = P({x ∈ ΩX: -√y ≤ x ≤ √y})
+> ---
 >
 >
 >
-> = P(-√y ≤ X ≤ √y)
+> Nhờ logic này ta có thể, từ X ta có thể xác định distribution của Y = g(X)
+>
+>
+>
+> ---
+>
+>
+>
+> Xét event Y ≤ y, có thể coi là Y ∈ A với A = {tập các số thực ≤ y},
+>
+>
+>
+> thì giống như trên, event này có bản chất là tập sau đây {s ∈ S: g(X(s)) = \[X(s)\]² ∈ A (tức \[X(s)\]² ≤ y)}
+>
+>
+>
+> mà theo đại số cơ bản, với x² ≤ y ⇔ -√y ≤ x ≤ √y nếu y ≥ 0, và x ∈ ∅ nếu y &lt; 0 nên: 
+>
+>
+>
+> nên \[X(s)\]² ≤ y ⇔ -√y ≤ X(s) ≤ √y khi y &gt; 0
+>
+>
+>
+> Do vậy tập {s ∈ S: g(X(s)) = \[X(s)\]² ∈ A (tức \[X(s)\]² ≤ y)} bằng với tập này: 
+>
+>
+>
+> {s ∈ S: -√y ≤ X(s) ≤ √y}, đây cũng là {s ∈ S: X(s) ∈ g⁻¹(A)}
+>
+>
+>
+> Do đó xác suất hai tập bằng nhau:
+>
+>
+>
+> P({s ∈ S: g(X(s)) = \[X(s)\]² ∈ A (tức \[X(s)\]² ≤ y)}) = P({s ∈ S: -√y ≤ X(s) ≤ √y}, đây cũng là {s ∈ S: X(s) ∈ g⁻¹(A)})
+>
+>
+>
+> ⇔ P(g(X) ≤ y) = P(-√y ≤ X ≤ √y)
+>
+>
+>
+> ⇔ P(Y ≤ y) = P(-√y ≤ X ≤ √y)
+>
+>
+>
+> ---
 >
 >
 >
@@ -791,18 +865,47 @@
 >
 >
 >
+> Ôn lại định nghĩa nếu X có pdf f(x): f(x): P(X ∈ A) = ∫\_A f(x)dx
+>
+>
+>
+> Cũng là khi A = (-∞, x),  P(X ≤ x) = ∫-∞:x f(t)dt
+>
+>
+>
+> Theo định nghĩa của CDF, FX(x) = P(X ≤ x), theo định nghĩa của pdf, nó lại = ∫-∞:x f(t)dt
+>
+>
+>
+> Do đó FX(x) = ∫-∞:x f(t)dt
+>
+>
+>
+> Dựa vào FTC1: G(.), f(.): G(x) = ∫-inf:x f(t)dt, G gọi là nguyên hàm của f, d/dx G(x) = f(x)
+>
+>
+>
+> FTC2: nếu G là nguyên hàm của f: ∫a:b f(x)dx = G(b) - G(a)
+>
+>
+>
+> Cho nên FX(x) chính là nguyên hàm của fX(x), d/dx F(x) = fX(x)
+>
+>
+>
 > P(-√y ≤ X ≤ √y) = ∫-√y:√y fX(x)dx.
 >
 >
 >
-> Dùng FTC1 cho biết: khi F là anti-derivative của f: tức d/dx F(x) = f(x)  thì ∫a:b
-> f(x)dx = F(b) - F(a).
+> ---
 >
 >
 >
-> Ở đây với định nghĩa của CDF: FX(x) = P(X ≤ x), dùng pdf, = ∫-inf:x fX(t)dt. Theo
-> FTC2, khi G(x) = ∫-inf:x f(t)dt thì d/dx G(x) = f(x). Vậy FTC2 cho ta: d/dx FX(x) =
-> fX(x).
+> Dùng FTC1 cho biết: khi F là anti-derivative của f: tức d/dx F(x) = f(x) thì ∫a:b f(x)dx = F(b) - F(a).
+>
+>
+>
+> Ở đây với định nghĩa của CDF: FX(x) = P(X ≤ x), dùng pdf, = ∫-inf:x fX(t)dt. Theo FTC2, khi G(x) = ∫-inf:x f(t)dt thì d/dx G(x) = f(x). Vậy FTC2 cho ta: d/dx FX(x) = fX(x).
 >
 >
 >
@@ -818,7 +921,7 @@
 >
 >
 >
-> fY(y) = d/dy FY(y) = d/dy [FX(√y) - FX(-√y)]
+> fY(y) = d/dy FY(y) = d/dy \[FX(√y) - FX(-√y)\]
 >
 >
 >
@@ -830,11 +933,26 @@
 >
 >
 >
-> = fX(√y) . (1/2)y^(-1/2) - fX(-√y) . (-1/2)y^(-1/2)
+> = fX(√y) . (1/2)y⁻½ - fX(-√y) . (-1/2)y⁻½
 >
 >
 >
-> = **(1/2√y) fX(√y) + (1/√2y) fX(-√y)**
+> = (1/2√y) fX(√y) + (1/2√y) fX(-√y)
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=KRX39ibcBlE)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú xuất sắc, giải thích cặn kẽ từ bản chất không gian mẫu (sample space) và tiền ảnh (pre-image) đến định lý cơ bản của giải tích và quy tắc chuỗi.
+>
+> **✓ Strengths**
+> - Diễn giải chính xác bản chất xác suất của biến ngẫu nhiên thông qua tập nghiệm tiền ảnh trên không gian mẫu {s in S: X(s) in g^-1(A)}.
+> - Tự liên hệ chặt chẽ với Định lý cơ bản của Giải tích (FTC) để làm rõ mối quan hệ giữa CDF và PDF trước khi lấy đạo hàm.
+> - Thực hiện đạo hàm hàm hợp (chain rule) cẩn thận từng bước, xử lý dấu trừ chính xác.
+>
+> **💡 Deeper notes**
+> - Để biểu thức của hàm mật độ f_Y(y) hoàn chỉnh trên toàn bộ trục số thực R, nên viết kết quả dưới dạng hàm từng khúc (piecewise) kèm điều kiện f_Y(y) = 0 khi y <= 0.
 
 **🔗 See also:** [Bổ đề Chi-square](./53_sampling_from_the_normal_distribution.md#node-udtt0nq)
 
@@ -847,8 +965,7 @@
 <p align="center"><kbd><img src="assets/rvd4h4583u.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Hiểu đại khái là , định lý này nói rằng nếu sample space của X, 𝒳
-> mà có thể chia thành các partition A0, A1,....Ak
+> Hiểu đại khái là , định lý này nói rằng nếu sample space của X, 𝒳 mà có thể chia thành các partition A0, A1,....Ak
 >
 >
 >
@@ -856,8 +973,7 @@
 >
 >
 >
-> Rồi, đặt 𝒴 là set ảnh của 𝒳: tức là 𝒴 là {g(x) với x ∈
-> 𝒳)
+> Rồi, đặt 𝒴 là set ảnh của 𝒳: tức là 𝒴 là {g(x) với x ∈ 𝒳)
 >
 >
 >
@@ -865,7 +981,7 @@
 >
 >
 >
-> Khi đó ta có fY(y) = Σ fX(gi_inv(y)) d/dy |gi_inv(y)| y ∈ 𝒴
+> Khi đó ta có fY(y) = Σ fX(gi⁻¹(y)) d/dy |gi⁻¹(y)| y ∈ 𝒴
 >
 >
 >
@@ -873,31 +989,32 @@
 >
 >
 >
-> Theo kinh nghiệm từ stat110: Hãy bắt đầu từ cdf P(Y < y)
+> Theo kinh nghiệm từ stat110: Hãy bắt đầu từ cdf P(Y &lt; y)
 >
 >
 >
-> và xét event Y < y, cũng là g(X) < y
+> và xét event Y &lt; y, cũng là g(X) &lt; y
 >
 >
 >
-> P(Y < y) = P(g(X) < y) = P({x ∈ 𝒳: g(x) < y})
+> P(Y &lt; y) = P(g(X) &lt; y) = P({x ∈ 𝒳: g(x) &lt; y})
 >
 >
 >
-> = Σ P({x ∈ Ai: g(x) < y})
+> = Σ P({x ∈ Ai: g(x) &lt; y})
 >
 >
 >
-> = Σi=1,2...k  P({x ∈ Ai: g(x) < y}) vì P({x ∈ A0: g(x) < y)} = P(∅) = 0
+> = Σi=1,2...k P({x ∈ Ai: g(x) &lt; y}) vì P({x ∈ A0: g(x) &lt; y)} = P(∅) = 0
 >
 >
 >
-> = Σi=1,2...k  P({x ∈ Ai: gi(x) < y}) vì x ∈ Ai ⇨ g(x) = gi(x)
+> = Σi=1,2...k P({x ∈ Ai: gi(x) &lt; y}) vì x ∈ Ai ⇨ g(x) = gi(x)
 >
 >
 >
-> = Σi=1,2...k  P({x ∈ Ai: gi(x) < y})
+> = Σi=1,2...k P({x ∈ Ai: gi(x) &lt; y})
+>
 >
 >
 >
@@ -906,11 +1023,11 @@
 >
 >
 >
-> d/dy P(Y < y) = d/dy FY(y) = d/dy Σi=1,2...k  P({x ∈ Ai: gi(x) < y})
+> d/dy P(Y &lt; y) = d/dy FY(y) = d/dy Σi=1,2...k P({x ∈ Ai: gi(x) &lt; y})
 >
 >
 >
-> = Σi=1,2...k  d/dy P({x ∈ Ai: gi(x) < y})
+> = Σi=1,2...k d/dy P({x ∈ Ai: gi(x) &lt; y})
 >
 >
 >
@@ -918,23 +1035,23 @@
 >
 >
 >
-> Và ta xét những hạng tử P({x ∈ Ai: gi(x) < y}) với gi monotone increasing
+> Và ta xét những hạng tử P({x ∈ Ai: gi(x) &lt; y}) với gi monotone increasing
 >
 >
 >
-> ⇨ gi(x) < y ⇔ x < gi_inv(y)
+> ⇨ gi(x) &lt; y ⇔ x &lt; gi⁻¹(y)
 >
 >
 >
-> ⇨ P({x ∈ Ai: gi(x) < y}) = P({x ∈ Ai: x < gi_inv(y)})
+> ⇨ P({x ∈ Ai: gi(x) &lt; y}) = P({x ∈ Ai: x &lt; gi⁻¹(y)})
 >
 >
 >
-> = ∫Ai ∩ (-inf, gi_inv(y)) fX(x)dx
+> = ∫Ai ∩ (-inf, gi⁻¹(y)) fX(x)dx
 >
 >
 >
-> Đặt xi = gi_inv(y) cho gọn
+> Đặt xi = gi⁻¹(y) cho gọn
 >
 >
 >
@@ -946,7 +1063,7 @@
 >
 >
 >
-> = [ d/xi ∫Ai ∩ (-inf, xi) fX(t)dt ] [d/dy xi] | chain rule
+> = \[ d/xi ∫Ai ∩ (-inf, xi) fX(t)dt \] \[d/dy xi\] | chain rule
 >
 >
 >
@@ -958,8 +1075,7 @@
 >
 >
 >
-> Theo FTC ∫-inf:x fX(t)dt = FX(x) ⇨ ∫-inf:a fX(t)dt = FX(a) = some constant
-> c ⇨ ∫a:x fX(t)dt = FX(x) + some constant
+> Theo FTC ∫-inf:x fX(t)dt = FX(x) ⇨ ∫-inf:a fX(t)dt = FX(a) = some constant c ⇨ ∫a:x fX(t)dt = FX(x) + some constant
 >
 >
 >
@@ -967,11 +1083,11 @@
 >
 >
 >
-> ⇨ d/dxi ∫Ai ∩ (-inf, xi) fX(t)dt = d/dxi [ FX(xi) + some constant c]
+> ⇨ d/dxi ∫Ai ∩ (-inf, xi) fX(t)dt = d/dxi \[ FX(xi) + some constant c\]
 >
 >
 >
-> = d/dxi FX(xi) + d/dxi [some constant c] 
+> = d/dxi FX(xi) + d/dxi \[some constant c\]
 >
 >
 >
@@ -983,15 +1099,15 @@
 >
 >
 >
-> Vậy tóm lại ta có: 
+> Vậy tóm lại ta có:
 >
 >
 >
-> d/dy P({x ∈ Ai: gi(x) < y}) với gi monotonic increasing
+> d/dy P({x ∈ Ai: gi(x) &lt; y}) với gi monotonic increasing
 >
 >
 >
-> = fX(xi) d/dy xi = **fX(gi_inv(y)) d/dy gi_inv(y)**
+> = fX(xi) d/dy xi = **fX(gi⁻¹(y)) d/dy gi⁻¹(y)**
 >
 >
 >
@@ -999,15 +1115,15 @@
 >
 >
 >
-> Xét những hạng tử P({x ∈ Ai: gi(x) < y}) với gi monotone decreasing
+> Xét những hạng tử P({x ∈ Ai: gi(x) &lt; y}) với gi monotone decreasing
 >
 >
 >
-> ⇨ gi(x) < y ⇔ x > gi_inv(y)
+> ⇨ gi(x) &lt; y ⇔ x &gt; gi⁻¹(y)
 >
 >
 >
-> ⇨ P({x ∈ Ai: gi(x) < y}) = P({x ∈ Ai: x > xi})
+> ⇨ P({x ∈ Ai: gi(x) &lt; y}) = P({x ∈ Ai: x &gt; xi})
 >
 >
 >
@@ -1023,7 +1139,7 @@
 >
 >
 >
-> ⇨ d/dy P({x ∈ Ai: gi(x) < y}) = d/dy [FX(Ai_upper) - FX(xi)]
+> ⇨ d/dy P({x ∈ Ai: gi(x) &lt; y}) = d/dy \[FX(Ai_upper) - FX(xi)\]
 >
 >
 >
@@ -1047,20 +1163,21 @@
 >
 >
 >
-> = **- fX(gi_inv(y)) d/dy gi_inv(y)
+> = - fX(gi⁻¹(y)) d/dy gi⁻¹(y)
 >
 >
 >
 >
-> Vậy, tổng hợp lại, kết quả là** 
+>
+> Vậy, tổng hợp lại, kết quả là
 >
 >
 >
-> Σ{i:gi đồng biến} fX(gi_inv(y)) d/dy gi_inv(y) 
+> Σ{i:gi đồng biến} fX(gi⁻¹(y)) d/dy gi⁻¹(y)
 >
 >
 >
-> + Σ{j: gj nghịch biến} [-fX(gi_inv(y)) d/dy gi_inv(y)]= Σi fX(gi_inv(y)) | d/dy gi_inv(y) |
+> Σ{j: gj nghịch biến} \[-fX(gi⁻¹(y)) d/dy gi⁻¹(y)\]= Σi fX(gi⁻¹(y)) | d/dy gi⁻¹(y) |
 >
 >
 >
@@ -1102,12 +1219,12 @@
 
 <a id="node-f14tr9i"></a>
 
-###### Phân phối Chi-squared từ Y=X^2
+###### Phân phối Chi-squared từ Y=X²
 
 <p align="center"><kbd><img src="assets/3fc22t50ro3.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ứng dụng vô đây giúp ta tìm được pdf của Y = X^2 với X \~n (0,1)
+> Ứng dụng vô đây giúp ta tìm được pdf của Y = X² với X \~n (0,1)
 >
 >
 >
@@ -1124,6 +1241,8 @@
 >
 > **💡 Deeper notes**
 > - Cần lưu ý thêm về số bậc tự do: $Y = X^2$ với $X \sim \mathcal{N}(0, 1)$ là phân phối Chi bình phương với đúng 1 bậc tự do ($\\chi^2_1$), dạng tổng quát $\\chi^2_k$ sẽ là tổng bình phương của $k$ biến chuẩn tắc độc lập.
+
+**🔗 See also:** [Bổ đề Chi-square](./53_sampling_from_the_normal_distribution.md#node-udtt0nq)
 
 <br>
 
@@ -1144,7 +1263,7 @@
 >
 >
 >
-> Ngược lại, nếu U ~Unif(0,1) thì X = F_inv(U) sẽ ~ F (tức có cdf là F)
+> Ngược lại, nếu U ~Unif(0,1) thì X = F⁻¹(U) sẽ ~ F (tức có cdf là F)
 >
 >
 >
@@ -1166,16 +1285,16 @@
 >
 >
 >
-> Bây giờ, ta sẽ hiểu về hàm Finv: Nó sẽ làm ngược lại: nhận vào một con số
+> Bây giờ, ta sẽ hiểu về hàm F⁻¹: Nó sẽ làm ngược lại: nhận vào một con số
 > xác suất, và spit out một con số để định ra một range từ -inf đến con số đó,
-> nói cách khác, Finv sẽ nhận vào một con số xác suất và  spit out một range
+> nói cách khác, F⁻¹ sẽ nhận vào một con số xác suất và  spit out một range
 > mà mà xác suất X nằm trong range bằng con số xác suất đưa vào. Ví dụ
 > input là 25% thì output là 30, để có nghĩa là xác suất X nằm trong range
 > (-inf, 30) = 25%
 >
 >
 >
-> Và đây Finv, được gọi là quantile function.
+> Và đây F⁻¹, được gọi là quantile function.
 >
 >
 >
@@ -1183,11 +1302,11 @@
 >
 >
 >
-> Finv(y) = x ⇔ F(x) = y, sẽ nghĩa là:
+> F⁻¹(y) = x ⇔ F(x) = y, sẽ nghĩa là:
 >
 >
 >
-> Đưa con số xác suất (y) vào Finv, nó trả ra cái range (-inf, x) mà xác suất  X
+> Đưa con số xác suất (y) vào F⁻¹, nó trả ra cái range (-inf, x) mà xác suất  X
 > nằm trong đó (-inf, x) là y (F(x) = P(X ≤ x) = y)
 >
 >
@@ -1197,7 +1316,7 @@
 >
 >
 > Từ đây cũng giúp ta hiểu các khái niệm như 25% quantile. Đơn giản nó chỉ
-> là con số spit out từ Finv khi input là 25%. Như đã nói, nó sẽ định ra một
+> là con số spit out từ F⁻¹ khi input là 25%. Như đã nói, nó sẽ định ra một
 > range mà 25% thời gian X sẽ nằm trong đó.
 >
 >
@@ -1226,7 +1345,7 @@
 >
 >
 >
-> Và khi đó, cũng đồng nghĩa là khi đưa vào Finv một con số xác suất khác
+> Và khi đó, cũng đồng nghĩa là khi đưa vào F⁻¹ một con số xác suất khác
 > nhau thì hai cái range mà nó trả ra cũng phải khác nhau. Vì nếu không, thì
 > có nghĩa là tồn tại cùng range mà lại có hai xác suất khác nhau ⇨ vi phạm
 > tính liên tục
@@ -1237,13 +1356,13 @@
 > là với discrete distribution, khi ta nhớ rằng ở giữa các possible value thì cdf
 > đi ngang, và cdf có bước nhảy tại các discrete value). Lúc này nếu input vào
 > 2 con số ở đoạn F đi ngang thì F trả ra cùng một con số xác suất. Đồng
-> nghĩa có thể xảy ra trường hợp input vào Finv một con số xác suất, và Finv
+> nghĩa có thể xảy ra trường hợp input vào F⁻¹ một con số xác suất, và F⁻¹
 > KHÔNG BIẾT PHẢI TRẢ RA CÁI RANGE NÀO, vì có nhiều mốc / range có
 > cùng xác suất.
 >
 >
 >
-> Do đó, ở đây gs nói, trong trường hợp này, ta có thể định nghĩa của Finv
+> Do đó, ở đây gs nói, trong trường hợp này, ta có thể định nghĩa của F⁻¹
 > khác đi chút xíu, và đại khái nó là vầy, đưa vào một con số xác suất, thì trả
 > ra cái range nhỏ nhất mà tương ứng với xác suất đó
 >
@@ -1253,7 +1372,7 @@
 >
 >
 >
-> Theo định nghĩa này thì trong hình b Finv(y) là x1 (là cái nhỏ nhất mà F(x) ≥
+> Theo định nghĩa này thì trong hình b F⁻¹(y) là x1 (là cái nhỏ nhất mà F(x) ≥
 > y, vốn dĩ tất cả các x từ x1 tới x2 đều thỏa)  hay range sẽ là -inf, x1 thay vì
 > mọi range -inf x với x từ x1 đến x2 đều có F là y.
 
@@ -1270,7 +1389,7 @@
 <p align="center"><kbd><img src="assets/iix2sb71ozl.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ta sẽ chứng minh Finv là gì rồi thì ta sẽ chứng minh Y = FX(X) sẽ ~ Unif(0,1)
+> Ta sẽ chứng minh F⁻¹ là gì rồi thì ta sẽ chứng minh Y = FX(X) sẽ ~ Unif(0,1)
 >
 >
 >
@@ -1278,38 +1397,38 @@
 >
 >
 >
-> Mà với định nghĩa của FXinv, và với  
+> Mà với định nghĩa của FX⁻¹, và với  
 >
 >
 >
-> F là hàm increasing thì FXinv cũng là
+> F là hàm increasing thì FX⁻¹ cũng là
 > increasing function.
 >
 >
 >
-> FX(x) ≤ y ⇔ FXinv(FX(x)) ≤ FXinv(y) 
+> FX(x) ≤ y ⇔ FX⁻¹(FX(x)) ≤ FX⁻¹(y) 
 >
 >
 >
-> Tuy nhiên để FXinv(FX(x)) = x, ta cần định nghĩa FXinv(t) = inf {x: FX(x) = t}: 
+> Tuy nhiên để FX⁻¹(FX(x)) = x, ta cần định nghĩa FX⁻¹(t) = inf {x: FX(x) = t}: 
 > Trong hai hình minh họa có thể thấy nếu F strictly increasing thì nếu đi ngược
-> lại từ F(x), bằng cách áp dụng hàm Finv, theo mũi tên đỏ thì ta có được x.
+> lại từ F(x), bằng cách áp dụng hàm F⁻¹, theo mũi tên đỏ thì ta có được x.
 > Nhưng nếu F không strictly increasing, như hình b, thì từ F(x) đi ngược lại
-> ta không biết ra x nào. Đồng nghĩa FXinv(F(x)) CHƯA CHẮC BẰNG x. 
-> Hình dung vầy, x1 = 3 ⇨ F(x) = 9 nhưng Finv(F(x)) thì chưa chắc bằng 3, mà
+> ta không biết ra x nào. Đồng nghĩa FX⁻¹(F(x)) CHƯA CHẮC BẰNG x. 
+> Hình dung vầy, x1 = 3 ⇨ F(x) = 9 nhưng F⁻¹(F(x)) thì chưa chắc bằng 3, mà
 > F(-3) nó cũng bằng 9.
 >
 >
 >
-> ⇔ x ≤ FXinv(y)
+> ⇔ x ≤ FX⁻¹(y)
 >
 >
 >
-> ⇨ ... = P({x ∈ ΩX: x ≤ FXinv(y)}) và đây chính là P(X ≤ FXinv(y)) 
+> ⇨ ... = P({x ∈ ΩX: x ≤ FX⁻¹(y)}) và đây chính là P(X ≤ FX⁻¹(y)) 
 >
 >
 >
-> mà P(X ≤ FXinv(y)) thì chính là cdf của X evaluate tại FXinv(y)): FX(FXinv(y))
+> mà P(X ≤ FX⁻¹(y)) thì chính là cdf của X evaluate tại FX⁻¹(y)): FX(FX⁻¹(y))
 >
 >
 >
@@ -1325,12 +1444,12 @@
 >
 >
 >
-> = P({x ∈ ΩX: FXinv(FX(x)) ≤ FXinv(1)})
+> = P({x ∈ ΩX: FX⁻¹(FX(x)) ≤ FX⁻¹(1)})
 >
 >
 >
-> Và tới đây nhờ định nghĩa của Finv mà ta có vế trái có thể thành x, như đã
-> nói và đồng thời vế phải: FXinv(1), theo định nghĩa đã hiểu về hàm Finv,
+> Và tới đây nhờ định nghĩa của F⁻¹ mà ta có vế trái có thể thành x, như đã
+> nói và đồng thời vế phải: FX⁻¹(1), theo định nghĩa đã hiểu về hàm F⁻¹,
 > thì nó sẽ spit out một con số a để làm nên một range (-inf, a) mà xác suất
 > x nằm trong đó là 100%. Hay nói cách khác, số a là số mà x luôn bé hơn
 > a.  
@@ -1342,17 +1461,17 @@
 >
 >
 >
-> Từ đó {x ∈ ΩX: FXinv(FX(x)) ≤ FXinv(1)}
+> Từ đó {x ∈ ΩX: FX⁻¹(FX(x)) ≤ FX⁻¹(1)}
 >
 > = {x ∈ ΩX: x ≤ inf} = {x ∈ ΩX} ⇨ FY(1) = P({x ∈ ΩX}) = 1
 >
 >
 >
-> Còn với y = 0: FY(0) = P({x ∈ ΩX: FXinv(FX(x)) ≤ FXinv(0)})
+> Còn với y = 0: FY(0) = P({x ∈ ΩX: FX⁻¹(FX(x)) ≤ FX⁻¹(0)})
 >
 >
 >
-> FXinv(0) theo định nghĩa sẽ là con số α sao cho P(X ∈ (-inf, α)) = 0
+> FX⁻¹(0) theo định nghĩa sẽ là con số α sao cho P(X ∈ (-inf, α)) = 0
 > và nó sẽ bằng -inf 
 >
 >
@@ -1374,15 +1493,15 @@
 >
 >
 >
-> Chứng minh X = Finv(U) ~ F:
+> Chứng minh X = F⁻¹(U) ~ F:
 >
 >
 >
-> Xét cdf của X: P(X ≤ x) = P(Finv(U) ≤ x)
+> Xét cdf của X: P(X ≤ x) = P(F⁻¹(U) ≤ x)
 >
 >
 >
-> = P(F(Finv(U)) ≤ F(x)) | dùng tính increasing của F
+> = P(F(F⁻¹(U)) ≤ F(x)) | dùng tính increasing của F
 >
 >
 >
