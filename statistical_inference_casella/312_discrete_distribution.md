@@ -1,4 +1,4 @@
-# 3.1&2 Discrete distribution
+# 3.1&2 Discrete Distribution
 
 📊 **Progress:** `20` Notes | `32` Screenshots
 
@@ -57,7 +57,7 @@
 >
 >
 >
-> Σi=1:k i^2 = k(k+1)(2k+1)/6
+> Σi=1:k i² = k(k+1)(2k+1)/6
 >
 >
 >
@@ -87,15 +87,15 @@
 >
 >
 >
-> Để tính Var ta tính EX^2 luôn (Để dùng công thức thức 2 của Var(X) 
+> Để tính Var ta tính EX² luôn (Để dùng công thức thức 2 của Var(X) 
 >
 >
 >
-> = EX^2 - (EX)^2)
+> = EX² - (EX)²)
 >
 >
 >
-> EX^2 thì dùng LOTUS = Σx=1,2...N x^2 P(X = x) = Σx=1,2...N x^2/N 
+> EX² thì dùng LOTUS = Σx=1,2...N x² P(X = x) = Σx=1,2...N x²/N 
 >
 >
 >
@@ -107,7 +107,7 @@
 >
 >
 >
-> Từ đó Var(X) = EX^2 - (EX)^2 = (N+1)(2N+1)/6] - [(N+1)/2]^2
+> Từ đó Var(X) = EX² - (EX)² = (N+1)(2N+1)/6] - [(N+1)/2]²
 >
 >
 >
@@ -405,9 +405,9 @@
 >
 >
 >
-> Tương tự để có x^2 thì có nghĩa là có 2 nơi (trong n thừa số) chọn x, n-2 nơi còn
+> Tương tự để có x² thì có nghĩa là có 2 nơi (trong n thừa số) chọn x, n-2 nơi còn
 > lại chọn y. Và như vậy có (n choose 2) cách chọn 2 nơi cho x. Nên hệ số gắn
-> với hạng tử x^2y^(n-2) sẽ là (n choose 2)
+> với hạng tử x²y^(n-2) sẽ là (n choose 2)
 >
 >
 >
@@ -567,11 +567,11 @@
 >
 >
 >
-> Vậy có quan tâm thứ tự và sampling có hoàn lại thì công thức là n^k: 6^4
+> Vậy có quan tâm thứ tự và sampling có hoàn lại thì công thức là n^k: 6⁴
 >
 >
 >
-> Vậy P({s}) = 1 / 6^4
+> Vậy P({s}) = 1 / 6⁴
 >
 >
 >
@@ -580,7 +580,7 @@
 >
 >
 >
-> Bài toán sẽ là, trong 6^4 po có dạng xxxx thì có bao nhiêu cái có dạng 1xxx?
+> Bài toán sẽ là, trong 6⁴ po có dạng xxxx thì có bao nhiêu cái có dạng 1xxx?
 >
 >
 >
@@ -593,12 +593,12 @@
 >
 >
 >
-> Còn số cách chọn của chuỗi xxx thì giống như trên, nó sẽ ra 6^3.
+> Còn số cách chọn của chuỗi xxx thì giống như trên, nó sẽ ra 6³.
 >
 >
 >
-> Vậy có 6^3 po trong event ({s ∈ Ω: s = 1xxx}) và P(P({s ∈ Ω: s = 1xxx})) 
-> = 6^3 P({s}) = 6^3 / 6^4 = 1/6.
+> Vậy có 6³ po trong event ({s ∈ Ω: s = 1xxx}) và P(P({s ∈ Ω: s = 1xxx})) 
+> = 6³ P({s}) = 6³ / 6⁴ = 1/6.
 >
 >
 >
@@ -618,7 +618,7 @@
 >
 >
 >
-> Dẫn đến P(Ac) = Π P(Ii) = (5/6)^4 từ đó P(A) = 1 - (5/6)^4
+> Dẫn đến P(Ac) = Π P(Ii) = (5/6)⁴ từ đó P(A) = 1 - (5/6)⁴
 >
 > Tất nhiên có cách làm nhanh hơn khi nhận ra rằng:
 >
@@ -694,15 +694,15 @@
 >
 >
 >
-> = (4 choose 0)(1/6)^0(1-1/6)^4 
+> = (4 choose 0)(1/6)^0(1-1/6)⁴ 
 >
 >
 >
-> = 1*1*(5/6)^4 = (5/6)^4
+> = 1*1*(5/6)⁴ = (5/6)⁴
 >
 >
 >
-> ⇨ P(A) = **1 - (5/6)^4**
+> ⇨ P(A) = **1 - (5/6)⁴**
 
 <br>
 
@@ -730,11 +730,11 @@
 >
 >
 >
-> = 1 - P(Y = 0) = 1 - (24 choose 0) (1/36)^0 (1 - 1/36)^24
+> = 1 - P(Y = 0) = 1 - (24 choose 0) (1/36)^0 (1 - 1/36)²4
 >
 >
 >
-> **= 1 - (35/36)^24**
+> **= 1 - (35/36)²4**
 >
 >
 >
@@ -1231,25 +1231,25 @@
 >
 >
 >
-> Tương tự với các event kia, để vế phải = (1 - p)^2p^3
+> Tương tự với các event kia, để vế phải = (1 - p)²p³
 >
 >
 >
-> ⇨ P({s = FFSSS}) = (1 - p)^2p^3
+> ⇨ P({s = FFSSS}) = (1 - p)²p³
 >
 >
 >
 > Có thể thấy với {s = FSSFS}...., lập luận tương tự để thấy nó cũng là intersection
 > của các trial độc lập, và xác suất  tích của xác suất của 3 success và 2 failure để
-> = (1 - p)^2p^3
+> = (1 - p)²p³
 >
 >
 >
-> Vậy P(X = 5) = (1 - p)^2p^3 + (1 - p)^2p^3 + ...
+> Vậy P(X = 5) = (1 - p)²p³ + (1 - p)²p³ + ...
 >
 >
 >
-> = [tổng số các event có dạng 3 success, 2 failure với S đứng cuối] (1 - p)^2p^3
+> = [tổng số các event có dạng 3 success, 2 failure với S đứng cuối] (1 - p)²p³
 >
 >
 >
@@ -1284,7 +1284,7 @@
 >
 >
 >
-> (4 choose 2)(1 - p)^2p^3 , hay
+> (4 choose 2)(1 - p)²p³ , hay
 >
 >
 >
@@ -1533,35 +1533,35 @@
 >
 >
 >
-> Chứng minh rất nhanh: Var(X + c) = E(X + c)^2 - [E(X + c)]^2
+> Chứng minh rất nhanh: Var(X + c) = E(X + c)² - [E(X + c)]²
 >
 >
 >
-> = E(X^2 + 2Xc + c^2) - [E(X + c)]^2
+> = E(X² + 2Xc + c²) - [E(X + c)]²
 >
 >
 >
-> = E(X^2) + E(2Xc) + E(c^2) - [EX + Ec]^2
+> = E(X²) + E(2Xc) + E(c²) - [EX + Ec]²
 >
 >
 >
-> = E(X^2) + 2cE(X) + c^2 - [EX+ c]^2
+> = E(X²) + 2cE(X) + c² - [EX+ c]²
 >
 >
 >
-> = E(X^2) + 2cE(X) + c^2 - [(EX)^2 + 2cEX + c^2]
+> = E(X²) + 2cE(X) + c² - [(EX)² + 2cEX + c²]
 >
 >
 >
-> = E(X^2) + 2cE(X) + c^2 - (EX)^2 - 2cEX - c^2
+> = E(X²) + 2cE(X) + c² - (EX)² - 2cEX - c²
 >
 >
 >
-> = E(X^2) - (EX)^2 đây chính là Var(X)
+> = E(X²) - (EX)² đây chính là Var(X)
 >
 >
 >
-> Var(X) = Var(Y + 1) = Var(Y) = r(1 - p)/p^2 = **(1 - p)/p^2**
+> Var(X) = Var(Y + 1) = Var(Y) = r(1 - p)/p² = **(1 - p)/p²**
 >
 > Tiếp theo là nói về tính chất Memoryless. Mình nhớ stat110 đã học, rằng
 > exponential là cái continuous distribution duy nhất có tính chất này. Nó thể hiện
@@ -1924,7 +1924,7 @@
 >
 >
 >
-> ⇨ P(X > 30) = (1-p)^30
+> ⇨ P(X > 30) = (1-p)³0
 >
 >
 >
