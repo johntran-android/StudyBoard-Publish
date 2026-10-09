@@ -109,7 +109,7 @@
 >
 >
 >
-> (Second moment) EX^2 = [đạo hàm cấp 1 của MX(t)]|t=0 
+> (Second moment) EX² = [đạo hàm cấp 1 của MX(t)]|t=0 
 >
 >
 >
@@ -137,7 +137,7 @@
 >
 >
 >
-> [Đạo hàm bậc 2 của e^tx]t=0 = x^2e^tx|t=0 = x^2 e^0 = x^2
+> [Đạo hàm bậc 2 của e^tx]t=0 = x²e^tx|t=0 = x² e^0 = x²
 >
 >
 >
@@ -247,7 +247,7 @@
 >
 >
 >
-> m2 tức 2nd sample moment là (Σi Xi^2)/n 
+> m2 tức 2nd sample moment là (Σi Xi²)/n 
 >
 >
 >
@@ -256,19 +256,19 @@
 >
 >
 >
-> μ2, tức 2nd population moment EX^2:
+> μ2, tức 2nd population moment EX²:
 >
 >
 >
-> Thế thì VarX theo công thức thứ hai ta đã biết = EX^2 - (EX)^2 
+> Thế thì VarX theo công thức thứ hai ta đã biết = EX² - (EX)² 
 >
 >
 >
-> Vậy ở đây ta có σ² = EX^2 - (EX)^2 = EX^2 - θ^2 
+> Vậy ở đây ta có σ² = EX² - (EX)² = EX² - θ² 
 >
 >
 >
-> ⇨ EX^2 = σ² + θ^2
+> ⇨ EX² = σ² + θ²
 >
 >
 >
@@ -280,7 +280,7 @@
 >
 >
 >
-> m2 = μ'2 ⇔ Σi Xi^2)/n = σ² + θ^2
+> m2 = μ'2 ⇔ Σi Xi²)/n = σ² + θ²
 >
 >
 >
@@ -288,7 +288,7 @@
 >
 >
 >
-> Kí hiệu là θ~, và σ~^2:
+> Kí hiệu là θ~, và σ~²:
 >
 >
 >
@@ -296,19 +296,19 @@
 >
 >
 >
-> (Σi Xi^2)/n = σ~^2 + θ^2 
+> (Σi Xi²)/n = σ~² + θ² 
 >
 >
 >
-> ⇔ (Σi Xi^2)/n - θ^2 = σ~^2 
+> ⇔ (Σi Xi²)/n - θ² = σ~² 
 >
 >
 >
-> ⇔ (1/n) Σi [Xi^2 - θ^2] = σ~^2 
+> ⇔ (1/n) Σi [Xi² - θ²] = σ~² 
 >
 >
 >
-> ⇔ σ~^2 = (1/n) Σi [Xi^2 - θ^2] 
+> ⇔ σ~² = (1/n) Σi [Xi² - θ²] 
 >
 >
 >
@@ -320,7 +320,7 @@
 >
 >
 >
-> σ~^ = (1/n) Σi [Xi^2 - θ^2]
+> σ~^ = (1/n) Σi [Xi² - θ²]
 
 <br>
 
@@ -369,9 +369,9 @@
 >
 >
 >
-> Còn EX^2: Thì để tính cái này có thể dùng lotus, nhưng tạm thời cho nhanh ở đây
-> cứ dùng công thức VarX là npq: VarX = EX^2 - (EX)^2 ⇔ npq = EX^2 - (kp)^2
-> ⇔ EX^2 = kpq - k^2p^2 
+> Còn EX²: Thì để tính cái này có thể dùng lotus, nhưng tạm thời cho nhanh ở đây
+> cứ dùng công thức VarX là npq: VarX = EX² - (EX)² ⇔ npq = EX² - (kp)²
+> ⇔ EX² = kpq - k²p² 
 >
 >
 >
@@ -383,7 +383,7 @@
 >
 >
 >
-> 2nd sample moment: (1/n) ΣXi^2
+> 2nd sample moment: (1/n) ΣXi²
 >
 >
 >
@@ -395,11 +395,11 @@
 >
 >
 >
-> m2 = (Σ Xi^2) / n = kpq - k^2p^2 
+> m2 = (Σ Xi²) / n = kpq - k²p² 
 >
 >
 >
-> Và giải ra ta có k~, tức estimator cho k, = X̄^2 / (X̄ - (1/n) Σ (Xi - X̄)^2
+> Và giải ra ta có k~, tức estimator cho k, = X̄² / (X̄ - (1/n) Σ (Xi - X̄)²
 >
 >
 >
@@ -501,36 +501,36 @@
 >
 >
 >
-> E[Chi-square(n)]  = E[Z1^2 + ...+Zn^2] = EZ1^2 + ..EZn^2
+> E[Chi-square(n)]  = E[Z1² + ...+Zn²] = EZ1² + ..EZn²
 >
 >
 >
-> = 1 + 1...+ 1 = n ⇨ E[Xν^2] = v
+> = 1 + 1...+ 1 = n ⇨ E[Xν²] = v
 >
 >
 >
-> Còn: E[(Xv^2/v)^2] ?
+> Còn: E[(Xv²/v)²] ?
 >
 >
 >
-> Thì để ý, đây là E của [Chi-square(v)]^2 / v^2,
+> Thì để ý, đây là E của [Chi-square(v)]² / v²,
 >
 >
 >
-> đưa 1/v^2 ra ta có (1/v^2) E [Chi-square(v)]^2
+> đưa 1/v² ra ta có (1/v²) E [Chi-square(v)]²
 >
 >
 >
-> Đến đây, thật ra ta chỉ đang muốn tính EX^2 với X là mộtv Chi-Square(v) mà
+> Đến đây, thật ra ta chỉ đang muốn tính EX² với X là mộtv Chi-Square(v) mà
 > thôi.
 >
 >
 >
-> Dùng công thức Var(X) = EX^2 - (EX)^2.
+> Dùng công thức Var(X) = EX² - (EX)².
 >
 >
 >
-> ⇨ EX^2 = Var(X) + (EX)^2 (1)
+> ⇨ EX² = Var(X) + (EX)² (1)
 >
 >
 >
@@ -548,11 +548,11 @@
 >
 >
 >
-> Nhắc lại story của Chi-square(n), nó là tổng của n iid Zi^2 với Zi ~ normal(0,1)
+> Nhắc lại story của Chi-square(n), nó là tổng của n iid Zi² với Zi ~ normal(0,1)
 >
 >
 >
-> ⇨ Var(X) = Var(Z1^2 + ...Zn^2)
+> ⇨ Var(X) = Var(Z1² + ...Zn²)
 >
 >
 >
@@ -573,11 +573,11 @@
 >
 >
 >
-> Nên ở đây, Var(X) = Var(Z1^2) + ..Var(Zn^2)
+> Nên ở đây, Var(X) = Var(Z1²) + ..Var(Zn²)
 >
 >
 >
-> Và với Z ~ normal(0,1) thì Var(Z^2) = 2 (QUAY LẠI CHỨNG MINH SAU)
+> Và với Z ~ normal(0,1) thì Var(Z²) = 2 (QUAY LẠI CHỨNG MINH SAU)
 >
 >
 >
@@ -601,13 +601,13 @@
 >
 >
 >
-> EX^2 = Var(X) + (EX)^2 (1) = 2v + v^2
+> EX² = Var(X) + (EX)² (1) = 2v + v²
 >
 >
 >
-> Nên E[(Xv^2/v)^2] = E của [Chi-square(v)]^2 / v^2 = (2v + v^2) / v^2 = **2/v + 1**
+> Nên E[(Xv²/v)²] = E của [Chi-square(v)]² / v² = (2v + v²) / v² = **2/v + 1**
 >
-> Và với Z ~ normal(0,1) thì Var(Z^2) = 2 (QUAY LẠI CHỨNG MINH SAU)
+> Và với Z ~ normal(0,1) thì Var(Z²) = 2 (QUAY LẠI CHỨNG MINH SAU)
 >
 > Rồi, thế thì tác giả cho biết rằng, cái bài toán này (ước lượng distribution của 
 > Σi aiYi với Yi là Chi-Square(ri)) RẤT GIỐNG với vấn đề mà ông Satterthwaite
@@ -712,19 +712,19 @@
 >
 >
 >
-> EY^2 = E[(X/v)^2] = E[Chi-square(v)^2] / v^2 = 2/v + 1 chứng minh ở note sau.
+> EY² = E[(X/v)²] = E[Chi-square(v)²] / v² = 2/v + 1 chứng minh ở note sau.
 >
 >
 >
-> Second moment của statistic Σi aiYi: E[Σi aiYi]^2
+> Second moment của statistic Σi aiYi: E[Σi aiYi]²
 >
 >
 >
-> Matching: E[Σi aiYi]^2 = 2/v + 1
+> Matching: E[Σi aiYi]² = 2/v + 1
 >
 >
 >
-> ⇨ v = 2 / (E[Σi aiYi]^2 - 1) = 2 / ([Σi aiYi]^2 - 1)
+> ⇨ v = 2 / (E[Σi aiYi]² - 1) = 2 / ([Σi aiYi]² - 1)
 >
 >
 >
@@ -921,7 +921,7 @@
 > Hoặc là phải check secondary check, tức check đạo hàm bậc hai. Còn với
 > bối cảnh của các lớp tối ưu thì đây chỉ là First order necessary condition
 > điều kiện cần bậc nhất. Chứ chưa đủ.Ta phải check thêm Hessian để nếu
-> như gradient ∇f(x*) vanish, và Hessian ∇^2f(x*) tại đó xác định dương thì x*
+> như gradient ∇f(x*) vanish, và Hessian ∇²f(x*) tại đó xác định dương thì x*
 > sẽ là global minimum (nhắc lại việc tìm global maximum có thể đơn giản là
 > chuyển thành bài toán tương đương để đi tìm global minimum)
 >
@@ -962,27 +962,27 @@
 >
 >
 >
-> Ôn lại pdf của n(μ, σ²): fX(x|μ,σ) = (1/√2πσ) exp[-(1/2σ²)(x-θ)^2]
+> Ôn lại pdf của n(μ, σ²): fX(x|μ,σ) = (1/√2πσ) exp[-(1/2σ²)(x-θ)²]
 >
 >
 >
-> ⇨ fXi(xi|θ) = (1/√2π) exp[-(1/2)(xi-θ)^2]
+> ⇨ fXi(xi|θ) = (1/√2π) exp[-(1/2)(xi-θ)²]
 >
 >
 >
-> L(θ|𝐱) = Πi=1:n fXi(xi|θ) = Πi=1:n (1/√2π) exp[-(1/2)(xi-θ)^2]
+> L(θ|𝐱) = Πi=1:n fXi(xi|θ) = Πi=1:n (1/√2π) exp[-(1/2)(xi-θ)²]
 >
 >
 >
-> = (1/√2π)^n Πi=1:n exp[-(1/2)(xi-θ)^2]
+> = (1/√2π)^n Πi=1:n exp[-(1/2)(xi-θ)²]
 >
 >
 >
-> = (1/√2π)^n exp Σi [-(1/2)(xi-θ)^2]
+> = (1/√2π)^n exp Σi [-(1/2)(xi-θ)²]
 >
 >
 >
-> = (1/2π)^(n/2) exp [-(1/2) Σi (xi-θ)^2]
+> = (1/2π)^(n/2) exp [-(1/2) Σi (xi-θ)²]
 >
 >
 >
@@ -990,11 +990,11 @@
 >
 >
 >
-> = d/dθ (1/2π)^(n/2) exp [-(1/2) Σi (xi-θ)^2]
+> = d/dθ (1/2π)^(n/2) exp [-(1/2) Σi (xi-θ)²]
 >
 >
 >
-> = (1/2π)^(n/2) d/dθ exp [-(1/2) Σi (xi-θ)^2] | đưa constant ra ngoài
+> = (1/2π)^(n/2) d/dθ exp [-(1/2) Σi (xi-θ)²] | đưa constant ra ngoài
 >
 >
 >
@@ -1002,19 +1002,19 @@
 >
 >
 >
-> = (1/2π)^(n/2) d/d[-(1/2) Σi (xi-θ)^2] exp [-(1/2) Σi (xi-θ)^2] . d/dθ [-(1/2) Σi (xi-θ)^2]
+> = (1/2π)^(n/2) d/d[-(1/2) Σi (xi-θ)²] exp [-(1/2) Σi (xi-θ)²] . d/dθ [-(1/2) Σi (xi-θ)²]
 >
 >
 >
-> = (1/2π)^(n/2) exp [-(1/2) Σi (xi-θ)^2] . [-(1/2)] Σi d/dθ [(xi-θ)^2]
+> = (1/2π)^(n/2) exp [-(1/2) Σi (xi-θ)²] . [-(1/2)] Σi d/dθ [(xi-θ)²]
 >
 >
 >
-> = (1/2π)^(n/2) exp [-(1/2) Σi (xi-θ)^2] . [-(1/2)] Σi [-2(xi-θ)]
+> = (1/2π)^(n/2) exp [-(1/2) Σi (xi-θ)²] . [-(1/2)] Σi [-2(xi-θ)]
 >
 >
 >
-> = (1/2π)^(n/2) exp [-(1/2) Σi (xi-θ)^2] . [Σi [(xi-θ)]
+> = (1/2π)^(n/2) exp [-(1/2) Σi (xi-θ)²] . [Σi [(xi-θ)]
 >
 >
 >
@@ -1041,20 +1041,20 @@
 >
 >
 >
-> d^2/dθ L(θ|𝐱)|θ=x̄:
+> d²/dθ L(θ|𝐱)|θ=x̄:
 >
 >
 >
-> Derive d^2/dθ L(θ|x) trước, nó sẽ bằng đạo hàm cấp 1 của d/dθ L(θ|𝐱) mà ta có
+> Derive d²/dθ L(θ|x) trước, nó sẽ bằng đạo hàm cấp 1 của d/dθ L(θ|𝐱) mà ta có
 > ở trên:
 >
 >
 >
-> = d/dθ (1/2π)^(n/2) exp [-(1/2) Σi (xi-θ)^2] . [Σi [(xi-θ)]
+> = d/dθ (1/2π)^(n/2) exp [-(1/2) Σi (xi-θ)²] . [Σi [(xi-θ)]
 >
 >
 >
-> = (1/2π)^(n/2) d/dθ exp [-(1/2) Σi (xi-θ)^2] . [Σi [(xi-θ)]
+> = (1/2π)^(n/2) d/dθ exp [-(1/2) Σi (xi-θ)²] . [Σi [(xi-θ)]
 >
 >
 >
@@ -1062,12 +1062,12 @@
 >
 >
 >
-> = (1/2π)^(n/2) d/dθ exp [-(1/2) Σi (xi-x̄)^2] . [Σi [(xi-x̄)]
+> = (1/2π)^(n/2) d/dθ exp [-(1/2) Σi (xi-x̄)²] . [Σi [(xi-x̄)]
 >
 >
 >
 > HOLY..LÀM VẬY LÀ SAI BÉT ĐẤY: VÌ CÁI TA PHẢI LÀM LÀ, DERIVE RA HÀM
-> d^2/dθ L(θ|x)  rồi mới lắp θ=x̄ vào, chứ không phải là lắp vào mới derive.
+> d²/dθ L(θ|x)  rồi mới lắp θ=x̄ vào, chứ không phải là lắp vào mới derive.
 >
 >
 >
@@ -1075,25 +1075,25 @@
 >
 >
 >
-> = (1/2π)^(n/2) d/dθ exp [-(1/2) Σi (xi-x̄)^2] . [Σi [(xi-x̄)]
+> = (1/2π)^(n/2) d/dθ exp [-(1/2) Σi (xi-x̄)²] . [Σi [(xi-x̄)]
 >
 >
 >
-> \~**Dùng product rule thôi:** Xét term có dính θ d/dθ exp [-(1/2) Σi (xi-θ)^2] .
+> \~**Dùng product rule thôi:** Xét term có dính θ d/dθ exp [-(1/2) Σi (xi-θ)²] .
 > [Σi [(xi-θ)]
 >
 >
 >
-> = { d/dθ exp [-(1/2) Σi (xi-θ)^2] } . [Σi [(xi-θ)] + exp [-(1/2) Σi (xi-θ)^2] . d/dθ [Σi
+> = { d/dθ exp [-(1/2) Σi (xi-θ)²] } . [Σi [(xi-θ)] + exp [-(1/2) Σi (xi-θ)²] . d/dθ [Σi
 > [(xi-θ)]
 >
 >
 >
-> Term 1: { d/dθ exp [-(1/2) Σi (xi-θ)^2] } . [Σi [(xi-θ)]
+> Term 1: { d/dθ exp [-(1/2) Σi (xi-θ)²] } . [Σi [(xi-θ)]
 >
 >
 >
-> = { d/du exp(u) } { d/dθ [-(1/2) Σi (xi-θ)^2] } . [Σi [(xi-θ)] } | u = -(1/2) Σi (xi-θ)^2
+> = { d/du exp(u) } { d/dθ [-(1/2) Σi (xi-θ)²] } . [Σi [(xi-θ)] } | u = -(1/2) Σi (xi-θ)²
 >
 >
 >
@@ -1109,7 +1109,7 @@
 >
 >
 >
-> = [d/du exp(u)] (Σixi - nθ)^2
+> = [d/du exp(u)] (Σixi - nθ)²
 >
 >
 >
@@ -1117,19 +1117,19 @@
 >
 >
 >
-> Term 2: exp [-(1/2) Σi (xi-θ)^2] . d/dθ [Σi [(xi-θ)]
+> Term 2: exp [-(1/2) Σi (xi-θ)²] . d/dθ [Σi [(xi-θ)]
 >
 >
 >
-> = exp [-(1/2) Σi (xi-θ)^2] . Σi d/dθ (xi-θ)
+> = exp [-(1/2) Σi (xi-θ)²] . Σi d/dθ (xi-θ)
 >
 >
 >
-> = exp [-(1/2) Σi (xi-θ)^2] . Σi (-1)
+> = exp [-(1/2) Σi (xi-θ)²] . Σi (-1)
 >
 >
 >
-> = exp [-(1/2) Σi (xi-θ)^2] . (-n)
+> = exp [-(1/2) Σi (xi-θ)²] . (-n)
 >
 >
 >
@@ -1146,11 +1146,11 @@
 >
 >
 >
-> lim xi → infinity (1/2π)^(n/2) exp [-(1/2) Σi (xi-θ)^2]
+> lim xi → infinity (1/2π)^(n/2) exp [-(1/2) Σi (xi-θ)²]
 >
 >
 >
-> Không khó để thấy khi đó exp [-(1/2) Σi (xi-θ)^2] → 0 nên L(θ|x) → 0
+> Không khó để thấy khi đó exp [-(1/2) Σi (xi-θ)²] → 0 nên L(θ|x) → 0
 >
 >
 >
@@ -1233,7 +1233,7 @@
 >
 >
 >
-> hoặc f(b) = f(a) + f'(a)(b-a) + (1/2)f''(a)c^2 với c nằm đâu đó giữa a và b
+> hoặc f(b) = f(a) + f'(a)(b-a) + (1/2)f''(a)c² với c nằm đâu đó giữa a và b
 >
 >
 >
@@ -1241,7 +1241,7 @@
 >
 >
 >
-> f(𝐱 + **d**) = f(𝐱) + ∇f(𝐱)T(**d**) + (1/2)**d**T∇^2f(𝐱 + α**d**)**d** với α là số ∈ [0,1] 
+> f(𝐱 + **d**) = f(𝐱) + ∇f(𝐱)T(**d**) + (1/2)**d**T∇²f(𝐱 + α**d**)**d** với α là số ∈ [0,1] 
 >
 >
 >
@@ -1251,7 +1251,7 @@
 >
 >
 >
-> f(𝐱* + **d**) = f(𝐱*) + ∇f(𝐱*)T**d** + (1/2)**d**T∇^2f(𝐱* + α**d**)**d** với α là số ∈ [0,1] 
+> f(𝐱* + **d**) = f(𝐱*) + ∇f(𝐱*)T**d** + (1/2)**d**T∇²f(𝐱* + α**d**)**d** với α là số ∈ [0,1] 
 >
 >
 >
@@ -1261,7 +1261,7 @@
 >
 >
 >
-> f(𝐱* + **d**) = f(𝐱*) + (1/2)**d**T∇^2f(𝐱* + α**d**)**d**, for some α số ∈ [0,1] 
+> f(𝐱* + **d**) = f(𝐱*) + (1/2)**d**T∇²f(𝐱* + α**d**)**d**, for some α số ∈ [0,1] 
 >
 >
 >
@@ -1272,15 +1272,15 @@
 >
 >
 >
-> f(𝐱* + t**d**) = f(𝐱*) + (1/2)(t**d**)T∇^2f(𝐱* + αt**d**)(t**d**)
+> f(𝐱* + t**d**) = f(𝐱*) + (1/2)(t**d**)T∇²f(𝐱* + αt**d**)(t**d**)
 >
 >
 >
-> = f(𝐱*) + (1/2)(t^2) **d**T∇^2f(𝐱* + αt**d**)**d** for some α in (0,1)
+> = f(𝐱*) + (1/2)(t²) **d**T∇²f(𝐱* + αt**d**)**d** for some α in (0,1)
 >
 >
 >
-> = f(𝐱*) + (1/2)(t^2) **d**T∇^2f(𝐱* + α**d**)**d** for some α in (0,t)
+> = f(𝐱*) + (1/2)(t²) **d**T∇²f(𝐱* + α**d**)**d** for some α in (0,t)
 >
 >
 >
@@ -1297,7 +1297,7 @@
 > vi này, thì Hessian tại 𝐱* + α**d** vẫn xác định âm, bởi lẽ hàm liên tục nên λmax cũng
 > liên tục, mà λmax âm thì không thể nào nó ngay lập tức biến thành dương được.
 > Vậy phải trong khoảng đó, Hessian vẫn xác định âm khiến cho cái quadratic term
-> **d**T∇^2f(𝐱* + α**d**)**d** âm → f(𝐱* + t**d**) nhỏ hơn f(𝐱*). Cho thấy 𝐱* là local maximum.
+> **d**T∇²f(𝐱* + α**d**)**d** âm → f(𝐱* + t**d**) nhỏ hơn f(𝐱*). Cho thấy 𝐱* là local maximum.
 
 <br>
 
@@ -1365,18 +1365,18 @@
 >
 >
 > Vậy thì đại khái là trong cái theorem 5.2.4, mình đã chứng minh cái bất đẳng
-> thức này: Σi (xi - a)^2 ≥ Σi (xi - x̄)^2. Và dấu bằng chỉ xảy ra khi a = x̄.
+> thức này: Σi (xi - a)² ≥ Σi (xi - x̄)². Và dấu bằng chỉ xảy ra khi a = x̄.
 > Việc chứng minh cái bất đẳng thức này không có gì khó, chỉ là biến đổi đại số
 > để cho thấy
 >
 >
 >
-> Σi (xi - a)^2 = Σi (xi - x̄)^2 + [một term không âm mà chỉ bằng không khi
+> Σi (xi - a)² = Σi (xi - x̄)² + [một term không âm mà chỉ bằng không khi
 > x̄ = a]
 >
 >
 >
-> Từ đó suy ra Σi (xi - a)^2 ≥ Σi (xi - x̄)^2 và chỉ bằng nhau khi x̄ = a
+> Từ đó suy ra Σi (xi - a)² ≥ Σi (xi - x̄)² và chỉ bằng nhau khi x̄ = a
 >
 >
 >
@@ -1384,7 +1384,7 @@
 >
 >
 >
-> e^-(1/2) Σ(xi - θ)^2 ≤ e^-(1/2) Σ(xi - x̄)^2
+> e^-(1/2) Σ(xi - θ)² ≤ e^-(1/2) Σ(xi - x̄)²
 >
 >
 >
@@ -1597,19 +1597,19 @@
 >
 >
 >
-> = -y/p^2 + (y-n) d/dp [1/(1-p)]
+> = -y/p² + (y-n) d/dp [1/(1-p)]
 >
 >
 >
-> = -y/p^2 + (y-n) [d/d(1-p) [1/(1-p) . d/dp (1-p)]]
+> = -y/p² + (y-n) [d/d(1-p) [1/(1-p) . d/dp (1-p)]]
 >
 >
 >
-> = -y/p^2 + (y-n) [-1/(1-p)^2] . (-1)]
+> = -y/p² + (y-n) [-1/(1-p)²] . (-1)]
 >
 >
 >
-> = -y/p^2 + (y-n)/(1-p)^2
+> = -y/p² + (y-n)/(1-p)²
 >
 >
 >
@@ -1621,7 +1621,7 @@
 >
 >
 >
-> Nên -y/p^2 < 0, (y-n)/(1-p)^2 cũng < 0 nốt.
+> Nên -y/p² < 0, (y-n)/(1-p)² cũng < 0 nốt.
 >
 >
 >
@@ -1808,16 +1808,16 @@
 >
 >
 >
-> = maximize over θ {1/(2π)^(n/2) exp[(-1/2)Σi (xi-θ)^2]}
+> = maximize over θ {1/(2π)^(n/2) exp[(-1/2)Σi (xi-θ)²]}
 >
 >
 >
-> equivalent: maximize over θ log exp {(-1/2)Σi (xi-θ)^2} = (-1/2)Σi (xi-θ)^2 subject
+> equivalent: maximize over θ log exp {(-1/2)Σi (xi-θ)²} = (-1/2)Σi (xi-θ)² subject
 > to  θ ≥ 0 vì hàm log đồng  biến
 >
 >
 >
-> Xét g(θ) = (-1/2) Σi (xi-θ)^2. Đây chỉ là hàm bậc hai theo θ, giải tìm cực trị bằng
+> Xét g(θ) = (-1/2) Σi (xi-θ)². Đây chỉ là hàm bậc hai theo θ, giải tìm cực trị bằng
 > điều kiện cần bậc nhất:
 >
 >
@@ -2112,8 +2112,8 @@
 >
 >
 >
-> Đặt η = τ(θ) và τ là hàm 1-1 và trong đó hàm τ_inv cũng well define. Tức
-> ý là nếu ta có η = τ(θ) thì θ = τ_inv(η). 
+> Đặt η = τ(θ) và τ là hàm 1-1 và trong đó hàm τ⁻¹ cũng well define. Tức
+> ý là nếu ta có η = τ(θ) thì θ = τ⁻¹(η). 
 >
 >
 >
@@ -2136,15 +2136,15 @@
 >
 >
 > Giá trị của joint pdf/pmf tính toán tại observed values 𝐱 và **tại θ sao cho** 
-> τ(θ) = η ⇔ θ = τinv(η).
+> τ(θ) = η ⇔ θ = τ⁻¹(η).
 >
 >
 >
-> ⇨ L*(η|𝐱) = f(𝐱|τinv(η)) 
+> ⇨ L*(η|𝐱) = f(𝐱|τ⁻¹(η)) 
 >
 >
 >
-> = L(τinv(η)|𝐱)
+> = L(τ⁻¹(η)|𝐱)
 >
 >
 >
@@ -2153,11 +2153,11 @@
 >
 >
 >
-> Bắc cầu qua f(x|τinv(η)) ta sẽ có:
+> Bắc cầu qua f(x|τ⁻¹(η)) ta sẽ có:
 >
 >
 >
-> Maximize over η L*(η|𝐱) = maximize over η f(𝐱|τinv(η)) 
+> Maximize over η L*(η|𝐱) = maximize over η f(𝐱|τ⁻¹(η)) 
 >
 >
 >
@@ -2165,7 +2165,7 @@
 >
 >
 >
-> Nên sup_η L*(η|x) = sup_η f(𝐱|τinv(η)) = sup_θ f(𝐱|θ) = sup_θ L(θ|𝐱) 
+> Nên sup_η L*(η|x) = sup_η f(𝐱|τ⁻¹(η)) = sup_θ f(𝐱|θ) = sup_θ L(θ|𝐱) 
 >
 >
 >
@@ -2207,15 +2207,15 @@
 >
 >
 >
-> L*(τ(θ)|𝐱), tức L*(η|𝐱) chính là f(𝐱|τinv(η))
+> L*(τ(θ)|𝐱), tức L*(η|𝐱) chính là f(𝐱|τ⁻¹(η))
 >
 >
 >
-> Và nếu τ là hàm one-to-one thì θ: τ(θ) = η cũng chính là θ = τinv(η)
+> Và nếu τ là hàm one-to-one thì θ: τ(θ) = η cũng chính là θ = τ⁻¹(η)
 >
 >
 >
-> ⇨ sup_η L*(η|𝐱) = sup_η f(𝐱|τinv(η)) 
+> ⇨ sup_η L*(η|𝐱) = sup_η f(𝐱|τ⁻¹(η)) 
 >
 >
 >
@@ -2236,11 +2236,11 @@
 >
 >
 >
-> sup_η L*(η|x) không còn bằng f(x|τinv(η))
+> sup_η L*(η|x) không còn bằng f(x|τ⁻¹(η))
 >
 >
 >
-> Lí do, lúc này τinv(η) không còn là một điểm, mà có thể có nhiều θ có cùng
+> Lí do, lúc này τ⁻¹(η) không còn là một điểm, mà có thể có nhiều θ có cùng
 > giá trị tau(θ) = η. Ví dụ như θ1, θ2 đều có τ(θ1) = τ(θ2) = η và f(x|θ1) có thể
 > khác f(x|θ2)
 >
@@ -2347,9 +2347,9 @@
 <p align="center"><kbd><img src="assets/kotankbfy29.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi đại ý là, với theorem vừa rồi thì ta có thể nói rằng MLE của θ^2, tức
+> Rồi đại ý là, với theorem vừa rồi thì ta có thể nói rằng MLE của θ², tức
 > MLE của hàm square apply lên population mean của normal(θ, σ²) chính
-> là  [X̄(𝐗)]^2
+> là  [X̄(𝐗)]²
 >
 >
 >
@@ -2404,7 +2404,7 @@
 >
 >
 >
-> = 1/(2πσ²)^(n/2) exp[-(1/2) Σi=1:n (xi - θ)^2/σ²]
+> = 1/(2πσ²)^(n/2) exp[-(1/2) Σi=1:n (xi - θ)²/σ²]
 >
 >
 >
@@ -2421,7 +2421,7 @@
 >
 >
 >
-> = - (n/2) log2π - (n/2) logσ² - (1/2) Σi=1:n (xi - θ)^2 / σ²
+> = - (n/2) log2π - (n/2) logσ² - (1/2) Σi=1:n (xi - θ)² / σ²
 >
 >
 >
@@ -2429,19 +2429,19 @@
 >
 >
 >
-> d/dθ G(θ, σ²) = d/dθ [- (n/2) log2π - (n/2) logσ² - (1/2) Σi=1:n (xi - θ)^2 / σ²]
+> d/dθ G(θ, σ²) = d/dθ [- (n/2) log2π - (n/2) logσ² - (1/2) Σi=1:n (xi - θ)² / σ²]
 >
 >
 >
-> = - (1/2) d/dθ [ Σi=1:n (xi - θ)^2 / σ²]
+> = - (1/2) d/dθ [ Σi=1:n (xi - θ)² / σ²]
 >
 >
 >
-> = - (1/2σ²) d/dθ [ Σi=1:n (xi - θ)^2 ]
+> = - (1/2σ²) d/dθ [ Σi=1:n (xi - θ)² ]
 >
 >
 >
-> = - (1/2σ²) Σi=1:n d/dθ(xi - θ)^2 
+> = - (1/2σ²) Σi=1:n d/dθ(xi - θ)² 
 >
 >
 >
@@ -2453,23 +2453,23 @@
 >
 >
 >
-> d/dσ² G(θ, σ²) = d/dσ² [- (n/2) log2π - (n/2) logσ² - (1/2) Σi=1:n (xi - θ)^2 / σ²]
+> d/dσ² G(θ, σ²) = d/dσ² [- (n/2) log2π - (n/2) logσ² - (1/2) Σi=1:n (xi - θ)² / σ²]
 >
 >
 >
-> = d/dσ² [-(n/2) logσ²] - d/dσ² [(1/2) Σi=1:n (xi - θ)^2 / σ²]
+> = d/dσ² [-(n/2) logσ²] - d/dσ² [(1/2) Σi=1:n (xi - θ)² / σ²]
 >
 >
 >
-> = (-n/2) 1/σ²] - (1/2) Σi=1:n (xi - θ)^2 { d/dσ² [1 / σ²] }
+> = (-n/2) 1/σ²] - (1/2) Σi=1:n (xi - θ)² { d/dσ² [1 / σ²] }
 >
 >
 >
-> = -n/2σ² - (1/2) Σi=1:n (xi - θ)^2 { d/dσ² [-1 / σ^4] }
+> = -n/2σ² - (1/2) Σi=1:n (xi - θ)² { d/dσ² [-1 / σ⁴] }
 >
 >
 >
-> = -n/2σ² - (1/2σ^4) Σi=1:n (xi - θ)^2
+> = -n/2σ² - (1/2σ⁴) Σi=1:n (xi - θ)²
 >
 >
 >
@@ -2489,15 +2489,15 @@
 >
 >
 >
-> và -n/2σ² - (1/2σ^4) Σi=1:n (xi - θ)^2 = 0
+> và -n/2σ² - (1/2σ⁴) Σi=1:n (xi - θ)² = 0
 >
 >
 >
-> ⇔ σ² = n^-1 Σi (xi - x̄)^2 
+> ⇔ σ² = n^-1 Σi (xi - x̄)² 
 >
 >
 >
-> Hay (σ²)^ tức estimator của σ² = n^-1 Σi (xi - x̄)^2
+> Hay (σ²)^ tức estimator của σ² = n^-1 Σi (xi - x̄)²
 >
 >
 >
@@ -2506,7 +2506,7 @@
 >
 >
 >
-> Rồi, tới đây, chú ý là ta có **Θ^** = (x̄,  n^-1 Σi (xi - x̄)^2) là điểm mà gradient = 0.
+> Rồi, tới đây, chú ý là ta có **Θ^** = (x̄,  n^-1 Σi (xi - x̄)²) là điểm mà gradient = 0.
 >
 >
 >
@@ -2518,7 +2518,7 @@
 >
 >
 >
-> Đó là: Xét hàm likelihood: 1/(2πσ²)^(n/2) exp[-(1/2) Σi=1:n (xi - θ)^2/σ²]
+> Đó là: Xét hàm likelihood: 1/(2πσ²)^(n/2) exp[-(1/2) Σi=1:n (xi - θ)²/σ²]
 >
 >
 >
@@ -2526,15 +2526,15 @@
 >
 >
 >
-> exp[-(1/2) Σi=1:n (xi - θ)^2/σ²]
+> exp[-(1/2) Σi=1:n (xi - θ)²/σ²]
 >
 >
 >
-> Cụ thể hơn xét cái Σi=1:n (xi - θ)^2, ta thấy nó sẽ luôn ≤ Σi=1:n (xi - x̄)^2 
+> Cụ thể hơn xét cái Σi=1:n (xi - θ)², ta thấy nó sẽ luôn ≤ Σi=1:n (xi - x̄)² 
 >
 >
 >
-> Lí do: Chỉ cần giải bài toán maximize g(θ) = Σi (xi - θ)^2:
+> Lí do: Chỉ cần giải bài toán maximize g(θ) = Σi (xi - θ)²:
 >
 >
 >
@@ -2546,25 +2546,25 @@
 >
 >
 >
-> Vậy nên 1/(2πσ²)^(n/2) exp[-(1/2) Σi=1:n (xi - θ)^2/σ²]
+> Vậy nên 1/(2πσ²)^(n/2) exp[-(1/2) Σi=1:n (xi - θ)²/σ²]
 >
 >
 >
-> luôn ≤ 1/(2πσ²)^(n/2) exp[-(1/2) Σi=1:n (xi - x̄)^2/σ²]
+> luôn ≤ 1/(2πσ²)^(n/2) exp[-(1/2) Σi=1:n (xi - x̄)²/σ²]
 >
 >
 >
-> Do đó việc chứng minh chỉ cần chứng minh hàm đạt max tại σ² = n^-1 Σi (xi - x̄)^2
+> Do đó việc chứng minh chỉ cần chứng minh hàm đạt max tại σ² = n^-1 Σi (xi - x̄)²
 > thôi.
 >
 >
 >
 > Và cũng dễ dàng dùng đạo hàm để chứng minh, bằng cách chứng minh đạo hàm cấp
-> 2 tai (σ^)^2 là âm
+> 2 tai (σ^)² là âm
 >
 >
 >
-> Vậy (θ, σ²)^_mle = (X̄, n^-1 Σi (Xi - X̄)^2)
+> Vậy (θ, σ²)^_mle = (X̄, n^-1 Σi (Xi - X̄)²)
 >
 >
 >
@@ -2580,7 +2580,7 @@
 
 > [!NOTE]
 > ở đây tác giả xét hàm H(θ1, θ2) và ông cho rằng để check xem tại 
-> (θ^1, θ^2) có phải là local maximum không thì ta phải check:
+> (θ^1, θ²) có phải là local maximum không thì ta phải check:
 >
 >
 >
@@ -2592,15 +2592,15 @@
 >
 >
 >
-> Tức ∂/∂θ1^2 H(θ1,θ2)|θ1=θ^1, θ2=θ^2 âm hoặc
+> Tức ∂/∂θ1² H(θ1,θ2)|θ1=θ^1, θ2=θ² âm hoặc
 >
 >
 >
-> ∂/∂θ2^2 H(θ1,θ2)|θ1=θ^1, θ2=θ^2
+> ∂/∂θ2² H(θ1,θ2)|θ1=θ^1, θ2=θ²
 >
 >
 >
-> 3) det của Hessian tại (θ^1, θ^2) dương.
+> 3) det của Hessian tại (θ^1, θ²) dương.
 >
 >
 >
@@ -2608,8 +2608,8 @@
 >
 >
 >
-> Có nghĩa là đang nói về Hessian ∇^2H(θ^1,θ^2) , và điều trên có 
-> nghĩa là  phần tử 11 hoặc 22 của Hessian tại (θ^1, θ^2) phải âm. 
+> Có nghĩa là đang nói về Hessian ∇²H(θ^1,θ²) , và điều trên có 
+> nghĩa là  phần tử 11 hoặc 22 của Hessian tại (θ^1, θ²) phải âm. 
 > Thì ta đã biết, số lượng entries đường chéo dương hay âm sẽ 
 > tương ứng với số lượng trị riêng dương hay âm. Nên cái này đồng
 > nghĩa phải có ít nhất một trị riêng âm
@@ -2617,10 +2617,10 @@
 >
 >
 >
-> Mà det ∇^2H(θ^1,θ^2) dương có nghĩa là tích hai eigenvalue 
+> Mà det ∇²H(θ^1,θ²) dương có nghĩa là tích hai eigenvalue 
 > dương, và cộng với ý trên ta sẽ có hai eigenvalue đều âm. Đây chính
 > là cho thấy matrix Hessian xác định âm ⇨ Theo điều kiện đủ bậc
-> hai thì đây giúp kết luận (θ^1, θ^2) là maximum
+> hai thì đây giúp kết luận (θ^1, θ²) là maximum
 
 <br>
 
@@ -2635,7 +2635,7 @@
 > [!NOTE]
 > Với normal log likelihood tức function L(θ, σ²|𝐱) đóng vai H(θ1, θ2) thì
 > đoạn này đại ý là ta có thể check 3 điều kiện trên để thấy đúng là θ^ = x̄
-> và (σ²)^ = n^-1 Σi (xi - x̄)^2) thỏa điều kiện để kết luận nó là mle.
+> và (σ²)^ = n^-1 Σi (xi - x̄)²) thỏa điều kiện để kết luận nó là mle.
 >
 >
 >
@@ -3113,7 +3113,7 @@
 >
 >
 >
-> Prior distribution là n(μ, τ²): π(θ) = 1/√2πτ exp[-(θ-μ)^2/(2τ²)]
+> Prior distribution là n(μ, τ²): π(θ) = 1/√2πτ exp[-(θ-μ)²/(2τ²)]
 >
 >
 >
@@ -3121,11 +3121,11 @@
 >
 >
 >
-> f(𝐱|θ,σ²) = Πi=1:n 1/√2πσ exp[-(x-θ)^2/(2σ²)]
+> f(𝐱|θ,σ²) = Πi=1:n 1/√2πσ exp[-(x-θ)²/(2σ²)]
 >
 >
 >
-> = 1/√2πσ exp[-(x-θ)^2/(2σ²)] (vì n = 1)
+> = 1/√2πσ exp[-(x-θ)²/(2σ²)] (vì n = 1)
 >
 >
 >
@@ -3172,7 +3172,7 @@
 >
 >
 >
-> = 1/√2πσ exp[-(x-θ)^2/(2σ²)] 1/√2πτ exp[-(θ-μ)^2/(2τ²)]
+> = 1/√2πσ exp[-(x-θ)²/(2σ²)] 1/√2πτ exp[-(θ-μ)²/(2τ²)]
 >
 >
 >
@@ -3184,31 +3184,31 @@
 >
 >
 >
-> exp[-(x-θ)^2/(2σ²)] exp[-(θ-μ)^2/(2τ²)]
+> exp[-(x-θ)²/(2σ²)] exp[-(θ-μ)²/(2τ²)]
 >
 >
 >
-> = exp[-(x-θ)^2/(2σ²) - (θ-μ)^2/(2τ²)]
+> = exp[-(x-θ)²/(2σ²) - (θ-μ)²/(2τ²)]
 >
 >
 >
-> Xét phần trong ngoặc: [-(x-θ)^2/(2σ²) - (θ-μ)^2/(2τ²)]
+> Xét phần trong ngoặc: [-(x-θ)²/(2σ²) - (θ-μ)²/(2τ²)]
 >
 >
 >
-> = [-(x^2 - 2xθ + θ^2)/(2σ²) - (θ^2-2θμ+μ²)/(2τ²)]
+> = [-(x² - 2xθ + θ²)/(2σ²) - (θ²-2θμ+μ²)/(2τ²)]
 >
 >
 >
-> = [-x^2/(2σ²) + 2xθ/(2σ²) - θ^2/(2σ²) - θ^2/(2τ²) + 2θμ/(2τ²) - μ²/(2τ²)]
+> = [-x²/(2σ²) + 2xθ/(2σ²) - θ²/(2σ²) - θ²/(2τ²) + 2θμ/(2τ²) - μ²/(2τ²)]
 >
 >
 >
-> = [- θ^2/(2σ²) - θ^2/(2τ²) + 2xθ/(2σ²)  + 2θμ/(2τ²) - x^2/(2σ²) - μ²/(2τ²)]
+> = [- θ²/(2σ²) - θ²/(2τ²) + 2xθ/(2σ²)  + 2θμ/(2τ²) - x²/(2σ²) - μ²/(2τ²)]
 >
 >
 >
-> = -θ^2 [1/(2σ²) + 1/(2τ²)] + 2θ [x/(2σ²) + μ/(2τ²)] - x^2/(2σ²) - μ²/(2τ²)] (1)
+> = -θ² [1/(2σ²) + 1/(2τ²)] + 2θ [x/(2σ²) + μ/(2τ²)] - x²/(2σ²) - μ²/(2τ²)] (1)
 >
 >
 >
@@ -3216,19 +3216,19 @@
 >
 >
 >
-> 1/√2πσ exp[-(x-θ)^2/(2σ²)] 
+> 1/√2πσ exp[-(x-θ)²/(2σ²)] 
 >
 >
 >
-> = 1/√2πσ exp[- (x^2 - 2xμ + μ²)/(2σ²)]
+> = 1/√2πσ exp[- (x² - 2xμ + μ²)/(2σ²)]
 >
 >
 >
-> = 1/√2πσ exp[- x^2/(2σ²) + 2xμ/(2σ²) - μ²/(2σ²)]
+> = 1/√2πσ exp[- x²/(2σ²) + 2xμ/(2σ²) - μ²/(2σ²)]
 >
 >
 >
-> = 1/√2πσ exp[- x^2/(2σ²) + 2xμ/(2σ²) - μ²/(2σ²)]
+> = 1/√2πσ exp[- x²/(2σ²) + 2xμ/(2σ²) - μ²/(2σ²)]
 >
 >
 >
@@ -3236,7 +3236,7 @@
 >
 >
 >
-> **-x^2[1/2Variance] + 2x Mean/2Variance - Mean^2/(2Variance)**
+> **-x²[1/2Variance] + 2x Mean/2Variance - Mean²/(2Variance)**
 >
 >
 >
