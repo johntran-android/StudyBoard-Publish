@@ -265,15 +265,15 @@
 >
 >
 >
-> Quay lại đây, áp dụng vào random variable (Wn - θ)^2, ta cũng có 
+> Quay lại đây, áp dụng vào random variable (Wn - θ)², ta cũng có 
 >
 >
 >
-> P_θ((Wn - θ)^2 ≥ ε^2) ≤ E_θ[(Wn - θ)^2] / ε^2.
+> P_θ((Wn - θ)² ≥ ε²) ≤ E_θ[(Wn - θ)²] / ε².
 >
 >
 >
-> ⇔ P_θ(|Wn - θ| ≥ ε) ≤ E_θ[(Wn - θ)^2] / ε^2.
+> ⇔ P_θ(|Wn - θ| ≥ ε) ≤ E_θ[(Wn - θ)²] / ε².
 >
 >
 >
@@ -281,24 +281,24 @@
 >
 >
 >
-> Thế thì, tới đây nếu ta chứng minh được Wn thỏa E_θ[(|Wn - θ|)^2] / ε^2 → 0
+> Thế thì, tới đây nếu ta chứng minh được Wn thỏa E_θ[(|Wn - θ|)²] / ε² → 0
 > khi n → inf thì dĩ nhiên vế trái cũng → 0.
 >
 >
 >
-> Từ đó ta chỉ cần quan tâm vế trái E_θ[(Wn - θ)^2]
+> Từ đó ta chỉ cần quan tâm vế trái E_θ[(Wn - θ)²]
 >
 >
 >
-> Còn nhớ, theo công thức VarX = EX^2 - (EX)^2 ⇨ EX^2 = Var X + (EX)^2
+> Còn nhớ, theo công thức VarX = EX² - (EX)² ⇨ EX² = Var X + (EX)²
 >
 >
 >
-> ⇨ E_θ[(Wn - θ)^2] = Var(Wn - θ) + [E_θ(Wn - θ)]^2
+> ⇨ E_θ[(Wn - θ)²] = Var(Wn - θ) + [E_θ(Wn - θ)]²
 >
 >
 >
-> = Var(Wn) + [E_θ(Wn - θ)]^2   | Var(X + c) = Var(X)
+> = Var(Wn) + [E_θ(Wn - θ)]²   | Var(X + c) = Var(X)
 >
 >
 >
@@ -306,12 +306,12 @@
 >
 >
 >
-> ⇨ E_θ[(Wn - θ)^2] = Var(Wn - θ) + [Bias(Wn)]^2
+> ⇨ E_θ[(Wn - θ)²] = Var(Wn - θ) + [Bias(Wn)]²
 >
 >
 >
 > Và như vậy dĩ nhiên chỉ cần chứng minh Var(Wn - θ) → 0 và Bias(Wn) → 0
-> khi n → inf, thì E_θ[(Wn - θ)^2] sẽ → 0 → P_θ(|Wn - θ| ≥ ε) → 0, và ta có
+> khi n → inf, thì E_θ[(Wn - θ)²] sẽ → 0 → P_θ(|Wn - θ| ≥ ε) → 0, và ta có
 > consistent sequence of estimator Wn của θ
 
 **🔗 See also:** [Bất đẳng thức Markov và chứng minh](./36_inequalities.md#node-u9zgfoi)
@@ -475,11 +475,11 @@
 >
 >
 >
-> Chỉ cần hiểu đại khái, theo định nghĩa Var(Tn) = E\[Tn^2\] - (ETn)^2 = E\[(1/X̄_n)^2\] - \[E(1/X̄_n)\]^2
+> Chỉ cần hiểu đại khái, theo định nghĩa Var(Tn) = E\[Tn²\] - (ETn)² = E\[(1/X̄_n)²\] - \[E(1/X̄_n)\]²
 >
 >
 >
-> Với E\[(1/X̄_n)^2\], theo LOTUS, = ∫(1/x̄_n)^2 f(x̄_n) d(x̄_n) với f là pdf của x̄_n. Ta đã biết, X̄_n của sample \~ normal(μ, σ) sẽ có limiting distribution là normal(μ, σ²/n), tức là X̄_n sẽ hội tụ distribution về một rv thuộc phân phối normal(μ, σ²). thế thì với phân phối này, trong tích phân ∫(1/x̄_n)^2 f(x̄_n) d(x̄_n) đang nói, tồn tại xác suất dương nào đó để x̄_n = 0, khiến tích phân này = inf (explode), vì sao, vì range của normal là từ -inf, inf, nên có nghĩa là tại x̄_n=0, vẫn tồn tại giá trị pdf không âm.
+> Với E\[(1/X̄_n)²\], theo LOTUS, = ∫(1/x̄_n)² f(x̄_n) d(x̄_n) với f là pdf của x̄_n. Ta đã biết, X̄_n của sample \~ normal(μ, σ) sẽ có limiting distribution là normal(μ, σ²/n), tức là X̄_n sẽ hội tụ distribution về một rv thuộc phân phối normal(μ, σ²). thế thì với phân phối này, trong tích phân ∫(1/x̄_n)² f(x̄_n) d(x̄_n) đang nói, tồn tại xác suất dương nào đó để x̄_n = 0, khiến tích phân này = inf (explode), vì sao, vì range của normal là từ -inf, inf, nên có nghĩa là tại x̄_n=0, vẫn tồn tại giá trị pdf không âm.
 >
 >
 >
@@ -531,27 +531,27 @@
 >
 >
 >
-> Còn Var\_μ\[g(T)\] = E\_μ{g(T) - E\_μ\[g(T)\]}^2
+> Còn Var\_μ\[g(T)\] = E\_μ{g(T) - E\_μ\[g(T)\]}²
 >
 >
 >
-> ≈ E\_μ{g(T) - g(μ)}^2 (thay E\_μ\[g(T)\] ≈ g(μ))
+> ≈ E\_μ{g(T) - g(μ)}² (thay E\_μ\[g(T)\] ≈ g(μ))
 >
 >
 >
-> ≈ E\_μ{g(μ) + g'(μ)(T-μ) - g(μ)}^2 (thay g(T) ≈ g(μ) + g'(μ)(T-μ))
+> ≈ E\_μ{g(μ) + g'(μ)(T-μ) - g(μ)}² (thay g(T) ≈ g(μ) + g'(μ)(T-μ))
 >
 >
 >
-> = E\_μ\[g'(μ)(T-μ)\]^2
+> = E\_μ\[g'(μ)(T-μ)\]²
 >
 >
 >
-> = (g'(μ))^2 E\_μ\[(T-μ)\]^2
+> = (g'(μ))² E\_μ\[(T-μ)\]²
 >
 >
 >
-> = (g'(μ))^2 Var\_μ\[T\]
+> = (g'(μ))² Var\_μ\[T\]
 >
 >
 >
@@ -559,7 +559,7 @@
 >
 >
 >
-> ⇨ g'(t) = -1/t^2
+> ⇨ g'(t) = -1/t²
 >
 >
 >
@@ -567,11 +567,11 @@
 >
 >
 >
-> Var\[1/X̄_n\] = (-1/μ²)^2Var\_μ\[X̄\] = **(1/μ^4) Var\_μ\[X̄\]**
+> Var\[1/X̄_n\] = (-1/μ²)²Var\_μ\[X̄\] = **(1/μ⁴) Var\_μ\[X̄\]**
 >
 >
 >
-> Và như vậy, ý chính muốn nói, với Tn = 1/X̄_n, thì khi ta t**ính chính xác variance của nó, được ∞**. Nhưng tính xấp xỉ, thì lại là **(1/μ^4) Var\_μ\[X̄\]**
+> Và như vậy, ý chính muốn nói, với Tn = 1/X̄_n, thì khi ta t**ính chính xác variance của nó, được ∞**. Nhưng tính xấp xỉ, thì lại là **(1/μ⁴) Var\_μ\[X̄\]**
 >
 >
 >
@@ -583,7 +583,7 @@
 >
 >
 >
-> đó là, cho chuỗi estimator (dựa trên sample size n) Tn: sao cho kn (Tn - τ(θ)) hội tụ phân phối về n(0, σ²), khi đó σ² gọi là asymptotic variance của Tn. Có nghĩa là, thì **thay vì dùng Var(Tn) tại limit, ta dùng variance của cái phân phối normal là limit distribution của** kn (Tn - τ(θ)) **làm asymptotic variance**. Như vậy, với Tn = 1/X̄, thay vì dùng Var(1/X̄) tại limit (=inf), ta dùng (1/μ^4) Var\_μ\[X̄\]
+> đó là, cho chuỗi estimator (dựa trên sample size n) Tn: sao cho kn (Tn - τ(θ)) hội tụ phân phối về n(0, σ²), khi đó σ² gọi là asymptotic variance của Tn. Có nghĩa là, thì **thay vì dùng Var(Tn) tại limit, ta dùng variance của cái phân phối normal là limit distribution của** kn (Tn - τ(θ)) **làm asymptotic variance**. Như vậy, với Tn = 1/X̄, thay vì dùng Var(1/X̄) tại limit (=inf), ta dùng (1/μ⁴) Var\_μ\[X̄\]
 >
 >
 >
@@ -609,7 +609,7 @@
 >
 >
 >
-> Yn|Wn = wn \~ n(0, wn + (1-wn)σn^2)
+> Yn|Wn = wn \~ n(0, wn + (1-wn)σn²)
 >
 >
 >
@@ -617,27 +617,27 @@
 >
 >
 >
-> Đã gặp cái này ở mấy chương trước có nghĩa là nếu biết giá trị của Wn (= wn) thì Yn là normal mean 0 có variance wn + (1-wn) σn^2. Và bản thân Wn thì là một rn \~ Bern(pn).
+> Đã gặp cái này ở mấy chương trước có nghĩa là nếu biết giá trị của Wn (= wn) thì Yn là normal mean 0 có variance wn + (1-wn) σn². Và bản thân Wn thì là một rn \~ Bern(pn).
 >
 >
 >
-> Vậy thì ở đây, gs nói cái này cũng chính là mixture model khi ta thấy Yn \~ n(0,1) với xác suất pn và Yn \~ n(0, σn^2) với xác suất 1 - pn. Là sao ta:
+> Vậy thì ở đây, gs nói cái này cũng chính là mixture model khi ta thấy Yn \~ n(0,1) với xác suất pn và Yn \~ n(0, σn²) với xác suất 1 - pn. Là sao ta:
 >
 >
 >
-> Khái niệm mixture model, trong sách này (Casella) cho đến giờ chưa được nghe. Nhưng, quachapter 2 của PRML của C.Bishop đã biết khái niệm mixture model, cũng đơn giản, đại khái như sau: f(x) = convex combination của các fi(x): ∑i αi fi(x). với fi(x) là các pdf của distribution. Ví dụ f(x|**μ**, **σ²**) = αi fi(x|μi, σi^2) với fi là pdf của Normal(μi, σi^2), và αi ≥ 0 ∀i, và ∑i αi = 1, thì ta sẽ có một Gaussian (normal) mixture.
+> Khái niệm mixture model, trong sách này (Casella) cho đến giờ chưa được nghe. Nhưng, quachapter 2 của PRML của C.Bishop đã biết khái niệm mixture model, cũng đơn giản, đại khái như sau: f(x) = convex combination của các fi(x): ∑i αi fi(x). với fi(x) là các pdf của distribution. Ví dụ f(x|**μ**, **σ²**) = αi fi(x|μi, σi²) với fi là pdf của Normal(μi, σi²), và αi ≥ 0 ∀i, và ∑i αi = 1, thì ta sẽ có một Gaussian (normal) mixture.
 >
 >
 >
-> Vậy thì ở đây, ta có f1(x|0,1) là pdf của Normal(0,1) và f2(x|0, σn^2) là pdf của Normal(0, σn^2) và convex combination coefficient là α1 = pn và α2 = 1-pn.
+> Vậy thì ở đây, ta có f1(x|0,1) là pdf của Normal(0,1) và f2(x|0, σn²) là pdf của Normal(0, σn²) và convex combination coefficient là α1 = pn và α2 = 1-pn.
 >
 >
 >
-> Chú ý là Yn|(Wn=wn) \~ n(0, wn + (1 - wn) σn^2) & Wn \~ Bern(pn), cũng là cái Gaussian mixture nói trên, KHÔNG PHẢI LÀ MỘT NORMAL DISTRIBUTION có variance là wn + (1 - wn) σn^2. Mà cách viết n(0, wn + (1 - wn) σn^2) chỉ có nghĩa là, nếu Wn = 1 (vốn là sự kiện có xác suất xảy ra là pn) thì Yn|Wn=1 sẽ là rv \~ normal(0,1), và nếu Wn = 0, là sự kiện có xác suất xảy ra là 1-pn, thì Yn|Wn=1 sẽ là rv \~ normal(0, σn^2). Nên gs mới nói câu "ta quan sát thấy Yn \~n(0,1) với xác suất pn và Yn\~n(0, σn^2) với xác suất 1-pn.
+> Chú ý là Yn|(Wn=wn) \~ n(0, wn + (1 - wn) σn²) & Wn \~ Bern(pn), cũng là cái Gaussian mixture nói trên, KHÔNG PHẢI LÀ MỘT NORMAL DISTRIBUTION có variance là wn + (1 - wn) σn². Mà cách viết n(0, wn + (1 - wn) σn²) chỉ có nghĩa là, nếu Wn = 1 (vốn là sự kiện có xác suất xảy ra là pn) thì Yn|Wn=1 sẽ là rv \~ normal(0,1), và nếu Wn = 0, là sự kiện có xác suất xảy ra là 1-pn, thì Yn|Wn=1 sẽ là rv \~ normal(0, σn²). Nên gs mới nói câu "ta quan sát thấy Yn \~n(0,1) với xác suất pn và Yn\~n(0, σn²) với xác suất 1-pn.
 >
 >
 >
-> Dùng công thức 4.4.7 (xem link) ta có thể có công thức của Var(Yn) = pn + (1 - pn)σn^2, để rồi ta sẽ nhận định rằng cái này tại limit (tức limiting variance) chỉ hữu hạn nếu giá trị tại limit của (1 - pn)σn^2 cũng hữu hạn.
+> Dùng công thức 4.4.7 (xem link) ta có thể có công thức của Var(Yn) = pn + (1 - pn)σn², để rồi ta sẽ nhận định rằng cái này tại limit (tức limiting variance) chỉ hữu hạn nếu giá trị tại limit của (1 - pn)σn² cũng hữu hạn.
 >
 >
 >
@@ -661,23 +661,23 @@
 >
 >
 >
-> Vì Yn \~ Gaussian mixture → fYn(t) = pn N(t|0,1) + (1-pn) N(t|0, σn^2)
+> Vì Yn \~ Gaussian mixture → fYn(t) = pn N(t|0,1) + (1-pn) N(t|0, σn²)
 >
 >
 >
-> ⇨ FYn(a) = ∫-inf:a fYn(t)dt = ∫-inf:a\[pn N(t|0,1) + (1-pn) N(t|0, σn^2)\] dt
+> ⇨ FYn(a) = ∫-inf:a fYn(t)dt = ∫-inf:a\[pn N(t|0,1) + (1-pn) N(t|0, σn²)\] dt
 >
 >
 >
-> = ∫-inf:a \[pn N(t|0,1)\] dt + ∫-inf:a \[(1-pn) N(t|0, σn^2)\] dt
+> = ∫-inf:a \[pn N(t|0,1)\] dt + ∫-inf:a \[(1-pn) N(t|0, σn²)\] dt
 >
 >
 >
-> = pn ∫-inf:a N(t|0,1) dt + (1-pn) ∫-inf:a N(t|0, σn^2) dt
+> = pn ∫-inf:a N(t|0,1) dt + (1-pn) ∫-inf:a N(t|0, σn²) dt
 >
 >
 >
-> = pn ∫-inf:a N(t|0,1) dt + (1-pn) ∫-inf:a N(t|0, σn^2) dt
+> = pn ∫-inf:a N(t|0,1) dt + (1-pn) ∫-inf:a N(t|0, σn²) dt
 >
 >
 >
@@ -685,7 +685,7 @@
 >
 >
 >
-> còn ∫-inf:a N(t|0, σn^2) dt chính là cdf tại a của W \~ normal(0, σn^2), tức FW(a), và cũng là P(W < a)
+> còn ∫-inf:a N(t|0, σn²) dt chính là cdf tại a của W \~ normal(0, σn²), tức FW(a), và cũng là P(W < a)
 >
 >
 >
@@ -701,11 +701,11 @@
 >
 >
 >
-> Thế thì, hồi nãy, với limiting variance ta nói, chỉ khi (1-pn)σn^2 → giá trị hữu hạn khi n → inf thì limiting variance mới finite.
+> Thế thì, hồi nãy, với limiting variance ta nói, chỉ khi (1-pn)σn² → giá trị hữu hạn khi n → inf thì limiting variance mới finite.
 >
 >
 >
-> Vậy thì ở đây, ta thử cho (1-pn)σn^2 → inf luôn (bằng cách cho pn → 1 và σn → ∞, thì ta sẽ thấy khi đó:
+> Vậy thì ở đây, ta thử cho (1-pn)σn² → inf luôn (bằng cách cho pn → 1 và σn → ∞, thì ta sẽ thấy khi đó:
 >
 >
 >
@@ -721,7 +721,7 @@
 >
 >
 >
-> limiting variance = inf (vì pn + (1-pn)σn^2 → inf)
+> limiting variance = inf (vì pn + (1-pn)σn² → inf)
 >
 >
 >
@@ -737,7 +737,7 @@
 >
 >
 >
-> Cho pn → 1, tức là cho xác suất chọn được n(0,1) là rất rất lớn, đồng nghĩa rất rất hiếm xảy ra việc chọn được n(0, σn^2). Nhưng đồng thời cho σn → ∞ tức là cho nó rất rất lớn. Thì cái limiting variance ngu ngốc ở chỗ, nó vẫn cho rằng có xác suất dương nào đó (dù vô cùng nhỏ) xảy ra việc chọn cái normal có variance khổng lồ, nên nó cho rằng variance tổng (ý là limiting variance) là khổng lồ. Trong khi đó, thực tế thì, thật ra với xác suất cực lớn của việc chọn được n(0,1) thì variance = 1 sẽ hợp lí hơn, cũng là nói asymptotic variance sẽ thực tế hơn.
+> Cho pn → 1, tức là cho xác suất chọn được n(0,1) là rất rất lớn, đồng nghĩa rất rất hiếm xảy ra việc chọn được n(0, σn²). Nhưng đồng thời cho σn → ∞ tức là cho nó rất rất lớn. Thì cái limiting variance ngu ngốc ở chỗ, nó vẫn cho rằng có xác suất dương nào đó (dù vô cùng nhỏ) xảy ra việc chọn cái normal có variance khổng lồ, nên nó cho rằng variance tổng (ý là limiting variance) là khổng lồ. Trong khi đó, thực tế thì, thật ra với xác suất cực lớn của việc chọn được n(0,1) thì variance = 1 sẽ hợp lí hơn, cũng là nói asymptotic variance sẽ thực tế hơn.
 
 **🔗 See also:** [Định lý phương sai toàn phần](./44_hierarchical_model_mixture_distribution.md#node-ivmktz5)
 
@@ -754,7 +754,7 @@
 >
 >
 >
-> Để hiểu cái này, ta sẽ cần liên hệ lại (nhớ lại) kiến thức về Cramer-Rao Lower Bound là cái gì), đã học ở chap 7, trong phần đánh giá chất lượng của các point estimator. Nói ngắn gọn, khi cần phải đánh giá các estimator (evaluating estimator quality), thì một tiêu chí quan trọng là MSE, được định nghĩa là một hàm của estimator: MSE(W(𝐗)) = E\_θ\[(W(𝐗) - θ)^2\], và ta muốn cái này càng nhỏ càng tốt. Sau đó, bằng cách biến đổi chút, ta sẽ cho thấy nó = Var\_θ \[W(𝐗)\] + \[Bias(W(𝐗)\]^2 với Bias(W(𝐗)) = E\_θ\[W(𝐗)\] - θ. Để rồi, câu chuyện tiếp theo là, giả sử ta **xét một đám các estimator có cùng bias** (đồng nghĩa có cùng kì vọng E\_θ\[W(𝐗)\]), thì thằng nào có Var\_θ\[W(𝐗)\] nhỏ nhất sẽ là tốt nhất.
+> Để hiểu cái này, ta sẽ cần liên hệ lại (nhớ lại) kiến thức về Cramer-Rao Lower Bound là cái gì), đã học ở chap 7, trong phần đánh giá chất lượng của các point estimator. Nói ngắn gọn, khi cần phải đánh giá các estimator (evaluating estimator quality), thì một tiêu chí quan trọng là MSE, được định nghĩa là một hàm của estimator: MSE(W(𝐗)) = E\_θ\[(W(𝐗) - θ)²\], và ta muốn cái này càng nhỏ càng tốt. Sau đó, bằng cách biến đổi chút, ta sẽ cho thấy nó = Var\_θ \[W(𝐗)\] + \[Bias(W(𝐗)\]² với Bias(W(𝐗)) = E\_θ\[W(𝐗)\] - θ. Để rồi, câu chuyện tiếp theo là, giả sử ta **xét một đám các estimator có cùng bias** (đồng nghĩa có cùng kì vọng E\_θ\[W(𝐗)\]), thì thằng nào có Var\_θ\[W(𝐗)\] nhỏ nhất sẽ là tốt nhất.
 >
 >
 >
@@ -770,22 +770,22 @@
 >
 >
 >
-> Var\_θ(W(𝐗)) ≥ \[d/dθ E\_θ\[W(𝐗)\]\]^2 / E\_θ\[(∂/∂θ log f(𝐗|θ))^2\]
+> Var\_θ(W(𝐗)) ≥ \[d/dθ E\_θ\[W(𝐗)\]\]² / E\_θ\[(∂/∂θ log f(𝐗|θ))²\]
 >
 >
 >
-> = \[d/dθ E\_θ\[W(𝐗)\]\]^2 / In(θ)
+> = \[d/dθ E\_θ\[W(𝐗)\]\]² / In(θ)
 >
 >
 >
-> với In(θ) = E\_θ\[(∂/∂θ log f(𝐗|θ))^2\], do iid = n E\_θ\[(∂/∂θ log f(Xi|θ))^2\] = n I1(θ)
+> với In(θ) = E\_θ\[(∂/∂θ log f(𝐗|θ))²\], do iid = n E\_θ\[(∂/∂θ log f(Xi|θ))²\] = n I1(θ)
 >
 > \
-> Vậy Var\_θ(W(𝐗)) ≥ \[d/dθ E\_θ(W(𝐗))\]^2 / n I1(θ)
+> Vậy Var\_θ(W(𝐗)) ≥ \[d/dθ E\_θ(W(𝐗))\]² / n I1(θ)
 >
 >
 >
-> Và CRLB của Var\_θ(W(𝐗)) là \[d/dθ E\_θ(W(𝐗))\]^2 / n I1(θ)
+> Và CRLB của Var\_θ(W(𝐗)) là \[d/dθ E\_θ(W(𝐗))\]² / n I1(θ)
 >
 >
 >
@@ -793,7 +793,7 @@
 >
 >
 >
-> Quay lại đây, định nghĩa Wn của chuỗi estimator cho τ(θ) có tính tiệm cận hiệu quả đó là khi √n(Wn - τ(θ)) → (d) n(0, \[τ'(θ)\]^2 / I1(θ))
+> Quay lại đây, định nghĩa Wn của chuỗi estimator cho τ(θ) có tính tiệm cận hiệu quả đó là khi √n(Wn - τ(θ)) → (d) n(0, \[τ'(θ)\]² / I1(θ))
 >
 >
 >
@@ -815,19 +815,19 @@
 >
 >
 >
-> Nên ở đây việc ta có √n(Wn - τ(θ)) → (d) n(0, \[τ'(θ)\]^2 / I1(θ)) chính là nói:
+> Nên ở đây việc ta có √n(Wn - τ(θ)) → (d) n(0, \[τ'(θ)\]² / I1(θ)) chính là nói:
 >
 >
 >
-> Avar(Wn) = \[τ'(θ)\]^2 / I1(θ),
+> Avar(Wn) = \[τ'(θ)\]² / I1(θ),
 >
 >
 >
-> và khi n lớn Var\[√n(Wn - τ(θ))\] ≈ \[τ'(θ)\]^2 / I1(θ)
+> và khi n lớn Var\[√n(Wn - τ(θ))\] ≈ \[τ'(θ)\]² / I1(θ)
 >
 >
 >
-> ⇔ Var(Wn) ≈ \[τ'(θ)\]^2 / n I1(θ) (dùng tính chất Var(αX + β) = α^2 Var(X))
+> ⇔ Var(Wn) ≈ \[τ'(θ)\]² / n I1(θ) (dùng tính chất Var(αX + β) = α² Var(X))
 >
 >
 >
@@ -835,7 +835,7 @@
 >
 >
 >
-> ⇔ Var(Wn) ≈ \[d/dθ E\[Wn\]\]^2 / n I1(θ) 
+> ⇔ Var(Wn) ≈ \[d/dθ E\[Wn\]\]² / n I1(θ) 
 >
 >
 >
@@ -851,7 +851,7 @@
 >
 >
 >
-> Nhìn lại thì τ'(θ)\]^2/In(θ) chỉ là CRLB của estimator có E\[Wn\] = τ(θ) hoặc là một consistent estimator khi khi n lớn vô cùng thì E\[Wn\] = τ(θ), trong khi đó định nghĩa 10.1.11 không đề cập vụ này.
+> Nhìn lại thì τ'(θ)\]²/In(θ) chỉ là CRLB của estimator có E\[Wn\] = τ(θ) hoặc là một consistent estimator khi khi n lớn vô cùng thì E\[Wn\] = τ(θ), trong khi đó định nghĩa 10.1.11 không đề cập vụ này.
 >
 >
 >
@@ -859,7 +859,7 @@
 >
 >
 >
-> Khó hiểu ở chỗ: Đạt CRLB của ai? Nếu nói Avar(Wn) đạt CRLB của Wn, thì Avar(Wn) phải là \[d/dθ E\[Wn\]\]^2 / In(θ) mới đúng chuẩn. Trong khi đó \[d/dθ τ(θ)\]^2 / In(θ) chưa chắc đã là CRLB của Wn, vì có khi E\[Wn\] khác τ(θ) và khi n lớn E\[Wn\] cũng không hội tụ về τ\[θ\].
+> Khó hiểu ở chỗ: Đạt CRLB của ai? Nếu nói Avar(Wn) đạt CRLB của Wn, thì Avar(Wn) phải là \[d/dθ E\[Wn\]\]² / In(θ) mới đúng chuẩn. Trong khi đó \[d/dθ τ(θ)\]² / In(θ) chưa chắc đã là CRLB của Wn, vì có khi E\[Wn\] khác τ(θ) và khi n lớn E\[Wn\] cũng không hội tụ về τ\[θ\].
 >
 >
 >
@@ -867,7 +867,7 @@
 >
 >
 >
-> Đó là, nếu estimator Wn của τ(θ) thỏa Avar(Wn) = \[τ'(θ)\]^2 / I1(θ) thì Wn sẽ được gọi là estimator hiệu quả tiệm cận. **KHI ĐÓ, AVAR CỦA NÓ ĐẠT ĐÚNG BẰNG CRLB CỦA MỘT ESTIMATOR Un NÀO ĐÓ CÓ TÍNH CHẤT ASYMPTOTICALLY UNBIASED**.
+> Đó là, nếu estimator Wn của τ(θ) thỏa Avar(Wn) = \[τ'(θ)\]² / I1(θ) thì Wn sẽ được gọi là estimator hiệu quả tiệm cận. **KHI ĐÓ, AVAR CỦA NÓ ĐẠT ĐÚNG BẰNG CRLB CỦA MỘT ESTIMATOR Un NÀO ĐÓ CÓ TÍNH CHẤT ASYMPTOTICALLY UNBIASED**.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -1034,27 +1034,27 @@
 >
 >
 >
-> Tới đây đặt I(θ0) = E\[l'(θ0|X)\]^2 = 1/ν(θ) và nói rằng nó là information number của một observation. Là sao ta?
+> Tới đây đặt I(θ0) = E\[l'(θ0|X)\]² = 1/ν(θ) và nói rằng nó là information number của một observation. Là sao ta?
 >
 >
 >
-> → Đó là vì định nghĩa, trong bài trước (xem link), người ta gọi đại lượng E\_θ\[(∂/∂θ log f(X|θ))^2\] là information number hay Fisher information
+> → Đó là vì định nghĩa, trong bài trước (xem link), người ta gọi đại lượng E\_θ\[(∂/∂θ log f(X|θ))²\] là information number hay Fisher information
 >
 >
 >
-> Vậy thì quay lại đây, E\[l'(θ0|X)\]^2, là cái gì, với việc ta đã đặt l(θ|x) là log likelihood: log L(θ|x), và hàm likelihood, theo định nghĩa, thì cũng chính là f(x|θ) khi xem nó là hàm theo θ. và l'(θ0|X) thì chính là ∂/∂θ l(θ0|X) chứ gì nữa. Vậy E\[l'(θ0|X)\]^2 (nên ghi là E\[(l'(θ0|X))^2\] cho rõ, là kì vọng của cái bình phương, quả thật chính là E\_θ\[(∂/∂θ log f(X|θ))^2\], nên nó chính là information number.
+> Vậy thì quay lại đây, E\[l'(θ0|X)\]², là cái gì, với việc ta đã đặt l(θ|x) là log likelihood: log L(θ|x), và hàm likelihood, theo định nghĩa, thì cũng chính là f(x|θ) khi xem nó là hàm theo θ. và l'(θ0|X) thì chính là ∂/∂θ l(θ0|X) chứ gì nữa. Vậy E\[l'(θ0|X)\]² (nên ghi là E\[(l'(θ0|X))²\] cho rõ, là kì vọng của cái bình phương, quả thật chính là E\_θ\[(∂/∂θ log f(X|θ))²\], nên nó chính là information number.
 >
 >
 >
-> Và nói thêm tí về bản chất của E\_θ\[(∂/∂θ log f(X|θ))^2\]. Bên trong kì vọng là (∂/∂θ log f(X|θ))^2, là bình phương của ∂/∂θ log f(X|θ), và cái này là đạo hàm của log f(X|θ) theo θ, và khi đạo hàm theo θ thì ta coi X cố định, và vì hàm số này phụ thuộc X và θ, nên khi chỉ đạo hàm theo θ thì ta đang lấy đạo hàm riêng (partial derivative), đó chính là lí do có cái ∂/∂. Đạo hàm riêng theo θ cũng là một hàm số theo θ. Như vậy, (∂/∂θ log f(X|θ))^2 nếu xem như X fix, thì nó cũng là một hàm số theo θ. Còn nếu xem như X không fix, thì nó vẫn là hàm theo các X và θ. Và X là random variable, vậy (∂/∂θ log f(X|θ))^2 là một random variable. Từ đó ta có quyền nói về kì vọng: E\[(∂/∂θ log f(X|θ))^2\], và vì cái random variable (∂/∂θ log f(X|θ))^2 phụ thuộc X, mà X có phân phối phụ thuộc θ, thành ra khi tính kì vọng, thì kết quả sẽ ra là hàm phụ thuộc θ. Có nghĩa là, ở đây có tới hai lí do để người ta viết chữ θ ở dưới chữ E trong E\_θ\[(∂/∂θ log f(X|θ))^2\]: Là vì cái cục trong kì vọng vốn đã là hàm theo θ, dù cho nó không phụ thuộc θ đi nữa và sau khi tính kì vọng, do phân phối của X phụ thuộc θ nên nó nhất định cũng phải dính đến θ. Và chữ θ ở dưới chữ E nhằm thể hiện, đây là hàm theo θ chỉ vậy thôi.
+> Và nói thêm tí về bản chất của E\_θ\[(∂/∂θ log f(X|θ))²\]. Bên trong kì vọng là (∂/∂θ log f(X|θ))², là bình phương của ∂/∂θ log f(X|θ), và cái này là đạo hàm của log f(X|θ) theo θ, và khi đạo hàm theo θ thì ta coi X cố định, và vì hàm số này phụ thuộc X và θ, nên khi chỉ đạo hàm theo θ thì ta đang lấy đạo hàm riêng (partial derivative), đó chính là lí do có cái ∂/∂. Đạo hàm riêng theo θ cũng là một hàm số theo θ. Như vậy, (∂/∂θ log f(X|θ))² nếu xem như X fix, thì nó cũng là một hàm số theo θ. Còn nếu xem như X không fix, thì nó vẫn là hàm theo các X và θ. Và X là random variable, vậy (∂/∂θ log f(X|θ))² là một random variable. Từ đó ta có quyền nói về kì vọng: E\[(∂/∂θ log f(X|θ))²\], và vì cái random variable (∂/∂θ log f(X|θ))² phụ thuộc X, mà X có phân phối phụ thuộc θ, thành ra khi tính kì vọng, thì kết quả sẽ ra là hàm phụ thuộc θ. Có nghĩa là, ở đây có tới hai lí do để người ta viết chữ θ ở dưới chữ E trong E\_θ\[(∂/∂θ log f(X|θ))²\]: Là vì cái cục trong kì vọng vốn đã là hàm theo θ, dù cho nó không phụ thuộc θ đi nữa và sau khi tính kì vọng, do phân phối của X phụ thuộc θ nên nó nhất định cũng phải dính đến θ. Và chữ θ ở dưới chữ E nhằm thể hiện, đây là hàm theo θ chỉ vậy thôi.
 >
 >
 >
-> Như vậy information number, không phải là fixed number, mà là một hàm theo θ: I(θ) Và ta thay θ0 vào. Giúp giải đáp thắc mắc là vì sao trong định nghĩa bữa trước nói information number là E\_θ\[(∂/∂θ log f(X|θ))^2\] mà nay lại là E\[l'(θ0|X)\]^2
+> Như vậy information number, không phải là fixed number, mà là một hàm theo θ: I(θ) Và ta thay θ0 vào. Giúp giải đáp thắc mắc là vì sao trong định nghĩa bữa trước nói information number là E\_θ\[(∂/∂θ log f(X|θ))²\] mà nay lại là E\[l'(θ0|X)\]²
 >
 >
 >
-> Rồi, thế thì, một điểm lưu ý, Information number chỉ là một khái niệm tổng quát, nó có thể là information number của sample size 1, kí hiệu I1(θ) = E\_θ\[(∂/∂θ log f(X1|θ))^2\] hoặc information number của một sample size n, In(θ) = E\_θ\[(∂/∂θ log f(𝐗|θ))^2\].
+> Rồi, thế thì, một điểm lưu ý, Information number chỉ là một khái niệm tổng quát, nó có thể là information number của sample size 1, kí hiệu I1(θ) = E\_θ\[(∂/∂θ log f(X1|θ))²\] hoặc information number của một sample size n, In(θ) = E\_θ\[(∂/∂θ log f(𝐗|θ))²\].
 >
 >
 >
@@ -1110,15 +1110,15 @@
 >
 >
 >
-> = E\[Y1^2\] - \[E(Y1)\]^2
+> = E\[Y1²\] - \[E(Y1)\]²
 >
 >
 >
-> = E\[Y1^2\] - 0 (ở trên vừa chứng minh mean của Y1,...Yn = 0)
+> = E\[Y1²\] - 0 (ở trên vừa chứng minh mean của Y1,...Yn = 0)
 >
 >
 >
-> = E\[Y1^2\] = E\_θ\[(∂/∂θ log f(X1|θ0))^2\] đây chính là I1(θ0)
+> = E\[Y1²\] = E\_θ\[(∂/∂θ log f(X1|θ0))²\] đây chính là I1(θ0)
 >
 >
 >
@@ -1264,43 +1264,43 @@
 >
 >
 >
-> = Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
+> = Σi \[∂²/∂θ² log f(Xi|θ)\]
 >
 >
 >
-> Vậy: l''(θ|𝐗) = Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
+> Vậy: l''(θ|𝐗) = Σi \[∂²/∂θ² log f(Xi|θ)\]
 >
 >
 >
-> ⇔ (1/n) l''(θ|𝐗) = (1/n) Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
+> ⇔ (1/n) l''(θ|𝐗) = (1/n) Σi \[∂²/∂θ² log f(Xi|θ)\]
 >
 >
 >
-> Và (1/n) Σi \[∂^2/∂θ^2 log f(Xi|θ)\] chính là một sample mean, nên theo LLN ta có:
+> Và (1/n) Σi \[∂²/∂θ² log f(Xi|θ)\] chính là một sample mean, nên theo LLN ta có:
 >
 >
 >
-> (1/n) Σi \[∂^2/∂θ^2 log f(Xi|θ)\] → (p) E\[∂^2/∂θ^2 log f(Xi|θ)\]
+> (1/n) Σi \[∂²/∂θ² log f(Xi|θ)\] → (p) E\[∂²/∂θ² log f(Xi|θ)\]
 >
 >
 >
-> Cũng là (1/n) l''(θ|𝐗) → (p)E\[∂^2/∂θ^2 log f(Xi|θ)\]
+> Cũng là (1/n) l''(θ|𝐗) → (p)E\[∂²/∂θ² log f(Xi|θ)\]
 >
 >
 >
-> và ∂^2/∂θ^2 log f(Xi|θ), với tư cách là random variable bởi là hàm của Xi có phân phối f(x|θ), nên E\[∂^2/∂θ^2 log f(Xi|θ)\] sẽ là hàm của θ, nên ta sẽ ghi thêm chữ θ dưới chữ E để thể hiện điều này:
+> và ∂²/∂θ² log f(Xi|θ), với tư cách là random variable bởi là hàm của Xi có phân phối f(x|θ), nên E\[∂²/∂θ² log f(Xi|θ)\] sẽ là hàm của θ, nên ta sẽ ghi thêm chữ θ dưới chữ E để thể hiện điều này:
 >
 >
 >
-> (1/n) l''(θ|𝐗) → (p)E\_θ\[∂^2/∂θ^2 log f(Xi|θ)\]
+> (1/n) l''(θ|𝐗) → (p)E\_θ\[∂²/∂θ² log f(Xi|θ)\]
 >
 >
 >
-> Và do đó (1/n) l''(θ|𝐗)|θ=θ0 → (p) E\_θ\[∂^2/∂θ^2 log f(Xi|θ)\]|θ=θ0
+> Và do đó (1/n) l''(θ|𝐗)|θ=θ0 → (p) E\_θ\[∂²/∂θ² log f(Xi|θ)\]|θ=θ0
 >
 >
 >
-> hay (1/n) l''(θ0|𝐗)→ (p) E\_θ0\[∂^2/∂θ^2 log f(Xi|θ)\]
+> hay (1/n) l''(θ0|𝐗)→ (p) E\_θ0\[∂²/∂θ² log f(Xi|θ)\]
 >
 >
 >
@@ -1308,11 +1308,11 @@
 >
 >
 >
-> E\_θ0\[∂^2/∂θ^2 log f(Xi|θ)\] = -E\_θ0\[(∂/∂θ log f(Xi|θ))^2\]
+> E\_θ0\[∂²/∂θ² log f(Xi|θ)\] = -E\_θ0\[(∂/∂θ log f(Xi|θ))²\]
 >
 >
 >
-> Do đó: (1/n) l''(θ0|𝐗)→ (p) -E\_θ0\[(∂/∂θ log f(Xi|θ))^2\], và đây chính là -I1(θ0)
+> Do đó: (1/n) l''(θ0|𝐗)→ (p) -E\_θ0\[(∂/∂θ log f(Xi|θ))²\], và đây chính là -I1(θ0)
 >
 >
 >
@@ -1348,7 +1348,7 @@
 >
 >
 >
-> và vế phải, theo localtion scale theorem, chính là n(0, I1(θ0)/\[I1(θ0)\]^2) = n(0, 1/\[I1(θ0)\])
+> và vế phải, theo localtion scale theorem, chính là n(0, I1(θ0)/\[I1(θ0)\]²) = n(0, 1/\[I1(θ0)\])
 >
 >
 >
@@ -1360,7 +1360,7 @@
 >
 >
 >
-> Nên √n(θ^ - θ0) → (d) (-1) × n(0, 1/\[I1(θ0)\]), cũng là n(0, (-1)^2 × 1/\[I1(θ0)\]), cũng là n(0, 1/\[I1(θ0)\])
+> Nên √n(θ^ - θ0) → (d) (-1) × n(0, 1/\[I1(θ0)\]), cũng là n(0, (-1)² × 1/\[I1(θ0)\]), cũng là n(0, 1/\[I1(θ0)\])
 >
 >
 >
@@ -1417,7 +1417,7 @@
 >
 > Đầu tiên, cùng ôn lại CRLB, nói đơn giản, theorem này cho biết, nếu ta có một statistic Wn là estimator
 >
-> của θ thỏa vài điều kiện nhất định thì Var(Wn) ≥ \[d/dθ E\[Wn\]\]^2 / In(θ) với In(θ) là information number
+> của θ thỏa vài điều kiện nhất định thì Var(Wn) ≥ \[d/dθ E\[Wn\]\]² / In(θ) với In(θ) là information number
 >
 > của n observation. Công thức của nó có thể nhìn trong sách, nhưng viết In(θ) cho gọn, và không khó
 >
@@ -1425,9 +1425,9 @@
 >
 >
 >
-> Gút lại, kết quả này chỉ là: nếu ta có Wn là estimator của θ thì CRLB của Var(Wn) là \[d/dθ E\[Wn\]\]^2 / n
+> Gút lại, kết quả này chỉ là: nếu ta có Wn là estimator của θ thì CRLB của Var(Wn) là \[d/dθ E\[Wn\]\]² / n
 >
-> I1(θ), và nếu xét Wn có E\[Wn\] = h(θ) thì cái CRLB là **\[h'(θ)\]^2 / n I1(θ)**.
+> I1(θ), và nếu xét Wn có E\[Wn\] = h(θ) thì cái CRLB là **\[h'(θ)\]² / n I1(θ)**.
 >
 >
 >
@@ -1439,7 +1439,7 @@
 >
 >
 >
-> √n(Wn - θ) → (d) n(0, ν(θ)) với ν(θ) = \[g'(θ)\]^2 / I1(θ).
+> √n(Wn - θ) → (d) n(0, ν(θ)) với ν(θ) = \[g'(θ)\]² / I1(θ).
 >
 >
 >
@@ -1459,27 +1459,27 @@
 >
 >
 >
-> nếu √n(Yn - θ) → (d) n(0, σ²) thì √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\]^2 σ²))
+> nếu √n(Yn - θ) → (d) n(0, σ²) thì √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\]² σ²))
 >
 >
 >
-> Và cái trên cũng tương đương với việc nói Avar(Yn) = σ² thì Avar(g(Yn)) = \[g'(θ)\]^2 σ² = \[g'(θ)\]^2
+> Và cái trên cũng tương đương với việc nói Avar(Yn) = σ² thì Avar(g(Yn)) = \[g'(θ)\]² σ² = \[g'(θ)\]²
 >
 > Avar(Yn)
 >
 >
 >
-> Và việc nói Avar(g(Yn)) = \[g'(θ)\]^2 Avar(Yn) thì cũng có nghĩa là
+> Và việc nói Avar(g(Yn)) = \[g'(θ)\]² Avar(Yn) thì cũng có nghĩa là
 >
 >
 >
-> khi n lớn thì Var(g(Yn)) ≈ \[g'(θ)\]^2 Avar(Yn) / n
+> khi n lớn thì Var(g(Yn)) ≈ \[g'(θ)\]² Avar(Yn) / n
 >
 >
 >
-> vì sao, vì √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\]^2 σ²)) = n(0, \[g'(θ)\]^2 Avar(Yn))) có bản chất ý nghĩa là: khi
+> vì sao, vì √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\]² σ²)) = n(0, \[g'(θ)\]² Avar(Yn))) có bản chất ý nghĩa là: khi
 >
-> n vô cùng thì random variable √n(g(Yn) - g(θ)) sẽ có distribution là n(0, \[g'(θ)\]^2 Avar(Yn))).
+> n vô cùng thì random variable √n(g(Yn) - g(θ)) sẽ có distribution là n(0, \[g'(θ)\]² Avar(Yn))).
 >
 >
 >
@@ -1487,27 +1487,27 @@
 >
 >
 >
-> Var\[√n(g(Yn) - g(θ))\] ≈ \[g'(θ)\]^2 Avar(Yn)
+> Var\[√n(g(Yn) - g(θ))\] ≈ \[g'(θ)\]² Avar(Yn)
 >
 >
 >
-> (ủa ko phải sao, vì nói distribution khi n vô cùng của X là n(μ, ε^2), tức cũng là nói khi n lớn X có
+> (ủa ko phải sao, vì nói distribution khi n vô cùng của X là n(μ, ε²), tức cũng là nói khi n lớn X có
 >
-> distribution là normal, mean là μ, variance là ε^2, vậy thì khi n lớn ta sẽ có Var(X) ≈ ε^2 chứ, hoàn toàn
+> distribution là normal, mean là μ, variance là ε², vậy thì khi n lớn ta sẽ có Var(X) ≈ ε² chứ, hoàn toàn
 >
 > logic)
 >
 >
 >
-> ⇔ n Var(g(Yn)) - n Var(g(θ)) ≈ \[g'(θ)\]^2 Avar(Yn)
+> ⇔ n Var(g(Yn)) - n Var(g(θ)) ≈ \[g'(θ)\]² Avar(Yn)
 >
 >
 >
-> ⇔ n Var(g(Yn)) - 0 ≈ \[g'(θ)\]^2 Avar(Yn)
+> ⇔ n Var(g(Yn)) - 0 ≈ \[g'(θ)\]² Avar(Yn)
 >
 >
 >
-> ⇔ Var(g(Yn)) ≈ \[g'(θ)\]^2 Avar(Yn) / n
+> ⇔ Var(g(Yn)) ≈ \[g'(θ)\]² Avar(Yn) / n
 >
 >
 >
@@ -1515,7 +1515,7 @@
 >
 >
 >
-> Var(h(θ^)) ≈ \[h'(θ)\]^2 Avar(θ^) / n.
+> Var(h(θ^)) ≈ \[h'(θ)\]² Avar(θ^) / n.
 >
 >
 >
@@ -1523,11 +1523,11 @@
 >
 >
 >
-> ⇨ Var(h(θ^)) ≈ \[h'(θ)\]^2 (1/I1(θ)) / n
+> ⇨ Var(h(θ^)) ≈ \[h'(θ)\]² (1/I1(θ)) / n
 >
 >
 >
-> ⇔ Var(h(θ^)) ≈ **\[h'(θ)\]^2 /nI1(θ))**, đây chính là 10.1.7
+> ⇔ Var(h(θ^)) ≈ **\[h'(θ)\]² /nI1(θ))**, đây chính là 10.1.7
 >
 >
 >
@@ -1545,11 +1545,11 @@
 >
 >
 >
-> i) Delta method cho Avar(h(θ^)) = \[h'(θ)\]^2 Avar(θ^).
+> i) Delta method cho Avar(h(θ^)) = \[h'(θ)\]² Avar(θ^).
 >
 >
 >
-> Và cái này cũng là cho ta: khi n lớn, Var(h(θ^)) ≈ \[h'(θ)\]^2 Avar(θ^) / n
+> Và cái này cũng là cho ta: khi n lớn, Var(h(θ^)) ≈ \[h'(θ)\]² Avar(θ^) / n
 >
 >
 >
@@ -1559,11 +1559,11 @@
 >
 >
 >
-> i) và ii) ⇨ khi n lớn, Var(h(θ^)) ≈ \[h'(θ)\]^2 \[1/I1(θ))\] / n = \[h'(θ)\]^2/ nI1(θ))
+> i) và ii) ⇨ khi n lớn, Var(h(θ^)) ≈ \[h'(θ)\]² \[1/I1(θ))\] / n = \[h'(θ)\]²/ nI1(θ))
 >
 >
 >
-> ⇔ Var(h(θ^)) ≈ \[h'(θ)\]^2/ nI1(θ)) (1)
+> ⇔ Var(h(θ^)) ≈ \[h'(θ)\]²/ nI1(θ)) (1)
 >
 >
 >
@@ -1571,7 +1571,7 @@
 >
 >
 >
-> iii) CRLB theorem nói rằng với Wn thỏa vì điều kiện Var(Wn) ≥ \[d/dθ E\_θ\[Wn\]\]^2 / nI1(θ).
+> iii) CRLB theorem nói rằng với Wn thỏa vì điều kiện Var(Wn) ≥ \[d/dθ E\_θ\[Wn\]\]² / nI1(θ).
 >
 >
 >
@@ -1579,7 +1579,7 @@
 >
 >
 >
-> CRLB của Var(Wn) = \[h'(θ)\]^2 / nI1(θ) (2)
+> CRLB của Var(Wn) = \[h'(θ)\]² / nI1(θ) (2)
 >
 >
 >
@@ -1636,15 +1636,15 @@
 >
 >
 >
-> i) Với một Wn, là estimator của g(θ) thì CRLB của variance của nó: Var(Wn) ≥ \[d/dθ E\_θ\[Wn\]\]^2 / nI1(θ) (với I1(θ) là information number của 1 observation)
+> i) Với một Wn, là estimator của g(θ) thì CRLB của variance của nó: Var(Wn) ≥ \[d/dθ E\_θ\[Wn\]\]² / nI1(θ) (với I1(θ) là information number của 1 observation)
 >
 >
 >
-> nên nếu ta chọn Wn có E\[Wn\] = h(θ), thì CRLB của nó là \[h'(θ)\]^2 / nI1(θ)
+> nên nếu ta chọn Wn có E\[Wn\] = h(θ), thì CRLB của nó là \[h'(θ)\]² / nI1(θ)
 >
 >
 >
-> ii) Theo theorem của Delta method nói rằng nếu Avar(Yn) = σ² thì Avar(g(Yn)) = \[g'(θ)\]^2 σ² = \[g'(θ)\]^2 Avar(Yn). Và biểu thị toán học của của Avar(g(Yn)) = \[g'(θ)\]^2 Avar(Yn) đó là √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\]^2 Avar(Yn)), và cái này có nghĩa là nếu n lớn ta có Var\[√n(g(Yn) - g(θ))\] ≈ \[g'(θ)\]^2 Avar(Yn)) ⇔ Var\[g(Yn)\] ≈ \[g'(θ)\]^2 Avar(Yn)) / n.
+> ii) Theo theorem của Delta method nói rằng nếu Avar(Yn) = σ² thì Avar(g(Yn)) = \[g'(θ)\]² σ² = \[g'(θ)\]² Avar(Yn). Và biểu thị toán học của của Avar(g(Yn)) = \[g'(θ)\]² Avar(Yn) đó là √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\]² Avar(Yn)), và cái này có nghĩa là nếu n lớn ta có Var\[√n(g(Yn) - g(θ))\] ≈ \[g'(θ)\]² Avar(Yn)) ⇔ Var\[g(Yn)\] ≈ \[g'(θ)\]² Avar(Yn)) / n.
 >
 >
 >
@@ -1652,11 +1652,11 @@
 >
 >
 >
-> Avar(θ^) = 1/I1(θ). Nên nếu áp dụng điều ii) với Yn = θ^ và hàm h, thì ta sẽ có Var\[h(θ^)\] ≈ \[h'(θ)\]^2 / nI1(θ), và cái này theo (i) thì chính là CRLB của Wn có E\[Wn\] = h(θ)
+> Avar(θ^) = 1/I1(θ). Nên nếu áp dụng điều ii) với Yn = θ^ và hàm h, thì ta sẽ có Var\[h(θ^)\] ≈ \[h'(θ)\]² / nI1(θ), và cái này theo (i) thì chính là CRLB của Wn có E\[Wn\] = h(θ)
 >
 >
 >
-> Vậy có nghĩa là, nếu ta muốn estimate variance của h(θ^), ta có thể dùng CRLB của một estimator Wn nào đó có E\[Wn\] = h(θ): Var\[h(θ^)\] ≈ CRLB của Var(Wn) = \[h'(θ)\]^2 / nI1(θ).
+> Vậy có nghĩa là, nếu ta muốn estimate variance của h(θ^), ta có thể dùng CRLB của một estimator Wn nào đó có E\[Wn\] = h(θ): Var\[h(θ^)\] ≈ CRLB của Var(Wn) = \[h'(θ)\]² / nI1(θ).
 >
 >
 >
@@ -1664,7 +1664,7 @@
 >
 >
 >
-> i) Dùng công thức xấp xỉ trên, sẽ cho phép ta dùng CLRB của Var(Wn) (với E\[Wn\] = h(θ)) = \[h'(θ)\]^2 / nI1(θ) để làm xấp xỉ cho Var(h(θ^).
+> i) Dùng công thức xấp xỉ trên, sẽ cho phép ta dùng CLRB của Var(Wn) (với E\[Wn\] = h(θ)) = \[h'(θ)\]² / nI1(θ) để làm xấp xỉ cho Var(h(θ^).
 >
 >
 >
@@ -1676,7 +1676,7 @@
 >
 >
 >
-> Estimator Var(h(θ^)) ≈ \[h'(θ^)\]^2 / nI1(θ^)
+> Estimator Var(h(θ^)) ≈ \[h'(θ^)\]² / nI1(θ^)
 >
 >
 >
@@ -1684,7 +1684,7 @@
 >
 >
 >
-> Var(h(θ^)) ≈ \[h'(θ)\]^2 / In(θ), đây là công thức có được nhờ Delta method, và định nghĩa của efficient estimator.
+> Var(h(θ^)) ≈ \[h'(θ)\]² / In(θ), đây là công thức có được nhờ Delta method, và định nghĩa của efficient estimator.
 >
 >
 >
@@ -1696,11 +1696,11 @@
 >
 >
 >
-> Var(h(θ^)) ≈ \[h'(θ^)\]^2 / In(θ^), hay Var(h(θ^)) ≈ \[h'(θ)\]^2 / In(θ) | θ = θ^
+> Var(h(θ^)) ≈ \[h'(θ^)\]² / In(θ^), hay Var(h(θ^)) ≈ \[h'(θ)\]² / In(θ) | θ = θ^
 >
 >
 >
-> nên kí hiệu là Var\_ θ^\[h(θ^)\] ý là hàm Var(h(θ^)) ≈ \[h'(θ)\]^2 / In(θ) evaluate tại θ^
+> nên kí hiệu là Var\_ θ^\[h(θ^)\] ý là hàm Var(h(θ^)) ≈ \[h'(θ)\]² / In(θ) evaluate tại θ^
 >
 >
 >
@@ -1720,7 +1720,7 @@
 >
 >
 >
-> Như đã biết, trong phần CRLB, thhì E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2}, được kí hiệu là In(θ), information number của n observation (xem link).
+> Như đã biết, trong phần CRLB, thhì E\_θ{\[∂/∂θ log f(𝐗|θ)\]²}, được kí hiệu là In(θ), information number của n observation (xem link).
 >
 >
 >
@@ -1728,31 +1728,31 @@
 >
 >
 >
-> = ∫ ∂/∂θ\[(∂/∂θ log f(x|θ)d(x|θ)\] dx thì E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2} = - E\_θ\[∂^2/∂θ^2 log f(𝐗|θ)\]
+> = ∫ ∂/∂θ\[(∂/∂θ log f(x|θ)d(x|θ)\] dx thì E\_θ{\[∂/∂θ log f(𝐗|θ)\]²} = - E\_θ\[∂²/∂θ² log f(𝐗|θ)\]
 >
 >
 >
->  Nên In(θ) ở đây = E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2}
+>  Nên In(θ) ở đây = E\_θ{\[∂/∂θ log f(𝐗|θ)\]²}
 >
 >
 >
-> = - E\_θ\[∂^2/∂θ^2 log f(𝐗|θ)\]
+> = - E\_θ\[∂²/∂θ² log f(𝐗|θ)\]
 >
 >
 >
-> = - E\_θ\[∂^2/∂θ^2 log L(θ|𝐗)\] (do L(θ|𝐗) = f(𝐗|θ))
+> = - E\_θ\[∂²/∂θ² log L(θ|𝐗)\] (do L(θ|𝐗) = f(𝐗|θ))
 >
 >
 >
-> Tới đây, một lần nữa người ta **bỏ kì vọng** chuyển sang dùng -∂^2/∂θ^2 log L(θ^|𝐗) và gọi nó là **observed information number**, là cái mà ông nói thật ra ngon hơn (superior) so với expected information number (In(θ))
+> Tới đây, một lần nữa người ta **bỏ kì vọng** chuyển sang dùng -∂²/∂θ² log L(θ^|𝐗) và gọi nó là **observed information number**, là cái mà ông nói thật ra ngon hơn (superior) so với expected information number (In(θ))
 >
 >
 >
-> = - E\_θ\[∂^2/∂θ^2 log L(θ|𝐗)\] (do L(θ|𝐗) = f(𝐗|θ))
+> = - E\_θ\[∂²/∂θ² log L(θ|𝐗)\] (do L(θ|𝐗) = f(𝐗|θ))
 >
 >
 >
-> ≈ -∂^2/∂θ^2 log L(θ^|𝐗)
+> ≈ -∂²/∂θ² log L(θ^|𝐗)
 >
 >
 >
@@ -1772,7 +1772,7 @@
 >
 >
 >
-> Var(h(θ^)) ≈ \[h'(θ) / -∂^2/∂θ^2 log L(θ|𝐗)\] | θ=θ^. Và đây là cách ta estimate variance của một hàm của một mle.
+> Var(h(θ^)) ≈ \[h'(θ) / -∂²/∂θ² log L(θ|𝐗)\] | θ=θ^. Và đây là cách ta estimate variance của một hàm của một mle.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -1790,35 +1790,35 @@
 <p align="center"><kbd><img src="assets/p70gp9yp7qr.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Còn một ý, nói -(1/n) ∂^2/∂θ^2 log L(θ|𝐗)|θ=θ^ là consistent estimator của I(θ), Là sao ta?
+> Còn một ý, nói -(1/n) ∂²/∂θ² log L(θ|𝐗)|θ=θ^ là consistent estimator của I(θ), Là sao ta?
 >
 >
 >
-> Vì ∂^2/∂θ^2 log L(θ|𝐗) = ∂^2/∂θ^2 log f(𝐗|θ)
+> Vì ∂²/∂θ² log L(θ|𝐗) = ∂²/∂θ² log f(𝐗|θ)
 >
 >
 >
-> = ∂^2/∂θ^2 log Πi f(Xi|θ)
+> = ∂²/∂θ² log Πi f(Xi|θ)
 >
 >
 >
-> = ∂^2/∂θ^2 Σi \[log f(Xi|θ)\]
+> = ∂²/∂θ² Σi \[log f(Xi|θ)\]
 >
 >
 >
-> = Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
+> = Σi \[∂²/∂θ² log f(Xi|θ)\]
 >
 >
 >
-> Dĩ nhiên ∂^2/∂θ^2 log f(Xi|θ) là một random variable. Và với iid random sample X1,...Xn thì ta cũng có một random sample Y1, ...Yn với Yi = ∂^2/∂θ^2 log f(Xi|θ)
+> Dĩ nhiên ∂²/∂θ² log f(Xi|θ) là một random variable. Và với iid random sample X1,...Xn thì ta cũng có một random sample Y1, ...Yn với Yi = ∂²/∂θ² log f(Xi|θ)
 >
 >
 >
-> Do đó Ybar = (Σi Yi)/n = (1/n) Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
+> Do đó Ybar = (Σi Yi)/n = (1/n) Σi \[∂²/∂θ² log f(Xi|θ)\]
 >
 >
 >
-> và theo LLN, Ybar → (p) E\_θ\[Yi\] = E\_θ\[∂^2/∂θ^2 log f(Xi|θ)\]
+> và theo LLN, Ybar → (p) E\_θ\[Yi\] = E\_θ\[∂²/∂θ² log f(Xi|θ)\]
 >
 >
 >
@@ -1826,7 +1826,7 @@
 >
 >
 >
-> Do đó, -Ybar = (1/n) Σi \[∂^2/∂θ^2 log f(Xi|θ)\] → (p) Ii(θ)
+> Do đó, -Ybar = (1/n) Σi \[∂²/∂θ² log f(Xi|θ)\] → (p) Ii(θ)
 >
 >
 >
@@ -1838,11 +1838,11 @@
 >
 >
 >
->  Var(h(θ^)) ≈ \[h'(θ^)^2 / -∂^2/∂θ^2 log L(θθ^|𝐗)\] có đặc địểm:
+>  Var(h(θ^)) ≈ \[h'(θ^)² / -∂²/∂θ² log L(θθ^|𝐗)\] có đặc địểm:
 >
 >
 >
-> mẫu số -∂^2/∂θ^2 log L(θθ^|𝐗)  = -n Ybar là consistent estimator của n Ii(θ), tức là In(θ)
+> mẫu số -∂²/∂θ² log L(θθ^|𝐗)  = -n Ybar là consistent estimator của n Ii(θ), tức là In(θ)
 >
 >
 >
@@ -1850,11 +1850,11 @@
 >
 >
 >
-> Còn nominator \[h'(θ^)\]^2 cũng sẽ hội tụ về \[h'(θ)\]^2 vì n → inf, θ^ → θ (do mle là consistant estimator của θ)
+> Còn nominator \[h'(θ^)\]² cũng sẽ hội tụ về \[h'(θ)\]² vì n → inf, θ^ → θ (do mle là consistant estimator của θ)
 >
 >
 >
-> Vậy suy ra Var(h(θ^)) cũng → (p) \[h'(θ)\]^2 / In(θ), tức là công thức xấp xỉ ban đầu mà ta lập luận từ Delta method và định nghĩa hiệu quả tiệm cận.
+> Vậy suy ra Var(h(θ^)) cũng → (p) \[h'(θ)\]² / In(θ), tức là công thức xấp xỉ ban đầu mà ta lập luận từ Delta method và định nghĩa hiệu quả tiệm cận.
 >
 >
 >
@@ -1883,19 +1883,19 @@
 >
 >
 >
-> Rồi, theo Delta method, nếu Avar(Yn) = σ² thì Avar(g(Yn)) = \[g'(θ)\]^2 σ² = \[g'(θ)\]^2 Avar(Yn). Như vậy, giả sử ta có Yn là estimator hiệu quả tiệm cận ở trên thì Avar(g(Yn)) = \[g'(θ)\] (1/I1(θ)). Và cái này thì có nghĩa là √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\] (1/I1(θ))), nên nếu n lớn, ta có Var\[√n(g(Yn) - g(θ)\] ≈ \[g'(θ)\] (1/I1(θ)) ⇔ Var(g(Yn)) ≈ \[g'(θ)\] / nI1(θ)
+> Rồi, theo Delta method, nếu Avar(Yn) = σ² thì Avar(g(Yn)) = \[g'(θ)\]² σ² = \[g'(θ)\]² Avar(Yn). Như vậy, giả sử ta có Yn là estimator hiệu quả tiệm cận ở trên thì Avar(g(Yn)) = \[g'(θ)\] (1/I1(θ)). Và cái này thì có nghĩa là √n(g(Yn) - g(θ)) → (d) n(0, \[g'(θ)\] (1/I1(θ))), nên nếu n lớn, ta có Var\[√n(g(Yn) - g(θ)\] ≈ \[g'(θ)\] (1/I1(θ)) ⇔ Var(g(Yn)) ≈ \[g'(θ)\] / nI1(θ)
 >
 >
 >
-> Và vế phải, \[g'(θ)\] / nI1(θ), theo CRLB theorem, nói rằng, nếu ta có Wn là estimator của g(θ), thì Var(Wn) ≥ \[d/dθ E\_θ(Wn)\]^2 / In(θ). Nên nếu Wn có Eθ\[Wn\] = g(θ), thì Var(Wn) ≥ \[g'(θ)\]^2 / In(θ) = \[g'(θ)\]^2 / nI1(θ)
+> Và vế phải, \[g'(θ)\] / nI1(θ), theo CRLB theorem, nói rằng, nếu ta có Wn là estimator của g(θ), thì Var(Wn) ≥ \[d/dθ E\_θ(Wn)\]² / In(θ). Nên nếu Wn có Eθ\[Wn\] = g(θ), thì Var(Wn) ≥ \[g'(θ)\]² / In(θ) = \[g'(θ)\]² / nI1(θ)
 >
 >
 >
-> Như vậy có thể thấy, với việc Var(g(Yn)) ≈ \[g'(θ)\] / nI1(θ) và Var(Wn) ≥ \[g'(θ)\]^2 / In(θ) = \[g'(θ)\]^2 / nI1(θ) thì như vậy ta có thể dùng CRLB của Wn có kì vọng = g(θ) để xấp xỉ cho Var(g(Yn))
+> Như vậy có thể thấy, với việc Var(g(Yn)) ≈ \[g'(θ)\] / nI1(θ) và Var(Wn) ≥ \[g'(θ)\]² / In(θ) = \[g'(θ)\]² / nI1(θ) thì như vậy ta có thể dùng CRLB của Wn có kì vọng = g(θ) để xấp xỉ cho Var(g(Yn))
 >
 >
 >
-> Áp dụng với θ^ là mle của θ, theo bữa trước đã chứng minh, thì mle là một estimator hiệu quả tiệm cận cũng như consistent. Nên theo trên, ta có: Var\[h(θ^)\] có thể tính xấp xỉ bởi CRLB của Var(Wn) có E\[Wn\] = h(θ) = \[h'(θ)\]^2 / nI1(θ),
+> Áp dụng với θ^ là mle của θ, theo bữa trước đã chứng minh, thì mle là một estimator hiệu quả tiệm cận cũng như consistent. Nên theo trên, ta có: Var\[h(θ^)\] có thể tính xấp xỉ bởi CRLB của Var(Wn) có E\[Wn\] = h(θ) = \[h'(θ)\]² / nI1(θ),
 >
 >
 >
@@ -1903,15 +1903,15 @@
 >
 >
 >
-> Tuy nhiên, công thức xấp xỉ này cũng vô dụng vì ta không biết θ. Nên tới đây, ta mới đi thêm một bước nữa: Dùng chính θ^ để estimate cho θ trong công thức \[h'(θ)\]^2 / nI1(θ)
+> Tuy nhiên, công thức xấp xỉ này cũng vô dụng vì ta không biết θ. Nên tới đây, ta mới đi thêm một bước nữa: Dùng chính θ^ để estimate cho θ trong công thức \[h'(θ)\]² / nI1(θ)
 >
 >
 >
-> Và sau đó, khi xét In(θ) có công thức là E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2}, thì dùng một Lemma, ta thấy nó bằng - E\_θ\[∂^2/∂θ^2 log f(𝐗|θ)\] = - E\_θ\[∂^2/∂θ^2 log L(θ|𝐗)\].
+> Và sau đó, khi xét In(θ) có công thức là E\_θ{\[∂/∂θ log f(𝐗|θ)\]²}, thì dùng một Lemma, ta thấy nó bằng - E\_θ\[∂²/∂θ² log f(𝐗|θ)\] = - E\_θ\[∂²/∂θ² log L(θ|𝐗)\].
 >
 >
 >
-> Thế thì, E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2} là expected information number, còn -∂^2/∂θ^2 log L(θ|𝐗) là observed information number và ta sẽ dùng observed information number.
+> Thế thì, E\_θ{\[∂/∂θ log f(𝐗|θ)\]²} là expected information number, còn -∂²/∂θ² log L(θ|𝐗) là observed information number và ta sẽ dùng observed information number.
 >
 >
 >
@@ -1919,7 +1919,7 @@
 >
 >
 >
-> Var\_θ(h(θ^)) ≈ Var\_θ^(h(θ^)), hay Var^\_θ(h(θ^)) = \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 log L(θ|𝐗)\]|θ=θ^, chính là cách mà ta sẽ estimate công thức xấp xỉ cho Var(h(θ^))
+> Var\_θ(h(θ^)) ≈ Var\_θ^(h(θ^)), hay Var^\_θ(h(θ^)) = \[h'(θ)\]²|θ=θ^ / \[-∂²/∂θ² log L(θ|𝐗)\]|θ=θ^, chính là cách mà ta sẽ estimate công thức xấp xỉ cho Var(h(θ^))
 >
 >
 >
@@ -1939,7 +1939,7 @@
 >
 >
 >
-> (Cái này chỉ đơn giản là với sample mean, ta đã chứng minh Var(X̄) = Var(X) / n, nên ở đây Var(X̄), tức Var(p^) = Var(Xi) / n. Variance của Bern(p) có thể chứng minh nhanh: = EX^2 - (EX)^2 = 1^2 × p + 0^2 × (1-p) - p^2 = p(1-p). Nên Var(p^) = p(1-p)/n)
+> (Cái này chỉ đơn giản là với sample mean, ta đã chứng minh Var(X̄) = Var(X) / n, nên ở đây Var(X̄), tức Var(p^) = Var(Xi) / n. Variance của Bern(p) có thể chứng minh nhanh: = EX² - (EX)² = 1² × p + 0² × (1-p) - p² = p(1-p). Nên Var(p^) = p(1-p)/n)
 >
 >
 >
@@ -1958,7 +1958,7 @@
 <p align="center"><kbd><img src="assets/i4lgaqfthyn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, bây giờ ta áp dụng công thức Var^(h(θ^)) ≈ \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 log L(θ|𝐱)\]|θ=θ^
+> Rồi, bây giờ ta áp dụng công thức Var^(h(θ^)) ≈ \[h'(θ)\]²|θ=θ^ / \[-∂²/∂θ² log L(θ|𝐱)\]|θ=θ^
 >
 >
 >
@@ -1966,11 +1966,11 @@
 >
 >
 >
-> Tử số: \[h'(θ)\]^2|θ=θ^ = 1
+> Tử số: \[h'(θ)\]²|θ=θ^ = 1
 >
 >
 >
-> Mẫu số: \[-∂^2/∂θ^2 log L(θ|𝐱)\]|θ=θ^
+> Mẫu số: \[-∂²/∂θ² log L(θ|𝐱)\]|θ=θ^
 >
 >
 >
@@ -2030,7 +2030,7 @@
 >
 >
 >
-> Và ∂^2/∂p^2 \[log(p) np^ + log(1-p) n(1-p^)\]
+> Và ∂²/∂p² \[log(p) np^ + log(1-p) n(1-p^)\]
 >
 >
 >
@@ -2042,23 +2042,23 @@
 >
 >
 >
-> = np^ × (-1/p^2) + ∂/∂p \[n(1-p^) \[1/(1-p)^2\]\]
+> = np^ × (-1/p²) + ∂/∂p \[n(1-p^) \[1/(1-p)²\]\]
 >
 >
 >
-> = -np^/p^2 + n(1-p^)/(1-p)^2
+> = -np^/p² + n(1-p^)/(1-p)²
 >
 >
 >
-> Vậy -∂^2/∂θ^2 log L(θ|𝐱) = -\[-np^/p^2 + n(1-p^)/(1-p)^2\]
+> Vậy -∂²/∂θ² log L(θ|𝐱) = -\[-np^/p² + n(1-p^)/(1-p)²\]
 >
 >
 >
-> = np^/p^2 + n(1-p^)/(1-p)^2
+> = np^/p² + n(1-p^)/(1-p)²
 >
 >
 >
-> (chú ý, np^/p^2 là n p_hat chia p bình phương, coi chừng nhìn nhầm và rút gọn thành n/p^ là sai)
+> (chú ý, np^/p² là n p_hat chia p bình phương, coi chừng nhìn nhầm và rút gọn thành n/p^ là sai)
 >
 >
 >
@@ -2066,11 +2066,11 @@
 >
 >
 >
-> \[-∂^2/∂p^2 log L(p|𝐱)\]|p=p^
+> \[-∂²/∂p² log L(p|𝐱)\]|p=p^
 >
 >
 >
-> = np^/(p^)^2 + n(1-p^)/(1-p^)^2
+> = np^/(p^)² + n(1-p^)/(1-p^)²
 >
 >
 >
@@ -2086,7 +2086,7 @@
 >
 >
 >
-> Và như vậy Var^(h(p^)) ≈ \[h'(p)\]^2|p=p^ / \[-∂^2/∂p^2 log L(p|𝐱)\]|p=p^
+> Và như vậy Var^(h(p^)) ≈ \[h'(p)\]²|p=p^ / \[-∂²/∂p² log L(p|𝐱)\]|p=p^
 >
 >
 >
@@ -2106,7 +2106,7 @@
 >
 >
 >
-> Sau đó, bằng cách tiếp cận dựa trên lí thuyết nói rằng Var^(h(θ^)) ≈ \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 log L(θ|𝐱)\]|θ=θ^, ta cũng tính ra được cùng kết quả Var^(p^) ≈ p^(1-p^)/n.
+> Sau đó, bằng cách tiếp cận dựa trên lí thuyết nói rằng Var^(h(θ^)) ≈ \[h'(θ)\]²|θ=θ^ / \[-∂²/∂θ² log L(θ|𝐱)\]|θ=θ^, ta cũng tính ra được cùng kết quả Var^(p^) ≈ p^(1-p^)/n.
 >
 >
 >
@@ -2114,11 +2114,11 @@
 >
 >
 >
-> i) \[h'(θ)\]^2|θ=θ^, mà ở đây khi đang tính Var(θ^) thì tức là h(.) = identity function, \[h'(θ)\]^2|θ=θ^ = 1.
+> i) \[h'(θ)\]²|θ=θ^, mà ở đây khi đang tính Var(θ^) thì tức là h(.) = identity function, \[h'(θ)\]²|θ=θ^ = 1.
 >
 >
 >
-> ii) Tính -∂^2/∂θ^2 log L(θ|𝐱)\]|θ=θ^, tức là derive công thức đạo hàm bậc hai của log likelihood L(θ|𝐱), sẽ ra một hàm theo θ, lấy dấu âm, và thế θ^ vào.
+> ii) Tính -∂²/∂θ² log L(θ|𝐱)\]|θ=θ^, tức là derive công thức đạo hàm bậc hai của log likelihood L(θ|𝐱), sẽ ra một hàm theo θ, lấy dấu âm, và thế θ^ vào.
 >
 >
 >
@@ -2172,7 +2172,7 @@
 >
 >
 >
-> với I1(p) = E_p\[(∂/∂p log f(X|p))^2\]
+> với I1(p) = E_p\[(∂/∂p log f(X|p))²\]
 >
 >
 >
@@ -2212,19 +2212,19 @@
 >
 >
 >
-> E_p\[(∂/∂p log f(X|p))^2\] = E_p\[((X-p)/p(1-p))^2\]
+> E_p\[(∂/∂p log f(X|p))²\] = E_p\[((X-p)/p(1-p))²\]
 >
 >
 >
-> = E_p\[((X-p))^2\] / \[p(1-p)\]^2
+> = E_p\[((X-p))²\] / \[p(1-p)\]²
 >
 >
 >
-> = Var_p(X) / \[p(1-p)\]^2
+> = Var_p(X) / \[p(1-p)\]²
 >
 >
 >
-> = p(1-p) / \[p(1-p)\]^2
+> = p(1-p) / \[p(1-p)\]²
 >
 >
 >
@@ -2302,7 +2302,7 @@
 >
 >
 >
-> Rồi, tiếp theo, là Delta method theorem, nói rằng nếu √n(Wn - θ) → (d) n(0, σ²), thì √n(g(Wn) - g(θ)) → (d) n(0, g'(θ)^2 σ²). Điều này cũng đồng nghĩa nói đơn giản hơn là nếu Wn có phương sai tiệm cận là Avar(Wn) thì Avar\[g(Wn)\] = \[g'(θ)\]^2 Avar(Wn).
+> Rồi, tiếp theo, là Delta method theorem, nói rằng nếu √n(Wn - θ) → (d) n(0, σ²), thì √n(g(Wn) - g(θ)) → (d) n(0, g'(θ)² σ²). Điều này cũng đồng nghĩa nói đơn giản hơn là nếu Wn có phương sai tiệm cận là Avar(Wn) thì Avar\[g(Wn)\] = \[g'(θ)\]² Avar(Wn).
 >
 >
 >
@@ -2326,11 +2326,11 @@
 >
 >
 >
-> Rồi, theo Delta method theorem, khi θ^ có phương sai tiệm cận là Avar(θ^) thì Avar\[h(θ^)\] = \[h'(θ)\]^2 Avar(θ^), thay kết quả trên vào ta có:
+> Rồi, theo Delta method theorem, khi θ^ có phương sai tiệm cận là Avar(θ^) thì Avar\[h(θ^)\] = \[h'(θ)\]² Avar(θ^), thay kết quả trên vào ta có:
 >
 >
 >
-> Avar\[h(θ^)\] = \[h'(θ)\]^2 \[1/I1(θ)\]
+> Avar\[h(θ^)\] = \[h'(θ)\]² \[1/I1(θ)\]
 >
 >
 >
@@ -2338,27 +2338,27 @@
 >
 >
 >
-> √n\[h(θ^) - h(θ)\] → (d) n(0, \[h'(θ)\]^2 \[1/I1(θ)\])
+> √n\[h(θ^) - h(θ)\] → (d) n(0, \[h'(θ)\]² \[1/I1(θ)\])
 >
 >
 >
-> Và điều này, ý nghĩa của nó là, khi n lớn đến vô hạn thì random variable √n\[h(θ^) - h(θ)\] sẽ có distribution là n(0, \[h'(θ)\]^2 \[1/I1(θ)\]).
+> Và điều này, ý nghĩa của nó là, khi n lớn đến vô hạn thì random variable √n\[h(θ^) - h(θ)\] sẽ có distribution là n(0, \[h'(θ)\]² \[1/I1(θ)\]).
 >
 >
 >
-> Vậy nếu xét n đủ lớn, thì ta có thể nói Var\[ √n\[h(θ^) - h(θ)\]\] ≈ \[h'(θ)\]^2 \[1/I1(θ)\]
+> Vậy nếu xét n đủ lớn, thì ta có thể nói Var\[ √n\[h(θ^) - h(θ)\]\] ≈ \[h'(θ)\]² \[1/I1(θ)\]
 >
 >
 >
-> ⇔ n \[Var\[h(θ^)\] + 0\] ≈ \[h'(θ)\]^2 \[1/I1(θ)\] (khai triến vế trái theo tính chất của phương sai Var(c1X + c2) = c1^2Var(X).
+> ⇔ n \[Var\[h(θ^)\] + 0\] ≈ \[h'(θ)\]² \[1/I1(θ)\] (khai triến vế trái theo tính chất của phương sai Var(c1X + c2) = c1²Var(X).
 >
 >
 >
-> ⇔ Var\[h(θ^)\] ≈ \[h'(θ)\]^2 \[1/I1(θ)\] / n
+> ⇔ Var\[h(θ^)\] ≈ \[h'(θ)\]² \[1/I1(θ)\] / n
 >
 >
 >
-> ⇔ Var\[h(θ^)\] ≈ \[h'(θ)\]^2 / nI1(θ)
+> ⇔ Var\[h(θ^)\] ≈ \[h'(θ)\]² / nI1(θ)
 >
 >
 >
@@ -2366,15 +2366,15 @@
 >
 >
 >
-> Và với việc biết về theorem Cramer Rao Lower Bound, nói rằng, nếu ta có Wn là chuỗi estimator của θ, thì phương sai của nó không thể nhỏ hơn CRLB: Var\_θ(Wn) ≥ \[d/dθ E\_θ\[Wn\]^2/ In(θ). Và nếu ta có Wn là estiamtor có E\[Wn\] = h(θ) thì Var\_θ(Wn) ≥ \[h'(θ)\]^2/ In(θ) = \[h'(θ)\]^2/ nI1(θ) chính là cái trên. Do đó ta mới nói:
+> Và với việc biết về theorem Cramer Rao Lower Bound, nói rằng, nếu ta có Wn là chuỗi estimator của θ, thì phương sai của nó không thể nhỏ hơn CRLB: Var\_θ(Wn) ≥ \[d/dθ E\_θ\[Wn\]²/ In(θ). Và nếu ta có Wn là estiamtor có E\[Wn\] = h(θ) thì Var\_θ(Wn) ≥ \[h'(θ)\]²/ In(θ) = \[h'(θ)\]²/ nI1(θ) chính là cái trên. Do đó ta mới nói:
 >
 >
 >
-> Var\[h(θ^)\] ≈ \[h'(θ)\]^2 / nI1(θ) là CRLB của một estimator Wn có E\[Wn\] = h(θ)
+> Var\[h(θ^)\] ≈ \[h'(θ)\]² / nI1(θ) là CRLB của một estimator Wn có E\[Wn\] = h(θ)
 >
 >
 >
-> Rồi, thế thì tuy là ta có công thức để mà estimate Var(h(θ^)) ≈ \[h'(θ)\]^2 / nI1(θ) nhưng công thức này vô dụng vì dù sao ta cũng không thể biết θ là gì. Do đó, ta sẽ làm hai động tác để lại mang ý nghĩa là ta sẽ ước lượng (estimate) cái công thức xấp xỉ (approximate) trên:
+> Rồi, thế thì tuy là ta có công thức để mà estimate Var(h(θ^)) ≈ \[h'(θ)\]² / nI1(θ) nhưng công thức này vô dụng vì dù sao ta cũng không thể biết θ là gì. Do đó, ta sẽ làm hai động tác để lại mang ý nghĩa là ta sẽ ước lượng (estimate) cái công thức xấp xỉ (approximate) trên:
 >
 >
 >
@@ -2382,11 +2382,11 @@
 >
 >
 >
-> ii) Động tác thứ hai, là nói về cái In(θ), vốn có công thức cần phải tính kì vọng: E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2}, nên nó gọi là expected information number.
+> ii) Động tác thứ hai, là nói về cái In(θ), vốn có công thức cần phải tính kì vọng: E\_θ{\[∂/∂θ log f(𝐗|θ)\]²}, nên nó gọi là expected information number.
 >
 >
 >
-> Phân tích cái này: Đầu tiên hãy hiểu rằng f(𝐗|θ) là random variable có được bởi việc áp joint pdf của 𝐗: f(𝐱|θ) lên random variable vector 𝐗, và sau đó là áp hàm log, rồi lấy đạo hàm theo θ, rồi bình phương, nên cuối cùng ta vẫn là có một random variable. Hay nói cách khác, ta có thể coi như đây là random variable có được bằng cách áp hàm g(𝐱) = {d/dθ \[log f(𝐱|θ)\]}^2, lên 𝐗. Và vì là random variable, nên ta có quyền lấy kì vọng. Và thêm nữa vì đây là random variabel có được từ việc áp dụng hàm g lên 𝐗, mà ông 𝐗 có distribution phụ thuộc θ: 𝐗 \~ f(𝐱|θ) nên dĩ nhiên g(𝐗) cũng vậy, và do đó expected value của nó phải là hàm phụ thuộc θ, nên nó mới có cái chữ θ ở dưới chân: E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2}. Nói chung hiểu bản chất của hắn ta sẽ dễ hiểu mấy khúc sau.
+> Phân tích cái này: Đầu tiên hãy hiểu rằng f(𝐗|θ) là random variable có được bởi việc áp joint pdf của 𝐗: f(𝐱|θ) lên random variable vector 𝐗, và sau đó là áp hàm log, rồi lấy đạo hàm theo θ, rồi bình phương, nên cuối cùng ta vẫn là có một random variable. Hay nói cách khác, ta có thể coi như đây là random variable có được bằng cách áp hàm g(𝐱) = {d/dθ \[log f(𝐱|θ)\]}², lên 𝐗. Và vì là random variable, nên ta có quyền lấy kì vọng. Và thêm nữa vì đây là random variabel có được từ việc áp dụng hàm g lên 𝐗, mà ông 𝐗 có distribution phụ thuộc θ: 𝐗 \~ f(𝐱|θ) nên dĩ nhiên g(𝐗) cũng vậy, và do đó expected value của nó phải là hàm phụ thuộc θ, nên nó mới có cái chữ θ ở dưới chân: E\_θ{\[∂/∂θ log f(𝐗|θ)\]²}. Nói chung hiểu bản chất của hắn ta sẽ dễ hiểu mấy khúc sau.
 >
 >
 >
@@ -2394,7 +2394,7 @@
 >
 >
 >
-> E\_θ{\[∂/∂θ log f(𝐗|θ)\]^2} = - E\_θ\[∂^2/∂θ^2 log f(𝐗|θ)\]
+> E\_θ{\[∂/∂θ log f(𝐗|θ)\]²} = - E\_θ\[∂²/∂θ² log f(𝐗|θ)\]
 >
 >
 >
@@ -2402,15 +2402,15 @@
 >
 >
 >
-> Tức là thay - E\_θ\[∂^2/∂θ^2 log f(𝐗|θ)\]
+> Tức là thay - E\_θ\[∂²/∂θ² log f(𝐗|θ)\]
 >
 >
 >
-> bằng: - ∂^2/∂θ^2 log f(𝐱|θ) 
+> bằng: - ∂²/∂θ² log f(𝐱|θ) 
 >
 >
 >
-> (chú ý, ở trên, là 𝐗, vì đây là random variable, và ta tính kì vọng của cái ∂^2/∂θ^2 log f(𝐗|θ), cũng là random variable. Còn ở dưới, là ta thế observed value vào, bỏ kì vọng)
+> (chú ý, ở trên, là 𝐗, vì đây là random variable, và ta tính kì vọng của cái ∂²/∂θ² log f(𝐗|θ), cũng là random variable. Còn ở dưới, là ta thế observed value vào, bỏ kì vọng)
 >
 >
 >
@@ -2418,11 +2418,11 @@
 >
 >
 >
-> Var\[h(θ^)\] ≈ \[h'(θ)\]^2 / nI1(θ)
+> Var\[h(θ^)\] ≈ \[h'(θ)\]² / nI1(θ)
 >
 >
 >
-> ≈ \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 log f(𝐱|θ)\]|θ=θ^
+> ≈ \[h'(θ)\]²|θ=θ^ / \[-∂²/∂θ² log f(𝐱|θ)\]|θ=θ^
 >
 >
 >
@@ -2430,7 +2430,7 @@
 >
 >
 >
-> ≈ \[h'(θ)\]^2|θ=θ^ / \[-∂^2/∂θ^2 logL(θ|𝐱)\]|θ=θ^
+> ≈ \[h'(θ)\]²|θ=θ^ / \[-∂²/∂θ² logL(θ|𝐱)\]|θ=θ^
 >
 >
 >
@@ -2438,15 +2438,15 @@
 >
 >
 >
-> Rồi. thế thì ở đây nhắc đến trong bài tập 5.5.22 mình đã dùng Delta Method để approximate var(p^/(1-p^)). Thì như vừa ôn lại Delta method ở trên, theorem này nói rằng nếu Wn có Avar(Wn) thì g(Wn) có Avar(g(Wn)) = \[g'(θ)\]^2 Avar(Wn). Nên áp dụng cái này, ta sẽ coi như g(p^) = p^/(1-p^) để rồi:
+> Rồi. thế thì ở đây nhắc đến trong bài tập 5.5.22 mình đã dùng Delta Method để approximate var(p^/(1-p^)). Thì như vừa ôn lại Delta method ở trên, theorem này nói rằng nếu Wn có Avar(Wn) thì g(Wn) có Avar(g(Wn)) = \[g'(θ)\]² Avar(Wn). Nên áp dụng cái này, ta sẽ coi như g(p^) = p^/(1-p^) để rồi:
 >
 >
 >
-> Avar\[p^/(1-p^)\] = \[g'(p)\]^2 Avar(p^)
+> Avar\[p^/(1-p^)\] = \[g'(p)\]² Avar(p^)
 >
 >
 >
-> và với cái này thì ta có thể có Var\[p^/(1-p^)\] ≈ \[g'(p)\]^2 Avar(p^)/n
+> và với cái này thì ta có thể có Var\[p^/(1-p^)\] ≈ \[g'(p)\]² Avar(p^)/n
 >
 >
 >
@@ -2458,47 +2458,47 @@
 >
 >
 >
-> Còn \[g'(p)\]^2: g(p) = p/(1-p)
+> Còn \[g'(p)\]²: g(p) = p/(1-p)
 >
 >
 >
-> ⇨ g'(p) = { \[d/dp p\](1-p) - p \[d/dp (1-p)\] } / (1-p)^2
+> ⇨ g'(p) = { \[d/dp p\](1-p) - p \[d/dp (1-p)\] } / (1-p)²
 >
 >
 >
-> = \[(1-p) + p\] / (1-p)^2
+> = \[(1-p) + p\] / (1-p)²
 >
 >
 >
-> = 1 / (1-p)^2
+> = 1 / (1-p)²
 >
 >
 >
-> Vậy thay vô ta có: Var\[p^/(1-p^)\] ≈ \[g'(p)\]^2 Avar(p^)/n
+> Vậy thay vô ta có: Var\[p^/(1-p^)\] ≈ \[g'(p)\]² Avar(p^)/n
 >
 >
 >
-> = \[1 / (1-p)^2\]^2 × p(1-p) / n
+> = \[1 / (1-p)²\]² × p(1-p) / n
 >
 >
 >
-> = \[1 / (1-p)^4\] × p(1-p) / n
+> = \[1 / (1-p)⁴\] × p(1-p) / n
 >
 >
 >
-> = p / n(1-p)^3\]
+> = p / n(1-p)³\]
 >
 >
 >
-> Vậy Var\[p^/(1-p^)\] ≈ p / n(1-p)^3\] và đây chính là ta đã giải lại bài tập 5.5.22 tính Var\[p^/(1-p^)\] theo Delta method. Và dĩ nhiên ta lại không có p, nên dùng cách thay p^ vào p, để có estimate của cái xấp xỉ này:
+> Vậy Var\[p^/(1-p^)\] ≈ p / n(1-p)³\] và đây chính là ta đã giải lại bài tập 5.5.22 tính Var\[p^/(1-p^)\] theo Delta method. Và dĩ nhiên ta lại không có p, nên dùng cách thay p^ vào p, để có estimate của cái xấp xỉ này:
 >
 >
 >
-> Var^\[p^/(1-p^)\] ≈ Var_p\[p^/(1-p^)\]|p=p^ = p/n(1-p)^3|p=p^
+> Var^\[p^/(1-p^)\] ≈ Var_p\[p^/(1-p^)\]|p=p^ = p/n(1-p)³|p=p^
 >
 >
 >
-> = **p^/n(1-p^)^3**
+> = **p^/n(1-p^)³**
 >
 >
 >
@@ -2510,27 +2510,27 @@
 >
 >
 >
-> Đó là Var(g(p^)) ≈ \[g'(p)\]^2|p=p^ / \[-∂^2/∂θ^2 log L(p|𝐱)\]|p=p^
+> Đó là Var(g(p^)) ≈ \[g'(p)\]²|p=p^ / \[-∂²/∂θ² log L(p|𝐱)\]|p=p^
 >
 >
 >
-> Tử số: \[g'(p)\]^2 như trên đã tính = 1/(1-p)^4 
+> Tử số: \[g'(p)\]² như trên đã tính = 1/(1-p)⁴ 
 >
 >
 >
-> ⇨ 1/(1-p)^4|p=p^ = 1/(1-p^)^4
+> ⇨ 1/(1-p)⁴|p=p^ = 1/(1-p^)⁴
 >
 >
 >
-> Mẫu số: -∂^2/∂θ^2 log L(p|𝐱) note trước mình đã tính = np^/p^2 + n(1-p^)/(1-p)^2
+> Mẫu số: -∂²/∂θ² log L(p|𝐱) note trước mình đã tính = np^/p² + n(1-p^)/(1-p)²
 >
 >
 >
-> Evaluate tại p^: np^/p^2 + n(1-p^)/(1-p)^2|p=p^
+> Evaluate tại p^: np^/p² + n(1-p^)/(1-p)²|p=p^
 >
 >
 >
-> = np^/p^2 + n(1-p^)/(1-p^)^2
+> = np^/p² + n(1-p^)/(1-p^)²
 >
 >
 >
@@ -2542,15 +2542,15 @@
 >
 >
 >
-> Vậy Var(g(p^)) = \[1/(1-p^)^4\] / \[n/p^(1-p^)\]
+> Vậy Var(g(p^)) = \[1/(1-p^)⁴\] / \[n/p^(1-p^)\]
 >
 >
 >
-> = \[1/(1-p^)^4\] × \[p^(1-p^)/n\]
+> = \[1/(1-p^)⁴\] × \[p^(1-p^)/n\]
 >
 >
 >
-> = **p^/n(1-p^)^3**
+> = **p^/n(1-p^)³**
 >
 >
 >
@@ -2655,15 +2655,15 @@
 >
 >
 >
-> √n(Wn - τ(θ)) → (d) n(0, σW^2) và
+> √n(Wn - τ(θ)) → (d) n(0, σW²) và
 >
 >
 >
-> √n(Vn - τ(θ)) → (d) n(0, σV^2)
+> √n(Vn - τ(θ)) → (d) n(0, σV²)
 >
 >
 >
-> thì ARE của Vn wrt Wn được định nghĩa là ARE(Vn, Wn) = σW^2 / σV^2
+> thì ARE của Vn wrt Wn được định nghĩa là ARE(Vn, Wn) = σW² / σV²
 >
 >
 >
@@ -2833,7 +2833,7 @@
 >
 >
 >
-> Delta method theorem nói ngắn gọn là: nếu Wn có Avar(Wn) thì Avar(g(Wn)) = \[g'(θ)\]^2 Avar(Wn)
+> Delta method theorem nói ngắn gọn là: nếu Wn có Avar(Wn) thì Avar(g(Wn)) = \[g'(θ)\]² Avar(Wn)
 >
 >
 >
@@ -2841,7 +2841,7 @@
 >
 >
 >
-> ⇔ Avar(e^(-λ^)\] = \[-e^-λ\]^2 Avar(λ^)
+> ⇔ Avar(e^(-λ^)\] = \[-e^-λ\]² Avar(λ^)
 >
 >
 >
@@ -2857,7 +2857,7 @@
 >
 >
 >
-> ⇨ Avar(e^(-λ^)\] = \[-e^-λ\]^2 λ = λe^(-2λ)
+> ⇨ Avar(e^(-λ^)\] = \[-e^-λ\]² λ = λe^(-2λ)
 >
 >
 >
@@ -3092,7 +3092,7 @@
 >
 >
 >
-> Kết quả đúng phải là tính theo ordered sample space thì (4,2,4,4) cũng phải khác so với (2,4,4,4), và số possible outcome chính là (4 × 4 × 4 × 4) = 4^4. Do đó, xác suất của mọi outcome sẽ là 1/4^4.
+> Kết quả đúng phải là tính theo ordered sample space thì (4,2,4,4) cũng phải khác so với (2,4,4,4), và số possible outcome chính là (4 × 4 × 4 × 4) = 4⁴. Do đó, xác suất của mọi outcome sẽ là 1/4⁴.
 >
 >
 >
@@ -3108,7 +3108,7 @@
 >
 >
 >
-> Còn 4^4, số possible outcome khi xét order sample space, thì chúng equally likely và ở đây nói "**có thể đối xử với 4^4 = 256 possible outcome này như random sample"** ("**can be treat as random sample"**) là sao?
+> Còn 4⁴, số possible outcome khi xét order sample space, thì chúng equally likely và ở đây nói "**có thể đối xử với 4⁴ = 256 possible outcome này như random sample"** ("**can be treat as random sample"**) là sao?
 >
 >
 >
@@ -3132,7 +3132,7 @@
 >
 >
 >
-> Như vậy ta có thể hiểu đại khái ý của gs khi ông nói có thể coi "4^4, số possible outcomes" như một random sample là vậy.
+> Như vậy ta có thể hiểu đại khái ý của gs khi ông nói có thể coi "4⁴, số possible outcomes" như một random sample là vậy.
 >
 >
 >
@@ -3178,7 +3178,7 @@
 >
 >
 >
-> Và với random sample X1,...Xn, mình đã quen thuộc với việc, ta có thể tính **sample variance**: S² = \[1/(n-1)\] Σi {(Xi - X̄)^2})
+> Và với random sample X1,...Xn, mình đã quen thuộc với việc, ta có thể tính **sample variance**: S² = \[1/(n-1)\] Σi {(Xi - X̄)²})
 >
 >
 >
@@ -3186,19 +3186,19 @@
 >
 >
 >
-> = \[1/(256 - 1)\] Σi=1:256 {(X̄\*\_i - (X̄\*)bar)^2}
+> = \[1/(256 - 1)\] Σi=1:256 {(X̄\*\_i - (X̄\*)bar)²}
 >
 >
 >
-> Làm rõ: (Xi - X̄)^2 với X̄ = Σi Xi, thì sẽ ứng với X̄\*\_i - (X̄\*)bar với (X̄\*)bar = Σi X̄\*\_i
+> Làm rõ: (Xi - X̄)² với X̄ = Σi Xi, thì sẽ ứng với X̄\*\_i - (X̄\*)bar với (X̄\*)bar = Σi X̄\*\_i
 >
 >
 >
-> Và con số 256 ở đây là chính là n^n (vì cái bài toán gốc là sampling with replacement 4 số từ tập có 4 số {2,4,9,12} để rồi order sample space có size 4^4, thì khái quát là sampling with replacement n số từ tập có n số, thì order sample space có size n^n)
+> Và con số 256 ở đây là chính là n^n (vì cái bài toán gốc là sampling with replacement 4 số từ tập có 4 số {2,4,9,12} để rồi order sample space có size 4⁴, thì khái quát là sampling with replacement n số từ tập có n số, thì order sample space có size n^n)
 >
 >
 >
-> Như vậy ta hiểu cái công thức Var\*(X̄) = \[1/(n^n - 1)\] Σi=1:n^n {(X̄\*\_i - (X̄\*)bar)^2} có bản chất là:
+> Như vậy ta hiểu cái công thức Var\*(X̄) = \[1/(n^n - 1)\] Σi=1:n^n {(X̄\*\_i - (X̄\*)bar)²} có bản chất là:
 >
 >
 >
@@ -3326,7 +3326,7 @@
 >
 >
 >
-> Do không có σ², ta có thể dùng S², sample variance = \[1/(n-1)\] Σi (Xi - X̄)^2. Nên ở đây với observed value 𝐱 = (2,4,9,12) ta có S²(𝐱) = (1/3) \[(2-6.75)^2 + (4-6.75)^2 + (9-6.75)^2 + (12-6.75)^2\] = 20.9167 ⇒ Var(X̄) ≈ S²/n = 20.9167/4 = **5.23**
+> Do không có σ², ta có thể dùng S², sample variance = \[1/(n-1)\] Σi (Xi - X̄)². Nên ở đây với observed value 𝐱 = (2,4,9,12) ta có S²(𝐱) = (1/3) \[(2-6.75)² + (4-6.75)² + (9-6.75)² + (12-6.75)²\] = 20.9167 ⇒ Var(X̄) ≈ S²/n = 20.9167/4 = **5.23**
 >
 >
 >
@@ -3358,11 +3358,11 @@
 >
 >
 >
-> Variance của empirical population: VarX = E\[(X-EX)^2\] = Σ\_{mọi possible value của X} P(X=x)(x - x̄)^2
+> Variance của empirical population: VarX = E\[(X-EX)²\] = Σ\_{mọi possible value của X} P(X=x)(x - x̄)²
 >
 >
 >
-> = (1/4) \[(2-6.75)^2 + (4-6.75)^2 + (9-6.75)^2 +(12-6.75)^2\] = **15.6875**
+> = (1/4) \[(2-6.75)² + (4-6.75)² + (9-6.75)² +(12-6.75)²\] = **15.6875**
 >
 >
 >
@@ -3382,15 +3382,15 @@
 >
 >
 >
-> Thế thì tiếp theo ta sẽ làm như sau, để cũng ra con số **3.921875**: Và đây mới là phương pháp bootstrap (con số trên chỉ là vì ta đã biết empirical population variance = **15.6875** mà **NGUYÊN NHÂN SÂU XA CŨNG LÀ VÌ TA ĐÃ BIẾT CÔNG THỨC VARIANCE VarX = E(X-EX)^2**. Mục đích là ta sẽ thấy cách tính boostrap cũng ra được con số này, để hiểu rằng nó có thể dùng để tính Variance của các đại lượng khác (không phải sample mean, mà là những cái khác). Cách làm ngắn gọn như sau:
+> Thế thì tiếp theo ta sẽ làm như sau, để cũng ra con số **3.921875**: Và đây mới là phương pháp bootstrap (con số trên chỉ là vì ta đã biết empirical population variance = **15.6875** mà **NGUYÊN NHÂN SÂU XA CŨNG LÀ VÌ TA ĐÃ BIẾT CÔNG THỨC VARIANCE VarX = E(X-EX)²**. Mục đích là ta sẽ thấy cách tính boostrap cũng ra được con số này, để hiểu rằng nó có thể dùng để tính Variance của các đại lượng khác (không phải sample mean, mà là những cái khác). Cách làm ngắn gọn như sau:
 >
 >
 >
-> Ta xét tập chứa mọi order outcome của việc bốc có hoàn lại 4 con số từ {2,4,9,12}. Và vì random sampling with replacement, và ta có phân biệt thứ tự tên tập các possible outcome sẽ có cả (2,2,2,2), hoặc (2,4,9,12) hoặc (4,2,12,9). Và số lượng (cũng là kích thước order sample space) sẽ là: 4^4 (kết quả này ko khó để đếm theo step rule: bước 1 chọn số thứ nhất, có 4 khả năng, bước 2 chọn số thứ hai, cũng có 4 khả năng, ... → có 4^4 khả năng, và xác suất của mỗi khả năng đều là (1/4)^4.
+> Ta xét tập chứa mọi order outcome của việc bốc có hoàn lại 4 con số từ {2,4,9,12}. Và vì random sampling with replacement, và ta có phân biệt thứ tự tên tập các possible outcome sẽ có cả (2,2,2,2), hoặc (2,4,9,12) hoặc (4,2,12,9). Và số lượng (cũng là kích thước order sample space) sẽ là: 4⁴ (kết quả này ko khó để đếm theo step rule: bước 1 chọn số thứ nhất, có 4 khả năng, bước 2 chọn số thứ hai, cũng có 4 khả năng, ... → có 4⁴ khả năng, và xác suất của mỗi khả năng đều là (1/4)⁴.
 >
 >
 >
-> Như vậy, order sample space có 4^4 = 256 possible outcome với xác suất bằng nhau. gọi chúng là {s1,...sN} với N = 4^4 (Mà khi khái quát lên, trong random sample có size n (mà trong ví dụ này, là 4 ({2,4,9,12}), thì order sample space sẽ có size N = n^n)
+> Như vậy, order sample space có 4⁴ = 256 possible outcome với xác suất bằng nhau. gọi chúng là {s1,...sN} với N = 4⁴ (Mà khi khái quát lên, trong random sample có size n (mà trong ví dụ này, là 4 ({2,4,9,12}), thì order sample space sẽ có size N = n^n)
 >
 >
 >
@@ -3422,7 +3422,7 @@
 >
 >
 >
-> 1/(N-1) Σi=1:N \[X̄\*i - (X̄\*)bar\]^2
+> 1/(N-1) Σi=1:N \[X̄\*i - (X̄\*)bar\]²
 >
 >
 >
@@ -3502,7 +3502,7 @@
 >
 >
 >
-> Rồi, nếu có σ² thì ta sẽ có Var(X̄) chính xác. Thì nay không có, ta có thể dùng sample variance S², thì ta sẽ có estimate cho Var(X̄): Var^(X̄) = S² / n. Với S² = (1/(n-1)) Σi (Xi - X̄)^2.
+> Rồi, nếu có σ² thì ta sẽ có Var(X̄) chính xác. Thì nay không có, ta có thể dùng sample variance S², thì ta sẽ có estimate cho Var(X̄): Var^(X̄) = S² / n. Với S² = (1/(n-1)) Σi (Xi - X̄)².
 >
 >
 >
@@ -3566,7 +3566,7 @@
 >
 >
 >
-> i) Như đã nói, điểm khởi đầu là ta xét order sample space chứa mọi outcome khi sampling with replacement 4 số từ {2,4,9,12}. Nó sẽ chứa 4^4 = 256 possible outcome s1,...s256. Và map mỗi outcome với một giá trị nào đó bởi hàm θ^, ta sẽ có 256 possible value {θ^(s1),...θ^(s256)}
+> i) Như đã nói, điểm khởi đầu là ta xét order sample space chứa mọi outcome khi sampling with replacement 4 số từ {2,4,9,12}. Nó sẽ chứa 4⁴ = 256 possible outcome s1,...s256. Và map mỗi outcome với một giá trị nào đó bởi hàm θ^, ta sẽ có 256 possible value {θ^(s1),...θ^(s256)}
 >
 > Và, như đã hiểu, các outcome s1,..s256 đều equally likely, giúp cho {θ^(s1),...θ^(s256)} có thể được treat như một bộ observed value của random sample size 256, sampling từ cái order sample space này
 >
@@ -3584,7 +3584,7 @@
 >
 >
 >
-> Var\*(θ^) = (1/256-1) Σi (θ^\*i - θ^\*\_bar)^2,
+> Var\*(θ^) = (1/256-1) Σi (θ^\*i - θ^\*\_bar)²,
 >
 >
 >
@@ -3640,11 +3640,11 @@
 >
 >
 >
-> Câu trả lời là, ta có thể dùng (observed value của) sample variance để thay chỗ của population variance, từ đó, thay vì ta có công thức chính xác Var(X̄) = σ² / n, ta có công thức ước lượng: Var(X̄) ≈ s^2/n. Và với observed value của sample, thì ta có observed value của S²: s^2 = \[1/(n-1)\] Σi=1:n (xi - x̄)^2. Thế giá trị vào ta tính ra con số **5.23**, là ước lượng của X̄ variance.
+> Câu trả lời là, ta có thể dùng (observed value của) sample variance để thay chỗ của population variance, từ đó, thay vì ta có công thức chính xác Var(X̄) = σ² / n, ta có công thức ước lượng: Var(X̄) ≈ s²/n. Và với observed value của sample, thì ta có observed value của S²: s² = \[1/(n-1)\] Σi=1:n (xi - x̄)². Thế giá trị vào ta tính ra con số **5.23**, là ước lượng của X̄ variance.
 >
 >
 >
-> Var(X̄) = σ²/n ≈ Var^(X̄) = s^2/n = **5.23** (chú ý kí hiệu Var^, var có mũ, thể hiện đây là giá trị estimate cho Var(X̄) chính xác)
+> Var(X̄) = σ²/n ≈ Var^(X̄) = s²/n = **5.23** (chú ý kí hiệu Var^, var có mũ, thể hiện đây là giá trị estimate cho Var(X̄) chính xác)
 >
 >
 >
@@ -3676,7 +3676,7 @@
 >
 >
 >
-> Khi đó ta thay sample variance s^2 vào thế chỗ của population variance σ² để có ước lượng cho Var(X̄) = σ²/n ≈ Var^(X̄) = s^2/n = **5.23**
+> Khi đó ta thay sample variance s² vào thế chỗ của population variance σ² để có ước lượng cho Var(X̄) = σ²/n ≈ Var^(X̄) = s²/n = **5.23**
 >
 >
 >
@@ -3688,11 +3688,11 @@
 >
 >
 >
-> σ² = E\[(X - EX)^2\] = (LOTUS) = Σ{x=2,4,9,12} (x - 6.75)^2 P(X = x)
+> σ² = E\[(X - EX)²\] = (LOTUS) = Σ{x=2,4,9,12} (x - 6.75)² P(X = x)
 >
 >
 >
-> = Σ{x=2,4,9,12} (x - 6.75)^2 (1/4)
+> = Σ{x=2,4,9,12} (x - 6.75)² (1/4)
 >
 >
 >
@@ -3724,7 +3724,7 @@
 >
 >
 >
-> Thế thì, bootstrap cho ta một cách tính khác: Ý tưởng chính là vầy: Với 4 số {2, 4, 9, 12}. Sampling with replacement 4 số. Số possible outcome (có phân biệt thứ tự) dễ thấy có thể tính theo step rule: Chọn số thứ 1 có 4 khả năng, chọn số thứ 2 có 4 khả năng,.. → 4 × 4 × 4 × 4 = 4^4. Gọi ordered sample space là {s1,....sN}, N = 4^4. Và si đều có xác suất bằng nhau. Gọi x̄\*(s) là hàm phụt ra con số trung bình. Thì x̄\*1 = x̄\*(s1), x̄\*2 = x̄\*(2), ...,x̄\*256 = x̄\*(s256) sẽ chính là 256 possible value của random variable X̄\*, có distribution uniform discrete.
+> Thế thì, bootstrap cho ta một cách tính khác: Ý tưởng chính là vầy: Với 4 số {2, 4, 9, 12}. Sampling with replacement 4 số. Số possible outcome (có phân biệt thứ tự) dễ thấy có thể tính theo step rule: Chọn số thứ 1 có 4 khả năng, chọn số thứ 2 có 4 khả năng,.. → 4 × 4 × 4 × 4 = 4⁴. Gọi ordered sample space là {s1,....sN}, N = 4⁴. Và si đều có xác suất bằng nhau. Gọi x̄\*(s) là hàm phụt ra con số trung bình. Thì x̄\*1 = x̄\*(s1), x̄\*2 = x̄\*(2), ...,x̄\*256 = x̄\*(s256) sẽ chính là 256 possible value của random variable X̄\*, có distribution uniform discrete.
 >
 >
 >
@@ -3732,7 +3732,7 @@
 >
 >
 >
-> Và vì coi như ta có một observed value của random sample 𝐗: 𝐱 = (x̄\*1, ....x̄\*N). Nên ta có thể dùng công thức sample variance S²: = 1/(256 - 1) Σi=1:N \[x̄\*i - (x̄\*)bar\]^2. Và ta sẽ lấy giá trị này để estimate cho variance của sample mean Var(X̄), kí hiệu là Var(X̄)\*
+> Và vì coi như ta có một observed value của random sample 𝐗: 𝐱 = (x̄\*1, ....x̄\*N). Nên ta có thể dùng công thức sample variance S²: = 1/(256 - 1) Σi=1:N \[x̄\*i - (x̄\*)bar\]². Và ta sẽ lấy giá trị này để estimate cho variance của sample mean Var(X̄), kí hiệu là Var(X̄)\*
 >
 >
 >
@@ -3812,7 +3812,7 @@
 >
 >
 >
-> Nên sample variance = \[1/(n^n - 1)\] Σi=1:n^n \[x̄\*j - (x̄\*)bar\]^2
+> Nên sample variance = \[1/(n^n - 1)\] Σi=1:n^n \[x̄\*j - (x̄\*)bar\]²
 >
 >
 >
@@ -3860,7 +3860,7 @@
 >
 >
 >
-> sample variance của W = \[1/(n^n-1)\] Σi=1:n^n (w\*j - w\*bar)^2
+> sample variance của W = \[1/(n^n-1)\] Σi=1:n^n (w\*j - w\*bar)²
 >
 >
 >
@@ -3876,7 +3876,7 @@
 >
 >
 >
-> = \[1/(n^n-1)\] Σi=1: n^n (\[p^(1-p^)\]\*j - \[p^(1-p^)\]\*bar)^2
+> = \[1/(n^n-1)\] Σi=1: n^n (\[p^(1-p^)\]\*j - \[p^(1-p^)\]\*bar)²
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
@@ -3939,7 +3939,7 @@
 >
 >
 >
-> Var\*(θ^) = (1/N-1) Σj=1:N  \[θ^\*j - (θ^\*)bar\]^2.
+> Var\*(θ^) = (1/N-1) Σj=1:N  \[θ^\*j - (θ^\*)bar\]².
 >
 >
 >
@@ -3971,7 +3971,7 @@
 >
 >
 >
-> Var\*(θ^) = (1/B-1) Σj=1:B  \[θ^\*j - (θ^\*)bar\]^2.
+> Var\*(θ^) = (1/B-1) Σj=1:B  \[θ^\*j - (θ^\*)bar\]².
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -4020,7 +4020,7 @@
 >
 >
 >
-> Với obsered value của sample 𝐗: 𝐱 = (x1,..xn). Ta thực hiện sampling with replacement n number, làm vậy B lần, để có s1,..sB. Và tính ra θ^\*1 = θ^(s1), ...θ^\*B = θ^(sB). và dùng nó như một random sample size B của một θ^ \~ discrete uniform. Và dùng công thức sample variance để tính, Var\*(θ^) = (1/B-1) Σj=1:B \[θ^\*j - (θ^\*)bar\]^2.
+> Với obsered value của sample 𝐗: 𝐱 = (x1,..xn). Ta thực hiện sampling with replacement n number, làm vậy B lần, để có s1,..sB. Và tính ra θ^\*1 = θ^(s1), ...θ^\*B = θ^(sB). và dùng nó như một random sample size B của một θ^ \~ discrete uniform. Và dùng công thức sample variance để tính, Var\*(θ^) = (1/B-1) Σj=1:B \[θ^\*j - (θ^\*)bar\]².
 >
 >
 >
@@ -4060,7 +4060,7 @@
 >
 >
 >
-> Thế thì với observed value của sample như vậy, thì observed value của sample mean x̄ là 2.71, và observed value của sample variance s^2 là 4.82.
+> Thế thì với observed value của sample như vậy, thì observed value của sample mean x̄ là 2.71, và observed value của sample variance s² là 4.82.
 >
 >
 >
@@ -4080,7 +4080,7 @@
 >
 >
 >
-> Vậy ở đây muốn gắn, ta phải giả định population distribution là distribution có hai parameter là mean và variance. Ví dụ, giả định distribution gốc là n(μ, σ²). thì khi đó, ta mới gắn x̄ vào thay chỗ của μ, và s^2 vào thay chỗ của σ². Đó là lí do trong sách ta thấy gs giả định population distribution là normal là vậy.
+> Vậy ở đây muốn gắn, ta phải giả định population distribution là distribution có hai parameter là mean và variance. Ví dụ, giả định distribution gốc là n(μ, σ²). thì khi đó, ta mới gắn x̄ vào thay chỗ của μ, và s² vào thay chỗ của σ². Đó là lí do trong sách ta thấy gs giả định population distribution là normal là vậy.
 >
 >
 >
@@ -4092,19 +4092,19 @@
 >
 >
 >
-> Vậy thì làm như sau: như đã nói, ta sẽ có B sample sampling từ plug in distribution này, tức B bộ số {x\*1,..x\*n}. Ứng với mỗi bộ, ví dụ sample j ta sẽ tính ra x̄(sample j), và s^2(sample j).
+> Vậy thì làm như sau: như đã nói, ta sẽ có B sample sampling từ plug in distribution này, tức B bộ số {x\*1,..x\*n}. Ứng với mỗi bộ, ví dụ sample j ta sẽ tính ra x̄(sample j), và s²(sample j).
 >
 >
 >
-> Từ đó, ta sẽ có s^2\*\_1, ...s^2\*\_B.
+> Từ đó, ta sẽ có s²\*\_1, ...s²\*\_B.
 >
 >
 >
-> Và coi như đây là một sample của S² \~ uniform discrete có B possible value equally likely, s^2\*\_1, ...s^2\*\_B, ta mới tính sample variance:
+> Và coi như đây là một sample của S² \~ uniform discrete có B possible value equally likely, s²\*\_1, ...s²\*\_B, ta mới tính sample variance:
 >
 >
 >
-> (1/B-1) Σj=1:B \[s^2\*j - (s^2\*)bar\], đây chính là parameter bootstrap variance của S²: Var\*\_B(S²).
+> (1/B-1) Σj=1:B \[s²\*j - (s²\*)bar\], đây chính là parameter bootstrap variance của S²: Var\*\_B(S²).
 >
 >
 >
@@ -4126,7 +4126,7 @@
 >
 >
 >
-> Thì nay cũng vậy, vì ta đang deal với estimator là sample variance S². Mà cái này, nếu như đang trong giả định rằng population distribution là normal, thì ta sẽ có công thức (xem crosslink) Var(S²) = 2 × (population variance)^2/(n-1).
+> Thì nay cũng vậy, vì ta đang deal với estimator là sample variance S². Mà cái này, nếu như đang trong giả định rằng population distribution là normal, thì ta sẽ có công thức (xem crosslink) Var(S²) = 2 × (population variance)²/(n-1).
 >
 >
 >
@@ -4134,7 +4134,7 @@
 >
 >
 >
-> Var(S²) = 2 × (population variance)^2/(n-1) ≈ Var^(S²) = 2 × (sample variance)^2/(n-1)
+> Var(S²) = 2 × (population variance)²/(n-1) ≈ Var^(S²) = 2 × (sample variance)²/(n-1)
 >
 >
 >
@@ -4150,7 +4150,7 @@
 >
 >
 >
-> Một điểm nữa, gs lại nói rằng, cái population distribution thật sự là normal có variance σ² = 4. Thành ra, theo công thức chính xác của Var(S²), ta có Var(S²) = 2 × population variance σ^4/(n-1) = 2 × 4^2 / (9-1) = 4.
+> Một điểm nữa, gs lại nói rằng, cái population distribution thật sự là normal có variance σ² = 4. Thành ra, theo công thức chính xác của Var(S²), ta có Var(S²) = 2 × population variance σ⁴/(n-1) = 2 × 4² / (9-1) = 4.
 >
 >
 >
