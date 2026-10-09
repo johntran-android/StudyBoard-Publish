@@ -1,4 +1,4 @@
-# 3.3 Continuous distribution
+# 3.3 Continuous Distribution
 
 📊 **Progress:** `24` Notes | `38` Screenshots | `3` AI Reviews
 
@@ -36,11 +36,11 @@
 >
 >
 >
-> ∫-inf:inf xfX(t)dt = ∫a:b xf(x)dx = ∫a:b x/(b-a)dx = [1/(b-a)] ∫xdx = [1/(b-a)] x^2/2 |a:b
+> ∫-inf:inf xfX(t)dt = ∫a:b xf(x)dx = ∫a:b x/(b-a)dx = [1/(b-a)] ∫xdx = [1/(b-a)] x²/2 |a:b
 >
 >
 >
-> = [1/(b-a)] (b^2 - a^2)/2 = [1/(b-a)] (b-a)(b+a)/2 = **(b+a)/2**
+> = [1/(b-a)] (b² - a²)/2 = [1/(b-a)] (b-a)(b+a)/2 = **(b+a)/2**
 >
 >
 >
@@ -48,7 +48,7 @@
 >
 >
 >
-> EX^2 = ...[1/(b-a)] ∫x^2dx = [1/(b-a)] x^3/3 |a:b = [1/(b-a)] (b^3 - a^3)/3
+> EX² = ...[1/(b-a)] ∫x²dx = [1/(b-a)] x³/3 |a:b = [1/(b-a)] (b³ - a³)/3
 >
 >
 >
@@ -60,23 +60,23 @@
 >
 >
 >
-> ⇨ Var(X) = EX^2 - (EX)^2 = (b2+ab+a2)/3 - (b+a)^2/4
+> ⇨ Var(X) = EX² - (EX)² = (b2+ab+a2)/3 - (b+a)²/4
 >
 >
 >
-> = 4(b2+ab+a2)/12 - 3(b+a)^2/12
+> = 4(b2+ab+a2)/12 - 3(b+a)²/12
 >
 >
 >
-> = (4b2+4ab+4a2) - (3b^2+6ab+3a^2) ] / 12
+> = (4b2+4ab+4a2) - (3b²+6ab+3a²) ] / 12
 >
 >
 >
-> = (4b2+4ab+4a2 - 3b^2-6ab-3a^2) ] / 12
+> = (4b2+4ab+4a2 - 3b²-6ab-3a²) ] / 12
 >
 >
 >
-> = (b2 + a2 - 2ab) ] / 12 = **(b-a)^2/12**
+> = (b2 + a2 - 2ab) ] / 12 = **(b-a)²/12**
 >
 >
 >
@@ -84,83 +84,83 @@
 >
 >
 >
-> Var(X) = E[(X - EX)^2], thì đây giống như tính mean của Y = (X - EX)^2
+> Var(X) = E[(X - EX)²], thì đây giống như tính mean của Y = (X - EX)²
 >
 >
 >
-> Áp dụng lotus: EY = ∫-inf:inf (x-EX)^2f(x)dx  EX = constant = (a+b)/2
+> Áp dụng lotus: EY = ∫-inf:inf (x-EX)²f(x)dx  EX = constant = (a+b)/2
 >
 >
 >
-> = ∫-inf:inf (x-EX)^2f(x)dx
+> = ∫-inf:inf (x-EX)²f(x)dx
 >
 >
 >
-> = ∫a:b (x-EX)^2[1/(b-a)]dx
+> = ∫a:b (x-EX)²[1/(b-a)]dx
 >
 >
 >
-> = [1/(b-a)] ∫a:b (x-EX)^2dx
+> = [1/(b-a)] ∫a:b (x-EX)²dx
 >
 >
 >
-> = [1/(b-a)] ∫a:b [x^2 - 2xEX + (EX)^2]dx
+> = [1/(b-a)] ∫a:b [x² - 2xEX + (EX)²]dx
 >
 >
 >
-> = [1/(b-a)] [ ∫a:b x^2dx - 2EX∫a:b xdx + (EX)^2∫a:b dx ]
+> = [1/(b-a)] [ ∫a:b x²dx - 2EX∫a:b xdx + (EX)²∫a:b dx ]
 >
 >
 >
-> = [1/(b-a)] [ ∫a:b x^2dx - 2EX x^2/2 |a:b + (EX)^2 x |a:b ]
+> = [1/(b-a)] [ ∫a:b x²dx - 2EX x²/2 |a:b + (EX)² x |a:b ]
 >
 >
 >
-> = [1/(b-a)] [ ∫a:b x^3/3 |a:b - EX (b^2 - a^2) + (EX)^2 (b - a) ]
+> = [1/(b-a)] [ ∫a:b x³/3 |a:b - EX (b² - a²) + (EX)² (b - a) ]
 >
 >
 >
-> = [1/(b-a)] [ (b^3 - a^3)/3 - EX (b^2 - a^2) + (EX)^2 (b - a) ]
+> = [1/(b-a)] [ (b³ - a³)/3 - EX (b² - a²) + (EX)² (b - a) ]
 >
 >
 >
-> = [1/(b-a)] [ (b - a)(b2 + ab + a^2)/3 - EX (b - a)(b + a) + (EX)^2 (b - a) ]
+> = [1/(b-a)] [ (b - a)(b2 + ab + a²)/3 - EX (b - a)(b + a) + (EX)² (b - a) ]
 >
 >
 >
-> = (b2 + ab + a^2)/3 - EX(b + a) + (EX)^2 
+> = (b2 + ab + a²)/3 - EX(b + a) + (EX)² 
 >
 >
 >
-> = (b2 + ab + a^2)/3 - [(a+b)/2](b + a) + (a+b)^2/4
+> = (b2 + ab + a²)/3 - [(a+b)/2](b + a) + (a+b)²/4
 >
 >
 >
-> = (b2 + ab + a^2)/3 - (a+b)^2/2 + (a+b)^2/4
+> = (b2 + ab + a²)/3 - (a+b)²/2 + (a+b)²/4
 >
 >
 >
-> = (b2 + ab + a^2)/3 - (a+b)^2/4
+> = (b2 + ab + a²)/3 - (a+b)²/4
 >
 >
 >
-> = (b2 + ab + a^2)/3 - (a^2+b^2+2ab)/4
+> = (b2 + ab + a²)/3 - (a²+b²+2ab)/4
 >
 >
 >
-> = [4(b2 + ab + a^2) - 3(a^2+b^2+2ab)]/12
+> = [4(b2 + ab + a²) - 3(a²+b²+2ab)]/12
 >
 >
 >
-> = [4b2 + 4ab + 4a^2 - 3a^2 - 3b^2 - 6ab]/12
+> = [4b2 + 4ab + 4a² - 3a² - 3b² - 6ab]/12
 >
 >
 >
-> = [b2 + a^2 - 2ab]/12
+> = [b2 + a² - 2ab]/12
 >
 >
 >
-> = **(b-a)^2/12**
+> = **(b-a)²/12**
 
 <br>
 
@@ -385,6 +385,8 @@
 >
 > Một công thức hữu ích khác sẽ gặp lại trong 3.3.15
 
+**🔗 See also:** [Bổ đề Chi-square](./53_sampling_from_the_normal_distribution.md#node-udtt0nq)
+
 <br>
 
 <a id="node-xt1ypib"></a>
@@ -433,11 +435,11 @@
 >
 >
 >
-> ⇨ fY(y) = fX(x) |dx/dy| = fX(ginv(y)) |d/dy ginv(y)|
+> ⇨ fY(y) = fX(x) |dx/dy| = fX(g⁻¹(y)) |d/dy g⁻¹(y)|
 >
 >
 >
-> ở đây là Y =  g(X) = βX ⇨ X = ginv(Y) = Y/β 
+> ở đây là Y =  g(X) = βX ⇨ X = g⁻¹(Y) = Y/β 
 >
 >
 >
@@ -479,6 +481,8 @@
 >
 > Với α sẽ ảnh hưởng đến hình dạng của distribution còn β ảnh hưởng đến độ
 > phân tán của distribution
+
+**🔗 See also:** [Bổ đề Chi-square](./53_sampling_from_the_normal_distribution.md#node-udtt0nq)
 
 <br>
 
@@ -595,31 +599,31 @@
 >
 >
 >
-> Var(X) = E[(X-EX)^2],
+> Var(X) = E[(X-EX)²],
 >
 >
 >
-> = E[(X^2 - 2XEX + (EX)^2] | (a + b)^2
+> = E[(X² - 2XEX + (EX)²] | (a + b)²
 >
 >
 >
-> = E(X^2) - E(2XEX) + E[(EX)^2] | linearity
+> = E(X²) - E(2XEX) + E[(EX)²] | linearity
 >
 >
 >
-> = E(X^2) - E(2XEX) + (EX)^2   | (EX)^2 là constant, E(c) = c
+> = E(X²) - E(2XEX) + (EX)²   | (EX)² là constant, E(c) = c
 >
 >
 >
-> = E(X^2) - 2EXE(X) + (EX)^2   | E(cX) = cEX
+> = E(X²) - 2EXE(X) + (EX)²   | E(cX) = cEX
 >
 >
 >
-> Var(X) dạng thứ hai = E(X^2) - (EX)^2 
+> Var(X) dạng thứ hai = E(X²) - (EX)² 
 >
 >
 >
-> Tính E(X^2):
+> Tính E(X²):
 >
 >
 >
@@ -635,7 +639,7 @@
 >
 >
 >
-> **Y = g(X) = X^2
+> **Y = g(X) = X²
 >
 >
 >
@@ -651,11 +655,11 @@
 >
 >
 >
-> E(X^2) = ∫-inf:inf x^2 fX(x)dx**
+> E(X²) = ∫-inf:inf x² fX(x)dx**
 >
 >
 >
-> = ∫-inf:inf x^2 x^(α-1) e^-(x/β) / [ Γ(α) β^(α) ] dx= 1/ [ Γ(α) β^(α) ] **∫-inf:inf x^(α + 1) e^-(x/β) dx 
+> = ∫-inf:inf x² x^(α-1) e^-(x/β) / [ Γ(α) β^(α) ] dx= 1/ [ Γ(α) β^(α) ] **∫-inf:inf x^(α + 1) e^-(x/β) dx 
 >
 >
 >
@@ -683,19 +687,19 @@
 >
 >
 >
-> ⇨ **EX^2** = **[ Γ(α+2) β^(α+2) ] / [ Γ(α) β^(α) ]** 
+> ⇨ **EX²** = **[ Γ(α+2) β^(α+2) ] / [ Γ(α) β^(α) ]** 
 >
 >
 >
-> =[ Γ(α+2) β^2 ] / [ Γ(α) β^(α) ] 
+> =[ Γ(α+2) β² ] / [ Γ(α) β^(α) ] 
 >
 >
 >
-> = [ (α+1) α Γ(α) β^2 ] / [ Γ(α) ] | recursion Γ(a + 1) = a Γ(a)
+> = [ (α+1) α Γ(α) β² ] / [ Γ(α) ] | recursion Γ(a + 1) = a Γ(a)
 >
 >
 >
-> = **α(α+1) β^2** 
+> = **α(α+1) β²** 
 >
 >
 >
@@ -703,15 +707,15 @@
 >
 >
 >
-> Var(X) = EX^2  - (EX)^2 = α(α+1) β^2  - (αβ)^2
+> Var(X) = EX²  - (EX)² = α(α+1) β²  - (αβ)²
 >
 >
 >
-> = β^2 [α(α+1) - α^2] = β^2 [α^2 + α  - α^2]
+> = β² [α(α+1) - α²] = β² [α² + α  - α²]
 >
 >
 >
-> ⇨ Var(X) = **αβ^2**
+> ⇨ Var(X) = **αβ²**
 
 <br>
 
@@ -1154,9 +1158,9 @@
 >
 >
 > Về pdf của Normal thì stat110 mình cũng đã học, nhớ lại trong lớp đó, gs bắt
-> đầu với standard normal trước N(0, 1) với pdf đơn giản là 1/√2π e^-x^2/2 Trong
+> đầu với standard normal trước N(0, 1) với pdf đơn giản là 1/√2π e^-x²/2 Trong
 > đó ta cũng có thể hiểu yếu tố 2π ở đâu ra: Đó là khi ta lấy cái kernel, tức
-> e^-x^2/2 và dùng điều kiện valid của pdf để tích phân từ -inf đến inf của pdf phải
+> e^-x²/2 và dùng điều kiện valid của pdf để tích phân từ -inf đến inf của pdf phải
 > bằng 1.
 >
 >
@@ -1174,7 +1178,7 @@
 >
 >
 >
-> Thế thì như đã nói: Ta sẽ tính ∫-inf:inf e^-x^2/2dx. Và mình nhớ gs Blizstein có
+> Thế thì như đã nói: Ta sẽ tính ∫-inf:inf e^-x²/2dx. Và mình nhớ gs Blizstein có
 > nói rằng cái tích phân này sẽ không thể nào tính được.
 >
 >
@@ -1187,11 +1191,11 @@
 >
 >
 >
-> ∫-inf:inf e^-x^2/2dx ∫-inf:inf e^-y^2/2dy
+> ∫-inf:inf e^-x²/2dx ∫-inf:inf e^-y²/2dy
 >
 >
 >
-> = ∫-inf:inf e^-x^2/2dx ∫-inf:inf e^-y^2/2dy
+> = ∫-inf:inf e^-x²/2dx ∫-inf:inf e^-y²/2dy
 >
 >
 >
@@ -1200,19 +1204,19 @@
 >
 >
 >
-> =  ∫-inf:inf [ ∫-inf:inf e^-x^2/2 dx ] e^-y^2/2dy
+> =  ∫-inf:inf [ ∫-inf:inf e^-x²/2 dx ] e^-y²/2dy
 >
 >
 >
-> =  ∫-inf:inf [ ∫-inf:inf e^-x^2/2 e^-y^2/2 dx dy | sắp xếp lại
+> =  ∫-inf:inf [ ∫-inf:inf e^-x²/2 e^-y²/2 dx dy | sắp xếp lại
 >
 >
 >
-> =  ∫-inf:inf [ ∫-inf:inf e^(-x^2 -y^2)/2 dx dy
+> =  ∫-inf:inf [ ∫-inf:inf e^(-x² -y²)/2 dx dy
 >
 >
 >
-> =  ∫-inf:inf [ ∫-inf:inf e^-(x^2+y^2)/2 dx dy
+> =  ∫-inf:inf [ ∫-inf:inf e^-(x²+y²)/2 dx dy
 >
 >
 >
@@ -1244,11 +1248,11 @@
 >
 >
 >
-> ⇨ e^-(x^2 + y^2)/2 = e^-[r^2 cos^2(θ) + r^2 sin^2(θ)] / 2
+> ⇨ e^-(x² + y²)/2 = e^-[r² cos²(θ) + r² sin²(θ)] / 2
 >
 >
 >
-> = e^-r^2/2 (sin^2(θ) + cos^2(θ) = 1)
+> = e^-r²/2 (sin²(θ) + cos²(θ) = 1)
 >
 >
 >
@@ -1261,7 +1265,7 @@
 >
 >
 >
-> ∫0:2π ∫0:inf e^-r^2/2 drdθ
+> ∫0:2π ∫0:inf e^-r²/2 drdθ
 >
 >
 >
@@ -1301,15 +1305,15 @@
 >
 >
 >
-> Còn có thể lập luận một cách tổng quát hơn: QUAY LẠI SAU (XEM LẠI 1802)Do đó tích phân cần tính là **∫0:2π ∫0:inf e^-r^2/2 r drdθ:**
+> Còn có thể lập luận một cách tổng quát hơn: QUAY LẠI SAU (XEM LẠI 1802)Do đó tích phân cần tính là **∫0:2π ∫0:inf e^-r²/2 r drdθ:**
 >
 >
 >
-> Tới đây, dùng u substitution: Đặt u = -r^2/2 ⇨ du = -(1/2)rdr = -rdr
+> Tới đây, dùng u substitution: Đặt u = -r²/2 ⇨ du = -(1/2)rdr = -rdr
 >
 >
 >
-> e^-r^2/2 r dr = - e^u du
+> e^-r²/2 r dr = - e^u du
 >
 >
 >
@@ -1341,7 +1345,7 @@
 >
 >
 >
-> (tức ∫-inf:inf e^-x^2/2dx ∫-inf:inf e^-y^2/2dy)
+> (tức ∫-inf:inf e^-x²/2dx ∫-inf:inf e^-y²/2dy)
 >
 >
 >
@@ -1349,11 +1353,11 @@
 >
 >
 >
-> ⇨ cái tích phân cần tính là ∫-inf:inf e^-x^2/2dx sẽ = √2π 
+> ⇨ cái tích phân cần tính là ∫-inf:inf e^-x²/2dx sẽ = √2π 
 >
 >
 >
-> Vậy để có valid pdf của N(0,1) thì cái nó phải phải là (1/√2π) e^-x^2/2**
+> Vậy để có valid pdf của N(0,1) thì cái nó phải phải là (1/√2π) e^-x²/2**
 >
 > Rồi, sau khi có pdf của N(0, 1) ta sẽ tìm pdf của N(μ, σ²):
 >
@@ -1372,15 +1376,15 @@
 >
 >
 >
-> fY(y) = fX(ginv(y)) |d/dy ginv(y)|
+> fY(y) = fX(g⁻¹(y)) |d/dy g⁻¹(y)|
 >
 >
 >
-> Với X = g(Z) = μ + σZ ⇨ Z = (X - μ)/σ  ⇨ ginv(x) = (x - μ)/σ  
+> Với X = g(Z) = μ + σZ ⇨ Z = (X - μ)/σ  ⇨ g⁻¹(x) = (x - μ)/σ  
 >
 >
 >
-> ⇨ fX(x) = fZ(ginv(x)) |d/dz ginv(x)|
+> ⇨ fX(x) = fZ(g⁻¹(x)) |d/dz g⁻¹(x)|
 >
 >
 >
@@ -1392,11 +1396,11 @@
 >
 >
 >
-> = (1/σ√2π) e^-[(x - μ)/σ]^2/2 
+> = (1/σ√2π) e^-[(x - μ)/σ]²/2 
 >
 >
 >
-> **= (1/σ√2π) e^-[(x - μ)^2/2σ²]  
+> **= (1/σ√2π) e^-[(x - μ)²/2σ²]  
 >
 >
 >
@@ -1486,7 +1490,7 @@
 >
 >
 >
-> = ∫-inf: (σz + u) (1/σ√2π) e^-[(x - μ)^2/2σ²] dx
+> = ∫-inf: (σz + u) (1/σ√2π) e^-[(x - μ)²/2σ²] dx
 >
 >
 >
@@ -1498,15 +1502,15 @@
 >
 >
 >
-> e^-[(x - μ)^2/2σ² = e^-[(x - μ)^2/σ²]/2 = e^-t^2/2
+> e^-[(x - μ)²/2σ² = e^-[(x - μ)²/σ²]/2 = e^-t²/2
 >
 >
 >
-> tích phân trên trở thành = ∫-inf: z (1/σ√2π) e^-t^2/2 σdt
+> tích phân trên trở thành = ∫-inf: z (1/σ√2π) e^-t²/2 σdt
 >
 >
 >
-> = ∫-inf:z (1/√2π) e^-t^2/2 dt
+> = ∫-inf:z (1/√2π) e^-t²/2 dt
 >
 >
 >
@@ -1515,11 +1519,11 @@
 >
 >
 >
-> Thế mà nay ta đã chứng minh P(Z < z) = ∫-inf:z (1/√2π) e^-t^2/2 dt
+> Thế mà nay ta đã chứng minh P(Z < z) = ∫-inf:z (1/√2π) e^-t²/2 dt
 >
 >
 >
-> Thì từ đó có thể suy ra fZ(t) = (1/√2π) e^-t^2/2
+> Thì từ đó có thể suy ra fZ(t) = (1/√2π) e^-t²/2
 >
 >
 >
@@ -1610,7 +1614,7 @@
 >
 >
 >
-> EZ^2 =  ∫-inf:inf z²fZ(z)dz = ∫-inf:inf (1/√2π) z² e^-z²/2 dz
+> EZ² =  ∫-inf:inf z²fZ(z)dz = ∫-inf:inf (1/√2π) z² e^-z²/2 dz
 >
 >
 >
@@ -1661,7 +1665,7 @@
 >
 > Cái tích phân này muốn tính phải dùng trick
 > và như lúc tìm normalizing constant của pdf N(0,1) ta thấy cái tích phân
-> ∫-inf:inf e^-x^2/2dx sẽ = √2π
+> ∫-inf:inf e^-x²/2dx sẽ = √2π
 >
 >
 >
@@ -1669,7 +1673,7 @@
 >
 >
 >
-> Vậy EZ^2 = (1/√2π) ∫-inf:inf z² e^-z²/2 dz
+> Vậy EZ² = (1/√2π) ∫-inf:inf z² e^-z²/2 dz
 >
 >
 >
@@ -1843,7 +1847,7 @@
 >
 >
 >
-> Ở đây ta có f(x) = (1/σ√2π) e^-[(x - μ)^2/2σ²]
+> Ở đây ta có f(x) = (1/σ√2π) e^-[(x - μ)²/2σ²]
 >
 >
 >
@@ -1851,23 +1855,23 @@
 >
 >
 >
-> d/dx (1/σ√2π) e^-[(x - μ)^2/2σ²] 
+> d/dx (1/σ√2π) e^-[(x - μ)²/2σ²] 
 >
 >
 >
-> = (1/σ√2π) d/dx e^-[(x - μ)^2/2σ²]
+> = (1/σ√2π) d/dx e^-[(x - μ)²/2σ²]
 >
 >
 >
-> = (1/σ√2π) d/d(-[(x - μ)^2/2σ²]) e^-[(x - μ)^2/2σ²] . d/dx (-[(x - μ)^2/2σ²])
+> = (1/σ√2π) d/d(-[(x - μ)²/2σ²]) e^-[(x - μ)²/2σ²] . d/dx (-[(x - μ)²/2σ²])
 >
 >
 >
-> = (1/σ√2π) e^-[(x - μ)^2/2σ²] . d/dx (-[(x - μ)^2/2σ²])
+> = (1/σ√2π) e^-[(x - μ)²/2σ²] . d/dx (-[(x - μ)²/2σ²])
 >
 >
 >
-> Xét d/dx (-[(x - μ)^2/2σ²]) = - (1/2σ²) d/dx (x - μ)^2
+> Xét d/dx (-[(x - μ)²/2σ²]) = - (1/2σ²) d/dx (x - μ)²
 >
 >
 >
@@ -1875,19 +1879,19 @@
 >
 >
 >
-> ⇨ .. = (1/σ√2π) e^-[(x - μ)^2/2σ²] [-(x - μ)/σ²]
+> ⇨ .. = (1/σ√2π) e^-[(x - μ)²/2σ²] [-(x - μ)/σ²]
 >
 >
 >
-> = - (1/σ²σ√2π) e^-[(x - μ)^2/2σ²] [(x - μ)]
+> = - (1/σ²σ√2π) e^-[(x - μ)²/2σ²] [(x - μ)]
 >
 >
 >
-> = - (1/σ^3√2π) e^-[(x - μ)^2/2σ²] [(x - μ)]
+> = - (1/σ³√2π) e^-[(x - μ)²/2σ²] [(x - μ)]
 >
 >
 >
-> d/dx = 0 ⇔ e^-[(x - μ)^2/2σ²] [(x - μ)] = 0
+> d/dx = 0 ⇔ e^-[(x - μ)²/2σ²] [(x - μ)] = 0
 >
 >
 >
@@ -1895,7 +1899,7 @@
 >
 >
 >
-> Khi x → -inf/inf thì e^-[(x - μ)^2/2σ²] → 0 nên tại +/-inf thì đạo
+> Khi x → -inf/inf thì e^-[(x - μ)²/2σ²] → 0 nên tại +/-inf thì đạo
 > hàm f(x) cũng bằng 0
 >
 >
@@ -1904,11 +1908,11 @@
 >
 >
 >
-> f(μ) = (1/σ√2π) e^-[(μ - μ)^2/2σ²] = (1/σ√2π) e^0 = 1/σ√2π
+> f(μ) = (1/σ√2π) e^-[(μ - μ)²/2σ²] = (1/σ√2π) e^0 = 1/σ√2π
 >
 >
 >
-> x → +/- inf → -[(x - μ)^2/2σ²] → -inf ⇨ e^-[(μ - μ)^2/2σ²] → 0
+> x → +/- inf → -[(x - μ)²/2σ²] → -inf ⇨ e^-[(μ - μ)²/2σ²] → 0
 >
 >
 >
@@ -1928,19 +1932,19 @@
 >
 >
 >
-> Tính đạo hàm cấp 2 d^2/dx^2 tại μ:
+> Tính đạo hàm cấp 2 d²/dx² tại μ:
 >
 >
 >
-> d/dx f'(x) = d/dx {- (1/σ^3√2π) e^-[(x - μ)^2/2σ²] [(x - μ)] }
+> d/dx f'(x) = d/dx {- (1/σ³√2π) e^-[(x - μ)²/2σ²] [(x - μ)] }
 >
 >
 >
-> = - (1/σ^3√2π)  d/dx {e^-[(x - μ)^2/2σ²] [(x - μ)] }
+> = - (1/σ³√2π)  d/dx {e^-[(x - μ)²/2σ²] [(x - μ)] }
 >
 >
 >
-> Tính cái này, d/dx {e^-[(x - μ)^2/2σ²] [(x - μ)]
+> Tính cái này, d/dx {e^-[(x - μ)²/2σ²] [(x - μ)]
 >
 >
 >
@@ -1948,23 +1952,23 @@
 >
 >
 >
-> = d/dx {e^-[(x - μ)^2/2σ²]} [(x - μ)] + {e^-[(x - μ)^2/2σ²]} d/dx (x - μ)
+> = d/dx {e^-[(x - μ)²/2σ²]} [(x - μ)] + {e^-[(x - μ)²/2σ²]} d/dx (x - μ)
 >
 >
 >
-> = e^-[(x - μ)^2/2σ²] [-2(x - μ)/2σ²] (x - μ) + e^-[(x - μ)^2/2σ²] 
+> = e^-[(x - μ)²/2σ²] [-2(x - μ)/2σ²] (x - μ) + e^-[(x - μ)²/2σ²] 
 >
 >
 >
-> = e^-[(x - μ)^2/2σ²] [-(x - μ)^2/σ²] + e^-[(x - μ)^2/2σ²] 
+> = e^-[(x - μ)²/2σ²] [-(x - μ)²/σ²] + e^-[(x - μ)²/2σ²] 
 >
 >
 >
-> = e^-[(x - μ)^2/2σ²] { [-(x - μ)^2/σ²] + 1}
+> = e^-[(x - μ)²/2σ²] { [-(x - μ)²/σ²] + 1}
 >
 >
 >
-> ⇨ d^2/dx^2 f(x) = - (1/σ^3√2π)  e^-[(x - μ)^2/2σ²] { [-(x - μ)^2/σ²] + 1}
+> ⇨ d²/dx² f(x) = - (1/σ³√2π)  e^-[(x - μ)²/2σ²] { [-(x - μ)²/σ²] + 1}
 >
 >
 >
@@ -1973,11 +1977,11 @@
 >
 >
 >
-> \- (1/σ^3√2π) e^-[(μ - μ)^2/2σ²] { [-(μ - μ)^2/σ²] + 1}
+> \- (1/σ³√2π) e^-[(μ - μ)²/2σ²] { [-(μ - μ)²/σ²] + 1}
 >
 >
 >
-> = - (1/σ^3√2π) e^0 { 0 + 1} = - (1/σ^3√2π) ⇨ hàm concave down tại μ 
+> = - (1/σ³√2π) e^0 { 0 + 1} = - (1/σ³√2π) ⇨ hàm concave down tại μ 
 > chứng tỏ μ là local maximum, và với ta chỉ có một cực trị thì nó cũng là
 > global maximum
 
@@ -2152,7 +2156,7 @@
 >
 >
 >
-> EX^2 = [Γ(α+2) Γ(α + β)] / [Γ(α +2 + β) Γ(α)] 
+> EX² = [Γ(α+2) Γ(α + β)] / [Γ(α +2 + β) Γ(α)] 
 >
 >
 >
@@ -2168,11 +2172,11 @@
 >
 >
 >
-> Var(X) = EX^2 - (EX)^2 = [(α + 1) α ] / [(α + 1 + β)(α + β)] - α / (α + β)
+> Var(X) = EX² - (EX)² = [(α + 1) α ] / [(α + 1 + β)(α + β)] - α / (α + β)
 >
 >
 >
-> ...= αβ / [(α + β)^2(α + 1 + β)]
+> ...= αβ / [(α + β)²(α + 1 + β)]
 
 <br>
 
@@ -2221,7 +2225,7 @@
 >
 >
 >
-> Tuy nhiên dĩ nhiên pdf của nó vẫn hợp lệ ∫-inf:inf (1/π) 1/[1 + (x - θ)^2] dx = 1
+> Tuy nhiên dĩ nhiên pdf của nó vẫn hợp lệ ∫-inf:inf (1/π) 1/[1 + (x - θ)²] dx = 1
 >
 >
 >
@@ -2229,11 +2233,11 @@
 >
 >
 >
-> ∫-inf:inf (1/π) 1/[1 + (x - θ)^2] dx
+> ∫-inf:inf (1/π) 1/[1 + (x - θ)²] dx
 >
 >
 >
-> = (1/π) ∫-inf:inf 1/[1 + (x - θ)^2] dx
+> = (1/π) ∫-inf:inf 1/[1 + (x - θ)²] dx
 >
 >
 >
@@ -2241,7 +2245,7 @@
 >
 >
 >
-> Dùng kiến thức là d/dt arctan(t) = 1/(1 + t^2)
+> Dùng kiến thức là d/dt arctan(t) = 1/(1 + t²)
 >
 >
 >
@@ -2249,11 +2253,11 @@
 >
 >
 >
-> = 1/[1 + (x - θ)^2] . 1 = 1/[1 + (x - θ)^2]
+> = 1/[1 + (x - θ)²] . 1 = 1/[1 + (x - θ)²]
 >
 >
 >
-> ⇨ **Nguyên hàm (anti derivative) của 1/[1 + (x - θ)^2] là arctan(x - θ)**
+> ⇨ **Nguyên hàm (anti derivative) của 1/[1 + (x - θ)²] là arctan(x - θ)**
 >
 >
 >
@@ -2297,7 +2301,7 @@
 >
 >
 >
-> Bản chất là câu chuyện giữa cdf F và Finv 
+> Bản chất là câu chuyện giữa cdf F và F⁻¹ 
 >
 >
 >
@@ -2307,29 +2311,29 @@
 >
 >
 >
-> thì inverse của nó Finv(y) sẽ làm ngược lại, nó nhận vào một con số phần trăm
+> thì inverse của nó F⁻¹(y) sẽ làm ngược lại, nó nhận vào một con số phần trăm
 > và trả ra mộc con số cột mốc mà bao nhiêu phần trăm thời gian giá trị của X
 > sẽ nằm dưới mức đó
 >
 >
 >
-> Do đó, nói về median, nó chính là cái output của Finv khi input là 50%, để rồi
+> Do đó, nói về median, nó chính là cái output của F⁻¹ khi input là 50%, để rồi
 > 50% thời gian , hay 50% possible value của X sẽ dưới mốc median này.
 >
 >
 >
 > Tương tự, ta sẽ có các mốc khác như 25% percentile, là cái mốc output khi input
-> của Finv là 0.25, để rồi có nghĩa là 25% giá trị possible value của X sẽ nằm
+> của F⁻¹ là 0.25, để rồi có nghĩa là 25% giá trị possible value của X sẽ nằm
 > dưới cái mốc 25% percentile.
 >
 >
 >
-> Vậy để chứng minh θ là median ta sẽ chức minh nó là thứ mà Finv của Cauchy
+> Vậy để chứng minh θ là median ta sẽ chức minh nó là thứ mà F⁻¹ của Cauchy
 > trả ra khi input là 50%:
 >
 >
 >
-> θ = Finv(0.5)
+> θ = F⁻¹(0.5)
 >
 >
 >
@@ -2346,15 +2350,15 @@
 >
 >
 >
-> = ∫-inf:θ (1/π) (1/[1+(x - θ)^2]) dx
+> = ∫-inf:θ (1/π) (1/[1+(x - θ)²]) dx
 >
 >
 >
-> = (1/π) ∫-inf:θ (1/[1+(x - θ)^2]) dx
+> = (1/π) ∫-inf:θ (1/[1+(x - θ)²]) dx
 >
 >
 >
-> Dùng cái ở trên đã biết, nguyên hàm của 1/[1 + (x - θ)^2] là arctan(x - θ)
+> Dùng cái ở trên đã biết, nguyên hàm của 1/[1 + (x - θ)²] là arctan(x - θ)
 >
 >
 >
@@ -2410,21 +2414,21 @@
 >
 >
 > Ta có Y = logX sẽ là một N(μ, σ²) theo định nghĩa của log normal ở trên.
-> và ta đã biết pdf của Y: fY(y) = (1/σ√2π) e^-[(y - μ)^2/2σ²]
+> và ta đã biết pdf của Y: fY(y) = (1/σ√2π) e^-[(y - μ)²/2σ²]
 >
 >
 >
 > Rồi, ôn lại về transformation theorem ko bao giờ là thừa, nhưng làm ngắn gọn
-> Y = g(X) ⇔ ginv(Y) = X, với y = g(x) = log x ⇨ x = ginv(y) = e^y.
+> Y = g(X) ⇔ g⁻¹(Y) = X, với y = g(x) = log x ⇨ x = g⁻¹(y) = e^y.
 > Thế thì FY(y) = P(Y < y) = P(g(X) < y) = P({s ∈ S: g(X)(s) < y})
 >
 >
 >
-> = P({s ∈ S: X(s) < ginv(y)}) nếu g monotonic increasing
+> = P({s ∈ S: X(s) < g⁻¹(y)}) nếu g monotonic increasing
 >
 >
 >
-> = P({s ∈ S: X(s) > ginv(y)}) nếu g monotonic decreasing
+> = P({s ∈ S: X(s) > g⁻¹(y)}) nếu g monotonic decreasing
 >
 >
 >
@@ -2432,11 +2436,11 @@
 >
 >
 >
-> ⇨ ta đi nhánh trên, ..= P({s ∈ S: X(s) < ginv(y)}) và cái này = P(X < ginv(y))
+> ⇨ ta đi nhánh trên, ..= P({s ∈ S: X(s) < g⁻¹(y)}) và cái này = P(X < g⁻¹(y))
 >
 >
 >
-> = FX(ginv(y))
+> = FX(g⁻¹(y))
 >
 >
 >
@@ -2450,28 +2454,28 @@
 >
 >
 >
-> Nên từ đây ta có fY(y) = d/dy FY(y) = d/dy FX(ginv(y)).
+> Nên từ đây ta có fY(y) = d/dy FY(y) = d/dy FX(g⁻¹(y)).
 >
 >
 >
-> Dùng chain rule, = d/d(ginv(y)) FX(ginv(y)) . d/dy ginv(y)
+> Dùng chain rule, = d/d(g⁻¹(y)) FX(g⁻¹(y)) . d/dy g⁻¹(y)
 >
 >
 >
-> again, ghi thế này cho hiểu bản chất: d/du FX(u) | u = ginv(y) . d/dy ginv(y) 
+> again, ghi thế này cho hiểu bản chất: d/du FX(u) | u = g⁻¹(y) . d/dy g⁻¹(y) 
 >
 >
 >
-> với d/du FX(u) | u = ginv(y) có nghĩa là giá trị của đạo hàm hàm FX evaluate tại
-> ginv(y). Mà d/du FX(u), hay d/dx FX(x) cũng được, chính là fX(x).
+> với d/du FX(u) | u = g⁻¹(y) có nghĩa là giá trị của đạo hàm hàm FX evaluate tại
+> g⁻¹(y). Mà d/du FX(u), hay d/dx FX(x) cũng được, chính là fX(x).
 >
 >
 >
-> Nên ta có fX(ginv(y)) d/dy ginv(y)
+> Nên ta có fX(g⁻¹(y)) d/dy g⁻¹(y)
 >
 >
 >
-> Với ginv(y) = e^y ⇨ d/dy e^y = e^y.
+> Với g⁻¹(y) = e^y ⇨ d/dy e^y = e^y.
 >
 >
 >
@@ -2479,19 +2483,19 @@
 >
 >
 >
-> ⇔ (1/σ√2π) e^-[(y - μ)^2/2σ²]  = fX(e^y) e^y 
+> ⇔ (1/σ√2π) e^-[(y - μ)²/2σ²]  = fX(e^y) e^y 
 >
 >
 >
-> ⇔  (1/σ√2π) e^-[(y - μ)^2/2σ²] / e^y = fX(e^y)
+> ⇔  (1/σ√2π) e^-[(y - μ)²/2σ²] / e^y = fX(e^y)
 >
 >
 >
-> ⇔ fX(e^y) = (1/e^yσ√2π) e^-[(y - μ)^2/2σ²] 
+> ⇔ fX(e^y) = (1/e^yσ√2π) e^-[(y - μ)²/2σ²] 
 >
 >
 >
-> **⇔ fX(x) = (1/σ√2π) (1/x) e^-[(log(x) - μ)^2/2σ²]**  | x = e^y
+> **⇔ fX(x) = (1/σ√2π) (1/x) e^-[(log(x) - μ)²/2σ²]**  | x = e^y
 >
 >
 >
@@ -2525,7 +2529,7 @@
 >
 >
 >
-> Áp dụng công thức mgf của Normal μ, σ là e^[μt + σ²t^2/2] ta có thể suy
+> Áp dụng công thức mgf của Normal μ, σ là e^[μt + σ²t²/2] ta có thể suy
 > ra **Ee^Y = e^(μ + σ²/2)
 >
 >
@@ -2534,7 +2538,7 @@
 >
 >
 >
-> Tương tự, EX^2 = E(e^logX)^2 = E(e^2logX = E(e^2Y)
+> Tương tự, EX² = E(e^logX)² = E(e²logX = E(e²Y)
 >
 >
 >
@@ -2542,27 +2546,27 @@
 >
 >
 >
-> = e^(2μ+2^2σ²/2)
+> = e^(2μ+2²σ²/2)
 >
 >
 >
-> = e^2(μ+σ²)
+> = e²(μ+σ²)
 >
 >
 >
-> ⇨ EX^2 = e^2(μ+σ²)
+> ⇨ EX² = e²(μ+σ²)
 >
 >
 >
-> ⇨ Var(X) = EX^2 - (EX)^2
+> ⇨ Var(X) = EX² - (EX)²
 >
 >
 >
-> = e^2(μ+σ²) -  [e^(μ + σ²/2)]^2
+> = e²(μ+σ²) -  [e^(μ + σ²/2)]²
 >
 >
 >
-> **= e^2(μ+σ²) -  e^(2μ + σ²)
+> **= e²(μ+σ²) -  e^(2μ + σ²)
 >
 >
 >
