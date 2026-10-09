@@ -1,6 +1,6 @@
 {
   "title": "Statistical Inference - Casella",
-  "publishedAt": 1791306926531,
+  "publishedAt": 1791564809894,
   "sections": [
     {
       "title": "📋 Overview",
@@ -81,7 +81,7 @@
       "imageCount": 25
     },
     {
-      "title": "2.4 Differentiating under integral",
+      "title": "2.4 Differentiating Under Integral",
       "path": "statistical_inference_casella/24_differentiating_under_integral.md",
       "noteCount": 11,
       "imageCount": 19
@@ -93,19 +93,19 @@
       "imageCount": 2
     },
     {
-      "title": "3.1&2 Discrete distribution",
+      "title": "3.1&2 Discrete Distribution",
       "path": "statistical_inference_casella/312_discrete_distribution.md",
       "noteCount": 20,
       "imageCount": 32
     },
     {
-      "title": "3.3 Continuous distribution",
+      "title": "3.3 Continuous Distribution",
       "path": "statistical_inference_casella/33_continuous_distribution.md",
       "noteCount": 24,
       "imageCount": 38
     },
     {
-      "title": "3.4 Exponential families",
+      "title": "3.4 Exponential Families",
       "path": "statistical_inference_casella/34_exponential_families.md",
       "noteCount": 10,
       "imageCount": 15
