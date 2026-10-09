@@ -177,15 +177,15 @@
 >
 >
 >
-> Với X: μX = EX = ∫0:1 xfX(x)dx = ∫0:1 xdx = x^2/2|0:1 = 1/2
+> Với X: μX = EX = ∫0:1 xfX(x)dx = ∫0:1 xdx = x²/2|0:1 = 1/2
 >
 >
 >
-> σX^2 = Var(X) = EX^2 - (EX)^2 = ∫0:1x^2fX(x)dx - (1/2)^2
+> σX² = Var(X) = EX² - (EX)² = ∫0:1x²fX(x)dx - (1/2)²
 >
 >
 >
-> = ∫0:1x^2dx - 1/4 = x^3/3|0:1 - 1/4 = 1/3 - 1/4 = 1/12
+> = ∫0:1x²dx - 1/4 = x³/3|0:1 - 1/4 = 1/3 - 1/4 = 1/12
 >
 >
 >
@@ -197,15 +197,15 @@
 >
 >
 >
-> = ∫0:1 y^2 dy + ∫1:2 (2y-y^2)dy
+> = ∫0:1 y² dy + ∫1:2 (2y-y²)dy
 >
 >
 >
-> =y^3/3|0:1 + (y^2 - y^3/3)|1:2
+> =y³/3|0:1 + (y² - y³/3)|1:2
 >
 >
 >
-> =1^3/3 + (2^2 - 2^3/3) - (1^2 - 1^3/3)
+> =1³/3 + (2² - 2³/3) - (1² - 1³/3)
 >
 >
 >
@@ -221,7 +221,7 @@
 >
 >
 >
-> σY^2 = Var(Y) =EX^2 - (EX)^2 = ∫0:1 y^2fY(y)dy + ∫1:2 y^2fY(y)dy - 1
+> σY² = Var(Y) =EX² - (EX)² = ∫0:1 y²fY(y)dy + ∫1:2 y²fY(y)dy - 1
 >
 >
 >
@@ -249,15 +249,15 @@
 >
 >
 >
-> = ∫0:1 x (y^2/2|x:x+1) dx
+> = ∫0:1 x (y²/2|x:x+1) dx
 >
 >
 >
-> = ∫0:1 x \[(x+1)^2/2 - x^2/2\] dx
+> = ∫0:1 x \[(x+1)²/2 - x²/2\] dx
 >
 >
 >
-> = ∫0:1 x \[x^2+2x + 1 - x^2\]/2 dx
+> = ∫0:1 x \[x²+2x + 1 - x²\]/2 dx
 >
 >
 >
@@ -265,15 +265,15 @@
 >
 >
 >
-> = (1/2)∫0:1 (2x^2 + x) dx
+> = (1/2)∫0:1 (2x² + x) dx
 >
 >
 >
-> = (1/2) (2x^3/3 + x^2/2)|0:1
+> = (1/2) (2x³/3 + x²/2)|0:1
 >
 >
 >
-> = (1/2) (2\*1^3/3 + 1^2/2)
+> = (1/2) (2\*1³/3 + 1²/2)
 >
 >
 >
@@ -409,7 +409,7 @@
 >
 >
 >
-> Var(aX + bY) = a^2VarX + b^2VarY + 2abCov(X,Y)
+> Var(aX + bY) = a²VarX + b²VarY + 2abCov(X,Y)
 >
 >
 >
@@ -417,7 +417,7 @@
 >
 >
 >
-> Var(aX + bY) , áp dụng công thức thứ 1 của Var: VarX = E[X - EX]^2
+> Var(aX + bY) , áp dụng công thức thứ 1 của Var: VarX = E[X - EX]²
 >
 >
 >
@@ -426,47 +426,47 @@
 >
 >
 >
-> ⇨ Var(aX + bY) = E[(aX + bY) - (aμX + bμY)]^2
+> ⇨ Var(aX + bY) = E[(aX + bY) - (aμX + bμY)]²
 >
 >
 >
-> = E[(aX + bY)^2 + (aμX + bμY)^2 - 2(aX + bY)(aμX + bμY)] | khai triển ra
+> = E[(aX + bY)² + (aμX + bμY)² - 2(aX + bY)(aμX + bμY)] | khai triển ra
 >
 >
 >
-> = E[(a^2X^2 + b^2Y^2 + 2abXY + a^2μX^2 + b^2μY^2 + 2abμXμY  - 2(a^2XμX + baYμX + abXμY + b^2YμY)] 
+> = E[(a²X² + b²Y² + 2abXY + a²μX² + b²μY² + 2abμXμY  - 2(a²XμX + baYμX + abXμY + b²YμY)] 
 >
 >
 >
-> = E[a^2X^2 + b^2Y^2 + 2abXY + a^2μX^2 + b^2μY^2 + 2abμXμY  - 2a^2XμX - 2baYμX - 2abXμY - 2b^2YμY] 
+> = E[a²X² + b²Y² + 2abXY + a²μX² + b²μY² + 2abμXμY  - 2a²XμX - 2baYμX - 2abXμY - 2b²YμY] 
 >
 >
 >
-> = E[(a^2X^2 - 2a^2XμX + a^2μX^2) + (b^2Y^2 - 2b^2YμY + b^2μY^2) + 2abXY - 2abXμY + 2abμXμY - 2baYμX ] 
+> = E[(a²X² - 2a²XμX + a²μX²) + (b²Y² - 2b²YμY + b²μY²) + 2abXY - 2abXμY + 2abμXμY - 2baYμX ] 
 >
 >
 >
-> = E[a^2(X^2 - 2XμX + μX^2) + b^2(Y^2 - 2YμY + μY^2) + 2abX(Y - μY) - 2abμX(Y - μY)] 
+> = E[a²(X² - 2XμX + μX²) + b²(Y² - 2YμY + μY²) + 2abX(Y - μY) - 2abμX(Y - μY)] 
 >
 >
 >
-> = E[a^2(X - μX)^2 + b^2(Y - μY)^2 + 2ab(X - μX)(Y - μY)] 
+> = E[a²(X - μX)² + b²(Y - μY)² + 2ab(X - μX)(Y - μY)] 
 >
 >
 >
-> = E[a^2(X - μX)^2] + E[b^2(Y - μY)^2] + E[2ab(X - μX)(Y - μY)] 
+> = E[a²(X - μX)²] + E[b²(Y - μY)²] + E[2ab(X - μX)(Y - μY)] 
 >
 >
 >
-> = a^2E[(X - μX)^2] + b^2E[(Y - μY)^2] + 2abE[(X - μX)(Y - μY)] 
+> = a²E[(X - μX)²] + b²E[(Y - μY)²] + 2abE[(X - μX)(Y - μY)] 
 >
 >
 >
-> **= a^2VarX + b^2VarY + 2abCov(X,Y)
+> **= a²VarX + b²VarY + 2abCov(X,Y)
 >
 >
 >
-> Khi X, Y độc lập thì Cov(X,Y) = 0 ⇨ Var(aX + bY) = a^2VarX + b^2VarY**
+> Khi X, Y độc lập thì Cov(X,Y) = 0 ⇨ Var(aX + bY) = a²VarX + b²VarY**
 
 <br>
 
@@ -481,7 +481,7 @@
 >
 >
 >
-> Var(aX + bY) = a^2VarX + b^2VarY + 2abCov(X,Y)
+> Var(aX + bY) = a²VarX + b²VarY + 2abCov(X,Y)
 >
 >
 >
@@ -521,28 +521,28 @@
 >
 >
 >
-> Ta sẽ xét hàm h(t) = E[(X - μX)t + (Y - μY)]^2
+> Ta sẽ xét hàm h(t) = E[(X - μX)t + (Y - μY)]²
 >
 >
 >
-> = E[(X - μX)^2t^2 + (Y - μY)^2 + 2t(X - μX)(Y - μY)]
+> = E[(X - μX)²t² + (Y - μY)² + 2t(X - μX)(Y - μY)]
 >
 >
 >
-> = E[(X - μX)^2t^2] + E[(Y - μY)^2] + 2tE(X - μX)(Y - μY)
+> = E[(X - μX)²t²] + E[(Y - μY)²] + 2tE(X - μX)(Y - μY)
 >
 >
 >
-> = t^2E[(X - μX)^2] + E[(Y - μY)^2] + 2tE(X - μX)(Y - μY)
+> = t²E[(X - μX)²] + E[(Y - μY)²] + 2tE(X - μX)(Y - μY)
 >
 >
 >
-> = t^2 σX^2 + σY^2 + 2tCov(X, Y)
+> = t² σX² + σY² + 2tCov(X, Y)
 >
 >
 >
 > Đến đây ko có gì khó, thế thì bản chất hàm h(t) là expected value của
-> một random variable Z = f(X,Y) = [(X - μX)t + (Y - μY)]^2, và nó luôn ko
+> một random variable Z = f(X,Y) = [(X - μX)t + (Y - μY)]², và nó luôn ko
 > âm với mọi X, Y, t, nên mọi possible của Z luôn ko âm ⇨ EZ ≥ 0
 >
 >
@@ -555,7 +555,7 @@
 >
 >
 >
-> t^2 σX^2 + σY^2 + 2tCov(X, Y) = 0
+> t² σX² + σY² + 2tCov(X, Y) = 0
 >
 >
 >
@@ -564,25 +564,25 @@
 >
 >
 >
-> Do đó, với phương trình ax^2 + bx + c = 0 thì khi tìm nghiệm ta 
-> sẽ xét discriminant, b^2 - 4ac, và nếu nó = 0 thì phương trình có 
+> Do đó, với phương trình ax² + bx + c = 0 thì khi tìm nghiệm ta 
+> sẽ xét discriminant, b² - 4ac, và nếu nó = 0 thì phương trình có 
 > nghiệm duy nhất, > 0 thì có 2 nghiệm phân biệt và < 0 thì vô nghiệm
 >
 >
 >
-> Vậy ở case này b^2 - 4ac phải ≤ 0 để thể hiện nhiều nhất là 1 nghiệm
+> Vậy ở case này b² - 4ac phải ≤ 0 để thể hiện nhiều nhất là 1 nghiệm
 >
 >
 >
-> ⇨ đó chính là [2Cov(X,Y)]^2 - 4σX^2σY^2 ≤ 0
+> ⇨ đó chính là [2Cov(X,Y)]² - 4σX²σY² ≤ 0
 >
 >
 >
-> ⇔ 4Cov(X,Y)^2 ≤ 4σX^2σY^2
+> ⇔ 4Cov(X,Y)² ≤ 4σX²σY²
 >
 >
 >
-> ⇔ Cov(X,Y)^2 ≤ σX^2σY^2
+> ⇔ Cov(X,Y)² ≤ σX²σY²
 >
 >
 >
@@ -607,11 +607,11 @@
 >
 >
 > Tiếp tục, ta thấy |Cor(X,Y)| = 1 tức là dấu bằng ở trên xảy ra tức cũng
-> là b^2 = 4ac, hay h(t) = E[(X - μX)t + (Y - μY)]^2 = 0
+> là b² = 4ac, hay h(t) = E[(X - μX)t + (Y - μY)]² = 0
 >
 >
 >
-> Mà đã nói ở trên h(t) là expected value của một rv là [(X - μX)t + (Y - μY)]^2 
+> Mà đã nói ở trên h(t) là expected value của một rv là [(X - μX)t + (Y - μY)]² 
 > không âm nên expected value của nó bằng 0 khi và chỉ khi nó chỉ có một
 > possible value là 0 (nhưng như vậy thì nó ko phải là random varialbe) 
 > hoặc nó có nhiều possible value nhưng mọi xác suất tức trọng số gắn với
@@ -620,11 +620,11 @@
 >
 >
 >
-> ⇨ P([(X - μX)t + (Y - μY)]^2=0) = 1
+> ⇨ P([(X - μX)t + (Y - μY)]²=0) = 1
 >
 >
 >
-> Và bởi vì event [(X - μX)t + (Y - μY)]^2 = 0 ko khó để thấy nó cũng là event
+> Và bởi vì event [(X - μX)t + (Y - μY)]² = 0 ko khó để thấy nó cũng là event
 > [(X - μX)t + (Y - μY)] = 0
 >
 >
@@ -697,11 +697,11 @@
 >
 >
 >
-> Nếu A là tiền ảnh của B: A = {(x,y) ∈ R^2: (g1(x,y), g2(x,y)) ∈ B} thì P((X, Y) ∈ A) = P((U,V) ∈ B)
+> Nếu A là tiền ảnh của B: A = {(x,y) ∈ R²: (g1(x,y), g2(x,y)) ∈ B} thì P((X, Y) ∈ A) = P((U,V) ∈ B)
 >
 >
 >
-> Tiếp, ta sẽ xác định support set của X,Y 𝒜: Với distribution đã biết của X, Y, thì 𝒜 = {(x,y) ∈ R^2: 0 ≤ x ≤ 1; 0 ≤ y ≤ 1/10}
+> Tiếp, ta sẽ xác định support set của X,Y 𝒜: Với distribution đã biết của X, Y, thì 𝒜 = {(x,y) ∈ R²: 0 ≤ x ≤ 1; 0 ≤ y ≤ 1/10}
 >
 >
 >
@@ -966,11 +966,11 @@
 >
 >
 >
-> = E(X^2 + XZ) - EX(EX + EZ)
+> = E(X² + XZ) - EX(EX + EZ)
 >
 >
 >
-> = E(X^2) + E(XZ) - (EX)^2 - EXEZ
+> = E(X²) + E(XZ) - (EX)² - EXEZ
 >
 >
 >
@@ -978,7 +978,7 @@
 >
 >
 >
-> 2D LOTUS = ∫∫ xz fX,Z(x,z)dxdz (tích phân trên toàn R^2)
+> 2D LOTUS = ∫∫ xz fX,Z(x,z)dxdz (tích phân trên toàn R²)
 >
 >
 >
@@ -1006,11 +1006,11 @@
 >
 >
 >
-> ⇨ ... = E(X^2) + EXEZ - (EX)^2 - EXEZ
+> ⇨ ... = E(X²) + EXEZ - (EX)² - EXEZ
 >
 >
 >
-> = EX^2 - (EX)^2 = Var(X) và đã tính lúc trước = 1/12
+> = EX² - (EX)² = Var(X) và đã tính lúc trước = 1/12
 
 <br>
 
@@ -1035,7 +1035,7 @@
 >
 >
 >
-> Var(aX + bY) = a^2Var(X) + b^2Var(Y) + 2abCov(X, Y)
+> Var(aX + bY) = a²Var(X) + b²Var(Y) + 2abCov(X, Y)
 >
 >
 >
@@ -1146,27 +1146,27 @@
 >
 >
 >
-> Và Y = X^2 + Z
+> Và Y = X² + Z
 >
 >
 >
-> Thế thì lập luận tương tự ta có thể có Y|X=x ~ uniform(x^2, x^2 + 1/10)
+> Thế thì lập luận tương tự ta có thể có Y|X=x ~ uniform(x², x² + 1/10)
 >
 >
 >
-> fY|X(y|x) = fX^2+Z|X(y|x)
+> fY|X(y|x) = fX²+Z|X(y|x)
 >
 >
 >
-> Biết X=x ⇨ .. = fx^2+Z|X(y|x)
+> Biết X=x ⇨ .. = fx²+Z|X(y|x)
 >
 >
 >
-> Vì Z độc lập X nên Z + x^2 cũng độc lập X
+> Vì Z độc lập X nên Z + x² cũng độc lập X
 >
 >
 >
-> ⇨ ...fx^2+Z|X(y|x) = fx^2+Z(y)
+> ⇨ ...fx²+Z|X(y|x) = fx²+Z(y)
 >
 >
 >
@@ -1178,15 +1178,15 @@
 >
 >
 >
-> ⇨ fZ+x^2(y) = f1*Z+x^2 = (1/1) fZ[(y - x^2)/1]
+> ⇨ fZ+x²(y) = f1*Z+x² = (1/1) fZ[(y - x²)/1]
 >
 >
 >
-> = fZ(y - x^2) = 10, 0 < y - x^2 <1/10 ⇔ x^2 < y < x^2 + 1/10
+> = fZ(y - x²) = 10, 0 < y - x² <1/10 ⇔ x² < y < x² + 1/10
 >
 >
 >
-> ⇨ Y|x ~ uniform(x^2, x^2 + 1/10)
+> ⇨ Y|x ~ uniform(x², x² + 1/10)
 >
 >
 >
@@ -1198,7 +1198,7 @@
 >
 >
 >
-> = 10 * 1/2 = 5, x^2 < y < x^2 + 1/10, -1 < x < 1
+> = 10 * 1/2 = 5, x² < y < x² + 1/10, -1 < x < 1
 >
 >
 >
@@ -1210,19 +1210,19 @@
 >
 >
 >
-> = EX E(X^2 + Z) - EX(X^2 + Z)
+> = EX E(X² + Z) - EX(X² + Z)
 >
 >
 >
-> = EX (EX^2 + EZ) - E(X^3 + XZ)
+> = EX (EX² + EZ) - E(X³ + XZ)
 >
 >
 >
-> = EXEX^2 + EXEZ - E(X^3) - E(XZ)
+> = EXEX² + EXEZ - E(X³) - E(XZ)
 >
 >
 >
-> = 0EX^2 + EXEZ - 0 - E(XZ) | do X ~unif(-1,1) ⇨ dễ tính ra EX = 0
+> = 0EX² + EXEZ - 0 - E(XZ) | do X ~unif(-1,1) ⇨ dễ tính ra EX = 0
 >
 >
 >
