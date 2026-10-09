@@ -94,7 +94,7 @@
 >
 >
 >
-> Var(W(𝐗)) ≥ \[∂/∂θ Eθ\[W(𝐗)\]^2 / nI1(θ)
+> Var(W(𝐗)) ≥ \[∂/∂θ Eθ\[W(𝐗)\]² / nI1(θ)
 >
 >
 >
@@ -110,31 +110,31 @@
 >
 >
 >
-> I1(θ) = E\_θ\[(∂/∂θ log f(X|θ))^2\]:
+> I1(θ) = E\_θ\[(∂/∂θ log f(X|θ))²\]:
 >
 >
 >
-> log f(X|θ) = log \[1/√(2πσ²) exp {-(X-μ)^2/2σ²}
+> log f(X|θ) = log \[1/√(2πσ²) exp {-(X-μ)²/2σ²}
 >
 >
 >
-> = log \[1/√(2πσ²)\] + log exp {-(X-μ)^2/2σ²}
+> = log \[1/√(2πσ²)\] + log exp {-(X-μ)²/2σ²}
 >
 >
 >
-> = log \[1/√(2πσ²)\] - (X-μ)^2/2σ²
+> = log \[1/√(2πσ²)\] - (X-μ)²/2σ²
 >
 >
 >
-> ⇒ ∂/∂θ log f(X|θ) = ∂/∂μ \[log \[1/√(2πσ²)\] - (X-μ)^2/2σ²\]
+> ⇒ ∂/∂θ log f(X|θ) = ∂/∂μ \[log \[1/√(2πσ²)\] - (X-μ)²/2σ²\]
 >
 >
 >
-> = ∂/∂μ \[-(X-μ)^2/2σ²\]
+> = ∂/∂μ \[-(X-μ)²/2σ²\]
 >
 >
 >
-> = (-1/2σ²) ∂/∂μ \[(X-μ)^2\]
+> = (-1/2σ²) ∂/∂μ \[(X-μ)²\]
 >
 >
 >
@@ -146,23 +146,23 @@
 >
 >
 >
-> ⇒ (∂/∂θ log f(X|θ))^2 = (X-μ)^2/σ^4 
+> ⇒ (∂/∂θ log f(X|θ))² = (X-μ)²/σ⁴ 
 >
 >
 >
-> ⇒ E\_θ\[(∂/∂θ log f(X|θ))^2\] = E\_θ\[(X-μ)^2/σ^4\]
+> ⇒ E\_θ\[(∂/∂θ log f(X|θ))²\] = E\_θ\[(X-μ)²/σ⁴\]
 >
 >
 >
-> = E\_θ\[(X-μ)^2\]/σ^4
+> = E\_θ\[(X-μ)²\]/σ⁴
 >
 >
 >
-> = Var(X)/σ^4
+> = Var(X)/σ⁴
 >
 >
 >
-> = σ²/σ^4
+> = σ²/σ⁴
 >
 >
 >
@@ -170,7 +170,7 @@
 >
 >
 >
-> Vậy CRLB ở đây = \[∂/∂θ Eθ\[W(𝐗)\]^2 / nI1(θ) = 1/n(1/σ²)
+> Vậy CRLB ở đây = \[∂/∂θ Eθ\[W(𝐗)\]² / nI1(θ) = 1/n(1/σ²)
 >
 >
 >
@@ -220,7 +220,7 @@
 >
 >
 >
-> Khi đó Var(X̄) sẽ là theo công thức (1-δ)σ²/n + δτ²/n + δ(1-δ)(θ-μ)^2/n
+> Khi đó Var(X̄) sẽ là theo công thức (1-δ)σ²/n + δτ²/n + δ(1-δ)(θ-μ)²/n
 >
 >
 >
@@ -268,11 +268,11 @@
 >
 >
 >
-> Thế thì, theo công thức tính của variance: Var(X) = E(X^2) - (EX)^2,
+> Thế thì, theo công thức tính của variance: Var(X) = E(X²) - (EX)²,
 >
 >
 >
-> nên Var\[E\[Xi|Y\]\] = E{\[E\[Xi|Y\]\]^2} - {E\[E\[Xi|Y\]\]}^2
+> nên Var\[E\[Xi|Y\]\] = E{\[E\[Xi|Y\]\]²} - {E\[E\[Xi|Y\]\]}²
 >
 >
 >
@@ -296,27 +296,27 @@
 >
 >
 >
-> ⇒ {E\[E\[Xi|Y\]\]}^2 = \[θδ + μ(1-δ)\]^2
+> ⇒ {E\[E\[Xi|Y\]\]}² = \[θδ + μ(1-δ)\]²
 >
 >
 >
-> iib) Tính E{\[E\[Xi|Y\]\]^2}, tương tự, \[E\[Xi|Y\]\]^2 là random variable có được bởi việc áp hàm \[E\[Xi|y\]\]^2 lên random variable Y, theo LOTUS ta có:
+> iib) Tính E{\[E\[Xi|Y\]\]²}, tương tự, \[E\[Xi|Y\]\]² là random variable có được bởi việc áp hàm \[E\[Xi|y\]\]² lên random variable Y, theo LOTUS ta có:
 >
 >
 >
-> E{\[E\[Xi|Y\]\]^2}
+> E{\[E\[Xi|Y\]\]²}
 >
 >
 >
-> = \[E\[Xi|Y=1\]\]^2 × P(Y=1) + \[E\[Xi|Y=0\]\]^2 × P(Y=0)
+> = \[E\[Xi|Y=1\]\]² × P(Y=1) + \[E\[Xi|Y=0\]\]² × P(Y=0)
 >
 >
 >
-> = (θ)^2 × δ + (μ)^2 × (1-δ)
+> = (θ)² × δ + (μ)² × (1-δ)
 >
 >
 >
-> = δ(θ)^2 + (1-δ)(μ)^2
+> = δ(θ)² + (1-δ)(μ)²
 >
 >
 >
@@ -324,43 +324,43 @@
 >
 >
 >
-> δ(θ^2) + (1-δ)(μ)^2 - \[θδ + μ(1-δ)\]^2
+> δ(θ²) + (1-δ)(μ)² - \[θδ + μ(1-δ)\]²
 >
 >
 >
-> = δ(θ^2) + (1-δ) μ² - δ^2θ^2 - μ² (1-δ)^2 - 2θδμ(1-δ)
+> = δ(θ²) + (1-δ) μ² - δ²θ² - μ² (1-δ)² - 2θδμ(1-δ)
 >
 >
 >
-> = δ(θ^2) - δ^2θ^2 + μ²\[1 - δ - (1-δ)^2\] - 2θδμ(1-δ)
+> = δ(θ²) - δ²θ² + μ²\[1 - δ - (1-δ)²\] - 2θδμ(1-δ)
 >
 >
 >
-> = δ(θ^2)(1 - δ) + μ²\[1 - δ - 1 - δ^2 + 2δ\] - 2θδμ(1-δ)
+> = δ(θ²)(1 - δ) + μ²\[1 - δ - 1 - δ² + 2δ\] - 2θδμ(1-δ)
 >
 >
 >
-> = δ(θ^2)(1 - δ) + μ²(δ - δ^2) - 2θδμ(1-δ)
+> = δ(θ²)(1 - δ) + μ²(δ - δ²) - 2θδμ(1-δ)
 >
 >
 >
-> = δ(θ^2)(1 - δ) + μ²δ(1 - δ) - 2θδμ(1 - δ)
+> = δ(θ²)(1 - δ) + μ²δ(1 - δ) - 2θδμ(1 - δ)
 >
 >
 >
-> = (1 - δ) \[δ(θ^2) + μ²δ - 2θδμ\]
+> = (1 - δ) \[δ(θ²) + μ²δ - 2θδμ\]
 >
 >
 >
-> = (1 - δ) δ (θ^2 + μ² - 2θμ)
+> = (1 - δ) δ (θ² + μ² - 2θμ)
 >
 >
 >
-> = (1 - δ) δ (θ - μ)^2 
+> = (1 - δ) δ (θ - μ)² 
 >
 >
 >
-> Vậy kết luận Var(Xi) = (1-δ) σ² + δ τ² + (1 - δ) δ (θ - μ)^2 
+> Vậy kết luận Var(Xi) = (1-δ) σ² + δ τ² + (1 - δ) δ (θ - μ)² 
 >
 >
 >
@@ -368,7 +368,7 @@
 >
 >
 >
-> ⇒ Var(X̄) = (1-δ) σ²/n + δ τ²/n + (1 - δ) δ (θ - μ)^2/n
+> ⇒ Var(X̄) = (1-δ) σ²/n + δ τ²/n + (1 - δ) δ (θ - μ)²/n
 >
 >
 >
@@ -382,7 +382,7 @@
 >
 >
 >
-> ≈ (1-δ) σ²/n + δ τ²/n + 0  (do θ ≈ μ nên (1 - δ) δ (θ - μ)^2/n ≈ 0)
+> ≈ (1-δ) σ²/n + δ τ²/n + 0  (do θ ≈ μ nên (1 - δ) δ (θ - μ)²/n ≈ 0)
 >
 >
 >
@@ -630,7 +630,7 @@
 >
 >
 >
-> Từ đó ta sẽ có thể có P(√n(Mn - μ) ≤ a) → P(Z ≥ cái gì đó), và từ vào đây ta sẽ cố gắng đưa vế phải về dạng P(something × Z ≤ a) để kết luận √n(Mn - μ) converge in distriution về \[something\] × Z, và nó cũng là một normal có variance là \[something\]^2, giúp kết luận Avar(Mn) theo định nghĩa.
+> Từ đó ta sẽ có thể có P(√n(Mn - μ) ≤ a) → P(Z ≥ cái gì đó), và từ vào đây ta sẽ cố gắng đưa vế phải về dạng P(something × Z ≤ a) để kết luận √n(Mn - μ) converge in distriution về \[something\] × Z, và nó cũng là một normal có variance là \[something\]², giúp kết luận Avar(Mn) theo định nghĩa.
 >
 >
 >
@@ -710,11 +710,11 @@
 >
 >
 >
-> Và theo location scale family, đây là normal(0, \[1/2f(μ)\]^2)
+> Và theo location scale family, đây là normal(0, \[1/2f(μ)\]²)
 >
 >
 >
-> Vậy limit distribution của √n(Mn - μ) là normal(0, \[1/2f(μ)\]^2), nên theo định nghĩa của phương sai tiệm cận, ta nói Avar(Mn) = \[1/2f(μ)\]^2.
+> Vậy limit distribution của √n(Mn - μ) là normal(0, \[1/2f(μ)\]²), nên theo định nghĩa của phương sai tiệm cận, ta nói Avar(Mn) = \[1/2f(μ)\]².
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -732,7 +732,7 @@
 <p align="center"><kbd><img src="assets/uxey1bhs0hc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> và như vậy, khi ta đã có Avar(Mn) = \[1/2f(μ)\]^2, với f(μ) là pdf của Xi tại population median μ.
+> và như vậy, khi ta đã có Avar(Mn) = \[1/2f(μ)\]², với f(μ) là pdf của Xi tại population median μ.
 >
 >
 >
@@ -744,7 +744,7 @@
 >
 >
 >
-> = (σ²)/\[1/2f(μ)\]^2
+> = (σ²)/\[1/2f(μ)\]²
 >
 >
 >
@@ -786,7 +786,7 @@
 >
 >
 >
-> Bên cạnh đó, sample mean X̄, hay diễn ta rằng nó cũng là một estimator, là hàm của sample, ta viết X̄(𝐗). Thì thật ra nó cũng là kết quả của bài toán tối ưu sau: minimize (over W) Σi (W - Xi)^2. Cái này dễ thấy, dùng ngôn ngữ tối ưu, đây là bài toán tối ưu hàm quadratic function của W, là bài toán lồi. Dùng đìều kiện tối ưu bậc một ta có d/dW \[Σi (W - Xi)^2\] = 0 ⇔ Σi \[d/dW (W - Xi)^2\] = 0 ⇔ Σi \[2(W - Xi)\] = 0 ⇔ nW - ΣiXi = 0 ⇔ W = (ΣiXi)/n chính là sample mean X̄(𝐗)
+> Bên cạnh đó, sample mean X̄, hay diễn ta rằng nó cũng là một estimator, là hàm của sample, ta viết X̄(𝐗). Thì thật ra nó cũng là kết quả của bài toán tối ưu sau: minimize (over W) Σi (W - Xi)². Cái này dễ thấy, dùng ngôn ngữ tối ưu, đây là bài toán tối ưu hàm quadratic function của W, là bài toán lồi. Dùng đìều kiện tối ưu bậc một ta có d/dW \[Σi (W - Xi)²\] = 0 ⇔ Σi \[d/dW (W - Xi)²\] = 0 ⇔ Σi \[2(W - Xi)\] = 0 ⇔ nW - ΣiXi = 0 ⇔ W = (ΣiXi)/n chính là sample mean X̄(𝐗)
 >
 >
 >
@@ -794,7 +794,7 @@
 >
 >
 >
-> Vậy khi minimize (sum) **square** của (W - Xi)^2 thì ta có sample mean
+> Vậy khi minimize (sum) **square** của (W - Xi)² thì ta có sample mean
 >
 >
 >
@@ -824,7 +824,7 @@
 >
 >
 >
-> với ρ(x) = (1/2)x^2 khi |x| ≤ k và = k|x| - (1/2)k^2 khi |x| ≥ k
+> với ρ(x) = (1/2)x² khi |x| ≤ k và = k|x| - (1/2)k² khi |x| ≥ k
 >
 >
 >
@@ -858,7 +858,7 @@
 >
 >
 >
-> Phải nói chút xíu chỗ này: Nên nhớ, sample mean, sample median đều là estimator, là function của sample W(𝐗), với W là hàm số nào đó. Và như đã nói ở note trước, chúng thực chất là kết quả của việc giải bài toán tối ưu với tiêu chí khác nhau. Nên cụ thể là với sample mean, W(𝐗) = (Σi Xi)/n, cũng được, mà ghi là argmin_W {Σi (W - Xi)^2} cũng được luôn.
+> Phải nói chút xíu chỗ này: Nên nhớ, sample mean, sample median đều là estimator, là function của sample W(𝐗), với W là hàm số nào đó. Và như đã nói ở note trước, chúng thực chất là kết quả của việc giải bài toán tối ưu với tiêu chí khác nhau. Nên cụ thể là với sample mean, W(𝐗) = (Σi Xi)/n, cũng được, mà ghi là argmin_W {Σi (W - Xi)²} cũng được luôn.
 >
 >
 >
@@ -874,7 +874,7 @@
 >
 >
 >
-> sample mean: argmin_W {Σi (W - xi)^2}, hay (Σi xi)/n và tính ra là 1.33
+> sample mean: argmin_W {Σi (W - xi)²}, hay (Σi xi)/n và tính ra là 1.33
 >
 >
 >
@@ -1108,7 +1108,7 @@
 >
 >
 >
-> \-1/√n(....) hội tụ in distribution về n(0, E\_θ0\[ψ(Xi - θ0\]^2).
+> \-1/√n(....) hội tụ in distribution về n(0, E\_θ0\[ψ(Xi - θ0\]²).
 >
 >
 >
@@ -1179,15 +1179,15 @@
 >
 >
 >
-> Còn Var(Y1)? Với việc EY1 = 0, thì Var(Y1) chỉ còn bằng E\[Y1^2\] (vì Var(Y1) theo công thức thứ 2 của variance, = E\[Y1^2) - \[E(Y1)\]^2 = E\[Y1^2) - 0^2 = E\[Y1^2\])
+> Còn Var(Y1)? Với việc EY1 = 0, thì Var(Y1) chỉ còn bằng E\[Y1²\] (vì Var(Y1) theo công thức thứ 2 của variance, = E\[Y1²) - \[E(Y1)\]² = E\[Y1²) - 0² = E\[Y1²\])
 >
 >
 >
-> Nên Var(Y1) = E\[Y1^2\] = E\[(ψ(Xi - θ0))^2\], tương tự, đây cũng là hàm theo θ0. ta ghi E\_θ0\[(ψ(Xi - θ0))^2\]
+> Nên Var(Y1) = E\[Y1²\] = E\[(ψ(Xi - θ0))²\], tương tự, đây cũng là hàm theo θ0. ta ghi E\_θ0\[(ψ(Xi - θ0))²\]
 >
 >
 >
-> Tới đây, với Y1,...Yn có mean = 0, variance = E\_θ0\[(ψ(Xi - θ0))^2\], và sample mean Ybar. Áp dụng CLT (Central Limit Theorem) cho phép ta có:
+> Tới đây, với Y1,...Yn có mean = 0, variance = E\_θ0\[(ψ(Xi - θ0))²\], và sample mean Ybar. Áp dụng CLT (Central Limit Theorem) cho phép ta có:
 >
 >
 >
@@ -1195,11 +1195,11 @@
 >
 >
 >
-> √n(Ybar - 0) / √E\_θ0\[(ψ(Xi - θ0))^2\] → (d) n(0,1) 
+> √n(Ybar - 0) / √E\_θ0\[(ψ(Xi - θ0))²\] → (d) n(0,1) 
 >
 >
 >
-> ⇔ √n(Ybar) / √E\_θ0\[(ψ(Xi - θ0))^2\] → (d) n(0,1) 
+> ⇔ √n(Ybar) / √E\_θ0\[(ψ(Xi - θ0))²\] → (d) n(0,1) 
 >
 >
 >
@@ -1207,7 +1207,7 @@
 >
 >
 >
-> Mà true variance, √E\_θ0\[(ψ(Xi - θ0))^2\], dĩ nhiên chỉ là constant, nên sẽ converge (in probability) về chính nó
+> Mà true variance, √E\_θ0\[(ψ(Xi - θ0))²\], dĩ nhiên chỉ là constant, nên sẽ converge (in probability) về chính nó
 >
 >
 >
@@ -1215,19 +1215,19 @@
 >
 >
 >
-> Do đó -√E\_θ0\[(ψ(Xi - θ0))^2\] × (√n(Ybar) / √E\_θ0\[(ψ(Xi - θ0))^2\]) → (d) (-√E\_θ0\[(ψ(Xi - θ0))^2\]) × Z với Z \~ n(0,1))
+> Do đó -√E\_θ0\[(ψ(Xi - θ0))²\] × (√n(Ybar) / √E\_θ0\[(ψ(Xi - θ0))²\]) → (d) (-√E\_θ0\[(ψ(Xi - θ0))²\]) × Z với Z \~ n(0,1))
 >
 >
 >
-> ⇔ -√n(Ybar) → (d) √E\_θ0\[(ψ(Xi - θ0))^2\] × Z với Z \~ n(0,1)), và theo location scale theorem, với Z là normal (0,1) thì αZ sẽ là normal(0, α^2). Vậy ta có:
+> ⇔ -√n(Ybar) → (d) √E\_θ0\[(ψ(Xi - θ0))²\] × Z với Z \~ n(0,1)), và theo location scale theorem, với Z là normal (0,1) thì αZ sẽ là normal(0, α²). Vậy ta có:
 >
 >
 >
-> \-√n(Ybar) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))^2\])
+> \-√n(Ybar) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))²\])
 >
 >
 >
-> Thay Ybar = (1/n) Σi ψ(Xi - θ0), ta có: -√n(1/n)(Σi ψ(Xi - θ0)) = (1/√n)(Σi ψ(Xi - θ0)) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))^2\])
+> Thay Ybar = (1/n) Σi ψ(Xi - θ0), ta có: -√n(1/n)(Σi ψ(Xi - θ0)) = (1/√n)(Σi ψ(Xi - θ0)) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))²\])
 >
 >
 >
@@ -1235,11 +1235,11 @@
 >
 >
 >
->  -(1/√n)(Σi ψ(Xi - θ0)) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))^2\])
+>  -(1/√n)(Σi ψ(Xi - θ0)) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))²\])
 >
 >
 >
->  ⇔ √n(-1/n)(Σi ψ(Xi - θ0)) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))^2\])
+>  ⇔ √n(-1/n)(Σi ψ(Xi - θ0)) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))²\])
 >
 >
 >
@@ -1279,7 +1279,7 @@
 >
 >
 >
->  √n(-1/n)(Σi ψ(Xi - θ0)) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))^2\])
+>  √n(-1/n)(Σi ψ(Xi - θ0)) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))²\])
 >
 >
 >
@@ -1291,7 +1291,7 @@
 >
 >
 >
-> √n(-1/n)(Σi ψ(Xi - θ0)) / (1/n) Σi ψ'(Xi - θ0) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))^2\]) / E\_θ0\[ψ'(Xi - θ0)\]
+> √n(-1/n)(Σi ψ(Xi - θ0)) / (1/n) Σi ψ'(Xi - θ0) → (d) n(0, E\_θ0\[(ψ(Xi - θ0))²\]) / E\_θ0\[ψ'(Xi - θ0)\]
 >
 >
 >
@@ -1299,11 +1299,11 @@
 >
 >
 >
-> Vế phải theo location scale theorem, chính là n(0, E\_θ0\[(ψ(Xi - θ0))^2\] / {E\_θ0\[ψ'(Xi - θ0)\]}^2)
+> Vế phải theo location scale theorem, chính là n(0, E\_θ0\[(ψ(Xi - θ0))²\] / {E\_θ0\[ψ'(Xi - θ0)\]}²)
 >
 >
 >
-> Vậy ta có: √n (θ^M - θ0) converge in distribution về n(0, E\_θ0\[(ψ(Xi - θ0))^2\] / {E\_θ0\[ψ'(Xi - θ0)\]}^2)
+> Vậy ta có: √n (θ^M - θ0) converge in distribution về n(0, E\_θ0\[(ψ(Xi - θ0))²\] / {E\_θ0\[ψ'(Xi - θ0)\]}²)
 >
 >
 >
@@ -1405,7 +1405,7 @@
 >
 >
 >
-> √n (θ^M - θ0) converge in distribution về n(0, E\_θ0\[(ψ(Xi - θ0))^2\] / {E\_θ0\[ψ'(Xi - θ0)\]}^2)
+> √n (θ^M - θ0) converge in distribution về n(0, E\_θ0\[(ψ(Xi - θ0))²\] / {E\_θ0\[ψ'(Xi - θ0)\]}²)
 >
 >
 >
@@ -1413,7 +1413,7 @@
 >
 >
 >
-> √n (θ^M - θ0) xấp xỉ một random variable Z với Z \~ n(0, E\_θ0\[(ψ(Xi - θ0))^2\] / {E\_θ0\[ψ'(Xi - θ0)\]}^2)
+> √n (θ^M - θ0) xấp xỉ một random variable Z với Z \~ n(0, E\_θ0\[(ψ(Xi - θ0))²\] / {E\_θ0\[ψ'(Xi - θ0)\]}²)
 >
 >
 >
@@ -1421,7 +1421,7 @@
 >
 >
 >
-> Và theo location scale thì Z/√n + θ0 sẽ \~ n(θ0, (1/n) E\_θ0\[(ψ(Xi - θ0))^2\] / {E\_θ0\[ψ'(Xi - θ0)\]}^2)
+> Và theo location scale thì Z/√n + θ0 sẽ \~ n(θ0, (1/n) E\_θ0\[(ψ(Xi - θ0))²\] / {E\_θ0\[ψ'(Xi - θ0)\]}²)
 >
 >
 >
@@ -1487,11 +1487,11 @@
 >
 >
 >
-> √n (θ^M - θ0) converge in distribution về n(0, E\_θ0\[(ψ(Xi - θ0))^2\] / {E\_θ0\[ψ'(Xi - θ0)\]}^2) 
+> √n (θ^M - θ0) converge in distribution về n(0, E\_θ0\[(ψ(Xi - θ0))²\] / {E\_θ0\[ψ'(Xi - θ0)\]}²) 
 >
 >
 >
-> và từ cái này ta có Avar(θ^M) = E\_θ0\[(ψ(Xi - θ0))^2\] / {E\_θ0\[ψ'(Xi - θ0)\]}^2
+> và từ cái này ta có Avar(θ^M) = E\_θ0\[(ψ(Xi - θ0))²\] / {E\_θ0\[ψ'(Xi - θ0)\]}²
 >
 >
 >
@@ -1503,11 +1503,11 @@
 >
 >
 >
->  Và như vậy ARE(θ^M, θ^) = E\_θ(\[ψ(X - θ)l'(θ|X)\]^2) / E\_θ(\[ψ'(Xi - θ)\]^2) E\_θ(\[l'(X-θ)\]^2)
+>  Và như vậy ARE(θ^M, θ^) = E\_θ(\[ψ(X - θ)l'(θ|X)\]²) / E\_θ(\[ψ'(Xi - θ)\]²) E\_θ(\[l'(X-θ)\]²)
 >
 >
 >
-> và cái này có dạng \[E(AB)\]^2 / E\[(A^2) (B^2)\], nên theo bất đẳng thức Cauchy: \[E(AB)\]^2 ≤ E\[(A^2) (B^2)\] khiến tỉ số này luôn nhỏ hơn hoặc bằng 1. Từ đó kết luận là: M-estimator luôn kém hiệu quả hơn MLE. Và nó chỉ bằng khi hàm ψ tỉ lệ thuận với l' (cái này được giao trong bài tập)
+> và cái này có dạng \[E(AB)\]² / E\[(A²) (B²)\], nên theo bất đẳng thức Cauchy: \[E(AB)\]² ≤ E\[(A²) (B²)\] khiến tỉ số này luôn nhỏ hơn hoặc bằng 1. Từ đó kết luận là: M-estimator luôn kém hiệu quả hơn MLE. Và nó chỉ bằng khi hàm ψ tỉ lệ thuận với l' (cái này được giao trong bài tập)
 >
 >
 >
@@ -1643,7 +1643,7 @@
 >
 >
 >
-> Như vậy quay lại công thức Avar(θ^M) = E\_θ\[(ψ(Xi - θ))^2\] / {E\_θ\[ψ'(Xi - θ)\]}^2
+> Như vậy quay lại công thức Avar(θ^M) = E\_θ\[(ψ(Xi - θ))²\] / {E\_θ\[ψ'(Xi - θ)\]}²
 >
 >
 >
@@ -1651,7 +1651,7 @@
 >
 >
 >
-> Avar(θ^M) = E\_θ\[(ψ(Xi - θ))^2\] / {E\_θ\[ψ(X-θ) l'(θ|X)\]}^2 
+> Avar(θ^M) = E\_θ\[(ψ(Xi - θ))²\] / {E\_θ\[ψ(X-θ) l'(θ|X)\]}² 
 >
 >
 >
@@ -1663,11 +1663,11 @@
 >
 >
 >
-> = 1/E\[l'(θ|X)^2\]
+> = 1/E\[l'(θ|X)²\]
 >
 >
 >
-> Do đó ARE(θ^M, θ^) =  (E\_θ\[ψ(X - θ)l'(θ|X)\])^2 / E\_θ0{\[ψ'(Xi - θ0)\]^2} E\_θ(\[l'(X-θ)\]^2)
+> Do đó ARE(θ^M, θ^) =  (E\_θ\[ψ(X - θ)l'(θ|X)\])² / E\_θ0{\[ψ'(Xi - θ0)\]²} E\_θ(\[l'(X-θ)\]²)
 >
 >
 >
