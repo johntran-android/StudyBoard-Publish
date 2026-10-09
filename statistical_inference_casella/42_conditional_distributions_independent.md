@@ -369,7 +369,7 @@
 >
 >
 >
-> mà f(x,y) bằng e^-y khi x &lt; y inf, còn khi x &lt; 0 hoặc 0 &lt; x nhưng 0 &lt; y &lt; x thì f(x, y) = 0 (định nghĩa của f(x,y) như vậy thì có nghĩa là khi thỏa điều kiện 0 &lt; x &lt; y thì f(x,y) = e^-y còn nếu không thỏa thì f(x,y) = 0, tập xác định vẫn là R^2 (x ∈ (-inf,inf), y ∈ (-inf:inf))
+> mà f(x,y) bằng e^-y khi x &lt; y inf, còn khi x &lt; 0 hoặc 0 &lt; x nhưng 0 &lt; y &lt; x thì f(x, y) = 0 (định nghĩa của f(x,y) như vậy thì có nghĩa là khi thỏa điều kiện 0 &lt; x &lt; y thì f(x,y) = e^-y còn nếu không thỏa thì f(x,y) = 0, tập xác định vẫn là R² (x ∈ (-inf,inf), y ∈ (-inf:inf))
 >
 >
 >
@@ -461,7 +461,7 @@
 >
 >
 >
-> Thế thì, variance, có công thức (thứ hai) là Var(Y) = EY^2 - (EY)^2
+> Thế thì, variance, có công thức (thứ hai) là Var(Y) = EY² - (EY)²
 >
 >
 >
@@ -473,31 +473,31 @@
 >
 >
 >
-> Var(Y|X=x) = E(Y^2|x) - \[E(Y|x)\]^2
+> Var(Y|X=x) = E(Y²|x) - \[E(Y|x)\]²
 >
 >
 >
-> Với E(Y^2|x) áp dùng công thức vừa rồi Eg(Y)|x = ∫-inf:inf g(y)fY|X(y|x)dx
+> Với E(Y²|x) áp dùng công thức vừa rồi Eg(Y)|x = ∫-inf:inf g(y)fY|X(y|x)dx
 >
 >
 >
-> = ∫-inf:inf y^2 e^-(y-x)dy, để tính tích phân này lại dùng integration by part
+> = ∫-inf:inf y² e^-(y-x)dy, để tính tích phân này lại dùng integration by part
 >
 >
 >
-> = ∫x:inf y^2 e^-(y-x)dy | nhắc lại ko thừa, vì condition pdf fY|X(y|x) = 0 khi y &lt; x nên thu hẹp cận của tích phân lại
+> = ∫x:inf y² e^-(y-x)dy | nhắc lại ko thừa, vì condition pdf fY|X(y|x) = 0 khi y &lt; x nên thu hẹp cận của tích phân lại
 >
 >
 >
-> Đặt u = y^2 ⇨ du = 2ydy, dv = e^-(y-x)dy ⇨ v = -e^-(y-x)
+> Đặt u = y² ⇨ du = 2ydy, dv = e^-(y-x)dy ⇨ v = -e^-(y-x)
 >
 >
 >
-> ⇨ ta có .. = y^2\[-e^-(y-x)\]|x:inf - ∫x:inf -e^-(y-x) 2ydy
+> ⇨ ta có .. = y²\[-e^-(y-x)\]|x:inf - ∫x:inf -e^-(y-x) 2ydy
 >
 >
 >
-> = y^2\[-e^-(y-x)\]|x:inf +2 ∫x:inf y e^-(y-x) dy
+> = y²\[-e^-(y-x)\]|x:inf +2 ∫x:inf y e^-(y-x) dy
 >
 >
 >
@@ -505,31 +505,31 @@
 >
 >
 >
-> Còn term 1: y → inf ⇨ e^-(y-x) → e^-inf = 0 ⇨ y^2\[-e^-(y-x)\] → 0
+> Còn term 1: y → inf ⇨ e^-(y-x) → e^-inf = 0 ⇨ y²\[-e^-(y-x)\] → 0
 >
 >
 >
-> y → x ⇨ y^2\[-e^-(y-x)\] → x^2\[-e^0\] = -x^2
+> y → x ⇨ y²\[-e^-(y-x)\] → x²\[-e^0\] = -x²
 >
 >
 >
-> ⇨ term 1 = 0 - (- x^2) = x^2
+> ⇨ term 1 = 0 - (- x²) = x²
 >
 >
 >
-> Vậy tích phân = x^2 + 2(1+x) = x^2 + 2 + 2x
+> Vậy tích phân = x² + 2(1+x) = x² + 2 + 2x
 >
 >
 >
-> Còn cái \[E(Y|x)\]^2 = (1 + x)^2 = 1 + x^2 + 2x
+> Còn cái \[E(Y|x)\]² = (1 + x)² = 1 + x² + 2x
 >
 >
 >
-> Vậy Var(Y) = x^2 + 2 + 2x - \[1 + x^2 + 2x\]
+> Vậy Var(Y) = x² + 2 + 2x - \[1 + x² + 2x\]
 >
 >
 >
-> = x^2 + 2 + 2x - 1 - x^2 - 2x
+> = x² + 2 + 2x - 1 - x² - 2x
 >
 >
 >
@@ -581,11 +581,11 @@
 >
 >
 >
-> Γ(2, 1) có pdf = \[1/Γ(2)1^2\] y^(2-1) e^-y/1 = y^2 e^-y / Γ(2)
+> Γ(2, 1) có pdf = \[1/Γ(2)1²\] y^(2-1) e^-y/1 = y² e^-y / Γ(2)
 >
 >
 >
-> = y^2 e^-y / \[1Γ(1)\] = **y^2 e^-y**
+> = y² e^-y / \[1Γ(1)\] = **y² e^-y**
 >
 >
 >
@@ -772,7 +772,7 @@
 >
 >
 >
-> với X = g(Z) = σZ + μ ⇨ Z = ginv(X) = (X - μ) / σ
+> với X = g(Z) = σZ + μ ⇨ Z = g⁻¹(X) = (X - μ) / σ
 >
 >
 >
@@ -780,11 +780,11 @@
 >
 >
 >
-> fX(x) = fZ(z) dz/dx = f(z) d ginv(x)dx = f(ginv(x)) d/dx ginv(x)
+> fX(x) = fZ(z) dz/dx = f(z) d g⁻¹(x)dx = f(g⁻¹(x)) d/dx g⁻¹(x)
 >
 >
 >
-> ginv(x) = (x - μ) / σ, d/dx ginv(x) = d/dx (x - μ) / σ = 1 / σ
+> g⁻¹(x) = (x - μ) / σ, d/dx g⁻¹(x) = d/dx (x - μ) / σ = 1 / σ
 >
 >
 >
@@ -1611,7 +1611,7 @@
 >
 >
 >
-> Còn E(X^2Y)?
+> Còn E(X²Y)?
 >
 >
 >
@@ -1619,11 +1619,11 @@
 >
 >
 >
-> ⇨ E(X^2Y) = EX^2 EY
+> ⇨ E(X²Y) = EX² EY
 >
 >
 >
-> EX^2 thì dùng công thức VarX = EX^2 - (EX)^2 ⇨ EX^2 = VarX + (EX)^2
+> EX² thì dùng công thức VarX = EX² - (EX)² ⇨ EX² = VarX + (EX)²
 > thế EX, VarX, EY vào thôi vì cho X, Y là Expo(1) ta nhớ với expo(λ) thì
 > expected value và variance đều là λ ⇨ kết quả là (1 + 1)1 = 2
 >
@@ -1738,7 +1738,7 @@
 <p align="center"><kbd><img src="assets/huppvcj2mu6.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ứng dụng theorem vừa rồi vào X ~ normal(μ1, σ1^2)  và Y~ normal(μ2, σ2^2)
+> Ứng dụng theorem vừa rồi vào X ~ normal(μ1, σ1²)  và Y~ normal(μ2, σ2²)
 >
 >
 >
@@ -1746,7 +1746,7 @@
 >
 >
 >
-> Với X ~ normal(μ, σ²) thì MX(t) = exp(μt + σ²t^2/2).
+> Với X ~ normal(μ, σ²) thì MX(t) = exp(μt + σ²t²/2).
 >
 >
 >
