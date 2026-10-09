@@ -128,7 +128,7 @@
 >
 >
 >
-> MX(t)|t=2 = E\[e^2X\]
+> MX(t)|t=2 = E\[e²X\]
 >
 >
 >
@@ -385,19 +385,19 @@
 >
 >
 >
-> ⇨ (X1 - X̄)^2 = [Σi=2:n (Xi - X̄)]^2
+> ⇨ (X1 - X̄)² = [Σi=2:n (Xi - X̄)]²
 >
 >
 >
-> S² = [1/(n-1)] Σi (Xi - X̄)^2
+> S² = [1/(n-1)] Σi (Xi - X̄)²
 >
 >
 >
-> = [1/(n-1)] [(X1 - X̄)^2 + Σi=2:n (Xi - X̄)^2]
+> = [1/(n-1)] [(X1 - X̄)² + Σi=2:n (Xi - X̄)²]
 >
 >
 >
-> = [1/(n-1)] [[Σi=2:n (Xi - X̄)]^2 + Σi=2:n (Xi - X̄)^2]
+> = [1/(n-1)] [[Σi=2:n (Xi - X̄)]² + Σi=2:n (Xi - X̄)²]
 >
 >
 >
@@ -446,23 +446,23 @@
 >
 >
 >
-> fX1(x) = [1/√(2π)] e^-x^2 / 2
+> fX1(x) = [1/√(2π)] e^-x² / 2
 >
 >
 >
-> ⇨ f(x1,...xn) = Πi=1:n [1/√(2π)] e^-xi^2 / 2
+> ⇨ f(x1,...xn) = Πi=1:n [1/√(2π)] e^-xi² / 2
 >
 >
 >
-> = [1/√(2π)]^n Πi=1:n e^-xi^2 / 2
+> = [1/√(2π)]^n Πi=1:n e^-xi² / 2
 >
 >
 >
-> = [1/√(2π)]^n e^[Σi=1:n -xi^2 / 2]
+> = [1/√(2π)]^n e^[Σi=1:n -xi² / 2]
 >
 >
 >
-> = [1/√(2π)]^n e^[(1/2)Σi=1:n -xi^2]
+> = [1/√(2π)]^n e^[(1/2)Σi=1:n -xi²]
 >
 >
 >
@@ -567,7 +567,7 @@
 >
 >
 >
-> f𝐘(y1, y2,..yn) = f𝐗(x1,x2...xn) | J | = [1/√(2π)]^n e^[(1/2)Σi=1:n -xi^2] n
+> f𝐘(y1, y2,..yn) = f𝐗(x1,x2...xn) | J | = [1/√(2π)]^n e^[(1/2)Σi=1:n -xi²] n
 >
 >
 >
@@ -579,19 +579,19 @@
 >
 >
 >
-> ... = [1/√(2π)]^n e^[(1/2)Σi=1:n -xi^2] n
+> ... = [1/√(2π)]^n e^[(1/2)Σi=1:n -xi²] n
 >
 >
 >
-> = (n/[√(2π)]^n) e^[(1/2)Σi=1:n -xi^2]
+> = (n/[√(2π)]^n) e^[(1/2)Σi=1:n -xi²]
 >
 >
 >
-> = (n/[√(2π)]^n) e^(1/2)[-x1^2 + Σi=2:n -xi^2]
+> = (n/[√(2π)]^n) e^(1/2)[-x1² + Σi=2:n -xi²]
 >
 >
 >
-> = (n/[√(2π)]^n) e^(-1/2)[x1^2 + Σi=2:n xi^2]
+> = (n/[√(2π)]^n) e^(-1/2)[x1² + Σi=2:n xi²]
 >
 >
 >
@@ -603,7 +603,7 @@
 >
 >
 >
-> = (n/[√(2π)]^n) e^(-1/2)[(y1 - S)^2 + Σi=2:n (yi + y1)^2]
+> = (n/[√(2π)]^n) e^(-1/2)[(y1 - S)² + Σi=2:n (yi + y1)²]
 >
 >
 >
@@ -611,63 +611,63 @@
 >
 >
 >
-> a) (y1 - S)^2 = y1^2 - 2y1S + S²
+> a) (y1 - S)² = y1² - 2y1S + S²
 >
 >
 >
-> b) Σi=2:n (yi + y1)^2 = Σi=2:n (yi^2 + y1^2 + 2yiy1)
+> b) Σi=2:n (yi + y1)² = Σi=2:n (yi² + y1² + 2yiy1)
 >
 >
 >
-> = Σi=2:n yi^2 + Σi=2:n y1^2 + Σi=2:n 2yiy1
+> = Σi=2:n yi² + Σi=2:n y1² + Σi=2:n 2yiy1
 >
 >
 >
-> = Σi=2:n yi^2 + (n-1) y1^2 + 2y1 Σi=2:n yi
+> = Σi=2:n yi² + (n-1) y1² + 2y1 Σi=2:n yi
 >
 >
 >
-> = Σi=2:n yi^2 + (n-1) y1^2 + 2y1S
+> = Σi=2:n yi² + (n-1) y1² + 2y1S
 >
 >
 >
-> ⇨ (y1 - S)^2 + Σi=2:n (yi + y1)^2
+> ⇨ (y1 - S)² + Σi=2:n (yi + y1)²
 >
 >
 >
-> = y1^2 - 2y1S + S² + Σi=2:n yi^2 + (n-1) y1^2 + 2y1S
+> = y1² - 2y1S + S² + Σi=2:n yi² + (n-1) y1² + 2y1S
 >
 >
 >
-> = y1^2 + (n-1) y1^2 + S² + Σi=2:n yi^2 
+> = y1² + (n-1) y1² + S² + Σi=2:n yi² 
 >
 >
 >
-> = n y1^2 + S² + Σi=2:n yi^2 
+> = n y1² + S² + Σi=2:n yi² 
 >
 >
 >
-> = n y1^2 + (Σi=2:n yi)^2 + Σi=2:n yi^2 
+> = n y1² + (Σi=2:n yi)² + Σi=2:n yi² 
 >
 >
 >
-> ⇨ (n/[√(2π)]^n) e^(-1/2)[(y1 - S)^2 + Σi=2:n (yi + y1)^2]
+> ⇨ (n/[√(2π)]^n) e^(-1/2)[(y1 - S)² + Σi=2:n (yi + y1)²]
 >
 >
 >
-> = (n/[√(2π)]^n) e^(-1/2)[n y1^2 + (Σi=2:n yi)^2 + Σi=2:n yi^2 ]
+> = (n/[√(2π)]^n) e^(-1/2)[n y1² + (Σi=2:n yi)² + Σi=2:n yi² ]
 >
 >
 >
-> = (n/[√(2π)]^n)    e^(-1/2)[n y1^2]    e^[(Σi=2:n yi)^2 + Σi=2:n yi^2 ]
+> = (n/[√(2π)]^n)    e^(-1/2)[n y1²]    e^[(Σi=2:n yi)² + Σi=2:n yi² ]
 >
 >
 >
-> là tích của  e^(-1/2)[n y1^2]  chỉ chứa y1
+> là tích của  e^(-1/2)[n y1²]  chỉ chứa y1
 >
 >
 >
-> và e^[(Σi=2:n yi)^2 + Σi=2:n yi^2 ] chỉ chứa y2,...yn
+> và e^[(Σi=2:n yi)² + Σi=2:n yi² ] chỉ chứa y2,...yn
 >
 >
 >
@@ -720,14 +720,18 @@
 
 <p align="center"><kbd><img src="assets/11d0h51r0h5c.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/90bhful9adn.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/6f6c09mgmsv.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > đại khái là ta sẽ lạc đề tí, bàn qua Chi-square một chút trước khi quay lại vì distribution này có tầm quan trọng trong việc triển khai ra pdf của sample variance S².
 >
 >
 >
-> Phần trước mình đã biết qua Chi-square p bậc tự do
+> Phần trước mình đã biết qua Chi-square là một trường hợp đặc biệt của Gamma, có pdf là:
+>
+>
+>
+> f(x) = \[1/Γ(p/2)2^(p/2)\] x^\[(p/2)-1\] e^(-x/2), 0 &lt; x &lt; ∞, p là bậc tự do
 >
 >
 >
@@ -735,15 +739,19 @@
 >
 >
 >
-> Nếu Z là normal (0, 1) thì Z² sẽ là Chi-square 1 bậc tự do, kí hiệu χ²\_1
+> a) Nếu Z là normal (0, 1) thì Z² sẽ là Chi-square 1 bậc tự do, kí hiệu χ²\_1
 >
 >
 >
-> Và nếu ta có X1, X2,....Xn là các Chi-square rv độc lập với các bậc tự do tương ứng Xi \~ χ²\_i, thì **tổng của chúng cũng là Chi-square và bậc tự do thì cộng lại**
+> b) nếu ta có X1, X2,....Xn là các Chi-square rv độc lập với các bậc tự do tương ứng Xi \~ χ²\_pi, thì tổng của chúng cũng là Chi-square và bậc tự do thì cộng lại
 >
 >
 >
-> Phần chứng minh thì đại khái là dựa trên những gì mình đã làm rồi.
+> ---
+>
+>
+>
+> Chứng minh: 
 >
 >
 >
@@ -751,28 +759,82 @@
 >
 >
 >
-> Còn phần b thì dựa trên ví dụ trong chương 4 đã làm để thấy tổng của các Γ cũng là Γ, với tham số cộng lại. Ở đây gs nói vì Chi-square là một loại Γ cụ thể là Γ(p/2, 2) nên dĩ nhiên nó cũng đúng
+> Dùng kết quả của Example 2.1.7, ta có fY(y) = (1/2√y) fX(√y) + (1/2√y) fX(-√y)
+>
+>
+>
+> Nếu X \~ n(0,1), fX(x) = (1/√2π) exp(-x²/2) ⇒ fX(√y) = (1/√2π) exp(-y/2) và fX(-√y) cũng vậy
+>
+>
+>
+> → fY(y) = (1/2√y) (1/√2π) exp(-y/2) + (1/2√y) (1/√2π) exp(-y/2)
+>
+>
+>
+> = (1/√y) (1/√2π) exp(-y/2)
+>
+>
+>
+> = (1/√2π) (1/√y) exp(-y/2) 
+>
+>
+>
+> theo công thức f(x) = \[1/Γ(p/2)2^(p/2)\] x^\[(p/2)-1\] e^(-x/2), 0 &lt; x &lt; ∞, p là bậc tự do
+>
+>
+>
+> thì đây chính là Chi-square với p = 1, χ²\_1:
+>
+>
+>
+> Để thấy rõ, nhắc lại vài tính chất hàm Gamma: Γ(a) = ∫0:inf t^(a-1)e^(-t) dt, Γ(1) = 1, Γ(1/2) = √π
+>
+>
+>
+> \[1/Γ(1/2)2^(1/2)\] x^\[(1/2)-1\] e^(-x/2)
+>
+>
+>
+> = (1/√π√2) (1/√x) e^(-x/2)
+>
+>
+>
+> = (1/√2π) (1/√x) e^(-x/2)
+>
+>
+>
+> ---
+>
+>
+>
+> Bên cạnh đó, ta cũng PDF của Gamma(α, β) = 1/\[Γ(α)β^α\] x^(α-1) e^(-x/β)
+>
+>
+>
+> Nên χ²\_1 chính là Gamma(1/2,2)
+>
+>
+>
+> ---
+>
+>
+>
+> Còn phần b thì dựa trên ví dụ trong chương 4 đã làm để thấy tổng của các Γ cũng là Γ, với tham số cộng lại. Ở đây gs nói vì Chi-square là một loại Γ cụ thể là Γ(p/2, 2) nên dĩ nhiên nó cũng đúng.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú tóm tắt rất tốt động lực dẫn nhập phân phối Chi-bình phương và bản chất của bổ đề cùng hướng chứng minh. Điểm thiếu sót duy nhất là bạn quên ghi rõ điều kiện các biến ngẫu nhiên phải độc lập ở mệnh đề (b).
->
-> **🟡 Minor issues**
->
-> **1.** *"Và nếu ta có X1, X2,....Xn là các Chi-square rv với các bậc tự do tương ứng Xi ~ χ²_i, thì tổng của chúng cũng là Chi-square và bậc tự do thì cộng lại"*
->
-> Ghi chú đã bỏ sót giả thiết quan trọng là các biến ngẫu nhiên X1, ..., Xn phải độc lập với nhau (independent). Nếu không độc lập, tổng của chúng không nhất thiết tuân theo phân phối Chi-bình phương. Ngoài ra, ký hiệu bậc tự do viết là χ²_i thay vì χ²_{p_i} (với p_i là số bậc tự do của từng biến).
->
+> Ghi chú rất xuất sắc, không chỉ tóm tắt chính xác nội dung bổ đề mà còn chủ động giải chi tiết lại phép biến đổi biến ngẫu nhiên và chứng minh tính tương đương giữa Gamma(1/2, 2) và Chi-bình phương 1 bậc tự do.
 >
 > **✓ Strengths**
-> - Nắm rất rõ lý do xuất hiện của đoạn này là bước đệm phục vụ cho việc suy diễn phân phối của phương sai mẫu S^2.
-> - Hiểu chính xác cơ sở chứng minh của cả hai phần: phần (a) dựa trên phép biến đổi biến ngẫu nhiên và phần (b) dựa trên tính chất cộng của các biến ngẫu nhiên Gamma độc lập.
+> - Nắm vững và diễn giải trực quan, chính xác hai tính chất quan trọng của phân phối Chi-bình phương trong Bổ đề 5.3.2.
+> - Tự triển khai đầy đủ và chính xác công thức đạo hàm hàm mật độ qua phép đổi biến Y = X² từ phân phối chuẩn tắc.
+> - Chứng minh mạch lạc sự trùng khớp giữa Chi-square(1) và Gamma(1/2, 2) thông qua giá trị hàm Gamma tại 1/2 là √π.
 >
 > **💡 Deeper notes**
-> - Tính chất cộng của phân phối Gamma chỉ áp dụng khi các biến ngẫu nhiên độc lập và có CÙNG tham số tỉ lệ/scale (ở đây với Chi-bình phương, mọi biến đều có tham số beta = 2 cố định, chỉ khác nhau tham số hình dạng alpha = p_i / 2).
+> - Ở phần (b), tính chất cộng của các biến ngẫu nhiên Gamma (tổng các biến Gamma độc lập là một biến Gamma với shape parameter cộng lại) chỉ đúng khi tất cả các biến đó có cùng scale parameter β. Trong trường hợp Chi-bình phương, điều này luôn thỏa mãn vì mọi χ²_p đều có chung β = 2.
 
-**🔗 See also:** [Đạo hàm PDF của Y=X^2](./21_distribution.md#node-6yi0r3h) · [Tổng biến ngẫu nhiên Gamma](./46_multi_variate_distribution.md#node-08ciur5) · [Đạo hàm phân phối t-Student](#node-5eltn4g) · [Ước lượng Satterthwaite](./72_method_of_finding_estimators.md#node-fosb15b) · [Pooled Estimator and Student t Distribution](./111_2_introduction_one_way_anova.md#node-680r0w1)
+**🔗 See also:** [PDF của Y=X²](./21_distribution.md#node-6yi0r3h) · [Tổng biến ngẫu nhiên Gamma](./46_multi_variate_distribution.md#node-08ciur5) · [Ước lượng Satterthwaite](./72_method_of_finding_estimators.md#node-fosb15b) · [Pooled Estimator and Student t Distribution](./111_2_introduction_one_way_anova.md#node-680r0w1) · [Hàm Gamma và Tính chất](./33_continuous_distribution.md#node-4frhl19) · [Phân phối Chi-squared từ Y=X²](./21_distribution.md#node-f14tr9i) · [Hàm Gamma và Phân phối Gamma](./33_continuous_distribution.md#node-xt1ypib)
 
 <br>
 
@@ -785,15 +847,15 @@
 <p align="center"><kbd><img src="assets/ozwzrjiuv89.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Phần này gs chứng minh vế cuối của theorem : nhắc lại: là nếu X1,...Xn là random sample từ normal(μ, σ²) thì
+> Phần này gs chứng minh vế cuối của theorem: là nếu X1,...Xn là random sample từ normal(μ, σ²) thì
 >
 >
 >
-> c): (n-1)S²/σ sẽ là Chi-square n-1
+> c): (n-1)S²/σ sẽ là Chi-square n-1 (χ²\_n-1)
 >
 >
 >
-> Và ko làm mất tính khái quát ta có thể xét normal (0,1)
+> Ko làm mất tính khái quát ta có thể xét normal (0,1) (vì sao?)
 >
 >
 >
@@ -933,7 +995,7 @@
 >
 >
 >
-> \[√(k/k+1)(X_k+1 - X̄\_k)\]² = **(k/k+1)**(X_k+1 **-** X̄\_k)**² **\~ Chi-square 1**
+> \[√(k/k+1)(X_k+1 - X̄\_k)\]² = **(k/k+1)**(X_k+1 **-** X̄\_k)\*\*² **\~ Chi-square 1**
 >
 >
 >
@@ -1026,7 +1088,7 @@
 >
 >
 >
-> Đại khái nó nói là: cho X1,...Xn là các rv ~ normal(μj, σj^2) j = 1,...n 
+> Đại khái nó nói là: cho X1,...Xn là các rv ~ normal(μj, σj²) j = 1,...n 
 >
 >
 >
@@ -1052,7 +1114,7 @@
 >
 >
 > a)Ui và Vr đọc lập khi và chỉ khi Cov(Ui, Vr) = 0 và hơn nữa  
-> Cov(Ui, Vr) = Σj aijbrj j^2
+> Cov(Ui, Vr) = Σj aijbrj j²
 >
 >
 >
@@ -1099,7 +1161,7 @@
 <p align="center"><kbd><img src="assets/xfe12q43zkg.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đầu tiên giáo sư cho rằng có thể chứng minh bổ đề này với μi = 0, σi^2 = 1
+> đầu tiên giáo sư cho rằng có thể chứng minh bổ đề này với μi = 0, σi² = 1
 > ta sẽ quay lại ý này sau.
 >
 >
@@ -1139,7 +1201,7 @@
 >
 >
 >
-> Tiếp, chứng minh ý thứ hai: Cov(Ui, Vr) = Σj aij brj σj^2
+> Tiếp, chứng minh ý thứ hai: Cov(Ui, Vr) = Σj aij brj σj²
 >
 >
 >
@@ -1179,7 +1241,7 @@
 >
 >
 >
-> ai1br1(X1 - μ1)^2 + ai2br2(X2 - μ2)^2 + ...
+> ai1br1(X1 - μ1)² + ai2br2(X2 - μ2)² + ...
 >
 >
 >
@@ -1191,7 +1253,7 @@
 >
 >
 >
-> = E[Σj=1:n aijbrj (Xj - μj)^2 + Σk=1:n, h=1:n, k≠h aik brh (Xk - μk)(Xh - μh) ]
+> = E[Σj=1:n aijbrj (Xj - μj)² + Σk=1:n, h=1:n, k≠h aik brh (Xk - μk)(Xh - μh) ]
 >
 >
 >
@@ -1199,7 +1261,7 @@
 >
 >
 >
-> = Σj=1:n aijbrj E(Xj - μj)^2 + Σk=1:n, h=1:n, k≠h aik brh E(Xk - μk)(Xh - μh) 
+> = Σj=1:n aijbrj E(Xj - μj)² + Σk=1:n, h=1:n, k≠h aik brh E(Xk - μk)(Xh - μh) 
 >
 >
 >
@@ -1207,11 +1269,11 @@
 >
 >
 >
-> Còn E(Xj - μj)^2 = Var(Xj) = σj^2
+> Còn E(Xj - μj)² = Var(Xj) = σj²
 >
 >
 >
-> ⇨ Cov(Ui, Vr) = Σj=1:n aijbrj σj^2 . Chứng minh xong
+> ⇨ Cov(Ui, Vr) = Σj=1:n aijbrj σj² . Chứng minh xong
 >
 >
 >
@@ -1226,7 +1288,7 @@
 >
 >
 >
-> Ở đây, ta sẽ chứng minh lemma này với μi = 0, σi^2 = 1. 
+> Ở đây, ta sẽ chứng minh lemma này với μi = 0, σi² = 1. 
 >
 >
 >
@@ -1234,7 +1296,7 @@
 >
 >
 >
-> Cho Xj ~ normal(μj, σj^2) độc lập và ta có các Ui, Vr là các random variable
+> Cho Xj ~ normal(μj, σj²) độc lập và ta có các Ui, Vr là các random variable
 > tạo bởi tổ hợp tuyến tính của các rv Xj. Thì chúng sẽ độc lập khi và chỉ khi
 > covariance của chúng bằng 0.
 >
@@ -1249,11 +1311,11 @@
 >
 >
 >
-> Mà covariance của Ui, Vr như đã làm vừa rồi, = Σj=1:n aijbrj σj^2
+> Mà covariance của Ui, Vr như đã làm vừa rồi, = Σj=1:n aijbrj σj²
 >
 >
 >
-> Mà đã nói, ta sẽ đang chứng minh với σi = 1 ⇨ Σj=1:n aijbrj σj^2 = Σj=1:n aijbrj 
+> Mà đã nói, ta sẽ đang chứng minh với σi = 1 ⇨ Σj=1:n aijbrj σj² = Σj=1:n aijbrj 
 >
 >
 >
@@ -1280,7 +1342,7 @@
 >
 >
 >
-> Chứng minh với n = 2 tức là chứng minh: ta có X1 ~ n(μ1 = 0, σ1^2 = 1)  X2 ~ n(0, 1)
+> Chứng minh với n = 2 tức là chứng minh: ta có X1 ~ n(μ1 = 0, σ1² = 1)  X2 ~ n(0, 1)
 >
 >
 >
@@ -1300,7 +1362,7 @@
 >
 >
 >
-> (Mà điều này tương đương Σj=1:n aij brj σj^2 = Σj=1:n aij brj = 0)  thì joint pdf của Ui, Vr sẽ factor, tức
+> (Mà điều này tương đương Σj=1:n aij brj σj² = Σj=1:n aij brj = 0)  thì joint pdf của Ui, Vr sẽ factor, tức
 > chúng độc lập
 >
 >
@@ -1318,18 +1380,18 @@
 >
 >
 >
-> 𝒜 là support set của X,Y, đơn giản là tập (con của R^2, vì (X,Y) là R^2 random variable vector) mà
+> 𝒜 là support set của X,Y, đơn giản là tập (con của R², vì (X,Y) là R² random variable vector) mà
 > trong đó joint pdf của X,Y dương.
 >
 >
 >
 > Dĩ nhiên là thông qua hàm g1, g2, thì U = g1(X,Y), V = g2(X, Y) thì các giá trị khả dĩ (x,y) của X, Y sẽ
-> được map với u,v trong R^2. Nhưng mà ta sẽ chỉ quan tâm tới (x,y) trong 𝒜, vì tại đó mới là nơi "có
+> được map với u,v trong R². Nhưng mà ta sẽ chỉ quan tâm tới (x,y) trong 𝒜, vì tại đó mới là nơi "có
 > thể xảy ra" (ý là giá trị của X,Y)
 >
 >
 >
-> Ảnh của 𝒜 tức là ℬ = {(u,v) ∈ R^2: u = g1(x, y), v = g2(x, y) for some (x,y) ∈ 𝒜}
+> Ảnh của 𝒜 tức là ℬ = {(u,v) ∈ R²: u = g1(x, y), v = g2(x, y) for some (x,y) ∈ 𝒜}
 >
 >
 >
@@ -1341,7 +1403,7 @@
 >
 >
 >
-> (Và điều này không ngăn cản việc có thể có điểm (x,y) khác trong R^2 nằm ngoài 𝒜 được map với
+> (Và điều này không ngăn cản việc có thể có điểm (x,y) khác trong R² nằm ngoài 𝒜 được map với
 > (u,v) nhưng vì tại (x,y) khác này, joint pdf của X,Y = 0 nên ko ảnh hưởng gì, nên theorem chỉ cần
 > mapping 1-1 giữa 𝒜 với ℬ là đủ)
 >
@@ -1420,7 +1482,7 @@
 >
 >
 >
-> = (b2a1 - b1a2) / (a1b2 - b1a2)^2
+> = (b2a1 - b1a2) / (a1b2 - b1a2)²
 >
 >
 >
@@ -1448,31 +1510,31 @@
 >
 >
 >
-> pdf cuả n(0,1) f(x) = [1/√2π] exp{-x1^2/2}
+> pdf cuả n(0,1) f(x) = [1/√2π] exp{-x1²/2}
 >
 >
 >
-> = [1/√2π] exp{-[(b2u - a2v) / (a1b2 - b1a2)]^2/2} [1/√2π] exp{-[(a1v - b1u) / (a1b2 - b1a2)]^2/2} |J|
+> = [1/√2π] exp{-[(b2u - a2v) / (a1b2 - b1a2)]²/2} [1/√2π] exp{-[(a1v - b1u) / (a1b2 - b1a2)]²/2} |J|
 >
 >
 >
-> = [1/2π] exp{-[(b2u - a2v) / (a1b2 - b1a2)]^2/2} exp{-[(a1v - b1u) / (a1b2 - b1a2)]^2/2} |J|
+> = [1/2π] exp{-[(b2u - a2v) / (a1b2 - b1a2)]²/2} exp{-[(a1v - b1u) / (a1b2 - b1a2)]²/2} |J|
 >
 >
 >
-> = [1/2π] exp{ -(1/2) [(b2u - a2v) / (a1b2 - b1a2)]^2 + [(a1v - b1u) / (a1b2 - b1a2)]^2 }  |J|
+> = [1/2π] exp{ -(1/2) [(b2u - a2v) / (a1b2 - b1a2)]² + [(a1v - b1u) / (a1b2 - b1a2)]² }  |J|
 >
 >
 >
-> = [1/2π] exp{ -1 / [2(a1b2 - b1a2)^2] [(b2u - a2v)^2 + (a1v - b1u)^2] } |J| (1)
+> = [1/2π] exp{ -1 / [2(a1b2 - b1a2)²] [(b2u - a2v)² + (a1v - b1u)²] } |J| (1)
 >
 >
 >
-> Xét [(b2u - a2v)^2 + (a1v - b1u)^2]
+> Xét [(b2u - a2v)² + (a1v - b1u)²]
 >
 >
 >
-> triển khai ra ta sẽ có (b1^2 + b2^2)u^2 + (a1^2 + a2^2)v^2 - **2(a1b1 + a2b2)uv**
+> triển khai ra ta sẽ có (b1² + b2²)u² + (a1² + a2²)v² - **2(a1b1 + a2b2)uv**
 >
 >
 >
@@ -1480,16 +1542,16 @@
 >
 >
 >
-> ⇨ chỉ còn (b1^2 + b2^2)u^2 + (a1^2 + a2^2)v^2
+> ⇨ chỉ còn (b1² + b2²)u² + (a1² + a2²)v²
 >
 >
 >
-> Như vậy (1) =  [1/2π] exp{ -1 / [2(a1b2 - b1a2)^2] [(b1^2 + b2^2)**u**^2 + (a1^2 + a2^2)**v**^2] } |J|
+> Như vậy (1) =  [1/2π] exp{ -1 / [2(a1b2 - b1a2)²] [(b1² + b2²)**u**² + (a1² + a2²)**v**²] } |J|
 >
 >
 >
-> = [1/2π] exp{ -1 / [2(a1b2 - b1a2)^2] [(b1^2 + b2^2)**u**^2 } * exp {-1 / [2(a1b2 - b1a2)^2][a1^2 +
-> a2^2)**v**^2] } |J|
+> = [1/2π] exp{ -1 / [2(a1b2 - b1a2)²] [(b1² + b2²)**u**² } * exp {-1 / [2(a1b2 - b1a2)²][a1² +
+> a2²)**v**²] } |J|
 >
 >
 >
@@ -1769,21 +1831,21 @@
 >
 >
 >
-> Còn mẫu, thì bài trước ta đã biết, Sn^2, tức là sample variance của  một
+> Còn mẫu, thì bài trước ta đã biết, Sn², tức là sample variance của  một
 > random sample size n từ normal thì sẽ có tính chất:
 >
 >
 >
-> (n-1) Sn^2 / σ² là một Chi-square n - 1, kí hiệu /X/^2_n-1
+> (n-1) Sn² / σ² là một Chi-square n - 1, kí hiệu /X/²_n-1
 >
 >
 >
-> Vậy thì Sn^2 / σ² dĩ nhiên là có bản chất cũng là (một Chi-square n-1) /
+> Vậy thì Sn² / σ² dĩ nhiên là có bản chất cũng là (một Chi-square n-1) /
 > (n-1)
 >
 >
 >
-> (này nhé nếu đặt Y = (n-1) Sn^2 / σ² thì ta có Y là Chi-square n-1, vậy giờ
+> (này nhé nếu đặt Y = (n-1) Sn² / σ² thì ta có Y là Chi-square n-1, vậy giờ
 > đem Y chia cho (n-1) thì ta nói là X = Y / (n-1) là một (Chi-square n-1) /
 > (n-1) thôi.
 >
@@ -1874,7 +1936,7 @@
 >
 >
 >
-> = 1/√(2π) e^-u^2/2 . 1/ [Γ(p/2) 2^(p/2)] v^[(p/2)-1] e^(-v/2),  
+> = 1/√(2π) e^-u²/2 . 1/ [Γ(p/2) 2^(p/2)] v^[(p/2)-1] e^(-v/2),  
 >
 >
 >
@@ -1956,11 +2018,11 @@
 >
 >
 >
-> = ∫0:inf 1/√(2π) e^-u^2/2 . 1/ [Γ(p/2) 2^(p/2)] v^[(p/2)-1] e^(-v/2) √(w/p) dw
+> = ∫0:inf 1/√(2π) e^-u²/2 . 1/ [Γ(p/2) 2^(p/2)] v^[(p/2)-1] e^(-v/2) √(w/p) dw
 >
 >
 >
-> = 1/√(2π)  1/ [Γ(p/2) 2^(p/2)] ∫0:inf e^-u^2/2 .v^[(p/2)-1] e^(-v/2) √(w/p) dw
+> = 1/√(2π)  1/ [Γ(p/2) 2^(p/2)] ∫0:inf e^-u²/2 .v^[(p/2)-1] e^(-v/2) √(w/p) dw
 >
 >
 >
@@ -1968,7 +2030,7 @@
 >
 >
 >
-> Xét ∫0:inf e^-u^2/2 . v^[(p/2)-1] e^(-v/2) √(w/p) dw
+> Xét ∫0:inf e^-u²/2 . v^[(p/2)-1] e^(-v/2) √(w/p) dw
 >
 >
 >
@@ -1976,13 +2038,11 @@
 >
 >
 >
-> Nói chung là ta sẽ nhận ra bên trong là kernel của Γ((p+1)/2, 2/(1+t^2/p))
+> Nói chung là ta sẽ nhận ra bên trong là kernel của Γ((p+1)/2, 2/(1+t²/p))
 >
 >
 >
 > từ đó ta có pdf của T,là pdf của student t p degree
-
-**🔗 See also:** [Bổ đề Chi-square](#node-udtt0nq)
 
 <br>
 
@@ -2037,10 +2097,10 @@
 >
 >
 >
-> Cho X1,..Xn là random sample n(μX, σX^2) và Y1,...Ym là random sample
-> n(μY, σY^2). Và ta quan tâm đến việc / MUỐN SO SÁNH  ĐỘ BIẾN ĐỘNG
+> Cho X1,..Xn là random sample n(μX, σX²) và Y1,...Ym là random sample
+> n(μY, σY²). Và ta quan tâm đến việc / MUỐN SO SÁNH  ĐỘ BIẾN ĐỘNG
 > (VARIABILITY) của hai population. Dĩ nhiên lẽ tự nhiên là ta muốn quan tâm
-> đến ratio σX^2 / σY^2.
+> đến ratio σX² / σY².
 >
 >
 >
@@ -2051,7 +2111,7 @@
 >
 > Thế thì chỗ này phải hiểu là, sở dĩ ta có thể dùng tỉ lệ giữa hai sample
 > variance để suy luận, suy đoán cho tỉ lệ giữa hai true population variance
-> σX^2/σY^2 là vì / là nhờ vào một loại distribution có tên là F distribution.
+> σX²/σY² là vì / là nhờ vào một loại distribution có tên là F distribution.
 > Mà, cụ thể là, cái random variable sau đây sẽ là một F random variable
 >
 >
@@ -2062,7 +2122,7 @@
 >
 > Để rồi, tí nữa ta sẽ thấy, khi tính kì vọng của cái random variable này,
 > thì ta sẽ thấy nó bằng 1 khi m lớn. Từ đó ý nghĩa là, hay cho phép kết luận
-> là, hay có cơ sở để nói là, SX^2 / SY^2 ≈ σX^2 / σY^2
+> là, hay có cơ sở để nói là, SX² / SY² ≈ σX² / σY²
 
 <br>
 
@@ -2075,9 +2135,9 @@
 <p align="center"><kbd><img src="assets/l8ehfruolw.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Định nghĩa này nói rằng, với random sample size n từ n(μX, σX^2)
-> và random sample size m từ n(μY, σY^2) thì random variable F
-> với F = (SX^2/σX^2)(SY^2/σY^2) sẽ tuân theo distribution có tên
+> Định nghĩa này nói rằng, với random sample size n từ n(μX, σX²)
+> và random sample size m từ n(μY, σY²) thì random variable F
+> với F = (SX²/σX²)(SY²/σY²) sẽ tuân theo distribution có tên
 > là Snedecor's F distribution với bậc tự do là n-1 và m-1
 >
 >
@@ -2112,7 +2172,7 @@
 >
 > ...Thế thì chỗ này phải hiểu là, sở dĩ ta có thể dùng tỉ lệ giữa hai sample
 > variance để suy luận, suy đoán cho tỉ lệ giữa hai true population variance
-> σX^2/σY^2 là vì / là nhờ vào một loại distribution có tên là F distribution. Mà, cụ
+> σX²/σY² là vì / là nhờ vào một loại distribution có tên là F distribution. Mà, cụ
 > thể là, cái random variable sau đây sẽ là một F random variable
 >
 >
@@ -2123,12 +2183,12 @@
 >
 > Để rồi, tí nữa ta sẽ thấy, khi tính kì vọng của cái random variable này, thì ta sẽ
 > thấy nó bằng 1 khi m lớn. Từ đó ý nghĩa là, hay cho phép kết luận là, hay có cơ
-> sở để nói là, SX^2 / SY^2 ≈ σX^2 / σY^2
+> sở để nói là, SX² / SY² ≈ σX² / σY²
 >
 >
 >
 > Vừa rồi, đã nói, định nghĩa của distribution của một random variable có được
-> bởi (SX^2/σX^2)(SY^2/σY^2) là một Fn-1,m-1 random variable, và ta có pdf của
+> bởi (SX²/σX²)(SY²/σY²) là một Fn-1,m-1 random variable, và ta có pdf của
 > F rồi.
 >
 >
@@ -2142,15 +2202,15 @@
 >
 >
 >
-> thì nó là (kết quả của) lấy SX^2 / σX^2 chia cho SY^2 / σY^2.
+> thì nó là (kết quả của) lấy SX² / σX² chia cho SY² / σY².
 >
 >
 >
-> Mà SX^2 / σX^2 thì ta có định nghĩa:
+> Mà SX² / σX² thì ta có định nghĩa:
 >
 >
 >
-> (n - 1) Sn^2 / σ² sẽ là một Chi-square n - 1
+> (n - 1) Sn² / σ² sẽ là một Chi-square n - 1
 >
 >
 >
@@ -2161,17 +2221,17 @@
 >
 >
 >
-> Nếu gọi J = (n - 1) Sn^2 / σ², thì Sn^2 / σ² =  J / (n - 1)
+> Nếu gọi J = (n - 1) Sn² / σ², thì Sn² / σ² =  J / (n - 1)
 >
 >
 >
-> Và đặt U = Sn^2 / σ², và ta quan tâm đến distribution của thằng rv K này, thì ta
+> Và đặt U = Sn² / σ², và ta quan tâm đến distribution của thằng rv K này, thì ta
 > có thể derive distribution của nó dựa vào transformation K = J / (n-1) và người ta
 > gọi K là một Chi-square (n-1) / n - 1 thì có nghĩa là vậy
 >
 >
 >
-> Tương tự, nếu gọi V = SY^2 / σY^2, thì ta gọi nó là Chi-square (m-1) / (m-1)
+> Tương tự, nếu gọi V = SY² / σY², thì ta gọi nó là Chi-square (m-1) / (m-1)
 >
 >
 >
@@ -2291,18 +2351,18 @@
 >
 >
 >
-> Mà đã nói (SX^2 / σX^2) / (SY^2 / σY^2) với SX là sample variance của random
-> sample size n, từ normal(μX, σX^2) và SY là sample variance của một random
-> sample size m từ normal(μY, σY^2) SẼ LÀ MỘT RANDOM VARIABLE CÓ
+> Mà đã nói (SX² / σX²) / (SY² / σY²) với SX là sample variance của random
+> sample size n, từ normal(μX, σX²) và SY là sample variance của một random
+> sample size m từ normal(μY, σY²) SẼ LÀ MỘT RANDOM VARIABLE CÓ
 > DISTRIBUTION Fn-1,m-1
 >
 >
 >
-> NHƯ VẬY, với m lớn thì:  E[(SX^2 / σX^2) / (SY^2 / σY^2)] = 1
+> NHƯ VẬY, với m lớn thì:  E[(SX² / σX²) / (SY² / σY²)] = 1
 >
 >
 >
-> Suy ra SX^2/SY^2 ≈ σX^2/σY^2 LÀM CƠ SỞ CHO VIỆC TA CÓ THỂ DÙNG TỈ
+> Suy ra SX²/SY² ≈ σX²/σY² LÀM CƠ SỞ CHO VIỆC TA CÓ THỂ DÙNG TỈ
 > SỐ CỦA HAI SAMPLE VARIANCE ĐỂ SUY LUẬN CHO TỈ SỐ CỦA HAI
 > POPULATION VARIANCE
 
@@ -2321,7 +2381,7 @@
 >
 >
 >
-> Nếu X là một Student's t có q bậc tự do thì X^2 là một F 1,q
+> Nếu X là một Student's t có q bậc tự do thì X² là một F 1,q
 
 <br>
 
