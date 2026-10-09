@@ -149,7 +149,7 @@
 >
 >
 >
-> Sample variance S² = 1/(n-1) Σ (Xi - X̄)^2
+> Sample variance S² = 1/(n-1) Σ (Xi - X̄)²
 >
 >
 >
@@ -177,7 +177,7 @@
 >
 >
 > Và một ý nữa là, cũng như theo quy ước ta ghi chữ thường cho giá trị
-> possible value của random variable, thì nay cũng vậy. x_bar, s^2, s
+> possible value của random variable, thì nay cũng vậy. x_bar, s², s
 > sẽ chỉ possible value (hay giá trị cụ thể, hay giá trị quan sát được, cũng
 > như nhau) của X̄, S², S
 
@@ -213,11 +213,11 @@
 >
 >
 >
-> Khi đó a) min a Σ(xi - a)^2 = Σ(xi - x_bar)^2
+> Khi đó a) min a Σ(xi - a)² = Σ(xi - x_bar)²
 >
 >
 >
-> nói bằng lời cho dễ hình dung là, con số a khiến Σ(xi - a)^2 nhỏ nhất chính là trung
+> nói bằng lời cho dễ hình dung là, con số a khiến Σ(xi - a)² nhỏ nhất chính là trung
 > bình của đám x1,x2,...xn
 >
 >
@@ -226,16 +226,16 @@
 >
 >
 >
-> Bắt đầu với Σ(xi - a)^2, công và trừ cho x_bar:
+> Bắt đầu với Σ(xi - a)², công và trừ cho x_bar:
 >
 >
 >
-> Σ(xi - x_bar + x_bar - a)^2 = Σ [(xi - x_bar)^2 + (x_bar - a)^2 + 2(xi - x_bar)(x_bar -
+> Σ(xi - x_bar + x_bar - a)² = Σ [(xi - x_bar)² + (x_bar - a)² + 2(xi - x_bar)(x_bar -
 > a)]
 >
 >
 >
-> = Σ (xi - x_bar)^2 + Σ(x_bar - a)^2 + 2Σ(xi - x_bar)(x_bar - a)
+> = Σ (xi - x_bar)² + Σ(x_bar - a)² + 2Σ(xi - x_bar)(x_bar - a)
 >
 >
 >
@@ -251,11 +251,11 @@
 >
 >
 >
-> ⇨ Σ(xi - a)^2 = Σ (xi - x_bar)^2 + Σ(x_bar - a)^2 (1)
+> ⇨ Σ(xi - a)² = Σ (xi - x_bar)² + Σ(x_bar - a)² (1)
 >
 >
 >
-> Do đó minimize a Σ(xi - a)^2 = minimize a [Σ (xi - x_bar)^2 + Σ(x_bar - a)^2]
+> Do đó minimize a Σ(xi - a)² = minimize a [Σ (xi - x_bar)² + Σ(x_bar - a)²]
 >
 >
 >
@@ -263,7 +263,7 @@
 >
 >
 >
-> Ý b: (n - 1)s^2 = Σ (xi - x_bar)^2 = Σ xi^2 - nx_bar^2
+> Ý b: (n - 1)s² = Σ (xi - x_bar)² = Σ xi² - nx_bar²
 >
 >
 >
@@ -271,31 +271,31 @@
 >
 >
 >
-> Σ(xi - a)^2 = Σ (xi - x_bar)^2 + Σ(x_bar - a)^2
+> Σ(xi - a)² = Σ (xi - x_bar)² + Σ(x_bar - a)²
 >
 >
 >
-> → Σ(xi - 0)^2 = Σ (xi - x_bar)^2 + Σ(x_bar - 0)^2
+> → Σ(xi - 0)² = Σ (xi - x_bar)² + Σ(x_bar - 0)²
 >
 >
 >
-> ⇔ Σ xi^2 = Σ (xi - x_bar)^2 + Σ x_bar^2
+> ⇔ Σ xi² = Σ (xi - x_bar)² + Σ x_bar²
 >
 >
 >
-> ⇔ Σi (xi - x_bar)^2 = Σi xi^2 - Σi x_bar^2
+> ⇔ Σi (xi - x_bar)² = Σi xi² - Σi x_bar²
 >
 >
 >
-> ⇔ Σi (xi - x_bar)^2 = Σi xi^2 - Σi x_bar^2
+> ⇔ Σi (xi - x_bar)² = Σi xi² - Σi x_bar²
 >
 >
 >
-> ⇔ [1/(n-1)] Σi (xi - x_bar)^2 = [1/(n-1)] Σi xi^2 - Σi x_bar^2
+> ⇔ [1/(n-1)] Σi (xi - x_bar)² = [1/(n-1)] Σi xi² - Σi x_bar²
 >
 >
 >
-> ⇔ **(n - 1) s^2 = Σi xi^2 - Σi x_bar^2**
+> ⇔ **(n - 1) s² = Σi xi² - Σi x_bar²**
 
 **🔗 See also:** [Tìm MLE không đạo hàm](./72_method_of_finding_estimators.md#node-276or8r) · [Bootstrap Variance Formula](./101_point_estimation.md#node-uvh5j60)
 
@@ -374,11 +374,11 @@
 >
 >
 >
-> Do đó người ta mới bình phương lên: E(X - EX)^2
+> Do đó người ta mới bình phương lên: E(X - EX)²
 >
 >
 >
-> Vậy Var[Σi g(Xi)] = E([Σi g(Xi)] - E[Σi g(Xi)])^2 đó là hàng trên
+> Vậy Var[Σi g(Xi)] = E([Σi g(Xi)] - E[Σi g(Xi)])² đó là hàng trên
 >
 >
 >
@@ -386,15 +386,15 @@
 >
 >
 >
-> Nên E([Σi g(Xi)] - E[Σi g(Xi)])^2 = E([Σi g(Xi)] - [Σi Eg(Xi)])^2
+> Nên E([Σi g(Xi)] - E[Σi g(Xi)])² = E([Σi g(Xi)] - [Σi Eg(Xi)])²
 >
 >
 >
-> = E(   Σi g(Xi) - Σi Eg(Xi)  )^2 | bỏ dấu ngoặc thôi
+> = E(   Σi g(Xi) - Σi Eg(Xi)  )² | bỏ dấu ngoặc thôi
 >
 >
 >
-> = **E(   Σi [g(Xi) - Eg(Xi)]  )^2** | gom hai dấu tổng lại, được kết qủa hàng thứ 2
+> = **E(   Σi [g(Xi) - Eg(Xi)]  )²** | gom hai dấu tổng lại, được kết qủa hàng thứ 2
 >
 >
 >
@@ -402,16 +402,16 @@
 >
 >
 >
-> Phải nhớ là ta đang dùng công thức thứ nhất của Variance, E(X - EX)^2
+> Phải nhớ là ta đang dùng công thức thứ nhất của Variance, E(X - EX)²
 >
 >
 >
-> thì nó là gì, nó là expected value của (X - EX)^2, chứ ko phải là bình phương
+> thì nó là gì, nó là expected value của (X - EX)², chứ ko phải là bình phương
 > của E(X - EX)
 >
 >
 >
-> Nên E[(Σi [g(Xi) - Eg(Xi)])^2] là expected value của (Σi [g(Xi) - Eg(Xi)])^2
+> Nên E[(Σi [g(Xi) - Eg(Xi)])²] là expected value của (Σi [g(Xi) - Eg(Xi)])²
 >
 >
 >
@@ -419,20 +419,20 @@
 >
 >
 >
-> Giống như (a + b)^2 = a^2 + b^2 + 2ab,
+> Giống như (a + b)² = a² + b² + 2ab,
 >
 >
 >
-> Hoặc (a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca
+> Hoặc (a + b + c)² = a² + b² + c² + 2ab + 2bc + 2ca
 >
 >
 >
->  hay khái quát lên ta có cái gọi là công thức Nhị thức Newton (a1 + a2 + ...an)^2
+>  hay khái quát lên ta có cái gọi là công thức Nhị thức Newton (a1 + a2 + ...an)²
 >
 >
 >
-> Thì khai triển ra, ta sẽ có n hạng tử có dạng ai^2, (ví dụ như với 2 hạng
-> tử thì ta có a^2 và b^2, 2*1 cái cross term, với 3 hạng tử thì ta có 3 cái ai^2
+> Thì khai triển ra, ta sẽ có n hạng tử có dạng ai², (ví dụ như với 2 hạng
+> tử thì ta có a² và b², 2*1 cái cross term, với 3 hạng tử thì ta có 3 cái ai²
 > và 3*2 cái cross term)
 >
 >
@@ -441,15 +441,15 @@
 >
 >
 >
-> [ [g(X1) - Eg(X1)] + [g(X2) - Eg(X2)] + ....[g(Xn) - Eg(Xn)] ]^2
+> [ [g(X1) - Eg(X1)] + [g(X2) - Eg(X2)] + ....[g(Xn) - Eg(Xn)] ]²
 >
 >
 >
-> Do đó ta sẽ có n term có dạng [g(Xi) - Eg(Xi)]^2
+> Do đó ta sẽ có n term có dạng [g(Xi) - Eg(Xi)]²
 >
 >
 >
-> Tổng của chúng là Σi [g(Xi) - Eg(Xi)]^2
+> Tổng của chúng là Σi [g(Xi) - Eg(Xi)]²
 >
 >
 >
@@ -457,11 +457,11 @@
 >
 >
 >
-> Vậy E[(Σi [g(Xi) - Eg(Xi)])^2]
+> Vậy E[(Σi [g(Xi) - Eg(Xi)])²]
 >
 >
 >
-> = E[ Σi [g(Xi) - Eg(Xi)]^2  + ΣiΣi,j≠i  [g(Xi) - Eg(Xi)][g(Xj) - Eg(Xj)]]
+> = E[ Σi [g(Xi) - Eg(Xi)]²  + ΣiΣi,j≠i  [g(Xi) - Eg(Xi)][g(Xj) - Eg(Xj)]]
 >
 >
 >
@@ -469,19 +469,19 @@
 >
 >
 >
-> = E [Σi [g(Xi) - Eg(Xi)]^2]  + E [ΣiΣi,j≠i  [g(Xi) - Eg(Xi)][g(Xj) - Eg(Xj)]]]
+> = E [Σi [g(Xi) - Eg(Xi)]²]  + E [ΣiΣi,j≠i  [g(Xi) - Eg(Xi)][g(Xj) - Eg(Xj)]]]
 >
 >
 >
-> = Σi E [g(Xi) - Eg(Xi)]^2  + ΣiΣi,j≠i  E [g(Xi) - Eg(Xi)][g(Xj) - Eg(Xj)]]
+> = Σi E [g(Xi) - Eg(Xi)]²  + ΣiΣi,j≠i  E [g(Xi) - Eg(Xi)][g(Xj) - Eg(Xj)]]
 >
 >
 >
-> Xét Σi E [g(Xi) - Eg(Xi)]^2
+> Xét Σi E [g(Xi) - Eg(Xi)]²
 >
 >
 >
-> thì E [g(Xi) - Eg(Xi)]^2, chính là gì?
+> thì E [g(Xi) - Eg(Xi)]², chính là gì?
 >
 >
 >
@@ -489,12 +489,12 @@
 >
 >
 >
-> Vì nếu đặt Y = g(Xi) thì E [g(Xi) - Eg(Xi)]^2 chính là E[Y - EY]^2, là công thức
+> Vì nếu đặt Y = g(Xi) thì E [g(Xi) - Eg(Xi)]² chính là E[Y - EY]², là công thức
 > của Var(Y)
 >
 >
 >
-> ⇨ Σi E [g(Xi) - Eg(Xi)]^2 = **Σi Var[g(Xi)]
+> ⇨ Σi E [g(Xi) - Eg(Xi)]² = **Σi Var[g(Xi)]
 >
 >
 >
@@ -654,12 +654,12 @@
 >
 >
 >
-> Vế trái Var(X̄) = Var[(1/n) Σi Xi)] , dùng tính chất Var(cX) = c^2 Var(X) đưa
+> Vế trái Var(X̄) = Var[(1/n) Σi Xi)] , dùng tính chất Var(cX) = c² Var(X) đưa
 > 1/n ra
 >
 >
 >
-> .. = (1/n)^2 Var (Σi Xi)
+> .. = (1/n)² Var (Σi Xi)
 >
 >
 >
@@ -679,7 +679,7 @@
 >
 >
 >
-> ⇨ (1/n)^2 Var (Σi Xi) = (1/n)^2 n Var(X1)
+> ⇨ (1/n)² Var (Σi Xi) = (1/n)² n Var(X1)
 >
 >
 >
@@ -687,7 +687,7 @@
 >
 >
 >
-> ⇨ ..= (1/n)^2 n σ² = **σ² / n**
+> ⇨ ..= (1/n)² n σ² = **σ² / n**
 >
 >
 >
@@ -699,7 +699,7 @@
 >
 >
 >
-> **S² = [1/(n-1)] Σi (Xi - X̄)^2**
+> **S² = [1/(n-1)] Σi (Xi - X̄)²**
 >
 >
 >
@@ -730,7 +730,7 @@
 >
 >
 >
-> Và function đó là function nào: Đó là g(x1, x2,..xn) = [1/(n-1)] Σi (xi - x_bar)^2Để rồi khi apply nó (g) lên các random variable X1, X2...Xn thì ta có:g(X1, X2,..Xn) = [1/(n-1)] Σi (Xi - X̄)^2, và = S²
+> Và function đó là function nào: Đó là g(x1, x2,..xn) = [1/(n-1)] Σi (xi - x_bar)²Để rồi khi apply nó (g) lên các random variable X1, X2...Xn thì ta có:g(X1, X2,..Xn) = [1/(n-1)] Σi (Xi - X̄)², và = S²
 >
 >
 >
@@ -738,11 +738,11 @@
 >
 >
 >
-> Σi (xi - x_bar)^2 = Σi xi^2 - n x_bar^2
+> Σi (xi - x_bar)² = Σi xi² - n x_bar²
 >
 >
 >
-> ⇨ [1/(n-1)] Σi (xi - x_bar)^2 = [1/(n-1)] [ Σi xi^2 - n x_bar^2 ]
+> ⇨ [1/(n-1)] Σi (xi - x_bar)² = [1/(n-1)] [ Σi xi² - n x_bar² ]
 >
 >
 >
@@ -750,12 +750,12 @@
 >
 >
 >
-> Vậy apply hàm g (vế trái) cũng y như apply hàm [1/(n-1)] [ Σi xi^2 - n x_bar^2 ] 
+> Vậy apply hàm g (vế trái) cũng y như apply hàm [1/(n-1)] [ Σi xi² - n x_bar² ] 
 > lên X1,X2...Xn
 >
 >
 >
-> Từ đó ta có:S² = [1/(n-1)] [ Σi Xi^2 - n X̄^2 ]  (dĩ nhiên khi Xi đóng vai xi thì X̄ đóng vai x_bar)
+> Từ đó ta có:S² = [1/(n-1)] [ Σi Xi² - n X̄² ]  (dĩ nhiên khi Xi đóng vai xi thì X̄ đóng vai x_bar)
 >
 >
 >
@@ -763,7 +763,7 @@
 >
 >
 >
-> Như vậy ta có ES² = E { [1/(n-1)] [ Σi Xi^2 - n X̄^2 ] }
+> Như vậy ta có ES² = E { [1/(n-1)] [ Σi Xi² - n X̄² ] }
 >
 >
 >
@@ -771,15 +771,15 @@
 >
 >
 >
-> → .. = [1/(n-1)] E [ Σi Xi^2 - n X̄^2 ] 
+> → .. = [1/(n-1)] E [ Σi Xi² - n X̄² ] 
 >
 >
 >
-> = [1/(n-1)]  { E [Σi Xi^2] -  E [ n X̄^2 ] }
+> = [1/(n-1)]  { E [Σi Xi²] -  E [ n X̄² ] }
 >
 >
 >
-> = [1/(n-1)]  { Σi E(Xi^2) -  n E[X̄^2] }
+> = [1/(n-1)]  { Σi E(Xi²) -  n E[X̄²] }
 >
 >
 >
@@ -788,7 +788,7 @@
 >
 >
 >
-> ⇨ Σi E(Xi^2) = Σi E(X1^2) = **n E(X1^2)**
+> ⇨ Σi E(Xi²) = Σi E(X1²) = **n E(X1²)**
 >
 >
 >
@@ -802,46 +802,46 @@
 >
 >
 >
-> Vậy tới đây ta có **[1/(n-1)]  { n E(X1^2) -  n E[X̄^2] }**
+> Vậy tới đây ta có **[1/(n-1)]  { n E(X1²) -  n E[X̄²] }**
 >
 >
 >
-> Tới đây, xét E(X1^2):
+> Tới đây, xét E(X1²):
 >
 >
 >
-> Ta nhớ công thức variance (công thức thứ 2 của Var(X)): Var(X) = EX^2 - (EX)^2 (nhớ
-> lại trong STAT110, thầy Blizstein có nói by convention khi khi EX^2 thì hiểu là kì vọng
-> của X^2, còn khi ghi bình phương của kì vọng của X thì là (EX)^2
+> Ta nhớ công thức variance (công thức thứ 2 của Var(X)): Var(X) = EX² - (EX)² (nhớ
+> lại trong STAT110, thầy Blizstein có nói by convention khi khi EX² thì hiểu là kì vọng
+> của X², còn khi ghi bình phương của kì vọng của X thì là (EX)²
 >
 >
 >
-> Vậy EX^2 = Var(X) + (EX)^2 
+> Vậy EX² = Var(X) + (EX)² 
 >
 >
 >
-> Áp dụng vào đây E(X1^2) = Var(X1) - (EX1)^2. Mà Var(X1) là population variance σ²,
+> Áp dụng vào đây E(X1²) = Var(X1) - (EX1)². Mà Var(X1) là population variance σ²,
 > EX1 = population mean μ 
 >
 >
 >
-> ⇨ EX1^2 = σ² + μ² 
+> ⇨ EX1² = σ² + μ² 
 >
 >
 >
-> ⇨ n E(X1^2) = **n (σ² + μ² )**
+> ⇨ n E(X1²) = **n (σ² + μ² )**
 >
 >
 >
-> Tương tự ta cũng E(X̄^2) = Var(X̄) + (EX̄)^2
+> Tương tự ta cũng E(X̄²) = Var(X̄) + (EX̄)²
 >
 >
 >
-> DÙng kết quả a), b)  ⇨ E(X̄^2) = σ² / n + μ²
+> DÙng kết quả a), b)  ⇨ E(X̄²) = σ² / n + μ²
 >
 >
 >
-> ⇨ [1/(n-1)]  { n E(X1^2) -  n E[X̄^2] }
+> ⇨ [1/(n-1)]  { n E(X1²) -  n E[X̄²] }
 >
 >
 >
@@ -904,7 +904,7 @@
 >
 >
 >
-> S²  = [1/(n-1)] [ Σi (Xi - X̄)^2 ] 
+> S²  = [1/(n-1)] [ Σi (Xi - X̄)² ] 
 >
 >
 >
@@ -927,7 +927,7 @@
 >
 >
 > ES^ = [1/(n-1)]  (n -1)  σ² , với  [1/(n-1)]  là do công thức S² = 
-> [1/(n-1)] [ Σi (Xi - X̄)^2 ]
+> [1/(n-1)] [ Σi (Xi - X̄)² ]
 >
 >
 >
@@ -1265,7 +1265,7 @@
 >
 >
 >
-> Ta đã biết từ những chương trước, mgf của normal là **M(t) = e^(μt + σ²t^2/2)**
+> Ta đã biết từ những chương trước, mgf của normal là **M(t) = e^(μt + σ²t²/2)**
 >
 >
 >
@@ -1274,23 +1274,23 @@
 >
 >
 >
-> = [e^ (μ(t/n) + σ²(t/n)^2/2) ]^n
+> = [e^ (μ(t/n) + σ²(t/n)²/2) ]^n
 >
 >
 >
-> = e^[n(μ(t/n) + σ²(t/n)^2/2)]   | vì (a^n)^m = a^(mn)
+> = e^[n(μ(t/n) + σ²(t/n)²/2)]   | vì (a^n)^m = a^(mn)
 >
 >
 >
-> = e^[nμ(t/n) + nσ²(t/n)^2/2)]   phân phối n vô
+> = e^[nμ(t/n) + nσ²(t/n)²/2)]   phân phối n vô
 >
 >
 >
-> = e^[μt + (nσ²/n^2)t^2/2)]
+> = e^[μt + (nσ²/n²)t²/2)]
 >
 >
 >
-> **= e^[μt + (σ²/n)t^2/2]**
+> **= e^[μt + (σ²/n)t²/2]**
 >
 >
 >
@@ -1518,7 +1518,7 @@
 >
 > Đầu tiên nhắc lại 𝒜 là cái gì (trong sách là chữ A viết kiểu, mình gọi
 > là 𝒜 cho nhanh) nó là support set của X, Y. Mà support set được định
-> nghĩa là tập chứa (x,y) ∈ R^2 sao cho fX,Y(x,y) DƯƠNG, vậy thôi.
+> nghĩa là tập chứa (x,y) ∈ R² sao cho fX,Y(x,y) DƯƠNG, vậy thôi.
 >
 >
 >
@@ -1538,7 +1538,7 @@
 > Do đó cặp (x,y) khiến vế trái dương chính là cặp (x,y) khiến vế phải dương
 > mà muốn vậy thì phải khiến chúng cùng dương hoặc cùng âm. Dĩ nhiên
 > marginal pdf (hay pdf nói chung thì ko âm) nên thành ra câu trả lời là (x,y)
-> sao cho fX(x) dương và fY(y) dương. ⇨ 𝒜 = {(x,y) ∈ R^2: fX(x) > 0, 
+> sao cho fX(x) dương và fY(y) dương. ⇨ 𝒜 = {(x,y) ∈ R²: fX(x) > 0, 
 > fY(y) > 0}. Nhưng ta ko biết cụ thể fX(x) fY(y) là gì nên chỉ đi được tới đây.
 >
 >
@@ -1705,8 +1705,8 @@
 >
 > Thì trong phần trước khi ta ôn lại lý thuyết của transformation theorem.
 > Ta có nhắc đến 𝒜, là support set của X,Y và ảnh của nó, ℬ.
-> và đã lập luận để thấy rằng  𝒜 = {(x,y) ∈ R^2: fX(x) > 0,  fY(y) > 0}
-> tức là tập các (x,y) thuộc R^2 sao cho x khiến thằng fX(x) dương và
+> và đã lập luận để thấy rằng  𝒜 = {(x,y) ∈ R²: fX(x) > 0,  fY(y) > 0}
+> tức là tập các (x,y) thuộc R² sao cho x khiến thằng fX(x) dương và
 > y khiến fY(y) dương (trong lập luận đó ta có kết quả này là X, Y độc lập)
 >
 >
@@ -1721,11 +1721,11 @@
 >
 >
 >
-> 𝒜 = {(x,y) ∈ R^2: fX(x) > 0,  fY(y) > 0}
+> 𝒜 = {(x,y) ∈ R²: fX(x) > 0,  fY(y) > 0}
 >
 >
 >
-> = {(x,y) ∈ R^2: x > 0,  x > 0}
+> = {(x,y) ∈ R²: x > 0,  x > 0}
 >
 >
 >
@@ -1880,12 +1880,12 @@
 >
 >
 > Để chứng minh ta dùng transformation theorem, nói rằng nếu Y = g(X)
-> và g là hàm đơn điệu, tức từ y = g(x) có thể giải tìm x = g_inv(y)
+> và g là hàm đơn điệu, tức từ y = g(x) có thể giải tìm x = g⁻¹(y)
 > Khi đó ta sẽ có thể derive pdf của Y từ pdf của X như sau:
 >
 >
 >
-> fY(y) = fX(x) |dx/dy| = fX(g_inv(y))  |d/dy ginv(y)|
+> fY(y) = fX(x) |dx/dy| = fX(g⁻¹(y))  |d/dy g⁻¹(y)|
 >
 >
 >
@@ -1894,7 +1894,7 @@
 >
 >
 > Dĩ nhiên hàm g(z) = σz + μ  là hàm đơn điệu vì đơn giản nó là hàm tuyến
-> tính. ⇨ x = σz + μ ⇔ z = (x - μ) / σ (tức ginv(x) = (x - μ) / σ)
+> tính. ⇨ x = σz + μ ⇔ z = (x - μ) / σ (tức g⁻¹(x) = (x - μ) / σ)
 >
 >
 >
@@ -1902,7 +1902,7 @@
 >
 >
 >
-> fX(x) = fZ(z) |dz/dx| = fZ((x - μ) / σ) |d/dx ginv(x)|
+> fX(x) = fZ(z) |dz/dx| = fZ((x - μ) / σ) |d/dx g⁻¹(x)|
 >
 >
 >
@@ -1922,12 +1922,12 @@
 >
 > Ta sẽ áp dụng transformation theorem, với Z = g(X) = (X - μ) / σ , dĩ nhiên
 > hàm này cũng là hàm tuyến tính nên đơn điệu, nên với z = (x - μ) / σ cũng 
-> có thể tìm ngược ra lại x = z σ + μ (tức g_inv(z) = z σ + μ, 
-> và d/dz g_inv(z) = σ )
+> có thể tìm ngược ra lại x = z σ + μ (tức g⁻¹(z) = z σ + μ, 
+> và d/dz g⁻¹(z) = σ )
 >
 >
 >
-> Ta có fZ(z) = fX(x) |d/dz ginv(z)|
+> Ta có fZ(z) = fX(x) |d/dz g⁻¹(z)|
 >
 >
 >
@@ -1939,7 +1939,7 @@
 >
 >
 >
-> Thay x = ginv(z) = z σ + μ vô
+> Thay x = g⁻¹(z) = z σ + μ vô
 >
 >
 >
@@ -2073,21 +2073,21 @@
 >
 >
 > nên nếu công thức hàm g (ý là ví dụ như khi ta có dạng cụ thể của g là  g(z) =
-> z²) thì g((z - μ)/σ)/σ = [(z - μ)/σ]^2 / σ. Ta thấy trong đó [(z - μ)/σ]^2 chính là
+> z²) thì g((z - μ)/σ)/σ = [(z - μ)/σ]² / σ. Ta thấy trong đó [(z - μ)/σ]² chính là
 > apply hàm g lên (z - μ)/σ, sau đó chia σ.
 >
 >
 >
 > Khi đó ta sẽ có pdf của X̄ có công thức là công thức của g((z - μ)/σ)/σ, hay
-> fX̄ (x) =  [(x - μ)/σ]^2 / σ
+> fX̄ (x) =  [(x - μ)/σ]² / σ
 >
 >
 >
-> (cái kí tự x hay z trong [(x - μ)/σ]^2 / σ hay [(z - μ)/σ]^2 / σ KHÔNG QUAN
+> (cái kí tự x hay z trong [(x - μ)/σ]² / σ hay [(z - μ)/σ]² / σ KHÔNG QUAN
 > TRỌNG, VÌ NÓ CHỈ LÀ DUMMIES NAME, nói về một hàm số, thì công thức
 > của nó, tức là nó làm gì với input đưa vô mới quan trọng. Nên kể cả ta nói là
-> fX̄(z) = [(z - μ)/σ]^2 / σ vẫn đúng chả sao cả, vì nó vẫn thể hiện là: à với z
-> bằng này, thì bỏ vô hàm pdf của X̄ nó sẽ cho ra kết quả bằng [(z - μ)/σ]^2 /
+> fX̄(z) = [(z - μ)/σ]² / σ vẫn đúng chả sao cả, vì nó vẫn thể hiện là: à với z
+> bằng này, thì bỏ vô hàm pdf của X̄ nó sẽ cho ra kết quả bằng [(z - μ)/σ]² /
 > σ).
 >
 >
@@ -2382,11 +2382,11 @@
 >
 >
 >
-> g2(x1,..xn) = [(x1 - x̄)^2 + ...(xn - x̄)^2] / (n - 1)
+> g2(x1,..xn) = [(x1 - x̄)² + ...(xn - x̄)²] / (n - 1)
 >
 >
 >
-> viết gọn là g2(x1,...xn) = [Σi (xi - x̄)^2 ] / (n - 1)
+> viết gọn là g2(x1,...xn) = [Σi (xi - x̄)² ] / (n - 1)
 >
 >
 >
@@ -2394,7 +2394,7 @@
 >
 >
 >
-> S² =  [Σi (Xi - X̄)^2 ] / (n - 1)
+> S² =  [Σi (Xi - X̄)² ] / (n - 1)
 >
 >
 >
