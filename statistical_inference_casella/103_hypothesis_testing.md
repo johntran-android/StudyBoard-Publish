@@ -167,15 +167,15 @@
 >
 >
 >
-> l(θ|𝐱) = l(θ^|𝐱) + l'(θ^|𝐱)(θ-θ^) + (1/2)l''(θ^|𝐱)(θ-θ^)^2 + ....
+> l(θ|𝐱) = l(θ^|𝐱) + l'(θ^|𝐱)(θ-θ^) + (1/2)l''(θ^|𝐱)(θ-θ^)² + ....
 >
 >
 >
-> = l(θ^|𝐱) + 0 × (θ-θ^) + (1/2)l''(θ^|𝐱)(θ-θ^)^2 + ....
+> = l(θ^|𝐱) + 0 × (θ-θ^) + (1/2)l''(θ^|𝐱)(θ-θ^)² + ....
 >
 >
 >
-> = l(θ^|𝐱) + (1/2)l''(θ^|𝐱)(θ-θ^)^2 + ....
+> = l(θ^|𝐱) + (1/2)l''(θ^|𝐱)(θ-θ^)² + ....
 >
 >
 >
@@ -183,11 +183,11 @@
 >
 >
 >
-> l(θ0|𝐱) = l(θ^|𝐱) + (1/2)l''(θ^|𝐱)(θ0-θ^)^2 + ....
+> l(θ0|𝐱) = l(θ^|𝐱) + (1/2)l''(θ^|𝐱)(θ0-θ^)² + ....
 >
 >
 >
-> ⇒ l(θ0|𝐱) ≈ l(θ^|𝐱) + (1/2)l''(θ^|𝐱)(θ0-θ^)^2
+> ⇒ l(θ0|𝐱) ≈ l(θ^|𝐱) + (1/2)l''(θ^|𝐱)(θ0-θ^)²
 >
 >
 >
@@ -215,19 +215,19 @@
 >
 >
 >
-> Thay l(θ0|𝐱) ≈ l(θ^|𝐱) + (1/2)l''(θ^|𝐱)(θ0-θ^)^2 vào:
+> Thay l(θ0|𝐱) ≈ l(θ^|𝐱) + (1/2)l''(θ^|𝐱)(θ0-θ^)² vào:
 >
 >
 >
-> ..= -2 (l(θ^|𝐱) + (1/2)l''(θ^|𝐱)(θ0-θ^)^2 - l(θ^|𝐱))
+> ..= -2 (l(θ^|𝐱) + (1/2)l''(θ^|𝐱)(θ0-θ^)² - l(θ^|𝐱))
 >
 >
 >
-> = - l''(θ^|𝐱)(θ0-θ^)^2
+> = - l''(θ^|𝐱)(θ0-θ^)²
 >
 >
 >
-> Vậy ta có -2 log λ(𝐱) ≈ - l''(θ^|𝐱)(θ0-θ^)^2 = (θ0-θ^)^2 \[-l''(θ^|𝐱)\]
+> Vậy ta có -2 log λ(𝐱) ≈ - l''(θ^|𝐱)(θ0-θ^)² = (θ0-θ^)² \[-l''(θ^|𝐱)\]
 >
 >
 >
@@ -235,7 +235,7 @@
 >
 >
 >
-> Vậy -2 log λ(𝐗) ≈ (θ0-θ^)^2 \[- l''(θ^|𝐗)\]
+> Vậy -2 log λ(𝐗) ≈ (θ0-θ^)² \[- l''(θ^|𝐗)\]
 >
 >
 >
@@ -247,31 +247,31 @@
 >
 >
 >
-> \- l''(θ^|𝐗) = \[-∂^2/∂θ^2 log L(θ|𝐗)\] | θ=θ^
+> \- l''(θ^|𝐗) = \[-∂²/∂θ² log L(θ|𝐗)\] | θ=θ^
 >
 >
 >
-> Xét -∂^2/∂θ^2 log L(θ|𝐗)
+> Xét -∂²/∂θ² log L(θ|𝐗)
 >
 >
 >
-> = -∂^2/∂θ^2 log f(𝐗|θ)
+> = -∂²/∂θ² log f(𝐗|θ)
 >
 >
 >
-> = - ∂^2/∂θ^2 log Πi f(Xi|θ)
+> = - ∂²/∂θ² log Πi f(Xi|θ)
 >
 >
 >
-> = - ∂^2/∂θ^2 (Σi log f(Xi|θ))
+> = - ∂²/∂θ² (Σi log f(Xi|θ))
 >
 >
 >
-> = - Σi \[∂^2/∂θ^2 log f(Xi|θ)\]
+> = - Σi \[∂²/∂θ² log f(Xi|θ)\]
 >
 >
 >
-> Nếu xét random variable -∂^2/∂θ^2 log f(X|θ) thì -∂^2/∂θ^2 log f(Xi|θ) với i=1,2....n sẽ làm một random sample iid size n
+> Nếu xét random variable -∂²/∂θ² log f(X|θ) thì -∂²/∂θ² log f(Xi|θ) với i=1,2....n sẽ làm một random sample iid size n
 >
 >
 >
@@ -279,11 +279,11 @@
 >
 >
 >
-> \-Σi \[∂^2/∂θ^2 log f(Xi|θ)\] / n
+> \-Σi \[∂²/∂θ² log f(Xi|θ)\] / n
 >
 >
 >
-> (= -\[∂^2/∂θ^2 log L(θ|𝐗)\]/n = -l''(θ^|𝐗)/n)
+> (= -\[∂²/∂θ² log L(θ|𝐗)\]/n = -l''(θ^|𝐗)/n)
 >
 >
 >
@@ -291,11 +291,11 @@
 >
 >
 >
-> \-Σi \[∂^2/∂θ^2 log f(Xi|θ)\] / n → (p) E\_θ{-∂^2/∂θ^2 log f(X1|θ)}
+> \-Σi \[∂²/∂θ² log f(Xi|θ)\] / n → (p) E\_θ{-∂²/∂θ² log f(X1|θ)}
 >
 >
 >
-> Và E\_θ{-∂^2/∂θ^2 log f(X1|θ)} theo bổ đề 7.3.11 (xem link) sẽ bằng E\_θ\[∂/∂θ log f(X1|θ)\]^2
+> Và E\_θ{-∂²/∂θ² log f(X1|θ)} theo bổ đề 7.3.11 (xem link) sẽ bằng E\_θ\[∂/∂θ log f(X1|θ)\]²
 >
 >
 >
@@ -335,15 +335,15 @@
 >
 >
 >
-> ⇒ \[√I1(θ) √n(θ^ - θ)\]^2 → (d) χ²\_1
+> ⇒ \[√I1(θ) √n(θ^ - θ)\]² → (d) χ²\_1
 >
 >
 >
-> ⇔ I1(θ) n (θ^ - θ)^2 → (d) χ²\_1
+> ⇔ I1(θ) n (θ^ - θ)² → (d) χ²\_1
 >
 >
 >
-> ⇔ n (θ^ - θ)^2 → (d) χ²\_1 / I1(θ)
+> ⇔ n (θ^ - θ)² → (d) χ²\_1 / I1(θ)
 >
 >
 >
@@ -351,13 +351,13 @@
 >
 >
 >
->  Vậy -2 log λ(𝐗) ≈ (θ0-θ^)^2 \[- l''(θ^|𝐗)\]
+>  Vậy -2 log λ(𝐗) ≈ (θ0-θ^)² \[- l''(θ^|𝐗)\]
 >
-> = n(θ0-θ^)^2 \[- l''(θ^|𝐗) / n\]
+> = n(θ0-θ^)² \[- l''(θ^|𝐗) / n\]
 >
 >
 >
-> i) n (θ^ - θ)^2 → (d) χ²\_1 / I1(θ)
+> i) n (θ^ - θ)² → (d) χ²\_1 / I1(θ)
 >
 >
 >
@@ -369,11 +369,11 @@
 >
 >
 >
-> ⇒ (θ0-θ^)^2 \[- l''(θ^|𝐗)\] → (d) I1(θ) × χ²\_1 / I1(θ)
+> ⇒ (θ0-θ^)² \[- l''(θ^|𝐗)\] → (d) I1(θ) × χ²\_1 / I1(θ)
 >
 >
 >
-> ⇔ (θ0-θ^)^2 \[- l''(θ^|𝐗)\] → (d) χ²\_1
+> ⇔ (θ0-θ^)² \[- l''(θ^|𝐗)\] → (d) χ²\_1
 >
 >
 >
@@ -814,7 +814,7 @@
 >
 >
 >
-> Giả sử ta có Θ là không gian parameter, có q chiều. (Ví dụ, giả sử ta giải bài toán hypothesis mà θ là parameter của normal, thì Θ sẽ là R^2, vì θ lúc này là vector (μ, σ²)) Sau đó, Θ0 lại chỉ có p &lt; q chiều (ví dụ, ta xét H0 là {(μ, σ²) ∈ R^2: μ = 5}. Khi đó ν sẽ là q - p = 2 - 1 = 1.
+> Giả sử ta có Θ là không gian parameter, có q chiều. (Ví dụ, giả sử ta giải bài toán hypothesis mà θ là parameter của normal, thì Θ sẽ là R², vì θ lúc này là vector (μ, σ²)) Sau đó, Θ0 lại chỉ có p &lt; q chiều (ví dụ, ta xét H0 là {(μ, σ²) ∈ R²: μ = 5}. Khi đó ν sẽ là q - p = 2 - 1 = 1.
 >
 >
 >
@@ -1301,35 +1301,35 @@
 >
 >
 >
-> Wn là asymptotically effiicient estimator của τ(θ) thì có phương sai tiệm cận là ν(θ) = \[τ'(θ)\]^2 / I1(θ)
+> Wn là asymptotically effiicient estimator của τ(θ) thì có phương sai tiệm cận là ν(θ) = \[τ'(θ)\]² / I1(θ)
 >
 >
 >
-> thể hiện toán học bởi: √n(Wn - τ(θ)) → n(0, ν(θ) = \[τ'(θ)\]^2 / I1(θ)) (1)
+> thể hiện toán học bởi: √n(Wn - τ(θ)) → n(0, ν(θ) = \[τ'(θ)\]² / I1(θ)) (1)
 >
 >
 >
-> (và cái này đồng nghĩa nói Avar(Wn) = \[τ'(θ)\]^2 / I1(θ))
+> (và cái này đồng nghĩa nói Avar(Wn) = \[τ'(θ)\]² / I1(θ))
 >
 >
 >
-> và cái này có nghĩa là khi n lớn Var\[√n(Wn - τ(θ))\] ≈ \[τ'(θ)\]^2 / I1(θ)) (1)
+> và cái này có nghĩa là khi n lớn Var\[√n(Wn - τ(θ))\] ≈ \[τ'(θ)\]² / I1(θ)) (1)
 >
 >
 >
-> ⇔ nVar(Wn) ≈ \[τ'(θ)\]^2 / I1(θ))
+> ⇔ nVar(Wn) ≈ \[τ'(θ)\]² / I1(θ))
 >
 >
 >
-> ⇔ Var(Wn) ≈ \[τ'(θ)\]^2 / nI1(θ))
+> ⇔ Var(Wn) ≈ \[τ'(θ)\]² / nI1(θ))
 >
 >
 >
-> ⇔ Var(Wn) ≈ \[τ'(θ)\]^2 / In(θ))
+> ⇔ Var(Wn) ≈ \[τ'(θ)\]² / In(θ))
 >
 >
 >
-> Và vế phải chính là CRLB của một estimator unbiased (unbiased: E\[Un\] = τ(θ) hoặc khi n lớn thì E\[Un\] → τ(θ). Vì CRLB của Un define bởi \[d/dθ E(Un)\]^2 / In(θ). Nên mới nói nếu Wn là estimator hiệu qủa tiệm cận của τ(θ) thì variance của nó sẽ dần đạt mức nhỏ nhất của Variance của một unbiased estimator của τ(θ)
+> Và vế phải chính là CRLB của một estimator unbiased (unbiased: E\[Un\] = τ(θ) hoặc khi n lớn thì E\[Un\] → τ(θ). Vì CRLB của Un define bởi \[d/dθ E(Un)\]² / In(θ). Nên mới nói nếu Wn là estimator hiệu qủa tiệm cận của τ(θ) thì variance của nó sẽ dần đạt mức nhỏ nhất của Variance của một unbiased estimator của τ(θ)
 >
 >
 >
@@ -1337,7 +1337,7 @@
 >
 >
 >
-> Và ii) định lí 10.1.2 nói rằng với θ^ là MLE của θ thì √n(τ(θ^) - τ(θ)) → n(0, ν(θ)). Cũng chính là nói Avar(τ(θ^)) = ν(θ) = \[τ'(θ)\]^2 / I1(θ) và theo định nghĩa (i) thì MLE τ(θ^) chính là estimator tiệm cận hiệu quả của τ(θ).
+> Và ii) định lí 10.1.2 nói rằng với θ^ là MLE của θ thì √n(τ(θ^) - τ(θ)) → n(0, ν(θ)). Cũng chính là nói Avar(τ(θ^)) = ν(θ) = \[τ'(θ)\]² / I1(θ) và theo định nghĩa (i) thì MLE τ(θ^) chính là estimator tiệm cận hiệu quả của τ(θ).
 >
 >
 >
@@ -1345,7 +1345,7 @@
 >
 >
 >
-> √n(θ^ - θ) → n(0, ν(θ)) với ν(θ) = \[τ'(θ)\]^2 / I1(θ), vì τ(θ) = θ nên lúc này ν(θ) = \[1\]^2 / I1(θ) = 1/I1(θ)
+> √n(θ^ - θ) → n(0, ν(θ)) với ν(θ) = \[τ'(θ)\]² / I1(θ), vì τ(θ) = θ nên lúc này ν(θ) = \[1\]² / I1(θ) = 1/I1(θ)
 >
 >
 >
@@ -1385,7 +1385,7 @@
 >
 >
 >
-> vế phải lúc này chính là n(0, (√I1(θ))^2 × 1/I1(θ)) = n(0,1)
+> vế phải lúc này chính là n(0, (√I1(θ))² × 1/I1(θ)) = n(0,1)
 >
 >
 >
@@ -1977,7 +1977,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> Theo định nghĩa, standard error của Wn, chỉ đơn giản là "estimator của STD(Wn), hay estimator của √Var(Wn)". Và ta đã gặp cái này rồi, ví dụ, ta xét sample mean, X̄, với variance của nó ta có thể chứng minh được là σ²/n = population variance/n. Thì đương nhiên STD(X̄) = σ/√n. Và vì ta không có population variance σ², ta dùng sample variance s^2 để thay vào, thì ta sẽ có estimate của STD(X̄), chính là standard error. Nên mới có công thức nói standard error của X̄ là s/√n là vậy.
+> Theo định nghĩa, standard error của Wn, chỉ đơn giản là "estimator của STD(Wn), hay estimator của √Var(Wn)". Và ta đã gặp cái này rồi, ví dụ, ta xét sample mean, X̄, với variance của nó ta có thể chứng minh được là σ²/n = population variance/n. Thì đương nhiên STD(X̄) = σ/√n. Và vì ta không có population variance σ², ta dùng sample variance s² để thay vào, thì ta sẽ có estimate của STD(X̄), chính là standard error. Nên mới có công thức nói standard error của X̄ là s/√n là vậy.
 >
 >
 >
@@ -2013,11 +2013,11 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> ⇔ Var\[Wn\]/(Sn)^2 ≈ 1
+> ⇔ Var\[Wn\]/(Sn)² ≈ 1
 >
 >
 >
-> ⇔ Var\[Wn\] ≈ (Sn)^2
+> ⇔ Var\[Wn\] ≈ (Sn)²
 >
 >
 >
@@ -2073,7 +2073,7 @@ Từ đó under H1, P(reject H0) = P(|Zn| ≥ z_α/2) = P(Zn ≤ -z_α/2 or Zn �
 >
 >
 >
-> √n(Wn - τ(θ)) → n\[0, ν(θ)\], ν(θ) = \[τ'(θ)\]^2 / I1(θ))
+> √n(Wn - τ(θ)) → n\[0, ν(θ)\], ν(θ) = \[τ'(θ)\]² / I1(θ))
 >
 >
 >
