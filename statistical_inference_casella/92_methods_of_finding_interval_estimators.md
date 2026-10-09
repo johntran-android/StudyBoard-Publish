@@ -807,27 +807,27 @@
 >
 >
 >
-> f''(λ) = n/λ² + Σxi [-1/(λ²)^2] 2λ
+> f''(λ) = n/λ² + Σxi [-1/(λ²)²] 2λ
 >
 >
 >
-> = n/λ² - 2Σxi /λ^3
+> = n/λ² - 2Σxi /λ³
 >
 >
 >
-> tại λ^ = Σxi/n → f''(λ^) = n/(Σxi/n)^2 - 2Σxi / (Σxi/n)^3
+> tại λ^ = Σxi/n → f''(λ^) = n/(Σxi/n)² - 2Σxi / (Σxi/n)³
 >
 >
 >
-> = n^3 / (Σxi)^2 - 2 n^3 / (Σxi)^2
+> = n³ / (Σxi)² - 2 n³ / (Σxi)²
 >
 >
 >
-> = - n^3 / (Σxi)^2 < 0
+> = - n³ / (Σxi)² < 0
 >
 >
 >
-> hay -n^3/(nλ)^2 = -n/(λ^)^2 < 0
+> hay -n³/(nλ)² = -n/(λ^)² < 0
 >
 >
 >
@@ -1124,7 +1124,7 @@
 >
 >
 >
-> Lúc này, xét điều kiện i) trở thành a^2 e^-a = b^2 e^-b
+> Lúc này, xét điều kiện i) trở thành a² e^-a = b² e^-b
 >
 >
 >
@@ -1190,7 +1190,7 @@
 >
 >
 >
-> Và a^2 e^-a = b^2 e^-b
+> Và a² e^-a = b² e^-b
 >
 >
 >
@@ -2399,15 +2399,15 @@
 >
 >
 >
-> → pdf fX̄(x̄) = (1/√2π(σ²/n)) exp[-(x̄-μ)^2/2(σ²/n)]
+> → pdf fX̄(x̄) = (1/√2π(σ²/n)) exp[-(x̄-μ)²/2(σ²/n)]
 >
 >
 >
-> = (1/√2π(σ²/n)) exp[-(n/2)(x̄-μ)^2/σ²]
+> = (1/√2π(σ²/n)) exp[-(n/2)(x̄-μ)²/σ²]
 >
 >
 >
-> = (1/√2π(σ²/n)) exp{-(n/2)[(x̄-μ)/σ]^2}
+> = (1/√2π(σ²/n)) exp{-(n/2)[(x̄-μ)/σ]²}
 >
 >
 >
@@ -2434,11 +2434,11 @@
 >
 >
 > Nhắc lại theorem transformation, nếu ta có fX là pdf của X, và Y = g(X) thì
-> nếu g là mapping 1-1 giữa x và y: y = g(x) ⇔ x = ginv(y) thì ta sẽ có:
+> nếu g là mapping 1-1 giữa x và y: y = g(x) ⇔ x = g⁻¹(y) thì ta sẽ có:
 >
 >
 >
-> fY(y) = fX(x) |d/dy x(y)| = fX(x) |d/dy ginv(y)|
+> fY(y) = fX(x) |d/dy x(y)| = fX(x) |d/dy g⁻¹(y)|
 >
 >
 >
@@ -2459,7 +2459,7 @@
 >
 >
 > Vì Q, hay h là một hàm monotone theo t với mọi θ) thì tức là mapping 
-> giữa t → q là 1-1: q = h(t, θ) ⇔ t = hinv(q, θ)
+> giữa t → q là 1-1: q = h(t, θ) ⇔ t = h⁻¹(q, θ)
 >
 >
 >
@@ -2471,7 +2471,7 @@
 >
 >
 >
-> = fT(hinv(q, θ)) |∂/∂q hinv(q, θ)|
+> = fT(h⁻¹(q, θ)) |∂/∂q h⁻¹(q, θ)|
 >
 >
 >
@@ -2487,7 +2487,7 @@
 >
 >
 >
-> = g(h(t,θ)) |∂/∂t h(t, θ)| |∂/∂q hinv(q, θ)|
+> = g(h(t,θ)) |∂/∂t h(t, θ)| |∂/∂q h⁻¹(q, θ)|
 >
 >
 >
@@ -3147,7 +3147,7 @@
 >
 >
 > Đầu tiên, FT là cdf của T, dĩ nhiên nó là một monotone -nondecreasing function
-> do đó đảm bảo mapping 1-1 giữa T và U: u = FT(t|θ) ⇔ t = FT_inv(u|θ)
+> do đó đảm bảo mapping 1-1 giữa T và U: u = FT(t|θ) ⇔ t = FT⁻¹(u|θ)
 >
 >
 >
@@ -3180,19 +3180,19 @@
 >
 >
 >
-> FT(T(s)|θ) ≤ u ⇔ T(s) ≤ FT_inv(u|θ)
+> FT(T(s)|θ) ≤ u ⇔ T(s) ≤ FT⁻¹(u|θ)
 >
 >
 >
-> ⇨ P_θ({s ∈ Ω: FT(T(s)|θ) ≤ u}) = P_θ({s ∈ Ω: T(s) ≤ FT_inv(u|θ)})
+> ⇨ P_θ({s ∈ Ω: FT(T(s)|θ) ≤ u}) = P_θ({s ∈ Ω: T(s) ≤ FT⁻¹(u|θ)})
 >
 >
 >
-> = P_θ(T ≤ FT_inv(u|θ))
+> = P_θ(T ≤ FT⁻¹(u|θ))
 >
 >
 >
-> = FT(FT_inv(u|θ)|θ) theo định nghĩa cdf   
+> = FT(FT⁻¹(u|θ)|θ) theo định nghĩa cdf   
 >
 >
 >
@@ -3208,12 +3208,12 @@
 >
 >
 >
-> Chứng minh ý hai của PIT luôn: Nếu ta có F là một valid cdf, thì Finv(U) với U
+> Chứng minh ý hai của PIT luôn: Nếu ta có F là một valid cdf, thì F⁻¹(U) với U
 > ~ unform(0,1) chính là một rv ~ F
 >
 >
 >
-> Tức là ta cần chứng minh X = Finv(U) là rv có pdf là F:
+> Tức là ta cần chứng minh X = F⁻¹(U) là rv có pdf là F:
 >
 >
 >
@@ -3225,11 +3225,11 @@
 >
 >
 >
-> = P({s ∈ Ω: Finv(U)(s) ≤ x})
+> = P({s ∈ Ω: F⁻¹(U)(s) ≤ x})
 >
 >
 >
-> = P({s ∈ Ω: Finv((U(s)) ≤ x})
+> = P({s ∈ Ω: F⁻¹((U(s)) ≤ x})
 >
 >
 >
@@ -3237,7 +3237,7 @@
 >
 >
 >
-> Finv((U(s)) ≤ x ⇔ F[Finv((U(s))] ≤ F(x) ⇔ U(s) ≤ F(x)
+> F⁻¹((U(s)) ≤ x ⇔ F[F⁻¹((U(s))] ≤ F(x) ⇔ U(s) ≤ F(x)
 >
 >
 >
@@ -3890,9 +3890,9 @@
 > nghiệm giải ra phải là giải từ công thức toán học, nên ta có thể giải hai cái
 > phương  trình này theo lối numerically cũng được, thì vẫn sẽ có 1-α
 > confidence interval. (giải theo lối numerically thì mình có thể liên hệ với tối ưu
-> hóa, ví dụ giải Ax = b mà theo lối analytically thì ta sẽ tính Ainv, nhân với b.
+> hóa, ví dụ giải Ax = b mà theo lối analytically thì ta sẽ tính A⁻¹, nhân với b.
 > Nhưng nếu giải theo thuật toán iteratively thì ta sẽ tạo chuỗi {xi} tiến dần về x
-> = Ainv b, đó chính là numerically,
+> = A⁻¹ b, đó chính là numerically,
 
 <br>
 
@@ -4167,7 +4167,7 @@
 >
 >
 >
-> nó = P(FX(X) ≤ FX(x*)) (x* là cái mà FX(x*) = y*, hay nói cách khác x* = FX_inv(y*)
+> nó = P(FX(X) ≤ FX(x*)) (x* là cái mà FX(x*) = y*, hay nói cách khác x* = FX⁻¹(y*)
 >
 >
 >
@@ -5293,15 +5293,15 @@
 >
 >
 >
-> = {Πi (1/√2πσ²) exp[-(xi-θ)^2/2σ²]} (1/√2πτ²) exp[-(θ-μ)^2/2τ²]
+> = {Πi (1/√2πσ²) exp[-(xi-θ)²/2σ²]} (1/√2πτ²) exp[-(θ-μ)²/2τ²]
 >
 >
 >
-> = (1/√2πσ²)^n exp[-Σi(xi-θ)^2/2σ²] (1/√2πτ²) exp[-(θ-μ)^2/2τ²]
+> = (1/√2πσ²)^n exp[-Σi(xi-θ)²/2σ²] (1/√2πτ²) exp[-(θ-μ)²/2τ²]
 >
 >
 >
-> = (1/√2πσ²)^n (1/√2πτ²) exp[-Σi(xi-θ)^2/2σ²] exp[-(θ-μ)^2/2τ²]
+> = (1/√2πσ²)^n (1/√2πτ²) exp[-Σi(xi-θ)²/2σ²] exp[-(θ-μ)²/2τ²]
 >
 >
 >
@@ -5655,7 +5655,7 @@
 >
 >
 >
-> Nhớ lại γ ta đặt là σ²/nτ² ⇔ (σ/√n)^2 = γτ² ⇨ σ/√n = τ√γ
+> Nhớ lại γ ta đặt là σ²/nτ² ⇔ (σ/√n)² = γτ² ⇨ σ/√n = τ√γ
 >
 >
 >
