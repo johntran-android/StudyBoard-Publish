@@ -892,43 +892,43 @@
 >
 >
 >
-> với X ~n(μ, σ²) ta biết fX(x) = (1/2πσ²)^(-1/2) exp[-(x - μ)^2 / 2σ²]
+> với X ~n(μ, σ²) ta biết fX(x) = (1/2πσ²)^(-1/2) exp[-(x - μ)² / 2σ²]
 >
 >
 >
-> ⇨ f𝐗(𝐱) = Πi=1:n (1/2πσ²)^(-1/2) exp[-(xi - μ)^2 / 2σ²]
+> ⇨ f𝐗(𝐱) = Πi=1:n (1/2πσ²)^(-1/2) exp[-(xi - μ)² / 2σ²]
 >
 >
 >
-> = [(1/2πσ²)^(1/2)]^n {exp Σi[-(xi - μ)^2 / 2σ²]}
+> = [(1/2πσ²)^(1/2)]^n {exp Σi[-(xi - μ)² / 2σ²]}
 >
 >
 >
-> = [(1/2πσ²)^(n/2)] {exp Σi[-(xi - μ)^2 / 2σ²]}
+> = [(1/2πσ²)^(n/2)] {exp Σi[-(xi - μ)² / 2σ²]}
 >
 >
 >
-> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi (xi - μ)^2]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi (xi - μ)²]}
 >
 >
 >
-> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi (xi - x̄ + x̄ - μ)^2]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi (xi - x̄ + x̄ - μ)²]}
 >
 >
 >
-> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi [(xi - x̄) + (x̄ - μ)]^2]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi [(xi - x̄) + (x̄ - μ)]²]}
 >
 >
 >
-> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi [(xi - x̄)^2 + (x̄ - μ)^2 + 2(xi - x̄)(x̄ - μ)]]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-Σi [(xi - x̄)² + (x̄ - μ)² + 2(xi - x̄)(x̄ - μ)]]}
 >
 >
 >
-> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - x̄)^2 + Σi(x̄ - μ)^2 + 2Σi(xi - x̄)(x̄ - μ)]]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - x̄)² + Σi(x̄ - μ)² + 2Σi(xi - x̄)(x̄ - μ)]]}
 >
 >
 >
-> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - x̄)^2 + n(x̄ - μ)^2 + 2Σi(xi - x̄)(x̄ - μ)]]}
+> = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - x̄)² + n(x̄ - μ)² + 2Σi(xi - x̄)(x̄ - μ)]]}
 >
 >
 >
@@ -937,7 +937,7 @@
 >
 >
 >
-> ... = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - x̄)^2 + n(x̄ - μ)^2]]}
+> ... = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - x̄)² + n(x̄ - μ)²]]}
 >
 >
 >
@@ -962,7 +962,7 @@
 >
 >
 >
-> Và ta sẽ nhớ công thức của nó là MX(t) = e^(μt + σ²t^2/2)
+> Và ta sẽ nhớ công thức của nó là MX(t) = e^(μt + σ²t²/2)
 >
 >
 >
@@ -990,19 +990,19 @@
 >
 >
 >
-> = e^(μt/n + σ²t^2/2n^2)*...*e^(μt/n + σ²t^2/2n^2) 
+> = e^(μt/n + σ²t²/2n²)*...*e^(μt/n + σ²t²/2n²) 
 >
 >
 >
-> = e^(μt/n + σ²t^2/2n^2)^n 
+> = e^(μt/n + σ²t²/2n²)^n 
 >
 >
 >
-> = e^(μt + σ²t^2/2n)
+> = e^(μt + σ²t²/2n)
 >
 >
 >
-> = e^(**μ**t + (**σ²/n**) t^2/2)
+> = e^(**μ**t + (**σ²/n**) t²/2)
 >
 >
 >
@@ -1394,7 +1394,7 @@
 >
 >
 >
-> f(𝐱|μ) = (2πσ²)^(-n/2) exp[-Σ(xi-x̄)^2/(2σ²)] exp(-n(x̄-μ)^2/(2σ²)
+> f(𝐱|μ) = (2πσ²)^(-n/2) exp[-Σ(xi-x̄)²/(2σ²)] exp(-n(x̄-μ)²/(2σ²)
 >
 >
 >
@@ -1402,7 +1402,7 @@
 >
 >
 >
-> Còn cái phần sau, còn dính tới μ:  exp(-n(x̄-μ)^2/(2σ²)
+> Còn cái phần sau, còn dính tới μ:  exp(-n(x̄-μ)²/(2σ²)
 >
 >
 >
@@ -1680,11 +1680,11 @@
 >
 >
 >
-> f(𝐱|Θ) = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - x̄)^2 + n(x̄ - μ)^2]]}
+> f(𝐱|Θ) = [(1/2πσ²)^(n/2)] {exp (1/2σ²) [-[Σi(xi - x̄)² + n(x̄ - μ)²]]}
 >
 >
 >
-> = [(2πσ²)^(-n/2)] exp {(1/2σ²) [-[Σi(xi - x̄)^2 + n(x̄ - μ)^2]]}
+> = [(2πσ²)^(-n/2)] exp {(1/2σ²) [-[Σi(xi - x̄)² + n(x̄ - μ)²]]}
 >
 >
 >
@@ -1699,13 +1699,13 @@
 >
 >
 >
->  Ta chỉ cần quan tâm [-[Σi(xi - x̄)^2 + n(x̄ - μ)^2]]}, vì sao, vì mình cần
+>  Ta chỉ cần quan tâm [-[Σi(xi - x̄)² + n(x̄ - μ)²]]}, vì sao, vì mình cần
 > xem thử là đâu là cái hàm còn dính tới Θ, và 𝐱, nhưng chỉ dính đến **x THÔNG
 > QUA FUNCITON NÀO ĐÓ**
 >
 >
 >
-> Vậy thì, [-[Σi(xi - x̄)^2 + n(x̄ - μ)^2]]}
+> Vậy thì, [-[Σi(xi - x̄)² + n(x̄ - μ)²]]}
 >
 >
 >
@@ -1713,15 +1713,15 @@
 >
 >
 >
-> và đặt T2(𝐱) = Σi(xi - x̄)^2 / (n-1)
+> và đặt T2(𝐱) = Σi(xi - x̄)² / (n-1)
 >
 >
 >
-> ⇨  -[ Σi(xi - x̄)^2 + n(x̄ - μ)^2 ]
+> ⇨  -[ Σi(xi - x̄)² + n(x̄ - μ)² ]
 >
 >
 >
-> =  -[ (n-1)T2(𝐱) + n(T1(𝐱) - μ)^2 ]
+> =  -[ (n-1)T2(𝐱) + n(T1(𝐱) - μ)² ]
 >
 >
 >
@@ -1729,7 +1729,7 @@
 >
 >
 >
-> [(2πσ²)^(-n/2)] exp {- [ (n-1)T2(𝐱) + n(T1(𝐱) - μ)^2 ] / 2σ² }
+> [(2πσ²)^(-n/2)] exp {- [ (n-1)T2(𝐱) + n(T1(𝐱) - μ)² ] / 2σ² }
 >
 >
 >
@@ -1899,7 +1899,7 @@
 
 > [!NOTE]
 > Rồi, hệ quả nữa đó là, nếu T(𝐗) là sufficient statistic thì với mọi function
-> one-to-one (tức scalar→ scalar) function r, thì rinv(T(𝐗)) cũng là sufficient
+> one-to-one (tức scalar→ scalar) function r, thì r⁻¹(T(𝐗)) cũng là sufficient
 > statistic luôn.
 >
 >
@@ -1908,7 +1908,7 @@
 >
 >
 >
-> đặt T*(𝐗) = r(T(𝐗)) ⇨ T(𝐗) = r_inv(T*(𝐗))
+> đặt T*(𝐗) = r(T(𝐗)) ⇨ T(𝐗) = r⁻¹(T*(𝐗))
 >
 >
 >
@@ -1916,7 +1916,7 @@
 >
 >
 >
-> = g(r_inv(T*(𝐗))|θ)h(𝐱)
+> = g(r⁻¹(T*(𝐗))|θ)h(𝐱)
 >
 >
 >
@@ -2276,7 +2276,7 @@
 
 > [!NOTE]
 > rồi, qua ví dụ này. Cho X1, ...Xn iid ~ n(μ, σ²) và cả hai đều chưa biết.
-> Cho 𝐱,  𝐲 là hai sample point và (x̄, s^2_x) và (ybar, s^2_y) là
+> Cho 𝐱,  𝐲 là hai sample point và (x̄, s²_x) và (ybar, s²_y) là
 > sample mean và  variance.
 >
 >
@@ -2317,12 +2317,12 @@
 >
 >
 >
-> = (2πσ²)^(-n/2) exp { - [n(x̄ - μ)^2 + (n-1)sx^2] / (2σ²) }
-> / (2πσ²)^(-n/2) exp { - [n(x̄ - μ)^2 + (n-1)sx^2] / (2σ²) }
+> = (2πσ²)^(-n/2) exp { - [n(x̄ - μ)² + (n-1)sx²] / (2σ²) }
+> / (2πσ²)^(-n/2) exp { - [n(x̄ - μ)² + (n-1)sx²] / (2σ²) }
 >
 >
 >
-> = exp([-n(x̄^2 - ybar^2) + 2nμ(x̄ - ybar) - (n - 1)(sx^2 - sy^2) / (2σ²)])
+> = exp([-n(x̄² - ybar²) + 2nμ(x̄ - ybar) - (n - 1)(sx² - sy²) / (2σ²)])
 >
 >
 >
@@ -2331,7 +2331,7 @@
 >
 >
 > Và lập luận sẽ là. Để mà cái này không phụ thuộc σ và μ (tức là constant
-> as a function of μ và σ ) thì chỉ xảy ra khi x̄ = ybar, và sx^2 = sy^2
+> as a function of μ và σ ) thì chỉ xảy ra khi x̄ = ybar, và sx² = sy²
 > (vì khi đó kết quả trở thành 1 là constant). Như vậy theo theorem này, thì
 > T(𝐗)= (X̄, S²) chính là minimal sufficient statistic
 
@@ -2526,8 +2526,8 @@
 > Câu chuyện là ta có joint pdf của X,Y. fXY(x,y). tạo thành random variable vector (X,
 > Y). Và (U,V) là kết quả của việc apply một vector → vector function nào đó lên  (X,Y):
 > k(X,Y) = (g1(X,Y), g2(X,Y)) sao cho mapping giữa support set của X,Y, kí hiệu là
-> A_curl (là tập con của R^2 mà fX,Y(x,y) tại mọi điểm trong đó đều dương) với ảnh
-> của nó qua k, tức {(u,v) ∈ R^2: u = g1(x,y), v = g2(x,y) for some x,y ∈ A_curl} là
+> A_curl (là tập con của R² mà fX,Y(x,y) tại mọi điểm trong đó đều dương) với ảnh
+> của nó qua k, tức {(u,v) ∈ R²: u = g1(x,y), v = g2(x,y) for some x,y ∈ A_curl} là
 > mapping 1-1. Nói rõ hơn, có nghĩa là với một (x,y) trong A_curl thì chỉ mapping với
 > một (u,v) trong ảnh của A_curl thôi và ngược lại, một (u,v) trong ảnh của A_curl chỉ
 > map với đúng một điểm (x,y) trong A_curl thôi (có thể map thêm với một (x,y) khác
@@ -3977,7 +3977,7 @@
 >
 >
 >
-> f(x|μ,σ²) = [1/√(2πσ)] exp[-(x-μ)^2/(2σ²)]
+> f(x|μ,σ²) = [1/√(2πσ)] exp[-(x-μ)²/(2σ²)]
 >
 >
 >
@@ -3985,31 +3985,31 @@
 >
 >
 >
-> = [1/√(2πσ)] exp[-(x^2 - 2xμ + μ²)/(2σ²)]
+> = [1/√(2πσ)] exp[-(x² - 2xμ + μ²)/(2σ²)]
 >
 >
 >
-> = [1/√(2πσ)] exp[(-x^2 + 2xμ - μ²)/(2σ²)]
+> = [1/√(2πσ)] exp[(-x² + 2xμ - μ²)/(2σ²)]
 >
 >
 >
-> = [1/√(2πσ)] exp[-x^2/(2σ²) + 2xμ/(2σ²) - μ²/(2σ²)]
+> = [1/√(2πσ)] exp[-x²/(2σ²) + 2xμ/(2σ²) - μ²/(2σ²)]
 >
 >
 >
-> = [1/√(2πσ)] exp[-x^2/(2σ²)] exp[2xμ/(2σ²)] exp[-μ²/(2σ²)]
+> = [1/√(2πσ)] exp[-x²/(2σ²)] exp[2xμ/(2σ²)] exp[-μ²/(2σ²)]
 >
 >
 >
-> = [1/√(2πσ)] exp[-μ²/(2σ²)] exp[-x^2/(2σ²) + 2xμ/(2σ²)]
+> = [1/√(2πσ)] exp[-μ²/(2σ²)] exp[-x²/(2σ²) + 2xμ/(2σ²)]
 >
 >
 >
-> = [1/√(2πσ)] exp[-μ²/(2σ²)] exp[ -1/(2σ²) . x^2 + 2μ/(2σ²) . x]
+> = [1/√(2πσ)] exp[-μ²/(2σ²)] exp[ -1/(2σ²) . x² + 2μ/(2σ²) . x]
 >
 >
 >
-> = [1/√(2πσ)] exp[-μ²/(2σ²)] exp[2μ/(2σ²) . x -1/(2σ²) . x^2]
+> = [1/√(2πσ)] exp[-μ²/(2σ²)] exp[2μ/(2σ²) . x -1/(2σ²) . x²]
 >
 >
 >
@@ -4021,7 +4021,7 @@
 >
 >
 >
-> w2(**θ**) = -1/(2σ²), t2(x) = x^2
+> w2(**θ**) = -1/(2σ²), t2(x) = x²
 >
 >
 >
@@ -4034,11 +4034,11 @@
 >
 >
 >
-> f(𝐱|θ, σ²) = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)] exp[2μ/(2σ²) . xi -1/(2σ²) . xi^2]
+> f(𝐱|θ, σ²) = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)] exp[2μ/(2σ²) . xi -1/(2σ²) . xi²]
 >
 >
 >
-> = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)] Πi=1:n exp[2μ/(2σ²) . xi -1/(2σ²) . xi^2] (***)
+> = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)] Πi=1:n exp[2μ/(2σ²) . xi -1/(2σ²) . xi²] (***)
 >
 >
 >
@@ -4047,16 +4047,16 @@
 >
 >
 >
-> .. = C(**θ**) exp {Σi=1:n [2μ/(2σ²) . xi -1/(2σ²) . xi^2]}
+> .. = C(**θ**) exp {Σi=1:n [2μ/(2σ²) . xi -1/(2σ²) . xi²]}
 >
 >
 >
-> = C(θ) exp { [2μ/(2σ²)] Σi=1:n xi - [1/(2σ²)] Σi=1:n xi^2 }
+> = C(θ) exp { [2μ/(2σ²)] Σi=1:n xi - [1/(2σ²)] Σi=1:n xi² }
 >
 >
 >
 >
-> Đặt T1(𝐱) = Σi=1:n xi, T2(𝐱) = Σi=1:n xi^2, h(𝐱) = 1
+> Đặt T1(𝐱) = Σi=1:n xi, T2(𝐱) = Σi=1:n xi², h(𝐱) = 1
 >
 >
 >
@@ -4076,7 +4076,7 @@
 >
 >
 >
-> = (Σi Xi,  Σi Xi^2) là **complete statistic**.
+> = (Σi Xi,  Σi Xi²) là **complete statistic**.
 >
 >
 >
@@ -4091,11 +4091,11 @@
 >
 >
 > Cái phân tích ở trên, là mình đang dựa vào theorem 6.2.25, để mình kết luận rằng
-> (T1(𝐗), T2(𝐗)) = (Σi Xi,  Σi Xi^2) là complete statistic. Vậy thì, nhớ rằng, theo định
-> nghĩa, complete là tính chất của một family of distribution. Nên nói (Σi Xi,  Σi Xi^2)
+> (T1(𝐗), T2(𝐗)) = (Σi Xi,  Σi Xi²) là complete statistic. Vậy thì, nhớ rằng, theo định
+> nghĩa, complete là tính chất của một family of distribution. Nên nói (Σi Xi,  Σi Xi²)
 > là complete statistic, tức là nói family of distribution của nó, là complete family.
-> Và ngay ở đây, mình chưa biết cái distribution của (Σi Xi,  Σi Xi^2) là gì, nhưng
-> nếu gọi **θ** là vector parameters của cái distribution này, thì (Σi Xi,  Σi Xi^2) chính
+> Và ngay ở đây, mình chưa biết cái distribution của (Σi Xi,  Σi Xi²) là gì, nhưng
+> nếu gọi **θ** là vector parameters của cái distribution này, thì (Σi Xi,  Σi Xi²) chính
 > là complete statistic của **θ.**
 >
 >
@@ -4123,7 +4123,7 @@
 >
 >
 >
-> = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)] Πi=1:n exp[2μ/(2σ²) . xi - 1/(2σ²) . xi^2]
+> = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)] Πi=1:n exp[2μ/(2σ²) . xi - 1/(2σ²) . xi²]
 >
 >
 >
@@ -4131,11 +4131,11 @@
 >
 >
 >
-> = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)] Πi=1:n exp[2μ/(2σ²) . xi] / exp [1/(2σ²) . xi^2]
+> = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)] Πi=1:n exp[2μ/(2σ²) . xi] / exp [1/(2σ²) . xi²]
 >
 >
 >
-> = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)] / exp [1/(2σ²) . xi^2] Πi=1:n exp[2μ/(2σ²) . xi] 
+> = Πi=1:n [1/√(2πσ)] exp[-μ²/(2σ²)] / exp [1/(2σ²) . xi²] Πi=1:n exp[2μ/(2σ²) . xi] 
 >
 >
 >
@@ -4143,7 +4143,7 @@
 >
 >
 >
-> H(𝐱) = 1 / {Πi=1:n exp [1/(2σ²) . xi^2]}
+> H(𝐱) = 1 / {Πi=1:n exp [1/(2σ²) . xi²]}
 >
 >
 >
@@ -4181,55 +4181,55 @@
 >
 >
 >
-> f(x|μ,σ²) = [1/√(2π(σ²/n))] exp[-(x-μ)^2/(2(σ²/n))]
+> f(x|μ,σ²) = [1/√(2π(σ²/n))] exp[-(x-μ)²/(2(σ²/n))]
 >
 >
 >
-> Đặt t^2 = σ²/n 
+> Đặt t² = σ²/n 
 >
 >
 >
-> = [1/√(2πt^2)] exp[-(x-μ)^2/(2(t^2))]
+> = [1/√(2πt²)] exp[-(x-μ)²/(2(t²))]
 >
 >
 >
-> = [1/√(2πt^2)] exp[-(x-μ)^2/(2t^2)]
+> = [1/√(2πt²)] exp[-(x-μ)²/(2t²)]
 >
 >
 >
-> = [1/√(2πt^2)] exp[-(x^2 - 2xμ + μ²)/(2t^2)]
+> = [1/√(2πt²)] exp[-(x² - 2xμ + μ²)/(2t²)]
 >
 >
 >
-> = [1/√(2πt^2)] exp[- x^2/(2t^2) + 2xμ/(2t^2) - μ²/(2t^2)]
+> = [1/√(2πt²)] exp[- x²/(2t²) + 2xμ/(2t²) - μ²/(2t²)]
 >
 >
 >
-> = [1/√(2πt^2)] exp[- x^2/(2t^2)] exp[2xμ/(2t^2)] / exp[μ²/(2t^2)]
+> = [1/√(2πt²)] exp[- x²/(2t²)] exp[2xμ/(2t²)] / exp[μ²/(2t²)]
 >
 >
 >
-> = [1/√(2πt^2)] [1/ exp[μ²/(2t^2)]] exp[- x^2/(2t^2)] exp[2xμ/(2t^2)] 
+> = [1/√(2πt²)] [1/ exp[μ²/(2t²)]] exp[- x²/(2t²)] exp[2xμ/(2t²)] 
 >
 >
 >
-> c(**θ**) chính là [1/√(2πt^2)] [1/ exp[μ²/(2t^2)]]
+> c(**θ**) chính là [1/√(2πt²)] [1/ exp[μ²/(2t²)]]
 >
 >
 >
-> h(x) chính là exp[- x^2/(2t^2)]
+> h(x) chính là exp[- x²/(2t²)]
 >
 >
 >
-> và ta có c(**θ**) h(x) exp[2xμ/(2t^2)]
+> và ta có c(**θ**) h(x) exp[2xμ/(2t²)]
 >
 >
 >
-> = c(**θ**) h(x) exp[μ . x/(t^2)]
+> = c(**θ**) h(x) exp[μ . x/(t²)]
 >
 >
 >
-> w1(**θ**) = μ/t^2
+> w1(**θ**) = μ/t²
 >
 >
 >
@@ -4257,8 +4257,8 @@
 >
 >
 >
-> Nhưng phân tích trên cũng cho thấy X̄ / t^2 cũng là complete statistic 
-> nếu coi w1(θ) = μ, t1(x) = x/t^2
+> Nhưng phân tích trên cũng cho thấy X̄ / t² cũng là complete statistic 
+> nếu coi w1(θ) = μ, t1(x) = x/t²
 >
 >
 >
