@@ -28,11 +28,11 @@
 >
 >
 >
-> Rồi, vậy thì người ta xét set B là tập con của R^2 và set A định nghĩa như sau:
+> Rồi, vậy thì người ta xét set B là tập con của R² và set A định nghĩa như sau:
 >
 >
 >
-> A = {(x,y) ∈ R^2: (g1(x,y), g2(x,y)) ∈ B}
+> A = {(x,y) ∈ R²: (g1(x,y), g2(x,y)) ∈ B}
 >
 >
 >
@@ -115,7 +115,7 @@
 >
 >
 >
-> và đây chính là định nghĩa của tập A, là **{(x,y)** ∈ **R^2: (g1(x,y), g2(x,y))**
+> và đây chính là định nghĩa của tập A, là **{(x,y)** ∈ **R²: (g1(x,y), g2(x,y))**
 > ∈ **B}**
 >
 >
@@ -237,11 +237,11 @@
 >
 >
 >
-> Thế thì, nếu B là R^2 thì A = {(x,y) ∈ R^2: (g1(x,y), g2(x,y)) ∈ R^2}
+> Thế thì, nếu B là R² thì A = {(x,y) ∈ R²: (g1(x,y), g2(x,y)) ∈ R²}
 >
 >
 >
-> ⇨ P((U,V) ∈ B) = P((X,Y) ∈ A) và với A là tập con của R^2 thì ko có gì đảm bảo fX,Y
+> ⇨ P((U,V) ∈ B) = P((X,Y) ∈ A) và với A là tập con của R² thì ko có gì đảm bảo fX,Y
 > dương trên cả, vì nếu dựa vào fXY để tìm fUV mà fXY = 0 thì có ích gì chứ. Có nghĩa là
 > mình phải dựa trên fXY, với fXY dương kìa
 >
@@ -268,12 +268,12 @@
 >
 >
 > Ở đây vai trò của B chính là **point set {(u,v)}**  với (u,v) là một điểm trong ℬ (thay
-> vì trong R^2, giúp đảm bảo rằng fU,V(u,v) dương).
+> vì trong R², giúp đảm bảo rằng fU,V(u,v) dương).
 >
 >
 >
 > Vậy khi B là point set trên thì cái gì đóng vai A, theo định nghĩa của tiền ảnh thì A =  {(x,y)
-> ∈ R^2: g1(x,y) = u, g2(x, y) = v}
+> ∈ R²: g1(x,y) = u, g2(x, y) = v}
 >
 >
 >
@@ -281,15 +281,15 @@
 >
 >
 >
-> {(x,y) ∈ 𝒜: g1(x,y) = u, g2(x, y) = v} ∪ {(x,y) ∈ R^2\\𝒜: g1(x,y) = u, g2(x, y) = v}
+> {(x,y) ∈ 𝒜: g1(x,y) = u, g2(x, y) = v} ∪ {(x,y) ∈ R²\\𝒜: g1(x,y) = u, g2(x, y) = v}
 >
 >
 >
-> và chính là Auv ∪ {(x,y) ∈ R^2\\𝒜: g1(x,y) = u, g2(x, y) = v}
+> và chính là Auv ∪ {(x,y) ∈ R²\\𝒜: g1(x,y) = u, g2(x, y) = v}
 >
 >
 >
-> Gọi {(x,y) ∈ R^2\\𝒜: g1(x,y) = u, g2(x, y) = v} là Auv_plus
+> Gọi {(x,y) ∈ R²\\𝒜: g1(x,y) = u, g2(x, y) = v} là Auv_plus
 >
 >
 >
@@ -331,7 +331,7 @@
 >
 >
 > Và Auv cũng là tập con của A (tức preimage của B={(u,v), với (u,v) là point trong ℬ},
-> bởi A define là {(x,y) ∈ R^2: g1(x,y) = u, g2(x,y) = v}
+> bởi A define là {(x,y) ∈ R²: g1(x,y) = u, g2(x,y) = v}
 >
 >
 >
@@ -349,7 +349,7 @@
 >
 >
 >
-> A = {(x,y) ∈ R^2: g1(x,y) = u, g2(x,y) = v}
+> A = {(x,y) ∈ R²: g1(x,y) = u, g2(x,y) = v}
 >
 >
 >
@@ -406,7 +406,7 @@
 >
 >
 > Tuy nhiên 𝒜 và ℬ vẫn vậy, là set mà fX,Y dương trên đó (𝒜)
-> và ℬ là {(u,v) ∈ R^2: u = g1(x,y), v = g2(x,y), (x,y) ∈ 𝒜}. Nói cách
+> và ℬ là {(u,v) ∈ R²: u = g1(x,y), v = g2(x,y), (x,y) ∈ 𝒜}. Nói cách
 > khác ℬ là ảnh (image) của 𝒜
 >
 >
@@ -420,7 +420,7 @@
 >
 >
 >
-> Thì A, tiền ảnh của nó, sẽ là {(x,y) ∈ R^2: (g1(x,y), g2(x,y)) ∈ B}, nhớ rằng B
+> Thì A, tiền ảnh của nó, sẽ là {(x,y) ∈ R²: (g1(x,y), g2(x,y)) ∈ B}, nhớ rằng B
 > đang là vùng rất nhỏ xung quanh điểm (u,v) thuộc ℬ
 >
 >
@@ -511,8 +511,8 @@
 > Rồi, **set /A**/ là gì, như đã nói đây là **support set của (X, Y)** (là **set** **mà joint pmf
 > dương** thì chính là support set). Thế thì như đã nói, khi ghi x = 0,1,2...
 > hay y = 0,1,2...khi đưa ra công thức của pmf thì nó chính là support set
-> Vậy tập thuộc R^2 mà fX,Y(x,y) dương, với việc fX,Y(x,y) cũng là fX(x)fY(y)
-> thì chính là tập (x,y) thuộc R^2 sao cho fX(x) dương và fY(y) dương.
+> Vậy tập thuộc R² mà fX,Y(x,y) dương, với việc fX,Y(x,y) cũng là fX(x)fY(y)
+> thì chính là tập (x,y) thuộc R² sao cho fX(x) dương và fY(y) dương.
 > Vậy thì đó chính là **{(x,y): x** ∈ **support set của X, y** ∈ **support set của Y}**
 >
 >
@@ -715,9 +715,9 @@
 >
 >
 >
-> (chú ý là vẫn có thể khi xét từ R^2 → ℬ thì quan hệ ko 1-1 nhưng
+> (chú ý là vẫn có thể khi xét từ R² → ℬ thì quan hệ ko 1-1 nhưng
 > xét 𝒜 → ℬ thì thỏa, như hình minh họa cho thấy mapping
-> giữa R^2 → B ko 1-1)
+> giữa R² → B ko 1-1)
 >
 >
 >
@@ -875,7 +875,7 @@
 >
 >
 >
-> Cũng có thể thay bằng 1 / |∂(u,v)/∂(x,y)| = |∂(u,v)/∂(x,y)_inv| = |∂(x,y)/∂(u,v)|
+> Cũng có thể thay bằng 1 / |∂(u,v)/∂(x,y)| = |∂(u,v)/∂(x,y)⁻¹| = |∂(x,y)/∂(u,v)|
 >
 >
 >
@@ -979,7 +979,7 @@
 >
 > tạo thành hình bình hành
 >
-> Quan hệ giữa 𝒜 và ℬ lúc này là 1-1, nhưng giữa R^2 →
+> Quan hệ giữa 𝒜 và ℬ lúc này là 1-1, nhưng giữa R² →
 > ℬ vẫn có thể là ko phải 1-1
 
 <br>
@@ -1013,7 +1013,7 @@
 >
 >
 >
-> Tức 𝒜 = x, y ∈ {(x,y): 0&lt;x&lt;1, 0&lt;y&lt;1} (đó là hình vuông trong R^2)
+> Tức 𝒜 = x, y ∈ {(x,y): 0&lt;x&lt;1, 0&lt;y&lt;1} (đó là hình vuông trong R²)
 >
 >
 >
@@ -1053,7 +1053,7 @@
 >
 >
 >
-> Vậy tập **ℬ** là {(u,v) ∈ R^2: 0 &lt; v &lt; 1, 0 &lt; u &lt; v}
+> Vậy tập **ℬ** là {(u,v) ∈ R²: 0 &lt; v &lt; 1, 0 &lt; u &lt; v}
 >
 >
 >
@@ -1069,7 +1069,7 @@
 >
 >
 >
-> Nếu xét mapping bởi hàm g1(x,y) = xy, g2(x,y) = x với (x,y) từ **toàn R^2 tới ℬ** thì nó **KHONG PHẢI LÀ mapping 1-1** (tức là mapping giữa R^2 và ℬ KHÔNG PHẢI 1-1) vì điểm bất kì (0,y) nào cũng được map với (0,0)
+> Nếu xét mapping bởi hàm g1(x,y) = xy, g2(x,y) = x với (x,y) từ **toàn R² tới ℬ** thì nó **KHONG PHẢI LÀ mapping 1-1** (tức là mapping giữa R² và ℬ KHÔNG PHẢI 1-1) vì điểm bất kì (0,y) nào cũng được map với (0,0)
 >
 >
 >
@@ -1177,12 +1177,12 @@
 >
 >
 >
-> Và tương tự Y cũng vậy, do đó **dễ thấy support set của (X,Y) là toàn bộ R^2**: A
-> = R^2
+> Và tương tự Y cũng vậy, do đó **dễ thấy support set của (X,Y) là toàn bộ R²**: A
+> = R²
 >
 >
 >
-> Thế thì ta sẽ tìm B: theo định nghĩa là **{x+y, x-y với x, y** ∈ **A = R^2}**
+> Thế thì ta sẽ tìm B: theo định nghĩa là **{x+y, x-y với x, y** ∈ **A = R²}**
 >
 >
 >
@@ -1195,10 +1195,10 @@
 >
 >
 > và ĐIỀU QUAN TRỌNG LÀ, **x, y này CHẮC CHẮC** ∈ **𝒜**, đơn giản vì
-> 𝒜 .. LÀ **TOÀN BỘ R^2**. Vậy nên, cái ông u,v bất kì kìa CHẮC CHẮC LÀ
+> 𝒜 .. LÀ **TOÀN BỘ R²**. Vậy nên, cái ông u,v bất kì kìa CHẮC CHẮC LÀ
 > THUỘC ℬ (vì định nghĩa của ℬ là (g1(x,y),g2(x,y)) với (x,y) ∈ 𝒜
 > mà) Thế mà ta đã bắt đầu bằng việc chọn u, v bất kì, để rồi đều cho thấy nó thuộc
-> ℬ, ĐIỀU NÀY GIÚP KẾT LUẬN ℬ CHÍNH LÀ R^2
+> ℬ, ĐIỀU NÀY GIÚP KẾT LUẬN ℬ CHÍNH LÀ R²
 >
 >
 >
@@ -1212,7 +1212,7 @@
 >
 >
 >
-> TÓM LẠI, X**ÁC ĐỊNH ĐƯỢC ℬ** CHÍNH LÀ **R^2**, VÀ **CHỨNG MINH ĐƯỢC
+> TÓM LẠI, X**ÁC ĐỊNH ĐƯỢC ℬ** CHÍNH LÀ **R²**, VÀ **CHỨNG MINH ĐƯỢC
 > MAPPING LÀ 1-1**.
 >
 >
@@ -1230,7 +1230,7 @@
 >
 >
 >
-> từ đó ta có như trong sách với ghi chú -inf < u và v < inf thể hiện set ℬ là R^2
+> từ đó ta có như trong sách với ghi chú -inf < u và v < inf thể hiện set ℬ là R²
 >
 >
 >
@@ -1289,28 +1289,28 @@
 >
 >
 >
-> = ∫-inf:inf [(1/√2π√2)e^-u^2/4][(1/√2π√2)e^-v^2/4] dv
+> = ∫-inf:inf [(1/√2π√2)e^-u²/4][(1/√2π√2)e^-v²/4] dv
 >
 >
 >
-> = [(1/√2π√2)e^-u^2/4] ∫-inf:inf [(1/√2π√2)e^-v^2/4] dv | Đưa phần ko dính v ra
+> = [(1/√2π√2)e^-u²/4] ∫-inf:inf [(1/√2π√2)e^-v²/4] dv | Đưa phần ko dính v ra
 >
 >
 >
-> = [(1/√2π√2)e^-u^2/4] ∫-inf:inf [(1/√2π√2)e^-v^2/4] dv
+> = [(1/√2π√2)e^-u²/4] ∫-inf:inf [(1/√2π√2)e^-v²/4] dv
 >
 >
 >
-> Xét tích phân ∫-inf:inf [(1/√2π√2)e^-v^2/4] dv bằng cách nhận ra integrant là
+> Xét tích phân ∫-inf:inf [(1/√2π√2)e^-v²/4] dv bằng cách nhận ra integrant là
 > pdf của normal(0,2) ...
 >
 >
 >
-> (Vì với pdf của normal(μ, σ²): f(x) = 1/σ√2π e^-(x-μ)^2/2σ² 
+> (Vì với pdf của normal(μ, σ²): f(x) = 1/σ√2π e^-(x-μ)²/2σ² 
 >
 >
 >
-> ⇨ pdf normal(0, 2) = 1/√2√2π e^-(x-0)^2/2(√2^2) = **1/√2√2π e^-x^2/4)**
+> ⇨ pdf normal(0, 2) = 1/√2√2π e^-(x-0)²/2(√2²) = **1/√2√2π e^-x²/4)**
 >
 >
 >
@@ -1322,7 +1322,7 @@
 >
 >
 >
-> Từ đó fU(u) = (1/√2π√2)e^-u^2/4, và tiếp tục lập luận rằng **vì pdf của U có dạng
+> Từ đó fU(u) = (1/√2π√2)e^-u²/4, và tiếp tục lập luận rằng **vì pdf của U có dạng
 > của một normal (0, 2) nhờ đó kết luận U ~ normal(0,2).**
 >
 >
@@ -1331,11 +1331,11 @@
 >
 >
 >
-> (tức [(1/√2π√2)e^-u^2/4] [(1/√2π√2)e^-v^2/4])
+> (tức [(1/√2π√2)e^-u²/4] [(1/√2π√2)e^-v²/4])
 >
 >
 >
->  và đã chứng minh f1(u) chính là fU(u) ⇨ fV(v) = (1/√2π√2)e^-v^2/4 và từ đó
+>  và đã chứng minh f1(u) chính là fU(u) ⇨ fV(v) = (1/√2π√2)e^-v²/4 và từ đó
 > suy ra V cũng là normal(0, 2)
 
 <br>
@@ -1361,8 +1361,8 @@
 >
 >
 >
-> Đơn giản là theorem đó nói rằng nếu X, Y độc lập và là normal(μ1, σ1^2) và
-> normal(μ2, σ2^2) thì X + Y sẽ là normal (μ1 + μ2, σ1^2 + σ2^2) Vậy nên dùng cái
+> Đơn giản là theorem đó nói rằng nếu X, Y độc lập và là normal(μ1, σ1²) và
+> normal(μ2, σ2²) thì X + Y sẽ là normal (μ1 + μ2, σ1² + σ2²) Vậy nên dùng cái
 > này ta suy ra ngay U ~ normal (0 + 0, 1 + 1) = normal(0,2)
 >
 >
@@ -1399,7 +1399,7 @@
 >
 >
 >
-> Chứng minh: Đặt Y = g(X) = -X với X ~ N(μ, σ²) ⇨ X = -Y = ginv(Y)
+> Chứng minh: Đặt Y = g(X) = -X với X ~ N(μ, σ²) ⇨ X = -Y = g⁻¹(Y)
 >
 >
 >
@@ -1407,23 +1407,23 @@
 >
 >
 >
-> fY(y) = fX(x) |dx/dy| = fX(ginv(y) |d/dy ginv(y)|
+> fY(y) = fX(x) |dx/dy| = fX(g⁻¹(y) |d/dy g⁻¹(y)|
 >
 >
 >
-> = (1/√2π) e^-(x)^2/2. | d/dy (-y) |
+> = (1/√2π) e^-(x)²/2. | d/dy (-y) |
 >
 >
 >
-> = (1/√2π) e^-x^2/2. | -1 |
+> = (1/√2π) e^-x²/2. | -1 |
 >
 >
 >
-> = (1/√2π) e^-(-y)^2/2
+> = (1/√2π) e^-(-y)²/2
 >
 >
 >
-> = (1/√2π) e^-y^2/2
+> = (1/√2π) e^-y²/2
 >
 >
 >
@@ -1518,7 +1518,7 @@
 >
 >
 >
-> ∂^2/∂u∂v FU,V(u,v) = fU,V(u,v) = ∂^2/∂u∂v P(X ∈ Au) P(Y ∈ Bv)
+> ∂²/∂u∂v FU,V(u,v) = fU,V(u,v) = ∂²/∂u∂v P(X ∈ Au) P(Y ∈ Bv)
 >
 >
 >
@@ -1526,7 +1526,7 @@
 >
 >
 >
-> ∂^2/∂u∂v [P(X ∈ Au) P(Y ∈ Bv)]
+> ∂²/∂u∂v [P(X ∈ Au) P(Y ∈ Bv)]
 >
 >
 >
@@ -1565,7 +1565,7 @@
 >
 >
 >
-> Một điểm nữa có thể nói thêm là Vì sao ∂^2/∂x∂y F(x,y) lại là joint pdf f(x,y)
+> Một điểm nữa có thể nói thêm là Vì sao ∂²/∂x∂y F(x,y) lại là joint pdf f(x,y)
 >
 >
 >
@@ -1589,7 +1589,7 @@
 >
 >
 >
-> ⇨  P(X ≤ x, Y ≤ y) = ∫∫A fX,Y(t,j)dxdy với A = {(t,j) ∈ R^2: -inf < t ≤ x, -inf < j ≤ y)}
+> ⇨  P(X ≤ x, Y ≤ y) = ∫∫A fX,Y(t,j)dxdy với A = {(t,j) ∈ R²: -inf < t ≤ x, -inf < j ≤ y)}
 >
 >
 >
@@ -1597,7 +1597,7 @@
 >
 >
 >
-> ∂^2F(x,y)/∂x∂y = f(x,y)
+> ∂²F(x,y)/∂x∂y = f(x,y)
 
 <br>
 
@@ -1636,7 +1636,7 @@
 >
 >
 > Thế thì, ta sẽ dựa vào một điều có thể chứng minh rằng: Nếu A là tập tiền
-> ảnh của B: A = {(x,y) ∈ R^2: (g(x,y), h(x,y)) ∈ B} thì P((X,Y) ∈ A) = P((U,V) ∈
+> ảnh của B: A = {(x,y) ∈ R²: (g(x,y), h(x,y)) ∈ B} thì P((X,Y) ∈ A) = P((U,V) ∈
 > B) và từ đó tạo cơ sở để ta xây dựng joint distribution của U,V dựa trên X,Y
 >
 >
@@ -1672,7 +1672,7 @@
 >
 >
 >
-> fY(y) = fX(ginv(y)) | d/dy ginv(y) |
+> fY(y) = fX(g⁻¹(y)) | d/dy g⁻¹(y) |
 >
 >
 >
@@ -1689,7 +1689,7 @@
 > xử theo kiểu nó sẽ là kết quả của các hàm gi khác nhau trên các Ai khác nhau,
 > ví dụ như g(x) với x trên A1 sẽ = g1(x), g(x) với x trên A2 sẽ = g2(x)....
 > Bên cạnh đó, yêu cầu quan trọng là các hàm gi trên các set Ai phải đơn điệu
-> (monotone), để với xi ∈ Ai sao cho y = gi(xi) thì xi = gi_inv(y)
+> (monotone), để với xi ∈ Ai sao cho y = gi(xi) thì xi = gi⁻¹(y)
 >
 >
 >
@@ -1701,7 +1701,7 @@
 >
 >
 >
-> fY(y) với y ∈ 𝒴, = **Σi fX(gi_inv(y)) |d/dy gi_inv(y)|** và = 0 khi y không ∈ 𝒴
+> fY(y) với y ∈ 𝒴, = **Σi fX(gi⁻¹(y)) |d/dy gi⁻¹(y)|** và = 0 khi y không ∈ 𝒴
 >
 >
 >
@@ -1755,20 +1755,20 @@
 >
 >
 >
-> Đầu tiên 𝒜 là gì? theo định nghĩa nó là {(x,y) ∈ R^2: fX,Y(x,y) > 0} Ta chưa
+> Đầu tiên 𝒜 là gì? theo định nghĩa nó là {(x,y) ∈ R²: fX,Y(x,y) > 0} Ta chưa
 > biết joint pdf fX,Y. Nhưng vì đề bài cho X, Y độc lập ta có thể suy ra ngay fX,Y(x,
 > y) = fX(x)fY(y), và từ đó fX,Y(x,y) > 0 ⇔ fX(x) > 0 và fY(y) > 0 ⇔ x ∈ support set
-> của X và y ∈ support set của Y  cũng chính là x ∈ R, y ∈ R, hay (x,y) ∈ R^2. Lí do
+> của X và y ∈ support set của Y  cũng chính là x ∈ R, y ∈ R, hay (x,y) ∈ R². Lí do
 > là vì X và Y đều ~n(0,1) có pdf dương tại mọi điểm thuộc R. Tóm lại 𝒜 là
-> R^2.
+> R².
 >
 >
 >
-> Thế thì trên R^2, ta có thể chia ra thành một partition như sau:
+> Thế thì trên R², ta có thể chia ra thành một partition như sau:
 >
 >
 >
-> A0 = {x,y ∈ R^2, y = 0}, A1 = {x,y ∈ R^2: y < 0} và A2 = {x,y ∈ R^2: y > 0}
+> A0 = {x,y ∈ R², y = 0}, A1 = {x,y ∈ R²: y < 0} và A2 = {x,y ∈ R²: y > 0}
 >
 >
 >
@@ -1869,11 +1869,11 @@
 >
 >
 >
-> Với fX,Y(x,y) = fX(x) fY(y) = (1/√2π) e^-x^2/2 (1/√2π) e^-y^2/2
+> Với fX,Y(x,y) = fX(x) fY(y) = (1/√2π) e^-x²/2 (1/√2π) e^-y²/2
 >
 >
 >
-> = (1/2π) e^-(x^2+y^2)/2
+> = (1/2π) e^-(x²+y²)/2
 >
 >
 >
@@ -1881,11 +1881,11 @@
 >
 >
 >
-> Tính tiếp như sách ,.. = (v/π) e^-(u^2+1)v^2/2 -inf < u < inf, 0 < v < inf
+> Tính tiếp như sách ,.. = (v/π) e^-(u²+1)v²/2 -inf < u < inf, 0 < v < inf
 >
 >
 >
-> Từ đó tính marginal pdf của U 1/[π(u^2 + 1)] -inf < u < inf
+> Từ đó tính marginal pdf của U 1/[π(u² + 1)] -inf < u < inf
 
 <br>
 
