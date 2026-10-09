@@ -382,7 +382,7 @@
 >
 >
 >
-> Nhớ lại nếu Y = g(X) thì với g là mapping 1-1 y = g(x) ⇔ x = ginv(y):
+> Nhớ lại nếu Y = g(X) thì với g là mapping 1-1 y = g(x) ⇔ x = g⁻¹(y):
 >
 >
 >
@@ -390,7 +390,7 @@
 >
 >
 >
-> = fX(ginv(y) |d/dy ginv(y)|
+> = fX(g⁻¹(y) |d/dy g⁻¹(y)|
 >
 >
 >
