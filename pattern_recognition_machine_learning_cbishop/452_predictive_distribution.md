@@ -1,6 +1,6 @@
 # 4.5.2 Predictive distribution
 
-📊 **Progress:** `1` Notes | `3` Screenshots | `1` AI Reviews
+📊 **Progress:** `2` Notes | `3` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-o3n19bt"></a>
@@ -347,6 +347,307 @@
 >
 > **💡 Deeper notes**
 > - Cách giải của Bishop dùng hàm Dirac delta thực chất chính là định nghĩa toán học chính thức của phép đổi biến / phân phối đẩy (pushforward measure) cho biến ngẫu nhiên liên tục khi chuyển từ không gian $\mathbf{w}$ sang không gian 1 chiều của $a$.
+
+<br>
+
+<a id="node-7if4x5p"></a>
+
+### Chứng minh khi linear transform một normal thì cũng được normal
+
+> [!NOTE]
+> Chứng minh nếu 𝐗 \~ 𝒩(𝛍,𝚺) thì 𝐘 = 𝐀𝐗 cũng \~ 𝒩(𝛕, 𝚲)
+>
+>
+>
+> Với X, mgf của X được định nghĩa như sau: MX(t) = E\[exp(tX)\]
+>
+>
+>
+> Với 𝐗 = (X1,X2,....), M𝐗(𝐭) = E\[exp\[Σi tiXi\]\] = E\[exp(𝐭ᵀ𝐗)\]
+>
+>
+>
+> (và cũng có nghĩa là nếu evaluate tại 𝐮, thì M𝐗(𝐭)|𝐭=𝐮 = E\[exp(𝐮ᵀ𝐗)\] (1))
+>
+>
+>
+> hay với 𝐘, M𝐘(t) = E\[exp\[Σi tiYi\]\] = E\[exp(𝐭ᵀ𝐘)\]
+>
+>
+>
+> Nhiệm vụ là: Vì 𝐗 \~ normal, nên mgf của nó có dạng mgf của Normal đa biến. Nếu chứng minh mgf của 𝐘 cũng có dạng đó là xong.
+>
+>
+>
+> M𝐘(𝐭) = E\[exp(𝐭ᵀ𝐘)\] = E\[exp(𝐭ᵀ𝐀𝐗)\] = E\[exp((𝐀ᵀ𝐭)ᵀ𝐗)\], theo (1), đây chính là M𝐗(𝐀ᵀ𝐭). Do đó, mgf của 𝐘 tại 𝐭 chỉ là mgf của 𝐗 evaluate tại 𝐀ᵀ𝐭:
+>
+>
+>
+> M𝐘(𝐭) = M𝐗(𝐀ᵀ𝐭) (2)
+>
+>
+>
+> ---
+>
+>
+>
+> Xét M𝐗(𝐭), để derive lại công thức mgf của 𝒩(𝛍, 𝚺), ta xây dựng cho 𝐙 \~ 𝒩(𝟎, 𝐈) trước:
+>
+>
+>
+> M𝐙(𝐭) = E\[exp(𝐭ᵀ𝐙)\] = E\[exp(Σi tiZi)\] = E\[Πi exp(tiZi)\]
+>
+>
+>
+> Vì Cov(𝐙) = 𝐈, nên Z1,Z2,...độc lập. ⇒ exp(t1Z1), exp(t2Z2),... cũng độc lập.
+>
+>
+>
+> Nên áp dụng tính chất: nếu X, Y độc lập thì E\[XY\] = E\[X\] E\[Y\]. Chứng minh cũng nhanh: E\[XY\] = ∫∫xyf(x,y)dxdy = ∫∫xyf(x)f(y)dxdy (do X, Y độc lập nên joint pdf tách thành tích các marginal pdf) = ∫yf(y)(∫xf(x)dx)dy = ∫yf(y)(EX)dy = EX EY
+>
+>
+>
+> Vậy .. = Πi E\[exp(tiZi)\]
+>
+>
+>
+> Tiếp, xét E\[exp(tiZi)\], = ∫exp(tizi) 𝒩(zi|0,1) dzi
+>
+>
+>
+> hay tạm bỏ i đi cho gọn E\[exp(tZ)\] (đây dĩ nhiên là mgf của Z \~ 𝒩(0,1))
+>
+>
+>
+> (again dùng LOTUS: EY = Eg(X) LOTUS cho phép = ∫g(x)fX(x)dx)
+>
+>
+>
+> = ∫exp(tz) 𝒩(z|0,1) dz = ∫exp(tz) 1/(√2π) exp(-z²/2) dz
+>
+>
+>
+> = ∫1/(√2π) exp(tz) exp(-z²/2) dz
+>
+>
+>
+> = ∫1/(√2π) exp(tz-z²/2) dz
+>
+>
+>
+> = ∫1/(√2π) exp\[-(z²-2tz)/2)\] dz
+>
+>
+>
+> = ∫1/(√2π) exp\[-(z²-2tz+t²-t²)/2)\] dz
+>
+>
+>
+> = ∫1/(√2π) exp\[-(z²-2tz+t²)/2+t²/2\] dz
+>
+>
+>
+> = ∫1/(√2π) exp\[-(z-t)²/2+t²/2\] dz
+>
+>
+>
+> = ∫1/(√2π) exp\[-(z-t)²/2\]exp(t²/2) dz
+>
+>
+>
+> = exp(t²/2) ∫1/(√2π) exp\[-(z-t)²/2\] dz
+>
+>
+>
+> Cục ∫1/(√2π) exp\[-(z-t)²/2\] dz, chính là gì, là tích phân của pdf của một 𝒩(t,1), nên bằng 1, do điều kiện valid của pdf.
+>
+>
+>
+> Vậy MZ(t) = exp(t²/2).
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy Πi E\[exp(tiZi)\] = Πi exp(ti²/2) = exp\[Σi (ti²/2)\] = exp(𝐭ᵀ𝐭/2)
+>
+>
+>
+> Vậy M𝐙(𝐭) = exp(𝐭ᵀ𝐭/2)
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, với Z \~ 𝒩(0,1) thì X = σZ + μ sẽ \~ 𝒩(μ, σ²)
+>
+>
+>
+> MX(t) = E\[exp(tX)\] = E\[exp(t(σZ + μ))\] = E\[exp(tσZ + tμ)\] = E\[exp(tσZ)exp(tμ)\]
+>
+>
+>
+> = exp(tμ) E\[exp(tσZ)\] (do linearity: E(cX) = cE(X))
+>
+>
+>
+> Mà MZ(t) = E\[exp(tZ)\] = exp(t²/2), nên E\[exp((tσ)Z)\] chính là MZ(tσ), nên = exp(t²/2)|t=tσ = exp(t²σ²/2)
+>
+>
+>
+> Vậy,.. = exp(tμ)exp(t²σ²/2) = exp(tμ+t²σ²/2).
+>
+>
+>
+> Như vậy ta đã cũng đã derive mgf của 𝒩(μ, σ²): MX(t) = exp(tμ+t²σ²/2).
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy tương tự vậy, với 𝐙 \~ 𝒩(𝟎, 𝐈), thì 𝐗 = 𝐁𝐙 + 𝛍 với 𝚺 = 𝐁𝐁ᵀ, sẽ là \~ 𝒩(𝛍, 𝚺=𝐁𝐁ᵀ)
+>
+>
+>
+> mgf của 𝐗: M𝐗(𝐭) = E\[exp(𝐭ᵀ𝐗)\]
+>
+>
+>
+> = E\[exp(𝐭ᵀ(𝐁𝐙 + 𝛍))\]
+>
+>
+>
+> = E\[exp(𝐭ᵀ𝐁𝐙 + 𝐭ᵀ𝛍)\]
+>
+>
+>
+> = E\[exp(𝐭ᵀ𝐁𝐙)exp(𝐭ᵀ𝛍)\]
+>
+>
+>
+> = E\[exp(𝐭ᵀ𝐁𝐙)\] exp(𝐭ᵀ𝛍)
+>
+>
+>
+> = E\[exp(𝐁ᵀ𝐭)ᵀ𝐙)\] exp(𝐭ᵀ𝛍)
+>
+>
+>
+> Vì M𝐙(𝐭) = E\[exp(𝐭ᵀ𝐙\]) = exp(𝐭ᵀ𝐭/2),
+>
+>
+>
+> nên E\[exp(𝐁ᵀ𝐭)ᵀ𝐙)\] chính là M𝐙(𝐭)|𝐭=𝐁ᵀ𝐭, =
+>
+>
+>
+> = exp((𝐁ᵀ𝐭)ᵀ(𝐁ᵀ𝐭)/2)
+>
+>
+>
+> = exp((𝐭ᵀ𝐁𝐁ᵀ𝐭)/2)
+>
+>
+>
+> Vậy M𝐗(𝐭) = E\[exp(𝐁ᵀ𝐭)ᵀ𝐙)\] exp(𝐭ᵀ𝛍) = exp((𝐭ᵀ𝐁𝐁ᵀ𝐭)/2) exp(𝐭ᵀ𝛍)
+>
+>
+>
+> = exp((𝐭ᵀ𝐁𝐁ᵀ𝐭)/2) exp(𝐭ᵀ𝛍)
+>
+>
+>
+> = exp((𝐭ᵀ𝐁𝐁ᵀ𝐭)/2 + 𝐭ᵀ𝛍)
+>
+>
+>
+> = exp(𝐭ᵀ𝛍 + 𝐭ᵀ𝐁𝐁ᵀ𝐭/2)
+>
+>
+>
+> = exp(𝐭ᵀ𝛍 + 𝐭ᵀ𝚺𝐭/2) (𝐁𝐁ᵀ = 𝚺)
+>
+>
+>
+> Vậy mgf của 𝐗 \~ 𝒩(𝛍, 𝚺) là M𝐗(𝐭) = exp(𝐭ᵀ𝛍 + 𝐭ᵀ𝚺𝐭/2)
+>
+>
+>
+> ---
+>
+>
+>
+> Nãy giờ chỉ là thử derive lại mgf của 𝐗 \~ 𝒩(𝛍, 𝚺)
+>
+>
+>
+> Tiếp tục với ý ở trên: "mgf của 𝐘 chỉ là mgf của 𝐗 evaluate tại 𝐀ᵀ𝐭"
+>
+>
+>
+> Vậy M𝐘(𝐭) = exp(𝐭ᵀ𝛍 + 𝐭ᵀ𝚺𝐭/2)|𝐭=𝐀ᵀ𝐭
+>
+>
+>
+> = exp((𝐀ᵀ𝐭)ᵀ𝛍 + (𝐀ᵀ𝐭)ᵀ𝚺(𝐀ᵀ𝐭)/2)
+>
+>
+>
+> = exp(𝐭ᵀ𝐀𝛍 + 𝐭ᵀ𝐀𝚺𝐀ᵀ𝐭/2)
+>
+>
+>
+> = exp(𝐭ᵀ(𝐀𝛍) + 𝐭ᵀ(𝐀𝚺𝐀ᵀ)𝐭/2)
+>
+>
+>
+> So với dạng mgf của 𝐗: \~ 𝒩(𝛍, 𝚺) là M𝐗(𝐭) = exp(𝐭ᵀ𝛍 + 𝐭ᵀ𝚺𝐭/2)
+>
+>
+>
+> Ta sẽ thấy 𝐀𝛍 tương ứng với 𝛍, 𝐀𝚺𝐀ᵀ tương ứng với 𝚺
+>
+>
+>
+> Vậy dạng của mgf của 𝐘 hoàn toàn giống với dạng mgf của một 𝒩(𝐀𝛍, 𝐀𝚺𝐀ᵀ)
+>
+>
+>
+> Từ đó, do mgf, cũng như pdf, pmf, cdf đều có thể giúp xác định một distribution, do đó giúp kết luận: 𝐘 = 𝐀𝐗 chính là một random variable vector \~ 𝒩(𝐀𝛍, 𝐀𝚺𝐀ᵀ)
+>
+>
+>
+> Mà 𝐀𝐗, như MIT 1806 đã học, bất kì một phép biến đổi tuyến tính nào đều có thể được đại diện bởi một phép nhân matrix A với vector. Nên ta đã chứng minh xong, rằng khi linear transform một random variable thuộc phân phối normal thì kết quả cũng vẫn là một normal random variable.
+
+📹 Video 1: [Untitled — Pattern Recognition Machine Learning_C.Bishop](https://www.youtube.com/watch?v=8da1j43ayzk)
+
+📹 Video 2: [Vì sao X là normal thì Y = AX cũng vậy?](https://www.youtube.com/watch?v=8K6GOCshz9Q)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chép suy dẫn rất chi tiết, logic và chính xác từ MGF chuẩn tắc một chiều đến chuẩn nhiều chiều và phép biến đổi tuyến tính.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Vì Cov(𝐙) = 𝐈, nên Z1,Z2,...độc lập."*
+>
+> Trong trường hợp tổng quát, không tương quan (hiệp phương sai bằng 0) không tương đương với độc lập; tính chất này chỉ đúng khi các biến thành phần cùng tuân theo phân phối chuẩn đồng thời (jointly Gaussian).
+>
+>
+> **✓ Strengths**
+> - Tự triển khai đầy đủ các bước biến đổi tích phân hoàn thiện bình phương để tìm MGF của chuẩn 1 chiều thay vì chỉ áp đặt công thức.
+> - Nắm vững tính chất song ánh (tính duy nhất) của hàm sinh mô-men (MGF) để suy ra phân phối xác suất sau phép biến đổi tuyến tính.
+>
+> **💡 Deeper notes**
+> - Sự tồn tại của ma trận 𝐁 thỏa mãn 𝐁𝐁ᵀ = 𝚺 đòi hỏi 𝚺 phải là ma trận đối xứng nửa xác định dương (thực hiện qua phân tích Cholesky hoặc phân tích kỳ dị phổ).
+> - Nếu mở rộng sang phép biến đổi afin đầy đủ 𝐘 = 𝐀𝐗 + 𝐜, MGF sẽ thu được dạng của 𝒩(𝐀𝛍 + 𝐜, 𝐀𝚺𝐀ᵀ).
 
 <br>
 
