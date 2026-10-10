@@ -1,6 +1,6 @@
 # 16.1 Equality-constrained Quadratic Programs
 
-📊 **Progress:** `2` Notes | `2` Screenshots | `2` AI Reviews
+📊 **Progress:** `2` Notes | `5` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-bat3b7g"></a>
@@ -71,23 +71,15 @@
 >
 >
 >
-> Lagrangian: ℒ(x, λ) = f(x) + λᵀc(x)
+> Lagrangian: f(x) - Σi λi ci(x) 
 >
 >
 >
-> = xᵀGx + xᵀc + λᵀ(Ax-b)
+> ℒ(x, λ) = f(x) - λᵀc(x)
 >
 >
 >
-> = xᵀGx + xᵀc + λᵀAx - λᵀb
->
->
->
-> = xᵀGx + (c + Aᵀλ)ᵀx - λᵀb
->
->
->
-> ∇\_x ℒ(x, λ) = Gᵀx + c + Aᵀλ
+> ∇\_x ℒ(x, λ) = Gx + c - Aᵀλ (do G đối xứng)
 >
 >
 >
@@ -95,22 +87,67 @@
 >
 >
 >
-> ⇔ Gᵀx\* + c + Aᵀλ\* = 0 ⇔ Gᵀx\* + Aᵀλ\* = -c
+> ⇔ Gᵀx\* + c - Aᵀλ\* = 0 ⇔ Gᵀx\* - Aᵀλ\* = -c ⇔ Gx\* - Aᵀλ\* = -c
 >
 >
 >
 > Cùng với Ax\* = b, ta thể hiện ở dạng matrix 16.4
+>
+>
+>
+> ---
+>
+>
+>
+> Đặt p = x\* - x ⇒ x\* = x + p
+>
+>
+>
+> Gx\* - Aᵀλ\* = -c ⇔ G(x + p) - Aᵀλ\* = -c ⇔ Gx + Gp - Aᵀλ\* = -c 
+>
+>
+>
+> ⇔ Gp - Aᵀλ\* = -c-Gx 
+>
+>
+>
+> ⇔ G(-p) + Aᵀλ\* = c+Gx
+>
+>
+>
+> Và Ax\* = b ⇔ A(x + p) = b ⇔ Ax + Ap = b ⇔  -Ap = Ax - b ⇔ A(-p) = Ax - b
+>
+>
+>
+> Đặt g = c+Gx, h = Ax-b
+>
+>
+>
+> Ta có 16.5
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ⚠️ **75/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
-> Ghi chú nhận diện chính xác hàng đầu tiên của hệ phương trình KKT chính là điều kiện dừng (stationarity condition) của hàm Lagrangian, nhưng chưa đề cập đến điều kiện chấp nhận được nguyên thủy (primal feasibility).
+> Ghi chú rất xuất sắc, tự biến đổi và chứng minh chi tiết từng bước từ điều kiện KKT bậc nhất sang dạng ma trận (16.4) và (16.5) một cách chính xác.
 >
 > **✓ Strengths**
-> - Nhận diện đúng bản chất của hàng phương trình đầu tiên trong hệ KKT chính là điều kiện dừng của hàm Lagrangian theo biến x.
+> - Thiết lập Lagrangian và đạo hàm chính xác điều kiện dừng cho bài toán QP có ràng buộc đẳng thức.
+> - Từng bước biến đổi đại số tuyến tính để chuyển từ nghiệm tối ưu x* sang bước dịch chuyển p rất mạch lạc và chuẩn xác.
 >
 > **💡 Deeper notes**
-> - Hệ phương trình (16.4) gồm hai phần: hàng trên là điều kiện dừng $\nabla_x \mathcal{L}(x^*, \lambda^*) = Gx^* + c - A^T\lambda^* = 0$, và hàng dưới là điều kiện ràng buộc nguyên thủy $Ax^* = b$.
+> - Dạng hệ (16.5) đưa về ẩn (-p, λ*) thay vì (p, λ*) là một thủ thuật thường dùng trong tối ưu để giữ cho ma trận KKT có dạng đối xứng [G, A^T; A, 0].
+
+<br>
+
+<a id="node-zj5iwy0"></a>
+
+#### KKT Matrix Nonsingularity Conditions
+
+<p align="center"><kbd><img src="assets/mqef6dbcr3.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/dl6xnzwr1jm.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/cvj83ordvxa.png" width="80%"></kbd></p>
 
 <br>
 
