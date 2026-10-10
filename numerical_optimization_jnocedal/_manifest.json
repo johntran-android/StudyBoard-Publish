@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1791259064895,
+  "publishedAt": 1791659696411,
   "sections": [
     {
       "title": "📋 Overview",
@@ -207,6 +207,12 @@
       "imageCount": 12
     },
     {
+      "title": "15.3 Elimination Of Variables",
+      "path": "numerical_optimization_jnocedal/153_elimination_of_variables.md",
+      "noteCount": 5,
+      "imageCount": 11
+    },
+    {
       "title": "16.0 Quadratic Programming",
       "path": "numerical_optimization_jnocedal/160_quadratic_programming.md",
       "noteCount": 3,
@@ -216,7 +222,7 @@
       "title": "16.1 Equality-constrained Quadratic Programs",
       "path": "numerical_optimization_jnocedal/161_equality_constrained_quadratic_programs.md",
       "noteCount": 2,
-      "imageCount": 2
+      "imageCount": 5
     },
     {
       "title": "Appendix A",
@@ -237,6 +243,6 @@
       "imageCount": 11
     }
   ],
-  "totalNotes": 435,
-  "totalImages": 631
+  "totalNotes": 440,
+  "totalImages": 645
 }
