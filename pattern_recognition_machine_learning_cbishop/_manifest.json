@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1791591801271,
+  "publishedAt": 1791673262174,
   "sections": [
     {
       "title": "📋 Overview",
@@ -449,7 +449,7 @@
     {
       "title": "4.5.2 Predictive distribution",
       "path": "pattern_recognition_machine_learning_cbishop/452_predictive_distribution.md",
-      "noteCount": 1,
+      "noteCount": 2,
       "imageCount": 3
     },
     {
@@ -471,6 +471,6 @@
       "imageCount": 0
     }
   ],
-  "totalNotes": 462,
+  "totalNotes": 463,
   "totalImages": 701
 }
