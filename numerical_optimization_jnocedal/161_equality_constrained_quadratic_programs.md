@@ -153,6 +153,8 @@
 > **💡 Deeper notes**
 > - Dạng hệ (16.5) đưa về ẩn (-p, λ*) thay vì (p, λ*) là một thủ thuật thường dùng trong tối ưu để giữ cho ma trận KKT có dạng đối xứng [G, A^T; A, 0].
 
+**🔗 See also:** [Symmetric Indefinite Factorization](./162_direct_solution_of_kkt_system.md#node-yspkro0)
+
 <br>
 
 <a id="node-zj5iwy0"></a>
