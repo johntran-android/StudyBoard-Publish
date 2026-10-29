@@ -1,6 +1,6 @@
 # 16.2 Direct solution of KKT system
 
-📊 **Progress:** `2` Notes | `3` Screenshots | `2` AI Reviews
+📊 **Progress:** `3` Notes | `5` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-bstsx53"></a>
@@ -155,41 +155,135 @@
 >
 >
 >
-> Mà một cách điển hình chính là khử Gauss: Đưa matrix K về dạng U: Và đó cũng chính là K = UR, khi đó hệ KKT sẽ trở thành hệ phương trình mà matrix hệ số là tam giác, việc giải chỉ là thế ngược: backsubstitution.
+> Mà một cách điển hình chính là khử Gauss: Đưa matrix K về dạng U: khi đó hệ KKT sẽ trở thành giải hệ LUx=y: Giải Lu=y rồi giải Ux = u là hai hệ phương trình mà matrix hệ số là tam giác, việc giải chỉ là thế: forwar-substitution và backward-substitution.
 >
 >
 >
-> Và đây cũng chính là thuật toán có thể dùng, vì thuật toán factor nổi tiếng khác là Cholesky chỉ work với matrix xác định dương, trong khi K xác định âm như theorem vừa rồi đã nói.
+> Và đây cũng chính là thuật toán có thể dùng, vì thuật toán factor nổi tiếng khác là Cholesky chỉ work với matrix xác định dương, trong khi K không xác định như theorem vừa rồi đã nói.
 >
 >
 >
 > Có điều nếu dùng khử Gauss, ta sẽ bỏ lãng phí việc K là matrix đối xứng, ý nói, có thể dùng cách khử Gauss, nhưng có thể có cách khác tốt hơn
 
 > [!TIP]
-> 🤖 **AI Check** — 🔴 Critical issues — ❌ **60/100** · ✗ Fix first
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Bạn đã nắm được ý chính về việc dùng phân tích tam giác thay cho Cholesky và nhược điểm bỏ phí tính đối xứng của khử Gauss. Tuy nhiên, bạn đã hiểu sai tính chất cốt lõi 'indefiniteness' (không xác định dấu) thành 'xác định âm', đây là sai lệch bản chất quan trọng của hệ KKT.
->
-> **🔴 Critical issues**
->
-> **1.** *"trong khi K xác định âm như theorem vừa rồi đã nói"*
->
-> Từ gốc 'indefiniteness' có nghĩa là 'không xác định dấu' (indefinite - ma trận có cả trị riêng dương và âm), hoàn toàn khác với 'xác định âm' (negative definite). Nếu ma trận thực sự xác định âm, ta chỉ cần nhân $-1$ là dùng được Cholesky; chính vì ma trận KKT không xác định dấu (indefinite / hệ điểm yên ngựa) nên Cholesky mới không áp dụng được.
->
+> Ghi chú nắm rất chuẩn xác các ý cốt lõi từ tài liệu: lý do không dùng được Cholesky (do tính không xác định dấu), cách áp dụng phân rã LU cùng forward/backward substitution, và nhược điểm bỏ phí tính đối xứng của khử Gauss. Cần bổ sung thêm kỹ thuật xoay trục (partial pivoting) để đảm bảo độ ổn định số học.
 >
 > **🟡 Minor issues**
 >
-> **1.** *"K = UR, khi đó hệ KKT sẽ trở thành hệ phương trình mà matrix hệ số là tam giác, việc giải chỉ là thế ngược: backsubstitution"*
+> **1.** *"Mà một cách điển hình chính là khử Gauss: Đưa matrix K về dạng U: khi đó hệ KKT sẽ trở thành giải hệ LUx=y"*
 >
-> Khử Gauss (Gaussian elimination) phân tích ma trận thành dạng $LU$ (hoặc $PLU$ với partial pivoting), không phải $UR$. Ngoài ra, việc giải hệ gồm cả thế tiến (forward substitution với $L$) và thế ngược (backward substitution với $U$), chứ không chỉ riêng thế ngược.
+> Tài liệu nhấn mạnh cụm 'Gaussian elimination with partial pivoting'. Đối với ma trận không xác định dấu (indefinite), khử Gauss thuần túy không có xoay trục (pivoting) có thể gặp phần tử trụ bằng 0 hoặc mất ổn định số học nghiêm trọng.
+>
+> **2.** *"việc giải chỉ là thế ngược: forwar-substitution và backward-substitution."*
+>
+> Trong tiếng Việt, 'forward substitution' là thế tiến (hoặc thế xuôi) và 'backward substitution' là thế ngược. Dùng gộp chung từ 'thế ngược' cho cả hai dễ gây nhầm lẫn về mặt thuật ngữ.
 >
 >
 > **✓ Strengths**
-> - Hiểu đúng việc không thể áp dụng trực tiếp phân tích Cholesky tiêu chuẩn cho hệ KKT.
-> - Nắm được nhược điểm của phép khử Gauss thông thường là bỏ qua tính đối xứng của ma trận KKT.
+> - Hiểu rất rõ lý do loại trừ phân rã Cholesky vì ma trận KKT không xác định dấu (indefinite).
+> - Nắm chuẩn quy trình giải hệ qua hai bước thế tiến và thế ngược từ các thừa số tam giác L và U.
+> - Nhận diện chính xác nhược điểm cốt lõi của khử Gauss trong trường hợp này là không tận dụng được tính đối xứng của ma trận KKT.
 >
 > **💡 Deeper notes**
-> - Để vừa khai thác tính đối xứng vừa giải quyết được tính không xác định dấu (indefinite) của ma trận KKT, các phương pháp trực tiếp thường dùng phân tích đối xứng không xác định $P K P^T = L D L^T$ (với $D$ gồm các khối $1 \times 1$ và $2 \times 2$, theo thuật toán Bunch-Parlett hoặc Bunch-Kaufman).
+> - Để tận dụng tính đối xứng mà vẫn xử lý được ma trận không xác định dấu (indefinite), trong thực tế người ta thường dùng phân rã đối xứng bất định như $LDL^T$ với xoay trục theo khối (Bunch-Parlett hoặc Bunch-Kaufman) thay vì LU thông thường.
+
+<br>
+
+<a id="node-yspkro0"></a>
+
+#### Symmetric Indefinite Factorization
+
+<p align="center"><kbd><img src="assets/rf5uxfmonb.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/20rknu10zpx.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Cách làm hiệu quả hơn là dùng symmetric indefinite factorization.
+>
+>
+>
+> Factor K: Pᵀ K P = L B Lᵀ
+>
+>
+>
+>
+>
+>  K\[-p; λ\*\] = \[g; h\] hay Kz = \[g; h\] (1)
+>
+>
+>
+> Pᵀ K P = L B Lᵀ
+>
+>
+>
+> ⇔ K = P L B Lᵀ Pᵀ
+>
+>
+>
+> (1) ⇔ (P L B Lᵀ Pᵀ) x = \[g; h\]
+>
+>
+>
+> ⇔ L B Lᵀ Pᵀ z = Pᵀ\[g; h\]
+>
+>
+>
+> Giải: Lz = Pᵀ\[g; h\]
+>
+>
+>
+> Giải: B ẑ = z
+>
+>
+>
+> Giải Lᵀ z̄ = ẑ
+>
+>
+>
+> Giải Pᵀ z = z̄  ⇔ z = P z̄
+>
+>
+>
+> Trong quá trình trên nhân với P (trong bước Pᵀ\[g; h\], hay P z̄) chỉ là đổi chỗ phần tử vector, nên không tốn gì.
+>
+>
+>
+> B ẑ = z với B là block diagonal matrix các block 1 × 1, 2 × 2 nên cũng ko tốn kém lắm.
+>
+>
+>
+> Chỉ có bước Lz = Pᵀ\[g; h\], Lᵀ z̄ = ẑ, giải hệ với matrix tam giác dưới, chính là quá trình forward-substitution là tốn kém hơn.
+>
+>
+>
+> Nói chung , cách làm này tương đối là hiệu quả với nhiều bài toán.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+>
+> Ghi chú nắm rất tốt bản chất của phương pháp phân rã đối xứng không xác định (symmetric indefinite factorization) và các bước giải hệ phương trình. Cần lưu ý tránh trùng lặp ký hiệu biến trung gian và phân biệt rõ giữa thế xuôi (forward) và thế ngược (backward substitution).
+>
+> **🟡 Minor issues**
+>
+> **1.** *"K[-p; λ*] = [g; h] hay Kz = [g; h] (1)"*
+>
+> Có sự xung đột ký hiệu biến: bạn đặt vector nghiệm cần tìm là z, nhưng ở các bước giải sau lại dùng z làm vector trung gian trong Lz = Pᵀ[g; h] và cuối cùng viết z = P z̄. Nên giữ vector nghiệm ban đầu là x hoặc giữ nguyên [-p; λ*] để tránh nhầm lẫn.
+>
+> **2.** *"Chỉ có bước Lz = Pᵀ[g; h], Lᵀ z̄ = ẑ, giải hệ với matrix tam giác dưới, chính là quá trình forward-substitution là tốn kém hơn."*
+>
+> L là ma trận tam giác dưới nên bước Lz = ... dùng forward substitution (thế xuôi), nhưng Lᵀ là ma trận tam giác trên nên bước Lᵀ z̄ = ẑ phải dùng back substitution (thế ngược).
+>
+>
+> **✓ Strengths**
+> - Hiểu rõ bản chất biến đổi đại số từ PᵀKP = LBLᵀ sang hệ phương trình từng bước.
+> - Nắm bắt chính xác chi phí tính toán tương đối của phép nhân ma trận hoán vị P, hệ khối B, và phép thế tam giác.
+>
+> **💡 Deeper notes**
+> - Chi phí của các phép thế tam giác phụ thuộc rất lớn vào độ thưa (sparsity) của ma trận L; nếu ma trận P không kiểm soát tốt hiện tượng fill-in (L bị dày lên), chi phí giải sẽ tăng đáng kể.
+
+**🔗 See also:** [Karush-Kuhn-Tucker Matrix Formulation](./161_equality_constrained_quadratic_programs.md#node-feah6f9)
 
 <br>
 
