@@ -1,6 +1,6 @@
 # 16.1 Equality-constrained Quadratic Programs
 
-📊 **Progress:** `4` Notes | `14` Screenshots | `4` AI Reviews
+📊 **Progress:** `5` Notes | `16` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-bat3b7g"></a>
@@ -564,6 +564,36 @@
 > - Trong công thức vi phân dL, việc giả định G đối xứng (G = Gᵀ) là điều kiện cần thiết để nhóm (1/2)(G + Gᵀ) thành G. Trong bài toán QP chuẩn tắc, ma trận Hessian G luôn được chọn là đối xứng.
 
 **🔗 See also:** [Second-Order Sufficient Conditions](./125_second_order_conditions.md#node-dxoyw3c)
+
+<br>
+
+<a id="node-j4b00kx"></a>
+
+###### Theorem 16.2 Reduced-Hessian Optimality
+
+<p align="center"><kbd><img src="assets/t362e34rsds.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/agiz9u36avs.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Khi A full row rank, và ZᵀGZ xác định dương thì x\* thỏa 16.4 (tức hệ KKT) cũng sẽ là unique global solution.
+>
+>
+>
+> Chứng minh cũng dễ hiểu.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác nội dung chính của Định lý 16.2 về điều kiện để nghiệm KKT trở thành nghiệm tối ưu toàn cục duy nhất.
+>
+> **✓ Strengths**
+> - Nắm đúng điều kiện đủ cho nghiệm cực tiểu toàn cục duy nhất (A có hạng hàng đầy đủ và reduced Hessian xác định dương).
+> - Nhận diện chính xác hệ phương trình (16.4) chính là hệ điều kiện KKT của bài toán quy hoạch toàn phương có ràng buộc đẳng thức.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý thêm về mặt hình học: các cột của ma trận Z tạo thành cơ sở cho không gian hạch (null space) của A, do đó bước dịch khả dĩ p luôn phân tích được thành Zu.
+> - Đoạn văn dưới định lý mở rộng thêm: nếu ZᵀGZ chỉ nửa xác định dương (có trị riêng bằng 0) thì x* chỉ là local minimizer (không strict), còn nếu có trị riêng âm thì x* chỉ là điểm dừng (stationary point) chứ không phải cực tiểu.
 
 <br>
 
