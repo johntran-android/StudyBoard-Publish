@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1792864880435,
+  "publishedAt": 1793293702613,
   "sections": [
     {
       "title": "📋 Overview",
@@ -221,8 +221,14 @@
     {
       "title": "16.1 Equality-constrained Quadratic Programs",
       "path": "numerical_optimization_jnocedal/161_equality_constrained_quadratic_programs.md",
-      "noteCount": 4,
-      "imageCount": 14
+      "noteCount": 5,
+      "imageCount": 16
+    },
+    {
+      "title": "16.2 Direct solution of KKT system",
+      "path": "numerical_optimization_jnocedal/162_direct_solution_of_kkt_system.md",
+      "noteCount": 2,
+      "imageCount": 3
     },
     {
       "title": "Appendix A",
@@ -243,6 +249,6 @@
       "imageCount": 11
     }
   ],
-  "totalNotes": 446,
-  "totalImages": 670
+  "totalNotes": 449,
+  "totalImages": 675
 }
