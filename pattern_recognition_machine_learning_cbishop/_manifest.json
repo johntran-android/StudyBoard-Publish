@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1793227932255,
+  "publishedAt": 1793283116032,
   "sections": [
     {
       "title": "📋 Overview",
@@ -491,8 +491,8 @@
     {
       "title": "5.2.3 Use of gradient information",
       "path": "pattern_recognition_machine_learning_cbishop/523_use_of_gradient_information.md",
-      "noteCount": 0,
-      "imageCount": 1
+      "noteCount": 1,
+      "imageCount": 3
     },
     {
       "title": "5.7 Ex",
@@ -513,6 +513,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 494,
-  "totalImages": 789
+  "totalNotes": 495,
+  "totalImages": 791
 }
