@@ -1255,7 +1255,7 @@
 >
 >
 >
-> thì với các constant aij, brj ta định nghiã ra:
+> thì với các constant aij, brj với j=1,...n, i = 1,...k, r = 1,...m. Ta định nghiã:
 >
 >
 >
@@ -1263,7 +1263,7 @@
 >
 >
 >
-> và 
+> và
 >
 >
 >
@@ -1271,7 +1271,7 @@
 >
 >
 >
-> Có nghĩa là ta có các random variable mới Ui, tạo ra bởi linear combination các random variabel X1,..Xn
+> Có nghĩa là ta có các random variable mới Ui, tạo ra bởi linear combination các random variable X1,..Xn
 >
 >
 >
@@ -1288,21 +1288,23 @@
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú tóm tắt rất tốt và chính xác nội dung bổ đề cũng như bối cảnh áp dụng; chỉ bỏ sót một điều kiện nhỏ về số chiều.
+> Ghi chú tóm tắt rất chính xác nội dung và ý nghĩa của Bổ đề 5.3.3 về tính độc lập của các tổ hợp tuyến tính từ mẫu chuẩn.
 >
 > **🟡 Minor issues**
 >
-> **1.** *"thì với các constant aij, brj ta định nghiã ra:"*
+> **1.** *"thì với các constant aij, brj với j=1,...n, i = 1,...k, r = 1,...m."*
 >
-> Bổ đề có nêu điều kiện về số lượng biến được tổ hợp là k + m ≤ n (với i = 1,...,k và r = 1,...,m), phần này bị lược bỏ trong ghi chú.
+> Ghi chú đã bỏ sót điều kiện ràng buộc về số chiều k + m ≤ n được nêu trong bổ đề gốc.
 >
 >
 > **✓ Strengths**
-> - Nắm bắt chính xác bản chất Ui, Vr là các tổ hợp tuyến tính của các biến ngẫu nhiên chuẩn độc lập.
-> - Tóm tắt đúng và đầy đủ hai kết quả cốt lõi của bổ đề về tính độc lập tương đương với hiệp phương sai bằng 0 và tính độc lập theo từng cặp của vector ngẫu nhiên chuẩn.
+> - Nắm bắt chính xác bản chất Ui và Vr là các tổ hợp tuyến tính (linear combinations) của các biến ngẫu nhiên chuẩn độc lập.
+> - Tóm tắt đúng và đầy đủ hai kết quả trọng tâm: độc lập tương đương với hiệp phương sai bằng 0, và tính độc lập của hai vector tương đương với sự độc lập đôi một giữa từng thành phần.
 >
 > **💡 Deeper notes**
-> - Điều kiện k + m ≤ n thường xuất hiện để đảm bảo có thể xây dựng một phép biến đổi trực giao hoặc không suy biến đầy đủ trên không gian n chiều ban đầu.
+> - Bổ đề này vận dụng tính chất đặc thù của phân phối chuẩn nhiều chiều: đối với các biến ngẫu nhiên có phân phối chuẩn đồng thời, không tương quan (Cov = 0) tương đương với độc lập, điều vốn không tự động đúng ở các phân phối tổng quát.
+
+**🔗 See also:** [Lemma 11.3.2 Covariance of Linear Combinations](./113_simple_linear_regression.md#node-26ktgyo)
 
 <br>
 
@@ -1351,7 +1353,7 @@
 >
 >
 >
-> Tiếp, chứng minh ý thứ hai: Cov(Ui, Vr) = Σj aij brj σj²
+> Tiếp, chứng minh ý a2: Cov(Ui, Vr) = Σj aij brj σj²
 >
 >
 >
@@ -1387,19 +1389,7 @@
 >
 >
 >
-> = E\[
->
->
->
-> ai1br1(X1 - μ1)² + ai2br2(X2 - μ2)² + ...
->
->
->
-> \-2ai1br2(X1 - μ1)(X2 - μ2) + ... (các cross term)
->
->
->
-> \]
+> = E\[ ai1br1(X1 - μ1)² + ai2br2(X2 - μ2)² + ... ai1br2(X1 - μ1)(X2 - μ2) + ... (các cross term)\]
 >
 >
 >
@@ -1476,26 +1466,19 @@
 > Đây chính là cái ràng buộc (restriction) đối với các constant mà giáo sư nói tới trong phần tiếp theo
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú rất chi tiết và chủ động tự chứng minh lại các kết quả được lược dẫn trong sách (như tính Cov(Ui, Vr) và tính chất độc lập suy ra hiệp phương sai bằng 0). Nắm rất chắc luồng lập luận của bài chứng minh.
->
-> **🟡 Minor issues**
->
-> **1.** *"-2ai1br2(X1 - μ1)(X2 - μ2) + ... (các cross term)"*
->
-> Trong bước nháp khai triển tích hai ngoặc, hệ số '-2' là không chuẩn xác (có thể do nhầm với khai triển hằng đẳng thức bậc hai). Tuy nhiên, dòng tổng sigma ngay bên dưới bạn đã viết lại dạng chuẩn xác không bị ảnh hưởng.
->
+> Ghi chú rất xuất sắc và chi tiết; bạn đã tự tay thực hiện đầy đủ các bước biến đổi mà giáo trình chỉ lướt qua hoặc để dưới dạng bài tập.
 >
 > **✓ Strengths**
-> - Tự triển khai đầy đủ và chính xác bước tính Cov(Ui, Vr) dựa trên tính tuyến tính của kỳ vọng và tính độc lập của các biến Xj.
-> - Hiểu đúng và nêu rõ lý do độc lập kéo theo Cov = 0 thông qua kỳ vọng tích E(XY) = E(X)E(Y).
-> - Nắm bắt chính xác hướng đi tiếp theo của bổ đề khi chuẩn hóa về μi = 0, σi² = 1 và điều kiện triệt tiêu hiệp phương sai dẫn đến ràng buộc tích vô hướng các hệ số bằng 0.
+> - Tự triển khai tường minh và chính xác phép chứng minh Cov(Ui, Vr) = Σ a_ij b_rj σ_j² bằng cách tách số hạng chéo (cross-terms) dựa trên tính độc lập của các biến X_j.
+> - Chứng minh lại chuẩn xác tính chất độc lập suy ra hiệp phương sai bằng 0 qua 2D LOTUS và tích các kỳ vọng biên.
+> - Hiểu rõ việc chuẩn hóa về μ_i = 0 và σ_i² = 1 dẫn đến điều kiện trực giao giữa các hệ số Σ a_ij b_rj = 0.
 >
 > **💡 Deeper notes**
-> - Để suy ra Ui và Vr độc lập khi hiệp phương sai bằng 0, không chỉ cần từng biến Ui, Vr có phân phối chuẩn riêng lẻ, mà bản thân vector (Ui, Vr) phải có phân phối chuẩn đồng thời (bivariate/multivariate normal) - điều này được đảm bảo do chúng cùng là tổ hợp tuyến tính từ vector chuẩn độc lập X.
+> - Để suy ra 'Cov = 0 kéo theo độc lập' cho biến phân phối chuẩn, điều kiện cần là cặp (Ui, Vr) phải có phân phối chuẩn đồng thời (bivariate/joint normal), chứ không chỉ riêng rẽ từng biến có phân phối chuẩn biên (marginal normal). Ở đây điều này luôn thỏa mãn vì cả Ui và Vr đều là tổ hợp tuyến tính từ cùng một vector các biến độc lập X_j.
 
-**🔗 See also:** [Định lý Độc lập Hiệp phương sai](./45_covariance_correlation.md#node-o2ergsg) · [Chứng minh tổng biến chuẩn](./46_multi_variate_distribution.md#node-uaywczk)
+**🔗 See also:** [Định lý Độc lập Hiệp phương sai](./45_covariance_correlation.md#node-o2ergsg) · [Chứng minh tổng biến chuẩn](./46_multi_variate_distribution.md#node-uaywczk) · [linked note](./57_ex.md#node-vmjgiar)
 
 <br>
 
@@ -1530,7 +1513,15 @@
 >
 >
 >
-> (Mà điều này tương đương Σj=1:n aij brj σj² = Σj=1:n aij brj = 0) thì joint pdf của Ui, Vr sẽ factor, tức chúng độc lập
+> (điều này tương đương Σj=1:n aij brj σj² = Σj=1:n aij brj = 0)
+>
+>
+>
+> thì joint pdf của Ui, Vr sẽ factored, tức chúng độc lập
+>
+>
+>
+> ---
 >
 >
 >
@@ -1538,7 +1529,7 @@
 >
 >
 >
-> Nhưng sẵn ôn lại tí: Bài toán đặt ra là ta triển khai ra joint pdf của U,V từ joint pdf đã có của X, Y.
+> Nhưng sẵn ôn lại tí: Bài toán đặt ra là ta triển khai ra joint pdf của U, V từ joint pdf đã có của X, Y.
 >
 >
 >
@@ -1570,6 +1561,10 @@
 >
 >
 >
+> ---
+>
+>
+>
 > Khi thỏa yêu cầu đó, thì từ (u,v) trong ℬ, như đã nói ta có thể tìm thấy (x,y) trong 𝒜: x = h1(u, v), y = h2(u,v) mà nếu điều kiện mapping 1-1 ko thỏa thì ta ko biết x, y là gì hết.
 >
 >
@@ -1586,17 +1581,27 @@
 >
 >
 >
-> ====
+> ---
 >
 >
 >
-> Áp dụng vào bài toán này, nhắc lại, ta cần chứng minh Ui và Vr độc lập với Ui = Σj=1:2 aijXj tức, = ai1X1
->
-> \- ai2X2 và Vr = Σj=1:2 brj Xj = br1X1 + br2X2
+> Áp dụng vào bài toán này, nhắc lại, ta cần chứng minh Ui và Vr độc lập với Ui = Σj=1:2 aijXj tức, = ai1X1 + ai2X2 và Vr = Σj=1:2 brj Xj = br1X1 + br2X2
 >
 >
 >
-> Cho i = 1,r = 1, tức là ta sẽ chứng minh U1, V1 độc lập, và cho gọn ta gọi là U, V với U = a1X1 + a2X2, V = b1X1 + b2X2 và "thành lập" random variable vector (U, V) (để mà ta sẽ chứng minh joint pdf của U, V factored, từ joint pdf của X1, X2)
+> Cho i = 1, r = 1, tức là ta sẽ chứng minh U1, V1 độc lập,
+>
+>
+>
+> Cho gọn ta gọi là U, V với U = a1X1 + a2X2, V = b1X1 + b2X2 và "thành lập" random variable vector (U, V)
+>
+>
+>
+> (và sẽ chứng minh joint pdf của U, V factored, từ joint pdf của X1, X2)
+>
+>
+>
+> ---
 >
 >
 >
@@ -1604,11 +1609,7 @@
 >
 >
 >
-> Chúng đều là hàm tuyến tính, nên có thể nói là ta đã thỏa yêu cầu mapping 1-1 từ support set của X1,X2 tới ảnh của nó.
->
->
->
-> Hoặc đơn giản là ta thấy có thể giải tìm x,y từ u = g1(x,y), v = g2(x,y):
+> Check điều kiện mapping 1-1: Ta thấy có thể giải tìm x, y từ u = g1(x,y), v = g2(x,y):
 >
 >
 >
@@ -1616,11 +1617,19 @@
 >
 >
 >
-> =&gt; x1 = (b2u - a2v) / (a1b2 - b1a2),
+> ⇒ x1 = (b2u - a2v) / (a1b2 - b1a2),
 >
 >
 >
 > Và x2 = (a1v - b1u) / (a1b2 - b1a2) (đây chính là h1, h2)
+>
+>
+>
+> Nếu a1b2 - b1a2 khác 0, từ (u,v) có thể tìm (x1,x2) do đó đây là thỏa điều kiện mapping 1-1 ở trên
+>
+>
+>
+> ---
 >
 >
 >
@@ -1636,7 +1645,7 @@
 >
 >
 >
-> ⇨ |J| = \[b2 / (a1b2 - b1a2)\] \[a1 / (a1b2 - b1a2)\] - \[-a2 / (a1b2 - b1a2)\] \[-b1 / (a1b2 - b1a2)\]
+> ⇨ det(J) = \[b2 / (a1b2 - b1a2)\] \[a1 / (a1b2 - b1a2)\] - \[-a2 / (a1b2 - b1a2)\] \[-b1 / (a1b2 - b1a2)\]
 >
 >
 >
@@ -1648,11 +1657,19 @@
 >
 >
 >
+> ⇒ |det(J)| = 1 / |a1b2 - b1a2|
+>
+>
+>
+> ---
+>
+>
+>
 > Thế vào theorem:
 >
 >
 >
-> fU,V(u,v) = fX1,X2(x1,x2) |J|
+> fU,V(u,v) = fX1,X2(x1,x2) |det J|
 >
 >
 >
@@ -1668,7 +1685,7 @@
 >
 >
 >
-> pdf cuả n(0,1) f(x) = \[1/√2π\] exp{-x1²/2}
+> pdf cuả n(0,1) f(x1) = \[1/√2π\] exp{-x1²/2} và f(x2) = \[1/√2π\] exp{-x2²/2}
 >
 >
 >
@@ -1680,7 +1697,7 @@
 >
 >
 >
-> = \[1/2π\] exp{ -(1/2) \[(b2u - a2v) / (a1b2 - b1a2)\]² + \[(a1v - b1u) / (a1b2 - b1a2)\]² } |J|
+> = \[1/2π\] exp{ -(1/2) (\[(b2u - a2v) / (a1b2 - b1a2)\]² + \[(a1v - b1u) / (a1b2 - b1a2)\]²) } |J|
 >
 >
 >
@@ -1715,28 +1732,17 @@
 > Tới đây là đủ để thấy joint pdf của U, V phân tách ⇨ U, V độc lập ⇨ Chứng minh xong phần a)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chép rất chi tiết, tự tính toán đầy đủ từng bước từ tìm nghiệm ngược, tính định thức Jacobian đến khai triển phân tích nhân tử để chứng minh tính độc lập.
->
-> **🟡 Minor issues**
->
-> **1.** *"Chúng đều là hàm tuyến tính, nên có thể nói là ta đã thỏa yêu cầu mapping 1-1 từ support set của X1,X2 tới ảnh của nó."*
->
-> Phép biến đổi tuyến tính chỉ đảm bảo 1-1 (song ánh trên R²) khi ma trận hệ số khả nghịch, tức định thức a1*b2 - b1*a2 khác 0. Bản thân tính tuyến tính chưa đủ để kết luận 1-1 nếu định thức bằng 0.
->
-> **2.** *"⇨ |J| = [b2 / (a1b2 - b1a2)] [a1 / (a1b2 - b1a2)] - [-a2 / (a1b2 - b1a2)] [-b1 / (a1b2 - b1a2)] = (b2a1 - b1a2) / (a1b2 - b1a2)² = 1 / (a1b2 - b1a2)"*
->
-> Đang có sự nhầm lẫn ký hiệu giữa định thức Jacobian J và giá trị tuyệt đối |J|. Biểu thức tính ra là định thức J = 1/(a1*b2 - b1*a2), còn khi đưa vào pdf phải là |J| = 1/|a1*b2 - b1*a2|.
->
+> Ghi chú rất xuất sắc, hiểu sâu sắc định lý biến đổi biến ngẫu nhiên và tự tay tính toán chi tiết định thức Jacobian cũng như các bước biến đổi đại số một cách chuẩn xác.
 >
 > **✓ Strengths**
-> - Hiểu rất rõ và diễn giải trực quan điều kiện đổi biến ngẫu nhiên 2 chiều (ánh xạ 1-1 trên tập support).
-> - Tự tính toán tường minh ma trận Jacobian và định thức của nó thay vì chỉ chép lại kết quả cuối cùng.
-> - Khai triển đại số chính xác để làm rõ số hạng chéo chứa hiệp phương sai triệt tiêu về 0, dẫn tới hàm mật độ đồng thời phân tách thành tích hai hàm riêng biệt.
+> - Tự tính toán tường minh ma trận Jacobian và định thức Jacobian thay vì chỉ chép lại kết quả từ tài liệu.
+> - Nắm rất vững điều kiện ánh xạ 1-1 trên tập giá trị (support) cần thiết cho định lý đổi biến nhiều chiều.
+> - Khai triển đại số chính xác phần số mũ và chỉ rõ cách triệt tiêu số hạng chéo (cross-term) nhờ điều kiện covariance bằng 0.
 >
 > **💡 Deeper notes**
-> - Trong trường hợp suy biến a1*b2 - b1*a2 = 0, U và V phụ thuộc tuyến tính (tỉ lệ với nhau); khi đó không thể dùng phép đổi biến mật độ liên tục thông thường mà xét trực tiếp tính suy biến của phân phối Gauss nhiều chiều.
+> - Về điều kiện mẫu số khác 0: Ta có đồng nhất thức Lagrange $(a_1 b_2 - a_2 b_1)^2 + (a_1 b_1 + a_2 b_2)^2 = (a_1^2 + a_2^2)(b_1^2 + b_2^2)$. Vì $a_1 b_1 + a_2 b_2 = 0$, nếu $a_1 b_2 - a_2 b_1 = 0$ thì $(a_1^2 + a_2^2)(b_1^2 + b_2^2) = 0$, nghĩa là một trong hai biến $U$ hoặc $V$ triệt tiêu thành hằng số 0 (trường hợp suy biến). Do đó với các tổ hợp tuyến tính không tầm thường, mẫu số luôn khác 0.
 
 <br>
 
@@ -1747,23 +1753,15 @@
 <p align="center"><kbd><img src="assets/0c7m7lf7hrye.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, đại khái là phần b, giáo sư cho là cũng có thể làm tương tự, là ta sẽ
-> tìm joint pdf của random variable vector (U1,..Uk) và (V1,.. Vm) chú ý
-> (joint pdf của hai random variable vector nhé) tức gọi 𝐔 = (U1,...Uk), 
-> **V** = (V1,...Vm). thì joint pdf của chúng: f𝐔,**V**(**u**,**v**)  (viết bold hết để thể hiện
-> là vector).
+> Rồi, đại khái là phần b, giáo sư cho là cũng có thể làm tương tự, là ta sẽ tìm joint pdf của random variable vector (U1,..Uk) và (V1,.. Vm) chú ý (joint pdf của hai random variable vector nhé) tức gọi 𝐔 = (U1,...Uk), 𝐕 = (V1,...Vm). thì joint pdf của chúng: f𝐔,𝐕(**u**,**v**) (viết bold hết để thể hiện là vector).
 >
 >
 >
-> Sau đó ta có thể dùng theorem 4.6.11 nói rằng nếu joint pdf của các 
-> random vector **X1**, **X2**, ...**Xn** mà factored, tức là có thể tách hàm 
-> f**X1**,**X2**,...**Xn**(**x1,**...**xn**) thành tích các hàm g1(**x1**)g2(**x2**)...gn(**xn**)
+> Sau đó ta có thể dùng theorem 4.6.11 nói rằng nếu joint pdf của các random vector **X1**, **X2**, ...**Xn** mà factored, tức là có thể tách hàm f**X1**,**X2**,...**Xn**(**x1,**...**xn**) thành tích các hàm g1(**x1**)g2(**x2**)...gn(**xn**)
 >
 >
 >
-> (có nghĩa là hàm f**X1,X2,...Xn**(**x1**,...**xn**) là function nhận vào bộ vector **x1,..xn**
-> có thể tách thành tích các function gi mà mỗi cái apply riêng lên vector **xi )**
-> thì khi đó các rv Vector **X1,...Xn** là độc lập
+> (có nghĩa là hàm f**X1,X2,...Xn**(**x1**,...**xn**) là function nhận vào bộ vector **x1,..xn**có thể tách thành tích các function gi mà mỗi cái apply riêng lên vector **xi** thì khi đó các rv Vector **X1,...Xn** là độc lập
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -1791,38 +1789,27 @@
 <p align="center"><kbd><img src="assets/l2mhrdhi9j.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Vậy đại ý là cái bổ đề vừa rồi: Nó cho phép: KHI TA BẮT ĐẦU VỚI CÁC
-> NORMAL RANDOM VARIABLES ĐỘC LẬP (X1,....Xn) thì COVARIANCE
-> VÀ TÍNH CHẤT INDEPENDENT của các linear function của đám rvs này
-> (Ui,Vr) sẽ là một.
+> Vậy đại ý là cái bổ đề vừa rồi: Nó cho phép: KHI TA BẮT ĐẦU VỚI CÁC **NORMAL RANDOM VARIABLES ĐỘC LẬP** (X1,....Xn) thì **COVARIANCE** VÀ TÍNH CHẤT **INDEPENDENT** của các linear function của đám rvs này (Ui,Vr) sẽ là tương đương.
 >
 >
 >
-> Từ đó cho phép ta check xem các linear function của đám rvs này tức Ui,
-> có độc lập hay không bằng cách xem Covariance của chúng có bằng 0 hay
-> không (đó là  ứng dụng của part a)
+> Từ đó cho phép ta check xem các linear function của đám rvs này tức Ui, **có độc lập hay không bằng cách xem Covariance của chúng có bằng 0 hay không** (đó là ứng dụng của part a)
 >
 >
 >
-> Còn part b, khi lemma nói nếu Ui độc lập Vr với mọi i và r thì suy ra vector U
-> độc lập vector R. Điều này cho phép khi ta có các random vector normal..
+> Còn part b, khi lemma nói nếu Ui độc lập Vr với mọi i và r thì suy ra **vector U độc lập vector R**. Điều này cho phép khi ta có các random vector normal 
 >
 >
 >
-> (hiểu ko: (U1,...Uk) mà mỗi cái là linear function của đám normal X1,..Xn
-> thì U1,...Uk như đã nói trong phần chứng minh lemma, cũng là normal,
-> nên (U1,..Uk) gọi là normal vector hay random variable vector mà mỗi cái
-> đều là normal rv)
+> (hiểu ko: (U1,...Uk) mà mỗi cái là linear function của đám normal X1,..Xn thì U1,...Uk như đã nói trong phần chứng minh lemma, cũng là normal, nên (U1,..Uk) gọi là normal vector hay random variable vector mà mỗi cái đều là normal rv)
 >
 >
 >
-> ..thì ta có thể làm bằng cách check xem các phần tử (Ui, và Vr có độc lập
-> từng cặp (pair wise) với nhau không.
+> ..thì ta có thể kết luận các vector này độc lập bằng cách **check xem các phần tử (Ui, và Vr có độc lập từng cặp (pair wise) với nhau không**.
 >
 >
 >
-> Và DUY CHỈ CÓ KHI TA START VỚI NORMAL THÌ MỚI CÓ TÍNH CHẤT
-> NÀY
+> Và **DUY CHỈ CÓ KHI TA DÙNG NORMAL DISTRIBUTION THÌ MỚI CÓ TÍNH CHẤT NÀY**
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
