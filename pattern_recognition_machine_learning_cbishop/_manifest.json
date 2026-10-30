@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1793328963821,
+  "publishedAt": 1793402672468,
   "sections": [
     {
       "title": "📋 Overview",
@@ -483,12 +483,6 @@
       "imageCount": 24
     },
     {
-      "title": "5.2.2 Local quadratic approximation",
-      "path": "pattern_recognition_machine_learning_cbishop/522_local_quadratic_approximation.md",
-      "noteCount": 3,
-      "imageCount": 14
-    },
-    {
       "title": "5.2.3 Use of gradient information",
       "path": "pattern_recognition_machine_learning_cbishop/523_use_of_gradient_information.md",
       "noteCount": 1,
@@ -501,10 +495,34 @@
       "imageCount": 6
     },
     {
-      "title": "5.3 Error Backpropagation",
-      "path": "pattern_recognition_machine_learning_cbishop/53_error_backpropagation.md",
+      "title": "5.2.2 Local quadratic approximation",
+      "path": "pattern_recognition_machine_learning_cbishop/522_local_quadratic_approximation.md",
+      "noteCount": 3,
+      "imageCount": 14
+    },
+    {
+      "title": "5.3.1 Evaluation of error-function derivatives",
+      "path": "pattern_recognition_machine_learning_cbishop/531_evaluation_of_error_function_derivatives.md",
       "noteCount": 4,
-      "imageCount": 12
+      "imageCount": 13
+    },
+    {
+      "title": "5.3.2 A simple example",
+      "path": "pattern_recognition_machine_learning_cbishop/532_a_simple_example.md",
+      "noteCount": 1,
+      "imageCount": 6
+    },
+    {
+      "title": "5.3.3 Efficiency of backpropagation",
+      "path": "pattern_recognition_machine_learning_cbishop/533_efficiency_of_backpropagation.md",
+      "noteCount": 1,
+      "imageCount": 3
+    },
+    {
+      "title": "5.3.4 The Jacobian matrix",
+      "path": "pattern_recognition_machine_learning_cbishop/534_the_jacobian_matrix.md",
+      "noteCount": 0,
+      "imageCount": 0
     },
     {
       "title": "5.7 Ex",
@@ -525,6 +543,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 501,
-  "totalImages": 809
+  "totalNotes": 503,
+  "totalImages": 819
 }
