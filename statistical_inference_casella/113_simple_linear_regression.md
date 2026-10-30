@@ -1,6 +1,6 @@
 # 11.3 Simple Linear Regression
 
-📊 **Progress:** `24` Notes | `43` Screenshots | `24` AI Reviews
+📊 **Progress:** `27` Notes | `50` Screenshots | `27` AI Reviews
 
 ---
 <a id="node-m4lr6nj"></a>
@@ -1856,11 +1856,15 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> Tìm Maximum Likelhood estimator cho α, β, σ²: 
+> Tìm Maximum Likelhood estimator cho α, β, σ²:
 >
 >
 >
-> (t1,𝐱1), (t2,𝐱2)...
+> ---
+>
+>
+>
+> Y như trong trong Bishop: (t1,𝐱1), (t2,𝐱2)...
 >
 >
 >
@@ -1869,6 +1873,10 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 > cũng tương đương giả định: residual error εi \~ normal(0, 1/β)
+>
+>
+>
+> và đi tìm MLE của 𝐰, β
 >
 >
 >
@@ -1884,11 +1892,11 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> Vì tính độc lập:  f(y1,y2,...yn|α, β, σ²,𝐱) = Πi f(yi|α, β, σ²,𝐱)
+> Vì tính độc lập: f(y1,y2,...yn|α, β, σ²,𝐱) = Πi f(yi|α, β, σ²,𝐱)
 >
 >
 >
-> Với Yi \~ n(α + βxi, σ²) 
+> Với Yi \~ n(α + βxi, σ²)
 >
 >
 >
@@ -1920,15 +1928,15 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> = Σi log (2πσ²)^(-1/2) + Σi {-(yi-α - βxi)²/2σi²}
+> = Σi log (2πσ²)^(-1/2) + Σi {-(yi-α - βxi)²/2σ²}
 >
 >
 >
-> = (-1/2) Σi log (2π)  + (-1/2) Σi log(σ²) + (1/2σ²) Σi {-(yi - α - βxi)²}
+> = (-1/2) Σi log (2π) + (-1/2) Σi log(σ²) + (1/2σ²) Σi {-(yi - α - βxi)²}
 >
 >
 >
-> = - (n/2) log (2π)  - n/2) log(σ²) - (1/2σ²) Σi (yi - α - βxi)²
+> = - (n/2) log (2π) - n/2) log(σ²) - (1/2σ²) Σi (yi - α - βxi)²
 >
 >
 >
@@ -1940,7 +1948,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> maximize\_α, β, σ² {- (n/2) log (2π)  - n/2) log(σ²) - (1/2σ²) Σi (yi - α - βxi)²}
+> maximize\_α, β, σ² {- (n/2) log (2π) - n/2) log(σ²) - (1/2σ²) Σi (yi - α - βxi)²}
 >
 >
 >
@@ -2024,11 +2032,11 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> ⇔ (Σi xiyi - Σixiα)/Σi xi² = β 
+> ⇔ (Σi xiyi - Σixiα)/Σi xi² = β
 >
 >
 >
-> ⇔ Σi xi(yi - α)/Σi xi² = β  (1)
+> ⇔ Σi xi(yi - α)/Σi xi² = β (1)
 >
 >
 >
@@ -2036,7 +2044,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> Giải theo α: 
+> Giải theo α:
 >
 >
 >
@@ -2048,23 +2056,23 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> =  Σi d/dα (yi - α - βxi)²
+> = Σi d/dα (yi - α - βxi)²
 >
 >
 >
-> =  Σi d/d(yi - α - βxi) (yi - α - βxi)² . d/dα (yi - α - βxi)²
+> = Σi d/d(yi - α - βxi) (yi - α - βxi)² . d/dα (yi - α - βxi)
 >
 >
 >
-> =  2 Σi (yi - α - βxi) (-1)
+> = 2 Σi (yi - α - βxi) (-1)
 >
 >
 >
-> =  -2 Σi (yi - α - βxi) 
+> = -2 Σi (yi - α - βxi)
 >
 >
 >
-> Điều kiện cần bậc nhất: -2 Σi (yi - α - βxi)  = 0
+> Điều kiện cần bậc nhất: -2 Σi (yi - α - βxi) = 0
 >
 >
 >
@@ -2076,11 +2084,11 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> ⇔ (1/n) (Σi yi - βΣixi) =  α 
+> ⇔ (1/n) (Σi yi - βΣixi) = α
 >
 >
 >
-> ⇔ α = (Σi yi)/n - β(Σixi)/n 
+> ⇔ α = (Σi yi)/n - β(Σixi)/n
 >
 >
 >
@@ -2120,7 +2128,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
->  Xét Σi (xi² - x̄ xi) = Σi (xi² - 2x̄ xi + x̄ xi + x̄ ² - x̄ ²)
+> Xét Σi (xi² - x̄ xi) = Σi (xi² - 2x̄ xi + x̄ xi + x̄ ² - x̄ ²)
 >
 >
 >
@@ -2136,7 +2144,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> = Σi (xi - x̄ )² + x̄  (Σi xi - Σi x̄ )
+> = Σi (xi - x̄ )² + x̄ (Σi xi - Σi x̄ )
 >
 >
 >
@@ -2177,37 +2185,197 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=dQ-blTqxLaM)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
 >
-> Ghi chú rất tốt, bạn đã tự thực hiện chi tiết toàn bộ các bước đạo hàm và biến đổi đại số để tìm nghiệm MLE cho α và β thay vì chỉ chép lại kết quả. Chỉ cần bổ sung thêm bước tìm nghiệm MLE cho σ² để hoàn thành trọn vẹn mục tiêu ban đầu.
+> Ghi chú rất xuất sắc khi tự chứng minh chi tiết nghiệm OLS/MLE cho α và β từ hàm log-likelihood thay vì chỉ chấp nhận kết quả sẵn có. Bạn chỉ cần hoàn thiện nốt bước tìm MLE cho tham số σ² như dự định ban đầu.
 >
 > **🟡 Minor issues**
 >
 > **1.** *"Tìm Maximum Likelhood estimator cho α, β, σ²:"*
 >
-> Ghi chú đặt mục tiêu tìm MLE cho cả ba tham số (α, β, σ²) nhưng mới chỉ giải chi tiết cho α và β, chưa thực hiện bước thay α_ML, β_ML vào log-likelihood để tối ưu tìm nghiệm σ²_ML.
->
-> **2.** *"=  Σi d/d(yi - α - βxi) (yi - α - βxi)² . d/dα (yi - α - βxi)²"*
->
-> Lỗi gõ ký hiệu quy tắc chuỗi đạo hàm: thừa số thứ hai phải là d/dα (yi - α - βxi) thay vì còn bình phương.
->
-> **3.** *"= Σi log (2πσ²)^(-1/2) + Σi {-(yi-α - βxi)²/2σi²}"*
->
-> Lỗi đánh máy nhỏ ở mẫu số: xuất hiện chỉ số i ở σi² (phương sai σ² là hằng số đẳng phương sai homoscedasticity).
+> Ghi chú đặt mục tiêu tìm MLE cho cả α, β và σ², nhưng phần sau mới chỉ giải đến α và β mà chưa thực hiện tiếp bước tối ưu hóa hàm log-likelihood theo σ² để tìm σ̂².
 >
 >
 > **✓ Strengths**
-> - Hiểu rõ bản chất hàm log-likelihood dưới mô hình chuẩn điều kiện và chỉ ra được mối liên hệ trực tiếp giữa MLE và bài toán bình phương cực tiểu (OLS/RSS).
-> - Tự triển khai đầy đủ, mạch lạc các bước đạo hàm riêng bậc nhất theo α và β để tìm điều kiện cần tối ưu.
-> - Biến đổi đại số tường minh việc đưa tổng các tích chéo về dạng độ lệch chuẩn tâm Sxx và Sxy.
+> - Biểu diễn chính xác hàm likelihood và log-likelihood cho mô hình hồi quy tuyến tính dưới giả định sai số chuẩn.
+> - Liên hệ tốt giữa bài toán cực đại hóa likelihood (MLE) với cực tiểu hóa tổng bình phương phần dư (RSS) khi cố định σ².
+> - Tự triển khai đạo hàm riêng và đại số rút gọn cho α và β rất chặt chẽ, biến đổi chuẩn xác đưa về dạng Sxy và Sxx.
 >
 > **💡 Deeper notes**
-> - Để bài toán tìm cực trị hoàn chỉnh về mặt toán học, ngoài điều kiện cần bậc nhất (FOC), có thể kiểm tra thêm ma trận Hessian (điều kiện đủ bậc hai) để khẳng định đây là điểm cực đại toàn cục (hàm lồi đối với RSS).
-> - Nghiệm MLE của σ² thu được có mẫu số là n (được đề cập ở cuối trang sách tham khảo), đây là ước lượng chệch (biased), khác với ước lượng không chệch hiệu chỉnh bậc tự do s² có mẫu số là n - 2.
+> - Để tìm nghiệm MLE của σ², bạn thay α̂ và β̂ vừa tìm được vào log-likelihood, lấy đạo hàm theo σ² (hoặc σ) và cho bằng 0 sẽ thu được công thức σ̂² = (1/n) RSS. Chú ý rằng đây là ước lượng chệch (biased), khác với ước lượng không chệch s² = RSS / (n - 2).
 
 **🔗 See also:** [Two Steps of Regression Analysis](#node-7ilb1oo)
 
 <br>
 
-<a id="node-k77vw5e"></a>
+<a id="node-26ktgyo"></a>
+
+###### Lemma 11.3.2 Covariance of Linear Combinations
+
+<p align="center"><kbd><img src="assets/f33qm04tbcj.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Bổ đề này nói đại ý rằng: Nếu có Y1,...Yn uncorrelated với Var(Yi) = σ² và c1,...cn, d1,...dn là các constants. 
+>
+>
+>
+> Thì khi đó:
+>
+>
+>
+> Cov(Σi ci Yi, Σi di Yi) = (Σi cidi) σ²
+>
+>
+>
+> Chứng minh sau
+
+> [!TIP]
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **0/100** · ✗ Fix first
+>
+> Vui lòng nhập lời giải thích của bạn để được chấm điểm.
+
+**🔗 See also:** [Độc lập trung bình phương sai](./53_sampling_from_the_normal_distribution.md#node-qx3kch2)
+
+<br>
+
+<a id="node-zj557yy"></a>
+
+###### Residuals and Bias in Variance
+
+<p align="center"><kbd><img src="assets/kk4dyxx4n6e.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/izoxzuknf3h.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Quay lại sau: Đại ý là tính toán để chứng minh MLE của σ̂ ² = (1/n) Σi (yi - α̂ - β̂ xi)² là một biased estimator của σ², vì:
+>
+>
+>
+> E\[σ̂ ²\] = \[(n-2)/n\] σ²
+>
+>
+>
+> Nên từ đó người ta lấy S² = \[n/(n-2)\] σ̂ ² để tạo một unbiased estimator cho σ².
+>
+>
+>
+> Ý nghĩa của cái này là gì:
+>
+>
+>
+> Chính là giúp ta thấy trong bài toán machine learning (giả định Ti \~ normal(𝐰ᵀ𝐱i, 1/β) thì MLE của 1/β chính là một biased estimator của 1/β
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác kết quả suy dẫn từ tài liệu và liên hệ đúng với bài toán hồi quy trong Machine Learning (ước lượng hợp lý cực đại của phương sai là ước lượng chệch).
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác kết quả kỳ vọng E[σ̂²] = [(n-2)/n]σ² và công thức hiệu chỉnh không chệch S².
+> - Liên hệ rất tốt giữa mô hình hồi quy tuyến tính cổ điển với cách ký hiệu tham số độ chính xác (precision) β trong Machine Learning (như trong giáo trình của Bishop).
+>
+> **💡 Deeper notes**
+> - Trong bài toán ML tổng quát Ti ~ Normal(wᵀxi, 1/β) với w có d chiều, số bậc tự do bị mất bằng d (thay vì 2 như trong hồi quy đơn biến), khi đó E[1/β_ML] = [(n-d)/n](1/β).
+
+<br>
+
+<a id="node-gytarq0"></a>
+
+###### Theorem 11.3.3 Sampling Distributions of Estimators
+
+<p align="center"><kbd><img src="assets/b14v9dv0zzc.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/gq46anpxf0l.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fyxcnrtygot.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0z740q5v1uf.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> α̂ = Ȳ - β̂ x̄
+>
+>
+>
+> β̂ = SxY/Sxx
+>
+>
+>
+> Sxx = (xi - x̄)², SxY = Σi (xi - x̄)(Yi - Ȳ)
+>
+>
+>
+> σ̂ ² = (1/n) Σi (Yi - α̂ - β̂ xi)²
+>
+>
+>
+> Theorem nói cả α̂, β̂ đều là normal: 
+>
+>
+>
+> β̂  = Σi (xi - x̄)(Yi - Ȳ)/Sxx
+>
+>
+>
+> = Σi \[(xi - x̄)Yi - (xi - x̄)Ȳ\]/Sxx
+>
+>
+>
+> = Σi \[(xi - x̄)Yi/Sxx\] - Ȳ \[Σi(xi - x̄)\] / Sxx
+>
+>
+>
+> Yi \~ n(α + βxi, σ²) ⇒ term đầu là tổng các linear function của Yi
+>
+>
+>
+> Yi là normal thì Ȳ cũng là normal (vì nó cũng là tổng các linear function của các Yi), nên - Ȳ \[Σi(xi - x̄)\] / Sxx cũng là normal
+>
+>
+>
+> Vậy đây là tổng hai normal, cũng là normal.
+>
+>
+>
+> α̂ = Σi (Yi/n) + β̂ x̄
+>
+>
+>
+> Với β̂ là normal thì đây là lại là tổng các linear function của các normal, cũng ra normal.
+>
+>
+>
+> Nói chung dùng Hệ quả 4.6.10 giải thích được hết.
+
+> [!TIP]
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **58/100** · ✗ Fix first
+>
+> Ghi chú có nỗ lực tự chứng minh tính chuẩn của các ước lượng nhưng mắc lỗi sai bản chất khi áp dụng định lý cho các biến không độc lập và bỏ qua tính chất triệt tiêu cơ bản của độ lệch trung bình. Bạn cần biểu diễn trực tiếp các ước lượng thành tổ hợp tuyến tính của các biến ngẫu nhiên Y_i độc lập như sách hướng dẫn.
+>
+> **🔴 Critical issues**
+>
+> **1.** *"nên - Ȳ [Σi(xi - x̄)] / Sxx cũng là normal. Vậy đây là tổng hai normal, cũng là normal."*
+>
+> Thứ nhất, đại lượng $\sum_i (x_i - \bar{x}) = 0$, do đó số hạng này triệt tiêu về 0 chứ không phải một biến ngẫu nhiên chuẩn. Thứ hai, việc suy luận 'tổng hai normal cũng là normal' rồi viện dẫn Hệ quả 4.6.10 là sai về mặt toán học vì Hệ quả 4.6.10 chỉ áp dụng cho tổ hợp tuyến tính của các biến ngẫu nhiên chuẩn ĐỘC LẬP (ở đây hai số hạng nếu có phụ thuộc vào nhau thì không tự suy ra phân phối chuẩn theo cách này). Cách chứng minh chuẩn xác của giáo trình là gộp lại thành $\hat{\beta} = \sum d_i Y_i$ trực tiếp từ các $Y_i$ độc lập.
+>
+> **2.** *"α̂ = Σi (Yi/n) + β̂ x̄"*
+>
+> Công thức này bị sai dấu (đúng phải là $\bar{Y} - \hat{\beta}\bar{x}$). Thêm vào đó, việc kết luận $\hat{\alpha}$ chuẩn vì là tổng tuyến tính của $\bar{Y}$ và $\hat{\beta}$ tiếp tục vi phạm giả định độc lập của Hệ quả 4.6.10. Sách giáo khoa đã phân tích $\hat{\alpha} = \sum c_i Y_i$ để tận dụng tính độc lập của các $Y_i$.
+>
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Sxx = (xi - x̄)²"*
+>
+> Thiếu ký hiệu tổng $\sum_{i=1}^n$; công thức chính xác phải là $S_{xx} = \sum_{i=1}^n (x_i - \bar{x})^2$.
+>
+>
+> **✓ Strengths**
+> - Nhớ được hướng tiếp cận mấu chốt là sử dụng tính chất tổ hợp tuyến tính của biến chuẩn để chứng minh tính chuẩn của ước lượng OLS.
+> - Nắm được biểu thức phân tích $S_{xy}$ và cách triển khai khai triển đại số ban đầu của $\hat{\beta}$.
+>
+> **💡 Deeper notes**
+> - Tính chất $\sum_{i=1}^n (x_i - \bar{x}) = 0$ là đẳng thức nền tảng trong hồi quy tuyến tính cổ điển, giúp đơn giản hóa các tổng chứa số hạng $(x_i - \bar{x})$ thành các trọng số cố định $c_i, d_i$.
+> - Hai biến ngẫu nhiên chuẩn có tổng là chuẩn khi và chỉ khi chúng phân phối chuẩn đồng thời (jointly normal), điều này được đảm bảo chính bởi vì cả hai đều là tổ hợp tuyến tính của cùng một vector các biến độc lập $Y$.
+
+<br>
 
