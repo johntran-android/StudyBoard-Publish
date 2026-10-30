@@ -1,6 +1,6 @@
 # 4.6 Multi-variate Distribution
 
-📊 **Progress:** `22` Notes | `28` Screenshots | `3` AI Reviews
+📊 **Progress:** `22` Notes | `28` Screenshots | `8` AI Reviews
 
 ---
 <a id="node-1ndxf47"></a>
@@ -841,6 +841,25 @@
 > wise nhưng pair wise independent thì chưa chắc đã multual independent
 > mà trong ví dụ 1.3.11 đã từng nói
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác và trực quan bản chất của độc lập tương hỗ (mutual independence), mối quan hệ với độc lập từng cặp (pairwise independence) và tính chất phân phối có điều kiện.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"fX1,X2|X3,X4 = fX1,X2"*
+>
+> Ký hiệu này mang tính tốc ký, lược bỏ các đối số cụ thể (x1, x2 | x3, x4) cũng như điều kiện mật độ lề/xác suất tại điều kiện phải lớn hơn 0 để hàm điều kiện được xác định.
+>
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất trực giác: biết giá trị của một nhóm biến ngẫu nhiên không làm thay đổi phân phối (không cung cấp thông tin) về nhóm biến ngẫu nhiên còn lại.
+> - Nắm vững mối quan hệ một chiều quan trọng: độc lập tương hỗ suy ra độc lập từng cặp, nhưng chiều ngược lại không nhất thiết đúng (đã nhớ đúng ví dụ 1.3.11 phản chứng).
+>
+> **💡 Deeper notes**
+> - Đẳng thức phân phối có điều kiện bằng phân phối biên f(x_A | x_B) = f(x_A) chỉ được xét trên tập các giá trị x_B mà tại đó f_B(x_B) > 0.
+
 <br>
 
 <a id="node-151qbd1"></a>
@@ -889,6 +908,19 @@
 >
 > ⇨ MZ(t) = [MX(t)]^n
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác và mạch lạc bản chất mở rộng từ 2 biến ngẫu nhiên lên n biến ngẫu nhiên độc lập tương hỗ (mutually independent) cho cả kỳ vọng tích và hàm sinh mô-men (mgf).
+>
+> **✓ Strengths**
+> - Phân biệt đúng điều kiện độc lập tương hỗ (mutually independent) khi mở rộng lên n biến ngẫu nhiên thay vì chỉ độc lập từng cặp (pairwise).
+> - Hiểu chính xác công thức kỳ vọng tích tách thành tích các kỳ vọng khi các hàm chỉ phụ thuộc vào biến tương ứng.
+> - Nắm rõ tính chất cộng của hàm sinh mô-men (mgf) dẫn đến tích các mgf và trường hợp đặc biệt quan trọng khi các biến cùng phân phối (i.i.d.).
+>
+> **💡 Deeper notes**
+> - Các định lý này ngầm giả định các kỳ vọng hữu hạn tồn tại và các hàm sinh mô-men $M_{X_i}(t)$ tồn tại trên một lân cận mở quanh $0$.
+
 **🔗 See also:** [Định lý Giới hạn Trung tâm](./55_convergence_concepts.md#node-efueime)
 
 <br>
@@ -916,6 +948,18 @@
 > Và qua đó cho thấy Z cũng là Gamma rv với parm cũng là β nhưng 
 > α là tổng αi
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác và súc tích tính chất tổng của các biến ngẫu nhiên Gamma độc lập có cùng tham số tỉ lệ beta thông qua hàm sinh mô-men (mgf).
+>
+> **✓ Strengths**
+> - Hiểu đúng và biểu diễn chuẩn xác tính chất nhân mgf của các biến ngẫu nhiên độc lập.
+> - Kết luận chính xác rằng tổng các biến ngẫu nhiên Gamma độc lập có cùng scale parameter beta sẽ tuân theo phân phối Gamma với shape parameter là tổng các alpha.
+>
+> **💡 Deeper notes**
+> - Về mặt chặt chẽ giải tích, hàm mgf của phân phối Gamma chỉ hội tụ và xác định khi t < 1/β (hoặc t < β tùy quy ước đặt tham số scale hay rate).
+
 **🔗 See also:** [Bổ đề Chi-square](./53_sampling_from_the_normal_distribution.md#node-udtt0nq) · [Xây dựng khoảng tin cậy](./92_methods_of_finding_interval_estimators.md#node-9p7bal4) · [Pooled Estimator and Student t Distribution](./111_2_introduction_one_way_anova.md#node-680r0w1)
 
 <br>
@@ -929,12 +973,43 @@
 <p align="center"><kbd><img src="assets/8xvnbtnurz3.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là ta có thể khái quát hơn nữa: thay vì xét Z = Σi Xi ta sẽ xét 
-> Z = Σi (aiXi + bi) tức là Σ các linear function của các rv
+> Đại khái là ta có thể khái quát hơn nữa: thay vì xét Z = Σi Xi ta sẽ xét Z = Σi (aiXi + bi) tức là Σi các linear function của các rv
 >
 >
 >
-> khi đó MZ(t) = [e^t(Σbi)] MX1(a1t) MX2(a2t) ...MXn(ant)
+> khi đó MZ(t) = \[e^t(Σibi)\] MX1(a1t) MX2(a2t) ...MXn(ant)
+>
+>
+>
+> mgf
+>
+>
+>
+> pdf, cdf, pmf, mgf: xác định phân phối xác suất
+>
+>
+>
+> X, MX(t) = E\[e^tX\]
+>
+>
+>
+> Y = g(X) = e^tX
+>
+>
+>
+> E\[Y\] = E\[e^tX\]
+>
+>
+>
+> MX(t)|t=3: E\[e^3X\]
+>
+>
+>
+> MX(at) = E\[e^atX\]
+>
+>
+>
+> ---
 >
 >
 >
@@ -942,59 +1017,112 @@
 >
 >
 >
-> theo định nghĩa mgf MZ(t) có bản chất là E[e^tZ]
+> theo định nghĩa mgf MZ(t) có bản chất là E\[e^tZ\]
 >
 >
 >
-> = E[e^tΣ(aiXi+bi)] 
+> = E\[e^(tΣi(aiXi + bi))\]
 >
 >
 >
-> = E[e^Σ(taiXi+bi)] | đưa phân phối t vô
+> = E\[e^Σ(taiXi + tbi)\] | phân phối t vô
 >
 >
 >
-> = E[e^[Σ(taiXi)+Σbi]
+> = E\[e^\[Σi(taiXi) + Σi tbi\]
 >
 >
 >
-> = E[e^Σ(taiXi) * e^Σbi]
+> = E\[e^(ΣitaiXi) e^(Σitbi)\]
 >
 >
 >
-> = e^Σbi E[e^Σ(taiXi)] | linearity
+> = (e^tΣibi) E\[e^Σ(taiXi)\] | linearity
 >
 >
 >
-> = e^Σbi E[Πi e^(taiXi)] 
+> = (e^tΣibi) E\[Πi e^(taiXi)\]
 >
 >
 >
-> = e^Σbi E[Πi e^(taiXi)] 
+> = (e^tΣibi) E\[e^(ta1X1) × e^(ta2X2) × ...e^(tanXn)\]
 >
 >
 >
-> tức là e^Σbi E[e^(ta1X1) * e^(ta2X2) * ...e^(tanXn)]
+> Y1 = g1(X1) = e^(t × a1 × X1)
 >
 >
 >
-> Và đây chính là expected của tích các gi(Xi) riêng lẻ
+> Y2 = g2(X2) = e^(t × a2 × X2)
 >
 >
 >
-> nên theo theorem 4.6.6 E[g1(X1)g2(X2)...gn(Xn)] = Eg1(X1)Eg2(X2)..
+> Và đây chính là expected của tích các gi(Xi) riêng lẻ độc lập
 >
 >
 >
-> ⇨ ..= e^Σbi E[e^(ta1X1)] * E[e^(ta2X2)] * ...E[e^(tanXn)]
+> nên theo theorem 4.6.6 E\[g1(X1)g2(X2)...gn(Xn)\] = E\[g1(X1)\] E\[g2(X2)..\]
 >
 >
 >
-> Đến đây thì E[e^(ta1X1)] chính là mgf của X1 evaluate tại a1t
+> X,Y độc lập, E(XY) = E(X)E(Y)
 >
 >
 >
-> = e^Σbi MX1(ta1)MX2(ta2).....
+> 2D LOTUS:
+>
+>
+>
+> LOTUS: Y = g(X), X \~ fX(x), EX = ∫xfX(x)dx, EY = ∫g(x)fX(x)dx
+>
+>
+>
+> Z = g(X,Y) ,fX,Y(x,y); E\[Z\] = ∫∫g(x,y)fX,Y(x,y)dxdy
+>
+>
+>
+> E(XY) = E\[Z\], Z = g(X,Y) = XY
+>
+>
+>
+> = ∫∫xyfX,Y(x,y)dxdy
+>
+>
+>
+> = ∫∫xyfX(x)fY(y)dxdy | do X, Y độc lập
+>
+>
+>
+> = ∫∫xfX(x)dx fY(y)ydy = ∫ EX fY(y)ydy = EX ∫ fY(y)ydy = EX EY
+>
+>
+>
+> ---
+>
+>
+>
+> ⇨ ..= (e^tΣibi) E\[e^(ta1X1)\] × E\[e^(ta2X2)\] × ...E\[e^(tanXn)\]
+>
+>
+>
+> Đến đây thì E\[e^(ta1X1)\] chính là mgf của X1 evaluate tại a1t
+>
+>
+>
+> = (e^tΣibi) MX1(ta1)MX2(ta2).....
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, hiểu rõ và diễn giải chi tiết từng bước biến đổi đại số cũng như việc áp dụng tính chất độc lập để tách kỳ vọng của tích.
+>
+> **✓ Strengths**
+> - Diễn giải chi tiết từng bước trung gian trong phép biến đổi đại số mũ và tính chất tuyến tính của kỳ vọng mà giáo trình đã lược bớt.
+> - Hiểu chính xác bản chất vì sao các X_i độc lập thì kỳ vọng của tích hàm mũ phân rã thành tích các kỳ vọng.
+> - Nhận diện đúng E[e^(t a_i X_i)] chính là hàm sinh mô-men M_X_i tính tại điểm a_i*t.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý thêm điều kiện tồn tại mgf: công thức mgf của Z chỉ xác định trên lân cận quanh 0 nơi mà tất cả các mgf thành phần M_X_i(a_i t) đều cùng tồn tại.
 
 <br>
 
@@ -1005,12 +1133,11 @@
 <p align="center"><kbd><img src="assets/ji2n3zsiegk.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ứng dụng cái hệ quả 4.6.9 ta sẽ chứng minh rằng tổng của các linear function
-> của các normal (μi, σi²) rv sẽ cũng là normal rv ~ n(Σi ai μi + bi, Σ ai² σi²)
+> Ứng dụng cái hệ quả 4.6.9 ta sẽ chứng minh rằng tổng của các linear function của các normal (μi, σi²) rv độc lập sẽ cũng là normal rv \~ n(Σi ai μi + bi, Σ ai² σi²)
 >
 >
 >
-> Như đã biết mgf của normal (μ, σ²) là M(t) = e^μt + σ²t²/2
+> Như đã biết mgf của normal (μ, σ²) là M(t) = e^\[μt + σ²t²/2\]
 >
 >
 >
@@ -1018,62 +1145,65 @@
 >
 >
 >
->  MZ(t) = theo hệ quả 4.6.9
+> MZ(t) = theo hệ quả 4.6.9
 >
 >
 >
-> sẽ = e^t(Σbi) MX1(a1t)....MXn(ant)
+> X \~ n(μ, σ²): M(t) = e^\[μt + σ²t²/2\]
 >
 >
 >
-> = e^t(Σbi) e^[μ1a1t + σ1²a1²t²/2] ...e^[μnant + σn²an²t²/2]
+> X1 \~ n(μ1, σ1²): MX1(a1t) = e^\[μ1t + σ1²(a1t)²/2\]
 >
 >
 >
-> = e^t(Σbi) e^[μ1a1t + σ1²a1²t²/2 + ... + μnant + σn²an²t²/2]
+> sẽ = \[e^(t Σi bi)\] MX1(a1t)....MXn(ant)
 >
 >
 >
-> = e^t(Σbi) e^[μ1a1t + μ2a2t + ...μnant + σ1²a1²t²/2 + ...  σn²an²t²/2]
+> = \[e^(t Σibi)\] e^\[μ1a1t + σ1²a1²t²/2\] ...e^\[μnant + σn²an²t²/2\]
 >
 >
 >
-> = e^t(Σbi) e^[Σiμiai t + Σiσi²ai²t²/2]
+> = \[e^(t Σibi)\] e^\[μ1a1t + σ1²a1²t²/2 + ... + μnant + σn²an²t²/2\]
 >
 >
 >
-> = e^[Σiμiai t + t Σbi + Σiσi²ai²t²/2 ]
+> = \[e^(t Σibi)\] e^\[μ1a1t + μ2a2t + ...μnant + σ1²a1²t²/2 + ... σn²an²t²/2\]
 >
 >
 >
-> = e^[ (Σiμiai + Σbi) t + + Σiσi²ai²t²/2 ]
+> = \[e^(t Σibi)\] e^\[(Σiμiai) t + Σiσi²ai²t²/2\]
 >
 >
 >
-> tới đây thì nó có dạng mgf của n(Σiμiai + Σbi,Σiai²σi²)
+> = e^\[Σiμiai t + (t Σi bi) + Σiσi²ai²t²/2 \]
+>
+>
+>
+> MZ(t) = e^\[ (Σiμiai + Σi bi) t + (Σiσi²ai²) t²/2 \]
+>
+>
+>
+> X \~ n(μ, σ²): M(t) = e^\[μt + σ²t²/2\]
+>
+>
+>
+> tới đây thì nó có dạng mgf của n(Σiμiai + Σi bi, Σiai²σi²)
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=Aq3dsND50OA)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
-> Ghi chú rất tốt, bạn đã tự triển khai chi tiết từng bước biến đổi đại số của hàm sinh mô-men (mgf) mà sách giáo khoa viết tắt. Tuy nhiên, cần lưu ý bổ sung điều kiện các biến ngẫu nhiên phải độc lập với nhau (mutually independent).
->
-> **🟡 Minor issues**
->
-> **1.** *"tổng của các linear function của các normal (μi, σi^2) rv sẽ cũng là normal rv"*
->
-> Định lý và phép nhân tách mgf $M_Z(t) = e^{t\sum b_i} \prod M_{X_i}(a_i t)$ chỉ đúng khi các biến ngẫu nhiên $X_i$ độc lập với nhau (mutually independent). Nếu thiếu điều kiện độc lập, tổng của các biến chuẩn chưa chắc là phân phối chuẩn.
->
-> **2.** *"= e^[ (Σiμiai + Σbi) t + + Σiσi^2ai^2t^2/2 ]"*
->
-> Có lỗi đánh máy thừa dấu cộng (`+ +`).
->
+> Ghi chú rất tốt, bạn đã diễn giải chi tiết từng bước đại số trung gian của phép biến đổi hàm sinh mô-men (mgf) một cách chính xác và rõ ràng.
 >
 > **✓ Strengths**
-> - Khai triển và nhóm các số hạng bậc nhất theo t và bậc hai theo t^2 rất rõ ràng và chuẩn xác.
-> - Hiểu đúng tính duy nhất của mgf để kết luận phân phối chuẩn dựa trên dạng hàm sinh mô-men thu được.
+> - Khai triển và gom các số hạng của hàm sinh mô-men từng bước rất chi tiết và chuẩn xác.
+> - Nắm vững tính chất độc lập khi tính mgf của tổ hợp tuyến tính các biến ngẫu nhiên.
 >
 > **💡 Deeper notes**
-> - Cơ sở lý thuyết để kết luận $Z$ có phân phối chuẩn ở bước cuối cùng dựa trên 'Tính duy nhất của hàm sinh mô-men' (Uniqueness Theorem of MGF) — nếu mgf của $Z$ trùng với mgf của phân phối chuẩn trong một lân cận của 0 thì $Z$ tuân theo phân phối chuẩn đó.
+> - Cơ sở lý thuyết để kết luận Z có phân phối chuẩn từ việc đồng nhất mgf chính là định lý duy nhất (uniqueness theorem) của hàm sinh mô-men.
 
 **🔗 See also:** [Điều kiện độc lập tổ hợp Normal](./53_sampling_from_the_normal_distribution.md#node-91dxhtz) · [Oneway ANOVA Assumptions](./111_2_introduction_one_way_anova.md#node-tp60spi) · [Convolution of Probit and Gaussian *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/452_predictive_distribution.md#node-dtpl38s)
 
@@ -1086,38 +1216,51 @@
 <p align="center"><kbd><img src="assets/5yv1sikrvk4.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, đây là 2 định lý mang tính cách là mở rộng (khái quát) của hai cái mà 
-> mình đã gặp đối với bivariate
+> Rồi, đây là 2 định lý mang tính cách là mở rộng (khái quát) của hai cái mà mình đã gặp đối với bivariate
 >
 >
 >
-> Đầu tiên có một cái rất hữu ích, đó là bổ đề 4.2., nói rằng, hai random
-> variable X, Y sẽ là independent NẾU VÀ CHỈ NẾU tồn tại hai hàm g() là
-> hàm của x, h là hàm của y. sao cho fX,Y(x,y) = g(x)h(y) với mọi x, y
+> Đầu tiên có một cái rất hữu ích, đó là bổ đề 4.2., nói rằng, hai random variable X, Y sẽ là independent NẾU VÀ CHỈ NẾU tồn tại hai hàm g() là hàm của x, h là hàm của y. sao cho fX,Y(x,y) = g(x)h(y) với mọi x, y
 >
 >
 >
-> Và nhờ cái bổ đề này mà ta có thể chứng minh tính độc lập của hai rv 
-> dễ hơn nhiều.
+> Và nhờ cái bổ đề này mà ta có thể chứng minh tính độc lập của hai rv dễ hơn nhiều.
 >
 >
 >
-> Ở đây, khái quát nó lên ta cũng có: **X1, X2,...Xn** sẽ là các rv vector multually
->  độc lập nếu tồn tại các hàm gi(xi) mỗi hàm chỉ là hàm của random variable
-> vector xi: sao cho joint pdf/pmf của **X1, ...Xn** = Πi gi(**xi**)
+> Ở đây, khái quát nó lên ta cũng có: **X1, X2,...Xn** sẽ là các rv vector multually độc lập nếu tồn tại các hàm gi(xi) mỗi hàm chỉ là hàm của random variable vector xi: sao cho joint pdf/pmf của **X1, ...Xn** = Πi gi(**xi**)
 >
 >
 >
-> ====
+> ---
 >
 >
 >
-> Và theorem 4.3.5 đại khái nói là nếu X, Y độc lập, thì U = g(X), V = h(Y)
-> cũng độc lập
+> Và theorem 4.3.5 đại khái nói là nếu X, Y độc lập, thì U = g(X), V = h(Y) cũng độc lập
 >
 >
 >
 > Khái quát lên **X1, ...Xn** mutually độc lập ⇨ Ui = gi(**Xi**) cũng mutually độc lập
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú nắm rất tốt bản chất của hai định lý mở rộng từ trường hợp hai biến (bivariate) sang nhiều vector ngẫu nhiên độc lập. Cần lưu ý tính hai chiều (nếu và chỉ nếu) ở Định lý 4.6.11 và điều kiện về miền hỗ trợ (support).
+>
+> **🟡 Minor issues**
+>
+> **1.** *"**X1, X2,...Xn** sẽ là các rv vector multually độc lập nếu tồn tại các hàm gi(xi)..."*
+>
+> Định lý 4.6.11 là điều kiện cần và đủ ('if and only if'). Cách diễn đạt 'nếu tồn tại' mới chỉ nhấn mạnh chiều đủ, cần làm rõ đây là quan hệ tương đương hai chiều (nếu và chỉ nếu) giống như bạn đã nêu ở phần bivariate.
+>
+>
+> **✓ Strengths**
+> - Nhận thức rõ tính kế thừa và khái quát hóa từ các kết quả biến ngẫu nhiên hai chiều lên họ các vector ngẫu nhiên.
+> - Nắm chuẩn định lý biến đổi: hàm số chỉ phụ thuộc vào từng thành phần độc lập sẽ cho ra các biến mới độc lập với nhau.
+>
+> **💡 Deeper notes**
+> - Để tích f(x1, ..., xn) = g1(x1)...gn(xn) thỏa mãn, miền hỗ trợ (support) của vector ghép cũng phải tách rời được thành tích Descartes của các miền hỗ trợ thành phần, không bị ràng buộc phụ thuộc chéo.
+> - Các hàm gi(xi) trong định lý phân rã không nhất thiết phải là hàm mật độ xác suất biên (marginal pdf/pmf), chỉ cần là các hàm khả vi/đo được không âm sao cho tích của chúng bằng mật độ đồng thời.
 
 **🔗 See also:** [Độc lập vector qua PDF chung](./53_sampling_from_the_normal_distribution.md#node-25t5b1y)
 
@@ -1140,11 +1283,11 @@
 >
 >
 >
-> 1. Có partition của 𝒜: P((X,Y) ∈ A0) = 0
+> 1) Có partition của 𝒜: P((X,Y) ∈ A0) = 0
 >
 >
 >
-> 2. Trên các A1, A2, thì qua g1, g2 đều map tới ℬ, và là mapping 1-1 (mà mapping 1-1 ở đây còn thêm ý là ta có thể tìm được hàm inverse để từ u,v tìm được x,y trên Ai nữa)
+> 2) Trên các A1, A2, thì qua g1, g2 đều map tới ℬ, và là mapping 1-1 (mà mapping 1-1 ở đây còn thêm ý là ta có thể tìm được hàm inverse để từ u,v tìm được x,y trên Ai nữa)
 >
 >
 >
@@ -1164,11 +1307,11 @@
 >
 >
 >
-> 1. P((X,Y) ∈ A0) = 0
+> 1) P((X,Y) ∈ A0) = 0
 >
 >
 >
-> 2. trên Ai thì với x,y ∈ Ai thì g1(x,y), g2(x,y) đều ∈ ℬ
+> 2) trên Ai thì với x,y ∈ Ai thì g1(x,y), g2(x,y) đều ∈ ℬ
 >
 >
 >
