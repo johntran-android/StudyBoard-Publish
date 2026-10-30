@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1793283116032,
+  "publishedAt": 1793328963821,
   "sections": [
     {
       "title": "📋 Overview",
@@ -255,16 +255,16 @@
       "imageCount": 10
     },
     {
-      "title": "3.3.3 Equivalent kernel",
-      "path": "pattern_recognition_machine_learning_cbishop/333_equivalent_kernel.md",
-      "noteCount": 5,
-      "imageCount": 8
-    },
-    {
       "title": "3.3.1 Bayesian Linear Regression",
       "path": "pattern_recognition_machine_learning_cbishop/331_bayesian_linear_regression.md",
       "noteCount": 8,
       "imageCount": 12
+    },
+    {
+      "title": "3.3.3 Equivalent kernel",
+      "path": "pattern_recognition_machine_learning_cbishop/333_equivalent_kernel.md",
+      "noteCount": 5,
+      "imageCount": 8
     },
     {
       "title": "3.4 Bayesian Model Comparison",
@@ -495,6 +495,18 @@
       "imageCount": 3
     },
     {
+      "title": "5.2.4 Gradient descent optimization",
+      "path": "pattern_recognition_machine_learning_cbishop/524_gradient_descent_optimization.md",
+      "noteCount": 2,
+      "imageCount": 6
+    },
+    {
+      "title": "5.3 Error Backpropagation",
+      "path": "pattern_recognition_machine_learning_cbishop/53_error_backpropagation.md",
+      "noteCount": 4,
+      "imageCount": 12
+    },
+    {
       "title": "5.7 Ex",
       "path": "pattern_recognition_machine_learning_cbishop/57_ex.md",
       "noteCount": 1,
@@ -513,6 +525,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 495,
-  "totalImages": 791
+  "totalNotes": 501,
+  "totalImages": 809
 }
