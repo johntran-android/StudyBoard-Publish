@@ -1,6 +1,6 @@
 # 4.5 Covariance & Correlation
 
-📊 **Progress:** `19` Notes | `29` Screenshots | `8` AI Reviews
+📊 **Progress:** `19` Notes | `29` Screenshots | `9` AI Reviews
 
 ---
 <a id="node-0rdjr6h"></a>
@@ -643,6 +643,31 @@
 >
 > Và như vậy tồn tại a, b sao cho Y = aX + b với , chính là a = -t, b = μXt  + μY
 > chứng minh xong ý 2
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+>
+> Ghi chú rất tốt, bạn đã tự diễn giải và hiểu rõ bản chất đại số lẫn xác suất đằng sau bất đẳng thức Cauchy-Schwarz dạng kỳ vọng. Cần lưu ý thêm rằng biến ngẫu nhiên nhận giá trị hằng số vẫn là biến ngẫu nhiên, đồng thời bổ sung bước kiểm tra dấu của hệ số a qua nghiệm t.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"nhưng như vậy thì nó ko phải là random varialbe"*
+>
+> Về mặt toán học xác suất, một đại lượng nhận giá trị hằng số c với xác suất 1 (P(Z = c) = 1) vẫn là một biến ngẫu nhiên hợp lệ (gọi là biến ngẫu nhiên suy biến hay degenerate random variable).
+>
+> **2.** *"Và như vậy tồn tại a, b sao cho Y = aX + b với , chính là a = -t, b = μXt  + μY chứng minh xong ý 2"*
+>
+> Đoạn kết còn thiếu bước tính cụ thể nghiệm t = -Cov(X,Y)/σ_X² để chứng minh a = -t ≠ 0 và a cùng dấu với hệ số tương quan ρ_XY như định lý yêu cầu.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ và diễn giải chi tiết tính chất bảo toàn thứ tự của kỳ vọng: Z ≥ 0 thì E[Z] ≥ 0.
+> - Nắm chắc mối liên hệ giữa tam thức bậc hai không âm với điều kiện biệt thức discriminant Δ ≤ 0.
+> - Tự triển khai đầy đủ các bước khai triển tuyến tính của kỳ vọng và hiệp phương sai mà không chỉ chép lại.
+>
+> **💡 Deeper notes**
+> - Chứng minh trong giáo trình ngầm giả định độ lệch chuẩn σ_X > 0 (biến ngẫu nhiên X không phải là hằng số suy biến) để tam thức bậc 2 h(t) có hệ số cao nhất khác 0 và cho phép chia ở bước cuối.
+> - Chiều ngược lại (nếu Y = aX + b với xác suất 1 thì |ρ_XY| = 1) cũng là một phần của mệnh đề 'khi và chỉ khi', có thể kiểm tra trực tiếp bằng cách thay Y = aX + b vào công thức tính tương quan.
 
 <br>
 
