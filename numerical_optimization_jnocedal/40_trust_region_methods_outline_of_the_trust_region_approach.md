@@ -98,9 +98,27 @@
 > Trong khi đó, ưu tiên của trust region là chọn vùng an toàn, nơi mà có thể xấp xỉ tốt hàm bởi hàm bậc hai, từ đó mới tính direction, do đó direction của nó tốt hơn.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **70/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Phân tích về nguyên lý của phương pháp trust region và ưu điểm của nó so với line search rất sâu sắc và chính xác, thể hiện sự hiểu biết tốt về khái niệm cốt lõi. Tuy nhiên, nhận định về việc hàm f tăng lên khi sử dụng line search là sai lệch so với thông tin được cung cấp ('at most a small reduction'), và bài viết bị đứt đoạn ở cuối.
+> Ghi chú nắm rất chắc và sâu sắc triết lý cốt lõi phân biệt giữa Line Search và Trust Region (Line search: chọn hướng trước rồi mới dò bước; Trust region: giới hạn vùng tin cậy trước rồi mới tối ưu hướng và bước). Chỉ có một vài điểm phỏng đoán nhỏ chưa hoàn toàn chuẩn xác về mặt kỹ thuật.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"thì nếu dùng steepest gradient descent hay quasi Newton thì có thể còn tệ hơn"*
+>
+> Trong địa hình thung lũng cong (curved valley), hướng dốc nhất (steepest descent) vuông góc với đường đồng mức tại x_k có thể hướng thẳng vào lòng đáy thung lũng, đôi khi không bị lệch hướng theo chiều thung lũng parabol giả định như bước Newton. Phỏng đoán rằng steepest descent chắc chắn 'tệ hơn' ở đây là chưa chặt chẽ.
+>
+> **2.** *"Để rồi đi theo Newton step sẽ dẫn ta xuống đáy cái parabol... thì có thể thấy nó khiến hàm f tăng lên"*
+>
+> Line search không bắt buộc nhảy thẳng tới cực tiểu của mô hình bậc hai (full Newton step). Line search chỉ tìm bước dọc theo tia đó. Sách nhấn mạnh rằng ngay cả khi chọn chiều dài bước tối ưu trên tia đó (optimal steplength), mức giảm f vẫn rất nhỏ do hướng đi đã không thuận lợi.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ bản chất: Line search chọn hướng từ mô hình chưa giới hạn vùng nên hướng có thể tệ ngay từ đầu, trong khi Trust Region giới hạn vùng tin cậy trước rồi mới tìm bước tối ưu trong đó.
+> - Đọc và giải thích đúng các chi tiết trực quan trên hình: đường đồng mức thực tế f, mô hình bậc hai m_k, và vị trí của các bước đi.
+>
+> **💡 Deeper notes**
+> - Khác biệt cơ bản nhất giữa hai trường phái: Line Search cố định hướng p_k trước rồi tìm alpha_k; Trust Region giới hạn kích thước bước ||p|| <= Delta_k trước rồi tìm cả hướng và độ dài bước p_k đồng thời.
 
 <br>
 
