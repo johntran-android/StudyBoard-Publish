@@ -15,6 +15,8 @@
 
 <a id="node-q4jrt2z"></a>
 
+### Không gian ma trận
+
 <p align="center"><kbd><img src="assets/ubl7plwsm98.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -34,6 +36,8 @@
 <br>
 
 <a id="node-rscfhbb"></a>
+
+#### Không gian con ma trận
 
 <p align="center"><kbd><img src="assets/zgk5hd3um6q.png" width="80%"></kbd></p>
 
@@ -61,6 +65,8 @@
 
 <a id="node-9ako3jo"></a>
 
+##### Cơ sở không gian R3x3
+
 <p align="center"><kbd><img src="assets/stsrtar8nn.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -80,6 +86,8 @@
 <br>
 
 <a id="node-8gda1z6"></a>
+
+###### Số chiều không gian con
 
 <p align="center"><kbd><img src="assets/ebr21r10wh8.png" width="80%"></kbd></p>
 
@@ -103,6 +111,8 @@
 <br>
 
 <a id="node-dtpyrq9"></a>
+
+###### Số chiều ma trận chéo
 
 <p align="center"><kbd><img src="assets/tvbmm2idhh.png" width="80%"></kbd></p>
 
@@ -136,6 +146,8 @@
 <br>
 
 <a id="node-20agvz8"></a>
+
+###### Hợp hai không gian con
 
 <p align="center"><kbd><img src="assets/ewqlcavv94f.png" width="80%"></kbd></p>
 
@@ -174,6 +186,8 @@
 
 <a id="node-ghiktqb"></a>
 
+###### Biểu diễn ma trận S+U
+
 <p align="center"><kbd><img src="assets/a5kfpw8r29a.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -195,6 +209,8 @@
 <br>
 
 <a id="node-sxwwix6"></a>
+
+###### Công thức cộng số chiều
 
 <p align="center"><kbd><img src="assets/qfswe8ooss.png" width="80%"></kbd></p>
 
@@ -224,6 +240,8 @@
 
 <a id="node-3yvsiaj"></a>
 
+###### Nghiệm phương trình vi phân
+
 <p align="center"><kbd><img src="assets/hfg5y2tv2av.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -238,6 +256,8 @@
 <br>
 
 <a id="node-08x65pz"></a>
+
+###### Không gian vector hàm số
 
 <p align="center"><kbd><img src="assets/ionnpfg69v.png" width="80%"></kbd></p>
 
@@ -256,6 +276,8 @@
 
 <a id="node-dsgo74o"></a>
 
+###### Hạng ma trận bằng một
+
 <p align="center"><kbd><img src="assets/0ne51xfb6ful.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -270,6 +292,8 @@
 <br>
 
 <a id="node-u7u0fel"></a>
+
+###### Không gian dòng và cột
 
 <p align="center"><kbd><img src="assets/6gvrnq39zc3.png" width="80%"></kbd></p>
 
@@ -293,6 +317,8 @@
 <br>
 
 <a id="node-tr5j7kf"></a>
+
+###### Tích ma trận cột-hàng
 
 <p align="center"><kbd><img src="assets/e0ealn577rt.png" width="80%"></kbd></p>
 
