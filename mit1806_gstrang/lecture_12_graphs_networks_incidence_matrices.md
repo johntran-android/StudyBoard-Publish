@@ -1,6 +1,6 @@
 # Lecture 12: Graphs, Networks, Incidence Matrices
 
-📊 **Progress:** `37` Notes | `40` Screenshots
+📊 **Progress:** `37` Notes | `40` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-26mdg03"></a>
@@ -342,7 +342,7 @@
 >
 >
 >
-> \-&gt; **3**, vì đã nói **dim của nullspace N(A) là 1**. Bữa trước đã biết (**rank / dim cols space C(A) / dim row space C(Aᵀ))** dims của nullspace N(A) = số cột n
+> **⇒ 3**, vì đã nói **dim của nullspace N(A) là 1**. Bữa trước đã biết (**rank / dim cols space C(A) / dim row space C(Aᵀ))** dims của nullspace N(A) = số cột n
 >
 >
 >
@@ -351,6 +351,25 @@
 >
 >
 > Cũng có thể lập luận vì có **dim nullspace N(A) = 1**, nên Ax = 0, **có 1 special solution**, đồng nghĩa **có 3 pivots** -&gt; **3 linearly independent cols** -&gt; **basis của cols space có 3 vector -&gt; dim của columns space = 3 -&gt; rank = 3**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc mối liên hệ giữa chiều của không gian hạt nhân (nullspace) và hạng của ma trận thông qua định lý Rank-Nullity.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"(rank / dim cols space C(A) / dim row space C(Aᵀ)) dims của nullspace N(A) = số cột n"*
+>
+> Bị thiếu dấu cộng (+) trong công thức của định lý Rank-Nullity: rank(A) + dim(N(A)) = n (số cột).
+>
+>
+> **✓ Strengths**
+> - Hiểu rõ bản chất định lý Rank-Nullity để suy ra rank = 4 - 1 = 3.
+> - Liên hệ mạch lạc giữa số nghiệm đặc biệt (special solutions), số pivot và số cột độc lập tuyến tính tạo nên cơ sở của column space.
+>
+> **💡 Deeper notes**
+> - Trong lý thuyết đồ thị biểu diễn qua ma trận liên thuộc (incidence matrix), dim(N(A)) = số thành phần liên thông của đồ thị (ở đây đồ thị liên thông nên dim = 1), từ đó rank của ma trận liên thuộc luôn bằng n - c (với n là số đỉnh/cột và c là số thành phần liên thông).
 
 **🔗 See also:** [Số chiều Rowspace và Nullspace](./lecture_10_the_four_fundamental_subspaces.md#node-bsozk2k) · [linked note](#node-e7n8l7p)
 
