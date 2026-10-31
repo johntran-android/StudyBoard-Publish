@@ -1,6 +1,6 @@
 # Lecture 10: The Four Fundamental Subspaces
 
-📊 **Progress:** `24` Notes | `33` Screenshots | `5` AI Reviews
+📊 **Progress:** `24` Notes | `39` Screenshots | `16` AI Reviews
 
 ---
 <a id="node-no1m6a6"></a>
@@ -217,6 +217,18 @@
 > này ở bài trước. Đương nhiên gs nói tiếp ta có thể **đi tìm
 > basis** và **số vector của basis chính là dimension**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác tinh thần và nội dung bài giảng của GS. Gilbert Strang về câu hỏi trọng tâm (basis và dimension) đối với 4 không gian con cơ bản.
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác hai câu hỏi trọng tâm được đặt ra trên bảng: tìm cơ sở (basis) và số chiều (dimension) cho các không gian con.
+> - Hiểu đúng khái niệm số chiều của column space chính bằng hạng (rank r) của ma trận A và liên hệ chuẩn xác giữa số vector trong cơ sở với số chiều.
+>
+> **💡 Deeper notes**
+> - Ở các bước tiếp theo của bài giảng, GS. Strang sẽ chỉ ra rằng không gian hàng (row space) cũng có cùng số chiều r (hạng hàng bằng hạng cột), từ đó dẫn đến định lý Rank-Nullity cho nullspace và left nullspace.
+
 <br>
 
 <a id="node-shgezta"></a>
@@ -225,16 +237,16 @@
 
 <p align="center"><kbd><img src="assets/nrph2nhmni.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/jeej17252rf.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/t272kn2ag6.png" width="80%"></kbd></p>
+
 > [!NOTE]
-> Và như ta đã làm chán chê bữa giờ, khi ta dùng **elimination**
-> để đưa A về Row Echelon form - **U**. Để xác định được **pivot**
-> cols và **free** cols.
+> Và như ta đã làm chán chê bữa giờ, khi ta dùng **elimination** để đưa A về Row Echelon form - **U**. Để xác định được **pivot** cols và **free** cols.
 >
 >
 >
-> Thế thì **các pivot cols chính là tạo nên một basis của cols
-> space** và **số lượng pivot chính là rank** và **chính là
-> dimensions của columns space**.
+> Thế thì **các pivot cols (của A) chính là tạo nên một basis của cols space** và **số lượng pivot chính là rank** và **chính là dimensions của columns space**.
 >
 >
 >
@@ -242,15 +254,37 @@
 >
 >
 >
-> thì bởi vì **chúng là các cols vector độc lập** trong các cols
-> vector, thì chúng là những vector **vừa đủ để span cols
-> space**, **nên chúng là basis của cols space**.
+> thì bởi vì **chúng là các cols vector độc lập** trong các cols vector, thì chúng là những vector **vừa đủ để span cols space**, **nên chúng là basis của cols space**.
 >
 >
 >
-> Tóm lại, chúng ta đã hiểu khá nhiều về cols space. Gs cho
-> rằng ta sẽ quay lại để chứng minh cái này dù mình đã biết là
-> nó đúng
+> Tóm lại, chúng ta đã hiểu khá nhiều về cols space. Gs cho rằng ta sẽ quay lại để chứng minh cái này dù mình đã biết là nó đúng
+>
+>
+>
+> ---
+>
+>
+>
+> Nhưng vì sao khử Gauss cho ta xác định cột 1,3,4 của U là pivots thì cột 1,3,4 của A cũng là bộ cơ sở?
+>
+>
+>
+> Thử giải thích: Chứng minh rất dễ: Chỉ cần xét tổ hợp tuyến tính của chúng: c1 A1 + c3 A3 + c4 A4. Vì EA = U, và theo góc nhìn nhân hai matrix thứ 3, U1 chính là EA1, U2 = EA2, U3 = EA3. Do đó
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=duV8R1iN4Ok)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú thể hiện tư duy rất tốt khi không chỉ ghi nhớ kết quả mà còn giải thích chính xác bản chất vì sao các cột pivot của A tạo thành cơ sở cho C(A) thông qua nghiệm của hệ Ax = 0.
+>
+> **✓ Strengths**
+> - Hiểu rõ và nhấn mạnh chuẩn xác việc lấy các cột pivot của ma trận gốc A để làm cơ sở cho C(A), cùng với chiều không gian là rank r.
+> - Lập luận rất chuẩn xác khi dùng tính bảo toàn nghiệm của Ax = 0 qua Ux = 0 để giải thích sự tương ứng về phụ thuộc tuyến tính giữa các cột.
+>
+> **💡 Deeper notes**
+> - Dù phép khử hàng làm thay đổi không gian cột (C(A) ≠ C(U)), nó bảo toàn hoàn toàn không gian nghiệm (N(A) = N(U)). Do đó, tổ hợp tuyến tính nào triệt tiêu các cột của U thì cũng triệt tiêu chính các cột tương ứng của A.
 
 <br>
 
@@ -259,6 +293,8 @@
 ###### Số chiều không gian hàng
 
 <p align="center"><kbd><img src="assets/rjf9o940n2.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/if00g9arrxb.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Thế thì xét qua **row space of A.**
@@ -272,6 +308,19 @@
 >
 > Và đây là một tính chất tuyệt vời. **Cols space và rows
 > space của A đều có dimension là r**
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=FGeUpJFwQFM)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm bắt rất chính xác tính chất cốt lõi từ bài giảng: số chiều của cả row space và column space đều bằng rank r của ma trận.
+>
+> **✓ Strengths**
+> - Hiểu đúng và nêu bật định lý quan trọng: dimension của row space và column space luôn bằng nhau và bằng rank r của ma trận A.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý thêm rằng dù có cùng số chiều r, row space C(A^T) là không gian con của R^n, trong khi column space C(A) là không gian con của R^m (khi A là ma trận m x n).
 
 **🔗 See also:** [Dimension of Left Nullspace](./lecture_12_graphs_networks_incidence_matrices.md#node-xk4c9wi)
 
@@ -302,6 +351,25 @@
 > Và do đó **suy ra cols space cũng chỉ có dimension = 2**,
 > vậy **Suy ra 3 cols vector không độc lập** (mà sẽ chỉ có 2
 > trong số đó độc lập tuyến tính)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất tốt, nắm bắt chính xác định lý cốt lõi: số chiều của không gian dòng bằng số chiều của không gian cột (bằng rank), từ đó suy ra sự phụ thuộc tuyến tính của các cột.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"mà sẽ chỉ có 2 trong số đó độc lập tuyến tính"*
+>
+> Cách diễn đạt hơi thiếu tính quy chuẩn; chính xác hơn là 'số cột độc lập tuyến tính cực đại là 2' (hoặc ta có thể chọn ra 2 cột độc lập tuyến tính để làm cơ sở cho không gian cột), tránh gây hiểu nhầm là chỉ có đúng một cặp 2 cột cố định nào đó độc lập.
+>
+>
+> **✓ Strengths**
+> - Hiểu và vận dụng xuất sắc mối quan hệ dim(Row Space) = dim(Col Space) = rank để kiểm tra tính độc lập tuyến tính.
+> - Lập luận logic chặt chẽ: từ việc nhận diện 2 hàng độc lập suy ra rank = 2, từ đó kết luận 3 vector cột trong không gian 2 chiều bắt buộc phải phụ thuộc tuyến tính.
+>
+> **💡 Deeper notes**
+> - Trong một ma trận m x n, nếu số cột n > rank(A) thì các cột chắc chắn phụ thuộc tuyến tính vì số vector vượt quá số chiều cực đại của không gian mà chúng sinh ra.
 
 <br>
 
@@ -340,129 +408,32 @@
 >
 >
 >
-> mà các special solution tạo thành một basis, cho nên \*\*số special solution = số free column chính là dimension của nullspace cũng như là số pivot column chính là dimension của column space / row space
+> mà các special solution tạo thành một basis, cho nên số special solution = số free column chính là dimension của nullspace cũng như là số pivot column chính là dimension của column space / row space
 >
 >
 >
-> Vậy với matrix n cột, rank r, thì có r pivot, nên có n-r free variable ⇒ có n-r special solution và như vậy dimension của nullspace là n-r\*\*
+> Vậy với matrix n cột, rank r, thì có r pivot, nên có n-r free variable ⇒ có n-r special solution và như vậy dimension của nullspace là n-r
 >
 > Hãy xét thêm hai câu hỏi sau: Tại sao chắc chắn rằng các special solution sẽ span nullspace, và tại sao chúng independence? (để từ đó kết luận chúng là basis của nullspace)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
 >
+> Ghi chú nắm rất tốt bản chất cách tìm Nullspace qua dạng bậc thang và mối liên hệ giữa số biến tự do với chiều n - r. Có một điểm lập luận về tính độc lập tuyến tính hơi thiếu chặt chẽ nhưng bạn đã chủ động nhận diện để đào sâu thêm ở cuối.
 >
+> **🟡 Minor issues**
 >
-> i) **Tại sao special solution span nullspace:**
+> **1.** *"vì ta được phép chọn giá trị bất kì cho free variable, thì dĩ nhiên luôn có thể chọn gía trị khiến các special solution độc lập."*
 >
+> Lập luận này hơi trực giác và chưa chặt chẽ về mặt toán học. Lý do cốt lõi khiến các special solution độc lập tuyến tính là vì tại các vị trí thành phần ứng với biến tự do, các vector này tạo thành một ma trận đơn vị I (mỗi vector có đúng một số 1 tại vị trí biến tự do của nó và 0 ở các biến tự do còn lại), do đó tổ hợp tuyến tính bằng 0 thì các hệ số buộc phải bằng 0.
 >
 >
-> Như đã biết, special solution được tìm bằng cách tìm free variable. Và gán giá trị tùy ý cho nó, thế ngược vào Ax=0 và giải ra các pivot variable. Vậy không làm mất đi tính khái quát, có thể xét matrix A có 5 cột, tức có 5 variable x1,x2,x3,x4,x5. Và cũng không làm mất tính khái quát, ta có thể giả sử sau khi đưa A về row echelon form ta có 3 pivot cols ứng với x1,x3,x4 và hai free columns x2, x5. Vậy ta sẽ gán x2=1, x5=0 để thế vào hệ phương trình lúc này còn 3 phương trình (vì có 3 pivot), để giải ra 3 biến pivot x1,x3,x4 (cho bằng a,b,c). Như vậy là ta có một special solution đầu tiên gọi là x_spec(1) = (a,1,b,c, 0). Và đương nhiên α\*x_spec(1) cũng là solution với mọi α. Và đây cũng tương đương với việc chọn x2=α, x5=0, giải tìm các pivot var
+> **✓ Strengths**
+> - Hiểu chính xác quy trình xây dựng nghiệm đặc biệt (special solutions) từ biến tự do (free variables) qua phép khử Gauss-Jordan.
+> - Kết nối chính xác giữa số pivot r, số biến tự do n - r với số chiều của không gian nghiệm Nullspace đúng như bài giảng của GS Strang minh họa trên bảng.
 >
->
->
-> Tương tự ta gán x2=0, x5=1, để tìm ra ba pivot var để có special solution thứ hai là x_spec(2) = (m,0,n,l,1). Tương tự, đương nhiên β\*x_spec(2) cũng là solution với mọi β. Đây cũng tương đương với việc chọn x5=β, x2=0, giải tìm pivot var
->
->
->
-> Và đương nhiên các linear combination của hai special solution: *α(a,1,b,c,0) + β*(m,0,n,l,1) cũng thuộc nullspace, với mọi\*\* α, β.
->
->
->
-> ======
->
->
->
-> **Chứng minh special solutions span nullspace bằng phản chứng**
->
->
->
-> Giả sử x_spec1 và x_spec2 là special solution.
->
->
->
-> Đương nhiên tương đương α*x_spec1 cũng là solution với mọi α và β*x_spec2 cũng vậy với mọi β. Và từ đó suy ra α*x_spec1 + β*x_spec2, hay mọi linear combination của các special solution đều là solution
->
->
->
-> Giả sử có một solution không phải là linear combination của hai special solution. Vậy x' thỏa Ax'=0 nhưng không tồn tại α, β khiến
->
->
->
-> x' = α*x_spec1 + β*x_spec2 với mọi α, β
->
->
->
-> hay nói cách khác
->
->
->
-> x' != α*x_spec1 + β*x_spec2 với mọi α, β
->
->
->
-> Nhân hai vế cho A, điều này tương đương
->
->
->
-> Ax' != A(α*x_spec1 + β*x_spec2) với mọi α, β
->
->
->
-> ⇔ Ax' != A\*(α*x_spec1) + A*(β\*x_spec2) với mọi α, β
->
->
->
-> Mà ta đã có Ax'=0, A\*(α*x_spec1) = 0, A*(β*x_spec2) = 0 vì x', α*x_spec1, β\*x_spec2 như nói trên đều là solution của Ax=0
->
->
->
-> Dẫn đến tương đương với:
->
->
->
-> ⇔ 0 != 0 + 0 với mọi α, β
->
->
->
-> Điều này là vô lý, vậy có thể kết luận rằng điều gỉa sử trên - tồn tại một solution không phải linear combination của các special solution - là sai. Từ đó có thể kết luận mọi solution của Ax=0 đều là linear combination của các special solution. **SUY RA SPECIAL SOLUTION SPAN NULLSPACE**
->
->
->
-> ====== \*\***Chứng minh các special solution independence**
->
->
->
-> Giả sử các special solution phụ thuộc: tức ta có thể viết x_spec2 = γ\*x_spec1
->
->
->
-> tương đương x_spec2 - γ\*x_spec1 = 0
->
->
->
-> Vậy α*x_spec1 + β*γ\*xpec1 = 0
->
->
->
-> tương đương (α + β\*γ)\*xspec1 = 0
->
->
->
-> tương đương x_spec1 = 0.
->
->
->
-> Điều này mâu thuẫn với giả thiết rằng x_spec 1 khác 0 (chọn free variable = 1 và các free variable khác = 0).
->
->
->
-> từ đó kết luận các **CÁC SPECIAL SOLUTION LINEAR INDEPENDENCE**
->
->
->
-> ======
->
->
->
-> từ đó kết luận các SPECIAL SOLUTION LÀ BASIS CỦA NULLSPACE
+> **💡 Deeper notes**
+> - Để chứng minh các special solution sinh ra toàn bộ Nullspace (span): Mọi nghiệm x bất kỳ của Ax = 0 đều có các thành phần biến tự do c1, c2, ..., c_(n-r). Khi lấy x trừ đi tổ hợp tuyến tính (c1*s1 + ... + c_(n-r)*s_(n-r)), ta thu được một nghiệm của Ax = 0 mà tất cả các biến tự do đều bằng 0, dẫn tới tất cả biến pivot cũng buộc bằng 0 (nghiệm tầm thường 0), chứng minh x phải bằng chính tổ hợp đó.
 
 <br>
 
@@ -478,6 +449,18 @@
 > dimension của nullspace là n-r. **Tổng dimension là n-r + r
 > = n = số cols của A**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác và nắm đúng bản chất của định lý Rank-Nullity cho hai không gian con trong R^n tràn bảng.
+>
+> **✓ Strengths**
+> - Xác định chính xác row space và null space đều là các không gian con của R^n.
+> - Hiểu rõ và tính đúng tổng số chiều của hai không gian là r + (n - r) = n (số cột của A).
+>
+> **💡 Deeper notes**
+> - Bài giảng của Gilbert Strang sau đó còn nhấn mạnh row space và null space không chỉ có tổng số chiều bằng n mà còn là cặp trực giao bù của nhau (orthogonal complements) trong R^n.
+
 **🔗 See also:** [Incidence Matrix of a Graph](./lecture_12_graphs_networks_incidence_matrices.md#node-6w3cdka)
 
 <br>
@@ -487,6 +470,10 @@
 ###### Dimensions of Fundamental Subspaces
 
 <p align="center"><kbd><img src="assets/b4v5cjgputj.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7kesctatrt3.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/a1urnecjw97.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Và dimension của nullspace của Aᵀ sẽ là m-r: Vì sao?
@@ -515,6 +502,19 @@
 >
 >
 > Và có thể thấy **nó cũng tuân theo cùng một rule: dim C(Aᵀ) + dim N(Aᵀ) = r + m - r = m = số columns của Aᵀ**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú giải thích rất mạch lạc, chặt chẽ và chính xác bản chất vì sao số chiều của left nullspace N(Aᵀ) lại bằng m - r thông qua định lý Rank-Nullity áp dụng cho ma trận Aᵀ.
+>
+> **✓ Strengths**
+> - Xác định chính xác kích thước của ma trận chuyển vị Aᵀ là n × m (n hàng, m cột).
+> - Kết nối chính xác mối quan hệ giữa row space của A với column space của Aᵀ cùng số lượng pivot.
+> - Lập luận chặt chẽ từ số biến tự do (free variables), số nghiệm đặc biệt (special solutions) đến số chiều của nullspace theo Rank-Nullity Theorem.
+>
+> **💡 Deeper notes**
+> - Không gian N(Aᵀ) thường được gọi là 'left nullspace' (hạt nhân trái) của A vì phương trình Aᵀy = 0 tương đương với yᵀA = 0.
 
 <br>
 
@@ -553,6 +553,20 @@
 >
 > Gs mới elimination để đưa nó về RREF matrix R
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác mạch bài giảng của GS. Strang về cách xác định cơ sở cho không gian cột và không gian hàng qua các phép khử đưa về RREF.
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác mạch tư duy từ việc xác định số chiều (dimension) chuyển sang tìm cơ sở (basis) cho 4 không gian con cơ bản.
+> - Nhận diện đúng số lượng và vị trí các cột pivot (cột 1 và 2) của ma trận ví dụ và mối quan hệ phụ thuộc tuyến tính của các cột còn lại.
+> - Mô tả đúng các bước khử ma trận từ dạng ban đầu sang dạng bậc thang rút gọn (RREF) trên bảng.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý quan trọng: khi lấy cơ sở cho không gian cột C(A), ta phải chọn các cột pivot từ ma trận gốc A, chứ không lấy các cột từ ma trận R sau khi đã biến đổi (vì phép biến đổi hàng làm thay đổi không gian cột).
+> - Ngược lại, các phép biến đổi hàng không làm thay đổi không gian hàng, do đó các hàng khác không của ma trận R (hoặc U) chính là cơ sở cho row space C(Aᵀ) mà không nhất thiết phải chuyển vị Aᵀ rồi khử lại từ đầu.
+
 <br>
 
 <a id="node-l74e1x1"></a>
@@ -565,6 +579,24 @@
 > và ta nhận xét thấy nó có một
 > Identity matrix, Free matrix, hàng dưới = 0
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú đã nắm đúng cấu trúc dạng khối kinh điển của ma trận bậc thang rút gọn R gồm ma trận đơn vị I, khối cột tự do F và các hàng số 0 bên dưới.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Free matrix"*
+>
+> Thuật ngữ chuẩn trong đại số tuyến tính (theo bài giảng của Gilbert Strang) thường gọi khối này là 'khối F' (block F) hay khối các cột tương ứng với biến tự do (free variables/free columns), thay vì gọi cả khối là 'free matrix'.
+>
+>
+> **✓ Strengths**
+> - Nhận diện chính xác 3 thành phần khối được khoanh tròn trên bảng: ma trận đơn vị I, khối F và hàng toàn số 0.
+>
+> **💡 Deeper notes**
+> - Cấu trúc khối tổng quát của ma trận RREF thường được viết dưới dạng R = [I, F; 0, 0], trong đó các cột của I ứng với các biến cơ sở (pivot variables) và F ứng với các biến tự do (free variables).
+
 <br>
 
 <a id="node-2b7s698"></a>
@@ -574,6 +606,8 @@
 <p align="center"><kbd><img src="assets/dytkd4gypxf.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/tnh3nduwgz.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/kvkfbxa2y7e.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > **COLUMN SPACE CỦA R KHÁC COLUMN SPACE CỦA
@@ -589,34 +623,52 @@
 > Column-space của R không bằng cols space của A. 
 > Nhưng row-space của R chính là row space của A
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác sự khác biệt giữa column space và row space qua phép khử Gauss, đồng thời hiểu rõ cách lấy cơ sở (basis) cho row space từ ma trận R.
+>
+> **✓ Strengths**
+> - Hiểu chính xác bản chất: các phép biến đổi dòng làm thay đổi column space nhưng bảo toàn row space.
+> - Nắm vững quy tắc chọn cơ sở cho row space là $r$ dòng khác không đầu tiên của ma trận rút gọn bậc thang $R$.
+>
+> **💡 Deeper notes**
+> - Mặc dù $C(R) \neq C(A)$, các phép biến đổi hàng vẫn bảo toàn mối quan hệ phụ thuộc tuyến tính giữa các cột, cho phép xác định các cột trụ (pivot columns) của $A$ để làm cơ sở cho $C(A)$.
+
 <br>
 
 <a id="node-q5nsehq"></a>
 
+###### Sự bảo toàn row space
+
 <p align="center"><kbd><img src="assets/dh78he08xni.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tại sao row space của R chính là row space của A để rồi
-> hai vector đầu là basis của rowspace của R cũng chính là
-> basis của rowspace của A?
+> Tại sao row space của R chính là row space của A để rồi hai vector đầu là basis của rowspace của R cũng chính là basis của rowspace của A?
 >
 >
 >
-> Lí do là vì, khi thực hiện quá trình row **elimination** matrix
-> A, ta đã **THAY CÁC ROW BẰNG LINEAR COMBINATION
-> CỦA  CHÚNG**. Gs đề nghị ngẫm lại xem có phải vậy
-> không. Đúng là như vậy. Thế thì điều đó có nghĩa là
-> **ROWSPACE CỦA A TRONG QUÁ TRÌNH ELIMINATION
-> KHÔNG THAY ĐỔI**, do đó rowspace của R vẫn chính là
-> rowspace của A. Khi thay hai vector (row) bằng hai vector
-> khác trong cùng row space (linear combination của hai
-> vector gốc) thì đương nhiên vẫn là rowspace đó.
+> Lí do là vì, khi thực hiện quá trình row **elimination** matrix A, ta đã **THAY CÁC ROW BẰNG LINEAR COMBINATION CỦA CHÚNG (và quá trình này khả nghịch do các matrxi E khả nghịch**)
 >
 >
 >
-> Do đó chỉ là **quá trình elimination giúp ta CHUYỂN HAI
-> BASIS CỦA ROWSPACE CỦA A THÀNH HAI BASIS KHÁC
-> RÕ RÀNG HƠN THÔI**. Gs gọi nó là **the** **best basis**
+> Gs đề nghị ngẫm lại xem có phải vậy không. Đúng là như vậy. Thế thì điều đó có nghĩa là **ROWSPACE CỦA A TRONG QUÁ TRÌNH ELIMINATION KHÔNG THAY ĐỔI**, do đó rowspace của R vẫn chính là rowspace của A. Khi thay hai vector (row) bằng hai vector khác trong cùng row space (linear combination của hai vector gốc) thì đương nhiên vẫn là rowspace đó.
+>
+>
+>
+> Do đó chỉ là **quá trình elimination giúp ta CHUYỂN HAI BASIS VECTOR CỦA ROWSPACE CỦA A THÀNH HAI BASIS KHÁC RÕ RÀNG HƠN THÔI**. Gs gọi nó là **the** **best basis**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú thể hiện sự hiểu biết rất sâu sắc và chính xác về bản chất đại số tuyến tính: phép khử hàng (nhân ma trận khả nghịch E) bảo toàn không gian hàng (row space), và các hàng khác không của R tạo thành cơ sở trực quan/tốt nhất cho không gian hàng của A.
+>
+> **✓ Strengths**
+> - Hiểu chính xác bản chất vì sao Row Space không đổi: mỗi phép biến đổi dòng sơ cấp là một tổ hợp tuyến tính khả nghịch (tương ứng với phép nhân ma trận E khả nghịch).
+> - Nắm bắt đúng thuật ngữ và trực giác của Giáo sư Gilbert Strang khi coi các dòng khác không của R là 'the best basis' (cơ sở tốt nhất) cho Row Space vì chứa các khối đơn vị rõ ràng.
+>
+> **💡 Deeper notes**
+> - Đối với Column Space thì ngược lại ($C(R) \neq C(A)$): phép biến đổi hàng làm thay đổi không gian cột nhưng vẫn giữ nguyên mối quan hệ phụ thuộc tuyến tính giữa các cột, do đó cơ sở của $C(A)$ phải được lấy từ các cột pivot tương ứng của ma trận gốc $A$ chứ không lấy từ $R$.
 
 <br>
 
@@ -649,32 +701,34 @@
 > clean / tối giản hết mức có thể)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ⚠️ **88/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
 >
-> Ghi chú nắm rất chắc bản chất: không gian cột bị thay đổi qua phép biến đổi hàng nên phải lấy cột của A làm cơ sở, trong khi không gian hàng không đổi nên các hàng khác không của R tạo thành cơ sở tối ưu cho row space của A. Cần diễn đạt chính xác hơn một chút về mối quan hệ giữa các hàng của R và các hàng ban đầu của A.
+> Ghi chú nắm rất tốt sự khác biệt cốt lõi giữa Column Space và Row Space khi biến đổi về dạng R: cột cơ sở của C(A) phải lấy từ ma trận A gốc, trong khi cơ sở của Row Space có thể lấy trực tiếp từ các hàng pivot của R.
 >
 > **🟡 Minor issues**
 >
 > **1.** *"Và cũng như đối với cols space, hai pivot cols (mà ở dạng reduced row echelon form) sẽ chính là hai cols gắn với cái Identity matrix là the best basis của cols space."*
 >
-> Câu này dễ gây hiểu nhầm rằng hai cột chứa ma trận đơn vị của R là cơ sở của C(A), dù ngay sau đó bạn đã viết chú ý đính chính là phải lấy cột của A. Chính xác thì hai cột đó chỉ là cơ sở của C(R).
+> Câu này gây mâu thuẫn trực tiếp với phần CHÚ Ý ngay bên dưới. Các cột pivot của R (chứa ma trận đơn vị I) chỉ là cơ sở của C(R), tuyệt đối không phải là cơ sở của C(A) vì C(R) ≠ C(A).
 >
 > **2.** *"PIVOT ROW CỦA R/U CŨNG CHÍNH LÀ PIVOT ROW (BASIS) CỦA A"*
 >
-> Diễn đạt chưa thật chuẩn xác về mặt câu chữ: các hàng khác không của R/U không phải là các hàng nguyên bản của A (chúng là tổ hợp tuyến tính qua biến đổi hàng). Đúng hơn là: các hàng khác không của R tạo thành một cơ sở cho không gian hàng của A vì Row(R) = Row(A).
+> Diễn đạt chưa chuẩn xác về mặt thuật ngữ. Các hàng khác không của R không phải là 'hàng của A' (vì đã qua phép khử Gauss), mà chúng là 'cơ sở cho không gian hàng của A' (vì Row(R) = Row(A)).
 >
 >
 > **✓ Strengths**
-> - Phân biệt chuẩn xác sự khác nhau giữa không gian cột (thay đổi qua biến đổi dòng, C(R) khác C(A)) và không gian hàng (bảo toàn, Row(R) = Row(A)).
-> - Hiểu đúng mục đích của việc tìm vị trí pivot columns trên U/R là để quay lại chọn các cột tương ứng trên A làm cơ sở cho C(A).
-> - Hiểu được lý do các hàng khác không của R là 'best basis' cho row space nhờ sự xuất hiện của ma trận đơn vị I (tối giản, dễ đọc nghiệm).
+> - Phân biệt rất chính xác điểm khác nhau căn bản: tìm cơ sở cho C(A) thì chỉ dùng R để lấy chỉ số (index) rồi phải quay về A, còn Row Space thì lấy trực tiếp các hàng pivot của R.
+> - Hiểu đúng bản chất vì sao các hàng pivot của R được GS. Strang gọi là 'the best basis' cho row space (nhờ chứa khối đơn vị I nên rất tối giản, trực quan và dễ biểu diễn).
 >
 > **💡 Deeper notes**
-> - Các hàng khác không của R tạo thành một cơ sở trực quan và gọn gàng nhất cho Row(A) vì chúng chứa khối ma trận đơn vị I, giúp việc xác định các hệ số khi biểu diễn một vector bất kỳ trong Row(A) trở nên tức thì mà không cần giải hệ phương trình.
+> - Khi thực hiện các phép biến đổi dòng sơ cấp, ta đang nhân ma trận sơ cấp E từ bên trái (R = EA), do đó tổ hợp tuyến tính các dòng không làm thay đổi Row Space (Row(A) = Row(R)), nhưng làm thay đổi Column Space (C(R) ≠ C(A)).
+> - Nếu muốn lấy cơ sở của Row Space trực tiếp từ các dòng ban đầu của ma trận A, ta phải chọn các dòng của A tương ứng với các pivot rows, nhưng chúng thường không 'sạch' (clean) bằng các dòng của R.
 
 <br>
 
 <a id="node-gx5dqz0"></a>
+
+###### Cơ sở không gian hàng
 
 <p align="center"><kbd><img src="assets/u9y5gwlhcek.png" width="80%"></kbd></p>
 
@@ -725,6 +779,8 @@
 
 <a id="node-v0i68k6"></a>
 
+###### Phép khử Gauss-Jordan
+
 <p align="center"><kbd><img src="assets/mgtwfs5thvd.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -747,6 +803,8 @@
 
 <a id="node-itj6svp"></a>
 
+###### Bản chất ma trận khử
+
 <p align="center"><kbd><img src="assets/zdb05nrgrz.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -767,6 +825,8 @@
 <br>
 
 <a id="node-ppnd23n"></a>
+
+###### Ma trận nghịch đảo Gauss-Jordan
 
 <p align="center"><kbd><img src="assets/gcbujoibtvs.png" width="80%"></kbd></p>
 
@@ -908,6 +968,8 @@
 <br>
 
 <a id="node-0fagooq"></a>
+
+###### Không gian con ma trận
 
 <p align="center"><kbd><img src="assets/qyyuk2nmxuq.png" width="80%"></kbd></p>
 
