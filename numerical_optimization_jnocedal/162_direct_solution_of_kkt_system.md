@@ -1,6 +1,6 @@
 # 16.2 Direct solution of KKT system
 
-📊 **Progress:** `3` Notes | `5` Screenshots | `3` AI Reviews
+📊 **Progress:** `4` Notes | `11` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-bstsx53"></a>
@@ -284,6 +284,155 @@
 > - Chi phí của các phép thế tam giác phụ thuộc rất lớn vào độ thưa (sparsity) của ma trận L; nếu ma trận P không kiểm soát tốt hiện tượng fill-in (L bị dày lên), chi phí giải sẽ tăng đáng kể.
 
 **🔗 See also:** [Karush-Kuhn-Tucker Matrix Formulation](./161_equality_constrained_quadratic_programs.md#node-feah6f9)
+
+<br>
+
+<a id="node-h3g4pek"></a>
+
+##### Schur-Complement Method
+
+<p align="center"><kbd><img src="assets/mhx9jxv9hlj.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/byolgubazga.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/9brq6t96iyr.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/p31bi0a3b5.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/o7t97im0ssh.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Gặp lại một cái đã thấy trong Boyd:
+>
+>
+>
+> Cái này nhìn vậy chứ đơn giản thôi:
+>
+>
+>
+> Ta đang muốn giải: \[G, Aᵀ; A, 0\]\[-p; λ\] = \[g, h\]
+>
+>
+>
+> ---
+>
+>
+>
+> (Ôn nhanh: Objective: (1/2) xᵀGx + cᵀx s.t Ax = b. L(x, λ) = (1/2) xᵀGx + cᵀx - λᵀ(Ax - b).
+>
+>
+>
+> Stationary condition:
+>
+>
+>
+> ∇\_x L = 0 ⇔ GBx\* + c - Aᵀλ = 0 ⇔ Gx\* - Aᵀλ = -c ⇔ Gx + Gp - Aᵀλ = -c
+>
+>
+>
+> ⇔ Gp - Aᵀλ = -c-Gx ⇔ G(-p) + Aᵀλ = Gx+c (1)
+>
+>
+>
+> Và Ax\* = b ⇔ Ax + Ap = b ⇔ Ap = b-Ax ⇔ A(-p) = Ax-b (2).
+>
+>
+>
+> Từ (1),(2): ta có hệ KKT, với g = Gx + c, h = Ax - b.)
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì nếu G xác định dương, có thể giải theo kiểu sau: Về cơ bản ý tưởng chỉ y chang như có hệ hai phương trình hai ẩn, ta khử hệ số để giải, mà cái này cũng chính là khử Gauss, nên có thể nói đây là khử Gauss với matrix khối.
+>
+>
+>
+> \[G, Aᵀ; A, 0\]\[-p; λ\] = \[g, h\]
+>
+>
+>
+> "Khử K21": Thay hàng 2 bằng: Hàng 2 - AG⁻¹ × Hàng 1 (trở thành \[A, AG⁻¹Aᵀ\]) → trở thành \[0, -AG⁻¹Aᵀ\].
+>
+>
+>
+> Và đơn giản là cái -AG⁻¹Aᵀ này được gọi là Schur complement của G.
+>
+>
+>
+> Có thể thấy để làm vậy G phải khả nghịch.
+>
+>
+>
+> Khi đó về cơ bản ta đã đưa K về dạng "U" (matrix tam giác trên giống như khử Gauss đưa A về row echelon form U vậy)
+>
+>
+>
+> Đương nhiên ở "bên kia" cũng trở thành h - AG⁻¹g để hệ phương trình cần giải là:
+>
+>
+>
+> \[G, Aᵀ; 0, -AG⁻¹Aᵀ\] \[-p; λ\] = \[g; h - AG⁻¹g\]
+>
+>
+>
+> Ta sẽ làm động tác tương tự như back substitution: Tính λ và thế ngược vào phương trình trên để có p (trong sách gọi là backsolve)
+>
+>
+>
+> Tức là giải phương trình hai để có λ: -AG⁻¹Aᵀ λ = h - AG⁻¹g
+>
+> ⇔ AG⁻¹Aᵀλ = AG⁻¹g - h
+>
+>
+>
+> Giải ra λ\* thì thế vào tính ra p: G(-p) + Aᵀλ\* = g ⇔ Gp = Aᵀλ\* - g.
+>
+>
+>
+> ---
+>
+>
+>
+> Nói chung là y như giải hệ bằng khử Gauss.
+>
+>
+>
+> Và cái này sẽ hữu ích khi G well condition,hoặc dễ invert (để tính G⁻¹ không tốn kém)
+>
+>
+>
+> Hoặc biết G⁻¹ một cách tường minh rồi, giống như chap 6 học quasi Newton đã biết có vụ này.
+>
+>
+>
+> Hoặc số ràng buộc đẳng thức nhỏ
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=4pAJlcx-stw)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, hiểu bản chất sâu sắc khi liên hệ phương pháp phần bù Schur với phép khử Gauss trên ma trận khối và kỹ thuật thế ngược (backsolve). Các bước biến đổi KKT đều hoàn toàn chính xác.
+>
+> **✓ Strengths**
+> - Tự dẫn xuất lại hệ KKT từ bài toán QP một cách rất rõ ràng và chuẩn xác theo biến ẩn p.
+> - Nắm đúng bản chất đại số tuyến tính: phương pháp Schur-complement chính là phép khử Gauss trên khối ma trận (block Gaussian elimination).
+> - Tóm tắt chuẩn xác các trường hợp thực tế mà phương pháp này phát huy hiệu quả cao nhất (G dễ đảo, Quasi-Newton, số ràng buộc m nhỏ).
+>
+> **💡 Deeper notes**
+> - Quy ước dấu của Schur complement: Trong đại số tuyến tính nói chung, phần bù Schur của khối G trong ma trận K là 0 - A G⁻¹ Aᵀ = -A G⁻¹ Aᵀ (đúng như bạn viết). Tuy nhiên trong sách Nocedal & Wright, tác giả gọi trực tiếp ma trận đối xứng xác định dương A G⁻¹ Aᵀ là phần bù Schur (bỏ dấu trừ) để tiện giải hệ đối xứng xác định dương.
+> - Điều kiện khả nghịch của hệ Schur: Để ma trận A G⁻¹ Aᵀ thực sự đối xứng xác định dương (và khả nghịch), ngoài điều kiện G xác định dương, cần thêm giả thiết A có đủ hạng hàng (full row rank - các ràng buộc độc lập tuyến tính).
+
+<br>
+
+<a id="node-ph9ro56"></a>
+
+###### Null-Space Method
+
+<p align="center"><kbd><img src="assets/drsohijcx4.png" width="80%"></kbd></p>
 
 <br>
 
