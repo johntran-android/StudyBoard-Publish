@@ -250,7 +250,7 @@
 >
 > Bài phân tích rất xuất sắc, bạn không chỉ giải thích đúng ý nghĩa của hình minh họa mà còn cung cấp chứng minh toán học chi tiết, làm rõ vì sao ma trận A chéo lại dẫn đến các đường đồng mức hình elip. Để hoàn thiện hơn, bạn có thể lưu ý rằng trong hình 2D, điểm dừng x* đạt được sau x0 → x1 và x1 → x* chứ không phải x1 → x2.
 
-**🔗 See also:** [Tối ưu hóa tọa độ Hessian chéo](#node-b04ox8f)
+**🔗 See also:** [Tối ưu hóa tọa độ Hessian chéo](#node-b04ox8f) · [5.2.4 Gradient Descent Optimization *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/524_gradient_descent_optimization.md#node-n86no7e)
 
 <br>
 
