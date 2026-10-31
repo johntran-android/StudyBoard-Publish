@@ -384,7 +384,7 @@
 > với A ở bên trái để biến nó thành I,  thì I sẽ trở thành
 > A⁻¹ ở bên phải**
 
-**🔗 See also:** [linked note](./lecture_10_the_four_fundamental_subspaces.md#node-v0i68k6)
+**🔗 See also:** [Phép khử Gauss-Jordan](./lecture_10_the_four_fundamental_subspaces.md#node-v0i68k6)
 
 <br>
 
