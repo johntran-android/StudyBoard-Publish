@@ -1,6 +1,6 @@
 # 2.1 Binary Variables
 
-📊 **Progress:** `16` Notes | `24` Screenshots | `7` AI Reviews
+📊 **Progress:** `16` Notes | `24` Screenshots | `14` AI Reviews
 
 ---
 <a id="node-22kgh3n"></a>
@@ -523,6 +523,8 @@ Deeper notes:
 >
 > **💡 Deeper notes**
 > - Khi chuyển bài toán tối ưu từ hàm hợp lý sang log-hợp lý, cần lưu ý giả định ln là hàm đơn điệu tăng ngặt (strictly increasing) và likelihood phải strictly positive (0 < μ < 1 với bài toán Bernoulli để ln xác định).
+
+**🔗 See also:** [Ưu tiên liên hợp Beta-Nhị thức](#node-ixw17hk)
 
 <br>
 
@@ -1088,19 +1090,11 @@ Deeper notes:
 <p align="center"><kbd><img src="assets/d98ha5xoraw.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là gs nói rằng mình đã thấy trong ví dụ mà ta đi xây dựng
-> maximum likelihood estimator cho μ của binomial(N, μ) và cho thấy kết quả
-> là μ^_ML là tỉ lệ của số lượng các observer value = 1 so với tổng số
-> observed value. Để rồi giúp ta nhận thấy rằng nếu số lượng data mà nhỏ,
-> thì cách làm này có thể dẫn tới những kết quả thái quá ví dụ như μ^_ML =
-> 1.
+> Đại khái là gs nói rằng mình đã thấy trong ví dụ mà ta đi xây dựng maximum likelihood estimator cho μ của binomial(N, μ) và cho thấy kết quả là μ^\_ML là tỉ lệ của số lượng các observer value = 1 so với tổng số observed value. Để rồi giúp ta nhận thấy rằng nếu số lượng data mà nhỏ, thì cách làm này có thể dẫn tới những kết quả thái quá ví dụ như μ̂ \_ML = 1.
 >
 >
 >
-> So với cách tiếp cận này, thì Bayesian approach sẽ khắc phục được nhược
-> điểm này. Và theo cách làm này, như đã nói nhiều lần, mình sẽ coi μ như
-> random variable, và chọn cho nó một distribution, gọi là prior distribution, để
-> rồi dùng Bayes theorem để xây dựng posterior distribution.
+> So với cách tiếp cận này, thì Bayesian approach sẽ khắc phục được nhược điểm này. Và theo cách làm này, như đã nói nhiều lần, mình sẽ coi μ như random variable, và chọn cho nó một distribution, gọi là prior distribution, để rồi dùng Bayes theorem để xây dựng posterior distribution.
 >
 >
 >
@@ -1108,27 +1102,19 @@ Deeper notes:
 >
 >
 >
-> Thế thì ông nói khi ta nhìn vào hàm likelihood, ta thấy nó có dạng là tích
-> của các cụm μ^x(1-μ)^(1-x). Từ đó nếu ta chọn prior distribution sao cho
-> công thức của nó cũng có dạng μ lũy thừa gì đó nhân với (1-μ) lũy thừa gì
-> đó thì ta sẽ thấy posterior cũng hóa ra sẽ là distribution cùng loại với prior.
-> Và tính chất này gọi là CONJUGACY.
+> Thế thì ông nói khi ta nhìn vào hàm likelihood, ta thấy nó có dạng là tích của các cụm μ^x(1-μ)^(1-x). Từ đó nếu ta chọn prior distribution sao cho công thức của nó cũng có dạng μ lũy thừa gì đó nhân với (1-μ) lũy thừa gì đó thì ta sẽ thấy posterior cũng hóa ra sẽ là distribution cùng loại với prior. Và tính chất này gọi là CONJUGACY.
 >
 >
 >
-> Thế thì trong trường hợp này, cái distribution có tính chất đó, chính là β. có
-> pdf: Nếu μ ~ β(a, b) thì pdf f(μ|a,b), hay beta(μ|a,b) = [Γ(a+b)/Γ(a)Γ(b)]
-> μ^(a-1)(1-μ)^(b-1).
+> Thế thì trong trường hợp này, cái distribution có tính chất đó, chính là beta distribution, có pdf:
 >
 >
 >
-> Nhờ các class stat110, casella, mình đã quen với distribution này. và trong
-> Casella đã nhiều lần làm các ví dụ đi xây dựng Bayes estimator của θ, với
-> sample X là iid Bern(θ). Để rồi khi ta chọn prior là β, tính ra posterior, ta sẽ
-> thấy cái kernel có dạng kernel của môt β có tham số khác, từ đó giúp kết
-> luận posterior là β, và ta cũng ko cần care các hằng số vì nó sẽ cùng nhau
-> tạo thành normalizing constant. Do đó β distribution ngọi là binomial
-> conjugate.
+> μ \~ β(a, b) thì pdf f(μ|a,b), hay Beta(μ|a,b) = \[Γ(a+b)/Γ(a)Γ(b)\] μ^(a-1)(1-μ)^(b-1).
+>
+>
+>
+> Nhờ các class stat110, casella, mình đã quen với distribution này. và trong Casella đã nhiều lần làm các ví dụ đi xây dựng Bayes estimator của θ, với sample X1,X2,... là iid Bern(θ). Để rồi khi ta chọn prior là β, tính ra posterior, ta sẽ thấy cái kernel có dạng kernel của môt β có tham số khác, từ đó giúp kết luận posterior là β, và ta cũng ko cần care các hằng số vì nó sẽ cùng nhau tạo thành normalizing constant. Do đó β distribution ngọi là binomial conjugate.
 >
 >
 >
@@ -1136,14 +1122,11 @@ Deeper notes:
 >
 >
 >
-> Đây nhé, mình có hàm joint pdf của data (observation) f(𝐱|μ) của random 
-> sample iid X1,..Xn ~ Bern(μ) → f(𝐱|μ) = Πi f(xi|μ). Theo định nghĩa hàm
-> likelihood thì L(μ|𝐱) = f(𝐱|μ).
+> Đây nhé, mình có hàm joint pdf của data (observation) f(𝐱|μ) của random sample iid X1,..Xn \~ Bern(μ) → f(𝐱|μ) = Πi f(xi|μ). Theo định nghĩa hàm likelihood thì L(μ|𝐱) = f(𝐱|μ).
 >
 >
 >
-> Tiếp, giả sử chọn β(a,b) là prior distribution của μ: π(μ) là pdf của beta(a,b).
-> (trong sách Casella, ta kí hiệu prior/posterior của tham số với π)
+> Tiếp, giả sử chọn β(a,b) là prior distribution của μ: π(μ) là pdf của beta(a,b). (trong sách Casella, ta kí hiệu prior/posterior của tham số với π)
 >
 >
 >
@@ -1155,36 +1138,31 @@ Deeper notes:
 >
 >
 >
-> vì f(𝐱) chỉ là marginal pdf của 𝐗 tại 𝐱, ta biết nó chỉ là một constant,dù không
-> biết f(𝐱) là gì nhưng theo lí thuyết chắc chắc nó phải tham gia vào normalizing
-> constant của π(μ|𝐱), vì cái này là một valid pdf (giúp đảm bảo ∫π(μ|𝐱)dμ  = 1)
+> vì f(𝐱) chỉ là marginal pdf của 𝐗 tại 𝐱, ta biết nó chỉ là một constant,dù không biết f(𝐱) là gì nhưng theo lí thuyết chắc chắc nó phải tham gia vào normalizing constant của π(μ|𝐱), vì cái này là một valid pdf (giúp đảm bảo ∫π(μ|𝐱)dμ = 1)
 >
 >
 >
-> Thành ra người ta sẽ chỉ quan tâm các term có dính μ, và chuyển sang dùng
-> kí hiệu tỉ lệ thuận (vì normalizing constant phải dương)
+> Thành ra người ta sẽ chỉ quan tâm các term có dính μ, và chuyển sang dùng kí hiệu tỉ lệ thuận (vì normalizing constant phải dương)
 >
 >
 >
-> π(μ|𝐱) ∝ f(𝐱|μ) π(μ) và đây cũng là L(μ|𝐱) π(μ), đó là lí do mà gs nhắc đến
-> likelihood ở đây, nhưng cái chính ta hiểu nó là joint distribution của **x:** f(𝐱|μ)
+> π(μ|𝐱) ∝ f(𝐱|μ) π(μ) và đây cũng là L(μ|𝐱) π(μ), đó là lí do mà gs nhắc đến likelihood ở đây, nhưng cái chính ta hiểu nó là joint distribution của 𝐗: f(𝐱|μ)
 >
 >
 >
-> Rồi, thế vô: 
+> Rồi, thế vô:
 >
 >
 >
-> π(μ|x) ∝ Πi f(xi|μ) β(μ|a,b) 
+> π(μ|x) ∝ Πi f(xi|μ) β(μ|a,b)
 >
 >
 >
-> = Πi μ^xi(1-μ)^(1-xi) C μ^(a-1)(1-μ)^(b-1) với C là constant = [Γ(a+b)/Γ(a)Γ(b)]
+> = Πi μ^xi(1-μ)^(1-xi) C μ^(a-1)(1-μ)^(b-1) với C là constant = \[Γ(a+b)/Γ(a)Γ(b)\]
 >
 >
 >
-> tiếp tục, ta lại ko cần care cái constant, vì nó sẽ nhập với cái constant f(𝐱) 
-> tạo thành normalizing constant của π(x|μ), giúp đảm bảo ∫π(μ|𝐱)dμ = 1
+> tiếp tục, ta lại ko cần care cái constant, vì nó sẽ nhập với cái constant f(𝐱) tạo thành normalizing constant của π(μ|x), giúp đảm bảo ∫π(μ|𝐱)dμ = 1
 >
 >
 >
@@ -1192,15 +1170,15 @@ Deeper notes:
 >
 >
 >
-> ⇔ π(μ|x) ∝ μ^Σxi(1-μ)^[Σ(1-xi)] μ^(a-1)(1-μ)^(b-1)
+> ⇔ π(μ|x) ∝ μ^Σxi(1-μ)^\[Σ(1-xi)\] μ^(a-1)(1-μ)^(b-1)
 >
 >
 >
-> ⇔ π(μ|x) ∝ μ^(Σxi+a-1)(1-μ)^[Σ(1-xi)+b-1]
+> ⇔ π(μ|x) ∝ μ^(Σxi+a-1)(1-μ)^\[Σ(1-xi)+b-1\]
 >
 >
 >
-> ⇔ π(μ|x) ∝ μ^(Σxi+a-1)(1-μ)^[N-Σxi+b-1]
+> ⇔ π(μ|x) ∝ μ^(Σxi+a-1)(1-μ)^\[N-Σxi+b-1\]
 >
 >
 >
@@ -1216,36 +1194,28 @@ Deeper notes:
 >
 >
 >
-> Nếu joint pdf f(x|μ) mà là distribution khác, ví dụ Xi ~ normal, thì prior phải
-> chọn normal thì posterior mới cũng ra normal, nên normal là prior conjugate
-> của normal
+> Nếu joint pdf f(x|μ) mà là distribution khác, ví dụ Xi \~ normal, thì prior phải chọn normal thì posterior mới cũng ra normal, nên normal là prior conjugate của normal
 >
 >
 >
-> Tất nhiên việc chọn prior như vậy chỉ là để đơn giản hóa việc tính toán,giống
-> như gs Bishop nói đến trong câu "form of prior distribution that has a simple
-> interpretation as well as some useful analytical properties"
+> Tất nhiên việc chọn prior như vậy chỉ là để đơn giản hóa việc tính toán,giống như gs Bishop nói đến trong câu "**form of prior distribution that has a simple interpretation as well as some useful analytical properties**"
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=3p7bkNSwRJc)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú rất xuất sắc, nắm vững bản chất của liên hợp (conjugacy), kỹ thuật nhận diện kernel và tự tay dẫn xuất chính xác posterior distribution cho mô hình Beta-Bernoulli.
->
-> **🟡 Minor issues**
->
-> **1.** *"tạo thành normalizing constant của π(x|μ), giúp đảm bảo ∫π(μ|𝐱)dμ = 1"*
->
-> Lỗi gõ nhầm ký hiệu: bạn viết nhầm thành π(x|μ) thay vì posterior π(μ|x), dù ở vế tích phân ngay sau đó bạn đã viết đúng ∫π(μ|𝐱)dμ = 1.
->
+> Ghi chú rất xuất sắc, hiểu sâu sắc bản chất của conjugate prior và cách dùng kernel để xác định posterior mà không cần tính tích phân phức tạp. Phần tự biến đổi toán học hoàn toàn chính xác và bám sát nội dung bài học.
 >
 > **✓ Strengths**
-> - Hiểu rõ động lực chuyển từ MLE sang tiếp cận Bayes để tránh hiện tượng overfitting khi cỡ mẫu nhỏ.
-> - Trình bày chuẩn xác khái niệm conjugacy và kỹ thuật nhận diện họ phân phối thông qua kernel bỏ qua hằng số chuẩn hóa.
-> - Tự thực hiện đầy đủ và chính xác derivation toán học từ likelihood và prior đến posterior Beta(Σxi + a, N - Σxi + b).
+> - Nắm rất vững tư duy Bayes: bỏ qua hằng số chuẩn hóa (normalizing constant) và chỉ tập trung vào kernel chứa tham số để suy ra phân phối hậu nghiệm.
+> - Tự thực hiện biến đổi toán học đầy đủ, chính xác từng bước từ likelihood Bernoulli đến phân phối hậu nghiệm Beta(Σxi + a, N - Σxi + b).
+> - Hiểu rõ động lực dẫn đến tính liên hợp (conjugacy) và lý do tại sao phương pháp Bayesian giải quyết được vấn đề over-fitting của MLE trên tập dữ liệu nhỏ.
 >
 > **💡 Deeper notes**
-> - Khẳng định 'Normal là conjugate prior của Normal' chỉ đúng hoàn toàn khi ước lượng kỳ vọng (mean) với phương sai (variance) đã biết; nếu phương sai cũng là tham số chưa biết thì cần dùng phân phối liên hợp dạng Gaussian-Gamma hoặc Gaussian-Inverse-Wishart.
-> - Tham số a và b của phân phối Beta thường được diễn giải trực quan là 'số lượng quan sát ảo' (effective number of observations hoặc pseudo-counts) của các lần thành công và thất bại trước khi quan sát dữ liệu thực tế.
+> - Ở ví dụ mở rộng về phân phối chuẩn (Normal), việc prior Normal dẫn đến posterior Normal chỉ đúng trực tiếp khi tham số cần ước lượng là kỳ vọng (mean) và phương sai (variance) đã biết. Nếu phương sai cũng là biến ngẫu nhiên thì conjugate prior sẽ là phân phối Normal-Inverse-Gamma (hoặc Normal-Gamma).
+
+**🔗 See also:** [Ước lượng Maximum Likelihood Bayes](#node-6ibllcz)
 
 <br>
 
@@ -1399,6 +1369,19 @@ Deeper notes:
 >
 > còn với các giá trị tham số khác, nó có các hình dạng khác nhau.
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác khi nhận diện Beta(1,1) chính là phân phối đều Uniform(0,1) và phân phối Beta có thể biến đổi rất linh hoạt theo các tham số.
+>
+> **✓ Strengths**
+> - Nhận diện chính xác trường hợp đặc biệt quan trọng Beta(1,1) tương đương với Uniform(0,1).
+> - Nắm được tính linh hoạt của phân phối Beta đối với các bộ siêu tham số khác nhau.
+>
+> **💡 Deeper notes**
+> - Khi a < 1 và b < 1, phân phối có dạng chữ U với mật độ tiến ra vô cùng tại hai biên 0 và 1.
+> - Khi a > 1 và b > 1, đồ thị có cực đại đơn trị (unimodal) tại mode = (a - 1) / (a + b - 2), đồng thời nếu a > b thì phân phối lệch trái và ngược lại.
+
 <br>
 
 <a id="node-aa12fia"></a>
@@ -1421,6 +1404,18 @@ Deeper notes:
 > constant C = [Γ(a+b)/Γ(a)Γ(b)], và chia cho f(𝐱) ở dưới) còn lại phải là
 > normalizing constant của β(m+a,l+b)
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú thể hiện sự thấu hiểu rất tốt về tính liên hợp (conjugacy) và cách suy ra hằng số chuẩn hóa từ kernel của phân phối Beta mà không cần tính tích phân phức tạp.
+>
+> **✓ Strengths**
+> - Nắm vững tính chất liên hợp (conjugate prior) giữa Beta prior và Binomial likelihood để xác định trực tiếp posterior.
+> - Hiểu chính xác kỹ thuật so khớp kernel để suy ra hằng số chuẩn hóa thay vì phải tính tích phân mẫu số f(x) một cách thủ công.
+>
+> **💡 Deeper notes**
+> - Ký hiệu 'm = Σixi' là cách viết tắt của tổng các biến chỉ thị $\sum_i x_i$ (với $x_i \in \{0, 1\}$), tương ứng số lần thành công (heads) trong chuỗi phép thử Bernoulli.
+
 <br>
 
 <a id="node-uifqmjg"></a>
@@ -1434,31 +1429,36 @@ Deeper notes:
 <p align="center"><kbd><img src="assets/k24gpguja3t.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là, bắt đầu với prior là β(a,b) để rồi posterior là β(a+số observed success
-> (x=1), b+số observed failure (x=0))
+> Đại ý là, bắt đầu với prior là β(a,b) để rồi posterior là β(a+số observed success (x=1), b+số observed failure (x=0))
 >
 >
 >
-> thế thì ta có thể hình dung một chuỗi suy luận về μ trong đó với mỗi lần, ta
-> dùng posterior đang có làm priori, để update với giá trị quan sát mới để có
-> posterior
+> thế thì ta có thể hình dung một chuỗi suy luận về μ trong đó với mỗi lần, ta dùng posterior đang có làm priori, để update với giá trị quan sát mới để có posterior
 >
 >
 >
-> khi đó, dễ hiểu là ta sẽ thấy việc cập nhật sẽ có hiệu quả là: cứ mỗi lần quan
-> sát được success (x=1) thì posterior sẽ tăng thêm 1 ở giá trị tham số đầu tiên
-> (a) và nếu quan sát được failure (x=0) thì sẽ tăng thêm 1 ở giá trị  tham số thứ
-> hai (b)
+> khi đó, dễ hiểu là ta sẽ thấy việc cập nhật sẽ có hiệu quả là: cứ mỗi lần quan sát được success (x=1) thì posterior sẽ tăng thêm 1 ở giá trị tham số đầu tiên (a) và nếu quan sát được failure (x=0) thì sẽ tăng thêm 1 ở giá trị tham số thứ hai (b)
 >
 >
 >
-> Minh họa bởi hình 2.3, bắt đầu với β(2,2) (cũng là uniform), sau khi quan sát
-> thấy một observed data x=1, posterior trở thành β(3,2)
+> Minh họa bởi hình 2.3, bắt đầu với β(2,2) (là cái chuông "cân xứng"), sau khi quan sát thấy một observed data x=1, posterior trở thành β(3,2), cái chuông nghiêng về μ=1
 >
 >
 >
-> Và theo gs Bishop, điều này giúp ta có thể HIỂU / DIỄN GIẢI a, b LÀ GIÁ TRỊ
-> HIỆU QỦA CỦA SỐ QUAN SÁT CỦA SUCCESS (x=1) HAY FAILURE (x=0)
+> Và theo gs Bishop, điều này giúp ta có thể HIỂU / DIỄN GIẢI a, b LÀ GIÁ TRỊ HIỆU QỦA CỦA SỐ QUAN SÁT CỦA SUCCESS (x=1) HAY FAILURE (x=0)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác bản chất của suy luận Bayes tuần tự (sequential Bayesian inference) và cách diễn giải siêu tham số $a, b$ như số lần quan sát hiệu dụng.
+>
+> **✓ Strengths**
+> - Nắm vững cơ chế cập nhật tham số của phân phối Beta khi có thêm dữ liệu quan sát dạng Bernoulli/nhị thức.
+> - Mô tả chính xác quy trình suy luận Bayes tuần tự (posterior của bước trước trở thành prior của bước sau).
+> - Hiểu đúng ý nghĩa trực quan của Hình 2.3 và diễn giải chuẩn xác khái niệm 'effective number of observations' của Bishop.
+>
+> **💡 Deeper notes**
+> - Cụm từ 'effective number of observations' thường được dịch chuẩn xác là 'số lượng quan sát hiệu dụng' (hoặc số quan sát ảo/tiền định), và giáo trình có lưu ý thêm rằng $a$ và $b$ không nhất thiết phải là số nguyên.
 
 <br>
 
@@ -1469,21 +1469,15 @@ Deeper notes:
 <p align="center"><kbd><img src="assets/ri1npdd5alk.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là cái ta vừa nói, gọi là sequential approach to learning (ý là việc học 
-> (học ra giá trị tham số của distribution) theo chuỗi) nó là cách tiếp cận rất tự
-> nhiên khi ta theo trường phái / góc nhìn Bayesian. Vì nó ko phụ thuộc cách
-> chọn prior, điều này là rõ ràng, mà chỉ phụ thuộc vào giả định iid của data,
-> vì sao?
+> Đại khái là cái ta vừa nói, gọi là sequential approach to learning (ý là việc học (học ra giá trị tham số của distribution) theo chuỗi) nó là cách tiếp cận rất tự nhiên khi ta theo trường phái / góc nhìn Bayesian. Vì nó ko phụ thuộc cách chọn prior, điều này là rõ ràng, mà chỉ phụ thuộc vào giả định iid của data, vì sao?
 >
 >
 >
-> HIểu đơn giản. Còn **nhớ chính nhờ iid**, nên **joint pdf** f(𝐱|θ) **mới tách thành
-> tích các** f(xi|θ). Ví dụ ta có x1,x2. Thì nhờ iid mà f(x1,x2|θ) = f(x1|θ)f(x2|θ).
+> HIểu đơn giản. Còn **nhớ chính nhờ iid**, nên **joint pdf** f(𝐱|θ) **mới tách thành tích các** f(xi|θ). Ví dụ ta có x1,x2. Thì nhờ iid mà f(x1,x2|θ) = f(x1|θ)f(x2|θ).
 >
 >
 >
-> Từ đó với prior π(θ),  posterior π(θ|x1,x2) ∝ f(x1,x2|θ)π(θ) thì cái này cũng
-> bằng f(x2|θ)f(x1|θ)π(θ), và π(θ|x1) thì ∝ f(x1|θ)π(θ) thì 
+> Từ đó với prior π(θ), posterior π(θ|x1,x2) ∝ f(x1,x2|θ)π(θ) thì cái này cũng bằng f(x2|θ)f(x1|θ)π(θ), và π(θ|x1) thì ∝ f(x1|θ)π(θ) thì
 >
 >
 >
@@ -1495,23 +1489,32 @@ Deeper notes:
 >
 >
 >
-> π(θ|x2) ∝ f(x2|θ)π(θ|x1)
+> π(θ|x1,x2) ∝ f(x2|θ)π(θ|x1)
 >
 >
 >
-> Và để bảo đảm tính valid của việc này thì c**hỉ cần tính iid của data**, chứ prior
-> distribution là gì, hay likelihood là gì thì đều ko care
+> Và để bảo đảm tính valid của việc này thì c**hỉ cần tính iid của data**, chứ prior distribution là gì, hay likelihood là gì thì đều ko care
 >
 >
 >
-> Để rồi ta có thể mỗi lần, dùng data quan sát được, (một hoặc một vài observed
-> data) để update posterior, sau đó thì vứt chúng đi, không cần lưu làm gì.
+> Để rồi ta có thể mỗi lần, dùng data quan sát được, (một hoặc một vài observed data) để update posterior, sau đó thì vứt chúng đi, không cần lưu làm gì.
 >
 >
 >
-> Nhờ vậy, với bài toán có data nhiều hoặc bài toán mà ta cần đưa ra dự đoán
-> khi data ở dạng stream, ta có thể làm kiểu này, để không phải lưu trữ data.
-> (Cái này gọi là real-time learning)
+> Nhờ vậy, với bài toán có data nhiều hoặc bài toán mà ta cần đưa ra dự đoán khi data ở dạng stream, ta có thể làm kiểu này, để không phải lưu trữ data. (Cái này gọi là real-time learning)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, giải thích cặn kẽ và chính xác bằng toán học tại sao tính chất i.i.d. cho phép cập nhật Bayesian tuần tự (sequential learning). Đồng thời, bạn cũng nắm rõ ứng dụng thực tế cho dữ liệu lớn và xử lý luồng thời gian thực.
+>
+> **✓ Strengths**
+> - Diễn giải toán học cụ thể và chính xác cách posterior của bước trước trở thành prior của bước sau nhờ vào giả định i.i.d.
+> - Nắm bắt trọn vẹn và đúng đắn các ưu điểm thực tế như tiết kiệm bộ nhớ và phục vụ học thời gian thực (real-time/online learning).
+>
+> **💡 Deeper notes**
+> - Về mặt lý thuyết xác suất chặt chẽ, tính chất độc lập ở đây là độc lập có điều kiện theo tham số (conditionally independent given θ), cho phép phân rã hàm likelihood chung thành tích các likelihood thành phần.
+> - Đoạn cuối của tài liệu gốc có nhắc thêm rằng phương pháp Maximum Likelihood (cực đại hợp lý) cũng có thể áp dụng theo khuôn khổ tuần tự (thông qua các thuật toán xấp xỉ ngẫu nhiên như Robbins-Monro hoặc SGD).
 
 <br>
 
@@ -1522,84 +1525,63 @@ Deeper notes:
 <p align="center"><kbd><img src="assets/isznezyxn6.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo, đại khái là gs nói nếu ta phải đưa ra dự đoán cho thử nghiệm tiếp
-> theo dựa trên những gì đã quan sát thấy, ta sẽ cần evaluate predictive
-> distribution của x, dựa trên D. Là sao ta?
+> Tiếp theo, đại khái là gs nói nếu ta phải đưa ra dự đoán cho thử nghiệm tiếp theo dựa trên những gì đã quan sát thấy, ta sẽ cần evaluate predictive distribution của x, dựa trên D. Là sao ta?
 >
 >
 >
-> Thì thật ra mình đã học cái này trong chap 1 rồi, predictive distribution, lập luận
-> là, với cách tiếp cận Bayesian, ta coi θ (hay ở đây là μ) như random variable,
-> để rồi ta chọn prior distribution cho nó, kí hiệu π(θ) (ví dụ như ta chọn β(a,b)
-> cho làm prior distribution của μ vậy), rồi dùng Bayes rule để xây dựng posterior
-> π(θ|𝐱) ∝ f(𝐱|θ) π(θ) (ví dụ như ta vừa tìm ra posterior của μ là β(a+m,b+l)
-> đó). Thế thì giờ đặt vấn đề muốn dùng kết quả này để đưa ra dự đoán cho lần
-> thử tiếp theo, cũng đồng nghĩa là dựa trên đó, ta muốn tính xác suất của hai
-> giá trị khả dĩ x=1 và x=0.
+> Thì thật ra mình đã học cái này trong chap 1 rồi, predictive distribution, lập luận là, với cách tiếp cận Bayesian, ta coi θ (hay ở đây là μ) như random variable, để rồi ta chọn prior distribution cho nó, kí hiệu π(θ) (ví dụ như ta chọn β(a,b) cho làm prior distribution của μ vậy), rồi dùng Bayes rule để xây dựng posterior π(θ|𝐱) ∝ f(𝐱|θ) π(θ) (ví dụ như ta vừa tìm ra posterior của μ là β(a+m,b+l) đó). Thế thì giờ đặt vấn đề muốn dùng kết quả này để đưa ra dự đoán cho lần thử tiếp theo, cũng đồng nghĩa là dựa trên đó, ta muốn tính xác suất của hai giá trị khả dĩ x=1 và x=0.
 >
 >
 >
-> Thế thì thế này, X ~ f(x|θ), hay ở đây là X ~ Bern(μ).
+> Thế thì thế này, X \~ f(x|θ), hay ở đây là X \~ Bern(μ).
 >
 >
 >
-> Nên f(x|μ)|x=1 = P_μ(X=1) = μ.
+> Nên f(x|μ)|x=1 = P\_μ(X=1) = μ.
 >
 >
 >
-> Nhưng ta đâu có biết μ, ta chỉ vừa mới có posterior của μ: β(a+m,b+l) tức là ta
-> có f(μ|a,b,m,l) = β(μ|a,b,m,l) thôi.
+> Nhưng ta đâu có biết μ, ta chỉ vừa mới có posterior của μ: β(a+m,b+l) tức là ta có f(μ|a,b,m,l) = β(μ|a,b,m,l) thôi.
 >
 >
 >
-> Thế thì, nếu nhớ lại trong sách Casella, khi nói về Bayes estimator, sau khi đã
-> có posterior, thì tùy vào việc ta muốn dùng loss là gì thì ta sẽ dùng mean hoặc
-> median của posterior distribution để làm point estimator cho param θ. Ví dụ,
-> nếu dùng square error loss, thì mean E[θ|𝐗] θ ~ π(θ|𝐱) chính là Bayes
-> estimator mà minimize Bayes risk, cũng là minimize posterior expected loss,
-> ngược lại nếu dùng absolute error loss, thì Bayes estimator là median của
-> posterior.
+> Thế thì, nếu nhớ lại trong sách Casella, khi nói về Bayes estimator, sau khi đã có posterior, thì tùy vào việc ta muốn dùng loss là gì thì ta sẽ dùng mean hoặc median của posterior distribution để làm point estimator cho param θ. Ví dụ, nếu dùng square error loss, thì mean E\[θ|𝐗\] θ \~ π(θ|𝐱) chính là Bayes estimator mà minimize Bayes risk, cũng là minimize posterior expected loss, ngược lại nếu dùng absolute error loss, thì Bayes estimator là median của posterior.
 >
 >
 >
-> Như vậy, theo cách cách làm này, giả sử ta dùng squared error loss, thì
-> E[μ|𝐱] với μ ~ β(a+m,b+l), = a+m/(a+m+b+l) sẽ chính là Bayes estimator
-> minimize Bayes risk, và từ đó ta đưa ra dự đoán xác suất trial tiếp theo  ra x=1
-> sẽ là a+m/(a+m+b+l).
+> Như vậy, theo cách cách làm này, giả sử ta dùng squared error loss, thì E\[μ|𝐱\] với μ \~ β(a+m,b+l), = (a+m)/(a+m+b+l) sẽ chính là Bayes estimator minimize Bayes risk, và từ đó ta đưa ra dự đoán xác suất trial tiếp theo ra x=1 sẽ là (a+m)/(a+m+b+l).
 >
 >
 >
-> Nhưng mà trong sách này, như đã thấy trong chap 1 (xem link), gs Bishop
-> không làm kiểu đó. Mà thay vào đó, ông nói rằng vì trong bài toán machine
-> learning, ta care nhiều hơn đến nhiệm vụ prediction, thay vì inference, tức là ta
-> ko cần biết tham số của population distribution, mà chủ yếu là đưa ra dự đoán
-> dựa trên tham số đó. Chính vì vậy, ví dụ như trong bài toán này, ta ko cần biết
-> population parameter μ là bao nhiêu, mà ta cần dự đoán kết quả cho lần trial
-> tiếp theo,  thông qua việc tính xác suất của việc ra X = 1 hay X = 0. Do đó, thay
-> vì dùng một point estimator của μ (ví dụ dùng posterior mean, hay median) ta
-> sẽ lấy trung bình f(x|μ) over mọi possible value của μ với μ ~ posterior
-> π(μ|𝐱), để có P(X=x|𝐱) gọi là **predictive distribution**
+> Nhưng mà trong sách này, như đã thấy trong chap 1 (xem link), gs Bishop không làm kiểu đó. Mà thay vào đó, ông nói rằng vì trong bài toán machine learning, ta care nhiều hơn đến nhiệm vụ prediction, thay vì inference, tức là ta ko cần biết tham số của population distribution, mà chủ yếu là đưa ra dự đoán dựa trên tham số đó. Chính vì vậy, ví dụ như trong bài toán này, ta ko cần biết population parameter μ là bao nhiêu, mà ta cần dự đoán kết quả cho lần trial tiếp theo, thông qua việc tính xác suất của việc ra X = 1 hay X = 0. Do đó, thay vì dùng một point estimator của μ (ví dụ dùng posterior mean, hay median) ta sẽ lấy trung bình f(x|μ) over mọi possible value của μ với μ \~ posterior π(μ|𝐱), để có P(X=x|𝐱) gọi là **predictive distribution**
 >
 >
 >
-> Và hành động này cũng chính marginalizing joint pdf của x, μ: f(x, μ) với mọi giá
-> trị khả dĩ của μ ~ posterior: ∫f(x, μ|𝐱) dμ = ∫f(x|μ) π(μ|𝐱) dμ
+> Và hành động này cũng chính marginalizing joint pdf của x, μ: f(x, μ) với mọi giá trị khả dĩ của μ \~ posterior:α
 >
 >
 >
-> P(X=x|𝐱) = E[f(x|μ)|𝐱] với μ ~ π(μ|𝐱), = ∫f(x|μ)π(μ|𝐱)dμ
+> ∫f(x, μ|𝐱) dμ = ∫f(x|μ) π(μ|𝐱) dμ (f(x|μ,𝐱) = f(x|μ) do gỉa định độc lập của các data point) 
 >
 >
 >
-> và với Bern(μ) thì f(x|μ) = μ^x(1-μ)^(1-x)
+> f(x|𝐱) hay p(x|𝐱) = P(X=x|𝐱) = E\[f(x|μ)|𝐱\] với μ \~ π(μ|𝐱), = ∫f(x|μ) π(μ|𝐱)dμ
 >
 >
 >
-> ⇨ E[f(x|μ)|𝐱] = ∫μ^x(1-μ)^(1-x) β(μ|a+m,b+l) dμ
+> và với Bern(μ) thì f(x|μ) = \[μ^x\]\[(1-μ)^(1-x)\]
 >
 >
 >
-> Để rồi P(X=x|𝐱) = E[f(x|μ)|𝐱]|x=1 = ∫μ^1(1-μ)^(1-1) β(μ|a+m,b+l) dμ
+> ⇨ E\[f(x|μ)|𝐱\] = ∫\[μ^x\]\[(1-μ)^(1-x)\] β(μ|a+m,b+l) dμ
+>
+>
+>
+> Để rồi P(X=1|𝐱) = E\[f(x|μ)|𝐱\]|x=1 
+>
+>
+>
+> = ∫μ^1(1-μ)^(1-1) β(μ|a+m,b+l) dμ
 >
 >
 >
@@ -1607,8 +1589,7 @@ Deeper notes:
 >
 >
 >
-> và cái này cũng lại chính là E[μ|𝐱] (hay E[μ|/D/] tức mean của posterior
-> distribution.
+> và cái này cũng lại chính là E\[μ|𝐱\] (hay E\[μ|/D/\] tức mean của posterior distribution.
 >
 >
 >
@@ -1616,40 +1597,31 @@ Deeper notes:
 >
 >
 >
-> -----
+> ---
 >
 >
 >
-> Nói thêm chút, vì sao ∫f(x|μ)π(μ|𝐱)dμ lại là E[f(x|μ)] với μ ~ π(μ|𝐱)?
+> Nói thêm chút, vì sao ∫f(x|μ)π(μ|𝐱)dμ lại là E\[f(x|μ)\] với μ \~ π(μ|𝐱)?
 >
 >
 >
-> Nhìn thế này sẽ hiểu: f(x|μ) là gì, nó là P(X=x|μ), tức là pmf của X, một random
-> variable có distribution là Bern(μ), và evaluate tại x, mang ý nghĩa với xác suất
-> của event X=x xảy ra là bao nhiêu nếu X ~ Bern(μ). Dĩ nhiên, theo định nghĩa
-> của Bernoulli distribution thì P(X=x|μ) = μ..
+> Nhìn thế này sẽ hiểu: f(x|μ) là gì, nó là P(X=x|μ), tức là pmf của X, một random variable có distribution là Bern(μ), và evaluate tại x, mang ý nghĩa với xác suất của event X=x xảy ra là bao nhiêu nếu X \~ Bern(μ). Dĩ nhiên, theo định nghĩa của Bernoulli distribution thì P(X=x|μ) = \[μ^x\]\[(1-μ)^(1-x)\]
 >
 >
 >
-> nhưng ở đây ta sẽ nhìn nó dưới góc độ là hàm của μ: f(x|μ) = g(μ) mà trong
-> trường hợp đặc biệt này g(μ) = μ, tức g là identity function, nhưng quan trọng là
-> ta xem f(x|μ) là hàm của μ.
+> nhưng ở đây ta sẽ nhìn nó dưới góc độ là hàm của μ: f(x|μ) = g(μ) 
 >
 >
 >
-> Mà μ là random variable (đây là cái mà trường phái Bayesian khác với
-> Frequentist), nên f(x|μ) là gì: một hàm số của random variable, thì cũng là
-> random variable!  Đây là điều mà gs Joe Blizstein đã nhắc lại nhiều lần trong
-> Stat110.
+> Mà μ là random variable (đây là cái mà trường phái Bayesian khác với Frequentist), nên f(x|μ) là gì: một hàm số của random variable, thì cũng là random variable! Đây là điều mà gs Joe Blizstein đã nhắc lại nhiều lần trong Stat110.
 >
 >
 >
-> À, như vậy f(x|μ) là một random variable, THÌ DO ĐÓ TA CÓ THỂ NÓI VỀ KÌ
-> VỌNG CỦA NÓ: E[f(x|μ)] (vì chỉ có random variable mới có quyền có kì vọng)
+> À, như vậy f(x|μ) là một random variable, THÌ DO ĐÓ TA CÓ THỂ NÓI VỀ KÌ VỌNG CỦA NÓ: E\[f(x|μ)\] (vì chỉ có random variable mới có quyền có kì vọng)
 >
 >
 >
-> (hoặc chặt chẽ hơn thì ghi E[f(x|μ)|𝐱])
+> (hoặc chặt chẽ hơn thì ghi E\[f(x|μ)|𝐱\])
 >
 >
 >
@@ -1657,20 +1629,35 @@ Deeper notes:
 >
 >
 >
-> → LOTUS: Vì nó là hàm của μ, là random variable có distribution posterior
-> π(μ|𝐱) nên theo LOTUS, khi một biến Y được tạo thành bởi áp hàm g lên
-> biến X, thì  EY = ∫g(x)f(x)dx.
+> → LOTUS: Vì nó là hàm của μ, là random variable có distribution posterior π(μ|𝐱) nên theo LOTUS, khi một biến Y được tạo thành bởi áp hàm g lên biến X, thì EY = ∫g(x)f(x)dx.
 >
 >
 >
-> Vậy E[f(x|μ)|𝐱] = ∫f(x|μ) π(μ|𝐱)dμ
+> Vậy E\[f(x|μ)|𝐱\] = ∫f(x|μ) π(μ|𝐱)dμ
 >
 >
 >
-> và trong trường hợp đặc biệt này (trường hợp khác thì chưa chắc) là khi f(x|μ)
-> = μ  thì E[f(x|μ)|𝐱] = ∫μ π(μ|𝐱)dμ và cái này chính là E[μ|𝐱], tức mean
-> của posterior, như đã nói, cũng chính là Bayes esimator của μ khiến minimize
-> Bayes risk với squared error loss function.
+> và trong trường hợp đặc biệt này (trường hợp khác thì chưa chắc) là khi f(x|μ) = μ thì E\[f(x|μ)|𝐱\] = ∫μ π(μ|𝐱)dμ và cái này chính là E\[μ|𝐱\], tức mean của posterior, như đã nói, cũng chính là Bayes esimator của μ khiến minimize Bayes risk với squared error loss function.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú xuất sắc, thể hiện sự hiểu biết sâu sắc và kết nối chặt chẽ giữa lý thuyết ước lượng Bayes (Casella-Berger) với phân phối dự đoán (Bishop), đồng thời giải thích bản chất LOTUS rất trực quan.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"∫f(x, μ|𝐱) dμ = ∫f(x|μ) π(μ|𝐱) dμ"*
+>
+> Bước khai triển tích phân ngầm ẩn giả định tính độc lập có điều kiện: $p(x|\mu, \mathbf{x}) = p(x|\mu)$ (khi đã biết tham số $\mu$, kết quả của lần thử mới $x$ độc lập với dữ liệu quá khứ $\mathbf{x}$). Nên nêu rõ giả định này để lập luận toán học hoàn chỉnh.
+>
+>
+> **✓ Strengths**
+> - So sánh rất sâu sắc giữa việc chọn point estimator (như posterior mean dưới squared error loss) và việc lấy tích phân toàn phần (marginalization) để thu được predictive distribution.
+> - Giải thích chính xác và trực quan việc áp dụng định lý LOTUS khi coi $f(x|\mu)$ là một hàm ngẫu nhiên của $\mu$.
+> - Tự diễn giải và chứng minh lại công thức (2.19) mạch lạc từ các tiên đề xác suất thay vì chỉ chép lại.
+>
+> **💡 Deeper notes**
+> - Trong trường hợp Bernoulli với $x=1$, phân phối dự đoán vô tình trùng với posterior mean $\mathbb{E}[\mu|\mathcal{D}]$. Tuy nhiên với các phân phối khác (ví dụ Gaussian dự đoán $x$ mới), predictive distribution $p(x|\mathcal{D})$ sẽ có độ biến thiên (variance) lớn hơn variance của posterior do cộng dồn cả độ bất định của tham số lẫn độ nhiễu nội tại của dữ liệu mới.
 
 <br>
 
@@ -1730,6 +1717,18 @@ Deeper notes:
 > chap 1 quả thật ta đã thấy việc giải bài toán curve fitting có regularization 
 > theo Bayesian cũng chính là maximize posteriori
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú xuất sắc! Bạn đã hiểu cặn kẽ bản chất toán học của phân phối hậu kỳ, sự hội tụ về Maximum Likelihood khi mẫu tiến ra vô cùng, và có sự liên hệ sâu sắc với hiệu ứng co (shrinkage) cũng như regularization.
+>
+> **✓ Strengths**
+> - Giải thích chuẩn xác lý do vì sao khi m, l tiến ra vô cùng thì ảnh hưởng của prior (a, b) bị triệt tiêu và nghiệm Bayes hội tụ về Maximum Likelihood.
+> - Liên hệ trực giác rất tốt giữa việc posterior mean nằm giữa prior mean và MLE với cơ chế regularization / shrinkage nhằm giảm thiểu các ước lượng cực đoan (extreme estimates).
+>
+> **💡 Deeper notes**
+> - Về mặt đại số, posterior mean thực chất là một tổ hợp lồi (weighted average / convex combination) giữa prior mean và MLE: E[μ|D] = λ * (a/(a+b)) + (1 - λ) * (m/N), với trọng số λ = (a+b)/(a+b+N). Điều này chứng minh chặt chẽ vì sao nó luôn nằm giữa hai giá trị này.
+
 <br>
 
 <a id="node-e6oik6z"></a>
@@ -1780,6 +1779,20 @@ Deeper notes:
 > Thế thì, gs Bishop mới đặt vấn đề là, liệu đây có phải là tính chất khái quát
 > không, **rằng càng có nhiều data thì posteriori** sẽ **ngày càng có variance
 > nhỏ** **lại**, (variance cũng là thể hiện tính uncertainty) hay không?
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, hiểu đúng và sâu sắc nội dung sách khi tự liên hệ các đồ thị trong Hình 2.2 với quá trình cập nhật tuần tự (sequential updating) từ prior đều Beta(1,1).
+>
+> **✓ Strengths**
+> - Minh họa rất trực quan sự thay đổi hình dạng của phân phối qua các bước quan sát tuần tự từ Beta(1,1) lên Beta(2,3) và Beta(8,4).
+> - Nắm chuẩn quy tắc conjugate update của Beta-Binomial: cộng dồn số lần thành công và thất bại vào tham số a và b.
+> - Liên hệ chính xác giữa độ nhọn của đồ thị hàm mật độ, phương sai (variance) và mức độ bất định (uncertainty).
+> - Đặt đúng câu hỏi mở đầu mang tính khái quát mà tác giả Bishop nêu ra về bản chất của suy diễn Bayesian.
+>
+> **💡 Deeper notes**
+> - Theo công thức phương sai của Beta, chỉ cần ít nhất một trong hai tham số a hoặc b tiến tới vô cùng (hoặc tổng a + b tiến tới vô cùng) thì phương sai đã tiến về 0, không nhất thiết cả hai đều phải đồng thời rất lớn.
 
 <br>
 
@@ -2069,125 +2082,123 @@ Deeper notes:
 >
 >
 >
-> Var(Y) = E[Var(Y|X)] + Var[E(Y|X)]
+> Var(Y) = E\[Var(Y|X)\] + Var\[E(Y|X)\]
 >
 >
 >
-> Var(Y) = E[(Y - EY)²] (định nghiã của variance)
+> Var(Y) = E\[(Y - EY)²\] (định nghiã của variance)
 >
 >
 >
-> = E[(Y - E[Y|X] + E[Y|X] - EY)²]
+> = E\[(Y - E\[Y|X\] + E\[Y|X\] - EY)²\]
 >
 >
 >
-> = E[(Y - E[Y|X])² + 2(Y - E[Y|X])(E[Y|X] - EY) + (E[Y|X] - EY)²]
+> = E\[(Y - E\[Y|X\])² + 2(Y - E\[Y|X\])(E\[Y|X\] - EY) + (E\[Y|X\] - EY)²\]
 >
 >
 >
-> = E[(Y - E[Y|X])² + 2E[(Y - E[Y|X])(E[Y|X] - EY)] + E[(E[Y|X] - EY)²]
+> = E\[(Y - E\[Y|X\])² + 2E\[(Y - E\[Y|X\])(E\[Y|X\] - EY)\] + E\[(E\[Y|X\] - EY)²\]
 >
 >
 >
-> Xét hạng tử đầu tiên: E[(Y - E[Y|X])²], đặt Z = (Y - E[Y|X])²
+> Xét hạng tử đầu tiên: E\[(Y - E\[Y|X\])²\], đặt Z = (Y - E\[Y|X\])²
 >
 >
 >
-> Áp dụng Adam's Law: E[Z] = E[E[Z|X]]
+> Áp dụng Adam's Law: E\[Z\] = E\[E\[Z|X\]\]
 >
 >
 >
-> = E[E[(Y - E[Y|X])²|X]]
+> = E\[E\[(Y - E\[Y|X\])²|X\]\]
 >
 >
 >
-> cái này chính là E[Var(Y|X)]. vì sao?
+> cái này chính là E\[Var(Y|X)\]. vì sao?
 >
 >
 >
-> Vì theo định nghĩa của variance của Y, Var(Y) = E[(Y - EY)²]
+> Vì theo định nghĩa của variance của Y, Var(Y) = E\[(Y - EY)²\]
 >
 >
 >
-> thì variance của Y conditioned on X sẽ là Var(Y|X) = E[(Y - E(Y|X)²|X]
+> thì variance của Y conditioned on X sẽ là Var(Y|X) = E\[(Y - E(Y|X)²|X\]
 >
 >
 >
-> Xét hạng tử thứ ba: E[(E[Y|X] - EY)²]
+> Xét hạng tử thứ ba: E\[(E\[Y|X\] - EY)²\]
 >
 >
 >
-> E[Y|X] là random variable có được bởi việc áp hàm E[Y|X=x] lên X.
+> E\[Y|X\] là random variable có được bởi việc áp hàm E\[Y|X=x\] lên X.
 >
 >
 >
-> Xét mean của nó E[E[Y|X]], theo Adam's law, chính là bằng EY.
+> Xét mean của nó E\[E\[Y|X\]\], theo Adam's law, chính là bằng EY.
 >
 >
 >
-> vậy E[(E[Y|X] - EY)²] = E[(E[Y|X] - E[E[Y|X]])²] nhìn thì rối, nhưng nếu đặt cái random variable E[Y|X] là Z ta sẽ thấy nó là
-> E[(Z
-> \- EZ)²] nên đây chính là Var(Z).
+> vậy E\[(E\[Y|X\] - EY)²\] = E\[(E\[Y|X\] - E\[E\[Y|X\]\])²\] nhìn thì rối, nhưng nếu đặt cái random variable E\[Y|X\] là Z ta sẽ thấy nó là E\[(Z - EZ)²\] nên đây chính là Var(Z).
 >
 >
 >
-> Vậy term thứ ba chính là Var[E(Y|X)]
+> Vậy term thứ ba chính là Var\[E(Y|X)\]
 >
 >
 >
-> Xét term thứ hai: 2E[(Y - E[Y|X])(E[Y|X] - EY)]
+> Xét term thứ hai: 2E\[(Y - E\[Y|X\])(E\[Y|X\] - EY)\]
 >
 >
 >
-> Coi nguyên cục trong kì vọng là U, thì term thứ 2 là 2E(U). Áp dụng Adam's law: EU = E[E(U|X)]
+> Coi nguyên cục trong kì vọng là U, thì term thứ 2 là 2E(U). Áp dụng Adam's law: EU = E\[E(U|X)\]
 >
 >
 >
-> E[U|X] là random variable có được bởi việc áp hàm E[U|X=x] lên x.
+> E\[U|X\] là random variable có được bởi việc áp hàm E\[U|X=x\] lên x.
 >
 >
 >
-> ⇨ E[E[U|X]] = ∫ E[U|X=x] fX(x) dx
+> ⇨ E\[E\[U|X\]\] = ∫ E\[U|X=x\] fX(x) dx
 >
 >
 >
-> E[U|X=x] = E[(Y - E[Y|X])(E[Y|X] - EY)|X=x]
+> E\[U|X=x\] = E\[(Y - E\[Y|X\])(E\[Y|X\] - EY)|X=x\]
 >
 >
 >
-> vì đã condition on X=x, nên E[Y|X] không còn là random variable, mà là fixed value E[Y|X=x]
+> vì đã condition on X=x, nên E\[Y|X\] không còn là random variable, mà là fixed value E\[Y|X=x\]
 >
 >
 >
-> = E[(Y - E[Y|X=x])(E[Y|X=x] - EY)|X=x]
+> = E\[(Y - E\[Y|X=x\])(E\[Y|X=x\] - EY)|X=x\]
 >
 >
 >
-> dẫn đến E[Y|X=x] - EY trở thành fixed value, đưa ra ngoài kì vọng theo tính linearity
+> dẫn đến E\[Y|X=x\] - EY trở thành fixed value, đưa ra ngoài kì vọng theo tính linearity
 >
 >
 >
-> = (E[Y|X=x] - EY) E[(Y - E[Y|X=x])|X=x]
+> = (E\[Y|X=x\] - EY) E\[(Y - E\[Y|X=x\])|X=x\]
 >
 >
 >
-> tới đây thừa số E[(Y - E[Y|X=x])|X=x], theo linearity = E(Y|X=x) - E[E(Y|X=x)|X=x]
+> tới đây thừa số E\[(Y - E\[Y|X=x\])|X=x\], theo linearity = E(Y|X=x) - E\[E(Y|X=x)|X=x\]
 >
 >
 >
-> = E(Y|X=x) - E(Y|X=x) = 0 (Do E(Y|X=x) là constant, nên E[E(Y|X=x)|X=x] = E(Y|X=x)
+> = E(Y|X=x) - E(Y|X=x) = 0 (Do E(Y|X=x) là constant, nên E\[E(Y|X=x)|X=x\] = E(Y|X=x)
 >
 >
 >
-> Như vậy term thứ hai = (E[Y|X=x] - EY) . 0 = 0
+> Như vậy term thứ hai = (E\[Y|X=x\] - EY) . 0 = 0
 >
 >
 >
-> Kết luận Var(Y) = E[Var(Y|X)] + Var[E(Y|X)]
+> Kết luận Var(Y) = E\[Var(Y|X)\] + Var\[E(Y|X)\]
 >
 >
 >
-> -------
+> ---
 >
 >
 >
@@ -2195,48 +2206,39 @@ Deeper notes:
 >
 >
 >
-> ⇨ Var(θ) = E[Var(θ|D)] + Var[E(θ|D)]
+> ⇨ Var(θ) = E\[Var(θ|D)\] + Var\[E(θ|D)\]
 >
 >
 >
-> Và xét Var[E(θ|D)]:
+> Và xét Var\[E(θ|D)\]:
 >
 >
 >
-> Nếu với D = một observed value d của D, ta có E[θ|D=d] là kì vọng của θ với θ ~ π(θ|D=d) dĩ nhiên chính là mean của
-> posterior.
+> Nếu với D = một observed value d của D, ta có E\[θ|D=d\] là kì vọng của θ với θ \~ π(θ|D=d) dĩ nhiên chính là mean của posterior.
 >
 >
 >
-> ⇨ E(θ|D) là random variable khi áp hàm E[θ|D=d] lên D, giá trị của nó mang ý nghĩa, với mean của posterior ứng với các
-> possible value khác nhau của D,
+> ⇨ E(θ|D) là random variable khi áp hàm E\[θ|D=d\] lên D, giá trị của nó mang ý nghĩa, với mean của posterior ứng với các possible value khác nhau của D,
 >
 >
 >
-> Và Var(E(θ|D)) sẽ là variance của random variable này, do đó nó mang ý nghĩa là độ biến động của giá trị posterior mean khi
-> giá trị của D thay đổi, do đó gs Bishop gọi nó là "variance in posterior mean", variance của posterior mean
+> Và Var(E(θ|D)) sẽ là variance của random variable này, do đó nó mang ý nghĩa là độ biến động của giá trị posterior mean khi giá trị của D thay đổi, do đó gs Bishop gọi nó là "variance in posterior mean", variance của posterior mean
 >
 >
 >
-> Chú ý, nó hoàn toàn không phải là variance của posterior distribution. Hiểu thế này: E[θ|D=d] là một point estimator của θ với
-> θ ~ π(θ|D=d), tức là, một ước lượng điểm của θ, được tính bởi cách thức dùng mean của posterior distribution để ước
-> lượng. Và vì tùy vào giá trị của D, ta có các posterior khác nhau, nên cái sự ước lượng ) này là một hàm số, hay, E[θ|D] cũng
-> là một biến ngẫu nhiên. Tóm lại E[θ|D] là posterior mean, là một biến ngẫu nhiên và Var của nó là variance của posterior
-> mean.
+> Chú ý, nó hoàn toàn không phải là variance của posterior distribution. Hiểu thế này: E\[θ|D=d\] là một point estimator của θ với θ \~ π(θ|D=d), tức là, một ước lượng điểm của θ, được tính bởi cách thức dùng mean của posterior distribution để ước lượng. Và vì tùy vào giá trị của D, ta có các posterior khác nhau, nên cái sự ước lượng ) này là một hàm số, hay, E\[θ|D\] cũng là một biến ngẫu nhiên. Tóm lại E\[θ|D\] là posterior mean, là một biến ngẫu nhiên và Var của nó là variance của posterior mean.
 >
 >
 >
-> Còn variance của posterior distribution thì phải kí hiệu là Var(θ|D=d), mang ý nghĩa là variance của θ với θ ~ π(θ|D=d).
+> Còn variance của posterior distribution thì phải kí hiệu là Var(θ|D=d), mang ý nghĩa là variance của θ với θ \~ π(θ|D=d).
 >
 >
 >
-> Như vậy thì đây cũng là một hàm số phụ thuộc d, nên Var(θ|D) cũng là một random variable có được do áp hàm Var(θ|D=d)
-> lên D.
+> Như vậy thì đây cũng là một hàm số phụ thuộc d, nên Var(θ|D) cũng là một random variable có được do áp hàm Var(θ|D=d) lên D.
 >
 >
 >
-> Và E[Var(θ|D)] chính là lấy mean của random variable này, nên nó mang ý nghĩa là trung bình của [variance của posterior
-> distribution]
+> Và E\[Var(θ|D)\] chính là lấy mean của random variable này, nên nó mang ý nghĩa là trung bình của \[variance của posterior distribution\]
 >
 >
 >
@@ -2244,19 +2246,19 @@ Deeper notes:
 >
 >
 >
-> term thứ nhất, mang ý nghĩa: **trung bình / kì vọng của [variance của posterior distribution]**
+> term thứ nhất, mang ý nghĩa: **trung bình / kì vọng của \[variance của posterior distribution\]**
 >
 >
 >
-> term thứ hai mang ý nghĩa: **variance / độ biến động của [posterior mean]**
+> term thứ hai mang ý nghĩa: **variance / độ biến động của \[posterior mean\]**
 >
 >
 >
-> Còn bên trái, Var(θ) dĩ nhiên là **[variance / độ biến động của prior distribution]**
+> Còn bên trái, Var(θ) dĩ nhiên là **\[variance / độ biến động của prior distribution\]**
 >
 >
 >
-> mà term thứ hai, (variance / độ biến động của [posterior mean]) dĩ nhiên không âm do variance thì luôn không âm
+> mà term thứ hai, (variance / độ biến động của \[posterior mean\]) dĩ nhiên không âm do variance thì luôn không âm
 >
 >
 >
@@ -2264,35 +2266,27 @@ Deeper notes:
 >
 >
 >
-> variance / độ biến động của prior distribution = số k0 âm + trung bình / kì vọng của [variance của posterior distribution]
+> variance / độ biến động của prior distribution = số k0 âm + trung bình / kì vọng của \[variance của posterior distribution\]
 >
 >
 >
-> ⇨ **variance / độ biến động của prior distribution** ≥ **trung bình / kì vọng của [variance của posterior distribution]**
+> ⇨ **variance / độ biến động của prior distribution** ≥ **trung bình / kì vọng của \[variance của posterior distribution\]**
 >
 >
 >
-> -------
+> ---
 >
 >
 >
-> Vậy thì cái kết luận vừa rồi cũng chính là (nói bằng lời): nói chung (lấy trung bình trên các bộ dataset D=d khác nhau) thì
-> variance của posterior sẽ nhỏ hơn so với variance của prior. Cũng chính là nói: Khi ta chưa biết gì về D, chưa quan sát thấy
-> data, lúc này chỉ dựa vào prior distribution, thì ta có variance của θ là nhiêu đó, ví dụ = a, thì sau khi có dữ liệu để rồi ta cập
-> nhật lại distribution của θ, để có posterior distribution, thì variance của θ lúc này, ví dụ b, thì b sẽ NHỎ HƠN a Và độ giảm
-> của variance, a - b, dĩ nhiên theo phương trình trên, chính là độ lớn của cái term thứ hai: variance / độ biến động của
-> [posterior mean]
+> Vậy thì cái kết luận vừa rồi cũng chính là (nói bằng lời): nói chung (lấy trung bình trên các bộ dataset D=d khác nhau) thì variance của posterior sẽ nhỏ hơn so với variance của prior. Cũng chính là nói: Khi ta chưa biết gì về D, chưa quan sát thấy data, lúc này chỉ dựa vào prior distribution, thì ta có variance của θ là nhiêu đó, ví dụ = a, thì sau khi có dữ liệu để rồi ta cập nhật lại distribution của θ, để có posterior distribution, thì variance của θ lúc này, ví dụ b, thì b sẽ NHỎ HƠN a Và độ giảm của variance, a - b, dĩ nhiên theo phương trình trên, chính là độ lớn của cái term thứ hai: variance / độ biến động của \[posterior mean\]
 >
 >
 >
-> Do đó gs Bishop mới nói trong sách rằng, mức độ giảm của variance sẽ càng lớn nếu như variance của posterior mean càng
-> lớn ("The reduction in variance is greater if the variance in the posterior mean is greater").
+> Do đó gs Bishop mới nói trong sách rằng, mức độ giảm của variance sẽ càng lớn nếu như variance của posterior mean càng lớn ("The reduction in variance is greater if the variance in the posterior mean is greater").
 >
 >
 >
-> Và điều này nhằm chứng minh cho nhận định mà gs Bishop đặt vấn đề lúc nãy: liệu đây có phải là tính chất khái quát không,
-> rằng càng có nhiều data thì posteriori sẽ ngày càng có variance nhỏ lại, (variance cũng là thể hiện tính uncertainty) hay
-> không?
+> Và điều này nhằm chứng minh cho nhận định mà gs Bishop đặt vấn đề lúc nãy: liệu đây có phải là tính chất khái quát không, rằng càng có nhiều data thì posteriori sẽ ngày càng có variance nhỏ lại, (variance cũng là thể hiện tính uncertainty) hay không?
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
