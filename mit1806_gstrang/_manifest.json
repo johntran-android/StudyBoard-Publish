@@ -1,6 +1,6 @@
 {
   "title": "MIT 18.06",
-  "publishedAt": 1793477112803,
+  "publishedAt": 1793497519532,
   "sections": [
     {
       "title": "18.03 Lec 25",
@@ -66,7 +66,7 @@
       "title": "Lecture 10: The Four Fundamental Subspaces",
       "path": "mit1806_gstrang/lecture_10_the_four_fundamental_subspaces.md",
       "noteCount": 24,
-      "imageCount": 39
+      "imageCount": 43
     },
     {
       "title": "Lecture 11: Matrix Spaces; Rank 1; Small World Graphs",
@@ -220,5 +220,5 @@
     }
   ],
   "totalNotes": 1181,
-  "totalImages": 1294
+  "totalImages": 1298
 }
