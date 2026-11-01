@@ -1,6 +1,6 @@
 # Lecture 10: The Four Fundamental Subspaces
 
-📊 **Progress:** `24` Notes | `39` Screenshots | `16` AI Reviews
+📊 **Progress:** `24` Notes | `43` Screenshots | `24` AI Reviews
 
 ---
 <a id="node-no1m6a6"></a>
@@ -8,6 +8,8 @@
 <br>
 
 <a id="node-h2tjkme"></a>
+
+## Four Fundamental Subspaces
 
 <p align="center"><kbd><img src="assets/naf6xnpz46.png" width="80%"></kbd></p>
 
@@ -643,6 +645,8 @@
 
 <p align="center"><kbd><img src="assets/dh78he08xni.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/6ktn5j.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > Tại sao row space của R chính là row space của A để rồi hai vector đầu là basis của rowspace của R cũng chính là basis của rowspace của A?
 >
@@ -657,6 +661,8 @@
 >
 >
 > Do đó chỉ là **quá trình elimination giúp ta CHUYỂN HAI BASIS VECTOR CỦA ROWSPACE CỦA A THÀNH HAI BASIS KHÁC RÕ RÀNG HƠN THÔI**. Gs gọi nó là **the** **best basis**
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=x6hV9XYOkH8)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -679,50 +685,27 @@
 <p align="center"><kbd><img src="assets/s6j5zq5lcym.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và cũng như đối với cols space, hai pivot cols (mà ở dạng
-> reduced row echelon form) sẽ chính là hai cols gắn với cái
-> Identity matrix là the best basis của cols space.
+> CHÚ Ý: KHI NÓI BASIS CỦA COLUMN SPACE LÀ PIVOT COLUMN, THÌ PHẢI HIỂU Ý NÓI **PIVOT COLUMN CỦA A** CHỨ KHÔNG PHẢI CỦA R HAY U. CÓ NGHĨA LÀ NHỜ PIVOT COLUMN CỦA U, TA **BIẾT VỊ TRÍ CỦA PIVOT COLUMN CỦA A**. 
 >
 >
 >
-> CHÚ Ý: KHI NÓI BASIS CỦA COLUMN SPACE LÀ PIVOT
-> COLUMN, THÌ PHẢI HIỂU Ý NÓI **PIVOT COLUMN CỦA A**
-> CHỨ KHÔNG PHẢI CỦA R HAY U. CÓ NGHĨA LÀ NHỜ
-> PIVOT COLUMN CỦA U, TA **BIẾT VỊ TRÍ CỦA PIVOT
-> COLUMN CỦA A**. ĐIỀU NÀY **KHÁC VỚI ROWSPACE**, KHI
-> VỚI ROWSPACE THÌ **PIVOT ROW CỦA R/U CŨNG
-> CHÍNH LÀ PIVOT ROW (BASIS)  CỦA A** VÌ NHƯ ĐÃ NÓI
-> CHÚNG **CÙNG MỘT ROWSPACE**
+> ĐIỀU NÀY **KHÁC VỚI ROWSPACE**, KHI VỚI ROWSPACE THÌ **PIVOT ROW CỦA R/U CŨNG CHÍNH LÀ BASIS CỦA C(Aᵀ)** VÌ NHƯ ĐÃ NÓI CHÚNG **CÙNG MỘT ROWSPACE**
 >
 >
 >
-> Thì hai row đầu tiên của R trong trường hợp này là the best
-> basis của row space (best mang ý nghĩa là nó đã được
-> clean / tối giản hết mức có thể)
+> Thì hai row đầu tiên của R trong trường hợp này là the **BEST BASIS CỦA ROW SPACE** (best mang ý nghĩa là nó đã được clean / tối giản hết mức có thể)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
-> Ghi chú nắm rất tốt sự khác biệt cốt lõi giữa Column Space và Row Space khi biến đổi về dạng R: cột cơ sở của C(A) phải lấy từ ma trận A gốc, trong khi cơ sở của Row Space có thể lấy trực tiếp từ các hàng pivot của R.
->
-> **🟡 Minor issues**
->
-> **1.** *"Và cũng như đối với cols space, hai pivot cols (mà ở dạng reduced row echelon form) sẽ chính là hai cols gắn với cái Identity matrix là the best basis của cols space."*
->
-> Câu này gây mâu thuẫn trực tiếp với phần CHÚ Ý ngay bên dưới. Các cột pivot của R (chứa ma trận đơn vị I) chỉ là cơ sở của C(R), tuyệt đối không phải là cơ sở của C(A) vì C(R) ≠ C(A).
->
-> **2.** *"PIVOT ROW CỦA R/U CŨNG CHÍNH LÀ PIVOT ROW (BASIS) CỦA A"*
->
-> Diễn đạt chưa chuẩn xác về mặt thuật ngữ. Các hàng khác không của R không phải là 'hàng của A' (vì đã qua phép khử Gauss), mà chúng là 'cơ sở cho không gian hàng của A' (vì Row(R) = Row(A)).
->
+> Ghi chú rất chính xác và nắm trọn vẹn điểm mấu chốt của bài giảng: phép khử Gauss thay đổi không gian cột nhưng bảo toàn không gian hàng.
 >
 > **✓ Strengths**
-> - Phân biệt rất chính xác điểm khác nhau căn bản: tìm cơ sở cho C(A) thì chỉ dùng R để lấy chỉ số (index) rồi phải quay về A, còn Row Space thì lấy trực tiếp các hàng pivot của R.
-> - Hiểu đúng bản chất vì sao các hàng pivot của R được GS. Strang gọi là 'the best basis' cho row space (nhờ chứa khối đơn vị I nên rất tối giản, trực quan và dễ biểu diễn).
+> - Phân biệt chuẩn xác giữa cơ sở của Column Space (phải lấy các cột pivot ban đầu của A) và Row Space (lấy trực tiếp các hàng pivot của R hoặc U).
+> - Hiểu đúng bản chất tại sao hàng của R tạo thành cơ sở đẹp nhất (best basis) cho Row Space vì chứa ma trận đơn vị con I_r với nhiều số 0 và 1.
 >
 > **💡 Deeper notes**
-> - Khi thực hiện các phép biến đổi dòng sơ cấp, ta đang nhân ma trận sơ cấp E từ bên trái (R = EA), do đó tổ hợp tuyến tính các dòng không làm thay đổi Row Space (Row(A) = Row(R)), nhưng làm thay đổi Column Space (C(R) ≠ C(A)).
-> - Nếu muốn lấy cơ sở của Row Space trực tiếp từ các dòng ban đầu của ma trận A, ta phải chọn các dòng của A tương ứng với các pivot rows, nhưng chúng thường không 'sạch' (clean) bằng các dòng của R.
+> - Các phép biến đổi hàng sơ cấp (Row operations) thực chất là tổ hợp tuyến tính các hàng nên bảo toàn span của các hàng (Row Space), nhưng chúng làm thay đổi tổ hợp tuyến tính của các phần tử trong cột, do đó C(R) ≠ C(A).
 
 <br>
 
@@ -731,6 +714,8 @@
 ###### Cơ sở không gian hàng
 
 <p align="center"><kbd><img src="assets/u9y5gwlhcek.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/vp8pj8qvnd.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Gs: làm sao tôi biết các row của A span cùng một vector
@@ -745,6 +730,18 @@
 > đồng nghĩa các **row của A là linear combination của các
 > basis vector**. Và **cũng đồng nghĩa rowspace cuả A chính
 > là rowspace của R.**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất chuẩn xác và nắm đúng bản chất vì sao phép khử hàng bảo toàn không gian hàng (row space): tính khả nghịch của các phép biến đổi hàng cho phép biểu diễn tuyến tính qua lại giữa các hàng của A và R.
+>
+> **✓ Strengths**
+> - Hiểu chính xác bản chất: quá trình khử Gauss có thể đảo ngược nên các hàng của A là tổ hợp tuyến tính của các hàng khác 0 trong R.
+> - Kết luận đúng đắn rằng không gian hàng của A và R là đồng nhất (Row(A) = Row(R)).
+>
+> **💡 Deeper notes**
+> - Để chứng minh chặt chẽ hai không gian trùng nhau, cần cả hai chiều: các hàng của R là tổ hợp tuyến tính của các hàng của A (chiều xuôi), và ngược lại (chiều đảo nhờ tính khả nghịch), từ đó suy ra Row(A) ⊆ Row(R) và Row(R) ⊆ Row(A).
 
 <br>
 
@@ -761,7 +758,7 @@
 >
 >
 >
-> Thế thì đầu tiên nullspace của Aᵀ đương nhiên theo định nghĩa là **mọi linear combination của các solution của Aᵀy=0**
+> Thế thì đầu tiên nullspace của Aᵀ đương nhiên theo định nghĩa là **tập mọi solution của Aᵀy=0**
 >
 >
 >
@@ -769,11 +766,27 @@
 >
 >
 >
-> đại khái là vì, ta có thể transpose hai vế của Aᵀy = 0 để có yᵀA = 0. Có nghĩa là nullspace của Aᵀ là linear combination của mọi vector y thì nó cũng là linear combination của mọi yᵀ và vì yᵀ nằm bên trái A nên mới nói **nullspace của Aᵀ là left nullspace của A.**
+> đại khái là vì, ta có thể transpose hai vế của Aᵀy = 0 để có yᵀA = 0. 
+>
+>
+>
+> Vì yᵀ nằm bên trái A nên mới nói **nullspace của Aᵀ là left nullspace của A.**
 >
 >
 >
 > Nhưng gs nói rằng tôi ít dùng cách gọi này
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chuẩn xác và nắm trọn vẹn bản chất vì sao $N(A^T)$ lại được gọi là left nullspace của $A$.
+>
+> **✓ Strengths**
+> - Nắm vững định nghĩa $N(A^T)$ là không gian các nghiệm của phương trình $A^T y = 0$.
+> - Giải thích chính xác nguồn gốc tên gọi 'left nullspace' thông qua việc lấy chuyển vị để đưa vector $y^T$ sang đứng bên trái ma trận $A$ ($y^T A = 0^T$).
+>
+> **💡 Deeper notes**
+> - Về mặt biểu diễn kỹ thuật, khi chuyển sang dạng $y^T A = 0^T$, vế phải là một vector hàng số 0 thay vì vector cột.
 
 <br>
 
@@ -782,6 +795,8 @@
 ###### Phép khử Gauss-Jordan
 
 <p align="center"><kbd><img src="assets/mgtwfs5thvd.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/kjw49oumoi.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > thế thì gs cho rằng elimination biến A thành R cũng có
@@ -797,6 +812,19 @@
 > đối với matrix I**. Từ đó **khi A thành R**, **I trở thành matrix nào
 > đó, gọi là E** (cố tình đặt tên là E)
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác ý tưởng mở rộng ma trận [A I] để tìm ma trận khử E thông qua phép biến đổi Gauss-Jordan.
+>
+> **✓ Strengths**
+> - Hiểu đúng quy trình khử Gauss-Jordan áp dụng đồng thời lên ma trận ghép [A I].
+> - Nắm rõ kết quả phép khử đưa A về dạng bậc thang rút gọn R (rref) và biến đổi I thành ma trận khử E.
+>
+> **💡 Deeper notes**
+> - Ma trận E thu được chính là tích của tất cả các phép biến đổi hàng sơ cấp (elementary matrices), do đó thoả mãn hệ thức EA = R (nhân từ bên trái).
+> - Kích thước của ma trận đơn vị ghép thêm phụ thuộc vào số hàng của A (m x m).
+
 **🔗 See also:** [Phương pháp khử Gauss-Jordan](./lecture_3_multiplication_and_inverse_matrices.md#node-o2kdp8j)
 
 <br>
@@ -808,8 +836,7 @@
 <p align="center"><kbd><img src="assets/zdb05nrgrz.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và như đã biết các bước **elimination biến A thành I** có thể 
-> biểu diễn bởi việc **transform matrix A bằng matrix E**: EA
+> Và như đã biết các bước **elimination biến A thành I (thành U hay R nhưng ở đây thầy đang xét tình huống mà R cũng là matrix I)** có thể biểu diễn bởi việc **transform matrix A bằng matrix E**: EA
 >
 >
 >
@@ -817,10 +844,19 @@
 >
 >
 >
-> Vì sao? Vì EA=R thì cũng những bước biến đổi đó áp 
-> dụng lên I, thì kết quả chính là kết quả của E × I. Mà vì I là
-> Identity matrix nên **EI = E**. Vậy suy ra **cái matrix kết quả
-> của I trở thành chính là E.**
+> Vì sao? Vì EA=R thì cũng những bước biến đổi đó áp dụng lên I, thì kết quả chính là kết quả của E × I. Mà vì I là Identity matrix nên **EI = E**. Vậy suy ra **cái matrix kết quả của I trở thành chính là E.**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất tốt, giải thích chính xác và logic bản chất phép nhân khối $E[A \mid I] = [EA \mid EI] = [R \mid E]$.
+>
+> **✓ Strengths**
+> - Hiểu rõ bản chất các phép biến đổi hàng tương đương với việc nhân ma trận sơ cấp tổng hợp E từ bên trái.
+> - Lập luận chặt chẽ vì sao ma trận I ban đầu biến đổi thành E dựa vào đẳng thức cơ bản EI = E.
+>
+> **💡 Deeper notes**
+> - Trên bảng thầy đang viết dạng tổng quát cho ma trận $A_{m \times n}$ thành ma trận dạng bậc thang thu gọn $R_{m \times n}$ (khi đó $E$ lưu lại toàn bộ các bước biến đổi), còn trường hợp $R = I$ là trường hợp riêng khi $A$ vuông và khả nghịch (lúc này $E = A^{-1}$ theo phương pháp Gauss-Jordan).
 
 <br>
 
@@ -831,15 +867,22 @@
 <p align="center"><kbd><img src="assets/gcbujoibtvs.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs ôn lại trong bài bữa trước về Gauss Jordan, ta
-> đang có A là **square & invertible** matrix. Khi đó sau khi
-> elimination, ta có **A trở thành I.**
+> Gs ôn lại trong bài bữa trước về Gauss Jordan, ta đang có A là **square & invertible** matrix. Khi đó sau khi elimination, ta có **A trở thành I.**
 >
 >
 >
-> Vì A trở thành I, có nghĩa là EA=I, nên **E chính là A.inv**
-> vậy việc **Gauss Jordan elimination sẽ giúp ta có được
-> A.inv**
+> Vì A trở thành I, có nghĩa là EA=I, nên E chính là A⁻¹ vậy việc Gauss Jordan elimination sẽ giúp ta có được A⁻¹
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú đã nắm rất chính xác phần ôn tập từ chương 2 về phương pháp Gauss-Jordan để tìm ma trận nghịch đảo khi ma trận vuông và khả nghịch.
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất của phép khử Gauss-Jordan là nhân ma trận biến đổi hàng E vào bên trái để biến đổi A thành I, từ đó suy ra E chính là nghịch đảo của A.
+>
+> **💡 Deeper notes**
+> - Bảng bài giảng đang mở rộng cho trường hợp tổng quát ma trận chữ nhật A kích thước m x n: khi đó E[A I] biến đổi thành [R E] với EA = R (dạng bậc thang rút gọn RREF), ma trận E vẫn tổng hợp các phép biến đổi hàng nhưng không còn là nghịch đảo hai chiều của A.
 
 <br>
 
@@ -849,81 +892,76 @@
 
 <p align="center"><kbd><img src="assets/60cpxg194q.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/h9u9b3z3d7s.png" width="80%"></kbd></p>
+
 > [!NOTE]
-> Ok, quay lại đây, nhớ rằng ta đang đi tìm basis của nullspace  của Aᵀ (hay còn
-> gọi là left-nullspace của A)
+> Ok, quay lại đây, nhớ rằng ta đang đi tìm basis của nullspace của Aᵀ (hay còn gọi là left-nullspace của A)
 >
 >
 >
-> Thế thì như đã nói, ta không cần phải transpose A, để rồi tìm basis của nullspace
-> của Aᵀ bằng các xét solution của  (Aᵀ)y = 0, tức là làm theo cách thông thường
-> khi tìm nullspace của A.
+> Thế thì như đã nói, ta không cần phải transpose A, để rồi tìm basis của nullspace của Aᵀ bằng các xét solution của (Aᵀ)y = 0, tức là làm theo cách thông thường khi tìm nullspace của A.
 >
 >
 >
-> Mà ở đây ta đang nói rằng quá trình elimination từ A trở thành R CŨNG ĐÃ CÓ
-> REVEAL THÔNG TIN VỀ NULLSPACE CỦA Aᵀ RỒI. Đó là:
+> Mà ở đây ta đang nói rằng quá trình elimination từ A trở thành R CŨNG ĐÃ CÓ REVEAL THÔNG TIN VỀ NULLSPACE CỦA Aᵀ RỒI. Đó là:
 >
 >
 >
-> Như mới nói quá trình elimination tương đương với việc nhân E với A để có R. Và
-> như vừa nói xong, phương pháp Gaussian Jordan sẽ cho ta biết E là gì (là cái mà
-> I trở thành sau khi cũng apply các bước elimination biến A thành R). Nên gs mới
-> lẩm nhẩm apply các bước như vậy với I để có matrix E như trên.
+> Như mới nói quá trình elimination tương đương với việc nhân E với A để có R. Và như vừa nói xong, phương pháp Gaussian Jordan sẽ cho ta biết E là gì (là cái mà I trở thành sau khi cũng apply các bước elimination biến A thành R). Nên gs mới lẩm nhẩm apply các bước như vậy với I để có matrix E như trên.
 >
 >
 >
-> Rồi, thế thì, EA = R. Và đây chính là lúc mà quá trình elimination biến A thành R
-> cũng reveal thông tin cho ta biết basis của nullspace của Aᵀ đây:
+> Rồi, thế thì, EA = R. Và đây chính là lúc mà quá trình elimination biến A thành R cũng reveal thông tin cho ta biết basis của nullspace của Aᵀ đây:
 >
 >
 >
-> Đầu tiên, nhớ lại định nghĩa row vector r1 (1xm) nhân với matrix A (mxn),  chính là
-> tạo ra một row bằng cách linear combination các row của A với các coeff là các
-> phần tử của r1. Và matrix E (3xn) có 3 row r1, r2, r3 thì khi nhân E (3xm) với A
-> (mxn) chính là tạo matrix mà mỗi hàng là linear combination của các hàng của A
-> với coeff là giá trị của vector hàng tương ứng của E:
+> Đầu tiên, nhớ lại định nghĩa row vector r1 (1 × m) nhân với matrix A (m × n), chính là tạo ra một row bằng cách linear combination các row của A với các coeff là các phần tử của r1. Và matrix E (3 × m) có 3 rows: r1, r2, r3 thì khi nhân E (3 × m) với A (m × n) chính là tạo matrix mà mỗi hàng là linear combination của các hàng của A với coeff là giá trị của vector hàng tương ứng của E (góc nhìn nhân hai matri thứ 2)
 >
 >
 >
-> Tức EA = R, thì hàng 1 của R chính là linear combination các hàng của A dùng
-> coeff là hàng 1 của E, hàng 2 của R chính là linear combination của A với coeff là
-> hàng 2 của E,....
+> Tức EA = R, thì hàng 1 của R chính là linear combination các hàng của A dùng coeff là hàng 1 của E, hàng 2 của R chính là linear combination của A với coeff là hàng 2 của E,....
 >
 >
 >
-> Vậy thì **hãy nhìn hàng 3 của R, là vector zero**. Có nghĩa là **TA CÓ LINEAR
-> COMBINATION CỦA CÁC HÀNG CỦA A VỚI HỆ SỐ LÀ HÀNG 3 CỦA E TẠO RA
-> KẾT QỦA ZERO.**
+> Vậy thì **hãy nhìn hàng 3 của R, là vector zero**. Có nghĩa là **TA CÓ LINEAR COMBINATION CỦA CÁC HÀNG CỦA A VỚI HỆ SỐ LÀ HÀNG 3 CỦA E TẠO RA KẾT QỦA ZERO.**
 >
 >
 >
-> Thì điều này theo định nghĩa của nullspace của Aᵀ là mọi vector y khiến Aᵀy=0
-> tương đương mọi vector y khiến yᵀ×A = 0, tương đương mọi vector y mà hệ số
-> của nó sẽ tạo linear combination các hàng của A cho ra zero. Thế thì theo **đó,
-> ROW 3 CỦA E CHÍNH LÀ MỘT VECTOR TRONG NULLSPACE CỦA Aᵀ
+> Thì điều này theo định nghĩa của nullspace của Aᵀ là mọi vector y khiến Aᵀy=0, tương đương mọi vector y mà hệ số của nó sẽ tạo linear combination các hàng của A cho ra zero. Thế thì theo đó:
 >
 >
 >
-> Rồi, bây giờ ta sẽ chứng minh nó cũng chính là basis:**
+> (chuyển vị của) ROW 3 CỦA E CHÍNH LÀ MỘT VECTOR TRONG NULLSPACE CỦA Aᵀ
 >
 >
 >
-> Là bởi như bài trước ta đã cũng nhau chứng minh để đi đến kết luận là
-> **dimension của nullspace của Aᵀ sẽ là m - r**. Vậy thì đối với matrix A này m = 3,
-> n = 4 và rank = 2. Vậy dimension của nullspace của Aᵀ = m-r=3-2 = 1
+> Rồi, bây giờ ta sẽ chứng minh nó cũng chính là basis:
 >
 >
 >
-> À, vậy **dimension của nullspace của Aᵀ = 1** nên basis của nullspace của Aᵀ
-> cũng **CHỈ CÓ 1 VECTOR** (vì như đã biết theo định nghĩa dimension của vector
-> Space là số vector trong basis của nó). Từ đó suy ra, **cái row thứ 3 của E chính
-> là một basis của nullspace của Aᵀ
+> Là bởi như bài trước ta đã cũng nhau chứng minh để đi đến kết luận là **dimension của nullspace của Aᵀ sẽ là m - r**. Vậy thì đối với matrix A này m = 3, n = 4 và rank = 2. Vậy dimension của nullspace của Aᵀ = m-r=3-2 = 1
 >
 >
 >
-> Và từ đó ta đã biết cách thông qua elimination biến A thành R mà cũng giúp
-> review được basis của nullspace của Aᵀ**
+> À, vậy **dimension của nullspace của Aᵀ = 1** nên basis của nullspace của Aᵀ cũng **CHỈ CÓ 1 VECTOR** (vì như đã biết theo định nghĩa dimension của vector Space là số vector trong basis của nó). Từ đó suy ra, \*\*cái row thứ 3 của E chính là một basis của nullspace của Aᵀ
+>
+>
+>
+> Và từ đó ta đã biết cách thông qua elimination biến A thành R mà cũng giúp review được basis của nullspace của Aᵀ
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, hiểu bản chất cực kỳ sâu sắc từ góc nhìn nhân ma trận theo hàng đến mối liên hệ giữa ma trận khử E, các hàng số 0 của R và cơ sở của left nullspace N(Aᵀ).
+>
+> **✓ Strengths**
+> - Giải thích chính xác bản chất phép nhân hàng: mỗi hàng của R là tổ hợp tuyến tính các hàng của A với trọng số là hàng tương ứng của ma trận E.
+> - Nhận diện đúng mối liên hệ yᵀA = 0 (tức Aᵀy = 0) với việc hàng 3 của R bằng 0 để suy ra hàng 3 của E nằm trong left nullspace.
+> - Rất tinh tế khi nhận thức được cần chuyển vị hàng 3 của E thành vector cột để thuộc nullspace của Aᵀ.
+> - Lập luận chặt chẽ về số chiều dim(N(Aᵀ)) = m - r = 1 để kết luận ngay 1 vector tìm được chính là basis.
+>
+> **💡 Deeper notes**
+> - Trong trường hợp tổng quát khi m - r > 1 (có nhiều hơn 1 hàng số 0 trong R), các hàng tương ứng của E luôn độc lập tuyến tính (vì ma trận E khả nghịch), do đó m - r hàng này luôn tự động tạo thành một cơ sở (basis) cho N(Aᵀ).
 
 <br>
 
@@ -964,6 +1002,19 @@
 >
 > *Tạm thời gs đề nghị bỏ qua một tính chất là V1 có thể
 > nhân với V2 (trong bảng là A nhân B)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chuẩn xác ý tưởng cốt lõi của bài giảng: ma trận có thể được xem như các vector trong một không gian vector vì chúng thỏa mãn phép cộng và nhân với vô hướng, tạm thời bỏ qua phép nhân ma trận.
+>
+> **✓ Strengths**
+> - Hiểu chính xác điều kiện đóng đối với phép cộng và phép nhân vô hướng để tạo thành một không gian vector.
+> - Nắm bắt đúng lưu ý quan trọng của giáo sư về việc tạm thời không xét đến phép nhân hai ma trận (A*B) khi định nghĩa không gian vector.
+>
+> **💡 Deeper notes**
+> - Về mặt bản chất đại số, không gian các ma trận thực cỡ 3x3 (thường ký hiệu là M_3x3 hoặc R^(3x3)) có 9 phần tử độc lập, do đó nó đẳng cấu (isomorphic) với không gian vector R^9 chứ không chỉ đơn thuần là mở rộng hình thức từ R^n.
+> - Để tạo thành một không gian vector hoàn chỉnh, ngoài 2 tính chất đóng (cộng và nhân vô hướng) thì về mặt tiên đề còn cần thỏa mãn 8 tiên đề phụ (giao hoán, kết hợp, phần tử không, phần tử đối, tính phân phối...).
 
 <br>
 
@@ -1006,6 +1057,33 @@
 >
 > rồi ta cũng sẽ thông qua dimension để làm rõ việc
 > D sẽ chứa các vector subspace kia ra sao
+
+> [!TIP]
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **58/100** · ✗ Fix first
+>
+> Ghi chú đã nhận biết đúng các không gian con cơ bản của ma trận 3x3 và số chiều của không gian ma trận đường chéo D, nhưng mắc lỗi sai bản chất khi cho rằng D chứa các không gian con kia.
+>
+> **🔴 Critical issues**
+>
+> **1.** *"D sẽ chứa các vector subspace kia ra sao"*
+>
+> Khẳng định này sai về bản chất quan hệ bao hàm và số chiều: không gian ma trận đường chéo D có số chiều là 3, trong khi không gian ma trận đối xứng S và ma trận tam giác trên U đều có số chiều là 6. Một không gian 3 chiều không thể chứa các không gian 6 chiều. Thực tế là D nằm trong S và U (nghĩa là S và U chứa D, cụ thể D chính là giao S ∩ U).
+>
+>
+> **🟡 Minor issues**
+>
+> **1.** *"3 basis của nó sẽ gồm 3 matrix như này"*
+>
+> Dùng sai thuật ngữ: 'cơ sở' (basis) là một tập hợp gồm nhiều vector/ma trận độc lập tuyến tính sinh ra không gian, nên ở đây phải gọi là 'cơ sở gồm 3 ma trận' (hoặc 3 ma trận cơ sở), không dùng cụm từ '3 basis'.
+>
+>
+> **✓ Strengths**
+> - Xác định đúng các không gian con quan trọng của không gian ma trận M (3x3) gồm U (tam giác trên), đối xứng và D (đường chéo).
+> - Ghi nhận chính xác số chiều của không gian ma trận đường chéo 3x3 là dim(D) = 3.
+>
+> **💡 Deeper notes**
+> - Cơ sở chuẩn của không gian ma trận đường chéo 3x3 thường được chọn là các ma trận đơn vị vị trí E11, E22, E33 (các ma trận chỉ có đúng một số 1 trên đường chéo chính và các vị trí khác bằng 0).
+> - Mối liên hệ trọng tâm giữa các không gian con này trong bài giảng là công thức số chiều: dim(S) = 6, dim(U) = 6, dim(S ∩ U) = dim(D) = 3 và dim(S + U) = dim(M) = 9.
 
 <br>
 
