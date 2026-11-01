@@ -1,6 +1,6 @@
 # Lecture 11: Matrix Spaces; Rank 1; Small World Graphs
 
-📊 **Progress:** `33` Notes | `34` Screenshots
+📊 **Progress:** `33` Notes | `34` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-4n31leg"></a>
@@ -8,6 +8,8 @@
 <br>
 
 <a id="node-6yimf88"></a>
+
+## Đại số tuyến tính Bài 11
 
 <p align="center"><kbd><img src="assets/fit9yyiv9hd.png" width="80%"></kbd></p>
 
@@ -231,6 +233,8 @@
 
 <a id="node-ri2ahk4"></a>
 
+###### Công thức số chiều Grassmann
+
 <p align="center"><kbd><img src="assets/k5xljn2v8v.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -334,6 +338,8 @@
 
 <a id="node-7gk57e5"></a>
 
+###### Ma trận rank-1 trong LoRA
+
 <p align="center"><kbd><img src="assets/gcaeqpxpuqt.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -356,6 +362,8 @@
 <br>
 
 <a id="node-2dlvaq2"></a>
+
+###### Ma trận hạng 1
 
 <p align="center"><kbd><img src="assets/lb1ntrgcdz.png" width="80%"></kbd></p>
 
@@ -380,6 +388,8 @@
 
 <a id="node-c01gf4n"></a>
 
+###### Subspace ma trận hạng 4
+
 <p align="center"><kbd><img src="assets/c4ewml14m25.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -389,6 +399,8 @@
 <br>
 
 <a id="node-7kwg37n"></a>
+
+###### Hạng của tổng ma trận
 
 <p align="center"><kbd><img src="assets/u47ae0jprhm.png" width="80%"></kbd></p>
 
@@ -417,9 +429,36 @@
 > Thì có vẻ như là, có thể đoán là có thể ta sẽ 5 cols của U+V
 > là independence → U+V có rank = 5
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **75/100** · ✓ Move on
+>
+> Ghi chú có trực giác phản chứng rất tốt khi nhận ra tổng của hai ma trận rank 4 có thể đạt rank 5, nhưng chưa chốt kết luận cuối cùng và cách biểu diễn các cột còn nhầm lẫn giữa số cột (17) với số chiều không gian cột.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Thì có vẻ như là, có thể đoán là có thể ta sẽ 5 cols của U+V là independence → U+V có rank = 5"*
+>
+> Chưa đưa ra kết luận logic cuối cùng: vì U + V có thể có rank = 5 (khác 4), tập này không đóng kín dưới phép cộng, do đó subset này KHÔNG phải là vector space.
+>
+> **2.** *"Cho rằng với V là v1,v2,v3,v4 và với U là u1,u2,u3, u5. và matrix U+V sẽ có các cols là v1+u1, v2+u2, v3+u3, v4+u4, v5+u5."*
+>
+> Ma trận kích thước 5x17 có 17 cột (mỗi cột là vector trong R^5). Việc liệt kê chỉ 4 hoặc 5 cột thể hiện sự nhầm lẫn giữa số lượng cột thực tế (17 cột) và số cột độc lập tuyến tính (tối đa 5).
+>
+>
+> **✓ Strengths**
+> - Có trực giác đúng đắn khi nhận diện được tổng của hai ma trận rank 4 có thể cho ra ma trận rank 5 để phá vỡ tính đóng kín của phép cộng.
+> - Chủ động tự đặt câu hỏi và xây dựng lập luận cá nhân thay vì chỉ chép lại bài giảng.
+>
+> **💡 Deeper notes**
+> - Cách nhanh nhất để kiểm tra: Ma trận không (zero matrix) có rank bằng 0, không thuộc tập hợp các ma trận rank 4, nên tập hợp này lập tức không thể là một vector space.
+> - Xét phép nhân vô hướng: nếu lấy 0 nhân với một ma trận rank 4 ta được ma trận 0 (rank 0 != 4), vi phạm tính đóng đối với phép nhân vô hướng.
+> - Xét phép cộng: một phản ví dụ hiển nhiên khác là A + (-A) = 0 (rank 0 != 4), chứng minh phép cộng hai ma trận rank 4 không nhất thiết ra ma trận rank 4.
+
 <br>
 
 <a id="node-pxve33a"></a>
+
+###### Ma trận rank và subspace
 
 <p align="center"><kbd><img src="assets/gipwl29zj8.png" width="80%"></kbd></p>
 
@@ -431,6 +470,8 @@
 <br>
 
 <a id="node-r8bu0wl"></a>
+
+###### Không gian con của R4
 
 <p align="center"><kbd><img src="assets/zco4u7oxltg.png" width="80%"></kbd></p>
 
@@ -458,6 +499,8 @@
 
 <a id="node-99doyu3"></a>
 
+###### Cơ sở và số chiều
+
 <p align="center"><kbd><img src="assets/k0i4yvvbpfj.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -466,6 +509,8 @@
 <br>
 
 <a id="node-k0vo80d"></a>
+
+###### Nullspace của tập hợp S
 
 <p align="center"><kbd><img src="assets/9qkb9nsvhl5.png" width="80%"></kbd></p>
 
@@ -486,6 +531,8 @@
 <br>
 
 <a id="node-amu0lle"></a>
+
+###### Số chiều của Nullspace
 
 <p align="center"><kbd><img src="assets/siq42li8pcm.png" width="80%"></kbd></p>
 
@@ -523,6 +570,8 @@
 
 <a id="node-30d7nqe"></a>
 
+###### Cơ sở của Nullspace
+
 <p align="center"><kbd><img src="assets/935q8h8ob7n.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -542,6 +591,8 @@
 
 <a id="node-35iizs0"></a>
 
+###### Cơ sở không gian con S
+
 <p align="center"><kbd><img src="assets/azumikehpvm.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -550,6 +601,8 @@
 <br>
 
 <a id="node-heyh5a8"></a>
+
+###### Không gian cột C(A)
 
 <p align="center"><kbd><img src="assets/kolboncoji.png" width="80%"></kbd></p>
 
@@ -572,9 +625,24 @@
 > Phải nói thêm cols là subspace của R1 (vì chỉ có 1
 > component)
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất chính xác, hiểu đúng bản chất về không gian cột (Column Space), số chiều và cơ sở của ma trận 1x4.
+>
+> **✓ Strengths**
+> - Áp dụng chính xác định lý số chiều của không gian cột bằng số chiều của không gian hàng và bằng rank (r = 1).
+> - Xác định đúng cột pivot (cột đầu tiên [1]) làm cơ sở cho C(A).
+> - Nhận diện đúng C(A) là không gian con thuộc R^1 (do số hàng m = 1).
+>
+> **💡 Deeper notes**
+> - Vì C(A) là một không gian con 1 chiều nằm trong R^1, nên thực chất C(A) chính là toàn bộ R^1.
+
 <br>
 
 <a id="node-lq805ld"></a>
+
+###### Không gian cột C(A)
 
 <p align="center"><kbd><img src="assets/4v8kb2q7xa5.png" width="80%"></kbd></p>
 
@@ -585,6 +653,8 @@
 <br>
 
 <a id="node-jy31k1q"></a>
+
+###### Left Nullspace N(Aᵀ)
 
 <p align="center"><kbd><img src="assets/qvho81949m8.png" width="80%"></kbd></p>
 
@@ -612,6 +682,8 @@
 <br>
 
 <a id="node-abdcf7y"></a>
+
+###### Nullspace của Aᵀ
 
 <p align="center"><kbd><img src="assets/wh4u2axc2bi.png" width="80%"></kbd></p>
 
@@ -659,6 +731,8 @@
 
 <a id="node-ddsi7qo"></a>
 
+###### Đồ thị và Ma trận
+
 <p align="center"><kbd><img src="assets/66xwdhr8yvx.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -669,6 +743,8 @@
 <br>
 
 <a id="node-kttqhwf"></a>
+
+###### Khái niệm đồ thị cơ bản
 
 <p align="center"><kbd><img src="assets/xa6w4qsur6n.png" width="80%"></kbd></p>
 
@@ -690,6 +766,8 @@
 <br>
 
 <a id="node-ivf8ywo"></a>
+
+###### Khoảng cách trong đồ thị
 
 <p align="center"><kbd><img src="assets/b8ibtt1tofv.png" width="80%"></kbd></p>
 
