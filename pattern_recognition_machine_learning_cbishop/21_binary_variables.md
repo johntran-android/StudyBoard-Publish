@@ -1,6 +1,6 @@
 # 2.1 Binary Variables
 
-📊 **Progress:** `16` Notes | `24` Screenshots | `14` AI Reviews
+📊 **Progress:** `16` Notes | `24` Screenshots | `15` AI Reviews
 
 ---
 <a id="node-22kgh3n"></a>
@@ -1134,7 +1134,7 @@ Deeper notes:
 >
 >
 >
-> π(μ|𝐱) = f(𝐱|μ) π(μ) / f(𝐱)
+> π(μ|𝐱) = f(𝐱|μ) π(μ) / f(𝐱) 
 >
 >
 >
@@ -1154,11 +1154,11 @@ Deeper notes:
 >
 >
 >
-> π(μ|x) ∝ Πi f(xi|μ) β(μ|a,b)
+> π(μ|x) ∝ Πi f(xi|μ) Beta(μ|a,b)
 >
 >
 >
-> = Πi μ^xi(1-μ)^(1-xi) C μ^(a-1)(1-μ)^(b-1) với C là constant = \[Γ(a+b)/Γ(a)Γ(b)\]
+> = Πi (μ^xi) (1-μ)^(1-xi) C \[μ^(a-1)\]\[(1-μ)^(b-1)\] với C là constant = \[Γ(a+b)/Γ(a)Γ(b)\]
 >
 >
 >
@@ -1166,19 +1166,19 @@ Deeper notes:
 >
 >
 >
-> ⇨ π(μ|x) ∝ Πi μ^xi(1-μ)^(1-xi) μ^(a-1)(1-μ)^(b-1)
+> ⇨ π(μ|x) ∝ Πi (μ^xi) (1-μ)^(1-xi) \[μ^(a-1)\] \[(1-μ)^(b-1)\]
 >
 >
 >
-> ⇔ π(μ|x) ∝ μ^Σxi(1-μ)^\[Σ(1-xi)\] μ^(a-1)(1-μ)^(b-1)
+> ⇔ π(μ|x) ∝ \[μ^(Σixi)\] \[(1-μ)^\[Σi(1-xi)\]\] \[μ^(a-1)\] \[(1-μ)^(b-1)\]
 >
 >
 >
-> ⇔ π(μ|x) ∝ μ^(Σxi+a-1)(1-μ)^\[Σ(1-xi)+b-1\]
+> ⇔ π(μ|x) ∝ μ^(Σixi+a-1)(1-μ)^\[Σi(1-xi)+b-1\]
 >
 >
 >
-> ⇔ π(μ|x) ∝ μ^(Σxi+a-1)(1-μ)^\[N-Σxi+b-1\]
+> ⇔ π(μ|x) ∝ \[μ^(Σixi+a-1)\] \[(1-μ)^(N-Σixi+b-1)\]
 >
 >
 >
@@ -1200,7 +1200,9 @@ Deeper notes:
 >
 > Tất nhiên việc chọn prior như vậy chỉ là để đơn giản hóa việc tính toán,giống như gs Bishop nói đến trong câu "**form of prior distribution that has a simple interpretation as well as some useful analytical properties**"
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=3p7bkNSwRJc)
+📹 Video 1: [Vì sao dùng phân phối Beta liên hợp để ước lượng tham số mu?](https://www.youtube.com/watch?v=3p7bkNSwRJc)
+
+📹 Video 2: [Tại sao phân phối hậu nghiệm của Bernoulli lại ra Beta?](https://www.youtube.com/watch?v=bbf8qVhzBL8)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -1561,7 +1563,39 @@ Deeper notes:
 >
 >
 >
-> ∫f(x, μ|𝐱) dμ = ∫f(x|μ) π(μ|𝐱) dμ (f(x|μ,𝐱) = f(x|μ) do gỉa định độc lập của các data point) 
+> X,Y: ∫f(x,y)dy = ∫f(x|y)f(y)dy = f(x) marginal pdf của X
+>
+>
+>
+> ∫p(X=x, y)dy = P(X=x)
+>
+>
+>
+> Σi p(X=xi, y) = f(y)
+>
+>
+>
+> P(X=x|𝐱) = ∫p(X=x, μ) dμ 
+>
+>
+>
+> = ∫p(X=x|μ) p(μ|𝒟) dμ
+>
+>
+>
+> P(X=1|𝐱) = ∫μ p(μ|𝒟) dμ 
+>
+>
+>
+> = E\[μ|𝒟\]
+>
+>
+>
+> μ \~ p(μ|𝒟), E\[μ\] = ∫μp(μ|𝒟)dx
+>
+>
+>
+> ∫f(x, μ|𝐱) dμ = ∫f(x|μ) π(μ|𝐱) dμ | (f(x|μ,𝐱) = f(x|μ) do gỉa định độc lập của các data point)
 >
 >
 >
@@ -1577,7 +1611,7 @@ Deeper notes:
 >
 >
 >
-> Để rồi P(X=1|𝐱) = E\[f(x|μ)|𝐱\]|x=1 
+> Để rồi P(X=1|𝐱) = E\[f(x|μ)|𝐱\]|x=1
 >
 >
 >
@@ -1609,7 +1643,7 @@ Deeper notes:
 >
 >
 >
-> nhưng ở đây ta sẽ nhìn nó dưới góc độ là hàm của μ: f(x|μ) = g(μ) 
+> nhưng ở đây ta sẽ nhìn nó dưới góc độ là hàm của μ: f(x|μ) = g(μ)
 >
 >
 >
@@ -2055,6 +2089,27 @@ Deeper notes:
 >
 >
 > ⇨ E[E[**θ**|D]] = ∫ [∫**θ**f(**θ**|D)d**θ**] f(D) dD
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, hiểu sâu sắc bản chất kỳ vọng có điều kiện và tự chứng minh chặt chẽ Adam's Law (Law of Total Expectation) để làm sáng tỏ công thức (2.21)–(2.23). Chỉ có một nhầm lẫn nhỏ ở phần mở đầu khi gắn mục tiêu của (2.21) với việc giảm độ bất định thay vì bảo toàn kỳ vọng.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Thế thì để chứng minh rằng, tính chất vừa nói: khi càng có nhiều data thì độ không chắc chắn (uncertainty) của param μ thể hiện bởi posterior distribution càng giảm sẽ càng"*
+>
+> Đoạn văn trong sách của Bishop đưa ra (2.21) để xem xét góc nhìn frequentist về tính không chệch (unbiasedness on average: kỳ vọng của posterior mean lấy trung bình theo data đúng bằng prior mean). Tính chất 'độ không chắc chắn trung bình giảm đi' (variance reduction) thực chất được chứng minh ở công thức (2.24) ngay sau đó thông qua Law of Total Variance (Eve's Law).
+>
+>
+> **✓ Strengths**
+> - Giải thích rất chuẩn xác bản chất của kỳ vọng có điều kiện E[X|Y]: là một hàm của biến ngẫu nhiên Y, do đó bản thân nó là một biến ngẫu nhiên mới g(Y).
+> - Tự thực hiện derivation từng bước cho Adam's Law (Law of Total Expectation) thông qua LOTUS, đổi thứ tự tổng và marginalization một cách mạch lạc và chính xác.
+> - Liên hệ rất tốt giữa lý thuyết xác suất trừu tượng với các ký hiệu tích phân và chỉ số dưới của Bishop trong (2.21)–(2.23).
+>
+> **💡 Deeper notes**
+> - Việc tráo đổi thứ tự hai dấu tổng / tích phân trong phép chứng minh Adam's Law về mặt giải tích đòi hỏi điều kiện hội tụ tuyệt đối theo Định lý Fubini–Tonelli (đảm bảo khi E[|X|] < ∞).
+> - Ký hiệu tích phân ở (2.22) và (2.23) với vector tham số đậm θ là tích phân nhiều lớp (multivariate integral) trên toàn bộ không gian tham số.
 
 <br>
 
