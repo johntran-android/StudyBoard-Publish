@@ -162,7 +162,7 @@
 > **💡 Deeper notes**
 > - Sách dùng công thức tổng quát cho mạng 'feed-forward' nói chung (có thể có kết nối nhảy cóc/skip-connection giữa các tầng không liền kề), trong khi ví dụ của bạn đang cụ thể hóa cho mạng nhiều tầng tuần tự (layered feed-forward network).
 
-**🔗 See also:** [Efficiency of Backpropagation](./533_efficiency_of_backpropagation.md#node-xgrbhhi)
+**🔗 See also:** [Efficiency of Backpropagation](./533_efficiency_of_backpropagation.md#node-xgrbhhi) · [5.4.1 Diagonal Approximation](./535_hessian.md#node-oap5h48)
 
 <br>
 
