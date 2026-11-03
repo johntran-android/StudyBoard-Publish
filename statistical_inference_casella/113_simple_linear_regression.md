@@ -1,6 +1,6 @@
 # 11.3 Simple Linear Regression
 
-📊 **Progress:** `27` Notes | `50` Screenshots | `27` AI Reviews
+📊 **Progress:** `28` Notes | `50` Screenshots | `28` AI Reviews
 
 ---
 <a id="node-m4lr6nj"></a>
@@ -1456,6 +1456,8 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 > **💡 Deeper notes**
 > - Điều kiện tồn tại K = 1/Sxx ngầm định rằng Sxx = Σ (xi - x̄)² > 0, nghĩa là các điểm dữ liệu xi không được hoàn toàn trùng nhau (không suy biến).
 
+**🔗 See also:** [Theorem 11.3.3 Sampling Distributions of Estimators](#node-gytarq0)
+
 <br>
 
 <a id="node-be2name"></a>
@@ -2234,7 +2236,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 > Vui lòng nhập lời giải thích của bạn để được chấm điểm.
 
-**🔗 See also:** [Độc lập trung bình phương sai](./53_sampling_from_the_normal_distribution.md#node-qx3kch2)
+**🔗 See also:** [Độc lập trung bình phương sai](./53_sampling_from_the_normal_distribution.md#node-qx3kch2) · [Independence of Regression Estimators and S2](#node-0c21ixk)
 
 <br>
 
@@ -2277,30 +2279,68 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 > **💡 Deeper notes**
 > - Trong bài toán ML tổng quát Ti ~ Normal(wᵀxi, 1/β) với w có d chiều, số bậc tự do bị mất bằng d (thay vì 2 như trong hồi quy đơn biến), khi đó E[1/β_ML] = [(n-d)/n](1/β).
 
+**🔗 See also:** [Independence of Regression Estimators and S2](#node-0c21ixk)
+
 <br>
 
 <a id="node-gytarq0"></a>
 
 ###### Theorem 11.3.3 Sampling Distributions of Estimators
 
-<p align="center"><kbd><img src="assets/b14v9dv0zzc.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/axddywm7j15.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/gq46anpxf0l.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/fyxcnrtygot.png" width="80%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/0z740q5v1uf.png" width="80%"></kbd></p>
-
 > [!NOTE]
-> α̂ = Ȳ - β̂ x̄
+> Qua phần này bắt đầu nói về việc ta xem xét sampling distribution của các estimator này
 >
 >
 >
-> β̂ = SxY/Sxx
+> Ôn lại chút: Sampling distribution là sao? Đơn giản là distribution của các statistic - có bản chất là hàm của sample: W(𝐗), hay ở đây là W(𝐘), ví dụ β̂. là một linear estimator W(𝐘) = Σi di Yi (cụ thể hơn thì nó là best unbiased linear estimator (với bộ hệ số di khiến nó có phương sai nhỏ nhất). Thế thì người ta gọi distribution của biến ngẫu nhiên này là sampling distribution để phân biệt với population distribution. Và ta bàn về distribution của chúng là để bắt đầu nói về bài toán testing và interval estimation (hai bài toán suy luận thứ hai và 3 sau khi đã bàn về bài toán suy luận đầu tiên: point estimation)
 >
 >
 >
-> Sxx = (xi - x̄)², SxY = Σi (xi - x̄)(Yi - Ȳ)
+> Nhắc lại tí xíu, bữa giờ ta đã làm gì:
+>
+>
+>
+> Đầu tiên là tác giả ném cho mình hai công thức estimate sau đây cho α và β (của mô hình simple linear regression giả định yi là gía trị quan sát được của Y1,...Yn \~ n(α + β xi, σ²) với Yi uncorrelate (và với normal thì cũng là independent).
+>
+>
+>
+> β̂ = Sxy/Sxx
+>
+>
+>
+> α̂ = ȳ - β̂ x̄
+>
+>
+>
+> với Sxx = Σi (xi - x̄)², Sxy = Σi (xi - x̄)(yi - ȳ)
+>
+>
+>
+> Sau đó, ông mới dẫn ta đi biện minh cho công thức này theo 3 kiểu: Nói cách khác, 3 cách để dẫn đến cùng một công thức trên:
+>
+>
+>
+> Thứ nhất: Nếu đặt ra bài toán khớp đường thẳng đơn thuần là bài toán tối ưu: minimize α, β SSE (=Σi (yi - α - βxi)²) thì ta sẽ ra kết quả trên. Và điều này có nghĩa là, kết quả trên hoàn toàn không cần dựa trên giả định nào về phân phối xác suất của dữ liệu quan sát được. Do đó, kết quả này, theo cách biện minh này, hoàn toàn không phải là kết quả của một bài toán suy luận thống kê.
+>
+>
+>
+>
+>
+> Thứ hai: Ông bắt đầu đặt ra bài toán suy luận thống kê (point estimation), với giả định sau đây: x1,x2,...là những giá trị cố định cho trước. y1,y2,...là giá trị quan sát được của các biến ngẫu nhiên Y1,Y2,...có E\[Yi\] = α + βxi và Var(Yi) = σ². Và Y1,Y2,...uncorrelate.
+>
+>
+>
+> Với giả định này, ta mới xét linear estimator W(𝐘) = Σi diYi và chỉ ra rằng, nếu áp cái hàm Sxy/Sxx lên 𝐘, ta sẽ có một linear estimator (của β) có tính chất: β̂ là Best Linear Unbiased Estimator. Và tương tự, α̂ = Ȳ - β̂ x̄ cũng là BLUE của α.
+>
+>
+>
+>
+>
+> Cuối cùng: Ông dùng giả định đầy đủ: xi là giá trị cố định, yi là giá trị quan sát được của các biến ngẫu nhiên Y1,Y2...\~ n(α + βxi, σ²) uncorrelated (đồng nghĩa độc lập vì đây là normal). Và ta đi tìm point estimator của α và β theo các truyền thống: MLE. Và hóa ra β̂ và α̂ cũng là MLE của β và α. Còn MLE của σ² thì là cái này:
 >
 >
 >
@@ -2308,74 +2348,246 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> Theorem nói cả α̂, β̂ đều là normal: 
+> Cái này thì ko như β̂, α̂. Không phải là unbiased estimator của σ².
 >
 >
 >
-> β̂  = Σi (xi - x̄)(Yi - Ȳ)/Sxx
+> ---
 >
 >
 >
-> = Σi \[(xi - x̄)Yi - (xi - x̄)Ȳ\]/Sxx
+> Theorem nói cả α̂, β̂ đều là normal: Nói chung dùng Hệ quả 4.6.10 giải thích được hết.
 >
 >
 >
-> = Σi \[(xi - x̄)Yi/Sxx\] - Ȳ \[Σi(xi - x̄)\] / Sxx
+> Với β̂. Đầu tiên hãy nhớ, trước khi nó là best unbiased linear estimator, thì nó là linear estimator trước đã: β̂ = Σi diYi, (và với di = (xi-x̄)/Sxx khiến ta có the best unbiased) Mà Yi \~ n(α + βxi, σ²) nên theo bổ đề 4.6.10 mình đã học bữa trước (có video), thì tổng các linear function của các normal độc lập thì cũng là normal: β̂ cũng là một normal:
 >
 >
 >
-> Yi \~ n(α + βxi, σ²) ⇒ term đầu là tổng các linear function của Yi
+> n(Σi \[di E(Yi)\], Σi di²σ²)
 >
 >
 >
-> Yi là normal thì Ȳ cũng là normal (vì nó cũng là tổng các linear function của các Yi), nên - Ȳ \[Σi(xi - x̄)\] / Sxx cũng là normal
+> = n(E\[Σi diYi\], σ² Σi di²)
 >
 >
 >
-> Vậy đây là tổng hai normal, cũng là normal.
+> = n(E\[β̂\], σ²/Sxx)
 >
 >
 >
-> α̂ = Σi (Yi/n) + β̂ x̄
+> = n(β, σ²/Sxx) do đã chứng minh β̂ là unbiased linear estimator
 >
 >
 >
-> Với β̂ là normal thì đây là lại là tổng các linear function của các normal, cũng ra normal.
+> ---
 >
 >
 >
-> Nói chung dùng Hệ quả 4.6.10 giải thích được hết.
+>
+>
+> Với α̂: Ȳ - β̂ x̄
+>
+>
+>
+> = (1/n) Σi Yi - (Σi di Yi) x̄, với di = (xi-x̄)/Sxx
+>
+>
+>
+> = Σi (1/n)Yi - Σi diYix̄
+>
+>
+>
+> = Σi \[(1/n)Yi - diYix̄\]
+>
+>
+>
+> = Σi \[(1/n) - di x̄ \] Yi
+>
+>
+>
+> = Σi ci Yi với ci = (1/n) - di x̄
+>
+>
+>
+> Như vậy có thể thấy α̂ cũng là tổng các linear function của các Yi là các normal độc lập. Nên nó cũng là normal có:
+>
+>
+>
+> E\[α̂ \] = Σi ci E\[Yi\] = Σi ci (α + β xi) = Σi \[(1/n) - di x̄ \] (α + β xi)
+>
+>
+>
+> = Σi {\[(α/n) - \[(xi-x̄)/Sxx\] x̄ α + (β xi/n) - \[(xi-x̄)/Sxx\] x̄ β xi\]
+>
+>
+>
+> = Σi(α/n) - Σi \[(xi-x̄)/Sxx\] x̄ α + Σi(β xi/n) - Σi \[(xi-x̄)/Sxx\] x̄ β xi\]
+>
+>
+>
+> = Σi(α/n) - (x̄ α/ Sxx) Σi (xi-x̄) + (β/n) (Σi xi) - (β/Sxx) Σi \[(xi-x̄) x̄ xi\]
+>
+>
+>
+> = Σi(α/n) - 0 + (β/n) (Σi xi) - (β/Sxx) x̄ Σi \[(xi-x̄) xi\]
+>
+>
+>
+> = Σi(α/n) + (β/n) (Σi xi) - (β/Sxx) x̄ Σi \[(xi² - x̄xi) \]
+>
+>
+>
+> = Σi(α/n) + (β/n) (Σi xi) - (β/Sxx) x̄ Σi \[(xi² - 2x̄xi + x̄ ² + x̄xi - x̄ ²) \]
+>
+>
+>
+> = Σi(α/n) + (β/n) (Σi xi) - (β/Sxx) x̄ Σi \[(xi - x̄)² + x̄(xi - x̄ )\]
+>
+>
+>
+> = Σi(α/n) + (β/n) (Σi xi) - (β/Sxx) x̄ {Σi \[(xi - x̄)²\] + Σi x̄(xi - x̄ )}
+>
+>
+>
+> = Σi(α/n) + (β/n) (Σi xi) - (β/Sxx) x̄ {Σi \[(xi - x̄)²\] + x̄ Σi (xi - x̄ )}
+>
+>
+>
+> = Σi(α/n) + (β/n) (Σi xi) - (β/Sxx) x̄ Σi (xi - x̄)²
+>
+>
+>
+> = Σi(α/n) + (β/n) (Σi xi) - (β/Sxx) x̄ Sxx
+>
+>
+>
+> = Σi(α/n) + (β/n) (Σi xi) - βx̄
+>
+>
+>
+> = Σi(α/n) + βx̄ - βx̄
+>
+>
+>
+> = Σi(α/n)
+>
+>
+>
+> = α
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> Var(α̂ ) = Σi ci ² Var(Yi)
+>
+>
+>
+> = Σi \[(1/n) - di x̄ \]² σ²
+>
+>
+>
+> = σ² Σi \[(1/n²) - 2di x̄/n + di² x̄ ²\]
+>
+>
+>
+> = σ² \[Σi (1/n²) - 2 (x̄/n) Σi di + Σi di² x̄ ²\]
+>
+>
+>
+> = σ² \[Σi (1/n²) - 2 (x̄/n) Σi \[(xi-x̄)/Sxx\] + x̄ ² Σi di² \]
+>
+>
+>
+> = σ² \[Σi (1/n²) - 2 (x̄/n) Σi \[(xi-x̄)\] /Sxx + x̄ ² /Sxx \]
+>
+>
+>
+> = σ² \[Σi (1/n²) - 2 (x̄/n) × 0 / Sxx + x̄ ² /Sxx \]
+>
+>
+>
+> = σ² \[(1/n) + x̄ ² /Sxx \]
+>
+>
+>
+> = σ² (Sxx + nx̄ ²) /nSxx
+>
+>
+>
+> = (σ²/nSxx) (Σi (xi - x̄)² + nx̄ ²)
+>
+>
+>
+> = (σ²/nSxx) (Σi (xi² - 2 xix̄ + x̄²) + nx̄ ²)
+>
+>
+>
+> = (σ²/nSxx) (Σi xi² - 2 x̄ Σi xi + n x̄² + nx̄ ²)
+>
+>
+>
+> = (σ²/nSxx) (Σi xi² - 2n x̄ ² + nx̄² + nx̄ ²)
+>
+>
+>
+> = σ²\[Σixi² /nSxx)
+>
+>
+>
+> ---
+>
+>
+>
+> Cuối cùng là Cov(α̂, β̂). Dùng bổ đề 11.3.2 (làm sau)
 
 > [!TIP]
-> 🤖 **AI Check** — 🔴 Critical issues — ❌ **58/100** · ✗ Fix first
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú có nỗ lực tự chứng minh tính chuẩn của các ước lượng nhưng mắc lỗi sai bản chất khi áp dụng định lý cho các biến không độc lập và bỏ qua tính chất triệt tiêu cơ bản của độ lệch trung bình. Bạn cần biểu diễn trực tiếp các ước lượng thành tổ hợp tuyến tính của các biến ngẫu nhiên Y_i độc lập như sách hướng dẫn.
->
-> **🔴 Critical issues**
->
-> **1.** *"nên - Ȳ [Σi(xi - x̄)] / Sxx cũng là normal. Vậy đây là tổng hai normal, cũng là normal."*
->
-> Thứ nhất, đại lượng $\sum_i (x_i - \bar{x}) = 0$, do đó số hạng này triệt tiêu về 0 chứ không phải một biến ngẫu nhiên chuẩn. Thứ hai, việc suy luận 'tổng hai normal cũng là normal' rồi viện dẫn Hệ quả 4.6.10 là sai về mặt toán học vì Hệ quả 4.6.10 chỉ áp dụng cho tổ hợp tuyến tính của các biến ngẫu nhiên chuẩn ĐỘC LẬP (ở đây hai số hạng nếu có phụ thuộc vào nhau thì không tự suy ra phân phối chuẩn theo cách này). Cách chứng minh chuẩn xác của giáo trình là gộp lại thành $\hat{\beta} = \sum d_i Y_i$ trực tiếp từ các $Y_i$ độc lập.
->
-> **2.** *"α̂ = Σi (Yi/n) + β̂ x̄"*
->
-> Công thức này bị sai dấu (đúng phải là $\bar{Y} - \hat{\beta}\bar{x}$). Thêm vào đó, việc kết luận $\hat{\alpha}$ chuẩn vì là tổng tuyến tính của $\bar{Y}$ và $\hat{\beta}$ tiếp tục vi phạm giả định độc lập của Hệ quả 4.6.10. Sách giáo khoa đã phân tích $\hat{\alpha} = \sum c_i Y_i$ để tận dụng tính độc lập của các $Y_i$.
->
->
-> **🟡 Minor issues**
->
-> **1.** *"Sxx = (xi - x̄)²"*
->
-> Thiếu ký hiệu tổng $\sum_{i=1}^n$; công thức chính xác phải là $S_{xx} = \sum_{i=1}^n (x_i - \bar{x})^2$.
->
+> Ghi chú xuất sắc, nắm rất vững bức tranh tổng thể từ 3 góc độ tiếp cận (Tối ưu hình học, BLUE/Gauss-Markov, MLE/Normal) và tự thực hiện biến đổi đại số chi tiết, chính xác cho kỳ vọng và phương sai của các ước lượng.
 >
 > **✓ Strengths**
-> - Nhớ được hướng tiếp cận mấu chốt là sử dụng tính chất tổ hợp tuyến tính của biến chuẩn để chứng minh tính chuẩn của ước lượng OLS.
-> - Nắm được biểu thức phân tích $S_{xy}$ và cách triển khai khai triển đại số ban đầu của $\hat{\beta}$.
+> - Tổng kết cực kỳ rõ ràng và mạch lạc 3 góc độ tiếp cận mô hình hồi quy tuyến tính đơn (tối ưu hóa thuần túy SSE, định lý Gauss-Markov/BLUE, và mô hình xác suất Normal/MLE).
+> - Tự triển khai đầy đủ các bước đại số để tính kỳ vọng và phương sai của alpha mũ thay vì chỉ chép lại kết quả cuối cùng từ sách.
+> - Hiểu đúng bản chất của phân phối chọn mẫu (sampling distribution) là phân phối của thống kê mẫu đóng vai trò biến ngẫu nhiên.
 >
 > **💡 Deeper notes**
-> - Tính chất $\sum_{i=1}^n (x_i - \bar{x}) = 0$ là đẳng thức nền tảng trong hồi quy tuyến tính cổ điển, giúp đơn giản hóa các tổng chứa số hạng $(x_i - \bar{x})$ thành các trọng số cố định $c_i, d_i$.
-> - Hai biến ngẫu nhiên chuẩn có tổng là chuẩn khi và chỉ khi chúng phân phối chuẩn đồng thời (jointly normal), điều này được đảm bảo chính bởi vì cả hai đều là tổ hợp tuyến tính của cùng một vector các biến độc lập $Y$.
+> - Khi xét tính độc lập từ tính không tương quan (uncorrelated), điều kiện cần là các biến ngẫu nhiên phải có phân phối chuẩn đồng thời (jointly normal); trong mô hình hồi quy, điều này được đảm bảo do giả định các sai số/quan sát độc lập ngay từ đầu.
+> - Đoạn cuối bạn ghi chú sẽ dùng Bổ đề 11.3.2 để tính Cov(alpha mũ, beta mũ), lưu ý bổ đề này thường dựa trên công thức Cov(sum a_i Y_i, sum b_i Y_i) = sigma^2 sum a_i b_i khi các Y_i độc lập.
+
+**🔗 See also:** [Application of Lemma 11.2.7](#node-q19qd3o)
+
+<br>
+
+<a id="node-0c21ixk"></a>
+
+###### Independence of Regression Estimators and S2
+
+<p align="center"><kbd><img src="assets/fyxcnrtygot.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0z740q5v1uf.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Phần chứng minh α̂, β̂ và S² (unbiased estimator của σ²) độc lập ta sẽ tìm hiểu sau
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú tóm tắt đúng mục tiêu chính của đoạn tài liệu và chủ động đánh dấu phần chứng minh để tìm hiểu sau.
+>
+> **✓ Strengths**
+> - Xác định đúng kết quả quan trọng trong giáo trình: tính độc lập giữa các ước lượng tham số hồi quy (α̂, β̂) và phương sai mẫu S².
+> - Nhận diện chính xác vai trò của S² là ước lượng không chệch (unbiased estimator) của σ².
+>
+> **💡 Deeper notes**
+> - Tính độc lập này cần giả định lấy mẫu từ phân phối chuẩn (normal sampling), và việc chứng minh dựa trên tính trực giao thông qua việc hiệp phương sai bằng 0 (Lemma 11.3.2 và Lemma 5.3.3).
+
+**🔗 See also:** [Độc lập trung bình phương sai](./53_sampling_from_the_normal_distribution.md#node-qx3kch2) · [Lemma 11.3.2 Covariance of Linear Combinations](#node-26ktgyo) · [Residuals and Bias in Variance](#node-zj557yy)
 
 <br>
 
