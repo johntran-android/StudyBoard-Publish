@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1793658919735,
+  "publishedAt": 1793678461673,
   "sections": [
     {
       "title": "📋 Overview",
@@ -522,7 +522,7 @@
       "title": "5.3.4 The Jacobian matrix",
       "path": "pattern_recognition_machine_learning_cbishop/534_the_jacobian_matrix.md",
       "noteCount": 2,
-      "imageCount": 2
+      "imageCount": 7
     },
     {
       "title": "5.7 Ex",
@@ -544,5 +544,5 @@
     }
   ],
   "totalNotes": 505,
-  "totalImages": 821
+  "totalImages": 826
 }
