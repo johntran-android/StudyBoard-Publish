@@ -1,6 +1,6 @@
 # 5.3.4 The Jacobian matrix
 
-📊 **Progress:** `2` Notes | `2` Screenshots | `1` AI Reviews
+📊 **Progress:** `2` Notes | `7` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-begz3qw"></a>
@@ -136,20 +136,98 @@
 
 <a id="node-lf81kas"></a>
 
+### Jacobian Matrix Error Propagation
+
+<p align="center"><kbd><img src="assets/9rjaz5ryl7o.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ww7g01uten.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/yvv3uqe46me.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/uk2oysu96wd.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5a3ntj5i1wa.png" width="80%"></kbd></p>
+
 > [!NOTE]
-> ∂yk/∂xi = Σj ∂yk/∂aj ∂aj/∂xi (1)
+> f(x,y,z): df = ∂f/∂x dx + ∂f/∂y dy + ∂f/∂z dz (total differential: MIT 1802)
 >
 >
 >
-> yk = yk(
+> g(x): dg = g'(x) dx
 >
 >
 >
-> a1 = Σj w1j xj = w11x1 + ...+ w1i xi + ... + w10
+> x = x(u,v), y = y(u,v), z = z(u,v)
 >
 >
 >
-> a2 = Σj w2j xj = w21x1 + ...+ w2i xi + ... + w20
+> dx = ∂x/∂u du + ∂x/∂v dv
+>
+>
+>
+> dy = ∂y/∂u du + ∂y/∂v dv
+>
+>
+>
+> dz = ∂z/∂u du + ∂z/∂v dv
+>
+>
+>
+> df = ∂f/∂x (∂x/∂u du + ∂x/∂v dv) + ∂f/∂y (∂y/∂u du + ∂y/∂v dv) + ∂f/∂z (∂z/∂u du + ∂z/∂v dv)
+>
+>
+>
+> = (∂f/∂x ∂x/∂u + ∂f/∂y ∂y/∂u + ∂f/∂z ∂z/∂u) du + (∂f/∂x ∂x/∂v + ∂f/∂y ∂y/∂v + ∂f/∂z ∂z/∂v) dv
+>
+>
+>
+> ∂f/∂u =  (∂f/∂x ∂x/∂u + ∂f/∂y ∂y/∂u + ∂f/∂z ∂z/∂u)
+>
+>
+>
+> ∂f/∂v = (∂f/∂x ∂x/∂v + ∂f/∂y ∂y/∂v + ∂f/∂z ∂z/∂v)
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> ∂yk/∂xi = Σj ∂yk/∂⁽¹⁾aj ∂a⁽¹⁾j/∂xi
+>
+>
+>
+> yk = yk(a⁽¹⁾1, a⁽¹⁾2, a⁽¹⁾3)
+>
+>
+>
+> dyk = ∂yk/∂a⁽¹⁾1 da⁽¹⁾1 + ∂yk/∂a⁽¹⁾2 da⁽¹⁾2 + ∂yk/∂a⁽¹⁾3 da⁽¹⁾3
+>
+>
+>
+> = Σj ∂yk/∂a⁽¹⁾j da⁽¹⁾j
+>
+>
+>
+> ---
+>
+>
+>
+>  a⁽¹⁾1 =  a⁽¹⁾1(x1,x2,...,xi,..)
+>
+>
+>
+> = Σm w⁽¹⁾1m xm = w⁽¹⁾11x1 + ...+ w⁽¹⁾1i xi + ... + w⁽¹⁾10
+>
+>
+>
+> a⁽¹⁾2 = a⁽¹⁾2(x1,x2,...,xi,..) = 
+>
+>
+>
+> Σm w⁽¹⁾2m xm = w⁽¹⁾21x1 + ...+ w⁽¹⁾2i xi + ... + w⁽¹⁾20
 >
 >
 >
@@ -157,11 +235,201 @@
 >
 >
 >
-> nên ∂a1/∂xi = w1i, ∂a2/∂xi = w2i,..., ∂aj/∂xi = wji
+> da⁽¹⁾1 = ∂a⁽¹⁾1/∂x1 dx1 + ∂a⁽¹⁾1/∂x2 dx2 + ... + ∂a⁽¹⁾1/∂xi dxi + ... = Σs ∂a⁽¹⁾1/∂xs dxs
 >
 >
 >
-> (1) = Σj ∂yk/∂aj wji = Σj wji ∂yk/∂aj
+> da⁽¹⁾2 = ∂a⁽¹⁾2/∂x1 dx1 + ∂a⁽¹⁾2/∂x2 dx2 + ... + ∂a⁽¹⁾2/∂xi dxi + ... = Σs ∂a⁽¹⁾2/∂xs dxs
+>
+>
+>
+> da⁽¹⁾j = ∂a⁽¹⁾j/∂x1 dx1 + ∂a⁽¹⁾j/∂x2 dx2 + ... + ∂a⁽¹⁾j/∂xi dxi + ... = Σs ∂a⁽¹⁾j/∂xs dxs
+>
+>
+>
+> ..
+>
+>
+>
+> Lắp vào:
+>
+>
+>
+> dyk = Σj ∂yk/∂a⁽¹⁾j da⁽¹⁾j = Σj ∂yk/∂a⁽¹⁾j (Σs ∂a⁽¹⁾j/∂xs dxs)
+>
+>
+>
+> = Σj Σs (∂yk/∂a⁽¹⁾j) (∂a⁽¹⁾j/∂xs) dxs
+>
+>
+>
+> = Σs Σj (∂yk/∂a⁽¹⁾j) (∂a⁽¹⁾j/∂xs) dxs
+>
+>
+>
+> = Σj (∂yk/∂a⁽¹⁾j) (∂a⁽¹⁾j/∂x1) dx1 + Σj (∂yk/∂a⁽¹⁾j) (∂a⁽¹⁾j/∂x2) dx2 + ...+ Σj (∂yk/∂a⁽¹⁾j) (∂a⁽¹⁾j/∂xi) dxi + ...
+>
+>
+>
+> ∂yk/∂xi = Σj (∂yk/∂a⁽¹⁾j) (∂a⁽¹⁾j/∂xi)
+>
+>
+>
+> = Σj w⁽¹⁾ji (∂yk/∂a⁽¹⁾j) → 5.73
+>
+>
+>
+> ---
+>
+>
+>
+> ∂yk/∂a⁽¹⁾j:
+>
+>
+>
+> yk = yk(a⁽²⁾1, a⁽²⁾2,...)
+>
+>
+>
+> dyk = Σl ∂yk/∂a⁽²⁾l da⁽²⁾l
+>
+>
+>
+> ---
+>
+>
+>
+> a⁽²⁾1 = a⁽²⁾1(z⁽¹⁾1, z⁽¹⁾2,...)
+>
+>
+>
+> a⁽²⁾2 = a⁽²⁾2(z⁽¹⁾1, z⁽¹⁾2,...)
+>
+>
+>
+> a⁽²⁾l = a⁽²⁾l(z⁽¹⁾1, z⁽¹⁾2,...) 
+>
+>
+>
+> ⇒ da⁽²⁾l = ∂a⁽²⁾l/∂z⁽¹⁾1 dz⁽¹⁾1 + ∂a⁽²⁾l/∂z⁽¹⁾2 dz⁽¹⁾2 + ... = Σn ∂a⁽²⁾l/∂z⁽¹⁾n dz⁽¹⁾n
+>
+>
+>
+> mà z⁽¹⁾n = h(a⁽¹⁾n) ⇒ dz⁽¹⁾n = h'(a⁽¹⁾n) da⁽¹⁾n
+>
+>
+>
+> Nên da⁽²⁾l = Σn ∂a⁽²⁾l/∂z⁽¹⁾n h'(a⁽¹⁾n) da⁽¹⁾n
+>
+>
+>
+> Vậy dyk = Σl ∂yk/∂a⁽²⁾l da⁽²⁾l
+>
+>
+>
+> = Σl ∂yk/∂a⁽²⁾l \[Σn ∂a⁽²⁾l/∂z⁽¹⁾n h'(a⁽¹⁾n) da⁽¹⁾n\]
+>
+>
+>
+> = Σn Σl ∂yk/∂a⁽²⁾l ∂a⁽²⁾l/∂z⁽¹⁾n h'(a⁽¹⁾n) da⁽¹⁾n
+>
+>
+>
+> = Σl ∂yk/∂a⁽²⁾l ∂a⁽²⁾l/∂z⁽¹⁾1 h'(a⁽¹⁾1) da⁽¹⁾1 + Σl ∂yk/∂a⁽²⁾l ∂a⁽²⁾l/∂z⁽¹⁾2 h'(a⁽¹⁾2) da⁽¹⁾2 + ...
+>
+>
+>
+> ⇒ ∂yk/∂a⁽¹⁾j = Σl ∂yk/∂a⁽²⁾l ∂a⁽²⁾l/∂z⁽¹⁾j h'(a⁽¹⁾j)
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> ∂a⁽²⁾l/∂z⁽¹⁾j = w⁽²⁾lj (theo (1))
+>
+>
+>
+> .. = Σl ∂yk/∂a⁽²⁾l w⁽²⁾lj h'(a⁽¹⁾j)
+>
+>
+>
+> = h'(a⁽¹⁾j) Σl w⁽²⁾lj ∂yk/∂a⁽²⁾l → 5.47
+>
+>
+>
+> ---
+>
+>
+>
+>  Nếu yk = σ(a⁽²⁾k)
+>
+>
+>
+> ⇒ ∂yk/∂a⁽²⁾l = 0 với l ≠ k,
+>
+>
+>
+> ngược lại ∂yk/∂a⁽²⁾l = ∂yk/∂a⁽²⁾k = σ'(a⁽²⁾k) 
+>
+>
+>
+> Ghi là ∂yk/∂a⁽²⁾l = δkl σ'(a⁽²⁾l), hay trong sách là ∂yk/∂a⁽²⁾j = δkj σ'(a⁽²⁾j)
+>
+>
+>
+> Nếu yk = exp(a⁽²⁾k)/Σs exp(a⁽²⁾s) (softmax):
+>
+>
+>
+> ---
+>
+>
+>
+> Theo kết quả bữa trước tính đạo hàm hàm softmax (xem link)
+>
+>
+>
+> ∂yi/∂ak = yi \[𝐈\_{i=k} - yk\] , cũng là yi δik - yiyk
+>
+>
+>
+> ∂yk/∂al = yk δkl - yk yl
+>
+>
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> ∂yk/∂a⁽²⁾l = δkl yk - ykyl, hay
+>
+>
+>
+> trong sách là ∂yk/∂a⁽²⁾j = δkj yk - ykyj
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=kQ5U-bfAg2o)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, tự triển khai đạo hàm bằng vi phân toàn phần rõ ràng, mạch lạc và hoàn toàn chính xác theo các công thức (5.73) - (5.76) trong sách.
+>
+> **✓ Strengths**
+> - Sử dụng vi phân toàn phần (total differential) để suy ra quy tắc dây chuyền rất chặt chẽ và trực quan.
+> - Tự chứng minh chi tiết công thức lan truyền ngược cho Jacobian qua các tầng ẩn và các trường hợp hàm kích hoạt đầu ra (sigmoid, softmax).
+>
+> **💡 Deeper notes**
+> - Ký hiệu chỉ số tầng (1), (2) được áp dụng cho mạng 2 tầng (1 tầng ẩn), nhưng thuật toán đệ quy (5.74) có thể mở rộng tự nhiên cho mạng nhiều tầng ẩn bằng cách lặp lại bước lan truyền ngược này.
+
+**🔗 See also:** [Exercise 5.7 Softmax Derivative](./52_training.md#node-5kuxlzr)
 
 <br>
 
