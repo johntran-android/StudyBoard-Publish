@@ -1,6 +1,6 @@
 {
   "title": "Statistical Inference - Casella",
-  "publishedAt": 1793387992398,
+  "publishedAt": 1793721326310,
   "sections": [
     {
       "title": "📋 Overview",
@@ -180,7 +180,7 @@
       "title": "5.3 Sampling From The Normal Distribution",
       "path": "statistical_inference_casella/53_sampling_from_the_normal_distribution.md",
       "noteCount": 21,
-      "imageCount": 29
+      "imageCount": 30
     },
     {
       "title": "5.4 Order Statistic",
@@ -317,10 +317,10 @@
     {
       "title": "11.3 Simple Linear Regression",
       "path": "statistical_inference_casella/113_simple_linear_regression.md",
-      "noteCount": 27,
+      "noteCount": 28,
       "imageCount": 50
     }
   ],
-  "totalNotes": 929,
-  "totalImages": 1231
+  "totalNotes": 930,
+  "totalImages": 1232
 }
