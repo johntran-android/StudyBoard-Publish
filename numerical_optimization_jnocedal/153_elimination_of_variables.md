@@ -604,6 +604,8 @@
 > **💡 Deeper notes**
 > - Phép biến đổi này phân rã không gian $\mathbb{R}^n$ thành hai thành phần: thành phần nghiệm riêng (particular solution) phụ thuộc vào $b$ thông qua $Y(AY)^{-1}b$ (nằm trong không gian bổ sung của null space), và thành phần nghiệm thuần nhất $Zx_Z$ tự do nằm hoàn toàn trong không gian hạt nhân $\mathcal{N}(A)$.
 
+**🔗 See also:** [Null-Space Method](./162_direct_solution_of_kkt_system.md#node-ph9ro56)
+
 <br>
 
 <a id="node-nlqpdrl"></a>
