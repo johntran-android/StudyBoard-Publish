@@ -1,6 +1,6 @@
 # 4.5 Covariance & Correlation
 
-📊 **Progress:** `19` Notes | `29` Screenshots | `9` AI Reviews
+📊 **Progress:** `19` Notes | `29` Screenshots | `10` AI Reviews
 
 ---
 <a id="node-0rdjr6h"></a>
@@ -369,6 +369,26 @@
 >
 > GIÁO SƯ CASELLA LƯU Ý THEOREM NÀY KO HỀ NÓI VỀ CHIỀU NGƯỢC 
 > LẠI, TỨC NẾU COV = 0 CHƯA CHẮC X, Y ĐỘC LẬP
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất tốt, bạn đã chủ động chứng minh chi tiết công thức E(XY) = E(X)E(Y) thay vì chỉ thừa nhận như sách, và nắm rõ tính một chiều của định lý.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Cov(X,Y) = 0 ⇨ Corr(X,Y) = 0"*
+>
+> Cần điều kiện cả hai biến ngẫu nhiån đều có phương sai hỡu hạn và dương (0 < \sigma_X, \sigma_Y < \infty) thì hệ số tương quan mới xác định và bằng 0.
+>
+>
+> **✓ Strengths**
+> - Bạn đã chủ động tự chứng minh công thức E[XY] = E[X]E[Y] cho trường hợp biến liên tục bằng cách tách tích phân hai lớp chính xác.
+> - Nắm vững lưu ý quan trọng của giáo trình về việc chiều ngược lại không đúng (Cov bằng 0 chưa chắc đã độc lập).
+>
+> **💡 Deeper notes**
+> - Việc tách tích phân kép về mặt toán học chặt chẽ cần điều kiện khả tích tuyệt đối E|X| < \infty và E|Y| < \infty (theo định lý Fubini).
+> - Trường hợp biến rời rạc chứng minh hoàn toàn tương tự bằng cách thay dấu tích phân bằng dấu tổng trên hàm khối xác suất p(x,y).
 
 **🔗 See also:** [Điều kiện độc lập tổ hợp Normal](./53_sampling_from_the_normal_distribution.md#node-91dxhtz)
 
