@@ -1,6 +1,6 @@
 # 5.3 Sampling From The Normal Distribution
 
-📊 **Progress:** `21` Notes | `29` Screenshots | `16` AI Reviews
+📊 **Progress:** `21` Notes | `30` Screenshots | `16` AI Reviews
 
 ---
 <a id="node-lmu32b0"></a>
@@ -1246,16 +1246,14 @@
 
 <p align="center"><kbd><img src="assets/900tplcxb4.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/0t0dxnfw2c5.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là tác giả nói có thể chứng minh sample mean và sample variance độc lập bằng cách khác, thay vì như lúc nãy ta đã làm là chứng minh joint pdf của chúng tách ra. Thì đầu tiên sẽ biết qua bổ đề sau:
 >
 >
 >
-> Đại khái nó nói là: cho X1,...Xn là các rv \~ normal(μj, σj²) j = 1,...n độc lập
->
->
->
-> thì với các constant aij, brj với j=1,...n, i = 1,...k, r = 1,...m. Ta định nghiã:
+> thì với các constant aij, brj với j=1,...n, i = 1,...k, r = 1,...m, k+m ≤ n. Ta định nghiã:
 >
 >
 >
@@ -1279,32 +1277,94 @@
 >
 >
 >
-> a)Ui và Vr độc lập khi và chỉ khi Cov(Ui, Vr) = 0 và hơn nữa Cov(Ui, Vr) = Σj aijbrj σj²
+> a)Ui và Vr độc lập khi và chỉ khi Cov(Ui, Vr) = 0 và hơn nữa Cov(Ui, Vr) = Σj aij brj σj²
 >
 >
 >
 > b) random vector (U1,...Uk) và (V1,...Vm) độc lập khi và chỉ khi Ui độc lập với Vr với mọi cặp i, r
+>
+>
+>
+>
+>
+> ---
+>
+>
+>
+> Ví dụ 
+>
+>
+>
+> Đại khái nó nói là: cho X1,...Xn là các rv \~ normal(μj, σj²) j = 1,...n độc lập
+>
+>
+>
+> X1,X2,X3,X4
+>
+>
+>
+> a11,a12,a21,a22:
+>
+>
+>
+> a11X1 + a12X2 = U1
+>
+>
+>
+> a21X1 + a22X2 = U2
+>
+>
+>
+> 𝐔 = (U1,U2)
+>
+>
+>
+> b11,b12,b21,b22:
+>
+>
+>
+> b11X1 + b12X2 = V1
+>
+>
+>
+> b21X1 + b22X2 = V2
+>
+>
+>
+>
+>
+>
+>
+> 𝐕 = (V1,V2)
+>
+>
+>
+> U1, V2 độc lập ⇔ Cov(U1,V2) = 0.
+>
+>
+>
+>  Cov(Ui, Vr) = Σj aij brj σj² 
+>
+>
+>
+> i = 1, r = 2, Cov(U1,V2) = Σj a1j b2j σj² =  a11b21 σ1² + a12b22 σ2²
+
+📹 [Xem video trên YouTube](https://youtu.be/JcDY12qJn80)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú tóm tắt rất chính xác nội dung và ý nghĩa của Bổ đề 5.3.3 về tính độc lập của các tổ hợp tuyến tính từ mẫu chuẩn.
->
-> **🟡 Minor issues**
->
-> **1.** *"thì với các constant aij, brj với j=1,...n, i = 1,...k, r = 1,...m."*
->
-> Ghi chú đã bỏ sót điều kiện ràng buộc về số chiều k + m ≤ n được nêu trong bổ đề gốc.
->
+> Ghi chú rất tốt, tóm tắt chính xác nội dung của Bổ đề 5.3.3 và tự lấy được ví dụ chỉ số cụ thể để hiểu rõ công thức tính hiệp phương sai.
 >
 > **✓ Strengths**
-> - Nắm bắt chính xác bản chất Ui và Vr là các tổ hợp tuyến tính (linear combinations) của các biến ngẫu nhiên chuẩn độc lập.
-> - Tóm tắt đúng và đầy đủ hai kết quả trọng tâm: độc lập tương đương với hiệp phương sai bằng 0, và tính độc lập của hai vector tương đương với sự độc lập đôi một giữa từng thành phần.
+> - Nắm vững ý nghĩa cốt lõi của bổ đề: chuyển việc chứng minh độc lập giữa các tổ hợp tuyến tính về kiểm tra hiệp phương sai bằng 0 đối với các biến chuẩn.
+> - Tự triển khai ví dụ với chỉ số cụ thể (i=1, r=2) để tính Cov(U1, V2) hoàn toàn chính xác theo công thức của bổ đề.
 >
 > **💡 Deeper notes**
-> - Bổ đề này vận dụng tính chất đặc thù của phân phối chuẩn nhiều chiều: đối với các biến ngẫu nhiên có phân phối chuẩn đồng thời, không tương quan (Cov = 0) tương đương với độc lập, điều vốn không tự động đúng ở các phân phối tổng quát.
+> - Tính chất 'Cov = 0 tương đương độc lập' chỉ đúng vì các biến U_i, V_r là tổ hợp tuyến tính của các biến ngẫu nhiên chuẩn độc lập, do đó chúng có phân phối chuẩn đồng thời (jointly normal). Với các phân phối tổng quát khác, không tương quan (Cov = 0) không suy ra độc lập.
+> - Bổ đề yêu cầu điều kiện k + m ≤ n để đảm bảo số lượng biến ngẫu nhiên mới không vượt quá số biến chuẩn độc lập ban đầu.
 
-**🔗 See also:** [Lemma 11.3.2 Covariance of Linear Combinations](./113_simple_linear_regression.md#node-26ktgyo)
+**🔗 See also:** [Lemma 11.3.2 Covariance of Linear Combinations](./113_simple_linear_regression.md#node-26ktgyo) · [Independence of Regression Estimators and S2](./113_simple_linear_regression.md#node-0c21ixk)
 
 <br>
 
@@ -1478,7 +1538,7 @@
 > **💡 Deeper notes**
 > - Để suy ra 'Cov = 0 kéo theo độc lập' cho biến phân phối chuẩn, điều kiện cần là cặp (Ui, Vr) phải có phân phối chuẩn đồng thời (bivariate/joint normal), chứ không chỉ riêng rẽ từng biến có phân phối chuẩn biên (marginal normal). Ở đây điều này luôn thỏa mãn vì cả Ui và Vr đều là tổ hợp tuyến tính từ cùng một vector các biến độc lập X_j.
 
-**🔗 See also:** [Định lý Độc lập Hiệp phương sai](./45_covariance_correlation.md#node-o2ergsg) · [Chứng minh tổng biến chuẩn](./46_multi_variate_distribution.md#node-uaywczk) · [linked note](./57_ex.md#node-vmjgiar)
+**🔗 See also:** [Định lý Độc lập Hiệp phương sai](./45_covariance_correlation.md#node-o2ergsg) · [Chứng minh tổng biến chuẩn](./46_multi_variate_distribution.md#node-uaywczk) · [Independence of Linear Combinations](./57_ex.md#node-vmjgiar)
 
 <br>
 
