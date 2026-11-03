@@ -1,6 +1,6 @@
 # 5.3 Sampling From The Normal Distribution
 
-📊 **Progress:** `21` Notes | `30` Screenshots | `16` AI Reviews
+📊 **Progress:** `21` Notes | `31` Screenshots | `16` AI Reviews
 
 ---
 <a id="node-lmu32b0"></a>
@@ -1248,6 +1248,8 @@
 
 <p align="center"><kbd><img src="assets/0t0dxnfw2c5.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/095lvpzzcchf.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là tác giả nói có thể chứng minh sample mean và sample variance độc lập bằng cách khác, thay vì như lúc nãy ta đã làm là chứng minh joint pdf của chúng tách ra. Thì đầu tiên sẽ biết qua bổ đề sau:
 >
@@ -1291,7 +1293,7 @@
 >
 >
 >
-> Ví dụ 
+> Ví dụ
 >
 >
 >
@@ -1299,70 +1301,60 @@
 >
 >
 >
-> X1,X2,X3,X4
+> X1,X2 (n=2)
 >
 >
 >
-> a11,a12,a21,a22:
+> a11,a12:
 >
 >
 >
-> a11X1 + a12X2 = U1
+> a11X1 + a12X2 = U
 >
 >
 >
-> a21X1 + a22X2 = U2
+> 𝐔 = (U)
 >
 >
 >
-> 𝐔 = (U1,U2)
+> b11,b12:
 >
 >
 >
-> b11,b12,b21,b22:
+> b11X1 + b12X2 = V
 >
 >
 >
-> b11X1 + b12X2 = V1
+> 𝐕 = (V)
 >
 >
 >
-> b21X1 + b22X2 = V2
+> U,V độc lập ⇔ Cov(U,V) = 0.
 >
 >
 >
+>  Cov(Ui, Vr) = Σj aij brj σj²
 >
 >
 >
->
-> 𝐕 = (V1,V2)
->
->
->
-> U1, V2 độc lập ⇔ Cov(U1,V2) = 0.
->
->
->
->  Cov(Ui, Vr) = Σj aij brj σj² 
->
->
->
-> i = 1, r = 2, Cov(U1,V2) = Σj a1j b2j σj² =  a11b21 σ1² + a12b22 σ2²
+> Cov(U,V) = Σj a1j b1j σj² = a11b11 σ1² + a12b12 σ2²
 
-📹 [Xem video trên YouTube](https://youtu.be/JcDY12qJn80)
+📹 Video 1: [Vì Sao Uncorrelated Suy Ra Độc Lập Ở Phân Phối Normal?](https://youtu.be/JcDY12qJn80)
+
+📹 Video 2: [Cách chứng minh U, V độc lập khi và chỉ khi Cov(U, V) = 0?](https://www.youtube.com/watch?v=Zs9nPFueweA)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú rất tốt, tóm tắt chính xác nội dung của Bổ đề 5.3.3 và tự lấy được ví dụ chỉ số cụ thể để hiểu rõ công thức tính hiệp phương sai.
+> Ghi chú tóm tắt rất tốt nội dung và ý nghĩa của Bổ đề 5.3.3, đồng thời cụ thể hóa chuẩn xác qua ví dụ với n = 2.
 >
 > **✓ Strengths**
-> - Nắm vững ý nghĩa cốt lõi của bổ đề: chuyển việc chứng minh độc lập giữa các tổ hợp tuyến tính về kiểm tra hiệp phương sai bằng 0 đối với các biến chuẩn.
-> - Tự triển khai ví dụ với chỉ số cụ thể (i=1, r=2) để tính Cov(U1, V2) hoàn toàn chính xác theo công thức của bổ đề.
+> - Nắm bắt chính xác bản chất: các biến ngẫu nhiên mới U và V là tổ hợp tuyến tính của các biến chuẩn độc lập.
+> - Hiểu đúng tính chất then chốt của phân phối chuẩn nhiều chiều: không tương quan (hiệp phương sai bằng 0) tương đương với độc lập.
+> - Áp dụng công thức tính hiệp phương sai rất chính xác vào ví dụ cụ thể hai biến (n = 2).
 >
 > **💡 Deeper notes**
-> - Tính chất 'Cov = 0 tương đương độc lập' chỉ đúng vì các biến U_i, V_r là tổ hợp tuyến tính của các biến ngẫu nhiên chuẩn độc lập, do đó chúng có phân phối chuẩn đồng thời (jointly normal). Với các phân phối tổng quát khác, không tương quan (Cov = 0) không suy ra độc lập.
-> - Bổ đề yêu cầu điều kiện k + m ≤ n để đảm bảo số lượng biến ngẫu nhiên mới không vượt quá số biến chuẩn độc lập ban đầu.
+> - Điều kiện k + m ≤ n trong bổ đề xuất phát từ việc bảo đảm không gian số chiều khi xây dựng phép biến đổi tuyến tính trực giao/chính quy (thường dùng biến đổi trực giao để chuyển đổi biến trong chứng minh đầy đủ).
 
 **🔗 See also:** [Lemma 11.3.2 Covariance of Linear Combinations](./113_simple_linear_regression.md#node-26ktgyo) · [Independence of Regression Estimators and S2](./113_simple_linear_regression.md#node-0c21ixk)
 
@@ -1397,7 +1389,7 @@
 >
 >
 >
-> = E(XY) - EXEY - EYEX + EXEY | linearity
+> = E(XY) - EXEY - EYEX + EXEY | linearity E\[cX\] = cE\[X\]
 >
 >
 >
@@ -1406,6 +1398,70 @@
 >
 >
 > Mà với X, Y independent thì E(XY) = EXEY (chứng minh bằng cách dùng 2D lotus, sau đó phân tách joint pdf thành tích marginal pdf để đưa về tích hai tích phân ⇨ EX EY)
+>
+>
+>
+> X, pmf P(X=x), x1,x2,x3
+>
+>
+>
+> E\[X\] = P(X=x1)x1 + P(X=x2)x2 + P(X=x3)x3 = Σi P(X=xi) xi
+>
+>
+>
+> X = ∫x fX(x) dx
+>
+>
+>
+> Y = g(X), g(u) = u²
+>
+>
+>
+> LOTUS: E\[Y\] = Σi P(X=xi) g(xi)
+>
+>
+>
+> E\[Y\] = ∫g(x) fX(x) dx
+>
+>
+>
+> 2D LOTUS: X,Y: joint pdf f(x,y). Z = g(X,Y) = XY
+>
+>
+>
+> E\[Z\] = ∫∫g(x,y)f(x,y)dxdy = ∫∫xy f(x,y)dxdy
+>
+>
+>
+> ---
+>
+>
+>
+> E(XY) = ∫∫xy f(x,y)dxdy 
+>
+>
+>
+> Nhờ X, Y độc lập
+>
+>
+>
+> = ∫∫xy f(x)f(y)dxdy
+>
+>
+>
+> = ∫yf(y) (∫x f(x)dx) dy
+>
+>
+>
+> = ∫yf(y) (EX) dy
+>
+>
+>
+> = EX ∫yf(y)dy
+>
+>
+>
+> = EX EY
 >
 >
 >
@@ -1461,7 +1517,7 @@
 >
 >
 >
-> = Σj=1:n aijbrj E(Xj - μj)² + Σk=1:n, h=1:n, k≠h aik brh E(Xk - μk)(Xh - μh)
+> = Σj=1:n aijbrj E\[(Xj - μj)²\] + Σk=1:n, h=1:n, k≠h aik brh E(Xk - μk)(Xh - μh)
 >
 >
 >
@@ -1593,6 +1649,28 @@
 >
 >
 >
+> X, fX(x), Y = g(X) 
+>
+>
+>
+> y = g(x) ⇔ x = g⁻¹(y)
+>
+>
+>
+> y = g(x) = 2x + 1  ⇔ x = (y-1)/2 = g⁻¹(y)
+>
+>
+>
+> fY(y) = fX(x) |d/dy x|
+>
+>
+>
+> fY(y) = fX(g⁻¹(y)) |d/dy g⁻¹(y)|
+>
+>
+>
+>
+>
 > Vấn đề là để dùng theorem này, ta cần có MAPPING 1-1 TỪ SUPPORT SET CỦA X, Y TỚI ẢNH CỦA NÓ: Là sao?
 >
 >
@@ -1677,11 +1755,11 @@
 >
 >
 >
-> ⇒ x1 = (b2u - a2v) / (a1b2 - b1a2),
+> ⇒ x1 = h1(u,v) = (b2u - a2v) / (a1b2 - b1a2), 
 >
 >
 >
-> Và x2 = (a1v - b1u) / (a1b2 - b1a2) (đây chính là h1, h2)
+> Và x2 = h2(u,v) = (a1v - b1u) / (a1b2 - b1a2) (đây chính là h1, h2)
 >
 >
 >
@@ -1761,7 +1839,25 @@
 >
 >
 >
-> = \[1/2π\] exp{ -1 / \[2(a1b2 - b1a2)²\] \[(b2u - a2v)² + (a1v - b1u)²\] } |J| (1)
+> Xét (\[(b2u - a2v) / (a1b2 - b1a2)\]² + \[(a1v - b1u) / (a1b2 - b1a2)\]²) 
+>
+>
+>
+> = (b2u - a2v)² / (a1b2 - b1a2)² + (a1v - b1u)² / (a1b2 - b1a2)² 
+>
+>
+>
+> = \[(b2u - a2v)² + (a1v - b1u)²\] / (a1b2 - b1a2)² 
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> = \[1/2π\] exp{ \[-1 / \[2(a1b2 - b1a2)²\] \[(b2u - a2v)² + (a1v - b1u)²\] } |J| (1)
 >
 >
 >
@@ -1781,15 +1877,25 @@
 >
 >
 >
-> Như vậy (1) = \[1/2π\] exp{ -1 / \[2(a1b2 - b1a2)²\] \[(b1² + b2²)u² + (a1² + a2²)v²\] } |J|
+> Như vậy (1) = \[1/2π\] exp{ C \[(b1² + b2²)u² + (a1² + a2²)v²\] } |J|
 >
 >
 >
-> = \[1/2π\] exp{ -1 / \[2(a1b2 - b1a2)²\] \[(b1² + b2²)u² } × exp {-1 / \[2(a1b2 - b1a2)²\]\[a1² + a2²)v²\] } |J|
+> Với C = \[-1 / \[2(a1b2 - b1a2)²\]
+>
+>
+>
+> = \[1/2π\] exp{ C (b1² + b2²)u² + C(a1² + a2²)v² } |J|
+>
+>
+>
+> = \[1/2π\] exp{ C(b1² + b2²)u² } × exp {C(a1² + a2²)v²\] } |J|
 >
 >
 >
 > Tới đây là đủ để thấy joint pdf của U, V phân tách ⇨ U, V độc lập ⇨ Chứng minh xong phần a)
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=8HZ_nMMTekM)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
