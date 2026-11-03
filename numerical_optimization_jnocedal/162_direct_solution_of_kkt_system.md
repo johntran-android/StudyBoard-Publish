@@ -1,6 +1,6 @@
 # 16.2 Direct solution of KKT system
 
-📊 **Progress:** `4` Notes | `11` Screenshots | `4` AI Reviews
+📊 **Progress:** `5` Notes | `14` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-bstsx53"></a>
@@ -433,6 +433,75 @@
 ###### Null-Space Method
 
 <p align="center"><kbd><img src="assets/drsohijcx4.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6x9c7agsodv.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/7s3j6h.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ipv2af.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Để hiểu đoạn này cần recall lại: p luôn có thể thể thể hiện bởi = Y py + Z pz với Y là matrix bất kì nào giúp \[Y|Z\] là non-singular (do tạo basis của Rⁿ)
+>
+>
+>
+> Có nghĩa là, nếu ta kiếm được matrix Y như vậy, và Z là nullspace basis matrix, thì có thể thay p trong hệ KKT bởi = Y py + Z pz. Từ đó đi giải py và pz.
+>
+>
+>
+>
+>
+>
+>
+> ---
+>
+>
+>
+> Vì sao A \[Y|Z\] thì rank vẫn = m. Nhân matrix full rank không đổi rank?
+>
+>
+>
+> Tổng quát hơn, ôn bài toán đại số tuýến tính: Vì sao rank (AB) = rank A nếu B full rank (non-singular / invertible)?
+>
+>
+>
+> B full rank (non-singular / invertible) , tức B⁻¹ tồn tại.
+>
+>
+>
+> ABB⁻¹ = A
+>
+>
+>
+> C(AB) ⊆ C(A): u ∈ C(AB) ⇒ u = Σi α (AB)i = Σi α (Σj bij Aj) = Σi,j αbij Aj ⇒ u ∈ C(A)
+>
+>
+>
+> C(ABB⁻¹) ⊆ C(AB) ⇔ C(A) ⊆ C(AB): Chứng minh hoàn toàn tương tự.
+>
+>
+>
+> Vậy C(AB) ≡ C(A). nên rank AB = rank A. 
+>
+>
+>
+> ---
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=otwKnGhj1vE)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất tốt, nắm vững bản chất việc phân rã không gian qua ma trận cơ sở [Y|Z] và tự chứng minh chặt chẽ bổ đề đại số tuyến tính rank(AB) = rank(A) khi B khả nghịch.
+>
+> **✓ Strengths**
+> - Hiểu chính xác cơ chế biểu diễn vector p thông qua cơ sở kết hợp của không gian con triệt tiêu và phần bù [Y|Z].
+> - Chứng minh đúng đắn và súc tích tính bất biến của rank khi nhân với ma trận khả nghịch thông qua quan hệ không gian cột C(AB) = C(A).
+>
+> **💡 Deeper notes**
+> - Từ rank(A[Y | Z]) = rank([AY | 0]) = m, do phần bù là ma trận 0 kích thước m × (n-m), ta suy ra trực tiếp ma trận vuông AY (kích thước m × m) có đúng rank m, chứng minh AY khả nghịch.
+
+**🔗 See also:** [Karush-Kuhn-Tucker Matrix Formulation](./161_equality_constrained_quadratic_programs.md#node-feah6f9) · [Reduction Strategies for Linear Constraints](./153_elimination_of_variables.md#node-oyz2ue4)
 
 <br>
 
