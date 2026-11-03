@@ -2048,7 +2048,7 @@
 > **💡 Deeper notes**
 > - Ký hiệu hàm chỉ số $\mathbb{I}_{i=k}$ trong toán học và các sách giáo trình (như Bishop) thường được biểu diễn gọn gàng hơn bằng delta Kronecker $I_{ik}$ (hoặc $\delta_{ik}$).
 
-**🔗 See also:** [Logistic Sigmoid Error Derivative](./57_ex.md#node-p2ztaoo) · [Error Function Derivatives Exercises](./57_ex.md#node-xxadbu9)
+**🔗 See also:** [Logistic Sigmoid Error Derivative](./57_ex.md#node-p2ztaoo) · [Error Function Derivatives Exercises](./57_ex.md#node-xxadbu9) · [Jacobian Matrix Error Propagation](./534_the_jacobian_matrix.md#node-lf81kas)
 
 <br>
 
