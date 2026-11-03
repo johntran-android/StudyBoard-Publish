@@ -1,6 +1,6 @@
 # 5.3.4 The Jacobian matrix
 
-📊 **Progress:** `2` Notes | `7` Screenshots | `2` AI Reviews
+📊 **Progress:** `3` Notes | `9` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-begz3qw"></a>
@@ -415,7 +415,9 @@
 >
 > trong sách là ∂yk/∂a⁽²⁾j = δkj yk - ykyj
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=kQ5U-bfAg2o)
+📹 Video 1: [Làm Sao Dùng Vi Phân Toàn Phần Tính Ma Trận Jacobian?](https://youtu.be/oc3MeNvCth0)
+
+📹 Video 2: [Cách tính ma trận Jacobian ∂yk/∂xi bằng vi phân toàn phần?](https://www.youtube.com/watch?v=kQ5U-bfAg2o)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -430,6 +432,71 @@
 > - Ký hiệu chỉ số tầng (1), (2) được áp dụng cho mạng 2 tầng (1 tầng ẩn), nhưng thuật toán đệ quy (5.74) có thể mở rộng tự nhiên cho mạng nhiều tầng ẩn bằng cách lặp lại bước lan truyền ngược này.
 
 **🔗 See also:** [Exercise 5.7 Softmax Derivative](./52_training.md#node-5kuxlzr)
+
+<br>
+
+<a id="node-ab9nwmf"></a>
+
+#### Evaluating the Jacobian Matrix
+
+<p align="center"><kbd><img src="assets/6tilpffi60q.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/uk2oysu96wd.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> 5.73: ∂yk/∂xi = Σj w⁽¹⁾ji (∂yk/∂a⁽¹⁾j)
+>
+>
+>
+> 5.74: ∂yk/∂a⁽¹⁾j = h'(a⁽¹⁾j) Σl w⁽²⁾lj ∂yk/∂a⁽²⁾l
+>
+>
+>
+> 5.75: ∂yk/∂a⁽²⁾j = δkj σ'(aj)
+>
+>
+>
+> 5.76: ∂yk/∂a⁽²⁾j = δkj yk - yk yj
+>
+>
+>
+> Như vậy quy trình sẽ là như sau (để tính ra Jacobian: đạo hàm của vector output 𝐲 đối với input vector 𝐱:
+>
+>
+>
+> Nhập input 𝐱, forward prop một lần để có các giá trị trung gian: 𝐚⁽¹⁾, 𝐚⁽²⁾, 𝐳⁽¹⁾
+>
+>
+>
+> Với mỗi phần tử của y: ví dụ yk backprop để tính ∂yk/∂a⁽²⁾j theo 5.75 hoặc 5.76. rồi dùng 5.74 tính ∂yk/∂a⁽¹⁾j và dùng 5.73 tính ∂yk/∂xi. Mỗi lần như vậy ta có đủ 1 hàng của J, ví dụ k=1, ta có được hàng 1: \[∂yk/∂x1, ∂yk/∂x2, ...\]
+>
+>
+>
+> ---
+>
+>
+>
+> Tác giả có nhắc đến Forward propagation formalism, cái này trong Nocedal đã học, chính là Forward Mode. (cái backpropagation ở đây chính là Backward Mode (gồm Forward Sweep + Backward Sweep)
+>
+>
+>
+> ---
+>
+>
+>
+> Cuối cùng là, tương tự, ta có thể dùng numerical gradient để check. Nguyên lí cũng tương tự với ∇E (∂E/∂wi)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác và mạch lạc quy trình tính ma trận Jacobian theo từng bước, đồng thời liên hệ chuẩn xác với Forward Mode và Reverse Mode trong vi phân tự động (Automatic Differentiation).
+>
+> **✓ Strengths**
+> - Tóm tắt đúng và đầy đủ quy trình tính ma trận Jacobian: 1 lần forward pass, sau đó với mỗi output y_k thực hiện 1 lần backprop để tính một hàng của ma trận Jacobian.
+> - Liên hệ rất chuẩn xác giữa thuật toán lan truyền tiến/lùi với Forward Mode và Reverse Mode (Forward/Backward Sweep) trong môn tối ưu / Automatic Differentiation.
+>
+> **💡 Deeper notes**
+> - Về chi phí tính toán: phương pháp Backprop (Reverse mode) mất K lần backward sweeps (với K là số output units), phù hợp khi K < D; còn Forward propagation formalism (Forward mode) mất D lần forward sweeps (với D là số input dimensions), tối ưu hơn khi D < K.
 
 <br>
 
