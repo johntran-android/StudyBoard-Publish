@@ -1,6 +1,6 @@
 # 5.3.4 The Jacobian matrix
 
-📊 **Progress:** `3` Notes | `9` Screenshots | `3` AI Reviews
+📊 **Progress:** `3` Notes | `10` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-begz3qw"></a>
@@ -443,6 +443,8 @@
 
 <p align="center"><kbd><img src="assets/uk2oysu96wd.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/47fapzfb327.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > 5.73: ∂yk/∂xi = Σj w⁽¹⁾ji (∂yk/∂a⁽¹⁾j)
 >
@@ -485,6 +487,8 @@
 >
 >
 > Cuối cùng là, tương tự, ta có thể dùng numerical gradient để check. Nguyên lí cũng tương tự với ∇E (∂E/∂wi)
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=SamIRKfN5no)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
