@@ -436,9 +436,9 @@
 
 <p align="center"><kbd><img src="assets/6x9c7agsodv.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/7s3j6h.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/wbpev76x61e.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/ipv2af.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/u8i4dh9xd4.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Để hiểu đoạn này cần recall lại: p luôn có thể thể thể hiện bởi = Y py + Z pz với Y là matrix bất kì nào giúp \[Y|Z\] là non-singular (do tạo basis của Rⁿ)
@@ -487,7 +487,7 @@
 >
 > ---
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=otwKnGhj1vE)
+📹 [Xem video trên YouTube](https://youtu.be/otwKnGhj1vE)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
