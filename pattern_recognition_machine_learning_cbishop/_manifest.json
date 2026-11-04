@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1793835505658,
+  "publishedAt": 1793836654603,
   "sections": [
     {
       "title": "📋 Overview",
@@ -519,16 +519,22 @@
       "imageCount": 3
     },
     {
-      "title": "5.3.5 Hessian",
-      "path": "pattern_recognition_machine_learning_cbishop/535_hessian.md",
-      "noteCount": 3,
-      "imageCount": 9
-    },
-    {
       "title": "5.3.4 The Jacobian matrix",
       "path": "pattern_recognition_machine_learning_cbishop/534_the_jacobian_matrix.md",
       "noteCount": 3,
       "imageCount": 10
+    },
+    {
+      "title": "5.4 The Hessian Matrix",
+      "path": "pattern_recognition_machine_learning_cbishop/54_the_hessian_matrix.md",
+      "noteCount": 3,
+      "imageCount": 10
+    },
+    {
+      "title": "5.4.2 Outer product approximation",
+      "path": "pattern_recognition_machine_learning_cbishop/542_outer_product_approximation.md",
+      "noteCount": 0,
+      "imageCount": 2
     },
     {
       "title": "5.7 Ex",
@@ -550,5 +556,5 @@
     }
   ],
   "totalNotes": 509,
-  "totalImages": 838
+  "totalImages": 841
 }
