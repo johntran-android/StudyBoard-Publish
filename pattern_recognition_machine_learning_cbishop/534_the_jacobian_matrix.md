@@ -488,7 +488,7 @@
 >
 > Cuối cùng là, tương tự, ta có thể dùng numerical gradient để check. Nguyên lí cũng tương tự với ∇E (∂E/∂wi)
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=SamIRKfN5no)
+📹 [Xem video trên YouTube](https://youtu.be/SamIRKfN5no)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
