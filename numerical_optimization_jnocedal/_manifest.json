@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1793735294429,
+  "publishedAt": 1793836105280,
   "sections": [
     {
       "title": "📋 Overview",
@@ -129,8 +129,8 @@
       "imageCount": 29
     },
     {
-      "title": "8.2 Automatic differentiation(*exᵀremely important for AI)",
-      "path": "numerical_optimization_jnocedal/82_automatic_differentiationexremely_important_for_ai.md",
+      "title": "8.2 Automatic differentiation",
+      "path": "numerical_optimization_jnocedal/82_automatic_differentiation.md",
       "noteCount": 36,
       "imageCount": 46
     },
