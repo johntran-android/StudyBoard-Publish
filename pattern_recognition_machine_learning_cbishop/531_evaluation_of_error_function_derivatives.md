@@ -349,7 +349,7 @@
 > **💡 Deeper notes**
 > - Ở bước liên hệ với mô hình tuyến tính, ghi chú nhắc đến δ = y - t; trong Bishop, điều này áp dụng khi activation output đi kèm hàm lỗi tương ứng là canonical link (ví dụ softmax + cross-entropy hoặc identity + sum-of-squares).
 
-**🔗 See also:** [Efficiency of Backpropagation](./533_efficiency_of_backpropagation.md#node-xgrbhhi)
+**🔗 See also:** [Efficiency of Backpropagation](./533_efficiency_of_backpropagation.md#node-xgrbhhi) · [5.4.1 Diagonal Approximation](./535_hessian.md#node-oap5h48)
 
 <br>
 
