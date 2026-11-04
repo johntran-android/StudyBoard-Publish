@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1793744901657,
+  "publishedAt": 1793769499610,
   "sections": [
     {
       "title": "📋 Overview",
@@ -527,8 +527,8 @@
     {
       "title": "5.3.5 Hessian",
       "path": "pattern_recognition_machine_learning_cbishop/535_hessian.md",
-      "noteCount": 1,
-      "imageCount": 3
+      "noteCount": 2,
+      "imageCount": 6
     },
     {
       "title": "5.7 Ex",
@@ -549,6 +549,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 507,
-  "totalImages": 832
+  "totalNotes": 508,
+  "totalImages": 835
 }
