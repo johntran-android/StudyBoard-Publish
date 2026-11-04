@@ -162,7 +162,7 @@
 > **💡 Deeper notes**
 > - Sách dùng công thức tổng quát cho mạng 'feed-forward' nói chung (có thể có kết nối nhảy cóc/skip-connection giữa các tầng không liền kề), trong khi ví dụ của bạn đang cụ thể hóa cho mạng nhiều tầng tuần tự (layered feed-forward network).
 
-**🔗 See also:** [Efficiency of Backpropagation](./533_efficiency_of_backpropagation.md#node-xgrbhhi) · [5.4.1 Diagonal Approximation](./535_hessian.md#node-oap5h48)
+**🔗 See also:** [Efficiency of Backpropagation](./533_efficiency_of_backpropagation.md#node-xgrbhhi) · [5.4.1 Diagonal Approximation](./54_the_hessian_matrix.md#node-oap5h48)
 
 <br>
 
@@ -349,7 +349,7 @@
 > **💡 Deeper notes**
 > - Ở bước liên hệ với mô hình tuyến tính, ghi chú nhắc đến δ = y - t; trong Bishop, điều này áp dụng khi activation output đi kèm hàm lỗi tương ứng là canonical link (ví dụ softmax + cross-entropy hoặc identity + sum-of-squares).
 
-**🔗 See also:** [Efficiency of Backpropagation](./533_efficiency_of_backpropagation.md#node-xgrbhhi) · [5.4.1 Diagonal Approximation](./535_hessian.md#node-oap5h48)
+**🔗 See also:** [Efficiency of Backpropagation](./533_efficiency_of_backpropagation.md#node-xgrbhhi) · [5.4.1 Diagonal Approximation](./54_the_hessian_matrix.md#node-oap5h48)
 
 <br>
 
