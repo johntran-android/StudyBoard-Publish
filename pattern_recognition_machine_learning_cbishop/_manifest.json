@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1793828901611,
+  "publishedAt": 1793830092816,
   "sections": [
     {
       "title": "📋 Overview",
@@ -519,16 +519,16 @@
       "imageCount": 3
     },
     {
-      "title": "5.3.4 The Jacobian matrix",
-      "path": "pattern_recognition_machine_learning_cbishop/534_the_jacobian_matrix.md",
-      "noteCount": 3,
-      "imageCount": 10
-    },
-    {
       "title": "5.3.5 Hessian",
       "path": "pattern_recognition_machine_learning_cbishop/535_hessian.md",
       "noteCount": 3,
       "imageCount": 9
+    },
+    {
+      "title": "5.3.4 The Jacobian matrix",
+      "path": "pattern_recognition_machine_learning_cbishop/534_the_jacobian_matrix.md",
+      "noteCount": 3,
+      "imageCount": 10
     },
     {
       "title": "5.7 Ex",
