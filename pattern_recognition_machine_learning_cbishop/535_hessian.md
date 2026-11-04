@@ -482,15 +482,15 @@
 >
 >
 >
-> dz = z'(w)dw 
+> dz = z'(w)dw
 >
 >
 >
-> df = ∂f/∂x (∂x/∂u du + ∂x/∂v dv) + ∂f/∂y (∂y/∂u du + ∂y/∂v dv) + ∂f/∂z z'(w)dw 
+> df = ∂f/∂x (∂x/∂u du + ∂x/∂v dv) + ∂f/∂y (∂y/∂u du + ∂y/∂v dv) + ∂f/∂z z'(w)dw
 >
 >
 >
-> = (∂f/∂x ∂x/∂u + ∂f/∂y∂y/∂u) du + (∂f/∂x ∂x/∂v + ∂f/∂y ∂y/∂v) dv + ∂f/∂z z'(w) dw 
+> = (∂f/∂x ∂x/∂u + ∂f/∂y∂y/∂u) du + (∂f/∂x ∂x/∂v + ∂f/∂y ∂y/∂v) dv + ∂f/∂z z'(w) dw
 >
 >
 >
@@ -534,37 +534,19 @@
 >
 >
 >
-> với δ⁽²⁾j = ∂En/∂a⁽²⁾j 
+> = z⁽¹⁾2 ∂δ⁽²⁾j/∂a⁽²⁾j ∂a⁽²⁾j/∂w⁽¹⁾j2
 >
 >
 >
-> 5.56: ∂En/∂a⁽²⁾j = h'(a⁽²⁾j) Σk w⁽²⁾kj δ⁽³⁾k
+> Xét ∂a⁽²⁾j/∂w⁽¹⁾j2
 >
 >
 >
-> ..= z⁽¹⁾2 ∂/∂w⁽¹⁾j2 \[h'(a⁽²⁾j) Σk w⁽²⁾kj δ⁽³⁾k\]
->
->
->
-> Xét ∂/∂w⁽¹⁾j2 \[h'(a⁽²⁾j) Σk w⁽²⁾kj δ⁽³⁾k\]
->
->
->
-> product rule
->
->
->
-> =  \[∂/∂w⁽¹⁾j2 h'(a⁽²⁾j)\] Σk w⁽²⁾kj δ⁽³⁾k + h'(a⁽²⁾j) ∂/∂w⁽¹⁾j2 \[Σk w⁽²⁾kj δ⁽³⁾k\]
->
->
->
-> ∂/∂w⁽¹⁾j2 h'(a⁽²⁾j) =  h''(a⁽²⁾j) ∂a⁽²⁾j/∂w⁽¹⁾j2 
->
->
->
-> =  h''(a⁽²⁾j) ∂(z⁽¹⁾j1w⁽¹⁾j1 + z⁽¹⁾j2w⁽¹⁾j2 + ...)/∂w⁽¹⁾j2
+> = ∂()/∂w⁽¹⁾j2
 
-📹 [Xem video trên YouTube](https://youtu.be/8ZRlA-FO5wg)
+📹 Video 1: [Vi phân toàn phần giúp tính đạo hàm cấp hai theo w_ji thế nào? (phần 2)](https://youtu.be/8ZRlA-FO5wg)
+
+📹 Video 2: [Vì sao đạo hàm cấp hai theo w_ji cần quy tắc nhân? (phần 3)](https://www.youtube.com/watch?v=hHoCRcFo9tg)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
