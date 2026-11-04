@@ -1,6 +1,6 @@
 # 5.3.5 Hessian
 
-📊 **Progress:** `2` Notes | `6` Screenshots | `1` AI Reviews
+📊 **Progress:** `3` Notes | `9` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-s2fd4av"></a>
@@ -33,8 +33,6 @@
 <p align="center"><kbd><img src="assets/tgsv8kes64f.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4945amf26bo.png" width="80%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/mfwy717wh3h.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > 5.48: aj = Σi wji zi
@@ -81,11 +79,11 @@
 >
 >
 >
-> df = ∂f/∂x (∂x/∂u du + ∂x/∂v dv) + ∂f/∂y (∂y/∂u du + ∂y/∂v dv) +  ∂f/∂z z'(v) dv
+> df = ∂f/∂x (∂x/∂u du + ∂x/∂v dv) + ∂f/∂y (∂y/∂u du + ∂y/∂v dv) + ∂f/∂z z'(v) dv
 >
 >
 >
-> df = (∂f/∂x ∂x/∂u + ∂f/∂y ∂y/∂u) du + (∂f/∂x ∂x/∂v + ∂f/∂y ∂y/∂v  + ∂f/∂z z'(v)) dv
+> df = (∂f/∂x ∂x/∂u + ∂f/∂y ∂y/∂u) du + (∂f/∂x ∂x/∂v + ∂f/∂y ∂y/∂v + ∂f/∂z z'(v)) dv
 >
 >
 >
@@ -103,11 +101,11 @@
 >
 >
 >
-> ∂²En/∂w⁽¹⁾ji² 
+> ∂²En/∂w⁽¹⁾ji²
 >
 >
 >
-> = ∂/∂w⁽¹⁾ji \[∂En/∂w⁽¹⁾ji\] 
+> = ∂/∂w⁽¹⁾ji \[∂En/∂w⁽¹⁾ji\]
 >
 >
 >
@@ -155,7 +153,7 @@
 >
 >
 >
-> Gọi ∂En/∂a⁽²⁾j là f 
+> Gọi ∂En/∂a⁽²⁾j là f
 >
 >
 >
@@ -327,6 +325,22 @@
 >
 >
 >
+> ∂a⁽³⁾k'/∂a⁽²⁾1 = ∂a⁽³⁾k'/∂z⁽²⁾1 ∂z⁽²⁾1/∂a⁽²⁾1
+>
+>
+>
+> ∂a⁽³⁾k'/∂z⁽²⁾1 = ∂\[tổng\]/∂z⁽²⁾1 = \[∂(z⁽²⁾1w⁽²⁾11)/∂z⁽²⁾1 + ∂(z⁽²⁾2w⁽²⁾12)∂z⁽²⁾1 +... 
+>
+>
+>
+> = ∂\[z⁽²⁾1 w⁽²⁾11\]/∂z⁽²⁾1 = w⁽²⁾11
+>
+>
+>
+> = ∂a⁽³⁾k'/∂z⁽²⁾1 z⁽²⁾1/∂a⁽²⁾1 da⁽²⁾1 + ...+ ∂a⁽³⁾k'/∂a⁽²⁾j da⁽²⁾j
+>
+>
+>
 > = w⁽²⁾k'1 h'(a⁽²⁾1) da⁽²⁾1 + ...+ w⁽²⁾k'j h'(a⁽²⁾j) da⁽²⁾j
 >
 >
@@ -389,7 +403,7 @@
 >
 > Đây là 5.80
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=fvqdTDe0cek)
+📹 [Xem video trên YouTube](https://youtu.be/fvqdTDe0cek)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -412,6 +426,165 @@
 > - Để đi từ (5.80) sang (5.81) (xấp xỉ đường chéo của LeCun), người ta giả định bỏ qua các phần tử ngoài đường chéo ∂²En/(∂a_k ∂a_k') khi k ≠ k', khi đó tổng kép Σ_k Σ_k' rút gọn chỉ còn tổng đơn Σ_k với w_kj².
 
 **🔗 See also:** [Feed-Forward Network Unit Activation](./531_evaluation_of_error_function_derivatives.md#node-krbtnm2) · [Weight Derivative Evaluation](./531_evaluation_of_error_function_derivatives.md#node-noaxia8)
+
+<br>
+
+<a id="node-3pv5vv4"></a>
+
+#### 5.4.1 Diagonal Approximation (bản sao)
+
+<p align="center"><kbd><img src="assets/vis49nchcxg.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/tgsv8kes64f.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4945amf26bo.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/llbfpy92wo.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> 5.48: aj = Σi wji zi
+>
+>
+>
+> 5.49: zj = h(aj)
+>
+>
+>
+> 5.53: ∂En/∂w⁽¹⁾ji = δ⁽²⁾j z⁽¹⁾i
+>
+>
+>
+> với δ⁽²⁾j = ∂En/∂a⁽²⁾j
+>
+>
+>
+> 5.56: ∂En/∂a⁽²⁾j = h'(a⁽²⁾j) Σk w⁽²⁾kj δ⁽³⁾k
+>
+>
+>
+> ---
+>
+>
+>
+> f(x,y,z), x(u,v), y(u,v), z(w)
+>
+>
+>
+> df = ∂f/∂x dx + ∂f/∂y dy + ∂f/∂z dz (total differenetial)
+>
+>
+>
+> dx = ∂x/∂u du + ∂x/∂v dv
+>
+>
+>
+> dy = ∂y/∂u du + ∂y/∂v dv
+>
+>
+>
+> dz = z'(w)dw 
+>
+>
+>
+> df = ∂f/∂x (∂x/∂u du + ∂x/∂v dv) + ∂f/∂y (∂y/∂u du + ∂y/∂v dv) + ∂f/∂z z'(w)dw 
+>
+>
+>
+> = (∂f/∂x ∂x/∂u + ∂f/∂y∂y/∂u) du + (∂f/∂x ∂x/∂v + ∂f/∂y ∂y/∂v) dv + ∂f/∂z z'(w) dw 
+>
+>
+>
+> ∂f/∂u = ∂f/∂x ∂x/∂u + ∂f/∂y∂y/∂u
+>
+>
+>
+> ∂f/∂v = ∂f/∂x ∂x/∂v + ∂f/∂y ∂y/∂v
+>
+>
+>
+> ∂f/∂w = ∂f/∂z z'(w)
+>
+>
+>
+> ---
+>
+>
+>
+> i = 2:
+>
+>
+>
+> f(x), f'(x) = d/dx f(x), f''(x) = d/dx f'(x)
+>
+>
+>
+> ∂²En/∂w⁽¹⁾j2² = ∂/∂w⁽¹⁾j2 (∂En/∂w⁽¹⁾j2)
+>
+>
+>
+> 5.53: ∂En/∂w⁽¹⁾j2 = δ⁽²⁾j z⁽¹⁾2
+>
+>
+>
+> .. = ∂/∂w⁽¹⁾j2 (δ⁽²⁾j z⁽¹⁾2)
+>
+>
+>
+> = z⁽¹⁾2 ∂/∂w⁽¹⁾j2 (δ⁽²⁾j)
+>
+>
+>
+> với δ⁽²⁾j = ∂En/∂a⁽²⁾j 
+>
+>
+>
+> 5.56: ∂En/∂a⁽²⁾j = h'(a⁽²⁾j) Σk w⁽²⁾kj δ⁽³⁾k
+>
+>
+>
+> ..= z⁽¹⁾2 ∂/∂w⁽¹⁾j2 \[h'(a⁽²⁾j) Σk w⁽²⁾kj δ⁽³⁾k\]
+>
+>
+>
+> Xét ∂/∂w⁽¹⁾j2 \[h'(a⁽²⁾j) Σk w⁽²⁾kj δ⁽³⁾k\]
+>
+>
+>
+> product rule
+>
+>
+>
+> =  \[∂/∂w⁽¹⁾j2 h'(a⁽²⁾j)\] Σk w⁽²⁾kj δ⁽³⁾k + h'(a⁽²⁾j) ∂/∂w⁽¹⁾j2 \[Σk w⁽²⁾kj δ⁽³⁾k\]
+>
+>
+>
+> ∂/∂w⁽¹⁾j2 h'(a⁽²⁾j) =  h''(a⁽²⁾j) ∂a⁽²⁾j/∂w⁽¹⁾j2 
+>
+>
+>
+> =  h''(a⁽²⁾j) ∂(z⁽¹⁾j1w⁽¹⁾j1 + z⁽¹⁾j2w⁽¹⁾j2 + ...)/∂w⁽¹⁾j2
+
+📹 [Xem video trên YouTube](https://youtu.be/8ZRlA-FO5wg)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú xuất sắc! Bạn đã tự chứng minh lại rất chi tiết và chính xác công thức (5.79) và (5.80) thông qua công cụ vi phân toàn phần.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"∂[z⁽²⁾1 w⁽²⁾11]/∂z⁽²⁾1 = w⁽²⁾11"*
+>
+> Lỗi gõ nhầm chỉ số ở bước nháp: đang lấy đạo hàm theo a⁽³⁾k' thì trọng số kết nối phải là w⁽²⁾k'1 chứ không phải w⁽²⁾11. Tuy nhiên ngay dòng kế tiếp bạn đã viết lại đúng là w⁽²⁾k'1.
+>
+>
+> **✓ Strengths**
+> - Sử dụng công cụ vi phân toàn phần (total differential) rất khéo léo và chặt chẽ để thực hiện chain rule cho hàm nhiều biến.
+> - Tự nhận thức được tính chưa chặt chẽ khi 'chia cho vi phân' ở Cách 1 và đã bổ sung Cách 2 khai triển đầy đủ vi phân cấp 1 trước khi đồng nhất hệ số.
+> - Khai triển chính xác đạo hàm cấp hai của hàm hợp để dẫn tới đúng công thức đệ quy (5.80) trong sách.
+>
+> **💡 Deeper notes**
+> - Để từ (5.80) suy ra công thức xấp xỉ đường chéo (5.81) của LeCun, ta giả định bỏ qua các phần tử ngoài đường chéo của Hessian đối với tầng tiếp theo, tức là đặt ∂²En/∂ak∂ak' = 0 với k ≠ k', khi đó tổng kép ∑k ∑k' thu về một tổng ∑k w_kj² ∂²En/∂ak².
 
 <br>
 
