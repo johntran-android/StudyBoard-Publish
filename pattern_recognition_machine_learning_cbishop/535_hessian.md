@@ -542,31 +542,319 @@
 >
 >
 >
-> = ∂()/∂w⁽¹⁾j2
+> = ∂(z⁽¹⁾1w⁽¹⁾j1 + z⁽¹⁾2w⁽¹⁾j2 + ...)/∂w⁽¹⁾j2
+>
+>
+>
+> = ∂(z⁽¹⁾2w⁽¹⁾j2)/∂w⁽¹⁾j2
+>
+>
+>
+> = z⁽¹⁾2
+>
+>
+>
+> ...= z⁽¹⁾2 ∂δ⁽²⁾j/∂a⁽²⁾j z⁽¹⁾2
+>
+>
+>
+> = (z⁽¹⁾2)² ∂δ⁽²⁾j/∂a⁽²⁾j
+>
+>
+>
+> = (z⁽¹⁾2)² ∂/∂a⁽²⁾j δ⁽²⁾j
+>
+>
+>
+> = (z⁽¹⁾2)² ∂/∂a⁽²⁾j \[∂En/∂a⁽²⁾j\]
+>
+>
+>
+> = (z⁽¹⁾2)² ∂²En/∂a⁽²⁾j²
+>
+>
+>
+> Viết lại: 
+>
+>
+>
+> ∂²En/∂w⁽¹⁾j2² = (z⁽¹⁾2)² ∂²En/∂a⁽²⁾j²
+>
+>
+>
+> thay 2 bởi i (nãy mượn i = 2 cho dễ): 
+>
+>
+>
+> ∂²En/∂w⁽¹⁾ji² = (z⁽¹⁾i)² ∂²En/∂a⁽²⁾j² → 5.79
+>
+>
+>
+> ---
+>
+>
+>
+> Derive 5.80:
+>
+>
+>
+> ∂²En/∂a⁽²⁾j² = ∂/∂a⁽²⁾j \[∂En/∂a⁽²⁾j\]
+>
+>
+>
+> 5.56: ∂En/∂a⁽²⁾j = h'(a⁽²⁾j) Σk w⁽²⁾kj δ⁽³⁾k
+>
+>
+>
+> .. = ∂/∂a⁽²⁾j \[h'(a⁽²⁾j) Σk w⁽²⁾kj δ⁽³⁾k\]
+>
+>
+>
+> Dễ thấy h'(a⁽²⁾j) là hàm phụ thuộc a⁽²⁾j
+>
+>
+>
+> Σk w⁽²⁾kj δ⁽³⁾k, có các  δ⁽³⁾k, cũng là hàm phụ thuộc a⁽²⁾j do để có δ⁽³⁾k ta phải forward prop ra E.
+>
+>
+>
+> Nên đây là đạo hàm của tích hai hàm số phụ thuộc a⁽²⁾j, dùng product rule: (uv)' = u'v + uv'
+>
+>
+>
+> ..= ∂/∂a⁽²⁾j \[h'(a⁽²⁾j)\] (Σk w⁽²⁾kj δ⁽³⁾k) + h'(a⁽²⁾j) \[∂/∂a⁽²⁾j Σk w⁽²⁾kj δ⁽³⁾k\]
+>
+>
+>
+> Xét ∂/∂a⁽²⁾j \[h'(a⁽²⁾j)\] = h''(a⁽²⁾j)
+>
+>
+>
+> Hạng tử 1: h''(a⁽²⁾j) (Σk w⁽²⁾kj δ⁽³⁾k) Đấy chính là hạng tử 2 của 5.80
+>
+>
+>
+> ---
+>
+>
+>
+> Hạng tử 2: h'(a⁽²⁾j) \[∂/∂a⁽²⁾j Σk w⁽²⁾kj δ⁽³⁾k\]
+>
+>
+>
+> ---
+>
+>
+>
+> Xét ∂/∂a⁽²⁾j Σk w⁽²⁾kj δ⁽³⁾k
+>
+>
+>
+> = Σk ∂/∂a⁽²⁾j \[w⁽²⁾kj δ⁽³⁾k\]
+>
+>
+>
+> = Σk w⁽²⁾kj ∂/∂a⁽²⁾j \[δ⁽³⁾k\] (1)
+>
+>
+>
+> ---
+>
+>
+>
+> Xét ∂/∂a⁽²⁾j \[δ⁽³⁾k\]
+>
+>
+>
+> Tính ∂δ⁽³⁾k/∂z⁽²⁾j trước:
+>
+>
+>
+> ∂δ⁽³⁾k/∂z⁽²⁾j = ∂δ⁽³⁾k/∂a⁽³⁾1 ∂a⁽³⁾1/∂z⁽²⁾j + ∂δ⁽³⁾k/∂a⁽³⁾2 ∂a⁽³⁾2/∂z⁽²⁾j + ..
+>
+>
+>
+> = Σk' ∂δ⁽³⁾k/∂a⁽³⁾k' ∂a⁽³⁾k'/∂z⁽²⁾j
+>
+>
+>
+> ---
+>
+>
+>
+> Từ đó tính ∂δ⁽³⁾k/∂a⁽²⁾j:
+>
+>
+>
+> ∂δ⁽³⁾k/∂a⁽²⁾j = ∂δ⁽³⁾k/∂z⁽²⁾j ∂z⁽²⁾j/∂a⁽²⁾j
+>
+>
+>
+> (thay ∂δ⁽³⁾k/∂z⁽²⁾j ở trên vào)
+>
+>
+>
+> = (Σk' ∂δ⁽³⁾k/∂a⁽³⁾k' ∂a⁽³⁾k'/∂z⁽²⁾j) ∂z⁽²⁾j/∂a⁽²⁾j
+>
+>
+>
+> (do z⁽²⁾j = h(a⁽²⁾j) ⇒ ∂z⁽²⁾j/∂a⁽²⁾j = h'(a⁽²⁾j))
+>
+>
+>
+> = (Σk' ∂δ⁽³⁾k/∂a⁽³⁾k' ∂a⁽³⁾k'/∂z⁽²⁾j) h'(a⁽²⁾j)
+>
+>
+>
+> Viết lại: ∂δ⁽³⁾k/∂a⁽²⁾j = (Σk' ∂δ⁽³⁾k/∂a⁽³⁾k' ∂a⁽³⁾k'/∂z⁽²⁾j) h'(a⁽²⁾j)
+>
+>
+>
+> ta tính tiếp ∂δ⁽³⁾k/∂a⁽³⁾k' và ∂a⁽³⁾k'/∂z⁽²⁾j
+>
+>
+>
+> ---
+>
+>
+>
+>  Tính ∂δ⁽³⁾k/∂a⁽³⁾k':
+>
+>
+>
+> = ∂\[∂En/∂a⁽³⁾k\]/∂a⁽³⁾k'
+>
+>
+>
+> = ∂²En/(∂a⁽³⁾k∂a⁽³⁾k')
+>
+>
+>
+> ---
+>
+>
+>
+> Tính ∂a⁽³⁾k'/∂z⁽²⁾j: dễ thấy = w⁽²⁾k'j
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy ∂δ⁽³⁾k/∂a⁽²⁾j = (Σk' ∂δ⁽³⁾k/∂a⁽³⁾k' ∂a⁽³⁾k'/∂z⁽²⁾j) h'(a⁽²⁾j)
+>
+>
+>
+> = (Σk' (∂²En/(∂a⁽³⁾k∂a⁽³⁾k')) w⁽²⁾k'j) h'(a⁽²⁾j)
+>
+>
+>
+> ---
+>
+>
+>
+> Thế kết quả trên vào (1):
+>
+>
+>
+> ∂/∂a⁽²⁾j Σk w⁽²⁾kj δ⁽³⁾k = Σk w⁽²⁾kj **∂δ⁽³⁾k/∂a⁽²⁾j**
+>
+>
+>
+> = Σk w⁽²⁾kj Σk' {(∂²En/(∂a⁽³⁾k∂a⁽³⁾k')) w⁽²⁾k'j) h'(a⁽²⁾j)}
+>
+>
+>
+> = Σk w⁽²⁾kj h'(a⁽²⁾j) Σk' {(∂²En/(∂a⁽³⁾k∂a⁽³⁾k')) w⁽²⁾k'j }
+>
+>
+>
+> = h'(a⁽²⁾j) Σk w⁽²⁾kj Σk' {(∂²En/(∂a⁽³⁾k∂a⁽³⁾k')) w⁽²⁾k'j }
+>
+>
+>
+> = h'(a⁽²⁾j) Σk Σk' w⁽²⁾kj {(∂²En/(∂a⁽³⁾k∂a⁽³⁾k')) w⁽²⁾k'j }
+>
+>
+>
+> = h'(a⁽²⁾j) Σk Σk' w⁽²⁾kj w⁽²⁾k'j {(∂²En/(∂a⁽³⁾k∂a⁽³⁾k')) }
+>
+>
+>
+> Hạng tử 2 còn đầy đủ: 
+>
+>
+>
+> h'(a⁽²⁾j) \[∂/∂a⁽²⁾j Σk w⁽²⁾kj δ⁽³⁾k\]
+>
+>
+>
+> = h'(a⁽²⁾j) h'(a⁽²⁾j) Σk w⁽²⁾kj w⁽²⁾k'j Σk' {(∂²En/(∂a⁽³⁾k∂a⁽³⁾k')) }
+>
+>
+>
+> = h'(a⁽²⁾j)² Σk w⁽²⁾kj w⁽²⁾k'j Σk' {(∂²En/(∂a⁽³⁾k∂a⁽³⁾k')) }
+>
+>
+>
+> = h'(a⁽²⁾j)² Σk Σk' w⁽²⁾kj w⁽²⁾k'j {(∂²En/(∂a⁽³⁾k∂a⁽³⁾k')) }
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy ∂²En/∂a⁽²⁾j² =
+>
+>
+>
+> h'(a⁽²⁾j)² Σk Σk' w⁽²⁾kj w⁽²⁾k'j {(∂²En/(∂a⁽³⁾k∂a⁽³⁾k'))}
+>
+>
+>
+> \+ h''(a⁽²⁾j) (Σk w⁽²⁾kj δ⁽³⁾k) → 5.80
+>
+>
+>
+> ---
+>
+>
+>
+> 5.81: (∂²En/(∂a⁽³⁾k∂a⁽³⁾k') = 0 với k khác k'
+>
+>
+>
+> Với k = k': ∂²En/∂a⁽³⁾k²
+>
+>
+>
+> ∂²En/∂a⁽²⁾j² =
+>
+>
+>
+> h'(a⁽²⁾j)² Σk w⁽²⁾kj² ∂²En/∂a⁽³⁾k² + h''(a⁽²⁾j) (Σk w⁽²⁾kj δ⁽³⁾k) → 5.81
 
 📹 Video 1: [Vi phân toàn phần giúp tính đạo hàm cấp hai theo w_ji thế nào? (phần 2)](https://youtu.be/8ZRlA-FO5wg)
 
 📹 Video 2: [Vì sao đạo hàm cấp hai theo w_ji cần quy tắc nhân? (phần 3)](https://www.youtube.com/watch?v=hHoCRcFo9tg)
 
+📹 Video 3: [Làm sao lan truyền ngược đạo hàm cấp hai theo a_j? (phần 4)](https://www.youtube.com/watch?v=0ZCEjdG0CXs)
+
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
-> Ghi chú xuất sắc! Bạn đã tự chứng minh lại rất chi tiết và chính xác công thức (5.79) và (5.80) thông qua công cụ vi phân toàn phần.
->
-> **🟡 Minor issues**
->
-> **1.** *"∂[z⁽²⁾1 w⁽²⁾11]/∂z⁽²⁾1 = w⁽²⁾11"*
->
-> Lỗi gõ nhầm chỉ số ở bước nháp: đang lấy đạo hàm theo a⁽³⁾k' thì trọng số kết nối phải là w⁽²⁾k'1 chứ không phải w⁽²⁾11. Tuy nhiên ngay dòng kế tiếp bạn đã viết lại đúng là w⁽²⁾k'1.
->
+> Ghi chú xuất sắc! Bạn đã tự chứng minh chi tiết từng bước cho các công thức (5.79), (5.80) và (5.81) trong sách của Bishop bằng quy tắc đạo hàm chuỗi (chain rule) và tích (product rule) một cách chuẩn xác.
 >
 > **✓ Strengths**
-> - Sử dụng công cụ vi phân toàn phần (total differential) rất khéo léo và chặt chẽ để thực hiện chain rule cho hàm nhiều biến.
-> - Tự nhận thức được tính chưa chặt chẽ khi 'chia cho vi phân' ở Cách 1 và đã bổ sung Cách 2 khai triển đầy đủ vi phân cấp 1 trước khi đồng nhất hệ số.
-> - Khai triển chính xác đạo hàm cấp hai của hàm hợp để dẫn tới đúng công thức đệ quy (5.80) trong sách.
+> - Chứng minh công thức (5.79) rất chặt chẽ thông qua việc tách đạo hàm cấp hai đối với trọng số liên kết.
+> - Áp dụng quy tắc đạo hàm của tích (product rule) để tách thành hai hạng tử cho công thức (5.80) rất rõ ràng và mạch lạc.
+> - Xử lý chuẩn xác quy tắc chuỗi đa biến để tính đạo hàm ∂δ_k/∂a_j qua các nút trung gian của tầng kế tiếp.
+> - Hiểu đúng bản chất của xấp xỉ đường chéo (diagonal approximation) ở công thức (5.81) khi triệt tiêu các phần tử chéo ngoài k ≠ k'.
 >
 > **💡 Deeper notes**
-> - Để từ (5.80) suy ra công thức xấp xỉ đường chéo (5.81) của LeCun, ta giả định bỏ qua các phần tử ngoài đường chéo của Hessian đối với tầng tiếp theo, tức là đặt ∂²En/∂ak∂ak' = 0 với k ≠ k', khi đó tổng kép ∑k ∑k' thu về một tổng ∑k w_kj² ∂²En/∂ak².
+> - Cần lưu ý rằng xấp xỉ đường chéo trong (5.81) là xấp xỉ cục bộ tầng kế tiếp (bỏ qua tương tác giữa các nút a_k và a_k' với k ≠ k'), giúp việc tính toán lan truyền ngược đạo hàm cấp 2 có độ phức tạp O(W) tương đương backprop thông thường, thay vì O(W^2) nếu giữ toàn bộ Hessian.
 
 <br>
 
