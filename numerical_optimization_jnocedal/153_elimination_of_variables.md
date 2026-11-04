@@ -233,9 +233,7 @@
 >
 > Tuy nhiên ông nói thêm, nếu lí tưởng, ta phải chọn sao cho B ko những dễ factor (ý nói để tìm nghịch đảo), và còn well conditioned nữa. Nên thuật toán khử Gauss mang tên MA48 có thể có được cái này, tuy vậy ko có gì đảm bảo khử Gauss sẽ cho ra một bộ basis tối ưu.
 
-📹 Video 1: [Example 15.3 Basis Matrix Partitioning — Numerical Optimization_J.Nocedal](https://www.youtube.com/watch?v=s8-ZNFrCxvk)
-
-📹 Video 2: [Tại sao chọn cột 3 và 6 để tìm B⁻¹ dễ nhất?](https://www.youtube.com/watch?v=63NedgBej6I)
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=63NedgBej6I)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
