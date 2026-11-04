@@ -415,9 +415,7 @@
 >
 > trong sách là ∂yk/∂a⁽²⁾j = δkj yk - ykyj
 
-📹 Video 1: [Làm Sao Dùng Vi Phân Toàn Phần Tính Ma Trận Jacobian?](https://youtu.be/oc3MeNvCth0)
-
-📹 Video 2: [Cách tính ma trận Jacobian ∂yk/∂xi bằng vi phân toàn phần?](https://www.youtube.com/watch?v=kQ5U-bfAg2o)
+📹 [Xem video trên YouTube](https://youtu.be/oc3MeNvCth0)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
