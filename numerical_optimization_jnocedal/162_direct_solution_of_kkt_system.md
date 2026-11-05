@@ -449,6 +449,124 @@
 >
 >
 >
+> Trước tiên nên ôn lại cách thử reduced (variable elimination) này:
+>
+>
+>
+> bài toán minimize f(x) s.t Ax = b
+>
+>
+>
+> A full row rank, tìm được Y sao cho \[Y|Z\] non-singular với Z là nullspace basis matrix
+>
+>
+>
+> Do các cột của \[Y|Z\] sẽ tạo basis của Rⁿ nên mọi x ∈ Rⁿ đều thể hiện bởi \[Y|Z\] \[x_y; x_z\] = Y x_y + Z x_z.
+>
+>
+>
+> Cho x thỏa Ax = b, ta có A(Y x_y + Z x_z) = b ⇔ AY x_y + AZ x_z = b
+>
+>
+>
+> ⇔ AY x_y = b (do AZ x_z = 0)
+>
+>
+>
+> ⇔ x_y = (AY)⁻¹ b (do AY là matrix rank m, size m × m nên non-singular. Và lí do là vì \[AY|0\] = A\[Y|Z\], là matrix rank m (A) nhân matrix non singular \[Y|Z\] nên vẫn ra rank m, mà A\[Y|Z\] = \[AY|0\], nên cái này rank m thì AY phải rank m)
+>
+>
+>
+> Từ đó x = Y (AY)⁻¹ b + Z x_z sẽ luôn feasible, giúp chuyển bài toán về minimize_x_z f(Y (AY)⁻¹ b + Z x_z)
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy ở đây: nếu có matrix Y sao cho \[Y|Z\] non singular. Thì p, là Rⁿ vector (do p = x\* - x) cũng sẽ luôn thể hiện bởi bộ basis này: p = Y p_y + Z p_z. Lắp vào 16.5 (hệ KKT):
+>
+>
+>
+> G(-Y p_y - Z p_z) + Aᵀ λ\* = g (phương trình 1)
+>
+>
+>
+> A(-Y p_y - Z p_z) = h (phương trình 2)
+>
+>
+>
+> ⇔ -AY p_y - AZ p_z = h
+>
+>
+>
+> ⇔ -AY p_y = h
+>
+>
+>
+> ⇔ p_y = -(AY)⁻¹h (như giải thích ở trên AY non-singular)
+>
+>
+>
+> Thế vô 16.5 phương trình 1:
+>
+>
+>
+> G(-Y p_y - Z p_z) + Aᵀ λ\* = g
+>
+>
+>
+> ⇔ -GY p_y - GZ p_z + Aᵀ λ\* = g
+>
+>
+>
+> ⇔ -ZᵀGY p_y - ZᵀGZ p_z + ZᵀAᵀ λ\* = Zᵀg (nhân hai vế cho Zᵀ)
+>
+>
+>
+> ⇔ -ZᵀGY p_y - Zᵀg = ZᵀGZ p_z
+>
+>
+>
+> Giải hệ này dùng Cholesky factor matrix ZᵀGZ, vì nó xác định dương (vì sao? vì đây là assumption - tức là giả định ta có cái này thì sẽ xài nullspace method) để gỉaỉ ra p_z.
+>
+>
+>
+> Từ đó, ta đã có p_y và p_z. nên tính ra p = Y x_y + Z x_z
+>
+>
+>
+> ---
+>
+>
+>
+> Cuối cùng,  khi đã có p\*
+>
+>
+>
+>  với phương trình 1: G(-p\*) + Aᵀ λ\* = g, nhân hai vế cho Yᵀ:
+>
+>
+>
+> \-YᵀGp\* + YᵀAᵀ λ\* = Yᵀg
+>
+>
+>
+> ⇔ YᵀAᵀ λ\* = Yᵀg + YᵀGp\*
+>
+>
+>
+> giải ra λ\*. 
+>
+>
+>
+>
+>
+>
+>
+>
+>
 >
 >
 >
@@ -486,8 +604,14 @@
 >
 >
 > ---
+>
+>
+>
+> Với Y như vậy Y xY
 
-📹 [Xem video trên YouTube](https://youtu.be/otwKnGhj1vE)
+📹 Video 1: [Tại sao rank(AB) = rank(A) khi ma trận B khả nghịch? (phần 1)](https://youtu.be/otwKnGhj1vE)
+
+📹 Video 2: [Làm sao dùng phương pháp null-space để giải hệ KKT? (phần 2)](https://www.youtube.com/watch?v=pia4HYygkUo)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
