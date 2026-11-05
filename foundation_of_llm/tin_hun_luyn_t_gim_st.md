@@ -5,15 +5,13 @@
 ---
 <a id="node-qe68vve"></a>
 
-## Tiền huấn luyện tự giám sát
-
 <p align="center"><kbd><img src="assets/jgnys8ojdmk.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Nói về một số loại cây cảnh nổi tiếng trên thế giới.
 
 > [!TIP]
-> **🤖 AI Feedback** — ❌ Score: **0/100**
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **0/100** · ✗ Fix first
 >
 > Ghi chú hoàn toàn không liên quan đến nội dung của hình ảnh. Hình ảnh thảo luận về các tác vụ tiền huấn luyện tự giám sát trong NLP, không phải về cây cảnh.
 
@@ -34,7 +32,7 @@
 > entropy giữa hai phân phối xác suất, dự đoán và mong muốn. Và ta sẽ training (optimize) decoder với objective này
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bản tóm tắt rất chính xác và cực kỳ sâu sắc, giải thích rõ ràng cả các chi tiết kỹ thuật được đánh dấu và không được đánh dấu. Phần giải thích về kiến trúc Transformer tổng thể trước khi đi vào mô hình decoder-only giúp người đọc hiểu rõ hơn.
 
@@ -52,7 +50,7 @@
 > Cái này đại khái là mình sẽ như ở trên hồi nãy đó, cái nót trên đó, đã nói về cái việc là người ta sẽ đặt cái objective function, cái hàm mục tiêu là cross entropy. Cross entropy là một khái niệm trong information theory. Đại khái là nó sẽ đo cái sự khác biệt giữa hai cái phân phối xác suất. Vậy thì như đã nói á, cái function cái model đó, cái decoder nó sẽ dự đoán cái token tiếp theo dựa trên những cái token trước đó. Và cái mà nó dự đoán ra là một cái vector các con số mang ý nghĩa là một cái phân phối xác suất trên tất cả các cái từ trong từ điển. Để rồi mình sẽ lựa ra cái cái từ nào, cái token nào ứng với cái xác suất cao nhất. Thế thì như đã nói ở nói trước, đó là mình sẽ có một cái một cái phân phối xác suất mà mình gọi là mục tiêu rồi, hoặc là một phân phối xác suất tiêu chuẩn trong đó nó cho tất cả xác suất vào trong cái cái cái cái cái vị trí ứng với cái từ đúng mà mình cần mô hình nó dự đoán ra. Đó thì mình sẽ set up cái hàm mục tiêu là cái sự khác biệt đo bằng cái khái niệm cross entropy giữa hai cái phân phối xác suất đó. Nhưng mà đó là mình tạm hiểu nó là cái loss, nó là cái cost, nó là cái loss tại cái vị trí cái từ đó thôi. Và mình sẽ làm như vậy với với với những cái vị trí khác nữa. Đó. Và mình sẽ lấy tổng là tổng loss. Và không phải là chỉ có một chuỗi, đúng không? Ví dụ như một cái câu đầu tiên nó có ba nó có ba từ. Thì tại mỗi vị trí á mô hình nó sẽ dự đoán. Như vậy mình sẽ có ba cái loss mình tổng lại. Nhưng mà mình có một chục cái câu như vậy ở trong một cái đoạn văn chẳng hạn. Thì mình cũng sẽ làm vậy và mình tổng lại hết, tổng lại hết loss trên toàn cái văn bản đó. Thì đó sẽ tạo thành ra cái cái cost function. Và có một điểm nữa đó là việc mà mình tối ưu cái tham số để mà giảm cái loss đó thì thật ra nó hoàn toàn tương ứng với việc là mình tối ưu cái tham số để mình tối đa hóa cái gọi là một cái likelihood function. Likelihood function á, đại khái mình hiểu đơn giản vậy nè. Xác suất á, ví dụ như dựa trên tham số theta thì cái xác suất mà nó ra được nó nó dự đoán cho cái token đó là bao nhiêu. Thì đó là xác suất. Nhưng mà nếu mình mình bỏ cái token á là là là cố định là fix, để rồi mình thay đổi cái cái cái theta đó thì nó gọi là likelihood. Do đó là là nói chung là hai cái này nó y chang nhau, nó vẫn mình có thể hiểu lại tối ưu cái tham số để giảm thiểu cái loss cũng có thể y hệt là tối ưu tối ưu cái tham số để mà maximize cái cái likelihood function. Thì nó là vậy thôi. Và khi mà mình giải bài toán tối ưu thì đương nhiên đây là bài toán tối ưu, mình giải xong mình sẽ ra được các cái giá trị của các cái parameter của cái cái decoder và lúc đó mình sẽ lấy nó ra để mà mình mình sử dụng, mình đưa cho nó một cái token, một cái chuỗi các token và nó sẽ dự đoán ra cái token tiếp theo.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Nội dung giải thích rất chính xác và chi tiết, đặc biệt là phần phân biệt xác suất và likelihood, cũng như việc tổng hợp loss trên cả chuỗi và tập dữ liệu. Cách diễn đạt rõ ràng giúp người đọc dễ hiểu.
 
@@ -68,7 +66,7 @@
 > thì cái này nói về việc mình sẽ tiền huấn luyện retraining. Mình sẽ pretrain một cái mô hình thuộc dạng là encoder-only. Cái encoder-only nó khác với decoder-only. Encoder-only á nó thuộc cái dạng của một cái mô hình thuộc gọi một thuộc cái loại là sequence encoding. Nó khác với với với decoder là một cái sequence generating. Có nghĩa là nó sẽ nhận vô với cái mình mình nói cái sequence generating ví dụ như decoder là nó nhận vô một cái chuỗi các input là các cái token, đúng không, một chuỗi các cái token. Và nhiệm vụ của nó là dự đoán cái token tiếp theo, tức là nó sẽ generate tức là nó sẽ tạo ra, nó sẽ chọn ra cái token thứ tiếp theo. Token mình cứ hiểu nôm na ví dụ như một cái từ vậy đó. Thì cái encoder nó lại làm nhiệm vụ là nó nhận vô một cái chuỗi các token nhưng mà nó cần phải phun ra là có thể là một cái vector các con số thực. Sao cho các con số trong cái vector đó nó nắm bắt cái ý nghĩa của cái chuỗi đưa vô. Nhưng cũng có thể nó phun ra một chuỗi các cái vector mà mỗi vector nó mang ý nghĩa của của cái từ đưa vô nhưng mà đồng thời có phản ánh cái ngữ cảnh nữa. Ví dụ như đưa vô một cái chuỗi gồm năm câu, "Tôi thích ăn táo Mỹ". Thì cái chuỗi nó đưa ra đó nó sẽ là một cái vector các con số thực ví dụ như 300 con số hay 500 con số phản ánh ý nghĩa của cả cái câu đó. Nhưng cũng có thể nói chuỗi nó đưa đưa đưa ra đó là năm cái vector mà mỗi vector là năm là 300 con số hoặc 500 con số mà mỗi vector nó phản ánh ý nghĩa của cái từ tương ứng nhưng mà đồng thời phải phản ánh cái ý nghĩa của từ tương ứng trong cái bối cảnh của của cái chuỗi đó nữa. Thì nói nói chung đó là cái nhiệm vụ của một cái cái sequence encoding model. Thì encoder-only thì nó thuộc cái loại này. Chính vì vậy mà người ta mới nói rằng với cái cái kiểu như thế này á mình không có biết gắn cái label như thế nào hết. Tức là ví dụ như decoder á mình còn có cái gold standard probability distribution, tức là ví dụ mình nôm na là mình cần nó dự đoán thì mình đại khái mình là con người mình có thể biết được là cái từ mà mình muốn nó đoán ra đúng nhất là phải là từ gì để mình đưa cho nó để mình hướng dẫn nó học theo kiểu là học tập có giám sát. Nhưng mà với cái encoder-only á thì cái việc nó đưa ra là lại là một chuỗi các con số thực. Mình làm sao mà tạo ra được cái label cho cái đó để mà dạy nó theo kiểu giám sát đây. Chính vì vậy mà mình sẽ phải gắn nó vào trong một cái lớp thuộc dạng classifier để rồi mình mới gắn cái label data mình vô mình huấn luyện nó với dạng là là là là supervised learning được. Bởi vì ngay cả self-supervised learning á cũng phải là có label data. Chẳng qua là self-supervised hay là supervised learning nó khác nhau ở chỗ là cái label data đó đó là mình tạo ra, con người tạo ra, con người chuẩn bị, hay là nó tự nó tạo ra. Đó. Thì cái phần đầu là nó nói về cái chuyện đó.### Ghi chú học tập:Pre-training mô hình Encoder-Only**1. Định nghĩa & Phân loại:***   **Pre-training (tiền huấn luyện)**: Quá trình huấn luyện mô hình trên một tập dữ liệu lớn ban đầu trước khi tinh chỉnh cho các tác vụ cụ thể.*   **Mô hình Encoder-Only**: Một loại kiến trúc trong học sâu, tập trung vào việc mã hóa (encoding) thông tin từ dữ liệu đầu vào.    *   **Khác biệt với Decoder-Only**:        *   **Encoder-Only**: Thuộc loại **Sequence Encoding** (mã hóa chuỗi).        *   **Decoder-Only**: Thuộc loại **Sequence Generating** (sinh chuỗi).**2. Nhiệm vụ của từng loại mô hình:***   **Sequence Generating (ví dụ: Decoder)**:    *   **Input**: Một chuỗi các token (ví dụ: từ trong câu).    *   **Output**: Dự đoán và tạo ra (generate) token tiếp theo trong chuỗi.    *   **Ví dụ**: Decoder nhận
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Ghi chú giải thích rất chính xác những thách thức trong việc tiền huấn luyện mô hình encoder-only, đặc biệt là khó khăn trong việc gán nhãn và cách thêm lớp phân loại để nhận tín hiệu giám sát. Việc phân biệt giữa sequence encoding và sequence generating cũng rất hữu ích và mang lại chiều sâu.
 
@@ -94,7 +92,7 @@
 > Kết quả  khi training xong, ta sẽ tháo cái classifier ra, khi đó encoder sẽ có khả năng rất giỏi trong việc nắm bắt ý nghĩa của một từ (token) trong một ngữ cảnh (dĩ nhiên là phản ánh vào trong các con số của vector output bởi encoder)
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Bản phân tích rất chính xác và sâu sắc, giải thích rõ ràng sự khác biệt giữa Language Model truyền thống và mô hình tiền huấn luyện encoder, bao gồm cả lý do và cách thức huấn luyện. Nội dung đã vượt xa những gì hình ảnh cung cấp, mang lại cái nhìn toàn diện.
 
@@ -102,7 +100,7 @@
 
 <a id="node-zta1g6k"></a>
 
-- **Tiền huấn luyện và Ứng dụng Encoder**
+###### Tiền huấn luyện và Ứng dụng Encoder
 
 <p align="center"><kbd><img src="assets/hc3m699z4kt.png" width="80%"></kbd></p>
 
@@ -110,7 +108,7 @@
 > Cái này hình minh họa. Mình thấy cái phần A này, tức là cái mà vừa mới nói, tức là cái quá trình pre-training, quá trình tiền huấn luyện. Thì kiểu như là một từ nó nhận vô một cái chuỗi các cái token. Như một từ che đi. Rồi nó cố gắng dự đoán lại cái từ đó gì? Dự đoán tìm hiểu cái đó. Đánh ra một cái phân bố xác suất là làm sao mà cái quá trình training, quá trình tối ưu cái tham số nó sẽ cố gắng cho cái cross entropy giữa hai cái phân bố xác suất nó gần lại. Thì cái đó là quá trình training. Rồi rồi. Thì sau khi train xong mình muốn dùng cái mô hình này thì ra mình sẽ gỡ cái lớp softmax đi, tức là mình gỡ cái lớp classifier đi. Mình chỉ dùng cái encoder mà lúc bây giờ cái tham số đã được huấn luyện rồi, đã được tối ưu rồi. Thì mình mới gắn một cái prediction network vô. Thì cái prediction network này á thì có thể nó cũng giống cái lớp softmax thôi. Nhưng mà nó nó sẽ có thể khác chút xíu nó là mình sẽ nhận cái output từ cái encoder và mà mà mà thực hiện cái dự đoán ở trong cái bài toán cuối. Thì cái phần toán cuối, cái bài toán cụ thể có thể nó là dự đoán sentiment hoặc là một cái cái một cái chuỗi hoặc là một cái nhiệm vụ nào đó khác. Và có hỏi thêm là để cái quá trình adapt đó nó nó được tốt hơn thì có thể cái pre-trained encoder nó tiếp tục fine-tune tiếp tục fine-tune cùng với cái cái prediction network trong cái bài toán cuối dùng cái dữ liệu có gắn nhãn của cái bài toán cụ thể. Ở đầu cuối. Rồi tinh chỉnh cái tham số của encoder thêm chút xíu nữa.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Phân tích xuất sắc, mô tả chính xác các giai đoạn tiền huấn luyện và ứng dụng, bao gồm cả chi tiết kỹ thuật như hàm lỗi cross-entropy và mục đích của fine-tuning. Giải thích rõ ràng việc loại bỏ lớp Softmax và thêm mạng dự đoán cho các tác vụ cụ thể là rất toàn diện.
 
@@ -118,7 +116,7 @@
 
 <a id="node-bs163pm"></a>
 
-- **Mô hình ngôn ngữ bị che**
+###### Mô hình ngôn ngữ bị che
 
 <p align="center"><kbd><img src="assets/5y3b7g94luc.png" width="80%"></kbd></p>
 
@@ -126,7 +124,7 @@
 > Rồi, để ý là phần này nói về cái khái niệm của cái gọi là masked language model. Tức là dịch nôm na là một cái mô hình ngôn ngữ mà thuộc dạng là bị che hoặc là mặt nạ. Thì đại khái á ở đây người ta nhắc đến trong cái bối cảnh truyền thống mình tạm hiểu là như vậy. Bối cảnh truyền thống của một cái mô hình ngôn ngữ á thì nó được hiểu rằng cái mô hình ngôn ngữ nó sẽ dự đoán một cái từ, dự đoán một cái token dựa trên những cái token trước đó. Thì đó là cái cách hiểu truyền thống của một cái mô hình ngôn ngữ. Nhưng nhưng cái masked language model mà cái ví dụ nổi tiếng nhất khi mà người ta giới thiệu cái này á chính là cái BERT á thì nó lại làm cái chuyện khác tức là nó dự đoán một cái từ bị che dựa trên tất cả các cái từ khác ở trong bối cảnh, trong cái đoạn văn. Và với cái cách với cái cách định nghĩa thế này á thì cái mô hình language truyền thống đó nó có thể gọi là một một trường hợp đặc biệt của cái masked language model. Đó là nó chỉ nó nó che hết những cái từ bên phải, chỉ dự đoán dựa trên cái context là những từ bên trái. Và cái đó nó có cái tên gọi là causal language modeling là cái cách truyền thống. Tuy nhiên cái cái masked thì nó rộng hơn và nó mang cái khả năng là dự đoán cái token bị che với cái context là cả bên trái lẫn bên phải.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Phần phân tích rất chính xác và chi tiết, giải thích rõ ràng khái niệm về Masked Language Modeling và mối quan hệ với Causal Language Modeling. Bạn đã nắm bắt rất tốt các điểm chính và cung cấp một cái nhìn sâu sắc.
 
@@ -134,7 +132,7 @@
 
 <a id="node-w7px820"></a>
 
-- **Che giấu Token và Tái tạo**
+###### Che giấu Token và Tái tạo
 
 <p align="center"><kbd><img src="assets/bweb7f7ysu.png" width="80%"></kbd></p>
 
@@ -146,7 +144,7 @@
 > Phần cuối cùng biểu diễn về mặt toán học của hàm lỗi (loss function), đây thực chất là một bài toán tối ưu. Để huấn luyện mô hình, chúng ta tối ưu các tham số (theta, W) nhằm tối đa hóa likelihood, cụ thể là tối đa hóa xác suất điều kiện. Xác suất điều kiện này dựa trên đầu vào đã bị che (X bar), mục tiêu là tối đa hóa xác suất của chuỗi gốc. Đây cũng chính là hình thức maximum likelihood. Một cách nhìn khác là tối thiểu hóa lỗi tái tạo (reconstruction loss), mà lỗi này chính là cross-entropy loss. Đối với một từ bị che (ví dụ 'early'), phân phối xác suất ban đầu sẽ tập trung vào từ 'early'. Mô hình cần dự đoán ra một phân phối xác suất gần nhất với phân phối gốc này. Việc giảm cross-entropy giữa hai phân phối xác suất giúp đạt được điều đó. Tổng chi phí (cost) bao gồm tổng tất cả các lỗi tại mọi vị trí bị che trong một chuỗi, và trên toàn bộ các chuỗi trong tập dữ liệu. Đây là cách thể hiện của bài toán tối ưu. Sau khi huấn luyện (train) mô hình và tìm được các tham số tối ưu theta^ và W^ coi như quá trình huấn luyện đã hoàn thành.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Giải thích rất chính xác và đầy đủ, cung cấp thêm ngữ cảnh và chiều sâu đáng kể cho các khái niệm được trình bày trong hình ảnh.
 
@@ -154,7 +152,7 @@
 
 <a id="node-b3odq9j"></a>
 
-- **Nhược điểm Mask Language Model**
+###### Nhược điểm Mask Language Model
 
 <p align="center"><kbd><img src="assets/mu7ztllj77l.jpeg" width="80%"></kbd></p>
 
@@ -164,15 +162,28 @@
 > Một điểm nữa là quá trình tạo mask có thể khiến cho mô hình bỏ qua / không học được / bỏ sót quan hệ giữa các từ, ví dụ như khi training, cái từ bị che đóng vai trò quan trọng đối với nhau.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **93/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **93/100** · ✓ Move on
 >
 > Học sinh đã nắm vững hai nhược điểm chính của Masked Language Modeling được đề cập, đặc biệt là sự khác biệt do token [MASK] và việc bỏ qua mối quan hệ giữa các token bị che. Bài làm thể hiện sự hiểu biết sâu sắc và chính xác.
+> # Phân tích chi tiết
+>
+> ## Điểm mạnh
+> *   **Hiểu rõ nhược điểm 1 (Token [MASK]):** Học sinh đã giải thích rất chính xác và chi tiết về việc token [MASK] chỉ xuất hiện trong quá trình huấn luyện (training) mà không xuất hiện trong quá trình suy luận (inference/test time). Điều này dẫn đến sự khác biệt ("discrepancy") giữa hai giai đoạn, đây là một điểm mấu chốt được tài liệu nhắc đến.
+> *   **Nhận diện nhược điểm 2 (Bỏ qua phụ thuộc):** Học sinh cũng đã nhận diện đúng nhược điểm thứ hai, đó là mô hình có thể bỏ qua hoặc không học được mối quan hệ giữa các từ bị che (masked tokens).
+> *   **Diễn đạt rõ ràng:** Cách diễn đạt bằng tiếng Việt tự nhiên, dễ hiểu và truyền tải được ý chính của tài liệu tham khảo.
+>
+> ## Các điểm cần cải thiện
+> *   **Chi tiết về nhược điểm 2:** Mặc dù học sinh đã nêu đúng rằng mô hình bỏ qua mối quan hệ giữa các từ bị che, nhưng phần ví dụ "ví dụ như khi training, cái từ bị che đóng vai trò quan trọng đối với nhau" chưa mô tả hoàn toàn chính xác *cơ chế* của việc bỏ qua này như trong tài liệu. Tài liệu nhấn mạnh rằng việc dự đoán một token bị che (ví dụ: `x2`) được thực hiện một cách *độc lập* với các token bị che khác (ví dụ: `x6`), mặc dù `x6` nên được xem xét trong ngữ cảnh của `x2`.
+>
+> ## Gợi ý để hiểu sâu hơn
+> *   **Làm rõ cơ chế độc lập:** Để cải thiện sự hiểu biết về nhược điểm thứ hai, học sinh nên tập trung vào việc giải thích rằng các dự đoán cho các token bị che được thực hiện một cách *độc lập* với nhau trong quá trình huấn luyện. Điều này có nghĩa là khi mô hình cố gắng dự đoán một từ bị che, nó không sử dụng thông tin từ các từ bị che khác trong cùng một câu để đưa ra dự đoán.
+> *   **Ví dụ minh họa:** Hãy thử đặt một ví dụ cụ thể hơn, chẳng hạn như câu "The cat sat on the [MASK] and [MASK] the mouse." Nếu mô hình dự đoán "mat" cho từ [MASK] đầu tiên và "caught" cho từ [MASK] thứ hai một cách độc lập, nó có thể bỏ qua mối quan hệ chặt chẽ giữa "mat" và "caught" trong ngữ cảnh này, trong khi một con mèo ngồi trên thảm và bắt chuột là một hành động có mối liên hệ rõ ràng.
 
 <br>
 
 <a id="node-dpbb3xj"></a>
 
-- **Mô hình ngôn ngữ che dấu**
+###### Mô hình ngôn ngữ che dấu
 
 <p align="center"><kbd><img src="assets/8xvi5838uvo.png" width="80%"></kbd></p>
 
@@ -182,15 +193,29 @@
 > Khi đó, việc dự đoán các từ trong chuỗi sẽ ko còn bị vấn đề là dự nhìn vào các từ bên trái (thứ mà masked language model cố gắng giải quyết) vì khi huấn luyện có nó sẽ phải dự đoán từ ở vị trí i=3 dựa trên những từ ở i=1,2 và i=4
 
 > [!TIP]
-> **🤖 AI Feedback** — ❌ Score: **65/100**
+> 🤖 **AI Check** — 🟡 Minor issues — ❌ **65/100** · ✓ Move on
 >
 > The student correctly grasps the concept of permuting prediction order for broader context but misunderstands the role of masking in this approach.
+> ## Detailed Analysis
+>
+> ### Strengths
+> *   **Core Concept:** The student correctly identifies Permuted Language Model as a method to address limitations and understands the fundamental idea of permuting the prediction order.
+> *   **Broader Context:** The student correctly notes that this approach allows for predicting words using a broader context, not just preceding words ("dự đoán từ ở vị trí i=3 dựa trên những từ ở i=1,2 và i=4"). This aligns with the reference's explanation that it's not limited to just preceding tokens.
+> *   **Problem Addressed:** The student correctly connects this approach to solving the problem of being limited to left-context, a problem also addressed by masked language models.
+>
+> ### Areas for Improvement
+> *   **Misconception about Masking:** The most significant inaccuracy is the statement "khỏi che gì hết" (don't mask anything). The reference material explicitly states: "this approach is somewhat akin to masked language modeling: we mask out x3 and use its surrounding tokens x0, x1, x2, x4 to predict this token." The Permuted Language Model *does* involve masking the target token to be predicted from its context, similar to masked language modeling.
+>
+> ### Suggestions
+> *   **Clarify Masking:** Revisit the specific mechanism of how a token is predicted in PLM. Understand that while the *order* of prediction is permuted, the *target token itself is masked out* during training. This forces the model to predict the masked token based on the available, unmasked context tokens (which could be both left and right, depending on the chosen permutation).
+> *   **Connect to Masked Language Models:** Reflect on why the text says it's "akin to masked language modeling." This similarity lies precisely in the fact that a token is hidden, and its prediction relies on its surrounding context, similar to how BERT uses masking. The permutation aspect primarily deals with *which* tokens form the context for prediction in a given step.
+> *   **Review the Example:** Look closely at the example (1.14) and the explanation that follows. For predicting x3, it uses surrounding tokens like e0, e1, e2, e4. The crucial part is that x3 itself is not present for the model to "see" when it's being predicted.
 
 <br>
 
 <a id="node-51loao8"></a>
 
-- **Mô hình ngôn ngữ hoán vị Transformer**
+###### Mô hình ngôn ngữ hoán vị Transformer
 
 <p align="center"><kbd><img src="assets/ccdfo62voqt.png" width="80%"></kbd></p>
 
@@ -202,9 +227,22 @@
 > Cách làm không phải là tách câu thành các token, sau đó thay thế các token này bằng 'mask token', rồi mới đưa vào mô hình để dự đoán.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **80/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **80/100** · ✓ Move on
 >
 > Học sinh hiểu đúng điểm khác biệt quan trọng giữa mô hình ngôn ngữ hoán vị và các phương pháp khác, đặc biệt là không sử dụng 'mask token' theo cách truyền thống. Tuy nhiên, cần bổ sung thêm về cách triển khai thực tế.
+> ## Phân tích chi tiết
+>
+> ### Điểm mạnh
+> Học sinh đã chính xác khi khẳng định rằng cách triển khai mô hình ngôn ngữ hoán vị *không phải* là tách câu thành các token, sau đó thay thế các token này bằng 'mask token' và đưa vào mô hình để dự đoán. Điều này cho thấy học sinh đã phân biệt được mô hình ngôn ngữ hoán vị (như được sử dụng trong XLNet, nơi dùng cơ chế *self-attention masks* để kiểm soát việc phụ thuộc ngữ cảnh) với các phương pháp khác như Masked Language Modeling (MLM) của BERT, nơi các token được thay thế bằng `[MASK]`.
+>
+> ### Các điểm cần cải thiện
+> Mặc dù học sinh đã đúng trong việc phủ định một phương pháp, ghi chú chưa làm rõ *cách thức thực tế* mà các mô hình ngôn ngữ hoán vị được triển khai theo tài liệu tham khảo. Tài liệu nhấn mạnh rằng hoán vị được thực hiện bằng cách "setting appropriate masks for self-attention" (thiết lập các mặt nạ phù hợp cho cơ chế tự chú ý), chứ không phải bằng cách thay đổi trực tiếp thứ tự hay thay thế token.
+>
+> ### Gợi ý
+> Để làm sâu sắc thêm hiểu biết, học sinh nên tập trung vào cách các mô hình ngôn ngữ hoán vị tận dụng *mask trong cơ chế tự chú ý (self-attention)*. Cần làm rõ rằng những mặt nạ này kiểm soát luồng thông tin, cho phép mô hình chỉ chú ý đến một tập hợp con các token đã chọn trong mỗi bước dự đoán, từ đó mô phỏng các thứ tự hoán vị khác nhau mà không cần thay đổi trực tiếp chuỗi đầu vào hay sử dụng các 'mask token' rõ ràng. Việc tập trung vào vai trò của *self-attention masks* là chìa khóa để hiểu đầy đủ cơ chế này.
+>
+> **⭐ Bonus points**
+> - Học sinh đã gián tiếp thể hiện kiến thức về Masked Language Modeling (MLM), một kỹ thuật tiền huấn luyện phổ biến trong các mô hình như BERT, bằng cách phân biệt nó với mô hình ngôn ngữ hoán vị.
 
 **🔗 See also:** [Học không giám sát để tiền huấn luyện](./gii_thiu_m_hnh_ngn_ng_ln.md#node-hsb1v0a)
 
@@ -212,7 +250,7 @@
 
 <a id="node-hdg9mdo"></a>
 
-- **Dự đoán câu tiếp theo**
+###### Dự đoán câu tiếp theo
 
 <p align="center"><kbd><img src="assets/88pu7w192x3.png" width="80%"></kbd></p>
 
@@ -236,15 +274,43 @@
 > Khi mình có dự đoán là một phân phối xác suất, mình dùng Binary Cross Entropy Loss để tính ra loss (mất mát) giữa phân phối xác suất thực (là một one-hot vector) và phân phối xác suất dự đoán. Quá trình training là mình sẽ giảm thiểu tổng cost function (loss) xuống. Đây chính là quá trình training một mô hình phân loại như đã nói ở trên. Quá trình này sẽ giúp train mô hình theo bài toán pre-training.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Học sinh thể hiện sự hiểu biết rất sâu sắc và chính xác về quá trình tiền huấn luyện mã hóa dựa trên bài toán phân loại, đặc biệt là Next Sentence Prediction (NSP), cùng với nhiều kiến thức mở rộng liên quan.
+> # Phân tích chi tiết phản hồi
+>
+> ## Điểm mạnh
+> *   **Hiểu rõ khái niệm tiền huấn luyện (Pre-training) và nhiệm vụ NSP:** Học sinh đã nắm vững ý tưởng cốt lõi về việc huấn luyện một bộ mã hóa như một bộ phân loại, sử dụng bài toán Next Sentence Prediction (NSP) làm ví dụ minh họa. Việc giải thích mục đích chung của tiền huấn luyện để tạo ra các mô hình nền tảng có khả năng áp dụng cho nhiều bài toán sau này là rất chính xác và thể hiện kiến thức rộng.
+> *   **Nắm bắt giả định cốt lõi của NSP:** Học sinh đã diễn giải rất tốt giả định rằng một mô hình hiểu ngữ cảnh tốt sẽ có khả năng xác định được mối quan hệ giữa các câu, cụ thể là liệu một câu có phải là câu tiếp theo của câu kia hay không. Việc liên hệ điều này với khả năng "hiểu ngữ cảnh" của mô hình là một điểm cộng lớn.
+> *   **Mô tả chính xác quy trình tạo dữ liệu:** Học sinh đã giải thích đúng cách tạo ra các "mẫu dương" (positive samples) từ các cặp câu kế tiếp nhau và các "mẫu âm" (negative samples) bằng cách chọn các câu ngẫu nhiên không kế tiếp nhau, cùng với việc gán nhãn "true" hoặc "false" (1 hoặc 0).
+> *   **Hiểu các token đặc biệt và quy trình mã hóa:** Mô tả về việc sử dụng các token đặc biệt như `[CLS]` và `[SEP]` để phân tách câu và cấu trúc chuỗi đầu vào là chính xác. Quá trình từ token hóa, tạo embedding (`e0...e11`), đưa qua Encoder của Transformer, và cuối cùng lấy `h0` làm vector đại diện cho toàn bộ chuỗi để phân loại, đều được trình bày rõ ràng và đúng với hình ảnh tham khảo.
+> *   **Nắm vững cơ chế phân loại cuối cùng:** Học sinh hiểu vai trò của lớp Softmax để tạo ra phân phối xác suất và việc sử dụng hàm lỗi Binary Cross Entropy để tính toán mất mát trong quá trình huấn luyện, nhằm tối thiểu hóa tổng hàm chi phí.
+>
+> ## Các lĩnh vực cần cải thiện
+> *   **Làm rõ hơn về "mục tiêu cụ thể" trong tiền huấn luyện:** Mặc dù đúng là tiền huấn luyện không đặt ra mục tiêu cho *một bài toán cụ thể cuối cùng*, nhưng NSP *là một nhiệm vụ cụ thể* (proxy task) mà mô hình cần giải quyết trong giai đoạn tiền huấn luyện. Có thể làm rõ rằng tiền huấn luyện sử dụng các nhiệm vụ *giả lập* (proxy tasks) để học các biểu diễn tổng quát, chứ không phải không có mục tiêu nào cả trong quá trình huấn luyện.
+> *   **Chi tiết về Tokenization:** Học sinh đã nhận ra rằng "không hẳn là một từ đưa vô bởi vì có nhiều cái cách để mà token hóa", đây là một điểm quan sát tốt. Tuy nhiên, nếu có thể cung cấp một ví dụ cụ thể hơn về các phương pháp token hóa phổ biến như WordPiece hay BPE thường được sử dụng trong các mô hình như BERT, thì phần này sẽ trở nên sâu sắc hơn.
+>
+> ## Gợi ý để đào sâu kiến thức
+> *   **Phân biệt rõ ràng hơn giữa các loại nhiệm vụ:** Nghiên cứu sâu hơn về sự khác biệt giữa các "nhiệm vụ tiền huấn luyện" (pre-training tasks - ví dụ: NSP, Masked Language Model) và "nhiệm vụ hạ nguồn" (downstream tasks - ví dụ: phân loại văn bản, hỏi đáp) để củng cố sự hiểu biết về vai trò của từng loại nhiệm vụ trong quy trình phát triển mô hình NLP hiện đại.
+> *   **Tìm hiểu các phương pháp Tokenization nâng cao:** Khám phá chi tiết hơn về cách thức hoạt động của các thuật toán tokenization như WordPiece, Byte-Pair Encoding (BPE), hoặc SentencePiece, để hiểu rõ hơn cách chúng xử lý các từ hiếm hoặc từ mới.
+> *   **Mở rộng kiến thức về các nhiệm vụ tiền huấn luyện khác:** Nghiên cứu thêm về các nhiệm vụ tiền huấn luyện khác được sử dụng trong BERT và các mô hình Transformer khác, ví dụ như Masked Language Model (MLM), để thấy sự đa dạng trong cách học biểu diễn ngôn ngữ.
+>
+> ## Điểm cộng thêm (Kiến thức bên ngoài tham khảo)
+> *   Khái niệm về mô hình nền (base models) và mục đích chung của tiền huấn luyện để tạo ra các mô hình nền tảng có khả năng ứng dụng rộng rãi.
+> *   Việc sử dụng hàm lỗi Binary Cross Entropy (BCE) và vector one-hot cho phân phối xác suất thực.
+> *   Đề cập đến cơ chế "trao đổi thông tin với nhau" giữa các vector qua các lớp Transformer, gợi ý sự hiểu biết về cơ chế tự chú ý (self-attention).
+>
+>
+> **⭐ Bonus points**
+> - Học sinh giải thích mục đích chung của tiền huấn luyện là tạo ra các mô hình nền (base models) có khả năng phát huy tác dụng tốt trong nhiều bài toán cụ thể sau này.
+> - Học sinh đã gọi tên được hàm lỗi Binary Cross Entropy Loss và khái niệm phân phối xác suất thực dưới dạng one-hot vector cho bài toán phân loại nhị phân.
+> - Học sinh có hiểu biết ngầm về cơ chế trao đổi thông tin giữa các vector qua các lớp của mô hình Transformer, gợi ý đến cơ chế tự chú ý.
 
 <br>
 
 <a id="node-demfq7i"></a>
 
-- **ELECTRA: Phát hiện từ thay đổi**
+###### ELECTRA: Phát hiện từ thay đổi
 
 <p align="center"><kbd><img src="assets/mn1899krll8.png" width="80%"></kbd></p>
 
@@ -289,9 +355,35 @@
 >         *   **Vai trò:** Tương tự như Discriminator trong mô hình GAN, phân biệt giữa dữ liệu
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **90/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
 >
 > Ghi chú của bạn thể hiện sự hiểu biết rất tốt về cách tiếp cận huấn luyện ELECTRA, đặc biệt là việc nhận diện hai mô hình chính và mục tiêu của chúng. Bạn cũng đã có một nhận định sâu sắc khi liên hệ với GANs.
+> ### Phân tích chi tiết
+>
+> #### Điểm mạnh:
+>
+> *   **Nắm bắt mục tiêu tiền huấn luyện:** Bạn đã hiểu đúng rằng mục tiêu chính của việc tiền huấn luyện base model là giúp mô hình nắm bắt ngữ cảnh một cách hiệu quả.
+> *   **Xác định đúng cấu trúc hai mô hình:** Bạn đã nhận diện chính xác sự tồn tại của hai mô hình là Generator (Masked Language Model) và Discriminator (Mô hình nền đang được huấn luyện).
+> *   **Hiểu rõ vai trò của Generator:** Mô tả đúng vai trò của Generator là dự đoán các từ bị che trong câu.
+> *   **Nhận diện bản chất nhiệm vụ:** Bạn đã nhận ra rằng nhiệm vụ của Discriminator là một bài toán phân loại nhị phân.
+> *   **Phát hiện tính tự giám sát:** Việc nhận biết đây là một quá trình tự giám sát là chính xác.
+> *   **Liên hệ với GANs (Generative Adversarial Networks):** Đây là một điểm mạnh nổi bật. Việc bạn so sánh kiến trúc và cơ chế huấn luyện của ELECTRA với GANs (Generator và Discriminator 'đua' nhau) cho thấy khả năng tổng hợp kiến thức rất tốt và hiểu sâu sắc hơn về cảm hứng đằng sau mô hình này.
+>
+> #### Các điểm cần cải thiện:
+>
+> *   **Mô tả chính xác nhiệm vụ của Discriminator:** Đây là điểm cần làm rõ nhất. Bạn thường diễn đạt nhiệm vụ của Discriminator là "dự đoán xem từ mà MLM sinh ra có giống với từ gốc ban đầu bị che hay không" hoặc "phân loại xem từ bị che và từ được tạo ra bởi Masked Language Model có phải là một hay không".
+>     *   **Giải thích chi tiết:** Thực tế, Discriminator không so sánh trực tiếp từ được sinh ra với từ gốc bị che. Thay vào đó, nó kiểm tra *từng token* trong chuỗi đã được Generator thay thế (chuỗi "replaced") và đưa ra phán đoán nhị phân cho mỗi token đó: liệu token hiện tại là *từ gốc* (từ ban đầu chưa bị che hoặc từ bị che nhưng được Generator dự đoán chính xác) hay là *từ đã bị thay thế* (do Generator sinh ra và khác với từ gốc). Ví dụ trong hình minh họa, từ "toys" ban đầu bị che, Generator dự đoán ra "toys", Discriminator sau đó dán nhãn "original" cho "toys" vì nó khớp với từ gốc. Ngược lại, "decades" thay thế "hours" nên được dán nhãn "replaced".
+>
+> #### Gợi ý để làm sâu sắc thêm hiểu biết:
+>
+> *   Khi mô tả nhiệm vụ của Discriminator, hãy tập trung vào việc nó nhận chuỗi *đã được thay thế hoàn chỉnh* làm đầu vào và đưa ra một dự đoán `original/replaced` cho *mỗi vị trí token* trong chuỗi đó, chứ không chỉ các vị trí bị che. Điều này nhấn mạnh hơn tính chất phân loại token-level.
+> *   Sơ đồ minh họa ở phần "label" là rất quan trọng để hiểu rõ nhiệm vụ này. Hãy chú ý rằng nhãn `original` được áp dụng cho cả các từ không bị che và các từ bị che mà Generator đã dự đoán đúng từ gốc, trong khi `replaced` chỉ áp dụng cho các từ Generator dự đoán sai hoặc không khớp với từ gốc.
+>
+> ### Ghi chú học tập (bổ sung):
+> *   **Mô hình chính (Discriminator)** nhận đầu vào là chuỗi đã được 'thay thế' (có thể chứa cả từ gốc và từ do Generator sinh ra) và đưa ra dự đoán nhị phân (`original` hoặc `replaced`) cho *mỗi token* trong chuỗi đó.
+>
+> **⭐ Bonus points**
+> - Khả năng liên hệ và so sánh kiến trúc của ELECTRA với Generative Adversarial Networks (GANs, bao gồm cơ chế Generator và Discriminator cạnh tranh) là một điểm cộng lớn, thể hiện sự hiểu biết sâu sắc vượt ra ngoài tài liệu tham khảo.
 
 **🔗 See also:** [Nền tảng Mô hình ngôn ngữ lớn](#node-tzhbd32)
 
@@ -299,7 +391,7 @@
 
 <a id="node-4hu03he"></a>
 
-- **Tiền huấn luyện Encoder-Decoder**
+###### Tiền huấn luyện Encoder-Decoder
 
 <p align="center"><kbd><img src="assets/z25nhe8un2r.png" width="80%"></kbd></p>
 
@@ -307,7 +399,7 @@
 > Ờ cái này đại khái là nói đến một cái kiến trúc gọi là encoder decoder. Thì như cái tên nó cái encoder decoder nó là một cái kiến trúc có cái hai phần. Mà cái phần đầu nó mang nhiệm vụ là nó mã hóa cái chuỗi đầu vào. Còn decoder nó sẽ mang nhiệm vụ là nó giống như là nó tạo ra một cái chuỗi đầu ra. Thì đương nhiên nó giống như một cái mô hình ngôn ngữ thì nó vẫn là mô hình ngôn ngữ. Và nó dự đoán cái chuỗi đầu ra dựa theo trên là cái chuỗi đầu vào. Thì ở đây người ta muốn nói là có thể dùng cái kiến trúc kiểu này để mà phục vụ cho những cái gọi là những cái bài toán phục vụ cho những cái nhiệm vụ NLP khác riêng biệt. Chứ không chứ không phải là có nghĩa là tuy là cái nhiệm vụ của cái encoder decoder là nhận vào một chuỗi và ra một chuỗi, nhưng mà mình có thể tận dụng nó để để gọi là điều chỉnh lại nó để nó trở thành phục vụ cho những bài toán riêng biệt. Mà cái bài toán bình thường á thì có thể là nó phục vụ cho cái việc là dịch thuật, gọi là machine translation khi cái chuỗi đầu vào nó là một cái câu tiếng Đức, chuỗi đầu ra nó là một cái câu tiếng Anh. Hoặc là summarization khi chuỗi đầu vào là một cái đoạn text thì chuỗi đầu ra là một cái câu mà nó tóm gọn hoặc là một cái đoạn text ngắn hơn, tóm tóm gọn cái nội dung đưa vô. Nhưng mà hoàn toàn có thể biến nó hoặc dùng nó cho một cái bài toán khác, một bài toán NLP khác. Ví dụ như là sentiment analysis. Vốn là một cái bài toán phân loại. Khi mà mình mình đưa vào một cái một cái đoạn văn, một cái câu văn, một cái câu mình muốn nó ra là xem cái câu đó là cái positive hay là negative hay là neutral. Vậy thì thật ra mình vẫn có thể dùng cái này để làm cho cái bài toán đó bằng cách là mình cho cái decoder nó output ra là là là là một cái từ nào ở trong ba cái từ đó. Thì cái đây là cái mở đầu cho việc là nói về việc mình sử dụng cái kiến trúc encoder decoder cho cho cho những cái bài toán này. Thì họ có nói sơ về việc huấn luyện á là mình sẽ đầu tiên mình cũng huấn luyện nguyên cả cái đó. Nhưng mà theo cái kiểu là self supervise. Tức là tự giám sát. Mục đích là để cho nó học được cái kiến thức chung. Nó hiểu được cái cái việc mà cái ngữ cảnh đưa cái từ cái đoạn văn đưa vô nó có cái ý nghĩa sao. Nhưng mà sau đó mình sẽ fine tune nó, mình sẽ tinh chỉnh nó với một cái bộ dữ liệu có gán nhãn theo cái kiểu là supervise learning.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **98/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
 > Phần phân tích rất chính xác và có chiều sâu, giải thích rõ ràng kiến trúc encoder-decoder và cách áp dụng nó cho nhiều bài toán NLP khác nhau, bao gồm cả ví dụ phân tích cảm xúc. Chi tiết về quá trình huấn luyện tự giám sát và tinh chỉnh cũng được trình bày đầy đủ.
 
@@ -315,7 +407,7 @@
 
 <a id="node-2bqsjcr"></a>
 
-- **T5: Tiếp cận Text-to-Text**
+###### T5: Tiếp cận Text-to-Text
 
 <p align="center"><kbd><img src="assets/g1ri050p93s.png" width="80%"></kbd></p>
 
@@ -325,15 +417,34 @@
 > Rồi một cái kiểu khác đó là khi cái cái cái cái mình prompt cho nó mình đưa cho nó là CLS, answer, When was Albert Einstein born? Thì nó output ra là he was born on March 14, 1879. Thì đây lại là một cái mô hình cũng dùng cái kiểu là encoder decoder nhưng mà nó phục vụ cho cái bài toán question answering. Tức là quá trình training cũng là cái kiến trúc đó nhưng mà cái dữ liệu, cái kiểu train nó cái dữ liệu nó được thay đổi bằng cách là mình thay đổi cái prompt cũng như là cái cái bộ câu hỏi và cái câu trả lời thì mình ra được một cái mô hình mà nó phục vụ cho cái nhiệm vụ NLP là question answering. Rồi một cái kiểu thứ ba là simplify. Đó cũng là cái chuỗi đưa vô là CLS simplify một cái cái một cái câu nào đó thì chuỗi đưa ra nó sẽ là là là giống như summary hoặc là viết một cái phiên bản đơn giản của chuỗi đưa vô. Tóm thì thì đây là có thể thấy đây là những cái ví dụ mà người ta minh họa cho việc là à một cùng một kiến trúc encoder decoder nhưng mà bằng một cách thay đổi chút xíu cái prompt và cái dữ liệu được huấn luyện thì mình sẽ sẽ kiểu như là mình mình mình chỉ cần pretrain một cái base model, sau đó mình tinh chỉnh lại mình lấy cái đó mình tinh chỉnh lại với cái bộ dữ liệu question answering thì mình sẽ có một cái mô hình là question answering NLP. Tinh chỉnh lại với cái bộ dữ liệu dịch thuật mình sẽ có được một cái mô hình dịch thuật. Thì ví dụ đại khái là như vậy.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **75/100**
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **75/100** · ✓ Move on
 >
 > Học sinh đã nắm vững khái niệm text-to-text và cách các tác vụ được định dạng trong T5. Tuy nhiên, cần làm rõ hơn về việc T5 sử dụng một mô hình duy nhất cho tất cả các tác vụ thay vì tinh chỉnh thành các mô hình chuyên biệt.
+> # Phân tích chi tiết
+>
+> ## Điểm mạnh
+> *   **Hiểu rõ khái niệm T5:** Học sinh đã nhận diện đúng T5 là mô hình Encoder-Decoder Pre-training cho các bài toán NLP.
+> *   **Nắm vững ý tưởng "text-to-text":** Hiểu rõ cốt lõi của T5 là biểu diễn nhiều bài toán NLP dưới dạng chuyển đổi từ chuỗi văn bản đầu vào sang chuỗi văn bản đầu ra.
+> *   **Mô tả chính xác cấu trúc ví dụ:** Mô tả chi tiết và chính xác cấu trúc đầu vào và đầu ra cho các ví dụ dịch thuật, hỏi đáp và đơn giản hóa văn bản được minh họa trong tài liệu, bao gồm các token đặc biệt (`CLS`) và cách các lệnh/yêu cầu được tích hợp vào chuỗi đầu vào.
+> *   **Hiểu biết về quá trình hoạt động:** Có bổ sung kiến thức về quá trình huấn luyện (pre-train/fine-tune) và sử dụng mô hình sau huấn luyện, thể hiện sự hiểu biết tổng thể về vòng đời của một mô hình NLP.
+>
+> ## Các điểm cần cải thiện
+> *   **Sự thống nhất của mô hình T5:** Điểm cần cải thiện chính là sự hiểu lầm về việc T5 là một *mô hình duy nhất* có khả năng thực hiện nhiều tác vụ khác nhau chỉ bằng cách thay đổi *cấu trúc prompt* (lệnh) trong đầu vào, chứ không phải là việc tinh chỉnh mô hình cơ sở để tạo ra các mô hình chuyên biệt cho từng tác vụ (ví dụ: một mô hình riêng cho hỏi đáp, một mô hình riêng cho dịch thuật). Văn bản tham chiếu nhấn mạnh "many different tasks are framed as the *same text-to-text task*", ám chỉ việc sử dụng một mô hình chung thống nhất cho tất cả các tác vụ.
+> *   **Ký hiệu token đầu ra:** Trong ví dụ dịch thuật, học sinh ghi `S` cho token bắt đầu chuỗi đầu ra, trong khi văn bản tham chiếu sử dụng `<s>`. Đây là một lỗi nhỏ về chi tiết cần được sửa.
+>
+> ## Gợi ý để hiểu sâu hơn
+> *   **Tập trung vào tính thống nhất:** Xem xét lại câu "many different tasks are framed as the same text-to-text task" để củng cố ý tưởng rằng T5 là một *mô hình đơn lẻ, thống nhất* có thể giải quyết nhiều loại tác vụ NLP khác nhau mà *không cần phải tạo ra các mô hình riêng biệt* cho từng tác vụ. Các tác vụ được phân biệt thông qua *hướng dẫn/lệnh* (instruction) trong chuỗi đầu vào.
+> *   **Thực hành giải thích:** Cố gắng diễn giải lại cách T5 xử lý các tác vụ đa dạng, nhấn mạnh rằng *một mô hình duy nhất* có thể chuyển đổi linh hoạt giữa các nhiệm vụ chỉ bằng cách thay đổi prompt đầu vào.
+> *   **Chú ý đến chi tiết:** Luôn cẩn thận với các ký hiệu đặc biệt (`[CLS]`, `<s>`) như trong văn bản gốc để đảm bảo độ chính xác tuyệt đối.
+>
+> **⭐ Bonus points**
+> - Giải thích quá trình huấn luyện và sử dụng mô hình T5, vượt ra ngoài thông tin trực tiếp được cung cấp trong hình ảnh.
 
 <br>
 
 <a id="node-7j43hcf"></a>
 
-- **Mô hình Encoder-Decoder Zero-shot**
+###### Mô hình Encoder-Decoder Zero-shot
 
 <p align="center"><kbd><img src="assets/uyrqf1ubpql.png" width="80%"></kbd></p>
 
@@ -343,7 +454,7 @@
 > Mô hình ngôn ngữ có thể thực hiện những tác vụ bất ngờ. Về cơ bản, một mô hình ngôn ngữ nhận đầu vào là một chuỗi và trả về đầu ra là một chuỗi. Tuy nhiên, bằng cách diễn giải chuỗi đầu ra (ví dụ: là một con số), mô hình có thể được ứng dụng vào nhiều nhiệm vụ khác nhau. Một điểm quan trọng là cách thiết lập quá trình huấn luyện mô hình encoder-decoder. Chuỗi đầu vào cho mô hình bao gồm hai phần: một là hướng dẫn hoặc yêu cầu cụ thể (prompt), và hai là chuỗi input ban đầu. Hai phần này được kết hợp để tạo thành một chuỗi đầu vào hoàn chỉnh. Nhờ cách thiết lập huấn luyện này, mô hình phát triển một khả năng đặc biệt: sau khi được huấn luyện và tinh chỉnh, nó có thể hiểu và xử lý những yêu cầu mà trước đó hoàn toàn không có trong bộ dữ liệu huấn luyện của nó. Khả năng này được gọi là Zero-shot learning.
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **88/100** · ✓ Move on
 >
 > Giải thích chi tiết và chính xác các khái niệm cốt lõi như chuyển đổi bài toán đánh giá thành sinh văn bản và học zero-shot. Tuy nhiên, việc đề cập đến mô hình encoder-decoder và "ví dụ cuối cùng" không có trong văn bản gốc.
 
@@ -351,7 +462,7 @@
 
 <a id="node-85zaaft"></a>
 
-- **Tự học Encoder-Decoder tiền tố**
+###### Tự học Encoder-Decoder tiền tố
 
 <p align="center"><kbd><img src="assets/06nro587d3f.png" width="80%"></kbd></p>
 
@@ -359,15 +470,33 @@
 > Huấn luyện mô hình Encoder-Decoder: Mô hình được huấn luyện để chuyển đổi chuỗi đầu vào (input) thành chuỗi đầu ra (output). Chuỗi input bao gồm prompt (instruction) và chuỗi ngữ cảnh. Encoder nhận chuỗi input, Decoder dự đoán chuỗi output. So sánh với Mô hình Ngôn ngữ Truyền thống (Causal Language Model): Giống nhau: Cả hai đều dự đoán token output dựa trên token input. Khác biệt chính: Mô hình Ngôn ngữ Truyền thống: Xử lý thông tin tuần tự theo một chiều, dự đoán token tiếp theo dựa trên các token trước đó. Encoder (trong mô hình này): Xử lý đồng thời tất cả các token của chuỗi đầu vào, không tuần tự từng token một. Encoder nhìn thấy và xử lý toàn bộ input cùng một lúc. Đây là điểm khác biệt chính so với mô hình ngôn ngữ truyền thống.
 
 > [!TIP]
-> **🤖 AI Feedback** — ✅ Score: **95/100**
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
 > Học sinh đã nắm vững cách huấn luyện mô hình encoder-decoder cho mô hình ngôn ngữ tiền tố và hiểu rõ sự khác biệt quan trọng trong cách bộ mã hóa xử lý đầu vào so với mô hình ngôn ngữ truyền thống.
+> ## Phân tích chi tiết phản hồi
+>
+> ### Điểm mạnh
+>
+> *   **Hiểu đúng vai trò Encoder-Decoder**: Học sinh đã xác định chính xác vai trò của bộ mã hóa (nhận chuỗi input/tiền tố) và bộ giải mã (dự đoán chuỗi output/chuỗi tiếp theo) trong ngữ cảnh này.
+> *   **Nắm vững sự khác biệt với Mô hình Ngôn ngữ Truyền thống (CLM)**: Học sinh mô tả rất chính xác cách Mô hình Ngôn ngữ Truyền thống xử lý thông tin tuần tự và dự đoán token tiếp theo dựa trên các token trước đó. Điều này phù hợp với mô tả trong tài liệu về việc tạo ra toàn bộ chuỗi một cách tự hồi quy.
+> *   **Nhận diện cơ chế xử lý của Encoder**: Điểm mạnh nhất là việc học sinh làm nổi bật sự khác biệt chính rằng "Encoder (trong mô hình này): Xử lý đồng thời tất cả các token của chuỗi đầu vào, không tuần tự từng token một. Encoder nhìn thấy và xử lý toàn bộ input cùng một lúc". Điều này hoàn toàn khớp với đoạn được tô hồng trong tài liệu: "the encoder processes the prefix at once". Đây là một điểm hiểu biết rất sâu sắc và quan trọng.
+> *   **Nêu được điểm chung**: Việc chỉ ra rằng cả hai đều dự đoán token output dựa trên token input là một điểm chung chính xác.
+>
+> ### Các lĩnh vực cần cải thiện
+>
+> *   **Thuật ngữ "chuỗi input bao gồm prompt (instruction) và chuỗi ngữ cảnh"**: Trong tài liệu tham khảo, đầu vào cho bộ mã hóa được gọi cụ thể là "prefix" (tiền tố), và tiền tố này "serves as the context for prediction" (đóng vai trò là ngữ cảnh để dự đoán). Mặc dù "prompt" và "instruction" có thể là các thành phần của tiền tố trong các ứng dụng thực tế, nhưng việc sử dụng thuật ngữ chính xác "prefix" từ tài liệu sẽ giúp tăng cường sự gắn kết với bài đọc.
+>
+> ### Gợi ý để đào sâu hiểu biết
+>
+> *   **Nhấn mạnh thuật ngữ cụ thể**: Tập trung vào việc sử dụng thuật ngữ "mô hình ngôn ngữ tiền tố" (prefix language modeling) khi mô tả cách tiếp cận này, vì đây là thuật ngữ chính được giới thiệu trong tài liệu.
+> *   **Kết nối với lợi ích**: Xem xét việc bổ sung lợi ích của phương pháp này, ví dụ như "dễ dàng tạo ra một số lượng lớn các ví dụ huấn luyện từ văn bản chưa được gắn nhãn" (easy to create a large number of training examples from unlabeled text), như đã đề cập ở cuối tài liệu. Điều này sẽ hoàn thiện hơn sự hiểu biết về lý do tại sao phương pháp này hiệu quả.
+>
 
 <br>
 
 <a id="node-ugmdare"></a>
 
-- **Kiến trúc Encoder-Decoder trong NLP**
+###### Kiến trúc Encoder-Decoder trong NLP
 
 <p align="center"><kbd><img src="assets/x38ramq213e.png" width="80%"></kbd></p>
 
@@ -375,7 +504,7 @@
 
 <a id="node-obmetsk"></a>
 
-- **Mở rộng ứng dụng mô hình Encoder-Decoder**
+###### Mở rộng ứng dụng mô hình Encoder-Decoder
 
 <p align="center"><kbd><img src="assets/5w9zzoz4v2f.png" width="80%"></kbd></p>
 
@@ -385,7 +514,7 @@
 
 <a id="node-ymyu3vg"></a>
 
-- **Hệ thống văn bản-sang-văn bản đa năng**
+###### Hệ thống văn bản-sang-văn bản đa năng
 
 <p align="center"><kbd><img src="assets/3fngu11djiu.png" width="80%"></kbd></p>
 
@@ -395,7 +524,7 @@
 
 <a id="node-07egis8"></a>
 
-- **Tiền huấn luyện Encoder-Decoder có Masking (T5)**
+###### Tiền huấn luyện Encoder-Decoder có Masking (T5)
 
 <p align="center"><kbd><img src="assets/wdii9h5b8pj.png" width="80%"></kbd></p>
 
@@ -417,7 +546,7 @@
 
 <a id="node-7ow2ngh"></a>
 
-- **Mô hình Encoder-Decoder đa ngôn ngữ**
+###### Mô hình Encoder-Decoder đa ngôn ngữ
 
 <p align="center"><kbd><img src="assets/ycsiw1pcz6d.png" width="80%"></kbd></p>
 
@@ -425,9 +554,28 @@
 > Phần 1: Huấn luyện mô hình Encoder-Decoder. Mục tiêu: Huấn luyện mô hình Encoder-Decoder hiểu và tạo ra output dựa trên input. Cách huấn luyện: Sử dụng các ví dụ bao gồm một "prompt" (instruction/hướng dẫn), một chuỗi "input", một "token phân biệt", và một chuỗi "output". Lợi ích của phương pháp này: Encoder sẽ học cách hiểu "prefix" (tức là "prompt"). Khả năng Zero-shot learning: Mặc dù huấn luyện với một số lượng "prompt" (prefix/yêu cầu) nhất định, encoder vẫn có thể học cách hiểu được các "prefix" mới mà nó chưa từng gặp trong dữ liệu huấn luyện. Điều này giúp mô hình có khả năng "zero-shot learning". Ưu điểm khác: Setup này giúp dễ dàng tạo ra bộ dữ liệu huấn luyện lớn. Phần 2: Huấn luyện cho tác vụ đa ngôn ngữ (Multilingual Tasks). Khi nào cần: Khi muốn huấn luyện mô hình cho các tác vụ "multilingual" (đa ngôn ngữ), ví dụ như dịch thuật, nơi có nhiều ngôn ngữ liên quan. Cách làm: Nên huấn luyện mô hình với bộ dữ liệu "multilingual" (dữ liệu chứa nhiều ngôn ngữ).
 
 > [!TIP]
-> **🤖 AI Feedback** — ⚠️ Score: **88/100**
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **88/100** · ✓ Move on
 >
 > Bạn đã nắm vững các ý chính về huấn luyện mô hình encoder-decoder và các yêu cầu cụ thể cho tác vụ đa ngôn ngữ. Các kiến thức bổ sung cho thấy sự hiểu biết sâu sắc.
+> ## Phân tích chi tiết
+>
+> ### Điểm mạnh:
+> *   **Hiểu rõ mục tiêu và cách hoạt động cơ bản:** Bạn đã diễn giải chính xác rằng encoder học cách hiểu 'prefix' và decoder học cách tiếp tục viết dựa trên sự hiểu biết đó. Việc bạn liên hệ 'prefix' với 'prompt' cũng rất phù hợp với ngữ cảnh thực tế của các mô hình hiện đại.
+> *   **Nhận diện ưu điểm:** Bạn đã làm nổi bật ưu điểm về việc dễ dàng tạo ra lượng lớn dữ liệu huấn luyện từ văn bản không dán nhãn, một điểm quan trọng được đề cập trong tài liệu.
+> *   **Nắm bắt điều kiện cho tác vụ đa ngôn ngữ:** Bạn hiểu đúng rằng để mô hình hiệu quả trong các tác vụ đa ngôn ngữ (ví dụ: dịch thuật), cần phải huấn luyện chúng bằng dữ liệu đa ngôn ngữ.
+> *   **Bổ sung kiến thức ngoại vi có giá trị:** Khả năng giải thích 'zero-shot learning' và các thành phần của một ví dụ huấn luyện (prompt, input, token phân biệt, output) cho thấy bạn có kiến thức sâu rộng hơn ngoài tài liệu tham khảo.
+>
+> ### Các lĩnh vực cần cải thiện:
+> *   **Chi tiết về từ vựng đa ngôn ngữ:** Bạn chưa đề cập đến một chi tiết quan trọng trong tài liệu tham khảo là việc bộ từ vựng của mô hình cần bao gồm các token từ *tất cả* các ngôn ngữ khi huấn luyện đa ngôn ngữ. Đây là một yếu tố kỹ thuật then chốt.
+> *   **Mục tiêu của biểu diễn chung (shared representations):** Mặc dù bạn đã hiểu về việc huấn luyện với dữ liệu đa ngôn ngữ, bạn chưa làm rõ rằng mục đích của việc này là để mô hình có thể học được các 'shared representations' (biểu diễn chung) giữa các ngôn ngữ. Các biểu diễn chung này là cơ sở để mô hình nâng cao khả năng hiểu và tạo ngôn ngữ trong ngữ cảnh đa ngôn ngữ và xuyên ngôn ngữ.
+>
+> ### Gợi ý để nâng cao hiểu biết:
+> *   **Chú ý đến các yếu tố kỹ thuật cụ thể:** Khi đọc tài liệu, hãy tìm kiếm các chi tiết kỹ thuật như cách thức hoạt động của từ vựng hay các khái niệm như 'shared representations', vì chúng thường giải thích *tại sao* một phương pháp lại hiệu quả.
+> *   **Liên kết nguyên nhân – kết quả rõ ràng hơn:** Khi mô tả một quy trình hoặc yêu cầu, hãy cố gắng liên kết nó với kết quả mong đợi hoặc lợi ích cụ thể. Ví dụ, việc có bộ từ vựng đầy đủ dẫn đến khả năng học các biểu diễn chung, từ đó cải thiện hiệu suất.
+>
+> **⭐ Bonus points**
+> - Đề cập đến các thành phần cụ thể của ví dụ huấn luyện như "prompt", "input", "token phân biệt", "output".
+> - Giải thích khái niệm "zero-shot learning" và mối liên hệ của nó với khả năng hiểu "prefix" mới.
 
 <br>
 
