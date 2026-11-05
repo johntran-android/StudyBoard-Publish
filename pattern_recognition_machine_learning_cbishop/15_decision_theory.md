@@ -1,6 +1,6 @@
 # 1.5 Decision Theory
 
-📊 **Progress:** `30` Notes | `49` Screenshots | `26` AI Reviews
+📊 **Progress:** `30` Notes | `50` Screenshots | `26` AI Reviews
 
 ---
 <a id="node-0es6zw7"></a>
@@ -3266,7 +3266,7 @@
 >
 >
 >
-> Do đó: 
+> Do đó:
 >
 >
 >
@@ -3452,14 +3452,14 @@
 >
 >
 >
-> π(θ|𝐱) 
+> π(θ|𝐱)
 >
 > \
 > W(𝐱) point estimate cho θ
 >
 >
 >
-> Frequentist: θ̂(𝐗) 
+> Frequentist: θ̂(𝐗)
 >
 >
 >
@@ -3479,7 +3479,7 @@
 >
 >
 >
-> E\[L\] =  ∫ \[∫(y(𝐱) - t)² f(𝐱, t) d𝐱\]  dt
+> E\[L\] = ∫ \[∫(y(𝐱) - t)² f(𝐱, t) d𝐱\] dt
 >
 >
 >
@@ -3487,11 +3487,11 @@
 >
 >
 >
-> E\[L\] =  ∫ ∫(y(𝐱) - t)² f(t|𝐱) d𝐱  dt
+> E\[L\] = ∫ ∫(y(𝐱) - t)² f(t|𝐱) dt d𝐱 
 >
 >
 >
-> = ∫ ∫(y(𝐱) - t)² f(t|𝐱)f(𝐱) d𝐱  dt
+> = ∫ ∫(y(𝐱) - t)² f(t|𝐱)f(𝐱) d𝐱 dt
 >
 >
 >
@@ -3503,7 +3503,7 @@
 >
 >
 >
-> y(𝐱) = ∫tf(t|𝐱)d𝐱 = E\[t|𝐱\]
+> y(𝐱) = ∫tf(t|𝐱)dt = E\[t|𝐱\]
 >
 >
 >
@@ -3515,11 +3515,11 @@
 >
 >
 >
->  = E\[y²\] -2E\[yT\] + E\[T²\]
+> = E\[y²\] -2E\[yT\] + E\[T²\]
 >
 >
 >
->  = y² -2yE\[T\] + E\[T²\]
+> = y² -2yE\[T\] + E\[T²\]
 >
 >
 >
@@ -3536,25 +3536,33 @@
 📹 Video 3: [Tại sao Linear Regression lại dùng wᵀx làm prediction? (cont)](https://www.youtube.com/watch?v=9RZ7m6mqCDc)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú xuất sắc khi kết nối rất mạch lạc và chính xác giữa Decision Theory trong thống kê cổ điển (Casella & Berger) với bài toán Regression trong Machine Learning (Bishop PRML 1.5.5). Các bước biến đổi và lập luận toán học hoàn toàn đúng đắn.
+> Ghi chú rất xuất sắc khi liên hệ sâu sắc giữa Decision Theory (từ Casella & Berger) và bài toán Regression trong Bishop PRML, giải thích rõ ràng tại sao conditional mean lại là lựa chọn tối ưu dưới hàm squared loss. Có một vài lỗi gõ nhầm vi phân ở phần nháp cuối cùng.
 >
 > **🟡 Minor issues**
 >
-> **1.** *"ML Estimator: W(𝐗) = argmax L(θ|𝐱) = ml estimate θ"*
+> **1.** *"= ∫ f(𝐱) [∫(y(𝐱) - t)² f(t|𝐱)d𝐱] dt"*
 >
-> Có sự lẫn lộn nhẹ về ký hiệu giữa estimator W(𝐗) (biến ngẫu nhiên phụ thuộc sample 𝐗) và estimate W(𝐱) (giá trị cụ thể sau khi quan sát dữ liệu 𝐱). Vế trái viết 𝐗 nhưng vế phải viết hàm theo 𝐱.
+> Lỗi gõ nhầm ký hiệu vi phân ở phần nháp: tích phân trong theo biến t nên phải là f(t|𝐱)dt, còn tích phân ngoài theo biến 𝐱 tương ứng với f(𝐱)d𝐱.
+>
+> **2.** *"minimize ∫(y(𝐱) - t)² f(t|𝐱)d𝐱 với mọi 𝐱"*
+>
+> Tương tự, biến lấy tích phân đối với conditional distribution của T là t, do đó vi phân phải là dt thay vì d𝐱.
+>
+> **3.** *"Bayes Estimator: W(𝐗) = E[θ|𝐱]"*
+>
+> Ký hiệu chưa hoàn toàn đồng nhất giữa estimator ngẫu nhiên W(𝐗) và giá trị ước lượng cụ thể W(𝐱). Nếu vế phải điều kiện hóa trên dữ liệu quan sát 𝐱 thì vế trái nên viết là W(𝐱).
 >
 >
 > **✓ Strengths**
-> - Hiểu sâu sắc vai trò của Decision Theory: phân biệt rõ ràng giữa giai đoạn suy diễn (inference - tìm phân phối) và giai đoạn ra quyết định (decision - chọn điểm dự đoán tối ưu).
-> - Áp dụng định lý LOTUS và hoán đổi thứ tự tích phân cực kỳ chuẩn xác để đưa việc tối thiểu Bayes risk toàn cục về bài toán tối thiểu posterior expected loss cục bộ cho từng giá trị x cụ thể.
-> - Giải thích bản chất tại sao mô hình hồi quy tuyến tính với giả định Gaussian lại dùng wᵀx làm dự đoán: đó là hệ quả của squared error loss dẫn đến conditional mean, chứ không phải một quy ước ngẫu hứng.
+> - Hiểu sâu sắc bản chất nguồn gốc ngẫu nhiên (randomness) khi chuyển từ Frequentist risk function sang Bayes risk.
+> - Sử dụng định lý LOTUS và tính chất tuyến tính của kỳ vọng để giải bài toán tối ưu cực kỳ trực quan và chuẩn xác.
+> - Kết nối mạch lạc lý thuyết ước lượng điểm của Casella & Berger với bài toán Regression trong PRML, làm sáng tỏ lý do tại sao conditional mean lại xuất hiện.
 >
 > **💡 Deeper notes**
-> - Trong Bishop PRML (1.88), tác giả dùng phép biến phân (calculus of variations) để đạo hàm theo hàm số y(x). Cách tiếp cận của bạn dùng phân rã kỳ vọng có điều kiện và tối ưu điểm (pointwise optimization) tương đương về mặt toán học và thường trực quan hơn trong Decision Theory.
-> - Một cách chứng minh kinh điển khác cho công thức (1.89) mà Bishop thường dùng sau đó là kỹ thuật thêm bớt: {y(x) - t}² = {y(x) - E[t|x] + E[t|x] - t}², triệt tiêu số hạng chéo nhờ luật kỳ vọng lặp (tower property), tách loss thành sai số mô hình và nhiễu nội tại (intrinsic noise).
+> - Trong sách Bishop (công thức 1.88), tác giả dùng Calculus of Variations (đạo hàm hàm/functional derivative) để tìm cực trị của phiếm hàm E[L]. Cách tiếp cận của bạn (đưa kỳ vọng vào bên trong điều kiện hóa theo x rồi cực tiểu hóa pointwise) là một góc nhìn tương đương, rất trực quan và chuẩn xác trong Decision Theory.
+> - Giả định quan trọng để cực tiểu hóa pointwise với từng x là hàm dự đoán y(x) hoàn toàn linh hoạt (completely flexible function). Nếu y(x) bị ràng buộc dạng tham số (chẳng hạn tuyến tính w^T x), ta phải tối ưu hàm mất mát trung bình trên toàn bộ dữ liệu thay vì tối ưu độc lập từng điểm.
 
 <br>
 
@@ -3565,6 +3573,8 @@
 <p align="center"><kbd><img src="assets/ogib0z5b2sf.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5whe6nton69.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/00mf7nh6d3n3t.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Một lựa chọn phổ biến cho loss trong regression problem là **squared loss**, L(t, y(𝐱)) = (y(𝐱) - t)²
@@ -3909,6 +3919,8 @@
 >
 > **💡 Deeper notes**
 > - Một cách biến đổi tương đương chặt chẽ mà không cần dùng calculus of variations là áp dụng luật kỳ vọng lặp (tower property): viết E[L] = E_x[E_{t|x}[(y(x) - t)^2 | x]]. Do p(x) >= 0 và y(x) hoàn toàn linh hoạt (không bị ràng buộc dạng hàm), việc cực tiểu hóa tích phân toàn phần tương đương với cực tiểu hóa E_{t|x}[(y(x) - t)^2 | x] độc lập tại từng điểm x.
+
+**🔗 See also:** [Bản chất hàm dự đoán](./542_outer_product_approximation.md#node-zkz6gsj)
 
 <br>
 
