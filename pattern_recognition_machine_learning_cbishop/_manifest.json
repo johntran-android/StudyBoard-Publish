@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1793836793186,
+  "publishedAt": 1793840292020,
   "sections": [
     {
       "title": "📋 Overview",
@@ -533,8 +533,8 @@
     {
       "title": "5.4.2 Outer product approximation",
       "path": "pattern_recognition_machine_learning_cbishop/542_outer_product_approximation.md",
-      "noteCount": 0,
-      "imageCount": 2
+      "noteCount": 1,
+      "imageCount": 1
     },
     {
       "title": "5.7 Ex",
@@ -555,6 +555,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 509,
-  "totalImages": 841
+  "totalNotes": 510,
+  "totalImages": 840
 }
