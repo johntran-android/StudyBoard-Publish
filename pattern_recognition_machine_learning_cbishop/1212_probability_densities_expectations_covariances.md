@@ -357,8 +357,6 @@
 > f(x) thì mình tự hiểu nó là tính kì vọng của random variable có được khi áp
 > function f lên random variable x
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=bjXIpzcd1TY)
-
 <br>
 
 <a id="node-z150bh8"></a>
