@@ -66,7 +66,7 @@
 >
 >
 >
-> Khi đó, với x\* thỏa c2(x) ≥ 0, nên c2(x\*) ≥ 0, thì d thỏa dT∇c1(x) ≥ 0 với mọi i ∈ 𝒜(x) ∩ I, sẽ chưa chắc khiến c2(x\* + d) cũng ≥ 0. Nhưng nếu ta tuyến tính hóa  c2, để thay c2 bởi c^2(x) = c2(x\*) + ∇c2(x\*)ᵀ(x-x\*). Thì ta sẽ có sự thật rằng, c^2(x\*) ≥ 0 thì d trên sẽ khién c^2(x\*+d)  = c2(x\*) + ∇c2(x\*)ᵀd cũng chắc chắn ≥ 0 do d đã thỏa ∇c2(x\*)ᵀd ≥ 0.
+> Khi đó, với x\* thỏa c2(x) ≥ 0, nên c2(x\*) ≥ 0, thì d thỏa dT∇c1(x) ≥ 0 với mọi i ∈ 𝒜(x) ∩ I, sẽ chưa chắc khiến c2(x\* + d) cũng ≥ 0. Nhưng nếu ta tuyến tính hóa  c2, để thay c2 bởi c²(x) = c2(x\*) + ∇c2(x\*)ᵀ(x-x\*). Thì ta sẽ có sự thật rằng, c²(x\*) ≥ 0 thì d trên sẽ khién c²(x\*+d)  = c2(x\*) + ∇c2(x\*)ᵀd cũng chắc chắn ≥ 0 do d đã thỏa ∇c2(x\*)ᵀd ≥ 0.
 >
 >
 >
@@ -256,7 +256,7 @@
 >
 >
 >
-> Hình ảnh: Với dạng ràng buộc này, cơ bản là ta có 1 cái tường và phải đi trên các thành tường, không được quẹo đi đâu (vì c1(x) = 0, giống như tập x ∈ R^2 thỏa x1 + x2 = 0 trở thành 1 đường thẳng, x phải đi trên đó)
+> Hình ảnh: Với dạng ràng buộc này, cơ bản là ta có 1 cái tường và phải đi trên các thành tường, không được quẹo đi đâu (vì c1(x) = 0, giống như tập x ∈ R² thỏa x1 + x2 = 0 trở thành 1 đường thẳng, x phải đi trên đó)
 >
 >
 >
@@ -468,7 +468,7 @@
 >
 >
 >
-> Ràng buộc c2(x) ≥ 0 ⇔ 1 - (x1 - 1)^2 - x2^2 ≥ 0, hình ảnh chính là x chỉ được nằm trong phạm vi hình tròn. Tính thử ∇c2: \[-2(x1-1), -2x2\]T ⇒ ∇c2(\[1,1\]) = (0,-2) chỉ vào trong (vector xanh dương)
+> Ràng buộc c2(x) ≥ 0 ⇔ 1 - (x1 - 1)² - x2² ≥ 0, hình ảnh chính là x chỉ được nằm trong phạm vi hình tròn. Tính thử ∇c2: \[-2(x1-1), -2x2\]T ⇒ ∇c2(\[1,1\]) = (0,-2) chỉ vào trong (vector xanh dương)
 >
 >
 >
@@ -566,7 +566,7 @@
 >
 >
 >
-> Đầu tiên, định lý này về đại ý nói rằng: Giả sử ta có x\* là điểm đã thỏa KKT (điều kiện cần bậc nhất), và điều kiện LICQ (tức constraint qualification) thỏa thì nếu xét hướng w thuộc critical cone, thì quadratic form của Hessian của Lagrangian tại x\*, tức wT \[∇^2_xx ℒ(x\*, λ\*)\] w phải không âm.
+> Đầu tiên, định lý này về đại ý nói rằng: Giả sử ta có x\* là điểm đã thỏa KKT (điều kiện cần bậc nhất), và điều kiện LICQ (tức constraint qualification) thỏa thì nếu xét hướng w thuộc critical cone, thì quadratic form của Hessian của Lagrangian tại x\*, tức wT \[∇²_xx ℒ(x\*, λ\*)\] w phải không âm.
 >
 >
 >
@@ -768,7 +768,7 @@
 >
 >
 >
-> ⇔ (1/2) (tk)^2 wT \[Hessian của ℒ tại x\*\] w ≥ 0
+> ⇔ (1/2) (tk)² wT \[Hessian của ℒ tại x\*\] w ≥ 0
 >
 >
 >
@@ -943,11 +943,11 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> ⇔ (1/||w||^2) (w)ᵀ ∇²\_xx ℒ(x\*, λ\*) (w) ≥ σ 
+> ⇔ (1/||w||²) (w)ᵀ ∇²\_xx ℒ(x\*, λ\*) (w) ≥ σ 
 >
 >
 >
-> ⇔ (w)ᵀ ∇²\_xx ℒ(x\*, λ\*) (w) ≥ σ ||w||^2 → Ta có 12.66
+> ⇔ (w)ᵀ ∇²\_xx ℒ(x\*, λ\*) (w) ≥ σ ||w||² → Ta có 12.66
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -967,7 +967,7 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 <p align="center"><kbd><img src="assets/fgtbjjw1sl.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, đại khái là gs cho rằng ta sẽ chứng minh điều sau đây: là với mọi feasible sequence {zk} approaching x\* thì luôn có đặc điểm: f(zk) ≥ f(x\*) + (σ/4)||zk - x\*||^2 (1)
+> Rồi, đại khái là gs cho rằng ta sẽ chứng minh điều sau đây: là với mọi feasible sequence {zk} approaching x\* thì luôn có đặc điểm: f(zk) ≥ f(x\*) + (σ/4)||zk - x\*||² (1)
 >
 >
 >
@@ -975,7 +975,7 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> Và để chứng minh cái này, sẽ dễ hơn nếu chứng minh phủ định của nó không thể xảy ra: Ta giả sử tồn tại một chuỗi {zk} thỏa f(zk) &lt; f(x\*) + (σ/4)||zk - x\*||^2 và chứng minh điều này dẫn đến mâu thuẫn.
+> Và để chứng minh cái này, sẽ dễ hơn nếu chứng minh phủ định của nó không thể xảy ra: Ta giả sử tồn tại một chuỗi {zk} thỏa f(zk) &lt; f(x\*) + (σ/4)||zk - x\*||² và chứng minh điều này dẫn đến mâu thuẫn.
 >
 >
 >
@@ -1145,7 +1145,7 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> f(zk) ≥ f(x\*) + (σ/4)||zk-x\*||^2 (2)
+> f(zk) ≥ f(x\*) + (σ/4)||zk-x\*||² (2)
 >
 >
 >
@@ -1153,7 +1153,7 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> Là vì (2) ⇔ f(zk)- f(x\*) ≥ (σ/4)||zk-x\*||^2 nói lên rằng, với zk nào, chênh lệch độ lớn của f giữa zk và x\* cũng luôn là một khoảng từ (σ/4)||zk-x\*||^2 trở lên
+> Là vì (2) ⇔ f(zk)- f(x\*) ≥ (σ/4)||zk-x\*||² nói lên rằng, với zk nào, chênh lệch độ lớn của f giữa zk và x\* cũng luôn là một khoảng từ (σ/4)||zk-x\*||² trở lên
 >
 >
 >
@@ -1173,11 +1173,11 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> Rồi, để chứng minh ta dùng phản chứng, giả sử tồn tại {zk} mà không thỏa (2): f(zk) &lt; f(x\*) + (σ/4)||zk-x\*||^2 ⇔ f(zk) - f(x\*) &lt; (σ/4)||zk-x\*||^2mang ý nghĩa là:
+> Rồi, để chứng minh ta dùng phản chứng, giả sử tồn tại {zk} mà không thỏa (2): f(zk) &lt; f(x\*) + (σ/4)||zk-x\*||² ⇔ f(zk) - f(x\*) &lt; (σ/4)||zk-x\*||²mang ý nghĩa là:
 >
 >
 >
-> (giống như ví von ở trên) **đứng từ x\* phóng tầm mắt ra nhìn về zk, và cho zk đi xa dần** (||zk-x\*|| tăng dần), thì **chênh lệch độ cao** (hàm f) giữa zk và x sẽ **TĂNG RẤT YẾU** (vì khi zk gần x\* thì ||zk-x\*||^2 sẽ rất nhỏ, và mức tăng hàm f lại còn phải bé hơn (σ/4)||zk-x\*||^2). Và ta sẽ chỉ ra điều này vô lý. **(xxx)**
+> (giống như ví von ở trên) **đứng từ x\* phóng tầm mắt ra nhìn về zk, và cho zk đi xa dần** (||zk-x\*|| tăng dần), thì **chênh lệch độ cao** (hàm f) giữa zk và x sẽ **TĂNG RẤT YẾU** (vì khi zk gần x\* thì ||zk-x\*||² sẽ rất nhỏ, và mức tăng hàm f lại còn phải bé hơn (σ/4)||zk-x\*||²). Và ta sẽ chỉ ra điều này vô lý. **(xxx)**
 >
 >
 >
@@ -1385,7 +1385,7 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> ℒ(zk, λ\*) = f(x\*) + ∇ℒ(x\*, λ\*)ᵀ(zk-x\*) + O(||zk-x\*||^2) (3)
+> ℒ(zk, λ\*) = f(x\*) + ∇ℒ(x\*, λ\*)ᵀ(zk-x\*) + O(||zk-x\*||²) (3)
 >
 >
 >
@@ -1395,7 +1395,7 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> Sao lần này lại là O to (Big O)? → là vì ta đang nói về ||zk-x\*||^2.
+> Sao lần này lại là O to (Big O)? → là vì ta đang nói về ||zk-x\*||².
 >
 >
 >
@@ -1403,11 +1403,11 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> Còn ở đây O(||zk-x\*||^2) cũng chứ các term bậc 2,3... của ||zk-x\*||. Nhưng khi xét trên tương quan với ||zk-x\*||^2 thì khi ||zk-x\*||^2 nhỏ về 0, những term này, vì nó bao gồm term bậc 2 ((zk-x\*)ᵀ∇²cj(x\*)(zk-x\*)) nên nó cũng thu về 0 với tốc độ tương đương chứ không nhanh hơn.
+> Còn ở đây O(||zk-x\*||²) cũng chứ các term bậc 2,3... của ||zk-x\*||. Nhưng khi xét trên tương quan với ||zk-x\*||² thì khi ||zk-x\*||² nhỏ về 0, những term này, vì nó bao gồm term bậc 2 ((zk-x\*)ᵀ∇²cj(x\*)(zk-x\*)) nên nó cũng thu về 0 với tốc độ tương đương chứ không nhanh hơn.
 >
 >
 >
-> Nói tóm lại, là vì định nghĩa của o(t) là những thứ teo nhỏ về t nhanh hơn t, còn O(t) là những thứ đồng hạng với t. Thành ra với cùng một chuỗi (zk-x\*)ᵀ∇²cj(x\*)(zk-x\*) + term bậc 3 + term bậc 4...thì nó là o (small o) đối với (||zk-x\*||) nhưng là O (big o) với ||zk-x\*||^2
+> Nói tóm lại, là vì định nghĩa của o(t) là những thứ teo nhỏ về t nhanh hơn t, còn O(t) là những thứ đồng hạng với t. Thành ra với cùng một chuỗi (zk-x\*)ᵀ∇²cj(x\*)(zk-x\*) + term bậc 3 + term bậc 4...thì nó là o (small o) đối với (||zk-x\*||) nhưng là O (big o) với ||zk-x\*||²
 >
 >
 >
@@ -1419,15 +1419,15 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> nên ℒ(zk, λ\*) = f(x\*) + ∇ℒ(x\*, λ\*)ᵀ(zk-x\*) + O(||zk-x\*||^2) 
+> nên ℒ(zk, λ\*) = f(x\*) + ∇ℒ(x\*, λ\*)ᵀ(zk-x\*) + O(||zk-x\*||²) 
 >
 >
 >
-> ⇔ ℒ(zk, λ\*) = f(x\*) + 0 + O(||zk-x\*||^2) 
+> ⇔ ℒ(zk, λ\*) = f(x\*) + 0 + O(||zk-x\*||²) 
 >
 >
 >
-> ⇔ ℒ(zk, λ\*) = f(x\*) + O(||zk-x\*||^2)
+> ⇔ ℒ(zk, λ\*) = f(x\*) + O(||zk-x\*||²)
 >
 >
 >
@@ -1439,7 +1439,7 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> ℒ(zk, λ\*) = f(x\*) + O(||zk-x\*||^2) 
+> ℒ(zk, λ\*) = f(x\*) + O(||zk-x\*||²) 
 >
 >
 >
@@ -1455,11 +1455,11 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> f(zk) - λ\*j∇cj(x\*)ᵀ(zk-x\*) - o(||zk-x\*||) ≥ f(x\*) + O(||zk-x\*||^2)
+> f(zk) - λ\*j∇cj(x\*)ᵀ(zk-x\*) - o(||zk-x\*||) ≥ f(x\*) + O(||zk-x\*||²)
 >
 >
 >
-> ⇔ f(zk) ≥ f(x\*) + λ\*j∇cj(x\*)ᵀ(zk-x\*)+ O(||zk-x\*||^2) + o(||zk-x\*||)
+> ⇔ f(zk) ≥ f(x\*) + λ\*j∇cj(x\*)ᵀ(zk-x\*)+ O(||zk-x\*||²) + o(||zk-x\*||)
 >
 >
 >
@@ -1495,7 +1495,7 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> Trong khi đó ta đang giả sử là zk thỏa f(zk) &lt; f(x\*) + (σ/4)||zk-x\*||^2, xem lại điểm **(xxx)** ở trên, ta đã nó điều này có nghĩa là **đứng từ x\* phóng tầm mắt ra nhìn về zk, và cho zk đi xa dần** (||zk-x\*|| tăng dần), thì **chênh lệch độ cao** (hàm f) giữa zk và x sẽ **TĂNG RẤT YẾU** (vì khi zk gần x\* thì ||zk-x\*||^2 sẽ rất nhỏ, và mức tăng hàm f lại còn phải bé hơn (σ/4)||zk-x\*||^2)
+> Trong khi đó ta đang giả sử là zk thỏa f(zk) &lt; f(x\*) + (σ/4)||zk-x\*||², xem lại điểm **(xxx)** ở trên, ta đã nó điều này có nghĩa là **đứng từ x\* phóng tầm mắt ra nhìn về zk, và cho zk đi xa dần** (||zk-x\*|| tăng dần), thì **chênh lệch độ cao** (hàm f) giữa zk và x sẽ **TĂNG RẤT YẾU** (vì khi zk gần x\* thì ||zk-x\*||² sẽ rất nhỏ, và mức tăng hàm f lại còn phải bé hơn (σ/4)||zk-x\*||²)
 >
 >
 >
@@ -1531,11 +1531,11 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> = f(x\*) + ∇ℒ(x\*, λ\*)ᵀ(zk-x\*) + (1/2)(zk-x\*)ᵀ∇²\_xx ℒ(x\*, λ\*)(zk-x\*) + o(||zk-x\*||^2)
+> = f(x\*) + ∇ℒ(x\*, λ\*)ᵀ(zk-x\*) + (1/2)(zk-x\*)ᵀ∇²\_xx ℒ(x\*, λ\*)(zk-x\*) + o(||zk-x\*||²)
 >
 >
 >
-> (ở trên đã nói về o nhỏ o lớn, ở đây ta đang gom các term bậc 3,4,...của ||zk-x\*||. Khi ||zk-x\*||^2 (bậc 2) nhỏ lại, thì term bậc 3,4 dĩ nhiên teo nhỏ còn nhanh hơn ||zk-x\*||^2, nên đây là o nhỏ của cả ||zk-x\*|| và ||zk-x\*||^2) 
+> (ở trên đã nói về o nhỏ o lớn, ở đây ta đang gom các term bậc 3,4,...của ||zk-x\*||. Khi ||zk-x\*||² (bậc 2) nhỏ lại, thì term bậc 3,4 dĩ nhiên teo nhỏ còn nhanh hơn ||zk-x\*||², nên đây là o nhỏ của cả ||zk-x\*|| và ||zk-x\*||²) 
 >
 >
 >
@@ -1543,11 +1543,11 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> = f(x\*) + 0 + (1/2)(zk-x\*)ᵀ∇²\_xx ℒ(x\*, λ\*)(zk-x\*) + o(||zk-x\*||^2)
+> = f(x\*) + 0 + (1/2)(zk-x\*)ᵀ∇²\_xx ℒ(x\*, λ\*)(zk-x\*) + o(||zk-x\*||²)
 >
 >
 >
-> = f(x\*) + (1/2)(zk-x\*)ᵀ∇²\_xx ℒ(x\*, λ\*)(zk-x\*) + o(||zk-x\*||^2)
+> = f(x\*) + (1/2)(zk-x\*)ᵀ∇²\_xx ℒ(x\*, λ\*)(zk-x\*) + o(||zk-x\*||²)
 >
 >
 >
@@ -1555,7 +1555,7 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> = f(x\*) + (1/2) (||zk-x\*||d) T∇²\_xx ℒ(x\*, λ\*) (||zk-x\*||d) + o(||zk-x\*||^2)
+> = f(x\*) + (1/2) (||zk-x\*||d) T∇²\_xx ℒ(x\*, λ\*) (||zk-x\*||d) + o(||zk-x\*||²)
 >
 >
 >
@@ -1563,11 +1563,11 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> = f(x\*) + (1/2) (||zk-x\*||^2) dT∇²\_xx ℒ(x\*, λ\*)d + o(||zk-x\*||^2)
+> = f(x\*) + (1/2) (||zk-x\*||²) dT∇²\_xx ℒ(x\*, λ\*)d + o(||zk-x\*||²)
 >
 >
 >
-> Viết lại: ℒ(zk, λ\*) = f(x\*) + (1/2) (||zk-x\*||^2) dT∇²\_xx ℒ(x\*, λ\*)d + o(||zk-x\*||^2)
+> Viết lại: ℒ(zk, λ\*) = f(x\*) + (1/2) (||zk-x\*||²) dT∇²\_xx ℒ(x\*, λ\*)d + o(||zk-x\*||²)
 >
 >
 >
@@ -1575,7 +1575,7 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> ℒ(zk, λ\*) ≥ f(x\*) + (1/2)||zk-x\*||^2σ + o(||zk-x\*||^2)
+> ℒ(zk, λ\*) ≥ f(x\*) + (1/2)||zk-x\*||²σ + o(||zk-x\*||²)
 >
 >
 >
@@ -1583,11 +1583,11 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> f(zk) ≥ f(x\*) + (1/2)||zk-x\*||^2 σ + o(||zk-x\*||^2)
+> f(zk) ≥ f(x\*) + (1/2)||zk-x\*||² σ + o(||zk-x\*||²)
 >
 >
 >
-> f(zk) ≥ f(x\*) + (σ/2) ||zk-x\*||^2 + o(||zk-x\*||^2)
+> f(zk) ≥ f(x\*) + (σ/2) ||zk-x\*||² + o(||zk-x\*||²)
 >
 >
 >
@@ -1595,15 +1595,15 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> Rồi, tới đây, again, kết qủa này ⇔ f(zk) - f(x\*) ≥ (σ/2) ||zk-x\*||^2 + o(||zk-x\*||^2) nói rằng:
+> Rồi, tới đây, again, kết qủa này ⇔ f(zk) - f(x\*) ≥ (σ/2) ||zk-x\*||² + o(||zk-x\*||²) nói rằng:
 >
 >
 >
-> "khi nhìn từ x tới zk, cho zk xa dần đều thì mức tăng của hàm f (chênh lệch giữa f tai zk và tai x\*) sẽ tăng ít nhất là lớn hơn bình phương của σ||zk-x\*||^2 CHIA 2"
+> "khi nhìn từ x tới zk, cho zk xa dần đều thì mức tăng của hàm f (chênh lệch giữa f tai zk và tai x\*) sẽ tăng ít nhất là lớn hơn bình phương của σ||zk-x\*||² CHIA 2"
 >
 >
 >
-> và nó lại mâu thuẫn với giả sử lúc đầu là {zk} thỏa f(zk) &lt; f(x\*) + (σ/4)||zk-x\*||^2 lại nói mức tăng sẽ bé hơn cả σ||zk-x\*||^2 CHIA 4.
+> và nó lại mâu thuẫn với giả sử lúc đầu là {zk} thỏa f(zk) &lt; f(x\*) + (σ/4)||zk-x\*||² lại nói mức tăng sẽ bé hơn cả σ||zk-x\*||² CHIA 4.
 >
 >
 >
@@ -1613,7 +1613,7 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 > Như kết luận với mọi chuỗi feasible {zk} tiếp cận x\* thì luôn có đặc đỉêm:\
 > \
-> f(zk) ≥ f(x\*) + (σ/4)||zk-x\*||^2
+> f(zk) ≥ f(x\*) + (σ/4)||zk-x\*||²
 >
 >
 >
