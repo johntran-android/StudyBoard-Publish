@@ -1,6 +1,6 @@
 # 5.4.2 Outer product approximation
 
-📊 **Progress:** `2` Notes | `3` Screenshots | `2` AI Reviews
+📊 **Progress:** `3` Notes | `3` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-u0cqcsg"></a>
@@ -78,8 +78,6 @@
 
 <p align="center"><kbd><img src="assets/bgydkgz1457.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/00mf7nh6d3n3t.png" width="80%"></kbd></p>
-
 > [!NOTE]
 > Đầu tiên cần recall lại một điểm kiến thức quan trọng:
 >
@@ -133,31 +131,39 @@
 >
 >
 >
-> Do đó ở đây mới nói rằng: yi = E\[Ti|𝐗i\], hay yn = E\[Tn|𝐗n\]
+> Do đó ở đây mới nói rằng: yi = E\[Ti|𝐱i\], hay Yn = E\[Tn|𝐗n\] = 𝐰ᵀΦ(𝐱)
 >
 >
 >
-> Từ đó yn - Tn = E\[Tn|𝐗n\] - Tn
+> ---
 >
 >
 >
-> (Tác giả không viết hoa, nhưng phải hiểu ông đang nói nó với tư cách là biến ngẫu nhiên (nên mới nói đến kì vọng))
+> Vì sao: yn - tn là random variable zero mean?
 >
 >
 >
-> ⇒ E\[E\[Tn|𝐗n\] - Tn\] = E(E\[Tn|𝐗n\]) - E\[Tn\]
+> Đầu tiên hãy chú ý:
 >
 >
 >
-> (E\[Tn\] , với Tn \~ 𝒩(μ(𝐱n), 1/β), ta hiểu nó là E\[Tn|𝐱n\])
+> 1. Tác giả không viết hoa (vì ổng thoát li cách viết quy ước của toán thống kê) nhưng phải hiểu ông đang nói nó với tư cách là biến ngẫu nhiên , nên mới nói đến kì vọng
 >
 >
 >
-> Xét E(E\[Tn|𝐗n\])
+> 2. Vì ông nhắc đến ∇∇yn như biến ngẫu nhiên nên ổng đang dùng giả định khác với cái ở trên chút xíu (là coi 𝐱n là giá trị cố định), ở đây 𝐱1,𝐱2 cũng là giá trị quan sát của biến 𝐗1, 𝐗2,....
 >
 >
 >
-> E\[Tn|𝐗n\] là rv có được bởi áp hàm g(𝐱) = E\[Tn|𝐱\] lên rv 𝐗n, tức g(𝐗n)
+> Và do đó, yn, nếu theo giả định 𝐱1, 𝐱2...cố định thì E\[Tn|𝐱n\] chỉ là hằng số.
+>
+>
+>
+> Nhưng với 𝐱1,𝐱2 cũng là giá trị quan sát của biến 𝐗1, 𝐗2,.... thì ta có biến Yn = E\[Tn|𝐗n\] là biến ngẫu nhiên tạo ra bởi việc áp hàm E\[Tn|𝐱\] lên biến ngẫu nhiên 𝐗n
+>
+>
+>
+> E\[Tn|𝐗n\] là biến ngẫu nhiên, như đã nói, có được bởi áp hàm g(𝐱) = E\[Tn|𝐱\] lên rv 𝐗n, tức g(𝐗n)
 >
 >
 >
@@ -217,15 +223,15 @@
 >
 >
 >
-> Để rồi theo như tác gỉa, nếu giả định tiếp là ∇∇Yn uncorrelate với biến ngẫu nhiên E\[Tn|𝐱n\] - Tn thì E\[(E\[Tn|𝐗n\] - Tn) ∇∇Yn\] sẽ bằng:
+> Để rồi theo như tác gỉa, nếu giả định tiếp là ∇∇Yn uncorrelate với biến ngẫu nhiên E\[Tn|𝐗n\] - Tn thì E\[(E\[Tn|𝐗n\] - Tn) ∇∇Yn\] sẽ bằng:
 >
 >
 >
-> = E\[(E\[Tn|𝐗n\] - Tn))E\[∇∇Yn\] 
+> = E\[(E\[Tn|𝐗n\] - Tn))E\[∇∇Yn\]
 >
 >
 >
-> = 0 × E\[∇∇Yn\] 
+> = 0 × E\[∇∇Yn\]
 >
 >
 >
@@ -237,11 +243,11 @@
 >
 >
 >
-> ū = Σi ui với ui là observed value của Ui = (E\[Tn|𝐱n\] - Tn) ∇∇Yn, có E\[Ui\] = 0 như vừa tính.
+> ū = Σi ui/n với ui là observed value của Ui = (E\[Tn|𝐗n\] - Tn) ∇∇Yn, có E\[Ui\] = 0 như vừa tính.
 >
 >
 >
-> Theo LLN, ū sẽ converge về true mean = 0 như tính vừa trên.
+> Đại khái là ổng nói cái này sẽ có trung bình = 0 (tác giả cũng chả thèm giải thích)
 >
 >
 >
@@ -250,42 +256,52 @@
 >
 >
 > ---
->
->
->
-> E = (1/2) ∫∫{y(𝐰,𝐱) - t}² p(𝐱, t) d𝐱 dt
 
-📹 [Xem video trên YouTube](https://youtu.be/GJojz_jbdoc)
+📹 Video 1: [Điểm khác nhau giữa linear regression và neural network regression.](https://youtu.be/GJojz_jbdoc)
+
+📹 Video 2: [Vì sao yn - tn có kỳ vọng bằng 0?](https://www.youtube.com/watch?v=xxcxiTXNEYo)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú thể hiện sự hiểu biết sâu sắc và chính xác về mặt xác suất - thống kê đằng sau lập luận bỏ số hạng thứ hai trong xấp xỉ Hessian (5.83). Có một vài điểm chưa thật chặt chẽ về mặt ký hiệu và khái niệm trung bình mẫu nhưng không ảnh hưởng đến hiểu biết cốt lõi.
+> Ghi chú phân tích rất sâu sắc và chính xác bản chất xác suất đằng sau lập luận rút gọn của Bishop khi bỏ qua số hạng đạo hàm bậc hai.
 >
 > **🟡 Minor issues**
 >
-> **1.** *"ū = Σi ui với ui là observed value của Ui = (E[Tn|𝐱n] - Tn) ∇∇Yn, có E[Ui] = 0 như vừa tính. Theo LLN, ū sẽ converge về true mean = 0 như tính vừa trên."*
+> **1.** *"hay Yn = E[Tn|𝐗n] = 𝐰ᵀΦ(𝐱)"*
 >
-> Đại lượng $\sum_{n=1}^N u_n$ là tổng mẫu (sample sum), không phải trung bình mẫu. Luật số lớn (LLN) áp dụng cho trung bình mẫu $\frac{1}{N}\sum_{n=1}^N u_n \to 0$. Khi trung bình mẫu tiến về 0, đóng góp trung bình trên mỗi mẫu triệt tiêu (số hạng này là $o(N)$ trong khi số hạng thứ nhất là $O(N)$).
+> Ở đoạn này bạn ghi nhầm lại công thức của Linear Regression (𝐰ᵀΦ(𝐱)), trong khi ngữ cảnh chương 5 đang là mạng neural phi tuyến tổng quát y(𝐱, 𝐰).
 >
-> **2.** *"E[(E[Tn|𝐱n] - Tn) ∇∇Yn]"*
+> **2.** *"Theo LOTUS: E[g(𝐗n)] = ∫g(𝐱)f(𝐱)d𝐱 = ∫E[Tn|𝐱] f(𝐱)d𝐱 ... = E[Tn]"*
 >
-> Có sự lẫn lộn ký hiệu giữa giá trị quan sát cố định $\mathbf{x}_n$ và biến ngẫu nhiên $\mathbf{X}_n$. Để lấy kỳ vọng không điều kiện, biến số phải là $\mathbf{X}_n$.
->
-> **3.** *"E = (1/2) ∫∫{y(𝐰,𝐱) - t}² p(𝐱, t) d𝐱 dt"*
->
-> Công thức tích phân của Bài tập 5.17 được chép ở cuối nhưng để trống, chưa triển khai tiếp phần đạo hàm và chứng minh công thức (5.194).
+> Về mặt thuật ngữ lý thuyết xác suất, tính chất E[E[T|X]] = E[T] được gọi là Luật kỳ vọng toàn phần (Law of Total Expectation / Tower Property). Việc bạn tự khai triển tích phân là hoàn toàn chính xác, chỉ là không nhất thiết phải gọi tên riêng là LOTUS.
 >
 >
 > **✓ Strengths**
-> - Liên kết xuất sắc giữa Decision Theory (Chương 1), Hồi quy tuyến tính (Chương 3) và Mạng nơ-ron (Chương 5) để làm rõ bản chất của hàm dự đoán y(x, w).
-> - Sử dụng công cụ xác suất (LOTUS, luật kỳ vọng toàn phần) để chứng minh chặt chẽ tại sao sai số (yn - tn) có kỳ vọng bằng 0.
-> - Hiểu đúng trực giác thống kê biện minh cho việc triệt tiêu số hạng thứ hai trong ma trận Hessian.
+> - Nhận diện chính xác việc Bishop đã chuyển từ giả định điểm dữ liệu cố định (fixed design) sang xem xét (X_n, T_n) như các biến ngẫu nhiên lấy mẫu từ phân phối chung.
+> - Chứng minh chặt chẽ tại sao (Y_n - T_n) có kỳ vọng bằng 0 bằng luật kỳ vọng toàn phần.
+> - Giải thích chuẩn xác logic thống kê: giả định không tương quan kết hợp kỳ vọng bằng 0 giúp số hạng tích trung bình triệt tiêu về 0 khi lấy tổng.
 >
 > **💡 Deeper notes**
-> - Trong Bài tập 5.17, khi xét dạng kỳ vọng liên tục qua $p(\mathbf{x}, t) = p(t|\mathbf{x})p(\mathbf{x})$, số hạng bậc hai $\nabla\nabla y$ triệt tiêu một cách chính xác tuyệt đối vì $\int (y(\mathbf{x}) - t) p(t|\mathbf{x}) dt = 0$ khi $y(\mathbf{x}) = \mathbb{E}[t|\mathbf{x}]$, mà không cần giả định phụ về tính không tương quan (uncorrelated) như lập luận xấp xỉ trên mẫu rời rạc ở trang 242.
+> - Trên thực tế, y(x, w) chỉ tiệm cận kỳ vọng có điều kiện E[T|x] khi mạng neural có đủ dung lượng (capacity) và đã hội tụ về nghiệm tối ưu. Nếu mô hình bị lệch (misspecified) hoặc chưa hội tụ, residual (y - t) sẽ chứa cả sai số mô hình (bias), khiến kỳ vọng không hoàn toàn bằng 0.
+> - Trong công thức (5.83), số hạng là tổng trực tiếp ∑ chứ không có hệ số 1/N. Tuy nhiên, lập luận của Bishop ngầm dựa trên Luật số lớn (Law of Large Numbers) rằng tổng này có bậc O(√N) hoặc trung bình mẫu hội tụ về 0, do đó nhỏ hơn đáng kể so với số hạng thứ nhất (luôn là ma trận nửa xác định dương tích lũy tăng tuyến tính theo N).
 
 **🔗 See also:** [Minimizing Squared Loss Function](./15_decision_theory.md#node-hh6bwri)
+
+<br>
+
+<a id="node-zi7e7rf"></a>
+
+#### Outer Product Hessian Approximation
+
+<p align="center"><kbd><img src="assets/x4iw82q0qa.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> đại khái là dùng outer product approximation, chi phí tính toán sẽ chỉ còn là O(W) (tính ∇y) và tính ra outer product tốn O(W²)
+>
+>
+>
+> Phần còn lại quay lại sau
 
 <br>
 
