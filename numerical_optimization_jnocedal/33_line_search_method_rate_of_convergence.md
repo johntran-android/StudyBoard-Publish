@@ -259,15 +259,15 @@
 >
 > hay V = WA 
 >
-> ⇔ A = VWinv Đây chính là change of basis matrix giúp đổi tạo độ đang theo basis v's thành tọa độ theo basis w's.
+> ⇔ A = VW⁻¹ Đây chính là change of basis matrix giúp đổi tạo độ đang theo basis v's thành tọa độ theo basis w's.
 >
-> Và như vậy nếu như v's là standard basis, thì matrix A = VWinv = IWinv = Winv chính là matrix đổi tọa độ từ standard basis e's sang basis w's
+> Và như vậy nếu như v's là standard basis, thì matrix A = VW⁻¹ = IW⁻¹ = W⁻¹ chính là matrix đổi tọa độ từ standard basis e's sang basis w's
 >
 > Thế thì, quay lại đây, xét Vᵀy, cũng là V⁻¹ y (V là orthogonal matrix nên Vᵀ = V⁻¹)
 >
 > thì Vᵀy, thì nó chính chuyển tọa độ của y từ standard basis sang basis v's, tức các eigen basis của Q. Và về khía cạnh hình học, nó chỉ là việc ta xoay trục tọa độ thẳng góc lại với các eigenvector của Q mà thôi. Và gọi z = Vᵀy, thì z chỉ là tọa độ của cùng vector y nhưng mà là khi trục tọa độ thẳng góc với eigenvectors của Q.
 >
-> Thế thì khi đó yTQy = c là phương trình của level set trong hệ trục standard thì zTΛz = c là phương trình của level set trong hệ trục eigenbasis của Q, và ta sẽ thấy zTΛz = c ⇔ z1^2 λ1 + z2^2 λ2 + .. = c. Đây chính là phương trình của một ellipsoids.
+> Thế thì khi đó yTQy = c là phương trình của level set trong hệ trục standard thì zTΛz = c là phương trình của level set trong hệ trục eigenbasis của Q, và ta sẽ thấy zTΛz = c ⇔ z1² λ1 + z2² λ2 + .. = c. Đây chính là phương trình của một ellipsoids.
 >
 > Như vậy, từ đó ta hiểu vì sao nói level set (contour plot) lại là các ellipsoid có trục thẳng trục với các eigenvector của Q.
 
@@ -318,7 +318,7 @@
 >
 > Là sao ta? 
 >
-> → Theo định nghĩa của weighted norm ở trên: ||x - x*||^2_Q = (x - x*)ᵀQ(x - x*)
+> → Theo định nghĩa của weighted norm ở trên: ||x - x*||²_Q = (x - x*)ᵀQ(x - x*)
 >
 > = (xᵀ - x*T)Q(x - x*) = (xᵀQ - x*Qᵀ)(x - x*) = xᵀQx - x*Qᵀx - xᵀQx* - x*Qᵀx*
 >
@@ -338,7 +338,7 @@
 >
 > Thì từ đó ta có thể derive công thức:
 >
-> ||xk+1 - x*||^2_Q = {1 - (∇fkT∇fk)^2 / (∇fkTQ∇fk)(∇fkTQinv∇fk)}||xk - x*||^2_Q
+> ||xk+1 - x*||²_Q = {1 - (∇fkT∇fk)² / (∇fkTQ∇fk)(∇fkTQinv∇fk)}||xk - x*||²_Q
 >
 > Đây là bài tập 3.7. QUAY LẠI SAU
 >
@@ -359,13 +359,13 @@
 >
 > Khi đó **error norm** (độ lớn của sai số) sẽ thỏa inequality này:
 >
-> ||xk+1 - x*||^2_Q ≤ ((λn - λ1)/(λn + λ1)]^2 ||xk - x*||^2_Q
+> ||xk+1 - x*||²_Q ≤ ((λn - λ1)/(λn + λ1)]² ||xk - x*||²_Q
 >
 > với 0 < λ1 < ...λn là eigenvalues của Q
 >
 > Ở đây không chứng minh theorem này. Nhưng đại khái nó chính là:
 >
-> [error tại step k+1] ≤ [error tại step k] * α với α = ((λn - λ1)/(λn + λ1)]^2 và error đo bằng weighted norm.
+> [error tại step k+1] ≤ [error tại step k] * α với α = ((λn - λ1)/(λn + λ1)]² và error đo bằng weighted norm.
 >
 > Và đại khái nó nói rằng **sự hội tụ sẽ diễn ra tuyến tính**, cũng là error sẽ giảm dần một cách tuyến tính.
 >
@@ -373,9 +373,9 @@
 >
 > Để thấy cái này chỉ cần cho λn = λ1 ta có:
 >
-> ||xk+1 - x*||^2_Q ≤ ((λn - λ1)/(λn + λ1)]^2 ||xk - x*||^2_Q
+> ||xk+1 - x*||²_Q ≤ ((λn - λ1)/(λn + λ1)]² ||xk - x*||²_Q
 >
-> ⇒ ||xk+1 - x*||^2_Q ≤ 0, tức là [error tại step k+1] ≤ 0 với ý nghĩa: đang ở step 1, thì qua step 2 thì error đã về 0, tức đã tới được x* rồi.
+> ⇒ ||xk+1 - x*||²_Q ≤ 0, tức là [error tại step k+1] ≤ 0 với ý nghĩa: đang ở step 1, thì qua step 2 thì error đã về 0, tức đã tới được x* rồi.
 >
 > Khi đó, contour plot sẽ là hình tròn và steepest descent (-∇f) luôn chỉ về solution x*
 >
@@ -383,7 +383,7 @@
 >
 > Trong note trước mình đã hiểu vì sao contour plot của f lại là các ellipsoids có trục thẳng hướng với các eigenvector của Q, mà ví dụ như trong 2D, tỉ lệ giữa bề rộng lớn nhất và bề rộng nhỏ nhất của cái hình ellipse này chính là tỉ lệ giữa eigenvalue lớn nhất và nhỏ nhất. Đây cũng chính là định nghĩa condition number của matrix Q: k(Q). Nên nếu tỉ lệ này lớn, thì cái ellipse sẽ rất dẹt, hay trong case n-chiều thì ellipsoid rất dẹt và càng dẹt thì tốc độ hội tụ càng chậm. 
 >
-> Điều này thể hiện bởi công thức 3.29 là vì nếu λn >> λ1 thì  α = ((λn - λ1)/(λn + λ1)]^2 sẽ là một tỉ lệ rất gần 1 (giống như [(1000-1)/(1000+1)]^2 = (999/1001)^2 ≈ 1. Có nghĩa là:
+> Điều này thể hiện bởi công thức 3.29 là vì nếu λn >> λ1 thì  α = ((λn - λ1)/(λn + λ1)]² sẽ là một tỉ lệ rất gần 1 (giống như [(1000-1)/(1000+1)]² = (999/1001)² ≈ 1. Có nghĩa là:
 >
 > [error tại step k+1] ≈ [error tại step k], tức error chả giảm đi bao nhiêu sau một step cả. 
 >
@@ -433,7 +433,7 @@
 > [!NOTE]
 > Đại khái là cái  theorem này nói rằng 
 >
-> **[error tại xk+1] / [error tại xk] sẽ không thể lớn hơn r^2.**
+> **[error tại xk+1] / [error tại xk] sẽ không thể lớn hơn r².**
 >
 > Với r là con số nằm trong khoảng ((λn - λ1) / (λn + λ1), 1). 
 >
@@ -451,13 +451,13 @@
 >
 > Ngược lại nếu **con số này lớn**, cũng chính là **λmax chênh lệch nhiều so với λmin** → **contour có dạng ellips rất dẹt**
 >
-> Vậy thì ý của theorem này nói rằng, **ngay cả khi ta xét case lí tưởng**, với hàm mục tiêu là **quadratic**, và **dùng exact line search** rồi mà cái** độ giảm của error vẫn bị ràng buộc bởi r^2**. 
+> Vậy thì ý của theorem này nói rằng, **ngay cả khi ta xét case lí tưởng**, với hàm mục tiêu là **quadratic**, và **dùng exact line search** rồi mà cái** độ giảm của error vẫn bị ràng buộc bởi r²**. 
 >
 > Để rồi với bài toán mà có well-conditioned thì sai số sẽ vẫn giảm rất chậm. Vậy thì chứng tỏ steepest descent method ko ổn.
 >
 > Ông lấy ví dụ là k(Q) = 800. Thật ra nó là con số nhỏ, tức là, Q cơ bản là well-condition, sự chênh lệch giữa eigenvalue lớn nhất và nhỏ nhất là không quá lớn.
 >
-> Nhưng vì như đã nói theorem này, cho thấy **[error tại xk+1] / [error tại xk] sẽ không thể lớn hơn r^2.** 
+> Nhưng vì như đã nói theorem này, cho thấy **[error tại xk+1] / [error tại xk] sẽ không thể lớn hơn r².** 
 >
 > dẫn tới với 800, khi bình phương nó vẫn là con số rất lớn ⇨ Ngay cả matrix Q well-condition mà phương pháp steepest descent vẫn rất chậm.
 >
@@ -467,7 +467,7 @@
 >
 > = (799/801, 1). Tức là một con số rất ≈ 1. Ví dụ như 0.99.
 >
-> Khi đó theo theorem này [error tại k+1]/[error tại] ≤ 0.99^2 cũng là con số rất gần 1
+> Khi đó theo theorem này [error tại k+1]/[error tại] ≤ 0.99² cũng là con số rất gần 1
 >
 > ⇨ error sau một step giảm cực kì ít
 
@@ -482,9 +482,9 @@
 > [!NOTE]
 > Ta sẽ phân tích qua convergence rate của Newton method 
 >
-> Như đã biết, Newton direction sẽ có công thức là pk_N = - (∇^2f_k)⁻¹ ∇f_k
+> Như đã biết, Newton direction sẽ có công thức là pk_N = - (∇²f_k)⁻¹ ∇f_k
 >
-> (Tại sao lại có công thức này thì đến nay mình đã dễ hiểu rồi, không cần nói lại, có thể ôn nhanh: đó là vì với pp này ta sẽ (đứng tại xk), approx hàm f bởi quadratic approximation (khai triển Taylor bậc hai của f). Khi đó, có thể tìm minimum của hàm approx này bằng cách cho gradient  = 0, và nó sẽ cho ta hệ tuyến tính ∇^2 f_k pk_N = - ∇f_k
+> (Tại sao lại có công thức này thì đến nay mình đã dễ hiểu rồi, không cần nói lại, có thể ôn nhanh: đó là vì với pp này ta sẽ (đứng tại xk), approx hàm f bởi quadratic approximation (khai triển Taylor bậc hai của f). Khi đó, có thể tìm minimum của hàm approx này bằng cách cho gradient  = 0, và nó sẽ cho ta hệ tuyến tính ∇² f_k pk_N = - ∇f_k
 >
 > Khi đó nếu Hessian tại k positive definite 0, thì ta có thể nhân hai vế cho inverse của
 > Hessian để có kết quả trên.)
@@ -495,13 +495,13 @@
 >
 > Directional derivative theo hướng pk_N:
 >
-> = ∇f_k T pk_N = ∇f_k T (- (∇^2f_k)⁻¹ ∇f_k) = - ∇f_k T (∇^2f_k)⁻¹ ∇f_k
+> = ∇f_k T pk_N = ∇f_k T (- (∇²f_k)⁻¹ ∇f_k) = - ∇f_k T (∇²f_k)⁻¹ ∇f_k
 >
 > Khi Hessian không positive definite ⇨ mọi eigenvalue chưa chắc đã dương thì ⇨ mọi eigenvalue của Hessian inverse cũng vậy ⇨ Hessian inverse cũng sẽ không positive defite
 >
-> ⇨ quadratic form ∇f_k T (∇^2f_k)⁻¹ ∇f_k sẽ không chắc luôn dương
+> ⇨ quadratic form ∇f_k T (∇²f_k)⁻¹ ∇f_k sẽ không chắc luôn dương
 >
-> ⇨ - ∇f_k T (∇^2f_k)⁻¹ ∇f_k sẽ không chắc luôn âm
+> ⇨ - ∇f_k T (∇²f_k)⁻¹ ∇f_k sẽ không chắc luôn âm
 >
 > ⇨ chưa chắc đi theo hướng pk_N đã giảm f 
 >
@@ -567,19 +567,19 @@
 > Nên ||A|| = max x ||Ax|| / ||x|| (tức là dùng l2 norm)
 >
 > Từ đó bài toán đặt ra là maximize ||Ax|| / ||x|| mà cái này ko âm,
-> nên nó tương đương bài toán maximize ||Ax||^2 / ||x||^2, tức 
+> nên nó tương đương bài toán maximize ||Ax||² / ||x||², tức 
 >
 > (Ax)ᵀ(Ax) / xᵀx = xᵀAᵀAx / xᵀx 
 >
-> = xᵀQ Λ Qᵀx / xᵀx = Σi (Qᵀx)i^2 λ(AᵀA)i
+> = xᵀQ Λ Qᵀx / xᵀx = Σi (Qᵀx)i² λ(AᵀA)i
 >
-> Và cái này ≤ Σi (Qᵀx)i^2 λ(AᵀA)max = λ(AᵀA)max Σi (Qᵀx)i^2 
+> Và cái này ≤ Σi (Qᵀx)i² λ(AᵀA)max = λ(AᵀA)max Σi (Qᵀx)i² 
 >
-> = λ(AᵀA)max ||Qᵀx||^2 = λ(AᵀA)max ||x||^2 = λ(AᵀA)max xᵀx
+> = λ(AᵀA)max ||Qᵀx||² = λ(AᵀA)max ||x||² = λ(AᵀA)max xᵀx
 >
 > Vậy (Ax)ᵀ(Ax) / xᵀx ≤ λ(AᵀA)max xᵀx / xᵀx = λ(AᵀA)max
 >
-> ⇔ ||Ax||^2 / ||x||^2 ≤ λ(AᵀA)max
+> ⇔ ||Ax||² / ||x||² ≤ λ(AᵀA)max
 >
 > ⇨ ||A|| / ||x|| ≤ √λ(AᵀA)max
 >
@@ -602,99 +602,99 @@
 >
 > Đầu tiên: xk + pkN - x* = xk - x* + pkN
 >
-> Với pkN = - (∇^2fk)⁻¹ ∇fk
+> Với pkN = - (∇²fk)⁻¹ ∇fk
 >
-> ∴ = xk - x* - (∇^2fk)⁻¹ ∇fk
+> ∴ = xk - x* - (∇²fk)⁻¹ ∇fk
 >
-> ∴ = I (xk - x*) - (∇^2f_k)⁻¹ ∇fk
+> ∴ = I (xk - x*) - (∇²f_k)⁻¹ ∇fk
 >
-> = ∇^2fk (∇^2fk)⁻¹ (xk - x*) - (∇^2fk)⁻¹ ∇fk 
+> = ∇²fk (∇²fk)⁻¹ (xk - x*) - (∇²fk)⁻¹ ∇fk 
 >
-> = ∇^2fk (∇^2fk)⁻¹ (xk - x*) - (∇^2fk)⁻¹ ∇fk + (∇^2fk)⁻¹ 0
+> = ∇²fk (∇²fk)⁻¹ (xk - x*) - (∇²fk)⁻¹ ∇fk + (∇²fk)⁻¹ 0
 >
-> = ∇^2fk (∇^2fk)⁻¹ (xk - x*) - (∇^2fk)⁻¹ ∇fk + (∇^2fk)⁻¹ ∇f(x*)
+> = ∇²fk (∇²fk)⁻¹ (xk - x*) - (∇²fk)⁻¹ ∇fk + (∇²fk)⁻¹ ∇f(x*)
 >
 > (Do gradient tại x* = 0, ∇f(x*) = 0)
 >
-> = ∇^2fk (∇^2fk)⁻¹ (xk - x*) - (∇^2fk)⁻¹ (∇fk - ∇f*)
+> = ∇²fk (∇²fk)⁻¹ (xk - x*) - (∇²fk)⁻¹ (∇fk - ∇f*)
 >
-> =  (∇^2fk)⁻¹ ∇^2fk (xk - x*) - (∇^2fk)⁻¹ (∇fk - ∇f*)
+> =  (∇²fk)⁻¹ ∇²fk (xk - x*) - (∇²fk)⁻¹ (∇fk - ∇f*)
 >
-> = (∇^2fk)⁻¹ [∇^2fk (xk - x*) - (∇fk - ∇f*)] → đây là 3.31
+> = (∇²fk)⁻¹ [∇²fk (xk - x*) - (∇fk - ∇f*)] → đây là 3.31
 >
 > ----
 >
 > Tiếp, dùng Taylor theorem, nói rằng:
 >
-> ∇f(x + p) = ∇f(x) + ∫0:1 ∇^2f(x + tp)pdt
+> ∇f(x + p) = ∇f(x) + ∫0:1 ∇²f(x + tp)pdt
 >
-> Áp dụng vào đây ta có ∇f(xk) = ∇f(x*) + ∫0:1 ∇^2f(xk + t(x* - xk))(x* - xk)dt
+> Áp dụng vào đây ta có ∇f(xk) = ∇f(x*) + ∫0:1 ∇²f(xk + t(x* - xk))(x* - xk)dt
 >
-> ⇔ ∇f(xk) - ∇f(x*) = ∫0:1 ∇^2f(xk + t(x* - xk))(x* - xk)dt (1)
+> ⇔ ∇f(xk) - ∇f(x*) = ∫0:1 ∇²f(xk + t(x* - xk))(x* - xk)dt (1)
 >
-> Tiếp, xét ||∇^2fk(xk - x*) - (∇fk - ∇f(x*))|| (tức là norm của cái term thứ 2 trong 3.31)
+> Tiếp, xét ||∇²fk(xk - x*) - (∇fk - ∇f(x*))|| (tức là norm của cái term thứ 2 trong 3.31)
 >
-> Thay ∇f(xk) - ∇f(x*) = ∫0:1 ∇^2f(xk + t(x* - xk)) có ở trên vào:
+> Thay ∇f(xk) - ∇f(x*) = ∫0:1 ∇²f(xk + t(x* - xk)) có ở trên vào:
 >
-> = || ∇^2f(xk)(xk - x*) - ∫0:1 ∇^2f(xk + t(x* - xk)) . (xk - x*) dt ||
+> = || ∇²f(xk)(xk - x*) - ∫0:1 ∇²f(xk + t(x* - xk)) . (xk - x*) dt ||
 >
-> Tới đây. ∇^2f(xk)(xk - x*) = ∇^2f(xk)(xk - x*) ∫0:1 dt (vì ∫0:1 dt = 1) = ∫0:1 ∇^2f(xk)(xk - x*) dt
+> Tới đây. ∇²f(xk)(xk - x*) = ∇²f(xk)(xk - x*) ∫0:1 dt (vì ∫0:1 dt = 1) = ∫0:1 ∇²f(xk)(xk - x*) dt
 >
-> ∴ = || ∫0:1 ∇^2f(xk)(xk - x*)dt  - ∫0:1 ∇^2f(xk + t(x* - xk)) . (xk - x*) dt ||
+> ∴ = || ∫0:1 ∇²f(xk)(xk - x*)dt  - ∫0:1 ∇²f(xk + t(x* - xk)) . (xk - x*) dt ||
 >
 > Gộp hai tích phân lại
 >
-> ∴= || ∫0:1 [ ∇^2f(xk)(xk - x*) - ∇^2f(xk + t(x* - xk)) . (xk - x*) ] dt ||
+> ∴= || ∫0:1 [ ∇²f(xk)(xk - x*) - ∇²f(xk + t(x* - xk)) . (xk - x*) ] dt ||
 >
 > Đặt thừa số chung (xk - x*) ra ngoài, và đưa ra ngoài tích phân luôn.
 >
-> ∴ = || ∫0:1 [∇^2f(xk) - ∇^2f(xk + t(x* - xk))] . (xk - x*) dt ||
+> ∴ = || ∫0:1 [∇²f(xk) - ∇²f(xk + t(x* - xk))] . (xk - x*) dt ||
 >
-> = || ∫0:1 [∇^2f(xk) - ∇^2f(xk + t(x* - xk))] dt (xk - x*)||
+> = || ∫0:1 [∇²f(xk) - ∇²f(xk + t(x* - xk))] dt (xk - x*)||
 >
 > Tới đây, cái ta đang có là ||Au||, với 
 >
-> A = ∫0:1 [∇^2f(xk) - ∇^2f(xk + t(x* - xk))] dt
+> A = ∫0:1 [∇²f(xk) - ∇²f(xk + t(x* - xk))] dt
 >
 > u = xk - x*
 >
 > ⇨ Áp dụng bất đẳng thức ||Au|| ≤ ||A|| ||u|| (vì định nghĩa của norm ||A|| là max_u ||Au|| / ||u|| ⇨ ||Au|| / ||u|| ≤ ||A|| và cái này ⇔ ||Au|| ≤ ||A|| ||u||)
 >
-> Ta có  || ∫0:1 [∇^2f(xk) - ∇^2f(xk + t(x* - xk))] dt (xk - x*)||
+> Ta có  || ∫0:1 [∇²f(xk) - ∇²f(xk + t(x* - xk))] dt (xk - x*)||
 >
-> ≤ ||∫0:1 [∇^2f(xk) - ∇^2f(xk + t(x* - xk))] dt|| ||xk -  x*||
+> ≤ ||∫0:1 [∇²f(xk) - ∇²f(xk + t(x* - xk))] dt|| ||xk -  x*||
 >
 > Tới đây, dùng một bất đẳng thức khác: norm của tổng (tích phân) luôn ≤ tổng của norm:
 > ||A + B|| ≤ ||A|| + ||B||, cái này đại khái là khái quát lên từ bất đẳng thức tam giác đối với vector. 
 >
 > Mà ở đây chính là ta đưa norm vào trong tích phân.
 >
-> ∴ ≤ ∫0:1 ||∇^2f(xk) - ∇^2f(xk + t(x* - xk))|| dt ||xk -  x*||
+> ∴ ≤ ∫0:1 ||∇²f(xk) - ∇²f(xk + t(x* - xk))|| dt ||xk -  x*||
 >
 > đưa constant ||xk -  x*|| vô lại
 >
-> ∴ = ∫0:1 ||∇^2f(xk) - ∇^2f(xk + t(x* - xk))|| ||xk -  x*|| dt
+> ∴ = ∫0:1 ||∇²f(xk) - ∇²f(xk + t(x* - xk))|| ||xk -  x*|| dt
 >
 > Áp dụng giả định gradient ∇f là Lipschitz continuous trên N, tức là tồn tại hằng số L > 0 sao cho: 
 > ||∇f(x) - ∇f(x~)|| ≤ L||x - x~||. Với mọi x, x~ ∈ N
 >
-> ⇨ ||∇^2f(xk) - ∇^2f(xk + t(x* - xk))|| ≤ L||xk - [xk + t(x* - xk)]||
+> ⇨ ||∇²f(xk) - ∇²f(xk + t(x* - xk))|| ≤ L||xk - [xk + t(x* - xk)]||
 >
 > = L||-t(x* - xk)|| = L||t(xk - x*)|| = Lt||(xk - x*)]||
 >
 > Từ đó ta có:
 >
-> ∫0:1 ||∇^2f(xk) - ∇^2f(xk + t(x* - xk))|| ||xk - x*|| dt
+> ∫0:1 ||∇²f(xk) - ∇²f(xk + t(x* - xk))|| ||xk - x*|| dt
 >
-> ≤ ∫0:1 Lt ||(xk - x*)]|| ||xk -  x*|| dt = ∫0:1 Lt ||xk - x*||^2 dt
+> ≤ ∫0:1 Lt ||(xk - x*)]|| ||xk -  x*|| dt = ∫0:1 Lt ||xk - x*||² dt
 >
-> = ||xk - x*||^2 ∫0:1 Lt dt
+> = ||xk - x*||² ∫0:1 Lt dt
 >
-> = ||xk - x*||^2 (L/2)
+> = ||xk - x*||² (L/2)
 >
 > Vậy là cuối cùng ta có 
 >
-> ||∇^2f(xk)(xk - x*) - (∇fk - ∇f(x*))|| ≤ (L/2) ||xk -  x*||^2
+> ||∇²f(xk)(xk - x*) - (∇fk - ∇f(x*))|| ≤ (L/2) ||xk -  x*||²
 >
 > → Đây chính là kết quả 3.32
 
@@ -707,7 +707,7 @@
 <p align="center"><kbd><img src="assets/kyjhghfq33q.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, ta có ∇^2f(x*) nonsingular là vì theorem này có giả thiết là **solution x* thỏa sufficient condition** và cái này thì nói rằng Hessian tại x* sẽ PD.
+> Tiếp, ta có ∇²f(x*) nonsingular là vì theorem này có giả thiết là **solution x* thỏa sufficient condition** và cái này thì nói rằng Hessian tại x* sẽ PD.
 >
 > Vậy thì đại khái là vì Hessian tại x* PD nên dĩ nhiên cũng khả nghịch.
 >
@@ -743,41 +743,41 @@
 >
 > ====
 >
-> Vậy xét ||xk + pkN - x*|| = ||xk - x* - ∇^2fk⁻¹ ∇fk||
+> Vậy xét ||xk + pkN - x*|| = ||xk - x* - ∇²fk⁻¹ ∇fk||
 >
-> Nhờ 3.31 ta đã có xk + pkN - x* = (∇^2fk)⁻¹[∇^2fk (xk - x*) - (∇fk - ∇f*)
+> Nhờ 3.31 ta đã có xk + pkN - x* = (∇²fk)⁻¹[∇²fk (xk - x*) - (∇fk - ∇f*)
 >
-> ⇨ ||xk + pkN - x*|| = || (∇^2fk)⁻¹[∇^2fk (xk - x*) - (∇fk - ∇f*)] ||
+> ⇨ ||xk + pkN - x*|| = || (∇²fk)⁻¹[∇²fk (xk - x*) - (∇fk - ∇f*)] ||
 >
 > và áp dùng ||Au|| ≤ ||A|| ||u||
 >
-> Thì vế phải ≤  || (∇^2fk)⁻¹|| ||[∇^2fk (xk - x*) - (∇fk - ∇f*)] || (
+> Thì vế phải ≤  || (∇²fk)⁻¹|| ||[∇²fk (xk - x*) - (∇fk - ∇f*)] || (
 >
-> Nhờ tiếp 3.32: ||[∇^2fk (xk - x*) - (∇fk - ∇f*)] || ≤ (1/2)L ||xk - x*||^2
+> Nhờ tiếp 3.32: ||[∇²fk (xk - x*) - (∇fk - ∇f*)] || ≤ (1/2)L ||xk - x*||²
 >
-> Nên vế phải ở trên tiếp tục ≤ ||(∇^2fk)⁻¹|| (1/2)L ||xk - x*||^2
+> Nên vế phải ở trên tiếp tục ≤ ||(∇²fk)⁻¹|| (1/2)L ||xk - x*||²
 >
-> Nhờ tiếp kết quả trên H⁻¹(x) ≤ 2||H⁻¹(x*)||, cũng là ||(∇^2fk)⁻¹|| ≤ 2 ||(∇^2f(x*))⁻¹||
+> Nhờ tiếp kết quả trên H⁻¹(x) ≤ 2||H⁻¹(x*)||, cũng là ||(∇²fk)⁻¹|| ≤ 2 ||(∇²f(x*))⁻¹||
 >
-> ⇨ vế phải tiếp tục ≤ 2 ||(∇^2f(x*))⁻¹|| (1/2)L ||xk - x*||^2
+> ⇨ vế phải tiếp tục ≤ 2 ||(∇²f(x*))⁻¹|| (1/2)L ||xk - x*||²
 >
-> = L ||(∇^2f(x*))⁻¹|| ||xk - x*||^2
+> = L ||(∇²f(x*))⁻¹|| ||xk - x*||²
 >
-> Đặt L~ = L ||(∇^2f(x*))⁻¹||
+> Đặt L~ = L ||(∇²f(x*))⁻¹||
 >
-> ∴ = L~ ||xk - x*||^2
+> ∴ = L~ ||xk - x*||²
 >
 > Vậy cuối cùng ta có: 
 >
-> ||xk - x* - (∇^2fk)⁻¹ ∇fk|| ≤ L~ ||xk - x*||^2
+> ||xk - x* - (∇²fk)⁻¹ ∇fk|| ≤ L~ ||xk - x*||²
 >
-> cũng chính là: ||xk + pkN - x*|| ≤ L~ ||xk - x*||^2
+> cũng chính là: ||xk + pkN - x*|| ≤ L~ ||xk - x*||²
 >
-> Hay: **||xk+1 - x*|| ≤ L~ ||xk - x*||^2**
+> Hay: **||xk+1 - x*|| ≤ L~ ||xk - x*||²**
 >
 > Gọi ||xk - x*|| là giá trị scalar error tại step k: ek thì kết quả trên chính là:
 >
-> ek+1 ≤ L~ ek^2
+> ek+1 ≤ L~ ek²
 >
 > CUỐI CÙNG:
 >
@@ -818,76 +818,76 @@
 >
 > Norm of gradient tại xk+1: ||∇f(xk+1)||
 >
-> Vì xk+1 = xk + pkN và theo pkN là solution của equation ∇^2fk pkN = - ∇fk
+> Vì xk+1 = xk + pkN và theo pkN là solution của equation ∇²fk pkN = - ∇fk
 >
-> ⇨ ∇^2fk pkN + ∇fk = 0
+> ⇨ ∇²fk pkN + ∇fk = 0
 >
 > ||∇f(xk+1)|| = ||∇f(xk+1) - 0|| 
 >
-> = ||∇f(xk+1) - (∇^2fk pkN + ∇fk)|| (dùng ∇^2fk pkN + ∇fk = 0)
+> = ||∇f(xk+1) - (∇²fk pkN + ∇fk)|| (dùng ∇²fk pkN + ∇fk = 0)
 >
-> = ||∇f(xk+1) - ∇^2fk pkN - ∇fk|| (phá dấu ngoặc ra)
+> = ||∇f(xk+1) - ∇²fk pkN - ∇fk|| (phá dấu ngoặc ra)
 >
-> = ||∇f(xk+1) - ∇fk - ∇^2fk pkN|| (đổi vị trí)
+> = ||∇f(xk+1) - ∇fk - ∇²fk pkN|| (đổi vị trí)
 >
 > Áp dụng Taylor theorem: f(x + p) = f(x) + ∫0:1 ∇f(x + pt)pdt ⇔ f(x + p) - f(x) = ∫0:1 ∇f(x + pt)pdt
 >
-> ⇨ ∇f(xk+1) - ∇fk = ∫0:1 ∇^2f(xk + tpkN)(xk+1 - xk) dt
+> ⇨ ∇f(xk+1) - ∇fk = ∫0:1 ∇²f(xk + tpkN)(xk+1 - xk) dt
 >
-> ⇨ .. = || ∫0:1 ∇^2f(xk + tpkN)(xk+1 - xk) dt - ∇^2fk pkN ||
+> ⇨ .. = || ∫0:1 ∇²f(xk + tpkN)(xk+1 - xk) dt - ∇²fk pkN ||
 >
-> Biến - ∇^2fk pkN = - ∇^2fk pkN ∫0:1 dt = - ∫0:1 ∇^2fk pkN dt và gộp hai tích phân lại.
+> Biến - ∇²fk pkN = - ∇²fk pkN ∫0:1 dt = - ∫0:1 ∇²fk pkN dt và gộp hai tích phân lại.
 >
-> = || ∫0:1 [ ∇^2f(xk + tpkN)(xk+1 - xk) - ∇^2fk pkN ] dt ||
+> = || ∫0:1 [ ∇²f(xk + tpkN)(xk+1 - xk) - ∇²fk pkN ] dt ||
 >
 > Áp dụng bất đặng thức tam giác cho tích phân, đại  khái là norm của tổng (tích phân 
 > thì ≤ tổng tích phân của norm)
 >
-> .. ≤ ∫0:1 || ∇^2f(xk + tpkN)(xk+1 - xk) - ∇^2fk pkN || dt
+> .. ≤ ∫0:1 || ∇²f(xk + tpkN)(xk+1 - xk) - ∇²fk pkN || dt
 >
-> = ∫0:1 || ∇^2f(xk + tpkN) pkN - ∇^2fk pkN || dt
+> = ∫0:1 || ∇²f(xk + tpkN) pkN - ∇²fk pkN || dt
 >
-> = ∫0:1 || [∇^2f(xk + tpkN) - ∇^2fk ] pkN || dt
+> = ∫0:1 || [∇²f(xk + tpkN) - ∇²fk ] pkN || dt
 >
 > Dùng tiếp inequality ||Au|| ≤ ||A|| ||u||
 >
-> .. ≤ ∫0:1 || [∇^2f(xk + tpkN) - ∇^2fk ] || || pkN || dt
+> .. ≤ ∫0:1 || [∇²f(xk + tpkN) - ∇²fk ] || || pkN || dt
 >
-> Tới đây dùng Lipschit: ||∇^f(a) - ∇^2f(b)|| ≤ L||a - b||
+> Tới đây dùng Lipschit: ||∇^f(a) - ∇²f(b)|| ≤ L||a - b||
 >
 > ⇨ ≤ ∫0:1 L || (xk + tpkN) - xk || || pkN || dt
 >
 > = ∫0:1 L || tpkN)|| || pkN || dt
 >
-> = ∫0:1 L |t| || pkN ||^2 dt = = ∫0:1 |t| dt . L || pkN ||^2
+> = ∫0:1 L |t| || pkN ||² dt = = ∫0:1 |t| dt . L || pkN ||²
 >
-> = L || pkN ||^2 / 2 
+> = L || pkN ||² / 2 
 >
-> = L || - ∇^2fk⁻¹ ∇fk ||^2 / 2 
+> = L || - ∇²fk⁻¹ ∇fk ||² / 2 
 >
-> = L || ∇^2fk⁻¹ ∇fk ||^2 / 2 
+> = L || ∇²fk⁻¹ ∇fk ||² / 2 
 >
-> ≤ L || ∇^2fk⁻¹ ||^2 || ∇fk ||^2 / 2  (Dùng ||Au|| ≤ ||A|| ||u||)
+> ≤ L || ∇²fk⁻¹ ||² || ∇fk ||² / 2  (Dùng ||Au|| ≤ ||A|| ||u||)
 >
 > Áp dụng tiếp cái này H⁻¹(x) ≤ 2||H⁻¹(x*)|| (xem note liền trước)
 >
-> ⇨ L || ∇^2fk⁻¹ ||^2 || ∇fk ||^2 / 2 ≤ L 2^2 || ∇^2f(x*)⁻¹ ||^2 || ∇fk ||^2 / 2
+> ⇨ L || ∇²fk⁻¹ ||² || ∇fk ||² / 2 ≤ L 2² || ∇²f(x*)⁻¹ ||² || ∇fk ||² / 2
 >
-> = || ∇^2f(x*)⁻¹ || || ∇fk ||^2
+> = || ∇²f(x*)⁻¹ || || ∇fk ||²
 >
-> Tóm lại ta có: **||∇f(xk+1)|| ≤ 2L || ∇^2f(x*)⁻¹ || || ∇fk ||^2**
+> Tóm lại ta có: **||∇f(xk+1)|| ≤ 2L || ∇²f(x*)⁻¹ || || ∇fk ||²**
 >
 > CHO THẤY GRADIENT → 0 RẤT NHANH (QUADRAᵀICALLY)
 >
 > Nếu chưa hiểu thì vì đại khái là vầy:
 >
-> ví dụ cho 2L || ∇^2f(x*)⁻¹ || là constant = 10, 
+> ví dụ cho 2L || ∇²f(x*)⁻¹ || là constant = 10, 
 >
-> ||∇f0|| = 0.01 thì ||∇f1|| ≤ 10 × 0.01^2 = 0.001 
+> ||∇f0|| = 0.01 thì ||∇f1|| ≤ 10 × 0.01² = 0.001 
 >
-> ||∇f2|| ≤ 10 × ||∇f1||||^2 ≤ 10 × (0.001)^2 = 0.00001 
+> ||∇f2|| ≤ 10 × ||∇f1||||² ≤ 10 × (0.001)² = 0.00001 
 >
-> ||∇f3|| ≤ 10 × ||∇f2||^2 ≤ 10 × (0.0001)^2 = 0.0000001
+> ||∇f3|| ≤ 10 × ||∇f2||² ≤ 10 × (0.0001)² = 0.0000001
 >
 > Hiểu đại khái là** norm của gradient giảm rất nhanh**
 
@@ -938,7 +938,7 @@
 <p align="center"><kbd><img src="assets/zzbrfb2wmdc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là theorem này nói rằng, nếu như ta có iteration xk+1 = xk + αkpk với pk là descent direction, αk thỏa Wolfe condition với c1 ≤ 1.2 Và nếu chuỗi xk converge về x* có gradient vanish, và Hessian PD và nếu search direction pk thỏa lim k→0 ||∇fk + ∇^2fkpk|| / ||pk|| = 0
+> Đại khái là theorem này nói rằng, nếu như ta có iteration xk+1 = xk + αkpk với pk là descent direction, αk thỏa Wolfe condition với c1 ≤ 1.2 Và nếu chuỗi xk converge về x* có gradient vanish, và Hessian PD và nếu search direction pk thỏa lim k→0 ||∇fk + ∇²fkpk|| / ||pk|| = 0
 >
 > Thì khi đó **thuật toán sẽ chọn αk = 1 với mọi k lớn hơn k0 nào đó** 
 >
@@ -988,17 +988,17 @@
 >
 > Vậy thì, nếu đã nói hàm f hành xử giống hàm bậc hai, thì ta có:
 >
-> f(xk+1) ≈ f(xk) + f'(xk)(xk+1 - xk) + (1/2)f''(xk)(xk+1 - xk)^2
+> f(xk+1) ≈ f(xk) + f'(xk)(xk+1 - xk) + (1/2)f''(xk)(xk+1 - xk)²
 >
-> = f(xk) + f'(xk)αkpk + (1/2)f''(xk)(αkpk)^2 = g(αk)  (Thay xk+1 - xk = pk)
+> = f(xk) + f'(xk)αkpk + (1/2)f''(xk)(αkpk)² = g(αk)  (Thay xk+1 - xk = pk)
 >
-> ⇨ f(xk+1) ≈ f(xk) + f'(xk)αkpk + (1/2)f''(xk)(αkpk)^2 (1)
+> ⇨ f(xk+1) ≈ f(xk) + f'(xk)αkpk + (1/2)f''(xk)(αkpk)² (1)
 >
 > Và với αk = 1, thì αkpk sẽ dẫn ta tới minimizer:
 >
-> Tức là g'(1) = 0  ⇔ f'(xk)pk + f''(xk)(pk)^2αk |αk=1 = 0
+> Tức là g'(1) = 0  ⇔ f'(xk)pk + f''(xk)(pk)²αk |αk=1 = 0
 >
-> ⇔ f'(xk)pk + f''(xk)(pk)^2 = 0 
+> ⇔ f'(xk)pk + f''(xk)(pk)² = 0 
 >
 > ⇔ pk = -f'(xk)/f''(xk)
 >
@@ -1006,13 +1006,13 @@
 >
 > Điều kiện Armijo: f(xk+1) ≤ f(xk) + c1 f'(xk) αk pk
 >
-> Thay  f(xk+1) ≈ f(xk) + f'(xk)αkpk + (1/2)f''(xk)(αkpk)^2 ở (1) vào, ta có:
+> Thay  f(xk+1) ≈ f(xk) + f'(xk)αkpk + (1/2)f''(xk)(αkpk)² ở (1) vào, ta có:
 >
-> f(xk) + f'(xk)αkpk + (1/2)f''(xk)(αkpk)^2 ≤ f(xk) + c1 f'(xk) αk pk
+> f(xk) + f'(xk)αkpk + (1/2)f''(xk)(αkpk)² ≤ f(xk) + c1 f'(xk) αk pk
 >
-> ⇔ f'(xk)αkpk + (1/2)f''(xk)(αkpk)^2 ≤ c1 f'(xk) αk pk
+> ⇔ f'(xk)αkpk + (1/2)f''(xk)(αkpk)² ≤ c1 f'(xk) αk pk
 >
-> ⇔ (1/2)f''(xk)(αkpk)^2 ≤ (c1-1)f'(xk) αk pk
+> ⇔ (1/2)f''(xk)(αkpk)² ≤ (c1-1)f'(xk) αk pk
 >
 > ⇔ (1/2)f''(xk)(pk) ≤ (c1-1)f'(xk)
 >
@@ -1044,7 +1044,7 @@
 > Chỉ nói là nếu pk là Quasi-Newton search direction thì cái limit của theorem
 > này sẽ có dạng như vầy.
 >
-> Và nói rằng, **theorem này cho rằng ta sẽ đạt superlinear convergence ngay cả khi Bk ko converge về Hessian ∇^2 f(x*)**, 
+> Và nói rằng, **theorem này cho rằng ta sẽ đạt superlinear convergence ngay cả khi Bk ko converge về Hessian ∇² f(x*)**, 
 >
 > mà **chỉ cần nó ngày càng approx tốt Hessian tại x* là đủ**
 
