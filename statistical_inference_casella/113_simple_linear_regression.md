@@ -1,6 +1,6 @@
 # 11.3 Simple Linear Regression
 
-📊 **Progress:** `28` Notes | `50` Screenshots | `28` AI Reviews
+📊 **Progress:** `30` Notes | `52` Screenshots | `30` AI Reviews
 
 ---
 <a id="node-m4lr6nj"></a>
@@ -2573,21 +2573,234 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 <p align="center"><kbd><img src="assets/0z740q5v1uf.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Phần chứng minh α̂, β̂ và S² (unbiased estimator của σ²) độc lập ta sẽ tìm hiểu sau
+> Phần chứng minh α̂, β̂ và S² (unbiased estimator của σ²) độc lập ta sẽ tìm hiểu sau nhưng đại ý là vầy:
+>
+>
+>
+> ε̂ i = Yi - (α̂ + β̂ xi) = Yi - α̂ - β̂ xi
+>
+>
+>
+> với β̂ = Σj djYj và α̂ = Σj cjYj
+>
+>
+>
+> (dj = (xj-x̄)/Sxx, cj = (1/n) - dj x̄ ))
+>
+>
+>
+> ⇒ .. = Yi - α̂ - β̂ xi = Yi - Σj cjYj - Σj djYj xi
+>
+>
+>
+> = Yi - Σj cjYj - Σj djxiYj 
+>
+>
+>
+> = Yi + Σj \[- cjYj - djxiYj\]
+>
+>
+>
+> =  Σj \[δijYj - cjYj - djxiYj\] 
+>
+>
+>
+> =  Σj \[(δij - cj - djxi)Yj\] 
+>
+>
+>
+> Theo lemma 11.3.2, Cov(ε̂ i, α̂ ) = 0, Cov(ε̂ i, β̂ ) = 0, nên
+>
+>
+>
+> Theo bổ đề 5.3.3 thì:
+>
+>
+>
+> ε̂ i, α̂ , β̂ đều là tổng các linear function của các biến Yi là các normal độc lập.
+>
+>
+>
+> Đồng thời Cov(ε̂ i, α̂ ) = 0, Cov(ε̂ i, β̂ ) = 0
+>
+>
+>
+> Nên theo ý a của bổ đề, ε̂ i và α̂ độc lập và ε̂ i, β̂ độc lập.
+>
+>
+>
+> Và S² (còn nhớ, nó là unbiased estimator của σ² = \[n/(n-2)\] σ̂ ²
+>
+>
+>
+> = \[1/(n-2)\] (Σi ε̂ i²)
+>
+>
+>
+> do là hàm số của ε̂ i, nên sẽ độc lập với α̂ và β̂
+>
+>
+>
+> ---
+>
+>
+>
+> Cuối cùng là chứng minh (n-2)S²/σ² \~ χ²\_n-2: quay lại sau
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú tóm tắt đúng mục tiêu chính của đoạn tài liệu và chủ động đánh dấu phần chứng minh để tìm hiểu sau.
+> Ghi chú rất tốt, bạn đã tự triển khai chi tiết các bước biến đổi đại số để đưa phần dư về dạng tổ hợp tuyến tính của các biến Y_j (điều mà giáo trình đã lược bớt), đồng thời nắm vững trực giác dẫn đến tính độc lập.
 >
 > **✓ Strengths**
-> - Xác định đúng kết quả quan trọng trong giáo trình: tính độc lập giữa các ước lượng tham số hồi quy (α̂, β̂) và phương sai mẫu S².
-> - Nhận diện chính xác vai trò của S² là ước lượng không chệch (unbiased estimator) của σ².
+> - Tự chứng minh chi tiết công thức biểu diễn ε̂_i theo hàm tuyến tính của Y_j mà sách giáo trình nhảy bước.
+> - Nắm rõ logic cốt lõi: các thống kê là tổ hợp tuyến tính của các biến phân phối chuẩn độc lập, do đó hiệp phương sai bằng 0 suy ra tính độc lập.
+> - Hiểu chính xác việc hàm số của các phần dư (cụ thể là S²) sẽ độc lập với α̂ và β̂.
 >
 > **💡 Deeper notes**
-> - Tính độc lập này cần giả định lấy mẫu từ phân phối chuẩn (normal sampling), và việc chứng minh dựa trên tính trực giao thông qua việc hiệp phương sai bằng 0 (Lemma 11.3.2 và Lemma 5.3.3).
+> - Để suy ra S² độc lập với (α̂, β̂), về mặt chặt chẽ cần vector phần dư (ε̂₁, ..., ε̂_n) độc lập đồng thời (jointly independent) với (α̂, β̂), chứ không chỉ là độc lập đôi một (pairwise independence). Tuy nhiên, vì đây là vector chuẩn nhiều chiều nên hiệp phương sai bằng 0 với mọi thành phần đảm bảo được tính độc lập đồng thời này.
 
 **🔗 See also:** [Độc lập trung bình phương sai](./53_sampling_from_the_normal_distribution.md#node-qx3kch2) · [Lemma 11.3.2 Covariance of Linear Combinations](#node-26ktgyo) · [Residuals and Bias in Variance](#node-zj557yy)
 
 <br>
+
+<a id="node-tgodcuh"></a>
+
+###### Inference on Linear Regression Parameters
+
+<p align="center"><kbd><img src="assets/o5eftls78k.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý đoạn này là:
+>
+>
+>
+> Ta có kết quả ((n-2)S²/σ² \~ χ²\_n-2 (mình tạm bỏ qua chứng minh, và để chứng minh cần dùng Cochran's Theorem)
+>
+>
+>
+> Rồi. Đồng thời cũng đã biết sampling distribution của α̂, β̂ là: 
+>
+>
+>
+> α̂ \~ n(α, σ²\[(1/nSxx)Σi xi²\]) 
+>
+>
+>
+> β̂ \~ n(β, σ²/Sxx)
+>
+>
+>
+> Và nhớ lại định nghĩa của phân phối student t: là phân phối có biến ngẫu nhiên tạo bởi một normal(0,1) chia cho (căn bậc 2 của một chi-square chia bậc tự do của nó) và bậc tự do của student t là bậc tự do của chi-square. Và biến normal và chi-square phải độc lập
+>
+>
+>
+> Nên ở đây ta có:
+>
+>
+>
+> (α̂ - α)/σ√(Σixi²/nSxx) \~ n(0,1) theo location scale family
+>
+>
+>
+> ((n-2)S²/σ² \~ χ²\_n-2 nên √S²/σ² = S/σ là căn bậc hai của một χ²\_n-2 chia bậc tự do của nó
+>
+>
+>
+> Vậy (α̂ - α)/σ√(Σixi²/nSxx) / S/σ \~ t_n-2
+>
+>
+>
+> ⇔ (α̂ - α) / S√(Σixi²/nSxx) \~ t_n-2
+>
+>
+>
+> ---
+>
+>
+>
+> Tương tự:
+>
+>
+>
+> (β̂ - β)/ (σ/√Sxx) \~ n(0,1)
+>
+>
+>
+> ((n-2)S²/σ² \~ χ²\_n-2 nên √S²/σ² = S/σ là căn bậc hai của một χ²\_n-2 chia bậc tự do của nó
+>
+>
+>
+> ⇒ (β̂ - β)/ (σ/√Sxx) / (S/σ) \~ t_n-2
+>
+>
+>
+> ⇔ (β̂ - β) / (S/√Sxx) \~ t_n-2
+>
+>
+>
+> ---
+>
+>
+>
+> Và ta sẽ dùng sampling distribution t_n-2 này để suy luận về α và β (tức là nói đến hai bài toán suy luận test và interval estimation, còn point estimation thì đã là α̂ và β̂ rồi)
+>
+>
+>
+> ---
+>
+>
+>
+> Ông nói thêm, joint distribution của hai cái biến t_n-2 ở trên gọi là bivariate Student's t. Có thể dùng để suy luận đồng thời cả α và β tuy nhiên ở đây ta sẽ suy luận từng cái.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, hiểu rõ bản chất định nghĩa phân phối Student's t và tự diễn giải từng bước triệt tiêu độ lệch chuẩn σ để ra công thức chuẩn mực trong sách.
+>
+> **✓ Strengths**
+> - Hiểu chính xác và áp dụng đúng định nghĩa của phân phối Student's t từ biến chuẩn hóa N(0,1) và biến Chi-bình phương.
+> - Tự triển khai đầy đủ các bước đại số biến đổi tỉ số để triệt tiêu tham số nhiễu σ thay vì chỉ chép lại công thức cuối.
+> - Nêu rõ điều kiện quan trọng về tính độc lập giữa tử số (chuẩn tắc) và mẫu số (chi-square).
+> - Nắm bắt chính xác vai trò của phân phối t trong suy luận thống kê (khoảng tin cậy và kiểm định) cũng như khái niệm bivariate Student's t distribution.
+>
+> **💡 Deeper notes**
+> - Tính độc lập giữa ước lượng hệ số (α̂, β̂) và phương sai mẫu S² đến từ Định lý 11.3.3 (suy rộng từ Định lý Cochran trong mô hình hồi quy tuyến tính).
+
+<br>
+
+<a id="node-0czbau8"></a>
+
+###### Section 11.3 Simple Linear Regression
+
+<p align="center"><kbd><img src="assets/ptd6k9z44d.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là ta thường quan tâm đến suy luận về β hơn là α.
+>
+>
+>
+> Vì E\[Y|x\] = α + βx nên α chỉ là E\[Y|x=0\], mà cái này thì tùy bài toán, có thể ta có hoặc không quan tâm đến.
+>
+>
+>
+> Còn β là độ dốc của hàm population regression E\[Y|x\] (rate of change, đạo hàm), nó sẽ giúp biết được khi x thay đổi 1 đơn vị thì E\[Y|x\] thay đổi thế nào. Do đó ta đặc biệt quan tâm β. Và cũng đặc biệt muốn suy luận (bài toán testing) rằng β có bằng 0 hay không.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác và đầy đủ ý nghĩa thực tiễn của hai tham số alpha và beta trong hồi quy tuyến tính đơn.
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất của alpha là giá trị kỳ vọng khi x = 0 và nhận biết được lý do tham số này có thể không quan trọng trong nhiều bài toán thực tế.
+> - Nắm vững ý nghĩa của beta là tốc độ thay đổi (độ dốc) của đường hồi quy tổng thể khi biến x tăng 1 đơn vị.
+> - Liên hệ chuẩn xác việc kiểm định giả thuyết beta = 0 nhằm xác định xem có tồn tại mối quan hệ tuyến tính giữa X và Y hay không.
+>
+> **💡 Deeper notes**
+> - Một lý do cụ thể khiến alpha thường ít được quan tâm là giá trị x = 0 có thể nằm ngoài phạm vi quan sát hợp lý của bài toán (ngoại suy), ví dụ như khi x là chiều cao hay cân nặng của người trưởng thành.
+> - Khi beta = 0, E(Y|x) không phụ thuộc tuyến tính vào x, đồng nghĩa với việc không có mối quan hệ tuyến tính nào giữa biến giải thích và biến phản hồi.
+
+<br>
+
+<a id="node-h3708w4"></a>
 
