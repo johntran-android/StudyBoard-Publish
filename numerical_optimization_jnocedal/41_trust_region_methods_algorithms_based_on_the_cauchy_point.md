@@ -114,17 +114,17 @@
 >
 > Thì lập luận là, ta sẽ xét 2 trường hợp:
 >
-> gkTBkgk ≤ 0: Thì (τp)ᵀBk(τp) = τ^2 pᵀBkp = τ^2 (Δk / ||gk||)^2 gkTBkgk cũng sẽ ≤ 0 ∀ τ
+> gkTBkgk ≤ 0: Thì (τp)ᵀBk(τp) = τ² pᵀBkp = τ² (Δk / ||gk||)² gkTBkgk cũng sẽ ≤ 0 ∀ τ
 >
-> mk(τ) = fk + τ gkT [-(Δk / ||gk||) gk] + (1/2) τ^2 (Δk / ||gk||)^2 gkTBkgk
+> mk(τ) = fk + τ gkT [-(Δk / ||gk||) gk] + (1/2) τ² (Δk / ||gk||)² gkTBkgk
 >
-> = fk - τ gkTgk [(Δk / ||gk||)] + (1/2) τ^2 (Δk / ||gk||)^2 gkTBkgk
+> = fk - τ gkTgk [(Δk / ||gk||)] + (1/2) τ² (Δk / ||gk||)² gkTBkgk
 >
-> = fk - ||gk|| Δk τ + (1/2) τ^2 (Δk / ||gk||)^2 gkTBkgk
+> = fk - ||gk|| Δk τ + (1/2) τ² (Δk / ||gk||)² gkTBkgk
 >
 > Xét đạo hàm theo τ của hàm g(τ) = mk(τpks):
 >
-> g'(τ) = (Δk / ||gk||)^2 gkTBkgk τ - ||gk|| Δk thì có thể thấy với mọi τ ≥ 0 thì cái này đều luôn âm ⇨ hàm monotone decreasing. ⇨ Hàm luôn giảm nên bài toán minimize sẽ có solution tại boundary: Tức τ là giá trị khiến τ||pks|| = Δ ⇔ τΔ = Δ ⇔ τ = 1
+> g'(τ) = (Δk / ||gk||)² gkTBkgk τ - ||gk|| Δk thì có thể thấy với mọi τ ≥ 0 thì cái này đều luôn âm ⇨ hàm monotone decreasing. ⇨ Hàm luôn giảm nên bài toán minimize sẽ có solution tại boundary: Tức τ là giá trị khiến τ||pks|| = Δ ⇔ τΔ = Δ ⇔ τ = 1
 >
 > ====
 >
@@ -132,15 +132,15 @@
 >
 > giải g'(τ) = 0:
 >
-> ⇔ (Δk / ||gk||)^2 gkTBkgk τ - ||gk|| Δk = 0
+> ⇔ (Δk / ||gk||)² gkTBkgk τ - ||gk|| Δk = 0
 >
-> ⇔ (Δk / ||gk||)^2 gkTBkgk τ = ||gk|| Δk 
+> ⇔ (Δk / ||gk||)² gkTBkgk τ = ||gk|| Δk 
 >
-> ⇔ [Δk^2 / (||gk||)^2] gkTBkgk τ = ||gk||Δk
+> ⇔ [Δk² / (||gk||)²] gkTBkgk τ = ||gk||Δk
 >
 > ⇔ τ = (||gk||)^3 / ΔkgkTBkgk
 >
-> g''(τ ) = (Δk / ||gk||)^2 gkTBkgk, và nó sẽ luôn > 0. 
+> g''(τ ) = (Δk / ||gk||)² gkTBkgk, và nó sẽ luôn > 0. 
 >
 > Nên nếu thỏa constraint, tức ||τ*pks|| ≤ Δk
 >
@@ -282,13 +282,13 @@
 >
 > minimize g(t) = m(tp)|p=-g = f + gᵀ(-gt) + (1/2)(-gt)ᵀB(-gt) 
 >
-> = f - t||g||^2 + (1/2) t^2 gᵀBg. 
+> = f - t||g||² + (1/2) t² gᵀBg. 
 >
 > Đây là **hàm đơn biến bậc hai theo t**. Dễ thấy solution của bài toán này là:
 >
-> g'(t) = 0 ⇔ - ||g||^2 + 2t gᵀBg = 0 ⇔ t = ||g||^2 / gᵀBg
+> g'(t) = 0 ⇔ - ||g||² + 2t gᵀBg = 0 ⇔ t = ||g||² / gᵀBg
 >
-> ⇨ pU chính là  ||g||^2 / gᵀBg (-g) = - [||g||^2 / gᵀB] g chính là công thức 4.15 trong sách.
+> ⇨ pU chính là  ||g||² / gᵀBg (-g) = - [||g||² / gᵀB] g chính là công thức 4.15 trong sách.
 >
 > Rồi, còn pB thì dễ rồi, nó là -B⁻¹ g (cũng là cái p*(Δ) với Δ rất lớn (coi như unconstrain ở trên)
 >
@@ -369,17 +369,17 @@
 >
 > = f + gᵀτpU + (1/2)[τpU]TBτpU
 >
-> = f + τgᵀpU + (1/2)(τ^2)pUᵀBpU
+> = f + τgᵀpU + (1/2)(τ²)pUᵀBpU
 >
 > Xét đạo hàm theo τ: dễ thấy = gᵀpU + pUᵀBpU τ 
 >
 > = gᵀ {- [gᵀg / gᵀBg] g} + {- [gᵀg / gᵀBg] g}T B {- [gᵀg / gᵀBg] g} τ
 >
-> = - [gᵀg / gᵀBg] gᵀg + [gᵀg / gᵀBg]^2 gᵀBg τ
+> = - [gᵀg / gᵀBg] gᵀg + [gᵀg / gᵀBg]² gᵀBg τ
 >
-> = - (gᵀg)^2 / (gᵀBg) + [(gᵀg)^2 / (gᵀBg)] τ
+> = - (gᵀg)² / (gᵀBg) + [(gᵀg)² / (gᵀBg)] τ
 >
-> = (gᵀg)^2(-1 + τ) / (gᵀBg)
+> = (gᵀg)²(-1 + τ) / (gᵀBg)
 >
 > Với τ ∈ [0,1] thì -1 + τ ∈ [-1, 0] nên cái này ≤ 0 → m decreasing function of τ
 >
@@ -393,21 +393,21 @@
 >
 > = ||pB + α(pB - pU)||
 >
-> Ta mới đặt hàm h(α) = (1/2) ||p_tilde(1 + α)||^2:
+> Ta mới đặt hàm h(α) = (1/2) ||p_tilde(1 + α)||²:
 >
-> h'(α) = d/dα [(1/2) ||p_tilde(1 + α)||^2] 
+> h'(α) = d/dα [(1/2) ||p_tilde(1 + α)||²] 
 >
-> = d/d(||p_tilde(1 + α)||) [(1/2) ||p_tilde(1 + α)||^2] . d/dα ||p_tilde(1 + α)|| 
+> = d/d(||p_tilde(1 + α)||) [(1/2) ||p_tilde(1 + α)||²] . d/dα ||p_tilde(1 + α)|| 
 >
 > = ||p_tilde(1 + α)|| . d/dα ||p_tilde(1 + α)||
 >
 > Nếu ta chứng minh h'(α) ≥ 0 với mọi α ∈ [0,1] thì đồng nghĩa ||p_tilde(1 + α)|| . d/dα ||p_tilde(1 + α)|| ≥ 0 ∀ α ∈ [0,1], ⇔ d/dα ||p_tilde(1 + α)|| ≥ 0 ∀ α ∈ [0,1], ⇨ p_tilde(1 + α) là increasing function of α trên ∈ [0,1], cũng chính là chứng minh xong ý i).
 >
-> (Chú ý, ở đây, thay vì đạo hàm hàm ||p_tilde(1 + α)|| (là hàm cần chứng minh increasing) ta sẽ dễ hơn nếu làm với hàm (1/2) ||p_tilde(1 + α)||^2 theo lí do trên, vì đạo hàm hàm này dễ hơn nhiều)
+> (Chú ý, ở đây, thay vì đạo hàm hàm ||p_tilde(1 + α)|| (là hàm cần chứng minh increasing) ta sẽ dễ hơn nếu làm với hàm (1/2) ||p_tilde(1 + α)||² theo lí do trên, vì đạo hàm hàm này dễ hơn nhiều)
 >
-> Quay lại h(α), = (1/2) ||p_tilde(1 + α)||^2
+> Quay lại h(α), = (1/2) ||p_tilde(1 + α)||²
 >
-> = (1/2) ||pU + α(pB - pU)||^2
+> = (1/2) ||pU + α(pB - pU)||²
 >
 > = (1/2) (pU + α(pB - pU))ᵀ(pU + α(pB - pU)
 >
@@ -415,13 +415,13 @@
 >
 > = (1/2) [pUᵀpU + α(pB - pU)ᵀpU + pUᵀα(pB - pU) + α(pB - pU)ᵀα(pB - pU)]
 >
-> = (1/2) [pUᵀpU + 2α(pB - pU)ᵀpU + α^2 (pB - pU)ᵀ(pB - pU)]
+> = (1/2) [pUᵀpU + 2α(pB - pU)ᵀpU + α² (pB - pU)ᵀ(pB - pU)]
 >
-> = (1/2) ||pU|| + α(pB - pU)ᵀpU + (1/2) α^2 ||pB - pU||^2
+> = (1/2) ||pU|| + α(pB - pU)ᵀpU + (1/2) α² ||pB - pU||²
 >
-> h'(α) = (pB - pU)ᵀpU + α ||pB - pU||^2
+> h'(α) = (pB - pU)ᵀpU + α ||pB - pU||²
 >
-> vì α ||pB - pU||^2 ≥ 0 
+> vì α ||pB - pU||² ≥ 0 
 >
 > ⇨ h'(α) ≥ (pB - pU)ᵀpU, hay -pUᵀ(pU - pB) cho giống sách cũng được.
 >
@@ -460,7 +460,7 @@
 > Do đó trong trường hợp sau, ta sẽ giải phương trình này để tìm giao điểm 
 > (tức là tìm τ mà tại đó quỹ đạo gấp khúc cắt boundary, cũng là τ minimizer m(p_tilde(τ)) subject to ||p_tilde(τ)|| ≤ Δ.
 >
-> ||pU + (τ - 1)(pB - pU)||^2 = Δ^2
+> ||pU + (τ - 1)(pB - pU)||² = Δ²
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
@@ -478,7 +478,7 @@
 <p align="center"><kbd><img src="assets/c38vwbyrmh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là nói về B trong bài toán minimize f + gᵀp + (1/2)pᵀBp s.t ||p|| ≤ Δ, thì như đã biết B có thể là Hessian, hay xấp xỉ Hessian. Thì ở đây là nói lại ý đó, cụ thể là nếu trong tình huống mà ta có Hessian avaiable (dĩ nhiên đây là Hessian tại điểm bắt đầu, xk, vì đây thật ra viết đầy đủ là bài toán minimize f(xk) + gkTpk + (1/2)pkTBkpk s.t ||pk|| ≤ Δ, giúp tìm pk gíúp giảm đủ), và available có nghĩa là có thể tính được hay có được mà không quá tốn kém, vì thật ra nguyên nhân chủ yếu của việc không có Hessian là vì chi phí tính toán, thì ta sẽ dùng B = Hessian, tức ∇^2f(xk).
+> Đại khái là nói về B trong bài toán minimize f + gᵀp + (1/2)pᵀBp s.t ||p|| ≤ Δ, thì như đã biết B có thể là Hessian, hay xấp xỉ Hessian. Thì ở đây là nói lại ý đó, cụ thể là nếu trong tình huống mà ta có Hessian avaiable (dĩ nhiên đây là Hessian tại điểm bắt đầu, xk, vì đây thật ra viết đầy đủ là bài toán minimize f(xk) + gkTpk + (1/2)pkTBkpk s.t ||pk|| ≤ Δ, giúp tìm pk gíúp giảm đủ), và available có nghĩa là có thể tính được hay có được mà không quá tốn kém, vì thật ra nguyên nhân chủ yếu của việc không có Hessian là vì chi phí tính toán, thì ta sẽ dùng B = Hessian, tức ∇²f(xk).
 >
 > Khi đó cái mà ta có từ phương pháp dogleg gọi là **Newton-doglog step**.
 >
@@ -486,7 +486,7 @@
 >
 > Đoạn sau đại khái nói thế này: Việc dùng modified Hessian trong phương pháp dogleg thật ra không phù hợp lắm bởi vì việc chỉnh sửa Hessian mà ta còn nhớ nó sẽ thay đổi đường chéo của Hessian để giúp nó thành xác định dương, thì việc này xảy ra có tính chất tùy tiện (arbitrary), và lợi ích của phương pháp trust-region có thể không được nhận ra một cách đầy đủ.
 >
-> Cụ thể là ở phần sau ta sẽ thấy đại ý là khi tính solution của bài toán trên với Bk là Hessian, thì solution nó là (∇^2f(xk) + λI)⁻¹ gk trong đó λ được chọn sao cho (∇^2f(xk) + λI) xác định dương rồi, có nghĩa là, bản thân phương pháp trust region thì có thể coi như nó cũng đã thực hiện cái việc chỉnh sửa Hessian rồi, khiến việc chỉnh sửa bởi các thuật toán modified Hessian không cần thiết (redundant)
+> Cụ thể là ở phần sau ta sẽ thấy đại ý là khi tính solution của bài toán trên với Bk là Hessian, thì solution nó là (∇²f(xk) + λI)⁻¹ gk trong đó λ được chọn sao cho (∇²f(xk) + λI) xác định dương rồi, có nghĩa là, bản thân phương pháp trust region thì có thể coi như nó cũng đã thực hiện cái việc chỉnh sửa Hessian rồi, khiến việc chỉnh sửa bởi các thuật toán modified Hessian không cần thiết (redundant)
 >
 > Rồi, tác giả kết luận Newton-dogleg method sẽ phù hợp với tình huống mà objective function convex (khi đó như đã biết từ Convex Optim Boyd, Hessian luôn xác định bán dương).
 >
@@ -514,7 +514,7 @@
 > [!NOTE]
 > Đoạn đầu đại ý là: Nói rằng khi B xác định dương, thì ta có thể LÀM CHO PHƯƠNG PHÁP DOGLEG PHỨC TẠP HƠN TÍ, bằng cách mở rộng không gian tìm kiếm chút xíu. Nói rõ hơn, đại khái là vầy: Để hiểu rõ ngọn ngành thì ta cần ôn lại chút về ý tưởng của dogleg method: Mục đích ngắn gọn của nó là CẢI THIỆN CAUCHY POINT. Là sao? 
 >
-> Là vầy, tác giả đã nói, tương tự như bên line search, ta có thể không cần thiết phải tốn công đi tìm exact (optimal) step length, mà chỉ cần step length đủ tốt, như thỏa Wolfe / Strong Wolfe conditions là được, vì như vậy cũng đủ giúp hội tụ toàn cục rồi. Thì ở đây cũng vậy, ta cũng chỉ cần pk (hay bỏ qua subscript k) p, giúp giảm đủ là được.Thì cái sự đủ ở đây chính là đối chiếu / lấy tấm gương của Cauchy point. Và Cauchy point, là p được tính bởi 2 bước: Tìm pkS là hướng steepest descent, và giải tìm pU = tpkS: minimize hàm m(p) (= f + gᵀp + (1/2)pᵀBp) nhưng restrict to hướng pkS (minimize g + gᵀpkS × t + (1/2)pkSTBpkS × t^2 và ||pkS t|| ≤ Δ)
+> Là vầy, tác giả đã nói, tương tự như bên line search, ta có thể không cần thiết phải tốn công đi tìm exact (optimal) step length, mà chỉ cần step length đủ tốt, như thỏa Wolfe / Strong Wolfe conditions là được, vì như vậy cũng đủ giúp hội tụ toàn cục rồi. Thì ở đây cũng vậy, ta cũng chỉ cần pk (hay bỏ qua subscript k) p, giúp giảm đủ là được.Thì cái sự đủ ở đây chính là đối chiếu / lấy tấm gương của Cauchy point. Và Cauchy point, là p được tính bởi 2 bước: Tìm pkS là hướng steepest descent, và giải tìm pU = tpkS: minimize hàm m(p) (= f + gᵀp + (1/2)pᵀBp) nhưng restrict to hướng pkS (minimize g + gᵀpkS × t + (1/2)pkSTBpkS × t² và ||pkS t|| ≤ Δ)
 >
 > Thế thì, vấn đề là, cái hướng của Cauchy point, là steepest gradient descent, mà ta đã biết, nó hội tụ rất tệ, vì nó không dùng thông tin curvature (chứa trong Bk, tức B). Thành ra người ta mới tìm cách cải thiện Cauchy point, mà đầu tiên là dogleg: Họ sẽ lập luận thế này: khi Δ thay đổi từ rất nhỏ đến rất lớn, thì solution của bài toán minimize m(p) s.t ||p|| ≤ Δ sẽ thay đổi từ pU đến pB, tạo ra một quỹ đạo hình cẳng chó. Vậy thì dogleg method mới định ra một đường gấp khúc xấp xỉ cái cẳng chó đó, và minimize hàm m(p) s.t ||p|| ≤ Δ restrict to cái đường gấp khúc này.
 >
