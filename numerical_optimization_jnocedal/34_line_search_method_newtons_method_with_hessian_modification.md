@@ -19,17 +19,17 @@
 > [!NOTE]
 > Phần này đại khái là, nói về case** khi Hessian không xác định dương**, thì Newton direction vốn như đã biết là solution của equation: 
 >
-> ∇^2fk pkN = - ∇fk
+> ∇²fk pkN = - ∇fk
 >
 > khi đó **sẽ chưa chắc là descent direction**. 
 >
-> Lí do là vì, khi Hessian PD, thì ta có, pkN = - ∇^2fk ∇fk. Directional derivative wrt pkN tạ xk: 
+> Lí do là vì, khi Hessian PD, thì ta có, pkN = - ∇²fk ∇fk. Directional derivative wrt pkN tạ xk: 
 >
 > = pkNT ∇fk
 >
-> = - (∇^2fk ∇fk) ∇fk 
+> = - (∇²fk ∇fk) ∇fk 
 >
-> = - ∇fkT ∇^2fk ∇fk sẽ **chắc chắn là âm** nếu gradient khác 0
+> = - ∇fkT ∇²fk ∇fk sẽ **chắc chắn là âm** nếu gradient khác 0
 >
 > **Còn khi Hessian ko PD** thì lưu ý là ta **vẫn có thể có nghiệm pkN**, vì Hessian vẫn có thể invertible, hoặc vẫn có thể có nhiều nghiệm (khi - ∇fk nằm trong column space của Hessian) nhưng **không chắc directional derivative wrt pkN tại xk âm nữa**.
 >
@@ -95,31 +95,31 @@
 >
 > Vì ||Ax|| / ||x|| không âm nên ta có thể giải bài toán tương đương:
 >
-> maximize over x ||Ax||^2 / ||x||^2 = xᵀAᵀAx / xᵀx
+> maximize over x ||Ax||² / ||x||² = xᵀAᵀAx / xᵀx
 >
-> xᵀAᵀAx = xᵀQΛQᵀx = Σ_i=1:n ((Qᵀx)_i)^2 λi
+> xᵀAᵀAx = xᵀQΛQᵀx = Σ_i=1:n ((Qᵀx)_i)² λi
 >
 > Và cái này thì áp dụng λmin ≤ λi ≤ λmax
 >
-> Σ_i=1:n ((Qᵀx)_i)^2 (λmin) ≤ Σ_i=1:n ((Qᵀx)_i)^2 λi ≤ Σ_i=1:n ((Qᵀx)_i)^2 λmax
+> Σ_i=1:n ((Qᵀx)_i)² (λmin) ≤ Σ_i=1:n ((Qᵀx)_i)² λi ≤ Σ_i=1:n ((Qᵀx)_i)² λmax
 >
-> ⇔ λmin Σ_i=1:n ((Qᵀx)_i)^2 ≤ Σ_i=1:n ((Qᵀx)_i)^2 λi ≤ λmax Σ_i=1:n ((Qᵀx)_i)^2 
+> ⇔ λmin Σ_i=1:n ((Qᵀx)_i)² ≤ Σ_i=1:n ((Qᵀx)_i)² λi ≤ λmax Σ_i=1:n ((Qᵀx)_i)² 
 >
-> ⇔ λmin ||Qᵀx||^2 ≤ Σ_i=1:n ((Qᵀx)_i)^2 λi ≤ λmax ||Qᵀx||^2 
+> ⇔ λmin ||Qᵀx||² ≤ Σ_i=1:n ((Qᵀx)_i)² λi ≤ λmax ||Qᵀx||² 
 >
-> ⇔ λmin ||x||^2 ≤ Σ_i=1:n ((Qᵀx)_i)^2 λi ≤ λmax ||x||^2
+> ⇔ λmin ||x||² ≤ Σ_i=1:n ((Qᵀx)_i)² λi ≤ λmax ||x||²
 >
-> ⇔ λmin ≤ Σ_i=1:n ((Qᵀx)_i)^2 λi ≤ λmax
+> ⇔ λmin ≤ Σ_i=1:n ((Qᵀx)_i)² λi ≤ λmax
 >
 > ⇨ λmin ≤ xᵀAᵀAx / xᵀx ≤ λmax
 >
 > Lưu ý nãy giờ λ là của AᵀA
 >
-> ⇨ max_x ||Ax||^2 / ||x||^2 = λmax(AᵀA)
+> ⇨ max_x ||Ax||² / ||x||² = λmax(AᵀA)
 >
 > ⇨ max_x ||Ax|| / ||x|| = √λmax(AᵀA)
 >
-> và min_x ||Ax||^2 / ||x||^2 = λmin(AᵀA)
+> và min_x ||Ax||² / ||x||² = λmin(AᵀA)
 >
 > ⇨ min_x ||Ax|| / ||x|| = √λmin(AᵀA)
 >
@@ -149,7 +149,7 @@
 >
 > = √ λmax(AᵀA) . √λmax(AᵀA⁻¹)
 >
-> Mà λ(AᵀA) thì chính là σ(A)^2 (cũng như λ(AᵀA⁻¹) = σ(A⁻¹)^2
+> Mà λ(AᵀA) thì chính là σ(A)² (cũng như λ(AᵀA⁻¹) = σ(A⁻¹)²
 >
 > ⇨ [max stret] = √λmax(AᵀA) = σmax(A)
 >
@@ -214,11 +214,11 @@
 <p align="center"><kbd><img src="assets/mvfsub4cfus.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đoạn này đại ý là nếu ta soi thuật toán 3.2 sẽ thấy rằng nếu chuỗi xk converge về x* nơi có ∇^2 f(x*) có tính sufficiently positive definite theo nghĩa là chiến lược chỉnh sửa (mà ta sẽ xem xét trong phần kế tiếp) trả về một matrix Ek = 0, 
+> Đoạn này đại ý là nếu ta soi thuật toán 3.2 sẽ thấy rằng nếu chuỗi xk converge về x* nơi có ∇² f(x*) có tính sufficiently positive definite theo nghĩa là chiến lược chỉnh sửa (mà ta sẽ xem xét trong phần kế tiếp) trả về một matrix Ek = 0, 
 >
 > Mà điều này có nghĩa là khi xk tiến gần đến x* thì Hessian tại đó dần trở thành xác định dương rồi, nên thuật toán chỉnh sửa bằng cách cộng Ek vào Hessian để tạo Bk xác định dương và giúp pk = - (Bk)⁻¹ ∇fk thỏa yêu cầu là descent direction) không cần add Ek gì nữa
 >
-> Thì khi đó về cơ bản thuật toán 3.2 chỉ là Newton method bởi nó dùng pk là Newton step, = - (∇^2f_k)⁻¹ ∇fk chứ không cần - (Bk)⁻¹ ∇fk nữa.
+> Thì khi đó về cơ bản thuật toán 3.2 chỉ là Newton method bởi nó dùng pk là Newton step, = - (∇²f_k)⁻¹ ∇fk chứ không cần - (Bk)⁻¹ ∇fk nữa.
 >
 > Hơn nữa, theo theorem 3.2 thì với k đủ lớn, tức xk đủ gần x* thì αk = 1 sẽ luôn được chọn khiến full Newton step, và theo phân tích của Newton method convergence analysis thì ta biết tốc độ hội tụ sẽ là quadratic
 
@@ -236,13 +236,13 @@
 <p align="center"><kbd><img src="assets/kr123zrb7bi.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ôn lại một chút về cái đang nói: Đó là dùng Newton method khi mà Hessian tại xk không xác định dương, khiến Newton direction - (∇^2f_k)⁻¹ ∇f_k không phải descent direction. Thì người ta khắc phục bằng cách thay Hessian ∇^2 f_k bởi B_k bằng ∇^2 f_k + E_k, để có được B_k là xác định dương. ⇨ - (Bk)⁻¹ ∇f_k là descent direction.
+> Ôn lại một chút về cái đang nói: Đó là dùng Newton method khi mà Hessian tại xk không xác định dương, khiến Newton direction - (∇²f_k)⁻¹ ∇f_k không phải descent direction. Thì người ta khắc phục bằng cách thay Hessian ∇² f_k bởi B_k bằng ∇² f_k + E_k, để có được B_k là xác định dương. ⇨ - (Bk)⁻¹ ∇f_k là descent direction.
 >
 > Thế thì, như note trước vừa nói, nếu mọi chuyện tốt đẹp thì khi đến một lúc nào đó (k nào đó) Hessian tại k sẽ bắt đầu xác định dương, và việc chỉnh sửa sẽ không còn cần nữa, tức Ek thành 0 và thuật toán trở thành Newton method thật sự, với các đặc điểm tốt đẹp là hội tụ nhanh.
 >
 > Nhưng điều này không phải luôn xảy ra, không phải lúc nào Hessian gần x* cũng xác định dương. Cụ thể là khi bản thân Hessian tại x* rất gần singular, tức vẫn xác định dương, nhưng λmin của nó rất ≈ 0. Khi đó dĩ nhiên khi xk → x* thì Hessian tại xk cũng vậy. 
 >
-> Khi đó, thuật toán không thể dùng E_k = 0 được, vì nếu vậy thì B_k = ∇^2 f_k + E_k cũng sẽ gần singular ⇨ việc tính - (Bk)⁻¹ ∇f_k sẽ bị vấn đề.
+> Khi đó, thuật toán không thể dùng E_k = 0 được, vì nếu vậy thì B_k = ∇² f_k + E_k cũng sẽ gần singular ⇨ việc tính - (Bk)⁻¹ ∇f_k sẽ bị vấn đề.
 >
 > Và do đó, thuật toán này sẽ không dần trở thành Newton method được (vì Ek không thể trở thành 0) khiến cho nó sẽ không đạt được quadratic convergence rate mà chỉ là linear rate → chậm.
 >
@@ -250,7 +250,7 @@
 >
 > Và lẽ dĩ nhiên ta cũng cần phép phân tách được tính toán với chi phí càng thấp càng tốt.
 >
-> Cuối cùng đó là, để chuẩn bị nói về các phép phân tách ma trận, dùng trong thuật toán 3.2, ta sẽ bắt đầu với việc giả định là phép phân tách eigenvalue ∇^2 f_k tồn tại. Dù trong thực tế thì điều này không phải luôn đúng vì với large-scale problem thì thường là phép phân tách này rất tốn kém.
+> Cuối cùng đó là, để chuẩn bị nói về các phép phân tách ma trận, dùng trong thuật toán 3.2, ta sẽ bắt đầu với việc giả định là phép phân tách eigenvalue ∇² f_k tồn tại. Dù trong thực tế thì điều này không phải luôn đúng vì với large-scale problem thì thường là phép phân tách này rất tốn kém.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
@@ -409,25 +409,25 @@
 >
 > ⇨ ||ΔA||_F = ||Qdiag(τi)Qᵀ||.
 >
-> Tới đây, hãy nhớ lại tính chất của Frobenius norm của A theo định nghĩa, nó chỉ là căn bậc hai của tổng tất cả các phần tử của ma trận ⇨ ||A||F = Σ_ij (Ajj)^2. Và ta nhớ là có thể thể hiện cái này bởi tr(AᵀA), vì tr(AᵀA) là tổng các entries đường chéo của AᵀA.
+> Tới đây, hãy nhớ lại tính chất của Frobenius norm của A theo định nghĩa, nó chỉ là căn bậc hai của tổng tất cả các phần tử của ma trận ⇨ ||A||F = Σ_ij (Ajj)². Và ta nhớ là có thể thể hiện cái này bởi tr(AᵀA), vì tr(AᵀA) là tổng các entries đường chéo của AᵀA.
 >
 > ⇨||ΔA||_F = tr[(ΔA)ᵀΔA)] = tr{[Qdiag(τi)Qᵀ]T(Qᵀdiag(τi)Qᵀ)}
 >
-> = tr{Qdiag(τi)QᵀQdiag(τi)Qᵀ} = tr{Qdiag(τi)^2Qᵀ}
+> = tr{Qdiag(τi)QᵀQdiag(τi)Qᵀ} = tr{Qdiag(τi)²Qᵀ}
 >
-> = tr{Qdiag(τi)^2Qᵀ]T} | tr(A) = tr(Aᵀ)
+> = tr{Qdiag(τi)²Qᵀ]T} | tr(A) = tr(Aᵀ)
 >
-> = tr{QQᵀdiag(τi)^2}
+> = tr{QQᵀdiag(τi)²}
 >
-> = tr{diag(τi)^2}
+> = tr{diag(τi)²}
 >
-> = Σi τi^2
+> = Σi τi²
 >
-> Như vậy objective trở thành minimize Σi τi^2 subject to λ(A + ΔA) ≥ δ
+> Như vậy objective trở thành minimize Σi τi² subject to λ(A + ΔA) ≥ δ
 >
 > Mà cái constraint có thể dễ thấy chính là λi + τi ≥ δ ⇔ δ - τi - λi ≤ 0 với i = 1,2...n 
 >
-> Viết lại bài toán: minimize Σi τi^2 subject to δ - τi - λi ≤ 0, hay δ - τ - λ ≺ 0 
+> Viết lại bài toán: minimize Σi τi² subject to δ - τi - λi ≤ 0, hay δ - τ - λ ≺ 0 
 >
 > Nhớ lại dạng tổng quát của inequality constrained optimization:
 >
@@ -742,9 +742,9 @@
 >
 > Ví dụ vì sao Lii = √Aii:
 >
-> Xét A11, thì entry 11 của LLᵀ chính là: Lấy L nhân với cột 1 của Lᵀ và lấy phần tử đầu tiên. cột 1 của Lᵀ là hàng 1 của L, là [L11,0...] (vì L là tam giác dưới) Vậy L . [cột 1 của Lᵀ] cho ra L11 nhân cột 1 của L, rồi lấy phần tử đầu tiên thì chính là L11^2
+> Xét A11, thì entry 11 của LLᵀ chính là: Lấy L nhân với cột 1 của Lᵀ và lấy phần tử đầu tiên. cột 1 của Lᵀ là hàng 1 của L, là [L11,0...] (vì L là tam giác dưới) Vậy L . [cột 1 của Lᵀ] cho ra L11 nhân cột 1 của L, rồi lấy phần tử đầu tiên thì chính là L11²
 >
-> Vậy A11 = L11^2 ⇨ L11 = √A11
+> Vậy A11 = L11² ⇨ L11 = √A11
 >
 > Còn các bước sau cũng dễ.
 >
@@ -815,20 +815,20 @@
 >
 > ⇔ |cij| / β ≤ √dj
 >
-> ⇔ (|cij| / β)^2 ≤ dj
+> ⇔ (|cij| / β)² ≤ dj
 >
-> ⇔ dj ≥ (cij / β)^2, nhắc lại, với mọi i
+> ⇔ dj ≥ (cij / β)², nhắc lại, với mọi i
 >
-> Như vậy: dj ≥ [(max_i cij) / β]^2
+> Như vậy: dj ≥ [(max_i cij) / β]²
 >
 > Đặt θj là max |cij|
 >
 > Con số dj phải có giá trị ít nhất là từ mấy thằng này trở lên, nên nó sẽ là:
 >
-> max(|cjj|, δ, (θj / β)^2) 
+> max(|cjj|, δ, (θj / β)²) 
 >
 > Vậy trong cái thuật toán 3.4 của Cholesky Factorization thông thường, có dj = cjj
-> ta sẽ thay bằng dj = max(|cjj|, δ, (θj / β)^2)
+> ta sẽ thay bằng dj = max(|cjj|, δ, (θj / β)²)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -1021,7 +1021,7 @@
 >
 > Và again, F cũng là cái có F norm nhỏ nhất giúp sửa B thành ra (B + F) xác định dương, để rồi cũng chính là giúp ta có kết quả phân rã của một matrix A đã chỉnh sửa (thành A + E nào đó) mà A + E xác định dương.
 >
-> Cuối cùng là một điểm đáng lưu ý đó là: Giáo sư nhấn mạnh với modified Cholesky factorization thì về cơ bản là ta chỉ sửa các phần tử đường chéo của A mà thôi (cái bước gán dj bởi max (|cjj|, δ, (θj/β)^2). Để rồi thể hiện matrix chỉnh sửa A bởi: P A Pᵀ + E = L D Lᵀ 
+> Cuối cùng là một điểm đáng lưu ý đó là: Giáo sư nhấn mạnh với modified Cholesky factorization thì về cơ bản là ta chỉ sửa các phần tử đường chéo của A mà thôi (cái bước gán dj bởi max (|cjj|, δ, (θj/β)²). Để rồi thể hiện matrix chỉnh sửa A bởi: P A Pᵀ + E = L D Lᵀ 
 > thì E là diagonal matrix.
 >
 > Còn ở đây, ta ko chỉ sửa đường chéo của A, mà thay đổi hoàn toàn cấu trúc của A, tức là  thể hiện ở dạng P(A + E)Pᵀ = L(B + F)Lᵀ thì E ko phải là diagonal matrix
