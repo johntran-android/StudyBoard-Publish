@@ -1824,9 +1824,7 @@
 >
 > Nhận xét là nhờ cái theorem đó mà chứng minh cái này rất khỏe
 
-📹 Video 1: [Tại sao MGF của tổng hai biến độc lập bằng tích MGF? (phần 1)](https://www.youtube.com/watch?v=G09HUqjpn_w)
-
-📹 Video 2: [Làm sao dùng LOTUS tính hàm MGF của phân phối chuẩn? (phần 3)](https://www.youtube.com/watch?v=PWkRReS5oM8)
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=PWkRReS5oM8)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -1968,8 +1966,6 @@
 >
 >
 > đây là có dạng của mgf của n(μ+γ, σ²+τ²), nên do mgf có thể xác định phân phối, ta kết luận Z \~ n(μ+γ, σ²+τ²)
-
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=1J4PcL23QcY)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
