@@ -472,6 +472,8 @@
 > **💡 Deeper notes**
 > - Hàm phân phối này thực chất là phân phối Categorical (hay Multinoulli / Generalized Bernoulli). Dạng tích lũy thừa Π y_k^{t_k} tương tự như Bernoulli (y^t (1-y)^{1-t}) nhưng mở rộng cho K classes với ràng buộc vector t có đúng một phần tử bằng 1 và tổng y_k bằng 1.
 
+**🔗 See also:** [Hessian Approximation for Cross-Entropy](./542_outer_product_approximation.md#node-mjkv6do)
+
 <br>
 
 <a id="node-8j52rv4"></a>
