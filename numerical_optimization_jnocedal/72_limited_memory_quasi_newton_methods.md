@@ -52,14 +52,14 @@
 >
 > xk+1 = xk + pkN
 >
-> Mà pkN thì biết rồi, = -(∇^2fk)⁻¹ ∇fk, công thức này xuất xứ từ việc: tại iteration
+> Mà pkN thì biết rồi, = -(∇²fk)⁻¹ ∇fk, công thức này xuất xứ từ việc: tại iteration
 > k ta xấp xỉ hàm f bởi quadratic approximation của nó mk(p) = fk + ∇fkTp +
-> (1/2)pᵀ∇^2fkp và từ đó, giải bài toán minimize hàm mk(p), dùng điều kiện cần
+> (1/2)pᵀ∇²fkp và từ đó, giải bài toán minimize hàm mk(p), dùng điều kiện cần
 > bậc nhất:
 >
-> ∇mk(p) = 0 ⇔ ∇^2fk p + ∇fk = 0
+> ∇mk(p) = 0 ⇔ ∇²fk p + ∇fk = 0
 >
-> ⇔ p = - (∇^2fk) ∇fk, chính là công thức Newton step.
+> ⇔ p = - (∇²fk) ∇fk, chính là công thức Newton step.
 >
 > Nói chung cái mô tuýp này (dùng hàm mk(p) là xấp xỉ bậc hai của hàm f tại xk)
 > để tìm hướng đi tại iteration k, là giống nhau ở cả Line Search, Trust Region, ...
@@ -85,7 +85,7 @@
 > direction thì tính Newton step thế nào (quasi Newton và inexact Newton)
 >
 > Thế thì ôn lại cái BFGS, là một quasi-Newton, ý tưởng chính của nó là
-> vầy:  Để tính pkN = -(∇^2fk)⁻¹ ∇fk, thì thay vì dùng Hessian thật ta sẽ
+> vầy:  Để tính pkN = -(∇²fk)⁻¹ ∇fk, thì thay vì dùng Hessian thật ta sẽ
 > dùng một  matrix Bk xấp xỉ của Hessian.
 >
 > Và ý tưởng cốt lõi để có Bk: Ta sẽ cập nhật nó từ từ, liên tục sau mỗi vòng
@@ -465,7 +465,7 @@
 > condition). Với cái kiểu này, thì nếu như matrix chứa thông tin độ cong theo
 > hướng pk một cách chính xác, thì chỉ cần αk = 1 thì đã thỏa rồi → ta sẽ phóng
 > ngay tới điểm xk+1 = xk + pk. Và điều này là cái ta có được nếu dùng Hessian
-> thật: pk = - ∇^2fk ∇fk.
+> thật: pk = - ∇²fk ∇fk.
 >
 > Tuy nhiên, với quasi-Newton, pk = - Hk ∇fk, mà Hk thì chưa có curvature
 > information từ xk → xk+1. Do đó, rất có thể pk tính ra quá dài, và
@@ -551,19 +551,19 @@
 >
 > Ta có zkT Qᵀ Λ Q zk = (Qᵀzk)ᵀ Λ Qzk. Đặt y = Qᵀzk. Ta có yTΛy
 >
-> = yT[λ1y1, ..λnyn] = λ1y1^2 + λ2y2^2 + ...= Σλi yi^2
+> = yT[λ1y1, ..λnyn] = λ1y1² + λ2y2² + ...= Σλi yi²
 >
 > Ta có bất đẳng thức sau:
 >
 > λmin ≤ λi ≤ λmax
 >
-> ⇨ Σλmin yi^2 ≤ Σλi yi^2 ≤ Σλmax yi^2
+> ⇨ Σλmin yi² ≤ Σλi yi² ≤ Σλmax yi²
 >
-> ⇔ λmin Σi yi^2 ≤ Σλi yi^2 ≤ λmax Σi yi^2
+> ⇔ λmin Σi yi² ≤ Σλi yi² ≤ λmax Σi yi²
 >
-> ⇔ λmin yTy ≤ Σλi yi^2 ≤ λmax Σi yTy
+> ⇔ λmin yTy ≤ Σλi yi² ≤ λmax Σi yTy
 >
-> ⇔ λmin ≤ Σλi yi^2 / yTy ≤ λmax
+> ⇔ λmin ≤ Σλi yi² / yTy ≤ λmax
 >
 > ⇔ λmin ≤ zkT QᵀΛQ zk / zkQᵀQᵀzk ≤ λmax
 >
@@ -578,8 +578,8 @@
 > Do đó nghịch đảo của nó, tức zkTzk / zkTG^kzk sẽ gần với một trị riêng nào đó của
 > nghịch đảo của G^k.
 >
-> Mà G^k thì là Hessian trung bình, nên nó sẽ approximate (∇^2fk)⁻¹ giúp kết  luận
-> zkTzk / zkTG^kzk sẽ gần với một trị riêng nào đó của (∇^2fk)⁻¹.
+> Mà G^k thì là Hessian trung bình, nên nó sẽ approximate (∇²fk)⁻¹ giúp kết  luận
+> zkTzk / zkTG^kzk sẽ gần với một trị riêng nào đó của (∇²fk)⁻¹.
 >
 > Từ đó bằng cách gán H0 = (zkTzk / zkTG^kzk)I sẽ giúp ta có matrix mà độ lớn của
 > trị riêng sẽ gần với ít nhất một trị riêng nào đó của Hessian inverse thật giúp cho độ
@@ -966,25 +966,25 @@
 >
 > Với việc L, U có cấu trúc đơn giản thì hai hai bước này sẽ ít tốn (ví dụ khi
 > L có dạng tam giác dưới thì giải L u1 = B1Tv chỉ là forward substitution, rất
-> nhanh, với cost của việc giải hệ n phương trình n biến chỉ là O(n^2)
+> nhanh, với cost của việc giải hệ n phương trình n biến chỉ là O(n²)
 >
 > ⇨ Ở đây, B2 chỉ có shape 2m x 2m, ⇨ hệ phương trình tuyến tính kích
-> thước 2m, cost O(m^2)
+> thước 2m, cost O(m²)
 >
-> Do đó chi phí của bước solve sẽ là O(m^2)
+> Do đó chi phí của bước solve sẽ là O(m²)
 >
-> Tính B1(B2)⁻¹ B1Tv: Chính là nhân B1 với z: là matrix (n, 2m) nhân R^2m
-> vector Tốn n phép dot product giữa hai R^2m vector, tốn 2m+2m-1 flops =
+> Tính B1(B2)⁻¹ B1Tv: Chính là nhân B1 với z: là matrix (n, 2m) nhân R²m
+> vector Tốn n phép dot product giữa hai R²m vector, tốn 2m+2m-1 flops =
 > 4m-1 flops. Tổng cộng tốn n(4m-1) = 4mn - n flops. Nếu chỉ tính phép
 > nhân: n2m = 2mn
 >
-> Vậy tổng cộng tốn: 2mn + O(m^2) + 2mn = 4mn + O(m^2)
+> Vậy tổng cộng tốn: 2mn + O(m²) + 2mn = 4mn + O(m²)
 >
 > Còn bước cuối: δk*I v Tốn n phép nhân
 >
-> Vậy tốn 4mn + n + O(m^2)
+> Vậy tốn 4mn + n + O(m²)
 >
-> = (4m + 1)n + O(m^2)
+> = (4m + 1)n + O(m²)
 >
 > Và nếu m nhỏ thì con số chi phí này chỉ gần như là tuyến tính theo n: O(n)
 
@@ -1028,7 +1028,7 @@
 > rồi L-BFGS compact và nay là compact form tính SF1 và L-SF1 compact
 > form.
 >
-> Nhu cầu: Cần Hessian inverse ∇^2fk để tính Newton step : pkN = -∇^2fk
+> Nhu cầu: Cần Hessian inverse ∇²fk để tính Newton step : pkN = -∇²fk
 > ∇fk
 >
 > Ideas: Tạo Bk xấp xỉ Hessian.
