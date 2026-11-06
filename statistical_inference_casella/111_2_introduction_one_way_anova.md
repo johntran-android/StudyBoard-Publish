@@ -1218,7 +1218,7 @@
 >
 >
 >
-> d/dσ² (1/(σ²)²) = d/d\[(1/(σ²)\] (1/(σ²)²) . d/dσ² \[(1/(σ²)α \]
+> d/dσ² (1/(σ²)²) = d/d\[(1/(σ²)\] (1/(σ²)²) . d/dσ² \[(1/(σ²) \]
 >
 >
 >
@@ -1414,7 +1414,7 @@
 >
 >
 >
-> T(𝐗) = (X̄ -θ0)/(S/√n)
+> t(𝐗) (là biến ngẫu nhiên có được bằng cách áp hàm t(𝐱) lên 𝐗, đặt là T(𝐗)) = (X̄ -θ0)/(S/√n)
 >
 >
 >
@@ -1422,7 +1422,23 @@
 >
 >
 >
-> μ, σ²: (X̄ -μ)/(S/√n) \~ t_n-1
+> KHÚC NÀY QUAN TRỌNG ĐÂY:
+>
+>
+>
+> Ta biết THEO THEOREM (...) NẾU NHƯ CÓ RANDOM SAMPLE Xi là normal có mean μ, variance σ²: biến ngẫu nhiên sau đâu (X̄ -μ)/(S/√n) sẽ \~ t_n-1.
+>
+>
+>
+> T(𝐗)) = (X̄ -θ0)/(S/√n), tại đây chưa có thể kết luận gì.
+>
+>
+>
+> Nhưng DƯỚI GIẢ ĐỊNH H0 LÀ ĐÚNG, THÌ θ0 LÀ TRUE MEAN, KHI ĐÓ, T(𝐗)) = (X̄ -θ0)/(S/√n) \~ t_n-1
+>
+>
+>
+> Và kể từ đó, ta có thể xét xác suất của event liên quan đến T(𝐗) (ví dụ xác suất reject H0 khi T bé hơn cái đó) bằng cách dùng phân phối student t
 >
 >
 >
@@ -1430,7 +1446,7 @@
 >
 >
 >
-> Dưới giả định H0: θ = θ0, thì (X̄ -θ0)/(S/√n) chính là một random variable \~ t_n-1
+> Vậy, dưới giả định H0: θ = θ0, thì (X̄ -θ0)/(S/√n) chính là một random variable \~ t_n-1
 >
 >
 >
@@ -1497,15 +1513,16 @@
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú xuất sắc, trình bày chi tiết và hoàn chỉnh từng bước suy dẫn kiểm định LRT cho phân phối chuẩn và tìm miền bác bỏ tương đương với phân phối Student t.
+> Ghi chú xuất sắc, các bước biến đổi LRT và kiểm soát kích thước bài toán (size alpha) được thực hiện chi tiết, logic và hoàn toàn chính xác.
 >
 > **✓ Strengths**
-> - Thực hiện đầy đủ và chính xác toàn bộ quá trình tìm MLE tự do (unrestricted) và MLE ràng buộc (restricted).
-> - Khai triển đại số tách tổng bình phương sai lệch rất chuẩn xác để đưa tỉ số hợp lý về dạng hàm số của thống kê t.
-> - Chứng minh rõ ràng tính tương đương giữa quy tắc bác bỏ LRT và quy tắc kiểm định giả thuyết mức ý nghĩa alpha.
+> - Thực hiện đầy đủ và chuẩn xác phép biến đổi tìm restricted MLE và unrestricted MLE của phương sai σ².
+> - Rút gọn thành công biểu thức tỉ số hợp lý λ(x) về hàm của thống kê t một cách mạch lạc.
+> - Hiểu rõ vai trò then chốt của giả thuyết H₀ trong việc xác định phân phối Student t của thống kê kiểm định để chuẩn hóa mức ý nghĩa α.
 >
 > **💡 Deeper notes**
-> - Do biến ngẫu nhiên T có phân phối liên tục (Student t) nên việc lấy dấu lớn hơn hoặc bằng (>=) hay dấu lớn hơn hẳn (>) không làm thay đổi xác suất sai lầm loại I (size alpha).
+> - Quy tắc bác bỏ trong đề bài dùng dấu '>' thay vì '≥', tuy nhiên do thống kê T tuân theo phân phối liên tục t_{n-1} nên P(|T| = t_{n-1, α/2}) = 0, việc dùng '>' hay '≥' không làm thay đổi kích thước mức α của kiểm định.
+> - Ngưỡng hằng số c của LRT luôn thoả mãn 0 < c ≤ 1 để đảm bảo c^(-2/n) - 1 ≥ 0, tương ứng với miền bác bỏ hợp lệ.
 
 **🔗 See also:** [Kiểm định LRT cho trung bình](./82_method_of_finding_tests.md#node-ouhenhy) · [LRT với tham số gây nhiễu](./82_method_of_finding_tests.md#node-elajwsz) · [MLEs phân phối chuẩn](./72_method_of_finding_estimators.md#node-6nhtwtp)
 
@@ -1532,11 +1549,11 @@
 >
 >
 >
-> Xét cái ANOVA hypothesis testing: H0: Σi aiθi = 0 vs H1: Σi aiθi ≠ 0 thì tác giả cho rằng cái test 11.2.7 sẽ là level alpha test.
+> Xét cái ANOVA hypothesis testing: H0: Σi aiθi = 0 vs H1: Σi aiθi ≠ 0 thì tác giả cho rằng cái test 11.2.7 sẽ là level α test.
 >
 >
 >
-> Ít nhất ta có thể hiểu cái test 11.2.7 là ở đâu mọc ra, nó chính là có xuất phát từ LRT method mà thôi. 
+> Ít nhất ta có thể hiểu cái test 11.2.7 là ở đâu mọc ra, nó chính là có xuất phát từ LRT method mà thôi.
 >
 >
 >
@@ -1645,11 +1662,11 @@
 >
 >
 >
-> Tuy nhiên có một sự thật là:
+> Tuy nhiên **có một sự thật** là:
 >
 >
 >
-> Với dù Σi aiθi mang giá trị thật γ\* nào thì khi đặt ra bài toán kiểm định: H0: Σi aiθi = γ\* vs H1: Σi aiθi khác γ thì phép kiểm định sau đây vẫn luôn là size alpha test:
+> Với **dù Σi aiθi mang giá trị thật γ\* nào** thì khi đặt ra bài toán kiểm định: H0: Σi aiθi = γ\* vs H1: Σi aiθi khác γ thì **phép kiểm định sau đây** vẫn **luôn là size alpha test**:
 >
 >
 >
@@ -1657,11 +1674,19 @@
 >
 >
 >
-> Vì sao? Vì test rule dựa trên một biến ngẫu nhiên tuy dính đến giá trị thật γ của của Σi aiθi nhưng nó luôn là một t_N-k random variable.
+> Vì sao? Vì test rule dựa trên một biến ngẫu nhiên tuy dính đến giá trị thật γ của của Σi aiθi nhưng **nó luôn là một t_N-k random variable**: Chính là định nghĩa của pivot: là hàm của 𝐗 và tham số θ chưa biết nhưng phân phối lại hoàn toàn không phụ thuộc θ
 >
 >
 >
-> Nên VỚI MỌI γ\*: sup\_γ∈{γ\*} P\_γ(|\[(Σi=1:k aiȲi) - γ\]/√Σi ai²/ni\] / √(S²\_p)| &gt; t_N-k,α/2)
+> Nên **VỚI MỌI γ\***: 
+>
+>
+>
+> sup\_γ∈{γ\*} P(reject H0)    
+>
+>
+>
+> = sup\_γ∈{γ\*} P\_γ(|\[(Σi=1:k aiȲi) - γ\]/√Σi ai²/ni\] / √(S²\_p)| &gt; t_N-k,α/2)
 >
 >
 >
@@ -1689,11 +1714,11 @@
 >
 >
 >
-> Với bài toán kiểm định H0: Σi aiθi = 0 (γ0) vs H1: Σi aiθi ≠ 0 thì test rule reject H0 khi |(Σi=1:k aiȲi)/√Σi ai²/ni\] / √(S²\_p)| &gt; t_N-k,α/2 là level alpha test (1)
+> Với bài toán kiểm định H0: Σi aiθi = 0 (γ0) vs H1: Σi aiθi ≠ 0 thì test rule reject H0 khi |(Σi=1:k aiȲi)/√Σi ai²/ni\] / √(S²\_p)| &gt; t_N-k,α/2 là level α test (1)
 >
 >
 >
-> nhưng với các bài toán khác, tạo thành vô số bài toán H0: Σi aiθi = γ vs H1: Σi aiθi ≠ γ, với bất kì γ nào, thì test rule reject H0 khi |\[(Σi=1:k aiȲi) - γ\] / √Σi ai²/ni\] / √(S²\_p)| &gt; t_N-k,α/2 CŨNG ĐỀU level alpha test (2)
+> nhưng với các bài toán khác, **tạo thành vô số bài toán H0**: Σi aiθi = γ vs H1: Σi aiθi ≠ γ, **với bất kì γ nào, thì test rule** **sau đây** reject H0 khi |\[(Σi=1:k aiȲi) - γ\] / √Σi ai²/ni\] / √(S²\_p)| &gt; t_N-k,α/2 **CŨNG ĐỀU level α test** (2)
 >
 >
 >
