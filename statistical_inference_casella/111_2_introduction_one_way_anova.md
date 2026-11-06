@@ -1,6 +1,6 @@
 # 11.1 & 2  introduction, One-way Anova
 
-📊 **Progress:** `22` Notes | `27` Screenshots | `18` AI Reviews
+📊 **Progress:** `22` Notes | `27` Screenshots | `21` AI Reviews
 
 ---
 <a id="node-c5qtmoe"></a>
@@ -50,6 +50,17 @@
 
 > [!NOTE]
 > Đoạn này nói sơ về việc chương này ta cũng sẽ thảo luận về bài toán regression, cụ thể là tập trung vào simple regression trong đó ta mô hình hóa mean của một random variable Y bởi hàm số của x: EY = α + βx
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất tốt và chính xác nội dung cốt lõi của đoạn văn về mô hình hồi quy tuyến tính đơn biến (simple linear regression).
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác bản chất của hồi quy tuyến tính đơn biến: mô hình hóa kỳ vọng của biến ngẫu nhiên Y theo biến quan sát x qua quan hệ tuyến tính EY = α + βx.
+>
+> **💡 Deeper notes**
+> - Hàm biểu diễn kỳ vọng EY theo biến x trong lý thuyết được gọi là 'population regression function' (hàm hồi quy tổng thể).
 
 <br>
 
@@ -112,7 +123,11 @@
 >
 >
 >
-> Ta có thể giả định E(εij) = 0 mà không làm mất tính tổng quát. Do đó E\[Yij\] = E\[θi + εij\] = E\[θi\] + E\[εij\] (do linearity) = E\[θi\] = θi
+> Ta có thể giả định E(εij) = 0 mà không làm mất tính tổng quát. Do đó E\[Yij\] = E\[θi + εij\] 
+>
+>
+>
+> = E\[θi\] + E\[εij\] (do linearity) = E\[θi\] = θi
 >
 >
 >
@@ -162,7 +177,19 @@
 >
 >
 >
-> τi là hiệu ứng duy nhất của mỗi treatment i
+> τi là hiệu ứng riêng của mỗi treatment i
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú đã tóm tắt chính xác dạng mô hình overparameterized cũng như ý nghĩa của các tham số grand mean (μ) và hiệu ứng nghiệm thức (τi).
+>
+> **✓ Strengths**
+> - Nắm đúng định nghĩa công thức của mô hình overparameterized.
+> - Hiểu đúng vai trò và tên gọi của grand mean μ và hiệu ứng riêng τi của từng treatment.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý thêm về vấn đề khả định (identifiability): ta không thể ước lượng riêng rẽ từng tham số μ và τi nếu không đặt thêm điều kiện ràng buộc (ví dụ: tổng các τi bằng 0 hoặc đặt một τi làm mốc tham chiếu).
 
 <br>
 
@@ -173,7 +200,7 @@
 <p align="center"><kbd><img src="assets/7529j7uxl.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Định nghĩa về cái gọi là identifiable - là một tính chất của một họ các distribution. Nói ngắn gọn là, nếu họ các distribution có tính chất này, thì với các θ khác nhau thì f(x|θ) sẽ khác nhau. Và từ đó giúp cho bài toán inference có thể thuận lợi.
+> Định nghĩa về cái gọi là **identifiable** - là một tính chất của một họ các distribution. Nói ngắn gọn là, nếu họ các distribution có tính chất này, thì **với các θ khác nhau thì  hàm số f(x|θ) sẽ khác nhau**. Và từ đó giúp cho bài toán inference có thể thuận lợi.
 >
 >
 >
@@ -188,23 +215,16 @@
 > Và trước giờ ta chưa bàn đến khái niệm này vì đều chọn mô hình identifiable. Nhưng sắp tới thì sẽ gặp những mô hình không identifiable.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú nắm rất tốt bản chất trực giác của tính định danh (identifiability) và mối liên hệ với hàm likelihood trong bài toán thống kê suy luận.
->
-> **🟡 Minor issues**
->
-> **1.** *"với các θ khác nhau thì f(x|θ) sẽ khác nhau"*
->
-> Về mặt hình thức, hai phân phối khác nhau nghĩa là hai hàm số f(·|θ) và f(·|θ') khác nhau (tức tồn tại x để giá trị khác nhau, hoặc khác nhau trên một tập có xác suất dương), chứ không nhất thiết f(x|θ) phải khác f(x|θ') tại mọi điểm x.
->
+> Ghi chú tóm tắt rất chính xác và trực quan định nghĩa cũng như ý nghĩa thực tế của tính định danh (identifiability) trong suy luận thống kê.
 >
 > **✓ Strengths**
-> - Hiểu chính xác bản chất của mô hình có tính định danh: các tham số khác nhau phải tương ứng với các phân phối xác suất khác nhau.
-> - Liên hệ rất trực quan giữa việc bất định danh với hàm likelihood: khi hai tham số sinh ra cùng một phân phối, likelihood của chúng bằng nhau với mọi dữ liệu x, khiến không thể phân biệt nghiệm tốt nhất.
+> - Nắm bắt chính xác bản chất của tính định danh: các giá trị tham số khác nhau phải tương ứng với các hàm mật độ/hàm xác suất khác nhau.
+> - Liên hệ tốt với hàm likelihood để giải thích trực giác vì sao khi mô hình không định danh thì không thể phân biệt được tham số thực sự từ dữ liệu.
 >
 > **💡 Deeper notes**
-> - Với biến liên tục, tính đồng nhất của hai phân phối f(·|θ) = f(·|θ') được xét theo nghĩa bằng nhau hầu khắp nơi (almost everywhere) theo độ đo chuẩn, do giá trị hàm mật độ tại một vài điểm rời rạc có thể thay đổi mà không làm thay đổi bản chất phân phối xác suất.
+> - Trong thực hành, khi gặp mô hình không định danh, người ta thường giải quyết bằng cách tái tham số hóa (reparameterization) hoặc áp đặt thêm các ràng buộc nhận dạng (identifying constraints) lên không gian tham số.
 
 <br>
 
@@ -219,7 +239,7 @@
 >
 >
 >
-> Nhưng đại ý vẫn là, ta sẽ ưu tiên dùng cái mô hình thứ nhất hơn (Yij = θi + εij), cái này gọi là cell means model.
+> Nhưng đại ý vẫn là, ta sẽ ưu tiên dùng cái mô hình thứ nhất hơn (Yij = θi + εij), cái này gọi là **cell means model**.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -242,7 +262,7 @@
 <p align="center"><kbd><img src="assets/kqf7nijrgaf.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, để mà có thể thực hiện cả point + interval estimation và testing (tức là cả ba dạng inference) thì ta cần một giả định gọi là giả định ANOVA:
+> Đại khái là, để mà có thể thực hiện cả point + interval estimation và testing (tức là cả ba dạng inference) thì ta cần một giả định gọi là **giả định ANOVA**:
 >
 >
 >
@@ -254,11 +274,11 @@
 >
 >
 >
-> Là sao: Là error random variable là zero mean, variance finite, và uncorrelate (covariance) giữa hai error khác nhau là bằng 0.
+> Là sao: Là error random variable là zero mean, variance finite, và uncorrelate (covariance giữa hai error khác nhau là bằng 0)
 >
 >
 >
-> ii) Các error random variable εij độc lập và có phân phối NormalL εij
+> ii) Các error random variable εij độc lập và có phân phối Normal εij
 >
 >
 >
@@ -300,15 +320,19 @@
 <p align="center"><kbd><img src="assets/1vrpp30054x.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, đại khái á là cái giả định mà variance nó giống nhau á thì là cái giả định quan trọng nhất. Okay. Thế thì đại ý là nói chung á, nếu như mà mình thấy dữ liệu nó vi phạm cái giả định ANOVA đó thì cái hành động đầu tiên đó là mình sẽ biến đổi dữ liệu phi tuyến. Đó, để cho nó khiến cho dữ liệu nó trở nên gần với ANOVA assumption hơn, phải không? Thì cái này nó dễ hơn là so với việc đi kiếm một cái mô hình khác. 
+> Rồi, đại khái á là cái **giả định mà variance nó giống nhau** là cái giả định quan trọng. 
 >
 >
 >
-> Rồi, có đề cập tới một cái nghiên cứu của ông Box năm 1954 đại ý rằng á là nói về cái tính chất robustness của ANOVA đó đối với cái giả định dữ liệu theo phân phối chuẩn á, nó sẽ tùy theo là cái phương sai thực tế nó có bằng nhau thật hay không. 
+> Thế thì đại ý là nói chung, nếu như mà mình thấy dữ liệu nó vi phạm cái giả định ANOVA đó thì cái hành động đầu tiên đó là mình sẽ **biến đổi dữ liệu phi tuyến.** Đó, để **khiến cho dữ liệu nó trở nên gần với ANOVA assumption hơn**. Thì cái này nó **dễ hơn** là so với việc đi kiếm một cái mô hình khác.
 >
 >
 >
-> Và trong cái phần còn lại của cái chương này là mình sẽ luôn luôn là dùng cái giả định đầy đủ, phải không? Dùng cái giả định ANOVA đầy đủ.
+> Rồi, có đề cập tới một cái nghiên cứu của ông Box năm 1954 đại ý rằng á là nói về cái **tính chất robustness của ANOVA** đó đối với cái giả định dữ liệu theo phân phối chuẩn á, nó sẽ tùy theo là cái phương sai thực tế nó có bằng nhau thật hay không.
+>
+>
+>
+> Và trong cái phần còn lại của cái chương này là mình sẽ luôn luôn là dùng cái giả định đầy đủ. Dùng cái giả định ANOVA đầy đủ.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
@@ -347,11 +371,11 @@
 >
 >
 >
-> Ông cho biết, trong phần nhiều trường hợp thì cái null hypothesis này nó rất silly (ngớ ngẩn), vì một experimenter thường sẽ không tin rằng các loại treatment khác nhau lại có chung mean, mà cái mà người ta quan tâm thường là đi tìm xem cái nào tốt hơn. Do đó, bài toán inference mà người ta muốn làm hơn là estimation, chứ không phải testing.
+> Ông cho biết, **trong phần nhiều trường hợp thì cái null hypothesis này nó rất silly** (ngớ ngẩn), vì một experimenter thường sẽ không tin rằng các loại treatment khác nhau lại có chung mean, mà cái mà người ta quan tâm thường là đi tìm xem cái nào tốt hơn. Do đó, bài toán inference **mà người ta muốn làm hơn là estimation**, chứ không phải testing.
 >
 >
 >
-> Lấy ví dụ này, tác giả cho biết thật ra thì ANOVA được phát triển nhằm tạo một công cụ để phân tích các thử nghiệm nông nghiệp. Ví dụ như xem thử các loại phân bón khác nhau có hiệu quả thế nào. Cho nên thật sự thì đại khái là người ta không ai quan tâm đến việc kiểm tra xem ANOVA null hypothesis có đúng hay không, vì hầu hết đều tin chắc là các loại phân bón khác nhau (hỗn hợp các thành phần khác nhau) đều sẽ có các hiệu qủa khác nhau (đồng nghĩa rằng họ biết thừa null hypothesis là sai. Mà cái họ quan tâm là làm sao để định lượng được những sự khác nhau này.
+> Lấy ví dụ này, tác giả cho biết thật ra thì ANOVA được phát triển nhằm tạo một công cụ để phân tích các thử nghiệm nông nghiệp. Ví dụ như xem thử các loại phân bón khác nhau có hiệu quả thế nào. Cho nên thật sự thì đại khái là người ta không ai quan tâm đến việc kiểm tra xem ANOVA null hypothesis có đúng hay không, vì hầu hết đều tin chắc là các loại phân bón khác nhau (hỗn hợp các thành phần khác nhau) đều sẽ có các hiệu qủa khác nhau (đồng nghĩa rằng h**ọ biết thừa null hypothesis là sai**. Mà cái họ **quan tâm là làm sao để định lượng được** những sự khác nhau này.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -526,15 +550,15 @@
 >
 >
 >
-> Thế thì ý chính muốn nói, một vấn đề của các giả thuyết ANOVA là rất khó diễn giải, ví dụ nói rằng các θis khác nhau chẳng ích lợi gì. 
+> Thế thì ý chính muốn nói, một vấn đề của các giả thuyết ANOVA là rất khó diễn giải, ví dụ nói rằng các θis khác nhau chẳng ích lợi gì.
 >
 >
 >
-> Do đó, người ta muốn bẻ nhỏ cái hypothesis này ra thành các hypothesis con dễ giải thích hơn, và công cụ phù hợp là union-intersection.
+> Do đó, người ta muốn **bẻ nhỏ cái hypothesis này ra thành các hypothesis con** dễ giải thích hơn, và công cụ phù hợp là **union-intersection**.
 >
 >
 >
-> Lí do là bởi ANOVA null hypothesis là intersection của các hypothesis con dễ hiểu hơn, mà có thể được biểu thị bởi khái niệm contrasts
+> Lí do là bởi ANOVA null hypothesis là intersection của các hypothesis con dễ hiểu hơn, mà có thể được biểu thị bởi khái niệm **contrasts**
 >
 >
 >
@@ -562,7 +586,7 @@
 <p align="center"><kbd><img src="assets/i5wusgfpipi.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo là định nghĩa của khái niệm contrast, cũng dễ hiểu, đại ý nó là một tổ hợp tuyến tính có tổng hệ số bằng 0. tác dụng của nó là có thể dùng để so sánh.
+> Tiếp theo là định nghĩa của khái niệm **contrast**, cũng dễ hiểu, đại ý nó là một **tổ hợp tuyến tính có tổng hệ số bằng 0**. tác dụng của nó là có thể dùng để so sánh.
 >
 >
 >
@@ -570,7 +594,7 @@
 >
 >
 >
-> thì dùng contrast 𝐚 = (1,-1,0,..0) thì Σi ai θi = θ1-θ2 sẽ có thể dùng để so sánh θ1 và θ2 (bằng cách xem Σi ai θi dương hay âm)
+> thì dùng contrast 𝐚 = (1,-1, 0,..0) thì Σi ai θi = θ1 - θ2 sẽ có thể **dùng để so sánh θ1 và θ2** (bằng cách **xem Σi ai θi dương hay âm**)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -595,7 +619,7 @@
 <p align="center"><kbd><img src="assets/r8kai6qt4ns.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Theorem này, nói rằng cho θ = (θ1,...θk) thì θis bằng nhau hết khi và chỉ khi mọi contrast bất kì (tức tổ hợp tuyến tính Σi aiθi với bộ hệ số ai có tổng bằng 0 bất kì) đều bằng 0.
+> Theorem này, nói rằng cho θ = (θ1,...θk) thì **θis bằng nhau hết khi và chỉ khi mọi contrast bất kì** (tức tổ hợp tuyến tính Σi aiθi với bộ hệ số ai có tổng bằng 0 bất kì) **đều bằng 0**.
 >
 >
 >
@@ -607,7 +631,7 @@
 >
 >
 >
-> Vì θ1=θ2=...=θk (đặt là giá trị chung này là θ), thì dĩ nhiên contrast bất kì Σi aiθi sẽ bằng θ Σi ai, và cái này bằng 0 do Σi ai theo định nghĩa contrast.
+> Vì θ1=θ2=...=θk (đặt là giá trị chung này là θ), thì dĩ nhiên contrast bất kì Σi aiθi sẽ bằng θ Σi ai, và cái này bằng 0 do Σi ai = 0 theo định nghĩa contrast.
 >
 >
 >
@@ -667,7 +691,7 @@
 <p align="center"><kbd><img src="assets/f4jvlt8gs2.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và nhờ theorem này, đại khái là ta có thể thể hiện cái null hypothesis ANOVA theo cách tương đương: thông qua constrast:
+> Và nhờ theorem này, đại khái là ta có thể **thể hiện cái null hypothesis ANOVA theo cách tương đương**: thông qua constrast:
 >
 >
 >
@@ -706,15 +730,28 @@
 <p align="center"><kbd><img src="assets/mhuvpfz8uiq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, mở đầu tác giả cho biết về tầm quan trọng của contrast (còn nhớ, là linear combination với hệ số có tổng bằng 0). Nó giúp ta có những suy luận hữu ích về giá trị các θis.
+> Đại khái là, mở đầu tác giả cho biết về **tầm quan trọng của contrast** (còn nhớ, là linear combination với hệ số có tổng bằng 0). Nó giúp ta có những suy luận hữu ích về giá trị các θis.
 >
 >
 >
-> Trong phần trước, mình cũng đã thấy rằng null hypothesis của ANOVA hypothesis testing (H0: θis bằng nhau ∀i) có thể thể hiện bởi H0: 𝐚ᵀ𝛉 = 0 ∀ 𝐚 ∈ 𝒜. 
+> Trong phần trước, mình cũng đã thấy rằng null hypothesis của ANOVA hypothesis testing (H0: θis bằng nhau ∀i) có thể thể hiện bởi H0: 𝐚ᵀ𝛉 = 0 ∀ 𝐚 ∈ 𝒜.
 >
 >
 >
-> Và sự thật rằng những suy luận thú vị nhất trong bài toán ANOVA có thể được thể hiện bởi một hoặc một tập các contrast.
+> Và sự thật rằng **những suy luận thú vị nhất trong bài toán ANOVA có thể được thể hiện bởi một hoặc một tập các contrast**.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác và đầy đủ nội dung đoạn giới thiệu, đồng thời liên hệ chuẩn xác lại định nghĩa và biểu diễn toán học của contrast từ phần trước.
+>
+> **✓ Strengths**
+> - Nhớ và nhắc lại chính xác định nghĩa toán học của contrast (tổ hợp tuyến tính có tổng các hệ số bằng 0).
+> - Kết nối chính xác giả thuyết H0 của ANOVA với không gian contrast a^T θ = 0 với mọi a thuộc A.
+> - Nắm rõ vai trò trung tâm của contrast trong việc thực hiện các suy luận thống kê nâng cao trong ANOVA.
+>
+> **💡 Deeper notes**
+> - Đoạn văn cũng lưu ý rằng dù trọng tâm là contrast, phần tiếp theo sẽ bắt đầu tổng quát hơn từ việc suy luận cho một tổ hợp tuyến tính đơn lẻ (single linear combination) bất kỳ trước khi thu hẹp về contrast.
 
 <br>
 
@@ -763,7 +800,15 @@
 >
 >
 >
-> Các kết quả sau đều dùng bổ đề 4.6.10 nói nếu ta có Xi \~ n(μi, σi²) và a1,a2,...an và b1,b2,...bn fixed constant thì Z = Σi (aiXi + bi) \~ n(Σi (aiμi + bi), Σi ai²σi²)
+> Các kết quả sau đều dùng bổ đề 4.6.10 nói: 
+>
+>
+>
+> Đại khái: tổng của các linear function của các normal độc lập cũng là normal
+>
+>
+>
+> Chi tiết hơn: nếu ta có Xi \~ n(μi, σi²) và a1,a2,...an và b1,b2,...bn fixed constant thì Z = Σi (aiXi + bi) \~ n(Σi (aiμi + bi), Σi ai²σi²) 
 >
 >
 >
@@ -771,11 +816,11 @@
 >
 >
 >
-> Ȳi. = (1/ni) \[Σj=1:ni Yij\], sẽ là biến \~ n(θi, σ²/ni)
+> Ȳi = (1/ni) \[Σj=1:ni Yij\], sẽ là biến \~ n(θi, σ²/ni)
 >
 >
 >
-> Tiếp, xét tổng Σj Yij/ni, Yij/ni là các normal n(θi/ni, σ²/ni²) thì cũng sẽ là normal:
+> Tiếp, xét tổng Σj Yij/ni: Yij/ni là các normal n(θi/ni, σ²/ni²) thì cũng sẽ là normal:
 >
 >
 >
