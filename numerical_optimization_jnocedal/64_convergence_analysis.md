@@ -33,15 +33,15 @@
 >
 > i) hàm f twice continuously differentiable  → đây là ý cho hàm trơn 
 >
-> Convex: trong level set L = {x: f(x) ≤ f(x0)}, là convex set, và tồn tại hai hằng số dương sao cho m||z||^2 ≤ zTG(x)z ≤ M||z||^2 ∀z và x ∈ L
+> Convex: trong level set L = {x: f(x) ≤ f(x0)}, là convex set, và tồn tại hai hằng số dương sao cho m||z||² ≤ zTG(x)z ≤ M||z||² ∀z và x ∈ L
 >
 > → Cái này đại khái nghĩa là quadratic form của Hessian tại mọi điểm trong L đều bị chặn dưới và trên, tức là nó không thể quá nhỏ → độ cong (Hessian man thông tin độ cong) quá nhỏ, hàm gần như phẳng, nhưng không thể quá to → khiến hàm thay đổi quá nhanh.
 >
 > Và gs nói ý ii) hàm chứa Hessian G(x) xác định dương và bài toán có một minimizer x* độc nhất thuộc L
 >
-> → Ý này dễ thấy, vì với mọi z thì 0 < m||z||^2 ≤ zTG(x)z → G(x) ≻ 0
+> → Ý này dễ thấy, vì với mọi z thì 0 < m||z||² ≤ zTG(x)z → G(x) ≻ 0
 >
-> Còn vụ unique minimizer là vì trong tập L, G(x) luôn xác định dương → hàm số f gọi là strictly convex. Và điều kiện m||z||^2 ≤ zTG(x)z ≤ M||z||^2 cũng sẽ hàm ý là tập L là tập đóng. Như vậy có nghĩa là khi → ra khỏi tập này từ bất kì hướng nào, hàm f sẽ vọt lên. Do đó nhất định tồn tại cực tiểu nằm trong L, và cùng với tính lồi chặt sẽ cho thấy nó là unique.
+> Còn vụ unique minimizer là vì trong tập L, G(x) luôn xác định dương → hàm số f gọi là strictly convex. Và điều kiện m||z||² ≤ zTG(x)z ≤ M||z||² cũng sẽ hàm ý là tập L là tập đóng. Như vậy có nghĩa là khi → ra khỏi tập này từ bất kì hướng nào, hàm f sẽ vọt lên. Do đó nhất định tồn tại cực tiểu nằm trong L, và cùng với tính lồi chặt sẽ cho thấy nó là unique.
 
 <br>
 
@@ -66,7 +66,7 @@
 >
 > Tiếp, tiếp tục với ý mọi matrix G(xk + ταkpk) đều thỏa assumption (6.1), tức xác định dương, thì như vậy Gbark cũng xác định dương (tổng của các xác định dương thì cũng xdd). Do đó, mọi trị riêng đều dương, nên có thể tách Gbark = (Gbark)^(1/2)(Gbark)^(1/2)
 >
-> ⇨ ykTyk = (skTGbark)(GbarkTsk) = skT (Gbark)^2 sk 
+> ⇨ ykTyk = (skTGbark)(GbarkTsk) = skT (Gbark)² sk 
 >
 > = skT (Gbark)^1/2 Gbark (Gbark)^1/2 sk 
 >
@@ -112,13 +112,13 @@
 >
 > Tới đây nhớ lại bản chất của trace: tổng entries đường chéo:
 >
-> tr(AᵀA) = Σii (AᵀA)_ii = Σi (aiTai) = Σij(Aij)^2 = ||A||^2 , chính là Frobenius norm (hay còn gọi là Eucledian norm)
+> tr(AᵀA) = Σii (AᵀA)_ii = Σi (aiTai) = Σij(Aij)² = ||A||² , chính là Frobenius norm (hay còn gọi là Eucledian norm)
 >
-> ⇨ ..= tr(Bk) - ||Bksk||^2 / skTBksk + ||yk||^2 / ykTsk  (6.44)
+> ⇨ ..= tr(Bk) - ||Bksk||² / skTBksk + ||yk||² / ykTsk  (6.44)
 >
 > (với tr(ykykT) thì coi như tr((ykTI)ᵀ(ykTI)) = ||ITyk|| = ||yk|| thôi)
 >
-> Nhưng cũng có cách khác cũng dễ: tr(AB) = tr(BA) ⇨ tr(ykykT) = tr(ykTyk) = ykTyk (trace của scalar = scalar) = ||yk||^2. và tr(BkskskTBk) = tr(BkTskskTBk) = tr(vvT) với v = BkTsk, = tr(vTv) = vTv = ||v||^2 = ||BkTsk||^2
+> Nhưng cũng có cách khác cũng dễ: tr(AB) = tr(BA) ⇨ tr(ykykT) = tr(ykTyk) = ykTyk (trace của scalar = scalar) = ||yk||². và tr(BkskskTBk) = tr(BkTskskTBk) = tr(vvT) với v = BkTsk, = tr(vTv) = vTv = ||v||² = ||BkTsk||²
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **93/100** · ✓ Move on
