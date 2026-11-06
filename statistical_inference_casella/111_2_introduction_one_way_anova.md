@@ -278,7 +278,7 @@
 >
 >
 >
-> ii) Các error random variable εij độc lập và có phân phối Normal εij
+> ii) Các error random variable εij độc lập và có phân phối Normal
 >
 >
 >
@@ -1022,7 +1022,7 @@
 >
 >
 >
-> Ôn nhanh về Likelihood Ratio Test: λ(𝐱) &lt; c mang ý nghĩa: Bác bỏ H0 nếu độ hợp lí lớn nhất trên không gian Θ0 chênh lệch đáng kể với độ hợp lí lớn nhất trên không gian Θ
+> Ôn nhanh về Likelihood Ratio Test: λ(𝐱) &lt; c mang ý nghĩa: **Bác bỏ H0 nếu độ hợp lí lớn nhất trên không gian Θ0 chênh lệch đáng kể với độ hợp lí lớn nhất trên không gian Θ**
 >
 >
 >
