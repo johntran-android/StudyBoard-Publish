@@ -19,7 +19,7 @@
 <p align="center"><kbd><img src="assets/z82vy294zzi.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên, gs giới thiệu bài toán least-square là bài toán tối ưu mà objective function của nó có dạng f(x) = (1/2) Σj rj(x)^2 với rj là smooth R^n → R function, được gọi là residual (phần dư).
+> Đầu tiên, gs giới thiệu bài toán least-square là bài toán tối ưu mà objective function của nó có dạng f(x) = (1/2) Σj rj(x)² với rj là smooth R^n → R function, được gọi là residual (phần dư).
 >
 >
 >
@@ -48,11 +48,11 @@
 >
 >
 >
-> Thế thì, nhớ là trong bài toán này, objective là (1/2) Σi \[ri(x)\]^2, tức là tổng của
+> Thế thì, nhớ là trong bài toán này, objective là (1/2) Σi \[ri(x)\]², tức là tổng của
 >
 > bình phương residual ri(x). Bằng cách gom chúng lại thành vector r(x) = \[r1(x),
 >
-> r2(x),....\]T, thì Σi \[ri(x)\]^2 có thể thể hiện bởi (1/2) ||r(x)||^2, cũng là f(x) = (1/2)
+> r2(x),....\]T, thì Σi \[ri(x)\]² có thể thể hiện bởi (1/2) ||r(x)||², cũng là f(x) = (1/2)
 >
 > r(x)ᵀ r(x)
 >
@@ -154,7 +154,7 @@
 >
 >
 >
-> = \[∇^2ri(x)\] . ri(x) + ∇ri(x) . ∇ri(x)
+> = \[∇²ri(x)\] . ri(x) + ∇ri(x) . ∇ri(x)
 >
 >
 >
@@ -162,7 +162,7 @@
 >
 >
 >
-> ri(x) là R^n vector → scalar function → ∇^2 ri(x) là Hessian matrix có shape nxn.
+> ri(x) là R^n vector → scalar function → ∇² ri(x) là Hessian matrix có shape nxn.
 >
 >
 >
@@ -170,7 +170,7 @@
 >
 >
 >
-> Vậy d/dx gi(x) = ∇^2ri(x) ri(x) + ∇ri(x) ∇ri(x)ᵀ
+> Vậy d/dx gi(x) = ∇²ri(x) ri(x) + ∇ri(x) ∇ri(x)ᵀ
 >
 >
 >
@@ -178,11 +178,11 @@
 >
 >
 >
-> = Σi {∇^2ri(x) ri(x) + ∇ri(x) ∇ri(x)ᵀ}
+> = Σi {∇²ri(x) ri(x) + ∇ri(x) ∇ri(x)ᵀ}
 >
 >
 >
-> = Σi {∇^2ri(x) ri(x)} + Σi {∇ri(x) ∇ri(x)ᵀ}
+> = Σi {∇²ri(x) ri(x)} + Σi {∇ri(x) ∇ri(x)ᵀ}
 >
 >
 >
@@ -190,7 +190,7 @@
 >
 >
 >
-> Vậy kết quả là Σi {∇^2ri(x) ri(x)} + J(x)ᵀJ(x), chính là 10.5
+> Vậy kết quả là Σi {∇²ri(x) ri(x)} + J(x)ᵀJ(x), chính là 10.5
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
@@ -232,7 +232,7 @@
 <p align="center"><kbd><img src="assets/d1le3t0879d.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì đại khái là vầy: Ta đã thấy rằng trong bài toán least-square, trong đó hàm objective là f(x) = Σi ri(x)^2 = r(x)ᵀr(x) với r(x) là vector → vector function, có Jacobian J(x) thì đạo hàm cấp 1 ∇f(x) và Hessian ∇^2f(x) có thể được tính bởi hai công thức 10.4 và 10.5. Và gs nói rằng, trong rất nhiều ứng dụng thì việc tính toán J(x) rất ít tốn kém. Từ đó, dẫn tới việc tính ra gradient và Hessian cũng đều không tốn kém gì mấy. Và đây là một đặc điểm mà ông cho rằng khiến bài toán least-square trở nên dễ chịu, và ông gọi nó đại khái là ta có được Hessian miễn phí.
+> Thế thì đại khái là vầy: Ta đã thấy rằng trong bài toán least-square, trong đó hàm objective là f(x) = Σi ri(x)² = r(x)ᵀr(x) với r(x) là vector → vector function, có Jacobian J(x) thì đạo hàm cấp 1 ∇f(x) và Hessian ∇²f(x) có thể được tính bởi hai công thức 10.4 và 10.5. Và gs nói rằng, trong rất nhiều ứng dụng thì việc tính toán J(x) rất ít tốn kém. Từ đó, dẫn tới việc tính ra gradient và Hessian cũng đều không tốn kém gì mấy. Và đây là một đặc điểm mà ông cho rằng khiến bài toán least-square trở nên dễ chịu, và ông gọi nó đại khái là ta có được Hessian miễn phí.
 >
 >
 >
@@ -282,7 +282,7 @@
 >
 >
 >
-> Thế rồi, dựa vào kinh nghiệm, người ta tìm thấy một function φ(x, t) = x1 + x2 t + x3 t^2 + x4 e^(-x5t) là một funcntion hữu ích giúp dự đoán chỉ số y với t cho trước. Và bài toán đặt ra là ta tìm vector x = (x1,x2,..x5), là paramter vector, sao cho hàm Φ fit được tốt nhất với các data thu thập được.
+> Thế rồi, dựa vào kinh nghiệm, người ta tìm thấy một function φ(x, t) = x1 + x2 t + x3 t² + x4 e^(-x5t) là một funcntion hữu ích giúp dự đoán chỉ số y với t cho trước. Và bài toán đặt ra là ta tìm vector x = (x1,x2,..x5), là paramter vector, sao cho hàm Φ fit được tốt nhất với các data thu thập được.
 >
 >
 >
@@ -294,7 +294,7 @@
 >
 >
 >
-> Thế thì, trong bài toán này, người ta nhận ra rằng, hoặc thường dùng hàm (1/2) Σi \[φ(x, tj) - yj\]^2, là tổng bình phương sai lệch giữa dự đoán Φ(x, tj) và yj. Ý nói, cái bài toán thực tế này chính là ví dụ điển hình của bài toán least - squared khái φ(x, ti) - yjquát mà ta nói đầu đến giờ. Trong đó hàm residual rj(x) ở đây chính là rj(x) = φ(x, tj) - yj.
+> Thế thì, trong bài toán này, người ta nhận ra rằng, hoặc thường dùng hàm (1/2) Σi \[φ(x, tj) - yj\]², là tổng bình phương sai lệch giữa dự đoán Φ(x, tj) và yj. Ý nói, cái bài toán thực tế này chính là ví dụ điển hình của bài toán least - squared khái φ(x, ti) - yjquát mà ta nói đầu đến giờ. Trong đó hàm residual rj(x) ở đây chính là rj(x) = φ(x, tj) - yj.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
@@ -408,7 +408,7 @@
 >
 >
 >
-> Thế thì, gs nói tiếp, thường là ta sẽ có lí do để giả định rằng εj's (tức các ε1, ε2,....) là independent và identically distributed, với varance σ^2 và pdf g\_σ(.).
+> Thế thì, gs nói tiếp, thường là ta sẽ có lí do để giả định rằng εj's (tức các ε1, ε2,....) là independent và identically distributed, với varance σ² và pdf g\_σ(.).
 >
 >
 >
@@ -420,15 +420,15 @@
 >
 >
 >
-> Dĩ nhiên là nhờ học Stat110 và Casella, mình không còn lạ gì cái này nữa. Nhưng ở đây còn một ý quan trọng, mà ta có thể liên hệ với những gì được học trong Chapter 1 của sách Bishop: Giả định distribution của ε là Normal(0, σ^2). Tức là: trong sách Bishop, chapter 1, ta cũng được học về một ví dụ mà gs Bishop dùng bài toán polynomial fitting để dẫn dắt các khái niệm nền tảng của một bài toán học máy. Và một điểm trong đó, đó là, gs nói ta sẽ giả định phân phối của t dựa trên x là iid Normal(y(x,w), σ^2) (đúng hơn thì trong đó gs nói ta sẽ giả định T \~ normal(y(**x**, w), 1/β), với β là pricision, là nghịch đảo của variance)
+> Dĩ nhiên là nhờ học Stat110 và Casella, mình không còn lạ gì cái này nữa. Nhưng ở đây còn một ý quan trọng, mà ta có thể liên hệ với những gì được học trong Chapter 1 của sách Bishop: Giả định distribution của ε là Normal(0, σ²). Tức là: trong sách Bishop, chapter 1, ta cũng được học về một ví dụ mà gs Bishop dùng bài toán polynomial fitting để dẫn dắt các khái niệm nền tảng của một bài toán học máy. Và một điểm trong đó, đó là, gs nói ta sẽ giả định phân phối của t dựa trên x là iid Normal(y(x,w), σ²) (đúng hơn thì trong đó gs nói ta sẽ giả định T \~ normal(y(**x**, w), 1/β), với β là pricision, là nghịch đảo của variance)
 >
 >
 >
-> Thế thì, lúc đó mình cũng đã nhận ra rằng, với T \~ Normal(y(x,w), σ^2), thì dùng location scale family theorem, ta sẽ nhận thấy giả định này cũng chính là đồng nghĩa với việc giả định T - y(x,w) (mà cái này chính là error) sẽ là random variable thuộc phân phối Normal(0, σ^2).
+> Thế thì, lúc đó mình cũng đã nhận ra rằng, với T \~ Normal(y(x,w), σ²), thì dùng location scale family theorem, ta sẽ nhận thấy giả định này cũng chính là đồng nghĩa với việc giả định T - y(x,w) (mà cái này chính là error) sẽ là random variable thuộc phân phối Normal(0, σ²).
 >
 >
 >
-> Còn ở đây, gs Nocedal nói về giả định của error, nhưng lưu ý là ông chưa nói rằng ε có phân phối normal nhé, mà chỉ là phân phối có variance σ^2, với pdf là g\_σ(.) thôi.
+> Còn ở đây, gs Nocedal nói về giả định của error, nhưng lưu ý là ông chưa nói rằng ε có phân phối normal nhé, mà chỉ là phân phối có variance σ², với pdf là g\_σ(.) thôi.
 >
 >
 >
@@ -460,7 +460,7 @@
 >
 >
 >
-> Nếu vậy thì đang giả định điều gì cho phép điều đó xảy ra, vì rõ ràng, nếu làm như gs Bishop, giả định ε là iid Normal (0, σ^2) thì cũng chỉ đồng nghĩa là đang giả định y|t là normal(Φ(x,t), σ^2) thôi, và dù cùng là normal nhưng chúng khác mean cơ mà.
+> Nếu vậy thì đang giả định điều gì cho phép điều đó xảy ra, vì rõ ràng, nếu làm như gs Bishop, giả định ε là iid Normal (0, σ²) thì cũng chỉ đồng nghĩa là đang giả định y|t là normal(Φ(x,t), σ²) thôi, và dù cùng là normal nhưng chúng khác mean cơ mà.
 >
 >
 >
@@ -472,11 +472,11 @@
 >
 >
 >
-> Tới đây, tình hình là ta cần pdf của y|t nhưng cái ta có là pdf của ε|t. Nên ta sẽ dùng change of variable theorem, ôn nhanh: Trong Stat110 và Casella đã học, khi ta có X \~ fX(x) và Y = g(X), với g là hàm mapping 1-1 giữa support set của X và support set của Y, tức là với mỗi x belong support set của X thì chỉ ứng với một y thuộc support set của Y và ngược lại: y = g(x) ⇔ x = ginv(y). Khi đó có thể xây dựng pdf của Y như sau: fY(y) = fX(x) |dx/dy| = fX(ginv(y)) |d/dy ginv(y)|
+> Tới đây, tình hình là ta cần pdf của y|t nhưng cái ta có là pdf của ε|t. Nên ta sẽ dùng change of variable theorem, ôn nhanh: Trong Stat110 và Casella đã học, khi ta có X \~ fX(x) và Y = g(X), với g là hàm mapping 1-1 giữa support set của X và support set của Y, tức là với mỗi x belong support set của X thì chỉ ứng với một y thuộc support set của Y và ngược lại: y = g(x) ⇔ x = g⁻¹(y). Khi đó có thể xây dựng pdf của Y như sau: fY(y) = fX(x) |dx/dy| = fX(g⁻¹(y)) |d/dy g⁻¹(y)|
 >
 >
 >
-> Áp dụng vào đây với yj = g(εj) = -εj + Φ(x, tj) ⇨ εj = ginv(yj) = -yj + Φ(x, tj). Và |d/dyj εj| = |d/dyj \[-yj + Φ(x, tj)\]| = |-1| = 1.
+> Áp dụng vào đây với yj = g(εj) = -εj + Φ(x, tj) ⇨ εj = g⁻¹(yj) = -yj + Φ(x, tj). Và |d/dyj εj| = |d/dyj \[-yj + Φ(x, tj)\]| = |-1| = 1.
 >
 >
 >
@@ -512,7 +512,7 @@
 >
 >
 >
-> Kế tiếp, như dự đoán, gs nói rằng nếu ta giả định ε \~normal(0, σ^2), khi đó, g\_σ(ε) = \[1/√(2πσ^2)\] exp\[-ε^2/2σ^2\]
+> Kế tiếp, như dự đoán, gs nói rằng nếu ta giả định ε \~normal(0, σ²), khi đó, g\_σ(ε) = \[1/√(2πσ²)\] exp\[-ε²/2σ²\]
 >
 >
 >
@@ -520,23 +520,23 @@
 >
 >
 >
->  L(x|y,t) = Πj g\_σ(φ(x, tj) - yj) = Πj \[1/√(2πσ^2)\] exp\[-(φ(x, tj) - yj)^2/2σ^2\]
+>  L(x|y,t) = Πj g\_σ(φ(x, tj) - yj) = Πj \[1/√(2πσ²)\] exp\[-(φ(x, tj) - yj)²/2σ²\]
 >
 >
 >
-> = Πj \[1/√(2πσ^2)\] exp\[(-1/2σ^2) (φ(x, tj) - yj)^2\]
+> = Πj \[1/√(2πσ²)\] exp\[(-1/2σ²) (φ(x, tj) - yj)²\]
 >
 >
 >
-> = \[1/√(2πσ^2)\]^m Πj { exp\[(-1/2σ^2) (φ(x, tj) - yj)^2\] }
+> = \[1/√(2πσ²)\]^m Πj { exp\[(-1/2σ²) (φ(x, tj) - yj)²\] }
 >
 >
 >
-> = \[1/√(2πσ^2)\]^m exp\[(-1/2σ^2) Σj (φ(x, tj) - yj)^2\]
+> = \[1/√(2πσ²)\]^m exp\[(-1/2σ²) Σj (φ(x, tj) - yj)²\]
 >
 >
 >
-> Vậy, ta có bài toán tối ưu cần giải: maximize over x {\[1/√(2πσ^2)\]^m exp\[(-1/2σ^2) Σj (φ(x, tj) - yj)^2\]}
+> Vậy, ta có bài toán tối ưu cần giải: maximize over x {\[1/√(2πσ²)\]^m exp\[(-1/2σ²) Σj (φ(x, tj) - yj)²\]}
 >
 >
 >
@@ -544,7 +544,7 @@
 >
 >
 >
-> maximize_x { log {\[1/√(2πσ^2)\]^m exp\[(-1/2σ^2) Σj (φ(x, tj) - yj)^2\]}
+> maximize_x { log {\[1/√(2πσ²)\]^m exp\[(-1/2σ²) Σj (φ(x, tj) - yj)²\]}
 >
 >
 >
@@ -552,7 +552,7 @@
 >
 >
 >
-> ⇔ maximize_x { log {\[1/√(2πσ^2)\]^m} + log { exp\[(-1/2σ^2) Σj (φ(x, tj) - yj)^2\]}
+> ⇔ maximize_x { log {\[1/√(2πσ²)\]^m} + log { exp\[(-1/2σ²) Σj (φ(x, tj) - yj)²\]}
 >
 >
 >
@@ -560,7 +560,7 @@
 >
 >
 >
-> ⇔ maximize_x { log { exp\[(-1/2σ^2) Σj (φ(x, tj) - yj)^2\] }
+> ⇔ maximize_x { log { exp\[(-1/2σ²) Σj (φ(x, tj) - yj)²\] }
 >
 >
 >
@@ -568,7 +568,7 @@
 >
 >
 >
-> ⇔ maximize_x { (-1/2σ^2) Σj (φ(x, tj) - yj)^2 }
+> ⇔ maximize_x { (-1/2σ²) Σj (φ(x, tj) - yj)² }
 >
 >
 >
@@ -576,11 +576,11 @@
 >
 >
 >
-> ⇔ minimize_x { Σj (φ(x, tj) - yj)^2 }
+> ⇔ minimize_x { Σj (φ(x, tj) - yj)² }
 >
 >
 >
-> Như vậy, tới đây có thể thấy rằng bài toán tìm maximum likelihood estimator của tham số x, DƯỚI GIẢ ĐỊNH ERROR LÀ RANDOM VARIABLE NORMAL(0, σ^2) thì cũng chính là bài toán tìm x sao cho least equare: minimize tổng bình phương của error. Đây cũng là cái mà gs Bishop đã nói trong Chap 1 của sách Bishop (Pattern Recognition & Machine Learning)
+> Như vậy, tới đây có thể thấy rằng bài toán tìm maximum likelihood estimator của tham số x, DƯỚI GIẢ ĐỊNH ERROR LÀ RANDOM VARIABLE NORMAL(0, σ²) thì cũng chính là bài toán tìm x sao cho least equare: minimize tổng bình phương của error. Đây cũng là cái mà gs Bishop đã nói trong Chap 1 của sách Bishop (Pattern Recognition & Machine Learning)
 >
 >
 >
