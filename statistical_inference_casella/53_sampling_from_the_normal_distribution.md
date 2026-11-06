@@ -1339,9 +1339,7 @@
 >
 > Cov(U,V) = Σj a1j b1j σj² = a11b11 σ1² + a12b12 σ2²
 
-📹 Video 1: [Vì Sao Uncorrelated Suy Ra Độc Lập Ở Phân Phối Normal?](https://youtu.be/JcDY12qJn80)
-
-📹 Video 2: [Cách chứng minh U, V độc lập khi và chỉ khi Cov(U, V) = 0?](https://www.youtube.com/watch?v=Zs9nPFueweA)
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=VUCJsx5AnYs)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -1894,8 +1892,6 @@
 >
 >
 > Tới đây là đủ để thấy joint pdf của U, V phân tách ⇨ U, V độc lập ⇨ Chứng minh xong phần a)
-
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=8HZ_nMMTekM)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
