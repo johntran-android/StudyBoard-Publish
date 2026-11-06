@@ -40,7 +40,7 @@
 >
 >
 >
-> Ax = b ⇔ PAx = Pb ⇔ LUx = Pb. Nên bước đầu tiên là tính b\~ = Pb, sau đó giải L z = b\~, và cuối cùng giải Ux = z. Có thể thấy việc giải hai hệ Lz = b\~ và Ux = z chỉ là deal với matrix tam giác, nên nó chỉ là quá trình back substitution hoặc forward subtitution mà thôi. Và thuật toán này có chi phí (2/3)n^3 (cái này mình đã phân tích trong ee364, tốn kém nhất chính bước elimination, để đưa PA = LU, tốn (2/3) n^3, còn lại mấy bước giải hệ với matrix tam giác thì chỉ tốn n^2, nên tổng cộng lại chỉ coi như (2/3) n^3
+> Ax = b ⇔ PAx = Pb ⇔ LUx = Pb. Nên bước đầu tiên là tính b\~ = Pb, sau đó giải L z = b\~, và cuối cùng giải Ux = z. Có thể thấy việc giải hai hệ Lz = b\~ và Ux = z chỉ là deal với matrix tam giác, nên nó chỉ là quá trình back substitution hoặc forward subtitution mà thôi. Và thuật toán này có chi phí (2/3)n^3 (cái này mình đã phân tích trong ee364, tốn kém nhất chính bước elimination, để đưa PA = LU, tốn (2/3) n^3, còn lại mấy bước giải hệ với matrix tam giác thì chỉ tốn n², nên tổng cộng lại chỉ coi như (2/3) n^3
 >
 >
 >
@@ -301,11 +301,11 @@
 >
 >
 >
-> Nên Aii = \[L's row i\]T \[L's row i\] = Σk Lik^2
+> Nên Aii = \[L's row i\]T \[L's row i\] = Σk Lik²
 >
 >
 >
-> Vậy A11 = L11^2 ⇨ **L11 = √A11**
+> Vậy A11 = L11² ⇨ **L11 = √A11**
 >
 >
 >
@@ -317,11 +317,11 @@
 >
 >
 >
-> A22 = L21^2 + L22^2
+> A22 = L21² + L22²
 >
 >
 >
-> ⇨ **L22 = √(A22 - L21^2)**
+> ⇨ **L22 = √(A22 - L21²)**
 >
 >
 >
@@ -341,11 +341,11 @@
 >
 >
 >
-> A33 = L31^2 + L32^2 + L33^2
+> A33 = L31² + L32² + L33²
 >
 >
 >
-> ⇨ **L33 = √(A33 - L31^2 - L32^2)**
+> ⇨ **L33 = √(A33 - L31² - L32²)**
 >
 >
 >
@@ -361,7 +361,7 @@
 >
 >
 >
-> **L22 = √(A22 - L21^2)**
+> **L22 = √(A22 - L21²)**
 >
 >
 >
@@ -373,7 +373,7 @@
 >
 >
 >
-> **L33 = √(A33 - L31^2 - L32^2)**
+> **L33 = √(A33 - L31² - L32²)**
 >
 >
 >
@@ -389,7 +389,7 @@
 >
 >
 >
-> n = 2 (tính cột 2): i) Tính L22 = √(A22 - L21^2), ii) chạy vòng lặp j để tính L32 = (A32 - L31L21)/L22, L42 = ...cho đến hết cột 2.
+> n = 2 (tính cột 2): i) Tính L22 = √(A22 - L21²), ii) chạy vòng lặp j để tính L32 = (A32 - L31L21)/L22, L42 = ...cho đến hết cột 2.
 >
 >
 >
@@ -417,7 +417,7 @@
 >
 >
 >
-> Aj2 = Aj2 - LjiLki ⇨ A22 = L22 - L21L21 = L22 - (L21)^2, A23 = A23 - L21L31,...
+> Aj2 = Aj2 - LjiLki ⇨ A22 = L22 - L21L21 = L22 - (L21)², A23 = A23 - L21L31,...
 >
 >
 >
@@ -425,7 +425,7 @@
 >
 >
 >
-> Đại khái là như vậy, sang vòng lặp i = 2, chỉ việc tính L22 = √A22, thay vì √(A22 - L21^2), và L32 = A32/L22 thay vì L32 = (A32 - L31L21)/L22 (vì A22 đã được cập nhật tại vòng lặp trước để = A22 - L21^2 rồi, tương tự mấy cái khác cũng vậy)
+> Đại khái là như vậy, sang vòng lặp i = 2, chỉ việc tính L22 = √A22, thay vì √(A22 - L21²), và L32 = A32/L22 thay vì L32 = (A32 - L31L21)/L22 (vì A22 đã được cập nhật tại vòng lặp trước để = A22 - L21² rồi, tương tự mấy cái khác cũng vậy)
 >
 >
 >
@@ -460,7 +460,7 @@
 >
 >
 >
-> Giải Ax = b, cũng như tác dụng của thuật toán khử Gauss trong việc này, ta sẽ rã A thành L(Lᵀ), sau đó giải Ax = b ⇔ L(Lᵀ)x = b, và việc này dẫn đến giải hai hệ với matrix tam giác: L u = b, Lᵀ x = u, và đây chỉ có O(n^2) vì chỉ là backward / forward substitution.
+> Giải Ax = b, cũng như tác dụng của thuật toán khử Gauss trong việc này, ta sẽ rã A thành L(Lᵀ), sau đó giải Ax = b ⇔ L(Lᵀ)x = b, và việc này dẫn đến giải hai hệ với matrix tam giác: L u = b, Lᵀ x = u, và đây chỉ có O(n²) vì chỉ là backward / forward substitution.
 >
 >
 >
