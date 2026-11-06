@@ -18,11 +18,11 @@
 > [!NOTE]
 > Phương pháp SR1: Đại ý câu chuyện của nó là thế này. Trong phần trước, ta đã nói về câu chuyện giúp sinh ra DFP, và sau đó là BFGS. Đó là: Ta muốn Bk+1 chứa thông tin curvature từ xk → xk+1, bằng cách ép nó thỏa secant equation Bk+1sk=yk. 
 >
-> Việc này được inspired bởi: ∇fk+1 - ∇fk ≈ ∇^2fk+1 (xk+1 - xk) 
+> Việc này được inspired bởi: ∇fk+1 - ∇fk ≈ ∇²fk+1 (xk+1 - xk) 
 >
-> ⇔ yk ≈ ∇^2fk+1 sk
+> ⇔ yk ≈ ∇²fk+1 sk
 >
-> ∇f1 - ∇f0 ≈ ∇^2f1 (x1 - x0) → ∇^2f1 mang thông tin curvature từ x0 → x1, nên nếu B1 cũng thỏa equation thì nó cũng mang thông tin curvature từ x0 → x1.
+> ∇f1 - ∇f0 ≈ ∇²f1 (x1 - x0) → ∇²f1 mang thông tin curvature từ x0 → x1, nên nếu B1 cũng thỏa equation thì nó cũng mang thông tin curvature từ x0 → x1.
 >
 > Và bằng cách biến đổi qua một không gian khác, ta thấy nó (điều kiện này) sẽ tương đương B^k+1s^k = s^k, tức là nó nhận s^k là vector riêng với trị riêng = 1. Để rồi, dẫn tới ta có thể có một dạng (trong số nhiều dạng khác) của nó: B^k+1 = P⊥ + P, với P là matrix chiếu lên span{s^k}. Và dùng điều kiện "gần nhất với Bk" ta dẫn tới kết luận B^k+1 có dạng P⊥B^kP⊥ + P. Và chuyển về lại ta sẽ có công thức update Bk như trong sách (ý tưởng chính là vậy)
 >
@@ -60,23 +60,23 @@
 >
 > ⇔ σ(δ(yk - Bksk)ᵀsk)δ(yk - Bksk) = yk - Bksk
 >
-> ⇔ σδ^2(yk - Bksk)ᵀsk = 1
+> ⇔ σδ²(yk - Bksk)ᵀsk = 1
 >
-> Rồi, lập luận như sau: vì đã nói σ sẽ là số +1 hoặc -1, mà ở đây, vế phải dương, còn δ^2 ở vế trái không âm, nên σ × (yk - Bksk)ᵀsk phải dương. do đó σ phải có dấu cùng dấu với (yk - Bksk)ᵀsk ⇨ σ = sign((yk - Bksk)ᵀsk)
+> Rồi, lập luận như sau: vì đã nói σ sẽ là số +1 hoặc -1, mà ở đây, vế phải dương, còn δ² ở vế trái không âm, nên σ × (yk - Bksk)ᵀsk phải dương. do đó σ phải có dấu cùng dấu với (yk - Bksk)ᵀsk ⇨ σ = sign((yk - Bksk)ᵀsk)
 >
-> Tiếp theo, để phương trình cân bằng ta cần δ^2|(yk - Bksk)ᵀsk| = 1
+> Tiếp theo, để phương trình cân bằng ta cần δ²|(yk - Bksk)ᵀsk| = 1
 >
-> ⇨ δ^2 = 1/|(yk - Bksk)ᵀsk|
+> ⇨ δ² = 1/|(yk - Bksk)ᵀsk|
 >
 > ⇨ δ = (+/-) 1/√|(yk - Bksk)ᵀsk|
 >
 > Thế là ta đã có công thức rank 1 update cho Bk+1
 >
-> Bk+1 = Bk + σvvT = Bk + sign((yk - Bksk)ᵀsk) × δ^2(yk - Bksk)(yk - Bksk)ᵀ
+> Bk+1 = Bk + σvvT = Bk + sign((yk - Bksk)ᵀsk) × δ²(yk - Bksk)(yk - Bksk)ᵀ
 >
-> = Bk + sign((yk - Bksk)ᵀsk) × δ^2(yk - Bksk)(yk - Bksk)ᵀ
+> = Bk + sign((yk - Bksk)ᵀsk) × δ²(yk - Bksk)(yk - Bksk)ᵀ
 >
-> = Bk + sign((yk - Bksk)ᵀsk) × [(+/-)1/√|(yk - Bksk)ᵀsk|]^2 × (yk - Bksk)(yk - Bksk)ᵀ 
+> = Bk + sign((yk - Bksk)ᵀsk) × [(+/-)1/√|(yk - Bksk)ᵀsk|]² × (yk - Bksk)(yk - Bksk)ᵀ 
 >
 > = Bk + sign((yk - Bksk)ᵀsk) × [1/|(yk - Bksk)ᵀsk|] × (yk - Bksk)(yk - Bksk)ᵀ 
 >
@@ -120,7 +120,7 @@
 >
 > xét term thứ 2: zT(yk - Bksk)(yk - Bksk)ᵀz / (yk - Bksk)ᵀsk
 >
-> = [zT(yk - Bksk)]^2 / (yk - Bksk)ᵀsk
+> = [zT(yk - Bksk)]² / (yk - Bksk)ᵀsk
 >
 > cái này chưa chắc đã không âm vì dù tử số không âm nhưng (yk - Bksk)ᵀsk thì có thể âm
 >
@@ -235,7 +235,7 @@
 >
 > Quay lại đây, ỡ mỗi iteration:
 >
-> Giải bài toán 6.27, gọi là subproblem, minimize hàm quadratic approx hàm f tại xk (nhưng dĩ nhiên là dùng Bk thay cho Hessian ∇^2fk, vì đây là quasi-Newton, nếu dùng Hessian thì thành ra Trust Region Newton rồi)
+> Giải bài toán 6.27, gọi là subproblem, minimize hàm quadratic approx hàm f tại xk (nhưng dĩ nhiên là dùng Bk thay cho Hessian ∇²fk, vì đây là quasi-Newton, nếu dùng Hessian thì thành ra Trust Region Newton rồi)
 >
 > minimize mk(s) = fk + ∇fkTs + (1/2)sTBks s.t ||s|| ≤ Δk
 >
