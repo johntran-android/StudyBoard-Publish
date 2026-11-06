@@ -1,6 +1,6 @@
 # 8.2 Method Of Finding Tests
 
-📊 **Progress:** `21` Notes | `26` Screenshots | `6` AI Reviews
+📊 **Progress:** `21` Notes | `26` Screenshots | `7` AI Reviews
 
 ---
 <a id="node-ddu990f"></a>
@@ -212,6 +212,19 @@
 >
 >
 > Khi đó ta sẽ thấy λ(𝐱), LRT có liên quan đến MLE là vậy
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm bắt rất chính xác và trực quan bản chất của kiểm định tỷ số hợp lý (LRT) thông qua sự so sánh giữa hợp lý cực đại có điều kiện (tử số) và toàn cục (mẫu số). Lập luận logic rõ ràng, bám sát sách tham khảo.
+>
+> **✓ Strengths**
+> - Giải thích trực quan và chính xác vai trò của tử số (restricted MLE trên không gian con Θ0) và mẫu số (unrestricted MLE trên toàn không gian Θ).
+> - Hiểu đúng quy tắc bác bỏ của LRT: tỷ số nhỏ nghĩa là H0 kém khả tín so với giả thuyết đối, dẫn đến bác bỏ H0.
+>
+> **💡 Deeper notes**
+> - Vì Θ0 là tập con của toàn bộ không gian tham số Θ, nên giá trị cực đại trên Θ0 không bao giờ vượt quá giá trị cực đại trên toàn không gian Θ; do đó giá trị thống kê λ(x) luôn nằm trong đoạn [0, 1] và hằng số c cũng thỏa mãn 0 <= c <= 1.
+> - Trong thống kê hiện đại, khi λ(x) lớn, người ta thường dùng thuật ngữ 'chưa đủ cơ sở bác bỏ H0' (fail to reject H0) thay vì 'chấp nhận H0 là đúng' (accept H0), dù trong ngữ cảnh đoạn trích sách gốc có dùng lối diễn đạt này.
 
 <br>
 
