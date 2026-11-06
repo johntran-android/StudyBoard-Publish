@@ -1849,7 +1849,7 @@
 <p align="center"><kbd><img src="assets/huppvcj2mu6.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ứng dụng theorem vừa rồi vào X \~ normal(μ1, σ1²) và Y\~ normal(μ2, σ2²) độc lập
+> Ứng dụng theorem vừa rồi vào X \~ normal(μ, σ²) và Y\~ normal(γ, τ²) độc lập
 >
 >
 >
@@ -1953,44 +1953,34 @@
 >
 >
 >
-> MZ(t)
+> MZ(t) = exp(μt + σ²t²/2)exp(γt + τ²t²/2)
+>
+>
+>
+> = exp(μt + σ²t²/2+γt + τ²t²/2)
+>
+>
+>
+> = exp((μ+γ)t + (σ²+τ²)t²/2)
+>
+>
+>
+> đây là có dạng của mgf của n(μ+γ, σ²+τ²), nên do mgf có thể xác định phân phối, ta kết luận Z \~ n(μ+γ, σ²+τ²)
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=1J4PcL23QcY)
 
 > [!TIP]
-> 🤖 **AI Check** — 🔴 Critical issues — ❌ **35/100** · ✗ Fix first
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
-> Ghi chú chưa hoàn thành phần việc tự đặt ra: tuyên bố chứng minh mgf của phân phối chuẩn nhưng mới chỉ ghi dở dang hàm mật độ rồi bỏ lửng (...). Ngoài ra, ghi chú chưa nêu điều kiện độc lập giữa X và Y khi áp dụng công thức tích mgf.
->
-> **🔴 Critical issues**
->
-> **1.** *"(Chứng minh như sau: 
-
- Nếu ko nhớ công thức pdf của normal(μ, σ²) thì nhớ pdf của Z ~ normal(0,1) 
-
- fZ(x) = (1/√2π) e^-z²/2 
-
- ...)"*
->
-> Ghi chú đặt ra mục tiêu chứng minh công thức hàm sinh mô-men (mgf) của phân phối chuẩn nhưng chưa thực hiện chứng minh mà dừng lại giữa chừng ở dấu ba chấm (...). Theo quy tắc Progress Check, việc nêu ý định làm nhưng chưa thực sự hoàn thành bước giải/chứng minh được tính là lỗi nghiêm trọng.
->
->
-> **🟡 Minor issues**
->
-> **1.** *"Ứng dụng theorem vừa rồi vào X ~ normal(μ1, σ1²)  và Y~ normal(μ2, σ2²) 
-
- Ta có Z = X + Y. thì mgf MZ(t) = MX(t)MY(t)"*
->
-> Đẳng thức MZ(t) = MX(t)MY(t) chỉ đúng khi X và Y độc lập với nhau, nhưng ghi chú chưa nêu rõ giả thiết độc lập này.
->
-> **2.** *"fZ(x) = (1/√2π) e^-z²/2"*
->
-> Ký hiệu chưa nhất quán giữa biến số đầu vào: vế trái là fZ(x) theo x nhưng số mũ ở vế phải lại dùng biến z (-z²/2).
->
+> Ghi chú rất xuất sắc và chi tiết; bạn không chỉ hiểu rõ cách áp dụng định lý nhân mgf mà còn tự chứng minh lại công thức mgf của phân phối chuẩn bằng phương pháp thêm bớt hoàn thành bình phương một cách chính xác.
 >
 > **✓ Strengths**
-> - Nắm đúng dạng công thức mgf của tổng hai biến ngẫu nhiên và công thức mgf của phân phối chuẩn.
+> - Tự triển khai trọn vẹn và chuẩn xác phép biến đổi hoàn thành bình phương (completing the square) để tìm mgf của phân phối chuẩn thay vì chỉ thừa nhận kết quả.
+> - Nhận diện đúng tính hợp lệ của hàm mật độ xác suất (tích phân trên toàn miền bằng 1) để triệt tiêu tích phân phức tạp.
+> - Kết luận chuẩn xác về phân phối của tổng hai biến ngẫu nhiên độc lập thông qua tính duy nhất của mgf.
 >
 > **💡 Deeper notes**
-> - Để chứng minh mgf của phân phối chuẩn tổng quát X = μ + σZ, cách tiện nhất là tính mgf của chuẩn tắc MZ(t) = exp(t²/2) qua tích phân hoàn thành bình phương, rồi dùng tính chất biến đổi tuyến tính MX(t) = exp(μt)MZ(σt).
+> - Trong phần giải thích LOTUS, biến phụ Y = g(X) tạm thời trùng ký hiệu với biến ngẫu nhiên Y ~ n(γ, τ²) ở trên; nên dùng một ký hiệu khác (như W hoặc U) để tránh nhầm lẫn khi đọc lại.
 
 **🔗 See also:** [Chứng minh S² Chi-square](./53_sampling_from_the_normal_distribution.md#node-nh8m52t)
 
