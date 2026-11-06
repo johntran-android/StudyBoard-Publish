@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1793859493936,
+  "publishedAt": 1793939329123,
   "sections": [
     {
       "title": "📋 Overview",
@@ -227,8 +227,14 @@
     {
       "title": "16.2 Direct solution of KKT system",
       "path": "numerical_optimization_jnocedal/162_direct_solution_of_kkt_system.md",
-      "noteCount": 5,
-      "imageCount": 14
+      "noteCount": 6,
+      "imageCount": 16
+    },
+    {
+      "title": "16.3 Iterative method solve KKT system",
+      "path": "numerical_optimization_jnocedal/163_iterative_method_solve_kkt_system.md",
+      "noteCount": 0,
+      "imageCount": 3
     },
     {
       "title": "Appendix A",
@@ -249,6 +255,6 @@
       "imageCount": 11
     }
   ],
-  "totalNotes": 452,
-  "totalImages": 686
+  "totalNotes": 453,
+  "totalImages": 691
 }
