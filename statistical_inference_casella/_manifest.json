@@ -1,6 +1,6 @@
 {
   "title": "Statistical Inference - Casella",
-  "publishedAt": 1793987898229,
+  "publishedAt": 1793988500728,
   "sections": [
     {
       "title": "📋 Overview",
@@ -312,7 +312,7 @@
       "title": "11.1 & 2  introduction, One-way Anova",
       "path": "statistical_inference_casella/111_2_introduction_one_way_anova.md",
       "noteCount": 22,
-      "imageCount": 27
+      "imageCount": 29
     },
     {
       "title": "11.3 Simple Linear Regression",
@@ -322,5 +322,5 @@
     }
   ],
   "totalNotes": 932,
-  "totalImages": 1235
+  "totalImages": 1237
 }
