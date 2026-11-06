@@ -1,6 +1,6 @@
 # 4.2 Conditional Distributions & Independent
 
-📊 **Progress:** `18` Notes | `27` Screenshots | `1` AI Reviews
+📊 **Progress:** `18` Notes | `27` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-6ysk9w8"></a>
@@ -1596,6 +1596,31 @@
 >
 > Kết quả chứng minh xong
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, hiểu sâu sắc bản chất từ LOTUS đến Fundamental Bridge của biến chỉ thị (indicator variable). Chỉ có một vài lỗi gõ phím nhỏ (typo) không ảnh hưởng đến luồng tư duy.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"E[g(X)h(Y)] = Eg(X)Eh(X)"*
+>
+> Lỗi gõ phím (typo) ở phát biểu định lý: phải là Eg(X)Eh(Y) thay vì viết lặp lại biến X ở cả hai kỳ vọng.
+>
+> **2.** *"có nghĩa là x ∈ A thì g(x) = 1, ngược lại x = 0."*
+>
+> Cách diễn đạt nhầm biến: khi x không thuộc A thì giá trị hàm chỉ thị g(x) = 0, chứ không phải x = 0.
+>
+>
+> **✓ Strengths**
+> - Nắm rất vững trực giác và cơ chế hoạt động của LOTUS cho cả trường hợp đơn biến và đa biến.
+> - Trình bày mạch lạc cả hai hướng chứng minh cho phần (a), đặc biệt là việc liên hệ Fundamental Bridge từ Stat 110 để chuyển bài toán xác suất về kỳ vọng của hàm chỉ thị.
+> - Hiểu rõ tại sao tích hai hàm chỉ thị g(x)h(y) chính là hàm chỉ thị của tập tích Descartes C.
+>
+> **💡 Deeper notes**
+> - Đẳng thức E[g(X)h(Y)] = E[g(X)]E[h(Y)] đòi hỏi điều kiện kỹ thuật là các kỳ vọng E[g(X)] và E[h(Y)] phải tồn tại hữu hạn (hoặc các hàm g, h không âm theo định lý Tonelli/Fubini).
+> - Về mặt lý thuyết độ đo nghiêm ngặt, các tập con A và B phải là các tập Borel (Borel sets) để xác suất P(X ∈ A) được xác định hợp lệ.
+
 <br>
 
 <a id="node-6pr996h"></a>
@@ -1683,6 +1708,33 @@
 >
 > Var(X) = cũng làm tương tự
 
+> [!TIP]
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **65/100** · ✗ Fix first
+>
+> Bạn đã nắm vững tính chất độc lập để tính xác suất và phân tách kỳ vọng E(X²Y) = E(X²)E(Y). Tuy nhiên, ghi chú có mâu thuẫn nghiêm trọng khi khẳng định Expo(λ) có kỳ vọng và phương sai đều là λ, trái ngược với kết quả E(X) = 1/λ bạn vừa tự chứng minh ngay bên dưới.
+>
+> **🔴 Critical issues**
+>
+> **1.** *"ta nhớ với expo(λ) thì expected value và variance đều là λ"*
+>
+> Khẳng định này sai và mâu thuẫn trực tiếp với phép chứng minh E(X) = 1/λ ở cuối ghi chú. Đối với phân phối Exponential(λ) (với rate λ), kỳ vọng là 1/λ và phương sai là 1/λ² (bạn có thể đã nhớ nhầm sang phân phối Poisson(λ)). Chỉ khi λ = 1 thì cả kỳ vọng và phương sai mới cùng bằng 1.
+>
+>
+> **🟡 Minor issues**
+>
+> **1.** *"x → inf ⇨ e^(-λx) ⇨ e^-inf = 0 ⇨ -xe^(-λx) → 0"*
+>
+> Khi x → ∞, biểu thức -x e^(-λx) có dạng vô định ∞ · 0. Để suy ra giới hạn bằng 0 một cách chặt chẽ, cần dùng quy tắc L'Hôpital hoặc nhận xét tốc độ tăng của hàm mũ lấn át đa thức, không thể chỉ lập luận rời rạc từng thừa số.
+>
+>
+> **✓ Strengths**
+> - Áp dụng chính xác tính chất độc lập để phân tách xác suất đồng thời và tích kỳ vọng E(X²Y) = E(X²)E(Y).
+> - Biết vận dụng công thức liên hệ giữa phương sai và moment bậc hai: E(X²) = Var(X) + (E(X))².
+> - Thực hiện thành thạo và chính xác các bước tích phân từng phần để tính kỳ vọng của biến ngẫu nhiên liên tục.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý phân biệt hai cách tham số hóa của phân phối Exponential: tham số tỉ lệ (rate parameter) λ với E(X) = 1/λ, Var(X) = 1/λ²; và tham số tỷ lệ nghịch/thang đo (scale parameter) β = 1/λ với E(X) = β, Var(X) = β².
+
 <br>
 
 <a id="node-hx6s7er"></a>
@@ -1696,8 +1748,7 @@
 >
 >
 >
-> Cho X, Y độc lập với mgf MX(t) MY(t) thì với Z = X + Y thì MZ(t) 
-> = MX(t) MY(t)
+> Cho X, Y độc lập với mgf MX(t) MY(t) thì với Z = X + Y thì MZ(t) = MX(t) MY(t)
 >
 >
 >
@@ -1705,15 +1756,61 @@
 >
 >
 >
-> Theo định nghĩa mgf: MX(t) = E[e^tX]
+> Theo định nghĩa mgf: MX(t) = E\[e^tX\]
 >
 >
 >
-> ⇨ MX(t) = E[e^tZ] = E[e^t(X+Y)] = E(e^tX e^tY) | đơn giản là tính chất hàm mũ
+> MY(t) = E\[e^tY\]
 >
 >
 >
-> Xét E(e^tX e^tY), thì nó chính là E[g(X)h(Y)] với g(X) = e^tX, h(Y) = e^tY
+> g(t)|t=2 = 2²
+>
+>
+>
+> MX(t)|t=2 = E\[e^(2X)\]
+>
+>
+>
+> Z = X + Y, MZ(t) = E\[e^tZ\]
+>
+>
+>
+> = E\[e^t(X+Y)\]
+>
+>
+>
+> = E\[e^(tX+tY)\]
+>
+>
+>
+> = E\[e^(tX) e^(tY)\]
+>
+>
+>
+> X, Y độc lập nên e^(tX), e^(tY) cũng độc lập
+>
+>
+>
+> .. = E\[e^(tX)\] \[e^(tY)\]
+>
+>
+>
+> = MX(t) MY(t)
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> ⇨ MZ(t) = E\[e^tZ\] = E\[e^t(X+Y)\] = E(e^tX e^tY) | đơn giản là tính chất hàm mũ
+>
+>
+>
+> Xét E(e^tX e^tY), thì nó chính là E\[g(X)h(Y)\] với g(X) = e^tX, h(Y) = e^tY
 >
 >
 >
@@ -1721,11 +1818,25 @@
 >
 >
 >
-> ...= Ee^tX . Ee^tY  và đây chính là MX(t) . MY(t)
+> ...= Ee^tX . Ee^tY và đây chính là MX(t) . MY(t)
 >
 >
 >
 > Nhận xét là nhờ cái theorem đó mà chứng minh cái này rất khỏe
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=G09HUqjpn_w)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và mạch lạc. Bạn đã diễn giải chi tiết từng bước chứng minh của định lý, đặc biệt là làm rõ cách áp dụng tính chất kỳ vọng của tích hai hàm độc lập E[g(X)h(Y)] = E[g(X)]E[h(Y)].
+>
+> **✓ Strengths**
+> - Nắm vững định nghĩa hàm sinh mô-men (mgf) và tính chất lũy thừa cơ bản.
+> - Làm rõ được bước trung gian quan trọng trong sách (áp dụng Theorem 4.2.10 với g(X) và h(Y)) thay vì chỉ viết lại kết quả.
+>
+> **💡 Deeper notes**
+> - Công thức M_Z(t) = M_X(t)M_Y(t) chỉ có ý nghĩa trên tập các giá trị t mà tại đó cả M_X(t) và M_Y(t) đều cùng tồn tại (tức là lân cận quanh điểm 0 mà cả hai mgf đều hội tụ).
 
 <br>
 
@@ -1738,7 +1849,7 @@
 <p align="center"><kbd><img src="assets/huppvcj2mu6.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ứng dụng theorem vừa rồi vào X ~ normal(μ1, σ1²)  và Y~ normal(μ2, σ2²)
+> Ứng dụng theorem vừa rồi vào X \~ normal(μ1, σ1²) và Y\~ normal(μ2, σ2²) độc lập
 >
 >
 >
@@ -1746,23 +1857,140 @@
 >
 >
 >
-> Với X ~ normal(μ, σ²) thì MX(t) = exp(μt + σ²t²/2).
+> Với X \~ normal(μ, σ²) thì MX(t) = exp(μt + σ²t²/2).
 >
 >
 >
-> (Chứng minh như sau: 
+> MX(t) = E\[e^tX\]  
 >
 >
 >
-> Nếu ko nhớ công thức pdf của normal(μ, σ²) thì nhớ pdf của Z ~ normal(0,1) 
+> LOTUS: Y = g(X), X \~ fX(x). EX = ∫xfX(x)dx, EY = ∫g(x)fX(x)dx
 >
 >
 >
-> fZ(x) = (1/√2π) e^-z²/2 
+> E\[e^tX\] = E\[Y\] với Y = g(X), với g(x) = e^tx
 >
 >
 >
-> ...
+> E\[e^tX\] = ∫e^tx (1/√2πσ²) e^{-(x-μ)²/2σ²} dx
+>
+>
+>
+> = ∫(1/√2πσ²) e^{tx-(x-μ)²/2σ²} dx
+>
+>
+>
+> = ∫(1/√2πσ²) e^{(2σ²tx -(x-μ)²)/2σ²} dx
+>
+>
+>
+> = ∫(1/√2πσ²) e^{(2σ²tx -x²+2μx-μ²)/2σ²} dx
+>
+>
+>
+> = ∫(1/√2πσ²) e^{(-x²+2(σ²t+μ)x-μ²)/2σ²} dx
+>
+>
+>
+> = ∫(1/√2πσ²) e^{(-x²+2(σ²t+μ)x-(σ²t+μ)²+(σ²t+μ)²-μ²)/2σ²} dx
+>
+>
+>
+> = ∫(1/√2πσ²) e^{(-\[x²-2(σ²t+μ)x+(σ²t+μ)²\]+(σ²t+μ)²-μ²)/2σ²} dx
+>
+>
+>
+> = ∫(1/√2πσ²) e^{(-\[x-(σ²t+μ)\]²+(σ²t+μ)²-μ²)/2σ²} dx
+>
+>
+>
+> = ∫(1/√2πσ²) e^{-\[x-(σ²t+μ)\]²/2σ²} e^{(σ²t+μ)²-μ²)/2σ²} dx
+>
+>
+>
+> = e^{(σ²t+μ)²-μ²)/2σ²} ∫(1/√2πσ²) e^{-\[x-(σ²t+μ)\]²/2σ²}  dx
+>
+>
+>
+> Xét ∫(1/√2πσ²) e^{-\[x-(σ²t+μ)\]²/2σ²} dx
+>
+>
+>
+> Hàm (1/√2πσ²) e^{-\[x-(σ²t+μ)\]²/2σ²} chính pdf n(σ²t+μ, σ²)
+>
+>
+>
+> nên theo tính valid của pdf: ∫(1/√2πσ²) e^{-\[x-(σ²t+μ)\]²/2σ²} dx = 1
+>
+>
+>
+> .. = e^{(σ²t+μ)²-μ²)/2σ²}
+>
+>
+>
+> = e^{(σ²t)²+2μσ²t+μ²-μ²)/2σ²}
+>
+>
+>
+> = e^{(σ²)²t²+2μσ²t)/2σ²}
+>
+>
+>
+> = e^\[(σ²)t²/2+μt\]
+>
+>
+>
+> = e^\[μt + (σ²)t²/2\]
+>
+>
+>
+> MX(t) = exp(μt + σ²t²/2)
+>
+>
+>
+> MY(t) = exp(γt + τ²t²/2)
+>
+>
+>
+> MZ(t)
+
+> [!TIP]
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **35/100** · ✗ Fix first
+>
+> Ghi chú chưa hoàn thành phần việc tự đặt ra: tuyên bố chứng minh mgf của phân phối chuẩn nhưng mới chỉ ghi dở dang hàm mật độ rồi bỏ lửng (...). Ngoài ra, ghi chú chưa nêu điều kiện độc lập giữa X và Y khi áp dụng công thức tích mgf.
+>
+> **🔴 Critical issues**
+>
+> **1.** *"(Chứng minh như sau: 
+
+ Nếu ko nhớ công thức pdf của normal(μ, σ²) thì nhớ pdf của Z ~ normal(0,1) 
+
+ fZ(x) = (1/√2π) e^-z²/2 
+
+ ...)"*
+>
+> Ghi chú đặt ra mục tiêu chứng minh công thức hàm sinh mô-men (mgf) của phân phối chuẩn nhưng chưa thực hiện chứng minh mà dừng lại giữa chừng ở dấu ba chấm (...). Theo quy tắc Progress Check, việc nêu ý định làm nhưng chưa thực sự hoàn thành bước giải/chứng minh được tính là lỗi nghiêm trọng.
+>
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Ứng dụng theorem vừa rồi vào X ~ normal(μ1, σ1²)  và Y~ normal(μ2, σ2²) 
+
+ Ta có Z = X + Y. thì mgf MZ(t) = MX(t)MY(t)"*
+>
+> Đẳng thức MZ(t) = MX(t)MY(t) chỉ đúng khi X và Y độc lập với nhau, nhưng ghi chú chưa nêu rõ giả thiết độc lập này.
+>
+> **2.** *"fZ(x) = (1/√2π) e^-z²/2"*
+>
+> Ký hiệu chưa nhất quán giữa biến số đầu vào: vế trái là fZ(x) theo x nhưng số mũ ở vế phải lại dùng biến z (-z²/2).
+>
+>
+> **✓ Strengths**
+> - Nắm đúng dạng công thức mgf của tổng hai biến ngẫu nhiên và công thức mgf của phân phối chuẩn.
+>
+> **💡 Deeper notes**
+> - Để chứng minh mgf của phân phối chuẩn tổng quát X = μ + σZ, cách tiện nhất là tính mgf của chuẩn tắc MZ(t) = exp(t²/2) qua tích phân hoàn thành bình phương, rồi dùng tính chất biến đổi tuyến tính MX(t) = exp(μt)MZ(σt).
 
 **🔗 See also:** [Chứng minh S² Chi-square](./53_sampling_from_the_normal_distribution.md#node-nh8m52t)
 
