@@ -33,7 +33,7 @@
 >
 > Để khi Bk là I thì pk = - ∇f_k, chính là steepest descent direction
 >
-> Còn Bk là Hessian ∇^2 f_k thì nó chính là - (∇^2f_k)⁻¹ ∇f_k, là Newton direction
+> Còn Bk là Hessian ∇² f_k thì nó chính là - (∇²f_k)⁻¹ ∇f_k, là Newton direction
 >
 > Còn khi Bk được chọn là một xấp xỉ gần đúng của Hessian như trong công thức ở phần trước thì ta có quasi-Newton direction
 >
