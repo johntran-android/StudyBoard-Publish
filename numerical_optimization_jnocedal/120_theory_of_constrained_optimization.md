@@ -163,15 +163,15 @@
 >
 >
 >
-> Ví dụ, xét một bài toán không ràng buộc là tìm giá trị cực tiểu (minimize) của hàm số max(x^2, x). Dễ thấy rằng hàm mục tiêu này không phải là hàm trơn. Tuy nhiên, bằng cách tái cấu trúc để đưa về một bài toán tương đương là cực tiểu hóa t với các ràng buộc t ≥ x và t ≥ x^2, bài toán sẽ trở thành bài toán có ràng buộc, và cả hàm mục tiêu lẫn các hàm ràng buộc đều là hàm trơn. 
+> Ví dụ, xét một bài toán không ràng buộc là tìm giá trị cực tiểu (minimize) của hàm số max(x², x). Dễ thấy rằng hàm mục tiêu này không phải là hàm trơn. Tuy nhiên, bằng cách tái cấu trúc để đưa về một bài toán tương đương là cực tiểu hóa t với các ràng buộc t ≥ x và t ≥ x², bài toán sẽ trở thành bài toán có ràng buộc, và cả hàm mục tiêu lẫn các hàm ràng buộc đều là hàm trơn. 
 >
 >
 >
-> Cụ thể, xét theo biến t, hàm mục tiêu bây giờ là t, còn các hàm ràng buộc là t - x hoặc t - x^2. Chúng đều là những hàm tuyến tính theo t và hiển nhiên là các hàm trơn. Phương pháp tái cấu trúc này thường xuất hiện khi hàm mục tiêu f là cực đại (maximum) của một tập hợp các hàm số, hoặc khi f là chuẩn L1 (L1 norm) hay chuẩn L-vô-hạn (L infinity norm) của một hàm vectơ. 
+> Cụ thể, xét theo biến t, hàm mục tiêu bây giờ là t, còn các hàm ràng buộc là t - x hoặc t - x². Chúng đều là những hàm tuyến tính theo t và hiển nhiên là các hàm trơn. Phương pháp tái cấu trúc này thường xuất hiện khi hàm mục tiêu f là cực đại (maximum) của một tập hợp các hàm số, hoặc khi f là chuẩn L1 (L1 norm) hay chuẩn L-vô-hạn (L infinity norm) của một hàm vectơ. 
 >
 >
 >
-> Cuối cùng, một lưu ý nhỏ khác là việc đặt các ràng buộc t ≥ x hay t ≥ x^2 trông có vẻ hơi khác so với cách thể hiện khái quát là có hàm c ≥ 0. Thực chất, chúng ta chỉ cần chuyển x sang vế trái là sẽ thu được dạng đó. Nói chung, sau khi sắp xếp lại, ta sẽ có được dạng của bài toán khái quát.
+> Cuối cùng, một lưu ý nhỏ khác là việc đặt các ràng buộc t ≥ x hay t ≥ x² trông có vẻ hơi khác so với cách thể hiện khái quát là có hàm c ≥ 0. Thực chất, chúng ta chỉ cần chuyển x sang vế trái là sẽ thu được dạng đó. Nói chung, sau khi sắp xếp lại, ta sẽ có được dạng của bài toán khái quát.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
