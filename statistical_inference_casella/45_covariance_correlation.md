@@ -1,6 +1,6 @@
 # 4.5 Covariance & Correlation
 
-📊 **Progress:** `19` Notes | `29` Screenshots | `10` AI Reviews
+📊 **Progress:** `19` Notes | `29` Screenshots | `11` AI Reviews
 
 ---
 <a id="node-0rdjr6h"></a>
@@ -413,6 +413,19 @@
 >
 > CHO NÊN CÓ KHI HAI RANDOM VARIABLE QUAN HỆ MẠNH VỚI NHAU
 > NHƯNG KHÔNG TUYẾN TÍNH THÌ COVARIANCE VẪN = 0.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác bản chất cốt lõi của đoạn tài liệu: Cov(X,Y) = 0 (hay E[XY] = E[X]E[Y]) không tương đương với tính độc lập, vì hiệp phương sai và hệ số tương quan chỉ đo lường mối quan hệ tuyến tính.
+>
+> **✓ Strengths**
+> - Nắm vững kết luận quan trọng: Cov(X, Y) = 0 chỉ biểu thị không có quan hệ tuyến tính chứ không suy ra được tính độc lập.
+> - Hiểu rõ ví dụ minh họa rằng hai biến ngẫu nhiên có thể phụ thuộc mật thiết (thậm chí biến này là hàm của biến kia) nhưng Cov vẫn bằng 0 nếu mối quan hệ là phi tuyến đối xứng.
+>
+> **💡 Deeper notes**
+> - Một ngoại lệ quan trọng đáng ghi nhớ: nếu (X, Y) có phân phối chuẩn đồng thời (bivariate normal distribution), thì Cov(X, Y) = 0 lại tương đương với độc lập.
+> - Trong ví dụ ở giáo trình, Y hoàn toàn được xác định bởi X (Y = I(|X - θ| < 2)), tức là phụ thuộc tuyệt đối, nhưng tính đối xứng quanh tâm làm tích phân triệt tiêu dẫn đến Cov = 0.
 
 <br>
 
