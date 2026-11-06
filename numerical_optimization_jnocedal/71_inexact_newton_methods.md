@@ -40,15 +40,15 @@
 <p align="center"><kbd><img src="assets/smqwab684o.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Chỗ này đại khái là với line search Newton và trust region Newton thì mình cần factor Hessian bởi vì mình cần tính pk: = (∇^2fk)⁻¹ ∇fk
+> Chỗ này đại khái là với line search Newton và trust region Newton thì mình cần factor Hessian bởi vì mình cần tính pk: = (∇²fk)⁻¹ ∇fk
 >
 > Vì sao lại factor, là vì đang ám chỉ dùng factor-solve method để tìm inverse của Hessian, hoặc là nói cách khác, là để giải hệ [Hessian tại k] pk = - ∇fk
 >
-> Vì thực tế khi tìm pk, tuy là công thức nói ta sẽ pk = - (∇^2fk)⁻¹ ∇fk nhưng ta sẽ không tính inverse của Hessian, mà dùng factor-solve method để giải tìm pk.
+> Vì thực tế khi tìm pk, tuy là công thức nói ta sẽ pk = - (∇²fk)⁻¹ ∇fk nhưng ta sẽ không tính inverse của Hessian, mà dùng factor-solve method để giải tìm pk.
 >
-> Ví dụ bước 1 ta factor ∇^2fk = LLᵀ, thì giải ∇^2fk pk = - ∇fk tương đương giải LLᵀ pk = - ∇fk. 
+> Ví dụ bước 1 ta factor ∇²fk = LLᵀ, thì giải ∇²fk pk = - ∇fk tương đương giải LLᵀ pk = - ∇fk. 
 >
-> bước 2: giải L y = - ∇fk. và sau đó là Lᵀ pk = y, đều là hệ tuyến tính với matrix hê số tam giác (L hay Lᵀ) ⇨ giải bằng back hay forward substitution chỉ tốn o(n^2)
+> bước 2: giải L y = - ∇fk. và sau đó là Lᵀ pk = y, đều là hệ tuyến tính với matrix hê số tam giác (L hay Lᵀ) ⇨ giải bằng back hay forward substitution chỉ tốn o(n²)
 >
 > Do đó, ở đây gs Nocedal nói, nếu việc phân rã này không quá tốn kém và Hessian matrix có thể được hình thành một cách tường minh. Thì ta có thể xài phép phân rã spase (ví dụ = LLᵀ chính là sparse factorization, vì nó tạo ra các matrix spare) để làm.
 
@@ -68,7 +68,7 @@
 > [!NOTE]
 > Đại khái là, gs nói rằng trong thực tế thì thường là việc phân rã Hessian rất tốt kém, nên không thể dùng sparse factorization như note trước vừa nói được.  Khi đó một cách tiếp cận là GIẢI TÌM NEWTON STEP THEO LỐI ITERAᵀIVELY, gọi là inexact Newton method. Cái này cũng có nhiều tính chất tốt, thậm chí có thể đạt hội tụ siêu tuyến tính. Và nó còn có thể tìm ra hướng đi hiệu quả ngay cả khi Hessian bị indefinite và thậm chí còn có thể có một tính chất tốt hơn nữa, đó là có thể được thực hiện theo lối "Hessian free" - tức hoàn toàn không cần tính hay lưu trữ Hessian.
 >
-> Nói thêm chút, cái này mình đã học bên Convex với gs Boyd. Ý tưởng giải Newton step theo lối iteratively đơn giản là: Bản chất giải tìm Newton step, chỉ là giải hệ ∇^2f p = - ∇f. Và ta đã biết có cách giải hệ này theo lối iteratively, đây chính là cách tiếp cận đang được nói đến.
+> Nói thêm chút, cái này mình đã học bên Convex với gs Boyd. Ý tưởng giải Newton step theo lối iteratively đơn giản là: Bản chất giải tìm Newton step, chỉ là giải hệ ∇²f p = - ∇f. Và ta đã biết có cách giải hệ này theo lối iteratively, đây chính là cách tiếp cận đang được nói đến.
 >
 > Vậy thì nên hiểu thế này: chương 7 ta sẽ học một cách tìm Hessian, nhằm tính Newton step pkNtrong thuật toán line search Newton hay trust region Newton, tuy nhiên không phải là ta sẽ dùng phân rã sparse để giải tìm pkN mà sẽ dùng các tiếp cận iterative, để rồi ngoài cái vòng lặp lớn (outer iteration), tại mỗi step, khi tìm pkN, ta cũng sẽ chạy một cái vòng lặp. Và đây chính là in-exac Newton method
 
@@ -134,7 +134,7 @@
 <p align="center"><kbd><img src="assets/5f1psdt1wjj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Phần này đại khái là ta sẽ học những cách để tính gần đúng Newton step (như đã biết, là nghiệm của hệ tuyến tính ∇^2 fk pkN = - ∇fk) với các phương pháp như dùng Conjugate Gradient hoặc Lanczos method và có chỉnh sửa chút.
+> Phần này đại khái là ta sẽ học những cách để tính gần đúng Newton step (như đã biết, là nghiệm của hệ tuyến tính ∇² fk pkN = - ∇fk) với các phương pháp như dùng Conjugate Gradient hoặc Lanczos method và có chỉnh sửa chút.
 >
 > Như lúc đầu đã nói sơ, tuy rằng ta có thể giải hệ này bằng phép phân rã matrix nhưng vấn đề là có khi matrix phân rã không sparse, ngay cả khi Hessian thực tế vẫn sparse. (gọi là Fill-in)
 >
@@ -160,21 +160,21 @@
 >
 > Đầu tiên nên nhớ khác nhau giữa quasi-Newton và inexact Newton: 
 >
-> Inexact Newton, là nói về việc ta muốn tìm Newton-step, trong bối cảnh thuật toán line search Newton hoặc trust region Newton (tức muốn pk là Newton step), nhưng thay vì giải hệ ∇^2 fk pkN = - ∇fk theo những cách thông thường: ví dụ phân rã sparse Hessian, mà trong bối cảnh bài toán quy mô lớn sẽ tốn kém, thì ta sẽ dùng cách thức iteratively để giải hệ này để tìm pkN. Đây gọi là inexact Newton.
+> Inexact Newton, là nói về việc ta muốn tìm Newton-step, trong bối cảnh thuật toán line search Newton hoặc trust region Newton (tức muốn pk là Newton step), nhưng thay vì giải hệ ∇² fk pkN = - ∇fk theo những cách thông thường: ví dụ phân rã sparse Hessian, mà trong bối cảnh bài toán quy mô lớn sẽ tốn kém, thì ta sẽ dùng cách thức iteratively để giải hệ này để tìm pkN. Đây gọi là inexact Newton.
 >
-> Còn quasi-Newton hoàn toàn khác: cũng là ta muốn tính pk = -(∇^2 fk)⁻¹ ∇fk, thì ta tránh chi phí cao của việc này bằng cách: giả lập Hessian, thay nó bởi Bk, và xây dựng một phương pháp mà trong đó suốt quá trình của thuật toán ta sẽ liên tục cập nhật lại Bk (hay Bk⁻¹ dùng các thông tin mới), thì đây là quasi-Newton.
+> Còn quasi-Newton hoàn toàn khác: cũng là ta muốn tính pk = -(∇² fk)⁻¹ ∇fk, thì ta tránh chi phí cao của việc này bằng cách: giả lập Hessian, thay nó bởi Bk, và xây dựng một phương pháp mà trong đó suốt quá trình của thuật toán ta sẽ liên tục cập nhật lại Bk (hay Bk⁻¹ dùng các thông tin mới), thì đây là quasi-Newton.
 >
-> Vậy thì quay lại đây, với inexact Newton, ta sẽ có một vòng lặp khác giúp giải ∇^2fk pkN = -∇fk TRONG MỖI vòng lặp của thuật toán. DO ĐÓ, DĨ NHIÊN PHẢI CÓ CÁCH ĐỂ BIẾT KHI NÀO THÌ DỪNG vòng lặp con này để có pkN mà xài, vậy thì ở đây chính là nói tới điều này: Ta sẽ dùng residual rk = ∇^2fk pk + ∇fk. Là sao, vì sao?
+> Vậy thì quay lại đây, với inexact Newton, ta sẽ có một vòng lặp khác giúp giải ∇²fk pkN = -∇fk TRONG MỖI vòng lặp của thuật toán. DO ĐÓ, DĨ NHIÊN PHẢI CÓ CÁCH ĐỂ BIẾT KHI NÀO THÌ DỪNG vòng lặp con này để có pkN mà xài, vậy thì ở đây chính là nói tới điều này: Ta sẽ dùng residual rk = ∇²fk pk + ∇fk. Là sao, vì sao?
 >
-> → Thì bởi vì mục đích là giải hệ ∇^2fk pkN = -∇fk chính là tìm pkN sao cho ∇^2fk pkN = .. -∇fk, mà pkN trong quá trình giải theo lối iteratively sẽ là chuỗi pkN_i sao cho ∇^2fk pkN_i ngày càng gần với -∇fk, đồng nghĩa cái khoảng cách giữa ∇^2fk pkN_i với -∇fk sẽ ngày càng tiến đến 0, đó cũng chính là nói chuỗi residual rk_i = ∇^2fk pkN_i + ∇fk → 0.
+> → Thì bởi vì mục đích là giải hệ ∇²fk pkN = -∇fk chính là tìm pkN sao cho ∇²fk pkN = .. -∇fk, mà pkN trong quá trình giải theo lối iteratively sẽ là chuỗi pkN_i sao cho ∇²fk pkN_i ngày càng gần với -∇fk, đồng nghĩa cái khoảng cách giữa ∇²fk pkN_i với -∇fk sẽ ngày càng tiến đến 0, đó cũng chính là nói chuỗi residual rk_i = ∇²fk pkN_i + ∇fk → 0.
 >
-> Và ta sẽ dừng khi rk_i đủ nhỏ (để pkN_i khi đó là xấp xỉ bằng Newton step thật: -(∇^2 fk)⁻¹ ∇fk. 
+> Và ta sẽ dừng khi rk_i đủ nhỏ (để pkN_i khi đó là xấp xỉ bằng Newton step thật: -(∇² fk)⁻¹ ∇fk. 
 >
-> Thế thì ta sẽ giải cái hệ này ∇^2fk pkN = -∇fk bằng cách nào: Đó chính là dùng Conjugate Gradient đã học ở chapter 5:
+> Thế thì ta sẽ giải cái hệ này ∇²fk pkN = -∇fk bằng cách nào: Đó chính là dùng Conjugate Gradient đã học ở chapter 5:
 >
-> Theo đó còn nhớ đại khái story hay idea của CG là vầy: Đối mặt với hệ phương trình tuyến tính Ax = b, CG có thể giúp ta đi từ initial x0 ở đâu đó, và chọn p0 là steepest direction tại x0, để đi đến nghiệm x* của Ax = b trong NHIỀU NHẤT là n bước, và nếu A có các tính chất nào đó thì thậm chỉ số bước còn ít hơn. Do đó, ở đây, chính là ta sẽ áp dụng CG để giải hệ ∇^2fk pkN = -∇fk (với một số chỉnh sửa nhất định vì trong CG gốc, matrix A được yêu cầu phải là xác định dương nhưng Hessian thực tế thì ko phải lúc nào cũng xác định dương)
+> Theo đó còn nhớ đại khái story hay idea của CG là vầy: Đối mặt với hệ phương trình tuyến tính Ax = b, CG có thể giúp ta đi từ initial x0 ở đâu đó, và chọn p0 là steepest direction tại x0, để đi đến nghiệm x* của Ax = b trong NHIỀU NHẤT là n bước, và nếu A có các tính chất nào đó thì thậm chỉ số bước còn ít hơn. Do đó, ở đây, chính là ta sẽ áp dụng CG để giải hệ ∇²fk pkN = -∇fk (với một số chỉnh sửa nhất định vì trong CG gốc, matrix A được yêu cầu phải là xác định dương nhưng Hessian thực tế thì ko phải lúc nào cũng xác định dương)
 >
-> Vậy thì ở đây, ta hiểu là mình sẽ chạy thuật toán CG để giải ∇^2fk pkN = -∇fk tìm pkN nhưng kiểu như là ta sẽ không chạy cho đến khi "xong", mà thay vào đó, chỉ chạy cho đến khi "tạm được", tức là không cần rk_i = 0, mà chỉ cần rk_i thỏa điều kiện nào đó. Và do đó, ở đây gs nói về điều kiện mà ta sẽ dừng thuật toán CG:
+> Vậy thì ở đây, ta hiểu là mình sẽ chạy thuật toán CG để giải ∇²fk pkN = -∇fk tìm pkN nhưng kiểu như là ta sẽ không chạy cho đến khi "xong", mà thay vào đó, chỉ chạy cho đến khi "tạm được", tức là không cần rk_i = 0, mà chỉ cần rk_i thỏa điều kiện nào đó. Và do đó, ở đây gs nói về điều kiện mà ta sẽ dừng thuật toán CG:
 >
 > ||rk|| ≤ ηk ||∇fk||
 >
@@ -197,7 +197,7 @@
 <p align="center"><kbd><img src="assets/x33shbc05n.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Nói sơ nhanh về ý tưởng của method này: Ta muốn dùng Newton step (Newton direction) trong các thuật toán lớn nào đó, ví dụ Line Search, Trusted Region. Muốn vậy, ta phải giải hệ này: ∇^2fk pk = - ∇fk. Mà với bài toán quy mô lớn thì việc giải hệ này tìm pk (trong trường hợp này, gọi là pkN, "pk_Newton" sẽ rất tốn kém vì các lí do sau: Tất nhiên nói giải cái này theo công thức pk = -(∇^2fk)⁻¹ ∇fk thì cũng không có nghĩa là ta đi tìm Hessian inverse, rồi đem nhân với gradient, mà ta sẽ factor-solve: factor Hessian thành các tích các matrix có cấu trúc đơn giản, và giải lần lượt các hệ đơn giản này. Vấn đề là, sparse factor ko phải lúc nào cũng được: đôi khi Hessian thật thì sparse nhưng factor xong thì dense (= không có simple structure). Do đó, ta sẽ dùng một cách thức để giải hệ ∇^2fk pk = - ∇fk này một cách iteratively, và chapter 5 ta đã học một phương pháp cho việc giải hệ Ax = b theo lối iteratively như vậy: Đó chính là CG: Conjugate Gradient method, là thuật toán mà đã chứng minh rằng nếu matrix hệ số (A, ở đây là Hessian có quy mô n × n thì chỉ tốn nhiều nhất là n step để tìm ra được x* (hay pkN*), thậm chí còn nhanh hơn nếu như cấu trúc của A (ví dụ phân phối của trị riêng của nó) có tính chất đặc biệt nào đó (ví dụ như co cụm lại thành một số ít nhỏ hơn n nhiều lần các cụm). Như vậy, ở đây ta sẽ nói về Line-Search Newton - CG, tức là: dùng thuật toán line search, mà cơ bản là như đã biết, ta sẽ iteratively thực hiện các bước: 
+> Nói sơ nhanh về ý tưởng của method này: Ta muốn dùng Newton step (Newton direction) trong các thuật toán lớn nào đó, ví dụ Line Search, Trusted Region. Muốn vậy, ta phải giải hệ này: ∇²fk pk = - ∇fk. Mà với bài toán quy mô lớn thì việc giải hệ này tìm pk (trong trường hợp này, gọi là pkN, "pk_Newton" sẽ rất tốn kém vì các lí do sau: Tất nhiên nói giải cái này theo công thức pk = -(∇²fk)⁻¹ ∇fk thì cũng không có nghĩa là ta đi tìm Hessian inverse, rồi đem nhân với gradient, mà ta sẽ factor-solve: factor Hessian thành các tích các matrix có cấu trúc đơn giản, và giải lần lượt các hệ đơn giản này. Vấn đề là, sparse factor ko phải lúc nào cũng được: đôi khi Hessian thật thì sparse nhưng factor xong thì dense (= không có simple structure). Do đó, ta sẽ dùng một cách thức để giải hệ ∇²fk pk = - ∇fk này một cách iteratively, và chapter 5 ta đã học một phương pháp cho việc giải hệ Ax = b theo lối iteratively như vậy: Đó chính là CG: Conjugate Gradient method, là thuật toán mà đã chứng minh rằng nếu matrix hệ số (A, ở đây là Hessian có quy mô n × n thì chỉ tốn nhiều nhất là n step để tìm ra được x* (hay pkN*), thậm chí còn nhanh hơn nếu như cấu trúc của A (ví dụ phân phối của trị riêng của nó) có tính chất đặc biệt nào đó (ví dụ như co cụm lại thành một số ít nhỏ hơn n nhiều lần các cụm). Như vậy, ở đây ta sẽ nói về Line-Search Newton - CG, tức là: dùng thuật toán line search, mà cơ bản là như đã biết, ta sẽ iteratively thực hiện các bước: 
 >
 > \- tìm pk, và ở đây ta sẽ dùng Newton step. Và ta sẽ chạy thuật toán CG để tìm pk.
 >
@@ -225,7 +225,7 @@
 >
 > Lí do là vì để ta khỏi lẫn lộn giữa kí hiệu đã học của hai thuật toán line searcg, và CG: Phải hiểu rằng, ta sẽ có hai vòng lặp lồng vào nhau: vòng lặp lớn outer iteration sẽ đi từ x0 → x1 → ...→ xk → xk+1...và cho đến khi về được minimizer của f(x) (với điều kiện dừng là gradient vanish ||∇fk|| = 0 hay < ε nào đó), và trong mỗi iteration. ví dụ thứ k nó sẽ:
 >
-> Chạy inner iteration để tìm pk bằng cách dùng CG để giải hệ Bk p = -∇fk (Dùng Bk chỉ Hessian ∇^2fk). Mà trong mỗi inner iteration, thuật toán CG sẽ tính ra các direction dj, để sinh ra cái chuỗi zj (là chuỗi p_j này sẽ converge về nghiệm thật sự của Bk p = -∇fk, tức p* = -(Bk)⁻¹ ∇fk)
+> Chạy inner iteration để tìm pk bằng cách dùng CG để giải hệ Bk p = -∇fk (Dùng Bk chỉ Hessian ∇²fk). Mà trong mỗi inner iteration, thuật toán CG sẽ tính ra các direction dj, để sinh ra cái chuỗi zj (là chuỗi p_j này sẽ converge về nghiệm thật sự của Bk p = -∇fk, tức p* = -(Bk)⁻¹ ∇fk)
 >
 > Có lẽ phải nhớ lại thuật toán CG chút xíu: Mục tiêu là giải Ax = b theo cách iteratively: Idea sẽ là ta đang giải bài toán tối ưu minimize hàm F(x) là là nguyên hàm của Ax - b, để cho first order necessary condition của nó chính là ∇F(x) = 0 ⇔ Ax - b = 0. Vậy thì xuất phát từ x0, chọn p0 là steepest descent direction tại x0, ta sẽ có cách generate p1 sao cho nó conjugate wrt matrix A với p0, rồi cũng tính step-size α1, và đi đến x1, tiếp tụ, từ x1, tìm p2 là conjugate wrt matrix A với p1, và cũng là với p0, ròi α2, đến x2,....Để rồi cuối cùng ta sẽ hội tụ dần về x*, chính là solution của Ax = b.
 >
@@ -259,15 +259,15 @@
 >
 > 2) Khởi tạo z0 = 0. r0 = gradient ∇fk, d0 = -r0 = -∇fk
 >
-> Đây là điểm khác so với CG trong chap 5, trong đó ta sẽ bắt đầu tại initial point nào đó, chứ không phải 0, xem lại liên kết, trong đó nói ta có initial point x0 (chú ý, x0 chính là tương đương z0 ở đây, giải tìm x thỏa Ax = b chính là giải tìm p thỏa ∇^2fk p = - ∇fk.
+> Đây là điểm khác so với CG trong chap 5, trong đó ta sẽ bắt đầu tại initial point nào đó, chứ không phải 0, xem lại liên kết, trong đó nói ta có initial point x0 (chú ý, x0 chính là tương đương z0 ở đây, giải tìm x thỏa Ax = b chính là giải tìm p thỏa ∇²fk p = - ∇fk.
 >
-> Còn r0 chọn bằng ∇fk là sao? → đó là initial residual = residual tại z0 = ∇^2fk × 0 -(-∇fk) = ∇fk (nhớ ko? residual là rk = Axk - b, ở đây thì là ∇^2fk zj + ∇fk)
+> Còn r0 chọn bằng ∇fk là sao? → đó là initial residual = residual tại z0 = ∇²fk × 0 -(-∇fk) = ∇fk (nhớ ko? residual là rk = Axk - b, ở đây thì là ∇²fk zj + ∇fk)
 >
 > Còn d0 chọn bằng -∇fk là sao? → chính là theo CG, thì initial direction chọn bằng steepest descent direction tại initial point.
 >
 > 3) Chạy vòng lặp thuật toán CG: 
 >
-> Đầu tiên nó có chốt chặn: Kiểm tra djTBkdj (như đã ghi chú, trong phần này, gs kí hiệu nó cho Hessian tại k, ∇^2fk) xem âm hoặc bằng 0 không, nếu có thì dừng thuật toán CG, pk = zj (nếu ngay ở step đầu tiên mà djTBkdj đã ≤ 0 thì dùng ngay cái steepest descent direction -∇fk. 
+> Đầu tiên nó có chốt chặn: Kiểm tra djTBkdj (như đã ghi chú, trong phần này, gs kí hiệu nó cho Hessian tại k, ∇²fk) xem âm hoặc bằng 0 không, nếu có thì dừng thuật toán CG, pk = zj (nếu ngay ở step đầu tiên mà djTBkdj đã ≤ 0 thì dùng ngay cái steepest descent direction -∇fk. 
 >
 > Chỗ này là sao? → Đây chính là đoạn chỉnh sửa so với CG, vì trong CG chuẩn, ta có giả định matrix hệ số A xác định dương, pkBkpk (tương ứng với djTBkdj ở đây) sẽ luôn dương. Nhưng ở đây, Hessian Bk không chắc luôn xác định dương, nên djTBkdj có thể âm hoặc bằng 0. Khi đó, CG sẽ bị lỗi ở bước tính αj = rjTrj / djTBjdj: Lỗi explode nếu djTBkdj = 0 hoặc αj sẽ âm nếu djTBkdj âm → dẫn tới thuật toán sẽ dẫn ta đi ngược lại hướng dj → tăng residual thay vì giảm. Do đó, LSNCG sẽ stop ngay khi thấy djTBkdj đã ≤ 0.
 >
@@ -329,9 +329,9 @@
 >
 > → V = A W 
 >
-> ⇨ A = VWinv chính là change of basis matrix chuyển từ tọa độ basis v's sang tọa độ basis w's
+> ⇨ A = VW⁻¹ chính là change of basis matrix chuyển từ tọa độ basis v's sang tọa độ basis w's
 >
-> Nếu v's là standard basis thì V = I. → Winv chính là matrix chuyển tạo độ basis chuẩn sang basis w's.
+> Nếu v's là standard basis thì V = I. → W⁻¹ chính là matrix chuyển tạo độ basis chuẩn sang basis w's.
 >
 > Quay lại đây, Qᵀ gk cũng chính là Q⁻¹ gk chính là chuyển tọa độ của gradient gk từ basis e's sang basis q's. Về mặt hình học, chính là xoay trục tọa độ trở nên sao cho các trục thẳng góc với các vector q's (cũng vuông góc nhau)
 >
@@ -369,7 +369,7 @@
 >
 > Và trong chap 8 sẽ nói nhiều hơn về cái này, nhưng đại ý là, ta sẽ dùng công thức finite differencing:
 >
-> ∇^2fk d ≈ [∇f(xk + hd) - ∇f(xk)] / h.
+> ∇²fk d ≈ [∇f(xk + hd) - ∇f(xk)] / h.
 >
 > Công thức này là sao?
 >
@@ -377,9 +377,9 @@
 >
 > g'(α) = d/dα ∇(xk + αd) = d/d(xk + αd) ∇(xk + αd) . d/dα (xk + αd)
 >
-> = ∇^2f(xk + αd) d
+> = ∇²f(xk + αd) d
 >
-> ⇨ ∇^2f(xk) d = g'(α)|α=0 tức là đạo hàm của hàm  g(α) = ∇(xk + αd) tại α = 0.
+> ⇨ ∇²f(xk) d = g'(α)|α=0 tức là đạo hàm của hàm  g(α) = ∇(xk + αd) tại α = 0.
 >
 > Như vậy, dựa theo định nghĩa đạo hàm hàm f(x):
 >
@@ -421,7 +421,7 @@
 >
 > Đầu tiên ý tưởng chính của trust region method tóm gọn như sau: Tại mỗi iteration, xem hàm f như hàm bậc hai, để giải bài toán minimize hàm bậc hai mk(p) có ràng buộc ||pk|| ≤ Δk, với ràng buộc Δk xác định ở iteration trước. Giải ra pk, check thử xem độ uy tín của mô hình mk, bằng tỉ lệ giữa độ giảm bởi mk và độ giảm thực tế (nếu dùng pk để cập nhận vị trí), để nếu độ tỉ lệ này cao (hướng về 1) chứng tỏ mk mô phỏng đúng f, và ||pk|| = Δk, ta sẽ tăng trust region. Ngược lại nếu độ uy tín thấp, chứng tỏ mk mô phỏng sai hàm f, ta sẽ không dùng pk, giảm trust region. Còn uy tín vừa vừa thì vẫn update nhưng giữ nguyên trust region. Ý tưởng chính là vậy.
 >
-> Còn cụ thể hơn mk(p) là xấp xỉ bậc hai của f tại xk: mk(p) = fk + ∇fkTp + (1/2) pᵀ Bk p. Nếu Bk được chọn là Hessian ∇^2fk, thì ta có trust region Newton, nếu Bk là I thì ta sẽ có trust region steepest descent, còn nếu Bk là ma trận xấp xỉ Hessian thì ta có trust region quasi Newton.
+> Còn cụ thể hơn mk(p) là xấp xỉ bậc hai của f tại xk: mk(p) = fk + ∇fkTp + (1/2) pᵀ Bk p. Nếu Bk được chọn là Hessian ∇²fk, thì ta có trust region Newton, nếu Bk là I thì ta sẽ có trust region steepest descent, còn nếu Bk là ma trận xấp xỉ Hessian thì ta có trust region quasi Newton.
 >
 > Và bài toán minimize mk s.t ||pk|| ≤ Δk gọi là sub-problem.
 >
@@ -455,7 +455,7 @@
 >
 > Và dĩ nhiên cũng dễ hiểu thuật toán 7.2 (CG Steihaug) chỉ là CG chỉnh sửa để giải subproblem thôi, đặt nó trong vòng lặp lớn của thuật toán 4.1 (Trust Region), cụ thể là cái bước giải subproblem tìm pk thì ta mới có đầy đủ Trust Region Newton CG. 
 >
-> Có thể vẫn cần nói lại điều này cho khắc sâu hơn: Nên nhớ tác dụng của CG chủ yếu là giúp giải hệ Ax = b. Và khi đối diện với thuật toán nào mà pk của nó là dùng Newton step, thì chính là khi ta muốn giải hệ ∇^2 fk p = -∇fk để tìm pk. Và do đó, CG có thể giúp giải cái hệ này theo lối iteratively. Tuy nhiên vì CG gốc giải định A xác định dương, nên khi áp dụng vào bài toán này, Hessian có thể không xác định dương, thì ta phải chỉnh sửa CG. 
+> Có thể vẫn cần nói lại điều này cho khắc sâu hơn: Nên nhớ tác dụng của CG chủ yếu là giúp giải hệ Ax = b. Và khi đối diện với thuật toán nào mà pk của nó là dùng Newton step, thì chính là khi ta muốn giải hệ ∇² fk p = -∇fk để tìm pk. Và do đó, CG có thể giúp giải cái hệ này theo lối iteratively. Tuy nhiên vì CG gốc giải định A xác định dương, nên khi áp dụng vào bài toán này, Hessian có thể không xác định dương, thì ta phải chỉnh sửa CG. 
 >
 > Nếu so với Line Search Newton CG vừa học, thì tại mỗi outer iteration, ta có thêm inner iteration của CG để tìm Newton step.
 >
@@ -547,7 +547,7 @@
 >
 > Lúc nãy mình đã ôn lại Cauchy point về mặt trực giác, nó là khi ta đi theo hướng steepest descent tại xk và muốn giảm tối đa mk(p) trong phạm vi ràng buộc. Tức là nó là solution của bài toán minimize g(α) = mk(α(-∇fk)) s.t ||α(-∇fk)|| ≤ Δk.
 >
-> Với mk(p) = fk + ∇fkTp + (1/2)p ∇^2fk p thì việc restrict bởi hướng ∇fk sẽ cho ta bài toán mininize hàm đơn biến bậc hai có ràng buộc. 
+> Với mk(p) = fk + ∇fkTp + (1/2)p ∇²fk p thì việc restrict bởi hướng ∇fk sẽ cho ta bài toán mininize hàm đơn biến bậc hai có ràng buộc. 
 >
 > Chỉ việc giải tìm critical point: g'(α) = 0, để xem điểm cực tiểu của hàm g(α) nằm bên trong hay ngoài phạm vi trust region. Nếu nằm trong thì không có gì để nói, còn nếu nằm ngoài thì vì giới hạn, ta sẽ lấy tại boudary.
 >
@@ -557,39 +557,39 @@
 >
 > = ∇mk(α(-∇fk)) . (-∇fk)
 >
-> = [ (∇^2fk p + ∇fk)p=α(-∇fk) ] . (-∇fk)
+> = [ (∇²fk p + ∇fk)p=α(-∇fk) ] . (-∇fk)
 >
-> = [∇^2fk α(-∇fk) + ∇fk] . (-∇fk)
+> = [∇²fk α(-∇fk) + ∇fk] . (-∇fk)
 >
-> = [-α ∇^2fk∇fk + ∇fk]T (-∇fk)
+> = [-α ∇²fk∇fk + ∇fk]T (-∇fk)
 >
-> = α ∇fkT ∇^2fk ∇fk - ∇fkT∇fk
+> = α ∇fkT ∇²fk ∇fk - ∇fkT∇fk
 >
 > Fisrt order optimality necessary condition: g'(α) = 0 
 >
-> ⇔ α ∇fkT ∇^2fk ∇fk - ∇fkT∇fk = 0
+> ⇔ α ∇fkT ∇²fk ∇fk - ∇fkT∇fk = 0
 >
-> ⇔ α ∇fkT ∇^2fk ∇fk = ∇fkT∇fk
+> ⇔ α ∇fkT ∇²fk ∇fk = ∇fkT∇fk
 >
-> ⇔ α = ∇fkT∇fk / ∇fkT ∇^2fk ∇fk
+> ⇔ α = ∇fkT∇fk / ∇fkT ∇²fk ∇fk
 >
-> ⇨ ||α(-∇fk)|| = (∇fkT∇fk / ∇fkT ∇^2fk ∇fk) ||∇fk||
+> ⇨ ||α(-∇fk)|| = (∇fkT∇fk / ∇fkT ∇²fk ∇fk) ||∇fk||
 >
-> = ||∇fk||^3 / ∇fkT ∇^2fk ∇fk
+> = ||∇fk||^3 / ∇fkT ∇²fk ∇fk
 >
-> Tới đây tính g''(α) = d/dα g'(α) = d/dα [α ∇fkT ∇^2fk ∇fk - ∇fkT∇fk] = ∇fkT ∇^2fk ∇fk
+> Tới đây tính g''(α) = d/dα g'(α) = d/dα [α ∇fkT ∇²fk ∇fk - ∇fkT∇fk] = ∇fkT ∇²fk ∇fk
 >
 > Chia hai case: 
 >
-> 1) ∇fkT ∇^2fk ∇fk < 0, thì cực trị là maximum của hàm g(α), nên để minimize g(α) trong phạm vi giới hạn, thì điểm cần tìm là nằm ngay trên boudary: → solution là (-∇fk / ||∇fk||) Δk
+> 1) ∇fkT ∇²fk ∇fk < 0, thì cực trị là maximum của hàm g(α), nên để minimize g(α) trong phạm vi giới hạn, thì điểm cần tìm là nằm ngay trên boudary: → solution là (-∇fk / ||∇fk||) Δk
 >
-> 2) ∇fkT ∇^2fk ∇fk > 0, thì cực trị là minimum của hàm g(α) nên phải xét thêm việc điểm này nằm trong hay ngoài:
+> 2) ∇fkT ∇²fk ∇fk > 0, thì cực trị là minimum của hàm g(α) nên phải xét thêm việc điểm này nằm trong hay ngoài:
 >
-> a) ||∇fk||^3 / ∇fkT ∇^2fk ∇fk > Δk thì ta sẽ có solution là:
+> a) ||∇fk||^3 / ∇fkT ∇²fk ∇fk > Δk thì ta sẽ có solution là:
 >
 > (-∇fk / ||∇fk||) Δk
 >
-> b) Ngược lại, thì solution là (∇fkT∇fk / ∇fkT ∇^2fk ∇fk) (-∇fk)
+> b) Ngược lại, thì solution là (∇fkT∇fk / ∇fkT ∇²fk ∇fk) (-∇fk)
 >
 > Viết gk, Bk cho gọn:
 >
@@ -601,9 +601,9 @@
 >
 > ⇔ ||gk||^3 / ΔkgkTBkgk > 1 thì solution là -(Δk/ ||gk||) gk (B)
 >
-> + Ngược lại, solution là (||gk||^2 / gkTBkgk) (-gk) (C)
+> + Ngược lại, solution là (||gk||² / gkTBkgk) (-gk) (C)
 >
-> mà cái này = (||gk||^2 / gkTBkgk) (||gk||/Δk)(Δk/ ||gk||) (-gk)
+> mà cái này = (||gk||² / gkTBkgk) (||gk||/Δk)(Δk/ ||gk||) (-gk)
 >
 > = [(||gk||^3 / ΔkgkTBkgk) [-(Δk/ ||gk||) gk] 
 >
@@ -664,7 +664,7 @@
 > pk.
 >
 > Và việc dùng CG để giải sub-problem chính là dùng thuật toán CG giúp tìm
-> pkN bằng cách giải hệ ∇^2fk pkN = - ∇fk, theo cách iteratively: nói ngắn gọn
+> pkN bằng cách giải hệ ∇²fk pkN = - ∇fk, theo cách iteratively: nói ngắn gọn
 > như sau
 >
 > Ôn nhanh CG cũng như thuật toán 5.2:
@@ -695,7 +695,7 @@
 >
 > minimize mk(p) = fk + ∇fkTp + (1/2)pᵀ Bk p subject to ||p|| ≤ Δk
 >
-> (vì đây là Trust Region Newton nên Bk chính là ∇^2fk)
+> (vì đây là Trust Region Newton nên Bk chính là ∇²fk)
 >
 > Thế thì, để giải bài toán subproblem, dĩ nhiên ta cũng giải theo lối iterative
 > với hai phương pháp đã học trong chap 5: Dogleg và 2D subspace
@@ -850,13 +850,13 @@
 >
 > Thế thì: ||zj+1|| = ||zj + αjdj||
 >
-> ⇨ ||zj+1||^2 = ||zj + αjdj||^2 = (zj + αjdj)ᵀ(zj + αjdj)
+> ⇨ ||zj+1||² = ||zj + αjdj||² = (zj + αjdj)ᵀ(zj + αjdj)
 >
 > = (zjT + αjdjT)(zj + αjdj)
 >
 > = zjTzj + αjdjTzj + zjTαjdj + αjdjTαjdj
 >
-> = ||zj||^2 + 2αjdjTzj + αj^2||dj||^2
+> = ||zj||² + 2αjdjTzj + αj²||dj||²
 >
 > Đến đây, nếu ta chứng minh được djTzj > 0 thì sẽ chứng minh được ||zj+1|| > ||zj|| (1)
 >
@@ -883,7 +883,7 @@
 >
 > Xét k = 1, d1Tz1 có > 0 không? (z0 = 0 rồi nên ta sẽ chứng minh từ k = 1)
 >
-> d1Tz1 = d1T(z0 + α1d1) = d1Tα1d1 = α1 ||d1||^2 cái này > 0, vì sao? vì α1 là step-size, luôn dương (vì sao luôn dương, vì α1 là stepsize tìm được bằng cách tối thiểu hóa hàm bậc hai đơn biến mk giới hạn bởi d1, mà d1. hay dj luôn là descent direction (nếu ko, tưc djTBkdj ≤ thì thuật toán đã return ở chốt đầu rồi, nên đã qua được chốt đó thì tức là djTBkdj > 0. Nên αj = rjTrj / djTBkdj sẽ dương do tử và mẫu dương.
+> d1Tz1 = d1T(z0 + α1d1) = d1Tα1d1 = α1 ||d1||² cái này > 0, vì sao? vì α1 là step-size, luôn dương (vì sao luôn dương, vì α1 là stepsize tìm được bằng cách tối thiểu hóa hàm bậc hai đơn biến mk giới hạn bởi d1, mà d1. hay dj luôn là descent direction (nếu ko, tưc djTBkdj ≤ thì thuật toán đã return ở chốt đầu rồi, nên đã qua được chốt đó thì tức là djTBkdj > 0. Nên αj = rjTrj / djTBkdj sẽ dương do tử và mẫu dương.
 >
 > Tiếp, gỉa sử nó đúng với k = j: djTzj > 0
 >
@@ -899,11 +899,11 @@
 >
 > = βj+1djTzj + βj+1djTαjdj
 >
-> = βj+1djTzj + βj+1αj ||dj||^2
+> = βj+1djTzj + βj+1αj ||dj||²
 >
 > Mà ta đã giả sử djTzj > 0 ⇨ βj+1djTzj > 0 (vì βj+1 = rj+1Trj+1 / rjTrj > 0)
 >
-> và βj+1αj ||dj||^2 cũng dương nốt.
+> và βj+1αj ||dj||² cũng dương nốt.
 >
 > Vậy chứng minh xong là djTzj > 0 với mọi j ⇨ theo (1), ta đã chứng minh xong.
 
@@ -1107,7 +1107,7 @@
 > Thế thì để hiểu bản chất vì sao  ta phải tính A^, b^ đó là vì: Mình đang giải bài toán
 > trong một hệ tọa độ khác: Là hệ tọa độ basis c's:
 >
-> Khi đặt x^ = Cx thì tọa độ của x trong basis e's, sẽ chuyển sang tọa độ trong basis cinv'
+> Khi đặt x^ = Cx thì tọa độ của x trong basis e's, sẽ chuyển sang tọa độ trong basis c⁻¹'
 > s (các cột của C⁻¹): Vì sao?
 >
 > Để hiểu ý này, nhớ lại Change of basis matrix, đầu tiên xuất phát từ cách xây dựng
@@ -1132,7 +1132,7 @@
 >
 > ⇨ [T(v1), T(v2),..] = W A
 >
-> ⇨ A = Winv [T(v1), T(v2),..]
+> ⇨ A = W⁻¹ [T(v1), T(v2),..]
 >
 > Và một vector u = (u1, u2,...) trong basis v's: Σi ui vi. Khi biến đổi bởi T(.) và thể hiện
 > trong tọa độ u' s:
@@ -1163,33 +1163,33 @@
 >
 > Vậy thì bây giờ, nếu T(v) là phép biến đổi identity: T(v) = v, thì khi đó:
 >
-> [T(v1), T(v2),...] chỉ là [v1, v2,..], đặt là V ⇨ A = Winv V
+> [T(v1), T(v2),...] chỉ là [v1, v2,..], đặt là V ⇨ A = W⁻¹ V
 >
 > Và nếu như v's là e's tức input basis là standard basis, thì V chính là I, và ta sẽ có
-> matrix giúp đổi tọa độ từ basis e's sang basis w's đơn giản là A = Winv.
+> matrix giúp đổi tọa độ từ basis e's sang basis w's đơn giản là A = W⁻¹.
 >
 > Do đó, khi đặt x^ = Cx = (C⁻¹)⁻¹ x thì ta đang đổi tọa độ từ basis e's sang tọa độ
-> của basis cinv' s, tức là các cột của C⁻¹. (ko phải là của C nhé)
+> của basis c⁻¹' s, tức là các cột của C⁻¹. (ko phải là của C nhé)
 >
 > -----
 >
 > Quay lại đây, ta đang nói bản chất vì sao ta phải tính A^, b^ đó là vì: Mình đang giải bài
-> toán trong một hệ tọa độ khác: Là hệ tọa độ basis cinv's.
+> toán trong một hệ tọa độ khác: Là hệ tọa độ basis c⁻¹'s.
 >
 > Thế thì, trong gian hệ tọa độ đó, ta cũng sẽ đi theo một chuỗi điểm x^0 → x^1 → ...để
 > đến x^* và điểm này sẽ tương ứng với x* trong tọa độ e's. Nói cách khác, khi có x*^, ta
-> sẽ chuyển nó sang lại tọa độ e's bằng cách nhân với change of basis từ basis cinv's
-> (chú ý, basis cinv's, ko phải c's) sang basis e's:
+> sẽ chuyển nó sang lại tọa độ e's bằng cách nhân với change of basis từ basis c⁻¹'s
+> (chú ý, basis c⁻¹'s, ko phải c's) sang basis e's:
 >
 > (I)⁻¹ C⁻¹ = C⁻¹, tức là x* = C⁻¹ x^*.
 >
-> Nó giúp ta hiểu sâu hơn bản chất: CHUYỂN SANG HỆ TỌA ĐỘ BASIS cinv'a, TRONG
+> Nó giúp ta hiểu sâu hơn bản chất: CHUYỂN SANG HỆ TỌA ĐỘ BASIS c⁻¹'a, TRONG
 > ĐÓ BÀI TOÁN CÓ MAᵀRIX HỆ SỐ TỐT HƠN → HỘI TỤ NHANH HƠN → KHI CÓ
 > KẾT QỦA, x^*, CHUYỂN NÓ VỀ LẠI TỌA ĐỘ BASIS e's ĐỂ CÓ x*.
 >
 > Thế thì, từ việc hiểu bản chất này, ta sẽ hiểu ý tưởng của việc né cái vụ làm tường
 > minh như sau: TÌM VÌ VẤN ĐỀ TÍNH C⁻¹ CƠ BẢN CHỈ LÀ GIÚP CHUYỂN TỌA ĐỘ
-> QUA LẠI GIỮA HAI CƠ SỞ e' s và cinv's nên ta sẽ tìm cách TẠO RA CHUỖI x^1,x^2...
+> QUA LẠI GIỮA HAI CƠ SỞ e' s và c⁻¹'s nên ta sẽ tìm cách TẠO RA CHUỖI x^1,x²...
 > NHƯNG TRONG TỌA ĐỘ e's LUÔN.
 >
 > Để hình dung sự bất cập của việc làm Tường minh (Explicitly):
@@ -1200,7 +1200,7 @@
 > Ta đang đứng ở nhà (trong hệ tọa độ basis e's).
 >
 > Ta tốn một đống chi phí "mua vé" (tính ma trận C) để bay sang không gian mới (hệ tọa
-> độ basis cinv's).
+> độ basis c⁻¹'s).
 >
 > Ở không gian đó, ta bước từ x^0 → x^1 → ... → x^* (nhảy thuật toán CG rất nhanh vì
 > ma trận hệ số bên đó có phân phối trị riêng tụ lại, đường siêu dễ đi).
@@ -1218,7 +1218,7 @@
 > Đại khái là vầy:
 >
 > Cách làm: Là ta cứ bám sát vào thuật toán "naive" PCG: Nhưng sẽ tìm cách để thể hiện
-> các kết quả bằng basis e's, thay vì basis cinv's: 
+> các kết quả bằng basis e's, thay vì basis c⁻¹'s: 
 >
 > Theo naive CG, như đã biết:
 >
@@ -1238,7 +1238,7 @@
 >
 > Làm như sau:
 >
-> x^ là tọa độ trong basis cinv's thì tọa độ trong basis e's của nó là x = C⁻¹ x^ ⇨ x^ = Cx
+> x^ là tọa độ trong basis c⁻¹'s thì tọa độ trong basis e's của nó là x = C⁻¹ x^ ⇨ x^ = Cx
 > → Ta sẽ thay x^ = Cx
 >
 > r^ = A^x^ - b^ = C⁻¹ᵀAC⁻¹Cx - C⁻¹ᵀb = C⁻¹ᵀAx - C⁻¹ᵀb = C⁻¹ᵀ(Ax - b) = C⁻¹ᵀr
@@ -1340,7 +1340,7 @@
 > Thế thì vừa rồi là mình ôn lại về thuật toán PCG. Quay lại đây, đại ý là để CG có thể
 > giải bài toán subproblem nhanh hơn, ta cũng có thể áp dụng PCG vào. Và mình hiểu
 > điều đó đồng nghĩa là ta sẽ dùng matrix full rank C để đổi biến, chuyển tọa độ sang
-> hệ basis cinv's khiến matrix hệ số có phân phối trị riêng tốt hơn.
+> hệ basis c⁻¹'s khiến matrix hệ số có phân phối trị riêng tốt hơn.
 >
 > Thế thì, nhắc lại một chút, trong bài toán subproblem, ta muốn giải hệ Bk p = -∇fk
 >
@@ -1360,10 +1360,10 @@
 > Với Bk^p = D⁻¹ᵀ Bk D⁻¹, ∇fk^ = D⁻¹ᵀ ∇fk
 >
 > Và nếu như vừa ôn lại bản chất của PCG, thì đây chính là việc VỀ LÍ THUYẾT
-> THUẬT TOÁN  TẠO CHUỖI z^1, z^2,... ĐỂ ĐI TỚI z^* NHANH HƠN (giống như trong
+> THUẬT TOÁN  TẠO CHUỖI z^1, z²,... ĐỂ ĐI TỚI z^* NHANH HƠN (giống như trong
 > note trước, ta tạo chuỗi x^k đi đến x^*).
 >
-> Và các direction sẽ là d^1, d^2,....(tương ứng với trong note trước là p^k)
+> Và các direction sẽ là d^1, d²,....(tương ứng với trong note trước là p^k)
 >
 > VÀ KHI CÓ z^* (tức là p^*) rồi,  THÌ DÙNG D ĐỂ DỊCH VỀ LẠI p*: p* = D⁻¹ p^*.  VÀ
 > VỀ THỰC HÀNH THÌ TA SẼ KHÔNG LÀM THEO LỐI TƯỜNG MINH MÀ SẼ TẠO
