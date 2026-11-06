@@ -1,6 +1,6 @@
 # 5.4.2 Outer product approximation
 
-📊 **Progress:** `3` Notes | `3` Screenshots | `2` AI Reviews
+📊 **Progress:** `4` Notes | `4` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-u0cqcsg"></a>
@@ -131,7 +131,7 @@
 >
 >
 >
-> Do đó ở đây mới nói rằng: yi = E\[Ti|𝐱i\], hay Yn = E\[Tn|𝐗n\] = 𝐰ᵀΦ(𝐱)
+> Do đó ở đây mới nói rằng: yi = E\[Ti|𝐱i\], hay Yn = E\[Tn|𝐗n\] 
 >
 >
 >
@@ -262,29 +262,18 @@
 📹 Video 2: [Vì sao yn - tn có kỳ vọng bằng 0?](https://www.youtube.com/watch?v=xxcxiTXNEYo)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú phân tích rất sâu sắc và chính xác bản chất xác suất đằng sau lập luận rút gọn của Bishop khi bỏ qua số hạng đạo hàm bậc hai.
->
-> **🟡 Minor issues**
->
-> **1.** *"hay Yn = E[Tn|𝐗n] = 𝐰ᵀΦ(𝐱)"*
->
-> Ở đoạn này bạn ghi nhầm lại công thức của Linear Regression (𝐰ᵀΦ(𝐱)), trong khi ngữ cảnh chương 5 đang là mạng neural phi tuyến tổng quát y(𝐱, 𝐰).
->
-> **2.** *"Theo LOTUS: E[g(𝐗n)] = ∫g(𝐱)f(𝐱)d𝐱 = ∫E[Tn|𝐱] f(𝐱)d𝐱 ... = E[Tn]"*
->
-> Về mặt thuật ngữ lý thuyết xác suất, tính chất E[E[T|X]] = E[T] được gọi là Luật kỳ vọng toàn phần (Law of Total Expectation / Tower Property). Việc bạn tự khai triển tích phân là hoàn toàn chính xác, chỉ là không nhất thiết phải gọi tên riêng là LOTUS.
->
+> Ghi chú phân tích rất sâu sắc và chính xác bản chất xác suất đằng sau lập luận của Bishop. Bạn đã làm rõ được tại sao yn - tn có kỳ vọng bằng 0 thông qua luật kỳ vọng toàn phần và giải thích trọn vẹn lý do số hạng thứ hai triệt tiêu khi lấy tổng.
 >
 > **✓ Strengths**
-> - Nhận diện chính xác việc Bishop đã chuyển từ giả định điểm dữ liệu cố định (fixed design) sang xem xét (X_n, T_n) như các biến ngẫu nhiên lấy mẫu từ phân phối chung.
-> - Chứng minh chặt chẽ tại sao (Y_n - T_n) có kỳ vọng bằng 0 bằng luật kỳ vọng toàn phần.
-> - Giải thích chuẩn xác logic thống kê: giả định không tương quan kết hợp kỳ vọng bằng 0 giúp số hạng tích trung bình triệt tiêu về 0 khi lấy tổng.
+> - Hiểu rất rõ và giải thích tường tận việc xem (x_n, t_n) như các biến ngẫu nhiên lấy mẫu từ phân phối p(x, t) để biến yn và đạo hàm của nó thành các biến ngẫu nhiên.
+> - Chứng minh chặt chẽ E[E[T|X] - T] = 0 bằng định lý LOTUS / Law of Total Expectation.
+> - Giải thích chính xác cơ chế mà Bishop dùng để bỏ qua số hạng thứ hai: tính không tương quan dẫn đến tích kỳ vọng bằng 0, và tổng trên N mẫu đóng vai trò xấp xỉ trung bình mẫu.
 >
 > **💡 Deeper notes**
-> - Trên thực tế, y(x, w) chỉ tiệm cận kỳ vọng có điều kiện E[T|x] khi mạng neural có đủ dung lượng (capacity) và đã hội tụ về nghiệm tối ưu. Nếu mô hình bị lệch (misspecified) hoặc chưa hội tụ, residual (y - t) sẽ chứa cả sai số mô hình (bias), khiến kỳ vọng không hoàn toàn bằng 0.
-> - Trong công thức (5.83), số hạng là tổng trực tiếp ∑ chứ không có hệ số 1/N. Tuy nhiên, lập luận của Bishop ngầm dựa trên Luật số lớn (Law of Large Numbers) rằng tổng này có bậc O(√N) hoặc trung bình mẫu hội tụ về 0, do đó nhỏ hơn đáng kể so với số hạng thứ nhất (luôn là ma trận nửa xác định dương tích lũy tăng tuyến tính theo N).
+> - Về mặt bản chất, kỳ vọng có điều kiện E[y(x) - t | x] = y(x) - E[t | x] = 0 ngay với mỗi x cố định (nếu mô hình đạt hàm hồi quy tối ưu). Do đó, E[y(X) - T] = E_X[E[y(X) - T | X]] = E_X[0] = 0 mà không nhất thiết phải triển khai tích phân 2 lớp đầy đủ.
+> - Để số hạng tổng chia cho N tiến về 0, ta còn ngầm giả định luật số lớn (Law of Large Numbers) và phương sai của số hạng đó hữu hạn.
 
 **🔗 See also:** [Minimizing Squared Loss Function](./15_decision_theory.md#node-hh6bwri)
 
@@ -302,6 +291,152 @@
 >
 >
 > Phần còn lại quay lại sau
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+>
+> Ghi chú đã nắm được ý chính về lợi ích độ phức tạp tính toán khi dùng xấp xỉ tích ngoài (outer product approximation). Cần lưu ý thêm đây là chi phí tính trên mỗi mẫu dữ liệu và xấp xỉ này chỉ hợp lệ khi mô hình đã được huấn luyện tốt.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"chi phí tính toán sẽ chỉ còn là O(W) (tính ∇y) và tính ra outer product tốn O(W²)"*
+>
+> Độ phức tạp O(W) cho lan truyền ngược và O(W²) cho phép nhân ma trận là tính trên từng mẫu dữ liệu n; với tập dữ liệu gồm N mẫu, tổng chi phí tính toán xấp xỉ Hessian sẽ là O(N W²).
+>
+>
+> **✓ Strengths**
+> - Nắm đúng bản chất: xấp xỉ tích ngoài chỉ cần đạo hàm bậc nhất, tận dụng được lan truyền ngược O(W) và xây dựng ma trận trong O(W²).
+>
+> **💡 Deeper notes**
+> - Xấp xỉ Levenberg–Marquardt / tích ngoài này chỉ thực sự đáng tin cậy khi mạng đã được huấn luyện tốt (trained appropriately), khi đó phần dư sai số nhỏ khiến số hạng chứa đạo hàm bậc hai bị triệt tiêu.
+> - Công thức H ≈ ∑ b_n b_n^T áp dụng cho hàm kích hoạt đồng nhất (identity) ở đầu ra; với cross-entropy và hàm sigmoid/softmax, công thức sẽ có thêm hệ số trọng số đầu ra (ví dụ: y_n(1 - y_n)).
+
+<br>
+
+<a id="node-mjkv6do"></a>
+
+##### Hessian Approximation for Cross-Entropy
+
+<p align="center"><kbd><img src="assets/vwvseysa77k.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Ex 5.19:
+>
+>
+>
+> E(𝐰) = - Σi=1:N {ti ln yi + (1-ti) ln (1-yi)}
+>
+>
+>
+> 𝐇 = ∇²E(𝐰)
+>
+>
+>
+> ∇E(𝐰) = ∇(-Σi=1:N {ti ln yi + (1-ti) ln (1-yi)})
+>
+>
+>
+> = -Σi ∇{ti ln yi + (1-ti) ln (1-yi)}
+>
+>
+>
+> = -Σi {∇(ti ln yi) + ∇\[(1-ti) ln (1-yi)\]}
+>
+>
+>
+> = -Σi {ti ∇(ln yi) + (1-ti) ∇ln (1-yi)}
+>
+>
+>
+> = -Σi {ti \[d/dyi (ln yi) . ∇yi\] + (1-ti) \[d/d(1-yi) ln (1-yi) . ∇(1-yi)}
+>
+>
+>
+> = -Σi { (ti/yi) ∇yi + \[(1-ti)/(1-yi)\] (-∇yi) }
+>
+>
+>
+> = -Σi { (ti/yi) ∇yi - \[(1-ti)/(1-yi)\] ∇yi }
+>
+>
+>
+> = -Σi { (ti/yi) - (1-ti)/(1-yi) } ∇yi
+>
+>
+>
+> = -Σi { \[ti(1-yi) - (1-ti)yi\]/\[yi(1-yi)\] } ∇yi
+>
+>
+>
+> = -Σi { (ti-tiyi-yi+tiyi)/\[yi(1-yi)\] } ∇yi
+>
+>
+>
+> = -Σi { (ti-yi)/\[yi(1-yi)\] } ∇yi
+>
+>
+>
+> yi = σ(ai) ⇒ dyi/dai = σ'(ai) = σ(ai)\[1-σ(ai)\] = yi(1-yi)
+>
+>
+>
+> = -Σi { (ti-yi)/σ'(ai) } \[d/dai yi . ∇ai\]
+>
+>
+>
+> = -Σi { (ti-yi)/σ'(ai) } \[σ'(ai) ∇ai\]
+>
+>
+>
+> = -Σi { (ti-yi) ∇ai }
+>
+>
+>
+> 𝐇 = ∇\[-Σi { (ti-yi) ∇ai }\]
+>
+>
+>
+> = -Σi ∇\[(ti-yi) ∇ai\]
+>
+>
+>
+> = -Σi \[∇(ti-yi) ∇ai + (ti-yi) ∇∇ai\]
+>
+>
+>
+> = -Σi \[-∇yi ∇aiᵀ + (ti-yi) ∇∇ai\]
+>
+>
+>
+> = Σi ∇yi ∇aiᵀ - Σi (ti-yi) ∇∇ai
+>
+>
+>
+> ≈ Σi ∇yi ∇aiᵀ
+>
+>
+>
+> = Σi \[yi(1-yi) ∇ai ∇aiᵀ\] → 5.85 (𝐛i chính là ∇ai)
+>
+>
+>
+> ---
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=1qi4xJ1oBss)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú giải quyết trọn vẹn và chi tiết bài tập 5.19, các bước biến đổi đạo hàm và ma trận Hessian rất mạch lạc và chính xác.
+>
+> **✓ Strengths**
+> - Thực hiện đầy đủ từng bước đạo hàm từ hàm mất mát Cross-Entropy đến gradient và ma trận Hessian.
+> - Nhận diện chính xác quy tắc chuỗi cho hàm logistic sigmoid và biểu diễn đúng tích ngoài (outer product) của gradient vector b_n.
+>
+> **💡 Deeper notes**
+> - Bước xấp xỉ bỏ qua số hạng đạo hàm bậc hai thứ hai (ti - yi)∇²a_i dựa trên giả định mô hình đã được huấn luyện tốt (phần dư ti - yi nhỏ) hoặc xấp xỉ dạng Gauss-Newton / ma trận Fisher Information.
+
+**🔗 See also:** [Cross-Entropy Error Function Gradient](./432_logistic_regression.md#node-gvw6cdv) · [Multiclass Cross-Entropy Error Function](./434_multiclass_logistic_regression.md#node-ndts6t4)
 
 <br>
 
