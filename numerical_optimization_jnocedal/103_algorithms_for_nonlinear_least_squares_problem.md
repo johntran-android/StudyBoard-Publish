@@ -1,6 +1,6 @@
 # 10.3 Algorithms for nonlinear least-squares problem
 
-📊 **Progress:** `14` Notes | `23` Screenshots | `6` AI Reviews
+📊 **Progress:** `14` Notes | `23` Screenshots | `10` AI Reviews
 
 ---
 <a id="node-i8zrnvn"></a>
@@ -14,11 +14,11 @@
 <p align="center"><kbd><img src="assets/pzzx6l3uiv9.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên vẫn là nói về việc giải bài toán least-square: minimize f(x) = Σi ri(x)^2 (10.1)
+> Đầu tiên vẫn là nói về việc giải bài toán least-square: minimize f(x) = Σi ri(x)² (10.1)
 >
 >
 >
-> Còn nhớ trong 10.2, khi nói rằng hàm Φ(x, ti) là hàm tuyến tính theo x, dẫn đến ri(x) = Φ(x, ti) - yi cũng là linear (đúng hơn là affine) function theo x, thì khi đó hàm vector x → vector r(x) = \[r1(x), r2(x),..\] có thể được thể hiện bởi: r(x) = Jx, để rồi Σi ri(x)^2 có thể được thể hiện bởi ||Jx - y||^2. Lúc này bài toán được gọi là linear least-square.
+> Còn nhớ trong 10.2, khi nói rằng hàm Φ(x, ti) là hàm tuyến tính theo x, dẫn đến ri(x) = Φ(x, ti) - yi cũng là linear (đúng hơn là affine) function theo x, thì khi đó hàm vector x → vector r(x) = \[r1(x), r2(x),..\] có thể được thể hiện bởi: r(x) = Jx - y, để rồi Σi ri(x)² có thể được thể hiện bởi ||Jx - y||². Lúc này bài toán được gọi là linear least-square.
 >
 >
 >
@@ -35,7 +35,16 @@
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú giải thích rất sâu sắc về sự khác biệt giữa các bài toán least-square tuyến tính và phi tuyến, đồng thời làm rõ tầm quan trọng của việc khai thác cấu trúc gradient và Hessian. Việc liên hệ với phần 10.2 giúp người đọc dễ dàng nắm bắt bối cảnh và lý do tại sao phương pháp này được giới thiệu.
+> Ghi chú thể hiện tư duy kết nối mạch lạc và hiểu rất sâu sắc bản chất khác nhau giữa linear và nonlinear least-squares, đồng thời nắm bắt chính xác ý đồ khai thác cấu trúc gradient/Hessian của thuật toán Gauss–Newton.
+>
+> **✓ Strengths**
+> - Nhận định rất chuẩn xác rằng 'linear least-squares' bắt nguồn từ việc các hàm thặng dư r_i(x) là tuyến tính (affine) theo x, chứ không phải do hàm mục tiêu f(x) là tuyến tính (thực chất f(x) là hàm bậc hai/quadratic).
+> - Tóm lược chính xác các phương pháp giải đại số tuyến tính của bài toán linear least-squares từ mục 10.2 để tạo bàn đạp bước sang nonlinear least-squares.
+> - Nắm bắt đúng trọng tâm của phần 10.3: khai thác cấu trúc đặc biệt của gradient và Hessian để xấp xỉ độ cong bậc hai (Hessian) chỉ bằng đạo hàm bậc một (Jacobian).
+>
+> **💡 Deeper notes**
+> - Theo quy ước chuẩn trong giáo trình Nocedal & Wright, hàm mục tiêu thường có thêm hệ số 1/2: f(x) = 1/2 * Σ r_i(x)^2 để triệt tiêu số 2 khi lấy gradient.
+> - Thuật ngữ 'free Hessian' là một cách hiểu trực quan rất hay cho Gauss–Newton: ta xấp xỉ Hessian xấp xỉ bằng J(x)^T J(x), tức là có được thông tin độ cong bậc hai mà hoàn toàn không cần tính các ma trận đạo hàm bậc hai ∇^2 r_i(x).
 
 **🔗 See also:** [Bài toán Least-Squares](./101_least_square_problem.md#node-ot9v1dc) · [Hessian miễn phí Least-square](./101_least_square_problem.md#node-4tij0lf)
 
@@ -56,7 +65,7 @@
 >
 >
 >
-> ∇^2f(x) = J(x)ᵀJ(x) + Σi {∇^2ri(x) ri(x)} (10.5)
+> ∇²f(x) = J(x)ᵀJ(x) + Σi {∇²ri(x) ri(x)} (10.5)
 >
 >
 >
@@ -71,19 +80,19 @@
 >
 >
 >
-> Ý tưởng rất đơn giản: tại điểm đang đứng, ví dụ gọi là x0, ta sẽ coi như hàm số là hàm bậc hai: f(x) ≈ f(x0) + ∇f(x0)(x - x0) + (1/2)(x-x0)ᵀ ∇^2f(x0)(x-x0). Đặt đây là hàm g(p) = f(x0) + ∇f(x0)p + (1/2)pᵀ∇^2f(x0)p (p = x - x0). Câu chuyện tiếp theo sẽ là, tìm minimizer của hàm quadratic g(p), bằng closed-form solution:
+> Ý tưởng rất đơn giản: tại điểm đang đứng, ví dụ gọi là x0, ta sẽ coi như hàm số là hàm bậc hai: f(x) ≈ f(x0) + ∇f(x0)ᵀ(x - x0) + (1/2)(x-x0)ᵀ ∇²f(x0)(x-x0). Đặt đây là hàm g(p) = f(x0) + ∇f(x0)ᵀp + (1/2)pᵀ∇²f(x0)p (p = x - x0). Câu chuyện tiếp theo sẽ là, tìm minimizer của hàm quadratic g(p), bằng closed-form solution:
 >
 >
 >
-> ∇g(p) = 0 ⇔ ∇^2f(x0)p + ∇f(x0) = 0 (đây là cái mà gs gọi là standard Newton equation ∇^2f(xk)p = - ∇f(xk))
+> ∇g(p) = 0 ⇔ ∇²f(x0)p + ∇f(x0) = 0 (đây là cái mà gs gọi là standard Newton equation ∇²f(xk)p = - ∇f(xk))
 >
 >
 >
-> ⇔ p = - \[∇^2f(x0)\]inv ∇f(x0)
+> ⇔ p = - \[∇²f(x0)\]⁻¹ ∇f(x0)
 >
 >
 >
-> Đây chính là Newton direction (Newton step), có nghĩa là từ x0 chỉ cần phóng theo p ta sẽ tới x0 - \[∇^2f(x0)\]inv ∇f(x0) chính là điểm sẽ minimize hàm g(p).
+> Đây chính là Newton direction (Newton step), có nghĩa là từ x0 chỉ cần phóng theo p ta sẽ tới x0 - \[∇²f(x0)\]⁻¹ ∇f(x0) chính là điểm sẽ minimize hàm g(p).
 >
 >
 >
@@ -107,7 +116,7 @@
 >
 >
 >
-> Tóm lại, vì hai đặc điểm này, nên ta dùng J(x)ᵀJ(x) thay cho ∇^2f(x), để rồi Newton equation (giúp giải tìm Newton step) sẽ là:
+> Tóm lại, vì hai đặc điểm này, nên ta dùng J(x)ᵀJ(x) thay cho ∇²f(x), để rồi Newton equation (giúp giải tìm Newton step) sẽ là:
 >
 >
 >
@@ -115,16 +124,36 @@
 >
 >
 >
-> hay viết gọn là JkTJk p = - JkTrk
+> hay viết gọn là JkᵀJk p = - Jkᵀrk
 >
 >
 >
 > Một ý cuối đó là, cái vụ term J(x)ᵀJ(x) dominate term thứ hai thường xuất hiện trong các bài toán mà residual nhỏ, hoặc chúng là hàm gần tuyến tính, và đây là những yếu tố xuất hiện nhiều trong cái bài toán thực tế, giúp cho việc dùng Gauss Newton sẽ có tác dụng.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **97/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Bài viết giải thích rất chi tiết và chính xác về lý do và cách thức phương pháp Gauss-Newton sửa đổi so với phương pháp Newton tiêu chuẩn, bao gồm cả hai đặc điểm chính đã được nêu bật trong văn bản. Độ sâu của phân tích rất tốt, tuy nhiên, phần mở đầu có thể ngắn gọn hơn một chút để đi thẳng vào vấn đề chính sớm hơn.
+> Ghi chú nắm rất chắc bản chất và động lực của phương pháp Gauss–Newton từ góc nhìn tối ưu hóa, liên hệ chuẩn xác giữa xấp xỉ Hessian và việc tiết kiệm chi phí đạo hàm bậc hai.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"f(x) ≈ f(x0) + ∇f(x0)(x - x0) + (1/2)(x-x0)ᵀ ∇^2f(x0)(x-x0)"*
+>
+> Ký hiệu tích vô hướng giữa gradient và vector bước dịch chuyển nên viết rõ là ∇f(x₀)ᵀ(x - x₀) hoặc ∇f(x₀)ᵀp để chuẩn xác về mặt kích thước ma trận/vector.
+>
+> **2.** *"p = - [∇^2f(x0)]inv ∇f(x0)"*
+>
+> Bước nghịch đảo này ngầm giả định ma trận Hessian (hoặc sau này là JₖᵀJₖ) khả nghịch (Jₖ có full column rank). Trên thực tế khi JₖᵀJₖ suy biến, cần dùng giả nghịch đảo hoặc các kỹ thuật regularization (như Levenberg–Marquardt).
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ và giải thích trực quan tại sao Gauss–Newton tiết kiệm chi phí: Jacobian J đã được tính khi tìm gradient nên tạo JᵀJ không cần tính thêm đạo hàm bậc hai.
+> - Nắm chuẩn điều kiện để số hạng thứ nhất áp đảo số hạng thứ hai: khi phần dư r_j nhỏ hoặc các hàm r_j gần như affine.
+> - Liên hệ tốt với tư duy tổng quát về Newton step và mô hình xấp xỉ bậc hai từ Convex Optimization.
+>
+> **💡 Deeper notes**
+> - Sách gốc nhấn mạnh Gauss–Newton thường được kết hợp với line search (hoặc trust-region) để đảm bảo tính hội tụ toàn cục khi bước khởi tạo còn xa nghiệm tối ưu.
+> - Tốc độ hội tụ của Gauss–Newton phụ thuộc vào độ lớn của phần dư tại nghiệm: nếu r(x*) = 0 (zero-residual), tốc độ hội tụ là bậc hai (quadratic) giống hệt Newton; nếu r(x*) ≠ 0 nhưng nhỏ, tốc độ hội tụ là tuyến tính (linear) với hệ số co nhỏ.
 
 **🔗 See also:** [Hessian miễn phí Least-square](./101_least_square_problem.md#node-4tij0lf)
 
@@ -139,15 +168,15 @@
 > [!NOTE]
 > Tiếp theo, đại khái là nói về một ưu điểm nữa của Gauss-Newton. Có lẽ nên ôn nhanh, Gauss-Newton là gì:
 >
-> Bối cảnh là ta muốn quay lại đối mặt với bài toán least-square trong trường hợp residual là non-linear function, mà trước đó, trong 10.2, khi ta xét case residual r(x) là linear function, để rồi có dạng Jx - y, khiến việc giải bài toán minimize ||r(x)||^2 trở thành bài toán giải hệ phương trình tuyến tính (normal equation, JᵀJx = Jᵀb) và từ đó có thể dùng các thuật toán đại số tuyến tính đơn thuần như Cholesky factorization giải normal equation, QR factorization based method và SVD based method. Trừ trường hợp bài toán có quy mô lớn thì ta sẽ dùng Conjugate Gradient method - là thuật toán chuyên trị việc giải tìm nghiệm của hệ Ax = b.
+> Bối cảnh là ta muốn quay lại đối mặt với bài toán least-square trong trường hợp residual là non-linear function, mà trước đó, trong 10.2, khi ta xét case residual r(x) là linear function, để rồi có dạng Jx - y, khiến việc giải bài toán minimize ||r(x)||² trở thành bài toán giải hệ phương trình tuyến tính (normal equation, JᵀJx = Jᵀb) và từ đó có thể dùng các thuật toán đại số tuyến tính đơn thuần như Cholesky factorization giải normal equation, QR factorization based method và SVD based method. Trừ trường hợp bài toán có quy mô lớn thì ta sẽ dùng Conjugate Gradient method - là thuật toán chuyên trị việc giải tìm nghiệm của hệ Ax = b.
 >
 > Thì nay, không còn sự tiện lợi đó, ta mới lại xét một đặc điểm của bài toán least square mà gs đề cập ở phần đầu chương 10, cũng như vừa nhắc lại ở note trước, đó là, bài toán này có gradient của hàm objective ∇f(x) = J(x)ᵀr(x) và Hessian = J(x)ᵀJ(x) + một term thứ hai.
 >
->  Thế thì, đặc điểm tốt của bài toán least square đó là, gs nói đại ý là đa số trường hợp thực tế cái term thứ hai của Hessian chính xác rất không đáng kể so với term thứ nhất J(x)ᵀJ(x), khiến việc ta dùng J(x)ᵀJ(x) để xấp xỉ cho Hessian là chấp nhận được. Và như vậy, dự trên sự thật là đằng nào thì ta cũng sẽ có J(x), nên ta sẽ có luôn Hessian xấp xỉ J(x)ᵀJ(x), và vì nó tốt (phần lớn là xấp xỉ tốt cho Hessian thật) nên mới nói là ta có Hessian miễn phí, từ đó có thể dùng thuật toán Newton để giải bài toán này. Nhưng vì không hẵn là Newton thật (vì chỉ khi dùng Hessian thật, thì mới là Newton step thật), nên mới gọi là Gauss Newton. Dĩ nhiên, dùng J(x)ᵀJ(x) thay cho Hessian ∇^2f(x) thì ta không gọi là Newton step pk_N (= -\[∇^2f(x)\]inv ∇f(x)) nữa mà gọi là Gauss-Newton step pk_GN = -(JkTJk)⁻¹ JkTr.
+>  Thế thì, đặc điểm tốt của bài toán least square đó là, gs nói đại ý là đa số trường hợp thực tế cái term thứ hai của Hessian chính xác rất không đáng kể so với term thứ nhất J(x)ᵀJ(x), khiến việc ta dùng J(x)ᵀJ(x) để xấp xỉ cho Hessian là chấp nhận được. Và như vậy, dự trên sự thật là đằng nào thì ta cũng sẽ có J(x), nên ta sẽ có luôn Hessian xấp xỉ J(x)ᵀJ(x), và vì nó tốt (phần lớn là xấp xỉ tốt cho Hessian thật) nên mới nói là ta có Hessian miễn phí, từ đó có thể dùng thuật toán Newton để giải bài toán này. Nhưng vì không hẵn là Newton thật (vì chỉ khi dùng Hessian thật, thì mới là Newton step thật), nên mới gọi là Gauss Newton. Dĩ nhiên, dùng J(x)ᵀJ(x) thay cho Hessian ∇²f(x) thì ta không gọi là Newton step pk_N (= -\[∇²f(x)\]⁻¹ ∇f(x)) nữa mà gọi là Gauss-Newton step pk_GN = -(JkᵀJk)⁻¹ Jkᵀr.
 >
 > (và được biết thì Gauss cũng chính với Gaussen distribution của xác suất, hay khử Gauss của đại số tuyến tính)
 >
-> Vậy thì quay lại đây, tiếp nối hai ưu điểm ở trên (free Hessian, và J(x)ᵀJ(x) xấp xỉ tốt Hessian) thì ở đây nói về ưu điểm thứ ba: Là khi Jk full rank thì ∇fk = JkTrk khác 0 và pk_GN (Gauss-Newton step) trở thành descent direction.
+> Vậy thì quay lại đây, tiếp nối hai ưu điểm ở trên (free Hessian, và J(x)ᵀJ(x) xấp xỉ tốt Hessian) thì ở đây nói về ưu điểm thứ ba: Là khi Jk full rank thì ∇fk = Jkᵀrk khác 0 và pk_GN (Gauss-Newton step) trở thành descent direction.
 >
 > Ôn lại thế nào gọi là descent direction: Đơn giản là hướng đi giúp ta đi xuống, thể hiện bởi directional derivative ≤ 0: ∇f(x)ᵀp ≤ 0. Giúp cho khi đi ra khỏi x một đoạn nhỏ, theo theo hướng p này, xét hàm g(t) = f(x) giới hạn theo phương p: g(t) = f(x + tp). g'(t) = ∇f(x+tp)ᵀp, và g'(t)|t=0 = ∇f(x)ᵀp, với việc p là descent direction thì g'(t)|t=0 ≤ 0. Nên nếu đi ra khỏi x một đoạn nhỏ theo hướng p, thì theo linear approx g(t) ≈ g(0) + g'(0)t sẽ &lt; g(0) ⇨ giá trị hàm giảm xuống, nên mới gọi là descent direction (chú ý, và steepest descent - độ dốc lớn nhất,  chính là -∇f(x))
 >
@@ -155,19 +184,19 @@
 >
 >
 >
-> Dùng pkGN = -(JkTJk)⁻¹ ∇fk ⇨ ∇fk = -JkTJk pkGN
+> Dùng pkGN = -(JkᵀJk)⁻¹ ∇fk ⇨ ∇fk = -JkᵀJk pkGN
 >
-> ⇨ ∇fkTpkGN = (-JkTJk pkGN)ᵀpkGN
+> ⇨ ∇fkTpkGN = (-JkᵀJk pkGN)ᵀpkGN
 >
-> = (-(JkTJk)pkGN)ᵀpkGN
+> = (-(JkᵀJk)pkGN)ᵀpkGN
 >
-> = -(pkGN)ᵀ(JkTJk)ᵀpkGN
+> = -(pkGN)ᵀ(JkᵀJk)ᵀpkGN
 >
-> = -(pkGN)ᵀJkTJkpkGN
+> = -(pkGN)ᵀJkᵀJkpkGN
 >
 > = -(JkpkGN)ᵀ(JkpkGN)
 >
-> = - ||JkpkGN||^2 và đây là negative square norm, nên đương nhiên ≤ 0 cho thấy pkGN là descent direction.
+> = - ||JkpkGN||² và đây là negative square norm, nên đương nhiên ≤ 0 cho thấy pkGN là descent direction.
 >
 >
 >
@@ -179,7 +208,31 @@
 >
 > Mà đã nói Jk full column rank, thì như nhờ MIT 180, ta biết khi đó các cột của J độc lập, nullspace chỉ có vector zero. Vậy Jk pkGN = 0 ⇔ pkGN = 0, cho thấy lúc này ta sẽ không đi đâu nữa
 >
-> Đồng thời, thế pkGN = 0 vào (JkTJk)pkGN = ∇fk, thì cũng cho thấy ∇fk = 0, tức là tại điểm mà Jk pkGN = 0 thì cũng chính là stationary point
+> Đồng thời, thế pkGN = 0 vào (JkᵀJk)pkGN = ∇fk, thì cũng cho thấy ∇fk = 0, tức là tại điểm mà Jk pkGN = 0 thì cũng chính là stationary point
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú rất tốt, thể hiện sự hiểu bài sâu sắc và tự biến đổi chi tiết các bước đại số tuyến tính từ tài liệu. Bạn chỉ cần lưu ý định nghĩa chặt chẽ của 'hướng giảm' (descent direction) là tích vô hướng phải thực sự âm (< 0) chứ không phải ≤ 0.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"thể hiện bởi directional derivative ≤ 0: ∇f(x)ᵀp ≤ 0... linear approx g(t) ≈ g(0) + g'(0)t sẽ < g(0)"*
+>
+> Định nghĩa chuẩn của hướng giảm (descent direction) trong tối ưu hóa đòi hỏi đạo hàm theo hướng phải âm thực sự: $\nabla f(x)^T p < 0$. Nếu tích vô hướng bằng 0 thì xấp xỉ tuyến tính không đảm bảo giá trị hàm giảm ($g'(0)t = 0$), do đó không thể coi là hướng giảm. Đây cũng chính là lý do giáo trình nêu điều kiện $\nabla f_k \neq 0$ để bất đẳng thức trở thành ngặt (< 0).
+>
+> **2.** *"Là khi Jk full rank thì ∇fk = Jkᵀrk khác 0 và pk_GN (Gauss-Newton step) trở thành descent direction"*
+>
+> Cách diễn đạt có thể gây hiểu nhầm rằng '$J_k$ full rank kéo theo $\nabla f_k \neq 0$'. Thực tế trong giáo trình, '$J_k$ có full rank' và '$\nabla f_k \neq 0$' là hai giả thiết đồng thời đi kèm nhau.
+>
+>
+> **✓ Strengths**
+> - Tóm tắt rất mạch lạc bối cảnh và trực giác về 'free Hessian' của Gauss-Newton so với Newton thuần túy.
+> - Tự triển khai tường minh từng bước nhân ma trận trong đạo hàm theo hướng để dẫn ra dạng trừ bình phương chuẩn -||J_k p_k^{GN}||² ≤ 0.
+> - Vận dụng tốt kiến thức đại số tuyến tính (nullspace, full column rank) để giải thích khi nào dấu đẳng thức xảy ra và mối liên hệ với điểm dừng (stationary point).
+>
+> **💡 Deeper notes**
+> - Khi $J_k$ có full column rank ($m \ge n$), ma trận $J_k^T J_k$ là ma trận đối xứng xác định dương (symmetric positive definite), đảm bảo luôn khả nghịch và bước Gauss-Newton $p_k^{GN}$ luôn tồn tại duy nhất.
 
 <br>
 
@@ -190,25 +243,49 @@
 <p align="center"><kbd><img src="assets/k5tk99f3q6g.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ôn lại chút xíu, nói một cách ngắn gọn thì Gauss Newton method là khi ta dùng JkTJk (vốn chỉ là phần thứ nhất trong công thức của Hessian = ∇^2fk = JkTJk + term thứ 2) để xấp xỉ Hessian, và đây là một ưu điểm của bài toán least square vì thực tế thường cho phép xấp xỉ này, và cũng như là nhờ vậy, việc có Hessian trở nên không tốn kém mấy. Và như vậy, công thức Newton step trở thành công thức Gauss Newton: pkGN = -(JkTJk)⁻¹ JkTr, là solution của (JkTJk) pkGN = -JkTr → Công thức này chính là 10.23,
+> Ôn lại chút xíu, nói một cách ngắn gọn thì Gauss Newton method là khi ta dùng JkᵀJk (vốn chỉ là phần thứ nhất trong công thức của Hessian = ∇²fk = JkᵀJk + term thứ 2) để xấp xỉ Hessian, và đây là một ưu điểm của bài toán least square vì thực tế thường cho phép xấp xỉ này, và cũng như là nhờ vậy, việc có Hessian trở nên không tốn kém mấy. Và như vậy, công thức Newton step trở thành công thức Gauss Newton: pkGN = -(JkᵀJk)⁻¹ Jkᵀr, là solution của (JkᵀJk) pkGN = -Jkᵀr → Công thức này chính là 10.23,
 >
-> Vậy thì ở đây ta sẽ nhớ lại bài toán linear least square: Nói một cách ngắn gọn, là khi residual r(x) là tuyến tính (tí quay lại chỗ này), để rồi có dạng r(x) = Jx - y. Khi đó objective là (1/2)||r(x)||^2 = (1/2)(Jx - y)ᵀ(Jx - y) = (1/2)(xᵀJᵀ - yT)(Jx - y) = (1/2)xᵀJᵀJx - (1/2)yTJx - (1/2)xᵀJᵀy + (1/2)yTy = (1/2)xᵀJᵀJx - yTJx + (1/2)yTy. Và gradient lúc này là JᵀJx-Jᵀy và Hessian là JᵀJ.
+> Vậy thì ở đây ta sẽ nhớ lại bài toán linear least square: Nói một cách ngắn gọn, là khi residual r(x) là tuyến tính (tí quay lại chỗ này), để rồi có dạng r(x) = Jx - y. Khi đó objective là (1/2)||r(x)||² = (1/2)(Jx - y)ᵀ(Jx - y) = (1/2)(xᵀJᵀ - yT)(Jx - y) = (1/2)xᵀJᵀJx - (1/2)yTJx - (1/2)xᵀJᵀy + (1/2)yTy = (1/2)xᵀJᵀJx - yTJx + (1/2)yTy. Và gradient lúc này là JᵀJx-Jᵀy và Hessian là JᵀJ.
 >
-> Lúc này bài toán minimize hàm ||r(x)||^2, là bài toán tối ưu hàm quadratic, có closed form solution: là nghiệm của phương trình normal equation: JᵀJx - Jᵀy = 0 ⇔ JᵀJx = Jᵀy → đây là 10.14.
+> Lúc này bài toán minimize hàm ||r(x)||², là bài toán tối ưu hàm quadratic, có closed form solution: là nghiệm của phương trình normal equation: JᵀJx - Jᵀy = 0 ⇔ JᵀJx = Jᵀy → đây là 10.14.
 >
-> Vậy thì so sánh 10.23 (JkTJk) pkGN = JkTr, giúp giải ra Gauss Newton step, với 10.14, JᵀJx = Jᵀy giúp giải ra solution của bài toán linear least square, ta thấy có sự tương đồng. Nên dễ thấy việc tìm pkGN chính là giải một bài toán linear least square khác.
+> Vậy thì so sánh 10.23 (JkᵀJk) pkGN = Jkᵀr, giúp giải ra Gauss Newton step, với 10.14, JᵀJx = Jᵀy giúp giải ra solution của bài toán linear least square, ta thấy có sự tương đồng. Nên dễ thấy việc tìm pkGN chính là giải một bài toán linear least square khác.
 >
-> Do đó nếu JᵀJx = Jᵀy normal equation của bài toán minimize (1/2)||Jx - y||^2 thì (JkTJk) pkGN = -JkTrk chính là normal equation của bài toán minimize (1/2)||Jk p - (-rk)||^2 = (1/2)||Jkp + rk||^2 → Đây là 10.26
+> Do đó nếu JᵀJx = Jᵀy normal equation của bài toán minimize (1/2)||Jx - y||² thì (JkᵀJk) pkGN = -Jkᵀrk chính là normal equation của bài toán minimize (1/2)||Jk p - (-rk)||² = (1/2)||Jkp + rk||² → Đây là 10.26
 >
-> Nói thêm chút về điểm (1) ở trên: Trong bối cảnh Nocedal, người ta chỉ tập trung vào vấn đề tối ưu hóa, nên chỉ đặt ra vấn đề là ta muốn minimize hàm f(x) = Σi ri(x)^2 = ||r(x)||^2 với r(x) = \[r1(x), ...rn(x)\] và ri(x) là residual function theo x, x là biến tối ưu. Và khi hàm ri(x) là hàm tuyến tính theo x, kéo theo r(x) cũng vậy, để lúc này r(x) có thể thể hiện bởi Jx - y, ta có bài toán linear least square.
+> Nói thêm chút về điểm (1) ở trên: Trong bối cảnh Nocedal, người ta chỉ tập trung vào vấn đề tối ưu hóa, nên chỉ đặt ra vấn đề là ta muốn minimize hàm f(x) = Σi ri(x)² = ||r(x)||² với r(x) = \[r1(x), ...rn(x)\] và ri(x) là residual function theo x, x là biến tối ưu. Và khi hàm ri(x) là hàm tuyến tính theo x, kéo theo r(x) cũng vậy, để lúc này r(x) có thể thể hiện bởi Jx - y, ta có bài toán linear least square.
 >
-> Thì trong Bishop, mình hiểu rõ hơn. Đó là khi ta muốn xây dựng prediction function y(w,x) với x là input vector và w là vector adjustable parameter, để rồi error, hay residual r = t - y(w, x). Và ta chỉ quan tâm đến nó như hàm của w, nên ta ghi r(w). Và với các cặp xi, ti khác nhau, ta có các ri(w). Đây chính là tương ứng với ri(x) ở trên. Và với bài toán machine learning, ta muốn tìm w để minimize sum square error: Σ ri(w)^2 = Σi \[y(w, xi) - ti\]^2.
+> Thì trong Bishop, mình hiểu rõ hơn. Đó là khi ta muốn xây dựng prediction function y(w,x) với x là input vector và w là vector adjustable parameter, để rồi error, hay residual r = t - y(w, x). Và ta chỉ quan tâm đến nó như hàm của w, nên ta ghi r(w). Và với các cặp xi, ti khác nhau, ta có các ri(w). Đây chính là tương ứng với ri(x) ở trên. Và với bài toán machine learning, ta muốn tìm w để minimize sum square error: Σ ri(w)² = Σi \[y(w, xi) - ti\]².
 >
-> Rồi, lại nói tiếp, y(w,x), thì ta cũng biết, người ta sẽ có thể dùng hàm basis để tạo các non-linearity của input, y(w,x) = wTφ(x) với w = (w0, w1,...wM-1), Φ(x) = \[1, Φ1(x), Φ2(x),...\]. Lúc này y(w,x) tuy là hàm phi tuyến đối với x, nhưng vẫn tuyến tính đối với w. Và như vậy ri(w) = wTΦi(x) - ti. Và nếu đặt matrix Φ (gọi là design matrix) có các hàng là Φ(x1), thì vector r(w) = ΦTw - t, để rồi, ||r(w)||^2 = ||ΦTw - t||^2. Đây chính là tương ứng với ||Jx - y||^2 trong Nocedal.
+> Rồi, lại nói tiếp, y(w,x), thì ta cũng biết, người ta sẽ có thể dùng hàm basis để tạo các non-linearity của input, y(w,x) = wTφ(x) với w = (w0, w1,...wM-1), Φ(x) = \[1, Φ1(x), Φ2(x),...\]. Lúc này y(w,x) tuy là hàm phi tuyến đối với x, nhưng vẫn tuyến tính đối với w. Và như vậy ri(w) = wTΦi(x) - ti. Và nếu đặt matrix Φ (gọi là design matrix) có các hàng là Φ(x1), thì vector r(w) = ΦTw - t, để rồi, ||r(w)||² = ||ΦTw - t||². Đây chính là tương ứng với ||Jx - y||² trong Nocedal.
 >
 > Nói chung viết ra như vậy để thấy sự liên hệ giữa Bishop và Nocedal.
 >
 > Vậy thì quay lại đây, khi đã nhận định rằng Gauss Newton step pkGN là nghiệm của bài toán linear least square có objective (1/2)||Jkp + rk|| rồi, thì ta có thể dùng các phương phải giải của linear least square để tính pkGN...
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú rất tốt, thể hiện sự hiểu sâu sắc khi tự suy diễn lại phương trình pháp tuyến (normal equations) và liên hệ chặt chẽ giữa cách biểu diễn của Nocedal với mô hình hồi quy tuyến tính trong giáo trình Bishop. Có một vài lỗi nhầm dấu và chuyển vị ma trận nhỏ cần chỉnh lại cho chuẩn xác.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Vậy thì so sánh 10.23 (JkᵀJk) pkGN = Jkᵀr, giúp giải ra Gauss Newton step"*
+>
+> Sơ suất viết thiếu dấu trừ ở vế phải (phải là -Jkᵀrk). Mặc dù các đoạn trước và sau bạn đều viết đúng dạng -(JkᵀJk)⁻¹ Jkᵀrk, nhưng cần sửa lại ở vị trí này để nhất quán.
+>
+> **2.** *"Và nếu đặt matrix Φ (gọi là design matrix) có các hàng là Φ(x1), thì vector r(w) = ΦTw - t"*
+>
+> Nếu ma trận thiết kế Φ có các hàng là vector đặc trưng của từng điểm dữ liệu, thì vector dự đoán là Φw, do đó vector phần dư phải là r(w) = Φw - t chứ không phải Φᵀw - t (Φᵀw sẽ bị lệch chiều không gian nếu số mẫu N khác số chiều đặc trưng M).
+>
+>
+> **✓ Strengths**
+> - Tự triển khai tường minh bài toán linear least-squares và chỉ ra chính xác vì sao bước Gauss-Newton pkGN thực chất là nghiệm của bài toán bình phương tối thiểu tuyến tính.
+> - Khả năng kết nối kiến thức rất tốt giữa góc nhìn tối ưu hóa giải tích (Nocedal) và mô hình hóa học máy (Bishop).
+>
+> **💡 Deeper notes**
+> - Một lợi ích cực kỳ quan trọng của việc chuyển về bài toán (10.26) và giải qua QR/SVD thay vì giải trực tiếp phương trình pháp tuyến (10.23) là số điều kiện (condition number): giải qua QR trên Jk chỉ chịu số điều kiện κ(Jk), trong khi nhân trực tiếp JkᵀJk làm số điều kiện bị bình phương lên thành κ(Jk)², dễ dẫn đến mất ổn định số học khi ma trận gần suy biến.
+> - Ở câu cuối cùng, biểu thức norm thiếu số mũ 2: (1/2)||Jkp + rk||².
 
 <br>
 
@@ -231,6 +308,26 @@
 >
 > Nói chung là, chỉ là đừng có dại mà tính J làm gì khi chỉ cần JᵀJ và Jᵀr.
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú xuất sắc! Bạn đã giải thích rất trực quan bản chất đại số tuyến tính của công thức (10.27) thông qua góc nhìn tích ngoài (outer product) và tổ hợp tuyến tính.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"ri đối vối x: ∇rj"*
+>
+> Lỗi chính tả nhỏ (gõ nhầm ri thay vì rj và 'vối' thay vì 'với'); không ảnh hưởng đến hiểu biết toán học.
+>
+>
+> **✓ Strengths**
+> - Áp dụng chính xác 4 góc nhìn nhân ma trận của Gilbert Strang để diễn giải tổng tích ngoài ma trận hạng 1.
+> - Hiểu rõ động lực giảm thiểu bộ nhớ từ O(mn) xuống O(n²) khi m >> n trong các bài toán bình phương tối thiểu phi tuyến.
+> - Tự sửa đúng chỉ số lấy tổng j từ 1 đến m (trong khi sách gốc có lỗi in ấn viết i = 1 nhưng biến chạy là j).
+>
+> **💡 Deeper notes**
+> - Dù việc tính trực tiếp JᵀJ và giải hệ phương trình chuẩn tiết kiệm bộ nhớ, nó có thể làm tăng số điều kiện (condition number) lên bình phương: cond(JᵀJ) = (cond(J))², gây kém ổn định số học so với phương pháp phân tích QR trực tiếp trên J nếu J được lưu trữ.
+
 <br>
 
 <a id="node-z30uszf"></a>
@@ -242,11 +339,11 @@
 > [!NOTE]
 > Đoạn này đại khái là:
 >
->  Còn nhớ, bài toán least square là bài toán tối ưu trong đó ta minimize f(x) =(1/2) Σj rj(x)^2 = ||r(x)||^2 = r(x)ᵀr(x).
+>  Còn nhớ, bài toán least square là bài toán tối ưu trong đó ta minimize f(x) =(1/2) Σj rj(x)² = ||r(x)||² = r(x)ᵀr(x).
 >
-> Và với cái này, ta đã chứng minh ∇f(x) = J(x)ᵀr(x) và Hessian ∇^2f(x) là J(x)ᵀJ(x) + Σj=1:m rj(x) ∇^2rj(x)
+> Và với cái này, ta đã chứng minh ∇f(x) = J(x)ᵀr(x) và Hessian ∇²f(x) là J(x)ᵀJ(x) + Σj=1:m rj(x) ∇²rj(x)
 >
-> Và sau đó, ta mới lập luận rằng, trong bài toán least square thực tế, nhiều khi residual nhỏ, khiến có cái term thứ hai của Hessian không đáng kể so với JᵀJ, cũng như là khi đến gần solution thì term này cũng nhỏ. Do đó, ta có thể lấy JᵀJ làm xấp xỉ tốt, cho Hessian. Mà dù gì thì ta cũng sẽ tính gradient J để tính Jᵀr, nên chỉ việc tính JᵀJ cũng không khó, và ta gọi đây là free Hessian. Từ đó, việc dùng JᵀJ thay cho Hessian chính xác trong việc tính Newton step giúp ta có Gauss Newton method. Mà việc giải tìm pkNG là tìm nghiệm của hệ (JkTJk)pkGN = - JkTrk thì chính là giải điều kiện tối ưu cần bậc nhất của bài toán optimization: minimize (1/2) ||Jkp + rk||^2
+> Và sau đó, ta mới lập luận rằng, trong bài toán least square thực tế, nhiều khi residual nhỏ, khiến có cái term thứ hai của Hessian không đáng kể so với JᵀJ, cũng như là khi đến gần solution thì term này cũng nhỏ. Do đó, ta có thể lấy JᵀJ làm xấp xỉ tốt, cho Hessian. Mà dù gì thì ta cũng sẽ tính gradient J để tính Jᵀr, nên chỉ việc tính JᵀJ cũng không khó, và ta gọi đây là free Hessian. Từ đó, việc dùng JᵀJ thay cho Hessian chính xác trong việc tính Newton step giúp ta có Gauss Newton method. Mà việc giải tìm pkNG là tìm nghiệm của hệ (JkᵀJk)pkGN = - Jkᵀrk thì chính là giải điều kiện tối ưu cần bậc nhất của bài toán optimization: minimize (1/2) ||Jkp + rk||²
 >
 > Thế thì ở đây ta nhìn thêm góc nhìn khác: là ta xét hàm r(x), và thay nó bằng xấp xỉ tuyến tính của nó:
 >
@@ -254,9 +351,9 @@
 >
 > Để rồi, thay vì dùng objective là squared norm của r(xk + p), ta dùng hàm xấp xỉ: r(xk) + Jkp
 >
-> = f(xk + p) = (1/2) ||r(xk + p)||^2 ≈ (1/2) ||r(xk) + Jkp||^2
+> = f(xk + p) = (1/2) ||r(xk + p)||² ≈ (1/2) ||r(xk) + Jkp||²
 >
-> = (1/2) ||Jkp + rk||^2
+> = (1/2) ||Jkp + rk||²
 >
 > Ý nghĩa là: r(x) phi tuyến → f(x) phi tuyến bậc cao
 >
@@ -313,11 +410,11 @@
 >
 > Rank deficient là khi matrix không full rank (cả full column rank), đồng nghĩa là các cột không độc lập, tồn tại non-zero nullspace vector.
 >
-> Thế thì như đã nói, phương pháp Gauss Newton sẽ chỉ giống Newton method nhưng thay vì dùng Hessian ∇^2f(x) thì ta dùng JkTJk để xấp xỉ cho nó. Và Gauss Newton step là nghiệm của (JkTJk) pkGN = JkTrk (tức ∇fk).
+> Thế thì như đã nói, phương pháp Gauss Newton sẽ chỉ giống Newton method nhưng thay vì dùng Hessian ∇²f(x) thì ta dùng JkᵀJk để xấp xỉ cho nó. Và Gauss Newton step là nghiệm của (JkᵀJk) pkGN = Jkᵀrk (tức ∇fk).
 >
-> Và để hệ có nghiệm để giải ra được pkGN, thì JkTJk phải full rank, invertible. Mà nhờ MIT 1806 mình đã biết rồi, matrix AᵀA và A có chung nullspace. Nên muốn AᵀA full rank thì A phải full column rank. Do đó, nếu Jk rank deficient thì JkTJk sẽ không full rank, non invertible → không tồn tại pkGN (tức là thuật toán giải hệ trên sẽ fail)
+> Và để hệ có nghiệm để giải ra được pkGN, thì JkᵀJk phải full rank, invertible. Mà nhờ MIT 1806 mình đã biết rồi, matrix AᵀA và A có chung nullspace. Nên muốn AᵀA full rank thì A phải full column rank. Do đó, nếu Jk rank deficient thì JkᵀJk sẽ không full rank, non invertible → không tồn tại pkGN (tức là thuật toán giải hệ trên sẽ fail)
 >
-> Nhưng nếu Jk gần rank deficient, tức các cột gần phụ thuộc chứ chưa hẳn là phụ thuộc, thì lúc này JkTJk vẫn invertible, nhưng nó sẽ có eigenvalue rất nhỏ, khiến eigenvalue của JkTJk sẽ rất lớn và dẫn đến nếu vô tình JkTrk gần trùng với hướng của eiegenvector thì (JkTJk)⁻¹ JkTrk tức pkGN sẽ có độ dài khổng lồ → thuật toán bị phân kì và line search cũng không thể khắc phục được.
+> Nhưng nếu Jk gần rank deficient, tức các cột gần phụ thuộc chứ chưa hẳn là phụ thuộc, thì lúc này JkᵀJk vẫn invertible, nhưng nó sẽ có eigenvalue rất nhỏ, khiến eigenvalue của JkᵀJk sẽ rất lớn và dẫn đến nếu vô tình Jkᵀrk gần trùng với hướng của eiegenvector thì (JkᵀJk)⁻¹ Jkᵀrk tức pkGN sẽ có độ dài khổng lồ → thuật toán bị phân kì và line search cũng không thể khắc phục được.
 >
 > ---
 >
@@ -327,7 +424,7 @@
 >
 > Còn trust region thì đi theo cách tiếp cận ngược lại: quy định step size trước (tức trust region) sau đó mới giải bài toán tìm direction trong phạm vi cho phép - sẽ là bài toán tối ưu có ràng buộc.
 >
-> Vậy thì, phải hiểu thế này: Mục tiêu cuối cùng là giảm hàm objective f(x) = ||r(x)||^2.
+> Vậy thì, phải hiểu thế này: Mục tiêu cuối cùng là giảm hàm objective f(x) = ||r(x)||².
 >
 > Và để đạt được mục tiêu đó, với bài toán linear least square thì ta có closed form solution, và để tính ra solution, thì ta có thể dùng các thuật toán thuần túy là đại số tuyến tính (cholesky, QR, SVD factored based method) hoặc CG.
 >
@@ -341,9 +438,9 @@
 >
 > Ta đều muốn tìm p để minimize f(xk + p), và p này nếu tìm được sẽ cho ta xk + p là solution của bài táon. Nhưng điều này quá khó. Thành ra ta phải làm theo cách thức sau:
 >
-> Nếu ta thay f(xk + p) = ||r(xk + p)||^2 bởi xấp xỉ bậc nai của nó tại xk: g(p) và đi tìm p để minimize cái này → p này chính là Newton direction.
+> Nếu ta thay f(xk + p) = ||r(xk + p)||² bởi xấp xỉ bậc nai của nó tại xk: g(p) và đi tìm p để minimize cái này → p này chính là Newton direction.
 >
-> Nếu ta thây f(xk + p), vốn là ||r(xk + p)||^2, bởi h(p) = ||r(xk) + ∇r(x)ᵀp||^2 = ||Jkp + rk||^2, tức thay r(xk + p) bởi hàm xấp xỉ tuyến tính của r tại xk. Và đi minimize h(p), thì p này chính là Gauss Newton direction.
+> Nếu ta thây f(xk + p), vốn là ||r(xk + p)||², bởi h(p) = ||r(xk) + ∇r(x)ᵀp||² = ||Jkp + rk||², tức thay r(xk + p) bởi hàm xấp xỉ tuyến tính của r tại xk. Và đi minimize h(p), thì p này chính là Gauss Newton direction.
 >
 > Thế thì nay, là nói về đi theo trust region approach:
 >
@@ -355,13 +452,46 @@
 >
 > Nhưng với bài toán least square, tương tự, như ở line search, khi ta minimize h(p) thay vì g(p), và gọi nó là Gauss Newton direction, thì ở đây ta cũng có thể không dùng g, mà dùng h:
 >
-> minimize h(p) = ||Jkp + rk||^2 s.t ||p|| ≤ Δ, và đây chính là Levenberg - Marquardt
+> minimize h(p) = ||Jkp + rk||² s.t ||p|| ≤ Δ, và đây chính là Levenberg - Marquardt
 >
-> và cái hàm này ||Jkp + rk||^2 thì trong note trước mình đã thấy nó là (1/2)pᵀJkTJkp + rkTJkp + (1/2)rkTrk → chính là 10.32
+> và cái hàm này ||Jkp + rk||² thì trong note trước mình đã thấy nó là (1/2)pᵀJkᵀJkp + rkTJkp + (1/2)rkTrk → chính là 10.32
 >
-> mà đem so với g(p) = (1/2)pᵀJkTJkp + rkTJkp + (1/2)pᵀ(term 2)p + rkTrk
+> mà đem so với g(p) = (1/2)pᵀJkᵀJkp + rkTJkp + (1/2)pᵀ(term 2)p + rkTrk
 >
-> thì đúng là chỉ khác ở chỗ: Hessian của người ta có 2 term, ta bỏ đi term 2, chỉ dùng term 2: JkTJk.
+> thì đúng là chỉ khác ở chỗ: Hessian của người ta có 2 term, ta bỏ đi term 2, chỉ dùng term 2: JkᵀJk.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+>
+> Ghi chú thể hiện tư duy bản chất rất sắc bén và liên kết kiến thức tốt giữa Đại số tuyến tính (MIT 18.06) và Tối ưu hóa (Line Search vs Trust Region, Newton vs Gauss-Newton, LM). Một số điểm nhầm dấu và viết nhầm câu chữ toán học cần được chỉnh lại để hoàn thiện hơn.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"(JkᵀJk) pkGN = Jkᵀrk (tức ∇fk)"*
+>
+> Thiếu dấu âm: hệ phương trình Gauss-Newton chính xác là (JkᵀJk) pkGN = -Jkᵀrk = -∇fk, vì bước tối ưu cần đi ngược hướng gradient để giảm hàm mục tiêu.
+>
+> **2.** *"nhưng nó sẽ có eigenvalue rất nhỏ, khiến eigenvalue của JkᵀJk sẽ rất lớn"*
+>
+> Lỗi viết nhầm: ý bạn là eigenvalue của nghịch đảo (JkᵀJk)⁻¹ sẽ rất lớn, dẫn đến độ dài bước nhảy p khổng lồ.
+>
+> **3.** *"không tồn tại pkGN (tức là thuật toán giải hệ trên sẽ fail)"*
+>
+> Về mặt đại số, do range(JkᵀJk) = range(Jkᵀ) nên hệ luôn tương thích (consistent). Khi rank-deficient, hệ có vô số nghiệm (không xác định duy nhất) chứ không hẳn là vô nghiệm; tuy nhiên thuật toán thực tế dùng phép nghịch đảo hoặc phân rã chuẩn sẽ thất bại.
+>
+> **4.** *"ta bỏ đi term 2, chỉ dùng term 2: JkᵀJk"*
+>
+> Lỗi nói nhịu: bạn viết lặp lại 'term 2' hai lần thay vì 'chỉ dùng term 1: JkᵀJk'.
+>
+>
+> **✓ Strengths**
+> - Giải thích rất trực quan và chính xác tại sao rank-deficient và ill-conditioning gây nguy hiểm cho phương pháp Gauss-Newton.
+> - Phân biệt rành mạch, có hệ thống giữa hai trường phái Line Search và Trust Region.
+> - Kết nối chính xác nguồn gốc hàm xấp xỉ của Levenberg-Marquardt từ việc tuyến tính hóa hàm phần dư r(x).
+>
+> **💡 Deeper notes**
+> - Hàm mục tiêu chuẩn trong sách thường kèm hệ số 1/2: f(x) = (1/2)||r(x)||² để gradient triệt tiêu hệ số 2 thành ∇f = J^T r.
+> - Về mặt tính toán, bài toán Trust Region spherical cho LM dẫn đến nghiệm dạng (J_k^T J_k + λ_k I) p = -J_k^T r_k (với λ_k ≥ 0 là nhân tử Lagrange), đóng vai trò chính quy hóa (damping) giúp ma trận luôn đối xứng xác định dương và khả nghịch ngay cả khi J_k suy biến.
 
 <br>
 
@@ -544,7 +674,7 @@
 >
 >
 >
-> Bài toán tối ưu đặt ra là minimize over p {||Jp + r||^2} s.t ||p|| ≤ Δ, và lemma nói rằng pLM là solution nếu như nó thỏa: là feasible point (tức thỏa constraint), và tồn tại scalar λ không âm sao cho (JᵀJ + λI) pLM = -Jᵀr và λ(Δ - ||pLM||) = 0.
+> Bài toán tối ưu đặt ra là minimize over p {||Jp + r||²} s.t ||p|| ≤ Δ, và lemma nói rằng pLM là solution nếu như nó thỏa: là feasible point (tức thỏa constraint), và tồn tại scalar λ không âm sao cho (JᵀJ + λI) pLM = -Jᵀr và λ(Δ - ||pLM||) = 0.
 >
 >
 >
@@ -552,11 +682,11 @@
 >
 >
 >
-> Đầu tiên bài toán minimize over p {||Jp + r||^2} s.t ||p|| ≤ Δ equivalent với
+> Đầu tiên bài toán minimize over p {||Jp + r||²} s.t ||p|| ≤ Δ equivalent với
 >
 >
 >
-> minimize over p {||Jp + r||^2} s.t (1/2)||p||^2 ≤ (1/2)Δ^2. Lí do là vì constraint ||p|| ≤ Δ (a) tương đương (1/2)||p||^2 ≤ (1/2) Δ^2 (b), vì Δ không âm. Do đó việc p thỏa thì cũng thỏa (a).
+> minimize over p {||Jp + r||²} s.t (1/2)||p||² ≤ (1/2)Δ². Lí do là vì constraint ||p|| ≤ Δ (a) tương đương (1/2)||p||² ≤ (1/2) Δ² (b), vì Δ không âm. Do đó việc p thỏa thì cũng thỏa (a).
 >
 >
 >
@@ -564,11 +694,11 @@
 >
 >
 >
-> Vậy ở đây, hàm cần tối ưu là f0(p) = ||Jp + r||^2 (biến tối ưu là p). Và bài toán toán này có một inequality condition f1(p) = (1/2)(||p||^2 - Δ^2) ≤ 0. Nên Lagrangian function là:
+> Vậy ở đây, hàm cần tối ưu là f0(p) = ||Jp + r||² (biến tối ưu là p). Và bài toán toán này có một inequality condition f1(p) = (1/2)(||p||² - Δ²) ≤ 0. Nên Lagrangian function là:
 >
 >
 >
-> L(p, λ) = f0(p) + λf1(p) = ||Jp + r||^2 + (λ/2)(||p||^2 - Δ^2)
+> L(p, λ) = f0(p) + λf1(p) = ||Jp + r||² + (λ/2)(||p||² - Δ²)
 >
 >
 >
@@ -576,19 +706,19 @@
 >
 >
 >
-> ∇\_p L(p, λ) = d/dp \[||Jp + r||^2 + (λ/2)(||p||^2 - Δ^2)\]
+> ∇\_p L(p, λ) = d/dp \[||Jp + r||² + (λ/2)(||p||² - Δ²)\]
 >
 >
 >
-> = d/dp \[||Jp + r||^2\] + d/dp \[(λ/2)(||p||^2 - Δ^2)\]
+> = d/dp \[||Jp + r||²\] + d/dp \[(λ/2)(||p||² - Δ²)\]
 >
 >
 >
-> = d/dp \[||Jp + r||^2\] + (λ/2) d/dp (||p||^2) 
+> = d/dp \[||Jp + r||²\] + (λ/2) d/dp (||p||²) 
 >
 >
 >
-> ||Jp + r||^2 = (Jp + r)ᵀ(Jp + r) = (pᵀJᵀ + rT)(Jp + r) = pᵀJᵀJp + rTJp + pᵀJᵀr + rTr
+> ||Jp + r||² = (Jp + r)ᵀ(Jp + r) = (pᵀJᵀ + rT)(Jp + r) = pᵀJᵀJp + rTJp + pᵀJᵀr + rTr
 >
 >
 >
@@ -604,15 +734,15 @@
 >
 >
 >
-> Còn d/dp (||p||^2)  = d/dp pᵀp là gì?
+> Còn d/dp (||p||²)  = d/dp pᵀp là gì?
 >
 >
 >
-> Làm theo lối MIT 18s096 đã học: tìm cách đửa d(||p||^2) về dạng linear operator act on dp
+> Làm theo lối MIT 18s096 đã học: tìm cách đửa d(||p||²) về dạng linear operator act on dp
 >
 >
 >
-> d(||p||^2) = d(pᵀp) = (p+dp)ᵀ(p+dp) - pᵀp = (pᵀ+dpᵀ)(p+dp) - pᵀp = pᵀp+dpᵀp+pᵀdp+dpᵀdp - pᵀp
+> d(||p||²) = d(pᵀp) = (p+dp)ᵀ(p+dp) - pᵀp = (pᵀ+dpᵀ)(p+dp) - pᵀp = pᵀp+dpᵀp+pᵀdp+dpᵀdp - pᵀp
 >
 >
 >
@@ -672,7 +802,7 @@
 >
 >
 >
-> λ\*(||p\*||^2 - Δ^2) = 0
+> λ\*(||p\*||² - Δ²) = 0
 >
 >
 >
@@ -734,7 +864,7 @@
 >
 >
 >
-> Lemma 10.2 nói rằng cho bài toán minimize ||Jp + r||^2 s.t ||p|| ≤ Δ if and only if pLM feasible và tồn tại scalar λ ≥ 0 thỏa:
+> Lemma 10.2 nói rằng cho bài toán minimize ||Jp + r||² s.t ||p|| ≤ Δ if and only if pLM feasible và tồn tại scalar λ ≥ 0 thỏa:
 >
 >
 >
@@ -750,7 +880,7 @@
 >
 >
 >
-> Bài toán minimize ||Jp + r||^2 s.t ||p|| ≤ Δ chính là minimize f + gᵀp + (1/2)pᵀBp s.t ||p|| ≤ Δ với B = JᵀJ, g = Jᵀr, f = rTr. Nên theo theorem 4.1, nếu pLM feasible và tồn tại λ ≥ 0 thỏa 4.8a,b,c thì pLM sẽ chính là solution.
+> Bài toán minimize ||Jp + r||² s.t ||p|| ≤ Δ chính là minimize f + gᵀp + (1/2)pᵀBp s.t ||p|| ≤ Δ với B = JᵀJ, g = Jᵀr, f = rTr. Nên theo theorem 4.1, nếu pLM feasible và tồn tại λ ≥ 0 thỏa 4.8a,b,c thì pLM sẽ chính là solution.
 >
 >
 >
@@ -776,7 +906,7 @@
 >
 >
 >
-> Normal equation của bài toán least square minimize f(x) = (1/2) ||Ax - b||^2 thật ra chỉ chính là cái first order optimality condition ∇f(x) = 0 thôi có khỉ gì đâu.
+> Normal equation của bài toán least square minimize f(x) = (1/2) ||Ax - b||² thật ra chỉ chính là cái first order optimality condition ∇f(x) = 0 thôi có khỉ gì đâu.
 >
 >
 >
@@ -1198,11 +1328,11 @@
 >
 >
 >
-> từ (JkTJk + λI) pLM_k = -JkTrk 
+> từ (JkᵀJk + λI) pLM_k = -Jkᵀrk 
 >
 >
 >
-> trở thành (JkTJk + λ Dk^2) pLM_k = -JkTrk 
+> trở thành (JkᵀJk + λ Dk²) pLM_k = -Jkᵀrk 
 >
 >
 >
@@ -1210,7 +1340,7 @@
 >
 >
 >
-> minimize ||\[Jk; √λ Dk\]p + \[rk; 0\]||^2
+> minimize ||\[Jk; √λ Dk\]p + \[rk; 0\]||²
 >
 >
 >
