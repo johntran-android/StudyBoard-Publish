@@ -285,14 +285,14 @@
 >
 > Tuy tác giả không giải thích, mà chỉ nói với cách chọn này, thì cái norm sẽ có tính chất non-dimensional, dẫn đến scale invariant, qua thảo luận với Gemini ta hiểu sơ vì sao có được tính scale invariant:
 >
-> A ở đây sẽ là hiệu hai Bk+1 và Bk, với việc B được thiết kế để xấp xỉ / thay thế Hessian, thì ta cứ coi nó như Hessian, matrix đạo hàm cấp hai. Thì đơn vị của các entries sẽ là [f]/[x]^2
+> A ở đây sẽ là hiệu hai Bk+1 và Bk, với việc B được thiết kế để xấp xỉ / thay thế Hessian, thì ta cứ coi nó như Hessian, matrix đạo hàm cấp hai. Thì đơn vị của các entries sẽ là [f]/[x]²
 > (gọi [f] là đơn vị của f, [x] là đơn vị của x)
 >
-> W, mà tác giả nói ta có thể assume nó là Gk⁻¹, với Gk coi như Hessian trung bình, thì như vậy coi như W là inv của Hessian, có đơn vị của các entries là [x]^2/[f]
+> W, mà tác giả nói ta có thể assume nó là Gk⁻¹, với Gk coi như Hessian trung bình, thì như vậy coi như W là inv của Hessian, có đơn vị của các entries là [x]²/[f]
 >
 > Nên W^(1/2) sẽ có đơn vị là [x]/[f]^(1/2)
 >
-> ⇨ W^(1/2)AW^(1/2) sẽ có đơn vị là ([x]/[f]^(1/2)) ([f]/[x]^2) ([x]/[f]^(1/2)) = 1. 
+> ⇨ W^(1/2)AW^(1/2) sẽ có đơn vị là ([x]/[f]^(1/2)) ([f]/[x]²) ([x]/[f]^(1/2)) = 1. 
 >
 > Điều này có nghĩa là, scale invariant. vì cái cục trước khi lấy norm là không có đơn vị. Nên việc thay đổi đơn vị sẽ không ảnh hưởng tới nó. Nói chung hiểu đại khái là vậy.
 >
@@ -300,15 +300,15 @@
 >
 > steepest descent: αkpk. với pk = -gk, mà gk là vector đạo hàm bậc một → đơn vị của (element) của nó sẽ là [f]/[x]. và như vậy xk có đơn vị [x], pk lại là có đơn vị [f]/[x], dẫn đến αk sẽ phải gánh cái việc dung hòa đơn vị.
 >
-> Newton method pk = -Hk⁻¹ gk. gk có đơn vị [f]/[x], Hk có đơn vị [f]/[x]^2 → Hk⁻¹ có đơn vị [x]^2/[f] → pk = [x]^2/[f] [f]/[x] = [x] → là cùng đơn vị với x, hoàn toàn đúng
+> Newton method pk = -Hk⁻¹ gk. gk có đơn vị [f]/[x], Hk có đơn vị [f]/[x]² → Hk⁻¹ có đơn vị [x]²/[f] → pk = [x]²/[f] [f]/[x] = [x] → là cùng đơn vị với x, hoàn toàn đúng
 >
 > Nên ở đây, cái việc đơn vị của cái cục trước khi tính norm không có đơn vị chính là giúp tạo tính scale invariant vì dù x có đổi thành đơn vị gì, thì kết quả ko bị ảnh hưởng.
 >
 > -----
 >
-> Rồi, thử làm rõ xem **vì sao Gk = ∫0:1 ∇^2 f(xk + ταkpk)dτ lại là average Hessian?**
+> Rồi, thử làm rõ xem **vì sao Gk = ∫0:1 ∇² f(xk + ταkpk)dτ lại là average Hessian?**
 >
-> Là vì nếu xét **hàm số Hessian H(x) = ∇^2f(x)** và xét hàm h(τ) = H(xk + τ αkpk) là Hessian H "restricted to afffine pk"
+> Là vì nếu xét **hàm số Hessian H(x) = ∇²f(x)** và xét hàm h(τ) = H(xk + τ αkpk) là Hessian H "restricted to afffine pk"
 >
 > Hessian trung bình = 1/(xk+1 - xk) ∫xk:xk+1 H(x)dx
 >
@@ -330,7 +330,7 @@
 >
 > = ∫0:1 H(xk + ταkpk)dτ
 >
-> hay ∫0:1 ∇^2f(xk + ταkpk)dτ
+> hay ∫0:1 ∇²f(xk + ταkpk)dτ
 >
 > Như vậy đúng là cái này **chính là Hessian trung bình** 
 >
@@ -338,7 +338,7 @@
 >
 > Tiếp vì sao gs nói **Gk sẽ thỏa: yk = Gk αkpk = Gksk là do Taylor's theorem**?
 >
-> Theorem 2.1 (xem link) mình đã học về Taylor's theorem, note sau sẽ thử chứng minh lại cho nhớ, còn ở đây ta dùng công thức 2.5: **∇f(x+p) = ∇f(x) + ∫0:1 ∇^2f(x + tp)pdt**
+> Theorem 2.1 (xem link) mình đã học về Taylor's theorem, note sau sẽ thử chứng minh lại cho nhớ, còn ở đây ta dùng công thức 2.5: **∇f(x+p) = ∇f(x) + ∫0:1 ∇²f(x + tp)pdt**
 >
 > áp dụng vào đây ta có: 
 >
@@ -398,27 +398,27 @@
 >
 > -----
 >
-> Tiếp, để chứng minh 2.5: ∇f(x+p) = ∇f(x) + ∫0:1 ∇^2f(x+tp)pdt. Mình có thể liên hệ đến FTC:
+> Tiếp, để chứng minh 2.5: ∇f(x+p) = ∇f(x) + ∫0:1 ∇²f(x+tp)pdt. Mình có thể liên hệ đến FTC:
 >
 > FTC2 nói rằng nếu G là nguyên hàm của f thì ∫a:bf(t)dt = F(b) - F(a)
 >
-> Xét hàm G(t) = ∇f(x+tp), thì G'(t) = d/dt G(t) = d/dt ∇f(x+tp) = d/d(x+tp) ∇f(x+tp) . d/dt (x+tp) = ∇^2f(x+tp) . p = ∇^2f(x+tp) p
+> Xét hàm G(t) = ∇f(x+tp), thì G'(t) = d/dt G(t) = d/dt ∇f(x+tp) = d/d(x+tp) ∇f(x+tp) . d/dt (x+tp) = ∇²f(x+tp) . p = ∇²f(x+tp) p
 >
-> Vậy G(t) là nguyên hàm của g(t) = ∇^2f(x+tp)p
+> Vậy G(t) là nguyên hàm của g(t) = ∇²f(x+tp)p
 >
 > Áp dụng FTC2: ∫0:1 g(t)dt = G(1) - G(0)
 >
-> ⇔ ∫0:1 ∇^2f(x+tp)p dt = ∇f(x+tp)|t=1 - ∇f(x+tp)|t=0
+> ⇔ ∫0:1 ∇²f(x+tp)p dt = ∇f(x+tp)|t=1 - ∇f(x+tp)|t=0
 >
-> ⇔ ∫0:1 ∇^2f(x+tp)p dt = ∇f(x+p) - ∇f(x)
+> ⇔ ∫0:1 ∇²f(x+tp)p dt = ∇f(x+p) - ∇f(x)
 >
-> ⇔ ∇f(x+p) = ∇f(x) + ∫0:1 ∇^2f(x+tp)p dt 
+> ⇔ ∇f(x+p) = ∇f(x) + ∫0:1 ∇²f(x+tp)p dt 
 >
 > Đây chính là 2.5
 >
 > -----
 >
-> Còn 2.6: f(x + p) = f(x) + ∇f(x)ᵀp + (1/2) pᵀ ∇^2f(x + tp)p for some t in (0,1)
+> Còn 2.6: f(x + p) = f(x) + ∇f(x)ᵀp + (1/2) pᵀ ∇²f(x + tp)p for some t in (0,1)
 >
 > Đơn giản là dùng MVᵀ lần nữa: Với chính cái hàm G(t) = ∇f(x+tp)
 >
@@ -428,11 +428,11 @@
 >
 > ⇔ d/dt G(t)|t=c = ∇f(x+p) - ∇f(x)
 >
-> ⇔ ∇^2f(x+tp)p|t=c = ∇f(x+p) - ∇f(x)
+> ⇔ ∇²f(x+tp)p|t=c = ∇f(x+p) - ∇f(x)
 >
-> ⇔ ∇^2f(x+cp)p = ∇f(x+p) - ∇f(x) for some c in (0,1)
+> ⇔ ∇²f(x+cp)p = ∇f(x+p) - ∇f(x) for some c in (0,1)
 >
-> ⇨ kết hợp với cái trên ∫0:1 ∇^2f(x+tp)p dt  = ∇^2f(x+cp)p for some c in (0,1)
+> ⇨ kết hợp với cái trên ∫0:1 ∇²f(x+tp)p dt  = ∇²f(x+cp)p for some c in (0,1)
 >
 > thì cái này cũng đúng, vì vế trái đơn giản chính trung bình của hàm ∇f trên đoạn x → x+p còn vế phải cũng là giá trị trung bình xảy ra tại điểm nào đó trong đoạn (x, x+p), vì CŨNG CHÍNH LÀ MVP CHO PHÉP nói rằng khi đi từ x → x+p thì tại điểm nào đó ∇f sẽ đạt giá trị bằng giá trị trung bình của của nó trên đoạn đó.
 >
@@ -444,7 +444,7 @@
 >
 > khi đi từ a → b thì tại c đâu đó ta sẽ có:
 >
-> f(b) = f(a) + f'(a)(b-a) + (1/2)f''(c)(b-a)^2
+> f(b) = f(a) + f'(a)(b-a) + (1/2)f''(c)(b-a)²
 >
 > Và áp dụng nó cho hàm g(t) = f(x + tp), với a = 0, b = 1:
 >
@@ -464,27 +464,27 @@
 >
 > áp dụng f(x + p) = f(x) + ∇f(x + tp)ᵀp for some t in (0,1)
 >
-> → ∇f(u+du) - ∇f(u) = ∇^2f(u + tdu)du for some t in (0,1)
+> → ∇f(u+du) - ∇f(u) = ∇²f(u + tdu)du for some t in (0,1)
 >
 > vì du rất nhỏ → tdu ≈ 0
 >
-> ⇨ ∇f(u+du) - ∇f(u) = ∇^2f(u)du 
+> ⇨ ∇f(u+du) - ∇f(u) = ∇²f(u)du 
 >
-> ⇨ d[∇f(u)ᵀp] = [∇f(u+du) - ∇f(u)]Tp = [∇^2f(u)du]Tp = duT∇^2f(u)ᵀp
+> ⇨ d[∇f(u)ᵀp] = [∇f(u+du) - ∇f(u)]Tp = [∇²f(u)du]Tp = duT∇²f(u)ᵀp
 >
 > Thay du = p dt
 >
-> ⇔ d[∇f(u)ᵀp] = dt pᵀ∇^2f(u)ᵀp
+> ⇔ d[∇f(u)ᵀp] = dt pᵀ∇²f(u)ᵀp
 >
-> ⇨ d[∇f(u)ᵀp] / dt = pᵀ∇^2f(u)ᵀp
+> ⇨ d[∇f(u)ᵀp] / dt = pᵀ∇²f(u)ᵀp
 >
 > Vậy g''(t) = d/dt ∇f(x+tp)ᵀp = pᵀ∇f(x+tp)ᵀp 
 >
 > Rồi, áp dụng cho hàm g ta có:
 >
-> g(1) = g(0) + g'(0)(1-0) + (1/2)g''(c)(1-0)^2 for some c in (0,1)
+> g(1) = g(0) + g'(0)(1-0) + (1/2)g''(c)(1-0)² for some c in (0,1)
 >
-> ⇔ f(x+p) = f(x) + ∇f(x)ᵀp + (1/2)∇^2f(x+cp) p for some c in (0,1)
+> ⇔ f(x+p) = f(x) + ∇f(x)ᵀp + (1/2)∇²f(x+cp) p for some c in (0,1)
 >
 > Chính là (2.6)
 
@@ -580,23 +580,23 @@
 >
 > Xét cái distance:
 >
-> ||B^ - Bk^||_F, dĩ nhiên để cho dễ ta cũng sẽ chuyển sang equivalent problem với objective = square của norm (||B^ - Bk^||_F)^2
+> ||B^ - Bk^||_F, dĩ nhiên để cho dễ ta cũng sẽ chuyển sang equivalent problem với objective = square của norm (||B^ - Bk^||_F)²
 >
 > thay dạng phân rã của B^ vào:
 >
-> (||B^ - Bk^||_F)^2 = (||P⊥B^P⊥ + P(B^)P⊥ + P⊥B^P + PB^P - Bk^||_F)^2
+> (||B^ - Bk^||_F)² = (||P⊥B^P⊥ + P(B^)P⊥ + P⊥B^P + PB^P - Bk^||_F)²
 >
 > Ta cũng phân rã Bk^, là constant matrix thành 4 matrix y hệt theo cách trên:
 >
 > Bk^ = I Blk^ I = (P⊥ + P)Bk^(P⊥ + P) = (P⊥Bk^ + PBk^)(P⊥ + P) = P⊥Bk^P⊥ + PBk^P⊥ + P⊥Bk^P + PBk^P
 >
-> ⇨ (||P⊥B^P⊥ + PB^P⊥ + P⊥B^P + PB^P - (P⊥Bk^P⊥ + PBk^P⊥ + P⊥Bk^P + PBk^P)||_F)^2 
+> ⇨ (||P⊥B^P⊥ + PB^P⊥ + P⊥B^P + PB^P - (P⊥Bk^P⊥ + PBk^P⊥ + P⊥Bk^P + PBk^P)||_F)² 
 >
-> = (||(P⊥B^P⊥ - P⊥Bk^P⊥) + (PB^P⊥ - PBk^P⊥) + (P⊥B^P - P⊥Bk^P) + (P - PBk^P)||_F)^2
+> = (||(P⊥B^P⊥ - P⊥Bk^P⊥) + (PB^P⊥ - PBk^P⊥) + (P⊥B^P - P⊥Bk^P) + (P - PBk^P)||_F)²
 >
 > Tới đây tạm hiểu là ta sẽ dùng định lý Pythagore với Fnorm
 >
-> = ||P⊥B^P⊥ - P⊥Bk^P⊥||^2 + ||PB^P⊥ - PBk^P⊥||^2 + ||(P⊥B^P  - P⊥Bk^P||^2 + ||P - PBk^P)||^2
+> = ||P⊥B^P⊥ - P⊥Bk^P⊥||² + ||PB^P⊥ - PBk^P⊥||² + ||(P⊥B^P  - P⊥Bk^P||² + ||P - PBk^P)||²
 >
 > Và dùng các kết qủa ở trên PB^P⊥ = 0, P⊥B^P = P, thì 4 hạng tử này chỉ còn hạng tử đầu tiên là còn phụ thuộc B^ ⇨ tổng đạt min khi nó đạt min, và vì nó không âm nên dĩ nhiên đạt min khi nó bằng 0: 
 >
@@ -640,19 +640,19 @@
 >
 > Hãy nhớ lại bức tranh toàn cảnh:
 >
-> Ta muốn tại mỗi iteration, ta xây dựng Bk+1 sao cho nó có thể xấp xỉ Hessian, mục đích là để dùng nó giúp tính ra pk+1 = -(Bk+1)⁻¹ gk+1 (nếu Bk+1 xấp xỉ tốt Hessian ∇^2fk+1, thì pk+1 sẽ xấp xỉ tốt Newton's step, giúp converge nhanh, quadratically)
+> Ta muốn tại mỗi iteration, ta xây dựng Bk+1 sao cho nó có thể xấp xỉ Hessian, mục đích là để dùng nó giúp tính ra pk+1 = -(Bk+1)⁻¹ gk+1 (nếu Bk+1 xấp xỉ tốt Hessian ∇²fk+1, thì pk+1 sẽ xấp xỉ tốt Newton's step, giúp converge nhanh, quadratically)
 >
-> Vậy để Bk+1 xấp xỉ được Hessian ∇^2fk+1, thì nó phải làm được cái việc mà Hessian làm được: Chứa thông tin curvature. Cụ thể như vầy:
+> Vậy để Bk+1 xấp xỉ được Hessian ∇²fk+1, thì nó phải làm được cái việc mà Hessian làm được: Chứa thông tin curvature. Cụ thể như vầy:
 >
-> Hàm mk+1(p), xấp xỉ bậc hai của f tại xk+1: = fk+1 + ∇fk+1Tp + (1/2)pᵀ ∇^2fk+1 p, nó sẽ có thể dự đoán chính xác hành vi của f tại xk+1: mk+1(0) = fk+1 và ∇mk+1 = ∇fk+1. Và sẽ dự đoán tốt hành vi của hàm f trong khoảng lân cận xk+1. Ta cho xk và xk+2 là những điểm trong khoảng lân cận này, (xk+2 thì chưa có nên khỏi bàn) thì ta cho là mk+1(p) có thể approx độ dốc của hàm f tại xk: ∇mk+1(-αkpk) ≈ ∇fk
+> Hàm mk+1(p), xấp xỉ bậc hai của f tại xk+1: = fk+1 + ∇fk+1Tp + (1/2)pᵀ ∇²fk+1 p, nó sẽ có thể dự đoán chính xác hành vi của f tại xk+1: mk+1(0) = fk+1 và ∇mk+1 = ∇fk+1. Và sẽ dự đoán tốt hành vi của hàm f trong khoảng lân cận xk+1. Ta cho xk và xk+2 là những điểm trong khoảng lân cận này, (xk+2 thì chưa có nên khỏi bàn) thì ta cho là mk+1(p) có thể approx độ dốc của hàm f tại xk: ∇mk+1(-αkpk) ≈ ∇fk
 >
-> Điều này tương đương ∇^2fk+1 (-αkpk) + ∇fk+1 ≈ ∇fk
+> Điều này tương đương ∇²fk+1 (-αkpk) + ∇fk+1 ≈ ∇fk
 >
-> ⇔ ∇fk+1 - ∇fk ≈ ∇^2fk+1 αkpk
+> ⇔ ∇fk+1 - ∇fk ≈ ∇²fk+1 αkpk
 >
-> ⇔ ∇fk+1 - ∇fk ≈ ∇^2fk+1 (xk+1 - xk), đây chính là secant equation.
+> ⇔ ∇fk+1 - ∇fk ≈ ∇²fk+1 (xk+1 - xk), đây chính là secant equation.
 >
-> Và ý nghĩa của cái này chính là NHỜ HESSIAN ∇^2fk+1 CHỨA THÔNG TIN CURVAᵀURE CỦA HÀM SỐ TẠI xk+1 NÊN TRONG PHẠM VI LÂN CẬN xk+1, NÓ MỚI GIÚP HÀM mk+1 DỰ ĐOÁN GẦN ĐÚNG HÀNH VI CỦA HÀM f. NÊN CÁI PHƯƠNG TRÌNH XẤP XỈ NÀY, PHẢN ẢNH MỘT SỰ THẬT: HESSIAN ∇^2fk+1 **CHỨA THÔNG TIN CURVAᵀURE CỦA HÀM SỐ TẠI xk+1**, HOẶC, CỤ THỂ HƠN: **NÓ CHỨA THÔNG TIN ĐỘ CONG CỦA HÀM SỐ TỪ xk → xk+1**
+> Và ý nghĩa của cái này chính là NHỜ HESSIAN ∇²fk+1 CHỨA THÔNG TIN CURVAᵀURE CỦA HÀM SỐ TẠI xk+1 NÊN TRONG PHẠM VI LÂN CẬN xk+1, NÓ MỚI GIÚP HÀM mk+1 DỰ ĐOÁN GẦN ĐÚNG HÀNH VI CỦA HÀM f. NÊN CÁI PHƯƠNG TRÌNH XẤP XỈ NÀY, PHẢN ẢNH MỘT SỰ THẬT: HESSIAN ∇²fk+1 **CHỨA THÔNG TIN CURVAᵀURE CỦA HÀM SỐ TẠI xk+1**, HOẶC, CỤ THỂ HƠN: **NÓ CHỨA THÔNG TIN ĐỘ CONG CỦA HÀM SỐ TỪ xk → xk+1**
 >
 > Và ta việc ta ép Bk+1, cũng phải thỏa điều này (secant equation) chính là muốn NÓ CŨNG CHỨA THÔNG TIN ĐỘ CONG CỦA HÀM f từ xk → xk+1.
 >
@@ -797,7 +797,7 @@
 <p align="center"><kbd><img src="assets/ffpbvi5m9rd.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi đoạn này đại khái là vầy: BFGS giúp cost chỉ là O(n^2) nhỏ hơn rất nhiều O(n^3) nếu dùng Newton method (pk = -∇^2 fk inv ∇fk: Vừa phải tính Hessian, vừa phải giải hệ tuyến tính để tìm Hessian inverse)
+> Rồi đoạn này đại khái là vầy: BFGS giúp cost chỉ là O(n²) nhỏ hơn rất nhiều O(n^3) nếu dùng Newton method (pk = -∇² fk inv ∇fk: Vừa phải tính Hessian, vừa phải giải hệ tuyến tính để tìm Hessian inverse)
 >
 > Nói chung là ngon. Tuy Newton method hội tụ nhanh quaratic (đã học trong Convex Optim) nhưng nó tốn kém quá. Còn BFGS thì rẻ hơn nhưng vẫn hội tụ siêu tuyến tính.
 >
@@ -807,7 +807,7 @@
 >
 > Thì chỗ này phải hiểu là vầy, sở dĩ ta cập nhật Hk thay vì ta cập nhật Bk là như đã biết để khỏi phải tính inverse của nó, vì cuối cùng cũng cần inverse, vì tính inverse sẽ là giải hệ tuyến tính, tốn O(n^3).
 >
-> Có điều, BFGS (cập nhật Hk) ở trên KHÔNG WORK TỐT VỚI BÀI TOÁN CONSTRAINED PROBLEM. Nên thành ra ta sẽ lại quay lại cập nhật Bk, nhưng với việc giải hệ ta sẽ dùng một cái trick, dùng phân tách Cholesky, giúp ta vẫn giữ cost ở O(n^2), và sẽ dẫn đến một thuật toán BFGS xịn hơn, khắc phục được vấn đề trên.
+> Có điều, BFGS (cập nhật Hk) ở trên KHÔNG WORK TỐT VỚI BÀI TOÁN CONSTRAINED PROBLEM. Nên thành ra ta sẽ lại quay lại cập nhật Bk, nhưng với việc giải hệ ta sẽ dùng một cái trick, dùng phân tách Cholesky, giúp ta vẫn giữ cost ở O(n²), và sẽ dẫn đến một thuật toán BFGS xịn hơn, khắc phục được vấn đề trên.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **75/100** · ✓ Move on
@@ -861,13 +861,13 @@
 >
 > = wTHkw + ρk(zTsk)(skTz)
 >
-> = wTHkw + ρk(zTsk)^2
+> = wTHkw + ρk(zTsk)²
 >
 > Nếu Hk xác định dương thì wTHkw ≥ 0 với mọi w, và chỉ bằng 0 khi w = 0
 >
-> và ρk(zTsk)^2 thì cũng luôn ≥ 0. chỉ bằng 0 khi zTsk = 0 
+> và ρk(zTsk)² thì cũng luôn ≥ 0. chỉ bằng 0 khi zTsk = 0 
 >
-> Giả sử cả hai cùng lúc bằng 0 khiến wTHkw + ρk(zTsk)^2 = 0:
+> Giả sử cả hai cùng lúc bằng 0 khiến wTHkw + ρk(zTsk)² = 0:
 >
 > w = 0 và zTsk = 0 
 >
@@ -875,7 +875,7 @@
 >
 > ⇔ z = 0
 >
-> Ban đầu ta đã giả sử z khác 0, nay lại dẫn tới z = 0 → mẫu thuẫn, cho nên w = 0 và zTsk = 0  không thể xảy ra → zTHk+1z = wTHkw + ρk(zTsk)^2 > 0 → Hk+1 xác định dương nếu như Hk xác định dương
+> Ban đầu ta đã giả sử z khác 0, nay lại dẫn tới z = 0 → mẫu thuẫn, cho nên w = 0 và zTsk = 0  không thể xảy ra → zTHk+1z = wTHkw + ρk(zTsk)² > 0 → Hk+1 xác định dương nếu như Hk xác định dương
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **99/100** · ✓ Move on
@@ -965,7 +965,7 @@
 >
 > Có điều, nếu β quá lớn thì cái p0 sẽ dài quá (p0 = -H0 ∇f0 = -β ∇f0) và khi đó chỉ đơn giản là khiến thuật toán backtracking line search phải chạy nhiều lần với tính được α0 tốt → tốt chi phí tính giá trị gradient và hàm f, chỉ vậy thôi.
 >
-> Tiếp theo, gs nói có một mẹo khiến H0 cũng có thể xấp xỉ Hessian tại x0: Tính yk, sk và gán vào H0, trước khi dùng nó để tính H1. Cái này rất dễ hiểu: Bữa trước mình đã phân tích, lập luận để hiểu rằng, việc đặt điều kiện Bk+1, hay Hk+1 phải tuân thủ secant equation chính là muốn nó chứa đựng thông tin curvature từ xk→xk+1. Vậy thì ở đây, bằng cách tính (ykTsk/ykTyk) I và gán cho H0, ta đã cho H0 có thông tin curvature tại x0, giúp nó đại khái là có thể phần nào bắt chước Hessian ∇^2 f0.
+> Tiếp theo, gs nói có một mẹo khiến H0 cũng có thể xấp xỉ Hessian tại x0: Tính yk, sk và gán vào H0, trước khi dùng nó để tính H1. Cái này rất dễ hiểu: Bữa trước mình đã phân tích, lập luận để hiểu rằng, việc đặt điều kiện Bk+1, hay Hk+1 phải tuân thủ secant equation chính là muốn nó chứa đựng thông tin curvature từ xk→xk+1. Vậy thì ở đây, bằng cách tính (ykTsk/ykTyk) I và gán cho H0, ta đã cho H0 có thông tin curvature tại x0, giúp nó đại khái là có thể phần nào bắt chước Hessian ∇² f0.
 >
 > Cụ thể chi tiết thì quay lại sau.
 
@@ -983,21 +983,21 @@
 <p align="center"><kbd><img src="assets/d9fxm4j6vp.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đoạn này là đoạn mà gs Nocedal nói về cái vụ "ta có thể quay lại dùng công thức cập nhật Bk, mà nếu dùng phân rã Cholesky, thì vẫn có thể chỉ tốn O(n^2)".
+> Đoạn này là đoạn mà gs Nocedal nói về cái vụ "ta có thể quay lại dùng công thức cập nhật Bk, mà nếu dùng phân rã Cholesky, thì vẫn có thể chỉ tốn O(n²)".
 >
 > Tóm tắt lại chút bối cảnh:
 >
-> Về cơ bản là ta muốn xây dựng Bk xấp xỉ Hessian ∇^2 fk để mà cho ra pk = - Bk ∇fk gần giống Newton's step, giúp hội tụ siêu nhanh. Và để xây dựng Bk, ta đặt ra yêu cầu nó phải chứa thông tin curvature giống như Hessian, thể hiện qua việc thỏa secant equation. Sau đó, dùng thêm điều kiện là cái Bk ở mỗi iteration phải giống cái Bk-1 trước đó nhất có thể, với việc giống ở đây đo bằng weighted norm ||.||_W giúp mang lại tính scale invariant và dễ giải, thì từ đó ta có bài toán minimize ||B-Bk||_W s.t Byk=sk B=BT, giải ra ta sẽ có Bk+1.  Và dẫn đến công thức: tính Bk+1 từ Bk như đã biết. 
+> Về cơ bản là ta muốn xây dựng Bk xấp xỉ Hessian ∇² fk để mà cho ra pk = - Bk ∇fk gần giống Newton's step, giúp hội tụ siêu nhanh. Và để xây dựng Bk, ta đặt ra yêu cầu nó phải chứa thông tin curvature giống như Hessian, thể hiện qua việc thỏa secant equation. Sau đó, dùng thêm điều kiện là cái Bk ở mỗi iteration phải giống cái Bk-1 trước đó nhất có thể, với việc giống ở đây đo bằng weighted norm ||.||_W giúp mang lại tính scale invariant và dễ giải, thì từ đó ta có bài toán minimize ||B-Bk||_W s.t Byk=sk B=BT, giải ra ta sẽ có Bk+1.  Và dẫn đến công thức: tính Bk+1 từ Bk như đã biết. 
 >
 > (nói cập nhật Bk, thì ý là tính Bk+1, cái này nên hiểu ý)
 >
-> Nhưng sau đó, ta vẫn phải tính nghịch đảo của Bk+1, để mà tính pk+1 = - Bk+1 ∇fk+1. Và ta thay vì tính Bk+1 xong rồi tính nghịch đảo, thì người ta mới dùng một cách biến đổi đại số để đổi cái công thức cập nhật Bk, (tức tính Bk+1) thẳng qua công thức cập nhật (Bk)⁻¹: tức tính thẳng (Bk+1)⁻¹ từ (Bk)⁻¹ luôn (mà trong sách dùng Hk+1,Hk). Và như vậy thì ta sẽ tránh được việc tính nghịch đảo, vốn sẽ tốn O(n^3), giúp toàn bộ quá trình chỉ là tốn O(n^2).
+> Nhưng sau đó, ta vẫn phải tính nghịch đảo của Bk+1, để mà tính pk+1 = - Bk+1 ∇fk+1. Và ta thay vì tính Bk+1 xong rồi tính nghịch đảo, thì người ta mới dùng một cách biến đổi đại số để đổi cái công thức cập nhật Bk, (tức tính Bk+1) thẳng qua công thức cập nhật (Bk)⁻¹: tức tính thẳng (Bk+1)⁻¹ từ (Bk)⁻¹ luôn (mà trong sách dùng Hk+1,Hk). Và như vậy thì ta sẽ tránh được việc tính nghịch đảo, vốn sẽ tốn O(n^3), giúp toàn bộ quá trình chỉ là tốn O(n²).
 >
 > Và đó là thuật toán DFP. Nói ngắn gọn: Áp các điều kiện lên Bk để có công thức cập nhật Bk, rồi dùng công thức "chuyển đổi để có công thức cập nhật Hk"
 >
 > Nhưng lại có cách khác, đó là áp thẳng các điều kiện lên luôn (Bk)⁻¹, để ra luôn công thức cập nhật Hk, và đây chính là BFGS, còn tốt hơn cả DFP.
 >
-> Tuy nhiên gs nói có khi, việc dùng cách cập nhật Hk gặp khó khăn trong một số tình huống, nên khi đó, ta lại dùng công thức chuyển đổi nói trên để có phiên bản BFGS nhưng mà là cập nhật Bk. Nhưng mà làm vậy thì lại đạp cái đuôi của mình. là phải tính inverse hóa ra lại tốn O(n^3). Tuy nhiên có cách, bằng cách phân rã Cholesky, ta có thể tạo ra thuật toán BFGS cập nhật các matrix L,D này (vẫn là dựa trên gốc là việc đặt điều kiện lên Hk (là điểm khác biệt giữa DFP và BFGS), để có công thức cập nhật Hk, và chuyển đổi thành công thức cập nhật Bk hay Lk,Dk), và với điều này, vì B thể hiện bằng tích các matrix tam giác L, matrix đường chéo D, khiến việc tính inverse, cơ bản chỉ là vẫn chỉ tốn O(n^2).
+> Tuy nhiên gs nói có khi, việc dùng cách cập nhật Hk gặp khó khăn trong một số tình huống, nên khi đó, ta lại dùng công thức chuyển đổi nói trên để có phiên bản BFGS nhưng mà là cập nhật Bk. Nhưng mà làm vậy thì lại đạp cái đuôi của mình. là phải tính inverse hóa ra lại tốn O(n^3). Tuy nhiên có cách, bằng cách phân rã Cholesky, ta có thể tạo ra thuật toán BFGS cập nhật các matrix L,D này (vẫn là dựa trên gốc là việc đặt điều kiện lên Hk (là điểm khác biệt giữa DFP và BFGS), để có công thức cập nhật Hk, và chuyển đổi thành công thức cập nhật Bk hay Lk,Dk), và với điều này, vì B thể hiện bằng tích các matrix tam giác L, matrix đường chéo D, khiến việc tính inverse, cơ bản chỉ là vẫn chỉ tốn O(n²).
 >
 > Tuy nhiên, qua đây, giáo sư lại phán một câu xanh rờn: Là KINH NGHIỆM TÍNH TOÁN THỰC TẾ ĐỀ XUẤT RẰNG CÁCH LÀM NÀY CHẢ CÓ LỢI ÍCH GÌ RÕ RÀNG CẢ, nên thôi cứ dùng BGFS nguyên gốc là đủ rồi.
 
