@@ -104,15 +104,15 @@
 <p align="center"><kbd><img src="assets/2u99oxt6qvr.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp theo, giáo sư đưa ra một ví dụ về việc tối thiểu hóa hàm số x1 + x2. Đây là bài toán tối ưu hóa hai biến với một ràng buộc đẳng thức là x1^2 + x2^2 - 2 = 0. 
+> Tiếp theo, giáo sư đưa ra một ví dụ về việc tối thiểu hóa hàm số x1 + x2. Đây là bài toán tối ưu hóa hai biến với một ràng buộc đẳng thức là x1² + x2² - 2 = 0. 
 >
 >
 >
-> Chiếu theo ngôn ngữ định nghĩa tổng quát của bài toán tối ưu có ràng buộc, hàm mục tiêu (objective function) f chính là x1 + x2. Do chỉ có một ràng buộc đẳng thức, tập chỉ số ℐ chứa các ràng buộc bất đẳng thức dĩ nhiên là tập rỗng. Trong khi đó, tập chỉ số ký hiệu bởi chữ E viết hoa, ℰ chứa các ràng buộc đẳng thức chỉ có một phần tử duy nhất là {1}. Hàm ràng buộc này chính là c1(x) = x1^2 + x2^2 - 2, với ràng buộc đẳng thức tương ứng là c1(x) = 0.
+> Chiếu theo ngôn ngữ định nghĩa tổng quát của bài toán tối ưu có ràng buộc, hàm mục tiêu (objective function) f chính là x1 + x2. Do chỉ có một ràng buộc đẳng thức, tập chỉ số ℐ chứa các ràng buộc bất đẳng thức dĩ nhiên là tập rỗng. Trong khi đó, tập chỉ số ký hiệu bởi chữ E viết hoa, ℰ chứa các ràng buộc đẳng thức chỉ có một phần tử duy nhất là {1}. Hàm ràng buộc này chính là c1(x) = x1² + x2² - 2, với ràng buộc đẳng thức tương ứng là c1(x) = 0.
 >
 >
 >
-> Với bài toán này, chúng ta **có thể vẽ được tập khả thi (feasible set)**. Theo định nghĩa, tập khả thi là tập hợp các điểm thỏa mãn ràng buộc. Trong trường hợp này, đó là tập hợp các điểm x thỏa mãn phương trình x1^2 + x2^2 = 2. Khi biểu diễn trực quan, tập hợp này **chính là đường tròn có tâm tại gốc tọa độ và bán kính bằng căn 2**. Giáo sư đặc biệt nhấn mạnh rằng **tập khả thi ở đây chỉ là đường tròn chứ không phải hình tròn**.
+> Với bài toán này, chúng ta **có thể vẽ được tập khả thi (feasible set)**. Theo định nghĩa, tập khả thi là tập hợp các điểm thỏa mãn ràng buộc. Trong trường hợp này, đó là tập hợp các điểm x thỏa mãn phương trình x1² + x2² = 2. Khi biểu diễn trực quan, tập hợp này **chính là đường tròn có tâm tại gốc tọa độ và bán kính bằng căn 2**. Giáo sư đặc biệt nhấn mạnh rằng **tập khả thi ở đây chỉ là đường tròn chứ không phải hình tròn**.
 >
 >
 >
@@ -206,7 +206,7 @@
 >
 >
 >
-> Nhớ lại, đã học trong MIT 18.06, span{∇c1(x)} là subspace span bởi ∇c1(x) (trong ví dụ cụ thể đang xét thì nó là vector \[∂c1(x)/∂x1, ∂c1(x)/∂x2\] = \[2x1, 2x2\] = 2x), dĩ nhiên, đây chỉ là 1D subspace của R^2, ví dụ cho tọa độ x = (α, β), thì span{∇c1(x)} = span{2x} sẽ là đường thẳng đi tâm và qua điểm (2α, 2β) vậy thôi.
+> Nhớ lại, đã học trong MIT 18.06, span{∇c1(x)} là subspace span bởi ∇c1(x) (trong ví dụ cụ thể đang xét thì nó là vector \[∂c1(x)/∂x1, ∂c1(x)/∂x2\] = \[2x1, 2x2\] = 2x), dĩ nhiên, đây chỉ là 1D subspace của R², ví dụ cho tọa độ x = (α, β), thì span{∇c1(x)} = span{2x} sẽ là đường thẳng đi tâm và qua điểm (2α, 2β) vậy thôi.
 >
 >
 >
@@ -218,19 +218,19 @@
 >
 >
 >
-> Chiếu u lên span{∇c1(x)}, ví dụ được u' → u' = ∇c1(x)∇c1(x)ᵀu/||∇c1(x)||^2
+> Chiếu u lên span{∇c1(x)}, ví dụ được u' → u' = ∇c1(x)∇c1(x)ᵀu/||∇c1(x)||²
 >
 >
 >
-> phần dư u - u' = u - ∇c1(x)∇c1(x)ᵀu / ||∇c1(x)||^2
+> phần dư u - u' = u - ∇c1(x)∇c1(x)ᵀu / ||∇c1(x)||²
 >
 >
 >
-> = \[I - ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||^2\]u
+> = \[I - ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||²\]u
 >
 >
 >
-> Do đó matrix chiếu lên orthogonal complement của span{∇c1(x)} chính là P = \[I - ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||^2\].
+> Do đó matrix chiếu lên orthogonal complement của span{∇c1(x)} chính là P = \[I - ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||²\].
 >
 >
 >
@@ -238,9 +238,9 @@
 >
 >
 >
-> \[I - ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||^2\] (-∇f(x))
+> \[I - ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||²\] (-∇f(x))
 >
-> = - \[I - ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||^2\] ∇f(x)
+> = - \[I - ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||²\] ∇f(x)
 >
 >
 >
@@ -248,11 +248,11 @@
 >
 >
 >
-> ∇c1(x)ᵀd^ = \[-∇c1(x)ᵀ\[I - ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||^2\] ∇f(x)
+> ∇c1(x)ᵀd^ = \[-∇c1(x)ᵀ\[I - ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||²\] ∇f(x)
 >
 >
 >
-> = \[-∇c1(x)ᵀ + ∇c1(x)ᵀ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||^2\] ∇f(x)
+> = \[-∇c1(x)ᵀ + ∇c1(x)ᵀ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||²\] ∇f(x)
 >
 >
 >
@@ -268,7 +268,7 @@
 >
 >
 >
-> Và ∇f(x)ᵀd^ = -∇f(x)ᵀ\[I - ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||^2\] ∇f(x)
+> Và ∇f(x)ᵀd^ = -∇f(x)ᵀ\[I - ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||²\] ∇f(x)
 >
 >
 >
@@ -276,15 +276,15 @@
 >
 >
 >
-> Mà P là gì, như đã thấy nó là matrix chiếu, mà với projection matrix, trong MIT 18.06 đã học: nó có tính chất: P^2 = P (vì chiếu 1 điểm đã nằm trong subspace thì sẽ ra chính nó).
+> Mà P là gì, như đã thấy nó là matrix chiếu, mà với projection matrix, trong MIT 18.06 đã học: nó có tính chất: P² = P (vì chiếu 1 điểm đã nằm trong subspace thì sẽ ra chính nó).
 >
 >
 >
-> Và tính chất đối xứng Pᵀ = P  (ví dụ như dễ thấy ở đây I - ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||^2 là đối xứng)
+> Và tính chất đối xứng Pᵀ = P  (ví dụ như dễ thấy ở đây I - ∇c1(x)∇c1(x)ᵀ/||∇c1(x)||² là đối xứng)
 >
 >
 >
-> Do đó quadratic form của nó: xᵀPx = xᵀPPx = xᵀPᵀPx = (Px)ᵀ(Px) = ||Px||^2 ≥ 0 ∀x
+> Do đó quadratic form của nó: xᵀPx = xᵀPPx = xᵀPᵀPx = (Px)ᵀ(Px) = ||Px||² ≥ 0 ∀x
 >
 >
 >
