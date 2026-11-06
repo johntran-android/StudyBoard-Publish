@@ -25,7 +25,7 @@
 >
 > Đại khái là thế này: Quadratic approx của hàm f tại xk:
 >
-> f(xk + p) ≈ f(xk) + ∇f(xk)ᵀp + (1/2)pᵀ∇^2f(xk)p
+> f(xk + p) ≈ f(xk) + ∇f(xk)ᵀp + (1/2)pᵀ∇²f(xk)p
 >
 > Đặt vế phải là hàm mk(p) 
 >
@@ -152,11 +152,11 @@
 >
 > Nói rằng khi đi từ xk → xk + p, ta có:
 >
-> f(xk + p) = f(xk) + ∇f(xk)ᵀp + (1/2)pᵀ ∇^2f(xk + tp)p for some t in (0,1) (4.1)
+> f(xk + p) = f(xk) + ∇f(xk)ᵀp + (1/2)pᵀ ∇²f(xk + tp)p for some t in (0,1) (4.1)
 >
 > Rồi, từ cái này mình sẽ lập luận rằng, nếu t nhỏ trong phạm vi nào đó thì Hessian tại xk + tp có thể coi như bằng Hessian tại xk. Từ đó ta có quadratic approximation:
 >
-> f(xk + p) ≈ f(xk) + ∇f(xk)ᵀp + (1/2)pᵀ ∇^2f(xk)p
+> f(xk + p) ≈ f(xk) + ∇f(xk)ᵀp + (1/2)pᵀ ∇²f(xk)p
 >
 > Còn trong sách, tác giả nói nếu ta thay Hessian tại xk + tp bởi ma trận xấp xỉ Bk symmetric nào đó (mà nếu Bk là Hessian tại k thì ta có kết quả trên) thì ta sẽ có:
 >
@@ -166,12 +166,12 @@
 >
 > mk(p) =  f(xk) + ∇f(xk)ᵀp + (1/2)pᵀ Bk p (4.2)
 >
-> Vậy thì sai khác giữa mk(p) và f(xk+p) sẽ là O(||p||^2) là vì sao?
+> Vậy thì sai khác giữa mk(p) và f(xk+p) sẽ là O(||p||²) là vì sao?
 >
-> ⇨ Là vì f(xk + p) - mk(p) sẽ là (1/2)pᵀ (Bk - H(xk+pt)) p. Và đây là O(||p||^2)
-> vì nó có dạng Σ αi pi^2
+> ⇨ Là vì f(xk + p) - mk(p) sẽ là (1/2)pᵀ (Bk - H(xk+pt)) p. Và đây là O(||p||²)
+> vì nó có dạng Σ αi pi²
 >
-> Thì là vì f(xk + p) - mk(p) = (1/2)pᵀ(Bk - ∇^2f(xk+tp)) p
+> Thì là vì f(xk + p) - mk(p) = (1/2)pᵀ(Bk - ∇²f(xk+tp)) p
 >
 > Rồi tại sao khi Bk chính xác là Hessian thì ta sẽ có sai khác O(||p^3||)???
 >
@@ -185,7 +185,7 @@
 >
 > minimize mk(p) subject to ||p|| ≤ Δk (4.3)
 >
-> Và vì ||.|| ở đây là L2 norm, nên về cơ bản là ta giải bài toán minimize quadratic function với constraint cũng quadratic vì ||p|| ≤ Δk thì tương đương pᵀp ≤ Δk^2)
+> Và vì ||.|| ở đây là L2 norm, nên về cơ bản là ta giải bài toán minimize quadratic function với constraint cũng quadratic vì ||p|| ≤ Δk thì tương đương pᵀp ≤ Δk²)
 >
 > Rồi nếu Bk xác định dương và ||Bk⁻¹ gk|| ≤ Δk thì ta có solution là pk_B = - (Bk)⁻¹ gk Và trong trường hợp này pk_B gọi là full step.
 >
@@ -387,9 +387,9 @@
 >
 > Nói rõ hơn: mình phải nhận thức rõ, hàm mk(p), vì là hàm của p, mà bản chất là gì, là x - xk, vì mk(p) vốn xuất thân từ xấp xỉ bậc 2, cũng là Taylor expansion của f xung quanh xk:
 >
-> f(x) ≈ f(xk) + ∇f(xk)ᵀ(x-xk) + (1/2)(x-xk)ᵀ ∇^2f(xk) (x-xk) 
+> f(x) ≈ f(xk) + ∇f(xk)ᵀ(x-xk) + (1/2)(x-xk)ᵀ ∇²f(xk) (x-xk) 
 >
-> Rồi ta mới lấy vế phải, đặt p = x - xk, và đăt hàm mk(p) = f(xk) + ∇f(xk)ᵀp + (1/2)p ∇^2f(xk) p
+> Rồi ta mới lấy vế phải, đặt p = x - xk, và đăt hàm mk(p) = f(xk) + ∇f(xk)ᵀp + (1/2)p ∇²f(xk) p
 >
 > Thì theo đó, sự tương ứng sẽ là: **Trong hệ quy chiếu x, ta đi từ xk → xk + p*, thì tương ứng với trong hệ quy chiếu p, thì ta đi từ p = 0, đến p = p***
 >
