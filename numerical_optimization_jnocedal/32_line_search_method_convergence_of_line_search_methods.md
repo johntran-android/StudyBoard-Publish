@@ -51,7 +51,7 @@
 >
 > Thì khi đó:
 >
-> Σk≥0 [cos(θ_k)]^2 (||∇fk||)^2 < ∞
+> Σk≥0 [cos(θ_k)]² (||∇fk||)² < ∞
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **99/100** · ✓ Move on
@@ -105,25 +105,25 @@
 >
 > Do ||αk pk|| = |αk| ||pk|| = α ||pk|| vì α dương.
 >
-> ⇔ ||∇fk+1 - ∇fk||||pk|| ≤ αkL(||pk||)^2 (nhân hai vế cho ||pk||)
+> ⇔ ||∇fk+1 - ∇fk||||pk|| ≤ αkL(||pk||)² (nhân hai vế cho ||pk||)
 >
 > mà (∇fk+1 - ∇fk)ᵀpk = ||∇fk+1 - ∇fk||||pk||cos θ ≤ ||∇fk+1 - ∇fk||||pk||*1 
 >
 > (θ là góc giữa ∇fk+1 - ∇fk và pk)
 >
-> ⇨ (∇fk+1 - ∇fk)ᵀpk ≤ αk L(||pk||)^2
+> ⇨ (∇fk+1 - ∇fk)ᵀpk ≤ αk L(||pk||)²
 >
-> Chia hai vế cho (||pk||)^2 là số dương)
+> Chia hai vế cho (||pk||)² là số dương)
 >
-> ⇨ αk ≥ (∇fk+1 - ∇fk)ᵀpk / L(||pk||)^2  
+> ⇨ αk ≥ (∇fk+1 - ∇fk)ᵀpk / L(||pk||)²  
 >
 > Tới đây kết hợp (∇fk+1 - ∇fk)ᵀpk ≥ (c2 - 1) ∇fkTpk
 >
-> ⇨ αk ≥ (∇fk+1 - ∇fk)ᵀpk / L(||pk||)^2 ≥ (c2 - 1) ∇fkTpk /  L(||pk||)^2
+> ⇨ αk ≥ (∇fk+1 - ∇fk)ᵀpk / L(||pk||)² ≥ (c2 - 1) ∇fkTpk /  L(||pk||)²
 >
-> ⇔ αk ≥ [(c2 - 1) / L] (∇fkTpk / (||pk||)^2)
+> ⇔ αk ≥ [(c2 - 1) / L] (∇fkTpk / (||pk||)²)
 >
-> ⇔ αk ≥ - [(1 - c2) / L] (∇fkTpk / (||pk||)^2)
+> ⇔ αk ≥ - [(1 - c2) / L] (∇fkTpk / (||pk||)²)
 >
 > Đặt vế phải là cục A, ta có αk ≥ cục A.
 >
@@ -133,21 +133,21 @@
 >
 > Ở trên ta có αk ≥ cục A, mà cục B = c1∇fkTpk âm do c1 dương, ∇fkTpk âm lí do là pk là descent direction. Vậy cục B âm, nhân hai vế cho αk ≥ cục A ta có αk cục B ≤ cục A cục B
 >
-> αk c1∇fkTpk ≤ - [(1 - c2) / L] (∇fkTpk / (||pk||)^2) c1∇fkTpk
+> αk c1∇fkTpk ≤ - [(1 - c2) / L] (∇fkTpk / (||pk||)²) c1∇fkTpk
 >
-> Vậy fk+1 ≤ fk + c1αk∇fkTpk ≤ fk - [(1 - c2) / L] (∇fkTpk / (||pk||)^2) c1∇fkTpk
+> Vậy fk+1 ≤ fk + c1αk∇fkTpk ≤ fk - [(1 - c2) / L] (∇fkTpk / (||pk||)²) c1∇fkTpk
 >
-> = fk - c1 [(1 - c2) / L] (∇fkTpk)^2 / (||pk||)^2) 
+> = fk - c1 [(1 - c2) / L] (∇fkTpk)² / (||pk||)²) 
 >
 > Tới đây dùng: ∇fkTpk = ||∇fk||||pk|| cos θk
 >
-> ⇨ fk+1 ≤ fk - c1 [ (1 - c2) / L] (||∇fk||||pk|| cos θ)^2 / (||pk||)^2)]
+> ⇨ fk+1 ≤ fk - c1 [ (1 - c2) / L] (||∇fk||||pk|| cos θ)² / (||pk||)²)]
 >
-> ⇔ fk+1 ≤ fk - c1 [ (1 - c2) / L] (||∇fk||cos θ)^2)]
+> ⇔ fk+1 ≤ fk - c1 [ (1 - c2) / L] (||∇fk||cos θ)²)]
 >
 > Đặt c = c1 [ (1 - c2) / L]
 >
-> ⇨ fk+1 ≤ fk - c (cos θk)^2 (||∇fk||)^2
+> ⇨ fk+1 ≤ fk - c (cos θk)² (||∇fk||)²
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -167,33 +167,33 @@
 > [!NOTE]
 > Rồi, từ kết quả đã có ở note trước:
 >
-> fk+1 ≤ fk - c (cos θk)^2 (||∇fk||)^2
+> fk+1 ≤ fk - c (cos θk)² (||∇fk||)²
 >
 > Tới đây, viết cái inequality này với mọi j từ 0 tới k
 >
-> f1 ≤ f0 - c (cos θ0)^2 (||∇f0||)^2
+> f1 ≤ f0 - c (cos θ0)² (||∇f0||)²
 >
-> f2 ≤ f1 - c (cos θ1)^2 (||∇f1||)^2
+> f2 ≤ f1 - c (cos θ1)² (||∇f1||)²
 >
 > ...
 >
-> fk+1 ≤ fk - c (cos θk)^2 (||∇fk||)^2
+> fk+1 ≤ fk - c (cos θk)² (||∇fk||)²
 >
 > Cộng vế theo vế cả đám:
 >
-> f1 + f2 +...+ fk+1 ≤ f0 + f1 +...+ fk - Σ_j=0:k c (cos θj)^2 (||∇fj||)^2
+> f1 + f2 +...+ fk+1 ≤ f0 + f1 +...+ fk - Σ_j=0:k c (cos θj)² (||∇fj||)²
 >
-> ⇔ fk+1 ≤ f0 - Σ_j=0:k c (cos θj)^2 (||∇fj||)^2
+> ⇔ fk+1 ≤ f0 - Σ_j=0:k c (cos θj)² (||∇fj||)²
 >
-> Cuối cùng ta có f0 - fk+1 ≥ Σ_j=0:k c (cos θj)^2 (||∇fj||)^2
+> Cuối cùng ta có f0 - fk+1 ≥ Σ_j=0:k c (cos θj)² (||∇fj||)²
 >
 > Mà vì hàm f có giả thiết là bị chặn dưới, nôm na là nó không thể xuống -inf được, do đó khoảng giảm từ f0 đến fk+1 không thể lớn vô cùng được:
 >
 > ⇨ f0 - fk+1 ≤ inf
 >
-> ⇨ Σ_j=0:k c (cos θj)^2 (||∇fj||)^2 ≤ inf.
+> ⇨ Σ_j=0:k c (cos θj)² (||∇fj||)² ≤ inf.
 >
-> ⇔ Σ_j=0:k (cos θj)^2 (||∇fj||)^2 ≤ inf. Chứng minh xong
+> ⇔ Σ_j=0:k (cos θj)² (||∇fj||)² ≤ inf. Chứng minh xong
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ⚠️ **80/100** · ✓ Move on
@@ -231,13 +231,13 @@
 <p align="center"><kbd><img src="assets/22q0au8pe3g.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, thế thì cái Dutendit condition Σ_j=0:k (cos θj)^2 (||∇fj||)^2 ≤ inf có một ý nghĩa như vầy.
+> Rồi, thế thì cái Dutendit condition Σ_j=0:k (cos θj)² (||∇fj||)² ≤ inf có một ý nghĩa như vầy.
 >
-> Tổng của chuỗi số với số hạng tổng quát (cos θk)^2 (||∇fk||)^2 hội tụ về  một giá trị nào đó, chứ ko nổ tung (= infinity). 
+> Tổng của chuỗi số với số hạng tổng quát (cos θk)² (||∇fk||)² hội tụ về  một giá trị nào đó, chứ ko nổ tung (= infinity). 
 >
-> Thế thì có một định lí về dãy số nói rằng (mà cũng dễ hiểu) là số hạng tổng quát (cos θk)^2 (||∇fk||)^2 phải hội tụ về 0 khi k → inf (vì chỉ có như vậy thì cái tổng mới hội tụ về giá trị hữu hạn được)
+> Thế thì có một định lí về dãy số nói rằng (mà cũng dễ hiểu) là số hạng tổng quát (cos θk)² (||∇fk||)² phải hội tụ về 0 khi k → inf (vì chỉ có như vậy thì cái tổng mới hội tụ về giá trị hữu hạn được)
 >
-> Do đó ta suy ra lim k → inf (cos θk)^2 (||∇fk||)^2 = 0
+> Do đó ta suy ra lim k → inf (cos θk)² (||∇fk||)² = 0
 >
 > Thế thì cái chính sẽ là, chỉ cần pk được chọn là hướng hợp với - ∇fk một góc nhọn, tức cos θk theo công thức 3.12 cosθk = - ∇fkTpk / ||∇fk|| |pk|| là số dương, thì khi đó, để cái lim trên tiến về không thì bắt buộc ∇k phải → 0
 >
@@ -291,7 +291,7 @@
 >
 > xk+1 = xk + αk pk với **pk là Newton direction hoặc quasi Newton direction** 
 >
-> (ôn lại tí xíu: Nếu pk là Newton direction, thì nó là nghiệm của hệ: Bk pk = - ∇fk với Bk là Hessian tại k: ∇^2 fk, còn với quasi Newton direction, thì người ta thay bằng matrix Bk nào đó (tính bằng vài cách) xấp xỉ cho Hessian) 
+> (ôn lại tí xíu: Nếu pk là Newton direction, thì nó là nghiệm của hệ: Bk pk = - ∇fk với Bk là Hessian tại k: ∇² fk, còn với quasi Newton direction, thì người ta thay bằng matrix Bk nào đó (tính bằng vài cách) xấp xỉ cho Hessian) 
 >
 > Như vậy, ở đây, khi họ **assume Bk positive definite**, dĩ nhiên là ta có thể có (Bk)⁻¹:
 >
@@ -327,13 +327,13 @@
 >
 > (Λ là matrix eigenvalue của Bk, Q là orthogonal matrix tạo bởi các eigenvectors của Bk)
 >
-> = Σi λi ((Qᵀpk)_i)^2 ≥ Σi λmin(Bk) (Qᵀpk)_i^2 
+> = Σi λi ((Qᵀpk)_i)² ≥ Σi λmin(Bk) (Qᵀpk)_i² 
 >
-> = λmin(Bk) Σi (Qᵀpk)_i^2 = λmin(Bk) ||Qᵀpk||^2 
+> = λmin(Bk) Σi (Qᵀpk)_i² = λmin(Bk) ||Qᵀpk||² 
 >
-> = λmin(Bk) ||pk||^2  (do ||Qᵀpk|| = ||pk||)
+> = λmin(Bk) ||pk||²  (do ||Qᵀpk|| = ||pk||)
 >
-> Vậy (pk)ᵀ Bk pk ≥ λmin(Bk) ||pk||^2
+> Vậy (pk)ᵀ Bk pk ≥ λmin(Bk) ||pk||²
 >
 > ====
 >
@@ -371,9 +371,9 @@
 >
 > Vì hàm objective không âm, nên ta có thể chuyển thành bài toán tương đương:
 >
-> maximize (g(x))^2 = (||Ax||)^2 / (||x||)^2, ví với u không âm thì u1 > u2 thì u1^2 > u2^2
+> maximize (g(x))² = (||Ax||)² / (||x||)², ví với u không âm thì u1 > u2 thì u1² > u2²
 >
-> maximize x  (||Ax||)^2 / (||x||)^2  = (Ax)ᵀ(Ax) / xᵀx = (xᵀ AᵀA x) / xᵀx
+> maximize x  (||Ax||)² / (||x||)²  = (Ax)ᵀ(Ax) / xᵀx = (xᵀ AᵀA x) / xᵀx
 >
 > Rồi, AᵀA dĩ nhiên là **symmetric**, nên nó **luôn có đủ các eigenvector độc lập để có thể diagonalizable**: 
 >
@@ -381,27 +381,27 @@
 >
 > Xét xᵀAᵀAx / xᵀx = xᵀQ Λ Qᵀx / xᵀx 
 >
-> = Σi λ(AᵀA)_i (Qᵀx)_i^2 / xᵀx
+> = Σi λ(AᵀA)_i (Qᵀx)_i² / xᵀx
 >
-> ≤  Σi λmax(AᵀA) (Qᵀx)_i^2 / xᵀx (1)
+> ≤  Σi λmax(AᵀA) (Qᵀx)_i² / xᵀx (1)
 >
-> = λmax(AᵀA) Σi (Qᵀx)_i^2 / xᵀx
+> = λmax(AᵀA) Σi (Qᵀx)_i² / xᵀx
 >
-> =λmax(AᵀA) ||Qᵀx||^2 / xᵀx
+> =λmax(AᵀA) ||Qᵀx||² / xᵀx
 >
-> = λmax(AᵀA) ||x||^2 / xᵀx    | Do Qᵀx ko thay đổi norm
+> = λmax(AᵀA) ||x||² / xᵀx    | Do Qᵀx ko thay đổi norm
 >
-> = λmax(AᵀA) ||x||^2 / ||x||^2
+> = λmax(AᵀA) ||x||² / ||x||²
 >
 > = λmax(AᵀA)
 >
-> Vậy max x ≠ 0 ||Ax||^2 / ||x||^2 = λmax(AᵀA)
+> Vậy max x ≠ 0 ||Ax||² / ||x||² = λmax(AᵀA)
 >
 > ⇨ max x ||Ax|| / ||x|| = √λmax(AᵀA) 
 >
 > Suy nghĩ đơn giản thôi: 
 >
-> Nếu hàm [g(x)]^2 đạt max = a tức, [g(x)]^2 ≤ a, và g(x) ≥ 0, thì ta ⇔ g(x) ≤ √a ⇨ g(x) có max = √a
+> Nếu hàm [g(x)]² đạt max = a tức, [g(x)]² ≤ a, và g(x) ≥ 0, thì ta ⇔ g(x) ≤ √a ⇨ g(x) có max = √a
 >
 > Rồi.
 >
@@ -411,15 +411,15 @@
 >
 > mà với matrix Bk positive definite thì ta có:
 >
-> BkTBk = (Q Λ Qᵀ)ᵀ (Q Λ Qᵀ) = Q Λ Qᵀ Q Λ Qᵀ = Q Λ^2 Qᵀ
+> BkTBk = (Q Λ Qᵀ)ᵀ (Q Λ Qᵀ) = Q Λ Qᵀ Q Λ Qᵀ = Q Λ² Qᵀ
 >
 > Và cái này chính là **singular value decomposition của BkTBk**, mà **cũng là eigenvalue decomposition của nó.**
 >
-> Tức là **eigenvalue của BkTBk chính là singular value cuả nó, và đều là λ(Bk)^2, tức là bình phương eigenvalue của Bk**
+> Tức là **eigenvalue của BkTBk chính là singular value cuả nó, và đều là λ(Bk)², tức là bình phương eigenvalue của Bk**
 >
 > Nên tất nhiên **eigenvalue lớn nhất của BkTBk cũng chính là bình phương eigenvalue lớn nhất của Bk**
 >
-> ⇨ √λmax(BkTBk) = √(λmax(Bk))^2 = λmax(Bk)
+> ⇨ √λmax(BkTBk) = √(λmax(Bk))² = λmax(Bk)
 >
 > Vậy ta có **max_x ||Bkx|| / ||x|| = λmax(Bk)**, hay cũng là **||Bk|| = λmax(Bk)** (1)
 >
@@ -433,15 +433,15 @@
 >
 > ====
 >
-> Vậy tử số (pk)ᵀ Bk pk ≥ λmin(Bk) ||pk||^2 
+> Vậy tử số (pk)ᵀ Bk pk ≥ λmin(Bk) ||pk||² 
 >
 > còn mẫu số ||Bk pk|| ≤ λmax(Bk) ||pk||
 >
-> ⇨ ||Bk pk|| ||pk|| ≤ λ(Bk)_max ||pk||^2
+> ⇨ ||Bk pk|| ||pk|| ≤ λ(Bk)_max ||pk||²
 >
 > ⇨ cos θk = (pk)ᵀ Bk pk / ||Bk pk|| ||pk||  (kết qủa ta có ở trên) 
 >
-> ≥ λmin(Bk) ||pk||^2 / λmax(Bk) ||pk||^2 
+> ≥ λmin(Bk) ||pk||² / λmax(Bk) ||pk||² 
 >
 > ⇔ **θk ≥ λmin(Bk) / λmax(Bk)**
 >
@@ -467,7 +467,7 @@
 >
 > ⇨ **θk ≥ 1/M**. Chứng minh xong. 
 >
-> Và kết hợp với kết qủa (cos θk)^2 ||∇fk||^2 → 0 thì điều này có nghĩa là ∇fk → 0
+> Và kết hợp với kết qủa (cos θk)² ||∇fk||² → 0 thì điều này có nghĩa là ∇fk → 0
 >
 > Và như vậy ta có thể kết luận rằng **chỉ cần Bk positive definite và có tính chất là tồn tại M sao cho ||Bk|| ||Bk⁻¹|| ≤ M thì ta sẽ có global convergnence.**
 
