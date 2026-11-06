@@ -1,6 +1,6 @@
 # 11.1 & 2  introduction, One-way Anova
 
-📊 **Progress:** `22` Notes | `27` Screenshots | `21` AI Reviews
+📊 **Progress:** `22` Notes | `29` Screenshots | `22` AI Reviews
 
 ---
 <a id="node-c5qtmoe"></a>
@@ -1906,8 +1906,24 @@
 
 ###### Nội dung xem lại sau
 
+<p align="center"><kbd><img src="assets/bdmhy3fnnvu.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ipj2f27m79.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > QUAY LẠI SAU
+
+> [!TIP]
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **0/100** · ✗ Fix first
+>
+> Ghi chú chưa có bất kỳ nội dung kiến thức hay bài giải nào để đánh giá. Hãy hoàn thành bài học rồi quay lại kiểm tra nhé.
+>
+> **🔴 Critical issues**
+>
+> **1.** *"QUAY LẠI SAU"*
+>
+> Chưa thực hiện nội dung học tập hay bài giải nào, chỉ là ghi chú tạm hoãn.
+>
 
 <br>
 
