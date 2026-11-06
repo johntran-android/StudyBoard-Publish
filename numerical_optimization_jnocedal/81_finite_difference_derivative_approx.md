@@ -44,9 +44,9 @@
 >
 > Tiếp, nếu f twice differentiable, thì:
 >
-> ∇f(x + p) = ∇f(x) + ∫0:1 ∇^2f(x + tp)pdt
+> ∇f(x + p) = ∇f(x) + ∫0:1 ∇²f(x + tp)pdt
 >
-> f(x + p) = f(x) + ∇f(x)ᵀp + (1/2)pᵀ ∇^2f(x + tp) p for some t in [0,1]
+> f(x + p) = f(x) + ∇f(x)ᵀp + (1/2)pᵀ ∇²f(x + tp) p for some t in [0,1]
 >
 > Và đại khái là cái này chính là cái cho ta finite differentiation:
 >
@@ -54,16 +54,16 @@
 >
 > f(x + εei) = f(x) + ∇f(x)ᵀ ε*ei + (1/2)(εei)ᵀ ∇f(x + tεei)εei
 >
-> ⇔ f(x + εei) = f(x) + ε∇f(x)ᵀei + (1/2)ε^2(ei)ᵀ ∇f(x + tεei)ei
+> ⇔ f(x + εei) = f(x) + ε∇f(x)ᵀei + (1/2)ε²(ei)ᵀ ∇f(x + tεei)ei
 >
 > Tới đây có thể nói như sau: nếu ε rất nhỏ, thì t*ε càng nhỏ, và x + tεei là
 > điểm rất gần x, nên Hessian tại đó coi như xấp xỉ Hessian tại x:
 >
-> ⇔ f(x + εei) ≈ f(x) + ε∇f(x)ᵀei + (1/2)ε^2(ei)ᵀ ∇f(x)ei
+> ⇔ f(x + εei) ≈ f(x) + ε∇f(x)ᵀei + (1/2)ε²(ei)ᵀ ∇f(x)ei
 >
 > Tương tự:
 >
-> f(x - εei) ≈ f(x) - ε∇f(x)ᵀei + (1/2)ε^2(ei)ᵀ ∇f(x)ei
+> f(x - εei) ≈ f(x) - ε∇f(x)ᵀei + (1/2)ε²(ei)ᵀ ∇f(x)ei
 >
 > Trừ vế theo vế:
 >
@@ -114,7 +114,7 @@
 >
 > Tiếp, nếu f twice differentiable, thì:
 >
-> ∇f(x + p) = ∇f(x) + ∫0:1 ∇^2f(x + tp)pdt
+> ∇f(x + p) = ∇f(x) + ∫0:1 ∇²f(x + tp)pdt
 >
 > Chứng minh:
 >
@@ -122,19 +122,19 @@
 >
 > g'(t) = d/dt g(t) = d/dt ∇f(x + tp) = d/d(x + tp) ∇f(x + tp) . d/dt (x + tp)
 >
-> = ∇^2f(x + tp) p
+> = ∇²f(x + tp) p
 >
 > FTC 2 nói rằng: Nếu G là nguyên hàm của f thì ∫a:bf(t)dt = G(b) - G(a)
 >
 > Áp dụng vào: ∫0:1g'(t)dt = g(1) - g(0)
 >
-> ⇔ ∫0:1 ∇^2f(x + tp) p dt = ∇f(x + p) - ∇f(x)
+> ⇔ ∫0:1 ∇²f(x + tp) p dt = ∇f(x + p) - ∇f(x)
 >
-> ⇔ ∇f(x + p) = ∇f(x) + ∫0:1 ∇^2f(x + tp) p dt. Chứng minh xong
+> ⇔ ∇f(x + p) = ∇f(x) + ∫0:1 ∇²f(x + tp) p dt. Chứng minh xong
 >
 > ------
 >
-> Và ý thứ ba: f(x + p) = f(x) + ∇f(x)ᵀp + (1/2)pᵀ ∇^2f(x + tp) p for some t in [0,1]
+> Và ý thứ ba: f(x + p) = f(x) + ∇f(x)ᵀp + (1/2)pᵀ ∇²f(x + tp) p for some t in [0,1]
 >
 > Chứng minh (xem lại) Chap 2
 
@@ -219,42 +219,42 @@
 >
 > Bắt đầu với Taylor's theorem:
 >
-> f(x + p) = f(x) + ∇f(x)ᵀp + (1/2)pᵀ ∇^2f(x + tp)p for some t ∈ (0,1)
+> f(x + p) = f(x) + ∇f(x)ᵀp + (1/2)pᵀ ∇²f(x + tp)p for some t ∈ (0,1)
 >
-> ⇔ f(x + p) - f(x) - ∇f(x)ᵀp = (1/2)pᵀ ∇^2f(x + tp)p
+> ⇔ f(x + p) - f(x) - ∇f(x)ᵀp = (1/2)pᵀ ∇²f(x + tp)p
 >
-> Gọi L là upper bound nào đó của norm Hessian: ||∇^2f(x)|| ≤ L. Ta có thể nói vậy là vì hàm số không thể cong vô cực (do điều kiện twice continously differentiable)
+> Gọi L là upper bound nào đó của norm Hessian: ||∇²f(x)|| ≤ L. Ta có thể nói vậy là vì hàm số không thể cong vô cực (do điều kiện twice continously differentiable)
 >
-> Xét |(1/2)pᵀ ∇^2f(x + tp)p|
+> Xét |(1/2)pᵀ ∇²f(x + tp)p|
 >
 > Áp dụng |uTv| ≤ ||u|| ||v||, vì |uTv| = | ||u||||v|| cos θ(u,v) | ≤ ||u|| ||v||
 >
-> ⇨ |(1/2)pᵀ ∇^2f(x + tp)p| ≤ (1/2) ||p|| ||∇^2f(x + tp)p||
+> ⇨ |(1/2)pᵀ ∇²f(x + tp)p| ≤ (1/2) ||p|| ||∇²f(x + tp)p||
 >
 > Tiếp, áp dụng ||Ax|| ≤ ||A|| ||x||
 >
 > Vì ||A|| define là sup_x ||Ax|| / ||x|| ⇨ ||A|| ≥ ||Ax|| / ||x|| ∀x ⇨ ||A||||x|| ≥
 > ||Ax||
 >
-> ⇨ (1/2) ||p|| ||∇^2f(x + tp)p|| ≤ (1/2) ||p|| ||∇^2f(x + tp)|| ||p||
+> ⇨ (1/2) ||p|| ||∇²f(x + tp)p|| ≤ (1/2) ||p|| ||∇²f(x + tp)|| ||p||
 >
-> = (1/2) ||p||^2 ||∇^2f(x + tp)||
+> = (1/2) ||p||² ||∇²f(x + tp)||
 >
-> Vậy |(1/2)pᵀ ∇^2f(x + tp)p| ≤ (1/2) ||p||^2 ||∇^2f(x + tp)||
+> Vậy |(1/2)pᵀ ∇²f(x + tp)p| ≤ (1/2) ||p||² ||∇²f(x + tp)||
 >
 > Và đã nói L là upper bound của Hessian trong phạm vi đang xét
 >
-> Nên ||∇^2f(x + tp)|| ≤ L
+> Nên ||∇²f(x + tp)|| ≤ L
 >
-> ⇨ |(1/2)pᵀ ∇^2f(x + tp)p| ≤ (1/2) ||p||^2 ||∇^2f(x + tp)|| ||p|| ≤ (1/2) L ||p||^2
+> ⇨ |(1/2)pᵀ ∇²f(x + tp)p| ≤ (1/2) ||p||² ||∇²f(x + tp)|| ||p|| ≤ (1/2) L ||p||²
 >
-> Vậy |f(x + p) - f(x) - ∇f(x)ᵀp| ≤ (L/2) ||p||^2
+> Vậy |f(x + p) - f(x) - ∇f(x)ᵀp| ≤ (L/2) ||p||²
 >
 > Áp dụng điều này với p = εei
 >
-> |f(x + εei) - f(x) - ∇f(x)ᵀ εei| ≤ (L/2) ||εei||^2
+> |f(x + εei) - f(x) - ∇f(x)ᵀ εei| ≤ (L/2) ||εei||²
 >
-> ⇔ |f(x + εei) - f(x) - ε ∇f(x)ᵀei| ≤ (L/2) ε^2 ||ei||^2
+> ⇔ |f(x + εei) - f(x) - ε ∇f(x)ᵀei| ≤ (L/2) ε² ||ei||²
 >
 > ⇔ |[f(x + εei) - f(x) - ε ∇f(x)ᵀei]/ε| ≤ (L/2) * ε * 1  (||ei|| = 1)
 >
@@ -491,11 +491,11 @@
 > Điều kiện cần tối ưu bậc nhất (first order necessary optimality condition) tìm
 > critical point: g'(ε) = 0
 >
-> d/dε [2u L_f / ε^2  + (L/2) ε] = 0
+> d/dε [2u L_f / ε²  + (L/2) ε] = 0
 >
-> ⇔ (L/2) = 2u L_f / ε^2
+> ⇔ (L/2) = 2u L_f / ε²
 >
-> ⇔ ε^2 = 4u L_f / L
+> ⇔ ε² = 4u L_f / L
 >
 > Và đại ý là nếu có thể thêm một số điều kiện  thì ta có thể dùng √u, mà ta
 > tin rằng nó sẽ khá gần với con số tối ưu.
@@ -579,27 +579,27 @@
 >
 > Nên áp dụng ở đây khi đi từ x → x + tp, mức thay đổi của Hessian:
 >
-> ||[∇^2f(x + tp) - ∇^2f(x)]|| / ||tp|| ≤ L, gọi là hằng số Lipschitz
+> ||[∇²f(x + tp) - ∇²f(x)]|| / ||tp|| ≤ L, gọi là hằng số Lipschitz
 >
 > -----
 >
 > Rồi, thế thì nói về định lý Taylor thì đã biết rồi:
 >
-> f(x + p) = f(x) + ∇f(x)ᵀp + (1/2)pᵀ ∇^2f(x + tp)p for some t ∈ (0,1)
+> f(x + p) = f(x) + ∇f(x)ᵀp + (1/2)pᵀ ∇²f(x + tp)p for some t ∈ (0,1)
 >
-> Vậy thì xét Hessian tại ∇^2f(x + tp) và tại ∇^2f(x), khi đi từ x đến x + tp
+> Vậy thì xét Hessian tại ∇²f(x + tp) và tại ∇²f(x), khi đi từ x đến x + tp
 >
-> Theo điều kiện Lipschitz: ||∇^2f(x + tp) - ∇^2f(x)|| / ||x + tp - x|| ≤ L
+> Theo điều kiện Lipschitz: ||∇²f(x + tp) - ∇²f(x)|| / ||x + tp - x|| ≤ L
 >
-> ⇔ ||∇^2f(x + tp) - ∇^2f(x)|| / |t|||p|| ≤ L
+> ⇔ ||∇²f(x + tp) - ∇²f(x)|| / |t|||p|| ≤ L
 >
-> ⇔ ||∇^2f(x + tp) - ∇^2f(x)|| / ≤ L |t| ||p|| (1)
+> ⇔ ||∇²f(x + tp) - ∇²f(x)|| / ≤ L |t| ||p|| (1)
 >
-> Vậy ||(1/2)pᵀ ∇^2f(x + tp)p - (1/2)pᵀ∇^2f(x)p||
+> Vậy ||(1/2)pᵀ ∇²f(x + tp)p - (1/2)pᵀ∇²f(x)p||
 >
-> = ||(1/2)pᵀ [∇^2f(x + tp)p - ∇^2f(x)]p||
+> = ||(1/2)pᵀ [∇²f(x + tp)p - ∇²f(x)]p||
 >
-> ≤ (1/2) ||p|| ||∇^2f(x + tp)p - ∇^2f(x)|| ||p||
+> ≤ (1/2) ||p|| ||∇²f(x + tp)p - ∇²f(x)|| ||p||
 >
 > (Cái này do ||pᵀAp|| ≤ ||p|| ||Ap|| (triangular inequality) ≤ ||p|| ||A|| ||p|| (định nghĩa
 > norm))
@@ -608,49 +608,49 @@
 >
 > = [constant nào đó] ||p||^3
 >
-> Như vậy, sai khác giữa (1/2)pᵀ ∇^2f(x + tp)p và (1/2)pᵀ ∇^2f(x)p có độ lớn tỉ lệ với
+> Như vậy, sai khác giữa (1/2)pᵀ ∇²f(x + tp)p và (1/2)pᵀ ∇²f(x)p có độ lớn tỉ lệ với
 > ||p||^3.
 >
 > Nên ta sẽ ghi là:
 >
-> f(x + p) = f(x) + ∇f(x)ᵀp + (1/2)pᵀ ∇^2f(x)p + O(||p||^3)
+> f(x + p) = f(x) + ∇f(x)ᵀp + (1/2)pᵀ ∇²f(x)p + O(||p||^3)
 >
 > ====
 >
 > Rồi, áp dụng với p = εei và -εei
 >
-> f(x + εei) = f(x) + ∇f(x)ᵀεei + (1/2)(εei)ᵀ ∇^2f(x)(εei) + o(||εei||^3)
+> f(x + εei) = f(x) + ∇f(x)ᵀεei + (1/2)(εei)ᵀ ∇²f(x)(εei) + o(||εei||^3)
 >
-> = f(x) + ε ∇f(x)ᵀei + (1/2)ε^2(ei)ᵀ ∇^2f(x)ei + O(ε^3)
+> = f(x) + ε ∇f(x)ᵀei + (1/2)ε²(ei)ᵀ ∇²f(x)ei + O(ε^3)
 >
 > Rồi ∇f(x)ᵀei, dĩ nhiên chính là ra phần tử thứ i của gradient, chính là ∂f(x)/∂xi
 >
-> Còn ε^2(ei)ᵀ ∇^2f(x) ei ra gì?
+> Còn ε²(ei)ᵀ ∇²f(x) ei ra gì?
 >
-> = ε^2(ei)ᵀ[∇^2f(x) ei] = ε^2(ei)ᵀ[cột thứ i của ∇^2f(x)]
+> = ε²(ei)ᵀ[∇²f(x) ei] = ε²(ei)ᵀ[cột thứ i của ∇²f(x)]
 >
-> = ε^2 ∇^2f(x)_ii
+> = ε² ∇²f(x)_ii
 >
-> = ε^2 ∂^2f/∂xi^2 (phần tử ii của Hessian chính là đạo hàm bậc hai wrt xi của f)
+> = ε² ∂²f/∂xi² (phần tử ii của Hessian chính là đạo hàm bậc hai wrt xi của f)
 >
-> ...= f(x) + ε∂f(x)/∂xi + (1/2)ε^2 ∂^2f/∂xi^2 + O(ε^3)
+> ...= f(x) + ε∂f(x)/∂xi + (1/2)ε² ∂²f/∂xi² + O(ε^3)
 >
 > Viết lại:
 >
-> f(x + εei) = f(x) + ε∂f(x)/∂xi + (1/2)ε^2 ∂^2f/∂xi^2 + O(ε^3)
+> f(x + εei) = f(x) + ε∂f(x)/∂xi + (1/2)ε² ∂²f/∂xi² + O(ε^3)
 >
 > Tương tự:
 >
-> f(x - εei) = f(x) - ε∂f(x)/∂xi + (1/2)ε^2 ∂^2f/∂xi^2 - O(ε^3)
+> f(x - εei) = f(x) - ε∂f(x)/∂xi + (1/2)ε² ∂²f/∂xi² - O(ε^3)
 >
 > Trừ vế theo vế:
 >
 > f(x + εei) - f(x - εei) = 2ε∂f(x)/∂xi + 2 O(ε^3)
 >
-> ⇔ [f(x + εei) - f(x - εei)] / 2ε = ∂f(x)/∂xi + O(ε^2)
+> ⇔ [f(x + εei) - f(x - εei)] / 2ε = ∂f(x)/∂xi + O(ε²)
 >
 > Và như vậy, đạo hàm xấp xỉ tính theo Central-difference sai số với đạo hàm chính
-> xác O(ε^2). Và điều đó nó có nghĩa là nó chính xác Forward-difference (có sai số
+> xác O(ε²). Và điều đó nó có nghĩa là nó chính xác Forward-difference (có sai số
 > O(ε) - tuyến tính với ε)
 >
 > Và tuy rằng khi kết hợp với sai số làm tròn thì đôi khi sự chính xác hơn này không
@@ -785,15 +785,15 @@
 >
 > Vậy ∫0:1 ||J(x + tp) - J(x)|| ||p|| dt ≤ ∫0:1 L . |t| . ||p|| ||p|| dt
 >
-> = L ||p||^2 ∫0:1 t dt
+> = L ||p||² ∫0:1 t dt
 >
-> = L ||p||^2 t^2/2|0:1
+> = L ||p||² t²/2|0:1
 >
-> = L ||p||^2 (1/2)
+> = L ||p||² (1/2)
 >
-> = (L/2) ||p||^2
+> = (L/2) ||p||²
 >
-> ⇨ ||r(x + p) - r(x) - J(x)p|| ≤ (L/2) ||p||^2 chính là kết quả 8.10
+> ⇨ ||r(x + p) - r(x) - J(x)p|| ≤ (L/2) ||p||² chính là kết quả 8.10
 
 <br>
 
@@ -804,25 +804,25 @@
 <p align="center"><kbd><img src="assets/fsyfgoz0i1t.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cái kết quả trên ||r(x + p) - r(x) - J(x)p|| ≤ (L/2) ||p||^2
+> Cái kết quả trên ||r(x + p) - r(x) - J(x)p|| ≤ (L/2) ||p||²
 >
 > Vậy thì cái này có nghĩa là gì mới được:
 >
-> [norm của vector [r(x + p) - r(x)] - J(x)p] sẽ luôn ≤ (L/2) ||p||^2
+> [norm của vector [r(x + p) - r(x)] - J(x)p] sẽ luôn ≤ (L/2) ||p||²
 >
 > Nên nếu ta lấy r(x + p) - r(x) để xấp xỉ cho J(x)p thì mức sai số, tính theo norm sẽ
-> luôn  bé (L/2) ||p||^2, nếu ||p|| nhỏ thì đây là chặn trên rất nhỏ → sai số cũng sẽ rất
+> luôn  bé (L/2) ||p||², nếu ||p|| nhỏ thì đây là chặn trên rất nhỏ → sai số cũng sẽ rất
 > nhỏ.
 >
 > Do đó cho vector d, và số ε rất nhỏ:
 >
-> ||r(x + εd) - r(x) - J(x)ε d || ≤ (L/2) ||εd||^2
+> ||r(x + εd) - r(x) - J(x)ε d || ≤ (L/2) ||εd||²
 >
-> ||r(x + εd) - r(x) - εJ(x)d|| ≤ (L/2) ε^2 ||d||^2
+> ||r(x + εd) - r(x) - εJ(x)d|| ≤ (L/2) ε² ||d||²
 >
-> ⇨ ||r(x + εd) - r(x) - εJ(x)d|| / ε ≤ (L/2) ε ||d||^2
+> ⇨ ||r(x + εd) - r(x) - εJ(x)d|| / ε ≤ (L/2) ε ||d||²
 >
-> ⇔ ||[r(x + εd) - r(x)] / ε - J(x)d|| ≤ (L/2) ε ||d||^2
+> ⇔ ||[r(x + εd) - r(x)] / ε - J(x)d|| ≤ (L/2) ε ||d||²
 >
 > Ý nghĩa của cái này là sai số của r(x + εd) - r(x)] / ε và J(x)d sẽ nhỏ tuyến tính
 > theo ε, nếu ε rất nhỏ, ta có thể cho phép xấp xỉ J(x)d bởi r(x + εd) - r(x)] / ε với O(ε)
@@ -1028,13 +1028,13 @@
 > [!NOTE]
 > Đại ý là một số thuật toán ko cần Hessian, mà chỉ cần tính Hessian nhân với
 > vector p nào đó. Nên dựa vào Taylor's theorem, ta lại có thể derive ra công
-> thức tính gần đúng của ∇^2f(x)p:
+> thức tính gần đúng của ∇²f(x)p:
 >
 > Xài lại cái hồi nãy đã chứng minh:
 >
-> ||r(x + p) - r(x) - J(x)p|| ≤ (L/2) ||p||^2
+> ||r(x + p) - r(x) - J(x)p|| ≤ (L/2) ||p||²
 >
-> từ đó có J(x)d = r(x + εd) - r(x)] / ε + O(ε^2)
+> từ đó có J(x)d = r(x + εd) - r(x)] / ε + O(ε²)
 >
 > và cho ta công thức xấp xỉ Jacobian: J(x)d ≈ r(x + εd) - r(x)] / ε
 >
@@ -1042,16 +1042,16 @@
 >
 > và thay J(x), Jacobian của r(x) = ∇f(x),thì chính là Hessian của f(x)
 >
-> ||∇f(x + p) - ∇f(x) - ∇^2f(x)p|| ≤ (L/2) ||p||^2
+> ||∇f(x + p) - ∇f(x) - ∇²f(x)p|| ≤ (L/2) ||p||²
 >
-> ⇨ ∇^2f(x)d = ∇f(x + εd) - ∇(x)] / ε + O(ε)
+> ⇨ ∇²f(x)d = ∇f(x + εd) - ∇(x)] / ε + O(ε)
 >
 > và ta có công thức xấp xỉ Hessian có sai số tuyến tính theo ε: 
 >
-> ∇^2f(x)d ≈ ∇f(x + εd) - ∇(x)] / ε
+> ∇²f(x)d ≈ ∇f(x + εd) - ∇(x)] / ε
 >
 > Là tương tự như những phần trước ta sẽ có công thức xấp xỉ Hessian theo
-> central difference có sai số nhỏ hơn, O(ε^2)
+> central difference có sai số nhỏ hơn, O(ε²)
 
 **🔗 See also:** [Xấp xỉ tích Jacobian-vector](#node-uv0qt75)
 
