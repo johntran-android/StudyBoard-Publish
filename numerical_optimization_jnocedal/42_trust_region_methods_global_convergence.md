@@ -104,11 +104,11 @@
 >
 > minimize over τ hàm g(τ) = f + gᵀ(τpS) + (1/2)(τpS)ᵀ B (τpS) s.t ||τpS|| ≤ Δ
 >
-> = f + τ gᵀ(pS) + (1/2)(pS)ᵀB(pS) τ^2  
+> = f + τ gᵀ(pS) + (1/2)(pS)ᵀB(pS) τ²  
 >
-> = f + τ gᵀ(- (Δ / ||g||) g) + (1/2)(- (Δ / ||g||) g)ᵀB(- (Δ / ||g||) g) τ^2
+> = f + τ gᵀ(- (Δ / ||g||) g) + (1/2)(- (Δ / ||g||) g)ᵀB(- (Δ / ||g||) g) τ²
 >
-> = f - τ Δ ||g|| + (1/2)(Δ / ||g||)^2 gᵀBg τ^2
+> = f - τ Δ ||g|| + (1/2)(Δ / ||g||)² gᵀBg τ²
 >
 > Khi đó ta sẽ có hai trường hợp mà đã nói ở phần Cauchy point
 >
@@ -120,23 +120,23 @@
 >
 > = f + gᵀ[- (Δ / ||g||) g] + (1/2) [- (Δ / ||g||) g]T B [- (Δ / ||g||) g]
 >
-> = f - (Δ / ||g||) gᵀg + (1/2) (Δ / ||g||)^2  gᵀBg
+> = f - (Δ / ||g||) gᵀg + (1/2) (Δ / ||g||)²  gᵀBg
 >
-> = f - (Δ / ||g||) ||g||^2 + (1/2) (Δ / ||g||)^2  gᵀBg
+> = f - (Δ / ||g||) ||g||² + (1/2) (Δ / ||g||)²  gᵀBg
 >
-> = f - Δ ||g|| + (1/2) (Δ / ||g||)^2  gᵀBg
+> = f - Δ ||g|| + (1/2) (Δ / ||g||)²  gᵀBg
 >
-> Từ đó m(0) - m(pC) = f - [f - Δ ||g|| + (1/2) (Δ / ||g||)^2  gᵀBg]
+> Từ đó m(0) - m(pC) = f - [f - Δ ||g|| + (1/2) (Δ / ||g||)²  gᵀBg]
 >
-> = f - f + Δ ||g|| - (1/2) (Δ / ||g||)^2  gᵀBg
+> = f - f + Δ ||g|| - (1/2) (Δ / ||g||)²  gᵀBg
 >
-> = Δ ||g|| - (1/2) (Δ / ||g||)^2  gᵀBg
+> = Δ ||g|| - (1/2) (Δ / ||g||)²  gᵀBg
 >
-> Viết lại: m(0) - m(pC) = Δ ||g|| - (1/2) (Δ / ||g||)^2  gᵀBg
+> Viết lại: m(0) - m(pC) = Δ ||g|| - (1/2) (Δ / ||g||)²  gᵀBg
 >
-> Tới đây ta xét B thỏa: gᵀBg ≤ 0, điều này ⇔ - (1/2) (Δ / ||g||)^2  gᵀBg ≥ 0
+> Tới đây ta xét B thỏa: gᵀBg ≤ 0, điều này ⇔ - (1/2) (Δ / ||g||)²  gᵀBg ≥ 0
 >
-> ⇨ Δ ||g|| - (1/2) (Δ / ||g||)^2  gᵀBg ≥ Δ ||g||
+> ⇨ Δ ||g|| - (1/2) (Δ / ||g||)²  gᵀBg ≥ Δ ||g||
 >
 > Và Δ dĩ nhiên ≥ min(Δ, ||g|| / ||B||) 
 >
@@ -166,21 +166,21 @@
 >
 > Khi đó pC = [(||g||)^3 / Δ gᵀBg] [-g Δ / ||g||] 
 >
-> = [(||g||)^2 / gᵀBg] [-g] 
+> = [(||g||)² / gᵀBg] [-g] 
 >
-> = - [(||g||)^2 / gᵀBg] g
+> = - [(||g||)² / gᵀBg] g
 >
 > m(0) - m(pC) 
 >
-> = f - [f + gᵀ{- [(||g||)^2 / gᵀBg] g} + (1/2) {- [(||g||)^2 / gᵀBg] g}TB{- [(||g||)^2 / gᵀBg] g}
+> = f - [f + gᵀ{- [(||g||)² / gᵀBg] g} + (1/2) {- [(||g||)² / gᵀBg] g}TB{- [(||g||)² / gᵀBg] g}
 >
-> = gᵀg [(||g||)^2 / gᵀBg] - (1/2) [||g||^4 / (gᵀBg)^2] gᵀBg
+> = gᵀg [(||g||)² / gᵀBg] - (1/2) [||g||^4 / (gᵀBg)²] gᵀBg
 >
 > = [(||g||)^4 / gᵀBg] - (1/2) [||g||^4 / (gᵀBg)]
 >
 > = (1/2) ||g||^4 / (gᵀBg)
 >
-> Tới đây xét cái quaratic form ở mẫu: gᵀBg. Ta sẽ có gᵀBg ≤ ||B|| ||g||^2. Vì sao:
+> Tới đây xét cái quaratic form ở mẫu: gᵀBg. Ta sẽ có gᵀBg ≤ ||B|| ||g||². Vì sao:
 >
 > Nhớ lại định nghĩa của norm of matrix B. Nói bằng lời, nó là stretch factor lớn nhất khi linear transform một vector bởi B: max_u ||Bu|| / ||u||. Nên ||B|| ≥ ||Bu|| / ||u|| Từ đó ta có inequality ||B|| ||u|| ≥ ||Bu||. ⇨ Áp dụng với g: ||B|| ||g|| ≥ ||Bg||
 >
@@ -188,11 +188,11 @@
 >
 > Mà ở trên ta có ||B|| ||g|| ≥ ||Bg|| ⇨ gᵀ(Bg) ≤ ||g|| ||B|| ||g||   
 >
-> Vậy gᵀ(Bg) ≤ ||B|| ||g||^2 (*)
+> Vậy gᵀ(Bg) ≤ ||B|| ||g||² (*)
 >
-> ⇨ (1/2) ||g||^4 / (gᵀBg) ≥ (1/2) ||g||^4 / ||B|| ||g||^2  
+> ⇨ (1/2) ||g||^4 / (gᵀBg) ≥ (1/2) ||g||^4 / ||B|| ||g||²  
 >
-> = (1/2) ||g||^2 / ||B|| = (1/2) (||g|| / ||B||) ||g|| 
+> = (1/2) ||g||² / ||B|| = (1/2) (||g|| / ||B||) ||g|| 
 >
 > và cái này thì dĩ nhiên ≥ (1/2) ||g|| × min(Δ, ||g|| / ||B||)
 >
@@ -206,15 +206,15 @@
 >
 > Lúc này việc chứng minh cũng y như case 1, vì pC = -(Δ/||g||) g
 >
-> m(0) - m(pC)  = Δ ||g|| - (1/2) (Δ / ||g||)^2 gᵀBg
+> m(0) - m(pC)  = Δ ||g|| - (1/2) (Δ / ||g||)² gᵀBg
 >
 > Chỉ khác là gᵀBg > 0 ta phải lập luận khác: 
 >
 > Với (||g||)^3 / Δ > gᵀBg ⇔ - (||g||)^3 / Δ < - gᵀBg hay - gᵀBg > - (||g||)^3 / Δ 
 >
-> ⇨ -(1/2) (1/2) (Δ / ||g||)^2 gᵀBg > - (1/2) (Δ / ||g||)^2 (||g||)^3 / Δ 
+> ⇨ -(1/2) (1/2) (Δ / ||g||)² gᵀBg > - (1/2) (Δ / ||g||)² (||g||)^3 / Δ 
 >
-> ⇨ m(0) - m(pC)  = Δ ||g|| - (1/2) (Δ / ||g||)^2 gᵀBg > - (1/2) (Δ / ||g||)^2 (||g||)^3 / Δ 
+> ⇨ m(0) - m(pC)  = Δ ||g|| - (1/2) (Δ / ||g||)² gᵀBg > - (1/2) (Δ / ||g||)² (||g||)^3 / Δ 
 >
 > = Δ ||g|| - (1/2) Δ ||g||
 >
@@ -490,7 +490,7 @@
 >
 > = |(1/2)pkTBkpk - ∫0:1 [g(xk + tpk) - g(xk)]Tpkdt ]|
 >
-> Tác giả ghi cái này ≤ {(β/2)||pk||^2 + β1||pk||^2 với β1 là Lipschitz constant cho g trong set S(R0)m và assume ||pk|| < R0
+> Tác giả ghi cái này ≤ {(β/2)||pk||² + β1||pk||² với β1 là Lipschitz constant cho g trong set S(R0)m và assume ||pk|| < R0
 >
 > Làm rõ chỗ này:
 >
@@ -508,13 +508,13 @@
 >
 > Dùng định nghĩa của norm ||A||:  max x ||Ax|| / ||x|| ⇨ ||Ax|| / ||x|| ≤ ||A||. Áp dụng vào đây: ||Bkpk|| / ||pk|| ≤ ||Bk||, hay ||Bkpk|| ≤ ||Bk|| . ||pk||
 >
-> ⇨ |pkTBkpk| = |pkT(Bkpk)| ≤ | ||pk|| . ||Bkpk|| | ≤ | ||pk|| ||Bk|| ||pk|| | = | ||Bk|| ||pk||^2 | = ||Bk|| ||pk||^2
+> ⇨ |pkTBkpk| = |pkT(Bkpk)| ≤ | ||pk|| . ||Bkpk|| | ≤ | ||pk|| ||Bk|| ||pk|| | = | ||Bk|| ||pk||² | = ||Bk|| ||pk||²
 >
 > Dùng giả thiết của theorem tác giả đã nói ||Bk|| ≤ β for some constant β.
 >
-> ⇨ pkTBkpk = pkT(Bkpk) ≤ ||pk|| . ||Bkpk|| ≤ ||pk|| ||Bk|| ||pk|| = ||Bk|| ||pk||^2 ≤ β ||pk||^2
+> ⇨ pkTBkpk = pkT(Bkpk) ≤ ||pk|| . ||Bkpk|| ≤ ||pk|| ||Bk|| ||pk|| = ||Bk|| ||pk||² ≤ β ||pk||²
 >
-> Thêm 1/2 vào, viết lại: (1/2)pkTBkpk ≤ (1/2)β ||pk||^2 Đây là cái hạng tử đầu tiên của 4.27
+> Thêm 1/2 vào, viết lại: (1/2)pkTBkpk ≤ (1/2)β ||pk||² Đây là cái hạng tử đầu tiên của 4.27
 >
 > ====
 >
@@ -548,19 +548,19 @@
 >
 > = ∫0:1 β1 |t| ||pk|| ||pk|| dt 
 >
-> = ∫0:1 β1 |t| ||pk||^2 dt
+> = ∫0:1 β1 |t| ||pk||² dt
 >
-> = β1 ||pk||^2 ∫0:1 t dt (do t ≥ 0)
+> = β1 ||pk||² ∫0:1 t dt (do t ≥ 0)
 >
-> ≤  β1 ||pk||^2 ∫0:1 dt (do t ≤ 1)
+> ≤  β1 ||pk||² ∫0:1 dt (do t ≤ 1)
 >
-> = β1 ||pk||^2 
+> = β1 ||pk||² 
 >
 > Đây là term thứ 2:
 >
 > Kết hợp lại ta có :
 >
-> |mk(pk) - f(xk + pk)| ≤ (1/2)β ||pk||^2 + β1 ||pk||^2  như tác giả viết (4.27)
+> |mk(pk) - f(xk + pk)| ≤ (1/2)β ||pk||² + β1 ||pk||²  như tác giả viết (4.27)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ⚠️ **85/100** · ✓ Move on
@@ -594,7 +594,7 @@
 >
 > Dùng tiếp kết quả hồi nãy:
 >
-> |mk(pk) - f(xk + pk)| ≤ (1/2)β ||pk||^2 + β1 ||pk||^2 (4.27)
+> |mk(pk) - f(xk + pk)| ≤ (1/2)β ||pk||² + β1 ||pk||² (4.27)
 >
 > ||pk|| ≤ γΔk for some constant γ (4.25) 
 >
@@ -602,13 +602,13 @@
 >
 > |ρk - 1| = |[mk(pk) - f(xk + pk)] / [mk(0) - mk(pk)]|
 >
-> ≤ | [(1/2)β ||pk||^2 + β1 ||pk||^2 ] | / [c1 ε min(Δk, ε / β)] |  (dùng 4.27, 4.29)
+> ≤ | [(1/2)β ||pk||² + β1 ||pk||² ] | / [c1 ε min(Δk, ε / β)] |  (dùng 4.27, 4.29)
 >
-> ≤ | [(1/2)β (γΔk)^2 + β1 (γΔk)^2 ] | / [c1 ε min(Δk, ε / β)] | (dùng (4.25))
+> ≤ | [(1/2)β (γΔk)² + β1 (γΔk)² ] | / [c1 ε min(Δk, ε / β)] | (dùng (4.25))
 >
-> = | [(γΔk)^2[β/2  + β1] | / [c1 ε min(Δk, ε / β)] |
+> = | [(γΔk)²[β/2  + β1] | / [c1 ε min(Δk, ε / β)] |
 >
-> = [(γΔk)^2[β/2  + β1] | / [c1 ε min(Δk, ε / β)]  (số không âm, bỏ trị tuyệt đối)
+> = [(γΔk)²[β/2  + β1] | / [c1 ε min(Δk, ε / β)]  (số không âm, bỏ trị tuyệt đối)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
