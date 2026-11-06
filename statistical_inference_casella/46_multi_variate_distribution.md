@@ -1,6 +1,6 @@
 # 4.6 Multi-variate Distribution
 
-📊 **Progress:** `22` Notes | `28` Screenshots | `8` AI Reviews
+📊 **Progress:** `22` Notes | `28` Screenshots | `12` AI Reviews
 
 ---
 <a id="node-1ndxf47"></a>
@@ -21,6 +21,17 @@
 >
 >
 > 𝐗 = (X1, X2, X3, X4)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác ý tưởng mở đầu từ vector ngẫu nhiên hai chiều (bivariate) sang nhiều chiều (multivariate) thông qua ví dụ thực tế.
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác bản chất của việc tổng quát hóa từ vector hai chiều (X, Y) lên vector ngẫu nhiên n chiều (multivariate random vector) qua ví dụ 4 biến.
+>
+> **💡 Deeper notes**
+> - Trong thống kê và đại số tuyến tính đa biến sau này, các vector ngẫu nhiên thường được quy ước ở dạng vector cột để thuận tiện cho các phép toán ma trận hiệp phương sai.
 
 <br>
 
@@ -295,6 +306,21 @@
 > Nhận xét, không quá lạ lẫm, đây chỉ là khái quát của cái gọi là 2D lotus mà
 > mình đã gặp trong STAT110 cũng như nói trong phần trước bivariate random
 > variable vector
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc bản chất khái niệm: hiểu đúng hàm thực biến vector ngẫu nhiên thành biến ngẫu nhiên một chiều và liên hệ chính xác với định lý LOTUS mở rộng cho n chiều.
+>
+> **✓ Strengths**
+> - Nhận diện chính xác rằng một hàm thực (real-valued function) tác động lên vector ngẫu nhiên sẽ tạo ra một biến ngẫu nhiên đơn biến (univariate random variable).
+> - Ghi lại chuẩn xác công thức kỳ vọng cho cả hai trường hợp rời rạc và liên tục.
+> - Liên hệ trực giác rất tốt với định lý LOTUS (Law of the Unconscious Statistician) từ trường hợp 2 chiều lên n chiều.
+>
+> **💡 Deeper notes**
+> - Theo lý thuyết độ đo chặt chẽ, hàm g(x) cần là hàm đo được (Borel measurable) để g(X) chắc chắn là một biến ngẫu nhiên.
+> - Kỳ vọng Eg(X) chỉ tồn tại xác định khi tích phân hoặc chuỗi hội tụ tuyệt đối, tức là E|g(X)| < ∞.
+> - Ký hiệu vi phân dx trong công thức liên tục thực chất là dx₁dx₂...dx_n trên không gian R^n.
 
 <br>
 
@@ -604,6 +630,19 @@
 >
 > Và  m!/(x1!...xn!) gọi là MULTINOMIAL COEFFICIENTS
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc và chính xác ví dụ về hàm khối xác suất đồng thời của phân phối đa thức (Multinomial distribution), từ việc xác định vector ngẫu nhiên đến cách áp dụng công thức.
+>
+> **✓ Strengths**
+> - Tóm tắt chuẩn xác các tham số của bài toán: số phép thử m = 10, vector xác suất p_i và điều kiện tổng xác suất bằng 1.
+> - Hiểu rõ bản chất vector ngẫu nhiên đếm số lần xuất hiện của từng mặt và chuyển đổi sự kiện thành giá trị cụ thể x = (0, 0, 1, 2, 3, 4).
+> - Ghi lại đúng công thức tính pmf đa thức và hiểu rõ vai trò của hệ số đa thức (multinomial coefficient).
+>
+> **💡 Deeper notes**
+> - Một lưu ý nhỏ về mặt biểu diễn: khi viết 10! (1/21)^0/0! ... nên lưu ý thứ tự thực hiện phép tính nếu viết trên máy tính để tránh nhầm lẫn mẫu số chung, dù về mặt toán học cách ghép từng thừa số p_i^(x_i) / x_i! là hoàn toàn tương đương với m! / (x_1!...x_n!) * prod(p_i^(x_i)).
+
 <br>
 
 <a id="node-4mnv9w1"></a>
@@ -809,6 +848,26 @@
 > LẬP. CÒN ĐÂY LÀ MỘT ĐÁM CÁC RANDOM VARIABLE X1,X2...Xn MULTUAL
 > ĐỘC LẬP.
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú nắm rất tốt bản chất mở rộng của tính độc lập tương hỗ (mutual independence) từ biến ngẫu nhiên đơn lẻ sang các vector ngẫu nhiên. Chỉ có một điểm diễn đạt chưa chuẩn về mặt toán học khi gọi hàm mật độ chung là 'matrix input function'.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Nên phải hiểu f(x1,x2,...xn) ở trên là matrix input function (vì x1,x2..xn) đều là vector."*
+>
+> Cách gọi 'matrix input function' chưa thực sự chuẩn xác về mặt giải tích/xác suất. Thực chất f nhận đầu vào là một tập hợp các vector (hoặc tương đương là một vector ghép nối nhiều chiều thuộc không gian R^(d1+...+dn)), chứ không phải hàm ma trận theo nghĩa đại số tuyến tính.
+>
+>
+> **✓ Strengths**
+> - Hiểu chính xác bản chất độc lập tương hỗ là mật độ đồng thời (joint pdf/pmf) bằng tích các mật độ biên duyên (marginal pdf/pmf).
+> - Nhận biết rõ ràng sự chuyển đổi giữa trường hợp tổng quát (vector ngẫu nhiên) và trường hợp đặc biệt 1D (biến ngẫu nhiên thông thường).
+>
+> **💡 Deeper notes**
+> - Đẳng thức tích marginals phải thỏa mãn với 'mọi' bộ giá trị (x1, ..., xn), chỉ cần vi phạm tại một điểm có độ đo dương thì tính độc lập tương hỗ sẽ không còn giữ được.
+> - Cần phân biệt giữa 'pairwise independence' (độc lập từng đôi một) và 'mutual independence' (độc lập tương hỗ) khi có từ 3 biến/vector trở lên.
+
 <br>
 
 <a id="node-reqi8yp"></a>
@@ -873,40 +932,35 @@
 >
 >
 >
-> 4.2.10 đại khái nói rằng nếu X, Y (pairwise) độc lập và g là hàm chỉ theo x, h là
-> hàm chỉ theo y thì Eg(X)h(Y) = Eg(X)Eh(Y)
+> 4.2.10 đại khái nói rằng nếu X, Y (pairwise) độc lập và g là hàm chỉ theo x, h là hàm chỉ theo y thì E\[g(X)h(Y)\] = Eg(X)Eh(Y)
 >
 >
 >
-> thì ở đây nếu có X1,...Xn mutually độc lập và có n hàm g1, g2,...gn sao cho g1
-> chỉ là gàm của x1, g2 chỉ là hàm của x2,..thì
+> thì ở đây nếu có X1,...Xn mutually độc lập và có n hàm g1, g2,...gn sao cho g1 chỉ là hàm của x1, g2 chỉ là hàm của x2,..thì
 >
 >
 >
-> E[g1(X1)g2(X2)...gn(Xn)] = Eg1(X1) * Eg2(X2)... * Egn(Xn)
+> E\[g1(X1)g2(X2)...gn(Xn)\] = Eg1(X1) × Eg2(X2)... × Egn(Xn)
 >
 >
 >
-> ====
+> ---
 >
 >
 >
-> Cũng tương tự, ở 4.2.12 ta đã biết nếu X, Y độc lập thì mgf của X + Y sẽ bằng
-> tích của các mgf của từng cái.
+> Cũng tương tự, ở 4.2.12 ta đã biết nếu X, Y độc lập thì mgf của X + Y sẽ bằng tích của các mgf của từng cái.
 >
 >
 >
-> thì ở đây cũng vậy nếu X1,...Xn mutually độc lập thì với Z = X1 + X2...+ Xn
-> thì mgf MZ(t) = MX1(t) * MX2(t) * ....MXn(t)
+> thì ở đây cũng vậy nếu X1,...Xn mutually độc lập thì với Z = X1 + X2...+ Xn thì mgf MZ(t) = MX1(t) × MX2(t) × ....× MXn(t)
 >
 >
 >
-> Và nếu như X1, X2....lại có chung distribution thì mgf cũng giống nhau gọi là 
-> MX(t)
+> Và nếu như X1, X2....lại có chung distribution thì mgf cũng giống nhau gọi là MX(t)
 >
 >
 >
-> ⇨ MZ(t) = [MX(t)]^n
+> ⇨ MZ(t) = \[MX(t)\]^n
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
