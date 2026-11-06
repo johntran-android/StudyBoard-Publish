@@ -75,23 +75,23 @@
 >
 >
 >
-> Vì ||p|| không âm, và hàm square u^2 với u không âm sẽ đồng biến nên ta có ||p|| ≤ Δ ⇔ ||p||^2 ≤ Δ^2 ⇔ pᵀp ≤ Δ^2 ⇔ pᵀp - Δ^2 ≤ 0 ⇔ (1/2)(pᵀp - Δ^2) ≤ 0
+> Vì ||p|| không âm, và hàm square u² với u không âm sẽ đồng biến nên ta có ||p|| ≤ Δ ⇔ ||p||² ≤ Δ² ⇔ pᵀp ≤ Δ² ⇔ pᵀp - Δ² ≤ 0 ⇔ (1/2)(pᵀp - Δ²) ≤ 0
 >
 >
 >
-> Nên bài toán equivalent minimize f + gᵀp + (1/2)pᵀBp s.t (1/2)(pᵀp - Δ^2) ≤ 0
+> Nên bài toán equivalent minimize f + gᵀp + (1/2)pᵀBp s.t (1/2)(pᵀp - Δ²) ≤ 0
 >
 >
 >
-> Lagragian: f + gᵀp + (1/2)pᵀBp + (1/2)λ(pᵀp - Δ^2)
+> Lagragian: f + gᵀp + (1/2)pᵀBp + (1/2)λ(pᵀp - Δ²)
 >
 >
 >
-> = f + gᵀp + (1/2)pᵀBp + (1/2)λpᵀp - (1/2)λΔ^2
+> = f + gᵀp + (1/2)pᵀBp + (1/2)λpᵀp - (1/2)λΔ²
 >
 >
 >
-> = (1/2)pᵀ(B + λI)p + gᵀp + f - λΔ^2
+> = (1/2)pᵀ(B + λI)p + gᵀp + f - λΔ²
 >
 >
 >
@@ -151,11 +151,11 @@
 >
 >
 >
-> Vì là bài toán với constraint ||p|| ≤ Δ cũng equivalent với pᵀp ≤ Δ^2 nên ta có quyền xài điều kiện này ở bài toán nào cũng được. Hoặc nếu thích thì cứ dùng điều kiện này ở bài toán equivalent:
+> Vì là bài toán với constraint ||p|| ≤ Δ cũng equivalent với pᵀp ≤ Δ² nên ta có quyền xài điều kiện này ở bài toán nào cũng được. Hoặc nếu thích thì cứ dùng điều kiện này ở bài toán equivalent:
 >
 >
 >
-> λ\*(||p\*||^2 - Δ^2) = 0
+> λ\*(||p\*||² - Δ²) = 0
 >
 >
 >
@@ -171,7 +171,7 @@
 >
 >
 >
-> Hessian của L: ∇^2L(p, λ) = B + λI, tức là để tại stationary point p\* (thỏa gradient vanish) mà p\* là minimal thì Hessian này phải xác định bán dương.
+> Hessian của L: ∇²L(p, λ) = B + λI, tức là để tại stationary point p\* (thỏa gradient vanish) mà p\* là minimal thì Hessian này phải xác định bán dương.
 >
 >
 >
@@ -230,7 +230,7 @@
 >
 >
 >
-> Có thể nhận ra nếu B là Hessian **chính là Newton step**: - ∇^2f(x) ∇f(x)
+> Có thể nhận ra nếu B là Hessian **chính là Newton step**: - ∇²f(x) ∇f(x)
 >
 >
 >
@@ -346,7 +346,7 @@
 >
 >
 >
-> ||p(λ)||^2 = {- Σi \[qiTg / (λi + λ)\] qi }^2
+> ||p(λ)||² = {- Σi \[qiTg / (λi + λ)\] qi }²
 >
 >
 >
@@ -354,19 +354,19 @@
 >
 >
 >
-> ..= Σi \[qiTg / (λi + λ)\]^2 qiTqi
+> ..= Σi \[qiTg / (λi + λ)\]² qiTqi
 >
 >
 >
-> = Σi \[qiTg / (λi + λ)\]^2 ||qi||^2 → Đây chính là 4.39
+> = Σi \[qiTg / (λi + λ)\]² ||qi||² → Đây chính là 4.39
 >
 >
 >
-> Viết lại ||p(λ)||^2 = Σi \[qiTg / (λi + λ)\]^2 ||qi||^2 (4.39)
+> Viết lại ||p(λ)||² = Σi \[qiTg / (λi + λ)\]² ||qi||² (4.39)
 >
 >
 >
-> = Σi \[qiTg / (λi + λ)\]^2 (norm qi = 1, do Q orthogonal matrix)
+> = Σi \[qiTg / (λi + λ)\]² (norm qi = 1, do Q orthogonal matrix)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -396,7 +396,7 @@
 >
 >
 >
-> Thế thì ở đây, sau khi dùng phân rã trị riêng để thấy bản chất của ||p(λ)||: ||p(λ)||^2 = Σi \[qiTg / (λi + λ)\]^2 (4.39) thì ta sẽ **lập luận dựa trên biến thiên của hàm ||p(λ)||** như sau:
+> Thế thì ở đây, sau khi dùng phân rã trị riêng để thấy bản chất của ||p(λ)||: ||p(λ)||² = Σi \[qiTg / (λi + λ)\]² (4.39) thì ta sẽ **lập luận dựa trên biến thiên của hàm ||p(λ)||** như sau:
 >
 >
 >
@@ -404,7 +404,7 @@
 >
 >
 >
-> Xét trường hợp mà **qiTg đều khác 0** (nên tử sổ \[qiTg / (λi + λ)\]^2 sẽ khác 0):
+> Xét trường hợp mà **qiTg đều khác 0** (nên tử sổ \[qiTg / (λi + λ)\]² sẽ khác 0):
 >
 >
 >
@@ -498,7 +498,7 @@
 >
 >
 >
-> m(d) = F(xk) + ∇F(xk)ᵀd + (1/2) dT∇^2F(xk)d, và tìm minimum của hàm này để có xk+1 = xk + d
+> m(d) = F(xk) + ∇F(xk)ᵀd + (1/2) dT∇²F(xk)d, và tìm minimum của hàm này để có xk+1 = xk + d
 >
 >
 >
@@ -510,11 +510,11 @@
 >
 >
 >
-> ⇔ ∇^2 F(xk) d + ∇F(xk) = 0
+> ⇔ ∇² F(xk) d + ∇F(xk) = 0
 >
 >
 >
-> ⇔ d = - ∇^2F(xk)⁻¹ ∇F(xk)
+> ⇔ d = - ∇²F(xk)⁻¹ ∇F(xk)
 >
 >
 >
@@ -562,7 +562,7 @@
 >
 >
 >
-> Nhớ lại ||p(λ)||^2 = Σi \[qiTg / (λi + λ)\]^2 đã hiểu ở những note trước. Thì dễ thấy khi λ gần -λ1 → λ1 + λ ≈ 0 ⇨q1Tg / (λ1 + λ) sẽ rất lớn, và nó hoàn toàn vượt trội các hạng tử khác là q2Tg / (λ2 + λ) và q3Tg / (λ3 + λ).
+> Nhớ lại ||p(λ)||² = Σi \[qiTg / (λi + λ)\]² đã hiểu ở những note trước. Thì dễ thấy khi λ gần -λ1 → λ1 + λ ≈ 0 ⇨q1Tg / (λ1 + λ) sẽ rất lớn, và nó hoàn toàn vượt trội các hạng tử khác là q2Tg / (λ2 + λ) và q3Tg / (λ3 + λ).
 >
 >
 >
@@ -582,11 +582,11 @@
 >
 >
 >
-> = 1/Δ - 1/√Σi \[qiTg / (λi + λ)\]^2
+> = 1/Δ - 1/√Σi \[qiTg / (λi + λ)\]²
 >
 >
 >
-> ≈ 1/Δ - 1/√\[q1Tg / (λ1 + λ)\]^2
+> ≈ 1/Δ - 1/√\[q1Tg / (λ1 + λ)\]²
 >
 >
 >
@@ -676,7 +676,7 @@
 >
 >
 >
-> = (1/||p(λ)||^2) . d/dλ ||p(λ)||
+> = (1/||p(λ)||²) . d/dλ ||p(λ)||
 >
 >
 >
@@ -692,11 +692,11 @@
 >
 >
 >
-> Với hàm này ta dùng mẹo một chút: \[f(x)\]^2 = ||x||^2 = xᵀx:
+> Với hàm này ta dùng mẹo một chút: \[f(x)\]² = ||x||² = xᵀx:
 >
 >
 >
-> Đặt u = xᵀx, Ta có f^2 = u
+> Đặt u = xᵀx, Ta có f² = u
 >
 >
 >
@@ -754,11 +754,11 @@
 >
 > Viết lại cho tới nay:
 >
-> φ'2(λ) = (1/||p(λ)||^2) . d/dλ ||p(λ)||
+> φ'2(λ) = (1/||p(λ)||²) . d/dλ ||p(λ)||
 >
 >
 >
-> = (1/||p(λ)||^2) . \[p(λ)/||p(λ)||\] . d/dλ p(λ)
+> = (1/||p(λ)||²) . \[p(λ)/||p(λ)||\] . d/dλ p(λ)
 >
 >
 >
@@ -874,7 +874,7 @@
 >
 > =  λ\_l + \[(||p(λ)|| - Δ)\] ||p(λ)||^3 / \[||p(λ)||Δ\] \[p(λ)ᵀ (B + λI)⁻¹ p(λ)\]
 >
-> =  λ\_l + (||p(λ)|| - Δ) ||p(λ)||^2 / Δ \[p(λ)ᵀ (B + λI)⁻¹ p(λ)\]
+> =  λ\_l + (||p(λ)|| - Δ) ||p(λ)||² / Δ \[p(λ)ᵀ (B + λI)⁻¹ p(λ)\]
 >
 >
 >
@@ -882,11 +882,11 @@
 >
 >
 >
-> =  λ\_l + (||p(λ)|| - Δ) ||p(λ)||^2 / Δ \[p(λ)ᵀ (RᵀR)⁻¹ p(λ)\]
+> =  λ\_l + (||p(λ)|| - Δ) ||p(λ)||² / Δ \[p(λ)ᵀ (RᵀR)⁻¹ p(λ)\]
 >
-> =  λ\_l + (||p(λ)|| - Δ) ||p(λ)||^2 / Δ \[p(λ)ᵀ R⁻¹ Rᵀinv p(λ)\]
+> =  λ\_l + (||p(λ)|| - Δ) ||p(λ)||² / Δ \[p(λ)ᵀ R⁻¹ Rᵀinv p(λ)\]
 >
-> =  λ\_l + (||p(λ)|| - Δ) ||p(λ)||^2 / Δ \[p(λ)ᵀ R⁻¹ R⁻¹ᵀ p(λ)\]
+> =  λ\_l + (||p(λ)|| - Δ) ||p(λ)||² / Δ \[p(λ)ᵀ R⁻¹ R⁻¹ᵀ p(λ)\]
 >
 >
 >
@@ -894,7 +894,7 @@
 >
 >
 >
-> =  λ\_l + (||p(λ)|| - Δ) ||p(λ)||^2 / Δ \[\[R⁻¹ᵀp(λ)\]T R⁻¹ᵀ p(λ)\]
+> =  λ\_l + (||p(λ)|| - Δ) ||p(λ)||² / Δ \[\[R⁻¹ᵀp(λ)\]T R⁻¹ᵀ p(λ)\]
 >
 >
 >
@@ -902,11 +902,11 @@
 >
 >
 >
-> .. = λ\_l + (||p(λ)|| - Δ) ||p(λ)||^2 / Δ (Qᵀq)
+> .. = λ\_l + (||p(λ)|| - Δ) ||p(λ)||² / Δ (Qᵀq)
 >
-> = λ\_l + (||p(λ)|| - Δ) ||p(λ)||^2 / Δ ||q||^2
+> = λ\_l + (||p(λ)|| - Δ) ||p(λ)||² / Δ ||q||²
 >
-> = λ\_l + \[||p(λ)||^2 / ||q||^2\] \[(||p(λ)|| - Δ) / Δ\]
+> = λ\_l + \[||p(λ)||² / ||q||²\] \[(||p(λ)|| - Δ) / Δ\]
 >
 >
 >
@@ -916,7 +916,7 @@
 >
 > Viết lại:
 >
-> λ\_l+1 = λ\_l + \[||p(λ)||^2 / ||q||^2\] \[(||p(λ)|| - Δ) / Δ\] (4.44)
+> λ\_l+1 = λ\_l + \[||p(λ)||² / ||q||²\] \[(||p(λ)|| - Δ) / Δ\] (4.44)
 >
 >
 >
@@ -1048,11 +1048,11 @@
 >
 >
 >
-> ||p\*(λ)||^2 = Σi \[qiTg / (λi + λ)\]^2 (4.39)
+> ||p\*(λ)||² = Σi \[qiTg / (λi + λ)\]² (4.39)
 >
 >
 >
-> hay ||p\*(λ)|| = √Σi \[qiTg / (λi + λ)\]^2
+> hay ||p\*(λ)|| = √Σi \[qiTg / (λi + λ)\]²
 >
 >
 >
@@ -1132,19 +1132,19 @@
 >
 >
 >
-> ⇔ ||p||^2 = ||-Σi≠1 \[qiTg / (λi-λ1)\] qi + τz||^2 = Δ^2
+> ⇔ ||p||² = ||-Σi≠1 \[qiTg / (λi-λ1)\] qi + τz||² = Δ²
 >
 >
 >
-> (Dùng tính chất ||(u + v)||^2 = (u + v)ᵀ(u + v) = (uT + vT)(u + v)
+> (Dùng tính chất ||(u + v)||² = (u + v)ᵀ(u + v) = (uT + vT)(u + v)
 >
 >
 >
-> = uTu + vTu + uTv + vTv = ||u||^2 + ||v||^2 + 2uTv. Nếu u vuông góc v → uTv = 0 thì ||(u + v)||^2
+> = uTu + vTu + uTv + vTv = ||u||² + ||v||² + 2uTv. Nếu u vuông góc v → uTv = 0 thì ||(u + v)||²
 >
 >
 >
-> = ||u||^2 + ||v||^2, đây chính là định lí Pythagores)
+> = ||u||² + ||v||², đây chính là định lí Pythagores)
 >
 >
 >
@@ -1152,23 +1152,23 @@
 >
 >
 >
-> → ||p||^2 = ||-Σi≠1 \[qiTg / (λi-λ1)\] qi + τz||^2 = Δ^2
+> → ||p||² = ||-Σi≠1 \[qiTg / (λi-λ1)\] qi + τz||² = Δ²
 >
 >
 >
-> ⇔ ||-Σi≠1 \[qiTg / (λi-λ1)\] qi||^2 + ||τz||^2 = Δ^2
+> ⇔ ||-Σi≠1 \[qiTg / (λi-λ1)\] qi||² + ||τz||² = Δ²
 >
 >
 >
-> ⇔ ||Σi≠1 \[qiTg / (λi-λ1)\] qi||^2 + |τ|^2||z||^2 = Δ^2
+> ⇔ ||Σi≠1 \[qiTg / (λi-λ1)\] qi||² + |τ|²||z||² = Δ²
 >
 >
 >
-> ⇔ ||Σi≠1 \[qiTg / (λi-λ1)\] qi||^2 + |τ|^2 = Δ^2 (do chọn ||z|| = 1)
+> ⇔ ||Σi≠1 \[qiTg / (λi-λ1)\] qi||² + |τ|² = Δ² (do chọn ||z|| = 1)
 >
 >
 >
-> ⇔ |τ|^2 = Δ^2 - ||Σi≠1 \[qiTg / (λi-λ1)\] qi||^2
+> ⇔ |τ|² = Δ² - ||Σi≠1 \[qiTg / (λi-λ1)\] qi||²
 >
 >
 >
@@ -1526,17 +1526,17 @@
 >
 > (trong EE364A, gọi là restricted by an affine)
 >
-> = t(gᵀd)+ (1/2)t^2 dTBd
+> = t(gᵀd)+ (1/2)t² dTBd
 >
-> = t[g2 × (-g2)]+ (1/2)t^2 dTBd
+> = t[g2 × (-g2)]+ (1/2)t² dTBd
 >
-> = -tg2^2+ (1/2)t^2 dTBd
+> = -tg2²+ (1/2)t² dTBd
 >
 > Để ý d = (0, -g2, 0) với g2 khác 0 chính là nullspace vector của B
 >
-> = -t g2^2 + (1/2) t^2 dT (0) 
+> = -t g2² + (1/2) t² dT (0) 
 >
-> = -t g2^2. 
+> = -t g2². 
 >
 > Vậy khi t → inf, tức là đi theo hướng vector d, thì hàm m sẽ → -inf. Không thể attain minimum
 
@@ -1650,17 +1650,17 @@
 >
 > ⇔ λ(Δ - ||p\*||)(Δ + ||p\*||) = 0 (chú ý, Δ, hay ||p\*|| chỉ là scalar)
 >
-> ⇔ λ(Δ^2 - ||p\*||^2) = 0
+> ⇔ λ(Δ² - ||p\*||²) = 0
 >
-> ⇔ λΔ^2 = λpᵀp
+> ⇔ λΔ² = λpᵀp
 >
-> ⇔ (λ/2)Δ^2 = (λ/2)pᵀp
+> ⇔ (λ/2)Δ² = (λ/2)pᵀp
 >
 >
 >
-> ⇨ (a) ⇔ m(p) ≥ m(p\*) + (λ/2)Δ^2 - (λ/2)pᵀp
+> ⇨ (a) ⇔ m(p) ≥ m(p\*) + (λ/2)Δ² - (λ/2)pᵀp
 >
-> ⇔ m(p) ≥ m(p\*) + (λ/2)(Δ^2 - pᵀp)
+> ⇔ m(p) ≥ m(p\*) + (λ/2)(Δ² - pᵀp)
 >
 >
 >
@@ -1718,7 +1718,7 @@
 >
 > và điều kiện cần bậc 2:
 >
-> ∇^2m(p\*) ⪰ 0 ⇔ (B + λI) ⪰ 0 → Đây chính là 4.8b
+> ∇²m(p\*) ⪰ 0 ⇔ (B + λI) ⪰ 0 → Đây chính là 4.8b
 >
 > (Nhờ MIT 18s096, viêc tìm gradient và Hessian của quadratic function không có gì khó nữa:
 >
@@ -1782,9 +1782,9 @@
 >
 > Lagrangian: L(p, λ) = m(p) + λ(||p|| - Δ).
 >
-> Nhưng vì constrained ||p|| ≤ Δ ⇔ (1/2)||p||^2 ≤ (1/2)Δ do ||p|| không âm nên bài toán tương đương (equivalent) là minimize m(p) s.t (1/2) pᵀp ≤ (1/2) Δ^2.
+> Nhưng vì constrained ||p|| ≤ Δ ⇔ (1/2)||p||² ≤ (1/2)Δ do ||p|| không âm nên bài toán tương đương (equivalent) là minimize m(p) s.t (1/2) pᵀp ≤ (1/2) Δ².
 >
-> Lagrangian: L(p, λ) = m(p) + λ/2(pᵀp - Δ^2).
+> Lagrangian: L(p, λ) = m(p) + λ/2(pᵀp - Δ²).
 >
 > ∇L = ∇m(p) + λp = BTp + g + λp = (B + λI)p + g
 >
@@ -1964,11 +1964,11 @@
 >
 > = λ1q1Tp × pᵀq1 + λ2q2Tp × pᵀq2 + ...
 >
-> = λ1(q1Tp)^2 + λ2(q2Tp)^2 ...
+> = λ1(q1Tp)² + λ2(q2Tp)² ...
 >
 > ⇨ pᵀBkp ≤ Số âm
 >
-> ⇔ λ1(q1Tp)^2 + λ2(q2Tp)^2 ... ≤ Số âm
+> ⇔ λ1(q1Tp)² + λ2(q2Tp)² ... ≤ Số âm
 >
 > ⇨ **ít nhất một λi âm và tại λ đó, qiTp phải khác 0 chứ ko được = 0**
 >
