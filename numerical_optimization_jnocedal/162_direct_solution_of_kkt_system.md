@@ -1,6 +1,6 @@
 # 16.2 Direct solution of KKT system
 
-📊 **Progress:** `5` Notes | `14` Screenshots | `5` AI Reviews
+📊 **Progress:** `6` Notes | `16` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-bstsx53"></a>
@@ -563,14 +563,6 @@
 >
 >
 >
->
->
->
->
->
->
->
->
 > ---
 >
 >
@@ -604,14 +596,10 @@
 >
 >
 > ---
->
->
->
-> Với Y như vậy Y xY
 
-📹 Video 1: [Tại sao rank(AB) = rank(A) khi ma trận B khả nghịch? (phần 1)](https://youtu.be/otwKnGhj1vE)
+📹 Video 1: [Tại sao rank(AB) = rank(A) khi ma trận B khả nghịch?](https://youtu.be/otwKnGhj1vE)
 
-📹 Video 2: [Làm sao dùng phương pháp null-space để giải hệ KKT? (phần 2)](https://www.youtube.com/watch?v=pia4HYygkUo)
+📹 Video 2: [Làm sao dùng phương pháp null-space để giải hệ KKT?](https://www.youtube.com/watch?v=pia4HYygkUo)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -626,6 +614,35 @@
 > - Từ rank(A[Y | Z]) = rank([AY | 0]) = m, do phần bù là ma trận 0 kích thước m × (n-m), ta suy ra trực tiếp ma trận vuông AY (kích thước m × m) có đúng rank m, chứng minh AY khả nghịch.
 
 **🔗 See also:** [Karush-Kuhn-Tucker Matrix Formulation](./161_equality_constrained_quadratic_programs.md#node-feah6f9) · [Reduction Strategies for Linear Constraints](./153_elimination_of_variables.md#node-oyz2ue4)
+
+<br>
+
+<a id="node-9ex7ukk"></a>
+
+###### Example 16.3 Null-Space Method
+
+<p align="center"><kbd><img src="assets/e4lhqftz9vo.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/z5o8sdawh0e.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Cuối cùng là một ví dụ và vài nhận định về lợi hại của hai phương pháp nullspace so với Schur complement.
+>
+>
+>
+> Nullspace nhìn chung là hiệu quả nếu n-m nhỏ (đồng nghĩa rank của A cao)
+>
+>
+>
+> Tuy nhiên nhược điểm của nó là phải có matrix nullspace basis Z, mà nếu A lớn và thưa thì tính ra Z có thể rất tốn kém.
+>
+>
+>
+> Tiếp cũng khó có quy tắc nào để kết luận hai phương pháp cái nào tốt hơn.
+>
+>
+>
+> Nhưng nhìn chung khi G xác định dương và việc tính A G⁻¹ Aᵀ không quá tốn thì prefer Schur Complement, còn lại thì prefer nullspace method.
 
 <br>
 
