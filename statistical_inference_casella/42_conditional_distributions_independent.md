@@ -1824,7 +1824,9 @@
 >
 > Nhận xét là nhờ cái theorem đó mà chứng minh cái này rất khỏe
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=G09HUqjpn_w)
+📹 Video 1: [Tại sao MGF của tổng hai biến độc lập bằng tích MGF? (phần 1)](https://www.youtube.com/watch?v=G09HUqjpn_w)
+
+📹 Video 2: [Làm sao dùng LOTUS tính hàm MGF của phân phối chuẩn? (phần 3)](https://www.youtube.com/watch?v=PWkRReS5oM8)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
