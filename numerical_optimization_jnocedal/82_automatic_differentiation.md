@@ -336,7 +336,7 @@
 >
 > Sau đó vì x4, x5 là hàm của x1, x2, x3: x4(x1,x2,x3), x5(x1,x2,x3) như note trước đã nói.
 >
-> Nên nếu xét y = \[x4,x5\] thì nó là R^3 → R^2 function y(x) = y(x1,x2,x3)
+> Nên nếu xét y = \[x4,x5\] thì nó là R^3 → R² function y(x) = y(x1,x2,x3)
 >
 > = \[x4(x1,x2,x3), x5(x1,x2,x3)\]
 >
@@ -467,7 +467,7 @@
 >
 >
 >
-> (w/y)' = (w'y - w y')/y^2 = w'/y - wy'/y^2
+> (w/y)' = (w'y - w y')/y² = w'/y - wy'/y²
 >
 >
 >
@@ -475,7 +475,7 @@
 >
 >
 >
-> Dpz = (1/y) Dpw - (w/y^2)Dpy.
+> Dpz = (1/y) Dpw - (w/y²)Dpy.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -513,11 +513,11 @@
 > thì forward sweep, sẽ cũng giống ta chạy p = e1, p = e2,..cùng lúc. Để kết
 > quả ta có cùng lúc ∇z(x)ᵀ = [∂z(x)/∂x1, ...∂z(x)/∂xn]
 >
-> Thế thì nếu tính đơn lẻ một cái: Dpz = (1/y) Dpw - (w/y^2)Dpy
+> Thế thì nếu tính đơn lẻ một cái: Dpz = (1/y) Dpw - (w/y²)Dpy
 >
 > ta sẽ tốn bao nhiêu phép tính: Lấy scalar (1/y) nhân scalar Dpw (Dpw, chỉ
 > là ∇wTp, là directional derivative, NHỚ RẰNG, NÓ LUÔN LUÔN LÀ SCALAR)
->  rồi lấy (w/y^2) nhân Dpy, rồi lấy hai cái trừ nhau. → Tức là ta tốn 2 phép nhân
+>  rồi lấy (w/y²) nhân Dpy, rồi lấy hai cái trừ nhau. → Tức là ta tốn 2 phép nhân
 > scalar, và 1 phép trừ (hay gọi là phép cộng cũng được)
 >
 > Vậy nếu có n input x1,..xn, thì quá trình sẽ tốn 2n phép nhân và n phép cộng.
@@ -957,8 +957,8 @@
 > Là sao.
 >
 > Đơn giản thôi, giả sử một hàm f(x) có thể được thể hiện bởi tổng n hàm f1(x), ...
-> fn(x) mà mỗi hàm chỉ là hàm của vài phần tử của x. Ví dụ f(x) = x1^2 + x1e^x2
-> + x1/x3. Thì tức là f(x) = f1(x) + f2(x) + f2(x) với f1(x) = x1^2, f2(x) = x1e^x2, f3(x)
+> fn(x) mà mỗi hàm chỉ là hàm của vài phần tử của x. Ví dụ f(x) = x1² + x1e^x2
+> + x1/x3. Thì tức là f(x) = f1(x) + f2(x) + f2(x) với f1(x) = x1², f2(x) = x1e^x2, f3(x)
 > = x1/x3. Mỗi hàm chỉ phụ thuộc vài component của vector input x.
 >
 > (trong sách này ta tự hiểu x là vector, ko cần viết đậm như trong xác suất)
@@ -1235,8 +1235,8 @@
 <p align="center"><kbd><img src="assets/6rpqqky9us.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, tới lượt dùng forward mode để tính Hessian ∇^2f(x) (của scalar function f)
-> cũng như tính ra ∇^2f(x)p với vector p nào đó (vì có khi ta ko cần Hessian, mà
+> Rồi, tới lượt dùng forward mode để tính Hessian ∇²f(x) (của scalar function f)
+> cũng như tính ra ∇²f(x)p với vector p nào đó (vì có khi ta ko cần Hessian, mà
 > cần product của Hessian với vector nào đó thôi)
 >
 > Tương tự như trong forward mode, bắt đầu với seed vector p, quá trình forward
@@ -1246,13 +1246,13 @@
 >
 > Và khi kết thúc forward sweep ta sẽ có (f, Dpf = ∇f(x)ᵀp)
 >
-> Thế thì bây giờ, ta định nghĩa ra Dpqxi = pᵀ ∇^2xi(x) q, để rồi khi forward, tại
+> Thế thì bây giờ, ta định nghĩa ra Dpqxi = pᵀ ∇²xi(x) q, để rồi khi forward, tại
 > mỗi, node ta sẽ tính thêm cái này. Khi đó lúc kết thúc, ta sẽ có Dpq_f(x), tức pᵀ
-> ∇^2f(x) q
+> ∇²f(x) q
 >
-> (làm rõ tí: ∇^2xi(x) là cái gì? À, thì là như vừa nói, coi xi(x) là hàm vector →
-> scalar x → xi thì ∇xi(x) là gradient vector, ∇^2xi(x) là Hessian matrix. Và pᵀ
-> ∇^2xi(x) q cũng là scalar)
+> (làm rõ tí: ∇²xi(x) là cái gì? À, thì là như vừa nói, coi xi(x) là hàm vector →
+> scalar x → xi thì ∇xi(x) là gradient vector, ∇²xi(x) là Hessian matrix. Và pᵀ
+> ∇²xi(x) q cũng là scalar)
 >
 > Và trước khi forward sweep ta cũng initialize chúng tại các node đầu (input) 
 > bằng 0 
@@ -1289,11 +1289,11 @@
 >
 > và đây chính là:
 >
-> ∇^2xi(x) = ∇^2xj(x) + ∇^2xk(x) 
+> ∇²xi(x) = ∇²xj(x) + ∇²xk(x) 
 >
-> ⇔ pᵀ∇^2xi(x)q = pᵀ[∇^2xj(x) + ∇^2xk(x)]q
+> ⇔ pᵀ∇²xi(x)q = pᵀ[∇²xj(x) + ∇²xk(x)]q
 >
-> ⇔ pᵀ∇^2xi(x)q = pᵀ∇^2xj(x)q + pᵀ∇^2xk(x)q
+> ⇔ pᵀ∇²xi(x)q = pᵀ∇²xj(x)q + pᵀ∇²xk(x)q
 >
 > Đây chính là Dpq xi(x) = Dpq xj(x) + Dpq xk(x)
 >
@@ -1333,7 +1333,7 @@
 >
 > Vế phải dùng product rule:
 >
-> ⇔ ∇^2xi(x) = [d/dx L'(xj(x))] ∇xj(x)ᵀ + L'(xj(x)) [d/dx ∇xj(x)]
+> ⇔ ∇²xi(x) = [d/dx L'(xj(x))] ∇xj(x)ᵀ + L'(xj(x)) [d/dx ∇xj(x)]
 >
 > Chú ý: vì vế trái là matrix Hessian, nên vế phải cũng phải là tổng hai matrix,
 > do đó term đầu tiên phải là [d/dx L'(xj(x))] ∇xj(x)ᵀ (có transpose ∇xj(x)), vì
@@ -1341,15 +1341,15 @@
 >
 > Còn cái term thứ hai thì (d/dx ∇xj(x)) đã là matrix rồi. 
 >
-> ⇔ ∇^2xi(x) = [d/dxi(x) L'(xj(x)) . d/dx xj(x)] ∇xj(x)ᵀ + L'(xj(x)) [∇^2xj(x)]
+> ⇔ ∇²xi(x) = [d/dxi(x) L'(xj(x)) . d/dx xj(x)] ∇xj(x)ᵀ + L'(xj(x)) [∇²xj(x)]
 >
-> ⇔ ∇^2xi(x) = L''(xj(x)) . ∇xj(x) ∇xj(x)ᵀ + L'(xj(x)) ∇^2xj(x)
+> ⇔ ∇²xi(x) = L''(xj(x)) . ∇xj(x) ∇xj(x)ᵀ + L'(xj(x)) ∇²xj(x)
 >
-> ⇔ pᵀ∇^2xi(x)q = pᵀ { L''(xj(x)) ∇xj(x) ∇xj(x)ᵀ + L'(xj(x)) ∇^2xj(x) } q
+> ⇔ pᵀ∇²xi(x)q = pᵀ { L''(xj(x)) ∇xj(x) ∇xj(x)ᵀ + L'(xj(x)) ∇²xj(x) } q
 >
-> ⇔ Dpqxi(x) = pᵀ { L''(xj(x)) . ∇xj(x) ∇xj(x)ᵀ} q + pᵀ { L'(xj(x)) ∇^2xj(x) } q
+> ⇔ Dpqxi(x) = pᵀ { L''(xj(x)) . ∇xj(x) ∇xj(x)ᵀ} q + pᵀ { L'(xj(x)) ∇²xj(x) } q
 >
-> ⇔ Dpqxi(x) = L''(xj(x)) pᵀ [∇xj(x) ∇xj(x)ᵀ] q +  L'(xj(x)) pᵀ ∇^2xj(x) q
+> ⇔ Dpqxi(x) = L''(xj(x)) pᵀ [∇xj(x) ∇xj(x)ᵀ] q +  L'(xj(x)) pᵀ ∇²xj(x) q
 >
 > ⇔ Dpqxi(x) = L''(xj(x)) Dpxj(x) Dqxj(x) +  L'(xj(x)) Dpqxj(x) → 8.38c
 
@@ -1365,23 +1365,23 @@
 > Như vậy tính Hessian bằng forward mode thế nào?
 >
 > Vì như đã nói, ta sẽ đưa vào thêm seed vector q, để mỗi note, giờ đây ta sẽ
-> tính một bộ ba (xi, Dpxi = ∇xi(x)ᵀp, Dqpxi = pᵀ∇^2xi(x)q)
+> tính một bộ ba (xi, Dpxi = ∇xi(x)ᵀp, Dqpxi = pᵀ∇²xi(x)q)
 >
-> thì khi đến node cuối ta sẽ có Qᵀ∇^2f(x)p.
+> thì khi đến node cuối ta sẽ có Qᵀ∇²f(x)p.
 >
-> Thế thì nếu q = e1, p = e2 ta sẽ có e1T∇^2f(x)e2, và cái này là gì?
+> Thế thì nếu q = e1, p = e2 ta sẽ có e1T∇²f(x)e2, và cái này là gì?
 >
-> Phân tích: ∇^2f(x)e2, theo MIT 18.06, góc nhìn nhân matrix vector là linear
-> combination các cột của ∇^2f(x) với hệ số là các component của e2. Nên
-> cái này chính là lấy ra cột 2 của ∇^2f(x). Tiếp, e1T[∇^2f(x)e2], thì chính là 
-> lấy ra phần tử thứ 1 của cái [cột 2 của ∇^2f(x)] nói trên. Kết qủa là ∇^2f(x)_12
+> Phân tích: ∇²f(x)e2, theo MIT 18.06, góc nhìn nhân matrix vector là linear
+> combination các cột của ∇²f(x) với hệ số là các component của e2. Nên
+> cái này chính là lấy ra cột 2 của ∇²f(x). Tiếp, e1T[∇²f(x)e2], thì chính là 
+> lấy ra phần tử thứ 1 của cái [cột 2 của ∇²f(x)] nói trên. Kết qủa là ∇²f(x)_12
 >
 > Do đó, bằng cách forward mode với lần lượt các cặp ei, ej thì ta sẽ có các
 > entry ij của Hessian.
 >
 > Nhưng vì tính đối xứng (symmetric) của Hessian, nên ta ko cần seed (e1,e2)
-> rồi lại (e2,e1), mà chỉ cần (e1,e2) để có ∇^2f(x)_12 thì nó cũng chính là
-> ∇^2f(x)_21.
+> rồi lại (e2,e1), mà chỉ cần (e1,e2) để có ∇²f(x)_12 thì nó cũng chính là
+> ∇²f(x)_21.
 >
 > Do đó mới nói chỉ lấy ei, ej với i = 1,2...n và j = 1,2...,i.
 >
@@ -1410,8 +1410,8 @@
 > forward mode.
 >
 > Ôn nhanh: Bằng cách với mỗi node, trong forward mode, ta tính thêm
-> Dpqxi = pᵀ ∇^2xi(x) q, thì tại cuối graph ta sẽ có Dpqf = pᵀ∇^2f(x)q.
-> Để rồi nếu p = ei, q = ej thì Dpqf sẽ cho ta ∇^2f(x)_ij, là phần tử ij của
+> Dpqxi = pᵀ ∇²xi(x) q, thì tại cuối graph ta sẽ có Dpqf = pᵀ∇²f(x)q.
+> Để rồi nếu p = ei, q = ej thì Dpqf sẽ cho ta ∇²f(x)_ij, là phần tử ij của
 > Hessian.
 >
 > Và để tính đủ Hessian, nhờ tính chất đối xứng, ta sẽ chỉ tính n(n+1)/2
@@ -1422,12 +1422,12 @@
 > Do đó ta sẽ cần tính các node xi, Dejxi với j = 1,2,....và Deiejxi
 >
 > Với mỗi node, ta sẽ tính phép tính để có xi, n phép tính để Dejxi với j = 1,2..
-> và Nz(∇^2f) (là số non-zero entries của Hessian) phép tính để có Deiejxi
+> và Nz(∇²f) (là số non-zero entries của Hessian) phép tính để có Deiejxi
 >
 > Và mỗi phép tính có thể tốn thực tế vài lần phép tính đơn.
 >
 > Thành ra người ta mới áng chừng tổng số phép tính nó sẽ à một factor
-> của (1 + n + Nz(∇^2f)) số phép tính cần thiết của việc evaluate function
+> của (1 + n + Nz(∇²f)) số phép tính cần thiết của việc evaluate function
 
 <br>
 
@@ -1441,8 +1441,8 @@
 > Đại khái là có khi ta ko cần tính ra explicitly matrix Hessian, mà thật ra chỉ
 > cần tính Hessian nhân với vector q nào đó. Khi đó ta có thể dùng forward
 > mode để tính với các cặp seed p = ei và q, với i = 1,2,...n. Khi đó, tại node
-> cuối ta sẽ lần lượt có e1T∇^2f(x)q, e2T∇^2f(x)q,..... Chính là các component
-> của vector ∇^2f(x)q.
+> cuối ta sẽ lần lượt có e1T∇²f(x)q, e2T∇²f(x)q,..... Chính là các component
+> của vector ∇²f(x)q.
 >
 > Mình nên hiểu ko phải ta tính tuần tự từng cặp seed. Ví dụ để có Hessian,
 > ko phải là ta sẽ chạy lần lượt forward sweep n(n+1)/2 lần, mỗi lần với một
@@ -1463,18 +1463,18 @@
 > [!NOTE]
 > Hiểu đoạn này một cách đại khái như sau. Bữa giờ khi nói về việc dùng
 > forward mode để tính Hessian, ta đã hiểu là, với mỗi node, ta sẽ tính thêm
-> Dpqxi(x) = pᵀ ∇^2xi(x) q, để nếu p = ei, q= ej thì tại node cuối ta sẽ có
+> Dpqxi(x) = pᵀ ∇²xi(x) q, để nếu p = ei, q= ej thì tại node cuối ta sẽ có
 > eiT ∇f(x) ej chính là Hessian_ij.
 >
 > Vấn đề là xét Hessian_ij, thì công thức 8.39 cho thấy nó có thể được
-> tạo ra từ các pᵀ∇^2f(x)p với p = ei, ej và (ei + ej).
+> tạo ra từ các pᵀ∇²f(x)p với p = ei, ej và (ei + ej).
 >
 > Dẫn đến ta có thể không cần phải forward mode với cặp seed p, q 
 > như lúc đầu nói. Mà chỉ cần dùng một seed p để rồi chỉ cần forward 
 > sweep với p = ei, ej và (ei + ej) thì ta vẫn có thể tính ra Hessian_ij.
 >
 > Thêm nữa, nếu định ra hàm đơn biến Φ(t) = f(t + tp) là hàm f restrict theo
-> direction t, thì ta sẽ có Dpf (=∇fTp) chính là Φ'(t)|t=0 và Dppf =(pᵀ∇^2fp)
+> direction t, thì ta sẽ có Dpf (=∇fTp) chính là Φ'(t)|t=0 và Dppf =(pᵀ∇²fp)
 > chính là Φ''(t)|t=0.
 >
 > Nói chung tác dụng là giúp có thể thiết kế ra cách dùng forward mode
@@ -1491,8 +1491,8 @@
 > [!NOTE]
 > Tiếp theo là cách tính Hessian bằng reverse mode.
 >
-> Đầu tiên phải nhận ra, giả sử ta cần tính [Hessian nhân vector q: ∇^2f(x)q]
-> (như đã biết, nhiều thuật toán ta không cần Hessian ∇^2f(x) mà cần ∇^2f(x)
+> Đầu tiên phải nhận ra, giả sử ta cần tính [Hessian nhân vector q: ∇²f(x)q]
+> (như đã biết, nhiều thuật toán ta không cần Hessian ∇²f(x) mà cần ∇²f(x)
 > nhân với vector q nào đó), thì nó chính là gradient của ∇f(x)ᵀq. Vì sao?
 >
 > Xét hàm g(x) = ∇f(x)ᵀq, đây là vector → scalar function.
@@ -1513,7 +1513,7 @@
 >
 > [∂[∂f(x)/∂x1]/∂x1 ,  ∂[∂f(x)/∂x1]/∂x2, ...]
 >
-> = [∂^2f(x)/∂x1^2 ,  ∂^2f(x)/∂x1x2, ∂^2f(x)/∂x1x3...]
+> = [∂²f(x)/∂x1² ,  ∂²f(x)/∂x1x2, ∂²f(x)/∂x1x3...]
 >
 > Đây chính là hàng thứ 1 của Hessian, hay cột thứ nhất cũng được vì Hessian
 > đối xứng
@@ -1521,11 +1521,11 @@
 > Tương tự như vậy với i = 2, ta có cột thứ 2 của Hessian.
 >
 > Do đó  Σi { [d/dx ∂f(x)/∂xi] qi} chính là linear combination các cột thứ i của
-> Hessian với  phần tử qi. Do đó đây chính là ∇^2f(x)q
+> Hessian với  phần tử qi. Do đó đây chính là ∇²f(x)q
 >
 > -------
 >
-> Như vậy bài toán đi tìm ∇^2f(x)q chỉ là bài toán tìm gradient của hàm g(x) =
+> Như vậy bài toán đi tìm ∇²f(x)q chỉ là bài toán tìm gradient của hàm g(x) =
 > ∇f(x)ᵀq
 >
 > Mà để tìm gradient của vector → scalar function, mình đã học cách làm
@@ -1559,7 +1559,7 @@
 > cho hàm g(x) = ∇f(x)ᵀq, để dùng khi reverse mode.
 >
 > Và quá trình reverse mode xong, như đã nói, sẽ cho ta đồng loạt 
-> các partial derivative ∂/∂xi[∇f(x)ᵀq], chính là các component của ∇^2f(x)q
+> các partial derivative ∂/∂xi[∇f(x)ᵀq], chính là các component của ∇²f(x)q
 
 <br>
 
@@ -1570,20 +1570,20 @@
 <p align="center"><kbd><img src="assets/2z3bqxzn81i.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Còn nếu muốn có bản thân Hessian ∇^2f(x) không thôi? Thì ta sẽ làm cái vụ
+> Còn nếu muốn có bản thân Hessian ∇²f(x) không thôi? Thì ta sẽ làm cái vụ
 > forward-backward mode với q = e1, e2,....en. Vì sao?
 >
 > Thì như note trước vừa nói, kết thúc reverse sweep, tại các input node, ta
 > sẽ có các các partial derivative ∂/∂xi[∇f(x)ᵀq], chính là các component của 
-> [∇^2f(x)q]
+> [∇²f(x)q]
 >
-> Vậy thì nếu q là e1, thì ta sẽ có ∇^2f(x)e1, mà đây chính là cột 1 của ∇^2f(x)
+> Vậy thì nếu q là e1, thì ta sẽ có ∇²f(x)e1, mà đây chính là cột 1 của ∇²f(x)
 >
 > chạy lần lượt với e2,...en ta sẽ có cột 2, ..cột n của Hessian.
 >
 > ------
 >
-> nói về chi phí tính toán, đại khái là gs nói rằng để tính ∇^2f(x)q thì số phép
+> nói về chi phí tính toán, đại khái là gs nói rằng để tính ∇²f(x)q thì số phép
 > tính chỉ gấp (factor) cỡ 12 lần số phép tính cần thiết của việc tính f(x).
 >
 > Nhưng nếu tính Hessian, thì vì ta phải làm n lần với q = e1,...en nên số
