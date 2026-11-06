@@ -83,7 +83,7 @@
 > Để rồi bài toán này, có thể được thể hiện ở dạng unconstrained optimization
 > problem:
 >
-> minimize x Σj [rj(x)]^2 | rj tức là residual yj - Φ(tj, x), và hàm objective này
+> minimize x Σj [rj(x)]² | rj tức là residual yj - Φ(tj, x), và hàm objective này
 > là sum of squared error
 >
 > Bài toán này gọi là nonlinear least square, dễ thấy là vì hàm Φ(tj, x) là hàm
@@ -91,7 +91,7 @@
 >
 > Thế thì đại ý là tác giả muốn minh họa rằng bài toán này tuy có ít param
 > nhưng vì có rất nhiều data nên để tính toán ra giá trị của objective function
-> f = Σj [rj(x)]^2 cũng sẽ rất tốn kém
+> f = Σj [rj(x)]² cũng sẽ rất tốn kém
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
@@ -277,7 +277,7 @@
 >
 > Tiếp, công thức 2.5 khi họ nói nếu **f twice continuously differentiable** thì ta có:
 >
-> **∇f(x + p) = ∇f(x) + ∫0:1 ∇^2 f(x + tp)pdt**
+> **∇f(x + p) = ∇f(x) + ∫0:1 ∇² f(x + tp)pdt**
 >
 > Để hiểu cái này có thể thấy nó có dạng của FTC2:
 >
@@ -291,23 +291,23 @@
 >
 > và f(t) = G'(t) = d/dt ∇f(x + tp) = d/d(x + tp) ∇f(x + tp) ∘ d/dt (x + tp)
 >
-> = ∇^2 f(x + tp) ∘ p
+> = ∇² f(x + tp) ∘ p
 >
 > Áp dụng cái này, vì dĩ nhiên G là nguyên hàm của f:
 >
 > G(1) -  G(0) = ∫_0^1 f(t)dt
 >
->  Ta có ∇f(x + p) - ∇f(x) = ∫_0^1 ∇^2 f(x + tp) . p dt
+>  Ta có ∇f(x + p) - ∇f(x) = ∫_0^1 ∇² f(x + tp) . p dt
 >
-> ⇔ ∇f(x + p) = ∇f(x)  + ∫_0^1 ∇^2 f(x + tp) . p dt
+> ⇔ ∇f(x + p) = ∇f(x)  + ∫_0^1 ∇² f(x + tp) . p dt
 >
 > =====
 >
-> Còn cái 2.6: f(x + p) = f(x) + ∇f(x)ᵀp + (1/2)p ∇^2f(x + tp)p
+> Còn cái 2.6: f(x + p) = f(x) + ∇f(x)ᵀp + (1/2)p ∇²f(x + tp)p
 >
 > Đầu tiên phải dùng / nói đến định lý Taylor trước:
 >
-> f(b) = f(a) + f'(a)(b - a) + (1/2) f''(t)(b - a)^2 + ...+(1/n!) f^(n)(a)(b - a)^n
+> f(b) = f(a) + f'(a)(b - a) + (1/2) f''(t)(b - a)² + ...+(1/n!) f^(n)(a)(b - a)^n
 >
 > + (1/(n+1)!)f^(n+1)(c)(b - a)^(n+1)/(n+1)! với c ∈ (a, b)
 >
@@ -315,15 +315,15 @@
 >
 > Ví dụ xấp xỉ bậc 1: f(x) ≈ f(x0) + f'(x0)(x-x0)
 >
-> Và xấp xỉ bậc 2: f(x) ≈ f(x0) + f'(x0)(x-x) + (1/2) f''(x0)(x-x0)^2
+> Và xấp xỉ bậc 2: f(x) ≈ f(x0) + f'(x0)(x-x) + (1/2) f''(x0)(x-x0)²
 >
 > Thì đó là ta xấp xỉ. Còn cái này nó sẽ cho phép có dấu bằng, bằng cách nói về / thêm vào một phần dư (gọi là phần dư Lagrange)
 >
-> f(x) = f(x0) + f'(x0)(x-x0) + (1/2) f''(c)(x-x0)^2 với c nào đó nằm trong (x,x0)
+> f(x) = f(x0) + f'(x0)(x-x0) + (1/2) f''(c)(x-x0)² với c nào đó nằm trong (x,x0)
 >
 > Tương tự,
 >
-> f(x) = f(x0) + f'(x0)(x-x0) + (1/2) f''(x0)(x-x0)^2 + (1/3!) f^(3)(x)(x-x0)^3  với c nằm trong (x,x0)
+> f(x) = f(x0) + f'(x0)(x-x0) + (1/2) f''(x0)(x-x0)² + (1/3!) f^(3)(x)(x-x0)^3  với c nằm trong (x,x0)
 >
 > Và mean value theorem chính là phiên bản của cái này:
 >
@@ -341,7 +341,7 @@
 >
 > Thế thì, áp dụng Taylor theorem với a = 0, b = 1
 >
-> g(1) = g(0) + g'(0)(1 - 0) + (1/2) g''(t)(1 - 0)^2 với t nào đó ∈ (0,1)
+> g(1) = g(0) + g'(0)(1 - 0) + (1/2) g''(t)(1 - 0)² với t nào đó ∈ (0,1)
 >
 > Tính g'(0):
 >
@@ -365,37 +365,37 @@
 >
 > = ∇f(u+du)ᵀp - ∇f(u)ᵀp = [∇f(u+du) - ∇f(u)]Tp = d∇f(u)ᵀp 
 >
-> Mà d∇f(u) = ∇^2f(u) du  (vì đạo hàm của hàm ∇f chính là Hessian ∇^2f)
+> Mà d∇f(u) = ∇²f(u) du  (vì đạo hàm của hàm ∇f chính là Hessian ∇²f)
 >
-> Do đó dh = d ∇f(u)ᵀp = [∇^2f(u)du]Tp 
+> Do đó dh = d ∇f(u)ᵀp = [∇²f(u)du]Tp 
 >
-> = duT ∇^2f(u)ᵀ p . Và vì cái này là scalar (u, du là scalar)
+> = duT ∇²f(u)ᵀ p . Và vì cái này là scalar (u, du là scalar)
 >
-> = (duT ∇^2f(u)ᵀ p)ᵀ
+> = (duT ∇²f(u)ᵀ p)ᵀ
 >
-> = (∇^2f(u)ᵀ p)ᵀ duTT
+> = (∇²f(u)ᵀ p)ᵀ duTT
 >
-> = (pᵀ∇^2f(u)ᵀT) du
+> = (pᵀ∇²f(u)ᵀT) du
 >
-> = pᵀ∇^2f(u) du
+> = pᵀ∇²f(u) du
 >
-> Vậy dh(u) = = pᵀ∇^2f(u) du 
+> Vậy dh(u) = = pᵀ∇²f(u) du 
 >
-> ⇨ d/du h(u) = pᵀ∇^2f(u) = pᵀ∇^2f(x + tp)
+> ⇨ d/du h(u) = pᵀ∇²f(u) = pᵀ∇²f(x + tp)
 >
-> Vậy d/d(x + tp) ∇f(x + tp)ᵀp = pᵀ∇^2f(x + tp)
+> Vậy d/d(x + tp) ∇f(x + tp)ᵀp = pᵀ∇²f(x + tp)
 >
-> ⇨ d/d(x + tp) ∇f(x + tp)ᵀp . d/dt (x + tp) = pᵀ∇^2f(x + tp) . d/dt (x + tp) 
+> ⇨ d/d(x + tp) ∇f(x + tp)ᵀp . d/dt (x + tp) = pᵀ∇²f(x + tp) . d/dt (x + tp) 
 >
-> = pᵀ∇^2f(x + tp) . p
+> = pᵀ∇²f(x + tp) . p
 >
-> = pᵀ∇^2f(x + tp)p
+> = pᵀ∇²f(x + tp)p
 >
-> Vậy g''(t)  = pᵀ∇^2f(x + tp)p
+> Vậy g''(t)  = pᵀ∇²f(x + tp)p
 >
-> ⇨ g''(t)|t=ξ = pᵀ∇^2f(x + ξp)p
+> ⇨ g''(t)|t=ξ = pᵀ∇²f(x + ξp)p
 >
-> g(1) = g(0) + g'(0)(1 - 0) + (1/2) g''(ξ)(1-0)^2
+> g(1) = g(0) + g'(0)(1 - 0) + (1/2) g''(ξ)(1-0)²
 >
 > Thay vào hết:
 >
@@ -405,9 +405,9 @@
 >
 > g'(0) = ∇f(x)ᵀp
 >
-> g''(t) = pᵀ∇^2f(x + tp)p
+> g''(t) = pᵀ∇²f(x + tp)p
 >
-> Vậy f(x + p)  = f(x) + ∇f(x)ᵀp + (1/2) pᵀ∇^2f(x + tp)p
+> Vậy f(x + p)  = f(x) + ∇f(x)ᵀp + (1/2) pᵀ∇²f(x + tp)p
 >
 > Chứng minh xong
 
@@ -471,10 +471,10 @@
 >
 > Thế thì ta có **∇f(x*) khác 0** (tức là vector khác 0, ta phải hiểu ∇f(x) là vector,
 > gradient, không phải scalar). Thì, bằng cách **chọn một vector p = - ∇f(x*)**, ta sẽ
-> có **∇f(x*)ᵀp = -∇f(x*)ᵀ∇f(x*) = -(||∇f(x*)||)^2**
+> có **∇f(x*)ᵀp = -∇f(x*)ᵀ∇f(x*) = -(||∇f(x*)||)²**
 >
-> Vậy thì có thể thấy ∇f(x) là vector khác 0 thì dẫn đến ||∇f(x*)||^2 là square
-> norm của nó, phải là số dương ⇨ pᵀ ∇f(x*) = -||∇f(x*)||^2 phải **âm**.
+> Vậy thì có thể thấy ∇f(x) là vector khác 0 thì dẫn đến ||∇f(x*)||² là square
+> norm của nó, phải là số dương ⇨ pᵀ ∇f(x*) = -||∇f(x*)||² phải **âm**.
 >
 > Tiếp, ta sẽ xét hàm **g(t) = pᵀ∇f(x* + tp)**, đại ý là thể hiện **giá trị của pᵀ∇f(x)**
 > sẽ thay đổi như thế nào **khi đi từ x → x + p**, hay, đi theo hướng vector p
@@ -573,7 +573,7 @@
 
 > [!NOTE]
 > Đại khái là theorem này nói về Second-order Necessary condition: Nếu là  local
-> minimizer thì ∇^2f(x) sẽ là positive semi definite matrix (và ∇f(x*) = 0, cái này
+> minimizer thì ∇²f(x) sẽ là positive semi definite matrix (và ∇f(x*) = 0, cái này
 > cũng là First order Necessary condition)
 >
 > Chứng minh Phản chứng, giả sử x* là local minimizer nhưng Hessian tại đó
@@ -584,19 +584,19 @@
 >
 > Thì dựa vào Taylor theorem:
 >
-> f(x* + p) = f(x*) + ∇f(x*)ᵀp + (1/2) pᵀ∇^2 f(x + tp)p for some t in (0,1)
+> f(x* + p) = f(x*) + ∇f(x*)ᵀp + (1/2) pᵀ∇² f(x + tp)p for some t in (0,1)
 >
 > Áp dụng vào đây với t_bar p đóng vài trò p, ta có:
 >
-> f(x* + t_bar p) = f(x*) + ∇f(x*)ᵀ t_bar p + (1/2) (t_bar p)ᵀ ∇^2 f(x + t t_bar p) t_bar p
+> f(x* + t_bar p) = f(x*) + ∇f(x*)ᵀ t_bar p + (1/2) (t_bar p)ᵀ ∇² f(x + t t_bar p) t_bar p
 >
-> = f(x*) + t_bar∇f(x*)ᵀp + (1/2) (t_bar)^2 pᵀ ∇^2 f(x + t t_bar p) p
+> = f(x*) + t_bar∇f(x*)ᵀp + (1/2) (t_bar)² pᵀ ∇² f(x + t t_bar p) p
 >
 > với t_bar ∈ (0, T), và some t in (0,1) ⇨ t × t_bar thay bằng some t in (0, t_bar)
 >
-> = f(x*) + t_bar∇f(x*)ᵀp + (1/2) (t_bar)^2 pᵀ ∇^2 f(x + t p) p for some t in (0, t_bar)
+> = f(x*) + t_bar∇f(x*)ᵀp + (1/2) (t_bar)² pᵀ ∇² f(x + t p) p for some t in (0, t_bar)
 >
-> = f(x*) + (1/2) (t_bar)^2 pᵀ ∇^2f(x + t p) p for some t in (0, t_bar)
+> = f(x*) + (1/2) (t_bar)² pᵀ ∇²f(x + t p) p for some t in (0, t_bar)
 >
 > (gradient ∇f(x*) = 0)
 >
@@ -604,28 +604,28 @@
 >
 > thì ở đây ta có tồn tại t nào đó trong (0, t_bar) thì ta có cái equation:
 >
-> f(x* + tbar p) = f(x*) + (1/2) (t_bar)^2 pᵀ ∇^2 f(x + t p) p for some t in (0, t_bar)
+> f(x* + tbar p) = f(x*) + (1/2) (t_bar)² pᵀ ∇² f(x + t p) p for some t in (0, t_bar)
 >
 > Và dĩ nhiên trong khoảng này thì cũng là trong khoảng (0, T)
 >
-> ⇨ pᵀ ∇^2 f(x + t p) p < 0
+> ⇨ pᵀ ∇² f(x + t p) p < 0
 >
 > ⇨ f(x* + t_bar p) < f(x*) ⇨ ta đã có thể đi thêm theo hướng p để giảm f 
 >
 > ⇨ x* ko phải là local minimizer. Điều này trái với giả thiết 
 >
-> ⇨ ∇^2 f(x) phải positive semi definite tại x*
+> ⇨ ∇² f(x) phải positive semi definite tại x*
 >
 > =====
 >
 > Tóm tắt ý chính cái này chút:
 >
-> Ta giả sử x* là local minimizer nhưng Hessian tại đó ∇^2 f(x*) không positive
-> semi definite. Tức tồn tại p sao cho pᵀ ∇^2 f(x*) p < 0
+> Ta giả sử x* là local minimizer nhưng Hessian tại đó ∇² f(x*) không positive
+> semi definite. Tức tồn tại p sao cho pᵀ ∇² f(x*) p < 0
 >
-> Theo tính liên tục, thì nếu đặt g(tbar) = pᵀ ∇^2f(x* + ptbar) p thì g(tbar) phải tiếp
+> Theo tính liên tục, thì nếu đặt g(tbar) = pᵀ ∇²f(x* + ptbar) p thì g(tbar) phải tiếp
 > tục âm trong một khoảng nào đó từ x* (tbar = 0) đến x* + p T (tbar = T), nói cách
-> khác là tồn tại T nào đó mà từ tbar = 0 đến T, thì g(tbar) = pᵀ ∇^2 f(x* + ptbar) p
+> khác là tồn tại T nào đó mà từ tbar = 0 đến T, thì g(tbar) = pᵀ ∇² f(x* + ptbar) p
 > nhất định âm
 >
 > Thế thì, theo Taylor theorem nói rằng:
@@ -633,17 +633,17 @@
 > Dù tbar có bằng bao nhiêu thì trong khoảng từ x* đến x* + p tbar thì sẽ luôn có
 > một thằng t nào đó khiến ta được phép thể hiện f(x* + p tbar) bởi f(x*):
 >
-> f(x* + p tbar) = f(x*) + ∇f(x*)ᵀp + (1/2) (p tbar)ᵀ∇f^2(x* + t p tbar)(p tbar)
+> f(x* + p tbar) = f(x*) + ∇f(x*)ᵀp + (1/2) (p tbar)ᵀ∇f²(x* + t p tbar)(p tbar)
 >
-> = f(x*) + 0Tp + (1/2) tbar^2 pᵀ∇f^2(x* + t p tbar)p
+> = f(x*) + 0Tp + (1/2) tbar² pᵀ∇f²(x* + t p tbar)p
 >
-> = f(x*) + (1/2) tbar^2 pᵀ∇f^2(x* + t p tbar)p
+> = f(x*) + (1/2) tbar² pᵀ∇f²(x* + t p tbar)p
 >
 > Và ý chính của cái này, nhắc lại là với mọi tbar in (0,T) thì ta luôn được phép thể
 > hiện f(x* + p tbar) = f(x*) + something.
 >
-> mà cái something này âm vì pᵀ∇f^2(x* + t p tbar)p với some t in (0,1) thì cũng
-> như pᵀ∇f^2(x* + tp)p với some t in (0, tbar) và do đó nó âm
+> mà cái something này âm vì pᵀ∇f²(x* + t p tbar)p với some t in (0,1) thì cũng
+> như pᵀ∇f²(x* + tp)p với some t in (0, tbar) và do đó nó âm
 >
 > Do đó ⇨ với mọi tbar in (0,T) thì f(x* + p tbar) < f(x*)
 
@@ -662,7 +662,7 @@
 
 > [!NOTE]
 > Qua cái theorem về điều kiện ĐỦ (của optimality condition): Nó nói rằng, nếu
-> ∇^2 f  liên tục trong khoảng lân cận của x* và ∇f(x*)  = 0 và ∇^2 f(x*) positive
+> ∇² f  liên tục trong khoảng lân cận của x* và ∇f(x*)  = 0 và ∇² f(x*) positive
 > definite Thì x* là **strict local minimizer**
 >
 > Chứng minh. Đại khái là vì Hessian liên tục và positive definite tại x* nên có thể
@@ -673,7 +673,7 @@
 >
 > Đại khái là, có thể hiểu vầy cho đơn giản: Gọi hàm λmin(x) là hàm lấy ra
 > eigenvalue nhỏ nhất của matrix Hessian tại x: λmin(x) = minimum eigenvalues
-> of ∇^2 f(x)
+> of ∇² f(x)
 >
 > Dĩ nhiên nó là scalar function.
 >
@@ -714,15 +714,15 @@
 >
 > Thì Taylor theorem nói rằng:
 >
-> f(x* + p) = f(x*) + ∇f(x*)ᵀp + (1/2) pᵀ ∇^2 f(z) p với z là điểm nào đó nằm giữa 
+> f(x* + p) = f(x*) + ∇f(x*)ᵀp + (1/2) pᵀ ∇² f(z) p với z là điểm nào đó nằm giữa 
 > x* và x* + p, tức khoảng (x*, x* + p), cũng có thể ghi là z = x* + pt với t là giá trị
 > nào đó trong (0,1).
 >
-> Với ∇f(x*) = 0 ta có f(x* + p) = f(x*) + (1/2) pᵀ ∇^2 f(z) p  với z = x* + pt với some 
+> Với ∇f(x*) = 0 ta có f(x* + p) = f(x*) + (1/2) pᵀ ∇² f(z) p  với z = x* + pt với some 
 > t ∈ (0,1).
 >
 > Và có nghĩa là f(x* + p) có thể được thể hiện bởi f(x*) + something mà something
-> này, là bằng (1/2) pᵀ ∇^2 f(z) p sẽ DƯƠNG vì z vẫn trong quả banh nói trên có
+> này, là bằng (1/2) pᵀ ∇² f(z) p sẽ DƯƠNG vì z vẫn trong quả banh nói trên có
 > mọi điểm trong đó đều có Hessian positive definite
 >
 > Vậy, f(x* + p) = f(x*) + số dương ⇨ f(x* + p) > f(x*) với mọi p sao cho ||p|| < r
@@ -767,7 +767,7 @@
 >
 > Điều kiện cần bậc 2:
 >
-> [x* là local minizer ] ⇨ thì Hessian tại đó xác định bán dương ∇^2 f(x*) ≻ 0
+> [x* là local minizer ] ⇨ thì Hessian tại đó xác định bán dương ∇² f(x*) ≻ 0
 >
 > Còn điều kiện đủ: Tức là ⇐: 
 >
