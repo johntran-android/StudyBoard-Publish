@@ -55,25 +55,25 @@
 > [!NOTE]
 > Thế thì  đại ý là ta có thể có trust region elliptical bằng cách thay constraint ||p|| ≤ Δ bằng ||Dp|| ≤ Δ. Với D là một diagonal matrix. Là sao nhỉ?
 >
-> Để dễ hình dung lấy ví dụ trong 2D case tức x là R^2 vector. Trong đó hàm f rất nhạy cảm theo x1 và ít hơn theo x2. 
+> Để dễ hình dung lấy ví dụ trong 2D case tức x là R² vector. Trong đó hàm f rất nhạy cảm theo x1 và ít hơn theo x2. 
 >
 > Thì tại sao ||Dp|| ≤ Δ sẽ tạo trust region hình elip thay vì hình tròn: Gọi d1, d2 là diagonal entries:
 >
 > Dp = (d1p1, d2p2) 
 >
-> ⇨ ||Dp|| ≤ Δ ⇔ ||Dp||^2 ≤ Δ^2 
+> ⇨ ||Dp|| ≤ Δ ⇔ ||Dp||² ≤ Δ² 
 >
-> ⇔ (d1p1)^2 + (d2p2)^2 ≤ Δ^2
+> ⇔ (d1p1)² + (d2p2)² ≤ Δ²
 >
-> ⇔ (d1/Δ)^2p1^2 + (d2/Δ)^2 p2^2 ≤ 1
+> ⇔ (d1/Δ)²p1² + (d2/Δ)² p2² ≤ 1
 >
-> Đây là phương trình elips (có dạng ax^2 + by^2 ≤ c)
+> Đây là phương trình elips (có dạng ax² + by² ≤ c)
 >
 > Từ đó cho thấy. nếu ta di chuyển theo phương x1 (p2 = 0):
 >
-> (a) ⇔ (d1/Δ)^2p1^2 ≤ 1
+> (a) ⇔ (d1/Δ)²p1² ≤ 1
 >
-> ⇔ p1^2 ≤ 1/(d1/Δ)^2 = (Δ/d1)^2
+> ⇔ p1² ≤ 1/(d1/Δ)² = (Δ/d1)²
 >
 > ⇔ -Δ/d1 ≤ p1 ≤ Δ/d1
 >
@@ -81,7 +81,7 @@
 >
 > Và lập luận tương tự sẽ thấy nếu d2 nhỏ, thì phạm vi cho phép của p2 là -Δ/d2 ≤ p2 ≤ Δ/d2 sẽ lớn, cho phép phạm vi theo hướng mà hàm f ít sensitive rộng hơn.
 >
-> Và chọn d thế nào (làm sao biết xi nào sensitive để mà cho dii đó lớn): Dùng đạo hàm cấp 2: ∂^2/∂xi^2 f
+> Và chọn d thế nào (làm sao biết xi nào sensitive để mà cho dii đó lớn): Dùng đạo hàm cấp 2: ∂²/∂xi² f
 >
 > Tác giả cũng cho biết là cũng không cần phải cố gắng làm quá chính xác, không cần phải theo sát sự scaling của bài toán (ý là nếu f là cái thung lũng dẹt thì ta sẽ muốn trust region cũng dẹt, nhưng không nhất thiết phải làm quá, để y chang sự dẹt của bài toán) mà chỉ cần hòm hòm để cái trust region elliptic là được rồi.
 >
@@ -111,11 +111,11 @@
 >
 > pks = argmin p ∈ R^n {fk + gkTp} s.t ||p|| ≤ Δ. thì đây chính là xấp xỉ hàm f bởi linear function: fk + gkTp (linear approx. tại xk của nó). Giải bài toán này sẽ ra pks = -gk (ý la hướng negative gradient, nhưng chiều dài sẽ là Δ) 
 >
-> Tất nhiên đây là bài toán ràng buộc bất đẳng thức, equivalent với minimize fk + gkTp s.t pᵀp - Δ^2 ≤ 0. Dùng KKT conditions:
+> Tất nhiên đây là bài toán ràng buộc bất đẳng thức, equivalent với minimize fk + gkTp s.t pᵀp - Δ² ≤ 0. Dùng KKT conditions:
 >
-> Stationary condition: Lagrangian: L(p, ν) = fk + gkTp + v(pᵀp - Δ^2).
+> Stationary condition: Lagrangian: L(p, ν) = fk + gkTp + v(pᵀp - Δ²).
 >
-> = vpᵀp + gkTp + fk - vΔ^2
+> = vpᵀp + gkTp + fk - vΔ²
 >
 > Tìm gradient ∇L theo phương pháp đã học trong MIT 18s096:
 >
@@ -131,13 +131,13 @@
 >
 > ∇L = 0 ⇔ 2vp + gk = 0 ⇔ p = -gk/v
 >
-> Complenetary slackness: v(pᵀp - Δ^2) = 0. Vì v khác 0 nên pᵀp - Δ^2 = 0 ⇔ ||p|| = Δ
+> Complenetary slackness: v(pᵀp - Δ²) = 0. Vì v khác 0 nên pᵀp - Δ² = 0 ⇔ ||p|| = Δ
 >
 > Vậy p = - (Δ/||gk||) gk, cũng là pks.
 >
 > Sau đó, giải tìm τk > 0 để minimize mk(τpks) = fk + gkT(τpks) + (1/2)(τpks)ᵀBk(τpks) (s.t ||τpks|| ≤ Δ
 >
-> ⇔ minimize mk(τpks) = fk + τgkTpks + (1/2)τ^2pksTBkpks s.t |τ|||pks|| ≤ Δ
+> ⇔ minimize mk(τpks) = fk + τgkTpks + (1/2)τ²pksTBkpks s.t |τ|||pks|| ≤ Δ
 >
 > Đây là bài toán tối ưu hàm đơn biến bậc hai có ràng buộc. Cách giải rất đơn giản: Tìm minimizer của g(τ) = mk(τpks):
 >
@@ -149,7 +149,7 @@
 >
 > = - gkT[- (Δ/||gk||) gk] / [- (Δ/||gk||) gk]TBk[- (Δ/||gk||) gk]
 >
-> = [(Δ/||gk||) gkTgk] / [(Δ/||gk||)^2 gkTBkgk]
+> = [(Δ/||gk||) gkTgk] / [(Δ/||gk||)² gkTBkgk]
 >
 > = [gkTgk] / [(Δ/||gk||) gkTBkgk] 
 >
@@ -161,7 +161,7 @@
 >
 > Đạo hàm cấp 2 tại critical point: g''(τ) = pksTBkpks = [- (Δ/||gk||) gk]TBk[- (Δ/||gk||) gk]
 >
-> = (Δ/||gk||)^2 gkTBkgk 
+> = (Δ/||gk||)² gkTBkgk 
 >
 > Nếu gkTBkgk ≤ 0 ⇨ g''(τ) ≤ 0 ⇨ τ* là maximum, và τ* < 0 (do gkTBkgk ≤ 0 → ||gk||^3 / (ΔgkTBkgk) ≤ 0). Như vậy khi τ đi từ 0 → inf (nhớ ràng bài toán chỉ xét τ từ 0 đến 1, thể hiện ta đi từ xk theo hướng vector pks và xa nhất là đụng hàng rào, ứng với step size |pks| = Δ) thì hàm số giảm liên tục (cái bát parabol úp xuống và ta đang đi trên sườn bên kia của bát). Do đó, nó đạt min khi đi xa nhất có thể, chính là đụng hàng rào. Nên ở ca này, τ* = 1.
 >
@@ -175,27 +175,27 @@
 >
 > ====
 >
-> Quay lại đây, bây giờ constraint của bài toán minimize fk + gkTp là ||Dp|| ≤ Δ, chuyển sang equivalent problem với constraint ||Dp||^2 ≤ Δ
+> Quay lại đây, bây giờ constraint của bài toán minimize fk + gkTp là ||Dp|| ≤ Δ, chuyển sang equivalent problem với constraint ||Dp||² ≤ Δ
 >
 > Thử xem solution sẽ là gì. Tương tự, dùng KKT conditions thôi: 
 >
-> Stationary condition: Lagrangian : L(p, ν) = fk + gkTp + ν(||Dp||^2 - Δ^2).
+> Stationary condition: Lagrangian : L(p, ν) = fk + gkTp + ν(||Dp||² - Δ²).
 >
-> = fk + gkTp + ν((Dp)ᵀ(Dp) - Δ^2)
+> = fk + gkTp + ν((Dp)ᵀ(Dp) - Δ²)
 >
-> = fk + gkTp + ν(pᵀDTDp - Δ^2)
+> = fk + gkTp + ν(pᵀDTDp - Δ²)
 >
-> = νpᵀDTDp + gkTp - νΔ^2 + fk
+> = νpᵀDTDp + gkTp - νΔ² + fk
 >
 > Nhờ MIT 18s096 tìm gradient quá dễ, ∇L = 2νDTDp + gk 
 >
 > ∇L = 0 ⇔ 2νDTDp + gk = 0 ⇔ DTDp = -(1/2ν)gk 
 >
-> ⇔ p = -(1/2ν)(D^2)⁻¹ gk
+> ⇔ p = -(1/2ν)(D²)⁻¹ gk
 >
 > ⇔ p = -(1/2ν)(D^-2) gk = pks 
 >
-> Complenetary slackness: ν(pᵀDTDp - Δ^2) = 0. Vì ν khác 0 nên pᵀDTDp - Δ^2 = 0 
+> Complenetary slackness: ν(pᵀDTDp - Δ²) = 0. Vì ν khác 0 nên pᵀDTDp - Δ² = 0 
 >
 > ⇔ ||Dp|| = Δ 
 >
