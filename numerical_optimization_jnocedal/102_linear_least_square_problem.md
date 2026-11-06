@@ -44,11 +44,11 @@
 >
 >
 >
-> Như vậy, objective lúc này trở thành: f(x) = (1/2)r(x)ᵀr(x) = (1/2)(Jx - y)ᵀ(Jx - y) = (1/2)||Jx - y||^2.
+> Như vậy, objective lúc này trở thành: f(x) = (1/2)r(x)ᵀr(x) = (1/2)(Jx - y)ᵀ(Jx - y) = (1/2)||Jx - y||².
 >
 >
 >
-> Thử xem ∇f và Hessian ∇^2f là gì:
+> Thử xem ∇f và Hessian ∇²f là gì:
 >
 >
 >
@@ -144,7 +144,7 @@
 >
 >
 >
-> Ở đây ta dùng điều kiện đủ bậc hai, cho dễ dễ thấy, ta đã có Hessian là JᵀJ, thì như đã biết JᵀJ chắc chắn là positive semi definite: Chỉ cần xét quadratic form của nó (nhớ MIT 18.06 ta biết, chỉ cần chỉ ra quadratic form của nó luôn ko âm): zTJᵀJz = (Jᵀz)ᵀ(Jᵀz) = ||Jᵀz||^2, đây là bình phương của norm của vector Jᵀz, dĩ nhiên luôn không âm. Kết luận JᵀJ possitive semi definite ⇨ f là hàm lồi.
+> Ở đây ta dùng điều kiện đủ bậc hai, cho dễ dễ thấy, ta đã có Hessian là JᵀJ, thì như đã biết JᵀJ chắc chắn là positive semi definite: Chỉ cần xét quadratic form của nó (nhớ MIT 18.06 ta biết, chỉ cần chỉ ra quadratic form của nó luôn ko âm): zTJᵀJz = (Jᵀz)ᵀ(Jᵀz) = ||Jᵀz||², đây là bình phương của norm của vector Jᵀz, dĩ nhiên luôn không âm. Kết luận JᵀJ possitive semi definite ⇨ f là hàm lồi.
 >
 >
 >
@@ -214,7 +214,7 @@
 >
 >
 >
-> Ngoài ra, vì JᵀJ là gram matrix, là matrix positive semi definite (check quadratic form uTJᵀJu = (Ju)ᵀJu = ||Ju||^2 ≥ 0 với mọi u), điều này đồng nghĩa mọi eigenvalue không âm, mà ở trên đã nói nó full rank, tức là không có eigenvalue bằng 0.
+> Ngoài ra, vì JᵀJ là gram matrix, là matrix positive semi definite (check quadratic form uTJᵀJu = (Ju)ᵀJu = ||Ju||² ≥ 0 với mọi u), điều này đồng nghĩa mọi eigenvalue không âm, mà ở trên đã nói nó full rank, tức là không có eigenvalue bằng 0.
 >
 >
 >
@@ -286,7 +286,7 @@
 >
 >
 >
-> Như đã nói stretching factor lớn nhất, chính là định nghĩa của norm A: ||A|| = max_x ||Ax|| / ||x||. Vậy thì ta sẽ thử mổ xẻ bài toán này: maximize_x ||Ax|| / ||x||. Đối mặt với bài toán tối ưu này, nhận thấy ||Ax|| / ||x|| là hàm không âm, và hàm quadratic thì đồng biến với input không âm, nên ta sẽ chuyển thành bài toán tương đương: maximize_x ||Ax||^2 / ||x||^2 = (Ax)ᵀ(Ax) / xᵀx = xᵀAᵀAx / xᵀx (cái này trong MIT 1806, sách thầy Strang mình biết gọi là Rayleint quotient).
+> Như đã nói stretching factor lớn nhất, chính là định nghĩa của norm A: ||A|| = max_x ||Ax|| / ||x||. Vậy thì ta sẽ thử mổ xẻ bài toán này: maximize_x ||Ax|| / ||x||. Đối mặt với bài toán tối ưu này, nhận thấy ||Ax|| / ||x|| là hàm không âm, và hàm quadratic thì đồng biến với input không âm, nên ta sẽ chuyển thành bài toán tương đương: maximize_x ||Ax||² / ||x||² = (Ax)ᵀ(Ax) / xᵀx = xᵀAᵀAx / xᵀx (cái này trong MIT 1806, sách thầy Strang mình biết gọi là Rayleint quotient).
 >
 >
 >
@@ -294,23 +294,23 @@
 >
 >
 >
-> Σi λmin(AᵀA) yi^2 ≤ yTΛy = Σi λi yi^2 ≤ Σi λmax(AᵀA) yi^2
+> Σi λmin(AᵀA) yi² ≤ yTΛy = Σi λi yi² ≤ Σi λmax(AᵀA) yi²
 >
 >
 >
-> ⇔ λmin(AᵀA) Σi yi^2 ≤ yTΛy = Σi λi yi^2 ≤ λmax(AᵀA) Σi yi^2
+> ⇔ λmin(AᵀA) Σi yi² ≤ yTΛy = Σi λi yi² ≤ λmax(AᵀA) Σi yi²
 >
 >
 >
-> ⇔ λmin(AᵀA) ||y||^2 ≤ yTΛy = Σi λi yi^2 ≤ λmax(AᵀA) ||y||^2
+> ⇔ λmin(AᵀA) ||y||² ≤ yTΛy = Σi λi yi² ≤ λmax(AᵀA) ||y||²
 >
 >
 >
-> ⇨ λmin(AᵀA) ≤ yTΛy / yTy = Σi λi yi^2 ≤ λmax(AᵀA)
+> ⇨ λmin(AᵀA) ≤ yTΛy / yTy = Σi λi yi² ≤ λmax(AᵀA)
 >
 >
 >
-> ⇨ yTΛy / yTy, cũng là ||Ax||^2 / ||x||^2 đạt max = λmax(AᵀA) và đạt min = λmin(AᵀA)
+> ⇨ yTΛy / yTy, cũng là ||Ax||² / ||x||² đạt max = λmax(AᵀA) và đạt min = λmin(AᵀA)
 >
 >
 >
@@ -330,7 +330,7 @@
 >
 >
 >
-> Xét AᵀA, áp cái SVD factorization của A vào: AᵀA = (U Σ Vᵀ)ᵀ (U Σ Vᵀ) = (V ΣT Uᵀ)(U Σ Vᵀ) = V ΣT UᵀU Σ Vᵀ = V ΣTΣ Vᵀ, và đây cũng chính là eigen-decomposition của AᵀA, giúp kết luận σ(A)^2 = λ(AᵀA) ⇨ σ(A) = √λ(AᵀA).
+> Xét AᵀA, áp cái SVD factorization của A vào: AᵀA = (U Σ Vᵀ)ᵀ (U Σ Vᵀ) = (V ΣT Uᵀ)(U Σ Vᵀ) = V ΣT UᵀU Σ Vᵀ = V ΣTΣ Vᵀ, và đây cũng chính là eigen-decomposition của AᵀA, giúp kết luận σ(A)² = λ(AᵀA) ⇨ σ(A) = √λ(AᵀA).
 >
 >
 >
@@ -346,27 +346,27 @@
 >
 >
 >
-> = √λmax(\[AᵀA\]^2)/√λmin(\[AᵀA\]^2)
+> = √λmax(\[AᵀA\]²)/√λmin(\[AᵀA\]²)
 >
 >
 >
-> Ôn nhanh tính chất này giả sử u và λ là eigenvector/value của A: Au = λu ⇨ A^2u = A λu = λ Au = λ^2 u ⇨ u cũng là eigenvector ứng với eigenvalue là λ^2, tức là eigenvalue của A^2 = \[eigenvalue tương ứng của A\]^2. Nếu A là matrix có eigenvalue không âm, ví dụ như matrix AᵀA, thì khi đó dễ thấy ta sẽ có thể nói, λmax(A^2) = \[λmax(A)\]^2, và λmin(A^2) = \[λmin(A)\]^2
+> Ôn nhanh tính chất này giả sử u và λ là eigenvector/value của A: Au = λu ⇨ A²u = A λu = λ Au = λ² u ⇨ u cũng là eigenvector ứng với eigenvalue là λ², tức là eigenvalue của A² = \[eigenvalue tương ứng của A\]². Nếu A là matrix có eigenvalue không âm, ví dụ như matrix AᵀA, thì khi đó dễ thấy ta sẽ có thể nói, λmax(A²) = \[λmax(A)\]², và λmin(A²) = \[λmin(A)\]²
 >
 >
 >
-> Vậy λmax\[(AᵀA)^2\] = \[λmax(AᵀA)\]^2 và λmin(\[AᵀA\]^2) = \[λmin(AᵀA)\]^2
+> Vậy λmax\[(AᵀA)²\] = \[λmax(AᵀA)\]² và λmin(\[AᵀA\]²) = \[λmin(AᵀA)\]²
 >
 >
 >
-> ⇨ √λmax(\[AᵀA\]^2)/√λmin(\[AᵀA\]^2) = λmax(AᵀA) / λmin(AᵀA)
+> ⇨ √λmax(\[AᵀA\]²)/√λmin(\[AᵀA\]²) = λmax(AᵀA) / λmin(AᵀA)
 >
 >
 >
-> và cái này = \[√λmax(AᵀA) / √λmin(AᵀA)\]^2 = \[κ(A)\]^2
+> và cái này = \[√λmax(AᵀA) / √λmin(AᵀA)\]² = \[κ(A)\]²
 >
 >
 >
-> Vậy ta đã thấy κ(AᵀA) = \[κ(A)\]^2 ⇨ giúp hiểu vì sao gs nói "the condition number of JᵀJ is the square of the condition number of J"
+> Vậy ta đã thấy κ(AᵀA) = \[κ(A)\]² ⇨ giúp hiểu vì sao gs nói "the condition number of JᵀJ is the square of the condition number of J"
 >
 >
 >
@@ -430,7 +430,7 @@
 >
 >
 >
-> ⇔ minimize ||Qᵀ(Jx - y)||^2
+> ⇔ minimize ||Qᵀ(Jx - y)||²
 >
 >
 >
@@ -458,11 +458,11 @@
 >
 >
 >
-> Vậy ||Qᵀ(Jx - y)||^2 = ||\[R; 0\] ΠT x - \[Q1ᵀ; Q2ᵀ\]y||^2 (đây là dấu bằng thứ 2)
+> Vậy ||Qᵀ(Jx - y)||² = ||\[R; 0\] ΠT x - \[Q1ᵀ; Q2ᵀ\]y||² (đây là dấu bằng thứ 2)
 >
 >
 >
-> Tiếp, với argmented vector \[a;b\], ví dụ vector \[x1, x2, x3, x4\]T tách thành hai khúcp \[\[x1, x2\]; \[x3, x4\]\], thì norm của nó, tức ||\[x1, x2, x3, x4\]||^2 = x1^2 + x2^2 + x3^2 + x4^2 dĩ nhiên cũng là ||\[x1,x2\]||^2 + ||\[x3,x4\]||^2.
+> Tiếp, với argmented vector \[a;b\], ví dụ vector \[x1, x2, x3, x4\]T tách thành hai khúcp \[\[x1, x2\]; \[x3, x4\]\], thì norm của nó, tức ||\[x1, x2, x3, x4\]||² = x1² + x2² + x3² + x4² dĩ nhiên cũng là ||\[x1,x2\]||² + ||\[x3,x4\]||².
 >
 >
 >
@@ -470,15 +470,15 @@
 >
 >
 >
-> ⇨ ||\[R; 0\] ΠT x - \[Q1ᵀ; Q2ᵀ\]y||^2 
+> ⇨ ||\[R; 0\] ΠT x - \[Q1ᵀ; Q2ᵀ\]y||² 
 >
 >
 >
-> = ||\[RΠT x - Q1ᵀy\]||^2 + ||\[0 - Q2ᵀy\]||^2
+> = ||\[RΠT x - Q1ᵀy\]||² + ||\[0 - Q2ᵀy\]||²
 >
 >
 >
-> = ||\[RΠT x - Q1ᵀy\]||^2 + ||\[Q2ᵀy\]||^2 → 10.18
+> = ||\[RΠT x - Q1ᵀy\]||² + ||\[Q2ᵀy\]||² → 10.18
 >
 >
 >
@@ -486,7 +486,7 @@
 >
 >
 >
-> minimize  ||\[RΠT x - Q1ᵀy\]||^2
+> minimize  ||\[RΠT x - Q1ᵀy\]||²
 >
 >
 >
@@ -498,7 +498,7 @@
 >
 >
 >
-> Bước 1: giải R z = Q1ᵀy, ra z, đây là hệ có matrix hệ số tam giác → chỉ là back-subsititution, tốn O(n^2)
+> Bước 1: giải R z = Q1ᵀy, ra z, đây là hệ có matrix hệ số tam giác → chỉ là back-subsititution, tốn O(n²)
 >
 >
 >
@@ -640,11 +640,11 @@
 >
 >
 >
-> = V S^2 Vᵀ
+> = V S² Vᵀ
 >
 >
 >
-> Và như đã biết cái vụ này từ MIT 1806, đó là, kết quả này cho thấy với JᵀJ, thì SVD cũng là eigendecomposition, nên eigenvector của JᵀJ chính là các cột của V, và eigenvalue của JᵀJ chính là các σi^2 (bình phương singular value của J)
+> Và như đã biết cái vụ này từ MIT 1806, đó là, kết quả này cho thấy với JᵀJ, thì SVD cũng là eigendecomposition, nên eigenvector của JᵀJ chính là các cột của V, và eigenvalue của JᵀJ chính là các σi² (bình phương singular value của J)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -664,15 +664,15 @@
 >
 >
 >
-> Xuất phát từ việc ta muốn giải bài toán minimize hàm error với error = Σi ri(x)^2. Gọi r(x) là hàm nhận vào x trả ra vector chứa các residual (hay còn gọi là error) ri(x), mà cụ thể cho dễ hiểu thì ví dụ ri(x) = Φ(x, ti) - yi với ti có thể là một vector hoặc scalar input, x là tham số cần điều chỉnh, yi là observed value (target variable). Khi đó, objective có thể thể hiện = ||r(x)||^2.
+> Xuất phát từ việc ta muốn giải bài toán minimize hàm error với error = Σi ri(x)². Gọi r(x) là hàm nhận vào x trả ra vector chứa các residual (hay còn gọi là error) ri(x), mà cụ thể cho dễ hiểu thì ví dụ ri(x) = Φ(x, ti) - yi với ti có thể là một vector hoặc scalar input, x là tham số cần điều chỉnh, yi là observed value (target variable). Khi đó, objective có thể thể hiện = ||r(x)||².
 >
 >
 >
-> Tiếp, khi hàm Φ(x,t) là hàm tuyến tính theo x, thì r(x) khi đó có thể thể hiện bởi Jx - y, dẫn đến bài toán có objective là ||Jx - y||^2
+> Tiếp, khi hàm Φ(x,t) là hàm tuyến tính theo x, thì r(x) khi đó có thể thể hiện bởi Jx - y, dẫn đến bài toán có objective là ||Jx - y||²
 >
 >
 >
-> Nhớ lại cái phương pháp dựa trên QR factor ta đã nói rằng vì Q là orthogonal matrix nên nó ko làm thay đổi norm, nên có thể chuyển bài toán về tương đương minimize ||Q(Jx - y)||^2. Thì ở đây cũng vậy, ta dùng Uᵀ, cũng là orthogonal matrix (do U là orthogonal matrix: Chứng minh rất nhanh: U orthogonal ⇨ Uᵀ = U⁻¹ ⇨ (Uᵀ)ᵀ(Uᵀ) = UUᵀ = UU⁻¹ = I ⇨ Uᵀ cũng là orthogonal matrix)
+> Nhớ lại cái phương pháp dựa trên QR factor ta đã nói rằng vì Q là orthogonal matrix nên nó ko làm thay đổi norm, nên có thể chuyển bài toán về tương đương minimize ||Q(Jx - y)||². Thì ở đây cũng vậy, ta dùng Uᵀ, cũng là orthogonal matrix (do U là orthogonal matrix: Chứng minh rất nhanh: U orthogonal ⇨ Uᵀ = U⁻¹ ⇨ (Uᵀ)ᵀ(Uᵀ) = UUᵀ = UU⁻¹ = I ⇨ Uᵀ cũng là orthogonal matrix)
 >
 >
 >
@@ -680,7 +680,7 @@
 >
 >
 >
-> ||Uᵀ(Jx - y)||^2 = ||UᵀJx - Uᵀy||^2
+> ||Uᵀ(Jx - y)||² = ||UᵀJx - Uᵀy||²
 >
 >
 >
@@ -688,11 +688,11 @@
 >
 >
 >
-> ..= ||Uᵀ U \[S; 0\] Vᵀ x - Uᵀy||^2
+> ..= ||Uᵀ U \[S; 0\] Vᵀ x - Uᵀy||²
 >
 >
 >
-> = || \[S; 0\] Vᵀ x - Uᵀy||^2
+> = || \[S; 0\] Vᵀ x - Uᵀy||²
 >
 >
 >
@@ -700,23 +700,23 @@
 >
 >
 >
-> ...= || \[S; 0\] Vᵀ x - \[U1T; U2T\]y||^2 
+> ...= || \[S; 0\] Vᵀ x - \[U1T; U2T\]y||² 
 >
 >
 >
-> Dùng tính chất  ||\[a;b\]||^2 = ||a||^2 + ||b||^2 (\[a,b\] là vector tạo bởi việc ghép vector a và b chồng lên nhau)
+> Dùng tính chất  ||\[a;b\]||² = ||a||² + ||b||² (\[a,b\] là vector tạo bởi việc ghép vector a và b chồng lên nhau)
 >
 >
 >
-> .. = ||S(Vᵀx) - U1Ty||^2 + ||\[0\]Vᵀx - \[U2T\]y||^2 
+> .. = ||S(Vᵀx) - U1Ty||² + ||\[0\]Vᵀx - \[U2T\]y||² 
 >
 >
 >
-> = ||S(Vᵀx) - U1Ty||^2 + ||\[U2T\]y||^2  → 10.20
+> = ||S(Vᵀx) - U1Ty||² + ||\[U2T\]y||²  → 10.20
 >
 >
 >
-> Đến đây, tiếp tục chuyển thành bài toán tương đương với objective khác bằng cách bỏ đi hằng số: minimize ||S(Vᵀx) - U1Ty||^2, và cái này là hàm không âm, nên minimize khi nó bằng 0: S(Vᵀx) - U1Ty = 0
+> Đến đây, tiếp tục chuyển thành bài toán tương đương với objective khác bằng cách bỏ đi hằng số: minimize ||S(Vᵀx) - U1Ty||², và cái này là hàm không âm, nên minimize khi nó bằng 0: S(Vᵀx) - U1Ty = 0
 >
 >
 >
@@ -724,7 +724,7 @@
 >
 >
 >
-> ⇔ x = \[S(Vᵀ)\]inv U1Ty
+> ⇔ x = \[S(Vᵀ)\]⁻¹ U1Ty
 >
 >
 >
@@ -802,7 +802,7 @@
 >
 >
 >
-> ||Ax||^2 = (Ax)ᵀ(Ax) = xᵀAᵀAx
+> ||Ax||² = (Ax)ᵀ(Ax) = xᵀAᵀAx
 >
 >
 >
@@ -818,27 +818,27 @@
 >
 >
 >
-> = Σi λi yi^2
+> = Σi λi yi²
 >
 >
 >
-> Σi λmin yi^2 ≤ Σi λi yi^2 ≤ Σi λmax yi^2
+> Σi λmin yi² ≤ Σi λi yi² ≤ Σi λmax yi²
 >
 >
 >
-> ⇔ λmin Σi yi^2 ≤ Σi λi yi^2 ≤ λmax Σi yi^2
+> ⇔ λmin Σi yi² ≤ Σi λi yi² ≤ λmax Σi yi²
 >
 >
 >
-> ⇔ λmin ≤ \[Σi λi yi^2\] / Σi yi^2≤ λmax
+> ⇔ λmin ≤ \[Σi λi yi²\] / Σi yi²≤ λmax
 >
 >
 >
-> ⇔ λmin ≤ ||Ax||^2 / ||y||^2≤ λmax (thay lại Σi λi yi^2 = ||Ax||
+> ⇔ λmin ≤ ||Ax||² / ||y||²≤ λmax (thay lại Σi λi yi² = ||Ax||
 >
 >
 >
-> ⇔ λmin ≤ ||Ax||^2 / ||x||^2≤ λmax (||y|| = ||x||)
+> ⇔ λmin ≤ ||Ax||² / ||x||²≤ λmax (||y|| = ||x||)
 >
 >
 >
@@ -936,7 +936,7 @@
 >
 > bài toán trở thành giải hệ RΠΠT x = Q1ᵀy\
 > \
-> ii) giải R z = Q1ᵀy, ra z, đây là hệ có matrix hệ số tam giác →→ chỉ là back-subsititution, tốn O(n^2)\
+> ii) giải R z = Q1ᵀy, ra z, đây là hệ có matrix hệ số tam giác →→ chỉ là back-subsititution, tốn O(n²)\
 > \
 > iii) Giải ΠΠT x = z, và hệ này matrix hệ số chỉ là permutation matrix, ⇨ x = ΠΠ z, chỉ là việc sắp xếp (hoán vị) lại các phần tử của z (ko tốn gì) (đây là ý mà gs Nocedal nói "perform triangular substitution to solve Rz = Q1ᵀy, then PERMUᵀE the component of z to obtain x\*)
 >
@@ -963,11 +963,11 @@
 >
 >
 >
-> Tất nhiên lục này x\* không thể bằng ∑i=1:n (uiTy/σi) vi. Vậy ta sẽ bắt đầu tìm x\* lại từ bài toán minimize ||S(Vᵀx) - U1Ty||^2 (mà nếu J full column rank thì x\* có công thức trên)
+> Tất nhiên lục này x\* không thể bằng ∑i=1:n (uiTy/σi) vi. Vậy ta sẽ bắt đầu tìm x\* lại từ bài toán minimize ||S(Vᵀx) - U1Ty||² (mà nếu J full column rank thì x\* có công thức trên)
 >
 >
 >
-> Xem xét ||S(Vᵀx) - U1Ty||^2
+> Xem xét ||S(Vᵀx) - U1Ty||²
 >
 >
 >
@@ -987,7 +987,7 @@
 >
 >
 >
-> ⇨ ||S(Vᵀx) - U1Ty||^2 = ∑i (σiviTx - uiTy)^2
+> ⇨ ||S(Vᵀx) - U1Ty||² = ∑i (σiviTx - uiTy)²
 >
 >
 >
@@ -995,15 +995,15 @@
 >
 >
 >
-> ..= ∑i,σi≠0 (σiviTx - uiTy)^2 + ∑i,σi=0 (σiviTx - uiTy)^2 
+> ..= ∑i,σi≠0 (σiviTx - uiTy)² + ∑i,σi=0 (σiviTx - uiTy)² 
 >
 >
 >
-> = ∑i,σi≠0 (σiviTx - uiTy)^2 + ∑i,σi=0 (- uiTy)^2
+> = ∑i,σi≠0 (σiviTx - uiTy)² + ∑i,σi=0 (- uiTy)²
 >
 >
 >
-> = ∑i,σi≠0 (σiviTx - uiTy)^2 + ∑i,σi=0 (uiTy)^2
+> = ∑i,σi≠0 (σiviTx - uiTy)² + ∑i,σi=0 (uiTy)²
 >
 >
 >
