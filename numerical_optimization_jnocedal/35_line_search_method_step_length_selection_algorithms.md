@@ -166,17 +166,17 @@
 >
 > Rồi, vậy thì tiếp theo ý tưởng sẽ là: Dùng các thông tin đã biết: Φ(0), tức giá trị f tại xk, Φ(α0) (vì đã tính thì mới check được ở bước trên) và Φ'(0). Để làm như sau, dựa trên ý tưởng là vầy: Ta dựng một parabol, một hàm bậc hai sao cho nó đi qua A: tại α = 0, mang giá trị Φ(0), và B: là tại α0, mang giá trị Φ(α0) và độ dốc tại A tức α = 0 là Φ'(0), thì ta sẽ tìm xem cái minimum của nó ở đâu, và lấy α đó.
 >
-> Thế thì phương trình hàm quadratic có dạng khái quát là Φq(α) = aα^2 + bα + c
+> Thế thì phương trình hàm quadratic có dạng khái quát là Φq(α) = aα² + bα + c
 >
 > Để nó thỏa Φq(0) = Φ(0). Φq(α) = Φ(α0), và Φ'q(α)|α=0 = Φ'(0) ta có:
 >
-> Φq(0) =  a × 0^2 + b × 0 + c = c = Φ(0) ⇔ c = Φ(0)
+> Φq(0) =  a × 0² + b × 0 + c = c = Φ(0) ⇔ c = Φ(0)
 >
-> Φq(α) = Φ(α0) ⇔ a × α^2 + b × α + Φ(0) = Φ(α0)
+> Φq(α) = Φ(α0) ⇔ a × α² + b × α + Φ(0) = Φ(α0)
 >
 > Φ'q(α)|α=0 = Φ'(0) ⇔ 2aα + b = Φ'(0)
 >
-> Nói chung là giải ra ta sẽ có a = [Φ(α0) - Φ(0) - α0 Φ'(0)] / (α0)^2
+> Nói chung là giải ra ta sẽ có a = [Φ(α0) - Φ(0) - α0 Φ'(0)] / (α0)²
 >
 > b = Φ'(0), c = c = Φ(0)
 >
@@ -357,25 +357,25 @@
 >
 > Một chiến thuật khác là là dùng interpolation to quadratic: Với việc đã biết f(xk-1), f(xk) và ∇f(xk-1)ᵀ(pk-1) (tức là directional derivative wrt pk-1 tại xk-1). Nếu như gọi xk-1 là B, xk là A, pk-1 là xk - xk-1 là vector từ A → B, thì ∇f(xk-1)ᵀ(pk-1) chính là độ dốc theo hướng A→B của hàm f. Hình dung ta có hàm f bị giới hạn theo hướng AB sẽ như hàm đơn biến, nó đi điểm A, B và biết độ dốc tại A. Ta sẽ xấp xỉ / coi nó là hàm bậc hai. Và đi tìm điểm cực tiểu. (Xem hình minh họa) và đó chính là αk_0, giá trị khởi điểm cho αk
 >
-> Cách dựng hàm bậc hai thì cũng như đã biết ở phần trước, là ta đặt hàm g(α) = aα^2 + bα + c
+> Cách dựng hàm bậc hai thì cũng như đã biết ở phần trước, là ta đặt hàm g(α) = aα² + bα + c
 >
 > Cho nó đi qua xk-1, xk:
 >
 > Đi qua xk-1: tức là ứng với α = 0 ta có g(0) = f(xk-1) ⇔ c = f(xk-1)
 >
-> Đi qua xk: tức là ứng với α = αk-1, pk-1, g(αk-1) = f(xk) ⇔ aαk-1^2 + bαk-1 + c = f(xk)
+> Đi qua xk: tức là ứng với α = αk-1, pk-1, g(αk-1) = f(xk) ⇔ aαk-1² + bαk-1 + c = f(xk)
 >
 > Độ dốc tại xk-1: g'(0) = ∇f(xk-1)ᵀpk-1 = 2a × 0 + b = b ⇨ b = ∇f(xk-1)ᵀpk-1. viết là Φ'(0) cho gọn
 >
 > Thay 1, 3 vào 2:
 >
-> aαk-1^2 + bαk-1 + c = f(xk)
+> aαk-1² + bαk-1 + c = f(xk)
 >
-> ⇔ aαk-1^2 + Φ'(0)αk-1 + f(xk-1) = f(xk)
+> ⇔ aαk-1² + Φ'(0)αk-1 + f(xk-1) = f(xk)
 >
-> ⇔ aαk-1^2 = f(xk) - f(xk-1) - Φ'(0)αk-1
+> ⇔ aαk-1² = f(xk) - f(xk-1) - Φ'(0)αk-1
 >
-> ⇔ a = [f(xk) - f(xk-1) - Φ'(0)αk-1] / αk-1^2
+> ⇔ a = [f(xk) - f(xk-1) - Φ'(0)αk-1] / αk-1²
 >
 > minimizer của hàm g là solution của g'(α) = 0: 2aα + b = 0 ⇔ α = -b/2a
 >
@@ -383,9 +383,9 @@
 >
 > ⇔ α = -b/2a 
 >
-> = - Φ'(0) / 2 {[f(xk) - f(xk-1) - Φ'(0)αk-1] / αk-1^2}
+> = - Φ'(0) / 2 {[f(xk) - f(xk-1) - Φ'(0)αk-1] / αk-1²}
 >
-> = [- Φ'(0) αk-1^2] / 2 [f(xk) - f(xk-1) - Φ'(0)αk-1]
+> = [- Φ'(0) αk-1²] / 2 [f(xk) - f(xk-1) - Φ'(0)αk-1]
 >
 > Đây là công thức đúng, nhưng trong sách đang nói về một công thức khác một chú:
 >
