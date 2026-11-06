@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1793928502019,
+  "publishedAt": 1793937499142,
   "sections": [
     {
       "title": "📋 Overview",
@@ -533,8 +533,8 @@
     {
       "title": "5.4.2 Outer product approximation",
       "path": "pattern_recognition_machine_learning_cbishop/542_outer_product_approximation.md",
-      "noteCount": 3,
-      "imageCount": 3
+      "noteCount": 4,
+      "imageCount": 4
     },
     {
       "title": "5.4.3 Inverse Hessian",
@@ -561,6 +561,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 512,
-  "totalImages": 843
+  "totalNotes": 513,
+  "totalImages": 844
 }
