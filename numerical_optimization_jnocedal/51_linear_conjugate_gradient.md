@@ -1,6 +1,6 @@
 # 5.1 Linear Conjugate Gradient
 
-📊 **Progress:** `23` Notes | `52` Screenshots | `18` AI Reviews
+📊 **Progress:** `23` Notes | `52` Screenshots | `19` AI Reviews
 
 ---
 <a id="node-ezxbb8s"></a>
@@ -18,13 +18,25 @@
 <p align="center"><kbd><img src="assets/fhkgvnruvn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua một phương pháp mới: Conjugate gradient method. Đại khái là tác giả nói nó có hai ưu điểm: Thứ nhất đây là một trong nhưng phương pháp tốt nhất để giải một hệ phương trình tuyến tính quy mô lớn. Và thứ hai, nó cũng có thể được điều chỉnh để giải hệ phương trình phi tuyến.
+> Qua một phương pháp mới: Conjugate gradient method. Đại khái là tác giả nói nó có hai ưu điểm: Thứ nhất đây là một trong nhưng phương pháp tốt nhất để giải một hệ phương trình tuyến tính quy mô lớn. Và thứ hai, nó cũng có thể được điều chỉnh để giải bài toán tối ưu hóa phi tuyến.
 >
 > Nói sơ, linear conjugate gradient được phát triển năm 1950, là các tiếp cận iterative, để giải hệ tuyến tính với ma trận hệ số xác định dương. Nó phù hợp hơn phép khử Gausse, vốn đã học ở MIT 18.06 cho những bài toán quy mô lớn.
 >
-> Hiệu quả của phương pháp này chủ yếu là phụ thuộc vào phân bố của trị riêng của matrix hệ số. Bằng cách transforming, còn gọi là pre-conditioning, ta có thể cải thiện sự phân bố của các trị riêng, giúp bài toán hội tụ nhanh hơn. 
+> Hiệu quả của phương pháp này chủ yếu là phụ thuộc vào phân bố của trị riêng của matrix hệ số. Bằng cách transforming, còn gọi là pre-conditioning, ta có thể cải thiện sự phân bố của các trị riêng, giúp bài toán hội tụ nhanh hơn.
 >
 > Nói sơ về non-linear conjugate gradient method, thì key feature của nó là nó ko đòi hỏi phải lưu trữ matrix, và nó nhanh hơn là phương pháp steepest descent.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác, đầy đủ và mạch lạc toàn bộ các điểm cốt lõi trong phần mở đầu của chương.
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác hai vai trò cốt lõi của Conjugate Gradient: giải hệ phương trình tuyến tính quy mô lớn và mở rộng sang bài toán tối ưu phi tuyến.
+> - Hiểu đúng bản chất lặp (iterative), sự phụ thuộc vào phân bố trị riêng, vai trò của preconditioning, cũng như ưu điểm không tốn bộ nhớ lưu ma trận của non-linear CG so với steepest descent.
+>
+> **💡 Deeper notes**
+> - Trong công thức chuẩn của Linear Conjugate Gradient, ma trận hệ số thông thường cần thỏa mãn cả hai tính chất là đối xứng và xác định dương (Symmetric Positive Definite - SPD).
 
 <br>
 
@@ -37,16 +49,98 @@
 > [!NOTE]
 > Đại khái là, tác giả nói một điều mà mình đã học / tự nhận ra hồi còn học EE364A: Việc giải hệ f(x) = 0 có thể coi như là đang giải điều kiện cần bậc một của bài toán minimize hàm số F(x) là nguyên hàm của f: ∇F(x) = f(x) = 0. Và đây là nguyên lí của root finding Newton method: Bằng cách xấp xỉ hàm F bằng hàm bậc 2 thì ta cũng xấp xỉ hàm f là hàm bậc 1.
 >
+>
+>
 > Và giải bài toán minimize F với Newton method cũng chính là gỉai hệ f(x)=0 bằng root finding Newton method.
 >
-> Thế thì ở đây f(x) = Ax - b, thì nguyên hàm của nó, chính là F(x) = (1/2)xᵀAx - bᵀx, ở đây ta sẽ gọi là φ(x) ⇨ ∇φ(x) = Ax - b 
+>
+>
+> Thế thì ở đây f(x) = Ax - b, thì nguyên hàm của nó, chính là F(x) = (1/2)xᵀAx - bᵀx, ở đây ta sẽ gọi là φ(x) ⇨ ∇φ(x) = Ax - b
+>
+>
 >
 > Và như đã nói, cách nhìn này cho ta thấy việc giải hệ Ax = b chính là giải bài toán tối ưu hàm bậc hai F(x), là một convex optimzation problem.
+>
+>
+>
+> f(x) = (1/2)xᵀPx + qᵀx + r
+>
+>
+>
+> ∇f(x) = (1/2)(P + Pᵀ)x + q
+>
+>
+>
+> MIT 18s096 Steve, Allan
+>
+>
+>
+> df = f(x+dx) - f(x)
+>
+>
+>
+> = (1/2)(x+dx)ᵀP(x+dx) + qᵀ(x+dx) + r - (1/2)xᵀPx - qᵀx - r
+>
+>
+>
+> = (1/2)(xᵀPx+dxᵀPx+xᵀPdx+dxᵀPdx) + qᵀdx - (1/2)xᵀPx 
+>
+>
+>
+> dxᵀPx = (dxᵀPx)ᵀ = xᵀPᵀdx ((AB)ᵀ = BᵀAᵀ)
+>
+>
+>
+> = (1/2)(xᵀPx+xᵀPᵀdx+xᵀPdx+dxᵀPdx) + qᵀdx - (1/2)xᵀPx 
+>
+>
+>
+> = (1/2)xᵀ(Pᵀ + P)dx + qᵀdx 
+>
+>
+>
+> = \[(1/2)xᵀ(Pᵀ + P) + qᵀ\]dx 
+>
+>
+>
+> = \[(1/2)(Pᵀ + P)ᵀx + q\]ᵀdx 
+>
+>
+>
+> đã có: linear operator act on dx ⇒ ∇f(x) = (1/2)(Pᵀ + P)ᵀx + q
+>
+>
+>
+>
+>
+> ∇f(x) = Px + q (nếu P đối xứng)
+>
+>
+>
+> ∇²f(x) = (1/2)(P + Pᵀ) 
+>
+>
+>
+> ∇²f(x) = P (nếu P đối xứng)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Your analysis accurately captures the equivalence between solving Ax=b and minimizing φ(x), and correctly derives the gradient. Connecting this specific problem to the broader principle of root-finding and Newton's method demonstrates a profound understanding of the underlying mathematical concepts.
+> Ghi chú nắm rất chắc bản chất liên hệ giữa bài toán tìm nghiệm hệ phương trình và bài toán tối ưu lồi, cũng như mối liên hệ giữa phương pháp Newton giải nghiệm và Newton tối ưu hóa.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Việc giải hệ f(x) = 0 có thể coi như là đang giải điều kiện cần bậc một của bài toán minimize hàm số F(x) là nguyên hàm của f: ∇F(x) = f(x) = 0."*
+>
+> Trong không gian nhiều chiều, không phải hệ $f(x) = 0$ nào cũng tồn tại 'nguyên hàm' (hàm thế vô hướng $F$ sao cho $\nabla F = f$). Điều này chỉ xảy ra khi ma trận Jacobian của $f$ đối xứng (với hệ tuyến tính thì tương ứng $A = A^T$). Ngoài ra, để nghiệm của $\nabla F(x) = 0$ thực sự là điểm cực tiểu (minimize), ma trận $A$ bắt buộc phải là ma trận xác định dương ($A \succ 0$).
+>
+>
+> **✓ Strengths**
+> - Liên kết xuất sắc giữa bài toán giải hệ đại số tuyến tính $Ax=b$ và bài toán tối ưu hàm toàn phương lồi $\phi(x)$.
+> - Hiểu đúng bản chất của phương pháp Newton: xấp xỉ tuyến tính hàm $f$ trong root-finding tương đương với xấp xỉ bậc hai của hàm mục tiêu trong tối ưu hóa.
+>
+> **💡 Deeper notes**
+> - Sự tương đương giữa việc giải hệ phương trình và tối ưu hàm $\phi(x)$ trong phương pháp Conjugate Gradient phụ thuộc mật thiết vào tính chất đối xứng và xác định dương (Symmetric Positive Definite - SPD) của ma trận $A$; nếu $A$ không đối xứng hoặc không xác định dương thì hàm toàn phương không bị chặn dưới hoặc không lồi.
 
 **🔗 See also:** [Tối ưu hóa tọa độ Hessian chéo](#node-b04ox8f) · [Vài suy nghĩ về bản chất của Conjugate Gradient method](#node-6z4orxx) · [Basic properties of conjugate gradient method](#node-p6jzgvh) · [Rate of Convergence](#node-3zg5huu) · [Local Convergence of Inexact Newtons](./71_inexact_newton_methods.md#node-ts4mvv1)
 
@@ -61,58 +155,97 @@
 <p align="center"><kbd><img src="assets/71g51xsarfp.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên, tác giả nói đại ý là một đặc điểm rất tốt của phương pháp này là khả năng của nó trong việc tạo ra một bộ vector có tính chất gọi là conjugacy: {p0,...pn-1} được gọi là conjugate wrt matrix xác định dương A nếu như piTApj = 0 ∀i≠j.
+> Đầu tiên, tác giả nói đại ý là một đặc điểm rất tốt của phương pháp này là khả năng của nó trong việc tạo ra một bộ vector có tính chất gọi là conjugacy: {p0,...pn-1} được gọi là conjugate wrt matrix đối xứng xác định dương A nếu như piTApj = 0 ∀i≠j.
 >
-> Tác giả nói cũng dễ cho thấy bộ vector conjugate cũng sẽ độc lập tuyến tính. Là sao?
 >
-> Giả sử có pk là vector phụ thuộc tuyến tính, ta có thể thể hiện nó bởi tổ hợp tuyến tính các vector còn lại: pk = Σi pi. Áp dụng tính chất conjugacy:
 >
-> pkTApj = 0 ∀k≠j
+> Tác giả nói cũng dễ cho thấy bộ vector conjugate cũng sẽ **độc lập tuyến tính**. Là sao?
 >
-> ⇔ pkT(Σi pi)pj = 0 ∀k≠j
 >
-> ⇔ (Σi pi)ᵀApj = 0 ∀k≠j
 >
-> ⇔ Σi piTApj = 0 ∀k≠j
+> Xét Σi ci pi = 0, nếu chứng minh ci = 0 với mọi i ta sẽ chứng minh {pi} độc lập tuyến tính.
 >
-> Trong cái tổng bên phải, nếu pi khác pj thì hạng tử bằng 0 rồi, nên chỉ còn pjApj.
 >
-> Tức là ta có pjTApj = 0, mà điều này sẽ mâu thuẫn với việc A xác định dương thì với mọi x khác 0, xᵀAx > 0. Do đó, đại ý là ta đã chứng minh được bộ vector conjugate cũng sẽ độc lập tuyến tính.
+>
+> Nhân hai vế cho pjᵀA:
+>
+>
+>
+> ⇒ pjᵀA Σi ci pi = 0
+>
+>
+>
+> ⇔ Σi ci pjᵀApi = 0
+>
+>
+>
+> ⇔ c1 pjᵀAp1 + ...+ cj pjᵀApj + ... = 0
+>
+>
+>
+> ⇔ cj pjᵀApj = 0
+>
+>
+>
+> ⇔ cj = 0 do pjᵀApj &gt; 0 với mọi pj khác 0
+>
+>
+>
+> Và điều này đúng với mọi j, tức là Σi ci pi = 0 suy ra ci = 0 ∀i giúp chứng minh được bộ vector conjugate cũng sẽ độc lập tuyến tính.
+>
+>
+>
+> ---
+>
+>
 >
 > Tiếp theo, tác giả nói về việc, ta có thể chứng minh được rằng, sử dụng bộ vector conjugate, ta có thể minimize hàm φ chỉ trong n bước. Và ta sẽ xét một phương pháp gọi là CONJUGAᵀE DIRECᵀION method (không phải conjugate gradient method nhé, sự liên hệ giữa chúng sẽ nói sau). Phương pháp này đại khái là như sau:
 >
+>
+>
 > Bắt đầu với x0, và một bộ vector conjugate {p0,...pn-1}, ta sẽ generate các điểm xk:
+>
+>
 >
 > xk+1 = xk + αkpk trong đó αk là solution của bài toán tối ưu hàm một biến:
 >
-> minimize g(α) = φ(xk + αpk) 
+> minimize g(α) = φ(xk + αpk)
 >
-> Để giải tìm αk, dùng điều kiện cần bậc 1 thôi: 
+> Để giải tìm αk, dùng điều kiện cần bậc 1 thôi:
 >
-> g'(α) = 0 ⇔ d/dα φ(xk + αpk) = 0 
+> g'(α) = 0 ⇔ d/dα φ(xk + αpk) = 0
 >
 > ⇔ d/d(xk + αpk) φ(xk + αpk) . d/dα (xk + αpk) = 0
 >
-> ⇔ ∇φ(xk + αpk) . pk = 0 
+> ⇔ ∇φ(xk + αpk) . pk = 0
 >
-> ⇔ ∇φ(xk + αpk)ᵀ pk = 0 
+> ⇔ ∇φ(xk + αpk)ᵀ pk = 0
 >
-> ⇔ [(Ax - b)|x=xk + αpk]Tpk = 0
+> ⇔ \[(Ax - b)|x=xk + αpk\]Tpk = 0
 >
-> ⇔ [A(xk + αpk) - b]Tpk = 0
+> ⇔ \[A(xk + αpk) - b\]Tpk = 0
 >
-> ⇔ [Axk + Aαpk - b]Tpk = 0
+> ⇔ \[Axk + Aαpk - b\]Tpk = 0
 >
-> ⇔ [rk + Aαpk]Tpk = 0 | Ở đây quên nói, ta sẽ gọi r(x) = Ax-b 
+> ⇔ \[rk + Aαpk\]Tpk = 0 | Ở đây quên nói, ta sẽ gọi r(x) = Ax-b
 >
 > ⇔ rkTpk + αpkTApk = 0
 >
 > ⇔ α = -rkTpk/pkTApk. Đây chính là 5.7
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Bạn đã nắm vững các định nghĩa cốt lõi và thực hiện xuất sắc việc chứng minh công thức alpha_k một cách chi tiết và chính xác. Để nâng cao hơn nữa, hãy xem xét lại cách thiết lập giả định và các bước chứng minh tính độc lập tuyến tính của các vector liên hợp để đảm bảo tính chặt chẽ.
+> Ghi chú rất xuất sắc, bạn đã tự chứng minh tính độc lập tuyến tính và tự đạo hàm để tìm ra công thức bước nhảy alpha một cách chính xác và rõ ràng.
+>
+> **✓ Strengths**
+> - Tự triển khai trọn vẹn chứng minh tính độc lập tuyến tính của hệ vector liên hợp (conjugate) dựa trên tính chất xác định dương của ma trận A.
+> - Tự thiết lập và giải bài toán tối ưu 1 chiều dọc theo hướng tìm kiếm để dẫn ra biểu thức nghiệm đóng cho alpha_k khớp với công thức (5.7) trong giáo trình.
+> - Nắm rõ sự phân biệt ban đầu giữa Conjugate Direction Method tổng quát và Conjugate Gradient Method cụ thể.
+>
+> **💡 Deeper notes**
+> - Trong hàm toàn phương phi(x) = 1/2 x^T A x - b^T x, thặng dư r_k thường được định nghĩa trong nhiều tài liệu là r_k = A x_k - b (hoặc gradient tại x_k); một số tài liệu khác định nghĩa r_k = b - A x_k, khi đó dấu trong công thức alpha sẽ tương ứng thay đổi (ở đây ghi chú chọn r(x) = Ax - b nên alpha = - (r_k^T p_k) / (p_k^T A p_k) là hoàn toàn chuẩn xác).
+> - Điều kiện cần bậc một g'(alpha) = 0 ở đây cũng đồng thời là điều kiện đủ để đạt cực tiểu toàn cục do A xác định dương nên hàm mục tiêu phi(x) lồi nghiêm ngặt dọc theo hướng p_k.
 
 **🔗 See also:** [Chuyển đổi A thành diagonal](#node-tikzhc4) · [Tối ưu hóa tọa độ Hessian chéo](#node-b04ox8f) · [Vài suy nghĩ về bản chất của Conjugate Gradient method](#node-6z4orxx) · [Basic properties of conjugate gradient method](#node-p6jzgvh)
 
