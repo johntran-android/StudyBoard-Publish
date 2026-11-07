@@ -1,5 +1,7 @@
 # Tóm tắt về repo này
 
+> 👤 **Về mình:** [johntran-android.github.io](https://johntran-android.github.io): mọi thứ mình đang học, các sản phẩm mình làm, và cách chúng ghép với nhau.
+
 Khoảng 3 năm trước mình bắt đầu học AI với các khóa của Andrew Ng trên Coursera như Machine Learning, Deep Learning và NLP Specialization. Sau đó, nhờ đọc blog của Huyền Chip, mình tiếp tục với CS231N và CS224N của Stanford và tự làm các assignment.
 
 Trong quá trình đó mình nhận ra một điều: **làm được assignment không đồng nghĩa với việc thật sự hiểu những gì đang diễn ra bên dưới**. Có những lúc gặp một câu hỏi lý thuyết mà ngay cả câu hỏi đang hỏi gì mình cũng chưa hiểu rõ.
