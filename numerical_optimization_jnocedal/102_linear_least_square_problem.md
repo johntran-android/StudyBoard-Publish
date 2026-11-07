@@ -100,7 +100,7 @@
 >
 >
 >
-> ⇨ ∇f(x) = \[(xᵀJᵀ - yT)J\]T = Jᵀ((xᵀJᵀ - yT)ᵀ = **Jᵀ(Jx - y)** → đây **chính là công thức trong sách.**
+> ⇨ ∇f(x) = \[(xᵀJᵀ - yT)J\]ᵀ = Jᵀ((xᵀJᵀ - yT)ᵀ = **Jᵀ(Jx - y)** → đây **chính là công thức trong sách.**
 >
 >
 >
@@ -338,7 +338,7 @@
 >
 >
 >
-> Nếu áp dụng công thức này, thì κ(AᵀA) = √λmax(\[AᵀA\]T\[AᵀA\])/√λmin(\[AᵀA\]T\[AᵀA\])
+> Nếu áp dụng công thức này, thì κ(AᵀA) = √λmax(\[AᵀA\]ᵀ\[AᵀA\])/√λmin(\[AᵀA\]ᵀ\[AᵀA\])
 >
 >
 >
@@ -434,7 +434,7 @@
 >
 >
 >
-> Thay Qᵀ = \[Q1, Q2\]T = \[Q1ᵀ; Q2ᵀ\] và Jx = J Π ΠT x vào (vì Π là permutation matrix, nên Π ΠT = Π Πinv = I)
+> Thay Qᵀ = \[Q1, Q2\]ᵀ = \[Q1ᵀ; Q2ᵀ\] và Jx = J Π ΠT x vào (vì Π là permutation matrix, nên Π ΠT = Π Πinv = I)
 >
 >
 >
@@ -462,7 +462,7 @@
 >
 >
 >
-> Tiếp, với argmented vector \[a;b\], ví dụ vector \[x1, x2, x3, x4\]T tách thành hai khúcp \[\[x1, x2\]; \[x3, x4\]\], thì norm của nó, tức ||\[x1, x2, x3, x4\]||² = x1² + x2² + x3² + x4² dĩ nhiên cũng là ||\[x1,x2\]||² + ||\[x3,x4\]||².
+> Tiếp, với argmented vector \[a;b\], ví dụ vector \[x1, x2, x3, x4\]ᵀ tách thành hai khúcp \[\[x1, x2\]; \[x3, x4\]\], thì norm của nó, tức ||\[x1, x2, x3, x4\]||² = x1² + x2² + x3² + x4² dĩ nhiên cũng là ||\[x1,x2\]||² + ||\[x3,x4\]||².
 >
 >
 >
@@ -628,15 +628,15 @@
 >
 >
 >
-> Một ý nữa đó là, JᵀJ = \[U \[S; 0\] Vᵀ\]T U \[S; 0\] Vᵀ
+> Một ý nữa đó là, JᵀJ = \[U \[S; 0\] Vᵀ\]ᵀ U \[S; 0\] Vᵀ
 >
 >
 >
-> = V \[S; 0\]T Uᵀ U \[S; 0\] Vᵀ
+> = V \[S; 0\]ᵀ Uᵀ U \[S; 0\] Vᵀ
 >
 >
 >
-> = V \[S; 0\]T \[S; 0\] Vᵀ
+> = V \[S; 0\]ᵀ \[S; 0\] Vᵀ
 >
 >
 >
