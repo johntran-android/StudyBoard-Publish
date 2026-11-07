@@ -42,29 +42,29 @@
 >
 > ⇨ Directional derivative của f wrt pk tại xk, cũng là Φ'(α) sẽ là:
 >
-> ∇f(xk + αpk)ᵀpk = [Q(xk + αpk) - b]Tpk
+> ∇f(xk + αpk)ᵀpk = [Q(xk + αpk) - b]ᵀpk
 >
 > Để tìm α khiến Φ(α) nhỏ nhất. Ta cho đạo hàm bằng 0:
 >
-> [Q(xk + αpk) - b]Tpk = 0
+> [Q(xk + αpk) - b]ᵀpk = 0
 >
 > ⇔ Q(xk + αpk)ᵀpk - bᵀpk = 0
 >
 > ⇔ Q(xk + αpk)ᵀpk = bᵀpk 
 >
-> ⇔ Q(xkTpk + αpkTpk) = bᵀpk 
+> ⇔ Q(xkTpk + αpkᵀpk) = bᵀpk 
 >
-> ⇔ QxkTpk + QαpkTpk = bᵀpk 
+> ⇔ QxkTpk + Qαpkᵀpk = bᵀpk 
 >
-> ⇔ QαpkTpk = - QxkTpk + bᵀpk 
+> ⇔ Qαpkᵀpk = - QxkTpk + bᵀpk 
 >
-> ⇔ αQpkTpk = - [QxkTpk - bᵀpk]
+> ⇔ αQpkᵀpk = - [QxkTpk - bᵀpk]
 >
-> ⇔ αQpkTpk = - [Qxk - b]Tpk
+> ⇔ αQpkᵀpk = - [Qxk - b]ᵀpk
 >
-> ⇔ αQpkTpk = - [∇fk]Tpk  (Thay ∇f(xk) = Qxk - b)
+> ⇔ αQpkᵀpk = - [∇fk]ᵀpk  (Thay ∇f(xk) = Qxk - b)
 >
-> ⇔ α = - [∇fk]Tpk / QpkTpk
+> ⇔ α = - [∇fk]ᵀpk / Qpkᵀpk
 >
 > Đây chính là 3.55 trong sách
 
