@@ -1,6 +1,6 @@
 # 5.1 Linear Conjugate Gradient
 
-📊 **Progress:** `23` Notes | `52` Screenshots | `19` AI Reviews
+📊 **Progress:** `23` Notes | `54` Screenshots | `19` AI Reviews
 
 ---
 <a id="node-ezxbb8s"></a>
@@ -154,6 +154,10 @@
 
 <p align="center"><kbd><img src="assets/71g51xsarfp.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/wppxe9zt8ro.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/muxlm6pua2.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > Đầu tiên, tác giả nói đại ý là một đặc điểm rất tốt của phương pháp này là khả năng của nó trong việc tạo ra một bộ vector có tính chất gọi là conjugacy: {p0,...pn-1} được gọi là conjugate wrt matrix đối xứng xác định dương A nếu như piTApj = 0 ∀i≠j.
 >
@@ -219,7 +223,61 @@
 >
 >
 >
+> Cách 1: viết φ(xk + αpk) ở dạng hàm bậc 2 của α
+>
+>
+>
 > = (1/2)(xk + αpk)ᵀA(xk + αpk) - bᵀ(xk + αpk)
+>
+>
+>
+> = (1/2)(xkᵀAxk + αpkᵀAxk + xkᵀA αpk+ αpkᵀAαpk) - bᵀ(xk + αpk)
+>
+>
+>
+> = (1/2)xkᵀAxk + αpkᵀAxk + (1/2)αpkᵀAαpk - bᵀxk - bᵀαpk
+>
+>
+>
+> = (1/2)xkᵀAxk + αpkᵀAxk + (1/2)αpkᵀAαpk - bᵀxk - bᵀαpk
+>
+>
+>
+> = (1/2)pkᵀApk α² + (pkᵀAxk - bᵀpk)α + (1/2)xkᵀAxk - bᵀxk
+>
+>
+>
+> g'(α) = pkᵀApk α + pkᵀAxk - bᵀpk
+>
+>
+>
+> g'(α) = 0
+>
+>
+>
+> ⇔ pkᵀApk α + pkᵀAxk - bᵀpk = 0
+>
+>
+>
+> ⇔ pkᵀApk α = - pkᵀAxk + pkᵀb
+>
+>
+>
+> ⇔ α = -pkᵀ(Axk - b)/pkᵀApk
+>
+>
+>
+> ⇔ αk = -pkᵀrk/pkᵀApk → 5.7
+>
+>
+>
+>
+>
+> ---
+>
+>
+>
+>  Cách 2 (cứ để g(α) = φ(xk + αpk)
 >
 >
 >
@@ -311,21 +369,30 @@
 >
 > ⇔ α = -rkTpk/pkᵀApk. Đây chính là 5.7
 
-📹 [Xem video trên YouTube](https://youtu.be/dWWDrFxObGg)
+📹 Video 1: [Tại sao các vectơ liên hợp luôn độc lập tuyến tính? (phần 1)](https://youtu.be/dWWDrFxObGg)
+
+📹 Video 2: [Làm sao tính bước nhảy alpha trong phương pháp hướng liên hợp? (phần 2)](https://www.youtube.com/watch?v=wgdR-pmFiBM)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú rất xuất sắc khi tự chứng minh đầy đủ tính độc lập tuyến tính của hệ vector liên hợp và dẫn xuất chi tiết công thức bước nhảy alpha k từ bài toán tối ưu một chiều.
+> Ghi chú rất xuất sắc, tự chứng minh trọn vẹn tính độc lập tuyến tính và tự suy diễn công thức bước nhảy alpha theo hai cách tiếp cận mạch lạc, chính xác.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"d/d(xk + αpk) φ(xk + αpk) . d/dα (xk + αpk) = 0"*
+>
+> Ký hiệu lấy vi phân/đạo hàm theo vector bằng phép chia vi phân một chiều mang tính trực giác không chính thức trong giải tích đa biến (tuy nhiên bạn đã nhận thức được và bổ sung ngay cách dùng vi phân toàn phần chuẩn xác ở phía dưới).
+>
 >
 > **✓ Strengths**
-> - Chứng minh chặt chẽ tính độc lập tuyến tính của hệ vector liên hợp bằng cách nhân vô hướng với pjᵀA và dùng tính chất xác định dương của ma trận A.
-> - Tự triển khai đạo hàm hàm một biến g(alpha) và giải ra chính xác công thức của alpha_k theo phần dư r_k tương ứng với công thức (5.7) trong giáo trình.
-> - Phân biệt rõ ràng giữa phương pháp tổng quát Conjugate Direction và thuật toán cụ thể Conjugate Gradient.
+> - Tự triển khai phép chứng minh tính độc lập tuyến tính của hệ vector liên hợp qua phép nhân vô hướng với pjᵀA rất ngắn gọn và chặt chẽ.
+> - Tự dẫn ra công thức tính bước nhảy αk theo 2 cách (khai triển hàm bậc hai thuần túy và dùng đạo hàm theo hướng/gradient) hoàn toàn chính xác.
+> - Nắm rõ bản chất hình học của bài toán tối ưu đường thẳng (line search) dọc theo vector liên hợp pk.
 >
 > **💡 Deeper notes**
-> - Trong Nocedal & Wright, hàm mục tiêu toàn phương ngầm định là phi(x) = (1/2)xᵀAx - bᵀx, từ đó gradient đúng bằng Ax - b và rk = Axk - b chính là phần dư (residual).
-> - Để chứng minh hoàn tất việc g'(alpha) = 0 là điểm cực tiểu toàn cục, cần thêm nhận xét g''(alpha) = pkᵀApk > 0 (do A xác định dương và pk != 0), đảm bảo phi(x) lồi ngặt dọc theo hướng pk.
+> - Trong công thức gradient phi(x) = Ax - b, cần lưu ý giả định A là ma trận đối xứng (A = Aᵀ) để đạo hàm bậc nhất của (1/2)xᵀAx chính xác là Ax.
+> - Ở bước biến đổi (rk + Aαpk)ᵀpk = rkᵀpk + αpkᵀApk, đã ngầm sử dụng tính chất đối xứng của ma trận A (pkᵀAᵀ = pkᵀA).
 
 **🔗 See also:** [Chuyển đổi A thành diagonal](#node-tikzhc4) · [Tối ưu hóa tọa độ Hessian chéo](#node-b04ox8f) · [Vài suy nghĩ về bản chất của Conjugate Gradient method](#node-6z4orxx) · [Basic properties of conjugate gradient method](#node-p6jzgvh)
 
