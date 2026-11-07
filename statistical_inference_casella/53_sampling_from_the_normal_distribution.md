@@ -2155,7 +2155,7 @@
 > **💡 Deeper notes**
 > - Khi thay thế hằng số σ bằng độ lệch chuẩn mẫu S, mẫu số trở thành một biến ngẫu nhiên. Vì vậy, phân phối của tỉ số này không còn là phân phối chuẩn nữa mà phụ thuộc vào phân phối của S và tính độc lập giữa X̄ và S² (đặc trưng của mẫu từ phân phối chuẩn), dẫn đến phân phối t với (n - 1) bậc tự do.
 
-**🔗 See also:** [Kiểm định LRT cho trung bình](./82_method_of_finding_tests.md#node-ouhenhy) · [Pooled Estimator and Student t Distribution](./111_2_introduction_one_way_anova.md#node-680r0w1)
+**🔗 See also:** [Kiểm định LRT cho trung bình](./82_method_of_finding_tests.md#node-ouhenhy) · [Pooled Estimator and Student t Distribution](./111_2_introduction_one_way_anova.md#node-680r0w1) · [Testing Linear Combinations of Means](./111_2_introduction_one_way_anova.md#node-gjyj05b)
 
 <br>
 
