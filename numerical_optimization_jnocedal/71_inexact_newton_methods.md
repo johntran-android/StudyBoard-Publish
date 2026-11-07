@@ -311,11 +311,11 @@
 >
 > Thể hiện nó theo output basis: 
 >
-> T(v1) = α11 u1 + α21u2 + ... = [α11, α21,..]T W (vector cột × matrix U = [u1, u2,...]
+> T(v1) = α11 u1 + α21u2 + ... = [α11, α21,..]ᵀ W (vector cột × matrix U = [u1, u2,...]
 >
-> T(v2) = α12 u1 + α22u2 + ...= [α12, α22,..]T W (vector cột × matrix U = [u1, u2,...]
+> T(v2) = α12 u1 + α22u2 + ...= [α12, α22,..]ᵀ W (vector cột × matrix U = [u1, u2,...]
 >
-> Đặt [α11, α21,..]T, [α12, α22,..]T...thành các cột của  A
+> Đặt [α11, α21,..]ᵀ, [α12, α22,..]ᵀ...thành các cột của  A
 >
 > → [T(v1), T(v2),...] = A W, thì A chính là matrix đại diện cho linear transformation T(v) từ input space basis v's → output space basis w's
 >
@@ -467,7 +467,7 @@
 >
 > Ta sẽ quay lại nói về cái check djTBkdj ≤ 0 sau (1)
 >
-> Set αj = rjTrj / djTBkdj: Đây là bước tính stepsize của CG. (tương đương bước tính αk = αk = rkTrk / pkTApk 5.24a trong CG gốc Algorithm 5.2)
+> Set αj = rjTrj / djTBkdj: Đây là bước tính stepsize của CG. (tương đương bước tính αk = αk = rkTrk / pkᵀApk 5.24a trong CG gốc Algorithm 5.2)
 >
 > zj+1 = zj + αjdj: Đây là bước cập nhật (tương đương xk+1 = xk + αkpk 5.24b trong 5.2)
 >
@@ -487,7 +487,7 @@
 >
 > Thì mình hiểu là vì cái ta tìm là pk, ứng với x* trong thuật toán CG giải Ax = b, và {zj} ứng với chuỗi {xi}, nên tại thời điểm dừng, ta có dj (ứng với pk trong CG gốc). 
 >
-> Nhưng trong CG gốc, để có xk+1 ta còn phải tính step size αk nữa (ví dụ cái bước set 5.24a αk = rkTrk / pkTApk) Mà trong CG gốc, vì A xác định dương, nên với hướng pk đã có, việc tìm step size chỉ là / hay công thức 5.24a có bản chất xuất phát từ việc giải bài toán minimize hàm bậc hai là nguyên hàm của Ax - b, restricted bởi hướng pk, và cái hàm đó chỉ là hàm bậc hai đơn biến. Tí nữa mình sẽ derive lại luôn cho nhớ. Nhưng khi Bk không xác định dương, để djBkdj âm và thuật toán rơi vài cái if check này, thì vì nếu giới hạn theo hướng dj này, thì hàm số có thể cắm đầu đi xuống rất xa, vượt qua giới hạn trust region. Thành ra ta sẽ phải tìm step size τ với bài toán minimize mk(pk) với pk = zj + τdj thỏa constraint ||pk|| = Δk là vậy.
+> Nhưng trong CG gốc, để có xk+1 ta còn phải tính step size αk nữa (ví dụ cái bước set 5.24a αk = rkTrk / pkᵀApk) Mà trong CG gốc, vì A xác định dương, nên với hướng pk đã có, việc tìm step size chỉ là / hay công thức 5.24a có bản chất xuất phát từ việc giải bài toán minimize hàm bậc hai là nguyên hàm của Ax - b, restricted bởi hướng pk, và cái hàm đó chỉ là hàm bậc hai đơn biến. Tí nữa mình sẽ derive lại luôn cho nhớ. Nhưng khi Bk không xác định dương, để djBkdj âm và thuật toán rơi vài cái if check này, thì vì nếu giới hạn theo hướng dj này, thì hàm số có thể cắm đầu đi xuống rất xa, vượt qua giới hạn trust region. Thành ra ta sẽ phải tìm step size τ với bài toán minimize mk(pk) với pk = zj + τdj thỏa constraint ||pk|| = Δk là vậy.
 >
 > Nói đi thì phải nói lại, việc tính αj thật ra cũng phải chịu ràng buộc là step size ko đưa ra vượt quá trust region, và quả thật nó thể hiện ở việc check norm của zj+1 có lớn hơn Δk hay không, nếu chưa lớn thì thôi, đồng nghĩa là step size αj không đưa ta đi quá giới hạn trust region theo hướng dj. Nhưng nếu quá, thì cũng phải tìm lại step size phù hợp, đó cũng chính là (2)
 >
@@ -561,7 +561,7 @@
 >
 > = [∇²fk α(-∇fk) + ∇fk] . (-∇fk)
 >
-> = [-α ∇²fk∇fk + ∇fk]T (-∇fk)
+> = [-α ∇²fk∇fk + ∇fk]ᵀ (-∇fk)
 >
 > = α ∇fkT ∇²fk ∇fk - ∇fkT∇fk
 >
@@ -1119,9 +1119,9 @@
 >
 > Thể hiện nó bởi các output space basis w's:
 >
-> T(v1) = a11 w1 + a21 w2 + ... = W [a11, a21,..]T = W a1 (đặt a1 = a11, a21,..]T
+> T(v1) = a11 w1 + a21 w2 + ... = W [a11, a21,..]ᵀ = W a1 (đặt a1 = a11, a21,..]ᵀ
 >
-> T(v2) = a12 w1 + a22 w2 + ... = W [a12, a22,..]T = W a2 (đặt a2 = a12, a22,..]T
+> T(v2) = a12 w1 + a22 w2 + ... = W [a12, a22,..]ᵀ = W a2 (đặt a2 = a12, a22,..]ᵀ
 >
 > ...
 >
@@ -1155,7 +1155,7 @@
 >
 > = (A's row 1)ᵀu w1 + (A's row 2)ᵀu w2 + ..
 >
-> = W [(A's row 1)ᵀu, (A's row 2)ᵀu]T
+> = W [(A's row 1)ᵀu, (A's row 2)ᵀu]ᵀ
 >
 > = W Au → Chứng minh xong, cho thấy đúng là A chính là matrix đại diện cho T(v)
 >
@@ -1266,13 +1266,13 @@
 >
 > i) α^k trở thành αk = (C⁻¹ᵀrk)ᵀC⁻¹ᵀrk / (Cpk)ᵀC⁻¹ᵀAC⁻¹Cpk
 >
-> = rkTC⁻¹C⁻¹ᵀrk / pkTCᵀC⁻¹ᵀAC⁻¹Cpk
+> = rkTC⁻¹C⁻¹ᵀrk / pkᵀCᵀC⁻¹ᵀAC⁻¹Cpk
 >
-> = rkTC⁻¹C⁻¹ᵀrk / pkT(C⁻¹C)ᵀAC⁻¹Cpk 
+> = rkTC⁻¹C⁻¹ᵀrk / pkᵀ(C⁻¹C)ᵀAC⁻¹Cpk 
 >
-> = rkTC⁻¹C⁻¹ᵀrk / pkTApk 
+> = rkTC⁻¹C⁻¹ᵀrk / pkᵀApk 
 >
-> = rkTM⁻¹rk / pkTApk (đặt M⁻¹=C⁻¹C⁻¹ᵀ). 
+> = rkTM⁻¹rk / pkᵀApk (đặt M⁻¹=C⁻¹C⁻¹ᵀ). 
 >
 > ii) x^k+1 = x^k + α^kp^k trở thành:
 >
@@ -1304,7 +1304,7 @@
 >
 > Tổng hợp lại các bước:
 >
-> i) αk = rkTM⁻¹rk / pkTApk (đặt M⁻¹=C⁻¹C⁻¹ᵀ). 
+> i) αk = rkTM⁻¹rk / pkᵀApk (đặt M⁻¹=C⁻¹C⁻¹ᵀ). 
 >
 > ii) xk+1 = xk + αkpk
 >
@@ -1325,7 +1325,7 @@
 > Giải M yk = rk để có yk (chính là M⁻¹ rk) Nhưng thực ra không cần, vì đây là yk có từ iteration
 > trước.
 >
-> i) αk = rkTyk / pkTApk (chính là rkTM⁻¹rk / pkTApk)
+> i) αk = rkTyk / pkᵀApk (chính là rkTM⁻¹rk / pkᵀApk)
 >
 > ii) xk+1 = xk + αkpk
 >
