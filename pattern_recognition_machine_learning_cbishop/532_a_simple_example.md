@@ -123,5 +123,7 @@
 > **💡 Deeper notes**
 > - Biểu thức 1 - tanh(a_j)^2 chính là 1 - z_j^2, việc lưu lại giá trị kích hoạt z_j từ lượt forward giúp việc tính toán gradient ở lượt backward nhanh hơn mà không cần tính lại hàm tanh.
 
+**🔗 See also:** [Exact Evaluation of the Hessian](./untitled.md#node-1jfymnq)
+
 <br>
 
