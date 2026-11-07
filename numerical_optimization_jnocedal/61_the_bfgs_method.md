@@ -1,6 +1,6 @@
 # 6.1 The BFGS Method
 
-📊 **Progress:** `20` Notes | `27` Screenshots | `17` AI Reviews
+📊 **Progress:** `20` Notes | `27` Screenshots | `18` AI Reviews
 
 ---
 <a id="node-zktnplz"></a>
@@ -24,11 +24,25 @@
 <p align="center"><kbd><img src="assets/j1tt2v6tsto.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Mở đầu bằng vài lời ca ngợi phương pháp này, gs cho rằng nó là một trong những thuật toán tối ưu phi tuyến tốt nhất, phát triển lần đầu tiên bởi ông W.C. Davidon.
+> Mở đầu bằng vài lời ca ngợi phương pháp này, gs cho rằng nó là một trong những thuật toán tối ưu phi tuyến sáng tạo nhất, phát triển lần đầu tiên bởi ông W.C. Davidon.
 >
 > Tiếp theo tác giả nói đại ý là quasi-Newton tốt hơn nhiều so với steepest descent method, đặc biệt là bài toán khó. Nó thậm chí một số trường hợp còn tốt hơn cả Newton method vì nó không đòi hỏi đạo hàm bậc hai. Và nó xuất hiện trong hầu hết các thư viện tối ưu hiện nay. Mình sẽ học về phương pháp này trong cả hai chương 6 cho bài toán nhỏ và vừa và chap 7 cho bài toán lớn.
 >
-> Đoạn cuối đại ý hiểu sơ ràng kĩ thuật automatic differentiation ra đời khiến cho ta có thể dùng Newton's method mà không cần tính đạo hàm cấp hai, nhưng nó vẫn không dùng được ở một số bài toán khác, do đó quasi-Newton vẫn là một phương pháp hay.
+> Đoạn cuối đại ý hiểu sơ ràng kĩ thuật automatic differentiation ra đời khiến cho ta có thể dùng Newton's method mà không cần tự tính tính đạo hàm cấp hai, nhưng nó vẫn không dùng được ở một số bài toán khác, do đó quasi-Newton vẫn là một phương pháp hay.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất tốt và nắm bắt chính xác toàn bộ các ý chính trong phần giới thiệu về phương pháp Quasi-Newton.
+>
+> **✓ Strengths**
+> - Tóm tắt chuẩn xác bối cảnh lịch sử ra đời của phương pháp Quasi-Newton từ W.C. Davidon.
+> - Nắm rõ ưu điểm cốt lõi của Quasi-Newton so với Steepest Descent và Newton's method.
+> - Hiểu đúng vai trò và giới hạn thực tế của vi phân tự động (automatic differentiation) đối với việc tính đạo hàm cấp hai.
+>
+> **💡 Deeper notes**
+> - Về mặt kỹ thuật, sách nhấn mạnh một điểm rất quan trọng: Quasi-Newton chỉ cần gradient nhưng đạt được tốc độ hội tụ siêu tuyến tính (superlinear convergence) nhờ việc đo lường sự thay đổi của gradient qua các bước lặp.
+> - Ở đoạn cuối về vi phân tự động, ngoài việc không áp dụng được cho mọi bài toán, lý do lớn khiến Quasi-Newton vẫn hấp dẫn là chi phí tính toán đạo hàm cấp hai (Hessian) qua vi phân tự động thường đắt đỏ hơn rất nhiều so với chỉ tính gradient.
 
 <br>
 
@@ -62,9 +76,24 @@
 > Nhưng một điểm quan trọng là, Bk⁻¹ sẽ là matrix được cập nhật lại sau mỗi iteration chứ không phải là được tính toán ở mỗi iteration
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Bài ghi rất chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về thuật toán BFGS, bao gồm cả mối liên hệ với các phương pháp tối ưu khác và lý do ra đời của quasi-Newton. Em đã nắm vững các khái niệm trọng tâm như mô hình bậc hai, vai trò của ma trận xấp xỉ Bk và cách nó được cập nhật sau mỗi vòng lặp.
+> Ghi chú rất tốt, thể hiện sự kết nối mạch lạc giữa các phương pháp đã học (Line Search, Trust Region, Steepest Descent, Newton) và động lực ra đời của Quasi-Newton. Có một lỗi viết nhầm nhỏ khi thiếu nghịch đảo ở công thức hướng Newton.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Nếu chọn Bk là Hessian Hk, thì nó sẽ cho p = -Hk gk thì ta có Newton line search"*
+>
+> Viết thiếu nghịch đảo của Hessian; hướng tìm kiếm Newton chuẩn phải là p = -H_k^{-1} g_k (như chính bạn đã viết đúng ở phần sau khi suy ra p_k = -B_k^{-1} g_k).
+>
+>
+> **✓ Strengths**
+> - Khái quát hóa rất tốt bức tranh toàn cảnh: mô hình xấp xỉ bậc hai m_k(p) là nền tảng chung cho cả Line Search, Trust Region và các biến thể chọn ma trận B_k.
+> - Nắm chuẩn động lực cốt lõi của Quasi-Newton: giảm chi phí tính ma trận Hessian và giải hệ phương trình mà vẫn giữ được tốc độ hội tụ nhanh.
+> - Nhận thức đúng việc B_k (hoặc trực tiếp B_k^{-1}) được cập nhật qua từng bước thay vì phải tính toán lại từ đầu.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý thêm điều kiện quan trọng của B_k là phải đối xứng và xác định dương (symmetric positive definite) để đảm bảo p_k luôn là một hướng giảm (descent direction).
 
 <br>
 
@@ -132,9 +161,29 @@
 > (tạm hiểu đại khái là nếu dùng thêm điều kiện / yêu cầu này này thì nó sẽ chỉ đúng nếu hàm f cũng là bậc hai y chang mk, nên trong phần lớn trường hợp, Bk+1 sẽ không thể tồn tại để thỏa mãn cả hai yêu cầu này, bởi bản chất hàm f là hàm phi tuyến nào đó không phải giống y như mk+1).
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
 >
-> Ghi chú của bạn rất chính xác và thể hiện sự hiểu biết vượt trội về tài liệu. Lý luận độc lập của bạn, đặc biệt là về lý do điều kiện gradient là hợp lý và tại sao không áp đặt điều kiện khớp giá trị, đã bổ sung thêm chiều sâu và cái nhìn phân tích đáng kể.
+> Ghi chú thể hiện sự tiếp thu rất tốt về bản chất và động lực hình thành phương trình secant trong Quasi-Newton. Bạn đã tự diễn giải và biến đổi lại các bước toán học rất mạch lạc, chỉ cần lưu ý thêm về giả định đối xứng của ma trận B.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Ở BẤT CỨ PHƯƠNG PHÁP NÀO giải bài toán tối ưu theo iterative approach đó là: MÔ PHỎNG HÀM MỤC TIÊU BẰNG MỘT HÀM CẤP 2"*
+>
+> Khẳng định này hơi tuyệt đối hóa; không phải mọi thuật toán lặp đều dùng mô hình bậc hai (chẳng hạn subgradient, các thuật toán không dùng đạo hàm như Nelder-Mead simplex, v.v.), dù phần lớn các thuật toán gradient/Newton đều có thể quy chiếu hoặc liên hệ về mô hình bậc hai cục bộ.
+>
+> **2.** *"∇mk+1(-αkpk) = Bk+1Tp + gk+1 | p = -αkpk = -αk Bk+1Tpk + gk+1"*
+>
+> Đạo hàm của dạng toàn phương (1/2) p^T B p theo p là B p chỉ khi B là ma trận đối xứng (hoặc chính xác hơn là (1/2)(B + B^T)p). Trong Quasi-Newton, ta luôn quy ước B đối xứng nên B^T = B; việc viết lẫn lộn B^T rồi biến thành B mà không nêu giả định đối xứng là một bước nhảy tắt về mặt đại số tuyến tính.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ và tự giải thích mạch lạc vì sao lại cần cập nhật B_k liên tục thay vì giữ cố định.
+> - Nắm chuẩn xác logic ép gradient của mô hình bậc hai khớp với gradient của hàm mục tiêu tại hai điểm xk và xk+1 để suy ra phương trình secant.
+> - Có tư duy phản biện tốt khi tự đặt câu hỏi về việc tại sao không ép luôn mk+1(xk) = f(xk).
+>
+> **💡 Deeper notes**
+> - Phương trình secant B_{k+1} s_k = y_k thực chất là một hệ phương trình dưới định (underdetermined): s_k và y_k là các vector n chiều nên chỉ cung cấp n phương trình, trong khi ma trận đối xứng B_{k+1} có n(n+1)/2 bậc tự do. Đây là lý do ở các phần tiếp theo cần thêm các điều kiện cập nhật hạng thấp (rank-1, rank-2 như DFP, BFGS) để xác định duy nhất B_{k+1}.
+> - Để B_{k+1} xác định dương (đảm bảo hướng tìm kiếm p_{k+1} là hướng giảm), điều kiện cần là s_k^T y_k > 0 (gọi là curvature condition), điều kiện này thường được đảm bảo thông qua các quy tắc tìm kiếm đoạn thẳng (Wolfe conditions).
 
 <br>
 
@@ -700,38 +749,28 @@
 > → B^k+1s^k-1 hơi khác s^k-1, mang ý nghĩa: B^k+1 MẤT ĐI CHÚT XÍU THÔNG TIN CURVAᵀURE từ xk-1 → xk. Và TƯƠNG TỰ, B^k CŨNG MẤT ĐI CHÚT XÍU THÔNG TIN TỪ xk-2 → xk-1,... THÀNH RA HIỆU ỨNG LÀ k CÀNG LỚN, B^k+1 sẽ mất đi thông tin curvature ở các hướng x1→x2, x2→x3,...ở xa. Và hóa ra điều này lại hay.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **90/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Bài giải thích rất sâu sắc, liên hệ hiệu quả phương trình secant với việc cập nhật và bảo toàn thông tin độ cong của hàm số trong thuật toán quasi-Newton. Tuy nhiên, một số chỗ về dạng chính xác của phương trình secant khi áp dụng cho ma trận B so với H cần được làm rõ hơn để tránh nhầm lẫn.
-> ### Phân tích chi tiết
+> Ghi chú giải thích xuất sắc và sâu sắc bản chất câu nói của tác giả về việc kết hợp thông tin mới và bảo tồn thông tin cũ (hereditary property). Có một vài điểm cần chỉnh lại về mặt kỹ thuật: tốc độ hội tụ của Quasi-Newton là siêu tuyến tính (superlinear) chứ không phải bậc hai (quadratic), và một lỗi gõ nhầm giữa $s_k$ và $y_k$.
 >
-> **1. Điểm mạnh:**
+> **🟡 Minor issues**
 >
-> *   **Hiểu rõ mục tiêu tổng thể:** Sinh viên nắm được mục đích của các phương pháp Quasi-Newton là xấp xỉ ma trận Hessian (hoặc nghịch đảo của nó) để tránh việc tính toán Hessian thật, từ đó tạo ra bước tìm kiếm tương tự như bước Newton để đạt được hội tụ nhanh.
-> *   **Đạo hàm phương trình cát tuyến:** Sinh viên đã thành công trong việc đạo hàm phương trình cát tuyến ($y_k \approx \nabla^2 f(x_{k+1}) s_k$), thể hiện sự hiểu biết về cách Hessian liên hệ với sự thay đổi của gradient và vị trí.
-> *   **Nắm bắt ý nghĩa cốt lõi của cập nhật Quasi-Newton:** Sinh viên đã kết luận chính xác rằng công thức cập nhật thực hiện hai việc chính: (i) cập nhật thêm thông tin độ cong mới nhất ('combines the most recently observed information') và (ii) bảo toàn thông tin độ cong đã có ('with the existing knowledge embedded in our current Hessian approximation'). Điều này trực tiếp giải thích đoạn văn được highlight.
-> *   **Hiểu lý do thực tiễn:** Sinh viên giải thích đúng lý do tại sao thuật toán cập nhật $H_{k+1}$ (nghịch đảo của Hessian xấp xỉ) thay vì $B_{k+1}$ là để tránh phải tính nghịch đảo trong mỗi bước, giúp việc tính toán bước tìm kiếm hiệu quả hơn.
+> **1.** *"nếu Bk+1 xấp xỉ tốt Hessian ∇²fk+1, thì pk+1 sẽ xấp xỉ tốt Newton's step, giúp converge nhanh, quadratically"*
 >
-> **2. Các điểm cần cải thiện:**
+> Phương pháp Quasi-Newton (như DFP, BFGS) khi tiệm cận nghiệm thường đạt tốc độ hội tụ siêu tuyến tính (superlinear convergence), chứ không đạt được bậc hai (quadratic convergence) như phương pháp Newton chuẩn (trừ phi ma trận xấp xỉ hội tụ hoàn toàn về đúng Hessian).
 >
-> *   **Lỗi cơ bản về phương trình cát tuyến:** Đây là lỗi nghiêm trọng nhất. Sinh viên đã lộn giữa vector $s_k$ và $y_k$ trong phương trình cát tuyến. Sinh viên nhiều lần viết "$B^{k+1}s^k = s^k$, cũng chính là $B^{k+1}s^k = y^k$". Điều này là sai lầm căn bản. Phương trình cát tuyến yêu cầu $B_{k+1}s_k = y_k$, trong đó $s_k = x_{k+1} - x_k$ và $y_k = \nabla f_{k+1} - \nabla f_k$. Hai vector này nói chung là khác nhau. Việc nhầm lẫn này làm sai lệch toàn bộ các suy luận toán học tiếp theo.
-> *   **Phép chiếu và công thức cập nhật không chính xác:** Việc sử dụng ma trận chiếu $P$ và $P^{\perp}$ để mô tả công thức cập nhật $B_{k+1}$ ("$B^* (tức B^{k+1}) = P^{\perp}B^kP^{\perp} + P$") là không đúng trong ngữ cảnh của công thức DFP hoặc các công thức Quasi-Newton tiêu chuẩn khác. Phân tích về cách bảo toàn thông tin cũ dựa trên các ma trận chiếu này cũng bị sai do tiền đề ban đầu về phương trình cát tuyến sai.
-> *   **Suy luận về tính bảo toàn thông tin cũ:** Mặc dù kết luận về việc bảo toàn thông tin độ cong cũ là đúng về mặt khái niệm đối với DFP (đặc biệt trong trường hợp hàm bậc hai và tìm kiếm đường thẳng chính xác), cách sinh viên chứng minh điều này là hoàn toàn sai, bởi nó dựa trên lỗi $s_k = y_k$.
-> *   **Lỗi ký hiệu nhỏ:** Trong phần đầu, có một chút nhầm lẫn khi viết "$\nabla m_{k+1} = \nabla f_k$". Thực ra phải là "$\nabla m_{k+1}(0) = \nabla f_{k+1}$" để tính gradient tại tâm xấp xỉ.
+> **2.** *"B^k+1 thỏa B^k+1s^k = s^k , cũng chính là Bk+1yk = sk"*
 >
-> **3. Gợi ý để nâng cao hiểu biết:**
+> Lỗi gõ nhầm (typo) đảo chiều: Phương trình secant đối với ma trận xấp xỉ Hessian $B_{k+1}$ là $B_{k+1}s_k = y_k$ (như chính bạn đã viết đúng ở đoạn trên và dòng dưới $B_{k+1}s_{k-1} = y_{k-1}$), còn $H_{k+1}y_k = s_k$ là phương trình secant cho ma trận xấp xỉ nghịch đảo Hessian $H_{k+1}$.
 >
-> *   **Nắm vững phương trình cát tuyến:** Điều quan trọng nhất là phải hiểu và áp dụng chính xác phương trình cát tuyến: $B_{k+1}s_k = y_k$ (hoặc $H_{k+1}y_k = s_k$). Hãy chắc chắn rằng bạn luôn phân biệt rõ ràng giữa $s_k$ và $y_k$.
-> *   **Nghiên cứu nguồn gốc công thức cập nhật:** Thay vì tự suy luận dựa trên tiền đề không chính xác, hãy tìm hiểu kỹ cách các công thức cập nhật DFP và BFGS được đạo hàm một cách chặt chẽ, thường là thông qua việc giải bài toán tối ưu hóa sự thay đổi nhỏ nhất của ma trận $B$ (hoặc $H$) dưới ràng buộc phương trình cát tuyến và tính đối xứng. Điều này sẽ giúp bạn hiểu rõ cấu trúc toán học của các thuật toán này.
-> *   **Hiểu sâu hơn về tính chất kế thừa (hereditary property):** Tìm hiểu về "n-step quadratic termination" (chấm dứt sau n bước đối với hàm bậc hai) và cách mà tính chất này liên hệ với việc bảo toàn thông tin độ cong cũ trong các phương pháp Quasi-Newton khi sử dụng tìm kiếm đường thẳng chính xác.
 >
-> Việc hiểu đúng nền tảng toán học là cực kỳ quan trọng để áp dụng và phát triển các thuật toán này một cách chính xác.
+> **✓ Strengths**
+> - Hiểu rất đúng và giải thích sáng tỏ trực giác toán học đằng sau phát biểu của tác giả: cập nhật vi sai mới nhất $(s_k, y_k)$ đồng thời bảo lưu thông tin độ cong ở các hướng trước đó.
+> - Liên hệ rất tốt tính chất kế thừa thông tin độ cong (hereditary property: $B_{k+1}s_j = y_j, orall j \le k$) trong hàm bậc hai và sự suy giảm dần tự nhiên (decay) của thông tin quá khứ trên hàm phi tuyến tổng quát.
 >
-> **⭐ Bonus points**
-> - Sinh viên đã đề cập đến điều kiện $s_k^T y_k > 0$ (curvature condition) là cần thiết để có vô số ma trận $B$ thỏa mãn phương trình cát tuyến.
-> - Sinh viên đã chỉ ra việc lựa chọn ma trận $B_{k+1}$ 'gần' với $B_k$ nhất theo một chuẩn có trọng số ($||.||_W$) để tối ưu hóa.
-> - Sinh viên đã đề cập rằng tính trực giao của các vector $s_k$ chỉ đúng trong điều kiện tìm kiếm đường thẳng chính xác và hàm mục tiêu là hàm bậc hai.
-> - Sinh viên đã có cái nhìn sâu sắc về việc các phương pháp Quasi-Newton 'quên' dần thông tin độ cong cũ có thể lại là một điều tốt trong các trường hợp phi bậc hai.
+> **💡 Deeper notes**
+> - Sự trực giao $\hat{s}_k \perp \hat{s}_{k-1}$ thực chất là do tính chất liên hợp (conjugacy: $s_k^T A s_{k-1} = 0$) của các hướng tìm kiếm khi tối ưu hàm bậc hai với exact line search, khi đưa vào không gian trọng số chuẩn hóa $W = A^{-1}$ thì tích vô hướng trở thành trực giao thông thường.
+> - Trong thực tế với hàm phi tuyến và inexact line search (Armijo/Wolfe), thông tin độ cong cũ mất dần không chỉ là bất lợi mà thực chất là ưu điểm, vì Hessian cục bộ của hàm phi tuyến liên tục thay đổi theo vị trí.
 
 <br>
 
