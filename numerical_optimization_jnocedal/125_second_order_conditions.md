@@ -468,7 +468,7 @@
 >
 >
 >
-> Ràng buộc c2(x) ≥ 0 ⇔ 1 - (x1 - 1)² - x2² ≥ 0, hình ảnh chính là x chỉ được nằm trong phạm vi hình tròn. Tính thử ∇c2: \[-2(x1-1), -2x2\]T ⇒ ∇c2(\[1,1\]) = (0,-2) chỉ vào trong (vector xanh dương)
+> Ràng buộc c2(x) ≥ 0 ⇔ 1 - (x1 - 1)² - x2² ≥ 0, hình ảnh chính là x chỉ được nằm trong phạm vi hình tròn. Tính thử ∇c2: \[-2(x1-1), -2x2\]ᵀ ⇒ ∇c2(\[1,1\]) = (0,-2) chỉ vào trong (vector xanh dương)
 >
 >
 >
@@ -500,7 +500,7 @@
 >
 >
 >
-> ∇c2(x\*) = \[-2(0-1), 0\]T = (2,0)ᵀ, mình vẽ vector xanh lục hướng vào tâm đường tròn)
+> ∇c2(x\*) = \[-2(0-1), 0\]ᵀ = (2,0)ᵀ, mình vẽ vector xanh lục hướng vào tâm đường tròn)
 >
 >
 >
@@ -817,7 +817,7 @@ abla c_i(x^*)^T w$ và nó chỉ triệt tiêu khi nhân với $\lambda_i^*$ tro
 >
 >
 >
-> linearized f tại x\*+d = f(x\*) + ∇f(x\*)ᵀd = f(x\*) + \[Σi λi ∇ci(x\*)\]Td
+> linearized f tại x\*+d = f(x\*) + ∇f(x\*)ᵀd = f(x\*) + \[Σi λi ∇ci(x\*)\]ᵀd
 >
 >
 >
