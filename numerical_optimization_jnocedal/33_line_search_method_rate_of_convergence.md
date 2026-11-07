@@ -178,19 +178,19 @@
 >
 > ⇨ - ∇f(xk - αk∇fk)ᵀ(∇fk) = - ∇f(xk - αk∇fk)ᵀ(∇fk)
 >
-> = - [Q(xk - αk∇fk) - b]T∇fk
+> = - [Q(xk - αk∇fk) - b]ᵀ∇fk
 >
-> = - [Qxk - Qαk∇fk - b]T∇fk
+> = - [Qxk - Qαk∇fk - b]ᵀ∇fk
 >
-> = - [Qxk - b - Qαk∇fk]T∇fk
+> = - [Qxk - b - Qαk∇fk]ᵀ∇fk
 >
-> = - [∇fk - Qαk∇fk]T∇fk
+> = - [∇fk - Qαk∇fk]ᵀ∇fk
 >
-> = - ∇fkT∇fk + [Qαk∇fk]T∇fk
+> = - ∇fkT∇fk + [Qαk∇fk]ᵀ∇fk
 >
-> ⇨ g' = 0 ⇔ - ∇fkT∇fk + [Qαk∇fk]T∇fk = 0
+> ⇨ g' = 0 ⇔ - ∇fkT∇fk + [Qαk∇fk]ᵀ∇fk = 0
 >
-> ⇔ [Qαk∇fk]T∇fk = ∇fkT∇fk
+> ⇔ [Qαk∇fk]ᵀ∇fk = ∇fkT∇fk
 >
 > ⇔ αk∇fkTQ∇fk = ∇fkT∇fk
 >
