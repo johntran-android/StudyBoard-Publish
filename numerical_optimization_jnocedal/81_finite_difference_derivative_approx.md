@@ -708,7 +708,7 @@
 >
 > ∂rm(x)/∂xi ≈ [rm(x + εei) - rm(x)] / ε 
 >
-> [∂r1(x)/∂xi,...,∂rm(x)/∂xi]T ≈ [r(x + εei) - r(x)] / ε 
+> [∂r1(x)/∂xi,...,∂rm(x)/∂xi]ᵀ ≈ [r(x + εei) - r(x)] / ε 
 >
 > ∂r(x)/∂xi ≈ [r(x + εei) - r(x)] / ε 
 >
@@ -981,13 +981,13 @@
 >
 > Vậy ta sẽ nhúc nhích cùng lúc (x1,x4) và dùng nó để tính hai cột 1,4:
 >
-> [r(x + ε(e1+e4)) - r(x)] = a, thì [a1,a2,0,0,0,0]T và [0,0,a3,a4,a5,0] là  cột 1 và cột
+> [r(x + ε(e1+e4)) - r(x)] = a, thì [a1,a2,0,0,0,0]ᵀ và [0,0,a3,a4,a5,0] là  cột 1 và cột
 > 4 của J (gần đúng)
 >
-> [r(x + ε(e2+e5)) - r(x)] = b, thì [0,b2,b3,b4,0,0]T và [0,0,0,0,b6,b6] là  cột 2 và cột
+> [r(x + ε(e2+e5)) - r(x)] = b, thì [0,b2,b3,b4,0,0]ᵀ và [0,0,0,0,b6,b6] là  cột 2 và cột
 > 5 của J (gần đúng)
 >
-> [r(x + ε(e3+e6)) - r(x)] = c, thì [0,0,c3,c4,c5,0]T và [0,0,0,0,0,c6] là  cột 3 và cột
+> [r(x + ε(e3+e6)) - r(x)] = c, thì [0,0,c3,c4,c5,0]ᵀ và [0,0,0,0,0,c6] là  cột 3 và cột
 > 6 của J (gần đúng)
 
 <br>
