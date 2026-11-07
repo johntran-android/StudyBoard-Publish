@@ -167,7 +167,7 @@
 >
 >
 >
-> Nhân hai vế cho pjᵀA:
+> Nhân hai vế cho pjᵀA, j bất kì.
 >
 >
 >
@@ -187,6 +187,10 @@
 >
 >
 >
+> xᵀAx &gt; 0 với x khác 0, mọi trị riêng &gt; 0
+>
+>
+>
 > ⇔ cj = 0 do pjᵀApj &gt; 0 với mọi pj khác 0
 >
 >
@@ -199,7 +203,7 @@
 >
 >
 >
-> Tiếp theo, tác giả nói về việc, ta có thể chứng minh được rằng, sử dụng bộ vector conjugate, ta có thể minimize hàm φ chỉ trong n bước. Và ta sẽ xét một phương pháp gọi là CONJUGAᵀE DIRECᵀION method (không phải conjugate gradient method nhé, sự liên hệ giữa chúng sẽ nói sau). Phương pháp này đại khái là như sau:
+> Tiếp theo, tác giả nói về việc, ta có thể chứng minh được rằng, sử dụng bộ vector conjugate, ta có thể minimize hàm φ chỉ trong n bước. Và ta sẽ xét một phương pháp gọi là CONJUGATE DIRECTION method (không phải conjugate gradient method nhé, sự liên hệ giữa chúng sẽ nói sau). Phương pháp này đại khái là như sau:
 >
 >
 >
@@ -209,43 +213,119 @@
 >
 > xk+1 = xk + αkpk trong đó αk là solution của bài toán tối ưu hàm một biến:
 >
+>
+>
 > minimize g(α) = φ(xk + αpk)
+>
+>
+>
+> = (1/2)(xk + αpk)ᵀA(xk + αpk) - bᵀ(xk + αpk)
+>
+>
 >
 > Để giải tìm αk, dùng điều kiện cần bậc 1 thôi:
 >
+>
+>
 > g'(α) = 0 ⇔ d/dα φ(xk + αpk) = 0
+>
+>
 >
 > ⇔ d/d(xk + αpk) φ(xk + αpk) . d/dα (xk + αpk) = 0
 >
+>
+>
 > ⇔ ∇φ(xk + αpk) . pk = 0
+>
+>
 >
 > ⇔ ∇φ(xk + αpk)ᵀ pk = 0
 >
-> ⇔ \[(Ax - b)|x=xk + αpk\]Tpk = 0
 >
-> ⇔ \[A(xk + αpk) - b\]Tpk = 0
 >
-> ⇔ \[Axk + Aαpk - b\]Tpk = 0
+> ---
 >
-> ⇔ \[rk + Aαpk\]Tpk = 0 | Ở đây quên nói, ta sẽ gọi r(x) = Ax-b
 >
-> ⇔ rkTpk + αpkTApk = 0
 >
-> ⇔ α = -rkTpk/pkTApk. Đây chính là 5.7
+> (hoặc chuẩn hơn:
+>
+>
+>
+> dφ(xk + αpk) = ∇φ(xk + αpk)ᵀd(xk + αpk) (dΦ(u) = ∇Φ(u)ᵀdu)
+>
+>
+>
+> = ∇φ(xk + αpk)ᵀd(αpk)
+>
+>
+>
+> = ∇φ(xk + αpk)ᵀ(αpk+dαpk - αpk)
+>
+>
+>
+> = ∇φ(xk + αpk)ᵀdα pk
+>
+>
+>
+> = ∇φ(xk + αpk)ᵀpk dα
+>
+>
+>
+> ⇒ g'(α) = ∇φ(xk + αpk)ᵀpk
+>
+>
+>
+> ---
+>
+>
+>
+> ∇φ(x) = Ax - b ⇒ ∇φ(xk + αpk) = A(xk + αpk) - b
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> ⇔ \[A(xk + αpk) - b\]ᵀpk = 0
+>
+>
+>
+> ⇔ \[Axk - b + Aαpk\]ᵀpk = 0
+>
+>
+>
+> gọi r(x) = Ax-b nên Axk - b = r(xk) = rk
+>
+>
+>
+> ⇔ (rk + Aαpk)ᵀpk = 0 
+>
+>
+>
+> ⇔ rkᵀpk + αpkᵀApk = 0
+>
+>
+>
+> ⇔ α = -rkTpk/pkᵀApk. Đây chính là 5.7
+
+📹 [Xem video trên YouTube](https://youtu.be/dWWDrFxObGg)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
-> Ghi chú rất xuất sắc, bạn đã tự chứng minh tính độc lập tuyến tính và tự đạo hàm để tìm ra công thức bước nhảy alpha một cách chính xác và rõ ràng.
+> Ghi chú rất xuất sắc khi tự chứng minh đầy đủ tính độc lập tuyến tính của hệ vector liên hợp và dẫn xuất chi tiết công thức bước nhảy alpha k từ bài toán tối ưu một chiều.
 >
 > **✓ Strengths**
-> - Tự triển khai trọn vẹn chứng minh tính độc lập tuyến tính của hệ vector liên hợp (conjugate) dựa trên tính chất xác định dương của ma trận A.
-> - Tự thiết lập và giải bài toán tối ưu 1 chiều dọc theo hướng tìm kiếm để dẫn ra biểu thức nghiệm đóng cho alpha_k khớp với công thức (5.7) trong giáo trình.
-> - Nắm rõ sự phân biệt ban đầu giữa Conjugate Direction Method tổng quát và Conjugate Gradient Method cụ thể.
+> - Chứng minh chặt chẽ tính độc lập tuyến tính của hệ vector liên hợp bằng cách nhân vô hướng với pjᵀA và dùng tính chất xác định dương của ma trận A.
+> - Tự triển khai đạo hàm hàm một biến g(alpha) và giải ra chính xác công thức của alpha_k theo phần dư r_k tương ứng với công thức (5.7) trong giáo trình.
+> - Phân biệt rõ ràng giữa phương pháp tổng quát Conjugate Direction và thuật toán cụ thể Conjugate Gradient.
 >
 > **💡 Deeper notes**
-> - Trong hàm toàn phương phi(x) = 1/2 x^T A x - b^T x, thặng dư r_k thường được định nghĩa trong nhiều tài liệu là r_k = A x_k - b (hoặc gradient tại x_k); một số tài liệu khác định nghĩa r_k = b - A x_k, khi đó dấu trong công thức alpha sẽ tương ứng thay đổi (ở đây ghi chú chọn r(x) = Ax - b nên alpha = - (r_k^T p_k) / (p_k^T A p_k) là hoàn toàn chuẩn xác).
-> - Điều kiện cần bậc một g'(alpha) = 0 ở đây cũng đồng thời là điều kiện đủ để đạt cực tiểu toàn cục do A xác định dương nên hàm mục tiêu phi(x) lồi nghiêm ngặt dọc theo hướng p_k.
+> - Trong Nocedal & Wright, hàm mục tiêu toàn phương ngầm định là phi(x) = (1/2)xᵀAx - bᵀx, từ đó gradient đúng bằng Ax - b và rk = Axk - b chính là phần dư (residual).
+> - Để chứng minh hoàn tất việc g'(alpha) = 0 là điểm cực tiểu toàn cục, cần thêm nhận xét g''(alpha) = pkᵀApk > 0 (do A xác định dương và pk != 0), đảm bảo phi(x) lồi ngặt dọc theo hướng pk.
 
 **🔗 See also:** [Chuyển đổi A thành diagonal](#node-tikzhc4) · [Tối ưu hóa tọa độ Hessian chéo](#node-b04ox8f) · [Vài suy nghĩ về bản chất của Conjugate Gradient method](#node-6z4orxx) · [Basic properties of conjugate gradient method](#node-p6jzgvh)
 
@@ -266,20 +346,20 @@
 >
 > x* - x0 = σ0p0 + σ1p1 + ..σn-1 pn-1.
 >
-> Nhân hai vế cho pkTA ta có:
+> Nhân hai vế cho pkᵀA ta có:
 >
-> pkTA(x* - x0) = pkTA(σ0p0 + σ1p1 + ..σn-1 pn-1)
+> pkᵀA(x* - x0) = pkᵀA(σ0p0 + σ1p1 + ..σn-1 pn-1)
 >
-> Xét vế phải, phân phối vô ta có tổng các pkTAσipi, vì tính conjugacy nên nếu pi khác pk, kết quả thành 0. Nên chỉ còn pkTApk, ta có pkTA(x*-x0) = σkpkTApk
+> Xét vế phải, phân phối vô ta có tổng các pkᵀAσipi, vì tính conjugacy nên nếu pi khác pk, kết quả thành 0. Nên chỉ còn pkᵀApk, ta có pkᵀA(x*-x0) = σkpkᵀApk
 >
-> ⇔ σk = pkTA(x*-x0)/pkTApk (5.8)
+> ⇔ σk = pkᵀA(x*-x0)/pkᵀApk (5.8)
 >
 > Giờ ta sẽ đi chứng minh σk TRÙNG KHỚP với step length αk của công thức 5.7. Là sao?
 > ⇨ Thì khi ta chứng minh σk = αk thì cũng đã chứng minh là chuỗi {xk} tạo bởi x1 = x0 + α0p0, x2 = x1 + α1p1,...cũng chính là sẽ là đi từ x0 → x1 = x0 + σ0x0, x2 = x0 + σ0x0 + σ1x1 , ... xn = x0 + σ0p0 + σ1p1 + ...σn-1pn-1 = x0 + x* - x0 = x*! Có nghĩa là ta cũng đã chứng minh được thuật toán sẽ dẫn ta đến x* tại iteration thứ n.
 >
 > Về mặt hình học hiểu nôm na như sau: Như đã biết về ý nghĩa của x* - x0 = σ0p0 + σ1p1 + ..σn-1 pn-1: Đó là để đi từ x0 → x*, ta sẽ đi thep phương p0 một khoảng có độ lớn σ0, rồi từ đó đi theo phương p1 một khoảng có độ lớn σ1,... Vậy thì nếu chứng minh αk = σk thì dĩ nhiên cũng đã chứng minh chuỗi {xk} tạo bởi thuật toán cũng sẽ dẫn ta tới x* sau n bước.
 >
-> Quay lại đây, chuỗi {xk} tạo bởi 5.6, 5.7: xk+1 = xk + αkpk, và αk = -rkTpk/pkTApk, cụ thể sẽ là:
+> Quay lại đây, chuỗi {xk} tạo bởi 5.6, 5.7: xk+1 = xk + αkpk, và αk = -rkTpk/pkᵀApk, cụ thể sẽ là:
 >
 > x1 = x0 + α0p0
 >
@@ -289,25 +369,25 @@
 >
 > xk = xk-1 + αkpk = x0 + α0p0 + α1p1 + ..αk-1pk-1
 >
-> Nhân hai vế cho pkTA:
+> Nhân hai vế cho pkᵀA:
 >
-> pkTAxk = pkTAx0 + pkTA(α0p0 + α1p1 + ..αk-1pk-1)
+> pkᵀAxk = pkᵀAx0 + pkᵀA(α0p0 + α1p1 + ..αk-1pk-1)
 >
-> ⇔ pkTAxk - pkTAx0 = pkTA(α0p0 + α1p1 + ..αk-1pk-1)
+> ⇔ pkᵀAxk - pkᵀAx0 = pkᵀA(α0p0 + α1p1 + ..αk-1pk-1)
 >
-> ⇔ pkTA(xk - x0) = pkTA(α0p0 + α1p1 + ..αk-1pk-1)
+> ⇔ pkᵀA(xk - x0) = pkᵀA(α0p0 + α1p1 + ..αk-1pk-1)
 >
-> Vế phải, theo tính chất conjugate, dễ hiểu chỉ còn 0, ta có pkTA(xk - x0) = 0
+> Vế phải, theo tính chất conjugate, dễ hiểu chỉ còn 0, ta có pkᵀA(xk - x0) = 0
 >
-> ⇔ pkTAxk = pkTAx0
+> ⇔ pkᵀAxk = pkᵀAx0
 >
-> Từ đó cái tử số của σk = pkTA(x*-x0)/pkTApk sẽ bằng:
+> Từ đó cái tử số của σk = pkᵀA(x*-x0)/pkᵀApk sẽ bằng:
 >
-> pkTA(x* - x0) = pkTAx*- pkTAx0 = pkTAx*-pkTAxk = pkT(Ax*-Axk)
+> pkᵀA(x* - x0) = pkᵀAx*- pkᵀAx0 = pkᵀAx*-pkᵀAxk = pkᵀ(Ax*-Axk)
 >
-> = pkT(b-Axk) Và vì rk = Axk-b nên đây chính là -pkTrk
+> = pkᵀ(b-Axk) Và vì rk = Axk-b nên đây chính là -pkᵀrk
 >
-> Vậy σk = pkTA(x*-x0)/pkTApk = -pkTrk/pkTApk, chính là αk. Chứng minh xong
+> Vậy σk = pkᵀA(x*-x0)/pkᵀApk = -pkᵀrk/pkᵀApk, chính là αk. Chứng minh xong
 
 **🔗 See also:** [Chuyển đổi A thành diagonal](#node-tikzhc4)
 
@@ -398,7 +478,7 @@
 > [!NOTE]
 > Hiểu chỗ này đại khái như sau: Nếu như A diagonal, thì bộ basis vector {ei} chính là conjugate set, và dùng chúng để đi từ x0 thì ta sẽ đến được x* trong nhiều nhất là n step như theorem 5.1 đã nói.
 >
-> Nhưng nếu A không phải diagonal, thì {ei} không phải là conjugate set, nên theorem 5.1 đương nhiên là không áp dụng, đi theo các hướng đó với thuật toán 5.6 (xk+1 = xk + αkpk) , 5.7 (αk = -rkTpk/pkTApk) không còn giúp đến đích trong nhiều nhất là n bước nữa.
+> Nhưng nếu A không phải diagonal, thì {ei} không phải là conjugate set, nên theorem 5.1 đương nhiên là không áp dụng, đi theo các hướng đó với thuật toán 5.6 (xk+1 = xk + αkpk) , 5.7 (αk = -rkTpk/pkᵀApk) không còn giúp đến đích trong nhiều nhất là n bước nữa.
 >
 > Vậy thì đại khái là để thuật toán hội tụ trong n bước theo theorem 5.1, ta phải tìm bộ conjugate set {pi} của A thì thuật toán mới work như theorem vừa rồi đã tuyên bố. 
 >
@@ -647,7 +727,7 @@
 >
 > Thì **đây chính là công thức của conjugate gradient**, vì trong thuật toán 5.1
 >
-> αk := -rkTpk / pkTApk
+> αk := -rkTpk / pkᵀApk
 >
 > ⇨ α0 := -r0Tp0 / p0TAp0
 >
@@ -691,7 +771,7 @@
 >
 > = (Bx* - α Bp0)ᵀ(Bx* - α Bp0)
 >
-> = [B(x* - αp0)]TB(x* - α p0)
+> = [B(x* - αp0)]ᵀB(x* - α p0)
 >
 > = (x* - αp0)ᵀBᵀB(x* - α p0)
 >
@@ -773,7 +853,7 @@
 <p align="center"><kbd><img src="assets/yts0xlux0g.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Theorem này nói đại ý rằng: Bắt đầu từ x0 và ta dùng một thuật toán 5.6, 5.7 để tạo ra chuỗi {xk}. Tức là: αk = -rkTpk / (pkTApk) và xk+1 = xk + αkpk. Thì khi đó chuỗi này sẽ có tính chất sau:
+> Theorem này nói đại ý rằng: Bắt đầu từ x0 và ta dùng một thuật toán 5.6, 5.7 để tạo ra chuỗi {xk}. Tức là: αk = -rkTpk / (pkᵀApk) và xk+1 = xk + αkpk. Thì khi đó chuỗi này sẽ có tính chất sau:
 >
 > r(x1)ᵀp0 = 0
 >
@@ -831,9 +911,9 @@
 >
 > ⇔ ∇φ(x0 + αp0)ᵀp0 = 0 
 >
-> ⇔ [(Aᵀx - b)|x=x0+αp0]Tp0 = 0
+> ⇔ [(Aᵀx - b)|x=x0+αp0]ᵀp0 = 0
 >
-> ⇔ [(Aᵀx - b)|x=x1]Tp0 = 0 
+> ⇔ [(Aᵀx - b)|x=x1]ᵀp0 = 0 
 >
 > ⇔ (Aᵀx1 - b)ᵀp0 = 0 
 >
@@ -972,7 +1052,7 @@
 >
 > Vì sao ở đây nói theo 5.3, -rk lại là steepest descent direction nhỉ? → vì 5.3 nói rằng ∇φ(xk) = Axk - b = r(xk) hay rk. À vậy thì -rk là - ∇φ(xk), dĩ nhiên nó chính là steepest descent direction như đã biết.
 >
-> Thế thì, **βk phải làm sao để pk và pk-1 conjugate wrt matrix A**: tức pkTApk-1 = 0. Ta sẽ tính ra βk thỏa điều kiện này:
+> Thế thì, **βk phải làm sao để pk và pk-1 conjugate wrt matrix A**: tức pkᵀApk-1 = 0. Ta sẽ tính ra βk thỏa điều kiện này:
 >
 > Nhân hai vế của pk = -rk + βkpk-1 với pk-1TA:
 >
@@ -1229,7 +1309,7 @@
 >
 > Nhân hai vế cho Api với i = 0,1,....k, ta có: 
 >
-> pk+1TApi = -rk+1TApi + βk+1 pkTApi với i = 0,1,....k
+> pk+1TApi = -rk+1TApi + βk+1 pkᵀApi với i = 0,1,....k
 >
 > (nhớ là, đây là cái ta có, và ta phải chứng minh vế trái pk+1TApi = 0 với i = 0,1,...k)
 >
@@ -1239,7 +1319,7 @@
 >
 > Nhiệm vụ chỉ cần chứng minh vế phải = 0 cho i = 0,1...k-1.
 >
-> Dùng / xài induction hypothesis cho 5.19, tức là được quyền xài 5.19 với  k = k: Ta có pkTApi = 0 với mọi i = 0,1...k-1
+> Dùng / xài induction hypothesis cho 5.19, tức là được quyền xài 5.19 với  k = k: Ta có pkᵀApi = 0 với mọi i = 0,1...k-1
 >
 > Như vậy đương nhiên bộ vector p0,p1,..pk là một conjugate set.
 >
@@ -1247,7 +1327,7 @@
 >
 > Theorem 5.2 nói gì? (*)
 >
-> Theorem này nói đại ý rằng: Bắt đầu từ x0 và ta dùng một thuật toán 5.6, 5.7 để tạo ra chuỗi {xk}. Tức là: αk = -rkTpk / (pkTApk) và xk+1 = xk + αkpk. Thì khi đó chuỗi này sẽ có tính chất sau:
+> Theorem này nói đại ý rằng: Bắt đầu từ x0 và ta dùng một thuật toán 5.6, 5.7 để tạo ra chuỗi {xk}. Tức là: αk = -rkTpk / (pkᵀApk) và xk+1 = xk + αkpk. Thì khi đó chuỗi này sẽ có tính chất sau:
 > (với r(x) = Ax - b)
 >
 > r(x1)ᵀp0 = 0
@@ -1352,7 +1432,7 @@
 >
 > Cái này thì ko dùng quy nạp mà lập luận như sau: 
 >
-> Với việc đã chứng minh xong 5.18, nên có quyền xài: pkTApi = 0 ∀i = 0,1,...k-1. Do đó bộ p0,...pk là conjugate set.
+> Với việc đã chứng minh xong 5.18, nên có quyền xài: pkᵀApi = 0 ∀i = 0,1,...k-1. Do đó bộ p0,...pk là conjugate set.
 >
 > Lại theo theorem 5.1 (vì sao xài được thì xem lại (*)): nói rằng rkTpi = 0 ∀ i=0,1...k-1
 >
@@ -1471,7 +1551,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Lặp lại cho đến khi rk = 0:  
 >
-> i) αk := -rkTpk / pkTApk (5.14a)
+> i) αk := -rkTpk / pkᵀApk (5.14a)
 >
 > Đây là gì? Đây chính là solution của bài toán minimize hàm g(α) = φ(xk + α × pk), tức là hàm φ(x) giới hạn bởi phương vector pk. Y như trong line search. Ý nghĩa: Từ xk nếu đi theo phương pk thì step đến đâu là xuống được thấp nhất.
 >
@@ -1479,7 +1559,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > iii) rk+1 := Axk+1 - b (5.14c): Đây chỉ là tính lại residual mới nhất
 >
-> iv) βk+1 := rk+1TApk / pkTApk (5.14d)
+> iv) βk+1 := rk+1TApk / pkᵀApk (5.14d)
 >
 > Đây chính là bước tính ra βk+1 dựa theo điều kiện pk+1 conjugate pk, để sau bước này, dùng βk+1 để tính pk+1 thì ta sẽ có direction pk+1 conjugate (wrt A) với pk.
 >
@@ -1487,13 +1567,13 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > k = k + 1.
 >
-> Thế thì gs nói có thể dùng 5.14e, 5.11 để thay 5.14a bằng αk = rkTrk/ pkTApk. Là sao nhỉ? Ta có:
+> Thế thì gs nói có thể dùng 5.14e, 5.11 để thay 5.14a bằng αk = rkTrk/ pkᵀApk. Là sao nhỉ? Ta có:
 >
 > 5.14e: pk+1 = -rk+1 + βk+1 pk.
 >
 > 5.11: rkTpi = 0, i = 0,1,....k-1
 >
-> 5.14a: αk = -rkTpk / pkTApk
+> 5.14a: αk = -rkTpk / pkᵀApk
 >
 > Vậy, từ 5.14e ⇨ pk = -rk + βk pk-1
 >
@@ -1505,9 +1585,9 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > ⇨ -rkTpk = rkTrk 
 >
-> ⇨ αk = -rkTpk / pkTApk = rkTrk/ pkTApk
+> ⇨ αk = -rkTpk / pkᵀApk = rkTrk/ pkᵀApk
 >
-> Vậy là từ αk = -rkTpk / pkTApk, nay αk = rkTrk/ pkTApk, khác nhau ở cái tử số, cơ bản đều là dot product của hai vector.
+> Vậy là từ αk = -rkTpk / pkᵀApk, nay αk = rkTrk/ pkᵀApk, khác nhau ở cái tử số, cơ bản đều là dot product của hai vector.
 >
 > ----
 >
@@ -1517,19 +1597,19 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > βk+1 = rk+1Trk+1 / rkTrk. Là sao?
 >
-> Công thức 5.14d nói βk+1 = (ý là :=) rk+1TApk / pkTApk
+> Công thức 5.14d nói βk+1 = (ý là :=) rk+1TApk / pkᵀApk
 >
-> = rk+1T(rk+1 - rk) / αkpkTApk
+> = rk+1T(rk+1 - rk) / αkpkᵀApk
 >
-> = rk+1Trk+1 / αkpkTApk - rk+1Trk / αkpkTApk
+> = rk+1Trk+1 / αkpkᵀApk - rk+1Trk / αkpkᵀApk
 >
-> = rk+1Trk+1 / αkpkTApk - 0 (do 5.16)
+> = rk+1Trk+1 / αkpkᵀApk - 0 (do 5.16)
 >
-> = rk+1Trk+1 / αkpkTApk
+> = rk+1Trk+1 / αkpkᵀApk
 >
-> Thay αk = rkTrk/ pkTApk.
+> Thay αk = rkTrk/ pkᵀApk.
 >
-> .. = rk+1Trk+1 / [(rkTrk/ pkTApk) pkTApk]
+> .. = rk+1Trk+1 / [(rkTrk/ pkᵀApk) pkᵀApk]
 >
 > = rk+1Trk+1 / rkTrk → Đây là công thức trong sách.
 >
@@ -1541,7 +1621,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Lặp lại cho đến khi rk = 0:
 >
-> i)  (Công thức tính αk theo kiểu mới, cách cũ: αk = -rkTpk / pkTApk)
+> i)  (Công thức tính αk theo kiểu mới, cách cũ: αk = -rkTpk / pkᵀApk)
 >
 > ii) xk+1 := xk + αkpk (5.24b) (cái này ko có gì thay đổi)
 >
@@ -1551,7 +1631,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > iv) βk+1 := rk+1Trk+1 / rkTrk (5.24d)
 >
-> Cách cũ của Algo 5.1: βk+1 := rk+1TApk / pkTApk. Thì trong kiểu cũ, ta phải tính Apk, rồi dot product với rk+1 và pk. Còn kiểu mới chỉ tính dot product, không nhân matrix vector.
+> Cách cũ của Algo 5.1: βk+1 := rk+1TApk / pkᵀApk. Thì trong kiểu cũ, ta phải tính Apk, rồi dot product với rk+1 và pk. Còn kiểu mới chỉ tính dot product, không nhân matrix vector.
 >
 > v) pk+1 := -rk+1 + βk+1 pk (5.24e) (Cái này thì vẫn vậy)
 >
@@ -1561,7 +1641,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Thế thì, gs nói "như vậy với thuật toán này ta ko cần phải biết x, r và p của nhiều hơn 2 iteration trước": Ý ông là cả Algo 5.1 và 5.2. Ý này dễ hiểu, vì rõ ràng trong mỗi iteration, ta chỉ xài xk,pk,rk để tính xk+1, rk+1, pk+1.
 >
-> Ông nói "Phần lớn tính toán sẽ là tính Apk, tính pkT(Apk) và rk+1Trk+1 cũng như là 3 cái sum vectors": Đúng rồi, nhìn thuật toán là thấy.
+> Ông nói "Phần lớn tính toán sẽ là tính Apk, tính pkᵀ(Apk) và rk+1Trk+1 cũng như là 3 cái sum vectors": Đúng rồi, nhìn thuật toán là thấy.
 >
 > Rồi, đại ý là inner product (dot product) cũng như vector sum thì chỉ tốn một con số nhỏ nào đó của n floating point operation. Là sao?
 >
@@ -1757,15 +1837,15 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Áp dụng cho (||xk+1 - x*||_A)²:
 >
-> = Σi λi ([xk+1 - x*]Tvi)²  (thay xk+1 - x* cho z)
+> = Σi λi ([xk+1 - x*]ᵀvi)²  (thay xk+1 - x* cho z)
 >
-> Xét [xk+1 - x*]Tvi
+> Xét [xk+1 - x*]ᵀvi
 >
 > Thay xk+1 - x* = Σi [1 + λi P*k(λi)] ξi vi, hay đổi qua dùng index j: 
 >
 > xk+1 - x* = Σj [1 + λj P*k(λj)] ξj vj
 >
-> ⇨ [xk+1 - x*]Tvi = [Σj [1 + λj P*k(λj)] ξj vj]Tvi
+> ⇨ [xk+1 - x*]ᵀvi = [Σj [1 + λj P*k(λj)] ξj vj]ᵀvi
 >
 > Cái này nhìn vậy thôi chứ chỉ là (Σj (scalar τj) × vj)ᵀvi, với τi = [1 + λi P*k(λi)] ξi thôi
 >
@@ -1781,9 +1861,9 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Vậy ta có kết quả là:
 >
-> [xk+1 - x*]Tvi = [1 + λi P*k(λi)] ξi
+> [xk+1 - x*]ᵀvi = [1 + λi P*k(λi)] ξi
 >
-> ⇨ (||xk+1 - x*||_A)² = Σi λi ([xk+1 - x*]Tvi)² 
+> ⇨ (||xk+1 - x*||_A)² = Σi λi ([xk+1 - x*]ᵀvi)² 
 >
 > ⇔ (||xk+1 - x*||_A)² = Σi λi ([1 + λi P*k(λi)] ξi)²
 >
@@ -2469,7 +2549,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Đi theo hướng pk sao cho hàm Φ giảm xuống thấp nhất. Dĩ nhiên đây là bài toán exact line search thôi. Giới hạn theo hướng pk, thì hàm g(α) = φ(xk + αpk) chỉ là hàm bậc hai. Dùng điều kiện tối ưu cần và đủ bậc một, cho đạo hàm bằng 0 thì ta sẽ giải ra α tối ưu
 >
-> αk = rkTrk / pkTApk 
+> αk = rkTrk / pkᵀApk 
 >
 > Dùng optimal stepsize để đến xk+1:
 >
@@ -2479,7 +2559,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > rk+1 = rk + αkApk
 >
-> Tìm conjugate direction pk+1 (sao cho pkTApk+1 = 0):
+> Tìm conjugate direction pk+1 (sao cho pkᵀApk+1 = 0):
 >
 > βk+1 := rk+1Trk+1 / rkTrk
 >
@@ -2533,19 +2613,19 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > ⇨ α^k = r^kTr^k / p^kTC⁻¹ᵀAC⁻¹p^k 
 >
-> = [C⁻¹ᵀrk]TC⁻¹ᵀrk / (Cpk)ᵀC⁻¹ᵀAC⁻¹Cpk
+> = [C⁻¹ᵀrk]ᵀC⁻¹ᵀrk / (Cpk)ᵀC⁻¹ᵀAC⁻¹Cpk
 >
-> = rkTC⁻¹C⁻¹ᵀrk / pkTCᵀC⁻¹ᵀAC⁻¹Cpk
+> = rkTC⁻¹C⁻¹ᵀrk / pkᵀCᵀC⁻¹ᵀAC⁻¹Cpk
 >
 > Dùng identity (AB)⁻¹ = B⁻¹A⁻¹ ⇨ C⁻¹C⁻¹ᵀ = (CᵀC)⁻¹
 >
-> = rkT(CᵀC)⁻¹rk / pkTApk
+> = rkT(CᵀC)⁻¹rk / pkᵀApk
 >
 > Đặt M = CᵀC
 >
-> = rkTM⁻¹rk / pkTApk
+> = rkTM⁻¹rk / pkᵀApk
 >
-> → α^k = rkTM⁻¹rk / pkTApk
+> → α^k = rkTM⁻¹rk / pkᵀApk
 >
 > Sau đó, khi đã có α^k thì tính x^k+1:
 >
@@ -2621,7 +2701,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Ta cần tính: 
 >
-> 1) α^k = rkTM⁻¹rk / pkTApk
+> 1) α^k = rkTM⁻¹rk / pkᵀApk
 >
 > 2) β^k+1 = rk+1TM⁻¹rk+1 / rkTM⁻¹rk 
 >
@@ -2665,7 +2745,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Giải M yk = rk để có yk
 >
-> α^k = rkTyk / pkTApk
+> α^k = rkTyk / pkᵀApk
 >
 > xk+1 := xk + α^k pk
 >
