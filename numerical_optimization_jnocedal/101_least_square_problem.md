@@ -52,7 +52,7 @@
 >
 > bình phương residual ri(x). Bằng cách gom chúng lại thành vector r(x) = \[r1(x),
 >
-> r2(x),....\]T, thì Σi \[ri(x)\]² có thể thể hiện bởi (1/2) ||r(x)||², cũng là f(x) = (1/2)
+> r2(x),....\]ᵀ, thì Σi \[ri(x)\]² có thể thể hiện bởi (1/2) ||r(x)||², cũng là f(x) = (1/2)
 >
 > r(x)ᵀ r(x)
 >
@@ -114,7 +114,7 @@
 >
 >
 >
-> Tiếp, vì f(x), như đã nói là vector → scalar function, nên ∇f(x) dĩ nhiên là vector R^n, nên kết quả sẽ là J(x)ᵀr(x) (có shape \[m,n\]T\[m,1\] = \[n,m\]\[m,1\] = \[n,1\].
+> Tiếp, vì f(x), như đã nói là vector → scalar function, nên ∇f(x) dĩ nhiên là vector R^n, nên kết quả sẽ là J(x)ᵀr(x) (có shape \[m,n\]ᵀ\[m,1\] = \[n,m\]\[m,1\] = \[n,1\].
 >
 >
 >
@@ -142,7 +142,7 @@
 >
 >
 >
-> Xét hàm gi(x) = \[cột i của J(x)ᵀ\] ri(x), cũng chính là \[hàng i của J(x)\]T ri(x) = ∇ri(x) ri(x), là vector có các phần tử \[∂ri(x)/∂x1 ri(x), ∂ri(x)/∂x2 ri(x), ...∂ri(x)/xn ri(x)\]
+> Xét hàm gi(x) = \[cột i của J(x)ᵀ\] ri(x), cũng chính là \[hàng i của J(x)\]ᵀ ri(x) = ∇ri(x) ri(x), là vector có các phần tử \[∂ri(x)/∂x1 ri(x), ∂ri(x)/∂x2 ri(x), ...∂ri(x)/xn ri(x)\]
 >
 >
 >
