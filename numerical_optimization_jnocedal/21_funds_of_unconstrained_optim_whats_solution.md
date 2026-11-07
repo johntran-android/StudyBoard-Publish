@@ -363,11 +363,11 @@
 >
 > đặt h(u) = ∇f(u)ᵀp ⇨  dh = h(u+du) - h(u)
 >
-> = ∇f(u+du)ᵀp - ∇f(u)ᵀp = [∇f(u+du) - ∇f(u)]Tp = d∇f(u)ᵀp 
+> = ∇f(u+du)ᵀp - ∇f(u)ᵀp = [∇f(u+du) - ∇f(u)]ᵀp = d∇f(u)ᵀp 
 >
 > Mà d∇f(u) = ∇²f(u) du  (vì đạo hàm của hàm ∇f chính là Hessian ∇²f)
 >
-> Do đó dh = d ∇f(u)ᵀp = [∇²f(u)du]Tp 
+> Do đó dh = d ∇f(u)ᵀp = [∇²f(u)du]ᵀp 
 >
 > = duT ∇²f(u)ᵀ p . Và vì cái này là scalar (u, du là scalar)
 >
