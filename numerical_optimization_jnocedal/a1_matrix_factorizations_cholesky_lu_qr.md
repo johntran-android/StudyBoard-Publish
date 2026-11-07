@@ -238,7 +238,7 @@
 >
 >
 >
-> ⇨ Aᵀ = Uᵀ \[L1; L2\]T P = Uᵀ \[L1T, L2T\] P
+> ⇨ Aᵀ = Uᵀ \[L1; L2\]ᵀ P = Uᵀ \[L1T, L2T\] P
 >
 >
 >
@@ -297,11 +297,11 @@
 >
 >
 >
-> Aij = \[L's row i\] T \[L's col j\] = \[L's row i\]T \[L's row j\] = Σk Lik × Ljk
+> Aij = \[L's row i\] T \[L's col j\] = \[L's row i\]ᵀ \[L's row j\] = Σk Lik × Ljk
 >
 >
 >
-> Nên Aii = \[L's row i\]T \[L's row i\] = Σk Lik²
+> Nên Aii = \[L's row i\]ᵀ \[L's row i\] = Σk Lik²
 >
 >
 >
@@ -309,7 +309,7 @@
 >
 >
 >
-> A21 = \[L's row 2\]T \[L's row 1\] = L21L11 + L22L12 + 0 ... = L21L11
+> A21 = \[L's row 2\]ᵀ \[L's row 1\] = L21L11 + L22L12 + 0 ... = L21L11
 >
 >
 >
@@ -325,7 +325,7 @@
 >
 >
 >
-> A31 = \[L's row 3\]T \[L's row 1\] = L31L11 + L32L12 + L33L13 + 0 + ... = L31L11 (do L12, L13 và sau đó = 0)
+> A31 = \[L's row 3\]ᵀ \[L's row 1\] = L31L11 + L32L12 + L33L13 + 0 + ... = L31L11 (do L12, L13 và sau đó = 0)
 >
 >
 >
@@ -333,7 +333,7 @@
 >
 >
 >
-> A32 = \[L's row 3\]T \[L's row 2\] = L31L21 + L32L22 + L33L23 + ... = L31L21 + L32L22 (do L23 và sau đó đều = 0)
+> A32 = \[L's row 3\]ᵀ \[L's row 2\] = L31L21 + L32L22 + L33L23 + ... = L31L21 + L32L22 (do L23 và sau đó đều = 0)
 >
 >
 >
