@@ -1107,7 +1107,7 @@
 >
 > ∇g(x), cũng là d/dx g(x) = d/dx [r(x)ᵀq]
 >
-> = [d/dx r(x)]Tq
+> = [d/dx r(x)]ᵀq
 >
 > = J(x)ᵀq.
 >
@@ -1318,7 +1318,7 @@
 >
 > Vậy d/dx xi(x) = ∇xi(x) = L'(xj(x)) . ∇xj(x) (1)
 >
-> ⇔ ∇xi(x)ᵀp = [L'(xj(x)) . ∇xj(x)]Tp
+> ⇔ ∇xi(x)ᵀp = [L'(xj(x)) . ∇xj(x)]ᵀp
 >
 > (L(.) là unary, tức là scalar → scalar function nên đạo hàm cấp 1,2 đều là là
 > scalar)
