@@ -369,9 +369,9 @@
 >
 > ⇔ α = -rkTpk/pkᵀApk. Đây chính là 5.7
 
-📹 Video 1: [Tại sao các vectơ liên hợp luôn độc lập tuyến tính? (phần 1)](https://youtu.be/dWWDrFxObGg)
+📹 Video 1: [Tại sao các vectơ liên hợp luôn độc lập tuyến tính?](https://youtu.be/dWWDrFxObGg)
 
-📹 Video 2: [Làm sao tính bước nhảy alpha trong phương pháp hướng liên hợp? (phần 2)](https://www.youtube.com/watch?v=wgdR-pmFiBM)
+📹 Video 2: [Làm sao tính bước nhảy alpha trong phương pháp hướng liên hợp?](https://www.youtube.com/watch?v=wgdR-pmFiBM)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
