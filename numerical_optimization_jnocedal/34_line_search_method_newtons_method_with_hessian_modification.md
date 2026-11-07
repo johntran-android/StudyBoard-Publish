@@ -276,15 +276,15 @@
 >
 > Tính thử - (Hk)⁻¹ ∇f_k
 >
-> = - diag(1/10, 1/3, 1/-1) [1, -3, 2]T
+> = - diag(1/10, 1/3, 1/-1) [1, -3, 2]ᵀ
 >
 > Ở đây nói về kiến thức đại số tuyến tính chút xíu, nhờ MIT 1806 mình đã biết: Với diagonal matrix (hay nói chung triangular matrix) thì eigenvalues nằm trên đường chéo. Và λ(A⁻¹) = 1 / λ(A) ⇨ Ta có (Hk)⁻¹ như vậy, hoặc cũng có thể dùng Hk (Hk)⁻¹ = I để suy ra (Hk)⁻¹.
 >
-> Kết quả phép nhân trên cho ra vector pk = [-1/10, 1, 2]T. 
+> Kết quả phép nhân trên cho ra vector pk = [-1/10, 1, 2]ᵀ. 
 >
 > Tính thử directional derivative wrt hướng pk:
 >
-> pkT∇f_k = -1/10 × 1 + 1 × (-3) + 2 × 2 = -1/10 - 3 + 4 = 1 - 1/10 = 9/10 > 0, tức là dương ⇨ pk không phải descent direction
+> pkᵀ∇f_k = -1/10 × 1 + 1 × (-3) + 2 × 2 = -1/10 - 3 + 4 = 1 - 1/10 = 9/10 > 0, tức là dương ⇨ pk không phải descent direction
 >
 > Thế thì có thể ta sẽ nghĩ đến chuyện sửa cái Hessian này, bằng cách cộng vào một số nhỏ thôi để vừa đủ để làm cho matrix trở thành xác định dương. Và ta làm vậy bằng cách cộng vào cái giá trị -1, để biến nó thành dương (khi đó mọi trị riêng đều dương thì matrix xác định dương)
 >
@@ -292,11 +292,11 @@
 >
 > Khi đó B_k = diag(10, 3, 10^-8) đã xác định dương. Thử tính lại pk:
 >
-> pk = - (Bk)⁻¹ ∇f_k = - diag(1/10, 1/3, 1/δ) [1, -3, 2]T 
+> pk = - (Bk)⁻¹ ∇f_k = - diag(1/10, 1/3, 1/δ) [1, -3, 2]ᵀ 
 >
-> = - [(1/10) × 1, (1/3) × (-3), (1/δ) × 2]T
+> = - [(1/10) × 1, (1/3) × (-3), (1/δ) × 2]ᵀ
 >
-> = [-1/10, -1, 2/δ]T
+> = [-1/10, -1, 2/δ]ᵀ
 >
 > Vấn đề là với δ = 10^-8 thì 2/δ là con số rất lớn, khiến pk sẽ rất lớn, và có thể thấy với tọa độ thứ 3 rất lớn thì nó sẽ gần như song song với hướng của e3. Cũng có thể phân tích như tác giả trong sách:
 >
@@ -411,11 +411,11 @@
 >
 > Tới đây, hãy nhớ lại tính chất của Frobenius norm của A theo định nghĩa, nó chỉ là căn bậc hai của tổng tất cả các phần tử của ma trận ⇨ ||A||F = Σ_ij (Ajj)². Và ta nhớ là có thể thể hiện cái này bởi tr(AᵀA), vì tr(AᵀA) là tổng các entries đường chéo của AᵀA.
 >
-> ⇨||ΔA||_F = tr[(ΔA)ᵀΔA)] = tr{[Qdiag(τi)Qᵀ]T(Qᵀdiag(τi)Qᵀ)}
+> ⇨||ΔA||_F = tr[(ΔA)ᵀΔA)] = tr{[Qdiag(τi)Qᵀ]ᵀ(Qᵀdiag(τi)Qᵀ)}
 >
 > = tr{Qdiag(τi)QᵀQdiag(τi)Qᵀ} = tr{Qdiag(τi)²Qᵀ}
 >
-> = tr{Qdiag(τi)²Qᵀ]T} | tr(A) = tr(Aᵀ)
+> = tr{Qdiag(τi)²Qᵀ]ᵀ} | tr(A) = tr(Aᵀ)
 >
 > = tr{QQᵀdiag(τi)²}
 >
@@ -682,7 +682,7 @@
 >
 > 1) Tính LD: Ta sẽ linearly combine 3 cột của L với entries cột 1 của D, tức là ta có d1 × cột L1 
 >
-> 2) Sau đó (trong bước nhân với Lᵀ) thì lại linear combine các cột của LD với cột 1 của Lᵀ: và nó chỉ y nguyên, do cột đó là [1 0 0]T.
+> 2) Sau đó (trong bước nhân với Lᵀ) thì lại linear combine các cột của LD với cột 1 của Lᵀ: và nó chỉ y nguyên, do cột đó là [1 0 0]ᵀ.
 > Thành ra hàng 1 cột 1 của LD(Lᵀ) chính là d1L_11 = d1.
 >
 > Nói chung lập luận tương tự ta sẽ hiểu các equation khác, từ đó có công thức tính các entries của L và D
