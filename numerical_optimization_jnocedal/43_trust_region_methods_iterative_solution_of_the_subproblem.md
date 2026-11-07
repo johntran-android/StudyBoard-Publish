@@ -894,7 +894,7 @@
 >
 >
 >
-> =  λ\_l + (||p(λ)|| - Δ) ||p(λ)||² / Δ \[\[R⁻¹ᵀp(λ)\]T R⁻¹ᵀ p(λ)\]
+> =  λ\_l + (||p(λ)|| - Δ) ||p(λ)||² / Δ \[\[R⁻¹ᵀp(λ)\]ᵀ R⁻¹ᵀ p(λ)\]
 >
 >
 >
@@ -1828,7 +1828,7 @@
 >
 > (B + λI)p\* = -g
 >
-> ⇔ \[(B + λI)p\*\]T = -gᵀ
+> ⇔ \[(B + λI)p\*\]ᵀ = -gᵀ
 >
 > ⇔ -p\*T(B + λI)ᵀ = gᵀ
 >
@@ -1974,7 +1974,7 @@
 >
 > Và điều đó có nghĩa là gì, **có nghĩa là p hợp với cái eigenvector ứng với eigenvalue âm này một góc nhọn hoặc tù** ⇨ chính là **hướng sẽ trượt ra khỏi saddle point**.
 >
-> Còn nếu với 4.20, thì vế phải của mk(0) - mk(pk) ≥ c1 ||gk|| min (Δk, ||gk|| / ||Bk||) đã thành 0, khi đó điều kiện dừng chỉ là mk(0) - mk(pk) ≥ 0 ⇔ - (1/2)pkTBkpk ≥ 0 thì thuật toán chỉ cần chọn pk = 0, tức là đứng yên là thỏa → nó không ép đi ra khỏi saddle point
+> Còn nếu với 4.20, thì vế phải của mk(0) - mk(pk) ≥ c1 ||gk|| min (Δk, ||gk|| / ||Bk||) đã thành 0, khi đó điều kiện dừng chỉ là mk(0) - mk(pk) ≥ 0 ⇔ - (1/2)pkᵀBkpk ≥ 0 thì thuật toán chỉ cần chọn pk = 0, tức là đứng yên là thỏa → nó không ép đi ra khỏi saddle point
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
