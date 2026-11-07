@@ -1,6 +1,6 @@
 # 7.2 Method Of Finding Estimators
 
-📊 **Progress:** `42` Notes | `52` Screenshots | `1` AI Reviews
+📊 **Progress:** `42` Notes | `52` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-po2ayci"></a>
@@ -806,6 +806,22 @@
 > Quay lại đây, gs viết ở dạng expand:
 > L(**θ**|𝐱), tức L(θ1, ...θk|x1,...xn) = Πi=1:n f(xi|θ1...θk) (không khó hiểu, vì joint pmf
 > pdf = tích marginal pmf / pdf do tính chất iid)
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=iy-3owjYDYI)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú giải thích rất chính xác bản chất của estimator, phân biệt rõ giữa estimate và estimator, cũng như làm rõ vai trò của likelihood function khi cố định mẫu x và biến thiên theo tham số θ.
+>
+> **✓ Strengths**
+> - Phân biệt rất rõ ràng và chuẩn xác giữa estimator (hàm/thống kê) và estimate (giá trị ước lượng cụ thể).
+> - Nắm vững bản chất của likelihood function L(θ|x): biến số là θ còn dữ liệu quan sát x được giữ cố định.
+> - Giải thích chính xác vì sao joint pdf/pmf lại tách thành tích các marginal pdf/pmf nhờ vào giả thiết iid.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý thêm rằng L(θ|x) không phải là một hàm mật độ xác suất (pdf) của tham số θ (tích phân của L(θ|x) theo θ không nhất thiết bằng 1).
+> - Hàm likelihood về mặt lý thuyết chỉ cần xác định đến một hằng số nhân dương tùy ý (proportionality constant) chứ không bắt buộc phải bằng chính xác tích joint pdf.
 
 <br>
 
