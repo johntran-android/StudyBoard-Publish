@@ -426,7 +426,9 @@
 >
 > Tuy vậy vẫn còn chỗ zj (mình là z⁽²⁾j') và Hkk' (đáng lẽ phải là Mkk') và h'(aj') (mình là h'(a⁽²⁾j)) là những chỗ in sai.
 
-📹 [Xem video trên YouTube](https://youtu.be/-wqvroqdiWs)
+📹 Video 1: [Làm sao tính chính xác ma trận Hessian theo các trọng số? (phần 1)](https://youtu.be/-wqvroqdiWs)
+
+📹 Video 2: [Làm sao tính Hessian cho trọng số ở hai tầng khác nhau? (phần 2)](https://www.youtube.com/watch?v=psQkLoQpYdI)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
