@@ -266,7 +266,7 @@
 >
 > Nhưng không phải lúc nào hàm f cũng lồi ngặt, nên giáo sư nói thành ra ta phải CHỦ ĐỘNG ÁP CÁI ĐIỀU KIỆN NÀY, VÀ CỤ THỂ LÀ ĐÈ VÀO THẰNG STEP SIZE αk:
 >
-> skTyk > 0 ⇔ αkpkT(gk+1 - gk) > 0.
+> skTyk > 0 ⇔ αkpkᵀ(gk+1 - gk) > 0.
 >
 > Và tác giả nói rằng nếu mà αk được chọn theo tiêu chí Wolfe hay strong Wolfe condition thì nó tự động thỏa cái này. 
 >
@@ -509,7 +509,7 @@
 >
 > Xét hàm k(u) = ∇f(u)ᵀp
 >
-> dk = d[∇f(u)ᵀp] = ∇f(u + du)ᵀp - ∇f(u)ᵀp = [∇f(u + du) - ∇f(u)]Tp
+> dk = d[∇f(u)ᵀp] = ∇f(u + du)ᵀp - ∇f(u)ᵀp = [∇f(u + du) - ∇f(u)]ᵀp
 >
 > áp dụng f(x + p) = f(x) + ∇f(x + tp)ᵀp for some t in (0,1)
 >
@@ -519,7 +519,7 @@
 >
 > ⇨ ∇f(u+du) - ∇f(u) = ∇²f(u)du 
 >
-> ⇨ d[∇f(u)ᵀp] = [∇f(u+du) - ∇f(u)]Tp = [∇²f(u)du]Tp = duT∇²f(u)ᵀp
+> ⇨ d[∇f(u)ᵀp] = [∇f(u+du) - ∇f(u)]ᵀp = [∇²f(u)du]ᵀp = duT∇²f(u)ᵀp
 >
 > Thay du = p dt
 >
@@ -880,7 +880,7 @@
 >
 > List vài công thức liên quan, 
 >
-> skTyk > 0 ⇔ αkpkT(gk+1 - gk) > 0. (6.8)
+> skTyk > 0 ⇔ αkpkᵀ(gk+1 - gk) > 0. (6.8)
 >
 > Hk+1 = (I - ρkskykT)Hk(I - ρkykskT) + ρkskskT (6.17)
 >
