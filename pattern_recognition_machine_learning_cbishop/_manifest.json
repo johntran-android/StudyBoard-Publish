@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1793939335311,
+  "publishedAt": 1794013723652,
   "sections": [
     {
       "title": "📋 Overview",
@@ -279,16 +279,16 @@
       "imageCount": 9
     },
     {
-      "title": "3.5.2 Maximizing the evidence function",
-      "path": "pattern_recognition_machine_learning_cbishop/352_maximizing_the_evidence_function.md",
-      "noteCount": 3,
-      "imageCount": 4
-    },
-    {
       "title": "3.5 Evidence Approximation",
       "path": "pattern_recognition_machine_learning_cbishop/35_evidence_approximation.md",
       "noteCount": 6,
       "imageCount": 6
+    },
+    {
+      "title": "3.5.2 Maximizing the evidence function",
+      "path": "pattern_recognition_machine_learning_cbishop/352_maximizing_the_evidence_function.md",
+      "noteCount": 3,
+      "imageCount": 4
     },
     {
       "title": "3.5.3 Effective number of parameters",
@@ -539,8 +539,14 @@
     {
       "title": "5.4.3 Inverse Hessian",
       "path": "pattern_recognition_machine_learning_cbishop/543_inverse_hessian.md",
-      "noteCount": 0,
-      "imageCount": 0
+      "noteCount": 1,
+      "imageCount": 2
+    },
+    {
+      "title": "5.4.4 Finite differences",
+      "path": "pattern_recognition_machine_learning_cbishop/544_finite_differences.md",
+      "noteCount": 1,
+      "imageCount": 2
     },
     {
       "title": "5.7 Ex",
@@ -559,8 +565,14 @@
       "path": "pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md",
       "noteCount": 5,
       "imageCount": 7
+    },
+    {
+      "title": "Untitled",
+      "path": "pattern_recognition_machine_learning_cbishop/untitled.md",
+      "noteCount": 1,
+      "imageCount": 7
     }
   ],
-  "totalNotes": 513,
-  "totalImages": 844
+  "totalNotes": 516,
+  "totalImages": 855
 }
