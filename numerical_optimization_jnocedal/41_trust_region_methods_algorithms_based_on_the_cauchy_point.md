@@ -367,7 +367,7 @@
 >
 > = f + gᵀp_tilde(τ) + (1/2)p_tilde(τ)ᵀBp_tilde(τ)
 >
-> = f + gᵀτpU + (1/2)[τpU]TBτpU
+> = f + gᵀτpU + (1/2)[τpU]ᵀBτpU
 >
 > = f + τgᵀpU + (1/2)(τ²)pUᵀBpU
 >
@@ -427,7 +427,7 @@
 >
 > Thay vô:
 >
-> .. ≥ -[- [gᵀg / gᵀBg] g]T([- [gᵀg / gᵀBg] g] - pB)
+> .. ≥ -[- [gᵀg / gᵀBg] g]ᵀ([- [gᵀg / gᵀBg] g] - pB)
 >
 > = [gᵀg / gᵀBg] gᵀ([- [gᵀg / gᵀBg] g] - (-B⁻¹ g))
 >
@@ -478,7 +478,7 @@
 <p align="center"><kbd><img src="assets/c38vwbyrmh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là nói về B trong bài toán minimize f + gᵀp + (1/2)pᵀBp s.t ||p|| ≤ Δ, thì như đã biết B có thể là Hessian, hay xấp xỉ Hessian. Thì ở đây là nói lại ý đó, cụ thể là nếu trong tình huống mà ta có Hessian avaiable (dĩ nhiên đây là Hessian tại điểm bắt đầu, xk, vì đây thật ra viết đầy đủ là bài toán minimize f(xk) + gkTpk + (1/2)pkTBkpk s.t ||pk|| ≤ Δ, giúp tìm pk gíúp giảm đủ), và available có nghĩa là có thể tính được hay có được mà không quá tốn kém, vì thật ra nguyên nhân chủ yếu của việc không có Hessian là vì chi phí tính toán, thì ta sẽ dùng B = Hessian, tức ∇²f(xk).
+> Đại khái là nói về B trong bài toán minimize f + gᵀp + (1/2)pᵀBp s.t ||p|| ≤ Δ, thì như đã biết B có thể là Hessian, hay xấp xỉ Hessian. Thì ở đây là nói lại ý đó, cụ thể là nếu trong tình huống mà ta có Hessian avaiable (dĩ nhiên đây là Hessian tại điểm bắt đầu, xk, vì đây thật ra viết đầy đủ là bài toán minimize f(xk) + gkTpk + (1/2)pkᵀBkpk s.t ||pk|| ≤ Δ, giúp tìm pk gíúp giảm đủ), và available có nghĩa là có thể tính được hay có được mà không quá tốn kém, vì thật ra nguyên nhân chủ yếu của việc không có Hessian là vì chi phí tính toán, thì ta sẽ dùng B = Hessian, tức ∇²f(xk).
 >
 > Khi đó cái mà ta có từ phương pháp dogleg gọi là **Newton-doglog step**.
 >
