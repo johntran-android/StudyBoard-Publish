@@ -118,7 +118,7 @@
 >
 > ⇨ m(pC) = f + gᵀpC + (1/2) pCᵀ B pC 
 >
-> = f + gᵀ[- (Δ / ||g||) g] + (1/2) [- (Δ / ||g||) g]T B [- (Δ / ||g||) g]
+> = f + gᵀ[- (Δ / ||g||) g] + (1/2) [- (Δ / ||g||) g]ᵀ B [- (Δ / ||g||) g]
 >
 > = f - (Δ / ||g||) gᵀg + (1/2) (Δ / ||g||)²  gᵀBg
 >
@@ -432,7 +432,7 @@
 >
 > Tiếp theo là áp dụng định lý Taylor để có kết quả 
 >
-> f(xk + pk) = f(xk) + g(xk)ᵀpk + ∫0:1 [g(xk + tpk) - g(xk)]Tpkdt 
+> f(xk + pk) = f(xk) + g(xk)ᵀpk + ∫0:1 [g(xk + tpk) - g(xk)]ᵀpkdt 
 >
 > Là sao?
 >
@@ -462,33 +462,33 @@
 >
 > Cộng và trừ bớt cho g(x)ᵀp
 >
-> f(x + p) - f(x) = ∫0:1 [g(x + tp) - g(x) + g(x)]Tpdt 
+> f(x + p) - f(x) = ∫0:1 [g(x + tp) - g(x) + g(x)]ᵀpdt 
 >
-> ⇔ f(x + p) - f(x) = ∫0:1 [g(x + tp) - g(x)]Tpdt  + ∫0:1 g(x)ᵀpdt 
+> ⇔ f(x + p) - f(x) = ∫0:1 [g(x + tp) - g(x)]ᵀpdt  + ∫0:1 g(x)ᵀpdt 
 >
-> ⇔ f(x + p) - f(x) = ∫0:1 [g(x + tp) - g(x)]Tpdt  + g(x)ᵀp ∫0:1 dt 
+> ⇔ f(x + p) - f(x) = ∫0:1 [g(x + tp) - g(x)]ᵀpdt  + g(x)ᵀp ∫0:1 dt 
 >
 > (đưa g(x)ᵀp ra ngoài tích phân vì không dính đến t)
 >
-> ⇔ f(x + p) = f(x) + g(x)ᵀp + ∫0:1 [g(x + tp) - g(x)]Tpdt   
+> ⇔ f(x + p) = f(x) + g(x)ᵀp + ∫0:1 [g(x + tp) - g(x)]ᵀpdt   
 >
 > Đấy chính là công thức mà tác giả nói là từ Taylor's theorem, nhưng đáng lý tác giả nói từ FTC thì dễ hiểu hơn vì nếu soi từ 3 công thức Taylor theorem 2.4 → 2.6 thì hơi khó nhìn ra 
 >
 > Áp dụng vào đây ta có:
 >
-> f(xk + pk) = f(xk) + g(xk)ᵀpk + ∫0:1 [g(xk + tpk) - g(xk)]Tpkdt 
+> f(xk + pk) = f(xk) + g(xk)ᵀpk + ∫0:1 [g(xk + tpk) - g(xk)]ᵀpkdt 
 >
 > **CHÚ Ý, TÁC GIẢ GHI SAI / THỪA "for some t ∈ (0,1)"**
 >
-> Với mk(pk) = f(xk) + gkTpk + (1/2)pkTBkpk và f(xk + pk) bằng ở trên ta sẽ tính:
+> Với mk(pk) = f(xk) + gkTpk + (1/2)pkᵀBkpk và f(xk + pk) bằng ở trên ta sẽ tính:
 >
 > |mk(pk) - f(xk + pk)| 
 >
-> = |f(xk) + gkTpk + (1/2)pkTBkpk - [f(xk) + g(xk)ᵀpk + ∫0:1 [g(xk + tpk) - g(xk)]Tpkdt ]|
+> = |f(xk) + gkTpk + (1/2)pkᵀBkpk - [f(xk) + g(xk)ᵀpk + ∫0:1 [g(xk + tpk) - g(xk)]ᵀpkdt ]|
 >
-> = |f(xk) + gkTpk + (1/2)pᵀBkpk - f(xk) - g(xk)ᵀpk - ∫0:1 [g(xk + tpk) - g(xk)]Tpkdt ]|
+> = |f(xk) + gkTpk + (1/2)pᵀBkpk - f(xk) - g(xk)ᵀpk - ∫0:1 [g(xk + tpk) - g(xk)]ᵀpkdt ]|
 >
-> = |(1/2)pkTBkpk - ∫0:1 [g(xk + tpk) - g(xk)]Tpkdt ]|
+> = |(1/2)pkᵀBkpk - ∫0:1 [g(xk + tpk) - g(xk)]ᵀpkdt ]|
 >
 > Tác giả ghi cái này ≤ {(β/2)||pk||² + β1||pk||² với β1 là Lipschitz constant cho g trong set S(R0)m và assume ||pk|| < R0
 >
@@ -496,29 +496,29 @@
 >
 > Đầu tiên: Dùng bất đẳng thức tam giác: |A + B| ≤ |A| + |B|
 >
-> ⇨ |(1/2)pkTBkpk - ∫0:1 [g(xk + tpk) - g(xk)]Tpkdt ]| 
+> ⇨ |(1/2)pkᵀBkpk - ∫0:1 [g(xk + tpk) - g(xk)]ᵀpkdt ]| 
 >
-> ≤ |(1/2)pkTBkpk| + |-∫0:1 [g(xk + tpk) - g(xk)]Tpkdt ]|
+> ≤ |(1/2)pkᵀBkpk| + |-∫0:1 [g(xk + tpk) - g(xk)]ᵀpkdt ]|
 >
-> = |(1/2)pkTBkpk| + |∫0:1 [g(xk + tpk) - g(xk)]Tpkdt ]|
+> = |(1/2)pkᵀBkpk| + |∫0:1 [g(xk + tpk) - g(xk)]ᵀpkdt ]|
 >
-> Xét cái hạng tử đầu tiên: |(1/2)pkTBkpk|
+> Xét cái hạng tử đầu tiên: |(1/2)pkᵀBkpk|
 >
-> |pkTBkpk| = |pkT(Bkpk)| ≤ | ||pk|| . ||Bkpk|| | (vì aTb = ||a|| ||b|| cos θ(a,b) ≤ ||a|| ||b||)
+> |pkᵀBkpk| = |pkᵀ(Bkpk)| ≤ | ||pk|| . ||Bkpk|| | (vì aTb = ||a|| ||b|| cos θ(a,b) ≤ ||a|| ||b||)
 >
 > Dùng định nghĩa của norm ||A||:  max x ||Ax|| / ||x|| ⇨ ||Ax|| / ||x|| ≤ ||A||. Áp dụng vào đây: ||Bkpk|| / ||pk|| ≤ ||Bk||, hay ||Bkpk|| ≤ ||Bk|| . ||pk||
 >
-> ⇨ |pkTBkpk| = |pkT(Bkpk)| ≤ | ||pk|| . ||Bkpk|| | ≤ | ||pk|| ||Bk|| ||pk|| | = | ||Bk|| ||pk||² | = ||Bk|| ||pk||²
+> ⇨ |pkᵀBkpk| = |pkᵀ(Bkpk)| ≤ | ||pk|| . ||Bkpk|| | ≤ | ||pk|| ||Bk|| ||pk|| | = | ||Bk|| ||pk||² | = ||Bk|| ||pk||²
 >
 > Dùng giả thiết của theorem tác giả đã nói ||Bk|| ≤ β for some constant β.
 >
-> ⇨ pkTBkpk = pkT(Bkpk) ≤ ||pk|| . ||Bkpk|| ≤ ||pk|| ||Bk|| ||pk|| = ||Bk|| ||pk||² ≤ β ||pk||²
+> ⇨ pkᵀBkpk = pkᵀ(Bkpk) ≤ ||pk|| . ||Bkpk|| ≤ ||pk|| ||Bk|| ||pk|| = ||Bk|| ||pk||² ≤ β ||pk||²
 >
-> Thêm 1/2 vào, viết lại: (1/2)pkTBkpk ≤ (1/2)β ||pk||² Đây là cái hạng tử đầu tiên của 4.27
+> Thêm 1/2 vào, viết lại: (1/2)pkᵀBkpk ≤ (1/2)β ||pk||² Đây là cái hạng tử đầu tiên của 4.27
 >
 > ====
 >
-> Xét hạng tử thứ 2: |∫0:1 [g(xk + tpk) - g(xk)]Tpkdt ]|
+> Xét hạng tử thứ 2: |∫0:1 [g(xk + tpk) - g(xk)]ᵀpkdt ]|
 >
 > Dùng tính chất Lipschitz continuous, ta nhớ cái này đại ý nôm na là vầy: Khi đi từ x đến y thì gradient không thay đổi qúa đột ngột. Và thể hiện bởi toán học là:
 >
@@ -534,11 +534,11 @@
 >
 > ⇔ ||g(xk + tpk) - g(xk)|| ≤ β1 ||(xk + tpk) - xk||
 >
-> ⇨ |∫0:1 [g(xk + tpk) - g(xk)]Tpkdt |
+> ⇨ |∫0:1 [g(xk + tpk) - g(xk)]ᵀpkdt |
 >
 > Đưa dấu giá trị tuyệt đối vào trong tích phân: 
 >
-> = ∫0:1 |[g(xk + tpk) - g(xk)]Tpk| dt 
+> = ∫0:1 |[g(xk + tpk) - g(xk)]ᵀpk| dt 
 >
 > ≤ ∫0:1 ||[g(xk + tpk) - g(xk)|| ||pk|| dt  (áp dụng aTb ≤ ||a|| ||b||)
 >
