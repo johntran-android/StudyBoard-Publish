@@ -1,6 +1,6 @@
 # 11.1 & 2  introduction, One-way Anova
 
-📊 **Progress:** `22` Notes | `29` Screenshots | `22` AI Reviews
+📊 **Progress:** `22` Notes | `30` Screenshots | `22` AI Reviews
 
 ---
 <a id="node-c5qtmoe"></a>
@@ -743,15 +743,15 @@
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
-> Ghi chú tóm tắt rất chính xác và đầy đủ nội dung đoạn giới thiệu, đồng thời liên hệ chuẩn xác lại định nghĩa và biểu diễn toán học của contrast từ phần trước.
+> Ghi chú tóm tắt rất chính xác và súc tích nội dung phần mở đầu, đồng thời liên kết tốt với kiến thức về contrast và giả thuyết không (null hypothesis) ở phần trước.
 >
 > **✓ Strengths**
-> - Nhớ và nhắc lại chính xác định nghĩa toán học của contrast (tổ hợp tuyến tính có tổng các hệ số bằng 0).
-> - Kết nối chính xác giả thuyết H0 của ANOVA với không gian contrast a^T θ = 0 với mọi a thuộc A.
-> - Nắm rõ vai trò trung tâm của contrast trong việc thực hiện các suy luận thống kê nâng cao trong ANOVA.
+> - Nắm vững định nghĩa contrast là tổ hợp tuyến tính có tổng các hệ số bằng 0.
+> - Tóm tắt đúng bản chất giả thuyết H0 trong ANOVA dưới dạng kiểm định các contrast.
+> - Truyền tải trọn vẹn thông điệp chính của tác giả về vai trò của contrast trong phân tích suy luận ANOVA.
 >
 > **💡 Deeper notes**
-> - Đoạn văn cũng lưu ý rằng dù trọng tâm là contrast, phần tiếp theo sẽ bắt đầu tổng quát hơn từ việc suy luận cho một tổ hợp tuyến tính đơn lẻ (single linear combination) bất kỳ trước khi thu hẹp về contrast.
+> - Đoạn văn cuối đề cập tác giả sẽ bắt đầu từ suy luận cho một tổ hợp tuyến tính đơn lẻ tổng quát (single linear combination) trước khi đi sâu vào contrast cụ thể.
 
 <br>
 
@@ -889,7 +889,7 @@
 >
 >
 >
-> Vì student t bậc tự do n-1 theo định nghĩa là phân phối của (X̄ - μ) / (S/√n) với random sample \~ normal.
+> **Vì student t bậc tự do n-1 theo định nghĩa là phân phối của (X̄ - μ) / (S/√n) với random sample \~ normal.**
 >
 >
 >
@@ -1426,7 +1426,7 @@
 >
 >
 >
-> Ta biết THEO THEOREM (...) NẾU NHƯ CÓ RANDOM SAMPLE Xi là normal có mean μ, variance σ²: biến ngẫu nhiên sau đâu (X̄ -μ)/(S/√n) sẽ \~ t_n-1.
+> **Ta biết THEO ĐỊNH NGHĨA CỦA PHÂN PHỐI STUDENT t_n-1, nếu như có random sample Xi là normal có mean μ, variance σ²: biến ngẫu nhiên sau đâY (X̄ -μ)/(S/√n) sẽ \~ t_n-1**.
 >
 >
 >
@@ -1524,7 +1524,7 @@
 > - Quy tắc bác bỏ trong đề bài dùng dấu '>' thay vì '≥', tuy nhiên do thống kê T tuân theo phân phối liên tục t_{n-1} nên P(|T| = t_{n-1, α/2}) = 0, việc dùng '>' hay '≥' không làm thay đổi kích thước mức α của kiểm định.
 > - Ngưỡng hằng số c của LRT luôn thoả mãn 0 < c ≤ 1 để đảm bảo c^(-2/n) - 1 ≥ 0, tương ứng với miền bác bỏ hợp lệ.
 
-**🔗 See also:** [Kiểm định LRT cho trung bình](./82_method_of_finding_tests.md#node-ouhenhy) · [LRT với tham số gây nhiễu](./82_method_of_finding_tests.md#node-elajwsz) · [MLEs phân phối chuẩn](./72_method_of_finding_estimators.md#node-6nhtwtp)
+**🔗 See also:** [Kiểm định LRT cho trung bình](./82_method_of_finding_tests.md#node-ouhenhy) · [LRT với tham số gây nhiễu](./82_method_of_finding_tests.md#node-elajwsz) · [MLEs phân phối chuẩn](./72_method_of_finding_estimators.md#node-6nhtwtp) · [Phân phối và biến động trung bình mẫu](./53_sampling_from_the_normal_distribution.md#node-153vzn2)
 
 <br>
 
@@ -1911,19 +1911,68 @@
 <p align="center"><kbd><img src="assets/ipj2f27m79.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> QUAY LẠI SAU
+> Ví dụ để test H0: θ1 = θ2 vs H1: θ1 ≠ θ2 thì phép kiểm định sau là level alpha test:
+>
+>
+>
+> Reject H0 khi |(Ȳ1 - Ȳ2)/√S²\_p (1/n1+1/n2)| &gt; t_N-k,α/2
+>
+>
+>
+> Là sao?
+>
+>
+>
+> Ở note trước ta có \[(Σi=1:k aiȲi) - Σi aiθi\]/√Σi ai²/ni\] / √(S²\_p) \~ t_N-k
+>
+>
+>
+> và note ta cũng chứng minh cái test reject H0: θ = θ0 vs H1 có rule sau đây sẽ là size α test:\
+> \
+> Reject H0 khi |(X̄ -θ0)| ≥ (t_n-1, α/2) √(S²/n) 
+>
+>
+>
+> (vì nếu θ0 là true mean (tức dưới giả định H0: θ = θ0) thì phân phối của (X̄-θ0)/√(S²/n) được định nghĩa là student t bậc n-1) thành ra cái test này là test thỏa (sup\_Θ0 P\_θ(reject H0) = P\_θ0(reject H0) = P\_θ0(|(X̄ -θ0)| ≥ (t_n-1, α/2) √(S²/n)) = P\_θ0(|(X̄ -θ0)|/√(S²/n) ≥ (t_n-1, α/2)) = P\_θ0(|T_n-1| ≥ (t_n-1, α/2)) = α)
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì nếu 𝐚 = (1, -1, 0,...0), \[(Σi=1:k aiȲi) - Σi aiθi\]/√Σi ai²/ni\] / √(S²\_p) = \[(Ȳ1 - Ȳ2) - Σi aiθi\]/√Σi ai²/ni\] / √(S²\_p), dĩ nhiên vẫn là random variable T_N-k
+>
+>
+>
+> Từ đó phép kiểm định Reject H0 khi |(Ȳ1 - Ȳ2)/√S²\_p (1/n1+1/n2)| &gt; t_N-k,α/2 sẽ có đặc điểm (sup\_Θ0 P\_θ(reject H0) ≤ α, nên là level α test.
 
 > [!TIP]
-> 🤖 **AI Check** — 🔴 Critical issues — ❌ **0/100** · ✗ Fix first
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú chưa có bất kỳ nội dung kiến thức hay bài giải nào để đánh giá. Hãy hoàn thành bài học rồi quay lại kiểm tra nhé.
+> Ghi chú rất tốt, kết nối chính xác công thức thống kê t tổng quát của ANOVA contrast với trường hợp cụ thể của vector a = (1, -1, 0, ..., 0).
 >
-> **🔴 Critical issues**
+> **🟡 Minor issues**
 >
-> **1.** *"QUAY LẠI SAU"*
+> **1.** *"Thế thì nếu 𝐚 = (1, -1, 0,...0), [(Σi=1:k aiȲi) - Σi aiθi]/√Σi ai²/ni] / √(S²_p) = [(Ȳ1 - Ȳ2) - Σi aiθi]/√Σi ai²/ni] / √(S²_p)"*
 >
-> Chưa thực hiện nội dung học tập hay bài giải nào, chỉ là ghi chú tạm hoãn.
+> Có thể làm rõ thêm bước thay trực tiếp điều kiện dưới H0 (tức θ1 - θ2 = 0) và tính luôn đại lượng ở mẫu: ∑ ai²/ni = 1/n1 + 1/n2 để biểu thức triệt tiêu hoàn toàn thành thống kê kiểm định.
 >
+>
+> **✓ Strengths**
+> - Hiểu rõ bản chất kiểm định t trong ANOVA contrast xuất phát từ pivotal quantity tuân theo phân phối Student t bậc N - k.
+> - Lập luận chặt chẽ về mặt xác suất sai lầm loại I (size / level alpha test) thông qua hàm xác suất dưới giả thuyết H0.
+>
+> **💡 Deeper notes**
+> - Lưu ý quan trọng của sách là sự khác biệt với two-sample t-test thông thường: ở đây bậc tự do là N - k và S_p^2 sử dụng thông tin gộp từ toàn bộ k nhóm (kể cả nhóm 3 đến k), giúp ước lượng phương sai σ² có nhiều bậc tự do hơn.
+
+<br>
+
+<a id="node-yhgppns"></a>
+
+###### Section 11.2.4 The ANOVA F Test
+
+<p align="center"><kbd><img src="assets/3yx019u1vez.png" width="80%"></kbd></p>
 
 <br>
 
