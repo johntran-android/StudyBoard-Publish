@@ -147,7 +147,7 @@
 >
 > ⇔ τ = - gkTpks / pksTBkpks 
 >
-> = - gkT[- (Δ/||gk||) gk] / [- (Δ/||gk||) gk]TBk[- (Δ/||gk||) gk]
+> = - gkT[- (Δ/||gk||) gk] / [- (Δ/||gk||) gk]ᵀBk[- (Δ/||gk||) gk]
 >
 > = [(Δ/||gk||) gkTgk] / [(Δ/||gk||)² gkTBkgk]
 >
@@ -159,7 +159,7 @@
 >
 > → critical point τ* = ||gk||^3 / (ΔgkTBkgk)
 >
-> Đạo hàm cấp 2 tại critical point: g''(τ) = pksTBkpks = [- (Δ/||gk||) gk]TBk[- (Δ/||gk||) gk]
+> Đạo hàm cấp 2 tại critical point: g''(τ) = pksTBkpks = [- (Δ/||gk||) gk]ᵀBk[- (Δ/||gk||) gk]
 >
 > = (Δ/||gk||)² gkTBkgk 
 >
