@@ -1,6 +1,6 @@
 # Untitled
 
-📊 **Progress:** `1` Notes | `7` Screenshots | `1` AI Reviews
+📊 **Progress:** `1` Notes | `6` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-rxqnxgs"></a>
@@ -20,8 +20,6 @@
 <p align="center"><kbd><img src="assets/f3p2bxjcqlr.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/cgakokiy7m7.png" width="80%"></kbd></p>
-
-<p align="center"><kbd><img src="assets/9ef8eb.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đoạn này đại khái là derive công thức chính xác của Hessian ∇² E(𝐰) cho một nn có hai layer.
