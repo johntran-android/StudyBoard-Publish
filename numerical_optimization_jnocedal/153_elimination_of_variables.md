@@ -1,4 +1,4 @@
-# 15.3 Elimination Of Variables
+# 15.3 Elimination of variables
 
 📊 **Progress:** `9` Notes | `27` Screenshots | `9` AI Reviews
 
