@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1794030492755,
+  "publishedAt": 1794161786892,
   "sections": [
     {
       "title": "📋 Overview",
@@ -207,7 +207,7 @@
       "imageCount": 12
     },
     {
-      "title": "15.3 Elimination Of Variables",
+      "title": "15.3 Elimination of variables",
       "path": "numerical_optimization_jnocedal/153_elimination_of_variables.md",
       "noteCount": 9,
       "imageCount": 27
@@ -233,8 +233,8 @@
     {
       "title": "16.3 Iterative method solve KKT system",
       "path": "numerical_optimization_jnocedal/163_iterative_method_solve_kkt_system.md",
-      "noteCount": 0,
-      "imageCount": 3
+      "noteCount": 2,
+      "imageCount": 5
     },
     {
       "title": "Appendix A",
@@ -255,6 +255,6 @@
       "imageCount": 11
     }
   ],
-  "totalNotes": 453,
-  "totalImages": 693
+  "totalNotes": 455,
+  "totalImages": 695
 }
