@@ -58,7 +58,7 @@
 >
 > Trong thực tế, tác gỉa nói một cách để chọn M là làm y vậy, vẽ cái biểu đồ này ra và chọn mô hình (tức là cả kiến trúc và giá trị tham số đã train) có validation error thấp nhất.
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=vsLY94KCVew)
+📹 [Xem video trên YouTube](https://youtu.be/vsLY94KCVew)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -74,8 +74,6 @@
 > - Bản chất cốt lõi của việc kết quả dao động mạnh giữa các lần chạy với cùng một giá trị M là do hàm lỗi của mạng nơ-ron có nhiều cực tiểu cục bộ (local minima), khiến thuật toán tối ưu hội tụ về các nghiệm khác nhau tùy thuộc vào điểm khởi tạo.
 
 <br>
-
-<a id="node-ocss2l4"></a>
 
 <a id="node-isdhxmf"></a>
 
@@ -154,6 +152,8 @@
 >
 >
 > đây chính là minimize sse với L2 regularizer
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=cpsMJoxEAms)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
