@@ -1,6 +1,6 @@
 # 2.2 Multinomial Variables
 
-📊 **Progress:** `7` Notes | `10` Screenshots | `4` AI Reviews
+📊 **Progress:** `7` Notes | `10` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-3wyjcuf"></a>
@@ -107,24 +107,31 @@
 >
 >
 >
-> Còn xem thử E[𝐗|**μ**] là sao ? Câu trả lời là theo định nghĩa của  kì vọng
-> thôi - là weighted average các possible value của 𝐗 với weight là pmf
-> tương ứng:
+> Còn xem thử E\[𝐗|**μ**\] là sao ? Câu trả lời là theo định nghĩa của kì vọng thôi - là weighted average các possible value của 𝐗 với weight là pmf tương ứng:
 >
 >
 >
-> E[𝐗|**μ**] = Σ_{xi=𝐱1,..𝐱K} 𝐱iP(𝐗=𝐱i) (*𝐱i là các one-hot vector, hay cũng dễ nhận 
-> dưới góc nhìn đại số tuyến tính, đây chính là các standard basis 𝐞i )
+> E\[𝐗|**μ**\] = Σ\_{xi=𝐱1,..𝐱K} 𝐱iP(𝐗=𝐱i) ( × 𝐱i là các one-hot vector, hay cũng dễ nhận dưới góc nhìn đại số tuyến tính, đây chính là các standard basis 𝐞i )
 >
 >
 >
-> = Σ_{𝐱i=𝐱1,..𝐱K} 𝐱i μi
+> = Σ\_{𝐱i=𝐱1,..𝐱K} 𝐱i μi
 >
 >
 >
-> Và cái này chính là gì? ⇨ linear combination các vector 𝐱i với hệ số μi. và
-> dễ hiểu kết quả là vector **μ** (vì μ1*[1,0,..0]ᵀ + μ2*([0,1,0..]ᵀ + .. = [μ1, μ2,..]ᵀ
-> = **μ**)
+> Và cái này chính là gì? ⇨ linear combination các vector 𝐱i với hệ số μi. và dễ hiểu kết quả là vector **μ** (vì μ1 × \[1,0,..0\]ᵀ + μ2 × (\[0,1,0..\]ᵀ + .. = \[μ1, μ2,..\]ᵀ = **μ**)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú giải thích rất chính xác và trực quan bản chất của kỳ vọng qua góc nhìn tổ hợp tuyến tính các vector cơ sở chuẩn (one-hot vectors).
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất của biến ngẫu nhiên dạng one-hot vector tương ứng với các vector cơ sở chuẩn (standard basis vectors).
+> - Diễn giải phép tính kỳ vọng dưới dạng tổ hợp tuyến tính có trọng số một cách rõ ràng và trực quan.
+>
+> **💡 Deeper notes**
+> - Trong sách tham khảo gốc (Bishop PRML) ở công thức (2.28) có một lỗi typo in nhầm K thành M ở chỉ số cuối $(\mu_1, \dots, \mu_M)^T$, việc bạn hiểu đúng bản chất theo số chiều $K$ là hoàn toàn chính xác.
 
 <br>
 
@@ -242,6 +249,27 @@
 >
 > Cũng ko khó để hiểu T(𝐱)_K, tổng các phần tử thứ k của các vector **x1**,...**xN**
 > thì cũng chính là tổng số các observed value ứng với U = uk.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, hiểu sâu sắc bản chất khi liên hệ giữa góc nhìn của Bishop và kiến thức thống kê cổ điển trong Casella-Berger. Việc tự chứng minh tính sufficient statistic thông qua định lý nhân tử hóa Fisher-Neyman là một điểm cộng lớn.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"khi pdf của 𝐗: f(x|θ) có thể được factor..."*
+>
+> Vì các biến quan sát mang giá trị one-hot rời rạc, hàm phân phối ở đây chính xác là hàm khối xác suất (pmf - probability mass function) chứ không phải hàm mật độ xác suất (pdf), dù định lý Neyman factorization áp dụng hoàn toàn tương đương cho cả hai trường hợp.
+>
+>
+> **✓ Strengths**
+> - Phân biệt rất rõ ràng và chuẩn xác giữa biến ngẫu nhiên (chữ hoa) và giá trị quan sát thực nghiệm (chữ thường).
+> - Các bước biến đổi hoán đổi vị trí hai dấu tích và gom lũy thừa được trình bày chi tiết, mạch lạc.
+> - Tự liên hệ và áp dụng thành công Định lý nhân tử hóa Neyman (Factorization Theorem) để giải thích tường minh vì sao $m_k$ là sufficient statistic.
+>
+> **💡 Deeper notes**
+> - Do có ràng buộc $\sum_{k=1}^K x_{nk} = 1$, ta luôn có $\sum_{k=1}^K m_k = N$, nghĩa là vector thống kê đủ thực chất chỉ có $K-1$ bậc tự do độc lập.
+> - Dạng lũy thừa của hàm likelihood này là đặc trưng kinh điển của họ hàm mũ (Exponential Family), trong đó vector $m = (m_1, \dots, m_K)^T$ chính là natural sufficient statistic.
 
 <br>
 
