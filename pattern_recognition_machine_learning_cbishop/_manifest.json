@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1794019165293,
+  "publishedAt": 1794347914304,
   "sections": [
     {
       "title": "📋 Overview",
@@ -549,6 +549,24 @@
       "imageCount": 2
     },
     {
+      "title": "5.4.5 Exact evaluation of the Hessian",
+      "path": "pattern_recognition_machine_learning_cbishop/545_exact_evaluation_of_the_hessian.md",
+      "noteCount": 1,
+      "imageCount": 6
+    },
+    {
+      "title": "5.4.6 Fast multiplication by the Hessian",
+      "path": "pattern_recognition_machine_learning_cbishop/546_fast_multiplication_by_the_hessian.md",
+      "noteCount": 1,
+      "imageCount": 4
+    },
+    {
+      "title": "5.5. Regularization in Neural Networks",
+      "path": "pattern_recognition_machine_learning_cbishop/55_regularization_in_neural_networks.md",
+      "noteCount": 2,
+      "imageCount": 6
+    },
+    {
       "title": "5.7 Ex",
       "path": "pattern_recognition_machine_learning_cbishop/57_ex.md",
       "noteCount": 1,
@@ -565,14 +583,8 @@
       "path": "pattern_recognition_machine_learning_cbishop/appendix_d_calculus_of_variation.md",
       "noteCount": 5,
       "imageCount": 7
-    },
-    {
-      "title": "Untitled",
-      "path": "pattern_recognition_machine_learning_cbishop/untitled.md",
-      "noteCount": 1,
-      "imageCount": 6
     }
   ],
-  "totalNotes": 516,
-  "totalImages": 854
+  "totalNotes": 519,
+  "totalImages": 864
 }
