@@ -1,6 +1,6 @@
 # 11.1 & 2  introduction, One-way Anova
 
-📊 **Progress:** `22` Notes | `30` Screenshots | `22` AI Reviews
+📊 **Progress:** `26` Notes | `38` Screenshots | `26` AI Reviews
 
 ---
 <a id="node-c5qtmoe"></a>
@@ -1973,6 +1973,637 @@
 ###### Section 11.2.4 The ANOVA F Test
 
 <p align="center"><kbd><img src="assets/3yx019u1vez.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là phần này ta sẽ học về phép kiểm định cho ANOVA hypothesis:
+>
+>
+>
+> Còn nhớ, ANOVA null hypothesis: H0: mọi θi đều bằng nhau
+>
+>
+>
+> Và dùng khái niệm contrast, H0 thể hiện bởi: Σi ai θi = 0 ∀𝐚 ∈ 𝒜 (tập các 𝐚 sao cho Σi ai = 0)
+>
+>
+>
+> Thế thì dùng union-intersection ta sẽ thể hiện H0 bởi intersection của các H0 của các phép thử con như sau:
+>
+>
+>
+> Gọi Θ\_𝐚 là {θ: Σi ai θi = 0}
+>
+>
+>
+> Thì như vậy dễ hiểu là Σi ai θi = 0 ∀ 𝐚 ∈ 𝒜 ⇔ θ ∈ Θ\_𝐚 ∀ 𝐚 ∈ 𝒜 ⇔ θ ∈ ∩\_𝐚∈𝒜  Θ\_𝐚
+>
+>
+>
+> Nên H0 có thể thể hiện thành: θ ∈ ∩\_𝐚∈𝒜  Θ\_𝐚
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác và mạch lạc logic biểu diễn giả thuyết không (H0) của ANOVA dưới dạng giao (intersection) của các không gian tham số con thông qua tương phản (contrast).
+>
+> **✓ Strengths**
+> - Nắm vững định nghĩa giả thuyết H0 của ANOVA thông qua hệ các tương phản (contrast).
+> - Trình bày logic và chuẩn xác từng bước biểu diễn không gian tham số của H0 thành dạng giao các tập Θ_a để áp dụng phương pháp kiểm định Union-Intersection.
+>
+> **💡 Deeper notes**
+> - Trong phương pháp Union-Intersection (UIT), việc viết H0 thành phép giao (intersection) của các không gian tham số sẽ tương ứng với việc miền bác bỏ (rejection region) của kiểm định tổng quát là phép hợp (union) của các miền bác bỏ của từng phép thử con.
+
+<br>
+
+<a id="node-bcxrmfx"></a>
+
+###### Union-Intersection Test in ANOVA
+
+<p align="center"><kbd><img src="assets/y7kqf8uawvk.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Như vậy ta theo phương pháp xây dựng phép kiểm định union-intersection
+>
+>
+>
+> Thì nếu phép kiểm định reject H0 thì nó ≡ sẽ reject một H0\_𝐚 bất kì.
+>
+>
+>
+> Xét bài toán con: testing H0\_𝐚: θ ∈ Θ\_𝐚 vs H1\_𝐚: θ ∉ Θ\_𝐚, ta có thể dùng t-statistic test  11.2.6
+>
+>
+>
+> theo đó, ta sẽ reject H0\_𝐚 nếu T\_𝐚 &gt; k (k chọn sao đó nói sau)
+>
+>
+>
+> nhưng dễ thấy ta chỉ cần test với bài toán con mà T\_𝐚 lớn nhất 
+>
+>
+>
+> vì nếu giống như để check xem có ít nhất có một thằng lớn hơn k thì chỉ cần check thằng to nhất lớn hơn k thôi
+>
+>
+>
+> Như vậy phép kiểm định sẽ là:
+>
+> \
+> Reject H0 ⇔ Reject H0\_𝐚 for any 𝐚 ⇔ T\_𝐚 &gt; k  for any 𝐚 ⇔ sup\_𝐚 T\_𝐚 &gt; k
+>
+>
+>
+> Và chọn k để có level α test:
+>
+>
+>
+> sup\_θ∈Θ0 P\_θ(Reject H0)
+>
+>
+>
+> = sup\_θ∈Θ0 P\_θ(sup\_𝐚 T\_𝐚 &gt; k) = α
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc và chính xác bản chất của phương pháp union-intersection: bác bỏ H0 khi có ít nhất một kiểm định thành phần bị bác bỏ, tương đương với kiểm tra giá trị lớn nhất (supremum).
+>
+> **✓ Strengths**
+> - Hiểu chính xác trực giác của Union-Intersection Test (UIT): việc kiểm tra xem có ít nhất một T_a > k hay không tương đương với kiểm tra giá trị lớn nhất sup_a T_a > k.
+> - Trình bày mạch lạc logic dẫn xuất từ bài toán con, thống kê kiểm định t đến bài toán tối ưu sup_a T_a.
+> - Nêu đúng cách xác định hằng số ngưỡng k để đảm bảo mức ý nghĩa (level/size) alpha dưới không gian giả thuyết H0.
+>
+> **💡 Deeper notes**
+> - Cụm từ tiếng Anh 'for any a' trong ngữ cảnh bài này mang nghĩa 'tồn tại ít nhất một a' (for at least one a / for some a) chứ không phải 'với mọi a' (for all a). Bạn đã hiểu đúng bản chất ('ít nhất có một thằng'), nhưng khi viết ký hiệu toán học nên dùng ∃a thay vì giữ nguyên chữ 'for any a' để tránh nhầm lẫn về mặt logic.
+
+<br>
+
+<a id="node-fmkt4vb"></a>
+
+###### Lemma 11.2.7 Contrast Maximization (bản sao)
+
+<p align="center"><kbd><img src="assets/h550a9c9c8m.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/0uaahjjodw6.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ujn0b7b9bdc.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Cov(X,Y) = E\[(X-EX)(Y-EY)\]
+>
+>
+>
+> = E\[XY-(EX)Y-X(EY)+(EX)(EY)\]
+>
+>
+>
+> = E(XY) - (EX)(EY) - (EX)(EY) + (EX)(EY)
+>
+>
+>
+> = E(XY) - (EX)(EY)
+>
+>
+>
+> ---
+>
+> Bất đẳng thức Cauchy-Schwarz:
+>
+>
+>
+> E\[(U-tV)²\] ≥ 0 ∀t
+>
+>
+>
+> ⇔ E\[U² - 2U(tV) + (tV)²\] ≥ 0
+>
+>
+>
+> ⇔ E\[U²\] - E\[2U(tV)\] + E\[(tV)²\] ≥ 0
+>
+>
+>
+> ⇔ E\[U²\] - 2tE\[UV\] + t²E\[V²\] ≥ 0
+>
+>
+>
+> ⇔ E\[V²\]t² - 2E\[UV\]t + E\[U²\] ≥ 0 ∀t (1)
+>
+>
+>
+> Xét hàm f(t) = E\[V²\]t² - 2E\[UV\]t + E\[U²\]
+>
+>
+>
+> d/dt f(t) = 2E\[V²\]t - 2E\[UV\]
+>
+>
+>
+> Điều kiện tối ưu cần bậc nhất: d/dt f(t) = 0 ⇔ 2E\[V²\]t - 2E\[UV\] = 0
+>
+>
+>
+> ⇔ t = E\[UV\]/ E\[V²\] (giả định E\[V²\] &gt; 0)
+>
+>
+>
+> d/dt \[2E\[V²\]t - 2E\[UV\]\] = 2E\[V²\] ≥ 0 với t
+>
+>
+>
+> Suy ra hàm số đạt cực tiểu tại t0 = E\[UV\] / E\[V²\]
+>
+>
+>
+> (1) ⇔ f(t0) ≥ 0
+>
+>
+>
+> E\[V²\](E\[UV\]/ E\[V²\])² - 2E\[UV\](E\[UV\]/ E\[V²\]) + E\[U²\] ≥ 0
+>
+>
+>
+> ⇔ (E\[UV\])²/ E\[V²\] - 2(E\[UV\])²/ E\[V²\] + E\[U²\] ≥ 0
+>
+>
+>
+> ⇔ -(E\[UV\])²/ E\[V²\] + E\[U²\] ≥ 0
+>
+>
+>
+> ⇔ E\[U²\] ≥ (E\[UV\])²/ E\[V²\]
+>
+>
+>
+> ⇔ E\[U²\]E\[V²\] ≥ (E\[UV\])²
+>
+>
+>
+> đây chính là bất đẳng thức Cauchy-Schwarz:
+>
+>
+>
+> (E\[UV\])² ≤ E\[U²\]E\[V²\]
+>
+>
+>
+> Áp dụng cho: U = X - EX, V = Y - EY
+>
+>
+>
+> (E\[(X-EX)(Y-EY)\])² ≤ E\[(X-EX)²\]E\[(Y-EY)²\]
+>
+>
+>
+> ⇔ \[Cov(X,Y)\]² ≤ Var(X) Var(Y)
+>
+>
+>
+> ---
+>
+>
+>
+> Áp dụng cho U = (X - EX), V = (Y - EY)
+>
+>
+>
+> (E\[(X - EX)(Y - EY)\])² ≤ E\[(X - EX)²\]E\[(Y - EY)²\]
+>
+>
+>
+> (Cov(X,Y))² ≤ Var(X)Var(Y)
+>
+>
+>
+> ⇔ -STD(X)STD(Y) ≤ (Cov(X,Y)) ≤ STD(X)STD(Y)
+>
+>
+>
+> ⇔ -1 ≤ Cov(X,Y) / STD(X)STD(Y) ≤ 1
+>
+>
+>
+> ⇔ -1 ≤ Corr(X,Y) ≤ 1
+>
+>
+>
+> ---
+>
+>
+>
+> Bổ đề nói rằng cho (v1,...vk) là constant và (c1,...ck) là constant dương. Và 𝒜 = {𝐚=(a1,...ak): Σiai = 0} thì khi đó:
+>
+>
+>
+> max\_𝐚∈𝒜 {(Σi aivi)² / (Σi ai²/ci)} = Σi ci(vi - v̄c)² với v̄c = Σi civi / Σici
+>
+>
+>
+> Và maximum sẽ đạt tại 𝐚 có dạng ai = Kci(vi-v̄c) với K là constant khác 0
+>
+>
+>
+> ---
+>
+>
+>
+> Chứng minh đại khái như sau:
+>
+>
+>
+> Đặt ℬ = {𝐛: (b1,...bk): Σi bi = 0 và Σi bi²/ci = 1}.
+>
+>
+>
+> Với mọi 𝐚 ∈ 𝒜, đặt 𝐛 sao cho:
+>
+>
+>
+> bi = ai/√(Σj aj²/cj) (1)
+>
+>
+>
+> Σi bi = Σi ai/√(Σj aj²/cj) = \[1/√(Σj aj²/cj)\] Σi ai = \[1/√(Σj aj²/cj)\] × 0 = 0
+>
+>
+>
+> ⇒ bi² = ai² / (Σj aj²/cj)
+>
+>
+>
+> Dễ thấy khi đó Σi bi²/ci
+>
+>
+>
+> = Σi {\[ai² / (Σj aj²/cj)\] / ci}
+>
+>
+>
+> = \[1/ (Σj aj²/cj)\] Σi ai²/ci (đưa thừa số chung 1/ (Σj aj²/cj) ra ngoài tổng)
+>
+>
+>
+> = (Σi ai²/ci) / (Σj aj²/cj)
+>
+>
+>
+> = 1
+>
+>
+>
+> vậy Σi bi²/ci = 1
+>
+>
+>
+> ---
+>
+>
+>
+> (1) cũng suy ra ai = bi √(Σj aj²/cj), i = 1,2,3,..
+>
+>
+>
+> ⇔ aivi = bivi √(Σj aj²/cj)
+>
+>
+>
+> ⇒ Σi ai vi = Σi {bivi √(Σj aj²/cj)}
+>
+>
+>
+> = √(Σj aj²/cj) Σi bivi (đưa thừa số chung √(Σj aj²/cj) ra ngoài)
+>
+>
+>
+> ⇔ Σi ai vi = √(Σj aj²/cj) Σi bivi
+>
+>
+>
+>  ⇔ (Σi ai vi)² = (Σj aj²/cj) (Σi bivi)² (bình phương hai vế)
+>
+>
+>
+>  ⇔ (Σi ai vi)²/ (Σi ai²/ci) = (Σi bivi)² (Σj aj²/cj) / (Σi ai²/ci)
+>
+>
+>
+>  ⇔ (Σi ai vi)²/ (Σi ai²/ci) = (Σi bivi)²
+>
+>
+>
+> ---
+>
+>
+>
+> Nhắc nhớ rằng, ta cần chứng minh chính là là max\_𝐚∈𝒜 {vế trái ở trên} = Σi ci(vi - v̄c)²
+>
+>
+>
+> Nên nay ta cần chứng minh max\_𝐚∈𝒜 {vế phải ở trên, tức (Σi bivi)² } = Σi ci(vi - v̄c)²
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy bài toán là maximize (Σi bivi)² , thì cơ bản là ta xem thử nó ≤ cái gì (tìm upperbound)
+>
+>
+>
+> R là rv có possible values: r1=b1/c1, r2=b2/c2,...,rk=bk/ck
+>
+>
+>
+> V là rv có possible values v1,...vk
+>
+>
+>
+> Và joint pmf của R,V là P(R=ri, V=vi) = ci/C
+>
+>
+>
+> P(R=ri) = Σ{mọi vi} P(R=ri, V=vi) = Σ{mọi vi} ci/C
+>
+>
+>
+> (với và ci/C ≥ 0, Σi ci/C = 1, ta có pmf hợp lệ)
+>
+>
+>
+> Đặt U là random variable = RV:
+>
+>
+>
+> Hãy nhìn U ở dạng: hàm của R,V: U = g(R,V) = RV
+>
+>
+>
+> khi đó theo 2D LOTUS:
+>
+>
+>
+> 1D: LOTUS X P(X=x), x1,x2,x3 E\[X\] = Σi=1,2,3 xiP(X=xi), Y = g(X), EY = Σi=1,2,3 g(xi)P(X=xi)
+>
+>
+>
+> E\[Y\] = Σ\_yi ∈{y1,y2,y3} yi P(Y=yi)
+>
+>
+>
+> 2D LOTUS X,Y P(X=x, Y=y), Z = g(X,Y) E\[Z\] = Σ{mọi possible value xi, yi} g(xi, yi) P(X=xi, Y=yi)
+>
+>
+>
+> E\[U\] = Σ{mọi possible value ri, vi} g(ri, vi) P(R=ri, V=vi)
+>
+>
+>
+> = Σ{mọi possible value ri, vi} rivi P(R=ri, V=vi)
+>
+>
+>
+> = Σ{mọi possible value ri, vi} (bi/ci) vi (ci/C)
+>
+>
+>
+> E\[U\] = E\[RV\] = Σi (bi/ci) vi ci/C
+>
+>
+>
+> Vậy E\[RV\] = Σi (bi/ci)vi ci/C
+>
+>
+>
+> ⇔ C × E\[RV\] = Σi bivi
+>
+>
+>
+> ⇔ E\[RV\] = Σi bivi / C 
+>
+>
+>
+> ---
+>
+>
+>
+> Đã ôn lại ở trên Cov(X,Y) = E\[(X-EX)(Y-EY)\] = E(XY) - (EX)(EY)
+>
+>
+>
+> nên Cov(R,V) = E(RV) - (ER)(EV)
+>
+>
+>
+> Mà E\[R\] = 0 (éo hiểu vì sao lão Casella phán vậy), nên Cov(R,V) = E\[RV\]
+>
+>
+>
+> Nên theo Cauchy Schwart inequality: \[Cov(X,Y)\]² ≤ Var(X) Var(Y)
+>
+>
+>
+> nên \[Cov(R,V)\]² ≤ Var(R)Var(V)
+>
+>
+>
+> ⇔ (E\[RV\])² ≤ Var(R)Var(V)
+>
+>
+>
+> ---
+>
+>
+>
+> (E\[RV\])² ≤ Var(R)Var(V)
+>
+>
+>
+> ⇔ (Σi bivi)²/C² ≤ Var(R)Var(V)
+>
+>
+>
+> Var(R) = E\[(R-ER)²\] = Σi (bi/ci - 0)² × P(R=bi/ci) = Σi (bi/ci)² × (ci/C)
+>
+>
+>
+> Var(V) = E\[(V-EV)²\]
+>
+>
+>
+> EV = Σi vi P(V=vi) = Σi vi ci/C = (Σi vici) / (Σi ci), đặt là v̄c
+>
+>
+>
+> ⇒ Var(V) = E\[(V-EV)²\] = Σi (vi-v̄c)² (ci/C)
+>
+>
+>
+> ---
+>
+>
+>
+> .. ⇔ (Σi bivi)²/C² ≤ \[Σi (bi/ci)² × (ci/C)\] \[Σi (vi-v̄c)² (ci/C)\]
+>
+>
+>
+> ⇔ \[Σi bivi\]²/C² ≤ \[Σi (bi/ci)² × (ci/C)\] \[Σi (vi-v̄c)² (ci/C)\]
+>
+>
+>
+> Dùng Σi bi²/ci = 1 ⇔ Σi \[(bi²/ci²) × ci\] = 1 ⇔ Σi \[(bi²/ci²) × ci/C\] = 1/C
+>
+>
+>
+> .. ⇔ \[Σi bivi\]²/C² ≤ (1/C) \[Σi (vi-v̄c)² (ci/C)\]
+>
+>
+>
+> ⇔ \[Σi bivi\]²≤ Σi \[(vi-v̄c)² ci\]
+>
+>
+>
+> ⇔ \[Σi bivi\]²≤ Σi \[ci(vi-v̄c)²\] → 11.2.11
+>
+>
+>
+> ---
+>
+>
+>
+> Cuối cùng, đại khái là khi dùng vector 𝐚 với ai = Kci(vi-v̄c) thì ta thấy:
+>
+>
+>
+> 1. 𝐚 ∈ 𝒜
+>
+>
+>
+> 2. lắp vô Σi bivi thì ra được kết quả là √vế phải
+>
+>
+>
+> Như vậy có thể kết luận đã chứng minh xong rằng nó chính là solution của maximize\_ 𝐚∈𝒜 \[Σi bivi\]² và tại đó \[Σi bivi\]² cũng là {(Σi aivi)² / (Σi ai²/ci)} sẽ đặt max = Σi ci(vi - v̄c)²
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất chi tiết, mạch lạc và bám sát toàn bộ các bước chứng minh trong sách giáo khoa, từ việc tự chứng minh bất đẳng thức Cauchy-Schwarz đến việc áp dụng biến ngẫu nhiên rời rạc.
+>
+> **✓ Strengths**
+> - Tự diễn giải và chứng minh lại bất đẳng thức Cauchy-Schwarz từ tính chất tam thức bậc hai không âm một cách rất rõ ràng.
+> - Biến đổi chuẩn hóa từ không gian vector a sang vector b trên mặt cầu elip chuẩn hóa rất chặt chẽ và dễ hiểu.
+> - Hiểu chuẩn xác cách kiến tạo phân phối xác suất rời rạc dựa trên các trọng số ci/C để quy bài toán đại số tuyến tính về hiệp phương sai và phương sai.
+>
+> **💡 Deeper notes**
+> - Khi thay ai = K * ci * (vi - v̄c), nếu K < 0 thì căn bậc hai mẫu số sẽ kéo ra |K| = -K, khi đó tổng b_i * v_i bằng -√(Σ ci(vi - v̄c)²). Tuy nhiên khi bình phương lên thì giá trị vẫn đạt đúng cận trên, do đó K là hằng số khác 0 bất kỳ (âm hay dương) đều tối ưu.
+> - Trường hợp tất cả vi bằng nhau (vi = v̄c với mọi i), cận trên bằng 0 và bất đẳng thức trở thành đẳng thức hiển nhiên với mọi a.
+
+<br>
+
+<a id="node-o4n9nrm"></a>
+
+###### Maximizing the Contrast T-Statistic
+
+<p align="center"><kbd><img src="assets/fjf14esk66w.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/t8j5aovolr.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/2v4nzwwnc2i.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/94363d01wyd.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là, áp dụng bổ đề 11.2.7, ta có thể chứng minh rằng cái thằng T_𝐚² lớn nhất là:
+>
+> sup_ 𝐚:Σiai=0 (T_𝐚)² = Σi ni[(Ȳi- Y̿) - (θi- θ̄ )]² / S²_p , mình đặt cái này là T_𝐚*
+>
+> và có thể chứng minh rằng Σi ni[(Ȳi- Y̿) - (θi- θ̄ )]²/ S²_p chính là một biến (k-1)F_k-1,N-k
+>
+> (Phân phối F_k-1,N-k là phân phối của [χ²_k-1/(k-1)] / [χ²_N-k)/(N-k)] và hai biến chi-square độc lập)
+>
+> Từ đó, quay về bài toán ta muốn có phép thử level α để reject H0 tương đương reject H0 của bài toán con nào đó ⇔ reject H0 của bài toán con có (T_𝐚)² lớn nhất
+>
+> Reject H0 ⇔ Reject H0_𝐚 với ít nhất một 𝐚 ⇔ T_𝐚 > c với ít nhất một 𝐚 ⇔ sup_𝐚:Σiai=0 T_𝐚 > c (c là ngưỡng chọn sao cho có level α test)
+>
+> Và nay, (T_𝐚)² lớn nhất có phân phối (k-1)F_k-1,N-k như vậy, giúp ta có thể có phép thử dựa vào phân phối F (tra bảng)
+>
+> ---
+>
+> Như vậy dưới giả định H0: θis bằng nhau:
+>
+> T_𝐚* = Σi ni[(Ȳi- Y̿) - (θi- θ̄ )]²/ S²_p = Σi ni[(Ȳi- Y̿)]²/ S²_p, và như đã nói, nó ~ (k-1)F_k-1,N-k
+>
+> Vậy ta sẽ có phép thử level α cho H0 như sau:
+>
+> Reject H0 khi T_𝐚* > threshold c nào đó được chọn sao cho test có level α
+>
+> P(Σi ni[(Ȳi- Y̿)]²/ S²_p > threshold) ≤ α
+>
+> P((k-1)F_k-1,N-k > threshold) ≤ α
+>
+> ⇒ threshold = (k-1)F_k-1,N-k,α
+>
+> nên reject H0 khi Σi ni[(Ȳi- Y̿)]²/ S²_p > (k-1)F_k-1,N-k,α
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc bản chất mối liên hệ giữa việc tối đa hóa thống kê kiểm định contrast và phân phối F trong ANOVA. Có một chút nhầm lẫn ký hiệu nhỏ giữa T_a và (T_a)^2 ở bước lập luận kiểm định hai phía nhưng không ảnh hưởng đến kết luận tổng thể.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"T_𝐚 > c với ít nhất một 𝐚 ⇔ sup_𝐚:Σiai=0 T_𝐚 = T_𝐚* > c"*
+>
+> Đoạn này bị nhầm lẫn ký hiệu: trước đó bạn đã đặt T_𝐚* là sup của (T_𝐚)², không phải sup của T_𝐚. Ngoài ra, việc kiểm định giả thuyết con H0_𝐚 là kiểm định hai phía nên ta cần bác bỏ khi |T_𝐚| > c (hoặc T_𝐚² > c²), từ đó mới suy ra sup (T_𝐚)² > threshold.
+>
+>
+> **✓ Strengths**
+> - Hiểu rõ trực giác phương pháp Scheffé: kiểm định giả thuyết tổng thể H0 tương đương với việc kiểm định đồng thời các bài toán con và bác bỏ khi thống kê contrast lớn nhất vượt ngưỡng.
+> - Rút gọn chính xác biểu thức dưới H0 (các số hạng chênh lệch theta triệt tiêu) và xác định đúng ngưỡng bác bỏ từ phân phối (k-1)F.
+>
+> **💡 Deeper notes**
+> - Vì vector a thỏa mãn Σ a_i = 0, nếu chọn vector -a thì T_{-a} = -T_a; do đó sup T_a = sup |T_a| = √(sup T_a²), việc bình phương T_a² tự nhiên bao hàm cả hai phía của kiểm định contrast.
 
 <br>
 
