@@ -1,6 +1,6 @@
 # 1.2.4 The Gaussian distribution
 
-📊 **Progress:** `10` Notes | `14` Screenshots | `1` AI Reviews
+📊 **Progress:** `10` Notes | `14` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-6omzny8"></a>
@@ -84,6 +84,20 @@
 >
 > Ở đây có thể có điểm mà có thể Casella đã nói nhưng ít để ý, 1/σ² gọi là
 > precision.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú rất tốt, thể hiện sự hiểu sâu sắc khi liên hệ kiến thức từ Stat110/Casella để tự dẫn xuất lại hàm mật độ Gaussian thông qua họ vị trí - tỉ lệ (location-scale family).
+>
+> **✓ Strengths**
+> - Dẫn xuất chính xác hàm mật độ Gaussian tổng quát từ phân phối chuẩn tắc thông qua phép đổi biến (transformation theorem).
+> - Hiểu đúng bản chất của tham số vị trí (location = mean) và tỉ lệ (scale = standard deviation) trong họ location-scale đối với phân phối chuẩn.
+> - Liên hệ và ghi nhận thêm khái niệm precision (1/σ²) được nhắc đến trong giáo trình.
+>
+> **💡 Deeper notes**
+> - Lưu ý quy ước ký hiệu: trong sách Bishop và nhiều giáo trình xác suất thống kê, phân phối chuẩn thường được tham số hóa theo phương sai là N(μ, σ²) thay vì N(μ, σ) (mặc dù trong họ location-scale thì scale parameter là σ).
+> - Có một lỗi đánh máy nhỏ trong biểu thức 'x = g(z) = σz + u' (viết 'u' thay vì 'μ'), tuy nhiên bước suy ra z = (x - μ)/σ ngay sau đó đã hoàn toàn chuẩn xác.
 
 <br>
 
@@ -303,6 +317,25 @@
 >
 > Cái ý mà gs Bishop nói rằng với Normal thì mode trùng với mean là một ý mới mà mình
 > chưa nghe trong Casella
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú rất tốt, chủ động tự tính toán và dẫn xuất lại kỳ vọng bậc hai bằng hàm sinh moment (MGF) thay vì chỉ đọc chép. Cần lưu ý một điểm nhỏ về hệ số trong khai triển Taylor của MGF.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"để rồi Taylor expansion và lấy hệ số của term bậc hai, thì nó cũng chính là second moment"*
+>
+> Trong chuỗi Taylor của hàm sinh moment m_X(t) = ∑ E[X^n] t^n / n!, hệ số đi liền với t^2 là E[X^2] / 2!, do đó second moment bằng hệ số của t^2 nhân thêm 2! (tức nhân 2), chứ không phải trực tiếp là hệ số đó.
+>
+>
+> **✓ Strengths**
+> - Chủ động liên hệ và áp dụng thành thạo công cụ MGF từ Stat 110 và Casella để kiểm chứng lại kết quả trong sách.
+> - Thực hiện chính xác các bước đạo hàm bậc 1 và bậc 2 bằng quy tắc chuỗi và tích để ra đúng E[X^2] = μ² + σ².
+>
+> **💡 Deeper notes**
+> - Đối với phân phối Gauss, mode trùng với mean (và median) bắt nguồn từ tính đối xứng của hàm mật độ quanh μ và điểm cực đại duy nhất x = μ (nơi đạo hàm của pdf bằng 0).
 
 <br>
 
@@ -1078,6 +1111,19 @@
 >
 > Πi=1:N /N/(xi| μ, σ²) cũng chính là N(𝐱| μ***1**, σ²*𝐈)
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú xuất sắc! Bạn đã kết nối rất chuẩn xác giữa ký hiệu machine learning của Bishop và nền tảng xác suất thống kê cổ điển (Casella / Stat 110), chỉ ra bản chất tương đương giữa một mẫu ngẫu nhiên i.i.d và một phân phối chuẩn đa chiều với ma trận hiệp phương sai đường chéo.
+>
+> **✓ Strengths**
+> - Phân biệt chính xác giữa random variable (biến ngẫu nhiên) và realization/observed value (giá trị quan sát), khắc phục được sự nhập nhằng về ký hiệu trong sách.
+> - Chứng minh được tính tương đương giữa việc lấy mẫu $N$ lần độc lập từ $\mathcal{N}(\mu, \sigma^2)$ và lấy mẫu 1 lần từ vector Gaussian $N$ chiều $\mathcal{N}(\mu \mathbf{1}, \sigma^2 \mathbf{I})$.
+> - Chỉ ra chính xác bản chất cụm từ 'probability of the data set' trong biến liên tục thực chất là giá trị của hàm mật độ xác suất đồng thời (joint PDF) tại điểm dữ liệu quan sát được.
+>
+> **💡 Deeper notes**
+> - Trong Machine Learning, 'probability of the data set' $p(\mathbf{x}|\mu, \sigma^2)$ thường được gọi trực tiếp là Likelihood (hàm hợp lý) khi xem nó như hàm của các tham số $\mu, \sigma^2$. Đối với biến liên tục, xác suất tại một điểm chính xác bằng 0, nên đây thực chất là joint PDF (hoặc mật độ xác suất biên $p(\mathbf{x})\mathrm{d}\mathbf{x}$ trên một lân cận vi phân).
+
 <br>
 
 <a id="node-xm5nidw"></a>
@@ -1089,32 +1135,23 @@
 <p align="center"><kbd><img src="assets/hous6aym2b.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi, thế thì, đã nhắc lại vài lần trong các note trước, trong Casella, ta đã biết
-> khái niệm likelihood function, nó làm hàm của θ, (mang ý nghĩa độ hợp lí của θ
-> nếu như observed value là 𝐱), kí hiệu L(θ|𝐱) và hàm này được định nghĩa
-> là L(θ|𝐱) = f(𝐱|θ), tức joint pdf của random sample tại 𝐱.
+> Rồi, thế thì, đã nhắc lại vài lần trong các note trước, trong Casella, ta đã biết khái niệm likelihood function, nó làm hàm của θ, (mang ý nghĩa độ hợp lí của θ nếu như observed value là 𝐱), kí hiệu L(θ|𝐱) và hàm này được định nghĩa là L(θ|𝐱) = f(𝐱|θ), tức joint pdf của random sample tại 𝐱.
 >
 >
 >
-> Do đó mới nói, cái mà ta có vưa rồi, **XÁC SUẤT CỦA DATA SET**,
+> N(𝐱|μ1, σ²) = Πi=1:N N(xi | μ1, σ²) CHÍNH LÀ LIKELIHOOD FUNCTION CỦA θ = (μ1, σ²) TẠI 𝐗 = 𝐱
 >
 >
 >
-> N(𝐱 | μ**1**, σ²*I) = Πi=1:N N(xi | μ, σ²)  **CHÍNH LÀ** **LIKELIHOOD
-> FUNCTION CỦA** θ = (μ***1,** σ²*I) **TẠI X = x**
+> L(μ1, σ²| 𝐱), hoặc coi là hàm theo scalar μ, σ² thôi cũng được L(μ, σ²|𝐱)
 >
 >
 >
-> L(μ***1**, σ²*I | 𝐱), hoặc coi là hàm theo scalar μ, σ² thôi cũng được
-> L((μ, σ²)| 𝐱)
+> = N(𝐱|μ1, σ²) = Πi=1:N N(xi| μ, σ²)
 >
 >
 >
-> = N(𝐱 | μ**1**, σ²*I) = Πi=1:N N(xi| μ, σ²)
->
->
->
-> -----
+> ---
 >
 >
 >
@@ -1138,13 +1175,11 @@
 >
 >
 >
-> giá trị marginal pdf của Normal(μ, σ²) tại đó f(x1| μ, σ²),...f(xn | μ, σ²) là các
-> đoạn xanh lá)
+> giá trị pdf của Normal(μ, σ²) tại đó f(x1| μ, σ²),...f(xn | μ, σ²) là các đoạn xanh lá)
 >
 >
 >
-> THÌ **TÍCH CỦA CHÚNG**, MỚI LÀ GIÁ TRỊ CỦA LIKELIHOOD TẠI (μ, σ²):
-> L((μ, σ²) | 𝐱)
+> THÌ TÍCH CỦA CHÚNG, MỚI LÀ GIÁ TRỊ CỦA LIKELIHOOD TẠI (μ, σ²): L((μ, σ²) | 𝐱)
 >
 >
 >
@@ -1156,29 +1191,43 @@
 >
 >
 >
-> NÓ CŨNG KHÔNG PHẢI LÀ ĐỒ THỊ CỦA POPULATION NORMAL N(μ, σ²)
-> VÌ BẢN CHẤT TA KO BIẾT μ, σ² là bao nhiêu.
+> NÓ CŨNG KHÔNG PHẢI LÀ ĐỒ THỊ CỦA POPULATION NORMAL N(μ, σ²) VÌ BẢN CHẤT TA KO BIẾT μ, σ² là bao nhiêu.
 >
 >
 >
-> SỰ THẬT, NÓ CHỈ LÀ MINH HỌA CHO ĐỒ THỊ CỦA NORMAL
-> TẠI MỘT CẶP (μ, σ²) **NÀO ĐÓ**.
+> SỰ THẬT, NÓ CHỈ LÀ MINH HỌA CHO ĐỒ THỊ CỦA NORMAL TẠI MỘT CẶP (μ, σ²) NÀO ĐÓ.
 >
 >
 >
-> ĐỂ RỒI TA SẼ ĐI MAXIMIZE CÁI LIKELIHOOD, CHÍNH LÀ ĐI TÌM MỘT
-> CẶP (μ, σ²) SAO CHO TÍCH CỦA MẤY CÁCH ĐOẠN MÀU XANH LÁ NÀY
-> LỚN NHẤT.
+> ĐỂ RỒI TA SẼ ĐI MAXIMIZE CÁI LIKELIHOOD, CHÍNH LÀ ĐI TÌM MỘT CẶP (μ, σ²) SAO CHO TÍCH CỦA MẤY CÁCH ĐOẠN MÀU XANH LÁ NÀY LỚN NHẤT.
 >
 >
 >
-> Vì với mỗi 1 cặp μ, σ², ta sẽ có f(x1|μ, σ²), f(x2|μ, σ²) khác nhau, và nhân
-> tụi nó lại để được L(μ, σ²|𝐱) khác nhau. Và sẽ có 1 cặp nào đó maximize
-> giá trị này.
+> Vì với mỗi 1 cặp μ, σ², ta sẽ có f(x1|μ, σ²), f(x2|μ, σ²) khác nhau, và nhân tụi nó lại để được L(μ, σ²|𝐱) khác nhau. Và sẽ có 1 cặp nào đó maximize giá trị này.
 >
 >
 >
 > Và đó chính là MAXIMUM LIKELIHOOD ESTIMATOR CỦA θ = (μ, σ²)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú thể hiện sự hiểu biết rất sâu sắc và chính xác về bản chất của hàm likelihood cũng như cách đọc biểu đồ Figure 1.14. Điểm mấu chốt là nhận diện được đường màu đỏ là hàm mật độ xác suất theo biến dữ liệu $x$ tại một tham số cố định, chứ không phải đồ thị của hàm likelihood trên không gian tham số.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"N(𝐱|μ1, σ²) = Πi=1:N N(xi | μ1, σ²)"*
+>
+> Có một lỗi gõ nhỏ khi ghi $\mu_1$ thay vì $\mu$, và việc ký hiệu hàm mật độ đồng thời của tập dữ liệu dạng vector $\mathbf{x}$ bằng $\mathcal{N}(\mathbf{x}|\mu, \sigma^2)$ có thể gây nhầm lẫn với phân phối chuẩn nhiều chiều (multivariate normal) nếu không nói rõ là tích độc lập.
+>
+>
+> **✓ Strengths**
+> - Phân biệt rạch ròi giữa hàm mật độ $p(x|\mu, \sigma^2)$ (hàm theo $x$) và hàm likelihood $L(\mu, \sigma^2|\mathbf{x})$ (hàm theo tham số $\mu, \sigma^2$).
+> - Chỉ ra chính xác sự dễ gây hiểu lầm trong cách đặt câu chữ của caption hình vẽ (đường màu đỏ là đồ thị pdf tại một cấu hình tham số cụ thể, giá trị likelihood là tích độ cao các thanh màu xanh).
+> - Nắm vững bản chất của Maximum Likelihood Estimation (MLE) là việc tinh chỉnh tham số để cực đại hóa tích các giá trị mật độ tại các điểm dữ liệu quan sát được.
+>
+> **💡 Deeper notes**
+> - Đồ thị thực sự của hàm likelihood $L(\mu, \sigma^2|\mathbf{x})$ sẽ là một mặt cong trong không gian 3 chiều với 2 trục tham số là $\mu$ và $\sigma^2$ (hoặc log-likelihood), không vẽ chung trên hệ trục với biến ngẫu nhiên $x$.
 
 <br>
 
