@@ -2587,23 +2587,17 @@
 > nên reject H0 khi Σi ni[(Ȳi- Y̿)]²/ S²_p > (k-1)F_k-1,N-k,α
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
 >
-> Ghi chú nắm rất chắc bản chất mối liên hệ giữa việc tối đa hóa thống kê kiểm định contrast và phân phối F trong ANOVA. Có một chút nhầm lẫn ký hiệu nhỏ giữa T_a và (T_a)^2 ở bước lập luận kiểm định hai phía nhưng không ảnh hưởng đến kết luận tổng thể.
->
-> **🟡 Minor issues**
->
-> **1.** *"T_𝐚 > c với ít nhất một 𝐚 ⇔ sup_𝐚:Σiai=0 T_𝐚 = T_𝐚* > c"*
->
-> Đoạn này bị nhầm lẫn ký hiệu: trước đó bạn đã đặt T_𝐚* là sup của (T_𝐚)², không phải sup của T_𝐚. Ngoài ra, việc kiểm định giả thuyết con H0_𝐚 là kiểm định hai phía nên ta cần bác bỏ khi |T_𝐚| > c (hoặc T_𝐚² > c²), từ đó mới suy ra sup (T_𝐚)² > threshold.
->
+> Ghi chú rất tốt, thể hiện sự hiểu bài sâu sắc về mối liên hệ giữa việc tối đa hóa thống kê kiểm định tương phản (phương pháp Scheffé) và kiểm định F tổng quát trong ANOVA.
 >
 > **✓ Strengths**
-> - Hiểu rõ trực giác phương pháp Scheffé: kiểm định giả thuyết tổng thể H0 tương đương với việc kiểm định đồng thời các bài toán con và bác bỏ khi thống kê contrast lớn nhất vượt ngưỡng.
-> - Rút gọn chính xác biểu thức dưới H0 (các số hạng chênh lệch theta triệt tiêu) và xác định đúng ngưỡng bác bỏ từ phân phối (k-1)F.
+> - Nắm rất vững tư tưởng Union-Intersection: bác bỏ H0 khi có ít nhất một tương phản bị bác bỏ, tương đương với việc so sánh giá trị supremum với ngưỡng tới hạn.
+> - Hiểu chính xác cách rút gọn thống kê dưới giả thuyết H0 và cách xác định ngưỡng bác bỏ (k-1)F_{k-1, N-k, alpha} từ phân phối của supremum.
 >
 > **💡 Deeper notes**
-> - Vì vector a thỏa mãn Σ a_i = 0, nếu chọn vector -a thì T_{-a} = -T_a; do đó sup T_a = sup |T_a| = √(sup T_a²), việc bình phương T_a² tự nhiên bao hàm cả hai phía của kiểm định contrast.
+> - Ký hiệu T_𝐚* hơi dư biến chỉ số 𝐚 vì đây là giá trị supremum trên toàn bộ không gian các vector tương phản thỏa mãn tổng a_i = 0, nên nó không còn phụ thuộc vào một vector 𝐚 cụ thể.
+> - Khi xét từng bài toán con H0_𝐚, bài toán thường là hai phía (|T_𝐚| > c tương đương T_𝐚² > c²). Do tập {𝐚: Σ a_i = 0} đối xứng qua gốc tọa độ (nếu 𝐚 thỏa mãn thì -𝐚 cũng thỏa mãn và làm đổi dấu T_𝐚), nên sup T_𝐚 = sup |T_𝐚|, do đó lập luận dẫn đến sup T_𝐚² của bạn hoàn toàn chuẩn xác.
 
 <br>
 
