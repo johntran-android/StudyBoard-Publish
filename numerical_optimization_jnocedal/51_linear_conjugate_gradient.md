@@ -979,6 +979,8 @@
 
 📹 Video 2: [Làm sao dùng ma trận S⁻¹ đổi sang cơ sở liên hợp? (phần 3)](https://www.youtube.com/watch?v=qeu8_4IPZhk)
 
+📹 Video 3: [Làm sao xây dựng ma trận chuyển cơ sở S⁻¹V? (phần 4)](https://www.youtube.com/watch?v=LdqakqsyBRY)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
