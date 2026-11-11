@@ -975,11 +975,7 @@
 >
 > {p0,p1,...pn-1}
 
-📹 Video 1: [Làm sao xây dựng ma trận của phép biến đổi tuyến tính? (phần 2)](https://youtu.be/wTy7YOMdQgI)
-
-📹 Video 2: [Làm sao dùng ma trận S⁻¹ đổi sang cơ sở liên hợp? (phần 3)](https://www.youtube.com/watch?v=qeu8_4IPZhk)
-
-📹 Video 3: [Làm sao xây dựng ma trận chuyển cơ sở S⁻¹V? (phần 4)](https://www.youtube.com/watch?v=LdqakqsyBRY)
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=LdqakqsyBRY)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
