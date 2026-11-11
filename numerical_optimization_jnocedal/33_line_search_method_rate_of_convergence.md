@@ -390,33 +390,29 @@
 > Cuối cùng, **tốc độ hội tụ của steepest descent method** về cơ bản là **cũng giống với các non-linear objective function** khác
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **99/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
 >
-> Học sinh thể hiện sự hiểu biết xuất sắc và toàn diện về tính chất hội tụ của phương pháp steepest descent, bao gồm các giải thích chi tiết và kết nối sâu sắc với các khái niệm toán học nền tảng.
-> # Phân tích chi tiết
+> Ghi chú nắm rất chắc bản chất của Theorem 3.3, từ trực giác hình học (contour, zigzag) đến phân tích số học khi condition number thay đổi. Cần lưu ý thêm định nghĩa chuẩn của 'hội tụ tuyến tính' và tỉ lệ trục của ellipse.
 >
-> ## Điểm mạnh
-> *   Tóm tắt chính xác các điều kiện của định lý và bất đẳng thức kết quả, bao gồm cả việc xác định đúng phương pháp (steepest descent), loại tìm kiếm đường (exact line search) và hàm mục tiêu (strongly convex quadratic function).
-> *   Giải thích đúng về tốc độ hội tụ 'tuyến tính' (linear rate) và ý nghĩa của việc sai số giảm dần một cách tuyến tính.
-> *   Giải thích chi tiết trường hợp đặc biệt khi Q là bội số của ma trận đơn vị (tức là tất cả các giá trị riêng bằng nhau), bao gồm cả việc suy luận toán học rõ ràng từ công thức (3.29) để cho thấy sự hội tụ trong một lần lặp, cùng với ý nghĩa hình học của nó (đường đồng mức hình tròn, hướng trực tiếp đến nghiệm).
-> *   Hiểu biết sâu sắc về số điều kiện κ(Q), định nghĩa của nó và tác động của nó đến hình dạng của đường đồng mức (kéo dài, dẹt), hiện tượng 'zigzagging' và tốc độ hội tụ (chậm lại, suy giảm).
-> *   Lý luận toán học xuất sắc về việc tại sao số điều kiện lớn dẫn đến hội tụ chậm bằng cách phân tích hệ số hội tụ α trong phương trình (3.29) với một ví dụ số rõ ràng và dễ hiểu.
-> *   Xác định chính xác rằng hành vi tốc độ hội tụ áp dụng cho các hàm mục tiêu phi tuyến tổng quát.
+> **🟡 Minor issues**
 >
-> ## Các lĩnh vực cần cải thiện
-> *   Không có lĩnh vực đáng kể nào cần cải thiện trực tiếp liên quan đến sự thiếu chính xác hoặc hiểu lầm về văn bản được cung cấp. Bài ghi chú của học sinh rất mạnh mẽ và thể hiện sự hiểu biết sâu sắc.
+> **1.** *"tỉ lệ giữa bề rộng lớn nhất và bề rộng nhỏ nhất của cái hình ellipse này chính là tỉ lệ giữa eigenvalue lớn nhất và nhỏ nhất"*
 >
-> ## Đề xuất
-> *   Để củng cố thêm sự hiểu biết, hãy xem xét phác thảo hoặc sử dụng phần mềm để hình dung các biểu đồ đường đồng mức cho các số điều kiện khác nhau và đường đi 'zigzagging' của phương pháp steepest descent. Điều này có thể giúp trực quan hóa mối liên hệ giữa lý thuyết và thực hành.
-> *   Khám phá thêm về lý do tại sao 'exact line searches' lại quan trọng để đạt được tốc độ hội tụ tuyến tính này, và cách các 'inexact line searches' (ví dụ như backtracking line search) có thể ảnh hưởng đến hiệu suất và độ phức tạp của thuật toán.
-> *   Nghiên cứu các phương pháp tối ưu hóa khác (như Newton's method hoặc Quasi-Newton methods) và so sánh tốc độ hội tụ, ưu và nhược điểm của chúng với steepest descent trong các điều kiện khác nhau.
+> Phương trình elip là x^T Q x = c nên độ dài các bán trục tỉ lệ nghịch với căn bậc hai của eigenvalue (1/√λ). Do đó, tỉ lệ giữa trục lớn nhất và trục nhỏ nhất là √(λ_n / λ_1) = √κ(Q), chứ không phải là λ_n / λ_1 = κ(Q). Tuy nhiên trực giác elip càng dẹt khi κ(Q) lớn là hoàn toàn đúng.
 >
-> **⭐ Bonus points**
-> - Khái niệm chuẩn Q được xác định chính xác là một chuẩn có trọng số (weighted norm).
-> - Số điều kiện được định nghĩa chính xác là tỉ lệ giữa các yếu tố kéo giãn lớn nhất và nhỏ nhất của ma trận (stretch factor).
-> - Học sinh hiểu rằng các đường đồng mức của hàm bậc hai là hình elip với các trục thẳng hàng với các vector riêng của Q.
-> - Giải thích hình học về số điều kiện như tỉ lệ giữa bề rộng lớn nhất và nhỏ nhất của hình elip được cung cấp, liên kết rõ ràng giữa tính toán và hình học.
-> - Một ví dụ số rõ ràng được sử dụng để minh họa cách hệ số hội tụ tiến gần đến 1 đối với các số điều kiện lớn, cho thấy sự suy giảm hiệu suất hội tụ.
+> **2.** *"sự hội tụ sẽ diễn ra tuyến tính, cũng là error sẽ giảm dần một cách tuyến tính"*
+>
+> Trong tối ưu hóa, 'hội tụ tuyến tính' (linear convergence) là thuật ngữ chỉ việc sai số giảm theo cấp số nhân: e_{k+1} ≤ α e_k với α ∈ (0, 1) (tức log của sai số giảm tuyến tính theo số bước), chứ không phải sai số giảm đều từng lượng cố định theo kiểu hàm bậc nhất.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ cơ chế hội tụ trong 1 bước khi Q là bội của ma trận đơn vị thông qua công thức α = 0.
+> - Lấy ví dụ trực quan số học (1000 và 1) để giải thích vì sao condition number lớn dẫn tới tốc độ hội tụ cực kỳ chậm.
+> - Liên kết tốt trực giác hình học giữa ma trận Q, hình dạng elipsoid dẹt và hiện tượng zigzag của Steepest Descent.
+>
+> **💡 Deeper notes**
+> - Theorem 3.3 áp dụng cho chuẩn có trọng số ||·||_Q (Q-norm) vốn gắn liền với hàm mục tiêu bậc hai; việc quy đổi sang chuẩn Euclid thông thường ||·||_2 có thể làm phát sinh thêm hệ số phụ thuộc vào condition number κ(Q).
+> - Kết luận về hàm phi tuyến tổng quát (general nonlinear objective) ngầm hiểu rằng hàm đó có Hessian khả nghịch và liên tục quanh nghiệm, khi đó ma trận Hessian tại nghiệm đóng vai trò tương tự ma trận Q.
 
 <br>
 
