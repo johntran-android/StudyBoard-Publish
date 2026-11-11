@@ -1,6 +1,6 @@
 # 5.1 Linear Conjugate Gradient
 
-📊 **Progress:** `23` Notes | `54` Screenshots | `19` AI Reviews
+📊 **Progress:** `23` Notes | `56` Screenshots | `20` AI Reviews
 
 ---
 <a id="node-ezxbb8s"></a>
@@ -406,55 +406,135 @@
 
 <p align="center"><kbd><img src="assets/u8ic61li6am.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/dotam3nz0ze.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/h3twic.png" width="80%"></kbd></p>
+
 > [!NOTE]
-> Theorem 5.1: Nói rằng với x0 (initial point) bất kì thì chuỗi {xk} được generate bởi thuật toán 5.6 ở trên sẽ converge về solution x* của Ax = b trong nhiều nhất là n step.
+> Theorem 5.1: Nói rằng với x0 (initial point) bất kì thì chuỗi {xk} được generate bởi thuật toán 5.6 ở trên sẽ converge về solution x\* của Ax = b trong nhiều nhất là n step.
 >
-> Chứng minh như sau: Đầu tiên, vì {pi} độc lập tuyến tính, và đủ số lượng (n) nên dĩ nhiên chúng là một basis của R^n, span {p0,..pn-1} = R^n. Nên mọi vector R^n đều là linear combination của chúng. Do đó gs nói ta có thể thể hiện x* - x0 (cũng là R^n vector) bởi:
 >
-> x* - x0 = σ0p0 + σ1p1 + ..σn-1 pn-1.
+>
+> Chứng minh như sau: Đầu tiên, vì {pi} độc lập tuyến tính, và đủ số lượng (n) nên dĩ nhiên chúng là một basis của R^n, span {p0,..pn-1} = R^n. Nên mọi vector R^n đều là linear combination của chúng. Do đó gs nói ta có thể thể hiện x\* - x0 (cũng là R^n vector) bởi:
+>
+>
+>
+> x\* - x0 = σ0p0 + σ1p1 + ..σn-1 pn-1.
+>
+>
+>
+> x\* = x0 + σ0p0 + σ1p1 + ..σn-1 pn-1.
+>
+>
 >
 > Nhân hai vế cho pkᵀA ta có:
 >
-> pkᵀA(x* - x0) = pkᵀA(σ0p0 + σ1p1 + ..σn-1 pn-1)
 >
-> Xét vế phải, phân phối vô ta có tổng các pkᵀAσipi, vì tính conjugacy nên nếu pi khác pk, kết quả thành 0. Nên chỉ còn pkᵀApk, ta có pkᵀA(x*-x0) = σkpkᵀApk
 >
-> ⇔ σk = pkᵀA(x*-x0)/pkᵀApk (5.8)
+> pkᵀA(x\* - x0) = pkᵀA(σ0p0 + σ1p1 + ..σn-1 pn-1)
+>
+>
+>
+> Xét vế phải, phân phối vô ta có tổng các pkᵀAσipi, vì tính conjugacy nên nếu pi khác pk, kết quả thành 0. Nên chỉ còn pkᵀApk, ta có:
+>
+>
+>
+>  pkᵀA(x\*-x0) = σkpkᵀApk
+>
+>
+>
+> ⇔ σk = pkᵀA(x\*-x0)/pkᵀApk (5.8)
+>
+>
 >
 > Giờ ta sẽ đi chứng minh σk TRÙNG KHỚP với step length αk của công thức 5.7. Là sao?
-> ⇨ Thì khi ta chứng minh σk = αk thì cũng đã chứng minh là chuỗi {xk} tạo bởi x1 = x0 + α0p0, x2 = x1 + α1p1,...cũng chính là sẽ là đi từ x0 → x1 = x0 + σ0x0, x2 = x0 + σ0x0 + σ1x1 , ... xn = x0 + σ0p0 + σ1p1 + ...σn-1pn-1 = x0 + x* - x0 = x*! Có nghĩa là ta cũng đã chứng minh được thuật toán sẽ dẫn ta đến x* tại iteration thứ n.
 >
-> Về mặt hình học hiểu nôm na như sau: Như đã biết về ý nghĩa của x* - x0 = σ0p0 + σ1p1 + ..σn-1 pn-1: Đó là để đi từ x0 → x*, ta sẽ đi thep phương p0 một khoảng có độ lớn σ0, rồi từ đó đi theo phương p1 một khoảng có độ lớn σ1,... Vậy thì nếu chứng minh αk = σk thì dĩ nhiên cũng đã chứng minh chuỗi {xk} tạo bởi thuật toán cũng sẽ dẫn ta tới x* sau n bước.
 >
-> Quay lại đây, chuỗi {xk} tạo bởi 5.6, 5.7: xk+1 = xk + αkpk, và αk = -rkTpk/pkᵀApk, cụ thể sẽ là:
+>
+> ⇨ Thì khi ta chứng minh σk = αk thì cũng đã chứng minh là chuỗi {xk} tạo bởi x1 = x0 + α0p0, x2 = x1 + α1p1,...cũng chính là sẽ là đi từ x0 → x1 = x0 + σ0p0, x2 = x0 + σ0p0 + σ1p1 , ... xn = x0 + σ0p0 + σ1p1 + ...σn-1pn-1 = x0 + x\* - x0 = x\*!
+>
+>
+>
+> Có nghĩa là ta cũng đã chứng minh được thuật toán sẽ dẫn ta đến x\* tại iteration thứ n.
+>
+>
+>
+> Về mặt hình học hiểu nôm na như sau: Như đã biết về ý nghĩa của x\* - x0 = σ0p0 + σ1p1 + ..σn-1 pn-1: Đó là để đi từ x0 → x\*, ta sẽ đi thep phương p0 một khoảng có độ lớn σ0, rồi từ đó đi theo phương p1 một khoảng có độ lớn σ1,... Vậy thì nếu chứng minh αk = σk thì dĩ nhiên cũng đã chứng minh chuỗi {xk} tạo bởi thuật toán cũng sẽ dẫn ta tới x\* sau n bước.
+>
+>
+>
+> Quay lại đây, chuỗi {xk} tạo bởi 5.6, 5.7: xk+1 = xk + αkpk, và αk = -rkᵀpk/pkᵀApk, cụ thể sẽ là:
+>
+>
 >
 > x1 = x0 + α0p0
 >
+>
+>
 > x2 = x1 + α1p1 = x0 + α0p0 + α1p1
+>
+>
 >
 > ...
 >
-> xk = xk-1 + αkpk = x0 + α0p0 + α1p1 + ..αk-1pk-1
+>
+>
+> xk = xk-1 + αk-1pk-1= x0 + α0p0 + α1p1 + ..αk-1pk-1
+>
+>
 >
 > Nhân hai vế cho pkᵀA:
 >
+>
+>
 > pkᵀAxk = pkᵀAx0 + pkᵀA(α0p0 + α1p1 + ..αk-1pk-1)
+>
+>
 >
 > ⇔ pkᵀAxk - pkᵀAx0 = pkᵀA(α0p0 + α1p1 + ..αk-1pk-1)
 >
+>
+>
 > ⇔ pkᵀA(xk - x0) = pkᵀA(α0p0 + α1p1 + ..αk-1pk-1)
+>
+>
 >
 > Vế phải, theo tính chất conjugate, dễ hiểu chỉ còn 0, ta có pkᵀA(xk - x0) = 0
 >
+>
+>
 > ⇔ pkᵀAxk = pkᵀAx0
 >
-> Từ đó cái tử số của σk = pkᵀA(x*-x0)/pkᵀApk sẽ bằng:
 >
-> pkᵀA(x* - x0) = pkᵀAx*- pkᵀAx0 = pkᵀAx*-pkᵀAxk = pkᵀ(Ax*-Axk)
+>
+> Từ đó cái tử số của σk = pkᵀA(x\*-x0)/pkᵀApk sẽ bằng:
+>
+>
+>
+> pkᵀA(x\* - x0) = pkᵀAx\*- pkᵀAx0 = pkᵀAx\*-pkᵀAxk = pkᵀ(Ax\*-Axk)
+>
+>
 >
 > = pkᵀ(b-Axk) Và vì rk = Axk-b nên đây chính là -pkᵀrk
 >
-> Vậy σk = pkᵀA(x*-x0)/pkᵀApk = -pkᵀrk/pkᵀApk, chính là αk. Chứng minh xong
+>
+>
+> Vậy σk = pkᵀA(x\*-x0)/pkᵀApk = -pkᵀrk/pkᵀApk, chính là αk. Chứng minh xong
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=V3qSJFNY3HM)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, trình bày mạch lạc, giải thích chi tiết và trực giác hóa được toàn bộ các bước biến đổi của định lý và chứng minh.
+>
+> **✓ Strengths**
+> - Hiểu rõ và diễn giải trọn vẹn tại sao việc chứng minh sigma_k = alpha_k lại trực tiếp dẫn tới việc x_n = x*.
+> - Các bước biến đổi đại số từ khai triển cơ sở, sử dụng tính trực giao liên hợp (conjugacy), cho tới biến đổi số dư rk = Axk - b đều rất chính xác và chi tiết.
+>
+> **💡 Deeper notes**
+> - Định lý phát biểu hội tụ trong 'nhiều nhất n bước' (at most n steps) vì nếu ban đầu x0 đã nằm trong không gian con chứa nghiệm hoặc một số hệ số alpha_k = 0 (tức r_k = 0), thuật toán có thể tìm ra nghiệm x* trước khi chạm mốc n bước.
+> - Chứng minh này ngầm định ma trận A là đối xứng xác định dương (SPD), đảm bảo mẫu số p_k^T A p_k > 0 và các hướng liên hợp khác không độc lập tuyến tính.
 
 **🔗 See also:** [Chuyển đổi A thành diagonal](#node-tikzhc4)
 
