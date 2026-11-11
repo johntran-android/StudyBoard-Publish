@@ -1,6 +1,6 @@
 # 8.2 Automatic differentiation
 
-📊 **Progress:** `36` Notes | `46` Screenshots | `15` AI Reviews
+📊 **Progress:** `36` Notes | `46` Screenshots | `16` AI Reviews
 
 ---
 <a id="node-w3fcz5c"></a>
@@ -1258,6 +1258,18 @@
 > bằng 0 
 >
 > (còn nhớ các Dpx1(x),..Dpxn(x) thì initialize = pi)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc và chính xác bản chất của việc mở rộng forward mode để tính tích dạng toàn phương/song tuyến tính với Hessian. Khái niệm và khởi tạo giá trị ban đầu đều được giải thích rõ ràng, đúng đắn.
+>
+> **✓ Strengths**
+> - Hiểu rất rõ bản chất của mỗi node $x_i$ như một hàm vô hướng theo vector biến đầu vào $x$, từ đó hiểu đúng thứ nguyên của gradient và Hessian tại từng node.
+> - Nắm chính xác cách định nghĩa đại lượng $D_{pq}x_i = p^T (\nabla^2 x_i) q$ và việc khởi tạo nó bằng 0 tại các node đầu vào (do đạo hàm bậc hai của biến độc lập bằng 0).
+>
+> **💡 Deeper notes**
+> - Để tính đầy đủ đại lượng $D_{pq}x_i$ theo quy tắc dây chuyền ở các bước sau khi $p \neq q$, trong quá trình forward sweep trên thực tế ta thường cần lưu/tính song song cả $D_q x_i$ lẫn $D_p x_i$ cùng với giá trị $x_i$.
 
 <br>
 
