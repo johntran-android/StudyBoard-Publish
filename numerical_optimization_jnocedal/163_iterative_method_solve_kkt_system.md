@@ -1,6 +1,6 @@
 # 16.3 Iterative method solve KKT system
 
-📊 **Progress:** `2` Notes | `5` Screenshots | `2` AI Reviews
+📊 **Progress:** `3` Notes | `6` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-6st1h4j"></a>
@@ -82,6 +82,41 @@
 > **💡 Deeper notes**
 > - Ma trận Z trong phương pháp này được giả định ngầm là ma trận trực giao (orthogonal matrix), giúp thuật toán không bị ảnh hưởng bởi độ điều hòa xấu của ma trận ràng buộc A.
 > - Thành phần Yx_Y được cố định ngay từ điểm khởi đầu thỏa mãn ràng buộc Ax = b, và các bước lặp CG sau đó chỉ cập nhật ngầm trên thành phần không gian nghiệm Zx_Z.
+
+<br>
+
+<a id="node-urrm6om"></a>
+
+###### Algorithm 16.2 Projected CG Method
+
+<p align="center"><kbd><img src="assets/lbvv42d49q.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Thuật toán 16.2 là CG chạy thẳng trên x, không cần tạo Z.
+>
+> Chọn x₀ thoả Ax = b. Mỗi bước, P chiếu phần dư về null(A) = {d : Ad = 0}, nên mọi hướng d đều có Ad = 0 và x luôn thoả Ax = b.
+>
+> P = Z(ZᵀHZ)⁻¹Zᵀ, với H là ma trận tiền điều kiện ở (16.26). Các bước giống hệt CG, chỉ thêm g⁺ = Pr⁺.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác tư tưởng cốt lõi của Projected CG: làm việc trực tiếp trên x, duy trì tính khả thi Ax = b bằng cách chiếu hướng tìm kiếm vào null(A).
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Các bước giống hệt CG, chỉ thêm g⁺ = Pr⁺."*
+>
+> Có sự khác biệt nhỏ về mặt công thức: CG tiêu chuẩn dùng tích vô hướng rᵀr để tính α và β, còn Projected CG dùng rᵀg (tương đương gᵀHg); ngoài ra hướng d được tạo từ -g thay vì -r.
+>
+>
+> **✓ Strengths**
+> - Hiểu chính xác cơ chế bảo toàn điều kiện ràng buộc Ax = b nhờ việc P chiếu các hướng d vào không gian null(A).
+> - Nắm đúng mục tiêu chính của thuật toán là tối ưu trực tiếp trên x mà không cần tạo tường minh ma trận cơ sở Z.
+>
+> **💡 Deeper notes**
+> - Công thức P = Z(ZᵀHZ)⁻¹Zᵀ chỉ là biểu diễn giải tích phục vụ chứng minh lý thuyết; trong thực hành, phép tính g = Pr được thực hiện bằng cách giải hệ phương trình tuyến tính kiểu KKT (saddle-point system) để tránh việc phải tìm Z.
+> - Thuật toán yêu cầu ma trận G phải xác định dương trên không gian null(A) (tức ZᵀGZ > 0) để mẫu số dᵀGd luôn dương.
 
 <br>
 
