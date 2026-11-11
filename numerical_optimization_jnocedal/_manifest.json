@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1794161786892,
+  "publishedAt": 1794375499930,
   "sections": [
     {
       "title": "📋 Overview",
@@ -90,7 +90,7 @@
       "title": "5.1 Linear Conjugate Gradient",
       "path": "numerical_optimization_jnocedal/51_linear_conjugate_gradient.md",
       "noteCount": 23,
-      "imageCount": 54
+      "imageCount": 56
     },
     {
       "title": "6.1 The BFGS Method",
@@ -233,8 +233,8 @@
     {
       "title": "16.3 Iterative method solve KKT system",
       "path": "numerical_optimization_jnocedal/163_iterative_method_solve_kkt_system.md",
-      "noteCount": 2,
-      "imageCount": 5
+      "noteCount": 3,
+      "imageCount": 6
     },
     {
       "title": "Appendix A",
@@ -255,6 +255,6 @@
       "imageCount": 11
     }
   ],
-  "totalNotes": 455,
-  "totalImages": 695
+  "totalNotes": 456,
+  "totalImages": 698
 }
