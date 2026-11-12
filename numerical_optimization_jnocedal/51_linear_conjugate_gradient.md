@@ -1,6 +1,6 @@
 # 5.1 Linear Conjugate Gradient
 
-📊 **Progress:** `23` Notes | `56` Screenshots | `20` AI Reviews
+📊 **Progress:** `23` Notes | `64` Screenshots | `20` AI Reviews
 
 ---
 <a id="node-ezxbb8s"></a>
@@ -546,89 +546,262 @@
 
 <p align="center"><kbd><img src="assets/yn0e42muu6.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/yc635jyr34r.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fkvmbsl19vr.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/26vcojugutr.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/5w3kicl97ik.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/vbynztyh5x.png" width="80%"></kbd></p>
+
 > [!NOTE]
-> Đại khái là ở đây minh họa giúp ta hiểu vì sao conjugate direction method lại giúp converge về x\* trong n bước. Lấy ví dụ trong 2D, khi A là diagonal matrix, thì contour plot sẽ có dạng các hình ellipse. Và việc di chuyển từ x0 → x1, x1 → x2 theo phương pháp này chính là đi theo đường chấm chấm. Dễ thấy với 2D thì chỉ tốn 2 step, nếu 3D, sẽ tốn 3 steps,..nD sẽ tốn n steps.
+> Đại khái là ở đây minh họa hình học để giúp ta hiểu **vì sao conjugate direction method lại giúp converge về x\* trong n bước**.
 >
-> Thế thì vì sao khi A là diagonal thì contour plot là lại ellipse/ellipsoid?
 >
-> Nếu A là diagonal, A = diag(λ1,...,λn), contour của Φ(x) sẽ có dạng:
+>
+> Lấy ví dụ trong 2D, khi A là diagonal matrix, thì contour plot sẽ có dạng các hình ellipse.
+>
+>
+>
+> Theo phương pháp này, như đã biết ta sẽ đi như sau:
+>
+>
+>
+> Di chuyển từ x0, theo e1, với sải bước sao cho minimize hàm f restrict theo hướng e1 để đến x1
+>
+>
+>
+> Từ x1 di chuyển theo e2, với sải bước sao cho minimize hàm f restrict theo hướng e2 để đến x2 (cũng là x\*)
+>
+>
+>
+> ⇒ Chỉ tốn hai bước (trong không gian nD sẽ tốn n bước)
+>
+>
+>
+> Và với A diagonal, e1, e2 cũng chính là một bộ conjugate direction (bên cạnh vô số bộ vector khác)
+>
+>
+>
+> Như vậy, rất dễ thấy ở đây, phương pháp sẽ đưa ta từ x0 đến x\* trong nhiều nhất là 2 bước (nếu x0 trùng x1 thì chỉ tốn 1 bước)
+>
+>
+>
+> ---
+>
+>
+>
+> Như nếu không chọn p0=e1, p1=e2 thì sao, là có chắc là cũng sẽ đưa ta đến x\* trong nhiều nhất 2 bước không? Ví dụ nếu chọn hướng p0 là vector màu tím, thì p1 có phải là vector màu xanh không? Hay, đi theo p0 là vector màu tím, theo công thức sải bước đưa ta đến x1', thì từ x1' có chắc là đi theo p1 sẽ đến x\*, nói cách khác, vector màu xanh có phải là conjugate direction p1 không?
+>
+>
+>
+>  Câu trả lời sẽ dùng lập luận y như khi A không diagonal:
+>
+>
+>
+> Bằng cách đổi biến x̂ = S⁻¹ x, với S là matrix có các cột là \[p0,p1\], thì như video trước ta đã hiểu, là đây chính là ta chuyển hệ trục tọa độ theo basis p's. Và trong hệ trục đó, matrix Hessian sẽ trở thành SᵀAS, là một matrix chéo.
+>
+>
+>
+> (x = S x̂, (mà ta hiểu chính là \[x\]\_e = S \[x\]\_p)
+>
+>
+>
+> φ̂(x̂) = (1/2) xᵀAx - bᵀx = (1/2) x̂ ᵀSᵀASx̂ - bᵀSx̂ → Hessian là SᵀAS)
+>
+>
+>
+> Từ đó, trong hệ trục đó, contour của f cũng là ellipse có trục song song với hai trục tọa độ p0,p1 y như cái hình này.
+>
+>
+>
+> (Ví von như đeo kính vào, ta sẽ thấy hình ảnh một hệ trục có hai vector p0,p1 vuông góc. và ellipse có trục song song với các trục tọa độ giống y như hình này) trong đó:
+>
+>
+>
+> đi từ x0 (tọa độ basis e x0 = \[x0\]\_e, tọa độ basis p x̂ 0 = \[x0\]\_p)
+>
+>
+>
+> theo p0, xải bước α0
+>
+>
+>
+> đến được x'1 (\[x'1\]\_e, \[x'1\]\_p = x̂ '1)
+>
+>
+>
+> theo p1, xải bước α1
+>
+>
+>
+> đến được x'2 (\[x'2\]\_e, \[x'2\]\_p = x̂ '2) cũng chính là x\*
+>
+>
+>
+> Như vậy đeo kính vào sẽ thấy nó đi như cái hình trong ô đỏ: đi theo hướng vuông góc với trục tọa độ, ellipse nằm thẳng trục và ta cũng đến trong 2 bước).
+>
+>
+>
+> Mở kính ra, ta sẽ thấy nó đi như hình ở ngoài, dù theo p0,p1 xiên vẹo nhưng cũng đến x\* trong 2 bước.
+>
+>
+>
+> ---
+>
+>
+>
+> Và xét qua trường hợp A không diagonal cũng vậy, trong e's contour của nó không thẳng trục. Nhưng chọn bộ p0,p1 conjugate bất kì và đổi biến y như trên thì Hessian cũng thành diagonal, và trong hệ trục đó câu chuyện cũng y như trên. Để cho thấy là ta cũng sẽ đến đích trong 2 bước.
+>
+>
+>
+> ---
+>
+>
+>
+> Vì sao khi A là diagonal thì contour plot là lại ellipse/ellipsoid?
+>
+>
+>
+> Nếu matrix A (đối xứng xác định dương) là diagonal A = diag(λ1,...,λn), contour của Φ(x) sẽ có dạng:
+>
+>
 >
 > Φ(x) = c (c-level set)
 >
+>
+>
 > ⇔ (1/2)xᵀAx - bᵀx = c
+>
+>
 >
 > ⇔ (1/2)xᵀdiag(λ1,...,λn)x - bᵀx = c
 >
+>
+>
 > ⇔ (1/2)xᵀ(λ1x1, ..λnxn) - bᵀx = c
+>
+>
 >
 > ⇔ (1/2)λ1x1² + .. + (1/2)λnxn² - (b1x1+ .. + bnxn) = c
 >
+>
+>
 > ⇔ (1/2)λ1x1² + .. + (1/2)λnxn² - b1x1 .. - bnxn = c
+>
+>
 >
 > ⇔ (1/2)λ1x1² - b1x1 + .. + (1/2)λnxn² - bnxn = c
 >
+>
+>
 > ⇔ (λ1/2)\[x1² - b1x1/(λ1/2)\] + .. + (λn/2)\[xn² - bnxn/(λn/2)\] = c
+>
+>
 >
 > ⇔ (λ1/2)\[x1² - 2b1x1/λ1\] + .. + (λn/2)\[xn² - 2bnxn/λn\] = c
 >
+>
+>
 > ⇔ (λ1/2)\[x1² - 2x1b1/λ1\] + .. + (λn/2)\[xn² - 2xnbn/λn\] = c
+>
+>
 >
 > ⇔ (λ1/2)\[x1² - 2x1b1/λ1 + (b1/λ1)² - (b1/λ1)²\] + .. + (λn/2)\[xn² - 2xnbn/λn + (bn/λn)² - (bn/λn)²\] = c
 >
+>
+>
 > ⇔ (λ1/2)\[x1² - 2x1b1/λ1 + (b1/λ1)²\] - (λ1/2)(b1/λ1)² + .. + (λn/2)\[xn² - 2xnbn/λn + (bn/λn)²\] - (λn/2)(bn/λn)² = c
 >
-> ⇔ (λ1/2)\[x1² - 2x1b1/λ1 + (b1/λ1)²\] - b1²/2λ1 + .. + (λn/2)\[xn² - 2xnbn/λn + (bn/λn)²\] - bn²/2λn = c
+>
 >
 > ⇔ (λ1/2)\[x1² - 2x1b1/λ1 + (b1/λ1)²\] - b1²/2λ1 + .. + (λn/2)\[xn² - 2xnbn/λn + (bn/λn)²\] - bn²/2λn = c
+>
+>
+>
+> ⇔ (λ1/2)\[x1² - 2x1b1/λ1 + (b1/λ1)²\] - b1²/2λ1 + .. + (λn/2)\[xn² - 2xnbn/λn + (bn/λn)²\] - bn²/2λn = c
+>
+>
 >
 > ⇔ (λ1/2)(x1 - b1/λ1)² - b1²/2λ1 + .. + (λn/2)(xn - bn/λn)² - bn²/2λn = c
 >
+>
+>
 > ⇔ Σi (λi/2)(xi - bi/λi)² - Σi bi²/2λi = c
+>
+>
 >
 > ⇔ Σi (λi/2)(xi - bi/λi)² = c + Σi bi²/2λi
 >
+>
+>
 > Đặt vế phải là C'
+>
+>
 >
 > ⇔ Σi (λi/2)(xi - bi/λi)² = C'
 >
+>
+>
 > ⇔ Σi (λi/2)(xi - bi/λi)² / C' = 1
+>
+>
 >
 > ⇔ Σi (xi - bi/λi)² / \[C'/(λi/2)\] = 1
 >
+>
+>
 > ⇔ Σi (xi - bi/λi)² / \[2C'/λi)\] = 1
+>
+>
 >
 > Đây chính là phương trình của ellipsoid với center tại (b1/λ1, ...bn/λn)
 >
-> Quay lại đây, có thể hiểu trong trường hợp này, bộ vector e1,...en (standard basis) chính là conjugate set của A. Thật vậy, eiᵀAej = eiᵀ(0,0,...λj,..0) = 0×0 + 0×0 + ..1×0 + ..0×λj + ..0×0 = 0. Nên di chuyển theo conjugate direction chính là di chuyển theo hướng các trục:
+>
+>
+> Quay lại đây, có thể hiểu trong trường hợp này, bộ vector e1,...en (standard basis) chính là conjugate set của A.
+>
+>
+>
+> Thật vậy:
+>
+>
+>
+> nếu i khác j: eiᵀAej = eiᵀ(0,0,...λj,..0) = 0×0 + 0×0 + ..1×0 + ..0×λj + ..0×0 = 0.
+>
+>
+>
+> Nên di chuyển theo conjugate direction chính là di chuyển theo hướng các trục:
+>
+>
 >
 > x0 đi theo hướng / phương e1 đến x1
+>
+>
 >
 > x1 đi theo hướng / phương e2 đến x2 (x\*)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú rất xuất sắc, tự hoàn thành biến đổi đại số đầy đủ để chứng minh đường mức là ellipsoid và nhận diện chính xác hệ trục tọa độ chính là tập vector liên hợp khi ma trận Hessian chéo hóa.
+> Ghi chú thể hiện sự hiểu biết sâu sắc và chính xác về bản chất hình học cũng như đại số của phương pháp phương liên hợp (Conjugate Direction). Phép biến đổi tọa độ và bước khai triển dạng toàn phương đưa về phương trình ellipsoid đều rất chuẩn xác.
 >
 > **🟡 Minor issues**
 >
-> **1.** *"Đây chính là phương trình của ellipsoid với center tại (b1/λ1, ...bn/λn)"*
+> **1.** *"Σi (xi - bi/λi)² / [2C'/λi)] = 1. Đây chính là phương trình của ellipsoid với center tại (b1/λ1, ...bn/λn)"*
 >
-> Phương trình này chỉ thực sự biểu diễn một ellipsoid thực khi ma trận A là xác định dương (tức mọi trị riêng λi > 0) và C' > 0 (tương ứng với giá trị mức c > φ(x*)). Nếu có λi trái dấu hoặc âm, mặt mức sẽ là hyperboloid hoặc vô nghiệm.
->
-> **2.** *"Thật vậy, eiᵀAej = eiᵀ(0,0,...λj,..0) = 0×0 + 0×0 + ..1×0 + ..0×λj + ..0×0 = 0."*
->
-> Cần nêu rõ điều kiện i ≠ j, vì tính trực giao liên hợp (conjugate) xét trên các cặp vector khác nhau (khi i = j thì eiᵀAei = λi ≠ 0).
+> Để tập mức (level set) thực sự tạo thành một ellipsoid thực (tồn tại nghiệm thực), giá trị hằng số mức c cần thỏa mãn c > -1/2 * b^T A^(-1) b (tức là c > phi(x*)), đảm bảo hằng số C' > 0.
 >
 >
 > **✓ Strengths**
-> - Tự thực hiện biến đổi thêm bớt bình phương đúng từng bước một cách chặt chẽ thay vì chỉ thừa nhận công thức có sẵn.
-> - Hiểu đúng bản chất rằng hệ cơ sở chính tắc {e1, ..., en} chính là tập vector liên hợp của ma trận chéo.
-> - Nắm chắc trực giác hình học: tối ưu hóa 1D dọc theo các trục độc lập sẽ tìm được cực tiểu chính xác sau n bước.
+> - Hiểu rất rõ cơ chế tách biệt bài toán n-chiều thành n bài toán 1-chiều độc lập khi Hessian ở dạng ma trận đường chéo.
+> - Ý tưởng dùng phép đổi biến tọa độ x = S x̂ với S chứa các vector liên hợp để chéo hóa Hessian (S^T A S) và liên hệ hình học bằng phép ẩn dụ 'đeo kính' rất trực quan và chính xác.
+> - Khai triển đại số chi tiết, hoàn thành bình phương đúng đắn để chứng minh tập mức là hình ellipsoid có tâm tại nghiệm x* = A^(-1)b.
 >
 > **💡 Deeper notes**
-> - Tâm của ellipsoid tìm được là x* = (b1/λ1, ..., bn/λn)ᵀ chính là nghiệm của hệ Ax* = b khi A = diag(λ1, ..., λn).
-> - Trường hợp A không chéo nhưng đối xứng xác định dương có thể đưa về trường hợp chéo này thông qua phép đổi biến trực giao A = QΛQᵀ (hoặc biến đổi tọa độ theo các hướng liên hợp), giúp giải thích bản chất tổng quát của phương pháp Conjugate Gradient.
+> - Trong không gian x̂, các trục tọa độ trực giao theo tích vô hướng Euclid thông thường, tương ứng với việc các hướng tìm kiếm p_i trực giao với nhau theo tích vô hướng có trọng số A (tức p_i^T A p_j = 0). Phép biến đổi này chính là biến ellipsoid xiên thành ellipsoid thẳng trục (hoặc hình cầu nếu chuẩn hóa độ dài theo A).
 
 **🔗 See also:** [Tối ưu hóa tọa độ Hessian chéo](#node-b04ox8f) · [5.2.4 Gradient Descent Optimization *(Pattern Recognition Machine Learning_C.Bishop)*](../pattern_recognition_machine_learning_cbishop/524_gradient_descent_optimization.md#node-n86no7e)
 
@@ -638,9 +811,15 @@
 
 ###### Chuyển đổi A thành diagonal
 
-<p align="center"><kbd><img src="assets/59engrftwp6.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/6b9gzofz8bx.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/mj5m5g260gp.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/4ab9ee24iru.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/x8b7fg.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/losnm4k.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Hiểu chỗ này đại khái như sau: Nếu như A diagonal, thì bộ basis vector {ei} chính là conjugate set, và dùng chúng để đi từ x0 thì ta sẽ đến được x\* trong nhiều nhất là n step như theorem 5.1 đã nói.
@@ -675,177 +854,13 @@
 >
 >
 >
-> Vậy thì, nhớ lại ở MIT 1806 ta đã học về change of basis matrix, cũng như linear transformation. Ôn lại tí:
->
->
->
-> Giả sử ta có vector x đang có tọa độ theo basis v's. Thì để chuyển tọa độ của nó thành tọa độ theo basis w's thì ta sẽ lập luận như sau:
->
->
->
-> Trước tiên phải nói về linear transformation: Ax là một linear tranformation, bởi nó thoả điều kiện T(αv + βu) = αT(v) + βT(u). Thế thì, ý chính cần hiểu, với một linear transformation, ta có thể thể hiện nó bởi phép biến đổi bởi một matrix A. Ví dụ, phép xoay bởi góc α, là một linear tranformation, thì sẽ có thể tìm được matrix Q để biểu diễn T(v) = Qv.
->
->
->
-> Cách làm theo quy tắc như sau: Ta biến đổi (áp dụng linear transformation) lên các basis của input space. Và thể hiện kết quả theo basis của các output space. Rồi cuối cùng lấy tọa độ của chúng bỏ vào cột của matrix A. Khi đó ta sẽ có matrix A đại diện cho phép biến đổi tuyến tính. Ví dụ, ta tìm Q, đại diện cho phép xoay trong không gian R² một góc α.
->
->
->
-> Theo rule trên, bước 1 ta biến đổi hai basis e1,e2:
->
-> (1,0) trở thành (cos(α), sin(α))
->
-> (0,1) trở thành (-sin(α), cos(α))
->
->
->
-> Và dĩ nhiên đó cũng chính tọa độ của kết quả trong basis e's (tức là trong case này input basis = output basis, quy tắc khái quát là dành cho cả khi input basis khác output basis)
->
->
->
-> Do đó, matrix Q chính là \[cos(α) -sin(α); sin(α) cos(α)\]
->
->
->
-> Thế thì, nếu ta chọn output basis không phải là e1, e2 mà là vector khác, thì matrix sẽ khác, và trong bài giáo sư Strang đã minh họa khi ta chọn một bộ basis đặc biệt, q1,q2 thì có thể khiến Q trở thành một diagonal matrix. Và hóa ra basis đặc biệt đó cũng chính là eigenvector của Q.
->
->
->
-> Thế thì, ta mới xét một phép biến đổi tuyến tính đặc biệt: Identity transformation, T(v) = v. Tức là chả làm gì hết.
->
->
->
-> Vậy thì vẫn theo quy tắc, ta sẽ biến đổi (dù chả làm gì) các input basis v's, rồi thể hiện nó bởi các output basis w's. Và ném các tọa độ vào các cột của A.
->
->
->
-> Vậy thì T(v1) = v1. Tức là, kết quả biến đổi của v1 là v1. Bước 2: thể hiện kết quả này theo basis w's: v1 = α11w1 + α21w2 + ..Bước 3: Ném bộ tọa độ của v1 trong basis w's thành cột 1 của A: Cột 1 của A = \[α11, α21,...\] Tương tự như vậy, ta sẽ có matrix A.
->
->
->
-> Thế thì ta thấy thế này, với matrix A như vậy, và bỏ các basis v's, w's thành các matrix V, W thì ta có:
->
->
->
-> v1 = α11w1 + α21w2 +.. . Chính là linear combination các vector w's bởi các hệ số là cột 1 của A:
->
->
->
-> v1 = W\[cột 1 của A\]
->
->
->
-> Tương tự, v2 = W\[cột 2 của A\]
->
->
->
-> Và đây chính là V = WA (theo góc nhìn thứ 2 khi nhân matrix với matrix mà thầy Strang đã dạy)
->
->
->
-> Từ đây, dĩ nhiên là W là matrix of basis, nó invertible, nhân hai vế cho W⁻¹:
->
-> W⁻¹V = A ⇨ A = W⁻¹V chính là matrix GIÚP ĐỔI TỌA ĐỘ TRONG BASIS v's SANG TỌA ĐỘ THEO BASIS w's, gọi là "change of basis" matrix.
->
->
->
-> Thế thì, từ đó, nếu ta đang trong tọa độ chuẩn (Standard basis e's), thì V lúc này chính là I và muốn đổi sang tọa độ basis w's: matrix đổi tọa độ sẽ là: A = W⁻¹I = W⁻¹
->
->
->
-> Có nghĩa là nếu x là vector có tọa độ trong basis e's, thì W⁻¹x là tọa độ của nó trong basis w's.
->
->
->
-> ---
->
->
->
-> Quay lại bài này ta thấy rõ: x̂ = S⁻¹ x chính là chuyển tọa độ của x từ basis e's sang tọa độ của nó trong BASIS p's (p0,..pn-1). Vì đã nói S chính là matrix có các cột tạo bởi {pi} mà.
->
->
->
-> Vậy thì ý tưởng ở đây là:
->
->
->
-> Khi A diagonal, ta thấy contour plot là elipsoid ngay ngắn thẳng trục để rồi đi theo các hướng bởi vector ei, theo thuật toán cho kết quả hội tụ trong n bước là vì lúc này {ei} là conjugate set
->
->
->
-> Cho dù A không diagonal, để rồi {ei} không phải là conjugate set của nó. Nên đi dùng chúng sẽ không thỏa Theorem 5.1 giúp hội tụ trong n bước. Thì đơn giản là bằng cách đổi biến sang tọa độ của basis p's, là conjugate set của A, thì trong hệ tọa độ đó, cái contour plot nó là CŨNG LÀ một elipsoid ngay ngắn, thẳng trục với basis p's. Và mọi chuyện y hệt case trên.
->
->
->
-> Vậy thì ý tưởng là: làm sao đó để trong hệ tọa tọa độ mới, matrix A biến thành diagonal matrix.
->
->
->
-> Như trên vừa nói, nếu x là tọa độ trong basis e's, thì S⁻¹ x sẽ là tọa độ trong basis mới tạo bởi các cột của S. Ngược lại nếu x̂ là tọa độ trong basis đó thì x = S x̂ sẽ là tọa độ trong basis e's. Thế thì ta có:
->
->
->
-> Φ(x) = (1/2)xᵀAx - bᵀx khi chuyển qua tọa độ mới sẽ là:
->
->
->
-> Φ(Sx̂) = (1/2)(Sx̂)ᵀA(Sx̂) - bᵀSx̂
->
->
->
-> = (1/2)x̂TSᵀASx̂ - bᵀSx̂
->
->
->
-> Để rồi nếu như ta muốn trong hệ trục này, basis {si} matrix Hessian trở nên diagonal, tức SᵀAS diagonal (để giống như trong hệ trục gốc, basis {ei}, Hessian là A diagonal)
->
->
->
-> Thế thì SᵀAS diagonal đồng nghĩa các off-diagonal entries (các phần tử ngoài đường chéo) phải bằng 0.
->
-> Các phần tử ngoài đường chéo là gì?
->
->
->
-> SᵀAS = Sᵀ (AS), theo góc nhìn thứ 2 khi nhân matrix, = Sᵀ \[As1, As2,...Asn\]
->
->
->
-> Thế thì matrix này, đường chéo của nó sẽ là s1ᵀAs1, s2ᵀAs2,...snᵀAsn
->
->
->
-> Còn ngòai đường chéo sẽ là siᵀAsj với i ≠ j.
->
->
->
-> Như vậy, muốn SᵀAS là diagonal matrix thì ta sẽ phải có siᵀAsj = 0 với i ≠ j
->
->
->
-> Do đó, {si} phải là một conjugate set của A.
->
->
->
-> Và lúc này, ta sẽ hiểu rằng, trong hệ tọa độ mới, theo basis {si} = {pi} = {p0,...pn-1} thì thuật toán cũng làm cái việc y như trong trường hợp A diagonal: Tức là nó cũng sẽ chỉ mất n bước để đi đến x\* mà ở mỗi bước nó sẽ dùng hướng các vector của basis.
->
->
->
-> Do đó thầy Nocedal mới nói ở đây rằng: "ith coordinate direction in x̂-space corresponds to th direction pi in x-space" Ý là, trong hệ tọa độ basis p's thì di chuyển theo hướng p cũng chính là tương ứng với di chuyển theo hướng e's trong hệ tọa độ basis e's.
->
->
->
-> Nên coordinate search strategy sẽ apply φ̂ sẽ tương đương với conjugate direction algorithm. Do đó, theorem 5.1 nói rằng, nó sẽ converge trong n step.
->
->
->
-> ---
->
->
->
 > Phần ghi chú trong video:\
 > \
-> T(αu + βv) = αT(u) + βT(v)
+> Linear transformation có tính chất: T(αu + βv) = αT(u) + βT(v)
+>
+>
+>
+> Nên phân biệt u là vector, là cái nhà nằm trên đồng trống. Khi đánh địa chỉ nó, người ta chọn hệ trục (cơ sở) thì nó mới có địa chỉ, cơ sở khác nhau thì địa chỉ khác nhau. Ví dụ cơ sở e's (e1, e2), s's (s1,s2), v's (v1,v2)
 >
 >
 >
@@ -861,7 +876,15 @@
 >
 >
 >
+> Biến đổi tuyến tính u, ta có vector T(u), giống như từ cái nhà u, ta có cái nhà mới T(u). Và dựa theo cơ sở w's thì địa chỉ của nó là \[T(u)\]\_w
+>
+>
+>
 > \[T(u)\]\_w = (7,8,9): T(u) = 7w1 + 8w2 + 9w3
+>
+>
+>
+> Nhiệm vụ là muốn tìm matrix A đại diện cho T(.) để nhân A cho tọa độ của u trong cơ sở v's được tọa độ của T(u) trong cơ sở w's
 >
 >
 >
@@ -869,7 +892,11 @@
 >
 >
 >
-> T(u) = T(5v1 + 6v2) = 5T(v1)+ 6T(v2)
+> Lập luận như sau: Do \[u\]\_v = (5,6) nên u = 5v1 + 6v2
+>
+>
+>
+> ⇒ T(u) = T(5v1 + 6v2) = 5T(v1)+ 6T(v2)
 >
 >
 >
@@ -897,7 +924,11 @@
 >
 >
 >
-> ⇒ c1 = 5\[T(v1)\]\_w, c2 = \[T(v2)\]\_w
+> ⇒ c1 = \[T(v1)\]\_w, c2 = \[T(v2)\]\_w
+>
+>
+>
+> Vậy cột 1 của A là tọa độ của T(v1) trong cơ sở w, cột 2 là tọa độ của T(v2) trong cơ sở w
 >
 >
 >
@@ -905,7 +936,7 @@
 >
 >
 >
-> T(u) = u
+> Giờ xét phép biến đổi identity: T(u) = u
 >
 >
 >
@@ -917,11 +948,27 @@
 >
 >
 >
+> ⇒ matrix A giúp nhân tọa độ của u theo cơ sở v's ra tọa độ u trong cơ sở s's sẽ là: cột j là tọa độ của vj trong cơ sở s.
+>
+>
+>
+> Nhưng ta có thể lập luận thêm:
+>
+>
+>
 > \[v1\]\_s = (c11, c21)
 >
 >
 >
-> \[v1\]\_e = \[c11 s1 + c21 s2\]\_e
+> ⇒ v1 = c11 s1 + c21 s2
+>
+>
+>
+> Hai vector bằng nhau nên tọa độ trong cơ sở e (hay cơ sở nào) cũng bằng nhau:
+>
+>
+>
+> ⇒ \[v1\]\_e = \[c11 s1 + c21 s2\]\_e
 >
 >
 >
@@ -945,6 +992,10 @@
 >
 >
 >
+> Vậy từ hai ý này:
+>
+>
+>
 > \[v1\]\_e = c11 \[s1\]\_e + c21 \[s2\]\_e
 >
 >
@@ -953,7 +1004,15 @@
 >
 >
 >
+> Nếu ta đặt matrix V, S có các cột là \[v1\]\_e,\[v2\]\_e, và \[s1\]\_e, \[s2\]\_e thì hai phương trình trên chính là:
+>
+>
+>
 > V = SA
+>
+>
+>
+> Do S là matrix chứa các cột tọa basis nên S khả nghịch"
 >
 >
 >
@@ -961,42 +1020,171 @@
 >
 >
 >
+> Vậy matrix A giúp chuyển tọa độ trong cơ sở v's sang s's là: A = S⁻¹ V
+>
+>
+>
 > S⁻¹ V \[u\]\_v = \[u\]\_s
 >
 >
 >
-> S⁻¹ \[u\]\_e = \[u\]\_s 
+> Theo quy tắc đó, nếu muốn chuyển từ tọa độ cơ sở e's sang s's: A = S⁻¹ E = S⁻¹ I = S⁻¹
 >
 >
 >
-> S⁻¹ x = \[x\]\_s x̂
+> (matrix E có các cột là \[e1\]\_e, \[e2\]\_e, thì cũng chính là e1, e2. Và E chính là Identity matrix I)
 >
 >
 >
-> {p0,p1,...pn-1}
+> S⁻¹ \[u\]\_e = \[u\]\_s
+>
+>
+>
+>  \[u\]\_e = S \[u\]\_s 
+>
+>
+>
+> Như vậy, trong sách khi ta thấy x̂ = S⁻¹ x với S là matrix có các cột là p0, p1,...thì ta hiểu đang chuyển tọa độ của x trong cơ sở e's (mà thường thì khi viết x, ta hay đồng nhất là vector x và tọa độ của nó trong cơ sở chuẩn mà ở trên ta phân biệt rạch ròi ra là x và \[x\]\_e) sang tọa độ cơ sở là các vector p0, p1,... này.
+>
+>
+>
+> S⁻¹ x = x̂ chính là S⁻¹ \[x\]\_e = \[x\]\_s
+>
+>
+>
+> ---
+>
+>
+>
+> Quay lại bài này ta thấy rõ: x̂ = S⁻¹ x chính là chuyển tọa độ của x từ basis e's sang tọa độ của nó trong BASIS p's (p0,..pn-1).
+>
+>
+>
+> Vậy thì ý tưởng ở đây là:
+>
+>
+>
+> Khi A diagonal, ta thấy contour plot là elipsoid ngay ngắn thẳng trục để rồi đi theo các hướng bởi vector ei, theo thuật toán cho kết quả hội tụ trong n bước là vì lúc này {ei} là conjugate set
+>
+>
+>
+> Cho dù A không diagonal, để rồi {ei} không phải là conjugate set của nó. Nên đi dùng chúng sẽ không thỏa Theorem 5.1 giúp hội tụ trong n bước. Thì đơn giản là bằng cách đổi biến sang tọa độ của basis p's, là conjugate set của A, thì trong hệ tọa độ đó, cái contour plot nó là CŨNG LÀ một elipsoid ngay ngắn, thẳng trục với basis p's. Và mọi chuyện y hệt case trên.
+>
+>
+>
+> Vậy thì ý tưởng là: làm sao đó để trong hệ tọa tọa độ mới, matrix A biến thành diagonal matrix.
+>
+>
+>
+> Như trên vừa nói, nếu x là tọa độ trong basis e's, thì S⁻¹ x sẽ là tọa độ trong basis mới tạo bởi các cột của S. Ngược lại nếu x̂ là tọa độ trong basis đó thì x = S x̂ sẽ là tọa độ trong basis e's.
+>
+>
+>
+> \[x\]\_p = S⁻¹ \[x\]\_e
+>
+>
+>
+> \[x\]\_e = S \[x\]\_p
+>
+>
+>
+> Thế thì ta có:
+>
+>
+>
+> Φ(x) = (1/2)xᵀAx - bᵀx khi chuyển qua tọa độ mới sẽ là:
+>
+>
+>
+> Φ(Sx̂) = (1/2)(Sx̂)ᵀA(Sx̂) - bᵀSx̂
+>
+>
+>
+> = (1/2)x̂ ᵀSᵀASx̂ - bᵀSx̂
+>
+>
+>
+> Để rồi nếu như ta muốn trong hệ trục này, basis {si} matrix Hessian trở nên diagonal, tức SᵀAS diagonal (để giống như trong hệ trục gốc, basis {ei}, Hessian là A diagonal)
+>
+>
+>
+> SᵀAS diagonal, tạm quên p0,p1,..Giả sử các cột của S là s1, s2,... thì để SᵀAS diagonal, ta thấy như sau:
+>
+>
+>
+> Các phần tử ngoài đường chéo:
+>
+>
+>
+> SᵀAS = Sᵀ (AS), theo góc nhìn thứ 2 khi nhân matrix, = Sᵀ \[As1, As2,...Asn\]
+>
+>
+>
+> Thế thì matrix này, đường chéo của nó sẽ là s1ᵀAs1, s2ᵀAs2,...snᵀAsn
+>
+>
+>
+> Còn ngòai đường chéo sẽ là siᵀAsj với i ≠ j.
+>
+>
+>
+> Như vậy, muốn SᵀAS là diagonal matrix thì ta sẽ phải có siᵀAsj = 0 với i ≠ j
+>
+>
+>
+> Do đó, {si} phải là một conjugate set của A.
+>
+>
+>
+> từ đó ta hiểu nếu đặt p0,p1,...làm cột của S, thì SᵀAS là diagonal matrix
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> Và lúc này, ta sẽ hiểu rằng, trong hệ tọa độ mới, theo basis {si} = {pi} = {p0,...pn-1} thì thuật toán cũng làm cái việc y như trong trường hợp A diagonal: Tức là nó cũng sẽ chỉ mất n bước để đi đến x\* mà ở mỗi bước nó sẽ dùng hướng các vector basis.
+>
+>
+>
+> Cụ thể:
+>
+>
+>
+> Từ x1
+>
+>
+>
+> Do đó thầy Nocedal mới nói ở đây rằng: "ith coordinate direction in x̂-space corresponds to th direction pi in x-space" Ý là, trong hệ tọa độ basis p's thì di chuyển theo hướng p1 cũng chính là tương ứng với di chuyển theo hướng e1 trong hệ tọa độ basis e's, di chuyển theo hướng p2 cũng chính là tương ứng với di chuyển theo hướng e2 trong hệ tọa độ basis e's
+>
+>
+>
+> Nên coordinate search strategy sẽ apply φ̂ sẽ tương đương với conjugate direction algorithm. Do đó, theorem 5.1 nói rằng, nó sẽ converge trong n step.
+>
+>
+>
+> ---
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=LdqakqsyBRY)
+📹 Video 1: [Vì sao ma trận SᵀAS là ma trận đường chéo? (phần 3)](https://www.youtube.com/watch?v=zYeJv7A0Hns)
+
+📹 Video 2: [Làm sao xây dựng ma trận chuyển cơ sở S⁻¹V?](https://www.youtube.com/watch?v=LdqakqsyBRY)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú thể hiện sự hiểu biết rất xuất sắc và trực giác sâu sắc về bản chất đại số tuyến tính đằng sau phương pháp Conjugate Direction thông qua phép đổi biến tọa độ.
->
-> **🟡 Minor issues**
->
-> **1.** *"Ví dụ, phép xoay trong không gian R² một góc α... có thể khiến Q trở thành một diagonal matrix. Và hóa ra basis đặc biệt đó cũng chính là eigenvector của Q."*
->
-> Phép quay 2D tổng quát với góc α bất kỳ (không phải bội số của 180 độ) không có vector riêng thực và không chéo hóa được trên trường số thực ℝ (chỉ chéo hóa được trên ℂ). Ở đây có lẽ bạn nhớ nhầm ví dụ từ bài giảng của GS. Strang (thường minh họa bằng phép chiếu projection hoặc ma trận đối xứng).
->
+> Ghi chú xuất sắc! Bạn đã tự chứng minh lại bản chất của phép đổi cơ sở và liên kết hoàn hảo giữa việc chéo hóa ma trận Hessian với tính chất trực giao liên hợp (conjugacy).
 >
 > **✓ Strengths**
-> - Hiểu rất rõ và chính xác mối liên hệ giữa việc tối ưu dọc theo các trục tọa độ trong không gian x̂ và các hướng liên hợp pi trong không gian x.
-> - Chứng minh mạch lạc tại sao điều kiện liên hợp piᵀApj = 0 lại biến ma trận SᵀAS thành ma trận đường chéo.
-> - Tự liên hệ thành công bản chất của ma trận đổi cơ sở (change of basis) W⁻¹V từ Đại số tuyến tính vào biến đổi x̂ = S⁻¹x.
+> - Diễn giải cực kỳ trực quan và chuẩn xác bản chất của phép đổi hệ cơ sở từ cơ sở chuẩn sang hệ vector liên hợp.
+> - Tự tính toán và chỉ ra được các phần tử ngoài đường chéo của ma trận SᵀAS tương ứng với siᵀAsj = 0, kết nối trực tiếp với định nghĩa tính liên hợp.
+> - Hiểu sâu sắc lý do tại sao tìm kiếm theo tọa độ trong không gian x̂ lại tương đương với thuật toán conjugate direction trong không gian x gốc.
 >
 > **💡 Deeper notes**
-> - Vì A đối xứng xác định dương (SPD), tập các hướng liên hợp {pi} luôn độc lập tuyến tính, đảm bảo S khả nghịch và phép biến đổi x = Sx̂ là song ánh.
-> - Phép biến đổi SᵀAS là phép đồng dạng dạng toàn phương (congruence transformation), khác với phép biến đổi tương tự S⁻¹AS (similarity transformation) dùng cho trị riêng, trừ khi S là ma trận trực giao (Sᵀ = S⁻¹).
+> - Để S khả nghịch và các hướng pi tạo thành một cơ sở đầy đủ của không gian n chiều, các vector conjugate này phải độc lập tuyến tính, điều này luôn được đảm bảo khi A là ma trận đối xứng xác định dương (Symmetric Positive Definite - SPD).
+> - Hình dạng contour của hàm mục tiêu là elip/elipsoid thực chất dựa trên giả định A là ma trận đối xứng xác định dương (A > 0), đảm bảo hàm lồi ngặt và có cực tiểu toàn cục duy nhất.
 
 **🔗 See also:** [Theorem 5.1](#node-g0algzt) · [Conjugate Direction Method](#node-0lu7h6i)
 
@@ -1034,7 +1222,14 @@
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Bài làm giải thích rất chính xác tính chất của ma trận Hessian chéo và sự tối ưu hóa trên không gian con, thể hiện sự hiểu sâu sắc. Việc tự tay dẫn dắt công thức (5.10) cũng cho thấy bạn đã nắm vững kiến thức và không chỉ đọc mà còn hiểu rõ từng bước; bạn chỉ cần chú ý đặt ký hiệu công thức ở dạng hoàn chỉnh để khớp hoàn toàn với văn bản gốc.
+> Ghi chú nắm rất chắc bản chất trực quan từ ma trận Hessian đường chéo đến việc cực tiểu hóa trên không gian con, đồng thời tự diễn giải và chứng minh lại công thức (5.10) một cách mạch lạc.
+>
+> **✓ Strengths**
+> - Giải thích trực quan và chính xác ý nghĩa hình học: khi Hessian là ma trận đường chéo, việc tối ưu từng tọa độ sẽ chốt luôn giá trị thành phần tối ưu tương ứng của nghiệm x*.
+> - Chứng minh chi tiết, rõ ràng từng bước cho công thức truy hồi phần dư r_{k+1} = r_k + \alpha_k A p_k (5.10) dựa trên định nghĩa phần dư và bước cập nhật nghiệm.
+>
+> **💡 Deeper notes**
+> - Về mặt chuẩn xác hình học, miền tối ưu sau k bước thực chất là một affine subspace (không gian con afin) dạng x_0 + span{e_1, ..., e_k} chứ không hẳn đi qua gốc tọa độ trừ khi điểm xuất phát x_0 = 0.
 
 **🔗 See also:** [Conjugate Direction Method](#node-0lu7h6i) · [5.1 The Linear Conjugate Gradient Method](#node-hpdy8sw) · [Góc nhìn hình học lí giải tính chất của conjugate direction](#node-aads1j4) · [Theorem 5.3](#node-e7cob1z)
 
@@ -1220,7 +1415,23 @@
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Điểm mạnh của bạn là sự hiểu biết sâu sắc về bản chất của thuật toán Conjugate Gradient, đặc biệt là vai trò của A-norm và phép chiếu trong không gian con. Bạn đã giải thích rất rõ ràng lý do tại sao phương pháp này lại hiệu quả, vượt xa việc chỉ tóm tắt định lý.
+> Ghi chú thể hiện trực giác toán học và hiểu biết hình học rất xuất sắc; bạn đã kết nối thành công bước nhảy của Conjugate Gradient với phép chiếu trực giao theo A-norm.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"rkTpi = 0 với mọi pi = 0,1,..,k-1"*
+>
+> Lỗi gõ ký hiệu nhỏ: nên viết là 'với mọi i = 0, 1, ..., k-1' thay vì 'với mọi pi'.
+>
+>
+> **✓ Strengths**
+> - Xây dựng trực giác hình học xuất sắc khi liên hệ CG với bài toán bình phương tối thiểu (least squares) và phép chiếu trực giao.
+> - Lập luận chặt chẽ vì sao phép chiếu thông thường (Euclidean norm) bị bế tắc do chứa x* chưa biết, trong khi phép chiếu theo A-norm lại giải quyết triệt để nhờ gom được Ax* = b.
+> - Biến đổi đại số chính xác từ phép đổi biến tọa độ bằng căn ma trận A^(1/2) dẫn đến đúng công thức bước nhảy alpha của thuật toán.
+>
+> **💡 Deeper notes**
+> - Điều kiện ngầm định quan trọng: Ma trận A phải đối xứng xác định dương (Symmetric Positive Definite - SPD) thì mới tồn tại căn bậc hai ma trận A^(1/2) và chuẩn A (A-norm) mới là một chuẩn hợp lệ.
+> - Mối liên hệ giữa việc cực tiểu hóa hàm mục tiêu phi(x) và chuẩn sai số A-norm: (1/2)||x - x*||_A^2 = phi(x) + (1/2)x*^T A x*. Do số hạng sau là hằng số, việc cực tiểu hóa phi(x) hoàn toàn tương đương với cực tiểu hóa khoảng cách sai số theo A-norm.
 
 **🔗 See also:** [5.1 The Linear Conjugate Gradient Method](#node-hpdy8sw) · [Conjugate Direction Method](#node-0lu7h6i) · [A Practical Form Of The Conjugate Gradient Method.](#node-jdgssae) · [Rate of Convergence](#node-3zg5huu)
 
