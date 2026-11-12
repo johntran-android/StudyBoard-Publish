@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1794458891817,
+  "publishedAt": 1794459490137,
   "sections": [
     {
       "title": "📋 Overview",
@@ -569,8 +569,8 @@
     {
       "title": "5.5.1 Consistent Gaussian priors",
       "path": "pattern_recognition_machine_learning_cbishop/551_consistent_gaussian_priors.md",
-      "noteCount": 3,
-      "imageCount": 7
+      "noteCount": 4,
+      "imageCount": 8
     },
     {
       "title": "5.7 Ex",
@@ -591,6 +591,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 522,
-  "totalImages": 871
+  "totalNotes": 523,
+  "totalImages": 872
 }
