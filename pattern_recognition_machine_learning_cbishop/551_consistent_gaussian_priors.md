@@ -1,6 +1,6 @@
 # 5.5.1 Consistent Gaussian priors
 
-📊 **Progress:** `2` Notes | `6` Screenshots | `2` AI Reviews
+📊 **Progress:** `3` Notes | `7` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-vq3vs93"></a>
@@ -242,6 +242,10 @@
 >
 >
 >
+> (λ/2) Σ w²
+>
+>
+>
 > (λ1/2) Σ\_w∈𝒲1 w² + (λ2/2) Σ\_w∈𝒲2 w²
 >
 >
@@ -278,7 +282,7 @@
 >
 >
 >
-> Còn bias cũng được điều chỉnh như mong muốn (vì nó ko bị regularizer khống chế) 
+> Còn bias cũng được điều chỉnh như mong muốn (vì nó ko bị regularizer khống chế)
 >
 >
 >
@@ -291,6 +295,8 @@
 >
 >
 > p(𝐰|α1,α2) ∝ exp(-(α1/2) Σ\_w∈𝒲1 w² - (α2/2) Σ\_w∈𝒲2 w²) (tìm hiểu sau)
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=1F3wizYVnQo)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -313,6 +319,54 @@
 <p align="center"><kbd><img src="assets/067nls38qb5u.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/043dk0e8uqim.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/vq234j1gmx.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Cuối cùng đại ý là, cách làm này sẽ gây vấn đề khi ta làm công tác model comparision với Bayesian framework.
+>
+>
+>
+> Cụ thể là phân phối tiên nghiệm của bias sẽ trở thành improper. Khiến mọi thứ không đúng nữa.
+>
+>
+>
+> Là sao?
+>
+>
+>
+> Đầu tiên hãy nhớ lại, với Bayesian, ta sẽ coi 𝐰 (bao gồm mọi weight bias) là random variable hết. 
+>
+>
+>
+> Để rồi ta chọn prior distribution của 𝐰: f(𝐰) hay p(𝐰|α). Ví dụ, chọn 𝒩(𝟎, (1/α)𝐈)
+>
+>
+>
+> posterior distribution của 𝐰: p(𝐰|𝐭) ∝ p(𝐭|𝐰)p(𝐰|α)
+>
+>
+>
+> t1,t2,...d
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **80/100** · ✓ Move on
+>
+> Ghi chú nắm đúng một hệ quả quan trọng là việc dùng improper priors gây khó khăn cho model comparison trong Bayesian framework. Tuy nhiên, bạn nên ghi rõ tên phương pháp ('dùng improper priors') và lý do cốt lõi (evidence bằng 0) để ghi chú hoàn thiện hơn.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"cách làm này"*
+>
+> Cách diễn đạt còn mơ hồ. Cần làm rõ 'cách làm này' chính là việc sử dụng tiền nghiệm không chuẩn hóa được (improper priors) do để ngỏ các tham số bias không ràng buộc.
+>
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác kết luận về sự bất lợi của improper priors đối với bài toán so sánh mô hình (model comparison) trong Bayesian framework.
+>
+> **💡 Deeper notes**
+> - Nguyên nhân trực tiếp khiến việc so sánh mô hình và chọn hệ số điều chuẩn gặp khó khăn là do đại lượng evidence (marginal likelihood) tương ứng bị triệt tiêu bằng 0 khi sử dụng improper prior.
+> - Để khắc phục, trong thực tế người ta thường đặt prior riêng cho các bias đi kèm siêu tham số độc lập, chấp nhận đánh đổi tính bất biến tịnh tiến (shift invariance).
 
 <br>
 
