@@ -1,6 +1,6 @@
 # 5.5.1 Consistent Gaussian priors
 
-📊 **Progress:** `3` Notes | `7` Screenshots | `3` AI Reviews
+📊 **Progress:** `4` Notes | `8` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-vq3vs93"></a>
@@ -316,8 +316,6 @@
 
 <p align="center"><kbd><img src="assets/067nls38qb5u.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/vq234j1gmx.png" width="80%"></kbd></p>
-
 > [!NOTE]
 > Cuối cùng đại ý là, cách làm này sẽ gây vấn đề khi ta làm công tác model comparision với Bayesian framework.
 >
@@ -445,6 +443,8 @@
 >
 > ---
 
+📹 [Xem video trên YouTube](https://youtu.be/y3SUVfjJbPc)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
@@ -461,5 +461,30 @@
 
 <a id="node-wsg2852"></a>
 
+<p align="center"><kbd><img src="assets/067nls38qb5u.png" width="80%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/043dk0e8uqim.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/vq234j1gmx.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> đại ý là do vấn đề improper trên, ta sẽ phải hi sinh tính invariant under linear transformation, để đưa bias vào regularizer lại, nhưng dùng riêng λ khác cho nó.
+>
+>
+>
+> hình minh họa ảnh hưởng của 4 hyperparm αw1,αw2,αb1, αb2
+
+> [!TIP]
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **0/100** · ✗ Fix first
+>
+> Ghi chú chưa hoàn thành và hoàn toàn chưa có nội dung để tóm tắt hay giải thích kiến thức trong tài liệu.
+>
+> **🔴 Critical issues**
+>
+> **1.** *"đại ý là "*
+>
+> Ghi chú còn dang dở, chưa đưa ra bất kỳ kết luận hay nội dung phân tích nào về hình ảnh và các công thức phân phối tiên nghiệm (prior) / ARD đã cho.
+>
+
+<br>
 
