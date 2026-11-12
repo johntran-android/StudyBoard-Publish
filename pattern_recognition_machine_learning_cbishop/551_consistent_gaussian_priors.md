@@ -216,6 +216,8 @@
 
 📹 Video 2: [Trọng số phải biến đổi thế nào khi co giãn đầu vào? (phần 2)](https://www.youtube.com/watch?v=Sgg5UMQVzsI)
 
+📹 Video 3: [Vì sao mạng Bayes làm mất tính bất biến của weight decay? (phần 4)](https://www.youtube.com/watch?v=fGd-ViSTpuo)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
@@ -347,7 +349,39 @@
 >
 >
 >
-> t1,t2,...d
+> t1,t2,...là giá trị quan sát được của T1,T2,.. độc lập.: Ti \~ 𝒩(𝐰ᵀΦ(𝐱i), 1/β)
+>
+>
+>
+> p(𝐭|𝐰, β) = p(t1,t2,...|𝐰, β) = Πi p(ti|𝐰, β) = Πi 𝒩(ti|𝐰ᵀΦ(𝐱i), 1/β)
+>
+>
+>
+> Từ đó:
+>
+>
+>
+> p(𝐰|𝐭) ∝ p(𝐭|𝐰)p(𝐰|α) = \[Πi 𝒩(ti|𝐰ᵀΦ(𝐱i), 1/β)\] 𝒩(𝐰|𝟎, (1/α)𝐈)
+>
+>
+>
+> ⇔ p(𝐰|𝐭) ∝ \[Πi 𝒩(ti|𝐰ᵀΦ(𝐱i), 1/β)\] 𝒩(𝐰|𝟎, (1/α)𝐈)
+>
+>
+>
+> ⇔ p(𝐰|𝐭) ∝ \[Πi C1 exp{-(β/2)(ti-𝐰ᵀΦ(𝐱i)\]²)\] C2 exp\[-(α/2)𝐰ᵀ𝐰\]
+>
+>
+>
+> ⇔ p(𝐰|𝐭) ∝ \[C exp{-(β/2) Σi(ti-𝐰ᵀΦ(𝐱i)\]²)\] C2 exp\[-(α/2)𝐰ᵀ𝐰\]
+>
+>
+>
+> ⇔ p(𝐰|𝐭) ∝ C3 exp{-(β/2) Σi(ti-𝐰ᵀΦ(𝐱i)\]²) exp\[-(α/2)𝐰ᵀ𝐰\]
+>
+>
+>
+> ⇔ p(𝐰|𝐭) ∝ C3 exp{-(β/2) Σi(ti-𝐰ᵀΦ(𝐱i)\]²) -(α/2)𝐰ᵀ𝐰}
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **80/100** · ✓ Move on
