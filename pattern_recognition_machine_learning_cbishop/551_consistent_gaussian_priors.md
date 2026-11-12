@@ -212,7 +212,7 @@
 >
 > Nhưng nếu có L2 regularizer: (λ/2) Σ w² thì việc điều chỉnh như vậy sẽ khiến L2 regularization loss bị hiện tượng như trong ví dụ cụ thể ở trên đã thấy: đóng góp của một loại nào đó sẽ có thể bị trở nên quá nhỏ so với loại còn lại. Khiến cho hiệu ứng của regularization sẽ thiên vị một loại này hơn loại kia, ví dụ chỉ ưu tiên khống chế weight của layer này mà bỏ mặc layer kia tạo nên cái gọi là "favor solution này hơn solution khác một cách tùy tiện"
 
-📹 Video 1: [Vì sao weight decay không nhất quán khi co giãn đầu vào? (phần 1)](https://www.youtube.com/watch?v=W_XXQCusF6Q)
+📹 Video 1: [Vì sao weight decay không nhất quán khi co giãn đầu vào?](https://www.youtube.com/watch?v=W_XXQCusF6Q)
 
 📹 Video 2: [Vì sao cần lambda riêng cho từng layer trong L2 regularization?](https://www.youtube.com/watch?v=fGd-ViSTpuo)
 
