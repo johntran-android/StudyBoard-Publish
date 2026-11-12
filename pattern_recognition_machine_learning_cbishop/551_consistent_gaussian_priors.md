@@ -1,6 +1,6 @@
 # 5.5.1 Consistent Gaussian priors
 
-📊 **Progress:** `1` Notes | `3` Screenshots | `1` AI Reviews
+📊 **Progress:** `2` Notes | `6` Screenshots | `2` AI Reviews
 
 ---
 <a id="node-vq3vs93"></a>
@@ -50,74 +50,269 @@
 >
 > Vấn đề là, nếu có regularizer:
 >
-> Reg loss cũ: (λ/2)[(w⁽¹⁾)² + (w⁽²⁾)²]
+> Reg loss cũ: (λ/2)\[(w⁽¹⁾)² + (w⁽²⁾)²\]
 >
-> Reg loss mới: (λ/2)[(w⁽¹⁾/100)² + (w⁽²⁾)²]
+> Reg loss mới: (λ/2)\[(w⁽¹⁾/100)² + (w⁽²⁾)²\]
 >
-> điều này sẽ khiến reg loss chỉ hầu như còn là đóng góp của w⁽²⁾, khiến cho regularizer sẽ ưu tiên tập trung vào w⁽²⁾ và bỏ qủa w⁽¹⁾ từ đó sẽ ưu tiên 𝐰 mà w⁽²⁾ nhỏ. 
+> điều này sẽ khiến reg loss chỉ hầu như còn là đóng góp của w⁽²⁾, khiến cho regularizer sẽ ưu tiên tập trung vào w⁽²⁾ và bỏ qủa w⁽¹⁾ từ đó sẽ ưu tiên 𝐰 mà w⁽²⁾ nhỏ.
 >
-> Từ đó, nó sẽ không scale w như trên để network có tính consistent 
+> Từ đó, nó sẽ không scale w như trên để network có tính consistent
 >
-> Đây là ý arbitrarily favours one solution over another solution 
+> Đây là ý arbitrarily favours one solution over another solution
 >
 > ---
 >
-> Khái quát lên
+> Khái quát:
 >
-> Nếu ta có mạng với hàm số:
+>
+>
+> Nếu ta có mạng:
+>
+>
 >
 > zj = h(Σi wjixi + wj0)
 >
-> yk = Σj wkjzj + wk0
 >
-> và ta biến đổi tuyến tính x: x̃ i = axi + b
 >
-> yk = Σj wkj h(Σi w̃jix̃i + w̃j0) + wk0
+> yk = Σj wkjzj + wk0 
 >
-> Để Σi w̃jix̃i + w̃j0 = Σi wjixi + wj0
 >
-> ⇔ Σi w̃ji(axi + b) + w̃j0 = Σi wjixi + wj0
 >
-> ⇔ Σi (aw̃jixi + w̃jib) + w̃j0 = Σi wjixi + wj0
+> yk = Σj wkj h(Σi wjixi + wj0) + wk0
 >
-> ⇔ Σi aw̃jixi + Σiw̃jib + w̃j0 = Σi wjixi + wj0
 >
-> aw̃jixi = wjixi ⇔ w̃ji = wji/a
 >
-> Σiw̃jib + w̃j0 = wj0 ⇔ w̃j0 = wj0 - Σiw̃jib = wj0 - Σi(wji/a)b = wj0 - (b/a) Σi wji
+> x1 → y1
+>
+>
+>
+> x2 → y2
+>
+>
+>
+> và ta biến đổi tuyến tính x, y:
+>
+>
+>
+> x̃ i = axi + b
+>
+>
+>
+> ỹk = cyk + d
+>
+>
+>
+> ỹk = Σj w̃ kj h(Σi w̃ ji x̃i + w̃ j0) + w̃ k0 (1)
+>
+>
+>
+> để giữ nguyên hàm mapping thì network với tham số w̃ phải map x với y với mọi cặp vector x,y:
+>
+>
+>
+> (1) ⇔ cyk + d = Σj w̃ kj h(Σi w̃ ji (axi + b) + w̃ j0) + w̃ k0
+>
+>
+>
+> ⇔ cyk = Σj w̃ kj h(Σi w̃ ji (axi + b) + w̃ j0) + w̃ k0 - d
+>
+>
+>
+> ⇔ yk = Σj (w̃ kj/c) h(Σi w̃ ji (axi + b) + w̃ j0) + w̃ k0/c - d/c
+>
+>
+>
+> ⇔ yk = Σj (w̃ kj/c) h(Σi (w̃ ji axi + w̃ ji b) + w̃ j0) + w̃ k0/c - d/c
+>
+>
+>
+> ⇔ y1k = Σj (w̃ kj/c) h(Σi a w̃ ji x1i + Σi w̃ ji b + w̃ j0) + w̃ k0/c - d/c
+>
+>
+>
+> y1k = Σj wkj h(Σi wjix1i + wj0) + wk0
+>
+>
+>
+> để đạt (2) ta phải có:
+>
+>
+>
+> ⇔ Σj (w̃ kj/c) h(Σi a w̃ ji xi + Σi b w̃ ji + w̃ j0) + w̃ k0/c - d/c
+>
+>
+>
+> = Σj wkj h(Σi wjixi + wj0) + wk0 **với mọi x**
+>
+>
+>
+> Điều này tương đương:
+>
+>
+>
+> Σi a w̃ ji xi + Σi b w̃ ji + w̃ j0 = Σi wji xi + wj0
+>
+>
+>
+> (w̃ kj/c) = wkj
+>
+>
+>
+> w̃ k0/c - d/c = wk0
+>
+>
+>
+> ⇔
+>
+>
+>
+> a w̃ ji = wji ⇔ w̃ ji = wji/a → 5.116
+>
+>
+>
+> Σi b w̃ ji + w̃ j0 = wj0 ⇔ w̃ j0 = wj0 - Σi b w̃ ji = wj0 - Σi b wji/a = wj0 - (b/a) Σi wji → 5.117
+>
+>
+>
+> w̃ kj = c wkj → 5.119
+>
+>
+>
+> w̃ k0/c - d/c = wk0 ⇔ w̃ k0 = c wk0 + d → 5.120
+>
+>
 >
 > ---
 >
-> Tương tự, nếu biến đổi tuyến tính yk thành ỹk = cyk + d thì w sau cũng phải thay đổi
 >
-> ỹk = Σj w̃ kj zj + w̃k0
 >
-> ⇔ cyk + d = Σj w̃ kj zj + w̃k0
+> Vậy có nghĩa là sao?
 >
-> ⇔ yk = Σj w̃ kj zj/c + w̃k0/c - d/c
 >
-> để w̃ kj/c = wkj ⇔ w̃ kj = c wkj
 >
-> w̃k0/c - d/c = wk0 ⇔ w̃k0 - d = cwk0 ⇔ w̃k0 = cwk0 + d
+> Là để mạng vẫn biểu diễn cùng một mapping, weight của layer 1 phải scale nhỏ lại a lần (ví dụ a,b,c,d đều là số &gt; 1 ví dụ 2,3,4,5)
 >
-> ---
 >
-> --
+>
+> weight của layer 2 phải scale to lên c lần
+>
+>
+>
+> bias của layer 1 phải shift một khoảng: -(b/a) Σi wji
+>
+>
+>
+> bias của layer 2 được scale bởi c và shift một khoảng d: + c wk0 + d
+>
+>
+>
+> Nếu chỉ có main loss SSE, mạng sẽ điều chỉnh đúng như vậy để giữ main loss ko đổi.
+>
+>
+>
+> Nhưng nếu có L2 regularizer: (λ/2) Σ w² thì việc điều chỉnh như vậy sẽ khiến L2 regularization loss bị hiện tượng như trong ví dụ cụ thể ở trên đã thấy: đóng góp của một loại nào đó sẽ có thể bị trở nên quá nhỏ so với loại còn lại. Khiến cho hiệu ứng của regularization sẽ thiên vị một loại này hơn loại kia, ví dụ chỉ ưu tiên khống chế weight của layer này mà bỏ mặc layer kia tạo nên cái gọi là "favor solution này hơn solution khác một cách tùy tiện"
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=W_XXQCusF6Q)
+📹 Video 1: [Vì sao weight decay không nhất quán khi co giãn đầu vào? (phần 1)](https://www.youtube.com/watch?v=W_XXQCusF6Q)
+
+📹 Video 2: [Trọng số phải biến đổi thế nào khi co giãn đầu vào? (phần 2)](https://www.youtube.com/watch?v=Sgg5UMQVzsI)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
-> Ghi chú rất xuất sắc, bạn đã lấy một ví dụ số cụ thể trực quan để làm rõ bản chất của việc phá vỡ tính nhất quán khi scale dữ liệu, đồng thời chứng minh chi tiết và chính xác các công thức biến đổi trọng số trong giáo trình.
+> Ghi chú xuất sắc! Bạn đã tự diễn giải trực quan bằng ví dụ thực tế và biến đổi đại số đầy đủ, chính xác từng bước cho các công thức (5.116) - (5.120), đồng thời nắm rất vững bản chất vì sao regularizer L2 thông thường lại phá vỡ tính nhất quán này.
 >
 > **✓ Strengths**
-> - Ví dụ cụ thể về giá nhà và chiều dài giúp làm nổi bật trực giác vì sao simple weight decay lại thiên vị nghiệm một cách tùy tiện (arbitrarily favors one solution).
-> - Các bước biến đổi đại số để tìm w̃_ji, w̃_j0, w̃_kj, w̃_k0 hoàn toàn chính xác và bám sát các công thức (5.116) đến (5.120) trong giáo trình.
+> - Dùng ví dụ cụ thể (đổi đơn vị mét sang cm) giúp hình dung trực quan bản chất của việc scale trọng số giữa các tầng.
+> - Tự triển khai phép biến đổi đại số đầy đủ và chính xác từ định nghĩa hàm ánh xạ tới các công thức (5.116) đến (5.120) trong sách.
+> - Hiểu rất rõ và giải thích chuẩn xác lý do weight decay truyền thống (với một hệ số λ chung) làm lệch mục tiêu tối ưu khi quy mô dữ liệu thay đổi.
 >
 > **💡 Deeper notes**
-> - Khi cân bằng hai vế Σ aw̃_ji x_i + (Σ w̃_ji b + w̃_j0) = Σ w_ji x_i + w_j0, về mặt toán học đây là đồng nhất thức phải đúng với mọi vector đầu vào x, do đó ta đồng nhất hệ số của x_i và hệ số tự do.
-> - Trong thực tế, weight decay thường chỉ áp dụng cho weights mà bỏ qua biases (hoặc dùng hệ số suy giảm riêng), một phần cũng chính vì sự biến đổi phức tạp của bias w̃_j0 = w_j0 - (b/a)Σ w_ji khi input bị dịch chuyển (shift).
+> - Trong thực tế, người ta thường không áp dụng weight decay lên các tham số bias (w_0) vì bias chỉ dịch chuyển vị trí mà không ảnh hưởng trực tiếp đến độ mượt của hàm số, tuy nhiên ngay cả với riêng các ma trận trọng số w, việc dùng chung một hệ số λ giữa các tầng khác nhau vẫn vi phạm tính nhất quán này.
+
+<br>
+
+<a id="node-coru8dg"></a>
+
+### Section 5.5 Regularization in Neural Networks
+
+<p align="center"><kbd><img src="assets/gkyrydswsrg.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại ý là với mong muốn có một regularizer "tốt hơn" khắc phục vấn đề này, một giải pháp là:
+>
+>
+>
+> (λ1/2) Σ\_w∈𝒲1 w² + (λ2/2) Σ\_w∈𝒲2 w²
+>
+>
+>
+> tức là: dùng λ khác nhau cho hai layer và không đưa vào bias.
+>
+>
+>
+> Vì sao nó tốt hơn?
+>
+>
+>
+> Ví dụ:
+>
+>
+>
+> Reg loss cũ: (λ1/2) Σ\_w∈𝒲1 w² + (λ2/2) Σ\_w∈𝒲2 w²
+>
+>
+>
+> Reg loss mới: (λ1/2) Σ\_w∈𝒲1 (w/a)² + (λ2/2) Σ\_w∈𝒲2 (cw)²
+>
+>
+>
+> = (λ1/2a²) Σ\_w∈𝒲1 w² + (c²λ2/2) Σ\_w∈𝒲2 w²
+>
+>
+>
+> Như vậy, để trọng số cứ việc scale lên/xuống như mong muốn mà reg loss như cũ chỉ cần thay λ1 bằng λ1 × a² và λ2 thay bằng λ2/c²
+>
+>
+>
+> (hình như trong sách in sai)
+>
+>
+>
+> Còn bias cũng được điều chỉnh như mong muốn (vì nó ko bị regularizer khống chế) 
+>
+>
+>
+> ---
+>
+>
+>
+> Và đại khái regularizer này tương ứng với việc dùng prior distribution của 𝐰 là:
+>
+>
+>
+> p(𝐰|α1,α2) ∝ exp(-(α1/2) Σ\_w∈𝒲1 w² - (α2/2) Σ\_w∈𝒲2 w²) (tìm hiểu sau)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, bạn không những nắm đúng bản chất về việc chia regularization parameter riêng cho từng layer và bỏ qua bias, mà còn rất sắc bén khi phát hiện ra lỗi in ấn chính thức trong sách của Bishop.
+>
+> **✓ Strengths**
+> - Hiểu chính xác nguyên lý: không phạt bias và cần dùng các hệ số phạt khác nhau (λ1, λ2) cho từng layer để bảo toàn tính bất biến đối với biến đổi tuyến tính của input/output.
+> - Biến đổi đại số chính xác và phát hiện đúng lỗi in sai của sách PRML (trong bản gốc sách in nhầm lũy thừa 1/2 và -1/2 thay vì 2 và -2, đã được xác nhận trong errata chính thức của Bishop).
+>
+> **💡 Deeper notes**
+> - Về mặt ý nghĩa đầy đủ: việc regularizer bất biến (sau khi scale λ tương ứng) nhằm đảm bảo nghiệm tối ưu của toàn bộ hàm mục tiêu (Data Loss + Reg Loss) cho ra các dự đoán mạng nơ-ron hoàn toàn đồng nhất khi dữ liệu đầu vào hoặc đầu ra bị biến đổi affine.
+
+<br>
+
+<a id="node-wbjhok5"></a>
+
+#### Improper Priors on Bias Parameters
+
+<p align="center"><kbd><img src="assets/067nls38qb5u.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/043dk0e8uqim.png" width="80%"></kbd></p>
 
 <br>
 
