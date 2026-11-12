@@ -1168,7 +1168,7 @@
 >
 > ---
 
-📹 Video 1: [Vì sao ma trận SᵀAS là ma trận đường chéo? (phần 3)](https://www.youtube.com/watch?v=zYeJv7A0Hns)
+📹 Video 1: [Vì sao ma trận SᵀAS là ma trận đường chéo?](https://www.youtube.com/watch?v=zYeJv7A0Hns)
 
 📹 Video 2: [Làm sao xây dựng ma trận chuyển cơ sở S⁻¹V?](https://www.youtube.com/watch?v=LdqakqsyBRY)
 
