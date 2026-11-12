@@ -214,9 +214,7 @@
 
 📹 Video 1: [Vì sao weight decay không nhất quán khi co giãn đầu vào? (phần 1)](https://www.youtube.com/watch?v=W_XXQCusF6Q)
 
-📹 Video 2: [Trọng số phải biến đổi thế nào khi co giãn đầu vào? (phần 2)](https://www.youtube.com/watch?v=Sgg5UMQVzsI)
-
-📹 Video 3: [Vì sao mạng Bayes làm mất tính bất biến của weight decay? (phần 4)](https://www.youtube.com/watch?v=fGd-ViSTpuo)
+📹 Video 2: [Vì sao cần lambda riêng cho từng layer trong L2 regularization?](https://www.youtube.com/watch?v=fGd-ViSTpuo)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -298,8 +296,6 @@
 >
 > p(𝐰|α1,α2) ∝ exp(-(α1/2) Σ\_w∈𝒲1 w² - (α2/2) Σ\_w∈𝒲2 w²) (tìm hiểu sau)
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=1F3wizYVnQo)
-
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
@@ -320,8 +316,6 @@
 
 <p align="center"><kbd><img src="assets/067nls38qb5u.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/043dk0e8uqim.png" width="80%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/vq234j1gmx.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -329,7 +323,7 @@
 >
 >
 >
-> Cụ thể là phân phối tiên nghiệm của bias sẽ trở thành improper. Khiến mọi thứ không đúng nữa.
+> Cụ thể là phân phối tiên nghiệm của bias sẽ trở thành improper. Khiến sinh vấn đề
 >
 >
 >
@@ -337,7 +331,7 @@
 >
 >
 >
-> Đầu tiên hãy nhớ lại, với Bayesian, ta sẽ coi 𝐰 (bao gồm mọi weight bias) là random variable hết. 
+> Đầu tiên hãy nhớ lại trong linear regression với Bayesian, ta sẽ coi 𝐰 (bao gồm mọi weight bias) là random variable hết.
 >
 >
 >
@@ -369,38 +363,103 @@
 >
 >
 >
-> ⇔ p(𝐰|𝐭) ∝ \[Πi C1 exp{-(β/2)(ti-𝐰ᵀΦ(𝐱i)\]²)\] C2 exp\[-(α/2)𝐰ᵀ𝐰\]
+> ⇔ p(𝐰|𝐭) ∝ \[Πi C1 exp{-(β/2)(ti-𝐰ᵀΦ(𝐱i))²}\] C2 exp\[-(α/2)𝐰ᵀ𝐰\]
 >
 >
 >
-> ⇔ p(𝐰|𝐭) ∝ \[C exp{-(β/2) Σi(ti-𝐰ᵀΦ(𝐱i)\]²)\] C2 exp\[-(α/2)𝐰ᵀ𝐰\]
+> ⇔ p(𝐰|𝐭) ∝ \[C exp{-(β/2) Σi(ti-𝐰ᵀΦ(𝐱i))²} C2 exp\[-(α/2)𝐰ᵀ𝐰\]
 >
 >
 >
-> ⇔ p(𝐰|𝐭) ∝ C3 exp{-(β/2) Σi(ti-𝐰ᵀΦ(𝐱i)\]²) exp\[-(α/2)𝐰ᵀ𝐰\]
+> ⇔ p(𝐰|𝐭) ∝ C3 exp{-(β/2) Σi(ti-𝐰ᵀΦ(𝐱i))²} exp\[-(α/2)𝐰ᵀ𝐰\]
 >
 >
 >
-> ⇔ p(𝐰|𝐭) ∝ C3 exp{-(β/2) Σi(ti-𝐰ᵀΦ(𝐱i)\]²) -(α/2)𝐰ᵀ𝐰}
+> ⇔ p(𝐰|𝐭) ∝ C3 exp{-(β/2) Σi(ti-𝐰ᵀΦ(𝐱i))² -(α/2)𝐰ᵀ𝐰}
+>
+>
+>
+> Do bên trong exponential là hàm bậc hai của 𝐰 nên posterior là normal
+>
+>
+>
+> Chọn/tìm 𝐰 sao p(𝐰|𝐭) lớn nhất, Maximum A Posteriori 𝐰MAP:
+>
+>
+>
+> maximize\_𝐰 {exp{-(β/2) Σi(ti-𝐰ᵀΦ(𝐱i))² -(α/2)𝐰ᵀ𝐰}}
+>
+>
+>
+> ≡ maximize\_𝐰 {ln exp{-(β/2) Σi(ti-𝐰ᵀΦ(𝐱i))²) -(α/2)𝐰ᵀ𝐰}}
+>
+>
+>
+> ≡ maximize\_𝐰 {-(β/2) Σi(ti-𝐰ᵀΦ(𝐱i))²) -(α/2)𝐰ᵀ𝐰}
+>
+>
+>
+> ≡ minimize\_𝐰 {β\[(1/2) Σi(ti-𝐰ᵀΦ(𝐱i))²) + (α/2β)𝐰ᵀ𝐰\]}
+>
+>
+>
+> ≡ minimize\_𝐰 {(1/2) Σi(ti-𝐰ᵀΦ(𝐱i))²) + (α/2β)𝐰ᵀ𝐰\]}
+>
+>
+>
+> ≡ minimize\_𝐰 {(1/2) Σi(ti-𝐰ᵀΦ(𝐱i))²) + (λ/2)𝐰ᵀ𝐰\]} với λ = α/β
+>
+>
+>
+> Kết quả này ta hiểu rằng:
+>
+>
+>
+> Niềm tin ban đầu rằng w đều nhỏ (quanh 0): xác suất w mang giá trị nhỏ quanh 0 là lớn, xác xuất w lớn xa mốc 0 là rất nhỏ. Điều này phản ánh vào reg loss: w lớn, reg loss sẽ lớn.
+>
+>
+>
+> Từ đó, nếu mình không đưa bias (wi0, wk0,..) vào reg loss sẽ tương đương việc ta tin rằng bias có thể mang giá trị bao nhiêu cũng được: điều này chính là p(bias) = c
+>
+>
+>
+> Việc ko đưa bias vào Regularizer ⇔ niềm tin (prior belief) p(bias) = c
+>
+>
+>
+> Và một distribution như vậy sẽ không thỏa hai yêu cầu valid của hàm pdf:
+>
+>
+>
+> f(x) = c ≥ 0
+>
+>
+>
+> ∫f(x)dx = 1
+>
+>
+>
+> ∫-∞:∞ c dx = c ∫-∞:∞ dx = ∞
+>
+>
+>
+> ---
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **80/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú nắm đúng một hệ quả quan trọng là việc dùng improper priors gây khó khăn cho model comparison trong Bayesian framework. Tuy nhiên, bạn nên ghi rõ tên phương pháp ('dùng improper priors') và lý do cốt lõi (evidence bằng 0) để ghi chú hoàn thiện hơn.
->
-> **🟡 Minor issues**
->
-> **1.** *"cách làm này"*
->
-> Cách diễn đạt còn mơ hồ. Cần làm rõ 'cách làm này' chính là việc sử dụng tiền nghiệm không chuẩn hóa được (improper priors) do để ngỏ các tham số bias không ràng buộc.
->
+> Ghi chú giải thích rất xuất sắc và trực quan bản chất của improper prior: việc không phạt bias trong hàm mất mát tương đương với việc gán cho nó phân phối đều trên toàn trục số thực, dẫn đến tích phân phân kỳ.
 >
 > **✓ Strengths**
-> - Nắm bắt chính xác kết luận về sự bất lợi của improper priors đối với bài toán so sánh mô hình (model comparison) trong Bayesian framework.
+> - Dẫn dắt bài bản từ MAP trong Bayesian Linear Regression để liên hệ trực tiếp giữa số hạng chuẩn hóa (regularizer) và phân phối tiên nghiệm (prior).
+> - Giải thích chính xác vì sao bias không bị ràng buộc tương ứng với prior phẳng p(bias) = c và chứng minh được tích phân phân kỳ (improper prior).
 >
 > **💡 Deeper notes**
-> - Nguyên nhân trực tiếp khiến việc so sánh mô hình và chọn hệ số điều chuẩn gặp khó khăn là do đại lượng evidence (marginal likelihood) tương ứng bị triệt tiêu bằng 0 khi sử dụng improper prior.
-> - Để khắc phục, trong thực tế người ta thường đặt prior riêng cho các bias đi kèm siêu tham số độc lập, chấp nhận đánh đổi tính bất biến tịnh tiến (shift invariance).
+> - Để hoàn thiện hơn câu mở đầu về 'model comparison', lý do kỹ thuật là hằng số chuẩn hóa của improper prior bị triệt tiêu/không xác định, khiến cho evidence (marginal likelihood p(D)) triệt tiêu hoặc phụ thuộc vào hằng số tùy ý, dẫn đến tỷ số Bayes (Bayes factor) để so sánh mô hình không còn dùng được.
 
 <br>
+
+<a id="node-wsg2852"></a>
+
+<p align="center"><kbd><img src="assets/043dk0e8uqim.png" width="80%"></kbd></p>
 
