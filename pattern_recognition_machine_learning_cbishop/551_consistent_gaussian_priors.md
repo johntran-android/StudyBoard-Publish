@@ -1,6 +1,6 @@
 # 5.5.1 Consistent Gaussian priors
 
-📊 **Progress:** `4` Notes | `8` Screenshots | `4` AI Reviews
+📊 **Progress:** `4` Notes | `9` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-vq3vs93"></a>
@@ -461,30 +461,92 @@
 
 <a id="node-wsg2852"></a>
 
+##### Improper Priors for Bias Parameters
+
 <p align="center"><kbd><img src="assets/067nls38qb5u.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/043dk0e8uqim.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/h5bq867rkqf.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/vq234j1gmx.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/wxwazwzwn4l.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > đại ý là do vấn đề improper trên, ta sẽ phải hi sinh tính invariant under linear transformation, để đưa bias vào regularizer lại, nhưng dùng riêng λ khác cho nó.
 >
 >
 >
-> hình minh họa ảnh hưởng của 4 hyperparm αw1,αw2,αb1, αb2
+> Cách làm này sẽ khiến mất tính bất biến tịnh tiến (nhưng vẫn giúp có tính bất biến tỉ lệ. tức là nếu chỉ scale input và output, x̃ = ax và ỹ = cy thì mạng sẽ vẫn scale w tương ứng để giữ nguyên mapping), đồng thời khắc phục vụ inproper ở trên.
+>
+>
+>
+> hình minh họa ảnh hưởng của 4 hyperparm α⁽¹⁾\_w, α⁽²⁾\_w, α⁽¹⁾\_b, α⁽²⁾\_b
+>
+>
+>
+> L2 regularizer = (1/2)α⁽¹⁾\_w Σi (wi⁽¹⁾)² + (1/2)α⁽¹⁾\_b Σi (bi⁽¹⁾)² + (1/2)α⁽²⁾\_w Σi (wi⁽²⁾)² + (1/2)α⁽²⁾\_b Σi (b⁽²⁾)²
+>
+>
+>
+> Cần chú ý theo bản chỉnh sửa thì các giá trị trong hình phải là mũ -2, ví dụ ở hình trên bên phải, α⁽²⁾\_w (hyperparam cho weight của layer 2) = 10^-2 tức 1/100 thay vì 10. Có nghĩa là, so với hình trên bên trái, nơi α⁽²⁾\_w = 1^-2 = 1, thì thì cái của bên phải sẽ nhỏ hơn. Điều này có thể hiểu theo 2 cách:
+>
+>
+>
+> Objective function = Main loss (SSE) + λ/2 (...) 
+>
+>
+>
+> 1) α⁽²⁾\_w, khi nhìn dưới góc độ là hằng số kiểm soát tương quan của reg loss thì nó càng nhỏ đồng nghĩa mức phạt cho việc trọng số của layer 2 lớn sẽ thấp đi, cho phép trọng số của layer 2 to hơn.
+>
+>
+>
+> 2) Vì ta đã hiểu việc có thêm reg loss trong hàm objective khi training (cùng với main loss SSE) tương đương với việc ta tiếp cận theo Bayesian trong đó chọn prior distribution của w là normal có mean 𝟎, phương sai là (1/α⁽²⁾\_w) 𝐈. Nên nếu aw2 nhỏ, có nghĩa là ta đang tin (niềm tin ban đầu) rằng giá trị của weight trong layer 2 có mức phân tán lớn quanh zero, đồng nghĩa giá trị w có thể lớn.
+>
+>
+>
+> Và hệ quả đó là có thể thấy, khi α⁽²⁾\_w nhỏ, cho phép w layer 2 lớn, dẫn tới a⁽²⁾, cũng là output y lớn, đó là lí do so với hình 1 (trên, trái), các đồ thị hàm số (biểu diễn bởi neural net) có dải giá trị cao hơn.
+>
+>
+>
+> Tương tự, với α⁽¹⁾\_w, hình 3 (dưới, trái) = 1000^-2, sẽ nhỏ hơn của hình 1 (= 1), nên cũng cho phép trọng số w⁽¹⁾ của hình 3 lớn hơn của hình 1. Khiến a⁽¹⁾ lớn, khiến input của hàm h, ví dụ tanh(.) lớn. Dẫn tới hệ qủa: chỉ cần x thay đổi tí xíu, sự thay đổi này khuếch đại bởi w, khiến a⁽¹⁾ sẽ thay đổi rất nhanh, khiến khi đi qua hàm h, output sẽ thay đổi rất nhanh, tạo nên cái kiểu giật lên hoặc xuống như hình 3 thay vì thay đổi mượt mà như hình 1.
+>
+>
+>
+> a⁽¹⁾ = w ⁽¹⁾ x + b⁽¹⁾
+>
+>
+>
+> z ⁽¹⁾ = tanh(a⁽¹⁾)
+>
+>
+>
+> ví dụ x đang bằng -0.1 sang 0.1, vì w⁽¹⁾ lớn, ví dụ = 1000 sẽ khiến a⁽¹⁾ từ -100 thành +100, điều này sẽ khiến đi qua hàm h, ví dụ tanh(.), output sẽ chuyển từ ≈ -1 sang ≈ +1. Ví dụ w⁽²⁾ = 100, y sẽ từ -100 nhảy lên +100
+>
+>
+>
+>
+>
+> Dẫn tới đường hàm số sẽ có bước giật lên đột ngột tại 0 (nếu tính tới bias b⁽¹⁾, thì nó sẽ giật chỗ khác, ví dụ khi x từ -0.5 sang -0.3, với w = 1000, xw sẽ từ -500 sang -300, bias = + 400, thì xw + b sẽ từ - 100 sang +100, khiến hàm sẽ giật tại -0.4.
+>
+>
+>
+> Từ đó ta cũng hiểu α⁽¹⁾\_b, nếu nó nhỏ, (như so hình 3 với 4) sẽ cho phép b⁽¹⁾ lớn, từ đó tạo ra hệ quả là các vị trí của các điểm giật sẽ phân tán rộng hơn (hình 4) Còn nếu b⁽¹⁾ nhỏ, thì vị trí giật sẽ loanh quanh mức 0 (hình 3)
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=dgb3RYacT4g)
 
 > [!TIP]
-> 🤖 **AI Check** — 🔴 Critical issues — ❌ **0/100** · ✗ Fix first
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú chưa hoàn thành và hoàn toàn chưa có nội dung để tóm tắt hay giải thích kiến thức trong tài liệu.
+> Ghi chú rất xuất sắc, hiểu sâu sắc bản chất từ bất biến phép biến đổi, giải thích chính xác lỗi đính chính (errata) số mũ -2, cho tới trực giác hình học của từng siêu tham số.
 >
-> **🔴 Critical issues**
+> **✓ Strengths**
+> - Nắm rất vững mối liên hệ giữa nghịch đảo độ chính xác (precision) alpha và độ biến thiên của trọng số được lấy mẫu từ phân phối tiên nghiệm (prior).
+> - Áp dụng chính xác bản errata của sách (số mũ -2) để giải thích sự thay đổi độ lớn của trọng số giữa các hình.
+> - Giải thích trực quan rất rõ ràng và chuẩn xác cơ chế hình thành bước nhảy (độ dốc) và vị trí dịch chuyển của hàm tanh dựa trên w1 và b1.
+> - Hiểu đúng bản chất việc đặt prior riêng cho bias làm mất tính bất biến tịnh tiến (shift invariance) nhưng vẫn bảo toàn tính bất biến tỉ lệ (scale invariance) khi nhóm trọng số theo tầng.
 >
-> **1.** *"đại ý là "*
->
-> Ghi chú còn dang dở, chưa đưa ra bất kỳ kết luận hay nội dung phân tích nào về hình ảnh và các công thức phân phối tiên nghiệm (prior) / ARD đã cho.
->
+> **💡 Deeper notes**
+> - Hình 5.11 minh họa các hàm số được lấy mẫu trực tiếp từ phân phối tiên nghiệm (prior sampling / prior predictive functions) chứ chưa qua bước huấn luyện/tối ưu hàm mất mát (MAP/SSE); tuy nhiên việc liên hệ hai chiều với hệ số phạt L2 của bạn vẫn hoàn toàn tương thích về mặt toán học.
 
 <br>
 
