@@ -1,6 +1,6 @@
 # 5.3 Sampling From The Normal Distribution
 
-📊 **Progress:** `21` Notes | `31` Screenshots | `16` AI Reviews
+📊 **Progress:** `21` Notes | `31` Screenshots | `20` AI Reviews
 
 ---
 <a id="node-lmu32b0"></a>
@@ -2722,31 +2722,23 @@
 <p align="center"><kbd><img src="assets/7tlnh2e8wx5.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đại khái là, ta sẽ biết một distribution quan trọng nữa F distributin.
+> đại khái là, ta sẽ biết một distribution quan trọng nữa F distribution.
 >
 >
 >
-> Động lực của cái này, đó là ta muốn tìm distribution của một "tỉ lệ của
-> variances"
+> Động lực của cái này, đó là ta muốn tìm distribution của một "tỉ lệ của variances"
 >
 >
 >
-> Cho X1,..Xn là random sample n(μX, σX²) và Y1,...Ym là random sample
-> n(μY, σY²). Và ta quan tâm đến việc / MUỐN SO SÁNH  ĐỘ BIẾN ĐỘNG
-> (VARIABILITY) của hai population. Dĩ nhiên lẽ tự nhiên là ta muốn quan tâm
-> đến ratio σX² / σY².
+> Cho X1,..Xn là random sample n(μX, σX²) và Y1,...Ym là random sample n(μY, σY²). Và ta quan tâm đến việc / MUỐN SO SÁNH ĐỘ BIẾN ĐỘNG (VARIABILITY) của hai population. Dĩ nhiên lẽ tự nhiên là ta muốn quan tâm đến ratio σX² / σY².
 >
 >
 >
-> Thì thông tin về ratios này chứa đựng trong S²X / S²Y (tỉ lệ của hai
-> sample variance)
+> Thì thông tin về ratios này chứa đựng trong S²X / S²Y (tỉ lệ của hai sample variance)
 >
 >
 >
-> Thế thì chỗ này phải hiểu là, sở dĩ ta có thể dùng tỉ lệ giữa hai sample
-> variance để suy luận, suy đoán cho tỉ lệ giữa hai true population variance
-> σX²/σY² là vì / là nhờ vào một loại distribution có tên là F distribution.
-> Mà, cụ thể là, cái random variable sau đây sẽ là một F random variable
+> Thế thì chỗ này phải hiểu là, sở dĩ ta có thể dùng tỉ lệ giữa hai sample variance để suy luận, suy đoán cho tỉ lệ giữa hai true population variance σX²/σY² là vì / là nhờ vào một loại distribution có tên là F distribution. Mà, cụ thể là, cái random variable sau đây sẽ là một F random variable
 >
 >
 >
@@ -2754,9 +2746,21 @@
 >
 >
 >
-> Để rồi, tí nữa ta sẽ thấy, khi tính kì vọng của cái random variable này,
-> thì ta sẽ thấy nó bằng 1 khi m lớn. Từ đó ý nghĩa là, hay cho phép kết luận
-> là, hay có cơ sở để nói là, SX² / SY² ≈ σX² / σY²
+> Để rồi, tí nữa ta sẽ thấy, khi tính kì vọng của cái random variable này, thì ta sẽ thấy nó bằng 1 khi m lớn. Từ đó ý nghĩa là, hay cho phép kết luận là, hay có cơ sở để nói là, SX² / SY² ≈ σX² / σY²
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc động lực thực tế và bản chất của phân phối F khi so sánh phương sai của hai quần thể. Lập luận trực giác về kỳ vọng tiến tới 1 khi cỡ mẫu lớn là hoàn toàn chính xác.
+>
+> **✓ Strengths**
+> - Nắm đúng động lực thực tế của phân phối F: dùng để suy diễn và so sánh độ biến động (variability) giữa hai tổng thể thông qua tỉ lệ mẫu.
+> - Chỉ ra chính xác đại lượng ngẫu nhiên tuân theo phân phối F là tỉ số chuẩn hóa giữa tỉ lệ phương sai mẫu và tỉ lệ phương sai tổng thể.
+> - Hiểu rất tốt trực giác thống kê khi liên hệ kỳ vọng của biến ngẫu nhiên F xấp xỉ 1 khi bậc tự do mẫu thứ hai đủ lớn.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý điều kiện tiên quyết: hai mẫu ngẫu nhiên X và Y phải độc lập với nhau (independent samples), và các biến quan sát phải tuân theo phân phối chuẩn.
+> - Cụ thể, đại lượng ngẫu nhiên này tuân theo phân phối F với bậc tự do là (n - 1, m - 1); kỳ vọng toán học của nó là (m - 1)/(m - 3) với điều kiện m - 1 > 2, giá trị này tiến dần về 1 khi m tăng lên vô cùng.
 
 <br>
 
@@ -2769,10 +2773,7 @@
 <p align="center"><kbd><img src="assets/l8ehfruolw.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Định nghĩa này nói rằng, với random sample size n từ n(μX, σX²)
-> và random sample size m từ n(μY, σY²) thì random variable F
-> với F = (SX²/σX²)(SY²/σY²) sẽ tuân theo distribution có tên
-> là Snedecor's F distribution với bậc tự do là n-1 và m-1
+> Định nghĩa này nói rằng, với X1,... Xn random sample size n từ n(μX, σX²) và Y1,...Ym random sample size m từ n(μY, σY²) và Yj độc lập Xi thì random variable F với F = (SX²/σX²)/(SY²/σY²) sẽ tuân theo distribution có tên là Snedecor's F distribution với bậc tự do là n-1 và m-1
 >
 >
 >
@@ -2780,16 +2781,27 @@
 >
 >
 >
-> Vậy thì ở đây, giáo sư Casella cho biết  variance ratios có thể có F
-> distribution ngay cả khi population không phải normal mà chỉ cần nó có
-> tính đối xứng (spherical symmetry)
+> Vậy thì ở đây, giáo sư Casella cho biết variance ratios có thể có F distribution ngay cả khi population không phải normal mà chỉ cần nó có tính đối xứng (spherical symmetry)
 >
 >
 >
-> Và việc chứng minh ra công thức pdf của F distribution có thể làm 
-> tương tự như khi derive pdf của t distribution (nhớ lại, với t distribution,
-> thì ta dựa vào định nghĩa của nó là U/√(V/p) với U là normal(0,1) V là
-> Chi-square p
+> Và việc chứng minh ra công thức pdf của F distribution có thể làm tương tự như khi derive pdf của t distribution (nhớ lại, với t distribution, thì ta dựa vào định nghĩa của nó là U/√(V/p) với U là normal(0,1) V là Chi-square p
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác định nghĩa phân phối F, điều kiện mở rộng về tính đối xứng cầu (spherical symmetry) và mối liên hệ trong cách dẫn xuất giữa phân phối t và phân phối F.
+>
+> **✓ Strengths**
+> - Nắm chuẩn xác định nghĩa phân phối Snedecor's F và các bậc tự do tương ứng từ hai mẫu chuẩn độc lập.
+> - Ghi nhận đúng điều kiện mở rộng của Kelker (1970) khi tổng thể không chuẩn nhưng có tính đối xứng cầu.
+> - Liên hệ tốt bản chất dẫn xuất giữa phân phối F và phân phối t thông qua các biến ngẫu nhiên Chi-bình phương độc lập.
+>
+> **💡 Deeper notes**
+> - Để dẫn xuất hàm pdf của F, ta quy về tìm phân phối của tỉ số biến dạng (U/p)/(V/q) với U ~ Chi²(p) và V ~ Chi²(q) độc lập (ở đây p = n-1, q = m-1 do (n-1)S_X²/σ_X² ~ Chi²(n-1)).
+> - Trường hợp đặc biệt nhắc tới trong sách là khi bậc tự do tử số p = 1: nếu T ~ t_q thì T² ~ F_{1, q}.
+
+**🔗 See also:** [Section 11.3 Simple Linear Regression](./113_simple_linear_regression.md#node-0czbau8)
 
 <br>
 
@@ -3000,6 +3012,35 @@
 > SỐ CỦA HAI SAMPLE VARIANCE ĐỂ SUY LUẬN CHO TỈ SỐ CỦA HAI
 > POPULATION VARIANCE
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú thể hiện sự hiểu bài rất sâu sắc về bản chất cấu thành phân phối F và trực giác đằng sau việc suy diễn tỉ số phương sai. Chỉ có một vài lỗi nhầm tên gọi cục bộ và lỗi gõ công thức nhỏ cần lưu ý đính chính.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"thì cái random variable được tạo bằng cách lấy hàm g(z) = (n-1) z / σ² apply lên sample variance S², thì cái random variable đó sẽ có distribution đã biết, có tên là Student t"*
+>
+> Lỗi nhầm lẫn tên gọi (slip of the pen): biến ngẫu nhiên (n-1)S²/σ² có phân phối Chi-square (χ²_{n-1}), không phải Student's t. Dù ngay trước và sau đó bạn đều dùng đúng là Chi-square, việc ghi 'Student t' ở đây dễ gây nhầm lẫn nếu đọc lại sau này.
+>
+> **2.** *"định nghĩa của distribution của một random variable có được bởi (SX²/σX²)(SY²/σY²)"*
+>
+> Thiếu dấu chia giữa hai cụm phân số (đúng ra phải là phép chia tỉ số của hai đại lượng).
+>
+> **3.** *"EF = E[(U/q) / (V/q)]"*
+>
+> Lỗi gõ nhầm tử số: đúng ra phải là U/p thay vì U/q (ở dòng kế tiếp bạn đã sửa lại thành E[U/p]).
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ bản chất của biến ngẫu nhiên F là tỉ số của hai biến Chi-square độc lập chia cho bậc tự do tương ứng.
+> - Nắm chắc lập luận dùng tính chất độc lập để tách kỳ vọng của tích E[U] * E[1/V].
+> - Nắm bắt chính xác ý nghĩa thống kê cốt lõi: E[F] ≈ 1 khi cỡ mẫu lớn là cơ sở trực quan để dùng tỉ số phương sai mẫu suy đoán cho tỉ số phương sai tổng thể.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý điều kiện tồn tại của kỳ vọng: E[F_{p,q}] chỉ xác định, hữu hạn và dương khi bậc tự do ở mẫu số thỏa mãn q > 2 (trong bài toán này là m - 1 > 2, tức m > 3).
+> - Lập luận 'bỏ kỳ vọng thì S_X²/S_Y² ≈ σ_X²/σ_Y²' trong giáo trình là lối diễn giải trực giác; về mặt toán học nghiệm ngặt, biến ngẫu nhiên vẫn có phương sai dao động xung quanh giá trị kỳ vọng (trừ khi m, n tiến tới vô cùng theo luật số lớn).
+
 <br>
 
 <a id="node-85e946b"></a>
@@ -3009,13 +3050,35 @@
 <p align="center"><kbd><img src="assets/bjahnif90f7.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cuối cùng là theorem nói đại khái là nghịch đảo của một F rv cũng là 
-> một F rv (cái distribution này tên là F, khiến ta dễ lú lẫn, ví dụ mình có thể
-> ghi là cho F ~ F, có nghĩa là đặt một random variable F, có distribution F)
+> Cuối cùng là theorem nói đại khái là: 
 >
 >
 >
-> Nếu X là một Student's t có q bậc tự do thì X² là một F 1,q
+> a) Nếu X \~ F_p,q thì 1/X \~ F_q,p
+>
+>
+>
+> b) Nếu X \~ t_q thì X² \~ F_1,q
+>
+>
+>
+> c) Nếu X \~ F_p,q thì (p/q)X/\[1+(p/q)X\] \~ beta(p/2, q/2)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác và đầy đủ cả 3 tính chất quan trọng của phân phối F được nêu trong Định lý 5.3.8.
+>
+> **✓ Strengths**
+> - Ghi lại chính xác mối quan hệ nghịch đảo của biến ngẫu nhiên phân phối F (đổi bậc tự do từ (p, q) thành (q, p)).
+> - Ghi nhận chính xác mối liên hệ giữa phân phối t-Student và phân phối F qua phép bình phương.
+> - Ghi nhận đúng phép biến đổi từ phân phối F sang phân phối Beta.
+>
+> **💡 Deeper notes**
+> - Các tính chất này bắt nguồn trực tiếp từ định nghĩa F = (U/p) / (V/q) với U ~ χ²_p và V ~ χ²_q độc lập; việc nghịch đảo phép chia hiển nhiên hoán đổi vai trò của hai biến χ² và bậc tự do tương ứng.
+> - Tính chất b suy ra từ định nghĩa t_q = Z / √(V/q), khi bình phương ta có Z² ~ χ²_1 ở tử số, dẫn đến phân phối F_{1,q}.
+
+**🔗 See also:** [Section 11.3 Simple Linear Regression](./113_simple_linear_regression.md#node-0czbau8)
 
 <br>
 
