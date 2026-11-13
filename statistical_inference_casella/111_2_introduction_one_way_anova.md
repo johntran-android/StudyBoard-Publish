@@ -1524,7 +1524,7 @@
 > - Quy tắc bác bỏ trong đề bài dùng dấu '>' thay vì '≥', tuy nhiên do thống kê T tuân theo phân phối liên tục t_{n-1} nên P(|T| = t_{n-1, α/2}) = 0, việc dùng '>' hay '≥' không làm thay đổi kích thước mức α của kiểm định.
 > - Ngưỡng hằng số c của LRT luôn thoả mãn 0 < c ≤ 1 để đảm bảo c^(-2/n) - 1 ≥ 0, tương ứng với miền bác bỏ hợp lệ.
 
-**🔗 See also:** [Kiểm định LRT cho trung bình](./82_method_of_finding_tests.md#node-ouhenhy) · [LRT với tham số gây nhiễu](./82_method_of_finding_tests.md#node-elajwsz) · [MLEs phân phối chuẩn](./72_method_of_finding_estimators.md#node-6nhtwtp) · [Phân phối và biến động trung bình mẫu](./53_sampling_from_the_normal_distribution.md#node-153vzn2)
+**🔗 See also:** [Kiểm định LRT cho trung bình](./82_method_of_finding_tests.md#node-ouhenhy) · [LRT với tham số gây nhiễu](./82_method_of_finding_tests.md#node-elajwsz) · [MLEs phân phối chuẩn](./72_method_of_finding_estimators.md#node-6nhtwtp) · [Phân phối và biến động trung bình mẫu](./53_sampling_from_the_normal_distribution.md#node-153vzn2) · [Section 11.3 Simple Linear Regression](./113_simple_linear_regression.md#node-0czbau8)
 
 <br>
 
