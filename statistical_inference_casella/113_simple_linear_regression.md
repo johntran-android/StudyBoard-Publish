@@ -1,6 +1,6 @@
 # 11.3 Simple Linear Regression
 
-📊 **Progress:** `30` Notes | `52` Screenshots | `30` AI Reviews
+📊 **Progress:** `32` Notes | `59` Screenshots | `32` AI Reviews
 
 ---
 <a id="node-m4lr6nj"></a>
@@ -2206,7 +2206,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 > **💡 Deeper notes**
 > - Để tìm nghiệm MLE của σ², bạn thay α̂ và β̂ vừa tìm được vào log-likelihood, lấy đạo hàm theo σ² (hoặc σ) và cho bằng 0 sẽ thu được công thức σ̂² = (1/n) RSS. Chú ý rằng đây là ước lượng chệch (biased), khác với ước lượng không chệch s² = RSS / (n - 2).
 
-**🔗 See also:** [Two Steps of Regression Analysis](#node-7ilb1oo)
+**🔗 See also:** [Two Steps of Regression Analysis](#node-7ilb1oo) · [Regression and Residual Sum of Squares](#node-71s1z11)
 
 <br>
 
@@ -2279,7 +2279,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 > **💡 Deeper notes**
 > - Trong bài toán ML tổng quát Ti ~ Normal(wᵀxi, 1/β) với w có d chiều, số bậc tự do bị mất bằng d (thay vì 2 như trong hồi quy đơn biến), khi đó E[1/β_ML] = [(n-d)/n](1/β).
 
-**🔗 See also:** [Independence of Regression Estimators and S2](#node-0c21ixk)
+**🔗 See also:** [Independence of Regression Estimators and S2](#node-0c21ixk) · [Regression and Residual Sum of Squares](#node-71s1z11)
 
 <br>
 
@@ -2297,6 +2297,10 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 > Ôn lại chút: Sampling distribution là sao? Đơn giản là distribution của các statistic - có bản chất là hàm của sample: W(𝐗), hay ở đây là W(𝐘), ví dụ β̂. là một linear estimator W(𝐘) = Σi di Yi (cụ thể hơn thì nó là best unbiased linear estimator (với bộ hệ số di khiến nó có phương sai nhỏ nhất). Thế thì người ta gọi distribution của biến ngẫu nhiên này là sampling distribution để phân biệt với population distribution. Và ta bàn về distribution của chúng là để bắt đầu nói về bài toán testing và interval estimation (hai bài toán suy luận thứ hai và 3 sau khi đã bàn về bài toán suy luận đầu tiên: point estimation)
+>
+>
+>
+> ---
 >
 >
 >
@@ -2328,15 +2332,19 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
+> ---
+>
 >
 >
 > Thứ hai: Ông bắt đầu đặt ra bài toán suy luận thống kê (point estimation), với giả định sau đây: x1,x2,...là những giá trị cố định cho trước. y1,y2,...là giá trị quan sát được của các biến ngẫu nhiên Y1,Y2,...có E\[Yi\] = α + βxi và Var(Yi) = σ². Và Y1,Y2,...uncorrelate.
 >
 >
 >
-> Với giả định này, ta mới xét linear estimator W(𝐘) = Σi diYi và chỉ ra rằng, nếu áp cái hàm Sxy/Sxx lên 𝐘, ta sẽ có một linear estimator (của β) có tính chất: β̂ là Best Linear Unbiased Estimator. Và tương tự, α̂ = Ȳ - β̂ x̄ cũng là BLUE của α.
+> Với giả định này, ta mới xét linear estimator W(𝐘) = Σi diYi và chỉ ra rằng, nếu áp cái hàm Sxy/Sxx lên 𝐘, ta sẽ có một linear estimator (của β) có tính chất: β̂ là Best Linear Unbiased Estimator - BLUE. Và tương tự, α̂ = Ȳ - β̂ x̄ cũng là BLUE của α.
 >
 >
+>
+> ---
 >
 >
 >
@@ -2356,11 +2364,11 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> Theorem nói cả α̂, β̂ đều là normal: Nói chung dùng Hệ quả 4.6.10 giải thích được hết.
+> Theorem nói cả α̂, β̂ đều là biến ngẫu nhiên normal: Nói chung dùng Hệ quả 4.6.10 giải thích được hết.
 >
 >
 >
-> Với β̂. Đầu tiên hãy nhớ, trước khi nó là best unbiased linear estimator, thì nó là linear estimator trước đã: β̂ = Σi diYi, (và với di = (xi-x̄)/Sxx khiến ta có the best unbiased) Mà Yi \~ n(α + βxi, σ²) nên theo bổ đề 4.6.10 mình đã học bữa trước (có video), thì tổng các linear function của các normal độc lập thì cũng là normal: β̂ cũng là một normal:
+> Với β̂. Đầu tiên hãy nhớ, trước khi nó là best unbiased linear estimator, thì nó là linear estimator trước đã: β̂ = Σi diYi, (và với di = (xi-x̄)/Sxx khiến ta có the best unbiased) Mà Yi \~ n(α + βxi, σ²) nên theo bổ đề 4.6.10 mình đã học bữa trước (có video), thì **tổng các linear function của các normal độc lập thì cũng là normal**: β̂ cũng là một normal:
 >
 >
 >
@@ -2410,7 +2418,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> Như vậy có thể thấy α̂ cũng là tổng các linear function của các Yi là các normal độc lập. Nên nó cũng là normal có:
+> Như vậy có thể thấy α̂ cũng là **tổng các linear function của các Yi là các normal độc lập**. Nên nó cũng là normal có:
 >
 >
 >
@@ -2577,6 +2585,10 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
+> Theo định nghĩa 11.3.27 ε̂ i = Yi - (α̂ + β̂ xi) (gọi là Residual )
+>
+>
+>
 > ε̂ i = Yi - (α̂ + β̂ xi) = Yi - α̂ - β̂ xi
 >
 >
@@ -2593,7 +2605,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> = Yi - Σj cjYj - Σj djxiYj 
+> = Yi - Σj cjYj - Σj djxiYj
 >
 >
 >
@@ -2601,11 +2613,19 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> =  Σj \[δijYj - cjYj - djxiYj\] 
+> Viết Yi = 0 × Y1 + 0 × Y2 + ....+ 1 × Yj + ... = Σj δijYi 
 >
 >
 >
-> =  Σj \[(δij - cj - djxi)Yj\] 
+> = Σj δijYi + Σj \[- cjYj - djxiYj\]
+>
+>
+>
+> = Σj \[δijYj - cjYj - djxiYj\]
+>
+>
+>
+> = Σj \[(δij - cj - djxi)Yj\]
 >
 >
 >
@@ -2629,6 +2649,10 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
+> ---
+>
+>
+>
 > Và S² (còn nhớ, nó là unbiased estimator của σ² = \[n/(n-2)\] σ̂ ²
 >
 >
@@ -2637,7 +2661,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> do là hàm số của ε̂ i, nên sẽ độc lập với α̂ và β̂
+> do là hàm số của ε̂ i, nên S² sẽ độc lập với α̂ và β̂
 >
 >
 >
@@ -2675,15 +2699,15 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> Ta có kết quả ((n-2)S²/σ² \~ χ²\_n-2 (mình tạm bỏ qua chứng minh, và để chứng minh cần dùng Cochran's Theorem)
+> Ta có kết quả ((n-2) ε̂ i²/σ² \~ χ²\_n-2 (mình tạm bỏ qua chứng minh, và để chứng minh cần dùng Cochran's Theorem)
 >
 >
 >
-> Rồi. Đồng thời cũng đã biết sampling distribution của α̂, β̂ là: 
+> Rồi. Đồng thời cũng đã biết sampling distribution của α̂, β̂ là:
 >
 >
 >
-> α̂ \~ n(α, σ²\[(1/nSxx)Σi xi²\]) 
+> α̂ \~ n(α, σ²\[(1/nSxx)Σi xi²\])
 >
 >
 >
@@ -2691,7 +2715,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> Và nhớ lại định nghĩa của phân phối student t: là phân phối có biến ngẫu nhiên tạo bởi một normal(0,1) chia cho (căn bậc 2 của một chi-square chia bậc tự do của nó) và bậc tự do của student t là bậc tự do của chi-square. Và biến normal và chi-square phải độc lập
+> Và nhớ lại **định nghĩa của phân phối student t** bậc tự do p là phân phối của biến ngẫu nhiên tạo bởi một **normal(0,1)** chia cho (**căn bậc 2** của một **chi-square chia bậc tự do p của nó**) và bậc tự do của student t là bậc tự do của chi-square. Và biến normal và chi-square phải **độc lập**
 >
 >
 >
@@ -2699,11 +2723,15 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> (α̂ - α)/σ√(Σixi²/nSxx) \~ n(0,1) theo location scale family
+> Do α̂ \~ n(α, σ²\[(1/nSxx)Σi xi²\])
 >
 >
 >
-> ((n-2)S²/σ² \~ χ²\_n-2 nên √S²/σ² = S/σ là căn bậc hai của một χ²\_n-2 chia bậc tự do của nó
+> ⇒ (α̂ - α)/σ√(Σixi²/nSxx) \~ n(0,1) theo location scale family
+>
+>
+>
+> ((n-2)S²/σ² \~ χ²\_n-2 ⇒ √S²/σ² (= S/σ) chính là căn bậc hai của một χ²\_n-2 chia bậc tự do n-2 của nó
 >
 >
 >
@@ -2723,7 +2751,11 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> (β̂ - β)/ (σ/√Sxx) \~ n(0,1)
+> β̂ \~ n(β, σ²/Sxx)
+>
+>
+>
+> ⇒ (β̂ - β)/ (σ/√Sxx) \~ n(0,1)
 >
 >
 >
@@ -2773,7 +2805,9 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 
 ###### Section 11.3 Simple Linear Regression
 
-<p align="center"><kbd><img src="assets/ptd6k9z44d.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/ji04haxl3dr.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/vzwhnx8md1.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại ý là ta thường quan tâm đến suy luận về β hơn là α.
@@ -2785,22 +2819,530 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 > Còn β là độ dốc của hàm population regression E\[Y|x\] (rate of change, đạo hàm), nó sẽ giúp biết được khi x thay đổi 1 đơn vị thì E\[Y|x\] thay đổi thế nào. Do đó ta đặc biệt quan tâm β. Và cũng đặc biệt muốn suy luận (bài toán testing) rằng β có bằng 0 hay không.
+>
+>
+>
+> Nếu β = 0, đồng nghĩa E\[Y|x\] = α, cũng chính là Y \~ n(α, σ²), population regression function không còn phụ thuộc x nữa. Và như đã nói, ta **muốn biết** điều này có đúng không.
+>
+>
+>
+> ---
+>
+>
+>
+> Như vậy, xét bài toán kiểm định cho hypothesis: H0: β = 0 vs H1: β ≠ 0. Ta xây dựng phép kiểm định level α như sau:
+>
+>
+>
+> Đại khái là với 2-sided test, H0: θ = θ0, còn nhớ cái rule sẽ là: reject H0 khi T(𝐱) quá nhỏ hoặc quá lớn hơn một mốc nào đó: T(𝐱) ≤ mốc nào đó, hoặc T(𝐱) ≥ mốc nào đó. Và đại khái là để cho tiện, ta sẽ thể hiện bởi: |T(𝐱)| ≥ k. Dĩ nhiên cần tìm k.
+>
+>
+>
+> Nên hiểu: Theo LRT method để derive một test rule, ta sẽ ra kết quả là: Reject H0 khi |(X̄ - θ0) / √(S²/n)| &gt; k. Và với việc (X̄ - θ0) / √(S²/n) là biến t_n-1, ta sẽ chọn k = t_n-1,α/2 để có level α test.
+>
+>
+>
+> Ở đây cũng y chang vậy, LRT test sẽ là: Reject H0 khi |(β̂ - β) / (S/√Sxx)| &gt; k
+>
+>
+>
+> Và như phần trước đã biết (β̂ - β) / (S/√Sxx) \~ t_n-2
+>
+>
+>
+> nên ta sẽ chọn k để có level alpha test: t_n-2, α/2
+>
+>
+>
+> Nhiệm vụ là tìm k để có level alpha test:
+>
+>
+>
+> ⇔ sup\_Θ0 P\_θ(reject H0) ≤ α
+>
+>
+>
+> ⇔ sup\_β∈{β0=0} P\_β(|(β̂ - β) / (S/√Sxx)| &gt; k) ≤ α
+>
+>
+>
+> ⇔ P\_β0(|(β̂ - β0) / (S/√Sxx)| &gt; k) ≤ α
+>
+>
+>
+> ⇔ P\_β0(|β̂ / (S/√Sxx)| &gt; k) ≤ α
+>
+>
+>
+> ⇔ P(|T_n-2| &gt; k) ≤ α
+>
+>
+>
+> ⇔ P(T_n-2 &lt; -k ∪ T_n-2 &gt; k) ≤ α
+>
+>
+>
+> ⇔ P(T_n-2 &lt; -k) + P(T_n-2 &gt; k) ≤ α
+>
+>
+>
+> ⇔ 2P(T_n-2 &gt; k) ≤ α
+>
+>
+>
+> ⇔ P(T_n-2 &gt; k) ≤ α/2
+>
+>
+>
+> ⇒ k = t_n-2,α/2
+>
+>
+>
+> Nên cái level α test để reject H0: β = 0 là: |β̂ / (S/√Sxx)| &gt; t_n-2,α/2
+>
+>
+>
+> Bên cạnh đó:
+>
+>
+>
+> Với β̂ / (S/√Sxx) \~ t_n-2 thì \[β̂ / (S/√Sxx)\]² \~ F1,n-2
+>
+>
+>
+> nên ta cũng có thể chọn k theo F distribution:
+>
+>
+>
+> P\_β0(|β̂ / (S/√Sxx)| &gt; k) ≤ α
+>
+>
+>
+> do |β̂ / (S/√Sxx)| &gt; k ⇔ \[β̂ / (S/√Sxx)\]² &gt; k²
+>
+>
+>
+> ⇔ P\_β0(\[β̂ / (S/√Sxx)\]² &gt; k²) ≤ α
+>
+>
+>
+> ⇔ P\_β0(F_1,n-2 &gt; k²) ≤ α
+>
+>
+>
+> ⇒ k² = F_1,n-2,α
+>
+>
+>
+> Nên ta có thể dùng test rule sau: Reject H0 khi \[β̂ / (S/√Sxx)\]² &gt; F_1,n-2,α
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú tóm tắt rất chính xác và đầy đủ ý nghĩa thực tiễn của hai tham số alpha và beta trong hồi quy tuyến tính đơn.
+> Ghi chú rất xuất sắc, không chỉ tóm tắt đúng ý nghĩa thực tế của việc kiểm định tham số beta so với alpha mà còn tự suy diễn chi tiết và chặt chẽ quy tắc bác bỏ H0 cho cả hai dạng thống kê t và F.
 >
 > **✓ Strengths**
-> - Hiểu đúng bản chất của alpha là giá trị kỳ vọng khi x = 0 và nhận biết được lý do tham số này có thể không quan trọng trong nhiều bài toán thực tế.
-> - Nắm vững ý nghĩa của beta là tốc độ thay đổi (độ dốc) của đường hồi quy tổng thể khi biến x tăng 1 đơn vị.
-> - Liên hệ chuẩn xác việc kiểm định giả thuyết beta = 0 nhằm xác định xem có tồn tại mối quan hệ tuyến tính giữa X và Y hay không.
+> - Giải thích trực quan và chính xác ý nghĩa thực tế của việc kiểm định beta = 0 so với việc ước lượng intercept alpha.
+> - Tự triển khai và chứng minh chi tiết các bước tìm giá trị tới hạn k từ định nghĩa mức ý nghĩa (size/level) của kiểm định hai phía đối xứng.
+> - Nắm vững mối liên hệ giữa phân phối Student và phân phối Fisher (T^2 ~ F_1,df) để chỉ ra tính tương đương giữa kiểm định t và kiểm định F.
 >
 > **💡 Deeper notes**
-> - Một lý do cụ thể khiến alpha thường ít được quan tâm là giá trị x = 0 có thể nằm ngoài phạm vi quan sát hợp lý của bài toán (ngoại suy), ví dụ như khi x là chiều cao hay cân nặng của người trưởng thành.
-> - Khi beta = 0, E(Y|x) không phụ thuộc tuyến tính vào x, đồng nghĩa với việc không có mối quan hệ tuyến tính nào giữa biến giải thích và biến phản hồi.
+> - Ký hiệu alpha bị trùng lặp giữa hệ số chặn (intercept) của hồi quy tuyến tính và mức ý nghĩa kiểm định (significance level). Khi viết công thức tính xác suất lỗi loại I, nên ký hiệu phân biệt (ví dụ alpha_level hoặc alpha_0) để tránh nhầm lẫn.
+> - Trong không gian tham số H0: beta = 0, H0 là giả thuyết phức (composite hypothesis) do còn chứa các tham số phụ (nuisance parameters) là alpha (intercept) và sigma^2; tuy nhiên do thống kê kiểm định là một pivotal quantity dưới H0 nên xác suất không phụ thuộc vào các tham số này.
+
+**🔗 See also:** [Phân phối F và Đối xứng Cầu](./53_sampling_from_the_normal_distribution.md#node-hd9jnpj) · [Tính chất phân phối F và t](./53_sampling_from_the_normal_distribution.md#node-85e946b) · [Testing Linear Combinations of Means](./111_2_introduction_one_way_anova.md#node-gjyj05b)
 
 <br>
 
-<a id="node-h3708w4"></a>
+<a id="node-71s1z11"></a>
+
+###### Regression and Residual Sum of Squares
+
+<p align="center"><kbd><img src="assets/dii0sy1jhxk.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6dfzvyig6qt.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/90ga055x8a.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/nrrfx8sm3.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/dzvlp95324q.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Tiếp nối note trước, ta đã có level α test để test H0: β = 0 vs H1: β ≠ 0
+>
+>
+>
+> Reject H0 khi |β̂ / (S/√Sxx)| &gt; t_n-2,α/2 (1)
+>
+>
+>
+> hay cũng là
+>
+>
+>
+> \[β̂ / (S/√Sxx)\]² &gt; F_1,n-2,α (2)
+>
+>
+>
+> Và cái này có nghĩa là, để có phép kiểm định có xác suất mắc lỗi loại I cao nhất là 5%, thì ta sẽ reject H0 khi \[β̂ / (S/√Sxx)\]² &gt; F_1,n-2,0.05
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì xét β̂ / (S/√Sxx)
+>
+>
+>
+> với β̂ = Sxy / Sxx. Còn nhớ, đây là MLE, cũng là BLUE của β.
+>
+>
+>
+> và S² = \[1/(n-2)\] Σi ε̂\_i², cũng còn nhớ, đây là unbiased estimator của σ²
+>
+>
+>
+> và Σi ε̂\_i², còn nhớ, cũng là Residual Sum of Square: RSS
+>
+>
+>
+> ⇒ S² = RSS / (n-2)
+>
+>
+>
+> ⇒ \[β̂ / (S/√Sxx)\]² = \[(Sxy)² / (Sxx)²\] / {\[RSS / (n-2)\] / Sxx}
+>
+>
+>
+> = \[(Sxy)² / (Sxx)\] / \[RSS / (n-2)\]
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy thì cái tử số (Sxy)² / (Sxx), tí nữa ta sẽ chứng minh, nó chính là Σi (ŷi - ȳ)², được đặt tên là Regression Sum of Square: RegSS. Và ta sẽ hiểu vì sao có cái cái tên này cũng như ý nghĩa của nó sau.
+>
+>
+>
+> Còn ở đây, chỉ cần biết: cái test statistic \[β̂ / (S/√Sxx)\]² trong test rule (2), (mà ta cũng đã biết nó có phân phối F_1,n-2 đó, nên ta cũng gọi nó là F-test statistic) sẽ bằng RegSS/\[RSS/(n-2)\].
+>
+>
+>
+> Mà hay hơn nữa, RegSS, thật ra là RegSS/1
+>
+>
+>
+> nên cái F-test statistic cũng chính là (RegSS/1) / (RSS/(n-2))
+>
+>
+>
+> Và việc ta so sánh F-test statistic với ngưỡng F_1,n-2,α để reject H0 thật ra có ý nghĩa như sau sau khi thể hiện lên bản ANOVA:
+>
+>
+>
+> Nói ngắn gọn là:
+>
+>
+>
+> nếu RegSS/1 (cũng là MS(Reg), Mean Square Regression) lớn hơn nhiều lần RSS/(n-2) (cũng là MSResid, Mean Square Residual) để F-statistic &gt; threshold thì khi đó có nghĩa là lượng biến động trong data mà ta giải thích được bằng regression line (chính là RegSS, Σi (ŷi - ȳ)² mà ta sẽ chứng minh nó là (Sxy)² / (Sxx)) lớn gấp nhiều lần lượng biến động trong data mà ta còn tồn đọng (RSS/(n-2)). Khi đó, có nghĩa là đại khái là ta có thể tin rằng β khác 0.
+>
+>
+>
+> Và lấy ví dụ 11.3.4, tính toán F statistic cho thấy = 50.23, như trên vừa nói, có nghĩa là lượng biến động (trên mỗi bậc tự do) có thể giải thích bởi regression line lớn gấp 50 lần lượng biến động tồn đọng (trên mỗi bậc tự do), và cũng là F statistic sẽ vượt xa các ngưỡng cần thiết để có level α test với α rất nhỏ. Do do, cả theo F statistic test và cả theo ý nghĩa, ta sẽ phải bác giả thiết β = 0, cũng là công nhận rằng tồn tại quan hệ tuyến tính giữa E\[Y|x\] và x.
+>
+>
+>
+> ---
+>
+>
+>
+> Cuối cùng, đại khái là, tác giả nói về một điểm tương đồng nữa với ANOVA (nội dung hai phần mà mình tạm bỏ qua), nhưng đại ý là:
+>
+>
+>
+> Total Sum of Squares: Σi (yi - ȳ)²
+>
+>
+>
+> sẽ bằng
+>
+>
+>
+> Regression Sum of Squares: Σi (ŷi - ȳ)², và tí nữa ta sẽ chứng minh nó chính là (Sxy)² / Sxx
+>
+>
+>
+> cộng với
+>
+>
+>
+> Residual Sum of Squres: Σi (ŷi - yi)²
+>
+>
+>
+> Trong đó RegSS: đo sự biến động của giá trị dự đoán ŷi so với grand mean ȳ.
+>
+>
+>
+> và RSS đo sự biến động của dự đoán so với observed value
+>
+>
+>
+> ---
+>
+>
+>
+> Và vì RSS = TSS - RegSS, mà RSS, như vừa nói: đo sự biến động của dự đoán so với observed value, nên nó mang ý nghĩa là lượng biến động trong data còn tồn đọng mà không thể giải thích bởi regression line.
+>
+>
+>
+> Và như vậy TSS - RSS sẽ dĩ nhiên mang ý nghĩa là lượng biến động trong data ĐÃ GIẢI QUYẾT ĐƯỢC, ĐÃ GIẢI THÍCH ĐƯỢC bởi regression line.
+>
+>
+>
+> Từ đó, người ta dùng statistic sau: r² = RegSS / TSS, mang ý nghĩa: tỉ lệ giữa mức biến động đã giải thích được so với mức biến động tổng cộng. Và dễ thấy r² càng lớn thì có nghĩa là regression line càng tốt.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, nắm bắt trọn vẹn và chuẩn xác mối liên hệ giữa t-test, F-test trong bảng ANOVA hồi quy, ý nghĩa hình học/thống kê của phân tích phương sai (TSS = RegSS + RSS) và bản chất của hệ số xác định r².
+>
+> **✓ Strengths**
+> - Hiểu rất rõ và tự biến đổi tường minh mối liên hệ giữa t-statistic bình phương và F-statistic trong phân tích hồi quy đơn biến.
+> - Nắm bắt chính xác bản chất của F-statistic là tỉ số giữa biến động giải thích được trên mỗi bậc tự do (MS(Reg)) và biến động sai số trên mỗi bậc tự do (MS(Resid)).
+> - Giải thích chuẩn xác ý nghĩa của đẳng thức phân rã tổng bình phương sai lệch (TSS = RegSS + RSS) cũng như vai trò của hệ số xác định r².
+>
+> **💡 Deeper notes**
+> - Đẳng thức phân rã tổng bình phương TSS = RegSS + RSS chỉ giữ được khi mô hình có hệ số chặn (intercept α̂), bởi vì hệ số chặn đảm bảo điều kiện trực giao (cross-term biến mất: Σ (ŷi - ȳ)(yi - ŷi) = 0).
+> - Trong hồi quy tuyến tính đơn, r² trùng với bình phương hệ số tương quan mẫu của Pearson giữa x và y: r² = Sxy² / (Sxx * Syy).
+
+**🔗 See also:** [Estimation with Normal Errors](#node-c6564df) · [Residuals and Bias in Variance](#node-zj557yy)
+
+<br>
+
+<a id="node-ph4z8v7"></a>
+
+###### Inference for Slope Parameter Beta
+
+<p align="center"><kbd><img src="assets/iyao39u4uzq.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Kết qủa (β̂ - β) / (S/√Sxx) \~ t_n-2 cũng có thể dùng để xây dựng 100(1-α)% confidence interval cho β 11.3.37. Là sao?
+>
+>
+>
+> Ôn lại thế nào là một 1-α confidence interval / set estimation
+>
+>
+>
+> Đó là C(𝐗) sao cho inf\_θ∈Θ P\_θ(C(𝐗) chứa θ) ≥ 1-α, ví dụ α = 0.05 thì đây sẽ là set có xác suất chứa θ không bao giờ nhỏ hơn 95%
+>
+>
+>
+> Vậy để có 1-α confidence interval cho β ta sẽ cần L(𝐘), U(𝐘) sao cho:
+>
+>
+>
+> inf\_β P\_β(L(𝐘) ≤ β ≤ U(𝐘)) ≥ 1-α
+>
+>
+>
+> ---
+>
+>
+>
+> Ta sẽ dùng phương pháp đảo ngược một level α test:
+>
+>
+>
+> Ôn nhanh lí thuyết:
+>
+>
+>
+> Giả sử ta có một có test rule sao cho với bất kì θ0 nào, khi xét bài toán kiểm định
+>
+>
+>
+> H0: θ = θ0 vs θ ≠ θ0, thì test rule này đều luôn là một level α test.
+>
+>
+>
+> Gọi ℛ(θ0) là rejection region bởi test rule này. Theo định nghĩa level α test ta có:
+>
+>
+>
+> Type I error: Reject H0, 𝐱 ∈ R, θ ∈ Θ0
+>
+>
+>
+> sup\_ θ∈Θ0 P\_θ(𝐗 ∈ R) = α
+>
+>
+>
+> sup\_θ∈{θ0} P\_θ(𝐗 ∈ ℛ(θ0)) ≤ α
+>
+>
+>
+> ⇔ P\_θ0(𝐗 ∈ ℛ(θ0)) ≤ α
+>
+>
+>
+> ⇔ 1 - P\_θ0(𝐗 ∈ 𝒜(θ0)) ≤ α
+>
+>
+>
+> ⇔ 1 - α ≤ P\_θ0(𝐗 ∈ 𝒜(θ0))
+>
+>
+>
+> Rồi ví von cái ta đang có là gì: Là một cái test rule sao tạo ra một vùng chỉ cần xuất hiện tín hiệu 𝐱 trong vùng đó là ta sẽ accept θ0 với xác suất mắc lỗi loại 1 rất thấp (level α)
+>
+>
+>
+> Gọi C(𝐱) là {tập các θ0 mà với 𝐗 = 𝐱, thì ta accept H0: θ = θ0}
+>
+>
+>
+> ⇒ C(𝐱) = {θ0: 𝐱 ∈ 𝒜(θ0)}
+>
+>
+>
+> Khi đó dĩ nhiên θ0 ∈ C(𝐱) ⇔ 𝐱 ∈ 𝒜(θ0)
+>
+>
+>
+> ⇒ P\_θ0(θ0 ∈ C(𝐗)) = P\_θ0(𝐗 ∈ 𝒜(θ0))
+>
+>
+>
+> và theo trên thì cái này ≥ 1 - α với mọi θ0
+>
+>
+>
+> Vậy P\_θ0(θ0 ∈ C(𝐗)) ≥ 1 - α với mọi θ0
+>
+>
+>
+> Thì cũng là ta có C(𝐗) là random set:
+>
+>
+>
+> P\_θ(θ ∈ C(𝐗)) ≥ 1 - α với mọi θ, nên C(𝐗) là 1 - α interval estimation.
+>
+>
+>
+> ---
+>
+>
+>
+> Quay lại đây, xét bài toán testing H0: β = β0 vs not H0, thì phép thử:
+>
+>
+>
+> Với mọi β0, sup\_β∈{β0} P\_β(𝐘 ∈ ℛ(β0)) = P\_β0(𝐘 ∈ ℛ(β0))
+>
+>
+>
+> = P\_β0(|(β̂ - β0) / (S/√Sxx)| ≥ t_n-2,α/2)
+>
+>
+>
+> = P\_β0(|T_n-2| ≥ t_n-2,α/2) = α
+>
+>
+>
+> = P\_β0(T_n-2 ≤ -t_n-2,α/2 or T_n-2 ≥ t_n-2,α/2) = α
+>
+>
+>
+> = P\_β0(T_n-2 ≤ -t_n-2,α/2) + P(T_n-2 ≥ t_n-2,α/2) = α
+>
+>
+>
+> = α/2 + α/2 = α
+>
+>
+>
+> Vậy sup\_β∈β0 P\_β(𝐘 ∈ ℛ(β0)) = P\_β0(𝐘 ∈ ℛ(β0)) = α với mọi β0
+>
+>
+>
+> nên đây là size α test với mọi bài toán kiểm định H0: β = β0
+>
+>
+>
+> ⇒ ∀β0 P\_β0(𝐘 ∈ 𝒜(β0)) = 1-α
+>
+>
+>
+> Đặt C(𝐲) = {β0: 𝐲 ∈ 𝒜(β0)} thì β0 ∈ C(𝐘) ⇔ 𝐲 ∈ 𝒜(β0)
+>
+>
+>
+> Nên P\_β0(β0 ∈ C(𝐘)) = P\_β0(𝐘 ∈ 𝒜(β0)), và = 1-α, và điều này đúng với mọi β0
+>
+>
+>
+> nên P\_β(β ∈ C(𝐘)) = 1-α
+>
+>
+>
+> Vậy C(𝐘) với C(𝐲) define như trên là 1-α interval estimation.
+>
+>
+>
+> Giờ ta viết cụ thể C(𝐲): như đã nói, là tập các β0 sao cho 𝐲 ∈ 𝒜(β0)
+>
+>
+>
+> ℛ(β0) = {𝐲: |(β̂ - β0) / (S/√Sxx)| ≥ t_n-2,α/2}
+>
+>
+>
+> 𝒜(β0) = {𝐲: |(β̂ - β0) / (S/√Sxx)| ≤ t_n-2,α/2}
+>
+>
+>
+> ⇒ C(𝐲) = {β0: |(β̂ (𝐲)- β0) / (S(𝐲)/√Sxx)| ≤ t_n-2,α/2}
+>
+>
+>
+> = {β0: -t_n-2,α/2 ≤ (β̂ (𝐲)- β0) / (S(𝐲)/√Sxx) ≤ t_n-2,α/2}
+>
+>
+>
+> = {β0: -t_n-2,α/2 × (S(𝐲)/√Sxx) ≤ β̂ (𝐲) - β0 ≤ t_n-2,α/2 × (S(𝐲)/√Sxx)}
+>
+>
+>
+> = {β0: t_n-2,α/2 × (S(𝐲)/√Sxx) + β̂ (𝐲) ≥ β0 ≥ β̂ (𝐲) - t_n-2,α/2 × (S(𝐲)/√Sxx)}
+>
+>
+>
+> = {β0: β̂ (𝐲) - t_n-2,α/2 × (S(𝐲)/√Sxx) ≤ β0 ≤ β̂ (𝐲) + t_n-2,α/2 × (S(𝐲)/√Sxx)}
+>
+>
+>
+> Và như vậy C(𝐘): \[β̂ (𝐘) - t_n-2,α/2 × (S(𝐘)/√Sxx), β̂ (𝐘) + t_n-2,α/2 × (S(𝐘)/√Sxx)\] là 100(1-α)% confidence interval cho β.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, bạn đã tự mình chứng minh lại công thức khoảng tin cậy cho hệ số hồi quy thông qua phương pháp đảo ngược miền bác bỏ của kiểm định giả thuyết (test inversion). Lập luận toán học chặt chẽ và logic.
+>
+> **✓ Strengths**
+> - Nắm rất vững mối liên hệ đối ngẫu (duality) giữa bài toán kiểm định giả thuyết mức ý nghĩa α và khoảng tin cậy 1-α.
+> - Trình bày chi tiết từng bước biến đổi đại số từ miền chấp nhận A(β0) sang tập tin cậy C(y) cho β.
+> - Hiểu đúng và phân biệt rõ vai trò của mẫu ngẫu nhiên Y và giá trị quan sát cụ thể y trong suy diễn thống kê.
+>
+> **💡 Deeper notes**
+> - Về thuật ngữ kiểm định: Trong kiểm định giả thuyết hiện đại, vùng A(θ0) theo quy ước truyền thống Neyman-Pearson thường gọi là 'acceptance region', nhưng về mặt ý nghĩa bản chất là 'fail to reject H0' (chưa đủ cơ sở để bác bỏ H0) chứ không hẳn là khẳng định H0 đúng hoàn toàn.
+> - Phương pháp đảo ngược kiểm định (test inversion) trong trường hợp này cho kết quả trùng khớp với phương pháp dùng biến then chốt (pivotal quantity) T = (β̂ - β)/(S/√Sxx) ~ t_(n-2).
+
+<br>
 
