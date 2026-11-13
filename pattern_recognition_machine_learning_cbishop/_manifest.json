@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1794460087523,
+  "publishedAt": 1794597508929,
   "sections": [
     {
       "title": "📋 Overview",
@@ -570,7 +570,13 @@
       "title": "5.5.1 Consistent Gaussian priors",
       "path": "pattern_recognition_machine_learning_cbishop/551_consistent_gaussian_priors.md",
       "noteCount": 4,
-      "imageCount": 8
+      "imageCount": 9
+    },
+    {
+      "title": "5.5.2 Early stopping",
+      "path": "pattern_recognition_machine_learning_cbishop/552_early_stopping.md",
+      "noteCount": 0,
+      "imageCount": 6
     },
     {
       "title": "5.7 Ex",
@@ -592,5 +598,5 @@
     }
   ],
   "totalNotes": 523,
-  "totalImages": 872
+  "totalImages": 879
 }
