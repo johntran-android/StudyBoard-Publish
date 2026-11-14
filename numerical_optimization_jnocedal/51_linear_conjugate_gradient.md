@@ -1,6 +1,6 @@
 # 5.1 Linear Conjugate Gradient
 
-📊 **Progress:** `23` Notes | `64` Screenshots | `20` AI Reviews
+📊 **Progress:** `23` Notes | `66` Screenshots | `22` AI Reviews
 
 ---
 <a id="node-ezxbb8s"></a>
@@ -159,7 +159,7 @@
 <p align="center"><kbd><img src="assets/muxlm6pua2.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên, tác giả nói đại ý là một đặc điểm rất tốt của phương pháp này là khả năng của nó trong việc tạo ra một bộ vector có tính chất gọi là conjugacy: {p0,...pn-1} được gọi là conjugate wrt matrix đối xứng xác định dương A nếu như piTApj = 0 ∀i≠j.
+> Đầu tiên, tác giả nói đại ý là một đặc điểm rất tốt của phương pháp này là khả năng của nó trong việc tạo ra một bộ vector có tính chất gọi là conjugacy: {p0,...pn-1} được gọi là conjugate wrt matrix đối xứng xác định dương A nếu như piᵀApj = 0 ∀i≠j.
 >
 >
 >
@@ -367,7 +367,7 @@
 >
 >
 >
-> ⇔ α = -rkTpk/pkᵀApk. Đây chính là 5.7
+> ⇔ α = -rkᵀpk/pkᵀApk. Đây chính là 5.7
 
 📹 Video 1: [Tại sao các vectơ liên hợp luôn độc lập tuyến tính?](https://youtu.be/dWWDrFxObGg)
 
@@ -817,16 +817,16 @@
 
 <p align="center"><kbd><img src="assets/4ab9ee24iru.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/x8b7fg.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/x8xojq84e5.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/losnm4k.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/z6yu3j9nhyl.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Hiểu chỗ này đại khái như sau: Nếu như A diagonal, thì bộ basis vector {ei} chính là conjugate set, và dùng chúng để đi từ x0 thì ta sẽ đến được x\* trong nhiều nhất là n step như theorem 5.1 đã nói.
 >
 >
 >
-> Nhưng nếu A không phải diagonal, thì {ei} không phải là conjugate set, nên theorem 5.1 đương nhiên là không áp dụng, đi theo các hướng đó với thuật toán 5.6 (xk+1 = xk + αkpk) , 5.7 (αk = -rkTpk/pkᵀApk) không còn giúp đến đích trong nhiều nhất là n bước nữa.
+> Nhưng nếu A không phải diagonal, thì {ei} không phải là conjugate set, nên theorem 5.1 đương nhiên là không áp dụng, đi theo các hướng đó với thuật toán 5.6 (xk+1 = xk + αkpk) , 5.7 (αk = -rkᵀpk/pkᵀApk) không còn giúp đến đích trong nhiều nhất là n bước nữa.
 >
 >
 >
@@ -1168,7 +1168,7 @@
 >
 > ---
 
-📹 Video 1: [Vì sao ma trận SᵀAS là ma trận đường chéo?](https://www.youtube.com/watch?v=zYeJv7A0Hns)
+📹 Video 1: [Vì sao ma trận SᵀAS là ma trận đường chéo?](https://youtu.be/zYeJv7A0Hns)
 
 📹 Video 2: [Làm sao xây dựng ma trận chuyển cơ sở S⁻¹V?](https://www.youtube.com/watch?v=LdqakqsyBRY)
 
@@ -1197,25 +1197,45 @@
 <p align="center"><kbd><img src="assets/ro5lzponre.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là thầy nói rằng, nhìn vào cái hình 5.1 ta có thể dễ nhận ra và hiểu ý sau đây: Khi Hessian diagonal thì cứ sau mỗi một step (ví dụ, từ x0 → x1) thì thật ra ta ĐÃ TÌM THẤY THÊM MỘT TỌA ĐỘ NỮA CỦA x* RỒI. Ta có thể hoàn toàn đồng tình với ý này. Trong hình 5.1, có hai tọa độ. Thì sau step thứ nhất, thì mình đã có x1_1 chính là x*_1. Và sau step thứ 2, x2_2 chính là x*_2. 
+> Đại ý là thầy nói rằng, nhìn vào cái hình 5.1 ta có thể dễ nhận ra và hiểu ý sau đây: Khi Hessian diagonal thì cứ sau mỗi một step (ví dụ, từ x0 → x1) thì thật ra ta ĐÃ TÌM THẤY THÊM MỘT TỌA ĐỘ NỮA CỦA x\* RỒI. Ta có thể hoàn toàn đồng tình với ý này. Trong hình 5.1, có hai tọa độ. Thì sau step thứ nhất, thì mình đã có x1_1 chính là x\*\_1. Và sau step thứ 2, x2_2 chính là x\*\_2.
+>
+>
 >
 > Do đó, sau 1 step, thì hàm quadratic đã được minimize trên / over trục x1. Nói rõ ý này:
 >
+>
+>
 > Có nghĩa là ta sau bước 1 ta đã giải bài toán minimize over {x: x_1 ∈ R, x_2 fix} Φ(x). Và cái này cũng tương đương minimize over x ∈ R² Φ(x0 + t × e1).
+>
+>
 >
 > Thì đây chính là minimize quadratic Φ ON THE SUBSPACE SPANED BY e1.
 >
+>
+>
 > Vậy thì khái quát lên cho n-D case, thì mình cũng có thể hiểu là sau k step, ta quả thật là đã minimize hàm quadratic Φ on the subspace spanned by e1,e2,...ek.
+>
+>
 >
 > Trước khi vào theorem 5.2. Ta có:
 >
+>
+>
 > 5.4: rk = Axk - b, ⇨ rk+1 = Axk+1 - b
+>
+>
 >
 > ⇨ rk+1 - rk = Axk+1 - Axk - b + b
 >
-> ⇔ rk+1 - rk = A(xk+1 - xk) 
+>
+>
+> ⇔ rk+1 - rk = A(xk+1 - xk)
+>
+>
 >
 > Dùng xk+1 = xk + αkpk ⇔xk+1 - xk = αkpk
+>
+>
 >
 > ..⇔ rk+1 - rk = Aαkpk = αkApk (5.10)
 
@@ -1244,194 +1264,301 @@
 <p align="center"><kbd><img src="assets/af2z50gp5t7.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại ý theorem này nói rằng cho điểm khởi đầu x0 bất kì. Và chuỗi {xk} sẽ được tạo bởi conjugate direction algorithm (5.6), (5.7). Thì khi đó: 
+> Đại ý theorem này nói rằng cho điểm khởi đầu x0 bất kì. Và chuỗi {xk} sẽ được tạo bởi conjugate direction algorithm (5.6), (5.7). Thì khi đó:
 >
-> rkTpi = 0 với i = 0,1,...k-1
+>
+>
+> rkᵀpi = 0 với i = 0,1,...k-1
+>
+>
 >
 > Và xk sẽ là minimizer của φ(x) = (1/2)xᵀAx - bᵀx over the set {x | x = x0 + span{p0,...pk-1}}.
 >
 > Trước khi đi vào chứng minh, ta hiểu cái theorem này nói gì vậy?
 >
+>
+>
 > Đầu tiên, nhớ lại conjugate direction algorithm cũng như các tính chất của nó, nói cách khác, ôn lại chút xíu bối cảnh của ta: Đó là chương này bắt đầu với việc nói về bài toán giải hệ phương trình tuyến tính Ax = b ⇔ Ax - b = 0. Thế thì, tìm nghiệm của hệ này cũng chính là, tương đương với việc tìm minimizer của hàm quadratic Φ(x) = (1/2)xᵀAx - bᵀx. Vì điều kiện cần bậc một chính là ∇Φ(x) = 0 ⇔ Ax - b = 0.
 >
-> Và từ đó, người ta mới giới thiệu một cách tiếp cận iterative để giải Ax = b. Bắt đầu với x0. Ta sẽ generate chuỗi {xk}: xk+1 = xk + αkpk. Với {p0,p1,...pn-1} là conjugate set của A. Và theorem 5.1 đã chứng minh rằng, trong nhiều nhất là n step thì {xk} sẽ converge về x* là true solution của Ax = b.
 >
-> Rồi, vậy thì đặt rk = Axk - b (r là stand for residual, ý là "phần còn thiếu tại step k") thì theorem này nói rằng: 
 >
-> rkTpi = 0 với mọi pi = 0,1,..,k-1.
+> Và từ đó, người ta mới giới thiệu một cách tiếp cận iterative để giải Ax = b. Bắt đầu với x0. Ta sẽ generate chuỗi {xk}: xk+1 = xk + αkpk. Với {p0,p1,...pn-1} là conjugate set của A. Và theorem 5.1 đã chứng minh rằng, trong nhiều nhất là n step thì {xk} sẽ converge về x\* là true solution của Ax = b.
+>
+>
+>
+> Rồi, vậy thì đặt rk = Axk - b (r là stand for residual, ý là "phần còn thiếu tại step k") thì theorem này nói rằng:
+>
+>
+>
+> rkᵀpi = 0 với mọi i = 0,1,..,k-1.
+>
+>
+>
+> ---
+>
+>
 >
 > Suy nghĩ chút: Cái này có vẻ rất dễ có liên quan đến least square.
 >
-> Nếu rkTpi = 0 với mọi pi=0,1...k-1. Thì có nghĩa là rk vuông góc với span{p0,...,pk-1}.
 >
-> Nhớ lại least square: Lập luận thế này: ta muốn giải Ax = b, chính là muốn tìm linear combination các cột của A để tạo ra b. Từ đó nếu C(A) không chứa b, thì nhiều nhất là ta chỉ tìm được một linear combination của A's columns để tạo ra điểm gần nhất với b: chính là hình chiếu của b lên C(A): Để rồi, residual e = b - Ax^ sẽ vuông góc với C(A) ⇨ thuộc left nullspace N(Aᵀ) ⇨ Aᵀe = 0 ⇔ Aᵀ(b - Ax^) = 0 ⇔ Aᵀb = AᵀAx^, chính là normal equation.
+>
+> Nếu rkᵀpi = 0 với mọi i=0,1...k-1. Thì có nghĩa là rk vuông góc với span{p0,...,pk-1}.
+>
+>
+>
+> Nhớ lại least square: Lập luận thế này: ta muốn giải Ax = b, chính là muốn tìm linear combination các cột của A để tạo ra b. Từ đó nếu C(A) không chứa b, thì nhiều nhất là ta chỉ tìm được một linear combination của A's columns để tạo ra điểm gần nhất với b: chính là hình chiếu của b lên C(A): Để rồi, residual e = b - Ax̂ sẽ vuông góc với C(A) ⇨ thuộc left nullspace N(Aᵀ) ⇨ Aᵀe = 0 ⇔ Aᵀ(b - Ax̂) = 0 ⇔ Aᵀb = AᵀAx̂, chính là normal equation.
+>
+>
+>
+> ---
+>
+>
 >
 > Thử lập luận thế này: Mục tiêu là di chuyển x trên x0 + span{p0}, sao cho minimize Φ(x) = (1/2)xᵀAx - bᵀx. Để cho đơn giản ta cho x0 = 0.
 >
-> Thì nếu được minimizer của Φ(x), tức x*, là solution của Ax = b, nếu x* không nằm trong span{p0}, nên cùng lắm là ta chỉ đến được hình chiếu của x* lên span{p0}, gọi đó là αp0. Ta có residual (x* - αp0) vuông góc với p0:
+> Thì nếu được minimizer của Φ(x), tức x\*, là solution của Ax = b, nếu x\* không nằm trong span{p0}, nên cùng lắm là ta chỉ đến được hình chiếu của x\* lên span{p0}, gọi đó là αp0. Ta có residual (x\* - αp0) vuông góc với p0:
 >
-> (x* - αp0)ᵀp0 = 0 (i)
 >
-> ⇔ x*Tp0 - αp0Tp0 = 0
 >
-> ⇔ x*Tp0 = αp0Tp0 
+> (x\* - αp0)ᵀp0 = 0 (i)
 >
-> ⇔ x*Tp0/p0Tp0 = α 
+> ⇔ x\*Tp0 - αp0ᵀp0 = 0
 >
-> Hay α = x*Tp0 / p0Tp0. Vấn đề là, ta đâu có biết x* là gì. (iii)
+> ⇔ x\*Tp0 = αp0ᵀp0
 >
-> Để giải quyết, ta làm cách khác: **Chuyển tọa độ sang hệ basis a's** (là cột của A^-1/2), khi x di chuyển trong span {p0}: 
+> ⇔ x\*Tp0/p0ᵀp0 = α
 >
-> Gọi x = αp0 là hình chiếu của x* lên span{p0}, đang có tọa độ trong basis e's
+>
+>
+> Hay α = xᵀp0 / p0ᵀp0. Vấn đề là, ta đâu có biết x là gì. (iii)
+>
+>
+>
+> Để giải quyết, ta làm cách khác: **Chuyển tọa độ sang hệ basis a's** (là cột của A^-1/2), khi x di chuyển trong span {p0}:
+>
+>
+>
+> Gọi x = αp0 là hình chiếu của x\* lên span{p0}, đang có tọa độ trong basis e's
+>
+>
 >
 > Thì tọa độ của nó trong basis a's sẽ là:
 >
-> x^ = (A^1/2)⁻¹ x = (A^1/2)⁻¹ αp0
 >
-> Tọa độ của x* trong basis a's: x^* = (A^-1/2)⁻¹ x* = (A^1/2)x* 
 >
-> ⇔ x* = (A^1/2) x*^
+> x̂ = (A^-1/2)⁻¹ x = (A^-1/2)⁻¹ αp0
 >
-> và p0^ là tọa độ của p0 trong basis a's: 
 >
-> p0^ = (A^-1/2)⁻¹ p0 
 >
-> ⇔ p0 = (A^1/2) p0^
+> Tọa độ của x\* trong basis a's: x̂\* = (A^-1/2)⁻¹ x\* = (A^1/2)x\*
 >
-> ⇨ Residual trong basis a's: x^* - αp^0
 >
-> Và thiết lập **phương trình residual vuông góc với subspace trong basis a's**: 
 >
-> (x^* - αp^0)ᵀp^0 = 0 (ii)
+> ⇔ x\* = (A^-1/2) x̂\* 
 >
-> Dừng lại đây một chút, nhớ lại phương trình (i): (x* - αp0)ᵀp0 = 0. Thì đây là phương trình giúp tìm hình chiếu của x* lên span{p0} trong tọa độ chuẩn (basis e's). 
 >
-> Còn (ii) là giúp tìm hình chiếu của x*^ lên span{p^0} trong tọa độ basis a's. 
 >
-> Kết quả sẽ có thể ra một điểm khác. Hiểu nôm na thế này: Giả sử ta có hai vector u = (1,1) v = (1,2). **Trong hệ tọa độ basis e's, dĩ nhiên chúng KHÔNG VUÔNG GÓC** vì 1 × 1 + 1 × 2 khác 0. **Nhưng khi chuyển về tọa độ basis là u, v** (dùng change of basis) thì tọa độ của u trong basis u, v sẽ là (1,0) và của v sẽ là (0,1) ⇨ **TRONG HỆ TỌA ĐỘ ĐÓ U VUÔNG GÓC V**, dù ở tọa độ basis e's chúng hợp nhau góc nhọn. 
+> và p̂0 là tọa độ của p0 trong basis a's:
 >
-> Thì câu chuyện cũng tương tự. Trong basis a's, ta tìm hình chiếu của x*^ lên span{p0^}, thì cái điểm đó, hay cái đường chiếu đó, **nó vuông góc với p0 trong hệ basis a's nhưng xéo xẹo nếu nhìn trong basis e's**. Nhưng ta sẽ thấy có những lí do để làm vậy.
+>
+>
+> p̂0 = (A^-1/2)⁻¹ p0
+>
+>
+>
+> ⇔ p0 = (A^1/2) p̂0
+>
+>
+>
+> ⇨ Residual trong basis a's: x̂\* - αp̂0 
+>
+>
+>
+> Và thiết lập **phương trình residual vuông góc với subspace trong basis a's**:
+>
+>
+>
+> (x̂\* - αp̂0)ᵀp̂0 = 0 (ii)
+>
+>
+>
+> Dừng lại đây một chút, nhớ lại phương trình (i): (x\* - αp0)ᵀp0 = 0. Thì đây là phương trình giúp tìm hình chiếu của x\* lên span{p0} trong tọa độ chuẩn (basis e's).
+>
+>
+>
+> Còn (ii) là giúp tìm hình chiếu của x̂\* lên span{p̂0} trong tọa độ basis a's.
+>
+> Kết quả sẽ có thể ra một điểm khác. Hiểu nôm na thế này: Giả sử ta có hai vector u = (1,1) v = (1,2).
+>
+>
+>
+> **Trong hệ tọa độ basis e's, dĩ nhiên chúng KHÔNG VUÔNG GÓC** vì 1 × 1 + 1 × 2 khác 0. **Nhưng khi chuyển về tọa độ basis là u, v** (dùng change of basis) thì tọa độ của u trong basis u, v sẽ là (1,0) và của v sẽ là (0,1) ⇨ **TRONG HỆ TỌA ĐỘ ĐÓ U VUÔNG GÓC V**, dù ở tọa độ basis e's chúng hợp nhau góc nhọn.
+>
+>
+>
+> Thì câu chuyện cũng tương tự. Trong basis a's, ta tìm hình chiếu của x̂\* lên span{p̂0}, thì cái điểm đó, hay cái đường chiếu đó, **nó vuông góc với p0 trong hệ basis a's nhưng xéo xẹo nếu nhìn trong basis e's**. Nhưng ta sẽ thấy có những lí do để làm vậy.
+>
+>
 >
 > Tiếp tục từ (ii):
 >
-> (x^* - αp^0)ᵀp^0 = 0
+> (x̂\* - αp̂0)ᵀp̂0 = 0
 >
-> ⇔ x^*Tp^0 - αp^0Tp^0 = 0
+> ⇔ x̂\*Tp̂0 - αp̂0Tp̂0 = 0
 >
-> ⇔ x^*Tp^0 = αp^0Tp^0
+> ⇔ x̂\*Tp̂0 = αp̂0Tp̂0
 >
-> ⇔ x^*Tp^0 / p^0Tp^0 = α
+> ⇔ x̂\*Tp̂0 / p̂0Tp̂0 = α
 >
-> ⇔ α = x^*Tp^0 / p^0Tp^0
+> ⇔ α = x̂\*Tp̂0 / p̂0Tp̂0
 >
-> Thay x^* = (A^-1/2)⁻¹ x* = Bx* (đặt B = (A^-1/2)⁻¹ cho gọn)
 >
-> p^0 = (A^-1/2)⁻¹ p0 = Bp0 
 >
-> ⇔  α = (Bx*)ᵀBp0 / (Bp0)ᵀBp0
+> Thay x̂\* = (A^-1/2)⁻¹ x\* = Bx\* (đặt B = (A^-1/2)⁻¹ cho gọn)
 >
-> ⇔  α = x*TBᵀBp0 / p0TBᵀBp0
 >
-> ⇔  α = x*TB²p0 / p0TB²p0
 >
-> ⇔ **α = x*TAp0 / p0TAp0**
+> p̂0 = (A^-1/2)⁻¹ p0 = Bp0
 >
-> Tới đây, từ Ax* = b ⇔ x*TAᵀ = bᵀ ⇔ x*TA = bᵀ
+> ⇔ α = (Bx\*)ᵀBp0 / (Bp0)ᵀBp0
 >
-> ..⇔ α = bᵀp0 / p0TAp0
+> ⇔ α = x\*TBᵀBp0 / p0ᵀBᵀBp0
+>
+> ⇔ α = x\*TB²p0 / p0ᵀB²p0
+>
+> ⇔ α = x\*TAp0 / p0ᵀAp0
+>
+>
+>
+> Tới đây, từ Ax\* = b ⇔ x\*ᵀAᵀ = bᵀ ⇔ xᵀA = bᵀ
+>
+>
+>
+> ..⇔ α = bᵀp0 / p0ᵀAp0
+>
+>
 >
 > Thì **đây chính là công thức của conjugate gradient**, vì trong thuật toán 5.1
 >
-> αk := -rkTpk / pkᵀApk
 >
-> ⇨ α0 := -r0Tp0 / p0TAp0
 >
-> = -(Ax0 - b)ᵀp0 / p0TAp0
+> αk := -rkᵀpk / pkᵀApk
 >
-> = -(0 - b)ᵀp0 / p0TAp0  | đang giả sử xuất phát từ x0 = 0 
 >
-> = bᵀp0 / p0TAp0
 >
-> Như vậy mình hiểu thuật toán CG có bản chất là: 
+> ⇨ α0 := -r0Tp0 / p0ᵀAp0
 >
-> Từ x0 = 0, đi theo hướng p0 sao cho tới gần x* nhất để phần dư vuông góc với p0. Nhưng gần là theo basis a's, để vuông góc cũng là theo basis A, chứ không phải là basis e's. Thế thì nghĩ thêm một chút, trong basis e's, vì sao để tìm điểm gần nhất thì ta tìm điểm mà residual vuông góc với p0: Thì thật ra ta đang giải bài toán gì? → Chính là bài toán minimize distance: ||x* - αp0||, cũng tương đương minimize ||x* - αp0||² = (x* - αp0)ᵀ(x* - αp0). Mở ngoặc ra gom lại thì đây là hàm quadratic theo α và dùng calculus để giải thì cũng ra α trên công thức (iii) (ở trên khi tìm α từ lập luận residual vuông góc với basis p0 thì là dùng hình học): 
+> = -(Ax0 - b)ᵀp0 / p0ᵀAp0
 >
-> g(α) = (x* - αp0)ᵀ(x* - αp0) = (x*T - αp0T)(x* - αp0) = x*Tx* - αp0Tx* - x*Tαp0 + αp0Tαp0 = ||p0||² α² - 2 p0Tx* α + ||x*||²
+> = -(0 - b)ᵀp0 / p0ᵀAp0 | đang giả sử xuất phát từ x0 = 0
 >
-> Giải tìm minimizer bằng điều kiện cần bậc 1: g'(α) = 0 
+> = bᵀp0 / p0ᵀAp0
 >
-> ⇔ 2||p0||² α - 2 p0Tx* = 0
 >
-> ⇔ ||p0||² α = p0Tx* 
 >
-> ⇔ α = p0Tx* / ||p0||²
+> Như vậy mình hiểu thuật toán CG có bản chất là:
 >
-> ⇔ α = p0Tx* / p0Tp0 
 >
-> Tới đây có thể thấy ta gặp lại công thức (iii), và again, đi vào ngõ cụt vì ta không biết x*.
 >
-> Rồi sau đó, ta sẽ dùng điều kiện vuông góc nhưng trong tọa độ basis a's. Thì ở đây mình sẽ chuyển bài toán về tọa độ basis a's: 
+> Từ x0 = 0, đi theo hướng p0 sao cho tới gần x\* nhất để phần dư vuông góc với p0. Nhưng gần là theo basis a's, để vuông góc cũng là theo basis A, chứ không phải là basis e's. Thế thì nghĩ thêm một chút, trong basis e's, vì sao để tìm điểm gần nhất thì ta tìm điểm mà residual vuông góc với p0: Thì thật ra ta đang giải bài toán gì? → Chính là bài toán minimize distance: ||x\* - αp0||, cũng tương đương minimize ||x\* - αp0||² = (x\* - αp0)ᵀ(x\* - αp0). Mở ngoặc ra gom lại thì đây là hàm quadratic theo α và dùng calculus để giải thì cũng ra α trên công thức (iii) (ở trên khi tìm α từ lập luận residual vuông góc với basis p0 thì là dùng hình học):
+>
+>
+>
+> g(α) = (x\* - αp0)ᵀ(x\* - αp0) = (xᵀ - αp0ᵀ)(x - αp0) = xᵀx - αp0ᵀx\* - xᵀαp0 + αp0ᵀαp0 = ||p0||² α² - 2 p0ᵀx α + ||x\*||²
+>
+>
+>
+> Giải tìm minimizer bằng điều kiện cần bậc 1: g'(α) = 0
+>
+> ⇔ 2||p0||² α - 2 p0ᵀx\* = 0
+>
+> ⇔ ||p0||² α = p0ᵀx\*
+>
+> ⇔ α = p0ᵀx\* / ||p0||²
+>
+> ⇔ α = p0ᵀx\* / p0ᵀp0
+>
+>
+>
+> Tới đây có thể thấy ta gặp lại công thức (iii), và again, đi vào ngõ cụt vì ta không biết x\*.
+>
+>
+>
+> Rồi sau đó, ta sẽ dùng điều kiện vuông góc nhưng trong tọa độ basis a's. Thì ở đây mình sẽ chuyển bài toán về tọa độ basis a's:
+>
+>
 >
 > Và trong tọa độ basis a's ta sẽ đi minimize distance, **TÍNH THEO BASIS a's**:
 >
-> Tức là minimize hàm h(α) = ||x^* - α p^0||² 
+>
+>
+> Tức là minimize hàm h(α) = ||x̂\* - α p̂0||²
+>
+>
 >
 > (Chỗ này chú ý nhé, lẽ dĩ nhiên với việc đã chuyển sang tọa độ basis a's thì distance cũng phải là trong basis a's chứ)
 >
-> Thay x^* = (A^-1/2)⁻¹ x* = (A^1/2)x* = B x*, 
 >
-> Thay p^0 = (A^-1/2)⁻¹ p0 = (A^1/2) p0 = Bp0 
 >
-> ⇨ h(α) = ||Bx* - α Bp0||² 
+> Thay x̂\* = (A^-1/2)⁻¹ x\* = (A^1/2)x\* = B x\*,
 >
-> = (Bx* - α Bp0)ᵀ(Bx* - α Bp0)
+> Thay p̂0 = (A^-1/2)⁻¹ p0 = (A^1/2) p0 = Bp0
 >
-> = [B(x* - αp0)]ᵀB(x* - α p0)
+> ⇨ h(α) = ||Bx\* - α Bp0||²
 >
-> = (x* - αp0)ᵀBᵀB(x* - α p0)
+> = (Bx\* - α Bp0)ᵀ(Bx\* - α Bp0)
 >
-> = (x* - αp0)ᵀ(A^1/2)ᵀ(A^1/2)(x* - α p0)
+> = \[B(x\* - αp0)\]ᵀB(x\* - α p0)
 >
-> = (x* - αp0)ᵀA(x* - αp0)
+> = (x\* - αp0)ᵀBᵀB(x\* - α p0)
 >
-> VÀ CÁI NÀY ĐƯỢC ĐỊNH NGHĨA LÀ NORM-A CỦA VECᵀOR x* - αp0
+> = (x\* - αp0)ᵀ(A^1/2)ᵀ(A^1/2)(x\* - α p0)
 >
-> Tất nhiên là tương tự, lấy đạo hàm và cho bằng 0 ta sẽ giải ra α. NHƯNG Ý CHÍNH Ở ĐÂY ĐÓ LÀ: 
+> = (x\* - αp0)ᵀA(x\* - αp0)
 >
-> **HÀNH ĐỘNG CHUYỂN TỌA ĐỘ VỀ BASIS a's VÀ MINIMIZE DISTANCE TRONG BASIS a's CŨNG CHÍNH LÀ HÀNH ĐỘNG CHUYỂN VIỆC MINIMIZE DISTANCE THEO NORM L2 THÔNG THƯỜNG SANG A-NORM** 
+> VÀ CÁI NÀY ĐƯỢC ĐỊNH NGHĨA LÀ NORM-A CỦA VECᵀOR x\* - αp0
+>
+>
+>
+> Tất nhiên là tương tự, lấy đạo hàm và cho bằng 0 ta sẽ giải ra α. NHƯNG Ý CHÍNH Ở ĐÂY ĐÓ LÀ:
+>
+> **HÀNH ĐỘNG CHUYỂN TỌA ĐỘ VỀ BASIS a's VÀ MINIMIZE DISTANCE TRONG BASIS a's CŨNG CHÍNH LÀ HÀNH ĐỘNG CHUYỂN VIỆC MINIMIZE DISTANCE THEO NORM L2 THÔNG THƯỜNG SANG A-NORM**
+>
+>
 >
 > Giải tiếp: g'(α) = 0
 >
-> g(α) = (x* - αp0)ᵀA(x* - αp0) = (x*TA - αp0TA)(x* - αp0) = x*TAx* - αp0TAx* - x*TAαp0 + αp0TAαp0 = x*TAx* - 2p0TAx* α + α² p0TAp0
+> g(α) = (x\* - αp0)ᵀA(x\* - αp0) = (xᵀA - αp0ᵀA)(x - αp0) = xᵀAx - αp0ᵀAx\* - xᵀAαp0 + αp0ᵀAαp0 = xᵀAx\* - 2p0ᵀAx\* α + α² p0ᵀAp0
 >
-> g'(α) = 0 ⇔ 2p0TAp0 α - 2p0TAx* = 0
+> g'(α) = 0 ⇔ 2p0ᵀAp0 α - 2p0ᵀAx\* = 0
 >
-> ⇔ α = p0TAx* / p0TAp0 
+> ⇔ α = p0ᵀAx\* / p0ᵀAp0
 >
-> ⇔ α = p0Tb / p0TAp0 y như hồi nãy, mấu chốt là ta có Ax*, nên biến nó thành b là cái đã biết, thay vì chỉ có mỗi x*, là cái không biết → ngõ cụt.
+> ⇔ α = p0ᵀb / p0ᵀAp0 y như hồi nãy, mấu chốt là ta có Ax\*, nên biến nó thành b là cái đã biết, thay vì chỉ có mỗi x\*, là cái không biết → ngõ cụt.
 >
-> **TÓM LẠI, NHỜ VẬY TA HIỂU SÂU HƠN, BẢN CHẤT CỦA THUẬT TOÁN CG: CHỈ LÀ GIẢI BÀI TOÁN TÌM HÌNH CHIẾU CỦA x* LÊN SUBSPACE x0 + span{p0,..pk}, CŨNG LÀ TÌM CÁCH ĐẾN GẦN x* NHẤT KHI DI CHUYỂN TRONG x0 + span{p0,..pk}, TỨC MINIMIZE DISTANCE NHƯNG LÀM TRONG TỌA ĐỘ BASIS a's, CŨNG CHÍNH LÀ DÙNG NORM-A ĐỂ ĐO DISTANCE**
+>
+>
+> TÓM LẠI, NHỜ VẬY TA HIỂU SÂU HƠN, BẢN CHẤT CỦA THUẬT TOÁN CG: CHỈ LÀ GIẢI BÀI TOÁN TÌM HÌNH CHIẾU CỦA x LÊN SUBSPACE x0 + span{p0,..pk}, CŨNG LÀ TÌM CÁCH ĐẾN GẦN x NHẤT KHI DI CHUYỂN TRONG x0 + span{p0,..pk}, TỨC MINIMIZE DISTANCE NHƯNG LÀM TRONG TỌA ĐỘ BASIS a's, CŨNG CHÍNH LÀ DÙNG NORM-A ĐỂ ĐO DISTANCE\*\*
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú thể hiện trực giác toán học và hiểu biết hình học rất xuất sắc; bạn đã kết nối thành công bước nhảy của Conjugate Gradient với phép chiếu trực giao theo A-norm.
+> Ghi chú thể hiện sự hiểu biết sâu sắc và trực quan hình học xuất sắc khi liên hệ thuật toán Conjugate Gradient với bài toán chiếu vuông góc (Least Squares) trong không gian chuẩn A-norm. Lập luận và các phép biến đổi đại số cho trường hợp 1D hoàn toàn chính xác.
 >
 > **🟡 Minor issues**
 >
-> **1.** *"rkTpi = 0 với mọi pi = 0,1,..,k-1"*
+> **1.** *"Nhưng khi chuyển về tọa độ basis là u, v (dùng change of basis) thì tọa độ của u trong basis u, v sẽ là (1,0) và của v sẽ là (0,1) ⇨ TRONG HỆ TỌA ĐỘ ĐÓ U VUÔNG GÓC V"*
 >
-> Lỗi gõ ký hiệu nhỏ: nên viết là 'với mọi i = 0, 1, ..., k-1' thay vì 'với mọi pi'.
+> Cách diễn đạt này hơi lỏng lẻo về mặt toán học: bản thân hai vector không tự nhiên vuông góc khi đổi cơ sở tùy ý, mà là tích vô hướng chuẩn của các vector tọa độ bằng 0 (vì cơ sở mới được gán làm hệ trục tọa độ mới). Với phép đổi biến qua ma trận đối xứng A^(1/2), tích vô hướng chuẩn trong không gian tọa độ mới chính xác là tích vô hướng suy rộng (A-inner product) trong không gian gốc.
 >
 >
 > **✓ Strengths**
-> - Xây dựng trực giác hình học xuất sắc khi liên hệ CG với bài toán bình phương tối thiểu (least squares) và phép chiếu trực giao.
-> - Lập luận chặt chẽ vì sao phép chiếu thông thường (Euclidean norm) bị bế tắc do chứa x* chưa biết, trong khi phép chiếu theo A-norm lại giải quyết triệt để nhờ gom được Ax* = b.
-> - Biến đổi đại số chính xác từ phép đổi biến tọa độ bằng căn ma trận A^(1/2) dẫn đến đúng công thức bước nhảy alpha của thuật toán.
+> - Nắm bắt chính xác bản chất hình học của Conjugate Gradient là bài toán chiếu trực giao trong không gian trang bị tích vô hướng sinh bởi A (A-norm projection).
+> - Thực hiện biến đổi đại số tìm bước nhảy alpha_0 qua điều kiện triệt tiêu đạo hàm của khoảng cách chuẩn A một cách mạch lạc và khớp chính xác với công thức trong tài liệu.
+> - Liên hệ tốt giữa nghiệm hệ tuyến tính Ax=b với bài toán tối ưu hàm bậc hai lồi phi(x).
 >
 > **💡 Deeper notes**
-> - Điều kiện ngầm định quan trọng: Ma trận A phải đối xứng xác định dương (Symmetric Positive Definite - SPD) thì mới tồn tại căn bậc hai ma trận A^(1/2) và chuẩn A (A-norm) mới là một chuẩn hợp lệ.
-> - Mối liên hệ giữa việc cực tiểu hóa hàm mục tiêu phi(x) và chuẩn sai số A-norm: (1/2)||x - x*||_A^2 = phi(x) + (1/2)x*^T A x*. Do số hạng sau là hằng số, việc cực tiểu hóa phi(x) hoàn toàn tương đương với cực tiểu hóa khoảng cách sai số theo A-norm.
+> - Ghi chú mới phân tích trực giác chi tiết cho trường hợp 1 hướng (k=1); khi mở rộng lên không gian con k chiều x0 + span{p0, ..., pk-1}, tính liên hợp p_i^T A p_j = 0 (với i != j) chính là tính trực giao đôi một trong chuẩn A, cho phép tối ưu hóa độc lập trên từng hướng mà không làm hỏng kết quả tối ưu của các hướng trước đó.
 
 **🔗 See also:** [5.1 The Linear Conjugate Gradient Method](#node-hpdy8sw) · [Conjugate Direction Method](#node-0lu7h6i) · [A Practical Form Of The Conjugate Gradient Method.](#node-jdgssae) · [Rate of Convergence](#node-3zg5huu)
 
@@ -1459,19 +1586,43 @@
 >
 > ⇔ [bᵀ - (αAp0)ᵀ](Ap0) = 0
 >
-> ⇔ [bᵀ - αp0TAᵀ]Ap0 = 0
+> ⇔ [bᵀ - αp0ᵀAᵀ]Ap0 = 0
 >
-> ⇔ bᵀAp0 - αp0TAᵀAp0 = 0
+> ⇔ bᵀAp0 - αp0ᵀAᵀAp0 = 0
 >
-> ⇔ bᵀAp0 = αp0TAᵀAp0
+> ⇔ bᵀAp0 = αp0ᵀAᵀAp0
 >
-> ⇔ bᵀAp0 / p0TAᵀAp0 = α
+> ⇔ bᵀAp0 / p0ᵀAᵀAp0 = α
 >
 > Với việc A đối xứng (xác định dương) nên Aᵀ = A ⇨ AᵀA = A²
 >
 > ⇨ α = bᵀAp0 / p0A²p0.
 >
 > (Đây chính là một công thức của một thuật toán khác)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+>
+> Ghi chú có lập luận trực giác hình học rất tốt và tự biến đổi đạo hàm/hình chiếu chính xác để tìm ra bước nhảy α của thuật toán Minimal Residual / Least Squares. Cần làm rõ thêm việc bỏ qua x₀ (giả định ngầm x₀ = 0) và phân biệt rõ hai hàm mục tiêu khác nhau.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"x bị restrict trong span {p0} ⇨ x = αp0, dĩ nhiên basis của subspace này chính là p0."*
+>
+> Đoạn đầu bạn viết 'x1 = x0 + α0p0' nhưng khi lập luận hình chiếu lại lấy 'x = αp0', tức là đang ngầm giả định điểm xuất phát x₀ = 0. Nếu x₀ ≠ 0, bạn cần chiếu phần dư r₀ = b - Ax₀ lên span{Ap₀}, khi đó tử số sẽ là r₀ᵀAp₀ thay vì bᵀAp₀.
+>
+> **2.** *"⇨ α = bᵀAp0 / p0A²p0."*
+>
+> Thiếu ký hiệu chuyển vị ở mẫu số (nên viết chuẩn là p₀ᵀA²p₀ như dòng trước đó bạn đã viết đúng p₀ᵀAᵀAp₀).
+>
+>
+> **✓ Strengths**
+> - Trực quan hóa hình học rất rõ ràng: ánh xạ không gian con 1D từ x sang Ax và đưa bài toán về phép chiếu trực giao của b lên span{Ap₀}.
+> - Các bước biến đổi đại số tuyến tính từ điều kiện trực giao để giải ra nghiệm α rất mạch lạc và chính xác.
+> - Tự nhận thức được việc thay đổi cách nhìn/hàm mục tiêu sẽ dẫn đến một thuật toán khác với công thức bước nhảy khác.
+>
+> **💡 Deeper notes**
+> - Về bản chất, thuật toán Gradient Descent / CG tiêu chuẩn cực tiểu hóa hàm Φ(x) chính là cực tiểu hóa chuẩn sai số theo ma trận A: ‖x - x*‖_A². Còn cách tiếp cận hình chiếu trực giao của bạn chính là cực tiểu hóa chuẩn Euclidean của phần dư ‖Ax - b‖₂² (dẫn đến thuật toán Minimal Residual - MINRES hoặc CGNR).
 
 <br>
 
@@ -1483,107 +1634,455 @@
 
 <p align="center"><kbd><img src="assets/yts0xlux0g.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/98f7pvl73yq.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/26paw.png" width="80%"></kbd></p>
+
 > [!NOTE]
-> Theorem này nói đại ý rằng: Bắt đầu từ x0 và ta dùng một thuật toán 5.6, 5.7 để tạo ra chuỗi {xk}. Tức là: αk = -rkTpk / (pkᵀApk) và xk+1 = xk + αkpk. Thì khi đó chuỗi này sẽ có tính chất sau:
+> Theorem này nói đại ý rằng: Bắt đầu từ x0 và ta dùng một thuật toán 5.6, 5.7 để tạo ra chuỗi {x_k}. Tức là: α\_k = -r_kᵀp_k / (p_kᵀAp_k) và x_k+1 = x_k + α\_kp_k. Thì khi đó chuỗi này sẽ có tính chất sau:
+>
+>
+>
+> minimize Φ(x) over set {x: x = x0 + span{p0}}
+>
+>
+>
+> span{a,b}: mọi linear combination của a,b: u = αa + βb, ∀α, β
+>
+>
+>
+> (r(x) = Ax - b) 
+>
+>
 >
 > r(x1)ᵀp0 = 0
 >
-> r(x2)ᵀp0 = 0, r2Tp1 = 0
 >
-> r(x3)ᵀp0 = 0, r3Tp1 = 0, r3Tp2 = 0
-> ....
 >
-> r(xk)ᵀpi = 0 ∀i = 0,1,...
+> r(x2)ᵀp0 = 0, r2ᵀp1 = 0
 >
-> r(x) = Ax - b
+>
+>
+> r(x3)ᵀp0 = 0, r3ᵀp1 = 0, r3ᵀp2 = 0 ....
+>
+>
+>
+> r(x_k)ᵀpi = 0 ∀i = 0,1,...,k-1
+>
+>
 >
 > Và điều đó cũng đồng nghĩa là:
 >
+>
+>
 > x1 minimize φ(x) over the set {x: x = x0 + span{p0}}
+>
+>
 >
 > x2 minimize φ(x) over the set {x: x = x0 + span{p0, p1}}
 >
 > ...
 >
-> xk minimize φ(x) over the set {x: x =  x0 + span{p0, p1,...pk-1}}
+> x_k minimize φ(x) over the set {x: x = x0 + span{p0, p1,...p_k-1}}
 >
-> Cách chứng minh đại ý là: 
 >
-> Đầu tiên ta chứng minh điều kiện **cần và đủ** để x' là **minimizer của φ(x) over set {x: x = x0 + span{p0,...pk-1}} là r(x')ᵀpi = 0 với mọi i**. 
 >
-> Lập luận sẽ là xét hàm φ(x) restricted on set {x: x = x0 + span{p0,...pk-1}}, có nghĩa là hàm h(σ) = φ(x0 + σ0p0 + σ1p1 + ..σk-1pk-1), với σ = (σ0, ...σk-1)ᵀ
+> ---
 >
-> Thì đây là convex function theo dạng convex (φ) composition with affine x0 + σ0p0 + σ1p1 + ..σk-1pk-1, nên điều kiện optimality cần và đủ là gradient h'(σ) = 0, triển khai ra ta sẽ có vector gradient = 0 đồng nghĩa r(x)ᵀpi = 0 với i = 0,1..,k-1.
 >
-> Vấn đề là, ta chỉ mới chứng minh rằng nếu mà có thằng x' thỏa r(x')ᵀpi = 0 ∀i = 0,1,...,k-1 thì nó sẽ là minimizer của φ(x) over subset {x0 + span{p0,...,pk-1}}. 
 >
-> Trong khi đó cái cần chứng minh là chuỗi {xk} sẽ đều thỏa cái này cơ.
+> Cách chứng minh đại ý là:
 >
-> Do đó tiếp theo ta sẽ chứng minh chuỗi {xk} tạo bởi quy trình trên sẽ thỏa r(x')ᵀpi = 0 ∀i = 0,1,...,k-1. Và vì đây là chứng minh mọi item trong chuỗi đều thỏa, nên ta sẽ dùng phương pháp quy nạp (induction).
+>
+>
+> Đầu tiên ta chứng minh:
+>
+>
+>
+> điều kiện **cần và đủ** để x' là minimizer của φ(x) over set {x: x = x0 + span{p0,...p_k-1}}
+>
+>
+>
+> là r(x')ᵀpi = 0 với mọi i = 0,1,2,....,k-1
+>
+>
+>
+> Lập luận sẽ là:
+>
+>
+>
+> xét hàm φ(x) restricted on set {x: x = x0 + span{p0,...p_k-1}} 
+>
+>
+>
+> x ∈ {x: x = x0 + span{p0,...p_k-1}}  ⇒ x = x0 + σ0p0 + σ1p1 + ..σ\_k-1p_k-1 (với σ = (σ0, ...σ\_k-1)ᵀ nào đó)
+>
+>
+>
+> Φ(x) với x = x0 + σ0p0 + σ1p1 + ..σ\_k-1p_k-1 với (với σ = (σ0, ...σ\_k-1)ᵀ nào đó)
+>
+>
+>
+> h(σ) = Φ(x0 + σ0p0 + σ1p1 + ..σ\_k-1p_k-1)
+>
+>
+>
+> có nghĩa là xét hàm h(σ) = φ(x0 + σ0p0 + σ1p1 + ..σ\_k-1p_k-1), với σ = (σ0, ...σ\_k-1)ᵀ bất kì
+>
+>
+>
+> Do A đối xứng xác định dương nên đây là strictly convex function theo dạng convex function (φ) composition with affine x0 + σ0p0 + σ1p1 + ..σ\_k-1p_k-1, nên hàm này cũng sẽ là strictly convex (ta sẽ chứng minh lại ở dưới)
+>
+>
+>
+> Từ đó điều kiện optimality cần và đủ là gradient h'(σ) = 0, triển khai ra ta sẽ có vector gradient = 0 đồng nghĩa r(x)ᵀpi = 0, với i = 0,1..,k-1.
+>
+>
+>
+> ---
+>
+>
+>
+> Chứng minh h(σ) cũng strictly convex:
+>
+>
+>
+> h(σ) = Φ(x0 + Pσ) với P mà matrix ta đặt ra có các cột là p0,...p_k-1
+>
+>
+>
+> = (1/2)xᵀAx - bᵀx | x=x0 + Pσ
+>
+>
+>
+> = (1/2)(x0 + Pσ)ᵀA(x0 + Pσ) - bᵀ(x0 + Pσ)
+>
+>
+>
+> = (1/2)(x0ᵀA + σᵀPᵀA)(x0 + Pσ) - bᵀ(x0 + Pσ)
+>
+>
+>
+> = (1/2)(x0ᵀAx0 + σᵀPᵀAx0 + x0ᵀAPσ + σᵀPᵀAPσ) - bᵀ(x0 + Pσ)
+>
+>
+>
+> = (1/2)(x0ᵀAx0 + 2x0ᵀAPσ + σᵀPᵀAPσ) - bᵀx0 - bᵀPσ
+>
+>
+>
+> = (1/2)σᵀPᵀAPσ + x0ᵀAPσ - bᵀPσ + (1/2)x0ᵀAx0 - bᵀx0
+>
+>
+>
+> = (1/2)σᵀPᵀAPσ + (x0ᵀAP - bᵀP)σ + (1/2)x0ᵀAx0 - bᵀx0
+>
+>
+>
+> → đây là hàm bậc 2 của σ có Hessian là PᵀAP.
+>
+>
+>
+> Xét uᵀPᵀAPu, do P full column rank (vì bộ vector liên hợp thì độc lập đã chứng minh ở các phần trước) nên Pu khác 0 với mọi u khác 0, và vì A xác định dương nên (Pu)ᵀAPu &gt; 0 với mọi Pu khác 0. Vậy với mọi u khác 0, uᵀPᵀAPu &gt; 0. Vậy PᵀAP xác định dương. Vậy với mọi σ, hessian của h(σ) luôn xác định dương nên h(σ) strictly convex.
+>
+>
+>
+> và cùng do đó, điểm dừng nơi ∇h(σ) = 0 cũng sẽ là minimizer.
+>
+>
+>
+> ---
+>
+>
+>
+> Tìm minimizer σ0 của h(σ), để xác nhận rằng x = x0 + σ\*0p0 + σ\*1p1 + ...σ\*\_k-1p_k-1
+>
+>
+>
+> sẽ cũng là minimizer của Φ(x0 + σ\*0p0 + σ\*1p1 + ...σ\*\_k-1p_k-1)
+>
+>
+>
+> Tìm gradient (đạo hàm của h(σ) đối với vector σ):
+>
+>
+>
+> Viết lại hàm h(σ) = Φ(x0 + Pσ)
+>
+>
+>
+> Mục tiêu: Đưa về dh(σ) = \[∇\_σ h(σ)\]ᵀ dσ
+>
+>
+>
+> dh(σ) = dΦ(x0 + Pσ)
+>
+>
+>
+> Đặt u = x0 + Pσ:
+>
+>
+>
+> h đối với u là hàm vector - scalar h(u) = Φ(u), và u đới với σ sẽ là hàm vector - vector
+>
+>
+>
+> ⇒ dh(u) = (∇\_u h(u))ᵀ du = (∇\_u Φ(u))ᵀ du
+>
+>
+>
+> ∇Φ(x) đã biết = Ax - b, nên ∇\_u Φ(u) = Au - b
+>
+>
+>
+> = (Au - b)ᵀ du
+>
+>
+>
+> du = x0 + P(σ+ dσ) - x0 - Pσ = Pdσ
+>
+>
+>
+> ⇒ dh(σ) = (Au - b)ᵀPdσ ⇒ ∇\_σ h(σ) = ((Au - b)ᵀP)ᵀ
+>
+>
+>
+> Vậy ∇\_σ h(σ) = Pᵀ(Au - b)
+>
+>
+>
+> ---
+>
+>
+>
+> Co gradient = 0:
+>
+>
+>
+> Pᵀ(Au - b) = 0 ⇔ Pᵀ(A(x0 + Pσ) - b) = 0
+>
+>
+>
+> ⇔ Pᵀ(Ax - b) = 0
+>
+>
+>
+> ⇔ Pᵀr(x) = 0
+>
+>
+>
+> ⇔ p0ᵀ r(x), p1ᵀ r(x) = 0, p2ᵀ r(x) = 0,...p_k-1ᵀ r(x) = 0
+>
+>
+>
+> hay piᵀr(x) = 0 với i = 0,1,2,...k-1
+>
+>
+>
+> Vậy điểm σ\* khiến minimize h(σ) là σ khiến ta có piᵀr(x0 + Pσ) = 0 với i = 0,1,2,...k-1
+>
+>
+>
+> cũng là σ khiến ta có piᵀr(x) = 0 với i = 0,1,2,...k-1
+>
+>
+>
+> Và σ\* khiến minimize h(σ) dĩ nhiên cũng đồng nghĩa x = x0 + Pσ = x0 + σ0 p0 + ...σk-1 p_k-1 (và cũng là điểm mà ta gọi là xk) sẽ là điểm minimize hàm Φ(x0 + Pσ), tức Φ(x) restrict bởi tập {x| x=x0 + span{p0,...,pk-1}}
+>
+>
+>
+> ---
+>
+>
+>
+> Vấn đề là, ta chỉ mới chứng minh rằng nếu mà có thằng x' thỏa r(x')ᵀpi = 0 ∀i = 0,1,...,k-1 thì nó sẽ là minimizer của φ(x) over subset {x0 + span{p0,...,p_k-1}}.
+>
+>
+>
+> Trong khi đó cái cần chứng minh là chuỗi {x_k} sẽ đều thỏa cái này cơ.
+>
+>
+>
+> Do đó tiếp theo ta sẽ chứng minh chuỗi {x_k} tạo bởi quy trình trên sẽ thỏa r(x')ᵀpi = 0 ∀i = 0,1,...,k-1. Và vì đây là chứng minh mọi item trong chuỗi đều thỏa, nên ta sẽ dùng phương pháp quy nạp (induction).
+>
+>
 >
 > Với phương pháp quy nạp.
 >
+>
+>
 > Đầu tiên ta chứng minh nó đúng với k = 1.
+>
+>
 >
 > Sau đó giả sử nó đúng với k-1 (đây gọi là induction hypothesis, gỉa thuyết quy nạp), thì ta sẽ chứng minh nó cũng đúng với k. Khi đó là chứng minh xong.
 >
+>
+>
 > Thế thì với k = 1, x1 = x0 + α0p0 thì liệu r(x1)ᵀp0 có bằng 0?
 >
-> Để trả lời, ta nhớ lại thuật toán 5.7, 5.8 là từ đâu ra.Đó là xuất phát từ ý tưởng của conjugate direction method: Cho bộ conjugate set {p0,...pn-1} của matrix A. Thì
-> αk chính là one-dimensional minimizer của Φ along xk + αpk. Nói dễ hiểu, ta đặt ra bài toán minimize hàm đơn biến g(α) define bởi Φ giới hạn theo hướng pk: g(α) = Φ(xk + αpk), thì solution của nó sẽ là 5.7.
 >
-> Như vậy thì dĩ nhiên với k=1, g'(α)|α=α0 = 0 
 >
-> ⇔ d/dα φ(x0 + αp0) = 0 
+> Để trả lời, ta nhớ lại thuật toán 5.7, 5.8 là từ đâu ra.Đó là xuất phát từ ý tưởng của conjugate direction method: Cho bộ conjugate set {p0,...pn-1} của matrix A. Thì α\_k chính là one-dimensional minimizer của Φ along x_k + αp_k. Nói dễ hiểu, ta đặt ra bài toán minimize hàm đơn biến g(α) define bởi Φ giới hạn theo hướng p_k: g(α) = Φ(x_k + αp_k), thì solution của nó sẽ là 5.7.
 >
-> ⇔ d/d(x0 + αp0) φ(x0 + αp0) . d/dα (x0 + αp0) = 0 
 >
-> ⇔ ∇φ(x0 + αp0) . p0 = 0 
 >
-> ⇔ ∇φ(x0 + αp0)ᵀp0 = 0 
+> Như vậy thì dĩ nhiên với k=1, g'(α)|α=α0 = 0
 >
-> ⇔ [(Aᵀx - b)|x=x0+αp0]ᵀp0 = 0
+> ⇔ d/dα φ(x0 + αp0) = 0
 >
-> ⇔ [(Aᵀx - b)|x=x1]ᵀp0 = 0 
+> ⇔ d/d(x0 + αp0) φ(x0 + αp0) . d/dα (x0 + αp0) = 0
 >
-> ⇔ (Aᵀx1 - b)ᵀp0 = 0 
+> ⇔ ∇φ(x0 + αp0) . p0 = 0
 >
-> ⇔ (Ax1 - b)ᵀp0 = 0 
+> ⇔ ∇φ(x0 + αp0)ᵀp0 = 0
 >
-> ⇔ r(x1)ᵀp0 = 0 ⇨ Như vậy k = 1 đúng: xk thỏa r(xk)ᵀpi = 0 ∀i = 0,..k-1
+> ⇔ \[(Aᵀx - b)|x=x0+αp0\]ᵀp0 = 0
 >
-> Tiếp theo, như đã bàn, ta sẽ giả sử nó cũng đúng với xk-1: Tức là ta có 
+> ⇔ \[(Aᵀx - b)|x=x1\]ᵀp0 = 0
 >
-> r(xk-1)ᵀpi = 0, hay rk-1Tpi = 0 ∀i = 0,..k-2 (a)
+> ⇔ (Aᵀx1 - b)ᵀp0 = 0
 >
-> Ta sẽ chứng minh nó đúng với xk
+> ⇔ (Ax1 - b)ᵀp0 = 0
 >
-> Thế thì ta dùng 5.10 đã chứng minh ở note trước: rk+1 = rk + αkApk 
+> ⇔ r(x1)ᵀp0 = 0 ⇨ Như vậy k = 1 đúng: x_k thỏa r(x_k)ᵀpi = 0 ∀i = 0,..k-1
 >
-> ⇨ rk = rk-1 + αk-1Apk-1 
 >
-> Do đó xét piTrk i = 0,1,...k-1
 >
-> thay rk = rk-1 + αk-1Apk-1
+> ---
 >
-> piTrk = piT(rk-1 + αk-1Apk-1)
 >
-> = piTrk-1 + piTαk-1Apk-1
 >
-> Hạng tử đầu piTrk-1 = rk-1Tpi = r(xk-1)ᵀpi = 0 với mọi i = 0,...k-2 do (a)
+> Tiếp theo, như đã bàn, ta sẽ giả sử nó cũng đúng với x_k-1: Tức là ta có
 >
-> Hạng tử sau piTαk-1Apk-1 = 0 với mọi i = 0,...k-2 do {p0,...pn-1} là conjugate set của A.
 >
-> Vậy piTrk = 0 với mọi i = 0,...k-1 
 >
-> ⇨ Kết luận với k, xk cũng thỏa r(xk)ᵀpi với mọi i = 0,...k-1 
+> r(x_k-1)ᵀpi = 0, hay r_k-1ᵀpi = 0 ∀i = 0,..k-2 (a)
 >
-> ⇨ Chứng minh xong rằng mọi xk trong chuỗi {xk} đều thỏa điều kiện này và như vậy xk sẽ là minimizer của φ over set {x0 + span{p0,..pk-1}}
+>
+>
+> r_k-1ᵀp0 = 0,
+>
+>
+>
+> r_k-1ᵀp1 = 0,
+>
+>
+>
+> r_k-1ᵀp2 = 0
+>
+>
+>
+> ...
+>
+>
+>
+> r_k-1ᵀp_k-2 = 0
+>
+>
+>
+> ---
+>
+>
+>
+> Ta sẽ chứng minh nó đúng với x_k: r_kᵀp_0 = r_kᵀp_1 = .. = r_kᵀp_k-1 = 0
+>
+>
+>
+> Thế thì ta dùng 5.10 đã chứng minh ở note trước: r_k+1 = r_k + α\_k A p_k
+>
+>
+>
+> ⇨ r_k = r_k-1 + α\_k-1 A p_k-1
+>
+>
+>
+> ⇒ r_kᵀp_i = (r_k-1 + α\_k-1 A p_k-1)ᵀp_i
+>
+>
+>
+> = r_k-1ᵀp_i + (α\_k-1 A p_k-1)ᵀp_i
+>
+>
+>
+> = r_k-1ᵀp_i + α\_k-1 p_k-1ᵀAᵀp_i
+>
+>
+>
+> Hạng tử đầu r_k-1ᵀp_i = r_k-1 ᵀ pi = r(x_k-1)ᵀpi = 0 với mọi i = 0,...k-2 do (a)
+>
+>
+>
+> Hạng tử sau piᵀα\_k-1Ap_k-1 = 0 với mọi i = 0,...k-2 do {p0,...pn-1} là conjugate set của A.
+>
+>
+>
+> Vậy r_kᵀpi = 0 với mọi i = 0,...k-2
+>
+>
+>
+> ---
+>
+>
+>
+> Chỉ còn phải chứng minh r_kᵀpi = 0 với i = k-1, hay r_kᵀp_k-1:
+>
+>
+>
+> = (r_k-1 + α\_k-1 A p_k-1)ᵀp_k-1
+>
+>
+>
+> = r_k-1ᵀp_k-1 + (α\_k-1 A p_k-1)ᵀp_k-1
+>
+>
+>
+> = r_k-1ᵀp_k-1 + α\_k-1 p_k-1ᵀAᵀp_k-1
+>
+>
+>
+> = r_k-1ᵀp_k-1 + \[-r_k-1ᵀp_k-1/(p_k-1ᵀAp_k-1)\] p_k-1ᵀAᵀp_k-1
+>
+>
+>
+> = r_k-1ᵀp_k-1 + (-r_k-1ᵀp_k-1)
+>
+>
+>
+> = 0
+>
+>
+>
+> Vậy r_kᵀpi = 0 với mọi i = 0,1,2,...k-1
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> ⇨ Kết luận với k, x_k cũng thỏa r(x_k)ᵀpi = 0 với mọi i = 0,...k-1
+>
+>
+>
+> ⇨ Chứng minh xong rằng mọi x_k trong chuỗi {x_k} đều thỏa điều kiện này và như vậy x_k sẽ là minimizer của φ over set {x0 + span{p0,..p_k-1}}
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=I7vBVb7KG9M)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú của bạn giải thích rất chi tiết và chính xác định lý, đặc biệt làm rõ cách xử lý trường hợp i = k-1 trong bước quy nạp mà văn bản gốc chỉ ngụ ý, thể hiện sự hiểu biết sâu sắc. Để hoàn thiện hơn, bạn có thể đảm bảo sự nhất quán hoàn toàn trong ký hiệu r(x) và rk trên toàn bộ ghi chú.
+> Ghi chú xuất sắc, hiểu sâu sắc bản chất định lý và trình bày lại từng bước chứng minh thậm chí còn chi tiết, tường minh hơn cả sách giáo trình.
+>
+> **✓ Strengths**
+> - Tự triển khai và chứng minh chặt chẽ tính strictly convex của hàm mục tiêu trên không gian con thông qua ma trận Hessian $P^T A P$ và tính độc lập tuyến tính của các hướng liên hợp.
+> - Chứng minh điều kiện tối ưu bậc một thông qua vi phân ma trận một cách chuẩn xác và rõ ràng.
+> - Trình bày logic quy nạp hoàn chỉnh, giải thích cặn kẽ cả trường hợp cơ sở lẫn bước chuyển tiếp quy nạp.
+>
+> **💡 Deeper notes**
+> - Trong đoạn biến đổi vi phân cho trường hợp cơ sở $k=1$, việc ghi $(A^T x_1 - b)$ tương đương $(Ax_1 - b)$ dựa trên giả thiết ma trận $A$ đối xứng ($A = A^T$), một giả định nền tảng xuyên suốt phương pháp liên hợp.
 
 <br>
 
@@ -1594,49 +2093,105 @@
 <p align="center"><kbd><img src="assets/4x5i9c0xwcv.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại ý nói là thuật toán conjugate direction đòi hỏi ta có một bộ conjugate vector. Và có nhiều cách để tạo ra một bộ như vậy. Ví dụ với A xác định dương thì eigenvectors cũng là conjugate set. Nhưng có điều tìm ra bộ eigenvector thì rất tốn kém với bài toán quy mô lớn. Một đề xuất khác là có thể dùng thuật toán Gram-Smidth. Tuy nhiên, cũng tốn kém nốt. Nói chung là sắp tới sẽ nói giải pháp.
+> Đại ý nói là thuật toán conjugate direction đòi hỏi ta có một bộ conjugate vector. Và có nhiều cách để tạo ra một bộ như vậy. Ví dụ với A xác định dương thì eigenvectors cũng là conjugate set. Nhưng có điều tìm ra bộ eigenvector thì rất tốn kém với bài toán quy mô lớn. Một đề xuất khác là có thể dùng thuật toán Gram-Schmidt.
 >
-> Dừng ở đây mình thử trả lời xem vì sao với A ≻ thì eigenvector lại là conjugate set?
+>
+>
+> Tuy nhiên, cũng tốn kém nốt. Nói chung là sắp tới sẽ nói giải pháp.
+>
+>
+>
+> Dừng ở đây mình thử trả lời xem **vì sao với A ≻ thì eigenvector lại là conjugate set?**
+>
+>
 >
 > Là vì với A đối xứng thì ta có thể có bộ eigenvector orthonormal, để tách A thành Q Λ Qᵀ
 >
+>
+>
 > với A ≻ 0 thì đường chéo của Λ đều dương.
 >
-> Vậy thì: vì sao qiTAqj = 0 nếu i ≠ j?
 >
-> qiTAqj = qiTQ Λ Qᵀqj 
+>
+> Vậy thì: vì sao qiᵀAqj = 0 nếu i ≠ j?
+>
+>
+>
+> qiᵀAqj = qiᵀQ Λ Qᵀqj
+>
+>
 >
 > Qᵀqj chính là gì? ⇨ chính là ej, vì theo góc nhìn thứ nhất nhân matrix với vector, thì vector phần tử thứ i của vector kết quả là dot product của hàng i của Q (là qi) và vector qj. Mà Q orthogonal nên nếu i khác j thì chúng sẽ vuông góc → dot product = 0. Nên chỉ có row j (cũng chính là qj) dot product với qj là khác 0, mà cái này cụ thể thì là bằng 1 (vì ra ||qj||² = 1)
 >
-> Còn qiTQ = (Qᵀqi)ᵀ, tương tự, chính là eiT
 >
-> Vậy ta có eiT Λ ej = eiT (0,..λj,..0) = 0 × 0 + ..1 × λi + ..+ 0 × λj +..0 ×0,
+>
+> Còn qiᵀQ = (Qᵀqi)ᵀ, tương tự, chính là eiᵀ
+>
+>
+>
+> Vậy ta có eiᵀ Λ ej = eiᵀ (0,..λj,..0) = 0 × 0 + ..1 × λi + ..+ 0 × λj +..0 ×0,
+>
+>
 >
 > Với i khác j thì cái này = 0 là cái chắc.
 >
+>
+>
 > Vậy rõ ràng {qi}, các cột của Q, các eigenvector của A chính là một conjugate set.
+>
+>
+>
+> ---
+>
+>
 >
 > Nhưng có thể chứng minh nhanh hơn nhiều:
 >
-> qiTAqj = qiT λiqj (vì Aqj = λiqj với λj và qj là trị riêng, vector riêng)
 >
-> = λi qiTqj (scalar move tùy ý)
 >
-> = λi × 0 (do Q orthogonal)
+> qiᵀAqj = qiᵀ λjqj (vì Aqj = λjqj với λj và qj là trị riêng, vector riêng)
 >
-> = 0. 
+>
+>
+> = λj qiᵀqj (scalar move tùy ý)
+>
+>
+>
+> = λj × 0 (do Q orthogonal)
+>
+>
+>
+> = 0.
+>
+>
+>
+> ---
+>
+>
 >
 > Trong sách cũng nhắc đến Gram Smidth: Sẵn ôn lại nhanh, nhờ gs Strang của MiT18.06 nó rất dễ hiểu:
 >
+>
+>
 > Ta có một bộ basis a1,...an và muốn tìm một bộ orthogonal basis q1,...qn.
+>
+>
 >
 > Cách làm như sau:
 >
+>
+>
 > Cho q1 là a1, normalize để có unit norm: q1 = a1/||a1||
 >
-> q2 được tạo ra như sau: Lấy a2 chiếu lên span{a1} (cũng là span{q1}) và lấy phần dư, đem normalize để thành q2. Khi đó q2 sẽ orthogonal span{q1}. 
 >
-> Gọi α1 q1  là hình chiếu của a2 lên span{q1}: residual sẽ vuông góc với span{q1}:
+>
+> q2 được tạo ra như sau: Lấy a2 chiếu lên span{a1} (cũng là span{q1}) và lấy phần dư, đem normalize để thành q2. Khi đó q2 sẽ orthogonal span{q1}.
+>
+>
+>
+> Gọi α1 q1 là hình chiếu của a2 lên span{q1}: residual sẽ vuông góc với span{q1}:
+>
+>
 >
 > (a2 - α1q1)ᵀq1 = 0 ⇔ a2Tq1 - (α1q1)ᵀq1 = 0 ⇔ a2Tq1 - α1q1Tq1 = 0 ⇔ a2Tq1 = α1q1Tq1
 >
@@ -1646,23 +2201,43 @@
 >
 > Normalize: q2 = q2 / ||q2||
 >
-> q3 được tạo như sau: Lấy a3 chiếu lên span{q1,q2} và lấy phần dư, đem normalize
-> Đây sẽ là bài toán project lên 2D subspace 
+>
+>
+> q3 được tạo như sau: Lấy a3 chiếu lên span{q1,q2} và lấy phần dư, đem normalize Đây sẽ là bài toán project lên 2D subspace
+>
+>
 >
 > Bỏ gọi A là matrix có các cột là q1,q2: thì hình chiếu a3 lên C(A): Ax, phần dư vuông góc với với C(A) → nằm trong left null space N(Aᵀ): Aᵀ(a3 - Ax) = 0 ⇔ Aᵀa3 = AᵀAx
 >
-> ⇔ x = (AᵀA)⁻¹Aᵀa3 ⇨ q3 = a3 - A (AᵀA)⁻¹Aᵀa3 
+>
+>
+> ⇔ x = (AᵀA)⁻¹Aᵀa3 ⇨ q3 = a3 - A (AᵀA)⁻¹Aᵀa3
+>
+>
 >
 > Và vì q1,q2 orthogonal, nên AᵀA = I ⇨ q3 = a3 - AAᵀa3
 >
+>
+>
 > Normalize q3.
+>
+>
 >
 > Cứ thế.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
 >
-> Bạn đã nắm bắt rất chính xác các ý chính từ văn bản và thể hiện sự hiểu biết sâu sắc qua việc tự giải thích các khái niệm liên quan. Để hoàn hảo hơn, hãy luôn đảm bảo mọi thông tin suy luận đều được gắn kết rõ ràng với nội dung gốc nếu có thể, hoặc chỉ ra đó là kiến thức bổ sung của bạn.
+> Ghi chú rất xuất sắc, hiểu sâu sắc bản chất vấn đề. Bạn không chỉ tóm tắt đúng ý sách mà còn tự chứng minh tính liên hợp của eigenvectors theo hai cách và ôn lại bản chất hình học của Gram-Schmidt rất chuẩn xác.
+>
+> **✓ Strengths**
+> - Tóm tắt chính xác nội dung đoạn sách về việc lựa chọn tập hướng liên hợp và lý do vì sao eigenvectors hay Gram-Schmidt bị xem là tốn kém trong bài toán lớn.
+> - Tự đặt câu hỏi và tự chứng minh tính A-conjugate của hệ eigenvector rất mạch lạc qua cả hai cách (dùng phân rã phổ và dùng trực tiếp định nghĩa trị riêng).
+> - Ôn tập thuật toán Gram-Schmidt theo góc nhìn hình học (chiếu trực giao lên không gian con) rất trực quan và chính xác.
+>
+> **💡 Deeper notes**
+> - Ký hiệu vector sau khi trừ hình chiếu và sau khi chuẩn hóa (normalize) đang dùng chung một tên (ví dụ gán q2 là phần dư rồi lại viết q2 = q2 / ||q2||); trong cài đặt code hoặc ghi chép toán chính quy nên dùng ký hiệu tạm thời như v2 hoặc u2 trước khi chuẩn hóa thành q2.
+> - Đối với ma trận đối xứng có trị riêng bội (trùng nhau), định lý phổ (Spectral Theorem) vẫn đảm bảo luôn chọn được một hệ cơ sở trực chuẩn các eigenvector.
 
 <br>
 
@@ -1718,6 +2293,26 @@
 > Dùng nó tính conjugate direction tiếp thep pk+1
 >
 > Lặp lại.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+>
+> Ghi chú nắm rất tốt bản chất của Conjugate Gradient, ý nghĩa của việc tiết kiệm bộ nhớ và tự suy dẫn được công thức cho beta_k. Có một hạt sạn nhỏ về thứ tự thực hiện và chỉ số bước đầu tiên trong đoạn diễn giải bằng lời trước khi tóm tắt thuật toán.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Bắt đầu từ x0, ta chọn p0 là hướng dốc nhất: -∇φ(x0), rồi theo công thức trên tính ra β1 và từ đó có p1. Sau khi có p1 thì theo cách làm của conjugate direction method, đi tìm α0 theo 5.7... và từ đó có x1: x1 = x0 + α1p1."*
+>
+> Đoạn mô tả này bị lộn thứ tự tính toán và sai chỉ số. Ta không thể tính ngay beta_1 và p_1 khi mới ở x0 vì beta_1 cần r_1 (phải có x_1 mới có r_1). Thứ tự đúng tại bước đầu tiên là: từ p_0 tính alpha_0, cập nhật x_1 = x_0 + alpha_0*p_0, tính r_1, rồi mới tính beta_1 để tạo p_1. (Dù ngay bên dưới bạn đã tóm tắt thuật toán 5.1 đúng thứ tự, đoạn văn này vẫn nên sửa để tránh gây hiểu lầm).
+>
+>
+> **✓ Strengths**
+> - Hiểu chính xác ưu điểm vượt trội của Conjugate Gradient so với Conjugate Direction tổng quát: chỉ cần p_{k-1} để tạo p_k mà vẫn đảm bảo liên hợp với toàn bộ các hướng trước đó, giúp tối ưu bộ nhớ và tính toán.
+> - Tự biến đổi đại số rõ ràng và chính xác để tìm ra hệ số beta_k từ điều kiện trực giao liên hợp p_{k-1}^T A p_k = 0.
+> - Tóm tắt đúng và mạch lạc các bước lặp trong thuật toán CG sơ bộ (Algorithm 5.1).
+>
+> **💡 Deeper notes**
+> - Phép biến đổi từ pk-1^T A rk thành rk^T A pk-1 (như trong công thức 5.14d) ngầm định ma trận A đối xứng (A = A^T). Đồng thời, A phải là ma trận xác định dương (SPD) để mẫu số p_{k-1}^T A p_{k-1} > 0 với mọi p_{k-1} khác 0.
 
 **🔗 See also:** [5.1 The Linear Conjugate Gradient Method](#node-hpdy8sw) · [Conjugate Direction Method](#node-0lu7h6i) · [A Practical Form Of The Conjugate Gradient Method.](#node-jdgssae)
 
@@ -1958,7 +2553,7 @@
 >
 > Theorem 5.2 nói gì? (*)
 >
-> Theorem này nói đại ý rằng: Bắt đầu từ x0 và ta dùng một thuật toán 5.6, 5.7 để tạo ra chuỗi {xk}. Tức là: αk = -rkTpk / (pkᵀApk) và xk+1 = xk + αkpk. Thì khi đó chuỗi này sẽ có tính chất sau:
+> Theorem này nói đại ý rằng: Bắt đầu từ x0 và ta dùng một thuật toán 5.6, 5.7 để tạo ra chuỗi {xk}. Tức là: αk = -rkᵀpk / (pkᵀApk) và xk+1 = xk + αkpk. Thì khi đó chuỗi này sẽ có tính chất sau:
 > (với r(x) = Ax - b)
 >
 > r(x1)ᵀp0 = 0
@@ -2059,13 +2654,13 @@
 >
 > =====
 >
-> IV) Chứng minh 5.16 tức là rkTri = 0 ∀ i = 0,1...k-1 và ∀k = 1,2,...n-1. 
+> IV) Chứng minh 5.16 tức là rkᵀri = 0 ∀ i = 0,1...k-1 và ∀k = 1,2,...n-1. 
 >
 > Cái này thì ko dùng quy nạp mà lập luận như sau: 
 >
 > Với việc đã chứng minh xong 5.18, nên có quyền xài: pkᵀApi = 0 ∀i = 0,1,...k-1. Do đó bộ p0,...pk là conjugate set.
 >
-> Lại theo theorem 5.1 (vì sao xài được thì xem lại (*)): nói rằng rkTpi = 0 ∀ i=0,1...k-1
+> Lại theo theorem 5.1 (vì sao xài được thì xem lại (*)): nói rằng rkᵀpi = 0 ∀ i=0,1...k-1
 >
 > Dùng 5.14e: pk+1 = -rk+1 + βk+1 pk
 >
@@ -2075,7 +2670,7 @@
 >
 > ⇨ ri ∈ span {pi, pi-1} ∀ i = 1,2...k-1 (cái này dễ hiểu)
 >
-> Vậy thì rkTpi ∀ i=0,1...k-1 ⇨ rk vuông góc span {p1,...pk-1}
+> Vậy thì rkᵀpi ∀ i=0,1...k-1 ⇨ rk vuông góc span {p1,...pk-1}
 >
 > nên dĩ nhiên vuông góc với mọi vector trong đó (**)
 >
@@ -2083,17 +2678,17 @@
 >
 > ⇨ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1
 >
-> Vậy từ ** → rkTri = 0 ∀ i = 1,2...k-1
+> Vậy từ ** → rkᵀri = 0 ∀ i = 1,2...k-1
 >
 > Tới đây là đã chưng minh 5.16 với mọi i = 1,2...k-1
 >
 > Nhưng ta còn 1 cái i = 0 nữa (xem lại 5.16)
 >
-> Vậy thì rkTr0 có bằng 0 không?
+> Vậy thì rkᵀr0 có bằng 0 không?
 >
 > ⇨ r0 chính là gì, Ax0 - b, chính là ∇Φ(x0), và p0 còn nhớ, được chọn = negative gradient. Vậy  r0 = -p0 
 >
-> ⇨ rkTr0 = -rkTp0, cái này thì đích thị là bằng 0 do 5.11: rkTpi = 0 ∀ i=0,1...k-1
+> ⇨ rkᵀr0 = -rkᵀp0, cái này thì đích thị là bằng 0 do 5.11: rkᵀpi = 0 ∀ i=0,1...k-1
 >
 > Vậy là đã chứng minh xong.
 
@@ -2148,7 +2743,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 > [!NOTE]
 > Đại khái là nói rằng phần chứng minh của theorem này dựa trên sự thật rằng p0 là negative gradient (p0 = - r0, Ax0 - b, tức ∇(1/2xᵀAx - bx)|x=x0). Và nếu p0 không không phải -r0 thì theorem này sẽ không work.
 >
-> Một điểm nữa, thực ra ta thấy trong theorem đã nói (5.16): rkTri 0 với i=0,1,...k-1. Có nghĩa là, các gradient vector (nhắc lại lần nữa, residual Ax-b, chính là gradient của hàm Φ(x) = 1/2xᵀAx - bx) thực ra là ORᵀHOGONAL nhau, chứ KHÔNG PHẢI LÀ CONJUGAᵀE NHAU.
+> Một điểm nữa, thực ra ta thấy trong theorem đã nói (5.16): rkᵀri 0 với i=0,1,...k-1. Có nghĩa là, các gradient vector (nhắc lại lần nữa, residual Ax-b, chính là gradient của hàm Φ(x) = 1/2xᵀAx - bx) thực ra là ORᵀHOGONAL nhau, chứ KHÔNG PHẢI LÀ CONJUGAᵀE NHAU.
 >
 > Do đó giáo sư mới nói tên gọi Conjugate Gradient Method thực ra là hiểu sai, gây hiểu lầm (misnormer) vì như đã nói gradient, không conjugate, mà cái conjugate là các direction pi
 
@@ -2182,7 +2777,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Lặp lại cho đến khi rk = 0:  
 >
-> i) αk := -rkTpk / pkᵀApk (5.14a)
+> i) αk := -rkᵀpk / pkᵀApk (5.14a)
 >
 > Đây là gì? Đây chính là solution của bài toán minimize hàm g(α) = φ(xk + α × pk), tức là hàm φ(x) giới hạn bởi phương vector pk. Y như trong line search. Ý nghĩa: Từ xk nếu đi theo phương pk thì step đến đâu là xuống được thấp nhất.
 >
@@ -2198,35 +2793,35 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > k = k + 1.
 >
-> Thế thì gs nói có thể dùng 5.14e, 5.11 để thay 5.14a bằng αk = rkTrk/ pkᵀApk. Là sao nhỉ? Ta có:
+> Thế thì gs nói có thể dùng 5.14e, 5.11 để thay 5.14a bằng αk = rkᵀrk/ pkᵀApk. Là sao nhỉ? Ta có:
 >
 > 5.14e: pk+1 = -rk+1 + βk+1 pk.
 >
-> 5.11: rkTpi = 0, i = 0,1,....k-1
+> 5.11: rkᵀpi = 0, i = 0,1,....k-1
 >
-> 5.14a: αk = -rkTpk / pkᵀApk
+> 5.14a: αk = -rkᵀpk / pkᵀApk
 >
 > Vậy, từ 5.14e ⇨ pk = -rk + βk pk-1
 >
-> ⇨ -rkTpk = -rkT(-rk + βk pk-1) = rkTrk - rkT βk pk-1
+> ⇨ -rkᵀpk = -rkᵀ(-rk + βk pk-1) = rkᵀrk - rkᵀ βk pk-1
 >
-> = rkTrk - βk rkTpk-1
+> = rkᵀrk - βk rkᵀpk-1
 >
-> Mà 5.11 nói rkTpk-1 = 0 
+> Mà 5.11 nói rkᵀpk-1 = 0 
 >
-> ⇨ -rkTpk = rkTrk 
+> ⇨ -rkᵀpk = rkᵀrk 
 >
-> ⇨ αk = -rkTpk / pkᵀApk = rkTrk/ pkᵀApk
+> ⇨ αk = -rkᵀpk / pkᵀApk = rkᵀrk/ pkᵀApk
 >
-> Vậy là từ αk = -rkTpk / pkᵀApk, nay αk = rkTrk/ pkᵀApk, khác nhau ở cái tử số, cơ bản đều là dot product của hai vector.
+> Vậy là từ αk = -rkᵀpk / pkᵀApk, nay αk = rkᵀrk/ pkᵀApk, khác nhau ở cái tử số, cơ bản đều là dot product của hai vector.
 >
 > ----
 >
 > Tiếp, từ 5.10: rk+1 = rk + αkApk ⇨ αkApk = rk+1 - rk.
 >
-> Áp dụng 5.14e (pk+1 = -rk+1 + βk+1 pk) và 5.11 (rkTpi = 0, i = 0,1,....k-1) lần nữa ta đơn giản hóa βk+1:
+> Áp dụng 5.14e (pk+1 = -rk+1 + βk+1 pk) và 5.11 (rkᵀpi = 0, i = 0,1,....k-1) lần nữa ta đơn giản hóa βk+1:
 >
-> βk+1 = rk+1Trk+1 / rkTrk. Là sao?
+> βk+1 = rk+1Trk+1 / rkᵀrk. Là sao?
 >
 > Công thức 5.14d nói βk+1 = (ý là :=) rk+1TApk / pkᵀApk
 >
@@ -2238,11 +2833,11 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > = rk+1Trk+1 / αkpkᵀApk
 >
-> Thay αk = rkTrk/ pkᵀApk.
+> Thay αk = rkᵀrk/ pkᵀApk.
 >
-> .. = rk+1Trk+1 / [(rkTrk/ pkᵀApk) pkᵀApk]
+> .. = rk+1Trk+1 / [(rkᵀrk/ pkᵀApk) pkᵀApk]
 >
-> = rk+1Trk+1 / rkTrk → Đây là công thức trong sách.
+> = rk+1Trk+1 / rkᵀrk → Đây là công thức trong sách.
 >
 > ----
 >
@@ -2252,7 +2847,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Lặp lại cho đến khi rk = 0:
 >
-> i)  (Công thức tính αk theo kiểu mới, cách cũ: αk = -rkTpk / pkᵀApk)
+> i)  (Công thức tính αk theo kiểu mới, cách cũ: αk = -rkᵀpk / pkᵀApk)
 >
 > ii) xk+1 := xk + αkpk (5.24b) (cái này ko có gì thay đổi)
 >
@@ -2260,7 +2855,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Trong Algo 5.1 thì bước này là rk+1 := Axk+1 - b, thay xk+1 = xk + αkpk ⇨ rk+1 = Axk + A αkpk - b = Axk - b + A αkpk = rk + αkApk. Có nghĩa là cũng ko có gì mới cả, nhưng cái khác là ta sẽ tính phép toán matrix nhân vector: Apk thay vì Axk+1. 
 >
-> iv) βk+1 := rk+1Trk+1 / rkTrk (5.24d)
+> iv) βk+1 := rk+1Trk+1 / rkᵀrk (5.24d)
 >
 > Cách cũ của Algo 5.1: βk+1 := rk+1TApk / pkᵀApk. Thì trong kiểu cũ, ta phải tính Apk, rồi dot product với rk+1 và pk. Còn kiểu mới chỉ tính dot product, không nhân matrix vector.
 >
@@ -3022,7 +3617,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Còn VrVrT? Đây chính là projection matrix lên rowspace C(Aᵀ), vì sao? 
 >
-> → Ôn lại vụ projection: Muốn project b lên C(A): gọi p^ là projection, residual là e = b - p^. Vì là projection nên e phải vuông góc với C(A) ⇨ nó nằm trong N(Aᵀ): Aᵀe = 0, ⇨ Aᵀ(b - p^) = 0. Vì p^ là projection, nên đương nhiên ∈ C(A) ⇨ p^ = Ax^: Ta có Aᵀ(b - Ax^) = 0 ⇨ Aᵀb = AᵀAx^, đây là normal equation. Nếu A full column rank thì AᵀA full rank ⇨ x^ = (AᵀA)⁻¹ Aᵀb ⇨ p^ = Ax^ = A(AᵀA)⁻¹ Aᵀb = Pb ⇨ projection matrix lên C(A) là P = A(AᵀA)⁻¹ Aᵀ. 
+> → Ôn lại vụ projection: Muốn project b lên C(A): gọi p^ là projection, residual là e = b - p^. Vì là projection nên e phải vuông góc với C(A) ⇨ nó nằm trong N(Aᵀ): Aᵀe = 0, ⇨ Aᵀ(b - p^) = 0. Vì p^ là projection, nên đương nhiên ∈ C(A) ⇨ p^ = Ax̂: Ta có Aᵀ(b - Ax̂) = 0 ⇨ Aᵀb = AᵀAx̂, đây là normal equation. Nếu A full column rank thì AᵀA full rank ⇨ x̂ = (AᵀA)⁻¹ Aᵀb ⇨ p^ = Ax̂ = A(AᵀA)⁻¹ Aᵀb = Pb ⇨ projection matrix lên C(A) là P = A(AᵀA)⁻¹ Aᵀ. 
 >
 > Chú ý, trong công thức trên, đang assume A full column rank, tức là nó chứa các basis của C(A).
 >
@@ -3124,27 +3719,27 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Thế thì, chìa khóa của kĩ thuật này là "đổi biến", dùng một matrix full rank C:
 >
-> x^ = Cx 
+> x̂ = Cx 
 >
-> ⇔ C⁻¹ x^ = x (C full rank mà, nên invertible)
+> ⇔ C⁻¹ x̂ = x (C full rank mà, nên invertible)
 >
 > Khi đó hàm quadratic Φ(x) = (1/2)xᵀAx - bᵀx trở thành:
 >
-> = (1/2)(C⁻¹ x^)ᵀ A (C⁻¹ x^) - bᵀ (C⁻¹ x^), dĩ nhiên giờ nó là hàm theo x^, đặt là φ(x^)
+> = (1/2)(C⁻¹ x̂)ᵀ A (C⁻¹ x̂) - bᵀ (C⁻¹ x̂), dĩ nhiên giờ nó là hàm theo x̂, đặt là φ(x̂)
 >
-> = (1/2)x^T (C⁻¹ᵀ A C⁻¹) x^ - bᵀ C⁻¹ x^ 
+> = (1/2)x̂T (C⁻¹ᵀ A C⁻¹) x̂ - bᵀ C⁻¹ x̂ 
 >
-> = (1/2)x^T (C⁻¹ᵀ A C⁻¹) x^ - (C⁻¹ᵀb)ᵀ x^ (trong sách kí hiệu (C⁻¹)ᵀ là C^-T)
+> = (1/2)x̂T (C⁻¹ᵀ A C⁻¹) x̂ - (C⁻¹ᵀb)ᵀ x̂ (trong sách kí hiệu (C⁻¹)ᵀ là C^-T)
 >
-> Và việc minimize hàm Φ^(x^) thay vì Φ(x) dễ hiểu là cũng tương đương ta đang giải hệ phương trình tuyến tính:
+> Và việc minimize hàm Φ^(x̂) thay vì Φ(x) dễ hiểu là cũng tương đương ta đang giải hệ phương trình tuyến tính:
 >
-> (C⁻¹ᵀ A C⁻¹) x^ = C⁻¹ᵀb
+> (C⁻¹ᵀ A C⁻¹) x̂ = C⁻¹ᵀb
 >
 > Dừng lại chút: Vậy hai phương trình này có tương đương không, vì cuối cùng thì ta đang muốn giải Ax = b cơ mà.
 >
-> Dễ thấy dĩ nhiên là chúng tương đương, vì việc đổi biến x = C⁻¹ x^ sẽ cho ra phương trình sau: Ax = b ⇔ AC⁻¹ x^ = b ⇔ C⁻¹ᵀAC⁻¹ x^ = C⁻¹ᵀb. Do đó ta minimize hàm φ^(x^) để tìm được x^* thì khi đó C⁻¹ x^* chính là x*. (Cái này là kiến thức equivalent optimization problem đã nghe gs S. Boyd nói trong EE364A, tất nhiên điều kiện phải là hàm số dùng để đổi biến phải là hàm one-to-one)
+> Dễ thấy dĩ nhiên là chúng tương đương, vì việc đổi biến x = C⁻¹ x̂ sẽ cho ra phương trình sau: Ax = b ⇔ AC⁻¹ x̂ = b ⇔ C⁻¹ᵀAC⁻¹ x̂ = C⁻¹ᵀb. Do đó ta minimize hàm φ^(x̂) để tìm được x̂* thì khi đó C⁻¹ x̂* chính là x*. (Cái này là kiến thức equivalent optimization problem đã nghe gs S. Boyd nói trong EE364A, tất nhiên điều kiện phải là hàm số dùng để đổi biến phải là hàm one-to-one)
 >
-> Rồi, nói thêm chút. bữa trước đã ôn lại cái vụ change of basis. Nên còn nhớ C⁻¹ x^ hay C⁻¹ chính là chuyển tọa độ vector trong basis e's sang tọa độ basis c's, và trong hệ tọa độ basis c's thì Hessian matrix là C⁻¹ᵀAC⁻¹, và nó có thể có phân phối trị riêng tốt hơn A.
+> Rồi, nói thêm chút. bữa trước đã ôn lại cái vụ change of basis. Nên còn nhớ C⁻¹ x̂ hay C⁻¹ chính là chuyển tọa độ vector trong basis e's sang tọa độ basis c's, và trong hệ tọa độ basis c's thì Hessian matrix là C⁻¹ᵀAC⁻¹, và nó có thể có phân phối trị riêng tốt hơn A.
 >
 > Thế thì đường hướng chính là vậy, và ta có thể có nhiều cách để chọn C khiến cho phân phối trị riêng của C⁻¹ᵀAC⁻¹ trở nên thuận lợi: ví dụ nó khiến cho C⁻¹ᵀAC⁻¹ có condition number nhỏ hoặc khiến trị riêng của C⁻¹ᵀAC⁻¹ tụ lại thành vài cụm để hưởng lợi từ mấy điều hồi nãy đã nói.
 >
@@ -3170,7 +3765,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 > [!NOTE]
 > Đại ý là, tác giả nói ta thật ra không cần phải tiến hành cái bước đổi biến một cách explicitly. Là sao ta? 
 >
-> → Đại khái là, nếu làm **EXPLICITLY**, thì mình sẽ dùng C, C⁻¹ để đổi biến như vừa nói, và chuyển qua giải bài toán minimize hàm φ^(x^) = (1/2)x^T(C⁻¹ᵀAC⁻¹)x^- (C⁻¹ᵀb)ᵀx^. Rồi áp dụng thuật toán CG vào bài toán này.
+> → Đại khái là, nếu làm **EXPLICITLY**, thì mình sẽ dùng C, C⁻¹ để đổi biến như vừa nói, và chuyển qua giải bài toán minimize hàm φ^(x̂) = (1/2)x̂T(C⁻¹ᵀAC⁻¹)x̂- (C⁻¹ᵀb)ᵀx̂. Rồi áp dụng thuật toán CG vào bài toán này.
 >
 > ----
 >
@@ -3180,7 +3775,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Đi theo hướng pk sao cho hàm Φ giảm xuống thấp nhất. Dĩ nhiên đây là bài toán exact line search thôi. Giới hạn theo hướng pk, thì hàm g(α) = φ(xk + αpk) chỉ là hàm bậc hai. Dùng điều kiện tối ưu cần và đủ bậc một, cho đạo hàm bằng 0 thì ta sẽ giải ra α tối ưu
 >
-> αk = rkTrk / pkᵀApk 
+> αk = rkᵀrk / pkᵀApk 
 >
 > Dùng optimal stepsize để đến xk+1:
 >
@@ -3192,7 +3787,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Tìm conjugate direction pk+1 (sao cho pkᵀApk+1 = 0):
 >
-> βk+1 := rk+1Trk+1 / rkTrk
+> βk+1 := rk+1Trk+1 / rkᵀrk
 >
 > pk+1 := -rk+1 + βk+1pk
 >
@@ -3200,15 +3795,15 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > ----
 >
-> Quay lại đây, để áp dụng CG vào bài toán minimize φ^(x^) thì ta sẽ thay A bằng A^ = C⁻¹ᵀAC⁻¹, b^ = C⁻¹ᵀb,...
+> Quay lại đây, để áp dụng CG vào bài toán minimize φ^(x̂) thì ta sẽ thay A bằng A^ = C⁻¹ᵀAC⁻¹, b^ = C⁻¹ᵀb,...
 >
-> Bắt đầu với x^0 = C x0
+> Bắt đầu với x̂0 = C x0
 >
-> Gán k = 0, r^0 = A^x^0 - b^, p^0 = - r^0. Bắt đầu vòng lặp cho đến khi r^0 = 0
+> Gán k = 0, r^0 = A^x̂0 - b^, p^0 = - r^0. Bắt đầu vòng lặp cho đến khi r^0 = 0
 >
 > α^k := r^kTr^k / p^kTA^p^k 
 >
-> x^k+1 := x^k + α^k p^k
+> x̂k+1 := x̂k + α^k p^k
 >
 > r^k+1 = r^k + α^kC⁻¹ᵀAC⁻¹p^k
 >
@@ -3218,7 +3813,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Update chỉ số k := k + 1  
 >
-> Và cái này sẽ hội tụ về x^* rất nhanh vì ta đã cố tình chọn C khiến matrix A^ có phân bố trị riêng tốt như đã nói.
+> Và cái này sẽ hội tụ về x̂* rất nhanh vì ta đã cố tình chọn C khiến matrix A^ có phân bố trị riêng tốt như đã nói.
 >
 > Vấn đề mà tác giả Nocedal không nói, hoặc chỉ nói ngắn gọn là "không cần thiết phải tính toán một cách tường minh (explicitly)..." đó là:
 >
@@ -3230,7 +3825,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Do đó cách làm khác gs nói trong sách đại khái là dùng các quan hệ: 
 >
-> x^ = Cx cũng là x^k = Cxk
+> x̂ = Cx cũng là x̂k = Cxk
 >
 > p^k = Cpk (vì tương tự như tọa độ của xk theo basis c's là Cxk thì tạo độ của pk theo basis c's là Cpk)
 >
@@ -3238,7 +3833,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > b^ = C⁻¹ᵀb 
 >
-> r^k = A^x^k - b^ = C⁻¹ᵀAC⁻¹Cxk - C⁻¹ᵀb = C⁻¹ᵀ(Axk - b) = C⁻¹ᵀrk
+> r^k = A^x̂k - b^ = C⁻¹ᵀAC⁻¹Cxk - C⁻¹ᵀb = C⁻¹ᵀ(Axk - b) = C⁻¹ᵀrk
 >
 > Từ đó:
 >
@@ -3246,23 +3841,23 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > = [C⁻¹ᵀrk]ᵀC⁻¹ᵀrk / (Cpk)ᵀC⁻¹ᵀAC⁻¹Cpk
 >
-> = rkTC⁻¹C⁻¹ᵀrk / pkᵀCᵀC⁻¹ᵀAC⁻¹Cpk
+> = rkᵀC⁻¹C⁻¹ᵀrk / pkᵀCᵀC⁻¹ᵀAC⁻¹Cpk
 >
 > Dùng identity (AB)⁻¹ = B⁻¹A⁻¹ ⇨ C⁻¹C⁻¹ᵀ = (CᵀC)⁻¹
 >
-> = rkT(CᵀC)⁻¹rk / pkᵀApk
+> = rkᵀ(CᵀC)⁻¹rk / pkᵀApk
 >
 > Đặt M = CᵀC
 >
-> = rkTM⁻¹rk / pkᵀApk
+> = rkᵀM⁻¹rk / pkᵀApk
 >
-> → α^k = rkTM⁻¹rk / pkᵀApk
+> → α^k = rkᵀM⁻¹rk / pkᵀApk
 >
-> Sau đó, khi đã có α^k thì tính x^k+1:
+> Sau đó, khi đã có α^k thì tính x̂k+1:
 >
-> x^k+1 = x^k + α^k p^k
+> x̂k+1 = x̂k + α^k p^k
 >
-> Vấn đề là: nếu ta có x^* thì để dịch ra lại x*, ta sẽ lại cần C⁻¹: x* = C⁻¹ x^*. 
+> Vấn đề là: nếu ta có x̂* thì để dịch ra lại x*, ta sẽ lại cần C⁻¹: x* = C⁻¹ x̂*. 
 >
 > Do đó, phải nghĩ ra một cách nào đó để ta sinh ra chuỗi {x0,...x*} ngay trong thuật toán mà không cần phải đợi về x*^ rồi mới nhờ C⁻¹ để dịch lại thành x*.
 >
@@ -3270,7 +3865,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Hãy xem xét cái này:
 >
-> x^k+1 = x^k + α^k p^k
+> x̂k+1 = x̂k + α^k p^k
 >
 > ⇔ Cxk+1 = Cxk + α^k Cpk
 >
@@ -3278,11 +3873,11 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > xk+1 = xk + α^k pk (*)
 >
-> Nên dĩ nhiên khi chuỗi {x^k} converge về x^* thì chuỗi {xk} converge về x*. Bên cạnh đó, cần hiểu là chuỗi {xk} ở đây sẽ đi một con đường khác so với thuật toán CG, vì mỗi điểm của {xk} sẽ tương ứng với một điểm của {x^k} và vì chuỗi {x^k} sẽ hội tụ nhanh hơn nên chuỗi kia cũng vậy.
+> Nên dĩ nhiên khi chuỗi {x̂k} converge về x̂* thì chuỗi {xk} converge về x*. Bên cạnh đó, cần hiểu là chuỗi {xk} ở đây sẽ đi một con đường khác so với thuật toán CG, vì mỗi điểm của {xk} sẽ tương ứng với một điểm của {x̂k} và vì chuỗi {x̂k} sẽ hội tụ nhanh hơn nên chuỗi kia cũng vậy.
 >
-> NHƯ VẬY, TA CHỈ CẦN DÙNG CÁCH THỨC NÀY ĐỂ TẠO CHUỖI {xk (=C⁻¹ x^k)} NGAY TRONG THUẬT TOÁN MÀ KHÔNG CẦN TÍNH C⁻¹
+> NHƯ VẬY, TA CHỈ CẦN DÙNG CÁCH THỨC NÀY ĐỂ TẠO CHUỖI {xk (=C⁻¹ x̂k)} NGAY TRONG THUẬT TOÁN MÀ KHÔNG CẦN TÍNH C⁻¹
 >
-> Thế thì, như vậy với việc đã có công thức của α^k, ta cần thêm pk. Chú ý lần nữa pk này là tọa độ của p^k trong basis e's, VỐN DĨ SẼ LÀ CÁI HƯỚNG HOÀN TOÀN KHÁC SO VỚI pk TRONG CG. (Y NHƯ NÓI CÁI CHUỖI {xk} MÀ MỖI ĐIỂM TƯƠNG ỨNG VỚI MỘT ĐIỂM x^k ở ĐÂY SẼ HOÀN TOÀN KHÁC VỚI CHUỖI {xk} CỦA CG, VÌ NÓ SẼ ÍT ĐIỂM HƠN} 
+> Thế thì, như vậy với việc đã có công thức của α^k, ta cần thêm pk. Chú ý lần nữa pk này là tọa độ của p^k trong basis e's, VỐN DĨ SẼ LÀ CÁI HƯỚNG HOÀN TOÀN KHÁC SO VỚI pk TRONG CG. (Y NHƯ NÓI CÁI CHUỖI {xk} MÀ MỖI ĐIỂM TƯƠNG ỨNG VỚI MỘT ĐIỂM x̂k ở ĐÂY SẼ HOÀN TOÀN KHÁC VỚI CHUỖI {xk} CỦA CG, VÌ NÓ SẼ ÍT ĐIỂM HƠN} 
 >
 > Để có pk (tức là bước tính pk+1, vì pk ở đây là kết quả pk+1 ở vòng lặp trước đó) thì theo thuật toán tường minh ta sẽ tính p^k+1 theo các bước của thuật toán thôi:
 >
@@ -3326,19 +3921,19 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Do đó β^k+1 = r^k+1Tr^k+1 / r^kTr^k 
 >
-> = rk+1TM⁻¹rk+1 / rkTM⁻¹rk 
+> = rk+1TM⁻¹rk+1 / rkᵀM⁻¹rk 
 >
 > Như vậy có thể tổng kết lại bức tranh sẽ là như sau:
 >
 > Ta cần tính: 
 >
-> 1) α^k = rkTM⁻¹rk / pkᵀApk
+> 1) α^k = rkᵀM⁻¹rk / pkᵀApk
 >
-> 2) β^k+1 = rk+1TM⁻¹rk+1 / rkTM⁻¹rk 
+> 2) β^k+1 = rk+1TM⁻¹rk+1 / rkᵀM⁻¹rk 
 >
 > 3) -(CᵀC)⁻¹ rk+1 = -M⁻¹ rk+1 để rồi có pk+1 = -(CᵀC)⁻¹ rk+1 + β^k+1 pk đóng vai pk ở vòng sau.
 >
-> khi đó dựa vào (*) xk+1 = xk + α^k pk, ta sẽ về cơ bản là TẠO CHUỖI {xk} TƯƠNG ỨNG CHUỖI {x^k} (là chuỗi hội tụ nhanh) NGAY TRONG THUẬN TOÁN PCG
+> khi đó dựa vào (*) xk+1 = xk + α^k pk, ta sẽ về cơ bản là TẠO CHUỖI {xk} TƯƠNG ỨNG CHUỖI {x̂k} (là chuỗi hội tụ nhanh) NGAY TRONG THUẬN TOÁN PCG
 >
 > Vậy vấn đề là làm sao để chi phí tính 3 cái trên rẻ.
 >
@@ -3348,7 +3943,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Tương tự, đặt yk+1 = M⁻¹ rk+1 ⇨ M yk+1 = rk+1
 >
-> ⇨ βk+1 = rk+1TM⁻¹rk+1 / rkTM⁻¹rk = rk+1Tyk+1 / rkTyk, nếu giải ra yk+1 nhanh thì tính βk+1 cũng nhanh (vì chỉ là tính hai cái dot product với rk và rk+1, dĩ nhiên trước đó ta phải có rk, rk+1)
+> ⇨ βk+1 = rk+1TM⁻¹rk+1 / rkᵀM⁻¹rk = rk+1Tyk+1 / rkᵀyk, nếu giải ra yk+1 nhanh thì tính βk+1 cũng nhanh (vì chỉ là tính hai cái dot product với rk và rk+1, dĩ nhiên trước đó ta phải có rk, rk+1)
 >
 > Và với yk+1 = M⁻¹ rk+1 thì 3) cũng trở thành pk+1 = -M⁻¹ rk+1 + β^k+1 pk
 >
@@ -3376,7 +3971,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Giải M yk = rk để có yk
 >
-> α^k = rkTyk / pkᵀApk
+> α^k = rkᵀyk / pkᵀApk
 >
 > xk+1 := xk + α^k pk
 >
@@ -3384,7 +3979,7 @@ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
 > Giải M yk+1 = rk+1 để có yk+1
 >
-> βk+1 := rk+1Tyk+1 / rkTyk
+> βk+1 := rk+1Tyk+1 / rkᵀyk
 >
 > pk+1 := -yk+1 + β^k+1 pk
 >
