@@ -318,11 +318,11 @@
 >
 >
 >
-> Σi (cột i của QM: Mii qi) outer product \[row i của Qᵀ: qiT\]
+> Σi (cột i của QM: Mii qi) outer product \[row i của Qᵀ: qiᵀ\]
 >
 >
 >
-> ⇨ QMQᵀ = Σi Mii qiqiT
+> ⇨ QMQᵀ = Σi Mii qiqiᵀ
 >
 >
 >
@@ -330,23 +330,23 @@
 >
 >
 >
-> Vậy p(λ) = -Q(Λ + λI)⁻¹ Qᵀ g = - { Σi \[qiqiT / (λi + λ)\] } g
+> Vậy p(λ) = -Q(Λ + λI)⁻¹ Qᵀ g = - { Σi \[qiqiᵀ / (λi + λ)\] } g
 >
 >
 >
-> = - Σi \[qiqiTg / (λi + λ)\] (phân phối vô)
+> = - Σi \[qiqiᵀg / (λi + λ)\] (phân phối vô)
 >
 >
 >
-> = - Σi \[qiTg / (λi + λ)\] qi (qiTg là scalar) → Đây chính là 4.38
+> = - Σi \[qiᵀg / (λi + λ)\] qi (qiᵀg là scalar) → Đây chính là 4.38
 >
 >
 >
-> Viết lại: p(λ) = - Σi \[qiTg / (λi + λ)\] qi (4.38)
+> Viết lại: p(λ) = - Σi \[qiᵀg / (λi + λ)\] qi (4.38)
 >
 >
 >
-> ||p(λ)||² = {- Σi \[qiTg / (λi + λ)\] qi }²
+> ||p(λ)||² = {- Σi \[qiᵀg / (λi + λ)\] qi }²
 >
 >
 >
@@ -354,19 +354,19 @@
 >
 >
 >
-> ..= Σi \[qiTg / (λi + λ)\]² qiTqi
+> ..= Σi \[qiᵀg / (λi + λ)\]² qiᵀqi
 >
 >
 >
-> = Σi \[qiTg / (λi + λ)\]² ||qi||² → Đây chính là 4.39
+> = Σi \[qiᵀg / (λi + λ)\]² ||qi||² → Đây chính là 4.39
 >
 >
 >
-> Viết lại ||p(λ)||² = Σi \[qiTg / (λi + λ)\]² ||qi||² (4.39)
+> Viết lại ||p(λ)||² = Σi \[qiᵀg / (λi + λ)\]² ||qi||² (4.39)
 >
 >
 >
-> = Σi \[qiTg / (λi + λ)\]² (norm qi = 1, do Q orthogonal matrix)
+> = Σi \[qiᵀg / (λi + λ)\]² (norm qi = 1, do Q orthogonal matrix)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -396,7 +396,7 @@
 >
 >
 >
-> Thế thì ở đây, sau khi dùng phân rã trị riêng để thấy bản chất của ||p(λ)||: ||p(λ)||² = Σi \[qiTg / (λi + λ)\]² (4.39) thì ta sẽ **lập luận dựa trên biến thiên của hàm ||p(λ)||** như sau:
+> Thế thì ở đây, sau khi dùng phân rã trị riêng để thấy bản chất của ||p(λ)||: ||p(λ)||² = Σi \[qiᵀg / (λi + λ)\]² (4.39) thì ta sẽ **lập luận dựa trên biến thiên của hàm ||p(λ)||** như sau:
 >
 >
 >
@@ -404,7 +404,7 @@
 >
 >
 >
-> Xét trường hợp mà **qiTg đều khác 0** (nên tử sổ \[qiTg / (λi + λ)\]² sẽ khác 0):
+> Xét trường hợp mà **qiᵀg đều khác 0** (nên tử sổ \[qiᵀg / (λi + λ)\]² sẽ khác 0):
 >
 >
 >
@@ -416,7 +416,7 @@
 >
 >
 >
-> Xét **qiTg bằng 0** thì sao?
+> Xét **qiᵀg bằng 0** thì sao?
 >
 >
 >
@@ -562,7 +562,7 @@
 >
 >
 >
-> Nhớ lại ||p(λ)||² = Σi \[qiTg / (λi + λ)\]² đã hiểu ở những note trước. Thì dễ thấy khi λ gần -λ1 → λ1 + λ ≈ 0 ⇨q1Tg / (λ1 + λ) sẽ rất lớn, và nó hoàn toàn vượt trội các hạng tử khác là q2Tg / (λ2 + λ) và q3Tg / (λ3 + λ).
+> Nhớ lại ||p(λ)||² = Σi \[qiᵀg / (λi + λ)\]² đã hiểu ở những note trước. Thì dễ thấy khi λ gần -λ1 → λ1 + λ ≈ 0 ⇨q1Tg / (λ1 + λ) sẽ rất lớn, và nó hoàn toàn vượt trội các hạng tử khác là q2Tg / (λ2 + λ) và q3Tg / (λ3 + λ).
 >
 >
 >
@@ -582,7 +582,7 @@
 >
 >
 >
-> = 1/Δ - 1/√Σi \[qiTg / (λi + λ)\]²
+> = 1/Δ - 1/√Σi \[qiᵀg / (λi + λ)\]²
 >
 >
 >
@@ -1044,15 +1044,15 @@
 >
 >
 >
-> p(λ) = - Σi \[qiTg / (λi + λ)\] qi (4.38)
+> p(λ) = - Σi \[qiᵀg / (λi + λ)\] qi (4.38)
 >
 >
 >
-> ||p\*(λ)||² = Σi \[qiTg / (λi + λ)\]² (4.39)
+> ||p\*(λ)||² = Σi \[qiᵀg / (λi + λ)\]² (4.39)
 >
 >
 >
-> hay ||p\*(λ)|| = √Σi \[qiTg / (λi + λ)\]²
+> hay ||p\*(λ)|| = √Σi \[qiᵀg / (λi + λ)\]²
 >
 >
 >
@@ -1092,11 +1092,11 @@
 >
 >
 >
-> Và như vậy p(λ\*) = p(-λ1) = - Σi≠1 \[qiTg / (λi-λ1)\] qi phải là nghiệm của (B + λI)p\* = -g
+> Và như vậy p(λ\*) = p(-λ1) = - Σi≠1 \[qiᵀg / (λi-λ1)\] qi phải là nghiệm của (B + λI)p\* = -g
 >
 >
 >
-> (theo 4.38 p(λ) = - Σi \[qiTg / (λi + λ)\] qi, thế λ = -λ1 và vì q1Tg = 0 rồi)
+> (theo 4.38 p(λ) = - Σi \[qiᵀg / (λi + λ)\] qi, thế λ = -λ1 và vì q1Tg = 0 rồi)
 >
 >
 >
@@ -1120,7 +1120,7 @@
 >
 >
 >
-> ⇨ p = - Σi≠1 \[qiTg / (λi-λ1)\] qi + τz là solution của (B + λ\*I)p = -g
+> ⇨ p = - Σi≠1 \[qiᵀg / (λi-λ1)\] qi + τz là solution của (B + λ\*I)p = -g
 >
 >
 >
@@ -1128,11 +1128,11 @@
 >
 >
 >
-> ||p|| = ||-Σi≠1 \[qiTg / (λi-λ1)\] qi + τz|| = Δ
+> ||p|| = ||-Σi≠1 \[qiᵀg / (λi-λ1)\] qi + τz|| = Δ
 >
 >
 >
-> ⇔ ||p||² = ||-Σi≠1 \[qiTg / (λi-λ1)\] qi + τz||² = Δ²
+> ⇔ ||p||² = ||-Σi≠1 \[qiᵀg / (λi-λ1)\] qi + τz||² = Δ²
 >
 >
 >
@@ -1148,27 +1148,27 @@
 >
 >
 >
-> Áp dụng vào đây Σi≠1 \[qiTg / (λi-λ1)\] qi là **linear combination các eigenvector của B - λ1I**, mà **eigenvector ứng với eigenvalue khác 0 của một matrix thì nó sẽ nằm trong rowspace**, cũng đồng thời là column space vì matrix đối xứng chúng trùng nhau, và **nullspace orthogonal complement rowspace** nên suy ra Σi≠1 \[qiTg / (λi-λ1)\] qi (là vector trong column space cũng là rowspace) sẽ vuông góc z
+> Áp dụng vào đây Σi≠1 \[qiᵀg / (λi-λ1)\] qi là **linear combination các eigenvector của B - λ1I**, mà **eigenvector ứng với eigenvalue khác 0 của một matrix thì nó sẽ nằm trong rowspace**, cũng đồng thời là column space vì matrix đối xứng chúng trùng nhau, và **nullspace orthogonal complement rowspace** nên suy ra Σi≠1 \[qiᵀg / (λi-λ1)\] qi (là vector trong column space cũng là rowspace) sẽ vuông góc z
 >
 >
 >
-> → ||p||² = ||-Σi≠1 \[qiTg / (λi-λ1)\] qi + τz||² = Δ²
+> → ||p||² = ||-Σi≠1 \[qiᵀg / (λi-λ1)\] qi + τz||² = Δ²
 >
 >
 >
-> ⇔ ||-Σi≠1 \[qiTg / (λi-λ1)\] qi||² + ||τz||² = Δ²
+> ⇔ ||-Σi≠1 \[qiᵀg / (λi-λ1)\] qi||² + ||τz||² = Δ²
 >
 >
 >
-> ⇔ ||Σi≠1 \[qiTg / (λi-λ1)\] qi||² + |τ|²||z||² = Δ²
+> ⇔ ||Σi≠1 \[qiᵀg / (λi-λ1)\] qi||² + |τ|²||z||² = Δ²
 >
 >
 >
-> ⇔ ||Σi≠1 \[qiTg / (λi-λ1)\] qi||² + |τ|² = Δ² (do chọn ||z|| = 1)
+> ⇔ ||Σi≠1 \[qiᵀg / (λi-λ1)\] qi||² + |τ|² = Δ² (do chọn ||z|| = 1)
 >
 >
 >
-> ⇔ |τ|² = Δ² - ||Σi≠1 \[qiTg / (λi-λ1)\] qi||²
+> ⇔ |τ|² = Δ² - ||Σi≠1 \[qiᵀg / (λi-λ1)\] qi||²
 >
 >
 >
@@ -1702,7 +1702,7 @@
 >
 >
 >
-> Chứng minh điều kiện cần. Tức là ta gọi p\* là minimizer của bài toán constrained opitmiation problem trên. Thì ta chứng minh nó feasible và tồn tại λ ≥ 0 thỏa 4.8a,b,c.
+> Chứng minh điều kiện cần. Tức là ta gọi p\* là minimizer của bài toán constrained opiᵀmiation problem trên. Thì ta chứng minh nó feasible và tồn tại λ ≥ 0 thỏa 4.8a,b,c.
 >
 >
 >
@@ -1970,7 +1970,7 @@
 >
 > ⇔ λ1(q1Tp)² + λ2(q2Tp)² ... ≤ Số âm
 >
-> ⇨ **ít nhất một λi âm và tại λ đó, qiTp phải khác 0 chứ ko được = 0**
+> ⇨ **ít nhất một λi âm và tại λ đó, qiᵀp phải khác 0 chứ ko được = 0**
 >
 > Và điều đó có nghĩa là gì, **có nghĩa là p hợp với cái eigenvector ứng với eigenvalue âm này một góc nhọn hoặc tù** ⇨ chính là **hướng sẽ trượt ra khỏi saddle point**.
 >
