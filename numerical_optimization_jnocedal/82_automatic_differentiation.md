@@ -740,7 +740,7 @@
 > thì ta sẽ cộng lại.
 >
 > Trong thuật toán, thì tại mỗi lần ta tính xong , ví dụ đã có gradient đổ về
-> từ thượng lưu: ∂f/∂x4 từ nhánh x4-x6. Thì ta sẽ cộng dồn vào x^4, (biến
+> từ thượng lưu: ∂f/∂x4 từ nhánh x4-x6. Thì ta sẽ cộng dồn vào x̂4, (biến
 > adjoint của node 4). Khi có gradient đổ về từ nhánh x4-x7, thì tiếp tục
 > cộng dồn vào.
 
@@ -1476,7 +1476,7 @@
 > Hiểu đoạn này một cách đại khái như sau. Bữa giờ khi nói về việc dùng
 > forward mode để tính Hessian, ta đã hiểu là, với mỗi node, ta sẽ tính thêm
 > Dpqxi(x) = pᵀ ∇²xi(x) q, để nếu p = ei, q= ej thì tại node cuối ta sẽ có
-> eiT ∇f(x) ej chính là Hessian_ij.
+> eiᵀ ∇f(x) ej chính là Hessian_ij.
 >
 > Vấn đề là xét Hessian_ij, thì công thức 8.39 cho thấy nó có thể được
 > tạo ra từ các pᵀ∇²f(x)p với p = ei, ej và (ei + ej).
