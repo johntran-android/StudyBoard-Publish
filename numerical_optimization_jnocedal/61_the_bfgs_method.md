@@ -593,7 +593,7 @@
 >
 > Nhìn vào cái constraint B^sk^ = sk^, cho thấy B^ phải là matrix nhận sk^ làm vector riêng với trị riêng bằng 1, và lại có distance với Bk^ đo bởi Frobenius norm nhỏ nhất.
 >
-> Thì mr Gemini mới lập luận thế này: Việc nhân một matrix với một vector mà cho ra chính vector đó, làm ta nghĩ đến matrix chiếu. Cụ thể, nếu ta có vector a, và P là matrix giúp chiếu lên vector a, thì Pa = a.Ta đã học cái này trong MIT 1806: chiếu b lên subspace tạo bởi vector a: p = ax^, phần dư sẽ vuông góc với span{a}: aT(b-ax^) = 0 ⇔ aTb = aTax^ ⇔ x^ = aTb / aTa ⇨ p = ax^ = aaTb/aTa = Pb → P = aaT/aTa. Và rõ ràng Pa = aaTa/aTa = a. 
+> Thì mr Gemini mới lập luận thế này: Việc nhân một matrix với một vector mà cho ra chính vector đó, làm ta nghĩ đến matrix chiếu. Cụ thể, nếu ta có vector a, và P là matrix giúp chiếu lên vector a, thì Pa = a.Ta đã học cái này trong MIT 1806: chiếu b lên subspace tạo bởi vector a: p = ax̂, phần dư sẽ vuông góc với span{a}: aT(b-ax̂) = 0 ⇔ aTb = aTax̂ ⇔ x̂ = aTb / aTa ⇨ p = ax̂ = aaTb/aTa = Pb → P = aaT/aTa. Và rõ ràng Pa = aaTa/aTa = a. 
 >
 > Như vậy điều kiện B^sk^ = sk^ là ta nghĩ đến việc tác B thành hai phần: B' + P trong đó B'sk^ = 0 và Psk^ = sk^. Với P là matrix chiếu lên span{sk^}, như trên, ta biết nó phải là sk^sk^T/sk^Tsk^
 >
