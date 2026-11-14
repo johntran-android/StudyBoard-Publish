@@ -3406,13 +3406,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 > là 100(1-α)% confidence interval cho β.
 
-📹 Video 1: [Xác suất bao phủ của khoảng tin cậy cho beta là gì? (phần 1)](https://youtu.be/TbZry5bNzg4)
-
-📹 Video 2: [Làm sao đảo ngược phép kiểm định để tìm khoảng tin cậy? (phần 2)](https://www.youtube.com/watch?v=YtDyxvpPGiQ)
-
-📹 Video 3: [Làm sao đảo kiểm định t để tìm khoảng tin cậy cho beta? (phần 3)](https://www.youtube.com/watch?v=4rq3ABjvW6Q)
-
-📹 Video 4: [Vì sao miền chấp nhận tạo ra khoảng tin cậy cho beta? (phần 4)](https://www.youtube.com/watch?v=K8f2yncHnxg)
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=K8f2yncHnxg)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
