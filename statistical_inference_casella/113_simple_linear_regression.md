@@ -3164,71 +3164,135 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> H0: θ = θ0 vs θ ≠ θ0, thì test rule này đều luôn là một level α test.
+> H0: θ = θ0 vs H1: θ ≠ θ0, thì test rule này đều luôn là một level α test.
 >
 >
 >
-> Gọi ℛ(θ0) là rejection region bởi test rule này. Theo định nghĩa level α test ta có:
+> level α test
 >
 >
 >
-> Type I error: Reject H0, 𝐱 ∈ R, θ ∈ Θ0
+> test?
 >
 >
 >
-> sup\_ θ∈Θ0 P\_θ(𝐗 ∈ R) = α
+> H0: θ ∈ Θ0 vs H1: θ ∈ Θ0c (Θ0 U Θ0c)
 >
 >
 >
-> sup\_θ∈{θ0} P\_θ(𝐗 ∈ ℛ(θ0)) ≤ α
+> f(𝐱): { W(𝐱)
+>
+> W(𝐗) ≤ c → H0 ngược lại → H1
 >
 >
 >
-> ⇔ P\_θ0(𝐗 ∈ ℛ(θ0)) ≤ α
+> λ(𝐱) = sup\_Θ0 L(θ|𝐱) / sup\_Θ L(θ|𝐱)
 >
 >
 >
-> ⇔ 1 - P\_θ0(𝐗 ∈ 𝒜(θ0)) ≤ α
+> λ(𝐱) ≤ c → Reject H0
+>
+> }
 >
 >
 >
-> ⇔ 1 - α ≤ P\_θ0(𝐗 ∈ 𝒜(θ0))
+> Rejection region: ℛ = {𝐱: reject H0}
 >
 >
 >
-> Rồi ví von cái ta đang có là gì: Là một cái test rule sao tạo ra một vùng chỉ cần xuất hiện tín hiệu 𝐱 trong vùng đó là ta sẽ accept θ0 với xác suất mắc lỗi loại 1 rất thấp (level α)
+> Acceptance region: 𝒜 = {𝐱: not reject H0}
 >
 >
 >
-> Gọi C(𝐱) là {tập các θ0 mà với 𝐗 = 𝐱, thì ta accept H0: θ = θ0}
+> Level α test
 >
 >
 >
-> ⇒ C(𝐱) = {θ0: 𝐱 ∈ 𝒜(θ0)}
+> Type I error: Reject H0 (𝐗 ∈ ℛ) khi θ ∈ Θ0
 >
 >
 >
-> Khi đó dĩ nhiên θ0 ∈ C(𝐱) ⇔ 𝐱 ∈ 𝒜(θ0)
+> P\_θ(𝐗 ∈ R) khi θ∈Θ0
 >
 >
 >
-> ⇒ P\_θ0(θ0 ∈ C(𝐗)) = P\_θ0(𝐗 ∈ 𝒜(θ0))
+> sup\_θ∈Θ0 P\_θ(𝐗 ∈ R) ≤ α (vd 0.05)
 >
 >
 >
-> và theo trên thì cái này ≥ 1 - α với mọi θ0
+> khi level α test
 >
 >
 >
-> Vậy P\_θ0(θ0 ∈ C(𝐗)) ≥ 1 - α với mọi θ0
+> H0: θ = 1 vs H1: θ khác 1: P\_θ0(𝐗 ∈ R(1)) ≤ α | 𝐱=𝐱1: reject H0, 𝐱=𝐱2: accept H0
+>
+> H0: θ = 2 vs H1: θ khác 2: P\_θ0(𝐗 ∈ R(2)) ≤ α | 𝐱=𝐱1: accept H0, 𝐱=𝐱2: accept H0
+>
+> H0: θ = 3 vs H1: θ khác 3: P\_θ0(𝐗 ∈ R(3)) ≤ α | 𝐱=𝐱1: accept H0, 𝐱=𝐱2: reject H0
+>
+> ..
+>
+> H0: θ = θ0 vs H1: θ khác θ0: P\_θ0(𝐗 ∈ R(θ0)) ≤ α
 >
 >
 >
-> Thì cũng là ta có C(𝐗) là random set:
+> ⇔ 1 - P\_θ0(𝐗 ∈ R(θ0)) ≥ 1 - α
 >
 >
 >
-> P\_θ(θ ∈ C(𝐗)) ≥ 1 - α với mọi θ, nên C(𝐗) là 1 - α interval estimation.
+> ⇔ P\_θ0(𝐗 ∈ A(θ0)) ≥ 1 - α
+>
+>
+>
+> A(θ0) = {𝐱: accept H0: θ=θ0}
+>
+>
+>
+> A(1) = {𝐱: accept θ0=1}
+>
+> A(2) = {𝐱: accept θ0=2}
+>
+> A(3) = {𝐱: accept θ0=3}
+>
+>
+>
+> C(𝐱) = {θ0: 𝐱 ∈ A(θ0)}
+>
+>
+>
+> C(𝐱1) = {2,3}
+>
+>
+>
+> C(𝐱2) = {1,2}
+>
+>
+>
+> 2 ∈ C(𝐱2) ⇔ 𝐱2 ∈ A(2)
+>
+>
+>
+> 1 ∈ C(𝐱2) ⇔ 𝐱2 ∈ A(1)
+>
+>
+>
+> θ0 ∈ C(𝐱) ⇔ 𝐱 ∈ A(θ0)
+>
+>
+>
+> θ0 ∈ C(𝐗) ⇔ 𝐗 ∈ A(θ0)
+>
+>
+>
+> P\_θ0(𝐗 ∈ A(θ0)) = P\_θ0(C(𝐗) chứa θ0) ≥ 1-α với mọi θ0
+>
+>
+>
+> Với mọi θ, P\_θ(C(𝐗) chứa θ) ≥ 1-α
+>
+>
+>
+> C(𝐗) là một 1-α confidence interval.
 >
 >
 >
@@ -3240,6 +3304,10 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
+> Reject H0 khi |(β̂ - β0) / (S/√Sxx)| ≥ t_n-2,α/2
+>
+>
+>
 > Với mọi β0, sup\_β∈{β0} P\_β(𝐘 ∈ ℛ(β0)) = P\_β0(𝐘 ∈ ℛ(β0))
 >
 >
@@ -3248,15 +3316,15 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> = P\_β0(|T_n-2| ≥ t_n-2,α/2) = α
+> = P\_β0(|T_n-2| ≥ t_n-2,α/2)
 >
 >
 >
-> = P\_β0(T_n-2 ≤ -t_n-2,α/2 or T_n-2 ≥ t_n-2,α/2) = α
+> = P\_β0(T_n-2 ≤ -t_n-2,α/2 or T_n-2 ≥ t_n-2,α/2)
 >
 >
 >
-> = P\_β0(T_n-2 ≤ -t_n-2,α/2) + P(T_n-2 ≥ t_n-2,α/2) = α
+> = P\_β0(T_n-2 ≤ -t_n-2,α/2) + P(T_n-2 ≥ t_n-2,α/2)
 >
 >
 >
@@ -3296,11 +3364,15 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> ℛ(β0) = {𝐲: |(β̂ - β0) / (S/√Sxx)| ≥ t_n-2,α/2}
+> ℛ(β0) = {𝐲: |(β̂(𝐲) - β0) / (S(𝐲)/√Sxx)| ≥ t_n-2,α/2}
 >
 >
 >
-> 𝒜(β0) = {𝐲: |(β̂ - β0) / (S/√Sxx)| ≤ t_n-2,α/2}
+> 𝒜(β0) = {𝐲: |(β̂(𝐲) - β0) / (S(𝐲)/√Sxx)| ≤ t_n-2,α/2}
+>
+>
+>
+> 𝒜(β0) = {𝐲: |(β̂(𝐲) - β0) / (S(𝐲)/√Sxx)| ≤ t_n-2,α/2}
 >
 >
 >
@@ -3324,23 +3396,35 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> Và như vậy C(𝐘): \[β̂ (𝐘) - t_n-2,α/2 × (S(𝐘)/√Sxx), β̂ (𝐘) + t_n-2,α/2 × (S(𝐘)/√Sxx)\] là 100(1-α)% confidence interval cho β.
+> Và như vậy C(𝐘):
+>
+>
+>
+> \[β̂ (𝐘) - t_n-2,α/2 × (S(𝐘)/√Sxx), β̂ (𝐘) + t_n-2,α/2 × (S(𝐘)/√Sxx)\]
+>
+>
+>
+> là 100(1-α)% confidence interval cho β.
 
-📹 [Xem video trên YouTube](https://youtu.be/TbZry5bNzg4)
+📹 Video 1: [Xác suất bao phủ của khoảng tin cậy cho beta là gì? (phần 1)](https://youtu.be/TbZry5bNzg4)
+
+📹 Video 2: [Làm sao đảo ngược phép kiểm định để tìm khoảng tin cậy? (phần 2)](https://www.youtube.com/watch?v=YtDyxvpPGiQ)
+
+📹 Video 3: [Làm sao đảo kiểm định t để tìm khoảng tin cậy cho beta? (phần 3)](https://www.youtube.com/watch?v=4rq3ABjvW6Q)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
-> Ghi chú rất xuất sắc, bạn đã tự mình chứng minh lại công thức khoảng tin cậy cho hệ số hồi quy thông qua phương pháp đảo ngược miền bác bỏ của kiểm định giả thuyết (test inversion). Lập luận toán học chặt chẽ và logic.
+> Ghi chú xuất sắc! Bạn đã giải thích bản chất mối liên hệ giữa kiểm định giả thuyết và khoảng tin cậy thông qua phương pháp đảo ngược miền chấp nhận (test inversion) một cách cực kỳ chi tiết, chuẩn xác và mạch lạc.
 >
 > **✓ Strengths**
-> - Nắm rất vững mối liên hệ đối ngẫu (duality) giữa bài toán kiểm định giả thuyết mức ý nghĩa α và khoảng tin cậy 1-α.
-> - Trình bày chi tiết từng bước biến đổi đại số từ miền chấp nhận A(β0) sang tập tin cậy C(y) cho β.
-> - Hiểu đúng và phân biệt rõ vai trò của mẫu ngẫu nhiên Y và giá trị quan sát cụ thể y trong suy diễn thống kê.
+> - Nắm vững và diễn đạt chính xác nguyên lý đối ngẫu giữa kiểm định giả thuyết mức alpha và khoảng tin cậy 1 - alpha (test inversion theorem).
+> - Thực hiện đầy đủ các bước đại số từ bất đẳng thức của miền chấp nhận để suy ra công thức khoảng tin cậy của tham số độ dốc beta.
 >
 > **💡 Deeper notes**
-> - Về thuật ngữ kiểm định: Trong kiểm định giả thuyết hiện đại, vùng A(θ0) theo quy ước truyền thống Neyman-Pearson thường gọi là 'acceptance region', nhưng về mặt ý nghĩa bản chất là 'fail to reject H0' (chưa đủ cơ sở để bác bỏ H0) chứ không hẳn là khẳng định H0 đúng hoàn toàn.
-> - Phương pháp đảo ngược kiểm định (test inversion) trong trường hợp này cho kết quả trùng khớp với phương pháp dùng biến then chốt (pivotal quantity) T = (β̂ - β)/(S/√Sxx) ~ t_(n-2).
+> - Vì thống kê T tuân theo phân phối liên tục (Student's t), việc lấy dấu bất đẳng thức ngặt (<, >) hay không ngặt (≤, ≥) ở biên không làm thay đổi độ đo xác suất cũng như độ tin cậy của khoảng.
+
+**🔗 See also:** [Liên hệ Kiểm định - Tin cậy](./92_methods_of_finding_interval_estimators.md#node-v7ov102)
 
 <br>
 
