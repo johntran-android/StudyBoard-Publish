@@ -411,6 +411,8 @@
 > **💡 Deeper notes**
 > - Về mặt thuật ngữ chặt chẽ trong giáo trình (Casella & Berger): test có 'level α' (nghĩa là xác suất bác bỏ sai ≤ α) sẽ tạo ra '1 - α confidence set' (xác suất bao phủ ≥ 1 - α). Nếu test có đúng 'size α' thì confidence coefficient mới đạt chính xác bằng 1 - α.
 
+**🔗 See also:** [Inference for Slope Parameter Beta](./113_simple_linear_regression.md#node-ph4z8v7)
+
 <br>
 
 <a id="node-4x9sjxz"></a>
