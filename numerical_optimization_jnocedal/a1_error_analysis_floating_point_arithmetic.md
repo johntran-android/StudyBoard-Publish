@@ -54,14 +54,14 @@
 
 > [!NOTE]
 > Đoạn này gs yêu cầu ta phân biệt giữa sai số tuyệt đối và tương đối. Nếu
-> x, x^ là giá trị chính xác và giá trị xấp xỉ, với x là scalar, vector hay matrix
-> thì sai số tuyệt đối được định nghĩa là norm của x - x^: ||x - x^||
+> x, x̂ là giá trị chính xác và giá trị xấp xỉ, với x là scalar, vector hay matrix
+> thì sai số tuyệt đối được định nghĩa là norm của x - x̂: ||x - x̂||
 >
 > Còn sai số tương đối là tỉ số của cái này với norm x:
 >
-> ||x - x^|| / ||x||
+> ||x - x̂|| / ||x||
 >
-> Và khi sai số tương đổi nhỏ hơn 1 nhiều thì có thể thay mẫu số bởi ||x^||
+> Và khi sai số tương đổi nhỏ hơn 1 nhiều thì có thể thay mẫu số bởi ||x̂||
 
 <br>
 
@@ -374,7 +374,7 @@
 >
 > Theo định nghĩa, sai số tương đối sẽ bằng sai số tuyệt đối chia độ lớn của con số:
 >
-> Tức = |x - x^| / |x|,
+> Tức = |x - x̂| / |x|,
 >
 > hay, nếu gọi fl(x) là con số mà máy sẽ lưu thì sai số tương đối sẽ là:
 >
