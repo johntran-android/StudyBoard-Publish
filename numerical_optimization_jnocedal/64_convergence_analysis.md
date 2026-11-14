@@ -66,7 +66,7 @@
 >
 > Tiếp, tiếp tục với ý mọi matrix G(xk + ταkpk) đều thỏa assumption (6.1), tức xác định dương, thì như vậy Gbark cũng xác định dương (tổng của các xác định dương thì cũng xdd). Do đó, mọi trị riêng đều dương, nên có thể tách Gbark = (Gbark)^(1/2)(Gbark)^(1/2)
 >
-> ⇨ ykTyk = (skTGbark)(GbarkTsk) = skT (Gbark)² sk 
+> ⇨ ykTyk = (skTGbark)(Gbarkᵀsk) = skT (Gbark)² sk 
 >
 > = skT (Gbark)^1/2 Gbark (Gbark)^1/2 sk 
 >
