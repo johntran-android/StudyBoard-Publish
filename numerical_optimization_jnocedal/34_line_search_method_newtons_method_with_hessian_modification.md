@@ -308,11 +308,11 @@
 >
 > và theo góc nhìn thứ 4, ta sẽ có tổng các rank 1 matrix: λ1q1q1T +..λnqnqnT
 >
-> = Σ_i=1:n λiqiqiT
+> = Σ_i=1:n λiqiqiᵀ
 >
-> ⇨ H = Σ_i=1:n λiqiqiT (λ1, λ2, λ3 là các trị riêng)
+> ⇨ H = Σ_i=1:n λiqiqiᵀ (λ1, λ2, λ3 là các trị riêng)
 >
-> Dĩ nhiên cũng không khó để thấy H⁻¹ cũng = Σ_i=1:n (1/λi)qiqiT
+> Dĩ nhiên cũng không khó để thấy H⁻¹ cũng = Σ_i=1:n (1/λi)qiqiᵀ
 >
 > Và Bk = diag(λ1, λ2, δ) thì ta có:
 >
