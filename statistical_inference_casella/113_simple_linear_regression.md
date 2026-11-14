@@ -3156,10 +3156,6 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> Ta sẽ dùng phương pháp đảo ngược một level α test:
->
->
->
 > Ôn nhanh lí thuyết:
 >
 >
@@ -3329,6 +3325,8 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 > Và như vậy C(𝐘): \[β̂ (𝐘) - t_n-2,α/2 × (S(𝐘)/√Sxx), β̂ (𝐘) + t_n-2,α/2 × (S(𝐘)/√Sxx)\] là 100(1-α)% confidence interval cho β.
+
+📹 [Xem video trên YouTube](https://youtu.be/TbZry5bNzg4)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
