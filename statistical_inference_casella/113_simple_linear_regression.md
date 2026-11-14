@@ -3412,6 +3412,8 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 
 📹 Video 3: [Làm sao đảo kiểm định t để tìm khoảng tin cậy cho beta? (phần 3)](https://www.youtube.com/watch?v=4rq3ABjvW6Q)
 
+📹 Video 4: [Vì sao miền chấp nhận tạo ra khoảng tin cậy cho beta? (phần 4)](https://www.youtube.com/watch?v=K8f2yncHnxg)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
