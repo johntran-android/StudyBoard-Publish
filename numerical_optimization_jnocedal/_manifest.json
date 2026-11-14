@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1794516496041,
+  "publishedAt": 1794687524986,
   "sections": [
     {
       "title": "📋 Overview",
@@ -90,7 +90,7 @@
       "title": "5.1 Linear Conjugate Gradient",
       "path": "numerical_optimization_jnocedal/51_linear_conjugate_gradient.md",
       "noteCount": 23,
-      "imageCount": 64
+      "imageCount": 66
     },
     {
       "title": "6.1 The BFGS Method",
@@ -256,5 +256,5 @@
     }
   ],
   "totalNotes": 456,
-  "totalImages": 706
+  "totalImages": 708
 }
