@@ -467,7 +467,7 @@
 >
 > Ta sẽ quay lại nói về cái check djTBkdj ≤ 0 sau (1)
 >
-> Set αj = rjTrj / djTBkdj: Đây là bước tính stepsize của CG. (tương đương bước tính αk = αk = rkTrk / pkᵀApk 5.24a trong CG gốc Algorithm 5.2)
+> Set αj = rjTrj / djTBkdj: Đây là bước tính stepsize của CG. (tương đương bước tính αk = αk = rkᵀrk / pkᵀApk 5.24a trong CG gốc Algorithm 5.2)
 >
 > zj+1 = zj + αjdj: Đây là bước cập nhật (tương đương xk+1 = xk + αkpk 5.24b trong 5.2)
 >
@@ -487,7 +487,7 @@
 >
 > Thì mình hiểu là vì cái ta tìm là pk, ứng với x* trong thuật toán CG giải Ax = b, và {zj} ứng với chuỗi {xi}, nên tại thời điểm dừng, ta có dj (ứng với pk trong CG gốc). 
 >
-> Nhưng trong CG gốc, để có xk+1 ta còn phải tính step size αk nữa (ví dụ cái bước set 5.24a αk = rkTrk / pkᵀApk) Mà trong CG gốc, vì A xác định dương, nên với hướng pk đã có, việc tìm step size chỉ là / hay công thức 5.24a có bản chất xuất phát từ việc giải bài toán minimize hàm bậc hai là nguyên hàm của Ax - b, restricted bởi hướng pk, và cái hàm đó chỉ là hàm bậc hai đơn biến. Tí nữa mình sẽ derive lại luôn cho nhớ. Nhưng khi Bk không xác định dương, để djBkdj âm và thuật toán rơi vài cái if check này, thì vì nếu giới hạn theo hướng dj này, thì hàm số có thể cắm đầu đi xuống rất xa, vượt qua giới hạn trust region. Thành ra ta sẽ phải tìm step size τ với bài toán minimize mk(pk) với pk = zj + τdj thỏa constraint ||pk|| = Δk là vậy.
+> Nhưng trong CG gốc, để có xk+1 ta còn phải tính step size αk nữa (ví dụ cái bước set 5.24a αk = rkᵀrk / pkᵀApk) Mà trong CG gốc, vì A xác định dương, nên với hướng pk đã có, việc tìm step size chỉ là / hay công thức 5.24a có bản chất xuất phát từ việc giải bài toán minimize hàm bậc hai là nguyên hàm của Ax - b, restricted bởi hướng pk, và cái hàm đó chỉ là hàm bậc hai đơn biến. Tí nữa mình sẽ derive lại luôn cho nhớ. Nhưng khi Bk không xác định dương, để djBkdj âm và thuật toán rơi vài cái if check này, thì vì nếu giới hạn theo hướng dj này, thì hàm số có thể cắm đầu đi xuống rất xa, vượt qua giới hạn trust region. Thành ra ta sẽ phải tìm step size τ với bài toán minimize mk(pk) với pk = zj + τdj thỏa constraint ||pk|| = Δk là vậy.
 >
 > Nói đi thì phải nói lại, việc tính αj thật ra cũng phải chịu ràng buộc là step size ko đưa ra vượt quá trust region, và quả thật nó thể hiện ở việc check norm của zj+1 có lớn hơn Δk hay không, nếu chưa lớn thì thôi, đồng nghĩa là step size αj không đưa ta đi quá giới hạn trust region theo hướng dj. Nhưng nếu quá, thì cũng phải tìm lại step size phù hợp, đó cũng chính là (2)
 >
@@ -876,7 +876,7 @@
 >
 > rjTzj = rjTΣi=0:j-1 αidi = Σi=0:j-1 αi rjTdi
 >
-> Tới đây, mới xem lại Theorem 5.2, nói nói đại khái là residual tại vòng sau, thì luôn vuông góc với mọi direction trước đó (trong thuật toán CG gốc, ta sẽ có rkTpi với i = 0,1,...k-1): Cho nên ở đây, ta sẽ có rj vuông góc với d0,d1,...dj-1. Nên cái bên phải = 0 ⇨ rjTzj = 0
+> Tới đây, mới xem lại Theorem 5.2, nói nói đại khái là residual tại vòng sau, thì luôn vuông góc với mọi direction trước đó (trong thuật toán CG gốc, ta sẽ có rkᵀpi với i = 0,1,...k-1): Cho nên ở đây, ta sẽ có rj vuông góc với d0,d1,...dj-1. Nên cái bên phải = 0 ⇨ rjTzj = 0
 >
 > ------ 
 > Quay lại đây, chứng minh quy nạp nói ở trên:
@@ -1007,14 +1007,14 @@
 > Ý tưởng như trên nói, là dùng matrix full rank C để đổi biến, chuyển sang bài toán tối
 > ưu tương đương (equivalent problem) có matrix hệ số có phân phối trị riêng tốt hơn.
 >
-> Khi đặt x^ = Cx, suy ra x = C⁻¹x^
+> Khi đặt x̂ = Cx, suy ra x = C⁻¹x̂
 >
 > thì thay x vào hàm mục tiêu của bài toán gốc, đang là: f(x) = (1/2)xᵀAx - bᵀx,  nó sẽ trở
-> thành (1/2) (C⁻¹x^)ᵀAC⁻¹x^ - bᵀ(C⁻¹x^), đây là hàm theo x^, đặt là f~(x^).
+> thành (1/2) (C⁻¹x̂)ᵀAC⁻¹x̂ - bᵀ(C⁻¹x̂), đây là hàm theo x̂, đặt là f~(x̂).
 >
-> Sắp xếp lại, f~(x^) = (1/2)x^T C⁻¹ᵀAC⁻¹ x^ - bᵀC⁻¹ x^
+> Sắp xếp lại, f~(x̂) = (1/2)x̂T C⁻¹ᵀAC⁻¹ x̂ - bᵀC⁻¹ x̂
 >
-> = (1/2)x^T C⁻¹ᵀAC⁻¹ x^ - (C⁻¹ᵀb)ᵀ x^
+> = (1/2)x̂T C⁻¹ᵀAC⁻¹ x̂ - (C⁻¹ᵀb)ᵀ x̂
 >
 > Thế thì đến đây, mình nghĩ là cần phải nói rõ ta đang làm gì, và vì sao được phép đổi
 > biến, cơ sở nào cho phép làm vậy.
@@ -1023,12 +1023,12 @@
 > b = 0, với Ax - b là đạo hàm của một hàm số f nào đó, từ đó thấy việc đang làm chính là giải điều
 > kiện cần tối ưu bậc nhất: ∇f(x) = 0.
 >
-> Thay x = C⁻¹ x^, Ax = b trở thành A C⁻¹ x^ = b. Nhân hai vế cho C⁻¹ᵀ, phương trình
-> sẽ tương đương với C⁻¹ᵀAC⁻¹ x^ = C⁻¹ᵀb, và từ đó nếu coi đây là phương trình
-> điều kiện cần tối ưu bậc nhất thì cái hàm số theo x^ chính là (1/2)x^T C⁻¹ᵀAC⁻¹ x^ -
-> (C⁻¹ᵀb)ᵀ x^ có đạo hàm là C⁻¹ᵀAC⁻¹ x^ - C⁻¹ᵀb.
+> Thay x = C⁻¹ x̂, Ax = b trở thành A C⁻¹ x̂ = b. Nhân hai vế cho C⁻¹ᵀ, phương trình
+> sẽ tương đương với C⁻¹ᵀAC⁻¹ x̂ = C⁻¹ᵀb, và từ đó nếu coi đây là phương trình
+> điều kiện cần tối ưu bậc nhất thì cái hàm số theo x̂ chính là (1/2)x̂T C⁻¹ᵀAC⁻¹ x̂ -
+> (C⁻¹ᵀb)ᵀ x̂ có đạo hàm là C⁻¹ᵀAC⁻¹ x̂ - C⁻¹ᵀb.
 >
-> Do đó giải ra x^* thỏa C⁻¹ᵀAC⁻¹ x^ = C⁻¹ᵀb, giúp minimize hàm f^(x^) thì C⁻¹ x^*
+> Do đó giải ra x̂* thỏa C⁻¹ᵀAC⁻¹ x̂ = C⁻¹ᵀb, giúp minimize hàm f^(x̂) thì C⁻¹ x̂*
 > sẽ thõa Ax = b, giúp minimize hàm f(x).
 >
 > -----
@@ -1060,19 +1060,19 @@
 >
 > Vậy thì, nếu áp dụng vào bài toán đã đổi biến, tức là ta phải làm gì:
 >
-> → Chỉ là thay x bằng x^, thay A bằng A^ = (C⁻¹)ᵀAC⁻¹, thay b bằng C⁻¹ᵀb.
+> → Chỉ là thay x bằng x̂, thay A bằng A^ = (C⁻¹)ᵀAC⁻¹, thay b bằng C⁻¹ᵀb.
 >
 > Để rồi thuật toán sẽ là:
 >
-> Bắt đầu tại x^0 nào đó. Có residual r^0 = A^x^0 - b^. Chọn p^0 = -∇f^(x^0) = - A^x^0 + b^
+> Bắt đầu tại x̂0 nào đó. Có residual r^0 = A^x̂0 - b^. Chọn p^0 = -∇f^(x̂0) = - A^x̂0 + b^
 >
 > Vòng lặp thứ nhất:
 >
-> Giải bài toán minimize hàm bậc hai đơn biến f^(x^0 + α^p^0) tính α^0,
+> Giải bài toán minimize hàm bậc hai đơn biến f^(x̂0 + α^p^0) tính α^0,
 >
-> Đi đến x^1, x^1 = x^0 + α^0p^0
+> Đi đến x̂1, x̂1 = x̂0 + α^0p^0
 >
-> Tính residual tại đây: r^1 = A^x^1 - b^
+> Tính residual tại đây: r^1 = A^x̂1 - b^
 >
 > Chuẩn bị hướng p^1: là conjugate wrt matrix A^ của p^0: p^1TA^p^0 = 0
 >
@@ -1107,7 +1107,7 @@
 > Thế thì để hiểu bản chất vì sao  ta phải tính A^, b^ đó là vì: Mình đang giải bài toán
 > trong một hệ tọa độ khác: Là hệ tọa độ basis c's:
 >
-> Khi đặt x^ = Cx thì tọa độ của x trong basis e's, sẽ chuyển sang tọa độ trong basis c⁻¹'
+> Khi đặt x̂ = Cx thì tọa độ của x trong basis e's, sẽ chuyển sang tọa độ trong basis c⁻¹'
 > s (các cột của C⁻¹): Vì sao?
 >
 > Để hiểu ý này, nhớ lại Change of basis matrix, đầu tiên xuất phát từ cách xây dựng
@@ -1168,7 +1168,7 @@
 > Và nếu như v's là e's tức input basis là standard basis, thì V chính là I, và ta sẽ có
 > matrix giúp đổi tọa độ từ basis e's sang basis w's đơn giản là A = W⁻¹.
 >
-> Do đó, khi đặt x^ = Cx = (C⁻¹)⁻¹ x thì ta đang đổi tọa độ từ basis e's sang tọa độ
+> Do đó, khi đặt x̂ = Cx = (C⁻¹)⁻¹ x thì ta đang đổi tọa độ từ basis e's sang tọa độ
 > của basis c⁻¹' s, tức là các cột của C⁻¹. (ko phải là của C nhé)
 >
 > -----
@@ -1176,20 +1176,20 @@
 > Quay lại đây, ta đang nói bản chất vì sao ta phải tính A^, b^ đó là vì: Mình đang giải bài
 > toán trong một hệ tọa độ khác: Là hệ tọa độ basis c⁻¹'s.
 >
-> Thế thì, trong gian hệ tọa độ đó, ta cũng sẽ đi theo một chuỗi điểm x^0 → x^1 → ...để
-> đến x^* và điểm này sẽ tương ứng với x* trong tọa độ e's. Nói cách khác, khi có x*^, ta
+> Thế thì, trong gian hệ tọa độ đó, ta cũng sẽ đi theo một chuỗi điểm x̂0 → x̂1 → ...để
+> đến x̂* và điểm này sẽ tương ứng với x* trong tọa độ e's. Nói cách khác, khi có x*^, ta
 > sẽ chuyển nó sang lại tọa độ e's bằng cách nhân với change of basis từ basis c⁻¹'s
 > (chú ý, basis c⁻¹'s, ko phải c's) sang basis e's:
 >
-> (I)⁻¹ C⁻¹ = C⁻¹, tức là x* = C⁻¹ x^*.
+> (I)⁻¹ C⁻¹ = C⁻¹, tức là x* = C⁻¹ x̂*.
 >
 > Nó giúp ta hiểu sâu hơn bản chất: CHUYỂN SANG HỆ TỌA ĐỘ BASIS c⁻¹'a, TRONG
 > ĐÓ BÀI TOÁN CÓ MAᵀRIX HỆ SỐ TỐT HƠN → HỘI TỤ NHANH HƠN → KHI CÓ
-> KẾT QỦA, x^*, CHUYỂN NÓ VỀ LẠI TỌA ĐỘ BASIS e's ĐỂ CÓ x*.
+> KẾT QỦA, x̂*, CHUYỂN NÓ VỀ LẠI TỌA ĐỘ BASIS e's ĐỂ CÓ x*.
 >
 > Thế thì, từ việc hiểu bản chất này, ta sẽ hiểu ý tưởng của việc né cái vụ làm tường
 > minh như sau: TÌM VÌ VẤN ĐỀ TÍNH C⁻¹ CƠ BẢN CHỈ LÀ GIÚP CHUYỂN TỌA ĐỘ
-> QUA LẠI GIỮA HAI CƠ SỞ e' s và c⁻¹'s nên ta sẽ tìm cách TẠO RA CHUỖI x^1,x²...
+> QUA LẠI GIỮA HAI CƠ SỞ e' s và c⁻¹'s nên ta sẽ tìm cách TẠO RA CHUỖI x̂1,x²...
 > NHƯNG TRONG TỌA ĐỘ e's LUÔN.
 >
 > Để hình dung sự bất cập của việc làm Tường minh (Explicitly):
@@ -1202,10 +1202,10 @@
 > Ta tốn một đống chi phí "mua vé" (tính ma trận C) để bay sang không gian mới (hệ tọa
 > độ basis c⁻¹'s).
 >
-> Ở không gian đó, ta bước từ x^0 → x^1 → ... → x^* (nhảy thuật toán CG rất nhanh vì
+> Ở không gian đó, ta bước từ x̂0 → x̂1 → ... → x̂* (nhảy thuật toán CG rất nhanh vì
 > ma trận hệ số bên đó có phân phối trị riêng tụ lại, đường siêu dễ đi).
 >
-> Xong việc, ta lại tốn thêm chi phí "mua vé khứ hồi" (tính C⁻¹) để dịch điểm đích x^* đó
+> Xong việc, ta lại tốn thêm chi phí "mua vé khứ hồi" (tính C⁻¹) để dịch điểm đích x̂* đó
 > về lại nhà (trở thành x* trong tọa độ e's).
 >
 > → HỆ QUẢ: Việc phải trực tiếp đi tính toán các ma trận C, C⁻¹, A^, b^ chính là "chi phí
@@ -1222,13 +1222,13 @@
 >
 > Theo naive CG, như đã biết:
 >
-> Ban đầu đứng ở x^0 = C⁻¹ x0. Residual r^0 = A^x^0 - b^. Chọn p^0 = -∇f^(x^0) = - A^x^0 + b^
+> Ban đầu đứng ở x̂0 = C⁻¹ x0. Residual r^0 = A^x̂0 - b^. Chọn p^0 = -∇f^(x̂0) = - A^x̂0 + b^
 >
 > Vòng lặp thứ k, thuật toán CG:
 >
 > i) α^k = r^kTr^k / p^kTA^p^k 
 >
-> ii) x^k+1 = x^k + α^kp^k
+> ii) x̂k+1 = x̂k + α^kp^k
 >
 > iii) r^k+1 = r^k + α^kA^p^k 
 >
@@ -1238,13 +1238,13 @@
 >
 > Làm như sau:
 >
-> x^ là tọa độ trong basis c⁻¹'s thì tọa độ trong basis e's của nó là x = C⁻¹ x^ ⇨ x^ = Cx
-> → Ta sẽ thay x^ = Cx
+> x̂ là tọa độ trong basis c⁻¹'s thì tọa độ trong basis e's của nó là x = C⁻¹ x̂ ⇨ x̂ = Cx
+> → Ta sẽ thay x̂ = Cx
 >
-> r^ = A^x^ - b^ = C⁻¹ᵀAC⁻¹Cx - C⁻¹ᵀb = C⁻¹ᵀAx - C⁻¹ᵀb = C⁻¹ᵀ(Ax - b) = C⁻¹ᵀr
+> r^ = A^x̂ - b^ = C⁻¹ᵀAC⁻¹Cx - C⁻¹ᵀb = C⁻¹ᵀAx - C⁻¹ᵀb = C⁻¹ᵀ(Ax - b) = C⁻¹ᵀr
 > → Ta sẽ thay r^k = C⁻¹ᵀrk
 >
-> p^ sẽ cũng = Cp. Nhưng ta nên lập luận từ α^k p^k = x^k+1 - x^k
+> p^ sẽ cũng = Cp. Nhưng ta nên lập luận từ α^k p^k = x̂k+1 - x̂k
 >
 > ⇨ Cxk+1 - Cxk = C(xk+1 - xk) = C αk pk ⇨ p^k = C pk (αk / α^k) = Cpk (xem ý sau) 
 >
@@ -1266,15 +1266,15 @@
 >
 > i) α^k trở thành αk = (C⁻¹ᵀrk)ᵀC⁻¹ᵀrk / (Cpk)ᵀC⁻¹ᵀAC⁻¹Cpk
 >
-> = rkTC⁻¹C⁻¹ᵀrk / pkᵀCᵀC⁻¹ᵀAC⁻¹Cpk
+> = rkᵀC⁻¹C⁻¹ᵀrk / pkᵀCᵀC⁻¹ᵀAC⁻¹Cpk
 >
-> = rkTC⁻¹C⁻¹ᵀrk / pkᵀ(C⁻¹C)ᵀAC⁻¹Cpk 
+> = rkᵀC⁻¹C⁻¹ᵀrk / pkᵀ(C⁻¹C)ᵀAC⁻¹Cpk 
 >
-> = rkTC⁻¹C⁻¹ᵀrk / pkᵀApk 
+> = rkᵀC⁻¹C⁻¹ᵀrk / pkᵀApk 
 >
-> = rkTM⁻¹rk / pkᵀApk (đặt M⁻¹=C⁻¹C⁻¹ᵀ). 
+> = rkᵀM⁻¹rk / pkᵀApk (đặt M⁻¹=C⁻¹C⁻¹ᵀ). 
 >
-> ii) x^k+1 = x^k + α^kp^k trở thành:
+> ii) x̂k+1 = x̂k + α^kp^k trở thành:
 >
 > Cxk+1 = Cxk + αkCpk ⇨ xk+1 = xk + αkpk
 >
@@ -1290,9 +1290,9 @@
 >
 > βk = (C⁻¹ᵀrk+1)ᵀC⁻¹ᵀrk+1 / (C⁻¹ᵀrk)ᵀC⁻¹ᵀrk
 >
-> ⇔ βk = rk+1TC⁻¹C⁻¹ᵀrk+1 / rkTC⁻¹C⁻¹ᵀrk
+> ⇔ βk = rk+1TC⁻¹C⁻¹ᵀrk+1 / rkᵀC⁻¹C⁻¹ᵀrk
 >
-> = rk+1TM⁻¹ rk+1 / rkTM⁻¹ rk
+> = rk+1TM⁻¹ rk+1 / rkᵀM⁻¹ rk
 >
 > v) p^k+1 = -r^k+1 + β^k+1p^k trở thành
 >
@@ -1304,13 +1304,13 @@
 >
 > Tổng hợp lại các bước:
 >
-> i) αk = rkTM⁻¹rk / pkᵀApk (đặt M⁻¹=C⁻¹C⁻¹ᵀ). 
+> i) αk = rkᵀM⁻¹rk / pkᵀApk (đặt M⁻¹=C⁻¹C⁻¹ᵀ). 
 >
 > ii) xk+1 = xk + αkpk
 >
 > iii) rk+1 = rk + αkApk 
 >
-> iv) βk rk+1TM⁻¹ rk+1 / rkTM⁻¹ rk
+> iv) βk rk+1TM⁻¹ rk+1 / rkᵀM⁻¹ rk
 >
 > v) pk = -M⁻¹ rk+1 + βk+1 pk
 >
@@ -1325,7 +1325,7 @@
 > Giải M yk = rk để có yk (chính là M⁻¹ rk) Nhưng thực ra không cần, vì đây là yk có từ iteration
 > trước.
 >
-> i) αk = rkTyk / pkᵀApk (chính là rkTM⁻¹rk / pkᵀApk)
+> i) αk = rkᵀyk / pkᵀApk (chính là rkᵀM⁻¹rk / pkᵀApk)
 >
 > ii) xk+1 = xk + αkpk
 >
@@ -1333,7 +1333,7 @@
 >
 > Giải M yk+1 = rk+1 để có yk+1 (chính là M⁻¹ rk+1)
 >
-> iv) βk = rk+1Tyk+1 / rkTyk (chính là rk+1TM⁻¹ rk+1 / rkTM⁻¹ rk
+> iv) βk = rk+1Tyk+1 / rkᵀyk (chính là rk+1TM⁻¹ rk+1 / rkᵀM⁻¹ rk
 >
 > v) pk = -yk+1 + βk+1 pk (chính là -M⁻¹ rk+1 + βk+1 pk)
 >
@@ -1348,9 +1348,9 @@
 > ta ko care). Có điều, cần có thêm constraint ||p|| ≤ Δk
 >
 > Thế thì, nếu dùng matrix C, hay ở đây, ta dùng kí hiệu D, để đổi biến thì tương tự như
-> khi dùng C để đổi biến x^ = C x, khiến ta sẽ chuyển từ việc deal với bài toán minimize
-> f(x) = (1/2)xᵀAx - bᵀx để giải tìm x* thỏa Ax* = b sang bài toán minimize f^(x^) =
-> (1/2)x^A^x^ - b^Tx^ với A^ = C⁻¹ᵀAC⁻¹ và b^ = C⁻¹ᵀb.
+> khi dùng C để đổi biến x̂ = C x, khiến ta sẽ chuyển từ việc deal với bài toán minimize
+> f(x) = (1/2)xᵀAx - bᵀx để giải tìm x* thỏa Ax* = b sang bài toán minimize f^(x̂) =
+> (1/2)x̂A^x̂ - b^Tx̂ với A^ = C⁻¹ᵀAC⁻¹ và b^ = C⁻¹ᵀb.
 >
 > Thì ở đây khi dùng D để đổi biến p^ = D p, ta cũng sẽ chuyển từ việc deal với bài
 > toán minimize mk(p) = (1/2)pᵀBkp + ∇fkTp  sang bài toán minimize mk^(p^) =
@@ -1361,7 +1361,7 @@
 >
 > Và nếu như vừa ôn lại bản chất của PCG, thì đây chính là việc VỀ LÍ THUYẾT
 > THUẬT TOÁN  TẠO CHUỖI z^1, z²,... ĐỂ ĐI TỚI z^* NHANH HƠN (giống như trong
-> note trước, ta tạo chuỗi x^k đi đến x^*).
+> note trước, ta tạo chuỗi x̂k đi đến x̂*).
 >
 > Và các direction sẽ là d^1, d²,....(tương ứng với trong note trước là p^k)
 >
