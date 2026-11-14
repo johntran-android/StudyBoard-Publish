@@ -109,7 +109,7 @@
 >
 >
 >
-> Nhưng dĩ nhiên nếu trong phạm vi toàn hố, x\* là cái local solution duy nhất, thì dĩ nhiên nó cũng là strict, vì nếu tồn tại thằng x^ nằm sát bên có độ cao bằng x\*, thì x^ cũng là local solution, trong khi ta đang nói x\* là cái duy nhất cơ mà. Vậy suy ra không thể có x^ nào quanh đó ngang nó, mà đều phải cao hơn nó, vậy x\* là strict solution.
+> Nhưng dĩ nhiên nếu trong phạm vi toàn hố, x\* là cái local solution duy nhất, thì dĩ nhiên nó cũng là strict, vì nếu tồn tại thằng x̂ nằm sát bên có độ cao bằng x\*, thì x̂ cũng là local solution, trong khi ta đang nói x\* là cái duy nhất cơ mà. Vậy suy ra không thể có x̂ nào quanh đó ngang nó, mà đều phải cao hơn nó, vậy x\* là strict solution.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
