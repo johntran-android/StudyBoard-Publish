@@ -454,9 +454,9 @@
 >
 > minimize h(p) = ||Jkp + rk||² s.t ||p|| ≤ Δ, và đây chính là Levenberg - Marquardt
 >
-> và cái hàm này ||Jkp + rk||² thì trong note trước mình đã thấy nó là (1/2)pᵀJkᵀJkp + rkTJkp + (1/2)rkTrk → chính là 10.32
+> và cái hàm này ||Jkp + rk||² thì trong note trước mình đã thấy nó là (1/2)pᵀJkᵀJkp + rkᵀJkp + (1/2)rkᵀrk → chính là 10.32
 >
-> mà đem so với g(p) = (1/2)pᵀJkᵀJkp + rkTJkp + (1/2)pᵀ(term 2)p + rkTrk
+> mà đem so với g(p) = (1/2)pᵀJkᵀJkp + rkᵀJkp + (1/2)pᵀ(term 2)p + rkᵀrk
 >
 > thì đúng là chỉ khác ở chỗ: Hessian của người ta có 2 term, ta bỏ đi term 2, chỉ dùng term 2: JkᵀJk.
 
