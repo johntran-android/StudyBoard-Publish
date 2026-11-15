@@ -2173,6 +2173,8 @@
 
 📹 Video 2: [Tại sao x_k cực tiểu hóa phi trên không gian con? (phần 2)](https://www.youtube.com/watch?v=UYGz_oQFBv4)
 
+📹 Video 3: [Tại sao cực tiểu hóa phi tương đương r_x vuông góc p_i? (phần 3)](https://www.youtube.com/watch?v=QpNTm5otibM)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
