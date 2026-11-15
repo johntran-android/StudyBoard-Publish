@@ -1636,7 +1636,7 @@
 
 <p align="center"><kbd><img src="assets/98f7pvl73yq.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/26paw.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/a67jqbjsbqr.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Theorem này nói đại ý rằng: Bắt đầu từ x0 và ta dùng một thuật toán 5.6, 5.7 để tạo ra chuỗi {x_k}. Tức là: α\_k = -r_kᵀp_k / (p_kᵀAp_k) và x_k+1 = x_k + α\_kp_k. Thì khi đó chuỗi này sẽ có tính chất sau:
@@ -1811,6 +1811,106 @@
 >
 >
 >
+> u(σ) = x0 + Pσ: vector → vector ⇒ du = J dσ
+>
+>
+>
+> h = Φ(u): vector → scalar ⇒ dh = ∇hᵀdu = ∇Φ(u)ᵀdu
+>
+>
+>
+> ⇒ dh = ∇Φ(u)ᵀJ dσ = (Jᵀ∇Φ(u))ᵀ dσ
+>
+>
+>
+> h(σ): dh(σ) = (∇\_σ h)ᵀ dσ
+>
+>
+>
+> ⇒ ∇\_σ h = Jᵀ∇Φ(u) = Pᵀ (Au - b)
+>
+>
+>
+> = Pᵀ (A(x0 + Pσ) - b)
+>
+>
+>
+> = Pᵀ r(x)
+>
+>
+>
+> ∇h(σ) = Pᵀ r(x)
+>
+>
+>
+> Điều kiện tối ưu cần bậc nhất (first order necessary condition)
+>
+>
+>
+> ∇h(σ) = 0 ⇔ Pᵀ r(x) = 0
+>
+>
+>
+> ⇔ p0ᵀr(x) = 0, p1ᵀr(x) = 0,...
+>
+>
+>
+> ⇔ piᵀr(x) = 0, i = 0,1,2....k-1
+>
+>
+>
+> ---
+>
+>
+>
+> Pᵀ (A(x0 + Pσ) - b) = 0
+>
+>
+>
+> σ\* minimize h(σ), = Φ(x0 + Pσ)
+>
+>
+>
+> f(x): g(α) = f(x0 + αd)
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> ---
+>
+>
+>
+> f(x): scalar → scalar: df = f'(x)dx
+>
+>
+>
+> f(x): vector → scalar: df = ∇fᵀdx
+>
+>
+>
+> f(x): vector → vector: df = J dx
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+>
+>
+> ---
+>
+>
+>
 > Mục tiêu: Đưa về dh(σ) = \[∇\_σ h(σ)\]ᵀ dσ
 >
 >
@@ -1823,7 +1923,7 @@
 >
 >
 >
-> h đối với u là hàm vector - scalar h(u) = Φ(u), và u đới với σ sẽ là hàm vector - vector
+> h đối với u là hàm vector - scalar h(u) = Φ(u), và u đối với σ sẽ là hàm vector - vector
 >
 >
 >
@@ -1855,7 +1955,7 @@
 >
 >
 >
-> Co gradient = 0:
+> Cho gradient = 0:
 >
 >
 >
@@ -2069,7 +2169,9 @@
 >
 > ⇨ Chứng minh xong rằng mọi x_k trong chuỗi {x_k} đều thỏa điều kiện này và như vậy x_k sẽ là minimizer của φ over set {x0 + span{p0,..p_k-1}}
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=I7vBVb7KG9M)
+📹 Video 1: [Tại sao phần dư r_k luôn vuông góc với hướng liên hợp? (phần 1)](https://youtu.be/I7vBVb7KG9M)
+
+📹 Video 2: [Tại sao x_k cực tiểu hóa phi trên không gian con? (phần 2)](https://www.youtube.com/watch?v=UYGz_oQFBv4)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
