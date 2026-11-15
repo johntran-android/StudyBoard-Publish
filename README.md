@@ -97,10 +97,10 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 |:---|:---|
 | [📂 **Calculus**](#group-calculus) | [MIT 18.01 — Single Variable Calculus](#nb-a0_mit1801)<br>[MIT 18.02](#nb-mit_1802)<br>[MIT 18S096 Matrix Calculus for ML](#nb-mit_18s096_matrix_calculus_for_ml) |
 | [📂 **Linear Algebra**](#group-linear-algebra) | [EE263A — Linear Dynamical Systems](#nb-ee263a)<br>[MIT 18.06 Book](#nb-mit_1806_book)<br>[MIT 18.06](#nb-mit1806_gstrang) |
-| [📂 **Probability & Statistics**](#group-probability-statistics) | [STAT110_Havard](#nb-stat110_havard)<br>[Statistical Inference - Casella](#nb-statistical_inference_casella) |
+| [📂 **Machine Learning & Deep Learning**](#group-machine-learning-deep-learning) | [CS224N_Stanford](#nb-cs224n_stanford)<br>[CS231N_Stanford](#nb-cs231n_stanford)<br>[DL Spec Coursera](#nb-dl_spec_coursera)<br>[NLP Spec Coursera](#nb-nlp_spec_coursera) |
 | [📂 **Optimization**](#group-optimization) | [EE364a, Convex Optim_S.Boyd](#nb-ee364a_convex_optim_sboyd)<br>[Numerical Optimization_J.Nocedal](#nb-numerical_optimization_jnocedal) |
 | [📂 **Machine Learning Foundation**](#group-machine-learning-foundation) | [Pattern Recognition Machine Learning_C.Bishop](#nb-pattern_recognition_machine_learning_cbishop) |
-| [📂 **Machine Learning & Deep Learning**](#group-machine-learning-deep-learning) | [CS224N_Stanford](#nb-cs224n_stanford)<br>[CS231N_Stanford](#nb-cs231n_stanford)<br>[DL Spec Coursera](#nb-dl_spec_coursera)<br>[NLP Spec Coursera](#nb-nlp_spec_coursera) |
+| [📂 **Probability & Statistics**](#group-probability-statistics) | [STAT110_Havard](#nb-stat110_havard)<br>[Statistical Inference - Casella](#nb-statistical_inference_casella) |
 | [📂 **Other**](#group-other) | [LLM — Large Language Models](#nb-a1_llm)<br>[Deep Learning Specialization_Cousera_Andrew Ng](#nb-deep_learning_specialization_cousera_andrew_ng)<br>[Foundation of LLM](#nb-foundation_of_llm) |
 
 🎬 [Xem Video Library ↓](#video-library)
