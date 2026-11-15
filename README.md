@@ -1234,8 +1234,8 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 <a id="roadmap-linear-algebra"></a>
 #### 📂 Linear Algebra
 
-<details open>
-<summary>🗺️ 50 ý tưởng sắp tới</summary>
+<details>
+<summary>🗺️ 50 ý tưởng sắp tới (bấm để mở)</summary>
 
 | Điểm | Ý tưởng | Note gốc |
 |---|---|---|
@@ -1295,8 +1295,8 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 <a id="roadmap-optimization"></a>
 #### 📂 Optimization
 
-<details open>
-<summary>🗺️ 50 ý tưởng sắp tới</summary>
+<details>
+<summary>🗺️ 50 ý tưởng sắp tới (bấm để mở)</summary>
 
 | Điểm | Ý tưởng | Note gốc |
 |---|---|---|
@@ -1356,8 +1356,8 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 <a id="roadmap-machine-learning-foundation"></a>
 #### 📂 Machine Learning Foundation
 
-<details open>
-<summary>🗺️ 50 ý tưởng sắp tới</summary>
+<details>
+<summary>🗺️ 50 ý tưởng sắp tới (bấm để mở)</summary>
 
 | Điểm | Ý tưởng | Note gốc |
 |---|---|---|
@@ -1417,8 +1417,8 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 <a id="roadmap-probability-statistics"></a>
 #### 📂 Probability & Statistics
 
-<details open>
-<summary>🗺️ 50 ý tưởng sắp tới</summary>
+<details>
+<summary>🗺️ 50 ý tưởng sắp tới (bấm để mở)</summary>
 
 | Điểm | Ý tưởng | Note gốc |
 |---|---|---|
