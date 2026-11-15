@@ -1,6 +1,56 @@
-# Tóm tắt về repo này
+<div align="center">
 
-> 👤 **Về mình:** [johntran-android.github.io](https://johntran-android.github.io): mọi thứ mình đang học, các sản phẩm mình làm, và cách chúng ghép với nhau.
+# Nền móng Machine Learning
+
+**Học lại AI từ gốc, và học công khai.**<br>
+Giải tích → Đại số tuyến tính → Xác suất → Thống kê → Tối ưu → Machine Learning.<br>
+Mỗi chủ đề là một ghi chú mình tự giải thích lại; nhiều chủ đề có video ngắn trả lời đúng một câu “tại sao”.
+
+**`~12,550 notes` · `~18,333 screenshots` · `18 notebooks`**
+
+<a href="https://johntran-android.github.io/ml-map/">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/map-spin-dark.gif">
+  <img src="docs/map-spin.gif" alt="Bản đồ 233 chủ đề nền móng Machine Learning đang xoay, mỗi môn một màu, chủ đề có video mang dấu ▶" width="100%">
+</picture>
+</a>
+
+<sub>Bản đồ 233 chủ đề: bấm vào ảnh để mở bản đồ tương tác, xem lộ trình học và video của từng chủ đề.</sub>
+
+**[🗺️ Bản đồ & lộ trình](https://johntran-android.github.io/ml-map/)** · **[🎬 Video](#video-library)** · **[📚 Ghi chú](#top-nav)** · **[🛠️ StudyBoard](https://studyboard.app/landing.html)** · **[👤 Về mình](https://johntran-android.github.io)**
+
+<sub>🇬🇧 Re-learning the math behind AI from the ground up, in public: study notes and short “why” videos (in Vietnamese) across MIT 18.01 / 18.06, Harvard Stat110, Casella & Berger, Nocedal & Wright and Bishop's PRML.</sub>
+
+<sub>[↔ Xem README bản cũ](README_OLD.md)</sub>
+
+</div>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/study-days-dark.svg">
+  <img alt="Số ngày có học từ 25/07/2026, chuỗi ngày liền nhau, số ghi chú mới và số video" src="docs/study-days-light.svg" width="100%">
+</picture>
+
+## Lộ trình
+
+```mermaid
+flowchart LR
+  A["Giải tích<br/>MIT 18.01 · 18.02 · 18.S096"] --> B["Đại số tuyến tính<br/>MIT 18.06 · EE263"]
+  B --> C["Xác suất<br/>Harvard Stat110"]
+  C --> D["Thống kê<br/>Casella & Berger"]
+  D --> E["Tối ưu<br/>Boyd · Nocedal & Wright"]
+  E --> F["Machine Learning<br/>Bishop PRML"]
+  F -.-> G["Tiếp theo<br/>CS229 · ML engineering"]
+  classDef done fill:#e3f3ea,stroke:#0c7a4d,color:#0b3d27
+  classDef now fill:#fff1cc,stroke:#b88512,stroke-width:3px,color:#3d2c00
+  classDef next fill:#f1f3f5,stroke:#8a96a3,stroke-dasharray:4 3,color:#3a4552
+  class A,B,C,D,E done
+  class F now
+  class G next
+```
+
+<sub>Xanh: đã học · Vàng: đang học · Xám: sắp tới</sub>
+
+## Câu chuyện
 
 Khoảng 3 năm trước mình bắt đầu học AI với các khóa của Andrew Ng trên Coursera như Machine Learning, Deep Learning và NLP Specialization. Sau đó, nhờ đọc blog của Huyền Chip, mình tiếp tục với CS231N và CS224N của Stanford và tự làm các assignment.
 
@@ -45,8 +95,6 @@ Các môn như MIT 18.06, Stat110, Casella, Nocedal và Bishop đối với mìn
 Hướng tiếp theo là tiếp tục đi lên các lớp ML ở tầng cao hơn như CS229 và các chủ đề về AI/ML engineering, trong khi vẫn phát triển StudyBoard song song và dần đưa những kiến thức đã học vào một sản phẩm thực tế.
 
 Repository này vì vậy chủ yếu là một **learning log** — dấu vết của quá trình đi từ nền tảng toán, probability, statistics và optimization lên machine learning, đồng thời là một phần của quá trình build StudyBoard..
-
-**`~12,550 notes` · `~18,333 screenshots` · `18 notebooks`**
 
 <!-- studyboard-toc:start -->
 <a id="top-nav"></a>
