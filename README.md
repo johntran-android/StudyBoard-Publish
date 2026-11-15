@@ -33,7 +33,7 @@ Mỗi chủ đề là một ghi chú mình tự giải thích lại; nhiều ch�
 ## Lộ trình
 
 ```mermaid
-flowchart LR
+flowchart TD
   A["Giải tích<br/>MIT 18.01 · 18.02 · 18.S096"] --> B["Đại số tuyến tính<br/>MIT 18.06 · EE263"]
   B --> C["Xác suất<br/>Harvard Stat110"]
   C --> D["Thống kê<br/>Casella & Berger"]
