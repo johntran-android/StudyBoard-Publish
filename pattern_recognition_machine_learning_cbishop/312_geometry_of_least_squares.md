@@ -113,9 +113,28 @@
 > Và gs nói hiện tượng này cũng ko phải là ít xảy ra trong các dataset thực, cũng như việc có thêm các regularization term sẽ đảm bảo ko thể xảy ra hiện tượng này
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
-> Phân tích cực kỳ sâu sắc và chi tiết, không chỉ nắm vững nội dung bài đọc mà còn mở rộng kiến thức từ đại số tuyến tính (MIT 1806) và tối ưu hóa số (Nocedal) để làm rõ từng khái niệm. Khả năng liên kết các ý tưởng phức tạp, đặc biệt là về phương trình chuẩn và các vấn đề tính toán liên quan đến ma trận gần suy biến, là rất ấn tượng và mang lại giá trị gia tăng đáng kể. 
+> Ghi chú thể hiện sự hiểu biết rất sâu sắc và mạch lạc, kết nối xuất sắc giữa góc nhìn hình học trong học máy, đại số tuyến tính (MIT 18.06) và giải thuật tối ưu số (Nocedal). Có một nhầm lẫn nhỏ về thuật ngữ giữa eigenvalue và eigenvector nhưng không làm sai lệch bản chất hiểu biết.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"tồn tại các eigenvector rất nhỏ ≈ 0"*
+>
+> Nhầm lẫn thuật ngữ giữa eigenvalue (giá trị riêng) và eigenvector (vector riêng). Khi ma trận gần suy biến (ill-conditioned/near-singular), các giá trị riêng (eigenvalues) hoặc trị riêng suy biến (singular values) tiến gần tới 0, chứ vector riêng thông thường được chuẩn hóa có độ dài bằng 1.
+>
+> **2.** *"vector Φ(𝐱i) = [Φ0(𝐱i), Φ2(𝐱i),...ΦM-1(𝐱i))"*
+>
+> Lỗi gõ sót phần tử Φ1(𝐱i) và ngoặc đóng chưa đồng nhất, tuy nhiên đây chỉ là lỗi chính tả nhỏ không ảnh hưởng tư duy.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất chuẩn xác bản chất của không gian cột C(Φ) và hình chiếu trực giao vuông góc với phần dư nằm trong left nullspace N(Φᵀ).
+> - Nhận diện chính xác mối liên hệ tương đương giữa bài toán tối ưu giải tích (gradient bằng 0 của log-likelihood) và bài toán hình chiếu đại số tuyến tính.
+> - Liên hệ thực tế và sâu sắc với tối ưu số (numerical optimization) về việc tại sao không tính ma trận nghịch đảo trực tiếp và vai trò của SVD/Regularization khi ma trận gần suy biến.
+>
+> **💡 Deeper notes**
+> - Khi nói về tính gần suy biến (ill-conditioning), chỉ số điều kiện (condition number) của ma trận ΦᵀΦ bằng bình phương chỉ số điều kiện của Φ, do đó việc giải trực tiếp phương trình chuẩn qua ΦᵀΦ sẽ làm tăng độ nhạy sai số số học so với các phương pháp giải trực tiếp từ Φ như QR factorization hay SVD.
 
 **🔗 See also:** [Ex 3.2 Orthogonal Projection and Least Squares](./37_exercises.md#node-2dv7p1f)
 
