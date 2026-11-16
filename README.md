@@ -26,27 +26,53 @@ Mỗi chủ đề là một ghi chú mình tự giải thích lại; nhiều ch�
 
 ## Lộ trình
 
-```mermaid
-flowchart TD
-  A1["Deep Learning · NLP<br/>Coursera · Andrew Ng"] --> A2["Computer Vision<br/>Stanford CS231N"]
-  A2 --> A3["NLP<br/>Stanford CS224N"]
-  A3 --> A4["LLM<br/>Fine-tuning · RLHF"]
-  A4 --> B1["Giải tích<br/>MIT 18.01 · 18.02 · 18.S096"]
-  B1 --> B2["Đại số tuyến tính<br/>MIT 18.06 · EE263"]
-  B2 --> B3["Xác suất<br/>Harvard Stat110"]
-  B3 --> B4["Thống kê<br/>Casella & Berger"]
-  B4 --> B5["Tối ưu<br/>Boyd · Nocedal & Wright"]
-  B5 --> B6["Machine Learning<br/>Bishop PRML"]
-  B6 -.-> N["Tiếp theo<br/>CS229 · học qua project AI engineering"]
-  classDef done fill:#e3f3ea,stroke:#0c7a4d,color:#0b3d27
-  classDef now fill:#fff1cc,stroke:#b88512,stroke-width:3px,color:#3d2c00
-  classDef next fill:#f1f3f5,stroke:#8a96a3,stroke-dasharray:4 3,color:#3a4552
-  class A1,A2,A3,A4,B1,B2,B3,B4,B5 done
-  class B6 now
-  class N next
-```
+<table>
+<tr>
+<th width="33%">1 · Làm quen</th>
+<th width="33%">2 · Đào sâu</th>
+<th width="33%">3 · Hệ thống hoá</th>
+</tr>
+<tr>
+<td valign="top"><sub>Học rộng để thấy toàn cảnh</sub></td>
+<td valign="top"><sub>Lớp đại học + toán nền</sub></td>
+<td valign="top"><sub>Ghép lại thành một khối</sub></td>
+</tr>
+<tr>
+<td valign="top">
 
-<sub>Xanh: đã học · Vàng: đang học · Xám: sắp tới</sub>
+**Coursera · Andrew Ng**
+- Machine Learning Specialization
+- Deep Learning Specialization
+- NLP Specialization
+- Generative AI with LLMs
+
+</td>
+<td valign="top">
+
+**Stanford**
+- CS231N · Computer Vision
+- CS224N · NLP
+
+**Toán nền**
+- Giải tích · MIT 18.01, 18.02, 18.S096
+- Đại số tuyến tính · MIT 18.06, EE263
+- Xác suất · Harvard Stat110
+- Thống kê · Casella & Berger
+- Tối ưu · Boyd, Nocedal & Wright
+
+</td>
+<td valign="top">
+
+**Đang học**
+- Bishop · Pattern Recognition and Machine Learning
+
+**Tiếp theo**
+- Stanford CS229
+- Học qua project AI engineering
+
+</td>
+</tr>
+</table>
 
 ## Câu chuyện
 
