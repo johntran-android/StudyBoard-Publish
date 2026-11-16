@@ -3,6 +3,7 @@
 # Nền móng Machine Learning
 
 **Học lại AI từ gốc, và học công khai.**<br>
+Đi từ deep learning ứng dụng (Andrew Ng, CS231N, CS224N) quay lại học nền:<br>
 Giải tích → Đại số tuyến tính → Xác suất → Thống kê → Tối ưu → Machine Learning.<br>
 Mỗi chủ đề là một ghi chú mình tự giải thích lại; nhiều chủ đề có video ngắn trả lời đúng một câu “tại sao”.
 
@@ -17,7 +18,7 @@ Mỗi chủ đề là một ghi chú mình tự giải thích lại; nhiều ch�
 **[Bản đồ & lộ trình](https://johntran-android.github.io/ml-map/)** · **[Video](#video-library)** · **[Ghi chú](#top-nav)**<br>
 **[StudyBoard](https://studyboard.app/landing.html)** · **[Về mình](https://johntran-android.github.io)**
 
-<sub>🇬🇧 Re-learning the math behind AI from the ground up, in public: study notes and short “why” videos (in Vietnamese) across MIT 18.01 / 18.06, Harvard Stat110, Casella & Berger, Nocedal & Wright and Bishop's PRML.</sub>
+<sub>🇬🇧 Re-learning the math behind AI from the ground up, in public: after Andrew Ng's Coursera specializations and Stanford CS231N / CS224N, going back to the foundations: study notes and short “why” videos (in Vietnamese) across MIT 18.01 / 18.02 / 18.S096, MIT 18.06, EE263, Harvard Stat110, Casella & Berger, Boyd, Nocedal & Wright and Bishop's PRML.</sub>
 
 <sub>[↔ Xem README bản cũ](README_OLD.md)</sub>
 
@@ -27,18 +28,31 @@ Mỗi chủ đề là một ghi chú mình tự giải thích lại; nhiều ch�
 
 ```mermaid
 flowchart TD
-  A["Giải tích<br/>MIT 18.01 · 18.02 · 18.S096"] --> B["Đại số tuyến tính<br/>MIT 18.06 · EE263"]
-  B --> C["Xác suất<br/>Harvard Stat110"]
-  C --> D["Thống kê<br/>Casella & Berger"]
-  D --> E["Tối ưu<br/>Boyd · Nocedal & Wright"]
-  E --> F["Machine Learning<br/>Bishop PRML"]
-  F -.-> G["Tiếp theo<br/>CS229 · ML engineering"]
+  subgraph P1["Giai đoạn 1 · Deep learning ứng dụng"]
+    direction TB
+    A1["Coursera · Andrew Ng<br/>Deep Learning Spec · NLP Spec"] --> A2["Stanford CS231N<br/>Computer Vision · đã làm hết assignment"]
+    A2 --> A3["Stanford CS224N<br/>NLP · gần xong assignment"]
+    A3 --> A4["LLM<br/>Fine-tuning · PEFT · RLHF · Foundation of LLM"]
+  end
+  P1 --> W["Làm được assignment ≠ hiểu bên dưới<br/>→ quay lại học nền"]
+  W --> P2
+  subgraph P2["Giai đoạn 2 · Nền móng toán cho ML"]
+    direction TB
+    B1["Giải tích<br/>MIT 18.01 · 18.02 · 18.S096"] --> B2["Đại số tuyến tính<br/>MIT 18.06 + sách Strang · EE263"]
+    B2 --> B3["Xác suất<br/>Harvard Stat110"]
+    B3 --> B4["Thống kê<br/>Casella & Berger"]
+    B4 --> B5["Tối ưu<br/>Boyd · Nocedal & Wright"]
+    B5 --> B6["Machine Learning<br/>Bishop PRML"]
+  end
+  P2 -.-> N["Tiếp theo<br/>Stanford CS229 · học qua project AI engineering"]
   classDef done fill:#e3f3ea,stroke:#0c7a4d,color:#0b3d27
   classDef now fill:#fff1cc,stroke:#b88512,stroke-width:3px,color:#3d2c00
   classDef next fill:#f1f3f5,stroke:#8a96a3,stroke-dasharray:4 3,color:#3a4552
-  class A,B,C,D,E done
-  class F now
-  class G next
+  classDef note fill:#ffffff,stroke:#8a96a3,color:#3a4552
+  class A1,A2,A3,A4,B1,B2,B3,B4,B5 done
+  class B6 now
+  class N next
+  class W note
 ```
 
 <sub>Xanh: đã học · Vàng: đang học · Xám: sắp tới</sub>
@@ -85,7 +99,7 @@ Nói cách khác, ngoài Feynman loop trong việc học còn có thêm một v�
 
 Các môn như MIT 18.06, Stat110, Casella, Nocedal và Bishop đối với mình chủ yếu vẫn là tầng nền.
 
-Hướng tiếp theo là tiếp tục đi lên các lớp ML ở tầng cao hơn như CS229 và các chủ đề về AI/ML engineering, trong khi vẫn phát triển StudyBoard song song và dần đưa những kiến thức đã học vào một sản phẩm thực tế.
+Hướng tiếp theo là Stanford CS229, rồi chuyển sang **học qua project**: tự build các project AI engineering từ đầu đến cuối, để kiến thức nền không chỉ nằm trong ghi chú mà được kiểm chứng bằng sản phẩm chạy thật. StudyBoard vẫn phát triển song song, và là nơi đầu tiên những kiến thức này được đưa vào.
 
 Repository này vì vậy chủ yếu là một **learning log** — dấu vết của quá trình đi từ nền tảng toán, probability, statistics và optimization lên machine learning, đồng thời là một phần của quá trình build StudyBoard..
 
