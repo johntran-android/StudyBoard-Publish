@@ -37,9 +37,18 @@
 > Do đó ở đây, ta sẽ thảo luận một hướng, trong đó ta sẽ làm theo lối XẤP XỈ HÓA. Và ý tưởng cũng đơn giản, giống như khi ta không marginalizing over mọi 𝐰, để có predictive distribution, thì ta có thể làm theo lối xấp xỉ bằng cách dùng 𝐰 có posterior distribution cao nhất rồi lắp vào hàm prediction mà ta nói là làm theo kiểu nửa mùa ở trên. Thì đây cũng vậy, ta không marginalizing over mọi α, β. Thì ta chọn point estimate α, β theo tiêu chí nào đó, Và cụ thể là: maximize marginal likelihood (và cách làm này có vài tên khác như empirical Bayes, ....)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú rất xuất sắc, giải thích trực quan và chính xác sự khác biệt giữa MAP, fully Bayesian và phương pháp xấp xỉ bằng cách tối đa hóa marginal likelihood. Để hoàn thiện hơn, bạn có thể bổ sung thêm các tên gọi học thuật khác được đề cập trong bài như empirical Bayes hay type 2 maximum likelihood.
+> Ghi chú thể hiện sự thấu hiểu rất tốt bản chất của phương pháp Evidence Approximation và cách tiếp cận Bayesian từ cấp độ tham số đến siêu tham số.
+>
+> **✓ Strengths**
+> - Nắm rất vững sự khác biệt giữa Bayesian đầy đủ (marginalizing) và ước lượng điểm (MAP/point estimate).
+> - Hiểu chính xác bản chất vì sao phải dùng xấp xỉ: việc lấy tích phân đồng thời trên cả tham số w và các siêu tham số α, β là không khả thi về mặt giải tích (analytically intractable).
+> - Nhận diện đúng kỹ thuật cốt lõi: tối đa hóa hàm marginal likelihood (evidence) để chọn giá trị cho siêu tham số α, β.
+>
+> **💡 Deeper notes**
+> - Một điểm thú vị được sách nhấn mạnh là ta có thể giải tích phân giải tích riêng lẻ trên w HOẶC riêng lẻ trên các siêu tham số, nhưng chỉ khi lấy tích phân đồng thời trên cả hai nhóm biến thì mới bị analytically intractable.
+> - Cần lưu ý sự khác biệt giữa MAP của w và Evidence Approximation: trong Evidence Approximation, tham số w vẫn được tích phân triệt để (fully integrated out) để tạo ra marginal likelihood p(D|α, β), chứ không bị ước lượng điểm như trong MAP thông thường.
 
 <br>
 
