@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1794598695546,
+  "publishedAt": 1794873508009,
   "sections": [
     {
       "title": "📋 Overview",
@@ -293,8 +293,8 @@
     {
       "title": "3.5.3 Effective number of parameters",
       "path": "pattern_recognition_machine_learning_cbishop/353_effective_number_of_parameters.md",
-      "noteCount": 6,
-      "imageCount": 17
+      "noteCount": 5,
+      "imageCount": 16
     },
     {
       "title": "3.6 Limitations of Fixed Basis Functions",
@@ -575,8 +575,8 @@
     {
       "title": "5.5.2 Early stopping",
       "path": "pattern_recognition_machine_learning_cbishop/552_early_stopping.md",
-      "noteCount": 0,
-      "imageCount": 6
+      "noteCount": 2,
+      "imageCount": 7
     },
     {
       "title": "5.7 Ex",
@@ -597,6 +597,6 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 523,
+  "totalNotes": 524,
   "totalImages": 879
 }
