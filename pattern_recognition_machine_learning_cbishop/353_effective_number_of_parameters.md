@@ -1,6 +1,6 @@
 # 3.5.3 Effective number of parameters
 
-📊 **Progress:** `5` Notes | `16` Screenshots | `5` AI Reviews
+📊 **Progress:** `5` Notes | `17` Screenshots | `5` AI Reviews
 
 ---
 <a id="node-ca7uttw"></a>
@@ -20,6 +20,8 @@
 <p align="center"><kbd><img src="assets/2ecbs6na97.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/fqgeywfet2p.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/poka8b9o889.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Ok, tiếp theo gs nói kết quả 3.92 sẽ cho ta một góc nhìn hay ho. Đầu tiên ta sẽ xem xét contours (tức level set) của hàm likelihood.
@@ -332,13 +334,132 @@
 >
 >
 >
+> ⇒ T(𝐱) = T(2 𝐯1 + 3 𝐯2) = 2T(𝐯1) + 3T(𝐯2)
 >
 >
 >
+> \[T(𝐱)\]\_w = \[2T(𝐯1) + 3T(𝐯2)\]\_w = 2 \[T(𝐯1)\]\_w + 3 \[T(𝐯2)\]\_w
 >
 >
 >
+> ---
 >
+>
+>
+> 𝐀 \[𝐱\]\_v = \[T(𝐱)\]\_w = 2 \[T(𝐯1)\]\_w + 3 \[T(𝐯2)\]\_w
+>
+>
+>
+> 𝐀 \[𝐱\]\_v = 2 \[T(𝐯1)\]\_w + 3 \[T(𝐯2)\]\_w
+>
+>
+>
+> 𝐀 (2,3)ᵀ = 2𝐜1 + 3𝐜2
+>
+>
+>
+> 2𝐜1 + 3𝐜2 = 2 \[T(𝐯1)\]\_w + 3 \[T(𝐯2)\]\_w
+>
+>
+>
+> ⇒ 𝐜1 = \[T(𝐯1)\]\_w,  𝐜2 = \[T(𝐯2)\]\_w
+>
+>
+>
+> 𝐜1 = (A11, A21): 
+>
+>
+>
+> ⇒ T(𝐯1) = A11 𝐰1 + A21 𝐰2
+>
+>
+>
+> \[T(𝐯1)\]\_e = \[A11 𝐰1 + A21 𝐰2\]\_e  = A11\[𝐰1\]\_e + A21 \[𝐰2\]\_e
+>
+>
+>
+> 𝐜2 = (A12, A22): T(𝐯2) = A12 𝐰1 + A22 𝐰2
+>
+>
+>
+> \[T(𝐯2)\]\_e = \[ A12 𝐰1 + A22 𝐰2\]\_e = A12\[𝐰1\]\_e + A22\[𝐰2\]\_e
+>
+>
+>
+> Ghi lại:
+>
+>
+>
+> \[T(𝐯1)\]\_e = A11\[𝐰1\]\_e + A21 \[𝐰2\]\_e
+>
+>
+>
+> 𝐖  là matrix có hai cột là \[𝐰1\]\_e; \[𝐰2\]\_e
+>
+>
+>
+> \[T(𝐯1)\]\_e = 𝐖 𝐜1
+>
+>
+>
+> \[T(𝐯2)\]\_e = A12\[𝐰1\]\_e + A22\[𝐰2\]\_e
+>
+>
+>
+> \[T(𝐯2)\]\_e = 𝐖 𝐜2
+>
+>
+>
+> Đặt 𝐕 là matrix có hai cột \[T(𝐯1)\]\_e, \[T(𝐯2)\]\_e
+>
+>
+>
+> 𝐕 = 𝐖 𝐀
+>
+>
+>
+> 𝐀 = 𝐖⁻¹ 𝐕
+>
+> \
+> ----
+>
+> Change of basis matrix:
+>
+>
+>
+> 𝐀 \[𝐱\]\_v = \[𝐱\]\_w
+>
+>
+>
+> T(𝐱) = 𝐱
+>
+>
+>
+> 𝐀 = 𝐖⁻¹ 𝐕
+>
+>
+>
+> 𝐖  là matrix có hai cột là \[𝐰1\]\_e; \[𝐰2\]\_e, 𝐕 là matrix có hai cột \[𝐯1\]\_e, \[𝐯2\]\_e
+>
+>
+>
+> 𝐀 \[𝐱\]\_e = \[𝐱\]\_u
+>
+>
+>
+> 𝐀 = 𝐖⁻¹ 𝐕
+>
+>
+>
+> 𝐕 là matrix có hai cột \[𝐞1\]\_e = (1,0), \[𝐞2\]\_e (0,1): 𝐕 = 𝐈
+>
+>
+>
+> 𝐖  là matrix có hai cột là \[𝐮1\]\_e; \[𝐮2\]\_e: 𝐐
+>
+>
+>
+> 𝐀 = 𝐐⁻¹ 𝐈 = 𝐐⁻¹ = 𝐐ᵀ
 >
 >
 >
@@ -508,7 +629,9 @@
 >
 > Từ đó ta hiểu việc đặt 𝐲 = 𝐐ᵀ𝐰' bản chất chính là 𝐐ᵀ \[𝐰'\]\_e = \[𝐰'\]\_u, chuyển tọa độ của 𝐰' từ cơ sở 𝐞's sang cơ sở 𝐮's.
 
-📹 [Xem video trên YouTube](https://youtu.be/SHOlSWiXouE)
+📹 Video 1: [Tại sao đường đồng mức của likelihood là elip theo vectơ riêng? (phần 1)](https://youtu.be/SHOlSWiXouE)
+
+📹 Video 2: [Tại sao Q^T chuyển tọa độ sang hệ vectơ riêng u? (phần 2)](https://www.youtube.com/watch?v=nL-1X9-G1rk)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
