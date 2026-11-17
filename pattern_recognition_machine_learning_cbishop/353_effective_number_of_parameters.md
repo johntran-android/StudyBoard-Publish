@@ -654,9 +654,9 @@
 
 ### Số lượng tham số hiệu dụng
 
-<p align="center"><kbd><img src="assets/i69wgg61fcl.png" width="80%"></kbd></p>
-
 <p align="center"><kbd><img src="assets/qz5rc1h2jvj.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/i69wgg61fcl.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Rồi, khi đã hiểu vì sao λ (eigenvalue của β𝚽ᵀ𝚽) cũng như cái vụ contours của L(𝐰|𝐭) có hình ellipses. Ta sẽ có thể nói về cái interpretation của kết quả 3.92:
@@ -671,31 +671,167 @@
 >
 >
 >
-> Như sau: Dễ hiểu thôi ví dụ λ1 và λ2 là eigenvalue, với λ1 nhỏ hơn nhiều so với α và λ2 thì ngược lại (nhắc lại cho nhớ: α là tham số của prior distribution của 𝐰, nơi ta assume nó là 𝒩(0, (1/α)𝐈)
+> Viết lại công thức 𝐰ML và 𝐰MAP
 >
 >
 >
-> Vậy thì hiện tượng xảy ra sẽ là như sau:
+> Công thức 3.15:
 >
 >
 >
-> Vì λ1 ≪ α, nên λ1 / (α + λ1) sẽ rất nhỏ, ≈ 0. Và hình vẽ minh họa cho thấy w1 của 𝐰MAP cũng bị đẩy về gần 0.
+> 𝐰ML = (𝚽ᵀ𝚽)⁻¹ 𝚽ᵀ𝐭 ⇒ 𝚽ᵀ𝐭 = (𝚽ᵀ𝚽) 𝐰ML
 >
 >
 >
-> Còn λ2 ≫ α, nên λ2 / (α + λ2) sẽ gần 1. HÌnh vẽ cho thấy w2 của 𝐰MAP bị đẩy về gần 𝐰ML.
+> Công thức 3.53 (xem link):
 >
 >
 >
-> (w1, w2 của 𝐰MAP, nên hiểu là \[𝐰MAP\]\_u tức tọa độ của 𝐰MAP trong hệ trục đã đổi sang eigenbasis 𝐮1, 𝐮2 của β𝚽ᵀ𝚽)
+> 𝐰MAP = 𝐦N = β𝐒N𝚽ᵀ𝐭 = β(α𝐈 + β𝚽ᵀ𝚽)⁻¹𝚽ᵀ𝐭
 >
 >
 >
-> Vậy có nghĩa là gì:
+> ⇒ 𝐰MAP = β(α𝐈 + β𝚽ᵀ𝚽)⁻¹(𝚽ᵀ𝚽) 𝐰ML
 >
 >
 >
-> Ở cái hướng eigenvector u1 của 𝚽ᵀ𝚽 mà eigenvalue nhỏ (ví dụ λ1), chính là cái hướng mà cái contour hình ellipse bị kéo giãn nhiều, và λ1 nhỏ tức độ cong theo hướng này nhỏ để bề mặt cái chuông Gaussian này sẽ dốc xuống thoai thoải. Thì 𝐰MAP_1 sẽ gần với 0.
+> đổi sang hệ trục tọa độ cơ sở 𝐮's:
+>
+>
+>
+> \[𝐰\]\_u = 𝐐ᵀ \[𝐰\]\_e ⇔ \[𝐰\]\_e = 𝐐 \[𝐰\]\_u
+>
+>
+>
+> 𝐰MAP = β(α𝐈 + β𝚽ᵀ𝚽)⁻¹(𝚽ᵀ𝚽) 𝐰ML
+>
+>
+>
+> Thay 𝐰MAP =  𝐐 𝐲MAP 
+>
+>
+>
+> 𝐐 𝐲MAP = β(α𝐈 + β𝚽ᵀ𝚽)⁻¹(𝚽ᵀ𝚽) 𝐐 𝐲ML
+>
+>
+>
+> 𝐐 orthogonal, vuông, các cột là 𝐮1, 𝐮2: norm = 1, 𝐮i ᵀ 𝐮j = 0 với i khác j. Thành 𝐐ᵀ = 𝐐⁻¹
+>
+>
+>
+> 𝐲MAP = 𝐐ᵀ (α𝐈 + β𝚽ᵀ𝚽)⁻¹ (β𝚽ᵀ𝚽) 𝐐 𝐲ML
+>
+>
+>
+> ⇔ 𝐲MAP = 𝐐ᵀ (α𝐈 + 𝐐𝚲𝐐ᵀ)⁻¹ 𝐐𝚲𝐐ᵀ 𝐐 𝐲ML
+>
+>
+>
+> Xét α𝐈 + 𝐐𝚲𝐐ᵀ = α𝐐𝐐ᵀ + 𝐐𝚲𝐐ᵀ
+>
+>
+>
+> = α𝐐𝐈𝐐ᵀ + 𝐐𝚲𝐐ᵀ = 𝐐α𝐈𝐐ᵀ + 𝐐𝚲𝐐ᵀ
+>
+>
+>
+> = 𝐐(α𝐈 + 𝚲)𝐐ᵀ
+>
+>
+>
+> ⇒ .. ⇔ 𝐲MAP = 𝐐ᵀ \[𝐐(α𝐈 + 𝚲)𝐐ᵀ\]⁻¹ 𝐐𝚲𝐐ᵀ 𝐐 𝐲ML
+>
+>
+>
+> (nếu 𝐀,𝐁 invertible (𝐀𝐁)⁻¹ = 𝐁⁻¹𝐀⁻¹)
+>
+>
+>
+> = 𝐐ᵀ \[𝐐(α𝐈 + 𝚲)𝐐ᵀ\]⁻¹ 𝐐𝚲𝐐ᵀ 𝐐 𝐲ML
+>
+>
+>
+> = 𝐐ᵀ (𝐐ᵀ)⁻¹\[𝐐(α𝐈 + 𝚲)\]⁻¹ 𝐐𝚲𝐐ᵀ 𝐐 𝐲ML
+>
+>
+>
+> = \[𝐐(α𝐈 + 𝚲)\]⁻¹ 𝐐𝚲 𝐲ML
+>
+>
+>
+> = (α𝐈 + 𝚲)⁻¹𝐐⁻¹ 𝐐𝚲 𝐲ML
+>
+>
+>
+> = (α𝐈 + 𝚲)⁻¹𝚲 𝐲ML
+>
+>
+>
+> Vậy 𝐲MAP = (α𝐈 + 𝚲)⁻¹𝚲 𝐲ML
+>
+>
+>
+> α𝐈 + 𝚲 = diag(α+λ1, α+λ2,...)
+>
+>
+>
+> ⇒ (α𝐈 + 𝚲)⁻¹ = diag(1/(α+λ1), 1/(α+λ2),...)
+>
+>
+>
+> (α𝐈 + 𝚲)⁻¹𝚲 = diag(λ1/(α+λ1), λ2/(α+λ2),...)
+>
+>
+>
+> Vậy 𝐲MAP = (α𝐈 + 𝚲)⁻¹𝚲 𝐲ML
+>
+>
+>
+> ⇔ 𝐲MAP_1 = λ1/(α+λ1) 𝐲ML_1
+>
+>
+>
+> , 𝐲MAP_2 = λ2/(α+λ2) 𝐲ML_2, ...
+>
+>
+>
+> Hay: 𝐲MAP_i = λi/(α+λi) 𝐲ML_i
+>
+>
+>
+> Nếu làm theo sách, cứ dùng 𝐰, và tự hiểu đây là tọa độ trong cơ sở 𝐮 (vì vốn dĩ 𝐰MAP và 𝐰ML ban đầu là tọa độ trong cơ sở 𝐞's, phải nhân với 𝐐ᵀ mới chuyển thành tọa độ cơ sở 𝐮's) thì ta có:
+>
+>
+>
+> 𝐰MAP_i = λi/(α+λi) 𝐰ML_i
+>
+>
+>
+> Và từ đó ta sẽ hiểu hai ý sau:
+>
+>
+>
+> nếu α ≫ λi thì λi/(α+λi) ≈ 0, khiến 𝐰MAP_i = một phần nhỏ của 𝐰ML_i. Ví dụ α ≫ λ1 như trong hình khiến tạo độ 𝐰MAP_1 sẽ nhỏ)
+>
+>
+>
+> nếu α ≪ λi, thì λi/(α+λi) ≈ 1 khiến 𝐰MAP_i ≈ 𝐰ML_i. Ví dụ như trong hình, α ≪ λ2 nên khiến 𝐰MAP_2 gần với 𝐰ML_2
+>
+>
+>
+> Và như vậy trong hai tham số w1, w2 của 𝐰MAP, w1 bị bóp thành 0, coi như bị phế. Thành ra con số γ chính là số lượng param không bị phế, (vì khi ≈ 0 thì coi như ko có), gọi là effective parameters, còn gọi là well-determined parameters.
+>
+>
+>
+> Và như vậy, ta có thể hiểu đại khái rằng, prior sẽ khiến cho mô hình phế đi các tọa độ ứng với các trục ko cần thiết (là các parameter w ứng với hướng mà tác động ko mạnh tới likelihood (insensitive).
+>
+>
+>
+> Còn về mặt trực giác có thể hiểu thế này: 
+>
+>
+>
+> Ở cái hướng eigenvector u1 của β𝚽ᵀ𝚽 mà eigenvalue nhỏ (ví dụ λ1), chính là cái hướng mà cái contour hình ellipse bị kéo giãn nhiều, và λ1 nhỏ tức độ cong theo hướng này nhỏ, và bề mặt cái chuông Gaussian này sẽ dốc xuống thoai thoải. Thì 𝐰MAP_1 sẽ gần với 0.
 >
 >
 >
@@ -703,7 +839,7 @@
 >
 >
 >
-> Mà 𝐰MAP_1 bị bóp về gần 0 có nghĩa là sao mà 𝐰MAP_2 sẽ gần với 𝐰ML_2 thì có nghĩa là sao?
+> Mà 𝐰MAP_1 bị bóp về gần 0 có nghĩa là sao mà 𝐰MAP_2 sẽ gần với 𝐰ML_2.
 >
 >
 >
@@ -720,34 +856,23 @@
 >
 >
 > Còn ở hướng u2, likelihood có mức thay đổi nhanh (dốc cắm đầu theo phương u2) thì lại giống như lực kéo về 𝐰ML lấn át lực kéo về prior mean. Do đó, w2 của 𝐰MAP bị kéo về w2 của 𝐰ML
->
->
->
-> Đó là góc nhìn thứ nhất.
->
->
->
-> Và insight thứ hai là, γ = Σi λi / (α + λi) = λ1 / (α + λ1) + λ2 / (α + λ2), thì coi như chỉ = λ2 / (α + λ2) (vì cái kia ≈ 0 rồi). Và như vậy trong hai tham số w1, w2 của 𝐰MAP, w1 bị bóp thành 0, coi như bị phế. Thành ra con số γ chính là số lượng param không bị phế, (vì khi ≈ 0 thì coi như ko có), gọi là effective parameters, còn gọi là well-determined parameters.
->
->
->
-> Và như vậy, ta có thể hiểu đại khái rằng, prior sẽ khiến cho mô hình phế đi các tọa độ ứng với các trục ko cần thiết (là các parameter w ứng với hướng mà tác động ko mạnh tới likelihood (insensitive).
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=csrfieA6pNk)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú thể hiện sự thấu hiểu rất sâu sắc và trực quan về bản chất hình học của nghiệm MAP, cơ chế 'giằng co' giữa Prior và Likelihood, cũng như ý nghĩa của số tham số hiệu dụng gamma.
+> Ghi chú xuất sắc! Bạn đã tự thực hiện đầy đủ phép biến đổi đại số tuyến tính để chứng minh công thức thành phần trong cơ sở riêng và đưa ra trực giác hình học kéo-giằng rất chuẩn xác giữa Prior và Likelihood.
 >
 > **✓ Strengths**
-> - Hiểu rất chính xác bản chất hệ tọa độ: nhận ra w1, w2 ở đây là tọa độ biểu diễn theo cơ sở vector riêng (eigenbasis) của ma trận Hessian thay vì hệ trục gốc ban đầu.
-> - Hình tượng hóa xuất sắc sự tương tác giữa Likelihood và Prior như hai 'lực kéo' tỉ lệ với độ cong (curvature) theo từng hướng vector riêng.
-> - Nắm trọn vẹn bản chất của đại lượng gamma như số lượng tham số được dữ liệu xác định chặt chẽ (well-determined/effective parameters).
+> - Biến đổi ma trận và chuyển cơ sở trực giao Q chính xác từng bước từ wMAP sang hệ tọa độ theo các vector riêng.
+> - Giải thích rất sáng rõ vai trò của tỷ số λ_i / (α + λ_i) trong hai trường hợp cực hạn (α >> λ_i và α << λ_i).
+> - Trực giác cơ học về 'lực kéo' và độ cong (curvature) giữa Prior và Likelihood rất trực quan và bám sát bản chất toán học.
 >
 > **💡 Deeper notes**
-> - Về mặt thuật ngữ chuẩn xác, hàm Likelihood p(t|w) khi xét theo biến w có dạng tỉ lệ với một hàm Gaussian (proportional to a Gaussian), nhưng bản thân nó không phải là một hàm mật độ xác suất chuẩn hóa trên không gian w (tích phân theo w không nhất thiết bằng 1).
-> - Mối quan hệ định lượng giữa MAP và ML trong hệ cơ sở riêng được biểu diễn trực tiếp bằng công thức: w_{i, MAP} = [lambda_i / (lambda_i + alpha)] * w_{i, ML}, từ đó thấy ngay khi lambda_i >> alpha thì w_{i, MAP} -> w_{i, ML}, còn khi lambda_i << alpha thì w_{i, MAP} -> 0.
+> - Về mặt thuật ngữ, likelihood function L(w) theo biến w có dạng hàm mũ của một dạng toàn phương (tương tự đồ thị Gauss), nhưng nó không phải là một hàm mật độ xác suất chuẩn hóa trên không gian tham số w trừ khi được chuẩn hóa thành posterior tương ứng với prior phẳng.
 
-**🔗 See also:** [Early Stopping and Weight Decay](./552_early_stopping.md#node-wipwskt)
+**🔗 See also:** [Early Stopping and Weight Decay](./552_early_stopping.md#node-wipwskt) · [Hessian of Regularized Error Function](./351_evaluation_of_the_evidence_function.md#node-vpu7vqs) · [Gaussian Prior and Posterior Parameters](./331_bayesian_linear_regression.md#node-nt82rck) · [Maximum Likelihood and Gradient](./311_maximum_likelihood_and_least_squares.md#node-ogc31vz)
 
 <br>
 
