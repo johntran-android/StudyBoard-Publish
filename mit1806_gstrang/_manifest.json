@@ -220,5 +220,103 @@
     }
   ],
   "totalNotes": 1181,
-  "totalImages": 1298
+  "totalImages": 1298,
+  "videos": [
+    {
+      "id": "x6hV9XYOkH8",
+      "title": "Tại sao ma trận khử E cho biết cơ sở Left Nullspace?",
+      "uploadedAt": 1793495921144,
+      "at": [
+        "LECTURE 10: THE FOUR FUNDAMENTAL SUBSPACES"
+      ]
+    },
+    {
+      "id": "FGeUpJFwQFM",
+      "title": "Tại sao khử Gauss đổi Column Space nhưng giữ nguyên Row Space?",
+      "uploadedAt": 1793470183626,
+      "at": [
+        "LECTURE 10: THE FOUR FUNDAMENTAL SUBSPACES"
+      ]
+    },
+    {
+      "id": "duV8R1iN4Ok",
+      "title": "Vì sao các cột pivot của U xác định cơ sở cho C(A)?",
+      "uploadedAt": 1793465978161,
+      "at": [
+        "LECTURE 10: THE FOUR FUNDAMENTAL SUBSPACES"
+      ]
+    },
+    {
+      "id": "fdjo2Nbwk2E",
+      "title": "Tại sao Left Nullspace vuông góc với Column Space?",
+      "uploadedAt": 1792252122658,
+      "at": [
+        "LECTURE 10: THE FOUR FUNDAMENTAL SUBSPACES"
+      ]
+    },
+    {
+      "id": "m3w2ZyvA8X8",
+      "title": "Hai vector còn lại có là cơ sở của không gian nào?",
+      "uploadedAt": 1792040142582,
+      "at": [
+        "LECTURE 9: INDEPENDECE, BASIS, AND DIMENSION"
+      ]
+    },
+    {
+      "id": "WdqD4oyv45k",
+      "title": "Tại sao Basis là tập vector \"không dư, không thiếu\"?",
+      "uploadedAt": 1792039609711,
+      "at": [
+        "LECTURE 9: INDEPENDECE, BASIS, AND DIMENSION"
+      ]
+    },
+    {
+      "id": "RlPbmEXWyTM",
+      "title": "Khi nào các vector v1,...,vl span một không gian vector?",
+      "uploadedAt": 1792024407738,
+      "at": [
+        "LECTURE 9: INDEPENDECE, BASIS, AND DIMENSION"
+      ]
+    },
+    {
+      "id": "NrYt3dlnowY",
+      "title": "Tại Sao Rank = n Thì Không Có Biến Tự Do?",
+      "uploadedAt": 1792022319119,
+      "at": [
+        "LECTURE 9: INDEPENDECE, BASIS, AND DIMENSION"
+      ]
+    },
+    {
+      "id": "ogUUI-lxqk0",
+      "title": "Vì sao 3 vector trong R² luôn phụ thuộc tuyến tính?",
+      "uploadedAt": 1791951066643,
+      "at": [
+        "LECTURE 9: INDEPENDECE, BASIS, AND DIMENSION"
+      ]
+    },
+    {
+      "id": "GCwrn_86Gos",
+      "title": "Tại sao tập chứa vector không luôn phụ thuộc tuyến tính?",
+      "uploadedAt": 1791950686500,
+      "at": [
+        "LECTURE 9: INDEPENDECE, BASIS, AND DIMENSION"
+      ]
+    },
+    {
+      "id": "OpXy96ENApE",
+      "title": "Vì sao x1 phụ thuộc khi tạo được từ x2 và x3?",
+      "uploadedAt": 1791949409848,
+      "at": [
+        "LECTURE 9: INDEPENDECE, BASIS, AND DIMENSION"
+      ]
+    },
+    {
+      "id": "OeiSCA8vnoU",
+      "title": "Tại Sao Ax=0 Có Nghiệm Khác 0 Khi Hàng Ít Hơn Cột?",
+      "uploadedAt": 1791948407540,
+      "at": [
+        "LECTURE 9: INDEPENDECE, BASIS, AND DIMENSION"
+      ]
+    }
+  ]
 }
