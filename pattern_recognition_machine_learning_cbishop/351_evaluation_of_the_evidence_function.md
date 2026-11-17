@@ -510,7 +510,7 @@
 > **💡 Deeper notes**
 > - A = αI + βΦᵀΦ luôn là ma trận đối xứng xác định dương (symmetric positive definite) do α > 0 và βΦᵀΦ nửa xác định dương, đảm bảo A luôn khả nghịch và E(w) có cực tiểu toàn cục duy nhất tại w = m_N.
 
-**🔗 See also:** [Gaussian Prior and Posterior Parameters](./331_bayesian_linear_regression.md#node-nt82rck) · [Section 3.5.2 Maximizing the Evidence Function](./352_maximizing_the_evidence_function.md#node-nc5qxnz) · [Ex 3.21 Log Determinant Derivative Identity](./37_exercises.md#node-3ldsqi5)
+**🔗 See also:** [Gaussian Prior and Posterior Parameters](./331_bayesian_linear_regression.md#node-nt82rck) · [Section 3.5.2 Maximizing the Evidence Function](./352_maximizing_the_evidence_function.md#node-nc5qxnz) · [Ex 3.21 Log Determinant Derivative Identity](./37_exercises.md#node-3ldsqi5) · [Số lượng tham số hiệu dụng](./353_effective_number_of_parameters.md#node-jdgevif)
 
 <br>
 
