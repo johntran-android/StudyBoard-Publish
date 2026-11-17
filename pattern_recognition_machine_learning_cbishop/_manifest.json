@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1794883813772,
+  "publishedAt": 1794941901150,
   "sections": [
     {
       "title": "📋 Overview",
@@ -600,6 +600,15 @@
   "totalNotes": 524,
   "totalImages": 880,
   "videos": [
+    {
+      "id": "csrfieA6pNk",
+      "title": "Tại sao λ và α kéo w_MAP về 0 hay w_ML? (phần 3)",
+      "uploadedAt": 1794938099276,
+      "at": [
+        "Section 3.5.3 Effective Number of Parameters",
+        "3.5.3 Effective number of parameters"
+      ]
+    },
     {
       "id": "xjTMaLGPvWY",
       "title": "Tại sao đường đồng mức Likelihood là elip và trị riêng λ đo độ cong?",
