@@ -1,6 +1,6 @@
 # 11.3 Simple Linear Regression
 
-📊 **Progress:** `32` Notes | `59` Screenshots | `32` AI Reviews
+📊 **Progress:** `35` Notes | `64` Screenshots | `35` AI Reviews
 
 ---
 <a id="node-m4lr6nj"></a>
@@ -2568,7 +2568,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 > - Khi xét tính độc lập từ tính không tương quan (uncorrelated), điều kiện cần là các biến ngẫu nhiên phải có phân phối chuẩn đồng thời (jointly normal); trong mô hình hồi quy, điều này được đảm bảo do giả định các sai số/quan sát độc lập ngay từ đầu.
 > - Đoạn cuối bạn ghi chú sẽ dùng Bổ đề 11.3.2 để tính Cov(alpha mũ, beta mũ), lưu ý bổ đề này thường dựa trên công thức Cov(sum a_i Y_i, sum b_i Y_i) = sigma^2 sum a_i b_i khi các Y_i độc lập.
 
-**🔗 See also:** [Application of Lemma 11.2.7](#node-q19qd3o)
+**🔗 See also:** [Application of Lemma 11.2.7](#node-q19qd3o) · [Estimation and Prediction at Specified x](#node-y5p4urs)
 
 <br>
 
@@ -3421,6 +3421,526 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 > - Vì thống kê T tuân theo phân phối liên tục (Student's t), việc lấy dấu bất đẳng thức ngặt (<, >) hay không ngặt (≤, ≥) ở biên không làm thay đổi độ đo xác suất cũng như độ tin cậy của khoảng.
 
 **🔗 See also:** [Liên hệ Kiểm định - Tin cậy](./92_methods_of_finding_interval_estimators.md#node-v7ov102)
+
+<br>
+
+<a id="node-y5p4urs"></a>
+
+###### Estimation and Prediction at Specified x
+
+<p align="center"><kbd><img src="assets/amgmjco2dkd.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/bvqmollmw5s.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn đầu đại khái là như sau:
+>
+>
+>
+> Ôn nhanh cái gọi là conditional normal model: Đây là một mô hình trong đó ta giả định dữ liệu quan sát được như sau:
+>
+>
+>
+> x1,x2,..là các gía trị cố định đã biết.
+>
+>
+>
+> y1,y2,...là các giá trị quan sát được của các biến ngẫu nhiên Y1, Y2,...độc lập, và có phân phối:
+>
+>
+>
+> Yi \~ n(α + βxi, σ²)
+>
+>
+>
+> Và cách nói tương đương của mô hình này là:
+>
+>
+>
+> y1, y2,...là giá trị quan sát được của Yi = α + βxi + εi
+>
+>
+>
+> trong đó εi indepdent \~ n(0, σ²)
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy thì giả sử ta có bộ giá trị quan sát (x1,y1),....(xn,yn) và sau khi đã estimate ra α, β, σ² (tức là đã có α̂, β̂, là hai cái MLE / BLUE của α, β. cũng như S², là unbiased estimator của σ²). Thì bấy giờ, sẽ có hai bài toán mà ta có thể quan tâm:
+>
+>
+>
+> Đó là cho x = x0, ta muốn point estimate mean của Y: tức là E\[Y|x0\] = μ(x0) = α + βx0
+>
+>
+>
+> (mà dĩ nhiên một point estimator hiển nhiên của μ(x0) = E\[Y|x0\] chính là lắp estimator của α và β vô: μ̂(x0) = α̂ + β̂ x0)
+>
+>
+>
+> (cũng y như trong Bishop, sau khi đã có MLE của 𝐰: 𝐰ML, ta có MLE của μ: 𝐰MLᵀ Φ(𝐱i) trong mô hình nơi ta giả định Ti \~ 𝒩(μ(𝐱i) = 𝐰ᵀΦ(𝐱i), 1/β))
+>
+>
+>
+> Hoặc là ta muốn dự đoán giá trị của Y với x0 này.
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy đầu tiên, xét bài toán inference thứ nhất (bài toán inference thứ hai kia, chính là prediction trong ML)
+>
+>
+>
+> Dạng inference thứ nhất: point estimation:
+>
+>
+>
+> Như đã nói, một point estimator dễ thấy cho E\[Y|x0\] là α̂ + β̂ x0.
+>
+>
+>
+> Và ta sẽ tính mean, variance của nó để đánh giá estimator này.
+>
+>
+>
+> Dễ thấy α̂ + β̂ x0 cũng là unbiased estimator cho E\[Y|x0\] = μ = α + βx0 vì α̂, β̂ đều là unbiased estimator cho α và β.
+>
+>
+>
+> W(𝐗) là estiamator cho θ: Bias của W = E\[W(𝐗)\] - θ,
+>
+>
+>
+> Var(α̂ + β̂ x0) thì tính ra σ²\[1/n + (x0 - x̄)²/Sxx\], có thể tính sau.
+>
+>
+>
+> ---
+>
+>
+>
+> Dạng inference thứ hai: interval estimator.
+>
+>
+>
+> Lập luận là dùng 11.3.3 để có (α̂, β̂ ) độc lập với S². Nên S² cũng độc lập với α̂ + β̂ x0
+>
+>
+>
+> Rồi α̂ và β̂ đều là linear function của Y1,...Yn. (nên α̂ , β̂ cũng là normal) và tới đây nên α̂ + β̂ x0 cũng là linear function của Y1,...Yn, nên α̂ + β̂ x0 cũng là biến normal.
+>
+>
+>
+> Có mean = E\[α̂\] + x0 E\[β̂ \] = α + βx0, variance = σ²\[1/n + (x0 - x̄)²/Sxx\]
+>
+>
+>
+> Và như vậy xét statistic sau:
+>
+>
+>
+> \[α̂ + β̂ x0 - (α + βx0)\] / S√\[1/n + (x0 - x̄)²/Sxx\]
+>
+>
+>
+> = \[α̂ + β̂ x0 - (α + βx0)\] / {(S/σ)(σ√\[1/n + (x0 - x̄)²/Sxx\])}
+>
+>
+>
+> = \[α̂ + β̂ x0 - (α + βx0)\] / (σ√\[1/n + (x0 - x̄)²/Sxx\]) / (S/σ)
+>
+>
+>
+> Xét U = \[α̂ + β̂ x0 - (α + βx0)\] / σ√\[1/n + (x0 - x̄)²/Sxx\] thì chính là gì?
+>
+>
+>
+> Chính là {(α̂ + β̂ x0) - E\[α̂ + β̂ x0\]} / STD\[α̂ + β̂ x0\], với α̂ + β̂ x0 là biến normal.
+>
+>
+>
+> Do đó đây (U) chính là một biến ngẫu nhiên n(0,1)
+>
+>
+>
+> ---
+>
+>
+>
+> Còn (S/σ)? S² = \[n/(n-2)\]σ̂ ² thì theorem 11.3.3 ta đã chứng minh (n-2) S²/σ² \~ χ²\_n-2
+>
+>
+>
+> Như vậy: S/σ chính là √\[(n-2) S²/σ²/(n-2)\], căn bậc hai của một biến χ²\_n-2 chia cho bậc tự do của nó.
+>
+>
+>
+> Vậy, theo định nghĩa của phân phối student's t: U/(S/σ) = n(0,1) / √(χ²\_p/p) và U, S độc lập thì đây chính là biến ngẫu nhiên có phân phối student t's bậc tự do n-2: T_n-2.
+>
+>
+>
+> Do đó \[α̂ + β̂ x0 - (α + βx0)\] / S√\[1/n + (x0 - x̄)²/Sxx\] \~ t_n-2.
+>
+>
+>
+> W(𝐘, α, β) = \[α̂ (𝐘)+ β̂(𝐘) x0 - (α + βx0)\] / S(𝐘)√\[1/n + (x0 - x̄)²/Sxx\]
+>
+>
+>
+> pivot quantity
+>
+>
+>
+>
+>
+>
+>
+> Và đây là một pivot quantity, vì nó là hàm của 𝐘 và cả E\[Y|x0\] = α + βx0, nhưng phân phối không phụ thuộc α và β. Từ đó ta sẽ có thể dùng để xây dựng một ước lượng khoảng cho E\[Y|x0\] = α + βx0 có xác suất bao phụ 1-α. Như sau:
+>
+>
+>
+> Xây dựng level α' (dùng α' để tránh lẫn với α) cho bài toán kiểm định H0: μ = μ0 vs H1: μ ≠ μ0
+>
+>
+>
+> Xét bài toán testing H0: θ = θ0 vs H1: θ ≠ θ0
+>
+>
+>
+> Với mọi θ0, rejection region: ℛ(θ0) = {𝐲: reject H0}, 𝒜 = {𝐲: not reject H0} có level α
+>
+>
+>
+> Dễ thấy: ℛ(μ0) = {𝐲: |\[α̂ + β̂ x0 - μ0\] / S√\[1/n + (x0 - x̄)²/Sxx\]| &gt; t_n-2, α'/2} sẽ là level α' rejection region
+>
+>
+>
+> H0: θ ∈ Θ0 vs H1: θ ∉ Θ0
+>
+>
+>
+> Xác xuất mắc sai lầm loại 1 không vượt quá α
+>
+>
+>
+> Type I error = reject H0 (𝐗 ∈ R), trong khi θ ∈ Θ0
+>
+>
+>
+> P\_θ(𝐗 ∈ R) khi θ ∈ Θ0
+>
+>
+>
+> sup\_θ∈Θ0 P\_θ(𝐗 ∈ R) ≤ α
+>
+>
+>
+> ---
+>
+>
+>
+> với mọi μ0.
+>
+>
+>
+> Vì sup\_ μ∈{μ0} P\_μ(𝐘 ∈ ℛ(μ0)) = P\_μ0(𝐘 ∈ ℛ(μ0))
+>
+>
+>
+> = P\_μ0(|\[α̂ + β̂ x0 - μ0\] / S√\[1/n + (x0 - x̄)²/Sxx\]| ≥ t_n-2, α'/2)
+>
+>
+>
+> = P\_μ0(|T_n-2| ≥ t_n-2, α'/2)
+>
+>
+>
+> = P(|T_n-2| ≥ t_n-2, α'/2) (hàm số này hoàn toàn không còn phụ thuộc μ0)
+>
+>
+>
+> = P(T_n-2 ≤ -t_n-2, α'/2 or t_n-2, α'/2 ≤ T_n-2)
+>
+>
+>
+> = P(T_n-2 ≤ -t_n-2, α'/2) + P(t_n-2, α'/2 ≤ T_n-2)
+>
+>
+>
+> = α'/2 + α'/2 = α'
+>
+>
+>
+> Vậy ℛ(μ0) là level α' rejection region của bài toán kiểm định H0: μ = μ0 với mọi μ0
+>
+>
+>
+> Nên 𝒜(μ0) = {𝐲: |\[α̂ + β̂ x0 - μ0\] / S√\[1/n + (x0 - x̄)²/Sxx\]| ≤ t_n-2, α'/2}} là acceptance region của level α test của bài toán kiểm định H0: μ = μ0 với mọi μ0
+>
+>
+>
+> Theo định lí đảo ngược phép kiểm định, thì nếu define tập sau đây:
+>
+>
+>
+> C(𝐲) = {μ: |\[α̂ + β̂ x0 - μ\] / S√\[1/n + (x0 - x̄)²/Sxx\]| ≤ t_n-2, α'/2}
+>
+>
+>
+> = {μ: -t_n-2, α'/2 ≤ \[α̂ + β̂ x0 - μ\] / S√\[1/n + (x0 - x̄)²/Sxx\] ≤ t_n-2, α'/2}
+>
+>
+>
+> = {μ: -t_n-2, α'/2 × S√\[1/n + (x0 - x̄)²/Sxx\] ≤ \[α̂ + β̂ x0 - μ\] ≤ t_n-2, α'/2 × S√\[1/n + (x0 - x̄)²/Sxx\]}
+>
+>
+>
+> = {μ: μ ≤ α̂ + β̂ x0 + t_n-2, α'/2 × S√\[1/n + (x0 - x̄)²/Sxx\] ; α̂ + β̂ x0 - t_n-2, α'/2 × S√\[1/n + (x0 - x̄)²/Sxx\] ≤ μ}
+>
+>
+>
+> = {μ: α̂ + β̂ x0 - t_n-2, α'/2 × S√\[1/n + (x0 - x̄)²/Sxx\] ≤ μ ≤ α̂ + β̂ x0 + t_n-2, α'/2 × S√\[1/n + (x0 - x̄)²/Sxx\]}
+>
+>
+>
+> = {μ: α̂(𝐲) + β̂(𝐲) x0 - t_n-2, α'/2 × S(𝐲)√\[1/n + (x0 - x̄)²/Sxx\] ≤ μ ≤ α̂ (𝐲)+ β̂(𝐲) x0 + t_n-2, α'/2 × S(𝐲)√\[1/n + (x0 - x̄)²/Sxx\]}
+>
+>
+>
+> Và C(𝐘) = \[α̂(𝐘) + β̂(𝐘)x0 - t_n-2, α'/2 × S(𝐘)√\[1/n + (x0 - x̄)²/Sxx\]; α̂(𝐘) + β̂(𝐘) x0 + t_n-2, α'/2 × S(𝐘)√\[1/n + (x0 - x̄)²/Sxx\]\]
+>
+>
+>
+> là 1-α' confidence interval của μ = α + βx0
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=Gyi8uj3s0e4)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, nắm vững bản chất toán học từ mô hình hồi quy, cấu trúc thống kê t-Student đến kỹ thuật đảo ngược phép kiểm định/pivot để tìm khoảng tin cậy.
+>
+> **✓ Strengths**
+> - Phân tích rất cẩn thận cấu trúc của thống kê t thông qua tỉ số giữa biến chuẩn tắc n(0,1) và căn của biến khi-bình phương chia bậc tự do.
+> - Chủ động đổi mức ý nghĩa thành α' để tránh nhầm lẫn ký hiệu với hệ số chặn α của mô hình hồi quy.
+> - Lập luận logic chặt chẽ khi liên hệ giữa vùng bác bỏ, vùng chấp nhận của kiểm định giả thuyết và định lý đảo ngược để xây dựng khoảng tin cậy.
+>
+> **💡 Deeper notes**
+> - Phần biến đổi đại số của Var(α̂ + β̂ x₀) được bạn chủ động để lại tính sau; nếu cần chứng minh đầy đủ, việc sử dụng Cov(α̂, β̂) = -x̄σ²/Sxx và Var(α̂) = (σ²/n)(∑xᵢ²/Sxx) như trong giáo trình sẽ hoàn thiện 100% dẫn xuất.
+
+**🔗 See also:** [Theorem 11.3.3 Sampling Distributions of Estimators](#node-gytarq0)
+
+<br>
+
+<a id="node-bdew5im"></a>
+
+###### Definition 11.3.5 Prediction Interval
+
+<p align="center"><kbd><img src="assets/s7v67j9xcl.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/fga36b2wpgp.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Qua bài toán tiếp theo: prediction giá trị của Y với x = x0
+>
+>
+>
+> Ta gặp một định nghĩa mới: prediction interval có độ bao phủ 1-α: là random interval sao cho:
+>
+>
+>
+> P\_θ(Y ∈ \[L(𝐗), U(𝐗)\]) ≥ 1-α ∀θ
+>
+>
+>
+> Hiểu cái này thế nào?
+>
+>
+>
+> Vế trái ở đây là xác suất của event liên quan đến biến ngẫu nhiên Y và random interval L(𝐗), U(𝐗) 
+>
+>
+>
+> Vậy nếu interval này có xác suất mà Y nằm trong đó không nhỏ hơn 1-α thì nó gọi là 1-α prediction interval.
+>
+>
+>
+> Tác giả cho biết thường thì prediction interval rộng hơn confidence interval.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chuẩn xác định nghĩa toán học của khoảng dự báo (prediction interval) và ghi nhận đúng việc nó thường rộng hơn khoảng tin cậy.
+>
+> **✓ Strengths**
+> - Tóm tắt chính xác định nghĩa toán học của prediction interval từ Definition 11.3.5.
+> - Nhận diện đúng điểm khác biệt trực giác cốt lõi: khoảng dự báo thường rộng hơn khoảng tin cậy cùng mức độ tin cậy.
+>
+> **💡 Deeper notes**
+> - Khoảng dự báo rộng hơn khoảng tin cậy vì nó bao gồm hai nguồn bất định: sai số khi ước lượng tham số từ mẫu dữ liệu X và sự biến thiên nội tại (randomness) của chính biến ngẫu nhiên mới Y (trong khi tham số trong thống kê cổ điển là một hằng số cố định).
+
+<br>
+
+<a id="node-en1koyf"></a>
+
+###### Prediction Interval for New Observation
+
+<p align="center"><kbd><img src="assets/rkidoz5btrr.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là, giả sử từ phân phối n(α + βx0, σ²), ta có một quan sát mới Y0.
+>
+>
+>
+> Thì khi đó, ta có thể xây dựng một 1-α prediction interval cho Y0 như sau:
+>
+>
+>
+> Với data đã có (x1, y1),...,(xn,yn), và dưới mô hình conditional normal. Ta đã estimate α, β, σ² bởi α̂, β̂, S².
+>
+>
+>
+> Xét statistic: Y0 - (α̂ + β̂x0)
+>
+>
+>
+> Do Y0 độc lập Y1,...Yn, nên cũng độc lập với α̂ + β̂x0 là hàm của Y1,...Yn.
+>
+>
+>
+> Và Y0 - (α̂ + β̂x0) là linear function của hai biến normal độc lập:
+>
+>
+>
+> Y \~ n(α + βx0, σ²)
+>
+>
+>
+> α̂ + β̂x0 cũng \~ n(α + βx0, σ²(1/n + (x0 - x̄)²/Sxx))
+>
+>
+>
+> nên Y0 - (α̂ + β̂x0) cũng là một normal có:
+>
+>
+>
+> E\[Y0 - (α̂ + β̂x0)\] = EY0 - E(α̂ + β̂x0) = α + βx0 - (α + βx0) = 0
+>
+>
+>
+> Var(Y0 - (α̂ + β̂x0)) = VarY0 + Var (α̂ + β̂x0)
+>
+>
+>
+> = σ² + σ²(1/n + (x0 - x̄)²/Sxx)
+>
+>
+>
+> = σ²(1 + (1/n + (x0 - x̄)²/Sxx))
+>
+>
+>
+> Từ đó, Y0 - (α̂ + β̂x0) / σ√(1 + (1/n + (x0 - x̄)²/Sxx)) chính là một rv \~ n(0,1)
+>
+>
+>
+> ---
+>
+>
+>
+> Tương tự, theorem trước đây đã nói: (n-2)S²/σ² \~ χ²\_n-2
+>
+>
+>
+> nên S/σ là căn bậc hai của một χ²\_n-2 chia bậc tự do của nó
+>
+>
+>
+> Và do đó, theo định nghĩa của student t:
+>
+>
+>
+> U/(S/σ) = \[Y0 - (α̂ + β̂x0) / σ√(1 + (1/n + (x0 - x̄)²/Sxx))\] / (S/σ)
+>
+>
+>
+> = \[Y0 - (α̂ + β̂x0) / S√(1 + (1/n + (x0 - x̄)²/Sxx))\] chính là \~ t_n-2
+>
+>
+>
+> Xét xác suất
+>
+>
+>
+> P\_α,β,σ²(Y0 ∈ \[α̂ + β̂x0 - t_n-2,α/2 × S√(1 + (1/n + (x0 - x̄)²/Sxx))\]; α̂ + β̂x0 + t_n-2,α/2 × S√(1 + (1/n + (x0 - x̄)²/Sxx))\]\])
+>
+>
+>
+> thì ta sẽ thấy nó bằng:
+>
+>
+>
+> P\_α,β,σ²(α̂ + β̂x0 - t_n-2,α/2 × S√(1 + (1/n + (x0 - x̄)²/Sxx)) ≤ Y0 ≤ α̂ + β̂x0 + t_n-2,α/2 × S√(1 + (1/n + (x0 - x̄)²/Sxx)))
+>
+>
+>
+> = P\_α,β,σ²(α̂ + β̂x0 - t_n-2,α/2 × ≤ Y0/S√(1 + (1/n + (x0 - x̄)²/Sxx))\] ≤ α̂ + β̂x0 + t_n-2,α/2 )
+>
+>
+>
+> = P\_α,β,σ²((α̂ + β̂x0 - Y0)/S√(1 + (1/n + (x0 - x̄)²/Sxx)) ≤ t_n-2,α/2 ≤ (α̂ + β̂x0 - Y0)/S√(1 + (1/n + (x0 - x̄)²/Sxx)) )
+>
+>
+>
+> = P\_α,β,σ²(|(α̂ + β̂x0 - Y0)/S√(1 + (1/n + (x0 - x̄)²/Sxx))| ≤ t_n-2,α/2 )
+>
+>
+>
+> = P\_α,β,σ²(|Tn-2| ≤ t_n-2,α/2 )
+>
+>
+>
+> = P(|Tn-2| ≤ t_n-2,α/2 )
+>
+>
+>
+> = 1 - P(|Tn-2| ≥ t_n-2,α/2)
+>
+>
+>
+> = 1 - α
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú rất tốt, thể hiện sự hiểu sâu sắc khi tự mình diễn giải chi tiết lại phân phối của tử số, mẫu số để tạo thành phân phối t và chứng minh xác suất bao phủ $1-\alpha$. Có một vài lỗi gõ phím/nháp nhầm ở các bước biến đổi trung gian nhưng không ảnh hưởng đến bản chất.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"P_α,β,σ²(Y0 ∈ [α̂ + β̂x0 - t_n-2,α/2 × S√(1 + (1/n + (x0 - x̄)²/Sxx))]; α̂ + β̂x0 - t_n-2,α/2 × S√(1 + (1/n + (x0 - x̄)²/Sxx))]])"*
+>
+> Đầu mút trên của khoảng bị viết nhầm thành dấu trừ thay vì dấu cộng (`α̂ + β̂x0 + t_n-2,α/2...`).
+>
+> **2.** *"= P_α,β,σ²(α̂ + β̂x0 - t_n-2,α/2 ×  ≤ Y0/S√(1 + (1/n + (x0 - x̄)²/Sxx))] ≤ α̂ + β̂x0 + t_n-2,α/2 )
+
+= P_α,β,σ²((α̂ + β̂x0 - Y0)/S√(1 + (1/n + (x0 - x̄)²/Sxx)) ≤ t_n-2,α/2 ≤ (α̂ + β̂x0 - Y0)/S√(1 + (1/n + (x0 - x̄)²/Sxx)) )"*
+>
+> Các dòng biến đổi đại số trung gian bị lỗi đánh máy (dấu ngoặc, thiếu số hạng và bất đẳng thức kép bị lặp lại hai vế cùng một đại lượng). Biến đổi đúng cần là trừ $\hat{\alpha} + \hat{\beta}x_0$ rồi chia cho sai số chuẩn để đưa về dạng $-t_{n-2,\alpha/2} \le T \le t_{n-2,\alpha/2}$.
+>
+>
+> **✓ Strengths**
+> - Tự triển khai rất rõ ràng kỳ vọng và phương sai của sai số dự báo $Y_0 - (\hat{\alpha} + \hat{\beta}x_0)$ thay vì chỉ chép lại công thức.
+> - Hiểu bản chất của thống kê $t$ bằng cách tách thành biến chuẩn tắc chia cho căn bậc hai của biến khi-bình phương chia bậc tự do.
+> - Chủ động kiểm tra lại xác suất bao phủ $1-\alpha$ của khoảng dự báo.
+>
+> **💡 Deeper notes**
+> - Để thống kê tỷ số $U / (S/\sigma)$ thực sự tuân theo phân phối Student $t_{n-2}$, điều kiện tiên quyết là tử số $U$ và mẫu số $S^2$ phải độc lập thống kê với nhau. Cần lưu ý ghi rõ giả định độc lập giữa $S^2$ và $Y_0 - (\hat{\alpha} + \hat{\beta}x_0)$ khi áp dụng định nghĩa này.
 
 <br>
 
