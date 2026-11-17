@@ -800,7 +800,7 @@
 > **💡 Deeper notes**
 > - Để ma trận ΦᵀΦ khả nghịch (invertible), điều kiện ngầm định là ma trận thiết kế Φ phải có full column rank (nghĩa là số mẫu N ≥ số tham số M và các hàm cơ sở độc lập tuyến tính trên tập dữ liệu). Trong trường hợp M > N hoặc dữ liệu suy biến, cần dùng SVD để tính pseudo-inverse tổng quát.
 
-**🔗 See also:** [Ex 3.2 Orthogonal Projection and Least Squares](./37_exercises.md#node-2dv7p1f) · [Ex 3.6  MLE Hồi quy Đa biến](./37_exercises.md#node-cq8t94f) · [Gradient of Logistic Error Function](./432_logistic_regression.md#node-to86xxj) · [Section 4.3.6 Canonical Link Functions](./436_canonical_link_function.md#node-tn8x82z)
+**🔗 See also:** [Ex 3.2 Orthogonal Projection and Least Squares](./37_exercises.md#node-2dv7p1f) · [Ex 3.6  MLE Hồi quy Đa biến](./37_exercises.md#node-cq8t94f) · [Gradient of Logistic Error Function](./432_logistic_regression.md#node-to86xxj) · [Section 4.3.6 Canonical Link Functions](./436_canonical_link_function.md#node-tn8x82z) · [Số lượng tham số hiệu dụng](./353_effective_number_of_parameters.md#node-jdgevif)
 
 <br>
 
@@ -886,9 +886,24 @@
 > Do đó, từ việc w0 = (Σi ti)/N - Σj \[wj × (1/N)Σi Φj(𝐱i)\]  cho thấy rằng mô hình sẽ học ra cách (nói vậy là vì, w0 ta đang xét chính là maximum likelihood estimator của w0, là thứ mà ta tìm được để tối ưu likelihood) để BÙ ĐẮP (compensate) cho sự thiếu hụt giữa trung bình target value (t^) và weighted sum của trung bình các basis function values.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Đoạn ghi chú này trình bày việc dẫn xuất w0 một cách xuất sắc, chi tiết và chính xác, phù hợp hoàn toàn với nội dung hình ảnh. Đặc biệt, phần giải thích trực quan về các thành phần của w0 giúp người đọc dễ dàng nắm bắt vai trò của tham số này.
+> Ghi chú rất xuất sắc, tự triển khai đạo hàm từng bước rõ ràng, chính xác và có ví dụ thực tế trực quan để hiểu bản chất việc bù trừ sai lệch của bias parameter.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"d/dw0 [(1/2) Σi {ti - w0 - Σj wj × Φj(𝐱i)}²] = 0"*
+>
+> Vì hàm E_D(𝐰) phụ thuộc vào nhiều biến (vector 𝐰) nên về mặt ký hiệu toán học chuẩn xác nên dùng đạo hàm riêng ∂/∂w0 thay vì vi phân/đạo hàm toàn phần d/dw0 (dù ở phần đầu ghi chú bạn đã gọi đúng là ∂/∂w0).
+>
+>
+> **✓ Strengths**
+> - Tự triển khai đầy đủ và chính xác từng bước đạo hàm từ hàm lỗi tường minh thay vì chỉ chép lại công thức cuối cùng của sách.
+> - Nêu rõ động lực và lý do lấy đạo hàm riêng theo w0 để tìm w0_ML một cách tự nhiên và trực diện.
+> - Lấy ví dụ cụ thể (quy mô nhà, vị trí) giúp giải thích rất trực quan ý nghĩa thống kê của việc bù trừ (compensate) giữa trung bình target và tổng có trọng số của trung bình các basis functions.
+>
+> **💡 Deeper notes**
+> - Các basis functions Φj(𝐱) không nhất thiết phải luôn là hàm phi tuyến; chúng có thể là hàm tuyến tính (linear features) hoặc bất kỳ biến đổi cố định nào của biến đầu vào.
 
 <br>
 
