@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1794941901150,
+  "publishedAt": 1794942493319,
   "sections": [
     {
       "title": "📋 Overview",
@@ -602,7 +602,7 @@
   "videos": [
     {
       "id": "csrfieA6pNk",
-      "title": "Tại sao λ và α kéo w_MAP về 0 hay w_ML? (phần 3)",
+      "title": "Tại sao λ và α kéo w_MAP về 0 hay w_ML?",
       "uploadedAt": 1794938099276,
       "at": [
         "Section 3.5.3 Effective Number of Parameters",
