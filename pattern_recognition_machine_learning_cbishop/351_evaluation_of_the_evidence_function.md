@@ -277,9 +277,17 @@
 > Mình hiểu E ở đây là Error, chứ ko phải kì vọng (Expectation của 𝐰) nhé.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú vô cùng chi tiết, chính xác và thể hiện sự hiểu biết sâu sắc về cả hai phương pháp tính tích phân (dùng công thức phân phối Gaussian tuyến tính và biến đổi trực tiếp qua hàm năng lượng). Các bước phân tích rõ ràng và việc làm tường minh các biến phụ thuộc ẩn rất xuất sắc.
+> Ghi chú xuất sắc, hiểu rất sâu bản chất mô hình hóa xác suất và thực hiện đầy đủ cả 2 hướng tiếp cận (dùng công thức Linear-Gaussian và khai triển trực tiếp ra dạng năng lượng tích phân).
+>
+> **✓ Strengths**
+> - Hiểu rõ bản chất marginal likelihood là trung bình theo prior của tham số w và phân tích cặn kẽ việc làm gọn ký hiệu điều kiện (X, model).
+> - Thực hiện thành công phép suy diễn marginal thông qua kết quả của mô hình Linear-Gaussian (2.115) ra thẳng dạng phân phối chuẩn của t.
+> - Khai triển đại số chi tiết, chính xác các số hạng định thức ma trận đơn vị và gom hàm mũ để tái lập công thức (3.78) cùng hàm chi phí chính quy hóa (3.79).
+>
+> **💡 Deeper notes**
+> - Trong ký hiệu $T_i \sim \mathcal{N}(t_i | \mathbf{w}^T \mathbf{\Phi}(\mathbf{x}), 1/\beta)$, chính xác hơn về chỉ số mẫu nên là $\boldsymbol{\phi}(\mathbf{x}_n)$ ứng với từng điểm dữ liệu trước khi ghép thành ma trận thiết kế $\mathbf{\Phi}$.
 
 **🔗 See also:** [Phân bố tiên nghiệm và hậu nghiệm](./233_bayess_theorem_for_gaussian_variables.md#node-zswmsts) · [Likelihood and Error Functions](./311_maximum_likelihood_and_least_squares.md#node-urnjdcs) · [Gaussian Prior and Posterior Parameters](./331_bayesian_linear_regression.md#node-nt82rck) · [PDF Gaussian Đa Biến](./124_the_gaussian_distribution.md#node-40ke7sj)
 
