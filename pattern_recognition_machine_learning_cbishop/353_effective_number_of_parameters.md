@@ -631,7 +631,9 @@
 
 📹 Video 1: [Tại sao đường đồng mức của likelihood là elip theo vectơ riêng? (phần 1)](https://youtu.be/SHOlSWiXouE)
 
-📹 Video 2: [Tại sao Q^T chuyển tọa độ sang hệ vectơ riêng u? (phần 2)](https://www.youtube.com/watch?v=nL-1X9-G1rk)
+📹 Video 2: [Tại sao Q^T chuyển tọa độ sang hệ vectơ riêng u?](https://www.youtube.com/watch?v=nL-1X9-G1rk)
+
+📹 Video 3: [Tại sao trị riêng λ đo độ cong của hàm likelihood? (phần 3)](https://www.youtube.com/watch?v=xjTMaLGPvWY)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
