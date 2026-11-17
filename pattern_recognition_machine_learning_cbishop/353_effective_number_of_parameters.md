@@ -629,7 +629,7 @@
 >
 > Từ đó ta hiểu việc đặt 𝐲 = 𝐐ᵀ𝐰' bản chất chính là 𝐐ᵀ \[𝐰'\]\_e = \[𝐰'\]\_u, chuyển tọa độ của 𝐰' từ cơ sở 𝐞's sang cơ sở 𝐮's.
 
-📹 Video 1: [Tại sao Q^T chuyển tọa độ sang hệ vectơ riêng u?](https://www.youtube.com/watch?v=nL-1X9-G1rk)
+📹 Video 1: [Tại sao ma trận chuyển cơ sở là A = W^-1 V và Q^T giúp chuyển tọa độ cơ sở e's sang u's](https://www.youtube.com/watch?v=nL-1X9-G1rk)
 
 📹 Video 2: [Tại sao đường đồng mức Likelihood là elip và trị riêng λ đo độ cong?](https://www.youtube.com/watch?v=xjTMaLGPvWY)
 
