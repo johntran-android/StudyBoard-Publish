@@ -598,5 +598,1020 @@
     }
   ],
   "totalNotes": 524,
-  "totalImages": 880
+  "totalImages": 880,
+  "videos": [
+    {
+      "id": "xjTMaLGPvWY",
+      "title": "Tại sao đường đồng mức Likelihood là elip và trị riêng λ đo độ cong?",
+      "uploadedAt": 1794878759446,
+      "at": [
+        "Section 3.5.3 Effective Number of Parameters",
+        "3.5.3 Effective number of parameters"
+      ]
+    },
+    {
+      "id": "nL-1X9-G1rk",
+      "title": "Tại sao ma trận chuyển cơ sở là A = W^-1 V và Q^T giúp chuyển tọa độ cơ sở e's sang u's",
+      "uploadedAt": 1794876414080,
+      "at": [
+        "Section 3.5.3 Effective Number of Parameters",
+        "3.5.3 Effective number of parameters"
+      ]
+    },
+    {
+      "id": "dgb3RYacT4g",
+      "title": "Hyperparameter của weight và bias định hình hàm số mạng thế nào?",
+      "uploadedAt": 1794594019796,
+      "at": [
+        "Section 5.5 Regularization in Neural Networks",
+        "5.5.1 Consistent Gaussian priors"
+      ]
+    },
+    {
+      "id": "y3SUVfjJbPc",
+      "title": "Vì sao không phạt bias dẫn đến tiên nghiệm không hợp lệ?",
+      "uploadedAt": 1794458242495,
+      "at": [
+        "Section 5.5 Regularization in Neural Networks",
+        "5.5.1 Consistent Gaussian priors"
+      ]
+    },
+    {
+      "id": "fGd-ViSTpuo",
+      "title": "Vì sao cần lambda riêng cho từng layer trong L2 regularization?",
+      "uploadedAt": 1794455226702,
+      "at": [
+        "5.5.1 Consistent Gaussian priors"
+      ]
+    },
+    {
+      "id": "W_XXQCusF6Q",
+      "title": "Vì sao weight decay không nhất quán khi co giãn đầu vào?",
+      "uploadedAt": 1794361224439,
+      "at": [
+        "5.5.1 Consistent Gaussian priors"
+      ]
+    },
+    {
+      "id": "cpsMJoxEAms",
+      "title": "Vì sao regularization bậc hai tương đương với tiên nghiệm Gaussian?",
+      "uploadedAt": 1794348512222,
+      "at": [
+        "5.5. Regularization in Neural Networks"
+      ]
+    },
+    {
+      "id": "vsLY94KCVew",
+      "title": "Vì sao số node ẩn M chưa đủ quyết định test error?",
+      "uploadedAt": 1794346555521,
+      "at": [
+        "5.5. Regularization in Neural Networks"
+      ]
+    },
+    {
+      "id": "psQkLoQpYdI",
+      "title": "Làm sao tính Hessian cho trọng số ở hai tầng khác nhau? (phần 2)",
+      "uploadedAt": 1794013870968,
+      "at": [
+        "5.4.5 Exact evaluation of the Hessian"
+      ]
+    },
+    {
+      "id": "-wqvroqdiWs",
+      "title": "Làm sao tính chính xác ma trận Hessian theo các trọng số? (phần 1)",
+      "uploadedAt": 1794012465151,
+      "at": [
+        "5.4.5 Exact evaluation of the Hessian"
+      ]
+    },
+    {
+      "id": "1qi4xJ1oBss",
+      "title": "Làm sao tính xấp xỉ ma trận Hessian cho hàm cross-entropy?",
+      "uploadedAt": 1793934320732,
+      "at": [
+        "5.4.2 Outer product approximation"
+      ]
+    },
+    {
+      "id": "xxcxiTXNEYo",
+      "title": "Vì sao yn - tn có kỳ vọng bằng 0?",
+      "uploadedAt": 1793927309462,
+      "at": [
+        "5.4.2 Outer product approximation"
+      ]
+    },
+    {
+      "id": "GJojz_jbdoc",
+      "title": "Điểm khác nhau giữa linear regression và neural network regression.",
+      "uploadedAt": 1793918944595,
+      "at": [
+        "5.4.2 Outer product approximation"
+      ]
+    },
+    {
+      "id": "uF2pBk9VPxg",
+      "title": "Làm sao tính ma trận Hessian của hàm lỗi E theo W?",
+      "uploadedAt": 1793839297544,
+      "at": [
+        "5.4.2 Outer product approximation"
+      ]
+    },
+    {
+      "id": "0ZCEjdG0CXs",
+      "title": "Làm sao tính xấp xỉ đường chéo ma trận Hessian bằng backprop?",
+      "uploadedAt": 1793834142716,
+      "at": [
+        "5.4.1 Diagonal Approximation (bản sao)",
+        "5.4.1 Diagonal Approximation",
+        "5.4 The Hessian Matrix",
+        "5.4 The Hessian Matrix"
+      ]
+    },
+    {
+      "id": "SamIRKfN5no",
+      "title": "Làm sao tính từng hàng ma trận Jacobian của y theo x?",
+      "uploadedAt": 1793743590404,
+      "at": [
+        "5.3.4 The Jacobian Matrix",
+        "5.3.4 The Jacobian matrix"
+      ]
+    },
+    {
+      "id": "oc3MeNvCth0",
+      "title": "Làm Sao Dùng Vi Phân Toàn Phần Tính Ma Trận Jacobian?",
+      "uploadedAt": 1793741444468,
+      "at": [
+        "5.3.4 The Jacobian Matrix",
+        "5.3.4 The Jacobian matrix"
+      ]
+    },
+    {
+      "id": "shn4HGB4mrQ",
+      "title": "Tại sao công thức 5.71 chỉ là vi phân toàn phần?",
+      "uploadedAt": 1793657931726,
+      "at": [
+        "5.3.4 The Jacobian Matrix",
+        "5.3.4 The Jacobian matrix"
+      ]
+    },
+    {
+      "id": "bbf8qVhzBL8",
+      "title": "Tại sao phân phối hậu nghiệm của Bernoulli lại ra Beta?",
+      "uploadedAt": 1793588787860,
+      "at": [
+        "2.1 Binary Variables"
+      ]
+    },
+    {
+      "id": "3p7bkNSwRJc",
+      "title": "Vì sao dùng phân phối Beta liên hợp để ước lượng tham số mu?",
+      "uploadedAt": 1793569456216,
+      "at": [
+        "2.1 Binary Variables"
+      ]
+    },
+    {
+      "id": "vnhEb1jYjho",
+      "title": "Tại sao Backpropagation chỉ tốn O(W) còn Finite Difference tốn O(W^2)?",
+      "uploadedAt": 1793401546500,
+      "at": [
+        "5.3.3 Efficiency of backpropagation"
+      ]
+    },
+    {
+      "id": "ynakCCSkgh0",
+      "title": "Cách Tính Đạo Hàm Backprop Trong Mạng 2 Layer Dùng Hàm Tanh?",
+      "uploadedAt": 1793394902361,
+      "at": [
+        "5.3.2 A simple example"
+      ]
+    },
+    {
+      "id": "X3c2DARr8EM",
+      "title": "Cách Suy Ra Công Thức Backpropagation 5.56 Bằng Vi Phân Toàn Phần?",
+      "uploadedAt": 1793327180119,
+      "at": [
+        "5.3.1 Evaluation of Error-Function Derivatives",
+        "Section 5.3 Error Backpropagation",
+        "5.3.1 Evaluation of error-function derivatives"
+      ]
+    },
+    {
+      "id": "NP2YnuUjMIU",
+      "title": "Làm sao SGD thoát khỏi local minima và điểm yên ngựa?",
+      "uploadedAt": 1793311708161,
+      "at": [
+        "5.2.4 Gradient Descent Optimization",
+        "5.2.4 Gradient descent optimization"
+      ]
+    },
+    {
+      "id": "s0CUmjNqJO8",
+      "title": "Vì sao hướng dốc nhất khiến Gradient Descent đi zíc zắc?",
+      "uploadedAt": 1793310390804,
+      "at": [
+        "5.2.4 Gradient Descent Optimization",
+        "5.2.4 Gradient descent optimization"
+      ]
+    },
+    {
+      "id": "fdCQxx5mvnE",
+      "title": "Vì sao Gradient giúp giảm số bước tính từ O(M³) xuống O(M²)?",
+      "uploadedAt": 1793246975209,
+      "at": [
+        "5.2.3 Use of gradient information"
+      ]
+    },
+    {
+      "id": "Vb8O7m3jSBQ",
+      "title": "Vì sao trị riêng Hessian H quyết định trục elip hàm lỗi E(w)?",
+      "uploadedAt": 1793148735005,
+      "at": [
+        "5.2.2 Local Quadratic Approximation",
+        "5.2.2 Local quadratic approximation"
+      ]
+    },
+    {
+      "id": "Rzqf70LRGXU",
+      "title": "Vì sao ma trận chuyển cơ sở lại có dạng U^-1 V?",
+      "uploadedAt": 1793140485123,
+      "at": [
+        "5.2.2 Local Quadratic Approximation",
+        "5.2.2 Local quadratic approximation"
+      ]
+    },
+    {
+      "id": "hY_5sPoMfWE",
+      "title": "Làm sao suy ra công thức PMF của phân phối nhị thức Binomial(n, p)?",
+      "uploadedAt": 1792968934316,
+      "at": [
+        "2.1 Binary Variables"
+      ]
+    },
+    {
+      "id": "LyNb3hLs4Rg",
+      "title": "Hàm Log-Likelihood để ước lượng μ Bernoulli?",
+      "uploadedAt": 1792964040343,
+      "at": [
+        "2.1 Binary Variables"
+      ]
+    },
+    {
+      "id": "92V18SjUb00",
+      "title": "Cách tính Var(X) = μ(1-μ) của phân phối Bernoulli bằng LOTUS?",
+      "uploadedAt": 1792963585008,
+      "at": [
+        "2.1 Binary Variables"
+      ]
+    },
+    {
+      "id": "x2nqrx_1N-g",
+      "title": "Tại sao đạo hàm Softmax Cross-Entropy theo ak bằng yk - tk?",
+      "uploadedAt": 1792948096043,
+      "at": [
+        "Section 5.2 Network Training",
+        "5.2 Training"
+      ]
+    },
+    {
+      "id": "56_O8qpinzE",
+      "title": "Tại sao hàm lỗi Multi-class có dạng -Σ tk ln yk?",
+      "uploadedAt": 1792881156227,
+      "at": [
+        "Section 5.2 Network Training",
+        "5.2 Training"
+      ]
+    },
+    {
+      "id": "_ny2GNFdhfo",
+      "title": "So sánh logistic regression và neural network",
+      "uploadedAt": 1792874991241,
+      "at": [
+        "Section 5.2 Network Training",
+        "5.2 Training"
+      ]
+    },
+    {
+      "id": "kbQmbgK_CTY",
+      "title": "Tại sao đạo hàm ∂E/∂a_k lại bằng y_k - t_k?",
+      "uploadedAt": 1792874521839,
+      "at": [
+        "Section 5.2 Network Training",
+        "5.2 Training"
+      ]
+    },
+    {
+      "id": "SCVs2NRRo7s",
+      "title": "Cách suy ra hàm Cross-Entropy Multi-Label từ phân phối Bernoulli?",
+      "uploadedAt": 1792800866564,
+      "at": [
+        "Section 5.2 Network Training",
+        "5.2 Training"
+      ]
+    },
+    {
+      "id": "qBtQHf2RkQ4",
+      "title": "Hàm Lỗi E(w) Ra Sao Khi Xác Suất Nhãn Sai Là ε?",
+      "uploadedAt": 1792794813122,
+      "at": [
+        "Section 5.2 Network Training",
+        "5.2 Training"
+      ]
+    },
+    {
+      "id": "KaRfsb0rGJA",
+      "title": "Tại sao Binary Cross Entropy thực chất là Negative Log-Likelihood?",
+      "uploadedAt": 1792709083694,
+      "at": [
+        "Section 5.2 Network Training",
+        "5.2 Training"
+      ]
+    },
+    {
+      "id": "COfLYidpH6w",
+      "title": "Cách suy ra công thức MLE của 1/β và ma trận Σ?",
+      "uploadedAt": 1792623317326,
+      "at": [
+        "Section 5.2 Network Training",
+        "5.2 Training"
+      ]
+    },
+    {
+      "id": "LfNYAOHXklE",
+      "title": "Vì sao MLE trong Neural Network tương đương hàm Loss bình phương?",
+      "uploadedAt": 1792551316135,
+      "at": [
+        "Section 5.2 Network Training",
+        "5.2 Training"
+      ]
+    },
+    {
+      "id": "ue09Y3gKJVI",
+      "title": "Vì sao mạng nơ-ron nhiều tầng tuyến tính chỉ là linear model?",
+      "uploadedAt": 1792534125884,
+      "at": [
+        "5.1 Feed-forward Network Functions"
+      ]
+    },
+    {
+      "id": "OjExYWYwgbQ",
+      "title": "Vì sao M! × 2^M bộ trọng số lại cho cùng một mapping?",
+      "uploadedAt": 1792533895231,
+      "at": [
+        "5.1.1 Weight-Space Symmetries",
+        "5.1 Feed-forward Network Functions"
+      ]
+    },
+    {
+      "id": "t2-pF0WzwD0",
+      "title": "Vì Sao Hidden Unit Trong Neural Network Chính Là Basis Function?",
+      "uploadedAt": 1792448480633,
+      "at": [
+        "5.1 Feed-forward Network Functions"
+      ]
+    },
+    {
+      "id": "CsOAZYm9BHE",
+      "title": "Cách tính đạo hàm ma trận để tìm nghiệm W̃ = X̃⁺T?",
+      "uploadedAt": 1792194022415,
+      "at": [
+        "4.1.3 Least squares for classification"
+      ]
+    },
+    {
+      "id": "AvNmmtQ7ZiA",
+      "title": "Tại sao hàm lỗi Sum of Squares lại viết bằng Trace?",
+      "uploadedAt": 1792193504242,
+      "at": [
+        "4.1.3 Least squares for classification"
+      ]
+    },
+    {
+      "id": "PN_OLQMByOU",
+      "title": "Tại sao Least Squares ước lượng xác suất P(C|x) ngoài (0, 1)?",
+      "uploadedAt": 1792191529035,
+      "at": [
+        "4.1.3 Least squares for classification"
+      ]
+    },
+    {
+      "id": "Rdn5CyR1QgI",
+      "title": "Tại sao công thức E[Loss] 1.80 được suy ra từ LOTUS?",
+      "uploadedAt": 1792107488465,
+      "at": [
+        "1.5 Decision Theory"
+      ]
+    },
+    {
+      "id": "0DIv7EViwmk",
+      "title": "Vì sao K classes nên maximize P(correct) thay vì minimize P(mistake)?",
+      "uploadedAt": 1792098849270,
+      "at": [
+        "1.5 Decision Theory"
+      ]
+    },
+    {
+      "id": "w2H10rAb_XM",
+      "title": "Tại sao Decision Boundary tối ưu phải nằm tại giao điểm x0?",
+      "uploadedAt": 1792020643905,
+      "at": [
+        "1.5 Decision Theory"
+      ]
+    },
+    {
+      "id": "L_0FU59P6Ts",
+      "title": "Tại sao f(x,C1) ≥ f(x,C2) giúp tối thiểu hóa p(mistake)?",
+      "uploadedAt": 1792017925990,
+      "at": [
+        "1.5 Decision Theory"
+      ]
+    },
+    {
+      "id": "EdO4zFFBwpI",
+      "title": "Vì sao p(mistake) bằng tích phân f(C, x) trên Decision Regions?",
+      "uploadedAt": 1792012621924,
+      "at": [
+        "1.5 Decision Theory"
+      ]
+    },
+    {
+      "id": "cs2g9gIdUpU",
+      "title": "Tại Sao Phải Chọn Lớp Có Posterior p(Ck|x) Cao Nhất?",
+      "uploadedAt": 1792011971090,
+      "at": [
+        "1.5 Decision Theory"
+      ]
+    },
+    {
+      "id": "Y4YG0TJQ-tA",
+      "title": "Inference khác Decision thế nào trong chẩn đoán ung thư?",
+      "uploadedAt": 1791930582295,
+      "at": [
+        "1.5 Decision Theory"
+      ]
+    },
+    {
+      "id": "DW22LgJKcKM",
+      "title": "Tại Sao Đi Tìm Phân Phối p(x,t) Được Gọi Là Inference?",
+      "uploadedAt": 1791929036430,
+      "at": [
+        "1.5 Decision Theory"
+      ]
+    },
+    {
+      "id": "E2W9KwyCmy8",
+      "title": "Tại sao Decision Boundary của Predictive Distribution trùng với w_MAP?",
+      "uploadedAt": 1791926175951,
+      "at": [
+        "Section 4.5.2 Predictive Distribution",
+        "4.5.2 Predictive distribution"
+      ]
+    },
+    {
+      "id": "qOrOKM71YhI",
+      "title": "Làm sao tính tích chập hàm Probit Φ(λa) và Gaussian bằng P(Z ≤ λA)?",
+      "uploadedAt": 1791909797690,
+      "at": [
+        "Section 4.5.2 Predictive Distribution",
+        "4.5.2 Predictive distribution"
+      ]
+    },
+    {
+      "id": "pqzGU1xMTGo",
+      "title": "Tại sao λ² = π/8 khi xấp xỉ Sigmoid bằng Probit?",
+      "uploadedAt": 1791844365267,
+      "at": [
+        "Section 4.5.2 Predictive Distribution",
+        "4.5.2 Predictive distribution"
+      ]
+    },
+    {
+      "id": "bn50Fk9l3-8",
+      "title": "Tại sao Linear Regression lại dùng wᵀx làm dự đoán tối ưu (finish)?",
+      "uploadedAt": 1791839085485,
+      "at": [
+        "1.5 Decision Theory"
+      ]
+    },
+    {
+      "id": "9RZ7m6mqCDc",
+      "title": "Tại sao Linear Regression lại dùng wᵀx làm prediction? (cont)",
+      "uploadedAt": 1791762526956,
+      "at": [
+        "1.5 Decision Theory"
+      ]
+    },
+    {
+      "id": "qpbXwm7Wsy8",
+      "title": "Tại sao lại dùng wᵀx làm prediction trong Linear Regression?",
+      "uploadedAt": 1791761893964,
+      "at": [
+        "1.5 Decision Theory"
+      ]
+    },
+    {
+      "id": "8K6GOCshz9Q",
+      "title": "Vì sao X là normal thì Y = AX cũng vậy?",
+      "uploadedAt": 1791672266066,
+      "at": [
+        "Section 4.5.2 Predictive Distribution",
+        "4.5.2 Predictive distribution"
+      ]
+    },
+    {
+      "id": "8da1j43ayzk",
+      "title": "Vì sao X là normal thì Y = AX cũng vậy? (Learn with me)",
+      "uploadedAt": 1791671525136,
+      "at": [
+        "Section 4.5.2 Predictive Distribution",
+        "4.5.2 Predictive distribution"
+      ]
+    },
+    {
+      "id": "Zo8OaL3lIDI",
+      "title": "Làm sao rút tích phân M chiều σ(wᵀΦ) về một biến a?",
+      "uploadedAt": 1791591461640,
+      "at": [
+        "Section 4.5.2 Predictive Distribution",
+        "4.5.2 Predictive distribution"
+      ]
+    },
+    {
+      "id": "pYfey6Xqi14",
+      "title": "Vì Sao Tích Phân M Chiều σ(wᵀΦ) Tính Được Qua LOTUS?",
+      "uploadedAt": 1791589439712,
+      "at": [
+        "Section 4.5.2 Predictive Distribution",
+        "4.5.2 Predictive distribution"
+      ]
+    },
+    {
+      "id": "BulxSUVG87E",
+      "title": "Derive công thức Sn, covariance của Gaussian xấp xỉ Laplace cho phân phối posterior của w (p2)",
+      "uploadedAt": 1791499884880,
+      "at": [
+        "4.5.1 Laplace Approximation",
+        "4.5 Bayesian Logistic Regression"
+      ]
+    },
+    {
+      "id": "g7UVXPc31tw",
+      "title": "Derive công thức Sn, covariance của Gaussian xấp xỉ Laplace cho phân phối posterior của w",
+      "uploadedAt": 1791499659166,
+      "at": [
+        "4.5.1 Laplace Approximation",
+        "4.5 Bayesian Logistic Regression"
+      ]
+    },
+    {
+      "id": "BOlKZldjLic",
+      "title": "Làm sao dùng Laplace Approximation xấp xỉ Posterior trong Logistic Regression?",
+      "uploadedAt": 1791416448429,
+      "at": [
+        "4.5.1 Laplace Approximation",
+        "4.5 Bayesian Logistic Regression"
+      ]
+    },
+    {
+      "id": "qsnFuqhhQhI",
+      "title": "Tại sao hàm Sigmoid khiến Bayesian Logistic Regression bị intractable?",
+      "uploadedAt": 1791413887315,
+      "at": [
+        "4.5 Bayesian Logistic Regression"
+      ]
+    },
+    {
+      "id": "jg-WZOiNjuk",
+      "title": "Tại sao dự đoán tối ưu với Squared Loss lại là E[t|x]?",
+      "uploadedAt": 1791407367226,
+      "at": [
+        "3.1.0 Linear Regression and Basis Functions"
+      ]
+    },
+    {
+      "id": "_xIqFZNeKYE",
+      "title": "Tại sao E[t|x] là dự đoán tối ưu cho squared loss?",
+      "uploadedAt": 1791406705520,
+      "at": [
+        "3.1.0 Linear Regression and Basis Functions"
+      ]
+    },
+    {
+      "id": "N2py3U9LNrY",
+      "title": "Tại sao Basis Function giúp Linear Regression phi tuyến với input?",
+      "uploadedAt": 1791401397631,
+      "at": [
+        "3.1.0 Linear Regression and Basis Functions"
+      ]
+    },
+    {
+      "id": "k8p6u6uWNU8",
+      "title": "Tại sao Occam Factor phạt mô hình bằng -(1/2)M ln N?",
+      "uploadedAt": 1791392261297,
+      "at": [
+        "Section 4.4.1 Model Comparison and BIC",
+        "4.4.1 Model comparison and BIC"
+      ]
+    },
+    {
+      "id": "zhoOSzo1jv4",
+      "title": "Vì sao Occam Factor xấp xỉ thành -(1/2)M ln N trong BIC?",
+      "uploadedAt": 1791383060015,
+      "at": [
+        "Section 4.4.1 Model Comparison and BIC",
+        "4.4.1 Model comparison and BIC"
+      ]
+    },
+    {
+      "id": "tycNSi6cf2E",
+      "title": "Giải thích model là gì và so sánh model theo Bayesian là sao?",
+      "uploadedAt": 1791321405097,
+      "at": [
+        "Section 3.4 Bayesian Model Comparison",
+        "3.4 Bayesian Model Comparison"
+      ]
+    },
+    {
+      "id": "_IFymiaGRCQ",
+      "title": "Làm Sao Xấp Xỉ Model Evidence Từ Normalizing Constant Z?",
+      "uploadedAt": 1791236305241,
+      "at": [
+        "Section 4.4.1 Model Comparison and BIC",
+        "4.4.1 Model comparison and BIC"
+      ]
+    },
+    {
+      "id": "7rFrudmIrBk",
+      "title": "Tại sao ma trận hiệp phương sai của xấp xỉ Laplace là A⁻¹?",
+      "uploadedAt": 1791216881325,
+      "at": [
+        "4.4 Laplace Approximation"
+      ]
+    },
+    {
+      "id": "0uDZAp4dJl4",
+      "title": "Vì sao Taylor bậc hai của ln f(z) tạo ra Gaussian?",
+      "uploadedAt": 1790986264800,
+      "at": [
+        "4.4 Laplace Approximation"
+      ]
+    },
+    {
+      "id": "K9yDgHwWRc0",
+      "title": "The Laplace Approximation",
+      "uploadedAt": 1790982064549,
+      "at": [
+        "4.4 Laplace Approximation"
+      ]
+    },
+    {
+      "id": "K9QxrW2g1z4",
+      "title": "Canonical Link Function Gradient",
+      "uploadedAt": 1790973977150,
+      "at": [
+        "Section 4.3.6 Canonical Link Functions",
+        "4.3.6 Canonical link function"
+      ]
+    },
+    {
+      "id": "4_PShg7dBDo",
+      "title": "Cách biến đổi hàm Log-Likelihood theo tham số η trong GLM?",
+      "uploadedAt": 1790958963978,
+      "at": [
+        "Section 4.3.6 Canonical Link Functions",
+        "4.3.6 Canonical link function"
+      ]
+    },
+    {
+      "id": "IGptJPe9ENw",
+      "title": "Conditional Mean in Exponential Family",
+      "uploadedAt": 1790956154446,
+      "at": [
+        "Section 4.3.6 Canonical Link Functions",
+        "4.3.6 Canonical link function"
+      ]
+    },
+    {
+      "id": "87DFX_8wgPE",
+      "title": "2.4.1 Maximum likelihood & sufficient statistic",
+      "uploadedAt": 1790952673452,
+      "at": [
+        "2.4.1 Maximum likelihood & sufficient statistic"
+      ]
+    },
+    {
+      "id": "V6oCEsXYSxA",
+      "title": "Làm sao đưa xác suất gán nhãn sai ε vào P(T=1|a)?",
+      "uploadedAt": 1790896523980,
+      "at": [
+        "4.3.5 Probit Regression (bản sao)",
+        "4.3.5 Probit Regression"
+      ]
+    },
+    {
+      "id": "YrNpRZMgk-4",
+      "title": "Vì sao Probit Regression nhạy cảm với Outlier hơn Logistic Regression?",
+      "uploadedAt": 1790892354795,
+      "at": [
+        "4.3.5 Probit Regression (bản sao)",
+        "4.3.5 Probit Regression"
+      ]
+    },
+    {
+      "id": "no5efrUg8rs",
+      "title": "Vì sao Gaussian N(μ, σ²) chỉ làm rescale hệ số w trong Probit?",
+      "uploadedAt": 1790809152043,
+      "at": [
+        "4.3.5 Probit Regression (bản sao)",
+        "4.3.5 Probit Regression"
+      ]
+    },
+    {
+      "id": "bHTMl05EoAY",
+      "title": "Tại sao Activation Function trong Noisy Threshold Model là CDF của θ?",
+      "uploadedAt": 1790809010064,
+      "at": [
+        "4.3.5 Probit Regression (bản sao)",
+        "4.3.5 Probit Regression"
+      ]
+    },
+    {
+      "id": "kGoVAIslUsQ",
+      "title": "Vì Sao Ma Trận Hessian Của Multiclass Logistic Regression Gồm Các Block M×M (p2) ?",
+      "uploadedAt": 1790800830972,
+      "at": [
+        "4.3.4 Multiclass logistic regression"
+      ]
+    },
+    {
+      "id": "Sz2QRKW9wLA",
+      "title": "Tại sao ma trận Hessian Multiclass gồm các block M×M?",
+      "uploadedAt": 1790730933980,
+      "at": [
+        "4.3.4 Multiclass logistic regression"
+      ]
+    },
+    {
+      "id": "SNbte9J7NL8",
+      "title": "Tại sao đạo hàm Cross-Entropy theo w_j bằng (y_nj - t_nj)Φ_n?",
+      "uploadedAt": 1790716426862,
+      "at": [
+        "4.3.4 Multiclass logistic regression"
+      ]
+    },
+    {
+      "id": "S4kORpAgTsQ",
+      "title": "Từ Likelihood suy ra Multiclass Cross-Entropy Loss như thế nào?",
+      "uploadedAt": 1790632928275,
+      "at": [
+        "4.3.4 Multiclass logistic regression"
+      ]
+    },
+    {
+      "id": "RfrcgvaQmgU",
+      "title": "Activation Derivative for Maximum Likelihood",
+      "uploadedAt": 1790626221283,
+      "at": [
+        "4.3.4 Multiclass logistic regression"
+      ]
+    },
+    {
+      "id": "-9YldVmpmPU",
+      "title": "Tại sao Class Posterior lại là Softmax tuyến tính của feature Φ?",
+      "uploadedAt": 1790378986165,
+      "at": [
+        "4.3.4 Multiclass logistic regression"
+      ]
+    },
+    {
+      "id": "qAxY0gbf8rM",
+      "title": "Vì sao xấp xỉ tuyến tính Sigmoid biến Logistic Regression thành Least Squares?",
+      "uploadedAt": 1790377296587,
+      "at": [
+        "4.3.3 Iterative reweighted least squares"
+      ]
+    },
+    {
+      "id": "uW9swHIgaPw",
+      "title": "Vì sao nghiệm IRLS lại có dạng Weighted Least Squares?",
+      "uploadedAt": 1790291738339,
+      "at": [
+        "4.3.3 Iterative reweighted least squares"
+      ]
+    },
+    {
+      "id": "OefUwDAl93Q",
+      "title": "Tại sao Newton-Raphson trong Logistic Regression lại ra Weighted Least Squares?",
+      "uploadedAt": 1790282941701,
+      "at": [
+        "4.3.3 Iterative reweighted least squares"
+      ]
+    },
+    {
+      "id": "FZ8WIyEcWwk",
+      "title": "Mẹo dùng vi phân vector để tìm ma trận Hessian của Logistic Regression chỉ trong 3 phút.",
+      "uploadedAt": 1790220529722,
+      "at": [
+        "4.3.3 Iterative reweighted least squares"
+      ]
+    },
+    {
+      "id": "KQozp2d2dy8",
+      "title": "Vì sao Newton-Raphson giải Linear Regression chỉ trong đúng 1 bước?",
+      "uploadedAt": 1790197183525,
+      "at": [
+        "4.3.3 Iterative reweighted least squares"
+      ]
+    },
+    {
+      "id": "kI2yukn25aQ",
+      "title": "Cách tự derive gradient và Hessian của hàm quadratic",
+      "uploadedAt": 1790195064225,
+      "at": [
+        "4.3.3 Iterative reweighted least squares"
+      ]
+    },
+    {
+      "id": "yOm1k_DQ3K0",
+      "title": "Tại sao bước lặp Newton dùng xấp xỉ bậc hai cục bộ?",
+      "uploadedAt": 1790121880818,
+      "at": [
+        "4.3.3 Iterative reweighted least squares"
+      ]
+    },
+    {
+      "id": "XzhGTA5AeNU",
+      "title": "Tại sao MLE làm norm của W tiến ra vô cực?",
+      "uploadedAt": 1790117348534,
+      "at": [
+        "4.3.2 Logistic Regression",
+        "4.3.2 Logistic regression"
+      ]
+    },
+    {
+      "id": "LNW4K9FY_As",
+      "title": "Learning with me: Maximum Likelihood on Linearly Separable Data ",
+      "uploadedAt": 1790112160343,
+      "at": [
+        "4.3.2 Logistic Regression",
+        "4.3.2 Logistic regression"
+      ]
+    },
+    {
+      "id": "IJMvYy5NB-k",
+      "title": "Tại sao Cross-Entropy Loss thực chất là Negative Log-Likelihood?",
+      "uploadedAt": 1790031455474,
+      "at": [
+        "4.3.2 Logistic Regression",
+        "4.3.2 Logistic regression"
+      ]
+    },
+    {
+      "id": "W4pQ_271eXE",
+      "title": "Tại sao đạo hàm hàm Sigmoid lại bằng σ(1 - σ)?",
+      "uploadedAt": 1790022243689,
+      "at": [
+        "4.3.2 Logistic Regression",
+        "4.3.2 Logistic regression"
+      ]
+    },
+    {
+      "id": "YN8gyl1HEAA",
+      "title": "Tại sao Logistic Regression chỉ tốn M tham số thay vì M(M+5)/2+1?",
+      "uploadedAt": 1789775417418,
+      "at": [
+        "4.3.2 Logistic Regression",
+        "4.3.2 Logistic regression"
+      ]
+    },
+    {
+      "id": "5kKAasvIeGI",
+      "title": "Vì Sao Basis Function ϕ(x) Biến Dữ Liệu Thành Linearly Separable?",
+      "uploadedAt": 1789771898531,
+      "at": [
+        "4.3.1 Fixed Basis Functions",
+        "4.3.1 Fixed basis functions"
+      ]
+    },
+    {
+      "id": "OMWS53GIrUI",
+      "title": "Tại sao nên giả định trực tiếp f(C|x) thay vì ước lượng f(x|C)?",
+      "uploadedAt": 1789766773670,
+      "at": [
+        "Section 4.3 Probabilistic Discriminative Models",
+        "4.3. Probabilistic Discriminative Models"
+      ]
+    },
+    {
+      "id": "Ovmp-M7j5II",
+      "title": "Vì sao họ Exponential với scale chung cho Log-odds tuyến tính?",
+      "uploadedAt": 1789683381098,
+      "at": [
+        "Section 4.2.4 Exponential Family",
+        "4.2.4 Exponential family"
+      ]
+    },
+    {
+      "id": "E55dfUAdwjE",
+      "title": "Vì sao giáo sư Bishop gọi S1, S2 là covariance matrix",
+      "uploadedAt": 1789680661454,
+      "at": [
+        "4.2.2 Maximum Likelihood Solution",
+        "4.2.2 Maximum likelihood solution"
+      ]
+    },
+    {
+      "id": "jbPysqwE8nc",
+      "title": "Vì sao Naive Bayes giảm số tham số từ 2^D xuống D?",
+      "uploadedAt": 1789678706927,
+      "at": [
+        "Section 4.2.3 Discrete Features",
+        "4.2.4 Discrete features"
+      ]
+    },
+    {
+      "id": "2Dy41xan6xg",
+      "title": "Vì sao ma trận hiệp phương sai chung Σ bằng S?",
+      "uploadedAt": 1789610153199,
+      "at": [
+        "4.2.2 Maximum Likelihood Solution",
+        "4.2.2 Maximum likelihood solution"
+      ]
+    },
+    {
+      "id": "STiYw1o_W1E",
+      "title": "Tại sao ma trận hiệp phương sai MLE chung lại bằng S?",
+      "uploadedAt": 1789597319502,
+      "at": [
+        "4.2.2 Maximum Likelihood Solution",
+        "4.2.2 Maximum likelihood solution"
+      ]
+    },
+    {
+      "id": "ZI3dek5QaCc",
+      "title": "Tại sao nghiệm MLE của 𝜍1 lại chính là trung bình mẫu?",
+      "uploadedAt": 1789592527015,
+      "at": [
+        "4.2.2 Maximum Likelihood Solution",
+        "4.2.2 Maximum likelihood solution"
+      ]
+    },
+    {
+      "id": "PEL_sI4YGSg",
+      "title": "Tại sao không tối ưu Perceptron bằng số ca phân loại sai?",
+      "uploadedAt": 1789160475415,
+      "at": [
+        "4.1.7 Perceptron"
+      ]
+    },
+    {
+      "id": "AxZbMJ3AD1E",
+      "title": "Vì sao Least Squares lại cho cùng nghiệm w với Fisher Criterion?",
+      "uploadedAt": 1788988069347,
+      "at": [
+        "Section 4.1.5 Relation to Least Squares",
+        "4.1.5 Relation to least square"
+      ]
+    },
+    {
+      "id": "fuo5lM8PyCk",
+      "title": "Làm sao chọn threshold cho Fisher Discriminant nhờ CLT và MLE?",
+      "uploadedAt": 1788910581229,
+      "at": [
+        "4.1.4 Fisher's linear discriminant"
+      ]
+    },
+    {
+      "id": "XWXHBKtAWK0",
+      "title": "Vì sao hướng tối ưu w của Fisher là Sw⁻¹(m2 - m1)?",
+      "uploadedAt": 1788839850967,
+      "at": [
+        "4.1.4 Fisher's linear discriminant"
+      ]
+    },
+    {
+      "id": "9rn2c18KCbI",
+      "title": "Tại sao vectơ chiếu w phải song song với đường nối hai tâm?",
+      "uploadedAt": 1788632547156,
+      "at": [
+        "4.1.4 Fisher's linear discriminant"
+      ]
+    },
+    {
+      "id": "TSv9sh-O1Os",
+      "title": "Vì sao Least Squares phân loại kém do giả định Gaussian?",
+      "uploadedAt": 1788623614956,
+      "at": [
+        "4.1.3 Least squares for classification"
+      ]
+    },
+    {
+      "id": "D1LgZ77Hxgs",
+      "title": "Dự đoán \"Quá đúng\" lại bị SSE phạt nặng, hạn chế của mô hình phân loại tuyến tính theo least square ",
+      "uploadedAt": 1788488738804,
+      "at": [
+        "4.1.3 Least squares for classification"
+      ]
+    }
+  ]
 }
