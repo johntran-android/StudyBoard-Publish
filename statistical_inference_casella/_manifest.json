@@ -1,6 +1,6 @@
 {
   "title": "Statistical Inference - Casella",
-  "publishedAt": 1794661090770,
+  "publishedAt": 1794958097684,
   "sections": [
     {
       "title": "📋 Overview",
@@ -317,13 +317,23 @@
     {
       "title": "11.3 Simple Linear Regression",
       "path": "statistical_inference_casella/113_simple_linear_regression.md",
-      "noteCount": 32,
-      "imageCount": 59
+      "noteCount": 35,
+      "imageCount": 64
     }
   ],
-  "totalNotes": 938,
-  "totalImages": 1253,
+  "totalNotes": 941,
+  "totalImages": 1258,
   "videos": [
+    {
+      "id": "Gyi8uj3s0e4",
+      "title": "Làm sao xây dựng khoảng tin cậy cho alpha + beta x0?",
+      "uploadedAt": 1794955530832,
+      "at": [
+        "Section 11.3 Simple Linear Regression",
+        "Section 11.3 Simple Linear Regression",
+        "11.3 SIMPLE LINEAR REGRESSION"
+      ]
+    },
     {
       "id": "K8f2yncHnxg",
       "title": "Vì sao miền chấp nhận tạo ra khoảng tin cậy cho beta?",
