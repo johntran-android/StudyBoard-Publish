@@ -373,9 +373,28 @@
 > Và tương tự như α ta cũng phải giải tìm β theo lối iterative.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
 >
-> Bản ghi chép cực kỳ chi tiết, chính xác và rõ ràng, đặc biệt là phần giải thích cặn kẽ tại sao $d\lambda_i/d\beta = \lambda_i/\beta$. Các bước biến đổi đại số để đi đến công thức (3.94) và (3.95) đều rất mạch lạc và hoàn hảo.
+> Ghi chú rất tốt, bạn đã tự mình triển khai chi tiết từng bước đạo hàm từ hàm mục tiêu đến công thức (3.94) và (3.95). Có một điểm chưa chặt chẽ nhỏ về việc phụ thuộc của m_N vào beta (triệt tiêu nhờ gradient bằng 0) cần lưu ý thêm.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"với E(𝐦N) = (β/2) ||𝐭 - ΦmN||² + (α/2)(𝐦N)ᵀ𝐦N), chỉ có term đầu dính tới β"*
+>
+> Thực chất m_N cũng phụ thuộc vào beta (và alpha). Tuy nhiên, vì m_N là điểm cực tiểu của E(w) nên gradient theo m_N bằng 0 (∇ E(m_N) = 0), khiến đạo hàm theo m_N qua quy tắc chuỗi triệt tiêu. Nói 'chỉ có term đầu dính tới beta' là chưa chính xác về mặt giải tích nhiều biến dù kết quả đạo hàm riêng phần trực tiếp vô tình trùng khớp.
+>
+> **2.** *"Tới đây nhớ lại Φ là design matrix có các hàng chính là Φi(𝐱)ᵀ,...ΦM(𝐱)."*
+>
+> Ma trận thiết kế Φ có kích thước N x M, các hàng của nó ứng với N điểm dữ liệu ϕ(x_n)ᵀ (n chạy từ 1 đến N) chứ không phải chạy theo chiều feature M.
+>
+>
+> **✓ Strengths**
+> - Tự triển khai đầy đủ các bước biến đổi trung gian của Bishop thay vì chỉ chép lại công thức.
+> - Chứng minh rất rõ ràng và mạch lạc việc dλ_i/dβ = λ_i/β thông qua bài toán tìm trị riêng của ma trận ΦᵀΦ.
+> - Biến đổi đại số chính xác từ phương trình đạo hàm bằng 0 về dạng nghiệm ẩn (implicit solution) 1/β.
+>
+> **💡 Deeper notes**
+> - Lý do đạo hàm dE(m_N)/dβ chỉ giữ lại phần đạo hàm riêng theo β mà không cần tính qua dm_N/dβ là hệ quả của Envelope Theorem (định lý bao hình): vì m_N làm dừng hàm năng lượng E(w).
 
 **🔗 See also:** [Section 3.5.2 Maximizing the Evidence Function](#node-nc5qxnz) · [Evidence Re-estimation Limit](./353_effective_number_of_parameters.md#node-00gilsq)
 
