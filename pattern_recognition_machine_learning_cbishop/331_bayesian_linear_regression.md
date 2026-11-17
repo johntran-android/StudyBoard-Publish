@@ -318,9 +318,18 @@
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú của bạn rất xuất sắc, giải thích rất sâu sắc và trực quan từ trực giác hình chuông của phân phối chuẩn đến sự khác biệt giữa hai trường phái Bayes và tần suất. Điểm trừ duy nhất là lỗi gõ nhầm số thứ tự công thức ở cuối bài từ (3.53, 3.54) thành (5.3, 5.4).
+> Ghi chú rất xuất sắc, nắm bắt bản chất toán học và ý nghĩa thống kê của phân phối hậu nghiệm, ước lượng MAP, cập nhật tuần hoàn (sequential learning) và mối liên hệ giữa Bayesian với Frequentist (MLE).
+>
+> **✓ Strengths**
+> - Hiểu chính xác lý do vector trọng số MAP trùng với kỳ vọng hậu nghiệm m_N là do tính đối xứng của phân phối Gauss (mode trùng mean).
+> - Phân tích sâu sắc sự chuyển tiếp từ Bayesian sang MLE khi độ chính xác prior alpha tiến về 0 (infinitely broad prior).
+> - Nắm rất vững trực giác về cập nhật Bayes tuần hoàn (sequential Bayesian updating): posterior của bước trước làm prior cho bước kế tiếp.
+>
+> **💡 Deeper notes**
+> - Về mặt triết lý Bayesian, mục tiêu tối thượng không bắt buộc phải là 'ước lượng điểm' (point estimation) như ghi chú đề cập; sức mạnh thực sự của Bayesian thường nằm ở việc giữ nguyên toàn bộ phân phối hậu nghiệm p(w|t) để tính tích phân biên (marginalize) ra phân phối dự đoán p(t_new|x_new, t), MAP chỉ là một lựa chọn thực dụng khi cần một vector tham số cụ thể.
+> - Khi alpha tiến về 0, phân phối prior trở thành 'improper prior' (tích phân trên toàn không gian R^D bằng vô cùng, không chuẩn hóa được thành 1), nhưng phân phối hậu nghiệm tương ứng vẫn là một phân phối chuẩn hợp lệ miễn là ma trận thiết kế khả nghịch/đủ hạng.
 
-**🔗 See also:** [Section 3.3.3 Equivalent Kernel](./333_equivalent_kernel.md#node-qgf9klh) · [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8) · [Hessian of Regularized Error Function](./351_evaluation_of_the_evidence_function.md#node-vpu7vqs) · [Iterative Estimation of Alpha](./352_maximizing_the_evidence_function.md#node-vstyyq2)
+**🔗 See also:** [Section 3.3.3 Equivalent Kernel](./333_equivalent_kernel.md#node-qgf9klh) · [Tính toán hàm evidence](./351_evaluation_of_the_evidence_function.md#node-u15ayc8) · [Hessian of Regularized Error Function](./351_evaluation_of_the_evidence_function.md#node-vpu7vqs) · [Iterative Estimation of Alpha](./352_maximizing_the_evidence_function.md#node-vstyyq2) · [Số lượng tham số hiệu dụng](./353_effective_number_of_parameters.md#node-jdgevif)
 
 <br>
 
@@ -418,9 +427,27 @@
 > Nếu so với việc tìm θ có π(θ|𝐱) lớn nhất, thì kết quả có thể sẽ khác. Tuy rằng trong trường hợp posterior là Normal thì hai kết quả sẽ giống nhau, vì mean của posterior cũng là nơi có π(θ|𝐱) lớn nhất.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
 >
-> Ghi chú cực kỳ xuất sắc, thể hiện sự hiểu biết sâu sắc và chính xác về mối liên hệ giữa tối đa hóa hậu nghiệm (MAP) và việc giảm thiểu sai số có Regularization L2. Bạn chỉ cần lưu ý thêm hệ số 1/2 ở phần phạt L2 (tức là α/2 thay vì α) để công thức hoàn toàn đồng nhất với tài liệu học.
+> Ghi chú thể hiện sự hiểu biết sâu sắc và toàn diện về mối liên hệ giữa MAP, MLE và Regularized Least Squares, cũng như mở rộng chính xác sang Decision Theory.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"thì vì f(𝐭) không âm , và dùng hàm ln để có bài toán tối ưu tương đương"*
+>
+> Lý do chính để bỏ qua f(𝐭) khi tối ưu hóa theo 𝐰 là vì f(𝐭) là hằng số độc lập với 𝐰 (constant with respect to 𝐰), chứ không chỉ vì nó không âm.
+>
+> **2.** *"minimize (β/2) sum square error + α 𝐰ᵀ𝐰 + constant"*
+>
+> Số hạng chính quy hóa bị thiếu hệ số 1/2, đúng chuẩn phải là (α/2) 𝐰ᵀ𝐰 để khi chia cho (β/2) ta thu được đúng λ = α/β như sách trình bày.
+>
+>
+> **✓ Strengths**
+> - Giải thích rất sáng tỏ sự khác biệt và điểm giao thoa giữa trường phái Frequentist (MLE) và Bayesian (MAP).
+> - Kết nối xuất sắc với lý thuyết quyết định (Decision Theory) trong thống kê toán: chỉ ra rằng Bayes estimator dưới hàm mất mát bình phương tối thiểu hóa posterior expected loss cho ra posterior mean, và giải thích vì sao trường hợp Gaussian thì mode (MAP) trùng với mean.
+>
+> **💡 Deeper notes**
+> - Trong ký hiệu của PRML (Bishop), phân phối hậu nghiệm thường được viết là N(𝐰 | 𝐦_N, 𝐒_N) với 𝐒_N là ma trận hiệp phương sai (covariance matrix), còn 𝐒_N⁻¹ là ma trận độ chính xác (precision matrix).
 
 <br>
 
