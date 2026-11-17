@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1794873508009,
+  "publishedAt": 1794878296734,
   "sections": [
     {
       "title": "📋 Overview",
@@ -294,7 +294,7 @@
       "title": "3.5.3 Effective number of parameters",
       "path": "pattern_recognition_machine_learning_cbishop/353_effective_number_of_parameters.md",
       "noteCount": 5,
-      "imageCount": 16
+      "imageCount": 17
     },
     {
       "title": "3.6 Limitations of Fixed Basis Functions",
@@ -598,5 +598,5 @@
     }
   ],
   "totalNotes": 524,
-  "totalImages": 879
+  "totalImages": 880
 }
