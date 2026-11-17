@@ -322,5 +322,293 @@
     }
   ],
   "totalNotes": 938,
-  "totalImages": 1253
+  "totalImages": 1253,
+  "videos": [
+    {
+      "id": "K8f2yncHnxg",
+      "title": "Vì sao miền chấp nhận tạo ra khoảng tin cậy cho beta?",
+      "uploadedAt": 1794631750355,
+      "at": [
+        "Section 11.3 Simple Linear Regression",
+        "Section 11.3 Simple Linear Regression",
+        "11.3 SIMPLE LINEAR REGRESSION"
+      ]
+    },
+    {
+      "id": "iy-3owjYDYI",
+      "title": "Tại sao hàm likelihood là hàm của theta chứ không phải x?",
+      "uploadedAt": 1794088336169,
+      "at": [
+        "7.2 METHOD OF FINDING ESTIMATORS"
+      ]
+    },
+    {
+      "id": "PWkRReS5oM8",
+      "title": "Làm sao dùng LOTUS tính hàm MGF của phân phối chuẩn?",
+      "uploadedAt": 1793987046914,
+      "at": [
+        "4.2 CONDITIONAL DISTRIBUTIONS & INDEPENDENT"
+      ]
+    },
+    {
+      "id": "VUCJsx5AnYs",
+      "title": "Khi nào Cov(Ui, Vr) = 0 tương đương tính độc lập?",
+      "uploadedAt": 1793727767485,
+      "at": [
+        "5.3 SAMPLING FROM THE NORMAL DISTRIBUTION"
+      ]
+    },
+    {
+      "id": "Aq3dsND50OA",
+      "title": "Tại sao tổ hợp tuyến tính biến Normal độc lập là Normal?",
+      "uploadedAt": 1793381492457,
+      "at": [
+        "4.6 MULTI-VARIATE DISTRIBUTION"
+      ]
+    },
+    {
+      "id": "dQ-blTqxLaM",
+      "title": "Cách tìm ước lượng MLE cho α và β từ log-likelihood?",
+      "uploadedAt": 1793209949125,
+      "at": [
+        "Section 11.3 Simple Linear Regression",
+        "11.3 SIMPLE LINEAR REGRESSION"
+      ]
+    },
+    {
+      "id": "gpURGn0c_74",
+      "title": "Chứng minh bất đẳng thức Cauchy-Schwarz không cần học thuộc lòng.",
+      "uploadedAt": 1792779273260,
+      "at": [
+        "Section 11.3 Simple Linear Regression",
+        "11.3 SIMPLE LINEAR REGRESSION"
+      ]
+    },
+    {
+      "id": "0QxT5Qi1RfE",
+      "title": "Ôn lại tí xíu về Best Unbiased Estimator, có Variance nhỏ nhất",
+      "uploadedAt": 1792691097243,
+      "at": [
+        "Section 11.3 Simple Linear Regression",
+        "11.3 SIMPLE LINEAR REGRESSION"
+      ]
+    },
+    {
+      "id": "V-6BNavEGgU",
+      "title": "Tại sao cực tiểu hóa RSS không cần giả định phân phối?",
+      "uploadedAt": 1792605338901,
+      "at": [
+        "Section 11.3 Simple Linear Regression",
+        "11.3 SIMPLE LINEAR REGRESSION"
+      ]
+    },
+    {
+      "id": "6upP75ujeSM",
+      "title": "Tại sao Var(X) bằng ax² + bx² từ hai biến Normal độc lập?",
+      "uploadedAt": 1792431519702,
+      "at": [
+        "4.5 COVARIANCE & CORRELATION"
+      ]
+    },
+    {
+      "id": "26Q9kLHdbkc",
+      "title": "Tại sao E[Y|X] = α + βx² vẫn là Linear Regression?",
+      "uploadedAt": 1792425779315,
+      "at": [
+        "11.3 SIMPLE LINEAR REGRESSION"
+      ]
+    },
+    {
+      "id": "DwlKo2-RcYc",
+      "title": "Làm sao biến acceptance region A(θ0) thành confidence set C(X)?",
+      "uploadedAt": 1792185692481,
+      "at": [
+        "9.2 METHODS OF FINDING INTERVAL ESTIMATORS"
+      ]
+    },
+    {
+      "id": "7zjlggrD-iQ",
+      "title": "Làm sao dẫn xuất quy tắc t-test từ Likelihood Ratio Test?",
+      "uploadedAt": 1792095967503,
+      "at": [
+        "Section 11.2.3 Linear Combinations of Means",
+        "Section 11.2 Oneway Analysis of Variance",
+        "Section 11.1 Introduction",
+        "11.1 & 2 INTRODUCTION, ONE-WAY ANOVA"
+      ]
+    },
+    {
+      "id": "ecVQI3CJzPc",
+      "title": "Vì sao thống kê ANOVA với S²_p tuân theo phân phối t bậc N-k?",
+      "uploadedAt": 1792002750179,
+      "at": [
+        "Section 11.2.3 Linear Combinations of Means",
+        "Section 11.2 Oneway Analysis of Variance",
+        "Section 11.1 Introduction",
+        "11.1 & 2 INTRODUCTION, ONE-WAY ANOVA"
+      ]
+    },
+    {
+      "id": "MRIIRaMOWAs",
+      "title": "Làm sao suy ra pdf Student's t từ tỉ số U/√(V/p) (cont)?",
+      "uploadedAt": 1791826248000,
+      "at": [
+        "5.3 SAMPLING FROM THE NORMAL DISTRIBUTION"
+      ]
+    },
+    {
+      "id": "rrOrZFTeyVE",
+      "title": "Làm sao tìm hàm mật độ Student's t từ tỷ số U/√(V/p)?",
+      "uploadedAt": 1791825199094,
+      "at": [
+        "5.3 SAMPLING FROM THE NORMAL DISTRIBUTION"
+      ]
+    },
+    {
+      "id": "ZqHWCkV8iG0",
+      "title": "Chứng minh X,Y ~ normal độc lập thì X+Y cũng là normal",
+      "uploadedAt": 1791740286594,
+      "at": [
+        "5.3 SAMPLING FROM THE NORMAL DISTRIBUTION"
+      ]
+    },
+    {
+      "id": "4QKRIw9ZxL8",
+      "title": "Ôn nhanh location scale family.",
+      "uploadedAt": 1791740269729,
+      "at": [
+        "5.3 SAMPLING FROM THE NORMAL DISTRIBUTION"
+      ]
+    },
+    {
+      "id": "V4s75gq78PI",
+      "title": "Tại sao (n-1)S²/σ² lại có phân phối Chi-Square χ²_{n-1}?",
+      "uploadedAt": 1791740253782,
+      "at": [
+        "5.3 SAMPLING FROM THE NORMAL DISTRIBUTION"
+      ]
+    },
+    {
+      "id": "KRX39ibcBlE",
+      "title": "Làm sao tìm PDF của Y = X² từ hàm CDF?",
+      "uploadedAt": 1791561404634,
+      "at": [
+        "2.1 DISTRIBUTION"
+      ]
+    },
+    {
+      "id": "8oEGxDhqdME",
+      "title": "Vì Sao Trung Bình Mẫu Có Phân Phối Chuẩn N(μ, σ²/n)?",
+      "uploadedAt": 1791304434638,
+      "at": [
+        "5.3 SAMPLING FROM THE NORMAL DISTRIBUTION"
+      ]
+    },
+    {
+      "id": "LLi-ShGm1AI",
+      "title": "Vì sao Ȳi. có phân phối n(θi, σ²/ni) trong mô hình ANOVA?",
+      "uploadedAt": 1791131506962,
+      "at": [
+        "Section 11.2.3 Linear Combinations of Means",
+        "Section 11.2 Oneway Analysis of Variance",
+        "Section 11.1 Introduction",
+        "11.1 & 2 INTRODUCTION, ONE-WAY ANOVA"
+      ]
+    },
+    {
+      "id": "iyUvmtl4bpg",
+      "title": "Làm sao đảo Acceptance Region A(θ) thành khoảng tin cậy C(X)?",
+      "uploadedAt": 1790878283466,
+      "at": [
+        "Section 11.2 Oneway Analysis of Variance",
+        "Section 11.1 Introduction",
+        "11.1 & 2 INTRODUCTION, ONE-WAY ANOVA"
+      ]
+    },
+    {
+      "id": "qi2c2LvaefU",
+      "title": "Vì sao dùng √λ tốt hơn S cho khoảng tin cậy Poisson?",
+      "uploadedAt": 1790183894478,
+      "at": [
+        "10.4 Interval Estimation",
+        "10.4 INTERVAL ESTIMATION"
+      ]
+    },
+    {
+      "id": "UO_2KJVR6fY",
+      "title": "Tại sao nghịch đảo Score Test ra khoảng tin cậy cho p?",
+      "uploadedAt": 1790101523675,
+      "at": [
+        "10.4 Interval Estimation",
+        "10.4 INTERVAL ESTIMATION"
+      ]
+    },
+    {
+      "id": "OcJDysX87L0",
+      "title": "Cách đảo ngược acceptance region thành khoảng tin cậy cho μ?",
+      "uploadedAt": 1790009733415,
+      "at": [
+        "9.2 METHODS OF FINDING INTERVAL ESTIMATORS"
+      ]
+    },
+    {
+      "id": "nC7WkJULeTs",
+      "title": "Thế nào là point estimation, confidence interval và hypothesis testing",
+      "uploadedAt": 1790004244242,
+      "at": [
+        "9.2 METHODS OF FINDING INTERVAL ESTIMATORS"
+      ]
+    },
+    {
+      "id": "t5L8jQeG_nU",
+      "title": "Cách lập phương trình bậc hai tìm khoảng tin cậy Binomial Score?",
+      "uploadedAt": 1789746141654,
+      "at": [
+        "10.4 Interval Estimation",
+        "10.4 INTERVAL ESTIMATION"
+      ]
+    },
+    {
+      "id": "beyWo5KCi6c",
+      "title": "Tại sao [h(θ̂) - h(θ)] / √Var^(h(θ̂)) hội tụ về N(0,1)?",
+      "uploadedAt": 1789149772425,
+      "at": [
+        "10.4 Interval Estimation",
+        "10.4 INTERVAL ESTIMATION"
+      ]
+    },
+    {
+      "id": "Z_OW_2fvLbE",
+      "title": "Làm sao xây dựng Generalized Wald Test từ M-estimator?",
+      "uploadedAt": 1788902153576,
+      "at": [
+        "Section 10.3.2 Other Large-Sample Tests",
+        "Section 10.3.1 Asymptotic Distribution of LRTs",
+        "Section 10.3 Hypothesis Testing",
+        "10.3 HYPOTHESIS TESTING"
+      ]
+    },
+    {
+      "id": "RBcsZYaHM-Q",
+      "title": "Vì Sao Kỳ Vọng Của Score Statistic E_θ[S(θ)] Bằng 0?",
+      "uploadedAt": 1788566520328,
+      "at": [
+        "Section 10.3.2 Other Large-Sample Tests",
+        "Section 10.3.1 Asymptotic Distribution of LRTs",
+        "Section 10.3 Hypothesis Testing",
+        "10.3 HYPOTHESIS TESTING"
+      ]
+    },
+    {
+      "id": "UmyowzIGpGE",
+      "title": "Large-Sample Binomial Tests",
+      "uploadedAt": 1788452614121,
+      "at": [
+        "Section 10.3.2 Other Large-Sample Tests",
+        "Section 10.3.1 Asymptotic Distribution of LRTs",
+        "Section 10.3 Hypothesis Testing",
+        "10.3 HYPOTHESIS TESTING"
+      ]
+    }
+  ]
 }
