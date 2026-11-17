@@ -1,6 +1,6 @@
 # 9.2 Methods Of Finding Interval Estimators
 
-📊 **Progress:** `52` Notes | `61` Screenshots | `15` AI Reviews
+📊 **Progress:** `52` Notes | `61` Screenshots | `16` AI Reviews
 
 ---
 <a id="node-7s1kn1j"></a>
@@ -2501,6 +2501,18 @@
 >
 >
 > = g(q). như vậy fQ(q) = g(q) **hoàn toàn không phụ thuộc θ** nữa.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, hiểu đúng bản chất trực giác từ công thức pdf và tự hoàn thiện chứng minh $f_Q(q) = g(q)$ bằng định lý đổi biến một cách rõ ràng.
+>
+> **✓ Strengths**
+> - Hiểu rất rõ cách biến đổi đại số để làm xuất hiện dạng pivot trong hàm mật độ của trung bình mẫu.
+> - Tự lực triển khai chứng minh hoàn chỉnh cho Bài tập 9.10 bằng định lý biến đổi biến (Theorem 2.1.5), chỉ ra Jacobian triệt tiêu và $f_Q(q) = g(q)$ không phụ thuộc $\theta$.
+>
+> **💡 Deeper notes**
+> - Để $Q(T, \theta)$ là một pivot hoàn chỉnh, ngoài việc hàm mật độ $g(q)$ không phụ thuộc vào $\theta$, miền giá trị (support) của $Q(T, \theta)$ cũng cần độc lập với tham số $\theta$.
 
 <br>
 
