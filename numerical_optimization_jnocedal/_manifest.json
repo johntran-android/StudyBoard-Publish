@@ -256,5 +256,282 @@
     }
   ],
   "totalNotes": 456,
-  "totalImages": 708
+  "totalImages": 708,
+  "videos": [
+    {
+      "id": "QpNTm5otibM",
+      "title": "Tại sao cực tiểu hóa phi tương đương r_x vuông góc p_i?",
+      "uploadedAt": 1794718274523,
+      "at": [
+        "5.1 The Linear Conjugate Gradient Method",
+        "5.1 Linear Conjugate Gradient",
+        "5.1 Linear Conjugate Gradient"
+      ]
+    },
+    {
+      "id": "zYeJv7A0Hns",
+      "title": "Vì sao ma trận SᵀAS là ma trận đường chéo?",
+      "uploadedAt": 1794514466822,
+      "at": [
+        "5.1 The Linear Conjugate Gradient Method",
+        "5.1 Linear Conjugate Gradient",
+        "5.1 Linear Conjugate Gradient"
+      ]
+    },
+    {
+      "id": "LdqakqsyBRY",
+      "title": "Làm sao xây dựng ma trận chuyển cơ sở S⁻¹V?",
+      "uploadedAt": 1794416066575,
+      "at": [
+        "5.1 The Linear Conjugate Gradient Method",
+        "5.1 Linear Conjugate Gradient",
+        "5.1 Linear Conjugate Gradient"
+      ]
+    },
+    {
+      "id": "V3qSJFNY3HM",
+      "title": "Vì sao phương pháp hướng liên hợp hội tụ sau tối đa n bước?",
+      "uploadedAt": 1794374219628,
+      "at": [
+        "5.1 The Linear Conjugate Gradient Method",
+        "5.1 Linear Conjugate Gradient",
+        "5.1 Linear Conjugate Gradient"
+      ]
+    },
+    {
+      "id": "wgdR-pmFiBM",
+      "title": "Làm sao tính bước nhảy alpha trong phương pháp hướng liên hợp?",
+      "uploadedAt": 1794028313340,
+      "at": [
+        "5.1 The Linear Conjugate Gradient Method",
+        "5.1 Linear Conjugate Gradient",
+        "5.1 Linear Conjugate Gradient"
+      ]
+    },
+    {
+      "id": "dWWDrFxObGg",
+      "title": "Tại sao các vectơ liên hợp luôn độc lập tuyến tính?",
+      "uploadedAt": 1794024830641,
+      "at": [
+        "5.1 The Linear Conjugate Gradient Method",
+        "5.1 Linear Conjugate Gradient",
+        "5.1 Linear Conjugate Gradient"
+      ]
+    },
+    {
+      "id": "pia4HYygkUo",
+      "title": "Làm sao dùng phương pháp null-space để giải hệ KKT?",
+      "uploadedAt": 1793858493951,
+      "at": [
+        "16.2 Direct solution of KKT system"
+      ]
+    },
+    {
+      "id": "otwKnGhj1vE",
+      "title": "Tại sao rank(AB) = rank(A) khi ma trận B khả nghịch?",
+      "uploadedAt": 1793733491163,
+      "at": [
+        "16.2 Direct solution of KKT system"
+      ]
+    },
+    {
+      "id": "4pAJlcx-stw",
+      "title": "Schur-Complement Method",
+      "uploadedAt": 1793417776447,
+      "at": [
+        "16.2 Direct solution of KKT system"
+      ]
+    },
+    {
+      "id": "rqNag5i113c",
+      "title": "Tại sao Z^T G Z được gọi là Reduced Hessian?",
+      "uploadedAt": 1793293237841,
+      "at": [
+        "16.2 Direct solution of KKT system"
+      ]
+    },
+    {
+      "id": "jg7rbTIx6Wk",
+      "title": "Ví dụ 16.2 minh họa một bài toán QP có nghiệm duy nhất.",
+      "uploadedAt": 1792863324417,
+      "at": [
+        "16.1 Equality-constrained Quadratic Programs"
+      ]
+    },
+    {
+      "id": "2u9U3nA1768",
+      "title": "Mượn bài toán tối ưu để ôn lại vài kiến thức đại số tuyến tính.",
+      "uploadedAt": 1792860207679,
+      "at": [
+        "16.1 Equality-constrained Quadratic Programs"
+      ]
+    },
+    {
+      "id": "sNjOXBKz0YM",
+      "title": "Mượn bài toán  lập hệ ma trận KKT để ôn cách tìm gradient và Hessian hàm bậc hai.",
+      "uploadedAt": 1792856418435,
+      "at": [
+        "16.1 Equality-constrained Quadratic Programs"
+      ]
+    },
+    {
+      "id": "TYA0HbfhlHQ",
+      "title": "Vì sao ma trận KKT khả nghịch khi ZᵀGZ xác định dương?",
+      "uploadedAt": 1792726769059,
+      "at": [
+        "16.1 Equality-constrained Quadratic Programs"
+      ]
+    },
+    {
+      "id": "JyhO5lX_IZQ",
+      "title": "Phép chiếu Gram Schmidt và QR factor",
+      "uploadedAt": 1792686105800,
+      "at": [
+        "Section 15.3 Elimination of Variables",
+        "15.3 Elimination of variables"
+      ]
+    },
+    {
+      "id": "zjAzLlTsl44",
+      "title": "Vì sao nghiệm Y(AY)⁻¹b từ phân rã QR là Least-Norm?",
+      "uploadedAt": 1792685292570,
+      "at": [
+        "Section 15.3 Elimination of Variables",
+        "15.3 Elimination of variables"
+      ]
+    },
+    {
+      "id": "zUdZtRFHlYg",
+      "title": "Vì sao AY khả nghịch khi phân tách nghiệm x = Yx_Y + Zx_Z?",
+      "uploadedAt": 1792469693852,
+      "at": [
+        "Section 15.3 Elimination of Variables",
+        "15.3 Elimination of variables"
+      ]
+    },
+    {
+      "id": "V688_8gu1X4",
+      "title": "Vì sao x = Yb + ZxN trượt trên Null Space?",
+      "uploadedAt": 1792259640410,
+      "at": [
+        "Section 15.3 Elimination of Variables",
+        "15.3 Elimination of variables"
+      ]
+    },
+    {
+      "id": "-9nfMosuj58",
+      "title": "Tại sao Z = [-B⁻¹N; I] là basis của Nullspace?",
+      "uploadedAt": 1791657693355,
+      "at": [
+        "Section 15.3 Elimination of Variables",
+        "15.3 Elimination of variables"
+      ]
+    },
+    {
+      "id": "63NedgBej6I",
+      "title": "Tại sao chọn cột 3 và 6 để tìm B⁻¹ dễ nhất?",
+      "uploadedAt": 1791647917033,
+      "at": [
+        "Section 15.3 Elimination of Variables",
+        "15.3 Elimination of variables"
+      ]
+    },
+    {
+      "id": "Gl4aCDchTAs",
+      "title": "Làm sao khử ràng buộc Ax = b đưa về tối ưu không ràng buộc?",
+      "uploadedAt": 1791491686650,
+      "at": [
+        "Section 15.3 Elimination of Variables",
+        "15.3 Elimination of variables"
+      ]
+    },
+    {
+      "id": "SyvGCGAjrtQ",
+      "title": "Vì sao A full row rank đảm bảo hệ Ax=b luôn có nghiệm?",
+      "uploadedAt": 1791258118869,
+      "at": [
+        "16.1 Equality-constrained Quadratic Programs"
+      ]
+    },
+    {
+      "id": "t6pKTKzIX_o",
+      "title": "Vì sao phương sai danh mục đầu tư là xᵀGx?",
+      "uploadedAt": 1791149804497,
+      "at": [
+        "16.0 Quadratic Programming"
+      ]
+    },
+    {
+      "id": "j85JoFMH0F0",
+      "title": "Tại sao bài toán đối ngẫu LP có ràng buộc ngầm A^T λ = c?",
+      "uploadedAt": 1790911824364,
+      "at": [
+        "12.9 Duality"
+      ]
+    },
+    {
+      "id": "HB2-G1ppSjQ",
+      "title": "Vì Sao Nghiệm Primal (x̄, ƛ) Cũng Là Nghiệm Của Wolfe Dual?",
+      "uploadedAt": 1790828129254,
+      "at": [
+        "12.9 Duality"
+      ]
+    },
+    {
+      "id": "PzLtTlIO-kE",
+      "title": "Khi nào minimizer của Lagrangian cho ra đúng nghiệm Primal x̄?",
+      "uploadedAt": 1790705388728,
+      "at": [
+        "12.9 Duality"
+      ]
+    },
+    {
+      "id": "qSrfcPuiA4k",
+      "title": "Tại sao nghiệm KKT λ̃ làm cực đại hóa hàm đối ngẫu q(λ)?",
+      "uploadedAt": 1790430332543,
+      "at": [
+        "12.9 Duality"
+      ]
+    },
+    {
+      "id": "GtOATZjDGQs",
+      "title": "Theorem 12.11 Weak Duality",
+      "uploadedAt": 1790393266298,
+      "at": [
+        "12.9 Duality"
+      ]
+    },
+    {
+      "id": "UGddFxbogXU",
+      "title": "Tại sao hàm dual objective q(λ) luôn concave và domain 𝒟 lồi?",
+      "uploadedAt": 1790306878388,
+      "at": [
+        "12.9 Duality"
+      ]
+    },
+    {
+      "id": "oS8uhtEOI9w",
+      "title": "Vì sao Projected Hessian Zᵀ∇²LZ giúp kiểm tra cực tiểu dễ hơn?",
+      "uploadedAt": 1789916587155,
+      "at": [
+        "12.5 Second-Order Conditions"
+      ]
+    },
+    {
+      "id": "6g2qIzX9yO0",
+      "title": "Vì sao df/dε = -λ*||∇ci|| khi thay đổi ràng buộc ci(x)?",
+      "uploadedAt": 1789916409346,
+      "at": [
+        "12.8 Lagrange Multipliers and Sensitivity"
+      ]
+    },
+    {
+      "id": "wy_PaBOEbnY",
+      "title": "Tại sao nhân tử Lagrange λ* = 0 khi ràng buộc không active?",
+      "uploadedAt": 1789858516690,
+      "at": [
+        "12.8 Lagrange Multipliers and Sensitivity"
+      ]
+    }
+  ]
 }
