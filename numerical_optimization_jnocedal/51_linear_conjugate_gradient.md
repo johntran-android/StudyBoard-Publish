@@ -1,6 +1,6 @@
 # 5.1 Linear Conjugate Gradient
 
-📊 **Progress:** `23` Notes | `66` Screenshots | `22` AI Reviews
+📊 **Progress:** `23` Notes | `67` Screenshots | `22` AI Reviews
 
 ---
 <a id="node-ezxbb8s"></a>
@@ -2191,6 +2191,8 @@
 ###### Chứng minh eigenvector conjugate + ôn lại Gram-Smidth
 
 <p align="center"><kbd><img src="assets/4x5i9c0xwcv.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6evf35oj3vglh.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Đại ý nói là thuật toán conjugate direction đòi hỏi ta có một bộ conjugate vector. Và có nhiều cách để tạo ra một bộ như vậy. Ví dụ với A xác định dương thì eigenvectors cũng là conjugate set. Nhưng có điều tìm ra bộ eigenvector thì rất tốn kém với bài toán quy mô lớn. Một đề xuất khác là có thể dùng thuật toán Gram-Schmidt.
