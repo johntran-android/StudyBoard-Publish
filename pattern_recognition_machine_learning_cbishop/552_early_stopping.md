@@ -34,6 +34,8 @@
 >
 > (Đã biết mục tiêu của machine learning là có khả năng generalization: mô hình phải dự đoán đúng với data mới, chứ ko phải chỉ training data. Và do đó ta sẽ tách riêng 1 data set gọi là validation set, để kiểm tra sau khi train với training set)
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=3O0cMGRgNJk)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
