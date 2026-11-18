@@ -2352,69 +2352,110 @@
 <p align="center"><kbd><img src="assets/l0lw3wtpuic.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là, tác giả nói rằng, phương pháp conjugate gradient THẬT RA chính là conjugate direction nhưng CÓ THÊM MỘT TÍNH CHẤT CỰC KÌ HỮU ÍCH: Đó là **trong quá trình tính toán, ta sẽ DÙNG pk-1 ĐỂ TẠO pk**, mà vẫn đảm bảo là pk conjugate với đám p0,...pk-2 trước đó. Nhờ vậy, không cần tốn nhiều chi phí lưu trữ và tính toán.
+> Đại khái là, tác giả nói rằng, phương pháp conjugate gradient THẬT RA chính là conjugate direction nhưng CÓ THÊM MỘT TÍNH CHẤT CỰC KÌ HỮU ÍCH:
 >
-> Tiếp theo, tác giả nói **pk là linear combination của negative residual -rk và pk-1**: 
 >
-> pk = -rk + βkpk-1 (5.13)
 >
-> Vì sao ở đây nói theo 5.3, -rk lại là steepest descent direction nhỉ? → vì 5.3 nói rằng ∇φ(xk) = Axk - b = r(xk) hay rk. À vậy thì -rk là - ∇φ(xk), dĩ nhiên nó chính là steepest descent direction như đã biết.
+> Đó là trong quá trình tính toán, **ta sẽ DÙNG p_k-1 ĐỂ TẠO p_k**, mà vẫn đảm bảo là p_k conjugate với đám p0,...p_k-2 trước đó. Nhờ vậy, không cần tốn nhiều chi phí lưu trữ và tính toán.
 >
-> Thế thì, **βk phải làm sao để pk và pk-1 conjugate wrt matrix A**: tức pkᵀApk-1 = 0. Ta sẽ tính ra βk thỏa điều kiện này:
 >
-> Nhân hai vế của pk = -rk + βkpk-1 với pk-1TA:
 >
-> pk-1TApk = -pk-1TArk + pk-1TAβkpk-1
+> Tiếp theo, tác giả nói p_k sẽ được chọn sao cho nó là linear combination của negative residual -rk và p_k-1:
 >
-> Cho bằng 0: pk-1TApk = 0 
 >
-> ⇔ -pk-1TArk + pk-1TAβkpk-1 = 0
 >
-> ⇔ -pk-1TArk + βk pk-1TApk-1 = 0
+> p_k = -rk + βk p_k-1 (5.13)
 >
-> ⇔ βk pk-1TApk-1 = pk-1TArk
 >
-> ⇔ βk  = pk-1TArk / pk-1TApk-1
 >
-> Và từ đó ta có full thuật toán: Bắt đầu **từ x0, ta chọn p0 là hướng dốc nhất: -∇φ(x0)**, rồi **theo công thức trên tính ra β1 và từ đó có p1**. Sau khi có p1 thì **theo cách làm của conjugate direction method**, đi **tìm α0 theo 5.7** cách làm của conjugate direction (Conjugate Direction Method), và từ đó có **x1: x1 = x0 + α1p1**. Tiếp theo tạo p2 từ p1 theo công thức trên, cứ thế.
+> Vì sao ở đây nói theo 5.3, -rk lại là steepest descent direction nhỉ? → Vì 5.3 nói rằng ∇φ(xk) = Axk - b = r(xk) hay rk. À vậy thì -rk là - ∇φ(xk), dĩ nhiên nó chính là steepest descent direction như đã biết.
 >
-> Nên nhìn thuật toán 5.1 **Conjugate Gradient Preliminary Version**
+>
+>
+> Thế thì, βk phải làm sao để p_k và p_k-1 conjugate wrt matrix A: tức p_kᵀAp_k-1 = 0. Ta sẽ tính ra βk thỏa điều kiện này:
+>
+>
+>
+> Nhân hai vế của p_k = -rk + βk p_k-1 với p_k-1ᵀA:
+>
+>
+>
+> p_k-1ᵀAp_k = -p_k-1ᵀArk + p_k-1ᵀ A βk p_k-1
+>
+>
+>
+> Cho bằng 0: p_k-1ᵀAp_k = 0
+>
+>
+>
+> ⇔ -p_k-1ᵀArk + p_k-1ᵀAβkp_k-1 = 0
+>
+>
+>
+> ⇔ -p_k-1ᵀArk + βk p_k-1ᵀAp_k-1 = 0
+>
+>
+>
+> ⇔ βk p_k-1ᵀAp_k-1 = p_k-1ᵀArk
+>
+>
+>
+> ⇔ βk = p_k-1ᵀArk / p_k-1ᵀAp_k-1
+>
+>
+>
+> Và từ đó ta có full thuật toán:
+>
+>
+>
+> Thuật toán 5.1 **Conjugate Gradient Preliminary Version**
+>
+>
 >
 > Bắt đầu ta có intial point x0. Tính r0 = Ax0 - b, đó chính là ∇Φ(x0). Gán p0 cho -∇Φ(x0).
 >
-> Lặp lại cho đến khi residual rk = 0, tại mỗi iteration:
+>
+>
+> Tại mỗi iteration:
+>
+>
 >
 > Tính αk (theo công thức 5.7, xem link Conjugate Direction Method)
 >
-> Update xk+1 = xk + αkpk (công thức 5.8, xem link Conjugate Direction Method)
+>
+>
+> Update xk+1 = xk + αkp_k (công thức 5.8, xem link Conjugate Direction Method)
+>
+>
 >
 > Tính rk+1
 >
+>
+>
 > Tính βk+1
 >
-> Dùng nó tính conjugate direction tiếp thep pk+1
 >
-> Lặp lại.
+>
+> Dùng nó tính conjugate direction tiếp thep p_k+1
+>
+>
+>
+> Lặp lại. (Lặp lại cho đến khi residual rk = 0)
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=rdfTaWa_d8w)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú nắm rất tốt bản chất của Conjugate Gradient, ý nghĩa của việc tiết kiệm bộ nhớ và tự suy dẫn được công thức cho beta_k. Có một hạt sạn nhỏ về thứ tự thực hiện và chỉ số bước đầu tiên trong đoạn diễn giải bằng lời trước khi tóm tắt thuật toán.
->
-> **🟡 Minor issues**
->
-> **1.** *"Bắt đầu từ x0, ta chọn p0 là hướng dốc nhất: -∇φ(x0), rồi theo công thức trên tính ra β1 và từ đó có p1. Sau khi có p1 thì theo cách làm của conjugate direction method, đi tìm α0 theo 5.7... và từ đó có x1: x1 = x0 + α1p1."*
->
-> Đoạn mô tả này bị lộn thứ tự tính toán và sai chỉ số. Ta không thể tính ngay beta_1 và p_1 khi mới ở x0 vì beta_1 cần r_1 (phải có x_1 mới có r_1). Thứ tự đúng tại bước đầu tiên là: từ p_0 tính alpha_0, cập nhật x_1 = x_0 + alpha_0*p_0, tính r_1, rồi mới tính beta_1 để tạo p_1. (Dù ngay bên dưới bạn đã tóm tắt thuật toán 5.1 đúng thứ tự, đoạn văn này vẫn nên sửa để tránh gây hiểu lầm).
->
+> Ghi chú rất tốt, thể hiện sự hiểu bài sâu sắc khi tự suy luận ra biểu thức tính hệ số beta_k từ điều kiện liên hợp và giải thích rõ bản chất của gradient âm.
 >
 > **✓ Strengths**
-> - Hiểu chính xác ưu điểm vượt trội của Conjugate Gradient so với Conjugate Direction tổng quát: chỉ cần p_{k-1} để tạo p_k mà vẫn đảm bảo liên hợp với toàn bộ các hướng trước đó, giúp tối ưu bộ nhớ và tính toán.
-> - Tự biến đổi đại số rõ ràng và chính xác để tìm ra hệ số beta_k từ điều kiện trực giao liên hợp p_{k-1}^T A p_k = 0.
-> - Tóm tắt đúng và mạch lạc các bước lặp trong thuật toán CG sơ bộ (Algorithm 5.1).
+> - Hiểu chính xác và làm nổi bật được ưu điểm cốt lõi của Conjugate Gradient so với phương pháp Conjugate Direction tổng quát: chỉ cần vector trước đó mà vẫn đảm bảo tính liên hợp với toàn bộ tập vector cũ.
+> - Tự thực hiện biến đổi đại số chính xác để tìm ra công thức tính beta_k từ điều kiện liên hợp p_k^T A p_{k-1} = 0.
+> - Nắm rõ mối liên hệ giữa vector thặng dư r_k và gradient của hàm mục tiêu để giải thích tại sao -r_k là hướng dốc nhất (steepest descent).
 >
 > **💡 Deeper notes**
-> - Phép biến đổi từ pk-1^T A rk thành rk^T A pk-1 (như trong công thức 5.14d) ngầm định ma trận A đối xứng (A = A^T). Đồng thời, A phải là ma trận xác định dương (SPD) để mẫu số p_{k-1}^T A p_{k-1} > 0 với mọi p_{k-1} khác 0.
+> - Trong phép biến đổi beta_k = p_{k-1}^T A r_k / (p_{k-1}^T A p_{k-1}), biểu thức ở tử số khớp với công thức (5.14d) là r_k^T A p_{k-1} nhờ vào tính đối xứng của ma trận A (A = A^T trong bài toán CG chuẩn). Nên ghi chú thêm điều kiện A đối xứng xác định dương (SPD).
 
 **🔗 See also:** [5.1 The Linear Conjugate Gradient Method](#node-hpdy8sw) · [Conjugate Direction Method](#node-0lu7h6i) · [A Practical Form Of The Conjugate Gradient Method.](#node-jdgssae)
 
