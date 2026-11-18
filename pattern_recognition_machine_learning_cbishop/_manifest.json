@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1794942493319,
+  "publishedAt": 1794965892489,
   "sections": [
     {
       "title": "📋 Overview",
@@ -600,6 +600,15 @@
   "totalNotes": 524,
   "totalImages": 880,
   "videos": [
+    {
+      "id": "3O0cMGRgNJk",
+      "title": "Tại sao early stopping lại tương đương với L2 regularization?",
+      "uploadedAt": 1794964311832,
+      "at": [
+        "5.5.2 Early Stopping",
+        "5.5.2 Early stopping"
+      ]
+    },
     {
       "id": "csrfieA6pNk",
       "title": "Tại sao λ và α kéo w_MAP về 0 hay w_ML?",
