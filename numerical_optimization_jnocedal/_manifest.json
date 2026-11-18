@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1794976093105,
+  "publishedAt": 1794976688362,
   "sections": [
     {
       "title": "📋 Overview",
@@ -260,7 +260,7 @@
   "videos": [
     {
       "id": "rdfTaWa_d8w",
-      "title": "Làm sao tính hệ số $\beta_k$ để tạo hướng liên hợp $p_k$?",
+      "title": "Thuật toán CG sơ bộ.",
       "uploadedAt": 1794975097563,
       "at": [
         "5.1 The Linear Conjugate Gradient Method",
