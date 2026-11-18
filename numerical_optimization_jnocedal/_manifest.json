@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1794970694882,
+  "publishedAt": 1794976093105,
   "sections": [
     {
       "title": "📋 Overview",
@@ -258,6 +258,16 @@
   "totalNotes": 456,
   "totalImages": 709,
   "videos": [
+    {
+      "id": "rdfTaWa_d8w",
+      "title": "Làm sao tính hệ số $\beta_k$ để tạo hướng liên hợp $p_k$?",
+      "uploadedAt": 1794975097563,
+      "at": [
+        "5.1 The Linear Conjugate Gradient Method",
+        "5.1 Linear Conjugate Gradient",
+        "5.1 Linear Conjugate Gradient"
+      ]
+    },
     {
       "id": "QpNTm5otibM",
       "title": "Tại sao cực tiểu hóa phi tương đương r_x vuông góc p_i?",
