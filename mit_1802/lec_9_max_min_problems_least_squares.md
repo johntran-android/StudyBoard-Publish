@@ -1,13 +1,9 @@
-# Lec 9: Max-min Problems, Least
-squares
+# Lec 9: Max-min Problems, Least Squares
 
 📊 **Progress:** `21` Notes | `28` Screenshots
 
 ---
 <a id="node-7vcu50t"></a>
-
-## Lec 9: Max-min Problems, Least
-squares
 
 <br>
 
@@ -35,7 +31,7 @@ squares
 >
 >
 >
-> **∆f ~= f_x*∆x + f_y*∆y** 
+> **∆f ≈ f_x*∆x + f_y*∆y** 
 >
 >
 >
@@ -43,21 +39,21 @@ squares
 >
 >
 >
-> **∆f ~= f'*∆x** (hay f(x) - f(x0) ~= f'(x0)(x-x0) 
+> **∆f ≈ f'*∆x** (hay f(x) - f(x0) ≈ f'(x0)(x-x0) 
 >
 >
 >
-> <=> **f(x) ~= f(x0) + f'(x)(x-x0)**
+> ⇔ **f(x) ≈ f(x0) + f'(x)(x-x0)**
 >
 >
 >
-> Và intuition là: khi **x thay đổi delta_x** nó khiến f**unction f thay đổi** một
-> khoảng bằng **delta_x** **nhân** với **rate of change f_x**: **f_x*delta_x**
+> Và intuition là: khi **x thay đổi Δx** nó khiến f**unction f thay đổi** một
+> khoảng bằng **Δx** **nhân** với **rate of change f_x**: **f_x × Δx**
 >
 >
 >
-> khi **y thay đổi delta_y** nó khiến function **thay đổi một khoảng delta_y**
-> **nhân** với **rate of change f_y**: **f_y*delta_y**.
+> khi **y thay đổi Δy** nó khiến function **thay đổi một khoảng Δy**
+> **nhân** với **rate of change f_y**: **f_y × Δy**.
 >
 >
 >
@@ -112,7 +108,7 @@ squares
 > [!NOTE]
 > thế thì đại khái là **nếu ta có f_x(x0, y0) = a** ta có **đường tiếp tuyến** nằm t**rong mặt phẳng
 > song song với xz,** **cắt trục y tại** **y0** và có **độ dốc tại x0 là a**, và phương trình của nó là **z -
-> z0 = a(x - x0)** mang ý nghĩa là khi x thay đổi từ x0 -> x, z thay đổi từ z0 -> z với rate
+> z0 = a(x - x0)** mang ý nghĩa là khi x thay đổi từ x0 → x, z thay đổi từ z0 → z với rate
 > (z-z0)/(x-x0) = a
 >
 >
@@ -136,7 +132,7 @@ squares
 >
 >
 >
-> Thì đây là phương trình mặt phẳng với x*constant + y*constant +
+> Thì đây là phương trình mặt phẳng với x × constant + y × constant +
 > constant và nếu giữ y, thay đổi x ta có phương trình của tangent line
 > thứ 1 (ý là cho y = y0 ko đổi thì phương trình trở thành z = z0 + a(x -
 > x0)) và ngược lại, giữ x thay đổi y thì ta có phương trình tangent line
@@ -157,17 +153,17 @@ squares
 > [!NOTE]
 > Thế thì gs cho biết **ý nghĩa** của **linear approximation đối với hàm
 > hai biến** chính là **nói rằng** **đồ thị hàm số f (tất nhiên chỉ xét trong
-> một khoảng x~=x0) có thể coi như trùng với tangent plane**.
+> một khoảng x≈x0) có thể coi như trùng với tangent plane**.
 >
 >
 >
-> Nếu ta **di chuyển trên tangent plane** thì **delta_z = linear function
-> của delta_x và delta_y (fx*delta_x + fy*delta_y)**.
+> Nếu ta **di chuyển trên tangent plane** thì **Δz = linear function
+> của Δx và Δy (fx × Δx + fy × Δy)**.
 >
 >
 >
 > Nhưng vì **thực tế** đồ thị của f **chỉ là gần bằng tangent plane** nên
-> ta dùng dấu **xấp xỉ ~=**
+> ta dùng dấu **xấp xỉ ≈**
 
 <br>
 
@@ -264,7 +260,7 @@ squares
 >
 >
 >
-> và nó **bằng -1 khi y = 0**, và x-y = -1 -> **x = -1**. Do đó đây là **minimum**
+> và nó **bằng -1 khi y = 0**, và x-y = -1 → **x = -1**. Do đó đây là **minimum**
 
 <br>
 
@@ -371,14 +367,14 @@ squares
 <p align="center"><kbd><img src="assets/0at6z3uw82ji.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì **true pattern** có dạng **y = c*e^ax**, để **tìm c và a** giúp
+> Thế thì **true pattern** có dạng **y = c × e^ax**, để **tìm c và a** giúp
 > tạo được đường **fit tốt nhất với data** này thì rất **khó**. Nhưng **chỉ
 > cần lấy ln hai vế**. Ta sẽ có  thể thấy **bài toán trở thành least
 > square**
 >
 >
 >
-> ln(c*e^ax) = ln(c) + ln(e^ax) = ln(c) + ax ln(e) = ln(c) + ax
+> ln(c × e^ax) = ln(c) + ln(e^ax) = ln(c) + ax ln(e) = ln(c) + ax
 
 <br>
 
