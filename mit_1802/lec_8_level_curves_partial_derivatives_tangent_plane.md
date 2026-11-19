@@ -1,13 +1,9 @@
-# Lec 8: Level Curves, Partial
-derivatives, Tangent Plane
+# Lec 8: Level Curves, Partial Derivatives, Tangent Plane
 
 📊 **Progress:** `20` Notes | `22` Screenshots
 
 ---
 <a id="node-21skkg2"></a>
-
-## Lec 8: Level Curves, Partial
-derivatives, Tangent Plane
 
 <br>
 
@@ -17,7 +13,7 @@ derivatives, Tangent Plane
 
 > [!NOTE]
 > đại khái là nói về function có **hơn một variable**, ví dụ với **2
-> variables** **f(x, y)** với một số ví dụ như **f=x^2+y^2,** hoặc function
+> variables** **f(x, y)** với một số ví dụ như **f=x²+y²,** hoặc function
 > dựa vào x,y để tra cứu một thông tin nào đó.
 >
 >
@@ -51,18 +47,18 @@ derivatives, Tangent Plane
 <p align="center"><kbd><img src="assets/xgd0h65sup.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ khác với function f = 1 - x^2 - y^2. Đại khái là ta có thể làm từng
+> Ví dụ khác với function f = 1 - x² - y². Đại khái là ta có thể làm từng
 > bước để **dần hiểu dạng đồ thị của f** như thế nào. Bằng cách đầu tiên
-> là xét trong **yz-plane**, tức x = 0. Khi đó f = 1 - y^2, như vậy giao của
+> là xét trong **yz-plane**, tức x = 0. Khi đó f = 1 - y², như vậy giao của
 > đồ thị hàm f với yz plane là parabola.
 >
 >
 >
-> Tương tự xét trong **xz plane** thì nó là parabola **f = 1 - x^2.**
+> Tương tự xét trong **xz plane** thì nó là parabola **f = 1 - x².**
 >
 >
 >
-> Và xét trong xy plane, tức z = 0 thì ta có **x^2+y^2 = 1**, đây là phương
+> Và xét trong xy plane, tức z = 0 thì ta có **x²+y² = 1**, đây là phương
 > trình **đường tròn unit.**
 
 <br>
@@ -81,7 +77,7 @@ derivatives, Tangent Plane
 <p align="center"><kbd><img src="assets/etbp9bdrz0o.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Còn đây là đồ thị của f = y^2 - x^2. có hình yên ngựa (saddle point), thì
+> Còn đây là đồ thị của f = y² - x². có hình yên ngựa (saddle point), thì
 > để ý rằng **xét trong plane yz** thì nó là **parabola ngửa lên**. Ngược lại
 > trong **plane xz** thì nó là **parabola úp xuống**
 
@@ -173,7 +169,7 @@ derivatives, Tangent Plane
 <p align="center"><kbd><img src="assets/oqy8a4gddrq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs cho xem contour plot của saddle point z = y^2 - x^2
+> Gs cho xem contour plot của saddle point z = y² - x²
 
 <br>
 
@@ -209,7 +205,7 @@ derivatives, Tangent Plane
 >
 >
 >
-> **limit của [f(x+delta_x) - f(x)] /delta_x khi delta_x -> 0**
+> **limit của [f(x+Δx) - f(x)] /Δx khi Δx → 0**
 
 <br>
 
@@ -234,30 +230,30 @@ derivatives, Tangent Plane
 <p align="center"><kbd><img src="assets/8p6rxvek6oa.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ta có function ước lượng **xấp xỉ hàm số f**: f(x) ~= f(x0) + f'(x0)(x-x0) 
+> Ta có function ước lượng **xấp xỉ hàm số f**: f(x) ≈ f(x0) + f'(x0)(x-x0) 
 > và gs cho biết nếu ta có thêm các higher order term nữa thì 
 > đó chính là Taylor series
 >
 >
 >
 > Sau khi học bài 9 của 1801, ta đã có thể hiểu đây chính là **LINEAR**
-> **APPROXIMATION**: f(x) ~= f(x0) + f'(x0)(x-x0), xuất phát từ lập luận
-> khi limit delta_x -> 0 của delta_f / delta_x = f'(x)
+> **APPROXIMATION**: f(x) ≈ f(x0) + f'(x0)(x-x0), xuất phát từ lập luận
+> khi limit Δx → 0 của Δf / Δx = f'(x)
 >
 >
 >
-> Thì ta có thể cho rằng khi delta_x ~= 0, tức x-x0~=0, hay x~=x0
-> thì delta_f / delta_x ~= f'(x0) từ đó f(x)-f(x0)~=f'(x0)(x-x0)
-> <=> **f(x) ~= f(x0) + f'(x0)(x-x0)**
+> Thì ta có thể cho rằng khi Δx ≈ 0, tức x-x0≈0, hay x≈x0
+> thì Δf / Δx ≈ f'(x0) từ đó f(x)-f(x0)≈f'(x0)(x-x0)
+> ⇔ **f(x) ≈ f(x0) + f'(x0)(x-x0)**
 >
 >
 >
-> Còn nếu có thể quadratic term f''(x0)(x-x0)^2/2 thì ta sẽ có 
+> Còn nếu có thể quadratic term f''(x0)(x-x0)²/2 thì ta sẽ có 
 > **QUADRATIC** **APPROXIMATION**: 
 >
 >
 >
-> f(x) ~= f(x0) + f'(x0)(x-x0) + f''(x0)(x-x0)^2/2
+> f(x) ≈ f(x0) + f'(x0)(x-x0) + f''(x0)(x-x0)²/2
 
 <br>
 
@@ -278,7 +274,7 @@ derivatives, Tangent Plane
 >
 >
 > Và định nghĩa của nó là ví dụ **partial derivative của f w.r.t x** tại **(x0, y0)**
-> là **limit của  [f(x0+delta_x, y0) - f(x0, y0)] / delta_x**. Trong đó ta sẽ **treat
+> là **limit của  [f(x0+Δx, y0) - f(x0, y0)] / Δx**. Trong đó ta sẽ **treat
 > y như constant**
 >
 >
