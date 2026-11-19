@@ -5,8 +5,6 @@
 ---
 <a id="node-jg45u4c"></a>
 
-## Lec 11: Differentials, Chain-rule
-
 <br>
 
 <a id="node-kyannpv"></a>
@@ -37,7 +35,7 @@
 >
 >
 >
-> Tức là từ y = f(x) => d/dx (y = f(x)) <=> dy/dx = df(x)/dx <=> **dy/dx =
+> Tức là từ y = f(x) ⇒ d/dx (y = f(x)) ⇔ dy/dx = df(x)/dx ⇔ **dy/dx =
 > f'(x) hay dy = f'(x)dx là vậy**
 
 **🔗 See also:** [linked note](./lec_14_non_independent_random_variables.md#node-8r52v3n) · [linked note](./lec_20_path_independence_conservative_field.md#node-7hei77e)
@@ -62,7 +60,7 @@
 >
 >
 >
-> y = sin^-1(x) <=> sin(y) = x (y = f(x) <=> g(y) = x hay f_inv(y) = x)
+> y = sin^-1(x) ⇔ sin(y) = x (y = f(x) ⇔ g(y) = x hay f_inv(y) = x)
 >
 >
 >
@@ -70,23 +68,23 @@
 >
 >
 >
-> **d/dx (sin(y) = x)) <=> (d/dx) sin(y) = (d/dx) x**
+> **d/dx (sin(y) = x)) ⇔ (d/dx) sin(y) = (d/dx) x**
 >
 >
 >
-> <=> d sin(y) / dy * dy / dx = dx/dx (chain rule)
+> ⇔ d sin(y) / dy * dy / dx = dx/dx (chain rule)
 >
 >
 >
-> <=> **cos(y) * dy / dx = 1**
+> ⇔ **cos(y) * dy / dx = 1**
 >
 >
 >
-> <=> **dy / dx = 1 / cos(y)** = 1 / sqrt(1-sin(y)^2)
+> ⇔ **dy / dx = 1 / cos(y)** = 1 / sqrt(1-sin(y)²)
 >
 >
 >
-> = **1 / sqrt(1-x^2)**
+> = **1 / sqrt(1-x²)**
 >
 >
 >
@@ -99,27 +97,27 @@
 >
 >
 >
-> Đó là cũng từ y = sin^-1(x) <=> x = sin(y)
+> Đó là cũng từ y = sin^-1(x) ⇔ x = sin(y)
 >
 >
 >
-> => **dx = sin'(y)dy** **(lấy vi phân, đây chính là bước implicit differentiation)**
+> ⇒ **dx = sin'(y)dy** **(lấy vi phân, đây chính là bước implicit differentiation)**
 >
 >
 >
-> <=> dx = cos(y)dy (derivative của sin(y) = cos(y))
+> ⇔ dx = cos(y)dy (derivative của sin(y) = cos(y))
 >
 >
 >
-> <=> dy/dx = 1/cos(y)
+> ⇔ dy/dx = 1/cos(y)
 >
 >
 >
-> Và vì x = sin(y) nên cos(y) = sqrt(1-sin(y)^2) = sqrt(1-x^2)
+> Và vì x = sin(y) nên cos(y) = sqrt(1-sin(y)²) = sqrt(1-x²)
 >
 >
 >
-> Vậy **dy/dx = 1/[sqrt(1-x^2)] đó chính là giúp ta tính được derivative của
+> Vậy **dy/dx = 1/[sqrt(1-x²)] đó chính là giúp ta tính được derivative của
 > sin_inv(x)**
 >
 >
@@ -130,20 +128,7 @@
 
 <a id="node-nvr780f"></a>
 
-#### Như vậy ta hiểu là trong 1801 implicit differentiation là ta
-apply d/dx vào hai vế, mà ý nghĩa CHÍNH LÀ LẤY ĐẠO
-HÀM THEO X HAI VẾ. 
-
-y = f(x) => (d/dx) y = (d/dx) f(x) <=> \\*dy/dx = f'(x)\\*
-
-Còn 18.02 thì implicit differentiation thể hiện bằng cách 
-LẤY VI PHÂN HAI VẾ
-
-y = f(x) <=> \\*dy = f'(x) dx\\*
-
-Và chúng cùng bản chất, chẳng qua cách thể hiện theo vi
-phân  sẽ chuẩn bị cho ta bước qua khái niệm VI PHÂN
-TOÀN PHẦN (TOTAL DIFFERENTIAL)
+#### Như vậy ta hiểu là trong 1801 implicit differentiation là ta apply d/dx vào hai vế, mà ý nghĩa CHÍNH LÀ LẤY ĐẠO HÀM THEO X HAI VẾ.   y = f(x) ⇒ (d/dx) y = (d/dx) f(x) ⇔ \\*dy/dx = f'(x)\\*  Còn 18.02 thì implicit differentiation thể hiện bằng cách  LẤY VI PHÂN HAI VẾ  y = f(x) ⇔ \\*dy = f'(x) dx\\*  Và chúng cùng bản chất, chẳng qua cách thể hiện theo vi phân  sẽ chuẩn bị cho ta bước qua khái niệm VI PHÂN TOÀN PHẦN (TOTAL DIFFERENTIAL)
 
 <br>
 
@@ -167,7 +152,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> **df = ∂f/∂x*dx + ∂f/∂y*dy + ∂f/∂z*dz**
+> **df = ∂f/∂x × dx + ∂f/∂y × dy + ∂f/∂z × dz**
 >
 >
 >
@@ -176,7 +161,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 > PHẢI MATRIX**. CHÚNG GỌI LÀ **DIFFERENTIAL** (VI PHÂN). Và ta phải
 > **học các rule để manipulate chúng.**
 >
-> TOTAL DIFFERENTIAL: df = f_x*dx + f_y*dy + f_z*dz
+> TOTAL DIFFERENTIAL: df = f_x × dx + f_y × dy + f_z × dz
 
 **🔗 See also:** [linked note](./lec_14_non_independent_random_variables.md#node-i4e81w1) · [linked note](./lec_18_change_of_variables.md#node-rqd8oib)
 
@@ -213,35 +198,35 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> Khi **df/dx = f'(x)** THEO ĐỊNH NGHĨA là = **limit** của ∆f/∆x khi ∆x->0
-> thì ta có thể **bỏ lim** và **chuyển thành approximate**: **f'(x) ~= ∆f/∆x**
-> với ∆x rất nhỏ (ÔX~=0). Để rồi điều đó tương đương:
+> Khi **df/dx = f'(x)** THEO ĐỊNH NGHĨA là = **limit** của ∆f/∆x khi ∆x→0
+> thì ta có thể **bỏ lim** và **chuyển thành approximate**: **f'(x) ≈ ∆f/∆x**
+> với ∆x rất nhỏ (ÔX≈0). Để rồi điều đó tương đương:
 >
 >
 >
-> f'(x) ~= [f(x) - f(x0)] / (x-x0) với x~=x0 (để ∆x~=0)
+> f'(x) ≈ [f(x) - f(x0)] / (x-x0) với x≈x0 (để ∆x≈0)
 >
 >
 >
-> <=> f'(x)*(x-x0) ~= f(x) - f(x0)
+> ⇔ f'(x) × (x-x0) ≈ f(x) - f(x0)
 >
 >
 >
-> <=> f'(x)*(x-x0) + f(x0) ~= f(x)
+> ⇔ f'(x) × (x-x0) + f(x0) ≈ f(x)
 >
 >
 >
-> Viết lại f(x) ~= f'(x)*(x-x0) + f(x0) với x~=x0 đây chính là linear
+> Viết lại f(x) ≈ f'(x) × (x-x0) + f(x0) với x≈x0 đây chính là linear
 > approximation
 >
 >
 >
-> nếu x0 = 0 ta sẽ có f(x) ~= f(0) + f'(0)x
+> nếu x0 = 0 ta sẽ có f(x) ≈ f(0) + f'(0)x
 >
 >
 >
 > Vậy có thể coi như từ **df/dx = f'(x)**, khi **thay d bằng ∆**, ta **có
-> approximation: ∆f/∆x ~= f'(x)
+> approximation: ∆f/∆x ≈ f'(x)
 >
 >
 >
@@ -253,7 +238,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> df/dx = f'(x), khi thay d bằng ∆, ta có approximation: ∆f/∆x ~= f'(x)
+> df/dx = f'(x), khi thay d bằng ∆, ta có approximation: ∆f/∆x ≈ f'(x)
 
 <br>
 
@@ -272,7 +257,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 > 2/ Là vai trò củ**a place holder** như mới nói để khi **thay bằng các
-> delta thì ta sẽ có công thức xấp xỉ ∆f ~= f_x∆x + f_y∆y + f_z∆z**
+> delta thì ta sẽ có công thức xấp xỉ ∆f ≈ f_x∆x + f_y∆y + f_z∆z**
 
 **🔗 See also:** [linked note](./lec_12_gradient_directional_derivative_tangent_plane.md#node-wbj3643)
 
@@ -334,7 +319,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> Xuất phát từ **total differential**: df = f_x*dx + f_y*dy + f_z*dz
+> Xuất phát từ **total differential**: df = f_x × dx + f_y × dy + f_z × dz
 >
 >
 >
@@ -358,11 +343,11 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> **df = f_x*x'(t)*dt + f_y*y'(t)*dt + f_z*z'(t)*dt**   
+> **df = f_x × x'(t) × dt + f_y × y'(t) × dt + f_z × z'(t) × dt**   
 >
 >
 >
-> <=> df = [f_x*x'(t) + f_y*y' (t) + f_z*z'(t)] dt
+> ⇔ df = [f_x × x'(t) + f_y × y' (t) + f_z × z'(t)] dt
 >
 >
 >
@@ -371,7 +356,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> => điều này chứng tỏ rằng f_x*x'(t) + f_y*y' (t) + f_z*z'(t) chính là df/dt
+> ⇒ điều này chứng tỏ rằng f_x × x'(t) + f_y × y' (t) + f_z × z'(t) chính là df/dt
 
 <br>
 
@@ -388,7 +373,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> ∆f ~= f_x*∆x + f_y*∆y + f_z*∆z
+> ∆f ≈ f_x*∆x + f_y*∆y + f_z*∆z
 >
 >
 >
@@ -401,24 +386,24 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> **∆f/∆t ~= f_x*∆x/∆t + f_y*∆y/∆t + f_z*∆z/∆t**
+> **∆f/∆t ≈ f_x*∆x/∆t + f_y*∆y/∆t + f_z*∆z/∆t**
 >
 >
 >
-> thì khi ta cho ∆t nhỏ -> 0 thì ∆**f/∆t sẽ trở thành df/dt** tức là derivative.
+> thì khi ta cho ∆t nhỏ → 0 thì ∆**f/∆t sẽ trở thành df/dt** tức là derivative.
 >
 >
 >
-> Tương tự **∆x/∆t -> dx/dt, ∆y/∆t -> dy/dt, ∆z/∆t -> dz/dt**
+> Tương tự **∆x/∆t → dx/dt, ∆y/∆t → dy/dt, ∆z/∆t → dz/dt**
 >
 >
 >
-> Khi đó **dấu approx ~= ngày càng trở nên chính xác hơ**n và **dần trở
+> Khi đó **dấu approx ≈ ngày càng trở nên chính xác hơ**n và **dần trở
 > thành dấu "="**. Từ đó ta có công thức
 >
 >
 >
-> **df/dt ~= f_x*dx/dt + f_y*dy/dt + f_z*dz/dt**
+> **df/dt ≈ f_x × dx/dt + f_y × dy/dt + f_z × dz/dt**
 
 **🔗 See also:** [linked note](./lec_9_max_min_problems_least_squares.md#node-q20s5wi)
 
@@ -429,7 +414,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 <p align="center"><kbd><img src="assets/8s0iz0zbucl.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs làm một ví dụ tính **dw/dt** của **w = x^2y + z** với x = t, y = e^t. z = sin(t)
+> gs làm một ví dụ tính **dw/dt** của **w = x²y + z** với x = t, y = e^t. z = sin(t)
 >
 >
 >
@@ -443,7 +428,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> dw/dt = w_x*dx/dt + w_y*dy/dt + w_z*dz/dt
+> dw/dt = w_x × dx/dt + w_y × dy/dt + w_z × dz/dt
 >
 >
 >
@@ -472,8 +457,8 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> d(t^2e^t)/dt thì dùng công thức: derivative của uv = u'v + uv' nên
-> derivative của t^2 * e^t = 2t*e^t + t^2*e^t
+> d(t²e^t)/dt thì dùng công thức: derivative của uv = u'v + uv' nên
+> derivative của t² * e^t = 2t × e^t + t² × e^t
 >
 >
 >
@@ -496,7 +481,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 > Đương nhiên **u, v là function theo biến t** nào đó: **u(t), v(t)**, và
-> ta **xem uv là function  của u, v**: f(u,v) = u*v
+> ta **xem uv là function  của u, v**: f(u,v) = u × v
 >
 >
 >
@@ -504,7 +489,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> df/dt = f_u*du/dt + f_v*dv/dt
+> df/dt = f_u × du/dt + f_v × dv/dt
 >
 >
 >
@@ -516,7 +501,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> Từ đó ta có df/dt tức là f'(t) hay (uv)' = v*u' + u*v' = u'v + uv'
+> Từ đó ta có df/dt tức là f'(t) hay (uv)' = v × u' + u × v' = u'v + uv'
 >
 > Coi uv là f(u,v), dùng chain-rule để
 > derive công thức của (uv)'
@@ -537,7 +522,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> dg/dt = g_u*du/dt  + g_v*dv/dt
+> dg/dt = g_u × du/dt  + g_v × dv/dt
 >
 >
 >
@@ -545,11 +530,11 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> **g_v** (giống như f_y) là partial derivative của g w.r.t v = u*(-1/v^2) = -u/v^2
+> **g_v** (giống như f_y) là partial derivative của g w.r.t v = u × (-1/v²) = -u/v²
 >
 >
 >
-> Vậy dg/dt = (1/v)*du/dt + (-u/v^2)*dv/dt 
+> Vậy dg/dt = (1/v) × du/dt + (-u/v²) × dv/dt 
 >
 >
 >
@@ -558,11 +543,11 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> Từ đó dg/dt = (1/v)*u' + (-u/v^2)*v' 
+> Từ đó dg/dt = (1/v) × u' + (-u/v²) × v' 
 >
 >
 >
-> <=> (**u/v)' =** **(u'v - v'u) / v^2 chính là  QUOTIENT RULE**
+> ⇔ (**u/v)' =** **(u'v - v'u) / v² chính là  QUOTIENT RULE**
 >
 > Coi u/v là f(u,v), dùng chain-rule để
 > derive công thức của (u/v)'
@@ -601,7 +586,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> **dw = f_x*dx + f_y*dy**
+> **dw = f_x × dx + f_y × dy**
 >
 >
 >
@@ -610,7 +595,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> **dx = x_u*du + x_v*dv**
+> **dx = x_u × du + x_v × dv**
 >
 >
 >
@@ -619,7 +604,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> **dy = y_u*du + y_v*dv**
+> **dy = y_u × du + y_v × dv**
 >
 >
 >
@@ -627,7 +612,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> **dw = f_x*(x_u*du + x_v*dv) + f_y*(y_u*du + y_v*dv)**
+> **dw = f_x × (x_u × du + x_v × dv) + f_y × (y_u × du + y_v × dv)**
 >
 >
 >
@@ -635,7 +620,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> **dw = (f_x*x_u + f_y*y_u)du + (f_x*x_v+f_y*y_v)dv**
+> **dw = (f_x × x_u + f_y × y_u)du + (f_x × x_v+f_y × y_v)dv**
 >
 >
 >
@@ -646,7 +631,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> Cũng như df = f_x*dx + f_y*dy thì coefficients gắn với dx, chính là
+> Cũng như df = f_x × dx + f_y × dy thì coefficients gắn với dx, chính là
 > partial derivative của f w.r.t x và coefficient gắn với dy chính là
 > partial derivative của f w.r.t y vậy
 >
@@ -669,11 +654,11 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> **f_u** (hay w_u) = (**f_x*x_u + f_y*y_u**)
+> **f_u** (hay w_u) = (**f_x × x_u + f_y × y_u**)
 >
 >
 >
-> **f_v** (hay w_v) = **f_x*x_v + f_y*y_v**
+> **f_v** (hay w_v) = **f_x × x_v + f_y × y_v**
 >
 >
 >
@@ -681,24 +666,24 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> **dw = (f_x*x_u + f_y*y_u)du** +  (f_x*x_v+f_y*y_v)dv
+> **dw = (f_x × x_u + f_y × y_u)du** +  (f_x × x_v+f_y × y_v)dv
 >
 >
 >
 > Thay đổi u một chút (du), kéo theo x y thay đổi với rate (of change) là
-> x_u, y_u. Nên x sẽ thay đổi dx = x_u*du, y sẽ thay đổi dy = y_u*du
+> x_u, y_u. Nên x sẽ thay đổi dx = x_u × du, y sẽ thay đổi dy = y_u × du
 >
 >
 >
 > Tiếp x, y thay đổi sẽ kéo theo w thay đổi với rate f_x, f_y. Nên việc x 
-> thay đổi (do u) là dx = x_u*du sẽ kéo theo w thay đổi f_x*x_u*du
-> Tương tự, việc y thay đổi (do u) là dy = y_u*du sẽ kéo theo f thay đổi
-> f_y*y_u*du.
+> thay đổi (do u) là dx = x_u × du sẽ kéo theo w thay đổi f_x × x_u × du
+> Tương tự, việc y thay đổi (do u) là dy = y_u × du sẽ kéo theo f thay đổi
+> f_y × y_u × du.
 >
 >
 >
-> Tổng cộng f sẽ bị thay đổi do u là **f_x*x_u*du + f_y*y_u*du**
-> = (f_x*x_u + f_y*y_u)*du
+> Tổng cộng f sẽ bị thay đổi do u là **f_x × x_u × du + f_y × y_u × du**
+> = (f_x × x_u + f_y × y_u) × du
 >
 >
 >
@@ -706,11 +691,11 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> f_u (hay ∂f/du) = (f_x*x_u + f_y*y_u)
+> f_u (hay ∂f/du) = (f_x × x_u + f_y × y_u)
 >
 >
 >
-> tương tự với sự thay đổi của f do v: (f_x*x_v+f_y*y_v)dv
+> tương tự với sự thay đổi của f do v: (f_x × x_v+f_y × y_v)dv
 >
 >
 >
@@ -718,7 +703,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> df = (f_x*x_u + f_y*y_u)du + (f_x*x_v+f_y*y_v)dv
+> df = (f_x × x_u + f_y × y_u)du + (f_x × x_v+f_y × y_v)dv
 
 <br>
 
@@ -771,7 +756,7 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 > Còn df thì có thể đứng một mình, mang ý nghĩa là **TOTAL DIFFERENTIAL**
-> là tổng của mọi thay đổi của f bởi các variable, ví dụ df = f_x*dx + f_y*dy
+> là tổng của mọi thay đổi của f bởi các variable, ví dụ df = f_x × dx + f_y × dy
 >
 > đúng là ∂f KHÔNG THỂ ĐỨNG MỘT MÌNH, hay nói cách khác,
 > đứng một mình nó sẽ vô nghĩa.
@@ -790,12 +775,12 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 
 > [!NOTE]
 > một ví dụ, về **polar** **coordinate** (vector (x,y) có thể được thể hiện theo r
-> và theta.
+> và θ.
 >
 >
 >
 > Thế thì nếu ta có **hàm f(x,y)** thì câu hỏi là **partial derivative f_r và
-> f_theta** như thế nào?
+> f_θ** như thế nào?
 >
 >
 >
@@ -803,15 +788,17 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> f_r = f_x*x_r + f_y*y_r = f_x*cos(θ) + f_y*sin(θ)
+> f_r = f_x × x_r + f_y × y_r = f_x × cos(θ) + f_y × sin(θ)
 >
 >
 >
-> f_theta = f_x*x_θ + f_y*y_θ = ...
+> f_θ = f_x × x_θ + f_y × y_θ = ...
 
 <br>
 
 <a id="node-6o8x8mv"></a>
+
+###### Gradient Vector and Polar Coordinates
 
 <p align="center"><kbd><img src="assets/3qa8zs8b67k.png" width="80%"></kbd></p>
 
@@ -820,14 +807,14 @@ TOÀN PHẦN (TOTAL DIFFERENTIAL)
 >
 >
 >
-> **nabda_f (grad_f) = [f_x, f_y, f_z]**
+> **nabda_f (∇f) = [f_x, f_y, f_z]**
 >
 >
 >
 > Bài sau ta sẽ tiếp tục làm quen khái niệm này mà trong ML đã
 > quá quen thuộc
 >
-> nabda_f (grad_f) = [f_x, f_y, f_z]
+> nabda_f (∇f) = [f_x, f_y, f_z]
 
 <br>
 
