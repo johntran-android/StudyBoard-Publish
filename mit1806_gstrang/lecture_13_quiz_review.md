@@ -1,6 +1,6 @@
 # Lecture 13: Quiz Review
 
-📊 **Progress:** `36` Notes | `40` Screenshots
+📊 **Progress:** `36` Notes | `40` Screenshots | `3` AI Reviews
 
 ---
 <a id="node-pxluqi6"></a>
@@ -9,11 +9,15 @@
 
 <a id="node-3owvu21"></a>
 
+## Đại số tuyến tính
+
 <p align="center"><kbd><img src="assets/ed7ee8yzca5.png" width="80%"></kbd></p>
 
 <br>
 
 <a id="node-4j8cjvb"></a>
+
+### Subspaces and Dimension in R7
 
 <p align="center"><kbd><img src="assets/d57llmk3d1p.png" width="80%"></kbd></p>
 
@@ -40,9 +44,23 @@
 > Không thể nhiều hơn vì chỉ có 3 vector, và không thể = 0 vì
 > đã nói đây là non-zero vector.
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác và đầy đủ bản chất câu hỏi về số chiều của không gian con sinh bởi 3 vector trong R^7.
+>
+> **✓ Strengths**
+> - Hiểu đúng khái niệm số chiều cực đại của không gian sinh bởi 3 vector là 3 (khi độc lập tuyến tính).
+> - Ghi nhận đầy đủ các trường hợp phụ thuộc tuyến tính dẫn đến số chiều có thể là 1 hoặc 2 (với các vector khác không).
+>
+> **💡 Deeper notes**
+> - Nếu cả 3 vector đều là vector không (zero vector), không gian sinh ra chỉ chứa điểm gốc {0} và có số chiều bằng 0.
+
 <br>
 
 <a id="node-odvcq7l"></a>
+
+#### Null Space of Matrix U
 
 <p align="center"><kbd><img src="assets/erniiu7cyb.png" width="80%"></kbd></p>
 
@@ -84,9 +102,40 @@
 > một zero vector**. Kết luận **dimension của nullspace của 
 > matrix N(U) = {zero vector}**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **75/100** · ✓ Move on
+>
+> Bạn đã nắm đúng bản chất về việc ma trận không có cột tự do thì không có nghiệm đặc biệt và nullspace chỉ gồm vector 0. Tuy nhiên, bạn đang nhầm lẫn giữa không gian nghiệm, cơ sở (basis) và số chiều (dimension).
+>
+> **🟡 Minor issues**
+>
+> **1.** *"basis của nullspace chỉ có một zero vector"*
+>
+> Vector không (zero vector) không bao giờ là một phần tử của cơ sở vì tập hợp chứa vector không luôn phụ thuộc tuyến tính. Cơ sở của không gian chỉ gồm vector không {0} là tập rỗng (empty set ∅).
+>
+> **2.** *"Kết luận dimension của nullspace của matrix N(U) = {zero vector}"*
+>
+> Số chiều (dimension) là một số thực/nguyên đo số lượng vector trong cơ sở, không phải là một tập hợp. Ở đây, dim(N(U)) = 0 (vì cơ sở rỗng), còn chính nullspace mới là N(U) = {0}.
+>
+> **3.** *"không có free cols nào, cũng như không có solution nào"*
+>
+> Hệ phương trình thuần nhất Ux = 0 luôn luôn có nghiệm (ít nhất là nghiệm tầm thường x = 0). Diễn đạt chuẩn xác là không có 'non-zero solution' hoặc không có 'special solution'.
+>
+>
+> **✓ Strengths**
+> - Xác định chính xác ma trận 5x3 có rank = 3 thì cả 3 cột đều là cột pivot và không có cột tự do nào.
+> - Hiểu đúng quy trình: số cột tự do quyết định số special solutions và các special solutions tạo thành basis của nullspace.
+> - Kết luận đúng không gian nullspace chỉ chứa duy nhất vector không.
+>
+> **💡 Deeper notes**
+> - Định lý Rank-Nullity khẳng định: rank(A) + dim(N(A)) = n (với n là số cột). Ở đây 3 + dim(N(U)) = 3, suy ra dim(N(U)) = 0.
+> - Cần phân biệt rõ 3 khái niệm: Bản thân không gian N(U) = {0}, Cơ sở của N(U) = ∅ (tập rỗng), và Số chiều dim(N(U)) = 0.
+
 <br>
 
 <a id="node-2heql81"></a>
+
+##### Null Space and Pivot Columns
 
 <p align="center"><kbd><img src="assets/fplqiymvgne.png" width="80%"></kbd></p>
 
@@ -104,6 +153,8 @@
 <br>
 
 <a id="node-p1pd0ay"></a>
+
+###### Echelon Form of Block Matrix
 
 <p align="center"><kbd><img src="assets/11dn7i6iego.png" width="80%"></kbd></p>
 
@@ -131,9 +182,31 @@
 > form có dạng là 3 hàng đầu độc lập nên giữ nguyên, mấy
 > hàng sau = 0 hết.**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+>
+> Ghi chú trả lời đúng dạng ma trận bậc thang của B là giữ nguyên U (hoặc các hàng độc lập của U) và các hàng còn lại triệt tiêu về 0. Tuy nhiên, cách giải thích dựa vào rank cụ thể chưa tổng quát bằng phép khử khối ma trận trực tiếp.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Matrix B dù có 10 hàng thì vì 5 hàng dưới là bằng 2 × 5 hàng trên... Vậy xét 10 hàng của B, thì vẫn chỉ có 3 hàng đầu tiên độc lập, hàng 4, 5 là, 6,7,8,9,10 thì phụ thuộc các hàng đầu"*
+>
+> Lập luận khử từng hàng dựa trên việc giả định rank = 3 là không cần thiết và làm hẹp bài toán. Về bản chất, ta chỉ cần thực hiện phép biến đổi hàng theo khối: lấy nửa dưới trừ đi 2 lần nửa trên (row_{i+5} - 2*row_i) thì toàn bộ khối 2U sẽ thành ma trận 0, kết quả trực tiếp ra dạng bậc thang là [U; 0] mà không phụ thuộc vào số hàng độc lập của U.
+>
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất phép khử hàng (elimination) sẽ triệt tiêu các hàng phụ thuộc tuyến tính thành các hàng 0 ở dưới cùng.
+> - Xác định chính xác dạng cuối cùng của ma trận bậc thang với các hàng khác 0 ở trên và các hàng 0 ở dưới.
+>
+> **💡 Deeper notes**
+> - Trong bài giảng của GS. Strang, U vốn đã là ma trận bậc thang (echelon form), nên chỉ cần khử khối 2U bên dưới thành [U; 0] là đã xong dạng bậc thang mà không cần giả thiết thêm U thành R (reduced row echelon form).
+> - Cách tiếp cận đại số khối (block matrix elimination) [U; 2U] -> [U; 0] giúp giải quyết bài toán cho kích thước m x n bất kỳ mà không cần quan tâm số chiều cụ thể hay rank của U.
+
 <br>
 
 <a id="node-u17h6ac"></a>
+
+###### Echelon Form of Block Matrix
 
 <p align="center"><kbd><img src="assets/phx98qtsop.png" width="80%"></kbd></p>
 
@@ -150,6 +223,8 @@
 
 <a id="node-gyv0s61"></a>
 
+###### Khử hàng ma trận C
+
 <p align="center"><kbd><img src="assets/bbu4taawjxq.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -158,6 +233,8 @@
 <br>
 
 <a id="node-215zqef"></a>
+
+###### Phép khử ma trận khối
 
 <p align="center"><kbd><img src="assets/e2z2b2ohjb6.png" width="80%"></kbd></p>
 
@@ -171,6 +248,8 @@
 
 <a id="node-xpal9an"></a>
 
+###### Dạng bậc thang ma trận khối
+
 <p align="center"><kbd><img src="assets/84nmwpdaoqx.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -180,6 +259,8 @@
 <br>
 
 <a id="node-tn83rxp"></a>
+
+###### Dạng bậc thang rút gọn
 
 <p align="center"><kbd><img src="assets/2h8i4byl4ev.png" width="80%"></kbd></p>
 
@@ -223,6 +304,8 @@
 
 <a id="node-nif3d4c"></a>
 
+###### Echelon Form of Block Matrices
+
 <p align="center"><kbd><img src="assets/2t1ylms5wnu.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -255,6 +338,8 @@
 
 <a id="node-tcqoecd"></a>
 
+###### Ma trận dạng bậc thang
+
 <p align="center"><kbd><img src="assets/zwn19tszch.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -263,6 +348,8 @@
 <br>
 
 <a id="node-k2tf2ug"></a>
+
+###### Xác định kích thước ma trận
 
 <p align="center"><kbd><img src="assets/gznwv2fgn2u.png" width="80%"></kbd></p>
 
@@ -294,6 +381,8 @@
 <br>
 
 <a id="node-tex123q"></a>
+
+###### Tính Rank từ Nullspace
 
 <p align="center"><kbd><img src="assets/ilmnttlj2l.png" width="80%"></kbd></p>
 
@@ -331,6 +420,8 @@
 
 <a id="node-q9kno8g"></a>
 
+###### Cột 1 ma trận A
+
 <p align="center"><kbd><img src="assets/vasfg4flnth.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -345,6 +436,8 @@
 <br>
 
 <a id="node-y8seenn"></a>
+
+###### Tìm ma trận từ Nullspace
 
 <p align="center"><kbd><img src="assets/pj920bhk7oc.png" width="80%"></kbd></p>
 
@@ -382,6 +475,8 @@
 <br>
 
 <a id="node-48eflfw"></a>
+
+###### Nghiệm tổng quát hệ Ax=b
 
 <p align="center"><kbd><img src="assets/ahyul23fii.png" width="80%"></kbd></p>
 
@@ -514,6 +609,8 @@
 
 <a id="node-9nz47jb"></a>
 
+###### Ma trận lũy linh
+
 <p align="center"><kbd><img src="assets/raga1q7gfxg.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -553,6 +650,8 @@
 <br>
 
 <a id="node-fngpm3b"></a>
+
+###### Ma trận lũy linh
 
 <p align="center"><kbd><img src="assets/lz0znurixs.png" width="80%"></kbd></p>
 
@@ -729,6 +828,8 @@
 
 <a id="node-pl0qgd2"></a>
 
+###### Nullspace của tích ma trận
+
 <p align="center"><kbd><img src="assets/20bqrfg37k1.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -756,6 +857,8 @@
 <br>
 
 <a id="node-088ce8a"></a>
+
+###### Cơ sở của Nullspace
 
 <p align="center"><kbd><img src="assets/pthl9phkmq9.png" width="80%"></kbd></p>
 
@@ -792,6 +895,8 @@
 
 <a id="node-oziqdlp"></a>
 
+###### Nghiệm tổng quát của Bx
+
 <p align="center"><kbd><img src="assets/u494hthe0xi.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -801,6 +906,8 @@
 <br>
 
 <a id="node-1kyds2t"></a>
+
+###### Nghiệm riêng phương trình Bx=b
 
 <p align="center"><kbd><img src="assets/9l1f3mkj5a.png" width="80%"></kbd></p>
 
@@ -851,6 +958,8 @@
 
 <a id="node-nizfj45"></a>
 
+###### Nghiệm tổng quát hệ phương trình
+
 <p align="center"><kbd><img src="assets/ij65wq0smog.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -860,6 +969,8 @@
 <br>
 
 <a id="node-j9ujlvr"></a>
+
+###### Bản chất nghiệm riêng
 
 <p align="center"><kbd><img src="assets/oft5y9t0dl8.png" width="80%"></kbd></p>
 
@@ -877,6 +988,8 @@
 <br>
 
 <a id="node-vbp8zq3"></a>
+
+###### Tính khả nghịch ma trận
 
 <p align="center"><kbd><img src="assets/pu6wuex0d48.png" width="80%"></kbd></p>
 
@@ -896,6 +1009,8 @@
 <br>
 
 <a id="node-k7m88ey"></a>
+
+###### Subspace của A và -A
 
 <p align="center"><kbd><img src="assets/k2wiispv7m.png" width="80%"></kbd></p>
 
@@ -921,6 +1036,8 @@
 
 <a id="node-iitaxne"></a>
 
+###### Bốn không gian con cơ bản
+
 <p align="center"><kbd><img src="assets/rfp8qe21s8.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -945,11 +1062,15 @@
 
 <a id="node-etkdvgy"></a>
 
+###### Bốn không gian con cơ bản
+
 <p align="center"><kbd><img src="assets/y5mn5cr1syf.png" width="80%"></kbd></p>
 
 <br>
 
 <a id="node-y6pf62i"></a>
+
+###### Subspace khi đổi hàng
 
 <p align="center"><kbd><img src="assets/gjezmc2uzub.png" width="80%"></kbd></p>
 
@@ -964,6 +1085,8 @@
 
 <a id="node-38pnijs"></a>
 
+###### Trực giao Row và Nullspace
+
 <p align="center"><kbd><img src="assets/5ed5cuz3z5f.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -974,6 +1097,8 @@
 <br>
 
 <a id="node-wbomung"></a>
+
+###### Row Space và Nullspace trực giao
 
 <p align="center"><kbd><img src="assets/ga9xjscd7eb.png" width="80%"></kbd></p>
 
