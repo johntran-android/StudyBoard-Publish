@@ -5,8 +5,6 @@
 ---
 <a id="node-8wep6ed"></a>
 
-## Lec 19: Vector Fields
-
 <br>
 
 <a id="node-vfyez6d"></a>
@@ -15,7 +13,7 @@
 
 > [!NOTE]
 > bài này ta sẽ tạm quên double integral để thảo luận về Vector field. Định
-> nghĩa đại khái là, tại mỗi điểm x, y ta có vector F  = M*i + N*j với M, N
+> nghĩa đại khái là, tại mỗi điểm x, y ta có vector F  = M × i + N × j với M, N
 > phụ thuộc x, y. Có nghĩa là mọi điểm ta có vector F và vector F sẽ khác
 > nhau phụ thuộc x, y. Đó là **VECTOR FIELD** - **TRƯỜNG VECTOR.**
 >
@@ -58,7 +56,7 @@
 <p align="center"><kbd><img src="assets/34r9yvib2fm.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ thứ hai là vector field quy định bởi F = x*i (tức là không có j
+> Ví dụ thứ hai là vector field quy định bởi F = x × i (tức là không có j
 > component, nên các vector chỉ song song với trục x)
 >
 >
@@ -88,7 +86,7 @@
 <p align="center"><kbd><img src="assets/tkr3ndaqh1k.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua ví dụ một vector field khác F = x*i + y*j. Thì hình
+> Qua ví dụ một vector field khác F = x × i + y × j. Thì hình
 > ảnh nó là như này, vector tại x,y thì chính là vector (x,y)
 > nhưng dời gốc về điểm (x,y) thôi
 
@@ -101,7 +99,7 @@
 <p align="center"><kbd><img src="assets/pkf3greu0ij.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Qua vector field này, F = -y*i + x*j thì có nghĩa là tại (x,y) ta sẽ tương ứng
+> Qua vector field này, F = -y × i + x × j thì có nghĩa là tại (x,y) ta sẽ tương ứng
 > với vector (-y, x) là vector bằng độ dài và vuông góc với (x,y) và ta dời
 > vector đó về điểm (x,y)
 >
@@ -141,7 +139,7 @@
 > [!NOTE]
 > Thế thì nếu object di chuyển trên quỹ đạo mà lực F sẽ khác nhau
 > giữa các điểm khác nhau trên quỹ đạo. Thì ta cách tính là ta sẽ chia
-> nhỏ quỹ  đạo thành các đoạn delta_r. Và ta sẽ tính
+> nhỏ quỹ  đạo thành các đoạn Δr. Và ta sẽ tính
 >
 >
 >
@@ -163,8 +161,8 @@
 <p align="center"><kbd><img src="assets/3oiy144alie.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì  ta có thể viết delta_r = delta_r / delta_r * delta_t Thì (delta_r
-> / delta_r) chính là ~ VELOCITY VECTOR dr/dt
+> Thế thì  ta có thể viết Δr = Δr / Δr * Δt Thì (Δr
+> / Δr) chính là ~ VELOCITY VECTOR dr/dt
 
 <br>
 
@@ -190,17 +188,17 @@
 
 > [!NOTE]
 > một student thắc mắc, thì gs khẳng định đúng là ta sẽ tính limit khi
-> delta_t -> 0 của Tổng [F. (delta_r/delta_t) delta_t]
+> Δt → 0 của Tổng [F. (Δr/Δt) Δt]
 >
 >
 >
-> Mang ý nghĩa là ta cắt quỹ đạo (trajectory) thành các đoạn delta_r
+> Mang ý nghĩa là ta cắt quỹ đạo (trajectory) thành các đoạn Δr
 > ngày càng nhỏ và tính tổng của các phép dot product giữa vector F
-> và delta_r
+> và Δr
 >
 >
 >
-> Thì delta_r nhỏ dần thì cũng là (velocity . delta_t) với delta_t nhỏ dần
+> Thì Δr nhỏ dần thì cũng là (velocity . Δt) với Δt nhỏ dần
 
 <br>
 
@@ -209,11 +207,11 @@
 <p align="center"><kbd><img src="assets/eheipi6m1d9.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ta qua một ví dụ (lấy ví dụ hồi nãy) vector field  = -y*i + x*j
+> Ta qua một ví dụ (lấy ví dụ hồi nãy) vector field  = -y × i + x × j
 >
 >
 >
-> với quỹ đạo C: x = t, y = t^2 với t trong range [0,1]
+> với quỹ đạo C: x = t, y = t² với t trong range [0,1]
 
 <br>
 
@@ -222,8 +220,8 @@
 <p align="center"><kbd><img src="assets/pfpmtlyusy.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì trajectory x = t, y = t^2 với t trong range [0,1] chính là
-> điểm sẽ có quỹ đạo là một đoạn của Parabola y = x^2 từ gốc
+> Thế thì trajectory x = t, y = t² với t trong range [0,1] chính là
+> điểm sẽ có quỹ đạo là một đoạn của Parabola y = x² từ gốc
 > 0 đến (1,1)
 >
 >
@@ -260,12 +258,12 @@
 <p align="center"><kbd><img src="assets/mapogy2df7.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và với việc vector field định nghĩa F = - y*i + x*j tức là tại (x,y) thì
-> vector F = (-y, x) ta thay x = t, y = t^2 thì ta có F = <-t^2, t>
+> Và với việc vector field định nghĩa F = - y × i + x × j tức là tại (x,y) thì
+> vector F = (-y, x) ta thay x = t, y = t² thì ta có F = <-t², t>
 >
 >
 >
-> Và x=t thì dx = dt <=> dx/dt = 1
+> Và x=t thì dx = dt ⇔ dx/dt = 1
 >
 >
 >
@@ -274,11 +272,11 @@
 >
 >
 >
-> thì tương tự x là hàm theo t: x(t) = t ta có dx = x'(t)dt = 1*dt
+> thì tương tự x là hàm theo t: x(t) = t ta có dx = x'(t)dt = 1 × dt
 >
 >
 >
-> và y = t^2 nên dy = 2tdt <=> dy /dt = 2t
+> và y = t² nên dy = 2tdt ⇔ dy /dt = 2t
 >
 >
 >
@@ -296,8 +294,8 @@
 <p align="center"><kbd><img src="assets/pvnhhgalnkn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và dot product F và velocity ta có t^2. Tích phân từ 0 đến 1
-> của t^2dt = nguyên hàm của t^2 | 0:1 = (1/3)t^3 | 0: 1= 1/3
+> Và dot product F và velocity ta có t². Tích phân từ 0 đến 1
+> của t²dt = nguyên hàm của t² | 0:1 = (1/3)t³ | 0: 1= 1/3
 
 <br>
 
@@ -364,7 +362,7 @@
 > [!NOTE]
 > Thế thì phương pháp ta sẽ làm đó là, thể hiện x, y dưới dạng
 > single variable t và thế vào. Ghi lại tích phân Fdr theo  cách
-> trên F = <M,N> = <-y, x> (do cho F = -y*i + x*j) ta có tích phân
+> trên F = <M,N> = <-y, x> (do cho F = -y × i + x × j) ta có tích phân
 > của -ydx + xdy.
 
 <br>
@@ -374,9 +372,9 @@
 <p align="center"><kbd><img src="assets/0b91wkvb8nn6.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi thì từ x = t, y = t^2, như hồi nãy ta dùng implicit
+> Rồi thì từ x = t, y = t², như hồi nãy ta dùng implicit
 > differentiation cho ta dx = dt và dy = 2tdy thế vào tích phân ta
-> có tích phân (over C) của -t^2dt + t*dtdt
+> có tích phân (over C) của -t²dt + t × dtdt
 
 <br>
 
@@ -402,7 +400,7 @@
 >
 >
 >
-> Gs nói rằng ta có thể chọn x = sin(theta) y = sin(theta) ^2 nhưng trong
+> Gs nói rằng ta có thể chọn x = sin(θ) y = sin(θ) ² nhưng trong
 > trường hợp này sẽ rất khó làm (not practical) (đã nói là ta chọn, nên ta
 > cần phải chọn parameter để express x, y sao cho hợp lý)
 >
@@ -433,16 +431,16 @@
 >
 >
 >
-> Đó là bắt đầu từ delta_r là một vector thể hiện sự thay đổi rất nhỏ của
+> Đó là bắt đầu từ Δr là một vector thể hiện sự thay đổi rất nhỏ của
 > object trên quỹ đạo, thì ta đã biết ở bài trước, rằng khi chia nhỏ quỹ
-> đạo ra thành những phần rất nhỏ delta_r -> 0, thì vector delta_r có
+> đạo ra thành những phần rất nhỏ Δr → 0, thì vector Δr có
 > thể coi như trùng với phương của tiếp tuyến của quỹ đạo tại điểm
 > đang xét. gọi T là vector tiếp tuyến đơn vị (unit tangent vector) thì ta
-> có delta_r trùng phương với T^ (đương nhiên có độ lớn = 1)
+> có Δr trùng phương với T^ (đương nhiên có độ lớn = 1)
 >
 >
 >
-> Còn độ lớn của delta_r thì bằng delta_s với s là chiều dài của quỹ
+> Còn độ lớn của Δr thì bằng Δs với s là chiều dài của quỹ
 > đạo
 
 <br>
@@ -495,7 +493,7 @@
 > đạo và vector field có liên hệ hình học với nhau. Lấy ví dụ ta có quỹ
 > đạo (trajectory) C là (đi theo) đường tròn bán kính a tâm tại gốc tọa
 > độ và đi theo hướng ngược chiều kim đồng hồ. Còn vector field F =
-> x*i^ + y*j^ là vector field mà ta đã nói ở đầu bài
+> x × i^ + y × j^ là vector field mà ta đã nói ở đầu bài
 >
 >
 >
@@ -530,7 +528,7 @@
 > giữa vector field F và trajectory (F vuông góc với quỹ đạo) thì việc tính
 > line integral theo cách này dễ hơn rất nhiều (mặc dù nếu ta tính theo
 > cách 2, đó là express x, y theo parameter nào đó chẳng hạn như
-> sin(theta) và cos(theta) thì ta cũng sẽ cho ra kết quả như vậy như cách
+> sin(θ) và cos(θ) thì ta cũng sẽ cho ra kết quả như vậy như cách
 > kia rõ ràng là nhanh nhất
 
 <br>
@@ -541,17 +539,17 @@
 
 > [!NOTE]
 > Cuối cùng làm một ví dụ: Cùng quỹ đạo C, nhưng vector field F khác
-> F = -y*i^ + x*j^
+> F = -y × i^ + x × j^
 >
 >
 >
 > Lúc này vector F song song với vector T, nên ta đã biết F.T = |F|.|T|.
-> cos(góc giữ chúng) = |F|*1*1 = |F|
+> cos(góc giữ chúng) = |F|*1 × 1 = |F|
 >
 >
 >
-> Và |F| = a (vì component của F là -y, x nên |F| = sqrt[(-y)^2 + x^2]
-> = sqrt r^2 = r = a
+> Và |F| = a (vì component của F là -y, x nên |F| = sqrt[(-y)² + x²]
+> = sqrt r² = r = a
 
 <br>
 
@@ -571,11 +569,11 @@
 >
 >
 > và tích phân trên quỹ đạo c của ds thí CHÍNH LÀ CHIỀU DÀI 
-> QUỸ ĐẠO c -> 2pi*a
+> QUỸ ĐẠO c → 2π × a
 >
 >
 >
-> Vậy kết quả là 2pi*a^2**
+> Vậy kết quả là 2π × a²**
 
 <br>
 
@@ -586,9 +584,9 @@
 <p align="center"><kbd><img src="assets/903a9n7kp79.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Hoặc nếu tính bằng cách '2' đó là thể hiện x, y theo theta  ta sẽ có tích
-> phân over c -ydx + xdy = tích phân từ 0 đến 2pi của a^2(sin^2 theta
-> +cos^2 theta) dtheta = a^2 tích phân 0:2pi dtheta = a^2 2pi
+> Hoặc nếu tính bằng cách '2' đó là thể hiện x, y theo θ  ta sẽ có tích
+> phân over c -ydx + xdy = tích phân từ 0 đến 2π của a²(sin² θ
+> +cos² θ) dθ = a² tích phân 0:2π dθ = a² 2π
 
 <br>
 
