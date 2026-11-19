@@ -1,6 +1,6 @@
 # Lecture 14: Orthogonal Vectors And Subspaces
 
-📊 **Progress:** `37` Notes | `37` Screenshots | `1` AI Reviews
+📊 **Progress:** `37` Notes | `41` Screenshots | `19` AI Reviews
 
 ---
 <a id="node-cmamy5b"></a>
@@ -9,59 +9,86 @@
 
 <a id="node-meitfuf"></a>
 
+## Không gian con trực giao
+
 <p align="center"><kbd><img src="assets/8z6skcmlnid.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> bài này gs sẽ nói về khái niệm hai
-> **vector space** **orthogonal**
+> Bài này gs sẽ nói về khái niệm hai **vector space** **orthogonal**
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=GomcsySSQCw)
 
 <br>
 
 <a id="node-q0ahb9j"></a>
 
+### Bốn không gian con trực giao
+
 <p align="center"><kbd><img src="assets/rlhdfb9izbs.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> đầu tiên gs cho biết đại khái là đến giờ ta **đã biết 4
-> subspace quan trọng** này, với việc biết **basis** và
-> **dimension** của chúng.
+> Đầu tiên gs cho biết đại khái là đến giờ ta **đã biết 4 subspace quan trọng** này, với việc biết **basis** và **dimension** của chúng.
 >
 >
 >
-> Nay ta sẽ học về việc **chúng orthogonal với nhau** là
-> sao, thể hiện qua hình ảnh này.
+> Nay ta sẽ học về việc **chúng orthogonal với nhau** là sao, thể hiện qua hình ảnh này.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất tốt và chính xác bối cảnh bài giảng của giáo sư Gilbert Strang về 4 không gian con cơ bản và tính trực giao giữa chúng.
+>
+> **✓ Strengths**
+> - Nắm đúng tiến trình kiến thức: sau khi xác định được cơ sở (basis) và số chiều (dimension) của 4 không gian con, bước tiếp theo là khảo sát tính trực giao (orthogonality).
+> - Nhận diện đúng sơ đồ 'The Big Picture of Linear Algebra' thể hiện mối quan hệ hình học giữa các không gian con.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý tính trực giao ở đây là trực giao theo từng cặp bổ sung trực giao trong hai không gian khác nhau: Row space trực giao với Nullspace trong R^n, và Column space trực giao với Left Nullspace (Nullspace of A^T) trong R^m, chứ 4 không gian không cùng nằm chung trong một không gian để trực giao đồng thời với nhau.
 
 <br>
 
 <a id="node-hhd9hzt"></a>
 
+#### Hai vector trực giao
+
 <p align="center"><kbd><img src="assets/vewfnh5n3m.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs nói qua về khái niệm **hai vector orthogonal**, thì nó đồng
-> nghĩa với từ **perpendicular** - vuông góc. Và cho hai vector
-> x,y. Để biết chúng có vuông góc không thì chỉ việc **tính dot
-> product của chúng xem có bằng 0 không**
+> gs nói qua về khái niệm **hai vector orthogonal**, thì nó đồng nghĩa với từ **perpendicular** - vuông góc. Và cho hai vector x,y. Để biết chúng có vuông góc không thì chỉ việc **tính dot product của chúng xem có bằng 0 không**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
+> Ghi chú nắm rất chính xác và súc tích định nghĩa hai vector trực giao (orthogonal/perpendicular) thông qua tích vô hướng (dot product) bằng 0.
 >
+> **✓ Strengths**
+> - Hiểu đúng bản chất trực giao tương đương với tính chất vuông góc và tích vô hướng bằng 0 (x^T y = 0).
 >
-> (đây là kiến thức đã học ở 18.02, trong bài 1 ta đã biết rằng
-> dot product (tích vô hướng) của hai vector a, b sẽ là
-> |a|*|b|*cos(theta) do đó nếu aᵀb (cách viết của 18.06 về dot
-> product của a,b) = 0 thì cos(theta) = 0 ⇒ theta (là góc giữa
-> hai vector) = 90
+> **💡 Deeper notes**
+> - Theo định nghĩa đại số x^T y = 0, vector không (zero vector) trực giao với mọi vector khác, dù về mặt hình học trực quan nó không có hướng xác định.
+> - Trên bảng, giáo sư dùng định lý Pythagoras (||x + y||^2 = ||x||^2 + ||y||^2) để chứng minh và dẫn dắt ra điều kiện x^T y = 0.
 
 <br>
 
 <a id="node-h3x2z1w"></a>
 
+##### Vector vuông góc và Pythagoras
+
 <p align="center"><kbd><img src="assets/7w2fknh21gs.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì câu hỏi gs đặt ra là **tại sao dot product bằng 0
-> lại là dấu hiệu của hai vector vuông góc**. Hai nói cách
-> khác, gs đề nghị tìm **liên hệ giữa định lý pythagores**
-> với dot product xᵀy = 0.
+> Thế thì câu hỏi gs đặt ra là **tại sao dot product bằng 0 lại là dấu hiệu của hai vector vuông góc**. Hai nói cách khác, gs đề nghị tìm **liên hệ giữa định lý Pythagores** với dot product xᵀy = 0.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm rất chuẩn xác vấn đề trọng tâm và câu hỏi dẫn dắt của giáo sư trên bảng về mối liên hệ giữa định lý Pythagoras và tích vô hướng xᵀy = 0.
+>
+> **✓ Strengths**
+> - Xác định đúng câu hỏi cốt lõi của bài giảng về lý do tại sao tích vô hướng xᵀy = 0 lại thể hiện tính trực giao thông qua định lý Pythagoras.
+>
+> **💡 Deeper notes**
+> - Để thấy rõ mối liên hệ này trong bước tiếp theo, ta khai triển ||x + y||² = (x + y)ᵀ(x + y) = ||x||² + ||y||² + 2xᵀy, từ đó suy ra ||x + y||² = ||x||² + ||y||² khi và chỉ khi xᵀy = 0.
 
 <br>
 
@@ -72,16 +99,29 @@
 <p align="center"><kbd><img src="assets/ol4yte0s3qs.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs: thế thì đầu tiên nếu cho vector (1,2,3) thì length square
-> ||u||² là gì?
+> Gs: thế thì đầu tiên nếu cho vector (1,2,3) thì length square ||u||² là gì?
 >
 >
 >
-> Me: [sqrt(1² + 2² + 3²)]² = 1² + 2² + 3²
+> Me: \[√(1² + 2² + 3²)\]² = 1² + 2² + 3²
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú trả lời chính xác định nghĩa và công thức tính bình phương độ dài của vector. Bạn có thể tính thêm bước cuối ra giá trị số cụ thể là 14.
+>
+> **✓ Strengths**
+> - Hiểu chính xác mối quan hệ giữa độ dài (chuẩn Euclidean) và bình phương độ dài của một vector.
+> - Biết rằng bình phương độ dài ||u||² chính là tổng bình phương các thành phần (tương đương với uᵀu).
+>
+> **💡 Deeper notes**
+> - Trong đại số tuyến tính, ||u||² thường được tính trực tiếp qua tích vô hướng uᵀu = 1² + 2² + 3² = 14 thay vì phải lấy căn bậc hai rồi bình phương ngược lại.
 
 <br>
 
 <a id="node-to2gtb3"></a>
+
+###### Biểu diễn chuẩn qua xᵀx
 
 <p align="center"><kbd><img src="assets/5akqzowbay4.png" width="80%"></kbd></p>
 
@@ -92,10 +132,30 @@
 
 <a id="node-qso6by9"></a>
 
+###### Ví dụ vector trực giao
+
 <p align="center"><kbd><img src="assets/1u957iq3xx7.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > gs ví dụ 2 vector
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ❌ **35/100** · ✓ Move on
+>
+> Ghi chú quá ngắn gọn và mới chỉ dừng lại ở việc đánh dấu đây là ví dụ của giáo sư. Cần ghi lại cụ thể hai vector trực giao và hệ thức Pythagoras liên quan để nắm được nội dung bài giảng.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"gs ví dụ 2 vector"*
+>
+> Ghi chú thiếu toàn bộ nội dung trọng tâm của ví dụ: hai vector vuông góc (tích vô hướng x·y = 0) dẫn đến định lý Pythagoras cho vector: ||x+y||^2 = ||x||^2 + ||y||^2 (14 + 5 = 19).
+>
+>
+> **✓ Strengths**
+> - Nhận biết được đây là phần giảng viên đưa ra ví dụ minh họa bằng vector số cụ thể.
+>
+> **💡 Deeper notes**
+> - Ví dụ trên bảng minh họa cho trường hợp hai vector trực giao trong R^3: tích vô hướng x^T y = 1(2) + 2(-1) + 3(0) = 0, từ đó ||x+y||^2 = ||x||^2 + ||y||^2.
 
 <br>
 
@@ -106,7 +166,7 @@
 <p align="center"><kbd><img src="assets/zah494af62.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tương tự, triển khai ra ta có. 
+> Tương tự, triển khai ra ta có.
 >
 >
 >
@@ -114,53 +174,104 @@
 >
 >
 >
-> = (xᵀ+yᵀ)(x+y) = xᵀx+xᵀy + yᵀx + yᵀy
+> = (xᵀ+yᵀ)(x+y) = xᵀx + xᵀy + yᵀx + yᵀy
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác và rõ ràng, bổ sung bước trung gian chuyển vị $(x+y)^T = x^T + y^T$ giúp việc khai triển biểu thức trở nên trực quan, dễ hiểu.
+>
+> **✓ Strengths**
+> - Áp dụng chính xác tính chất chuyển vị của một tổng để triển khai tích vô hướng của hai vectơ.
+>
+> **💡 Deeper notes**
+> - Vì $x^T y$ là một số vô hướng (scalar), ta có $x^T y = (x^T y)^T = y^T x$, do đó $x^T y + y^T x = 2x^T y$. Từ đó, đẳng thức Pythagoras chỉ xảy ra khi số hạng chéo này bằng 0 ($x^T y = 0$, tức $x \perp y$).
 
 <br>
 
 <a id="node-v5cm2dp"></a>
 
+###### Pythagoras và tích vô hướng
+
 <p align="center"><kbd><img src="assets/22nu6tm1ldk.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Khử đi hai vế và gom xᵀy và yᵀx (đều giống nhau)
-> ta có **2xᵀy = 0**
+> Khử đi hai vế và gom xᵀy và yᵀx (đều giống nhau) ta có **2xᵀy = 0**
 >
 >
 >
-> Và đây là mối liên hệ giữa **định lí pytagores** và việc
-> **dot product của hai vector bằng 0**
+> Và đây là mối liên hệ giữa **định lí Pytagores** và việc **dot product của hai vector bằng 0**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và tóm lược đúng bản chất phép suy dẫn từ định lý Pythagoras sang điều kiện trực giao (tích vô hướng bằng 0).
+>
+> **✓ Strengths**
+> - Nhận diện đúng phép giản ước hai vế và tính chất giao hoán của tích vô hướng đối với vector thực (xᵀy = yᵀx) để ra 2xᵀy = 0.
+> - Nắm được cốt lõi bài giảng: định lý Pythagoras tương đương với việc hai vector trực giao (tích vô hướng bằng 0).
+>
+> **💡 Deeper notes**
+> - Tính chất xᵀy = yᵀx đúng với các vector thuộc không gian thực ℝⁿ vì kết quả là một số vô hướng (scalar). Đối với không gian phức ℂⁿ, tích vô hướng có tính liên hợp phức: xᴴy = (yᴴx)*.
 
 <br>
 
 <a id="node-drf45f3"></a>
 
+###### Trực giao của vector không
+
 <p align="center"><kbd><img src="assets/lq3n18bvwhn.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/eq3s08t7jk6.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tiếp gs hỏi thế zero vector thì sao → với zero vector thì
 > vì chúng dot product với vector nào cũng bằng 0 nên cứ
 > theo luật mà làm, **nó sẽ orthogonal với mọi vector**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chép hoàn toàn chính xác theo đúng định nghĩa đại số tuyến tính: vector không trực giao với mọi vector vì tích vô hướng của nó với bất kỳ vector nào cũng bằng 0.
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác và giải thích rõ ràng lý do vector không trực giao với mọi vector dựa trên định nghĩa x^T y = 0.
+>
+> **💡 Deeper notes**
+> - Hệ quả từ định nghĩa này là vector không trực giao với chính nó (0^T 0 = 0), và đây cũng là vector duy nhất có tính chất trực giao với chính mình.
+
 <br>
 
 <a id="node-vmuk5yp"></a>
 
+###### Không gian con trực giao
+
 <p align="center"><kbd><img src="assets/uzev4fctsm.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp ta sẽ mở rộng từ **orthogonal vector** sang **orthogonal
-> subspace**
+> Tiếp ta sẽ mở rộng từ **orthogonal vector** sang **orthogonal subspace**
 >
 >
 >
-> Gs đề nghị ta coi **bức tường** là subspace thứ nhất (a 2D
-> subspace trong R3), và **mặt sàn** là subspace thứ hai. Câu
-> hỏi là chúng **có là phải là hai orthogonal subspace**
+> Gs đề nghị ta coi **bức tường** là subspace thứ nhất (a 2D subspace trong R3), và **mặt sàn** là subspace thứ hai. Câu hỏi là chúng **có là phải là hai orthogonal subspace?**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chuẩn câu hỏi dẫn nhập và ví dụ trực quan mà giáo sư Gilbert Strang đưa ra khi mở rộng khái niệm trực giao sang không gian con.
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác hướng phát triển bài học từ vector trực giao sang không gian con trực giao.
+> - Tóm lược đúng ví dụ thực tế (bức tường và mặt sàn) mà giáo sư dùng để kích thích tư duy người học.
+>
+> **💡 Deeper notes**
+> - Về mặt bản chất: Bức tường và mặt sàn gặp nhau tại một đường thẳng (giao tuyến khác 0); do đó, một vector nằm trên giao tuyến thuộc cả hai không gian và không thể tự trực giao với chính nó (trừ vector 0). Vì vậy hai không gian con 2 chiều này không trực giao với nhau.
 
 <br>
 
 <a id="node-pvr3bqz"></a>
+
+###### Không gian con trực giao
 
 <p align="center"><kbd><img src="assets/15u5dnomrqm.png" width="80%"></kbd></p>
 
@@ -169,11 +280,26 @@
 > **orthogonal** khi **MỌI vector trong subspace** này
 > **orthogonal với MỌI vector trong subspace kia**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác và nắm trọn vẹn định nghĩa hai không gian con trực giao được giảng dạy trên bảng.
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác điều kiện toàn thể 'mọi vector' giữa hai không gian con, tránh được nhầm lẫn phổ biến rằng chỉ cần vài vector trực giao với nhau.
+>
+> **💡 Deeper notes**
+> - Từ định nghĩa này, hệ quả quan trọng là giao của hai không gian con trực giao S và T chỉ có thể là vector không {0}, vì nếu có vector v khác không thuộc cả hai thì v phải trực giao với chính nó (v·v = 0, vô lý với vector khác 0).
+
 <br>
 
 <a id="node-cp4pwd5"></a>
 
+###### Không gian con trực giao
+
 <p align="center"><kbd><img src="assets/bu6f3xuw22w.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/j8eqhtt6alg.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Và theo định nghĩa này thì **hai subspace không
@@ -189,15 +315,28 @@
 > muốn orthogonal thì chúng **chỉ có thể intersect nhau tại
 > ZERO vì chỉ có zero vector mới orthogonal với chính nó**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác bản chất và trực giác hình học của bài giảng: hai không gian con trực giao chỉ có thể cắt nhau tại vector không.
+>
+> **✓ Strengths**
+> - Hiểu chính xác phản ví dụ của GS Gilbert Strang: vector nằm trên giao tuyến (vết nứt giữa sàn và tường) thuộc cả hai không gian nên phải trực giao với chính nó, điều bất khả thi với vector khác không.
+> - Rút ra đúng kết luận then chốt: hai không gian con muốn trực giao thì phần giao của chúng chỉ có thể là vector không duy nhất (zero vector).
+>
+> **💡 Deeper notes**
+> - Về mặt đại số hình thức: Nếu vector v thuộc S ∩ T và S ⊥ T, thì theo định nghĩa v ⊥ v, tức là v^T v = ||v||^2 = 0, suy ra v bắt buộc phải là vector không.
+
 <br>
 
 <a id="node-9jgxsbm"></a>
 
+###### Orthogonal subspace trong R2
+
 <p align="center"><kbd><img src="assets/f5wiv6uvmta.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp gs đề nghị hãy **xét các orthogonal subspace** của
-> **R2**
+> Tiếp gs đề nghị hãy **xét các orthogonal subspace** của **R2**
 >
 >
 >
@@ -205,33 +344,61 @@
 >
 >
 >
-> i) một **zero vector** (đã biết, nó **vẫn là một subspace**), và
-> một **line đi qua zero** (cũng là một space): mọi vector trong
-> line đều orthogonal với vector duy nhất trong zero vector
-> space (đương nhiên là vector zero) (Bởi dot product của
-> vector nào với zero vector đều bằng 0) Nên thỏa yêu cầu
-> **orthogonal sub spaces**
+> i) một **zero vector** (đã biết, nó **vẫn là một subspace**), và một **line đi qua zero** (cũng là một space): mọi vector trong line đều orthogonal với vector duy nhất trong zero vector space (đương nhiên là vector zero) (Bởi dot product của vector nào với zero vector đều bằng 0) Nên thỏa yêu cầu **orthogonal subspaces**
 >
 >
 >
-> ii) **hai line qua origin** (là hai subpace) mà **vuông góc nhau**.
-> Đương nhiên mọi vector trong line này cũng sẽ đều vuông
-> góc mọi vector trong line kia → thỏa mãn điều kiện hai
-> orthogonal subspace.
+> ii) **hai line qua origin** (là hai subpace) mà **vuông góc nhau**. Đương nhiên mọi vector trong line này cũng sẽ đều vuông góc mọi vector trong line kia → thỏa mãn điều kiện hai orthogonal subspace.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác định nghĩa hai không gian con trực giao (orthogonal subspaces) trong R^2 cùng các ví dụ trực quan phù hợp với bài giảng của GS Gilbert Strang.
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất hai không gian con trực giao: mọi vector thuộc không gian này phải trực giao với mọi vector thuộc không gian kia.
+> - Nhận diện chính xác không gian con chứa vector không {0} trực giao với bất kỳ không gian con nào do tính chất của tích vô hướng.
+> - Minh họa chuẩn xác trường hợp hai đường thẳng đi qua gốc tọa độ vuông góc nhau là hai không gian con trực giao 1 chiều trong R^2.
+>
+> **💡 Deeper notes**
+> - Ngoài hai ví dụ trên, trong R^2 còn có cặp không gian con trực giao là không gian chỉ gồm vector không {0} và toàn bộ không gian R^2.
+> - Trường hợp hai đường thẳng vuông góc nhau qua gốc tọa độ không chỉ là orthogonal subspaces mà còn là orthogonal complements (bổ sung trực giao) của nhau, vì tổng số chiều của chúng bằng số chiều của R^2 (1 + 1 = 2).
 
 <br>
 
 <a id="node-p3x0mh4"></a>
 
+###### Trực giao Rowspace và Nullspace
+
 <p align="center"><kbd><img src="assets/lt4m5qneg0a.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đầu tiên gs cho biết **rowspace** sẽ
-> orthogonal with **nullspace**. Tại sao
+> Đầu tiên gs cho biết **rowspace** sẽ orthogonal with **nullspace**. Tại sao?
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **75/100** · ✓ Move on
+>
+> Ghi chép đã nắm đúng tính chất cốt lõi rằng không gian hàng (row space) trực giao với không gian nghiệm (nullspace), nhưng chưa ghi lại gợi ý trả lời 'Ax = 0' từ bài giảng để giải thích cho câu hỏi 'Tại sao?'.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Tại sao"*
+>
+> Ghi chú dừng lại ở câu hỏi 'Tại sao' mà chưa ghi nhận câu trả lời cốt lõi trên bảng là $Ax = 0$, nơi mỗi hàng của $A$ nhân vô hướng với nghiệm $x$ đều bằng 0.
+>
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác quan hệ trực giao giữa row space và nullspace theo bài giảng.
+>
+> **💡 Deeper notes**
+> - Để trả lời đầy đủ câu hỏi 'Tại sao?': Với mọi $x \in N(A)$, ta có $Ax = 0$. Phép nhân ma trận này có nghĩa là tích vô hướng của từng hàng của $A$ với $x$ đều bằng 0, suy ra mọi tổ hợp tuyến tính của các hàng (tức toàn bộ row space) đều vuông góc với $x$.
+> - Row space và nullspace không chỉ trực giao mà còn là hai không gian bù trực giao (orthogonal complements) của nhau trong $\mathbb{R}^n$, với tổng số chiều bằng $n$ theo định lý Rank-Nullity.
 
 <br>
 
 <a id="node-jw7843g"></a>
+
+###### Row space trực giao Nullspace
 
 <p align="center"><kbd><img src="assets/8xbb95db7q.png" width="80%"></kbd></p>
 
@@ -288,14 +455,50 @@
 > Đây là cơ sở để kết luận ta có **hai subspace orthogonal nhau là row
 > space và nullspace**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú giải thích rất chính xác và trực quan tại sao row space lại vuông góc với nullspace dựa trên phép nhân ma trận $Ax = 0$. Các bước suy luận từ tích vô hướng của từng hàng đến tổ hợp tuyến tính đều rất rõ ràng.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"(c × u1 + v × u2)x = c × u1x + v × u2x = c × 0 + d × 0 = 0"*
+>
+> Có lỗi ký hiệu nhỏ không nhất quán giữa hệ số v và d (vế trái dùng v nhưng vế phải lại viết là d × 0).
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ bản chất của phương trình Ax = 0 theo góc nhìn từng hàng (row-by-row) tương đương với tích vô hướng bằng 0.
+> - Chứng minh chặt chẽ việc nếu từng hàng trực giao với x thì mọi tổ hợp tuyến tính của các hàng cũng trực giao với x nhờ tính chất tuyến tính.
+>
+> **💡 Deeper notes**
+> - Ngoài việc row space và nullspace trực giao với nhau, chúng còn là 'orthogonal complements' (phần bù trực giao) của nhau trong không gian R^n vì tổng số chiều của chúng đúng bằng n (dim(C(A^T)) + dim(N(A)) = r + (n - r) = n).
+
 <br>
 
 <a id="node-u3tyh6t"></a>
+
+###### Row Space trực giao Nullspace
 
 <p align="center"><kbd><img src="assets/y5y6z586op.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Gs: Correct!
+
+> [!TIP]
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **0/100** · ✗ Fix first
+>
+> Ghi chú hoàn toàn chưa có nội dung kiến thức nào về bài giảng (chứng minh không gian dòng trực giao với nullspace) mà chỉ ghi lại một câu nói ngoài lề.
+>
+> **🔴 Critical issues**
+>
+> **1.** *"Gs: Correct!"*
+>
+> Ghi chú không tóm tắt hay ghi lại bất kỳ nội dung toán học nào từ bảng bài giảng (khái niệm và chứng minh tại sao row space lại trực giao với nullspace thông qua Ax = 0).
+>
+>
+> **💡 Deeper notes**
+> - Từ phương trình Ax = 0, mỗi hàng của ma trận A nhân vô hướng với vector x trong nullspace đều bằng 0, nghĩa là mọi vector hàng đều trực giao với x. Do tổ hợp tuyến tính bất kỳ của các hàng cũng sẽ trực giao với x, toàn bộ không gian dòng (row space) trực giao với nullspace.
 
 <br>
 
@@ -304,6 +507,8 @@
 ###### Orthogonality of Fundamental Subspaces
 
 <p align="center"><kbd><img src="assets/hjijrz0mwa5.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/84kydy5cwor.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tương tự, ta sẽ xem thử tại sao **C(A) lại orthogonal với
@@ -329,7 +534,11 @@
 
 <a id="node-sb1dwsz"></a>
 
+###### Bốn không gian con cơ bản
+
 <p align="center"><kbd><img src="assets/2q1ghk2ud6z.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/j4bnq0l2etm.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > gs: correct. Và ta có thể thấy kiểu như **2 subspace
@@ -340,48 +549,84 @@
 > Còn **Columns space và Left nullspace** khắc họa nên
 > **R^m**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác bức tranh tổng thể về 4 không gian con cơ bản: Row space và Nullspace tạo nên Rⁿ, còn Column space và Left nullspace tạo nên Rᵐ.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"khắc họa nên Rⁿ"*
+>
+> Cách dùng từ 'khắc họa nên' mang tính trực giác; về mặt toán học chuẩn xác, hai không gian con này là phần bù trực giao của nhau và tạo thành tổng trực tiếp (direct sum) để phân rã hoàn toàn không gian Rⁿ (tương tự với Rᵐ).
+>
+>
+> **✓ Strengths**
+> - Xác định đúng cặp không gian con thuộc về Rⁿ (Row space và Nullspace) và cặp thuộc về Rᵐ (Column space và Left nullspace).
+> - Nắm được cốt lõi của định lý cơ bản của đại số tuyến tính về sự phân rã của hai không gian.
+>
+> **💡 Deeper notes**
+> - Cụ thể hơn, hai cặp không gian con này trực giao với nhau (orthogonal complements): bất kỳ vector nào trong Rⁿ đều có thể phân tích duy nhất thành tổng của một vector thuộc Row space và một vector thuộc Nullspace (Rⁿ = Row(A) ⊕ Null(A) và Rᵐ = Col(A) ⊕ Null(Aᵀ)).
+> - Số chiều (dimension) của chúng cộng lại khớp hoàn toàn: r + (n - r) = n và r + (m - r) = m.
+
 <br>
 
 <a id="node-pojvq4a"></a>
 
+###### Số chiều Rowspace và Nullspace
+
 <p align="center"><kbd><img src="assets/y3qfkevyg4q.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp gs đặt câu hỏi là, tưởng tượng trong R³, ta lấy hai
-> subspace là **2 orthogonal line** (đương nhiên đi qua gốc
-> zero), và chúng **KHÔNG** **CÙNG NHAU KHẮC HỌA NÊN CẢ
-> R³** (vì chúng chỉ tạo một plane)
+> Tiếp gs đặt câu hỏi là, tưởng tượng trong R³, ta lấy hai subspace là **2 orthogonal line** (đương nhiên đi qua gốc zero), và chúng **KHÔNG** **CÙNG NHAU LẤP ĐẦY CẢ R³** (vì chúng chỉ tạo một plane)
 >
 >
 >
-> Thì gs hỏi là: Có khi nào một rowspace và nullspace đóng
-> vai của hai line đó - tức 2 subspace orthogonal nhưng
-> không tạo toàn bộ R³
+> Thì gs hỏi là: Có khi nào một rowspace và nullspace đóng vai của hai line đó - tức 2 subspace orthogonal nhưng không tạo toàn bộ R³
 >
 >
 >
-> Me: Không, vì tính chất **tổng dimension của rowspace (r)
-> và nullspace (n-r) phải bằng n**. Do đó không thể có vụ 
-> rowspace và nullspace đều là subspace của R³ (matrix có
-> 3 cols) mà mỗi cái đều là một line (dim = 1) được
+> Trả lời: Không, vì tính chất **tổng dimension của rowspace (r) và nullspace (n-r) phải bằng n**. Do đó không thể có vụ rowspace và nullspace đều là subspace của R³ (matrix có 3 cols) mà mỗi cái đều là một line (dim = 1) được
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chuẩn xác và lập luận hoàn toàn chính xác dựa trên định lý Rank-Nullity (tổng số chiều của row space và null space luôn bằng số cột n).
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác bản chất câu hỏi của giáo sư Gilbert Strang về khái niệm bù trực giao (orthogonal complement) trong R³.
+> - Áp dụng chính xác định lý về số chiều: dim(Row space) + dim(Nullspace) = r + (n - r) = n để bác bỏ khả năng cả hai đều là đường thẳng trong R³.
+>
+> **💡 Deeper notes**
+> - Khái niệm chính xác cần nhớ là hai không gian này không chỉ đơn thuần là trực giao (orthogonal) mà là bù trực giao của nhau (orthogonal complements in Rⁿ), nghĩa là tổng số chiều của chúng luôn lấp đầy toàn bộ không gian gốc.
 
 <br>
 
 <a id="node-wm23y80"></a>
 
+###### Số chiều Rowspace và Nullspace
+
 <p align="center"><kbd><img src="assets/mq6q62tsyt.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs cho ví dụ này, dễ thấy hai row dependent, → chỉ có **1
-> independent row** → **rowspace có dim = 1**, và do đó
-> matrix rank 1, và cũng dẫn tới chỉ có 1 independent cols,
-> nên chỉ có **2 free cols** ứng với 2 special solution → chỉ
-> có 2 vector trong basis và do đó **nullspace có dim = 2
+> Gs cho ví dụ này, dễ thấy hai row dependent, → chỉ có **1 independent row** → **rowspace có dim = 1**, và do đó matrix rank 1, và cũng dẫn tới chỉ có 1 independent cols, nên chỉ có **2 free cols** ứng với 2 special solution → chỉ có 2 vector trong basis và do đó nullspace có dim = 2
 >
 >
 >
-> Và đúng là 1 + 2 = 3 (cả rowspace và nullspace là
-> subspace của R3)**
+> Và đúng là 1 + 2 = 3 (cả rowspace và nullspace là subspace của R3)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và đầy đủ về việc xác định hạng (rank), số chiều của row space và null space cũng như liên hệ định lý Rank-Nullity trong R^3.
+>
+> **✓ Strengths**
+> - Nhận diện chính xác tính phụ thuộc tuyến tính giữa hai hàng để suy ra rank = 1.
+> - Áp dụng chuẩn xác định lý Rank-Nullity: số cột pivot (1) + số cột tự do (2) = số chiều không gian cột n = 3.
+> - Hiểu đúng bản chất row space và null space đều là các không gian con trực giao trong R^3.
+>
+> **💡 Deeper notes**
+> - Có thể bổ sung thêm rằng row space và null space không chỉ cùng nằm trong R^3 mà còn là phần bù trực giao của nhau (orthogonal complements) trong R^3.
 
 <br>
 
@@ -392,19 +637,15 @@
 <p align="center"><kbd><img src="assets/z2tvt30yotk.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs: correct, ta có **rowspace là 1 line**: vector [1 2 5]ᵀ và
-> **nullspace là một plane**.
+> gs: correct, ta có rowspace là 1 line: vector \[1 2 5\]ᵀ và nullspace là một plane.
 >
 >
 >
-> gs: **Plane nào?**
+> gs: Plane nào?
 >
 >
 >
-> me: Plane quy định bởi phương trình **1***x1 + **2***x2 +
-> **5***x3 = 0 Đó chính là **phương trình đường mặt phẳng
-> nullspace**: tập hợp tất cả các vector / đường thẳng vuông
-> góc với vector [1 2 5]
+> me: Plane quy định bởi phương trình 1 x1 + 2 x2 + 5 x3 = 0 Đó chính là phương trình đường mặt phẳng nullspace: tập hợp tất cả các vector / đường thẳng vuông góc với vector \[1 2 5\]
 >
 >
 >
@@ -412,18 +653,13 @@
 >
 >
 >
-> Và liên hệ với 18.02 ta biết <1, 2, 5> **chính là NORMAL
-> VECTOR** (vector pháp tuyến) của mặt phẳng, nó sẽ
-> **vuông góc với mọi vector trong mặt phẳng**. Vậy từ đó
-> trong trường hợp này bức tranh về rowspace C(Aᵀ) và
-> nullspace N(A) rất rõ rằng, **C(Aᵀ) chính là line đi qua
-> normal vector** và  **N(A) chính là plane**. Và xác nhận lại
-> rằng mọi vector trong plane (nullspace) đều vuông góc với
-> normal vector (mọi vector trong row space)
+> Và liên hệ với 18.02 ta biết &lt;1, 2, 5&gt; chính là NORMAL VECTOR (vector pháp tuyến) của mặt phẳng, nó sẽ vuông góc với mọi vector trong mặt phẳng. Vậy từ đó trong trường hợp này bức tranh về rowspace C(Aᵀ) và nullspace N(A) rất rõ rằng, C(Aᵀ) chính là line đi qua normal vector và N(A) chính là plane. Và xác nhận lại rằng mọi vector trong plane (nullspace) đều vuông góc với normal vector (mọi vector trong row space)
 
 <br>
 
 <a id="node-7q5uw9k"></a>
+
+###### Phần bù trực giao trong R^n
 
 <p align="center"><kbd><img src="assets/2zgcgkxe0mx.png" width="80%"></kbd></p>
 
@@ -467,6 +703,8 @@
 <br>
 
 <a id="node-eyrvns1"></a>
+
+###### Ý tưởng loại bỏ phương trình
 
 <p align="center"><kbd><img src="assets/8z7e5ppxnvb.png" width="80%"></kbd></p>
 
@@ -515,6 +753,8 @@
 <br>
 
 <a id="node-gha3tsf"></a>
+
+###### Tính khả nghịch
 
 <p align="center"><kbd><img src="assets/s5gasm7pwh.png" width="80%"></kbd></p>
 
@@ -592,6 +832,8 @@
 
 <a id="node-bvqfsbw"></a>
 
+###### Ma trận không khả nghịch
+
 <p align="center"><kbd><img src="assets/rbe3ro3fe3j.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -657,6 +899,8 @@
 
 <a id="node-35vs8p7"></a>
 
+###### Nullspace và Rank của AᵀA
+
 <p align="center"><kbd><img src="assets/2pdzjt4h9e1.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -721,6 +965,8 @@
 <br>
 
 <a id="node-qfmvh45"></a>
+
+###### Tính chất ma trận AᵀA
 
 <p align="center"><kbd><img src="assets/v0zqqsjg2y.png" width="80%"></kbd></p>
 
