@@ -1,13 +1,9 @@
-# Lec 17: Double Integrals In
-polar Coordinates
+# Lec 17: Double Integrals In Polar Coordinates
 
-📊 **Progress:** `21` Notes | `21` Screenshots
+📊 **Progress:** `21` Notes | `21` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-gmfgrsz"></a>
-
-## Lec 17: Double Integrals In
-polar Coordinates
 
 <br>
 
@@ -18,10 +14,10 @@ polar Coordinates
 > [!NOTE]
 > Đầu tiên gs review lại bài trước ta đã học về ý nghĩa của double integral
 > trong vùng R của f(x,y)dA đó là ta chia vùng R thành các vùng nhỏ
-> delta_A và ứng với mỗi vùng sẽ có chiều cao là f(x,y). Thì double
+> ΔA và ứng với mỗi vùng sẽ có chiều cao là f(x,y). Thì double
 > integral sẽ là thể tích của vùng dưới đồ thị hàm f sẽ được tính bằng
-> cách đầu tiên lấy sum các thể tích f(x,y)delta_A này và sau đó là ta lấy
-> limit của nó khi cho delta_A -> 0
+> cách đầu tiên lấy sum các thể tích f(x,y)ΔA này và sau đó là ta lấy
+> limit của nó khi cho ΔA → 0
 >
 >
 >
@@ -52,8 +48,8 @@ polar Coordinates
 
 > [!NOTE]
 > Thế thì, ta đã biết Polar coordinate một điểm (vector) sẽ
-> được represent bởi r và theta. Và liên hệ giữa x, y và r,
-> theta là: x = r*cos(theta), y = r*sin(theta)
+> được represent bởi r và θ. Và liên hệ giữa x, y và r,
+> θ là: x = r × cos(θ), y = r × sin(θ)
 
 <br>
 
@@ -63,7 +59,7 @@ polar Coordinates
 
 > [!NOTE]
 > Thế thì ta sẽ tính double integral trong Polar coords tức
-> là tích phân sẽ là ...dr d_theta
+> là tích phân sẽ là ...dr d_θ
 >
 >
 >
@@ -78,18 +74,18 @@ polar Coordinates
 
 > [!NOTE]
 > Vậy đầu tiên ta cần xác định bound của tích phân. Thế thì inner
-> integral, như đã biết, sẽ mang ý nghĩa là với một giá trị theta fixed,
+> integral, như đã biết, sẽ mang ý nghĩa là với một giá trị θ fixed,
 > thì r sẽ có range như thế nào.
 >
 >
 >
-> Dễ thấy ở đây, theta bằng bao nhiêu thì r sẽ đều có range từ 0 đến 1
-> là bán kính (paraboloid z = 1 - x^2 - y^2 cắt plane xy ở một đường
+> Dễ thấy ở đây, θ bằng bao nhiêu thì r sẽ đều có range từ 0 đến 1
+> là bán kính (paraboloid z = 1 - x² - y² cắt plane xy ở một đường
 > tròn bán kính 1)
 >
 >
 >
-> Còn range của theta cũng dễ thấy là từ 0 đến pi/2
+> Còn range của θ cũng dễ thấy là từ 0 đến π/2
 
 <br>
 
@@ -99,22 +95,24 @@ polar Coordinates
 
 > [!NOTE]
 > Thế thì gs cho rằng, **không như trong x, y coordinates**, thì
-> **delta_x*delta_y** hay **delta_y*delta_x chính là delta_A** (để khi ->
+> **Δx × Δy** hay **Δy × Δx chính là ΔA** (để khi →
 > 0 thì dxdy chính là dA)
 >
 >
 >
-> Còn ở đây, **delta_r. delta_theta KHÔNG PHẢI LÀ delta_A**
+> Còn ở đây, **Δr. Δθ KHÔNG PHẢI LÀ ΔA**
 
 <br>
 
 <a id="node-4zkt543"></a>
 
+###### Area Element in Polar Coordinates
+
 <p align="center"><kbd><img src="assets/1yuts837b2q.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Do đó ta **cần xác định cách tính vùng delta_A trong Polar coordinate:** 
-> bao bởi bởi **r** và **r + delta_r**, **theta** và **theta + delta_theta**
+> Do đó ta **cần xác định cách tính vùng ΔA trong Polar coordinate:** 
+> bao bởi bởi **r** và **r + Δr**, **θ** và **θ + Δθ**
 >
 >
 >
@@ -122,34 +120,47 @@ polar Coordinates
 >
 >
 >
-> Đầu tiên ta sẽ tính chênh lệch diện tích của hình tròn bán kính r+delta_r
+> Đầu tiên ta sẽ tính chênh lệch diện tích của hình tròn bán kính r+Δr
 > và hình tròn bán kính r. Sẽ là: 
 >
 >
 >
-> pi*(r+delta_r)^2 - pi*r^2 = pi*(r^2 + delta_r^2 +2*r*delta_r) - pi*r^2
+> pi × (r+Δr)² - pi × r² = pi × (r² + Δr² +2 × r × Δr) - pi × r²
 >
 >
 >
-> = **pi*delta_r^2 + pi*2*r*delta_r**
+> = **pi × Δr² + pi × 2 × r × Δr**
 >
 >
 >
-> Và sau đó để tính diện tích delta_A là vùng trên hình vành khuyên vừa rồi
-> nhưng giới hạn bởi góc delta_theta, ta cần **nhân nó cho delta_theta / 2pi**
+> Và sau đó để tính diện tích ΔA là vùng trên hình vành khuyên vừa rồi
+> nhưng giới hạn bởi góc Δθ, ta cần **nhân nó cho Δθ / 2π**
 >
 >
 >
-> => delta_A = (pi*delta_r^2 + pi*2*r*delta_r) *delta_theta / 2pi
+> ⇒ ΔA = (pi × Δr² + pi × 2 × r × Δr) *Δθ / 2π
 >
 >
 >
-> Với delta_r^2 ~= 0 (vì nó là **bậc 2 của đại lượng vô cùng nhỏ delta_r** 
+> Với Δr² ≈ 0 (vì nó là **bậc 2 của đại lượng vô cùng nhỏ Δr** 
 > nên ta có thể **bỏ đi**)
 >
 >
 >
-> Kết quả delta_A = pi*2*r*delta_r * delta_theta / 2pi = **r*delta_r*delta_theta**
+> Kết quả ΔA = pi × 2 × r × Δr * Δθ / 2π = **r × Δr × Δθ**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, bạn đã tự suy luận ra diện tích phần tử diện tích trong tọa độ cực bằng cách lấy hiệu diện tích hai hình tròn rồi nhân với tỉ lệ góc và triệt tiêu vô cùng bé bậc cao một cách chính xác.
+>
+> **✓ Strengths**
+> - Tự thiết lập được phép tính diện tích hình vành khuyên và nhân tỉ lệ góc delta_θ / 2pi rất chặt chẽ.
+> - Hiểu đúng bản chất giải tích khi bỏ qua số hạng vô cùng bé bậc cao (delta_r^2 * delta_θ) để thu được phần tử diện tích r*delta_r*delta_θ.
+>
+> **💡 Deeper notes**
+> - Về mặt toán học chặt chẽ, ta viết dấu xấp xỉ delta_A ≈ r*delta_r*delta_θ, và nó trở thành dấu bằng chính xác khi chuyển sang vi phân dA = r dr dθ.
+> - Ngoài cách tính hiệu diện tích hình quạt, một cách trực giác phổ biến khác là xấp xỉ mảnh delta_A thành một hình chữ nhật cong có hai kích thước là delta_r và r*delta_θ (độ dài cung tròn), cho ra ngay diện tích là r*delta_r*delta_θ.
 
 <br>
 
@@ -158,13 +169,13 @@ polar Coordinates
 <p align="center"><kbd><img src="assets/qch8bdshbc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Gs: Đúng là vậy, ta có thể giải cách khác **coi delta_A như hình chữ
-> nhật cạnh delta_r, và cạnh kia là r*delta_theta** (chiều dài cung = bán
-> kính*góc)
+> Gs: Đúng là vậy, ta có thể giải cách khác **coi ΔA như hình chữ
+> nhật cạnh Δr, và cạnh kia là r × Δθ** (chiều dài cung = bán
+> kính × góc)
 >
 >
 >
-> Nên **delta_A = delta_r * delta_theta * r**
+> Nên **ΔA = Δr * Δθ * r**
 >
 >
 >
@@ -172,7 +183,7 @@ polar Coordinates
 >
 >
 >
-> **dA = r*dr*d_theta**
+> **dA = r × dr × d_θ**
 >
 >
 >
@@ -180,8 +191,8 @@ polar Coordinates
 >
 >
 >
-> Ta sẽ **cần xác định lại bound** cũng như **thay dA là r*dr*d_theta**
-> chứ không chỉ dr*d_theta
+> Ta sẽ **cần xác định lại bound** cũng như **thay dA là r × dr × d_θ**
+> chứ không chỉ dr × d_θ
 
 <br>
 
@@ -190,13 +201,13 @@ polar Coordinates
 <p align="center"><kbd><img src="assets/r0dmw9l8fqc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì ta cần **chuyển f(x,y) thành f(r, theta)**.
+> Thế thì ta cần **chuyển f(x,y) thành f(r, θ)**.
 >
 >
 >
-> Đương nhiên có thể dùng **x = r*cos(theta), y = r*sin(theta)** thế vào,
-> nhưng cũng có thể **quan sát thấy x^2 + y^2 chính là r^2** để ta có
-> ngay **f = 1 - r^2**
+> Đương nhiên có thể dùng **x = r × cos(θ), y = r × sin(θ)** thế vào,
+> nhưng cũng có thể **quan sát thấy x² + y² chính là r²** để ta có
+> ngay **f = 1 - r²**
 
 <br>
 
@@ -206,8 +217,8 @@ polar Coordinates
 
 > [!NOTE]
 > Rồi, tích phân trở thành như thế này. Hoàn toàn đơn giản, ta sẽ tính
-> inner integral trước và dễ thấy nguyên hàm của (1-r^2)r là (r^2/2 - r^4/4)
-> -> inner integral = (r^2/2 - r^4/4) | 0 : 1
+> inner integral trước và dễ thấy nguyên hàm của (1-r²)r là (r²/2 - r^4/4)
+> → inner integral = (r²/2 - r^4/4) | 0 : 1
 
 <br>
 
@@ -217,7 +228,7 @@ polar Coordinates
 
 > [!NOTE]
 > Kết quả là 1/4. từ đó tính outer
-> integral: (theta/4) | 0:pi/2 = **pi/8**
+> integral: (θ/4) | 0:π/2 = **pi/8**
 
 <br>
 
@@ -226,13 +237,13 @@ polar Coordinates
 <p align="center"><kbd><img src="assets/fexb17uulz.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs nhắc lại là **99% trường hợp ta sẽ outer integrate với theta** và
+> gs nhắc lại là **99% trường hợp ta sẽ outer integrate với θ** và
 > **inner integrate với r**.
 >
 >
 >
-> Nên đầu tiên ta sẽ cần xác định inner bound với ý nghĩa là: **với theta
-> fixed**, thì **r có range gì**, sau đó outer integral bound là range của theta
+> Nên đầu tiên ta sẽ cần xác định inner bound với ý nghĩa là: **với θ
+> fixed**, thì **r có range gì**, sau đó outer integral bound là range của θ
 
 <br>
 
@@ -281,7 +292,7 @@ polar Coordinates
 >
 >
 >
-> Vậy ta sẽ tính: **tích phân trong vùng R 1*dA**
+> Vậy ta sẽ tính: **tích phân trong vùng R 1 × dA**
 >
 >
 >
@@ -301,7 +312,7 @@ polar Coordinates
 >
 >
 > Khi đó bằng cách **tích phân kép trên vùng R delta.dA** sẽ cho ta khối
-> lượng của object. (nếu theta = constant thì nó sẽ là theta*diện tích R
+> lượng của object. (nếu θ = constant thì nó sẽ là θ*diện tích R
 > còn không  thì nó vẫn giúp ta tính khối lượng của object )
 
 **🔗 See also:** [linked note](./lec_22_greens_theorem.md#node-t8iykun)
@@ -322,7 +333,7 @@ polar Coordinates
 >
 >
 >
-> Average of f = f_bar = [1/Area(R)] double integral over R f*dA
+> Average of f = f_bar = [1/Area(R)] double integral over R f × dA
 
 <br>
 
@@ -337,7 +348,7 @@ polar Coordinates
 >
 >
 >
-> [1/Mass(R)] tích phân kép trong vùng R f*delta*dA
+> [1/Mass(R)] tích phân kép trong vùng R f × delta × dA
 >
 >
 >
@@ -392,8 +403,8 @@ polar Coordinates
 >
 >
 > Ta có vật khối lượng **m** **quay quanh tâm O** với **vận tốc góc** **omega** với
-> khoảng cách **r**. Thì **động năng là 1/2 m v^2** với v = r*omega thì động
-> năng bằng 1/2mr^2omega^2 thì khi đó **mr^2 chính là moment quán
+> khoảng cách **r**. Thì **động năng là 1/2 m v²** với v = r × omega thì động
+> năng bằng 1/2mr²omega² thì khi đó **mr² chính là moment quán
 > tính**
 
 <br>
