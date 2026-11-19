@@ -5,8 +5,6 @@
 ---
 <a id="node-looaf07"></a>
 
-## Lec 22: Green's Theorem
-
 <br>
 
 <a id="node-os394gk"></a>
@@ -98,17 +96,17 @@
 
 > [!NOTE]
 > Và ta muốn tính line integral của F dot dr với F là vector field:
-> <ye^-x, (0.5x^2 - e^-x)>
+> <ye^-x, (0.5x² - e^-x)>
 >
 >
 >
 > Thế thì nếu phải tính một cách trực tiếp, thì như đã  biết (một cách làm)
-> là ta sẽ express x, y dưới dạng một parameter ví dụ theta:
+> là ta sẽ express x, y dưới dạng một parameter ví dụ θ:
 >
 >
 >
-> x = 2 + cos(theta), y = sin(theta) từ đó dx = -sin(theta)dtheta, 
-> dy = cos(theta)dtheta và thế vào ta sẽ tính tích phân theo variable theta
+> x = 2 + cos(θ), y = sin(θ) từ đó dx = -sin(θ)dθ, 
+> dy = cos(θ)dθ và thế vào ta sẽ tính tích phân theo variable θ
 >
 >
 >
@@ -167,23 +165,23 @@
 >
 >
 >
-> x_bar = **tích phân kép trên vùng R của x . theta . dA** / **Khối lượng của vật
+> x_bar = **tích phân kép trên vùng R của x . θ . dA** / **Khối lượng của vật
 > phẳng (Mass of planar object)**
 >
 >
 >
-> với theta là density có thể là hàm phụ thuộc x, nhưng ở đây gs cho rằng
-> ta có  density đồng nhất: theta = 1
+> với θ là density có thể là hàm phụ thuộc x, nhưng ở đây gs cho rằng
+> ta có  density đồng nhất: θ = 1
 >
 >
 >
-> Và khối lượng của object tính bằng **tích phân kép trên vùng R của theta
-> dA**  thì với **theta = 1**, nó sẽ là **tích phân kép trên vùng R của theta
+> Và khối lượng của object tính bằng **tích phân kép trên vùng R của θ
+> dA**  thì với **θ = 1**, nó sẽ là **tích phân kép trên vùng R của θ
 > dA** thì chính là  **diện tích vùng R**  (theo link tím)
 >
 >
 >
-> Từ đó, tích phân kép trên vùng R của x . theta . dA =
+> Từ đó, tích phân kép trên vùng R của x . θ . dA =
 >
 >
 >
@@ -205,12 +203,12 @@
 
 > [!NOTE]
 > Và theo hình học, ta biết ngay x_bar = 2 vì tâm của hình tròn là tại x =
-> 2. Và diện tích của hình tròn (vùng R) là pi (vì bán kính = 1, pi*r^2 =
+> 2. Và diện tích của hình tròn (vùng R) là pi (vì bán kính = 1, pi × r² =
 > pi)
 >
 >
 >
-> Từ đó ta có ngay kết quả là 2pi
+> Từ đó ta có ngay kết quả là 2π
 >
 >
 >
@@ -251,7 +249,7 @@
 >
 > Do đó, tuy curl F = 0 tại mọi điểm trừ origin trong hình tròn nhưng nó
 > không conservative biểu hiện là khi tính line integral trên C của F dot
-> dr thì ra kết quả 2pi khác 0
+> dr thì ra kết quả 2π khác 0
 
 <br>
 
