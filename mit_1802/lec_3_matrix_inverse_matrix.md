@@ -5,11 +5,11 @@
 ---
 <a id="node-7cb26d6"></a>
 
-## Lec 3: Matrix, Inverse Matrix
-
 <br>
 
 <a id="node-3zqt2ur"></a>
+
+## Bản chất tích có hướng
 
 <p align="center"><kbd><img src="assets/nxdb3m9dpf9.png" width="80%"></kbd></p>
 
@@ -28,6 +28,8 @@
 
 <a id="node-2bhdgpm"></a>
 
+### Ý nghĩa tích có hướng
+
 <p align="center"><kbd><img src="assets/97m20502fpv.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -39,11 +41,13 @@
 > Cũng như bản thân vector (A x B) sẽ **vuông góc với plane span
 > bởi vector A, B**
 
-**🔗 See also:** [linked note](./lec_4_square_system_equation_of_plane.md#node-miy1y9u)
+**🔗 See also:** [Vectơ pháp tuyến mặt phẳng](./lec_4_square_system_equation_of_plane.md#node-miy1y9u)
 
 <br>
 
 <a id="node-0s4i8ph"></a>
+
+#### Tính chất phản giao hoán
 
 <p align="center"><kbd><img src="assets/428594f4nea.png" width="80%"></kbd></p>
 
@@ -64,6 +68,8 @@
 
 <a id="node-kqvl0h9"></a>
 
+###### Ứng dụng của tích có hướng
+
 <p align="center"><kbd><img src="assets/afwbujah33v.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -74,6 +80,8 @@
 <br>
 
 <a id="node-l4alsam"></a>
+
+###### Mặt phẳng từ định thức
 
 <p align="center"><kbd><img src="assets/2jso4s6op3a.png" width="80%"></kbd></p>
 
@@ -90,11 +98,13 @@
 > Ta có thể **xây dựng equation det = 0**, và tính toán ra x, y, z để kết
 > quả sẽ cho ra **phương trình mặt phẳng của plane**
 
-**🔗 See also:** [linked note](./lec_2_determinant_cross_product.md#node-yodlng2)
+**🔗 See also:** [Thể tích hình hộp từ vectơ](./lec_2_determinant_cross_product.md#node-yodlng2)
 
 <br>
 
 <a id="node-lnqj8to"></a>
+
+###### Phương pháp vector pháp tuyến
 
 <p align="center"><kbd><img src="assets/kf34yi33yom.png" width="80%"></kbd></p>
 
@@ -106,6 +116,8 @@
 <br>
 
 <a id="node-vtu2tbe"></a>
+
+###### Phương trình mặt phẳng
 
 <p align="center"><kbd><img src="assets/qki2w6z9qep.png" width="80%"></kbd></p>
 
@@ -129,6 +141,8 @@
 
 <a id="node-mjy3slh"></a>
 
+###### Định thức và tích ba
+
 <p align="center"><kbd><img src="assets/i6s1f0ftty8.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -140,6 +154,8 @@
 
 <a id="node-66q7823"></a>
 
+###### Ma trận hệ phương trình
+
 <p align="center"><kbd><img src="assets/rxhy1oxswrj.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -149,6 +165,8 @@
 <br>
 
 <a id="node-b0q6bu4"></a>
+
+###### Phép nhân Ax hàng cột
 
 <p align="center"><kbd><img src="assets/o949h0pmmx.png" width="80%"></kbd></p>
 
@@ -161,6 +179,8 @@
 <br>
 
 <a id="node-uqh3rme"></a>
+
+###### Phép nhân ma trận
 
 <p align="center"><kbd><img src="assets/aqdaboyfuof.png" width="80%"></kbd></p>
 
@@ -175,6 +195,8 @@
 
 <a id="node-hxi8uu5"></a>
 
+###### Phép biến đổi vectơ
+
 <p align="center"><kbd><img src="assets/cqkba8jlyee.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -184,6 +206,8 @@
 <br>
 
 <a id="node-mud10dz"></a>
+
+###### Thứ tự phép biến đổi
 
 <p align="center"><kbd><img src="assets/sxuuirrcj6e.png" width="80%"></kbd></p>
 
@@ -200,6 +224,8 @@
 
 <a id="node-n1jwdpt"></a>
 
+###### Ma trận đơn vị
+
 <p align="center"><kbd><img src="assets/7l7s78fsokc.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -215,6 +241,8 @@
 
 <a id="node-kxovl2f"></a>
 
+###### Ma trận xoay 90 độ
+
 <p align="center"><kbd><img src="assets/91x6fiaq615.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -224,6 +252,8 @@
 <br>
 
 <a id="node-xur2ti6"></a>
+
+###### Ma trận xoay 90 độ
 
 <p align="center"><kbd><img src="assets/nt76b6srpor.png" width="80%"></kbd></p>
 
@@ -260,7 +290,7 @@
 > Thế thì ta sẽ xoay (transform) i^ và thể hiện nó bởi output basis (cũng
 > là i^, j^). Vậy thì khi xoay i^ thì kết quả là nó thành vector j^, và để thể
 > hiện dưới standard basis thì đương nhiên nó cũng chính là coordinate
-> của j^ = (0, 1), mà cũng chính là 0*i^ + 1*j^ => Cột 1 của R là 0, 1
+> của j^ = (0, 1), mà cũng chính là 0 × i^ + 1 × j^ ⇒ Cột 1 của R là 0, 1
 >
 >
 >
@@ -279,6 +309,8 @@
 
 <a id="node-vzdt7xo"></a>
 
+###### Cột của ma trận quay
+
 <p align="center"><kbd><img src="assets/wngp1yukyop.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -287,19 +319,19 @@
 >
 >
 >
-> Thế thì **R.i** sẽ là R.[1 0]T chính là 1*col1 + 0*col2 = **col1**
+> Thế thì **R.i** sẽ là R.[1 0]T chính là 1 × col1 + 0 × col2 = **col1**
 >
 >
 >
-> và **R.j** sẽ là R.[0 1]T chính là 0*col1 + 1*col2 = **col2**
+> và **R.j** sẽ là R.[0 1]T chính là 0 × col1 + 1 × col2 = **col2**
 >
 >
 >
-> Vậy thì đương nhiên là **col 1 của R chính là R*i**
+> Vậy thì đương nhiên là **col 1 của R chính là R × i**
 >
 >
 >
-> và **col 2 của R chính là R*j
+> và **col 2 của R chính là R × j
 >
 >
 >
@@ -310,10 +342,12 @@
 
 <a id="node-iublj86"></a>
 
+###### Tính chất phép quay
+
 <p align="center"><kbd><img src="assets/rusj2s0ogla.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và R^2 sẽ chính là -I với ý nghĩa khi ta áp dụng rotation 2 lần
+> Và R² sẽ chính là -I với ý nghĩa khi ta áp dụng rotation 2 lần
 > thì sẽ chính là quay 180 độ, ta sẽ đổi dấu x,y.
 >
 >
@@ -323,6 +357,8 @@
 <br>
 
 <a id="node-kgb2q84"></a>
+
+###### Phép nghịch đảo ma trận
 
 <p align="center"><kbd><img src="assets/7udmhwksorw.png" width="80%"></kbd></p>
 
@@ -336,6 +372,8 @@
 <br>
 
 <a id="node-42g0qo7"></a>
+
+###### Ma trận nghịch đảo
 
 <p align="center"><kbd><img src="assets/8smfvmzrh75.png" width="80%"></kbd></p>
 
@@ -359,6 +397,8 @@
 
 <a id="node-ltudun9"></a>
 
+###### Ma trận nghịch đảo
+
 <p align="center"><kbd><img src="assets/a9lz8orwonc.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -377,6 +417,8 @@
 <br>
 
 <a id="node-cpngp51"></a>
+
+###### Công thức tính nghịch đảo
 
 <p align="center"><kbd><img src="assets/erppwpdubhq.png" width="80%"></kbd></p>
 
@@ -404,7 +446,7 @@
 >
 >
 >
-> (CT)A = detA*I
+> (CT)A = detA × I
 >
 >
 >
@@ -413,6 +455,8 @@
 <br>
 
 <a id="node-n9kk9cw"></a>
+
+###### Ma trận minor và cofactor
 
 <p align="center"><kbd><img src="assets/v6vpecccrro.png" width="80%"></kbd></p>
 
@@ -438,6 +482,8 @@
 
 <a id="node-h21uoaf"></a>
 
+###### Quy tắc ma trận cofactor
+
 <p align="center"><kbd><img src="assets/zvy6fb0vwtt.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -454,6 +500,8 @@
 <br>
 
 <a id="node-zwluvsd"></a>
+
+###### Ma trận nghịch đảo adj(A)
 
 <p align="center"><kbd><img src="assets/jdv5z8jc9q.png" width="80%"></kbd></p>
 
