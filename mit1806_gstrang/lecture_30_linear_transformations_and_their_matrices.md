@@ -1,6 +1,6 @@
 # Lecture 30: Linear Transformations And Their Matrices
 
-📊 **Progress:** `42` Notes | `46` Screenshots
+📊 **Progress:** `42` Notes | `46` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-4lvk0vf"></a>
@@ -8,6 +8,8 @@
 <br>
 
 <a id="node-2ifu2ab"></a>
+
+## Phép biến đổi tuyến tính
 
 <p align="center"><kbd><img src="assets/mjfuj5aueef.png" width="80%"></kbd></p>
 
@@ -18,6 +20,8 @@
 <br>
 
 <a id="node-17j28cf"></a>
+
+### Phép chiếu tuyến tính
 
 <p align="center"><kbd><img src="assets/fuwzo5ed4e.png" width="80%"></kbd></p>
 
@@ -54,6 +58,8 @@
 <br>
 
 <a id="node-2ewq5i7"></a>
+
+##### Phép chiếu tuyến tính
 
 <p align="center"><kbd><img src="assets/slal7csf6j.png" width="80%"></kbd></p>
 
@@ -130,6 +136,8 @@
 
 <a id="node-8mv83on"></a>
 
+###### Điều kiện T(0) = 0
+
 <p align="center"><kbd><img src="assets/ko6x3qhiusp.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -193,6 +201,8 @@
 
 <a id="node-qb4rg1x"></a>
 
+###### Tính tuyến tính phép quay
+
 <p align="center"><kbd><img src="assets/l1natn53jnd.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -215,6 +225,8 @@
 
 <a id="node-ddjs2et"></a>
 
+###### Phép quay tuyến tính
+
 <p align="center"><kbd><img src="assets/5g5yw9z175.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -225,6 +237,8 @@
 <br>
 
 <a id="node-4edxf5b"></a>
+
+###### Biến đổi tuyến tính T(v)=Av
 
 <p align="center"><kbd><img src="assets/9iveoieqtl.png" width="80%"></kbd></p>
 
@@ -296,6 +310,8 @@
 
 <a id="node-qni03lt"></a>
 
+###### Phép biến đổi ma trận
+
 <p align="center"><kbd><img src="assets/ez1aki24bf.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -305,6 +321,8 @@
 <br>
 
 <a id="node-x1h1ipi"></a>
+
+###### Phép đối xứng trục x1
 
 <p align="center"><kbd><img src="assets/6dzp0r6zd46.png" width="80%"></kbd></p>
 
@@ -337,9 +355,31 @@
 > từ đó khi **linear transform** các điểm của ngôi nhà kết
 > quả **là phép đối xứng qua trục x1**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất tốt, giải thích chính xác ý nghĩa hình học của ma trận phản chiếu qua trục hoành thông qua các thành phần tọa độ.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"coi như là một row vector nhân một matrix x (có một cột), thì sẽ là linear combination của các row của x với coefficients là các component của row 1 của A"*
+>
+> Cách diễn đạt 'tổ hợp tuyến tính của các hàng của x' hơi khiên cưỡng vì x là vector cột; chính xác và tự nhiên hơn nên gọi đây là tích vô hướng (dot product) giữa hàng của A với cột x, hoặc tích của hàng với cột tạo ra 1*x1 + 0*x2.
+>
+>
+> **✓ Strengths**
+> - Nhận diện chính xác tác động đại số của ma trận: giữ nguyên tọa độ x1 và đổi dấu tọa độ x2.
+> - Liên hệ chuẩn xác giữa kết quả đại số và ý nghĩa hình học là phép đối xứng qua trục x1.
+>
+> **💡 Deeper notes**
+> - Phép đối xứng qua trục (reflection) luôn có định thức bằng -1 (det(A) = -1), thể hiện việc làm đảo ngược hướng (orientation) của hình vẽ.
+> - Ma trận đối xứng này thỏa mãn A^2 = I (phép đối hợp / involution), nghĩa là thực hiện đối xứng hai lần sẽ trở về hình dạng ban đầu.
+
 <br>
 
 <a id="node-mmmf0ry"></a>
+
+###### Linear Transformation và Ma trận A
 
 <p align="center"><kbd><img src="assets/8yrxy1b2ayi.png" width="80%"></kbd></p>
 
@@ -351,6 +391,8 @@
 <br>
 
 <a id="node-hq77v9o"></a>
+
+###### Biến đổi tuyến tính R³-R²
 
 <p align="center"><kbd><img src="assets/7pcmtzgub0o.png" width="80%"></kbd></p>
 
@@ -394,9 +436,23 @@
 > chất phép nhân Ax, hơn là chỉ dựa trên việc tương thích
 > kích thước [2x3][3x1] = [2x1]
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, giải thích sâu sắc bản chất chiều của ma trận biểu diễn phép biến đổi tuyến tính qua góc nhìn tổ hợp tuyến tính các cột (column picture).
+>
+> **✓ Strengths**
+> - Hiểu rất rõ và giải thích trực quan kích thước ma trận 2x3 thông qua góc nhìn cột (Ax là tổ hợp tuyến tính các cột của A).
+> - Kết nối chính xác không gian đích với không gian cột (Column Space) của ma trận.
+>
+> **💡 Deeper notes**
+> - Về ý 'A map một vector trong row space với một vector trong column space': Tổng quát hơn, input vector x nằm trong R³ (có thể gồm cả thành phần thuộc nullspace, thành phần này bị map về 0). Ánh xạ giữa row space và column space là một đẳng cấu 1-1 (bijective mapping).
+
 <br>
 
 <a id="node-9m549zv"></a>
+
+###### Thông tin xác định T(v)
 
 <p align="center"><kbd><img src="assets/5eooeubsl9m.png" width="80%"></kbd></p>
 
@@ -410,9 +466,24 @@
 > **TA CẦN BAO NHIÊU THÔNG TIN ĐỂ CÓ THỂ TÍNH
 > T(v) VỚI MỌI v?**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác câu hỏi đặt vấn đề của bài giảng về lượng thông tin cần thiết để xác định hoàn toàn một phép biến đổi tuyến tính.
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác câu hỏi mở đầu cốt lõi trên bảng: cần biết bao nhiêu thông tin để xác định được T(v) cho mọi đầu vào v.
+> - Liên hệ tốt giữa khái niệm trừu tượng của phép biến đổi tuyến tính T với ma trận biểu diễn A tương ứng.
+>
+> **💡 Deeper notes**
+> - Để có ma trận A cụ thể cho T, ta cần phải chọn trước một cơ sở (basis) cho không gian đầu vào và không gian đầu ra.
+> - Lời giải cho câu hỏi này trong bài giảng là: chỉ cần biết kết quả của T tác động lên một tập cơ sở (n vector độc lập tuyến tính) là đủ để tính được T(v) cho mọi v thông qua tính chất tuyến tính.
+
 <br>
 
 <a id="node-k383lp9"></a>
+
+###### Ánh xạ trên hệ cơ sở
 
 <p align="center"><kbd><img src="assets/lppxvd00vdo.png" width="80%"></kbd></p>
 
@@ -449,6 +520,8 @@
 
 <a id="node-ejwe87r"></a>
 
+###### Xác định T(v) từ cơ sở
+
 <p align="center"><kbd><img src="assets/mt1s3k96iqb.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -478,9 +551,23 @@
 >
 > Nên c**hỉ cần biết T(v1), T(v2), ...T(vn) là có thể biết T(v)**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và giải thích rõ ràng nguyên lý: một phép biến đổi tuyến tính được xác định hoàn toàn bởi tác động của nó lên một hệ cơ sở.
+>
+> **✓ Strengths**
+> - Nắm vững tính chất tuyến tính để suy ra ảnh của một vector bất kỳ thông qua tổ hợp tuyến tính.
+> - Trình bày logic, mạch lạc và bám sát chính xác nội dung bài giảng của GS. Gilbert Strang trên bảng.
+>
+> **💡 Deeper notes**
+> - Cần lưu ý cách diễn đạt 'mọi basis vector': điều này có nghĩa là mọi vector thuộc về MỘT cơ sở cụ thể đã chọn, chứ không phải mọi cơ sở có thể có của không gian.
+
 <br>
 
 <a id="node-jwydmmm"></a>
+
+###### Bản chất tọa độ vector
 
 <p align="center"><kbd><img src="assets/u9jajhi9we8.png" width="80%"></kbd></p>
 
@@ -513,12 +600,27 @@
 
 <a id="node-1xr0jg6"></a>
 
+###### Tọa độ và cơ sở
+
 <p align="center"><kbd><img src="assets/56sxvp81dyr.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Coordinate cho ta biết **ĐÓNG GÓP CỦA CÁC BASIS
 > VECTOR** tạo nên **v**. Và khi ta **THAY ĐỔI BASIS, TA
 > THAY ĐỔI COORDINATE**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm bắt rất chính xác bản chất của tọa độ trong đại số tuyến tính: tọa độ là hệ số biểu diễn vector qua một cơ sở, và khi đổi cơ sở thì tọa độ cũng thay đổi.
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất tọa độ là trọng số/đóng góp (hệ số kết hợp tuyến tính c_1, ..., c_n) của các vector cơ sở để tạo thành vector v.
+> - Nắm bắt chính xác mối quan hệ phụ thuộc chặt chẽ giữa hệ tọa độ và cơ sở được chọn.
+>
+> **💡 Deeper notes**
+> - Bản thân vector v trong không gian là một đối tượng hình học không đổi, chỉ có biểu diễn tọa độ [v]_B của nó thay đổi khi ta chuyển sang cơ sở khác B'.
+> - Cơ sở ở đây phải là một cơ sở có thứ tự (ordered basis) để thứ tự các thành phần tọa độ (c_1, ..., c_n) được xác định duy nhất.
 
 <br>
 
@@ -560,6 +662,8 @@
 
 <a id="node-ha6l1ts"></a>
 
+###### Tọa độ theo cơ sở
+
 <p align="center"><kbd><img src="assets/hogcqf5nz99.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -570,6 +674,18 @@
 > **CHỌN MỘT BASIS** KHÁC, VÍ DỤ NHƯ DÙNG
 > EIGENVECTORS chẳng hạn, khi đó **COEFFICIENTS**
 > **KHÁC SẼ TẠO NÊN COORDINATE KHÁC**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chuẩn xác bản chất: tọa độ của một vector luôn phụ thuộc vào hệ cơ sở được chọn, và đổi sang cơ sở mới (như cơ sở vector riêng) sẽ làm thay đổi các hệ số tọa độ tương ứng.
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất tọa độ của một vector là các hệ số trong tổ hợp tuyến tính đối với một cơ sở cụ thể.
+> - Liên hệ tốt với trường hợp đổi sang cơ sở các vector riêng (eigenvector basis).
+>
+> **💡 Deeper notes**
+> - Để các vector riêng có thể tạo thành một cơ sở cho không gian, ma trận cần có đủ n vector riêng độc lập tuyến tính (tức ma trận chéo hóa được).
 
 <br>
 
@@ -608,11 +724,15 @@
 
 <a id="node-qq4gawx"></a>
 
+###### Ma trận biến đổi tuyến tính
+
 <p align="center"><kbd><img src="assets/s5h4on6up5.png" width="80%"></kbd></p>
 
 <br>
 
 <a id="node-tmk2dxd"></a>
+
+###### Ma trận phép chiếu
 
 <p align="center"><kbd><img src="assets/kfexmm893jb.png" width="80%"></kbd></p>
 
@@ -707,6 +827,8 @@
 <br>
 
 <a id="node-obcha20"></a>
+
+###### Ma trận biến đổi tọa độ
 
 <p align="center"><kbd><img src="assets/cxvcf2tlwyf.png" width="80%"></kbd></p>
 
@@ -852,6 +974,8 @@
 
 <a id="node-gpobtjy"></a>
 
+###### Ma trận chiếu dạng chéo
+
 <p align="center"><kbd><img src="assets/28zb5c536a5.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -897,6 +1021,8 @@
 
 <a id="node-qeuh56q"></a>
 
+###### Ma trận chiếu Standard Basis
+
 <p align="center"><kbd><img src="assets/c8qandw5ksj.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -933,6 +1059,8 @@
 
 <a id="node-y66rkbv"></a>
 
+###### Ma trận phép chiếu
+
 <p align="center"><kbd><img src="assets/eaa8hwiru9s.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -950,6 +1078,8 @@
 <br>
 
 <a id="node-vfxfgb7"></a>
+
+###### Cơ sở ma trận chiếu
 
 <p align="center"><kbd><img src="assets/4yzbw3xe02n.png" width="80%"></kbd></p>
 
@@ -972,6 +1102,8 @@
 <br>
 
 <a id="node-pcg8p5q"></a>
+
+###### Quy tắc tìm ma trận A
 
 <p align="center"><kbd><img src="assets/q82khyyne0h.png" width="80%"></kbd></p>
 
@@ -1011,6 +1143,8 @@
 
 <a id="node-91jmcck"></a>
 
+###### Cột của ma trận biến đổi
+
 <p align="center"><kbd><img src="assets/qq8bny5fp79.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1044,11 +1178,13 @@
 > matrix A trong ví dụ projection lên line hồi nãy mà khi đó là
 > ta chỉ đoán giá trị của A vì đây là trường hợp đơn giản
 
-**🔗 See also:** [linked note](#node-obcha20)
+**🔗 See also:** [Ma trận biến đổi tọa độ](#node-obcha20)
 
 <br>
 
 <a id="node-b8webyn"></a>
+
+###### Ma trận biến đổi A
 
 <p align="center"><kbd><img src="assets/mqxmov0pph.png" width="80%"></kbd></p>
 
@@ -1117,6 +1253,8 @@
 
 <a id="node-yqgkqso"></a>
 
+###### Ma trận phép chiếu
+
 <p align="center"><kbd><img src="assets/gvfnmw36fhr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1172,6 +1310,8 @@
 
 <a id="node-op1ny9h"></a>
 
+###### Phép đạo hàm tuyến tính
+
 <p align="center"><kbd><img src="assets/y0n1d53ke5e.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -1226,6 +1366,8 @@
 <br>
 
 <a id="node-pqb9b9a"></a>
+
+###### Ma trận ánh xạ tuyến tính
 
 <p align="center"><kbd><img src="assets/ji7j2ff4oh.png" width="80%"></kbd></p>
 
