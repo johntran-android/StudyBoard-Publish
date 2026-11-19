@@ -1,13 +1,9 @@
-# Lec 14: Non-independent Random
-variables
+# Lec 14: Non-independent Random Variables
 
 📊 **Progress:** `32` Notes | `35` Screenshots
 
 ---
 <a id="node-dvkq9jw"></a>
-
-## Lec 14: Non-independent Random
-variables
 
 <br>
 
@@ -69,7 +65,7 @@ variables
 <p align="center"><kbd><img src="assets/17cgcdlxt6p.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, ví dụ này g(x,y,z) = x^2 + yz + z^3. Thì constraint này, ta có thể
+> Thế thì, ví dụ này g(x,y,z) = x² + yz + z³. Thì constraint này, ta có thể
 > tìm cách express z theo x,y từ đó take partial derivative. Tuy nhiên rõ ràng
 > làm vậy rất phức tạp.
 >
@@ -83,11 +79,11 @@ variables
 >
 >
 >
-> dg = g_x*dx + g_y*dy + g_z*dz
+> dg = g_x × dx + g_y × dy + g_z × dz
 >
 >
 >
-> = 2x*dx + z*dy + (y+3z^2)*dz
+> = 2x × dx + z × dy + (y+3z²) × dz
 
 **🔗 See also:** [linked note](./lec_11_differentials_chain_rule.md#node-ibo13sv)
 
@@ -108,7 +104,7 @@ variables
 <p align="center"><kbd><img src="assets/y6m6tvoqs7h.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì cho dg = 0 ta có 2xdx + zdy + (y+3z^2)dz = 0
+> Thế thì cho dg = 0 ta có 2xdx + zdy + (y+3z²)dz = 0
 >
 >
 >
@@ -138,12 +134,12 @@ variables
 >
 >
 >
-> <=> dz = -4/6 dx + -1/6 dy
+> ⇔ dz = -4/6 dx + -1/6 dy
 >
 >
 >
 > Thì equation này chính là "có dạng" total differential: 
-> dz = z_x*dx + z_y*dy, tức là ta **có thể kết luận z_x = -4/6 và z_y = -1/6**
+> dz = z_x × dx + z_y × dy, tức là ta **có thể kết luận z_x = -4/6 và z_y = -1/6**
 
 <br>
 
@@ -160,7 +156,7 @@ variables
 >
 > Thì khi giữ y fixed, tức y constant, ta sẽ có dy = 0 nên equation trở
 > thành dz = -1/6 * 4 dx thì dựa theo implicit differential (theo link) rằng
-> nếu ta có z = z(x) thì dz = z_x*dx ta suy ra z_x chính là -1/6 * 4
+> nếu ta có z = z(x) thì dz = z_x × dx ta suy ra z_x chính là -1/6 * 4
 >
 >
 >
@@ -187,7 +183,7 @@ variables
 
 > [!NOTE]
 > Khái quát lên ta có nếu g(x, y, z) = constant c thì dg =
-> g_x*dx + g_y*dy + g_z*dz = 0
+> g_x × dx + g_y × dy + g_z × dz = 0
 
 <br>
 
@@ -305,11 +301,11 @@ variables
 
 > [!NOTE]
 > Ta qua một ví dụ, cho f là diện tích của hình tam giác cạnh a, b,
-> góc theta. Theo công thức ta có f (hay A) = 0.5*a*b*sin(theta)
+> góc θ. Theo công thức ta có f (hay A) = 0.5 × a × b × sin(θ)
 >
 >
 >
-> Và cái ta sẽ quan tâm là rate of change của A w.r.t theta, tức là theta
+> Và cái ta sẽ quan tâm là rate of change của A w.r.t θ, tức là θ
 > thay đổi sẽ ảnh hưởng như thế nào tới diện tích A
 
 <br>
@@ -319,12 +315,12 @@ variables
 <p align="center"><kbd><img src="assets/kkqf1n8nkd.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và ý thứ hai là assume đây là tam giác vuông. Tức là a = b*cos(theta)
+> Và ý thứ hai là assume đây là tam giác vuông. Tức là a = b × cos(θ)
 >
 >
 >
-> Thì đây sẽ đóng vai trò constraints - thể hiện quan hệ giữa a, b, cos(theta)
-> có thể coi như hàm g(a,b,theta) = a - b*cos(theta) = constant = 0
+> Thì đây sẽ đóng vai trò constraints - thể hiện quan hệ giữa a, b, cos(θ)
+> có thể coi như hàm g(a,b,θ) = a - b × cos(θ) = constant = 0
 
 <br>
 
@@ -334,15 +330,15 @@ variables
 
 > [!NOTE]
 > Thế thì, đại khái là theo gs có 3 "trường hợp" khi nói về rate of change
-> of A wrt theta:
+> of A wrt θ:
 >
 >
 >
-> 1) Coi a, b, theta là independent: Khi đó, kí hiệu partial A / partial theta
-> (partial derivative if A wrt theta) sẽ đồng nghĩa với kí hiệu (partial A/
-> partial theta) _ a,b  với ý nghĩa là ta sẽ giữa a, b fixed. Điều này đồng
-> nghĩa là ta BỎ ĐI KHÔNG DÙNG QUAN HỆ CỦA a, b, theta: a = b
-> cos(theta) và cũng đồng nghĩa là ta bỏ đi constraint: tam giác vuông
+> 1) Coi a, b, θ là independent: Khi đó, kí hiệu partial A / partial θ
+> (partial derivative if A wrt θ) sẽ đồng nghĩa với kí hiệu (partial A/
+> partial θ) _ a,b  với ý nghĩa là ta sẽ giữa a, b fixed. Điều này đồng
+> nghĩa là ta BỎ ĐI KHÔNG DÙNG QUAN HỆ CỦA a, b, θ: a = b
+> cos(θ) và cũng đồng nghĩa là ta bỏ đi constraint: tam giác vuông
 
 <br>
 
@@ -351,7 +347,7 @@ variables
 <p align="center"><kbd><img src="assets/rfkdwwbiicj.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Khi đó, partial A / partial theta = (1/2)*a*b*cos(theta)
+> Khi đó, partial A / partial θ = (1/2) × a × b × cos(θ)
 
 <br>
 
@@ -361,8 +357,8 @@ variables
 
 > [!NOTE]
 > Tuy nhiên case thứ 2, và 3 mới là cái ta quan tâm, Đó là thay đổi
-> theta, giữ a fixed. Khi đó b sẽ thay đổi. Và giữ b fixed, thay đổi
-> theta, thì a sẽ thay đổi
+> θ, giữ a fixed. Khi đó b sẽ thay đổi. Và giữ b fixed, thay đổi
+> θ, thì a sẽ thay đổi
 
 <br>
 
@@ -371,18 +367,18 @@ variables
 <p align="center"><kbd><img src="assets/kdr2o2z1akq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ở case thứ 2, ta giữ a fixed. khi đó, thay đổi theta, b sẽ thay đổi theo 
-> thông qua b = b(a, theta) = a / cos(theta)
+> Ở case thứ 2, ta giữ a fixed. khi đó, thay đổi θ, b sẽ thay đổi theo 
+> thông qua b = b(a, θ) = a / cos(θ)
 >
 >
 >
-> Lúc này partial derivative của A wrt theta sẽ kí hiệu là (partial A / partial theta)_a
-> mang ý nghĩa là ta chỉ giữa a fixed, còn b và theta sẽ relate nhau qua 
-> b = a / cos(theta)
+> Lúc này partial derivative của A wrt θ sẽ kí hiệu là (partial A / partial θ)_a
+> mang ý nghĩa là ta chỉ giữa a fixed, còn b và θ sẽ relate nhau qua 
+> b = a / cos(θ)
 >
 >
 >
-> Và đương nhiên là quan hệ giữa b và theta sẽ quy định bởi việc giữ điều
+> Và đương nhiên là quan hệ giữa b và θ sẽ quy định bởi việc giữ điều
 > kiện là tam giác vuông
 
 <br>
@@ -392,9 +388,9 @@ variables
 <p align="center"><kbd><img src="assets/6cuc5upjat5.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và case thứ 3, là giữa b constant. a sẽ làm function a (b, theta) sẽ thay
-> đổi theo theta. Tương tự ta sẽ kí hiệu là (partial A / partial theta)_b mang
-> ý nghĩa là giữ b fixed, thì đây là rate of change của A wrt theta
+> Và case thứ 3, là giữa b constant. a sẽ làm function a (b, θ) sẽ thay
+> đổi theo θ. Tương tự ta sẽ kí hiệu là (partial A / partial θ)_b mang
+> ý nghĩa là giữ b fixed, thì đây là rate of change của A wrt θ
 
 <br>
 
@@ -403,14 +399,14 @@ variables
 <p align="center"><kbd><img src="assets/kes5frd4tm.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì ta sẽ thử tính (partial A / partial theta)_a.
+> Thế thì ta sẽ thử tính (partial A / partial θ)_a.
 >
 >
 >
 > Và phương pháp đầu tiên là cách mà không phải lúc nào cũng làm được
-> nhưng ở đây thì được, đó là ta solve b theo a và theta và gắn vào A để 
-> thành function theo theta (vì a đã là constant, nên A chỉ còn là hàm theo
-> một biến theta)
+> nhưng ở đây thì được, đó là ta solve b theo a và θ và gắn vào A để 
+> thành function theo θ (vì a đã là constant, nên A chỉ còn là hàm theo
+> một biến θ)
 
 <br>
 
@@ -419,8 +415,8 @@ variables
 <p align="center"><kbd><img src="assets/u5u9ispogis.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Để có A = A(theta) = (1/2)absin(theta) =
-> (1/2)a*a*sin(theta)/cos(theta) = (1/2)a^2 tan(theta)
+> Để có A = A(θ) = (1/2)absin(θ) =
+> (1/2)a × a × sin(θ)/cos(θ) = (1/2)a² tan(θ)
 
 <br>
 
@@ -429,20 +425,20 @@ variables
 <p align="center"><kbd><img src="assets/9uuzr6duwwc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và từ đó, ta tính (partial A / partial theta)_a đơn giản sẽ chỉ là lấy
-> derivative của A theo theta.
+> Và từ đó, ta tính (partial A / partial θ)_a đơn giản sẽ chỉ là lấy
+> derivative của A theo θ.
 >
 >
 >
-> kết quả là (1/2)*a^2*d(tan(theta))/d(theta)
+> kết quả là (1/2) × a² × d(tan(θ))/d(θ)
 >
 >
 >
-> Ở đây ta có kiến thức là đạo hàm của tan(x) = sec^2(x) (sec(x) = 1/cos(x))
+> Ở đây ta có kiến thức là đạo hàm của tan(x) = sec²(x) (sec(x) = 1/cos(x))
 >
 >
 >
-> Nên kết quả là (1/2)*a^2*[sec(theta)]^2
+> Nên kết quả là (1/2) × a²*[sec(θ)]²
 
 <br>
 
@@ -453,7 +449,7 @@ variables
 > [!NOTE]
 > Thế thì tiếp theo là hai phương pháp có hệ thống mà ta nên dùng, vì như
 > đã nói, phương pháp solve for b để gắn vào A để chuyển nó thành
-> function đơn biến theo theta không phải lúc nào cũng làm được vì có khi
+> function đơn biến theo θ không phải lúc nào cũng làm được vì có khi
 > không thể solve / khó solve ra b từ constraint được.
 >
 >
@@ -462,22 +458,22 @@ variables
 >
 >
 >
-> Cách làm đó là, dựa vào việc do ta đang tính (partial A / partial theta)_a
+> Cách làm đó là, dựa vào việc do ta đang tính (partial A / partial θ)_a
 > tức là giữa a fixed. Khi đó da = 0 như ta đã biết.
 >
 >
 >
-> Thứ hai, là từ constraint a = b*cos(theta), tức là a = a(b, theta). Áp dùng
-> total differentials (khi có f(x,y) thì df = f_x*dx + f_y*dy) ta có:
+> Thứ hai, là từ constraint a = b × cos(θ), tức là a = a(b, θ). Áp dùng
+> total differentials (khi có f(x,y) thì df = f_x × dx + f_y × dy) ta có:
 >
 >
 >
-> da = a_b*db + a_theta*d_theta (a_b và a_theta là partial derivative của a
-> wrt b và wrt theta, dễ thấy là sẽ lần lượt bằng cos(theta) và - b*sin(theta) )
+> da = a_b × db + a_θ*d_θ (a_b và a_θ là partial derivative của a
+> wrt b và wrt θ, dễ thấy là sẽ lần lượt bằng cos(θ) và - b × sin(θ) )
 >
 >
 >
-> <=> **da = cos(theta)*db -b*sin(theta)d_theta**
+> ⇔ **da = cos(θ) × db -b × sin(θ)d_θ**
 >
 >
 >
@@ -491,15 +487,15 @@ variables
 <p align="center"><kbd><img src="assets/lzd5fmdelcq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Từ đó, ta có 0 = da = os(theta)*db -b*sin(theta)d_theta
+> Từ đó, ta có 0 = da = os(θ) × db -b × sin(θ)d_θ
 >
 >
 >
-> Và từ đó ta solve qua db = b*tan(theta)*d_theta
+> Và từ đó ta solve qua db = b × tan(θ) × d_θ
 >
 >
 >
-> và đây là rate of change của b wrt theta
+> và đây là rate of change của b wrt θ
 
 <br>
 
@@ -512,16 +508,16 @@ variables
 >
 >
 >
-> dA = A_a*da + A_b*db + A_theta*d_theta
+> dA = A_a × da + A_b × db + A_θ*d_θ
 >
 >
 >
-> = (1/2)b*sin(theta)*da + (1/2)*a*sin(theta)db + (1/2)abcos(theta)d_theta
+> = (1/2)b × sin(θ) × da + (1/2) × a × sin(θ)db + (1/2)abcos(θ)d_θ
 >
 >
 >
-> Thế thì khi đó, ta có da = 0. và db ta đã solve = b*tan(theta)*d_theta 
-> ở trên. Ta sẽ có dA chỉ còn theo d_theta
+> Thế thì khi đó, ta có da = 0. và db ta đã solve = b × tan(θ) × d_θ 
+> ở trên. Ta sẽ có dA chỉ còn theo d_θ
 
 <br>
 
@@ -532,8 +528,8 @@ variables
 <p align="center"><kbd><img src="assets/qejmtcckdtl.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Từ đó, gom lại thì ta có dA = (...)*d_theta **thì coefficient (...) chính là
-> (partial A / partial theta)_a** = **(1/2)a*b*sec(theta)**
+> Từ đó, gom lại thì ta có dA = (...) × d_θ **thì coefficient (...) chính là
+> (partial A / partial θ)_a** = **(1/2)a × b × sec(θ)**
 
 <br>
 
@@ -543,7 +539,7 @@ variables
 
 > [!NOTE]
 > Tóm tắt method 1: là ta dùng total differential để có dA theo da, db,
-> d theta.
+> d θ.
 >
 >
 >
@@ -551,14 +547,14 @@ variables
 >
 >
 >
-> TIếp ta dựa vào constraint để solve a theo b, theta và áp dụng total
-> differential để có da theo db dtheta, và da = 0 nên ta solve db theo
-> d_theta.
+> TIếp ta dựa vào constraint để solve a theo b, θ và áp dụng total
+> differential để có da theo db dθ, và da = 0 nên ta solve db theo
+> d_θ.
 >
 >
 >
-> Gắn vào dA ta sẽ có dA theo d_theta, và coefficients chính là
-> partial derivative của A wrt theta với a constants
+> Gắn vào dA ta sẽ có dA theo d_θ, và coefficients chính là
+> partial derivative của A wrt θ với a constants
 
 <br>
 
@@ -580,31 +576,31 @@ variables
 >
 >
 >
-> partial f / partial u = f_x*x_u + f_y*y_u
+> partial f / partial u = f_x × x_u + f_y × y_u
 >
 >
 >
-> nên áp dụng ở đây ta sẽ có A là function theo theta, a, b nên:
+> nên áp dụng ở đây ta sẽ có A là function theo θ, a, b nên:
 >
 >
 >
->  (partial A / partial theta )_a
+>  (partial A / partial θ )_a
 >
 >
 >
-> = A_theta * (partial theta / partial theta)_a 
-> + A_a * (partial a / partial theta)_a 
-> + A_b * (partial b / partial theta)_a
+> = A_θ * (partial θ / partial θ)_a 
+> + A_a * (partial a / partial θ)_a 
+> + A_b * (partial b / partial θ)_a
 >
 >
 >
-> THế thì (partial theta / partial theta) = 1.
+> THế thì (partial θ / partial θ) = 1.
 >
 >
 >
-> (partial a / partial theta)_a = 0 do a = constant nên theta thay đổi
-> thì a vẫn giữ nguyên, nên rate of change of a wrt theta (chính
-> là (partial a / partial theta)_a = 0
+> (partial a / partial θ)_a = 0 do a = constant nên θ thay đổi
+> thì a vẫn giữ nguyên, nên rate of change of a wrt θ (chính
+> là (partial a / partial θ)_a = 0
 >
 >
 >
@@ -612,15 +608,15 @@ variables
 >
 >
 >
-> (partial A / partial theta )_a = 
+> (partial A / partial θ )_a = 
 >
 >
 >
-> = A_theta * 1 + A_b * (partial b / partial theta)_a
+> = A_θ * 1 + A_b * (partial b / partial θ)_a
 >
 >
 >
-> Thay A_theta, A_b, partial b / partial theta)_a vào thì ta cũng sẽ 
+> Thay A_θ, A_b, partial b / partial θ)_a vào thì ta cũng sẽ 
 > có kết quả như method 2
 
 **🔗 See also:** [linked note](./lec_11_differentials_chain_rule.md#node-zezolbx)
