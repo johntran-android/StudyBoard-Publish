@@ -5,8 +5,6 @@
 ---
 <a id="node-plxeww9"></a>
 
-## Lec 18: Change Of Variables
-
 <br>
 
 <a id="node-txxjkmw"></a>
@@ -16,13 +14,13 @@
 > [!NOTE]
 > Đại khái là ta sẽ học về **Change variables** trong bài toán **tính double
 > integral**. Đầu tiên là ví dụ 1, ta cần dùng double integral để t**ính diện
-> tích của hình elip** có hai t**ham số a,b**. Phương trình của elip là **(x/a)^2
-> + (y/b)^2 = 1**
+> tích của hình elip** có hai t**ham số a,b**. Phương trình của elip là **(x/a)²
+> + (y/b)² = 1**
 >
 >
 >
-> Điều này cũng có nghĩa là **những điểm bên trong elip** sẽ có **(x/a)^2
-> + (y/b)^2 < 1**
+> Điều này cũng có nghĩa là **những điểm bên trong elip** sẽ có **(x/a)²
+> + (y/b)² < 1**
 
 <br>
 
@@ -36,8 +34,8 @@
 >
 >
 >
-> **Diện tích = Tích phân kép trong vùng R của 1*dx*dy với R được định
-> nghĩa bởi (x/a)^2 + (y/b)^2 < 1**
+> **Diện tích = Tích phân kép trong vùng R của 1 × dx × dy với R được định
+> nghĩa bởi (x/a)² + (y/b)² < 1**
 >
 >
 >
@@ -62,16 +60,16 @@
 >
 >
 >
-> Và từ đó **vùng R được định nghĩa theo u**, **v** là **(u^2 + v^2) < 1**
+> Và từ đó **vùng R được định nghĩa theo u**, **v** là **(u² + v²) < 1**
 >
 >
 >
-> Và **dudv = dxdy/ab** nên **dxdy = ab*dudv**
+> Và **dudv = dxdy/ab** nên **dxdy = ab × dudv**
 >
 >
 >
-> Từ đó diện tích ta cần tính **tích phân kép trong vùng R = u^2+v^2<1
-> của ab*dudv**
+> Từ đó diện tích ta cần tính **tích phân kép trong vùng R = u²+v²<1
+> của ab × dudv**
 
 <br>
 
@@ -84,22 +82,22 @@
 >
 >
 >
-> tích phân kép trong vùng u^2+v^2<1 của dudv
+> tích phân kép trong vùng u²+v²<1 của dudv
 >
 >
 >
 > Và nó trở thành / **chính là bài toán tính diện tích của hình tròn bán
-> kính 1**: tích phân kép trong vùng x^2+y^2<1 dxdy, mà ta đã tính ở
+> kính 1**: tích phân kép trong vùng x²+y²<1 dxdy, mà ta đã tính ở
 > bài trước ra kết quả là **pi** 
 >
 >
 >
 > (Mà để tính thì ta sẽ chuyển sang polar coordinate để thành tích
-> phân 0 đến pi tích phân 0 1 của r dr d_theta)
+> phân 0 đến pi tích phân 0 1 của r dr d_θ)
 >
 >
 >
-> **Vậy đáp án là ab*pi**
+> **Vậy đáp án là ab × pi**
 
 <br>
 
@@ -132,12 +130,12 @@
 <p align="center"><kbd><img src="assets/r3lj6r9447.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì đại khái là ta sẽ p**hân tích relation giữa delta_A và delta_A'**.
+> Thế thì đại khái là ta sẽ p**hân tích relation giữa ΔA và ΔA'**.
 >
 >
 >
 > Biểu diễn **bằng hình học** thì là khi change variable **từ x, y sang u,
-> v** thì **delta_A từ hình chữ nhật** trở thành **hình bình hành delta_A'** 
+> v** thì **ΔA từ hình chữ nhật** trở thành **hình bình hành ΔA'** 
 >
 >
 >
@@ -157,11 +155,11 @@
 >
 >
 > Điều này có nghĩa là **dù x bằng bao nhiêu** thì khi **y thay đổi
-> delta_y** thì **u luôn thay đổi (-2)*delta_y.**
+> Δy** thì **u luôn thay đổi (-2) × Δy.**
 >
 >
 >
-> Do đó gs nói vì vậy mà đại khái là, **hai cạnh delta_y của hình chữ
+> Do đó gs nói vì vậy mà đại khái là, **hai cạnh Δy của hình chữ
 > nhật** sẽ **trở thành hai cạnh bằng nhau và song song của hình bình
 > hành** (nếu chưa hiểu thì chú ý rằng, đã nói rate of change của u đối với
 > y không phụ thuộc x, nên dù cái cạnh mà song song với trục y có nằm
@@ -178,16 +176,16 @@
 <p align="center"><kbd><img src="assets/q1kafvwdha.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Rồi thế thì ta **cần tìm liên hệ giữa delta_A và delta_A**': Thì gs cho rằng
-> ta biết p**hép biến đổi này nó không phụ thuộc vị trí của delta_A**. Ví dụ
-> nếu **delta_A nằm chỗ khác** thì phép biến đổi tuyến tính cũng sẽ cho ra
-> **delta_A' cùng diện tích** nhưng **nằm chỗ khác**.
+> Rồi thế thì ta **cần tìm liên hệ giữa ΔA và ΔA**': Thì gs cho rằng
+> ta biết p**hép biến đổi này nó không phụ thuộc vị trí của ΔA**. Ví dụ
+> nếu **ΔA nằm chỗ khác** thì phép biến đổi tuyến tính cũng sẽ cho ra
+> **ΔA' cùng diện tích** nhưng **nằm chỗ khác**.
 >
 >
 >
-> **Do đó** gs cho rằng ta **có thể dùng một delta_A đơn giản nhất**, để
-> **xem thử delta_A' có diện tích bao nhiêu** từ đó ta **SUY RA CONSTANT
-> FACTOR** liên kết detla_A và delta_A'
+> **Do đó** gs cho rằng ta **có thể dùng một ΔA đơn giản nhất**, để
+> **xem thử ΔA' có diện tích bao nhiêu** từ đó ta **SUY RA CONSTANT
+> FACTOR** liên kết detla_A và ΔA'
 
 <br>
 
@@ -196,7 +194,7 @@
 <p align="center"><kbd><img src="assets/69owyb5b47a.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì **delta_A đơn giản nhất chính là unit square**. Đương nhiên là ta
+> Thế thì **ΔA đơn giản nhất chính là unit square**. Đương nhiên là ta
 > biết diện tích là 1
 >
 >
@@ -231,7 +229,7 @@
 <p align="center"><kbd><img src="assets/u7pv0d1owgt.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và gs cho rằng **dù lấy delta_A là hình rectangle nào** thì **delta_A'
+> Và gs cho rằng **dù lấy ΔA là hình rectangle nào** thì **ΔA'
 > cũng có diện tích gấp 5 lần**
 
 <br>
@@ -263,16 +261,16 @@
 >
 >
 >
-> **df = f_x*dx + f_y*dy**.
+> **df = f_x × dx + f_y × dy**.
 >
 >
 >
-> Và khi **thay df, dx, dy** bằng **delta_f, delta_x, delta_y** ta sẽ có
+> Và khi **thay df, dx, dy** bằng **Δf, Δx, Δy** ta sẽ có
 > **LINEAR APPROXIMATION**:
 >
 >
 >
-> **delta_f ~= f_x*delta_x + f_y*delta_y**
+> **Δf ≈ f_x × Δx + f_y × Δy**
 >
 >
 >
@@ -280,11 +278,11 @@
 >
 >
 >
-> **delta_u ~= u_x*delta_x + u_y*delta_y**
+> **Δu ≈ u_x × Δx + u_y × Δy**
 >
 >
 >
-> **delta_v ~= v_x*delta_x + v_y*delta_y**
+> **Δv ≈ v_x × Δx + v_y × Δy**
 >
 >
 >
@@ -292,41 +290,9 @@
 >
 >
 >
-> [delta_u, delta_v] ~= matrix [u_x, u_y; v_x, v_y] . [delta_x, delta_y]
+> [Δu, Δv] ≈ matrix [u_x, u_y; v_x, v_y] . [Δx, Δy]
 
-**🔗 See also:** [linked note](./lec_11_differentials_chain_rule.md#node-ibo13sv) · [Đại khái là ta \\*có thể thấy TẠI SAO SCALING FACTOR LÀ DET CỦA 
-MATRIX\\* \\*OF PARTIAL DERIVATIVE\\*
-
-Từ điều ta có hồi nãy, vector <Δx, Δy> liên hệ với <Δu, Δv> thông matrix: 
-
-<Δu, Δv> ~= matrix [u_x, u_y; v_x, v_y] . <Δx, Δy>
-
-Thì cái này có nghĩa là: một vector <Δx, Δy> sẽ tương ứng với vector <Δu, Δv>
-= [u_x, u_y; v_x, v_y] . <Δx, Δy> khi đổi biến từ x,y sang u,v.
-
-Do đó, vector <Δx, 0> (là cạnh vertical của hình vuông trong x,y coordinate) sẽ
-ứng với / trở thành vector Δx * <u_x, v_x>  + 0 * <u_y, v_y> (nhân <Δx, 0> với matrix
-[u_x, u_y; v_x, v_y] theo góc nhìn linear combination các matrix column) và bằng
-<Δx * u_x, Δx * v_x> hay \\*<u_x*Δx, v_x*Δx>\\*
-
-Tương tự, vector <0, Δy> (là cạnh horizontal của hình vuông trong x,y coordinate)
-sẽ tương ứng vector 0 * <u_x, v_x>  + Δy * <u_y, v_y> = <Δy * u_y, Δy * v_y>
-hay \\*<u_y*Δy, v_y*Δy>\\*
-
-Để rồi từ delta_A =\\* Δ*Δy\\*, transformed thành delta_A' = 
-
-= \\*determinant của hai vector <u_x*Δx, v_x*Δx> và <u_y*Δy, v_y*Δy>\\* 
-
-Đây là kiến thức đã học (theo link) rằng diện tích của hình bình hành tạo bởi
-hai vector a = <a1, a2> và b = <b1, b2> chính là determinant của hai vectors
-a1b2 - a2b1
-
-Và ở đây nó bằng: u_x*Δx*v_y*Δy - u_y*Δy*v_x*Δx
-
-= \\*(u_x*v_y - u_y*v_x)*Δx*Δy
-
-Thế thì (u_x*v_y - u_y*v_x) CHÍNH LÀ DETERMINANT CỦA TRANSFORM
-MATRIX [u_x, u_y; v_x, v_y]\\*](#node-1ag0xsj)
+**🔗 See also:** [linked note](./lec_11_differentials_chain_rule.md#node-ibo13sv) · [Đại khái là ta \\*có thể thấy TẠI SAO SCALING FACTOR LÀ DET CỦA  MATRIX\\* \\*OF PARTIAL DERIVATIVE\\*  Từ điều ta có hồi nãy, vector <Δx, Δy> liên hệ với <Δu, Δv> thông matrix:   <Δu, Δv> ≈ matrix [u_x, u_y; v_x, v_y] . <Δx, Δy>  Thì cái này có nghĩa là: một vector <Δx, Δy> sẽ tương ứng với vector <Δu, Δv> = [u_x, u_y; v_x, v_y] . <Δx, Δy> khi đổi biến từ x,y sang u,v.  Do đó, vector <Δx, 0> (là cạnh vertical của hình vuông trong x,y coordinate) sẽ ứng với / trở thành vector Δx * <u_x, v_x>  + 0 * <u_y, v_y> (nhân <Δx, 0> với matrix [u_x, u_y; v_x, v_y] theo góc nhìn linear combination các matrix column) và bằng <Δx * u_x, Δx * v_x> hay \\*<u_x*Δx, v_x*Δx>\\*  Tương tự, vector <0, Δy> (là cạnh horizontal của hình vuông trong x,y coordinate) sẽ tương ứng vector 0 * <u_x, v_x>  + Δy * <u_y, v_y> = <Δy * u_y, Δy * v_y> hay \\*<u_y*Δy, v_y*Δy>\\*  Để rồi từ ΔA =\\* Δ*Δy\\*, transformed thành ΔA' =   = \\*determinant của hai vector <u_x*Δx, v_x*Δx> và <u_y*Δy, v_y*Δy>\\*   Đây là kiến thức đã học (theo link) rằng diện tích của hình bình hành tạo bởi hai vector a = <a1, a2> và b = <b1, b2> chính là determinant của hai vectors a1b2 - a2b1  Và ở đây nó bằng: u_x*Δx × v_y*Δy - u_y*Δy × v_x*Δx  = \\*(u_x × v_y - u_y × v_x)*Δx*Δy  Thế thì (u_x × v_y - u_y × v_x) CHÍNH LÀ DETERMINANT CỦA TRANSFORM MATRIX [u_x, u_y; v_x, v_y]\\*](#node-1ag0xsj)
 
 <br>
 
@@ -336,16 +302,16 @@ MATRIX [u_x, u_y; v_x, v_y]\\*](#node-1ag0xsj)
 
 > [!NOTE]
 > Vậy thì gs nói điều vừa rồi (hai linear approximate equation xấp xỉ 
-> delta_u, delta_v theo delta_x và delta_t) cho ta thấy là: **diện tích của
-> hình bình hành uv** (kết quả transform từ hình chữ nhật delta_x,
-> delta_y sẽ **phụ thuộc bởi partial derivative của u, v w.r.t x, y: tức
+> Δu, Δv theo Δx và Δt) cho ta thấy là: **diện tích của
+> hình bình hành uv** (kết quả transform từ hình chữ nhật Δx,
+> Δy sẽ **phụ thuộc bởi partial derivative của u, v w.r.t x, y: tức
 > u_x, u_y, v_x, v_y**
 >
 >
 >
 > Và tùy vào các điểm (x, y) khác nhau thì u_x, u_y, v_x, v_y có thể 
 > khác nhau (nếu như chúng là các function theo x, y) khi đó **scaling
-> factor giữa delta_A và delta_A' sẽ khác nhau phụ thuộc x, y**
+> factor giữa ΔA và ΔA' sẽ khác nhau phụ thuộc x, y**
 
 <br>
 
@@ -374,39 +340,7 @@ MATRIX [u_x, u_y; v_x, v_y]\\*](#node-1ag0xsj)
 
 <a id="node-1ag0xsj"></a>
 
-- **Đại khái là ta \\*có thể thấy TẠI SAO SCALING FACTOR LÀ DET CỦA 
-MATRIX\\* \\*OF PARTIAL DERIVATIVE\\*
-
-Từ điều ta có hồi nãy, vector <Δx, Δy> liên hệ với <Δu, Δv> thông matrix: 
-
-<Δu, Δv> ~= matrix [u_x, u_y; v_x, v_y] . <Δx, Δy>
-
-Thì cái này có nghĩa là: một vector <Δx, Δy> sẽ tương ứng với vector <Δu, Δv>
-= [u_x, u_y; v_x, v_y] . <Δx, Δy> khi đổi biến từ x,y sang u,v.
-
-Do đó, vector <Δx, 0> (là cạnh vertical của hình vuông trong x,y coordinate) sẽ
-ứng với / trở thành vector Δx * <u_x, v_x>  + 0 * <u_y, v_y> (nhân <Δx, 0> với matrix
-[u_x, u_y; v_x, v_y] theo góc nhìn linear combination các matrix column) và bằng
-<Δx * u_x, Δx * v_x> hay \\*<u_x*Δx, v_x*Δx>\\*
-
-Tương tự, vector <0, Δy> (là cạnh horizontal của hình vuông trong x,y coordinate)
-sẽ tương ứng vector 0 * <u_x, v_x>  + Δy * <u_y, v_y> = <Δy * u_y, Δy * v_y>
-hay \\*<u_y*Δy, v_y*Δy>\\*
-
-Để rồi từ delta_A =\\* Δ*Δy\\*, transformed thành delta_A' = 
-
-= \\*determinant của hai vector <u_x*Δx, v_x*Δx> và <u_y*Δy, v_y*Δy>\\* 
-
-Đây là kiến thức đã học (theo link) rằng diện tích của hình bình hành tạo bởi
-hai vector a = <a1, a2> và b = <b1, b2> chính là determinant của hai vectors
-a1b2 - a2b1
-
-Và ở đây nó bằng: u_x*Δx*v_y*Δy - u_y*Δy*v_x*Δx
-
-= \\*(u_x*v_y - u_y*v_x)*Δx*Δy
-
-Thế thì (u_x*v_y - u_y*v_x) CHÍNH LÀ DETERMINANT CỦA TRANSFORM
-MATRIX [u_x, u_y; v_x, v_y]\\***
+###### Đại khái là ta \\*có thể thấy TẠI SAO SCALING FACTOR LÀ DET CỦA  MATRIX\\* \\*OF PARTIAL DERIVATIVE\\*  Từ điều ta có hồi nãy, vector <Δx, Δy> liên hệ với <Δu, Δv> thông matrix:   <Δu, Δv> ≈ matrix [u_x, u_y; v_x, v_y] . <Δx, Δy>  Thì cái này có nghĩa là: một vector <Δx, Δy> sẽ tương ứng với vector <Δu, Δv> = [u_x, u_y; v_x, v_y] . <Δx, Δy> khi đổi biến từ x,y sang u,v.  Do đó, vector <Δx, 0> (là cạnh vertical của hình vuông trong x,y coordinate) sẽ ứng với / trở thành vector Δx * <u_x, v_x>  + 0 * <u_y, v_y> (nhân <Δx, 0> với matrix [u_x, u_y; v_x, v_y] theo góc nhìn linear combination các matrix column) và bằng <Δx * u_x, Δx * v_x> hay \\*<u_x*Δx, v_x*Δx>\\*  Tương tự, vector <0, Δy> (là cạnh horizontal của hình vuông trong x,y coordinate) sẽ tương ứng vector 0 * <u_x, v_x>  + Δy * <u_y, v_y> = <Δy * u_y, Δy * v_y> hay \\*<u_y*Δy, v_y*Δy>\\*  Để rồi từ ΔA =\\* Δ*Δy\\*, transformed thành ΔA' =   = \\*determinant của hai vector <u_x*Δx, v_x*Δx> và <u_y*Δy, v_y*Δy>\\*   Đây là kiến thức đã học (theo link) rằng diện tích của hình bình hành tạo bởi hai vector a = <a1, a2> và b = <b1, b2> chính là determinant của hai vectors a1b2 - a2b1  Và ở đây nó bằng: u_x*Δx × v_y*Δy - u_y*Δy × v_x*Δx  = \\*(u_x × v_y - u_y × v_x)*Δx*Δy  Thế thì (u_x × v_y - u_y × v_x) CHÍNH LÀ DETERMINANT CỦA TRANSFORM MATRIX [u_x, u_y; v_x, v_y]\\*
 
 **🔗 See also:** [linked note](#node-rqd8oib)
 
@@ -508,9 +442,9 @@ MATRIX [u_x, u_y; v_x, v_y]\\***
 
 > [!NOTE]
 > Ta **quay lạ**i ví dụ về việc **chuyển sang polar coordinates** mà ta đã làm
-> bữa trước, trong đó ta **đã thấy** khi đó ta **phải dùng r*dr*d_theta** (khi 
-> chuyển tích phân từ theo x, y sang theo r, theta) chứ **không chỉ là 
-> dr*d_theta**
+> bữa trước, trong đó ta **đã thấy** khi đó ta **phải dùng r × dr × d_θ** (khi 
+> chuyển tích phân từ theo x, y sang theo r, θ) chứ **không chỉ là 
+> dr × d_θ**
 
 <br>
 
@@ -520,7 +454,7 @@ MATRIX [u_x, u_y; v_x, v_y]\\***
 
 > [!NOTE]
 > Thế thì, theo như vừa rồi ta mới học, **scaling factor giữa dA = dxdy và
-> dA' = drd_theta** sẽ là **GIÁ TRỊ TUYỆT ĐỐI CỦA DETERMINANT CỦA
+> dA' = drd_θ** sẽ là **GIÁ TRỊ TUYỆT ĐỐI CỦA DETERMINANT CỦA
 > JACOBIAN MATRIX : dA = |det(J)| dA'**
 >
 >
@@ -539,7 +473,7 @@ MATRIX [u_x, u_y; v_x, v_y]\\***
 
 > [!NOTE]
 > Thành ra ta có lại kết quả bữa
-> trước, đó là dxdy = rdrd_theta
+> trước, đó là dxdy = rdrd_θ
 
 <br>
 
@@ -560,7 +494,7 @@ MATRIX [u_x, u_y; v_x, v_y]\\***
 >
 >
 > (Tính chất này ta đã biết từ 1806: det(A) = 1/det(Ainv), chứng minh
-> nhanh: AAinv = AinvA = I. det(AAinv) = det(A)det(Ainv) = det(I) = 1 <=>
+> nhanh: AAinv = AinvA = I. det(AAinv) = det(A)det(Ainv) = det(I) = 1 ⇔
 > det(A) = 1/det(Ainv)
 >
 >
@@ -580,7 +514,7 @@ MATRIX [u_x, u_y; v_x, v_y]\\***
 >
 >
 > Và gs cho lưu ý ta rằng, trong ví dụ này ta cũng thấy scaling factor
-> (giữa delta_A và detal_A' không còn là constant (ví dụ bằng 5 như hồi
+> (giữa ΔA và detal_A' không còn là constant (ví dụ bằng 5 như hồi
 > nãy) nữa mà là hàm theo r
 
 <br>
@@ -591,7 +525,7 @@ MATRIX [u_x, u_y; v_x, v_y]\\***
 
 > [!NOTE]
 > Cuối cùng ta thử làm ví dụ này. tính tích phân kép từ 0-1 (của cả x và y) 
-> của x^2y dxdy. bằng cách đổi biến u = x, v = xy.
+> của x²y dxdy. bằng cách đổi biến u = x, v = xy.
 >
 >
 >
@@ -619,7 +553,7 @@ MATRIX [u_x, u_y; v_x, v_y]\\***
 > [!NOTE]
 > Thì đầu tiên như đã biết ta cần tìm liên hệ giữa dudv và dxdy bằng
 > cách tính trị tuyệt đối của det của Jacobian matrix. Với u = x, v = xy
-> dễ thấy J = [u_x = 1, u_y = 0, v_x = y, v_y = x] nên |J| = 1*x - 0*y = x
+> dễ thấy J = [u_x = 1, u_y = 0, v_x = y, v_y = x] nên |J| = 1 × x - 0 × y = x
 >
 >
 >
@@ -641,7 +575,7 @@ MATRIX [u_x, u_y; v_x, v_y]\\***
 >
 >
 >
-> Thì x^2ydxdy = x^2y(1/x)dudv = xydudv = vdudv
+> Thì x²ydxdy = x²y(1/x)dudv = xydudv = vdudv
 
 <br>
 
@@ -684,7 +618,7 @@ MATRIX [u_x, u_y; v_x, v_y]\\***
 <p align="center"><kbd><img src="assets/0o6ry065rt3i.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì xy=constant, cho thấy các level curve của v = x*y sẽ là các
+> Thế thì xy=constant, cho thấy các level curve của v = x × y sẽ là các
 > hyperbola như giáo sư vẽ màu cam - có nghĩa là để v constant thì
 > tức là điểm (x,y) di chuyển trên các ta có các đường hyperbol màu
 > cam này.
@@ -702,7 +636,7 @@ MATRIX [u_x, u_y; v_x, v_y]\\***
 >
 >
 >
-> Rõ ràng, ta chỉ biết tại điểm bắt đầu thì y = 1, mà v = xy => y = v/x
+> Rõ ràng, ta chỉ biết tại điểm bắt đầu thì y = 1, mà v = xy ⇒ y = v/x
 > cũng bằng v/u (vì u = x). Do đó ta có u = v có nghĩa inner integral bound
 > (theo u) bắt đầu với u = v
 
@@ -759,7 +693,7 @@ MATRIX [u_x, u_y; v_x, v_y]\\***
 >
 >
 > Và trong hình tam giác đó, ta có các đường song song từ v = 0 tới v = 1) 
-> v = constant. Thì u từ v tăng lên 1. -> inner bound là v:1 và outer bound
+> v = constant. Thì u từ v tăng lên 1. → inner bound là v:1 và outer bound
 > là 0:1
 
 <br>
