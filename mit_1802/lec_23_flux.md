@@ -5,7 +5,5 @@
 ---
 <a id="node-xe4vijm"></a>
 
-## Lec 23: Flux
-
 <br>
 
