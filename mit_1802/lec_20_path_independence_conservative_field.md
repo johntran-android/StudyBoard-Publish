@@ -5,8 +5,6 @@
 ---
 <a id="node-cy4gq06"></a>
 
-## Lec 20: Path Independence & Conservative Field
-
 <br>
 
 <a id="node-opgvuk4"></a>
@@ -43,7 +41,7 @@
 
 > [!NOTE]
 > Ta sẽ đi thêm một ví dụ về cái này trước khi qua kiến thức
-> khác. Đó là cho vector field  F = y*i^ + x*j^ và quỹ đạo C gồm
+> khác. Đó là cho vector field  F = y × i^ + x × j^ và quỹ đạo C gồm
 > 3 phần khép kin như hình
 
 <br>
@@ -55,7 +53,7 @@
 <p align="center"><kbd><img src="assets/uizdene72mr.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và c tạo nên một phần của dĩa có bán kính đơn vị với góc theta
+> Và c tạo nên một phần của dĩa có bán kính đơn vị với góc θ
 > từ 0 đến pi/4
 
 <br>
@@ -67,7 +65,7 @@
 > [!NOTE]
 > Thế thì ta sẽ tính line integral của F (dot product) dr và như bữa trước 
 > ta đã biết ta có thể tính bằng cách thể hiện dr = <dx, dy> và F = <y, x>
-> nên dot product giữa chúng là y*dx + x*dy
+> nên dot product giữa chúng là y × dx + x × dy
 >
 >
 >
@@ -91,7 +89,7 @@
 >
 >
 >
-> Từ đó ta có tích phân trên c1 0*dx + x*0 = 0
+> Từ đó ta có tích phân trên c1 0 × dx + x × 0 = 0
 >
 >
 >
@@ -111,12 +109,12 @@
 > [!NOTE]
 > Phần thứ 2 có thể thấy là một phần của đường tròn đơn vị. Thế thì ta
 > sẽ theo phương pháp "2" đã học, đó là thể hiện x, y ở dạng một parameter
-> nào đó. Vậy ở đây sẽ hợp lý nếu thể hiện bởi theta (chính xác là r, theta nhưng vì
+> nào đó. Vậy ở đây sẽ hợp lý nếu thể hiện bởi θ (chính xác là r, θ nhưng vì
 > là đường tròn đơn vị nên r = 1)
 >
 >
 >
-> Từ đó ta có dx, dy theo theta.
+> Từ đó ta có dx, dy theo θ.
 
 <br>
 
@@ -126,15 +124,15 @@
 
 > [!NOTE]
 > Từ đó ta có: tích phân từ 0 đến pi/4 (c2 là 1/8 đường tròn đơn vị
-> ứng với góc theta từ 0 đến 2pi/8) của (cos^2 theta - sin^2 theta) d_theta
+> ứng với góc θ từ 0 đến 2π/8) của (cos² θ - sin² θ) d_θ
 >
 >
 >
-> (cos^2 theta - sin^2 theta) = cos(2theta), nguyên hàm của nó là 1/2 sin(2theta)
+> (cos² θ - sin² θ) = cos(2θ), nguyên hàm của nó là 1/2 sin(2θ)
 >
 >
 >
-> Kết quả là: [1/2 sin(2theta)] | 0:pi/4 = 1/2
+> Kết quả là: [1/2 sin(2θ)] | 0:pi/4 = 1/2
 
 <br>
 
@@ -194,7 +192,7 @@
 >
 >
 >
-> t^2 | 1/sqrt(2): 0 = 0 - 1/2 = -1/2
+> t² | 1/sqrt(2): 0 = 0 - 1/2 = -1/2
 
 <br>
 
@@ -238,7 +236,7 @@
 >
 >
 >
-> Nên ta có vector field: F = Grad_f, với f là hàm theo x, y: f(x,y)
+> Nên ta có vector field: F = ∇f, với f là hàm theo x, y: f(x,y)
 >
 >
 >
@@ -254,7 +252,7 @@
 > Gs nói thêm, Potential là khái niệm đã học trong vật lí chính là THẾ
 > NĂNG. Thì gs nói đại khái là nếu đúng theo vật lí thì F phải ngược
 > chiều với gradient. Nhưng ở đây chuyện này không quan trọng lắm
-> nên ta không cần bám sát vật lí nên ta cứ cho F = grad_f
+> nên ta không cần bám sát vật lí nên ta cứ cho F = ∇f
 
 <br>
 
@@ -313,7 +311,7 @@
 > [!NOTE]
 > Khi ta tích phân một vector field và cụ thể ở đây là gradient vector
 > của một function f dọc theo đường cong (along the curve) - thể hiện
-> bởi: **tích phân trên c grad_f (dot product) dr
+> bởi: **tích phân trên c ∇f (dot product) dr
 >
 >
 >
@@ -324,11 +322,13 @@
 
 <a id="node-pal7ksy"></a>
 
+###### Line Integrals and Conservative Fields
+
 <p align="center"><kbd><img src="assets/gpy78xwcm2c.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > gs nói tiếp, cái này chỉ đúng nếu vector field ở đây là Gradient của
-> function Grad_f (chứ ko phải vector field bất kì)
+> function ∇f (chứ ko phải vector field bất kì)
 >
 >
 >
@@ -343,20 +343,20 @@
 <p align="center"><kbd><img src="assets/on1rx1v50y.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, Grad_f là vector có hai các component như đã biết là
+> Thế thì, ∇f là vector có hai các component như đã biết là
 > partial derivatives: f_x, f_y
 >
 >
 >
-> Nên Grad_f (dot product) dr chính là **f_x*dx + f_y*dy
+> Nên ∇f (dot product) dr chính là **f_x × dx + f_y × dy
 >
 >
 >
-> Và f_x*dx + f_y*dy CHÍNH LÀ df (theo total differential)**
+> Và f_x × dx + f_y × dy CHÍNH LÀ df (theo total differential)**
 >
 >
 >
-> Vậy tích phân trên C của Grad_F (dot product) dr chính
+> Vậy tích phân trên C của ∇F (dot product) dr chính
 > là **tích phân trên C của df**
 
 <br>
@@ -375,7 +375,7 @@
 >
 >
 >
-> Đây cũng là giải thích vì sao tích phân Grad_f . dr lại là f(P1) - f(P0)
+> Đây cũng là giải thích vì sao tích phân ∇f . dr lại là f(P1) - f(P0)
 > nhưng nó chưa phải là chứng minh. Tiếp sau đây ta sẽ chứng minh
 
 <br>
@@ -404,20 +404,20 @@
 >
 >
 >
-> Khi đó: tích phân trên c của Grad_f (dot product) dr sẽ bằng:
+> Khi đó: tích phân trên c của ∇f (dot product) dr sẽ bằng:
 >
 >
 >
-> Từ đó f_x*dx + f_y*dy = (f_x*dx/dt + f_y*dy/dt)*dt
+> Từ đó f_x × dx + f_y × dy = (f_x × dx/dt + f_y × dy/dt) × dt
 >
 >
 >
-> Thế thì ta sẽ có tích phân over c [f_x*(dx/dt) + f_y*(dy/dt)]dt
+> Thế thì ta sẽ có tích phân over c [f_x × (dx/dt) + f_y × (dy/dt)]dt
 >
 >
 >
-> Thế thì đây ta nhận ra chính là CHAIN-RULE, để f_x*dx/dt +
-> f_y*dy/dt chính RATE OF CHANGE CỦA F ĐỐI VỚI T: df/dt
+> Thế thì đây ta nhận ra chính là CHAIN-RULE, để f_x × dx/dt +
+> f_y × dy/dt chính RATE OF CHANGE CỦA F ĐỐI VỚI T: df/dt
 
 **🔗 See also:** [linked note](./lec_11_differentials_chain_rule.md#node-kyannpv)
 
@@ -436,7 +436,7 @@
 > Và đây chính là TÍCH PHÂN CỦA DERIVATIVE (THEO T) CỦA HÀM
 > F THÌ THEO FTC PART 2, NÓ TRỞ THÀNH HÀM F | EVALUATE
 > TẠI T1 - HÀM F EVALUATE TẠI T0 TỨC f(t1)
-> - f(t0)
+> \- f(t0)
 
 <br>
 
@@ -465,13 +465,13 @@
 
 > [!NOTE]
 > Thế thì ứng dụng theorem vừa rồi để giải lại bài toán hồi nãy. Thì
-> đầu tiên với vector field F = y*i^ + x*j^, hay F = <y, x> Ta sẽ đặt
+> đầu tiên với vector field F = y × i^ + x × j^, hay F = <y, x> Ta sẽ đặt
 > câu hỏi potential là gì. Hay nếu GRADIENT VECTOR CỦA
 > FUNCTION LÀ <Y, X> THÌ HÀM FUNCTION LÀ GÌ.
 >
 >
 >
-> Dễ thấy nếu Grad vector grad_f là <y, x> thì tức là:
+> Dễ thấy nếu ∇vector ∇f là <y, x> thì tức là:
 >
 >
 >
@@ -481,11 +481,12 @@
 
 <a id="node-vxdb61u"></a>
 
+###### Gradient Field and Level Curves
+
 <p align="center"><kbd><img src="assets/oizzl37dm19.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Khi đó, ta quay lại hình ảnh của vector field, với vẽ thêm CONTOUR
-> PLOT CỦA HÀM F = XY.
+> Khi đó, ta quay lại hình ảnh của vector field, với vẽ thêm CONTOUR PLOT CỦA HÀM F = XY.
 >
 >
 >
@@ -493,22 +494,15 @@
 >
 >
 >
-> công của lúc F trên c1, là line integral trên c1 của grad (dot product) dr
-> sẽ là [hàm f evaluate tại điểm cuối - f evaluate tại điểm đầu].
+> công của lực F trên c1, là line integral trên c1 của ∇F (dot product) dr sẽ là \[hàm f evaluate tại điểm cuối - f evaluate tại điểm đầu\].
 >
 >
 >
-> Mà c1 CHÍNH LÀ TRÙNG VỚI LEVEL CURVE ỨNG VỚI GIÁ TRỊ
-> BẰNG 0 CỦA F=XY, NÊN DĨ NHIÊN TRÊN ĐOẠN NÀY F KHÔNG
-> THAY ĐỔI, DO ĐÓ [hàm f evaluate tại điểm cuối - f evaluate tại điểm
-> đầu] = 0 - 0 = 0
+> Mà c1 CHÍNH LÀ TRÙNG VỚI LEVEL CURVE ỨNG VỚI GIÁ TRỊ BẰNG 0 CỦA F=XY, NÊN DĨ NHIÊN TRÊN ĐOẠN NÀY F KHÔNG THAY ĐỔI, DO ĐÓ \[hàm f evaluate tại điểm cuối - f evaluate tại điểm đầu\] = 0 - 0 = 0
 >
 >
 >
-> Tương tự xét công của lực F trên c2 theo định lí vừa rời nó sẽ là 
-> hàm f (f(x,y) = xy) evaluate tại điểm cuối - chính là ứng với điểm nằm 
-> trên level curve f = 1/2 trừ hàm f evaluate tại điểm đầu là f = 0. Ta có
-> kết quả là 1/2 - 0 = 1/2
+> Tương tự xét công của lực F trên c2 theo định lí vừa rời nó sẽ là hàm f (f(x,y) = xy) evaluate tại điểm cuối - chính là ứng với điểm nằm trên level curve f = 1/2 trừ hàm f evaluate tại điểm đầu là f = 0. Ta có kết quả là 1/2 - 0 = 1/2
 >
 >
 >
@@ -583,7 +577,7 @@
 > THÌ KHI ĐÓ, LINE INTEGRAL SẼ CHỈ PHỤ THUỘC ĐIỂM
 > ĐẦU ĐIỂM CUỐI. Tức là miễn là các quỹ đạo c có chung điểm
 > đầu điểm cuối thì kết quả line integral - tích phân trên c_i của 
-> [F dot product dr] = [Grad_f dot product dr] sẽ đều bằng nhau
+> [F dot product dr] = [∇f dot product dr] sẽ đều bằng nhau
 >
 >
 >
@@ -648,12 +642,12 @@
 >
 > làm theo cách thể hiện tích phân F dot product dr theo dạng tích phân
 > của F dot product T^ ds với T^ là vector tiếp tuyến đơn vị thì khi đó F
-> song song T^, nên F dot product T^ = |F|*|T^|*cos(0) = |F|*1*1 = |F| và
-> |F| = r = 1 (tại sao thì vì |F| = sqrt(y^2 + x^2) = sqrt(r^2) = 1)
+> song song T^, nên F dot product T^ = |F|*|T^|*cos(0) = |F|*1 × 1 = |F| và
+> |F| = r = 1 (tại sao thì vì |F| = sqrt(y² + x²) = sqrt(r²) = 1)
 >
 >
 >
-> Và từ đó tích phân có kết quả là tích phân 1 ds = 2pi
+> Và từ đó tích phân có kết quả là tích phân 1 ds = 2π
 >
 >
 >
@@ -678,11 +672,13 @@
 >
 >
 >
-> -> Không, vì thật ra hai cái này là một. ta sẽ thấy nó sau đây
+> → Không, vì thật ra hai cái này là một. ta sẽ thấy nó sau đây
 
 <br>
 
 <a id="node-5nlyqfr"></a>
+
+###### Force as Gradient of Potential
 
 <p align="center"><kbd><img src="assets/ewlotvfbkl.png" width="80%"></kbd></p>
 
@@ -691,12 +687,12 @@
 > [!NOTE]
 > Tiếp theo, gs nhắc lại thì nếu nói đúng theo vật lí thì trường lực
 > (force field, là vector field) nếu là gradient field thì LỰC F SẼ LÀ ÂM
-> CỦA GRADIENT: F = - Grad_f. (f gọi là Potential)
+> CỦA GRADIENT: F = - ∇f. (f gọi là Potential)
 >
 >
 >
 > Nhưng trong class này gs cho đơn giản hóa bằng cách coi như  F =
-> grad_f (đã nói ý này ở phần trước)
+> ∇f (đã nói ý này ở phần trước)
 >
 >
 >
@@ -787,9 +783,9 @@
 <p align="center"><kbd><img src="assets/e75tlxvy8ut.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và cuối cùng đại khái là, nếu vector field define bởi F = M*i^ + N*j^ mà
+> Và cuối cùng đại khái là, nếu vector field define bởi F = M × i^ + N × j^ mà
 > là gradient field thì khi đó Mdx + Ndy chính là differential df (dễ hiểu vì
-> khi đó M, N chính là f_x, f_y, thì f_x*dx + f_y*dy chính là df (total
+> khi đó M, N chính là f_x, f_y, thì f_x × dx + f_y × dy chính là df (total
 > differential)
 
 <br>
