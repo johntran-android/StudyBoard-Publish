@@ -183,6 +183,7 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 `549 notes · 615 screenshots · 22 sections`
 
 > This notebook contains study notes for MIT 18.02 (Multivariable Calculus), covering core topics such as vector algebra, matrices, partial derivatives, Lagrange multipliers, and double integrals.
+> 
 > Vở ghi chép này tổng hợp các kiến thức môn Giải tích đa biến (MIT 18.02), bao gồm các chủ đề cốt lõi như đại số vector, ma trận, đạo hàm riêng, phương pháp nhân tử Lagrange và tích phân kép.
 
 <details open>
@@ -190,28 +191,28 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 
 | Section | Notes | Screenshots |
 |---|---:|---:|
-| [Lec 10: Second Derivative Test,](mit_1802/lec_10_second_derivative_test_boudaries_infinity.md) | 23 | 24 |
+| [Lec 1: Dot Products](mit_1802/lec_1_dot_products.md) | 0 | 4 |
+| [Lec 2: Determinant, Cross Product](mit_1802/lec_2_determinant_cross_product.md) | 16 | 21 |
+| [Lec 3: Matrix, Inverse Matrix](mit_1802/lec_3_matrix_inverse_matrix.md) | 26 | 31 |
+| [Lec 4: Square System, Equation Of Plane](mit_1802/lec_4_square_system_equation_of_plane.md) | 20 | 23 |
+| [Lec 5: Parametric Equations For Lines And Curves](mit_1802/lec_5_parametric_equations_for_lines_and_curves.md) | 23 | 24 |
+| [Lec 6: Velocity, Acceleration, Kepler's Second Law](mit_1802/lec_6_velocity_acceleration_keplers_second_law.md) | 27 | 28 |
+| [Lec 7: Review](mit_1802/lec_7_review.md) | 16 | 17 |
+| [Lec 8: Level Curves, Partial Derivatives, Tangent Plane](mit_1802/lec_8_level_curves_partial_derivatives_tangent_plane.md) | 20 | 22 |
+| [Lec 9: Max-min Problems, Least Squares](mit_1802/lec_9_max_min_problems_least_squares.md) | 21 | 28 |
+| [Lec 10: Second Derivative Test, Boudaries, Infinity](mit_1802/lec_10_second_derivative_test_boudaries_infinity.md) | 23 | 24 |
 | [Lec 11: Differentials, Chain-rule](mit_1802/lec_11_differentials_chain_rule.md) | 20 | 21 |
-| [Lec 12: Gradient, Directional](mit_1802/lec_12_gradient_directional_derivative_tangent_plane.md) | 30 | 37 |
+| [Lec 12: Gradient, Directional Derivative, Tangent Plane](mit_1802/lec_12_gradient_directional_derivative_tangent_plane.md) | 30 | 37 |
 | [Lec 13: Lagrange Multiplier](mit_1802/lec_13_lagrange_multiplier.md) | 33 | 36 |
-| [Lec 14: Non-independent Random](mit_1802/lec_14_non_independent_random_variables.md) | 32 | 35 |
+| [Lec 14: Non-independent Random Variables](mit_1802/lec_14_non_independent_random_variables.md) | 32 | 35 |
 | [Lec 15: Partial Differentials Equations](mit_1802/lec_15_partial_differentials_equations.md) | 18 | 19 |
 | [Lec 16: Double Integrals](mit_1802/lec_16_double_integrals.md) | 35 | 37 |
-| [Lec 17: Double Integrals In](mit_1802/lec_17_double_integrals_in_polar_coordinates.md) | 21 | 21 |
+| [Lec 17: Double Integrals In Polar Coordinates](mit_1802/lec_17_double_integrals_in_polar_coordinates.md) | 21 | 21 |
 | [Lec 18: Change Of Variables](mit_1802/lec_18_change_of_variables.md) | 33 | 36 |
 | [Lec 19: Vector Fields](mit_1802/lec_19_vector_fields.md) | 36 | 44 |
-| [Lec 1: Dot Products](mit_1802/lec_1_dot_products.md) | 0 | 4 |
 | [Lec 20: Path Independence & Conservative Field](mit_1802/lec_20_path_independence_conservative_field.md) | 38 | 43 |
 | [Lec 21: Gradient Field & Potential Function](mit_1802/lec_21_gradient_field_potential_function.md) | 35 | 35 |
 | [Lec 22: Green's Theorem](mit_1802/lec_22_greens_theorem.md) | 26 | 29 |
-| [Lec 2: Determinant, Cross Product](mit_1802/lec_2_determinant_cross_product.md) | 16 | 21 |
-| [Lec 3: Matrix, Inverse Matrix](mit_1802/lec_3_matrix_inverse_matrix.md) | 26 | 31 |
-| [Lec 4: Square System, Equation](mit_1802/lec_4_square_system_equation_of_plane.md) | 20 | 23 |
-| [Lec 5: Parametric Equations For](mit_1802/lec_5_parametric_equations_for_lines_and_curves.md) | 23 | 24 |
-| [Lec 6: Velocity, Acceleration,](mit_1802/lec_6_velocity_acceleration_keplers_second_law.md) | 27 | 28 |
-| [Lec 7: Review](mit_1802/lec_7_review.md) | 16 | 17 |
-| [Lec 8: Level Curves, Partial](mit_1802/lec_8_level_curves_partial_derivatives_tangent_plane.md) | 20 | 22 |
-| [Lec 9: Max-min Problems, Least](mit_1802/lec_9_max_min_problems_least_squares.md) | 21 | 28 |
 
 </details>
 
@@ -685,7 +686,6 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 `529 notes · 895 screenshots · 100 sections`
 
 > This notebook summarizes key concepts from C. Bishop's 'Pattern Recognition and Machine Learning,' covering foundational probability theory, Bayesian inference, common machine learning models, and essential mathematical tools.
-> 
 > Sổ tay này tóm tắt các khái niệm chính từ sách 'Pattern Recognition and Machine Learning' của C. Bishop, bao gồm lý thuyết xác suất nền tảng, suy luận Bayes, các mô hình học máy phổ biến và những công cụ toán học thiết yếu.
 
 <details open>
