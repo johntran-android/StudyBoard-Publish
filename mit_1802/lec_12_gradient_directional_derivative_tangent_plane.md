@@ -1,13 +1,9 @@
-# Lec 12: Gradient, Directional
-derivative, Tangent Plane
+# Lec 12: Gradient, Directional Derivative, Tangent Plane
 
 📊 **Progress:** `30` Notes | `37` Screenshots
 
 ---
 <a id="node-5ybol2s"></a>
-
-## Lec 12: Gradient, Directional
-derivative, Tangent Plane
 
 <br>
 
@@ -22,11 +18,11 @@ derivative, Tangent Plane
 >
 >
 >
-> dw/dt = w_x*dx/dt + w_y*dy/dt + w_z*dz/dt
+> dw/dt = w_x × dx/dt + w_y × dy/dt + w_z × dz/dt
 >
 >
 >
-> hay (∂/∂x)w*dx/dt + (∂/∂y)y*dy/dt + (∂/∂z)w*dz/dt**
+> hay (∂/∂x)w × dx/dt + (∂/∂y)y × dy/dt + (∂/∂z)w × dz/dt**
 
 <br>
 
@@ -41,7 +37,7 @@ derivative, Tangent Plane
 >
 >
 >
-> **Grad_f = <w_x, w_y, w_z>**
+> **∇f = <w_x, w_y, w_z>**
 >
 >
 >
@@ -59,7 +55,7 @@ derivative, Tangent Plane
 > partial derivative sẽ tùy thuộc vào / phụ thuộc vào một điểm (x, y, z) cụ
 > thể
 
-**🔗 See also:** [linked note](#node-eocx74p)
+**🔗 See also:** [Directional Derivative and Gradient](#node-eocx74p)
 
 <br>
 
@@ -87,7 +83,7 @@ derivative, Tangent Plane
 >
 >
 >
-> dw = w_x*dx/dt + w_y*dy/dt + w_z*dz/dt
+> dw = w_x × dx/dt + w_y × dy/dt + w_z × dz/dt
 >
 >
 >
@@ -120,64 +116,68 @@ derivative, Tangent Plane
 > Theorem: GRADIENT VECTOR tại một điểm nào đó sẽ VUÔNG
 > GÓC VỚI LEVEL SURFACE
 
-**🔗 See also:** [linked note](./lec_13_lagrange_multiplier.md#node-h0mt9ko) · [linked note](./lec_15_partial_differentials_equations.md#node-oqny49o)
+**🔗 See also:** [Parallel Gradients of Level Curves](./lec_13_lagrange_multiplier.md#node-h0mt9ko) · [Tangent Plane and Normal Vector](./lec_15_partial_differentials_equations.md#node-oqny49o)
 
 <br>
 
 <a id="node-yyn7pto"></a>
 
+###### Gradient and Level Surfaces
+
 <p align="center"><kbd><img src="assets/gtr9loqas9f.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ông lấy ví dụ như sau cho hàm **w(x,y,z) = a1*x + a2*y + a3*z**, thế
+> Ông lấy ví dụ như sau cho hàm **w(x,y,z) = a1 × x + a2 × y + a3 × z**, thế
 > thì **gradient** vector, như định nghĩa là vector chứa các component
-> là  các partial derivative: **Grad_w = <w_x, w_y, w_z> = <a1, a2,
+> là  các partial derivative: **∇w = <w_x, w_y, w_z> = <a1, a2,
 > a3>**
 >
 >
 >
 > Thế thì nói qua **level surface**: Là cái **tập hợp các điểm** khi ta
-> **cho w mang giá trị constant c** nào đó: **a1*x + a2*y + a3*z = c**
+> **cho w mang giá trị constant c** nào đó: **a1 × x + a2 × y + a3 × z = c**
 >
 >
 >
-> Thế thì a1*x + a2*y + a3*z = c là phương trình của surface này, và
+> Thế thì a1 × x + a2 × y + a3 × z = c là phương trình của surface này, và
 > nó có dạng là p**hương trình mặt phẳng**.
 >
 >
 >
 > Thì ta đã biết **NORMAL VECTOR** của plane này là **<a1, a2,
-> a3>** (MÀ ĐÂY CŨNG **CHÍNH LÀ GRAD_W)** mà n**ormal vector
+> a3>** (MÀ ĐÂY CŨNG **CHÍNH LÀ ∇W)** mà n**ormal vector
 > đương nhiên là vector vuông góc với plane** nên điều này đã cho
 > thấy **gradient vector vuông góc với plane - là level surface**
 
-**🔗 See also:** [linked note](./lec_4_square_system_equation_of_plane.md#node-miy1y9u)
+**🔗 See also:** [Vectơ pháp tuyến mặt phẳng](./lec_4_square_system_equation_of_plane.md#node-miy1y9u)
 
 <br>
 
 <a id="node-7940qhh"></a>
+
+###### Gradient and Level Curves
 
 <p align="center"><kbd><img src="assets/nf9xffin5g.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4wgjlx0qbwm.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ thứ 2, xét hàm 2 biến **w = x^2 + y^2**.
+> Ví dụ thứ 2, xét hàm 2 biến **w = x² + y²**.
 >
 >
 >
-> Thì **level curve** (cho w = constant c) sẽ là **x^2 + y^2 = c** là phương
+> Thì **level curve** (cho w = constant c) sẽ là **x² + y² = c** là phương
 > trình đường tròn.
 >
 >
 >
-> (với 2 biến thì level surface w = c <=> **x^2+y^2 = c** chỉ là **một đường
+> (với 2 biến thì level surface w = c ⇔ **x²+y² = c** chỉ là **một đường
 > 2D** ví dụ trước là 3 biến, level surface là một plane, ở đây gs lấy ví dụ
 > 2 biến để vẽ được)
 >
 >
 >
-> Thì ta xét gradient **grad_w** = **<w_x, w_y> = <2x, 2y>.**
+> Thì ta xét gradient **∇w** = **<w_x, w_y> = <2x, 2y>.**
 >
 >
 >
@@ -193,6 +193,8 @@ derivative, Tangent Plane
 <br>
 
 <a id="node-uj2w24t"></a>
+
+###### Gradient and Level Curves
 
 <p align="center"><kbd><img src="assets/20t90blkpu8.png" width="80%"></kbd></p>
 
@@ -214,7 +216,7 @@ derivative, Tangent Plane
 > đạo, một tập hợp điểm các vị trí của object di chuyển thể hiện bởi
 > **position vector r(t)**
 
-**🔗 See also:** [linked note](./lec_6_velocity_acceleration_keplers_second_law.md#node-k44c7aj)
+**🔗 See also:** [Vector vị trí đường Cycloid](./lec_6_velocity_acceleration_keplers_second_law.md#node-k44c7aj)
 
 <br>
 
@@ -238,6 +240,8 @@ derivative, Tangent Plane
 
 <a id="node-9iub6cv"></a>
 
+###### Multivariable Chain Rule and Gradient
+
 <p align="center"><kbd><img src="assets/dn1zhwsms5j.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -247,7 +251,7 @@ derivative, Tangent Plane
 >
 >
 >
-> Nên dw/dt = Grad_w . Velocity = Grad_w . dr/dt
+> Nên dw/dt = ∇w . Velocity = ∇w . dr/dt
 >
 >
 >
@@ -260,7 +264,7 @@ derivative, Tangent Plane
 >
 >
 >
-> Vậy: **Grad_w . Velocity = 0**
+> Vậy: **∇w . Velocity = 0**
 >
 >
 >
@@ -276,6 +280,8 @@ derivative, Tangent Plane
 
 <a id="node-uclspkp"></a>
 
+###### Gradient Perpendicular to Level Surface
+
 <p align="center"><kbd><img src="assets/vuf6e21fgnr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -285,7 +291,7 @@ derivative, Tangent Plane
 >
 >
 >
-> Có nghĩa là, **tại điểm đang xét** (**mà ta có gradient vector**  grad_w)
+> Có nghĩa là, **tại điểm đang xét** (**mà ta có gradient vector**  ∇w)
 > thì vừa rồi ta chứng minh nó sẽ **vuông góc với velocity vector tại
 > đó** của một curve nào đó (đương nhiên đi qua điểm đang xét)
 > nằm trong level surface.
@@ -364,16 +370,18 @@ derivative, Tangent Plane
 
 <a id="node-ferhvoz"></a>
 
+###### Tangent Plane to a Surface
+
 <p align="center"><kbd><img src="assets/759oqzda4xb.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Ví dụ này là **tìm tangent plane** của surface **x^2 + y^2 - z^2 = 4** tại
+> Ví dụ này là **tìm tangent plane** của surface **x² + y² - z² = 4** tại
 > điểm **(2, 1, 1)** 
 >
 >
 >
-> Áp dụng theorem vừa rồi, ta sẽ **XEM** **x^2 + y^2 - z^2 = 4 LÀ LEVEL
-> SURFACE CỦA FUNCTION** **w = x^2 + y^2 - z^2** **tại w = 4**
+> Áp dụng theorem vừa rồi, ta sẽ **XEM** **x² + y² - z² = 4 LÀ LEVEL
+> SURFACE CỦA FUNCTION** **w = x² + y² - z²** **tại w = 4**
 >
 >
 >
@@ -381,28 +389,28 @@ derivative, Tangent Plane
 >
 >
 >
-> Theo theorem trên, **gradient** vector **grad_w** **tại (2,1,1)** sẽ
+> Theo theorem trên, **gradient** vector **∇w** **tại (2,1,1)** sẽ
 > **vuông góc với level surface tại đó** và cũng **chính là vuông góc với
 > tangent plane** của đồ thị hàm w **tại (2,1,1)**
 >
 >
 >
-> Do đó GRADIENT VECTOR grad_w **CŨNG CHÍNH LÀ NORMAL
+> Do đó GRADIENT VECTOR ∇w **CŨNG CHÍNH LÀ NORMAL
 > VECTOR CỦA TANGENT PLANE** và cũng là normal vector của level
 > surface
 >
 >
 >
 > Vậy ta xây dựng gradient vector theo định nghĩa **là vector các 
-> partial derivatives**: grad_w = <w_x, w_y, w_z> = <2x, 2y, -2z>
+> partial derivatives**: ∇w = <w_x, w_y, w_z> = <2x, 2y, -2z>
 >
 >
 >
-> Và grad_w **tại (2,1,1)** là: **<4,2,-2>**
+> Và ∇w **tại (2,1,1)** là: **<4,2,-2>**
 >
 >
 >
-> Do đó phương trình mặt phẳng mà **normal** vector là **grad_w** là:
+> Do đó phương trình mặt phẳng mà **normal** vector là **∇w** là:
 >
 >
 >
@@ -417,7 +425,7 @@ derivative, Tangent Plane
 > [!NOTE]
 > Trong đó **để tìm something** thì ta sẽ dựa tangent plane
 > của w tại (2,1,1) nên đương nhiên **nó đi qua (2,1,1)** nên
-> ta phải có something sao cho 4*2 + 2*1 - 2*1 = something
+> ta phải có something sao cho 4 × 2 + 2 × 1 - 2 × 1 = something
 > = 8
 >
 >
@@ -443,7 +451,7 @@ derivative, Tangent Plane
 >
 >
 >
-> **dw =w_x*dx + w_y*dy + w_z*dz**
+> **dw =w_x × dx + w_y × dy + w_z × dz**
 >
 >
 >
@@ -462,12 +470,12 @@ derivative, Tangent Plane
 >
 >
 > (Ôn lại chút, với hàm đơn biến f(x), định nghĩa của derivative của f đối với x đó là limit của **quotient
-> difference** ∆f/∆x khi ∆x->0, hay, tỉ lệ [thay đổi của f, ∆f]  trên [thay đổi của x, ∆x] khi ∆x trở nên vô
+> difference** ∆f/∆x khi ∆x→0, hay, tỉ lệ [thay đổi của f, ∆f]  trên [thay đổi của x, ∆x] khi ∆x trở nên vô
 > cùng nhỏ. Thể hiện qua equation:
 >
 >
 >
-> **f'(x) = lim ∆x->0 ∆f/∆x**
+> **f'(x) = lim ∆x→0 ∆f/∆x**
 >
 >
 >
@@ -476,7 +484,7 @@ derivative, Tangent Plane
 >
 >
 >
-> **f'(x) ~= ∆f/∆x, x~=x0,** hay **∆f = f'(x)∆x**
+> **f'(x) ≈ ∆f/∆x, x≈x0,** hay **∆f = f'(x)∆x**
 >
 >
 >
@@ -484,7 +492,7 @@ derivative, Tangent Plane
 >
 >
 >
-> <=> f'(x0)(x-x0) = f(x)-f(x0) <=> **f(x) = f(x0) - f'(x0)(x-x0)** 
+> ⇔ f'(x0)(x-x0) = f(x)-f(x0) ⇔ **f(x) = f(x0) - f'(x0)(x-x0)** 
 >
 >
 >
@@ -492,15 +500,15 @@ derivative, Tangent Plane
 >
 >
 >
-> **dw = w_x*dx + w_y*dy + w_z*dz**  w/∂x có định nghĩa là lim ∆x->0 [w(x+∆x,y,z) - w(x,y,z)] / ∆x
+> **dw = w_x × dx + w_y × dy + w_z × dz**  w/∂x có định nghĩa là lim ∆x→0 [w(x+∆x,y,z) - w(x,y,z)] / ∆x
 >
 >
 >
-> ∂w/∂y có định nghĩa là lim ∆y->0 [w(x,y+∆y,z) - w(x,y,z)] / ∆y
+> ∂w/∂y có định nghĩa là lim ∆y→0 [w(x,y+∆y,z) - w(x,y,z)] / ∆y
 >
 >
 >
-> ∂w/∂z có định nghĩa là lim ∆z->0 [w(x,y,z+∆z) - w(x,y,z)] / ∆z
+> ∂w/∂z có định nghĩa là lim ∆z→0 [w(x,y,z+∆z) - w(x,y,z)] / ∆z
 >
 >
 >
@@ -509,15 +517,15 @@ derivative, Tangent Plane
 >
 >
 >
-> ∆w ~= w_x*∆x + w_y*∆y + w_z*∆z
+> ∆w ≈ w_x*∆x + w_y*∆y + w_z*∆z
 >
 >
 >
-> **∆w ~= 2x*∆x + 2y*∆y - 2z*∆z**  Tại (2,1,-1) ta có:
+> **∆w ≈ 2x*∆x + 2y*∆y - 2z*∆z**  Tại (2,1,-1) ta có:
 >
 >
 >
-> ∆w ~= **4*∆x + 2*∆y - 2*∆z**
+> ∆w ≈ **4*∆x + 2*∆y - 2*∆z**
 >
 >
 >
@@ -535,14 +543,14 @@ derivative, Tangent Plane
 >
 >
 >
-> 2) Và ý quan trọng thứ hai đó là, TA SẼ **DÙNG DẤU ~=** KHI THÊ HIỆN RẰNG **TA ĐANG DI
+> 2) Và ý quan trọng thứ hai đó là, TA SẼ **DÙNG DẤU ≈** KHI THÊ HIỆN RẰNG **TA ĐANG DI
 > CHUYỂN TRÊN ĐỒ THỊ HÀM W**. NHƯNG NẾU T**HAY BẰNG DẤU BẰNG**, THÌ ĐÓ ĐỒNG
 > NGHĨA LÀ **TA ĐANG DI CHUYỂN TRÊN TANGENT PLANE**
 >
 >
 >
-> ∆w ~= 4*∆x + 2*∆y - 2*∆z, có nghĩa là thể hiện ta đang "ở" trên level surface. Cũng giống như với
-> hàm đơn biến, việc dùng ∆f ~= f'(x0)∆x <=> f(x)-f(x0) ~= f'(x0)(x-x0) <=> f(x) ~= f'(x0)(x-x0) + f(x0)
+> ∆w ≈ 4*∆x + 2*∆y - 2*∆z, có nghĩa là thể hiện ta đang "ở" trên level surface. Cũng giống như với
+> hàm đơn biến, việc dùng ∆f ≈ f'(x0)∆x ⇔ f(x)-f(x0) ≈ f'(x0)(x-x0) ⇔ f(x) ≈ f'(x0)(x-x0) + f(x0)
 >
 >
 >
@@ -553,7 +561,7 @@ derivative, Tangent Plane
 >
 >
 >
-> f(x) ~= f'(x0)(x-x0) + f(x0)
+> f(x) ≈ f'(x0)(x-x0) + f(x0)
 >
 >
 >
@@ -582,7 +590,7 @@ derivative, Tangent Plane
 >
 >
 >
-> **0 = 4*(x-2) + 2*(y-1) - 2*(z+1)**: Và đây chính là phương trình của tangent plane mà ta đã tìm ra
+> **0 = 4 × (x-2) + 2 × (y-1) - 2 × (z+1)**: Và đây chính là phương trình của tangent plane mà ta đã tìm ra
 > theo cách 1
 >
 > LINEAR APPROXIMATION
@@ -719,6 +727,8 @@ derivative, Tangent Plane
 
 <a id="node-eocx74p"></a>
 
+###### Directional Derivative and Gradient
+
 <p align="center"><kbd><img src="assets/fyxmgs0y20e.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -726,7 +736,7 @@ derivative, Tangent Plane
 >
 >
 >
-> và dr/ds = u nên **dw/ds = grad_w . u^**
+> và dr/ds = u nên **dw/ds = ∇w . u^**
 
 **🔗 See also:** [linked note](#node-49gybpg)
 
@@ -734,57 +744,61 @@ derivative, Tangent Plane
 
 <a id="node-aukckoq"></a>
 
+###### Directional Derivative Example
+
 <p align="center"><kbd><img src="assets/y6t1sii8d2.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > nên nếu ở direction i^, tức là u = i^ thì directional derivative dw/ds | i^ =
-> grad_w . i^ và nó chính là partial derivative của w đối với x: w_x
+> ∇w . i^ và nó chính là partial derivative của w đối với x: w_x
 >
 >
 >
 > Tương tự nếu ở direction j^, tức u = j^ thì directional derivative dw/ds |
-> j^ =  grad_w . j^ và nó chính là partial derivative của w đối với y: w_y
+> j^ =  ∇w . j^ và nó chính là partial derivative của w đối với y: w_y
 
 <br>
 
 <a id="node-1mx55uf"></a>
 
+###### Directional Derivative and Gradient Formula
+
 <p align="center"><kbd><img src="assets/f2yfx4lemgo.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì dw/ds | u^ = grad_w . u^ thì theo định nghĩa dot product của
-> hai vector a.b = |a|.|b|.cos(theta) 
+> Thế thì dw/ds | u^ = ∇w . u^ thì theo định nghĩa dot product của
+> hai vector a.b = |a|.|b|.cos(θ) 
 >
 >
 >
-> Nên grad_w . u^ = |grad_w|.|u^|.cos(theta) mà u^ là unit vector có
+> Nên ∇w . u^ = |∇w|.|u^|.cos(θ) mà u^ là unit vector có
 > length = 1
 >
 >
 >
-> nên grad_w.u^ = |grad_w|.cos(theta)
+> nên ∇w.u^ = |∇w|.cos(θ)
 >
 >
 >
-> Từ đây ta mới hiểu tại sao GRADIENT VECTOR grad_w CHÍNH LÀ
+> Từ đây ta mới hiểu tại sao GRADIENT VECTOR ∇w CHÍNH LÀ
 > HƯỚNG (DIRECTION) **KHIẾN W TĂNG NHANH NHẤT**. Là bởi vì:
 >
 >
 >
-> dw/ds|u^ sẽ lớn nhất nếu grad_w.u^ lớn nhất. và điều này tương
-> đương |grad_w|.cos(theta) lớn nhất
+> dw/ds|u^ sẽ lớn nhất nếu ∇w.u^ lớn nhất. và điều này tương
+> đương |∇w|.cos(θ) lớn nhất
 >
 >
 >
-> Như vậy cos(theta) phải lớn nhất và chỉ khi theta = 1 tức là u^ (hướng
+> Như vậy cos(θ) phải lớn nhất và chỉ khi θ = 1 tức là u^ (hướng
 > của directional derivative dw/ds|u^) trùng với hướng của gradient vector
-> grad_w. Khi đó thì dw/ds|u^ sẽ lớn nhất mang ý nghĩa là khi di chuyển
+> ∇w. Khi đó thì dw/ds|u^ sẽ lớn nhất mang ý nghĩa là khi di chuyển
 > với unit speed theo hướng này thì w sẽ tăng nhanh nhất và độ lớn của
-> **dw/ds|u^=direction(grad_w) = |grad_w|**
+> **dw/ds|u^=direction(∇w) = |∇w|**
 >
 >
 >
-> Và khi theta = 90 độ, tức hướng của directional derivative dw/ds|u^
+> Và khi θ = 90 độ, tức hướng của directional derivative dw/ds|u^
 > VUÔNG GÓC VỚI GRADIENT VECTOR thì dw/ds|u^ = 0
 >
 >
@@ -800,7 +814,7 @@ derivative, Tangent Plane
 
 > [!NOTE]
 > khi u^ trùng hướng của gradient vector thì dw/ds|u^ đạt
-> maximum và bằng |grad_w|
+> maximum và bằng |∇w|
 
 <br>
 
@@ -810,11 +824,13 @@ derivative, Tangent Plane
 
 > [!NOTE]
 > Và khi u^ ngược hướng với hướng của gradient vector thì
-> dw/ds|u^ minimum, =  -|grad_w|
+> dw/ds|u^ minimum, =  -|∇w|
 
 <br>
 
 <a id="node-o6n0cg0"></a>
+
+###### Gradient and Tangent to Level Curves
 
 <p align="center"><kbd><img src="assets/fxdteaj0k7s.png" width="80%"></kbd></p>
 
@@ -825,7 +841,7 @@ derivative, Tangent Plane
 >
 > Và điều đó cũng đồng nghĩa là u^ trùng với "hướng của" tiếp tuyến với
 > level curve (nhớ lại, ta đã chứng minh gradient vector vuông  góc với
-> level curve, thì nay u^ mà vuông góc với grad_w thì tức là nó sẽ trùng
+> level curve, thì nay u^ mà vuông góc với ∇w thì tức là nó sẽ trùng
 > với hướng của tiếp tuyến của level curve mang ý nghĩa là điểm di
 > chuyển dọc theo level curve, hoàn toàn dễ hiểu khi đó thì đương nhiên
 > w không thay đổi, vì nó đang ở trên level curve = là tập hợp điểm của
