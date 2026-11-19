@@ -228,7 +228,7 @@
 > Hay nói cách khác **x_particular + nullspace** sẽ là **tập hợp
 > toàn bộ solution của Ax=b**
 
-**🔗 See also:** [linked note](./lecture_13_quiz_review.md#node-k2tf2ug)
+**🔗 See also:** [Xác định kích thước ma trận](./lecture_13_quiz_review.md#node-k2tf2ug)
 
 <br>
 
