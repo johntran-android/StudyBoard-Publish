@@ -5,11 +5,11 @@
 ---
 <a id="node-1tuchzg"></a>
 
-## Lec 13: Lagrange Multiplier
-
 <br>
 
 <a id="node-x188mgg"></a>
+
+## Introduction to Lagrange Multipliers
 
 <p align="center"><kbd><img src="assets/n1g8sffat38.png" width="80%"></kbd></p>
 
@@ -41,6 +41,8 @@
 
 <a id="node-7i23w03"></a>
 
+### Lagrange Multipliers
+
 <p align="center"><kbd><img src="assets/g7ml63gvrss.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -64,6 +66,8 @@
 
 <a id="node-rf4p6n1"></a>
 
+#### Introduction to Lagrange Multipliers
+
 <p align="center"><kbd><img src="assets/3tjmo72uxg9.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -75,27 +79,33 @@
 
 <a id="node-d0sckz1"></a>
 
+##### Lagrange Multipliers Optimization Example
+
 <p align="center"><kbd><img src="assets/5sbyyo021dt.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Ví dụ, ta muốn tìm điểm nằm trên hyperbola xy=3 mà gần với origin O nhất.
-> Thì cũng có nghĩa là ta muốn tìm x,y sao cho function f(x,y) = sqrt(x^2 +y^2)
+> Thì cũng có nghĩa là ta muốn tìm x,y sao cho function f(x,y) = sqrt(x² +y²)
 > nhỏ nhất với constraint: xy = 3
 
 <br>
 
 <a id="node-kfg1du8"></a>
 
+###### Minimizing Distance to Hyperbola
+
 <p align="center"><kbd><img src="assets/dojzx7mrxxw.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > tuy nhiên ta có thể tìm x,y sao cho bình phương khoảng cách của
-> điểm đến O nhỏ nhất cũng được. Nên ta thay f(x,y) = x^2 + y^2 và
+> điểm đến O nhỏ nhất cũng được. Nên ta thay f(x,y) = x² + y² và
 > constrain là xy = 3 như đã nói, thì tức là g(x,y) = x.y
 
 <br>
 
 <a id="node-ct7ky2l"></a>
+
+###### Lagrange Multipliers with Two Variables
 
 <p align="center"><kbd><img src="assets/wm1iem8j4z.png" width="80%"></kbd></p>
 
@@ -133,6 +143,8 @@
 
 <a id="node-qvo1h0d"></a>
 
+###### Minimizing Distance to Hyperbola
+
 <p align="center"><kbd><img src="assets/ia02c04g7b.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -155,6 +167,8 @@
 <br>
 
 <a id="node-h0mt9ko"></a>
+
+###### Parallel Gradients of Level Curves
 
 <p align="center"><kbd><img src="assets/f4y22tjs3f.png" width="80%"></kbd></p>
 
@@ -186,19 +200,23 @@
 >
 >
 >
-> **GRAD_F = CONSTANT*GRAD_G**
+> **∇F = CONSTANT*∇G**
 
-**🔗 See also:** [linked note](./lec_12_gradient_directional_derivative_tangent_plane.md#node-ttjrg7j) · [linked note](./lec_15_partial_differentials_equations.md#node-7wnt4tc)
+**🔗 See also:** [linked note](./lec_12_gradient_directional_derivative_tangent_plane.md#node-ttjrg7j) · [Lagrange Multipliers](./lec_15_partial_differentials_equations.md#node-7wnt4tc)
 
 <br>
 
 <a id="node-qx1rfh0"></a>
+
+###### Gradient and Level Curves
 
 <p align="center"><kbd><img src="assets/61n3n2q26fh.png" width="80%"></kbd></p>
 
 <br>
 
 <a id="node-ytsildx"></a>
+
+###### Lagrange Multipliers Geometric Interpretation
 
 <p align="center"><kbd><img src="assets/w154odvefor.png" width="80%"></kbd></p>
 
@@ -210,47 +228,51 @@
 
 <a id="node-k8hb1jr"></a>
 
+###### Lagrange Multipliers and Level Curves
+
 <p align="center"><kbd><img src="assets/9rxjaveoose.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì điều kiện này (hai gradient vector song song . cùng
-> phương) được thể hiện bằng việc **grad_f = lambda * grad_g**.
-> Tức là vector này = proportion của vector kia
+> Thế thì điều kiện này (hai gradient vector song song . cùng phương) được thể hiện bằng việc **∇f = λ \* ∇g**. Tức là vector này = proportion của vector kia
 >
 >
 >
-> ĐÂY CHÍNH LÀ PHƯƠNG PHÁP LAGRANGE MULTIPLIERS
+> đây chính là phương pháp **LAGRANGE MULTIPLIERS**
 
 <br>
 
 <a id="node-0ktj9wl"></a>
 
+###### Method of Lagrange Multipliers
+
 <p align="center"><kbd><img src="assets/zt7d1uvpo3m.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Như vậy bài toán từ việc tìm min/max của hàm f(x,y) với constraint g(x,y)
-> = c trở thành bài toán là tìm x,y, lambda sao cho:
+> = c trở thành bài toán là tìm x,y, λ sao cho:
 >
 >
 >
-> **Grad_f = lambda* Grad_g** tương đương
+> **∇f = λ ∇g** tương đương
 >
 >
 >
-> system equation (vì grad_f là vector các partial derivative [f_x, g_x]
-> tương tự grad_g là vector các partial derivative [g_x, g_y]
+> system equation (vì ∇f là vector các partial derivative [f_x, g_x]
+> tương tự ∇g là vector các partial derivative [g_x, g_y]
 >
 >
 >
-> f_x = lambda*g_x
+> f_x = λg_x
 >
 >
 >
-> f_y = lambda*g_y
+> f_y = λg_y
 
 <br>
 
 <a id="node-evuuore"></a>
+
+###### Lagrange Multipliers System of Equations
 
 <p align="center"><kbd><img src="assets/hpyyri7vgqr.png" width="80%"></kbd></p>
 
@@ -262,6 +284,8 @@
 
 <a id="node-dppablo"></a>
 
+###### Lagrange Multipliers Method Example
+
 <p align="center"><kbd><img src="assets/dhp81i06k9u.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -269,11 +293,11 @@
 >
 >
 >
-> f_x = lambda*g_x chính là 2x = lambda*y
+> f_x = λg_x chính là 2x = λy
 >
 >
 >
-> f_y = lamba*g_y chính là  2y = lambda*x
+> f_y = λg_y chính là  2y = λx
 >
 >
 >
@@ -283,47 +307,38 @@
 
 <a id="node-wz1m4n0"></a>
 
+###### Lagrange Multipliers Constrained Optimization
+
 <p align="center"><kbd><img src="assets/2ei5pmxm5wc.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Một số câu hỏi: 
+> Một số câu hỏi:
 >
 >
 >
-> 1. Sao ta biết hướng nào (ý là hỏi gradient vector)? Gs cho rằng ta đã 
-> biết trong bài trước, gradient vector VUÔNG GÓC VỚI LEVEL CURVE
-> CÒN HƯỚNG THÌ SẼ HƯỚNG VỀ NƠI FUNCTION CÓ GÍA TRỊ CAO
+> 1. Sao ta biết hướng nào (ý là hỏi gradient vector)? Gs cho rằng ta đã biết trong bài trước, gradient vector VUÔNG GÓC VỚI LEVEL CURVE CÒN HƯỚNG THÌ SẼ HƯỚNG VỀ NƠI FUNCTION CÓ GÍA TRỊ CAO
 >
 >
 >
-> Nên ở đây ta sẽ tùy vào lambda âm hay dương (tức là ta cho phép
-> lambda âm hoặc dương
+> Nên ở đây ta sẽ tùy vào λ âm hay dương (tức là ta cho phép λ âm hoặc dương
 >
 >
 >
-> 2. Gs nói thêm là (như lúc nãy ta đã note) rằng điểm minimize f(x, y)
-> với constraint không phải là điểm mà f(x,y) = g(x,y). Mà chỉ là điểm mà
-> gradient grad_f  = lambda*grad_g
+> 2. Gs nói thêm là (như lúc nãy ta đã note) rằng điểm minimize f(x, y) với constraint không phải là điểm mà f(x,y) = g(x,y). Mà chỉ là điểm mà gradient ∇f = λ\*∇g
 >
 >
 >
-> 3. Và bài toán này là để minh họa cho bài toán general hơn là, với hàm
-> f(x,y) (trong machine learning, là loss function là function của các
-> parameters) và ta sẽ muốn tìm parameters để minimize function f
-> với constraint nào đó liên quan đến function g. Và để làm vậy ta đã chuyển
-> bài toán từ tìm điểm gần nhất trên Hyperbola với gốc O thành bài toán
-> tìm x,y sao cho gradient vector của f và g paralell nhau
+> 3. Và bài toán này là để minh họa cho bài toán general hơn là, với hàm f(x,y) (trong machine learning, là loss function là function của các parameters) và ta sẽ muốn tìm parameters để minimize function f với constraint nào đó liên quan đến function g. Và để làm vậy ta đã chuyển bài toán từ tìm điểm gần nhất trên Hyperbola với gốc O thành bài toán tìm x,y sao cho gradient vector của f và g paralell nhau
 >
 >
 >
-> 4. Đúng là trong bài toán này, từ constraint xy = 3, ta có thể solve
-> cho ra y theo x, và từ đó lắp y vào f và chuyển thành bài toán tìm min
-> của hàm f thông thường. Nhưng trong bối cảnh chung hơn là không phải
-> lúc nào ta cũng solve được
+> 4. Đúng là trong bài toán này, từ constraint xy = 3, ta có thể solve cho ra y theo x, và từ đó lắp y vào f và chuyển thành bài toán tìm min của hàm f thông thường. Nhưng trong bối cảnh chung hơn là không phải lúc nào ta cũng solve được
 
 <br>
 
 <a id="node-q433w3t"></a>
+
+###### Lagrange Multipliers Optimization Example
 
 <p align="center"><kbd><img src="assets/8y8yiulc2xd.png" width="80%"></kbd></p>
 
@@ -331,18 +346,20 @@
 > Thế thì theo gs, đối diện với bài toán này, ta không có cách tổng quát
 > để giải. Có khi vấn đề rất dễ mà có khi cũng rất khó
 
-**🔗 See also:** [linked note](./lec_15_partial_differentials_equations.md#node-7wnt4tc)
+**🔗 See also:** [Lagrange Multipliers](./lec_15_partial_differentials_equations.md#node-7wnt4tc)
 
 <br>
 
 <a id="node-0d4gvz6"></a>
+
+###### Lagrange Multipliers System of Equations
 
 <p align="center"><kbd><img src="assets/9q1km4d0dw.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Thế thì, ta viết lại hệ phương trình như vầy, và hai phương trình
 > đầu, có thể thể hiện dưới dạng matrix Ax = 0 với matrix A là [2
-> -lambda; lambda - 2]
+> -λ; λ - 2]
 >
 >
 >
@@ -368,6 +385,8 @@
 
 <a id="node-m09xu4i"></a>
 
+###### Lagrange Multipliers Determinant Condition
+
 <p align="center"><kbd><img src="assets/tk6gjry1ame.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -378,25 +397,31 @@
 
 <a id="node-44py3ro"></a>
 
+###### Determinant of a 2x2 Matrix
+
 <p align="center"><kbd><img src="assets/v2rxuli6k3d.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > thế thì det của 2x2 matrix là ac - bd dễ tính bằng -4 +
-> lambda^2 , để det = 0 thì lambda phải bằng 2 hoặc -2
+> λ² , để det = 0 thì λ phải bằng 2 hoặc -2
 
 <br>
 
 <a id="node-pm2nglp"></a>
 
+###### Lagrange Multipliers Candidate Points
+
 <p align="center"><kbd><img src="assets/nsy8070rczd.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> với lambda = 2, ta có 2 solution là (sqrt3, sqrt3) và (-sqrt3, -sqrt3)
-> còn lambda = -2 thì không có solution nào.
+> với λ = 2, ta có 2 solution là (sqrt3, sqrt3) và (-sqrt3, -sqrt3)
+> còn λ = -2 thì không có solution nào.
 
 <br>
 
 <a id="node-gcyxb7a"></a>
+
+###### Lagrange Multipliers with Two Variables
 
 <p align="center"><kbd><img src="assets/oxwiw1p75jd.png" width="80%"></kbd></p>
 
@@ -408,67 +433,54 @@
 >
 >
 > và solution thứ 2 là (-sqrt3, -sqrt3) và đều ứng với
-> lambda = 2: grad_f = 2*grad_g
+> λ = 2: ∇f = 2*∇g
 
 <br>
 
 <a id="node-h50gftn"></a>
 
+###### Lagrange Multipliers Example
+
 <p align="center"><kbd><img src="assets/2eahldvfe6a.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và gs cho biết lambda ở đây chính là Lagrange multiplier, vì
-> nó giúp " multiply" grad g để ra grad f
+> Và gs cho biết λ ở đây chính là Lagrange multiplier, vì
+> nó giúp " multiply" ∇g để ra ∇f
 
 <br>
 
 <a id="node-06y5vzs"></a>
+
+###### Validity of Lagrange Multipliers
 
 <p align="center"><kbd><img src="assets/pqmj91fmf7.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/4og8q4dm5o4.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại ý là, tại constrained min/max (là hai điểm (sqrt3, sqrt3) và (-sqrt3,
-> -sqrt3)) thì khi ta di chuyển theo hướng của level curve g = c  tức là đi
-> theo hướng của hyperbola)
+> Đại ý là, tại constrained min/max (là hai điểm (sqrt3, sqrt3) và (-sqrt3, -sqrt3)) thì **khi ta di chuyển theo hướng của level curve g = c tức là đi theo hướng của hyperbola thì đạo hàm của f phải không thay đổi**.
 >
 >
 >
-> Thế thì, rõ ràng là tại hai điểm này, thì khi đi theo phương của level
-> curve g = c, thì nó **chính là** **phương tiếp tuyến với level curve của
-> f**. Bởi lẽ ta đã  lập luận rằng, **điểm constraints min/max chính là
-> điểm mà trên contour plot level curve của f và level curve của g tiếp
-> tuyến**  / tangent nhau.
+> Thế thì, rõ ràng là tại hai điểm này, thì khi đi theo phương của level curve g = c, thì nó **chính là** **phương tiếp tuyến với level curve của f**. Bởi lẽ ta đã lập luận rằng, **điểm constraints min/max chính là điểm mà trên contour plot level curve của f và level curve của g tiếp tuyến** / tangent nhau.
 >
 >
 >
-> Thì khi đó, đi theo phương của level curve của g thì chính là đi theo
-> phương tiếp tuyến của level curve của f (và cũng là đi theo phương
-> mà men theo level curve của f, nên độ dốc theo phương đó của f là
-> bằng 0
+> Thì khi đó, đi theo phương của level curve của g thì chính là đi theo phương tiếp tuyến của level curve của f (và cũng là đi theo phương mà men theo level curve của f, nên độ dốc theo phương đó của f là bằng 0
 >
 >
 >
-> Nhưng **nếu đi hướng khác, thì hàm f sẽ tăng hay giảm**, **chỉ có đi
-> theo hướng tangent, tức men theo level curve thì f mới không thay
-> đổi thôi**
+> Nhưng **nếu đi hướng khác, thì hàm f sẽ tăng hay giảm**, **chỉ có đi theo hướng tangent, tức men theo level curve thì f mới không thay đổi thôi**
 >
 >
 >
-> Nên nó khác với unconstrained max/min. ở đó partial derivative bằng
-> 0. Thì đi hướng nào hàm cũng không tăng (vì độ dốc tại đó theo
-> hướng nào cũng bằng 0, và dĩ nhiên khi nói "đi" ở đây là đi một đoạn
-> vô cùng nhỏ, và độ dốc của hàm đương nhiên là 1st derivative, còn
-> đương nhiên second derivative sẽ khác 0, thể hiện độ dốc của độ
-> dốc, tức mức tăng của độ dốc đang thay đổi, hay nói cách khác, tuy
-> hàm f không thay đổi nhưng độ dốc của nó đang thay đổi (đang tăng
-> lên để ngày càng dốc hơn đối với min hoặc độ dốc đang giảm để
-> ngày càng dốc xuống đối với max)
+> Nên nó khác với unconstrained max/min. ở đó partial derivative bằng 0. Thì đi hướng nào hàm cũng không tăng (vì độ dốc tại đó theo hướng nào cũng bằng 0, và dĩ nhiên khi nói "đi" ở đây là đi một đoạn vô cùng nhỏ, và độ dốc của hàm đương nhiên là 1st derivative, còn đương nhiên second derivative sẽ khác 0, thể hiện độ dốc của độ dốc, tức mức tăng của độ dốc đang thay đổi, hay nói cách khác, tuy hàm f không thay đổi nhưng độ dốc của nó đang thay đổi (đang tăng lên để ngày càng dốc hơn đối với min hoặc độ dốc đang giảm để ngày càng dốc xuống đối với max)
 
 <br>
 
 <a id="node-utsfctn"></a>
+
+###### Gradients and Tangent Vectors
 
 <p align="center"><kbd><img src="assets/k6y2wmipmug.png" width="80%"></kbd></p>
 
@@ -488,12 +500,12 @@
 >
 >
 >
-> Và bài trước ta đã biết df/ds|u^ = grad_f . u^
+> Và bài trước ta đã biết df/ds|u^ = ∇f . u^
 >
 >
 >
 > Như vậy, với u^ là bất kì hướng nào tangent với level curve g thì grad
-> f đều có grad_f . u^ = 0, tức grad_f vuông góc với mọi vector u^
+> f đều có ∇f . u^ = 0, tức ∇f vuông góc với mọi vector u^
 > tangent với level curve g = c Do đó nó vuông góc với tangent plane
 > (chứa mọi vector u^ như trên) của level curve/set g = c 
 >
@@ -503,19 +515,21 @@
 >
 >
 >
-> Vậy suy ra **grad_f vuông góc với level curve g = c**
+> Vậy suy ra **∇f vuông góc với level curve g = c**
 
 <br>
 
 <a id="node-i73th7j"></a>
 
+###### Lagrange Multipliers Geometric Derivation
+
 <p align="center"><kbd><img src="assets/7mtqrxipihi.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì bài trước ta biết theorem rằng grad_g cũng vuông góc
-> với level set g = c. Vậy từ đây suy ra grad_f song song grad_g
+> Thế thì bài trước ta biết theorem rằng ∇g cũng vuông góc
+> với level set g = c. Vậy từ đây suy ra ∇f song song ∇g
 > và điều này biện minh cho việc ta dùng sự thật rằng / điều kiện
-> grad_f và grad_g proportional nhau: grad_f = lambda*grad_g để
+> ∇f và ∇g proportional nhau: ∇f = λ∇g để
 > tìm constrained min/max
 >
 >
@@ -525,6 +539,8 @@
 <br>
 
 <a id="node-xnajpsm"></a>
+
+###### Limitations of Lagrange Multipliers
 
 <p align="center"><kbd><img src="assets/jut01jo181f.png" width="80%"></kbd></p>
 
@@ -541,6 +557,8 @@
 <br>
 
 <a id="node-z45c9jr"></a>
+
+###### Lagrange Multipliers Warning
 
 <p align="center"><kbd><img src="assets/jv9vg2z7wgm.png" width="80%"></kbd></p>
 
@@ -564,6 +582,8 @@
 
 <a id="node-82op4qe"></a>
 
+###### Lagrange Multipliers Method
+
 <p align="center"><kbd><img src="assets/4a01r7k6src.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -575,6 +595,8 @@
 
 <a id="node-480la56"></a>
 
+###### Lagrange Multipliers Pyramid Example
+
 <p align="center"><kbd><img src="assets/pyajutpazy.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -584,6 +606,8 @@
 <br>
 
 <a id="node-zn1fzyw"></a>
+
+###### Lagrange Multipliers: Minimizing Surface Area
 
 <p align="center"><kbd><img src="assets/zu22kx35yx.png" width="80%"></kbd></p>
 
@@ -623,7 +647,7 @@
 >
 >
 > Còn chiều cao của mỗi mặt, được tính bằng pytagore ví dụ của mặt
-> PP1P2 là sqrt(u1^2 + h^2) với u1 là khoảng cách từ Q (là điểm hình
+> PP1P2 là sqrt(u1² + h²) với u1 là khoảng cách từ Q (là điểm hình
 > chiếu của P lên mặt đáy, hay PQ là đường cao của hình kim tự tháp,
 > Q có tọa độ là (x,y,0) )
 
@@ -635,9 +659,9 @@
 
 > [!NOTE]
 > Khi đó diện tích mặt bên sẽ là
-> (1/2)a1sqrt(u1^2+h^2) +
-> (1/2)a2*sqrt(u2^2+h^2) +
-> (1/2)a3*sqrt(u3^2+h^2)
+> (1/2)a1sqrt(u1²+h²) +
+> (1/2)a2 × sqrt(u2²+h²) +
+> (1/2)a3 × sqrt(u3²+h²)
 >
 >
 >
@@ -652,25 +676,29 @@
 
 <a id="node-loexta6"></a>
 
+###### Lagrange Multipliers Optimization Example
+
 <p align="center"><kbd><img src="assets/a3u6g5951ml.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và ta dựa vào Lagrange multiplier để có equation: Grad_f =
-> lambda*Grad_g
+> Và ta dựa vào Lagrange multiplier để có equation: ∇f =
+> λ∇g
 >
 >
 >
-> Từ đó ta có **hệ các equation partial derivative của f = lambda*partial
+> Từ đó ta có **hệ các equation partial derivative của f = λpartial
 > derivative của g**
 
 <br>
 
 <a id="node-nmf5yko"></a>
 
+###### Lagrange Multipliers Optimization Example
+
 <p align="center"><kbd><img src="assets/u90kry1libn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và điều này giúp giải ra u1=u2=u3 => Q chính là incenter
+> Và điều này giúp giải ra u1=u2=u3 ⇒ Q chính là incenter
 > (tâm trong) của tam giác đáy
 
 <br>
