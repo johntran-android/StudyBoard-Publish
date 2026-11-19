@@ -362,7 +362,11 @@
 >
 > với λ sẽ kiểm soát tương quan của hai mục tiêu như đã biết
 
-📹 [Xem video trên YouTube](https://youtu.be/pjdUjZ-zpV0)
+📹 Video 1: [Tangent propagation học tính bất biến qua vectơ tiếp tuyến thế nào? (phần 1)](https://youtu.be/pjdUjZ-zpV0)
+
+📹 Video 2: [Tangent propagation xây dựng hàm phạt từ ma trận Jacobian thế nào? (phần 2)](https://www.youtube.com/watch?v=nKyWIxOhNVo)
+
+📹 Video 3: [Tangent propagation liên kết Jacobian và vectơ tiếp tuyến thế nào? (phần 3)](https://www.youtube.com/watch?v=Fu4hPTwO1bY)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
