@@ -645,7 +645,7 @@
 
 <p align="center"><kbd><img src="assets/dh78he08xni.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/6ktn5j.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/l0kdkxkeoel.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tại sao row space của R chính là row space của A để rồi hai vector đầu là basis của rowspace của R cũng chính là basis của rowspace của A?
@@ -662,7 +662,7 @@
 >
 > Do đó chỉ là **quá trình elimination giúp ta CHUYỂN HAI BASIS VECTOR CỦA ROWSPACE CỦA A THÀNH HAI BASIS KHÁC RÕ RÀNG HƠN THÔI**. Gs gọi nó là **the** **best basis**
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=x6hV9XYOkH8)
+📹 [Xem video trên YouTube](https://youtu.be/x6hV9XYOkH8)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
