@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795052318518,
+  "publishedAt": 1795054693031,
   "sections": [
     {
       "title": "📋 Overview",
@@ -613,8 +613,26 @@
   "totalImages": 895,
   "videos": [
     {
+      "id": "Fu4hPTwO1bY",
+      "title": "Tangent propagation liên kết Jacobian và vectơ tiếp tuyến thế nào? (phần 3)",
+      "uploadedAt": 1795053232109,
+      "at": [
+        "Section 5.5.4 Tangent Propagation",
+        "5.5.4 Tangent propagation"
+      ]
+    },
+    {
+      "id": "nKyWIxOhNVo",
+      "title": "Tangent propagation xây dựng hàm phạt từ ma trận Jacobian thế nào? (phần 2)",
+      "uploadedAt": 1795052151761,
+      "at": [
+        "Section 5.5.4 Tangent Propagation",
+        "5.5.4 Tangent propagation"
+      ]
+    },
+    {
       "id": "pjdUjZ-zpV0",
-      "title": "Tangent propagation học tính bất biến qua vectơ tiếp tuyến thế nào?",
+      "title": "Tangent propagation học tính bất biến qua vectơ tiếp tuyến thế nào? (phần 1)",
       "uploadedAt": 1795049926578,
       "at": [
         "Section 5.5.4 Tangent Propagation",
