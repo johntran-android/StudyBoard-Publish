@@ -1,6 +1,6 @@
 # Lecture 11: Matrix Spaces; Rank 1; Small World Graphs
 
-📊 **Progress:** `33` Notes | `34` Screenshots | `2` AI Reviews
+📊 **Progress:** `33` Notes | `34` Screenshots | `11` AI Reviews
 
 ---
 <a id="node-4n31leg"></a>
@@ -34,6 +34,25 @@
 > này** (again, tạm bỏ qua việc ta có thể nhân hai matrix) thì
 > **ta sẽ thấy các tính chất mà mình đã làm bữa giờ với
 > normal vector space vẫn đúng**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chuẩn ý tưởng cốt lõi của giáo sư Strang khi mở rộng khái niệm không gian vector sang không gian ma trận thông qua hai phép toán cộng và nhân vô hướng.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"thứ mà ta làm việc với thật ra không phải vector, mà là matrix"*
+>
+> Về mặt thuật ngữ đại số trừu tượng, bất kỳ phần tử nào thuộc một không gian vector (vector space) đều được gọi là 'vector' theo định nghĩa, do đó các ma trận trong không gian này chính là các vector (chỉ là không phải vector dạng cột thông thường trong R^n).
+>
+>
+> **✓ Strengths**
+> - Hiểu chính xác điều kiện tiên quyết để một tập hợp tạo thành không gian vector là tính đóng dưới phép cộng và phép nhân vô hướng (linear combinations).
+> - Nhận thức đúng việc tạm gác phép nhân hai ma trận sang một bên vì phép toán này không phải là điều kiện cấu thành không gian vector cơ bản.
+>
+> **💡 Deeper notes**
+> - Để thỏa mãn đầy đủ định nghĩa tiên đề của không gian vector, hai phép toán cộng và nhân vô hướng còn cần thỏa mãn 8 tiên đề (như tính kết hợp, giao hoán, phần tử không, phần tử đối, v.v.), vốn dĩ ma trận thông thường đều thỏa mãn trọn vẹn.
 
 <br>
 
@@ -72,18 +91,15 @@
 <p align="center"><kbd><img src="assets/stsrtar8nn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì ta sẽ **đi tìm basis** cũng như từ đó biết được
-> dimension  của M
+> Thế thì ta sẽ **đi tìm basis** cũng như từ đó biết được dimension của M
 >
 >
 >
-> Thế thì cũng như không gian R3 sẽ dễ thấy có một basis
-> cơ bản là (1 0 0), (0 1 0), (0 0 1) (chính là standard basis)
+> Thế thì cũng như không gian R3 sẽ dễ thấy có một basis cơ bản là (1 0 0), (0 1 0), (0 0 1) (chính là standard basis)
 >
 >
 >
-> Thì với **R3x3** ta cũng có một bộ basis gồm **9** matrix như
-> này
+> Thì với **R^3x3** ta cũng có một bộ basis gồm **9** matrix như này
 
 <br>
 
@@ -208,6 +224,25 @@
 > kì matrix 3x3 nào cũng có thể biểu diễn bởi một matrix đối
 > xứng S + một matrix U. (Ngẫm một chút sẽ thấy đúng)
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+>
+> Ghi chú nắm rất tốt ý nghĩa cốt lõi của không gian tổng S + U và việc mọi ma trận 3x3 đều phân tích được thành tổng của một ma trận đối xứng và một ma trận tam giác trên. Cần chú ý cách diễn đạt định nghĩa ban đầu để tránh gây hiểu nhầm sang phép hợp tập hợp.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"với định nghĩa là tập hợp **mọi matrix đối xứng cùng với mọi matrix upper triangular**"*
+>
+> Cách diễn đạt 'cùng với' dễ gây nhầm lẫn không gian tổng (sum of subspaces, S + U) với phép hợp tập hợp (union, S ∪ U). Định nghĩa chính xác của S + U là tập hợp tất cả các tổng s + u, trong đó s thuộc S và u thuộc U (như bảng ghi: 'any element of S + any element of U').
+>
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất kết quả: S + U bao phủ toàn bộ không gian các ma trận 3x3.
+> - Giải thích trực quan chính xác ý nghĩa đại số: mọi ma trận 3x3 đều biểu diễn được dưới dạng tổng s + u.
+>
+> **💡 Deeper notes**
+> - Có thể củng cố bằng công thức số chiều không gian con: dim(S + U) = dim(S) + dim(U) - dim(S ∩ U) = 6 + 6 - 3 = 9, đúng bằng số chiều của không gian ma trận 3x3.
+
 <br>
 
 <a id="node-sxwwix6"></a>
@@ -229,6 +264,19 @@
 >
 > gs cho rằng ta **đã thấy một công thức xuất hiện**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác và tóm tắt đúng nội dung trên bảng cùng ý đồ của bài giảng.
+>
+> **✓ Strengths**
+> - Xác định chính xác các giá trị số chiều của S, U, S ∩ U và S + U dựa trên ví dụ ma trận 3x3.
+> - Nắm bắt được trực giác bài giảng hướng tới công thức liên hệ giữa số chiều của tổng và giao hai không gian con.
+>
+> **💡 Deeper notes**
+> - Công thức tổng quát được giáo sư nhắc tới là: dim(S + U) = dim(S) + dim(U) - dim(S ∩ U) (tương đương với 9 = 6 + 6 - 3).
+> - Trong ví dụ này, S là không gian ma trận đối xứng 3x3, U là ma trận tam giác trên 3x3, và giao S ∩ U chính là không gian các ma trận đường chéo 3x3 có số chiều bằng 3.
+
 <br>
 
 <a id="node-ri2ahk4"></a>
@@ -239,6 +287,17 @@
 
 > [!NOTE]
 > đó là **dim S + dim U = dim (S intersect U) + dim (S + U)**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác, nhận diện đúng công thức Grassmann về số chiều của tổng và giao hai không gian con mà giáo sư đang minh họa trên bảng.
+>
+> **✓ Strengths**
+> - Nhận diện và viết chính xác định lý số chiều: dim S + dim U = dim(S ∩ U) + dim(S + U).
+>
+> **💡 Deeper notes**
+> - Công thức này áp dụng cho các không gian con hữu hạn chiều của cùng một không gian vector và thường được phát biểu dưới dạng dim(S + U) = dim S + dim U - dim(S ∩ U), tương tự nguyên lý bao hàm - loại trừ.
 
 <br>
 
@@ -318,6 +377,18 @@
 > Me: 1 luôn, vì đã nói rank A = 1, mà như bài trước đã
 > biết cols space và row space của A đều có cùng dimension.
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú trả lời chính xác câu hỏi trong bài giảng; bạn đã nắm vững định lý cốt lõi rằng số chiều của không gian hàng và không gian cột đều bằng hạng của ma trận (rank = 1).
+>
+> **✓ Strengths**
+> - Xác định đúng số chiều của không gian cột là 1 dựa trên việc hạng của ma trận bằng 1.
+> - Nắm vững mối liên hệ cơ bản trong đại số tuyến tính: dim(C(A)) = dim(C(A^T)) = rank(A).
+>
+> **💡 Deeper notes**
+> - Về mặt ký hiệu toán học chặt chẽ, cơ sở (basis) là một tập hợp các véc-tơ độc lập tuyến tính sinh ra không gian, ví dụ {[1, 4, 5]}, thay vì chỉ gọi ngắn gọn là '1st row'.
+
 <br>
 
 <a id="node-tr5j7kf"></a>
@@ -333,6 +404,24 @@
 >
 > Gs: Thế thì tôi có thể viết nó thành dạng hai matrix này nhân
 > nhau - matrix bởi 1 cols và matrix bởi 1 row
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+>
+> Ghi chú đã nắm đúng bản chất của ma trận hạng 1 là tích của một ma trận cột (vector cột) và một ma trận hàng (vector hàng) như bài giảng thể hiện.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"matrix bởi 1 cols và matrix bởi 1 row"*
+>
+> Cách dùng từ mang tính khẩu ngữ và chưa chuẩn thuật ngữ; chính xác hơn nên gọi là tích giữa ma trận cột (vector cột kích thước m x 1) và ma trận hàng (vector hàng kích thước 1 x n), hay còn gọi là tích ngoài (outer product).
+>
+>
+> **✓ Strengths**
+> - Nhận diện chính xác phép phân tích ma trận hạng 1 thành tích của một cột và một hàng theo bài giảng của Giáo sư Gilbert Strang.
+>
+> **💡 Deeper notes**
+> - Mọi ma trận có hạng r = 1 đều có thể viết dưới dạng tích uv^T (với u là vector cột và v^T là vector hàng). Không gian cột C(A) khi đó là đường thẳng sinh bởi cột u, và không gian hàng sinh bởi hàng v^T.
 
 <br>
 
@@ -358,6 +447,30 @@
 > (phương pháp LoRA), thì bây giờ mình đã có thể hiểu tại
 > sao nó được gọi là **low-rank matrix**, à bởi vì nó là matrix
 > kết quả của việc **nhân một vector cột với một vector hàng**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+>
+> Bạn đã nắm rất tốt cốt lõi của ma trận rank 1 là tích của vector cột và vector hàng, đồng thời có liên hệ trực quan xuất sắc với LoRA. Cần lưu ý thêm là ma trận low-rank tổng quát có thể có rank r > 1 (tích của ma trận hẹp thay vì chỉ 1 vector), và u, v cần tỉ lệ phù hợp chứ không hẳn là lấy nguyên xi một hàng và một cột của A.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"một vector cột nào đó của nó u và một vector hàng nào đó của nó (v)"*
+>
+> u và v^T không nhất thiết đồng thời là cột và hàng nguyên bản lấy trực tiếp từ A. Nếu u là một cột của A, thì v^T chứa các hệ số tỉ lệ của các cột còn lại so với u (v^T cùng phương với hàng của A nhưng thường cần chuẩn hoá hoặc chia cho hệ số pivot).
+>
+> **2.** *"bởi vì nó là matrix kết quả của việc nhân một vector cột với một vector hàng"*
+>
+> Phép nhân 1 vector cột với 1 vector hàng chỉ cho ra ma trận rank 1 (trường hợp r = 1 trong LoRA). Trong thực tế, low-rank matrix có thể có hạng r > 1 (ví dụ r = 4, 8, 16), được tạo từ tích của ma trận d x r với r x k, tương đương tổng của r ma trận rank 1.
+>
+>
+> **✓ Strengths**
+> - Hiểu chính xác công thức cốt lõi A = u v^T cho ma trận rank 1 từ bài giảng của GS. Gilbert Strang.
+> - Có liên hệ thực tiễn và trực giác rất tốt với kỹ thuật PEFT/LoRA trong Deep Learning.
+>
+> **💡 Deeper notes**
+> - Trong LoRA với rank r bất kỳ, ma trận cập nhật Delta W được biểu diễn dưới dạng tích B * A (với B kích thước d x r và A kích thước r x k), bản chất là tổng của r ma trận rank 1 dạng u_i * v_i^T.
+> - Mọi ma trận rank 1 đều có không gian cột (Column Space) và không gian hàng (Row Space) là đường thẳng 1 chiều, do đó mọi cột đều là bội số của u và mọi hàng đều là bội số của v^T.
 
 <br>
 
@@ -395,6 +508,17 @@
 > [!NOTE]
 > Từ đó dẫn đến một câu hỏi đó là, vậy **tập hợp các rank 4
 > matrix 5x17 đó có là một subspace không?**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **85/100** · ✓ Move on
+>
+> Ghi chú đã nắm bắt chính xác câu hỏi gợi mở quan trọng được đặt ra trong bài giảng về không gian con ma trận.
+>
+> **✓ Strengths**
+> - Ghi chép chính xác câu hỏi bản lề của giáo sư khi mở rộng khái niệm không gian con sang không gian ma trận.
+>
+> **💡 Deeper notes**
+> - Câu trả lời cho câu hỏi này là 'Không': tập hợp các ma trận có rank cố định (ví dụ rank 4) không tạo thành không gian con vì không chứa ma trận không (ma trận không có rank 0) và không đóng kín dưới phép cộng (tổng của hai ma trận rank 4 có thể có rank khác 4, chẳng hạn triệt tiêu nhau về rank 0 hoặc thành rank khác).
 
 <br>
 
@@ -466,6 +590,19 @@
 > gs: đúng vậy, **không phải là subspace**. Ví dụ như **cộng hai
 > matrix rank 1 cũng chưa chắc ra matrix rank 1**, mà khả
 > năng cao ta sẽ ra matrix rank 2
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác và nắm đúng bản chất vì sao tập các ma trận rank 1 không phải là không gian con thông qua tính không đóng kín dưới phép cộng.
+>
+> **✓ Strengths**
+> - Hiểu đúng kết luận trên bảng rằng tập các ma trận có rank bằng 1 không tạo thành một không gian con (subspace).
+> - Đưa ra giải thích trực quan và chính xác: tổng của hai ma trận rank 1 không nhất thiết có rank 1 (thường có rank bằng 2), vi phạm tính đóng dưới phép cộng.
+>
+> **💡 Deeper notes**
+> - Một lý do trực tiếp khác khiến tập này không phải là không gian con: ma trận không (zero matrix) có rank bằng 0 chứ không phải rank 1, do đó tập này không chứa phần tử không.
+> - Tổng của hai ma trận rank 1 cũng có thể cho ra ma trận rank 0 (ví dụ A + (-A) = 0), điều này cũng vi phạm tính đóng kín.
 
 <br>
 
