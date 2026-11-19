@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1794965892489,
+  "publishedAt": 1795052318518,
   "sections": [
     {
       "title": "📋 Overview",
@@ -579,6 +579,18 @@
       "imageCount": 7
     },
     {
+      "title": "5.5.3 Invariances",
+      "path": "pattern_recognition_machine_learning_cbishop/553_invariances.md",
+      "noteCount": 3,
+      "imageCount": 5
+    },
+    {
+      "title": "5.5.4 Tangent propagation",
+      "path": "pattern_recognition_machine_learning_cbishop/554_tangent_propagation.md",
+      "noteCount": 2,
+      "imageCount": 10
+    },
+    {
       "title": "5.7 Ex",
       "path": "pattern_recognition_machine_learning_cbishop/57_ex.md",
       "noteCount": 1,
@@ -597,9 +609,18 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 524,
-  "totalImages": 880,
+  "totalNotes": 529,
+  "totalImages": 895,
   "videos": [
+    {
+      "id": "pjdUjZ-zpV0",
+      "title": "Tangent propagation học tính bất biến qua vectơ tiếp tuyến thế nào?",
+      "uploadedAt": 1795049926578,
+      "at": [
+        "Section 5.5.4 Tangent Propagation",
+        "5.5.4 Tangent propagation"
+      ]
+    },
     {
       "id": "3O0cMGRgNJk",
       "title": "Tại sao early stopping lại tương đương với L2 regularization?",
