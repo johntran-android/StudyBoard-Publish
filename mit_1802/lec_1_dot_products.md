@@ -5,8 +5,6 @@
 ---
 <a id="node-yqhq162"></a>
 
-## Lec 1: Dot Products
-
 <br>
 
 <a id="node-7xfo3v8"></a>
