@@ -1,17 +1,15 @@
-# Lec 4: Square System, Equation
-of Plane
+# Lec 4: Square System, Equation Of Plane
 
 📊 **Progress:** `20` Notes | `23` Screenshots
 
 ---
 <a id="node-7ru2hbe"></a>
 
-## Lec 4: Square System, Equation
-of Plane
-
 <br>
 
 <a id="node-mqr51fg"></a>
+
+## Phương trình mặt phẳng
 
 <p align="center"><kbd><img src="assets/zvy1nm5oyk.png" width="80%"></kbd></p>
 
@@ -33,6 +31,8 @@ of Plane
 <br>
 
 <a id="node-z5e55yx"></a>
+
+### Mặt phẳng qua điểm P0
 
 <p align="center"><kbd><img src="assets/vw3b0kider7.png" width="80%"></kbd></p>
 
@@ -59,6 +59,8 @@ of Plane
 
 <a id="node-4f391h3"></a>
 
+#### Phương trình mặt phẳng
+
 <p align="center"><kbd><img src="assets/4uzqmy9bnah.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -73,6 +75,8 @@ of Plane
 
 <a id="node-miy1y9u"></a>
 
+##### Vectơ pháp tuyến mặt phẳng
+
 <p align="center"><kbd><img src="assets/uog37gq9b3.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -86,11 +90,13 @@ of Plane
 > plane** span bởi A, B và **độ lớn vector A x B là diện tích hình bình
 > hành tạo bởi A, B**
 
-**🔗 See also:** [linked note](./lec_3_matrix_inverse_matrix.md#node-2bhdgpm) · [linked note](./lec_12_gradient_directional_derivative_tangent_plane.md#node-yyn7pto)
+**🔗 See also:** [Ý nghĩa tích có hướng](./lec_3_matrix_inverse_matrix.md#node-2bhdgpm) · [Gradient and Level Surfaces](./lec_12_gradient_directional_derivative_tangent_plane.md#node-yyn7pto)
 
 <br>
 
 <a id="node-s5xh069"></a>
+
+###### Vector song song mặt phẳng
 
 <p align="center"><kbd><img src="assets/zcqjjdvqiq.png" width="80%"></kbd></p>
 
@@ -120,6 +126,8 @@ of Plane
 
 <a id="node-umlz6i6"></a>
 
+###### Nghiệm duy nhất hệ phương trình
+
 <p align="center"><kbd><img src="assets/9lsq031zvcl.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -131,7 +139,7 @@ of Plane
 >
 > Dưới góc nhìn của 1806 mình có thể thấy ở đây là matrix full-rank:
 > **square** và dễ thấy các **column independent** do xuất hiện các **identity
-> matrix**. Do đó, **column space là toàn bộ R^3**, dẫn đến **b = (1,2,3) luôn
+> matrix**. Do đó, **column space là toàn bộ R³**, dẫn đến **b = (1,2,3) luôn
 > nằm trong column space**. Và dẫn đến **luôn có x_particular**.
 >
 >
@@ -147,6 +155,8 @@ of Plane
 
 <a id="node-13vmyam"></a>
 
+###### Giao điểm ba mặt phẳng
+
 <p align="center"><kbd><img src="assets/z37zqow6j9a.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -158,6 +168,8 @@ of Plane
 
 <a id="node-srjk2q4"></a>
 
+###### Nghiệm hệ phương trình Ax=b
+
 <p align="center"><kbd><img src="assets/1lmycm71r2c.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -167,6 +179,8 @@ of Plane
 <br>
 
 <a id="node-34xxanc"></a>
+
+###### Số nghiệm hệ tuyến tính
 
 <p align="center"><kbd><img src="assets/balwu5wib3p.png" width="80%"></kbd></p>
 
@@ -198,6 +212,8 @@ of Plane
 
 <a id="node-g3enmnt"></a>
 
+###### Hình học nghiệm hệ phương trình
+
 <p align="center"><kbd><img src="assets/fj2ozsnfhd.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -210,7 +226,7 @@ of Plane
 >
 >
 >
-> Xét hệ 3 equation 3 variable. Ax = b. matrix A 3x3, x, b đều là R^3 vector. equation 1 là
+> Xét hệ 3 equation 3 variable. Ax = b. matrix A 3x3, x, b đều là R³ vector. equation 1 là
 > equation của plane P1, equation 2 là equation của plane P2 equation 3 là equation của
 > plane P3
 >
@@ -231,7 +247,7 @@ of Plane
 >
 >
 >
-> Về mặt hình học, thì lúc này **cả 3 plane sẽ có cùng một normal vector** -> 3 plane cùng
+> Về mặt hình học, thì lúc này **cả 3 plane sẽ có cùng một normal vector** → 3 plane cùng
 > vuông góc với cùng một normal vector, và **chỉ khác nhau bởi vế phải** - như đã nói có thể
 > coi như shift các plane cách xa hoặc lại gần origin.
 >
@@ -241,15 +257,15 @@ of Plane
 >
 >
 >
-> i) 3 PLANE SONG SONG -> hệ **vô nghiệm**
+> i) 3 PLANE SONG SONG → hệ **vô nghiệm**
 >
 >
 >
-> ii) 2 plane TRÙNG nhau VÀ song song với plane còn lại -> hệ **vô nghiệm**
+> ii) 2 plane TRÙNG nhau VÀ song song với plane còn lại → hệ **vô nghiệm**
 >
 >
 >
-> iii) cả 3 đều TRÙNG nhau -> hệ có **vô số nghiệm**
+> iii) cả 3 đều TRÙNG nhau → hệ có **vô số nghiệm**
 >
 >
 >
@@ -258,15 +274,15 @@ of Plane
 >
 >
 >
-> i) b'2 b'3 đều khác 0 -> hệ **vô nghiệm**
+> i) b'2 b'3 đều khác 0 → hệ **vô nghiệm**
 >
 >
 >
-> ii) b'2 hoặc b'3 khác 0 -> hệ **vô nghiệm**
+> ii) b'2 hoặc b'3 khác 0 → hệ **vô nghiệm**
 >
 >
 >
-> iii) b'2 = b'3 = 0 -> hệ có **vô số nghiệm**
+> iii) b'2 = b'3 = 0 → hệ có **vô số nghiệm**
 >
 >
 >
@@ -292,7 +308,7 @@ of Plane
 >
 >
 > i) Sau khi elimination, **row 3 sẽ thành 0**, khi đó **nếu b'3 khác 0**, thì ta có trường hợp **P3
-> KHÔNG CHỨA LINE P1P2** -> Hệ v**ô nghiệm**, đây cũng là khi **b không nằm trong C(A)**
+> KHÔNG CHỨA LINE P1P2** → Hệ v**ô nghiệm**, đây cũng là khi **b không nằm trong C(A)**
 >
 >
 >
@@ -309,7 +325,7 @@ of Plane
 >
 >
 > Theo hình học, 3 row đều độc lập, tức **3 plane equation đều có normal vector khác 
-> nhau** **P1, P2, P3 PLANE CẮT NHAU TẠI 1 ĐIỂM** -> Chỉ có một solution
+> nhau** **P1, P2, P3 PLANE CẮT NHAU TẠI 1 ĐIỂM** → Chỉ có một solution
 >
 >
 >
@@ -328,15 +344,19 @@ of Plane
 
 <a id="node-i35ympg"></a>
 
+###### Đường thẳng thuộc mặt phẳng
+
 <p align="center"><kbd><img src="assets/zo7ew3aoczp.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > nếu line P1,P2 nằm trong
-> P3 -> many solution
+> P3 → many solution
 
 <br>
 
 <a id="node-jp4bcb1"></a>
+
+###### Giao điểm ba mặt phẳng
 
 <p align="center"><kbd><img src="assets/jqr9pj5vbdq.png" width="80%"></kbd></p>
 
@@ -346,6 +366,8 @@ of Plane
 <br>
 
 <a id="node-0yp46wt"></a>
+
+###### Hình học của phương trình
 
 <p align="center"><kbd><img src="assets/3hiezach6k5.png" width="80%"></kbd></p>
 
@@ -372,11 +394,13 @@ of Plane
 
 <a id="node-hn6ghen"></a>
 
+###### Tính khả nghịch ma trận
+
 <p align="center"><kbd><img src="assets/lfo8jg0qsfg.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > thế thì gs quay lại việc **tại sao ta không thể luôn tìm solution của
-> bằng cách Ainv*y** (hay Ainvb) là **bởi A không phải luôn invertible**
+> bằng cách Ainv × y** (hay Ainvb) là **bởi A không phải luôn invertible**
 > (theo góc nhìn của 1806 thì đã quá rõ)
 >
 >
@@ -418,6 +442,8 @@ of Plane
 
 <a id="node-3gid9zc"></a>
 
+###### Hệ phương trình thuần nhất
+
 <p align="center"><kbd><img src="assets/oslm19au6wr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -432,13 +458,15 @@ of Plane
 
 <a id="node-8mzo5oy"></a>
 
+###### Nullspace ma trận khả nghịch
+
 <p align="center"><kbd><img src="assets/bac8evbddpv.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/x5rcqpijgb.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Tiếp ta xét trường hợp A invertible. Khi đó tồn tại Ainv, nên Ax = 0
-> <=> x = Ainv*0 = 0
+> ⇔ x = Ainv × 0 = 0
 >
 >
 >
@@ -449,8 +477,8 @@ of Plane
 >
 > 1806 view: thì đây là lúc matrix non-singular, nên mọi cols đều
 > indendent, không có free columns, nên system equation không có
-> free variable -> không tìm được special solution nào -> không có
-> vector khác 0 nào trong basis của nullspace -> dim N(A) = 0
+> free variable → không tìm được special solution nào → không có
+> vector khác 0 nào trong basis của nullspace → dim N(A) = 0
 >
 >
 >
@@ -462,6 +490,8 @@ of Plane
 <br>
 
 <a id="node-s5twekq"></a>
+
+###### Véc-tơ pháp tuyến đồng phẳng
 
 <p align="center"><kbd><img src="assets/8h4cjee6wo.png" width="80%"></kbd></p>
 
@@ -497,6 +527,8 @@ of Plane
 
 <a id="node-o4y52ho"></a>
 
+###### Giao tuyến ba mặt phẳng
+
 <p align="center"><kbd><img src="assets/eu45ss5mzh7.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -515,6 +547,8 @@ of Plane
 <br>
 
 <a id="node-8t9fpx0"></a>
+
+###### Trường hợp tổng quát
 
 <p align="center"><kbd><img src="assets/l2jtxdlnhge.png" width="80%"></kbd></p>
 
