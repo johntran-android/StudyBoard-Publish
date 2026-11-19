@@ -5,8 +5,6 @@
 ---
 <a id="node-5vst46u"></a>
 
-## Lec 16: Double Integrals
-
 <br>
 
 <a id="node-gy7xpx2"></a>
@@ -42,7 +40,7 @@
 >
 >
 >
-> Kí hiệu là **∫∫R f(x,y)*dA**
+> Kí hiệu là **∫∫R f(x,y) × dA**
 >
 >
 >
@@ -72,7 +70,7 @@
 >
 >
 >
-> Thì tổng của tất cả các thể tích của chúng với ∆A nhỏ -> dA chính
+> Thì tổng của tất cả các thể tích của chúng với ∆A nhỏ → dA chính
 > là ý nghĩa của tích phân kép mà ta đang nói đến
 
 <br>
@@ -94,7 +92,7 @@
 >
 >
 >
-> Thế thì khi lấy **limit của sum này** khi cho ∆A_i -> 0 thì ta sẽ có Double
+> Thế thì khi lấy **limit của sum này** khi cho ∆A_i → 0 thì ta sẽ có Double
 > Integrals: ∫∫R f(x,y)dA
 
 <br>
@@ -124,7 +122,7 @@
 
 > [!NOTE]
 > Thế thì để tính double integrals, như đã thật ra ta sẽ không chia R thành
-> các ∆A và tính **limit ∆A -> 0 của ∑ ∆A_i * f(x_i, y_i)**
+> các ∆A và tính **limit ∆A → 0 của ∑ ∆A_i * f(x_i, y_i)**
 >
 >
 >
@@ -164,11 +162,11 @@
 >
 >
 >
-> **Limit δx -> 0 của [Tổng mọi S(x)*δx]**
+> **Limit δx → 0 của [Tổng mọi S(x)*δx]**
 >
 >
 >
-> Và đó chính là: **tích phân S(x)*dx**
+> Và đó chính là: **tích phân S(x) × dx**
 
 <br>
 
@@ -337,7 +335,7 @@
 <p align="center"><kbd><img src="assets/l5nsbruujn9.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tính cái **inner integra**l: tích phân từ 0 đến 1 (1-x^2 - y^2) dy đơn giản  là làm theo việc tính
+> Tính cái **inner integra**l: tích phân từ 0 đến 1 (1-x² - y²) dy đơn giản  là làm theo việc tính
 > tích phân 1 biến mà đã học hồi cấp 3 hoặc trong 18.01.
 >
 >
@@ -360,12 +358,12 @@
 >
 >
 >
-> với f(x,y)  = 1 - x^2 - y^2 với x constant, thì nguyên hàm anti-derivative) của nó là y - y*x^2 -
-> (1/3)y^3
+> với f(x,y)  = 1 - x² - y² với x constant, thì nguyên hàm anti-derivative) của nó là y - y × x² -
+> (1/3)y³
 >
 >
 >
-> Nên kết quả là [y - y*x^2 - (1/3)y^3] từ 0 đến 1 = 1 - x^2 - 1/3 = 2/3 - x^2
+> Nên kết quả là [y - y × x² - (1/3)y³] từ 0 đến 1 = 1 - x² - 1/3 = 2/3 - x²
 >
 >
 >
@@ -431,12 +429,12 @@
 > [!NOTE]
 > Thế thì lúc này **bound** của tích phân **sẽ khác**. Đó là, **với giá trị
 > cụ thể của x**, thì **bound của tích phân của y sẽ khác**, không **còn
-> là 0 tới 1 nữa** mà là từ 0 **đến sqrt(1-x^2)**
+> là 0 tới 1 nữa** mà là từ 0 **đến sqrt(1-x²)**
 >
 >
 >
-> Bởi x^2+y^2 = 1 => y = +/- sqrt(1-x^2), mà xét x, y dương (từ [0:1] nên
-> y = sqrt(1-x^2)
+> Bởi x²+y² = 1 ⇒ y = +/- sqrt(1-x²), mà xét x, y dương (từ [0:1] nên
+> y = sqrt(1-x²)
 
 <br>
 
@@ -447,7 +445,7 @@
 > [!NOTE]
 > Từ đó **bound** của **inner integral phụ thuộc x**, còn **bound của x vẫn
 > là number từ 0 đến 1**. Mang ý nghĩa là với gía trị của x, hay một lát cắt
-> tại x, song song với plane yz, thì **bound của y từ 0 đến sqrt(1-x^2)**.
+> tại x, song song với plane yz, thì **bound của y từ 0 đến sqrt(1-x²)**.
 >
 >
 >
@@ -467,16 +465,16 @@
 
 > [!NOTE]
 > Và ta cũng chỉ đơn giản là **tính inner integral** trước: bằng các **xác định
-> nguyên hàm** của **1 - x^2 - y^2** đó là y - x^2*y -(1/3)y^3 và **thế y =
-> sqrt(1-x^2)** và **y = 0** vào
+> nguyên hàm** của **1 - x² - y²** đó là y - x² × y -(1/3)y³ và **thế y =
+> sqrt(1-x²)** và **y = 0** vào
 >
 >
 >
-> Để có sqrt(1-x^2) - x^2*sqrt(1-x^2) -(1/3)(sqrt(1-x^2))^3/2
+> Để có sqrt(1-x²) - x² × sqrt(1-x²) -(1/3)(sqrt(1-x²))³/2
 >
 >
 >
-> thu gọn thành (2/3)(1-x^2)^3/2
+> thu gọn thành (2/3)(1-x²)³/2
 
 <br>
 
@@ -501,7 +499,7 @@
 >
 >
 >
-> Đặt **x = sin(θ)** thì (**1-x^2)^1/2 = cos(θ)**
+> Đặt **x = sin(θ)** thì (**1-x²)^1/2 = cos(θ)**
 
 <br>
 
@@ -514,19 +512,19 @@
 >
 >
 >
-> (hoặc nói là: Đạo hàm hai vế theo theta: (d/dθ)x = (d/dθ) sin(theta)
+> (hoặc nói là: Đạo hàm hai vế theo θ: (d/dθ)x = (d/dθ) sin(θ)
 >
 >
 >
-> <=> dx/dθ = cos(θ) <=> dx = cos(θ)dθ)
+> ⇔ dx/dθ = cos(θ) ⇔ dx = cos(θ)dθ)
 >
 >
 >
-> và **bound x từ 0 đến 1** sẽ ứng với bound **θ từ 0 đến pi/2**
+> và **bound x từ 0 đến 1** sẽ ứng với bound **θ từ 0 đến π/2**
 >
 >
 >
-> thế vào ta có **tích phân 0:π/2 (2/3)cos(θ)^3.cos(θ).dθ
+> thế vào ta có **tích phân 0:π/2 (2/3)cos(θ)³.cos(θ).dθ
 >
 >
 >
@@ -540,7 +538,7 @@
 
 > [!NOTE]
 > Tiếp để tính tích phân này ta cần dùng công thức
-> [cos(theta)]^2 = (1+cos(2theta))/2
+> [cos(θ)]² = (1+cos(2θ))/2
 
 <br>
 
@@ -549,12 +547,12 @@
 <p align="center"><kbd><img src="assets/lcp6gu83zn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Triển khai [(1+cos2theta)/2]^2 ra
+> Triển khai [(1+cos2θ)/2]² ra
 >
 >
 >
-> Và với cái [cos(2theta)]^2 ta tiếp tục dùng công thức cos(2theta)]^2 =
-> [1+cos(4theta)]/2 để không còn lũy thừa nữa. Khi đó tính tích phân
+> Và với cái [cos(2θ)]² ta tiếp tục dùng công thức cos(2θ)]² =
+> [1+cos(4θ)]/2 để không còn lũy thừa nữa. Khi đó tính tích phân
 > sẽ ra π/8 (gs không làm vì mất thời gian)
 
 <br>
@@ -629,7 +627,7 @@
 >
 >
 >
-> Thế thì dễ thấy với given y, x sẽ từ **x = y^2 đến x = y**
+> Thế thì dễ thấy với given y, x sẽ từ **x = y² đến x = y**
 >
 >
 >
@@ -657,7 +655,7 @@
 >
 >
 >
-> nên ta có [e^y/y]x | y^2 : y = **e^y - e^y*y**
+> nên ta có [e^y/y]x | y² : y = **e^y - e^y × y**
 
 <br>
 
@@ -666,7 +664,7 @@
 <p align="center"><kbd><img src="assets/dkqv8ov8949.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, tính **outer integral: ∫(e^y - y*e^y)dy = ∫e^ydy - ∫y*e^ydy**
+> Tiếp, tính **outer integral: ∫(e^y - y × e^y)dy = ∫e^ydy - ∫y × e^ydy**
 >
 >
 >
@@ -674,7 +672,7 @@
 >
 >
 >
-> = 1*e^y + y*e^y = e**^y + y*e^y**
+> = 1 × e^y + y × e^y = e**^y + y × e^y**
 >
 >
 >
@@ -682,11 +680,11 @@
 >
 >
 >
-> - (y*e^y)' = - e^y - y*e^y 
+> \- (y × e^y)' = - e^y - y × e^y 
 >
 >
 >
-> Cộng 2 vế cho 2e^y: 2e^y - (y*e^y)' = e^y - y*e^y 
+> Cộng 2 vế cho 2e^y: 2e^y - (y × e^y)' = e^y - y × e^y 
 >
 >
 >
@@ -694,15 +692,15 @@
 >
 >
 >
-> (2e^y)' - (y*e^y)' = e^y - y*e^y 
+> (2e^y)' - (y × e^y)' = e^y - y × e^y 
 >
 >
 >
-> <=> (2e^y - y*e^y)' = e^y - y*e^y 
+> ⇔ (2e^y - y × e^y)' = e^y - y × e^y 
 >
 >
 >
-> Do đó nguyên hàm của e^y - y*e^y là **2e^y - y*e^y**
+> Do đó nguyên hàm của e^y - y × e^y là **2e^y - y × e^y**
 >
 >
 >
