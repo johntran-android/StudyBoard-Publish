@@ -5,8 +5,6 @@
 ---
 <a id="node-msb7pyb"></a>
 
-## Lec 2: Determinant, Cross Product
-
 <br>
 
 <a id="node-8kkd4d9"></a>
@@ -51,17 +49,17 @@
 >
 >
 > Theo 1802 thì lập luận như sau: theo hình học, phần hình chiếu của a trên u,
-> gọi là p đi, sẽ là |a|*cos(theta).
+> gọi là p đi, sẽ là |a|*cos(θ).
 >
 >
 >
-> Và vì u là unit vector, tức |u| = 1, ta có p = |a|*cos(theta) = |a|*1*cos(theta)
-> = |a|*|u|*cos(theta). 
+> Và vì u là unit vector, tức |u| = 1, ta có p = |a|*cos(θ) = |a|*1 × cos(θ)
+> = |a|*|u|*cos(θ). 
 >
 >
 >
 > Thì đây chính là dot product của a và u: **aTu** như đã chứng minh bữa trước (rằng
-> aTb = |a|*|b|*cos(theta)
+> aTb = |a|*|b|*cos(θ)
 >
 >
 >
@@ -76,20 +74,20 @@
 >
 >
 >
-> Khi đó b = p + e = ax + e => e = b - ax. e là phần còn dư của v sau khi
+> Khi đó b = p + e = ax + e ⇒ e = b - ax. e là phần còn dư của v sau khi
 > project lên a, ta có e sẽ vuông góc với a: aTe = 0
 >
 >
 >
-> Từ đó: aT(b-ax) = 0 <=> aTb - aTax = 0 <=> x = aTb/aTa
+> Từ đó: aT(b-ax) = 0 ⇔ aTb - aTax = 0 ⇔ x = aTb/aTa
 >
 >
 >
-> => p = ax = aaTb/aTa
+> ⇒ p = ax = aaTb/aTa
 >
 >
 >
-> Thế thì, nếu **a là unit vector**, tức |a|^2 = aTa = 1, thì p = aaTb
+> Thế thì, nếu **a là unit vector**, tức |a|² = aTa = 1, thì p = aaTb
 >
 >
 >
@@ -97,15 +95,15 @@
 >
 >
 >
-> |p|^2 = pTp =  (aaTb)T(aaTb) = bT(aaT)T(aaTb) = bTaaTaaTb
+> |p|² = pTp =  (aaTb)T(aaTb) = bT(aaT)T(aaTb) = bTaaTaaTb
 >
 >
 >
-> = bTaaTb = (aTb)^2 vì aTb là scalar, nên aTb = bTa => bTaaTb = (aTb)(aTb)
+> = bTaaTb = (aTb)² vì aTb là scalar, nên aTb = bTa ⇒ bTaaTb = (aTb)(aTb)
 >
 >
 >
-> **= (aTb)^2**
+> **= (aTb)²**
 >
 >
 >
@@ -141,19 +139,19 @@
 >
 > Thì ta có thể tiếp cận theo lối **tính diện tích các tam giác**. Và với tam
 > giác, nếu có hai vector A, B, ta có thể tính diện tích là **1/2 * đáy * cao**
-> với **đáy = length của vector A**, **cao là length vector B * sin(theta)**.
+> với **đáy = length của vector A**, **cao là length vector B * sin(θ)**.
 >
 >
 >
-> Vậy thì ta có thể dùng công thức bữa trước để tính cos(theta):
+> Vậy thì ta có thể dùng công thức bữa trước để tính cos(θ):
 >
 >
 >
-> **cos(theta) = [dot product của A, B] / [length A * length B]**
+> **cos(θ) = [dot product của A, B] / [length A * length B]**
 >
 >
 >
-> Rồi **từ đó tính ra sin(theta)**
+> Rồi **từ đó tính ra sin(θ)**
 >
 >
 >
@@ -174,13 +172,13 @@
 >
 >
 >
-> Và góc giữa A' và B, gọi là theta' sẽ bằng 90 - theta. Nên **sin(theta)
-> = cos(theta')**.
+> Và góc giữa A' và B, gọi là θ' sẽ bằng 90 - θ. Nên **sin(θ)
+> = cos(θ')**.
 >
 >
 >
 > Từ đó công thức mà ta dùng để tính diện tích tam giác
-> |A|*|B|*sin(theta) sẽ trở thành  **|A'|*|B|*cos(theta')**
+> |A|*|B|*sin(θ) sẽ trở thành  **|A'|*|B|*cos(θ')**
 >
 >
 >
@@ -191,7 +189,7 @@
 
 <a id="node-x3tt19o"></a>
 
-- **Tính toán phép quay 90 độ**
+###### Tính toán phép quay 90 độ
 
 <p align="center"><kbd><img src="assets/hp08dh3y4nm.png" width="80%"></kbd></p>
 
@@ -203,7 +201,7 @@
 
 <a id="node-tfkyz6q"></a>
 
-- **Xây dựng ma trận xoay 2D**
+###### Xây dựng ma trận xoay 2D
 
 <p align="center"><kbd><img src="assets/4k20c9g0jbr.png" width="80%"></kbd></p>
 
@@ -240,7 +238,7 @@
 >
 >
 >
-> -> khi đó coefficients chính là component của col1 của Q = [cos(φ), sin(φ)]
+> → khi đó coefficients chính là component của col1 của Q = [cos(φ), sin(φ)]
 >
 >
 >
@@ -257,7 +255,7 @@
 >
 >
 >
-> -> khi đó coefficients chính là components của col2 của Q = [-sin(φ), cos(φ)]
+> → khi đó coefficients chính là components của col2 của Q = [-sin(φ), cos(φ)]
 >
 >
 >
@@ -277,7 +275,7 @@
 
 <a id="node-hqstsep"></a>
 
-- **Vector vuông góc A'**
+###### Vector vuông góc A'
 
 <p align="center"><kbd><img src="assets/f3r7qiq4tjs.png" width="80%"></kbd></p>
 
@@ -289,7 +287,7 @@
 
 <a id="node-wc2svhz"></a>
 
-- **Determinant và Diện tích Hình Bình Hành**
+###### Determinant và Diện tích Hình Bình Hành
 
 <p align="center"><kbd><img src="assets/1pe5w78ivbi.png" width="80%"></kbd></p>
 
@@ -312,7 +310,7 @@
 
 <a id="node-h42wet1"></a>
 
-- **Diện tích tam giác từ định thức**
+###### Diện tích tam giác từ định thức
 
 <p align="center"><kbd><img src="assets/2fzkgveyx8i.png" width="80%"></kbd></p>
 
@@ -323,6 +321,8 @@
 <br>
 
 <a id="node-3ecldsj"></a>
+
+###### Khai triển cofactor định thức
 
 <p align="center"><kbd><img src="assets/v5wqj6t14f.png" width="80%"></kbd></p>
 
@@ -343,17 +343,21 @@
 
 <a id="node-yodlng2"></a>
 
+###### Thể tích hình hộp từ vectơ
+
 <p align="center"><kbd><img src="assets/g3h96eb1b9c.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > và (absolute value của) nó **chính là volume (thể tích)
 > của hình hộp (parallelepiped) tạo bởi 3 vector này**
 
-**🔗 See also:** [linked note](./lec_3_matrix_inverse_matrix.md#node-l4alsam)
+**🔗 See also:** [Mặt phẳng từ định thức](./lec_3_matrix_inverse_matrix.md#node-l4alsam)
 
 <br>
 
 <a id="node-3p6bzh6"></a>
+
+###### Khái niệm tích có hướng
 
 <p align="center"><kbd><img src="assets/w6tbr19uwl9.png" width="80%"></kbd></p>
 
@@ -394,6 +398,8 @@
 
 <a id="node-qv843wh"></a>
 
+###### Ứng dụng tích có hướng
+
 <p align="center"><kbd><img src="assets/ks96b85u8o.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/5pucmp21x97.png" width="80%"></kbd></p>
@@ -415,6 +421,8 @@
 
 <a id="node-wdjdkyd"></a>
 
+###### Tích vectơ i và j
+
 <p align="center"><kbd><img src="assets/rv2cx5zsu.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -423,22 +431,26 @@
 >
 >
 > me: Dễ thấy nó **chính là k**. Theo định nghĩa nó sẽ vuông góc với
-> plane span bởi i^, j^ -> chính là trục k. Còn hướng thì theo quy tắc
-> bàn tay phải ta sẽ thấy nó hướng lên -> k^
+> plane span bởi i^, j^ → chính là trục k. Còn hướng thì theo quy tắc
+> bàn tay phải ta sẽ thấy nó hướng lên → k^
 
 <br>
 
 <a id="node-gqp6baa"></a>
 
+###### Phép nhân vectơ đơn vị
+
 <p align="center"><kbd><img src="assets/585zwjsoioe.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > gs: correct. và ta có thể tính ra
-> để thấy nó chính là 1*k^ = k^
+> để thấy nó chính là 1 × k^ = k^
 
 <br>
 
 <a id="node-7shmm0y"></a>
+
+###### Hình học tích hỗn tạp
 
 <p align="center"><kbd><img src="assets/9u0psyt5z9l.png" width="80%"></kbd></p>
 
@@ -480,7 +492,7 @@
 >
 >
 >
-> Thế là ta có thể tích sẽ bằng (diện tích base)*(chiều cao)
+> Thế là ta có thể tích sẽ bằng (diện tích base) × (chiều cao)
 >
 >
 >
