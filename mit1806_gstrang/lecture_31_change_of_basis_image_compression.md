@@ -624,7 +624,7 @@
 >
 > Từ đó ta có A
 
-**🔗 See also:** [linked note](./lecture_30_linear_transformations_and_their_matrices.md#node-pcg8p5q)
+**🔗 See also:** [Quy tắc tìm ma trận A](./lecture_30_linear_transformations_and_their_matrices.md#node-pcg8p5q)
 
 <br>
 
