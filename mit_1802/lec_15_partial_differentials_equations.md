@@ -5,8 +5,6 @@
 ---
 <a id="node-ssgomfm"></a>
 
-## Lec 15: Partial Differentials Equations
-
 <br>
 
 <a id="node-pznee55"></a>
@@ -35,11 +33,13 @@
 
 <a id="node-wbk9xic"></a>
 
+### Gradient and Linear Approximation
+
 <p align="center"><kbd><img src="assets/knbl2vjcudh.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Sau đó ta cũng đã học về khái niệm Gradient vector (nabla f) là vector
-> chứa các partial derivatives: Grad_f = (f_x, f_y, f_z)
+> chứa các partial derivatives: ∇f = (f_x, f_y, f_z)
 >
 >
 >
@@ -47,21 +47,21 @@
 >
 >
 >
-> df = f_x*dx + f_y*dy + f_z*dz nó sẽ mang ý nghĩa là place holder, để
-> khi thay các df, dx, dy, dz bằng các small change delta_f, delta_x, delta_y
-> delta_z thì ta có LINEAR APPROXIMATION equation:
+> df = f_x × dx + f_y × dy + f_z × dz nó sẽ mang ý nghĩa là place holder, để
+> khi thay các df, dx, dy, dz bằng các small change Δf, Δx, Δy
+> Δz thì ta có LINEAR APPROXIMATION equation:
 >
 >
 >
-> delta_f ~= f_x*delta_x + f_y*delta_y  +f_z*delta_z
+> Δf ≈ f_x × Δx + f_y × Δy  +f_z × Δz
 >
 >
 >
-> và nó cũng chính là dot product của Grad_f vector và Delta_r vector
+> và nó cũng chính là dot product của ∇f vector và Delta_r vector
 >
 >
 >
-> (vector r = (x, y, z), nên delta_r = (delta_x, detta_y, delta_z)
+> (vector r = (x, y, z), nên Δr = (Δx, detta_y, Δz)
 
 <br>
 
@@ -71,7 +71,7 @@
 
 > [!NOTE]
 > Và cái này nó gọi là Tangent plane approximation (cũng là linear
-> approximation) bởi vì khi ta dùng dấu bằng thay cho ~= ở đây thì tức là
+> approximation) bởi vì khi ta dùng dấu bằng thay cho ≈ ở đây thì tức là
 > ta sẽ coi hàm f  như một hàm tuyến tính đối với x, y, z để rồi nó trở thành
 > mặt phẳng tiếp tuyến của hàm f.
 >
@@ -85,21 +85,23 @@
 
 <a id="node-oqny49o"></a>
 
+##### Tangent Plane and Normal Vector
+
 <p align="center"><kbd><img src="assets/0afnst1o72um.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Và bài trước ta cũng đã biết về theorem nói rằng Gradient vector
-> Grad_f sẽ vuông góc với level set (level curve) - là tập hợp các điểm
+> ∇f sẽ vuông góc với level set (level curve) - là tập hợp các điểm
 > của đồ thị hàm f mà tại đó đều bằng constant c.
 >
 >
 >
-> Do đó, Grad_f tại một điểm cũng chính là normal vector của tangent
+> Do đó, ∇f tại một điểm cũng chính là normal vector của tangent
 > plane tại điểm đó
 >
 >
 >
-> Còn hướng thì Grad_f sẽ chỉ về hướng mà f tăng lên nhanh nhất
+> Còn hướng thì ∇f sẽ chỉ về hướng mà f tăng lên nhanh nhất
 
 **🔗 See also:** [linked note](./lec_12_gradient_directional_derivative_tangent_plane.md#node-ttjrg7j)
 
@@ -160,7 +162,7 @@
 >
 >
 > Do đó ta cũng phải kiểm tra limit / boundary bằng cách cho variable
-> -> 0 hay infinity và xem limit của function như thế nào thì từ đó mới
+> → 0 hay infinity và xem limit của function như thế nào thì từ đó mới
 > kết luận là local min/max có phải là Global min/max không
 
 <br>
@@ -184,7 +186,7 @@
 >
 >
 >
-> Khi ta có TOTAL DIFFERENTIALS:  df = f_x*dx + f_y*dy + f_z*dz
+> Khi ta có TOTAL DIFFERENTIALS:  df = f_x × dx + f_y × dy + f_z × dz
 >
 >
 >
@@ -221,7 +223,7 @@
 >
 >
 >
-> Do đó ta mới có f_x*x_u. Tương tự với y, z
+> Do đó ta mới có f_x × x_u. Tương tự với y, z
 >
 >
 >
@@ -230,6 +232,8 @@
 <br>
 
 <a id="node-7wnt4tc"></a>
+
+###### Lagrange Multipliers
 
 <p align="center"><kbd><img src="assets/qsco3bkoxtb.png" width="80%"></kbd></p>
 
@@ -245,7 +249,7 @@
 >
 >
 >
-> Grad_f = Lambda* Grad_g và từ đó ta có hệ phương trình
+> ∇f = λ ∇g và từ đó ta có hệ phương trình
 >
 >
 >
@@ -255,7 +259,7 @@
 >
 > Đó là tại điểm min/max thì **LEVEL CURVE CỦA F TIẾP TUYẾN VỚI
 > LEVEL CURVE CỦA G NÊN TẠI ĐÓ HAI NORMAL VECTOR / CŨNG
-> LÀ HAI VECTOR GRAD_F VÀ GRAD_G SONG SONG /
+> LÀ HAI VECTOR ∇F VÀ ∇G SONG SONG /
 > PROPORTIONAL NHAU**
 >
 >
@@ -263,7 +267,7 @@
 > Gs cũng nhắc lại có thể bài toán trở nên phức tạp nhưng cũng có thể
 > đơn giản (theo link xanh lá)
 
-**🔗 See also:** [linked note](./lec_13_lagrange_multiplier.md#node-q433w3t) · [linked note](./lec_13_lagrange_multiplier.md#node-h0mt9ko)
+**🔗 See also:** [Lagrange Multipliers Optimization Example](./lec_13_lagrange_multiplier.md#node-q433w3t) · [Parallel Gradients of Level Curves](./lec_13_lagrange_multiplier.md#node-h0mt9ko)
 
 <br>
 
@@ -296,7 +300,7 @@
 >
 >
 >
-> df = f_x*dx + f_y*dy + f_z*dz để rồi vì y = const nen dy = 0
+> df = f_x × dx + f_y × dy + f_z × dz để rồi vì y = const nen dy = 0
 >
 >
 >
@@ -304,7 +308,7 @@
 >
 >
 >
-> dg = g_x*dx + g_y*dy + g_z*dz . Và cái này = 0 do g = constant c nên
+> dg = g_x × dx + g_y × dy + g_z × dz . Và cái này = 0 do g = constant c nên
 > cùng với dy = 0, giúp ta solve dx theo dz (chính là (partial x / partial
 > z)_y), từ đó gắn vào ta có df  theo dz
 >
@@ -366,6 +370,8 @@
 
 <a id="node-zrft1oj"></a>
 
+###### Chain Rule and Directional Derivatives
+
 <p align="center"><kbd><img src="assets/d3n5qj2ayhv.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -374,7 +380,7 @@
 >
 >
 >
-> df/ds|u^ = Grad_f . u^
+> df/ds|u^ = ∇f . u^
 
 <br>
 
