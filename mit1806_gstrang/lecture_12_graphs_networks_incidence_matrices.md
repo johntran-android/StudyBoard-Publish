@@ -9,6 +9,8 @@
 
 <a id="node-49th4cz"></a>
 
+## Đồ thị và mạng lưới
+
 <p align="center"><kbd><img src="assets/evtkop53le7.png" width="80%"></kbd></p>
 
 <br>
@@ -44,6 +46,8 @@
 
 <a id="node-hq1hsst"></a>
 
+#### Ma trận của đồ thị
+
 <p align="center"><kbd><img src="assets/o4616h87jhr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -54,6 +58,8 @@
 <br>
 
 <a id="node-q03skft"></a>
+
+##### Định hướng cạnh đồ thị
 
 <p align="center"><kbd><img src="assets/qlt1d9k427o.png" width="80%"></kbd></p>
 
@@ -74,6 +80,8 @@
 <br>
 
 <a id="node-mz1t07c"></a>
+
+###### Ma trận liên thuộc
 
 <p align="center"><kbd><img src="assets/r7w9o04y9e7.png" width="80%"></kbd></p>
 
@@ -96,6 +104,8 @@
 <br>
 
 <a id="node-8pbirt7"></a>
+
+###### Tính phụ thuộc của loop
 
 <p align="center"><kbd><img src="assets/gvi3z299pom.png" width="80%"></kbd></p>
 
@@ -122,11 +132,13 @@
 > Gs: Correct. Thế thì điều này gợi ý rằng **loop sẽ biểu hiện
 > một bộ các row / edge có tính chất linearly dependent.**
 
-**🔗 See also:** [linked note](#node-e4mbogb)
+**🔗 See also:** [Độc lập tuyến tính trong đồ thị](#node-e4mbogb)
 
 <br>
 
 <a id="node-3tldtoo"></a>
+
+###### Đặc điểm ma trận liên thuộc
 
 <p align="center"><kbd><img src="assets/4vp9wkerwnh.png" width="80%"></kbd></p>
 
@@ -158,6 +170,8 @@
 
 <a id="node-5bc80oe"></a>
 
+###### Nullspace của ma trận A
+
 <p align="center"><kbd><img src="assets/t4qu4xbn2zj.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -182,6 +196,8 @@
 <br>
 
 <a id="node-kuon7b5"></a>
+
+###### Nullspace khi cột độc lập
 
 <p align="center"><kbd><img src="assets/piwjq37eyv.png" width="80%"></kbd></p>
 
@@ -214,6 +230,8 @@
 
 <a id="node-q7hkwqh"></a>
 
+###### Ý nghĩa của vector Ax
+
 <p align="center"><kbd><img src="assets/twadgeik2p.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -237,6 +255,8 @@
 
 <a id="node-7smqhde"></a>
 
+###### Điện thế tại các nút
+
 <p align="center"><kbd><img src="assets/to3icr5lkw.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -253,6 +273,8 @@
 <br>
 
 <a id="node-6g1t13h"></a>
+
+###### Nghiệm zero của Ax = 0
 
 <p align="center"><kbd><img src="assets/hyyayjcufpo.png" width="80%"></kbd></p>
 
@@ -316,11 +338,15 @@
 
 <a id="node-yx1tald"></a>
 
+###### Ma trận liên thuộc đồ thị
+
 <p align="center"><kbd><img src="assets/mdccvzlqsm.png" width="80%"></kbd></p>
 
 <br>
 
 <a id="node-z9lau5h"></a>
+
+###### Cố định giá trị nút
 
 <p align="center"><kbd><img src="assets/kpl4a8vw3u9.png" width="80%"></kbd></p>
 
@@ -371,7 +397,7 @@
 > **💡 Deeper notes**
 > - Trong lý thuyết đồ thị biểu diễn qua ma trận liên thuộc (incidence matrix), dim(N(A)) = số thành phần liên thông của đồ thị (ở đây đồ thị liên thông nên dim = 1), từ đó rank của ma trận liên thuộc luôn bằng n - c (với n là số đỉnh/cột và c là số thành phần liên thông).
 
-**🔗 See also:** [Số chiều Rowspace và Nullspace](./lecture_10_the_four_fundamental_subspaces.md#node-bsozk2k) · [linked note](#node-e7n8l7p)
+**🔗 See also:** [Số chiều Rowspace và Nullspace](./lecture_10_the_four_fundamental_subspaces.md#node-bsozk2k) · [Số chiều không gian dòng](#node-e7n8l7p)
 
 <br>
 
@@ -436,6 +462,8 @@
 <br>
 
 <a id="node-skprjaa"></a>
+
+###### Định luật Ohm
 
 <p align="center"><kbd><img src="assets/mr5kop7tzfa.png" width="80%"></kbd></p>
 
@@ -519,6 +547,8 @@
 
 <a id="node-azq8qzg"></a>
 
+###### Cân bằng dòng nút 2
+
 <p align="center"><kbd><img src="assets/8eurquwwqba.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -529,6 +559,8 @@
 <br>
 
 <a id="node-9e4d3nr"></a>
+
+###### Cân bằng dòng tại nút
 
 <p align="center"><kbd><img src="assets/j7snvkw7qck.png" width="80%"></kbd></p>
 
@@ -602,11 +634,13 @@
 > elimination, nên nhớ là sẽ **có các bước row - exchange**, nên
 > dù thế nào thì row cuối cùng thành 0)
 
-**🔗 See also:** [linked note](#node-s7plvzp)
+**🔗 See also:** [Công thức tính số loop](#node-s7plvzp)
 
 <br>
 
 <a id="node-378kryy"></a>
+
+###### Cơ sở của N(Aᵀ)
 
 <p align="center"><kbd><img src="assets/zqwzq21osop.png" width="80%"></kbd></p>
 
@@ -628,6 +662,8 @@
 <br>
 
 <a id="node-4497kkv"></a>
+
+###### Cơ sở không gian N(Aᵀ)
 
 <p align="center"><kbd><img src="assets/m3wigw5xml.png" width="80%"></kbd></p>
 
@@ -657,11 +693,13 @@
 > Và **hai vector** trong **basis của N(Aᵀ) sẽ ứng với hai
 > loop**
 
-**🔗 See also:** [linked note](#node-s7plvzp)
+**🔗 See also:** [Công thức tính số loop](#node-s7plvzp)
 
 <br>
 
 <a id="node-0xqk45g"></a>
+
+###### Tổ hợp vòng lặp đồ thị
 
 <p align="center"><kbd><img src="assets/4ns6r3f5efn.png" width="80%"></kbd></p>
 
@@ -679,6 +717,8 @@
 <br>
 
 <a id="node-e7n8l7p"></a>
+
+###### Số chiều không gian dòng
 
 <p align="center"><kbd><img src="assets/lgdrkldkls.png" width="80%"></kbd></p>
 
@@ -701,6 +741,8 @@
 <br>
 
 <a id="node-porsnqg"></a>
+
+###### Cơ sở không gian cột Aᵀ
 
 <p align="center"><kbd><img src="assets/2g2vqugc6kd.png" width="80%"></kbd></p>
 
@@ -726,6 +768,8 @@
 
 <a id="node-e4mbogb"></a>
 
+###### Độc lập tuyến tính trong đồ thị
+
 <p align="center"><kbd><img src="assets/z9ebgb13kz.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -750,11 +794,13 @@
 > Vậy **số edge tạo một bộ độc lập từ một graph có #nodes
 > sẽ là #nodes - 1**
 
-**🔗 See also:** [linked note](#node-8pbirt7)
+**🔗 See also:** [Tính phụ thuộc của loop](#node-8pbirt7)
 
 <br>
 
 <a id="node-71c4eui"></a>
+
+###### Cây trong Lý thuyết Đồ thị
 
 <p align="center"><kbd><img src="assets/xmap56uwnw.png" width="80%"></kbd></p>
 
@@ -765,6 +811,8 @@
 <br>
 
 <a id="node-s7plvzp"></a>
+
+###### Công thức tính số loop
 
 <p align="center"><kbd><img src="assets/krkt24d20wn.png" width="80%"></kbd></p>
 
@@ -791,7 +839,7 @@
 > edge thành một loop, do đó trừ 1 để thành ra một bộ 
 > các edge không tạo loop.
 
-**🔗 See also:** [Left Nullspace of Incidence Matrix](#node-5qjh8qt) · [linked note](#node-4497kkv)
+**🔗 See also:** [Left Nullspace of Incidence Matrix](#node-5qjh8qt) · [Cơ sở không gian N(Aᵀ)](#node-4497kkv)
 
 <br>
 
@@ -854,6 +902,8 @@
 <br>
 
 <a id="node-djxq3zt"></a>
+
+###### Mô hình ma trận mạch điện
 
 <p align="center"><kbd><img src="assets/co6rzorqog5.png" width="80%"></kbd></p>
 
