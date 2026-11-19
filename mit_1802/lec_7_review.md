@@ -5,8 +5,6 @@
 ---
 <a id="node-u3ru51m"></a>
 
-## Lec 7: Review
-
 <br>
 
 <a id="node-9zu69zs"></a>
@@ -20,8 +18,8 @@
 >
 >
 >
-> Và ta đã chứng minh nó cũng chính là |A||B|cos(theta). Nhờ vậy có thể
-> dùng A.B/|A|*|B| để tính cos(theta) từ đó tính góc tạo bởi A, B.
+> Và ta đã chứng minh nó cũng chính là |A||B|cos(θ). Nhờ vậy có thể
+> dùng A.B/|A|*|B| để tính cos(θ) từ đó tính góc tạo bởi A, B.
 >
 >
 >
@@ -29,21 +27,21 @@
 >
 >
 >
-> Ôn lại nhanh tại sao A.B = |A||B|cos(theta):
+> Ôn lại nhanh tại sao A.B = |A||B|cos(θ):
 >
 >
 >
-> Vì dùng các hệ thức lượng tam giác có 3 cạnh a,b,c và theta là góc đối
+> Vì dùng các hệ thức lượng tam giác có 3 cạnh a,b,c và θ là góc đối
 > cạnh c:
 >
 >
 >
-> a^2 + b^2 - 2abcos(theta) = c^2
+> a² + b² - 2abcos(θ) = c²
 >
 >
 >
 > Thế thì xét tam giác 3 cạnh tạo bởi 3 vector A, B, C góc giữa A và B là
-> theta: |A|^2 + |B|^2 - 2|A||B|*cos(theta) = |C|^2 (1)
+> θ: |A|² + |B|² - 2|A||B|*cos(θ) = |C|² (1)
 >
 >
 >
@@ -52,16 +50,16 @@
 >
 >
 >
-> (1) <=> AA + BB - 2|A||B|cos(theta) = CC và CC cũng bằng (A-B)(A-B) =
+> (1) ⇔ AA + BB - 2|A||B|cos(θ) = CC và CC cũng bằng (A-B)(A-B) =
 > AA + BB - 2AB
 >
 >
 >
-> <=> AA + BB - 2|A||B|cos(theta) = AA + BB - 2AB
+> ⇔ AA + BB - 2|A||B|cos(θ) = AA + BB - 2AB
 >
 >
 >
-> Vậy 2|A||B|cos(theta) = 2AB <=> **A.B = |A||B|cos(theta)**
+> Vậy 2|A||B|cos(θ) = 2AB ⇔ **A.B = |A||B|cos(θ)**
 
 <br>
 
@@ -184,7 +182,7 @@
 >
 >
 >
-> detA = 1*(+det [3 2; 0 -1]) + 1*(-det [1 2; 2 -1]) = 1*(-3) + 1*(-(-1-4))) =
+> detA = 1 × (+det [3 2; 0 -1]) + 1 × (-det [1 2; 2 -1]) = 1 × (-3) + 1 × (-(-1-4))) =
 > -3+5  = 2
 >
 >
@@ -194,7 +192,7 @@
 >
 >
 >
-> Vậy chỉ cần tìm cofactor của A12: - (det [3 2; 1 0]) = - (3*0 - 2*1) = -(-2)
+> Vậy chỉ cần tìm cofactor của A12: - (det [3 2; 1 0]) = - (3 × 0 - 2 × 1) = -(-2)
 > = **2**
 >
 >
@@ -231,8 +229,8 @@
 >
 >
 >
-> det M =  1*(+det [3 c; 0 -1]) + 1*(-det [1 c; 2 -1]) = 1*(-3-0) +
-> 1*(-(-1-2c))) = -3+1+2c = 2c - 2
+> det M =  1 × (+det [3 c; 0 -1]) + 1 × (-det [1 c; 2 -1]) = 1 × (-3-0) +
+> 1 × (-(-1-2c))) = -3+1+2c = 2c - 2
 >
 >
 >
@@ -247,7 +245,7 @@
 >
 >
 >
-> Row 2 là [3 0 1], ta sẽ trừ nó cho 3*row 1 để hủy vị trí 21: [3 0 1] -
+> Row 2 là [3 0 1], ta sẽ trừ nó cho 3 × row 1 để hủy vị trí 21: [3 0 1] -
 > 3*[1 2 1] = [0 -6 -2]. Vậy pivot thứ 2 là -6
 >
 >
@@ -289,7 +287,7 @@
 > của nó, cũng như một row của nó dependent các columns và row còn
 > lại. Khi đó, chỉ có 2 column độc lập, và chúng sẽ span C(M), cũng như 2
 > row độc lập sẽ span C(MT).Và cả hai đều là 2D plane subspace của
-> R^3. Hay dim C(M) và dim C(MT) đều bằng 2. Theo định lý Rank -
+> R³. Hay dim C(M) và dim C(MT) đều bằng 2. Theo định lý Rank -
 > Nullity, dim N(M) và dim N(MT) sẽ bằng 1. Tức có nonzero vector trong
 > nullspace và left nullspace khiến combine columns cũng như row thành
 > 0.
@@ -355,7 +353,7 @@
 >
 > Và intersection line này (nullspace) và plane span bởi hai normal
 > vector (rowspace) đúng là orthogonal complement, cùng nhau nó sẽ
-> cover R^3.
+> cover R³.
 >
 >
 >
