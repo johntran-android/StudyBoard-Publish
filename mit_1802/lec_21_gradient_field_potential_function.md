@@ -5,8 +5,6 @@
 ---
 <a id="node-9ts9cna"></a>
 
-## Lec 21: Gradient Field & Potential Function
-
 <br>
 
 <a id="node-40v4107"></a>
@@ -14,7 +12,7 @@
 <p align="center"><kbd><img src="assets/w4o684unm7n.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs nhắc lại bài trước ta đã học rằng, nếu vector field F ( = M*i^ + N*j^)
+> gs nhắc lại bài trước ta đã học rằng, nếu vector field F ( = M × i^ + N × j^)
 > mà LÀ MỘT GRADIENT FIELD (tức là vector F LÀ VECTOR GRADIENT
 > CỦA MỘT FUNCTION f nào đó) thì khi đó Fundamental Theorem đối với
 > tích phân đường cho ta biết: tích phân trên đường (quỹ đạo) c từ P0 đến
@@ -44,9 +42,9 @@
 <p align="center"><kbd><img src="assets/lmirt0lp9rg.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì, cho vector field F là một gradient field: **vector F = Grad_f**.
+> Thế thì, cho vector field F là một gradient field: **vector F = ∇f**.
 > thì ta đã biết, điều này đồng nghĩa là component M, N của F chính
-> là component của grad_f - chính là các partial derivative:
+> là component của ∇f - chính là các partial derivative:
 >
 >
 >
@@ -215,12 +213,12 @@
 
 > [!NOTE]
 > Ta làm ví dụ, tìm potential function của gradient field vừa rồi F =
-> <M=4x^2+8xy, N=3y^2+4x^2> (với a = 8, thì nó là một gradient field)
+> <M=4x²+8xy, N=3y²+4x²> (với a = 8, thì nó là một gradient field)
 >
 >
 >
 > Như đã biết tích phân trên curve c F dot dr = tích phân trên c của
-> M*dx + N*dy
+> M × dx + N × dy
 >
 >
 >
@@ -236,7 +234,7 @@
 > [!NOTE]
 > Thế thì trên c1: nó sẽ tương ứng với x từ 0 đến x1, và y giữ constant
 > = 0, cho nên dy = 0 và tích phân đường trên c1 trở nên đơn giản hóa
-> chỉ còn: tích phân x từ 0 đến x1 của 4x^2dx tính ra đơn giản là (4/3)x1^3
+> chỉ còn: tích phân x từ 0 đến x1 của 4x²dx tính ra đơn giản là (4/3)x1³
 
 <br>
 
@@ -245,9 +243,9 @@
 <p align="center"><kbd><img src="assets/h2tc45oyuta.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> còn trên c2 thì x constant -> dx = 0 và y biến đổi từ 0 đến y1
+> còn trên c2 thì x constant → dx = 0 và y biến đổi từ 0 đến y1
 > nên tích phân cần tính trở thành tích phân y từ 0 đến y1 của
-> (3y^2 + 4x1^2)dy = y1^3 + 4x1^2y1
+> (3y² + 4x1²)dy = y1³ + 4x1²y1
 
 <br>
 
@@ -256,16 +254,16 @@
 <p align="center"><kbd><img src="assets/jlub61aspvo.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Như vậy f(x1,y1) = integral trên c1 + c2 + f(0,0) = (4/3)x1^3 +
-> y1^3 + 4x1^2y1 + f(0,0) và f(0,0) vốn chỉ là một constant c nào đó
+> Như vậy f(x1,y1) = integral trên c1 + c2 + f(0,0) = (4/3)x1³ +
+> y1³ + 4x1²y1 + f(0,0) và f(0,0) vốn chỉ là một constant c nào đó
 >
 >
 >
-> nên f(x1,y1) = (4/3)x1^3 + y1^3 + 4x1^2y1 + c
+> nên f(x1,y1) = (4/3)x1³ + y1³ + 4x1²y1 + c
 >
 >
 >
-> Và từ đó f(x,y) = (4/3)x^3 + y^3 + 4x^2y + c
+> Và từ đó f(x,y) = (4/3)x³ + y³ + 4x²y + c
 
 <br>
 
@@ -299,18 +297,18 @@
 >
 >
 >
-> Vậy ta cần tìm nguyên hàm (hàm f) sao cho f_x = 4x^2 + 8xy và 
-> f_y = 3y^2 + 4x^2
+> Vậy ta cần tìm nguyên hàm (hàm f) sao cho f_x = 4x² + 8xy và 
+> f_y = 3y² + 4x²
 >
 >
 >
-> Thế thì từ 1, ta có thể suy ra f = (4/3)x^3 + 4x^2y + g(y): Sở dĩ có g(y)
+> Thế thì từ 1, ta có thể suy ra f = (4/3)x³ + 4x²y + g(y): Sở dĩ có g(y)
 > là vì đây (f_x) là partial derivative của f wrt x, thì constant đối với x
 > không nhất thiết phải là constant đối với y, mà có thể là hàm theo y
 >
 >
 >
-> Vậy từ (1) ta có mọi hàm f  có dạng  f = (4/3)x^3 + 4x^2y + g(y) đều
+> Vậy từ (1) ta có mọi hàm f  có dạng  f = (4/3)x³ + 4x²y + g(y) đều
 > thỏa (1)
 
 <br>
@@ -320,7 +318,7 @@
 <p align="center"><kbd><img src="assets/emlw806dvje.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì từ đó ta tính f_y = 4x^2 + g'(y) đặng tiếp theo dựa vào (2) để 
+> Thế thì từ đó ta tính f_y = 4x² + g'(y) đặng tiếp theo dựa vào (2) để 
 > mà tính tìm ra g(y) từ đó hoàn thành tìm ra f
 
 <br>
@@ -330,7 +328,7 @@
 <p align="center"><kbd><img src="assets/f1unl6ra44a.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> rồi, dựa vào (2) ta solve ra g'(y) = 3y^2 từ đó suy ra g(y) = y^3 + c
+> rồi, dựa vào (2) ta solve ra g'(y) = 3y² từ đó suy ra g(y) = y³ + c
 > và c lần này gs cho rằng là TRUE CONSTANT vì nó không depend
 > on x lẫn y (khác với g(y) là constant theo x, không depend on x, nhưng
 > vẫn có thể depend on y)
@@ -342,7 +340,7 @@
 <p align="center"><kbd><img src="assets/jqf6rktcstk.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và gắn g(y) vào f tìm ra từ (1) ta có f = (4/3)x^3 + 4x^2y + y^3
+> Và gắn g(y) vào f tìm ra từ (1) ta có f = (4/3)x³ + 4x²y + y³
 > + c và again gs nói c là optional (có thể khỏi cần, ứng với c = 0, vì
 > yêu cầu chỉ là tìm potential function chứ không phải tìm mọi
 > potential function)
@@ -568,7 +566,7 @@
 >
 >
 >
-> Nó tương đương như: **lực / khối lượng ra gia tốc** (F=ma =>a = F/m)
+> Nó tương đương như: **lực / khối lượng ra gia tốc** (F=ma ⇒a = F/m)
 >
 >
 >
