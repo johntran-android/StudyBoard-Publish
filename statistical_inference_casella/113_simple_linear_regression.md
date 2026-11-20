@@ -1,6 +1,6 @@
 # 11.3 Simple Linear Regression
 
-📊 **Progress:** `35` Notes | `64` Screenshots | `35` AI Reviews
+📊 **Progress:** `37` Notes | `67` Screenshots | `36` AI Reviews
 
 ---
 <a id="node-m4lr6nj"></a>
@@ -3719,7 +3719,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 > là 1-α' confidence interval của μ = α + βx0
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=Gyi8uj3s0e4)
+📹 [Xem video trên YouTube](https://youtu.be/Gyi8uj3s0e4)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -3818,7 +3818,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> Y \~ n(α + βx0, σ²)
+> Y0 \~ n(α + βx0, σ²)
 >
 >
 >
@@ -3846,7 +3846,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> Từ đó, Y0 - (α̂ + β̂x0) / σ√(1 + (1/n + (x0 - x̄)²/Sxx)) chính là một rv \~ n(0,1)
+> Từ đó, \[Y0 - (α̂ + β̂x0)\] / σ√(1 + (1/n + (x0 - x̄)²/Sxx)) chính là một rv \~ n(0,1)
 >
 >
 >
@@ -3866,11 +3866,19 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> U/(S/σ) = \[Y0 - (α̂ + β̂x0) / σ√(1 + (1/n + (x0 - x̄)²/Sxx))\] / (S/σ)
+> U/(S/σ) = \[Y0 - (α̂ + β̂x0)\] / σ√(1 + (1/n + (x0 - x̄)²/Sxx))\] / (S/σ)
 >
 >
 >
-> = \[Y0 - (α̂ + β̂x0) / S√(1 + (1/n + (x0 - x̄)²/Sxx))\] chính là \~ t_n-2
+> = \[Y0 - (α̂ + β̂x0)\] / S√(1 + (1/n + (x0 - x̄)²/Sxx))
+>
+>
+>
+> là U là normal 0,1 chia V là  căn bậc hai của một χ²\_n-2 chia bậc tự do của nó, và U, V độc lập
+>
+>
+>
+> thì đây chính là rv \~ t_n-2
 >
 >
 >
@@ -3878,7 +3886,7 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> P\_α,β,σ²(Y0 ∈ \[α̂ + β̂x0 - t_n-2,α/2 × S√(1 + (1/n + (x0 - x̄)²/Sxx))\]; α̂ + β̂x0 + t_n-2,α/2 × S√(1 + (1/n + (x0 - x̄)²/Sxx))\]\])
+> P\_α,β,σ²( α̂ + β̂x0 - t_n-2,α/2 × S√(1 + (1/n + (x0 - x̄)²/Sxx))\] ≤ Y0 ≤ α̂ + β̂x0 + t_n-2,α/2 × S√(1 + (1/n + (x0 - x̄)²/Sxx))\]\])
 >
 >
 >
@@ -3890,15 +3898,19 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> = P\_α,β,σ²(α̂ + β̂x0 - t_n-2,α/2 × ≤ Y0/S√(1 + (1/n + (x0 - x̄)²/Sxx))\] ≤ α̂ + β̂x0 + t_n-2,α/2 )
+> = P\_α,β,σ²(- t_n-2,α/2 × S√(1 + (1/n + (x0 - x̄)²/Sxx)) ≤ Y0 - α̂ - β̂x0; Y0 - α̂ - β̂x0 ≤  t_n-2,α/2 × S√(1 + (1/n + (x0 - x̄)²/Sxx)))
 >
 >
 >
-> = P\_α,β,σ²((α̂ + β̂x0 - Y0)/S√(1 + (1/n + (x0 - x̄)²/Sxx)) ≤ t_n-2,α/2 ≤ (α̂ + β̂x0 - Y0)/S√(1 + (1/n + (x0 - x̄)²/Sxx)) )
+> = P\_α,β,σ²(- t_n-2,α/2  ≤ (Y0 - α̂ - β̂x0)/S√(1 + (1/n + (x0 - x̄)²/Sxx)); (Y0 - α̂ - β̂x0)/S√(1 + (1/n + (x0 - x̄)²/Sxx)) ≤  t_n-2,α/2)
 >
 >
 >
-> = P\_α,β,σ²(|(α̂ + β̂x0 - Y0)/S√(1 + (1/n + (x0 - x̄)²/Sxx))| ≤ t_n-2,α/2 )
+> = P\_α,β,σ²(- t_n-2,α/2  ≤ (Y0 - α̂ - β̂x0)/S√(1 + (1/n + (x0 - x̄)²/Sxx)) ≤  t_n-2,α/2)
+>
+>
+>
+> = P\_α,β,σ²(|(Y0 - α̂ - β̂x0)/S√(1 + (1/n + (x0 - x̄)²/Sxx))| ≤ t_n-2,α/2 )
 >
 >
 >
@@ -3906,41 +3918,136 @@ W(𝐱) = argmax_θ L(θ|𝐱)"*
 >
 >
 >
-> = P(|Tn-2| ≤ t_n-2,α/2 )
->
->
->
-> = 1 - P(|Tn-2| ≥ t_n-2,α/2)
->
->
->
-> = 1 - α
+> = 1-α
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú rất tốt, thể hiện sự hiểu sâu sắc khi tự mình diễn giải chi tiết lại phân phối của tử số, mẫu số để tạo thành phân phối t và chứng minh xác suất bao phủ $1-\alpha$. Có một vài lỗi gõ phím/nháp nhầm ở các bước biến đổi trung gian nhưng không ảnh hưởng đến bản chất.
->
-> **🟡 Minor issues**
->
-> **1.** *"P_α,β,σ²(Y0 ∈ [α̂ + β̂x0 - t_n-2,α/2 × S√(1 + (1/n + (x0 - x̄)²/Sxx))]; α̂ + β̂x0 - t_n-2,α/2 × S√(1 + (1/n + (x0 - x̄)²/Sxx))]])"*
->
-> Đầu mút trên của khoảng bị viết nhầm thành dấu trừ thay vì dấu cộng (`α̂ + β̂x0 + t_n-2,α/2...`).
->
-> **2.** *"= P_α,β,σ²(α̂ + β̂x0 - t_n-2,α/2 ×  ≤ Y0/S√(1 + (1/n + (x0 - x̄)²/Sxx))] ≤ α̂ + β̂x0 + t_n-2,α/2 )
-
-= P_α,β,σ²((α̂ + β̂x0 - Y0)/S√(1 + (1/n + (x0 - x̄)²/Sxx)) ≤ t_n-2,α/2 ≤ (α̂ + β̂x0 - Y0)/S√(1 + (1/n + (x0 - x̄)²/Sxx)) )"*
->
-> Các dòng biến đổi đại số trung gian bị lỗi đánh máy (dấu ngoặc, thiếu số hạng và bất đẳng thức kép bị lặp lại hai vế cùng một đại lượng). Biến đổi đúng cần là trừ $\hat{\alpha} + \hat{\beta}x_0$ rồi chia cho sai số chuẩn để đưa về dạng $-t_{n-2,\alpha/2} \le T \le t_{n-2,\alpha/2}$.
->
+> Ghi chú rất xuất sắc và chi tiết; bạn đã tự giải thích và biến đổi đầy đủ các bước mà tài liệu gốc lược bớt (chứng minh xác suất bao phủ bằng 1 - α).
 >
 > **✓ Strengths**
-> - Tự triển khai rất rõ ràng kỳ vọng và phương sai của sai số dự báo $Y_0 - (\hat{\alpha} + \hat{\beta}x_0)$ thay vì chỉ chép lại công thức.
-> - Hiểu bản chất của thống kê $t$ bằng cách tách thành biến chuẩn tắc chia cho căn bậc hai của biến khi-bình phương chia bậc tự do.
-> - Chủ động kiểm tra lại xác suất bao phủ $1-\alpha$ của khoảng dự báo.
+> - Hiểu rất rõ và trình bày chi tiết cấu trúc phân phối của biến ngẫu nhiên T (chuẩn hóa tử số thành N(0,1) và mẫu số từ phân phối Chi-bình phương).
+> - Tự triển khai đầy đủ các bước biến đổi bất đẳng thức xác suất P(...) = 1 - α mà tài liệu gốc chỉ tóm gọn là 'rearranged in the usual way'.
 >
 > **💡 Deeper notes**
-> - Để thống kê tỷ số $U / (S/\sigma)$ thực sự tuân theo phân phối Student $t_{n-2}$, điều kiện tiên quyết là tử số $U$ và mẫu số $S^2$ phải độc lập thống kê với nhau. Cần lưu ý ghi rõ giả định độc lập giữa $S^2$ và $Y_0 - (\hat{\alpha} + \hat{\beta}x_0)$ khi áp dụng định nghĩa này.
+> - Ký hiệu α vừa được dùng cho hệ số chặn (intercept) trong mô hình hồi quy, vừa là mức ý nghĩa (significance level) trong khoảng dự báo 1 - α; đây là trùng lặp ký hiệu phổ biến trong giáo trình nhưng cần lưu ý ngữ cảnh để tránh nhầm lẫn.
+> - Tính độc lập giữa U và V (hay giữa S² và Y₀ - (α̂ + β̂x₀)) dựa trên hai điều kiện: Y₀ độc lập với toàn bộ mẫu cũ, và theo lý thuyết mô hình chuẩn thì S² độc lập với bộ ước lượng (α̂, β̂).
+
+<br>
+
+<a id="node-r89an6j"></a>
+
+###### Simultaneous Estimation and Confidence Bands
+
+<p align="center"><kbd><img src="assets/fzamrdqy29f.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/yhl48s81lb.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là, bàn qua vấn đề suy luận ra của Y với các giá trị x0 khác nhau cùng lúc.
+>
+>
+>
+> Trong phần trước, mình đã hiểu 1-α' confidence interval (dùng α' để chỉ level để tránh nhập nhằng với tham số α) cho mean của Y với x=x0, tức E\[Y|x=x0\] = α + βx0 là:
+>
+>
+>
+> \[α̂(𝐘) + β̂(𝐘)x0 - t_n-2, α'/2 × S(𝐘)√\[1/n + (x0 - x̄)²/Sxx\]; α̂(𝐘) + β̂(𝐘) x0 + t_n-2, α'/2 × S(𝐘)√\[1/n + (x0 - x̄)²/Sxx\]\]
+>
+>
+>
+> Nhưng với việc suy luận ra của Y với các giá trị x0 khác nhau cùng lúc, thì nếu ta chỉ dùng Confidence interval này, kết quả sẽ không còn là 1-α' CI nữa. Là sao?
+>
+>
+>
+> Có nghĩa là khoảng tin cậy cho E\[Y|𝐱=𝐱0\] ở trên, là một 1-α' confidence interval:
+>
+>
+>
+> P(C(𝐘) chứa μ(x0) = α + βx0))
+>
+>
+>
+> Nếu xét riêng từng cái:
+>
+>
+>
+> Thì với mỗi 𝐱0i, thì khoảng tin cậy cho E\[𝐘|𝐱=𝐱0i\]: Ci(𝐘) = \[α̂(𝐘) + β̂(𝐘)x0i - t_n-2, α'/2 × S(𝐘)√\[1/n + (x0i - x̄)²/Sxx\]; α̂(𝐘) + β̂(𝐘) x0i + t_n-2, α'/2 × S(𝐘)√\[1/n + (x0i - x̄)²/Sxx\]\] sẽ ..
+>
+>
+>
+> ..đều là có xác xuất bao phủ 1-α'.
+>
+>
+>
+> Nhưng nếu xét chung lại để nói về:
+>
+>
+>
+> Xác suất "C1(𝐘) chứa E\[𝐘|𝐱=𝐱01\], C2(𝐘) chứa E\[𝐘|𝐱=𝐱02\], ...." thì xác suất của joint event này chưa chắc là 1-α.
+>
+>
+>
+> Do đó cách làm để có xác suất của joint event này vẫn đạt ≥ 1-α' là làm như sau:
+>
+>
+>
+> Ta xét event E1 = C1(𝐘) không chứa E\[𝐘|𝐱=𝐱01\], E2 = C2(𝐘) không chứa E\[𝐘|𝐱=𝐱02\],...
+>
+>
+>
+> P(∩i {Ci(𝐘) chứa E\[Y|x0i}) ≥ 1 - Σi P(Ei)
+>
+>
+>
+> Như vậy để P(∩i {Ci(𝐘) chứa E\[Y|x0i}) ≥ 1 - α', ta cần: 1 - Σi P(Ei) ≥ 1 - α'
+>
+>
+>
+> ⇔ Σi P(Ei) ≤ α'
+>
+>
+>
+> Ta sẽ cho P(Ei) ≤ α'/m
+>
+>
+>
+> ⇔ P(Ci(𝐘) chứa E\[Y|x0i}) ≥ 1 - α'/m
+>
+>
+>
+> và như vậy bằng cách thay cái ngưỡng thành α'/2m:
+>
+>
+>
+> \[α̂(𝐘) + β̂(𝐘)x0i - t_n-2, α'/2m × S(𝐘)√\[1/n + (x0i - x̄)²/Sxx\]; α̂(𝐘) + β̂(𝐘) x0i + t_n-2, α'/2m × S(𝐘)√\[1/n + (x0i - x̄)²/Sxx\]\]
+>
+>
+>
+> thì đây là Ci(𝐘) có P(Ci(𝐘) chứa E\[Y|x0i}) ≥ 1 - α'/m giúp ta có P(∩i {Ci(𝐘) chứa E\[Y|x0i}) ≥ 1 - α'
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, giải thích trực quan và chứng minh rõ ràng việc áp dụng bất đẳng thức Bonferroni để kiểm soát mức tin cậy đồng thời (simultaneous confidence level).
+>
+> **✓ Strengths**
+> - Phân biệt rất tinh tế ký hiệu mức ý nghĩa α' với hệ số chặn α của mô hình hồi quy để tránh nhầm lẫn.
+> - Chứng minh chặt chẽ từng bước từ biến cố bù và bất đẳng thức Boole/Bonferroni để đi đến việc chia mức ý nghĩa thành α'/m và tra ngưỡng t tại α'/(2m).
+>
+> **💡 Deeper notes**
+> - Phương pháp Bonferroni kiểm soát mức bao phủ đồng thời cho một số hữu hạn m điểm định trước (m < ∞). Nếu muốn xây dựng dải tin cậy liên tục cho toàn bộ đường hồi quy trên toàn miền x, người ta thường dùng dải Scheffé (Working-Hotelling band).
+
+<br>
+
+<a id="node-66m6it1"></a>
+
+###### Theorem 11.3.6 Simultaneous Inference
+
+<p align="center"><kbd><img src="assets/zt65mukx1b.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Quay lại sau
 
 <br>
 
