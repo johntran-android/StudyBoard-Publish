@@ -2480,7 +2480,7 @@
 <p align="center"><kbd><img src="assets/4rg1ruj15k2.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Chứng minh theorem 5.3
+> Chứng minh theorem 5.3:
 >
 >
 >
@@ -2512,7 +2512,7 @@
 >
 >
 >
-> Vậy thì với việc 4 cái trên đã đúng với k = 0, ta giả sử nó đúng với k thì nếu chứng minh nó đúng với k + 1 thì ta sẽ chứng minh xong bởi phép quy nạp.
+> Vậy thì với việc 3 cái trên đã đúng với k = 0, ta giả sử nó đúng với k thì nếu chứng minh nó đúng với k + 1 thì ta sẽ chứng minh xong bởi phép quy nạp.
 >
 >
 >
@@ -2520,7 +2520,11 @@
 >
 >
 >
-> I) Chứng minh 5.17 đúng với k+1: Tức cần chứng minh span {r0, ..rk+1} = span {r0, Ar0,...,A^k+1 r0}
+> I) Chứng minh 5.17 đúng với k+1: Tức cần chứng minh: 
+>
+>
+>
+> span {r0, ..rk+1} = span {r0, Ar0,...,A^k+1 r0}
 >
 >
 >
@@ -2548,7 +2552,7 @@
 >
 >
 >
-> pk ∈ span {r0, Ar0, ..Ak r0}
+> pk ∈ span {r0, Ar0, ..A^k r0}
 >
 >
 >
@@ -2556,7 +2560,7 @@
 >
 >
 >
-> Apk ∈ span {Ar0, A^2r0, ..A^k+1 r0}
+> Apk = α1 Ar0 + α2 A^2 r0 + .. + αk+1 A^k+1 r0, với α1, α2 ,...nào đó
 >
 >
 >
@@ -2596,6 +2600,10 @@
 >
 >
 >
+> ---
+>
+>
+>
 > Tiếp, áp dụng 5.10, là cái này đây (xem link để coi lại)
 >
 >
@@ -2604,7 +2612,7 @@
 >
 >
 >
-> cái chính của 5.10 chính là nói rằng rk+1 - rk trùng phương với Apk (scale bởi αk)
+> cái chính của 5.10 chính là nói rằng rk+1 - rk cùng phương với Apk (scale bởi αk)
 >
 >
 >
@@ -2636,11 +2644,19 @@
 >
 >
 >
+> rk+1 = α1 Ar0 + α2 A^2 r0 + ...+ αk+1 A^k+1 r0 + β1 r0 + β2 Ar0 +.. βk+1 A^k r0
+>
+>
+>
+> = β1 r0 + (α1 + β2) Ar0 + ...+ (..) A^k r0 + (...) A^k+1 r0
+>
+>
+>
 > Thế vô phương trình rk+1 = .. + rk rồi gom hạng tử lại thì cũng trở thành:
 >
 >
 >
-> rk+1 = linear combination của Ar0, ...,A^k+1 r0
+> rk+1 = linear combination của r0, Ar0, ...,A^k+1 r0
 >
 >
 >
@@ -2648,23 +2664,15 @@
 >
 >
 >
-> Tiếp sách viết kết hợp cái này với giả thuyết quy nạp cho 5.17, ta có thể kết luận tập vế trái là con tập vế phải. Là sao?
+> Đang chứng minh 5.17 đúng với k+1: span {r0,..rk+1} = span{r0, Ar0,...., A^k+1 r0}
 >
 >
 >
-> Giả thuyết quy nạp cho 5.17 tức là ta có thể xài 5.17 cho case k = k:
+> Lập luận thế này: gọi u là vector bất kì ∈ tập vế trái span {r0,..rk+1}. 
 >
 >
 >
-> span {r0, ..,rk} = span {r0, Ar0,..A^k r0} (induction hypo for 5.17)
->
->
->
-> Lập luận thế này: gọi u là item bất kì ∈ tập vế trái span {r0,..rk+1}. Như đã nói hai lần ở trên, điều này có nghiã là
->
->
->
-> u = linear combination các vector r0,..rk+1: Σi=1:k+1 αi ri
+> u = linear combination các vector r0,..rk+1: 
 >
 >
 >
@@ -2672,11 +2680,19 @@
 >
 >
 >
-> Vì rk+1 ∈ span{Ar0,...,A^k+1 r0} ⇨ rk+1 cũng là linear combination các basis vector Ar0,...,A^k+1 r0: rk+1 = α × Ar0 + ...ω × A^k+1 r0 (for some α, ...ω)
+> Vì rk+1 ∈ span{Ar0,...,A^k+1 r0}
 >
 >
 >
-> ⇔ u = α0 r0 + ...αk rk + αk+1 (α × Ar0 + ...ω × A^k+1 r0)
+> ⇨ rk+1 cũng là linear combination các basis vector Ar0,...,A^k+1 r0:
+>
+>
+>
+> rk+1 = α Ar0 + ...ω A^k+1 r0 (for some α, ...ω)
+>
+>
+>
+> ⇔ u = α0 r0 + ...αk rk + αk+1 (α Ar0 + ...ω A^k+1 r0)
 >
 >
 >
@@ -2712,7 +2728,7 @@
 >
 >
 >
-> span {p0, p1,..pk} = span {r0, Ar0, ..A^k r0} (induction hypo for 5.18)
+> span {p0, p1,..pk} = span {r0, Ar0, ..,A^k r0} (induction hypo for 5.18)
 >
 >
 >
@@ -2720,7 +2736,7 @@
 >
 >
 >
-> A^k r0 ∈ span {p0, p1,..pk}
+> A^k r0 ∈ span {p0, p1,...,pk}
 >
 >
 >
@@ -2762,9 +2778,9 @@
 >
 > Có nghĩa là:
 >
+>
+>
 > i = 0, ta có Ap0 = (r1 - r0) / α0, điều này suy ra Ap0 ∈ span {r0,...rk+1}
->
->
 >
 >
 >
@@ -2780,7 +2796,7 @@
 >
 >
 >
-> Thế thì ta đang có A^k+1 r0 ∈ span {Ap0, Ap1, .. ,Apk}, mà mỗi basis lại nằm trong A^k+1 r0 ∈ span {r0,...rk+1} nên có thể suy ra
+> Thế thì ta đang có A^k+1 r0 ∈ span {Ap0, Ap1, .. ,Apk}, mà mỗi basis lại nằm trong span {r0,...rk+1} nên có thể suy ra
 >
 >
 >
@@ -2828,7 +2844,7 @@
 >
 >
 >
-> Vế trái span {p0, p1,..pk+1} = span {p0, p1,..,pk, rk+1}
+> Vế trái span {p0, p1,..pk, pk+1} = span {p0, p1,..,pk, rk+1}
 >
 >
 >
@@ -2837,6 +2853,28 @@
 >
 >
 > ..(tiếp) = span {r0, Ar0, ...,A^k r0, rk+1}
+>
+>
+>
+> p0 = α1 r0 + α2 Ar0 + ...αk+1 A^k r0
+>
+> p1 = β1 r0 + β2 Ar0 + ...βk+1 A^k r0
+>
+> ...
+>
+> pk = γ1 r0 + γ2 Ar0 + ...γk+1 A^k r0
+>
+>
+>
+> span {p0, p1,..,pk, rk+1} = {ω0 p0 + ω1p1 + ... + ωk pk + ωk+1 rk+1, với mọi ω0,...ωk+1}
+>
+>
+>
+> = {(..)r0 + (..)Ar0 + .. (..)A^k r0 + (...)rk+1, với mọi bộ hệ số tổ hợp bất kì}
+>
+>
+>
+> = span {r0, Ar0, ...A^k r0, rk+1}
 >
 >
 >
@@ -2863,6 +2901,8 @@
 >
 >
 > Như vậy đã chứng minh xong:
+>
+>
 >
 > span{p0, ..pk+1} = span {r0, Ar0, ...,A^k+1 r0}, tức 5.18 cho k+1
 >
@@ -2904,7 +2944,7 @@
 >
 >
 >
-> Xét i = k: Vế trái pk+1Api = pk+1Apk đương nhiên bằng 0 khỏi cần chứng minh vì đây là do cách tạo pk+1 của thuật toán, nó phải cho ra pk+1 conjugaye pk.
+> Xét i = k: Vế trái pk+1ᵀApi = pk+1ᵀApk đương nhiên bằng 0 do cách chọn β tạo pk+1 của thuật toán, nó phải cho ra pk+1 conjugate pk.
 >
 >
 >
@@ -2930,13 +2970,23 @@
 >
 > Theorem này nói đại ý rằng: Bắt đầu từ x0 và ta dùng một thuật toán 5.6, 5.7 để tạo ra chuỗi {xk}. Tức là: αk = -rkᵀpk / (pkᵀApk) và xk+1 = xk + αkpk. Thì khi đó chuỗi này sẽ có tính chất sau: (với r(x) = Ax - b)
 >
+>
+>
 > r(x1)ᵀp0 = 0
 >
-> r(x2)ᵀp0 = 0, r2Tp1 = 0
 >
-> r(x3)ᵀp0 = 0, r3Tp1 = 0, r3Tp2 = 0 ....
+>
+> r(x2)ᵀp0 = 0, r2ᵀp1 = 0
+>
+>
+>
+> r(x3)ᵀp0 = 0, r3ᵀp1 = 0, r3Tp2 = 0 ....
+>
+>
 >
 > r(xk)ᵀpi = 0 ∀i = 0,1,...k-1
+>
+>
 >
 > r(xk+1)ᵀpi = 0 ∀i = 0,1,...k
 >
@@ -2976,19 +3026,25 @@
 >
 > ⇔ pi = α r0 + β Ar0 + ... + ω A^i r0 for some α, ...ω
 >
+>
+>
 > ⇔ Api = A(α r0 + β Ar0 + ... + ω A^i r0) for some α, ...ω
 >
-> ⇔ Api = α Ar0 + β A2 r0 + ... + A^i+1 ω r0 for some α, ...ω
->
-> ⇔ Api ∈ span{Ar0, A2r0, ..A^i+1 r0}
 >
 >
->
-> Mà span{Ar0, A2r0, ..A^i+1 r0} ⊂ span{r0, Ar0, A2r0, ..A^i+1 r0} (vì vế phải nó có thêm 1 basis là r0)
+> ⇔ Api = α Ar0 + β A^2 r0 + ... + ω A^i+1 r0 for some α, ...ω
 >
 >
 >
-> Và theo 5.18 ở trên thì span{r0, Ar0, A2r0, ..A^i+1 r0} = span{p0,...pi+1}
+> ⇔ Api ∈ span{Ar0, A^2r0, ..A^i+1 r0}
+>
+>
+>
+> Mà span{Ar0, A^2r0, ..A^i+1 r0} ⊂ span{r0, Ar0, A2r0, ..A^i+1 r0} (vì vế phải nó có thêm 1 basis là r0)
+>
+>
+>
+> Và theo 5.18 ở trên thì span{p0,...pi+1} = span{r0, Ar0, A2r0, ..A^i+1 r0} 
 >
 >
 >
@@ -3000,11 +3056,11 @@
 >
 >
 >
+> (5.23) Với i = 0,....k-1: Api ∈ span{Ar0, A^2r0, ..A^i+1 r0} ⊂ span{p0,...pi+1}
+>
+>
+>
 > (5.22) rk+1ᵀpi = 0 ∀i = 0,1,...k
->
->
->
-> (5.23) Với i = 0,....k-1: Api ∈ span{Ar0, A2r0, ..A^i+1 r0} ⊂ span{p0,...pi+1}
 >
 >
 >
@@ -3018,33 +3074,45 @@
 >
 >
 >
-> Ap0 ∈ span span{p0}
+> Ap0 ∈  span{p0,p1}
 >
-> Ap1 ∈ span span{p0, p1}
+> Ap1 ∈  span{p0, p1,p2}
 >
 > ..
 >
-> Apk-1 ∈ span span{p0, p1,...pk-1}
+> Apk-1 ∈ span{p0, p1,...pk}
+>
+>
 >
 > mà:
 >
-> Ap0 ∈ span{p0} dĩ nhiên ⇨ Ap0 ∈ span{p0,...pk} (vì span{p0} ⊂ pan{p0,...pk})
 >
-> Ap1 ∈ span span{p0, p1} ⇨ Api ∈ span{p0,...pk}
+>
+> Ap0 ∈ span{p0,p1} dĩ nhiên ⇨ Ap0 ∈ span{p0,...pk} (vì span{p0} ⊂ span{p0,...pk})
+>
+>
+>
+> Ap1 ∈ span{p0, p1,p2} ⇨ Api ∈ span{p0,...pk}
+>
+>
 >
 > ..tương tự
 >
-> Apk-1 ∈ span span{p0, p1,...pk-1} ⇨ Apk-1 ∈ span{p0,...pk}
+>
+>
+> Apk-1 ∈ span{p0, p1,...pk} ⇨ Apk-1 ∈ span{p0,...pk}
 >
 >
 >
-> VẬY LÀ, ĐÁM Ap0,...Apk-1 ĐỀU ∈ span{p0,...pk}, MÀ rk+1 LẠI VUÔNG GÓC VỚI SUBSPACE NÀY. NHƯ VẬY SUY RA rk+1 VUÔNG GÓC VỚI ĐÁM VECᵀOR Ap0,...Apk-1:
+> vậy là, đám Ap0,...Apk-1 đều ∈ span{p0,...pk}, mà rk+1 lại vuông góc với subspace này. như vậy suy ra rk+1 vuông góc với đám vector Ap0,...Apk-1:
+>
+>
 >
 > rk+1ᵀApi = 0 với mọi i = 0,....k-1
 >
 >
 >
-> NHỚ LẠI TA ĐANG MUỐN LÀM CÁI GÌ: → Ta đang muốn chứng minh pk+1Api = 0 với i = 0,1,....k-1
+> nhớ lại ta đang muốn làm cái gì: → Ta đang muốn chứng minh pk+1Api = 0 với i = 0,1,....k-1
 >
 >
 >
@@ -3100,7 +3168,7 @@
 >
 >
 >
-> Lại theo theorem 5.1 (vì sao xài được thì xem lại (\*)): nói rằng rkᵀpi = 0 ∀ i=0,1...k-1
+> Lại theo theorem 5.2 (vì sao xài được thì xem lại (\*)): nói rằng rkᵀpi = 0 ∀ i=0,1...k-1
 >
 >
 >
@@ -3114,7 +3182,7 @@
 >
 >
 >
-> Vậy thì rkᵀpi ∀ i=0,1...k-1 ⇨ rk vuông góc span {p1,...pk-1}
+> Vậy thì rkᵀpi ∀ i=0,1...k-1 ⇨ rk vuông góc span {p0,p1,...pk-1}
 >
 >
 >
@@ -3156,45 +3224,33 @@
 >
 > Vậy là đã chứng minh xong.
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=ykaT4YT3Nr0)
+📹 Video 1: [Làm sao chứng minh span của vectơ phần dư trong Conjugate Gradient? (phần 1)](https://youtu.be/ykaT4YT3Nr0)
+
+📹 Video 2: [Làm sao quy nạp span của vectơ phần dư trong Conjugate Gradient? (phần 2)](https://www.youtube.com/watch?v=Z8rU47aN54M)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú nắm rất chắc và chi tiết toàn bộ các bước quy nạp và biến đổi không gian con của Định lý 5.3. Có một vài sơ suất nhỏ về chỉ số khi diễn giải trực quan nhưng không ảnh hưởng đến tính đúng đắn tổng thể.
+> Ghi chú rất xuất sắc, hiểu sâu sắc từng bước suy luận trong phép chứng minh quy nạp của Định lý 5.3 và diễn giải chi tiết bản chất của các không gian span.
 >
 > **🟡 Minor issues**
 >
-> **1.** *"Ap0 ∈ span span{p0}
-
-Ap1 ∈ span span{p0, p1}
-
-..
-
-Apk-1 ∈ span span{p0, p1,...pk-1}"*
+> **1.** *"span {r0, Ar0, ..A^k r0} = span {p0, p1,..pk} (induction hypo for 5.17)"*
 >
-> Lỗi lệch chỉ số khi bung biểu thức (5.23). Vì A p_i ∈ span{p_0, ..., p_{i+1}} nên với i = 0 phải là Ap_0 ∈ span{p_0, p_1}, và với i = k - 1 phải là Ap_{k-1} ∈ span{p_0, ..., p_k}. Dù vậy, kết luận tổng quát A p_i ∈ span{p_0, ..., p_k} với mọi i ≤ k - 1 vẫn đúng.
+> Nhầm lẫn ký hiệu: hệ thức liên hệ giữa span{p_0, ..., p_k} và Krylov subspace là (5.18), không phải (5.17).
 >
-> **2.** *"rk+1 = linear combination của Ar0, ...,A^k+1 r0"*
+> **2.** *"ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
 >
-> Sơ suất nhỏ về câu chữ: r_{k+1} = (tổ hợp tuyến tính của Ar_0, ..., A^{k+1}r_0) + r_k, mà r_k chứa cả r_0, nên r_{k+1} phải là tổ hợp tuyến tính của {r_0, Ar_0, ..., A^{k+1}r_0} (cần có thêm r_0, đoạn sau người học đã viết đúng).
->
-> **3.** *"rk vuông góc span {p1,...pk-1}
-
-...
-
-ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
->
-> Viết thiếu p_0 trong span; r_i = -p_i + β_i p_{i-1} với i = 1 chứa p_0, nên r_k phải vuông góc với span{p_0, p_1, ..., p_{k-1}} và r_i thuộc không gian con này.
+> Ghi thiếu toán tử span: đúng ra phải là ri ∈ span{p_0, ..., p_{k-1}} (cụ thể hơn là ri ∈ span{p_{i-1}, p_i}), chứ ri không phải là một phần tử đơn lẻ trong tập rời rạc các vector p.
 >
 >
 > **✓ Strengths**
-> - Hiểu rất rõ bản chất đại số tuyến tính của ký hiệu span và diễn giải tường minh từng phép bao hàm tập hợp.
-> - Chứng minh bước biến đổi tương đương của không gian con p_{k+1} ở mục II rất chặt chẽ và dễ hiểu.
-> - Tách biệt rõ ràng phần quy nạp cho các hệ thức (5.17)–(5.19) và phần chứng minh trực tiếp tính trực giao của phần dư (5.16).
+> - Diễn giải cực kỳ trực quan và chi tiết cách A tác động lên không gian span để biến đổi hệ cơ sở.
+> - Nắm chắc và liên kết mạch lạc giữa các công thức đệ trình (5.14e, 5.10) với các giả thiết quy nạp để chứng minh bao hàm hai chiều.
+> - Lập luận chặt chẽ khi tách trường hợp i = k và i < k trong chứng minh tính liên hợp p_{k+1}^T A p_i = 0.
 >
 > **💡 Deeper notes**
-> - Định lý 5.3 giả định r_k khác 0 (tức chưa đạt nghiệm tối ưu x*); nếu r_k = 0 thì thuật toán dừng ngay và không gian Krylov đạt bậc tối đa.
+> - Ở bước cơ sở (base case) quy nạp, hệ thức (5.19) được xét cho k = 1 là do khi k = 0, tập chỉ số i chạy từ 0 đến k - 1 = -1 là tập rỗng (thỏa mãn một cách hiển nhiên/chân công).
 
 **🔗 See also:** [Tối ưu hóa tọa độ Hessian chéo](#node-b04ox8f) · [A Practical Form Of The Conjugate Gradient Method.](#node-jdgssae) · [Rate of Convergence](#node-3zg5huu)
 
