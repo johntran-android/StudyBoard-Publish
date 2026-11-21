@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1795292896912,
+  "publishedAt": 1795294562447,
   "sections": [
     {
       "title": "📋 Overview",
@@ -260,7 +260,7 @@
   "videos": [
     {
       "id": "LqnLjjuFg2k",
-      "title": "Làm sao chứng minh chiều ngược lại của span trong Conjugate Gradient? (phần 5)",
+      "title": "Chứng minh theorem 5.3 (Conjugate Gradient)",
       "uploadedAt": 1795288146319,
       "at": [
         "5.1 The Linear Conjugate Gradient Method",
@@ -270,38 +270,8 @@
     },
     {
       "id": "fuxN3Abpx2M",
-      "title": "Làm sao tối ưu phép tính trong Conjugate Gradient thực tế? (phần 4)",
+      "title": "Thuật toán 5.2 Practical Conjugate Gradient",
       "uploadedAt": 1795287545095,
-      "at": [
-        "5.1 The Linear Conjugate Gradient Method",
-        "5.1 Linear Conjugate Gradient",
-        "5.1 Linear Conjugate Gradient"
-      ]
-    },
-    {
-      "id": "1U8KAwKtPik",
-      "title": "Làm sao chứng minh tính liên hợp của hướng trong Conjugate Gradient? (phần 3)",
-      "uploadedAt": 1795283247145,
-      "at": [
-        "5.1 The Linear Conjugate Gradient Method",
-        "5.1 Linear Conjugate Gradient",
-        "5.1 Linear Conjugate Gradient"
-      ]
-    },
-    {
-      "id": "Z8rU47aN54M",
-      "title": "Làm sao quy nạp span của vectơ phần dư trong Conjugate Gradient? (phần 2)",
-      "uploadedAt": 1795277475243,
-      "at": [
-        "5.1 The Linear Conjugate Gradient Method",
-        "5.1 Linear Conjugate Gradient",
-        "5.1 Linear Conjugate Gradient"
-      ]
-    },
-    {
-      "id": "ykaT4YT3Nr0",
-      "title": "Làm sao chứng minh span của vectơ phần dư trong Conjugate Gradient? (phần 1)",
-      "uploadedAt": 1795237285681,
       "at": [
         "5.1 The Linear Conjugate Gradient Method",
         "5.1 Linear Conjugate Gradient",
