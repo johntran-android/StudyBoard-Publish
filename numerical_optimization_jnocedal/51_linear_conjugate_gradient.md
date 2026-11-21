@@ -3532,7 +3532,7 @@
 >
 >
 >
-> Cách cũ của Algo 5.1: βk+1 := rk+1TApk / pkᵀApk.
+> Cách cũ của Algo 5.1: βk+1 := rk+1ᵀApk / pkᵀApk.
 >
 >
 >
@@ -3588,7 +3588,7 @@
 >
 >
 >
-> Còn cách mới, ta chỉ tính Apk ở bước i) và xài lại ở bước iii) , tốn **1** lần nhân matrix vector
+> Còn cách mới, ta chỉ tính Apk ở bước i) và xài lại ở bước iii), tốn **1** lần nhân matrix vector
 >
 >
 >
@@ -3641,6 +3641,8 @@
 >
 >
 > Với large problem, CG có lợi điểm là nó không thay đổi matrix hệ số (còn factorization thì có) và nó cũng có thể đôi khi giúp tìm ra solution nhanh hơn, đây sẽ là điểm tiếp theo ta bàn.
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=fuxN3Abpx2M)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
