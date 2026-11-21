@@ -3264,6 +3264,8 @@
 
 📹 Video 3: [Làm sao chứng minh tính liên hợp của hướng trong Conjugate Gradient? (phần 3)](https://www.youtube.com/watch?v=1U8KAwKtPik)
 
+📹 Video 4: [Làm sao chứng minh chiều ngược lại của span trong Conjugate Gradient? (phần 5)](https://www.youtube.com/watch?v=LqnLjjuFg2k)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
