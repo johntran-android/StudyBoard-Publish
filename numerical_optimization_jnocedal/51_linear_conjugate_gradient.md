@@ -2512,7 +2512,7 @@
 >
 >
 >
-> Vậy thì với việc 3 cái trên đã đúng với k = 0, ta giả sử nó đúng với k thì nếu chứng minh nó đúng với k + 1 thì ta sẽ chứng minh xong bởi phép quy nạp.
+> Ta giả sử nó đúng với k thì nếu chứng minh nó đúng với k + 1 thì ta sẽ chứng minh xong bởi phép quy nạp.
 >
 >
 >
@@ -2520,7 +2520,7 @@
 >
 >
 >
-> I) Chứng minh 5.17 đúng với k+1: Tức cần chứng minh: 
+> I) Chứng minh 5.17 đúng với k+1: Tức cần chứng minh:
 >
 >
 >
@@ -2528,7 +2528,7 @@
 >
 >
 >
-> Chiến lược: Chứng minh tập này là con tập kia, vì cái cần chứng minh là hai tập hợp (span{..} chỉ là tập hợp các linear combination bởi các basis vector thôi) bằng nhau.
+> Chiến lược: Chứng minh tập này là con tập kia, vì cái cần chứng minh là hai tập hợp (span{..} chỉ là tập hợp các linear combination bởi các vector này thôi) bằng nhau.
 >
 >
 >
@@ -2568,7 +2568,7 @@
 >
 >
 >
-> → Hiểu thế này: nói pk ∈ span {r0, Ar0, ..A^k r0} thì như đã nói trên, chỉ đơn giản là nói pk nằm trong subspace span bởi các basis {r0, Ar0,..A^k r0}, đã học MIT 18.06, điều này có nghĩa là pk có thể thể hiện bởi linear combination của các basis vector đó:
+> → Hiểu thế này: nói pk ∈ span {r0, Ar0, ..A^k r0} thì như đã nói trên, chỉ đơn giản là nói pk nằm trong subspace span bởi các {r0, Ar0,..A^k r0}, đã học MIT 18.06, điều này có nghĩa là pk có thể thể hiện bởi linear combination của các vector đó:
 >
 >
 >
@@ -2592,7 +2592,7 @@
 >
 >
 >
-> Và điều này chính là thể hiện rằng Apk nằm trong subspace span bởi các basis {Ar0, A2 r0 + .. ,A^k+1 r0}. Hay:
+> Và điều này chính là thể hiện rằng Apk nằm trong subspace span bởi các {Ar0, A2 r0 + .. ,A^k+1 r0}. Hay:
 >
 >
 >
@@ -2668,11 +2668,11 @@
 >
 >
 >
-> Lập luận thế này: gọi u là vector bất kì ∈ tập vế trái span {r0,..rk+1}. 
+> Lập luận thế này: gọi u là vector bất kì ∈ tập vế trái span {r0,..rk+1}.
 >
 >
 >
-> u = linear combination các vector r0,..rk+1: 
+> u = linear combination các vector r0,..rk+1:
 >
 >
 >
@@ -2680,11 +2680,11 @@
 >
 >
 >
-> Vì rk+1 ∈ span{Ar0,...,A^k+1 r0}
+> Vì rk+1 ∈ span{r0, Ar0,...,A^k+1 r0}
 >
 >
 >
-> ⇨ rk+1 cũng là linear combination các basis vector Ar0,...,A^k+1 r0:
+> ⇨ rk+1 cũng là linear combination các vector r0, Ar0,...,A^k+1 r0:
 >
 >
 >
@@ -2796,7 +2796,7 @@
 >
 >
 >
-> Thế thì ta đang có A^k+1 r0 ∈ span {Ap0, Ap1, .. ,Apk}, mà mỗi basis lại nằm trong span {r0,...rk+1} nên có thể suy ra
+> Thế thì ta đang có A^k+1 r0 ∈ span {Ap0, Ap1, .. ,Apk}, mà mỗi lại nằm trong span {r0,...rk+1} nên có thể suy ra
 >
 >
 >
@@ -2808,7 +2808,7 @@
 >
 >
 >
-> span {r0, Ar0, ..A^k r0} = span {p0, p1,..pk} (induction hypo for 5.17)
+> span {r0, Ar0, ..A^k r0} = span {p0, p1,..pk} (induction hypo for 5.18)
 >
 >
 >
@@ -2944,7 +2944,7 @@
 >
 >
 >
-> Xét i = k: Vế trái pk+1ᵀApi = pk+1ᵀApk đương nhiên bằng 0 do cách chọn β tạo pk+1 của thuật toán, nó phải cho ra pk+1 conjugate pk.
+> Xét i = k: Vế trái pk+1ᵀApi = pk+1ᵀApk đương nhiên bằng 0 do cách chọn β+1 khiến với i = k thì vế phải của 5.21 bằng 0 (cơ bản là do cách tạo pk+1 khiến cho ra pk+1 conjugate pk)
 >
 >
 >
@@ -3040,11 +3040,11 @@
 >
 >
 >
-> Mà span{Ar0, A^2r0, ..A^i+1 r0} ⊂ span{r0, Ar0, A2r0, ..A^i+1 r0} (vì vế phải nó có thêm 1 basis là r0)
+> Mà span{Ar0, A^2r0, ..A^i+1 r0} ⊂ span{r0, Ar0, A2r0, ..A^i+1 r0} (vì vế phải nó có thêm 1 vector là r0)
 >
 >
 >
-> Và theo 5.18 ở trên thì span{p0,...pi+1} = span{r0, Ar0, A2r0, ..A^i+1 r0} 
+> Và theo 5.18 ở trên thì span{p0,...pi+1} = span{r0, Ar0, A2r0, ..A^i+1 r0}
 >
 >
 >
@@ -3060,7 +3060,27 @@
 >
 >
 >
-> (5.22) rk+1ᵀpi = 0 ∀i = 0,1,...k
+> (5.22) rk+1ᵀαipi = 0 ∀i = 0,1,...k
+>
+>
+>
+> rk+1ᵀpi = 0 ∀i = 0,1,...k
+>
+>
+>
+> ⇒ rk+1ᵀαipi = 0 ∀i = 0,1,...k, với αi bất kì
+>
+>
+>
+> rk+1ᵀ(Σi αipi) = 0  với αi bất kì
+>
+>
+>
+> rk+1 vuông góc với vector bất kì trong span{p0,p1,...pk}
+>
+>
+>
+> rk+1 vuong góc span{p0,p1,...pk}
 >
 >
 >
@@ -3074,9 +3094,9 @@
 >
 >
 >
-> Ap0 ∈  span{p0,p1}
+> Ap0 ∈ span{p0,p1}
 >
-> Ap1 ∈  span{p0, p1,p2}
+> Ap1 ∈ span{p0, p1,p2}
 >
 > ..
 >
@@ -3088,11 +3108,11 @@
 >
 >
 >
-> Ap0 ∈ span{p0,p1} dĩ nhiên ⇨ Ap0 ∈ span{p0,...pk} (vì span{p0} ⊂ span{p0,...pk})
+> Ap0 ∈ span{p0,p1} dĩ nhiên ⇨ Ap0 ∈ span{p0,...pk} (vì span{p0,p1} ⊂ span{p0,...pk})
 >
 >
 >
-> Ap1 ∈ span{p0, p1,p2} ⇨ Api ∈ span{p0,...pk}
+> Ap1 ∈ span{p0, p1,p2} ⇨ Ap1 ∈ span{p0,...pk}
 >
 >
 >
@@ -3112,7 +3132,11 @@
 >
 >
 >
-> nhớ lại ta đang muốn làm cái gì: → Ta đang muốn chứng minh pk+1Api = 0 với i = 0,1,....k-1
+> nhớ lại ta đang muốn làm cái gì: 
+>
+>
+>
+> → Ta đang muốn chứng minh pk+1ᵀApi = 0 với i = 0,1,....k-1
 >
 >
 >
@@ -3120,7 +3144,7 @@
 >
 >
 >
-> pk+1ᵀApi = -rk+1Api + βk+1 pkApi với i = 0,1,....k-1
+> pk+1ᵀApi = -rk+1ᵀApi + βk+1 pkᵀApi với i = 0,1,....k-1
 >
 >
 >
@@ -3164,7 +3188,7 @@
 >
 >
 >
-> Với việc đã chứng minh xong 5.18, nên có quyền xài: pkᵀApi = 0 ∀i = 0,1,...k-1. Do đó bộ p0,...pk là conjugate set.
+> Với việc đã chứng minh xong 5.19, nên có quyền xài: pkᵀApi = 0 ∀i = 0,1,...k-1. Do đó bộ p0,...pk là conjugate set.
 >
 >
 >
@@ -3172,11 +3196,21 @@
 >
 >
 >
-> Dùng 5.14e: pk+1 = -rk+1 + βk+1 pk
+> Dùng 5.14e: 
+>
+>
+>
+> pk+1 = -rk+1 + βk+1 pk
+>
+>
 >
 > ⇨ pi = -ri + βi pi-1
 >
+>
+>
 > ⇔ ri = -pi + βi pi-1
+>
+>
 >
 > ⇨ ri ∈ span {pi, pi-1} ∀ i = 1,2...k-1 (cái này dễ hiểu)
 >
@@ -3194,7 +3228,7 @@
 >
 >
 >
-> ⇨ ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1
+> ⇨ ri ∈ span {p0, p1,...pk-1} ∀ i = 1,2...k-1
 >
 >
 >
@@ -3228,29 +3262,20 @@
 
 📹 Video 2: [Làm sao quy nạp span của vectơ phần dư trong Conjugate Gradient? (phần 2)](https://www.youtube.com/watch?v=Z8rU47aN54M)
 
+📹 Video 3: [Làm sao chứng minh tính liên hợp của hướng trong Conjugate Gradient? (phần 3)](https://www.youtube.com/watch?v=1U8KAwKtPik)
+
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú rất xuất sắc, hiểu sâu sắc từng bước suy luận trong phép chứng minh quy nạp của Định lý 5.3 và diễn giải chi tiết bản chất của các không gian span.
->
-> **🟡 Minor issues**
->
-> **1.** *"span {r0, Ar0, ..A^k r0} = span {p0, p1,..pk} (induction hypo for 5.17)"*
->
-> Nhầm lẫn ký hiệu: hệ thức liên hệ giữa span{p_0, ..., p_k} và Krylov subspace là (5.18), không phải (5.17).
->
-> **2.** *"ri ∈ {p1,...pk-1} ∀ i = 1,2...k-1"*
->
-> Ghi thiếu toán tử span: đúng ra phải là ri ∈ span{p_0, ..., p_{k-1}} (cụ thể hơn là ri ∈ span{p_{i-1}, p_i}), chứ ri không phải là một phần tử đơn lẻ trong tập rời rạc các vector p.
->
+> Ghi chú xuất sắc, bám sát và giải thích cặn kẽ từng bước logic trong phép chứng minh quy nạp của Định lý 5.3. Mọi biến đổi về không gian span, tính trực giao và liên hợp đều được giải thích tường minh, chính xác.
 >
 > **✓ Strengths**
-> - Diễn giải cực kỳ trực quan và chi tiết cách A tác động lên không gian span để biến đổi hệ cơ sở.
-> - Nắm chắc và liên kết mạch lạc giữa các công thức đệ trình (5.14e, 5.10) với các giả thiết quy nạp để chứng minh bao hàm hai chiều.
-> - Lập luận chặt chẽ khi tách trường hợp i = k và i < k trong chứng minh tính liên hợp p_{k+1}^T A p_i = 0.
+> - Làm rõ bản chất của các bước bao hàm tập hợp (span) bằng cách diễn giải chi tiết dưới dạng tổ hợp tuyến tính.
+> - Hiểu rất rõ và giải thích trọn vẹn cách kết hợp Định lý 5.2 cùng bước phụ (5.23) để triệt tiêu số hạng đầu trong công thức (5.21).
+> - Phần chứng minh tính trực giao của các phần dư (5.16) không dùng quy nạp được lập luận gãy gọn và chính xác.
 >
 > **💡 Deeper notes**
-> - Ở bước cơ sở (base case) quy nạp, hệ thức (5.19) được xét cho k = 1 là do khi k = 0, tập chỉ số i chạy từ 0 đến k - 1 = -1 là tập rỗng (thỏa mãn một cách hiển nhiên/chân công).
+> - Định lý 5.3 có giả thiết quan trọng ở đầu: 'iterate thứ k chưa phải là nghiệm x*'. Điều này đảm bảo r_k ≠ 0 và mẫu số α_k ≠ 0, nhờ đó các phép chia cho α_i trong bước chứng minh không bị suy biến.
 
 **🔗 See also:** [Tối ưu hóa tọa độ Hessian chéo](#node-b04ox8f) · [A Practical Form Of The Conjugate Gradient Method.](#node-jdgssae) · [Rate of Convergence](#node-3zg5huu)
 
@@ -3265,7 +3290,11 @@
 > [!NOTE]
 > Đại khái là nói rằng phần chứng minh của theorem này dựa trên sự thật rằng p0 là negative gradient (p0 = - r0, Ax0 - b, tức ∇(1/2xᵀAx - bx)|x=x0). Và nếu p0 không không phải -r0 thì theorem này sẽ không work.
 >
-> Một điểm nữa, thực ra ta thấy trong theorem đã nói (5.16): rkᵀri 0 với i=0,1,...k-1. Có nghĩa là, các gradient vector (nhắc lại lần nữa, residual Ax-b, chính là gradient của hàm Φ(x) = 1/2xᵀAx - bx) thực ra là ORᵀHOGONAL nhau, chứ KHÔNG PHẢI LÀ CONJUGATE NHAU.
+>
+>
+> Một điểm nữa, thực ra ta thấy trong theorem đã nói (5.16): rkᵀri 0 với i=0,1,...k-1. Có nghĩa là, các gradient vector (nhắc lại lần nữa, residual Ax-b, chính là gradient của hàm Φ(x) = 1/2xᵀAx - bx) thực ra là ORTHOGONAL nhau, chứ KHÔNG PHẢI LÀ CONJUGATE NHAU.
+>
+>
 >
 > Do đó giáo sư mới nói tên gọi Conjugate Gradient Method thực ra là hiểu sai, gây hiểu lầm (misnormer) vì như đã nói gradient, không conjugate, mà cái conjugate là các direction pi
 
@@ -3300,155 +3329,332 @@
 
 <p align="center"><kbd><img src="assets/yg3mqv5tiqs.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/zwbhmb5fr.png" width="80%"></kbd></p>
+
 <p align="center"><kbd><img src="assets/503c7yckr0w.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/jm219066f9k.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/zwbhmb5fr.png" width="80%"></kbd></p>
-
 > [!NOTE]
-> Đại ý là ta sẽ derive phiên bản "kinh tế" hơn của thuật toán vừa rồi.
+> Đại ý là ta sẽ derive phiên bản "kinh tế" hơn của thuật toán vừa rồi
+>
+>
 >
 > Xem lại thuật toán 5.1 có các bước sau trong mỗi iteration, cũng là ôn lại toàn bộ từ đầu đến giờ
 >
-> Bắt đầu với starting point x0. Gán r0 = Ax0 - b (đây là residual tại r0, mang ý nghĩa mức error của việc giảm tìm x thỏa Ax = b tại initial step, và đây cũng là ∇φ(x0))
+>
+>
+> Bắt đầu với starting point x0. Gán r0 = Ax0 - b (đây là residual tại x0, mang ý nghĩa mức error của việc giảm tìm x thỏa Ax = b tại initial step, và đây cũng là ∇φ(x0))
+>
+>
 >
 > Chọn p0 = -r0: hướng đi đầu tiên từ x0 chính là steepest descent.
 >
-> Lặp lại cho đến khi rk = 0:  
 >
-> i) αk := -rkᵀpk / pkᵀApk (5.14a)
->
-> Đây là gì? Đây chính là solution của bài toán minimize hàm g(α) = φ(xk + α × pk), tức là hàm φ(x) giới hạn bởi phương vector pk. Y như trong line search. Ý nghĩa: Từ xk nếu đi theo phương pk thì step đến đâu là xuống được thấp nhất.
->
-> ii) xk+1 := xk + αkpk (5.14b): Đây là update vị trí từ xk đến xk+1 thôi
->
-> iii) rk+1 := Axk+1 - b (5.14c): Đây chỉ là tính lại residual mới nhất
->
-> iv) βk+1 := rk+1TApk / pkᵀApk (5.14d)
->
-> Đây chính là bước tính ra βk+1 dựa theo điều kiện pk+1 conjugate pk, để sau bước này, dùng βk+1 để tính pk+1 thì ta sẽ có direction pk+1 conjugate (wrt A) với pk.
->
-> v) pk+1 = -rk+1 + βk+1 pk
->
-> k = k + 1.
->
-> Thế thì gs nói có thể dùng 5.14e, 5.11 để thay 5.14a bằng αk = rkᵀrk/ pkᵀApk. Là sao nhỉ? Ta có:
->
-> 5.14e: pk+1 = -rk+1 + βk+1 pk.
->
-> 5.11: rkᵀpi = 0, i = 0,1,....k-1
->
-> 5.14a: αk = -rkᵀpk / pkᵀApk
->
-> Vậy, từ 5.14e ⇨ pk = -rk + βk pk-1
->
-> ⇨ -rkᵀpk = -rkᵀ(-rk + βk pk-1) = rkᵀrk - rkᵀ βk pk-1
->
-> = rkᵀrk - βk rkᵀpk-1
->
-> Mà 5.11 nói rkᵀpk-1 = 0 
->
-> ⇨ -rkᵀpk = rkᵀrk 
->
-> ⇨ αk = -rkᵀpk / pkᵀApk = rkᵀrk/ pkᵀApk
->
-> Vậy là từ αk = -rkᵀpk / pkᵀApk, nay αk = rkᵀrk/ pkᵀApk, khác nhau ở cái tử số, cơ bản đều là dot product của hai vector.
->
-> ----
->
-> Tiếp, từ 5.10: rk+1 = rk + αkApk ⇨ αkApk = rk+1 - rk.
->
-> Áp dụng 5.14e (pk+1 = -rk+1 + βk+1 pk) và 5.11 (rkᵀpi = 0, i = 0,1,....k-1) lần nữa ta đơn giản hóa βk+1:
->
-> βk+1 = rk+1Trk+1 / rkᵀrk. Là sao?
->
-> Công thức 5.14d nói βk+1 = (ý là :=) rk+1TApk / pkᵀApk
->
-> = rk+1T(rk+1 - rk) / αkpkᵀApk
->
-> = rk+1Trk+1 / αkpkᵀApk - rk+1Trk / αkpkᵀApk
->
-> = rk+1Trk+1 / αkpkᵀApk - 0 (do 5.16)
->
-> = rk+1Trk+1 / αkpkᵀApk
->
-> Thay αk = rkᵀrk/ pkᵀApk.
->
-> .. = rk+1Trk+1 / [(rkᵀrk/ pkᵀApk) pkᵀApk]
->
-> = rk+1Trk+1 / rkᵀrk → Đây là công thức trong sách.
->
-> ----
->
-> Và từ đó ta có thuật toán 5.2: CONJUGAᵀE GRADIENT chính thức:
->
-> Bắt đầu với r0 = Ax0 - b, p0 = -rk, k = 0
 >
 > Lặp lại cho đến khi rk = 0:
 >
-> i)  (Công thức tính αk theo kiểu mới, cách cũ: αk = -rkᵀpk / pkᵀApk)
+>
+>
+> i) αk := -rkᵀpk / pkᵀApk (5.14a)
+>
+>
+>
+> Đây là gì? Đây chính là solution của bài toán minimize hàm g(α) = φ(xk + α × pk), tức là hàm φ(x) giới hạn bởi phương vector pk. Y như trong line search. Ý nghĩa: Từ xk nếu đi theo phương pk thì step đến đâu là xuống được thấp nhất.
+>
+>
+>
+> ii) xk+1 := xk + αkpk (5.14b): Đây là update vị trí từ xk đến xk+1 thôi
+>
+>
+>
+> iii) rk+1 := Axk+1 - b (5.14c): Đây chỉ là tính lại residual mới nhất
+>
+>
+>
+> iv) βk+1 := rk+1ᵀApk / pkᵀApk (5.14d)
+>
+>
+>
+> Đây chính là bước tính ra βk+1 dựa theo điều kiện pk+1 conjugate pk, để sau bước này, dùng βk+1 để tính pk+1 thì ta sẽ có direction pk+1 conjugate (wrt A) với pk.
+>
+>
+>
+> v) pk+1 = -rk+1 + βk+1 pk
+>
+>
+>
+> k = k + 1.
+>
+>
+>
+> ---
+>
+>
+>
+> Thế thì gs nói có thể dùng 5.14e, 5.11 để:
+>
+>
+>
+> Thay 5.14a:
+>
+>
+>
+> αk := -rkᵀpk / pkᵀApk
+>
+>
+>
+> bằng
+>
+>
+>
+> αk = rkᵀrk/ pkᵀApk.
+>
+>
+>
+> Là sao?
+>
+>
+>
+> Hiểu như sau:
+>
+>
+>
+> 5.14e: pk+1 = -rk+1 + βk+1 pk.
+>
+>
+>
+> 5.11: rkᵀpi = 0, i = 0,1,....k-1
+>
+>
+>
+> 5.14a: αk = -rkᵀpk / pkᵀApk
+>
+>
+>
+> Vậy, từ 5.14e ⇨ pk = -rk + βk pk-1
+>
+>
+>
+> ⇨ -rkᵀpk = -rkᵀ(-rk + βk pk-1) = rkᵀrk - rkᵀ βk pk-1 = rkᵀrk - βk rkᵀpk-1
+>
+>
+>
+> Mà 5.11 nói rkᵀpk-1 = 0
+>
+>
+>
+> ⇨ -rkᵀpk = rkᵀrk
+>
+>
+>
+> ⇨ αk = -rkᵀpk / pkᵀApk = rkᵀrk/ pkᵀApk
+>
+>
+>
+> Vậy là từ cách tính cũ:
+>
+>
+>
+> αk = -rkᵀpk / pkᵀApk
+>
+>
+>
+> nay trở thành:
+>
+>
+>
+> αk = rkᵀrk/ pkᵀApk
+>
+>
+>
+> khác nhau ở cái tử số, cơ bản đều là dot product của hai vector.
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, từ 5.10: rk+1 = rk + αkApk ⇨ Apk = (rk+1 - rk)/ αk
+>
+>
+>
+> Áp dụng 5.14e (pk+1 = -rk+1 + βk+1 pk) và 5.11 (rkᵀpi = 0, i = 0,1,....k-1) lần nữa ta đơn giản hóa βk+1:
+>
+>
+>
+> βk+1 = rk+1ᵀrk+1 / rkᵀrk. Là sao?
+>
+>
+>
+> Công thức 5.14d nói βk+1 = rk+1ᵀApk / pkᵀApk
+>
+>
+>
+> = rk+1ᵀ(rk+1 - rk) / αkpkᵀApk (thay Apk ở tử số = (rk+1 - rk)/ αk )
+>
+>
+>
+> = rk+1ᵀrk+1 / αkpkᵀApk - rk+1ᵀrk / αkpkᵀApk
+>
+>
+>
+> = rk+1ᵀrk+1 / αkpkᵀApk - 0 (do 5.16 nên rk+1ᵀrk = 0)
+>
+>
+>
+> = rk+1ᵀrk+1 / αkpkᵀApk
+>
+>
+>
+> Thay αk = rkᵀrk/ pkᵀApk.
+>
+>
+>
+> .. = rk+1ᵀrk+1 / \[(rkᵀrk/ pkᵀApk) pkᵀApk\]
+>
+>
+>
+> hai cái pkᵀApk khử nhau
+>
+>
+>
+> = rk+1ᵀrk+1 / rkᵀrk
+>
+>
+>
+> Viết lại: βk+1 = rk+1ᵀrk+1 / rkᵀrk→ Đây là công thức trong sách.
+>
+>
+>
+> So sánh cách cũ và mới:
+>
+>
+>
+> Cách cũ của Algo 5.1: βk+1 := rk+1TApk / pkᵀApk.
+>
+>
+>
+> Thì trong kiểu cũ, ta **phải tính Apk, rồi dot product với rk+1 và pk**.
+>
+>
+>
+> Còn kiểu mới chỉ **tính dot product** rk+1ᵀrk+1, và rkᵀrk **không nhân matrix vector**.
+>
+>
+>
+>
+>
+> ---
+>
+> Và từ đó ta có thuật toán 5.2: CONJUGATE GRADIENT chính thức:
+>
+>
+>
+> Bắt đầu với r0 = Ax0 - b, p0 = -r0, k = 0
+>
+>
+>
+> Lặp lại cho đến khi rk = 0:
+>
+>
+>
+> i) αk = rkᵀrk / pkᵀApk (cách cũ: αk = -rkᵀpk / pkᵀApk)
+>
+>
 >
 > ii) xk+1 := xk + αkpk (5.24b) (cái này ko có gì thay đổi)
 >
+>
+>
 > iii) rk+1 := rk + αkApk (5.24c)
 >
-> Trong Algo 5.1 thì bước này là rk+1 := Axk+1 - b, thay xk+1 = xk + αkpk ⇨ rk+1 = Axk + A αkpk - b = Axk - b + A αkpk = rk + αkApk. Có nghĩa là cũng ko có gì mới cả, nhưng cái khác là ta sẽ tính phép toán matrix nhân vector: Apk thay vì Axk+1. 
+>
+>
+> Trong Algo 5.1 thì bước này là rk+1 := Axk+1 - b,
+>
+>
+>
+> thay xk+1 = xk + αkpk thì cũng có rk+1 = Axk + A αkpk - b = Axk - b + A αkpk = rk + αkApk.
+>
+>
+>
+> Có nghĩa là cũng ko có gì mới cả, nhưng cái khác là:
+>
+>
+>
+> Cách cũ, ta phải tính Apk trong bước i) và Axk trong bước iii), tốn **2** lần nhân matrix vector
+>
+>
+>
+> Còn cách mới, ta chỉ tính Apk ở bước i) và xài lại ở bước iii) , tốn **1** lần nhân matrix vector
+>
+>
 >
 > iv) βk+1 := rk+1Trk+1 / rkᵀrk (5.24d)
 >
-> Cách cũ của Algo 5.1: βk+1 := rk+1TApk / pkᵀApk. Thì trong kiểu cũ, ta phải tính Apk, rồi dot product với rk+1 và pk. Còn kiểu mới chỉ tính dot product, không nhân matrix vector.
+>
 >
 > v) pk+1 := -rk+1 + βk+1 pk (5.24e) (Cái này thì vẫn vậy)
 >
+>
+>
 > k := k + 1
 >
-> ====
+>
+>
+> ---
+>
+>
 >
 > Thế thì, gs nói "như vậy với thuật toán này ta ko cần phải biết x, r và p của nhiều hơn 2 iteration trước": Ý ông là cả Algo 5.1 và 5.2. Ý này dễ hiểu, vì rõ ràng trong mỗi iteration, ta chỉ xài xk,pk,rk để tính xk+1, rk+1, pk+1.
 >
-> Ông nói "Phần lớn tính toán sẽ là tính Apk, tính pkᵀ(Apk) và rk+1Trk+1 cũng như là 3 cái sum vectors": Đúng rồi, nhìn thuật toán là thấy.
 >
-> Rồi, đại ý là inner product (dot product) cũng như vector sum thì chỉ tốn một con số nhỏ nào đó của n floating point operation. Là sao?
 >
-> Sẵn ôn lại, đã học từ EE364a. Một phép cộng (trừ) và phép nhân (chia) tạo thành một floating point operation (flop). Vậy một dot product giữa hai n-D vector u,v: Sẽ tốn n phép nhân hai phần tử với nhau, và n-1 phép cộng, coi như tốn n phép (nhân + cộng scalar vs scalar) → tốn n flops. Và trong thuật toán thì ta sẽ dot product vài lần, ví dụ 4 lần → tốn 4n flops. Và ý chính là, đây chỉ là bậc 1 của n, n tăng, thì chi phí cũng chỉ tăng tuyến tính.
+> Ông nói "Phần lớn tính toán sẽ là tính Apk, tính pkᵀ(Apk) và rk+1ᵀrk+1 cũng như là 3 cái sum vectors": Cái này dễ hiểu, nhìn thuật toán là thấy.
 >
-> Còn chi phí của nhân matrix với vector thì giáo sư nói tùy vào bài toán. Có thể hiểu ý này là: Nếu matrix A có thể phân rã thành các matrix đơn giản hơn thì chi phí nhân matrix vs vector có thể ít hơn. Còn tiêu chuẩn thì nó tốn O(n²)
 >
-> Ta biết nhân matrix A với vector x là tính n phép dot product giữa các row của A và x. Mỗi cái thì tốn n flops ⇨ Tốn n² flops.
 >
-> Gs nói thêm cái Conjugate Gradient method này chỉ nên dùng cho LARGE PROBLEM. Còn nhỏ hơn thì nên dùng Gaussian elimination (khử Gausse) hay eigen decomposition vì chúng ít nhạy với rounding error hơn.
+> Tiếp, đại ý là inner product (dot product) cũng như vector sum thì chỉ tốn một con số nhỏ nào đó của n floating point operation. Là sao?
+>
+>
+>
+> Sẵn ôn lại, đã học từ EE364a. Một phép cộng, trừ, nhân, chỉ được tính là một floating point operation (flop). Vậy một dot product giữa hai n-D vector u,v: Sẽ tốn n phép nhân hai phần tử với nhau, và n-1 phép cộng, coi như tốn 2n-1 phép (nhân + cộng scalar vs scalar) → tốn 2n-1 flops ≈ 2n flops Và trong thuật toán thì ta sẽ dot product vài lần, ví dụ 4 lần → tốn 4n flops. Và ý chính là, đây chỉ là bậc 1 của n, n tăng, thì chi phí cũng chỉ tăng tuyến tính O(n)
+>
+>
+>
+> Còn chi phí của nhân matrix với vector thì giáo sư nói tùy vào bài toán. Còn tiêu chuẩn thì nó tốn O(n²)
+>
+>
+>
+> Vì sao? → Ta biết nhân matrix A với vector x là tính n phép dot product giữa các row của A và x. Mỗi cái thì tốn n flops ⇨ Tốn 2n² flops. O(n²)
+>
+>
+>
+> ---
+>
+>
+>
+> Gs nói thêm cái Conjugate Gradient method này chỉ nên dùng cho LARGE PROBLEM. Còn nhỏ hơn thì nên dùng Gaussian elimination (khử Gausse) hay svd vì chúng ít nhạy với rounding error hơn.
+>
+>
 >
 > Với large problem, CG có lợi điểm là nó không thay đổi matrix hệ số (còn factorization thì có) và nó cũng có thể đôi khi giúp tìm ra solution nhanh hơn, đây sẽ là điểm tiếp theo ta bàn.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú rất xuất sắc, bạn đã tự tay biến đổi chi tiết các bước rút gọn cho alpha_k và beta_k+1 mà sách chỉ tóm tắt. Chỉ có vài chi tiết nhỏ về thuật ngữ và một lỗi gõ phím nhẹ cần lưu ý.
->
-> **🟡 Minor issues**
->
-> **1.** *"Bắt đầu với r0 = Ax0 - b, p0 = -rk, k = 0"*
->
-> Lỗi gõ phím nhỏ: ở bước khởi tạo phải là p0 = -r0 thay vì -rk.
->
-> **2.** *"hay eigen decomposition vì chúng ít nhạy với rounding error hơn"*
->
-> Trong nguyên bản sách nhắc tới 'singular value decomposition' (SVD) và Gaussian elimination chứ không phải 'eigen decomposition'.
->
-> **3.** *"Nếu matrix A có thể phân rã thành các matrix đơn giản hơn thì chi phí nhân matrix vs vector có thể ít hơn."*
->
-> Ý của tác giả khi nói chi phí nhân A*p phụ thuộc vào bài toán chủ yếu đề cập đến tính thưa (sparsity) hoặc cấu trúc đặc biệt của ma trận (như Toeplitz, banded, hoặc toán tử không cần lưu tường minh ma trận), chứ CG thường tránh phân rã ma trận.
->
+> Ghi chú rất xuất sắc! Bạn đã tự triển khai chi tiết các bước biến đổi đại số từ công thức cũ sang công thức mới của αk và βk+1 rất rõ ràng và chuẩn xác.
 >
 > **✓ Strengths**
-> - Bạn đã thực hiện đầy đủ và chính xác toàn bộ phép biến đổi toán học để chứng minh công thức rút gọn của alpha_k và beta_{k+1} thay vì chỉ chép lại kết quả.
-> - Hiểu rất rõ trực giác hình học và bản chất tối ưu hóa bước đi line search trong mỗi vòng lặp.
-> - Phân tích đúng độ phức tạp thuật toán và cách tái sử dụng kết quả tính toán giữa các bước.
+> - Tự diễn giải và biến đổi đại số tường minh cho cả hai công thức αk và βk+1 dựa trên tính trực giao của residual và công thức cập nhật p_k, hoàn thiện tốt phần sách viết vắn tắt.
+> - Hiểu đúng bản chất tiết kiệm chi phí tính toán: chỉ cần duy nhất 1 phép nhân ma trận - vector (A p_k) cho mỗi vòng lặp thay vì 2 lần như ở thuật toán 5.1.
+> - Phân tích chính xác độ phức tạp tính toán (FLOPs) của tích vô hướng O(n) và nhân ma trận - vector đầy đủ O(n²).
 >
 > **💡 Deeper notes**
-> - Trong các bài toán lớn, ưu điểm lớn nhất của CG so với các phép phân rã (factorization như Cholesky hay LU) của ma trận thưa là không sinh ra hiện tượng lấp đầy (fill-in: các phần tử 0 biến thành khác 0 làm tràn bộ nhớ).
-> - Việc tính r_{k+1} = r_k + alpha_k * A * p_k tiết kiệm một phép nhân ma trận - vector vì vector A*p_k đã được tính sẵn ở bước tính alpha_k.
+> - Về chi phí nhân ma trận - vector: CG đặc biệt vượt trội với 'large problems' khi ma trận A là ma trận thưa (sparse matrix). Khi đó, phép nhân A p_k chỉ tốn O(nnz) (số phần tử khác 0, thường xấp xỉ O(n)) thay vì O(n²).
+> - Hiện tượng 'fill-in': Đoạn trích có nhắc tới ưu điểm 'does not produce fill in the arrays'. Khi dùng phân rã ma trận (như Cholesky hay LU) trên ma trận thưa, các vị trí số 0 ban đầu có thể bị điền đầy bởi các giá trị khác 0 ('fill-in'), làm bùng nổ bộ nhớ; CG khắc phục triệt để điều này vì ma trận A được giữ nguyên.
 
 **🔗 See also:** [Theorem 5.3](#node-e7cob1z) · [Vài suy nghĩ về bản chất của Conjugate Gradient method](#node-6z4orxx) · [Basic properties of conjugate gradient method](#node-p6jzgvh) · [Thuật toán Newton-CG](./71_inexact_newton_methods.md#node-rwy213p) · [Conjugate Gradient Method Iterations](./102_linear_least_square_problem.md#node-x7aktmm)
 
