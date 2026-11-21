@@ -438,9 +438,7 @@
 >
 > vào sẽ có công thức trong sách.
 
-📹 Video 1: [Vì sao data augmentation tương đương với regularization? (phần 1)](https://www.youtube.com/watch?v=nWOq3ZRDaxs)
-
-📹 Video 2: [Vì sao data augmentation tương đương với tangent propagation? (phần 2)](https://www.youtube.com/watch?v=G3lITj2nnNw)
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=g_7hFLLIgX4)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
