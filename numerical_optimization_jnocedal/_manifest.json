@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1794976688362,
+  "publishedAt": 1795240091992,
   "sections": [
     {
       "title": "📋 Overview",
@@ -258,6 +258,16 @@
   "totalNotes": 456,
   "totalImages": 709,
   "videos": [
+    {
+      "id": "ykaT4YT3Nr0",
+      "title": "Làm sao chứng minh span của vectơ phần dư trong Conjugate Gradient?",
+      "uploadedAt": 1795237285681,
+      "at": [
+        "5.1 The Linear Conjugate Gradient Method",
+        "5.1 Linear Conjugate Gradient",
+        "5.1 Linear Conjugate Gradient"
+      ]
+    },
     {
       "id": "rdfTaWa_d8w",
       "title": "Thuật toán CG sơ bộ.",
