@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1795285093280,
+  "publishedAt": 1795288695025,
   "sections": [
     {
       "title": "📋 Overview",
@@ -258,6 +258,16 @@
   "totalNotes": 456,
   "totalImages": 709,
   "videos": [
+    {
+      "id": "fuxN3Abpx2M",
+      "title": "Làm sao tối ưu phép tính trong Conjugate Gradient thực tế? (phần 4)",
+      "uploadedAt": 1795287545095,
+      "at": [
+        "5.1 The Linear Conjugate Gradient Method",
+        "5.1 Linear Conjugate Gradient",
+        "5.1 Linear Conjugate Gradient"
+      ]
+    },
     {
       "id": "1U8KAwKtPik",
       "title": "Làm sao chứng minh tính liên hợp của hướng trong Conjugate Gradient? (phần 3)",
