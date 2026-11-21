@@ -1,6 +1,6 @@
 # 1.5 Decision Theory
 
-📊 **Progress:** `30` Notes | `50` Screenshots | `26` AI Reviews
+📊 **Progress:** `30` Notes | `51` Screenshots | `26` AI Reviews
 
 ---
 <a id="node-0es6zw7"></a>
@@ -2566,6 +2566,8 @@
 ###### Loss Functions for Regression
 
 <p align="center"><kbd><img src="assets/nhfkka9kzy.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/wgjsp058l.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > (Nội dung này mình nhờ GPT tổng hợp những gì nói trong video với những ghi chú ngắn mà bạn thấy trong video, thành ra cái note dưới đây cơ bản có bàn tay của AI)
