@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795226290806,
+  "publishedAt": 1795229291045,
   "sections": [
     {
       "title": "📋 Overview",
@@ -619,18 +619,9 @@
   "totalImages": 902,
   "videos": [
     {
-      "id": "G3lITj2nnNw",
-      "title": "Vì sao data augmentation tương đương với tangent propagation? (phần 2)",
-      "uploadedAt": 1795224937801,
-      "at": [
-        "5.5.5 Training with Transformed Data",
-        "5.5.5 Training with transformed data"
-      ]
-    },
-    {
-      "id": "nWOq3ZRDaxs",
-      "title": "Vì sao data augmentation tương đương với regularization? (phần 1)",
-      "uploadedAt": 1795222637807,
+      "id": "g_7hFLLIgX4",
+      "title": "Vì sao data augmentation tương đương tangent propagation?",
+      "uploadedAt": 1795226404370,
       "at": [
         "5.5.5 Training with Transformed Data",
         "5.5.5 Training with transformed data"
