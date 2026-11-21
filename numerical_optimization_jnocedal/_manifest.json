@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1795240091992,
+  "publishedAt": 1795280293931,
   "sections": [
     {
       "title": "📋 Overview",
@@ -259,8 +259,18 @@
   "totalImages": 709,
   "videos": [
     {
+      "id": "Z8rU47aN54M",
+      "title": "Làm sao quy nạp span của vectơ phần dư trong Conjugate Gradient? (phần 2)",
+      "uploadedAt": 1795277475243,
+      "at": [
+        "5.1 The Linear Conjugate Gradient Method",
+        "5.1 Linear Conjugate Gradient",
+        "5.1 Linear Conjugate Gradient"
+      ]
+    },
+    {
       "id": "ykaT4YT3Nr0",
-      "title": "Làm sao chứng minh span của vectơ phần dư trong Conjugate Gradient?",
+      "title": "Làm sao chứng minh span của vectơ phần dư trong Conjugate Gradient? (phần 1)",
       "uploadedAt": 1795237285681,
       "at": [
         "5.1 The Linear Conjugate Gradient Method",
