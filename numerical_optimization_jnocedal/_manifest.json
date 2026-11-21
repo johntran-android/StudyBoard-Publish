@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1795288695025,
+  "publishedAt": 1795292896912,
   "sections": [
     {
       "title": "📋 Overview",
@@ -258,6 +258,16 @@
   "totalNotes": 456,
   "totalImages": 709,
   "videos": [
+    {
+      "id": "LqnLjjuFg2k",
+      "title": "Làm sao chứng minh chiều ngược lại của span trong Conjugate Gradient? (phần 5)",
+      "uploadedAt": 1795288146319,
+      "at": [
+        "5.1 The Linear Conjugate Gradient Method",
+        "5.1 Linear Conjugate Gradient",
+        "5.1 Linear Conjugate Gradient"
+      ]
+    },
     {
       "id": "fuxN3Abpx2M",
       "title": "Làm sao tối ưu phép tính trong Conjugate Gradient thực tế? (phần 4)",
