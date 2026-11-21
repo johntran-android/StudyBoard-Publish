@@ -3258,13 +3258,7 @@
 >
 > Vậy là đã chứng minh xong.
 
-📹 Video 1: [Làm sao chứng minh span của vectơ phần dư trong Conjugate Gradient? (phần 1)](https://youtu.be/ykaT4YT3Nr0)
-
-📹 Video 2: [Làm sao quy nạp span của vectơ phần dư trong Conjugate Gradient? (phần 2)](https://www.youtube.com/watch?v=Z8rU47aN54M)
-
-📹 Video 3: [Làm sao chứng minh tính liên hợp của hướng trong Conjugate Gradient? (phần 3)](https://www.youtube.com/watch?v=1U8KAwKtPik)
-
-📹 Video 4: [Làm sao chứng minh chiều ngược lại của span trong Conjugate Gradient? (phần 5)](https://www.youtube.com/watch?v=LqnLjjuFg2k)
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=LqnLjjuFg2k)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
