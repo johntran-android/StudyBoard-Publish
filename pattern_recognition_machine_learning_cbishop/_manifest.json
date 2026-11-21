@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795058900949,
+  "publishedAt": 1795225107498,
   "sections": [
     {
       "title": "📋 Overview",
@@ -72,7 +72,7 @@
       "title": "1.5 Decision Theory",
       "path": "pattern_recognition_machine_learning_cbishop/15_decision_theory.md",
       "noteCount": 30,
-      "imageCount": 50
+      "imageCount": 51
     },
     {
       "title": "1.6 Information Theory",
@@ -591,6 +591,12 @@
       "imageCount": 10
     },
     {
+      "title": "5.5.5 Training with transformed data",
+      "path": "pattern_recognition_machine_learning_cbishop/555_training_with_transformed_data.md",
+      "noteCount": 3,
+      "imageCount": 6
+    },
+    {
       "title": "5.7 Ex",
       "path": "pattern_recognition_machine_learning_cbishop/57_ex.md",
       "noteCount": 1,
@@ -609,9 +615,18 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 529,
-  "totalImages": 895,
+  "totalNotes": 532,
+  "totalImages": 902,
   "videos": [
+    {
+      "id": "nWOq3ZRDaxs",
+      "title": "Vì sao data augmentation tương đương với regularization?",
+      "uploadedAt": 1795222637807,
+      "at": [
+        "5.5.5 Training with Transformed Data",
+        "5.5.5 Training with transformed data"
+      ]
+    },
     {
       "id": "Fu4hPTwO1bY",
       "title": "Tangent propagation liên kết Jacobian và vectơ tiếp tuyến thế nào?",
