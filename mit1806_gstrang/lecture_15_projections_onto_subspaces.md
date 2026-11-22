@@ -9,11 +9,15 @@
 
 <a id="node-wv5up5i"></a>
 
+## Ma trận hình chiếu
+
 <p align="center"><kbd><img src="assets/7x9pd2onabk.png" width="80%"></kbd></p>
 
 <br>
 
 <a id="node-lzzbmqo"></a>
+
+### Phép chiếu lên Subspace
 
 <p align="center"><kbd><img src="assets/fzhh8lpvj1.png" width="80%"></kbd></p>
 
@@ -29,6 +33,8 @@
 <br>
 
 <a id="node-ztclrq9"></a>
+
+#### Hình chiếu vector lên vector
 
 <p align="center"><kbd><img src="assets/14zb0qucscl.png" width="80%"></kbd></p>
 
@@ -47,6 +53,8 @@
 
 <a id="node-624nhj2"></a>
 
+##### Hình chiếu trực giao
+
 <p align="center"><kbd><img src="assets/guasfbp2jv.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -59,6 +67,8 @@
 <br>
 
 <a id="node-h9vivir"></a>
+
+###### Công thức hình chiếu vector
 
 <p align="center"><kbd><img src="assets/nai626pb8ub.png" width="80%"></kbd></p>
 
@@ -78,6 +88,8 @@
 
 <a id="node-95k4jaz"></a>
 
+###### Phép chiếu vectơ
+
 <p align="center"><kbd><img src="assets/4x8af1nwlm6.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -91,6 +103,8 @@
 <br>
 
 <a id="node-kvzzr6s"></a>
+
+###### Tính chất hình chiếu vector
 
 <p align="center"><kbd><img src="assets/eh8yy6es1ev.png" width="80%"></kbd></p>
 
@@ -107,6 +121,8 @@
 
 <a id="node-gf35byx"></a>
 
+###### Công thức hình chiếu vector
+
 <p align="center"><kbd><img src="assets/c0jdiybjz3s.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -122,6 +138,8 @@
 
 <a id="node-a7h11fc"></a>
 
+###### Ma trận hình chiếu
+
 <p align="center"><kbd><img src="assets/1a62o8hhrcn.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -132,6 +150,8 @@
 <br>
 
 <a id="node-alp188n"></a>
+
+###### Ma trận chiếu P
 
 <p align="center"><kbd><img src="assets/8i9txq96566.png" width="80%"></kbd></p>
 
@@ -144,6 +164,8 @@
 <br>
 
 <a id="node-u1oddq3"></a>
+
+###### Không gian cột của P
 
 <p align="center"><kbd><img src="assets/iyvv1vggp5.png" width="80%"></kbd></p>
 
@@ -173,11 +195,13 @@
 > space của P chính là line đi qua vector a**. Nên kết quả của
 > **Pb sẽ vẫn nằm trên line này**
 
-**🔗 See also:** [linked note](#node-5su5cq6)
+**🔗 See also:** [Dạng ma trận Aᵀ(b-Âx)=0](#node-5su5cq6)
 
 <br>
 
 <a id="node-e87h0ke"></a>
+
+###### Hạng của ma trận chiếu
 
 <p align="center"><kbd><img src="assets/m6yrc1nd9me.png" width="80%"></kbd></p>
 
@@ -239,6 +263,8 @@
 
 <a id="node-pdkvpdd"></a>
 
+###### Lý do sử dụng Projection
+
 <p align="center"><kbd><img src="assets/q15xs3fxkca.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -277,6 +303,8 @@
 
 <a id="node-katlkhi"></a>
 
+###### Phép chiếu lên mặt phẳng
+
 <p align="center"><kbd><img src="assets/as9mhib99e9.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -288,6 +316,8 @@
 
 <a id="node-eb13jz9"></a>
 
+###### Hình chiếu lên mặt phẳng
+
 <p align="center"><kbd><img src="assets/f746i5dzlgq.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -297,6 +327,8 @@
 <br>
 
 <a id="node-ay9m7hh"></a>
+
+###### Mặt phẳng và Column Space
 
 <p align="center"><kbd><img src="assets/o57b8um5qq.png" width="80%"></kbd></p>
 
@@ -332,6 +364,8 @@
 
 <a id="node-tzxgy7w"></a>
 
+###### Phép chiếu vector lên C(A)
+
 <p align="center"><kbd><img src="assets/90qiqj5nwar.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -341,6 +375,8 @@
 <br>
 
 <a id="node-2m11r3f"></a>
+
+###### Vectơ sai số trực giao
 
 <p align="center"><kbd><img src="assets/gszcued21wh.png" width="80%"></kbd></p>
 
@@ -379,6 +415,8 @@
 
 <a id="node-w56zol2"></a>
 
+###### Hình chiếu lên C(A)
+
 <p align="center"><kbd><img src="assets/qhovmbdcp7n.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -393,6 +431,8 @@
 
 <a id="node-b1uxrli"></a>
 
+###### Bài toán hình chiếu vuông góc
+
 <p align="center"><kbd><img src="assets/xzjlhx5mfgh.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -403,6 +443,8 @@
 <br>
 
 <a id="node-a8lsbxf"></a>
+
+###### Trực giao của vector e
 
 <p align="center"><kbd><img src="assets/j0dflsgzgs.png" width="80%"></kbd></p>
 
@@ -419,6 +461,8 @@
 
 <a id="node-v78hdi2"></a>
 
+###### Điều kiện trực giao phép chiếu
+
 <p align="center"><kbd><img src="assets/1a3zkxnfl9z.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -428,6 +472,8 @@
 <br>
 
 <a id="node-5su5cq6"></a>
+
+###### Dạng ma trận Aᵀ(b-Âx)=0
 
 <p align="center"><kbd><img src="assets/u59zbvx3kqq.png" width="80%"></kbd></p>
 
@@ -445,7 +491,7 @@
 > còn bây giờ ta có hai vector a1 a2 basis của C(A) nên ta
 > có : **Aᵀ(b-Ax̂) = 0**
 
-**🔗 See also:** [linked note](#node-u1oddq3)
+**🔗 See also:** [Không gian cột của P](#node-u1oddq3)
 
 <br>
 
@@ -474,6 +520,8 @@
 
 <a id="node-skstct8"></a>
 
+###### Trực giao N(Aᵀ) và C(A)
+
 <p align="center"><kbd><img src="assets/sotam9ye729.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -496,6 +544,8 @@
 <br>
 
 <a id="node-sa91oui"></a>
+
+###### Phương trình chuẩn tắc
 
 <p align="center"><kbd><img src="assets/dk9fioeezyq.png" width="80%"></kbd></p>
 
@@ -554,6 +604,8 @@
 
 <a id="node-n45i2ju"></a>
 
+###### Sai lầm rút gọn (AᵀA)⁻¹
+
 <p align="center"><kbd><img src="assets/w5ikmp5fdzr.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -586,6 +638,8 @@
 
 <a id="node-qiqdgem"></a>
 
+###### Column space ma trận invertible
+
 <p align="center"><kbd><img src="assets/epzzqxkf1qt.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -604,6 +658,8 @@
 
 <a id="node-b7ooxnt"></a>
 
+###### Ma trận chiếu toàn không gian
+
 <p align="center"><kbd><img src="assets/smo3sa07r4k.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -621,6 +677,8 @@
 <br>
 
 <a id="node-v5ijbff"></a>
+
+###### Ma trận hình chiếu P
 
 <p align="center"><kbd><img src="assets/ef1m9lqjrr.png" width="80%"></kbd></p>
 
@@ -673,6 +731,8 @@
 
 <a id="node-bol8nlz"></a>
 
+###### Bài toán Least Squares
+
 <p align="center"><kbd><img src="assets/oeicdajkuat.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -685,6 +745,8 @@
 
 <a id="node-kbg3it8"></a>
 
+###### Bài toán khớp đường thẳng
+
 <p align="center"><kbd><img src="assets/svu78blumj.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -695,6 +757,8 @@
 
 <a id="node-fxsorpf"></a>
 
+###### Phương pháp bình phương tối thiểu
+
 <p align="center"><kbd><img src="assets/mfrh76oi9ua.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -704,6 +768,8 @@
 <br>
 
 <a id="node-0g08keg"></a>
+
+###### Hệ phương trình tìm đường thẳng
 
 <p align="center"><kbd><img src="assets/gc8spkz0z2q.png" width="80%"></kbd></p>
 
@@ -741,6 +807,8 @@
 
 <a id="node-0qt5wk4"></a>
 
+###### Phương trình ma trận Ax = b
+
 <p align="center"><kbd><img src="assets/2jr0czfudg5.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -758,6 +826,8 @@
 <br>
 
 <a id="node-a3x13xo"></a>
+
+###### Phương trình chuẩn AᵀAx̂ = Aᵀb
 
 <p align="center"><kbd><img src="assets/8aqutf2knot.png" width="80%"></kbd></p>
 
@@ -781,6 +851,8 @@
 <br>
 
 <a id="node-g1vtz0j"></a>
+
+###### Phép chiếu tối ưu
 
 <p align="center"><kbd><img src="assets/e4s0ym8heg7.png" width="80%"></kbd></p>
 
