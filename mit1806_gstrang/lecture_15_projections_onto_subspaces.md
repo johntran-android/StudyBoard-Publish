@@ -535,6 +535,8 @@
 
 <a id="node-zyfgurd"></a>
 
+###### Phương trình pháp tuyến
+
 <p align="center"><kbd><img src="assets/mkww9e2rchf.png" width="80%"></kbd></p>
 
 > [!NOTE]
