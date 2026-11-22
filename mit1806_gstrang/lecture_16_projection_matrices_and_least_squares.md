@@ -134,6 +134,8 @@
 
 <a id="node-3b7wnzq"></a>
 
+###### Ma trận chiếu I-P
+
 <p align="center"><kbd><img src="assets/51a8bjtoeg.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -153,6 +155,8 @@
 
 <a id="node-j2e9bro"></a>
 
+###### Ma trận chiếu bù I-P
+
 <p align="center"><kbd><img src="assets/dwr30lj8o7.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -168,6 +172,8 @@
 <br>
 
 <a id="node-w9nkjfp"></a>
+
+###### Ứng dụng ma trận chiếu
 
 <p align="center"><kbd><img src="assets/yntqh9bbw7e.png" width="80%"></kbd></p>
 
@@ -210,6 +216,8 @@
 
 <a id="node-4kbw1yf"></a>
 
+###### Nghiệm xấp xỉ tốt nhất
+
 <p align="center"><kbd><img src="assets/undl59rhyxp.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -230,6 +238,8 @@
 
 <a id="node-f0131ga"></a>
 
+###### Bản chất sai số bình phương
+
 <p align="center"><kbd><img src="assets/mgxiqjbn6l.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/owcej2rvnxl.png" width="80%"></kbd></p>
@@ -247,6 +257,8 @@
 <br>
 
 <a id="node-qybrvyy"></a>
+
+###### Hồi quy tuyến tính
 
 <p align="center"><kbd><img src="assets/0dzov6qi2g67.png" width="80%"></kbd></p>
 
