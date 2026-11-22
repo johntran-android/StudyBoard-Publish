@@ -1,6 +1,6 @@
 # Lecture 14: Orthogonal Vectors And Subspaces
 
-📊 **Progress:** `37` Notes | `46` Screenshots | `25` AI Reviews
+📊 **Progress:** `37` Notes | `46` Screenshots | `32` AI Reviews
 
 ---
 <a id="node-cmamy5b"></a>
@@ -687,7 +687,7 @@
 
 <p align="center"><kbd><img src="assets/2zgcgkxe0mx.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/9zluci.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/01s059srg638.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > và, đại khái là vì ta có hai subspace này (nullspace và
@@ -737,6 +737,8 @@
 > nhưng chỉ có 1 cols. Và **giá trị khác nhau mỗi lần là do
 > noise**, tuy nhiên bên trong giá trị **vẫn chứa thông tin**.
 > Và ta **muốn tách những thông tin hữu ích ra khỏi noise**
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=Utf0bKKqqio)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -802,6 +804,19 @@
 >
 > (AᵀA)ᵀ = Aᵀ(Aᵀᵀ) = AᵀA. Tức là bằng cách cho thấy **AᵀA transpose của nó bằng chính nó nên AᵀA đối xứng.**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và súc tích, đã giải thích rõ tại sao $A^TA$ là ma trận vuông và chứng minh đúng tính đối xứng qua phép chuyển vị.
+>
+> **✓ Strengths**
+> - Xác định đúng hai tính chất nền tảng của ma trận $A^TA$ là ma trận vuông và ma trận đối xứng.
+> - Chứng minh tính đối xứng $(A^TA)^T = A^TA$ chính xác dựa trên quy tắc chuyển vị tích $(AB)^T = B^TA^T$ và $(A^T)^T = A$.
+>
+> **💡 Deeper notes**
+> - Nếu ma trận $A$ có kích thước $m \times n$ thì $A^TA$ luôn có kích thước cụ thể là $n \times n$ (trong khi $AA^T$ sẽ là $m \times m$).
+> - Ngoài tính đối xứng, $A^TA$ còn có tính chất quan trọng là luôn nửa xác định dương (positive semi-definite), và sẽ khả nghịch nếu $A$ có các cột độc lập tuyến tính (full column rank).
+
 <br>
 
 <a id="node-yqftgl5"></a>
@@ -837,6 +852,17 @@
 > Câu hỏi tiếp theo là nó **có
 > invertible không?**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm bắt chính xác và đúng trọng tâm câu hỏi của giáo sư trong bài giảng.
+>
+> **✓ Strengths**
+> - Ghi nhận chính xác câu hỏi cốt lõi mà giảng viên đặt ra về tính khả nghịch (invertible) của ma trận.
+>
+> **💡 Deeper notes**
+> - Tính khả nghịch (invertibility) thường chỉ áp dụng cho ma trận vuông và tương đương với việc định thức khác 0, ma trận có hạng đầy đủ (full rank) hoặc các cột độc lập tuyến tính.
+
 <br>
 
 <a id="node-0mymuub"></a>
@@ -852,6 +878,25 @@
 >
 > gs cho rằng tôi sẽ **nhân hai vế của Ax=b với Aᵀ** để hi vọng rằng **có thể có solution của phương trình này**, gs gọi là **x̂**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+>
+> Ghi chú nắm rất đúng trực giác cốt lõi: khi m > n, C(A) không phủ hết R^m nên Ax=b thường vô nghiệm, và việc nhân Aᵀ dẫn tới phương trình pháp phương để tìm nghiệm x̂ xấp xỉ tốt nhất.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"để hi vọng rằng có thể có solution của phương trình này"*
+>
+> Cách dùng từ 'hi vọng' tạo cảm giác hên xui. Về mặt toán học, hệ phương trình AᵀAx̂ = Aᵀb luôn luôn đảm bảo có nghiệm với mọi vector b (do Aᵀb luôn thuộc C(Aᵀ) = C(AᵀA)).
+>
+>
+> **✓ Strengths**
+> - Giải thích chính xác lý do hình học vì sao Ax=b thường vô nghiệm khi m > n (do không gian cột C(A) không thể span toàn bộ R^m).
+> - Nhận diện đúng ký hiệu nghiệm x̂ (nghiệm bình phương tối thiểu) cho phương trình chuẩn tắc AᵀAx̂ = Aᵀb.
+>
+> **💡 Deeper notes**
+> - Hệ phương trình AᵀAx̂ = Aᵀb luôn có nghiệm; hơn nữa, nghiệm x̂ sẽ là duy nhất nếu ma trận A có các cột độc lập tuyến tính (tức A có full column rank n, khi đó AᵀA khả nghịch).
+
 <br>
 
 <a id="node-7al9iez"></a>
@@ -863,6 +908,18 @@
 > [!NOTE]
 > Và khi đó **AᵀAx̂ = Aᵀb** sẽ là equation mà ông gọi là **good
 > equation**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú ngắn gọn và nắm đúng phương trình cốt lõi $A^TA\hat{x} = A^Tb$ dùng khi hệ $Ax = b$ vô nghiệm theo bài giảng của GS. Gilbert Strang.
+>
+> **✓ Strengths**
+> - Ghi nhận chính xác phương trình chuẩn (normal equation) $A^TA\hat{x} = A^Tb$ dùng để tìm nghiệm xấp xỉ tốt nhất (bình phương tối thiểu) khi $Ax = b$ không có nghiệm.
+>
+> **💡 Deeper notes**
+> - Thuật ngữ toán học chuẩn mực cho phương trình này là 'normal equations' (hệ phương trình chuẩn).
+> - Nghiệm $\hat{x} = (A^TA)^{-1}A^Tb$ sẽ là duy nhất khi và chỉ khi ma trận $A$ có các cột độc lập tuyến tính (tức $A^TA$ khả nghịch).
 
 <br>
 
@@ -878,6 +935,18 @@
 >
 >
 > Và như đã nói chỉ khi nào b **NẰM TRÊN COLS SPACE − LÀ 2D PLANE TRONG R3**, THÌ mới system of equation này mới solvable
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác về mặt toán học và phản ánh đúng bản chất hình học của hệ phương trình Ax = b mà Giáo sư Gilbert Strang đang giảng.
+>
+> **✓ Strengths**
+> - Xác định chính xác ma trận A kích thước 3x2 có hai cột độc lập tuyến tính nên rank = 2.
+> - Hiểu đúng bản chất hình học: không gian cột C(A) là một mặt phẳng 2 chiều trong không gian R3, và hệ Ax = b chỉ có nghiệm khi b thuộc không gian này.
+>
+> **💡 Deeper notes**
+> - Vì b thông thường không nằm trong C(A) (hệ vô nghiệm do m > n), bài toán thực tế sẽ dẫn đến việc tìm nghiệm xấp xỉ bình phương tối thiểu (least squares) thông qua phương trình chuẩn tắc A^T A x̂ = A^T b như trên bảng.
 
 <br>
 
@@ -901,6 +970,18 @@
 > (Ta sẽ gặp lại AᵀA sau, trong đó ta s**ẽ chứng minh AᵀA
 > fullrank chỉ khi nào A full column rank (theo link)**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và nắm bắt trọn vẹn bản chất bài giảng: ma trận $A^T A$ ở ví dụ khả nghịch do có hạng đủ, và điều kiện tổng quát để $A^T A$ khả nghịch là $A$ phải có các cột độc lập tuyến tính (full column rank).
+>
+> **✓ Strengths**
+> - Nhận diện chính xác ví dụ tính toán cụ thể $A^T A$ ra ma trận khả nghịch.
+> - Nắm vững định lý cốt lõi: $A^T A$ khả nghịch (full rank kích thước $n \times n$) khi và chỉ khi $A$ có full column rank (các cột của $A$ độc lập tuyến tính).
+>
+> **💡 Deeper notes**
+> - Bản chất của tính chất này xuất phát từ việc $A$ và $A^T A$ có cùng không gian nghiệm: $N(A^T A) = N(A)$, do đó nếu $Ax = 0$ chỉ có nghiệm tầm thường $x = 0$ (cột độc lập tuyến tính) thì $A^T A x = 0$ cũng vậy, đảm bảo $A^T A$ khả nghịch.
+
 **🔗 See also:** [Invertibility of Aᵀ A](#node-3l4hkq3)
 
 <br>
@@ -914,6 +995,18 @@
 > [!NOTE]
 > Ví dụ như matrix này, không invertible, vì result
 > matrix chỉ có **rank = 1**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác khi nhận xét ma trận kết quả $A^T A$ có rank = 1 nên không khả nghịch (singular/non-invertible).
+>
+> **✓ Strengths**
+> - Nhận diện chính xác ma trận $A^T A = \begin{bmatrix} 3 & 9 \\ 9 & 27 \end{bmatrix}$ kích thước 2x2 nhưng chỉ có rank bằng 1 do các hàng/cột phụ thuộc tuyến tính.
+> - Hiểu đúng hệ quả: ma trận vuông kích thước 2x2 có rank = 1 < 2 thì định thức bằng 0 và không thể nghịch đảo.
+>
+> **💡 Deeper notes**
+> - Bản chất sâu xa là do ma trận $A$ ban đầu có các cột phụ thuộc tuyến tính (cột 2 gấp 3 lần cột 1, tức $\text{rank}(A) = 1 < n = 2$), dẫn đến $\text{rank}(A^T A) = \text{rank}(A) = 1$, khiến phương trình chuẩn $A^T A \hat{x} = A^T b$ không có nghiệm duy nhất.
 
 <br>
 
