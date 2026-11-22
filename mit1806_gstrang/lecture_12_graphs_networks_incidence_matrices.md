@@ -17,6 +17,8 @@
 
 <a id="node-korjxys"></a>
 
+### Đồ thị và ma trận
+
 <p align="center"><kbd><img src="assets/217r3g38hj8.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -71,6 +73,8 @@
 <br>
 
 <a id="node-9clftfv"></a>
+
+###### Đánh số các cạnh
 
 <p align="center"><kbd><img src="assets/1gr2kgkroi.png" width="80%"></kbd></p>
 
