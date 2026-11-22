@@ -1,6 +1,6 @@
 # Lecture 14: Orthogonal Vectors And Subspaces
 
-📊 **Progress:** `37` Notes | `46` Screenshots | `32` AI Reviews
+📊 **Progress:** `37` Notes | `48` Screenshots | `34` AI Reviews
 
 ---
 <a id="node-cmamy5b"></a>
@@ -852,6 +852,8 @@
 > Câu hỏi tiếp theo là nó **có
 > invertible không?**
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=iex8d8cg63w)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
@@ -871,31 +873,31 @@
 
 <p align="center"><kbd><img src="assets/kcibi8tc8w.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/ycyoaybky9.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > Đại khái là, từ Ax=b, là equation mà gs đã nói ở trên đại ý là **khả năng cao nó không có solution** (vì như đã nói C(A) không span toàn bộ Rm)
 >
 >
 >
-> gs cho rằng tôi sẽ **nhân hai vế của Ax=b với Aᵀ** để hi vọng rằng **có thể có solution của phương trình này**, gs gọi là **x̂**
+> gs cho rằng tôi sẽ **nhân hai vế của Ax=b với Aᵀ** để "hi vọng rằng" **có thể có solution của phương trình này**, gs gọi là **x̂**
+>
+>
+>
+> (thật ra ta sẽ thấy AᵀAx = Aᵀb luôn có nghiệm)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú nắm rất đúng trực giác cốt lõi: khi m > n, C(A) không phủ hết R^m nên Ax=b thường vô nghiệm, và việc nhân Aᵀ dẫn tới phương trình pháp phương để tìm nghiệm x̂ xấp xỉ tốt nhất.
->
-> **🟡 Minor issues**
->
-> **1.** *"để hi vọng rằng có thể có solution của phương trình này"*
->
-> Cách dùng từ 'hi vọng' tạo cảm giác hên xui. Về mặt toán học, hệ phương trình AᵀAx̂ = Aᵀb luôn luôn đảm bảo có nghiệm với mọi vector b (do Aᵀb luôn thuộc C(Aᵀ) = C(AᵀA)).
->
+> Ghi chú nắm rất chính xác tinh thần bài giảng của GS Strang về việc chuyển từ hệ vô nghiệm Ax = b sang phương trình chuẩn (normal equations). Nhận xét phương trình AᵀAx = Aᵀb luôn có nghiệm là một điểm hiểu sâu rất tốt.
 >
 > **✓ Strengths**
-> - Giải thích chính xác lý do hình học vì sao Ax=b thường vô nghiệm khi m > n (do không gian cột C(A) không thể span toàn bộ R^m).
-> - Nhận diện đúng ký hiệu nghiệm x̂ (nghiệm bình phương tối thiểu) cho phương trình chuẩn tắc AᵀAx̂ = Aᵀb.
+> - Hiểu đúng bản chất hình học: khi m > n thì C(A) không thể phủ hết R^m, dẫn đến Ax = b hầu như luôn vô nghiệm với b bất kỳ.
+> - Nắm chuẩn ký hiệu nghiệm x̂ (least squares solution) thay cho x khi chuyển sang phương trình chuẩn.
+> - Nhận định chính xác rằng hệ phương trình chuẩn AᵀA x̂ = Aᵀb luôn luôn có nghiệm vì C(AᵀA) = C(Aᵀ).
 >
 > **💡 Deeper notes**
-> - Hệ phương trình AᵀAx̂ = Aᵀb luôn có nghiệm; hơn nữa, nghiệm x̂ sẽ là duy nhất nếu ma trận A có các cột độc lập tuyến tính (tức A có full column rank n, khi đó AᵀA khả nghịch).
+> - Nghiệm x̂ luôn tồn tại, và nghiệm này là duy nhất khi các cột của A độc lập tuyến tính (rank(A) = n, khiến AᵀA khả nghịch).
 
 <br>
 
@@ -1016,6 +1018,8 @@
 
 <p align="center"><kbd><img src="assets/tq1x9etj3go.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/55vom5gycs4.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > và gs nói rằng ông đã biết chắc kết quả sẽ không invertible vì **AᵀA SẼ CÓ RANK CHÍNH XÁC BẰNG RANK CỦA A**. mà trong trường hợp này RANK A = 1, NÊN AᵀA CŨNG CÓ RANK BẰNG 1, TRONG KHI NÓ LÀ MATRIX 2X2 NÊN NÓ KHÔNG FULLRANK
 >
@@ -1079,6 +1083,19 @@
 >
 > và **rank cũng chúng cũng bằng nhau nữa**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm bắt rất chính xác mối quan hệ giữa không gian nghiệm (nullspace) và hạng (rank) của A và AᵀA như được giảng trên bảng.
+>
+> **✓ Strengths**
+> - Hiểu chính xác tính chất quan trọng: N(AᵀA) = N(A) và rank(AᵀA) = rank(A).
+> - Chỉ ra đúng bản chất vì sao hai không gian nghiệm trùng nhau: Ax = 0 tương đương với AᵀAx = 0 (trên trường số thực).
+>
+> **💡 Deeper notes**
+> - Đẳng thức Ax = 0 ⇔ AᵀAx = 0 đúng trên trường số thực (do xᵀAᵀAx = ||Ax||² = 0 ⇔ Ax = 0); với ma trận số phức cần dùng ma trận chuyển vị liên hợp AᴴA.
+> - Từ việc N(AᵀA) = N(A) dẫn đến rank(AᵀA) = rank(A) là nhờ Định lý Rank-Nullity, vì cả A và AᵀA đều có cùng n cột.
+
 <br>
 
 <a id="node-3l4hkq3"></a>
@@ -1088,26 +1105,19 @@
 <p align="center"><kbd><img src="assets/1o0i9aalgtn.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Và từ đó gs kết luận **AᵀA INVERTIBLE CHỈ KHI A CÓ CÁC
-> COLS INDEPENDENT (FULL COLUMNS RANK)**
+> Và từ đó gs kết luận AᵀA INVERTIBLE ⇔ A CÓ CÁC COLS INDEPENDENT (FULL COLUMNS RANK)
 >
 >
 >
-> \~Điều này có thể dễ hiểu bởi, vì AᵀA có shape (n, n) và rank
-> của nó bằng rank A, vậy rõ ràng chỉ khi nào rank A bằng n thì
-> AᵀA mới full-rank. Và điều này xảy ra tức là khi CÁC COLS
-> CỦA ĐỀU LÀ PIVOT, và cũng chính là nullspace của A CHỈ
-> CÓ ZERO (vì không có free cols nào)\~
+> \~Điều này có thể dễ hiểu bởi, vì AᵀA có shape (n, n) và rank của nó bằng rank A, vậy rõ ràng chỉ khi nào rank A bằng n thì AᵀA mới full-rank. Và điều này xảy ra tức là khi CÁC COLS CỦA A ĐỀU LÀ PIVOT, và cũng chính là nullspace của A CHỈ CÓ ZERO (vì không có free cols nào)\~
 >
 >
 >
-> Chứng minh **AᵀAx=0 ⇔ Ax = 0 như sau (sau này gs sẽ
-> chứng minh cái này (theo link)**:
+> Chứng minh AᵀAx=0 ⇔ Ax = 0 như sau (sau này gs sẽ chứng minh cái này (theo link):
 >
 >
 >
-> Nếu Ax = 0 thì nhân hai vế cho Aᵀ đương nhiên ta có  AᵀAx
-> = 0. Vậy Ax = 0 ⇒ AᵀAx = 0.
+> Nếu Ax = 0 thì nhân hai vế cho Aᵀ đương nhiên ta có AᵀAx = 0. Vậy Ax = 0 ⇒ AᵀAx = 0.
 >
 >
 >
@@ -1115,18 +1125,27 @@
 >
 >
 >
-> xᵀAᵀAx = 0 ⇔ (Ax)ᵀ(Ax) = 0 ⇔ ||Ax|| = 0, mà length của
-> vector Ax >= 0 nên dấu bằng xảy chỉ khi Ax = 0. Vậy AᵀAx = 0
-> ⇒ Ax = 0
+> xᵀAᵀAx = 0 ⇔ (Ax)ᵀ(Ax) = 0 ⇔ ||Ax||² = 0, mà length của vector Ax ≥ 0 nên dấu bằng xảy chỉ khi Ax = 0. Vậy AᵀAx = 0 ⇒ Ax = 0
 >
 >
 >
-> Từ đó giúp kết luận AᵀAx = 0 ⇔ Ax = 0, hai matrix AᵀA  và A
-> chung nullspace **N(AᵀA) = N(A)**. Vậy thì đương nhiên để
-> **AᵀA fullrank/non-singular/invertible** thì **N(AᵀA) phải bằng
-> {0}**, đồng nghĩa **N(A) cũng vậy**, mà điều này dễ thấy sẽ
-> tương đương với việc **A Full Column Rank khi đó dim C(A)
-> =  rank = n ⇒ dim N(A) = 0**
+> Từ đó giúp kết luận AᵀAx = 0 ⇔ Ax = 0, hai matrix AᵀA và A chung nullspace N(AᵀA) = N(A). 
+>
+>
+>
+> Vậy thì đương nhiên để AᵀA fullrank/non-singular/invertible thì N(AᵀA) phải bằng {0}, đồng nghĩa N(A) cũng vậy, mà điều này dễ thấy sẽ tương đương với việc A Full Column Rank khi đó dim C(A) = rank = n ⇒ dim N(A) = 0
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, hiểu rõ bản chất cốt lõi và tự chứng minh chặt chẽ mệnh đề N(AᵀA) = N(A) thông qua chuẩn vector.
+>
+> **✓ Strengths**
+> - Chứng minh chặt chẽ hai chiều của mệnh đề N(AᵀA) = N(A) bằng tích vô hướng và chuẩn vector ||Ax||² = 0.
+> - Kết nối mạch lạc giữa khái niệm không gian nghiệm (nullspace), số chiều pivot, hạng ma trận và tính khả nghịch của AᵀA.
+>
+> **💡 Deeper notes**
+> - Chứng minh xᵀAᵀAx = ||Ax||² = 0 suy ra Ax = 0 mặc định ma trận A có các phần tử thuộc trường số thực ℝ; đối với số phức ℂ, cần dùng ma trận liên hợp chuyển vị (Hermitian transpose Aᴴ) thay vì Aᵀ.
 
 **🔗 See also:** [Normal Equations for Least Squares](#node-30t8kt0) · [linked note](./lecture_16_projection_matrices_and_least_squares.md#node-ho17455)
 
