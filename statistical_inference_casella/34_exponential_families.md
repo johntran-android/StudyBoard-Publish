@@ -1,6 +1,6 @@
 # 3.4 Exponential Families
 
-📊 **Progress:** `10` Notes | `15` Screenshots
+📊 **Progress:** `10` Notes | `15` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-05anyjt"></a>
@@ -39,6 +39,27 @@
 >
 >
 > Nói chung khi vào ví dụ sẽ hiểu
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **82/100** · ✓ Move on
+>
+> Ghi chú nắm rất tốt ý tưởng tổng quát và cấu trúc của họ hàm mũ (exponential family), bao gồm cả bản chất vector/scalar của tham số θ. Tuy nhiên, có một nhầm lẫn nhỏ khi gán điều kiện không âm cho ti(x) thay vì c(θ).
+>
+> **🟡 Minor issues**
+>
+> **1.** *"với h(x) ≥ 0, ti(x) ≥ 0 là real value function của observation x."*
+>
+> Trong định nghĩa chuẩn, chỉ có h(x) ≥ 0 và c(θ) ≥ 0. Các hàm ti(x) và wi(θ) chỉ cần là hàm nhận giá trị thực (real-valued), ti(x) hoàn toàn có thể âm (chẳng hạn trong phân phối Chuẩn, t1(x) = x). Bạn đã vô tình gán điều kiện ≥ 0 cho ti(x) và bỏ sót điều kiện c(θ) ≥ 0.
+>
+>
+> **✓ Strengths**
+> - Nhận diện chính xác dạng toán học tổng quát của họ phân phối mũ.
+> - Hiểu đúng vai trò của θ có thể là số thực (scalar) hoặc vector nhiều chiều.
+> - Liệt kê đúng các phân phối thông dụng thuộc họ này (Normal, Gamma, Beta, Binomial, Poisson).
+>
+> **💡 Deeper notes**
+> - Một điều kiện quan trọng của họ hàm mũ là miền xác định (support) của x không được phụ thuộc vào tham số θ; sự phụ thuộc vào θ chỉ được nằm trong c(θ) và wi(θ).
+> - c(θ) thực chất đóng vai trò là hằng số chuẩn hóa (normalizing constant) để tích phân hoặc tổng xác suất trên toàn miền bằng 1.
 
 <br>
 
