@@ -1,6 +1,6 @@
 # Lecture 14: Orthogonal Vectors And Subspaces
 
-📊 **Progress:** `37` Notes | `41` Screenshots | `19` AI Reviews
+📊 **Progress:** `37` Notes | `46` Screenshots | `25` AI Reviews
 
 ---
 <a id="node-cmamy5b"></a>
@@ -577,6 +577,10 @@
 
 <p align="center"><kbd><img src="assets/y3qfkevyg4q.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/htrragnid8t.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/ts5vsm2he6i.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > Tiếp gs đặt câu hỏi là, tưởng tượng trong R³, ta lấy hai subspace là **2 orthogonal line** (đương nhiên đi qua gốc zero), và chúng **KHÔNG** **CÙNG NHAU LẤP ĐẦY CẢ R³** (vì chúng chỉ tạo một plane)
 >
@@ -587,6 +591,8 @@
 >
 >
 > Trả lời: Không, vì tính chất **tổng dimension của rowspace (r) và nullspace (n-r) phải bằng n**. Do đó không thể có vụ rowspace và nullspace đều là subspace của R³ (matrix có 3 cols) mà mỗi cái đều là một line (dim = 1) được
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=53VJU032wbM)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -607,6 +613,10 @@
 ###### Số chiều Rowspace và Nullspace
 
 <p align="center"><kbd><img src="assets/mq6q62tsyt.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/6drn1oc1owq.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/j0c5tx7oyj.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Gs cho ví dụ này, dễ thấy hai row dependent, → chỉ có **1 independent row** → **rowspace có dim = 1**, và do đó matrix rank 1, và cũng dẫn tới chỉ có 1 independent cols, nên chỉ có **2 free cols** ứng với 2 special solution → chỉ có 2 vector trong basis và do đó nullspace có dim = 2
@@ -655,6 +665,20 @@
 >
 > Và liên hệ với 18.02 ta biết &lt;1, 2, 5&gt; chính là NORMAL VECTOR (vector pháp tuyến) của mặt phẳng, nó sẽ vuông góc với mọi vector trong mặt phẳng. Vậy từ đó trong trường hợp này bức tranh về rowspace C(Aᵀ) và nullspace N(A) rất rõ rằng, C(Aᵀ) chính là line đi qua normal vector và N(A) chính là plane. Và xác nhận lại rằng mọi vector trong plane (nullspace) đều vuông góc với normal vector (mọi vector trong row space)
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, hiểu sâu sắc mối liên hệ hình học giữa row space C(Aᵀ) và nullspace N(A) như hai không gian bù trực giao trong R³.
+>
+> **✓ Strengths**
+> - Nhận diện chính xác C(Aᵀ) là đường thẳng sinh bởi vector [1, 2, 5]ᵀ (do rank = 1) và N(A) là mặt phẳng có số chiều bằng 2.
+> - Liên hệ rất trực quan và chuẩn xác với hình học giải tích (18.02): vector dòng chính là vector pháp tuyến của mặt phẳng nghiệm x₁ + 2x₂ + 5x₃ = 0.
+> - Nắm vững tính chất trực giao cốt lõi: mọi vector trong nullspace đều vuông góc với mọi vector trong row space (N(A) ⊥ C(Aᵀ)).
+>
+> **💡 Deeper notes**
+> - Cần lưu ý thêm về mặt chuẩn xác đại số tuyến tính: cả đường thẳng (row space) và mặt phẳng (nullspace) đều bắt buộc phải đi qua gốc tọa độ (0, 0, 0) để thỏa mãn định nghĩa không gian con (subspace).
+> - Cụm từ 'phương trình đường mặt phẳng' chỉ là lỗi diễn đạt khẩu ngữ lặp từ ('đường' và 'mặt phẳng'), nên gọi chuẩn xác là 'phương trình mặt phẳng'.
+
 <br>
 
 <a id="node-7q5uw9k"></a>
@@ -663,11 +687,25 @@
 
 <p align="center"><kbd><img src="assets/2zgcgkxe0mx.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/9zluci.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > và, đại khái là vì ta có hai subspace này (nullspace và
 > rowspace) **orthogonal** đồng thời **tổng dimension của
 > chúng bằng n**. Nên tgọi chúng là **ORTHOGONAL
 > COMPLEMENT IN R^N**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và nắm trọn vẹn bản chất: hai không gian con trực giao có tổng số chiều bằng n thì chính là phần bù trực giao (orthogonal complements) của nhau trong R^n.
+>
+> **✓ Strengths**
+> - Hiểu chính xác điều kiện để hai không gian con là orthogonal complements: vừa trực giao với nhau vừa có tổng số chiều bằng số chiều của không gian mẹ (R^n).
+> - Kết nối tốt giữa khái niệm trực giao và định lý Rank-Nullity (r + (n - r) = n).
+>
+> **💡 Deeper notes**
+> - Hệ quả trực tiếp của việc là orthogonal complement là mọi vector x trong R^n đều có thể phân tích duy nhất thành x = x_row + x_null (tổng trực tiếp R^n = C(A^T) ⊕ N(A)).
 
 <br>
 
@@ -700,6 +738,19 @@
 > noise**, tuy nhiên bên trong giá trị **vẫn chứa thông tin**.
 > Và ta **muốn tách những thông tin hữu ích ra khỏi noise**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc và chính xác bản chất hình học của việc $Ax = b$ vô nghiệm khi $m > n$ cũng như động lực thực tế dẫn đến phương pháp bình phương tối thiểu (Least Squares).
+>
+> **✓ Strengths**
+> - Hiểu chính xác điều kiện vô nghiệm của hệ $Ax = b$ xuất phát từ việc $b$ không nằm trong không gian cột (column space).
+> - Lập luận chặt chẽ: ma trận có $n < m$ cột thì không gian cột tối đa có số chiều là $n$, không thể phủ hết $\mathbb{R}^m$, dẫn đến luôn tồn tại vector $b$ làm hệ vô nghiệm.
+> - Nắm bắt đúng trực giác mô hình hóa thực tế: nhiều phép đo lặp lại có nhiễu (noise) dẫn đến hệ thừa ẩn và cần Least Squares để ước lượng giá trị tối ưu.
+>
+> **💡 Deeper notes**
+> - Khái niệm 'giải' trong ngoặc kép trên bảng ('solve') thực chất là tìm nghiệm xấp xỉ tốt nhất $\hat{x}$ sao cho sai số $\|Ax - b\|$ đạt cực tiểu, hình chiếu của $b$ lên $C(A)$ chính là $p = A\hat{x}$.
+
 <br>
 
 <a id="node-eyrvns1"></a>
@@ -719,6 +770,18 @@
 > Nhưng rõ ràng việc này **không hợp lí**, vì **không có lí do gì
 > để cho rằng equation này thì tốt hơn equation khác** để
 > mà **vứt đi bớt**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm bắt rất chính xác trực giác mà Giáo sư Gilbert Strang truyền tải: không nên tùy tiện loại bỏ phương trình khi gặp hệ $m > n$ vì các dữ liệu/phép đo đều có giá trị như nhau.
+>
+> **✓ Strengths**
+> - Hiểu đúng trực giác và lý do tại sao phương án bỏ bớt phương trình để thu được ma trận khả nghịch là không hợp lý.
+> - Nắm bắt được vấn đề cốt lõi dẫn dắt đến phương pháp bình phương tối thiểu (Least Squares) thay vì loại bỏ dữ liệu quan sát.
+>
+> **💡 Deeper notes**
+> - Trong thực tế, khi $m > n$, các phương trình thường tương ứng với các phép đo thực nghiệm có chứa nhiễu (noise); việc sử dụng tất cả phương trình thông qua phương pháp bình phương tối thiểu ($A^TA\hat{x} = A^Tb$) sẽ giúp trung hòa sai số thay vì làm mất thông tin hữu ích nếu bỏ bớt.
 
 <br>
 
@@ -749,6 +812,18 @@
 
 > [!NOTE]
 > đúng vậy, nó **square**, và còn **đối xứng**. vì **(AᵀA)ᵀ cũng bằng AᵀA**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú ngắn gọn, chính xác tuyệt đối về tính chất vuông và đối xứng của ma trận tích $A^T A$.
+>
+> **✓ Strengths**
+> - Nắm rõ ma trận $A^T A$ luôn là ma trận vuông kích thước $n \times n$.
+> - Hiểu và chỉ ra đúng tính chất đối xứng thông qua đẳng thức $(A^T A)^T = A^T A$.
+>
+> **💡 Deeper notes**
+> - Để chứng minh chặt chẽ hơn tại sao $(A^T A)^T = A^T A$, ta áp dụng quy tắc chuyển vị tích: $(AB)^T = B^T A^T$, do đó $(A^T A)^T = A^T (A^T)^T = A^T A$.
 
 <br>
 
@@ -972,6 +1047,17 @@
 
 > [!NOTE]
 > Và bài sau ta sẽ thấy AᵀA đóg vai trò **CRUCIAL**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ⚠️ **75/100** · ✓ Move on
+>
+> Ghi chú ghi nhận đúng tầm quan trọng cốt lõi của ma trận AᵀA trong các bài học tiếp theo (hình chiếu, bình phương tối thiểu), tuy nhiên chưa ghi lại các tính chất đại số then chốt được trình bày trên bảng.
+>
+> **✓ Strengths**
+> - Nhận thức đúng vai trò trọng tâm của ma trận AᵀA trong chuỗi bài giảng tiếp theo về đại số tuyến tính.
+>
+> **💡 Deeper notes**
+> - Nên bổ sung 3 kết quả toán học quan trọng hiển thị trên bảng: N(AᵀA) = N(A), rank(AᵀA) = rank(A), và AᵀA khả nghịch khi và chỉ khi ma trận A có các cột độc lập tuyến tính.
 
 <br>
 
