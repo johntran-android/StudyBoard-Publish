@@ -1,6 +1,6 @@
 {
   "title": "MIT 18.06",
-  "publishedAt": 1795309701459,
+  "publishedAt": 1795372701207,
   "sections": [
     {
       "title": "18.03 Lec 25",
@@ -222,6 +222,14 @@
   "totalNotes": 1181,
   "totalImages": 1307,
   "videos": [
+    {
+      "id": "Utf0bKKqqio",
+      "title": "Vì sao không nên bỏ bớt phương trình khi Ax=b vô nghiệm?",
+      "uploadedAt": 1795371091630,
+      "at": [
+        "LECTURE 14: ORTHOGONAL VECTORS AND SUBSPACES"
+      ]
+    },
     {
       "id": "53VJU032wbM",
       "title": "Row space và null space có thể cùng là đường thẳng không?",
