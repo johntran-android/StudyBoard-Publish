@@ -576,6 +576,8 @@
 
 <a id="node-monsp9x"></a>
 
+###### Sự lưu thông điện tích
+
 <p align="center"><kbd><img src="assets/qlfqli7oc9o.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -896,6 +898,8 @@
 <br>
 
 <a id="node-vhcp7rr"></a>
+
+###### Đồ thị minh họa công thức
 
 <p align="center"><kbd><img src="assets/01pfmrt6isft.png" width="80%"></kbd></p>
 
