@@ -1,6 +1,6 @@
 {
   "title": "MIT 18.06",
-  "publishedAt": 1795372701207,
+  "publishedAt": 1795388297871,
   "sections": [
     {
       "title": "18.03 Lec 25",
@@ -90,7 +90,7 @@
       "title": "Lecture 14: Orthogonal Vectors And Subspaces",
       "path": "mit1806_gstrang/lecture_14_orthogonal_vectors_and_subspaces.md",
       "noteCount": 37,
-      "imageCount": 46
+      "imageCount": 48
     },
     {
       "title": "Lecture 15: Projections Onto Subspaces",
@@ -220,8 +220,16 @@
     }
   ],
   "totalNotes": 1181,
-  "totalImages": 1307,
+  "totalImages": 1309,
   "videos": [
+    {
+      "id": "iex8d8cg63w",
+      "title": "Khi nào ma trận AᵀA khả nghịch?",
+      "uploadedAt": 1795386764483,
+      "at": [
+        "LECTURE 14: ORTHOGONAL VECTORS AND SUBSPACES"
+      ]
+    },
     {
       "id": "Utf0bKKqqio",
       "title": "Vì sao không nên bỏ bớt phương trình khi Ax=b vô nghiệm?",
