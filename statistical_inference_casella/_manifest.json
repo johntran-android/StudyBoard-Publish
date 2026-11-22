@@ -1,6 +1,6 @@
 {
   "title": "Statistical Inference - Casella",
-  "publishedAt": 1795202189855,
+  "publishedAt": 1795306098285,
   "sections": [
     {
       "title": "📋 Overview",
@@ -336,6 +336,16 @@
   "totalNotes": 947,
   "totalImages": 1267,
   "videos": [
+    {
+      "id": "Ti80vUWcbrA",
+      "title": "Vì sao hồi quy logistic và tuyến tính đều là GLM?",
+      "uploadedAt": 1795304584598,
+      "at": [
+        "12.3.1 The Model",
+        "Section 12.3 Logistic Regression",
+        "12.3 LOGISTIC REGRESSION"
+      ]
+    },
     {
       "id": "Gyi8uj3s0e4",
       "title": "Làm sao xây dựng khoảng tin cậy cho alpha + beta x0?",
