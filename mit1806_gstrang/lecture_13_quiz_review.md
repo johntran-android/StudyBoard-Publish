@@ -765,6 +765,8 @@
 
 <a id="node-ilexr06"></a>
 
+###### Nullspace của ma trận tích
+
 <p align="center"><kbd><img src="assets/vrg9cxutcin.png" width="80%"></kbd></p>
 
 > [!NOTE]
