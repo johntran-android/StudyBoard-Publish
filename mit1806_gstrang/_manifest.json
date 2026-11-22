@@ -1,6 +1,6 @@
 {
   "title": "MIT 18.06",
-  "publishedAt": 1795388297871,
+  "publishedAt": 1795389492935,
   "sections": [
     {
       "title": "18.03 Lec 25",
@@ -223,6 +223,14 @@
   "totalImages": 1309,
   "videos": [
     {
+      "id": "gkxPk7hBGNE",
+      "title": "Khi Ax=b vô nghiệm, điều kiện nào để A^T A khả nghịch? (phần 2)",
+      "uploadedAt": 1795387259368,
+      "at": [
+        "LECTURE 14: ORTHOGONAL VECTORS AND SUBSPACES"
+      ]
+    },
+    {
       "id": "iex8d8cg63w",
       "title": "Khi nào ma trận AᵀA khả nghịch?",
       "uploadedAt": 1795386764483,
@@ -232,7 +240,7 @@
     },
     {
       "id": "Utf0bKKqqio",
-      "title": "Vì sao không nên bỏ bớt phương trình khi Ax=b vô nghiệm?",
+      "title": "Vì sao không nên bỏ bớt phương trình khi Ax=b vô nghiệm? (phần 1)",
       "uploadedAt": 1795371091630,
       "at": [
         "LECTURE 14: ORTHOGONAL VECTORS AND SUBSPACES"
