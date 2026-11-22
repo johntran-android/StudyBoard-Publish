@@ -270,6 +270,8 @@
 
 <a id="node-eth529a"></a>
 
+###### Squared error phát hiện outlier
+
 <p align="center"><kbd><img src="assets/896w0mldn1v.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -284,6 +286,8 @@
 
 <a id="node-01672jn"></a>
 
+###### Giả định không có outlier
+
 <p align="center"><kbd><img src="assets/rgoez2labh.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -293,6 +297,8 @@
 <br>
 
 <a id="node-7674oyq"></a>
+
+###### Sai số trên đường thẳng
 
 <p align="center"><kbd><img src="assets/ecnx0tlrqy.png" width="80%"></kbd></p>
 
@@ -308,6 +314,8 @@
 <br>
 
 <a id="node-zgpgk6i"></a>
+
+###### Đường thẳng qua ba điểm
 
 <p align="center"><kbd><img src="assets/utn8v62sfw8.png" width="80%"></kbd></p>
 
@@ -347,6 +355,8 @@
 
 <a id="node-onzn0v0"></a>
 
+###### Phép chiếu không gian cột
+
 <p align="center"><kbd><img src="assets/2sf5fbt02wy.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -364,6 +374,8 @@
 <br>
 
 <a id="node-9n4dt3v"></a>
+
+###### Phép chiếu không gian cột
 
 <p align="center"><kbd><img src="assets/f8bhrzisfx.png" width="80%"></kbd></p>
 
@@ -431,6 +443,8 @@
 
 <a id="node-nir3uvv"></a>
 
+###### Tính chất của AᵀA
+
 <p align="center"><kbd><img src="assets/4qffqw00u0x.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -450,6 +464,8 @@
 <br>
 
 <a id="node-rigclww"></a>
+
+###### Hệ phương trình chuẩn
 
 <p align="center"><kbd><img src="assets/shwgv6ksqhh.png" width="80%"></kbd></p>
 
@@ -473,6 +489,8 @@
 <br>
 
 <a id="node-rpxfd96"></a>
+
+###### Đạo hàm hàm sai số
 
 <p align="center"><kbd><img src="assets/um8lpii1qm.png" width="80%"></kbd></p>
 
@@ -499,6 +517,8 @@
 <br>
 
 <a id="node-jmdgmei"></a>
+
+###### Nghiệm bình phương cực tiểu
 
 <p align="center"><kbd><img src="assets/f5ovmrbezti.png" width="80%"></kbd></p>
 
@@ -621,7 +641,7 @@
 > nãy ông nhận định rằng ta sẽ kì vọng nó **invertible**,
 > và xa hơn là **positive definite**
 
-**🔗 See also:** [linked note](#node-nir3uvv)
+**🔗 See also:** [Tính chất của AᵀA](#node-nir3uvv)
 
 <br>
 
