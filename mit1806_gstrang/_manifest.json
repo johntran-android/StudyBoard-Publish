@@ -1,6 +1,6 @@
 {
   "title": "MIT 18.06",
-  "publishedAt": 1795067316033,
+  "publishedAt": 1795309701459,
   "sections": [
     {
       "title": "18.03 Lec 25",
@@ -90,7 +90,7 @@
       "title": "Lecture 14: Orthogonal Vectors And Subspaces",
       "path": "mit1806_gstrang/lecture_14_orthogonal_vectors_and_subspaces.md",
       "noteCount": 37,
-      "imageCount": 41
+      "imageCount": 46
     },
     {
       "title": "Lecture 15: Projections Onto Subspaces",
@@ -220,8 +220,16 @@
     }
   ],
   "totalNotes": 1181,
-  "totalImages": 1302,
+  "totalImages": 1307,
   "videos": [
+    {
+      "id": "53VJU032wbM",
+      "title": "Row space và null space có thể cùng là đường thẳng không?",
+      "uploadedAt": 1795308672653,
+      "at": [
+        "LECTURE 14: ORTHOGONAL VECTORS AND SUBSPACES"
+      ]
+    },
     {
       "id": "GomcsySSQCw",
       "title": "Tại sao row space và null space luôn trực giao với nhau?",
