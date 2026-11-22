@@ -1,6 +1,6 @@
 # Lecture 15: Projections Onto Subspaces
 
-📊 **Progress:** `45` Notes | `47` Screenshots
+📊 **Progress:** `45` Notes | `47` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-l9qi36h"></a>
@@ -29,6 +29,19 @@
 >
 > Đầu tiên, gs dùng ví dụ trong **1D dimension subspace** - đó là 
 > **đường thẳng a**: **tìm điểm trên a sao cho gần nhất với b**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm bắt rất chính xác và súc tích bản chất hình học của phép chiếu: tìm điểm trên không gian con (ở đây là đường thẳng) gần vector đích nhất.
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất của bài toán chiếu là bài toán tối ưu khoảng cách (tìm điểm gần nhất).
+> - Xác định chính xác trường hợp mở đầu là chiếu lên không gian con 1 chiều (đường thẳng đi qua vector a).
+>
+> **💡 Deeper notes**
+> - Về mặt thuật ngữ, cụm từ '1D dimension subspace' hơi thừa từ (1D đã là 1-dimension), chỉ cần gọi là 'không gian con 1 chiều' (1D subspace).
+> - Về mặt hình học, điểm gần nhất $p$ trên đường thẳng đi qua $a$ thỏa mãn điều kiện vector sai số $e = b - p$ phải vuông góc (orthogonal) với $a$.
 
 <br>
 
