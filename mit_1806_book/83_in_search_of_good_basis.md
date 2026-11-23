@@ -5,8 +5,6 @@
 ---
 <a id="node-a5kp6u5"></a>
 
-## 8.3 In Search Of Good Basis
-
 <br>
 
 <a id="node-u6eb2sc"></a>
