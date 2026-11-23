@@ -1,6 +1,6 @@
 {
   "title": "MIT 18.06",
-  "publishedAt": 1795389492935,
+  "publishedAt": 1795392492146,
   "sections": [
     {
       "title": "18.03 Lec 25",
@@ -224,7 +224,7 @@
   "videos": [
     {
       "id": "gkxPk7hBGNE",
-      "title": "Khi Ax=b vô nghiệm, điều kiện nào để A^T A khả nghịch? (phần 2)",
+      "title": "Khi Ax=b vô nghiệm, điều kiện nào để A^T A khả nghịch?",
       "uploadedAt": 1795387259368,
       "at": [
         "LECTURE 14: ORTHOGONAL VECTORS AND SUBSPACES"
