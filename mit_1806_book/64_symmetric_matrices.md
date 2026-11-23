@@ -5,8 +5,6 @@
 ---
 <a id="node-nrecj3k"></a>
 
-## 6.4 Symmetric Matrices
-
 <br>
 
 <a id="node-vngdpvo"></a>
