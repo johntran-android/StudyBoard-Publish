@@ -5,8 +5,6 @@
 ---
 <a id="node-kiiaa9g"></a>
 
-## 6.3 System Of Differential Equations
-
 <br>
 
 <a id="node-14ici2j"></a>
