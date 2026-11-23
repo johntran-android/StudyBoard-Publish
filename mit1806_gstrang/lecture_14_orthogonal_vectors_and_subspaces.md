@@ -738,9 +738,7 @@
 > noise**, tuy nhiên bên trong giá trị **vẫn chứa thông tin**.
 > Và ta **muốn tách những thông tin hữu ích ra khỏi noise**
 
-📹 Video 1: [Vì sao không nên bỏ bớt phương trình khi Ax=b vô nghiệm? (phần 1)](https://www.youtube.com/watch?v=Utf0bKKqqio)
-
-📹 Video 2: [Khi Ax=b vô nghiệm, điều kiện nào để A^T A khả nghịch?](https://www.youtube.com/watch?v=gkxPk7hBGNE)
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=gkxPk7hBGNE)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -853,8 +851,6 @@
 > [!NOTE]
 > Câu hỏi tiếp theo là nó **có
 > invertible không?**
-
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=iex8d8cg63w)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
