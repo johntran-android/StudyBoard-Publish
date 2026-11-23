@@ -1,6 +1,6 @@
 {
   "title": "Statistical Inference - Casella",
-  "publishedAt": 1795306098285,
+  "publishedAt": 1795462763147,
   "sections": [
     {
       "title": "📋 Overview",
@@ -329,12 +329,12 @@
     {
       "title": "12.3 Logistic Regression",
       "path": "statistical_inference_casella/123_logistic_regression.md",
-      "noteCount": 3,
-      "imageCount": 5
+      "noteCount": 6,
+      "imageCount": 8
     }
   ],
-  "totalNotes": 947,
-  "totalImages": 1267,
+  "totalNotes": 950,
+  "totalImages": 1270,
   "videos": [
     {
       "id": "Ti80vUWcbrA",
