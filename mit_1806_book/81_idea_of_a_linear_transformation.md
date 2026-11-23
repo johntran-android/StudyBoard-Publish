@@ -5,8 +5,6 @@
 ---
 <a id="node-mdtonlc"></a>
 
-## 8.1 Idea Of A Linear Transformation
-
 <br>
 
 <a id="node-6ltvozd"></a>
