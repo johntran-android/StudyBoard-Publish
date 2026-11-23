@@ -1,6 +1,6 @@
 # 1.5 Distribution Function
 
-📊 **Progress:** `9` Notes | `11` Screenshots
+📊 **Progress:** `9` Notes | `11` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-ytp3lpb"></a>
@@ -356,10 +356,32 @@
 <p align="center"><kbd><img src="assets/6qhgsm00hex.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Một ví dụ về cdf có tính continuous. Chính là cdf
-> của Logistics Distribution
+> Một ví dụ về cdf có tính continuous. Chính là cdf của Logistic Distribution
 >
-> QUAY LẠI SAU
+>
+>
+> F(x) = 1/\[1+exp(-x)\]
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **90/100** · ✓ Move on
+>
+> Ghi chú đã nêu chính xác ví dụ về một hàm cdf liên tục với công thức chuẩn của hàm sigmoid/logistic.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Chính là cdf của Logistic Distribution"*
+>
+> Chính xác hơn, đây là trường hợp đặc biệt (phân phối logistic chuẩn với tham số vị trí μ = 0 và thang đo s = 1), dạng tổng quát sẽ có thêm các tham số này.
+>
+>
+> **✓ Strengths**
+> - Nắm đúng dạng hàm cdf liên tục phổ biến (hàm logistic/sigmoid).
+> - Ghi lại công thức toán học chính xác.
+>
+> **💡 Deeper notes**
+> - Để một hàm là cdf hợp lệ, hàm đó cần thỏa mãn 3 điều kiện: giới hạn tiến về 0 tại -vô cùng, tiến về 1 tại +vô cùng, và là hàm không giảm (ở đây đạo hàm luôn dương nên đồng biến nghiêm ngặt).
+
+**🔗 See also:** [Modeling Bernoulli Success Probability](./123_logistic_regression.md#node-7hcnyrb)
 
 <br>
 
