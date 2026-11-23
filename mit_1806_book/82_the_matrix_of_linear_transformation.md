@@ -5,8 +5,6 @@
 ---
 <a id="node-o9fjgpr"></a>
 
-## 8.2 The Matrix Of Linear Transformation
-
 <br>
 
 <a id="node-kgubcpt"></a>
