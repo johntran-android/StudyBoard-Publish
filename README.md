@@ -295,6 +295,7 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 `106 notes · 139 screenshots · 13 sections`
 
 > A comprehensive compilation of study notes and solved problems for MIT 18.06 Linear Algebra, focusing on the four fundamental subspaces, matrix diagonalisation, singular value decomposition (SVD), and linear transformations.
+> 
 > Tài liệu tổng hợp ghi chép lý thuyết và bài tập giải chi tiết môn Đại số Tuyến tính MIT 18.06, tập trung vào bốn không gian con cơ bản, chéo hóa ma trận, phân tích kỳ dị (SVD) và biến đổi tuyến tính.
 
 <details open>
@@ -313,8 +314,8 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 | [8.2 The Matrix Of Linear Transformation](mit_1806_book/82_the_matrix_of_linear_transformation.md) | 20 | 23 |
 | [8.3 In Search Of Good Basis](mit_1806_book/83_in_search_of_good_basis.md) | 3 | 4 |
 | [11.2 Norm & Condition Number](mit_1806_book/112_norm_condition_number.md) | 13 | 15 |
-| [11.3 Iterative Method & preconditioner](mit_1806_book/113_iterative_method_preconditioner.md) | 4 | 6 |
-| [3. Vector Spaces and Subspaces](mit_1806_book/3_vector_spaces_and_subspaces.md) | 2 | 6 |
+| [11.3 Iterative Method & Preconditioner](mit_1806_book/113_iterative_method_preconditioner.md) | 4 | 6 |
+| [3. Vector Spaces And Subspaces](mit_1806_book/3_vector_spaces_and_subspaces.md) | 2 | 6 |
 
 </details>
 
@@ -329,7 +330,6 @@ Repository này vì vậy chủ yếu là một **learning log** — dấu vết
 `1,181 notes · 1,309 screenshots · 36 sections`
 
 > This notebook covers fundamental linear algebra concepts, from solving systems of equations and matrix operations to eigenvalues, SVD, and linear transformations, often emphasizing their geometric interpretations.
-> 
 > Sổ tay này bao gồm các khái niệm cơ bản về đại số tuyến tính, từ giải hệ phương trình và các phép toán ma trận đến trị riêng, phân tích SVD và biến đổi tuyến tính, thường nhấn mạnh các diễn giải hình học của chúng.
 
 <details open>
