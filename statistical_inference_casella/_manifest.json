@@ -1,6 +1,6 @@
 {
   "title": "Statistical Inference - Casella",
-  "publishedAt": 1795462763147,
+  "publishedAt": 1795468106231,
   "sections": [
     {
       "title": "📋 Overview",
@@ -336,6 +336,16 @@
   "totalNotes": 950,
   "totalImages": 1270,
   "videos": [
+    {
+      "id": "5y9ZCdAOOfo",
+      "title": "Tham số alpha và beta trong logistic regression có ý nghĩa gì?",
+      "uploadedAt": 1795466816174,
+      "at": [
+        "12.3.1 The Model",
+        "Section 12.3 Logistic Regression",
+        "12.3 LOGISTIC REGRESSION"
+      ]
+    },
     {
       "id": "Ti80vUWcbrA",
       "title": "Vì sao hồi quy logistic và tuyến tính đều là GLM?",
