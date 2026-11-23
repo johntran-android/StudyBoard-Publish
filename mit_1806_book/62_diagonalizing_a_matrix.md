@@ -5,8 +5,6 @@
 ---
 <a id="node-63e1e2y"></a>
 
-## 6.2 Diagonalizing A Matrix
-
 <br>
 
 <a id="node-kieofgz"></a>
