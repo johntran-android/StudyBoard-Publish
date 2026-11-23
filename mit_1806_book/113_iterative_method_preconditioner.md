@@ -1,13 +1,9 @@
-# 11.3 Iterative Method &
-preconditioner
+# 11.3 Iterative Method & Preconditioner
 
 📊 **Progress:** `4` Notes | `6` Screenshots
 
 ---
 <a id="node-s1f3mn7"></a>
-
-## 11.3 Iterative Method &
-preconditioner
 
 <br>
 
