@@ -1,6 +1,6 @@
 # 1.6 PDF & Pmf
 
-📊 **Progress:** `4` Notes | `5` Screenshots
+📊 **Progress:** `4` Notes | `5` Screenshots | `1` AI Reviews
 
 ---
 <a id="node-05uz3pr"></a>
@@ -201,6 +201,21 @@
 
 > [!NOTE]
 > QUAY LẠI SAU
+
+> [!TIP]
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **0/100** · ✗ Fix first
+>
+> Ghi chú hiện chưa có bất kỳ nội dung hoặc phân tích nào liên quan đến tài liệu, bạn chỉ mới để lại lời nhắc sẽ quay lại sau.
+>
+> **🔴 Critical issues**
+>
+> **1.** *"QUAY LẠI SAU"*
+>
+> Chưa có nội dung ghi chú hay xử lý kiến thức nào từ tài liệu được thực hiện.
+>
+>
+> **💡 Deeper notes**
+> - Tài liệu đề cập đến việc chuẩn hóa một hàm không âm có tích phân hữu hạn thành pdf, cùng với trường hợp ngoại lệ (tính liên tục tuyệt đối / absolutely continuous) khi hàm phân phối F_X(x) liên tục nhưng không khả vi (ví dụ: hàm Cantor).
 
 <br>
 
