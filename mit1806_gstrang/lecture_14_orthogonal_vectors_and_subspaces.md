@@ -740,7 +740,7 @@
 
 📹 Video 1: [Vì sao không nên bỏ bớt phương trình khi Ax=b vô nghiệm? (phần 1)](https://www.youtube.com/watch?v=Utf0bKKqqio)
 
-📹 Video 2: [Khi Ax=b vô nghiệm, điều kiện nào để A^T A khả nghịch? (phần 2)](https://www.youtube.com/watch?v=gkxPk7hBGNE)
+📹 Video 2: [Khi Ax=b vô nghiệm, điều kiện nào để A^T A khả nghịch?](https://www.youtube.com/watch?v=gkxPk7hBGNE)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
