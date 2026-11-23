@@ -1,6 +1,6 @@
 # 12.3 Logistic Regression
 
-📊 **Progress:** `3` Notes | `5` Screenshots | `3` AI Reviews
+📊 **Progress:** `6` Notes | `8` Screenshots | `6` AI Reviews
 
 ---
 <a id="node-holzhx7"></a>
@@ -341,4 +341,349 @@
 <br>
 
 <a id="node-yvpngir"></a>
+
+##### Logistic Regression Derivative and Symmetry
+
+<p align="center"><kbd><img src="assets/s0ali1c4u1.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> π(x) = exp(α + βx) / \[1 + exp(α + βx)\]
+>
+>
+>
+> Đại khái là có thể thấy π(x) &gt; 0 (do exp(..) &gt; 0 nên tử số và mẫu số đều dương) và tử số bé hơn mẫu số nên cái này cũng &lt; 1.
+>
+>
+>
+> Như vậy có vẻ nó là một công thức hợp lí, vì π(x), là P(Y=1) (nên π(x) là một giá trị xác suất)
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, thử lấy đạo hàm hàm π(x) đối với x:
+>
+>
+>
+> π(x) = exp(α + βx) / \[1 + exp(α + βx)\]
+>
+>
+>
+> π(u,v) = u / v
+>
+>
+>
+> dπ = (du v - u dv)/v²
+>
+>
+>
+> u = exp(z) ⇒ du = exp(z) dz = u dz
+>
+>
+>
+> v = 1 + exp(z) ⇒ dv = exp(z) dz = u dz
+>
+>
+>
+> π = u/(1 + u) ⇒ 1 - π = 1 - u/(1 + u) = 1/(1 + u)
+>
+>
+>
+> z = α + βx ⇒ dz = β dx
+>
+>
+>
+> vậy dπ = (du v - u dv)/v²
+>
+>
+>
+> = (u dz v - u u dz)/v²
+>
+>
+>
+> = (uv - u²)dz/v²
+>
+>
+>
+> = (u(1+u) - u²)dz/(1+u)²
+>
+>
+>
+> = (u + u² - u²)dz/(1+u)²
+>
+>
+>
+> = \[u/(1+u)²\]dz
+>
+>
+>
+> = π/(1+u)dz
+>
+>
+>
+> = π(1-π)dz
+>
+>
+>
+> = π(1-π)βdx
+>
+>
+>
+> Vẫy dπ = π(1-π)βdx ⇒ dπ/dx = βπ(x)(1-π(x))
+>
+>
+>
+> ---
+>
+>
+>
+> Khi đó, có thể thấy nếu β dương, âm, =0, thì dπ/dx dương, âm, = 0, tương ứng hàm π(x) strictly increasing / strictly decreasing / là hàm hằng theo x (cụ thể = exp(α) / \[1 + exp(α)\])
+>
+>
+>
+> ---
+>
+>
+>
+> Thêm nữa:
+>
+>
+>
+> π(-α/β) = exp(α + β(-α/β)) / \[1 + exp(α + β(-α/β))\]
+>
+>
+>
+> = exp(0)/(1+exp(0))
+>
+>
+>
+> = 1/2, cái này dễ thấy
+>
+>
+>
+> ---
+>
+>
+>
+> π(c-α/β) + π(-c-α/β) = 1
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, tự diễn giải chi tiết từng bước đạo hàm và các tính chất đối xứng, đơn điệu của hàm hồi quy logistic một cách chính xác.
+>
+> **✓ Strengths**
+> - Tự thực hiện đầy đủ và chính xác từng bước biến đổi đạo hàm dπ/dx bằng quy tắc đạo hàm phân thức.
+> - Hiểu rõ và giải thích trực giác tốt miền giá trị 0 < π(x) < 1 dựa trên tính chất của hàm mũ.
+> - Nắm vững tính đơn điệu của hàm theo dấu của hệ số β và tính chất đối xứng tâm quanh điểm x = -α/β.
+>
+> **💡 Deeper notes**
+> - Điểm đối xứng x = -α/β chỉ xác định khi β ≠ 0; nếu β = 0 thì đồ thị là đường nằm ngang π(x) = exp(α)/(1 + exp(α)).
+> - Mô hình logistic không bao giờ đạt giá trị chính xác 0 hoặc 1 với x hữu hạn (chỉ tiệm cận khi x tiến ra vô cực).
+
+<br>
+
+<a id="node-yj423vu"></a>
+
+###### Logistic Regression Parameter Interpretation
+
+<p align="center"><kbd><img src="assets/c534st5bxbs.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là đoạn này phân tích ý nghĩa của α, β.
+>
+>
+>
+> Nhắc lại giả định của logistic regression:
+>
+>
+>
+> y1,y2,...là các observed value của Y1,Y2,....độc lập có: Yn \~ Bern(π(xi)) với
+>
+>
+>
+> π(xi) = P(Y=1|xi), là hàm sao cho: π(xi) = σ(α + βxi)
+>
+>
+>
+> và cũng là log (π(xi) / \[1 - π(xi)) = α + βxi (1)
+>
+>
+>
+> Và soi chiếu theo mô hình GLM thì Y1,Y2,..độc lập \~ Bern(π(xi)) chính là tương ứng với exponential family có tham số là log (π(xi) / \[1 - π(xi)). link function là g(π(xi) = log (π(xi) / \[1 - π(xi)) và systematic component là α + βxi
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy thì theo (1) thì:
+>
+>
+>
+> log (π(0) / \[1 - π(0)) = α
+>
+>
+>
+> ⇔ α = log \[P(Y=1|x=0)/P(Y=0|x=0)\]
+>
+>
+>
+> tức là log của odds of success, tỉ lệ giữa xác suất P(Y=1|x=0) và P(Y=0|x=0)
+>
+>
+>
+> ---
+>
+>
+>
+> Còn β: Nếu tính log (odd) tại x+1 trừ log odd tại x ta có:
+>
+>
+>
+> α + β(xi+1) - \[α + βxi\] = β
+>
+>
+>
+> Nên beta chính là mang ý nghĩa của mức thay đổi của log odd khi x tăng 1 đơn vị.
+>
+>
+>
+> (trong simple linear regression, E\[Y|x\] = α + βx, thì E\[Y|x+1\] - E\[Y|x\] = β nên ý nghĩa của β là mức thay đổi của mean Y khi x thay đổi 1 đơn vị)
+>
+>
+>
+> ---
+>
+>
+>
+> Tiếp, nếu từ
+>
+>
+>
+> log odd tại x+1 - log odd tại x = β
+>
+>
+>
+> exp(.) hai vế ta có:
+>
+>
+>
+> exp(log odd tại x+1 - log odd tại x) = exp(β)
+>
+>
+>
+> ⇔ exp(log odd tại x+1) / exp(log odd tại x) = exp(β)
+>
+>
+>
+> ⇔ odd tại x+1 / odd tại x = exp(β)
+>
+>
+>
+> Như vậy exp(β) là tỉ lệ odds tại x+1 và tại x
+>
+>
+>
+> ---
+>
+>
+>
+> Nói dễ hiểu: exp(β) là tỉ lệ giữa odds tại x+1: tỉ lệ xác suất success tại x+1 / xác suất failure tại x+1 với odds tại x
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, hiểu đúng và diễn giải cặn kẽ bản chất xác suất của alpha, beta và exp(beta), đồng thời mở rộng liên hệ chính xác với mô hình GLM.
+>
+> **✓ Strengths**
+> - Diễn giải chính xác ý nghĩa log-odds của alpha tại x = 0 và mức thay đổi log-odds của beta khi x tăng 1 đơn vị.
+> - Chứng minh và hiểu rõ exp(beta) là odds ratio (tỉ số odds) đại diện cho mức thay đổi nhân tử của odds.
+> - Liên kết kiến thức tốt với lý thuyết GLM (họ phân phối hàm mũ, hàm liên kết logit, thành phần hệ thống).
+>
+> **💡 Deeper notes**
+> - Cần lưu ý phân biệt giữa 'odds ratio' (tỉ số odds so với mốc trước đó) và 'xác suất' (probability), vì odds ratio tăng không đồng nghĩa với xác suất tăng tuyến tính do tính phi tuyến của hàm sigmoid.
+
+<br>
+
+<a id="node-7hcnyrb"></a>
+
+###### Modeling Bernoulli Success Probability
+
+<p align="center"><kbd><img src="assets/shy5mw2e26.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đại khái là:
+>
+>
+>
+> Nhắc lại logistic regression: giả định y1,y2,....là observed value của Y1,Y2,...độc lập sao cho:
+>
+>
+>
+> Yi \~ Bern(π(xi)) với:
+>
+>
+>
+> π(xi) = σ(α + βxi),  (1)
+>
+>
+>
+> σ(w) = exp(w) / \[1+exp(w)\], cũng là 1/\[1+exp(-w)\] là hàm logistic sigmoid, (hay như sách viết là hàm F(w))
+>
+>
+>
+> Thế thì ông nói rằng, hàm σ hay F, vốn dĩ ta đã gặp rồi, nó chính là CDF của phân phối logistic (0,1). Xem link
+>
+>
+>
+> Thế thì như vậy, nếu ta thay hàm σ/cdf của sigmoid trong giả định này bởi một hàm cdf khác, ta sẽ có mô hình khác:
+>
+>
+>
+> Ví dụ, thay bằng cdf của normal, Φ(w), ta sẽ có mô hình Probit regression, như sau:
+>
+>
+>
+> giả định y1,y2,...là observed values của Y1,Y2,...độc lập có:
+>
+>
+>
+> Yi \~ Bern(π(xi)) với
+>
+>
+>
+> π(xi) = P(Y=1|xi) = Φ(α + βxi) 
+>
+>
+>
+> Đây cũng là cái đã gặp trong chương 4 Bishop
+>
+>
+>
+> ---
+>
+>
+>
+> Tương tự, nếu thay bởi Gumbel cdf thì ta sẽ có mô hình khác, trong đó link function là log-log link.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác và mạch lạc nội dung từ giáo trình, đồng thời liên hệ tốt với các kiến thức đã học trước đó.
+>
+> **✓ Strengths**
+> - Nắm vững bản chất việc mô hình hóa xác suất thành công π(x) thông qua hàm CDF liên tục.
+> - Trình bày chuẩn xác mô hình Bernoulli và định nghĩa toán học của Probit regression.
+> - Liên hệ tốt và nhất quán với kiến thức về hàm sigmoid và tài liệu tham khảo khác (Bishop).
+>
+> **💡 Deeper notes**
+> - Hàm liên kết (link function) g(π) thực chất là hàm nghịch đảo của CDF được chọn, tức g(π) = F^(-1)(π); do đó với CDF Gumbel (loại cực trị), hàm nghịch đảo của nó sẽ cho ra log-log hoặc complementary log-log (cloglog) link.
+
+**🔗 See also:** [Hàm phân phối Logistics](./15_distribution_function.md#node-b5jxnwe)
+
+<br>
 
