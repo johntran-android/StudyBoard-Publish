@@ -5,8 +5,6 @@
 ---
 <a id="node-i9fxhnb"></a>
 
-## 7.2 Basis And Matrices In Svd
-
 <br>
 
 <a id="node-qczidh5"></a>
