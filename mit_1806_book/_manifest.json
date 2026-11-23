@@ -1,6 +1,6 @@
 {
   "title": "MIT 18.06 Book",
-  "publishedAt": 1786563246420,
+  "publishedAt": 1795392628636,
   "sections": [
     {
       "title": "📋 Overview",
@@ -69,13 +69,13 @@
       "imageCount": 15
     },
     {
-      "title": "11.3 Iterative Method &\npreconditioner",
+      "title": "11.3 Iterative Method & Preconditioner",
       "path": "mit_1806_book/113_iterative_method_preconditioner.md",
       "noteCount": 4,
       "imageCount": 6
     },
     {
-      "title": "3. Vector Spaces\nand Subspaces",
+      "title": "3. Vector Spaces And Subspaces",
       "path": "mit_1806_book/3_vector_spaces_and_subspaces.md",
       "noteCount": 2,
       "imageCount": 6
