@@ -5,8 +5,6 @@
 ---
 <a id="node-z1d3rde"></a>
 
-## 7.3 Pca By Svd
-
 <br>
 
 <a id="node-i1xixqh"></a>
