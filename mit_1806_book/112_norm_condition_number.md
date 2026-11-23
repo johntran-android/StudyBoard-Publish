@@ -5,8 +5,6 @@
 ---
 <a id="node-7ogf53e"></a>
 
-## 11.2 Norm & Condition Number
-
 <br>
 
 <a id="node-mu34mc5"></a>
