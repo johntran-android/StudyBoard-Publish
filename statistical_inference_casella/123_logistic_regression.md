@@ -500,15 +500,15 @@
 >
 >
 >
-> y1,y2,...là các observed value của Y1,Y2,....độc lập có: Yn \~ Bern(π(xi)) với
+> y1,y2,...là các observed value của Y1,Y2,....độc lập có: Yi \~ Bern(π(xi)) với
 >
 >
 >
-> π(xi) = P(Y=1|xi), là hàm sao cho: π(xi) = σ(α + βxi)
+> π(xi) = P(Yi=1|xi), là hàm sao cho: π(xi) = σ(α + βxi)
 >
 >
 >
-> và cũng là log (π(xi) / \[1 - π(xi)) = α + βxi (1)
+> và cũng là log (π(xi) / (1 - π(xi)) = α + βxi (1)
 >
 >
 >
@@ -544,7 +544,7 @@
 >
 >
 >
-> α + β(xi+1) - \[α + βxi\] = β
+> \[α + β(xi+1) - \[α + βxi\] = β
 >
 >
 >
@@ -593,6 +593,8 @@
 >
 >
 > Nói dễ hiểu: exp(β) là tỉ lệ giữa odds tại x+1: tỉ lệ xác suất success tại x+1 / xác suất failure tại x+1 với odds tại x
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=5y9ZCdAOOfo)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
