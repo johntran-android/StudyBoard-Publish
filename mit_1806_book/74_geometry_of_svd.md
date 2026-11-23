@@ -5,8 +5,6 @@
 ---
 <a id="node-qv3hjz4"></a>
 
-## 7.4 Geometry Of Svd
-
 <br>
 
 <a id="node-plv1s71"></a>
@@ -1103,15 +1101,15 @@
 >
 >
 >
-> - Có vô số nghiệm thì A^+b là nghiệm nhỏ nhất
+> \- Có vô số nghiệm thì A^+b là nghiệm nhỏ nhất
 >
 >
 >
-> - Có một nghiệm thì nó cũng là cái nhỏ nhất mà thì cũng là cái đó luôn
+> \- Có một nghiệm thì nó cũng là cái nhỏ nhất mà thì cũng là cái đó luôn
 >
 >
 >
-> - Còn nếu b thuộc C(A) thì nghiệm least square trở thành nghiệm bình thường
+> \- Còn nếu b thuộc C(A) thì nghiệm least square trở thành nghiệm bình thường
 > và A^+ b lại cho ra nghiệm bình thường nhỏ nhất
 >
 >
