@@ -4483,13 +4483,13 @@
 >
 > Chứng minh Σi λiξi² chính là (||x0 - x\*||\_A)², hay (||e0||\_A)², e0 là error, sai số tại x0
 
-📹 Video 1: [Vì sao conjugate gradient cực tiểu hoá sai số theo chuẩn A? (phần 1)](https://youtu.be/VXaK6UqTQqg)
+📹 Video 1: [Làm sao đưa sai số conjugate gradient về bài toán đa thức? (phần 2)](https://www.youtube.com/watch?v=Y2N0sJzIigY)
 
-📹 Video 2: [Làm sao đưa sai số conjugate gradient về bài toán đa thức? (phần 2)](https://www.youtube.com/watch?v=Y2N0sJzIigY)
+📹 Video 2: [Làm sao chặn sai số conjugate gradient qua bài toán min-max? (phần 3)](https://www.youtube.com/watch?v=ouWklayNmTc)
 
-📹 Video 3: [Làm sao chặn sai số conjugate gradient qua bài toán min-max? (phần 3)](https://www.youtube.com/watch?v=ouWklayNmTc)
+📹 Video 3: [Làm sao biểu diễn sai số conjugate gradient qua các trị riêng?](https://www.youtube.com/watch?v=c6gBFtYkgSk)
 
-📹 Video 4: [Làm sao biểu diễn sai số conjugate gradient qua các trị riêng? (phần 4)](https://www.youtube.com/watch?v=c6gBFtYkgSk)
+📹 Video 4: [Rate of Convergence](https://www.youtube.com/watch?v=TCatqntNFL8)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
