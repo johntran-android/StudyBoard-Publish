@@ -108,19 +108,19 @@
 >
 > Bk+1 = Bk + (yk - Bksk)(yk - Bksk)ᵀ / (yk - Bksk)ᵀsk
 >
-> Xét quadratic form của Bk+1: zTBk+1z với z khác 0 bất kì.
+> Xét quadratic form của Bk+1: zᵀBk+1z với z khác 0 bất kì.
 >
-> = zT[Bk + (yk - Bksk)(yk - Bksk)ᵀ / (yk - Bksk)ᵀsk]z
+> = zᵀ[Bk + (yk - Bksk)(yk - Bksk)ᵀ / (yk - Bksk)ᵀsk]z
 >
-> = zT[Bkz + (yk - Bksk)(yk - Bksk)ᵀz / (yk - Bksk)ᵀsk]
+> = zᵀ[Bkz + (yk - Bksk)(yk - Bksk)ᵀz / (yk - Bksk)ᵀsk]
 >
-> = zTBkz + zT(yk - Bksk)(yk - Bksk)ᵀz / (yk - Bksk)ᵀsk
+> = zᵀBkz + zᵀ(yk - Bksk)(yk - Bksk)ᵀz / (yk - Bksk)ᵀsk
 >
-> nếu Bk ≻ 0 ⇨ zTBkz > 0 ∀z
+> nếu Bk ≻ 0 ⇨ zᵀBkz > 0 ∀z
 >
-> xét term thứ 2: zT(yk - Bksk)(yk - Bksk)ᵀz / (yk - Bksk)ᵀsk
+> xét term thứ 2: zᵀ(yk - Bksk)(yk - Bksk)ᵀz / (yk - Bksk)ᵀsk
 >
-> = [zT(yk - Bksk)]² / (yk - Bksk)ᵀsk
+> = [zᵀ(yk - Bksk)]² / (yk - Bksk)ᵀsk
 >
 > cái này chưa chắc đã không âm vì dù tử số không âm nhưng (yk - Bksk)ᵀsk thì có thể âm
 >
