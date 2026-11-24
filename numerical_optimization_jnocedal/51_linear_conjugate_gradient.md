@@ -4489,6 +4489,8 @@
 
 📹 Video 3: [Làm sao chặn sai số conjugate gradient qua bài toán min-max? (phần 3)](https://www.youtube.com/watch?v=ouWklayNmTc)
 
+📹 Video 4: [Làm sao biểu diễn sai số conjugate gradient qua các trị riêng? (phần 4)](https://www.youtube.com/watch?v=c6gBFtYkgSk)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
