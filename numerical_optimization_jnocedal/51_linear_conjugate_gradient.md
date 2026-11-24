@@ -4023,7 +4023,15 @@
 >
 >
 >
-> Xét (xk+1 - x\*)ᵀvi, ở cuối note, ta sẽ chứng minh (xk+1 - x\*)ᵀvi = \[1 + λi P\*k(λi)\] ξi
+> Xét (xk+1 - x\*)ᵀvi,
+>
+>
+>
+> ở cuối note, ta sẽ chứng minh: 
+>
+>
+>
+> (xk+1 - x\*)ᵀvi = \[1 + λi P\*k(λi)\] ξi
 >
 >
 >
@@ -4051,7 +4059,11 @@
 >
 >
 >
-> ⇔ (||xk+1 - x\*||\_A)² = Σi λi \[1 + λi P\*k(λi)\]² ξi² → Đây là 5.32 trong sách.
+> ⇔ (||xk+1 - x\*||\_A)² = Σi λi \[1 + λi P\*k(λi)\]² ξi² 
+>
+>
+>
+> → Đây là 5.32 trong sách.
 >
 >
 >
@@ -4111,6 +4123,14 @@
 >
 >
 >
+> g(x) ≤ f(x)
+>
+>
+>
+> inf_x g(x) ≤ inf_x f(x)
+>
+>
+>
 > (ví dụ giả sử (1 + λ1 Pk(λ1)) là cái lớn nhất trong hai cái 1 + λ1 Pk(λ1)), (1 + λ2 Pk(λ2)) thì
 >
 >
@@ -4145,11 +4165,21 @@
 >
 >
 >
+> inf_x \[f(x) × c\] = c × \[inf_x f(x)\] 
+>
+>
+>
 > nên hiểu là (||x0 - x\*||\_A)² là constant, nên đưa nó ra ngoài min max, kết quả coi như là:
 >
 >
 >
 > (||xk+1 - x\*||\_A)² ≤ min_Pk \[max_1≤i≤n \[1 + λi Pk(λi)\]²\] × (||x0 - x\*||\_A)²
+>
+>
+>
+>
+>
+> min_Pk \[max_1≤i≤n \[1 + λi Pk(λi)\]²\]
 >
 >
 >
@@ -4363,7 +4393,15 @@
 >
 >
 >
-> (Cái này nhìn vậy thôi chứ chỉ là (Σj (scalar τj) × vj)ᵀvi, với τi = \[1 + λi P\*k(λi)\] ξi)
+> (Cái này nhìn vậy thôi chứ chỉ là (Σj (scalar τj) × vj)ᵀvi, với τj = \[1 + λj P\*k(λj)\] ξj)
+>
+>
+>
+> = \[Σj τj vj\]ᵀvi
+>
+>
+>
+> = Σj τj vjᵀvi
 >
 >
 >
@@ -4371,11 +4409,11 @@
 >
 >
 >
-> = Σi≠j (scalar τj) × vjᵀvi) + (scalar τi) × viᵀvi
+> = Σi≠j (scalar τj) × vjᵀvi) + (scalar τj) × viᵀvi
 >
 >
 >
-> = Σj≠i (scalar τj) × 0) + (scalar τi) × 1
+> = Σj≠i (scalar τj) × 0) + (scalar τj) × 1
 >
 >
 >
@@ -4445,22 +4483,35 @@
 >
 > Chứng minh Σi λiξi² chính là (||x0 - x\*||\_A)², hay (||e0||\_A)², e0 là error, sai số tại x0
 
-📹 [Xem video trên YouTube](https://youtu.be/VXaK6UqTQqg)
+📹 Video 1: [Vì sao conjugate gradient cực tiểu hoá sai số theo chuẩn A? (phần 1)](https://youtu.be/VXaK6UqTQqg)
+
+📹 Video 2: [Làm sao đưa sai số conjugate gradient về bài toán đa thức? (phần 2)](https://www.youtube.com/watch?v=Y2N0sJzIigY)
+
+📹 Video 3: [Làm sao chặn sai số conjugate gradient qua bài toán min-max? (phần 3)](https://www.youtube.com/watch?v=ouWklayNmTc)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **96/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
 >
-> Ghi chép xuất sắc, người học tự khai triển chi tiết và chính xác toàn bộ các bước biến đổi trung gian từ công thức (5.25) đến (5.34) mà sách giáo khoa lược giản.
+> Ghi chú xuất sắc, bạn đã tự tay khai triển và chứng minh chi tiết từng bước từ sách giáo khoa mà không bỏ sót bất kỳ biến đổi nào.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"pk = ε0 r0 + ..εk A^k r0. Nên: xk+1 = xk + αk (γ0 r0 + ..γk A^kr0)"*
+>
+> Có sự chồng lấn ký hiệu: bạn dùng gamma cho tổ hợp tuyến tính bên trong alpha_k * p_k, rồi sau đó lại dùng chính ký hiệu gamma cho toàn bộ hệ số tích lũy từ x_0 đến x_{k+1} ở công thức (5.25). Dù không làm sai bản chất, nên dùng các ký hiệu khác nhau để mạch biến đổi chặt chẽ hơn.
+>
+> **2.** *"Nhưng nếu ta chỉ tìm cách minimize [1 + λ1 Pk(λ1)]² ξ1², ví dụ nó là cái lớn nhất trong 3 cái thì logic sẽ là với cái Pk đó thì Σi λi a(i) ξi² sẽ luôn lớn hơn hoặc bằng ||xk+1 - x*||²_A"*
+>
+> Cách diễn đạt trực giác ở đoạn này hơi lủng củng so với phần chứng minh toán học chuẩn mực ngay phía trên (vốn đã áp dụng đúng tính chất: nếu g(P) ≤ f(P) với mọi P thì min g ≤ min f).
+>
 >
 > **✓ Strengths**
-> - Tự chứng minh chi tiết đẳng thức (1/2)||x - x*||_A^2 = phi(x) - phi(x*) bằng định nghĩa hàm mục tiêu phi và điều kiện nghiệm Ax* = b.
-> - Chứng minh chặt chẽ tính chất phổ P_k(A)v_i = P_k(lambda_i)v_i thông qua quy nạp trực quan trên từng lũy thừa của ma trận.
-> - Khai triển mạch lạc việc trực giao hóa để chứng minh (x_{k+1} - x*)^T v_i = [1 + lambda_i P*_k(lambda_i)] xi_i và ||x_0 - x*||_A^2 = sum lambda_i xi_i^2.
-> - Hiểu đúng bản chất của bất đẳng thức min-max (5.33): bất đẳng thức đúng với mọi đa thức P_k nên giá trị cực tiểu hóa hai vế cũng bảo toàn bất đẳng thức.
+> - Tự khai triển đầy đủ và chính xác hệ thức quan trọng (1/2)||x - x*||_A^2 = phi(x) - phi(x*).
+> - Hiểu rất rõ bản chất tối ưu hóa của CG: vừa là phép chiếu trực giao trong A-norm ở góc nhìn hình học, vừa là bài toán xấp xỉ đa thức tối ưu ở góc nhìn đại số.
+> - Chứng minh bổ đề phổ A = sum lambda_i v_i v_i^T và tính chất P_k(A)v_i = P_k(lambda_i)v_i cực kỳ chi tiết, mạch lạc.
 >
 > **💡 Deeper notes**
-> - Việc ma trận có đủ n vector riêng trực chuẩn tạo thành cơ sở cho R^n là nhờ định lý phổ áp dụng cho ma trận đối xứng thực A, chứ không phải ma trận vuông nào trong R^n cũng mặc nhiên có n vector riêng độc lập.
-> - Đa thức tổng thể tác động lên sai số ban đầu e_0 là R_{k+1}(lambda) = 1 + lambda P_k(lambda), đây là một đa thức bậc k+1 thỏa mãn ràng buộc chuẩn hóa tại gốc tọa độ R_{k+1}(0) = 1.
+> - Đa thức Q_{k+1}(\lambda) = 1 + \lambda P_k(\lambda) trong lý thuyết không gian Krylov thường được gọi là đa thức phần dư (residual polynomial), có bậc k+1 và bị ràng buộc điều kiện chuẩn hóa tại gốc tọa độ: Q_{k+1}(0) = 1.
 
 **🔗 See also:** [Theorem 5.3](#node-e7cob1z) · [5.1 The Linear Conjugate Gradient Method](#node-hpdy8sw) · [Vài suy nghĩ về bản chất của Conjugate Gradient method](#node-6z4orxx) · [Theorem 5.5](#node-66uzm1b)
 
