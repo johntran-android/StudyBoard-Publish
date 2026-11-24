@@ -36,7 +36,7 @@
 >
 > Bên cạnh đó, local feature hữu ích trong một vùng này cũng có thể sẽ hữu ích  trong vùng kia.
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=q9qmr3cEO7U)
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=YhqXLoQBBv4)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -111,8 +111,6 @@
 >
 >
 > Cũng như là, nếu dấu thập có bị dịch đi chỗ khác, thì giá trị của unit detect được dấu thập tương ứng trên feature map cũng bị dịch đi. Và điều này tạo cơ sở cho tính bất biến của network đối với phép tịnh tiến, hay vặn xoắn. Lẽ dễ hiểu là vì, dù cái hình có bị dịch đi (translate) thì feature map vẫn detect được mô thức dấu thập ở một unit khác.
-
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=PhYnZS0HSPU)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
