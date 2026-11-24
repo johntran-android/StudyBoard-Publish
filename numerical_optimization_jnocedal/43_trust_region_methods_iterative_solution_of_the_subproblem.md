@@ -1254,23 +1254,23 @@
 >
 > m(p + z) = gᵀ(p + z) + (1/2)(p + z)ᵀB(p + z)
 >
-> = gᵀp + gᵀz + (1/2)(pᵀB + zTB)(p + z)
+> = gᵀp + gᵀz + (1/2)(pᵀB + zᵀB)(p + z)
 >
-> = gᵀp + gᵀz + (1/2)(pᵀBp + zTBp + pᵀBz + zTBz)
+> = gᵀp + gᵀz + (1/2)(pᵀBp + zᵀBp + pᵀBz + zᵀBz)
 >
-> = gᵀp + gᵀz + (1/2)pᵀBp + zTBp + (1/2)zTBz
+> = gᵀp + gᵀz + (1/2)pᵀBp + zᵀBp + (1/2)zᵀBz
 >
-> = gᵀp + (-Bp)ᵀz + (1/2)pᵀBp + zTBp + (1/2)zTBz (thay g = - Bp)
+> = gᵀp + (-Bp)ᵀz + (1/2)pᵀBp + zᵀBp + (1/2)zᵀBz (thay g = - Bp)
 >
-> = gᵀp - pᵀBz + (1/2)pᵀBp + zTBp + (1/2)zTBz
+> = gᵀp - pᵀBz + (1/2)pᵀBp + zᵀBp + (1/2)zᵀBz
 >
-> = gᵀp + (1/2)pᵀBp + (1/2)zTBz
+> = gᵀp + (1/2)pᵀBp + (1/2)zᵀBz
 >
-> = m(p) + (1/2)zTBz
+> = m(p) + (1/2)zᵀBz
 >
 >
 >
-> Mà **B bán xác định dương** nên **quadratic form zTBz ≥ 0 ∀ z ∈ R^n**
+> Mà **B bán xác định dương** nên **quadratic form zᵀBz ≥ 0 ∀ z ∈ R^n**
 >
 >
 >
@@ -1346,11 +1346,11 @@
 >
 >
 >
-> = gᵀp + gᵀz + (1/2)(pᵀBp + zTBp + pᵀBz + zTBz)
+> = gᵀp + gᵀz + (1/2)(pᵀBp + zᵀBp + pᵀBz + zᵀBz)
 >
 >
 >
-> = gᵀp + gᵀz + (1/2)\[pᵀBp + 0p + pᵀ(0) + zT(0)\] (0 là zero vector)
+> = gᵀp + gᵀz + (1/2)\[pᵀBp + 0p + pᵀ(0) + zᵀ(0)\] (0 là zero vector)
 >
 >
 >
@@ -1396,7 +1396,7 @@
 >
 >
 >
-> Nhờ đó dùng lập luận của chứng minh (i) ta suy ra m(p + z) = m(p) + (1/2)zTBz ∀ z ∈ R^n. Mà **B xác định dương** nên **hạng tử thứ hai luôn dương** ⇨ m(p + z) &gt; m(p) ⇨ p là **unique** minimizer.
+> Nhờ đó dùng lập luận của chứng minh (i) ta suy ra m(p + z) = m(p) + (1/2)zᵀBz ∀ z ∈ R^n. Mà **B xác định dương** nên **hạng tử thứ hai luôn dương** ⇨ m(p + z) &gt; m(p) ⇨ p là **unique** minimizer.
 >
 >
 >
