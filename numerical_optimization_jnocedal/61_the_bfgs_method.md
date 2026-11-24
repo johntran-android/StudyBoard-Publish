@@ -886,35 +886,35 @@
 >
 > ρk = 1/ykTsk
 >
-> Chỉ cần xét quadratic form zTHk+1z với z khác 0:
+> Chỉ cần xét quadratic form zᵀHk+1z với z khác 0:
 >
-> = zT[(I - ρkskykT)Hk(I - ρkykskT) + ρkskskT]z
+> = zᵀ[(I - ρkskykT)Hk(I - ρkykskT) + ρkskskT]z
 >
-> = zT(I - ρkskykT)Hk(I - ρkykskT)z + zTρkskskTz
+> = zᵀ(I - ρkskykT)Hk(I - ρkykskT)z + zᵀρkskskTz
 >
-> = zT(I - ρkskykT)Hk(I - ρkykskT)z + zTρkskskTz
+> = zᵀ(I - ρkskykT)Hk(I - ρkykskT)z + zᵀρkskskTz
 >
 > Đặt w = (I - ρkykskT)z = z - ρkykskTz
 >
-> ... = wTHkw + zTρkskskTz
+> ... = wTHkw + zᵀρkskskTz
 >
-> = wTHkw + ρk(zTsk)(skTz)
+> = wTHkw + ρk(zᵀsk)(skTz)
 >
-> = wTHkw + ρk(zTsk)²
+> = wTHkw + ρk(zᵀsk)²
 >
 > Nếu Hk xác định dương thì wTHkw ≥ 0 với mọi w, và chỉ bằng 0 khi w = 0
 >
-> và ρk(zTsk)² thì cũng luôn ≥ 0. chỉ bằng 0 khi zTsk = 0 
+> và ρk(zᵀsk)² thì cũng luôn ≥ 0. chỉ bằng 0 khi zᵀsk = 0 
 >
-> Giả sử cả hai cùng lúc bằng 0 khiến wTHkw + ρk(zTsk)² = 0:
+> Giả sử cả hai cùng lúc bằng 0 khiến wTHkw + ρk(zᵀsk)² = 0:
 >
-> w = 0 và zTsk = 0 
+> w = 0 và zᵀsk = 0 
 >
-> ⇔ z - ρkykskTz = 0 và zTsk = 0 
+> ⇔ z - ρkykskTz = 0 và zᵀsk = 0 
 >
 > ⇔ z = 0
 >
-> Ban đầu ta đã giả sử z khác 0, nay lại dẫn tới z = 0 → mẫu thuẫn, cho nên w = 0 và zTsk = 0  không thể xảy ra → zTHk+1z = wTHkw + ρk(zTsk)² > 0 → Hk+1 xác định dương nếu như Hk xác định dương
+> Ban đầu ta đã giả sử z khác 0, nay lại dẫn tới z = 0 → mẫu thuẫn, cho nên w = 0 và zᵀsk = 0  không thể xảy ra → zᵀHk+1z = wTHkw + ρk(zᵀsk)² > 0 → Hk+1 xác định dương nếu như Hk xác định dương
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **99/100** · ✓ Move on
