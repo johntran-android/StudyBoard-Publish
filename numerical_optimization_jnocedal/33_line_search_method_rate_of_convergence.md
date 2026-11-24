@@ -267,7 +267,7 @@
 >
 > thì Vᵀy, thì nó chính chuyển tọa độ của y từ standard basis sang basis v's, tức các eigen basis của Q. Và về khía cạnh hình học, nó chỉ là việc ta xoay trục tọa độ thẳng góc lại với các eigenvector của Q mà thôi. Và gọi z = Vᵀy, thì z chỉ là tọa độ của cùng vector y nhưng mà là khi trục tọa độ thẳng góc với eigenvectors của Q.
 >
-> Thế thì khi đó yTQy = c là phương trình của level set trong hệ trục standard thì zTΛz = c là phương trình của level set trong hệ trục eigenbasis của Q, và ta sẽ thấy zTΛz = c ⇔ z1² λ1 + z2² λ2 + .. = c. Đây chính là phương trình của một ellipsoids.
+> Thế thì khi đó yTQy = c là phương trình của level set trong hệ trục standard thì zᵀΛz = c là phương trình của level set trong hệ trục eigenbasis của Q, và ta sẽ thấy zᵀΛz = c ⇔ z1² λ1 + z2² λ2 + .. = c. Đây chính là phương trình của một ellipsoids.
 >
 > Như vậy, từ đó ta hiểu vì sao nói level set (contour plot) lại là các ellipsoid có trục thẳng trục với các eigenvector của Q.
 
