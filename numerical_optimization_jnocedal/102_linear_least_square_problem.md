@@ -144,7 +144,7 @@
 >
 >
 >
-> Ở đây ta dùng điều kiện đủ bậc hai, cho dễ dễ thấy, ta đã có Hessian là JᵀJ, thì như đã biết JᵀJ chắc chắn là positive semi definite: Chỉ cần xét quadratic form của nó (nhớ MIT 18.06 ta biết, chỉ cần chỉ ra quadratic form của nó luôn ko âm): zTJᵀJz = (Jᵀz)ᵀ(Jᵀz) = ||Jᵀz||², đây là bình phương của norm của vector Jᵀz, dĩ nhiên luôn không âm. Kết luận JᵀJ possitive semi definite ⇨ f là hàm lồi.
+> Ở đây ta dùng điều kiện đủ bậc hai, cho dễ dễ thấy, ta đã có Hessian là JᵀJ, thì như đã biết JᵀJ chắc chắn là positive semi definite: Chỉ cần xét quadratic form của nó (nhớ MIT 18.06 ta biết, chỉ cần chỉ ra quadratic form của nó luôn ko âm): zᵀJᵀJz = (Jᵀz)ᵀ(Jᵀz) = ||Jᵀz||², đây là bình phương của norm của vector Jᵀz, dĩ nhiên luôn không âm. Kết luận JᵀJ possitive semi definite ⇨ f là hàm lồi.
 >
 >
 >
@@ -777,7 +777,7 @@
 
 <a id="node-2tsnkwj"></a>
 
-###### Formula (10.21) Sensitivity
+###### Formula (10.21) Sensitiviᵀy
 
 <p align="center"><kbd><img src="assets/5vt58wog9as.png" width="80%"></kbd></p>
 
@@ -987,7 +987,7 @@
 >
 >
 >
-> ⇨ ||S(Vᵀx) - U1Ty||² = ∑i (σiviTx - uiTy)²
+> ⇨ ||S(Vᵀx) - U1Ty||² = ∑i (σiviᵀx - uiTy)²
 >
 >
 >
@@ -995,27 +995,27 @@
 >
 >
 >
-> ..= ∑i,σi≠0 (σiviTx - uiTy)² + ∑i,σi=0 (σiviTx - uiTy)² 
+> ..= ∑i,σi≠0 (σiviᵀx - uiTy)² + ∑i,σi=0 (σiviᵀx - uiTy)² 
 >
 >
 >
-> = ∑i,σi≠0 (σiviTx - uiTy)² + ∑i,σi=0 (- uiTy)²
+> = ∑i,σi≠0 (σiviᵀx - uiTy)² + ∑i,σi=0 (- uiTy)²
 >
 >
 >
-> = ∑i,σi≠0 (σiviTx - uiTy)² + ∑i,σi=0 (uiTy)²
+> = ∑i,σi≠0 (σiviᵀx - uiTy)² + ∑i,σi=0 (uiTy)²
 >
 >
 >
-> Rồi, tới đây, để minimize cái này, ta sẽ minimize term 1: và term 1 là tổng các bình phương, nên nó nhỏ nhất khi σiviTx - uiTy = 0 ∀i với σi ≠ 0
+> Rồi, tới đây, để minimize cái này, ta sẽ minimize term 1: và term 1 là tổng các bình phương, nên nó nhỏ nhất khi σiviᵀx - uiTy = 0 ∀i với σi ≠ 0
 >
 >
 >
-> ⇔ σiviTx = uiTy
+> ⇔ σiviᵀx = uiTy
 >
 >
 >
-> ⇔ viTx = uiTy/σi ∀i với σi ≠ 0
+> ⇔ viᵀx = uiTy/σi ∀i với σi ≠ 0
 >
 >
 >
@@ -1023,11 +1023,11 @@
 >
 >
 >
-> Và vì đây là orthogonal basis, nên tọa độ ci cũng chính là xᵀvi = viTx
+> Và vì đây là orthogonal basis, nên tọa độ ci cũng chính là xᵀvi = viᵀx
 >
 >
 >
-> Với các i sao cho σi ≠ 0 ci = viTx = uiTy/σi, còn các i với σi = 0 thì ta ko có ràng buộc gỉ cả.
+> Với các i sao cho σi ≠ 0 ci = viᵀx = uiTy/σi, còn các i với σi = 0 thì ta ko có ràng buộc gỉ cả.
 >
 >
 >
