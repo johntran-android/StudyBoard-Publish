@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1795555097235,
+  "publishedAt": 1795555139217,
   "sections": [
     {
       "title": "📋 Overview",
@@ -259,39 +259,9 @@
   "totalImages": 712,
   "videos": [
     {
-      "id": "TCatqntNFL8",
-      "title": "Rate of Convergence",
-      "uploadedAt": 1795550903153,
-      "at": [
-        "5.1 The Linear Conjugate Gradient Method",
-        "5.1 Linear Conjugate Gradient",
-        "5.1 Linear Conjugate Gradient"
-      ]
-    },
-    {
       "id": "c6gBFtYkgSk",
       "title": "Làm sao biểu diễn sai số conjugate gradient qua các trị riêng?",
       "uploadedAt": 1795550668041,
-      "at": [
-        "5.1 The Linear Conjugate Gradient Method",
-        "5.1 Linear Conjugate Gradient",
-        "5.1 Linear Conjugate Gradient"
-      ]
-    },
-    {
-      "id": "ouWklayNmTc",
-      "title": "Làm sao chặn sai số conjugate gradient qua bài toán min-max? (phần 3)",
-      "uploadedAt": 1795549407246,
-      "at": [
-        "5.1 The Linear Conjugate Gradient Method",
-        "5.1 Linear Conjugate Gradient",
-        "5.1 Linear Conjugate Gradient"
-      ]
-    },
-    {
-      "id": "Y2N0sJzIigY",
-      "title": "Làm sao đưa sai số conjugate gradient về bài toán đa thức? (phần 2)",
-      "uploadedAt": 1795549206170,
       "at": [
         "5.1 The Linear Conjugate Gradient Method",
         "5.1 Linear Conjugate Gradient",
