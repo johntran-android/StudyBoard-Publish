@@ -1087,10 +1087,10 @@
 > bình thường (vốn đã nhanh - O(n), vì như đã biết, lí thuyết nói nó chỉ tốn nhiều nhất n
 > bước)
 >
-> Có thể hỏi, vì sao A^ xác định dương? → Xét quadratic form: zTC⁻¹ᵀAC⁻¹z, Thì dễ
+> Có thể hỏi, vì sao A^ xác định dương? → Xét quadratic form: zᵀC⁻¹ᵀAC⁻¹z, Thì dễ
 > thấy vì C full rank, nên N(C⁻¹) = zero vector do đó với mọi z khác 0, C⁻¹z khác 0.
-> Và vì A xác định dương nên (zTC⁻¹)A(C⁻¹z) cũng sẽ dương với mọi C⁻¹z khác 0. Từ
-> đó ta có zTA^z dương với mọi z khác 0 giúp kết luận nó xác định dương.
+> Và vì A xác định dương nên (zᵀC⁻¹)A(C⁻¹z) cũng sẽ dương với mọi C⁻¹z khác 0. Từ
+> đó ta có zᵀA^z dương với mọi z khác 0 giúp kết luận nó xác định dương.
 >
 > -----
 >
