@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795480717734,
+  "publishedAt": 1795484196444,
   "sections": [
     {
       "title": "📋 Overview",
@@ -625,18 +625,9 @@
   "totalImages": 914,
   "videos": [
     {
-      "id": "PhYnZS0HSPU",
-      "title": "Convolutional Networks: lớp subsampling giảm spatial resolution như thế nào? (phần 2)",
-      "uploadedAt": 1795479217575,
-      "at": [
-        "Section 5.5.6 Convolutional Networks",
-        "5.5.6 Convolutional networks"
-      ]
-    },
-    {
-      "id": "q9qmr3cEO7U",
-      "title": "CNN tính feature map từ vùng tiếp nhận cục bộ thế nào?",
-      "uploadedAt": 1795478616066,
+      "id": "YhqXLoQBBv4",
+      "title": "Convolutional Networks tạo tính bất biến dịch chuyển như thế nào?",
+      "uploadedAt": 1795480083728,
       "at": [
         "Section 5.5.6 Convolutional Networks",
         "5.5.6 Convolutional networks"
