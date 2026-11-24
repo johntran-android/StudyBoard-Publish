@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795229413849,
+  "publishedAt": 1795480717734,
   "sections": [
     {
       "title": "📋 Overview",
@@ -597,6 +597,12 @@
       "imageCount": 6
     },
     {
+      "title": "5.5.6 Convolutional networks",
+      "path": "pattern_recognition_machine_learning_cbishop/556_convolutional_networks.md",
+      "noteCount": 3,
+      "imageCount": 12
+    },
+    {
       "title": "5.7 Ex",
       "path": "pattern_recognition_machine_learning_cbishop/57_ex.md",
       "noteCount": 1,
@@ -615,9 +621,27 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 532,
-  "totalImages": 902,
+  "totalNotes": 535,
+  "totalImages": 914,
   "videos": [
+    {
+      "id": "PhYnZS0HSPU",
+      "title": "Convolutional Networks: lớp subsampling giảm spatial resolution như thế nào? (phần 2)",
+      "uploadedAt": 1795479217575,
+      "at": [
+        "Section 5.5.6 Convolutional Networks",
+        "5.5.6 Convolutional networks"
+      ]
+    },
+    {
+      "id": "q9qmr3cEO7U",
+      "title": "CNN tính feature map từ vùng tiếp nhận cục bộ thế nào?",
+      "uploadedAt": 1795478616066,
+      "at": [
+        "Section 5.5.6 Convolutional Networks",
+        "5.5.6 Convolutional networks"
+      ]
+    },
     {
       "id": "g_7hFLLIgX4",
       "title": "Vì sao data augmentation tương đương tangent propagation?",
