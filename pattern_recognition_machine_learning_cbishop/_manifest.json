@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795648093964,
+  "publishedAt": 1795648693084,
   "sections": [
     {
       "title": "📋 Overview",
@@ -640,72 +640,9 @@
       ]
     },
     {
-      "id": "43viGIGoN7k",
-      "title": "Đạo hàm theo trọng số và tâm cụm kéo chúng lại thế nào? (phần 6)",
-      "uploadedAt": 1795644098067,
-      "at": [
-        "Section 5.5.7 Soft Weight Sharing",
-        "5.5.7 Soft weight sharing"
-      ]
-    },
-    {
-      "id": "Ui5qbI5m1e0",
-      "title": "Đạo hàm theo sigma cập nhật phương sai cụm thế nào? (phần 6)",
-      "uploadedAt": 1795643791146,
-      "at": [
-        "Section 5.5.7 Soft Weight Sharing",
-        "5.5.7 Soft weight sharing"
-      ]
-    },
-    {
       "id": "856zuU_VmJg",
       "title": "Làm sao suy ra hàm phạt L2 từ ước lượng MAP? (phần 6)",
       "uploadedAt": 1795638687147,
-      "at": [
-        "Section 5.5.7 Soft Weight Sharing",
-        "5.5.7 Soft weight sharing"
-      ]
-    },
-    {
-      "id": "eBDqDS_vqFM",
-      "title": "Làm sao mạng tự học cụm trọng số từ hỗn hợp Gaussian? (phần 5)",
-      "uploadedAt": 1795635632680,
-      "at": [
-        "Section 5.5.7 Soft Weight Sharing",
-        "5.5.7 Soft weight sharing"
-      ]
-    },
-    {
-      "id": "fqgvdbZz9mY",
-      "title": "Tại sao suy giảm trọng số tương đương với tiên nghiệm Gaussian? (phần 4)",
-      "uploadedAt": 1795631488785,
-      "at": [
-        "Section 5.5.7 Soft Weight Sharing",
-        "5.5.7 Soft weight sharing"
-      ]
-    },
-    {
-      "id": "XoZkY1rEoY0",
-      "title": "Tại sao dùng hỗn hợp Gaussian để chia sẻ trọng số mềm? (phần 3)",
-      "uploadedAt": 1795629004577,
-      "at": [
-        "Section 5.5.7 Soft Weight Sharing",
-        "5.5.7 Soft weight sharing"
-      ]
-    },
-    {
-      "id": "Xwfj4HBCEVA",
-      "title": "Chia sẻ trọng số mềm khác gì ràng buộc cứng? (phần 2)",
-      "uploadedAt": 1795623642136,
-      "at": [
-        "Section 5.5.7 Soft Weight Sharing",
-        "5.5.7 Soft weight sharing"
-      ]
-    },
-    {
-      "id": "lapCOuls2Yg",
-      "title": "Tại sao cần để mạng tự học cách chia sẻ trọng số? (phần 1)",
-      "uploadedAt": 1795580205413,
       "at": [
         "Section 5.5.7 Soft Weight Sharing",
         "5.5.7 Soft weight sharing"
