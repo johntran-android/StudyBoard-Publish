@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795640298988,
+  "publishedAt": 1795645104240,
   "sections": [
     {
       "title": "📋 Overview",
@@ -630,6 +630,24 @@
   "totalNotes": 539,
   "totalImages": 926,
   "videos": [
+    {
+      "id": "43viGIGoN7k",
+      "title": "Error Function Derivatives with Priors",
+      "uploadedAt": 1795644098067,
+      "at": [
+        "Section 5.5.7 Soft Weight Sharing",
+        "5.5.7 Soft weight sharing"
+      ]
+    },
+    {
+      "id": "Ui5qbI5m1e0",
+      "title": "Đạo hàm theo sigma cập nhật phương sai cụm thế nào? (phần 6)",
+      "uploadedAt": 1795643791146,
+      "at": [
+        "Section 5.5.7 Soft Weight Sharing",
+        "5.5.7 Soft weight sharing"
+      ]
+    },
     {
       "id": "856zuU_VmJg",
       "title": "Làm sao suy ra hàm phạt L2 từ ước lượng MAP? (phần 6)",
