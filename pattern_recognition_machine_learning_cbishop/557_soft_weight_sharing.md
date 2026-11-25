@@ -44,8 +44,6 @@
 
 📹 Video 2: [Chia sẻ trọng số mềm khác gì ràng buộc cứng? (phần 2)](https://www.youtube.com/watch?v=Xwfj4HBCEVA)
 
-📹 Video 3: [Làm sao mạng tự học tâm và độ phân tán trọng số? (phần 3)](https://www.youtube.com/watch?v=09UFPM8gvqE)
-
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
@@ -70,7 +68,7 @@
 <p align="center"><kbd><img src="assets/227vmhka8mq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> simple weight decay, L2 regularizer
+> Ôn lại simple weight decay, L2 regularizer để hiểu vì sao nói "simple weight decay regularizer can be viewd as the negative log of Gaussian prior...}
 >
 >
 >
@@ -86,11 +84,11 @@
 >
 >
 >
->  Chọn p(𝐰), 𝒩(𝟎, (1/α) 𝐈). Bayes:
+> Chọn p(𝐰), 𝒩(𝟎, (1/α) 𝐈). Bayes:
 >
 >
 >
-> p(𝐰|𝒟) = p(𝒟|𝐰)p(𝐰)/p(𝒟) 
+> p(𝐰|𝒟) = p(𝒟|𝐰)p(𝐰)/p(𝒟)
 >
 >
 >
@@ -102,7 +100,7 @@
 >
 >
 >
-> t1,t2,....là những giá trị quan sát được của T1,T2,...:  độc lập Ti \~ 𝒩(𝐰ᵀΦ(𝐱i), 1/β)
+> t1,t2,....là những giá trị quan sát được của T1,T2,...: độc lập Ti \~ 𝒩(𝐰ᵀΦ(𝐱i), 1/β)
 >
 >
 >
@@ -126,51 +124,51 @@
 >
 >
 >
->  = log \[Πi 𝒩(ti|𝐰ᵀΦ(𝐱i), 1/β)\] + log \[𝒩(𝐰|𝟎, (1/α) 𝐈)\]
+> = log \[Πi 𝒩(ti|𝐰ᵀΦ(𝐱i), 1/β)\] + log \[𝒩(𝐰|𝟎, (1/α) 𝐈)\]
 >
 >
 >
->  = Σi log \[𝒩(ti|𝐰ᵀΦ(𝐱i), 1/β)\] + log \[𝒩(𝐰|𝟎, (1/α) 𝐈)\]
+> = Σi log \[𝒩(ti|𝐰ᵀΦ(𝐱i), 1/β)\] + log \[𝒩(𝐰|𝟎, (1/α) 𝐈)\]
 >
 >
 >
->  = Σi log \[c exp(-β\[ti-𝐰ᵀΦ(𝐱i)\]²/2)\] + log \[𝒩(𝐰|𝟎, (1/α) 𝐈)\]
+> = Σi log \[c exp(-β\[ti-𝐰ᵀΦ(𝐱i)\]²/2)\] + log \[𝒩(𝐰|𝟎, (1/α) 𝐈)\]
 >
 >
 >
->  = Σi log c + Σi log exp(-β\[ti-𝐰ᵀΦ(𝐱i)\]²/2)\] + log \[c exp\[-(𝐰-𝟎)ᵀα𝐈(𝐰-𝟎)/2\]
+> = Σi log c + Σi log exp(-β\[ti-𝐰ᵀΦ(𝐱i)\]²/2)\] + log \[c exp\[-(𝐰-𝟎)ᵀα𝐈(𝐰-𝟎)/2\]
 >
 >
 >
-> = Σi log c -(β/2) Σi (ti-𝐰ᵀΦ(𝐱i)²) + log \[c exp\[(-α/2)(𝐰ᵀ𝐰\]
+> = Σi log c -(β/2) Σi (ti-𝐰ᵀΦ(𝐱i))² + log \[c2 exp\[(-α/2)(𝐰ᵀ𝐰\]
 >
 >
 >
-> = Σi log c -(β/2) Σi (ti-𝐰ᵀΦ(𝐱i)²) + log c + log exp\[(-α/2)(𝐰ᵀ𝐰)\]
+> = Σi log c -(β/2) Σi (ti-𝐰ᵀΦ(𝐱i))² + log c2 + log exp\[(-α/2)(𝐰ᵀ𝐰)\]
 >
 >
 >
-> = Σi log c -(β/2) Σi (ti-𝐰ᵀΦ(𝐱i)²) + log c + (-α/2)(𝐰ᵀ𝐰)
+> = Σi log c -(β/2) Σi (ti-𝐰ᵀΦ(𝐱i))² + log c2 + (-α/2)(𝐰ᵀ𝐰)
 >
 >
 >
-> = D -(β/2) Σi (ti-𝐰ᵀΦ(𝐱i)²) - (α/2)(𝐰ᵀ𝐰)
+> = D -(β/2) Σi (ti-𝐰ᵀΦ(𝐱i))² - (α/2)(𝐰ᵀ𝐰)
 >
 >
 >
-> equivalent: tìm 𝐰 sao cho minimize: 
+> equivalent: tìm 𝐰 sao cho minimize:
 >
 >
 >
-> β \[(1/2) Σi (ti-𝐰ᵀΦ(𝐱i)²) + (α/β)/2)(𝐰ᵀ𝐰)
+> β \[(1/2) Σi (ti-𝐰ᵀΦ(𝐱i))² + (α/β)/2)(𝐰ᵀ𝐰)\]
 >
 >
 >
-> equivalent: tìm 𝐰 sao cho minimize: 
+> equivalent: tìm 𝐰 sao cho minimize:
 >
 >
 >
-> (1/2) Σi (ti-𝐰ᵀΦ(𝐱i)²) + (λ/2)(𝐰ᵀ𝐰)
+> (1/2) Σi (ti-𝐰ᵀΦ(𝐱i))² + (λ/2)(𝐰ᵀ𝐰)
 >
 >
 >
@@ -178,18 +176,11 @@
 >
 >
 >
+> 𝐰ML
 >
 >
 >
->
->
->
-> 𝐰MAP, Bayes estimator của 𝐰
->
->
->
-> 𝐰ML: Tìm 𝐰 maximzie L(𝒟|𝐰) = p(𝒟|𝐰)
->
+> 𝐰MAP
 >
 >
 >
@@ -223,6 +214,25 @@
 >
 >
 >
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> p(𝐰): 𝒩(𝐰|𝟎, (1/α) 𝐈)
+>
+>
+>
+> wi \~ 𝒩(0, (1/α))
+>
+>
+>
+> Σj πj 𝒩(μj, σj²)
 >
 >
 >
@@ -279,16 +289,26 @@
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Ghi chú rất chính xác, nắm vững bản chất suy diễn MAP dẫn tới hàm phạt (regularizer) dạng Gaussian Mixture và nắm đúng cách tối ưu hóa đồng thời.
+> Ghi chú rất xuất sắc, tự dẫn xuất chi tiết từ góc nhìn MAP để làm rõ cơ sở xác suất của L2 regularization trước khi mở rộng trực tiếp sang Gaussian Mixture prior đúng như sách trình bày.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"wi ~ p(𝐰i) = Σj πj 𝒩(μj, σj²)"*
+>
+> Ký hiệu bị nhầm giữa vector và vô hướng (p(𝐰i) thay vì p(w_i)), đồng thời lược bỏ biến $w_i$ bên trong phân phối Gauss (chuẩn xác nên viết là $\mathcal{N}(w_i|\mu_j, \sigma_j^2)$).
+>
+> **2.** *"β [(1/2) Σi (ti-𝐰ᵀΦ(𝐱i))² + (α/β)/2)(𝐰ᵀ𝐰)]"*
+>
+> Lỗi gõ thừa dấu đóng ngoặc ở cụm `(α/β)/2)`.
+>
 >
 > **✓ Strengths**
-> - Liên hệ rất chuẩn xác từ góc nhìn xác suất Bayes (MAP) với hàm loss và regularizer trong mạng neural.
-> - Khai triển bước lấy log tích độc lập thành tổng log rất tường minh và chuẩn chỉnh theo công thức (5.136) - (5.138).
-> - Hiểu rõ việc tối ưu hóa phải thực hiện đồng thời trên cả trọng số và các tham số của GMM bằng các thuật toán như CG hoặc quasi-Newton thay vì chỉ dùng EM đơn thuần.
+> - Dẫn xuất đầy đủ và chính xác từ phân phối tiên nghiệm Gauss và likelihood Gauss ra hàm lỗi SSE kết hợp L2 regularizer với hệ số suy giảm trọng số $\lambda = \alpha / \beta$.
+> - Nắm bắt chính xác bản chất: thay vì prior Gauss đơn một cụm quanh 0, dùng Gaussian Mixture prior để gom cụm trọng số dẫn đến regularizer $\Omega(\mathbf{w})$.
+> - Ghi nhận đúng việc tối ưu hóa đồng thời cả trọng số $\mathbf{w}$ lẫn các tham số của mixture model bằng các thuật toán gradient bậc hai/bán Newton (CG, quasi-Newton).
 >
 > **💡 Deeper notes**
-> - Hệ số điều hòa $\lambda$ trong $\widetilde{E}(\mathbf{w}) = E(\mathbf{w}) + \lambda \Omega(\mathbf{w})$ về mặt Bayes thực chất phản ánh tỷ lệ giữa phương sai nhiễu của hàm likelihood và prior, nhưng trên thực tế thường được xem như một siêu tham số (hyperparameter) để cân bằng hai thành phần.
-> - Khi tối ưu đồng thời các tham số $\{\pi_j, \mu_j, \sigma_j\}$, các tham số này có ràng buộc (ví dụ $\pi_j \ge 0, \sum \pi_j = 1$ và $\sigma_j > 0$). Trên thực tế thường cần tái tham số hóa (reparameterization, ví dụ dùng softmax cho $\pi_j$ và hàm exp/softplus cho $\sigma_j$) để dùng được các thuật toán tối ưu không ràng buộc như CG hay quasi-Newton.
+> - Khi tối ưu hóa các tham số của mixture model $(\pi_j, \mu_j, \sigma_j^2)$ bằng thuật toán gradient không ràng buộc (như CG hay quasi-Newton), trên thực tế cần đổi biến/tái tham số hóa (reparameterization), ví dụ dùng softmax cho $\pi_j$ (đảm bảo $\sum \pi_j = 1, \pi_j \ge 0$) và exp cho $\sigma_j$ (đảm bảo $\sigma_j > 0$).
 
 <br>
 
@@ -302,6 +322,40 @@
 
 > [!NOTE]
 > Hiểu 5.140 thế này:
+>
+>
+>
+> mixture Gaussian:  Σj πj 𝒩(μj, σj²)
+>
+>
+>
+> πj ≥ 0, Σj πj = 1
+>
+>
+>
+> Frequentist: fix, unknown
+>
+>
+>
+> Bayesian: p(πj)
+>
+>
+>
+> Bayes posterior distribution của πj: γj
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
 >
 >
 >
@@ -449,7 +503,7 @@
 >
 >  Và kết quả này đại ý là cho thấy để minimize objective, bao gồm minimizer regularizer, wi sẽ vị kéo về các mean μj của các 𝒩(μj, σj²) với một "lực" tỉ lệ thuận với γj(wi), tức posterior probability của nó. Đây chính xác là điều ta tìm kiếm. Là sao?
 >
-> → Ta muốn gì? nhớ lại, ta muốn network tự học cách ràng buộc giá trị của weights (hiểu nôm na là tự học cách gom nhóm weight lại, thành các cụm, ví dụ, nếu nó thấy cần cho mọi weight bằng nhau, thì cứ gom thành 1 cụm, và thậm chí gom cái cụm đó thành 1 điểm duy nhất để đạt trạng thái mọi weight đều bằng nhau. Còn nếu nó thấy cần thiết để unit 1 và unit 5 có weight giống giống nhau, cứ việc  gom w11, w51 vào thành 1 cụm μj nào đó w12 và, w52,..thành 1 cụm tại mean μj'
+> → Ta muốn gì? nhớ lại, ta muốn network tự học cách ràng buộc giá trị của weights (hiểu nôm na là tự học cách gom nhóm weight lại, thành các cụm, ví dụ, nếu nó thấy cần cho mọi weight bằng nhau, thì cứ gom thành 1 cụm, và thậm chí gom cái cụm đó thành 1 điểm duy nhất để đạt trạng thái mọi weight đều bằng nhau. Còn nếu nó thấy cần thiết để unit 1 và unit 5 có weight giống giống nhau, cứ việc gom w11, w51 vào thành 1 cụm μj nào đó w12 và, w52,..thành 1 cụm tại mean μj'
 >
 >
 >
