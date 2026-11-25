@@ -288,7 +288,9 @@
 >
 > và ta sẽ optimized đồng thời theo cả 𝐰 và cả πj, μj, σj², thông qua các thuật toán như CG hay quasi-Newton.
 
-📹 [Xem video trên YouTube](https://youtu.be/XoZkY1rEoY0)
+📹 Video 1: [Tại sao dùng hỗn hợp Gaussian để chia sẻ trọng số mềm? (phần 3)](https://youtu.be/XoZkY1rEoY0)
+
+📹 Video 2: [Làm sao mạng tự học cụm trọng số từ hỗn hợp Gaussian? (phần 5)](https://www.youtube.com/watch?v=eBDqDS_vqFM)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
