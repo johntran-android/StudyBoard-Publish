@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795581499047,
+  "publishedAt": 1795625299534,
   "sections": [
     {
       "title": "📋 Overview",
@@ -606,7 +606,7 @@
       "title": "5.5.7 Soft weight sharing",
       "path": "pattern_recognition_machine_learning_cbishop/557_soft_weight_sharing.md",
       "noteCount": 4,
-      "imageCount": 11
+      "imageCount": 12
     },
     {
       "title": "5.7 Ex",
@@ -628,11 +628,20 @@
     }
   ],
   "totalNotes": 539,
-  "totalImages": 925,
+  "totalImages": 926,
   "videos": [
     {
+      "id": "Xwfj4HBCEVA",
+      "title": "Chia sẻ trọng số mềm khác gì ràng buộc cứng? (phần 2)",
+      "uploadedAt": 1795623642136,
+      "at": [
+        "Section 5.5.7 Soft Weight Sharing",
+        "5.5.7 Soft weight sharing"
+      ]
+    },
+    {
       "id": "lapCOuls2Yg",
-      "title": "Tại sao cần để mạng tự học cách chia sẻ trọng số?",
+      "title": "Tại sao cần để mạng tự học cách chia sẻ trọng số? (phần 1)",
       "uploadedAt": 1795580205413,
       "at": [
         "Section 5.5.7 Soft Weight Sharing",
