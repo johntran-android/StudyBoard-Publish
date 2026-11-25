@@ -286,6 +286,8 @@
 >
 > và ta sẽ optimized đồng thời theo cả 𝐰 và cả πj, μj, σj², thông qua các thuật toán như CG hay quasi-Newton.
 
+📹 [Xem video trên YouTube](https://youtu.be/XoZkY1rEoY0)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
