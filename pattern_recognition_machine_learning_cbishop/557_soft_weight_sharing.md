@@ -40,13 +40,7 @@
 >
 > Tuy nhiên, nếu ta ko biết trước các dạng ràng buộc này, thì không dùng cách này được. Do đó, một cách tiếp cận là soft weight sharing, trong đó, ta thay ràng buộc cứng bằng ràng buộc mềm - đó là để neural net tự học ra nên nên ràng buộc các trọng số thế nào.
 
-📹 Video 1: [Tại sao cần để mạng tự học cách chia sẻ trọng số? (phần 1)](https://www.youtube.com/watch?v=lapCOuls2Yg)
-
-📹 Video 2: [Chia sẻ trọng số mềm khác gì ràng buộc cứng? (phần 2)](https://www.youtube.com/watch?v=Xwfj4HBCEVA)
-
-📹 Video 3: [Tại sao suy giảm trọng số tương đương với tiên nghiệm Gaussian? (phần 4)](https://www.youtube.com/watch?v=fqgvdbZz9mY)
-
-📹 Video 4: [Làm sao suy ra hàm phạt L2 từ ước lượng MAP? (phần 6)](https://www.youtube.com/watch?v=856zuU_VmJg)
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=856zuU_VmJg)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -290,10 +284,6 @@
 >
 > và ta sẽ optimized đồng thời theo cả 𝐰 và cả πj, μj, σj², thông qua các thuật toán như CG hay quasi-Newton.
 
-📹 Video 1: [Tại sao dùng hỗn hợp Gaussian để chia sẻ trọng số mềm? (phần 3)](https://youtu.be/XoZkY1rEoY0)
-
-📹 Video 2: [Làm sao mạng tự học cụm trọng số từ hỗn hợp Gaussian? (phần 5)](https://www.youtube.com/watch?v=eBDqDS_vqFM)
-
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
@@ -531,9 +521,7 @@
 >
 > thì nếu γ1(wi) ≫ γ2(wi) đồng nghĩa dựa trên giá trị của wi, cho thấy xác suất nó thuộc cụm 1 là lớn hơn nhiều xác suất nó thuộc cụm 2. Khi đó, khi ém Ω(wi), cũng là muốn ép ∂Ω/∂wi = 0, thì do γ1(wi) ≫ γ2(wi) nên γ1(wi) (wi-μ1)/σ1² dominate γ2(wi) (wi-μ2)/σ2², khiến để giảm Ω(wi), thuật toán sẽ ưu tiên giảm wi-μ1, từ đó kéo wi về μ1.
 
-📹 Video 1: [Đạo hàm theo trọng số và tâm cụm kéo chúng lại thế nào? (phần 6)](https://www.youtube.com/watch?v=43viGIGoN7k)
-
-📹 Video 2: [Soft weight sharing tự động gom cụm trọng số thế nào? (phần 6)](https://www.youtube.com/watch?v=2aWLf4m1SxY)
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=2aWLf4m1SxY)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -828,8 +816,6 @@
 >
 >
 > đây chính là weighted average của bình phương deviation
-
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=Ui5qbI5m1e0)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
