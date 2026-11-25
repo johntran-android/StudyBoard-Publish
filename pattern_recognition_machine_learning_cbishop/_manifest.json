@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795633092573,
+  "publishedAt": 1795637294375,
   "sections": [
     {
       "title": "📋 Overview",
@@ -630,6 +630,15 @@
   "totalNotes": 539,
   "totalImages": 926,
   "videos": [
+    {
+      "id": "eBDqDS_vqFM",
+      "title": "Làm sao mạng tự học cụm trọng số từ hỗn hợp Gaussian? (phần 5)",
+      "uploadedAt": 1795635632680,
+      "at": [
+        "Section 5.5.7 Soft Weight Sharing",
+        "5.5.7 Soft weight sharing"
+      ]
+    },
     {
       "id": "fqgvdbZz9mY",
       "title": "Tại sao suy giảm trọng số tương đương với tiên nghiệm Gaussian? (phần 4)",
