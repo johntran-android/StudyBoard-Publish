@@ -1,6 +1,6 @@
 # 5.5.7 Soft weight sharing
 
-📊 **Progress:** `4` Notes | `11` Screenshots | `4` AI Reviews
+📊 **Progress:** `4` Notes | `12` Screenshots | `4` AI Reviews
 
 ---
 <a id="node-k7zk8tb"></a>
@@ -18,6 +18,8 @@
 <p align="center"><kbd><img src="assets/2hmbo3q4qc3.png" width="80%"></kbd></p>
 
 <p align="center"><kbd><img src="assets/s9b1conqbjg.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/nxeal97cxfk.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Hiểu đại khái ý này là như sau:
@@ -38,7 +40,9 @@
 >
 > Tuy nhiên, nếu ta ko biết trước các dạng ràng buộc này, thì không dùng cách này được. Do đó, một cách tiếp cận là soft weight sharing, trong đó, ta thay ràng buộc cứng bằng ràng buộc mềm - đó là để neural net tự học ra nên nên ràng buộc các trọng số thế nào.
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=lapCOuls2Yg)
+📹 Video 1: [Tại sao cần để mạng tự học cách chia sẻ trọng số? (phần 1)](https://www.youtube.com/watch?v=lapCOuls2Yg)
+
+📹 Video 2: [Chia sẻ trọng số mềm khác gì ràng buộc cứng? (phần 2)](https://www.youtube.com/watch?v=Xwfj4HBCEVA)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
