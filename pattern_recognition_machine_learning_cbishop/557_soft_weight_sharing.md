@@ -46,6 +46,8 @@
 
 📹 Video 3: [Tại sao suy giảm trọng số tương đương với tiên nghiệm Gaussian? (phần 4)](https://www.youtube.com/watch?v=fqgvdbZz9mY)
 
+📹 Video 4: [Làm sao suy ra hàm phạt L2 từ ước lượng MAP? (phần 6)](https://www.youtube.com/watch?v=856zuU_VmJg)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
@@ -331,35 +333,7 @@
 >
 >
 >
-> mixture Gaussian:  Σj πj 𝒩(μj, σj²)
->
->
->
 > πj ≥ 0, Σj πj = 1
->
->
->
-> Frequentist: fix, unknown
->
->
->
-> Bayesian: p(πj)
->
->
->
-> Bayes posterior distribution của πj: γj
->
->
->
->
->
->
->
->
->
->
->
->
 >
 >
 >
@@ -409,6 +383,18 @@
 >
 >
 >
+> = - ∂/∂wi (ln Σj πj 𝒩(w1|μj, σj²)) -  ∂/∂wi (ln Σj πj 𝒩(w2|μj, σj²)) - ....
+>
+>
+>
+> \- ∂/∂wi (ln Σj πj 𝒩(wi|μj, σj²))
+>
+>
+>
+> = - 0 -  0 - .... - ∂/∂wi (ln Σj πj 𝒩(wi|μj, σj²))
+>
+>
+>
 > = - ∂/∂wi (ln Σj πj 𝒩(wi|μj, σj²))
 >
 >
@@ -421,11 +407,17 @@
 >
 >
 >
+> = ∂/∂u ln(u) . ∂/∂wi u(wi)
+>
+>
+>
 > = \[1/Σj πj 𝒩(wi|μj, σj²)\] \[∂/∂wi Σj πj 𝒩(wi|μj, σj²)\]
 >
 >
 >
-> Xét \[∂/∂wi Σj πj 𝒩(wi|μj, σj²)\]
+> Xét \[∂/∂wi Σj πj 𝒩(wi|μj, σj²)\] 
+>
+>
 >
 > = Σj πj ∂/∂wi \[𝒩(wi|μj, σj²)\]
 >
