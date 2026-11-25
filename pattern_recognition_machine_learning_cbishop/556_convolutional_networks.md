@@ -65,9 +65,9 @@
 
 <p align="center"><kbd><img src="assets/quqyna8pxza.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/lvaxz5.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/t07vn820r2.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/eus7l.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/p61rrqkarj.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Hiểu về kiến trúc của convolutional network như sau:
@@ -135,7 +135,7 @@
 
 <p align="center"><kbd><img src="assets/6os0jq5upi.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/2o4f4m.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/fzjtfv3b8b.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Theo sau mỗi convolutional layer (lớp tích chập), sẽ là một subsampling layer, (mà người ta có thể gọi là pooling layer): Nó cũng làm tương tự: mỗi unit sẽ tính từ một vùng cục bộ của input (là feature map của conv layer trước đó), nhưng nó không có tính một phép tổng trọng số, mà chỉ là tính trung bình hoặc sau này có thể max pooling - lấy max. 
