@@ -44,6 +44,8 @@
 
 📹 Video 2: [Chia sẻ trọng số mềm khác gì ràng buộc cứng? (phần 2)](https://www.youtube.com/watch?v=Xwfj4HBCEVA)
 
+📹 Video 3: [Làm sao mạng tự học tâm và độ phân tán trọng số? (phần 3)](https://www.youtube.com/watch?v=09UFPM8gvqE)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
@@ -68,6 +70,162 @@
 <p align="center"><kbd><img src="assets/227vmhka8mq.png" width="80%"></kbd></p>
 
 > [!NOTE]
+> simple weight decay, L2 regularizer
+>
+>
+>
+> Ẽ(𝐰) = E(𝐰) (SSE) + (λ/2) Σi wi²
+>
+>
+>
+> Frequentist 𝐰 fixed unknown
+>
+>
+>
+> Bayes 𝐰 random variables
+>
+>
+>
+>  Chọn p(𝐰), 𝒩(𝟎, (1/α) 𝐈). Bayes:
+>
+>
+>
+> p(𝐰|𝒟) = p(𝒟|𝐰)p(𝐰)/p(𝒟) 
+>
+>
+>
+> Assumption
+>
+>
+>
+> 𝐱1,𝐱2,...là những giá trị cố định đã biết
+>
+>
+>
+> t1,t2,....là những giá trị quan sát được của T1,T2,...:  độc lập Ti \~ 𝒩(𝐰ᵀΦ(𝐱i), 1/β)
+>
+>
+>
+> p(𝒟|𝐰) = p(t1,t2,....|𝐰) = Πi p(ti|𝐰) = Πi 𝒩(ti|𝐰ᵀΦ(𝐱i), 1/β)
+>
+>
+>
+> p(𝐰|𝒟) ∝ p(𝒟|𝐰)p(𝐰) = Πi 𝒩(ti|𝐰ᵀΦ(𝐱i), 1/β) 𝒩(𝐰|𝟎, (1/α) 𝐈)
+>
+>
+>
+> Tìm 𝐰 sao cho maximize p(𝐰|𝒟)
+>
+>
+>
+> equivalent: tìm 𝐰 maximize log p(𝐰|𝒟)
+>
+>
+>
+> equivalent: tìm 𝐰 maximize log \[Πi 𝒩(ti|𝐰ᵀΦ(𝐱i), 1/β) 𝒩(𝐰|𝟎, (1/α) 𝐈)\]
+>
+>
+>
+>  = log \[Πi 𝒩(ti|𝐰ᵀΦ(𝐱i), 1/β)\] + log \[𝒩(𝐰|𝟎, (1/α) 𝐈)\]
+>
+>
+>
+>  = Σi log \[𝒩(ti|𝐰ᵀΦ(𝐱i), 1/β)\] + log \[𝒩(𝐰|𝟎, (1/α) 𝐈)\]
+>
+>
+>
+>  = Σi log \[c exp(-β\[ti-𝐰ᵀΦ(𝐱i)\]²/2)\] + log \[𝒩(𝐰|𝟎, (1/α) 𝐈)\]
+>
+>
+>
+>  = Σi log c + Σi log exp(-β\[ti-𝐰ᵀΦ(𝐱i)\]²/2)\] + log \[c exp\[-(𝐰-𝟎)ᵀα𝐈(𝐰-𝟎)/2\]
+>
+>
+>
+> = Σi log c -(β/2) Σi (ti-𝐰ᵀΦ(𝐱i)²) + log \[c exp\[(-α/2)(𝐰ᵀ𝐰\]
+>
+>
+>
+> = Σi log c -(β/2) Σi (ti-𝐰ᵀΦ(𝐱i)²) + log c + log exp\[(-α/2)(𝐰ᵀ𝐰)\]
+>
+>
+>
+> = Σi log c -(β/2) Σi (ti-𝐰ᵀΦ(𝐱i)²) + log c + (-α/2)(𝐰ᵀ𝐰)
+>
+>
+>
+> = D -(β/2) Σi (ti-𝐰ᵀΦ(𝐱i)²) - (α/2)(𝐰ᵀ𝐰)
+>
+>
+>
+> equivalent: tìm 𝐰 sao cho minimize: 
+>
+>
+>
+> β \[(1/2) Σi (ti-𝐰ᵀΦ(𝐱i)²) + (α/β)/2)(𝐰ᵀ𝐰)
+>
+>
+>
+> equivalent: tìm 𝐰 sao cho minimize: 
+>
+>
+>
+> (1/2) Σi (ti-𝐰ᵀΦ(𝐱i)²) + (λ/2)(𝐰ᵀ𝐰)
+>
+>
+>
+> SSE + L2 regularizer
+>
+>
+>
+>
+>
+>
+>
+>
+>
+> 𝐰MAP, Bayes estimator của 𝐰
+>
+>
+>
+> 𝐰ML: Tìm 𝐰 maximzie L(𝒟|𝐰) = p(𝒟|𝐰)
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
 > Ý tưởng chỉ là: thay vì dùng prior distribution của wi là 𝒩(μ, σ²), và giả định chúng độc lập, Ví dụ wi \~ 𝒩(0, 1/α), cũng chính là 𝐰 \~ 𝒩(𝟎, (1/α)𝐈), thì nay, ta dùng mixture Gaussian:
 >
 >
