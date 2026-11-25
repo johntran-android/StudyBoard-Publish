@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795646899818,
+  "publishedAt": 1795648093964,
   "sections": [
     {
       "title": "📋 Overview",
@@ -630,6 +630,15 @@
   "totalNotes": 539,
   "totalImages": 926,
   "videos": [
+    {
+      "id": "2aWLf4m1SxY",
+      "title": "Soft weight sharing tự động gom cụm trọng số thế nào? (phần 6)",
+      "uploadedAt": 1795645091579,
+      "at": [
+        "Section 5.5.7 Soft Weight Sharing",
+        "5.5.7 Soft weight sharing"
+      ]
+    },
     {
       "id": "43viGIGoN7k",
       "title": "Đạo hàm theo trọng số và tâm cụm kéo chúng lại thế nào? (phần 6)",
