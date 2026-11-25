@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795484291354,
+  "publishedAt": 1795570865497,
   "sections": [
     {
       "title": "📋 Overview",
@@ -603,6 +603,12 @@
       "imageCount": 12
     },
     {
+      "title": "5.5.7 Soft weight sharing",
+      "path": "pattern_recognition_machine_learning_cbishop/557_soft_weight_sharing.md",
+      "noteCount": 4,
+      "imageCount": 8
+    },
+    {
       "title": "5.7 Ex",
       "path": "pattern_recognition_machine_learning_cbishop/57_ex.md",
       "noteCount": 1,
@@ -621,8 +627,8 @@
       "imageCount": 7
     }
   ],
-  "totalNotes": 535,
-  "totalImages": 914,
+  "totalNotes": 539,
+  "totalImages": 922,
   "videos": [
     {
       "id": "YhqXLoQBBv4",
