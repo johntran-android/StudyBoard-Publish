@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795570865497,
+  "publishedAt": 1795581499047,
   "sections": [
     {
       "title": "📋 Overview",
@@ -606,7 +606,7 @@
       "title": "5.5.7 Soft weight sharing",
       "path": "pattern_recognition_machine_learning_cbishop/557_soft_weight_sharing.md",
       "noteCount": 4,
-      "imageCount": 8
+      "imageCount": 11
     },
     {
       "title": "5.7 Ex",
@@ -628,8 +628,17 @@
     }
   ],
   "totalNotes": 539,
-  "totalImages": 922,
+  "totalImages": 925,
   "videos": [
+    {
+      "id": "lapCOuls2Yg",
+      "title": "Tại sao cần để mạng tự học cách chia sẻ trọng số?",
+      "uploadedAt": 1795580205413,
+      "at": [
+        "Section 5.5.7 Soft Weight Sharing",
+        "5.5.7 Soft weight sharing"
+      ]
+    },
     {
       "id": "YhqXLoQBBv4",
       "title": "Convolutional Networks tạo tính bất biến dịch chuyển như thế nào?",
