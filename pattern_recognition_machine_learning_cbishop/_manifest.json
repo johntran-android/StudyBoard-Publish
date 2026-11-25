@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795637294375,
+  "publishedAt": 1795640298988,
   "sections": [
     {
       "title": "📋 Overview",
@@ -630,6 +630,15 @@
   "totalNotes": 539,
   "totalImages": 926,
   "videos": [
+    {
+      "id": "856zuU_VmJg",
+      "title": "Làm sao suy ra hàm phạt L2 từ ước lượng MAP? (phần 6)",
+      "uploadedAt": 1795638687147,
+      "at": [
+        "Section 5.5.7 Soft Weight Sharing",
+        "5.5.7 Soft weight sharing"
+      ]
+    },
     {
       "id": "eBDqDS_vqFM",
       "title": "Làm sao mạng tự học cụm trọng số từ hỗn hợp Gaussian? (phần 5)",
