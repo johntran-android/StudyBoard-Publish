@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795645104240,
+  "publishedAt": 1795646899818,
   "sections": [
     {
       "title": "📋 Overview",
@@ -632,7 +632,7 @@
   "videos": [
     {
       "id": "43viGIGoN7k",
-      "title": "Error Function Derivatives with Priors",
+      "title": "Đạo hàm theo trọng số và tâm cụm kéo chúng lại thế nào? (phần 6)",
       "uploadedAt": 1795644098067,
       "at": [
         "Section 5.5.7 Soft Weight Sharing",
