@@ -423,7 +423,15 @@
 >
 >
 >
+> (𝒩(x | μ, σ²) = (1/√2πσ²) exp(-(x-μ)²/2σ²))
+>
+>
+>
 > = Σj πj ∂/∂wi \[c exp(-(wi-μj)²/2σj²)\]
+>
+>
+>
+> = Σj πj c ∂/∂wi \[exp(-(wi-μj)²/2σj²)\]
 >
 >
 >
@@ -513,11 +521,17 @@
 >
 >
 >
-> Vậy xét ∂Ω/∂wi = γ1(wi) (wi-μ1)/σ1² + γ2(wi) (wi-μ2)/σ2² (giả sử chỉ có 2 cụm)
+> Vậy xét: (giả sử chỉ có 2 cụm)
+>
+>
+>
+> ∂Ω/∂wi = γ1(wi) (wi-μ1)/σ1² + γ2(wi) (wi-μ2)/σ2² 
 >
 >
 >
 > thì nếu γ1(wi) ≫ γ2(wi) đồng nghĩa dựa trên giá trị của wi, cho thấy xác suất nó thuộc cụm 1 là lớn hơn nhiều xác suất nó thuộc cụm 2. Khi đó, khi ém Ω(wi), cũng là muốn ép ∂Ω/∂wi = 0, thì do γ1(wi) ≫ γ2(wi) nên γ1(wi) (wi-μ1)/σ1² dominate γ2(wi) (wi-μ2)/σ2², khiến để giảm Ω(wi), thuật toán sẽ ưu tiên giảm wi-μ1, từ đó kéo wi về μ1.
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=43viGIGoN7k)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -538,7 +552,7 @@
 
 ##### Soft Weight Sharing Derivatives
 
-<p align="center"><kbd><img src="assets/jgyapaompa.png" width="80%"></kbd></p>
+<p align="center"><kbd><img src="assets/9dghbpi9xl8.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Ω(𝐰) = - Σk ln Σj' πj' 𝒩(wk|μj', σj'²)
@@ -812,6 +826,8 @@
 >
 >
 > đây chính là weighted average của bình phương deviation
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=Ui5qbI5m1e0)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
