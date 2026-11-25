@@ -44,6 +44,8 @@
 
 📹 Video 2: [Chia sẻ trọng số mềm khác gì ràng buộc cứng? (phần 2)](https://www.youtube.com/watch?v=Xwfj4HBCEVA)
 
+📹 Video 3: [Tại sao suy giảm trọng số tương đương với tiên nghiệm Gaussian? (phần 4)](https://www.youtube.com/watch?v=fqgvdbZz9mY)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
