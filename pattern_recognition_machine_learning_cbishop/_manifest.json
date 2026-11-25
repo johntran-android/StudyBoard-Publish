@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795648693084,
+  "publishedAt": 1795648886968,
   "sections": [
     {
       "title": "📋 Overview",
@@ -632,7 +632,7 @@
   "videos": [
     {
       "id": "2aWLf4m1SxY",
-      "title": "Soft weight sharing tự động gom cụm trọng số thế nào? (phần 6)",
+      "title": "Soft weight sharing tự động gom cụm trọng số thế nào? (phần 2)",
       "uploadedAt": 1795645091579,
       "at": [
         "Section 5.5.7 Soft Weight Sharing",
@@ -641,7 +641,7 @@
     },
     {
       "id": "856zuU_VmJg",
-      "title": "Làm sao suy ra hàm phạt L2 từ ước lượng MAP? (phần 6)",
+      "title": "Tại sao cần để mạng tự học cách chia sẻ trọng số? — Soft Weight Sharing §5.5.7 (phần 1)",
       "uploadedAt": 1795638687147,
       "at": [
         "Section 5.5.7 Soft Weight Sharing",
