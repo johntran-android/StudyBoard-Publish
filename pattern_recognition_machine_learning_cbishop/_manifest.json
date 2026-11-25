@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795627099865,
+  "publishedAt": 1795631294883,
   "sections": [
     {
       "title": "📋 Overview",
@@ -630,15 +630,6 @@
   "totalNotes": 539,
   "totalImages": 926,
   "videos": [
-    {
-      "id": "09UFPM8gvqE",
-      "title": "Làm sao mạng tự học tâm và độ phân tán trọng số? (phần 3)",
-      "uploadedAt": 1795625539500,
-      "at": [
-        "Section 5.5.7 Soft Weight Sharing",
-        "5.5.7 Soft weight sharing"
-      ]
-    },
     {
       "id": "Xwfj4HBCEVA",
       "title": "Chia sẻ trọng số mềm khác gì ràng buộc cứng? (phần 2)",
