@@ -531,7 +531,9 @@
 >
 > thì nếu γ1(wi) ≫ γ2(wi) đồng nghĩa dựa trên giá trị của wi, cho thấy xác suất nó thuộc cụm 1 là lớn hơn nhiều xác suất nó thuộc cụm 2. Khi đó, khi ém Ω(wi), cũng là muốn ép ∂Ω/∂wi = 0, thì do γ1(wi) ≫ γ2(wi) nên γ1(wi) (wi-μ1)/σ1² dominate γ2(wi) (wi-μ2)/σ2², khiến để giảm Ω(wi), thuật toán sẽ ưu tiên giảm wi-μ1, từ đó kéo wi về μ1.
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=43viGIGoN7k)
+📹 Video 1: [Đạo hàm theo trọng số và tâm cụm kéo chúng lại thế nào? (phần 6)](https://www.youtube.com/watch?v=43viGIGoN7k)
+
+📹 Video 2: [Soft weight sharing tự động gom cụm trọng số thế nào? (phần 6)](https://www.youtube.com/watch?v=2aWLf4m1SxY)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
