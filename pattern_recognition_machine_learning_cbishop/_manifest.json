@@ -1,6 +1,6 @@
 {
   "title": "Pattern Recognition Machine Learning_C.Bishop",
-  "publishedAt": 1795632507115,
+  "publishedAt": 1795633092573,
   "sections": [
     {
       "title": "📋 Overview",
@@ -630,6 +630,15 @@
   "totalNotes": 539,
   "totalImages": 926,
   "videos": [
+    {
+      "id": "fqgvdbZz9mY",
+      "title": "Tại sao suy giảm trọng số tương đương với tiên nghiệm Gaussian? (phần 4)",
+      "uploadedAt": 1795631488785,
+      "at": [
+        "Section 5.5.7 Soft Weight Sharing",
+        "5.5.7 Soft weight sharing"
+      ]
+    },
     {
       "id": "XoZkY1rEoY0",
       "title": "Tại sao dùng hỗn hợp Gaussian để chia sẻ trọng số mềm? (phần 3)",
