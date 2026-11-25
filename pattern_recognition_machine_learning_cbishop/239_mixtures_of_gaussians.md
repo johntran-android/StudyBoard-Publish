@@ -39,9 +39,28 @@
 > Nhìn chung, việc sử dụng một mô hình Gaussian đơn lẻ có những hạn chế bởi vì dữ liệu thực tế thường tuân theo các phân phối rất phức tạp. Một mô hình Gaussian (hoặc bất kỳ mô hình đơn lẻ nào) không thể nắm bắt hết được sự phức tạp đó. Tuy nhiên, bằng cách kết hợp (mixture) các mô hình này lại, chúng ta có thể tạo ra những phân phối rất phức tạp và biểu diễn dữ liệu một cách hiệu quả.
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
 >
-> Bài tóm tắt rất chính xác và đầy đủ các ý chính từ văn bản gốc, bao gồm cả việc giải thích các hình ảnh minh họa. Để bài viết mạch lạc hơn, bạn có thể cân nhắc tránh lặp lại một số cụm từ và tổng hợp ý một cách ngắn gọn hơn.
+> Ghi chú tóm tắt rất tốt động lực ra đời và ý tưởng cốt lõi của Gaussian Mixture Models (GMM) dựa trên tài liệu. Chỉ có một vài điểm nhầm lẫn nhỏ về thuật ngữ thực tế và khái niệm xác suất cần lưu ý.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"núi lửa. Old Faithful là tên của ngọn núi lửa tại Công viên Quốc gia Yellowstone ở Mỹ"*
+>
+> Old Faithful là một mạch nước phun (geyser), không phải núi lửa (volcano).
+>
+> **2.** *"đặc biệt khi giá trị trung bình tập trung ở một vùng có ít điểm dữ liệu"*
+>
+> Nguyên văn là 'places much of its probability mass in the central region' (đặt phần lớn khối lượng xác suất / mật độ xác suất ở vùng trung tâm), chứ không chỉ đơn thuần là giá trị trung bình (mean).
+>
+>
+> **✓ Strengths**
+> - Hiểu rõ hạn chế của một phân phối Gaussian đơn lẻ khi mô hình hóa dữ liệu đa cụm (multimodal data).
+> - Nắm vững tính chất xấp xỉ phổ quát (universal approximation) của hỗn hợp Gaussian đối với hầu hết các hàm mật độ liên tục.
+> - Mô tả chính xác vai trò của các tham số: số lượng thành phần, kỳ vọng, hiệp phương sai và trọng số tổ hợp.
+>
+> **💡 Deeper notes**
+> - Tổ hợp tuyến tính ở đây là tổ hợp lồi (convex combination), nghĩa là các hệ số tổ hợp (mixing coefficients) phải không âm và có tổng bằng 1 để đảm bảo tích phân toàn phần của hàm mật độ xác suất mới bằng 1.
 
 <br>
 
@@ -75,7 +94,14 @@
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Bạn đã nắm vững khái niệm về Hỗn hợp Gaussian (Mixture of Gaussians) và giải thích công thức (2.188) một cách chính xác, cùng với việc đọc đúng các hệ số từ hình minh họa. Phân tích sâu sắc về convex combination là một điểm cộng lớn, thể hiện sự hiểu biết vượt trội về lý thuyết.
+> Ghi chú rất xuất sắc, không chỉ nắm đúng khái niệm Gaussian Mixture Model từ giáo trình mà còn liên hệ rất chính xác với kiến thức tối ưu hóa lồi (convex combination).
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất của Gaussian Mixture Model là tổ hợp của các phân phối thành phần (components) với trung bình và ma trận hiệp phương sai riêng biệt.
+> - Quan sát và suy luận cực kỳ chính xác rằng các hệ số pha trộn π_k tạo thành một tổ hợp lồi (convex combination) thỏa mãn điều kiện không âm và tổng bằng 1 để đảm bảo tích phân toàn miền bằng 1.
+>
+> **💡 Deeper notes**
+> - Để f(x) là một hàm mật độ xác suất (probability density function) hợp lệ, hai điều kiện bắt buộc đối với hệ số trộn là 0 ≤ π_k ≤ 1 và Σ π_k = 1, điều này trực tiếp biến phép cộng này thành một tổ hợp lồi (convex combination).
 
 **🔗 See also:** [MLE cho Mô hình Hỗn hợp Gaussian](#node-ftegw07)
 
