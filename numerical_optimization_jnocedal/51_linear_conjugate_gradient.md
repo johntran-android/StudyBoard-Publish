@@ -4618,6 +4618,8 @@
 >
 > Và như vậy chứng minh xong.
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=0ANvAfw43UE)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
@@ -4642,145 +4644,245 @@
 <p align="center"><kbd><img src="assets/ql7v6t47b4j.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Đại khái là theorem này nói rằng: Nếu như A có các eigenvalues λ1 ≤ λ2 ≤ ....≤ λn, ta sẽ có: 
+> Đại khái là theorem này nói rằng: Nếu như A có các eigenvalues λ1 ≤ λ2 ≤ ....≤ λn, ta sẽ có:
 >
-> (||xk+1 - x*||_A)² ≤ [(λn-k - λ1)/(λn-k + λ1)]² (||x0 - x*||_A)²
+> (||xk+1 - x\*||\_A)² ≤ \[(λn-k - λ1)/(λn-k + λ1)\]² (||x0 - x\*||\_A)²
+>
+>
 >
 > Gs sẽ không chứng minh theorem này, nhưng gs cho rằng có thể mô tả làm sao ta có kết quả này từ kết quả 5.33:
 >
-> (||xk+1 - x*||_A)² ≤ {min_Pk [max_1≤i≤n [1 + λi Pk(λi)]²]} × (||x0 - x*||_A)².
 >
-> Mình viết lại cho gọn bằng cách gọi e_k là sai số tại step k = (||xk+1 - x*||_A)²:
 >
-> e_k ≤ {min_Pk [max_1≤i≤n [1 + λi Pk(λi)]²]} × e_0
+> (||xk+1 - x\*||\_A)² ≤ {min_Pk \[max_1≤i≤n \[1 + λi Pk(λi)\]²\]} × (||x0 - x\*||\_A)².
 >
-> Có dạng: e_k = [scalar] × e_0
 >
-> Thì đại ý gs nói là, nếu ta chọn một hàm đa thức bậc k, Pk sao cho [1 + λi Pk(λi)] (đặt là Qk+1(λ)) bằng giá trị 0 tại k λi lớn nhất, tức Qk+1(λn) = Qk+1(λn-1) = ... = Qk+1(λn-k+1) = 0, cũng như tại điểm nào đó nằm giữa λ1 và λn-l, thì khi đó dựa vào theorem 5.5 ta có thể chứng minh rằng giá trị lớn nhất đạt được của Qk+1 trong các giá trị eigenvalue còn lại λ1,...λn-k sẽ chính xác là (λn-k - λ1) / (λn-k + λ1) (i)
+>
+> Mình viết lại cho gọn bằng cách gọi e_k là sai số tại step k = (||xk+1 - x\*||\_A)²:
+>
+>
+>
+> e_k ≤ {min_Pk \[max_1≤i≤n \[1 + λi Pk(λi)\]²\]} × e_0
+>
+>
+>
+> Có dạng: e_k = \[scalar\] × e_0
+>
+>
+>
+> Thì đại ý gs nói là, nếu ta chọn một hàm đa thức bậc k, Pk sao cho \[1 + λi Pk(λi)\] (đặt là Qk+1(λ)) bằng giá trị 0 tại k λi lớn nhất, tức Qk+1(λn) = Qk+1(λn-1) = ... = Qk+1(λn-k+1) = 0, cũng như tại điểm nào đó nằm giữa λ1 và λn-l, thì khi đó dựa vào theorem 5.5 ta có thể chứng minh rằng giá trị lớn nhất đạt được của Qk+1 trong các giá trị eigenvalue còn lại λ1,...λn-k sẽ chính xác là (λn-k - λ1) / (λn-k + λ1) (i)
+>
+>
 >
 > Tiếp, ông nói ta sẽ minh họa việc có thể dùng Theorem 5.5 để dự đoán hành vi của CG method trong một bài toán cụ thể. Ví dụ ta ở trong hoàn cảnh như hình 5.3. trong đó trong n trị riêng của ma trận A thì m trị riêng lớn λn-m+1 → λn, còn lại n-m cái còn lại từ λ1 → λn-m thì nhỏ, và tập trung quanh mốc 1.
 >
+>
+>
 > Thế thì nếu ta đặt ε = λn-m - λ1, thì theorem 5.5 nói rằng, sau m+1 bước của thuật toán CG thì ta sẽ có:
 >
-> ||xm+1 - x*||_A ≈ ε||x0 - x*||_A
+> ||xm+1 - x\*||\_A ≈ ε||x0 - x\*||\_A
 >
-> Để rồi nếu như ε nhỏ, thì coi như ta có ||xm+1 - x*||_A ≈ 0, đồng nghĩa xm+1 đã là một gía trị ước lượng đủ tốt cho x* rồi.
+>
+>
+> Để rồi nếu như ε nhỏ, thì coi như ta có ||xm+1 - x\*||\_A ≈ 0, đồng nghĩa xm+1 đã là một gía trị ước lượng đủ tốt cho x\* rồi.
+>
+>
 >
 > ====
 >
-> Để hiểu được cần ôn lại chút xíu từ bài trước, ta đã có cái này: 
 >
-> (||xk+1 - x*||_A)² = min_Pk Σi λi[1 + λiPk(λi)]² ξi² = min_Pk Σi [1 + λiPk(λi)]² λiξi²
 >
-> Ý nghĩa là, ta có n cục rác λiξi² cấu thành nên cục rác to và ta muốn tạo ra n bộ lọc giúp bắt giữ được n cục rác này. Và nói bắt giữ, tức là nó phải có mắt lưới nhỏ đủ để bắt được cục rác. Mắt lưới to → tỉ lệ rác lọt qua 100%, mắt lưới nhỏ → tỉ lệ rác lọt qua 0%. 
+> Để hiểu được cần ôn lại chút xíu từ bài trước, ta đã có cái này:
 >
-> Thuật toán CG sẽ tìm cách giảm nó xuống tối thiểu bằng cách tìm Pk tốt nhất tức P*k: 
 >
-> (||xk+1 - x*||_A)² = min_Pk Σi λi[1 + λiPk(λi)]² ξi² = Σi [1 + λiP*k(λi)]² λiξi²
 >
-> Nhớ rằng P*k là là solution tốt nhất mà CG sẽ tìm ra. Ta có thể ví von điều này giống như tại bước thứ k, CG sẽ tìm kiếm / thiết kế ra n bộ lọc có mắt lưới nhỏ tối ưu, tuy có thể chưa chặn hết được rác nhưng nó có tỉ lệ lọt rác là (p*1,..,p*n) ví dụ n = 3, (10%, 20%, 50%)
+> (||xk+1 - x\*||\_A)² = min_Pk Σi λi\[1 + λiPk(λi)\]² ξi² = min_Pk Σi \[1 + λiPk(λi)\]² λiξi²
 >
-> Thế thì tiếp theo, mình mới hình dung là có một phương pháp khác làm theo cách khác, không tối ưu được như CG, nhưng cũng có thể có ích, bằng cách làm sau đây: Nó tiếp cận theo cách không tối ưu như CG (tìm ra đúng kích thước cần thiết để bắt mỗi cụ rác) nhưng tìm sẽ xem xét / thiết kế trong các bộ [bộ lọc] có dạng n bộ lọc đều có mắt lưới bằng nhau, hay cũng là siết lại các mắt lưới.
 >
-> Và cái tốt nhất nó tìm ra được sẽ có tỉ lệ lọt rác là (10%, 10%, 10%). vì nó xài 3 bộ lọc có mắt lướt bằng nhau nên tỉ lệ lọc rác cũng như nhau, và nó cũng đạt tỉ lệ lọt chỉ ở 10% ở loại rác thứ nhất cũng như hai loại kia.  
 >
-> Và thể hiện toán học cho phương pháp X này là: 
+> Ý nghĩa là, ta có n cục rác λiξi² cấu thành nên cục rác to và ta muốn tạo ra n bộ lọc giúp bắt giữ được n cục rác này. Và nói bắt giữ, tức là nó phải có mắt lưới nhỏ đủ để bắt được cục rác. Mắt lưới to → tỉ lệ rác lọt qua 100%, mắt lưới nhỏ → tỉ lệ rác lọt qua 0%.
 >
-> ek bởi phương pháp X = {min_Pk [max_1≤i≤n [1 + λi Pk(λi)]²]} × e_0
 >
-> Hành động chọn trong các bộ lọc có size như nhau thì cũng giống như coi mọi bộ lọc trong bộ đều có size bằng cái có size lớn nhất, ví dụ coi cái có size (1,2,3) như một cái có size (3,3,3) và coi cái có size (2,4,6) như cái có size (6,6,6), nên đây chính là tương ứng với cái chữ max 
+>
+> Thuật toán CG sẽ tìm cách giảm nó xuống tối thiểu bằng cách tìm Pk tốt nhất tức P\*k:
+>
+>
+>
+> (||xk+1 - x\*||\_A)² = min_Pk Σi λi\[1 + λiPk(λi)\]² ξi² = Σi \[1 + λiP\*k(λi)\]² λiξi²
+>
+>
+>
+> Nhớ rằng P*k là là solution tốt nhất mà CG sẽ tìm ra. Ta có thể ví von điều này giống như tại bước thứ k, CG sẽ tìm kiếm / thiết kế ra n bộ lọc có mắt lưới nhỏ tối ưu, tuy có thể chưa chặn hết được rác nhưng nó có tỉ lệ lọt rác là (p*1,..,p\*n) ví dụ n = 3, (10%, 20%, 50%)
+>
+>
+>
+> Thế thì tiếp theo, mình mới hình dung là có một phương pháp khác làm theo cách khác, không tối ưu được như CG, nhưng cũng có thể có ích, bằng cách làm sau đây: Nó tiếp cận theo cách không tối ưu như CG (tìm ra đúng kích thước cần thiết để bắt mỗi cụ rác) nhưng tìm sẽ xem xét / thiết kế trong các bộ \[bộ lọc\] có dạng n bộ lọc đều có mắt lưới bằng nhau, hay cũng là siết lại các mắt lưới.
+>
+>
+>
+> Và cái tốt nhất nó tìm ra được sẽ có tỉ lệ lọt rác là (10%, 10%, 10%). vì nó xài 3 bộ lọc có mắt lướt bằng nhau nên tỉ lệ lọc rác cũng như nhau, và nó cũng đạt tỉ lệ lọt chỉ ở 10% ở loại rác thứ nhất cũng như hai loại kia.
+>
+>
+>
+> Và thể hiện toán học cho phương pháp X này là:
+>
+>
+>
+> ek bởi phương pháp X = {min_Pk \[max_1≤i≤n \[1 + λi Pk(λi)\]²\]} × e_0
+>
+>
+>
+> Hành động chọn trong các bộ lọc có size như nhau thì cũng giống như coi mọi bộ lọc trong bộ đều có size bằng cái có size lớn nhất, ví dụ coi cái có size (1,2,3) như một cái có size (3,3,3) và coi cái có size (2,4,6) như cái có size (6,6,6), nên đây chính là tương ứng với cái chữ max
+>
+>
 >
 > Và tìm cách siết nó lại / tìm cái có size nhỏ nhất chính là chữ min (bỏ qua (6,6,6) để chọn (3,3,3) ví dụ vậy)
 >
+>
+>
 > Và dễ thấy là vì ông X dùng bộ lọc size như nhau, nên khi ổng đạt được tỉ lệ lọt 10% trong việc lọc loại rác thứ 1 để bằng với ông CG, thì ổng cũng đã CHẠM GIỚI HẠN. VÌ CÁI 10% trong việc lọc loại rác thứ nhất là kết quả tốt nhất CÓ THỂ ĐƯỢC RỒI, vì ngay cả CG cũng chỉ làm được 10%. Và vì ÔNG X DÙNG LỌC SIZE BẰNG NHAU, nên ổng cũng đạt tỉ lệ lọt 10% ở các loại rác khác. DO ĐÓ, mức tỉ lệ lọc rác tổng cộng của ông CG PHẢI NHỎ HƠN ông X
 >
-> Do đó mới có bất đẳng thức: 
 >
-> e_k bởi CG = ≤ e_k bởi X = {min_Pk [max_1≤i≤n [1 + λi Pk(λi)]²]} × e_0
 >
-> Từ đó chính cái này giúp chứng minh theorem vừa rồi rằng khi trong n trị riêng của A thì chỉ có r cái có giá trị khác nhau thì CG sẽ hội tụ tại nhiều nhất là trong r bước. Cách chứng minh có thể ôn lại đại khái là ta chỉ ra rằng bằng cách chọn đa thức bậc k, Qk sao cho tại mọi λi thì nó bằng 0 thì ngay lập tức ta sẽ thấy với Qk này (và Pk-1 tương ứng) thì vế phải đã bằng 0, đồng nghĩa tồn tại một đa thức Pk-1 khiến bài toán có thể hội tụ trong r bước, thì chắc chắc P*k của CG cũng phải làm được vậy. Ôn lại luôn cho nhớ lập luận tóan học:
+> Do đó mới có bất đẳng thức:
 >
-> er = Σi λi [1 + λi P*r-1(λi)]² ξi² = min_Pr-1 Σi λi [1 + λi Pr-1(λi)]² ξi² 
 >
-> ≤  {min_Pr-1 [max_1≤i≤n [1 + λi Pr-1(λi)]²]} × e0 
+>
+> e_k bởi CG = ≤ e_k bởi X = {min_Pk \[max_1≤i≤n \[1 + λi Pk(λi)\]²\]} × e_0
+>
+>
+>
+> Từ đó chính cái này giúp chứng minh theorem vừa rồi rằng khi trong n trị riêng của A thì chỉ có r cái có giá trị khác nhau thì CG sẽ hội tụ tại nhiều nhất là trong r bước. Cách chứng minh có thể ôn lại đại khái là ta chỉ ra rằng bằng cách chọn đa thức bậc k, Qk sao cho tại mọi λi thì nó bằng 0 thì ngay lập tức ta sẽ thấy với Qk này (và Pk-1 tương ứng) thì vế phải đã bằng 0, đồng nghĩa tồn tại một đa thức Pk-1 khiến bài toán có thể hội tụ trong r bước, thì chắc chắc P\*k của CG cũng phải làm được vậy. Ôn lại luôn cho nhớ lập luận tóan học:
+>
+>
+>
+> er = Σi λi \[1 + λi P\*r-1(λi)\]² ξi² = min_Pr-1 Σi λi \[1 + λi Pr-1(λi)\]² ξi²
+>
+>
+>
+> ≤ {min_Pr-1 \[max_1≤i≤n \[1 + λi Pr-1(λi)\]²\]} × e0
+>
+>
 >
 > Vì bất đẳng thức này đúng với mọi Pr-1 nên nó đúng với P^r-1 mà ta chủ đích chọn:
 >
-> er ≤ {[max_1≤i≤n [1 + λi P^r-1(λi)]²]} × e0 
 >
-> ≤ {[max_1≤i≤n [Qr(λi)]²]} × e0 
 >
-> = {[max_1≤i≤n 0]} × e0 
+> er ≤ {\[max_1≤i≤n \[1 + λi P^r-1(λi)\]²\]} × e0
 >
-> = 0 × e0 
+> ≤ {\[max_1≤i≤n \[Qr(λi)\]²\]} × e0
+>
+> = {\[max_1≤i≤n 0\]} × e0
+>
+> = 0 × e0
 >
 > = 0
 >
+>
+>
 > Hay er ≤ 0. Mà er dĩ nhiên ≥ 0 ⇨ er = 0.
+>
+>
 >
 > ====
 >
-> Như vậy thì quay lại theorem này, đại khái là người ta cũng dùng lối tương tự, bằng cách chỉ ra rằng trong bài toán mà trong n trị riêng của A xếp từ nhỏ đến lớn λ1 → λn với CÁCH PHÂN BỐ (về giá trị và vị trí) đặc biệt đó là [đám gồm n-m cái từ λ1,..λn-m có giá trị nhỏ quây quanh mốc 1, và sau đó là m trị riêng giá trị lớn: λn-m+1 → λn). Thì khi đó, bằng cách chỉ ra, dựng nên một đa thức Qk(λ) sao cho nó bằng 0 tại các trị riêng lớn (λn-m+1 → λn) cũng như tại một giá trị nào đó giữa đám trị riêng nhỏ (λ1,..λn-m) thì ta sẽ có chuỗi lập luận sau:
 >
->  Viết lại
 >
-> ek = Σi λi [1 + λi P*k-1(λi)]² ξi² = min_Pk-1 Σi λi [1 + λi Pk-1(λi)]² ξi² 
+> Như vậy thì quay lại theorem này, đại khái là người ta cũng dùng lối tương tự, bằng cách chỉ ra rằng trong bài toán mà trong n trị riêng của A xếp từ nhỏ đến lớn λ1 → λn với CÁCH PHÂN BỐ (về giá trị và vị trí) đặc biệt đó là \[đám gồm n-m cái từ λ1,..λn-m có giá trị nhỏ quây quanh mốc 1, và sau đó là m trị riêng giá trị lớn: λn-m+1 → λn). Thì khi đó, bằng cách chỉ ra, dựng nên một đa thức Qk(λ) sao cho nó bằng 0 tại các trị riêng lớn (λn-m+1 → λn) cũng như tại một giá trị nào đó giữa đám trị riêng nhỏ (λ1,..λn-m) thì ta sẽ có chuỗi lập luận sau:
 >
-> ≤  {min_Pk-1 [max_1≤i≤n [1 + λi Pk-1(λi)]²]} × e0 
+>
+>
+> Viết lại
+>
+>
+>
+> ek = Σi λi \[1 + λi P\*k-1(λi)\]² ξi² = min_Pk-1 Σi λi \[1 + λi Pk-1(λi)\]² ξi²
+>
+> ≤ {min_Pk-1 \[max_1≤i≤n \[1 + λi Pk-1(λi)\]²\]} × e0
+>
+>
 >
 > Đặt Q(λi) = 1 + λi Pk-1(λi)
 >
-> ≤ {[max_1≤i≤n Qk(λi)²]} × e0
+> ≤ {\[max_1≤i≤n Qk(λi)²\]} × e0
 >
-> = max {Qk(λ1)², ...,Qk(λn-m)², Qk(λn-m+1)²,...,Qk(λn)²}  × e0 (1)
+> = max {Qk(λ1)², ...,Qk(λn-m)², Qk(λn-m+1)²,...,Qk(λn)²} × e0 (1)
 >
-> Rồi, tới đây dừng lại chút để ôn lại Qk, hay Pk, là cái quái gì. 
+>
+>
+> Rồi, tới đây dừng lại chút để ôn lại Qk, hay Pk, là cái quái gì.
 >
 > Câu trả lời: nó là hàm đa thức (polynomial) bậc k: Qk(α) = γ0 α^0 + γ1 α^1 + ... + γk α^k với bộ hệ số γ0,..γk nào đó. Và hàm đa thức bậc 1 thì có 1 nghiệm, đa thức bậc 2 thì có 2 nghiệm,...đa thức bậc k thì có k nghiệm. Nghiệm, tức là root, là giá trị khiến đa thức bằng 0. Vậy nếu là đa thức bậc 4 thì sẽ có có thể có 4 giá trị khiến tại đó nó bằng 0. Tương tự, đang thức Qk(α) bậc k thì có thể có k giá trị α khiến Qk(α) = 0.
 >
-> Vậy thì giả sử người ta muốn xây dựng đa thức Q^ (bậc chưa biết), sao cho tại đám m cái các trị riêng lớn {λn-m+1, ...,λn} và một giá trị nữa giữa đám trị riêng nhỏ bằng 0, thì dĩ nhiên bậc của Q^ phải là k = m+1: Qm+1. 
+> Vậy thì giả sử người ta muốn xây dựng đa thức Q^ (bậc chưa biết), sao cho tại đám m cái các trị riêng lớn {λn-m+1, ...,λn} và một giá trị nữa giữa đám trị riêng nhỏ bằng 0, thì dĩ nhiên bậc của Q^ phải là k = m+1: Qm+1.
 >
-> Vậy thì trước khi gắn Q^ vô, ta cứ viết lại cái chuỗi ở trên với k=m+1 cái đã. Nên nhớ cái chuỗi này luôn đúng với k bằng bao nhiêu cũng được chả liên quan gì. Và cũng lưu ý luôn là ta chưa 
+> Vậy thì trước khi gắn Q^ vô, ta cứ viết lại cái chuỗi ở trên với k=m+1 cái đã. Nên nhớ cái chuỗi này luôn đúng với k bằng bao nhiêu cũng được chả liên quan gì. Và cũng lưu ý luôn là ta chưa
 >
-> em+1 ≤ {[max_1≤i≤n [1 + λi Pm(λi)]²]} × e0
 >
-> ≤ {[max_1≤i≤n Qm+1(λi)²]} × e0
 >
-> = max {Qk(λ1)², ...,Qk(λn-m)², Qk(λn-m+1)²,...,Qk(λn)²}  × e0 
+> em+1 ≤ {\[max_1≤i≤n \[1 + λi Pm(λi)\]²\]} × e0
+>
+> ≤ {\[max_1≤i≤n Qm+1(λi)²\]} × e0
+>
+> = max {Qk(λ1)², ...,Qk(λn-m)², Qk(λn-m+1)²,...,Qk(λn)²} × e0
+>
+>
 >
 > Rồi, giờ ta mới gắn Q^m+1 đặc biệt trên vào (dĩ nhiên Qm+1 có hàng vạn cái, những ta chọn cái có nghiệm là đám trị riêng lớn, còn vì sao phải là bậc m+1 thì hiểu rồi)
 >
-> em+1 ≤ {[max_1≤i≤n [1 + λi P^m(λi)]²]} × e0
 >
-> ≤ {[max_1≤i≤n Q^m+1(λi)²]} × e0
 >
-> = max {Q^m+1(λ1)², ...,Q^m+1(λn-m)², Q^m+1(λn-m+1)²,..., Q^m+1(λn)²}  × e0 
+> em+1 ≤ {\[max_1≤i≤n \[1 + λi P^m(λi)\]²\]} × e0
 >
-> = max {Q^m+1(λ1)², ...,Q^m+1(λn-m)², 0,..., 0} × e0  (tại các λ là nghiệm của nó, Q^m+1(λ) = 0)
+> ≤ {\[max_1≤i≤n Q^m+1(λi)²\]} × e0
+>
+> = max {Q^m+1(λ1)², ...,Q^m+1(λn-m)², Q^m+1(λn-m+1)²,..., Q^m+1(λn)²} × e0
+>
+> = max {Q^m+1(λ1)², ...,Q^m+1(λn-m)², 0,..., 0} × e0 (tại các λ là nghiệm của nó, Q^m+1(λ) = 0)
 >
 > = max {Q^m+1(λ1)², ...,Q^m+1(λn-m)²} × e0
 >
 > = max_1≤i≤n-m {Q^m+1(λ1)², ...,Q^m+1(λn-m)²} × e0 (ii)
 >
+>
+>
 > Và như ông giáo sư Nocedal nói, theorem 5.5 nói rằng, giả sử ta có bài toán mà A có n eigenvalues phân bố theo kiểu từ λ1 → λn-k là giá trị nhỏ, còn từ λn-k+1 → λn là giá trị lớn thì ta có thể chứng minh rằng có thể chọn ra Qk+1 sao cho giá trị lớn nhất đạt được của Qk+1 trong các giá trị eigenvalue còn lại λ1,...λn-k sẽ chính xác là (λn-k - λ1) / (λn-k + λ1).
+>
+>
 >
 > Áp dụng vào đây, tương tự, mình sẽ có thể nói rằng: THEOREM 5.5 CHO PHÉP TA CHẮC CHẮN LÀ CÓ THỂ CHỌN Qm+1 SAO CHO GIÁ TRỊ LỚN NHẤT CỦA QM+1 TẠI CÁC GIÁ TRỊ RIÊNG CÒN LẠI λ1,...λn-m SẼ BẰNG CHÍNH XÁC LÀ (λn-m - λ1) / (λn-m + λ1).
 >
+>
+>
 > Như vậy tiếp nối (ii)
 >
-> = [(λn-m - λ1) / (λn-m + λ1)]² × e0
+>
+>
+> = \[(λn-m - λ1) / (λn-m + λ1)\]² × e0
+>
+>
 >
 > Viết lại:
 >
-> em+1 ≤ [(λn-m - λ1) / (λn-m + λ1)]² × e0
 >
-> Và từ đó, nếu đám trị riêng CÓ GIÁ TRỊ NHỎ λ1 → λn-m  PHÂN BỐ TỤ LẠI TRONG MỘT PHẠM VI NHỎ NỮA, thì đồng nghĩa (λn-m - λ1) sẽ nhỏ → (λn-m - λ1) / (λn-m + λ1), đặt là ε sẽ nhỏ. Gíúp kết luận 
+>
+> em+1 ≤ \[(λn-m - λ1) / (λn-m + λ1)\]² × e0
+>
+>
+>
+> Và từ đó, nếu đám trị riêng CÓ GIÁ TRỊ NHỎ λ1 → λn-m PHÂN BỐ TỤ LẠI TRONG MỘT PHẠM VI NHỎ NỮA, thì đồng nghĩa (λn-m - λ1) sẽ nhỏ → (λn-m - λ1) / (λn-m + λ1), đặt là ε sẽ nhỏ. Gíúp kết luận
+>
+>
 >
 > em+1 ≤ ε² × e0 ≈ 0 với eps nhỏ
 >
+>
+>
 > ⇨ thuật toán hội tụ trong m+1 step (sau khi tính xm+1)
 >
-> Đây chính là giúp ta hiểu chỗ giáo sư Nocedal viết là nếu define ε = λn-m - λ1, Theorem 5.5 cho ta biết sau m+1 step thì ||xm+1 - x*||_A (chính là √em+1, vì mình đặt em+1 = (||xm+1 - x*||_A)²) ≈ ε ||x0 - x*||_A.
+>
+>
+> Đây chính là giúp ta hiểu chỗ giáo sư Nocedal viết là nếu define ε = λn-m - λ1, Theorem 5.5 cho ta biết sau m+1 step thì ||xm+1 - x\*||\_A (chính là √em+1, vì mình đặt em+1 = (||xm+1 - x\*||\_A)²) ≈ ε ||x0 - x\*||\_A.
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
