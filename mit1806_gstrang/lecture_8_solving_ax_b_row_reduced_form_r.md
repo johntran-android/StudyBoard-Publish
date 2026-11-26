@@ -314,7 +314,7 @@
 >
 >
 >
-> Me: Không, vì **tuy Ax=b thì A × constant *x chưa chắc
+> Thử trả lời: Không, vì **tuy Ax=b thì A × constant *x chưa chắc
 > bằng b**, nên **scale của x không phải là solution mới của
 > Ax=b**
 
@@ -720,7 +720,7 @@
 >
 >
 >
-> Me: Identity matrix, vậy A sau khi elimination sẽ thành I. Và vì 
+> Thử trả lời: Identity matrix, vậy A sau khi elimination sẽ thành I. Và vì 
 > mình biết elimination apply với A chính là nhân A với matrix E
 > thể hiện các bước elimination. Vậy EA = I. Điều này chứng tỏ
 > E chính là A⁻¹, đồng nghĩa A là **INVERTIBLE** MATRIX
@@ -753,7 +753,7 @@
 >
 >
 >
-> Me: Cũng giống như trường hợp Full Cols Rank, **các cols
+> Thử trả lời: Cũng giống như trường hợp Full Cols Rank, **các cols
 > đều linear independent**, nên **linear combination duy
 > nhất của các cols vector trở thành 0** **chỉ có thể khi các
 > coeff = 0**.
@@ -780,7 +780,7 @@
 >
 >
 >
-> Me: Tương tự, vì A là matrix Full Rank, mọi row của nó đều
+> Thử trả lời: Tương tự, vì A là matrix Full Rank, mọi row của nó đều
 > linear independent, nên q**uá trình elimination không tạo 
 > thành zero row nào**. 
 >
