@@ -129,7 +129,7 @@
 >
 >
 >
-> Me: Rõ ràng là **không**, vì có thể thấy **row 3 = row 1 + row 2**
+> Thử trả lời: Rõ ràng là **không**, vì có thể thấy **row 3 = row 1 + row 2**
 >
 >
 >
@@ -183,7 +183,7 @@
 >
 >
 >
-> Me: Thử lập luận, như đã biết, để tìm nullspace, tức **vector
+> Thử trả lời: Thử lập luận, như đã biết, để tìm nullspace, tức **vector
 > space chứa mọi solution của Ax = 0**. Đầu tiên A có 4 cột,
 > nên **nullspace của A là subspace của R4**.
 >
@@ -210,7 +210,7 @@
 >
 >
 >
-> Me: Tiếp nối lập luận trước, **nếu mọi cols đều
+> Thử trả lời: Tiếp nối lập luận trước, **nếu mọi cols đều
 > independent**, thì tức là **chúng đều là pivots**, và do đó
 > **không có free cols**. Dẫn đến **không có vector nào
 > trong basis** ⇒ **nullspace chỉ chứa zero**, và mang ý
@@ -618,7 +618,7 @@
 >
 >
 >
-> Me: Zero. Lí do là vì: Ta đã lí luận ở trên để kết luận
+> Thử trả lời: Zero. Lí do là vì: Ta đã lí luận ở trên để kết luận
 > dimension của nullspace của Aᵀ là 2. Thế thì, như đã biết,
 > dimension của column space of A sẽ là số pivot cols,
 > dimension của nullspace of A, là số free cols, nên **tổng dim
@@ -662,7 +662,7 @@
 >
 >
 >
-> Me: Như đã rồi, ta đã biết dim N(Aᵀ) = 2, nên basis của
+> Thử trả lời: Như đã rồi, ta đã biết dim N(Aᵀ) = 2, nên basis của
 > nó có 2 vector.
 
 <br>
@@ -733,7 +733,7 @@
 >
 >
 >
-> Me: 3, vì đã nói hồi nãy, rank A = 3, hay dim của colums
+> Thử trả lời: 3, vì đã nói hồi nãy, rank A = 3, hay dim của colums
 > space  = 3. Mà bài trước ta đã biết dim của cols space
 > bằng dim row space, vì một matrix có bao nhiêu pivot
 > cols cũng là bấy nhiêu pivot rows.
