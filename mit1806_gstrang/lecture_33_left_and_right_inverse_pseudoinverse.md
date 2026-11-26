@@ -39,7 +39,7 @@
 >
 >
 >
-> me: Thì như bữa giờ đã học, nếu matrix **full-rank**, hay **invertible**
+> Thử trả lời: Thì như bữa giờ đã học, nếu matrix **full-rank**, hay **invertible**
 > hay **non-singular**. Thì nó sẽ **mọi columns đều independent**, 
 > **mọi row cũng independent**, như vậy, nó sẽ phải **square** (vì nếu
 > không square, như m > n, thì chắc chắn sẽ có dependent row)
@@ -60,7 +60,7 @@
 >
 >
 >
-> me: Nó là khi ta có **mọi column đều independent**, và nó
+> Thử trả lời: Nó là khi ta có **mọi column đều independent**, và nó
 > có số hàng m nhiều hơn cột n (nếu m = n thì đương nhiên
 > trở thành full rank, nhưng không thể m < n vì như vậy
 > không thể có n cột independent vì khi đó max rank là m)
@@ -80,7 +80,7 @@
 >
 >
 >
-> me: vì mọi columns đều independent, nên không có free
+> Thử trả lời: vì mọi columns đều independent, nên không có free
 > columns → không có special solutions. → không có vector
 > nào trong basis của nullspace, hay nullspace chỉ có độc mỗi
 > zero vector, dim cuả nullspace = 0
@@ -154,7 +154,7 @@
 >
 >
 >
-> me: Có thể nhớ rằng ta đã cùng nhau chứng minh rằng
+> Thử trả lời: Có thể nhớ rằng ta đã cùng nhau chứng minh rằng
 > **khi A có full-column rank**, tức có **mọi column đều
 > độc lập** thì khi đó, **AᵀA sẽ full-rank.**
 >
@@ -230,7 +230,7 @@
 >
 >
 >
-> me: Lập luận thế này, vì **r = m < n** nên **chắc chắn có  free
+> Thử trả lời: Lập luận thế này, vì **r = m < n** nên **chắc chắn có  free
 > columns** hay Ax = 0 có free variables, từ đó **có  special
 > solutions** và **có vector trong basis** của nullspace Vậy
 > **nullspace** **KHÔNG CHỈ CÓ ZERO** hay dim N(A) > 0
@@ -269,7 +269,7 @@
 >
 >
 >
-> me: **Aᵀ(AAᵀ)⁻¹**
+> Thử trả lời: **Aᵀ(AAᵀ)⁻¹**
 >
 >
 >
@@ -464,7 +464,7 @@
 >
 >
 >
-> me: **Ax sẽ nằm trong column space C(A)**
+> Thử trả lời: **Ax sẽ nằm trong column space C(A)**
 
 <br>
 
@@ -523,7 +523,7 @@
 >
 >
 >
-> me: Thử suy nghĩ xem tại sao: Là vì, **nếu tồn tại y khác x
+> Thử trả lời: Thử suy nghĩ xem tại sao: Là vì, **nếu tồn tại y khác x
 > trong rowspace mà Ay = Ax** thì có nghĩa là **A(y-x) = 0**,
 > điều này có nghĩa là **y-x nằm trong nullspace**, trong khi
 > đó đã nói x **và y đều nằm trong rowspace** thì y-x **cũng
@@ -617,7 +617,7 @@
 >
 >
 >
-> me: đương nhiên là r
+> Thử trả lời: đương nhiên là r
 
 <br>
 
