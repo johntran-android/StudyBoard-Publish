@@ -617,7 +617,7 @@
 >
 >
 >
-> me: Dễ thấy ví dụ Au_i sẽ tiếp tục là:
+> Thử trả lời: Dễ thấy ví dụ Au_i sẽ tiếp tục là:
 >
 >
 >
