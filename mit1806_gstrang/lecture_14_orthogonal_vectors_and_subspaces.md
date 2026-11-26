@@ -1,6 +1,6 @@
 # Lecture 14: Orthogonal Vectors And Subspaces
 
-📊 **Progress:** `37` Notes | `48` Screenshots | `34` AI Reviews
+📊 **Progress:** `37` Notes | `48` Screenshots | `35` AI Reviews
 
 ---
 <a id="node-cmamy5b"></a>
@@ -17,6 +17,24 @@
 > Bài này gs sẽ nói về khái niệm hai **vector space** **orthogonal**
 
 📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=GomcsySSQCw)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+>
+> Ghi chú nắm đúng chủ đề chính của bài giảng về tính trực giao giữa các không gian con, dù cách diễn đạt khái niệm không gian còn đôi chút chưa thật chuẩn xác.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"hai vector space orthogonal"*
+>
+> Chính xác hơn nên dùng từ 'subspaces' (các không gian con). Để hai không gian trực giao với nhau, chúng phải là các không gian con cùng nằm trong một không gian vector lớn hơn (ví dụ $\mathbb{R}^n$ hoặc $\mathbb{R}^m$) để phép nhân vô hướng giữa các vector có nghĩa.
+>
+>
+> **✓ Strengths**
+> - Xác định chính xác chủ đề mở đầu của Bài giảng 14 về tính trực giao của các không gian.
+>
+> **💡 Deeper notes**
+> - Bài giảng tập trung cụ thể vào mối quan hệ trực giao giữa các không gian con cơ bản của ma trận: Nullspace trực giao với Row space trong $\mathbb{R}^n$, và Left nullspace $N(A^T)$ trực giao với Column space trong $\mathbb{R}^m$.
 
 <br>
 
@@ -103,7 +121,7 @@
 >
 >
 >
-> Me: \[√(1² + 2² + 3²)\]² = 1² + 2² + 3²
+> Thử trả lời: \[√(1² + 2² + 3²)\]² = 1² + 2² + 3²
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -516,7 +534,7 @@
 >
 >
 >
-> Me: Là bởi với y của N(Aᵀ) tức Aᵀy = 0, thì tương tự, ta
+> Thử trả lời: Là bởi với y của N(Aᵀ) tức Aᵀy = 0, thì tương tự, ta
 > sẽ có **CÁC ROW CỦA Aᵀ vuông góc với các y trong
 > N(Aᵀ).**
 >
@@ -655,7 +673,7 @@
 >
 >
 >
-> me: Plane quy định bởi phương trình 1 x1 + 2 x2 + 5 x3 = 0 Đó chính là phương trình đường mặt phẳng nullspace: tập hợp tất cả các vector / đường thẳng vuông góc với vector \[1 2 5\]
+> Thử trả lời: Plane quy định bởi phương trình 1 x1 + 2 x2 + 5 x3 = 0 Đó chính là phương trình đường mặt phẳng nullspace: tập hợp tất cả các vector / đường thẳng vuông góc với vector \[1 2 5\]
 >
 >
 >
@@ -798,7 +816,7 @@
 >
 >
 >
-> me: **square**, điều này dễ thấy. Và cũng **đối xứng (symmetric)**: Và ta cũng đã chứng minh cái này mà cũng dễ chứng minh lại:
+> Thử trả lời: **square**, điều này dễ thấy. Và cũng **đối xứng (symmetric)**: Và ta cũng đã chứng minh cái này mà cũng dễ chứng minh lại:
 >
 >
 >
