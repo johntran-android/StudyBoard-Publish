@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1795555698228,
+  "publishedAt": 1795677494352,
   "sections": [
     {
       "title": "📋 Overview",
@@ -258,6 +258,16 @@
   "totalNotes": 456,
   "totalImages": 712,
   "videos": [
+    {
+      "id": "m7CY9BGAfvg",
+      "title": "Làm sao chặn trên sai số conjugate gradient qua trị riêng? (phần 2)",
+      "uploadedAt": 1795670396305,
+      "at": [
+        "5.1 The Linear Conjugate Gradient Method",
+        "5.1 Linear Conjugate Gradient",
+        "5.1 Linear Conjugate Gradient"
+      ]
+    },
     {
       "id": "c6gBFtYkgSk",
       "title": "Làm sao biểu diễn sai số conjugate gradient qua các trị riêng?",
