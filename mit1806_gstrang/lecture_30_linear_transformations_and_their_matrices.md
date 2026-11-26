@@ -129,7 +129,7 @@
 >
 >
 >
-> Me: thử lập luận như sau: (u+v)+v0 không bằng (u+v0) + (v+v0) thành ra ko thỏa yêu cầu T(cu+dv) = cT(u) +
+> Thử trả lời: thử lập luận như sau: (u+v)+v0 không bằng (u+v0) + (v+v0) thành ra ko thỏa yêu cầu T(cu+dv) = cT(u) +
 > dT(v) → **Không** phải linear transformation
 
 <br>
