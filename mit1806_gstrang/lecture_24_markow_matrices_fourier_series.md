@@ -309,7 +309,7 @@
 >
 >
 >
-> Me: Câu này đơn giản là bởi nếu tổng các row là 0, thì
+> Thử trả lời: Câu này đơn giản là bởi nếu tổng các row là 0, thì
 > cũng đồng nghĩa là **có thể biểu diễn một row nào đó**
 > bằng **linear combination các row còn lại** với **bộ
 > coefficient khác zero**. Như vậy đồng nghĩa **các row
