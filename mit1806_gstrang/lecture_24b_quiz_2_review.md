@@ -82,7 +82,7 @@
 >
 >
 >
-> me: 1, vì dễ thấy nó **chỉ có 1 col independent cols**, cols
+> Thử trả lời: 1, vì dễ thấy nó **chỉ có 1 col independent cols**, cols
 > 2, 3 đều depend on col 1 → matrix có 1 pivot col, 2 free
 > cols. Rank = 1
 >
@@ -246,7 +246,7 @@
 >
 >
 >
-> me: Không, vì **đây là Projection matrix**, có tính chất
+> Thử trả lời: Không, vì **đây là Projection matrix**, có tính chất
 > là P² = P, mang ý nghĩa là, **khi đã project một matrix
 > lên vector a rồi**, thì **project tiếp cũng không thay đổi**
 > nữa. Nên u_k=....u_2 = u_1
@@ -464,7 +464,7 @@
 >
 >
 >
-> Me: Thử trả lời như sau, đầu tiên đây là square matrix, và nó sẽ invertible
+> Thử trả lời: Thử trả lời như sau, đầu tiên đây là square matrix, và nó sẽ invertible
 > đương nhiên là khi nó full-rank, đồng nghĩa với việc mọi columns và mọi row
 > đều independent
 >
@@ -525,7 +525,7 @@
 >
 >
 >
-> me: det A⁻¹ = 1 / det A = 1/ tích λs
+> Thử trả lời: det A⁻¹ = 1 / det A = 1/ tích λs
 >
 >
 >
@@ -603,7 +603,7 @@
 >
 >
 >
-> me: Lí luận như sau: nếu **gọi x là eigenvector của A với
+> Thử trả lời: Lí luận như sau: nếu **gọi x là eigenvector của A với
 > eigenvalue là λ**. Thì ta có **Ax = λx**
 >
 >
@@ -707,7 +707,7 @@
 >
 >
 >
-> Me: ta sẽ tìm eigenvalue theo cách tiếp cận phổ quát:
+> Thử trả lời: ta sẽ tìm eigenvalue theo cách tiếp cận phổ quát:
 >
 >
 >
@@ -950,7 +950,7 @@
 >
 >
 >
-> me: có thể để ý thấy column 3 = 2 column 1, nên matrix này có
+> Thử trả lời: có thể để ý thấy column 3 = 2 column 1, nên matrix này có
 > **các column không independent**, do đó nó singular. (*)
 >
 >
@@ -1124,7 +1124,7 @@
 >
 >
 >
-> me: vì **C(A) là subspace của R⁴** (do matrix có 4 hàng,
+> Thử trả lời: vì **C(A) là subspace của R⁴** (do matrix có 4 hàng,
 > vector column có 4 components). Vậy **nếu A invertible**,
 > tức là full-rank, thì **4 cols của nó sẽ là 4 vector độc lập**,
 > SPAN TOÀN BỘ R⁴. Khi đó **projection lên Column
