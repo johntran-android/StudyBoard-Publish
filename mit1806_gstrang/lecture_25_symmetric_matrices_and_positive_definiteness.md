@@ -108,7 +108,7 @@
 >
 >
 >
-> Me: Q - **ORTHOGONAL MATRIX**
+> Thử trả lời: Q - **ORTHOGONAL MATRIX**
 >
 >
 >
@@ -765,7 +765,7 @@
 >
 >
 >
-> me: là bởi **với triangular matrix, các entry trên đường chéo
+> Thử trả lời: là bởi **với triangular matrix, các entry trên đường chéo
 > chính là các eigenvalues** (và nó cũng chính là các pivot, vì
 > luôn đang chỉ nói về square matrix). Do đó tích của chúng
 > đương nhiên chính là tích các eigenvalue, và nó cũng **chính là
