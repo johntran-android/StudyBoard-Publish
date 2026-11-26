@@ -289,7 +289,7 @@
 >
 >
 >
-> Me: 2 × rank U = 2 × 3 = 6. Lí do là vì ta có 6 hàng độc lập
+> Thử trả lời: 2 × rank U = 2 × 3 = 6. Lí do là vì ta có 6 hàng độc lập
 >
 >
 >
@@ -297,7 +297,7 @@
 >
 >
 >
-> Me: 3, dễ thấy vì REF của nó là [U O]ᵀ vẫn chỉ có 3 (rank
+> Thử trả lời: 3, dễ thấy vì REF của nó là [U O]ᵀ vẫn chỉ có 3 (rank
 > of U) hàng độc lập
 
 <br>
@@ -367,7 +367,7 @@
 >
 >
 >
-> Me: Thế thì, b là Ax tức là b là linear combination của các
+> Thử trả lời: Thế thì, b là Ax tức là b là linear combination của các
 > A's columns, với coefficient là các components của x và vì
 > x có 3 component nên điều này chứng tỏ A có 3 cột. Và 
 > đương nhiên cũng có 3 hàng vì b có 3 components
@@ -522,7 +522,7 @@
 >
 >
 >
-> Me: Nullspace of A chỉ là zero vector, có nghĩa là basis  của
+> Thử trả lời: Nullspace of A chỉ là zero vector, có nghĩa là basis  của
 > nullspace không có vector nào, và dimension của nullspace
 > (of A) là bằng 0.
 >
@@ -619,7 +619,7 @@
 >
 >
 >
-> Me: Thử lập luận. Ta gọi giả sử có 2 cols. b1, b2. Thế thì,
+> Thử trả lời: Thử lập luận. Ta gọi giả sử có 2 cols. b1, b2. Thế thì,
 > việc matrix kết qủa BB sẽ có col1 là linear combination của
 > b1, b2 với coeff là hai phần tử của b1.  Và BB sẽ có col2 là
 > linear combination của b1, b2 với coeff là hai phần tử của
@@ -674,7 +674,7 @@
 >
 >
 >
-> Me: Đúng. Vì như đã nói muốn Ax=b luôn có solution,
+> Thử trả lời: Đúng. Vì như đã nói muốn Ax=b luôn có solution,
 > thì b phải nằm trong colums space (vì khi đó mới luôn
 > tìm được một bộ coeff (chính là các component của x)
 > giúp tạo một linear combination của các cols cho ra
@@ -1001,7 +1001,7 @@
 >
 >
 >
-> Me:
+> Thử trả lời:
 >
 >
 >
@@ -1022,7 +1022,7 @@
 >
 >
 >
-> Me: Yes. Thử trả lời theo cách ngắn gọn nhất, đó là hai
+> Thử trả lời: Yes. Thử trả lời theo cách ngắn gọn nhất, đó là hai
 > matrix này chỉ khác nhau ở chỗ khi elimination A ta nhân
 > thêm  matrix A cho -1. Và việc này không làm thay đổi kết
 > quả của quá trình elimination. Thành ra kết quả của của
@@ -1081,7 +1081,7 @@
 >
 >
 >
-> Me: rowspace của A và nullspace
+> Thử trả lời: rowspace của A và nullspace
 
 <br>
 
