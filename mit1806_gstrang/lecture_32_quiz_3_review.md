@@ -91,7 +91,7 @@
 >
 >
 >
-> me: có thể nhẩm thấy det của A theo cofactor
+> Thử trả lời: có thể nhẩm thấy det của A theo cofactor
 > formula là 0, nên A là SINGULAR matrix
 
 <br>
@@ -490,7 +490,7 @@
 >
 >
 >
-> Me: Ta đã biết matrix sẽ diagonalizable nếu nó có đủ n
+> Thử trả lời: Ta đã biết matrix sẽ diagonalizable nếu nó có đủ n
 > (ở đây là 3) independent eigenvectors. Và ta sẽ kết luận
 > ngay điều kiện này thỏa nếu 3 eigenvalues khác nhau.
 > Còn nếu có repeat eigenvalues thì phải kiểm tra cụ thể
@@ -545,7 +545,7 @@
 >
 >
 >
-> me: Ta đã biết, với symmetric matrix, thì eigenvalue
+> Thử trả lời: Ta đã biết, với symmetric matrix, thì eigenvalue
 > đều là số thực (cụ thể hơn là với matrix mang giá trị
 > thực và symmetric, thì nó sẽ có các eigenvector vuông
 > góc và các eigenvalue mang giá trị thực).
@@ -575,7 +575,7 @@
 >
 >
 >
-> me: ta đã biết yêu cầu để matrix positive definite đó là 1)
+> Thử trả lời: ta đã biết yêu cầu để matrix positive definite đó là 1)
 > mọi eigenvalue đều dương 2) mọi pivot đều dương 3) mọi
 > subdet đều dương và 4 quadratic form không âm và chỉ
 > bằng 0 khi x = 0.
@@ -607,7 +607,7 @@
 >
 >
 >
-> me: Ta đã biết Markov matrix là matrix có tổng row
+> Thử trả lời: Ta đã biết Markov matrix là matrix có tổng row
 > hoặc column bằng 1, và mọi giá trị đều không âm, và
 > bé hơn 1. Thế thì giả sử các rows có tổng bằng 1 tức
 > là row1 + row2 + .. = [1 1 ..]
