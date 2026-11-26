@@ -154,7 +154,7 @@
 >
 >
 >
-> Me: Là bởi vì xᵀAᵀAx = (Ax)ᵀ(Ax) = uᵀu với u = Ax. Thì có
+> Thử trả lời: Là bởi vì xᵀAᵀAx = (Ax)ᵀ(Ax) = uᵀu với u = Ax. Thì có
 > nghĩa là **quadratic form của AᵀA** CHÍNH LÀ **SQUARE
 > LENGTH** CỦA **u = Ax**. \~Và vì vậy **đương nhiên nó luôn
 > không âm**, và chỉ bằng 0 khi u = Ax = 0.
@@ -196,7 +196,7 @@
 >
 >
 >
-> me: Thì đó là **khi Ax = 0 không có solution nào**, **ngoài
+> Thử trả lời: Thì đó là **khi Ax = 0 không có solution nào**, **ngoài
 > zero**, hay **nullspace của A chỉ chứa độc mỗi vector
 > zero**, hoặc nói cách khác **basis của nullspace rỗng**,
 > hoặc nói cách khác nữa Ax = 0 **không có special solution**
@@ -313,7 +313,7 @@
 >
 >
 >
-> Me: Đoán rằng, chúng đều **CÓ CÙNG EIGENVALUES**
+> Thử trả lời: Đoán rằng, chúng đều **CÓ CÙNG EIGENVALUES**
 
 <br>
 
@@ -698,7 +698,7 @@
 >
 >
 >
-> Me: 2: Solve (A-λI)x = 0 ⇔ Ax = 0, và A có 2 pivot
+> Thử trả lời: 2: Solve (A-λI)x = 0 ⇔ Ax = 0, và A có 2 pivot
 > columns ⇒ có 2 free columns = 2 special solutions = 2
 > vector trong basis của nullspace = 2 (independent)
 > eigenvectors
@@ -723,7 +723,7 @@
 >
 >
 >
-> Me: Có thể thấy eigenvectors vẫn là trong nullspace của 
+> Thử trả lời: Có thể thấy eigenvectors vẫn là trong nullspace của 
 > A (vì λ vẫn bằng 0, bởi giải characteristic equation
 > det A = 0 ⇔ λ^4 = 0 ⇔ λ = 0, từ đó solve 
 > equation (A-0 × I)x=0 để tìm eigenvectors ⇔ Ax=0)
