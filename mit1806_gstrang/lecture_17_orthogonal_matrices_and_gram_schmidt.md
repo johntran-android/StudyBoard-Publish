@@ -55,7 +55,7 @@
 >
 >
 >
-> Me: vì như đã nói, các cols của Q orthonormal,
+> Thử trả lời: vì như đã nói, các cols của Q orthonormal,
 > nên dễ thấy **QᵀQ CHÍNH LÀ IDENTITY MATRIX**
 
 <br>
@@ -230,7 +230,7 @@
 >
 >
 >
-> Me: Trước khi thầy ghi ra lại công thức, thử lẩm nhẩm lại
+> Thử trả lời: Trước khi thầy ghi ra lại công thức, thử lẩm nhẩm lại
 > cách làm, với matrix A
 >
 >
@@ -457,7 +457,7 @@
 >
 >
 >
-> Me: Ta dùng công thức đã biết bữa trước, triển khai lại cho
+> Thử trả lời: Ta dùng công thức đã biết bữa trước, triển khai lại cho
 > nhớ:
 >
 >
@@ -533,7 +533,7 @@
 >
 >
 >
-> Me: Thử lập luận:
+> Thử trả lời: Thử lập luận:
 >
 >
 >
@@ -569,7 +569,7 @@
 >
 >
 >
-> Me: Ta đã có **phần dư của c** sau khi **trừ đi projection của
+> Thử trả lời: Ta đã có **phần dư của c** sau khi **trừ đi projection của
 > nó lên a (cũng là A)**. Như vậy, **vector này ĐÃ VUÔNG
 > GÓC VỚI A**
 
@@ -616,7 +616,7 @@
 >
 >
 >
-> Me: ta sẽ **trừ b cho phần project của b lên a**:
+> Thử trả lời: ta sẽ **trừ b cho phần project của b lên a**:
 >
 >
 >
@@ -641,7 +641,7 @@
 >
 >
 >
-> me: ta sẽ **xem AᵀB có bằng 0 không**
+> Thử trả lời: ta sẽ **xem AᵀB có bằng 0 không**
 
 <br>
 
@@ -677,7 +677,7 @@
 >
 >
 >
-> Me: Vì 2 cols của A **independent**, nên chúng **span một
+> Thử trả lời: Vì 2 cols của A **independent**, nên chúng **span một
 > 2D plane trong R3**
 >
 >
