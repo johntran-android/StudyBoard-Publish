@@ -90,7 +90,7 @@
 >
 >
 >
-> (me: qua bài về determinant ta sẽ có chứng minh tại sao
+> (Thử trả lời: qua bài về determinant ta sẽ có chứng minh tại sao
 > det của triangular matrix là tích các pivot)
 
 **🔗 See also:** [linked note](./lecture_18_properties_of_determinants.md#node-o9kzca1)
