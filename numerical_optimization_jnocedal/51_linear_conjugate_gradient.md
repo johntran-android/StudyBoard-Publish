@@ -4422,7 +4422,15 @@
 >
 >
 >
-> (||xk+1 - x\*||\_A)² = min_Pk Σi \[1 + λi Pk(λi)\]² λiξi²
+> (||xk+1 - x\*||\_A)² = min_Pk Σi \[1 + λi Pk(λi)\]² λiξi² 
+>
+>
+>
+> ≤ {min_Pk \[max_1≤i≤n \[1 + λi Pk(λi)\]²\]} × (||x0 - x\*||\_A)².
+>
+>
+>
+> Lập luận lại chỗ này:
 >
 >
 >
@@ -4498,23 +4506,19 @@
 >
 >
 >
+> ---
 >
 >
 >
->
-> ≤ min_Pk Σi max_i \[1 + λi Pk(λi)\]² λiξi²
->
->
->
-> = min_Pk max_i \[1 + λi Pk(λi)\]² Σi λiξi²
+> Vậy:
 >
 >
 >
-> = min_Pk max_i \[1 + λi Pk(λi)\]² (||x0 - x\*||\_A)²
+> (||xk+1 - x\*||\_A)² = min_Pk Σi \[1 + λi Pk(λi)\]² λiξi² 
 >
 >
 >
-> = {min_Pk \[max_1≤i≤n \[1 + λi Pk(λi)\]²\]} × (||x0 - x\*||\_A)².
+> ≤ {min_Pk \[max_1≤i≤n \[1 + λi Pk(λi)\]²\]} × (||x0 - x\*||\_A)².
 >
 >
 >
@@ -4522,11 +4526,15 @@
 >
 >
 >
-> (||xr - x\*||\_A)² = min_Pk Σi \[1 + λi P_r-1(λi)\]² λiξi² = {min_Pr-1 \[max_1≤i≤n \[1 + λi P_r-1(λi)\]²\]} × (||x0 - x\*||\_A)².
+> k = r - 1
 >
 >
 >
->  với ý nghĩa tại bước k = r-1, thì thuật toán sẽ tìm ra cái đa thức bậc r-1 tốt nhất, giúp xr - x\* nhỏ nhất.
+> (||xr - x\*||\_A)² = min_P_r-1 Σi \[1 + λi P_r-1(λi)\]² λiξi² ≤ {min_Pr-1 \[max_1≤i≤n \[1 + λi P_r-1(λi)\]²\]} × (||x0 - x\*||\_A)².
+>
+>
+>
+>  tại bước k = r-1, thì thuật toán sẽ tìm ra cái đa thức bậc r-1 tốt nhất, giúp xr - x\* nhỏ nhất.
 >
 >
 >
@@ -4592,7 +4600,7 @@
 >
 > Như vậy là viết lại chuỗi kết quả ta có:
 >
-> er = Σi λi \[1 + λi P\*r-1(λi)\]² ξi² = min_Pr-1 Σi λi \[1 + λi Pr-1(λi)\]² ξi² (i)
+> er = ||xr - x\*||²\_A = Σi λi \[1 + λi P\*r-1(λi)\]² ξi² = min_Pr-1 Σi λi \[1 + λi Pr-1(λi)\]² ξi² (i)
 >
 > ≤ {min_Pr-1 \[max_1≤i≤n \[1 + λi Pr-1(λi)\]²\]} × e0 (ii)
 >
@@ -4602,13 +4610,13 @@
 >
 >
 >
+>
+>
 > Hay er ≤ 0. Mà er dĩ nhiên ≥ 0 ⇨ er = 0.
 >
 >
 >
 > Và như vậy chứng minh xong.
-
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=m7CY9BGAfvg)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
