@@ -1,6 +1,6 @@
 {
   "title": "Statistical Inference - Casella",
-  "publishedAt": 1795656503344,
+  "publishedAt": 1795657693224,
   "sections": [
     {
       "title": "📋 Overview",
@@ -338,7 +338,7 @@
   "videos": [
     {
       "id": "c7g727RW818",
-      "title": "Tại sao hàm likelihood chỉ phụ thuộc vào alpha và beta?",
+      "title": "Xây dựng likelihood của Logistics Regression như thế nào?",
       "uploadedAt": 1795655700923,
       "at": [
         "Section 12.3.2 Estimation",
