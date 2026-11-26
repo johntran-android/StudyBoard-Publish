@@ -233,7 +233,7 @@
 >
 >
 >
-> me: Không. Vì như đã biết, **vì v1, v2 independence**,
+> Thử trả lời: Không. Vì như đã biết, **vì v1, v2 independence**,
 > **nên mọi linear combination của chúng đã tạo thành
 > plane R²**.
 >
@@ -979,7 +979,7 @@
 >
 >
 >
-> Me: Có, vì **dù chúng không independence**, thì **mọi linear 
+> Thử trả lời: Có, vì **dù chúng không independence**, thì **mọi linear 
 > combination của chúng vẫn tạo nên columns space** của A,
 > đơn giản vì **đó là định nghĩa của columns space**, và định
 > nghĩa của span (space tạo bởi mọi linear combination)
@@ -1014,7 +1014,7 @@
 >
 >
 >
-> Me: **Không**, vì **chúng không independence**, cols 4 =
+> Thử trả lời: **Không**, vì **chúng không independence**, cols 4 =
 > cols 1 hay cols 4 là một linear combination của các cols
 > khác với hệ số 1 × col1 + 0 × col2 + 0 × col3
 
@@ -1044,7 +1044,7 @@
 >
 >
 >
-> Me: như đã nói col4 = 1 × col1 + 0 × col2 + 0 × col3
+> Thử trả lời: như đã nói col4 = 1 × col1 + 0 × col2 + 0 × col3
 > nên **1***col1 + **0***col2 + **0***col3 **- 1***col4 = **0**
 >
 >
@@ -1106,7 +1106,7 @@
 >
 >
 >
-> Me: **tìm các linear independence cols** trong mấy vector đó,
+> Thử trả lời: **tìm các linear independence cols** trong mấy vector đó,
 > thì nó là basis
 
 > [!TIP]
@@ -1151,7 +1151,7 @@
 >
 >
 >
-> Me: 2
+> Thử trả lời: 2
 >
 >
 >
