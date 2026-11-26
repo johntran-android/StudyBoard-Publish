@@ -175,7 +175,7 @@
 >
 >
 >
-> Me: Rất đơn giản, là vì theo định nghĩa vector space phải
+> Thử trả lời: Rất đơn giản, là vì theo định nghĩa vector space phải
 > thỏa mãn hai tính chất: cộng hai vector hay scale vector với
 > một số thực thì vẫn được vector mới nằm trong space.
 >
@@ -349,7 +349,7 @@
 >
 >
 >
-> Me: hàng 2 **chỉ việc là linear combination của hàng 1** để A
+> Thử trả lời: hàng 2 **chỉ việc là linear combination của hàng 1** để A
 > **chỉ có 1 independence row** là được
 
 <br>
@@ -365,7 +365,7 @@
 >
 >
 >
-> Me: 1st row
+> Thử trả lời: 1st row
 >
 >
 >
@@ -374,7 +374,7 @@
 >
 >
 >
-> Me: 1 luôn, vì đã nói rank A = 1, mà như bài trước đã
+> Thử trả lời: 1 luôn, vì đã nói rank A = 1, mà như bài trước đã
 > biết cols space và row space của A đều có cùng dimension.
 
 > [!TIP]
@@ -542,7 +542,7 @@
 >
 >
 >
-> Me: Thử lập luận vầy, như gs vừa nói, cho hai rank 4
+> Thử trả lời: Thử lập luận vầy, như gs vừa nói, cho hai rank 4
 > matric  5x17. Có nghĩa là chúng đều có 4 independent
 > cols. Cho rằng với V là v1,v2,v3,v4 và với U là u1,u2,u3,
 > u5. và matrix U+V sẽ có các cols là v1+u1, v2+u2, v3+u3,
@@ -618,7 +618,7 @@
 >
 >
 >
-> Me: Vì giả sử **xét u, v thuộc S**, thì **xét m = c1 × u+c2 × v.** Ta sẽ
+> Thử trả lời: Vì giả sử **xét u, v thuộc S**, thì **xét m = c1 × u+c2 × v.** Ta sẽ
 > có tổng các component của m:
 >
 >
@@ -660,7 +660,7 @@
 >
 >
 >
-> Me: là **nullspace của (1x4) matrix A = [1, 1, 1, 1]**, vì theo
+> Thử trả lời: là **nullspace của (1x4) matrix A = [1, 1, 1, 1]**, vì theo
 > định nghĩa nullspace của nó sẽ là mọi vector x sao cho Ax =
 > 0, và như vậy với x là <x1, x2, x3, x4> thì ta sẽ có nullspace
 > của A là mọi vector x sao cho x1 × 1 + x2 × 1 + x3 × 1 + x4 × 1 = 0
@@ -749,7 +749,7 @@
 >
 >
 >
-> Me: Như bài trước đã biết **cols space và row space đều có
+> Thử trả lời: Như bài trước đã biết **cols space và row space đều có
 > cùng dimension = rank**, nên cols space có dimension = 1.
 >
 >
