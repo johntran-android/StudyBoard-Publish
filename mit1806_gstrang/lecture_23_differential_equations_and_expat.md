@@ -72,7 +72,7 @@
 >
 >
 >
-> me: Ta đã biết gs nói **matrix nxn sẽ có n eigenvalue**.
+> Thử trả lời: Ta đã biết gs nói **matrix nxn sẽ có n eigenvalue**.
 >
 >
 >
@@ -162,7 +162,7 @@
 >
 >
 >
-> me: vì λ = 0 rồi, nun **nullspace của (A - λ𝐈) cũng là
+> Thử trả lời: vì λ = 0 rồi, nun **nullspace của (A - λ𝐈) cũng là
 > của A**. Nói rõ hơn là, ta đã biết non-zero vector trong
 > nullspace hay có thể nói basis vector của nullspace của
 > A-λI sẽ chính là eigenvector của A ứng với
