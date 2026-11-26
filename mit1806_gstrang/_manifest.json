@@ -1,6 +1,6 @@
 {
   "title": "MIT 18.06",
-  "publishedAt": 1795393089148,
+  "publishedAt": 1795736325873,
   "sections": [
     {
       "title": "18.03 Lec 25",
@@ -222,6 +222,14 @@
   "totalNotes": 1181,
   "totalImages": 1309,
   "videos": [
+    {
+      "id": "8mQBH6ocR1s",
+      "title": "Làm sao tìm ma trận chiếu lên không gian con một chiều?",
+      "uploadedAt": 1795735028157,
+      "at": [
+        "LECTURE 15: PROJECTIONS ONTO SUBSPACES"
+      ]
+    },
     {
       "id": "gkxPk7hBGNE",
       "title": "Khi Ax=b vô nghiệm, điều kiện nào để A^T A khả nghịch?",
