@@ -94,7 +94,7 @@
 >
 >
 >
-> me: ta có thể **dùng điều kiện det** của matrix 2x2 **dương**
+> Thử trả lời: ta có thể **dùng điều kiện det** của matrix 2x2 **dương**
 > (submatrix [2] thì đã có det dương rồi) → như vậy phải
 > **lớn hơn 18**
 
@@ -120,7 +120,7 @@
 >
 >
 >
-> me: vì det = 0 nên **một eigenvalue = 0**, từ **trace** **suy ra
+> Thử trả lời: vì det = 0 nên **một eigenvalue = 0**, từ **trace** **suy ra
 > cái kia là 20**
 >
 > **SYMMETRIC** MATRIX CÓ EIGENVALUE **DƯƠNG**
@@ -144,7 +144,7 @@
 >
 >
 >
-> Me: 2 và 0 (có nghĩa là, sẽ chỉ có một pivot bằng 2, chứ
+> Thử trả lời: 2 và 0 (có nghĩa là, sẽ chỉ có một pivot bằng 2, chứ
 > nói pivot kia = 0 thì ko đúng, nhưng ý là vị trí thứ 2 trên
 > đường chéo của U) 
 >
@@ -281,7 +281,7 @@
 >
 >
 >
-> me: Vì ta có **det dương** tức là **tích các eigenvalue dương**,
+> Thử trả lời: Vì ta có **det dương** tức là **tích các eigenvalue dương**,
 > và **trace là tổng các eigenvalue cũng dương** suy ra các
 > eigenvalue dương
 
