@@ -179,7 +179,7 @@
 >
 >
 >
-> Me: Mình nghĩ rằng nếu **muốn b thông qua P vẫn giữ
+> Thử trả lời: Mình nghĩ rằng nếu **muốn b thông qua P vẫn giữ
 > nguyên hướng**, hay nói cách khác **Pb và b cùng
 > phương** thì chỉ có thể có một khả năng là **b đã nằm trong
 > cols space sẵn rồi**, khi đó cơ bản P sẽ project b trở thành
@@ -249,7 +249,7 @@
 >
 >
 >
-> Me: Thế thì matrix này giúp permute **hoán vị** (hoán đổi vị
+> Thử trả lời: Thế thì matrix này giúp permute **hoán vị** (hoán đổi vị
 > trí) của matrix hay vector. Vậy **Ax sẽ có tác dụng hoán đổi
 > vị trí của x**, hay Ax có vị trí được hoán đổi so với x.
 >
@@ -575,7 +575,7 @@
 >
 >
 >
-> Me: Có thể thấy nó **sai ở chỗ x không giống nhau**.
+> Thử trả lời: Có thể thấy nó **sai ở chỗ x không giống nhau**.
 > Tức là x trong Ax = λx - là eigenvector của A ứng với
 > eigenvalue λ. Còn Bx = α*x sẽ là eigenvector của B có
 > eigenvalue là α. Vậy thì **x không phải là một để mà
