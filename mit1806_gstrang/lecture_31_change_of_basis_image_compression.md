@@ -418,7 +418,7 @@
 >
 >
 >
-> Me: Nhớ lạ**i orthogonal matrix** (nếu các cols orthonormal)
+> Thử trả lời: Nhớ lạ**i orthogonal matrix** (nếu các cols orthonormal)
 > thì ta sẽ có tính chất rất lợi đó là **Q⁻¹ = Qᵀ**
 
 <br>
@@ -432,7 +432,7 @@
 >
 >
 >
-> Me: mới nói luôn, vì **W là orthogonal matrix** (sau khi ta đã
+> Thử trả lời: mới nói luôn, vì **W là orthogonal matrix** (sau khi ta đã
 > normalize các cols để có unit length) thì **W⁻¹ chính là Wᵀ**
 
 <br>
@@ -662,7 +662,7 @@
 >
 >
 >
-> me: Thử trả lời trước:
+> Thử trả lời: Thử trả lời trước:
 >
 >
 >
