@@ -165,7 +165,7 @@
 >
 >
 >
-> Me: Có thể dùng property 2 (exchange row thì đổi dấu) để
+> Thử trả lời: Có thể dùng property 2 (exchange row thì đổi dấu) để
 > thấy det của nó sẽ là **- (a11a32a23)**
 
 <br>
@@ -237,7 +237,7 @@
 >
 >
 >
-> Me: Tới đây ta dùng một kiến thức của **probability**
+> Thử trả lời: Tới đây ta dùng một kiến thức của **probability**
 > về **counting rule**: Có thể thấy survivor matrix là cái
 > mà **mỗi column đều có  một entry khác 0**.
 >
@@ -342,7 +342,7 @@
 >
 >
 >
-> Me: \~Có thể thấy không có row nào depend row nào, vì
+> Thử trả lời: \~Có thể thấy không có row nào depend row nào, vì
 > row nào cũng có một số 0 tại vị trí mà col khác là 1. (Do
 > đó nó ko thể nhân với scalar nào ra row khác được)
 > Nên có thể thấy chúng full rank = invertible
@@ -437,7 +437,7 @@
 >
 >
 >
-> Me: Hình như nó **chính là det của matrix nhỏ hơn** sau khi
+> Thử trả lời: Hình như nó **chính là det của matrix nhỏ hơn** sau khi
 > **loại bỏ hàng 1, cột 1 của matrix gốc** đi
 
 <br>
@@ -680,7 +680,7 @@
 >
 >
 >
-> me: thì bởi nó bằng 0 rồi tính làm gì nữa vì cofactor
+> Thử trả lời: thì bởi nó bằng 0 rồi tính làm gì nữa vì cofactor
 > nhân với nó cũng bằng 0 thôi
 
 <br>
