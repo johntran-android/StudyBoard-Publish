@@ -54,7 +54,7 @@
 >
 >
 >
-> Me:
+> Thử trả lời:
 >
 >
 >
@@ -545,6 +545,8 @@
 
 <a id="node-078cpvr"></a>
 
+###### Đáp án bài tập C, D
+
 <p align="center"><kbd><img src="assets/7uvp6it8v2b.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -723,7 +725,7 @@
 >
 >
 >
-> Me: Sau khi gpt nhắc cho ta nhớ **uᵀu chính là bình phương
+> Thử trả lời: Sau khi gpt nhắc cho ta nhớ **uᵀu chính là bình phương
 > norm của vector**. Tức tổng bình phương các component của
 > nó. Và nó là số **không âm**. Nên việc nó bằng 0 chứng tỏ u là
 > zero vector.
@@ -743,7 +745,7 @@
 >
 >
 >
-> me: À vậy có thể thấy, ta đang muốn chứng minh rằng,
+> Thử trả lời: À vậy có thể thấy, ta đang muốn chứng minh rằng,
 > với việc A's columns independent thì AᵀA invertible.
 >
 >
