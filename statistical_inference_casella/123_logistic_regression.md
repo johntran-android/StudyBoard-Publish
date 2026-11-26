@@ -1,6 +1,6 @@
 # 12.3 Logistic Regression
 
-📊 **Progress:** `6` Notes | `8` Screenshots | `6` AI Reviews
+📊 **Progress:** `8` Notes | `12` Screenshots | `8` AI Reviews
 
 ---
 <a id="node-holzhx7"></a>
@@ -686,6 +686,338 @@
 > - Hàm liên kết (link function) g(π) thực chất là hàm nghịch đảo của CDF được chọn, tức g(π) = F^(-1)(π); do đó với CDF Gumbel (loại cực trị), hàm nghịch đảo của nó sẽ cho ra log-log hoặc complementary log-log (cloglog) link.
 
 **🔗 See also:** [Hàm phân phối Logistics](./15_distribution_function.md#node-b5jxnwe)
+
+<br>
+
+<a id="node-b0gitdr"></a>
+
+###### Section 12.3.2 Estimation
+
+<p align="center"><kbd><img src="assets/mc1ifslbcln.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Hiểu ý này thế nào?
+>
+>
+>
+> Tác giả nhắc lại trong simple linear regression (trong model đó, ta giả định y1,y2....là observed value của các Y1,Y2,....độc lập có phân phối Yi \~ n(α + βxi, σ²). Thì một option để đi estimate α, β là least square.
+>
+>
+>
+> Recall lại chút xíu: Còn nhớ trong phần đó, tác giả đã dắt ta qua 3 cách tiếp cận khác nhau khi estimate cho α và β, đầu tiên là least square, đây chỉ là một bài toán tối ưu thuần túy, không phải là statistical inference, trong đó ta hoàn toàn không đặt ra giả định gì về phân phối của Yi. Sau đó, khi bắt đầu bước chân sang bài toán suy luận thống kê bằng cách đặt giả định về hai moment đầu tiên của Y, thì ta chứng minh được rằng kết quả có được của bài toán least square cùng chính là the Best Linear Unbiased estimator (BLUE) của α và β. Cuối cùng, khi giả định hoàn chỉnh để có simple linear regressio model như trên, thì ta thấy BLUE cũng chính là MLE của α và β.
+>
+>
+>
+> Vậy thì quay lại đây, ông nói, sở dĩ với simple linear regression, việc giải bài toán least square cho phép ta có estimate của α và β là do trong mô hình đó ta có một liên hệ trực tiếp giữa Yi và α + βxi. Còn giờ đây với logistic regression model, không còn điều này nữa. Là sao?
+>
+>
+>
+> Là vì, trong mô hình simple linear regression, giả định Yi độc lập \~ n(α + βxi, σ²) thì cũng là giả định Yi = α + βxi + εi với εi iid \~ n(0, σ²). Do đó ta có liên hệ trực tiếp giữa  Yi và α + βxi:
+>
+>
+>
+> Yi = α + βxi + εi
+>
+>
+>
+> Còn với logistic regression, còn nhớ giả định là: y1,y2,....là observed value của Y1,Y2,...độc lập có phân phối:
+>
+>
+>
+> Yi \~ Bern(π(xi)) với π(xi) = σ(α + βxi)
+>
+>
+>
+> Như vậy, E\[Yi|x\] = σ(α + βxi), ta sẽ không thể liên hệ Yi trực tiếp với α + βxi nữa.
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú thể hiện sự hiểu bài rất sâu sắc và mạch lạc, liên hệ chính xác kiến thức từ tối ưu thuần túy, định lý Gauss-Markov đến mô hình GLM hiện tại.
+>
+> **✓ Strengths**
+> - Hệ thống hóa xuất sắc 3 góc nhìn của mô hình hồi quy tuyến tính (tối ưu hóa thuần túy, BLUE theo Gauss-Markov, và MLE dưới giả định phân phối chuẩn).
+> - Giải thích rất chính xác bản chất của 'direct connection': trong tuyến tính $Y_i$ có quan hệ tuyến tính trực tiếp cộng thêm sai số $\varepsilon_i$, trong khi ở hồi quy logistic $Y_i$ là biến nhị phân rời rạc gắn với tổ hợp tuyến tính qua hàm phi tuyến (link function).
+>
+> **💡 Deeper notes**
+> - Về mặt thuật toán, ta vẫn có thể dùng Iteratively Reweighted Least Squares (IRLS) để tìm nghiệm MLE cho logistic regression, nhưng đây là phương pháp giải thuật toán số chứ không phải phương pháp bình phương tối thiểu trực tiếp (OLS) đóng dạng như hồi quy tuyến tính.
+
+<br>
+
+<a id="node-g8x43qt"></a>
+
+###### Bernoulli Maximum Likelihood Estimation
+
+<p align="center"><kbd><img src="assets/q2fwwp7gro.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/wv9toraeilh.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/n3430a2phb.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Đoạn này đã làm nhiều rồi, thiết lập hàm likelihood, rồi log likelihood và tính đạo hàm hàm likelihood:
+>
+>
+>
+> (x1,y1), (x2,y2),....(xn,yn)
+>
+>
+>
+> Assumption:
+>
+>
+>
+> x1,x2,....xn là những giá trị biết trước
+>
+>
+>
+> y1,y2,...yn là các giá trị quan sát được của các random variable Y1,Y2,...Yn. độc lập
+>
+>
+>
+> Yi \~ Bern(π(xi))
+>
+>
+>
+> P(Yi=1) = π(xi
+>
+>
+>
+> π(xi) = σ(α + βxi)
+>
+>
+>
+> ⇔ log \[π(xi)/(1-π(xi))\] = α + βxi
+>
+>
+>
+> ---
+>
+>
+>
+> Likelihood:
+>
+>
+>
+> 𝐱 = (3,5,9...) là các observed values của random sample size n: X1, X2,...Xn. iid n(x|μ, σ²)
+>
+>
+>
+> f(t), n(x|μ, σ²) = (1/√2πσ²) exp(-(t-μ)²/2σ²)
+>
+>
+>
+> f(x1|μ, σ²) = (1/√2πσ²) exp(-(x1-μ)²/2σ²)
+>
+>
+>
+> f(x2|μ, σ²) = (1/√2πσ²) exp(-(x2-μ)²/2σ²)
+>
+> ...
+>
+>
+>
+> joint f(t1,t2,...tn|μ, σ²)
+>
+>
+>
+> = f(x1|μ, σ²)f(x2|μ, σ²)....f(xn|μ, σ²)
+>
+>
+>
+> = Πi f(ti|μ, σ²)
+>
+>
+>
+>  joint pdf của X1,...Xn tính tại 𝐱 = (3,5,9...): 
+>
+>
+>
+> f(t1,t2,...tn|μ, σ²)|t1=3,t2=5,t3=9
+>
+>
+>
+> = Πi f(ti|μ, σ²) |t1=3,t2=5,t3=9
+>
+>
+>
+> = Πi (1/√2πσ²) exp(-(ti-μ)²/2σ²) |t1=3,t2=5,t3=9
+>
+>
+>
+> = (1/√2πσ²) exp(-(t1-μ)²/2σ²) (1/√2πσ²) exp(-(t2-μ)²/2σ²) ....|t1=3,t2=5,t3=9
+>
+>
+>
+> = (1/√2πσ²) exp(-(3-μ)²/2σ²) (1/√2πσ²) exp(-(5-μ)²/2σ²) ....
+>
+>
+>
+> L(μ, σ²|𝐱=(3,5,9))
+>
+>
+>
+> L(θ|𝐱) = f(𝐱|θ)
+>
+>
+>
+> ---
+>
+>
+>
+>
+>
+> biến ngẫu Y1,Y2,...
+>
+>
+>
+> P(Y1=y1), P(Y2=y2),...
+>
+>
+>
+> X \~ Bern(p): P(X=1) = p, P(X=0) = 1-p. P(X=x) = p^x \[(1-p)^(1-x)\]
+>
+>
+>
+> P(Y1=t1, Y2=t2,....) = Πi P(Yi=yi) = Πi π(xi)^ti \[(1-π(xi))^(1-ti)\]
+>
+>
+>
+> Xét joint pmf của Y1,... tại observed value: 𝐲 = (y1,y2,....yn)
+>
+>
+>
+> Πi π(xi)^ti \[(1-π(xi))^(1-ti)\]|𝐲 = (y1, y2,....yn)
+>
+>
+>
+> = Πi π(xi)^yi \[(1-π(xi))^(1-yi)\] 
+>
+>
+>
+> = Πi (σ(α + βxi))^yi \[(1 - σ(α - βxi))^(1-yi)\] 
+>
+>
+>
+> Đây likelihood:
+>
+>
+>
+> L(α,β|data) = Πi (F(α + βxi))^yi \[(1 - F(α - βxi))^(1-yi)\] 
+>
+>
+>
+> = Πi (Fi)^yi \[(1 - Fi)^(1-yi)\]
+>
+>
+>
+> log L(α,β|data) = log \[Πi (Fi)^yi \[(1 - Fi)^(1-yi)\]\]
+>
+>
+>
+> = Σi log (Fi)^yi \[(1 - Fi)^(1-yi)\]\]
+>
+>
+>
+> = Σi {log (Fi)^yi + log \[(1 - Fi)^(1-yi)\]}
+>
+>
+>
+> = Σi {yi log Fi + (1-yi) log (1 - Fi)}
+>
+>
+>
+> = Σi {yi log Fi + log (1 - Fi) - yi log (1 - Fi) }
+>
+>
+>
+> = Σi {yi log Fi - yi log (1 - Fi) + log (1 - Fi) }
+>
+>
+>
+> = Σi {yi \[log Fi - log (1 - Fi)\] + log (1 - Fi) }
+>
+>
+>
+> = Σi {log (1 - Fi)  + yi log \[Fi/(1 - Fi)\]}
+>
+>
+>
+> ---
+>
+>
+>
+> maximize\_ α, β {Likelihood}
+>
+>
+>
+> maximize\_ α, β {log Likelihood}
+>
+>
+>
+> ∂/∂α \[Σi {log (1 - Fi)  + yi log \[Fi/(1 - Fi)\]}\]
+>
+>
+>
+> = Σi ∂/∂α {log (1 - Fi)  + yi log \[Fi/(1 - Fi)\]}
+>
+>
+>
+> = Σi ∂/∂α log (1 - Fi)  + Σi ∂/∂α yi log \[Fi/(1 - Fi)\]
+>
+>
+>
+> = Σi ∂/∂α log (1 - Fi)  + Σi ∂/∂α yi log \[Fi/(1 - Fi)\]
+>
+>
+>
+> ∂/∂α log (1 - Fi) = ∂/∂(1 - Fi) ) log (1 - Fi) . ∂/∂α (1 - Fi)
+>
+>
+>
+> = \[1/(1 - Fi)\] . (-1) ∂Fi/∂α 
+>
+>
+>
+> = \[1/(1 - Fi)\] . (-1) ∂Fi/∂α 
+>
+>
+>
+> = \[1/(1 - Fi)\] . (-1) fi
+>
+>
+>
+> = -fi/(1 - Fi)
+>
+>
+>
+> ---
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=c7g727RW818)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+>
+> Ghi chú đã tự diễn giải và biến đổi rất chi tiết từng bước từ hàm likelihood sang dạng thu gọn của log-likelihood và bước đầu đạo hàm theo α. Có một lỗi gõ nhầm dấu trừ nhỏ và chưa hoàn tất toàn bộ các đạo hàm còn lại.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Πi (σ(α + βxi))^yi [(1 - σ(α - βxi))^(1-yi)] và L(α,β|data) = Πi (F(α + βxi))^yi [(1 - F(α - βxi))^(1-yi)]"*
+>
+> Lỗi gõ nhầm dấu trừ ở số hạng thứ hai thành (α - βxi) thay vì (α + βxi). Ở dòng kế tiếp bạn vẫn gán đúng về (1 - Fi) nên đây chỉ là lỗi nhầm dấu do bất cẩn.
+>
+> **2.** *"∂/∂α log (1 - Fi) = ... = -fi/(1 - Fi)"*
+>
+> Ghi chú mới chỉ tính xong đạo hàm của thành phần thứ nhất theo α, chưa viết tiếp phần đạo hàm của log[Fi/(1-Fi)] và đạo hàm theo β như mục tiêu ban đầu đặt ra.
+>
+>
+> **✓ Strengths**
+> - Tự biến đổi đại số rất tường minh từ tổng nhị thức yi*log(Fi) + (1-yi)*log(1-Fi) về dạng log(1-Fi) + yi*log(Fi/(1-Fi)) mà sách giáo khoa bỏ qua.
+> - Hiểu đúng và áp dụng chuẩn quy tắc đạo hàm hàm hợp (chain rule) khi lấy đạo hàm theo tham số α.
+>
+> **💡 Deeper notes**
+> - Để hoàn tất phương trình likelihood (score function), cần tính nốt đạo hàm của log[Fi / (1 - Fi)] theo α (bằng fi / [Fi(1 - Fi)]) rồi ghép hai số hạng lại để thấy nhân tử chung (yi - Fi).
+> - Khi lấy đạo hàm theo β, do quy tắc dây chuyền ∂(α + βxi)/∂β = xi nên kết quả sẽ xuất hiện thêm thừa số xi ở mỗi số hạng.
 
 <br>
 
