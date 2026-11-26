@@ -3707,11 +3707,11 @@
 >
 >
 >
-> Còn vì sao nó bằng φ(x) - φ(x\*)? → Đơn giản là khai triển: 
+> Còn vì sao nó bằng φ(x) - φ(x\*)? → Đơn giản là khai triển:
 >
 >
 >
-> (1/2) \[||x - x\*||²\_A\]  = (1/2)(x - x\*)ᵀA(x - x\*) ra:
+> (1/2) \[||x - x\*||²\_A\] = (1/2)(x - x\*)ᵀA(x - x\*) ra:
 >
 >
 >
@@ -3995,15 +3995,15 @@
 >
 >
 >
-> → zᵀAz = zᵀ(Σi λi viviᵀ)z = zᵀ(Σi λi viviᵀz) 
+> → zᵀAz = zᵀ(Σi λi viviᵀ)z = zᵀ(Σi λi viviᵀz)
 >
 >
 >
-> = zᵀ(λ1 v1v1ᵀz + λ2 v2v2ᵀz + ...) 
+> = zᵀ(λ1 v1v1ᵀz + λ2 v2v2ᵀz + ...)
 >
 >
 >
-> = zᵀλ1 v1v1ᵀz + zᵀλ2 v2v2ᵀz + ... 
+> = zᵀλ1 v1v1ᵀz + zᵀλ2 v2v2ᵀz + ...
 >
 >
 >
@@ -4027,7 +4027,7 @@
 >
 >
 >
-> ở cuối note, ta sẽ chứng minh: 
+> ở cuối note, ta sẽ chứng minh:
 >
 >
 >
@@ -4059,7 +4059,7 @@
 >
 >
 >
-> ⇔ (||xk+1 - x\*||\_A)² = Σi λi \[1 + λi P\*k(λi)\]² ξi² 
+> ⇔ (||xk+1 - x\*||\_A)² = Σi λi \[1 + λi P\*k(λi)\]² ξi²
 >
 >
 >
@@ -4165,7 +4165,7 @@
 >
 >
 >
-> inf_x \[f(x) × c\] = c × \[inf_x f(x)\] 
+> inf_x \[f(x) × c\] = c × \[inf_x f(x)\]
 >
 >
 >
@@ -4184,110 +4184,6 @@
 >
 >
 > Tác gỉa cho biết 5.33 cho phép ta định lượng tốc độ hội tụ của phương phápp CG bằng cách ta ước lượng giá trị của scalar min_Pk \[max_1≤i≤n \[1 + λi Pk(λi)\]²\], và ta sẽ tìm Pk sao cho cái này càng nhỏ càng tốt.
->
->
->
-> ---
->
->
->
-> Ý đồ của việc nãy giờ ta làm là thế này:
->
->
->
-> Đầu tiên nhớ lại ta có Σi λiξi² chính là (||x0 - x\*||\_A)², hay (||error_0||\_A)², nôm na là:
->
->
->
-> Σi λiξi² chính là (bình phương) sai số (theo chuẩn A) tại x0 là
->
->
->
-> Sau đó ta có ||xk+1 - x\*||²\_A = min_Pk {Σi λi \[1 + λi Pk(λi)\]² ξi²}.
->
->
->
-> Tạm thay lại \[1 + λi Pk(λi)\]² = a(i) cho gọn: ||xk+1 - x\*||²\_A = min_Pk {Σi λi a(i) ξi²}.
->
->
->
-> Thế thì mình hiểu rằng, cái equation này có nghĩa là, error (bình phương norm A của error) tại xk sẽ là giá trị có được khi thuật toán tìm cách minimize Σi λi a(i) ξi² bằng cách tìm kiếm trên toàn bộ không gian đa thức bậc k.
->
->
->
-> Nếu coi xk+1 là biến, hay giá trị xk+1 chưa phải kết quả tối ưu thì error tại đó đương nhiên sẽ là Σi λi a(i) ξi² (vì chưa phải là kết quả tối ưu mà, nên bỏ cái vụ min)
->
->
->
-> Do đó ta viết: (||ek+1||\_A)² = Σi λi a(i) ξi²
->
->
->
-> Rồi, vậy thì ta có: (nói sai số tự hiểu là bình phương của norm A)
->
->
->
-> Sai số tại x0 = Σi λi ξi²
->
->
->
-> Sai số tại xk+1 = Σi λi a(i) ξi²
->
->
->
-> Như vậy ta sẽ có nhận xét là: Sai số ban đầu là tổng hợp bởi n cục / cấu phần λi ξi². Trong quá trình thuật toán CG chạy, nó sẽ tìm cách giảm sai số bằng cách nhân vào các cấu phần này bởi a(i). Do đó, dễ hiểu là nếu a(i) nhỏ, ví dụ bằng 0 với mọi i, thì sai số tại xk sẽ bằng 0 → Chính là ta đã converge về x\*.
->
->
->
-> Lập luận như sau
->
->
->
-> Phương án của CG: tìm được P\* sao cho có được x\*k+1 khiến ||xk+1 - x\*||²\_A, hay square norm error theo chuẩn A tại xk+1 là nhỏ nhất.
->
->
->
-> ||xk+1 - x\*||²\_A = min_Pk Σi λi a(i) ξi² = min_Pk Σi λi \[1 + λi Pk(λi)\]² ξi²
->
->
->
-> Lấy ví dụ có i=1,2,3:
->
->
->
-> ||xk+1 - x\*||²\_A = min_Pk Σi λi a(i) ξi²
->
->
->
-> = min_Pk {λ1 \[1 + λ1 Pk(λ1)\]² ξ1² + λ2 \[1 + λ2 Pk(λ2)\]² ξ2² + λ3 \[1 + λ3 Pk(λ3)\]² ξ3²}
->
->
->
-> Có nghĩa là, CG sẽ tìm Pk sao cho tổng của ba hạng tử Σi λi \[1 + λi Pk(λi)\]² ξi² nhỏ nhất
->
->
->
-> Nhưng nếu ta chỉ tìm cách minimize \[1 + λ1 Pk(λ1)\]² ξ1², ví dụ nó là cái lớn nhất trong 3 cái thì logic sẽ là với cái Pk đó thì Σi λi a(i) ξi² sẽ luôn lớn hơn hoặc bằng ||xk+1 - x\*||²\_A
->
->
->
-> Do đó
->
->
->
-> min_Pk Σi λi \[1 + λi Pk(λi)\]² ξi² = ||xk+1 - x\*||²\_A ≤ min_Pk \[max_i \[1 + λi Pk(λi)\]²\] (||e0||\_A)²
->
->
->
-> Và như nãy đã nói, vì (||e0||\_A)² là constant, ta đưa ra ngoài min max:
->
->
->
-> (||xk+1 - x\*||\_A)² ≤ {min_Pk \[max_1≤i≤n \[1 + λi Pk(λi)\]²\]} × (||x0 - x\*||\_A)².
->
->
->
->
 >
 >
 >
@@ -4486,28 +4382,18 @@
 📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=c6gBFtYkgSk)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
-> Ghi chú xuất sắc, bạn đã tự tay khai triển và chứng minh chi tiết từng bước từ sách giáo khoa mà không bỏ sót bất kỳ biến đổi nào.
->
-> **🟡 Minor issues**
->
-> **1.** *"pk = ε0 r0 + ..εk A^k r0. Nên: xk+1 = xk + αk (γ0 r0 + ..γk A^kr0)"*
->
-> Có sự chồng lấn ký hiệu: bạn dùng gamma cho tổ hợp tuyến tính bên trong alpha_k * p_k, rồi sau đó lại dùng chính ký hiệu gamma cho toàn bộ hệ số tích lũy từ x_0 đến x_{k+1} ở công thức (5.25). Dù không làm sai bản chất, nên dùng các ký hiệu khác nhau để mạch biến đổi chặt chẽ hơn.
->
-> **2.** *"Nhưng nếu ta chỉ tìm cách minimize [1 + λ1 Pk(λ1)]² ξ1², ví dụ nó là cái lớn nhất trong 3 cái thì logic sẽ là với cái Pk đó thì Σi λi a(i) ξi² sẽ luôn lớn hơn hoặc bằng ||xk+1 - x*||²_A"*
->
-> Cách diễn đạt trực giác ở đoạn này hơi lủng củng so với phần chứng minh toán học chuẩn mực ngay phía trên (vốn đã áp dụng đúng tính chất: nếu g(P) ≤ f(P) với mọi P thì min g ≤ min f).
->
+> Ghi chú xuất sắc! Bạn đã tự tay chứng minh và diễn giải cặn kẽ từng bước biến đổi từ hình học sang đại số đa thức và chặn trên hội tụ của Conjugate Gradient.
 >
 > **✓ Strengths**
-> - Tự khai triển đầy đủ và chính xác hệ thức quan trọng (1/2)||x - x*||_A^2 = phi(x) - phi(x*).
-> - Hiểu rất rõ bản chất tối ưu hóa của CG: vừa là phép chiếu trực giao trong A-norm ở góc nhìn hình học, vừa là bài toán xấp xỉ đa thức tối ưu ở góc nhìn đại số.
-> - Chứng minh bổ đề phổ A = sum lambda_i v_i v_i^T và tính chất P_k(A)v_i = P_k(lambda_i)v_i cực kỳ chi tiết, mạch lạc.
+> - Diễn giải cực kỳ trực quan và chính xác sự tương đương giữa bài toán hình học (hình chiếu/khoảng cách trong A-norm) và bài toán tối ưu hóa đa thức đại số.
+> - Tự tay kiểm chứng và khai triển chi tiết tất cả các bổ đề phụ: phân rã phổ ma trận đối xứng, tính chất eigenvector của đa thức ma trận P(A), và phân rã sai số theo hệ trực chuẩn.
+> - Chứng minh chặt chẽ bất đẳng thức chặn trên (5.33) bằng cách tách thừa số cực đại ra khỏi tổng có trọng số không âm.
 >
 > **💡 Deeper notes**
-> - Đa thức Q_{k+1}(\lambda) = 1 + \lambda P_k(\lambda) trong lý thuyết không gian Krylov thường được gọi là đa thức phần dư (residual polynomial), có bậc k+1 và bị ràng buộc điều kiện chuẩn hóa tại gốc tọa độ: Q_{k+1}(0) = 1.
+> - Về bản chất, biểu thức $R_{k+1}(\lambda) = 1 + \lambda P_k(\lambda)$ chính là một đa thức bậc $k+1$ thỏa mãn điều kiện ràng buộc $R_{k+1}(0) = 1$ (thường gọi là residual polynomial trong tài liệu giải tích số).
+> - Tập $x_0 + \operatorname{span}\{r_0, Ar_0, \dots, A^k r_0\}$ về mặt hình học là một không gian afin (affine space) chứ không phải không gian con tuyến tính (linear subspace) đi qua gốc tọa độ.
 
 **🔗 See also:** [Theorem 5.3](#node-e7cob1z) · [5.1 The Linear Conjugate Gradient Method](#node-hpdy8sw) · [Vài suy nghĩ về bản chất của Conjugate Gradient method](#node-6z4orxx) · [Theorem 5.5](#node-66uzm1b)
 
@@ -4522,97 +4408,220 @@
 > [!NOTE]
 > Theorem 5.4 này đại ý nói là nếu như matrix A có r eigenvalues khác nhau (ví dụ matrix 10x10, có 10 eigenvalues dương nhưng nhiều cái bị lặp lại, chỉ có 5 giá trị khác nhau thôi) thì khi đó thuật toán CG sẽ hội tụ trong nhiều nhất là r bước thôi.
 >
-> Ý là sao, theorem này có ý nghĩa gì? → Ta nhớ có một theorem nói rằng thuật toán CG sẽ hội tụ trong tối đa là n bước (tức là matrix A nxn thì chỉ cần n iteration là converge từ x0 → x*). Thế thì theorem này nói rằng nếu ông A mà lại chỉ có r < n trị riêng khác nhau, nhiều  trị riêng bị lặp, thì thuật toán con hội tụ lẹ hơn nữa.
 >
-> Và ý tưởng của cách chứng minh đại khái là vầy: Trong phần trước, tác giả đã chỉ ra và ta đều đã hiểu rằng CÁI VIỆC MÀ CG ĐÃ LÀM TẠI BƯỚC K (ĐỂ TÌM ĐƯỢC xk+1 TỐI ƯU) CHÍNH LÀ TÌM RA CÁI ĐA THỨC BẬC K, Pk, TỐT NHẤT, GIÚP CHO SAI SỐ xk+1 - x* (theo chuẩn A) GIẢM XUỐNG NHỎ NHẤT. VÀ TA GỌI NÓ LÀ P*k(.). Thể hiện bằng toán học bởi:
 >
-> Sai số sau bước k, (||xk+1 - x*||_A)² ≤ {min_Pk [max_1≤i≤n [1 + λi Pk(λi)]²]} × (||x0 - x*||_A)².
+> Ý là sao, theorem này có ý nghĩa gì? → Ta nhớ có một theorem nói rằng thuật toán CG sẽ hội tụ trong tối đa là n bước (tức là matrix A n × n thì chỉ cần n iteration là converge từ x0 → x\*). Thế thì theorem này nói rằng nếu ông A mà lại chỉ có r &lt; n trị riêng khác nhau, nhiều trị riêng bị lặp, thì thuật toán con hội tụ lẹ hơn nữa.
 >
-> Điều đó cũng có nghĩa là tại bước k = r-1, thì thuật toán sẽ tìm ra cái đa thức bậc r-1 tốt nhất, giúp xr - x* nhỏ nhất. 
 >
-> Vậy thì nếu ta CÓ THỂ CHỈ RA CÓ MỘT ĐA THỨC BẬC r-1 NÀO ĐÓ, CÓ THỂ KHIẾN CHO TẠI ĐÓ xr - x* = 0, THÌ SUY RA ĐA THỨC BẬC r-1 TỐT NHẤT P*r-1 CỦA THUẬT TOÁN ĐƯƠNG NHIÊN CŨNG PHẢI LÀM ĐƯỢC NHƯ VẬY. Điều này đồng nghĩa thuật toán CG hội tụ sau r bước. (Đi từ x0 → x1 là 1 bước, đi từ x0 → xr là r bước)
+>
+> Và ý tưởng của cách chứng minh đại khái là vầy: Trong phần trước, tác giả đã chỉ ra và ta đều đã hiểu rằng CÁI VIỆC MÀ CG ĐÃ LÀM TẠI BƯỚC K (ĐỂ TÌM ĐƯỢC xk+1 TỐI ƯU) CHÍNH LÀ TÌM RA CÁI ĐA THỨC BẬC K, Pk, TỐT NHẤT, GIÚP CHO SAI SỐ xk+1 - x\* (theo chuẩn A) GIẢM XUỐNG NHỎ NHẤT. VÀ TA GỌI NÓ LÀ P\*k(.). Thể hiện bằng toán học bởi:
+>
+>
+>
+> Sai số sau bước k:
+>
+>
+>
+> (||xk+1 - x\*||\_A)² = min_Pk Σi \[1 + λi Pk(λi)\]² λiξi²
+>
+>
+>
+> \[1 + λ1 Pk(λ1)\]² λ1ξ1² + \[1 + λ2 Pk(λ2)\]² λ2ξ2²
+>
+>
+>
+> Giả sử:
+>
+>
+>
+> \[1 + λ1 Pk(λ1)\]² ≤ \[1 + λ2 Pk(λ2)\]² 
+>
+>
+>
+> ⇔ \[1 + λ1 Pk(λ1)\]²λ1ξ1² ≤ \[1 + λ2 Pk(λ2)\]² λ1ξ1² (1)
+>
+>
+>
+> \[1 + λ2 Pk(λ2)\]² ≤ \[1 + λ2 Pk(λ2)\]² 
+>
+>
+>
+> ⇔ \[1 + λ2 Pk(λ2)\]² λ2ξ2² ≤ \[1 + λ2 Pk(λ2)\]² λ2ξ2² (2)
+>
+>
+>
+> CỘng (1) và (2) vế theo vế:
+>
+>
+>
+> \[1 + λ1 Pk(λ1)\]² λ1ξ1² + \[1 + λ2 Pk(λ2)\]² λ2ξ2²
+>
+>
+>
+> ≤ \[1 + λ2 Pk(λ2)\]² λ1ξ1² + \[1 + λ2 Pk(λ2)\]² λ2ξ2²
+>
+>
+>
+> = \[1 + λ2 Pk(λ2)\]² ( λ1ξ1² + λ2ξ2²)
+>
+>
+>
+> \[1 + λ1 Pk(λ1)\]² λ1ξ1² + \[1 + λ2 Pk(λ2)\]² λ2ξ2² ≤ \[1 + λ2 Pk(λ2)\]² ( λ1ξ1² + λ2ξ2²)
+>
+>
+>
+> Σi \[1 + λi Pk(λi)\]² λiξi² ≤ max_1≤i≤n \[1 + λi Pk(λi)\]² × Σi λi ξi² đúng với mọi Pk
+>
+>
+>
+> Σi \[1 + λi Pk(λi)\]² λiξi² ≤ max_1≤i≤n \[1 + λi Pk(λi)\]² × Σi λi ξi²
+>
+>
+>
+> Σi λi ξi² = ||x0-x\*||²\_A
+>
+>
+>
+> Σi \[1 + λi Pk(λi)\]² λiξi² ≤ max_1≤i≤n \[1 + λi Pk(λi)\]² × ||x0-x\*||²\_A
+>
+>
+>
+> min_Pk Σi \[1 + λi Pk(λi)\]² λiξi² 
+>
+>
+>
+> ≤  ||x0-x\*||²\_A × min_Pk {max_1≤i≤n \[1 + λi Pk(λi)\]² } 
+>
+>
+>
+> ⇔ ||x_k+1-x\*||²\_A ≤ ||x0-x\*||²\_A × min_Pk {max_1≤i≤n \[1 + λi Pk(λi)\]²} 
+>
+>
+>
+>
+>
+>
+>
+> ≤ min_Pk Σi max_i \[1 + λi Pk(λi)\]² λiξi²
+>
+>
+>
+> = min_Pk max_i \[1 + λi Pk(λi)\]² Σi λiξi²
+>
+>
+>
+> = min_Pk max_i \[1 + λi Pk(λi)\]² (||x0 - x\*||\_A)²
+>
+>
+>
+> = {min_Pk \[max_1≤i≤n \[1 + λi Pk(λi)\]²\]} × (||x0 - x\*||\_A)².
+>
+>
+>
+> Điều đó cũng có nghĩa là:
+>
+>
+>
+> (||xr - x\*||\_A)² = min_Pk Σi \[1 + λi P_r-1(λi)\]² λiξi² = {min_Pr-1 \[max_1≤i≤n \[1 + λi P_r-1(λi)\]²\]} × (||x0 - x\*||\_A)².
+>
+>
+>
+>  với ý nghĩa tại bước k = r-1, thì thuật toán sẽ tìm ra cái đa thức bậc r-1 tốt nhất, giúp xr - x\* nhỏ nhất.
+>
+>
+>
+> ---
+>
+>
+>
+> Vậy thì nếu ta CÓ THỂ CHỈ RA CÓ MỘT ĐA THỨC BẬC r-1 NÀO ĐÓ, CÓ THỂ KHIẾN CHO TẠI ĐÓ xr - x\* = 0, THÌ SUY RA ĐA THỨC BẬC r-1 TỐT NHẤT P\*\_r-1 CỦA THUẬT TOÁN ĐƯƠNG NHIÊN CŨNG PHẢI LÀM ĐƯỢC NHƯ VẬY. Điều này đồng nghĩa thuật toán CG hội tụ sau r bước. (Đi từ x0 → x1 là 1 bước, đi từ x0 → xr là r bước)
+>
+>
 >
 > Rồi, với chiến lược đó, chứng minh như sau:
 >
-> Cho k = r-1 ta có bất đẳng thức thể hiện rằng kết quả của thuật toán sau bước k = r-1 sẽ tìm ra cái đa thức bậc r-1 tốt nhất. 
 >
-> Gọi sai số sau bước r-1, tức (||xr - x*||_A)² là er, sai số ban đầu là (||x0 - x*||_A)² là e0
+>
+> Cho k = r-1 ta có bất đẳng thức thể hiện rằng kết quả của thuật toán sau bước k = r-1 sẽ tìm ra cái đa thức bậc r-1 tốt nhất.
+>
+>
+>
+> Gọi sai số sau bước r-1, tức (||xr - x\*||\_A)² là er, sai số ban đầu là (||x0 - x\*||\_A)² là e0
+>
+>
 >
 > Ta có các quan hệ đã biết ở note trước như sau
 >
-> er = Σi λi [1 + λi P*r-1(λi)]² ξi² 
 >
-> = min_Pr-1 Σi λi [1 + λi Pr-1(λi)]² ξi² (error bởi cái Pr-1 xịn nhất, P*r-1, do CG tìm ra...)
 >
-> ≤ {min_Pr-1 [max_1≤i≤n [1 + λi Pr-1(λi)]²]} × e0 (..sẽ có thể nhỏ hơn error của cái Pr-1 tìm ra bởi thuật quy trình min-max, vì sao ≤ thì đã hiểu rồi, việc cho rằng mọi cái lọc đều có mắt to bằng cái to nhất, đem siết, thì khi siết xong, thật sự kết quả sẽ có thể còn tốt hơn vì có nhiều cái vốn đã có mắt nhỏ sẵn, nay còn nhỏ hơn)
+> er = Σi λi \[1 + λi P\*r-1(λi)\]² ξi²
 >
-> ≤ {[max_1≤i≤n [1 + λi Pr-1(λi)]²]} × e0 
 >
-> (...và bỏ cái min_Pr-1 thì dĩ nhiên ta phải có cái lớn hơn, và cái này max_1≤i≤n [1 + λi Pr-1(λi)]²] × e0 mang ý nghĩa là sai số khi coi như mọi cái lọc đều có cái mắt lọc to nhất khi chưa siết (ta đã bỏ min rồi). Đương nhiên nó đúng với mọi Pr-1, nên có quyền thay P^r-1 vào. Và nếu như thay P^r-1 mà ta chỉ định vào mà cho ra kết quả = 0 thì điều này đồng nghĩa là: Thậm chí chưa cần siết, thêm mà tại bước r dùng cái lọc chỉ định đã cho ra 0 rồi, suy ra cái tốt nhất chắc chắn phải cũng ra 0 tại bước r.)
 >
-> Thật vậy dùng P^r-1(λ) có công thức là [Qr(λ) - 1] / λ, với Qr(λ) có công thức như trong sách, (được đặt ra với mục đích là: nó sẽ cho ra 0 với bất kì λ nào đưa vô, và = 1 nếu input là 0)
+> = min_Pr-1 Σi λi \[1 + λi Pr-1(λi)\]² ξi² (error bởi cái Pr-1 xịn nhất, tức P\*r-1, do CG tìm ra...)
 >
-> [max_1≤i≤n [1 + λi P^r-1(λi)]²] × e0
 >
-> = [max_1≤i≤n [1 + λi [Qr(λi) - 1] / λi]²] × e0
 >
-> = [max_1≤i≤n [1 + [Qr(λi) - 1] ]²] × e0
+> ≤ {min_Pr-1 \[max_1≤i≤n \[1 + λi Pr-1(λi)\]²\]} × e0
 >
-> = [max_1≤i≤n Qr(λi)²] × e0
 >
-> = [max_1≤i≤n 0] × e0
 >
-> = [0] × e0
+> ≤ {\[max_1≤i≤n \[1 + λi Pr-1(λi)\]²\]} × e0
+>
+>
+>
+> Thật vậy dùng P^r-1(λ) có công thức là \[Qr(λ) - 1\] / λ, với Qr(λ) có công thức như trong sách, (được đặt ra với mục đích là: nó sẽ cho ra 0 nếu input bằng λi và = 1 nếu input là 0)
+>
+>
+>
+> \[max_1≤i≤n \[1 + λi P^r-1(λi)\]²\] × e0
+>
+> = \[max_1≤i≤n \[1 + λi \[Qr(λi) - 1\] / λi\]²\] × e0
+>
+> = \[max_1≤i≤n \[1 + \[Qr(λi) - 1\] \]²\] × e0
+>
+> = \[max_1≤i≤n Qr(λi)²\] × e0
+>
+> = \[max_1≤i≤n 0\] × e0
+>
+> = \[0\] × e0
 >
 > = 0
+>
+>
 >
 > Như vậy là viết lại chuỗi kết quả ta có:
 >
-> er = Σi λi [1 + λi P*r-1(λi)]² ξi² = min_Pr-1 Σi λi [1 + λi Pr-1(λi)]² ξi² (i)
+> er = Σi λi \[1 + λi P\*r-1(λi)\]² ξi² = min_Pr-1 Σi λi \[1 + λi Pr-1(λi)\]² ξi² (i)
 >
-> ≤  {min_Pr-1 [max_1≤i≤n [1 + λi Pr-1(λi)]²]} × e0 (ii)
+> ≤ {min_Pr-1 \[max_1≤i≤n \[1 + λi Pr-1(λi)\]²\]} × e0 (ii)
 >
-> ≤ {[max_1≤i≤n [1 + λi P^r-1(λi)]²]} × e0 (iii)
+> ≤ {\[max_1≤i≤n \[1 + λi P^r-1(λi)\]²\]} × e0 (iii)
 >
 > = 0
 >
+>
+>
 > Hay er ≤ 0. Mà er dĩ nhiên ≥ 0 ⇨ er = 0.
 >
+>
+>
 > Và như vậy chứng minh xong.
->
-> Nói lại ý nghĩa một lần nữa:  
->
-> Dấu bằng (i) thể hiện: Thuật toán CG tìm ra xr tối ưu thì chính là nó tìm thấy cái P*r-1 nhỏ nhất,  tốt nhất.
->
-> Dấu (ii) thể hiện: Đây là sai số tại xr nếu tìm ra bằng cách: Coi các bộ lọc đều có mắt to bằng cái to nhất, và đem siết hết, hay cũng có thể hiểu là tìm trong hết các bộ lọc có mắt to bằng nhau và tìm cái có mắt nhỏ nhất. Thì dĩ nhiên là cái bộ lọc tối ưu phải xịn hơn cái này, Ví dụ như khi mình tìm cái bộ lọc có đường kính bằng nhau (ví dụ tìm trong đám {(3,3,3), (4,4,4), (5,5,5)} nhỏ nhất thì thấy cái (3,3,3) là tốt nhất, thì cái P* là cái (1,2,3) dĩ nhiên phải có thể tốt hơn rồi.
->
-> Cái dấu (iii) thể hiện: lấy cái mắt lọc to nhất ra. Và thấy rằng nó đã đủ tốt.
->
-> Như vậy, với một cái bộ lọc P^r thì với cái mắt to nhất của nó mà nó đã đủ tốt, thì cái xịn hơn nữa chắc chắn cũng phải chỉ có tốt hơn trở lên. Tức là error tại xr của thuật toán CG cũng phải bằng 0 → thuật toán hội tụ sau r step.
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=m7CY9BGAfvg)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
-> Ghi chú thể hiện sự thấu hiểu rất sâu sắc về bản chất tối ưu hóa đa thức của thuật toán CG và logic chứng minh của Định lý 5.4. Các bước lập luận và trực giác hình tượng đều rất chính xác.
->
-> **🟡 Minor issues**
->
-> **1.** *"(được đặt ra với mục đích là: nó sẽ cho ra 0 với bất kì λ nào đưa vô, và = 1 nếu input là 0)"*
->
-> Câu chữ hơi lỏng: $Q_r(\lambda)$ triệt tiêu tại các trị riêng $\lambda_i \in \{\tau_1, \dots, \tau_r\}$ (các nghiệm của nó), chứ không phải bằng 0 với 'bất kì $\lambda$ nào đưa vô' (nếu với mọi $\lambda$ đều bằng 0 thì nó là đa thức không, mâu thuẫn với $Q_r(0) = 1$).
->
-> **2.** *"Như vậy, với một cái bộ lọc P^r thì với cái mắt to nhất của nó mà nó đã đủ tốt"*
->
-> Lỗi gõ nhầm chỉ số: đa thức đang xét ở bước này là bậc $r-1$ (tức $\bar{P}_{r-1}$ chứ không phải $P^r$).
->
+> Ghi chú xuất sắc! Bạn đã nắm rất vững bản chất của Định lý 5.4, giải thích trực quan chiến lược chứng minh (dùng một đa thức cụ thể để chặn trên cho giá trị tối ưu) và trình bày lại các bước biến đổi toán học rất rõ ràng, chuẩn xác.
 >
 > **✓ Strengths**
-> - Nắm rất vững logic chứng minh: dùng tính chất cận trên (min $\le$ một giá trị cụ thể) để chỉ ra rằng chỉ cần tồn tại một đa thức triệt tiêu tại toàn bộ các trị riêng thì sai số tối ưu của CG chắc chắn bằng 0.
-> - Hình tượng hóa trực quan rất tốt ý nghĩa của phép lấy chặn trên (min-max) qua hình ảnh kích thước 'mắt lọc'.
-> - Kết nối mạch lạc giữa bài toán xấp xỉ đại số với số bước lặp hội tụ $r$ của CG.
+> - Nắm bắt chính xác ý nghĩa thực tiễn của Định lý 5.4: số bước lặp tối đa của CG phụ thuộc vào số lượng trị riêng phân biệt chứ không đơn thuần là kích thước ma trận n.
+> - Hiểu sâu sắc chiến lược chứng minh: vì CG tìm đa thức tối ưu nên chỉ cần chỉ ra một đa thức cụ thể bậc r-1 triệt tiêu sai số thì nghiệm tối ưu của thuật toán chắc chắn đạt sai số bằng 0.
+> - Các bước biến đổi đại số từ Q_r(λ) sang P_bar_{r-1}(λ) và thế vào cận sai số được diễn giải chi tiết, mạch lạc và hoàn toàn chính xác.
 >
 > **💡 Deeper notes**
-> - Điều kiện ngầm định của CG cổ điển là ma trận $A$ đối xứng xác định dương (SPD), do đó các trị riêng $\lambda_i$ đều là số thực dương (khác 0), đảm bảo phép chia cho $\lambda$ khi định nghĩa $\bar{P}_{r-1}(\lambda) = (Q_r(\lambda) - 1)/\lambda$ luôn xác định và không bị chia cho 0 tại các trị riêng.
+> - Định lý này phát biểu trong số học chính xác (exact arithmetic); trên thực tế khi tính toán dấu phẩy động (floating-point arithmetic), sai số làm tròn có thể khiến thuật toán mất tính trực giao giữa các hướng liên hợp và cần nhiều hơn r bước lặp để hội tụ.
 
 <br>
 
@@ -5127,7 +5136,22 @@
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
 >
-> Bài phân tích thể hiện sự nắm vững vượt trội về kỹ thuật Preconditioning, từ bối cảnh đến chứng minh toán học và mục tiêu tối ưu hóa. Sự liên hệ với các tính chất hội tụ của CG và khả năng giải thích chi tiết quá trình biến đổi hàm bậc hai là rất đáng khen ngợi. Tuy nhiên, hãy luôn đảm bảo độ chính xác tuyệt đối trong các diễn giải về đại số tuyến tính, đặc biệt khi đề cập đến khái niệm đổi cơ sở, dù đây chỉ là một điểm nhỏ trong một bài làm xuất sắc.
+> Ghi chú rất xuất sắc, nắm bắt bản chất của preconditioning từ góc nhìn tối ưu hóa, đại số tuyến tính đến lý thuyết hội tụ của Conjugate Gradient. Việc liên hệ với phân tích Cholesky để đưa condition number về 1 thể hiện tư duy mở rộng bài toán rất tốt.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"nhưng lại co cụm lại thành m cụm, thì ta cũng đã chứng minh rằng sau m + 1 bước, CG sẽ đưa ta đến một điểm có thể xấp xỉ rất tốt solution rồi"*
+>
+> Định lý lý thuyết chỉ phát biểu số bước lặp để đạt xấp xỉ tốt là 'không lớn hơn nhiều so với số cụm m' (not much larger than the number of clusters, phụ thuộc độ rộng của từng cụm), chứ không khẳng định cố định chính xác là m + 1 bước.
+>
+>
+> **✓ Strengths**
+> - Hiểu rất rõ và xâu chuỗi mạch lạc bối cảnh từ việc biến đổi hệ Ax = b thành bài toán tối ưu hàm bậc hai lồi cho đến vai trò của phân phối trị riêng trong CG.
+> - Tự thực hiện biến đổi đại số đổi biến x = C⁻¹x̂ cho hàm mục tiêu và hệ phương trình tuyến tính một cách chính xác.
+> - Liên hệ sâu sắc và chính xác với phép phân tích Cholesky A = LLᵀ (với C = Lᵀ) để minh họa trường hợp lý tưởng đạt condition number bằng 1.
+>
+> **💡 Deeper notes**
+> - Dù việc chọn C = Lᵀ từ phân tích Cholesky cho κ = 1 trên lý thuyết, nhưng trong thực tế tính toán Cholesky đầy đủ cho A tốn O(n³) tương đương giải trực tiếp hệ phương trình; vì vậy thực tế người ta thường dùng Incomplete Cholesky để tìm C xấp xỉ sao cho việc giải hệ với C rẻ hơn.
 
 <br>
 
