@@ -1,6 +1,6 @@
 {
   "title": "Numerical Optimization_J.Nocedal",
-  "publishedAt": 1795706294606,
+  "publishedAt": 1795707495982,
   "sections": [
     {
       "title": "📋 Overview",
@@ -258,6 +258,16 @@
   "totalNotes": 456,
   "totalImages": 712,
   "videos": [
+    {
+      "id": "0ANvAfw43UE",
+      "title": "Vì sao conjugate gradient chỉ mất r bước với r trị riêng? (phần 2)",
+      "uploadedAt": 1795705971752,
+      "at": [
+        "5.1 The Linear Conjugate Gradient Method",
+        "5.1 Linear Conjugate Gradient",
+        "5.1 Linear Conjugate Gradient"
+      ]
+    },
     {
       "id": "c6gBFtYkgSk",
       "title": "Làm sao biểu diễn sai số conjugate gradient qua các trị riêng?",
