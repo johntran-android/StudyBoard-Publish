@@ -22,7 +22,7 @@
 >
 >
 >
-> Me: vì Ax = [1 0 0]ᵀ no solution → (1,0,0) nằm ngoài C(A). Và
+> Thử trả lời: vì Ax = [1 0 0]ᵀ no solution → (1,0,0) nằm ngoài C(A). Và
 > ngược lại vì Ax = (0 1 0) có 1 solution nên (0,1,0) nằm trong
 > C(A).
 >
@@ -70,7 +70,7 @@
 >
 >
 >
-> me: [0 1 0] vì đã nói nó phải ở trong C(A) thì equation 2 mới có
+> Thử trả lời: [0 1 0] vì đã nói nó phải ở trong C(A) thì equation 2 mới có
 > solution
 
 <br>
@@ -137,7 +137,7 @@
 >
 >
 >
-> Me: Identity 2x2
+> Thử trả lời: Identity 2x2
 
 <br>
 
@@ -152,7 +152,7 @@
 >
 >
 >
-> me: Thử lập luận như sau: ta sẽ check xem liệu quadratic form của nó tức xᵀ(AAᵀ)x có luôn dương với x khác 0 hay không? Nếu có thì kết luận là AAᵀ positive definite mà khỏi cần biết pivot, eigenvalues hay subdet.
+> Thử trả lời: Thử lập luận như sau: ta sẽ check xem liệu quadratic form của nó tức xᵀ(AAᵀ)x có luôn dương với x khác 0 hay không? Nếu có thì kết luận là AAᵀ positive definite mà khỏi cần biết pivot, eigenvalues hay subdet.
 >
 >
 >
@@ -223,7 +223,7 @@
 <p align="center"><kbd><img src="assets/hfffndx7sb.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> me: Như đã nói, vì r < m, nên tồn tại dependent row (chỉ
+> Thử trả lời: Như đã nói, vì r < m, nên tồn tại dependent row (chỉ
 > có r independent row - pivot row, mà có tới m row).  Thì ứng với
 > mỗi row trong m - r dependent row, chính là ..(2 cách giải thích)
 >
@@ -275,7 +275,7 @@
 >
 >
 >
-> Me: Đương nhiên x  = [1 -1 1] vì Ax là linear
+> Thử trả lời: Đương nhiên x  = [1 -1 1] vì Ax là linear
 > combination các columns của A
 
 <br>
@@ -290,7 +290,7 @@
 >
 >
 >
-> me: Nếu v1 - v2 + v3 = 0, tức là các cols không independent
+> Thử trả lời: Nếu v1 - v2 + v3 = 0, tức là các cols không independent
 > và [1 -1 1] chính là basis của nullspace.
 >
 >
@@ -319,7 +319,7 @@
 >
 >
 >
-> Me: Lập luận như sau, linear combination của v1, v2 đương
+> Thử trả lời: Lập luận như sau, linear combination của v1, v2 đương
 > nhiên nằm trong subspace span bởi v1, v2, gọi  là S12.
 >
 >
@@ -371,7 +371,7 @@
 >
 >
 >
-> me: Đầu tiên việc các cols dependent nhau cho ta kết luận ngay
+> Thử trả lời: Đầu tiên việc các cols dependent nhau cho ta kết luận ngay
 > matrix này singular do đó có **ít nhất một eigenvalue = 0** (còn
 > bao nhiêu thì phải xét dimension của nullspace)
 >
@@ -451,7 +451,7 @@
 >
 >
 >
-> Me: Có thể thấy ngay A đã có 3 independent eigenvectors vì 3
+> Thử trả lời: Có thể thấy ngay A đã có 3 independent eigenvectors vì 3
 > eigenvalues khác nhau. Cho phép diagonalization:
 >
 >
@@ -508,7 +508,7 @@
 >
 >
 >
-> me: Ta sẽ giải characteristic equation thôi.
+> Thử trả lời: Ta sẽ giải characteristic equation thôi.
 
 <br>
 
@@ -551,7 +551,7 @@
 >
 >
 >
-> me: aaᵀ/aᵀa, việc xây dựng công thức này tương đối
+> Thử trả lời: aaᵀ/aᵀa, việc xây dựng công thức này tương đối
 > dễ và đã làm nhiều lần nên khỏi lập luận lại
 
 <br>
@@ -660,7 +660,7 @@
 >
 >
 >
-> me: Để x̂ = [0 0] tức là p = 0. Như vậy b = e + p = e
+> Thử trả lời: Để x̂ = [0 0] tức là p = 0. Như vậy b = e + p = e
 > Mà ta biết Aᵀe = 0, hay e là left nullspace của A, là subspace
 > orthogonal complement với rows space of A.
 >
