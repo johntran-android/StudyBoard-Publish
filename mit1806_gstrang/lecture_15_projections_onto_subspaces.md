@@ -1,6 +1,6 @@
 # Lecture 15: Projections Onto Subspaces
 
-📊 **Progress:** `45` Notes | `47` Screenshots | `1` AI Reviews
+📊 **Progress:** `45` Notes | `47` Screenshots | `24` AI Reviews
 
 ---
 <a id="node-l9qi36h"></a>
@@ -22,13 +22,13 @@
 <p align="center"><kbd><img src="assets/fzhh8lpvj1.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs cho rằng đây là một bài **rất quan trọng** khi ta sẽ nói về
-> **projection lên subspace** 
+> Gs cho rằng đây là một bài **rất quan trọng** khi ta sẽ nói về **projection lên subspace**
 >
 >
 >
-> Đầu tiên, gs dùng ví dụ trong **1D dimension subspace** - đó là 
-> **đường thẳng a**: **tìm điểm trên a sao cho gần nhất với b**
+> Đầu tiên, gs dùng ví dụ trong **1D dimension subspace** - đó là **đường thẳng a**: **tìm điểm trên a sao cho gần nhất với b**
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=8mQBH6ocR1s)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -62,6 +62,18 @@
 > Và **vector p nằm trên phương vector a**, ta có **p = xa** và 
 > bài toán trở thành **tìm p** tức là tìm ra x.
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác mô hình bài toán chiếu: tìm hình chiếu p trên đường thẳng a quy về việc tìm hệ số vô hướng x, cùng với định nghĩa vector sai số e = b - p.
+>
+> **✓ Strengths**
+> - Hiểu chính xác mục tiêu bài toán: vector hình chiếu p nằm trên đường thẳng chứa vector a nên p = xa, bài toán quy về việc tìm hệ số vô hướng x.
+> - Nắm đúng bản chất và công thức của vector sai số e = b - p (error) khi chiếu vector b lên vector a.
+>
+> **💡 Deeper notes**
+> - Để thực sự giải tìm x ở bước tiếp theo, chìa khóa hình học quan trọng nhất (được ký hiệu vuông góc trên hình) là tính trực giao: e vuông góc với a, tức a^T(b - xa) = 0.
+
 <br>
 
 <a id="node-624nhj2"></a>
@@ -76,6 +88,26 @@
 >
 >
 > aᵀe = 0 ⇔ aᵀ(b-p) = 0 ⇔ aᵀ(b-xa) = 0 ⇔ aᵀ(b-xa) = 0
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác bản chất hình học của phép chiếu thông qua điều kiện trực giao giữa vector sai số e và vector a. Có một lỗi lặp lại nhỏ ở cuối biểu thức biến đổi.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"⇔ aᵀ(b-xa) = 0 ⇔ aᵀ(b-xa) = 0"*
+>
+> Bước biến đổi cuối cùng bị lặp lại hai lần giống hệt nhau (lỗi gõ văn bản).
+>
+>
+> **✓ Strengths**
+> - Hiểu chính xác điều kiện trực giao a ⊥ e được biểu diễn bằng tích vô hướng aᵀe = 0.
+> - Liên hệ mạch lạc giữa hình học (hình chiếu p = xa) và phương trình đại số aᵀ(b - xa) = 0.
+>
+> **💡 Deeper notes**
+> - Từ phương trình aᵀ(b - xa) = 0, khi khai triển ta được aᵀb - x(aᵀa) = 0, suy ra x = (aᵀb)/(aᵀa) với điều kiện a ≠ 0.
+> - Lưu ý x là một đại lượng vô hướng (scalar) trong không gian 1 chiều (chiếu lên một đường thẳng), trước khi mở rộng lên ma trận A trong không gian nhiều chiều.
 
 <br>
 
@@ -97,6 +129,18 @@
 > ⇔ aᵀb = aᵀxa = xaᵀa (vì x là scalar nên move đi đâu cũng
 > được)
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và giải thích rõ ràng lý do có thể chuyển vị trí của đại lượng vô hướng x trong biểu thức.
+>
+> **✓ Strengths**
+> - Hiểu đúng và khai triển chính xác điều kiện trực giao aᵀ(b - xa) = 0.
+> - Nắm rõ tính chất x là một đại lượng vô hướng (scalar) nên có thể giao hoán linh hoạt trong phép nhân ma trận/vector.
+>
+> **💡 Deeper notes**
+> - Để tìm nghiệm x = (aᵀb)/(aᵀa), cần lưu ý điều kiện a ≠ 0 để tích vô hướng aᵀa = ||a||² khác 0.
+
 <br>
 
 <a id="node-95k4jaz"></a>
@@ -113,6 +157,25 @@
 > Và đó là cái cần tìm khi giải bài toán tìm projection của 
 > b trên a
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+>
+> Ghi chép đã nắm đúng công thức tính hệ số vô hướng x từ bài giảng, tuy nhiên cần phân biệt rõ giữa hệ số x và vectơ hình chiếu p = ax.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Và đó là cái cần tìm khi giải bài toán tìm projection của b trên a"*
+>
+> Đại lượng x = aᵀb / aᵀa chỉ là hệ số vô hướng (scalar component). Vectơ hình chiếu thực sự cần tìm là p = ax. Nếu không làm rõ bước này, người học dễ nhầm lẫn hình chiếu là một số thay vì một vectơ.
+>
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác bước biến đổi đại số để tìm hệ số x từ phương trình trực giao trên bảng.
+>
+> **💡 Deeper notes**
+> - Phép chia cho aᵀa đòi hỏi điều kiện vectơ a khác vectơ không (tức aᵀa = ||a||² > 0).
+> - Từ x, vectơ hình chiếu hoàn chỉnh là p = a(aᵀb / aᵀa) = (aaᵀ / aᵀa)b, dẫn đến khái niệm ma trận chiếu P = aaᵀ / aᵀa ở phần tiếp theo của bài giảng.
+
 <br>
 
 <a id="node-kvzzr6s"></a>
@@ -128,7 +191,18 @@
 >
 >
 >
-> Me: sẽ scale lên **thành 2p**
+> Thử trả lời: sẽ scale lên **thành 2p**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và trả lời đúng câu hỏi tư duy của giáo sư: phép chiếu tuyến tính đối với vector b nên khi b gấp đôi thì hình chiếu p cũng gấp đôi.
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất tuyến tính của phép chiếu đối với vector được chiếu (b -> 2b dẫn đến p -> 2p).
+>
+> **💡 Deeper notes**
+> - Một câu hỏi phụ đi kèm rất quan trọng của GS Strang: nếu scale vector đích a lên thành 2a thì hình chiếu p sẽ không đổi, vì a xuất hiện ở cả tử số và mẫu số (bậc hai) nên tự triệt tiêu, phản ánh đúng tính chất hình chiếu chỉ phụ thuộc vào phương của đường thẳng.
 
 <br>
 
@@ -147,6 +221,18 @@
 > thành 2a thì cả tử và mẫu cũng đều x4, và nó sẽ
 > cancel nhau nên p không thay đổi gì
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác cả về mặt đại số lẫn ý nghĩa hình học của phép chiếu.
+>
+> **✓ Strengths**
+> - Nắm rõ tính chất bất biến theo tỷ lệ (scale-invariance) của phép chiếu lên đường thẳng tạo bởi vector a.
+> - Lập luận đại số chính xác khi nhận thấy cả tử và mẫu (khi gộp vector a ngoài cùng vào tử) đều là bậc 2 đối với a, nên đều nhân 4 và triệt tiêu nhau.
+>
+> **💡 Deeper notes**
+> - Về mặt hình học, vector a chỉ đóng vai trò xác định phương của đường thẳng (không gian con một chiều), do đó thay đổi độ dài của a không làm thay đổi đường thẳng và giữ nguyên hình chiếu p.
+
 <br>
 
 <a id="node-a7h11fc"></a>
@@ -159,6 +245,17 @@
 > thế thì gs cho biết ta có thể **biểu diễn phép projection bởi
 > một matrix**, gọi nó là **Projection matrix P**, và **thông qua
 > nó ta sẽ tìm được projection của vector b**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác ý tưởng cốt lõi của bài giảng: biểu diễn phép chiếu hình học dưới dạng một toán tử tuyến tính thông qua ma trận chiếu P tác động lên vector b (p = Pb).
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác vai trò và bản chất của ma trận chiếu P trong việc tìm hình chiếu của vector b.
+>
+> **💡 Deeper notes**
+> - Trong trường hợp chiếu lên đường thẳng (subspace 1 chiều sinh bởi vector a), ma trận chiếu có dạng cụ thể là P = (a a^T) / (a^T a).
 
 <br>
 
@@ -173,6 +270,19 @@
 > **scalar** (dot product của a với chính nó) và **aaᵀ
 > là một cols x một row** → như ta đã biết nó là
 > một **RANK 1 MATRIX**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc bản chất đại số tuyến tính: phân biệt rõ scalar ở mẫu số và tích ngoài tạo ma trận hạng 1 ở tử số để hình thành ma trận chiếu P.
+>
+> **✓ Strengths**
+> - Hiểu chính xác công thức ma trận chiếu P = aaᵀ / aᵀa và phân biệt rõ mẫu số là scalar còn tử số là ma trận.
+> - Nhận diện chính xác tích giữa vector cột và vector hàng (outer product) tạo ra ma trận có hạng bằng 1 (rank 1 matrix).
+>
+> **💡 Deeper notes**
+> - Điều kiện cần là vector a khác 0 (a ≠ 0) để mẫu số vô hướng aᵀa > 0 và ma trận chiếu xác định.
+> - Ma trận chiếu P = aaᵀ / aᵀa này luôn có hai tính chất nền tảng: đối xứng (Pᵀ = P) và lũy đẳng (P² = P).
 
 <br>
 
@@ -208,6 +318,19 @@
 > space của P chính là line đi qua vector a**. Nên kết quả của
 > **Pb sẽ vẫn nằm trên line này**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú rất chính xác, hiểu sâu sắc bản chất đại số tuyến tính về không gian cột (column space) của ma trận chiếu P và tích ma trận - vector.
+>
+> **✓ Strengths**
+> - Nắm rất vững định nghĩa cơ bản: kết quả nhân ma trận với một vector luôn là tổ hợp tuyến tính các cột và nằm trong column space của ma trận đó.
+> - Hiểu rõ ma trận chiếu lên đường thẳng (vector a) có rank bằng 1 và column space chính là đường thẳng sinh bởi vector a.
+>
+> **💡 Deeper notes**
+> - Tính chất ma trận P có rank = 1 và basis là {a} ngầm định điều kiện vector a khác 0 (non-zero vector).
+> - Một tính chất quan trọng khác của ma trận chiếu P là tính lũy đẳng (P^2 = P) và đối xứng (P^T = P), giải thích tại sao chiếu hai lần lên cùng một đường thẳng thì kết quả không đổi.
+
 **🔗 See also:** [Dạng ma trận Aᵀ(b-Âx)=0](#node-5su5cq6)
 
 <br>
@@ -220,6 +343,21 @@
 
 > [!NOTE]
 > Gs: Đúng vậy
+
+> [!TIP]
+> 🤖 **AI Check** — 🔴 Critical issues — ❌ **0/100** · ✗ Fix first
+>
+> Ghi chú không chứa bất kỳ nội dung toán học hay kiến thức nào từ bài giảng (về ma trận hình chiếu P, không gian cột C(P) và hạng rank(P) = 1). Bạn cần ghi lại kiến thức trọng tâm thay vì chỉ ghi một câu cảm thán/đồng ý.
+>
+> **🔴 Critical issues**
+>
+> **1.** *"Gs: Đúng vậy"*
+>
+> Ghi chú hoàn toàn thiếu nội dung bài học. Bảng thể hiện tính chất của ma trận chiếu lên một đường thẳng qua vector a: C(P) là đường thẳng đi qua a và rank(P) = 1, nhưng ghi chú không ghi nhận bất kỳ khái niệm hay công thức nào.
+>
+>
+> **💡 Deeper notes**
+> - Khi chiếu một vector lên một đường thẳng (span{a}), không gian cột C(P) là không gian 1 chiều sinh bởi a, do đó hạng của ma trận hình chiếu rank(P) luôn bằng 1.
 
 <br>
 
@@ -246,6 +384,18 @@
 > ⇒ tức là vẫn transpose bằng chính nó, nên nó mà 
 > **symmetric** matrix
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và logic, bạn đã chứng minh tính đối xứng của ma trận hình chiếu P một cách rõ ràng qua các bước chuyển vị chuẩn xác.
+>
+> **✓ Strengths**
+> - Áp dụng chính xác quy tắc chuyển vị của tích hai ma trận (AB)ᵀ = BᵀAᵀ.
+> - Kết luận đúng bản chất ma trận hình chiếu 1 chiều luôn là ma trận đối xứng (Pᵀ = P).
+>
+> **💡 Deeper notes**
+> - Ở bước mẫu số giữ nguyên (aᵀa), về mặt bản chất đây là một số vô hướng (scalar, tích vô hướng của a với chính nó), do đó chuyển vị của nó bằng chính nó.
+
 <br>
 
 <a id="node-eo7tabw"></a>
@@ -261,6 +411,17 @@
 >
 > \-&gt; Rõ ràng ta **sẽ vẫn ở đó**. Vậy là PP = P
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và nắm trọn vẹn bản chất hình học của tính chất lũy đẳng (idempotent) của ma trận hình chiếu: P² = P.
+>
+> **✓ Strengths**
+> - Hiểu đúng trực quan hình học: khi một điểm đã nằm trên đường thẳng/không gian con thì phép chiếu tiếp tục sẽ giữ nguyên điểm đó, dẫn đến P² = P.
+>
+> **💡 Deeper notes**
+> - Tính chất P² = P là điều kiện cần và đủ cho một ma trận hình chiếu (projection matrix); nếu là hình chiếu trực giao (orthogonal projection) như trong bài giảng thì P còn có thêm tính chất đối xứng Pᵀ = P.
+
 <br>
 
 <a id="node-ltdmtzs"></a>
@@ -271,6 +432,17 @@
 
 > [!NOTE]
 > Từ đó ta có hai tính chất của matrix P: Pᵀ = P và P² = P
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác khi nắm bắt hai tính chất đặc trưng cơ bản nhất của ma trận hình chiếu P: tính đối xứng (Pᵀ = P) và tính lũy đẳng (P² = P).
+>
+> **✓ Strengths**
+> - Ghi chép chính xác hai tính chất cốt lõi của ma trận hình chiếu trực giao từ bài giảng.
+>
+> **💡 Deeper notes**
+> - Tính chất P² = P (lũy đẳng) đúng với mọi ma trận chiếu nói chung, trong khi tính chất Pᵀ = P (đối xứng) là điều kiện cần và đủ để phép chiếu đó là hình chiếu trực giao (orthogonal projection).
 
 <br>
 
@@ -495,14 +667,30 @@
 >
 >
 >
-> a1T và a2T - tức là transpose hai columns của A, đương nhiên 
-> sẽ có matrix Aᵀ, ta có: **Aᵀ(b-Ax̂) = 0**
+> a1ᵀ và a2ᵀ - tức là transpose hai columns của A, đương nhiên sẽ có matrix Aᵀ, ta có: **Aᵀ(b-Ax̂) = 0**
 >
 >
 >
-> để ý rằng hồi nãy, equation ta có là **aᵀe = aᵀ(b-Ax̂) = 0**
-> còn bây giờ ta có hai vector a1 a2 basis của C(A) nên ta
-> có : **Aᵀ(b-Ax̂) = 0**
+> để ý rằng hồi nãy, equation ta có là **aᵀe = aᵀ(b-Ax̂) = 0**còn bây giờ ta có hai vector a1 a2 basis của C(A) nên ta có : **Aᵀ(b-Ax̂) = 0**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác bản chất việc ghép các phương trình trực giao thành dạng ma trận Aᵀ(b - Ax̂) = 0 và liên hệ tốt với trường hợp 1 chiều trước đó.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"Aᵀ(b-Ax̂) = 0"*
+>
+> Vế phải ở đây là vector không (zero vector) có kích thước 2x1 tương ứng với [0; 0], chứ không phải là scalar 0 đơn thuần.
+>
+>
+> **✓ Strengths**
+> - Hiểu đúng cách xây dựng ma trận Aᵀ từ việc chuyển vị các vector cột của A thành các hàng.
+> - Liên hệ mạch lạc giữa trường hợp hình chiếu lên một đường thẳng (aᵀe = 0) và hình chiếu lên không gian nhiều chiều C(A).
+>
+> **💡 Deeper notes**
+> - Để suy ra nghiệm duy nhất x̂ = (AᵀA)⁻¹Aᵀb ở bước tiếp theo, các vector cột a1, a2 cần độc lập tuyến tính để ma trận AᵀA khả nghịch.
 
 **🔗 See also:** [Không gian cột của P](#node-u1oddq3)
 
@@ -515,19 +703,26 @@
 <p align="center"><kbd><img src="assets/o6y76936t9e.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, gs đề nghị ta, vì bây giờ đã biết về 4 subspace, thì ta
-> hãy đưa nó vào đây.
+> tiếp, gs đề nghị ta, vì bây giờ đã biết về 4 subspace, thì ta hãy đưa nó vào đây.
 >
 >
 >
-> Đầu tiên đó là, trong Aᵀ(b-Ax̂) = 0, thì e=b-Ax̂ connect với
-> subspace nào?
+> đầu tiên đó là, trong aᵀ(b-ax̂) = 0, thì e=b-ax̂ connect với subspace nào?
 >
 >
 >
-> Me: Đương nhiên V**Ì e LÀ SOLUTION CỦA Aᵀy=0** nên nó
-> chính là **nằm trong nullspace của Aᵀ,** HAY CÒN **GỌI LÀ
-> LEFT NULLSPACE** **CỦA A**
+> Thử trả lời: đương nhiên vì e là solution của aᵀy=0 nên nó chính là nằm trong nullspace của aᵀ, hay còn gọi là left nullspace của a
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác và trả lời đúng trọng tâm câu hỏi trên bảng: vector sai số e nằm trong nullspace của Aᵀ (left nullspace của A) vì thỏa mãn Aᵀe = 0.
+>
+> **✓ Strengths**
+> - Xác định chính xác e thuộc không gian nghiệm N(Aᵀ) (left nullspace của A) từ phương trình chuẩn Aᵀ(b - Ax̂) = 0.
+>
+> **💡 Deeper notes**
+> - Điều này cũng hoàn toàn nhất quán với tính chất hình học: e vuông góc với không gian cột C(A), mà định lý cơ bản của đại số tuyến tính khẳng định N(Aᵀ) chính là phần bù trực giao (orthogonal complement) của C(A).
 
 <br>
 
@@ -543,6 +738,18 @@
 > của A** vì bài trước ta đã biết các **cặp subspace
 > orthogonal** là (nullspace of A và rowspace of A),
 > (nullspace of Aᵀ và columspace of A)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và mạch lạc, giải thích rõ mối liên hệ giữa phương trình Aᵀe = 0, không gian hạt nhân bên trái N(Aᵀ) và tính trực giao với không gian cột C(A).
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất đại số tuyến tính: Aᵀe = 0 đồng nghĩa với việc e nằm trong nullspace của Aᵀ.
+> - Liên kết chính xác tính chất trực giao giữa các cặp không gian con cơ bản: N(Aᵀ) ⊥ C(A) và N(A) ⊥ C(Aᵀ).
+>
+> **💡 Deeper notes**
+> - Cụ thể và chặt chẽ hơn, N(Aᵀ) và C(A) không chỉ trực giao mà còn là phần bù trực giao của nhau (orthogonal complements) trong không gian vector ℝᵐ.
 
 <br>
 
@@ -567,9 +774,19 @@
 <p align="center"><kbd><img src="assets/qguoooienz.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> gs nhận xét rằng, hồi nãy với 1 dimension, ta có **aᵀa là
-> scalar**, aᵀb cũng là scalar, và x sẽ là một factor giữa hai con
-> số đó. Còn bây giờ ta có **AᵀA là nxn matrix.**
+> gs nhận xét rằng, hồi nãy với 1 dimension, ta có **aᵀa là scalar**, aᵀb cũng là scalar, và x sẽ là một factor giữa hai con số đó. Còn bây giờ ta có **AᵀA là n × n matrix.**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác, nắm bắt rất tốt sự chuyển tiếp từ hình chiếu trên đường thẳng (1 chiều) sang không gian con nhiều chiều bằng ma trận phương trình chuẩn (normal equation).
+>
+> **✓ Strengths**
+> - Hiểu rõ bản chất phép chiếu 1 chiều với $a^T a$ và $a^T b$ là các vô hướng (scalar).
+> - Nhận diện chính xác kích thước của ma trận $A^T A$ là $n \times n$ khi tổng quát hóa lên trường hợp ma trận $A$ kích thước $m \times n$.
+>
+> **💡 Deeper notes**
+> - Để giải tìm nghiệm duy nhất $\hat{x} = (A^T A)^{-1} A^T b$, các cột của ma trận $A$ phải độc lập tuyến tính, khi đó ma trận vuông đối xứng $A^T A$ khả nghịch (khác 0 như phép chia cho vô hướng $a^T a$ ở trường hợp 1 chiều).
 
 <br>
 
@@ -649,6 +866,18 @@
 > Và **cái rule ở (AᵀA)⁻¹ = A⁻¹(Aᵀ)⁻¹ chỉ đúng khi A square
 > & invertible matrix** mà thôi
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác và trọn vẹn bản chất lập luận của giáo sư: việc tách $(A^TA)^{-1}$ thành $A^{-1}(A^T)^{-1}$ là sai lầm phổ biến do ngộ nhận $A$ khả nghịch, trong khi $A$ là ma trận chữ nhật đứng (tall & thin).
+>
+> **✓ Strengths**
+> - Hiểu rõ tại sao không thể áp dụng công thức nghịch đảo tích $(AB)^{-1} = B^{-1}A^{-1}$ khi các ma trận thành phần không vuông và không khả nghịch.
+> - Nắm đúng đặc điểm kích thước của ma trận $A$ (nhiều hàng hơn cột / tall and thin) trong bài toán bình phương tối thiểu.
+>
+> **💡 Deeper notes**
+> - Về mặt hình học: nếu $A$ là ma trận vuông và khả nghịch thì không gian cột $C(A)$ phủ kín toàn bộ không gian $\mathbb{R}^m$. Khi đó hình chiếu của vector $b$ lên $C(A)$ chính là chính nó ($P b = b$), do đó ma trận hình chiếu $P = I$ là hoàn toàn chuẩn xác trong trường hợp đó.
+
 <br>
 
 <a id="node-qiqdgem"></a>
@@ -666,8 +895,19 @@
 >
 >
 >
-> → **Rn**, vì khi đó **mọi n cols và n rows của A đều là
-> independent**, chúng sẽ **span toàn bộ Rn**
+> → **Rⁿ**, vì khi đó **mọi n cols và n rows của A đều là independent**, chúng sẽ **span toàn bộ Rn**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và nắm đúng bản chất: khi ma trận A vuông và khả nghịch (kích thước n x n), các cột độc lập tuyến tính nên không gian cột chính là toàn bộ R^n.
+>
+> **✓ Strengths**
+> - Hiểu đúng rằng ma trận vuông khả nghịch n x n có n cột độc lập tuyến tính và span toàn bộ R^n.
+> - Bắt trúng câu hỏi gợi mở của giáo sư Strang khi dẫn dắt về trường hợp ma trận chiếu P trở thành ma trận đơn vị I.
+>
+> **💡 Deeper notes**
+> - Khi C(A) = R^n, hình chiếu của bất kỳ vector b nào lên C(A) chính là chính nó (p = b), do đó ma trận chiếu P = I; điều này giải thích về mặt hình học cho phép biến đổi đại số P = A(A^T A)^(-1) A^T = A A^(-1) (A^T)^(-1) A^T = I trên bảng.
 
 <br>
 
@@ -685,9 +925,27 @@
 >
 >
 >
-> Me: Đương nhiên **b đã nằm trong Rn** rồi mà **giờ project
+> Thử trả lời: Đương nhiên **b đã nằm trong Rn** rồi mà **giờ project
 > nó "lên" Rn** thì đương nhiên **chả cần làm gì**, tức là 
 > chỉ cần nhân với Identity matrix → **P = I**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú thể hiện trực giác hình học rất chính xác: hình chiếu của một vector lên toàn bộ không gian chứa nó chính là chính nó, do đó ma trận hình chiếu là ma trận đơn vị I.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"THE WHOLE SPACE R^N"*
+>
+> Với ma trận A kích thước m x n, không gian cột (Column Space) nằm trong R^m chứ không phải R^n (trừ khi ma trận vuông n x n). Khi không gian cột phủ toàn bộ không gian thì đó là R^m.
+>
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất hình học: nếu vector b đã nằm sẵn trong không gian đích thì phép chiếu giữ nguyên b (P*b = b), suy ra P = I.
+>
+> **💡 Deeper notes**
+> - Về mặt đại số, khi các cột của A sinh ra toàn bộ R^m thì A là ma trận vuông khả nghịch (m = n). Khi đó (A^T * A)^(-1) tách thành A^(-1) * (A^T)^(-1), triệt tiêu với A và A^T ở hai bên để cho ra đúng P = I.
 
 <br>
 
@@ -716,14 +974,31 @@
 <p align="center"><kbd><img src="assets/g7pm6yp6ys.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Tiếp, gs cho rằng ta **vẫn sẽ có 2 tính chất của
-> projection** matrix P đó là **symmetric**.
+> Tiếp, gs cho rằng ta vẫn sẽ có 2 tính chất của projection matrix P đó là symmetric.
 >
 >
 >
-> Điều này dễ thấy vì **(AᵀA)⁻¹**  sẽ symmetric vì **AᵀA
-> symmetric**. Nên [**A(AᵀA)⁻¹Aᵀ]ᵀ sẽ vẫn bằng
-> A(AᵀA)⁻¹Aᵀ thôi**
+> Điều này dễ thấy vì (AᵀA)⁻¹ sẽ symmetric vì AᵀA symmetric. Nên \[A(AᵀA)⁻¹Aᵀ\]ᵀ sẽ vẫn bằng A(AᵀA)⁻¹Aᵀ thôi
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+>
+> Ghi chú giải thích rất chính xác tính đối xứng (Pᵀ = P) của ma trận chiếu P dựa trên tính đối xứng của AᵀA. Tuy nhiên, bạn nhắc đến '2 tính chất' nhưng mới chỉ nêu và kiểm tra 1 tính chất (đối xứng) mà chưa đề cập tính chất thứ hai (P² = P).
+>
+> **🟡 Minor issues**
+>
+> **1.** *"vẫn sẽ có 2 tính chất của projection matrix P đó là symmetric"*
+>
+> Câu nói đề cập đến '2 tính chất' nhưng đoạn sau chỉ nêu và chứng minh tính đối xứng (Pᵀ = P), bỏ sót tính chất lũy đẳng (idempotent: P² = P) được ghi trên bảng.
+>
+>
+> **✓ Strengths**
+> - Lập luận tính đối xứng của (AᵀA)⁻¹ từ tính đối xứng của AᵀA là hoàn toàn chính xác.
+> - Hiểu đúng quy tắc lấy chuyển vị của tích ma trận để suy ra Pᵀ = P.
+>
+> **💡 Deeper notes**
+> - Để (AᵀA)⁻¹ tồn tại, ma trận A cần có các cột độc lập tuyến tính (full column rank).
+> - Tính chất còn lại trên bảng là P² = P (chiếu hai lần liên tiếp không làm thay đổi kết quả, [A(AᵀA)⁻¹Aᵀ][A(AᵀA)⁻¹Aᵀ] = A(AᵀA)⁻¹Aᵀ).
 
 <br>
 
@@ -734,13 +1009,11 @@
 <p align="center"><kbd><img src="assets/239aumwa2d4.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> và **tính chất thứ hai là projection** của projection thì vẫn
-> vậy. Và dễ dàng thấy điều này là đúng khi **nhân P với P
-> vẫn ra lại P: 
+> và tính chất thứ hai là projection của projection thì vẫn vậy. Và dễ dàng thấy điều này là đúng khi nhân P với P vẫn ra lại P:
 >
 >
 >
-> PP =** A(AᵀA)⁻¹**Aᵀ A(AᵀA)⁻¹**Aᵀ = A(AᵀA)⁻¹Aᵀ = P
+> PP = A(AᵀA)⁻¹Aᵀ A(AᵀA)⁻¹Aᵀ = A(AᵀA)⁻¹Aᵀ = P
 
 <br>
 
@@ -755,6 +1028,18 @@
 > bài toán mà ta cần **solve một system of equation** có **rất
 > nhiều equation**. Và một application điển hình **chính là bài
 > toán LEAST SQUARE**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác bối cảnh và mục đích ứng dụng của ma trận hình chiếu trong việc giải hệ phương trình có nhiều phương trình hơn ẩn số qua bài toán Least Squares.
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác vai trò cầu nối của ma trận hình chiếu P đối với bài toán xấp xỉ bình phương tối thiểu (Least Squares).
+> - Nhận diện đúng dạng bài toán dẫn đến Least Squares là hệ phương trình có quá nhiều phương trình so với số ẩn (hệ overdetermined).
+>
+> **💡 Deeper notes**
+> - Khi hệ Ax = b có nhiều phương trình hơn số ẩn (m > n), vector b thường không nằm trong không gian cột C(A); ma trận chiếu P được dùng để chiếu b vuông góc lên C(A) nhằm tìm nghiệm xấp xỉ tối ưu.
 
 <br>
 
@@ -862,6 +1147,19 @@
 >
 > Đó là **thay vì giải equation Ax = b**, ta sẽ **giải equation AᵀAx̂ =
 > Aᵀb**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác và trực quan bản chất của phương pháp bình phương tối thiểu (least squares): thay thế hệ vô nghiệm bằng hệ phương trình chuẩn (normal equation) để tìm nghiệm tối ưu.
+>
+> **✓ Strengths**
+> - Hiểu rõ động lực chuyển từ việc giải hệ vô nghiệm Ax = b sang giải phương trình chuẩn AᵀAx̂ = Aᵀb để tối thiểu hóa sai số.
+> - Liên hệ tốt giữa bài toán đại số tuyến tính với bài toán thực tế khớp đường thẳng (tìm C, D qua 3 điểm không thẳng hàng).
+>
+> **💡 Deeper notes**
+> - Để phương trình chuẩn AᵀAx̂ = Aᵀb có nghiệm duy nhất thì ma trận AᵀA phải khả nghịch, điều này tương đương với việc các cột của ma trận A độc lập tuyến tính.
+> - Bản chất hình học của việc giải bài toán gần nhất này là chiếu vector b vuông góc xuống không gian cột C(A) để thu được vector p = Ax̂ gần b nhất.
 
 <br>
 
