@@ -95,7 +95,7 @@
 >
 >
 >
-> Me: Đó là **permutation** matrix, bởi nó chỉ là matrix có
+> Thử trả lời: Đó là **permutation** matrix, bởi nó chỉ là matrix có
 > được khi ta **exchange row từ identity matrix**, và ta đã
 > biết **det I = 1**
 
@@ -214,7 +214,7 @@
 >
 >
 >
-> Me: Từ property 2 ta biết khi **switch row thì det đổi dấu**.
+> Thử trả lời: Từ property 2 ta biết khi **switch row thì det đổi dấu**.
 > Thế thì nếu hai hàng giống nhau, đổi chỗ thì cơ bản là  ta
 > theo đó ta có hai matrix có det khác dấu. det A = - det B
 > Tuy nhiên vì hai hàng giống nhau nên B vẫn là A, ta có
@@ -323,7 +323,7 @@
 >
 >
 >
-> Me: Ta có thể giải thích như sau:
+> Thử trả lời: Ta có thể giải thích như sau:
 >
 >
 >
@@ -375,7 +375,7 @@
 <p align="center"><kbd><img src="assets/p4264dmpc3o.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Me: lấy ví dụ matrix này, đầu tiên dễ thấy nó là d3 × det
+> Thử trả lời: lấy ví dụ matrix này, đầu tiên dễ thấy nó là d3 × det
 > U1 (đây là tính chất 3a)
 >
 >
@@ -453,7 +453,7 @@
 >
 >
 >
-> Me: Thử xem tính chất thứ 8 này có thể chứng minh từ các
+> Thử trả lời: Thử xem tính chất thứ 8 này có thể chứng minh từ các
 > properties khác: Đó là nếu A non-invertible thì nó sẽ không
 > full-rank, đồng nghĩa **elimination sẽ cho U có ít nhất 1 row
 > bằng 0**. Thì khi đó:
@@ -537,7 +537,7 @@
 >
 >
 >
-> Me: A × A⁻¹ = I, nên det I = det A * det A⁻¹ 
+> Thử trả lời: A × A⁻¹ = I, nên det I = det A * det A⁻¹ 
 >
 >
 >
