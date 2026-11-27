@@ -1,6 +1,6 @@
 # Lecture 15: Projections Onto Subspaces
 
-📊 **Progress:** `45` Notes | `47` Screenshots | `24` AI Reviews
+📊 **Progress:** `45` Notes | `48` Screenshots | `27` AI Reviews
 
 ---
 <a id="node-l9qi36h"></a>
@@ -318,6 +318,8 @@
 > space của P chính là line đi qua vector a**. Nên kết quả của
 > **Pb sẽ vẫn nằm trên line này**
 
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=7z_1wzPvz38)
+
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
@@ -430,6 +432,8 @@
 
 <p align="center"><kbd><img src="assets/fc4kwsud19.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/rf5fgfq45bc.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > Từ đó ta có hai tính chất của matrix P: Pᵀ = P và P² = P
 
@@ -484,6 +488,18 @@
 > Kí hiệu x̂ để ám chỉ solution này là của bài toán gần với
 > bài toán gốc
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú giải thích rất chính xác và trực quan bản chất hình học vì sao cần dùng phép chiếu khi hệ phương trình Ax=b vô nghiệm.
+>
+> **✓ Strengths**
+> - Nắm rất vững trực giác hình học: ma trận cao và ốm (m > n) thì số cột không đủ span toàn bộ R^m, khiến vector b dễ rơi ra ngoài C(A).
+> - Hiểu chuẩn xác mục đích của hình chiếu: đưa b về p thuộc C(A) để hệ phương trình Ax̂ = p chắc chắn có nghiệm.
+>
+> **💡 Deeper notes**
+> - Hệ Ax̂ = p luôn đảm bảo có nghiệm vì p ∈ C(A), tuy nhiên nghiệm x̂ chỉ là duy nhất nếu các cột của A độc lập tuyến tính (rank(A) = n).
+
 <br>
 
 <a id="node-katlkhi"></a>
@@ -497,6 +513,17 @@
 > b lên line qua vector a hồi nãy sang **higher dimension**
 > subspace - **a plane**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm rất chuẩn xác ngữ cảnh bài giảng: chuyển từ bài toán chiếu lên không gian 1 chiều (đường thẳng đi qua vector a) sang không gian nhiều chiều hơn (mặt phẳng / column space).
+>
+> **✓ Strengths**
+> - Nhận diện chính xác bước chuyển tiếp sư phạm của giáo sư từ phép chiếu 1D lên không gian con nhiều chiều hơn (2D/mặt phẳng).
+>
+> **💡 Deeper notes**
+> - Mặt phẳng mà giáo sư đang vẽ trên bảng minh họa cho không gian cột (column space) của ma trận A (như dòng chữ 'onto col space' ở góc trái).
+
 <br>
 
 <a id="node-eb13jz9"></a>
@@ -508,6 +535,17 @@
 > [!NOTE]
 > Và ta cũng sẽ đi **tìm projection
 > của b lên plane này**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú ngắn gọn và nắm đúng ý tưởng chính của bài giảng: khi hệ $Ax = b$ vô nghiệm, ta tìm hình chiếu $p$ của vector $b$ lên không gian cột (thể hiện bằng mặt phẳng trong hình vẽ).
+>
+> **✓ Strengths**
+> - Nhận diện chính xác mục tiêu hình học được vẽ và trình bày trên bảng: chiếu vector b xuống mặt phẳng để tìm p.
+>
+> **💡 Deeper notes**
+> - "Mặt phẳng này" trên bảng vẽ chính là không gian cột (column space) $C(A)$ của ma trận $A$, và hình chiếu $p$ sẽ thỏa mãn phương trình $A\hat{x} = p$ luôn có nghiệm.
 
 <br>
 
