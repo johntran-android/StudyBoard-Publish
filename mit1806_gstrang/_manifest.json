@@ -1,6 +1,6 @@
 {
   "title": "MIT 18.06",
-  "publishedAt": 1795736325873,
+  "publishedAt": 1795738092448,
   "sections": [
     {
       "title": "18.03 Lec 25",
@@ -96,7 +96,7 @@
       "title": "Lecture 15: Projections Onto Subspaces",
       "path": "mit1806_gstrang/lecture_15_projections_onto_subspaces.md",
       "noteCount": 45,
-      "imageCount": 47
+      "imageCount": 48
     },
     {
       "title": "Lecture 16: Projection Matrices And Least Squares",
@@ -220,8 +220,16 @@
     }
   ],
   "totalNotes": 1181,
-  "totalImages": 1309,
+  "totalImages": 1310,
   "videos": [
+    {
+      "id": "7z_1wzPvz38",
+      "title": "Tại sao ma trận chiếu P luôn đối xứng và P² = P?",
+      "uploadedAt": 1795737197605,
+      "at": [
+        "LECTURE 15: PROJECTIONS ONTO SUBSPACES"
+      ]
+    },
     {
       "id": "8mQBH6ocR1s",
       "title": "Làm sao tìm ma trận chiếu lên không gian con một chiều?",
