@@ -1,6 +1,6 @@
 # Lecture 15: Projections Onto Subspaces
 
-📊 **Progress:** `45` Notes | `48` Screenshots | `27` AI Reviews
+📊 **Progress:** `45` Notes | `48` Screenshots | `29` AI Reviews
 
 ---
 <a id="node-l9qi36h"></a>
@@ -28,7 +28,7 @@
 >
 > Đầu tiên, gs dùng ví dụ trong **1D dimension subspace** - đó là **đường thẳng a**: **tìm điểm trên a sao cho gần nhất với b**
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=8mQBH6ocR1s)
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=N3lyFCha--0)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -318,8 +318,6 @@
 > space của P chính là line đi qua vector a**. Nên kết quả của
 > **Pb sẽ vẫn nằm trên line này**
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=7z_1wzPvz38)
-
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
 >
@@ -595,6 +593,24 @@
 > Gs nói n**ếu b nằm trong C(A) thì khỏe rồ**i,
 > **projection của b lên A sẽ chỉ là chính nó**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác ý cốt lõi của bài giảng: khi vector b đã thuộc không gian cột của ma trận thì hình chiếu của nó chính là chính nó (sai số triệt tiêu).
+>
+> **🟡 Minor issues**
+>
+> **1.** *"projection của b lên A"*
+>
+> Về mặt thuật ngữ chuẩn, phép chiếu là chiếu lên một không gian con (subspace), cụ thể ở đây là không gian cột C(A) của ma trận A, chứ không phải chiếu lên bản thân ma trận A.
+>
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác trực giác hình học của phép chiếu: nếu vector đã nằm sẵn trong không gian con thì hình chiếu p bằng chính nó (p = b) và sai số e = 0.
+>
+> **💡 Deeper notes**
+> - Khi b nằm trong C(A), hệ phương trình Ax = b có nghiệm chính xác, do đó ma trận chiếu P tác động lên b sẽ giữ nguyên b: Pb = A(A^T A)^(-1) A^T b = b.
+
 <br>
 
 <a id="node-2m11r3f"></a>
@@ -611,6 +627,25 @@
 >
 >
 > (giống như e perpendicular với line a hồi nãy)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+>
+> Ghi chú nắm rất tốt trực giác hình học và bản chất của phép chiếu trực giao lên không gian cột. Một điểm nhỏ cần lưu ý là $e = b - p$ là một vector (vector sai số), còn 'khoảng cách' là độ dài của vector đó.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"gọi e là khoảng cách từ b với p"*
+>
+> Về mặt thuật ngữ chính xác, $e = b - p$ là 'vector sai số' (error vector). 'Khoảng cách' giữa $b$ và $p$ là một đại lượng vô hướng (scalar) bằng độ dài của vector này, tức $||e|| = ||b - p||$.
+>
+>
+> **✓ Strengths**
+> - Nắm chuẩn trực giác hình học: vector sai số e vuông góc với toàn bộ mặt phẳng (không gian cột C(A)).
+> - Có sự liên hệ tốt và nhất quán với trường hợp chiếu lên một đường thẳng đã học trước đó.
+>
+> **💡 Deeper notes**
+> - Vì e vuông góc với toàn bộ mặt phẳng C(A), điều này tương đương với việc e vuông góc với mọi vector cơ sở của mặt phẳng đó: a1^T * e = 0 và a2^T * e = 0, hay viết gọn dưới dạng ma trận là A^T * e = 0.
 
 <br>
 
