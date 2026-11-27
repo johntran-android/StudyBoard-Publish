@@ -1,6 +1,6 @@
 {
   "title": "MIT 18.06",
-  "publishedAt": 1795738092448,
+  "publishedAt": 1795740496950,
   "sections": [
     {
       "title": "18.03 Lec 25",
@@ -223,17 +223,9 @@
   "totalImages": 1310,
   "videos": [
     {
-      "id": "7z_1wzPvz38",
-      "title": "Tại sao ma trận chiếu P luôn đối xứng và P² = P?",
-      "uploadedAt": 1795737197605,
-      "at": [
-        "LECTURE 15: PROJECTIONS ONTO SUBSPACES"
-      ]
-    },
-    {
-      "id": "8mQBH6ocR1s",
-      "title": "Làm sao tìm ma trận chiếu lên không gian con một chiều?",
-      "uploadedAt": 1795735028157,
+      "id": "N3lyFCha--0",
+      "title": "Chiếu lên 1D subspace span{a}. Vì sao ma trận chiếu luôn đối xứng và có P² = P?",
+      "uploadedAt": 1795737945430,
       "at": [
         "LECTURE 15: PROJECTIONS ONTO SUBSPACES"
       ]
