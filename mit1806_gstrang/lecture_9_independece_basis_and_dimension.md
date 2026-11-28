@@ -619,7 +619,7 @@
 >
 >
 > Chỉ 2 vec được không? ⇒ Không, **vì 2 vector (independence)
-> chỉ span được một 2D plane trong R3**
+> chỉ span được một 2D plane trong R³**
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -769,8 +769,8 @@
 > có, **hai vector này độc lập tuyến tính**, vậy nó đã **thỏa  điều
 > kiện thứ nhất**. Vậy nó sẽ là **basis của cái vector space mà
 > chúng span** - là mọi linear combination của chúng. Và đó là
-> **một 2D plane trong R3** (chú ý lại rằng ko phải là R2 nhé, vì
-> vector có 3 phần tử, nó nằm trong R3)
+> **một 2D plane trong R³** (chú ý lại rằng ko phải là R2 nhé, vì
+> vector có 3 phần tử, nó nằm trong R³)
 >
 >
 >
@@ -781,7 +781,7 @@
 >
 >
 > Tóm lại, **CHỈ XÉT 2 VECTOR**, thì nó **LÀ MỘT BASIS** một
-> basis, của một plane trong R3. Nhưng nếu **XÉT CẢ 3** vector
+> basis, của một plane trong R³. Nhưng nếu **XÉT CẢ 3** vector
 > thì chúng lại **KHÔNG PHẢI LÀ MỘT BASIS**, bởi chúng **không
 > independence.**
 
@@ -881,7 +881,7 @@
 > gs nói rằng, thế thì ta có vô số basis, nhưng chúng
 > đều có chung một điểm, mà hồi nãy tôi xóa đi một
 > vector thì các bạn đã đúng khi bảo rằng đây không
-> còn là basis của R3 nữa. Vì khi đó không đủ vector
+> còn là basis của R³ nữa. Vì khi đó không đủ vector
 >
 >
 >
