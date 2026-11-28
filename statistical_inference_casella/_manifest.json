@@ -1,6 +1,6 @@
 {
   "title": "Statistical Inference - Casella",
-  "publishedAt": 1795657693224,
+  "publishedAt": 1795826297705,
   "sections": [
     {
       "title": "📋 Overview",
@@ -329,16 +329,27 @@
     {
       "title": "12.3 Logistic Regression",
       "path": "statistical_inference_casella/123_logistic_regression.md",
-      "noteCount": 8,
-      "imageCount": 12
+      "noteCount": 9,
+      "imageCount": 14
     }
   ],
-  "totalNotes": 952,
-  "totalImages": 1274,
+  "totalNotes": 953,
+  "totalImages": 1276,
   "videos": [
     {
+      "id": "ciIfBvGwo9w",
+      "title": "Vì sao MLE của Logistic Regression không tồn tại với extreme data? (phần 2)",
+      "uploadedAt": 1795824657667,
+      "at": [
+        "Section 12.3.2 Estimation",
+        "12.3.1 The Model",
+        "Section 12.3 Logistic Regression",
+        "12.3 LOGISTIC REGRESSION"
+      ]
+    },
+    {
       "id": "c7g727RW818",
-      "title": "Xây dựng likelihood của Logistics Regression như thế nào?",
+      "title": "Xây dựng likelihood của Logistics Regression như thế nào? (phần 1)",
       "uploadedAt": 1795655700923,
       "at": [
         "Section 12.3.2 Estimation",
