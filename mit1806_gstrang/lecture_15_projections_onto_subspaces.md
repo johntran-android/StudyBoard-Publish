@@ -1,6 +1,6 @@
 # Lecture 15: Projections Onto Subspaces
 
-📊 **Progress:** `45` Notes | `49` Screenshots | `36` AI Reviews
+📊 **Progress:** `45` Notes | `51` Screenshots | `39` AI Reviews
 
 ---
 <a id="node-l9qi36h"></a>
@@ -486,7 +486,9 @@
 > Kí hiệu x̂ để ám chỉ solution này là của bài toán gần với
 > bài toán gốc
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=WAwC0dYKEDs)
+📹 Video 1: [Vì sao phải dùng phép chiếu khi hệ Ax = b vô nghiệm?](https://www.youtube.com/watch?v=WAwC0dYKEDs)
+
+📹 Video 2: [Làm sao tìm ma trận chiếu lên không gian cột C(A)? (phần 3)](https://www.youtube.com/watch?v=GaugfLdPv3I)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -734,6 +736,8 @@
 
 <p align="center"><kbd><img src="assets/j0dflsgzgs.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/q7f07s6oey.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > Thế thì e vuông góc với plane thì cũng có nghĩa là nó vuông vóc với mọi vector trong plane (lưu ý plane này là plane của một subspace, nó có đi qua gốc O)
 >
@@ -791,7 +795,7 @@
 >
 >
 >
-> a1ᵀ và a2ᵀ - tức là transpose hai columns của A, đương nhiên sẽ có matrix Aᵀ, ta có: 
+> a1ᵀ và a2ᵀ - tức là transpose hai columns của A, đương nhiên sẽ có matrix Aᵀ, ta có:
 >
 >
 >
@@ -799,7 +803,11 @@
 >
 >
 >
-> để ý rằng hồi nãy, equation ta có là aᵀe = aᵀ(b-Ax̂) = 0 còn bây giờ ta có hai vector a1 a2 basis của C(A) nên ta có : Aᵀ(b-Ax̂) = 0
+> để ý rằng hồi nãy, equation ta có là aᵀe = aᵀ(b-Ax̂) = 0 còn bây giờ ta có hai vector a1 a2 basis của C(A) nên ta có : 
+>
+>
+>
+> Aᵀ(b-Ax̂) = 0
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
@@ -891,6 +899,17 @@
 > nhân Aᵀ vào (b-Ax̂), chuyển Aᵀb qua bên
 > phải ta có equation **AᵀAx̂ = Aᵀb**
 
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác về bước biến đổi đại số từ điều kiện trực giao $A^T(b - A\hat{x}) = 0$ sang hệ phương trình chuẩn tắc (normal equation) $A^TA\hat{x} = A^Tb$.
+>
+> **✓ Strengths**
+> - Hiểu đúng và tóm tắt chính xác phép biến đổi đại số tuyến tính từ điều kiện trực giao sang phương trình chuẩn tắc.
+>
+> **💡 Deeper notes**
+> - Phương trình $A^TA\hat{x} = A^Tb$ được gọi là hệ phương trình chuẩn tắc (Normal Equations). Để có nghiệm duy nhất $\hat{x} = (A^TA)^{-1}A^Tb$, ma trận $A$ cần có các cột độc lập tuyến tính (full column rank) để $A^TA$ khả nghịch.
+
 <br>
 
 <a id="node-sa91oui"></a>
@@ -925,28 +944,47 @@
 <p align="center"><kbd><img src="assets/zgzuhl7rj6o.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì câu hỏi là **x̂ là gì**, và **projection p là gì**.
+> Thế thì câu hỏi là x̂ là gì, và projection p là gì.
 >
 >
 >
-> Vậy thì từ **AᵀAx̂ = Aᵀb**, **nhân hai vế cho (AᵀA)⁻¹** ta sẽ có **x̂** = **(AᵀA)⁻¹Aᵀb**
+> Vậy thì từ AᵀAx̂ = Aᵀb, nhân hai vế cho (AᵀA)⁻¹ ta sẽ có x̂ = (AᵀA)⁻¹Aᵀb
 >
 >
 >
-> Và p = Ax̂ (hồi nãy đã nói, p là projection của b lên column space của A nên p là linear combination của các A cols hay **p = Ax̂**)
+> Và p = Ax̂ (hồi nãy đã nói, p là projection của b lên column space của A nên p là linear combination của các A cols hay p = Ax̂)
 >
 >
 >
-> Giờ **có x̂ rồi** thì thế vào ta có **p = A(AᵀA)⁻¹Aᵀb**
+> Giờ có x̂ rồi thì thế vào ta có p = A(AᵀA)⁻¹Aᵀb
 >
 >
 >
-> Và gs liên hệ nó với trường hợp 1D hồi nãy, a là vector, thì **p = aaᵀ/aᵀab** còn bây giờ A là matrix thì công thức là vậy.
+> Và gs liên hệ nó với trường hợp 1D hồi nãy, a là vector, thì p = aaᵀ/aᵀab còn bây giờ A là matrix thì công thức là vậy.
 >
 >
 >
-> Thì nó cũng như nhau thôi vì **1/aᵀa cũng chính là (aᵀa)⁻¹**
-> − có thể coi là inverse của aᵀa
+> Thì nó cũng như nhau thôi vì 1/aᵀa cũng chính là (aᵀa)⁻¹− có thể coi là inverse của aᵀa
+
+> [!TIP]
+> 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
+>
+> Ghi chú nắm rất chính xác bản chất và các bước suy diễn từ phương trình chuẩn (normal equation) sang vector nghiệm x̂ và hình chiếu p, đồng thời thấy rõ sự tương đồng với trường hợp 1 chiều.
+>
+> **🟡 Minor issues**
+>
+> **1.** *"nhân hai vế cho (AᵀA)⁻¹"*
+>
+> Bước này ngầm giả định ma trận AᵀA khả nghịch (có nghịch đảo). Điều kiện này chỉ thỏa mãn khi các cột của ma trận A độc lập tuyến tính.
+>
+>
+> **✓ Strengths**
+> - Suy luận chuẩn xác từ phương trình pháp tuyến AᵀAx̂ = Aᵀb để tìm x̂ và thế vào công thức p = Ax̂.
+> - Liên hệ và đối chiếu trực quan, chính xác giữa công thức tổng quát nhiều chiều và công thức 1 chiều trước đó.
+>
+> **💡 Deeper notes**
+> - Ma trận chiếu P = A(AᵀA)⁻¹Aᵀ có hai tính chất đặc trưng cơ bản: P² = P (idempotent) và Pᵀ = P (symmetric).
+> - Nếu các cột của A phụ thuộc tuyến tính, AᵀA sẽ không khả nghịch và khi đó phải sử dụng giả nghịch đảo (pseudoinverse - Moore-Penrose).
 
 <br>
 
@@ -956,9 +994,23 @@
 
 <p align="center"><kbd><img src="assets/qkwz0z7286l.png" width="80%"></kbd></p>
 
+<p align="center"><kbd><img src="assets/9xj0tj.png" width="80%"></kbd></p>
+
 > [!NOTE]
 > và projection matrix P
 > chính là **A(AᵀA)⁻¹Aᵀ**
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác công thức ma trận hình chiếu (projection matrix) như được trình bày trên bảng.
+>
+> **✓ Strengths**
+> - Xác định và ghi lại chính xác dạng ma trận hình chiếu P = A(AᵀA)⁻¹Aᵀ.
+>
+> **💡 Deeper notes**
+> - Công thức này ngầm định các cột của ma trận A độc lập tuyến tính để AᵀA khả nghịch.
+> - Ma trận hình chiếu P luôn thỏa mãn hai tính chất quan trọng: đối xứng (Pᵀ = P) và lũy đẳng (P² = P).
 
 <br>
 
