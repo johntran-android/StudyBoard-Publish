@@ -698,7 +698,7 @@
 > [!NOTE]
 > Vậy thì **bài toán đặt ra** là: **XÂY DỰNG MỘT MATRIX A**
 > ĐẠI DIỆN CHO MỘT **LINEAR TRASFORMATION** T(v):
-> Rⁿ → R^m
+> Rⁿ → Rᵐ
 >
 >
 >
@@ -708,7 +708,7 @@
 >
 > 1) CHỌN MỘT BASIS v1, v2....vn** **CHO** **INPUT** in Rⁿ
 > và **CHỌN MỘT  BASIS w1, w2...wm CHO OUTPUT** in
-> R^m
+> Rᵐ
 >
 >
 >
@@ -1304,7 +1304,7 @@
 >
 >
 >
-> Nên đây giống như là linear transformation R3→R2
+> Nên đây giống như là linear transformation R³→R2
 
 <br>
 
