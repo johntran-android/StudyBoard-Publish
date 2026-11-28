@@ -39,7 +39,7 @@
 
 <a id="node-f7gi33v"></a>
 
-#### Không gian con trong R3
+#### Không gian con trong R³
 
 <p align="center"><kbd><img src="assets/zasmvz6naw.png" width="80%"></kbd></p>
 
@@ -48,12 +48,12 @@
 >
 >
 >
-> Với **R3**, **bản thân nó là subspace của chính nó**.
+> Với **R³**, **bản thân nó là subspace của chính nó**.
 >
 >
 >
 > **Bất kì plane nào hay line nào đi qua gốc O** đều là
-> subspace của R3
+> subspace của R³
 
 <br>
 
@@ -65,7 +65,7 @@
 
 > [!NOTE]
 > Câu hỏi cho ta là **tập hợp của subspace P (plane)** hợp
-> với (Union) **L (line) của R3 có phải là subspace của R3
+> với (Union) **L (line) của R³ có phải là subspace của R³
 > ko**.
 >
 >
@@ -145,7 +145,7 @@
 >
 >
 > Thử trả lời: **ko**, vì **cũng như 2 cái 3D vector thì nhiều
-> nhất chỉ tạo dc một plane** là một 2D subspace của R3
+> nhất chỉ tạo dc một plane** là một 2D subspace của R³
 > (**chưa kể nếu chúng trùng nhau thì chỉ tạo 1D subspace 
 > là một line**)
 >
@@ -292,7 +292,7 @@
 >
 >
 > Và vì x là 3D vector. Nên **NullSpace sẽ là một subspace
-> của R3**
+> của R³**
 >
 >
 >
@@ -350,7 +350,7 @@
 >
 >
 > Gs cho rằng điều này **cho ta biết:** **nó có thể là một
-> vector space, subspace của R3 (vì như đã kết luận,
+> vector space, subspace của R³ (vì như đã kết luận,
 > muốn là vector space thì nó đầu tiên phải chứa gốc O)**
 
 **🔗 See also:** [Gốc tọa độ trong subspace](./lecture_5_transpose_permutations_spaces_rn.md#node-47m7mjs)
@@ -398,7 +398,7 @@
 >
 >
 >
-> Như đã biết, **nó là một 1D subspace của R3**
+> Như đã biết, **nó là một 1D subspace của R³**
 
 <br>
 
@@ -499,7 +499,7 @@
 
 > [!NOTE]
 > Vậy nó (mọi solution của equasys này **không phải là
-> subspace (của R3)**. Thế nhưng ta **dễ thấy ít nhất là
+> subspace (của R³)**. Thế nhưng ta **dễ thấy ít nhất là
 > hai solution: [1 0 0] và [0 -1 1]**.
 >
 >
