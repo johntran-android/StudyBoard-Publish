@@ -152,7 +152,7 @@
 > Thế thì, **vector khác 0 trong left nullspace** là vector gì? Nó **chính là vector BỊ
 > MATRIX Aᵀ SUY BIẾN THÀNH ZERO**: Nói cách khác, nó **chính là solution của Aᵀy =
 > 0**. Và ta sẽ hiểu ra rằng, một vector trong R³, là **không gian 3 chiều**, bị **suy biến
-> thành một plane**− là C(A), vì vì mọi vector trong N(Aᵀ) - thứ làm nên chiều không gian thứ 3 của R3 đã
+> thành một plane**− là C(A), vì vì mọi vector trong N(Aᵀ) - thứ làm nên chiều không gian thứ 3 của R³ đã
 > bị biến thành 0 qua Aᵀy = 0
 >
 >
@@ -172,7 +172,7 @@
 > Vậy thì, ở đây ta có liên hệ thứ nhất: **Chính cái row bị thừa** (dependent row) đã **tạo
 > nên một linear combination giữa 3 rows cho ra 0**, từ đó **tạo nên một non-zero vector
 > trong R³ bị map thành 0**. Dẫn đến c**ác vector khác 0 trong left nullspace - subspace
-> của R3 đều bị map thành 0**: Aᵀy = 0, **chỉ còn lại các vector trong column space là
+> của R³ đều bị map thành 0**: Aᵀy = 0, **chỉ còn lại các vector trong column space là
 > được map với vector khác 0 trong rowspace.**
 >
 >
@@ -193,7 +193,7 @@
 >
 >
 >
-> Input x trong **R²** qua A, output Ax **vẫn trong một 2D plane** của R3, không có sự suy biến
+> Input x trong **R²** qua A, output Ax **vẫn trong một 2D plane** của R³, không có sự suy biến
 > chiều không gian.
 >
 >
