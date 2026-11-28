@@ -1,6 +1,6 @@
 # Lecture 15: Projections Onto Subspaces
 
-📊 **Progress:** `45` Notes | `48` Screenshots | `29` AI Reviews
+📊 **Progress:** `45` Notes | `49` Screenshots | `36` AI Reviews
 
 ---
 <a id="node-l9qi36h"></a>
@@ -470,7 +470,7 @@
 >
 >
 > Và matrix CAO, ỐM dẫn đến là **không đủ số cols (n) để
-> span được toàn bộ không gian R^m**. Nên luôn có thể **có
+> span được toàn bộ không gian Rᵐ**. Nên luôn có thể **có
 > b nằm ngoài cols space** khiến Ax=b vô nghiệm
 >
 >
@@ -485,6 +485,8 @@
 >
 > Kí hiệu x̂ để ám chỉ solution này là của bài toán gần với
 > bài toán gốc
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=WAwC0dYKEDs)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
@@ -505,6 +507,8 @@
 ###### Phép chiếu lên mặt phẳng
 
 <p align="center"><kbd><img src="assets/as9mhib99e9.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/tstoewoucw.png" width="80%"></kbd></p>
 
 > [!NOTE]
 > Nhân tiện gs cũng đang **move từ 1D subspace**, project
@@ -554,24 +558,15 @@
 <p align="center"><kbd><img src="assets/o57b8um5qq.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì đầu tiên gs đề nghị ta **định nghĩa plane**. Thì ta đã
-> biết, một plane, cụ thể hơn trong ví dụ đang là 2D plane
-> trong R3 Thì nó là **2D subspace của R3** thì nó sẽ có 2
-> basis vector (hay nói đúng hơn là **cần 2 vector độc lập**
-> **để có một basi**s của subspace này). Ta gọi nó là {a1, a2}
+> Thế thì đầu tiên gs đề nghị ta **định nghĩa plane**. Thì ta đã biết, một plane, cụ thể hơn trong ví dụ đang là 2D plane trong R³ Thì nó là **2D subspace của R³** thì nó sẽ có 2 basis vector (hay nói đúng hơn là **cần 2 vector độc lập để có một basi**s của subspace này). Ta gọi nó là {a1, a2}
 >
 >
 >
-> Gs cũng cho biết **a1 a2 không nhất thiết vuông góc nhau**,
-> vì có vô số basis - và như ta còn nhớ **miễn là chúng là hai
-> vector độc lập** (khác phương) là đủ thành basis rồi.
+> Gs cũng cho biết **a1 a2 không nhất thiết vuông góc nhau**, vì có vô số basis - và như ta còn nhớ **miễn là chúng là hai vector độc lập** (khác phương) là đủ thành basis rồi.
 >
 >
 >
-> Và plane này là columns space của matrix A. **Đồng nghĩa
-> a1, a2 là basis của C(A)** - và ta xài luôn **hai cols của A
-> luôn** vì ta đang coi như có hai column độc lập (để C(A) là
-> một plane)
+> Và plane này là columns space của matrix A. **Đồng nghĩa a1, a2 là basis của C(A)** - và ta xài luôn **hai cols của A luôn** vì ta đang coi như có hai column độc lập (để C(A) là một plane)
 >
 >
 >
@@ -580,6 +575,19 @@
 >
 >
 > #lec15
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú nắm rất chắc và chính xác bản chất hình học của không gian con: mặt phẳng đi qua gốc toạ độ là không gian cột C(A) sinh bởi hai vector độc lập tuyến tính a1, a2, và b nằm ngoài mặt phẳng.
+>
+> **✓ Strengths**
+> - Hiểu chính xác điều kiện để 2 vector tạo thành cơ sở của mặt phẳng (chỉ cần độc lập tuyến tính, không bắt buộc trực giao).
+> - Kết nối tốt giữa biểu diễn hình học (mặt phẳng trong R3) và đại số tuyến tính (không gian cột C(A) của ma trận A = [a1 a2]).
+> - Nhận diện đúng thiết lập bài toán hình chiếu khi b không thuộc không gian cột.
+>
+> **💡 Deeper notes**
+> - Việc giả định a1, a2 độc lập tuyến tính (A có full column rank) là điều kiện then chốt để ma trận A^T A khả nghịch, phục vụ cho việc suy ra công thức hình chiếu p = A(A^T A)^(-1) A^T b ở các bước tiếp theo.
 
 <br>
 
@@ -620,32 +628,23 @@
 <p align="center"><kbd><img src="assets/gszcued21wh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Nhưng **b không nằm trong C(A)**, nên ta **gọi e là
-> khoảng cách từ b với p**. Xong gs cho rằng, từ trực
-> giác ta có **e = b-p sẽ perpendicular với plane**
+> Nhưng **b không nằm trong C(A)**, nên ta **gọi e là b - p, (||e|| là khoảng cách từ) từ b với p**. Xong gs cho rằng, từ trực giác ta có **e = b-p sẽ perpendicular với plane**
 >
 >
 >
 > (giống như e perpendicular với line a hồi nãy)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **88/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
 >
-> Ghi chú nắm rất tốt trực giác hình học và bản chất của phép chiếu trực giao lên không gian cột. Một điểm nhỏ cần lưu ý là $e = b - p$ là một vector (vector sai số), còn 'khoảng cách' là độ dài của vector đó.
->
-> **🟡 Minor issues**
->
-> **1.** *"gọi e là khoảng cách từ b với p"*
->
-> Về mặt thuật ngữ chính xác, $e = b - p$ là 'vector sai số' (error vector). 'Khoảng cách' giữa $b$ và $p$ là một đại lượng vô hướng (scalar) bằng độ dài của vector này, tức $||e|| = ||b - p||$.
->
+> Ghi chú tóm tắt rất chính xác trực giác hình học: khi b không nằm trong không gian cột C(A), vector sai số e = b - p sẽ vuông góc với mặt phẳng C(A), mở rộng tự nhiên từ trường hợp chiếu lên một đường thẳng.
 >
 > **✓ Strengths**
-> - Nắm chuẩn trực giác hình học: vector sai số e vuông góc với toàn bộ mặt phẳng (không gian cột C(A)).
-> - Có sự liên hệ tốt và nhất quán với trường hợp chiếu lên một đường thẳng đã học trước đó.
+> - Hiểu đúng bản chất vector sai số e = b - p và độ dài ||e|| là khoảng cách từ b đến hình chiếu p.
+> - Nắm bắt chính xác trực giác hình học mở rộng từ phép chiếu lên đường thẳng sang phép chiếu lên mặt phẳng (không gian con).
 >
 > **💡 Deeper notes**
-> - Vì e vuông góc với toàn bộ mặt phẳng C(A), điều này tương đương với việc e vuông góc với mọi vector cơ sở của mặt phẳng đó: a1^T * e = 0 và a2^T * e = 0, hay viết gọn dưới dạng ma trận là A^T * e = 0.
+> - Điều kiện e vuông góc với toàn bộ mặt phẳng C(A) về mặt đại số tương đương với việc e vuông góc với từng vector sinh ra mặt phẳng đó, tức là a_1^T e = 0 và a_2^T e = 0 (hay A^T (b - p) = 0).
 
 <br>
 
@@ -656,18 +655,27 @@
 <p align="center"><kbd><img src="assets/rf6c2wz2umi.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì như đã nói **p là projection của b trên C(A)** nên **p
-> thuộc column space** thành ra **CHẮC CHẮN NÓ LÀ MỘT
-> LINEAR COMBINATION CỦA HAI BASIS VECTOR a1, a2**. 
+> Thế thì như đã nói p là projection của b trên C(A) nên p thuộc column space thành ra chắc chắn nó là một linear combination của hai basis vector a1, a2.
 >
 >
 >
-> Và 2 coefficient trong linear combination này CHÍNH LÀ x̂: 
-> **[x^1, x²]**
+> Và 2 coefficient trong linear combination này CHÍNH LÀ x̂: \[x̂1, x̂2\]
 >
 >
 >
-> **p = x^1 × a1 +x²*a2** hay ghi thế này cũng được **p = Ax̂**
+> p = x̂1 a1 +x̂2 a2 hay ghi thế này cũng được p = Ax̂
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chuẩn xác và nắm vững bản chất hình học cũng như đại số tuyến tính: vector hình chiếu p nằm trong không gian cột C(A) nên biểu diễn được dưới dạng tổ hợp tuyến tính p = Ax̂.
+>
+> **✓ Strengths**
+> - Hiểu chính xác bản chất vector hình chiếu p thuộc C(A) nên biểu diễn được qua tổ hợp tuyến tính của các cột của A.
+> - Chuyển đổi mượt mà và chính xác giữa dạng tổ hợp tuyến tính x̂₁a₁ + x̂₂a₂ và dạng ma trận nhân vector Ax̂.
+>
+> **💡 Deeper notes**
+> - Để a₁ và a₂ là 'basis vector' (cơ sở) như bạn ghi chú, giả định ngầm ở đây là hai cột a₁ và a₂ phải độc lập tuyến tính (đây cũng là điều kiện chuẩn trong bài giảng để ma trận AᵀA khả nghịch khi tìm x̂).
 
 <br>
 
@@ -682,8 +690,18 @@
 >
 >
 >
-> Việc tìm projection của b trên C(A) sẽ là **TÌM x̂ SAO CHO e
->  = b-p VUÔNG GÓC VỚI C(A)**
+> Việc tìm projection của b trên C(A) sẽ là TÌM x̂ SAO CHO e = b-p VUÔNG GÓC VỚI C(A)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác bản chất hình học và mục tiêu đại số của bài toán tìm hình chiếu lên không gian cột.
+>
+> **✓ Strengths**
+> - Nắm bắt chính xác bản chất bài toán: tìm vector hệ số x̂ sao cho vector sai số e = b - p vuông góc với toàn bộ không gian cột C(A).
+>
+> **💡 Deeper notes**
+> - Để vector sai số e vuông góc với toàn bộ không gian cột C(A), điều kiện tương đương thuận tiện cho việc tính toán là e phải vuông góc với từng vector cơ sở/cột a_i của A, dẫn đến hệ phương trình chuẩn A^T (b - A x̂) = 0.
 
 <br>
 
@@ -694,9 +712,19 @@
 <p align="center"><kbd><img src="assets/xzjlhx5mfgh.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Viết lại bài toán đặt ra: tìm x̂ sao cho
-> **e = b-p = b-Ax̂ vuông góc với plane
-> C(A)**
+> Viết lại bài toán đặt ra: tìm x̂ sao cho e = b-p = b-Ax̂ vuông góc với plane C(A)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú tóm tắt rất chính xác bản chất bài toán tìm hình chiếu trên bảng, đồng thời làm rõ được mặt phẳng ở đây chính là không gian cột C(A).
+>
+> **✓ Strengths**
+> - Xác định đúng mục tiêu cốt lõi: tìm vector x̂ sao cho vector sai số e = b - Ax̂ vuông góc với mặt phẳng.
+> - Bổ sung chính xác hiểu biết rằng 'plane' trên bảng biểu diễn cho không gian cột C(A) của ma trận A.
+>
+> **💡 Deeper notes**
+> - Về mặt đại số tuyến tính, điều kiện trực giao e ⊥ C(A) sẽ dẫn trực tiếp đến phương trình chuẩn (normal equation): A^T(b - Ax̂) = 0, tức A^T A x̂ = A^T b.
 
 <br>
 
@@ -707,13 +735,25 @@
 <p align="center"><kbd><img src="assets/j0dflsgzgs.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Thế thì **e vuông góc với plane** thì cũng có nghĩa là **nó vuông
-> vóc với mọi vector trong plane** (lưu ý plane này là plane của
-> một subspace, nó có đi qua gốc O)
+> Thế thì e vuông góc với plane thì cũng có nghĩa là nó vuông vóc với mọi vector trong plane (lưu ý plane này là plane của một subspace, nó có đi qua gốc O)
 >
 >
 >
-> Như vậy **e cũng vuông góc với vector a1, và a2**
+> Như vậy e cũng vuông góc với vector a1, và a2
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú rất chính xác và nắm trọn vẹn bản chất hình học của phép chiếu: vector sai số e vuông góc với không gian con thì sẽ vuông góc với mọi vector trong đó, bao gồm các vector cơ sở a1 và a2.
+>
+> **✓ Strengths**
+> - Hiểu chính xác định nghĩa trực giao giữa một vector và một không gian con (subspace).
+> - Nhận diện đúng điều kiện tiên quyết rằng mặt phẳng này là một không gian con (đi qua gốc tọa độ O).
+> - Suy luận chính xác rằng e trực giao với hai vector cơ sở/cột a1 và a2, đây là nền tảng để thiết lập phương trình A^T * e = 0.
+>
+> **💡 Deeper notes**
+> - Về mặt đại số, việc e vuông góc với cả a1 và a2 tương đương với hệ a1^T * e = 0 và a2^T * e = 0, hay viết gọn dưới dạng ma trận là A^T * e = 0 (tức là e nằm trong không gian hạch trái N(A^T)).
+> - Có một lỗi chính tả nhỏ gõ nhầm ('vuông vóc' thay vì 'vuông góc') nhưng không ảnh hưởng đến việc hiểu bản chất toán học.
 
 <br>
 
@@ -724,8 +764,19 @@
 <p align="center"><kbd><img src="assets/1a3zkxnfl9z.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Từ đó ta có **dot product của
-> e và a1, a2 bằng 0**
+> Từ đó ta có dot product của e và a1, a2 bằng 0
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chú hoàn toàn chính xác, nắm đúng bản chất hình học rằng vector sai số e vuông góc với mặt phẳng nên tích vô hướng của nó với các vector cơ sở a1, a2 đều bằng 0.
+>
+> **✓ Strengths**
+> - Nhận diện chính xác vector sai số e = b - A x_hat trực giao với các vector cột a1, a2 của ma trận A.
+> - Hiểu đúng bản chất của phương trình a_i^T (b - A x_hat) = 0 chính là phép tính tích vô hướng (dot product) bằng 0.
+>
+> **💡 Deeper notes**
+> - Hai phương trình vô hướng a1^T e = 0 và a2^T e = 0 có thể được ghép gọn gàng thành phương trình ma trận A^T e = A^T (b - A x_hat) = 0, dẫn tới phương trình chuẩn tắc (Normal Equations).
 
 <br>
 
@@ -740,11 +791,15 @@
 >
 >
 >
-> a1ᵀ và a2ᵀ - tức là transpose hai columns của A, đương nhiên sẽ có matrix Aᵀ, ta có: **Aᵀ(b-Ax̂) = 0**
+> a1ᵀ và a2ᵀ - tức là transpose hai columns của A, đương nhiên sẽ có matrix Aᵀ, ta có: 
 >
 >
 >
-> để ý rằng hồi nãy, equation ta có là **aᵀe = aᵀ(b-Ax̂) = 0**còn bây giờ ta có hai vector a1 a2 basis của C(A) nên ta có : **Aᵀ(b-Ax̂) = 0**
+> Aᵀ(b-Ax̂) = 𝟎
+>
+>
+>
+> để ý rằng hồi nãy, equation ta có là aᵀe = aᵀ(b-Ax̂) = 0 còn bây giờ ta có hai vector a1 a2 basis của C(A) nên ta có : Aᵀ(b-Ax̂) = 0
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **95/100** · ✓ Move on
@@ -1087,6 +1142,18 @@
 >
 >
 > PP = A(AᵀA)⁻¹Aᵀ A(AᵀA)⁻¹Aᵀ = A(AᵀA)⁻¹Aᵀ = P
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
+>
+> Ghi chép rất chính xác và súc tích về tính chất lũy đẳng (idempotent) P² = P của ma trận hình chiếu.
+>
+> **✓ Strengths**
+> - Hiểu đúng bản chất hình học: chiếu một vector đã nằm trên không gian con thì không làm thay đổi vector đó (P² = P).
+> - Thực hiện phép nhân đại số chính xác, nhận diện đúng việc cụm AᵀA ở giữa triệt tiêu với (AᵀA)⁻¹ thành ma trận đơn vị.
+>
+> **💡 Deeper notes**
+> - Công thức P = A(AᵀA)⁻¹Aᵀ ngầm giả định ma trận A có các cột độc lập tuyến tính (full column rank) để AᵀA khả nghịch.
 
 <br>
 
