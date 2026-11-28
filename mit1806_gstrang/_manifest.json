@@ -1,6 +1,6 @@
 {
   "title": "MIT 18.06",
-  "publishedAt": 1795841914960,
+  "publishedAt": 1795847296928,
   "sections": [
     {
       "title": "18.03 Lec 25",
@@ -96,7 +96,7 @@
       "title": "Lecture 15: Projections Onto Subspaces",
       "path": "mit1806_gstrang/lecture_15_projections_onto_subspaces.md",
       "noteCount": 45,
-      "imageCount": 49
+      "imageCount": 51
     },
     {
       "title": "Lecture 16: Projection Matrices And Least Squares",
@@ -220,8 +220,16 @@
     }
   ],
   "totalNotes": 1181,
-  "totalImages": 1311,
+  "totalImages": 1313,
   "videos": [
+    {
+      "id": "GaugfLdPv3I",
+      "title": "Làm sao tìm ma trận chiếu lên không gian cột C(A)? (phần 3)",
+      "uploadedAt": 1795845907227,
+      "at": [
+        "LECTURE 15: PROJECTIONS ONTO SUBSPACES"
+      ]
+    },
     {
       "id": "WAwC0dYKEDs",
       "title": "Vì sao phải dùng phép chiếu khi hệ Ax = b vô nghiệm?",
