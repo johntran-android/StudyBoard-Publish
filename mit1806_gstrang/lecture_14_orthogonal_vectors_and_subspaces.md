@@ -271,7 +271,7 @@
 >
 >
 >
-> Gs đề nghị ta coi **bức tường** là subspace thứ nhất (a 2D subspace trong R3), và **mặt sàn** là subspace thứ hai. Câu hỏi là chúng **có là phải là hai orthogonal subspace?**
+> Gs đề nghị ta coi **bức tường** là subspace thứ nhất (a 2D subspace trong R³), và **mặt sàn** là subspace thứ hai. Câu hỏi là chúng **có là phải là hai orthogonal subspace?**
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **95/100** · ✓ Move on
@@ -565,7 +565,7 @@
 >
 >
 > Còn **Columns space và Left nullspace** khắc họa nên
-> **R^m**
+> **Rᵐ**
 
 > [!TIP]
 > 🤖 **AI Check** — 🟡 Minor issues — ✅ **92/100** · ✓ Move on
@@ -641,7 +641,7 @@
 >
 >
 >
-> Và đúng là 1 + 2 = 3 (cả rowspace và nullspace là subspace của R3)
+> Và đúng là 1 + 2 = 3 (cả rowspace và nullspace là subspace của R³)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
@@ -952,7 +952,7 @@
 >
 >
 >
-> Và như đã nói chỉ khi nào b **NẰM TRÊN COLS SPACE − LÀ 2D PLANE TRONG R3**, THÌ mới system of equation này mới solvable
+> Và như đã nói chỉ khi nào b **NẰM TRÊN COLS SPACE − LÀ 2D PLANE TRONG R³**, THÌ mới system of equation này mới solvable
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **100/100** · ✓ Move on
