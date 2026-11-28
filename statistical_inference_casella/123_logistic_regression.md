@@ -1274,7 +1274,7 @@
 >
 > từ đó khiến L(π(0),π(1)) sẽ → L tại MLE của π(0),π(1), tức Lmax
 
-📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=ciIfBvGwo9w)
+📹 [Xem video trên YouTube](https://youtu.be/ciIfBvGwo9w)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
