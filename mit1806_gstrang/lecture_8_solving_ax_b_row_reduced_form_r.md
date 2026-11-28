@@ -794,7 +794,7 @@
 >
 > Hoặc lập luận kiểu khác là vì mọi columns đều independent,
 > và chúnng là các vector trong Rm (m=n=r). Nên ta có đủ n (=m)
-> vector độc lập trong R^m. Do đó **CHÚNG SPAN TOÀN BỘ
+> vector độc lập trong Rᵐ. Do đó **CHÚNG SPAN TOÀN BỘ
 > Rm** (cũng là Rn). Nên b (là vector trong Rm) dù có ở đâu (có giá
 > trị bao nhiêu) thì **CŨNG LUÔN NẰM TRONG COLUMN SPACE 
 > NÊN Ax=b LUÔN CÓ SOLUTION**. 
