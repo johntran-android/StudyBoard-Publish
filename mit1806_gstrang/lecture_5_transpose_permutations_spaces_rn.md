@@ -275,12 +275,12 @@
 
 <a id="node-rf1knne"></a>
 
-###### Không gian con của R3
+###### Không gian con của R³
 
 <p align="center"><kbd><img src="assets/nnbi9fvg7.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Với R3 thì subspace của nó có thể là một line đi qua O,
+> Với R³ thì subspace của nó có thể là một line đi qua O,
 > một plane đi qua O hoặc bản thân O
 
 <br>
@@ -380,7 +380,7 @@
 >
 >
 > Gs cho rằng cái này **rất quan trọng**. Hình ảnh **lấy 2 vector trong
-> R3  sẽ tạo một subspace của R3 là một không gian 2 chiều - plane**
+> R³  sẽ tạo một subspace của R³ là một không gian 2 chiều - plane**
 > (chú ý là **ko phải R2 nhé, vì vector có 3 component**)
 >
 >
@@ -394,7 +394,7 @@
 > Tất nhiên **còn tùy 5 vector ntn**, **vì nếu chúng cùng trên 1 line thì
 > subspace đó sẽ chỉ là 1 line đi qua gốc 0** như đã biết, nhưng "
 > maximum" thì chúng nó sẽ tạo một không gian 5D trong R10 (giống
-> như mặt phẳng 2D trong không gian 3D R3)
+> như mặt phẳng 2D trong không gian 3D R³)
 
 <br>
 
