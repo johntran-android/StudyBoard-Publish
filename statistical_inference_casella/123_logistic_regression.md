@@ -1,6 +1,6 @@
 # 12.3 Logistic Regression
 
-📊 **Progress:** `8` Notes | `12` Screenshots | `8` AI Reviews
+📊 **Progress:** `9` Notes | `14` Screenshots | `9` AI Reviews
 
 ---
 <a id="node-holzhx7"></a>
@@ -752,8 +752,6 @@
 
 <p align="center"><kbd><img src="assets/wv9toraeilh.png" width="80%"></kbd></p>
 
-<p align="center"><kbd><img src="assets/n3430a2phb.png" width="80%"></kbd></p>
-
 > [!NOTE]
 > Đoạn này đã làm nhiều rồi, thiết lập hàm likelihood, rồi log likelihood và tính đạo hàm hàm likelihood:
 >
@@ -779,7 +777,7 @@
 >
 >
 >
-> P(Yi=1) = π(xi
+> P(Yi=1) = π(xi)
 >
 >
 >
@@ -829,7 +827,7 @@
 >
 >
 >
->  joint pdf của X1,...Xn tính tại 𝐱 = (3,5,9...): 
+> joint pdf của X1,...Xn tính tại 𝐱 = (3,5,9...):
 >
 >
 >
@@ -891,11 +889,11 @@
 >
 >
 >
-> = Πi π(xi)^yi \[(1-π(xi))^(1-yi)\] 
+> = Πi π(xi)^yi \[(1-π(xi))^(1-yi)\]
 >
 >
 >
-> = Πi (σ(α + βxi))^yi \[(1 - σ(α - βxi))^(1-yi)\] 
+> = Πi (σ(α + βxi))^yi \[(1 - σ(α + βxi))^(1-yi)\]
 >
 >
 >
@@ -903,7 +901,7 @@
 >
 >
 >
-> L(α,β|data) = Πi (F(α + βxi))^yi \[(1 - F(α - βxi))^(1-yi)\] 
+> L(α,β|data) = Πi (F(α + βxi))^yi \[(1 - F(α + βxi))^(1-yi)\]
 >
 >
 >
@@ -939,7 +937,7 @@
 >
 >
 >
-> = Σi {log (1 - Fi)  + yi log \[Fi/(1 - Fi)\]}
+> = Σi {log (1 - Fi) + yi log \[Fi/(1 - Fi)\]}
 >
 >
 >
@@ -955,19 +953,23 @@
 >
 >
 >
-> ∂/∂α \[Σi {log (1 - Fi)  + yi log \[Fi/(1 - Fi)\]}\]
+> ∂/∂α \[Σi {log (1 - Fi) + yi log \[Fi/(1 - Fi)\]}\]
 >
 >
 >
-> = Σi ∂/∂α {log (1 - Fi)  + yi log \[Fi/(1 - Fi)\]}
+> = Σi ∂/∂α {log (1 - Fi) + yi log \[Fi/(1 - Fi)\]}
 >
 >
 >
-> = Σi ∂/∂α log (1 - Fi)  + Σi ∂/∂α yi log \[Fi/(1 - Fi)\]
+> = Σi ∂/∂α log (1 - Fi) + Σi ∂/∂α yi log \[Fi/(1 - Fi)\]
 >
 >
 >
-> = Σi ∂/∂α log (1 - Fi)  + Σi ∂/∂α yi log \[Fi/(1 - Fi)\]
+> = Σi ∂/∂α log (1 - Fi) + Σi ∂/∂α yi log \[Fi/(1 - Fi)\]
+>
+>
+>
+> Xét:
 >
 >
 >
@@ -975,11 +977,11 @@
 >
 >
 >
-> = \[1/(1 - Fi)\] . (-1) ∂Fi/∂α 
+> = \[1/(1 - Fi)\] . (-1) ∂Fi/∂α
 >
 >
 >
-> = \[1/(1 - Fi)\] . (-1) ∂Fi/∂α 
+> = \[1/(1 - Fi)\] . (-1) ∂Fi/∂α
 >
 >
 >
@@ -992,32 +994,301 @@
 >
 >
 > ---
+>
+>
+>
+>  Tương tự không khó để tính ra
+>
+>
+>
+>  ∂/∂α log \[Fi/(1 - Fi)\] = fi / Fi(1-Fi)
+>
+>
+>
+> ---
+>
+>
+>
+> Nên ∂/∂α \[Σi {log (1 - Fi) + yi log \[Fi/(1 - Fi)\]}\]
+>
+>
+>
+> = Σi {∂/∂α log (1 - Fi) + yi ∂/∂α log \[Fi/(1 - Fi)\]}
+>
+>
+>
+> = Σi {-fi/(1 - Fi) + yi fi / Fi(1-Fi)}
+>
+>
+>
+> Tương tự là tính đạo hàm đối với β
 
 📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=c7g727RW818)
 
 > [!TIP]
-> 🤖 **AI Check** — 🟡 Minor issues — ⚠️ **85/100** · ✓ Move on
+> 🤖 **AI Check** — 🟢 Pass — ✅ **92/100** · ✓ Move on
 >
-> Ghi chú đã tự diễn giải và biến đổi rất chi tiết từng bước từ hàm likelihood sang dạng thu gọn của log-likelihood và bước đầu đạo hàm theo α. Có một lỗi gõ nhầm dấu trừ nhỏ và chưa hoàn tất toàn bộ các đạo hàm còn lại.
->
-> **🟡 Minor issues**
->
-> **1.** *"Πi (σ(α + βxi))^yi [(1 - σ(α - βxi))^(1-yi)] và L(α,β|data) = Πi (F(α + βxi))^yi [(1 - F(α - βxi))^(1-yi)]"*
->
-> Lỗi gõ nhầm dấu trừ ở số hạng thứ hai thành (α - βxi) thay vì (α + βxi). Ở dòng kế tiếp bạn vẫn gán đúng về (1 - Fi) nên đây chỉ là lỗi nhầm dấu do bất cẩn.
->
-> **2.** *"∂/∂α log (1 - Fi) = ... = -fi/(1 - Fi)"*
->
-> Ghi chú mới chỉ tính xong đạo hàm của thành phần thứ nhất theo α, chưa viết tiếp phần đạo hàm của log[Fi/(1-Fi)] và đạo hàm theo β như mục tiêu ban đầu đặt ra.
->
+> Ghi chú rất chi tiết, tự khai triển và biến đổi toán học tường minh từ hàm likelihood, log-likelihood đến đạo hàm theo alpha. Kết luận đúng về tính chất phi tuyến của phương trình likelihood đòi hỏi phương pháp số.
 >
 > **✓ Strengths**
-> - Tự biến đổi đại số rất tường minh từ tổng nhị thức yi*log(Fi) + (1-yi)*log(1-Fi) về dạng log(1-Fi) + yi*log(Fi/(1-Fi)) mà sách giáo khoa bỏ qua.
-> - Hiểu đúng và áp dụng chuẩn quy tắc đạo hàm hàm hợp (chain rule) khi lấy đạo hàm theo tham số α.
+> - Tự lực khai triển từng bước đạo hàm theo quy tắc chuỗi (chain rule) rất rõ ràng và chuẩn xác.
+> - Hiểu rõ bản chất hàm likelihood được xây dựng từ tích các hàm xác suất (pmf) độc lập của phân phối Bernoulli.
+> - Nắm chắc ý nghĩa cốt lõi: phương trình đạo hàm bằng 0 là phi tuyến nên không có nghiệm đóng (closed-form), cần giải bằng thuật toán số.
 >
 > **💡 Deeper notes**
-> - Để hoàn tất phương trình likelihood (score function), cần tính nốt đạo hàm của log[Fi / (1 - Fi)] theo α (bằng fi / [Fi(1 - Fi)]) rồi ghép hai số hạng lại để thấy nhân tử chung (yi - Fi).
-> - Khi lấy đạo hàm theo β, do quy tắc dây chuyền ∂(α + βxi)/∂β = xi nên kết quả sẽ xuất hiện thêm thừa số xi ở mỗi số hạng.
+> - Biểu thức đạo hàm cuối cùng của bạn Σi {-fi/(1 - Fi) + yi fi / [Fi(1-Fi)]} khi quy đồng mẫu số chung sẽ rút gọn rất đẹp thành Σi (yi - Fi) * [fi / (Fi(1 - Fi))], dạng này giúp dễ nhận diện phần dư (residual) yi - Fi.
+> - Tài liệu gốc có lưu ý thêm một tính chất quan trọng: hàm log-likelihood của logistic/probit là lõm ngặt (strictly concave), nên nếu có nghiệm thì nghiệm MLE là duy nhất. Tuy nhiên với dữ liệu phân tách hoàn hảo (separation/extreme data), nghiệm có thể tiến ra ±∞.
+
+<br>
+
+<a id="node-k5kkz46"></a>
+
+###### Non-existence of Logistic Regression MLEs
+
+<p align="center"><kbd><img src="assets/ymddr6rnmui.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/13a0mhcng73.png" width="80%"></kbd></p>
+
+<p align="center"><kbd><img src="assets/mbw0o7yi7sn.png" width="80%"></kbd></p>
+
+> [!NOTE]
+> Để giải phương trình đạo hàm bằng 0 để ra nghiệm MLE của α của β thì ta sẽ phải deal với phương trình phi tuyến, do đó ko có closed form solution, cần dùng thuật toán giải
+>
+>
+>
+> Và đại ý là vì hàm log likelihood là lõm ngặt nên nếu phương trình đạo hàm bằng 0 có nghiệm thì nó sẽ là nghiệm duy nhất.
+>
+>
+>
+> Có điều, tác gỉa cho biết một số trường hợp bài toán sẽ vô nghiệm,  lí do là khi xuất hiện extreme data. Sẽ hiểu rõ hơn khi làm bài 12.16
+>
+>
+>
+> ---
+>
+>
+>
+>  Ex 12.16: Đại khái là ta có data như sau (xi=0, yi=1) với i=1,2,3,.....10 và (xi=1, yi=1) với i=11,...15 và (xi=1, yi=0) với i=16,...20
+>
+>
+>
+> Yêu cầu tính MLE của π(0) và π(1):
+>
+>
+>
+> Nhắc lại giả định của logistic regression:
+>
+>
+>
+> x1,x2,...đã biết, y1,y2,....là observed values của Y1,Y2,.... độc lập có phân phối:
+>
+>
+>
+> Yi \~ Bern(π(xi)) và π(xi) = σ(α + βxi)
+>
+>
+>
+> joint pmf của Yi: P(Y1=yi,...Yn=yn), do tính độc lập của Yi:
+>
+>
+>
+> .. = Πi P(Yi = yi)
+>
+>
+>
+> Joint pmf tại observed data
+>
+>
+>
+> = Πi P(Yi = yi)
+>
+>
+>
+> = Πi=1,..10 P(Yi = yi) × Πi=11,..15 P(Yi = yi) × Πi=16,..20 P(Yi = yi)
+>
+>
+>
+> Evaluate tại data:
+>
+>
+>
+> = Πi=1,..10 P(Yi = 1) × Πi=11,..15 P(Yi = 1) × Πi=16,..20 P(Yi = 0)
+>
+>
+>
+> = Πi=1,..10 π(xi) × Πi=11,..15 π(xi) × Πi=16,..20 \[1 - π(xi)\]
+>
+>
+>
+> = Πi=1,..10 π(0) × Πi=11,..15 π(1) × Πi=16,..20 \[1 - π(1)\]
+>
+>
+>
+> = π(0)^10 π(1)^5 \[1 - π(1)\]^5
+>
+>
+>
+> Gọi θ1 là π(0) và θ2 là π(1). Ta sẽ đi tìm MLE của θ1, θ2.
+>
+>
+>
+> = θ1^10 θ2^5 \[1 - θ2\]^5
+>
+>
+>
+> L(θ1, θ2) = θ1^10 θ2^5 \[1 - θ2\]^5
+>
+>
+>
+> log L(θ1, θ2) = log (θ1^10 θ2^5 \[1 - θ2\]^5)
+>
+>
+>
+> = log θ1^10 + log θ2^5 + log \[1 - θ2\]^5
+>
+>
+>
+> = 10 log θ1 + 5 log θ2 + 5 log (1 - θ2)
+>
+>
+>
+> Giải bài toán maximize over θ1, θ2 {L(θ1, θ2)}
+>
+>
+>
+> tương đương maximize over θ1, θ2 {log L(θ1, θ2)}
+>
+>
+>
+> giải theo θ1 trước: maximize\_θ1 {10 log θ1 + constant}
+>
+>
+>
+> d/dθ1 {10 log θ1 + constant} = 10/θ1
+>
+>
+>
+> và vì θ1 ∈ (0,1\] (định nghĩa của Bern(p): p ∈ \[0,1\]) nên hàm số đạo hàm riêng của log likelihood đối với θ1 luôn dương với mọi θ1. Nên hàm log likelihood cũng như likelihood đồng biến với mọi θ1 ∈ \[0,1\]. Do đó, hàm số chỉ đạt cực đại khi θ1 = 1.
+>
+>
+>
+> Vậy MLE estimator của θ1, cũng là π(0) = 1
+>
+>
+>
+> ---
+>
+>
+>
+> Giải theo θ2:
+>
+>
+>
+> Maximize\_θ2 10 log θ̂1 + 5 log θ2 + 5 log (1 - θ2)
+>
+>
+>
+> = 5 log θ2 + 5 log (1 - θ2) (do 10 log θ̂1 = 10 log 1 = 0)
+>
+>
+>
+> d/dθ2 (5 log θ2 + 5 log (1 - θ2))
+>
+>
+>
+> = 5/θ2 - 5/(1 - θ2))
+>
+>
+>
+> = 5(1 - θ2)/\[θ2(1 - θ2)\] - 5θ2/\[θ2(1 - θ2)\]
+>
+>
+>
+> = (5-5θ2-5θ2)/\[θ2(1 - θ2)\]
+>
+>
+>
+> = (5-10θ2)/\[θ2(1 - θ2)\]
+>
+>
+>
+> Cho = 0: (5-10θ2)/\[θ2(1 - θ2)\] = 0 ⇔ θ2 = 1/2
+>
+>
+>
+> vậy MLE của θ2, tức MLE của π(1) = 1/2
+>
+>
+>
+> ---
+>
+>
+>
+> b) Chứng minh maximum của likelihood không thể đạt được tại bất kì giá trị nào của tham số α, β nhưng có thể đạt được khi β → -∞ và α = -β
+>
+>
+>
+> Đại khái là:
+>
+>
+>
+> Likelihood lớn nhất, sẽ là L(θ̂1,θ̂2) với θ̂1 = 1 và θ̂2 = 1/2
+>
+>
+>
+> Cái ta cần chứng minh là không thể tồn tại α và β hữu hạn giúp có được
+>
+>
+>
+> θ1 = 1 ⇔ π(0) = 1 ⇔ σ(α + 0 × β) = 1 ⇔ σ(α) = 1
+>
+>
+>
+> θ2 = 1/2 ⇔ π(1) = 1/2 ⇔ σ(α + β) = 1/2
+>
+>
+>
+> Nói cách khác, hệ phương trình {σ(α + 0 × β) = 1, σ(α + β) = 1/2} vô nghiệm
+>
+>
+>
+> Xét σ(α) = 1 do 0 &lt; σ(α) &lt; 1 ∀ α ∈ R nên phương trình này không có nghiệm hữu hạn.
+>
+>
+>
+> ---
+>
+>
+>
+> Cho α = -β và cho β → -∞ khi đó:
+>
+>
+>
+> π(1) = σ(α + β) = σ(0) = 1/2, tức là π(1) = σ(α + β) luôn là MLE của π(1)
+>
+>
+>
+> và α sẽ → ∞ giúp ta có π(0) = σ(α + β × 0) → 1
+>
+>
+>
+> từ đó khiến L(π(0),π(1)) sẽ → L tại MLE của π(0),π(1), tức Lmax
+
+📹 [Xem video trên YouTube](https://www.youtube.com/watch?v=ciIfBvGwo9w)
+
+> [!TIP]
+> 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
+>
+> Ghi chú rất xuất sắc, hiểu sâu bản chất lý thuyết và tự thực hiện trọn vẹn, chính xác các bước giải cho bài tập 12.16.
+>
+> **✓ Strengths**
+> - Thiết lập hàm hợp lý (likelihood) và log-likelihood hoàn toàn chính xác từ dữ liệu phân loại nhị thức độc lập.
+> - Lập luận tìm cực đại theo θ1 chặt chẽ khi chỉ ra đạo hàm luôn dương trên miền xác định nên đạt max tại biên θ1 = 1.
+> - Giải thích phần (b) rất trực quan và chuẩn xác: hàm sigmoid không đạt giá trị 1 tại hữu hạn nên nghiệm chỉ đạt được ở giới hạn vô cùng (hiện tượng phân tách hoàn toàn/quasicomplete separation).
+>
+> **💡 Deeper notes**
+> - Hiện tượng MLE không tồn tại ở giá trị hữu hạn như trong bài tập này được gọi là vấn đề phân tách dữ liệu (complete separation hoặc quasi-complete separation) trong hồi quy logistic.
+> - Khi tìm nghiệm θ1 = 1, giá trị cực đại nằm ở biên của không gian tham số [0, 1], vì vậy việc đạo hàm bằng 0 không áp dụng được tại điểm biên mà phải dựa vào tính đơn điệu.
 
 <br>
 
