@@ -1,6 +1,6 @@
 {
   "title": "Statistical Inference - Casella",
-  "publishedAt": 1795826297705,
+  "publishedAt": 1795826753476,
   "sections": [
     {
       "title": "📋 Overview",
@@ -338,7 +338,7 @@
   "videos": [
     {
       "id": "ciIfBvGwo9w",
-      "title": "Vì sao MLE của Logistic Regression không tồn tại với extreme data? (phần 2)",
+      "title": "Vì sao MLE của Logistic Regression không tồn tại với extreme data?",
       "uploadedAt": 1795824657667,
       "at": [
         "Section 12.3.2 Estimation",
