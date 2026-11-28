@@ -486,9 +486,11 @@
 > Kí hiệu x̂ để ám chỉ solution này là của bài toán gần với
 > bài toán gốc
 
-📹 Video 1: [Vì sao phải dùng phép chiếu khi hệ Ax = b vô nghiệm?](https://www.youtube.com/watch?v=WAwC0dYKEDs)
+📹 Video 1: [Vì sao phải dùng phép chiếu khi hệ Ax = b vô nghiệm? (phần 1)](https://www.youtube.com/watch?v=WAwC0dYKEDs)
 
-📹 Video 2: [Làm sao tìm ma trận chiếu lên không gian cột C(A)? (phần 3)](https://www.youtube.com/watch?v=GaugfLdPv3I)
+📹 Video 2: [Làm sao tìm ma trận chiếu lên không gian con C(A)? (phần 2)](https://www.youtube.com/watch?v=wGGuTiYJWYc)
+
+📹 Video 3: [Làm sao tìm ma trận chiếu lên không gian cột C(A)? (phần 3)](https://www.youtube.com/watch?v=GaugfLdPv3I)
 
 > [!TIP]
 > 🤖 **AI Check** — 🟢 Pass — ✅ **98/100** · ✓ Move on
