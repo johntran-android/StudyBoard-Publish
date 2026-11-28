@@ -172,8 +172,8 @@
 >
 >
 > *Ôn lại tí xíu về Gram-Smith: Giả sử có a, b, c basis vectors
-> của R3 (đương nhiên, đã nói basis thì nó independent, và đủ
-> số lượng để span R3) có điều chưa phải là orthogonal Ta sẽ
+> của R³ (đương nhiên, đã nói basis thì nó independent, và đủ
+> số lượng để span R³) có điều chưa phải là orthogonal Ta sẽ
 > dùng quy trình G.S để tạo orthogonal basis A,B,C:
 >
 >
@@ -364,7 +364,7 @@
 >
 >
 > Để rồi đúng hơn U chính là **CHỨA m ORTHONORMAL
-> BASIS CỦA R^m**: r col đầu là basis của **column
+> BASIS CỦA Rᵐ**: r col đầu là basis của **column
 > space**, m-r columns sau là basis của **left** **null-space**
 >
 >
