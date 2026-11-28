@@ -28,7 +28,7 @@
 >
 >
 >
-> C(A) là subspace của **R^m = R³**. Mà không span hết R³
+> C(A) là subspace của **Rᵐ = R³**. Mà không span hết R³
 > chứng tỏ dim C(A) < 3 hay **r < m**,
 >
 >
