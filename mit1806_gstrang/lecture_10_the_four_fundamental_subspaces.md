@@ -25,7 +25,7 @@
 
 > [!NOTE]
 > Ok, đại khái là gs nói rằng trong bài trước **có một sai
-> sót** đó là khi gs nói về **basis của R3**, thì sau khi nói
+> sót** đó là khi gs nói về **basis của R³**, thì sau khi nói
 > về một **basis dễ thấy nhất** - ba vector đơn vị **(1 0 0),
 > (0 1 0), (0 0 1)** thì ta đã lấy một bộ 3 vector khác với
 > với hai cái đầu là hai vector độc lập: (1 1 2), (2 2 5). Và
@@ -92,7 +92,7 @@
 > span rowspace. Nhưng again, **chưa chắc các row của A sẽ là
 > basis của rowspace** nhé, vì **có thể chúng không independent**
 > ví dụ như trong matrix hồi nãy, rows của A chỉ span 2D plane
-> trong R3.
+> trong R³.
 >
 >
 >
@@ -915,7 +915,7 @@
 >
 >
 >
-> Đầu tiên, nhớ lại định nghĩa row vector r1 (1 × m) nhân với matrix A (m × n), chính là tạo ra một row bằng cách linear combination các row của A với các coeff là các phần tử của r1. Và matrix E (3 × m) có 3 rows: r1, r2, r3 thì khi nhân E (3 × m) với A (m × n) chính là tạo matrix mà mỗi hàng là linear combination của các hàng của A với coeff là giá trị của vector hàng tương ứng của E (góc nhìn nhân hai matri thứ 2)
+> Đầu tiên, nhớ lại định nghĩa row vector r1 (1 × m) nhân với matrix A (m × n), chính là tạo ra một row bằng cách linear combination các row của A với các coeff là các phần tử của r1. Và matrix E (3 × m) có 3 rows: r1, r2, R³ thì khi nhân E (3 × m) với A (m × n) chính là tạo matrix mà mỗi hàng là linear combination của các hàng của A với coeff là giá trị của vector hàng tương ứng của E (góc nhìn nhân hai matri thứ 2)
 >
 >
 >
@@ -983,16 +983,16 @@
 >
 >
 >
-> Ví dụ hai vector v1,v2 có 3 phần tử. (thuộc R3). Thì v1+v2,
+> Ví dụ hai vector v1,v2 có 3 phần tử. (thuộc R³). Thì v1+v2,
 > hay v1 × c đều tạo một vector cũng có 3 phần tử (tức cũng
-> thuộc R3)
+> thuộc R³)
 >
 >
 >
 > Thì tương tự vậy, ta xét 2 matrix 3x3: V1, V2. Thì V1+V2,
 > hay V1 × c đều cho ra matrix 3x3 khác. **Do đó có thể xét
-> vector space R3x3: tập hợp mọi matrix 3x3**. Thì nếu V1,V2
-> thuộc R3x3 thì ta cũng có **V1+V2, V1 × c cũng thuộc R3x3**.
+> vector space R³x3: tập hợp mọi matrix 3x3**. Thì nếu V1,V2
+> thuộc R³x3 thì ta cũng có **V1+V2, V1 × c cũng thuộc R³x3**.
 >
 >
 >
