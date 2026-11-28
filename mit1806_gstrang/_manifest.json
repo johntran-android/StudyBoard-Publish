@@ -1,6 +1,6 @@
 {
   "title": "MIT 18.06",
-  "publishedAt": 1795849092801,
+  "publishedAt": 1795873637761,
   "sections": [
     {
       "title": "18.03 Lec 25",
@@ -224,24 +224,8 @@
   "videos": [
     {
       "id": "GaugfLdPv3I",
-      "title": "Làm sao tìm ma trận chiếu lên không gian cột C(A)? (phần 3)",
+      "title": "Làm sao tìm ma trận chiếu lên không gian cột C(A)?",
       "uploadedAt": 1795845907227,
-      "at": [
-        "LECTURE 15: PROJECTIONS ONTO SUBSPACES"
-      ]
-    },
-    {
-      "id": "wGGuTiYJWYc",
-      "title": "Làm sao tìm ma trận chiếu lên không gian con C(A)? (phần 2)",
-      "uploadedAt": 1795845525483,
-      "at": [
-        "LECTURE 15: PROJECTIONS ONTO SUBSPACES"
-      ]
-    },
-    {
-      "id": "WAwC0dYKEDs",
-      "title": "Vì sao phải dùng phép chiếu khi hệ Ax = b vô nghiệm? (phần 1)",
-      "uploadedAt": 1795840762247,
       "at": [
         "LECTURE 15: PROJECTIONS ONTO SUBSPACES"
       ]
