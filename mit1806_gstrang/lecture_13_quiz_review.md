@@ -704,8 +704,8 @@
 >
 >
 > Thế thì, nếu A như ở đây nói, là mọi cols đều independent. Thì chính là ta có
-> matrix full rank / invertible / non-singular. Và 3 cols đủ span toàn bộ R3 ⇒ b
-> (vector trong R3) luôn nằm trong columns space C(A) ⇒ Ax=b luôn có duy
+> matrix full rank / invertible / non-singular. Và 3 cols đủ span toàn bộ R³ ⇒ b
+> (vector trong R³) luôn nằm trong columns space C(A) ⇒ Ax=b luôn có duy
 > nhất 1 solution.
 >
 >
@@ -723,8 +723,8 @@
 >
 > Thử xét case khác khi A chỉ có rank 2, tức là có 2 independent rows / 2
 > independent columns / singular / non-invertible. Thế thì, với 2 independent
-> columns, nó không đủ để span toàn bộ R3 mà chỉ span được một 2D plane
-> trong subspace của R3. Do đó, nếu b không nằm  trong C(A) thì không thể
+> columns, nó không đủ để span toàn bộ R³ mà chỉ span được một 2D plane
+> trong subspace của R³. Do đó, nếu b không nằm  trong C(A) thì không thể
 > tồn tại bộ coefficients khiến linearly combine các cols để cho ra b, đồng nghĩa
 > Ax=b vô nghiệm. Ngược lại, nếu b nằm trong C(A), thì Ax=b có particular
 > solution. Bên cạnh đó, vì matrix có rank 2, nên tồn tại 1 free columns, ứng với
@@ -748,7 +748,7 @@
 >
 >
 > Nếu chỉ có rank 1, thì câu chuyện theo góc nhìn 18.06 cũng tương tự, chỉ
-> khác là C(A) bây giờ chỉ là một 1D line trong R3 (nullspace N(A) sẽ là 2D
+> khác là C(A) bây giờ chỉ là một 1D line trong R³ (nullspace N(A) sẽ là 2D
 > plane vuông góc với line này) để rồi nếu b nằm trên line này, thì tồn tại
 > particular solution cũng đồng nghĩa là sẽ có vô số nghiệm (vì, có nullspace
 > khác {0}). Ngược lại, nếu b không nằm trong C(A) line, Ax=b sẽ vô nghiệm.
