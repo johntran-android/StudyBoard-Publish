@@ -369,7 +369,7 @@
 >
 > CHÚ Ý: ĐỪNG LÚ LẪN NHÉ, **ĐƯỜNG THẰNG Y = C + Dt
 > KHÔNG LIÊN QUAN GÌ ĐẾN COLS SPACE CỦA A**, NÓ LÀ
-> MỘT 2D PLANE TRONG R3)
+> MỘT 2D PLANE TRONG R³)
 
 <br>
 
@@ -556,6 +556,8 @@
 
 <a id="node-81mcedt"></a>
 
+###### Hệ số đường hồi quy
+
 <p align="center"><kbd><img src="assets/97t41kvqej.png" width="80%"></kbd></p>
 
 > [!NOTE]
@@ -564,6 +566,8 @@
 <br>
 
 <a id="node-f4eju4e"></a>
+
+###### Công thức tính p, e
 
 <p align="center"><kbd><img src="assets/lue7hhdngwn.png" width="80%"></kbd></p>
 
@@ -607,6 +611,8 @@
 <br>
 
 <a id="node-qaulzr2"></a>
+
+###### Vector picture và best line
 
 <p align="center"><kbd><img src="assets/aavdmygm1z.png" width="80%"></kbd></p>
 
