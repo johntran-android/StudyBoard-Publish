@@ -238,10 +238,10 @@
 >
 >
 > Trong bối cảnh này, nếu tồn tại x_particular, tương đương với
-> việc b nằm trong column space. Thế mà b thuộc R^m, mà
+> việc b nằm trong column space. Thế mà b thuộc Rᵐ, mà
 > rank = r = m, có nghĩa là có r=m pivots row cũng là r=m
 > pivots  column là các independent columns. Chúng sẽ span
-> toàn bộ R^m. Do đó **b LUÔN NẰM TRONG COLUMN
+> toàn bộ Rᵐ. Do đó **b LUÔN NẰM TRONG COLUMN
 > SPACE**.
 >
 >
@@ -387,7 +387,7 @@
 >
 >
 >
-> Có thể hiểu lí do ra vậy là vì khi A invertible tức full rank, thì C(A) chính là toàn bộ R^m, nên b thuộc R^m thì nó đã thuộc C(A) rồi, dẫn đến projection lên C(A) chả phải làm gì
+> Có thể hiểu lí do ra vậy là vì khi A invertible tức full rank, thì C(A) chính là toàn bộ Rᵐ, nên b thuộc Rᵐ thì nó đã thuộc C(A) rồi, dẫn đến projection lên C(A) chả phải làm gì
 >
 >
 >
