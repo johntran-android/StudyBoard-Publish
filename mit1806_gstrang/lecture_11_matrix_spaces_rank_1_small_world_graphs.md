@@ -86,7 +86,7 @@
 
 <a id="node-9ako3jo"></a>
 
-##### Cơ sở không gian R3x3
+##### Cơ sở không gian R³x3
 
 <p align="center"><kbd><img src="assets/stsrtar8nn.png" width="80%"></kbd></p>
 
@@ -95,7 +95,7 @@
 >
 >
 >
-> Thế thì cũng như không gian R3 sẽ dễ thấy có một basis cơ bản là (1 0 0), (0 1 0), (0 0 1) (chính là standard basis)
+> Thế thì cũng như không gian R³ sẽ dễ thấy có một basis cơ bản là (1 0 0), (0 1 0), (0 0 1) (chính là standard basis)
 >
 >
 >
@@ -156,9 +156,9 @@
 >
 >
 >
-> Cũng như nếu hỏi dimension của R3 thì đương nhiên là
+> Cũng như nếu hỏi dimension của R³ thì đương nhiên là
 > 3, vì cần 3 con số (tọa độ) mới định nghĩa ra một vector
-> trong R3 nên standard basis sẽ có 3 vector [1 0 0], [0 1 0], 
+> trong R³ nên standard basis sẽ có 3 vector [1 0 0], [0 1 0], 
 > [0 0 1]. Thì ở đây cũng tương tự vậy.
 
 <br>
