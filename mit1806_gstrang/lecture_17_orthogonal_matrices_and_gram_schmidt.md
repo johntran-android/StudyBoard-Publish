@@ -202,7 +202,7 @@
 >
 > Thế thì gs đại khái nói là ta **có 2 cols**, independent (dĩ
 > nhiên, vì orthonormal), nó sẽ **span một 2D subspace
-> trong R3.**
+> trong R³.**
 
 <br>
 
@@ -611,7 +611,7 @@
 <p align="center"><kbd><img src="assets/qg8dzka094.png" width="80%"></kbd></p>
 
 > [!NOTE]
-> Cho hai vector **a, b trong R3**. Như thường lệ ta **chỉ giữ
+> Cho hai vector **a, b trong R³**. Như thường lệ ta **chỉ giữ
 > nguyên a (A=a)**. Câu hỏi: B là gì?
 >
 >
@@ -678,7 +678,7 @@
 >
 >
 > Thử trả lời: Vì 2 cols của A **independent**, nên chúng **span một
-> 2D plane trong R3**
+> 2D plane trong R³**
 >
 >
 >
